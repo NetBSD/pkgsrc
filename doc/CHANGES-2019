@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4941 2019/11/14 11:03:27 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4942 2019/11/14 11:04:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7902,3 +7902,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/xbiff to 1.0.4 [wiz 2019-11-14]
 	Updated time/xclock to 1.0.9 [wiz 2019-11-14]
 	Updated x11/xman to 1.1.5 [wiz 2019-11-14]
+	Updated x11/xwininfo to 1.1.5 [wiz 2019-11-14]
