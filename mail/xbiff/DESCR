@@ -1,4 +1,5 @@
-The xbiff programs displays a little image of a mailbox. A flag is used
-to notify the user of the arrival new mail.
+xbiff provides graphical notification of new e-mail.
+It only handles mail stored in a filesystem accessible file,
+not via IMAP, POP or other remote access protocols.
 
 This is from the modular X.org X11 project.
