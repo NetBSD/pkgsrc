@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/05/29 20:51:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/11/14 15:25:31 wiz Exp $
 bin/gst-device-monitor-1.0
 bin/gst-discoverer-1.0
 bin/gst-play-1.0
@@ -146,13 +146,9 @@ lib/gstreamer-1.0/libgstaudiomixer.la
 lib/gstreamer-1.0/libgstaudiorate.la
 lib/gstreamer-1.0/libgstaudioresample.la
 lib/gstreamer-1.0/libgstaudiotestsrc.la
-lib/gstreamer-1.0/libgstcompositor.a
 lib/gstreamer-1.0/libgstcompositor.la
-lib/gstreamer-1.0/libgstcompositor.so
 lib/gstreamer-1.0/libgstencoding.la
-lib/gstreamer-1.0/libgstoverlaycomposition.a
 lib/gstreamer-1.0/libgstoverlaycomposition.la
-lib/gstreamer-1.0/libgstoverlaycomposition.so
 lib/gstreamer-1.0/libgstpbtypes.la
 lib/gstreamer-1.0/libgstplayback.la
 lib/gstreamer-1.0/libgstrawparse.la
