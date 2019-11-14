@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4926 2019/11/14 09:45:21 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.4927 2019/11/14 09:57:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7883,3 +7883,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/intel-microcode-netbsd to 201901113 [msaitoh 2019-11-14]
 	Updated www/py-werkzeug-docs to 0.16.0nb1 [gutteridge 2019-11-14]
 	Updated x11/xorgproto to 2019.2nb1 [ryoon 2019-11-14]
+	Updated lang/perl5 to 5.30.1 [adam 2019-11-14]
+	Updated databases/p5-gdbm to 5.30.1 [adam 2019-11-14]
