@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4961 2019/11/14 18:08:00 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4962 2019/11/14 18:29:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7926,3 +7926,18 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/py-test-pylint version 0.14.1 [adam 2019-11-14]
 	Updated net/py-tldextract to 2.2.2 [adam 2019-11-14]
 	Updated devel/py-test-assume to 2.2.0 [adam 2019-11-14]
+	Updated security/py-acme to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-apache to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-dns-dnsimple to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-dns-dnsmadeeasy to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-dns-gehirn to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-dns-google to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-dns-linode to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-dns-luadns to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-dns-nsone to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-dns-ovh to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-dns-rfc2136 to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-dns-route53 to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-dns-sakuracloud to 0.40.1 [adam 2019-11-14]
+	Updated security/py-certbot-nginx to 0.40.1 [adam 2019-11-14]
