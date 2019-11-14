@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2019/03/19 23:51:46 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2019/11/14 10:24:36 wiz Exp $
 
-DISTNAME=	xf86-video-ati-19.0.1
+DISTNAME=	xf86-video-ati-19.1.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
