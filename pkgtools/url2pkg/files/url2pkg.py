@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.25 2019/10/28 20:17:24 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.26 2019/11/14 20:03:47 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1118,4 +1118,7 @@ def main(argv: List[str], g: Globals):
 
 
 if __name__ == '__main__':
-    main(sys.argv, Globals())
+    try:
+        main(sys.argv, Globals())
+    except KeyboardInterrupt:
+        sys.exit(1)
