@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4960 2019/11/14 17:27:35 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4961 2019/11/14 18:08:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7922,3 +7922,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/libv4l to 0.4.3nb4 [wiz 2019-11-14]
 	Updated databases/py-mysqlclient to 1.4.5 [adam 2019-11-14]
 	Updated www/py-djangorestframework to 3.10.3 [adam 2019-11-14]
+	Updated net/py-lexicon to 3.3.8 [adam 2019-11-14]
+	Added devel/py-test-pylint version 0.14.1 [adam 2019-11-14]
+	Updated net/py-tldextract to 2.2.2 [adam 2019-11-14]
+	Updated devel/py-test-assume to 2.2.0 [adam 2019-11-14]
