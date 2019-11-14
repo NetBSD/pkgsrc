@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/10 21:15:40 nia Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/14 11:14:15 nia Exp $
 
 DISTNAME=	manaplus-1.9.3.23
 PKGREVISION=	1
@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config
 USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_LANGUAGES=	c c++
 
-LDFLAGS+=	${BUILDLINK_LDADD.iconv}
+LDFLAGS.SunOS+=	${BUILDLINK_LDADD.gettext}
 
 SUBST_CLASSES+=		eq
 SUBST_STAGE.eq=		pre-configure
