@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/03/10 22:21:14 wiz Exp $
+$NetBSD: distinfo,v 1.9 2019/11/14 11:04:00 wiz Exp $
 
-SHA1 (xwininfo-1.1.4.tar.bz2) = 7364e79d1de7bb612dd98c336c649648c6c081ca
-RMD160 (xwininfo-1.1.4.tar.bz2) = 8685af4c399fbb6a1fc4262e84d9713ba600dfa7
-SHA512 (xwininfo-1.1.4.tar.bz2) = d3ab103a0a311e08d1eabc4346750c21eb7d2fbcdc27cab0989a2624b9cd488911614fcf9832603353450114b1231a8f8262cab16e090a0d458d83ec7b6b959b
-Size (xwininfo-1.1.4.tar.bz2) = 169159 bytes
+SHA1 (xwininfo-1.1.5.tar.bz2) = 9f67b1eb07c5824d437bf577cf6198962af1aeb7
+RMD160 (xwininfo-1.1.5.tar.bz2) = 4e0c6dc57add6408a68975c477c5aa562f55d2f7
+SHA512 (xwininfo-1.1.5.tar.bz2) = a3268bbeeeeafac94e589fdd47554a965910d40df7cc3d9c36c7c24fa4f5dd49615484d5916ccb41efca9cd4cf9d8981a4c60953b921220b3f4f57f9cce0e1a6
+Size (xwininfo-1.1.5.tar.bz2) = 172496 bytes
