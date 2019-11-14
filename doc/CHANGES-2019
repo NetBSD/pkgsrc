@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4923 2019/11/13 22:13:38 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4924 2019/11/14 02:38:31 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7880,3 +7880,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xkeyboard-config to 2.28 [wiz 2019-11-13]
 	Updated x11/libXvMC to 1.0.12 [wiz 2019-11-13]
 	Updated x11/xorgproto to 2019.2 [wiz 2019-11-13]
+	Updated sysutils/intel-microcode-netbsd to 201901113 [msaitoh 2019-11-14]
