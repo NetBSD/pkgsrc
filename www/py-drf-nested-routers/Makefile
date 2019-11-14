@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/10/11 10:23:32 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/14 17:34:28 adam Exp $
 
 DISTNAME=	drf-nested-routers-0.91
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-djangorestframework>=3.6.0:../../www/py-djangorestframework
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-djangorestframework
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
