@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/04/17 06:55:57 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/14 10:59:38 wiz Exp $
 
-DISTNAME=	setxkbmap-1.3.1
+DISTNAME=	setxkbmap-1.3.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
