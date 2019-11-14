@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1068 2019/11/13 13:19:39 ng0 Exp $
+# $NetBSD: Makefile,v 1.1069 2019/11/14 09:25:47 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -459,6 +459,7 @@ SUBDIR+=	openjade
 SUBDIR+=	opensp
 SUBDIR+=	ots
 SUBDIR+=	p5-Alien-Hunspell
+SUBDIR+=	p5-Alien-Libxml2
 SUBDIR+=	p5-Biblio-EndnoteStyle
 SUBDIR+=	p5-CAM-PDF
 SUBDIR+=	p5-Convert-ASCII-Armour
