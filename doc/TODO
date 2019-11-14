@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19452 2019/11/14 11:08:41 wiz Exp $
+$NetBSD: TODO,v 1.19453 2019/11/14 11:12:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,7 @@ Suggested new packages
 	xf86-input-microtouch, xf86-input-palmax,
 	xf86-input-spaceorb, xf86-input-summa, xf86-input-synaptics [pkg/47082],
 	xf86-input-tek4957, xf86-input-ur98, xf86-video-amd, xf86-video-dummy,
-	xf86-video-freedreno, xf86-video-glide, xf86-video-impact,
+	xf86-video-freedreno, xf86-video-geode [wip], xf86-video-glide, xf86-video-impact,
 	xf86-video-omap, xf86-video-sisusb (Linux-only), xf86-video-sunbw2,
 	xf86-video-v4l, xf86-video-vermilion,
 	xf86-video-xgixp
@@ -1316,9 +1316,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xcoral-3.14
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
-	o xf86-video-geode-2.11.9 [wip]
-	o xf86-video-glide-1.2.2
-	o xf86-video-sisusb-0.9.4
 	o xfe-1.42 [pkg/52968]
 	o xforms-1.2.4
 	o xfs-1.1.1 [wip]
