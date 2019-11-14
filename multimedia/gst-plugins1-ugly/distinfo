@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2019/05/29 20:51:48 adam Exp $
+$NetBSD: distinfo,v 1.36 2019/11/14 15:25:31 wiz Exp $
 
-SHA1 (gst-plugins-ugly-1.16.0.tar.xz) = 44aa8094282dbdbb993590498e448fb07b2e3123
-RMD160 (gst-plugins-ugly-1.16.0.tar.xz) = 97f6ac17d2e6afa155dfa9580dd67cd6c5b549ce
-SHA512 (gst-plugins-ugly-1.16.0.tar.xz) = 7ecbd3ddc3034dfaa3ce7d118589c856e99e8da734e8d1dd70ab70f4aa3d11d78bd55b6c6134eddaa0b6e627015b1f663c0439367bba305c7d7d46a387470d2e
-Size (gst-plugins-ugly-1.16.0.tar.xz) = 887516 bytes
+SHA1 (gst-plugins-ugly-1.16.1.tar.xz) = 8dc73c25bb25d7edcc754fc455577ec44916ddca
+RMD160 (gst-plugins-ugly-1.16.1.tar.xz) = 3f2f84f7ea764afdf472a1acd6e82f86c83ce953
+SHA512 (gst-plugins-ugly-1.16.1.tar.xz) = 43a5c5b29dcd0968ccf7049c0d866510ca42f72bc0882c5e2b36ee6feb7074fdb32d858c284f8a650e28c47ef20f03fb376e0da1a0c01650ee4453068502700f
+Size (gst-plugins-ugly-1.16.1.tar.xz) = 891956 bytes
