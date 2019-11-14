@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4932 2019/11/14 10:34:42 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4933 2019/11/14 10:38:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7891,3 +7891,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xf86-video-ati to 19.1.0 [wiz 2019-11-14]
 	Updated x11/xrandr to 1.5.1 [wiz 2019-11-14]
 	Updated x11/libXfont2 to 2.0.4 [wiz 2019-11-14]
+	Updated multimedia/libvdpau to 1.3 [wiz 2019-11-14]
