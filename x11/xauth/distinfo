@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/02/02 18:45:05 wiz Exp $
+$NetBSD: distinfo,v 1.9 2019/11/14 10:39:27 wiz Exp $
 
-SHA1 (xauth-1.0.10.tar.bz2) = 87946b2af3ff13705d8eb60adae5c0bcdf839967
-RMD160 (xauth-1.0.10.tar.bz2) = 557852f551556305ccabd7c7547cde73d08eca18
-SHA512 (xauth-1.0.10.tar.bz2) = 1ddcd80848c4efffc6d0a576177f92a3ce47eb871a6c7e2097d96491aec027404d437e0bd792714ef423989153a9644f5ff179bde4dfeb4b340636d642d5849f
-Size (xauth-1.0.10.tar.bz2) = 162176 bytes
+SHA1 (xauth-1.1.tar.bz2) = 16180e36d75a23cb182cb91e78f24273f1a63967
+RMD160 (xauth-1.1.tar.bz2) = efc6bc78d403c8db7da201782f3a107f36ffd2d8
+SHA512 (xauth-1.1.tar.bz2) = b6ecd59a853a491ef45bf8cfbff63bed36645f81cb79ae9d18458b57f7502bccf92f0d979d3337578518646f680ad379e67b1dac15a927cbb11372733e7a3a0c
+Size (xauth-1.1.tar.bz2) = 163510 bytes
