@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2017/02/02 18:45:05 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/14 10:39:27 wiz Exp $
 
-DISTNAME=		xauth-1.0.10
+DISTNAME=		xauth-1.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
