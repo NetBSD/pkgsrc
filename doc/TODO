@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19446 2019/11/14 11:01:39 wiz Exp $
+$NetBSD: TODO,v 1.19447 2019/11/14 11:02:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1313,7 +1313,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
-	o xclock-1.0.9
 	o xcoral-3.14
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
