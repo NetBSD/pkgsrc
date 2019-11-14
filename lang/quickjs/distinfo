@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2019/11/14 21:20:04 rillig Exp $
+
+SHA1 (quickjs-2019-10-27.tar.xz) = 6d10526eecc6bbbd13f33262f796f30090195974
+RMD160 (quickjs-2019-10-27.tar.xz) = 4cd24d0d6c6c9fd23c2bc66d1e724e7e43985b22
+SHA512 (quickjs-2019-10-27.tar.xz) = 3654c8998b6c99fb42387c785e2be138b46b644025b2da5f26ecc6c1d58f32ef89b274763b0bcc5d25d86bbae217ec52576d13bf4e9cd81c6c2af46b692b73e9
+Size (quickjs-2019-10-27.tar.xz) = 763012 bytes
+SHA1 (patch-Makefile) = 4cff6c51bbd44d80327f186f261c6c7899b2a031
+SHA1 (patch-cutils.h) = db3fad2bd422d2886538819ef778d13a391d6935
+SHA1 (patch-qjs.c) = 2a2d778bb43540dc5289f84cd9df43162c1ce291
+SHA1 (patch-qjsc.c) = 9a70bde5e19b65942d9f23c10d0b7b3e2741bfaa
+SHA1 (patch-quickjs-libc.c) = 8a82afa9f13c9f7d53f8a94e377fbb4aa4471947
+SHA1 (patch-quickjs.c) = c411d8ed5539bcd77a504caf53541b7bddb51b5a
