@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.44 2019/05/23 19:23:01 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/14 15:19:42 tsutsui Exp $
 #
 
-DISTNAME=		onscripter-20161102
-PKGREVISION=		1
+DISTNAME=		onscripter-20191022
 CATEGORIES=		games
-MASTER_SITES=		http://onscripter.osdn.jp/
+MASTER_SITES=		https://onscripter.osdn.jp/
 
 MAINTAINER=		tsutsui@NetBSD.org
-HOMEPAGE=		http://onscripter.osdn.jp/onscripter.html
+HOMEPAGE=		https://onscripter.osdn.jp/onscripter.html
 COMMENT=		Interpreter to execute a script for NScripter
 LICENSE=		gnu-gpl-v2
 
