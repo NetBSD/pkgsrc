@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/02/28 22:46:41 wiz Exp $
+$NetBSD: distinfo,v 1.8 2019/11/14 10:38:07 wiz Exp $
 
-SHA1 (libvdpau-1.2.tar.bz2) = 6312ebbeca8a14a861c44319d2f8d45d2a0821ae
-RMD160 (libvdpau-1.2.tar.bz2) = a1812f74e37ed85893ea6b1e4c2e1942cbca08d6
-SHA512 (libvdpau-1.2.tar.bz2) = 86aa3f2a39cb73a597bf417da2eeef73ff01160ed9f54dff3725785ff5a289f47040496de44e2f5292d59657d4746e369b3fa307c4f83a32f7cc28e4cd8bce6f
-Size (libvdpau-1.2.tar.bz2) = 434329 bytes
-SHA1 (patch-src_Makefile.in) = fdacb1106c50852484202edde01cf45e1ded8c9f
+SHA1 (libvdpau-1.3.tar.bz2) = c8a3422e6a04ac23f8bfd4185b7b6b0903b627e9
+RMD160 (libvdpau-1.3.tar.bz2) = fa01066d6fbda721c1306ac581cdb3c55d9f41e5
+SHA512 (libvdpau-1.3.tar.bz2) = c06c23062816e8b207d38d9d53df43a1b193bb9836b48bd6d79a63d76522e87d383c446285b9877fe9c99faa0d290da8a49ccbb58eefa138cc38d0929a8e1330
+Size (libvdpau-1.3.tar.bz2) = 139009 bytes
