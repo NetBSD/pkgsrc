@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/03/06 08:48:31 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/14 18:04:00 adam Exp $
 
-DISTNAME=	tldextract-2.2.1
+DISTNAME=	tldextract-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tldextract/}
@@ -16,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests-file>=1.4:../../devel/py-requests-file
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-pylint-[0-9]*:../../devel/py-test-pylint
 
 USE_LANGUAGES=	# none
 
@@ -24,7 +25,7 @@ post-install:
 	${MV} tldextract tldextract-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX} tests
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
