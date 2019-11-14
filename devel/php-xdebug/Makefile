@@ -2,7 +2,7 @@
 #
 
 MODNAME=		xdebug
-PECL_VERSION=		2.7.2
+PECL_VERSION=		2.8.1
 CATEGORIES=		devel
 MASTER_SITES=		http://xdebug.org/files/
 EXTRACT_SUFX=		.tgz
