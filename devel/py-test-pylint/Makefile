@@ -1,0 +1,25 @@
+# $NetBSD: Makefile,v 1.1 2019/11/14 18:02:46 adam Exp $
+
+DISTNAME=	pytest-pylint-0.14.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+CATEGORIES=	devel python
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-pylint/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/carsongee/pytest-pylint
+COMMENT=	Pytest plugin to check source code with Pylint
+LICENSE=	mit
+
+DEPENDS+=	${PYPKGPREFIX}-pylint>=1.4.5:../../devel/py-pylint
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-test>=2.7:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+USE_LANGUAGES=	# none
+
+# test are not included
+do-test:
+	${DO_NADA}
+
+.include "../../lang/python/egg.mk"
+.include "../../mk/bsd.pkg.mk"
