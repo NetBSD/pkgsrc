@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4938 2019/11/14 11:00:46 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4939 2019/11/14 11:01:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7899,3 +7899,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/py-tqdm to 4.38.0 [adam 2019-11-14]
 	Updated x11/setxkbmap to 1.3.2 [wiz 2019-11-14]
 	Updated x11/xbacklight to 1.2.3 [wiz 2019-11-14]
+	Updated mail/xbiff to 1.0.4 [wiz 2019-11-14]
