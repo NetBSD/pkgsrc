@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2017/01/23 18:20:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/11/14 10:38:07 wiz Exp $
 include/vdpau/vdpau.h
 include/vdpau/vdpau_x11.h
-lib/libvdpau.la
+lib/libvdpau.so
+lib/libvdpau.so.1
+lib/libvdpau.so.1.0.0
 lib/pkgconfig/vdpau.pc
-lib/vdpau/libvdpau_trace.la
+lib/vdpau/libvdpau_trace.so
+lib/vdpau/libvdpau_trace.so.1
+lib/vdpau/libvdpau_trace.so.1.0.0
 share/examples/libvdpau/vdpau_wrapper.cfg
