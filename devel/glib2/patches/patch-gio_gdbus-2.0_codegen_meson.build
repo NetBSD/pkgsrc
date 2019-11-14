@@ -1,33 +1,29 @@
-$NetBSD: patch-gio_gdbus-2.0_codegen_meson.build,v 1.1 2019/06/03 09:53:50 prlw1 Exp $
+$NetBSD: patch-gio_gdbus-2.0_codegen_meson.build,v 1.2 2019/11/14 11:40:30 wiz Exp $
 
 Leave gdbus-2.0/codegen sudirectory to devel/gdbus-codegen package.
 
---- gio/gdbus-2.0/codegen/meson.build.orig	2019-04-15 10:54:04.000000000 +0000
+--- gio/gdbus-2.0/codegen/meson.build.orig	2019-10-04 11:44:23.000000000 +0000
 +++ gio/gdbus-2.0/codegen/meson.build
-@@ -16,7 +16,7 @@ gdbus_codegen_conf.set('DATADIR', glib_d
- # Install gdbus-codegen executable
+@@ -17,6 +17,7 @@ gdbus_codegen_conf.set('DATADIR', glib_d
  gdbus_codegen = configure_file(input : 'gdbus-codegen.in',
    output : 'gdbus-codegen',
--  install : true,
-+  install : false,
    install_dir : get_option('bindir'),
++  install : false,
    configuration : gdbus_codegen_conf
  )
-@@ -28,7 +28,7 @@ codegen_dir = join_paths(get_option('dat
- gdbus_codegen_built_files = []
+   # Provide tools for others when we're a subproject and they use the Meson GNOME module
+@@ -28,6 +29,7 @@ gdbus_codegen_built_files = []
  gdbus_codegen_built_files += configure_file(input : 'config.py.in',
                                              output : 'config.py',
--                                            install : true,
-+                                            install : false,
                                              install_dir : codegen_dir,
++                                            install : false,
                                              configuration : gdbus_codegen_conf)
  
-@@ -36,7 +36,7 @@ foreach f : gdbus_codegen_files
-   # Copy these into the builddir so that gdbus-codegen can be used uninstalled
+ foreach f : gdbus_codegen_files
+@@ -35,5 +37,6 @@ foreach f : gdbus_codegen_files
    # and then install it too so that it can be used after installation
    gdbus_codegen_built_files += configure_file(input : f, output : f,
--                                              install : true,
-+                                              install : false,
                                                install_dir : codegen_dir,
++                                              install : false,
                                                copy : true)
  endforeach

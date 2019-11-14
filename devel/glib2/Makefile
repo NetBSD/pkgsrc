@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2019/10/29 09:22:24 adam Exp $
+# $NetBSD: Makefile,v 1.263 2019/11/14 11:40:30 wiz Exp $
 
 .include "Makefile.common"
 
@@ -10,6 +10,8 @@ COMMENT=	Some useful routines for C programming (glib2)
 MESON_ARGS+=	-Dinstalled_tests=false
 # Avoid linux dependency on libmount-dev
 MESON_ARGS+=	-Dlibmount=false
+
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC}/output/gobject:${WRKSRC}/output/gmodule
 
 LDFLAGS.SunOS+=		-lintl -lnsl
 
