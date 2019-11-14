@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/07/05 18:40:55 wiedi Exp $
+$NetBSD: distinfo,v 1.3 2019/11/14 17:26:16 adam Exp $
 
-SHA1 (mysqlclient-python-1.3.13.tar.gz) = bb1e6a52f31bf7a2082eaa9afd02595d21caa9e9
-RMD160 (mysqlclient-python-1.3.13.tar.gz) = 962bfb40b9670367e8faa693fa1dea5be6467a84
-SHA512 (mysqlclient-python-1.3.13.tar.gz) = d656c2c9d6eaf02331a994f154ab0d2e1624e563b7f8e1b6f39b4f7d7ad6416662b8caeeab775d435bba22a5aba2d4c72a56429b403bdcfbc21d7ea8c72cddcc
-Size (mysqlclient-python-1.3.13.tar.gz) = 92948 bytes
+SHA1 (mysqlclient-1.4.5.tar.gz) = b913f8f71eb1e9947edb4f09f68ffca383866a42
+RMD160 (mysqlclient-1.4.5.tar.gz) = d63361ee27870159134bf72778b18363244fbe91
+SHA512 (mysqlclient-1.4.5.tar.gz) = d6ea6c04618fd274544dccdefc8a7d8f94989a368404d0db1514710d03de5df5c8b864509d8a28feb1cd1d68d9b23967ae9a34f31dd5221b569e64d28a6be022
+Size (mysqlclient-1.4.5.tar.gz) = 86278 bytes
