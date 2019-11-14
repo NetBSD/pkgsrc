@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2018/03/07 11:57:47 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/14 10:30:43 wiz Exp $
 
-DISTNAME=	xrandr-1.5.0
-PKGREVISION=	1
+DISTNAME=	xrandr-1.5.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
