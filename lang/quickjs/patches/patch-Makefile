@@ -1,0 +1,59 @@
+$NetBSD: patch-Makefile,v 1.1 2019/11/14 21:20:04 rillig Exp $
+
+Portability patch for NetBSD.
+
+--- Makefile.orig	2019-10-27 10:55:35.000000000 +0000
++++ Makefile
+@@ -22,13 +22,19 @@
+ # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ # THE SOFTWARE.
+ 
+-ifeq ($(shell uname -s),Darwin)
++OPSYS=$(shell uname -s)
++ifeq ($(OPSYS),Darwin)
+ CONFIG_DARWIN=y
+ endif
++ifeq ($(OPSYS),NetBSD)
++CONFIG_NETBSD=y
++endif
+ # Windows cross compilation from Linux
+ #CONFIG_WIN32=y
+ # use link time optimization (smaller and faster executables but slower build)
++ifndef CONFIG_NETBSD
+ CONFIG_LTO=y
++endif
+ # consider warnings as errors (for development)
+ #CONFIG_WERROR=y
+ # force 32 bit build for some utilities
+@@ -40,6 +46,10 @@ CONFIG_CLANG=y
+ CONFIG_DEFAULT_AR=y
+ endif
+ 
++ifndef CONFIG_NETBSD
++CONFIG_LDL=y
++endif
++
+ # installation directory
+ prefix=/usr/local
+ 
+@@ -165,8 +175,10 @@ QJSBN_OBJS=$(OBJDIR)/qjs.bn.o $(OBJDIR)/
+ 
+ LIBS=-lm
+ ifndef CONFIG_WIN32
++ifndef CONFIG_NETBSD
+ LIBS+=-ldl
+ endif
++endif
+ 
+ $(OBJDIR):
+ 	mkdir -p $(OBJDIR) $(OBJDIR)/examples $(OBJDIR)/tests
+@@ -199,6 +211,9 @@ QJSC_DEFINES:=-DCONFIG_CC=\"$(QJSC_CC)\"
+ ifdef CONFIG_LTO
+ QJSC_DEFINES+=-DCONFIG_LTO
+ endif
++ifdef CONFIG_LDL
++QJSC_DEFINES+=-DCONFIG_LDL
++endif
+ QJSC_HOST_DEFINES:=-DCONFIG_CC=\"$(HOST_CC)\" -DCONFIG_PREFIX=\"$(prefix)\"
+ 
+ $(OBJDIR)/qjsc.o $(OBJDIR)/qjsc.bn.o: CFLAGS+=$(QJSC_DEFINES)
