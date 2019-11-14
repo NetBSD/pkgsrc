@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.527 2019/10/27 13:48:45 kamil Exp $
+# $NetBSD: Makefile,v 1.528 2019/11/14 21:20:48 rillig Exp $
 #
 
 COMMENT=	Programming languages
@@ -223,6 +223,7 @@ SUBDIR+=	python36
 SUBDIR+=	python37
 SUBDIR+=	python38
 SUBDIR+=	qore
+SUBDIR+=	quickjs
 SUBDIR+=	racket
 SUBDIR+=	racket-textual
 SUBDIR+=	rakudo
