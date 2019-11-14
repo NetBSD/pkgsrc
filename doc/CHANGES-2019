@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4964 2019/11/14 21:21:04 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.4965 2019/11/14 21:47:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7943,3 +7943,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-certbot-nginx to 0.40.1 [adam 2019-11-14]
 	Updated www/py-model_mommy to 2.0.0 [adam 2019-11-14]
 	Added lang/quickjs version 27 [rillig 2019-11-14]
+	Updated www/gitea to 1.10.0 [nia 2019-11-14]
