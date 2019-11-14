@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.13 2018/05/20 06:33:40 wiz Exp $
+$NetBSD: distinfo,v 1.14 2019/11/14 11:08:32 wiz Exp $
 
-SHA1 (xf86-video-sis-0.10.9.tar.bz2) = c0009118307b8cf110d43dbd0a174de2f90dfbcc
-RMD160 (xf86-video-sis-0.10.9.tar.bz2) = 940cae3e90c5dd6dc15e7b4df8047f6260969846
-SHA512 (xf86-video-sis-0.10.9.tar.bz2) = 7cb11d2f1f8be8d92159af7e322a9e4fe4e3436c38932d6d665b8854c2009495e99ff075c7a14d9db9c781114afc8397f0e8c1225d9a2f4bbf1b6a4b6cd6745d
-Size (xf86-video-sis-0.10.9.tar.bz2) = 736272 bytes
-SHA1 (patch-src_sis__driver.c) = 89d5db8b258305c3c02921db57dffb04ae2c7ae2
+SHA1 (xf86-video-sis-0.11.0.tar.bz2) = 3e6b22a1c8061fb7efc7bf7012ca47fbf9f64722
+RMD160 (xf86-video-sis-0.11.0.tar.bz2) = eff32002e387d54baa42f2f3dd3c8a2ae114aa02
+SHA512 (xf86-video-sis-0.11.0.tar.bz2) = b8ad05b3faa24c6df65d825b576ddb8e2ce44705ce8b55d8cf0d9f37aa47a429ab43765d8daea57ff35c4cffed056fbec6dfe8ce95efcd6269cc7711115ea09c
+Size (xf86-video-sis-0.11.0.tar.bz2) = 735940 bytes
