@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/07/04 09:07:45 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/11/14 18:30:10 adam Exp $
 
-SHA1 (model_mommy-1.6.0.tar.gz) = d9117e8b36adc3c8a126ef77529f097d7cd04884
-RMD160 (model_mommy-1.6.0.tar.gz) = 3262395989fcc8ecceabd22373a7c87885665462
-SHA512 (model_mommy-1.6.0.tar.gz) = 8330cf8ef5a9ee2e3eb148d5a2452f8b15219685e7916fd18340e954d71e223d8b5310b6176b97d251fc6db90576a86e49ca9036a4a4dc78f999448b8ea947a3
-Size (model_mommy-1.6.0.tar.gz) = 15011 bytes
+SHA1 (model_mommy-2.0.0.tar.gz) = 761ca72e2220cb910b8a7503fe5e40bb8f6bb259
+RMD160 (model_mommy-2.0.0.tar.gz) = aa480df679ca2430f78953f5bff7a1229d59ee51
+SHA512 (model_mommy-2.0.0.tar.gz) = d4ad9da2f9e883e9943310f5939dc11cc3b87efe8b8fa25c27b025f8857502eb1abf011bcdcc7914d5e656e619289e98df73c0b3481c669ec41a3206d1ddbd17
+Size (model_mommy-2.0.0.tar.gz) = 30412 bytes
