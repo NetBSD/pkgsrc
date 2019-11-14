@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2018/03/10 22:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/14 11:04:00 wiz Exp $
 
-DISTNAME=		xwininfo-1.1.4
+DISTNAME=		xwininfo-1.1.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
