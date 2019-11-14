@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.256 2019/11/14 11:40:30 wiz Exp $
+$NetBSD: distinfo,v 1.257 2019/11/14 11:43:36 wiz Exp $
 
-SHA1 (glib-2.62.1.tar.xz) = d0e1991859b5b8053ef784aac15e9792cc2e7ff4
-RMD160 (glib-2.62.1.tar.xz) = 2a1d8f629eeecd646c04e035922161b308a85ec8
-SHA512 (glib-2.62.1.tar.xz) = 098e59d0da4cdd282156c2941c52127d33f1749802b23901efd6b760db99f6944b5cef445d76660a159ad4b912bc9d03dbf8c24b7f15b28e9770f37ca082a57c
-Size (glib-2.62.1.tar.xz) = 4681716 bytes
+SHA1 (glib-2.62.2.tar.xz) = b2a4e6eea3132b4c8393c2f570711131ed960b73
+RMD160 (glib-2.62.2.tar.xz) = 4a2cb690579c755de38125081879633e739a3820
+SHA512 (glib-2.62.2.tar.xz) = 9261d1ed8b1b6479328f95e1e5ed70e15472967171bdf3906c63744b93e9b1e8f003d5198e90bf2a6548e89fd6ec091d2daa2683a113a167a9d40066b89e9330
+Size (glib-2.62.2.tar.xz) = 4682000 bytes
 SHA1 (patch-gio_gcredentialsprivate.h) = dab92e07f8357a7dc1a569e37f65f9b199aee281
 SHA1 (patch-gio_gdbus-2.0_codegen_meson.build) = ec8ce89da08059ebf953d84a1dca5a2b380349f4
 SHA1 (patch-gio_giomodule.c) = d704699b2f457a08fff9219fe697e5fd2cc582ed
