@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4953 2019/11/14 11:49:46 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4954 2019/11/14 11:51:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7914,3 +7914,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/glib2-tools to 2.62.2 [wiz 2019-11-14]
 	Updated devel/gdbus-codegen to 2.62.2 [wiz 2019-11-14]
 	Updated devel/glibmm to 2.62.0 [wiz 2019-11-14]
+	Updated net/glib-networking to 2.62.1 [wiz 2019-11-14]
