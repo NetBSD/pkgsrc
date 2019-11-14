@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/14 21:20:04 rillig Exp $
+bin/qjs
+bin/qjsbn
+bin/qjsbnc
+bin/qjsc
+bin/qjscalc
+include/quickjs/quickjs-libc.h
+include/quickjs/quickjs.h
+lib/quickjs/libquickjs.a
+lib/quickjs/libquickjs.bn.a
