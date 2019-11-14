@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/03/04 08:29:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2019/11/14 17:27:15 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -173,12 +173,18 @@ ${PYSITELIB}/rest_framework/routers.pyo
 ${PYSITELIB}/rest_framework/schemas/__init__.py
 ${PYSITELIB}/rest_framework/schemas/__init__.pyc
 ${PYSITELIB}/rest_framework/schemas/__init__.pyo
+${PYSITELIB}/rest_framework/schemas/coreapi.py
+${PYSITELIB}/rest_framework/schemas/coreapi.pyc
+${PYSITELIB}/rest_framework/schemas/coreapi.pyo
 ${PYSITELIB}/rest_framework/schemas/generators.py
 ${PYSITELIB}/rest_framework/schemas/generators.pyc
 ${PYSITELIB}/rest_framework/schemas/generators.pyo
 ${PYSITELIB}/rest_framework/schemas/inspectors.py
 ${PYSITELIB}/rest_framework/schemas/inspectors.pyc
 ${PYSITELIB}/rest_framework/schemas/inspectors.pyo
+${PYSITELIB}/rest_framework/schemas/openapi.py
+${PYSITELIB}/rest_framework/schemas/openapi.pyc
+${PYSITELIB}/rest_framework/schemas/openapi.pyo
 ${PYSITELIB}/rest_framework/schemas/utils.py
 ${PYSITELIB}/rest_framework/schemas/utils.pyc
 ${PYSITELIB}/rest_framework/schemas/utils.pyo
@@ -222,7 +228,7 @@ ${PYSITELIB}/rest_framework/static/rest_framework/js/bootstrap.min.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/coreapi-0.1.1.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/csrf.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/default.js
-${PYSITELIB}/rest_framework/static/rest_framework/js/jquery-3.3.1.min.js
+${PYSITELIB}/rest_framework/static/rest_framework/js/jquery-3.4.1.min.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/prettify-min.js
 ${PYSITELIB}/rest_framework/status.py
 ${PYSITELIB}/rest_framework/status.pyc
