@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4945 2019/11/14 11:08:41 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4946 2019/11/14 11:09:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7906,3 +7906,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xinput to 1.6.3 [wiz 2019-11-14]
 	Updated x11/xf86-video-s3 to 0.7.0 [wiz 2019-11-14]
 	Updated x11/xf86-video-sis to 0.11.0 [wiz 2019-11-14]
+	Updated x11/xf86-input-elographics to 1.4.2 [wiz 2019-11-14]
