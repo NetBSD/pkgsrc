@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4935 2019/11/14 10:42:55 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4936 2019/11/14 10:53:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7895,3 +7895,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xauth to 1.1 [wiz 2019-11-14]
 	Updated security/py-google-auth to 1.7.1 [adam 2019-11-14]
 	Updated devel/py-faker to 2.0.4 [adam 2019-11-14]
+	Updated devel/py-configargparse to 0.15.1 [adam 2019-11-14]
+	Updated misc/py-tqdm to 4.38.0 [adam 2019-11-14]
