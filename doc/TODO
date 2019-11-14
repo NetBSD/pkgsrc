@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19438 2019/11/13 22:13:38 wiz Exp $
+$NetBSD: TODO,v 1.19439 2019/11/14 10:22:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1322,7 +1322,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xcoral-3.14
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
-	o xf86-video-amdgpu-19.1.0
 	o xf86-video-ati-19.1.0
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
