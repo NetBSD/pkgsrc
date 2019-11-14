@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2019/10/21 22:11:34 adam Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/14 05:25:43 gutteridge Exp $
 
 PKGNAME=	${PYPKGPREFIX}-werkzeug-docs-${DISTNAME:C/[^-]*-//}
+PKGREVISION=	1
 COMMENT=	Python WSGI Utility Library (HTML documentation)
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pallets-sphinx-themes-[0-9]*:../../textproc/py-pallets-sphinx-themes
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pallets-sphinx-themes>=1.2.2nb1:../../textproc/py-pallets-sphinx-themes
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-issues-[0-9]*:../../textproc/py-sphinx-issues
 TOOL_DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
 
