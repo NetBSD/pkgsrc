@@ -1,8 +1,10 @@
-DDD is the Data Display Debugger, a common graphical front-end for
-GDB, DBX, and XDB debuggers.
+GNU DDD (Data Display Debugger) is a graphical front-end for command-
+line debuggers such as GDB, DBX, WDB, Ladebug, JDB, XDB, the Perl
+debugger, the bash debugger bashdb, the GNU Make debugger remake, or
+the Python debugger pydb.
 
-DDD is a Motif application that besides the "usual" features such as
-viewing source texts and breakpoints.  DDD provides a graphical data
+DDD is a Motif application that -- besides the "usual" features such as
+viewing source texts and breakpoints -- also provides a graphical data
 display, where data structures are displayed as graphs.  A simple
 mouse click dereferences pointers or reveals structure contents.
 Complex data structures can be explored incrementally and
