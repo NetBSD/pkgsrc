@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4948 2019/11/14 11:40:55 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4949 2019/11/14 11:41:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7909,3 +7909,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xf86-input-elographics to 1.4.2 [wiz 2019-11-14]
 	Updated devel/glib2 to 2.62.1 [wiz 2019-11-14]
 	Updated devel/gdbus-codegen to 2.62.1 [wiz 2019-11-14]
+	Updated devel/glib2-tools to 2.62.1 [wiz 2019-11-14]
