@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/13 22:13:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/11/14 09:44:30 ryoon Exp $
 include/GL/glxint.h
 include/GL/glxmd.h
 include/GL/glxproto.h
@@ -42,7 +42,6 @@ include/X11/extensions/XI2.h
 include/X11/extensions/XI2proto.h
 include/X11/extensions/XIproto.h
 include/X11/extensions/XKB.h
-include/X11/extensions/XKBgeom.h
 include/X11/extensions/XKBproto.h
 include/X11/extensions/XKBsrv.h
 include/X11/extensions/XKBstr.h

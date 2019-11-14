@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2019/11/14 09:44:30 ryoon Exp $
+
+* XKBgeom.h is provided by libX11 1.6.9
+
+--- Makefile.in.orig	2019-10-17 16:02:37.000000000 +0000
++++ Makefile.in
+@@ -89,7 +89,6 @@ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+-@LEGACY_TRUE@am__append_1 = include/X11/extensions/XKBgeom.h
+ @LEGACY_TRUE@am__append_2 = include/X11/extensions/vldXvMC.h
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -272,8 +271,7 @@ am__fontcache_HEADERS_DIST = include/X11
+ am__kb_HEADERS_DIST = include/X11/extensions/XKB.h \
+ 	include/X11/extensions/XKBproto.h \
+ 	include/X11/extensions/XKBsrv.h \
+-	include/X11/extensions/XKBstr.h \
+-	include/X11/extensions/XKBgeom.h
++	include/X11/extensions/XKBstr.h
+ am__lg3d_HEADERS_DIST = include/X11/extensions/lgewire.h
+ am__print_HEADERS_DIST = include/X11/extensions/Print.h \
+ 	include/X11/extensions/Printstr.h
