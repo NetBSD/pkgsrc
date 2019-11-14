@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4956 2019/11/14 14:45:06 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.4957 2019/11/14 15:19:59 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7917,3 +7917,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/glib-networking to 2.62.1 [wiz 2019-11-14]
 	Updated graphics/MesaLib to 19.2.4 [nia 2019-11-14]
 	Updated multimedia/adobe-flash-player to 32.0.0.293 [tsutsui 2019-11-14]
+	Updated games/onscripter to 20191022 [tsutsui 2019-11-14]
