@@ -1,14 +1,13 @@
-$NetBSD: patch-gobject_meson.build,v 1.4 2019/10/29 09:22:24 adam Exp $
+$NetBSD: patch-gobject_meson.build,v 1.5 2019/11/14 11:40:30 wiz Exp $
 
 Leave glib-genmarshal and glib-mkenums to devel/glib2-tools.
 
---- gobject/meson.build.orig	2019-06-10 17:47:20.000000000 +0000
+--- gobject/meson.build.orig	2019-10-04 11:44:24.000000000 +0000
 +++ gobject/meson.build
-@@ -75,7 +75,7 @@ foreach tool: python_tools
+@@ -75,6 +75,7 @@ foreach tool: python_tools
      input : tool + '.in',
      output : tool,
      configuration : python_tools_conf,
--    install : true,
 +    install : false,
      install_dir : glib_bindir,
    )
