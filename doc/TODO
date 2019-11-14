@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19455 2019/11/14 11:43:46 wiz Exp $
+$NetBSD: TODO,v 1.19456 2019/11/14 11:49:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -648,7 +648,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
 	o glib-networking-2.62.1
-	o glibmm-2.62.0
 	o gliv-1.9.7
 	o glom-1.14.2
 	o gnet1-1.1.9
