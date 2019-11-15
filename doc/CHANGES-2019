@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4974 2019/11/15 14:31:52 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4975 2019/11/15 14:40:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7956,3 +7956,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-more-itertools to 7.2.0 [wiz 2019-11-15]
 	Updated textproc/py-colored to 1.4.0 [adam 2019-11-15]
 	Updated textproc/py-regex to 2019.11.1 [adam 2019-11-15]
+	Updated mail/pst-utils to 0.6.72nb1 [wiz 2019-11-15]
