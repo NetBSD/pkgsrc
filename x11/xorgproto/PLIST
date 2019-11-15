@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/11/14 09:44:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/11/15 10:01:35 ryoon Exp $
 include/GL/glxint.h
 include/GL/glxmd.h
 include/GL/glxproto.h
@@ -108,7 +108,6 @@ include/X11/extensions/shmstr.h
 include/X11/extensions/syncconst.h
 include/X11/extensions/syncproto.h
 include/X11/extensions/syncstr.h
-include/X11/extensions/vldXvMC.h
 include/X11/extensions/windowswm.h
 include/X11/extensions/windowswmstr.h
 include/X11/extensions/xcalibrateproto.h
