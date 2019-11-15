@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2019/03/04 18:29:47 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2019/11/15 14:31:02 adam Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/regex/__init__.py
 ${PYSITELIB}/regex/__init__.pyc
 ${PYSITELIB}/regex/__init__.pyo
@@ -13,9 +10,6 @@ ${PYSITELIB}/regex/_regex_core.pyo
 ${PYSITELIB}/regex/regex.py
 ${PYSITELIB}/regex/regex.pyc
 ${PYSITELIB}/regex/regex.pyo
-${PYSITELIB}/regex/test/__init__.py
-${PYSITELIB}/regex/test/__init__.pyc
-${PYSITELIB}/regex/test/__init__.pyo
-${PYSITELIB}/regex/test/test_regex.py
-${PYSITELIB}/regex/test/test_regex.pyc
-${PYSITELIB}/regex/test/test_regex.pyo
+${PYSITELIB}/regex/test_regex.py
+${PYSITELIB}/regex/test_regex.pyc
+${PYSITELIB}/regex/test_regex.pyo
