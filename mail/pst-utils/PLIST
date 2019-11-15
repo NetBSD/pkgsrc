@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/15 11:09:15 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/15 14:39:46 wiz Exp $
 bin/lspst
 bin/nick2ldif
 bin/pst2ldif
@@ -20,4 +20,3 @@ share/doc/libpst-${PKGVERSION}/COPYING
 share/doc/libpst-${PKGVERSION}/ChangeLog
 share/doc/libpst-${PKGVERSION}/NEWS
 share/doc/libpst-${PKGVERSION}/README
-@pkgdir share/doc/libpst-${PKGVERSION}/devel
