@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4966 2019/11/15 09:06:14 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4967 2019/11/15 09:18:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7945,3 +7945,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added lang/quickjs version 27 [rillig 2019-11-14]
 	Updated www/gitea to 1.10.0 [nia 2019-11-14]
 	Updated graphics/gif2png to 3.0.0 [wiz 2019-11-15]
+	Removed x11/evieext successor x11/xorgproto [wiz 2019-11-15]
