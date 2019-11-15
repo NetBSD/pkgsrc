@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/08/03 04:35:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/11/15 14:09:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,6 +17,9 @@ ${PYSITELIB}/arrow/api.pyo
 ${PYSITELIB}/arrow/arrow.py
 ${PYSITELIB}/arrow/arrow.pyc
 ${PYSITELIB}/arrow/arrow.pyo
+${PYSITELIB}/arrow/constants.py
+${PYSITELIB}/arrow/constants.pyc
+${PYSITELIB}/arrow/constants.pyo
 ${PYSITELIB}/arrow/factory.py
 ${PYSITELIB}/arrow/factory.pyc
 ${PYSITELIB}/arrow/factory.pyo
