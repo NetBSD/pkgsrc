@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/11/13 12:52:25 ng0 Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/15 15:57:51 ng0 Exp $
 
 DISTNAME=	v0.1.0
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -12,7 +12,6 @@ COMMENT=	Guile bindings for the SQLite3 database engine
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=			${WRKDIR}/guile-sqlite3
-USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES
 GUILE_NEED_BOOTSTRAP=	YES
