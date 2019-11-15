@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/07/20 22:46:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/15 09:18:17 wiz Exp $
 
 DISTNAME=	xorg-server-1.17.2
 PKGNAME=	${DISTNAME:S/xorg-server/modular-xorg-xquartz/}
@@ -96,7 +96,6 @@ MESSAGE_SUBST+=		PREFIX=${PREFIX}
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../wm/libAppleWM/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
-.include "../../x11/evieext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
