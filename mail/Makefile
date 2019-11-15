@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.534 2019/10/30 17:26:49 nia Exp $
+# $NetBSD: Makefile,v 1.535 2019/11/15 11:09:47 sborrill Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -291,6 +291,7 @@ SUBDIR+=	postsrsd
 SUBDIR+=	prayer
 SUBDIR+=	procmail
 SUBDIR+=	proxsmtp
+SUBDIR+=	pst-utils
 SUBDIR+=	pulsar
 SUBDIR+=	py-aiosmtpd
 SUBDIR+=	py-authres
