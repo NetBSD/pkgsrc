@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2019/08/22 19:52:29 nia Exp $
+# $NetBSD: Makefile.common,v 1.29 2019/11/15 09:18:17 wiz Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 # used by x11/modular-xorg-xwayland/Makefile
@@ -130,7 +130,6 @@ BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 BUILDLINK_API_DEPENDS.xorgproto+=	xorgproto>=2018.3
 .include "../../x11/xorgproto/buildlink3.mk"
-.include "../../x11/evieext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
