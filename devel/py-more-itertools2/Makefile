@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/11/15 14:01:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/15 14:08:35 wiz Exp $
 
 DISTNAME=	more-itertools-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	More routines for operating on iterables, beyond itertools (for Python 
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.0.0:../../lang/py-six
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 USE_LANGUAGES=	# none
 
