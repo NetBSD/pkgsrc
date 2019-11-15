@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/04/03 09:31:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/11/15 14:02:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -27,6 +27,9 @@ ${PYSITELIB}/aniso8601/compat.pyo
 ${PYSITELIB}/aniso8601/date.py
 ${PYSITELIB}/aniso8601/date.pyc
 ${PYSITELIB}/aniso8601/date.pyo
+${PYSITELIB}/aniso8601/decimalfraction.py
+${PYSITELIB}/aniso8601/decimalfraction.pyc
+${PYSITELIB}/aniso8601/decimalfraction.pyo
 ${PYSITELIB}/aniso8601/duration.py
 ${PYSITELIB}/aniso8601/duration.pyc
 ${PYSITELIB}/aniso8601/duration.pyo
@@ -48,6 +51,9 @@ ${PYSITELIB}/aniso8601/tests/compat.pyo
 ${PYSITELIB}/aniso8601/tests/test_date.py
 ${PYSITELIB}/aniso8601/tests/test_date.pyc
 ${PYSITELIB}/aniso8601/tests/test_date.pyo
+${PYSITELIB}/aniso8601/tests/test_decimalfraction.py
+${PYSITELIB}/aniso8601/tests/test_decimalfraction.pyc
+${PYSITELIB}/aniso8601/tests/test_decimalfraction.pyo
 ${PYSITELIB}/aniso8601/tests/test_duration.py
 ${PYSITELIB}/aniso8601/tests/test_duration.pyc
 ${PYSITELIB}/aniso8601/tests/test_duration.pyo
