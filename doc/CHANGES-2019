@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4972 2019/11/15 14:11:09 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4973 2019/11/15 14:22:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7953,3 +7953,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/py-more-itertools2 version 5.0.0 [wiz 2019-11-15]
 	Updated time/py-aniso8601 to 8.0.0 [adam 2019-11-15]
 	Updated time/py-arrow to 0.15.4 [adam 2019-11-15]
+	Updated devel/py-more-itertools to 7.2.0 [wiz 2019-11-15]
