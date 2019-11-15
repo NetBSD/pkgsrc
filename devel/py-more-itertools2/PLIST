@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/15 14:01:17 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/more_itertools/__init__.py
+${PYSITELIB}/more_itertools/__init__.pyc
+${PYSITELIB}/more_itertools/__init__.pyo
+${PYSITELIB}/more_itertools/more.py
+${PYSITELIB}/more_itertools/more.pyc
+${PYSITELIB}/more_itertools/more.pyo
+${PYSITELIB}/more_itertools/recipes.py
+${PYSITELIB}/more_itertools/recipes.pyc
+${PYSITELIB}/more_itertools/recipes.pyo
+${PYSITELIB}/more_itertools/tests/__init__.py
+${PYSITELIB}/more_itertools/tests/__init__.pyc
+${PYSITELIB}/more_itertools/tests/__init__.pyo
+${PYSITELIB}/more_itertools/tests/test_more.py
+${PYSITELIB}/more_itertools/tests/test_more.pyc
+${PYSITELIB}/more_itertools/tests/test_more.pyo
+${PYSITELIB}/more_itertools/tests/test_recipes.py
+${PYSITELIB}/more_itertools/tests/test_recipes.pyc
+${PYSITELIB}/more_itertools/tests/test_recipes.pyo
