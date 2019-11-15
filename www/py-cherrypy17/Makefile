@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/10/02 11:22:03 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/15 14:22:15 wiz Exp $
 
 DISTNAME=	CherryPy-17.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-cheroot>=6.2.4:../../www/py-cheroot
 DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
-DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-portend>=2.1.1:../../net/py-portend
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
@@ -33,5 +32,8 @@ post-install:
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
+PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools
+
+.include "../../lang/python/versioned_dependencies.mk.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
