@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.34 2019/10/21 21:08:56 adam Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.35 2019/11/15 14:05:54 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -15,6 +15,7 @@
 
 .include "../../lang/python/pyversion.mk"
 
+# format: short name for PYTHON_VERSIONED_DEPENDENCIES<space>python-2.x path<space>python-3.x path
 _SUPPORTED_PACKAGES=	# empty
 _SUPPORTED_PACKAGES+=	Pmw x11/py-Pmw x11/py-Pmw2
 _SUPPORTED_PACKAGES+=	X textproc/py-X2 textproc/py-X
@@ -24,6 +25,7 @@ _SUPPORTED_PACKAGES+=	ipython devel/py-ipython5 devel/py-ipython
 _SUPPORTED_PACKAGES+=	jsonlib textproc/py-jsonlib textproc/py-jsonlib3
 _SUPPORTED_PACKAGES+=	python-digest www/py-python-digest www/py-python3-digest
 _SUPPORTED_PACKAGES+=	sphinx textproc/py-sphinx1 textproc/py-sphinx
+_SUPPORTED_PACKAGES+=	more-itertools devel/py-more-itertools2 devel/py-more-itertools
 
 .for pattern in ${PYTHON_VERSIONED_DEPENDENCIES}
 _PKG_MATCHED=	no
