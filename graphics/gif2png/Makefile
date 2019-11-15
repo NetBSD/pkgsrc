@@ -1,25 +1,38 @@
-# $NetBSD: Makefile,v 1.55 2019/11/02 22:37:57 rillig Exp $
+# $NetBSD: Makefile,v 1.56 2019/11/15 09:05:56 wiz Exp $
 
-DISTNAME=	gif2png-2.5.11
-PKGREVISION=	2
-CATEGORIES=	graphics converters
+DISTNAME=	gif2png-3.0.0
+CATEGORIES=	graphics
+#MASTER_SITES=	https://gitlab.com/esr/gif2png/-/archive/master/
 MASTER_SITES=	http://www.catb.org/~esr/gif2png/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.catb.org/~esr/gif2png/
-COMMENT=	Convert GIF files to PNG
-LICENSE=	zlib
+HOMEPAGE=	https://gitlab.com/esr/gif2png/
+COMMENT=	Convert GIFs to PNG format
+LICENSE=	modified-bsd
 
-REPLACE_PYTHON+=	web2png
+GO_SRCPATH=	${DISTNAME}
+#GO_DIST_BASE=	gif2png-master
 
-LDFLAGS=		${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib
-BUILD_MAKE_FLAGS=	LDFLAGS=${LDFLAGS:Q}
-INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-post-install:
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+REPLACE_PYTHON+=	${WRKSRC}/web2png
 
-.include "../../graphics/png/buildlink3.mk"
+post-build:
+	cd ${WRKSRC} && \
+		xmlto man gif2png.xml && \
+		xmlto man web2png.xml
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/${DISTNAME} ${DESTDIR}${PREFIX}/bin/gif2png
+	${INSTALL_SCRIPT} ${WRKSRC}/web2png ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/gif2png.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/web2png.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+.include "../../security/go-crypto/buildlink3.mk"
+.include "../../devel/go-sys/buildlink3.mk"
+
+.include "../../lang/go/go-package.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
