@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2019/11/15 09:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2019/11/15 09:08:56 wiz Exp $
 
 DISTNAME=	gif2png-3.0.0
 CATEGORIES=	graphics
@@ -10,8 +10,8 @@ HOMEPAGE=	https://gitlab.com/esr/gif2png/
 COMMENT=	Convert GIFs to PNG format
 LICENSE=	modified-bsd
 
-GO_SRCPATH=	${DISTNAME}
-#GO_DIST_BASE=	gif2png-master
+GO_SRCPATH=	gitlab.com/esr/gif2png
+GO_DIST_BASE=	${DISTNAME}
 
 TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
@@ -25,7 +25,6 @@ post-build:
 		xmlto man web2png.xml
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/${DISTNAME} ${DESTDIR}${PREFIX}/bin/gif2png
 	${INSTALL_SCRIPT} ${WRKSRC}/web2png ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/gif2png.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/web2png.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
