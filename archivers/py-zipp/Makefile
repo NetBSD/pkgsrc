@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/11/15 14:22:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/15 15:48:34 hauke Exp $
 
 DISTNAME=	zipp-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,6 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools
 
-.include "../../lang/python/versioned_dependencies.mk.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
