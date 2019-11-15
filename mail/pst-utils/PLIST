@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/15 11:09:15 sborrill Exp $
+bin/lspst
+bin/nick2ldif
+bin/pst2ldif
+bin/readpst
+include/libpst-4/libpst/common.h
+include/libpst-4/libpst/libpst.h
+include/libpst-4/libpst/libstrfunc.h
+include/libpst-4/libpst/lzfu.h
+include/libpst-4/libpst/timeconv.h
+include/libpst-4/libpst/vbuf.h
+lib/libpst.la
+lib/pkgconfig/libpst.pc
+man/man1/lspst.1
+man/man1/pst2ldif.1
+man/man1/readpst.1
+man/man5/outlook.pst.5
+share/doc/libpst-${PKGVERSION}/AUTHORS
+share/doc/libpst-${PKGVERSION}/COPYING
+share/doc/libpst-${PKGVERSION}/ChangeLog
+share/doc/libpst-${PKGVERSION}/NEWS
+share/doc/libpst-${PKGVERSION}/README
+@pkgdir share/doc/libpst-${PKGVERSION}/devel
