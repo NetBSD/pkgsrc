@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2018/01/24 09:06:43 adam Exp $
+$NetBSD: distinfo,v 1.17 2019/11/15 11:08:36 adam Exp $
 
-SHA1 (urwid-2.0.1.tar.gz) = 1624d7c180b717a3d9cd5bdcf64fb353eed4e448
-RMD160 (urwid-2.0.1.tar.gz) = dd2858d79f3e6545ff83f3fc3d1e90d5a97656d7
-SHA512 (urwid-2.0.1.tar.gz) = 99c86a26b08c624c23207ce8e587e8442bece1f522e0c788600ad5f01a4c679efff95dd947edade8b6f4adc376edca949a40c305f9d5ddaf6a0ff97f13c6da30
-Size (urwid-2.0.1.tar.gz) = 604167 bytes
+SHA1 (urwid-2.1.0.tar.gz) = 829010a8bcd5f02e12434da429f052a5afcf5186
+RMD160 (urwid-2.1.0.tar.gz) = a697d0d2986d903f2bf1f83843cdc5bd25f8c4e9
+SHA512 (urwid-2.1.0.tar.gz) = c121c0e49ab9531f67bff8740d29fc716fb8c9203e1b2ddb7257f01095e0bf976f3f2131a3b1f95a3b5368ddeea6a09b9c867ab459b91e3e9be6cba4f18ec654
+Size (urwid-2.1.0.tar.gz) = 630226 bytes
