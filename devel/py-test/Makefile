@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2019/10/22 13:21:49 adam Exp $
+# $NetBSD: Makefile,v 1.87 2019/11/15 14:22:15 wiz Exp $
 
 DISTNAME=	pytest-4.6.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,7 +13,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=1.0:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS+=	${PYPKGPREFIX}-more-itertools>=4.0.0:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.12:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.5.0:../../devel/py-py
@@ -35,6 +34,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metadata
 .endif
 
+PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools
+
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:build
 
@@ -46,5 +47,6 @@ post-install:
 do-test:
 	cd ${WRKSRC}/testing && pytest-${PYVERSSUFFIX}
 
+.include "../../lang/python/versioned_dependencies.mk.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

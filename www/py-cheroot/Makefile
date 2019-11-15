@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/09/18 20:23:12 adam Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/15 14:22:15 wiz Exp $
 
 DISTNAME=	cheroot-6.5.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.cherrypy.org/
 COMMENT=	High-performance, pure-Python HTTP server used by CherryPy
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-more-itertools>=2.6:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm_git_archive>=1.0:../../devel/py-setuptools_scm_git_archive
@@ -42,5 +41,8 @@ post-install:
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
+PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools
+
+.include "../../lang/python/versioned_dependencies.mk.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
