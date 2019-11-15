@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/15 14:22:15 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/15 22:51:15 tnn Exp $
 
 DISTNAME=	CherryPy-17.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -34,6 +34,6 @@ do-test:
 
 PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools
 
-.include "../../lang/python/versioned_dependencies.mk.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
