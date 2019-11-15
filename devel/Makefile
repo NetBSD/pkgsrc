@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2952 2019/11/14 18:02:46 adam Exp $
+# $NetBSD: Makefile,v 1.2953 2019/11/15 14:02:01 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2234,6 +2234,7 @@ SUBDIR+=	py-mmh3
 SUBDIR+=	py-mock
 SUBDIR+=	py-modulegraph
 SUBDIR+=	py-more-itertools
+SUBDIR+=	py-more-itertools2
 SUBDIR+=	py-mox
 SUBDIR+=	py-msgpack
 SUBDIR+=	py-multipledispatch
