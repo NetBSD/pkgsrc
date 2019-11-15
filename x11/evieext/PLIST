@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/08/29 15:26:14 wiz Exp $
-include/X11/extensions/Xeviestr.h
-include/X11/extensions/evieproto.h
-lib/pkgconfig/evieproto.pc
