@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:55 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/15 09:05:56 wiz Exp $
 bin/gif2png
 bin/web2png
 man/man1/gif2png.1
