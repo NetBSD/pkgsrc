@@ -1,0 +1,15 @@
+$NetBSD: patch-man_Makefile.in,v 1.1 2019/11/15 11:09:15 sborrill Exp $
+
+Don't install pst2dii man page as binary is not installed
+
+--- man/Makefile.in.orig	2019-11-15 08:51:15.000000000 +0000
++++ man/Makefile.in	2019-11-15 08:52:12.000000000 +0000
+@@ -220,7 +220,7 @@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-man_MANS = readpst.1 pst2ldif.1 lspst.1 pst2dii.1 outlook.pst.5
++man_MANS = readpst.1 pst2ldif.1 lspst.1 outlook.pst.5
+ EXTRA_DIST = $(man_MANS)
+ all: all-am
+ 
