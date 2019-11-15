@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.861 2019/11/05 14:58:43 adam Exp $
+# $NetBSD: Makefile,v 1.862 2019/11/15 09:18:16 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -52,7 +52,6 @@ SUBDIR+=	elementary
 SUBDIR+=	elementary-icon-theme
 SUBDIR+=	enlightenment
 SUBDIR+=	eterm
-SUBDIR+=	evieext
 SUBDIR+=	fast-user-switch-applet
 SUBDIR+=	fbdesk
 SUBDIR+=	filerunner
