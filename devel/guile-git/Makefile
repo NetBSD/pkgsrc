@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/11/13 12:21:28 ng0 Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/15 15:56:03 ng0 Exp $
 
 DISTNAME=	guile-git-0.2.0
 CATEGORIES=	devel
@@ -10,7 +10,6 @@ COMMENT=	Guile bindings of libgit2
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c
 GUILE_NEED_BOOTSTRAP=	yes
 USE_TOOLS+=		pkg-config
 
