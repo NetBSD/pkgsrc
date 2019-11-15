@@ -2,7 +2,3 @@ pst-utils contains a set of tools to read and convert Outlook PST
 (Personal Folders) files. The main tools are:
  * readpst - convert PST files to mbox and other formats
  * lspst - list PST file data
-
-The package has been renamed from libpst to pst-utils to better
-reflect that its main purpose is to provide utilities rather than
-libraries for use by other packages.
