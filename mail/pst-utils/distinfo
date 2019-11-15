@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2019/11/15 11:09:15 sborrill Exp $
+
+SHA1 (libpst-0.6.72.tar.gz) = 520b555de8efadc251ce4d81bdde65f402003b16
+RMD160 (libpst-0.6.72.tar.gz) = 3b1010e410de21cf3d9e8cc238165ca072e51e0e
+SHA512 (libpst-0.6.72.tar.gz) = f2aeb2dc1b9d3e4e33bfddffac6dc3484e8bede432fdaf05a2250d375872db9514a16ff3e19aa823c674fc5ac82d03e257dc06b76e00195439077fd63657b5a5
+Size (libpst-0.6.72.tar.gz) = 14025331 bytes
+SHA1 (patch-configure) = 7c6eef14a77dd683b1c9afb3d631fed90a47a46c
+SHA1 (patch-man_Makefile.in) = 7217bbcc6476e2d99d87d7df8003d6328d99fdef
+SHA1 (patch-src_libpst.c) = dd43530de2c1117838aabc759ad90f9391390ae6
