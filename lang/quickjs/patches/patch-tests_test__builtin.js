@@ -1,8 +1,13 @@
-$NetBSD: patch-tests_test__builtin.js,v 1.1 2019/11/14 21:42:13 rillig Exp $
+$NetBSD: patch-tests_test__builtin.js,v 1.2 2019/11/15 20:51:24 rillig Exp $
 
 Disable tests that fail on NetBSD.
 
-rillig contacted Fabrice via mail on 2019-11-14.
+rillig contacted Fabrice via mail. Fabrice replied:
+> It is likely the tests fail because QuickJS relies on a the fact that
+> printf() should respect the current FP rounding mode when printing a
+> floating point number. There is no simple way to fix it, but it is not a
+> big issue. The fix will be not to depend on printf to convert floating
+> point numbers to string.
 
 --- tests/test_builtin.js.orig	2019-10-27 10:55:35.000000000 +0000
 +++ tests/test_builtin.js
