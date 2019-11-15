@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/11/13 11:43:54 ng0 Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/15 16:00:23 ng0 Exp $
 
 DISTNAME=	scheme-bytestructures-1.0.6
 PKGNAME=	${DISTNAME:S/scheme/guile/}
@@ -13,7 +13,6 @@ COMMENT=	Structured access to bytevector contents
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 
