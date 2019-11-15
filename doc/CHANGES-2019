@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4969 2019/11/15 11:09:03 adam Exp $
+$NetBSD: CHANGES-2019,v 1.4970 2019/11/15 11:10:59 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7949,3 +7949,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xorgproto to 2019.2nb2 [ryoon 2019-11-15]
 	Updated devel/py-test5 to 5.2.3 [adam 2019-11-15]
 	Updated devel/py-urwid to 2.1.0 [adam 2019-11-15]
+	Added mail/pst-utils version 0.6.72 [sborrill 2019-11-15]
