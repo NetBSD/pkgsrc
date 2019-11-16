@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.90 2019/08/11 15:38:22 ng0 Exp $
+# $NetBSD: Makefile,v 1.91 2019/11/16 17:36:28 ng0 Exp $
 
-DISTNAME=	xplanet-1.3.0
-PKGREVISION=	7
+# The 1.3.1 release is a few years old, and upstream recommends that
+# the head of svn be used.  However, we follow pkgsrc norms of
+# packaging releases, with some commits applied as patches.
+DISTNAME=	xplanet-1.3.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xplanet/}
 
@@ -11,15 +13,14 @@ COMMENT=	Rotating rendered map of the Earth in X11 root window
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++11
-USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		PERL=${_ENV_PERL:Q}
-_ENV_PERL=		${TOOLS_SETENV} perl
+USE_TOOLS+=		perl
+MAKE_ENV+=		PERL5=${PERL5:Q}
 
-# directory creation should be fixed in the future release of xplanet
-XPLANET_DIRS=		arcs config ephemeris fonts images markers origin
-XPLANET_DIRS+=		satellites scripts spice stars
-INSTALLATION_DIRS+=	${XPLANET_DIRS:C,.*,share/xplanet/&,g}
+# \todo Fix Native PNM support
+CONFIGURE_ARGS+=	--without-pnm
+# \todo Remove when https://github.com/OpenSpace/Spice is in pkgsrc
+CONFIGURE_ARGS+=	ac_cv_lib_cspice_furnsh_c=no
 
 .include "options.mk"
 
