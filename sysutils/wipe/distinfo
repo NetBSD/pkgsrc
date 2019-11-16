@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 01:32:38 agc Exp $
+$NetBSD: distinfo,v 1.9 2019/11/16 10:14:15 mef Exp $
 
-SHA1 (wipe-2.2.0.tar.bz2) = 4dd18f260ecd91b726336b2788fa33db04d6691a
-RMD160 (wipe-2.2.0.tar.bz2) = 5d1861bd893e01e94205a7ac2efadb1c756da700
-SHA512 (wipe-2.2.0.tar.bz2) = 5d156712b07b579018324b714dad2d3fae3c3cac1a9b1fd76ec44596b9d738bb3e460dedf23898e12ed87ee5dced28d1792c905c9869756914e21ad95efbbbbb
-Size (wipe-2.2.0.tar.bz2) = 70134 bytes
-SHA1 (patch-aa) = 4d84f400528b88f376a374f159b72da4237f3b33
-SHA1 (patch-ab) = 3116ad02dd0a3514afec440e46ab679395e4bbaa
-SHA1 (patch-ac) = df59d51a7ee781fd439db1bf2284fb34e26fb8fb
-SHA1 (patch-ad) = 6288118d9b4a70844bbc94a8e9dc4748fc9459f8
-SHA1 (patch-ae) = e1145c395a9b0999d7fbf8a4cb79f1dc89aa29e1
-SHA1 (patch-af) = 23102dea6f821791d5b3bd2bb509c38ab6bf2a16
-SHA1 (patch-ag) = fd61d6b065eb22cabb697f2df073a3b9efde26a9
+SHA1 (wipe-2.3.1.tar.bz2) = 72aa8bcbeb54deb676ae08af78401132860703de
+RMD160 (wipe-2.3.1.tar.bz2) = 313c140a2ea6f2c81a0b4d90974c8581ba0b14db
+SHA512 (wipe-2.3.1.tar.bz2) = 63870e68fa5dbf90abb686052f8dcc216ccb93b0c4f5cc10d60ccf43f3606ba91b46dc1e3d8b34d201f7ea657f70b45a61d5d04facf5b2a3e47d2286c46e7110
+Size (wipe-2.3.1.tar.bz2) = 72297 bytes
+SHA1 (patch-aa) = d4045fb2cfb620f0cbf7f5b767b42805389875a5
+SHA1 (patch-ab) = c870f718cbba7e633dd2a2e6e6da20d2dd942c26
+SHA1 (patch-ac) = 742517caf37193a254245685d5d7cd990caab7a5
+SHA1 (patch-ad) = 8867747f6e91d28e507de3b24c9436e3756d3652
+SHA1 (patch-ae) = 9785777c93b3c2fb357fcca4ba73f2f5bf5a8329
+SHA1 (patch-af) = 98c17d8fcb00b2e4327294dd26b367b874eacfe2
+SHA1 (patch-ag) = 1c2944e07724c27abbd4c966822159e649ac786a
 SHA1 (patch-ah) = 362b9f59453baa4d8632d895a2f3a530ba9ca652
