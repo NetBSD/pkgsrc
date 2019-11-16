@@ -1,0 +1,482 @@
+$NetBSD: patch-XSA305,v 1.2.2.2 2019/11/16 22:10:07 bsiegert Exp $
+
+From: Andrew Cooper <andrew.cooper3@citrix.com>
+Subject: x86/tsx: Introduce tsx= to use MSR_TSX_CTRL when available
+
+To protect against the TSX Async Abort speculative vulnerability, Intel have
+released new microcode for affected parts which introduce the MSR_TSX_CTRL
+control, which allows TSX to be turned off.  This will be architectural on
+future parts.
+
+Introduce tsx= to provide a global on/off for TSX, including its enumeration
+via CPUID.  Provide stub virtualisation of this MSR, as it is not exposed to
+guests at the moment.
+
+VMs may have booted before microcode is loaded, or before hosts have rebooted,
+and they still want to migrate freely.  A VM which booted seeing TSX can
+migrate safely to hosts with TSX disabled - TSX will start unconditionally
+aborting, but still behave in a manner compatible with the ABI.
+
+The guest-visible behaviour is equivalent to late loading the microcode and
+setting the RTM_DISABLE bit in the course of live patching.
+
+This is part of XSA-305 / CVE-2019-11135
+
+Signed-off-by: Andrew Cooper <andrew.cooper3@citrix.com>
+Reviewed-by: Jan Beulich <jbeulich@suse.com>
+
+diff --git a/docs/misc/xen-command-line.markdown b/docs/misc/xen-command-line.markdown
+index 684671cb7b..b86d26399a 100644
+--- docs/misc/xen-command-line.markdown.orig
++++ docs/misc/xen-command-line.markdown
+@@ -1948,6 +1948,20 @@ pages) must also be specified via the tbuf\_size parameter.
+ ### tsc (x86)
+ > `= unstable | skewed | stable:socket`
+ 
++### tsx
++    = <bool>
++
++    Applicability: x86
++    Default: true
++
++Controls for the use of Transactional Synchronization eXtensions.
++
++On Intel parts released in Q3 2019 (with updated microcode), and future parts,
++a control has been introduced which allows TSX to be turned off.
++
++On systems with the ability to turn TSX off, this boolean offers system wide
++control of whether TSX is enabled or disabled.
++
+ ### ucode (x86)
+ > `= [<integer> | scan]`
+ 
+diff --git a/xen/arch/x86/Makefile b/xen/arch/x86/Makefile
+index da1e4827f4..4c82d9f710 100644
+--- xen/arch/x86/Makefile.orig
++++ xen/arch/x86/Makefile
+@@ -65,6 +65,7 @@ obj-y += sysctl.o
+ obj-y += time.o
+ obj-y += trace.o
+ obj-y += traps.o
++obj-y += tsx.o
+ obj-y += usercopy.o
+ obj-y += x86_emulate.o
+ obj-$(CONFIG_TBOOT) += tboot.o
+diff --git a/xen/arch/x86/cpuid.c b/xen/arch/x86/cpuid.c
+index 5e11970701..04aefa555d 100644
+--- xen/arch/x86/cpuid.c.orig
++++ xen/arch/x86/cpuid.c
+@@ -622,6 +622,20 @@ void recalculate_cpuid_policy(struct domain *d)
+     if ( cpu_has_itsc && (d->disable_migrate || d->arch.vtsc) )
+         __set_bit(X86_FEATURE_ITSC, max_fs);
+ 
++    /*
++     * On hardware with MSR_TSX_CTRL, the admin may have elected to disable
++     * TSX and hide the feature bits.  Migrating-in VMs may have been booted
++     * pre-mitigation when the TSX features were visbile.
++     *
++     * This situation is compatible (albeit with a perf hit to any TSX code in
++     * the guest), so allow the feature bits to remain set.
++     */
++    if ( cpu_has_tsx_ctrl )
++    {
++        __set_bit(X86_FEATURE_HLE, max_fs);
++        __set_bit(X86_FEATURE_RTM, max_fs);
++    }
++
+     /* Clamp the toolstacks choices to reality. */
+     for ( i = 0; i < ARRAY_SIZE(fs); i++ )
+         fs[i] &= max_fs[i];
+diff --git a/xen/arch/x86/msr.c b/xen/arch/x86/msr.c
+index ebc0665615..35d99a98a1 100644
+--- xen/arch/x86/msr.c.orig
++++ xen/arch/x86/msr.c
+@@ -153,6 +153,7 @@ int guest_rdmsr(const struct vcpu *v, uint32_t msr, uint64_t *val)
+     case MSR_FLUSH_CMD:
+         /* Write-only */
+     case MSR_TSX_FORCE_ABORT:
++    case MSR_TSX_CTRL:
+         /* Not offered to guests. */
+         goto gp_fault;
+ 
+@@ -233,6 +234,7 @@ int guest_wrmsr(struct vcpu *v, uint32_t msr, uint64_t val)
+     case MSR_ARCH_CAPABILITIES:
+         /* Read-only */
+     case MSR_TSX_FORCE_ABORT:
++    case MSR_TSX_CTRL:
+         /* Not offered to guests. */
+         goto gp_fault;
+ 
+diff --git a/xen/arch/x86/setup.c b/xen/arch/x86/setup.c
+index 657160549f..dc13ad6c36 100644
+--- xen/arch/x86/setup.c.orig
++++ xen/arch/x86/setup.c
+@@ -1551,6 +1551,8 @@ void __init noreturn __start_xen(unsigned long mbi_p)
+ 
+     early_microcode_init();
+ 
++    tsx_init(); /* Needs microcode.  May change HLE/RTM feature bits. */
++
+     identify_cpu(&boot_cpu_data);
+ 
+     set_in_cr4(X86_CR4_OSFXSR | X86_CR4_OSXMMEXCPT);
+diff --git a/xen/arch/x86/smpboot.c b/xen/arch/x86/smpboot.c
+index fd52a10cf9..bdc118d88b 100644
+--- xen/arch/x86/smpboot.c.orig
++++ xen/arch/x86/smpboot.c
+@@ -376,6 +376,8 @@ void start_secondary(void *unused)
+     if ( boot_cpu_has(X86_FEATURE_IBRSB) )
+         wrmsrl(MSR_SPEC_CTRL, default_xen_spec_ctrl);
+ 
++    tsx_init(); /* Needs microcode.  May change HLE/RTM feature bits. */
++
+     if ( xen_guest )
+         hypervisor_ap_setup();
+ 
+diff --git a/xen/arch/x86/tsx.c b/xen/arch/x86/tsx.c
+new file mode 100644
+index 0000000000..a8ec2ccc69
+--- /dev/null
++++ xen/arch/x86/tsx.c
+@@ -0,0 +1,74 @@
++#include <xen/init.h>
++#include <asm/msr.h>
++
++/*
++ * Valid values:
++ *   1 => Explicit tsx=1
++ *   0 => Explicit tsx=0
++ *  -1 => Default, implicit tsx=1
++ *
++ * This is arranged such that the bottom bit encodes whether TSX is actually
++ * disabled, while identifying various explicit (>=0) and implicit (<0)
++ * conditions.
++ */
++int8_t __read_mostly opt_tsx = -1;
++int8_t __read_mostly cpu_has_tsx_ctrl = -1;
++
++static int __init parse_tsx(const char *s)
++{
++    int rc = 0, val = parse_bool(s, NULL);
++
++    if ( val >= 0 )
++        opt_tsx = val;
++    else
++        rc = -EINVAL;
++
++    return rc;
++}
++custom_param("tsx", parse_tsx);
++
++void tsx_init(void)
++{
++    /*
++     * This function is first called between microcode being loaded, and CPUID
++     * being scanned generally.  Calculate from raw data whether MSR_TSX_CTRL
++     * is available.
++     */
++    if ( unlikely(cpu_has_tsx_ctrl < 0) )
++    {
++        uint64_t caps = 0;
++
++        if ( boot_cpu_data.cpuid_level >= 7 &&
++             (cpuid_count_edx(7, 0) & cpufeat_mask(X86_FEATURE_ARCH_CAPS)) )
++            rdmsrl(MSR_ARCH_CAPABILITIES, caps);
++
++        cpu_has_tsx_ctrl = !!(caps & ARCH_CAPS_TSX_CTRL);
++    }
++
++    if ( cpu_has_tsx_ctrl )
++    {
++        uint64_t val;
++
++        rdmsrl(MSR_TSX_CTRL, val);
++
++        val &= ~(TSX_CTRL_RTM_DISABLE | TSX_CTRL_CPUID_CLEAR);
++        /* Check bottom bit only.  Higher bits are various sentinals. */
++        if ( !(opt_tsx & 1) )
++            val |= TSX_CTRL_RTM_DISABLE | TSX_CTRL_CPUID_CLEAR;
++
++        wrmsrl(MSR_TSX_CTRL, val);
++    }
++    else if ( opt_tsx >= 0 )
++        printk_once(XENLOG_WARNING
++                    "MSR_TSX_CTRL not available - Ignoring tsx= setting\n");
++}
++
++/*
++ * Local variables:
++ * mode: C
++ * c-file-style: "BSD"
++ * c-basic-offset: 4
++ * tab-width: 4
++ * indent-tabs-mode: nil
++ * End:
++ */
+diff --git a/xen/include/asm-x86/msr-index.h b/xen/include/asm-x86/msr-index.h
+index 89ae3e03f1..5ee7a37c12 100644
+--- xen/include/asm-x86/msr-index.h.orig
++++ xen/include/asm-x86/msr-index.h
+@@ -55,6 +55,7 @@
+ #define ARCH_CAPS_SSB_NO		(_AC(1, ULL) << 4)
+ #define ARCH_CAPS_MDS_NO		(_AC(1, ULL) << 5)
+ #define ARCH_CAPS_IF_PSCHANGE_MC_NO	(_AC(1, ULL) << 6)
++#define ARCH_CAPS_TSX_CTRL		(_AC(1, ULL) << 7)
+ 
+ #define MSR_FLUSH_CMD			0x0000010b
+ #define FLUSH_CMD_L1D			(_AC(1, ULL) << 0)
+@@ -62,6 +63,10 @@
+ #define MSR_TSX_FORCE_ABORT             0x0000010f
+ #define TSX_FORCE_ABORT_RTM             (_AC(1, ULL) <<  0)
+ 
++#define MSR_TSX_CTRL                    0x00000122
++#define TSX_CTRL_RTM_DISABLE            (_AC(1, ULL) <<  0)
++#define TSX_CTRL_CPUID_CLEAR            (_AC(1, ULL) <<  1)
++
+ /* Intel MSRs. Some also available on other CPUs */
+ #define MSR_IA32_PERFCTR0		0x000000c1
+ #define MSR_IA32_A_PERFCTR0		0x000004c1
+diff --git a/xen/include/asm-x86/processor.h b/xen/include/asm-x86/processor.h
+index 20d1ecb332..66224f23b9 100644
+--- xen/include/asm-x86/processor.h.orig
++++ xen/include/asm-x86/processor.h
+@@ -258,6 +258,16 @@ static always_inline unsigned int cpuid_count_ebx(
+     return ebx;
+ }
+ 
++static always_inline unsigned int cpuid_count_edx(
++    unsigned int leaf, unsigned int subleaf)
++{
++    unsigned int edx, tmp;
++
++    cpuid_count(leaf, subleaf, &tmp, &tmp, &tmp, &edx);
++
++    return edx;
++}
++
+ static always_inline void cpuid_count_leaf(uint32_t leaf, uint32_t subleaf,
+                                            struct cpuid_leaf *data)
+ {
+@@ -610,6 +620,9 @@ static inline uint8_t get_cpu_family(uint32_t raw, uint8_t *model,
+     return fam;
+ }
+ 
++extern int8_t opt_tsx, cpu_has_tsx_ctrl;
++void tsx_init(void);
++
+ #endif /* !__ASSEMBLY__ */
+ 
+ #endif /* __ASM_X86_PROCESSOR_H */
+diff --git a/xen/include/xen/lib.h b/xen/include/xen/lib.h
+index 750f809968..be223a6950 100644
+--- xen/include/xen/lib.h.orig
++++ xen/include/xen/lib.h
+@@ -116,6 +116,16 @@ extern int printk_ratelimit(void);
+ #define gprintk(lvl, fmt, args...) \
+     printk(XENLOG_GUEST lvl "%pv " fmt, current, ## args)
+ 
++#define printk_once(fmt, args...)               \
++({                                              \
++    static bool __read_mostly once_;            \
++    if ( unlikely(!once_) )                     \
++    {                                           \
++        once_ = true;                           \
++        printk(fmt, ## args);                   \
++    }                                           \
++})
++
+ #ifdef NDEBUG
+ 
+ static inline void
+From: Andrew Cooper <andrew.cooper3@citrix.com>
+Subject: x86/spec-ctrl: Mitigate the TSX Asynchronous Abort sidechannel
+
+See patch documentation and comments.
+
+This is part of XSA-305 / CVE-2019-11135
+
+Signed-off-by: Andrew Cooper <andrew.cooper3@citrix.com>
+Reviewed-by: Jan Beulich <jbeulich@suse.com>
+
+diff --git a/docs/misc/xen-command-line.markdown b/docs/misc/xen-command-line.markdown
+index b86d26399a..31635a473a 100644
+--- docs/misc/xen-command-line.markdown.orig
++++ docs/misc/xen-command-line.markdown
+@@ -1841,7 +1841,7 @@ extreme care.**
+ An overall boolean value, `spec-ctrl=no`, can be specified to turn off all
+ mitigations, including pieces of infrastructure used to virtualise certain
+ mitigation features for guests.  This also includes settings which `xpti`,
+-`smt`, `pv-l1tf` control, unless the respective option(s) have been
++`smt`, `pv-l1tf`, `tsx` control, unless the respective option(s) have been
+ specified earlier on the command line.
+ 
+ Alternatively, a slightly more restricted `spec-ctrl=no-xen` can be used to
+@@ -1952,7 +1952,7 @@ pages) must also be specified via the tbuf\_size parameter.
+     = <bool>
+ 
+     Applicability: x86
+-    Default: true
++    Default: false on parts vulnerable to TAA, true otherwise
+ 
+ Controls for the use of Transactional Synchronization eXtensions.
+ 
+@@ -1962,6 +1962,19 @@ a control has been introduced which allows TSX to be turned off.
+ On systems with the ability to turn TSX off, this boolean offers system wide
+ control of whether TSX is enabled or disabled.
+ 
++On parts vulnerable to CVE-2019-11135 / TSX Asynchronous Abort, the following
++logic applies:
++
++ * An explicit `tsx=` choice is honoured, even if it is `true` and would
++   result in a vulnerable system.
++
++ * When no explicit `tsx=` choice is given, parts vulnerable to TAA will be
++   mitigated by disabling TSX, as this is the lowest overhead option.
++
++ * If the use of TSX is important, the more expensive TAA mitigations can be
++   opted in to with `smt=0 spec-ctrl=md-clear`, at which point TSX will remain
++   active by default.
++
+ ### ucode (x86)
+ > `= [<integer> | scan]`
+ 
+diff --git a/xen/arch/x86/spec_ctrl.c b/xen/arch/x86/spec_ctrl.c
+index 2fe16b423d..ab196b156d 100644
+--- xen/arch/x86/spec_ctrl.c.orig
++++ xen/arch/x86/spec_ctrl.c
+@@ -152,6 +152,9 @@ static int __init parse_spec_ctrl(const char *s)
+             if ( opt_pv_l1tf_domu < 0 )
+                 opt_pv_l1tf_domu = 0;
+ 
++            if ( opt_tsx == -1 )
++                opt_tsx = -3;
++
+         disable_common:
+             opt_rsb_pv = false;
+             opt_rsb_hvm = false;
+@@ -362,7 +365,7 @@ static void __init print_details(enum ind_thunk thunk, uint64_t caps)
+     printk("Speculative mitigation facilities:\n");
+ 
+     /* Hardware features which pertain to speculative mitigations. */
+-    printk("  Hardware features:%s%s%s%s%s%s%s%s%s%s%s%s\n",
++    printk("  Hardware features:%s%s%s%s%s%s%s%s%s%s%s%s%s%s\n",
+            (_7d0 & cpufeat_mask(X86_FEATURE_IBRSB)) ? " IBRS/IBPB" : "",
+            (_7d0 & cpufeat_mask(X86_FEATURE_STIBP)) ? " STIBP"     : "",
+            (_7d0 & cpufeat_mask(X86_FEATURE_L1D_FLUSH)) ? " L1D_FLUSH" : "",
+@@ -374,7 +377,9 @@ static void __init print_details(enum ind_thunk thunk, uint64_t caps)
+            (caps & ARCH_CAPS_RSBA)                  ? " RSBA"      : "",
+            (caps & ARCH_CAPS_SKIP_L1DFL)            ? " SKIP_L1DFL": "",
+            (caps & ARCH_CAPS_SSB_NO)                ? " SSB_NO"    : "",
+-           (caps & ARCH_CAPS_MDS_NO)                ? " MDS_NO"    : "");
++           (caps & ARCH_CAPS_MDS_NO)                ? " MDS_NO"    : "",
++           (caps & ARCH_CAPS_TSX_CTRL)              ? " TSX_CTRL"  : "",
++           (caps & ARCH_CAPS_TAA_NO)                ? " TAA_NO"    : "");
+ 
+     /* Compiled-in support which pertains to mitigations. */
+     if ( IS_ENABLED(CONFIG_INDIRECT_THUNK) || IS_ENABLED(CONFIG_SHADOW_PAGING) )
+@@ -388,7 +393,7 @@ static void __init print_details(enum ind_thunk thunk, uint64_t caps)
+                "\n");
+ 
+     /* Settings for Xen's protection, irrespective of guests. */
+-    printk("  Xen settings: BTI-Thunk %s, SPEC_CTRL: %s%s, Other:%s%s%s\n",
++    printk("  Xen settings: BTI-Thunk %s, SPEC_CTRL: %s%s%s, Other:%s%s%s\n",
+            thunk == THUNK_NONE      ? "N/A" :
+            thunk == THUNK_RETPOLINE ? "RETPOLINE" :
+            thunk == THUNK_LFENCE    ? "LFENCE" :
+@@ -397,6 +402,8 @@ static void __init print_details(enum ind_thunk thunk, uint64_t caps)
+            (default_xen_spec_ctrl & SPEC_CTRL_IBRS)  ? "IBRS+" :  "IBRS-",
+            !boot_cpu_has(X86_FEATURE_SSBD)           ? "" :
+            (default_xen_spec_ctrl & SPEC_CTRL_SSBD)  ? " SSBD+" : " SSBD-",
++           !(caps & ARCH_CAPS_TSX_CTRL)              ? "" :
++           (opt_tsx & 1)                             ? " TSX+" : " TSX-",
+            opt_ibpb                                  ? " IBPB"  : "",
+            opt_l1d_flush                             ? " L1D_FLUSH" : "",
+            opt_md_clear_pv || opt_md_clear_hvm       ? " VERW"  : "");
+@@ -911,6 +918,7 @@ void __init init_speculation_mitigations(void)
+ {
+     enum ind_thunk thunk = THUNK_DEFAULT;
+     bool use_spec_ctrl = false, ibrs = false, hw_smt_enabled;
++    bool cpu_has_bug_taa;
+     uint64_t caps = 0;
+ 
+     if ( boot_cpu_has(X86_FEATURE_ARCH_CAPS) )
+@@ -1140,6 +1148,53 @@ void __init init_speculation_mitigations(void)
+             "enabled.  Mitigations will not be fully effective.  Please\n"
+             "choose an explicit smt=<bool> setting.  See XSA-297.\n");
+ 
++    /*
++     * Vulnerability to TAA is a little complicated to quantify.
++     *
++     * In the pipeline, it is just another way to get speculative access to
++     * stale load port, store buffer or fill buffer data, and therefore can be
++     * considered a superset of MDS (on TSX-capable parts).  On parts which
++     * predate MDS_NO, the existing VERW flushing will mitigate this
++     * sidechannel as well.
++     *
++     * On parts which contain MDS_NO, the lack of VERW flushing means that an
++     * attacker can still use TSX to target microarchitectural buffers to leak
++     * secrets.  Therefore, we consider TAA to be the set of TSX-capable parts
++     * which have MDS_NO but lack TAA_NO.
++     *
++     * Note: cpu_has_rtm (== hle) could already be hidden by `tsx=0` on the
++     *       cmdline.  MSR_TSX_CTRL will only appear on TSX-capable parts, so
++     *       we check both to spot TSX in a microcode/cmdline independent way.
++     */
++    cpu_has_bug_taa =
++        (cpu_has_rtm || (caps & ARCH_CAPS_TSX_CTRL)) &&
++        (caps & (ARCH_CAPS_MDS_NO | ARCH_CAPS_TAA_NO)) == ARCH_CAPS_MDS_NO;
++
++    /*
++     * On TAA-affected hardware, disabling TSX is the preferred mitigation, vs
++     * the MDS mitigation of disabling HT and using VERW flushing.
++     *
++     * On CPUs which advertise MDS_NO, VERW has no flushing side effect until
++     * the TSX_CTRL microcode is loaded, despite the MD_CLEAR CPUID bit being
++     * advertised, and there isn't a MD_CLEAR_2 flag to use...
++     *
++     * If we're on affected hardware, able to do something about it (which
++     * implies that VERW now works), no explicit TSX choice and traditional
++     * MDS mitigations (no-SMT, VERW) not obviosuly in use (someone might
++     * plausibly value TSX higher than Hyperthreading...), disable TSX to
++     * mitigate TAA.
++     */
++    if ( opt_tsx == -1 && cpu_has_bug_taa && (caps & ARCH_CAPS_TSX_CTRL) &&
++         ((hw_smt_enabled && opt_smt) ||
++          !boot_cpu_has(X86_FEATURE_SC_VERW_IDLE)) )
++    {
++        setup_clear_cpu_cap(X86_FEATURE_HLE);
++        setup_clear_cpu_cap(X86_FEATURE_RTM);
++
++        opt_tsx = 0;
++        tsx_init();
++    }
++
+     print_details(thunk, caps);
+ 
+     /*
+diff --git a/xen/arch/x86/tsx.c b/xen/arch/x86/tsx.c
+index a8ec2ccc69..2d202a0d4e 100644
+--- xen/arch/x86/tsx.c.orig
++++ xen/arch/x86/tsx.c
+@@ -5,7 +5,8 @@
+  * Valid values:
+  *   1 => Explicit tsx=1
+  *   0 => Explicit tsx=0
+- *  -1 => Default, implicit tsx=1
++ *  -1 => Default, implicit tsx=1, may change to 0 to mitigate TAA
++ *  -3 => Implicit tsx=1 (feed-through from spec-ctrl=0)
+  *
+  * This is arranged such that the bottom bit encodes whether TSX is actually
+  * disabled, while identifying various explicit (>=0) and implicit (<0)
+diff --git a/xen/include/asm-x86/msr-index.h b/xen/include/asm-x86/msr-index.h
+index 5ee7a37c12..1761a01f1f 100644
+--- xen/include/asm-x86/msr-index.h.orig
++++ xen/include/asm-x86/msr-index.h
+@@ -56,6 +56,7 @@
+ #define ARCH_CAPS_MDS_NO		(_AC(1, ULL) << 5)
+ #define ARCH_CAPS_IF_PSCHANGE_MC_NO	(_AC(1, ULL) << 6)
+ #define ARCH_CAPS_TSX_CTRL		(_AC(1, ULL) << 7)
++#define ARCH_CAPS_TAA_NO		(_AC(1, ULL) << 8)
+ 
+ #define MSR_FLUSH_CMD			0x0000010b
+ #define FLUSH_CMD_L1D			(_AC(1, ULL) << 0)
