@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4977 2019/11/16 03:01:17 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.4978 2019/11/16 10:14:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7962,3 +7962,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/p5-Devel-CheckLib to 1.14 [mef 2019-11-16]
 	Updated devel/p5-Devel-PatchPerl to 1.78 [mef 2019-11-16]
 	Updated net/mikutter to 3.9.7 [tsutsui 2019-11-16]
+	Updated sysutils/wipe to 2.3.1 [mef 2019-11-16]
