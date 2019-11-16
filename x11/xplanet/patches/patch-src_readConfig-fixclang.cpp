@@ -1,4 +1,5 @@
-$NetBSD: patch-src_readConfig-fixclang.cpp,v 1.1 2019/08/11 15:38:22 ng0 Exp $
+$NetBSD: patch-src_readConfig-fixclang.cpp,v 1.2 2019/11/16 17:36:28 ng0 Exp $
+
 This patch has been imported from FreeBSD ports, written by adridg.
 
 The later chunks (using i2b) are compile fixes on aarch64 (presumably with
