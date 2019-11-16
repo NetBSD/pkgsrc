@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4975 2019/11/15 14:40:04 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.4976 2019/11/16 00:49:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7957,3 +7957,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-colored to 1.4.0 [adam 2019-11-15]
 	Updated textproc/py-regex to 2019.11.1 [adam 2019-11-15]
 	Updated mail/pst-utils to 0.6.72nb1 [wiz 2019-11-15]
+	Updated devel/p5-Log-Report to 1.29 [mef 2019-11-16]
+	Updated devel/p5-Future to 0.42 [mef 2019-11-16]
+	Updated devel/p5-Devel-CheckLib to 1.14 [mef 2019-11-16]
+	Updated devel/p5-Devel-PatchPerl to 1.78 [mef 2019-11-16]
