@@ -1,13 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2005/11/10 16:31:25 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2019/11/16 10:14:15 mef Exp $
 
---- main.c.orig	2005-11-10 16:11:18.000000000 +0000
-+++ main.c
-@@ -49,8 +49,6 @@
+date: 2005-11-11 01:31:25 +0900;  author: joerg;  state: Exp;
+Depend on errno.h for errno.
+
+--- main.c.orig	2009-06-15 12:53:53.000000000 +0900
++++ main.c	2019-11-16 19:00:22.708537629 +0900
+@@ -52,8 +52,6 @@
  char *argvzero;
  int exit_code;
  
 -extern int errno;
 -
  struct opt_s options;                 /* cmd line options                        */
- 
- public int main(int argc, char **argv)
+ struct rename_s rns;
+ struct sigaction sigact;

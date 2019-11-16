@@ -1,12 +1,15 @@
-$NetBSD: patch-ac,v 1.1 2005/11/10 16:31:25 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2019/11/16 10:14:15 mef Exp $
 
---- wipe.c.orig	2005-11-10 16:11:51.000000000 +0000
-+++ wipe.c
-@@ -55,7 +55,6 @@
+date: 2005-11-11 01:31:25 +0900;  author: joerg;  state: Exp;
+Depend on errno.h for errno.
+
+--- wipe.c.orig	2009-06-15 12:07:00.000000000 +0900
++++ wipe.c	2019-11-16 19:01:20.812061117 +0900
+@@ -56,7 +56,6 @@
  #include "rand.h"
  #include "wipe.h"
  
 -extern int errno;
  extern int exit_code;
  extern char *argvzero;
- extern struct opt_s options;
+ extern struct rename_s rns;
