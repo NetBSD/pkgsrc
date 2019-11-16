@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4981 2019/11/16 12:48:48 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4982 2019/11/16 13:23:33 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -7966,3 +7966,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/p5-File-Copy-Recursive to 0.45 [mef 2019-11-16]
 	Updated sysutils/zabbix to 4.0.9nb4 [he 2019-11-16]
 	Updated cad/gtkwave to 3.3.103 [mef 2019-11-16]
+	Updated textproc/libxls to 1.5.2 [sjmulder 2019-11-16]
