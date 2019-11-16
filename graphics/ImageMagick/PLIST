@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.105 2019/01/29 09:52:27 leot Exp $
+@comment $NetBSD: PLIST,v 1.105.6.1 2019/11/16 22:09:58 bsiegert Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -151,7 +151,7 @@ include/ImageMagick-7/MagickWand/pixel-wand.h
 include/ImageMagick-7/MagickWand/stream.h
 include/ImageMagick-7/MagickWand/wand-view.h
 include/ImageMagick-7/MagickWand/wandcli.h
-lib/ImageMagick-7.0.8/config-Q16HDRI/configure.xml
+lib/ImageMagick-7.0.9/config-Q16HDRI/configure.xml
 lib/libMagick++-7.Q16HDRI.la
 lib/libMagickCore-7.Q16HDRI.la
 lib/libMagickWand-7.Q16HDRI.la
