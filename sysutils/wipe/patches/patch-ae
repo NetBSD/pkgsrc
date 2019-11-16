@@ -1,7 +1,10 @@
-$NetBSD: patch-ae,v 1.1 2005/11/10 16:31:25 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2019/11/16 10:14:15 mef Exp $
 
---- dir.c.orig	2005-11-10 16:13:27.000000000 +0000
-+++ dir.c
+date: 2005-11-11 01:31:25 +0900;  author: joerg;  state: Exp;
+Depend on errno.h for errno.
+
+--- dir.c.orig	2009-06-16 11:38:20.000000000 +0900
++++ dir.c	2019-11-16 19:10:59.620534303 +0900
 @@ -46,7 +46,6 @@
  #include "io.h"
  #include "dir.h"
@@ -9,4 +12,4 @@ $NetBSD: patch-ae,v 1.1 2005/11/10 16:31:25 joerg Exp $
 -extern int errno;
  extern int exit_code;
  extern char *argvzero;
- extern struct opt_s options;
+ extern struct rename_s rns;
