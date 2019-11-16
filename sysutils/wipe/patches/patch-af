@@ -1,7 +1,10 @@
-$NetBSD: patch-af,v 1.1 2005/11/10 16:31:25 joerg Exp $
+$NetBSD: patch-af,v 1.2 2019/11/16 10:14:15 mef Exp $
 
---- file.c.orig	2005-11-10 16:13:33.000000000 +0000
-+++ file.c
+date: 2005-11-11 01:31:25 +0900;  author: joerg;  state: Exp;
+Depend on errno.h for errno.
+ 
+--- file.c.orig	2009-05-04 14:05:42.000000000 +0900
++++ file.c	2019-11-16 19:04:00.588624480 +0900
 @@ -43,7 +43,6 @@
  #include "prompt.h"
  #include "wipe.h"
@@ -9,4 +12,4 @@ $NetBSD: patch-af,v 1.1 2005/11/10 16:31:25 joerg Exp $
 -extern int errno;
  extern int exit_code;
  extern char *argvzero;
- 
+ extern struct rename_s rns;
