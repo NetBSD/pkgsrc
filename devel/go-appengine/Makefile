@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/09/26 20:10:46 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11.2.1 2019/11/17 08:30:04 spz Exp $
 
 DISTNAME=	appengine-1.1.0
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=	${PKGBASE:S/^go-//}
