@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2019/11/17 17:56:48 nia Exp $
+
+SHA1 (iortcw-1.51c.tar.gz) = a418f9747f3250ad855885368924dead48006909
+RMD160 (iortcw-1.51c.tar.gz) = db33fd67b58b7163864c6b434a86f4cdd58fb308
+SHA512 (iortcw-1.51c.tar.gz) = bed985e00ba117bfe8c5fae20671575af2fa1c2eeaaba9ef69e6b82485d883084138f7f949299cfdad8171b40209d9baf111879acfd01e5eae16859b63ce77c6
+Size (iortcw-1.51c.tar.gz) = 27246236 bytes
+SHA1 (patch-MP_Makefile) = d1e7ab17dac10a923396bfe71c82deac97ffe1af
+SHA1 (patch-MP_code_qcommon_q__platform.h) = 5bd7cb759a1072589401dae7f13517ecf03e111d
+SHA1 (patch-SP_Makefile) = 61da55b573bebc4349cba29aacf31193736e2a9d
+SHA1 (patch-SP_code_qcommon_q__platform.h) = 69308492c4ac5f928ded4359b1a96b09801dabf7
