@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/17 05:34:51 markd Exp $
+
+SHA1 (kimap-19.08.3.tar.xz) = 2ab1b953f2bd7286ca0b277edc6bd8d2a2a140d8
+RMD160 (kimap-19.08.3.tar.xz) = 307cba5a17cb0fafe5312336e7a326fdc0c7ff70
+SHA512 (kimap-19.08.3.tar.xz) = 6a3bea5e4f442783fc4ab7b1f8b4425d75638edcdbb3c6f1d8c86e050b4b80deedca987cb868dc1190b126f04c70c55d660d2822929639ed70c359608543ea91
+Size (kimap-19.08.3.tar.xz) = 119512 bytes
