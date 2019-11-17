@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/17 05:38:04 markd Exp $
+include/KF5/KMbox/KMbox/MBox
+include/KF5/KMbox/KMbox/MBoxEntry
+include/KF5/KMbox/kmbox/kmbox_export.h
+include/KF5/KMbox/kmbox/mbox.h
+include/KF5/KMbox/kmbox/mboxentry.h
+include/KF5/kmbox_version.h
+lib/cmake/KF5Mbox/KF5MboxConfig.cmake
+lib/cmake/KF5Mbox/KF5MboxConfigVersion.cmake
+lib/cmake/KF5Mbox/KF5MboxTargets-noconfig.cmake
+lib/cmake/KF5Mbox/KF5MboxTargets.cmake
+lib/libKF5Mbox.so
+lib/libKF5Mbox.so.5
+lib/libKF5Mbox.so.5.12.3
+qt5/mkspecs/modules/qt_Mbox.pri
+share/qlogging-categories5/kmbox.categories
+share/qlogging-categories5/kmbox.renamecategories
