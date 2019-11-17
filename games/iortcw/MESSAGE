@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/11/17 17:56:48 nia Exp $
+
+The .pk3 files from a copy of Return to Castle Wolfenstein are needed
+to play iortcw.
+
+They should be copied to ~/.wolf/main.
+
+===========================================================================
