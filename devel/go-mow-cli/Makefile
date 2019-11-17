@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2019/09/26 20:10:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19.2.1 2019/11/17 08:30:10 spz Exp $
 
 DISTNAME=	go-mow-cli-0.0.20160221
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jawher/}
 GITHUB_PROJECT=	mow.cli
