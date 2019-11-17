@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1069 2019/11/14 09:25:47 wiz Exp $
+# $NetBSD: Makefile,v 1.1070 2019/11/17 06:03:09 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -382,6 +382,7 @@ SUBDIR+=	kapidox
 SUBDIR+=	kbanner
 SUBDIR+=	kcodecs
 SUBDIR+=	kcompletion
+SUBDIR+=	kpimtextedit
 SUBDIR+=	latex2html
 SUBDIR+=	libclucene
 SUBDIR+=	libcroco
