@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/17 06:01:46 markd Exp $
+
+SHA1 (kpimtextedit-19.08.3.tar.xz) = d89150288d303000bb7a2036a9cc92dbc637cdac
+RMD160 (kpimtextedit-19.08.3.tar.xz) = 929df5da293e86eccf5ad04459b62999dfbc936e
+SHA512 (kpimtextedit-19.08.3.tar.xz) = a85894133f454e540b3199fefea5db310bc5f4e607979a573c26c9f6e24accbf293fad28b0446f5103c779a37fd2e56578b457f25fcc34790f0ad43ac85ed57c
+Size (kpimtextedit-19.08.3.tar.xz) = 155000 bytes
