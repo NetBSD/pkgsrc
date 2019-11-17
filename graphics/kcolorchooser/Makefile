@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.41 2019/08/22 12:23:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2019/11/17 03:45:07 markd Exp $
 
-DISTNAME=	kcolorchooser-15.12.0
-PKGREVISION=	12
+DISTNAME=	kcolorchooser-${KAPPSVER}
 CATEGORIES=	graphics
+
+HOMEPAGE=	https://kde.org/applications/graphics/kcolorchooser/
 COMMENT=	KDE color chooser
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+USE_TOOLS+=	msgmerge
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/kxmlgui/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
