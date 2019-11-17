@@ -1,16 +1,30 @@
-# $NetBSD: Makefile,v 1.30 2019/08/22 12:23:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/17 04:01:34 markd Exp $
 
-DISTNAME=	dragon-${_KDE_VERSION}
-PKGREVISION=	14
+DISTNAME=	dragon-${KAPPSVER}
 CATEGORIES=	multimedia
-COMMENT=	a simple video player for KDE
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+HOMEPAGE=	https://kde.org/applications/multimedia/dragon/
+COMMENT=	Simple video player for KDE
+LICENSE=	gnu-gpl-v2
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+
+USE_TOOLS+=	msgmerge
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	misc/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/dragonplayerrc \
+		${PKG_SYSCONFDIR}/xdg/dragonplayerrc
+
+.include "../../devel/kparts/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
