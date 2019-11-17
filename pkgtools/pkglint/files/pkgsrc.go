@@ -269,7 +269,7 @@ func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {
 
 	f := strings.Fields(lex.Rest())
 	n := len(f)
-	if n != 4 && n != 6 {
+	if n < 4 || n > 6 {
 		return nil
 	}
 

@@ -47,6 +47,26 @@ func (s *Suite) CheckSummary(summary string) {
 	s.summary = ""
 }
 
+func (s *Suite) Test_TestNameChecker_Enable(c *check.C) {
+	ck := s.Init(c)
+
+	ck.Enable(ENone) // overwrite initialization from Suite.Init
+
+	c.Check(ck.errorsMask, check.Equals, uint64(0))
+
+	ck.Enable(EAll)
+
+	c.Check(ck.errorsMask, check.Equals, ^uint64(0))
+
+	ck.Enable(ENone, EMissingTest)
+
+	c.Check(ck.errorsMask, check.Equals, uint64(4))
+
+	ck.Enable(EAll, -EMissingTest)
+
+	c.Check(ck.errorsMask, check.Equals, ^uint64(0)^4)
+}
+
 func (s *Suite) Test_TestNameChecker_Check(c *check.C) {
 	ck := s.Init(c)
 
@@ -55,7 +75,6 @@ func (s *Suite) Test_TestNameChecker_Check(c *check.C) {
 	s.CheckErrors(
 		"Missing unit test \"Test_NewTestNameChecker\" for \"NewTestNameChecker\".",
 		"Missing unit test \"Test_TestNameChecker_IgnoreFiles\" for \"TestNameChecker.IgnoreFiles\".",
-		"Missing unit test \"Test_TestNameChecker_Enable\" for \"TestNameChecker.Enable\".",
 		"Missing unit test \"Test_TestNameChecker_load\" for \"TestNameChecker.load\".",
 		"Missing unit test \"Test_TestNameChecker_loadDecl\" for \"TestNameChecker.loadDecl\".",
 		"Missing unit test \"Test_TestNameChecker_addCode\" for \"TestNameChecker.addCode\".",
@@ -72,7 +91,7 @@ func (s *Suite) Test_TestNameChecker_Check(c *check.C) {
 		"Missing unit test \"Test_Suite_CheckErrors\" for \"Suite.CheckErrors\".",
 		"Missing unit test \"Test_Suite_CheckSummary\" for \"Suite.CheckSummary\".",
 		"Missing unit test \"Test_Value_Method\" for \"Value.Method\".")
-	s.CheckSummary("19 errors.")
+	s.CheckSummary("18 errors.")
 }
 
 func (s *Suite) Test_TestNameChecker_addTest(c *check.C) {
