@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.234 2019/11/02 16:25:28 rillig Exp $
+# $NetBSD: Makefile,v 1.235 2019/11/17 11:50:01 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
 TB_VER=		68.2.1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -46,6 +47,13 @@ post-extract:
 	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
 	mv ${WRKSRC}${MOZILLA_DIR}/gfx/ycbcr/yuv_row_arm.s \
 		${WRKSRC}${MOZILLA_DIR}/gfx/ycbcr/yuv_row_arm.S
+	${CP} ${WRKSRC}/third_party/rust/bindgen/.cargo-checksum.json \
+		${WRKSRC}/third_party/rust/bindgen/.cargo-checksum.json.orig
+	${CAT} ${WRKSRC}/third_party/rust/bindgen/.cargo-checksum.json.orig | \
+		${SED} -e 's/5788372d27bdbaaf0454bc17be31a5480918bc41a8a1c4832e8c61185c07f9cd/8c92a52c0f859c7bec7bfbc36b9d18f904baab0c8c9dc1b3e7af34de1a0b0da4/' | \
+		${SED} -e 's/8dc10043d872e68e660ef96edca4d9733f95be45cdad4893462fa929b335014f/71f1a37f75b971ea5b0d8457473cc410947dbf706cb6d2c0338916910b78a675/' | \
+		${SED} -e 's/34f9aa76b6c9c05136bb69dcd6455397faef571a567254d2c541d50a962994db/e5581852eec87918901a129284b4965aefc8a19394187a8095779a084f28fabe/' \
+		> ${WRKSRC}/third_party/rust/bindgen/.cargo-checksum.json
 
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
