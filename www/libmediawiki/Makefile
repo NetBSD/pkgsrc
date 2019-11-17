@@ -1,27 +1,18 @@
-# $NetBSD: Makefile,v 1.41 2019/08/22 12:23:53 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.42 2019/11/17 08:53:25 markd Exp $
 
-PKGNAME=	libmediawiki-4.13.0
-PKGREVISION=	12
-DISTNAME=	digikam-4.13.0
+DISTNAME=	libmediawiki-5.37.0
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_KDE:=libmediawiki/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.digikam.org/
 COMMENT=	Mediawiki C++ interface for KDE
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+.include "../../meta-pkgs/kde/applications.mk"
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=	msgmerge pkg-config
 
-PKGCONFIG_OVERRIDE+=	libmediawiki.pc.cmake
-
-WRKSRC=			${WRKDIR}/${DISTNAME}/extra/libmediawiki
-
-.include "../../meta-pkgs/kde4/kde4.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../devel/kcoreaddons/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
