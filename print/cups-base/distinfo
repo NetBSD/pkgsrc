@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.15 2019/08/16 21:19:30 leot Exp $
+$NetBSD: distinfo,v 1.16 2019/11/17 21:22:03 leot Exp $
 
-SHA1 (cups-2.2.12-source.tar.gz) = a6a89bd1dd3b7122913651698a89d795e3bfea80
-RMD160 (cups-2.2.12-source.tar.gz) = e9bcc54ad693f77f482c1fcef63d5c2fa538a722
-SHA512 (cups-2.2.12-source.tar.gz) = b8e7be512938ad388d469d093ad0c882ab42ea1408c27a91340f8424aa0e79e588df3d59795624973b89074a2af650fa9b5b6ed5224138b17e4c6dbbcbf0a2e6
-Size (cups-2.2.12-source.tar.gz) = 10409313 bytes
-SHA1 (patch-ae) = f34ec899f4816bdcf96ff315e001e3ac5a960200
+SHA1 (cups-2.3.0-source.tar.gz) = ccdce595a90d768968b1e908684594738eba3a91
+RMD160 (cups-2.3.0-source.tar.gz) = d7a0cd359441d1b30095c04986f500010aae4c9c
+SHA512 (cups-2.3.0-source.tar.gz) = c51f173b5fbae1554a3f4a3786fb3b5566e50d9f775473788ee3553922ac7e02e4785492c87c93fd46f159f50d97cc10ff6feafb3397cd9c1840840f3a9cdfae
+Size (cups-2.3.0-source.tar.gz) = 8129049 bytes
+SHA1 (patch-ae) = b81d7a2ce457f0d6994d6a084c63aa0a870bb881
 SHA1 (patch-af) = 6ae6ae6006387db69bf7c15f7c8500708c9e8f56
 SHA1 (patch-ai) = 2c1ca67ea6f6c1dedb4c8ff97736f328a2b9a7c6
 SHA1 (patch-airprint-conf_mime.convs.in) = 413a5ef448ab42858db804cfbfc1b8ff5b6bbf77
-SHA1 (patch-airprint-scheduler_conf.c) = f54ba16cc32dc09cd5bd8e864e1510ed2a84d6ed
+SHA1 (patch-airprint-scheduler_conf.c) = 504e752c1699049cdbe11d8b04814670ddda81d4
 SHA1 (patch-airprint-scheduler_dirsvc.c) = bef4ea8e898dffc67c4866baa701e12570eb6fca
-SHA1 (patch-airprint-scheduler_printers.c) = 7fc0157f990a6e4dfa04c0b2c5684422229af725
+SHA1 (patch-airprint-scheduler_printers.c) = 1794cd3ea6a32ce6376aa86e89f945de036036eb
 SHA1 (patch-at) = ef6303936daf0826dc4725f5369bfb1add832b1f
 SHA1 (patch-conf-cups-files.conf.in) = b2eccf54e108d8c9e70094acfd9618a66779a84a
 SHA1 (patch-conf_Makefile) = bb8313e493c02959edfe1e53f50b9f16ce6f42e0
@@ -18,15 +18,12 @@ SHA1 (patch-config-scripts_cups-compiler.m4) = 26f2ed2ef45d922f47e5e0ac87ccc278f
 SHA1 (patch-config-scripts_cups-directories.m4) = 8a6c2f962dafdde20f913fac2e172ae9f8760c3e
 SHA1 (patch-config-scripts_cups-gssapi.m4) = ac2df3e82bc844630af8462a461c7efe1da4b354
 SHA1 (patch-config-scripts_cups-libtool.m4) = a6139fbbbee7038d11654c0a2387af21f48b7412
-SHA1 (patch-config-scripts_cups-manpages.m4) = 5cc943738df29f11fc366557938b82c1e9162344
-SHA1 (patch-config-scripts_cups-opsys.m4) = 2bbacc401d4d8dbc157889b6a6cf66684c52357b
 SHA1 (patch-cups-tls.c) = f89c25f8089d9e11a983a270adbb2cbde3c22511
 SHA1 (patch-cups_thread.c) = e625a2b81f3d831d2a0c02bc0fa9a9d31c1097a7
 SHA1 (patch-doc-help-man-cups-files.conf.html) = c26754104788eb619e69e49d6d51bf84ab047876
-SHA1 (patch-man-cups-files.conf.man.in) = 820da58aa3f854018a48b68256d0cf0dc75b986e
-SHA1 (patch-scheduler-conf.c) = 179964f8d251be3c21f4cfc7b67f3196beda29dc
+SHA1 (patch-man-cups-files.conf.man.in) = 08c0322fd233c724b7df238df01988500130d1c6
+SHA1 (patch-scheduler-conf.c) = 1e3e116b6a0b5696656afe259ed48f6274ff6b57
 SHA1 (patch-scheduler-conf.h) = d11f3b789af096dcaca13a38f6484727ff895bee
 SHA1 (patch-scheduler-main.c) = cb31fa7427b497108ce7724bbfee1b784b9330ab
 SHA1 (patch-scheduler_auth.c) = 8c9a5338c9eb84336db0d487008795227fa9e7f0
 SHA1 (patch-scheduler_dirsvc.c) = aae5b924fb8fb39007cf04d8b83747e8724485cf
-SHA1 (patch-test_ippfind.c) = 70403f5e7d5bd56772616f64fc2dff1482994b79
