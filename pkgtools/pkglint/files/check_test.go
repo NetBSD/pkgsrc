@@ -57,10 +57,8 @@ func (s *Suite) SetUpTest(c *check.C) {
 	t := Tester{c: c, testName: c.TestName()}
 	s.Tester = &t
 
-	G = NewPkglint()
+	G = NewPkglint(&t.stdout, &t.stderr)
 	G.Testing = true
-	G.Logger.out = NewSeparatorWriter(&t.stdout)
-	G.Logger.err = NewSeparatorWriter(&t.stderr)
 	trace.Out = &t.stdout
 
 	// XXX: Maybe the tests can run a bit faster when they don't
@@ -181,7 +179,7 @@ func (t *Tester) SetUpVartypes() {
 }
 
 func (t *Tester) SetUpMasterSite(varname string, urls ...string) {
-	if !G.Pkgsrc.vartypes.DefinedExact(varname) {
+	if !G.Pkgsrc.vartypes.IsDefinedExact(varname) {
 		G.Pkgsrc.vartypes.DefineParse(varname, BtFetchURL,
 			List|SystemProvided,
 			"buildlink3.mk: none",
@@ -420,9 +418,9 @@ line:
 	for _, line := range makefileLines {
 		assert(!hasSuffix(line, "\\")) // Continuation lines are not yet supported.
 
-		if m, prefix := match1(line, `^#?(\w+=)`); m {
+		if m, varname := match1(line, `^#?(\w+)[!+:?]?=`); m {
 			for i, existingLine := range mlines[:19] {
-				if hasPrefix(strings.TrimPrefix(existingLine, "#"), prefix) {
+				if hasPrefix(strings.TrimPrefix(existingLine, "#"), varname+"=") {
 					mlines[i] = line
 					continue line
 				}
@@ -456,7 +454,7 @@ func (t *Tester) CreateFileLines(relativeFileName string, lines ...string) (file
 	err := os.MkdirAll(path.Dir(filename), 0777)
 	t.c.Assert(err, check.IsNil)
 
-	err = ioutil.WriteFile(filename, []byte(content.Bytes()), 0666)
+	err = ioutil.WriteFile(filename, content.Bytes(), 0666)
 	t.c.Assert(err, check.IsNil)
 
 	G.fileCache.Evict(filename)
@@ -485,7 +483,7 @@ func (t *Tester) CreateFileDummyBuildlink3(relativeFileName string, customLines 
 	// see pkgtools/createbuildlink/files/createbuildlink, "package specific variables"
 	upper := strings.Replace(strings.ToUpper(lower), "-", "_", -1)
 
-	width := tabWidth(sprintf("BUILDLINK_API_DEPENDS.%s+=\t", lower))
+	width := tabWidthSlice("BUILDLINK_API_DEPENDS.", lower, "+=\t")
 
 	aligned := func(format string, args ...interface{}) string {
 		msg := sprintf(format, args...)
@@ -917,7 +915,7 @@ func (t *Tester) Output() string {
 
 	t.stdout.Reset()
 	t.stderr.Reset()
-	if G.usable() {
+	if G.isUsable() {
 		G.Logger.logged = Once{}
 		if G.Logger.out != nil { // Necessary because Main resets the G variable.
 			G.Logger.out.state = 0 // Prevent an empty line at the beginning of the next output.
@@ -1130,7 +1128,7 @@ func (t *Tester) EnableSilentTracing() {
 // The diagnostics go to the in-memory buffer again,
 // ready to be checked with CheckOutputLines.
 func (t *Tester) DisableTracing() {
-	if G.usable() {
+	if G.isUsable() {
 		G.Logger.out = NewSeparatorWriter(&t.stdout)
 	}
 	trace.Tracing = false
@@ -1167,8 +1165,7 @@ func (t *Tester) CheckFileLinesDetab(relativeFileName string, lines ...string) {
 // This means that the test cases that follow do not have to use each of them,
 // and this in turn allows uninteresting test cases to be deleted during
 // development.
-func (t *Tester) Use(functions ...interface{}) {
-}
+func (t *Tester) Use(...interface{}) {}
 
 func (t *Tester) Shquote(format string, rels ...string) string {
 	var subs []interface{}

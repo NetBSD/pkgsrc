@@ -4,6 +4,50 @@ import (
 	"gopkg.in/check.v1"
 )
 
+func (s *Suite) Test_Load(c *check.C) {
+	t := s.Init(c)
+
+	nonexistent := t.File("nonexistent")
+	empty := t.CreateFileLines("empty")
+	oneLiner := t.CreateFileLines("one-liner",
+		"hello, world")
+
+	t.Check(Load(nonexistent, 0), check.IsNil)
+	t.Check(Load(empty, 0).Lines, check.HasLen, 0)
+	t.CheckEquals(Load(oneLiner, 0).Lines[0].Text, "hello, world")
+
+	t.CheckOutputEmpty()
+
+	t.Check(Load(nonexistent, LogErrors), check.IsNil)
+	t.Check(Load(empty, LogErrors).Lines, check.HasLen, 0)
+	t.CheckEquals(Load(oneLiner, LogErrors).Lines[0].Text, "hello, world")
+
+	t.CheckOutputLines(
+		"ERROR: ~/nonexistent: Cannot be read.")
+
+	t.Check(Load(nonexistent, NotEmpty), check.IsNil)
+	t.Check(Load(empty, NotEmpty), check.IsNil)
+	t.CheckEquals(Load(oneLiner, NotEmpty).Lines[0].Text, "hello, world")
+
+	t.CheckOutputEmpty()
+
+	t.Check(Load(nonexistent, NotEmpty|LogErrors), check.IsNil)
+	t.Check(Load(empty, NotEmpty|LogErrors), check.IsNil)
+	t.CheckEquals(Load(oneLiner, NotEmpty|LogErrors).Lines[0].Text, "hello, world")
+
+	t.CheckOutputLines(
+		"ERROR: ~/nonexistent: Cannot be read.",
+		"ERROR: ~/empty: Must not be empty.")
+
+	t.ExpectFatal(
+		func() { Load(t.File("does-not-exist"), MustSucceed) },
+		"FATAL: ~/does-not-exist: Cannot be read.")
+
+	t.ExpectFatal(
+		func() { Load(t.File("empty"), MustSucceed|NotEmpty) },
+		"FATAL: ~/empty: Must not be empty.")
+}
+
 func (s *Suite) Test_convertToLogicalLines__no_continuation(c *check.C) {
 	t := s.Init(c)
 
@@ -102,20 +146,6 @@ func (s *Suite) Test_convertToLogicalLines__comments(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_nextLogicalLine__commented_multi(c *check.C) {
-	t := s.Init(c)
-
-	mklines := t.NewMkLines("filename.mk",
-		"#COMMENTED= \\",
-		"#\tcontinuation 1 \\",
-		"#\tcontinuation 2")
-	mkline := mklines.mklines[0]
-
-	// The leading comments are stripped from the continuation lines as well.
-	t.CheckEquals(mkline.Value(), "continuation 1 \tcontinuation 2")
-	t.CheckEquals(mkline.HasComment(), false)
-}
-
 func (s *Suite) Test_convertToLogicalLines__missing_newline_at_eof(c *check.C) {
 	t := s.Init(c)
 
@@ -161,6 +191,20 @@ func (s *Suite) Test_convertToLogicalLines__missing_newline_at_eof_with_source(c
 		"ERROR: filename:1: File must end with a newline.")
 }
 
+func (s *Suite) Test_nextLogicalLine__commented_multi(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("filename.mk",
+		"#COMMENTED= \\",
+		"#\tcontinuation 1 \\",
+		"#\tcontinuation 2")
+	mkline := mklines.mklines[0]
+
+	// The leading comments are stripped from the continuation lines as well.
+	t.CheckEquals(mkline.Value(), "continuation 1 \tcontinuation 2")
+	t.CheckEquals(mkline.HasComment(), false)
+}
+
 func (s *Suite) Test_matchContinuationLine(c *check.C) {
 	t := s.Init(c)
 
@@ -177,48 +221,4 @@ func (s *Suite) Test_matchContinuationLine(c *check.C) {
 	t.CheckEquals(text, "word")
 	t.CheckEquals(trailingWhitespace, "   ")
 	t.CheckEquals(continuation, "\\")
-}
-
-func (s *Suite) Test_Load(c *check.C) {
-	t := s.Init(c)
-
-	nonexistent := t.File("nonexistent")
-	empty := t.CreateFileLines("empty")
-	oneLiner := t.CreateFileLines("one-liner",
-		"hello, world")
-
-	t.Check(Load(nonexistent, 0), check.IsNil)
-	t.Check(Load(empty, 0).Lines, check.HasLen, 0)
-	t.CheckEquals(Load(oneLiner, 0).Lines[0].Text, "hello, world")
-
-	t.CheckOutputEmpty()
-
-	t.Check(Load(nonexistent, LogErrors), check.IsNil)
-	t.Check(Load(empty, LogErrors).Lines, check.HasLen, 0)
-	t.CheckEquals(Load(oneLiner, LogErrors).Lines[0].Text, "hello, world")
-
-	t.CheckOutputLines(
-		"ERROR: ~/nonexistent: Cannot be read.")
-
-	t.Check(Load(nonexistent, NotEmpty), check.IsNil)
-	t.Check(Load(empty, NotEmpty), check.IsNil)
-	t.CheckEquals(Load(oneLiner, NotEmpty).Lines[0].Text, "hello, world")
-
-	t.CheckOutputEmpty()
-
-	t.Check(Load(nonexistent, NotEmpty|LogErrors), check.IsNil)
-	t.Check(Load(empty, NotEmpty|LogErrors), check.IsNil)
-	t.CheckEquals(Load(oneLiner, NotEmpty|LogErrors).Lines[0].Text, "hello, world")
-
-	t.CheckOutputLines(
-		"ERROR: ~/nonexistent: Cannot be read.",
-		"ERROR: ~/empty: Must not be empty.")
-
-	t.ExpectFatal(
-		func() { Load(t.File("does-not-exist"), MustSucceed) },
-		"FATAL: ~/does-not-exist: Cannot be read.")
-
-	t.ExpectFatal(
-		func() { Load(t.File("empty"), MustSucceed|NotEmpty) },
-		"FATAL: ~/empty: Must not be empty.")
 }

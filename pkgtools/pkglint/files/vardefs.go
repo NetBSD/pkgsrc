@@ -44,11 +44,11 @@ func (reg *VarTypeRegistry) Canon(varname string) *Vartype {
 	return vartype
 }
 
-func (reg *VarTypeRegistry) DefinedExact(varname string) bool {
+func (reg *VarTypeRegistry) IsDefinedExact(varname string) bool {
 	return reg.types[varname] != nil
 }
 
-func (reg *VarTypeRegistry) DefinedCanon(varname string) bool {
+func (reg *VarTypeRegistry) IsDefinedCanon(varname string) bool {
 	return reg.Canon(varname) != nil
 }
 
@@ -95,7 +95,7 @@ func (reg *VarTypeRegistry) DefineParse(varname string, basicType *BasicType, op
 //  - why the predefined permission set is not good enough
 //  - which packages need this custom permission set.
 func (reg *VarTypeRegistry) acl(varname string, basicType *BasicType, options vartypeOptions, aclEntries ...string) {
-	assertf(!reg.DefinedExact(varname), "Variable %q must only be defined once.", varname)
+	assertf(!reg.IsDefinedExact(varname), "Variable %q must only be defined once.", varname)
 	reg.DefineParse(varname, basicType, options, aclEntries...)
 }
 

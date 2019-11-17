@@ -2,6 +2,7 @@ package pkgver
 
 import (
 	"gopkg.in/check.v1"
+	"netbsd.org/pkglint/intqa"
 	"testing"
 )
 
@@ -10,35 +11,6 @@ type Suite struct{}
 func Test(t *testing.T) {
 	check.Suite(&Suite{})
 	check.TestingT(t)
-}
-
-func (s *Suite) Test_newVersion(c *check.C) {
-	c.Check(newVersion("5.0"), check.DeepEquals,
-		&version{[]int{5, 0, 0}, 0})
-	c.Check(newVersion("5.0nb5"), check.DeepEquals,
-		&version{[]int{5, 0, 0}, 5})
-	c.Check(newVersion("0.0.1-SNAPSHOT"), check.DeepEquals,
-		&version{[]int{0, 0, 0, 0, 1, 19, 14, 1, 16, 19, 8, 15, 20}, 0})
-	c.Check(newVersion("1.0alpha3"), check.DeepEquals,
-		&version{[]int{1, 0, 0, -3, 3}, 0})
-	c.Check(newVersion("1_0alpha3"), check.DeepEquals,
-		&version{[]int{1, 0, 0, -3, 3}, 0})
-	c.Check(newVersion("2.5beta"), check.DeepEquals,
-		&version{[]int{2, 0, 5, -2}, 0})
-	c.Check(newVersion("20151110"), check.DeepEquals,
-		&version{[]int{20151110}, 0})
-	c.Check(newVersion("0"), check.DeepEquals,
-		&version{[]int{0}, 0})
-	c.Check(newVersion("nb1"), check.DeepEquals,
-		&version{nil, 1})
-	c.Check(newVersion("1.0.1a"), check.DeepEquals,
-		&version{[]int{1, 0, 0, 0, 1, 1}, 0})
-	c.Check(newVersion("1.0.1z"), check.DeepEquals,
-		&version{[]int{1, 0, 0, 0, 1, 26}, 0})
-	c.Check(newVersion("0pre20160620"), check.DeepEquals,
-		&version{[]int{0, -1, 20160620}, 0})
-	c.Check(newVersion("3.5.DEV1710"), check.DeepEquals,
-		&version{[]int{3, 0, 5, 0, 4, 5, 22, 1710}, 0})
 }
 
 func (s *Suite) Test_Compare(c *check.C) {
@@ -90,4 +62,39 @@ func (s *Suite) Test_Compare(c *check.C) {
 			}
 		}
 	}
+}
+
+func (s *Suite) Test_newVersion(c *check.C) {
+	c.Check(newVersion("5.0"), check.DeepEquals,
+		&version{[]int{5, 0, 0}, 0})
+	c.Check(newVersion("5.0nb5"), check.DeepEquals,
+		&version{[]int{5, 0, 0}, 5})
+	c.Check(newVersion("0.0.1-SNAPSHOT"), check.DeepEquals,
+		&version{[]int{0, 0, 0, 0, 1, 19, 14, 1, 16, 19, 8, 15, 20}, 0})
+	c.Check(newVersion("1.0alpha3"), check.DeepEquals,
+		&version{[]int{1, 0, 0, -3, 3}, 0})
+	c.Check(newVersion("1_0alpha3"), check.DeepEquals,
+		&version{[]int{1, 0, 0, -3, 3}, 0})
+	c.Check(newVersion("2.5beta"), check.DeepEquals,
+		&version{[]int{2, 0, 5, -2}, 0})
+	c.Check(newVersion("20151110"), check.DeepEquals,
+		&version{[]int{20151110}, 0})
+	c.Check(newVersion("0"), check.DeepEquals,
+		&version{[]int{0}, 0})
+	c.Check(newVersion("nb1"), check.DeepEquals,
+		&version{nil, 1})
+	c.Check(newVersion("1.0.1a"), check.DeepEquals,
+		&version{[]int{1, 0, 0, 0, 1, 1}, 0})
+	c.Check(newVersion("1.0.1z"), check.DeepEquals,
+		&version{[]int{1, 0, 0, 0, 1, 26}, 0})
+	c.Check(newVersion("0pre20160620"), check.DeepEquals,
+		&version{[]int{0, -1, 20160620}, 0})
+	c.Check(newVersion("3.5.DEV1710"), check.DeepEquals,
+		&version{[]int{3, 0, 5, 0, 4, 5, 22, 1710}, 0})
+}
+
+func (s *Suite) Test__test_names(c *check.C) {
+	ck := intqa.NewTestNameChecker(c.Errorf)
+	ck.Enable(intqa.EAll, -intqa.EMissingTest)
+	ck.Check()
 }

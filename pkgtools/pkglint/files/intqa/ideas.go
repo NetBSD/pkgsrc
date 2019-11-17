@@ -8,10 +8,5 @@ package intqa
 // XXX: All methods should be defined in the same file as their receiver type.
 // If that is not possible, there should only be a small list of exceptions.
 
-// XXX: All tests should be in the same order as their corresponding elements in the
-// main code.
-
-// XXX: All tests for a single testee should be grouped together.
-
 // XXX: If there is a constructor for a type, only that constructor may be used
 // for constructing objects. All other forms (var x Type; x := &Type{}) should be forbidden.

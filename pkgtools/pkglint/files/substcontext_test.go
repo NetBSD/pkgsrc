@@ -503,6 +503,28 @@ func (s *Suite) Test_SubstContext__multiple_SUBST_VARS(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+// As of May 2019, pkglint does not check the order of the variables in
+// a SUBST block. Enforcing this order, or at least suggesting it, would
+// make pkgsrc packages more uniform, which is a good idea, but not urgent.
+func (s *Suite) Test_SubstContext__unusual_variable_order(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	mklines := t.NewMkLines("subst.mk",
+		MkCvsID,
+		"",
+		"SUBST_CLASSES+=\t\tid",
+		"SUBST_SED.id=\t\t-e /deleteme/d",
+		"SUBST_FILES.id=\t\tfile",
+		"SUBST_MESSAGE.id=\tMessage",
+		"SUBST_STAGE.id=\t\tpre-configure")
+
+	mklines.Check()
+
+	t.CheckOutputEmpty()
+}
+
 // Since the SUBST_CLASSES definition starts the SUBST block, all
 // directives above it are ignored by the SUBST context.
 func (s *Suite) Test_SubstContext_Directive__before_SUBST_CLASSES(c *check.C) {
@@ -855,28 +877,6 @@ func (s *Suite) Test_SubstContext_extractVarname(c *check.C) {
 
 	// The replacement must be a plain variable expression, without suffix.
 	test("s,@VAR@,${VAR}suffix,", "")
-}
-
-// As of May 2019, pkglint does not check the order of the variables in
-// a SUBST block. Enforcing this order, or at least suggesting it, would
-// make pkgsrc packages more uniform, which is a good idea, but not urgent.
-func (s *Suite) Test_SubstContext__unusual_variable_order(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpVartypes()
-
-	mklines := t.NewMkLines("subst.mk",
-		MkCvsID,
-		"",
-		"SUBST_CLASSES+=\t\tid",
-		"SUBST_SED.id=\t\t-e /deleteme/d",
-		"SUBST_FILES.id=\t\tfile",
-		"SUBST_MESSAGE.id=\tMessage",
-		"SUBST_STAGE.id=\t\tpre-configure")
-
-	mklines.Check()
-
-	t.CheckOutputEmpty()
 }
 
 // simulateSubstLines only tests some of the inner workings of SubstContext.

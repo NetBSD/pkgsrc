@@ -2,16 +2,6 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
-func (s *Suite) Test_VarTypeRegistry_Init(c *check.C) {
-	t := s.Init(c)
-
-	src := NewPkgsrc(t.File("."))
-	src.vartypes.Init(&src)
-
-	t.CheckEquals(src.vartypes.Canon("BSD_MAKE_ENV").basicType.name, "ShellWord")
-	t.CheckEquals(src.vartypes.Canon("USE_BUILTIN.*").basicType.name, "YesNoIndirectly")
-}
-
 func (s *Suite) Test_VarTypeRegistry_compilerLanguages(c *check.C) {
 	t := s.Init(c)
 
@@ -140,40 +130,14 @@ func (s *Suite) Test_VarTypeRegistry_enumFromFiles(c *check.C) {
 	test("OPSYS", "enum: NetBSD SunOS  (system-provided)")
 }
 
-func (s *Suite) Test_VarTypeRegistry_parseACLEntries__invalid_arguments(c *check.C) {
+func (s *Suite) Test_VarTypeRegistry_Init(c *check.C) {
 	t := s.Init(c)
 
-	reg := NewVarTypeRegistry()
-	parseACLEntries := reg.parseACLEntries
+	src := NewPkgsrc(t.File("."))
+	src.vartypes.Init(&src)
 
-	t.ExpectPanic(
-		func() { parseACLEntries("VARNAME", "buildlink3.mk: *", "*: *") },
-		"Pkglint internal error: "+
-			"Invalid ACL permission \"*\" for \"VARNAME\" in \"buildlink3.mk\". "+
-			"Remaining parts are \"*\". "+
-			"Valid permissions are default, set, append, use, use-loadtime (in this order), or none.")
-
-	t.ExpectPanic(
-		func() { parseACLEntries("VARNAME", "buildlink3.mk: use", "*: use") },
-		"Pkglint internal error: Repeated permissions \"use\" for \"VARNAME\".")
-
-	t.ExpectPanic(
-		func() { parseACLEntries("VARNAME", "*.txt: use") },
-		"Pkglint internal error: Invalid ACL glob \"*.txt\" for \"VARNAME\".")
-
-	t.ExpectPanic(
-		func() { parseACLEntries("VARNAME", "*.mk: use", "buildlink3.mk: append") },
-		"Pkglint internal error: Unreachable ACL pattern \"buildlink3.mk\" for \"VARNAME\".")
-
-	t.ExpectPanic(
-		func() { parseACLEntries("VARNAME", "no colon") },
-		"Pkglint internal error: ACL entry \"no colon\" must have exactly 1 colon.")
-
-	t.ExpectPanic(
-		func() { parseACLEntries("VARNAME", "too: many: colons") },
-		"Pkglint internal error: ACL entry \"too: many: colons\" must have exactly 1 colon.")
-
-	t.ExpectAssert(func() { parseACLEntries("VAR") })
+	t.CheckEquals(src.vartypes.Canon("BSD_MAKE_ENV").basicType.name, "ShellWord")
+	t.CheckEquals(src.vartypes.Canon("USE_BUILTIN.*").basicType.name, "YesNoIndirectly")
 }
 
 func (s *Suite) Test_VarTypeRegistry_Init__LP64PLATFORMS(c *check.C) {
@@ -231,4 +195,40 @@ func (s *Suite) Test_VarTypeRegistry_Init__MASTER_SITES(c *check.C) {
 
 	vartype := G.Pkgsrc.VariableType(nil, "MASTER_SITE_GITHUB")
 	t.CheckEquals(vartype.String(), "FetchURL (list, system-provided)")
+}
+
+func (s *Suite) Test_VarTypeRegistry_parseACLEntries__invalid_arguments(c *check.C) {
+	t := s.Init(c)
+
+	reg := NewVarTypeRegistry()
+	parseACLEntries := reg.parseACLEntries
+
+	t.ExpectPanic(
+		func() { parseACLEntries("VARNAME", "buildlink3.mk: *", "*: *") },
+		"Pkglint internal error: "+
+			"Invalid ACL permission \"*\" for \"VARNAME\" in \"buildlink3.mk\". "+
+			"Remaining parts are \"*\". "+
+			"Valid permissions are default, set, append, use, use-loadtime (in this order), or none.")
+
+	t.ExpectPanic(
+		func() { parseACLEntries("VARNAME", "buildlink3.mk: use", "*: use") },
+		"Pkglint internal error: Repeated permissions \"use\" for \"VARNAME\".")
+
+	t.ExpectPanic(
+		func() { parseACLEntries("VARNAME", "*.txt: use") },
+		"Pkglint internal error: Invalid ACL glob \"*.txt\" for \"VARNAME\".")
+
+	t.ExpectPanic(
+		func() { parseACLEntries("VARNAME", "*.mk: use", "buildlink3.mk: append") },
+		"Pkglint internal error: Unreachable ACL pattern \"buildlink3.mk\" for \"VARNAME\".")
+
+	t.ExpectPanic(
+		func() { parseACLEntries("VARNAME", "no colon") },
+		"Pkglint internal error: ACL entry \"no colon\" must have exactly 1 colon.")
+
+	t.ExpectPanic(
+		func() { parseACLEntries("VARNAME", "too: many: colons") },
+		"Pkglint internal error: ACL entry \"too: many: colons\" must have exactly 1 colon.")
+
+	t.ExpectAssert(func() { parseACLEntries("VAR") })
 }
