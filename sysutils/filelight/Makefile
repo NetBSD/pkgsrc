@@ -1,17 +1,30 @@
-# $NetBSD: Makefile,v 1.67 2019/08/22 12:23:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2019/11/17 04:14:18 markd Exp $
 
-DISTNAME=	filelight-${_KDE_VERSION}
-PKGREVISION=	14
+DISTNAME=	filelight-${KAPPSVER}
 CATEGORIES=	sysutils
+
+HOMEPAGE=	https://kde.org/applications/utilities/org.kde.filelight/
 COMMENT=	Graphical filesystem usage monitor
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
+USE_TOOLS+=	msgmerge
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	misc/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/filelightrc \
+		${PKG_SYSCONFDIR}/xdg/filelightrc
+
+.include "../../devel/kparts/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
