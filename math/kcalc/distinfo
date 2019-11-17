@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.10 2018/05/17 11:01:23 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2019/11/17 04:28:49 markd Exp $
 
-SHA1 (kcalc-4.14.3.tar.xz) = 0990a35d1fe97b4d4157b6ce6d8e13d199934dad
-RMD160 (kcalc-4.14.3.tar.xz) = 81822b452042f23e85216ad3e662e797050e0592
-SHA512 (kcalc-4.14.3.tar.xz) = ec8090b6bc8c78e7a63286c797e67617e4d9e335f6b29dce1dcbd41073465e6cf313d485f27f84a06d7cd04acc024051709b00f7be1dc8170e9531281d2deb16
-Size (kcalc-4.14.3.tar.xz) = 81392 bytes
-SHA1 (patch-CMakeLists.txt) = 41012666b695fbaad04261cbf566d875d9f83ed8
-SHA1 (patch-kcalc.cpp) = a318b81b381454fcf1570450c41d6bb7b58cf685
-SHA1 (patch-knumber_knumber_float.cpp) = 678e8d62df1a615f1117c58737da23a95d0e15a9
-SHA1 (patch-knumber_tests_CMakeLists.txt) = 7d159f617903b778e65615cb73a81f40f1d262df
+SHA1 (kcalc-19.08.3.tar.xz) = 66598d3a0527f12682d0c936fd1dfcc346db09ed
+RMD160 (kcalc-19.08.3.tar.xz) = 9c92305ab8181886d4ff3a44808978e677bb8b6e
+SHA512 (kcalc-19.08.3.tar.xz) = e27eefd90f3b32db383305e1eecade41545dfe8f9dd9a6c5b4f48b2082a7323e5a7d812ee54b45cea28c76ba6e82104e1fd2d001060f1588b4b1d62241421e7f
+Size (kcalc-19.08.3.tar.xz) = 372080 bytes
