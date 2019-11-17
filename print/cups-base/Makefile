@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/26 21:57:43 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/17 21:22:03 leot Exp $
 
 .include "../../print/cups/Makefile.common"
 
@@ -36,7 +36,6 @@ CONFIGURE_ARGS+=	--with-system-groups=${CUPS_SYSTEM_GROUPS:Q}
 CONFIGURE_ARGS+=	--with-exe-file-perm=0755
 CONFIGURE_ARGS+=	--enable-libpaper
 CONFIGURE_ARGS+=	--enable-ssl
-CONFIGURE_ARGS+=	--with-manext=bsd
 CONFIGURE_ARGS+=	--without-bundledir
 CONFIGURE_ARGS+=	--without-icondir
 CONFIGURE_ARGS+=	--without-menudir
@@ -130,7 +129,6 @@ SUBST_STAGE.piefix=	pre-configure
 .endif
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR}
-INSTALL_ENV+=		DSTROOT=${DESTDIR}
 
 pre-configure:
 .if !empty(CUPS_SYSTEM_GROUPS:M${CUPS_GROUP})
@@ -143,7 +141,7 @@ post-extract:
 	${CP} ${FILESDIR}/cups.pam ${WRKDIR}/cups.pam
 
 post-install:
-	set -e; for file in LICENSE.txt README.md; do			\
+	set -e; for file in LICENSE README.md; do			\
 		${INSTALL_DATA} ${WRKSRC}/$${file}			\
 		     ${DESTDIR}${DOCDIR}/$${file}; \
 	done

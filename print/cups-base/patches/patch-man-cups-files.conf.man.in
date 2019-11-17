@@ -1,9 +1,9 @@
-$NetBSD: patch-man-cups-files.conf.man.in,v 1.2 2018/06/11 10:04:25 adam Exp $
+$NetBSD: patch-man-cups-files.conf.man.in,v 1.3 2019/11/17 21:22:03 leot Exp $
 
 Add a PidFile configuration directive to write a PID file.
 
---- man/cups-files.conf.man.in.orig	2018-06-05 16:06:54.000000000 +0000
-+++ man/cups-files.conf.man.in
+--- man/cups-files.conf.5.orig	2018-06-05 16:06:54.000000000 +0000
++++ man/cups-files.conf.5
 @@ -157,6 +157,12 @@ The server name may be included in filen
  
  .fi
