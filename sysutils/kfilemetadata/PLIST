@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/07/29 20:39:26 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/11/17 02:03:40 markd Exp $
 include/kfilemetadata/extractionresult.h
 include/kfilemetadata/extractorplugin.h
 include/kfilemetadata/extractorpluginmanager.h
@@ -12,7 +12,6 @@ lib/cmake/KFileMetaData/KFileMetaDataTargetsWithPrefix-relwithdebinfo.cmake
 lib/cmake/KFileMetaData/KFileMetaDataTargetsWithPrefix.cmake
 lib/kde4/kfilemetadata_epubextractor.so
 lib/kde4/kfilemetadata_ffmpegextractor.so
-lib/kde4/kfilemetadata_mobiextractor.so
 lib/kde4/kfilemetadata_odfextractor.so
 lib/kde4/kfilemetadata_office2007extractor.so
 lib/kde4/kfilemetadata_officeextractor.so
@@ -23,7 +22,6 @@ lib/libkfilemetadata.so.4
 lib/libkfilemetadata.so.${KDELIBSVER}
 share/kde4/services/kfilemetadata_epubextractor.desktop
 share/kde4/services/kfilemetadata_ffmpegextractor.desktop
-share/kde4/services/kfilemetadata_mobiextractor.desktop
 share/kde4/services/kfilemetadata_odfextractor.desktop
 share/kde4/services/kfilemetadata_office2007extractor.desktop
 share/kde4/services/kfilemetadata_officeextractor.desktop
