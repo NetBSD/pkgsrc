@@ -66,6 +66,80 @@ import (
 // as opposed to the meaning of the variable assignment.
 //
 // FIXME: Implement each requirement from the above documentation.
+//
+// Next try for the spec, from November 2019.
+// Completely built from the existing examples, striving to be short and clear.
+// Needs some more time to mature.
+// After implementing it, it will be translated into English.
+//
+//  Ebenen: Datei > Absatz > MkZeile > Zeile
+//
+//  ### Datei
+//
+//  #.  Ein einzelner Absatz, der einen Tab weniger eingerückt ist als die übrigen,
+//      darf auf die Einrückung der anderen Absätze angeglichen werden,
+//      sofern der Absatz dadurch nicht zu breit wird.
+//
+//  ### Einzelner Absatz
+//
+//  #.  Jede Zeile besteht aus #, VarOp, Leerraum, Wert, Leerraum und Fortsetzung.
+//
+//  #.  Die Werte aller Zeilen sind mit Tabs an einer gemeinsamen vertikalen Linie
+//      (Ausrichtung) ausgerichtet.
+//
+//  #.  Das Ausrichten mit mehr als 1 Tab ist erlaubt, wenn die Ausrichtung einheitlich ist.
+//
+//  #.  Wenn VarOp über die Ausrichtung hinausragt (Ausreißer),
+//      darf zwischen VarOp und Wert statt der Ausrichtung 1 Leerzeichen sein.
+//
+//  #.  Die minimale Ausrichtung ergibt sich aus der maximalen Breite von # und VarOp
+//      aller Zeilen, gerundet zum nächsten Tabstopp.
+//      Dabei zählen auch Zeilen mit, die rechts von VarOp komplett leer sind.
+//
+//  #.  Die maximale Ausrichtung ergibt sich aus der maximalen Breite von Wert
+//      und Kommentar, abgezogen vom maximalen rechten Rand (in Spalte 73).
+//
+//  #.  Beim Umformatieren darf die Zeilenbreite die 73 Zeichen nicht überschreiten,
+//      damit am rechten Rand eindeutig ist, wo jede Zeile aufhört.
+//      Zeilen, die bereits vorher breiter waren, dürfen ruhig noch breiter werden.
+//
+//  #.  Das Verhältnis zwischen Tab-Zeilen und hinausragenden Zeilen muss ausgewogen sein.
+//      Nicht zu viele hinausragende Zeilen. (Noch zu definieren.)
+//      Möglicher Ansatz: Anteil der Leerfläche?
+//
+//  ### Mehrzeilig
+//
+//  #.  Jede MkZeile hat für alle ihre Zeilen einen gemeinsamen rechten Rand.
+//
+//  #.  Die Fortsetzungen jeder MkZeile sind entweder alle durch je 1 Leerzeichen abgetrennt,
+//      oder alle Fortsetzungen sind am rechten Rand.
+//
+//  #.  Um den gemeinsamen rechten Rand zu bestimmen, werden alle Zeilen ignoriert,
+//      in denen die Fortsetzung durch 1 Leerzeichen abgetrennt ist.
+//
+//  #.  Einzelne Fortsetzungen dürfen über den rechten Rand hinausragen.
+//      Die Fortsetzung wird dann durch 1 Leerzeichen abgetrennt.
+//
+//  ### Mehrzeilig, Erstzeile
+//
+//  #.  Die Fortsetzung der Erstzeile ist durch 1 Leerzeichen abgetrennt,
+//      wenn sie rechts von der Ausrichtung steht,
+//      andernfalls durch Tabs an der Ausrichtung.
+//
+//  #.  Eine leere Erstzeile mit 1 fortgesetzer Zeile ist nur zulässig,
+//      wenn die kombinierte Zeile breiter als 73 Zeichen wäre.
+//      Sonst werden die beiden Zeilen kombiniert.
+//
+//  ### Mehrzeilig, fortgesetzte Zeilen
+//
+//  #.  Nach einer leeren Erstzeile ist die erste fortgesetzte Zeile an der
+//      Ausrichtung aller Zeilen eingerückt, wenn die Erstzeile über die
+//      Ausrichtung ragt und der Platz aller Zeilen es zulässt, andernfalls
+//      mit 1 Tab.
+//
+//  #.  Bei mehrzeiligen einrückbaren Werten (AWK, Shell, Listen aus Tupeln)
+//      dürfen die weiteren Fortsetzungszeilen weiter eingerückt sein als die erste.
+//      Ihre Einrückung besteht aus Tabs, gefolgt von 0 bis 7 Leerzeichen.
 type VaralignBlock struct {
 	infos []*varalignLine
 	skip  bool
@@ -219,7 +293,7 @@ func (*VaralignBlock) rightMargin(infos []*varalignLine) int {
 	var min int
 	for _, info := range infos {
 		if info.isContinuation() {
-			mainWidth := tabWidth(info.beforeContinuation())
+			mainWidth := info.uptoCommentWidth()
 			if mainWidth > min {
 				min = mainWidth
 			}
@@ -291,16 +365,26 @@ func (*VaralignBlock) optimalWidth(infos []*varalignLine) int {
 	return (minVarnameOpWidth & -8) + 8
 }
 
+// adjustLong allows any follow-up line to start either in column 8 or at
+// least in column newWidth. But only if there is at least one continuation
+// line that starts in column 8 and needs the full width up to column 72.
 func (va *VaralignBlock) adjustLong(newWidth int, infos []*varalignLine) {
-	long := false
-	for _, info := range infos {
+	anyLong := false
+	for i, info := range infos {
 		if info.rawIndex == 0 {
-			long = false
+			anyLong = false
+			for _, follow := range infos[i+1:] {
+				if follow.rawIndex == 0 {
+					break
+				}
+				if !follow.multiEmpty && follow.spaceBeforeValue == "\t" && follow.varnameOpSpaceWidth() < newWidth && follow.widthAlignedAt(newWidth) > 72 {
+					anyLong = true
+					break
+				}
+			}
 		}
-		if !info.multiEmpty && info.spaceBeforeValue == "\t" && info.varnameOpSpaceWidth() != newWidth && info.widthAlignedAt(newWidth) > 72 {
-			long = true
-		}
-		info.long = long
+
+		info.long = anyLong && info.varnameOpSpaceWidth() == 8
 	}
 }
 
@@ -321,10 +405,10 @@ func (va *VaralignBlock) checkRightMargin(info *varalignLine, newWidth int, righ
 
 	newSpace := " "
 	fix := info.mkline.Autofix()
-	if oldSpace == "" || rightMargin == 0 || tabWidth(info.beforeContinuation()) >= rightMargin {
+	if oldSpace == "" || rightMargin == 0 || info.uptoCommentWidth() >= rightMargin {
 		fix.Notef("The continuation backslash should be preceded by a single space or tab.")
 	} else {
-		newSpace = alignmentAfter(info.beforeContinuation(), rightMargin)
+		newSpace = alignmentAfter(info.uptoComment(), rightMargin)
 		fix.Notef(
 			"The continuation backslash should be preceded by a single space or tab, "+
 				"or be in column %d, not %d.",
@@ -374,7 +458,7 @@ func (*VaralignBlock) realignMultiEmptyInitial(info *varalignLine, newWidth int)
 
 	hasSpace := strings.IndexByte(oldSpace, ' ') != -1
 	oldColumn := info.varnameOpSpaceWidth()
-	column := tabWidth(leadingComment + varnameOp + newSpace)
+	column := tabWidthSlice(leadingComment, varnameOp, newSpace)
 
 	fix := info.mkline.Autofix()
 	if hasSpace && column != oldColumn {
@@ -395,7 +479,7 @@ func (va *VaralignBlock) realignMultiEmptyFollow(info *varalignLine, newWidth in
 	if !*indentDiffSet {
 		*indentDiffSet = true
 		*indentDiff = condInt(newWidth != 0, newWidth-oldWidth, 0)
-		if *indentDiff > 0 && !info.commentedOut() {
+		if *indentDiff > 0 && !info.isCommentedOut() {
 			*indentDiff = 0
 		}
 	}
@@ -432,7 +516,7 @@ func (va *VaralignBlock) realignMultiInitial(info *varalignLine, newWidth int, i
 	}
 
 	hasSpace := strings.IndexByte(oldSpace, ' ') != -1
-	width := tabWidth(leadingComment + varnameOp + newSpace)
+	width := tabWidthSlice(leadingComment, varnameOp, newSpace)
 
 	fix := info.mkline.Autofix()
 	if hasSpace && width != oldWidth {
@@ -458,7 +542,21 @@ func (va *VaralignBlock) realignMultiFollow(info *varalignLine, newWidth int, in
 
 	fix := info.mkline.Autofix()
 	fix.Notef("This continuation line should be indented with %q.", indent(newWidth))
-	fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
+	modified, replaced := fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
+	assert(modified)
+	if info.continuation != "" && info.continuationColumn() == 72 {
+		orig := strings.TrimSuffix(replaced, "\n")
+		base := rtrimHspace(strings.TrimSuffix(orig, "\\"))
+		spaceIndex := len(base)
+		oldSuffix := orig[spaceIndex:]
+		newSuffix := " \\"
+		if tabWidth(base) < 72 {
+			newSuffix = alignmentAfter(base, 72) + "\\"
+		}
+		if newSuffix != oldSuffix {
+			fix.ReplaceAt(info.rawIndex, spaceIndex, oldSuffix, newSuffix)
+		}
+	}
 	fix.Apply()
 }
 
@@ -468,12 +566,12 @@ func (va *VaralignBlock) realignSingle(info *varalignLine, newWidth int) {
 	oldSpace := info.spaceBeforeValue
 
 	newSpace := ""
-	for tabWidth(leadingComment+varnameOp+newSpace) < newWidth {
+	for tabWidthSlice(leadingComment, varnameOp, newSpace) < newWidth {
 		newSpace += "\t"
 	}
 
 	// Indent the outlier with a space instead of a tab to keep the line short.
-	if newSpace == "" && info.canonicalInitial(newWidth) {
+	if newSpace == "" && info.isCanonicalInitial(newWidth) {
 		return
 	}
 	if newSpace == "" {
@@ -485,8 +583,8 @@ func (va *VaralignBlock) realignSingle(info *varalignLine, newWidth int) {
 	}
 
 	hasSpace := strings.IndexByte(oldSpace, ' ') != -1
-	oldColumn := tabWidth(leadingComment + varnameOp + oldSpace)
-	column := tabWidth(leadingComment + varnameOp + newSpace)
+	oldColumn := tabWidthSlice(leadingComment, varnameOp, oldSpace)
+	column := tabWidthSlice(leadingComment, varnameOp, newSpace)
 
 	fix := info.mkline.Autofix()
 	if newSpace == " " {
@@ -542,8 +640,7 @@ func (s VaralignSplitter) split(rawText string, initial bool) varalignParts {
 
 	leadingComment := s.parseLeadingComment(lexer, initial)
 	varnameOp, spaceBeforeValue := s.parseVarnameOp(parser, initial)
-	value, spaceAfterValue := s.parseValue(lexer)
-	trailingComment, spaceAfterComment, continuation := s.parseComment(lexer.Rest())
+	value, spaceAfterValue, continuation := s.parseValue(lexer)
 
 	return varalignParts{
 		leadingComment,
@@ -551,8 +648,6 @@ func (s VaralignSplitter) split(rawText string, initial bool) varalignParts {
 		spaceBeforeValue,
 		value,
 		spaceAfterValue,
-		trailingComment,
-		spaceAfterComment,
 		continuation,
 	}
 }
@@ -588,8 +683,8 @@ func (VaralignSplitter) parseVarnameOp(parser *MkParser, initial bool) (string, 
 	return lexer.Since(mark), lexer.NextHspace()
 }
 
-func (VaralignSplitter) parseValue(lexer *textproc.Lexer) (string, string) {
-	mark := lexer.Mark()
+func (VaralignSplitter) parseValue(lexer *textproc.Lexer) (string, string, string) {
+	rest := lexer.Rest()
 
 	for !lexer.EOF() && lexer.PeekByte() != '#' && lexer.Rest() != "\\" {
 
@@ -603,13 +698,6 @@ func (VaralignSplitter) parseValue(lexer *textproc.Lexer) (string, string) {
 		lexer.Skip(1)
 	}
 
-	valueSpace := lexer.Since(mark)
-	value := rtrimHspace(valueSpace)
-	space := valueSpace[len(value):]
-	return value, space
-}
-
-func (VaralignSplitter) parseComment(rest string) (string, string, string) {
 	end := len(rest)
 
 	backslash := end
@@ -617,26 +705,24 @@ func (VaralignSplitter) parseComment(rest string) (string, string, string) {
 		backslash--
 	}
 
-	if (end-backslash)&1 == 0 { // see https://github.com/golang/go/issues/34166
+	if (end-backslash)%2 == 0 {
 		return rest[:end], "", ""
 	}
 
 	continuation := rest[backslash:]
-	commentSpace := rest[:backslash]
-	comment := rtrimHspace(commentSpace)
-	space := commentSpace[len(comment):]
-	return comment, space, continuation
+	valueAndSpace := rest[:backslash]
+	value := rtrimHspace(valueAndSpace)
+	space := valueAndSpace[len(value):]
+	return value, space, continuation
 }
 
 type varalignParts struct {
-	leadingComment    string // either the # or some rarely used U+0020 spaces
-	varnameOp         string // empty iff it is a follow-up line
-	spaceBeforeValue  string // for follow-up lines, this is the indentation
-	value             string
-	spaceAfterValue   string // only set if there is a value
-	trailingComment   string
-	spaceAfterComment string // only set if there is a trailing comment
-	continuation      string // either a single backslash or empty
+	leadingComment   string // either the # or some rarely used U+0020 spaces
+	varnameOp        string // empty iff it is a follow-up line
+	spaceBeforeValue string // for follow-up lines, this is the indentation
+	value            string // including any trailing comment
+	spaceAfterValue  string
+	continuation     string // either a single backslash or empty
 }
 
 // continuation returns whether this line ends with a backslash.
@@ -645,19 +731,19 @@ func (p *varalignParts) isContinuation() bool {
 }
 
 func (p *varalignParts) isEmptyContinuation() bool {
-	return p.value == "" && p.trailingComment == "" && p.isContinuation()
+	return p.value == "" && p.isContinuation()
 }
 
 func (p *varalignParts) isEmpty() bool {
-	return p.value == "" && p.trailingComment == "" && !p.isContinuation()
+	return p.value == "" && !p.isContinuation()
 }
 
 func (p *varalignParts) varnameOpWidth() int {
-	return tabWidth(p.leadingComment + p.varnameOp)
+	return tabWidthSlice(p.leadingComment, p.varnameOp)
 }
 
 func (p *varalignParts) varnameOpSpaceWidth() int {
-	return tabWidth(p.leadingComment + p.varnameOp + p.spaceBeforeValue)
+	return tabWidthSlice(p.leadingComment, p.varnameOp, p.spaceBeforeValue)
 }
 
 // spaceBeforeValueIndex returns the string index at which the space before the value starts.
@@ -669,44 +755,44 @@ func (p *varalignParts) spaceBeforeValueIndex() int {
 }
 
 func (p *varalignParts) spaceBeforeContinuation() string {
-	if p.trailingComment == "" {
-		if p.value == "" {
-			return p.spaceBeforeValue
-		}
-		return p.spaceAfterValue
+	if p.value == "" {
+		return p.spaceBeforeValue
 	}
-	return p.spaceAfterComment
+	return p.spaceAfterValue
 }
 
-func (p *varalignParts) beforeContinuation() string {
+func (p *varalignParts) uptoCommentWidth() int {
+	return tabWidth(rtrimHspace(p.leadingComment +
+		p.varnameOp + p.spaceBeforeValue +
+		p.value))
+}
+
+func (p *varalignParts) uptoComment() string {
 	return rtrimHspace(p.leadingComment +
 		p.varnameOp + p.spaceBeforeValue +
-		p.value + p.spaceAfterValue +
-		p.trailingComment + p.spaceAfterComment)
+		p.value)
 }
 
 func (p *varalignParts) continuationColumn() int {
-	return tabWidth(p.leadingComment +
-		p.varnameOp + p.spaceBeforeValue +
-		p.value + p.spaceAfterValue +
-		p.trailingComment + p.spaceAfterComment)
+	return tabWidthSlice(p.leadingComment,
+		p.varnameOp, p.spaceBeforeValue,
+		p.value, p.spaceAfterValue)
 }
 
 func (p *varalignParts) continuationIndex() int {
 	return len(p.leadingComment) +
 		len(p.varnameOp) + len(p.spaceBeforeValue) +
-		len(p.value) + len(p.spaceAfterValue) +
-		len(p.trailingComment) + len(p.spaceAfterComment)
+		len(p.value) + len(p.spaceAfterValue)
 }
 
-func (p *varalignParts) commentedOut() bool {
+func (p *varalignParts) isCommentedOut() bool {
 	return hasPrefix(p.leadingComment, "#")
 }
 
-// canonicalInitial returns whether the space between the assignment
+// isCanonicalInitial returns whether the space between the assignment
 // operator and the value has its canonical form, which is either
 // at least one tab, or a single space, but only for lines that stick out.
-func (p *varalignParts) canonicalInitial(width int) bool {
+func (p *varalignParts) isCanonicalInitial(width int) bool {
 	space := p.spaceBeforeValue
 	if space == "" {
 		return false
@@ -719,9 +805,9 @@ func (p *varalignParts) canonicalInitial(width int) bool {
 	return strings.TrimLeft(space, "\t") == ""
 }
 
-// canonicalFollow returns whether the space before the value has its
+// isCanonicalFollow returns whether the space before the value has its
 // canonical form, which is at least one tab, followed by up to 7 spaces.
-func (p *varalignParts) canonicalFollow() bool {
+func (p *varalignParts) isCanonicalFollow() bool {
 	lexer := textproc.NewLexer(p.spaceBeforeValue)
 
 	tabs := 0
@@ -740,7 +826,7 @@ func (p *varalignParts) canonicalFollow() bool {
 func (p *varalignParts) widthAlignedAt(valueAlign int) int {
 	return tabWidthAppend(
 		valueAlign,
-		p.value+p.spaceAfterValue+p.trailingComment+p.spaceAfterComment+p.continuation)
+		p.value+p.spaceAfterValue+p.continuation)
 }
 
 type mklineInts struct {
