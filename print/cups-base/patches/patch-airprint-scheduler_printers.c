@@ -1,4 +1,4 @@
-$NetBSD: patch-airprint-scheduler_printers.c,v 1.1 2018/07/24 12:19:21 bouyer Exp $
+$NetBSD: patch-airprint-scheduler_printers.c,v 1.2 2019/11/17 21:22:03 leot Exp $
 
 From debian:
 From 7147c814439aafb26ff0262a7d6b8ef56d20969f Mon Sep 17 00:00:00 2001
@@ -18,9 +18,9 @@ Patch-Name: pwg-raster-attributes.patch
 
 diff --git a/scheduler/printers.c b/scheduler/printers.c
 index bb99907ad..a0ebcbd3e 100644
---- scheduler/printers.c.orig
+--- scheduler/printers.c.orig	2019-11-17 12:21:47.966025953 +0000
 +++ scheduler/printers.c
-@@ -2199,9 +2199,10 @@ cupsdSetPrinterAttrs(cupsd_printer_t *p)/* I - Printer to setup */
+@@ -2249,9 +2249,10 @@ cupsdSetPrinterAttrs(cupsd_printer_t *p)
    cupsd_location_t *auth;		/* Pointer to authentication element */
    const char	*auth_supported;	/* Authentication supported */
    ipp_t		*oldattrs;		/* Old printer attributes */
@@ -31,10 +31,10 @@ index bb99907ad..a0ebcbd3e 100644
 +  mime_type_t   *type;
  
  
-   DEBUG_printf(("cupsdSetPrinterAttrs: entering name = %s, type = %x\n", p->name,
-@@ -2538,6 +2539,80 @@ cupsdSetPrinterAttrs(cupsd_printer_t *p)/* I - Printer to setup */
-   DEBUG_printf(("cupsdSetPrinterAttrs: leaving name = %s, type = %x\n", p->name,
-                 p->type));
+  /*
+@@ -2584,6 +2585,80 @@ cupsdSetPrinterAttrs(cupsd_printer_t *p)
+ 
+   add_printer_formats(p);
  
 +  /* 
 +   * Add "pwg-raster-document-xxx-supported" attributes if PWG Raster input
@@ -113,33 +113,7 @@ index bb99907ad..a0ebcbd3e 100644
   /*
    * Add name-default attributes...
    */
-
-From bbc3507a260d29db3fc5601826f33c10f9dccd1e Mon Sep 17 00:00:00 2001
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Date: Tue, 9 Aug 2016 18:11:29 +0200
-Subject: Patch to support Apple AirPrint (printing from iPhone, iPad, iPod
- Touch to a CUPS server)
-
-Bug-Ubuntu: https://bugs.launchpad.net/bugs/711779
-Bug-Ubuntu: https://bugs.launchpad.net/bugs/1054495
-Bug-Debian: http://bugs.debian.org/700961
-Bug: https://cups.org/str.php?L4341
-Last-Update: 2015-02-10
-
-Patch-Name: airprint-support.patch
----
- conf/mime.convs.in   | 3 +++
- conf/mime.types      | 3 +++
- scheduler/conf.c     | 2 +-
- scheduler/dirsvc.c   | 6 ++++++
- scheduler/printers.c | 4 +++-
- 5 files changed, 16 insertions(+), 2 deletions(-)
-
-diff --git a/scheduler/printers.c b/scheduler/printers.c
-index a0ebcbd3e..b5fe9e031 100644
---- scheduler/printers.c.orig
-+++ scheduler/printers.c
-@@ -3765,7 +3765,9 @@ add_printer_formats(cupsd_printer_t *p)	/* I - Printer */
+@@ -3731,7 +3806,9 @@ add_printer_formats(cupsd_printer_t *p)	
        }
        else if (!_cups_strcasecmp(type->super, "image"))
        {
