@@ -410,7 +410,7 @@ func (s *Suite) Test_Options_Help__with_flag_group(c *check.C) {
 }
 
 func (s *Suite) Test__test_names(c *check.C) {
-	ck := intqa.NewTestNameChecker(c)
-	ck.ShowWarnings(false)
+	ck := intqa.NewTestNameChecker(c.Errorf)
+	ck.Enable(intqa.EAll, -intqa.EMissingTest)
 	ck.Check()
 }

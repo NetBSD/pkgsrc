@@ -382,6 +382,101 @@ func (s *Suite) Test_MkParser_VarUse(c *check.C) {
 		"WARN: Test_MkParser_VarUse.mk:1: Invalid part \" text\" after variable name \"arbitrary\".")
 }
 
+func (s *Suite) Test_MkParser_VarUse__ambiguous(c *check.C) {
+	t := s.Init(c)
+	b := NewMkTokenBuilder()
+
+	t.SetUpCommandLine("--explain")
+
+	line := t.NewLine("module.mk", 123, "\t$Varname $X")
+	p := NewMkParser(line, line.Text[1:])
+
+	tokens := p.MkTokens()
+	t.CheckDeepEquals(tokens, b.Tokens(
+		b.VaruseTextToken("$V", "V"),
+		b.TextToken("arname "),
+		b.VaruseTextToken("$X", "X")))
+
+	t.CheckOutputLines(
+		"ERROR: module.mk:123: $Varname is ambiguous. Use ${Varname} if you mean a Make variable or $$Varname if you mean a shell variable.",
+		"",
+		"\tOnly the first letter after the dollar is the variable name.",
+		"\tEverything following it is normal text, even if it looks like a",
+		"\tvariable name to human readers.",
+		"",
+		"WARN: module.mk:123: $X is ambiguous. Use ${X} if you mean a Make variable or $$X if you mean a shell variable.",
+		"",
+		"\tIn its current form, this variable is parsed as a Make variable. For",
+		"\thuman readers though, $x looks more like a shell variable than a",
+		"\tMake variable, since Make variables are usually written using braces",
+		"\t(BSD-style) or parentheses (GNU-style).",
+		"")
+}
+
+// Pkglint can replace $(VAR) with ${VAR}. It doesn't look at all components
+// of nested variables though because this case is not important enough to
+// invest much development time. It occurs so seldom that it is acceptable
+// to run pkglint multiple times in such a case.
+func (s *Suite) Test_MkParser_VarUse__parentheses_autofix(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--autofix")
+	t.SetUpVartypes()
+	lines := t.SetUpFileLines("Makefile",
+		MkCvsID,
+		"COMMENT=$(P1) $(P2)) $(P3:Q) ${BRACES} $(A.$(B.$(C)))")
+	mklines := NewMkLines(lines)
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"AUTOFIX: ~/Makefile:2: Replacing \"$(P1)\" with \"${P1}\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"$(P2)\" with \"${P2}\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"$(P3:Q)\" with \"${P3:Q}\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"$(C)\" with \"${C}\".")
+	t.CheckFileLines("Makefile",
+		MkCvsID,
+		"COMMENT=${P1} ${P2}) ${P3:Q} ${BRACES} $(A.$(B.${C}))")
+}
+
+func (s *Suite) Test_MkParser_VarUseModifiers(c *check.C) {
+	t := s.Init(c)
+
+	varUse := NewMkTokenBuilder().VarUse
+	test := func(text string, varUse *MkVarUse, diagnostics ...string) {
+		line := t.NewLine("Makefile", 20, "\t"+text)
+		p := NewMkParser(line, text)
+
+		actual := p.VarUse()
+
+		t.CheckDeepEquals(actual, varUse)
+		t.CheckEquals(p.Rest(), "")
+		t.CheckOutput(diagnostics)
+	}
+
+	// The !command! modifier is used so seldom that pkglint does not
+	// check whether the command is actually valid.
+	// At least not while parsing the modifier since at this point it might
+	// be still unknown which of the commands can be used and which cannot.
+	test("${VAR:!command!}", varUse("VAR", "!command!"))
+
+	test("${VAR:!command}", varUse("VAR"),
+		"WARN: Makefile:20: Invalid variable modifier \"!command\" for \"VAR\".")
+
+	test("${VAR:command!}", varUse("VAR"),
+		"WARN: Makefile:20: Invalid variable modifier \"command!\" for \"VAR\".")
+
+	// The :L modifier makes the variable value "echo hello", and the :[1]
+	// modifier extracts the "echo".
+	test("${echo hello:L:[1]}", varUse("echo hello", "L", "[1]"))
+
+	// bmake ignores the :[3] modifier, and the :L modifier just returns the
+	// variable name, in this case BUILD_DIRS.
+	test("${BUILD_DIRS:[3]:L}", varUse("BUILD_DIRS", "[3]", "L"))
+
+	test("${PATH:ts::Q}", varUse("PATH", "ts:", "Q"))
+}
+
 func (s *Suite) Test_MkParser_varUseModifier__invalid_ts_modifier_with_warning(c *check.C) {
 	t := s.Init(c)
 
@@ -479,6 +574,64 @@ func (s *Suite) Test_MkParser_varUseModifier__varuse_in_malformed_modifier(c *ch
 		"WARN: filename.mk:123: Invalid variable modifier \"?yes${INNER}\" for \"${VAR}\".")
 }
 
+func (s *Suite) Test_MkParser_varUseModifierSubst(c *check.C) {
+	t := s.Init(c)
+
+	varUse := NewMkTokenBuilder().VarUse
+	test := func(text string, varUse *MkVarUse, rest string, diagnostics ...string) {
+		line := t.NewLine("Makefile", 20, "\t"+text)
+		p := NewMkParser(line, text)
+
+		actual := p.VarUse()
+
+		t.CheckDeepEquals(actual, varUse)
+		t.CheckEquals(p.Rest(), rest)
+		t.CheckOutput(diagnostics)
+	}
+
+	test("${VAR:S", varUse("VAR"), "",
+		"WARN: Makefile:20: Invalid variable modifier \"S\" for \"VAR\".",
+		"WARN: Makefile:20: Missing closing \"}\" for \"VAR\".")
+
+	test("${VAR:S}", varUse("VAR"), "",
+		"WARN: Makefile:20: Invalid variable modifier \"S\" for \"VAR\".")
+
+	test("${VAR:S,}", varUse("VAR"), "",
+		"WARN: Makefile:20: Invalid variable modifier \"S,\" for \"VAR\".")
+
+	test("${VAR:S,from,to}", varUse("VAR"), "",
+		"WARN: Makefile:20: Invalid variable modifier \"S,from,to\" for \"VAR\".")
+
+	test("${VAR:S,from,to,}", varUse("VAR", "S,from,to,"), "")
+
+	test("${VAR:S,^from$,to,}", varUse("VAR", "S,^from$,to,"), "")
+
+	test("${VAR:S,@F@,${F},}", varUse("VAR", "S,@F@,${F},"), "")
+
+	test("${VAR:S,from,to,1}", varUse("VAR", "S,from,to,1"), "")
+	test("${VAR:S,from,to,g}", varUse("VAR", "S,from,to,g"), "")
+	test("${VAR:S,from,to,W}", varUse("VAR", "S,from,to,W"), "")
+
+	test("${VAR:S,from,to,1gW}", varUse("VAR", "S,from,to,1gW"), "")
+
+	// Inside the :S or :C modifiers, neither a colon nor the closing
+	// brace need to be escaped. Otherwise these patterns would become
+	// too difficult to read and write.
+	test("${VAR:C/[[:alnum:]]{2}/**/g}",
+		varUse("VAR", "C/[[:alnum:]]{2}/**/g"),
+		"")
+
+	// Some pkgsrc users really explore the darkest corners of bmake by using
+	// the backslash as the separator in the :S modifier. Sure, it works, it
+	// just looks totally unexpected to the average pkgsrc reader.
+	//
+	// Using the backslash as separator means that it cannot be used for anything
+	// else, not even for escaping other characters.
+	test("${VAR:S\\.post1\\\\1}",
+		varUse("VAR", "S\\.post1\\\\1"),
+		"")
+}
+
 func (s *Suite) Test_MkParser_varUseModifierAt__missing_at_after_variable_name(c *check.C) {
 	t := s.Init(c)
 	b := NewMkTokenBuilder()
@@ -521,34 +674,35 @@ func (s *Suite) Test_MkParser_varUseModifierAt__incomplete_without_warning(c *ch
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkParser_VarUse__ambiguous(c *check.C) {
+func (s *Suite) Test_MkParser_varUseModifierAt(c *check.C) {
 	t := s.Init(c)
-	b := NewMkTokenBuilder()
 
-	t.SetUpCommandLine("--explain")
+	varUse := NewMkTokenBuilder().VarUse
+	test := func(text string, varUse *MkVarUse, rest string, diagnostics ...string) {
+		line := t.NewLine("Makefile", 20, "\t"+text)
+		p := NewMkParser(line, text)
 
-	line := t.NewLine("module.mk", 123, "\t$Varname $X")
-	p := NewMkParser(line, line.Text[1:])
+		actual := p.VarUse()
 
-	tokens := p.MkTokens()
-	t.CheckDeepEquals(tokens, b.Tokens(
-		b.VaruseTextToken("$V", "V"),
-		b.TextToken("arname "),
-		b.VaruseTextToken("$X", "X")))
+		t.CheckDeepEquals(actual, varUse)
+		t.CheckEquals(p.Rest(), rest)
+		t.CheckOutput(diagnostics)
+	}
 
-	t.CheckOutputLines(
-		"ERROR: module.mk:123: $Varname is ambiguous. Use ${Varname} if you mean a Make variable or $$Varname if you mean a shell variable.",
+	test("${VAR:@",
+		varUse("VAR"),
 		"",
-		"\tOnly the first letter after the dollar is the variable name.",
-		"\tEverything following it is normal text, even if it looks like a",
-		"\tvariable name to human readers.",
-		"",
-		"WARN: module.mk:123: $X is ambiguous. Use ${X} if you mean a Make variable or $$X if you mean a shell variable.",
-		"",
-		"\tIn its current form, this variable is parsed as a Make variable. For",
-		"\thuman readers though, $x looks more like a shell variable than a",
-		"\tMake variable, since Make variables are usually written using braces",
-		"\t(BSD-style) or parentheses (GNU-style).",
+		"WARN: Makefile:20: Invalid variable modifier \"@\" for \"VAR\".",
+		"WARN: Makefile:20: Missing closing \"}\" for \"VAR\".")
+
+	test("${VAR:@i@${i}}", varUse("VAR", "@i@${i}}"), "",
+		"WARN: Makefile:20: Modifier ${VAR:@i@...@} is missing the final \"@\".",
+		"WARN: Makefile:20: Missing closing \"}\" for \"VAR\".")
+
+	test("${VAR:@i@${i}@}", varUse("VAR", "@i@${i}@"), "")
+
+	test("${PKG_GROUPS:@g@${g:Q}:${PKG_GID.${g}:Q}@:C/:*$//g}",
+		varUse("PKG_GROUPS", "@g@${g:Q}:${PKG_GID.${g}:Q}@", "C/:*$//g"),
 		"")
 }
 
@@ -851,184 +1005,6 @@ func (s *Suite) Test_MkParser_Varname(c *check.C) {
 	testRest("VARNAME/rest", "VARNAME", "/rest")
 }
 
-// Pkglint can replace $(VAR) with ${VAR}. It doesn't look at all components
-// of nested variables though because this case is not important enough to
-// invest much development time. It occurs so seldom that it is acceptable
-// to run pkglint multiple times in such a case.
-func (s *Suite) Test_MkParser_VarUse__parentheses_autofix(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpCommandLine("--autofix")
-	t.SetUpVartypes()
-	lines := t.SetUpFileLines("Makefile",
-		MkCvsID,
-		"COMMENT=$(P1) $(P2)) $(P3:Q) ${BRACES} $(A.$(B.$(C)))")
-	mklines := NewMkLines(lines)
-
-	mklines.Check()
-
-	t.CheckOutputLines(
-		"AUTOFIX: ~/Makefile:2: Replacing \"$(P1)\" with \"${P1}\".",
-		"AUTOFIX: ~/Makefile:2: Replacing \"$(P2)\" with \"${P2}\".",
-		"AUTOFIX: ~/Makefile:2: Replacing \"$(P3:Q)\" with \"${P3:Q}\".",
-		"AUTOFIX: ~/Makefile:2: Replacing \"$(C)\" with \"${C}\".")
-	t.CheckFileLines("Makefile",
-		MkCvsID,
-		"COMMENT=${P1} ${P2}) ${P3:Q} ${BRACES} $(A.$(B.${C}))")
-}
-
-func (s *Suite) Test_MkParser_VarUseModifiers(c *check.C) {
-	t := s.Init(c)
-
-	varUse := NewMkTokenBuilder().VarUse
-	test := func(text string, varUse *MkVarUse, diagnostics ...string) {
-		line := t.NewLine("Makefile", 20, "\t"+text)
-		p := NewMkParser(line, text)
-
-		actual := p.VarUse()
-
-		t.CheckDeepEquals(actual, varUse)
-		t.CheckEquals(p.Rest(), "")
-		t.CheckOutput(diagnostics)
-	}
-
-	// The !command! modifier is used so seldom that pkglint does not
-	// check whether the command is actually valid.
-	// At least not while parsing the modifier since at this point it might
-	// be still unknown which of the commands can be used and which cannot.
-	test("${VAR:!command!}", varUse("VAR", "!command!"))
-
-	test("${VAR:!command}", varUse("VAR"),
-		"WARN: Makefile:20: Invalid variable modifier \"!command\" for \"VAR\".")
-
-	test("${VAR:command!}", varUse("VAR"),
-		"WARN: Makefile:20: Invalid variable modifier \"command!\" for \"VAR\".")
-
-	// The :L modifier makes the variable value "echo hello", and the :[1]
-	// modifier extracts the "echo".
-	test("${echo hello:L:[1]}", varUse("echo hello", "L", "[1]"))
-
-	// bmake ignores the :[3] modifier, and the :L modifier just returns the
-	// variable name, in this case BUILD_DIRS.
-	test("${BUILD_DIRS:[3]:L}", varUse("BUILD_DIRS", "[3]", "L"))
-
-	test("${PATH:ts::Q}", varUse("PATH", "ts:", "Q"))
-}
-
-func (s *Suite) Test_MkParser_varUseModifierSubst(c *check.C) {
-	t := s.Init(c)
-
-	varUse := NewMkTokenBuilder().VarUse
-	test := func(text string, varUse *MkVarUse, rest string, diagnostics ...string) {
-		line := t.NewLine("Makefile", 20, "\t"+text)
-		p := NewMkParser(line, text)
-
-		actual := p.VarUse()
-
-		t.CheckDeepEquals(actual, varUse)
-		t.CheckEquals(p.Rest(), rest)
-		t.CheckOutput(diagnostics)
-	}
-
-	test("${VAR:S", varUse("VAR"), "",
-		"WARN: Makefile:20: Invalid variable modifier \"S\" for \"VAR\".",
-		"WARN: Makefile:20: Missing closing \"}\" for \"VAR\".")
-
-	test("${VAR:S}", varUse("VAR"), "",
-		"WARN: Makefile:20: Invalid variable modifier \"S\" for \"VAR\".")
-
-	test("${VAR:S,}", varUse("VAR"), "",
-		"WARN: Makefile:20: Invalid variable modifier \"S,\" for \"VAR\".")
-
-	test("${VAR:S,from,to}", varUse("VAR"), "",
-		"WARN: Makefile:20: Invalid variable modifier \"S,from,to\" for \"VAR\".")
-
-	test("${VAR:S,from,to,}", varUse("VAR", "S,from,to,"), "")
-
-	test("${VAR:S,^from$,to,}", varUse("VAR", "S,^from$,to,"), "")
-
-	test("${VAR:S,@F@,${F},}", varUse("VAR", "S,@F@,${F},"), "")
-
-	test("${VAR:S,from,to,1}", varUse("VAR", "S,from,to,1"), "")
-	test("${VAR:S,from,to,g}", varUse("VAR", "S,from,to,g"), "")
-	test("${VAR:S,from,to,W}", varUse("VAR", "S,from,to,W"), "")
-
-	test("${VAR:S,from,to,1gW}", varUse("VAR", "S,from,to,1gW"), "")
-
-	// Inside the :S or :C modifiers, neither a colon nor the closing
-	// brace need to be escaped. Otherwise these patterns would become
-	// too difficult to read and write.
-	test("${VAR:C/[[:alnum:]]{2}/**/g}",
-		varUse("VAR", "C/[[:alnum:]]{2}/**/g"),
-		"")
-
-	// Some pkgsrc users really explore the darkest corners of bmake by using
-	// the backslash as the separator in the :S modifier. Sure, it works, it
-	// just looks totally unexpected to the average pkgsrc reader.
-	//
-	// Using the backslash as separator means that it cannot be used for anything
-	// else, not even for escaping other characters.
-	test("${VAR:S\\.post1\\\\1}",
-		varUse("VAR", "S\\.post1\\\\1"),
-		"")
-}
-
-func (s *Suite) Test_MkParser_varUseModifierAt(c *check.C) {
-	t := s.Init(c)
-
-	varUse := NewMkTokenBuilder().VarUse
-	test := func(text string, varUse *MkVarUse, rest string, diagnostics ...string) {
-		line := t.NewLine("Makefile", 20, "\t"+text)
-		p := NewMkParser(line, text)
-
-		actual := p.VarUse()
-
-		t.CheckDeepEquals(actual, varUse)
-		t.CheckEquals(p.Rest(), rest)
-		t.CheckOutput(diagnostics)
-	}
-
-	test("${VAR:@",
-		varUse("VAR"),
-		"",
-		"WARN: Makefile:20: Invalid variable modifier \"@\" for \"VAR\".",
-		"WARN: Makefile:20: Missing closing \"}\" for \"VAR\".")
-
-	test("${VAR:@i@${i}}", varUse("VAR", "@i@${i}}"), "",
-		"WARN: Makefile:20: Modifier ${VAR:@i@...@} is missing the final \"@\".",
-		"WARN: Makefile:20: Missing closing \"}\" for \"VAR\".")
-
-	test("${VAR:@i@${i}@}", varUse("VAR", "@i@${i}@"), "")
-
-	test("${PKG_GROUPS:@g@${g:Q}:${PKG_GID.${g}:Q}@:C/:*$//g}",
-		varUse("PKG_GROUPS", "@g@${g:Q}:${PKG_GID.${g}:Q}@", "C/:*$//g"),
-		"")
-}
-
-func (s *Suite) Test_MkParser_isPkgbasePart(c *check.C) {
-	t := s.Init(c)
-
-	test := func(str string, expected bool) {
-		actual := (*MkParser)(nil).isPkgbasePart(str)
-
-		t.CheckEquals(actual, expected)
-	}
-
-	test("X11", true)
-	test("client", true)
-	test("${PKGNAME}", true)
-	test("[a-z]", true)
-	test("{client,server}", true)
-
-	test("1.2", false)
-	test("[0-9]*", false)
-	test("{5.[1-7].*,6.[0-9]*}", false)
-	test("${PKGVERSION}", false)
-	test("${PKGNAME:C/^.*-//}", false)
-	test(">=1.0", false)
-	test("_client", false) // The combination foo-_client looks strange.
-}
-
 func (s *Suite) Test_MkParser_PkgbasePattern(c *check.C) {
 	t := s.Init(c)
 
@@ -1073,6 +1049,30 @@ func (s *Suite) Test_MkParser_PkgbasePattern(c *check.C) {
 	//
 	// This pattern doesn't have a single package base, which means it cannot be parsed at all.
 	test("{ssh{,6}-[0-9]*,openssh-[0-9]*}", "", "{ssh{,6}-[0-9]*,openssh-[0-9]*}")
+}
+
+func (s *Suite) Test_MkParser_isPkgbasePart(c *check.C) {
+	t := s.Init(c)
+
+	test := func(str string, expected bool) {
+		actual := (*MkParser)(nil).isPkgbasePart(str)
+
+		t.CheckEquals(actual, expected)
+	}
+
+	test("X11", true)
+	test("client", true)
+	test("${PKGNAME}", true)
+	test("[a-z]", true)
+	test("{client,server}", true)
+
+	test("1.2", false)
+	test("[0-9]*", false)
+	test("{5.[1-7].*,6.[0-9]*}", false)
+	test("${PKGVERSION}", false)
+	test("${PKGNAME:C/^.*-//}", false)
+	test(">=1.0", false)
+	test("_client", false) // The combination foo-_client looks strange.
 }
 
 func (s *Suite) Test_MkParser_Dependency(c *check.C) {

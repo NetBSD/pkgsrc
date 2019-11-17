@@ -34,48 +34,6 @@ func (s *Suite) Test_CheckdirToplevel(c *check.C) {
 		"NOTE: ~/Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17.")
 }
 
-func (s *Suite) Test_Toplevel_checkSubdir__sorting_x11(c *check.C) {
-	t := s.Init(c)
-
-	t.CreateFileLines("Makefile",
-		MkCvsID,
-		"",
-		"SUBDIR+=\tx11",
-		"SUBDIR+=\tsysutils",
-		"SUBDIR+=\tarchivers")
-	t.CreateFileLines("archivers/Makefile")
-	t.CreateFileLines("sysutils/Makefile")
-	t.CreateFileLines("x11/Makefile")
-	t.SetUpVartypes()
-
-	CheckdirToplevel(t.File("."))
-
-	t.CheckOutputLines(
-		"WARN: ~/Makefile:4: sysutils should come before x11.",
-		"WARN: ~/Makefile:5: archivers should come before sysutils.")
-}
-
-func (s *Suite) Test_Toplevel_checkSubdir__commented_without_reason(c *check.C) {
-	t := s.Init(c)
-
-	t.CreateFileLines("Makefile",
-		MkCvsID,
-		"",
-		"#SUBDIR+=\taaa",
-		"#SUBDIR+=\tbbb\t#",
-		"#SUBDIR+=\tccc\t# reason")
-	t.CreateFileLines("aaa/Makefile")
-	t.CreateFileLines("bbb/Makefile")
-	t.CreateFileLines("ccc/Makefile")
-	t.SetUpVartypes()
-
-	CheckdirToplevel(t.File("."))
-
-	t.CheckOutputLines(
-		"WARN: ~/Makefile:3: \"aaa\" commented out without giving a reason.",
-		"WARN: ~/Makefile:4: \"bbb\" commented out without giving a reason.")
-}
-
 func (s *Suite) Test_CheckdirToplevel__recursive(c *check.C) {
 	t := s.Init(c)
 
@@ -153,4 +111,46 @@ func (s *Suite) Test_CheckdirToplevel__indentation(c *check.C) {
 		t.Shquote("(Run \"pkglint -e -Wall %s\" to show explanations.)", "."),
 		t.Shquote("(Run \"pkglint -fs -Wall %s\" to show what can be fixed automatically.)", "."),
 		t.Shquote("(Run \"pkglint -F -Wall %s\" to automatically fix some issues.)", "."))
+}
+
+func (s *Suite) Test_Toplevel_checkSubdir__sorting_x11(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("Makefile",
+		MkCvsID,
+		"",
+		"SUBDIR+=\tx11",
+		"SUBDIR+=\tsysutils",
+		"SUBDIR+=\tarchivers")
+	t.CreateFileLines("archivers/Makefile")
+	t.CreateFileLines("sysutils/Makefile")
+	t.CreateFileLines("x11/Makefile")
+	t.SetUpVartypes()
+
+	CheckdirToplevel(t.File("."))
+
+	t.CheckOutputLines(
+		"WARN: ~/Makefile:4: sysutils should come before x11.",
+		"WARN: ~/Makefile:5: archivers should come before sysutils.")
+}
+
+func (s *Suite) Test_Toplevel_checkSubdir__commented_without_reason(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("Makefile",
+		MkCvsID,
+		"",
+		"#SUBDIR+=\taaa",
+		"#SUBDIR+=\tbbb\t#",
+		"#SUBDIR+=\tccc\t# reason")
+	t.CreateFileLines("aaa/Makefile")
+	t.CreateFileLines("bbb/Makefile")
+	t.CreateFileLines("ccc/Makefile")
+	t.SetUpVartypes()
+
+	CheckdirToplevel(t.File("."))
+
+	t.CheckOutputLines(
+		"WARN: ~/Makefile:3: \"aaa\" commented out without giving a reason.",
+		"WARN: ~/Makefile:4: \"bbb\" commented out without giving a reason.")
 }

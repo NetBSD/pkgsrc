@@ -97,113 +97,6 @@ func NewPackage(dir string) *Package {
 	return &pkg
 }
 
-// File returns the (possibly absolute) path to relativeFileName,
-// as resolved from the package's directory.
-// Variables that are known in the package are resolved, e.g. ${PKGDIR}.
-func (pkg *Package) File(relativeFileName string) string {
-	return cleanpath(resolveVariableRefs(nil /* XXX: or maybe some mklines? */, joinPath(pkg.dir, relativeFileName)))
-}
-
-// Rel returns the path by which the given filename (as seen from the
-// current working directory) can be reached as a relative path from
-// the package directory.
-//
-// Example:
-//  NewPackage("category/package").Rel("other/package") == "../../other/package"
-func (pkg *Package) Rel(filename string) string {
-	return relpath(pkg.dir, filename)
-}
-
-// Returns whether the given file (relative to the package directory)
-// is included somewhere in the package, either directly or indirectly.
-func (pkg *Package) Includes(filename string) bool {
-	return pkg.unconditionalIncludes[filename] != nil ||
-		pkg.conditionalIncludes[filename] != nil
-}
-
-func (pkg *Package) checkPossibleDowngrade() {
-	if trace.Tracing {
-		defer trace.Call0()()
-	}
-
-	m, _, pkgversion := match2(pkg.EffectivePkgname, rePkgname)
-	if !m {
-		return
-	}
-
-	mkline := pkg.EffectivePkgnameLine
-
-	change := G.Pkgsrc.LastChange[pkg.Pkgpath]
-	if change == nil {
-		if trace.Tracing {
-			trace.Step1("No change log for package %q", pkg.Pkgpath)
-		}
-		return
-	}
-
-	if change.Action == Updated {
-		pkgversionNorev := replaceAll(pkgversion, `nb\d+$`, "")
-		changeNorev := replaceAll(change.Version(), `nb\d+$`, "")
-		cmp := pkgver.Compare(pkgversionNorev, changeNorev)
-		switch {
-		case cmp < 0:
-			mkline.Warnf("The package is being downgraded from %s (see %s) to %s.",
-				change.Version(), mkline.Line.RefToLocation(change.Location), pkgversion)
-			mkline.Explain(
-				"The files in doc/CHANGES-*, in which all version changes are",
-				"recorded, have a higher version number than what the package says.",
-				"This is unusual, since packages are typically upgraded instead of",
-				"downgraded.")
-
-		case cmp > 0 && !isLocallyModified(mkline.Filename):
-			mkline.Notef("Package version %q is greater than the latest %q from %s.",
-				pkgversion, change.Version(), mkline.Line.RefToLocation(change.Location))
-			mkline.Explain(
-				"Each update to a package should be mentioned in the doc/CHANGES file.",
-				"That file is used for the quarterly statistics of updated packages.",
-				"",
-				"To do this after updating a package, run",
-				sprintf("%q,", bmake("cce")),
-				"which is the abbreviation for commit-changes-entry.")
-		}
-	}
-}
-
-// checkLinesBuildlink3Inclusion checks whether the package Makefile includes
-// at least those buildlink3.mk files that are included by the buildlink3.mk
-// file of the package.
-//
-// The other direction is not checked since it is perfectly fine for a package
-// to have more dependencies than are needed for buildlink the package.
-// (This might be worth re-checking though.)
-func (pkg *Package) checkLinesBuildlink3Inclusion(mklines *MkLines) {
-	if trace.Tracing {
-		defer trace.Call0()()
-	}
-
-	// Collect all the included buildlink3.mk files from the file.
-	includedFiles := make(map[string]*MkLine)
-	for _, mkline := range mklines.mklines {
-		if mkline.IsInclude() {
-			includedFile := mkline.IncludedFile()
-			if hasSuffix(includedFile, "/buildlink3.mk") {
-				includedFiles[includedFile] = mkline
-				if pkg.bl3[includedFile] == nil {
-					mkline.Warnf("%s is included by this file but not by the package.", includedFile)
-				}
-			}
-		}
-	}
-
-	if trace.Tracing {
-		for packageBl3 := range pkg.bl3 {
-			if includedFiles[packageBl3] == nil {
-				trace.Step1("%s is included by the package but not by the buildlink3.mk file.", packageBl3)
-			}
-		}
-	}
-}
-
 func (pkg *Package) load() ([]string, *MkLines, *MkLines) {
 	// Load the package Makefile and all included files,
 	// to collect all used and defined variables and similar data.
@@ -242,96 +135,6 @@ func (pkg *Package) load() ([]string, *MkLines, *MkLines) {
 	return files, mklines, allLines
 }
 
-func (pkg *Package) check(filenames []string, mklines, allLines *MkLines) {
-	haveDistinfo := false
-	havePatches := false
-
-	for _, filename := range filenames {
-		if containsVarRef(filename) {
-			if trace.Tracing {
-				trace.Stepf("Skipping file %q because the name contains an unresolved variable.", filename)
-			}
-			continue
-		}
-
-		st, err := os.Lstat(filename)
-		switch {
-		case err != nil:
-			// For a missing custom distinfo file, an error message is already generated
-			// for the line where DISTINFO_FILE is defined.
-			//
-			// For all other cases it is next to impossible to reach this branch
-			// since all those files come from calls to dirglob.
-			break
-
-		case path.Base(filename) == "Makefile" && strings.Count(G.Pkgsrc.ToRel(filename), "/") == 2:
-			G.checkExecutable(filename, st.Mode())
-			pkg.checkfilePackageMakefile(filename, mklines, allLines)
-
-		default:
-			pkg.checkDirent(filename, st.Mode())
-		}
-
-		if contains(filename, "/patches/patch-") {
-			havePatches = true
-		} else if hasSuffix(filename, "/distinfo") {
-			haveDistinfo = true
-		}
-		pkg.checkOwnerMaintainer(filename)
-		pkg.checkFreeze(filename)
-	}
-
-	if pkg.Pkgdir == "." {
-		if havePatches && !haveDistinfo {
-			line := NewLineWhole(pkg.File(pkg.DistinfoFile))
-			line.Warnf("A package with patches should have a distinfo file.")
-			line.Explain(
-				"To generate a distinfo file for the existing patches, run",
-				sprintf("%q.", bmake("makepatchsum")))
-		}
-	}
-}
-
-// checkDirent checks a directory entry based on its filename and its mode
-// (regular file, directory, symlink).
-func (pkg *Package) checkDirent(dirent string, mode os.FileMode) {
-	// TODO: merge duplicate code in Pkglint.checkMode
-
-	basename := path.Base(dirent)
-
-	switch {
-
-	case mode.IsRegular():
-		pkgsrcRel := G.Pkgsrc.ToRel(dirent)
-		depth := strings.Count(pkgsrcRel, "/")
-		G.checkReg(dirent, basename, depth)
-
-	case hasPrefix(basename, "work"):
-		if G.Opts.Import {
-			NewLineWhole(dirent).Errorf("Must be cleaned up before committing the package.")
-		}
-		return
-
-	case mode.IsDir():
-		switch {
-		case basename == "files",
-			basename == "patches",
-			matches(dirent, `(?:^|/)files/[^/]*$`),
-			isEmptyDir(dirent):
-			break
-
-		default:
-			NewLineWhole(dirent).Warnf("Unknown directory name.")
-		}
-
-	case mode&os.ModeSymlink != 0:
-		NewLineWhole(dirent).Warnf("Invalid symlink name.")
-
-	default:
-		NewLineWhole(dirent).Errorf("Only files and directories are allowed in pkgsrc.")
-	}
-}
-
 func (pkg *Package) loadPackageMakefile() (*MkLines, *MkLines) {
 	filename := pkg.File("Makefile")
 	if trace.Tracing {
@@ -360,7 +163,7 @@ func (pkg *Package) loadPackageMakefile() (*MkLines, *MkLines) {
 	}
 
 	// See mk/tools/cmake.mk
-	if pkg.vars.Defined("USE_CMAKE") {
+	if pkg.vars.IsDefined("USE_CMAKE") {
 		allLines.Tools.def("cmake", "", false, AtRunTime, nil)
 		allLines.Tools.def("cpack", "", false, AtRunTime, nil)
 	}
@@ -373,11 +176,11 @@ func (pkg *Package) loadPackageMakefile() (*MkLines, *MkLines) {
 	pkg.Patchdir = pkg.vars.LastValue("PATCHDIR")
 
 	// See lang/php/ext.mk
-	if pkg.vars.DefinedSimilar("PHPEXT_MK") {
-		if !pkg.vars.DefinedSimilar("USE_PHP_EXT_PATCHES") {
+	if pkg.vars.IsDefinedSimilar("PHPEXT_MK") {
+		if !pkg.vars.IsDefinedSimilar("USE_PHP_EXT_PATCHES") {
 			pkg.Patchdir = "patches"
 		}
-		if pkg.vars.DefinedSimilar("PECL_VERSION") {
+		if pkg.vars.IsDefinedSimilar("PECL_VERSION") {
 			pkg.DistinfoFile = "distinfo"
 		} else {
 			pkg.IgnoreMissingPatches = true
@@ -395,21 +198,6 @@ func (pkg *Package) loadPackageMakefile() (*MkLines, *MkLines) {
 	}
 
 	return mainLines, allLines
-}
-
-func (pkg *Package) collectConditionalIncludes(mklines *MkLines) {
-	mklines.ForEach(func(mkline *MkLine) {
-		if mkline.IsInclude() {
-			mkline.SetConditionalVars(mklines.indentation.Varnames())
-
-			key := pkg.Rel(mkline.IncludedFileFull())
-			if mklines.indentation.IsConditional() {
-				pkg.conditionalIncludes[key] = mkline
-			} else {
-				pkg.unconditionalIncludes[key] = mkline
-			}
-		}
-	})
 }
 
 // TODO: What is allLines used for, is it still necessary? Would it be better as a field in Package?
@@ -471,7 +259,7 @@ func (pkg *Package) parseLine(mklines *MkLines, mkline *MkLine, allLines *MkLine
 	if mkline.IsVarassign() {
 		varname, op, value := mkline.Varname(), mkline.Op(), mkline.Value()
 
-		if op != opAssignDefault || !pkg.vars.Defined(varname) {
+		if op != opAssignDefault || !pkg.vars.IsDefined(varname) {
 			if trace.Tracing {
 				trace.Stepf("varassign(%q, %q, %q)", varname, op, value)
 			}
@@ -500,7 +288,7 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile string) (included
 	fullIncluded := joinPath(dirname, includedFile)
 	relIncludedFile := relpath(pkg.dir, fullIncluded)
 
-	if !pkg.diveInto(includingFile, includedFile) {
+	if !pkg.shouldDiveInto(includingFile, includedFile) {
 		return nil, true
 	}
 
@@ -554,11 +342,38 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile string) (included
 	return includedMklines, false
 }
 
-// diveInto decides whether to load the includedFile.
+// resolveIncludedFile resolves Makefile variables such as ${PKGPATH} to
+// their actual values.
+func (pkg *Package) resolveIncludedFile(mkline *MkLine, includingFilename string) string {
+
+	// TODO: resolveVariableRefs uses G.Pkg implicitly. It should be made explicit.
+	// TODO: Try to combine resolveVariableRefs and ResolveVarsInRelativePath.
+	includedFile := resolveVariableRefs(nil /* XXX: or maybe some mklines? */, mkline.ResolveVarsInRelativePath(mkline.IncludedFile()))
+	if containsVarRef(includedFile) {
+		if trace.Tracing && !contains(includingFilename, "/mk/") {
+			trace.Stepf("%s:%s: Skipping unresolvable include file %q.",
+				mkline.Filename, mkline.Linenos(), includedFile)
+		}
+		return ""
+	}
+
+	if mkline.Basename != "buildlink3.mk" {
+		if hasSuffix(includedFile, "/buildlink3.mk") {
+			pkg.bl3[includedFile] = mkline
+			if trace.Tracing {
+				trace.Step1("Buildlink3 file in package: %q", includedFile)
+			}
+		}
+	}
+
+	return includedFile
+}
+
+// shouldDiveInto decides whether to load the includedFile.
 //
 // The includingFile is relative to the current working directory,
 // the includedFile is taken directly from the .include directive.
-func (*Package) diveInto(includingFile string, includedFile string) bool {
+func (*Package) shouldDiveInto(includingFile string, includedFile string) bool {
 
 	if hasSuffix(includedFile, "/bsd.pkg.mk") || IsPrefs(includedFile) {
 		return false
@@ -592,31 +407,88 @@ func (pkg *Package) collectSeenInclude(mkline *MkLine, includedFile string) {
 	pkg.seenInclude = true
 }
 
-// resolveIncludedFile resolves Makefile variables such as ${PKGPATH} to
-// their actual values.
-func (pkg *Package) resolveIncludedFile(mkline *MkLine, includingFilename string) string {
+func (pkg *Package) collectConditionalIncludes(mklines *MkLines) {
+	mklines.ForEach(func(mkline *MkLine) {
+		if mkline.IsInclude() {
+			mkline.SetConditionalVars(mklines.indentation.Varnames())
 
-	// TODO: resolveVariableRefs uses G.Pkg implicitly. It should be made explicit.
-	// TODO: Try to combine resolveVariableRefs and ResolveVarsInRelativePath.
-	includedFile := resolveVariableRefs(nil /* XXX: or maybe some mklines? */, mkline.ResolveVarsInRelativePath(mkline.IncludedFile()))
-	if containsVarRef(includedFile) {
-		if trace.Tracing && !contains(includingFilename, "/mk/") {
-			trace.Stepf("%s:%s: Skipping unresolvable include file %q.",
-				mkline.Filename, mkline.Linenos(), includedFile)
-		}
-		return ""
-	}
-
-	if mkline.Basename != "buildlink3.mk" {
-		if hasSuffix(includedFile, "/buildlink3.mk") {
-			pkg.bl3[includedFile] = mkline
-			if trace.Tracing {
-				trace.Step1("Buildlink3 file in package: %q", includedFile)
+			key := pkg.Rel(mkline.IncludedFileFull())
+			if mklines.indentation.IsConditional() {
+				pkg.conditionalIncludes[key] = mkline
+			} else {
+				pkg.unconditionalIncludes[key] = mkline
 			}
 		}
+	})
+}
+
+func (pkg *Package) loadPlistDirs(plistFilename string) {
+	lines := Load(plistFilename, MustSucceed)
+	ck := PlistChecker{
+		pkg,
+		make(map[string]*PlistLine),
+		make(map[string]*PlistLine),
+		"",
+		Once{},
+		false}
+	ck.Load(lines)
+
+	for filename, pline := range ck.allFiles {
+		pkg.Plist.Files[filename] = pline
+	}
+	for dirname, pline := range ck.allDirs {
+		pkg.Plist.Dirs[dirname] = pline
+	}
+}
+
+func (pkg *Package) check(filenames []string, mklines, allLines *MkLines) {
+	haveDistinfo := false
+	havePatches := false
+
+	for _, filename := range filenames {
+		if containsVarRef(filename) {
+			if trace.Tracing {
+				trace.Stepf("Skipping file %q because the name contains an unresolved variable.", filename)
+			}
+			continue
+		}
+
+		st, err := os.Lstat(filename)
+		switch {
+		case err != nil:
+			// For a missing custom distinfo file, an error message is already generated
+			// for the line where DISTINFO_FILE is defined.
+			//
+			// For all other cases it is next to impossible to reach this branch
+			// since all those files come from calls to dirglob.
+			break
+
+		case path.Base(filename) == "Makefile" && strings.Count(G.Pkgsrc.ToRel(filename), "/") == 2:
+			G.checkExecutable(filename, st.Mode())
+			pkg.checkfilePackageMakefile(filename, mklines, allLines)
+
+		default:
+			pkg.checkDirent(filename, st.Mode())
+		}
+
+		if contains(filename, "/patches/patch-") {
+			havePatches = true
+		} else if hasSuffix(filename, "/distinfo") {
+			haveDistinfo = true
+		}
+		pkg.checkOwnerMaintainer(filename)
+		pkg.checkFreeze(filename)
 	}
 
-	return includedFile
+	if pkg.Pkgdir == "." {
+		if havePatches && !haveDistinfo {
+			line := NewLineWhole(pkg.File(pkg.DistinfoFile))
+			line.Warnf("A package with patches should have a distinfo file.")
+			line.Explain(
+				"To generate a distinfo file for the existing patches, run",
+				sprintf("%q.", bmake("makepatchsum")))
+		}
+	}
 }
 
 func (pkg *Package) checkfilePackageMakefile(filename string, mklines *MkLines, allLines *MkLines) {
@@ -627,9 +499,9 @@ func (pkg *Package) checkfilePackageMakefile(filename string, mklines *MkLines, 
 	vars := pkg.vars
 	pkg.checkPlist()
 
-	want := !vars.Defined("NO_CHECKSUM")
-	want = want && !vars.Defined("META_PACKAGE")
-	want = want && !(vars.Defined("DISTFILES") && vars.LastValue("DISTFILES") == "")
+	want := !vars.IsDefined("NO_CHECKSUM")
+	want = want && !vars.IsDefined("META_PACKAGE")
+	want = want && !(vars.IsDefined("DISTFILES") && vars.LastValue("DISTFILES") == "")
 	want = want || !isEmptyDir(pkg.File(pkg.Patchdir))
 
 	if !want {
@@ -658,7 +530,7 @@ func (pkg *Package) checkfilePackageMakefile(filename string, mklines *MkLines, 
 		}
 	}
 
-	if !vars.Defined("LICENSE") && !vars.Defined("META_PACKAGE") {
+	if !vars.IsDefined("LICENSE") && !vars.IsDefined("META_PACKAGE") {
 		line := NewLineWhole(filename)
 		line.Errorf("Each package must define its LICENSE.")
 		// TODO: Explain why the LICENSE is necessary.
@@ -669,13 +541,14 @@ func (pkg *Package) checkfilePackageMakefile(filename string, mklines *MkLines, 
 
 	pkg.redundant = NewRedundantScope()
 	pkg.redundant.Check(allLines) // Updates the variables in the scope
+	pkg.checkCategories()
 	pkg.checkGnuConfigureUseLanguages()
 	pkg.checkUseLanguagesCompilerMk(allLines)
 
 	pkg.determineEffectivePkgVars()
 	pkg.checkPossibleDowngrade()
 
-	if !vars.Defined("COMMENT") {
+	if !vars.IsDefined("COMMENT") {
 		NewLineWhole(filename).Warnf("Each package should define a COMMENT.")
 	}
 
@@ -714,7 +587,7 @@ func (pkg *Package) checkfilePackageMakefile(filename string, mklines *MkLines, 
 // or whether that file should be omitted since it is autogenerated.
 func (pkg *Package) checkPlist() {
 	vars := pkg.vars
-	if vars.Defined("PLIST_SRC") || vars.Defined("GENERATE_PLIST") {
+	if vars.IsDefined("PLIST_SRC") || vars.IsDefined("GENERATE_PLIST") {
 		return
 	}
 
@@ -744,208 +617,20 @@ func (pkg *Package) needsPlist() (bool, *Line) {
 	// TODO: In the below code, it shouldn't be necessary to mention
 	//  each variable name twice.
 
-	if vars.Defined("PERL5_PACKLIST") {
+	if vars.IsDefined("PERL5_PACKLIST") {
 		return false, vars.LastDefinition("PERL5_PACKLIST").Line
 	}
 
-	if vars.Defined("PERL5_USE_PACKLIST") {
+	if vars.IsDefined("PERL5_USE_PACKLIST") {
 		needed := strings.ToLower(vars.LastValue("PERL5_USE_PACKLIST")) == "no"
 		return needed, vars.LastDefinition("PERL5_USE_PACKLIST").Line
 	}
 
-	if vars.Defined("META_PACKAGE") {
+	if vars.IsDefined("META_PACKAGE") {
 		return false, vars.LastDefinition("META_PACKAGE").Line
 	}
 
 	return true, NewLineWhole(pkg.File("Makefile"))
-}
-
-func (pkg *Package) checkGnuConfigureUseLanguages() {
-	s := pkg.redundant
-
-	gnuConfigure := s.vars["GNU_CONFIGURE"]
-	if gnuConfigure == nil || !gnuConfigure.vari.Constant() {
-		return
-	}
-
-	useLanguages := s.vars["USE_LANGUAGES"]
-	if useLanguages == nil || !useLanguages.vari.Constant() {
-		return
-	}
-
-	var wrongLines []*MkLine
-	for _, mkline := range useLanguages.vari.WriteLocations() {
-
-		if G.Pkgsrc.IsInfra(mkline.Line.Filename) {
-			continue
-		}
-
-		if matches(mkline.Comment(), `(?-i)\b(?:c|empty|none)\b`) {
-			// Don't emit a warning since the comment probably contains a
-			// statement that C is really not needed.
-			return
-		}
-
-		languages := mkline.Value()
-		if matches(languages, `(?:^|[\t ]+)(?:c|c99|objc)(?:[\t ]+|$)`) {
-			return
-		}
-
-		wrongLines = append(wrongLines, mkline)
-	}
-
-	gnuLine := gnuConfigure.vari.WriteLocations()[0]
-	for _, useLine := range wrongLines {
-		gnuLine.Warnf(
-			"GNU_CONFIGURE almost always needs a C compiler, "+
-				"but \"c\" is not added to USE_LANGUAGES in %s.",
-			gnuLine.RefTo(useLine))
-	}
-}
-
-// nbPart determines the smallest part of the package version number,
-// typically "nb13" or an empty string.
-//
-// It is only used inside pkgsrc to mark changes that are
-// independent from the upstream package.
-func (pkg *Package) nbPart() string {
-	pkgrevision := pkg.vars.LastValue("PKGREVISION")
-	if rev, err := strconv.Atoi(pkgrevision); err == nil {
-		return "nb" + strconv.Itoa(rev)
-	}
-	return ""
-}
-
-func (pkg *Package) determineEffectivePkgVars() {
-	distnameLine := pkg.vars.FirstDefinition("DISTNAME")
-	pkgnameLine := pkg.vars.FirstDefinition("PKGNAME")
-
-	distname := ""
-	if distnameLine != nil {
-		distname = distnameLine.Value()
-	}
-
-	pkgname := ""
-	if pkgnameLine != nil {
-		pkgname = pkgnameLine.Value()
-	}
-
-	effname := pkgname
-	if distname != "" && effname != "" {
-		merged, ok := pkg.pkgnameFromDistname(effname, distname)
-		if ok {
-			effname = merged
-		}
-	}
-
-	if pkgnameLine != nil && (pkgname == distname || pkgname == "${DISTNAME}") {
-		if !pkgnameLine.HasComment() {
-			pkgnameLine.Notef("This assignment is probably redundant " +
-				"since PKGNAME is ${DISTNAME} by default.")
-			pkgnameLine.Explain(
-				"To mark this assignment as necessary, add a comment to the end of this line.")
-		}
-	}
-
-	if pkgname == "" && distnameLine != nil && !containsVarRef(distname) && !matches(distname, rePkgname) {
-		distnameLine.Warnf("As DISTNAME is not a valid package name, please define the PKGNAME explicitly.")
-	}
-
-	if pkgname != "" {
-		distname = ""
-	}
-
-	if effname != "" && !containsVarRef(effname) {
-		if m, m1, m2 := match2(effname, rePkgname); m {
-			pkg.EffectivePkgname = effname + pkg.nbPart()
-			pkg.EffectivePkgnameLine = pkgnameLine
-			pkg.EffectivePkgbase = m1
-			pkg.EffectivePkgversion = m2
-		}
-	}
-
-	if pkg.EffectivePkgnameLine == nil && distname != "" && !containsVarRef(distname) {
-		if m, m1, m2 := match2(distname, rePkgname); m {
-			pkg.EffectivePkgname = distname + pkg.nbPart()
-			pkg.EffectivePkgnameLine = distnameLine
-			pkg.EffectivePkgbase = m1
-			pkg.EffectivePkgversion = m2
-		}
-	}
-
-	if pkg.EffectivePkgnameLine != nil {
-		if trace.Tracing {
-			trace.Stepf("Effective name=%q base=%q version=%q",
-				pkg.EffectivePkgname, pkg.EffectivePkgbase, pkg.EffectivePkgversion)
-		}
-	}
-}
-
-func (pkg *Package) pkgnameFromDistname(pkgname, distname string) (string, bool) {
-	tokens := NewMkParser(nil, pkgname).MkTokens()
-
-	// TODO: Make this resolving of variable references available to all other variables as well.
-
-	var result strings.Builder
-	for _, token := range tokens {
-		if token.Varuse != nil {
-			if token.Varuse.varname != "DISTNAME" {
-				return "", false
-			}
-
-			newDistname := distname
-			for _, mod := range token.Varuse.modifiers {
-				if mod.IsToLower() {
-					newDistname = strings.ToLower(newDistname)
-				} else if subst, ok := mod.Subst(newDistname); ok {
-					newDistname = subst
-				} else {
-					return "", false
-				}
-			}
-			result.WriteString(newDistname)
-		} else {
-			result.WriteString(token.Text)
-		}
-	}
-	return result.String(), true
-}
-
-func (pkg *Package) checkUpdate() {
-	if pkg.EffectivePkgbase == "" {
-		return
-	}
-
-	for _, sugg := range G.Pkgsrc.SuggestedUpdates() {
-		if pkg.EffectivePkgbase != sugg.Pkgname {
-			continue
-		}
-
-		suggver, comment := sugg.Version, sugg.Comment
-		if comment != "" {
-			comment = " (" + comment + ")"
-		}
-
-		pkgnameLine := pkg.EffectivePkgnameLine
-		cmp := pkgver.Compare(pkg.EffectivePkgversion, suggver)
-		switch {
-
-		case cmp < 0:
-			pkgnameLine.Warnf("This package should be updated to %s%s.",
-				sugg.Version, comment)
-			pkgnameLine.Explain(
-				"The wishlist for package updates in doc/TODO mentions that a newer",
-				"version of this package is available.")
-
-		case cmp > 0:
-			pkgnameLine.Notef("This package is newer than the update request to %s%s.",
-				suggver, comment)
-
-		default:
-			pkgnameLine.Notef("The update request to %s from doc/TODO%s has been done.",
-				suggver, comment)
-		}
-	}
 }
 
 // CheckVarorder checks that in simple package Makefiles,
@@ -1181,26 +866,351 @@ func (pkg *Package) CheckVarorder(mklines *MkLines) {
 		seeGuide("Package components, Makefile", "components.Makefile"))
 }
 
-func (pkg *Package) checkFileMakefileExt(filename string) {
-	base := path.Base(filename)
-	if !hasPrefix(base, "Makefile.") || base == "Makefile.common" {
+func (pkg *Package) checkCategories() {
+	categories := pkg.redundant.vars["CATEGORIES"]
+	if categories == nil || !categories.vari.IsConstant() {
 		return
 	}
-	ext := strings.TrimPrefix(base, "Makefile.")
 
-	line := NewLineWhole(filename)
-	line.Notef("Consider renaming %q to %q.", base, ext+".mk")
-	line.Explain(
-		"The main definition of a pkgsrc package should be in the Makefile.",
-		"Common definitions for a few very closely related packages can be",
-		"placed in a Makefile.common, these may cover various topics.",
-		"",
-		"All other definitions should be grouped by topics and implemented",
-		"in separate files named *.mk after their topics. Typical examples",
-		"are extension.mk, module.mk, version.mk.",
-		"",
-		"These topic files should be documented properly so that their",
-		sprintf("content can be queried using %q.", bmakeHelp("help")))
+	seen := map[string]*MkLine{}
+	for _, mkline := range categories.vari.WriteLocations() {
+		switch mkline.Op() {
+		case opAssignDefault:
+			for _, category := range mkline.ValueFields(mkline.Value()) {
+				if seen[category] == nil {
+					seen[category] = mkline
+				}
+			}
+		case opAssign, opAssignAppend:
+			for _, category := range mkline.ValueFields(mkline.Value()) {
+				if seen[category] != nil {
+					mkline.Notef("Category %q is already added in %s.",
+						category, mkline.RefTo(seen[category]))
+				}
+				if seen[category] == nil {
+					seen[category] = mkline
+				}
+			}
+		}
+	}
+}
+
+func (pkg *Package) checkGnuConfigureUseLanguages() {
+	s := pkg.redundant
+
+	gnuConfigure := s.vars["GNU_CONFIGURE"]
+	if gnuConfigure == nil || !gnuConfigure.vari.IsConstant() {
+		return
+	}
+
+	useLanguages := s.vars["USE_LANGUAGES"]
+	if useLanguages == nil || !useLanguages.vari.IsConstant() {
+		return
+	}
+
+	var wrongLines []*MkLine
+	for _, mkline := range useLanguages.vari.WriteLocations() {
+
+		if G.Pkgsrc.IsInfra(mkline.Line.Filename) {
+			continue
+		}
+
+		if matches(mkline.Comment(), `(?-i)\b(?:c|empty|none)\b`) {
+			// Don't emit a warning since the comment probably contains a
+			// statement that C is really not needed.
+			return
+		}
+
+		languages := mkline.Value()
+		if matches(languages, `(?:^|[\t ]+)(?:c|c99|objc)(?:[\t ]+|$)`) {
+			return
+		}
+
+		wrongLines = append(wrongLines, mkline)
+	}
+
+	gnuLine := gnuConfigure.vari.WriteLocations()[0]
+	for _, useLine := range wrongLines {
+		gnuLine.Warnf(
+			"GNU_CONFIGURE almost always needs a C compiler, "+
+				"but \"c\" is not added to USE_LANGUAGES in %s.",
+			gnuLine.RefTo(useLine))
+	}
+}
+
+// checkUseLanguagesCompilerMk checks that after including mk/compiler.mk
+// or mk/endian.mk for the first time, there are no more changes to
+// USE_LANGUAGES, as these would be ignored by the pkgsrc infrastructure.
+func (pkg *Package) checkUseLanguagesCompilerMk(mklines *MkLines) {
+
+	var seen Once
+
+	handleVarassign := func(mkline *MkLine) {
+		if mkline.Varname() != "USE_LANGUAGES" {
+			return
+		}
+
+		if !seen.Seen("../../mk/compiler.mk") && !seen.Seen("../../mk/endian.mk") {
+			return
+		}
+
+		if mkline.Basename == "compiler.mk" {
+			if relpath(pkg.dir, mkline.Filename) == "../../mk/compiler.mk" {
+				return
+			}
+		}
+
+		mkline.Warnf("Modifying USE_LANGUAGES after including ../../mk/compiler.mk has no effect.")
+		mkline.Explain(
+			"The file compiler.mk guards itself against multiple inclusion.")
+	}
+
+	handleInclude := func(mkline *MkLine) {
+		_ = seen.FirstTime(pkg.Rel(mkline.IncludedFileFull()))
+	}
+
+	mklines.ForEach(func(mkline *MkLine) {
+		switch {
+		case mkline.IsVarassign():
+			handleVarassign(mkline)
+
+		case mkline.IsInclude():
+			handleInclude(mkline)
+		}
+	})
+}
+
+func (pkg *Package) determineEffectivePkgVars() {
+	distnameLine := pkg.vars.FirstDefinition("DISTNAME")
+	pkgnameLine := pkg.vars.FirstDefinition("PKGNAME")
+
+	distname := ""
+	if distnameLine != nil {
+		distname = distnameLine.Value()
+	}
+
+	pkgname := ""
+	if pkgnameLine != nil {
+		pkgname = pkgnameLine.Value()
+	}
+
+	effname := pkgname
+	if distname != "" && effname != "" {
+		merged, ok := pkg.pkgnameFromDistname(effname, distname)
+		if ok {
+			effname = merged
+		}
+	}
+
+	if pkgnameLine != nil && (pkgname == distname || pkgname == "${DISTNAME}") {
+		if !pkgnameLine.HasComment() {
+			pkgnameLine.Notef("This assignment is probably redundant " +
+				"since PKGNAME is ${DISTNAME} by default.")
+			pkgnameLine.Explain(
+				"To mark this assignment as necessary, add a comment to the end of this line.")
+		}
+	}
+
+	if pkgname == "" && distnameLine != nil && !containsVarRef(distname) && !matches(distname, rePkgname) {
+		distnameLine.Warnf("As DISTNAME is not a valid package name, please define the PKGNAME explicitly.")
+	}
+
+	if pkgname != "" {
+		distname = ""
+	}
+
+	if effname != "" && !containsVarRef(effname) {
+		if m, m1, m2 := match2(effname, rePkgname); m {
+			pkg.EffectivePkgname = effname + pkg.nbPart()
+			pkg.EffectivePkgnameLine = pkgnameLine
+			pkg.EffectivePkgbase = m1
+			pkg.EffectivePkgversion = m2
+		}
+	}
+
+	if pkg.EffectivePkgnameLine == nil && distname != "" && !containsVarRef(distname) {
+		if m, m1, m2 := match2(distname, rePkgname); m {
+			pkg.EffectivePkgname = distname + pkg.nbPart()
+			pkg.EffectivePkgnameLine = distnameLine
+			pkg.EffectivePkgbase = m1
+			pkg.EffectivePkgversion = m2
+		}
+	}
+
+	if pkg.EffectivePkgnameLine != nil {
+		if trace.Tracing {
+			trace.Stepf("Effective name=%q base=%q version=%q",
+				pkg.EffectivePkgname, pkg.EffectivePkgbase, pkg.EffectivePkgversion)
+		}
+	}
+}
+
+// nbPart determines the smallest part of the package version number,
+// typically "nb13" or an empty string.
+//
+// It is only used inside pkgsrc to mark changes that are
+// independent from the upstream package.
+func (pkg *Package) nbPart() string {
+	pkgrevision := pkg.vars.LastValue("PKGREVISION")
+	if rev, err := strconv.Atoi(pkgrevision); err == nil {
+		return "nb" + strconv.Itoa(rev)
+	}
+	return ""
+}
+
+func (pkg *Package) pkgnameFromDistname(pkgname, distname string) (string, bool) {
+	tokens := NewMkParser(nil, pkgname).MkTokens()
+
+	// TODO: Make this resolving of variable references available to all other variables as well.
+
+	var result strings.Builder
+	for _, token := range tokens {
+		if token.Varuse != nil {
+			if token.Varuse.varname != "DISTNAME" {
+				return "", false
+			}
+
+			newDistname := distname
+			for _, mod := range token.Varuse.modifiers {
+				if mod.IsToLower() {
+					newDistname = strings.ToLower(newDistname)
+				} else if subst, ok := mod.Subst(newDistname); ok {
+					newDistname = subst
+				} else {
+					return "", false
+				}
+			}
+			result.WriteString(newDistname)
+		} else {
+			result.WriteString(token.Text)
+		}
+	}
+	return result.String(), true
+}
+
+func (pkg *Package) checkPossibleDowngrade() {
+	if trace.Tracing {
+		defer trace.Call0()()
+	}
+
+	m, _, pkgversion := match2(pkg.EffectivePkgname, rePkgname)
+	if !m {
+		return
+	}
+
+	mkline := pkg.EffectivePkgnameLine
+
+	change := G.Pkgsrc.LastChange[pkg.Pkgpath]
+	if change == nil {
+		if trace.Tracing {
+			trace.Step1("No change log for package %q", pkg.Pkgpath)
+		}
+		return
+	}
+
+	if change.Action == Updated {
+		pkgversionNorev := replaceAll(pkgversion, `nb\d+$`, "")
+		changeNorev := replaceAll(change.Version(), `nb\d+$`, "")
+		cmp := pkgver.Compare(pkgversionNorev, changeNorev)
+		switch {
+		case cmp < 0:
+			mkline.Warnf("The package is being downgraded from %s (see %s) to %s.",
+				change.Version(), mkline.Line.RefToLocation(change.Location), pkgversion)
+			mkline.Explain(
+				"The files in doc/CHANGES-*, in which all version changes are",
+				"recorded, have a higher version number than what the package says.",
+				"This is unusual, since packages are typically upgraded instead of",
+				"downgraded.")
+
+		case cmp > 0 && !isLocallyModified(mkline.Filename):
+			mkline.Notef("Package version %q is greater than the latest %q from %s.",
+				pkgversion, change.Version(), mkline.Line.RefToLocation(change.Location))
+			mkline.Explain(
+				"Each update to a package should be mentioned in the doc/CHANGES file.",
+				"That file is used for the quarterly statistics of updated packages.",
+				"",
+				"To do this after updating a package, run",
+				sprintf("%q,", bmake("cce")),
+				"which is the abbreviation for commit-changes-entry.")
+		}
+	}
+}
+
+func (pkg *Package) checkUpdate() {
+	if pkg.EffectivePkgbase == "" {
+		return
+	}
+
+	for _, sugg := range G.Pkgsrc.SuggestedUpdates() {
+		if pkg.EffectivePkgbase != sugg.Pkgname {
+			continue
+		}
+
+		suggver, comment := sugg.Version, sugg.Comment
+		if comment != "" {
+			comment = " (" + comment + ")"
+		}
+
+		pkgnameLine := pkg.EffectivePkgnameLine
+		cmp := pkgver.Compare(pkg.EffectivePkgversion, suggver)
+		switch {
+
+		case cmp < 0:
+			pkgnameLine.Warnf("This package should be updated to %s%s.",
+				sugg.Version, comment)
+			pkgnameLine.Explain(
+				"The wishlist for package updates in doc/TODO mentions that a newer",
+				"version of this package is available.")
+
+		case cmp > 0:
+			pkgnameLine.Notef("This package is newer than the update request to %s%s.",
+				suggver, comment)
+
+		default:
+			pkgnameLine.Notef("The update request to %s from doc/TODO%s has been done.",
+				suggver, comment)
+		}
+	}
+}
+
+// checkDirent checks a directory entry based on its filename and its mode
+// (regular file, directory, symlink).
+func (pkg *Package) checkDirent(dirent string, mode os.FileMode) {
+	// TODO: merge duplicate code in Pkglint.checkMode
+
+	basename := path.Base(dirent)
+
+	switch {
+
+	case mode.IsRegular():
+		pkgsrcRel := G.Pkgsrc.ToRel(dirent)
+		depth := strings.Count(pkgsrcRel, "/")
+		G.checkReg(dirent, basename, depth)
+
+	case hasPrefix(basename, "work"):
+		if G.Opts.Import {
+			NewLineWhole(dirent).Errorf("Must be cleaned up before committing the package.")
+		}
+		return
+
+	case mode.IsDir():
+		switch {
+		case basename == "files",
+			basename == "patches",
+			matches(dirent, `(?:^|/)files/[^/]*$`),
+			isEmptyDir(dirent):
+			break
+
+		default:
+			NewLineWhole(dirent).Warnf("Unknown directory name.")
+		}
+
+	case mode&os.ModeSymlink != 0:
+		NewLineWhole(dirent).Warnf("Invalid symlink name.")
+
+	default:
+		NewLineWhole(dirent).Errorf("Only files and directories are allowed in pkgsrc.")
+	}
 }
 
 // checkOwnerMaintainer checks files that are about to be committed.
@@ -1268,6 +1278,63 @@ func (pkg *Package) checkFreeze(filename string) {
 		"See https://www.NetBSD.org/developers/pkgsrc/ for the exact rules.")
 }
 
+func (pkg *Package) checkFileMakefileExt(filename string) {
+	base := path.Base(filename)
+	if !hasPrefix(base, "Makefile.") || base == "Makefile.common" {
+		return
+	}
+	ext := strings.TrimPrefix(base, "Makefile.")
+
+	line := NewLineWhole(filename)
+	line.Notef("Consider renaming %q to %q.", base, ext+".mk")
+	line.Explain(
+		"The main definition of a pkgsrc package should be in the Makefile.",
+		"Common definitions for a few very closely related packages can be",
+		"placed in a Makefile.common, these may cover various topics.",
+		"",
+		"All other definitions should be grouped by topics and implemented",
+		"in separate files named *.mk after their topics. Typical examples",
+		"are extension.mk, module.mk, version.mk.",
+		"",
+		"These topic files should be documented properly so that their",
+		sprintf("content can be queried using %q.", bmakeHelp("help")))
+}
+
+// checkLinesBuildlink3Inclusion checks whether the package Makefile includes
+// at least those buildlink3.mk files that are included by the buildlink3.mk
+// file of the package.
+//
+// The other direction is not checked since it is perfectly fine for a package
+// to have more dependencies than are needed for buildlink the package.
+// (This might be worth re-checking though.)
+func (pkg *Package) checkLinesBuildlink3Inclusion(mklines *MkLines) {
+	if trace.Tracing {
+		defer trace.Call0()()
+	}
+
+	// Collect all the included buildlink3.mk files from the file.
+	includedFiles := make(map[string]*MkLine)
+	for _, mkline := range mklines.mklines {
+		if mkline.IsInclude() {
+			includedFile := mkline.IncludedFile()
+			if hasSuffix(includedFile, "/buildlink3.mk") {
+				includedFiles[includedFile] = mkline
+				if pkg.bl3[includedFile] == nil {
+					mkline.Warnf("%s is included by this file but not by the package.", includedFile)
+				}
+			}
+		}
+	}
+
+	if trace.Tracing {
+		for packageBl3 := range pkg.bl3 {
+			if includedFiles[packageBl3] == nil {
+				trace.Step1("%s is included by the package but not by the buildlink3.mk file.", packageBl3)
+			}
+		}
+	}
+}
+
 func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Indentation) {
 	if IsPrefs(mkline.IncludedFile()) {
 		return
@@ -1322,25 +1389,6 @@ func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Inden
 	//  already done with *_MK variables.
 }
 
-func (pkg *Package) loadPlistDirs(plistFilename string) {
-	lines := Load(plistFilename, MustSucceed)
-	ck := PlistChecker{
-		pkg,
-		make(map[string]*PlistLine),
-		make(map[string]*PlistLine),
-		"",
-		Once{},
-		false}
-	ck.Load(lines)
-
-	for filename, pline := range ck.allFiles {
-		pkg.Plist.Files[filename] = pline
-	}
-	for dirname, pline := range ck.allDirs {
-		pkg.Plist.Dirs[dirname] = pline
-	}
-}
-
 func (pkg *Package) AutofixDistinfo(oldSha1, newSha1 string) {
 	distinfoFilename := pkg.File(pkg.DistinfoFile)
 	if lines := Load(distinfoFilename, NotEmpty|LogErrors); lines != nil {
@@ -1354,46 +1402,28 @@ func (pkg *Package) AutofixDistinfo(oldSha1, newSha1 string) {
 	}
 }
 
-// checkUseLanguagesCompilerMk checks that after including mk/compiler.mk
-// or mk/endian.mk for the first time, there are no more changes to
-// USE_LANGUAGES, as these would be ignored by the pkgsrc infrastructure.
-func (pkg *Package) checkUseLanguagesCompilerMk(mklines *MkLines) {
+// File returns the (possibly absolute) path to relativeFileName,
+// as resolved from the package's directory.
+// Variables that are known in the package are resolved, e.g. ${PKGDIR}.
+func (pkg *Package) File(relativeFileName string) string {
+	return cleanpath(resolveVariableRefs(nil /* XXX: or maybe some mklines? */, joinPath(pkg.dir, relativeFileName)))
+}
 
-	var seen Once
+// Rel returns the path by which the given filename (as seen from the
+// current working directory) can be reached as a relative path from
+// the package directory.
+//
+// Example:
+//  NewPackage("category/package").Rel("other/package") == "../../other/package"
+func (pkg *Package) Rel(filename string) string {
+	return relpath(pkg.dir, filename)
+}
 
-	handleVarassign := func(mkline *MkLine) {
-		if mkline.Varname() != "USE_LANGUAGES" {
-			return
-		}
-
-		if !seen.Seen("../../mk/compiler.mk") && !seen.Seen("../../mk/endian.mk") {
-			return
-		}
-
-		if mkline.Basename == "compiler.mk" {
-			if relpath(pkg.dir, mkline.Filename) == "../../mk/compiler.mk" {
-				return
-			}
-		}
-
-		mkline.Warnf("Modifying USE_LANGUAGES after including ../../mk/compiler.mk has no effect.")
-		mkline.Explain(
-			"The file compiler.mk guards itself against multiple inclusion.")
-	}
-
-	handleInclude := func(mkline *MkLine) {
-		_ = seen.FirstTime(pkg.Rel(mkline.IncludedFileFull()))
-	}
-
-	mklines.ForEach(func(mkline *MkLine) {
-		switch {
-		case mkline.IsVarassign():
-			handleVarassign(mkline)
-
-		case mkline.IsInclude():
-			handleInclude(mkline)
-		}
-	})
+// Returns whether the given file (relative to the package directory)
+// is included somewhere in the package, either directly or indirectly.
+func (pkg *Package) Includes(filename string) bool {
+	return pkg.unconditionalIncludes[filename] != nil ||
+		pkg.conditionalIncludes[filename] != nil
 }
 
 // PlistContent lists the directories and files that appear in the

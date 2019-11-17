@@ -11,15 +11,7 @@ import (
 // VartypeCheck groups together the various checks for variables of the different types.
 type VartypeCheck struct {
 	MkLines *MkLines
-
-	// Note: if "go vet" or "go test" complains about a "variable with invalid type", update to go1.11.4.
-	// See https://github.com/golang/go/issues/28972.
-	// That doesn't help though since pkglint contains these "more convoluted alias declarations"
-	// mentioned in https://github.com/golang/go/commit/6971090515ba.
-	// Therefore MkLine is declared as *MkLine here.
-	// Ideally the "more convoluted cyclic type declaration" should be broken up.
-
-	MkLine *MkLine
+	MkLine  *MkLine
 
 	// The name of the variable being checked.
 	//
@@ -593,7 +585,7 @@ func (cv *VartypeCheck) FetchURL() {
 		}
 
 		if G.Pkgsrc.MasterSiteVarToURL[name] == "" {
-			if G.Pkg == nil || !G.Pkg.vars.Defined(name) {
+			if G.Pkg == nil || !G.Pkg.vars.IsDefined(name) {
 				cv.Errorf("The site %s does not exist.", name)
 			}
 		}
@@ -830,6 +822,47 @@ func (cv *VartypeCheck) MachineGnuPlatform() {
 		cv.Explain(
 			"A platform pattern has the form <OPSYS>-<OS_VERSION>-<MACHINE_ARCH>.",
 			"Each of these components may use wildcards.",
+			"",
+			"Examples:",
+			"* NetBSD-[456].*-i386",
+			"* *-*-*",
+			"* Linux-*-*")
+	}
+}
+
+func (cv *VartypeCheck) MachinePlatform() {
+	cv.MachinePlatformPattern()
+}
+
+func (cv *VartypeCheck) MachinePlatformPattern() {
+	if cv.Value != cv.ValueNoVar {
+		return
+	}
+
+	const rePart = `(?:\[[^\]]+\]|[^-\[])+`
+	const rePair = `^(` + rePart + `)-(` + rePart + `)$`
+	const reTriple = `^(` + rePart + `)-(` + rePart + `)-(` + rePart + `)$`
+
+	pattern := cv.Value
+	if matches(pattern, rePair) && hasSuffix(pattern, "*") {
+		pattern += "-*"
+	}
+
+	if m, opsysPattern, versionPattern, archPattern := match3(pattern, reTriple); m {
+		opsysCv := cv.WithVarnameValueMatch("the operating system part of "+cv.Varname, opsysPattern)
+		enumMachineOpsys.checker(opsysCv)
+
+		versionCv := cv.WithVarnameValueMatch("the version part of "+cv.Varname, versionPattern)
+		versionCv.Version()
+
+		archCv := cv.WithVarnameValueMatch("the hardware architecture part of "+cv.Varname, archPattern)
+		enumMachineArch.checker(archCv)
+
+	} else {
+		cv.Warnf("%q is not a valid platform pattern.", cv.Value)
+		cv.Explain(
+			"A platform pattern has the form <OPSYS>-<OS_VERSION>-<MACHINE_ARCH>.",
+			"Each of these components may be a shell globbing expression.",
 			"",
 			"Examples:",
 			"* NetBSD-[456].*-i386",
@@ -1075,47 +1108,6 @@ func (cv *VartypeCheck) Pkgrevision() {
 			"for shlib major bumps) and thus the PKGREVISIONs must be in the",
 			"separate Makefiles.",
 			"There is no practical way of having this information in a commonly used Makefile.")
-	}
-}
-
-func (cv *VartypeCheck) MachinePlatform() {
-	cv.MachinePlatformPattern()
-}
-
-func (cv *VartypeCheck) MachinePlatformPattern() {
-	if cv.Value != cv.ValueNoVar {
-		return
-	}
-
-	const rePart = `(?:\[[^\]]+\]|[^-\[])+`
-	const rePair = `^(` + rePart + `)-(` + rePart + `)$`
-	const reTriple = `^(` + rePart + `)-(` + rePart + `)-(` + rePart + `)$`
-
-	pattern := cv.Value
-	if matches(pattern, rePair) && hasSuffix(pattern, "*") {
-		pattern += "-*"
-	}
-
-	if m, opsysPattern, versionPattern, archPattern := match3(pattern, reTriple); m {
-		opsysCv := cv.WithVarnameValueMatch("the operating system part of "+cv.Varname, opsysPattern)
-		enumMachineOpsys.checker(opsysCv)
-
-		versionCv := cv.WithVarnameValueMatch("the version part of "+cv.Varname, versionPattern)
-		versionCv.Version()
-
-		archCv := cv.WithVarnameValueMatch("the hardware architecture part of "+cv.Varname, archPattern)
-		enumMachineArch.checker(archCv)
-
-	} else {
-		cv.Warnf("%q is not a valid platform pattern.", cv.Value)
-		cv.Explain(
-			"A platform pattern has the form <OPSYS>-<OS_VERSION>-<MACHINE_ARCH>.",
-			"Each of these components may be a shell globbing expression.",
-			"",
-			"Examples:",
-			"* NetBSD-[456].*-i386",
-			"* *-*-*",
-			"* Linux-*-*")
 	}
 }
 

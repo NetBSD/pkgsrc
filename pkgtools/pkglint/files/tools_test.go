@@ -31,96 +31,6 @@ func (s *Suite) Test_Tool_UsableAtRunTime(c *check.C) {
 	t.CheckEquals(run.UsableAtRunTime(), true)
 }
 
-// USE_TOOLS is an operating-system-dependent variable.
-// Many other tool variables have the form VARNAME.${tool},
-// which confused an earlier version of pkglint into
-// thinking that the below definition was about a tool
-// called "NetBSD".
-func (s *Suite) Test_Tools_ParseToolLine__opsys(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpTool("tool1", "", Nowhere)
-	t.SetUpVartypes()
-	t.CreateFileLines("Makefile",
-		MkCvsID,
-		"",
-		"USE_TOOLS.NetBSD+=\ttool1")
-
-	CheckdirToplevel(t.File("."))
-
-	// No error about "Unknown tool \"NetBSD\"."
-	t.CheckOutputEmpty()
-}
-
-func (s *Suite) Test_Tools_ParseToolLine__invalid_tool_name(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpVartypes()
-	mklines := t.NewMkLines("Makefile",
-		MkCvsID,
-		"",
-		".for t in abc ${UNDEFINED}",
-		"TOOLS_CREATE+=\t\t${t}",
-		"_TOOLS_VARNAME.${t}=\tVARNAME",
-		"TOOLS_PATH.${t}=\t/bin/${t}",
-		"TOOLS_ALIASES.${t}=\t${t} ${u} ${t}-arm64",
-		"TOOLS_ALIASES.tool=\t${t} ${u} ${t}-arm64",
-		"_TOOLS.${t}=\t${t}",
-		".endfor")
-
-	mklines.collectVariables()
-	t.Check(mklines.Tools.byName, check.HasLen, 1)
-	t.CheckEquals(mklines.Tools.ByName("tool").String(), "tool:::Nowhere:abc")
-
-	t.CheckOutputEmpty()
-}
-
-func (s *Suite) Test_Tools_parseUseTools(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpPkgsrc()
-	t.CreateFileLines("mk/triple-tool.mk",
-		MkCvsID,
-		"",
-		"USE_TOOLS+=\tunknown unknown unknown")
-	t.FinishSetUp()
-
-	t.Check(G.Pkgsrc.Tools.ByName("unknown"), check.IsNil)
-
-	t.CheckOutputEmpty()
-}
-
-func (s *Suite) Test_Tools_Define__invalid_tool_name(c *check.C) {
-	t := s.Init(c)
-
-	mkline := t.NewMkLine("dummy.mk", 123, "DUMMY=\tvalue")
-	reg := NewTools()
-
-	t.Check(reg.Define("tool_name", "", mkline), check.IsNil)
-	t.Check(reg.Define("tool:dependency", "", mkline), check.IsNil)
-	t.Check(reg.Define("tool:build", "", mkline), check.IsNil)
-
-	// As of October 2018, the underscore is not used in any tool name.
-	// If there should ever be such a case, just use a different character for testing.
-	t.CheckOutputLines(
-		"ERROR: dummy.mk:123: Invalid tool name \"tool_name\".",
-		"ERROR: dummy.mk:123: Invalid tool name \"tool:dependency\".",
-		"ERROR: dummy.mk:123: Invalid tool name \"tool:build\".")
-
-	t.Check(reg.byName, check.HasLen, 0)
-}
-
-func (s *Suite) Test_Tools_Trace__coverage(c *check.C) {
-	t := s.Init(c)
-
-	t.DisableTracing()
-
-	reg := NewTools()
-	reg.Trace()
-
-	t.CheckOutputEmpty()
-}
-
 func (s *Suite) Test_Tools__USE_TOOLS_predefined_sed(c *check.C) {
 	t := s.Init(c)
 
@@ -443,13 +353,6 @@ func (s *Suite) Test_Tools__tools_having_the_same_variable_name(c *check.C) {
 		"TRACE: - (*Tools).Trace()")
 }
 
-func (s *Suite) Test_ToolTime_String(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(LoadTime.String(), "LoadTime")
-	t.CheckEquals(RunTime.String(), "RunTime")
-}
-
 func (s *Suite) Test_Tools__var(c *check.C) {
 	t := s.Init(c)
 
@@ -470,96 +373,6 @@ func (s *Suite) Test_Tools__var(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputEmpty()
-}
-
-// Demonstrates how the Tools type handles tools that share the same
-// variable name. Of these tools, the GNU variant is preferred.
-//
-// In this realistic variant, the non-GNU tool is defined in bsd.prefs.mk
-// and the GNU tool is only defined but not made available.
-//
-// See also Pkglint.Tool.
-func (s *Suite) Test_Tools_Fallback__tools_having_the_same_variable_name_realistic(c *check.C) {
-	t := s.Init(c)
-
-	nonGnu := NewTools()
-	nonGnu.def("sed", "SED", false, AfterPrefsMk, nil)
-
-	gnu := NewTools()
-	gnu.def("gsed", "SED", false, Nowhere, nil)
-
-	local1 := NewTools()
-	local1.def("sed", "SED", false, AfterPrefsMk, nil)
-	local1.Fallback(gnu)
-
-	t.CheckEquals(local1.ByName("sed").Validity, AfterPrefsMk)
-	t.CheckEquals(local1.ByName("gsed").Validity, Nowhere)
-
-	local2 := NewTools()
-	local2.def("gsed", "SED", false, Nowhere, nil)
-	local2.Fallback(nonGnu)
-
-	t.CheckEquals(local2.ByName("sed").Validity, AfterPrefsMk)
-	t.CheckEquals(local2.ByName("gsed").Validity, Nowhere)
-
-	// No matter in which order the tool definitions are encountered,
-	// the non-GNU version is always chosen since the GNU version is
-	// not available at all.
-	t.CheckEquals(local1.ByVarname("SED").String(), "sed:SED::AfterPrefsMk")
-	t.CheckEquals(local2.ByVarname("SED").String(), "sed:SED::AfterPrefsMk")
-}
-
-// Demonstrates how the Tools type handles tools that share the same
-// variable name. Of these tools, the GNU variant is preferred.
-//
-// In this unrealistic variant, the GNU tool is defined in bsd.prefs.mk
-// and the non-GNU tool is only defined but not made available.
-//
-// See also Pkglint.Tool.
-func (s *Suite) Test_Tools_Fallback__tools_having_the_same_variable_name_unrealistic(c *check.C) {
-	t := s.Init(c)
-
-	// This simulates a tool defined in the tools framework but not added
-	// to USE_TOOLS, neither by bsd.prefs.mk nor by bsd.pkg.mk.
-	nonGnu := NewTools()
-	nonGnu.def("sed", "SED", false, Nowhere, nil)
-
-	// This simulates a tool that is added to USE_TOOLS in bsd.prefs.mk.
-	gnu := NewTools()
-	gnu.def("gsed", "SED", false, AfterPrefsMk, nil)
-	gnu.ByName("gsed").Aliases = []string{"sed"}
-
-	// This simulates a package that doesn't mention the sed tool at all.
-	// The call to .def() is therefore unrealistic.
-	// Nevertheless, since the GNU tools define the gsed tool as well,
-	// it is available even though not explicitly mentioned in the package.
-	local1 := NewTools()
-	local1.def("sed", "SED", false, Nowhere, nil)
-	local1.Fallback(gnu)
-
-	t.CheckEquals(local1.ByName("sed").Validity, Nowhere)
-	t.CheckEquals(local1.ByName("gsed").Validity, AfterPrefsMk)
-
-	local2 := NewTools()
-	local2.def("gsed", "SED", false, AfterPrefsMk, []string{"sed"})
-	local2.Fallback(nonGnu)
-
-	t.CheckEquals(local2.ByName("sed").Validity, AfterPrefsMk)
-	t.CheckEquals(local2.ByName("gsed").Validity, AfterPrefsMk)
-
-	t.CheckEquals(local1.ByVarname("SED").String(), "sed:SED::AfterPrefsMk")
-	t.CheckEquals(local2.ByVarname("SED").String(), "sed:SED::AfterPrefsMk")
-}
-
-func (s *Suite) Test_Tools_Fallback__called_twice(c *check.C) {
-	t := s.Init(c)
-
-	tools := NewTools()
-	fallback := NewTools()
-
-	tools.Fallback(fallback)
-
-	t.ExpectAssert(func() { tools.Fallback(fallback) })
 }
 
 func (s *Suite) Test_Tools__aliases(c *check.C) {
@@ -684,6 +497,218 @@ func (s *Suite) Test_Tools__autoconf213(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_Tools_Define__invalid_tool_name(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("dummy.mk", 123, "DUMMY=\tvalue")
+	reg := NewTools()
+
+	t.Check(reg.Define("tool_name", "", mkline), check.IsNil)
+	t.Check(reg.Define("tool:dependency", "", mkline), check.IsNil)
+	t.Check(reg.Define("tool:build", "", mkline), check.IsNil)
+
+	// As of October 2018, the underscore is not used in any tool name.
+	// If there should ever be such a case, just use a different character for testing.
+	t.CheckOutputLines(
+		"ERROR: dummy.mk:123: Invalid tool name \"tool_name\".",
+		"ERROR: dummy.mk:123: Invalid tool name \"tool:dependency\".",
+		"ERROR: dummy.mk:123: Invalid tool name \"tool:build\".")
+
+	t.Check(reg.byName, check.HasLen, 0)
+}
+
+func (s *Suite) Test_Tools_Trace__coverage(c *check.C) {
+	t := s.Init(c)
+
+	t.DisableTracing()
+
+	reg := NewTools()
+	reg.Trace()
+
+	t.CheckOutputEmpty()
+}
+
+// USE_TOOLS is an operating-system-dependent variable.
+// Many other tool variables have the form VARNAME.${tool},
+// which confused an earlier version of pkglint into
+// thinking that the below definition was about a tool
+// called "NetBSD".
+func (s *Suite) Test_Tools_ParseToolLine__opsys(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpTool("tool1", "", Nowhere)
+	t.SetUpVartypes()
+	t.CreateFileLines("Makefile",
+		MkCvsID,
+		"",
+		"USE_TOOLS.NetBSD+=\ttool1")
+
+	CheckdirToplevel(t.File("."))
+
+	// No error about "Unknown tool \"NetBSD\"."
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Tools_ParseToolLine__invalid_tool_name(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("Makefile",
+		MkCvsID,
+		"",
+		".for t in abc ${UNDEFINED}",
+		"TOOLS_CREATE+=\t\t${t}",
+		"_TOOLS_VARNAME.${t}=\tVARNAME",
+		"TOOLS_PATH.${t}=\t/bin/${t}",
+		"TOOLS_ALIASES.${t}=\t${t} ${u} ${t}-arm64",
+		"TOOLS_ALIASES.tool=\t${t} ${u} ${t}-arm64",
+		"_TOOLS.${t}=\t${t}",
+		".endfor")
+
+	mklines.collectVariables()
+	t.Check(mklines.Tools.byName, check.HasLen, 1)
+	t.CheckEquals(mklines.Tools.ByName("tool").String(), "tool:::Nowhere:abc")
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Tools_ParseToolLine__private_tool_undefined(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"",
+		"\tmd5sum filename")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:3: Unknown shell command \"md5sum\".")
+}
+
+// Tools that are defined by a package by adding to TOOLS_CREATE can
+// be used without adding them to USE_TOOLS again.
+func (s *Suite) Test_Tools_ParseToolLine__private_tool_defined(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"TOOLS_CREATE+=\tmd5sum",
+		"",
+		"\tmd5sum filename")
+
+	mklines.Check()
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Tools_parseUseTools(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("mk/triple-tool.mk",
+		MkCvsID,
+		"",
+		"USE_TOOLS+=\tunknown unknown unknown")
+	t.FinishSetUp()
+
+	t.Check(G.Pkgsrc.Tools.ByName("unknown"), check.IsNil)
+
+	t.CheckOutputEmpty()
+}
+
+// Demonstrates how the Tools type handles tools that share the same
+// variable name. Of these tools, the GNU variant is preferred.
+//
+// In this realistic variant, the non-GNU tool is defined in bsd.prefs.mk
+// and the GNU tool is only defined but not made available.
+//
+// See also Pkglint.Tool.
+func (s *Suite) Test_Tools_Fallback__tools_having_the_same_variable_name_realistic(c *check.C) {
+	t := s.Init(c)
+
+	nonGnu := NewTools()
+	nonGnu.def("sed", "SED", false, AfterPrefsMk, nil)
+
+	gnu := NewTools()
+	gnu.def("gsed", "SED", false, Nowhere, nil)
+
+	local1 := NewTools()
+	local1.def("sed", "SED", false, AfterPrefsMk, nil)
+	local1.Fallback(gnu)
+
+	t.CheckEquals(local1.ByName("sed").Validity, AfterPrefsMk)
+	t.CheckEquals(local1.ByName("gsed").Validity, Nowhere)
+
+	local2 := NewTools()
+	local2.def("gsed", "SED", false, Nowhere, nil)
+	local2.Fallback(nonGnu)
+
+	t.CheckEquals(local2.ByName("sed").Validity, AfterPrefsMk)
+	t.CheckEquals(local2.ByName("gsed").Validity, Nowhere)
+
+	// No matter in which order the tool definitions are encountered,
+	// the non-GNU version is always chosen since the GNU version is
+	// not available at all.
+	t.CheckEquals(local1.ByVarname("SED").String(), "sed:SED::AfterPrefsMk")
+	t.CheckEquals(local2.ByVarname("SED").String(), "sed:SED::AfterPrefsMk")
+}
+
+// Demonstrates how the Tools type handles tools that share the same
+// variable name. Of these tools, the GNU variant is preferred.
+//
+// In this unrealistic variant, the GNU tool is defined in bsd.prefs.mk
+// and the non-GNU tool is only defined but not made available.
+//
+// See also Pkglint.Tool.
+func (s *Suite) Test_Tools_Fallback__tools_having_the_same_variable_name_unrealistic(c *check.C) {
+	t := s.Init(c)
+
+	// This simulates a tool defined in the tools framework but not added
+	// to USE_TOOLS, neither by bsd.prefs.mk nor by bsd.pkg.mk.
+	nonGnu := NewTools()
+	nonGnu.def("sed", "SED", false, Nowhere, nil)
+
+	// This simulates a tool that is added to USE_TOOLS in bsd.prefs.mk.
+	gnu := NewTools()
+	gnu.def("gsed", "SED", false, AfterPrefsMk, nil)
+	gnu.ByName("gsed").Aliases = []string{"sed"}
+
+	// This simulates a package that doesn't mention the sed tool at all.
+	// The call to .def() is therefore unrealistic.
+	// Nevertheless, since the GNU tools define the gsed tool as well,
+	// it is available even though not explicitly mentioned in the package.
+	local1 := NewTools()
+	local1.def("sed", "SED", false, Nowhere, nil)
+	local1.Fallback(gnu)
+
+	t.CheckEquals(local1.ByName("sed").Validity, Nowhere)
+	t.CheckEquals(local1.ByName("gsed").Validity, AfterPrefsMk)
+
+	local2 := NewTools()
+	local2.def("gsed", "SED", false, AfterPrefsMk, []string{"sed"})
+	local2.Fallback(nonGnu)
+
+	t.CheckEquals(local2.ByName("sed").Validity, AfterPrefsMk)
+	t.CheckEquals(local2.ByName("gsed").Validity, AfterPrefsMk)
+
+	t.CheckEquals(local1.ByVarname("SED").String(), "sed:SED::AfterPrefsMk")
+	t.CheckEquals(local2.ByVarname("SED").String(), "sed:SED::AfterPrefsMk")
+}
+
+func (s *Suite) Test_Tools_Fallback__called_twice(c *check.C) {
+	t := s.Init(c)
+
+	tools := NewTools()
+	fallback := NewTools()
+
+	tools.Fallback(fallback)
+
+	t.ExpectAssert(func() { tools.Fallback(fallback) })
+}
+
 func (s *Suite) Test_Tools_IsValidToolName(c *check.C) {
 	t := s.Init(c)
 
@@ -698,4 +723,11 @@ func (s *Suite) Test_Tools_IsValidToolName(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_ToolTime_String(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(LoadTime.String(), "LoadTime")
+	t.CheckEquals(RunTime.String(), "RunTime")
 }

@@ -55,33 +55,6 @@ var (
 
 var dummyLine = NewLineMulti("", 0, 0, "", nil)
 
-// IsAutofix returns whether one of the --show-autofix or --autofix options is active.
-func (l *Logger) IsAutofix() bool { return l.Opts.Autofix || l.Opts.ShowAutofix }
-
-// Relevant decides and remembers whether the given diagnostic is relevant and should be logged.
-//
-// The result of the decision affects all log items until Relevant is called for the next time.
-func (l *Logger) Relevant(format string) bool {
-	relevant := l.shallBeLogged(format)
-	l.suppressDiag = !relevant
-	l.suppressExpl = !relevant
-	return relevant
-}
-
-func (l *Logger) FirstTime(filename, linenos, msg string) bool {
-	if l.Opts.LogVerbose {
-		return true
-	}
-
-	if !l.logged.FirstTimeSlice(path.Clean(filename), linenos, msg) {
-		l.suppressDiag = true
-		l.suppressExpl = true
-		return false
-	}
-
-	return true
-}
-
 // Explain outputs an explanation for the preceding diagnostic
 // if the --explain option is given. Otherwise it just records
 // that an explanation is available.
@@ -119,71 +92,6 @@ func (l *Logger) Explain(explanation ...string) {
 	l.out.WriteLine("")
 }
 
-func (l *Logger) ShowSummary(args []string) {
-	if l.Opts.Quiet || l.Opts.Autofix {
-		return
-	}
-
-	if l.Opts.ShowSource {
-		l.out.Separate()
-	}
-
-	if l.errors != 0 || l.warnings != 0 {
-		num := func(n int, singular, plural string) string {
-			if n == 0 {
-				return ""
-			} else if n == 1 {
-				return sprintf("%d %s", n, singular)
-			} else {
-				return sprintf("%d %s", n, plural)
-			}
-		}
-
-		l.out.Write(sprintf("%s found.\n",
-			joinSkipEmptyCambridge("and",
-				num(l.errors, "error", "errors"),
-				num(l.warnings, "warning", "warnings"),
-				num(l.notes, "note", "notes"))))
-	} else {
-		l.out.WriteLine("Looks fine.")
-	}
-
-	commandLine := func(arg string) string {
-		argv := append([]string{args[0], arg}, args[1:]...)
-		for i := range argv {
-			argv[i] = shquote(argv[i])
-		}
-		return strings.Join(argv, " ")
-	}
-
-	if l.explanationsAvailable && !l.Opts.Explain {
-		l.out.WriteLine(sprintf("(Run \"%s\" to show explanations.)", commandLine("-e")))
-	}
-	if l.autofixAvailable {
-		if !l.Opts.ShowAutofix {
-			l.out.WriteLine(sprintf("(Run \"%s\" to show what can be fixed automatically.)", commandLine("-fs")))
-		}
-		l.out.WriteLine(sprintf("(Run \"%s\" to automatically fix some issues.)", commandLine("-F")))
-	}
-}
-
-// shallBeLogged tests whether a diagnostic with the given format should
-// be logged.
-//
-// It only inspects the --only arguments; duplicates are handled in Logger.Logf.
-func (l *Logger) shallBeLogged(format string) bool {
-	if len(G.Opts.LogOnly) == 0 {
-		return true
-	}
-
-	for _, substr := range G.Opts.LogOnly {
-		if contains(format, substr) {
-			return true
-		}
-	}
-	return false
-}
-
 // Diag logs a diagnostic. These are filtered by the --only command line option,
 // and duplicates are suppressed unless the --log-verbose command line option is given.
 //
@@ -216,6 +124,47 @@ func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interf
 	}
 
 	l.Logf(level, filename, linenos, format, msg)
+}
+
+func (l *Logger) FirstTime(filename, linenos, msg string) bool {
+	if l.Opts.LogVerbose {
+		return true
+	}
+
+	if !l.logged.FirstTimeSlice(path.Clean(filename), linenos, msg) {
+		l.suppressDiag = true
+		l.suppressExpl = true
+		return false
+	}
+
+	return true
+}
+
+// Relevant decides and remembers whether the given diagnostic is relevant and should be logged.
+//
+// The result of the decision affects all log items until Relevant is called for the next time.
+func (l *Logger) Relevant(format string) bool {
+	relevant := l.shallBeLogged(format)
+	l.suppressDiag = !relevant
+	l.suppressExpl = !relevant
+	return relevant
+}
+
+// shallBeLogged tests whether a diagnostic with the given format should
+// be logged.
+//
+// It only inspects the --only arguments; duplicates are handled in Logger.Logf.
+func (l *Logger) shallBeLogged(format string) bool {
+	if len(G.Opts.LogOnly) == 0 {
+		return true
+	}
+
+	for _, substr := range G.Opts.LogOnly {
+		if contains(format, substr) {
+			return true
+		}
+	}
+	return false
 }
 
 func (l *Logger) showSource(line *Line) {
@@ -277,6 +226,9 @@ func (l *Logger) showSource(line *Line) {
 		l.out.Separate()
 	}
 }
+
+// IsAutofix returns whether one of the --show-autofix or --autofix options is active.
+func (l *Logger) IsAutofix() bool { return l.Opts.Autofix || l.Opts.ShowAutofix }
 
 func (l *Logger) Logf(level *LogLevel, filename, lineno, format, msg string) {
 	if l.suppressDiag {
@@ -349,6 +301,54 @@ func (l *Logger) Errorf(location string, format string, args ...interface{}) {
 	l.err.Write(escapePrintable(diag))
 }
 
+func (l *Logger) ShowSummary(args []string) {
+	if l.Opts.Quiet || l.Opts.Autofix {
+		return
+	}
+
+	if l.Opts.ShowSource {
+		l.out.Separate()
+	}
+
+	if l.errors != 0 || l.warnings != 0 {
+		num := func(n int, singular, plural string) string {
+			if n == 0 {
+				return ""
+			} else if n == 1 {
+				return sprintf("%d %s", n, singular)
+			} else {
+				return sprintf("%d %s", n, plural)
+			}
+		}
+
+		l.out.Write(sprintf("%s found.\n",
+			joinSkipEmptyCambridge("and",
+				num(l.errors, "error", "errors"),
+				num(l.warnings, "warning", "warnings"),
+				num(l.notes, "note", "notes"))))
+	} else {
+		l.out.WriteLine("Looks fine.")
+	}
+
+	commandLine := func(arg string) string {
+		argv := append([]string{args[0], arg}, args[1:]...)
+		for i := range argv {
+			argv[i] = shquote(argv[i])
+		}
+		return strings.Join(argv, " ")
+	}
+
+	if l.explanationsAvailable && !l.Opts.Explain {
+		l.out.WriteLine(sprintf("(Run \"%s\" to show explanations.)", commandLine("-e")))
+	}
+	if l.autofixAvailable {
+		if !l.Opts.ShowAutofix {
+			l.out.WriteLine(sprintf("(Run \"%s\" to show what can be fixed automatically.)", commandLine("-fs")))
+		}
+		l.out.WriteLine(sprintf("(Run \"%s\" to automatically fix some issues.)", commandLine("-F")))
+	}
+}
+
 // SeparatorWriter writes output, occasionally separated by an
 // empty line. This is used for separating the diagnostics when
 // --source is combined with --show-autofix, where each
@@ -360,7 +360,7 @@ type SeparatorWriter struct {
 }
 
 func NewSeparatorWriter(out io.Writer) *SeparatorWriter {
-	return &SeparatorWriter{out: out, state: 3}
+	return &SeparatorWriter{out, 3, bytes.Buffer{}}
 }
 
 func (wr *SeparatorWriter) WriteLine(text string) {
@@ -384,11 +384,6 @@ func (wr *SeparatorWriter) Separate() {
 	}
 }
 
-func (wr *SeparatorWriter) Flush() {
-	_, _ = io.Copy(wr.out, &wr.line)
-	wr.line.Reset()
-}
-
 func (wr *SeparatorWriter) write(b byte) {
 	if b == '\n' {
 		if wr.state == 1 {
@@ -407,4 +402,9 @@ func (wr *SeparatorWriter) write(b byte) {
 	}
 	wr.state = 1
 	wr.line.WriteByte(b)
+}
+
+func (wr *SeparatorWriter) Flush() {
+	_, _ = io.Copy(wr.out, &wr.line)
+	wr.line.Reset()
 }

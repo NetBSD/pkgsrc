@@ -48,12 +48,6 @@ type PlistChecker struct {
 	nonAsciiAllowed bool
 }
 
-type PlistLine struct {
-	*Line
-	conditions []string // e.g. PLIST.docs
-	text       string   // Line.Text without any conditions of the form ${PLIST.cond}
-}
-
 func (ck *PlistChecker) Load(lines *Lines) []*PlistLine {
 	plines := ck.NewLines(lines)
 	ck.collectFilesAndDirs(plines)
@@ -196,7 +190,7 @@ func (ck *PlistChecker) checkPath(pline *PlistLine) {
 		ck.checkPathShare(pline)
 	}
 
-	if contains(text, "${PKGLOCALEDIR}") && ck.pkg != nil && !ck.pkg.vars.Defined("USE_PKGLOCALEDIR") {
+	if contains(text, "${PKGLOCALEDIR}") && ck.pkg != nil && !ck.pkg.vars.IsDefined("USE_PKGLOCALEDIR") {
 		pline.Warnf("PLIST contains ${PKGLOCALEDIR}, but USE_PKGLOCALEDIR is not set in the package Makefile.")
 	}
 
@@ -307,7 +301,7 @@ func (ck *PlistChecker) checkPathInfo(pline *PlistLine, dirname, basename string
 		return
 	}
 
-	if ck.pkg != nil && !ck.pkg.vars.Defined("INFO_FILES") {
+	if ck.pkg != nil && !ck.pkg.vars.IsDefined("INFO_FILES") {
 		pline.Warnf("Packages that install info files should set INFO_FILES in the Makefile.")
 	}
 }
@@ -338,7 +332,7 @@ func (ck *PlistChecker) checkPathLib(pline *PlistLine, dirname, basename string)
 		pline.Errorf("Only the libiconv package may install lib/charset.alias.")
 	}
 
-	if hasSuffix(basename, ".la") && !pkg.vars.Defined("USE_LIBTOOL") {
+	if hasSuffix(basename, ".la") && !pkg.vars.IsDefined("USE_LIBTOOL") {
 		if ck.once.FirstTime("USE_LIBTOOL") {
 			pline.Warnf("Packages that install libtool libraries should define USE_LIBTOOL.")
 		}
@@ -433,9 +427,15 @@ func (ck *PlistChecker) checkPathShareIcons(pline *PlistLine) {
 		}
 	}
 
-	if contains(text[12:], "/") && !pkg.vars.Defined("ICON_THEMES") && ck.once.FirstTime("ICON_THEMES") {
+	if contains(text[12:], "/") && !pkg.vars.IsDefined("ICON_THEMES") && ck.once.FirstTime("ICON_THEMES") {
 		pline.Warnf("Packages that install icon theme files should set ICON_THEMES.")
 	}
+}
+
+type PlistLine struct {
+	*Line
+	conditions []string // e.g. PLIST.docs
+	text       string   // Line.Text without any conditions of the form ${PLIST.cond}
 }
 
 func (pline *PlistLine) CheckTrailingWhitespace() {

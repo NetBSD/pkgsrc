@@ -73,7 +73,7 @@ func (s *RedundantScope) handleVarassign(mkline *MkLine, ind *Indentation) {
 	//  this variable assignment and the/any? previous one.
 	//  See Test_RedundantScope__overwrite_inside_conditional.
 	//  Anyway, too few warnings are better than wrong warnings.
-	if info.vari.Conditional() || ind.Depth("") > 0 {
+	if info.vari.IsConditional() || ind.Depth("") > 0 {
 		return
 	}
 
@@ -147,7 +147,7 @@ func (s *RedundantScope) handleVarassign(mkline *MkLine, ind *Indentation) {
 			//
 			// Except when this line has the same value as the guaranteed
 			// current value of the variable. Then it is redundant.
-			if info.vari.Constant() && info.vari.ConstantValue() == mkline.Value() {
+			if info.vari.IsConstant() && info.vari.ConstantValue() == mkline.Value() {
 				s.onRedundant(prevWrites[len(prevWrites)-1], mkline)
 			}
 		}

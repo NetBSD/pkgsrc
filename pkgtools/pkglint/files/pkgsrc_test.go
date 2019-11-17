@@ -2,6 +2,57 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
+func (s *Suite) Test_Pkgsrc__frozen(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("doc/CHANGES-2018",
+		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2018Q2 branch [freezer 2018-03-25]")
+	t.FinishSetUp()
+
+	t.CheckEquals(G.Pkgsrc.LastFreezeStart, "2018-03-25")
+}
+
+func (s *Suite) Test_Pkgsrc__not_frozen(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("doc/CHANGES-2018",
+		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2018Q2 branch [freezer 2018-03-25]",
+		"\tmk/bsd.pkg.mk: freeze ended for pkgsrc-2018Q2 branch [freezer 2018-03-27]")
+	t.FinishSetUp()
+
+	t.CheckEquals(G.Pkgsrc.LastFreezeStart, "2018-03-25")
+	t.CheckEquals(G.Pkgsrc.LastFreezeEnd, "2018-03-27")
+}
+
+func (s *Suite) Test_Pkgsrc__frozen_with_typo(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("doc/CHANGES-2018",
+		// The closing bracket is missing.
+		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2018Q2 branch [freezer 2018-03-25")
+	t.FinishSetUp()
+
+	t.CheckEquals(G.Pkgsrc.LastFreezeStart, "")
+}
+
+func (s *Suite) Test_Pkgsrc__caching(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("lang/Makefile")
+	t.CreateFileLines("lang/python27/Makefile")
+
+	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+
+	t.CheckEquals(latest, "../../lang/python27")
+
+	cached := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+
+	t.CheckEquals(cached, "../../lang/python27")
+}
+
 // Ensures that pkglint can handle MASTER_SITES definitions with and
 // without line continuations.
 //
@@ -37,211 +88,21 @@ func (s *Suite) Test_Pkgsrc_loadMasterSites(c *check.C) {
 	t.CheckEquals(G.Pkgsrc.MasterSiteVarToURL["MASTER_SITE_BACKUP"], "")
 }
 
-func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates(c *check.C) {
+func (s *Suite) Test_Pkgsrc_loadPkgOptions(c *check.C) {
 	t := s.Init(c)
 
-	lines := t.NewLines("doc/TODO",
-		"",
-		"Suggested package updates",
-		"==============",
-		"For Perl updates \u2026",
-		"",
-		"\t"+"o CSP-0.34",
-		"\t"+"o freeciv-client-2.5.0 (urgent)",
-		"",
-		"\t"+"o ignored-0.0")
+	t.CreateFileLines("mk/defaults/options.description",
+		"option-name      Description of the option",
+		"<<<<< Merge conflict",
+		"===== Merge conflict",
+		">>>>> Merge conflict")
 
-	todo := G.Pkgsrc.parseSuggestedUpdates(lines)
-
-	t.CheckDeepEquals(todo, []SuggestedUpdate{
-		{lines.Lines[5].Location, "CSP", "0.34", ""},
-		{lines.Lines[6].Location, "freeciv-client", "2.5.0", "(urgent)"}})
-}
-
-func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpPkgsrc()
-	t.CreateFileLines("mk/misc/category.mk")
-	t.CreateFileLines("licenses/2-clause-bsd")
-	t.CreateFileLines("licenses/gnu-gpl-v3")
-
-	t.CreateFileLines("Makefile",
-		MkCvsID,
-		"SUBDIR+=\tcategory")
-
-	t.CreateFileLines("category/Makefile",
-		MkCvsID,
-		"COMMENT=\tExample category",
-		"",
-		"SUBDIR+=\tpackage",
-		"SUBDIR+=\tpackage2",
-		"",
-		".include \"../mk/misc/category.mk\"")
-
-	t.SetUpPackage("category/package",
-		"LICENSE=\t2-clause-bsd")
-	t.SetUpPackage("category/package2",
-		"LICENSE=\tmissing")
-
-	t.Main("-r", "-Cglobal", t.File("."))
+	G.Pkgsrc.loadPkgOptions()
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package2/Makefile:11: License file ~/licenses/missing does not exist.",
-		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.", // Added by Tester.SetUpPkgsrc
-		"WARN: ~/licenses/gnu-gpl-v3: This license seems to be unused.",
-		"3 warnings found.")
-}
-
-func (s *Suite) Test_Pkgsrc_loadUntypedVars(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpPkgsrc()
-	t.SetUpTool("echo", "ECHO", AtRunTime)
-	t.CreateFileLines("mk/infra.mk",
-		MkCvsID,
-		"#",
-		"# System-provided variables:",
-		"#",
-		"# DOCUMENTED",
-		"#\tThis variable is not actually defined but still documented.",
-		"#\tThis may be because its definition is evaluated dynamically.",
-		"",
-		".if !defined(INFRA_MK)",
-		"INFRA_MK:=",
-		"",
-		"UNTYPED.one=\tone",
-		"UNTYPED.two=\ttwo",
-		"ECHO=\t\techo",
-		"_UNTYPED=\tinfrastructure only",
-		".for p in param",
-		"PARAMETERIZED.${p}=\tparameterized",
-		"INDIRECT_${p}=\tindirect",
-		".endfor",
-		"#COMMENTED=\tcommented",
-		".endif")
-	t.FinishSetUp()
-
-	mklines := t.NewMkLines("filename.mk",
-		MkCvsID,
-		"",
-		"do-build:",
-		"\t: ${INFRA_MK} ${UNTYPED.three} ${ECHO}",
-		"\t: ${_UNTYPED} ${PARAMETERIZED.param}",
-		"\t: ${INDIRECT_param}",
-		"\t: ${DOCUMENTED} ${COMMENTED}")
-
-	mklines.Check()
-
-	t.CheckOutputLines(
-		"WARN: filename.mk:4: INFRA_MK is used but not defined.",
-		"WARN: filename.mk:5: _UNTYPED is used but not defined.",
-		"WARN: filename.mk:6: INDIRECT_param is used but not defined.")
-}
-
-func (s *Suite) Test_Pkgsrc_loadUntypedVars__badly_named_directory(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpPkgsrc()
-	t.CreateFileLines("mk/subdir.mk/file.mk",
-		MkCvsID)
-	t.FinishSetUp()
-
-	// Even when a directory is named *.mk, pkglint doesn't crash.
-	t.CheckOutputEmpty()
-}
-
-func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
-	t := s.Init(c)
-
-	t.CreateFileLines("mk/tools/bsd.tools.mk",
-		".include \"flex.mk\"",
-		".include \"gettext.mk\"",
-		".include \"../nonexistent.mk\"", // Is skipped because of the slash.
-		".include \"strip.mk\"",
-		".include \"replace.mk\"")
-	t.CreateFileLines("mk/tools/defaults.mk",
-		"_TOOLS_VARNAME.chown=CHOWN",
-		"_TOOLS_VARNAME.gawk=AWK",
-		"_TOOLS_VARNAME.mv=MV",
-		"_TOOLS_VARNAME.pwd=PWD")
-	t.CreateFileLines("mk/tools/flex.mk",
-		"# empty")
-	t.CreateFileLines("mk/tools/gettext.mk",
-		".if ${USE_TOOLS:Mgettext}", // This conditional prevents msgfmt from
-		"USE_TOOLS+=msgfmt",         // being added to the default USE_TOOLS.
-		".endif",
-		"TOOLS_CREATE+=msgfmt")
-	t.CreateFileLines("mk/tools/strip.mk",
-		".if defined(_INSTALL_UNSTRIPPED) || !defined(TOOLS_PLATFORM.strip)",
-		"TOOLS_NOOP+=            strip",
-		".else",
-		"TOOLS_CREATE+=          strip",
-		"TOOLS_PATH.strip=       ${TOOLS_PLATFORM.strip}",
-		".endif",
-		"STRIP?=         strip")
-	t.CreateFileLines("mk/tools/replace.mk",
-		"_TOOLS.bzip2=\tbzip2 bzcat",
-		"#TOOLS_CREATE+=commented out",
-		"_UNRELATED_VAR=\t# empty")
-	t.CreateFileLines("mk/bsd.prefs.mk",
-		"USE_TOOLS+=\tpwd",
-		"USE_TOOLS+=\tm4:pkgsrc")
-	t.CreateFileLines("mk/bsd.pkg.mk",
-		"USE_TOOLS+=\tmv")
-
-	G.Pkgsrc.loadTools()
-
-	t.EnableTracingToLog()
-	G.Pkgsrc.Tools.Trace()
-	t.DisableTracing()
-
-	t.CheckOutputLines(
-		"TRACE: + (*Tools).Trace()",
-		"TRACE: 1   tool bzcat:::Nowhere",
-		"TRACE: 1   tool bzip2:::Nowhere",
-		"TRACE: 1   tool chown:CHOWN::Nowhere",
-		"TRACE: 1   tool echo:ECHO:var:AfterPrefsMk",
-		"TRACE: 1   tool echo -n:ECHO_N:var:AfterPrefsMk",
-		"TRACE: 1   tool false:FALSE:var:AtRunTime",
-		"TRACE: 1   tool gawk:AWK::Nowhere",
-		"TRACE: 1   tool m4:::AfterPrefsMk",
-		"TRACE: 1   tool msgfmt:::AtRunTime",
-		"TRACE: 1   tool mv:MV::AtRunTime",
-		"TRACE: 1   tool pwd:PWD::AfterPrefsMk",
-		"TRACE: 1   tool strip:::AtRunTime",
-		"TRACE: 1   tool test:TEST:var:AfterPrefsMk",
-		"TRACE: 1   tool true:TRUE:var:AfterPrefsMk",
-		"TRACE: - (*Tools).Trace()")
-}
-
-// As a side-benefit, loadTools also loads the _BUILD_DEFS.
-func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpTool("echo", "ECHO", AtRunTime)
-	pkg := t.SetUpPackage("category/package",
-		"pre-configure:",
-		"\t@${ECHO} ${PKG_SYSCONFDIR} ${VARBASE}")
-	t.CreateFileLines("mk/bsd.pkg.mk",
-		MkCvsID,
-		"_BUILD_DEFS+=\tPKG_SYSCONFBASEDIR PKG_SYSCONFDIR")
-	t.CreateFileLines("mk/defaults/mk.conf",
-		MkCvsID,
-		"",
-		"VARBASE=\t\t/var/pkg",
-		"PKG_SYSCONFBASEDIR=\t/usr/pkg/etc",
-		"PKG_SYSCONFDIR=\t/usr/pkg/etc")
-	t.FinishSetUp()
-
-	G.Check(pkg)
-
-	t.CheckEquals(G.Pkgsrc.IsBuildDef("PKG_SYSCONFDIR"), true)
-	t.CheckEquals(G.Pkgsrc.IsBuildDef("VARBASE"), false)
-
-	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile:21: " +
-			"The user-defined variable VARBASE is used but not added to BUILD_DEFS.")
+		"ERROR: ~/mk/defaults/options.description:2: Invalid line format: <<<<< Merge conflict",
+		"ERROR: ~/mk/defaults/options.description:3: Invalid line format: ===== Merge conflict",
+		"ERROR: ~/mk/defaults/options.description:4: Invalid line format: >>>>> Merge conflict")
 }
 
 func (s *Suite) Test_Pkgsrc_loadDocChanges(c *check.C) {
@@ -257,93 +118,6 @@ func (s *Suite) Test_Pkgsrc_loadDocChanges(c *check.C) {
 	t.FinishSetUp()
 
 	t.CheckEquals(G.Pkgsrc.LastChange["pkgpath"].Action, Moved)
-}
-
-func (s *Suite) Test_Pkgsrc_checkRemovedAfterLastFreeze(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpCommandLine("-Wall", "--source")
-	t.CreateFileLines("doc/CHANGES-2019",
-		CvsID,
-		"",
-		"\tUpdated category/updated-before to 1.0 [updater 2019-04-01]",
-		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2019Q1 branch [freezer 2019-06-21]",
-		"\tmk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q1 branch [freezer 2019-06-25]",
-		"\tUpdated category/updated-after to 1.0 [updater 2019-07-01]",
-		"\tAdded category/added-after version 1.0 [updater 2019-07-01]",
-		"\tMoved category/moved-from to category/moved-to [author 2019-07-02]",
-		"\tDowngraded category/downgraded to 1.0 [author 2019-07-03]",
-		"\tUpdated category/still-there to 1.0 [updater 2019-07-04]")
-	t.SetUpPackage("category/still-there")
-	t.FinishSetUp()
-
-	// No error message since -Cglobal is not given.
-	t.CheckOutputEmpty()
-}
-
-func (s *Suite) Test_Pkgsrc_checkRemovedAfterLastFreeze__check_global(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpCommandLine("-Wall", "-Cglobal", "--source")
-	t.CreateFileLines("doc/CHANGES-2019",
-		CvsID,
-		"",
-		"\tUpdated category/updated-before to 1.0 [updater 2019-04-01]",
-		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2019Q1 branch [freezer 2019-06-21]",
-		"\tmk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q1 branch [freezer 2019-06-25]",
-		"\tUpdated category/updated-after to 1.0 [updater 2019-07-01]",
-		"\tAdded category/added-after version 1.0 [updater 2019-07-01]",
-		"\tMoved category/moved-from to category/moved-to [author 2019-07-02]",
-		"\tDowngraded category/downgraded to 1.0 [author 2019-07-03]",
-		"\tUpdated category/still-there to 1.0 [updater 2019-07-04]")
-	t.SetUpPackage("category/still-there")
-	t.FinishSetUp()
-
-	// It doesn't matter whether the last visible package change was before
-	// or after the latest freeze. The crucial point is that the most
-	// interesting change is the invisible one, which is the removal.
-	// And for finding the removal reliably, it doesn't matter how long ago
-	// the last package change was.
-
-	// The empty lines in the following output demonstrate the cheating
-	// by creating fake lines from Change.Location.
-	t.CheckOutputLines(
-		"ERROR: ~/doc/CHANGES-2019:3: Package category/updated-before "+
-			"must either exist or be marked as removed.",
-		"",
-		"ERROR: ~/doc/CHANGES-2019:6: Package category/updated-after "+
-			"must either exist or be marked as removed.",
-		"",
-		"ERROR: ~/doc/CHANGES-2019:7: Package category/added-after "+
-			"must either exist or be marked as removed.",
-		"",
-		"ERROR: ~/doc/CHANGES-2019:9: Package category/downgraded "+
-			"must either exist or be marked as removed.")
-}
-
-func (s *Suite) Test_Pkgsrc_checkRemovedAfterLastFreeze__wip(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpPackage("wip/package")
-	t.CreateFileLines("doc/CHANGES-2019",
-		CvsID,
-		"",
-		"\tUpdated category/updated-before to 1.0 [updater 2019-04-01]",
-		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2019Q1 branch [freezer 2019-06-21]",
-		"\tmk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q1 branch [freezer 2019-06-25]",
-		"\tUpdated category/updated-after to 1.0 [updater 2019-07-01]",
-		"\tAdded category/added-after version 1.0 [updater 2019-07-01]",
-		"\tMoved category/moved-from to category/moved-to [author 2019-07-02]",
-		"\tDowngraded category/downgraded to 1.0 [author 2019-07-03]")
-
-	t.Main("-Wall", "--source", "wip/package")
-
-	// Since the first argument is in pkgsrc-wip, the check for doc/CHANGES
-	// is skipped. It may well be that a pkgsrc-wip developer doesn't have
-	// write access to main pkgsrc, and therefore cannot fix doc/CHANGES.
-
-	t.CheckOutputLines(
-		"Looks fine.")
 }
 
 func (s *Suite) Test_Pkgsrc_loadDocChanges__not_found(c *check.C) {
@@ -523,6 +297,45 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__infrastructure(c *check.C) {
 		"Looks fine.")
 }
 
+func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__old(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Cglobal", "-Wall")
+	t.SetUpPkgsrc()
+	t.CreateFileLines("doc/CHANGES-2010",
+		CvsID,
+		"",
+		"Changes to the packages collection and infrastructure in 2015:",
+		"",
+		"\tInvalid line [3 4]")
+	t.CreateFileLines("doc/CHANGES-2015",
+		CvsID,
+		"",
+		"Changes to the packages collection and infrastructure in 2015:",
+		"",
+		"\tUpdated pkgpath to 1.0 [author 2015-07-01]",
+		"\tInvalid line [3 4]",
+		// The date of the below entry is earlier than that of the above entry;
+		// this error is ignored because the 2015 file is too old.
+		"\tUpdated pkgpath to 1.2 [author 2015-02-01]")
+	t.CreateFileLines("doc/CHANGES-2018",
+		CvsID,
+		"",
+		"Changes to the packages collection and infrastructure in 2018:",
+		"",
+		"\tUpdated pkgpath to 1.0 [author date]",
+		"\tUpdated pkgpath to 1.0 [author d]")
+	t.FinishSetUp()
+
+	// The 2010 file is so old that it is skipped completely.
+	// The 2015 file is so old that the date is not checked.
+	// Since 2018, each date in the file must match the filename.
+	t.CheckOutputLines(
+		"WARN: ~/doc/CHANGES-2015:6: Unknown doc/CHANGES line: \tInvalid line [3 4]",
+		"WARN: ~/doc/CHANGES-2018:5: Year \"date\" for pkgpath does not match the filename ~/doc/CHANGES-2018.",
+		"WARN: ~/doc/CHANGES-2018:6: Date \"d\" for pkgpath is earlier than \"date\" in line 5.")
+}
+
 func (s *Suite) Test_Pkgsrc_parseDocChange(c *check.C) {
 	t := s.Init(c)
 
@@ -607,43 +420,112 @@ func (s *Suite) Test_Pkgsrc_parseDocChange(c *check.C) {
 		nil...)
 }
 
-func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__old(c *check.C) {
+func (s *Suite) Test_Pkgsrc_checkRemovedAfterLastFreeze(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Cglobal", "-Wall")
-	t.SetUpPkgsrc()
-	t.CreateFileLines("doc/CHANGES-2010",
+	t.SetUpCommandLine("-Wall", "--source")
+	t.CreateFileLines("doc/CHANGES-2019",
 		CvsID,
 		"",
-		"Changes to the packages collection and infrastructure in 2015:",
-		"",
-		"\tInvalid line [3 4]")
-	t.CreateFileLines("doc/CHANGES-2015",
-		CvsID,
-		"",
-		"Changes to the packages collection and infrastructure in 2015:",
-		"",
-		"\tUpdated pkgpath to 1.0 [author 2015-07-01]",
-		"\tInvalid line [3 4]",
-		// The date of the below entry is earlier than that of the above entry;
-		// this error is ignored because the 2015 file is too old.
-		"\tUpdated pkgpath to 1.2 [author 2015-02-01]")
-	t.CreateFileLines("doc/CHANGES-2018",
-		CvsID,
-		"",
-		"Changes to the packages collection and infrastructure in 2018:",
-		"",
-		"\tUpdated pkgpath to 1.0 [author date]",
-		"\tUpdated pkgpath to 1.0 [author d]")
+		"\tUpdated category/updated-before to 1.0 [updater 2019-04-01]",
+		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2019Q1 branch [freezer 2019-06-21]",
+		"\tmk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q1 branch [freezer 2019-06-25]",
+		"\tUpdated category/updated-after to 1.0 [updater 2019-07-01]",
+		"\tAdded category/added-after version 1.0 [updater 2019-07-01]",
+		"\tMoved category/moved-from to category/moved-to [author 2019-07-02]",
+		"\tDowngraded category/downgraded to 1.0 [author 2019-07-03]",
+		"\tUpdated category/still-there to 1.0 [updater 2019-07-04]")
+	t.SetUpPackage("category/still-there")
 	t.FinishSetUp()
 
-	// The 2010 file is so old that it is skipped completely.
-	// The 2015 file is so old that the date is not checked.
-	// Since 2018, each date in the file must match the filename.
+	// No error message since -Cglobal is not given.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Pkgsrc_checkRemovedAfterLastFreeze__check_global(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "-Cglobal", "--source")
+	t.CreateFileLines("doc/CHANGES-2019",
+		CvsID,
+		"",
+		"\tUpdated category/updated-before to 1.0 [updater 2019-04-01]",
+		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2019Q1 branch [freezer 2019-06-21]",
+		"\tmk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q1 branch [freezer 2019-06-25]",
+		"\tUpdated category/updated-after to 1.0 [updater 2019-07-01]",
+		"\tAdded category/added-after version 1.0 [updater 2019-07-01]",
+		"\tMoved category/moved-from to category/moved-to [author 2019-07-02]",
+		"\tDowngraded category/downgraded to 1.0 [author 2019-07-03]",
+		"\tUpdated category/still-there to 1.0 [updater 2019-07-04]")
+	t.SetUpPackage("category/still-there")
+	t.FinishSetUp()
+
+	// It doesn't matter whether the last visible package change was before
+	// or after the latest freeze. The crucial point is that the most
+	// interesting change is the invisible one, which is the removal.
+	// And for finding the removal reliably, it doesn't matter how long ago
+	// the last package change was.
+
+	// The empty lines in the following output demonstrate the cheating
+	// by creating fake lines from Change.Location.
 	t.CheckOutputLines(
-		"WARN: ~/doc/CHANGES-2015:6: Unknown doc/CHANGES line: \tInvalid line [3 4]",
-		"WARN: ~/doc/CHANGES-2018:5: Year \"date\" for pkgpath does not match the filename ~/doc/CHANGES-2018.",
-		"WARN: ~/doc/CHANGES-2018:6: Date \"d\" for pkgpath is earlier than \"date\" in line 5.")
+		"ERROR: ~/doc/CHANGES-2019:3: Package category/updated-before "+
+			"must either exist or be marked as removed.",
+		"",
+		"ERROR: ~/doc/CHANGES-2019:6: Package category/updated-after "+
+			"must either exist or be marked as removed.",
+		"",
+		"ERROR: ~/doc/CHANGES-2019:7: Package category/added-after "+
+			"must either exist or be marked as removed.",
+		"",
+		"ERROR: ~/doc/CHANGES-2019:9: Package category/downgraded "+
+			"must either exist or be marked as removed.")
+}
+
+func (s *Suite) Test_Pkgsrc_checkRemovedAfterLastFreeze__wip(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("wip/package")
+	t.CreateFileLines("doc/CHANGES-2019",
+		CvsID,
+		"",
+		"\tUpdated category/updated-before to 1.0 [updater 2019-04-01]",
+		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2019Q1 branch [freezer 2019-06-21]",
+		"\tmk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q1 branch [freezer 2019-06-25]",
+		"\tUpdated category/updated-after to 1.0 [updater 2019-07-01]",
+		"\tAdded category/added-after version 1.0 [updater 2019-07-01]",
+		"\tMoved category/moved-from to category/moved-to [author 2019-07-02]",
+		"\tDowngraded category/downgraded to 1.0 [author 2019-07-03]")
+
+	t.Main("-Wall", "--source", "wip/package")
+
+	// Since the first argument is in pkgsrc-wip, the check for doc/CHANGES
+	// is skipped. It may well be that a pkgsrc-wip developer doesn't have
+	// write access to main pkgsrc, and therefore cannot fix doc/CHANGES.
+
+	t.CheckOutputLines(
+		"Looks fine.")
+}
+
+func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("doc/TODO",
+		"",
+		"Suggested package updates",
+		"==============",
+		"For Perl updates \u2026",
+		"",
+		"\t"+"o CSP-0.34",
+		"\t"+"o freeciv-client-2.5.0 (urgent)",
+		"",
+		"\t"+"o ignored-0.0")
+
+	todo := G.Pkgsrc.parseSuggestedUpdates(lines)
+
+	t.CheckDeepEquals(todo, []SuggestedUpdate{
+		{lines.Lines[5].Location, "CSP", "0.34", ""},
+		{lines.Lines[6].Location, "freeciv-client", "2.5.0", "(urgent)"}})
 }
 
 func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates__wip(c *check.C) {
@@ -666,7 +548,121 @@ func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates__wip(c *check.C) {
 			"This package should be updated to 1.13 ([cool new features]).")
 }
 
-func (s *Suite) Test_Pkgsrc__deprecated(c *check.C) {
+func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("mk/tools/bsd.tools.mk",
+		".include \"flex.mk\"",
+		".include \"gettext.mk\"",
+		".include \"../nonexistent.mk\"", // Is skipped because of the slash.
+		".include \"strip.mk\"",
+		".include \"replace.mk\"")
+	t.CreateFileLines("mk/tools/defaults.mk",
+		"_TOOLS_VARNAME.chown=CHOWN",
+		"_TOOLS_VARNAME.gawk=AWK",
+		"_TOOLS_VARNAME.mv=MV",
+		"_TOOLS_VARNAME.pwd=PWD")
+	t.CreateFileLines("mk/tools/flex.mk",
+		"# empty")
+	t.CreateFileLines("mk/tools/gettext.mk",
+		".if ${USE_TOOLS:Mgettext}", // This conditional prevents msgfmt from
+		"USE_TOOLS+=msgfmt",         // being added to the default USE_TOOLS.
+		".endif",
+		"TOOLS_CREATE+=msgfmt")
+	t.CreateFileLines("mk/tools/strip.mk",
+		".if defined(_INSTALL_UNSTRIPPED) || !defined(TOOLS_PLATFORM.strip)",
+		"TOOLS_NOOP+=            strip",
+		".else",
+		"TOOLS_CREATE+=          strip",
+		"TOOLS_PATH.strip=       ${TOOLS_PLATFORM.strip}",
+		".endif",
+		"STRIP?=         strip")
+	t.CreateFileLines("mk/tools/replace.mk",
+		"_TOOLS.bzip2=\tbzip2 bzcat",
+		"#TOOLS_CREATE+=commented out",
+		"_UNRELATED_VAR=\t# empty")
+	t.CreateFileLines("mk/bsd.prefs.mk",
+		"USE_TOOLS+=\tpwd",
+		"USE_TOOLS+=\tm4:pkgsrc")
+	t.CreateFileLines("mk/bsd.pkg.mk",
+		"USE_TOOLS+=\tmv")
+
+	G.Pkgsrc.loadTools()
+
+	t.EnableTracingToLog()
+	G.Pkgsrc.Tools.Trace()
+	t.DisableTracing()
+
+	t.CheckOutputLines(
+		"TRACE: + (*Tools).Trace()",
+		"TRACE: 1   tool bzcat:::Nowhere",
+		"TRACE: 1   tool bzip2:::Nowhere",
+		"TRACE: 1   tool chown:CHOWN::Nowhere",
+		"TRACE: 1   tool echo:ECHO:var:AfterPrefsMk",
+		"TRACE: 1   tool echo -n:ECHO_N:var:AfterPrefsMk",
+		"TRACE: 1   tool false:FALSE:var:AtRunTime",
+		"TRACE: 1   tool gawk:AWK::Nowhere",
+		"TRACE: 1   tool m4:::AfterPrefsMk",
+		"TRACE: 1   tool msgfmt:::AtRunTime",
+		"TRACE: 1   tool mv:MV::AtRunTime",
+		"TRACE: 1   tool pwd:PWD::AfterPrefsMk",
+		"TRACE: 1   tool strip:::AtRunTime",
+		"TRACE: 1   tool test:TEST:var:AfterPrefsMk",
+		"TRACE: 1   tool true:TRUE:var:AfterPrefsMk",
+		"TRACE: - (*Tools).Trace()")
+}
+
+// As a side-benefit, loadTools also loads the _BUILD_DEFS.
+func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpTool("echo", "ECHO", AtRunTime)
+	pkg := t.SetUpPackage("category/package",
+		"pre-configure:",
+		"\t@${ECHO} ${PKG_SYSCONFDIR} ${VARBASE}")
+	t.CreateFileLines("mk/bsd.pkg.mk",
+		MkCvsID,
+		"_BUILD_DEFS+=\tPKG_SYSCONFBASEDIR PKG_SYSCONFDIR")
+	t.CreateFileLines("mk/defaults/mk.conf",
+		MkCvsID,
+		"",
+		"VARBASE=\t\t/var/pkg",
+		"PKG_SYSCONFBASEDIR=\t/usr/pkg/etc",
+		"PKG_SYSCONFDIR=\t/usr/pkg/etc")
+	t.FinishSetUp()
+
+	G.Check(pkg)
+
+	t.CheckEquals(G.Pkgsrc.IsBuildDef("PKG_SYSCONFDIR"), true)
+	t.CheckEquals(G.Pkgsrc.IsBuildDef("VARBASE"), false)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:21: " +
+			"The user-defined variable VARBASE is used but not added to BUILD_DEFS.")
+}
+
+func (s *Suite) Test_Pkgsrc_loadTools__no_tools_found(c *check.C) {
+	t := s.Init(c)
+
+	t.ExpectFatal(
+		G.Pkgsrc.loadTools,
+		"FATAL: ~/mk/tools/bsd.tools.mk: Cannot be read.")
+
+	t.CreateFileLines("mk/tools/bsd.tools.mk")
+
+	t.ExpectFatal(
+		G.Pkgsrc.loadTools,
+		"FATAL: ~/mk/tools/bsd.tools.mk: Must not be empty.")
+
+	t.CreateFileLines("mk/tools/bsd.tools.mk",
+		MkCvsID)
+
+	t.ExpectFatal(
+		G.Pkgsrc.loadTools,
+		"FATAL: ~/mk/tools/bsd.tools.mk: Too few tool files.")
+}
+
+func (s *Suite) Test_Pkgsrc_initDeprecatedVars(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpTool("echo", "ECHO", AtRunTime)
@@ -689,58 +685,62 @@ func (s *Suite) Test_Pkgsrc__deprecated(c *check.C) {
 			"Use PKG_DEFAULT_JVM instead.")
 }
 
-func (s *Suite) Test_Pkgsrc_ListVersions__no_basedir(c *check.C) {
+func (s *Suite) Test_Pkgsrc_loadUntypedVars(c *check.C) {
 	t := s.Init(c)
 
-	versions := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
+	t.SetUpPkgsrc()
+	t.SetUpTool("echo", "ECHO", AtRunTime)
+	t.CreateFileLines("mk/infra.mk",
+		MkCvsID,
+		"#",
+		"# System-provided variables:",
+		"#",
+		"# DOCUMENTED",
+		"#\tThis variable is not actually defined but still documented.",
+		"#\tThis may be because its definition is evaluated dynamically.",
+		"",
+		".if !defined(INFRA_MK)",
+		"INFRA_MK:=",
+		"",
+		"UNTYPED.one=\tone",
+		"UNTYPED.two=\ttwo",
+		"ECHO=\t\techo",
+		"_UNTYPED=\tinfrastructure only",
+		".for p in param",
+		"PARAMETERIZED.${p}=\tparameterized",
+		"INDIRECT_${p}=\tindirect",
+		".endfor",
+		"#COMMENTED=\tcommented",
+		".endif")
+	t.FinishSetUp()
 
-	c.Check(versions, check.HasLen, 0)
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"",
+		"do-build:",
+		"\t: ${INFRA_MK} ${UNTYPED.three} ${ECHO}",
+		"\t: ${_UNTYPED} ${PARAMETERIZED.param}",
+		"\t: ${INDIRECT_param}",
+		"\t: ${DOCUMENTED} ${COMMENTED}")
+
+	mklines.Check()
+
 	t.CheckOutputLines(
-		"ERROR: Cannot find package versions of \"^python[0-9]+$\" in \"~/lang\".")
+		"WARN: filename.mk:4: INFRA_MK is used but not defined.",
+		"WARN: filename.mk:5: _UNTYPED is used but not defined.",
+		"WARN: filename.mk:6: INDIRECT_param is used but not defined.")
 }
 
-func (s *Suite) Test_Pkgsrc_ListVersions__no_subdirs(c *check.C) {
+func (s *Suite) Test_Pkgsrc_loadUntypedVars__badly_named_directory(c *check.C) {
 	t := s.Init(c)
 
-	t.CreateFileLines("lang/Makefile")
+	t.SetUpPkgsrc()
+	t.CreateFileLines("mk/subdir.mk/file.mk",
+		MkCvsID)
+	t.FinishSetUp()
 
-	versions := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
-
-	c.Check(versions, check.HasLen, 0)
-	t.CheckOutputLines(
-		"ERROR: Cannot find package versions of \"^python[0-9]+$\" in \"~/lang\".")
-}
-
-// Ensures that failed lookups are also cached since they can be assumed
-// not to change during a single pkglint run.
-func (s *Suite) Test_Pkgsrc_ListVersions__error_is_cached(c *check.C) {
-	t := s.Init(c)
-
-	versions := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
-
-	c.Check(versions, check.HasLen, 0)
-	t.CheckOutputLines(
-		"ERROR: Cannot find package versions of \"^python[0-9]+$\" in \"~/lang\".")
-
-	versions2 := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
-
-	c.Check(versions2, check.HasLen, 0)
-	t.CheckOutputEmpty() // No repeated error message
-}
-
-func (s *Suite) Test_Pkgsrc__caching(c *check.C) {
-	t := s.Init(c)
-
-	t.CreateFileLines("lang/Makefile")
-	t.CreateFileLines("lang/python27/Makefile")
-
-	latest := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
-
-	t.CheckEquals(latest, "../../lang/python27")
-
-	cached := G.Pkgsrc.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
-
-	t.CheckEquals(cached, "../../lang/python27")
+	// Even when a directory is named *.mk, pkglint doesn't crash.
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_Pkgsrc_Latest__multiple_candidates(c *check.C) {
@@ -887,42 +887,43 @@ func (s *Suite) Test_Pkgsrc_ListVersions__invalid_argument(c *check.C) {
 	t.Check(versions, check.HasLen, 0)
 }
 
-func (s *Suite) Test_Pkgsrc_loadPkgOptions(c *check.C) {
+func (s *Suite) Test_Pkgsrc_ListVersions__no_basedir(c *check.C) {
 	t := s.Init(c)
 
-	t.CreateFileLines("mk/defaults/options.description",
-		"option-name      Description of the option",
-		"<<<<< Merge conflict",
-		"===== Merge conflict",
-		">>>>> Merge conflict")
+	versions := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
 
-	G.Pkgsrc.loadPkgOptions()
-
+	c.Check(versions, check.HasLen, 0)
 	t.CheckOutputLines(
-		"ERROR: ~/mk/defaults/options.description:2: Invalid line format: <<<<< Merge conflict",
-		"ERROR: ~/mk/defaults/options.description:3: Invalid line format: ===== Merge conflict",
-		"ERROR: ~/mk/defaults/options.description:4: Invalid line format: >>>>> Merge conflict")
+		"ERROR: Cannot find package versions of \"^python[0-9]+$\" in \"~/lang\".")
 }
 
-func (s *Suite) Test_Pkgsrc_loadTools__no_tools_found(c *check.C) {
+func (s *Suite) Test_Pkgsrc_ListVersions__no_subdirs(c *check.C) {
 	t := s.Init(c)
 
-	t.ExpectFatal(
-		G.Pkgsrc.loadTools,
-		"FATAL: ~/mk/tools/bsd.tools.mk: Cannot be read.")
+	t.CreateFileLines("lang/Makefile")
 
-	t.CreateFileLines("mk/tools/bsd.tools.mk")
+	versions := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
 
-	t.ExpectFatal(
-		G.Pkgsrc.loadTools,
-		"FATAL: ~/mk/tools/bsd.tools.mk: Must not be empty.")
+	c.Check(versions, check.HasLen, 0)
+	t.CheckOutputLines(
+		"ERROR: Cannot find package versions of \"^python[0-9]+$\" in \"~/lang\".")
+}
 
-	t.CreateFileLines("mk/tools/bsd.tools.mk",
-		MkCvsID)
+// Ensures that failed lookups are also cached since they can be assumed
+// not to change during a single pkglint run.
+func (s *Suite) Test_Pkgsrc_ListVersions__error_is_cached(c *check.C) {
+	t := s.Init(c)
 
-	t.ExpectFatal(
-		G.Pkgsrc.loadTools,
-		"FATAL: ~/mk/tools/bsd.tools.mk: Too few tool files.")
+	versions := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
+
+	c.Check(versions, check.HasLen, 0)
+	t.CheckOutputLines(
+		"ERROR: Cannot find package versions of \"^python[0-9]+$\" in \"~/lang\".")
+
+	versions2 := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
+
+	c.Check(versions2, check.HasLen, 0)
+	t.CheckOutputEmpty() // No repeated error message
 }
 
 // See PR 46570, Ctrl+F "3. In lang/perl5".
@@ -1035,7 +1036,7 @@ func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {
 	mklines.Check()
 
 	vartype := G.Pkgsrc.VariableType(mklines, "MY_CHECK_SKIP")
-	t.CheckEquals(vartype.Guessed(), true)
+	t.CheckEquals(vartype.IsGuessed(), true)
 	t.CheckEquals(vartype.EffectivePermissions("filename.mk"), aclpAllRuntime)
 
 	// The permissions for MY_CHECK_SKIP say aclpAllRuntime, which excludes
@@ -1051,40 +1052,59 @@ func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {
 			"contains the invalid characters \"\\\"\\\"\".")
 }
 
-func (s *Suite) Test_Pkgsrc__frozen(c *check.C) {
+func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpPackage("category/package")
-	t.CreateFileLines("doc/CHANGES-2018",
-		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2018Q2 branch [freezer 2018-03-25]")
-	t.FinishSetUp()
+	t.SetUpPkgsrc()
+	t.CreateFileLines("mk/misc/category.mk")
+	t.CreateFileLines("licenses/2-clause-bsd")
+	t.CreateFileLines("licenses/gnu-gpl-v3")
 
-	t.CheckEquals(G.Pkgsrc.LastFreezeStart, "2018-03-25")
+	t.CreateFileLines("Makefile",
+		MkCvsID,
+		"SUBDIR+=\tcategory")
+
+	t.CreateFileLines("category/Makefile",
+		MkCvsID,
+		"COMMENT=\tExample category",
+		"",
+		"SUBDIR+=\tpackage",
+		"SUBDIR+=\tpackage2",
+		"",
+		".include \"../mk/misc/category.mk\"")
+
+	t.SetUpPackage("category/package",
+		"LICENSE=\t2-clause-bsd")
+	t.SetUpPackage("category/package2",
+		"LICENSE=\tmissing")
+
+	t.Main("-r", "-Cglobal", t.File("."))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package2/Makefile:11: License file ~/licenses/missing does not exist.",
+		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.", // Added by Tester.SetUpPkgsrc
+		"WARN: ~/licenses/gnu-gpl-v3: This license seems to be unused.",
+		"3 warnings found.")
 }
 
-func (s *Suite) Test_Pkgsrc__not_frozen(c *check.C) {
+func (s *Suite) Test_Pkgsrc_ReadDir(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpPackage("category/package")
-	t.CreateFileLines("doc/CHANGES-2018",
-		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2018Q2 branch [freezer 2018-03-25]",
-		"\tmk/bsd.pkg.mk: freeze ended for pkgsrc-2018Q2 branch [freezer 2018-03-27]")
-	t.FinishSetUp()
+	t.CreateFileLines("dir/aaa-subdir/file")
+	t.CreateFileLines("dir/subdir/file")
+	t.CreateFileLines("dir/file")
+	t.CreateFileLines("dir/.git/file")
+	t.CreateFileLines("dir/CVS/Entries")
+	t.CreateFileLines("dir/empty/empty/empty/empty/CVS/Entries")
 
-	t.CheckEquals(G.Pkgsrc.LastFreezeStart, "2018-03-25")
-	t.CheckEquals(G.Pkgsrc.LastFreezeEnd, "2018-03-27")
-}
+	infos := G.Pkgsrc.ReadDir("dir")
 
-func (s *Suite) Test_Pkgsrc__frozen_with_typo(c *check.C) {
-	t := s.Init(c)
+	var names []string
+	for _, info := range infos {
+		names = append(names, info.Name())
+	}
 
-	t.SetUpPackage("category/package")
-	t.CreateFileLines("doc/CHANGES-2018",
-		// The closing bracket is missing.
-		"\tmk/bsd.pkg.mk: started freeze for pkgsrc-2018Q2 branch [freezer 2018-03-25")
-	t.FinishSetUp()
-
-	t.CheckEquals(G.Pkgsrc.LastFreezeStart, "")
+	t.CheckDeepEquals(names, []string{"aaa-subdir", "file", "subdir"})
 }
 
 func (s *Suite) Test_Change_Version(c *check.C) {
@@ -1128,7 +1148,7 @@ func (s *Suite) Test_Change_Successor(c *check.C) {
 	t.ExpectAssert(func() { downgraded.Successor() })
 }
 
-func (s *Suite) Test_Change_Above(c *check.C) {
+func (s *Suite) Test_Change_IsAbove(c *check.C) {
 	t := s.Init(c)
 
 	var changes = []*Change{
@@ -1137,7 +1157,7 @@ func (s *Suite) Test_Change_Above(c *check.C) {
 		{Location{"", 1, 1}, 0, "", "", "", "2011-07-02"}}
 
 	test := func(i int, chi *Change, j int, chj *Change) {
-		actual := chi.Above(chj)
+		actual := chi.IsAbove(chj)
 		expected := i < j
 		if actual != expected {
 			t.CheckDeepEquals(
@@ -1158,24 +1178,4 @@ func (s *Suite) Test_ChangeAction_String(c *check.C) {
 
 	t.CheckEquals(Added.String(), "Added")
 	t.CheckEquals(Removed.String(), "Removed")
-}
-
-func (s *Suite) Test_Pkgsrc_ReadDir(c *check.C) {
-	t := s.Init(c)
-
-	t.CreateFileLines("dir/aaa-subdir/file")
-	t.CreateFileLines("dir/subdir/file")
-	t.CreateFileLines("dir/file")
-	t.CreateFileLines("dir/.git/file")
-	t.CreateFileLines("dir/CVS/Entries")
-	t.CreateFileLines("dir/empty/empty/empty/empty/CVS/Entries")
-
-	infos := G.Pkgsrc.ReadDir("dir")
-
-	var names []string
-	for _, info := range infos {
-		names = append(names, info.Name())
-	}
-
-	t.CheckDeepEquals(names, []string{"aaa-subdir", "file", "subdir"})
 }

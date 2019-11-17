@@ -96,14 +96,14 @@ func (perms ACLPermissions) HumanString() string {
 		condStr(perms.Contains(aclpUse), "used", ""))
 }
 
-func (vt *Vartype) List() bool                { return vt.options&List != 0 }
-func (vt *Vartype) Guessed() bool             { return vt.options&Guessed != 0 }
-func (vt *Vartype) PackageSettable() bool     { return vt.options&PackageSettable != 0 }
-func (vt *Vartype) UserSettable() bool        { return vt.options&UserSettable != 0 }
-func (vt *Vartype) SystemProvided() bool      { return vt.options&SystemProvided != 0 }
-func (vt *Vartype) CommandLineProvided() bool { return vt.options&CommandLineProvided != 0 }
-func (vt *Vartype) NeedsRationale() bool      { return vt.options&NeedsRationale != 0 }
-func (vt *Vartype) OnePerLine() bool          { return vt.options&OnePerLine != 0 }
+func (vt *Vartype) IsList() bool                { return vt.options&List != 0 }
+func (vt *Vartype) IsGuessed() bool             { return vt.options&Guessed != 0 }
+func (vt *Vartype) IsPackageSettable() bool     { return vt.options&PackageSettable != 0 }
+func (vt *Vartype) IsUserSettable() bool        { return vt.options&UserSettable != 0 }
+func (vt *Vartype) IsSystemProvided() bool      { return vt.options&SystemProvided != 0 }
+func (vt *Vartype) IsCommandLineProvided() bool { return vt.options&CommandLineProvided != 0 }
+func (vt *Vartype) NeedsRationale() bool        { return vt.options&NeedsRationale != 0 }
+func (vt *Vartype) IsOnePerLine() bool          { return vt.options&OnePerLine != 0 }
 
 func (vt *Vartype) EffectivePermissions(basename string) ACLPermissions {
 	for _, aclEntry := range vt.aclEntries {
@@ -186,7 +186,7 @@ func (vt *Vartype) AlternativeFiles(perms ACLPermissions) string {
 }
 
 func (vt *Vartype) MayBeAppendedTo() bool {
-	if vt.List() {
+	if vt.IsList() {
 		return true
 	}
 
@@ -201,22 +201,22 @@ func (vt *Vartype) MayBeAppendedTo() bool {
 
 func (vt *Vartype) String() string {
 	var opts []string
-	if vt.List() {
+	if vt.IsList() {
 		opts = append(opts, "list")
 	}
-	if vt.Guessed() {
+	if vt.IsGuessed() {
 		opts = append(opts, "guessed")
 	}
-	if vt.PackageSettable() {
+	if vt.IsPackageSettable() {
 		opts = append(opts, "package-settable")
 	}
-	if vt.UserSettable() {
+	if vt.IsUserSettable() {
 		opts = append(opts, "user-settable")
 	}
-	if vt.SystemProvided() {
+	if vt.IsSystemProvided() {
 		opts = append(opts, "system-provided")
 	}
-	if vt.CommandLineProvided() {
+	if vt.IsCommandLineProvided() {
 		opts = append(opts, "command-line-provided")
 	}
 
