@@ -334,38 +334,6 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__abi_api_versions(c *check.C) {
 		"WARN: buildlink3.mk:9: ABI version \"1.6.0\" should be at least API version \"1.6.1\" (see line 8).")
 }
 
-// As of October 2018, pkglint parses package dependencies a little
-// different than the pkg_* tools.
-// In all but two cases this works, this is one of the exceptions.
-// The "{totem,totem-xine}" cannot be parsed, therefore the check skipped.
-func (s *Suite) Test_Buildlink3Checker_checkVarassign__abi_api_versions_brace(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpVartypes()
-	t.CreateFileLines("multimedia/totem/Makefile")
-	mklines := t.SetUpFileMkLines("multimedia/totem/buildlink3.mk",
-		MkCvsID,
-		"",
-		"BUILDLINK_TREE+=\ttotem",
-		"",
-		".if !defined(TOTEM_BUILDLINK3_MK)",
-		"TOTEM_BUILDLINK3_MK:=",
-		"",
-		"BUILDLINK_API_DEPENDS.totem+=\t{totem,totem-xine}>=1.4.0",
-		"BUILDLINK_ABI_DEPENDS.totem+=\ttotem>=2.32.0nb46",
-		"BUILDLINK_PKGSRCDIR.totem?=\t../../multimedia/totem",
-		"",
-		".endif # TOTEM_BUILDLINK3_MK",
-		"",
-		"BUILDLINK_TREE+=\t-totem")
-
-	CheckLinesBuildlink3Mk(mklines)
-
-	// No warning about ABI "totem" and API "{totem,totem-xine}"
-	// because that case is explicitly not checked.
-	t.CheckOutputEmpty()
-}
-
 func (s *Suite) Test_CheckLinesBuildlink3Mk__missing_BUILDLINK_TREE_at_beginning(c *check.C) {
 	t := s.Init(c)
 
@@ -612,6 +580,20 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__PKGBASE_with_unknown_variable(c *ch
 			"(also in other variables in this file).")
 }
 
+// Just for branch coverage.
+func (s *Suite) Test_Buildlink3Checker_Check__no_tracing(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk")
+	t.DisableTracing()
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package/buildlink3.mk"))
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_Buildlink3Checker_checkUniquePkgbase(c *check.C) {
 	t := s.Init(c)
 
@@ -665,6 +647,25 @@ func (s *Suite) Test_Buildlink3Checker_checkUniquePkgbase(c *check.C) {
 		nil...)
 }
 
+func (s *Suite) Test_Buildlink3Checker_checkSecondParagraph__missing_mkbase(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"DISTNAME=\t# empty",
+		"PKGNAME=\t# empty, to force mkbase to be empty")
+	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	// There is no warning from buildlink3.mk about mismatched package names
+	// since that is only a follow-up error of being unable to parse the pkgbase.
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:3: As DISTNAME is not a valid package name, "+
+			"please define the PKGNAME explicitly.",
+		"WARN: ~/category/package/Makefile:4: \"\" is not a valid package name.")
+}
+
 func (s *Suite) Test_Buildlink3Checker_checkMainPart__if_else_endif(c *check.C) {
 	t := s.Init(c)
 
@@ -677,6 +678,94 @@ func (s *Suite) Test_Buildlink3Checker_checkMainPart__if_else_endif(c *check.C) 
 
 	G.Check(t.File("category/package"))
 
+	t.CheckOutputEmpty()
+}
+
+// Since the buildlink3 checker does not use MkLines.ForEach, it has to keep
+// track of the nesting depth of .if directives.
+func (s *Suite) Test_Buildlink3Checker_checkMainPart__nested_if(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.SetUpFileMkLines("category/package/buildlink3.mk",
+		MkCvsID,
+		"",
+		"BUILDLINK_TREE+=\ths-X11",
+		"",
+		".if !defined(HS_X11_BUILDLINK3_MK)",
+		"HS_X11_BUILDLINK3_MK:=",
+		"",
+		"BUILDLINK_API_DEPENDS.hs-X11+=\ths-X11>=1.6.1",
+		"BUILDLINK_ABI_DEPENDS.hs-X11+=\ths-X11>=1.6.1.2nb2",
+		"",
+		".if ${OPSYS} == NetBSD",
+		".endif",
+		"",
+		".endif\t# HS_X11_BUILDLINK3_MK",
+		"",
+		"BUILDLINK_TREE+=\t-hs-X11")
+
+	CheckLinesBuildlink3Mk(mklines)
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Buildlink3Checker_checkMainPart__comment_at_end_of_file(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.SetUpFileMkLines("category/package/buildlink3.mk",
+		MkCvsID,
+		"",
+		"BUILDLINK_TREE+=\ths-X11",
+		"",
+		".if !defined(HS_X11_BUILDLINK3_MK)",
+		"HS_X11_BUILDLINK3_MK:=",
+		"",
+		"BUILDLINK_API_DEPENDS.hs-X11+=\ths-X11>=1.6.1",
+		"BUILDLINK_ABI_DEPENDS.hs-X11+=\ths-X11>=1.6.1.2nb2",
+		"",
+		".endif\t# HS_X11_BUILDLINK3_MK",
+		"",
+		"BUILDLINK_TREE+=\t-hs-X11",
+		"",
+		"# the end")
+
+	CheckLinesBuildlink3Mk(mklines)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/buildlink3.mk:14: The file should end here.")
+}
+
+// As of October 2018, pkglint parses package dependencies a little
+// different than the pkg_* tools.
+// In all but two cases this works, this is one of the exceptions.
+// The "{totem,totem-xine}" cannot be parsed, therefore the check skipped.
+func (s *Suite) Test_Buildlink3Checker_checkVarassign__abi_api_versions_brace(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	t.CreateFileLines("multimedia/totem/Makefile")
+	mklines := t.SetUpFileMkLines("multimedia/totem/buildlink3.mk",
+		MkCvsID,
+		"",
+		"BUILDLINK_TREE+=\ttotem",
+		"",
+		".if !defined(TOTEM_BUILDLINK3_MK)",
+		"TOTEM_BUILDLINK3_MK:=",
+		"",
+		"BUILDLINK_API_DEPENDS.totem+=\t{totem,totem-xine}>=1.4.0",
+		"BUILDLINK_ABI_DEPENDS.totem+=\ttotem>=2.32.0nb46",
+		"BUILDLINK_PKGSRCDIR.totem?=\t../../multimedia/totem",
+		"",
+		".endif # TOTEM_BUILDLINK3_MK",
+		"",
+		"BUILDLINK_TREE+=\t-totem")
+
+	CheckLinesBuildlink3Mk(mklines)
+
+	// No warning about ABI "totem" and API "{totem,totem-xine}"
+	// because that case is explicitly not checked.
 	t.CheckOutputEmpty()
 }
 
@@ -816,93 +905,4 @@ func (s *Suite) Test_Buildlink3Checker_checkVarassign__other_variables(c *check.
 		"WARN: ~/category/package/buildlink3.mk:16: " +
 			"Only buildlink variables for \"package\", " +
 			"not \"other\" may be set in this file.")
-}
-
-// Just for branch coverage.
-func (s *Suite) Test_Buildlink3Checker_Check__no_tracing(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpPackage("category/package")
-	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk")
-	t.DisableTracing()
-	t.FinishSetUp()
-
-	G.Check(t.File("category/package/buildlink3.mk"))
-
-	t.CheckOutputEmpty()
-}
-
-func (s *Suite) Test_Buildlink3Checker_checkSecondParagraph__missing_mkbase(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpPackage("category/package",
-		"DISTNAME=\t# empty",
-		"PKGNAME=\t# empty, to force mkbase to be empty")
-	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk")
-	t.FinishSetUp()
-
-	G.Check(t.File("category/package"))
-
-	// There is no warning from buildlink3.mk about mismatched package names
-	// since that is only a follow-up error of being unable to parse the pkgbase.
-	t.CheckOutputLines(
-		"WARN: ~/category/package/Makefile:3: As DISTNAME is not a valid package name, "+
-			"please define the PKGNAME explicitly.",
-		"WARN: ~/category/package/Makefile:4: \"\" is not a valid package name.")
-}
-
-// Since the buildlink3 checker does not use MkLines.ForEach, it has to keep
-// track of the nesting depth of .if directives.
-func (s *Suite) Test_Buildlink3Checker_checkMainPart__nested_if(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpVartypes()
-	mklines := t.SetUpFileMkLines("category/package/buildlink3.mk",
-		MkCvsID,
-		"",
-		"BUILDLINK_TREE+=\ths-X11",
-		"",
-		".if !defined(HS_X11_BUILDLINK3_MK)",
-		"HS_X11_BUILDLINK3_MK:=",
-		"",
-		"BUILDLINK_API_DEPENDS.hs-X11+=\ths-X11>=1.6.1",
-		"BUILDLINK_ABI_DEPENDS.hs-X11+=\ths-X11>=1.6.1.2nb2",
-		"",
-		".if ${OPSYS} == NetBSD",
-		".endif",
-		"",
-		".endif\t# HS_X11_BUILDLINK3_MK",
-		"",
-		"BUILDLINK_TREE+=\t-hs-X11")
-
-	CheckLinesBuildlink3Mk(mklines)
-
-	t.CheckOutputEmpty()
-}
-
-func (s *Suite) Test_Buildlink3Checker_checkMainPart__comment_at_end_of_file(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpVartypes()
-	mklines := t.SetUpFileMkLines("category/package/buildlink3.mk",
-		MkCvsID,
-		"",
-		"BUILDLINK_TREE+=\ths-X11",
-		"",
-		".if !defined(HS_X11_BUILDLINK3_MK)",
-		"HS_X11_BUILDLINK3_MK:=",
-		"",
-		"BUILDLINK_API_DEPENDS.hs-X11+=\ths-X11>=1.6.1",
-		"BUILDLINK_ABI_DEPENDS.hs-X11+=\ths-X11>=1.6.1.2nb2",
-		"",
-		".endif\t# HS_X11_BUILDLINK3_MK",
-		"",
-		"BUILDLINK_TREE+=\t-hs-X11",
-		"",
-		"# the end")
-
-	CheckLinesBuildlink3Mk(mklines)
-
-	t.CheckOutputLines(
-		"WARN: ~/category/package/buildlink3.mk:14: The file should end here.")
 }

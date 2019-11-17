@@ -156,136 +156,6 @@ func (s *Suite) Test_CheckLinesPlist__sort_common(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_plistLineSorter_Sort(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpCommandLine("--autofix")
-	lines := t.SetUpFileLines("PLIST",
-		PlistCvsID,
-		"@comment Do not remove",
-		"A",
-		"b",
-		"CCC",
-		"lib/${UNKNOWN}.la",
-		"C",
-		"ddd",
-		"@exec echo \"after ddd\"", // Makes the PLIST unsortable
-		"sbin/program",
-		"${PLIST.one}bin/program",
-		"man/man1/program.1",
-		"${PLIST.two}bin/program2",
-		"lib/before.la",
-		"${PLIST.linux}${PLIST.x86_64}lib/lib-linux-x86_64.so", // Double condition, see graphics/graphviz
-		"lib/after.la",
-		"@exec echo \"after lib/after.la\"")
-	ck := PlistChecker{nil, nil, nil, "", Once{}, false}
-	plines := ck.NewLines(lines)
-
-	sorter1 := NewPlistLineSorter(plines)
-	t.CheckEquals(sorter1.unsortable, lines.Lines[5])
-
-	cleanedLines := append(append(lines.Lines[0:5], lines.Lines[6:8]...), lines.Lines[9:]...) // Remove ${UNKNOWN} and @exec
-
-	sorter2 := NewPlistLineSorter((&PlistChecker{nil, nil, nil, "", Once{}, false}).
-		NewLines(NewLines(lines.Filename, cleanedLines)))
-
-	c.Check(sorter2.unsortable, check.IsNil)
-
-	sorter2.Sort()
-
-	t.CheckOutputLines(
-		"AUTOFIX: ~/PLIST:3: Sorting the whole file.")
-	t.CheckFileLines("PLIST",
-		PlistCvsID,
-		"@comment Do not remove", // The header ends here
-		"A",
-		"C",
-		"CCC",
-		"b",
-		"${PLIST.one}bin/program", // Conditional lines are ignored during sorting
-		"${PLIST.two}bin/program2",
-		"ddd",
-		"lib/after.la",
-		"lib/before.la",
-		"${PLIST.linux}${PLIST.x86_64}lib/lib-linux-x86_64.so",
-		"man/man1/program.1",
-		"sbin/program",
-		"@exec echo \"after lib/after.la\"") // The footer starts here
-}
-
-func (s *Suite) Test_PlistChecker_checkLine(c *check.C) {
-	t := s.Init(c)
-
-	lines := t.NewLines("PLIST",
-		PlistCvsID,
-		"bin/program",
-		"${PLIST.var}bin/conditional-program",
-		"${PLIST.linux}${PLIST.arm}bin/arm-linux-only",
-		"${PLIST.linux}${PLIST.arm-64}@exec echo 'This is Linux/arm64'",
-		"${PLIST.ocaml-opt}share/ocaml",
-		"${PLIST.ocaml-opt}@exec echo 'This is OCaml'",
-		"${PLIST.ocaml-opt}@exec echo 'This is OCaml'",
-		"${PYSITELIB:S,lib,share}/modifiers don't work in PLISTs",
-		"${PLIST.empty}",
-		"",
-		"$prefix/bin",
-
-		// This line does not count as a PLIST condition since it has
-		// a :Q modifier, which does not work in PLISTs. Therefore the
-		// ${PLIST.man:Q} is considered part of the filename.
-		"${PLIST.man:Q}man/cat3/strlcpy.3",
-		"<<<<<<<<< merge conflict")
-
-	CheckLinesPlist(nil, lines)
-
-	t.CheckOutputLines(
-		"WARN: PLIST:3: \"bin/conditional-program\" should be sorted before \"bin/program\".",
-		"WARN: PLIST:4: \"bin/arm-linux-only\" should be sorted before \"bin/conditional-program\".",
-		"WARN: PLIST:10: PLISTs should not contain empty lines.",
-		"WARN: PLIST:11: PLISTs should not contain empty lines.",
-		"WARN: PLIST:14: Invalid line type: <<<<<<<<< merge conflict")
-}
-
-func (s *Suite) Test_PlistChecker_checkPathMan__gz(c *check.C) {
-	t := s.Init(c)
-
-	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	lines := t.NewLines("PLIST",
-		PlistCvsID,
-		"man/man3/strerror.3.gz")
-
-	CheckLinesPlist(G.Pkg, lines)
-
-	t.CheckOutputLines(
-		"NOTE: PLIST:2: The .gz extension is unnecessary for manual pages.")
-}
-
-func (s *Suite) Test_PlistChecker_checkPath__PKGMANDIR(c *check.C) {
-	t := s.Init(c)
-
-	lines := t.NewLines("PLIST",
-		PlistCvsID,
-		"${PKGMANDIR}/man1/sh.1")
-
-	CheckLinesPlist(nil, lines)
-
-	t.CheckOutputLines(
-		"NOTE: PLIST:2: PLIST files should use \"man/\" instead of \"${PKGMANDIR}\".")
-}
-
-func (s *Suite) Test_PlistChecker_checkPath__python_egg(c *check.C) {
-	t := s.Init(c)
-
-	lines := t.NewLines("PLIST",
-		PlistCvsID,
-		"${PYSITELIB}/gdspy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO")
-
-	CheckLinesPlist(nil, lines)
-
-	t.CheckOutputLines(
-		"WARN: PLIST:2: Include \"../../lang/python/egg.mk\" instead of listing .egg-info files directly.")
-}
-
 func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 	t := s.Init(c)
 
@@ -473,59 +343,6 @@ func (s *Suite) Test_PlistChecker__invalid_line_type(c *check.C) {
 		"WARN: ~/PLIST:6: Invalid line type: >>>>>>>> merge conflict")
 }
 
-func (s *Suite) Test_PlistChecker_checkPathNonAscii(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpCommandLine("-Wall", "--explain")
-	lines := t.NewLines("PLIST",
-		PlistCvsID,
-
-		"dir1/fr\xFCher", // German, "back then", encoded in ISO 8859-1
-
-		// Subsequent non-ASCII filenames do not generate further messages
-		// since these filenames typically appear in groups, and issuing
-		// too many warnings quickly gets boring.
-		"dir1/\u00C4thernetz", // German
-
-		// This ASCII-only pathname enables the check again.
-		"dir2/aaa",
-		"dir2/\u0633\u0644\u0627\u0645", // Arabic: salaam
-
-		"dir2/\uC548\uB148", // Korean: annyeong
-
-		// This ASCII-only pathname enables the check again.
-		"dir3/ascii-only",
-
-		// Any comment suppresses the check for the next contiguous
-		// sequence of non-ASCII filenames.
-		"@comment The next file is non-ASCII on purpose.",
-		"dir3/\U0001F603", // Smiling face with open mouth
-
-		// This ASCII-only pathname enables the check again.
-		"sbin/iconv",
-
-		"sbin/\U0001F603", // Smiling face with open mouth
-	)
-
-	CheckLinesPlist(nil, lines)
-
-	t.CheckOutputLines(
-		"WARN: PLIST:2: Non-ASCII filename \"dir1/fr<0xFC>her\".",
-		"",
-		"\tThe great majority of filenames installed by pkgsrc packages are",
-		"\tASCII-only. Filenames containing non-ASCII characters can cause",
-		"\tvarious problems since their name may already be different when",
-		"\tanother character encoding is set in the locale.",
-		"",
-		"\tTo mark a filename as intentionally non-ASCII, insert a PLIST",
-		"\t@comment with a convincing reason directly above this line. That",
-		"\tcomment will allow this line and the lines directly below it to",
-		"\tcontain non-ASCII filenames.",
-		"",
-		"WARN: PLIST:5: Non-ASCII filename \"dir2/<U+0633><U+0644><U+0627><U+0645>\".",
-		"WARN: PLIST:11: Non-ASCII filename \"sbin/<U+1F603>\".")
-}
-
 func (s *Suite) Test_PlistChecker__doc(c *check.C) {
 	t := s.Init(c)
 
@@ -583,6 +400,65 @@ func (s *Suite) Test_PlistChecker__PKGLOCALEDIR_without_package(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_PlistChecker_checkLine(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("PLIST",
+		PlistCvsID,
+		"bin/program",
+		"${PLIST.var}bin/conditional-program",
+		"${PLIST.linux}${PLIST.arm}bin/arm-linux-only",
+		"${PLIST.linux}${PLIST.arm-64}@exec echo 'This is Linux/arm64'",
+		"${PLIST.ocaml-opt}share/ocaml",
+		"${PLIST.ocaml-opt}@exec echo 'This is OCaml'",
+		"${PLIST.ocaml-opt}@exec echo 'This is OCaml'",
+		"${PYSITELIB:S,lib,share}/modifiers don't work in PLISTs",
+		"${PLIST.empty}",
+		"",
+		"$prefix/bin",
+
+		// This line does not count as a PLIST condition since it has
+		// a :Q modifier, which does not work in PLISTs. Therefore the
+		// ${PLIST.man:Q} is considered part of the filename.
+		"${PLIST.man:Q}man/cat3/strlcpy.3",
+		"<<<<<<<<< merge conflict")
+
+	CheckLinesPlist(nil, lines)
+
+	t.CheckOutputLines(
+		"WARN: PLIST:3: \"bin/conditional-program\" should be sorted before \"bin/program\".",
+		"WARN: PLIST:4: \"bin/arm-linux-only\" should be sorted before \"bin/conditional-program\".",
+		"WARN: PLIST:10: PLISTs should not contain empty lines.",
+		"WARN: PLIST:11: PLISTs should not contain empty lines.",
+		"WARN: PLIST:14: Invalid line type: <<<<<<<<< merge conflict")
+}
+
+func (s *Suite) Test_PlistChecker_checkPath__PKGMANDIR(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("PLIST",
+		PlistCvsID,
+		"${PKGMANDIR}/man1/sh.1")
+
+	CheckLinesPlist(nil, lines)
+
+	t.CheckOutputLines(
+		"NOTE: PLIST:2: PLIST files should use \"man/\" instead of \"${PKGMANDIR}\".")
+}
+
+func (s *Suite) Test_PlistChecker_checkPath__python_egg(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("PLIST",
+		PlistCvsID,
+		"${PYSITELIB}/gdspy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO")
+
+	CheckLinesPlist(nil, lines)
+
+	t.CheckOutputLines(
+		"WARN: PLIST:2: Include \"../../lang/python/egg.mk\" instead of listing .egg-info files directly.")
+}
+
 func (s *Suite) Test_PlistChecker_checkPath__unwanted_entries(c *check.C) {
 	t := s.Init(c)
 
@@ -598,6 +474,59 @@ func (s *Suite) Test_PlistChecker_checkPath__unwanted_entries(c *check.C) {
 		"WARN: ~/PLIST:2: The perllocal.pod file should not be in the PLIST.",
 		"WARN: ~/PLIST:3: CVS files should not be in the PLIST.",
 		"WARN: ~/PLIST:4: .orig files should not be in the PLIST.")
+}
+
+func (s *Suite) Test_PlistChecker_checkPathNonAscii(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain")
+	lines := t.NewLines("PLIST",
+		PlistCvsID,
+
+		"dir1/fr\xFCher", // German, "back then", encoded in ISO 8859-1
+
+		// Subsequent non-ASCII filenames do not generate further messages
+		// since these filenames typically appear in groups, and issuing
+		// too many warnings quickly gets boring.
+		"dir1/\u00C4thernetz", // German
+
+		// This ASCII-only pathname enables the check again.
+		"dir2/aaa",
+		"dir2/\u0633\u0644\u0627\u0645", // Arabic: salaam
+
+		"dir2/\uC548\uB148", // Korean: annyeong
+
+		// This ASCII-only pathname enables the check again.
+		"dir3/ascii-only",
+
+		// Any comment suppresses the check for the next contiguous
+		// sequence of non-ASCII filenames.
+		"@comment The next file is non-ASCII on purpose.",
+		"dir3/\U0001F603", // Smiling face with open mouth
+
+		// This ASCII-only pathname enables the check again.
+		"sbin/iconv",
+
+		"sbin/\U0001F603", // Smiling face with open mouth
+	)
+
+	CheckLinesPlist(nil, lines)
+
+	t.CheckOutputLines(
+		"WARN: PLIST:2: Non-ASCII filename \"dir1/fr<0xFC>her\".",
+		"",
+		"\tThe great majority of filenames installed by pkgsrc packages are",
+		"\tASCII-only. Filenames containing non-ASCII characters can cause",
+		"\tvarious problems since their name may already be different when",
+		"\tanother character encoding is set in the locale.",
+		"",
+		"\tTo mark a filename as intentionally non-ASCII, insert a PLIST",
+		"\t@comment with a convincing reason directly above this line. That",
+		"\tcomment will allow this line and the lines directly below it to",
+		"\tcontain non-ASCII filenames.",
+		"",
+		"WARN: PLIST:5: Non-ASCII filename \"dir2/<U+0633><U+0644><U+0627><U+0645>\".",
+		"WARN: PLIST:11: Non-ASCII filename \"sbin/<U+1F603>\".")
 }
 
 func (s *Suite) Test_PlistChecker_checkPathInfo(c *check.C) {
@@ -714,6 +643,20 @@ func (s *Suite) Test_PlistChecker_checkPathMan(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/PLIST:4: Mismatch between the section (1) and extension (8) of the manual page.",
 		"WARN: ~/PLIST:5: Unknown section \"x\" for manual page.")
+}
+
+func (s *Suite) Test_PlistChecker_checkPathMan__gz(c *check.C) {
+	t := s.Init(c)
+
+	G.Pkg = NewPackage(t.File("category/pkgbase"))
+	lines := t.NewLines("PLIST",
+		PlistCvsID,
+		"man/man3/strerror.3.gz")
+
+	CheckLinesPlist(G.Pkg, lines)
+
+	t.CheckOutputLines(
+		"NOTE: PLIST:2: The .gz extension is unnecessary for manual pages.")
 }
 
 func (s *Suite) Test_PlistChecker_checkPathShare(c *check.C) {
@@ -879,18 +822,6 @@ func (s *Suite) Test_PlistLine_CheckDirective(c *check.C) {
 		"WARN: ~/PLIST:13: Unknown PLIST directive \"@unknown\".")
 }
 
-func (s *Suite) Test_NewPlistLineSorter__only_comments(c *check.C) {
-	t := s.Init(c)
-
-	lines := t.NewLines("PLIST",
-		PlistCvsID,
-		"@comment intentionally left empty")
-
-	CheckLinesPlist(nil, lines)
-
-	t.CheckOutputEmpty()
-}
-
 func (s *Suite) Test_plistLineSorter__unsortable(c *check.C) {
 	t := s.Init(c)
 
@@ -912,4 +843,73 @@ func (s *Suite) Test_plistLineSorter__unsortable(c *check.C) {
 		"TRACE: 1 + SaveAutofixChanges()",
 		"TRACE: 1 - SaveAutofixChanges()",
 		"TRACE: - CheckLinesPlist(\"~/PLIST\")")
+}
+
+func (s *Suite) Test_NewPlistLineSorter__only_comments(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("PLIST",
+		PlistCvsID,
+		"@comment intentionally left empty")
+
+	CheckLinesPlist(nil, lines)
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_plistLineSorter_Sort(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--autofix")
+	lines := t.SetUpFileLines("PLIST",
+		PlistCvsID,
+		"@comment Do not remove",
+		"A",
+		"b",
+		"CCC",
+		"lib/${UNKNOWN}.la",
+		"C",
+		"ddd",
+		"@exec echo \"after ddd\"", // Makes the PLIST unsortable
+		"sbin/program",
+		"${PLIST.one}bin/program",
+		"man/man1/program.1",
+		"${PLIST.two}bin/program2",
+		"lib/before.la",
+		"${PLIST.linux}${PLIST.x86_64}lib/lib-linux-x86_64.so", // Double condition, see graphics/graphviz
+		"lib/after.la",
+		"@exec echo \"after lib/after.la\"")
+	ck := PlistChecker{nil, nil, nil, "", Once{}, false}
+	plines := ck.NewLines(lines)
+
+	sorter1 := NewPlistLineSorter(plines)
+	t.CheckEquals(sorter1.unsortable, lines.Lines[5])
+
+	cleanedLines := append(append(lines.Lines[0:5], lines.Lines[6:8]...), lines.Lines[9:]...) // Remove ${UNKNOWN} and @exec
+
+	sorter2 := NewPlistLineSorter((&PlistChecker{nil, nil, nil, "", Once{}, false}).
+		NewLines(NewLines(lines.Filename, cleanedLines)))
+
+	c.Check(sorter2.unsortable, check.IsNil)
+
+	sorter2.Sort()
+
+	t.CheckOutputLines(
+		"AUTOFIX: ~/PLIST:3: Sorting the whole file.")
+	t.CheckFileLines("PLIST",
+		PlistCvsID,
+		"@comment Do not remove", // The header ends here
+		"A",
+		"C",
+		"CCC",
+		"b",
+		"${PLIST.one}bin/program", // Conditional lines are ignored during sorting
+		"${PLIST.two}bin/program2",
+		"ddd",
+		"lib/after.la",
+		"lib/before.la",
+		"${PLIST.linux}${PLIST.x86_64}lib/lib-linux-x86_64.so",
+		"man/man1/program.1",
+		"sbin/program",
+		"@exec echo \"after lib/after.la\"") // The footer starts here
 }

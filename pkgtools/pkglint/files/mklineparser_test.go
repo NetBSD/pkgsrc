@@ -60,7 +60,8 @@ func (s *Suite) Test_MkLineParser_Parse__comment_or_not(c *check.C) {
 	// From shells/zsh/Makefile.common, rev. 1.78
 	mklineCommandUnescaped := t.NewMkLine("filename.mk", 1, "\t# $ sha1 patches/patch-ac")
 
-	t.CheckEquals(mklineCommandUnescaped.ShellCommand(), "# $ sha1 patches/patch-ac")
+	t.CheckEquals(mklineCommandUnescaped.IsComment(), true)
+	t.CheckEquals(mklineCommandUnescaped.Comment(), " $ sha1 patches/patch-ac")
 	t.CheckOutputEmpty() // No warning about parsing the lonely dollar sign.
 
 	mklineVarassignUnescaped := t.NewMkLine("filename.mk", 1, "SED_CMD=\t's,#,hash,'")
@@ -85,6 +86,7 @@ func (s *Suite) Test_MkLineParser_Parse__commented_lines(c *check.C) {
 	test(".include \"other.mk\" # the comment")
 	test(".include <other.mk> # the comment")
 	test("target: source # the comment")
+	test("\t\t# the comment")
 }
 
 func (s *Suite) Test_MkLineParser_parseVarassign(c *check.C) {
