@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2019/11/02 20:06:58 maya Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/17 06:38:54 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,7 +19,7 @@ DEPENDS+=	kde-wallpapers4-15.08.3{,nb[0-9]*}:../../misc/kde-wallpapers4
 DEPENDS+=	kde-baseapps4-15.12.0{,nb[0-9]*}:../../x11/kde-baseapps4
 DEPENDS+=	konsole-4.14.3{,nb[0-9]*}:../../x11/konsole
 DEPENDS+=	kaccessible-16.12.0{,nb[0-9]*}:../../misc/kaccessible
-DEPENDS+=	kmag-16.12.0{,nb[0-9]*}:../../misc/kmag
+DEPENDS+=	kmag>=16.12.0{,nb[0-9]*}:../../misc/kmag
 DEPENDS+=	kmouth-4.14.3{,nb[0-9]*}:../../misc/kmouth
 DEPENDS+=	kmousetool-16.12.0{,nb[0-9]*}:../../misc/kmousetool
 DEPENDS+=	ksystemlog-4.14.3{,nb[0-9]*}:../../sysutils/ksystemlog
@@ -85,23 +85,23 @@ DEPENDS+=	kubrick-4.14.3{,nb[0-9]*}:../../games/kubrick
 DEPENDS+=	lskat-4.14.3{,nb[0-9]*}:../../games/lskat
 DEPENDS+=	palapeli-4.14.3{,nb[0-9]*}:../../games/palapeli
 DEPENDS+=	picmi-4.14.3{,nb[0-9]*}:../../games/picmi
-DEPENDS+=	kamera-4.14.3{,nb[0-9]*}:../../graphics/kamera
+DEPENDS+=	kamera>=4.14.3{,nb[0-9]*}:../../graphics/kamera
 DEPENDS+=	kde-base-artwork-15.08.3{,nb[0-9]*}:../../graphics/kde-base-artwork
-DEPENDS+=	gwenview-4.14.3{,nb[0-9]*}:../../graphics/gwenview
+DEPENDS+=	gwenview>=4.14.3{,nb[0-9]*}:../../graphics/gwenview
 DEPENDS+=	ksaneplugin-16.12.0{,nb[0-9]*}:../../graphics/ksaneplugin
 DEPENDS+=	ksnapshot-15.08.3{,nb[0-9]*}:../../graphics/ksnapshot
-DEPENDS+=	kcolorchooser-15.12.0{,nb[0-9]*}:../../graphics/kcolorchooser
+DEPENDS+=	kcolorchooser>=15.12.0{,nb[0-9]*}:../../graphics/kcolorchooser
 DEPENDS+=	kgamma-4.14.3{,nb[0-9]*}:../../graphics/kgamma
-DEPENDS+=	kruler-4.14.3{,nb[0-9]*}:../../graphics/kruler
-DEPENDS+=	kolourpaint-16.04.0{,nb[0-9]*}:../../graphics/kolourpaint
-DEPENDS+=	kdegraphics-mobipocket-16.08.0{,nb[0-9]*}:../../graphics/kdegraphics-mobipocket
+DEPENDS+=	kruler>=4.14.3{,nb[0-9]*}:../../graphics/kruler
+DEPENDS+=	kolourpaint>=16.04.0{,nb[0-9]*}:../../graphics/kolourpaint
+DEPENDS+=	kdegraphics-mobipocket>=16.08.0{,nb[0-9]*}:../../graphics/kdegraphics-mobipocket
 DEPENDS+=	kdegraphics-strigi-analyzer-16.04.0{,nb[0-9]*}:../../graphics/kdegraphics-strigi-analyzer
-DEPENDS+=	kdegraphics-thumbnailers-4.14.3{,nb[0-9]*}:../../graphics/kdegraphics-thumbnailers
-DEPENDS+=	svgpart-16.08.0{,nb[0-9]*}:../../graphics/svgpart
+DEPENDS+=	kdegraphics-thumbnailers>=4.14.3{,nb[0-9]*}:../../graphics/kdegraphics-thumbnailers
+DEPENDS+=	svgpart>=16.08.0{,nb[0-9]*}:../../graphics/svgpart
 DEPENDS+=	audiocd-kio-16.08.0{,nb[0-9]*}:../../multimedia/audiocd-kio
-DEPENDS+=	dragon-4.14.3{,nb[0-9]*}:../../multimedia/dragon
+DEPENDS+=	dragon>=4.14.3{,nb[0-9]*}:../../multimedia/dragon
 DEPENDS+=	ffmpegthumbs-4.14.3{,nb[0-9]*}:../../multimedia/ffmpegthumbs
-DEPENDS+=	juk-4.14.3{,nb[0-9]*}:../../multimedia/juk
+DEPENDS+=	juk>=4.14.3{,nb[0-9]*}:../../multimedia/juk
 DEPENDS+=	kmix-4.14.3{,nb[0-9]*}:../../multimedia/kmix
 DEPENDS+=	kscd-4.14.3{,nb[0-9]*}:../../multimedia/kscd
 DEPENDS+=	mplayerthumbs-16.04.0{,nb[0-9]*}:../../multimedia/mplayerthumbs
@@ -130,18 +130,18 @@ DEPENDS+=	lokalize-4.14.3{,nb[0-9]*}:../../devel/lokalize
 DEPENDS+=	okteta-4.14.3{,nb[0-9]*}:../../devel/okteta
 DEPENDS+=	poxml-4.14.3{,nb[0-9]*}:../../devel/poxml
 DEPENDS+=	umbrello-4.14.3{,nb[0-9]*}:../../devel/umbrello
-DEPENDS+=	kate-4.14.3{,nb[0-9]*}:../../editors/kate
+DEPENDS+=	kate>=4.14.3{,nb[0-9]*}:../../editors/kate
 DEPENDS+=	amor-15.08.3{,nb[0-9]*}:../../games/amor
 DEPENDS+=	kteatime-4.14.3{,nb[0-9]*}:../../misc/kteatime
 DEPENDS+=	ktux-15.08.3{,nb[0-9]*}:../../misc/ktux
-DEPENDS+=	ark-4.14.3{,nb[0-9]*}:../../archivers/ark
-DEPENDS+=	filelight-4.14.3{,nb[0-9]*}:../../sysutils/filelight
-DEPENDS+=	kcalc-4.14.3{,nb[0-9]*}:../../math/kcalc
-DEPENDS+=	kcharselect-4.14.3{,nb[0-9]*}:../../misc/kcharselect
-DEPENDS+=	kdf-16.04.0{,nb[0-9]*}:../../sysutils/kdf
+DEPENDS+=	ark>=4.14.3{,nb[0-9]*}:../../archivers/ark
+DEPENDS+=	filelight>=4.14.3{,nb[0-9]*}:../../sysutils/filelight
+DEPENDS+=	kcalc>=4.14.3{,nb[0-9]*}:../../math/kcalc
+DEPENDS+=	kcharselect>=4.14.3{,nb[0-9]*}:../../misc/kcharselect
+DEPENDS+=	kdf>=16.04.0{,nb[0-9]*}:../../sysutils/kdf
 DEPENDS+=	kfloppy-4.14.3{,nb[0-9]*}:../../sysutils/kfloppy
 DEPENDS+=	kremotecontrol-16.12.0{,nb[0-9]*}:../../misc/kremotecontrol
-DEPENDS+=	ktimer-4.14.3{,nb[0-9]*}:../../time/ktimer
+DEPENDS+=	ktimer>=4.14.3{,nb[0-9]*}:../../time/ktimer
 DEPENDS+=	kwalletmanager-4.14.3{,nb[0-9]*}:../../security/kwalletmanager
 DEPENDS+=	kgpg-16.08.0{,nb[0-9]*}:../../security/kgpg
 DEPENDS+=	superkaramba-15.08.3{,nb[0-9]*}:../../misc/superkaramba
