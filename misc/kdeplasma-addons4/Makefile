@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2019/08/22 12:23:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.79 2019/11/17 02:21:32 markd Exp $
 
 DISTNAME=	kdeplasma-addons-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	misc
 COMMENT=	Plasmoids
 
@@ -16,7 +16,7 @@ CMAKE_ARGS+=	-D BUILD_ibus:BOOL=OFF
 
 .include "../../devel/qjson/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/libkexiv2/buildlink3.mk"
+.include "../../graphics/libkexiv2-kde4/buildlink3.mk"
 BUILDLINK_API_DEPENDS.eigen2+=	eigen2>=2.0.3
 .include "../../math/eigen2/buildlink3.mk"
 .include "../../math/qalculate/buildlink3.mk"
