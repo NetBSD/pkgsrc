@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.44 2019/08/22 12:23:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/17 03:07:33 markd Exp $
 
-DISTNAME=	kdegraphics-mobipocket-16.08.0
-PKGREVISION=	9
+DISTNAME=	kdegraphics-mobipocket-${KAPPSVER}
 CATEGORIES=	graphics
+
+HOMEPAGE=	https://kde.org/applications/graphics/
 COMMENT=	Library to support mobipocket ebooks
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.08.0/src/}
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
-
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../devel/kio/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
