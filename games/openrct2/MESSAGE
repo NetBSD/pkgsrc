@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/11/17 16:19:57 nia Exp $
+
+After starting OpenRCT2 it will ask you to set `game_path` to an installed
+game's data files in ~/.config/OpenRCT2/config.ini
+
+The data files can be extracted from the data1.cab and data2.cab files on
+the original installation media with `unshield`. This will create a
+directory called `Minimum` containing the game data. `game_path` should be
+set to the full path of `Minimum`.
+
+If you have the DRM-free digital version instead of the physical version,
+`innoextract` can be used to extract the data files from it. They are
+located in the root of the `app` directory. `game_path` should be set to
+the full path of the `app` directory.
+
+===========================================================================
