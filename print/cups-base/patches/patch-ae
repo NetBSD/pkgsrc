@@ -1,11 +1,11 @@
-$NetBSD: patch-ae,v 1.1 2017/11/12 14:10:15 khorben Exp $
+$NetBSD: patch-ae,v 1.2 2019/11/17 21:22:03 leot Exp $
 
 - Do not pass `-z' option to install(1)
 - Honor optimization flags.
 
---- Makedefs.in.orig	2017-10-13 18:22:26.000000000 +0000
+--- Makedefs.in.orig	2019-08-23 15:19:38.000000000 +0000
 +++ Makedefs.in
-@@ -49,7 +49,7 @@ SHELL		=	/bin/sh
+@@ -46,7 +46,7 @@ SHELL		=	/bin/sh
  #
  
  INSTALL_BIN	=	@LIBTOOL_INSTALL@ $(INSTALL) -c -m @CUPS_EXE_FILE_PERM@ @INSTALL_STRIP@
@@ -14,12 +14,12 @@ $NetBSD: patch-ae,v 1.1 2017/11/12 14:10:15 khorben Exp $
  INSTALL_CONFIG	=	$(INSTALL) -c -m @CUPS_CONFIG_FILE_PERM@
  INSTALL_DATA	=	$(INSTALL) -c -m 444
  INSTALL_DIR	=	$(INSTALL) -d
-@@ -151,7 +151,7 @@ CXXLIBS		=	@CXXLIBS@
+@@ -167,7 +167,7 @@ CXXLIBS		=	@CXXLIBS@
  DBUS_NOTIFIER	=	@DBUS_NOTIFIER@
  DBUS_NOTIFIERLIBS =	@DBUS_NOTIFIERLIBS@
  DNSSD_BACKEND	=	@DNSSD_BACKEND@
--DSOFLAGS	=	-L../cups @DSOFLAGS@
+-DSOFLAGS	=	@DSOFLAGS@
 +DSOFLAGS	=	-L../cups @DSOFLAGS@ $(OPTIM)
- DSOLIBS		=	@DSOLIBS@ $(COMMONLIBS)
  DNSSDLIBS	=	@DNSSDLIBS@
  IPPFIND_BIN	=	@IPPFIND_BIN@
+ IPPFIND_MAN	=	@IPPFIND_MAN@
