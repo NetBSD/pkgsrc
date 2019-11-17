@@ -4,6 +4,34 @@ import (
 	"gopkg.in/check.v1"
 )
 
+func (s *Suite) Test_ACLPermissions_Contains(c *check.C) {
+	t := s.Init(c)
+
+	perms := aclpAllRuntime
+
+	t.CheckEquals(perms.Contains(aclpAllRuntime), true)
+	t.CheckEquals(perms.Contains(aclpUse), true)
+	t.CheckEquals(perms.Contains(aclpUseLoadtime), false)
+}
+
+func (s *Suite) Test_ACLPermissions_String(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(ACLPermissions(0).String(), "none")
+	t.CheckEquals(aclpAll.String(), "set, set-default, append, use-loadtime, use")
+}
+
+func (s *Suite) Test_ACLPermissions_HumanString(c *check.C) {
+	t := s.Init(c)
+
+	// Doesn't happen in practice
+	t.CheckEquals(ACLPermissions(0).HumanString(), "")
+
+	t.CheckEquals(
+		aclpAll.HumanString(),
+		"set, given a default value, appended to, used at load time, or used")
+}
+
 func (s *Suite) Test_Vartype_EffectivePermissions(c *check.C) {
 	t := s.Init(c)
 
@@ -117,6 +145,16 @@ func (s *Suite) Test_Vartype_AlternativeFiles(c *check.C) {
 		"builtin.mk, but not buildlink3.mk, Makefile or *.mk")
 }
 
+func (s *Suite) Test_Vartype_MayBeAppendedTo(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	t.CheckEquals(G.Pkgsrc.VariableType(nil, "COMMENT").MayBeAppendedTo(), true)
+	t.CheckEquals(G.Pkgsrc.VariableType(nil, "DEPENDS").MayBeAppendedTo(), true)
+	t.CheckEquals(G.Pkgsrc.VariableType(nil, "PKG_FAIL_REASON").MayBeAppendedTo(), true)
+	t.CheckEquals(G.Pkgsrc.VariableType(nil, "CONF_FILES").MayBeAppendedTo(), true)
+}
 func (s *Suite) Test_Vartype_String(c *check.C) {
 	t := s.Init(c)
 
@@ -139,43 +177,4 @@ func (s *Suite) Test_BasicType_HasEnum(c *check.C) {
 	t.CheckEquals(vc.HasEnum("mid"), false)
 	t.CheckEquals(vc.HasEnum("nd"), false)
 	t.CheckEquals(vc.HasEnum("start middle"), false)
-}
-
-func (s *Suite) Test_ACLPermissions_Contains(c *check.C) {
-	t := s.Init(c)
-
-	perms := aclpAllRuntime
-
-	t.CheckEquals(perms.Contains(aclpAllRuntime), true)
-	t.CheckEquals(perms.Contains(aclpUse), true)
-	t.CheckEquals(perms.Contains(aclpUseLoadtime), false)
-}
-
-func (s *Suite) Test_ACLPermissions_String(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(ACLPermissions(0).String(), "none")
-	t.CheckEquals(aclpAll.String(), "set, set-default, append, use-loadtime, use")
-}
-
-func (s *Suite) Test_ACLPermissions_HumanString(c *check.C) {
-	t := s.Init(c)
-
-	// Doesn't happen in practice
-	t.CheckEquals(ACLPermissions(0).HumanString(), "")
-
-	t.CheckEquals(
-		aclpAll.HumanString(),
-		"set, given a default value, appended to, used at load time, or used")
-}
-
-func (s *Suite) Test_Vartype_MayBeAppendedTo(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpVartypes()
-
-	t.CheckEquals(G.Pkgsrc.VariableType(nil, "COMMENT").MayBeAppendedTo(), true)
-	t.CheckEquals(G.Pkgsrc.VariableType(nil, "DEPENDS").MayBeAppendedTo(), true)
-	t.CheckEquals(G.Pkgsrc.VariableType(nil, "PKG_FAIL_REASON").MayBeAppendedTo(), true)
-	t.CheckEquals(G.Pkgsrc.VariableType(nil, "CONF_FILES").MayBeAppendedTo(), true)
 }

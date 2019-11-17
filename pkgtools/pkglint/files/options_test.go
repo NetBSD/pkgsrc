@@ -2,6 +2,66 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
+func (s *Suite) Test_CheckLinesOptionsMk__autofix(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("opt", "")
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"")
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\t# none",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if 0",
+		".if 0",
+		".endif",
+		".endif")
+	t.FinishSetUp()
+	t.Chdir("category/package")
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"NOTE: options.mk:9: This directive should be indented by 2 spaces.",
+		"NOTE: options.mk:10: This directive should be indented by 2 spaces.")
+
+	t.SetUpCommandLine("-Wall", "--show-autofix")
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"NOTE: options.mk:9: This directive should be indented by 2 spaces.",
+		"AUTOFIX: options.mk:9: Replacing \".\" with \".  \".",
+		"NOTE: options.mk:10: This directive should be indented by 2 spaces.",
+		"AUTOFIX: options.mk:10: Replacing \".\" with \".  \".")
+
+	t.SetUpCommandLine("-Wall", "--autofix")
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"AUTOFIX: options.mk:9: Replacing \".\" with \".  \".",
+		"AUTOFIX: options.mk:10: Replacing \".\" with \".  \".")
+
+	t.CheckFileLinesDetab("options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=        PKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=  # none",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if 0",
+		".  if 0",
+		".  endif",
+		".endif")
+}
+
 func (s *Suite) Test_CheckLinesOptionsMk__literal(c *check.C) {
 	t := s.Init(c)
 
@@ -361,96 +421,6 @@ func (s *Suite) Test_CheckLinesOptionsMk__PLIST_VARS_based_on_PKG_SUPPORTED_OPTI
 		"WARN: options.mk:5: Option \"two\" should be handled below in an .if block.")
 }
 
-// Up to April 2019, pkglint logged a wrong note saying that OTHER_VARIABLE
-// should have the positive branch first. That note was only ever intended
-// for PKG_OPTIONS.
-func (s *Suite) Test_OptionsLinesChecker_handleLowerCondition__foreign_variable(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpOption("opt", "")
-	t.CreateFileLines("mk/bsd.options.mk")
-	t.SetUpPackage("category/package",
-		".include \"options.mk\"")
-	t.CreateFileLines("category/package/options.mk",
-		MkCvsID,
-		"",
-		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
-		"PKG_SUPPORTED_OPTIONS=\topt",
-		"",
-		".include \"../../mk/bsd.options.mk\"",
-		"",
-		".if empty(OTHER_VARIABLE)",
-		".else",
-		".endif")
-	t.FinishSetUp()
-
-	G.Check(t.File("category/package"))
-
-	t.CheckOutputLines(
-		"WARN: ~/category/package/options.mk:8: OTHER_VARIABLE is used but not defined.",
-		"WARN: ~/category/package/options.mk:4: Option \"opt\" should be handled below in an .if block.")
-}
-
-func (s *Suite) Test_CheckLinesOptionsMk__autofix(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpOption("opt", "")
-	t.CreateFileLines("mk/bsd.options.mk")
-	t.SetUpPackage("category/package",
-		".include \"options.mk\"")
-	t.CreateFileLines("category/package/options.mk",
-		MkCvsID,
-		"",
-		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
-		"PKG_SUPPORTED_OPTIONS=\t# none",
-		"",
-		".include \"../../mk/bsd.options.mk\"",
-		"",
-		".if 0",
-		".if 0",
-		".endif",
-		".endif")
-	t.FinishSetUp()
-	t.Chdir("category/package")
-
-	G.Check(".")
-
-	t.CheckOutputLines(
-		"NOTE: options.mk:9: This directive should be indented by 2 spaces.",
-		"NOTE: options.mk:10: This directive should be indented by 2 spaces.")
-
-	t.SetUpCommandLine("-Wall", "--show-autofix")
-
-	G.Check(".")
-
-	t.CheckOutputLines(
-		"NOTE: options.mk:9: This directive should be indented by 2 spaces.",
-		"AUTOFIX: options.mk:9: Replacing \".\" with \".  \".",
-		"NOTE: options.mk:10: This directive should be indented by 2 spaces.",
-		"AUTOFIX: options.mk:10: Replacing \".\" with \".  \".")
-
-	t.SetUpCommandLine("-Wall", "--autofix")
-
-	G.Check(".")
-
-	t.CheckOutputLines(
-		"AUTOFIX: options.mk:9: Replacing \".\" with \".  \".",
-		"AUTOFIX: options.mk:10: Replacing \".\" with \".  \".")
-
-	t.CheckFileLinesDetab("options.mk",
-		MkCvsID,
-		"",
-		"PKG_OPTIONS_VAR=        PKG_OPTIONS.package",
-		"PKG_SUPPORTED_OPTIONS=  # none",
-		"",
-		".include \"../../mk/bsd.options.mk\"",
-		"",
-		".if 0",
-		".  if 0",
-		".  endif",
-		".endif")
-}
-
 // A few packages (such as www/w3m) define several options that are
 // handled by a single .if block in the lower part.
 func (s *Suite) Test_CheckLinesOptionsMk__combined_option_handling(c *check.C) {
@@ -699,4 +669,34 @@ func (s *Suite) Test_CheckLinesOptionsMk__supported_but_not_checked(c *check.C) 
 	// the option is indeed handled. Because of this uncertainty, pkglint
 	// does not issue any warnings about possibly unhandled options at all.
 	t.CheckOutputEmpty()
+}
+
+// Up to April 2019, pkglint logged a wrong note saying that OTHER_VARIABLE
+// should have the positive branch first. That note was only ever intended
+// for PKG_OPTIONS.
+func (s *Suite) Test_OptionsLinesChecker_handleLowerCondition__foreign_variable(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("opt", "")
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"")
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\topt",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if empty(OTHER_VARIABLE)",
+		".else",
+		".endif")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/options.mk:8: OTHER_VARIABLE is used but not defined.",
+		"WARN: ~/category/package/options.mk:4: Option \"opt\" should be handled below in an .if block.")
 }
