@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4997 2019/11/17 17:57:10 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4998 2019/11/17 21:22:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8022,3 +8022,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/openrct2 version 0.2.4 [nia 2019-11-17]
 	Updated www/cliqz to 1.30.0 [fox 2019-11-17]
 	Added games/iortcw version 1.51c [nia 2019-11-17]
+	Updated print/cups-base to 2.3.0 [leot 2019-11-17]
