@@ -1,9 +1,9 @@
-$NetBSD: patch-scheduler-conf.c,v 1.1 2017/11/12 14:10:15 khorben Exp $
+$NetBSD: patch-scheduler-conf.c,v 1.2 2019/11/17 21:22:03 leot Exp $
 
 Add a PidFile configuration directive to write a PID file.
 
---- scheduler/conf.c.orig	2017-03-28 20:26:53.000000000 +0200
-+++ scheduler/conf.c	2017-07-17 18:04:23.000000000 +0200
+--- scheduler/conf.c.orig	2019-11-17 12:21:47.927540703 +0000
++++ scheduler/conf.c
 @@ -142,6 +142,7 @@ static const cupsd_var_t	cupsfiles_vars[
    { "CreateSelfSignedCerts",	&CreateSelfSignedCerts,	CUPSD_VARTYPE_BOOLEAN },
  #endif /* HAVE_SSL */
@@ -20,7 +20,7 @@ Add a PidFile configuration directive to write a PID file.
    cupsdSetString(&DocumentRoot, CUPS_DOCROOT);
    cupsdSetString(&AccessLog, CUPS_LOGDIR "/access_log");
    cupsdClearString(&ErrorLog);
-@@ -3402,6 +3404,7 @@ read_cupsd_conf(cups_file_t *fp)	/* I - 
+@@ -3375,6 +3377,7 @@ read_cupsd_conf(cups_file_t *fp)	/* I - 
               !_cups_strcasecmp(line, "CacheDir") ||
               !_cups_strcasecmp(line, "ConfigFilePerm") ||
               !_cups_strcasecmp(line, "DataDir") ||

@@ -1,4 +1,4 @@
-$NetBSD: patch-airprint-scheduler_conf.c,v 1.1 2018/07/24 12:19:21 bouyer Exp $
+$NetBSD: patch-airprint-scheduler_conf.c,v 1.2 2019/11/17 21:22:03 leot Exp $
 
 From bbc3507a260d29db3fc5601826f33c10f9dccd1e Mon Sep 17 00:00:00 2001
 From: Till Kamppeter <till.kamppeter@gmail.com>
@@ -31,6 +31,6 @@ index 9c1be7089..52f2a6d35 100644
  #if defined(HAVE_DNSSD) || defined(HAVE_AVAHI)
 -  cupsdSetString(&DNSSDSubTypes, "_cups,_print");
 +  cupsdSetString(&DNSSDSubTypes, "_cups,_print,_universal");
+   cupsdClearString(&DNSSDHostName);
  #endif /* HAVE_DNSSD || HAVE_AVAHI */
  
-   cupsdSetString(&LPDConfigFile, CUPS_DEFAULT_LPD_CONFIG_FILE);
