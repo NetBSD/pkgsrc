@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.519 2019/11/11 09:38:49 markd Exp $
+# $NetBSD: Makefile,v 1.520 2019/11/17 05:54:13 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -126,6 +126,7 @@ SUBDIR+=	kbruch
 SUBDIR+=	kcharselect
 SUBDIR+=	kchmviewer
 SUBDIR+=	kcontacts
+SUBDIR+=	kdav
 SUBDIR+=	kde-wallpapers4
 SUBDIR+=	kdeartwork4
 SUBDIR+=	kdepim-runtime4
