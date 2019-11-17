@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4988 2019/11/17 11:50:38 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.4989 2019/11/17 11:58:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8011,3 +8011,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/kipi-plugins to 19.08.3 [markd 2019-11-17]
 	Updated graphics/digikam to 6.4.0 [markd 2019-11-17]
 	Updated mail/thunderbird to 68.2.1nb1 [ryoon 2019-11-17]
+	Updated sysutils/etckeeper to 1.18.10 [mef 2019-11-17]
