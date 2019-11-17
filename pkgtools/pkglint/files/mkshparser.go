@@ -66,8 +66,6 @@ type ShellLexer struct {
 
 func NewShellLexer(tokens []string, rest string) *ShellLexer {
 	return &ShellLexer{
-		current:        "",
-		ioRedirect:     "",
 		remaining:      tokens,
 		atCommandStart: true,
 		error:          rest}

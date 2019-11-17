@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/10/26 09:51:47 rillig Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/11/17 01:26:25 rillig Exp $
 bin/pkglint
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/getopt.a
@@ -31,6 +31,7 @@ gopkg/src/netbsd.org/pkglint/histogram/histogram.go
 gopkg/src/netbsd.org/pkglint/histogram/histogram_test.go
 gopkg/src/netbsd.org/pkglint/intqa/ideas.go
 gopkg/src/netbsd.org/pkglint/intqa/testnames.go
+gopkg/src/netbsd.org/pkglint/intqa/testnames_test.go
 gopkg/src/netbsd.org/pkglint/licenses.go
 gopkg/src/netbsd.org/pkglint/licenses/licenses.go
 gopkg/src/netbsd.org/pkglint/licenses/licenses.y

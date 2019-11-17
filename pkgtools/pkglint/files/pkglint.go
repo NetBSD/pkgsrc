@@ -51,72 +51,23 @@ type Pkglint struct {
 	InterPackage InterPackage
 }
 
-func NewPkglint() Pkglint {
+func NewPkglint(stdout io.Writer, stderr io.Writer) Pkglint {
 	cwd, err := os.Getwd()
 	assertNil(err, "os.Getwd")
 
-	return Pkglint{
+	p := Pkglint{
 		res:       regex.NewRegistry(),
 		fileCache: NewFileCache(200),
 		cwd:       filepath.ToSlash(cwd),
 		interner:  NewStringInterner()}
+	p.Logger.out = NewSeparatorWriter(stdout)
+	p.Logger.err = NewSeparatorWriter(stderr)
+	return p
 }
 
 // unusablePkglint returns a pkglint object that crashes as early as possible.
 // This is to ensure that tests are properly initialized and shut down.
 func unusablePkglint() Pkglint { return Pkglint{} }
-
-type InterPackage struct {
-	hashes       map[string]*Hash    // Maps "alg:filename" => hash (inter-package check).
-	usedLicenses map[string]struct{} // Maps "license name" => true (inter-package check).
-	bl3Names     map[string]Location // Maps buildlink3 identifiers to their first occurrence.
-}
-
-func (ip *InterPackage) Enable() {
-	*ip = InterPackage{
-		make(map[string]*Hash),
-		make(map[string]struct{}),
-		make(map[string]Location)}
-}
-
-func (ip *InterPackage) Enabled() bool { return ip.hashes != nil }
-
-func (ip *InterPackage) Hash(alg, filename string, hashBytes []byte, loc *Location) *Hash {
-	key := alg + ":" + filename
-	if otherHash := ip.hashes[key]; otherHash != nil {
-		return otherHash
-	}
-
-	ip.hashes[key] = &Hash{hashBytes, *loc}
-	return nil
-}
-
-func (ip *InterPackage) UseLicense(name string) {
-	if ip.usedLicenses != nil {
-		ip.usedLicenses[intern(name)] = struct{}{}
-	}
-}
-
-func (ip *InterPackage) LicenseUsed(name string) bool {
-	_, used := ip.usedLicenses[name]
-	return used
-}
-
-// Bl3 remembers that the given buildlink3 name is used at the given location.
-// Since these names must be unique, there should be no other location where
-// the same name is used.
-func (ip *InterPackage) Bl3(name string, loc *Location) *Location {
-	if ip.bl3Names == nil {
-		return nil
-	}
-
-	if prev, found := ip.bl3Names[name]; found {
-		return &prev
-	}
-
-	ip.bl3Names[name] = *loc
-	return nil
-}
 
 type CmdOpts struct {
 	CheckGlobal bool
@@ -156,7 +107,7 @@ type pkglintFatal struct{}
 // G is the abbreviation for "global state";
 // this and the tracer are the only global variables in this Go package.
 var (
-	G     = NewPkglint()
+	G     = NewPkglint(nil, nil)
 	trace tracePkg.Tracer
 )
 
@@ -190,7 +141,7 @@ func (pkglint *Pkglint) Main(stdout io.Writer, stderr io.Writer, args []string) 
 
 	pkglint.prepareMainLoop()
 
-	for !pkglint.Todo.Empty() {
+	for !pkglint.Todo.IsEmpty() {
 		pkglint.Check(pkglint.Todo.Pop())
 	}
 
@@ -334,7 +285,7 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) int {
 	for _, arg := range pkglint.Opts.args {
 		pkglint.Todo.Push(filepath.ToSlash(arg))
 	}
-	if pkglint.Todo.Empty() {
+	if pkglint.Todo.IsEmpty() {
 		pkglint.Todo.Push(".")
 	}
 
@@ -530,7 +481,7 @@ func CheckLinesMessage(lines *Lines) {
 	//
 	// If the need arises, some of the checks may be activated again, but
 	// that requires more sophisticated code.
-	if G.Pkg != nil && G.Pkg.vars.Defined("MESSAGE_SRC") {
+	if G.Pkg != nil && G.Pkg.vars.IsDefined("MESSAGE_SRC") {
 		return
 	}
 
@@ -830,4 +781,56 @@ func (pkglint *Pkglint) loadCvsEntries(filename string) map[string]CvsEntry {
 	pkglint.cvsEntriesDir = dir
 	pkglint.cvsEntries = entries
 	return entries
+}
+
+type InterPackage struct {
+	hashes       map[string]*Hash    // Maps "alg:filename" => hash (inter-package check).
+	usedLicenses map[string]struct{} // Maps "license name" => true (inter-package check).
+	bl3Names     map[string]Location // Maps buildlink3 identifiers to their first occurrence.
+}
+
+func (ip *InterPackage) Enable() {
+	*ip = InterPackage{
+		make(map[string]*Hash),
+		make(map[string]struct{}),
+		make(map[string]Location)}
+}
+
+func (ip *InterPackage) Enabled() bool { return ip.hashes != nil }
+
+func (ip *InterPackage) Hash(alg, filename string, hashBytes []byte, loc *Location) *Hash {
+	key := alg + ":" + filename
+	if otherHash := ip.hashes[key]; otherHash != nil {
+		return otherHash
+	}
+
+	ip.hashes[key] = &Hash{hashBytes, *loc}
+	return nil
+}
+
+func (ip *InterPackage) UseLicense(name string) {
+	if ip.usedLicenses != nil {
+		ip.usedLicenses[intern(name)] = struct{}{}
+	}
+}
+
+func (ip *InterPackage) IsLicenseUsed(name string) bool {
+	_, used := ip.usedLicenses[name]
+	return used
+}
+
+// Bl3 remembers that the given buildlink3 name is used at the given location.
+// Since these names must be unique, there should be no other location where
+// the same name is used.
+func (ip *InterPackage) Bl3(name string, loc *Location) *Location {
+	if ip.bl3Names == nil {
+		return nil
+	}
+
+	if prev, found := ip.bl3Names[name]; found {
+		return &prev
+	}
+
+	ip.bl3Names[name] = *loc
+	return nil
 }

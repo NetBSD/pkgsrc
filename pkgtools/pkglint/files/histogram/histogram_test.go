@@ -3,6 +3,7 @@ package histogram_test
 import (
 	"gopkg.in/check.v1"
 	"netbsd.org/pkglint/histogram"
+	"netbsd.org/pkglint/intqa"
 	"strings"
 	"testing"
 )
@@ -25,4 +26,10 @@ func (s *Suite) Test_Histogram(c *check.C) {
 	c.Check(out.String(), check.Equals, ""+
 		"caption      3 three\n"+
 		"caption      2 two\n")
+}
+
+func (s *Suite) Test__test_names(c *check.C) {
+	ck := intqa.NewTestNameChecker(c.Errorf)
+	ck.Enable(intqa.EAll, -intqa.EMissingTest)
+	ck.Check()
 }

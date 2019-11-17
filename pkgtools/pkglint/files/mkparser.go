@@ -673,26 +673,6 @@ func (p *MkParser) Op() (bool, MkOperator) {
 	return false, 0
 }
 
-// isPkgbasePart returns whether str, when following a hyphen,
-// continues the package base (as in "mysql-client"), or whether it
-// starts the version (as in "mysql-1.0").
-func (*MkParser) isPkgbasePart(str string) bool {
-	lexer := textproc.NewLexer(str)
-
-	lexer.SkipByte('{')
-	lexer.SkipByte('[')
-	if lexer.NextByteSet(textproc.Alpha) != -1 {
-		return true
-	}
-
-	varUse := NewMkParser(nil, lexer.Rest()).VarUse()
-	if varUse != nil {
-		return !contains(varUse.varname, "VER") && len(varUse.modifiers) == 0
-	}
-
-	return false
-}
-
 func (p *MkParser) PkgbasePattern() string {
 
 	lexer := p.lexer
@@ -720,6 +700,26 @@ func (p *MkParser) PkgbasePattern() string {
 	// Unbalanced braces, as in "{ssh{,6}-[0-9]".
 	lexer.Reset(start)
 	return ""
+}
+
+// isPkgbasePart returns whether str, when following a hyphen,
+// continues the package base (as in "mysql-client"), or whether it
+// starts the version (as in "mysql-1.0").
+func (*MkParser) isPkgbasePart(str string) bool {
+	lexer := textproc.NewLexer(str)
+
+	lexer.SkipByte('{')
+	lexer.SkipByte('[')
+	if lexer.NextByteSet(textproc.Alpha) != -1 {
+		return true
+	}
+
+	varUse := NewMkParser(nil, lexer.Rest()).VarUse()
+	if varUse != nil {
+		return !contains(varUse.varname, "VER") && len(varUse.modifiers) == 0
+	}
+
+	return false
 }
 
 type DependencyPattern struct {

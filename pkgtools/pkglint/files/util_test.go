@@ -8,6 +8,54 @@ import (
 	"time"
 )
 
+func (s *Suite) Test_YesNoUnknown_String(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(yes.String(), "yes")
+	t.CheckEquals(no.String(), "no")
+	t.CheckEquals(unknown.String(), "unknown")
+}
+
+func (s *Suite) Test_trimHspace(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(trimHspace("a b"), "a b")
+	t.CheckEquals(trimHspace(" a b "), "a b")
+	t.CheckEquals(trimHspace("\ta b\t"), "a b")
+	t.CheckEquals(trimHspace(" \t a b\t \t"), "a b")
+}
+
+func (s *Suite) Test_trimCommon(c *check.C) {
+	t := s.Init(c)
+
+	test := func(a, b, trimmedA, trimmedB string) {
+		ta, tb := trimCommon(a, b)
+		t.CheckEquals(ta, trimmedA)
+		t.CheckEquals(tb, trimmedB)
+	}
+
+	test("", "",
+		"", "")
+
+	test("equal", "equal",
+		"", "")
+
+	test("prefixA", "prefixB",
+		"A", "B")
+
+	test("ASuffix", "BSuffix",
+		"A", "B")
+
+	test("PreMiddlePost", "PreCenterPost",
+		"Middle", "Center")
+
+	test("", "b",
+		"", "b")
+
+	test("a", "",
+		"a", "")
+}
+
 func (s *Suite) Test_assertNil(c *check.C) {
 	t := s.Init(c)
 
@@ -31,12 +79,231 @@ func (s *Suite) Test_assertNotNil(c *check.C) {
 		"Pkglint internal error: unexpected nil pointer")
 }
 
-func (s *Suite) Test_YesNoUnknown_String(c *check.C) {
+func (s *Suite) Test_isEmptyDir(c *check.C) {
 	t := s.Init(c)
 
-	t.CheckEquals(yes.String(), "yes")
-	t.CheckEquals(no.String(), "no")
-	t.CheckEquals(unknown.String(), "unknown")
+	t.CreateFileLines("CVS/Entries",
+		"dummy")
+	t.CreateFileLines("subdir/CVS/Entries",
+		"dummy")
+
+	t.CheckEquals(isEmptyDir(t.File(".")), true)
+	t.CheckEquals(isEmptyDir(t.File("CVS")), true)
+}
+
+func (s *Suite) Test_isEmptyDir__and_getSubdirs(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("CVS/Entries",
+		"dummy")
+
+	if dir := t.File("."); true {
+		t.CheckEquals(isEmptyDir(dir), true)
+		t.CheckDeepEquals(getSubdirs(dir), []string(nil))
+
+		t.CreateFileLines("somedir/file")
+
+		t.CheckEquals(isEmptyDir(dir), false)
+		t.CheckDeepEquals(getSubdirs(dir), []string{"somedir"})
+	}
+
+	if absent := t.File("nonexistent"); true {
+		t.CheckEquals(isEmptyDir(absent), true) // Counts as empty.
+
+		// The last group from the error message is localized, therefore the matching.
+		t.ExpectFatalMatches(
+			func() { getSubdirs(absent) },
+			`FATAL: ~/nonexistent: Cannot be read: open ~/nonexistent: (.+)\n`)
+	}
+}
+
+func (s *Suite) Test_getSubdirs(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("subdir/file")
+	t.CreateFileLines("empty/file")
+	c.Check(os.Remove(t.File("empty/file")), check.IsNil)
+
+	t.CheckDeepEquals(getSubdirs(t.File(".")), []string{"subdir"})
+}
+
+func (s *Suite) Test_isLocallyModified(c *check.C) {
+	t := s.Init(c)
+
+	unmodified := t.CreateFileLines("unmodified")
+	modTime := time.Unix(1136239445, 0).UTC()
+
+	err := os.Chtimes(unmodified, modTime, modTime)
+	c.Check(err, check.IsNil)
+
+	st, err := os.Lstat(unmodified)
+	c.Check(err, check.IsNil)
+
+	// Make sure that the file system has second precision and accuracy.
+	t.CheckDeepEquals(st.ModTime().UTC(), modTime)
+
+	modified := t.CreateFileLines("modified")
+
+	t.CreateFileLines("CVS/Entries",
+		"/unmodified//"+modTime.Format(time.ANSIC)+"//",
+		"/modified//"+modTime.Format(time.ANSIC)+"//",
+		"/enoent//"+modTime.Format(time.ANSIC)+"//")
+
+	t.CheckEquals(isLocallyModified(unmodified), false)
+	t.CheckEquals(isLocallyModified(modified), true)
+	t.CheckEquals(isLocallyModified(t.File("enoent")), true)
+	t.CheckEquals(isLocallyModified(t.File("not_mentioned")), false)
+	t.CheckEquals(isLocallyModified(t.File("subdir/file")), false)
+
+	t.DisableTracing()
+
+	t.CheckEquals(isLocallyModified(t.File("unmodified")), false)
+}
+
+func (s *Suite) Test_tabWidth(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(tabWidth("12345"), 5)
+	t.CheckEquals(tabWidth("\t"), 8)
+	t.CheckEquals(tabWidth("123\t"), 8)
+	t.CheckEquals(tabWidth("1234567\t"), 8)
+	t.CheckEquals(tabWidth("12345678\t"), 16)
+}
+
+// Since tabWidthAppend is used with logical lines (Line.Text) as well as with
+// raw lines (RawLine.textnl or RawLine.orignl), and since the width only
+// makes sense for a single line, better panic.
+func (s *Suite) Test_tabWidthAppend__panic(c *check.C) {
+	t := s.Init(c)
+
+	t.ExpectAssert(func() { tabWidthAppend(0, "\n") })
+}
+
+func (s *Suite) Test_detab(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(detab(""), "")
+	t.CheckEquals(detab("\t"), "        ")
+	t.CheckEquals(detab("1234\t9"), "1234    9")
+	t.CheckEquals(detab("1234567\t"), "1234567 ")
+	t.CheckEquals(detab("12345678\t"), "12345678        ")
+}
+
+func (s *Suite) Test_alignWith(c *check.C) {
+	t := s.Init(c)
+
+	test := func(str, other, expected string) {
+		t.CheckEquals(alignWith(str, other), expected)
+	}
+
+	// At least one tab is _always_ added.
+	test("", "", "\t")
+
+	test("VAR=", "1234567", "VAR=\t")
+	test("VAR=", "12345678", "VAR=\t")
+	test("VAR=", "123456789", "VAR=\t\t")
+
+	// At least one tab is added in any case,
+	// even if the other string is shorter.
+	test("1234567890=", "V=", "1234567890=\t")
+}
+
+func (s *Suite) Test_indent(c *check.C) {
+	t := s.Init(c)
+
+	test := func(width int, ind string) {
+		actual := indent(width)
+
+		t.CheckEquals(actual, ind)
+	}
+
+	test(0, "")
+	test(1, " ")
+	test(7, "       ")
+	test(8, "\t")
+	test(15, "\t       ")
+	test(16, "\t\t")
+	test(72, "\t\t\t\t\t\t\t\t\t")
+}
+
+func (s *Suite) Test_alignmentAfter(c *check.C) {
+	t := s.Init(c)
+
+	test := func(prefix string, width int, ind string) {
+		actual := alignmentAfter(prefix, width)
+
+		t.CheckEquals(actual, ind)
+	}
+
+	test("", 0, "")
+	test("", 15, "\t       ")
+
+	test("  ", 5, "   ")
+	test("      ", 10, "\t  ")
+
+	test("\t", 15, "       ")
+	test(" \t", 15, "       ")
+	test("       \t", 15, "       ")
+	test("\t    ", 15, "   ")
+
+	test("    ", 16, "\t\t")
+
+	// The desired width must be at least the width of the prefix.
+	t.ExpectAssert(func() { test("\t", 7, "") })
+}
+
+func (s *Suite) Test_shorten(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(shorten("aaaaa", 3), "aaa...")
+	t.CheckEquals(shorten("aaaaa", 5), "aaaaa")
+	t.CheckEquals(shorten("aaa", 5), "aaa")
+}
+
+func (s *Suite) Test_varnameBase(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(varnameBase("VAR"), "VAR")
+	t.CheckEquals(varnameBase("VAR.param"), "VAR")
+	t.CheckEquals(varnameBase(".CURDIR"), ".CURDIR")
+}
+
+func (s *Suite) Test_varnameCanon(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(varnameCanon("VAR"), "VAR")
+	t.CheckEquals(varnameCanon("VAR.param"), "VAR.*")
+	t.CheckEquals(varnameCanon(".CURDIR"), ".CURDIR")
+}
+
+func (s *Suite) Test_varnameParam(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(varnameParam("VAR"), "")
+	t.CheckEquals(varnameParam("VAR.param"), "param")
+	t.CheckEquals(varnameParam(".CURDIR"), "")
+}
+
+func (s *Suite) Test_fileExists(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("dir/file")
+
+	t.CheckEquals(fileExists(t.File("nonexistent")), false)
+	t.CheckEquals(fileExists(t.File("dir")), false)
+	t.CheckEquals(fileExists(t.File("dir/nonexistent")), false)
+	t.CheckEquals(fileExists(t.File("dir/file")), true)
+}
+
+func (s *Suite) Test_dirExists(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("dir/file")
+
+	t.CheckEquals(dirExists(t.File("nonexistent")), false)
+	t.CheckEquals(dirExists(t.File("dir")), true)
+	t.CheckEquals(dirExists(t.File("dir/nonexistent")), false)
+	t.CheckEquals(dirExists(t.File("dir/file")), false)
 }
 
 func (s *Suite) Test_mkopSubst__middle(c *check.C) {
@@ -85,83 +352,6 @@ func (s *Suite) Test__regex_ReplaceFirst(c *check.C) {
 	c.Assert(m, check.NotNil)
 	t.CheckDeepEquals(m, []string{"a+b", "a", "+", "b"})
 	t.CheckEquals(rest, "X+c+d")
-}
-
-func (s *Suite) Test_shorten(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(shorten("aaaaa", 3), "aaa...")
-	t.CheckEquals(shorten("aaaaa", 5), "aaaaa")
-	t.CheckEquals(shorten("aaa", 5), "aaa")
-}
-
-func (s *Suite) Test_tabWidth(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(tabWidth("12345"), 5)
-	t.CheckEquals(tabWidth("\t"), 8)
-	t.CheckEquals(tabWidth("123\t"), 8)
-	t.CheckEquals(tabWidth("1234567\t"), 8)
-	t.CheckEquals(tabWidth("12345678\t"), 16)
-}
-
-// Since tabWidthAppend is used with logical lines (Line.Text) as well as with
-// raw lines (RawLine.textnl or RawLine.orignl), and since the width only
-// makes sense for a single line, better panic.
-func (s *Suite) Test_tabWidthAppend__panic(c *check.C) {
-	t := s.Init(c)
-
-	t.ExpectAssert(func() { tabWidthAppend(0, "\n") })
-}
-
-func (s *Suite) Test_cleanpath(c *check.C) {
-	t := s.Init(c)
-
-	test := func(from, to string) {
-		t.CheckEquals(cleanpath(from), to)
-	}
-
-	test("simple/path", "simple/path")
-	test("/absolute/path", "/absolute/path")
-
-	// Single dot components are removed, unless it's the only component of the path.
-	test("./././.", ".")
-	test("./././", ".")
-	test("dir/multi/././/file", "dir/multi/file")
-	test("dir/", "dir")
-
-	test("dir/", "dir")
-
-	// Components like aa/bb/../.. are removed, but not in the initial part of the path,
-	// and only if they are not followed by another "..".
-	test("dir/../dir/../dir/../dir/subdir/../../Makefile", "dir/../dir/../dir/../Makefile")
-	test("111/222/../../333/444/../../555/666/../../777/888/9", "111/222/../../777/888/9")
-	test("1/2/3/../../4/5/6/../../7/8/9/../../../../10", "1/2/3/../../4/7/8/9/../../../../10")
-	test("cat/pkg.v1/../../cat/pkg.v2/Makefile", "cat/pkg.v1/../../cat/pkg.v2/Makefile")
-	test("aa/../../../../../a/b/c/d", "aa/../../../../../a/b/c/d")
-	test("aa/bb/../../../../a/b/c/d", "aa/bb/../../../../a/b/c/d")
-	test("aa/bb/cc/../../../a/b/c/d", "aa/bb/cc/../../../a/b/c/d")
-	test("aa/bb/cc/dd/../../a/b/c/d", "aa/bb/a/b/c/d")
-	test("aa/bb/cc/dd/ee/../a/b/c/d", "aa/bb/cc/dd/ee/../a/b/c/d")
-	test("../../../../../a/b/c/d", "../../../../../a/b/c/d")
-	test("aa/../../../../a/b/c/d", "aa/../../../../a/b/c/d")
-	test("aa/bb/../../../a/b/c/d", "aa/bb/../../../a/b/c/d")
-	test("aa/bb/cc/../../a/b/c/d", "aa/bb/cc/../../a/b/c/d")
-	test("aa/bb/cc/dd/../a/b/c/d", "aa/bb/cc/dd/../a/b/c/d")
-	test("aa/../cc/../../a/b/c/d", "aa/../cc/../../a/b/c/d")
-
-	// The initial 2 components of the path are typically category/package, when
-	// pkglint is called from the pkgsrc top-level directory.
-	// This path serves as the context and therefore is always kept.
-	test("aa/bb/../../cc/dd/../../ee/ff", "aa/bb/../../ee/ff")
-	test("aa/bb/../../cc/dd/../..", "aa/bb/../..")
-	test("aa/bb/cc/dd/../..", "aa/bb")
-	test("aa/bb/../../cc/dd/../../ee/ff/buildlink3.mk", "aa/bb/../../ee/ff/buildlink3.mk")
-	test("./aa/bb/../../cc/dd/../../ee/ff/buildlink3.mk", "aa/bb/../../ee/ff/buildlink3.mk")
-
-	test("../.", "..")
-	test("../././././././.", "..")
-	test(".././././././././", "..")
 }
 
 func (s *Suite) Test_relpath(c *check.C) {
@@ -216,6 +406,56 @@ func (s *Suite) Test_relpath__quick(c *check.C) {
 
 	test("some/dir", ".", "../..")
 	test("some/dir/.", ".", "../..")
+}
+
+func (s *Suite) Test_cleanpath(c *check.C) {
+	t := s.Init(c)
+
+	test := func(from, to string) {
+		t.CheckEquals(cleanpath(from), to)
+	}
+
+	test("simple/path", "simple/path")
+	test("/absolute/path", "/absolute/path")
+
+	// Single dot components are removed, unless it's the only component of the path.
+	test("./././.", ".")
+	test("./././", ".")
+	test("dir/multi/././/file", "dir/multi/file")
+	test("dir/", "dir")
+
+	test("dir/", "dir")
+
+	// Components like aa/bb/../.. are removed, but not in the initial part of the path,
+	// and only if they are not followed by another "..".
+	test("dir/../dir/../dir/../dir/subdir/../../Makefile", "dir/../dir/../dir/../Makefile")
+	test("111/222/../../333/444/../../555/666/../../777/888/9", "111/222/../../777/888/9")
+	test("1/2/3/../../4/5/6/../../7/8/9/../../../../10", "1/2/3/../../4/7/8/9/../../../../10")
+	test("cat/pkg.v1/../../cat/pkg.v2/Makefile", "cat/pkg.v1/../../cat/pkg.v2/Makefile")
+	test("aa/../../../../../a/b/c/d", "aa/../../../../../a/b/c/d")
+	test("aa/bb/../../../../a/b/c/d", "aa/bb/../../../../a/b/c/d")
+	test("aa/bb/cc/../../../a/b/c/d", "aa/bb/cc/../../../a/b/c/d")
+	test("aa/bb/cc/dd/../../a/b/c/d", "aa/bb/a/b/c/d")
+	test("aa/bb/cc/dd/ee/../a/b/c/d", "aa/bb/cc/dd/ee/../a/b/c/d")
+	test("../../../../../a/b/c/d", "../../../../../a/b/c/d")
+	test("aa/../../../../a/b/c/d", "aa/../../../../a/b/c/d")
+	test("aa/bb/../../../a/b/c/d", "aa/bb/../../../a/b/c/d")
+	test("aa/bb/cc/../../a/b/c/d", "aa/bb/cc/../../a/b/c/d")
+	test("aa/bb/cc/dd/../a/b/c/d", "aa/bb/cc/dd/../a/b/c/d")
+	test("aa/../cc/../../a/b/c/d", "aa/../cc/../../a/b/c/d")
+
+	// The initial 2 components of the path are typically category/package, when
+	// pkglint is called from the pkgsrc top-level directory.
+	// This path serves as the context and therefore is always kept.
+	test("aa/bb/../../cc/dd/../../ee/ff", "aa/bb/../../ee/ff")
+	test("aa/bb/../../cc/dd/../..", "aa/bb/../..")
+	test("aa/bb/cc/dd/../..", "aa/bb")
+	test("aa/bb/../../cc/dd/../../ee/ff/buildlink3.mk", "aa/bb/../../ee/ff/buildlink3.mk")
+	test("./aa/bb/../../cc/dd/../../ee/ff/buildlink3.mk", "aa/bb/../../ee/ff/buildlink3.mk")
+
+	test("../.", "..")
+	test("../././././././.", "..")
+	test(".././././././././", "..")
 }
 
 func (s *Suite) Test_pathContains(c *check.C) {
@@ -292,105 +532,6 @@ func (s *Suite) Test_pathContainsDir(c *check.C) {
 	test("aa/bb/cc", "c", false)
 }
 
-func (s *Suite) Test_fileExists(c *check.C) {
-	t := s.Init(c)
-
-	t.CreateFileLines("dir/file")
-
-	t.CheckEquals(fileExists(t.File("nonexistent")), false)
-	t.CheckEquals(fileExists(t.File("dir")), false)
-	t.CheckEquals(fileExists(t.File("dir/nonexistent")), false)
-	t.CheckEquals(fileExists(t.File("dir/file")), true)
-}
-
-func (s *Suite) Test_dirExists(c *check.C) {
-	t := s.Init(c)
-
-	t.CreateFileLines("dir/file")
-
-	t.CheckEquals(dirExists(t.File("nonexistent")), false)
-	t.CheckEquals(dirExists(t.File("dir")), true)
-	t.CheckEquals(dirExists(t.File("dir/nonexistent")), false)
-	t.CheckEquals(dirExists(t.File("dir/file")), false)
-}
-
-func (s *Suite) Test_isEmptyDir__and_getSubdirs(c *check.C) {
-	t := s.Init(c)
-
-	t.CreateFileLines("CVS/Entries",
-		"dummy")
-
-	if dir := t.File("."); true {
-		t.CheckEquals(isEmptyDir(dir), true)
-		t.CheckDeepEquals(getSubdirs(dir), []string(nil))
-
-		t.CreateFileLines("somedir/file")
-
-		t.CheckEquals(isEmptyDir(dir), false)
-		t.CheckDeepEquals(getSubdirs(dir), []string{"somedir"})
-	}
-
-	if absent := t.File("nonexistent"); true {
-		t.CheckEquals(isEmptyDir(absent), true) // Counts as empty.
-
-		// The last group from the error message is localized, therefore the matching.
-		t.ExpectFatalMatches(
-			func() { getSubdirs(absent) },
-			`FATAL: ~/nonexistent: Cannot be read: open ~/nonexistent: (.+)\n`)
-	}
-}
-
-func (s *Suite) Test_isEmptyDir(c *check.C) {
-	t := s.Init(c)
-
-	t.CreateFileLines("CVS/Entries",
-		"dummy")
-	t.CreateFileLines("subdir/CVS/Entries",
-		"dummy")
-
-	t.CheckEquals(isEmptyDir(t.File(".")), true)
-	t.CheckEquals(isEmptyDir(t.File("CVS")), true)
-}
-
-func (s *Suite) Test_getSubdirs(c *check.C) {
-	t := s.Init(c)
-
-	t.CreateFileLines("subdir/file")
-	t.CreateFileLines("empty/file")
-	c.Check(os.Remove(t.File("empty/file")), check.IsNil)
-
-	t.CheckDeepEquals(getSubdirs(t.File(".")), []string{"subdir"})
-}
-
-func (s *Suite) Test_detab(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(detab(""), "")
-	t.CheckEquals(detab("\t"), "        ")
-	t.CheckEquals(detab("1234\t9"), "1234    9")
-	t.CheckEquals(detab("1234567\t"), "1234567 ")
-	t.CheckEquals(detab("12345678\t"), "12345678        ")
-}
-
-func (s *Suite) Test_alignWith(c *check.C) {
-	t := s.Init(c)
-
-	test := func(str, other, expected string) {
-		t.CheckEquals(alignWith(str, other), expected)
-	}
-
-	// At least one tab is _always_ added.
-	test("", "", "\t")
-
-	test("VAR=", "1234567", "VAR=\t")
-	test("VAR=", "12345678", "VAR=\t")
-	test("VAR=", "123456789", "VAR=\t\t")
-
-	// At least one tab is added in any case,
-	// even if the other string is shorter.
-	test("1234567890=", "V=", "1234567890=\t")
-}
-
 const reMkIncludeBenchmark = `^\.([\t ]*)(s?include)[\t ]+\"([^\"]+)\"[\t ]*(?:#.*)?$`
 const reMkIncludeBenchmarkPositive = `^\.([\t ]*)(s?include)[\t ]+\"(.+)\"[\t ]*(?:#.*)?$`
 
@@ -455,121 +596,72 @@ func emptyToNil(slice []string) []string {
 	return slice
 }
 
-func (s *Suite) Test_trimHspace(c *check.C) {
+func (s *Suite) Test_hasAlnumPrefix(c *check.C) {
 	t := s.Init(c)
 
-	t.CheckEquals(trimHspace("a b"), "a b")
-	t.CheckEquals(trimHspace(" a b "), "a b")
-	t.CheckEquals(trimHspace("\ta b\t"), "a b")
-	t.CheckEquals(trimHspace(" \t a b\t \t"), "a b")
+	t.CheckEquals(hasAlnumPrefix(""), false)
+	t.CheckEquals(hasAlnumPrefix("A"), true)
+	t.CheckEquals(hasAlnumPrefix(","), false)
 }
 
-func (s *Suite) Test_trimCommon(c *check.C) {
+func (s *Suite) Test_Once(c *check.C) {
 	t := s.Init(c)
 
-	test := func(a, b, trimmedA, trimmedB string) {
-		ta, tb := trimCommon(a, b)
-		t.CheckEquals(ta, trimmedA)
-		t.CheckEquals(tb, trimmedB)
-	}
+	var once Once
 
-	test("", "",
-		"", "")
-
-	test("equal", "equal",
-		"", "")
-
-	test("prefixA", "prefixB",
-		"A", "B")
-
-	test("ASuffix", "BSuffix",
-		"A", "B")
-
-	test("PreMiddlePost", "PreCenterPost",
-		"Middle", "Center")
-
-	test("", "b",
-		"", "b")
-
-	test("a", "",
-		"a", "")
+	t.CheckEquals(once.FirstTime("str"), true)
+	t.CheckEquals(once.FirstTime("str"), false)
+	t.CheckEquals(once.FirstTimeSlice("str"), false)
+	t.CheckEquals(once.FirstTimeSlice("str", "str2"), true)
+	t.CheckEquals(once.FirstTimeSlice("str", "str2"), false)
 }
 
-func (s *Suite) Test_indent(c *check.C) {
+func (s *Suite) Test_Once__trace(c *check.C) {
 	t := s.Init(c)
 
-	test := func(width int, ind string) {
-		actual := indent(width)
+	var once Once
+	once.Trace = true
 
-		t.CheckEquals(actual, ind)
-	}
+	t.CheckEquals(once.FirstTime("str"), true)
+	t.CheckEquals(once.FirstTime("str"), false)
+	t.CheckEquals(once.FirstTimeSlice("str"), false)
+	t.CheckEquals(once.FirstTimeSlice("str", "str2"), true)
+	t.CheckEquals(once.FirstTimeSlice("str", "str2"), false)
 
-	test(0, "")
-	test(1, " ")
-	test(7, "       ")
-	test(8, "\t")
-	test(15, "\t       ")
-	test(16, "\t\t")
-	test(72, "\t\t\t\t\t\t\t\t\t")
+	t.CheckOutputLines(
+		"FirstTime: str",
+		"FirstTime: str, str2")
 }
 
-func (s *Suite) Test_alignmentAfter(c *check.C) {
+func (s *Suite) Test_Scope__no_tracing(c *check.C) {
 	t := s.Init(c)
 
-	test := func(prefix string, width int, ind string) {
-		actual := alignmentAfter(prefix, width)
-
-		t.CheckEquals(actual, ind)
-	}
-
-	test("", 0, "")
-	test("", 15, "\t       ")
-
-	test("  ", 5, "   ")
-	test("      ", 10, "\t  ")
-
-	test("\t", 15, "       ")
-	test(" \t", 15, "       ")
-	test("       \t", 15, "       ")
-	test("\t    ", 15, "   ")
-
-	test("    ", 16, "\t\t")
-
-	// The desired width must be at least the width of the prefix.
-	t.ExpectAssert(func() { test("\t", 7, "") })
-}
-
-func (s *Suite) Test_isLocallyModified(c *check.C) {
-	t := s.Init(c)
-
-	unmodified := t.CreateFileLines("unmodified")
-	modTime := time.Unix(1136239445, 0).UTC()
-
-	err := os.Chtimes(unmodified, modTime, modTime)
-	c.Check(err, check.IsNil)
-
-	st, err := os.Lstat(unmodified)
-	c.Check(err, check.IsNil)
-
-	// Make sure that the file system has second precision and accuracy.
-	t.CheckDeepEquals(st.ModTime().UTC(), modTime)
-
-	modified := t.CreateFileLines("modified")
-
-	t.CreateFileLines("CVS/Entries",
-		"/unmodified//"+modTime.Format(time.ANSIC)+"//",
-		"/modified//"+modTime.Format(time.ANSIC)+"//",
-		"/enoent//"+modTime.Format(time.ANSIC)+"//")
-
-	t.CheckEquals(isLocallyModified(unmodified), false)
-	t.CheckEquals(isLocallyModified(modified), true)
-	t.CheckEquals(isLocallyModified(t.File("enoent")), true)
-	t.CheckEquals(isLocallyModified(t.File("not_mentioned")), false)
-	t.CheckEquals(isLocallyModified(t.File("subdir/file")), false)
-
+	scope := NewScope()
+	scope.Define("VAR.param", t.NewMkLine("fname.mk", 3, "VAR.param=\tvalue"))
 	t.DisableTracing()
 
-	t.CheckEquals(isLocallyModified(t.File("unmodified")), false)
+	t.CheckEquals(scope.IsDefinedSimilar("VAR.param"), true)
+	t.CheckEquals(scope.IsDefinedSimilar("VAR.other"), true)
+	t.CheckEquals(scope.IsDefinedSimilar("OTHER"), false)
+}
+
+func (s *Suite) Test_Scope__commented_varassign(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("mk/defaults/mk.conf", 3, "#VAR=default")
+	scope := NewScope()
+	scope.Define("VAR", mkline)
+
+	t.CheckEquals(scope.IsDefined("VAR"), false)
+	t.Check(scope.FirstDefinition("VAR"), check.IsNil)
+	t.Check(scope.LastDefinition("VAR"), check.IsNil)
+
+	t.CheckEquals(scope.Mentioned("VAR"), mkline)
+	t.CheckEquals(scope.Commented("VAR"), mkline)
+
+	value, found := scope.LastValueFound("VAR")
+	t.CheckEquals(value, "")
+	t.CheckEquals(found, false)
 }
 
 func (s *Suite) Test_Scope_Define(c *check.C) {
@@ -590,53 +682,53 @@ func (s *Suite) Test_Scope_Define(c *check.C) {
 	t.CheckEquals(scope.LastValue("BUILD_DIRS"), "one two three four")
 }
 
-func (s *Suite) Test_Scope_Defined(c *check.C) {
+func (s *Suite) Test_Scope_Mentioned(c *check.C) {
+	t := s.Init(c)
+
+	assigned := t.NewMkLine("filename.mk", 3, "VAR=\tvalue")
+	commented := t.NewMkLine("filename.mk", 4, "#COMMENTED=\tvalue")
+	documented := t.NewMkLine("filename.mk", 5, "# DOCUMENTED is a variable.")
+
+	scope := NewScope()
+	scope.Define("VAR", assigned)
+	scope.Define("COMMENTED", commented)
+	scope.Define("DOCUMENTED", documented)
+
+	t.CheckEquals(scope.Mentioned("VAR"), assigned)
+	t.CheckEquals(scope.Mentioned("COMMENTED"), commented)
+	t.CheckEquals(scope.Mentioned("DOCUMENTED"), documented)
+	t.Check(scope.Mentioned("UNKNOWN"), check.IsNil)
+}
+
+func (s *Suite) Test_Scope_IsDefined(c *check.C) {
 	t := s.Init(c)
 
 	scope := NewScope()
 	scope.Define("VAR.param", t.NewMkLine("file.mk", 1, "VAR.param=value"))
 
-	t.CheckEquals(scope.Defined("VAR.param"), true)
-	t.CheckEquals(scope.Defined("VAR.other"), false)
-	t.CheckEquals(scope.Defined("VARIABLE.*"), false)
+	t.CheckEquals(scope.IsDefined("VAR.param"), true)
+	t.CheckEquals(scope.IsDefined("VAR.other"), false)
+	t.CheckEquals(scope.IsDefined("VARIABLE.*"), false)
 
-	t.CheckEquals(scope.DefinedSimilar("VAR.param"), true)
-	t.CheckEquals(scope.DefinedSimilar("VAR.other"), true)
-	t.CheckEquals(scope.DefinedSimilar("VARIABLE.*"), false)
+	t.CheckEquals(scope.IsDefinedSimilar("VAR.param"), true)
+	t.CheckEquals(scope.IsDefinedSimilar("VAR.other"), true)
+	t.CheckEquals(scope.IsDefinedSimilar("VARIABLE.*"), false)
 }
 
-func (s *Suite) Test_Scope_Used(c *check.C) {
+func (s *Suite) Test_Scope_IsUsed(c *check.C) {
 	t := s.Init(c)
 
 	scope := NewScope()
 	mkline := t.NewMkLine("file.mk", 1, "\techo ${VAR.param}")
 	scope.Use("VAR.param", mkline, VucRunTime)
 
-	t.CheckEquals(scope.Used("VAR.param"), true)
-	t.CheckEquals(scope.Used("VAR.other"), false)
-	t.CheckEquals(scope.Used("VARIABLE.*"), false)
+	t.CheckEquals(scope.IsUsed("VAR.param"), true)
+	t.CheckEquals(scope.IsUsed("VAR.other"), false)
+	t.CheckEquals(scope.IsUsed("VARIABLE.*"), false)
 
-	t.CheckEquals(scope.UsedSimilar("VAR.param"), true)
-	t.CheckEquals(scope.UsedSimilar("VAR.other"), true)
-	t.CheckEquals(scope.UsedSimilar("VARIABLE.*"), false)
-}
-
-func (s *Suite) Test_Scope_DefineAll(c *check.C) {
-	t := s.Init(c)
-
-	src := NewScope()
-
-	dst := NewScope()
-	dst.DefineAll(src)
-
-	c.Check(dst.firstDef, check.HasLen, 0)
-	c.Check(dst.lastDef, check.HasLen, 0)
-	c.Check(dst.used, check.HasLen, 0)
-
-	src.Define("VAR", t.NewMkLine("file.mk", 1, "VAR=value"))
-	dst.DefineAll(src)
-
-	t.CheckEquals(dst.Defined("VAR"), true)
+	t.CheckEquals(scope.IsUsedSimilar("VAR.param"), true)
+	t.CheckEquals(scope.IsUsedSimilar("VAR.other"), true)
+	t.CheckEquals(scope.IsUsedSimilar("VARIABLE.*"), false)
 }
 
 func (s *Suite) Test_Scope_FirstDefinition(c *check.C) {
@@ -658,6 +750,24 @@ func (s *Suite) Test_Scope_FirstDefinition(c *check.C) {
 	t.Check(scope.FirstDefinition("SNEAKY"), check.IsNil)
 }
 
+func (s *Suite) Test_Scope_Commented(c *check.C) {
+	t := s.Init(c)
+
+	assigned := t.NewMkLine("filename.mk", 3, "VAR=\tvalue")
+	commented := t.NewMkLine("filename.mk", 4, "#COMMENTED=\tvalue")
+	documented := t.NewMkLine("filename.mk", 5, "# DOCUMENTED is a variable.")
+
+	scope := NewScope()
+	scope.Define("VAR", assigned)
+	scope.Define("COMMENTED", commented)
+	scope.Define("DOCUMENTED", documented)
+
+	t.Check(scope.Commented("VAR"), check.IsNil)
+	t.CheckEquals(scope.Commented("COMMENTED"), commented)
+	t.Check(scope.Commented("DOCUMENTED"), check.IsNil)
+	t.Check(scope.Commented("UNKNOWN"), check.IsNil)
+}
+
 func (s *Suite) Test_Scope_LastValue(c *check.C) {
 	t := s.Init(c)
 
@@ -677,71 +787,22 @@ func (s *Suite) Test_Scope_LastValue(c *check.C) {
 		"WARN: file.mk:2: VAR is defined but not used.")
 }
 
-func (s *Suite) Test_Scope__no_tracing(c *check.C) {
+func (s *Suite) Test_Scope_DefineAll(c *check.C) {
 	t := s.Init(c)
 
-	scope := NewScope()
-	scope.Define("VAR.param", t.NewMkLine("fname.mk", 3, "VAR.param=\tvalue"))
-	t.DisableTracing()
+	src := NewScope()
 
-	t.CheckEquals(scope.DefinedSimilar("VAR.param"), true)
-	t.CheckEquals(scope.DefinedSimilar("VAR.other"), true)
-	t.CheckEquals(scope.DefinedSimilar("OTHER"), false)
-}
+	dst := NewScope()
+	dst.DefineAll(src)
 
-func (s *Suite) Test_Scope__commented_varassign(c *check.C) {
-	t := s.Init(c)
+	c.Check(dst.firstDef, check.HasLen, 0)
+	c.Check(dst.lastDef, check.HasLen, 0)
+	c.Check(dst.used, check.HasLen, 0)
 
-	mkline := t.NewMkLine("mk/defaults/mk.conf", 3, "#VAR=default")
-	scope := NewScope()
-	scope.Define("VAR", mkline)
+	src.Define("VAR", t.NewMkLine("file.mk", 1, "VAR=value"))
+	dst.DefineAll(src)
 
-	t.CheckEquals(scope.Defined("VAR"), false)
-	t.Check(scope.FirstDefinition("VAR"), check.IsNil)
-	t.Check(scope.LastDefinition("VAR"), check.IsNil)
-
-	t.CheckEquals(scope.Mentioned("VAR"), mkline)
-	t.CheckEquals(scope.Commented("VAR"), mkline)
-
-	value, found := scope.LastValueFound("VAR")
-	t.CheckEquals(value, "")
-	t.CheckEquals(found, false)
-}
-
-func (s *Suite) Test_Scope_Commented(c *check.C) {
-	t := s.Init(c)
-
-	assigned := t.NewMkLine("filename.mk", 3, "VAR=\tvalue")
-	commented := t.NewMkLine("filename.mk", 4, "#COMMENTED=\tvalue")
-	documented := t.NewMkLine("filename.mk", 5, "# DOCUMENTED is a variable.")
-
-	scope := NewScope()
-	scope.Define("VAR", assigned)
-	scope.Define("COMMENTED", commented)
-	scope.Define("DOCUMENTED", documented)
-
-	t.Check(scope.Commented("VAR"), check.IsNil)
-	t.CheckEquals(scope.Commented("COMMENTED"), commented)
-	t.Check(scope.Commented("DOCUMENTED"), check.IsNil)
-	t.Check(scope.Commented("UNKNOWN"), check.IsNil)
-}
-
-func (s *Suite) Test_Scope_Mentioned(c *check.C) {
-	t := s.Init(c)
-
-	assigned := t.NewMkLine("filename.mk", 3, "VAR=\tvalue")
-	commented := t.NewMkLine("filename.mk", 4, "#COMMENTED=\tvalue")
-	documented := t.NewMkLine("filename.mk", 5, "# DOCUMENTED is a variable.")
-
-	scope := NewScope()
-	scope.Define("VAR", assigned)
-	scope.Define("COMMENTED", commented)
-	scope.Define("DOCUMENTED", documented)
-
-	t.CheckEquals(scope.Mentioned("VAR"), assigned)
-	t.CheckEquals(scope.Mentioned("COMMENTED"), commented)
-	t.CheckEquals(scope.Mentioned("DOCUMENTED"), documented)
-	t.Check(scope.Mentioned("UNKNOWN"), check.IsNil)
+	t.CheckEquals(dst.IsDefined("VAR"), true)
 }
 
 func (s *Suite) Test_naturalLess(c *check.C) {
@@ -768,30 +829,6 @@ func (s *Suite) Test_naturalLess(c *check.C) {
 			test(i, ie, j, je)
 		}
 	}
-}
-
-func (s *Suite) Test_varnameBase(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(varnameBase("VAR"), "VAR")
-	t.CheckEquals(varnameBase("VAR.param"), "VAR")
-	t.CheckEquals(varnameBase(".CURDIR"), ".CURDIR")
-}
-
-func (s *Suite) Test_varnameParam(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(varnameParam("VAR"), "")
-	t.CheckEquals(varnameParam("VAR.param"), "param")
-	t.CheckEquals(varnameParam(".CURDIR"), "")
-}
-
-func (s *Suite) Test_varnameCanon(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(varnameCanon("VAR"), "VAR")
-	t.CheckEquals(varnameCanon("VAR.param"), "VAR.*")
-	t.CheckEquals(varnameCanon(".CURDIR"), ".CURDIR")
 }
 
 func (s *Suite) Test_FileCache(c *check.C) {
@@ -940,43 +977,6 @@ func (s *Suite) Test_bmakeHelp(c *check.C) {
 	t := s.Init(c)
 
 	t.CheckEquals(bmakeHelp("subst"), confMake+" help topic=subst")
-}
-
-func (s *Suite) Test_hasAlnumPrefix(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(hasAlnumPrefix(""), false)
-	t.CheckEquals(hasAlnumPrefix("A"), true)
-	t.CheckEquals(hasAlnumPrefix(","), false)
-}
-
-func (s *Suite) Test_Once(c *check.C) {
-	t := s.Init(c)
-
-	var once Once
-
-	t.CheckEquals(once.FirstTime("str"), true)
-	t.CheckEquals(once.FirstTime("str"), false)
-	t.CheckEquals(once.FirstTimeSlice("str"), false)
-	t.CheckEquals(once.FirstTimeSlice("str", "str2"), true)
-	t.CheckEquals(once.FirstTimeSlice("str", "str2"), false)
-}
-
-func (s *Suite) Test_Once__trace(c *check.C) {
-	t := s.Init(c)
-
-	var once Once
-	once.Trace = true
-
-	t.CheckEquals(once.FirstTime("str"), true)
-	t.CheckEquals(once.FirstTime("str"), false)
-	t.CheckEquals(once.FirstTimeSlice("str"), false)
-	t.CheckEquals(once.FirstTimeSlice("str", "str2"), true)
-	t.CheckEquals(once.FirstTimeSlice("str", "str2"), false)
-
-	t.CheckOutputLines(
-		"FirstTime: str",
-		"FirstTime: str, str2")
 }
 
 func (s *Suite) Test_wrap(c *check.C) {

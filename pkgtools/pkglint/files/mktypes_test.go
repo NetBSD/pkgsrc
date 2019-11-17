@@ -49,85 +49,6 @@ func (list *MkShList) AddCommand(command *MkShCommand) *MkShList {
 	return list.AddAndOr(andOr)
 }
 
-func (s *Suite) Test_MkVarUse_Mod(c *check.C) {
-	t := s.Init(c)
-
-	test := func(varUseText string, mod string) {
-		line := t.NewLine("filename.mk", 123, "")
-		varUse := NewMkParser(line, varUseText).VarUse()
-		t.CheckOutputEmpty()
-		t.CheckEquals(varUse.Mod(), mod)
-	}
-
-	test("${varname:Q}", ":Q")
-	test("${PATH:ts::Q}", ":ts::Q")
-}
-
-func (s *Suite) Test_MkVarUseModifier_MatchMatch(c *check.C) {
-	t := s.Init(c)
-
-	testFail := func(modifier string) {
-		mod := MkVarUseModifier{modifier}
-		ok, _, _, _ := mod.MatchMatch()
-		t.CheckEquals(ok, false)
-	}
-	test := func(modifier string, positive bool, pattern string, exact bool) {
-		mod := MkVarUseModifier{modifier}
-		actualOk, actualPositive, actualPattern, actualExact := mod.MatchMatch()
-		t.CheckDeepEquals(
-			[]interface{}{actualOk, actualPositive, actualPattern, actualExact},
-			[]interface{}{true, positive, pattern, exact})
-	}
-
-	testFail("")
-	testFail("X")
-
-	test("Mpattern", true, "pattern", true)
-	test("M*", true, "*", false)
-	test("M${VAR}", true, "${VAR}", false)
-	test("Npattern", false, "pattern", true)
-}
-
-func (s *Suite) Test_MkVarUseModifier_ChangesWords(c *check.C) {
-	t := s.Init(c)
-
-	test := func(modifier string, changes bool) {
-		mod := MkVarUseModifier{modifier}
-		t.CheckEquals(mod.ChangesWords(), changes)
-	}
-
-	test("E", false)
-	test("R", false)
-	test("Mpattern", false)
-	test("Npattern", false)
-	test("S,from,to,", true)
-	test("C,from,to,", true)
-	test("tl", false)
-	test("tu", false)
-	test("sh", true)
-
-	test("unknown", true)
-}
-
-// Ensures that ChangesWords cannot be called with an empty string as modifier.
-func (s *Suite) Test_MkVarUseModifier_ChangesWords__empty(c *check.C) {
-	t := s.Init(c)
-
-	mkline := t.NewMkLine("filename.mk", 123, "\t${VAR:}")
-
-	n := 0
-	mkline.ForEachUsed(func(varUse *MkVarUse, time VucTime) {
-		n += 100
-		for _, mod := range varUse.modifiers {
-			mod.ChangesWords()
-			n++
-		}
-	})
-
-	t.CheckOutputEmpty()
-	t.CheckEquals(n, 100)
-}
-
 func (s *Suite) Test_MkVarUseModifier_MatchSubst(c *check.C) {
 	t := s.Init(c)
 
@@ -227,4 +148,83 @@ func (s *Suite) Test_MkVarUseModifier_Subst__C_with_complex_replacement(c *check
 
 	t.CheckEquals(ok, false)
 	t.CheckEquals(result, "")
+}
+
+func (s *Suite) Test_MkVarUseModifier_MatchMatch(c *check.C) {
+	t := s.Init(c)
+
+	testFail := func(modifier string) {
+		mod := MkVarUseModifier{modifier}
+		ok, _, _, _ := mod.MatchMatch()
+		t.CheckEquals(ok, false)
+	}
+	test := func(modifier string, positive bool, pattern string, exact bool) {
+		mod := MkVarUseModifier{modifier}
+		actualOk, actualPositive, actualPattern, actualExact := mod.MatchMatch()
+		t.CheckDeepEquals(
+			[]interface{}{actualOk, actualPositive, actualPattern, actualExact},
+			[]interface{}{true, positive, pattern, exact})
+	}
+
+	testFail("")
+	testFail("X")
+
+	test("Mpattern", true, "pattern", true)
+	test("M*", true, "*", false)
+	test("M${VAR}", true, "${VAR}", false)
+	test("Npattern", false, "pattern", true)
+}
+
+func (s *Suite) Test_MkVarUseModifier_ChangesWords(c *check.C) {
+	t := s.Init(c)
+
+	test := func(modifier string, changes bool) {
+		mod := MkVarUseModifier{modifier}
+		t.CheckEquals(mod.ChangesWords(), changes)
+	}
+
+	test("E", false)
+	test("R", false)
+	test("Mpattern", false)
+	test("Npattern", false)
+	test("S,from,to,", true)
+	test("C,from,to,", true)
+	test("tl", false)
+	test("tu", false)
+	test("sh", true)
+
+	test("unknown", true)
+}
+
+// Ensures that ChangesWords cannot be called with an empty string as modifier.
+func (s *Suite) Test_MkVarUseModifier_ChangesWords__empty(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("filename.mk", 123, "\t${VAR:}")
+
+	n := 0
+	mkline.ForEachUsed(func(varUse *MkVarUse, time VucTime) {
+		n += 100
+		for _, mod := range varUse.modifiers {
+			mod.ChangesWords()
+			n++
+		}
+	})
+
+	t.CheckOutputEmpty()
+	t.CheckEquals(n, 100)
+}
+
+func (s *Suite) Test_MkVarUse_Mod(c *check.C) {
+	t := s.Init(c)
+
+	test := func(varUseText string, mod string) {
+		line := t.NewLine("filename.mk", 123, "")
+		varUse := NewMkParser(line, varUseText).VarUse()
+		t.CheckOutputEmpty()
+		t.CheckEquals(varUse.Mod(), mod)
+	}
+
+	test("${varname:Q}", ":Q")
+	test("${PATH:ts::Q}", ":ts::Q")
 }
