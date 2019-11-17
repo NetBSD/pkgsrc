@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2016/01/23 01:25:31 markd Exp $
+$NetBSD: distinfo,v 1.8 2019/11/17 08:48:32 markd Exp $
 
-SHA1 (digikam-4.13.0.tar.bz2) = d696ac88dcb3bcbd3a5da83b0fbe5e7315a43f92
-RMD160 (digikam-4.13.0.tar.bz2) = 11d6aa15a94cd38acca79f2a31f65393a01a2b0b
-SHA512 (digikam-4.13.0.tar.bz2) = 0cadb55f568a34d07f008791ca351428f4cd9e7060ba79aa8acc25e5e38f0bbcd586df764dacbcb9d1dadb56d2fb9160760cc89aeab4d7cef9bdbd26f691752b
-Size (digikam-4.13.0.tar.bz2) = 69554099 bytes
-SHA1 (patch-CMakeLists.txt) = 6689bf5d75f405425cc4d51aff9a49f6d48412eb
+SHA1 (libkvkontakte-5.0.0.tar.xz) = 0e1fa71e045916fd0762136464f56c62847cefa6
+RMD160 (libkvkontakte-5.0.0.tar.xz) = 3c870680656e2ec443350d982409ec5fd37940a0
+SHA512 (libkvkontakte-5.0.0.tar.xz) = bc7fa3d2d8a815c3a8b2265bf45500c10ac31383883a6a19802c5d01be5c16c1e72a8fe0c2c7cc086c9a7403ce001df0629e546caa872a2ae599e3a2650ef1af
+Size (libkvkontakte-5.0.0.tar.xz) = 59116 bytes
