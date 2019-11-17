@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.44 2019/11/02 22:38:00 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/17 02:59:09 markd Exp $
 
-DISTNAME=	libksane-15.08.3
-PKGREVISION=	12
+DISTNAME=	libksane-${KAPPSVER}
 CATEGORIES=	graphics
+
+HOMEPAGE=	https://kde.org/applications/graphics/
 COMMENT=	SANE Library interface for KDE
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-PKGCONFIG_OVERRIDE+=	libksane.pc.cmake
-
-.include "../../meta-pkgs/kde4/kde4.mk"
+USE_TOOLS+=	msgmerge
 
 .include "../../graphics/sane-backends/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../security/kwallet/buildlink3.mk"
+.include "../../x11/ktextwidgets/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
