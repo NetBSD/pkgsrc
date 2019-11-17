@@ -1,6 +1,6 @@
 The Hewlett-Packard IA-64 instruction set simulator
 
-To get the ski to run on NetBSD/i386, you need the following:
+To get the ski to run on NetBSD, you need the following:
 
 procfs support in the kernel:
 	http://www.netbsd.org/docs/guide/en/chap-linux.html#chap-linux-emulating-procfs
