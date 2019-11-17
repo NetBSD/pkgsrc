@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4999 2019/11/17 21:23:02 leot Exp $
+$NetBSD: CHANGES-2019,v 1.5000 2019/11/17 21:41:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8024,3 +8024,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/iortcw version 1.51c [nia 2019-11-17]
 	Updated print/cups-base to 2.3.0 [leot 2019-11-17]
 	Updated print/cups to 2.3.0 [leot 2019-11-17]
+	Updated chat/py-hangups to 0.4.10 [leot 2019-11-17]
