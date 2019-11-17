@@ -355,6 +355,9 @@ func (s *Suite) Test_Pkgsrc_parseDocChange(c *check.C) {
 	test("\tAdded something [author date]",
 		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tAdded something [author date]")
 
+	test("\tAdded category/package 1.0 [author 2019-11-17]",
+		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tAdded category/package 1.0 [author 2019-11-17]")
+
 	test("\t\tToo large indentation",
 		"WARN: doc/CHANGES-2019:123: Package changes should be indented using a single tab, not \"\\t\\t\".")
 	test("\t Too large indentation",
