@@ -25,7 +25,7 @@ func CheckFileAlternatives(filename string) {
 	checkPlistAlternative := func(line *Line, alternative string) {
 		relImplementation := strings.Replace(alternative, "@PREFIX@/", "", 1)
 		plistName := replaceAll(relImplementation, `@(\w+)@`, "${$1}")
-		if plist.Files[plistName] != nil || G.Pkg.vars.Defined("ALTERNATIVES_SRC") {
+		if plist.Files[plistName] != nil || G.Pkg.vars.IsDefined("ALTERNATIVES_SRC") {
 			return
 		}
 

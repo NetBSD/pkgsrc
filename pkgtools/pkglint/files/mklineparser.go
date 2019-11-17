@@ -28,10 +28,12 @@ func (p MkLineParser) Parse(line *Line) *MkLine {
 	// at the end of the line.
 	if hasPrefix(text, "\t") {
 		lex := textproc.NewLexer(text)
-		for lex.SkipByte('\t') {
-		}
+		lex.SkipHspace()
 
 		splitResult := p.split(line, lex.Rest(), false)
+		if lex.PeekByte() == '#' {
+			return p.parseCommentOrEmpty(line, p.split(line, lex.Rest(), true))
+		}
 		return p.parseShellcmd(line, splitResult)
 	}
 
