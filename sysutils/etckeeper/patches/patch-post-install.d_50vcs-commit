@@ -1,28 +1,34 @@
-$NetBSD: patch-post-install.d_50vcs-commit,v 1.3 2017/05/20 01:05:05 schmonz Exp $
+$NetBSD: patch-post-install.d_50vcs-commit,v 1.4 2019/11/17 11:57:16 mef Exp $
 
 Add SUBST_VARS token.
 
---- post-install.d/50vcs-commit.orig	2016-07-17 23:01:39.000000000 +0000
-+++ post-install.d/50vcs-commit
-@@ -1,10 +1,10 @@
+--- post-install.d/50vcs-commit.orig	2018-12-24 02:06:45.000000000 +0900
++++ post-install.d/50vcs-commit	2019-11-17 20:52:49.545914431 +0900
+@@ -1,7 +1,7 @@
  #!/bin/sh
  set -e
  
 -pl="/var/cache/etckeeper/packagelist"
 +pl="@VARBASE@/cache/etckeeper/packagelist"
  
- if etckeeper unclean; then
--	message="committing changes in /etc after $HIGHLEVEL_PACKAGE_MANAGER run"
-+	message="committing changes in ${ETCKEEPER_DIR} after $HIGHLEVEL_PACKAGE_MANAGER run"
+ # Parent process is etckeeper
+ # (Only procps ps is currently supported, others will fail,
+@@ -16,7 +16,7 @@ fi
  
- 	set +e
- 	if [ -e $pl.pre-install ] && [ "$(cat $pl.fmt 2>/dev/null || true)" = "$(etckeeper list-installed fmt)" ]; then
-@@ -21,7 +21,7 @@ if etckeeper unclean; then
+ if etckeeper unclean; then
+ 	if [ -z "${ETCKEEPER_PARENT_COMMAND_LINE}" ]; then
+-		message="committing changes in /etc after $HIGHLEVEL_PACKAGE_MANAGER run"
++		message="committing changes in ${ETCKEEPER_DIR} after $HIGHLEVEL_PACKAGE_MANAGER run"
+ 	else
+ 		message="committing changes in /etc made by \"$ETCKEEPER_PARENT_COMMAND_LINE\""
+ 	fi
+@@ -36,7 +36,8 @@ if etckeeper unclean; then
  	set -e
  
  	if [ "$status" != 0 ]; then
 -		echo "warning: etckeeper failed to commit changes in /etc using $VCS" >&2
 +		echo "warning: etckeeper failed to commit changes in ${ETCKEEPER_DIR} using $VCS" >&2
++
  	fi
  fi
- 	
+ 
