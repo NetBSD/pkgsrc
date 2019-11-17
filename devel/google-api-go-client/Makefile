@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2019/09/26 20:10:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2019/11/17 08:30:13 spz Exp $
 
 DISTNAME=		google-api-go-client
 PKGNAME=		google-api-go-client-20160909
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=google/}
 GITHUB_PROJECT=		${DISTNAME}
