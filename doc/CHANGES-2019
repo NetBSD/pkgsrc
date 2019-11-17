@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4994 2019/11/17 14:09:42 nia Exp $
+$NetBSD: CHANGES-2019,v 1.4995 2019/11/17 16:20:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8019,3 +8019,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-Apache2-AuthCookieDBI to 2.18 [mef 2019-11-17]
 	Updated sysutils/intel-microcode-netbsd to 201901115 [msaitoh 2019-11-17]
 	Updated sysutils/bchunk to 1.2.2 [nia 2019-11-17]
+	Added games/openrct2 version 0.2.4 [nia 2019-11-17]
