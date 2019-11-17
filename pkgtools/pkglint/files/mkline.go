@@ -678,8 +678,8 @@ func (mkline *MkLine) VariableNeedsQuoting(mklines *MkLines, varuse *MkVarUse, v
 	}
 
 	if !vartype.basicType.NeedsQ() {
-		if !vartype.List() {
-			if vartype.Guessed() {
+		if !vartype.IsList() {
+			if vartype.IsGuessed() {
 				return unknown
 			}
 			return no
@@ -691,7 +691,7 @@ func (mkline *MkLine) VariableNeedsQuoting(mklines *MkLines, varuse *MkVarUse, v
 
 	// A shell word may appear as part of a shell word, for example COMPILER_RPATH_FLAG.
 	if vuc.IsWordPart && vuc.quoting == VucQuotPlain {
-		if !vartype.List() && vartype.basicType == BtShellWord {
+		if !vartype.IsList() && vartype.basicType == BtShellWord {
 			return no
 		}
 	}
@@ -1056,7 +1056,7 @@ type indentationLevel struct {
 	checkedFiles []string
 }
 
-func (ind *Indentation) Empty() bool {
+func (ind *Indentation) IsEmpty() bool {
 	return len(ind.levels) == 0
 }
 
@@ -1095,7 +1095,7 @@ func (ind *Indentation) Push(mkline *MkLine, indent int, condition string) {
 //
 // Variables named *_MK are ignored since they are usually not interesting.
 func (ind *Indentation) AddVar(varname string) {
-	if hasSuffix(varname, "_MK") || ind.Empty() {
+	if hasSuffix(varname, "_MK") || ind.IsEmpty() {
 		return
 	}
 
@@ -1210,17 +1210,17 @@ func (ind *Indentation) TrackAfter(mkline *MkLine) {
 
 	case "elif":
 		// Handled here instead of TrackBefore to allow the action to access the previous condition.
-		if !ind.Empty() {
+		if !ind.IsEmpty() {
 			ind.top().args = args
 		}
 
 	case "else":
-		if !ind.Empty() {
+		if !ind.IsEmpty() {
 			ind.top().mkline.SetHasElseBranch(mkline)
 		}
 
 	case "endfor", "endif":
-		if !ind.Empty() { // Can only be false in unbalanced files.
+		if !ind.IsEmpty() { // Can only be false in unbalanced files.
 			ind.Pop()
 		}
 	}
@@ -1248,11 +1248,11 @@ func (ind *Indentation) TrackAfter(mkline *MkLine) {
 }
 
 func (ind *Indentation) CheckFinish(filename string) {
-	if ind.Empty() {
+	if ind.IsEmpty() {
 		return
 	}
 	eofLine := NewLineEOF(filename)
-	for !ind.Empty() {
+	for !ind.IsEmpty() {
 		openingMkline := ind.top().mkline
 		eofLine.Errorf(".%s from %s must be closed.", openingMkline.Directive(), eofLine.RefTo(openingMkline.Line))
 		ind.Pop()
