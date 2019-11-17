@@ -40,7 +40,7 @@ func NewVargroupsChecker(mklines *MkLines) *VargroupsChecker {
 func (ck *VargroupsChecker) init() {
 	mklines := ck.mklines
 	scope := mklines.vars
-	if !scope.Defined("_VARGROUPS") {
+	if !scope.IsDefined("_VARGROUPS") {
 		ck.skip = true
 		return
 	}
