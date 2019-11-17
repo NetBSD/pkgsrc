@@ -1,26 +1,33 @@
-# $NetBSD: Makefile,v 1.48 2019/08/22 12:23:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2019/11/17 04:22:55 markd Exp $
 
-DISTNAME=	kate-${_KDE_VERSION}
-PKGREVISION=	18
+DISTNAME=	kate-${KAPPSVER}
 CATEGORIES=	editors
-COMMENT=	KDE advanced text editor
 
-PY_PATCHPLIST=	YES
+HOMEPAGE=	https://www.kde.org/applications/utilities/kate/
+COMMENT=	KDE Advanced Text Editor
+LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-CHECK_PORTABILITY_SKIP+=	examples/syntax/highlight.sh
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+USE_TOOLS+=	msgmerge
 
-.include "../../devel/qjson/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+# generation of kded.moc fails when ${PREFIX}/include in the moc include path
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/addons/*/CMakeFiles/*_autogen.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/addons/*/*/CMakeFiles/*_autogen.dir/AutogenInfo.cmake
+SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
+
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/libkactivities4/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/py-kde4/buildlink3.mk"
-.include "../../x11/py-sip/buildlink3.mk"
-
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../devel/kitemmodels/buildlink3.mk"
+.include "../../devel/ktexteditor/buildlink3.mk"
+.include "../../devel/threadweaver/buildlink3.mk"
+.include "../../net/knewstuff/buildlink3.mk"
+.include "../../x11/kactivities5/buildlink3.mk"
+.include "../../x11/plasma-framework/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
