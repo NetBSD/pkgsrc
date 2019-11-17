@@ -178,8 +178,11 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/doc/CHANGES-2018:1: Year \"2015\" for category/package does not match the filename ~/doc/CHANGES-2018.",
 		"WARN: ~/doc/CHANGES-2018:6: Date \"2018-01-06\" for category/package is earlier than \"2018-01-09\" in line 5.",
-		"WARN: ~/doc/CHANGES-2018:8: Unknown doc/CHANGES line: \tReworked category/package to 1.2 [author8 2018-01-08]",
-		"WARN: ~/doc/CHANGES-2018:13: Unknown doc/CHANGES line: \tAdded another [new package]")
+		"WARN: ~/doc/CHANGES-2018:8: Invalid doc/CHANGES line: \tReworked category/package to 1.2 [author8 2018-01-08]",
+		"WARN: ~/doc/CHANGES-2018:10: Invalid doc/CHANGES line: \ttoo few fields",
+		"WARN: ~/doc/CHANGES-2018:11: Invalid doc/CHANGES line: \ttoo many many many many many fields",
+		"WARN: ~/doc/CHANGES-2018:12: Invalid doc/CHANGES line: \tmissing brackets around author",
+		"WARN: ~/doc/CHANGES-2018:13: Invalid doc/CHANGES line: \tAdded another [new package]")
 }
 
 func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__not_found(c *check.C) {
@@ -246,7 +249,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__default(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/doc/CHANGES-2018:6: Date \"2018-01-01\" for sysutils/checkperms is earlier than \"2018-01-05\" in line 5.",
 		"WARN: ~/doc/CHANGES-2018:7: Package changes should be indented using a single tab, not \"\\t\\t\".",
-		"WARN: ~/doc/CHANGES-2018:8: Unknown doc/CHANGES line: \tInvalid pkgpath to 1.16 [rillig 2019-06-16]",
+		"WARN: ~/doc/CHANGES-2018:8: Invalid doc/CHANGES line: \tInvalid pkgpath to 1.16 [rillig 2019-06-16]",
 		"WARN: ~/doc/CHANGES-2018:9: Year \"2019\" for category/package does not match the filename ~/doc/CHANGES-2018.",
 		"4 warnings found.",
 		t.Shquote("(Run \"pkglint -e -Cglobal -Wall %s\" to show explanations.)", "."))
@@ -331,9 +334,9 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__old(c *check.C) {
 	// The 2015 file is so old that the date is not checked.
 	// Since 2018, each date in the file must match the filename.
 	t.CheckOutputLines(
-		"WARN: ~/doc/CHANGES-2015:6: Unknown doc/CHANGES line: \tInvalid line [3 4]",
-		"WARN: ~/doc/CHANGES-2018:5: Year \"date\" for pkgpath does not match the filename ~/doc/CHANGES-2018.",
-		"WARN: ~/doc/CHANGES-2018:6: Date \"d\" for pkgpath is earlier than \"date\" in line 5.")
+		"WARN: ~/doc/CHANGES-2015:6: Invalid doc/CHANGES line: \tInvalid line [3 4]",
+		"WARN: ~/doc/CHANGES-2018:5: Invalid doc/CHANGES line: \tUpdated pkgpath to 1.0 [author date]",
+		"WARN: ~/doc/CHANGES-2018:6: Invalid doc/CHANGES line: \tUpdated pkgpath to 1.0 [author d]")
 }
 
 func (s *Suite) Test_Pkgsrc_parseDocChange(c *check.C) {
@@ -353,74 +356,96 @@ func (s *Suite) Test_Pkgsrc_parseDocChange(c *check.C) {
 		nil...)
 
 	test("\tAdded something [author date]",
-		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tAdded something [author date]")
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
+			"\tAdded something [author date]")
 
 	test("\tAdded category/package 1.0 [author 2019-11-17]",
-		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tAdded category/package 1.0 [author 2019-11-17]")
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
+			"\tAdded category/package 1.0 [author 2019-11-17]")
 
 	test("\t\tToo large indentation",
 		"WARN: doc/CHANGES-2019:123: Package changes should be indented using a single tab, not \"\\t\\t\".")
 	test("\t Too large indentation",
 		"WARN: doc/CHANGES-2019:123: Package changes should be indented using a single tab, not \"\\t \".")
 
-	// TODO: Add a warning here, since it's easy to forget a bracket.
 	test("\t1 2 3 4",
-		nil...)
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: \t1 2 3 4")
 	test("\t1 2 3 4 5",
-		nil...)
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: \t1 2 3 4 5")
 	test("\t1 2 3 4 5 6",
-		nil...)
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: \t1 2 3 4 5 6")
 	test("\t1 2 3 4 5 6 7",
-		nil...)
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: \t1 2 3 4 5 6 7")
 	test("\t1 2 [3 4",
-		nil...)
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: \t1 2 [3 4")
 	test("\t1 2 [3 4]",
-		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \t1 2 [3 4]")
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: \t1 2 [3 4]")
 	test("\tAdded 2 [3 4]",
-		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tAdded 2 [3 4]")
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: \tAdded 2 [3 4]")
 
-	test("\tAdded pkgpath version 1.0 [author date]",
+	test("\tAdded pkgpath version 1.0 [author 2019-01-01]",
 		nil...)
+
 	// "to" is wrong
 	test("\tAdded pkgpath to 1.0 [author date]",
-		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tAdded pkgpath to 1.0 [author date]")
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
+			"\tAdded pkgpath to 1.0 [author date]")
 
-	test("\tUpdated pkgpath to 1.0 [author date]",
+	test("\tUpdated pkgpath to 1.0 [author 2019-01-01]",
 		nil...)
+
 	// "from" is wrong
 	test("\tUpdated pkgpath from 1.0 [author date]",
-		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tUpdated pkgpath from 1.0 [author date]")
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
+			"\tUpdated pkgpath from 1.0 [author date]")
 
-	test("\tDowngraded pkgpath to 1.0 [author date]",
+	test("\tDowngraded pkgpath to 1.0 [author 2019-01-01]",
 		nil...)
+
 	// "from" is wrong
 	test("\tDowngraded pkgpath from 1.0 [author date]",
-		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tDowngraded pkgpath from 1.0 [author date]")
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
+			"\tDowngraded pkgpath from 1.0 [author date]")
 
-	test("\tRemoved pkgpath [author date]",
+	test("\tRemoved pkgpath [author 2019-01-01]",
 		nil...)
-	test("\tRemoved pkgpath successor pkgpath [author date]",
+
+	test("\tRemoved pkgpath successor pkgpath [author 2019-01-01]",
 		nil...)
+
 	// "and" is wrong
 	test("\tRemoved pkgpath and pkgpath [author date]",
-		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tRemoved pkgpath and pkgpath [author date]")
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
+			"\tRemoved pkgpath and pkgpath [author date]")
 
-	test("\tRenamed pkgpath to other [author date]",
+	test("\tRenamed pkgpath to other [author 2019-01-01]",
 		nil...)
+
 	// "from" is wrong
 	test("\tRenamed pkgpath from previous [author date]",
-		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tRenamed pkgpath from previous [author date]")
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
+			"\tRenamed pkgpath from previous [author date]")
 
-	test("\tMoved pkgpath to other [author date]",
+	test("\tMoved pkgpath to other [author 2019-01-01]",
 		nil...)
+
 	// "from" is wrong
 	test("\tMoved pkgpath from previous [author date]",
-		"WARN: doc/CHANGES-2019:123: Unknown doc/CHANGES line: \tMoved pkgpath from previous [author date]")
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
+			"\tMoved pkgpath from previous [author date]")
 
 	// "Split" is wrong
-	// TODO: Add a warning since this is probably a typo.
 	test("\tSplit pkgpath into a and b [author date]",
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
+			"\tSplit pkgpath into a and b [author date]")
+
+	// Entries ending in a colon are used for infrastructure changes.
+	test("\tmk: remove support for USE_CROSSBASE [author 2016-06-19]",
 		nil...)
+
+	test("\tAdded category/pkgpath version 1.0 [author-dash 2019-01-01]",
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
+			"\tAdded category/pkgpath version 1.0 [author-dash 2019-01-01]")
 }
 
 func (s *Suite) Test_Pkgsrc_checkRemovedAfterLastFreeze(c *check.C) {
