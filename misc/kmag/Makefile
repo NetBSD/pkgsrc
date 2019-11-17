@@ -1,17 +1,20 @@
-# $NetBSD: Makefile,v 1.42 2019/08/22 12:23:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2019/11/17 04:51:24 markd Exp $
 
-DISTNAME=	kmag-16.12.0
-PKGREVISION=	9
+DISTNAME=	kmag-${KAPPSVER}
 CATEGORIES=	misc
+
+HOMEPAGE=	https://kde.org/applications/utilities/kmag/
 COMMENT=	KDE screen magnifier
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.12.0/src/}
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
+USE_TOOLS+=	msgmerge
+
+.include "../../devel/kio/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
