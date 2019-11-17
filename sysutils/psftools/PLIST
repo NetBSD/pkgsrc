@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/07/23 23:47:16 bjs Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/11/17 12:35:41 mef Exp $
 bin/bbc2psf
 bin/cpi2psf
 bin/cpicomp
@@ -24,6 +24,7 @@ bin/psfjoin
 bin/psfmerge
 bin/psfpages
 bin/psfs2cpi
+bin/psfs2mda
 bin/psfxform
 bin/raw2psf
 bin/txt2psf
@@ -55,6 +56,7 @@ man/man1/psfjoin.1
 man/man1/psfmerge.1
 man/man1/psfpages.1
 man/man1/psfs2cpi.1
+man/man1/psfs2mda.1
 man/man1/psfxform.1
 man/man1/raw2psf.1
 man/man1/txt2psf.1
