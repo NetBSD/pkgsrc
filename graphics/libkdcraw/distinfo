@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.22 2019/11/02 17:09:54 maya Exp $
+$NetBSD: distinfo,v 1.23 2019/11/17 02:52:23 markd Exp $
 
-SHA1 (libkdcraw-15.08.3.tar.xz) = faf93404a36162a381abcafd289e3de811774a25
-RMD160 (libkdcraw-15.08.3.tar.xz) = a70f999dc10b4ed473ecec8ea0548a1f5c969e29
-SHA512 (libkdcraw-15.08.3.tar.xz) = f77902a768df26368a67f680cb1e5c54eec5f44b5598ff9966c30abdfd977ea683a738cf01749557f144d58a85121afea61a8e5f7ec80d1c2d55a3bdf9549c39
-Size (libkdcraw-15.08.3.tar.xz) = 102308 bytes
-SHA1 (patch-libkdcraw_kdcraw__p.cpp) = 96ecd8cdb7ee0258a23e07fb33b9f1a3697deb0f
+SHA1 (libkdcraw-19.08.3.tar.xz) = 59f41fd13d365c10072ba8f63120ed565139c58d
+RMD160 (libkdcraw-19.08.3.tar.xz) = e8d1202f0445d7fa30ef1993aca3f6fe43cbe260
+SHA512 (libkdcraw-19.08.3.tar.xz) = 295e171f174e574c2bd016f597321b2aa04f82bb8fbd4144d1227834cf11b22cbaeb4c07154ce23d917c6fd606f6235680f38e877bb1f769212c7308815dde9d
+Size (libkdcraw-19.08.3.tar.xz) = 42192 bytes
