@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.32 2019/08/22 12:23:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/17 04:08:53 markd Exp $
 
-DISTNAME=	juk-${_KDE_VERSION}
-PKGREVISION=	15
+DISTNAME=	juk-${KAPPSVER}
 CATEGORIES=	multimedia
-COMMENT=	a jukebox, tagger and music collection manager.
 
-post-patch:
-	cp ${WRKSRC}/tag.h ${WRKSRC}/tagxx.h
+HOMEPAGE=	https://kde.org/applications/multimedia/juk/
+COMMENT=	Jukebox, tagger and music collection manager
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
-.include "../../audio/libtunepimp/buildlink3.mk"
+USE_TOOLS+=	msgmerge
+
 .include "../../audio/taglib/buildlink3.mk"
+.include "../../devel/kio/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
