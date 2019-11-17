@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.40 2019/08/22 12:23:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2019/11/17 04:59:39 markd Exp $
 
-DISTNAME=	ktimer-${_KDE_VERSION}
-PKGREVISION=	14
+DISTNAME=	ktimer-${KAPPSVER}
 CATEGORIES=	time
+
+HOMEPAGE=	https://kde.org/applications/utilities/ktimer/
 COMMENT=	KDE countdown launcher
+LICENSE=	gnu-gpl-v2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
+USE_TOOLS+=	msgmerge
+
+.include "../../devel/kio/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
