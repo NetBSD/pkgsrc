@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2019/11/05 19:16:31 rillig Exp $
+# $NetBSD: Makefile,v 1.58 2019/11/17 11:11:21 wiz Exp $
 
 DISTNAME=	rspamd-2.1
 CATEGORIES=	mail
@@ -23,7 +23,7 @@ BUILD_DEFS+=	VARBASE
 LUA_VERSIONS_ACCEPTED=	53
 
 CPPFLAGS.SunOS+=			-D__EXTENSIONS__
-BUILDLINK_FNAME_TRANSFORM.Darwin+=	-e "s|-lrt||g"
+BUILDLINK_TRANSFORM.Darwin+=		rm:-lrt
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/rspamd
 TEST_TARGET=	run-test
