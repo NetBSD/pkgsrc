@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/17 17:56:48 nia Exp $
+bin/iowolfded
+bin/iowolfmp
+bin/iowolfsp
+share/applications/iowolfmp.desktop
+share/applications/iowolfsp.desktop
+share/icons/hicolor/scalable/apps/wolfmp.svg
+share/icons/hicolor/scalable/apps/wolfsp.svg
+share/iortcw/iowolfded.x86_64
+share/iortcw/iowolfmp.x86_64
+share/iortcw/iowolfmp_rend2.x86_64
+share/iortcw/iowolfsp.x86_64
+share/iortcw/iowolfsp_rend2.x86_64
+share/iortcw/iowolfspded.x86_64
+share/iortcw/main/cgame.mp.x86_64.so
+share/iortcw/main/cgame.sp.x86_64.so
+share/iortcw/main/qagame.mp.x86_64.so
+share/iortcw/main/qagame.sp.x86_64.so
+share/iortcw/main/ui.mp.x86_64.so
+share/iortcw/main/ui.sp.x86_64.so

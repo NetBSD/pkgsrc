@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.469 2019/11/17 16:19:57 nia Exp $
+# $NetBSD: Makefile,v 1.470 2019/11/17 17:56:48 nia Exp $
 #
 
 COMMENT=	Games
@@ -185,6 +185,7 @@ SUBDIR+=	imaze
 SUBDIR+=	ioquake3
 SUBDIR+=	ioquake3-pk3
 SUBDIR+=	ioquake3-raspberrypi
+SUBDIR+=	iortcw
 SUBDIR+=	ivan
 SUBDIR+=	jetpack
 SUBDIR+=	jin
