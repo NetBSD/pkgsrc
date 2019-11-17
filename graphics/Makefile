@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.858 2019/11/10 20:11:30 maya Exp $
+# $NetBSD: Makefile,v 1.859 2019/11/17 02:16:49 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -319,6 +319,7 @@ SUBDIR+=	libiptcdata
 SUBDIR+=	libjpeg-turbo
 SUBDIR+=	libkdcraw
 SUBDIR+=	libkexiv2
+SUBDIR+=	libkexiv2-kde4
 SUBDIR+=	libkface
 SUBDIR+=	libkipi
 SUBDIR+=	libksane
