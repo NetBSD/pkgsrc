@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2014/11/13 20:06:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/11/17 03:07:33 markd Exp $
 include/qmobipocket/mobipocket.h
 include/qmobipocket/qfilestream.h
 include/qmobipocket/qmobipocket_export.h
 lib/cmake/QMobipocket/QMobipocketConfig.cmake
-lib/kde4/mobithumbnail.so
+lib/cmake/QMobipocket/QMobipocketConfigVersion.cmake
+lib/cmake/QMobipocket/QMobipocketTargets-noconfig.cmake
+lib/cmake/QMobipocket/QMobipocketTargets.cmake
 lib/libqmobipocket.so
-lib/libqmobipocket.so.1
-lib/libqmobipocket.so.1.0.0
-lib/strigi/strigila_mobi.so
-share/kde4/services/mobithumbnail.desktop
+lib/libqmobipocket.so.2
+lib/libqmobipocket.so.2.0.0
+qt5/plugins/mobithumbnail.so
+share/kservices5/mobithumbnail.desktop
