@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19460 2019/11/17 11:26:33 wiz Exp $
+$NetBSD: TODO,v 1.19461 2019/11/17 13:44:00 leot Exp $
 
 Suggested new packages
 ======================
@@ -511,7 +511,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crafty-25.0.1
 	o cross-h8300-hms-binutils-2.17
 	o csharp-mysql-6.9.8
-	o cups-base-2.3.0
+	o cups-base-2.3.0 [leot]
 	o cvsutils-0.2.6
 	o cxref-1.6e
 	o cygwin_lib-1.5.24.2
