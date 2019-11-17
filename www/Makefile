@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1414 2019/11/06 13:35:18 ng0 Exp $
+# $NetBSD: Makefile,v 1.1415 2019/11/17 04:43:48 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -166,6 +166,7 @@ SUBDIR+=	kannel
 SUBDIR+=	kdewebdev4
 SUBDIR+=	kdewebkit
 SUBDIR+=	khtml
+SUBDIR+=	kimagemapeditor
 SUBDIR+=	kjs
 SUBDIR+=	kjsembed
 SUBDIR+=	kore
