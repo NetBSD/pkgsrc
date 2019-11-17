@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.11 2019/11/16 22:15:24 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.12 2019/11/17 08:40:01 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q3 branch:
 
@@ -65,4 +65,11 @@ graphics/ImageMagick: security fix
 
 Pullup ticket #6086 - requested by bouyer
 sysutils/xenkernel411: security fix
+
+Pullup ticket #6080 - requested by bouyer
+geography/opencpn: build fix
+
+Pullup ticket #6083 - requested by leot
+lang/go112: security update
+lang/go: update available version
 
