@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2012/03/20 00:14:36 markd Exp $
-lib/kde4/gsthumbnail.so
-lib/kde4/rawthumbnail.so
-share/kde4/services/gsthumbnail.desktop
-share/kde4/services/rawthumbnail.desktop
+@comment $NetBSD: PLIST,v 1.2 2019/11/17 05:14:17 markd Exp $
+qt5/plugins/blenderthumbnail.so
+qt5/plugins/gsthumbnail.so
+qt5/plugins/rawthumbnail.so
+share/kservices5/blenderthumbnail.desktop
+share/kservices5/gsthumbnail.desktop
+share/kservices5/rawthumbnail.desktop
