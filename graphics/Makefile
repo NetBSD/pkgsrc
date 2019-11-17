@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.859 2019/11/17 02:16:49 markd Exp $
+# $NetBSD: Makefile,v 1.860 2019/11/17 03:52:37 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -537,6 +537,7 @@ SUBDIR+=	simage
 SUBDIR+=	skencil
 SUBDIR+=	slim-themes
 SUBDIR+=	spcaview
+SUBDIR+=	spectacle
 SUBDIR+=	svgpart
 SUBDIR+=	sxiv
 SUBDIR+=	tango-icon-theme
