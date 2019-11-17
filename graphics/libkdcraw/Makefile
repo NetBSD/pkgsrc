@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.68 2019/11/02 22:37:59 rillig Exp $
+# $NetBSD: Makefile,v 1.69 2019/11/17 02:52:23 markd Exp $
 
-DISTNAME=	libkdcraw-15.08.3
-PKGREVISION=	12
+DISTNAME=	libkdcraw-${KAPPSVER}
 CATEGORIES=	graphics
+
+HOMEPAGE=	https://kde.org/applications/graphics/
 COMMENT=	KDE digital camera raw image library wrapper
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-PKGCONFIG_OVERRIDE+=	libkdcraw.pc.cmake
+USE_TOOLS+=	pkg-config
 
-.include "../../meta-pkgs/kde4/kde4.mk"
-
+BUILDLINK_API_DEPENDS.libraw+=	libraw>=0.18.0
 .include "../../graphics/libraw/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
