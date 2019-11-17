@@ -1,17 +1,27 @@
-# $NetBSD: Makefile,v 1.80 2019/11/02 22:37:59 rillig Exp $
+# $NetBSD: Makefile,v 1.81 2019/11/17 02:45:29 markd Exp $
 
-DISTNAME=	libkipi-15.08.3
-PKGREVISION=	9
+DISTNAME=	libkipi-${KAPPSVER}
 CATEGORIES=	graphics
+
+HOMEPAGE=	https://kde.org/applications/graphics/
 COMMENT=	KDE image plugin interface
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-PKGCONFIG_OVERRIDE+=	libkipi.pc.cmake
+USE_TOOLS+=	pkg-config
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+# generation of kded.moc fails when ${PREFIX}/include in the moc include path
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/tests/plugins/CMakeFiles/kipiplugin_kxmlhelloworld_autogen.dir/AutogenInfo.cmake
+SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/libkexiv2/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/kxmlgui/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
