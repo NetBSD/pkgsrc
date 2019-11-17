@@ -1,17 +1,7 @@
-$NetBSD: distinfo,v 1.47 2015/11/03 20:47:48 markd Exp $
+$NetBSD: distinfo,v 1.48 2019/11/17 09:11:20 markd Exp $
 
-SHA1 (digikam-4.13.0.tar.bz2) = d696ac88dcb3bcbd3a5da83b0fbe5e7315a43f92
-RMD160 (digikam-4.13.0.tar.bz2) = 11d6aa15a94cd38acca79f2a31f65393a01a2b0b
-SHA512 (digikam-4.13.0.tar.bz2) = 0cadb55f568a34d07f008791ca351428f4cd9e7060ba79aa8acc25e5e38f0bbcd586df764dacbcb9d1dadb56d2fb9160760cc89aeab4d7cef9bdbd26f691752b
-Size (digikam-4.13.0.tar.bz2) = 69554099 bytes
-SHA1 (patch-CMakeLists.txt) = ee3eba86700bc98c27fa43b53a295b20d9f6be2e
-SHA1 (patch-core_CMakeLists.txt) = 672b7327a66a67eaddc4f74121a1039c4ef318e5
-SHA1 (patch-core_README) = 66feff98fe74f9bb0478fb183f5292d48474bce9
-SHA1 (patch-core_app_album_albumwatch.cpp) = b43de7db712d3ee59412f350e4dd3cd805600556
-SHA1 (patch-core_app_utils_libopencv.h) = bba134463fc923afa5d54d2fbfe8cbd7569aef7b
-SHA1 (patch-core_libs_3rdparty_kmemoryinfo_kmemoryinfo_backend.cpp) = 050904de646281448da1bba7a9fb1b1b0fad51b1
-SHA1 (patch-core_libs_database_imgqsort_imgqsort.cpp) = db8750b66dc6e2c08958795e747a564f0506d7b1
-SHA1 (patch-core_libs_dimg_filters_icc_iccmanager.h) = 999bd32312fbe840913a8d29613b351384061b65
-SHA1 (patch-core_tests_imgqsort_detectblur_detectblur.cpp) = 6d1e05be8887e2473051761f0919edec0ced03ef
-SHA1 (patch-core_tests_imgqsort_detectnoise_detectnoise.cpp) = db708620ed31325429b61a1074eea25c64cd72ad
-SHA1 (patch-doc_CMakeLists.txt) = 5b4ba1daa49607b8773c3903d953e11bebc4d661
+SHA1 (digikam-6.4.0.tar.xz) = 8783a23c2ce8824ef61c8bc7d38c7b555588dd75
+RMD160 (digikam-6.4.0.tar.xz) = 3b9dd9378e13f12a5114a5864df9c8995c5cc161
+SHA512 (digikam-6.4.0.tar.xz) = 952ecb8c1a4f5477afd7b388df6be803482540fe9e4c4bc5011929f2cf0b4225396f2e940cbba2a45208f069deda1a8352a6841a4162b1099805c1cc60bd7c73
+Size (digikam-6.4.0.tar.xz) = 1001152608 bytes
+SHA1 (patch-core_libs_kmemoryinfo_libstatgrab_kmemoryinfo_backend.cpp) = 2dda961ce33d535cef998a490eeb1969419cbc17
