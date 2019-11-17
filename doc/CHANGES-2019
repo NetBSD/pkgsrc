@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.4992 2019/11/17 13:25:05 mef Exp $
+$NetBSD: CHANGES-2019,v 1.4993 2019/11/17 13:27:28 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8017,3 +8017,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/psftools to 1.0.13 [mef 2019-11-17]
 	Updated sysutils/rdfind to 1.4.1 [mef 2019-11-17]
 	Updated www/p5-Apache2-AuthCookieDBI to 2.18 [mef 2019-11-17]
+	Updated sysutils/intel-microcode-netbsd to 201901115 [msaitoh 2019-11-17]
