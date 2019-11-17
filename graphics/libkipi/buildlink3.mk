@@ -1,15 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.60 2019/08/22 12:23:20 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.61 2019/11/17 02:45:29 markd Exp $
 
 BUILDLINK_TREE+=	libkipi
 
 .if !defined(LIBKIPI_BUILDLINK3_MK)
 LIBKIPI_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libkipi+=	libkipi>=4.8.0
-BUILDLINK_ABI_DEPENDS.libkipi?=	libkipi>=15.08.3nb9
+BUILDLINK_API_DEPENDS.libkipi+=	libkipi>=17.12.1
 BUILDLINK_PKGSRCDIR.libkipi?=	../../graphics/libkipi
 
-.include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../x11/kxmlgui/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .endif	# LIBKIPI_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libkipi
