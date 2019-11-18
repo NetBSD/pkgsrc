@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/11/03 18:50:18 triaxx Exp $
+$NetBSD: distinfo,v 1.9 2019/11/18 15:42:42 wiz Exp $
 
-SHA1 (baikal-0.6.0.zip) = 47398b00cad4330bfac9df8abc03df896e2d206f
-RMD160 (baikal-0.6.0.zip) = 3c0e03f2558c18997f0a712d313d67fd6b0dbf87
-SHA512 (baikal-0.6.0.zip) = 75cd3e30c3df4bc5057e14215b320647c9683702171671ed58ac83e12f7770454d81970f036fd96dbb9aefe0928fcf40ae11128687fd261a0dccadf15d148905
-Size (baikal-0.6.0.zip) = 3432758 bytes
+SHA1 (baikal-0.6.1.zip) = c971ee72540d85d747caf8bccd8bcfecf3502873
+RMD160 (baikal-0.6.1.zip) = 8bea262e34d6802580621e0b8c05fb8ddb2124cc
+SHA512 (baikal-0.6.1.zip) = d88ed9fbe1f934d52fd798165675b90972c47c9e138de61e17a14777590ebad5006c1a414a4e0119eb8fa718e01f2aadb6e1d180e23a51fb33e1b5a3539c9e38
+Size (baikal-0.6.1.zip) = 3437686 bytes
