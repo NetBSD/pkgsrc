@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5012 2019/11/18 15:45:19 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5013 2019/11/18 15:52:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8079,3 +8079,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added www/p5-Browser-Open version 0.04 [mef 2019-11-18]
 	Updated net/php-baikal to 0.6.1 [wiz 2019-11-18]
 	Updated security/ruby-ruby-openid to 2.9.2 [taca 2019-11-18]
+	Updated security/ruby-sshkit to 1.20.0 [taca 2019-11-18]
