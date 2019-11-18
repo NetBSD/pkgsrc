@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 20:57:01 agc Exp $
+$NetBSD: distinfo,v 1.8 2019/11/18 10:48:29 markd Exp $
 
-SHA1 (palapeli-4.14.3.tar.xz) = 1f1419c96804fc95dcf2518cf7656f63c2b66ca7
-RMD160 (palapeli-4.14.3.tar.xz) = be0b51037a44bee1331b3b45d61487f1d2a93c4f
-SHA512 (palapeli-4.14.3.tar.xz) = 1e7737754441195f43e9a73fa312da43335ea7738384571d5bce18e01777584ebd962aa30c92f0e1809033ff9978e1ab32a37e2f924444a92868ef70440338b0
-Size (palapeli-4.14.3.tar.xz) = 1747840 bytes
-SHA1 (patch-src_engine_puzzlepreview.cpp) = 5a9139be67209840989c26f1faffff08a1c2c9b4
+SHA1 (palapeli-19.08.3.tar.xz) = 2594154282e892ce7e4d57dfb5d9a29f8fec228d
+RMD160 (palapeli-19.08.3.tar.xz) = c0b59b6492814cb60d8bf4bd666a8b25d2aa13fd
+SHA512 (palapeli-19.08.3.tar.xz) = 1e263e10a3d6d1dfbc2a0951297cbcc381cd789d5c806ec4ad57db4feef9a9e6a525e61991d03d554a02154652cbfe485a135da72822d03d35579de171c91ee0
+Size (palapeli-19.08.3.tar.xz) = 2069352 bytes
