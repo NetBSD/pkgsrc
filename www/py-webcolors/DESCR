@@ -1,3 +1,4 @@
+webcolors is a Python module for working with HTML/CSS color definitions.
 Support is included for the following formats (RGB colorspace only;
 conversion to/from HSL can be handled by the ``colorsys`` module in
 the Python standard library):
