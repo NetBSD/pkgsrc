@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/20 07:15:48 adam Exp $
+$NetBSD: distinfo,v 1.8 2019/11/18 17:03:11 adam Exp $
 
-SHA1 (pyobjc-framework-CoreWLAN-5.2.tar.gz) = 3f6e65c96c85e2c1db2b78253aa0eb5041c310f2
-RMD160 (pyobjc-framework-CoreWLAN-5.2.tar.gz) = ba51694618c645c3bc793e5d0c5763ca95244d4f
-SHA512 (pyobjc-framework-CoreWLAN-5.2.tar.gz) = 03f629d703a6c2f31f5d58e309a459f4d9a1a275a2cdd4d831ed9bf730a26a449c9af5df26f3f03480a57461f734fe85cd5a016f20fd4eafde33b98376c087ce
-Size (pyobjc-framework-CoreWLAN-5.2.tar.gz) = 41720 bytes
+SHA1 (pyobjc-framework-CoreWLAN-6.1.tar.gz) = a6ec118c0cb8530efc94a550b54fc3c29e34f637
+RMD160 (pyobjc-framework-CoreWLAN-6.1.tar.gz) = 3d238266973e8e82ba839e9479472f952a3a593d
+SHA512 (pyobjc-framework-CoreWLAN-6.1.tar.gz) = ca8e1fba2857bc722dc3b00f204a5ffe26e42d5d7158fb0166ba77bd5a87d0dcbc46e3e57c0e58df45ea9b5eac768d72c273e5a62757ff862947d13364fad7ab
+Size (pyobjc-framework-CoreWLAN-6.1.tar.gz) = 45391 bytes

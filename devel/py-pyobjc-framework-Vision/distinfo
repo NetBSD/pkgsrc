@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/20 07:15:55 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/11/18 17:03:17 adam Exp $
 
-SHA1 (pyobjc-framework-Vision-5.2.tar.gz) = 04613cb1a641a0c9e947be0b12f864e6edf01a4c
-RMD160 (pyobjc-framework-Vision-5.2.tar.gz) = ed41843042303f62ff5e59fce6a8996f32948290
-SHA512 (pyobjc-framework-Vision-5.2.tar.gz) = d5193831e3db8318e472ae9d43caef990b52932f3f29db4540c6bfa2b3becea08766c18a04b2cc28e957c92fb17d3c9a8dddea80ccbc58061236c670c446a57d
-Size (pyobjc-framework-Vision-5.2.tar.gz) = 21316 bytes
+SHA1 (pyobjc-framework-Vision-6.1.tar.gz) = 81c5a682adf9efd0893fecfc82e4f0a383845483
+RMD160 (pyobjc-framework-Vision-6.1.tar.gz) = b63b7e8494a4cedebe0f04ffe03ab113a008b945
+SHA512 (pyobjc-framework-Vision-6.1.tar.gz) = aff83da6421ee285a4fd54bd971008807178b9c4b049386fbbe12c00688302b6e14796a4ceb0900227eaba7779930b43f9382d86fcfc6f8e9303cda08c6d2b11
+Size (pyobjc-framework-Vision-6.1.tar.gz) = 28860 bytes
