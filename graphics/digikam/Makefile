@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2019/11/17 09:11:20 markd Exp $
+# $NetBSD: Makefile,v 1.145 2019/11/18 14:23:55 wiz Exp $
 
 DISTNAME=	digikam-6.4.0
 CATEGORIES=	graphics
@@ -28,13 +28,13 @@ CXXFLAGS.NetBSD+=	-D_KERNTYPES
 .include "../../graphics/kiconthemes/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/lensfun/buildlink3.mk"
-.include "../../wip/libksane/buildlink3.mk"
+.include "../../graphics/libksane/buildlink3.mk"
 .include "../../graphics/liblqr/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/opencv/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
-.include "../../wip/libkvkontakte/buildlink3.mk"
+.include "../../misc/libkvkontakte/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
