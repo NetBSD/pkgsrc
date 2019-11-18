@@ -1,4 +1,4 @@
-# $NetBSD: Shell.pm,v 1.3 2019/10/06 11:06:42 rillig Exp $
+# $NetBSD: Shell.pm,v 1.4 2019/11/18 08:06:59 rillig Exp $
 #
 # Parsing and checking shell commands embedded in Makefiles
 #
@@ -524,8 +524,8 @@ sub checkline_mk_shelltext($$) {
 				}
 
 			} else {
-				$opt_warn_extra and $line->log_warning("Unknown shell command \"${shellword}\".");
-				$opt_warn_extra and $line->explain_warning(
+				0 and $opt_warn_extra and $line->log_warning("Unknown shell command \"${shellword}\".");
+				0 and $opt_warn_extra and $line->explain_warning(
 "If you want your package to be portable to all platforms that pkgsrc",
 "supports, you should only use shell commands that are covered by the",
 "tools framework.");
