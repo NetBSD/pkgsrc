@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.25 2019/11/18 07:50:51 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.26 2019/11/18 07:56:02 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -1251,6 +1251,7 @@ def test_Adjuster_generate_lines():
     assert adjuster.makefile_lines.set('#LICENSE', 'BSD # TODO: too unspecific')
     adjuster.depends.append('dependency>=0:../../category/dependency')
     adjuster.todos.append('Run pkglint')
+    adjuster.tools.add('gmake')
 
     lines = adjuster.generate_lines()
 
@@ -1269,6 +1270,8 @@ def test_Adjuster_generate_lines():
         '# TODO: Run pkglint',
         '',
         'DEPENDS+=       dependency>=0:../../category/dependency',
+        '',
+        'USE_TOOLS+=     gmake',
         '',
         '.include "../../mk/bsd.pkg.mk"',
     ]
