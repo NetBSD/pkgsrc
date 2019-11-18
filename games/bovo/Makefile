@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/11/18 09:22:21 markd Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/18 09:25:35 markd Exp $
 
 DISTNAME=	bovo-${KAPPSVER}
 CATEGORIES=	games
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
-.include "../../wip/libkdegames/buildlink3.mk"
+.include "../../games/libkdegames/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
