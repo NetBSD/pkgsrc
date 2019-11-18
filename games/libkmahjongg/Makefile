@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.31 2019/08/22 12:23:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/18 09:16:45 markd Exp $
 
-DISTNAME=	libkmahjongg-${_KDE_VERSION}
-PKGREVISION=	15
+DISTNAME=	libkmahjongg-${KAPPSVER}
 CATEGORIES=	games
-COMMENT=	library for loading and rendering of Mahjongg tilesets
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+HOMEPAGE=	https://www.kde.org/applications/games/
+COMMENT=	Library for loading and rendering of Mahjongg tilesets
+LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../games/libkdegames/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
+USE_TOOLS+=	msgmerge
 
+.include "../../textproc/kcompletion/buildlink3.mk"
+.include "../../x11/kconfigwidgets/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
