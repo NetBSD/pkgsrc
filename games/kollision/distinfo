@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:56:56 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/11/18 10:18:47 markd Exp $
 
-SHA1 (kollision-4.14.3.tar.xz) = 7fd6603704f0fc79bd7c75ff65b7098c3fa7c2a0
-RMD160 (kollision-4.14.3.tar.xz) = 71884419843f4e5eefad13a3713195d5e40f38ce
-SHA512 (kollision-4.14.3.tar.xz) = 542cd8b0649ecfd246bb0da105ec14a4e4120b7e1986f3e325fe98855cb30f23da254a964feebcf0f193f467ee84a8d15581fa0157e326b58b64fdd3e160d96e
-Size (kollision-4.14.3.tar.xz) = 206948 bytes
+SHA1 (kollision-19.08.3.tar.xz) = e7e0e5e8db2ba14f6abaa0e1e62d6f35c8d82aab
+RMD160 (kollision-19.08.3.tar.xz) = b84dee1c718954d8fbe305871ff9afc8ab8c74d6
+SHA512 (kollision-19.08.3.tar.xz) = e19d14db64942cc0c1355ba465bc64c6721fc3e723c60ab1ef7b48525747ddebb43551772eaddc15dccdf991e8c11452686cb5590c22b66bf90ca088850e133f
+Size (kollision-19.08.3.tar.xz) = 280844 bytes
