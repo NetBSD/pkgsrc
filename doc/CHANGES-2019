@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5015 2019/11/18 17:05:50 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5016 2019/11/18 18:34:38 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8083,3 +8083,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/capistrano to 3.11.2 [taca 2019-11-18]
 	Updated devel/py-pyobjc to 6.1 [adam 2019-11-18]
 	Added devel/py-pyobjc-framework-MetalKit version 6.1 [adam 2019-11-18]
+	Updated www/gnurl to 7.67.0 [ng0 2019-11-18]
