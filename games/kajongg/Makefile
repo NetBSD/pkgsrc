@@ -1,31 +1,31 @@
-# $NetBSD: Makefile,v 1.56 2019/09/02 13:20:19 adam Exp $
+# $NetBSD: Makefile,v 1.57 2019/11/18 10:52:24 markd Exp $
 
-DISTNAME=	kajongg-${_KDE_VERSION}
-PKGREVISION=	26
+DISTNAME=	kajongg-${KAPPSVER}
 CATEGORIES=	games
+
+HOMEPAGE=	https://kde.org/applications/games/kajongg/
 COMMENT=	Maj Jong game
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
-PYTHON_VERSIONS_ACCEPTED=	27 # as of 4.14.3, configure does not detect twisted due to using 2.x syntax
+USE_TOOLS+=	msgmerge
 
-REPLACE_PYTHON+=	setup.py
-REPLACE_PYTHON+=	src/deferredutil.py
-REPLACE_PYTHON+=	src/kajongg.py
-REPLACE_PYTHON+=	src/kajonggserver.py
-REPLACE_PYTHON+=	src/scoringtest.py
-REPLACE_PYTHON+=	src/server.py
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+CONFIGURE_ENV+=	DESTDIR=${DESTDIR}
 
-.include "../../databases/sqlite3/buildlink3.mk"
+REPLACE_PYTHON+=        src/kajongg.py
+REPLACE_PYTHON+=        src/kajonggserver.py
+
+.include "../../games/libkmahjongg/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/py-kde4/buildlink3.mk"
-
+.include "../../x11/py-qt5/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
