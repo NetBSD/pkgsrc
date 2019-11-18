@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.30 2019/08/22 12:23:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/18 10:05:35 markd Exp $
 
-DISTNAME=	klickety-${_KDE_VERSION}
-PKGREVISION=	14
+DISTNAME=	klickety-${KAPPSVER}
 CATEGORIES=	games
-COMMENT=	a strategy game for KDE, an adaption of the Clickomania game
+
+HOMEPAGE=	https://kde.org/applications/games/klickety/
+COMMENT=	Strategy game for KDE, an adaption of the Clickomania game
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
+
+.include "../../meta-pkgs/kde/applications.mk"
+
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+
+USE_TOOLS+=	msgmerge
 
 REPLACE_PERL+=	klickety-2.0-inherit-ksame-highscore.pl
-
-.include "../../meta-pkgs/kde4/Makefile.kde4"
-
-.include "../../meta-pkgs/kde4/kde4.mk"
 
 .include "../../games/libkdegames/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
