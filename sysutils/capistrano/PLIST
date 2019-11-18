@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.16 2017/03/20 15:15:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/11/18 16:07:20 taca Exp $
 bin/cap${RUBY_SUFFIX}
 bin/capify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/issue_template.md
 ${GEM_LIBDIR}/.github/pull_request_template.md
+${GEM_LIBDIR}/.github/release-drafter.yml
+${GEM_LIBDIR}/.github/workflows/push.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.travis.yml
