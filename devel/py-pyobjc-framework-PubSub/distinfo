@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/20 07:15:53 adam Exp $
+$NetBSD: distinfo,v 1.8 2019/11/18 17:03:15 adam Exp $
 
-SHA1 (pyobjc-framework-PubSub-5.2.tar.gz) = 04494837805e83eedd321321af2e1edd671f1f32
-RMD160 (pyobjc-framework-PubSub-5.2.tar.gz) = ee91eb41416c64464079645c3e6f41b36ba4af66
-SHA512 (pyobjc-framework-PubSub-5.2.tar.gz) = 8c9e8d030cdf5caee94b605dc15e9f25e0bbf717bb29d5336e3b6ffe193acb0252ee9e316ac4f77bc0efcc572cac755775db1a3827d4a34f9200422fc1b177e5
-Size (pyobjc-framework-PubSub-5.2.tar.gz) = 14931 bytes
+SHA1 (pyobjc-framework-PubSub-6.1.tar.gz) = e026dea7cf4dbb42df642f0bdb1ce643be34a5e3
+RMD160 (pyobjc-framework-PubSub-6.1.tar.gz) = 44781a8476ea210bf3e1d1438a4bea73f9bb3c79
+SHA512 (pyobjc-framework-PubSub-6.1.tar.gz) = 2a88446bfb2b9746d292ed389086e6bb4a440423be3bd4f018444db95fcdddf02022782d7113673351d86f96adcb9ca1c8a6c514682b8a210a4f250f8b083460
+Size (pyobjc-framework-PubSub-6.1.tar.gz) = 15873 bytes
