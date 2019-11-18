@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2019/11/03 19:24:32 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/18 20:01:03 adam Exp $
 
-DISTNAME=	fs-uae-launcher-3.0.0
+DISTNAME=	fs-uae-launcher-3.0.2
 CATEGORIES=	emulators
 MASTER_SITES=	https://fs-uae.net/stable/${PKGVERSION_NOREV}/
 
