@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:56:55 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/11/18 09:43:41 markd Exp $
 
-SHA1 (kfourinline-4.14.3.tar.xz) = 70cecb2c6cd8499a8d30487434a0146585c4919c
-RMD160 (kfourinline-4.14.3.tar.xz) = 1dde1dd459a440743b8b83afe3d5aee04df3c835
-SHA512 (kfourinline-4.14.3.tar.xz) = e6b3981c5a2aaeeb9a72e3c20a76e8cfe1fe58cfda0178c3440ea319b9d83be5b47012a8245d325d4b7a4bb46d404f055325c4136c9c421db702a0509d4dcd57
-Size (kfourinline-4.14.3.tar.xz) = 282276 bytes
+SHA1 (kfourinline-19.08.3.tar.xz) = fb7a5bab10f713544a6dc5aa5e4aa6eee9493be9
+RMD160 (kfourinline-19.08.3.tar.xz) = 2aad3fa3bb5054aab998156d58cca8b48ec97cdd
+SHA512 (kfourinline-19.08.3.tar.xz) = c500ba027bc0e773f4ef35cce8d7c9124ef4cc7a9cdf942e236483f37215085e120634895fdf6e958934d69535497952cfb001f3331a6e90bbdd57f823c17ce7
+Size (kfourinline-19.08.3.tar.xz) = 638368 bytes
