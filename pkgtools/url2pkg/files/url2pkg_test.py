@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.24 2019/10/28 20:17:24 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.25 2019/11/18 07:50:51 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -887,6 +887,16 @@ def test_Adjuster_adjust_cmake(tmp_path: Path):
     adjuster.adjust_cmake()
 
     assert str_vars(adjuster.build_vars) == ['USE_CMAKE=yes']
+
+
+def test_Adjuster_adjust_gnu_make(tmp_path: Path):
+    adjuster = Adjuster(g, '', Lines())
+    adjuster.abs_wrksrc = tmp_path
+    (tmp_path / 'Makefile').write_text('ifdef HAVE_STDIO_H')
+
+    adjuster.adjust_gnu_make()
+
+    assert adjuster.tools == {'gmake'}
 
 
 def test_Adjuster_adjust_configure__none(tmp_path: Path):
