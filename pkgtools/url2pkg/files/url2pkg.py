@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.26 2019/11/14 20:03:47 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.27 2019/11/18 07:50:51 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,7 +47,7 @@ import re
 import subprocess
 import sys
 from pathlib import Path
-from typing import Any, Callable, Dict, List, NamedTuple, Optional, Tuple, Union
+from typing import Any, Callable, Dict, List, NamedTuple, Optional, Set, Tuple, Union
 
 
 class Var(NamedTuple):
@@ -603,6 +603,9 @@ class Adjuster:
     # All these files will be included at the bottom of the Makefile.
     includes: List[str]
 
+    # the tools for USE_TOOLS. Examples are sed, echo, printf, perl5.
+    tools: Set[str]
+
     # a list of variable assignments that will make up the fourth
     # paragraph of the package Makefile, where the build configuration
     # takes place.
@@ -642,6 +645,7 @@ class Adjuster:
         self.bl3_lines = []
         self.includes = []
         self.build_vars = []
+        self.tools = set()
         self.extra_vars = []
         self.todos = []
         self.pkgname_prefix = ''
@@ -816,6 +820,10 @@ class Adjuster:
     def adjust_cmake(self):
         if self.wrksrc_isfile('CMakeLists.txt'):
             self.build_vars.append(Var('USE_CMAKE', '=', 'yes'))
+
+    def adjust_gnu_make(self):
+        if self.wrksrc_isfile('Makefile') and self.wrksrc_grep('Makefile', r'^(?:ifeq|ifdef)\b'):
+            self.tools.add('gmake')
 
     def adjust_meson(self):
         if self.wrksrc_isfile('meson.build'):
@@ -1042,7 +1050,10 @@ class Adjuster:
         depend_vars.extend(Var('TEST_DEPENDS', '+=', d) for d in self.test_depends)
         lines.add_vars(*depend_vars)
 
-        lines.add_vars(*self.build_vars)
+        build_vars = self.build_vars
+        if self.tools:
+            build_vars.append(Var('USE_TOOLS', '+=', ' '.join(sorted(self.tools))))
+        lines.add_vars(*build_vars)
         lines.add_vars(*self.extra_vars)
 
         lines.add(*self.bl3_lines)
@@ -1074,6 +1085,7 @@ class Adjuster:
         self.adjust_descr()
         self.adjust_configure()
         self.adjust_cmake()
+        self.adjust_gnu_make()
         self.adjust_meson()
         self.adjust_gconf2_schemas()
         self.adjust_libtool()
