@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/03/13 15:30:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/11/18 15:44:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/INSTALL.md
@@ -6,7 +6,7 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/NOTICE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/UPGRADE.md
-${GEM_LIBDIR}/examples/README
+${GEM_LIBDIR}/examples/README.md
 ${GEM_LIBDIR}/examples/active_record_openid_store/README
 ${GEM_LIBDIR}/examples/active_record_openid_store/XXX_add_open_id_store_to_db.rb
 ${GEM_LIBDIR}/examples/active_record_openid_store/XXX_upgrade_open_id_store.rb
@@ -17,6 +17,8 @@ ${GEM_LIBDIR}/examples/active_record_openid_store/lib/open_id_setting.rb
 ${GEM_LIBDIR}/examples/active_record_openid_store/lib/openid_ar_store.rb
 ${GEM_LIBDIR}/examples/active_record_openid_store/test/store_test.rb
 ${GEM_LIBDIR}/examples/discover
+${GEM_LIBDIR}/examples/rails5_openid/Gemfile.lock
+${GEM_LIBDIR}/examples/rails5_openid/config/master.key
 ${GEM_LIBDIR}/examples/rails_openid/Gemfile
 ${GEM_LIBDIR}/examples/rails_openid/README
 ${GEM_LIBDIR}/examples/rails_openid/README.rdoc
@@ -122,6 +124,7 @@ ${GEM_LIBDIR}/lib/openid/yadis/services.rb
 ${GEM_LIBDIR}/lib/openid/yadis/xrds.rb
 ${GEM_LIBDIR}/lib/openid/yadis/xri.rb
 ${GEM_LIBDIR}/lib/openid/yadis/xrires.rb
+${GEM_LIBDIR}/lib/ruby-openid.rb
 ${GEM_LIBDIR}/test/data/accept.txt
 ${GEM_LIBDIR}/test/data/dh.txt
 ${GEM_LIBDIR}/test/data/example-xrds.xml
@@ -205,4 +208,3 @@ ${GEM_LIBDIR}/test/test_yadis_discovery.rb
 ${GEM_LIBDIR}/test/testutil.rb
 ${GEM_LIBDIR}/test/util.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
