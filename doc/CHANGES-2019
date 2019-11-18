@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5006 2019/11/18 09:05:09 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5007 2019/11/18 10:53:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8032,3 +8032,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/pkglint4 to 4.193.2 [rillig 2019-11-18]
 	Updated converters/py-simplejson to 3.17.0 [adam 2019-11-18]
 	Updated devel/py-test5 to 5.2.4 [adam 2019-11-18]
+	Updated security/py-OpenSSL to 19.1.0 [adam 2019-11-18]
+	Updated security/py-asn1 to 0.4.8 [adam 2019-11-18]
