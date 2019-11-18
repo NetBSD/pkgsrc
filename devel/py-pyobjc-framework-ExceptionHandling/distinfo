@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/20 07:15:49 adam Exp $
+$NetBSD: distinfo,v 1.8 2019/11/18 17:03:11 adam Exp $
 
-SHA1 (pyobjc-framework-ExceptionHandling-5.2.tar.gz) = 30fe8e2d9b4f60683fb3c2875f22797781c6a181
-RMD160 (pyobjc-framework-ExceptionHandling-5.2.tar.gz) = 28c0059a5482deab5c7c7c698a3b855754cd39f2
-SHA512 (pyobjc-framework-ExceptionHandling-5.2.tar.gz) = 488f361a8afc506960e5396cbcf90d6bdeaa517a2192f0578a951074f3a8479533aa98a6dff3ed4f9ac3838209f2bae942ac199b8efd3f84b99d4aaa953e8794
-Size (pyobjc-framework-ExceptionHandling-5.2.tar.gz) = 14612 bytes
+SHA1 (pyobjc-framework-ExceptionHandling-6.1.tar.gz) = 916408d1c752c814712d6716586a52df0fc22d09
+RMD160 (pyobjc-framework-ExceptionHandling-6.1.tar.gz) = 0d04d0a9003a20b439021bd907fd9a856841d58a
+SHA512 (pyobjc-framework-ExceptionHandling-6.1.tar.gz) = d037806ffde3bf988ece508dd794d4b228178b4aad2ecbf0f8e8720b72d249a3dd7ec9973a07b1b8a925e1e721a0d9a18bef9e18da095e872272048ec707d006
+Size (pyobjc-framework-ExceptionHandling-6.1.tar.gz) = 15687 bytes

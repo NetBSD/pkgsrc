@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/20 07:15:51 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/11/18 17:03:14 adam Exp $
 
-SHA1 (pyobjc-framework-MediaAccessibility-5.2.tar.gz) = dacd98d0c707eae5dc73a2200da4db9f2f4c047a
-RMD160 (pyobjc-framework-MediaAccessibility-5.2.tar.gz) = 5973eebe46816660d732bad854004f02c1c93c00
-SHA512 (pyobjc-framework-MediaAccessibility-5.2.tar.gz) = 2c7672db341678bb0a4156287c82381d8469f17fe597c0d7f6b0b082d652c6a5c1aaa2580e1ec14d1e6fea95306d7c983e0eeeabe65187c9a3bfc90268819ebc
-Size (pyobjc-framework-MediaAccessibility-5.2.tar.gz) = 11651 bytes
+SHA1 (pyobjc-framework-MediaAccessibility-6.1.tar.gz) = 78990302defea51e13e6dd3862c4d58b8a924848
+RMD160 (pyobjc-framework-MediaAccessibility-6.1.tar.gz) = d58dfbfe155d19fee21339839933e53e0d9c23ab
+SHA512 (pyobjc-framework-MediaAccessibility-6.1.tar.gz) = d00c69b13916d9c75703578dd811764c82b263be48998152510fc9fde7082f067df0720d67d6df89ecc6ce82f95721bccdc348c6ef2312bcaf67d403ba007ea1
+Size (pyobjc-framework-MediaAccessibility-6.1.tar.gz) = 13155 bytes

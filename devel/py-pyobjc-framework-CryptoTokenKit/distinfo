@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/20 07:15:48 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/11/18 17:03:11 adam Exp $
 
-SHA1 (pyobjc-framework-CryptoTokenKit-5.2.tar.gz) = 0af9ef9560cd12e7098fe5e5910350514f06b127
-RMD160 (pyobjc-framework-CryptoTokenKit-5.2.tar.gz) = e4a5f84eb47b89324db46e2c45b5fa5f8d57a883
-SHA512 (pyobjc-framework-CryptoTokenKit-5.2.tar.gz) = ff4d7000c91db860bf1f0c31c169e6062b7a2256890e5fb9e8abfff4bd9bf9a06b9ea447dd912dffc5aeff098beaca175c68fbdcc5106ad62651b9d1a1e46bdf
-Size (pyobjc-framework-CryptoTokenKit-5.2.tar.gz) = 21782 bytes
+SHA1 (pyobjc-framework-CryptoTokenKit-6.1.tar.gz) = 5fe343b26f92f5a1a9d3dead709047a40e518a92
+RMD160 (pyobjc-framework-CryptoTokenKit-6.1.tar.gz) = 3dc76ce1fbe3ca92ea861b10400cbdaf4fccb1df
+SHA512 (pyobjc-framework-CryptoTokenKit-6.1.tar.gz) = 7b6b60099f637d30851cab0d3a27c0e42739708aff27103862c7328cb653bd71615304fc00360a74632fe7ada7c7703c5b4388133b49a1c1e362043f17ebf020
+Size (pyobjc-framework-CryptoTokenKit-6.1.tar.gz) = 25847 bytes
