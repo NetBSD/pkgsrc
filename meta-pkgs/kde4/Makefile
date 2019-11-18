@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2019/11/17 06:38:54 markd Exp $
+# $NetBSD: Makefile,v 1.46 2019/11/18 10:59:23 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -46,45 +46,45 @@ DEPENDS+=	kwordquiz-4.14.3{,nb[0-9]*}:../../misc/kwordquiz
 DEPENDS+=	parley-4.14.3{,nb[0-9]*}:../../misc/parley
 ###DEPENDS+=	rocs-4.14.3{,nb[0-9]*}:../../misc/rocs
 DEPENDS+=	step-4.14.3{,nb[0-9]*}:../../misc/step
-DEPENDS+=	bomber-4.14.3{,nb[0-9]*}:../../games/bomber
-DEPENDS+=	bovo-4.14.3{,nb[0-9]*}:../../games/bovo
-DEPENDS+=	granatier-4.14.3{,nb[0-9]*}:../../games/granatier
-#DEPENDS+=	kajongg-4.14.3{,nb[0-9]*}:../../games/kajongg # Requires py2
-DEPENDS+=	kapman-4.14.3{,nb[0-9]*}:../../games/kapman
-DEPENDS+=	katomic-4.14.3{,nb[0-9]*}:../../games/katomic
-DEPENDS+=	kblackbox-4.14.3{,nb[0-9]*}:../../games/kblackbox
-DEPENDS+=	kblocks-4.14.3{,nb[0-9]*}:../../games/kblocks
-DEPENDS+=	kbounce-4.14.3{,nb[0-9]*}:../../games/kbounce
-DEPENDS+=	kbreakout-4.14.3{,nb[0-9]*}:../../games/kbreakout
-DEPENDS+=	kdiamond-4.14.3{,nb[0-9]*}:../../games/kdiamond
-DEPENDS+=	kfourinline-4.14.3{,nb[0-9]*}:../../games/kfourinline
-DEPENDS+=	kgoldrunner-4.14.3{,nb[0-9]*}:../../games/kgoldrunner
-DEPENDS+=	kigo-4.14.3{,nb[0-9]*}:../../games/kigo
-DEPENDS+=	killbots-4.14.3{,nb[0-9]*}:../../games/killbots
-DEPENDS+=	kiriki-4.14.3{,nb[0-9]*}:../../games/kiriki
-DEPENDS+=	kjumpingcube-4.14.3{,nb[0-9]*}:../../games/kjumpingcube
-DEPENDS+=	klickety-4.14.3{,nb[0-9]*}:../../games/klickety
-DEPENDS+=	klines-4.14.3{,nb[0-9]*}:../../games/klines
-DEPENDS+=	kmahjongg-4.14.3{,nb[0-9]*}:../../games/kmahjongg
-DEPENDS+=	kmines-4.14.3{,nb[0-9]*}:../../games/kmines
-DEPENDS+=	knavalbattle-4.14.3{,nb[0-9]*}:../../games/knavalbattle
-DEPENDS+=	knetwalk-4.14.3{,nb[0-9]*}:../../games/knetwalk
-DEPENDS+=	kolf-4.14.3{,nb[0-9]*}:../../games/kolf
-DEPENDS+=	kollision-4.14.3{,nb[0-9]*}:../../games/kollision
-DEPENDS+=	konquest-4.14.3{,nb[0-9]*}:../../games/konquest
+DEPENDS+=	bomber>=4.14.3{,nb[0-9]*}:../../games/bomber
+DEPENDS+=	bovo>=4.14.3{,nb[0-9]*}:../../games/bovo
+DEPENDS+=	granatier>=4.14.3{,nb[0-9]*}:../../games/granatier
+DEPENDS+=	kajongg>=4.14.3{,nb[0-9]*}:../../games/kajongg
+DEPENDS+=	kapman>=4.14.3{,nb[0-9]*}:../../games/kapman
+DEPENDS+=	katomic>=4.14.3{,nb[0-9]*}:../../games/katomic
+DEPENDS+=	kblackbox>=4.14.3{,nb[0-9]*}:../../games/kblackbox
+DEPENDS+=	kblocks>=4.14.3{,nb[0-9]*}:../../games/kblocks
+DEPENDS+=	kbounce>=4.14.3{,nb[0-9]*}:../../games/kbounce
+DEPENDS+=	kbreakout>=4.14.3{,nb[0-9]*}:../../games/kbreakout
+DEPENDS+=	kdiamond>=4.14.3{,nb[0-9]*}:../../games/kdiamond
+DEPENDS+=	kfourinline>=4.14.3{,nb[0-9]*}:../../games/kfourinline
+DEPENDS+=	kgoldrunner>=4.14.3{,nb[0-9]*}:../../games/kgoldrunner
+DEPENDS+=	kigo>=4.14.3{,nb[0-9]*}:../../games/kigo
+DEPENDS+=	killbots>=4.14.3{,nb[0-9]*}:../../games/killbots
+DEPENDS+=	kiriki>=4.14.3{,nb[0-9]*}:../../games/kiriki
+DEPENDS+=	kjumpingcube>=4.14.3{,nb[0-9]*}:../../games/kjumpingcube
+DEPENDS+=	klickety>=4.14.3{,nb[0-9]*}:../../games/klickety
+DEPENDS+=	klines>=4.14.3{,nb[0-9]*}:../../games/klines
+DEPENDS+=	kmahjongg>=4.14.3{,nb[0-9]*}:../../games/kmahjongg
+DEPENDS+=	kmines>=4.14.3{,nb[0-9]*}:../../games/kmines
+DEPENDS+=	knavalbattle>=4.14.3{,nb[0-9]*}:../../games/knavalbattle
+DEPENDS+=	knetwalk>=4.14.3{,nb[0-9]*}:../../games/knetwalk
+DEPENDS+=	kolf>=4.14.3{,nb[0-9]*}:../../games/kolf
+DEPENDS+=	kollision>=4.14.3{,nb[0-9]*}:../../games/kollision
+DEPENDS+=	konquest>=4.14.3{,nb[0-9]*}:../../games/konquest
 DEPENDS+=	kpat-4.14.3{,nb[0-9]*}:../../games/kpat
-DEPENDS+=	kreversi-4.14.3{,nb[0-9]*}:../../games/kreversi
-DEPENDS+=	kshisen-4.14.3{,nb[0-9]*}:../../games/kshisen
-DEPENDS+=	ksirk-4.14.3{,nb[0-9]*}:../../games/ksirk
-DEPENDS+=	ksnakeduel-4.14.3{,nb[0-9]*}:../../games/ksnakeduel
-DEPENDS+=	kspaceduel-4.14.3{,nb[0-9]*}:../../games/kspaceduel
-DEPENDS+=	ksquares-4.14.3{,nb[0-9]*}:../../games/ksquares
-DEPENDS+=	ksudoku-4.14.3{,nb[0-9]*}:../../games/ksudoku
-DEPENDS+=	ktuberling-4.14.3{,nb[0-9]*}:../../games/ktuberling
-DEPENDS+=	kubrick-4.14.3{,nb[0-9]*}:../../games/kubrick
-DEPENDS+=	lskat-4.14.3{,nb[0-9]*}:../../games/lskat
-DEPENDS+=	palapeli-4.14.3{,nb[0-9]*}:../../games/palapeli
-DEPENDS+=	picmi-4.14.3{,nb[0-9]*}:../../games/picmi
+DEPENDS+=	kreversi>=4.14.3{,nb[0-9]*}:../../games/kreversi
+DEPENDS+=	kshisen>=4.14.3{,nb[0-9]*}:../../games/kshisen
+DEPENDS+=	ksirk>=4.14.3{,nb[0-9]*}:../../games/ksirk
+DEPENDS+=	ksnakeduel>=4.14.3{,nb[0-9]*}:../../games/ksnakeduel
+DEPENDS+=	kspaceduel>=4.14.3{,nb[0-9]*}:../../games/kspaceduel
+DEPENDS+=	ksquares>=4.14.3{,nb[0-9]*}:../../games/ksquares
+DEPENDS+=	ksudoku>=4.14.3{,nb[0-9]*}:../../games/ksudoku
+DEPENDS+=	ktuberling>=4.14.3{,nb[0-9]*}:../../games/ktuberling
+DEPENDS+=	kubrick>=4.14.3{,nb[0-9]*}:../../games/kubrick
+DEPENDS+=	lskat>=4.14.3{,nb[0-9]*}:../../games/lskat
+DEPENDS+=	palapeli>=4.14.3{,nb[0-9]*}:../../games/palapeli
+DEPENDS+=	picmi>=4.14.3{,nb[0-9]*}:../../games/picmi
 DEPENDS+=	kamera>=4.14.3{,nb[0-9]*}:../../graphics/kamera
 DEPENDS+=	kde-base-artwork-15.08.3{,nb[0-9]*}:../../graphics/kde-base-artwork
 DEPENDS+=	gwenview>=4.14.3{,nb[0-9]*}:../../graphics/gwenview
