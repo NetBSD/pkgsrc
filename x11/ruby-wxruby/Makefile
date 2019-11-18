@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/07/21 22:26:04 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/18 16:20:23 taca Exp $
 #
 
 DISTNAME=	wxruby-2.0.1
@@ -14,7 +14,6 @@ LICENSE=	mit
 BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-redcloth>=4.2.0:../../textproc/ruby-redcloth
 
 BUILD_TARGET=		default html_docs
-USE_RAKE=		YES
 RAKE=			${RAKE_NAME} -I "./lib"
 USE_LANGUAGES=		c++
 USE_TOOLS=		pax
