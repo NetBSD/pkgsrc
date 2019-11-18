@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/08/05 12:40:53 adam Exp $
+# $NetBSD: Makefile,v 1.25 2019/11/18 04:41:34 gutteridge Exp $
 
 DISTNAME=	blockdiag-1.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-reportlab-[0-9]*:../../print/py-reportlab
 DEPENDS+=	${PYPKGPREFIX}-webcolors-[0-9]*:../../www/py-webcolors
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-pep8>=1.3:../../devel/py-pep8
+TEST_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 
 USE_LANGUAGES=	# none
 
