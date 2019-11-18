@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5004 2019/11/18 08:02:15 gson Exp $
+$NetBSD: CHANGES-2019,v 1.5005 2019/11/18 08:07:14 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8029,3 +8029,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-webcolors to 1.10 [gutteridge 2019-11-18]
 	Updated pkgtools/url2pkg to 19.3.7 [rillig 2019-11-17]
 	Updated misc/py-anita to 2.1 [gson 2019-11-18]
+	Updated pkgtools/pkglint4 to 4.193.2 [rillig 2019-11-18]
