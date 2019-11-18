@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2019/08/11 13:23:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/18 13:38:14 hauke Exp $
 
-VERSION_TAG=	0.4.1
+VERSION_TAG=	0.4.1.1
 
 DISTNAME=	Unburden-Home-Dir-${VERSION_TAG}
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+#PKGREVISION=	1
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	-https://codeload.github.com/xtaran/unburden-home-dir/tar.gz/${VERSION_TAG}
 
@@ -21,7 +21,7 @@ DEPENDS+=	p5-File-Rsync-[0-9]*:../../net/p5-File-Rsync
 DEPENDS+=	p5-File-Touch-[0-9]*:../../devel/p5-File-Touch
 DEPENDS+=	p5-File-Which-[0-9]*:../../devel/p5-File-Which
 DEPENDS+=	p5-String-Expand-[0-9]*:../../textproc/p5-String-Expand
-DEPENDS+=	p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run3
+DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 DEPENDS+=	lsof-[0-9]*:../../sysutils/lsof
 
@@ -70,6 +70,7 @@ SUBST_SED.comment-cfg=		-E -e 's,^([^\#]),\#\1,g'
 
 .if defined(PKG_DEVELOPER)
 
+USE_TOOLS+=	gmake
 DEPENDS+=	${RUBY_PKGPREFIX}-ronn-[0-9]*:../../devel/ruby-ronn
 
 .PHONY:		unburden-update-manpage
