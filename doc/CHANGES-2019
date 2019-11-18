@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5008 2019/11/18 11:12:48 markd Exp $
+$NetBSD: CHANGES-2019,v 1.5009 2019/11/18 12:09:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8075,3 +8075,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/palapeli to 19.08.3 [markd 2019-11-18]
 	Updated games/picmi to 19.08.3 [markd 2019-11-18]
 	Updated games/kajongg to 19.08.3 [markd 2019-11-18]
+	Updated www/firefox68 to 68.2.0nb1 [ryoon 2019-11-18]
