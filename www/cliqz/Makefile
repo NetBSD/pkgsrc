@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/11/17 17:32:23 fox Exp $
+# $NetBSD: Makefile,v 1.27 2019/11/18 11:00:59 fox Exp $
 
 DISTNAME=	cliqz-1.30.0
 CATEGORIES=	www
@@ -12,7 +12,6 @@ DISTFILES=	adult-domains.bin \
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 CLIQZ_CHANNEL=		release
-
 # If the PKGVERSION_NOREV is updated, make sure to update the last build id from
 # ftp -Vo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
 CLIQZ_LAST_BUILD_ID=	20191113183817
@@ -44,6 +43,7 @@ PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 TOOL_DEPENDS+=			cbindgen>=0.8.2:../../devel/cbindgen
 TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
+TOOL_DEPENDS+=			${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 BUILD_DEPENDS+=			yasm>=1.1:../../devel/yasm
 BUILD_DEPENDS+=			nasm-[0-9]*:../../devel/nasm
