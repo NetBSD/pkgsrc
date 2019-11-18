@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:56:45 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/11/18 09:23:45 markd Exp $
 
-SHA1 (bovo-4.14.3.tar.xz) = d37cd67b46fa3c9f1f491cc6d1065d1bb0848cfe
-RMD160 (bovo-4.14.3.tar.xz) = c6f4687b82113fd97bf00a9930c93dfd5df9548d
-SHA512 (bovo-4.14.3.tar.xz) = a3f9d95d74626a3bfe7735df75201252068e9993db8343833c0ffb0f53ae93df26ea71e92eecb2a82ceca320b421d2c05ab01485bee5b72e236c547fa5ecc772
-Size (bovo-4.14.3.tar.xz) = 101320 bytes
+SHA1 (bovo-19.08.3.tar.xz) = 040c91607913d37b5253e2b9c6e8cae58cec2eab
+RMD160 (bovo-19.08.3.tar.xz) = 3f733c7395d84f7c5087122163e481185030f444
+SHA512 (bovo-19.08.3.tar.xz) = f92150ad31b2230810c573c1ee1f5e5d906587823c747bb347ae62a39385f45b62c28a6452ada80c6c3e7b71c1ce87892d62d4bab41f80bf3fe5da09c3c8a349
+Size (bovo-19.08.3.tar.xz) = 200164 bytes
