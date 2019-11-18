@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/20 07:15:52 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/11/18 17:03:15 adam Exp $
 
-SHA1 (pyobjc-framework-PhotosUI-5.2.tar.gz) = 1585b3c1531d79b68be3c800d0aa79d63115c70e
-RMD160 (pyobjc-framework-PhotosUI-5.2.tar.gz) = 197f25f7ce2678c5509238dd2ea16d07124f33ce
-SHA512 (pyobjc-framework-PhotosUI-5.2.tar.gz) = a157ba5bebe33de95d555dd510e8c7fd1da6161e6be572c76c11578ca4e0c4d491ce8ea61280167e9950f04d5ff60986a7b7ed865a2666032b6c2d7096449b6b
-Size (pyobjc-framework-PhotosUI-5.2.tar.gz) = 22115 bytes
+SHA1 (pyobjc-framework-PhotosUI-6.1.tar.gz) = efb70d496ede7170490d30f03899febb5238f2cd
+RMD160 (pyobjc-framework-PhotosUI-6.1.tar.gz) = 4e0741e92adc3a5751543aed840953ea9bec22a8
+SHA512 (pyobjc-framework-PhotosUI-6.1.tar.gz) = 76621352b1bad1a0b298963fa5f08bdb6225261ef5d45c1df945b3e9b3d6cf2de47fc06902545980edcbc653cc63a2509ef0003415f10053611e5b567a9b8861
+Size (pyobjc-framework-PhotosUI-6.1.tar.gz) = 21780 bytes

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/18 17:03:14 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/MetalKit/_MetalKit.so
+${PYSITELIB}/MetalKit/__init__.py
+${PYSITELIB}/MetalKit/__init__.pyc
+${PYSITELIB}/MetalKit/__init__.pyo
+${PYSITELIB}/MetalKit/_metadata.py
+${PYSITELIB}/MetalKit/_metadata.pyc
+${PYSITELIB}/MetalKit/_metadata.pyo

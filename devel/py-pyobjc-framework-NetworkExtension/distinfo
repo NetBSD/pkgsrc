@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/20 07:15:52 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/11/18 17:03:14 adam Exp $
 
-SHA1 (pyobjc-framework-NetworkExtension-5.2.tar.gz) = 2e4d179d53efd21fa080a4741e6170886a4a561d
-RMD160 (pyobjc-framework-NetworkExtension-5.2.tar.gz) = d9a6ce4dc036bf4a3478c7fdf0ed5c37664c6ae4
-SHA512 (pyobjc-framework-NetworkExtension-5.2.tar.gz) = 72616a9752bd285315bf7ff938730ba8b0f552c3b9df7e6d0b58e0186597fedefadd33fbc0cb1aad08371a5a37d23d5affb34ad4ca8de77520cff0f6f9fcec98
-Size (pyobjc-framework-NetworkExtension-5.2.tar.gz) = 24545 bytes
+SHA1 (pyobjc-framework-NetworkExtension-6.1.tar.gz) = ff23a7cefba65f2df7292fb4b6191c92e853e67b
+RMD160 (pyobjc-framework-NetworkExtension-6.1.tar.gz) = 42172feebd3ffdf3ee0aefffb97ac07482e11de5
+SHA512 (pyobjc-framework-NetworkExtension-6.1.tar.gz) = 5e22018de8f9081d386ff01bf9b06b2ffb0f5250c821a99da97e83957b7a371629b35b6767e09a4a7ee0e627abbb651fb066def3b0491a6e2b8062757fac7b17
+Size (pyobjc-framework-NetworkExtension-6.1.tar.gz) = 38578 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/01/08 20:29:42 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/18 17:03:08 adam Exp $
 
 META_PACKAGE=	yes
 
@@ -64,6 +64,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MapKit>=${PYOBJC_VERS}:../../devel/py-
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MediaAccessibility>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-MediaAccessibility
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MediaLibrary>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-MediaLibrary
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MediaPlayer>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-MediaPlayer
+DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MetalKit>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-MetalKit
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-ModelIO>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-ModelIO
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-MultipeerConnectivity>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-MultipeerConnectivity
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-NetFS>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-NetFS

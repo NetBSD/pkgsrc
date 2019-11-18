@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/20 07:15:48 adam Exp $
+$NetBSD: distinfo,v 1.8 2019/11/18 17:03:11 adam Exp $
 
-SHA1 (pyobjc-framework-DictionaryServices-5.2.tar.gz) = 30fc88bb99b3713546a51810cc25f8c1e8b1d79c
-RMD160 (pyobjc-framework-DictionaryServices-5.2.tar.gz) = cb562479c3c247b69570e8d0340e259f5433510b
-SHA512 (pyobjc-framework-DictionaryServices-5.2.tar.gz) = 404bbb12e01667678f128a7d35dceb05c1ca9ea332a9a471e8e1bf7c660462a0d7a6a07beac91087e8dd9e688070111173618d506e061d3b8329892245e61104
-Size (pyobjc-framework-DictionaryServices-5.2.tar.gz) = 8469 bytes
+SHA1 (pyobjc-framework-DictionaryServices-6.1.tar.gz) = 3f729407ec7407060b144027b0c32b5bb2b2f153
+RMD160 (pyobjc-framework-DictionaryServices-6.1.tar.gz) = 300e81a8faad3830138c17754ad8b3260ab927d7
+SHA512 (pyobjc-framework-DictionaryServices-6.1.tar.gz) = 3dec475bb3dc3e9729d687ecd4b6cf17b7d415b96abacd0447897e8ec5f4dd9f5c88b967cf308f6ba039694a762e5f3be5ec017607394e6192e3f09409056198
+Size (pyobjc-framework-DictionaryServices-6.1.tar.gz) = 8997 bytes

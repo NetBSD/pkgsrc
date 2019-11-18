@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/20 07:15:53 adam Exp $
+$NetBSD: distinfo,v 1.8 2019/11/18 17:03:16 adam Exp $
 
-SHA1 (pyobjc-framework-ScriptingBridge-5.2.tar.gz) = 3ee4c4f2f5c476f43a07f1ad89d2c0a6ec54677a
-RMD160 (pyobjc-framework-ScriptingBridge-5.2.tar.gz) = 0c4b1629ac622a66f12c89f65d79dd77ff11cc70
-SHA512 (pyobjc-framework-ScriptingBridge-5.2.tar.gz) = 7b9043a428363e216046223debac31ff19f52ed4a66c7caec5ab97bcb503083f9dbba6c189b99b70c419406e4daee50579af003295ec5f39a8d782e69c449fe7
-Size (pyobjc-framework-ScriptingBridge-5.2.tar.gz) = 19792 bytes
+SHA1 (pyobjc-framework-ScriptingBridge-6.1.tar.gz) = a019cc2a3853e916a964c20135b2173361ce44df
+RMD160 (pyobjc-framework-ScriptingBridge-6.1.tar.gz) = 8fe9d34ce4ef320578a0256ca4dc42464867f15e
+SHA512 (pyobjc-framework-ScriptingBridge-6.1.tar.gz) = 49640f92d2c14032fc08143dce7c7eb0cdea7183c827175117bf9041d0d8e5222774dabaa3c6bdf75bd5e390cb565a79effb578fdf68dc4aa60f1580706e1d95
+Size (pyobjc-framework-ScriptingBridge-6.1.tar.gz) = 19391 bytes
