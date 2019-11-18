@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5013 2019/11/18 15:52:43 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5014 2019/11/18 16:08:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8080,3 +8080,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/php-baikal to 0.6.1 [wiz 2019-11-18]
 	Updated security/ruby-ruby-openid to 2.9.2 [taca 2019-11-18]
 	Updated security/ruby-sshkit to 1.20.0 [taca 2019-11-18]
+	Updated sysutils/capistrano to 3.11.2 [taca 2019-11-18]
