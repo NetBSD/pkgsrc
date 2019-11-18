@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.10 2019/10/06 11:45:05 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.11 2019/11/18 08:06:58 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2249,7 +2249,7 @@ sub checkline_mk_varuse($$$$) {
 		# Variables defined in .for loops are also ok.
 
 	} else {
-		$opt_warn_extra and $line->log_warning("${varname} is used but not defined. Spelling mistake?");
+		0 and $opt_warn_extra and $line->log_warning("${varname} is used but not defined. Spelling mistake?");
 	}
 
 	if ($varname eq "LOCALBASE" && !$is_internal) {
@@ -3362,7 +3362,7 @@ sub checkline_mk_varassign($$$$$) {
 		} elsif (exists($deprecated->{$varname}) || exists($deprecated->{$varcanon})) {
 			# Ok
 		} else {
-			$line->log_warning("${varname} is defined but not used. Spelling mistake?");
+			0 and $line->log_warning("${varname} is defined but not used. Spelling mistake?");
 		}
 	}
 
