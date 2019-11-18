@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/20 07:15:47 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/11/18 17:03:10 adam Exp $
 
-SHA1 (pyobjc-framework-Contacts-5.2.tar.gz) = 01ea7022f18bc3c5fff82199fa546b199bb3187f
-RMD160 (pyobjc-framework-Contacts-5.2.tar.gz) = 9fb685dc68cfd09bcf310223ab91e9e052e3b8e6
-SHA512 (pyobjc-framework-Contacts-5.2.tar.gz) = 7bdd510b1a0bbf22a08b4e6fe84c7400dd13d680364d4145340e21b34b30052661ea62851059da949bc059468f74be0c22535ce78a7223e8b2b816e6e4dc45ab
-Size (pyobjc-framework-Contacts-5.2.tar.gz) = 22070 bytes
+SHA1 (pyobjc-framework-Contacts-6.1.tar.gz) = 8bb7fe7ac66fd9734ff40b51967d10b7759fa688
+RMD160 (pyobjc-framework-Contacts-6.1.tar.gz) = a1dd09a42f1ce0bca960d29428723b2c6ca6bcd9
+SHA512 (pyobjc-framework-Contacts-6.1.tar.gz) = 10e38caf867fd449e05326b87d244efc1a5e7d5d9e414bf88b78bd28e8de9a8bb40b04cf51ddb645f20063bb67f5ce54493928b6e5c21430490203aaa7c4201e
+Size (pyobjc-framework-Contacts-6.1.tar.gz) = 32148 bytes
