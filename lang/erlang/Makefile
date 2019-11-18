@@ -1,47 +1,36 @@
-# $NetBSD: Makefile,v 1.96 2019/11/03 18:11:51 rillig Exp $
+# $NetBSD: Makefile,v 1.97 2019/11/18 20:46:01 nia Exp $
 
-DISTNAME=		OTP-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
-PKGNAME=		${DISTNAME:S/OTP-/erlang-/}
-PKGREVISION=		1
-CATEGORIES=		lang
-MASTER_SITES=		https://github.com/erlang/otp/archive/
+DISTNAME=	erlang-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
+PKGNAME=	${DISTNAME:S/OTP-/erlang-/}
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_GITHUB:=erlang/}
+GITHUB_PROJECT=	otp
+GITHUB_TAG=	OTP-${PKGVERSION_NOREV}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.erlang.org/
-COMMENT=		Concurrent functional programming language
-LICENSE=		apache-2.0
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.erlang.org/
+COMMENT=	Concurrent functional programming language
+LICENSE=	apache-2.0
 
-EXTRACT_USING=		bsdtar
-DIST_SUBDIR=		erlang
+EXTRACT_USING=	bsdtar
 
-WRKSRC=			${WRKDIR}/otp-${DISTNAME}
-GNU_CONFIGURE=		yes
+WRKSRC=		${WRKDIR}/otp-${GITHUB_TAG}
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	autoconf awk gmake perl:run flex
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_ARCH:M*armv6*) || !empty(MACHINE_ARCH:M*armv7*)
+MAKE_FLAGS+=	ARCH=arm
+.endif
+
 USE_GNU_CONFIGURE_HOST=	${USE_CROSS_COMPILE}
 OVERRIDE_DIRDEPTH=	4
-USE_TOOLS+=		autoconf awk gmake perl:run flex
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
 PTHREAD_OPTS+=		require native
 CONFIGURE_ARGS+=	--enable-threads
-
-.include "../../mk/bsd.prefs.mk"
-
-# have gcc without the necessary atomic ops?
-.if !empty(MACHINE_PLATFORM:MNetBSD-[56].*)
-
-# a machine without native ethread implementation?
-.  if	empty(MACHINE_PLATFORM:M*i386)	&&\
-	empty(MACHINE_PLATFORM:M*sparc)	&&\
-	empty(MACHINE_PLATFORM:M*sparc64) &&\
-	empty(MACHINE_PLATFORM:M*powerpc) &&\
-	empty(MACHINE_PLATFORM:M*x86_64)
-
-CONFIGURE_ARGS+=	--disable-native-ethr-impls\
-			--disable-smp-require-native-atomics
-
-.  endif
-.endif
 
 MAKE_ENV+=		DESTDIR=${DESTDIR}
 

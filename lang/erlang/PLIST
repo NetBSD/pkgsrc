@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2019/08/01 11:43:00 nia Exp $
+@comment $NetBSD: PLIST,v 1.39 2019/11/18 20:46:01 nia Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -191,8 +191,6 @@ lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_telnet.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_telnet_client.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_testspec.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_util.beam
-lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_webtool.beam
-lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_webtool_sup.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/cth_conn_log.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/cth_log_redirect.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/cth_surefire.beam
@@ -204,7 +202,6 @@ lib/erlang/lib/common_test-${VERSION.common_test}/ebin/test_server_io.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/test_server_node.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/test_server_sup.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/unix_telnet.beam
-lib/erlang/lib/common_test-${VERSION.common_test}/ebin/vts.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/include/ct.hrl
 lib/erlang/lib/common_test-${VERSION.common_test}/include/ct_event.hrl
 lib/erlang/lib/common_test-${VERSION.common_test}/priv/ct_default.css
@@ -247,8 +244,6 @@ lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_telnet_client.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_testspec.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_util.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_util.hrl
-lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_webtool.erl
-lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_webtool_sup.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/cth_conn_log.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/cth_log_redirect.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/cth_surefire.erl
@@ -260,7 +255,6 @@ lib/erlang/lib/common_test-${VERSION.common_test}/src/test_server_io.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/test_server_node.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/test_server_sup.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/unix_telnet.erl
-lib/erlang/lib/common_test-${VERSION.common_test}/src/vts.erl
 lib/erlang/lib/compiler-${VERSION.compiler}/ebin/beam_a.beam
 lib/erlang/lib/compiler-${VERSION.compiler}/ebin/beam_asm.beam
 lib/erlang/lib/compiler-${VERSION.compiler}/ebin/beam_block.beam
@@ -402,10 +396,10 @@ lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/fips.o
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/hash.o
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/hmac.o
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/info.o
+lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/mac.o
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/math.o
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/otp_test_engine.o
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/pkey.o
-lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/poly1305.o
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/rand.o
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/rsa.o
 lib/erlang/lib/crypto-${VERSION.crypto}/priv/obj/srp.o
@@ -929,12 +923,12 @@ lib/erlang/lib/erts-${VERSION.erts}/ebin/erts_dirty_process_signal_handler.beam
 lib/erlang/lib/erts-${VERSION.erts}/ebin/erts_internal.beam
 lib/erlang/lib/erts-${VERSION.erts}/ebin/erts_literal_area_collector.beam
 lib/erlang/lib/erts-${VERSION.erts}/ebin/init.beam
-lib/erlang/lib/erts-${VERSION.erts}/ebin/net.beam
 lib/erlang/lib/erts-${VERSION.erts}/ebin/persistent_term.beam
 lib/erlang/lib/erts-${VERSION.erts}/ebin/prim_buffer.beam
 lib/erlang/lib/erts-${VERSION.erts}/ebin/prim_eval.beam
 lib/erlang/lib/erts-${VERSION.erts}/ebin/prim_file.beam
 lib/erlang/lib/erts-${VERSION.erts}/ebin/prim_inet.beam
+lib/erlang/lib/erts-${VERSION.erts}/ebin/prim_net.beam
 lib/erlang/lib/erts-${VERSION.erts}/ebin/prim_zip.beam
 lib/erlang/lib/erts-${VERSION.erts}/ebin/socket.beam
 lib/erlang/lib/erts-${VERSION.erts}/ebin/zlib.beam
@@ -949,13 +943,13 @@ lib/erlang/lib/erts-${VERSION.erts}/src/erts_dirty_process_signal_handler.erl
 lib/erlang/lib/erts-${VERSION.erts}/src/erts_internal.erl
 lib/erlang/lib/erts-${VERSION.erts}/src/erts_literal_area_collector.erl
 lib/erlang/lib/erts-${VERSION.erts}/src/init.erl
-lib/erlang/lib/erts-${VERSION.erts}/src/net.erl
 lib/erlang/lib/erts-${VERSION.erts}/src/persistent_term.erl
 lib/erlang/lib/erts-${VERSION.erts}/src/prim_buffer.erl
 lib/erlang/lib/erts-${VERSION.erts}/src/prim_eval.S
 lib/erlang/lib/erts-${VERSION.erts}/src/prim_eval.erl
 lib/erlang/lib/erts-${VERSION.erts}/src/prim_file.erl
 lib/erlang/lib/erts-${VERSION.erts}/src/prim_inet.erl
+lib/erlang/lib/erts-${VERSION.erts}/src/prim_net.erl
 lib/erlang/lib/erts-${VERSION.erts}/src/prim_zip.erl
 lib/erlang/lib/erts-${VERSION.erts}/src/socket.erl
 lib/erlang/lib/erts-${VERSION.erts}/src/zlib.erl
@@ -1147,6 +1141,7 @@ lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_example.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_file.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_instance_sup.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_log.beam
+lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_logger.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_manager.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_misc_sup.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_request.beam
@@ -1355,6 +1350,7 @@ lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_file.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_instance_sup.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_internal.hrl
 lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_log.erl
+lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_logger.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_manager.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_misc_sup.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_request.erl
@@ -1409,6 +1405,7 @@ lib/erlang/lib/kernel-${VERSION.kernel}/ebin/disk_log_sup.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/dist_ac.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/dist_util.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/erl_boot_server.beam
+lib/erlang/lib/kernel-${VERSION.kernel}/ebin/erl_compile_server.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/erl_ddll.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/erl_distribution.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/erl_epmd.beam
@@ -1467,6 +1464,7 @@ lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_server.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_simple_h.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_std_h.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/logger_sup.beam
+lib/erlang/lib/kernel-${VERSION.kernel}/ebin/net.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/net_adm.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/net_kernel.beam
 lib/erlang/lib/kernel-${VERSION.kernel}/ebin/os.beam
@@ -1518,6 +1516,7 @@ lib/erlang/lib/kernel-${VERSION.kernel}/src/disk_log_sup.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/dist_ac.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/dist_util.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/erl_boot_server.erl
+lib/erlang/lib/kernel-${VERSION.kernel}/src/erl_compile_server.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/erl_ddll.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/erl_distribution.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/erl_epmd.erl
@@ -1586,6 +1585,7 @@ lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_server.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_simple_h.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_std_h.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/logger_sup.erl
+lib/erlang/lib/kernel-${VERSION.kernel}/src/net.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/net_adm.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/net_kernel.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/os.erl
@@ -1691,6 +1691,7 @@ lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_transport.beam
 lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_udp.beam
 lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_udp_server.beam
 lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_udp_sup.beam
+lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_user.beam
 lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_user_default.beam
 lib/erlang/lib/megaco-${VERSION.megaco}/examples/meas/meas.sh.skel
 lib/erlang/lib/megaco-${VERSION.megaco}/examples/meas/megaco_codec_meas.beam
@@ -1786,6 +1787,7 @@ lib/erlang/lib/megaco-${VERSION.megaco}/src/engine/megaco_timer.erl
 lib/erlang/lib/megaco-${VERSION.megaco}/src/engine/megaco_trans_sender.erl
 lib/erlang/lib/megaco-${VERSION.megaco}/src/engine/megaco_trans_sup.erl
 lib/erlang/lib/megaco-${VERSION.megaco}/src/engine/megaco_transport.erl
+lib/erlang/lib/megaco-${VERSION.megaco}/src/engine/megaco_user.erl
 lib/erlang/lib/megaco-${VERSION.megaco}/src/engine/megaco_user_default.erl
 lib/erlang/lib/megaco-${VERSION.megaco}/src/flex/megaco_flex_scanner.erl
 lib/erlang/lib/megaco-${VERSION.megaco}/src/flex/megaco_flex_scanner_drv.c
@@ -2077,6 +2079,7 @@ lib/erlang/lib/parsetools-${VERSION.parsetools}/src/leex.erl
 lib/erlang/lib/parsetools-${VERSION.parsetools}/src/yecc.erl
 lib/erlang/lib/parsetools-${VERSION.parsetools}/src/yeccparser.erl
 lib/erlang/lib/parsetools-${VERSION.parsetools}/src/yeccscan.erl
+lib/erlang/lib/public_key-${VERSION.public_key}/asn1/CMSAesRsaesOaep.asn1
 lib/erlang/lib/public_key-${VERSION.public_key}/asn1/InformationFramework.asn1
 lib/erlang/lib/public_key-${VERSION.public_key}/asn1/OTP-PKIX.asn1
 lib/erlang/lib/public_key-${VERSION.public_key}/asn1/OTP-PUB-KEY.asn1config
@@ -2587,7 +2590,6 @@ lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_sup.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_system_sup.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_transport.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_transport.hrl
-lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_userauth.hrl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_xfer.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_xfer.hrl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/sshc_sup.erl
