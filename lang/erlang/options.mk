@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2019/05/05 21:09:11 nia Exp $
+# $NetBSD: options.mk,v 1.11 2019/11/18 20:46:01 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=		java erlang-hipe
@@ -68,6 +68,8 @@ CONFIGURE_ARGS+=	--with-dynamic-trace=dtrace
 CONFIGURE_ARGS+=	--with-dynamic-trace=systemtap
 .  endif
 PLIST.dtrace=		yes
+.else
+CONFIGURE_ARGS+=	--without-dynamic-trace
 .endif
 
 # Help generate optional PLIST parts:
