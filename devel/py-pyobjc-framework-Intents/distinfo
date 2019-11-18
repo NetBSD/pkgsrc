@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/20 07:15:51 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/11/18 17:03:13 adam Exp $
 
-SHA1 (pyobjc-framework-Intents-5.2.tar.gz) = 9005b710be47fb26b560383ad77726c11cfa59f7
-RMD160 (pyobjc-framework-Intents-5.2.tar.gz) = 821edc44fb5bdb9ac223eb00a3d10e59d427c258
-SHA512 (pyobjc-framework-Intents-5.2.tar.gz) = db2195e6db6c5e3af4c90af65e03e67b406fcbd9936d61421684cc6c52d721c7a9e13c6898ae5c3d4efba38819cc81f02090d15a5854f130d656735701379eec
-Size (pyobjc-framework-Intents-5.2.tar.gz) = 31563 bytes
+SHA1 (pyobjc-framework-Intents-6.1.tar.gz) = 7d3d5b6729ebe94025b8678a652d3820c20e5b80
+RMD160 (pyobjc-framework-Intents-6.1.tar.gz) = d96080209e3b1b105a5347f3b7652cd0b312df1a
+SHA512 (pyobjc-framework-Intents-6.1.tar.gz) = 222fb509520e6d4214211928e48430d36c621efa917e2dc6c0635baf7ee04efffb4f97e0fe28ead5588bd21bbb054916871502a79d390c674ce036052e61760e
+Size (pyobjc-framework-Intents-6.1.tar.gz) = 67661 bytes

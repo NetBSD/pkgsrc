@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/20 07:15:54 adam Exp $
+$NetBSD: distinfo,v 1.8 2019/11/18 17:03:16 adam Exp $
 
-SHA1 (pyobjc-framework-ServiceManagement-5.2.tar.gz) = 7569d9245637d0002f5e688faf80ec9871f19292
-RMD160 (pyobjc-framework-ServiceManagement-5.2.tar.gz) = 630961f783436cd936f6e2f175cbff899fe4db70
-SHA512 (pyobjc-framework-ServiceManagement-5.2.tar.gz) = 9ee0e07826b0e7fe649a4e5e6d83d168c6b30509c144b78a00149d9c2276d8504ddc544413947c562676eee2e33332b54711315241462c183c308ae1432c105e
-Size (pyobjc-framework-ServiceManagement-5.2.tar.gz) = 11556 bytes
+SHA1 (pyobjc-framework-ServiceManagement-6.1.tar.gz) = d64734978779131402428252421376861abb0107
+RMD160 (pyobjc-framework-ServiceManagement-6.1.tar.gz) = 55d4562ed4150f55e93b111f23dbfe42ed32c115
+SHA512 (pyobjc-framework-ServiceManagement-6.1.tar.gz) = c1d738385dc2aa52c2eedea03a4cf8652d37327b409caa4170a1cd05ed0dc6115c13d24bb775587f21bc69590e65ea92541b107d3cba448bdcb63603220b44c7
+Size (pyobjc-framework-ServiceManagement-6.1.tar.gz) = 12309 bytes
