@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/20 07:15:52 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/11/18 17:03:15 adam Exp $
 
-SHA1 (pyobjc-framework-Photos-5.2.tar.gz) = 8084ee20b9ecc5b932f817c08e287d741c49f405
-RMD160 (pyobjc-framework-Photos-5.2.tar.gz) = f7ca4568a32bf8260e2d3cfbe6f148d27a3ca140
-SHA512 (pyobjc-framework-Photos-5.2.tar.gz) = 4abc64ea22a9bf4c1de4a9615320c4731c800a6f57df4770264cf3b319a2eb8824fe5d9a948b36163b4623d50a63ec1efb4429dc461615f63f5d07eb11b6e8a4
-Size (pyobjc-framework-Photos-5.2.tar.gz) = 22304 bytes
+SHA1 (pyobjc-framework-Photos-6.1.tar.gz) = 7f2a6a4726bdf7c87650f337b3943f0c93104727
+RMD160 (pyobjc-framework-Photos-6.1.tar.gz) = fb7268dc9aa8d4020415d0c8a43324428bb67370
+SHA512 (pyobjc-framework-Photos-6.1.tar.gz) = eb9900e9c60833a2cf57dad70ae29e39bdcac4894c7fa30af39bb1f7e2ff55f9adac7dd54434a7e18cd4495d826c7adc286e17fc920953a8dd4d1b275d4b7a2e
+Size (pyobjc-framework-Photos-6.1.tar.gz) = 31570 bytes

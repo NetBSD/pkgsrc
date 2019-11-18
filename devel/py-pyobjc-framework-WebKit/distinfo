@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/20 07:15:55 adam Exp $
+$NetBSD: distinfo,v 1.8 2019/11/18 17:03:17 adam Exp $
 
-SHA1 (pyobjc-framework-WebKit-5.2.tar.gz) = c37d424f45fc2807f50ea7a4acca6285045f901b
-RMD160 (pyobjc-framework-WebKit-5.2.tar.gz) = ecadb04e8af6751a4208f56812ede82180d1e1ef
-SHA512 (pyobjc-framework-WebKit-5.2.tar.gz) = 6cd64c7225766e7aa905f5f1650064d92acadccfece9a9fd3e19d835b58c0d0a44984428ba964b1e2ed6a43564fe6df2e1e1536de58561185a996fd011f2969f
-Size (pyobjc-framework-WebKit-5.2.tar.gz) = 449508 bytes
+SHA1 (pyobjc-framework-WebKit-6.1.tar.gz) = aaa538e356e0d2ae37a5a3b212093f8963d1a6b2
+RMD160 (pyobjc-framework-WebKit-6.1.tar.gz) = 8b8ff3f2d57b161dbb9c0da0b6386d36ea2f1a44
+SHA512 (pyobjc-framework-WebKit-6.1.tar.gz) = 7e3c7902a1393c25d2f74b975f28be5909642f54926be395a78c8a97ae6bcb1264735e5aa2f42c83042b7b8fb06796a8340a4a9f8724657a93e1f1fe5f757170
+Size (pyobjc-framework-WebKit-6.1.tar.gz) = 444737 bytes
