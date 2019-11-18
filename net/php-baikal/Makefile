@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2019/11/03 22:28:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/18 15:42:42 wiz Exp $
 
-DISTNAME=	baikal-0.6.0
+DISTNAME=	baikal-0.6.1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fruux/}

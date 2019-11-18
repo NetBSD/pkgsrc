@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/11/03 18:50:18 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/11/18 15:42:42 wiz Exp $
 share/baikal/CHANGELOG.md
 share/baikal/Core/Distrib.php
 share/baikal/Core/Frameworks/Baikal/Controller/Main.php
@@ -820,6 +820,7 @@ share/baikal/vendor/sabre/event/lib/WildcardEmitterTrait.php
 share/baikal/vendor/sabre/event/lib/coroutine.php
 share/baikal/vendor/sabre/event/phpunit.xml.dist
 share/baikal/vendor/sabre/http/.gitignore
+share/baikal/vendor/sabre/http/.php_cs.dist
 share/baikal/vendor/sabre/http/.travis.yml
 share/baikal/vendor/sabre/http/CHANGELOG.md
 share/baikal/vendor/sabre/http/LICENSE
@@ -853,6 +854,7 @@ share/baikal/vendor/sabre/http/lib/ResponseInterface.php
 share/baikal/vendor/sabre/http/lib/Sapi.php
 share/baikal/vendor/sabre/http/lib/Version.php
 share/baikal/vendor/sabre/http/lib/functions.php
+share/baikal/vendor/sabre/http/phpstan.neon
 share/baikal/vendor/sabre/http/tests/HTTP/Auth/AWSTest.php
 share/baikal/vendor/sabre/http/tests/HTTP/Auth/BasicTest.php
 share/baikal/vendor/sabre/http/tests/HTTP/Auth/BearerTest.php
@@ -871,6 +873,9 @@ share/baikal/vendor/sabre/http/tests/HTTP/URLUtilTest.php
 share/baikal/vendor/sabre/http/tests/bootstrap.php
 share/baikal/vendor/sabre/http/tests/phpcs/ruleset.xml
 share/baikal/vendor/sabre/http/tests/phpunit.xml
+share/baikal/vendor/sabre/http/tests/www/bar.php
+share/baikal/vendor/sabre/http/tests/www/foo
+share/baikal/vendor/sabre/http/tests/www/large.php
 share/baikal/vendor/sabre/uri/.gitattributes
 share/baikal/vendor/sabre/uri/.gitignore
 share/baikal/vendor/sabre/uri/.php_cs.dist
