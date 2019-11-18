@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/08/30 18:25:43 nia Exp $
+# $NetBSD: Makefile,v 1.37 2019/11/18 16:20:22 taca Exp $
 
 DISTNAME=	ruby-opengl-0.60.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-mkrf>=0.2.0:../../devel/ruby-mkrf
 
-USE_RAKE=	YES
 MAKE_ENV+=	LDSHARED=${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
 pre-configure:
