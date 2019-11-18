@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:56:56 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/11/18 10:24:27 markd Exp $
 
-SHA1 (kshisen-4.14.3.tar.xz) = c65e667485262df0f299949508d9df9c2c1f8072
-RMD160 (kshisen-4.14.3.tar.xz) = 1670e07287baf366b9af3e91395bcd1fa433a976
-SHA512 (kshisen-4.14.3.tar.xz) = fb6ef71d9a215496fc2d30fae133bf4aa1983f766e18d1e0e92cf3761219057331a8faf0fe3c0874627e846f72e766d348b933a1f7704ffd6298ad79b31c12db
-Size (kshisen-4.14.3.tar.xz) = 136012 bytes
+SHA1 (kshisen-19.08.3.tar.xz) = 9c3d7a7127261092db15575068ac13123c5b306d
+RMD160 (kshisen-19.08.3.tar.xz) = 2d3cc70a409fbcb1c106855ec19f24f020abbb7a
+SHA512 (kshisen-19.08.3.tar.xz) = 7bbc3507dc1100361b4d2d0dea9dfa969533956675d2b72137654237224152d4406076fadb5b749a348d5cbe70158aa7656bfc83b047b7490c43f6782e79dddd
+Size (kshisen-19.08.3.tar.xz) = 821980 bytes
