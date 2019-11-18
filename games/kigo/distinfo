@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:56:55 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/11/18 09:59:54 markd Exp $
 
-SHA1 (kigo-4.14.3.tar.xz) = 21ae8f4c9f7abee0fbcf8eaa6767405f057507e3
-RMD160 (kigo-4.14.3.tar.xz) = 4f2e722b5bfeefce71360308a8732de46ec1861a
-SHA512 (kigo-4.14.3.tar.xz) = 0d30a615c0194083d985192d54fbb03dbd2f06c5b558436acddd2f0c3c7f8ddb8969f24ce39329dae1c8723156fb5d403cae1505d16b7ff526e3bcac0782df95
-Size (kigo-4.14.3.tar.xz) = 1423600 bytes
+SHA1 (kigo-19.08.3.tar.xz) = d2f5453c8c8fd04dd792625bae30aaea903a4694
+RMD160 (kigo-19.08.3.tar.xz) = 0f24845550f287f27f04b3eb680ad53276060fe9
+SHA512 (kigo-19.08.3.tar.xz) = 7b4eb14923668bbd886686ba3c17daf2a8118cc6988049780dc6e33649282734f2c58798f9e97ca8b9dde97d36d54790bdd5a1c75452adef726343c061d9e46b
+Size (kigo-19.08.3.tar.xz) = 5227988 bytes
