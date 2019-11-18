@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2018/09/23 16:16:05 taca Exp $
+# $NetBSD: Makefile,v 1.30 2019/11/18 16:07:20 taca Exp $
 
-DISTNAME=	capistrano-3.11.0
+DISTNAME=	capistrano-3.11.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +12,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-sshkit>=1.9.0:../../security/ruby-sshkit
 DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=0:../../devel/ruby-i18n
 DEPENDS+=	${RUBY_PKGPREFIX}-airbrussh>=1.0.0:../../security/ruby-airbrussh
 
-USE_RAKE=	YES
+USE_LANGUAGES=	# none
 
 RUBYGEM_OPTIONS+=	--format-executable
 
