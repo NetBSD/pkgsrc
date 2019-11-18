@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.30 2019/08/22 12:23:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/18 09:31:48 markd Exp $
 
-DISTNAME=	katomic-${_KDE_VERSION}
-PKGREVISION=	14
+DISTNAME=	katomic-${KAPPSVER}
 CATEGORIES=	games
-COMMENT=	Build complex atoms with a minimal amount of moves
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+HOMEPAGE=	https://kde.org/applications/games/katomic/
+COMMENT=	Build complex atoms with a minimal amount of moves
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
+
+.include "../../meta-pkgs/kde/applications.mk"
+
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+
+USE_TOOLS+=	msgmerge
 
 REPLACE_PERL+=	katomic-levelset-upd.pl
-
-.include "../../meta-pkgs/kde4/kde4.mk"
 
 .include "../../games/libkdegames/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
