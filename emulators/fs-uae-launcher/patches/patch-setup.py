@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.3 2019/08/22 18:35:23 adam Exp $
+$NetBSD: patch-setup.py,v 1.4 2019/11/18 20:01:03 adam Exp $
 
 Fix installation on Darwin.
 
@@ -10,7 +10,7 @@ Fix installation on Darwin.
  
 -if sys.platform == "darwin":
 -    setup_kwargs["name"] = title
--    setup_kwargs["version"] = "3.0.0"
+-    setup_kwargs["version"] = "3.0.2"
 -else:
 -    setup_kwargs["scripts"] = scripts
 +setup_kwargs["scripts"] = scripts
