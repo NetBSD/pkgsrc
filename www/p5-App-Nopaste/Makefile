@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2019/11/04 22:09:59 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/18 12:28:03 mef Exp $
 
-DISTNAME=	App-Nopaste-1.012
+DISTNAME=	App-Nopaste-1.013
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 
@@ -19,15 +18,16 @@ REPLACE_PERL+=	script/nopaste
 DEPENDS+=	p5-WWW-Mechanize-[0-9]*:../../www/p5-WWW-Mechanize
 
 # Recommended dependencies
+DEPENDS+=	p5-Browser-Open-[0-9]*:../../www/p5-Browser-Open
 DEPENDS+=	p5-Clipboard-[0-9]*:../../x11/p5-Clipboard
 DEPENDS+=	p5-Config-INI-[0-9]*:../../devel/p5-Config-INI
 DEPENDS+=	p5-WWW-Pastebin-PastebinCom-Create-[0-9]*:../../www/p5-WWW-Pastebin-PastebinCom-Create
 DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
 
 # for make test
-BUILD_DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
-BUILD_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TEST_DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
+TEST_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
+TEST_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
