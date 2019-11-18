@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/17 17:56:48 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/18 16:20:02 nia Exp $
 bin/iowolfded
 bin/iowolfmp
 bin/iowolfsp
@@ -6,15 +6,15 @@ share/applications/iowolfmp.desktop
 share/applications/iowolfsp.desktop
 share/icons/hicolor/scalable/apps/wolfmp.svg
 share/icons/hicolor/scalable/apps/wolfsp.svg
-share/iortcw/iowolfded.x86_64
-share/iortcw/iowolfmp.x86_64
-share/iortcw/iowolfmp_rend2.x86_64
-share/iortcw/iowolfsp.x86_64
-share/iortcw/iowolfsp_rend2.x86_64
-share/iortcw/iowolfspded.x86_64
-share/iortcw/main/cgame.mp.x86_64.so
-share/iortcw/main/cgame.sp.x86_64.so
-share/iortcw/main/qagame.mp.x86_64.so
-share/iortcw/main/qagame.sp.x86_64.so
-share/iortcw/main/ui.mp.x86_64.so
-share/iortcw/main/ui.sp.x86_64.so
+share/iortcw/iowolfded.${IORTCW_ARCH}
+share/iortcw/iowolfmp.${IORTCW_ARCH}
+share/iortcw/iowolfmp_rend2.${IORTCW_ARCH}
+share/iortcw/iowolfsp.${IORTCW_ARCH}
+share/iortcw/iowolfsp_rend2.${IORTCW_ARCH}
+share/iortcw/iowolfspded.${IORTCW_ARCH}
+share/iortcw/main/cgame.mp.${IORTCW_ARCH}.so
+share/iortcw/main/cgame.sp.${IORTCW_ARCH}.so
+share/iortcw/main/qagame.mp.${IORTCW_ARCH}.so
+share/iortcw/main/qagame.sp.${IORTCW_ARCH}.so
+share/iortcw/main/ui.mp.${IORTCW_ARCH}.so
+share/iortcw/main/ui.sp.${IORTCW_ARCH}.so
