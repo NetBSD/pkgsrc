@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5016 2019/11/18 18:34:38 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.5017 2019/11/18 19:45:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8084,3 +8084,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-pyobjc to 6.1 [adam 2019-11-18]
 	Added devel/py-pyobjc-framework-MetalKit version 6.1 [adam 2019-11-18]
 	Updated www/gnurl to 7.67.0 [ng0 2019-11-18]
+	Updated x11/py-qt5 to 5.13.2 [adam 2019-11-18]
