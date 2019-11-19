@@ -1,20 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/17 10:49:46 ng0 Exp $
-share/fonts/X11/OTF/IBMPlexArabic-Bold.otf
-share/fonts/X11/OTF/IBMPlexArabic-ExtraLight.otf
-share/fonts/X11/OTF/IBMPlexArabic-Light.otf
-share/fonts/X11/OTF/IBMPlexArabic-Medium.otf
-share/fonts/X11/OTF/IBMPlexArabic-Regular.otf
-share/fonts/X11/OTF/IBMPlexArabic-SemiBold.otf
-share/fonts/X11/OTF/IBMPlexArabic-Text.otf
-share/fonts/X11/OTF/IBMPlexArabic-Thin.otf
-share/fonts/X11/OTF/IBMPlexDevanagari-Bold.otf
-share/fonts/X11/OTF/IBMPlexDevanagari-ExtraLight.otf
-share/fonts/X11/OTF/IBMPlexDevanagari-Light.otf
-share/fonts/X11/OTF/IBMPlexDevanagari-Medium.otf
-share/fonts/X11/OTF/IBMPlexDevanagari-Regular.otf
-share/fonts/X11/OTF/IBMPlexDevanagari-SemiBold.otf
-share/fonts/X11/OTF/IBMPlexDevanagari-Text.otf
-share/fonts/X11/OTF/IBMPlexDevanagari-Thin.otf
+@comment $NetBSD: PLIST,v 1.2 2019/11/19 23:52:09 ng0 Exp $
+@pkgdir share/fonts/X11/TTF
 share/fonts/X11/OTF/IBMPlexMono-Bold.otf
 share/fonts/X11/OTF/IBMPlexMono-BoldItalic.otf
 share/fonts/X11/OTF/IBMPlexMono-ExtraLight.otf
@@ -47,6 +32,14 @@ share/fonts/X11/OTF/IBMPlexSans-Text.otf
 share/fonts/X11/OTF/IBMPlexSans-TextItalic.otf
 share/fonts/X11/OTF/IBMPlexSans-Thin.otf
 share/fonts/X11/OTF/IBMPlexSans-ThinItalic.otf
+share/fonts/X11/OTF/IBMPlexSansArabic-Bold.otf
+share/fonts/X11/OTF/IBMPlexSansArabic-ExtraLight.otf
+share/fonts/X11/OTF/IBMPlexSansArabic-Light.otf
+share/fonts/X11/OTF/IBMPlexSansArabic-Medium.otf
+share/fonts/X11/OTF/IBMPlexSansArabic-Regular.otf
+share/fonts/X11/OTF/IBMPlexSansArabic-SemiBold.otf
+share/fonts/X11/OTF/IBMPlexSansArabic-Text.otf
+share/fonts/X11/OTF/IBMPlexSansArabic-Thin.otf
 share/fonts/X11/OTF/IBMPlexSansCondensed-Bold.otf
 share/fonts/X11/OTF/IBMPlexSansCondensed-BoldItalic.otf
 share/fonts/X11/OTF/IBMPlexSansCondensed-ExtraLight.otf
@@ -63,6 +56,14 @@ share/fonts/X11/OTF/IBMPlexSansCondensed-Text.otf
 share/fonts/X11/OTF/IBMPlexSansCondensed-TextItalic.otf
 share/fonts/X11/OTF/IBMPlexSansCondensed-Thin.otf
 share/fonts/X11/OTF/IBMPlexSansCondensed-ThinItalic.otf
+share/fonts/X11/OTF/IBMPlexSansDevanagari-Bold.otf
+share/fonts/X11/OTF/IBMPlexSansDevanagari-ExtraLight.otf
+share/fonts/X11/OTF/IBMPlexSansDevanagari-Light.otf
+share/fonts/X11/OTF/IBMPlexSansDevanagari-Medium.otf
+share/fonts/X11/OTF/IBMPlexSansDevanagari-Regular.otf
+share/fonts/X11/OTF/IBMPlexSansDevanagari-SemiBold.otf
+share/fonts/X11/OTF/IBMPlexSansDevanagari-Text.otf
+share/fonts/X11/OTF/IBMPlexSansDevanagari-Thin.otf
 share/fonts/X11/OTF/IBMPlexSansHebrew-Bold.otf
 share/fonts/X11/OTF/IBMPlexSansHebrew-ExtraLight.otf
 share/fonts/X11/OTF/IBMPlexSansHebrew-Light.otf
@@ -71,6 +72,14 @@ share/fonts/X11/OTF/IBMPlexSansHebrew-Regular.otf
 share/fonts/X11/OTF/IBMPlexSansHebrew-SemiBold.otf
 share/fonts/X11/OTF/IBMPlexSansHebrew-Text.otf
 share/fonts/X11/OTF/IBMPlexSansHebrew-Thin.otf
+share/fonts/X11/OTF/IBMPlexSansThai-Bold.otf
+share/fonts/X11/OTF/IBMPlexSansThai-ExtraLight.otf
+share/fonts/X11/OTF/IBMPlexSansThai-Light.otf
+share/fonts/X11/OTF/IBMPlexSansThai-Medium.otf
+share/fonts/X11/OTF/IBMPlexSansThai-Regular.otf
+share/fonts/X11/OTF/IBMPlexSansThai-SemiBold.otf
+share/fonts/X11/OTF/IBMPlexSansThai-Text.otf
+share/fonts/X11/OTF/IBMPlexSansThai-Thin.otf
 share/fonts/X11/OTF/IBMPlexSansThaiLooped-Bold.otf
 share/fonts/X11/OTF/IBMPlexSansThaiLooped-ExtraLight.otf
 share/fonts/X11/OTF/IBMPlexSansThaiLooped-Light.otf
@@ -95,11 +104,3 @@ share/fonts/X11/OTF/IBMPlexSerif-Text.otf
 share/fonts/X11/OTF/IBMPlexSerif-TextItalic.otf
 share/fonts/X11/OTF/IBMPlexSerif-Thin.otf
 share/fonts/X11/OTF/IBMPlexSerif-ThinItalic.otf
-share/fonts/X11/OTF/IBMPlexThai-Bold.otf
-share/fonts/X11/OTF/IBMPlexThai-ExtraLight.otf
-share/fonts/X11/OTF/IBMPlexThai-Light.otf
-share/fonts/X11/OTF/IBMPlexThai-Medium.otf
-share/fonts/X11/OTF/IBMPlexThai-Regular.otf
-share/fonts/X11/OTF/IBMPlexThai-SemiBold.otf
-share/fonts/X11/OTF/IBMPlexThai-Text.otf
-share/fonts/X11/OTF/IBMPlexThai-Thin.otf
