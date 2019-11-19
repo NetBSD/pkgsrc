@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2018/05/16 08:14:40 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.46 2019/11/19 05:26:21 wiz Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README.md
@@ -142,6 +142,18 @@ share/roundcube/bin/update.sh
 share/roundcube/bin/updatecss.sh
 share/roundcube/bin/updatedb.sh
 share/roundcube/index.php
+share/roundcube/installer/check.php
+share/roundcube/installer/client.js
+share/roundcube/installer/config.php
+share/roundcube/installer/images/add.png
+share/roundcube/installer/images/banner_gradient.gif
+share/roundcube/installer/images/banner_schraffur.gif
+share/roundcube/installer/images/delete.png
+share/roundcube/installer/images/error.png
+share/roundcube/installer/images/roundcube_logo.png
+share/roundcube/installer/index.php
+share/roundcube/installer/styles.css
+share/roundcube/installer/test.php
 share/roundcube/plugins/acl/acl.js
 share/roundcube/plugins/acl/acl.php
 share/roundcube/plugins/acl/composer.json
