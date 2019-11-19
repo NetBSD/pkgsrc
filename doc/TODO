@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19466 2019/11/19 23:41:22 rillig Exp $
+$NetBSD: TODO,v 1.19467 2019/11/19 23:45:05 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1469,10 +1469,8 @@ Suggested cleanups in pkgsrc
 	  package.
 
 	o Run pkglint recursively against the whole tree and fix any
-	  issues identified. This adds very little value to pkgsrc other
-	  than ensuring the pkgsrc files are lint-free and the files pass
-	  the code review tool (pkglint). It can annoy some team members,
-	  so choose your commits wisely.
+	  issues identified. It can annoy some team members, so choose
+	  your commits wisely.
 
 	o Review bulk build reports and fix packages broken on any
 	  platform. Ideally, successful build counts would be similar
