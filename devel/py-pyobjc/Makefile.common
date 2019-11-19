@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2019/11/18 17:03:08 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2019/11/19 05:36:44 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AVFoundation/Makefile
 # used by devel/py-pyobjc-framework-AVKit/Makefile
@@ -86,6 +86,8 @@ HOMEPAGE=	https://pyobjc.readthedocs.io/
 LICENSE=	mit
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		pysetup
 SUBST_STAGE.pysetup=	pre-configure
