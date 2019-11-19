@@ -219,7 +219,7 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename string) []*Change {
 			continue
 		}
 
-		if year != "" && len(change.Date) >= 4 && change.Date[0:4] != year {
+		if year != "" && change.Date[0:4] != year {
 			line.Warnf("Year %q for %s does not match the filename %s.",
 				change.Date[0:4], change.Pkgpath, filename)
 		}
