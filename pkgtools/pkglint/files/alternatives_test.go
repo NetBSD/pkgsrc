@@ -106,3 +106,25 @@ func (s *Suite) Test_CheckFileAlternatives__ALTERNATIVES_SRC(c *check.C) {
 
 	t.CheckOutputEmpty()
 }
+
+// When a man page is mentioned in the ALTERNATIVES file, it must use the
+// PKGMANDIR variable. In the PLIST files though, there is some magic
+// in the pkgsrc infrastructure that maps man/ to ${PKGMANDIR}, which
+// leads to a bit less typing.
+//
+// Seen in graphics/py-blockdiag.
+func (s *Suite) Test_CheckFileAlternatives__PLIST_man(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/ALTERNATIVES",
+		"@PKGMANDIR@/man1/blockdiag @PREFIX@/@PKGMANDIR@/man1/blockdiag-@PYVERSSUFFIX@.1")
+	t.CreateFileLines("category/package/PLIST",
+		PlistCvsID,
+		"man/man1/blockdiag-${PYVERSSUFFIX}.1")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputEmpty()
+}
