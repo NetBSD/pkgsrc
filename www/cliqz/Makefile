@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/11/18 11:00:59 fox Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/19 11:33:49 fox Exp $
 
 DISTNAME=	cliqz-1.30.0
 CATEGORIES=	www
@@ -146,7 +146,7 @@ BUILDLINK_DEPMETHOD.clang=     build
 BUILDLINK_API_DEPENDS.clang+=  clang>=6.0.1nb1
 .include "../../lang/clang/buildlink3.mk"
 BUILDLINK_DEPMETHOD.rust=      build
-BUILDLINK_API_DEPENDS.rust+=   rust>=1.36.0
+BUILDLINK_API_DEPENDS.rust+=   rust>=1.38.0
 .include "../../lang/rust/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
