@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2019/10/10 13:47:40 wiz Exp $
+# $NetBSD: Makefile,v 1.285 2019/11/19 16:54:19 wiz Exp $
 
 DISTNAME=		gnucash-3.7
 CATEGORIES=		finance
@@ -28,6 +28,9 @@ USE_TOOLS+=		gmake
 # build failure in test-tx_import and a couple test failures
 # https://bugzilla.gnome.org/show_bug.cgi?id=795251
 TEST_TARGET=		check
+
+# too fragile
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnucash
 CXXFLAGS+=		-Wno-deprecated-declarations
