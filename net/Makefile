@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1277 2019/11/06 11:54:49 ng0 Exp $
+# $NetBSD: Makefile,v 1.1278 2019/11/19 14:31:22 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -941,7 +941,6 @@ SUBDIR+=	wpa_supplicant
 SUBDIR+=	wu-ftpd
 SUBDIR+=	x2vnc
 SUBDIR+=	xfce4-wavelan-plugin
-SUBDIR+=	xfindproxy
 SUBDIR+=	xipdump
 SUBDIR+=	xl2tpd
 SUBDIR+=	xmftp
