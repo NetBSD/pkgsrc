@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2019/09/12 00:28:47 gdt Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/11/19 15:01:25 gdt Exp $
 bin/bup
 lib/bup/bup/__init__.py
 lib/bup/bup/_helpers.so
 lib/bup/bup/_release.py
 lib/bup/bup/bloom.py
 lib/bup/bup/client.py
+lib/bup/bup/compat.py
 lib/bup/bup/csetup.py
 lib/bup/bup/drecurse.py
 lib/bup/bup/gc.py
@@ -18,6 +19,7 @@ lib/bup/bup/metadata.py
 lib/bup/bup/midx.py
 lib/bup/bup/options.py
 lib/bup/bup/path.py
+lib/bup/bup/repo.py
 lib/bup/bup/rm.py
 lib/bup/bup/shquote.py
 lib/bup/bup/ssh.py
@@ -34,6 +36,7 @@ lib/bup/cmd/bup-fsck
 lib/bup/cmd/bup-ftp
 lib/bup/cmd/bup-fuse
 lib/bup/cmd/bup-gc
+lib/bup/cmd/bup-get
 lib/bup/cmd/bup-help
 lib/bup/cmd/bup-import-duplicity
 lib/bup/cmd/bup-import-rdiff-backup
@@ -48,7 +51,6 @@ lib/bup/cmd/bup-memtest
 lib/bup/cmd/bup-meta
 lib/bup/cmd/bup-midx
 lib/bup/cmd/bup-mux
-lib/bup/cmd/bup-newliner
 lib/bup/cmd/bup-on
 lib/bup/cmd/bup-on--server
 lib/bup/cmd/bup-prune-older
@@ -74,6 +76,7 @@ man/man1/bup-fsck.1
 man/man1/bup-ftp.1
 man/man1/bup-fuse.1
 man/man1/bup-gc.1
+man/man1/bup-get.1
 man/man1/bup-help.1
 man/man1/bup-import-duplicity.1
 man/man1/bup-import-rdiff-backup.1
@@ -87,8 +90,8 @@ man/man1/bup-memtest.1
 man/man1/bup-meta.1
 man/man1/bup-midx.1
 man/man1/bup-mux.1
-man/man1/bup-newliner.1
 man/man1/bup-on.1
+man/man1/bup-prune-older.1
 man/man1/bup-random.1
 man/man1/bup-restore.1
 man/man1/bup-rm.1
