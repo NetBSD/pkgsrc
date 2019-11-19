@@ -1,33 +1,30 @@
-# $NetBSD: Makefile,v 1.45 2019/08/11 13:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2019/11/19 18:16:09 nia Exp $
 #
 
-DISTNAME=	ratpoison-1.4.8
-PKGREVISION=	4
+DISTNAME=	ratpoison-1.4.9
 CATEGORIES=	wm
-MASTER_SITES=	http://savannah.nongnu.org/download/ratpoison/
+MASTER_SITES=	https://savannah.nongnu.org/download/ratpoison/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	tonio@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/ratpoison/
+HOMEPAGE=	https://www.nongnu.org/ratpoison/
 COMMENT=	Simple window manager with no fat library dependencies
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=		YES
-INFO_FILES=		yes
+USE_TOOLS+=	perl:run pkg-config
 
-USE_TOOLS+=	perl:run pkg-config autoconf
+GNU_CONFIGURE=	YES
+INFO_FILES=	yes
+
 REPLACE_PERL+=	contrib/rpws contrib/genrpbindings contrib/clickframe.pl
 REPLACE_SH=	contrib/allwindows.sh
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-pre-configure:
-	cd ${WRKSRC}; autoconf
-
 .include "../../devel/readline/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
