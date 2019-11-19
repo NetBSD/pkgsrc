@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5034 2019/11/19 16:15:45 prlw1 Exp $
+$NetBSD: CHANGES-2019,v 1.5035 2019/11/19 17:07:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8114,3 +8114,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed net/xfindproxy [wiz 2019-11-19]
 	Updated converters/bdf2psf to 1.194 [fcambus 2019-11-19]
 	Updated www/drupal8 to 8.7.10 [prlw1 2019-11-19]
+	Updated sysutils/bup to 0.30 [gdt 2019-11-19]
