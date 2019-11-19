@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2953 2019/11/15 14:02:01 wiz Exp $
+# $NetBSD: Makefile,v 1.2954 2019/11/19 05:37:57 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2329,6 +2329,7 @@ SUBDIR+=	py-pyobjc-framework-MapKit
 SUBDIR+=	py-pyobjc-framework-MediaAccessibility
 SUBDIR+=	py-pyobjc-framework-MediaLibrary
 SUBDIR+=	py-pyobjc-framework-MediaPlayer
+SUBDIR+=	py-pyobjc-framework-MetalKit
 SUBDIR+=	py-pyobjc-framework-ModelIO
 SUBDIR+=	py-pyobjc-framework-MultipeerConnectivity
 SUBDIR+=	py-pyobjc-framework-NetFS
