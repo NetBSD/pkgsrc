@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2019/10/31 11:22:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.58 2019/11/19 16:20:24 prlw1 Exp $
+
+PKGREVISION= 	1
 
 .include "Makefile.common"
 
@@ -48,6 +50,11 @@ FILES_SUBST+=	CLAMAV_USER=${CLAMAV_USER}
 FILES_SUBST+=	CLAMAV_GROUP=${CLAMAV_GROUP}
 FILES_SUBST+=	CLAMAV_DBDIR=${CLAMAV_DBDIR}
 MESSAGE_SUBST+=	CLAMAV_USER=${CLAMAV_USER}
+
+SUBST_CLASSES+=		vars
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	etc/clamav-milter.conf.sample etc/clamd.conf.sample
+SUBST_VARS.vars=	CLAMAV_DBDIR
 
 RCD_SCRIPTS=	clamd freshclamd
 SMF_METHODS=	${RCD_SCRIPTS}
