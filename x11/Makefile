@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.862 2019/11/15 09:18:16 wiz Exp $
+# $NetBSD: Makefile,v 1.863 2019/11/19 14:21:26 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -584,7 +584,6 @@ SUBDIR+=	xfontsel
 SUBDIR+=	xforms
 SUBDIR+=	xfsinfo
 SUBDIR+=	xfstt
-SUBDIR+=	xfwp
 SUBDIR+=	xgamma
 SUBDIR+=	xgas
 SUBDIR+=	xgrk
@@ -649,7 +648,6 @@ SUBDIR+=	xrdb
 SUBDIR+=	xrefresh
 SUBDIR+=	xrestop
 SUBDIR+=	xrootconsole
-SUBDIR+=	xrx
 SUBDIR+=	xscope
 SUBDIR+=	xscreensaver
 SUBDIR+=	xscreensaver-demo
