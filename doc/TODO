@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19465 2019/11/19 23:17:55 ng0 Exp $
+$NetBSD: TODO,v 1.19466 2019/11/19 23:41:22 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1445,9 +1445,6 @@ Suggested cleanups in pkgsrc
 	  Affects: cross/h8300-hms-binutils, cross/h8300-hms-gcc,
 	  sysutils/apcupsd, sysutils/gnometoaster,
 	  sysutils/mtoolsfm, sysutils/xnc
-
-	o Install documentation consistently into share/doc/${PKGBASE} or
-	  share/doc/${PKGNAME}, not share/doc/html.
 
 	o Convert packages to use VARBASE instead of hardcoding /var.
 
