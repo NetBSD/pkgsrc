@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/08/21 13:26:10 wiz Exp $
+$NetBSD: distinfo,v 1.6 2019/11/19 13:06:16 mef Exp $
 
-SHA1 (LWP-ConsoleLogger-0.000039.tar.gz) = 75bf86333484eeffa10e8a8109fd8cf9ca34bb76
-RMD160 (LWP-ConsoleLogger-0.000039.tar.gz) = bd2d4b83483aa494d31bd1b692e21b59a7265882
-SHA512 (LWP-ConsoleLogger-0.000039.tar.gz) = d3d160f26938d966ac1c3044e410c8c5e8016265cda121738a68ea3e66d6a0bd52cda1f00b2e5d2a59c486274333264853f9548c37f214061ffbdb244b241796
-Size (LWP-ConsoleLogger-0.000039.tar.gz) = 37602 bytes
+SHA1 (LWP-ConsoleLogger-0.000042.tar.gz) = ac9dcec626c648a114470849f420796419946df3
+RMD160 (LWP-ConsoleLogger-0.000042.tar.gz) = afd6e71db82bef7d8248b648f32cf571b014171a
+SHA512 (LWP-ConsoleLogger-0.000042.tar.gz) = 8211a64623ea9263fa8c993706b25e06ba49f98d77e7dff1e962b88ee2a02f9f6287d5cfc81f2f9e5f493f973f2961677813acb250419abe566de30f2d4885e1
+Size (LWP-ConsoleLogger-0.000042.tar.gz) = 40017 bytes
