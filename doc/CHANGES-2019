@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5024 2019/11/19 10:11:32 he Exp $
+$NetBSD: CHANGES-2019,v 1.5025 2019/11/19 11:17:41 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8098,3 +8098,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/postgresql12 to 12.1 [adam 2019-11-19]
 	Updated pkgtools/pkglint to 19.3.9 [rillig 2019-11-19]
 	Updated net/unbound to 1.9.5 [he 2019-11-19]
+	Updated misc/ansiweather to 1.15.0 [fcambus 2019-11-19]
