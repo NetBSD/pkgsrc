@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1070 2019/11/17 06:03:09 markd Exp $
+# $NetBSD: Makefile,v 1.1071 2019/11/19 21:30:15 maya Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1104,6 +1104,7 @@ SUBDIR+=	yaml-cpp
 SUBDIR+=	yelp-tools
 SUBDIR+=	yelp-xsl
 SUBDIR+=	yodl
+SUBDIR+=	yq
 SUBDIR+=	zoem
 
 .include "../mk/misc/category.mk"
