@@ -28,6 +28,9 @@ func CheckFileAlternatives(filename string) {
 		if plist.Files[plistName] != nil || G.Pkg.vars.IsDefined("ALTERNATIVES_SRC") {
 			return
 		}
+		if plist.Files[strings.Replace(plistName, "${PKGMANDIR}", "man", 1)] != nil {
+			return
+		}
 
 		switch {
 
