@@ -368,6 +368,10 @@ func (s *Suite) Test_Pkgsrc_parseDocChange(c *check.C) {
 	test("\t Too large indentation",
 		"WARN: doc/CHANGES-2019:123: Package changes should be indented using a single tab, not \"\\t \".")
 
+	test("\t",
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: \t")
+	test("\t1",
+		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: \t1")
 	test("\t1 2 3 4",
 		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: \t1 2 3 4")
 	test("\t1 2 3 4 5",
@@ -387,25 +391,25 @@ func (s *Suite) Test_Pkgsrc_parseDocChange(c *check.C) {
 		nil...)
 
 	// "to" is wrong
-	test("\tAdded pkgpath to 1.0 [author date]",
+	test("\tAdded pkgpath to 1.0 [author 2019-01-01]",
 		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
-			"\tAdded pkgpath to 1.0 [author date]")
+			"\tAdded pkgpath to 1.0 [author 2019-01-01]")
 
 	test("\tUpdated pkgpath to 1.0 [author 2019-01-01]",
 		nil...)
 
 	// "from" is wrong
-	test("\tUpdated pkgpath from 1.0 [author date]",
+	test("\tUpdated pkgpath from 1.0 [author 2019-01-01]",
 		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
-			"\tUpdated pkgpath from 1.0 [author date]")
+			"\tUpdated pkgpath from 1.0 [author 2019-01-01]")
 
 	test("\tDowngraded pkgpath to 1.0 [author 2019-01-01]",
 		nil...)
 
 	// "from" is wrong
-	test("\tDowngraded pkgpath from 1.0 [author date]",
+	test("\tDowngraded pkgpath from 1.0 [author 2019-01-01]",
 		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
-			"\tDowngraded pkgpath from 1.0 [author date]")
+			"\tDowngraded pkgpath from 1.0 [author 2019-01-01]")
 
 	test("\tRemoved pkgpath [author 2019-01-01]",
 		nil...)
@@ -414,30 +418,30 @@ func (s *Suite) Test_Pkgsrc_parseDocChange(c *check.C) {
 		nil...)
 
 	// "and" is wrong
-	test("\tRemoved pkgpath and pkgpath [author date]",
+	test("\tRemoved pkgpath and pkgpath [author 2019-01-01]",
 		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
-			"\tRemoved pkgpath and pkgpath [author date]")
+			"\tRemoved pkgpath and pkgpath [author 2019-01-01]")
 
 	test("\tRenamed pkgpath to other [author 2019-01-01]",
 		nil...)
 
 	// "from" is wrong
-	test("\tRenamed pkgpath from previous [author date]",
+	test("\tRenamed pkgpath from previous [author 2019-01-01]",
 		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
-			"\tRenamed pkgpath from previous [author date]")
+			"\tRenamed pkgpath from previous [author 2019-01-01]")
 
 	test("\tMoved pkgpath to other [author 2019-01-01]",
 		nil...)
 
 	// "from" is wrong
-	test("\tMoved pkgpath from previous [author date]",
+	test("\tMoved pkgpath from previous [author 2019-01-01]",
 		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
-			"\tMoved pkgpath from previous [author date]")
+			"\tMoved pkgpath from previous [author 2019-01-01]")
 
 	// "Split" is wrong
-	test("\tSplit pkgpath into a and b [author date]",
+	test("\tSplit pkgpath into a and b [author 2019-01-01]",
 		"WARN: doc/CHANGES-2019:123: Invalid doc/CHANGES line: "+
-			"\tSplit pkgpath into a and b [author date]")
+			"\tSplit pkgpath into a and b [author 2019-01-01]")
 
 	// Entries ending in a colon are used for infrastructure changes.
 	test("\tmk: remove support for USE_CROSSBASE [author 2016-06-19]",

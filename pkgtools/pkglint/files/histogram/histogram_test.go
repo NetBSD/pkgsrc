@@ -30,6 +30,6 @@ func (s *Suite) Test_Histogram(c *check.C) {
 
 func (s *Suite) Test__test_names(c *check.C) {
 	ck := intqa.NewTestNameChecker(c.Errorf)
-	ck.Enable(intqa.EAll, -intqa.EMissingTest)
+	ck.Configure("*", "*", "*", -intqa.EMissingTest)
 	ck.Check()
 }
