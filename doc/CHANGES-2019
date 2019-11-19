@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5031 2019/11/19 14:25:06 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.5032 2019/11/19 14:31:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8111,3 +8111,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/xfwp [wiz 2019-11-19]
 	Updated graphics/libansilove to 1.1.6 [fcambus 2019-11-19]
 	Updated graphics/ansilove to 4.0.5 [fcambus 2019-11-19]
+	Removed net/xfindproxy [wiz 2019-11-19]
