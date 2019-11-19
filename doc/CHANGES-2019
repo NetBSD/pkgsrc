@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5036 2019/11/19 18:16:30 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5037 2019/11/19 21:30:44 maya Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8116,3 +8116,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/drupal8 to 8.7.10 [prlw1 2019-11-19]
 	Updated sysutils/bup to 0.30 [gdt 2019-11-19]
 	Updated wm/ratpoison to 1.4.9 [nia 2019-11-19]
+	Added textproc/yq version 2.9.2 [maya 2019-11-19]
