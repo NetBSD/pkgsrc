@@ -1,23 +1,23 @@
-@comment $NetBSD: PLIST,v 1.4 2019/10/25 12:01:19 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/11/19 05:54:51 adam Exp $
 include/postgresql/server/plpy_util.h
 include/postgresql/server/plpython.h
 ${PLIST.py2x}lib/postgresql/hstore_plpython2.so
 ${PLIST.py3x}lib/postgresql/hstore_plpython3.so
 ${PLIST.py2x}lib/postgresql/plpython2.so
 ${PLIST.py3x}lib/postgresql/plpython3.so
-${PLIST}share/locale/cs/LC_MESSAGES/plpython-10.mo
-${PLIST}share/locale/de/LC_MESSAGES/plpython-10.mo
-${PLIST}share/locale/es/LC_MESSAGES/plpython-10.mo
-${PLIST}share/locale/fr/LC_MESSAGES/plpython-10.mo
-${PLIST}share/locale/it/LC_MESSAGES/plpython-10.mo
-${PLIST}share/locale/ja/LC_MESSAGES/plpython-10.mo
-${PLIST}share/locale/ko/LC_MESSAGES/plpython-10.mo
-${PLIST}share/locale/pl/LC_MESSAGES/plpython-10.mo
-${PLIST}share/locale/pt_BR/LC_MESSAGES/plpython-10.mo
-${PLIST}share/locale/ru/LC_MESSAGES/plpython-10.mo
-${PLIST}share/locale/sv/LC_MESSAGES/plpython-10.mo
-${PLIST}share/locale/tr/LC_MESSAGES/plpython-10.mo
-${PLIST}share/locale/zh_CN/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/cs/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/de/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/es/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/fr/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/ja/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/ko/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/pl/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/ru/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/sv/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/tr/LC_MESSAGES/plpython-10.mo
+${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/plpython-10.mo
 share/postgresql/extension/hstore_plpython2u--1.0.sql
 share/postgresql/extension/hstore_plpython2u.control
 share/postgresql/extension/hstore_plpython3u--1.0.sql

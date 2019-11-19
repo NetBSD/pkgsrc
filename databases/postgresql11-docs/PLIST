@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/08/11 11:40:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/11/19 05:54:52 adam Exp $
 man/man1/clusterdb.1
 man/man1/createdb.1
 man/man1/createuser.1
@@ -949,6 +949,7 @@ share/doc/postgresql/html/release-11-2.html
 share/doc/postgresql/html/release-11-3.html
 share/doc/postgresql/html/release-11-4.html
 share/doc/postgresql/html/release-11-5.html
+share/doc/postgresql/html/release-11-6.html
 share/doc/postgresql/html/release-11.html
 share/doc/postgresql/html/release-prior.html
 share/doc/postgresql/html/release.html
@@ -1376,6 +1377,7 @@ share/doc/postgresql/html/xfunc-sql.html
 share/doc/postgresql/html/xfunc-volatility.html
 share/doc/postgresql/html/xfunc.html
 share/doc/postgresql/html/xindex.html
+share/doc/postgresql/html/xml-limits-conformance.html
 share/doc/postgresql/html/xml2.html
 share/doc/postgresql/html/xoper-optimization.html
 share/doc/postgresql/html/xoper.html
