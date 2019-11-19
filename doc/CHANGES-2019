@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5026 2019/11/19 11:25:39 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.5027 2019/11/19 13:17:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8077,6 +8077,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/kajongg to 19.08.3 [markd 2019-11-18]
 	Updated www/firefox68 to 68.2.0nb1 [ryoon 2019-11-18]
 	Added www/p5-Browser-Open version 0.04 [mef 2019-11-18]
+	Updated www/p5-App-Nopaste to 1.013 [mef 2019-11-18]
 	Updated net/php-baikal to 0.6.1 [wiz 2019-11-18]
 	Updated security/ruby-ruby-openid to 2.9.2 [taca 2019-11-18]
 	Updated security/ruby-sshkit to 1.20.0 [taca 2019-11-18]
@@ -8100,3 +8101,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/unbound to 1.9.5 [he 2019-11-19]
 	Updated misc/ansiweather to 1.15.0 [fcambus 2019-11-19]
 	Updated www/logswan to 2.1.2 [fcambus 2019-11-19]
+	Updated www/p5-HTML-Form to 6.05 [mef 2019-11-19]
+	Updated www/p5-HTMLObject to 2.30 [mef 2019-11-19]
+	Updated www/p5-HTTP-Cookies to 6.05 [mef 2019-11-19]
+	Updated www/p5-HTTP-OAI to 4.10 [mef 2019-11-19]
+	Updated www/p5-LWP-ConsoleLogger to 0.000042 [mef 2019-11-19]
+	Updated www/p5-LWP-MediaTypes to 6.04 [mef 2019-11-19]
