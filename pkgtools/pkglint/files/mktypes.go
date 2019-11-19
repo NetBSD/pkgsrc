@@ -110,7 +110,7 @@ func (m MkVarUseModifier) IsToLower() bool { return m.Text == "tl" }
 func (m MkVarUseModifier) ChangesWords() bool {
 	text := m.Text
 
-	// See MkParser.VarUseModifiers for the meaning of these modifiers.
+	// See MkParser.varUseModifier for the meaning of these modifiers.
 	switch text[0] {
 
 	case 'E', 'H', 'M', 'N', 'O', 'R', 'T':
