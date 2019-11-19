@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/10/29 09:37:33 fcambus Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/19 14:23:02 fcambus Exp $
 
-DISTNAME=	libansilove-1.1.5
+DISTNAME=	libansilove-1.1.6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ansilove/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
