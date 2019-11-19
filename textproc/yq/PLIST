@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/19 21:30:15 maya Exp $
+bin/xq
+bin/yq
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/yq/__init__.py
+${PYSITELIB}/yq/__init__.pyo
+${PYSITELIB}/yq/__init__.pyc
+${PYSITELIB}/yq/compat.pyo
+${PYSITELIB}/yq/compat.pyc
+${PYSITELIB}/yq/dumper.pyo
+${PYSITELIB}/yq/dumper.pyc
+${PYSITELIB}/yq/loader.pyo
+${PYSITELIB}/yq/loader.pyc
+${PYSITELIB}/yq/parser.pyo
+${PYSITELIB}/yq/parser.pyc
+${PYSITELIB}/yq/version.pyo
+${PYSITELIB}/yq/version.pyc
+${PYSITELIB}/yq/compat.py
+${PYSITELIB}/yq/dumper.py
+${PYSITELIB}/yq/loader.py
+${PYSITELIB}/yq/parser.py
+${PYSITELIB}/yq/version.py
