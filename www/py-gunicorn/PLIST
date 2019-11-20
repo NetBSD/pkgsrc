@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2018/07/04 03:43:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/11/20 11:32:32 adam Exp $
 bin/gunicorn-${PYVERSSUFFIX}
-bin/gunicorn_paster-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,9 +10,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/gunicorn/__init__.py
 ${PYSITELIB}/gunicorn/__init__.pyc
 ${PYSITELIB}/gunicorn/__init__.pyo
-${PYSITELIB}/gunicorn/_compat.py
-${PYSITELIB}/gunicorn/_compat.pyc
-${PYSITELIB}/gunicorn/_compat.pyo
 ${PYSITELIB}/gunicorn/app/__init__.py
 ${PYSITELIB}/gunicorn/app/__init__.pyc
 ${PYSITELIB}/gunicorn/app/__init__.pyo
@@ -29,9 +25,6 @@ ${PYSITELIB}/gunicorn/app/wsgiapp.pyo
 ${PYSITELIB}/gunicorn/arbiter.py
 ${PYSITELIB}/gunicorn/arbiter.pyc
 ${PYSITELIB}/gunicorn/arbiter.pyo
-${PYSITELIB}/gunicorn/argparse_compat.py
-${PYSITELIB}/gunicorn/argparse_compat.pyc
-${PYSITELIB}/gunicorn/argparse_compat.pyo
 ${PYSITELIB}/gunicorn/config.py
 ${PYSITELIB}/gunicorn/config.pyc
 ${PYSITELIB}/gunicorn/config.pyo
@@ -47,9 +40,6 @@ ${PYSITELIB}/gunicorn/glogging.pyo
 ${PYSITELIB}/gunicorn/http/__init__.py
 ${PYSITELIB}/gunicorn/http/__init__.pyc
 ${PYSITELIB}/gunicorn/http/__init__.pyo
-${PYSITELIB}/gunicorn/http/_sendfile.py
-${PYSITELIB}/gunicorn/http/_sendfile.pyc
-${PYSITELIB}/gunicorn/http/_sendfile.pyo
 ${PYSITELIB}/gunicorn/http/body.py
 ${PYSITELIB}/gunicorn/http/body.pyc
 ${PYSITELIB}/gunicorn/http/body.pyo
@@ -80,15 +70,12 @@ ${PYSITELIB}/gunicorn/pidfile.pyo
 ${PYSITELIB}/gunicorn/reloader.py
 ${PYSITELIB}/gunicorn/reloader.pyc
 ${PYSITELIB}/gunicorn/reloader.pyo
-${PYSITELIB}/gunicorn/selectors.py
-${PYSITELIB}/gunicorn/selectors.pyc
-${PYSITELIB}/gunicorn/selectors.pyo
-${PYSITELIB}/gunicorn/six.py
-${PYSITELIB}/gunicorn/six.pyc
-${PYSITELIB}/gunicorn/six.pyo
 ${PYSITELIB}/gunicorn/sock.py
 ${PYSITELIB}/gunicorn/sock.pyc
 ${PYSITELIB}/gunicorn/sock.pyo
+${PYSITELIB}/gunicorn/socketfromfd.py
+${PYSITELIB}/gunicorn/socketfromfd.pyc
+${PYSITELIB}/gunicorn/socketfromfd.pyo
 ${PYSITELIB}/gunicorn/systemd.py
 ${PYSITELIB}/gunicorn/systemd.pyc
 ${PYSITELIB}/gunicorn/systemd.pyo
@@ -98,18 +85,12 @@ ${PYSITELIB}/gunicorn/util.pyo
 ${PYSITELIB}/gunicorn/workers/__init__.py
 ${PYSITELIB}/gunicorn/workers/__init__.pyc
 ${PYSITELIB}/gunicorn/workers/__init__.pyo
-${PYSITELIB}/gunicorn/workers/_gaiohttp.py
-${PLIST.py3x}${PYSITELIB}/gunicorn/workers/_gaiohttp.pyc
-${PLIST.py3x}${PYSITELIB}/gunicorn/workers/_gaiohttp.pyo
 ${PYSITELIB}/gunicorn/workers/base.py
 ${PYSITELIB}/gunicorn/workers/base.pyc
 ${PYSITELIB}/gunicorn/workers/base.pyo
 ${PYSITELIB}/gunicorn/workers/base_async.py
 ${PYSITELIB}/gunicorn/workers/base_async.pyc
 ${PYSITELIB}/gunicorn/workers/base_async.pyo
-${PYSITELIB}/gunicorn/workers/gaiohttp.py
-${PYSITELIB}/gunicorn/workers/gaiohttp.pyc
-${PYSITELIB}/gunicorn/workers/gaiohttp.pyo
 ${PYSITELIB}/gunicorn/workers/geventlet.py
 ${PYSITELIB}/gunicorn/workers/geventlet.pyc
 ${PYSITELIB}/gunicorn/workers/geventlet.pyo

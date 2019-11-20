@@ -1,2 +1,1 @@
 bin/gunicorn @PREFIX@/bin/gunicorn-@PYVERSSUFFIX@
-bin/gunicorn_paster @PREFIX@/bin/gunicorn_paster-@PYVERSSUFFIX@

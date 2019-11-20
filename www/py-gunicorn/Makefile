@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2019/07/08 10:36:27 nia Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/20 11:32:32 adam Exp $
 
-DISTNAME=	gunicorn-19.9.0
+DISTNAME=	gunicorn-20.0.0
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gunicorn/}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,10 +15,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.4.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} gunicorn gunicorn-${PYVERSSUFFIX} && \
-		${MV} gunicorn_paster gunicorn_paster-${PYVERSSUFFIX} || ${TRUE}
+	${MV} gunicorn gunicorn-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
