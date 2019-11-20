@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5054 2019/11/20 18:58:22 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.5055 2019/11/20 21:01:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8142,3 +8142,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated biology/openbabel to 3.0.0 [kamil 2019-11-20]
 	Updated biology/openbabel to 3.0.0nb1 [kamil 2019-11-20]
 	Updated biology/gnome-chemistry-utils to 0.12.13nb30 [kamil 2019-11-20]
+	Added misc/wandio version 4.2.2 [adam 2019-11-20]
+	Updated net/libtrace to 4.0.10 [adam 2019-11-20]
