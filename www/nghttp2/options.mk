@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.6 2019/01/14 17:22:18 gdt Exp $
+# $NetBSD: options.mk,v 1.7 2019/11/20 16:38:22 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nghttp2
 PKG_SUPPORTED_OPTIONS=	nghttp2-asio nghttp2-tools
-PKG_SUGGESTED_OPTIONS=	#
 
 .include "../../mk/bsd.options.mk"
 
