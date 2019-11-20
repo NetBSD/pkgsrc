@@ -1,18 +1,24 @@
-# $NetBSD: Makefile,v 1.40 2019/08/22 12:23:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2019/11/20 22:33:37 markd Exp $
 
-DISTNAME=	kalgebra-${_KDE_VERSION}
-PKGREVISION=	14
+DISTNAME=	kalgebra-${KAPPSVER}
 CATEGORIES=	math
+
+HOMEPAGE=	https://kde.org/applications/education/kalgebra/
 COMMENT=	KDE graph calculator
+LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+USE_TOOLS+=	msgmerge
+
+.include "../../devel/kio/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../math/analitza/buildlink3.mk"
-.include "../../misc/libkdeedu/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+#.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
