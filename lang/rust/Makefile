@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2019/11/20 09:53:13 he Exp $
+# $NetBSD: Makefile,v 1.131 2019/11/20 19:07:12 minskim Exp $
 
 DISTNAME=	rustc-1.39.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -359,6 +359,16 @@ do-install:
 
 GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 			sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
+
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	for f in ${DESTDIR}${PREFIX}/lib/librustc_macros-*.dylib \
+		 ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/lib/librustc_macros-*.dylib; do \
+		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
+	done
+.endif
 
 # Create a relocatable stage2 bootstrap from the bits we just built that can be
 # used to build the next version of rust.  Currently only tested on SmartOS.
