@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2019/11/18 18:46:08 markd Exp $
+# $NetBSD: Makefile,v 1.48 2019/11/20 22:42:56 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -27,10 +27,10 @@ DEPENDS+=	kcron-4.14.3{,nb[0-9]*}:../../sysutils/kcron
 DEPENDS+=	kuser-16.08.0{,nb[0-9]*}:../../sysutils/kuser
 DEPENDS+=	kdeartwork4-15.08.3{,nb[0-9]*}:../../misc/kdeartwork4
 DEPENDS+=	marble-4.14.3{,nb[0-9]*}:../../misc/marble
-DEPENDS+=	blinken-4.14.3{,nb[0-9]*}:../../games/blinken
-DEPENDS+=	analitza-4.14.3{,nb[0-9]*}:../../math/analitza
-DEPENDS+=	cantor-4.14.3{,nb[0-9]*}:../../math/cantor
-DEPENDS+=	kalgebra-4.14.3{,nb[0-9]*}:../../math/kalgebra
+DEPENDS+=	blinken>=4.14.3:../../games/blinken
+DEPENDS+=	analitza>=4.14.3:../../math/analitza
+DEPENDS+=	cantor>=4.14.3:../../math/cantor
+DEPENDS+=	kalgebra>=4.14.3:../../math/kalgebra
 DEPENDS+=	kalzium-16.08.0{,nb[0-9]*}:../../misc/kalzium
 DEPENDS+=	kanagram-4.14.3{,nb[0-9]*}:../../games/kanagram
 DEPENDS+=	kbruch-4.14.3{,nb[0-9]*}:../../misc/kbruch
@@ -45,7 +45,7 @@ DEPENDS+=	kturtle-4.14.3{,nb[0-9]*}:../../misc/kturtle
 DEPENDS+=	kwordquiz-4.14.3{,nb[0-9]*}:../../misc/kwordquiz
 DEPENDS+=	parley-4.14.3{,nb[0-9]*}:../../misc/parley
 ###DEPENDS+=	rocs-4.14.3{,nb[0-9]*}:../../misc/rocs
-DEPENDS+=	step-4.14.3{,nb[0-9]*}:../../misc/step
+DEPENDS+=	step>=4.14.3:../../misc/step
 DEPENDS+=	bomber>=4.14.3:../../games/bomber
 DEPENDS+=	bovo>=4.14.3:../../games/bovo
 DEPENDS+=	granatier>=4.14.3:../../games/granatier
