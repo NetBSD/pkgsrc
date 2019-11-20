@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2018/07/04 13:40:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.49 2019/11/20 22:07:24 markd Exp $
 
 DISTNAME=	libqalculate-0.9.7
 PKGNAME=	qalculate-0.9.7
@@ -6,7 +6,7 @@ PKGREVISION=	6
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
-MAINTAINER=	adam@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://qalculate.sourceforge.net/
 COMMENT=	Modern multi-purpose desktop calculator (console version)
 
