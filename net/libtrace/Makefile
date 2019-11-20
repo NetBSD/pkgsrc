@@ -1,22 +1,19 @@
-# $NetBSD: Makefile,v 1.12 2016/02/25 16:20:51 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.13 2019/11/20 21:00:19 adam Exp $
 
-DISTNAME=	libtrace-3.0.10
-PKGREVISION=	1
+DISTNAME=	libtrace-4.0.10
 CATEGORIES=	net
 MASTER_SITES=	http://research.wand.net.nz/software/libtrace/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://research.wand.net.nz/software/libtrace.php
+HOMEPAGE=	https://research.wand.net.nz/software/libtrace.php
 COMMENT=	Library for trace processing
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-lgpl-v3
 
-USE_TOOLS+=	gmake lex yacc
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
+USE_TOOLS+=	flex gmake yacc
 GNU_CONFIGURE=	yes
-
 CONFIGURE_ENV+=	libtrace_doxygen='false'
 
 CONFIGURE_ENV.DragonFly+=	ac_cv_have_decl_BIOCSETIF=no
@@ -24,6 +21,11 @@ CFLAGS.DragonFly+=		-DHAVE_VSNPRINTF
 
 CFLAGS.Linux+=	-DHAVE_VSNPRINTF
 
-.include "../../devel/zlib/buildlink3.mk"
+FAKE_NCURSES=	yes
+
+.include "../../misc/wandio/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/libyaml/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
