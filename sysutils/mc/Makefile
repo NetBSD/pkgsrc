@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.115 2019/08/11 13:23:10 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2019/11/20 17:02:14 nia Exp $
 
-DISTNAME=	mc-4.8.22
-PKGREVISION=	1
+DISTNAME=	mc-4.8.23
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.midnight-commander.org/downloads/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://ftp.midnight-commander.org/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://www.midnight-commander.org/
+HOMEPAGE=	https://www.midnight-commander.org/
 COMMENT=	User-friendly file manager and visual shell
 LICENSE=	gnu-gpl-v2
 
