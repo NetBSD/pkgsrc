@@ -1,10 +1,10 @@
-$NetBSD: patch-doc_CMakeLists.txt,v 1.4 2014/11/20 09:05:56 mef Exp $
+$NetBSD: patch-doc_CMakeLists.txt,v 1.5 2019/11/20 17:02:12 kamil Exp $
 
-Fix man path.
-
---- doc/CMakeLists.txt.orig	2012-10-04 04:08:55.000000000 +0900
-+++ doc/CMakeLists.txt	2014-11-20 17:53:33.000000000 +0900
-@@ -1,5 +1,5 @@
+--- doc/CMakeLists.txt.orig	2019-10-07 16:39:17.000000000 +0000
++++ doc/CMakeLists.txt
+@@ -1,5 +1,7 @@
++include(GNUInstallDirs)
++
  file(GLOB man_1 *.1)
 -install(FILES ${man_1} DESTINATION share/man/man1)
 +install(FILES ${man_1} DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
