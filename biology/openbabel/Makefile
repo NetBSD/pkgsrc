@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2019/11/20 17:02:12 kamil Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/20 18:07:55 kamil Exp $
 #
 
 GITHUB_PROJECT=	openbabel
 DISTNAME=	openbabel-${RELVERSION:S/-/./g}
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openbabel/}
 GITHUB_TAG=	${PKGBASE}-${RELVERSION}
@@ -17,6 +18,8 @@ RELVERSION=	3-0-0
 USE_LANGUAGES=	c gnu++11
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
+
+PKGCONFIG_OVERRIDE+=	openbabel-3.pc.cmake
 
 .include "options.mk"
 
