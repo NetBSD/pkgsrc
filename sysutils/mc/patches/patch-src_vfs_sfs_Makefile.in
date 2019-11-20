@@ -1,0 +1,15 @@
+$NetBSD: patch-src_vfs_sfs_Makefile.in,v 1.1 2019/11/20 17:02:14 nia Exp $
+
+Install config file to example directory.
+
+--- src/vfs/sfs/Makefile.in.orig	2019-11-20 13:51:35.560921188 +0000
++++ src/vfs/sfs/Makefile.in
+@@ -493,7 +493,7 @@ libvfs_sfs_la_SOURCES = \
+ 	sfs.c sfs.h
+ 
+ SFSCONFFILES = sfs.ini
+-@ENABLE_VFS_SFS_TRUE@sfsconfdir = $(sysconfdir)/@PACKAGE@
++@ENABLE_VFS_SFS_TRUE@sfsconfdir = @datadir@/examples/@PACKAGE@
+ @ENABLE_VFS_SFS_TRUE@sfsconf_DATA = $(SFSCONFFILES)
+ EXTRA_DIST = $(SFSCONFFILES)
+ all: all-am
