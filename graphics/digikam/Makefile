@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2019/11/18 14:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2019/11/20 14:35:43 mef Exp $
 
 DISTNAME=	digikam-6.4.0
 CATEGORIES=	graphics
@@ -8,6 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.digikam.org/
 COMMENT=	Advanced digital photo management application
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2.1
+DIST_SUBDIR=	digikam-6.4.0
 
 .include "../../meta-pkgs/kde/applications.mk"
 
