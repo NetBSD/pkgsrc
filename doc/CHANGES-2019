@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5039 2019/11/19 23:57:57 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.5040 2019/11/20 06:22:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8119,3 +8119,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/yq version 2.9.2 [maya 2019-11-19]
 	Updated fonts/ibm-plex-otf to 4.0.1 [ng0 2019-11-19]
 	Updated fonts/ibm-plex-ttf to 4.0.1 [ng0 2019-11-19]
+	Updated devel/p5-EV to 4.28 [gutteridge 2019-11-20]
