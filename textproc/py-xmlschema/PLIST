@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/22 17:32:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/20 10:09:36 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -28,6 +28,9 @@ ${PYSITELIB}/xmlschema/exceptions.pyo
 ${PYSITELIB}/xmlschema/helpers.py
 ${PYSITELIB}/xmlschema/helpers.pyc
 ${PYSITELIB}/xmlschema/helpers.pyo
+${PYSITELIB}/xmlschema/limits.py
+${PYSITELIB}/xmlschema/limits.pyc
+${PYSITELIB}/xmlschema/limits.pyo
 ${PYSITELIB}/xmlschema/namespaces.py
 ${PYSITELIB}/xmlschema/namespaces.pyc
 ${PYSITELIB}/xmlschema/namespaces.pyo
@@ -111,6 +114,10 @@ ${PYSITELIB}/xmlschema/tests/test_cases/features/namespaces/default_ns_valid2.xs
 ${PYSITELIB}/xmlschema/tests/test_cases/features/namespaces/import-case1.xsd
 ${PYSITELIB}/xmlschema/tests/test_cases/features/namespaces/import-case2.xsd
 ${PYSITELIB}/xmlschema/tests/test_cases/features/namespaces/import-case3.xsd
+${PYSITELIB}/xmlschema/tests/test_cases/features/namespaces/import-case4-1.xml
+${PYSITELIB}/xmlschema/tests/test_cases/features/namespaces/import-case4-2.xml
+${PYSITELIB}/xmlschema/tests/test_cases/features/namespaces/import-case4a.xsd
+${PYSITELIB}/xmlschema/tests/test_cases/features/namespaces/import-case4b.xsd
 ${PYSITELIB}/xmlschema/tests/test_cases/features/namespaces/include-case1.xsd
 ${PYSITELIB}/xmlschema/tests/test_cases/features/namespaces/include-case1bis.xsd
 ${PYSITELIB}/xmlschema/tests/test_cases/features/namespaces/include-case2.xsd
@@ -170,6 +177,7 @@ ${PYSITELIB}/xmlschema/tests/test_cases/issues/issue_105/issue_105.xsd
 ${PYSITELIB}/xmlschema/tests/test_cases/issues/issue_111/issue_111.xsd
 ${PYSITELIB}/xmlschema/tests/test_cases/issues/issue_111/issue_111_skeleton.xsd
 ${PYSITELIB}/xmlschema/tests/test_cases/issues/issue_115/Rotation.xsd
+${PYSITELIB}/xmlschema/tests/test_cases/resources/dummy file #2.txt
 ${PYSITELIB}/xmlschema/tests/test_cases/resources/dummy file.txt
 ${PYSITELIB}/xmlschema/tests/test_cases/resources/external_entity.xml
 ${PYSITELIB}/xmlschema/tests/test_cases/resources/malformed.xml
@@ -317,7 +325,6 @@ ${PYSITELIB}/xmlschema/validators/schemas/XSD_1.0/datatypes.xsd
 ${PYSITELIB}/xmlschema/validators/schemas/XSD_1.1/XMLSchema.xsd
 ${PYSITELIB}/xmlschema/validators/schemas/XSD_1.1/datatypes.xsd
 ${PYSITELIB}/xmlschema/validators/schemas/XSD_1.1/xsd11-extra.xsd
-${PYSITELIB}/xmlschema/validators/schemas/puppet.xsd
 ${PYSITELIB}/xmlschema/validators/schemas/xhtml1-strict.xsd
 ${PYSITELIB}/xmlschema/validators/schemas/xlink.xsd
 ${PYSITELIB}/xmlschema/validators/schemas/xml_minimal.xsd
