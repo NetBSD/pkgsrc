@@ -1,7 +1,0 @@
-Qalculate! Currency is a new utility for conversion between currencies using
-the Qalculate! library. It presents the user with a small dialog with two menus
-for currencies to convert between and two entries for the value to convert to
-or from. When a number or mathematical expression (using the full capabilities
-of Qalculate!) is typed in one of the entries conversion between the two
-currencies are done as-you-type. Current exchange rates can be fetched from the
-Internet with a simple button click.
