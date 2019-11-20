@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.436 2019/10/02 23:24:29 minskim Exp $
+# $NetBSD: Makefile,v 1.437 2019/11/20 22:27:02 markd Exp $
 
 COMMENT=	Mathematics
 
@@ -354,10 +354,7 @@ SUBDIR+=	py-xarray
 SUBDIR+=	py-z3
 SUBDIR+=	py-z3solver
 SUBDIR+=	qalculate
-SUBDIR+=	qalculate-bases
-SUBDIR+=	qalculate-currency
 SUBDIR+=	qalculate-gtk
-SUBDIR+=	qalculate-units
 SUBDIR+=	qhull
 SUBDIR+=	quadpack
 SUBDIR+=	randlib
