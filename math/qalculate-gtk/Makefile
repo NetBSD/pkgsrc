@@ -1,25 +1,21 @@
-# $NetBSD: Makefile,v 1.77 2019/11/20 22:07:24 markd Exp $
+# $NetBSD: Makefile,v 1.78 2019/11/20 22:21:02 markd Exp $
 
-DISTNAME=	qalculate-gtk-0.9.7
-PKGREVISION=	42
+DISTNAME=	qalculate-gtk-3.5.0
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Qalculate/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://qalculate.sourceforge.net/
-COMMENT=	Modern multi-purpose desktop calculator (GNOME version)
+HOMEPAGE=	http://qalculate.github.io/
+COMMENT=	Modern multi-purpose desktop calculator (GTK version)
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		autoconf gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt msgmerge xgettext pkg-config
 GNU_CONFIGURE=		yes
 
-pre-configure:
-	cd ${WRKSRC}; autoconf
-
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../math/qalculate/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
