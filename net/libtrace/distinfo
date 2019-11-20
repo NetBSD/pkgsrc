@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 00:35:10 agc Exp $
+$NetBSD: distinfo,v 1.7 2019/11/20 21:00:19 adam Exp $
 
-SHA1 (libtrace-3.0.10.tar.bz2) = 5033d5cf4bdbb33066862b1ae45221b612ee9b01
-RMD160 (libtrace-3.0.10.tar.bz2) = 5d8f01005e628ecc09f2070e8d48a9c2e43c45a3
-SHA512 (libtrace-3.0.10.tar.bz2) = 7b558843af3397496ba58b0ee15261d1ff1217307a1c93ab62321c1019f0892f4134ab9455730eebf4818b945bba62cebe1cbb593843c3485dc548923fa18799
-Size (libtrace-3.0.10.tar.bz2) = 564727 bytes
+SHA1 (libtrace-4.0.10.tar.bz2) = 50d120f9ffa602fb912a13b8272c6502470c91a3
+RMD160 (libtrace-4.0.10.tar.bz2) = 0baf8674d3693ec0042ab2b9f91b0276576d7dd7
+SHA512 (libtrace-4.0.10.tar.bz2) = b3b15ec3aeaa150e0751d83eaaae0a51c925f205d531970f296d53c1fb539ab425a618d4f649306abbd2af3d7668322e7f8f603796307d5d3d95e8a19e861fb2
+Size (libtrace-4.0.10.tar.bz2) = 737559 bytes
+SHA1 (patch-lib_format__ndag.c) = da7ba216406714ecb5c7386f5abb8376dd186b8e
