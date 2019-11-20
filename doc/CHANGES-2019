@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5049 2019/11/20 16:38:42 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5050 2019/11/20 17:02:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8138,3 +8138,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/moodle to 3.8 [wen 2019-11-20]
 	Updated www/nginx-devel to 1.17.6 [adam 2019-11-20]
 	Updated www/nghttp2 to 1.40.0 [adam 2019-11-20]
+	Updated sysutils/mc to 4.8.23 [nia 2019-11-20]
