@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.21 2019/10/22 18:45:03 adam Exp $
+$NetBSD: patch-setup.py,v 1.22 2019/11/20 23:34:36 minskim Exp $
 
 Disable mp_compile hack; it has problems with native parallel building.
 
@@ -25,3 +25,12 @@ Disable mp_compile hack; it has problems with native parallel building.
          for x in self.feature:
              if getattr(self, "disable_%s" % x):
                  setattr(self.feature, x, False)
+@@ -539,7 +532,7 @@ class pil_build_ext(build_ext):
+ 
+         if feature.want("zlib"):
+             _dbg("Looking for zlib")
+-            if _find_include_file(self, "zlib.h"):
++            if True or _find_include_file(self, "zlib.h"):
+                 if _find_library_file(self, "z"):
+                     feature.zlib = "z"
+                 elif sys.platform == "win32" and _find_library_file(self, "zlib"):
