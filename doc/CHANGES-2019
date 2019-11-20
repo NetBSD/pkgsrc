@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5047 2019/11/20 13:23:21 mef Exp $
+$NetBSD: CHANGES-2019,v 1.5048 2019/11/20 13:55:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8135,3 +8135,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-Plack-Middleware-Session to 0.33 [mef 2019-11-20]
 	Updated www/p5-WWW-Form-UrlEncoded to 0.26 [mef 2019-11-20]
 	Updated www/p5-WWW-Mechanize to 1.95 [mef 2019-11-20]
+	Updated www/moodle to 3.8 [wen 2019-11-20]
