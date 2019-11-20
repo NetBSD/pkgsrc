@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/10/22 17:32:03 adam Exp $
+$NetBSD: distinfo,v 1.2 2019/11/20 10:09:36 adam Exp $
 
-SHA1 (xmlschema-1.0.15.tar.gz) = 2b80b11ca841d749accf44a26168d406a1590718
-RMD160 (xmlschema-1.0.15.tar.gz) = 53648940f6c5c236db8eaafe2456f45b939b81be
-SHA512 (xmlschema-1.0.15.tar.gz) = ada5221d3ee3d980a245204a3c100b1ec88d6ae591265ba3195a8a5f7b370ec0eb1ca4eba460c84f308f72feb01dbefc6682bbe6d08fb3f120b116d42682a196
-Size (xmlschema-1.0.15.tar.gz) = 270853 bytes
+SHA1 (xmlschema-1.0.16.tar.gz) = 8d7a89aa18edac2a1b3e9aeaf53e28ca0e9c1535
+RMD160 (xmlschema-1.0.16.tar.gz) = 1a907cd362e94f8b93e56dad8eb7a178fa7491c1
+SHA512 (xmlschema-1.0.16.tar.gz) = 5dd79e608036995d70b4da627f89c86cd8e7a66f80c2cb87d701395229daa920759769bf7efad34c33dd28ca14971eb155a654f8fec12fb6ace8cb5ecf979650
+Size (xmlschema-1.0.16.tar.gz) = 278082 bytes
