@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5043 2019/11/20 09:43:46 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5044 2019/11/20 10:10:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8126,3 +8126,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py-uncompyle6 to 3.5.1 [adam 2019-11-20]
 	Updated devel/ccache to 3.7.6 [adam 2019-11-20]
 	Updated databases/redis to 5.0.7 [adam 2019-11-20]
+	Updated textproc/py-xmlschema to 1.0.16 [adam 2019-11-20]
+	Updated devel/py-test-mock to 1.12.0 [adam 2019-11-20]
