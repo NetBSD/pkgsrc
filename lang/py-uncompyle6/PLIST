@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/10/15 17:01:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/11/20 09:30:21 adam Exp $
 bin/pydisassemble-${PYVERSSUFFIX}
 bin/uncompyle6-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -125,6 +125,9 @@ ${PYSITELIB}/uncompyle6/scanners/pypy27.pyo
 ${PYSITELIB}/uncompyle6/scanners/pypy32.py
 ${PYSITELIB}/uncompyle6/scanners/pypy32.pyc
 ${PYSITELIB}/uncompyle6/scanners/pypy32.pyo
+${PYSITELIB}/uncompyle6/scanners/pypy33.py
+${PYSITELIB}/uncompyle6/scanners/pypy33.pyc
+${PYSITELIB}/uncompyle6/scanners/pypy33.pyo
 ${PYSITELIB}/uncompyle6/scanners/pypy35.py
 ${PYSITELIB}/uncompyle6/scanners/pypy35.pyc
 ${PYSITELIB}/uncompyle6/scanners/pypy35.pyo
