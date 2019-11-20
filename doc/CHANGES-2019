@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5046 2019/11/20 12:20:14 mef Exp $
+$NetBSD: CHANGES-2019,v 1.5047 2019/11/20 13:23:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8133,3 +8133,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-Net-HTTP to 6.19 [mef 2019-11-20]
 	Updated www/p5-Plack-Middleware-ReverseProxy to 0.16 [mef 2019-11-20]
 	Updated www/p5-Plack-Middleware-Session to 0.33 [mef 2019-11-20]
+	Updated www/p5-WWW-Form-UrlEncoded to 0.26 [mef 2019-11-20]
+	Updated www/p5-WWW-Mechanize to 1.95 [mef 2019-11-20]
