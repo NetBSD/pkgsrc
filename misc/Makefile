@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.521 2019/11/17 06:17:46 markd Exp $
+# $NetBSD: Makefile,v 1.522 2019/11/20 20:52:41 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -363,6 +363,7 @@ SUBDIR+=	vimpager
 SUBDIR+=	visual-regexp
 SUBDIR+=	vttest
 SUBDIR+=	vym
+SUBDIR+=	wandio
 SUBDIR+=	watch
 SUBDIR+=	wdic
 SUBDIR+=	wemux
