@@ -1,0 +1,14 @@
+WANDIO is a library for reading from, and writing to, files. Depending on
+libraries available at compile time, WANDIO provides transparent
+compression/decompression for the following formats:
+- zlib (gzip)
+- bzip2
+- lzo (write-only)
+- lzma
+- zstd
+- lz4
+- Intel QAT (write-only)
+- http (read-only)
+
+WANDIO also improves IO performance by performing compression/decompression in
+a separate thread (if pthreads are available).
