@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/01/18 22:28:38 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/11/20 17:02:14 nia Exp $
 bin/mc
 bin/mcdiff
 bin/mcedit
@@ -211,6 +211,7 @@ share/mc/skins/dark.ini
 share/mc/skins/darkfar.ini
 share/mc/skins/default.ini
 share/mc/skins/double-lines.ini
+share/mc/skins/featured-plus.ini
 share/mc/skins/featured.ini
 share/mc/skins/gotar.ini
 share/mc/skins/gray-green-purple256.ini
