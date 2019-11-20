@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5048 2019/11/20 13:55:29 wen Exp $
+$NetBSD: CHANGES-2019,v 1.5049 2019/11/20 16:38:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8136,3 +8136,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-WWW-Form-UrlEncoded to 0.26 [mef 2019-11-20]
 	Updated www/p5-WWW-Mechanize to 1.95 [mef 2019-11-20]
 	Updated www/moodle to 3.8 [wen 2019-11-20]
+	Updated www/nginx-devel to 1.17.6 [adam 2019-11-20]
+	Updated www/nghttp2 to 1.40.0 [adam 2019-11-20]
