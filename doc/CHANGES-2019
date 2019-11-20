@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5045 2019/11/20 11:32:52 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5046 2019/11/20 12:20:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8130,3 +8130,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-mock to 1.12.0 [adam 2019-11-20]
 	Updated textproc/py-xlsxwriter to 1.2.6 [adam 2019-11-20]
 	Updated www/py-gunicorn to 20.0.0 [adam 2019-11-20]
+	Updated www/p5-Net-HTTP to 6.19 [mef 2019-11-20]
+	Updated www/p5-Plack-Middleware-ReverseProxy to 0.16 [mef 2019-11-20]
+	Updated www/p5-Plack-Middleware-Session to 0.33 [mef 2019-11-20]
