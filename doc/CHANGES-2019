@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5055 2019/11/20 21:01:20 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5056 2019/11/20 22:50:47 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8144,3 +8144,13 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated biology/gnome-chemistry-utils to 0.12.13nb30 [kamil 2019-11-20]
 	Added misc/wandio version 4.2.2 [adam 2019-11-20]
 	Updated net/libtrace to 4.0.10 [adam 2019-11-20]
+	Updated games/blinken to 19.08.3 [markd 2019-11-20]
+	Updated math/analitza to 19.08.3 [markd 2019-11-20]
+	Updated math/qalculate to 3.5.0 [markd 2019-11-20]
+	Updated math/qalculate-gtk to 3.5.0 [markd 2019-11-20]
+	Removed math/qalculate-bases [markd 2019-11-20]
+	Removed math/qalculate-bases [markd 2019-11-20]
+	Removed math/qalculate-units [markd 2019-11-20]
+	Updated math/cantor to 19.08.3 [markd 2019-11-20]
+	Updated math/kalgebra to 19.08.3 [markd 2019-11-20]
+	Updated misc/step to 19.08.3 [markd 2019-11-20]
