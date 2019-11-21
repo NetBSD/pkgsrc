@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_isc_stats.c,v 1.3 2019/07/18 03:02:02 taca Exp $
+$NetBSD: patch-lib_isc_stats.c,v 1.4 2019/11/21 05:37:06 taca Exp $
 
 * Platform fixes from NetBSD base system.
 
---- lib/isc/stats.c.orig	2019-07-09 18:15:48.000000000 +0000
+--- lib/isc/stats.c.orig	2019-11-06 21:29:49.000000000 +0000
 +++ lib/isc/stats.c
 @@ -30,7 +30,7 @@
  #define ISC_STATS_MAGIC			ISC_MAGIC('S', 't', 'a', 't')
@@ -10,6 +10,6 @@ $NetBSD: patch-lib_isc_stats.c,v 1.3 2019/07/18 03:02:02 taca Exp $
  
 -#if defined(_WIN32) && !defined(_WIN64)
 +#if (defined(_WIN32) && !defined(_WIN64)) || !defined(_LP64)
- typedef atomic_int_fast32_t isc_stat_t;
+ 	typedef atomic_int_fast32_t isc__atomic_statcounter_t;
  #else
- typedef atomic_int_fast64_t isc_stat_t;
+ 	typedef atomic_int_fast64_t isc__atomic_statcounter_t;
