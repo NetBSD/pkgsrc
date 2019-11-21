@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5063 2019/11/21 23:49:23 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5064 2019/11/21 23:59:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8176,3 +8176,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/innoextract to 1.8 [nia 2019-11-21]
 	Updated audio/libxmp to 4.4.1 [nia 2019-11-21]
 	Updated audio/libxmp to 4.4.1 [nia 2019-11-21]
+	Updated audio/xmp to 4.1.0 [nia 2019-11-21]
