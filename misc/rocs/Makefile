@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.53 2019/08/22 12:23:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2019/11/21 06:35:44 markd Exp $
 
-DISTNAME=	rocs-${_KDE_VERSION}
-PKGREVISION=	17
+DISTNAME=	rocs-${KAPPSVER}
 CATEGORIES=	misc
+
+HOMEPAGE=	https://kde.org/applications/education/rocs/
 COMMENT=	KDE graph theory IDE
+LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-USE_LANGUAGES+=	c++11
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
-CMAKE_ARGS+=	-DKDE4_BUILD_TESTS:BOOL=OFF
-
-.include "../../meta-pkgs/kde4/kde4.mk"
+USE_TOOLS+=	msgmerge
 
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/grantlee/buildlink3.mk"
+.include "../../devel/grantlee-qt5/buildlink3.mk"
+.include "../../devel/kdeclarative/buildlink3.mk"
+.include "../../devel/ktexteditor/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
