@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5056 2019/11/20 22:50:47 markd Exp $
+$NetBSD: CHANGES-2019,v 1.5057 2019/11/21 05:37:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8154,3 +8154,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/cantor to 19.08.3 [markd 2019-11-20]
 	Updated math/kalgebra to 19.08.3 [markd 2019-11-20]
 	Updated misc/step to 19.08.3 [markd 2019-11-20]
+	Updated net/bind914 to 9.14.8 [taca 2019-11-21]
