@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2018/01/01 10:23:07 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2019/11/21 11:40:37 leot Exp $
 
 DISTNAME=	mod_python-3.5.0
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-${DISTNAME:S/mod_//}
@@ -19,6 +19,12 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN:Q}
+
+SUBST_CLASSES+=			optimization
+SUBST_STAGE.optimization=	pre-configure
+SUBST_MESSAGE.optimization=	Adjust optimization
+SUBST_FILES.optimization=	dist/Makefile.in
+SUBST_SED.optimization=		-e 's,--optimize 2,--optimize 1,g'
 
 INSTALLATION_DIRS+=	bin
 PY_PATCHPLIST=		yes
