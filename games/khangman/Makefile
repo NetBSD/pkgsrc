@@ -1,17 +1,32 @@
-# $NetBSD: Makefile,v 1.41 2019/08/22 12:23:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2019/11/21 06:07:44 markd Exp $
 
-DISTNAME=	khangman-${_KDE_VERSION}
-PKGREVISION=	15
+DISTNAME=	khangman-${KAPPSVER}
 CATEGORIES=	games
+
+HOMEPAGE=	https://kde.org/applications/education/khangman/
 COMMENT=	KDE hangman game
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
+USE_TOOLS+=	msgmerge
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	src/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/khangman.knsrc \
+		${PKG_SYSCONFDIR}/xdg/khangman.knsrc
+
+.include "../../devel/kdeclarative/buildlink3.mk"
+.include "../../misc/libkeduvocdocument/buildlink3.mk"
+.include "../../net/knewstuff/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../misc/libkdeedu/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
