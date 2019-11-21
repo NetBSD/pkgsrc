@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2019/08/22 12:22:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/21 23:42:27 nia Exp $
 
-DISTNAME=	innoextract-1.7
-PKGREVISION=	4
+DISTNAME=	innoextract-1.8
 CATEGORIES=	archivers
-MASTER_SITES=	http://constexpr.org/innoextract/files/
+MASTER_SITES=	https://constexpr.org/innoextract/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://constexpr.org/innoextract/
+HOMEPAGE=	https://constexpr.org/innoextract/
 COMMENT=	Tool to unpack installers created by Inno Setup
 LICENSE=	zlib
 
