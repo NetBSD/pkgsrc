@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2019/11/18 10:31:19 markd Exp $
+# $NetBSD: Makefile,v 1.32 2019/11/21 03:31:51 markd Exp $
 
 DISTNAME=	ksnakeduel-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/ksnakeduel/
@@ -12,6 +13,16 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/ksnakeduel.knsrc \
+		${PKG_SYSCONFDIR}/xdg/ksnakeduel.knsrc
 
 .include "../../games/libkdegames/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
