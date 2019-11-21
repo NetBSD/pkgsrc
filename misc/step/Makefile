@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/11/20 22:36:27 markd Exp $
+# $NetBSD: Makefile,v 1.42 2019/11/21 02:49:20 markd Exp $
 
 DISTNAME=	step-${KAPPSVER}
 CATEGORIES=	misc
@@ -12,6 +12,16 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	step/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/step.knsrc \
+		${PKG_SYSCONFDIR}/xdg/step.knsrc
 
 .include "../../graphics/kplotting/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
