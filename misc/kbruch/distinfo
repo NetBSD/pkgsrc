@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 23:49:38 agc Exp $
+$NetBSD: distinfo,v 1.11 2019/11/21 06:12:37 markd Exp $
 
-SHA1 (kbruch-4.14.3.tar.xz) = d19a96ea1fb190fafb947d1217479ae56336163d
-RMD160 (kbruch-4.14.3.tar.xz) = e9d738e56352533d4b55e8a65bfc2a69b8b3fb1e
-SHA512 (kbruch-4.14.3.tar.xz) = fbba4966e41928c712dfb7edb809a410a8824d8eb70206dab058c2353c4eca3761d531d0a8ecd978805ff9504364bc255d0a504c9a57f2fe4c66a84ab6897afd
-Size (kbruch-4.14.3.tar.xz) = 902924 bytes
+SHA1 (kbruch-19.08.3.tar.xz) = bb48a016cbe4bf07423775bd45d84b4fad5c9b94
+RMD160 (kbruch-19.08.3.tar.xz) = a83f63d42d1ec3b0e22464a133da6657cdfacaa8
+SHA512 (kbruch-19.08.3.tar.xz) = 21a290bc906bb1a9ad93dc6b21e9fe22433679bd74b0484b2060feac74bc37b3b0880032f9d61fc6555b32676707570af4590727299de4efc8b6fd88a0e8fd80
+Size (kbruch-19.08.3.tar.xz) = 5602756 bytes
