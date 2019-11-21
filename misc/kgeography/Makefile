@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.43 2019/08/22 12:23:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2019/11/21 06:14:52 markd Exp $
 
-DISTNAME=	kgeography-${_KDE_VERSION}
-PKGREVISION=	14
+DISTNAME=	kgeography-${KAPPSVER}
 CATEGORIES=	misc
+
+HOMEPAGE=	https://kde.org/applications/education/kgeography/
 COMMENT=	KDE geography trainer
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+
+USE_TOOLS+=	msgmerge
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/kxmlgui/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
