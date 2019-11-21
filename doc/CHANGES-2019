@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5060 2019/11/21 20:35:47 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5061 2019/11/21 23:32:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8172,3 +8172,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/rocs to 19.08.3 [markd 2019-11-21]
 	Updated databases/py-mysqlclient to 1.4.6 [adam 2019-11-21]
 	Updated devel/py-test-mock to 1.12.1 [adam 2019-11-21]
+	Updated devel/libidn2 to 2.3.0 [nia 2019-11-21]
