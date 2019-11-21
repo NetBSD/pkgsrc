@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.860 2019/11/17 03:52:37 markd Exp $
+# $NetBSD: Makefile,v 1.861 2019/11/21 06:26:10 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -282,6 +282,7 @@ SUBDIR+=	kipi-plugins
 SUBDIR+=	kolourpaint
 SUBDIR+=	koverartist
 SUBDIR+=	kplotting
+SUBDIR+=	kqtquickcharts
 SUBDIR+=	kqtquickcharts4
 SUBDIR+=	krita
 SUBDIR+=	kruler
