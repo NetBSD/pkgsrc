@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5058 2019/11/21 05:38:56 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5059 2019/11/21 06:48:38 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8156,3 +8156,17 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/step to 19.08.3 [markd 2019-11-20]
 	Updated net/bind914 to 9.14.8 [taca 2019-11-21]
 	Updated net/bind911 to 9.11.13 [taca 2019-11-21]
+	Added misc/kdeedu-data version 19.08.3 [markd 2019-11-21]
+	Added misc/libkeduvocdocument version 19.08.3 [markd 2019-11-21]
+	Updated games/kanagram to 19.08.3 [markd 2019-11-21]
+	Updated games/khangman to 19.08.3 [markd 2019-11-21]
+	Updated misc/kwordquiz to 19.08.3 [markd 2019-11-21]
+	Updated misc/kbruch to 19.08.3 [markd 2019-11-21]
+	Updated misc/kgeography to 19.08.3 [markd 2019-11-21]
+	Updated misc/kig to 19.08.3 [markd 2019-11-21]
+	Updated misc/kiten to 19.08.3 [markd 2019-11-21]
+	Updated misc/klettres to 19.08.3 [markd 2019-11-21]
+	Added graphics/kqtquickcharts version 19.08.3 [markd 2019-11-21]
+	Updated misc/ktouch to 19.08.3 [markd 2019-11-21]
+	Updated misc/kturtle to 19.08.3 [markd 2019-11-21]
+	Updated misc/rocs to 19.08.3 [markd 2019-11-21]
