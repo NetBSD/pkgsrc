@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/11/20 22:30:05 markd Exp $
+# $NetBSD: Makefile,v 1.54 2019/11/21 02:39:22 markd Exp $
 
 DISTNAME=	cantor-${KAPPSVER}
 CATEGORIES=	math
@@ -25,6 +25,31 @@ SUBST_FILES.py3=	cmake/FindPythonLibs3.cmake
 SUBST_SED.py3=		-e 's:python3):python-${PYVERSSUFFIX}):'
 
 REPLACE_SH+=	src/backends/sage/cantor-execsage
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	src/CMakeLists.txt
+SUBST_FILES.xdg+=	src/backends/*/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor.knsrc \
+		${PKG_SYSCONFDIR}/xdg/cantor.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_kalgebra.knsrc \
+		${PKG_SYSCONFDIR}/xdg/cantor_kalgebra.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_maxima.knsrc \
+		${PKG_SYSCONFDIR}/xdg/cantor_maxima.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_octave.knsrc \
+		${PKG_SYSCONFDIR}/xdg/cantor_octave.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_python3.knsrc \
+		${PKG_SYSCONFDIR}/xdg/cantor_python3.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_qalculate.knsrc \
+		${PKG_SYSCONFDIR}/xdg/cantor_qalculate.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_sage.knsrc \
+		${PKG_SYSCONFDIR}/xdg/cantor_sage.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_scilab.knsrc \
+		${PKG_SYSCONFDIR}/xdg/cantor_scilab.knsrc
 
 .include "../../devel/kpty/buildlink3.mk"
 .include "../../devel/ktexteditor/buildlink3.mk"
