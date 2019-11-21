@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/21 06:24:55 markd Exp $
+include/KF5/kqtquickcharts_version.h
+lib/cmake/KQtQuickCharts/KQtQuickChartsVersion.cmake
+qt5/qml/org/kde/charts/BarChart.qml
+qt5/qml/org/kde/charts/Label.qml
+qt5/qml/org/kde/charts/LegendItem.qml
+qt5/qml/org/kde/charts/LineChart.qml
+qt5/qml/org/kde/charts/LineLabel.qml
+qt5/qml/org/kde/charts/XYChart.qml
+qt5/qml/org/kde/charts/libkqtquickcharts.so
+qt5/qml/org/kde/charts/qmldir
