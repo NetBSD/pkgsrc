@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/20 22:30:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/11/21 02:39:22 markd Exp $
 bin/cantor
 bin/cantor_python3server
 bin/cantor_scripteditor
@@ -137,6 +137,14 @@ share/doc/HTML/uk/cantor/plot2d-dlg.png
 share/doc/HTML/uk/cantor/plot3d-dlg.png
 share/doc/HTML/uk/cantor/screenshot.png
 share/doc/HTML/uk/cantor/solve-equations-dlg.png
+share/examples/kde-xdg/cantor.knsrc
+share/examples/kde-xdg/cantor_kalgebra.knsrc
+share/examples/kde-xdg/cantor_maxima.knsrc
+share/examples/kde-xdg/cantor_octave.knsrc
+share/examples/kde-xdg/cantor_python3.knsrc
+share/examples/kde-xdg/cantor_qalculate.knsrc
+share/examples/kde-xdg/cantor_sage.knsrc
+share/examples/kde-xdg/cantor_scilab.knsrc
 share/icons/hicolor/128x128/apps/cantor.png
 share/icons/hicolor/16x16/apps/cantor.png
 share/icons/hicolor/22x22/apps/cantor.png
