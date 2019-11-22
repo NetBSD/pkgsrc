@@ -1,24 +1,27 @@
-# $NetBSD: Makefile,v 1.9 2017/08/01 17:40:10 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2019/11/22 00:12:34 nia Exp $
 
-DISTNAME=	libmowgli-0.7.1
+DISTNAME=	libmowgli-2.1.3
 CATEGORIES=	devel
-#MASTER_SITES=	http://distfiles.atheme.org/
-MASTER_SITES=	http://mirror.billymays.us/libmowgli/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=atheme/}
+GITHUB_PROJECT=	libmowgli-2
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jfranz@bsdprojects.net
-#HOMEPAGE=	http://www.atheme.org/projects/mowgli
+HOMEPAGE=	https://github.com/atheme/libmowgli-2
 COMMENT=	Development framework for C (like GLib)
+LICENSE=	isc
 
 PREV_PKGPATH=	devel/mowgli
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config
 
-PKGCONFIG_OVERRIDE+=	libmowgli.pc.in
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+
+PKGCONFIG_OVERRIDE+=	libmowgli-2.pc.in
 
 # Explicitly disable epoll on illumos, provided for Linux compat only.
 CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_ctl=no
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
