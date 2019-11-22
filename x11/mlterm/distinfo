@@ -1,15 +1,8 @@
-$NetBSD: distinfo,v 1.81 2019/09/22 06:17:30 rin Exp $
+$NetBSD: distinfo,v 1.82 2019/11/22 18:06:47 tsutsui Exp $
 
-SHA1 (mlterm-3.8.8.tar.gz) = 54f40fa50214656ab70f592d5d58805b1dfdc1c6
-RMD160 (mlterm-3.8.8.tar.gz) = 9a7675a86999541b57742099a5e9eac8a539b580
-SHA512 (mlterm-3.8.8.tar.gz) = 4db7de441300d30eadc85d1c780bb10c81d2555225fe163280508180ccc2114eeacf0e5772f9d69c1b59ef6f3ffb3444b75fe3e5ea508dd9e18e5850e78f78a5
-Size (mlterm-3.8.8.tar.gz) = 4035215 bytes
+SHA1 (mlterm-3.8.9.tar.gz) = 485d1f3215e12db8cd23f39a5c06b21e3e802307
+RMD160 (mlterm-3.8.9.tar.gz) = e5b6a4ac980866076c7b4f93aa3cbf1b20b4efcb
+SHA512 (mlterm-3.8.9.tar.gz) = 0bd5468dc58095fd9432922490178fe14335724cee08d2f509e8f72a4d5f9aea9ff2f0672706e5290219575f47a1ff15dccb4e21e318c89dd5718fe6ef694c0c
+Size (mlterm-3.8.9.tar.gz) = 4101898 bytes
 SHA1 (patch-configure) = e95b426f028c9bcb9895e69bb85ce8450f78a8c8
 SHA1 (patch-etc_font-fb) = 03f0b2ecee20ef3201c8e4ce17f03ac90f657b00
-SHA1 (patch-uitoolkit_fb_ui.h) = 751d9fad83ef04f957b297b04e3cf61c2a28a9dd
-SHA1 (patch-uitoolkit_fb_ui__display.c) = 15dbae082a13d5a4c5f22675914631da5494e6a6
-SHA1 (patch-uitoolkit_fb_ui__display__freebsd.c) = 3cb80b0564be184cf992ea54141183395c4cd39b
-SHA1 (patch-uitoolkit_fb_ui__display__linux.c) = 5dd0d30d579f42036066acb8c42db51045ac712f
-SHA1 (patch-uitoolkit_fb_ui__display__wscons.c) = 6ea6aec8cd72999874c9fb26a099d3b09ba91bb6
-SHA1 (patch-uitoolkit_fb_ui__display__x68kgrf.c) = 51ba1b5124fd6cb654e9c87fa289b06170429f92
-SHA1 (patch-uitoolkit_ui__event__source.c) = 4cf872768491bc8da5fc080cfd3a50969324a162
