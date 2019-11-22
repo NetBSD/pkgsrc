@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2019/10/10 07:58:41 adam Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/22 09:32:37 adam Exp $
 
-DISTNAME=	asyncpg-0.19.0
+DISTNAME=	asyncpg-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel python
+CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asyncpg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
