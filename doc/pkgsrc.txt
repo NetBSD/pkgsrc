@@ -789,6 +789,12 @@ pkgsrc guide. If you don't find anything here, there are alternatives:
 
     The available help topics are listed in Appendix D, Help topics.
 
+  * To see the value of a single variable, run bmake show-var VARNAME=X.
+
+  * To see the values of the most common variables, run bmake show-all. These
+    variables are grouped by topic. To see the variables for a single topic,
+    run bmake show-all-topic, for example bmake show-all-fetch.
+
   * The pkgsrc-users mailing list, to which you can subscribe and then ask your
     questions.
 
@@ -2608,6 +2614,12 @@ pkgsrc guide. If you don't find anything here, there are alternatives:
     like strcasecmp or any other topic.
 
     The available help topics are listed in Appendix D, Help topics.
+
+  * To see the value of a single variable, run bmake show-var VARNAME=X.
+
+  * To see the values of the most common variables, run bmake show-all. These
+    variables are grouped by topic. To see the variables for a single topic,
+    run bmake show-all-topic, for example bmake show-all-fetch.
 
   * The tech-pkg mailing list, to which you can subscribe and then ask your
     questions.
