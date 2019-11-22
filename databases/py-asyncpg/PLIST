@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/10/10 07:58:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/11/22 09:32:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -79,9 +79,12 @@ ${PYSITELIB}/asyncpg/pgproto/pgproto.c
 ${PYSITELIB}/asyncpg/pgproto/pgproto.pxd
 ${PYSITELIB}/asyncpg/pgproto/pgproto.pyx
 ${PYSITELIB}/asyncpg/pgproto/pgproto.so
+${PYSITELIB}/asyncpg/pgproto/tohex.h
+${PYSITELIB}/asyncpg/pgproto/tohex.pxd
 ${PYSITELIB}/asyncpg/pgproto/types.py
 ${PYSITELIB}/asyncpg/pgproto/types.pyc
 ${PYSITELIB}/asyncpg/pgproto/types.pyo
+${PYSITELIB}/asyncpg/pgproto/uuid.pyx
 ${PYSITELIB}/asyncpg/pool.py
 ${PYSITELIB}/asyncpg/pool.pyc
 ${PYSITELIB}/asyncpg/pool.pyo
