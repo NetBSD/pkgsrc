@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.61 2019/09/08 09:06:06 rillig Exp $
+# $NetBSD: subst.mk,v 1.62 2019/11/22 18:04:49 minskim Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -83,12 +83,12 @@ ECHO_SUBST_MSG?=	${STEP_MSG}
 
 # _SUBST_IS_TEXT_FILE_CMD returns 0 if $$file is a text file.
 _SUBST_IS_TEXT_FILE_CMD?= \
-	[ -z "`${TR} -cd '\\0' < "$$file" | ${TR} '\\0' 'x'`" ]
+	[ -z "`LC_ALL=C ${TR} -cd '\\0' < "$$file" | ${TR} '\\0' 'x'`" ]
 
 .for _class_ in ${SUBST_CLASSES}
 _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
-SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
+SUBST_FILTER_CMD.${_class_}?=	LC_ALL=C ${SED} ${SUBST_SED.${_class_}}
 SUBST_VARS.${_class_}?=		# none
 SUBST_MESSAGE.${_class_}?=	Substituting "${_class_}" in ${SUBST_FILES.${_class_}}
 .  for v in ${SUBST_VARS.${_class_}}
