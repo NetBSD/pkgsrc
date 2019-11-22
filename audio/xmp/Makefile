@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/11/21 23:59:06 nia Exp $
+# $NetBSD: Makefile,v 1.55 2019/11/22 17:17:07 nia Exp $
 
 DISTNAME=	xmp-4.1.0
 CATEGORIES=	audio
@@ -24,7 +24,7 @@ INSTALL_MAKE_FLAGS+=	INSTALL=${INSTALL:Q}
 
 # NetBSD and Solaris have their own drivers.
 .if ${OPSYS} != "NetBSD" && \
-    ${OPSYS} != "Solaris" && \
+    ${OPSYS} != "SunOS" && \
     ${OSS_TYPE} != "none"
 LIBS+=		${LIBOSSAUDIO}
 CPPFLAGS+=	-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
