@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/11/03 10:39:30 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/22 13:01:38 mef Exp $
 
 DISTNAME=	rt-4.2.16
 PKGNAME=	${DISTNAME:S/rt/rt4/}
@@ -146,6 +146,8 @@ DEPENDS+=	p5-Crypt-X509-[0-9]*:../../security/p5-Crypt-X509
 # Module::Pluggable will be removed from the Perl core distribution...
 DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Convert-Color-[0-9]*:../../converters/p5-Convert-Color
+
+DEPENDS+=	p5-Text-Reform-[0-9]*:../../textproc/p5-Text-Reform
 
 .include "dirs.mk"
 .include "options.mk"
