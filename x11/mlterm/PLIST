@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2019/04/05 12:14:58 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.43 2019/11/22 18:06:47 tsutsui Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -51,6 +51,7 @@ lib/mlterm/libpixmap_engine.la
 lib/mlterm/libsample.la
 ${PLIST.cairo}lib/mlterm/libtype_cairo.la
 ${PLIST.xft2}lib/mlterm/libtype_xft.la
+lib/mlterm/libzmodem.la
 libexec/mlterm/mlconfig
 libexec/mlterm/mlimgloader
 libexec/mlterm/mlterm-menu
