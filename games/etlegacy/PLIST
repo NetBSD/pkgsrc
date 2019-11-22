@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/06/30 23:33:40 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/11/22 18:42:03 nia Exp $
 ${PLIST.client}bin/etl
 bin/etlded
 man/man6/etl.6
@@ -13,6 +13,7 @@ share/etlegacy/etmain/lmscycle.cfg
 share/etlegacy/etmain/mapvotecycle.cfg
 share/etlegacy/etmain/objectivecycle.cfg
 share/etlegacy/legacy/GeoIP.dat
+share/etlegacy/legacy/banners.toml
 share/etlegacy/legacy/description.txt
 share/etlegacy/legacy/etl_bin_${PKGVERSION}-dirty.pk3
 share/etlegacy/legacy/greetings.toml
@@ -21,6 +22,7 @@ share/etlegacy/legacy/lualibs/toml.lua
 share/etlegacy/legacy/luascripts/wolfadmin/COPYING.txt
 share/etlegacy/legacy/luascripts/wolfadmin/admin/admin.lua
 share/etlegacy/legacy/luascripts/wolfadmin/admin/balancer.lua
+share/etlegacy/legacy/luascripts/wolfadmin/admin/banners.lua
 share/etlegacy/legacy/luascripts/wolfadmin/admin/bans.lua
 share/etlegacy/legacy/luascripts/wolfadmin/admin/history.lua
 share/etlegacy/legacy/luascripts/wolfadmin/admin/mutes.lua
@@ -49,6 +51,7 @@ share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/listplayers.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/lock.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/mute.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/needbots.lua
+share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/news.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/nextmap.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/pause.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/plock.lua
@@ -56,6 +59,7 @@ share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/punlock.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/put.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/putbots.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/readconfig.lua
+share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/rename.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/reset.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/resetsprees.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/restart.lua
@@ -64,7 +68,6 @@ share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/setlevel.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/showbans.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/showhistory.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/shuffle.lua
-share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/shufflesr.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/slap.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/spec999.lua
 share/etlegacy/legacy/luascripts/wolfadmin/commands/admin/sprees.lua
@@ -119,7 +122,6 @@ share/etlegacy/legacy/luascripts/wolfadmin/util/timers.lua
 share/etlegacy/legacy/luascripts/wolfadmin/util/util.lua
 share/etlegacy/legacy/pak3_${PKGVERSION}-dirty.pk3
 share/etlegacy/legacy/rules.toml
-share/etlegacy/legacy/sprees.toml
 share/etlegacy/legacy/wolfadmin.toml
 share/icons/hicolor/scalable/apps/etl.svg
 share/mime/packages/etlegacy.xml
