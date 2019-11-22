@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2019/11/03 19:28:47 rillig Exp $
+# $NetBSD: Makefile.common,v 1.3 2019/11/22 21:38:31 nia Exp $
 # used by games/etlegacy/Makefile
 # used by games/etlegacy-server/Makefile
 
@@ -50,6 +50,9 @@ CMAKE_ARGS+=	-DBUNDLED_ZLIB=OFF
 
 # don't try to build i386 binaries on amd64
 CMAKE_ARGS+=	-DCROSS_COMPILE32=OFF
+
+# Don't download unversioned tarballs
+CMAKE_ARGS+=	-DINSTALL_EXTRA=OFF
 
 CMAKE_ARGS+=	-DFEATURE_AUTOUPDATE=OFF
 
