@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.523 2019/11/21 06:00:55 markd Exp $
+# $NetBSD: Makefile,v 1.524 2019/11/22 23:30:32 jperkin Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -163,7 +163,7 @@ SUBDIR+=	libcdio
 SUBDIR+=	libcdio-paranoia
 SUBDIR+=	libcec
 SUBDIR+=	libkdeedu
-SUBDIR+=	libkeduvocdocumen
+SUBDIR+=	libkeduvocdocument
 SUBDIR+=	libkgeomap
 SUBDIR+=	libkkc-data
 SUBDIR+=	libkvkontakte
