@@ -1,4 +1,4 @@
-<!-- $NetBSD: help-devel.xml,v 1.2 2019/04/28 15:22:24 rillig Exp $ -->
+<!-- $NetBSD: help-devel.xml,v 1.3 2019/11/22 19:48:58 rillig Exp $ -->
 
 <chapter id="help-devel">
 <title>Getting help</title>
@@ -21,6 +21,20 @@
 	<para>The available help topics are listed in <xref
 	linkend="help-topics" />.</para>
 </listitem>
+
+<listitem><para>
+	To see the value of a single variable, run <command>bmake
+	show-var VARNAME=<replaceable>X</replaceable></command>.
+</para></listitem>
+
+<listitem><para>
+	To see the values of the most common variables, run
+	<command>bmake show-all</command>. These variables are grouped by
+	topic. To see the variables for a single topic, run
+	<command>bmake
+	show-all-<replaceable>topic</replaceable></command>, for example
+	<command>bmake show-all-fetch</command>.
+</para></listitem>
 
 <listitem><para>
 	The tech-pkg mailing list, to which
