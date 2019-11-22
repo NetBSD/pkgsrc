@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/07/02 03:53:18 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/22 09:35:07 adam Exp $
 
-DISTNAME=	Pympler-0.7
+DISTNAME=	Pympler-0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pympler/}
