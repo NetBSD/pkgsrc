@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.70 2019/06/08 10:14:08 rillig Exp $
+# $NetBSD: Makefile.common,v 1.71 2019/11/22 14:05:23 mef Exp $
 #
 # used by editors/emacs-snapshot/Makefile
 
@@ -71,7 +71,7 @@ PRINT_PLIST_AWK+=	{ gsub(/${EMACS_VERSION}/, "$${EMACS_VERSION}"); \
 			print; next; }
 
 post-extract:
-	cp ${.CURDIR}/../../editors/emacs23/files/site-init.el ${WRKSRC}/lisp
+	cp ${.CURDIR}/../../editors/emacs25/files/site-init.el ${WRKSRC}/lisp
 	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
 	${CHMOD} -R go-w ${WRKSRC}
 	# set auto-load for send-pr library
