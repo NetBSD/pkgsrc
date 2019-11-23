@@ -92,7 +92,9 @@ func argsStr(args []interface{}) string {
 		if rv.Len() > 0 {
 			rv.WriteString(", ")
 		}
-		if str, ok := arg.(fmt.Stringer); ok && !isNil(str) {
+		if str, ok := arg.(fmt.GoStringer); ok && !isNil(str) {
+			rv.WriteString(str.GoString())
+		} else if str, ok := arg.(fmt.Stringer); ok && !isNil(str) {
 			rv.WriteString(str.String())
 		} else {
 			_, _ = fmt.Fprintf(&rv, "%#v", arg)

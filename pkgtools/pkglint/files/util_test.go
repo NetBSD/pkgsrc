@@ -99,12 +99,12 @@ func (s *Suite) Test_isEmptyDir__and_getSubdirs(c *check.C) {
 
 	if dir := t.File("."); true {
 		t.CheckEquals(isEmptyDir(dir), true)
-		t.CheckDeepEquals(getSubdirs(dir), []string(nil))
+		t.CheckDeepEquals(getSubdirs(dir), []Path(nil))
 
 		t.CreateFileLines("somedir/file")
 
 		t.CheckEquals(isEmptyDir(dir), false)
-		t.CheckDeepEquals(getSubdirs(dir), []string{"somedir"})
+		t.CheckDeepEquals(getSubdirs(dir), []Path{"somedir"})
 	}
 
 	if absent := t.File("nonexistent"); true {
@@ -122,9 +122,9 @@ func (s *Suite) Test_getSubdirs(c *check.C) {
 
 	t.CreateFileLines("subdir/file")
 	t.CreateFileLines("empty/file")
-	c.Check(os.Remove(t.File("empty/file")), check.IsNil)
+	c.Check(os.Remove(t.File("empty/file").String()), check.IsNil)
 
-	t.CheckDeepEquals(getSubdirs(t.File(".")), []string{"subdir"})
+	t.CheckDeepEquals(getSubdirs(t.File(".")), []Path{"subdir"})
 }
 
 func (s *Suite) Test_isLocallyModified(c *check.C) {
@@ -133,10 +133,10 @@ func (s *Suite) Test_isLocallyModified(c *check.C) {
 	unmodified := t.CreateFileLines("unmodified")
 	modTime := time.Unix(1136239445, 0).UTC()
 
-	err := os.Chtimes(unmodified, modTime, modTime)
+	err := os.Chtimes(unmodified.String(), modTime, modTime)
 	c.Check(err, check.IsNil)
 
-	st, err := os.Lstat(unmodified)
+	st, err := os.Lstat(unmodified.String())
 	c.Check(err, check.IsNil)
 
 	// Make sure that the file system has second precision and accuracy.
@@ -284,28 +284,6 @@ func (s *Suite) Test_varnameParam(c *check.C) {
 	t.CheckEquals(varnameParam(".CURDIR"), "")
 }
 
-func (s *Suite) Test_fileExists(c *check.C) {
-	t := s.Init(c)
-
-	t.CreateFileLines("dir/file")
-
-	t.CheckEquals(fileExists(t.File("nonexistent")), false)
-	t.CheckEquals(fileExists(t.File("dir")), false)
-	t.CheckEquals(fileExists(t.File("dir/nonexistent")), false)
-	t.CheckEquals(fileExists(t.File("dir/file")), true)
-}
-
-func (s *Suite) Test_dirExists(c *check.C) {
-	t := s.Init(c)
-
-	t.CreateFileLines("dir/file")
-
-	t.CheckEquals(dirExists(t.File("nonexistent")), false)
-	t.CheckEquals(dirExists(t.File("dir")), true)
-	t.CheckEquals(dirExists(t.File("dir/nonexistent")), false)
-	t.CheckEquals(dirExists(t.File("dir/file")), false)
-}
-
 func (s *Suite) Test_mkopSubst__middle(c *check.C) {
 	t := s.Init(c)
 
@@ -360,7 +338,7 @@ func (s *Suite) Test_relpath(c *check.C) {
 	t.Chdir(".")
 	t.CheckEquals(G.Pkgsrc.topdir, t.tmpdir)
 
-	test := func(from, to, result string) {
+	test := func(from, to Path, result Path) {
 		t.CheckEquals(relpath(from, to), result)
 	}
 
@@ -396,7 +374,7 @@ func (s *Suite) Test_relpath(c *check.C) {
 func (s *Suite) Test_relpath__quick(c *check.C) {
 	t := s.Init(c)
 
-	test := func(from, to, result string) {
+	test := func(from, to Path, result Path) {
 		t.CheckEquals(relpath(from, to), result)
 	}
 
@@ -411,7 +389,7 @@ func (s *Suite) Test_relpath__quick(c *check.C) {
 func (s *Suite) Test_cleanpath(c *check.C) {
 	t := s.Init(c)
 
-	test := func(from, to string) {
+	test := func(from, to Path) {
 		t.CheckEquals(cleanpath(from), to)
 	}
 
@@ -498,12 +476,12 @@ func (s *Suite) Test_pathContains(c *check.C) {
 func (s *Suite) Test_pathContainsDir(c *check.C) {
 	t := s.Init(c)
 
-	test := func(haystack, needle string, expected bool) {
+	test := func(haystack, needle Path, expected bool) {
 		actual := pathContainsDir(haystack, needle)
 		t.CheckEquals(actual, expected)
 	}
 
-	testPanic := func(haystack, needle string) {
+	testPanic := func(haystack, needle Path) {
 		t.c.Check(
 			func() { _ = pathContainsDir(haystack, needle) },
 			check.PanicMatches,
@@ -850,15 +828,15 @@ func (s *Suite) Test_FileCache(c *check.C) {
 	c.Check(cache.Get("Makefile", MustSucceed|LogErrors), check.IsNil) // Wrong LoadOptions.
 
 	linesFromCache := cache.Get("Makefile", 0)
-	t.CheckEquals(linesFromCache.Filename, "Makefile")
+	t.CheckEquals(linesFromCache.Filename, NewPath("Makefile"))
 	c.Check(linesFromCache.Lines, check.HasLen, 2)
-	t.CheckEquals(linesFromCache.Lines[0].Filename, "Makefile")
+	t.CheckEquals(linesFromCache.Lines[0].Filename, NewPath("Makefile"))
 
 	// Cache keys are normalized using path.Clean.
 	linesFromCache2 := cache.Get("./Makefile", 0)
-	t.CheckEquals(linesFromCache2.Filename, "./Makefile")
+	t.CheckEquals(linesFromCache2.Filename, NewPath("./Makefile"))
 	c.Check(linesFromCache2.Lines, check.HasLen, 2)
-	t.CheckEquals(linesFromCache2.Lines[0].Filename, "./Makefile")
+	t.CheckEquals(linesFromCache2.Lines[0].Filename, NewPath("./Makefile"))
 
 	cache.Put("file1.mk", 0, lines)
 	cache.Put("file2.mk", 0, lines)

@@ -2,17 +2,16 @@ package pkglint
 
 import (
 	"netbsd.org/pkglint/regex"
-	"path"
 )
 
 type Lines struct {
-	Filename string
-	BaseName string
+	Filename Path
+	BaseName string // TODO: consider converting to Path
 	Lines    []*Line
 }
 
-func NewLines(filename string, lines []*Line) *Lines {
-	return &Lines{filename, path.Base(filename), lines}
+func NewLines(filename Path, lines []*Line) *Lines {
+	return &Lines{filename, filename.Base(), lines}
 }
 
 func (ls *Lines) Len() int { return len(ls.Lines) }

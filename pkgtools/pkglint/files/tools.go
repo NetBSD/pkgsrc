@@ -345,7 +345,7 @@ func (tr *Tools) implicitTools(toolName string) []string {
 
 func (tr *Tools) validity(basename string, useTools bool) Validity {
 	switch {
-	case IsPrefs(basename): // IsPrefs is not 100% accurate here but good enough
+	case IsPrefs(NewPath(basename)): // IsPrefs is not 100% accurate here but good enough
 		return AfterPrefsMk
 	case basename == "Makefile" && !tr.SeenPrefs:
 		return AfterPrefsMk

@@ -1,10 +1,8 @@
 package pkglint
 
 import (
-	"io/ioutil"
 	"netbsd.org/pkglint/regex"
 	"os"
-	"path/filepath"
 	"strconv"
 	"strings"
 )
@@ -455,12 +453,12 @@ func SaveAutofixChanges(lines *Lines) (autofixed bool) {
 
 	if G.Testing {
 		abs := abspath(lines.Filename)
-		absTmp := abspath(filepath.ToSlash(os.TempDir()))
-		assertf(hasPrefix(abs, absTmp), "%q must be inside %q", abs, absTmp)
+		absTmp := abspath(NewPathSlash(os.TempDir()))
+		assertf(abs.HasPrefixPath(absTmp), "%q must be inside %q", abs, absTmp)
 	}
 
-	changes := make(map[string][]string)
-	changed := make(map[string]bool)
+	changes := make(map[Path][]string)
+	changed := make(map[Path]bool)
 	for _, line := range lines.Lines {
 		chlines := changes[line.Filename]
 		if fix := line.autofix; fix != nil {
@@ -488,12 +486,12 @@ func SaveAutofixChanges(lines *Lines) (autofixed bool) {
 		for _, changedLine := range changedLines {
 			text.WriteString(changedLine)
 		}
-		err := ioutil.WriteFile(tmpName, []byte(text.String()), 0666)
+		err := tmpName.WriteString(text.String())
 		if err != nil {
 			G.Logger.Errorf(tmpName, "Cannot write: %s", err)
 			continue
 		}
-		err = os.Rename(tmpName, filename)
+		err = tmpName.Rename(filename)
 		if err != nil {
 			G.Logger.Errorf(tmpName, "Cannot overwrite with autofixed content: %s", err)
 			continue
