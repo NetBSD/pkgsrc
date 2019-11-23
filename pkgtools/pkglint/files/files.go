@@ -1,9 +1,7 @@
 package pkglint
 
 import (
-	"io/ioutil"
 	"netbsd.org/pkglint/textproc"
-	"path"
 	"strings"
 )
 
@@ -16,7 +14,7 @@ const (
 	LogErrors                           //
 )
 
-func LoadMk(filename string, options LoadOptions) *MkLines {
+func LoadMk(filename Path, options LoadOptions) *MkLines {
 	lines := Load(filename, options|Makefile)
 	if lines == nil {
 		return nil
@@ -24,12 +22,12 @@ func LoadMk(filename string, options LoadOptions) *MkLines {
 	return NewMkLines(lines)
 }
 
-func Load(filename string, options LoadOptions) *Lines {
+func Load(filename Path, options LoadOptions) *Lines {
 	if fromCache := G.fileCache.Get(filename, options); fromCache != nil {
 		return fromCache
 	}
 
-	rawBytes, err := ioutil.ReadFile(filename)
+	rawText, err := filename.ReadString()
 	if err != nil {
 		switch {
 		case options&MustSucceed != 0:
@@ -40,7 +38,6 @@ func Load(filename string, options LoadOptions) *Lines {
 		return nil
 	}
 
-	rawText := string(rawBytes)
 	if rawText == "" && options&NotEmpty != 0 {
 		switch {
 		case options&MustSucceed != 0:
@@ -52,17 +49,17 @@ func Load(filename string, options LoadOptions) *Lines {
 	}
 
 	if G.Opts.Profiling {
-		G.loaded.Add(path.Clean(filename), 1)
+		G.loaded.Add(filename.Clean().String(), 1)
 	}
 
 	result := convertToLogicalLines(filename, rawText, options&Makefile != 0)
-	if hasSuffix(filename, ".mk") {
+	if filename.HasSuffixText(".mk") {
 		G.fileCache.Put(filename, options, result)
 	}
 	return result
 }
 
-func convertToLogicalLines(filename string, rawText string, joinBackslashLines bool) *Lines {
+func convertToLogicalLines(filename Path, rawText string, joinBackslashLines bool) *Lines {
 	var rawLines []*RawLine
 	for lineno, rawLine := range strings.SplitAfter(rawText, "\n") {
 		if rawLine != "" {
@@ -92,7 +89,7 @@ func convertToLogicalLines(filename string, rawText string, joinBackslashLines b
 	return NewLines(filename, loglines)
 }
 
-func nextLogicalLine(filename string, rawLines []*RawLine, index int) (*Line, int) {
+func nextLogicalLine(filename Path, rawLines []*RawLine, index int) (*Line, int) {
 	{ // Handle the common case efficiently
 		rawLine := rawLines[index]
 		textnl := rawLine.textnl

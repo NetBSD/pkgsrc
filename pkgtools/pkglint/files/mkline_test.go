@@ -503,7 +503,7 @@ func (s *Suite) Test_MkLine_ResolveVarsInRelativePath(c *check.C) {
 		MkCvsID)
 	mkline := mklines.mklines[0]
 
-	test := func(before string, after string) {
+	test := func(before Path, after Path) {
 		t.CheckEquals(mkline.ResolveVarsInRelativePath(before), after)
 	}
 
@@ -1129,7 +1129,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__uncovered_cases(c *check.C) {
 		"")
 
 	// Just for branch coverage.
-	trace.Tracing = false
+	t.DisableTracing()
 	MkLineChecker{mklines, mklines.mklines[2]}.Check()
 
 	t.CheckOutputEmpty()
@@ -1265,7 +1265,7 @@ func (s *Suite) Test_Indentation(c *check.C) {
 	t.CheckEquals(ind.Depth("if"), 0)
 	t.CheckEquals(ind.DependsOn("VARNAME"), false)
 
-	ind.Push(mkline, 2, "")
+	ind.Push(mkline, 2, "", false)
 
 	t.CheckEquals(ind.Depth("if"), 2)
 	t.CheckEquals(ind.Depth("endfor"), 0)
@@ -1280,7 +1280,7 @@ func (s *Suite) Test_Indentation(c *check.C) {
 	t.CheckEquals(ind.DependsOn("LEVEL1.VAR1"), true)
 	t.CheckEquals(ind.DependsOn("OTHER_VAR"), false)
 
-	ind.Push(mkline, 2, "")
+	ind.Push(mkline, 2, "", false)
 
 	ind.AddVar("LEVEL2.VAR")
 
@@ -1308,7 +1308,7 @@ func (s *Suite) Test_Indentation__realistic(c *check.C) {
 		".if 1",
 		".  if !defined(GUARD_MK)",
 		".  for var in 1 2 3",
-		".    if !defined(GUARD_MK)",
+		".    if !defined(GUARD_MK)", // well, not entirely realistic
 		".    if 3",
 		".    endif",
 		".    endif",
@@ -1322,43 +1322,29 @@ func (s *Suite) Test_Indentation__realistic(c *check.C) {
 		".  endfor",
 		".endif")
 
-	t.EnableTracingToLog()
-
 	mklines.ForEach(func(mkline *MkLine) {})
 
-	t.CheckOutputLinesMatching(`Indentation`,
-		"TRACE:   Indentation before line 3: []",
-		"TRACE:   Indentation after line 3: [2]",
-		"TRACE:   Indentation before line 4: [2]",
-		"TRACE:   Indentation after line 4: [2 2]",
-		"TRACE:   Indentation before line 5: [2 2]",
-		"TRACE:   Indentation after line 5: [2 2 4]",
-		"TRACE:   Indentation before line 6: [2 2 4]",
-		"TRACE:   Indentation after line 6: [2 2 4 4]",
-		"TRACE:   Indentation before line 7: [2 2 4 4]",
-		"TRACE:   Indentation after line 7: [2 2 4 4 6]",
-		"TRACE:   Indentation before line 8: [2 2 4 4 6]",
-		"TRACE:   Indentation after line 8: [2 2 4 4]",
-		"TRACE:   Indentation before line 9: [2 2 4 4]",
-		"TRACE:   Indentation after line 9: [2 2 4]",
-		"TRACE:   Indentation before line 10: [2 2 4]",
-		"TRACE:   Indentation after line 10: [2 2]",
-		"TRACE:   Indentation before line 11: [2 2]",
-		"TRACE:   Indentation after line 11: [2]",
-		"TRACE:   Indentation before line 12: [2]",
-		"TRACE:   Indentation after line 12: [2]",
-		"TRACE:   Indentation before line 13: [2]",
-		"TRACE:   Indentation after line 13: [2 4]",
-		"TRACE:   Indentation before line 14: [2 4]",
-		"TRACE:   Indentation after line 14: [2]",
-		"TRACE:   Indentation before line 15: [2]",
-		"TRACE:   Indentation after line 15: [2]",
-		"TRACE:   Indentation before line 16: [2]",
-		"TRACE:   Indentation after line 16: [2 4]",
-		"TRACE:   Indentation before line 17: [2 4]",
-		"TRACE:   Indentation after line 17: [2]",
-		"TRACE:   Indentation before line 18: [2]",
-		"TRACE:   Indentation after line 18: []")
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Indentation_String(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("filename.mk",
+		".if exists(/bin)",
+		"# probably POSIX",
+		".endif")
+	var str string
+
+	mklines.ForEach(func(mkline *MkLine) {
+		if mkline.IsComment() {
+			t.CheckEquals(mklines.indentation.IsConditional(), true)
+			t.Check(mklines.indentation.Varnames(), check.IsNil)
+			str = mklines.indentation.String()
+		}
+	})
+
+	t.CheckEquals(str, "[2]")
 }
 
 func (s *Suite) Test_Indentation_RememberUsedVariables(c *check.C) {
@@ -1440,7 +1426,7 @@ func (s *Suite) Test_Indentation_TrackAfter__lonely_else(c *check.C) {
 func (s *Suite) Test_MatchMkInclude(c *check.C) {
 	t := s.Init(c)
 
-	test := func(input, expectedIndent, expectedDirective, expectedFilename, expectedComment string) {
+	test := func(input, expectedIndent, expectedDirective string, expectedFilename Path, expectedComment string) {
 		splitResult := NewMkLineParser().split(nil, input, true)
 		m, indent, directive, args := MatchMkInclude(splitResult.main)
 		t.CheckDeepEquals(

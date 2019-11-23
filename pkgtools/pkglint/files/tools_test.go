@@ -46,7 +46,7 @@ func (s *Suite) Test_Tools__USE_TOOLS_predefined_sed(c *check.C) {
 		"\t${SED} < input > output",
 		"\t${AWK} < input > output")
 
-	t.Main("-Wall", t.File("module.mk"))
+	t.Main("-Wall", "module.mk")
 
 	// Since this test doesn't load the usual tool definitions via
 	// G.Pkgsrc.loadTools, AWK is not known at all.

@@ -1069,7 +1069,7 @@ func (s *Suite) Test_MkLines_CheckUsedBy__show_autofix(c *check.C) {
 
 	t.SetUpCommandLine("--show-autofix")
 
-	test := func(pkgpath string, lines []string, diagnostics []string) {
+	test := func(pkgpath Path, lines []string, diagnostics []string) {
 		mklines := t.NewMkLines("Makefile.common", lines...)
 
 		mklines.CheckUsedBy(pkgpath)
@@ -1155,7 +1155,7 @@ func (s *Suite) Test_MkLines_CheckUsedBy__show_autofix(c *check.C) {
 func (s *Suite) Test_MkLines_CheckUsedBy(c *check.C) {
 	t := s.Init(c)
 
-	test := func(pkgpath string, lines []string, diagnostics []string) {
+	test := func(pkgpath Path, lines []string, diagnostics []string) {
 		mklines := t.NewMkLines("Makefile.common", lines...)
 
 		mklines.CheckUsedBy(pkgpath)

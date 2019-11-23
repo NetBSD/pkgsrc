@@ -2,7 +2,6 @@ package pkglint
 
 import (
 	"netbsd.org/pkglint/pkgver"
-	"path"
 	"strings"
 )
 
@@ -21,7 +20,7 @@ func CheckLinesBuildlink3Mk(mklines *MkLines) {
 func (ck *Buildlink3Checker) Check() {
 	mklines := ck.mklines
 	if trace.Tracing {
-		defer trace.Call1(mklines.lines.Filename)()
+		defer trace.Call(mklines.lines.Filename)()
 	}
 
 	mklines.Check()
@@ -40,7 +39,7 @@ func (ck *Buildlink3Checker) Check() {
 
 	if llex.SkipRegexp(`^BUILDLINK_DEPMETHOD\.([^\t ]+)\?=.*$`) {
 		llex.PreviousLine().Warnf("This line belongs inside the .ifdef block.")
-		for llex.SkipString("") {
+		for llex.SkipText("") {
 		}
 	}
 
@@ -100,7 +99,7 @@ func (ck *Buildlink3Checker) checkUniquePkgbase(pkgbase string, mkline *MkLine) 
 		return
 	}
 
-	base, name := trimCommon(pkgbase, path.Base(path.Dir(mkline.Filename)))
+	base, name := trimCommon(pkgbase, mkline.Filename.Dir().Base())
 	if base == "" && matches(name, `^(\d*|-cvs|-fossil|-git|-hg|-svn|-devel|-snapshot)$`) {
 		return
 	}

@@ -3,6 +3,7 @@ package pkglint
 import (
 	"gopkg.in/check.v1"
 	"math/rand"
+	"time"
 )
 
 // Fuzzer generates random strings.
@@ -27,7 +28,7 @@ func NewFuzzer(seed ...int64) *Fuzzer {
 	if len(seed) > 0 {
 		actualSeed = seed[0]
 	} else {
-		actualSeed = rand.Int63()
+		actualSeed = time.Now().UnixNano()
 	}
 	return &Fuzzer{seed: actualSeed, rnd: rand.New(rand.NewSource(actualSeed))}
 }

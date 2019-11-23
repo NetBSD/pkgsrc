@@ -3,9 +3,6 @@ package pkglint
 import (
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/textproc"
-	"os"
-	"path"
-	"path/filepath"
 	"strconv"
 	"strings"
 )
@@ -1089,9 +1086,9 @@ func (ck MkLineChecker) checkVarassignRightCategory() {
 
 	categories := mkline.ValueFields(mkline.Value())
 	actual := categories[0]
-	expected := path.Base(path.Dir(path.Dir(mkline.Filename)))
+	expected := mkline.Filename.Dir().Dir().Base()
 	if expected == "." {
-		expected = path.Base(path.Dir(path.Dir(G.Pkgsrc.ToRel(mkline.Filename))))
+		expected = G.Pkgsrc.ToRel(mkline.Filename).Dir().Dir().Base()
 	}
 	if expected == "wip" || actual == expected {
 		return
@@ -1194,7 +1191,7 @@ func (ck MkLineChecker) checkVarassignMiscRedundantInstallationDirs() {
 	}
 
 	for _, dir := range mkline.ValueFields(mkline.Value()) {
-		if G.Pkg.Plist.Dirs[dir] != nil {
+		if G.Pkg.Plist.Dirs[NewPath(dir)] != nil {
 			mkline.Notef("The directory %q is redundant in %s.", dir, varname)
 			mkline.Explain(
 				"This package defines AUTO_MKDIR, and the directory is contained in the PLIST.",
@@ -1308,12 +1305,12 @@ func (ck MkLineChecker) checkInclude() {
 	includedFile := mkline.IncludedFile()
 	mustExist := mkline.MustExist()
 	if trace.Tracing {
-		trace.Step2("includingFile=%s includedFile=%s", mkline.Filename, includedFile)
+		trace.Stepf("includingFile=%s includedFile=%s", mkline.Filename, includedFile)
 	}
 	ck.CheckRelativePath(includedFile, mustExist)
 
 	switch {
-	case hasSuffix(includedFile, "/Makefile"):
+	case includedFile.HasBase("Makefile"):
 		mkline.Errorf("Other Makefiles must not be included directly.")
 		mkline.Explain(
 			"To include portions of another Makefile, extract the common parts",
@@ -1329,25 +1326,25 @@ func (ck MkLineChecker) checkInclude() {
 			fix.Apply()
 		}
 
-	case hasSuffix(includedFile, "pkgtools/x11-links/buildlink3.mk"):
+	case includedFile.HasSuffixPath("pkgtools/x11-links/buildlink3.mk"):
 		fix := mkline.Autofix()
 		fix.Errorf("%s must not be included directly. Include \"../../mk/x11.buildlink3.mk\" instead.", includedFile)
 		fix.Replace("pkgtools/x11-links/buildlink3.mk", "mk/x11.buildlink3.mk")
 		fix.Apply()
 
-	case hasSuffix(includedFile, "graphics/jpeg/buildlink3.mk"):
+	case includedFile.HasSuffixPath("graphics/jpeg/buildlink3.mk"):
 		fix := mkline.Autofix()
 		fix.Errorf("%s must not be included directly. Include \"../../mk/jpeg.buildlink3.mk\" instead.", includedFile)
 		fix.Replace("graphics/jpeg/buildlink3.mk", "mk/jpeg.buildlink3.mk")
 		fix.Apply()
 
-	case hasSuffix(includedFile, "/intltool/buildlink3.mk"):
+	case includedFile.HasSuffixPath("intltool/buildlink3.mk"):
 		mkline.Warnf("Please write \"USE_TOOLS+= intltool\" instead of this line.")
 
-	case hasSuffix(includedFile, "/builtin.mk"):
+	case includedFile.HasSuffixText("/builtin.mk"): // TODO: maybe HasSuffixPath
 		if mkline.Basename != "hacks.mk" && !mkline.HasRationale() {
 			fix := mkline.Autofix()
-			fix.Errorf("%s must not be included directly. Include \"%s/buildlink3.mk\" instead.", includedFile, path.Dir(includedFile))
+			fix.Errorf("%s must not be included directly. Include \"%s/buildlink3.mk\" instead.", includedFile, includedFile.Dir())
 			fix.Replace("builtin.mk", "buildlink3.mk")
 			fix.Apply()
 		}
@@ -1370,28 +1367,28 @@ func (ck MkLineChecker) checkDirectiveIndentation(expectedDepth int) {
 
 // CheckRelativePath checks a relative path that leads to the directory of another package
 // or to a subdirectory thereof or a file within there.
-func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
+func (ck MkLineChecker) CheckRelativePath(relativePath Path, mustExist bool) {
 	if trace.Tracing {
 		defer trace.Call(relativePath, mustExist)()
 	}
 
 	mkline := ck.MkLine
-	if !G.Wip && contains(relativePath, "/wip/") {
+	if !G.Wip && relativePath.ContainsPath("wip") {
 		mkline.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
 	}
 
 	resolvedPath := mkline.ResolveVarsInRelativePath(relativePath)
-	if containsVarRef(resolvedPath) {
+	if containsVarRef(resolvedPath.String()) {
 		return
 	}
 
-	if filepath.IsAbs(resolvedPath) {
+	if resolvedPath.IsAbs() {
 		mkline.Errorf("The path %q must be relative.", resolvedPath)
 		return
 	}
 
-	abs := joinPath(path.Dir(mkline.Filename), resolvedPath)
-	if _, err := os.Stat(abs); err != nil {
+	abs := mkline.Filename.Dir().JoinNoClean(resolvedPath)
+	if !abs.Exists() {
 		if mustExist && !ck.MkLines.indentation.HasExists(resolvedPath) {
 			mkline.Errorf("Relative path %q does not exist.", resolvedPath)
 		}
@@ -1399,21 +1396,21 @@ func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 	}
 
 	switch {
-	case !hasPrefix(resolvedPath, "../"):
+	case !resolvedPath.HasPrefixPath(".."):
 		break
 
-	case hasPrefix(resolvedPath, "../../mk/"):
+	case resolvedPath.HasPrefixPath("../../mk"):
 		// From a package to the infrastructure.
 
-	case matches(resolvedPath, `^\.\./\.\./[^./][^/]*/[^/]`):
+	case matches(resolvedPath.String(), `^\.\./\.\./[^./][^/]*/[^/]`):
 		// From a package to another package.
 
-	case hasPrefix(resolvedPath, "../mk/") && relpath(path.Dir(mkline.Filename), G.Pkgsrc.File(".")) == "..":
+	case resolvedPath.HasPrefixPath("../mk") && G.Pkgsrc.ToRel(mkline.Filename).Count() == 2:
 		// For category Makefiles.
 		// TODO: Or from a pkgsrc wip package to wip/mk.
 
-	case matches(resolvedPath, `^\.\./[^./][^/]*/[^/]`):
-		if G.Wip && contains(resolvedPath, "/mk/") {
+	case matches(resolvedPath.String(), `^\.\./[^./][^/]*/[^/]`):
+		if G.Wip && resolvedPath.ContainsPath("mk") {
 			mkline.Warnf("References to the pkgsrc-wip infrastructure should look like \"../../wip/mk\", not \"../mk\".")
 		} else {
 			mkline.Warnf("References to other packages should look like \"../../category/package\", not \"../package\".")
@@ -1433,16 +1430,16 @@ func (ck MkLineChecker) CheckRelativePath(relativePath string, mustExist bool) {
 //
 // When used in .include directives, the relative package directories must be written
 // with the leading ../.. anyway, so the benefit might not be too big at all.
-func (ck MkLineChecker) CheckRelativePkgdir(pkgdir string) {
+func (ck MkLineChecker) CheckRelativePkgdir(pkgdir Path) {
 	if trace.Tracing {
-		defer trace.Call1(pkgdir)()
+		defer trace.Call(pkgdir)()
 	}
 
 	mkline := ck.MkLine
 	ck.CheckRelativePath(pkgdir+"/Makefile", true)
 	pkgdir = mkline.ResolveVarsInRelativePath(pkgdir)
 
-	if !matches(pkgdir, `^\.\./\.\./([^./][^/]*/[^./][^/]*)$`) && !containsVarRef(pkgdir) {
+	if !matches(pkgdir.String(), `^\.\./\.\./([^./][^/]*/[^./][^/]*)$`) && !containsVarRef(pkgdir.String()) {
 		mkline.Warnf("%q is not a valid relative package directory.", pkgdir)
 		mkline.Explain(
 			"A relative pathname always starts with \"../../\", followed",
@@ -1722,11 +1719,30 @@ func (ck MkLineChecker) checkCompareVarStr(varname, op, value string) {
 	ck.checkVartype(varname, opUseCompare, value, "")
 
 	if varname == "PKGSRC_COMPILER" {
-		ck.MkLine.Warnf("Use ${PKGSRC_COMPILER:%s%s} instead of the %s operator.", condStr(op == "==", "M", "N"), value, op)
-		ck.MkLine.Explain(
-			"The PKGSRC_COMPILER can be a list of chained compilers, e.g. \"ccache distcc clang\".",
-			"Therefore, comparing it using == or != leads to wrong results in these cases.")
+		ck.checkCompareVarStrCompiler(op, value)
 	}
+}
+
+func (ck MkLineChecker) checkCompareVarStrCompiler(op string, value string) {
+	if !matches(value, `^\w+$`) {
+		return
+	}
+
+	// It would be nice if original text of the whole comparison expression
+	// were available at this point, to avoid guessing how much whitespace
+	// the package author really used.
+
+	matchOp := condStr(op == "==", "M", "N")
+
+	fix := ck.MkLine.Autofix()
+	fix.Errorf("Use ${PKGSRC_COMPILER:%s%s} instead of the %s operator.", matchOp, value, op)
+	fix.Explain(
+		"The PKGSRC_COMPILER can be a list of chained compilers, e.g. \"ccache distcc clang\".",
+		"Therefore, comparing it using == or != leads to wrong results in these cases.")
+	fix.Replace("${PKGSRC_COMPILER} "+op+" "+value, "${PKGSRC_COMPILER:"+matchOp+value+"}")
+	fix.Replace("${PKGSRC_COMPILER} "+op+" \""+value+"\"", "${PKGSRC_COMPILER:"+matchOp+value+"}")
+	fix.Anyway()
+	fix.Apply()
 }
 
 func (ck MkLineChecker) checkDirectiveFor(forVars map[string]bool, indentation *Indentation) {

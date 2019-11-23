@@ -102,6 +102,9 @@ func (s *Suite) Test_MkLineChecker_Check__varuse_modifier_L(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: x11/xkeyboard-config/Makefile:3: "+
 			"Invalid part \"/xkbcomp\" after variable name \"${XKBBASE}\".",
+		// TODO: Avoid this duplicate diagnostic.
+		"WARN: x11/xkeyboard-config/Makefile:3: "+
+			"Invalid part \"/xkbcomp\" after variable name \"${XKBBASE}\".",
 		"WARN: x11/xkeyboard-config/Makefile:3: XKBBASE is used but not defined.")
 }
 
@@ -2413,7 +2416,7 @@ func (s *Suite) Test_MkLineChecker_CheckRelativePkgdir(c *check.C) {
 
 	t.CreateFileLines("other/package/Makefile")
 
-	test := func(relativePkgdir string, diagnostics ...string) {
+	test := func(relativePkgdir Path, diagnostics ...string) {
 		// Must be in the filesystem because of directory references.
 		mklines := t.SetUpFileMkLines("category/package/Makefile",
 			"# dummy")
@@ -2614,7 +2617,7 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCond(c *check.C) {
 	test(".if ${PKGSRC_COMPILER} == \"msvc\"",
 		"WARN: filename.mk:1: \"msvc\" is not valid for PKGSRC_COMPILER. "+
 			"Use one of { ccache ccc clang distcc f2c gcc hp icc ido mipspro mipspro-ucode pcc sunpro xlc } instead.",
-		"WARN: filename.mk:1: Use ${PKGSRC_COMPILER:Mmsvc} instead of the == operator.")
+		"ERROR: filename.mk:1: Use ${PKGSRC_COMPILER:Mmsvc} instead of the == operator.")
 
 	test(".if ${PKG_LIBTOOL:Mlibtool}",
 		"NOTE: filename.mk:1: PKG_LIBTOOL should be compared using == instead of matching against \":Mlibtool\".",
@@ -2668,10 +2671,11 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCond(c *check.C) {
 		"WARN: filename.mk:1: VAR is used but not defined.")
 
 	test(".if ${MASTER_SITES:Mftp://*} == \"ftp://netbsd.org/\"",
+		// FIXME: duplicate diagnostic, see MkParser.MkCond.
+		"WARN: filename.mk:1: Invalid variable modifier \"//*\" for \"MASTER_SITES\".",
 		"WARN: filename.mk:1: Invalid variable modifier \"//*\" for \"MASTER_SITES\".",
 		"WARN: filename.mk:1: \"ftp\" is not a valid URL.",
-		"WARN: filename.mk:1: MASTER_SITES should not be used at load time in any file.",
-		"WARN: filename.mk:1: Invalid variable modifier \"//*\" for \"MASTER_SITES\".")
+		"WARN: filename.mk:1: MASTER_SITES should not be used at load time in any file.")
 }
 
 func (s *Suite) Test_MkLineChecker_checkDirectiveCond__tracing(c *check.C) {
@@ -2703,7 +2707,7 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCond__comparison_with_shell_com
 
 	// Don't warn about unknown shell command "cc".
 	t.CheckOutputLines(
-		"WARN: security/openssl/Makefile:2: Use ${PKGSRC_COMPILER:Mgcc} instead of the == operator.")
+		"ERROR: security/openssl/Makefile:2: Use ${PKGSRC_COMPILER:Mgcc} instead of the == operator.")
 }
 
 // The :N modifier filters unwanted values. After this filter, any variable value
@@ -2746,8 +2750,8 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCond__comparing_PKGSRC_COMPILER
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: Makefile:2: Use ${PKGSRC_COMPILER:Mclang} instead of the == operator.",
-		"WARN: Makefile:3: Use ${PKGSRC_COMPILER:Ngcc} instead of the != operator.")
+		"ERROR: Makefile:2: Use ${PKGSRC_COMPILER:Mclang} instead of the == operator.",
+		"ERROR: Makefile:3: Use ${PKGSRC_COMPILER:Ngcc} instead of the != operator.")
 }
 
 func (s *Suite) Test_MkLineChecker_checkDirectiveCondEmpty(c *check.C) {
@@ -3060,6 +3064,62 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveCondCompareVarStr__no_tracing(c
 	ck.checkDirectiveCondCompareVarStr(varUse, "==", "distfile-1.0.tar.gz")
 
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkLineChecker_checkCompareVarStrCompiler(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	t.Chdir(".")
+
+	test := func(cond string, diagnostics ...string) {
+		mklines := t.SetUpFileMkLines("filename.mk",
+			MkCvsID,
+			"",
+			".if "+cond,
+			".endif")
+
+		t.SetUpCommandLine("-Wall")
+		mklines.Check()
+		t.SetUpCommandLine("-Wall", "--autofix")
+		mklines.Check()
+
+		t.CheckOutput(diagnostics)
+	}
+
+	test(
+		"${PKGSRC_COMPILER} == gcc",
+
+		"ERROR: filename.mk:3: "+
+			"Use ${PKGSRC_COMPILER:Mgcc} instead of the == operator.",
+		"AUTOFIX: filename.mk:3: "+
+			"Replacing \"${PKGSRC_COMPILER} == gcc\" "+
+			"with \"${PKGSRC_COMPILER:Mgcc}\".")
+
+	// No autofix because of missing whitespace.
+	// TODO: Provide the autofix regardless of the whitespace.
+	test(
+		"${PKGSRC_COMPILER}==gcc",
+
+		"ERROR: filename.mk:3: "+
+			"Use ${PKGSRC_COMPILER:Mgcc} instead of the == operator.")
+
+	// The comparison value can be with or without quotes.
+	test(
+		"${PKGSRC_COMPILER} == \"gcc\"",
+
+		"ERROR: filename.mk:3: "+
+			"Use ${PKGSRC_COMPILER:Mgcc} instead of the == operator.",
+		"AUTOFIX: filename.mk:3: "+
+			"Replacing \"${PKGSRC_COMPILER} == \\\"gcc\\\"\" "+
+			"with \"${PKGSRC_COMPILER:Mgcc}\".")
+
+	// No warning because it is not obvious what is meant here.
+	// This case probably doesn't occur in practice.
+	test(
+		"${PKGSRC_COMPILER} == \"distcc gcc\"",
+
+		nil...)
 }
 
 func (s *Suite) Test_MkLineChecker_checkDirectiveFor(c *check.C) {

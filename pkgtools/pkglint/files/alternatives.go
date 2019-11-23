@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func CheckFileAlternatives(filename string) {
+func CheckFileAlternatives(filename Path) {
 	lines := Load(filename, NotEmpty|LogErrors)
 	if lines == nil {
 		return
@@ -16,7 +16,7 @@ func CheckFileAlternatives(filename string) {
 		plist = G.Pkg.Plist
 	}
 
-	checkPlistWrapper := func(line *Line, wrapper string) {
+	checkPlistWrapper := func(line *Line, wrapper Path) {
 		if plist.Files[wrapper] != nil {
 			line.Errorf("Alternative wrapper %q must not appear in the PLIST.", wrapper)
 		}
@@ -25,10 +25,10 @@ func CheckFileAlternatives(filename string) {
 	checkPlistAlternative := func(line *Line, alternative string) {
 		relImplementation := strings.Replace(alternative, "@PREFIX@/", "", 1)
 		plistName := replaceAll(relImplementation, `@(\w+)@`, "${$1}")
-		if plist.Files[plistName] != nil || G.Pkg.vars.IsDefined("ALTERNATIVES_SRC") {
+		if plist.Files[NewPath(plistName)] != nil || G.Pkg.vars.IsDefined("ALTERNATIVES_SRC") {
 			return
 		}
-		if plist.Files[strings.Replace(plistName, "${PKGMANDIR}", "man", 1)] != nil {
+		if plist.Files[NewPath(strings.Replace(plistName, "${PKGMANDIR}", "man", 1))] != nil {
 			return
 		}
 
@@ -57,7 +57,7 @@ func CheckFileAlternatives(filename string) {
 		}
 
 		if plist.Files != nil {
-			checkPlistWrapper(line, wrapper)
+			checkPlistWrapper(line, NewPath(wrapper))
 			checkPlistAlternative(line, alternative)
 		}
 
