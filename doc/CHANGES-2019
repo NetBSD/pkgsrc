@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5091 2019/11/23 22:16:28 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5092 2019/11/23 22:18:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8207,3 +8207,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/festvox-rab8 to 1.95 [nia 2019-11-23]
 	Updated audio/festvox-us1 to 1.96 [nia 2019-11-23]
 	Updated audio/festvox-us2 to 1.96 [nia 2019-11-23]
+	Updated audio/festvox-us3 to 1.96 [nia 2019-11-23]
