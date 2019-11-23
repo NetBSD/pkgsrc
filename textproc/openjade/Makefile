@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/11/23 18:55:54 gdt Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/23 19:09:26 gdt Exp $
 
 DISTNAME=	openjade-1.3.2
 PKGREVISION=	15
@@ -37,7 +37,7 @@ INSTALLATION_DIRS=	${OPENJADE_DATA_DIR}/pubtext \
 # Because of code in openjade that does not conform to standards, some
 # versions of gcc produce an openjade binary that segfaults.  Examples
 # are building postgresql95-docs (gcc version ?) and building the
-# pkgsrc guide (gcc included with netbsd-9).
+# pkgsrc guide (gcc 7 and 8 on NetBSD/amd).
 #
 # Bug report about openjade built with gcc crashing for postgresql
 #   https://bugzilla.redhat.com/show_bug.cgi?id=1306162
