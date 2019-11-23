@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5088 2019/11/23 22:09:05 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5089 2019/11/23 22:11:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8204,3 +8204,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dnscrypt-proxy2 to 2.0.33 [nia 2019-11-23]
 	Updated audio/festvox-don to 1.95 [nia 2019-11-23]
 	Updated audio/festvox-en1 to 1.95 [nia 2019-11-23]
+	Updated audio/festvox-rab8 to 1.95 [nia 2019-11-23]
