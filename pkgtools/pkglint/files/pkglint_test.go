@@ -14,9 +14,9 @@ func (pkglint *Pkglint) isUsable() bool { return pkglint.fileCache != nil }
 func (s *Suite) Test_Pkglint_Main(c *check.C) {
 	t := s.Init(c)
 
-	out, err := os.Create(t.CreateFileLines("out"))
+	out, err := os.Create(t.CreateFileLines("out").String())
 	c.Check(err, check.IsNil)
-	outProfiling, err := os.Create(t.CreateFileLines("out.profiling"))
+	outProfiling, err := os.Create(t.CreateFileLines("out.profiling").String())
 	c.Check(err, check.IsNil)
 
 	t.SetUpPackage("category/package")
@@ -238,7 +238,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 			"Package version \"1.11\" is greater than the latest \"1.10\" "+
 			"from ../../doc/CHANGES-2018:5.",
 		"WARN: ~/sysutils/checkperms/Makefile:3: "+
-			"This package should be updated to 1.13 ([supports more file formats]).",
+			"This package should be updated to 1.13 (supports more file formats; see ../../doc/TODO:5).",
 		"ERROR: ~/sysutils/checkperms/Makefile:4: Invalid category \"tools\".",
 		"ERROR: ~/sysutils/checkperms/README: Packages in main pkgsrc must not have a README file.",
 		"ERROR: ~/sysutils/checkperms/TODO: Packages in main pkgsrc must not have a TODO file.",
@@ -259,7 +259,7 @@ func (s *Suite) Test_Pkglint_Main__autofix_exitcode(c *check.C) {
 	t.CreateFileLines("filename.mk",
 		"")
 
-	exitcode := t.Main("-Wall", "--autofix", t.File("filename.mk"))
+	exitcode := t.Main("-Wall", "--autofix", "filename.mk")
 
 	t.CheckOutputLines(
 		"AUTOFIX: ~/filename.mk:1: Inserting a line \"" + MkCvsID + "\" before this line.")
@@ -309,7 +309,7 @@ func (s *Suite) Test_Pkglint_Main__profiling(c *check.C) {
 
 	// Pkglint always writes the profiling data into the current directory.
 	// TODO: Make the location of the profiling log a mandatory parameter.
-	t.CheckEquals(fileExists("pkglint.pprof"), true)
+	t.CheckEquals(NewPath("pkglint.pprof").IsFile(), true)
 
 	err := os.Remove("pkglint.pprof")
 	c.Check(err, check.IsNil)
@@ -860,7 +860,7 @@ func (s *Suite) Test_Pkglint_checkReg__alternatives(c *check.C) {
 	lines := t.SetUpFileLines("category/package/ALTERNATIVES",
 		"bin/tar bin/gnu-tar")
 
-	t.Main(lines.Filename)
+	t.Main(lines.Filename.String())
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/ALTERNATIVES:1: Alternative implementation \"bin/gnu-tar\" must be an absolute path.",
@@ -961,7 +961,7 @@ func (s *Suite) Test_Pkglint_checkReg__readme_and_todo(c *check.C) {
 
 	// Copy category/package/** to wip/package.
 	err := filepath.Walk(
-		t.File("category/package"),
+		t.File("category/package").String(),
 		func(pathname string, info os.FileInfo, err error) error {
 			if info.Mode().IsRegular() {
 				src := filepath.ToSlash(pathname)
@@ -1047,7 +1047,7 @@ func (s *Suite) Test_Pkglint_checkExecutable(c *check.C) {
 	t := s.Init(c)
 
 	filename := t.CreateFileLines("file.mk")
-	err := os.Chmod(filename, 0555)
+	err := os.Chmod(filename.String(), 0555)
 	assertNil(err, "")
 
 	G.checkExecutable(filename, 0555)
@@ -1065,7 +1065,7 @@ func (s *Suite) Test_Pkglint_checkExecutable(c *check.C) {
 	// On Windows, this is effectively a no-op test since there is no
 	// execute-bit. The only relevant permissions bit is whether a
 	// file is readonly or not.
-	st, err := os.Lstat(filename)
+	st, err := filename.Lstat()
 	if t.Check(err, check.IsNil) {
 		t.CheckEquals(st.Mode()&0111, os.FileMode(0))
 	}

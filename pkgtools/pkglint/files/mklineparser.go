@@ -247,7 +247,7 @@ func (p MkLineParser) parseSysinclude(line *Line, splitResult mkLineSplitResult)
 		return nil
 	}
 
-	return &MkLine{line, splitResult, &mkLineInclude{directive == "include", true, indent, includedFile, nil}}
+	return &MkLine{line, splitResult, &mkLineInclude{directive == "include", true, indent, NewPath(includedFile), nil}}
 }
 
 func (p MkLineParser) parseDependency(line *Line, splitResult mkLineSplitResult) *MkLine {

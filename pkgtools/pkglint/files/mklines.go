@@ -70,7 +70,7 @@ func NewMkLines(lines *Lines) *MkLines {
 
 func (mklines *MkLines) Check() {
 	if trace.Tracing {
-		defer trace.Call1(mklines.lines.Filename)()
+		defer trace.Call(mklines.lines.Filename)()
 	}
 
 	// In the first pass, all additions to BUILD_DEFS and USE_TOOLS
@@ -440,7 +440,7 @@ func (mklines *MkLines) checkVarassignPlist(mkline *MkLine) {
 
 // CheckUsedBy checks that this file (a Makefile.common) has the given
 // relativeName in one of the "# used by" comments at the beginning of the file.
-func (mklines *MkLines) CheckUsedBy(relativeName string) {
+func (mklines *MkLines) CheckUsedBy(relativeName Path) {
 	lines := mklines.lines
 	if lines.Len() < 3 {
 		return
@@ -448,7 +448,7 @@ func (mklines *MkLines) CheckUsedBy(relativeName string) {
 
 	paras := mklines.SplitToParagraphs()
 
-	expected := "# used by " + relativeName
+	expected := "# used by " + relativeName.String()
 	found := false
 	var usedParas []*Paragraph
 
