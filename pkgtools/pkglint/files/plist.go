@@ -9,7 +9,7 @@ import (
 
 func CheckLinesPlist(pkg *Package, lines *Lines) {
 	if trace.Tracing {
-		defer trace.Call1(lines.Filename)()
+		defer trace.Call(lines.Filename)()
 	}
 
 	idOk := lines.CheckCvsID(0, `@comment `, "@comment ")
@@ -31,8 +31,8 @@ func CheckLinesPlist(pkg *Package, lines *Lines) {
 
 	ck := PlistChecker{
 		pkg,
-		make(map[string]*PlistLine),
-		make(map[string]*PlistLine),
+		make(map[Path]*PlistLine),
+		make(map[Path]*PlistLine),
 		"",
 		Once{},
 		false}
@@ -41,8 +41,8 @@ func CheckLinesPlist(pkg *Package, lines *Lines) {
 
 type PlistChecker struct {
 	pkg             *Package
-	allFiles        map[string]*PlistLine
-	allDirs         map[string]*PlistLine
+	allFiles        map[Path]*PlistLine
+	allDirs         map[Path]*PlistLine
 	lastFname       string
 	once            Once
 	nonAsciiAllowed bool
@@ -53,7 +53,7 @@ func (ck *PlistChecker) Load(lines *Lines) []*PlistLine {
 	ck.collectFilesAndDirs(plines)
 
 	if lines.BaseName == "PLIST.common_end" {
-		commonLines := Load(strings.TrimSuffix(lines.Filename, "_end"), NotEmpty)
+		commonLines := Load(lines.Filename.TrimSuffix("_end"), NotEmpty)
 		if commonLines != nil {
 			ck.collectFilesAndDirs(ck.NewLines(commonLines))
 		}
@@ -107,15 +107,16 @@ func (ck *PlistChecker) collectFilesAndDirs(plines []*PlistLine) {
 			first := text[0]
 			switch {
 			case plistLineStart.Contains(first):
-				if prev := ck.allFiles[text]; prev == nil || stringSliceLess(pline.conditions, prev.conditions) {
-					ck.allFiles[text] = pline
+				path := NewPath(text)
+				if prev := ck.allFiles[path]; prev == nil || stringSliceLess(pline.conditions, prev.conditions) {
+					ck.allFiles[path] = pline
 				}
-				for dir := path.Dir(text); dir != "."; dir = path.Dir(dir) {
+				for dir := path.Dir(); dir != "."; dir = dir.Dir() {
 					ck.allDirs[dir] = pline
 				}
 			case first == '@':
 				if m, dirname := match1(text, `^@exec \$\{MKDIR\} %D/(.*)$`); m {
-					for dir := dirname; dir != "."; dir = path.Dir(dir) {
+					for dir := NewPath(dirname); dir != "."; dir = dir.Dir() {
 						ck.allDirs[dir] = pline
 					}
 				}
@@ -259,7 +260,7 @@ func (ck *PlistChecker) checkDuplicate(pline *PlistLine) {
 		return
 	}
 
-	prev := ck.allFiles[text]
+	prev := ck.allFiles[NewPath(text)]
 	if prev == pline || len(prev.conditions) > 0 {
 		return
 	}
@@ -317,7 +318,7 @@ func (ck *PlistChecker) checkPathLib(pline *PlistLine, dirname, basename string)
 
 	if contains(basename, ".a") || contains(basename, ".so") {
 		if m, noext := match1(pline.text, `^(.*)(?:\.a|\.so[0-9.]*)$`); m {
-			if laLine := ck.allFiles[noext+".la"]; laLine != nil {
+			if laLine := ck.allFiles[NewPath(noext+".la")]; laLine != nil {
 				pline.Warnf("Redundant library found. The libtool library is in %s.", pline.RefTo(laLine.Line))
 			}
 		}
@@ -350,7 +351,7 @@ func (ck *PlistChecker) checkPathMan(pline *PlistLine) {
 		pline.Warnf("Unknown section %q for manual page.", section)
 	}
 
-	if catOrMan == "cat" && ck.allFiles["man/man"+section+"/"+manpage+"."+section] == nil {
+	if catOrMan == "cat" && ck.allFiles[NewPath("man/man"+section+"/"+manpage+"."+section)] == nil {
 		pline.Warnf("Preformatted manual page without unformatted one.")
 	}
 
