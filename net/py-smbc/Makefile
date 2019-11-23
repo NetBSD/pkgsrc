@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/11/13 20:31:17 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/23 08:45:45 mef Exp $
 
 DISTNAME=	pysmbc-1.0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysmbc/}
 EXTRACT_SUFX=	.tar.bz2
