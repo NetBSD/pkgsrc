@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.574 2019/10/20 11:10:47 nia Exp $
+# $NetBSD: Makefile,v 1.575 2019/11/23 12:01:01 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -94,7 +94,6 @@ SUBDIR+=	faad2
 SUBDIR+=	fasttracker2
 SUBDIR+=	fdk-aac
 SUBDIR+=	festival
-SUBDIR+=	festival-doc
 SUBDIR+=	festlex-cmu
 SUBDIR+=	festlex-oald
 SUBDIR+=	festlex-ogi
