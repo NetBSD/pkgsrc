@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.28 2013/10/18 11:41:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2019/11/23 22:08:12 nia Exp $
 
 DISTNAME=	festvox_en1
-PKGNAME=	festvox-en1-1.4.0
-PKGREVISION=	2
+PKGNAME=	festvox-en1-1.95
 CATEGORIES=	audio
-MASTER_SITES=	http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
+MASTER_SITES=	http://festvox.org/packed/festival/${PKGVERSION_NOREV}/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
+HOMEPAGE=	http://festvox.org/festival/index.html
 COMMENT=	MBROLA based British English male voice for festival
 LICENSE=	no-commercial-use
 
