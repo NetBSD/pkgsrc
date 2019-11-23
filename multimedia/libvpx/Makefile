@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2019/11/23 19:17:44 gdt Exp $
+# $NetBSD: Makefile,v 1.80 2019/11/23 19:37:20 gdt Exp $
 
 DISTNAME=	libvpx-1.8.1
 PKGREVISION=	1
@@ -26,10 +26,11 @@ CONFIGURE_ARGS+=	--disable-unit-tests
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-.  if !empty(${PKGSRC_COMPILER:Mgcc}) && (${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS")
 # PR pkg/48508: GCC 4.4 or later is required to compile ssse3 code on NetBSD & Solaris.
+# Because building pkgsrc with gcc < 4.4 doesn't really work in the
+# first place, for simplicitly, just set GCC_REQD unconditionally
+# rather than trying to limit by OS.
 GCC_REQD+=	4.4
-.  endif
 
 BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 .endif
