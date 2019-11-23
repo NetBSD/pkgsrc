@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5085 2019/11/23 17:26:07 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.5086 2019/11/23 21:56:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8201,3 +8201,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/festvox-rab16 to 2.5 [nia 2019-11-23]
 	Updated net/youtube-dl to 20191122 [leot 2019-11-23]
 	Updated math/bc-gh to 2.3.1 [gdt 2019-11-23]
+	Updated net/dnscrypt-proxy2 to 2.0.33 [nia 2019-11-23]
