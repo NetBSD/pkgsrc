@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/11/15 10:01:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/23 11:41:20 nia Exp $
 
 DISTNAME=		xorgproto-2019.2
 PKGREVISION=		2
@@ -16,6 +16,9 @@ USE_LANGUAGES=		c
 
 # some packages need the old headers
 CONFIGURE_ARGS+=	--enable-legacy
+
+# Force a consistent PLIST.
+CONFIGURE_ENV+=		MISC_MAN_SUFFIX="7"
 
 PKGCONFIG_OVERRIDE+=	applewmproto.pc.in
 PKGCONFIG_OVERRIDE+=	bigreqsproto.pc.in
