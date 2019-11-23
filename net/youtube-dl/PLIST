@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.94 2019/11/06 21:08:00 leot Exp $
+@comment $NetBSD: PLIST,v 1.95 2019/11/23 12:23:57 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -74,9 +74,6 @@ ${PYSITELIB}/youtube_dl/extractor/academicearth.pyo
 ${PYSITELIB}/youtube_dl/extractor/acast.py
 ${PYSITELIB}/youtube_dl/extractor/acast.pyc
 ${PYSITELIB}/youtube_dl/extractor/acast.pyo
-${PYSITELIB}/youtube_dl/extractor/addanime.py
-${PYSITELIB}/youtube_dl/extractor/addanime.pyc
-${PYSITELIB}/youtube_dl/extractor/addanime.pyo
 ${PYSITELIB}/youtube_dl/extractor/adn.py
 ${PYSITELIB}/youtube_dl/extractor/adn.pyc
 ${PYSITELIB}/youtube_dl/extractor/adn.pyo
@@ -398,9 +395,6 @@ ${PYSITELIB}/youtube_dl/extractor/cnbc.pyo
 ${PYSITELIB}/youtube_dl/extractor/cnn.py
 ${PYSITELIB}/youtube_dl/extractor/cnn.pyc
 ${PYSITELIB}/youtube_dl/extractor/cnn.pyo
-${PYSITELIB}/youtube_dl/extractor/comcarcoff.py
-${PYSITELIB}/youtube_dl/extractor/comcarcoff.pyc
-${PYSITELIB}/youtube_dl/extractor/comcarcoff.pyo
 ${PYSITELIB}/youtube_dl/extractor/comedycentral.py
 ${PYSITELIB}/youtube_dl/extractor/comedycentral.pyc
 ${PYSITELIB}/youtube_dl/extractor/comedycentral.pyo
@@ -461,9 +455,6 @@ ${PYSITELIB}/youtube_dl/extractor/dailymail.pyo
 ${PYSITELIB}/youtube_dl/extractor/dailymotion.py
 ${PYSITELIB}/youtube_dl/extractor/dailymotion.pyc
 ${PYSITELIB}/youtube_dl/extractor/dailymotion.pyo
-${PYSITELIB}/youtube_dl/extractor/daisuki.py
-${PYSITELIB}/youtube_dl/extractor/daisuki.pyc
-${PYSITELIB}/youtube_dl/extractor/daisuki.pyo
 ${PYSITELIB}/youtube_dl/extractor/daum.py
 ${PYSITELIB}/youtube_dl/extractor/daum.pyc
 ${PYSITELIB}/youtube_dl/extractor/daum.pyo
@@ -950,6 +941,9 @@ ${PYSITELIB}/youtube_dl/extractor/khanacademy.pyo
 ${PYSITELIB}/youtube_dl/extractor/kickstarter.py
 ${PYSITELIB}/youtube_dl/extractor/kickstarter.pyc
 ${PYSITELIB}/youtube_dl/extractor/kickstarter.pyo
+${PYSITELIB}/youtube_dl/extractor/kinja.py
+${PYSITELIB}/youtube_dl/extractor/kinja.pyc
+${PYSITELIB}/youtube_dl/extractor/kinja.pyo
 ${PYSITELIB}/youtube_dl/extractor/kinopoisk.py
 ${PYSITELIB}/youtube_dl/extractor/kinopoisk.pyc
 ${PYSITELIB}/youtube_dl/extractor/kinopoisk.pyo
@@ -1118,9 +1112,6 @@ ${PYSITELIB}/youtube_dl/extractor/miaopai.pyo
 ${PYSITELIB}/youtube_dl/extractor/microsoftvirtualacademy.py
 ${PYSITELIB}/youtube_dl/extractor/microsoftvirtualacademy.pyc
 ${PYSITELIB}/youtube_dl/extractor/microsoftvirtualacademy.pyo
-${PYSITELIB}/youtube_dl/extractor/minhateca.py
-${PYSITELIB}/youtube_dl/extractor/minhateca.pyc
-${PYSITELIB}/youtube_dl/extractor/minhateca.pyo
 ${PYSITELIB}/youtube_dl/extractor/ministrygrid.py
 ${PYSITELIB}/youtube_dl/extractor/ministrygrid.pyc
 ${PYSITELIB}/youtube_dl/extractor/ministrygrid.pyo
@@ -1550,9 +1541,6 @@ ${PYSITELIB}/youtube_dl/extractor/reuters.pyo
 ${PYSITELIB}/youtube_dl/extractor/reverbnation.py
 ${PYSITELIB}/youtube_dl/extractor/reverbnation.pyc
 ${PYSITELIB}/youtube_dl/extractor/reverbnation.pyo
-${PYSITELIB}/youtube_dl/extractor/revision3.py
-${PYSITELIB}/youtube_dl/extractor/revision3.pyc
-${PYSITELIB}/youtube_dl/extractor/revision3.pyo
 ${PYSITELIB}/youtube_dl/extractor/rice.py
 ${PYSITELIB}/youtube_dl/extractor/rice.pyc
 ${PYSITELIB}/youtube_dl/extractor/rice.pyo
