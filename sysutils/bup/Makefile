@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/11/21 17:34:06 gdt Exp $
+# $NetBSD: Makefile,v 1.41 2019/11/23 21:25:12 gdt Exp $
 
 DISTNAME=	bup-0.30
 CATEGORIES=	sysutils
@@ -13,17 +13,13 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 # (Note to future updating self) We would like to fetch the following files:
 #   https://github.com/bup/bup/archive/0.30.tar.gz
 #   https://github.com/bup/bup/archive/28876cde4a3dac518e773860aa7969c106f5390d.tar.gz
-# We use a subdir to isolate the man distfile that is named with a
-# SHA1, so that one can readily understand to which package the file
-# belongs (and the main file, which is not necessary but not harmful).
-DIST_SUBDIR=	bup		
 
 # EXTRACT_SUFX is set too late, so using it in SITES.* fails.
 EXTRACT_SUFX=  .tar.gz
 MAN_TAG=	28876cde4a3dac518e773860aa7969c106f5390d
 MAN_UNPACK=	bup-${MAN_TAG}
-MAN_DISTFILE=	${MAN_TAG}${EXTRACT_SUFX}
-SITES.${MAN_DISTFILE}= -${MASTER_SITE_GITHUB:=bup/bup/archive/}${MAN_DISTFILE}
+MAN_DISTFILE=	bup-man-${MAN_TAG}${EXTRACT_SUFX}
+SITES.${MAN_DISTFILE}= -${MASTER_SITE_GITHUB:=bup/bup/archive/}${MAN_TAG}${EXTRACT_SUFX}
 
 DISTFILES=     ${DEFAULT_DISTFILES} ${MAN_DISTFILE}
 
