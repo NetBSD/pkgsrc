@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.25 2012/09/11 23:59:34 asau Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/23 12:22:35 nia Exp $
 
 DISTNAME=	festvox_kallpc16k
-PKGNAME=	festvox-kal16-1.4.0
-PKGREVISION=	1
+PKGNAME=	festvox-kal16-2.5
 CATEGORIES=	audio
-MASTER_SITES=	http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
+MASTER_SITES=	http://festvox.org/packed/festival/${PKGVERSION_NOREV}/voices/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
+HOMEPAGE=	http://festvox.org/festival/index.html
 COMMENT=	16khz American English male voice for festival
 
-DEPENDS+=	festival>=1.4.0:../../audio/festival
-DEPENDS+=	festlex-poslex>=1.4.0:../../audio/festlex-poslex
-DEPENDS+=	festlex-cmu>=1.4.0:../../audio/festlex-cmu
+DEPENDS+=	festival>=2.5.0:../../audio/festival
+DEPENDS+=	festlex-poslex>=2.5:../../audio/festlex-poslex
+DEPENDS+=	festlex-cmu>=2.5:../../audio/festlex-cmu
 
 USE_TOOLS+=	pax
 
