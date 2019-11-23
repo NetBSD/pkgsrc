@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/07/26 15:31:08 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/23 11:46:35 nia Exp $
 
 DISTNAME=	vamp-plugin-sdk-2.8.0
 CATEGORIES=	audio
@@ -17,6 +17,8 @@ USE_LIBTOOL=	yes
 PKGCONFIG_OVERRIDE+=	pkgconfig/vamp-hostsdk.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/vamp-sdk.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/vamp.pc.in
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=build/vamp-plugin.map
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
