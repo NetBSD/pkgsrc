@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5093 2019/11/23 23:03:19 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5094 2019/11/23 23:36:37 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8209,3 +8209,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/festvox-us2 to 1.96 [nia 2019-11-23]
 	Updated audio/festvox-us3 to 1.96 [nia 2019-11-23]
 	Updated multimedia/smpeg to 0.4.5 [nia 2019-11-23]
+	Updated pkgtools/pkglint to 19.3.10 [rillig 2019-11-23]
