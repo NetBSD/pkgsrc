@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/08/11 13:18:39 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/11/23 07:17:59 mef Exp $
 
-DISTNAME=	cloc-1.76
-PKGREVISION=	2
+DISTNAME=	cloc-1.84
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AlDanial/}
-GITHUB_PROJECT=	cloc
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/AlDanial/cloc
