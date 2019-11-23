@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:08:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/11/23 23:03:01 nia Exp $
 ${PLIST.opengl}bin/glmovie
-${PLIST.gtk}bin/gtv
 bin/plaympeg
 bin/smpeg-config
 include/smpeg/MPEG.h
@@ -15,6 +14,5 @@ include/smpeg/MPEGsystem.h
 include/smpeg/MPEGvideo.h
 include/smpeg/smpeg.h
 lib/libsmpeg.la
-${PLIST.gtk}man/man1/gtv.1
 man/man1/plaympeg.1
 share/aclocal/smpeg.m4
