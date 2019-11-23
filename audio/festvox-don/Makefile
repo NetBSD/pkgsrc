@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2012/09/11 23:59:33 asau Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/23 22:04:51 nia Exp $
 
 DISTNAME=	festvox_don
-PKGNAME=	festvox-don-1.4.0
-PKGREVISION=	1
+PKGNAME=	festvox-don-1.95
 CATEGORIES=	audio
-MASTER_SITES=	http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
+MASTER_SITES=	http://festvox.org/packed/festival/${PKGVERSION_NOREV}/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
+HOMEPAGE=	http://festvox.org/festival/index.html
 COMMENT=	British English male voice for the festival speech synthesis system
 
 DEPENDS+=	festival>=1.4.0:../../audio/festival
