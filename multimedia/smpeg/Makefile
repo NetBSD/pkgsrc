@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/11/03 17:12:04 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/23 22:20:29 nia Exp $
 #
 
 DISTNAME=	smpeg-0.4.4
@@ -7,7 +7,7 @@ CATEGORIES=	devel multimedia
 MASTER_SITES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lokigames.com/development/smpeg.php3
+HOMEPAGE=	http://icculus.org/smpeg/
 COMMENT=	SDL MPEG Player Library
 LICENSE=	gnu-lgpl-v2
 
