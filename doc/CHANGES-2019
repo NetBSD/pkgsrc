@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5083 2019/11/23 12:26:10 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5084 2019/11/23 12:53:51 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8199,3 +8199,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/festlex-poslex to 2.5 [nia 2019-11-23]
 	Updated audio/festvox-kal16 to 2.5 [nia 2019-11-23]
 	Updated audio/festvox-rab16 to 2.5 [nia 2019-11-23]
+	Updated net/youtube-dl to 20191122 [leot 2019-11-23]
