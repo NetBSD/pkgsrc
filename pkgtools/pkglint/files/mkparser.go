@@ -410,6 +410,8 @@ func (p *MkParser) varUseModifierAt(lexer *textproc.Lexer, varname string) bool 
 // MkCond parses a condition like ${OPSYS} == "NetBSD".
 //
 // See devel/bmake/files/cond.c.
+//
+// FIXME: Move over to MkTokensParser
 func (p *MkParser) MkCond() *MkCond {
 	and := p.mkCondAnd()
 	if and == nil {
