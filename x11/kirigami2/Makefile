@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/04/25 21:17:14 markd Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/23 13:17:24 mef Exp $
 
 DISTNAME=	kirigami2-${KF5VER}
 CATEGORIES=	x11
@@ -13,5 +13,6 @@ DEPENDS+=	qt5-qtgraphicaleffects-[0-9]*:../../x11/qt5-qtgraphicaleffects
 
 .include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
