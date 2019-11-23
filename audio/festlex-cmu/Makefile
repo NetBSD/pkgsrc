@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.23 2012/09/11 23:59:32 asau Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/23 12:07:28 nia Exp $
 
 DISTNAME=	festlex_CMU
-PKGNAME=	festlex-cmu-1.4.0
-PKGREVISION=	1
+PKGNAME=	festlex-cmu-2.5
 CATEGORIES=	audio
-MASTER_SITES=	http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
+MASTER_SITES=	http://festvox.org/packed/festival/${PKGVERSION_NOREV}/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
+HOMEPAGE=	http://festvox.org/festival/index.html
 COMMENT=	CMU American English pronunciation dictionary for Festival
 
-DEPENDS+=	festival>=1.4.0:../../audio/festival
+DEPENDS+=	festival>=2.5:../../audio/festival
 USE_TOOLS+=	pax
 
 WRKSRC=		${WRKDIR}/festival
