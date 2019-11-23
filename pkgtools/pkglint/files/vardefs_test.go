@@ -178,7 +178,7 @@ func (s *Suite) Test_VarTypeRegistry_Init__no_testing(c *check.C) {
 	G.Testing = false
 	t.ExpectFatal(
 		t.FinishSetUp,
-		"FATAL: ~/mk/fetch/sites.mk: Cannot be read.")
+		"FATAL: ~/editors/emacs/modules.mk: Cannot be read.")
 }
 
 func (s *Suite) Test_VarTypeRegistry_Init__MASTER_SITES(c *check.C) {

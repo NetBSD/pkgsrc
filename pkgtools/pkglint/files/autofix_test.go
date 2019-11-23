@@ -1282,7 +1282,7 @@ func (s *Suite) Test_SaveAutofixChanges__file_removed(c *check.C) {
 	t.SetUpCommandLine("--autofix")
 	lines := t.SetUpFileLines("subdir/file.txt",
 		"line 1")
-	_ = os.RemoveAll(t.File("subdir"))
+	_ = os.RemoveAll(t.File("subdir").String())
 
 	fix := lines.Lines[0].Autofix()
 	fix.Warnf("Should start with an uppercase letter.")
@@ -1308,7 +1308,7 @@ func (s *Suite) Test_SaveAutofixChanges__file_busy_Windows(c *check.C) {
 		"line 1")
 
 	// As long as the file is kept open, it cannot be overwritten or deleted.
-	openFile, err := os.OpenFile(t.File("subdir/file.txt"), 0, 0666)
+	openFile, err := os.OpenFile(t.File("subdir/file.txt").String(), 0, 0666) // TODO: replace with Path.Open
 	defer func() { assertNil(openFile.Close(), "") }()
 	c.Check(err, check.IsNil)
 
@@ -1336,8 +1336,8 @@ func (s *Suite) Test_SaveAutofixChanges__cannot_overwrite(c *check.C) {
 	lines := t.SetUpFileLines("file.txt",
 		"line 1")
 
-	c.Check(os.RemoveAll(t.File("file.txt")), check.IsNil)
-	c.Check(os.MkdirAll(t.File("file.txt"), 0777), check.IsNil)
+	c.Check(os.RemoveAll(t.File("file.txt").String()), check.IsNil)
+	c.Check(os.MkdirAll(t.File("file.txt").String(), 0777), check.IsNil)
 
 	fix := lines.Lines[0].Autofix()
 	fix.Warnf("Should start with an uppercase letter.")

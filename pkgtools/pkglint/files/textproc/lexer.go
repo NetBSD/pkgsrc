@@ -75,7 +75,7 @@ func (l *Lexer) NextString(prefix string) string {
 	return ""
 }
 
-// SkipString skips over the given string, if the remaining string starts
+// SkipText skips over the given string, if the remaining string starts
 // with it. It returns whether it actually skipped.
 func (l *Lexer) SkipString(prefix string) bool {
 	skipped := strings.HasPrefix(l.rest, prefix)
