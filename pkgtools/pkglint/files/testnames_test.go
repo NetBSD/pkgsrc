@@ -11,6 +11,7 @@ import (
 func (s *Suite) Test__test_names(c *check.C) {
 	ck := intqa.NewTestNameChecker(c.Errorf)
 	ck.Configure("*", "*", "*", -intqa.EMissingTest)
+	ck.Configure("path.go", "*", "*", +intqa.EMissingTest)
 	ck.Configure("*yacc.go", "*", "*", intqa.ENone)
 	ck.Check()
 }

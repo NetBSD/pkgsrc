@@ -311,7 +311,7 @@ func (s *Suite) Test_Package__case_insensitive(c *check.C) {
 	t.FinishSetUp()
 
 	// this test is only interesting on a case-insensitive filesystem
-	if !fileExists(t.File("mk/BSD.PKG.MK")) {
+	if !t.File("mk/BSD.PKG.MK").IsFile() {
 		return
 	}
 
@@ -330,6 +330,64 @@ func (s *Suite) Test_NewPackage(c *check.C) {
 	t.FinishSetUp()
 
 	t.ExpectAssert(func() { NewPackage("category") })
+}
+
+func (s *Suite) Test_Package_load__variable_from_Makefile_used_in_builtin_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("devel/binutils",
+		"BINUTILS_PREFIX=\t${PREFIX}/${MACHINE_GNU_PLATFORM}")
+	t.CreateFileLines("devel/binutils/builtin.mk",
+		MkCvsID,
+		".include \"../../mk/bsd.prefs.mk\"",
+		"BINUTILS_PREFIX?=\t/usr",
+		"",
+		"BUILTIN_FIND_FILES.BINUTILS_FILES:=\t${BINUTILS_PREFIX}/include/bfd.h")
+	t.FinishSetUp()
+
+	G.Check(t.File("devel/binutils"))
+
+	// The BINUTILS_PREFIX from the Makefile is not used since the
+	// builtin.mk file is only parsed inside of buildlink3.mk, and
+	// that doesn't happen for the package itself, but only for those
+	// packages that depend on this package.
+	t.CheckOutputLines(
+		"WARN: ~/devel/binutils/Makefile:20: " +
+			"BINUTILS_PREFIX is defined but not used.")
+}
+
+func (s *Suite) Test_Package_load__buildlink3_mk_includes_other_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain")
+	t.SetUpPackage("multimedia/libav")
+	t.CreateFileDummyBuildlink3("multimedia/libav/buildlink3.mk",
+		".include \"available.mk\"")
+	t.CreateFileLines("multimedia/libav/available.mk",
+		MkCvsID,
+		"",
+		"LIBAV_AVAILABLE=\tno")
+	t.FinishSetUp()
+
+	G.Check(t.File("multimedia/libav"))
+
+	// From looking at the file available.mk alone, this variable looks
+	// unused indeed, but its intention is to be used by other packages.
+	// The explanation has a large paragraph covering exactly this case,
+	// therefore the warning is ok.
+	t.CheckOutputLines(
+		"WARN: ~/multimedia/libav/available.mk:3: "+
+			"LIBAV_AVAILABLE is defined but not used.",
+		"",
+		"\tThis might be a simple typo.",
+		"",
+		"\tIf a package provides a file containing several related variables",
+		"\t(such as module.mk, app.mk, extension.mk), that file may define",
+		"\tvariables that look unused since they are only used by other",
+		"\tpackages. These variables should be documented at the head of the",
+		"\tfile; see mk/subst.mk for an example of such a documentation",
+		"\tcomment.",
+		"")
 }
 
 // Demonstrates that Makefile fragments are handled differently,
@@ -357,7 +415,7 @@ func (s *Suite) Test_Package_load__extra_files(c *check.C) {
 		"@@ -1,1 +1,1 @@",
 		"- old",
 		"+ new")
-	t.CreateFileLines("patches/readme.mk",
+	t.CreateFileLines("patches/readme.mk", // Is ignored
 		"This is not a BSD-style Makefile.")
 	t.Copy("gnu-style.mk", "files/gnu-style.mk")
 	t.Copy("gnu-style.mk", "../../category/other/gnu-style.mk")
@@ -374,10 +432,6 @@ func (s *Suite) Test_Package_load__extra_files(c *check.C) {
 		"ERROR: gnu-style.mk:3: Unknown Makefile line format: \"else\".",
 		"ERROR: gnu-style.mk:5: Unknown Makefile line format: \"endif\".",
 
-		// Since the patches directory should contain only patches,
-		// each other file is treated as a file belonging to pkgsrc,
-		// therefore *.mk is interpreted as a Makefile fragment.
-		"ERROR: patches/readme.mk:1: Unknown Makefile line format: \"This is not a BSD-style Makefile.\".",
 		"ERROR: distinfo: Patch \"patches/patch-Makefile.mk\" is not recorded. Run \""+confMake+" makepatchsum\".",
 
 		// The following diagnostics are duplicated because the files from
@@ -1011,7 +1065,7 @@ func (s *Suite) Test_Package_shouldDiveInto(c *check.C) {
 	t := s.Init(c)
 	t.Chdir(".")
 
-	test := func(including, included string, expected bool) {
+	test := func(including, included Path, expected bool) {
 		actual := (*Package)(nil).shouldDiveInto(including, included)
 		t.CheckEquals(actual, expected)
 	}
@@ -1105,13 +1159,13 @@ func (s *Suite) Test_Package_loadPlistDirs__empty(c *check.C) {
 	pkg := NewPackage(t.File("category/package"))
 	pkg.load()
 
-	var dirs []string
+	var dirs []Path
 	for dir := range pkg.Plist.Dirs {
 		dirs = append(dirs, dir)
 	}
-	sort.Strings(dirs)
+	sort.Slice(dirs, func(i, j int) bool { return dirs[i] < dirs[j] })
 
-	t.CheckDeepEquals(dirs, []string{"bin"})
+	t.CheckDeepEquals(dirs, []Path{"bin"})
 }
 
 func (s *Suite) Test_Package_loadPlistDirs(c *check.C) {
@@ -1128,13 +1182,13 @@ func (s *Suite) Test_Package_loadPlistDirs(c *check.C) {
 	pkg := NewPackage(t.File("category/package"))
 	pkg.load()
 
-	var dirs []string
+	var dirs []Path
 	for dir := range pkg.Plist.Dirs {
 		dirs = append(dirs, dir)
 	}
-	sort.Strings(dirs)
+	sort.Slice(dirs, func(i, j int) bool { return dirs[i] < dirs[j] })
 
-	t.CheckDeepEquals(dirs, []string{"bin", "dir", "dir/subdir"})
+	t.CheckDeepEquals(dirs, []Path{"bin", "dir", "dir/subdir"})
 }
 
 func (s *Suite) Test_Package_check__files_Makefile(c *check.C) {
@@ -2456,6 +2510,8 @@ func (s *Suite) Test_Package_checkPossibleDowngrade__locally_modified_update(c *
 func (s *Suite) Test_Package_checkUpdate(c *check.C) {
 	t := s.Init(c)
 
+	// The package names intentionally differ from the package directories
+	// to ensure that the check uses the package name.
 	t.SetUpPackage("category/pkg1",
 		"PKGNAME=                package1-1.0")
 	t.SetUpPackage("category/pkg2",
@@ -2463,27 +2519,29 @@ func (s *Suite) Test_Package_checkUpdate(c *check.C) {
 	t.SetUpPackage("category/pkg3",
 		"PKGNAME=                package3-5.0")
 	t.CreateFileLines("doc/TODO",
+		CvsID,
 		"Suggested package updates",
+		"=========================",
+		"For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.",
 		"",
-		"",
-		"\t"+"O wrong bullet",
-		"\t"+"o package-without-version",
 		"\t"+"o package1-1.0",
+		"\t"+"o package1-1.0 [with comment]",
+		"\t"+"o package2-2.0",
 		"\t"+"o package2-2.0 [nice new features]",
+		"\t"+"o package3-3.0",
 		"\t"+"o package3-3.0 [security update]")
 	t.Chdir(".")
 
 	t.Main("-Wall,no-space", "category/pkg1", "category/pkg2", "category/pkg3")
 
 	t.CheckOutputLines(
-		"WARN: category/pkg1/../../doc/TODO:3: Invalid line format \"\".",
-		"WARN: category/pkg1/../../doc/TODO:4: Invalid line format \"\\tO wrong bullet\".",
-		"WARN: category/pkg1/../../doc/TODO:5: Invalid package name \"package-without-version\".",
-		"NOTE: category/pkg1/Makefile:4: The update request to 1.0 from doc/TODO has been done.",
-		"WARN: category/pkg2/Makefile:4: This package should be updated to 2.0 ([nice new features]).",
-		"NOTE: category/pkg3/Makefile:4: This package is newer than the update request to 3.0 ([security update]).",
-		"4 warnings and 2 notes found.",
-		"(Run \"pkglint -e -Wall,no-space category/pkg1 category/pkg2 category/pkg3\" to show explanations.)")
+		"NOTE: category/pkg1/Makefile:4: The update request to 1.0 from ../../doc/TODO:6 has been done.",
+		"NOTE: category/pkg1/Makefile:4: The update request to 1.0 (with comment) from ../../doc/TODO:7 has been done.",
+		"WARN: category/pkg2/Makefile:4: This package should be updated to 2.0 (see ../../doc/TODO:8).",
+		"WARN: category/pkg2/Makefile:4: This package should be updated to 2.0 (nice new features; see ../../doc/TODO:9).",
+		"NOTE: category/pkg3/Makefile:4: This package is newer than the update request to 3.0 from ../../doc/TODO:10.",
+		"NOTE: category/pkg3/Makefile:4: This package is newer than the update request to 3.0 (security update) from ../../doc/TODO:11.",
+		"2 warnings and 4 notes found.")
 }
 
 func (s *Suite) Test_Package_checkDirent__errors(c *check.C) {
@@ -3162,8 +3220,12 @@ func (s *Suite) Test_Package_Includes(c *check.C) {
 	t.CheckEquals(pkg.Includes("conditionally.mk"), true)
 	t.CheckEquals(pkg.Includes("other.mk"), false)
 
-	// TODO: Strictly speaking, never.mk should be in conditionalIncludes.
-	//  This is an edge case though. See collectConditionalIncludes and
-	//  Indentation.IsConditional for the current implementation.
-	t.CheckEquals(pkg.conditionalIncludes["never.mk"], (*MkLine)(nil))
+	// The file never.mk is in conditionalIncludes since pkglint only
+	// analyzes on the syntactical level. It doesn't evaluate the
+	// condition from the .if to see whether it is satisfiable.
+	//
+	// See Package.collectConditionalIncludes and Indentation.IsConditional.
+	t.CheckEquals(
+		pkg.conditionalIncludes["never.mk"].Location,
+		NewLocation(t.File("category/package/Makefile"), 22, 22))
 }

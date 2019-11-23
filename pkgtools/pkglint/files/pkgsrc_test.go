@@ -292,7 +292,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__infrastructure(c *check.C) {
 		"\t\tdistfile directly from GitHub [rillig 2018-01-01]",
 		"\tmk/bsd.pkg.mk: Another infrastructure change [rillig 2018-01-02]")
 
-	t.Main(t.File("category/package"))
+	t.Main("category/package")
 
 	// For pkglint's purpose, the infrastructure entries are simply ignored
 	// since they do not belong to a single package.
@@ -543,6 +543,7 @@ func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.NewLines("doc/TODO",
+		CvsID,
 		"",
 		"Suggested package updates",
 		"==============",
@@ -556,8 +557,8 @@ func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates(c *check.C) {
 	todo := G.Pkgsrc.parseSuggestedUpdates(lines)
 
 	t.CheckDeepEquals(todo, []SuggestedUpdate{
-		{lines.Lines[5].Location, "CSP", "0.34", ""},
-		{lines.Lines[6].Location, "freeciv-client", "2.5.0", "(urgent)"}})
+		{lines.Lines[6].Location, "CSP", "0.34", ""},
+		{lines.Lines[7].Location, "freeciv-client", "2.5.0", "(urgent)"}})
 }
 
 func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates__wip(c *check.C) {
@@ -577,7 +578,36 @@ func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates__wip(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: ~/wip/package/Makefile:3: " +
-			"This package should be updated to 1.13 ([cool new features]).")
+			"This package should be updated to 1.13 (cool new features; see ../../wip/TODO:5).")
+}
+
+func (s *Suite) Test_Pkgsrc_parseSuggestedUpdates__parse_errors(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.NewLines("doc/TODO",
+		"", // missing CvsID
+		"Suggested package updates",
+		"==============", // usually this line is a bit longer
+		"",
+		"", // usually there's only a single empty line
+		"\t"+"O wrong bullet",
+		"\t"+"o package-without-version",
+		"\t"+"o CSP-0.34",
+		"\t"+"o freeciv-client-2.5.0 (urgent)", // missing [brackets]
+		"\t"+"o mix-2.5.0 [urgent)",            // bracket + parenthesis
+		"",
+		"\t"+"o ignored-0.0")
+
+	todo := G.Pkgsrc.parseSuggestedUpdates(lines)
+
+	t.CheckDeepEquals(todo, []SuggestedUpdate{
+		{lines.Lines[7].Location, "CSP", "0.34", ""},
+		{lines.Lines[8].Location, "freeciv-client", "2.5.0", "(urgent)"},
+		{lines.Lines[9].Location, "mix", "2.5.0", "[urgent)"}})
+
+	t.CheckOutputLines(
+		"WARN: doc/TODO:6: Invalid line format \"\\tO wrong bullet\".",
+		"WARN: doc/TODO:7: Invalid package name \"package-without-version\".")
 }
 
 func (s *Suite) Test_Pkgsrc_loadTools(c *check.C) {
@@ -1025,12 +1055,12 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 		"PKGSRC_MAKE_ENV?=\t# none",
 		"CPPPATH?=\tcpp",
 		"OSNAME.Linux?=\tLinux")
-	pkg := t.SetUpPackage("category/package",
+	t.SetUpPackage("category/package",
 		"PKGSRC_MAKE_ENV+=\tCPP=${CPPPATH:Q}",
 		"PKGSRC_UNKNOWN_ENV+=\tCPP=${ABCPATH:Q}",
 		"OSNAME.SunOS=\t\t${OSNAME.Other}")
 
-	t.Main("-Wall", pkg)
+	t.Main("-Wall", "category/package")
 
 	if typ := G.Pkgsrc.VariableType(nil, "PKGSRC_MAKE_ENV"); c.Check(typ, check.NotNil) {
 		t.CheckEquals(typ.String(), "ShellWord (list, guessed)")
@@ -1110,7 +1140,7 @@ func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
 	t.SetUpPackage("category/package2",
 		"LICENSE=\tmissing")
 
-	t.Main("-r", "-Cglobal", t.File("."))
+	t.Main("-r", "-Cglobal", ".")
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package2/Makefile:11: License file ~/licenses/missing does not exist.",
@@ -1162,8 +1192,8 @@ func (s *Suite) Test_Change_Target(c *check.C) {
 	moved := Change{loc, Moved, "category/path", "category/other", "author", "2019-01-01"}
 	downgraded := Change{loc, Downgraded, "category/path", "1.0", "author", "2019-01-01"}
 
-	t.CheckEquals(renamed.Target(), "category/other")
-	t.CheckEquals(moved.Target(), "category/other")
+	t.CheckEquals(renamed.Target(), NewPath("category/other"))
+	t.CheckEquals(moved.Target(), NewPath("category/other"))
 	t.ExpectAssert(func() { downgraded.Target() })
 }
 

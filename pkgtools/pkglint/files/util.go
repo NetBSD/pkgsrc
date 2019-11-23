@@ -3,12 +3,9 @@ package pkglint
 import (
 	"fmt"
 	"hash/crc64"
-	"io/ioutil"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/textproc"
-	"os"
 	"path"
-	"path/filepath"
 	"reflect"
 	"regexp"
 	"sort"
@@ -30,6 +27,7 @@ func (ynu YesNoUnknown) String() string {
 }
 
 // Short names for commonly used functions.
+
 func contains(s, substr string) bool {
 	return strings.Contains(s, substr)
 }
@@ -240,12 +238,12 @@ func assertf(cond bool, format string, args ...interface{}) {
 	}
 }
 
-func isEmptyDir(filename string) bool {
-	if hasSuffix(filename, "/CVS") {
+func isEmptyDir(filename Path) bool {
+	if filename.HasSuffixText("/CVS") {
 		return true
 	}
 
-	dirents, err := ioutil.ReadDir(filename)
+	dirents, err := filename.ReadDir()
 	if err != nil {
 		return true // XXX: Why not false?
 	}
@@ -255,7 +253,7 @@ func isEmptyDir(filename string) bool {
 		if isIgnoredFilename(name) {
 			continue
 		}
-		if dirent.IsDir() && isEmptyDir(joinPath(filename, name)) {
+		if dirent.IsDir() && isEmptyDir(filename.JoinNoClean(NewPath(name))) {
 			continue
 		}
 		return false
@@ -263,17 +261,17 @@ func isEmptyDir(filename string) bool {
 	return true
 }
 
-func getSubdirs(filename string) []string {
-	dirents, err := ioutil.ReadDir(filename)
+func getSubdirs(filename Path) []Path {
+	dirents, err := filename.ReadDir()
 	if err != nil {
 		NewLineWhole(filename).Fatalf("Cannot be read: %s", err)
 	}
 
-	var subdirs []string
+	var subdirs []Path
 	for _, dirent := range dirents {
 		name := dirent.Name()
-		if dirent.IsDir() && !isIgnoredFilename(name) && !isEmptyDir(joinPath(filename, name)) {
-			subdirs = append(subdirs, name)
+		if dirent.IsDir() && !isIgnoredFilename(name) && !isEmptyDir(filename.JoinNoClean(NewPath(name))) {
+			subdirs = append(subdirs, NewPath(name))
 		}
 	}
 	return subdirs
@@ -287,24 +285,24 @@ func isIgnoredFilename(filename string) bool {
 	return hasPrefix(filename, ".#")
 }
 
-func dirglob(dirname string) []string {
-	infos, err := ioutil.ReadDir(dirname)
+func dirglob(dirname Path) []Path {
+	infos, err := dirname.ReadDir()
 	if err != nil {
 		return nil
 	}
-	var filenames []string
+	var filenames []Path
 	for _, info := range infos {
 		if !(isIgnoredFilename(info.Name())) {
-			filenames = append(filenames, cleanpath(joinPath(dirname, info.Name())))
+			filenames = append(filenames, cleanpath(dirname.JoinNoClean(NewPath(info.Name()))))
 		}
 	}
 	return filenames
 }
 
 // Checks whether a file is already committed to the CVS repository.
-func isCommitted(filename string) bool {
+func isCommitted(filename Path) bool {
 	entries := G.loadCvsEntries(filename)
-	_, found := entries[path.Base(filename)]
+	_, found := entries[filename.Base()]
 	return found
 }
 
@@ -313,14 +311,14 @@ func isCommitted(filename string) bool {
 //
 // There is no corresponding test for Git (as used by pkgsrc-wip) since that
 // is more difficult to implement than simply reading a CVS/Entries file.
-func isLocallyModified(filename string) bool {
+func isLocallyModified(filename Path) bool {
 	entries := G.loadCvsEntries(filename)
-	entry, found := entries[path.Base(filename)]
+	entry, found := entries[filename.Base()]
 	if !found {
 		return false
 	}
 
-	st, err := os.Stat(filename)
+	st, err := filename.Stat()
 	if err != nil {
 		return true
 	}
@@ -438,16 +436,6 @@ func varnameParam(varname string) string {
 	return ""
 }
 
-func fileExists(filename string) bool {
-	st, err := os.Stat(filename)
-	return err == nil && st.Mode().IsRegular()
-}
-
-func dirExists(filename string) bool {
-	st, err := os.Stat(filename)
-	return err == nil && st.Mode().IsDir()
-}
-
 func toInt(s string, def int) int {
 	if n, err := strconv.Atoi(s); err == nil {
 		return n
@@ -469,11 +457,15 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 	})
 }
 
-func joinPath(a, b string, others ...string) string {
+func joinPath(a, b Path, others ...Path) Path {
 	if len(others) == 0 {
 		return a + "/" + b
 	}
-	return a + "/" + b + "/" + strings.Join(others, "/")
+	parts := []string{a.String(), b.String()}
+	for _, part := range others {
+		parts = append(parts, part.String())
+	}
+	return NewPath(strings.Join(parts, "/"))
 }
 
 // relpath returns the relative path from the directory "from"
@@ -493,7 +485,7 @@ func joinPath(a, b string, others ...string) string {
 //
 // TODO: Invent data types for all kinds of relative paths that occur in pkgsrc
 //  and pkglint. Make sure that these paths cannot be accidentally mixed.
-func relpath(from, to string) (result string) {
+func relpath(from, to Path) (result Path) {
 
 	if trace.Tracing {
 		defer trace.Call(from, to, trace.Result(&result))()
@@ -507,34 +499,31 @@ func relpath(from, to string) (result string) {
 	}
 
 	// Take a shortcut for the common case from "dir" to "dir/subdir/...".
-	if hasPrefix(cto, cfrom) && hasPrefix(cto[len(cfrom):], "/") {
+	if cto.HasPrefixPath(cfrom) {
 		return cleanpath(cto[len(cfrom)+1:])
 	}
 
 	// Take a shortcut for the common case from "category/package" to ".".
 	// This is the most common variant in a complete pkgsrc scan.
 	if cto == "." {
-		fromParts := strings.FieldsFunc(cfrom, func(r rune) bool { return r == '/' })
+		fromParts := cfrom.Parts()
 		if len(fromParts) == 2 && !hasPrefix(fromParts[0], ".") && !hasPrefix(fromParts[1], ".") {
 			return "../.."
 		}
 	}
 
-	if cfrom == "." && !filepath.IsAbs(cto) {
-		return path.Clean(cto)
+	if cfrom == "." && !cto.IsAbs() {
+		return cto.Clean()
 	}
 
 	absFrom := abspath(cfrom)
 	absTopdir := abspath(G.Pkgsrc.topdir)
 	absTo := abspath(cto)
 
-	toTop, err := filepath.Rel(absFrom, absTopdir)
-	assertNil(err, "relpath from %q to topdir %q", absFrom, absTopdir)
+	toTop := absFrom.Rel(absTopdir)
+	fromTop := absTopdir.Rel(absTo)
 
-	fromTop, err := filepath.Rel(absTopdir, absTo)
-	assertNil(err, "relpath from topdir %q to %q", absTopdir, absTo)
-
-	result = cleanpath(joinPath(filepath.ToSlash(toTop), filepath.ToSlash(fromTop)))
+	result = cleanpath(toTop.JoinNoClean(fromTop))
 
 	if trace.Tracing {
 		trace.Stepf("relpath from %q to %q = %q", cfrom, cto, result)
@@ -542,20 +531,20 @@ func relpath(from, to string) (result string) {
 	return
 }
 
-func abspath(filename string) string {
+func abspath(filename Path) Path {
 	abs := filename
-	if !filepath.IsAbs(filename) {
+	if !filename.IsAbs() {
 		abs = joinPath(G.cwd, abs)
 	}
-	return path.Clean(abs)
+	return abs.Clean()
 }
 
 // Differs from path.Clean in that only "../../" is replaced, not "../".
 // Also, the initial directory is always kept.
 // This is to provide the package path as context in recursive invocations of pkglint.
-func cleanpath(filename string) string {
+func cleanpath(filename Path) Path {
 	parts := make([]string, 0, 5)
-	lex := textproc.NewLexer(filename)
+	lex := textproc.NewLexer(filename.String())
 	for lex.SkipString("./") {
 	}
 
@@ -585,7 +574,7 @@ func cleanpath(filename string) string {
 	if len(parts) == 0 {
 		return "."
 	}
-	return strings.Join(parts, "/")
+	return NewPath(strings.Join(parts, "/"))
 }
 
 func pathContains(haystack, needle string) bool {
@@ -602,10 +591,10 @@ func pathContains(haystack, needle string) bool {
 	return false
 }
 
-func pathContainsDir(haystack, needle string) bool {
+func pathContainsDir(haystack, needle Path) bool {
 	n0 := needle[0]
 	for i := 0; i < 1+len(haystack)-len(needle); i++ {
-		if haystack[i] == n0 && hasPrefix(haystack[i:], needle) {
+		if haystack[i] == n0 && hasPrefix(haystack.String()[i:], needle.String()) {
 			if i == 0 || haystack[i-1] == '/' {
 				if i+len(needle) < len(haystack) && haystack[i+len(needle)] == '/' {
 					return true
@@ -1010,8 +999,8 @@ func naturalLess(str1, str2 string) bool {
 
 // IsPrefs returns whether the given file, when included, loads the user
 // preferences.
-func IsPrefs(filename string) bool {
-	switch path.Base(filename) {
+func IsPrefs(filename Path) bool {
+	switch filename.Base() {
 	case // See https://github.com/golang/go/issues/28057
 		"bsd.prefs.mk",         // in mk/
 		"bsd.fast.prefs.mk",    // in mk/
@@ -1047,7 +1036,7 @@ func NewFileCache(size int) *FileCache {
 		0}
 }
 
-func (c *FileCache) Put(filename string, options LoadOptions, lines *Lines) {
+func (c *FileCache) Put(filename Path, options LoadOptions, lines *Lines) {
 	key := c.key(filename)
 
 	entry := c.mapping[key]
@@ -1101,7 +1090,7 @@ func (c *FileCache) removeOldEntries() {
 	}
 }
 
-func (c *FileCache) Get(filename string, options LoadOptions) *Lines {
+func (c *FileCache) Get(filename Path, options LoadOptions) *Lines {
 	key := c.key(filename)
 	entry, found := c.mapping[key]
 	if found && entry.options == options {
@@ -1118,7 +1107,7 @@ func (c *FileCache) Get(filename string, options LoadOptions) *Lines {
 	return nil
 }
 
-func (c *FileCache) Evict(filename string) {
+func (c *FileCache) Evict(filename Path) {
 	key := c.key(filename)
 	entry, found := c.mapping[key]
 	if !found {
@@ -1136,9 +1125,7 @@ func (c *FileCache) Evict(filename string) {
 	}
 }
 
-func (c *FileCache) key(filename string) string {
-	return path.Clean(filename)
-}
+func (c *FileCache) key(filename Path) string { return filename.Clean().String() }
 
 func bmakeHelp(topic string) string { return bmake("help topic=" + topic) }
 
@@ -1398,27 +1385,27 @@ func pathMatches(pattern, s string) bool {
 	return err == nil && matched
 }
 
-type StringQueue struct {
-	entries []string
+type PathQueue struct {
+	entries []Path
 }
 
-func (q *StringQueue) PushFront(entries ...string) {
-	q.entries = append(append([]string(nil), entries...), q.entries...)
+func (q *PathQueue) PushFront(entries ...Path) {
+	q.entries = append(append([]Path(nil), entries...), q.entries...)
 }
 
-func (q *StringQueue) Push(entries ...string) {
+func (q *PathQueue) Push(entries ...Path) {
 	q.entries = append(q.entries, entries...)
 }
 
-func (q *StringQueue) IsEmpty() bool {
+func (q *PathQueue) IsEmpty() bool {
 	return len(q.entries) == 0
 }
 
-func (q *StringQueue) Front() string {
+func (q *PathQueue) Front() Path {
 	return q.entries[0]
 }
 
-func (q *StringQueue) Pop() string {
+func (q *PathQueue) Pop() Path {
 	front := q.entries[0]
 	q.entries = q.entries[1:]
 	return front

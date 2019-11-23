@@ -225,7 +225,7 @@ func (cv *VartypeCheck) BuildlinkDepmethod() {
 }
 
 func (cv *VartypeCheck) Category() {
-	if cv.Value != "wip" && fileExists(G.Pkgsrc.File(cv.Value+"/Makefile")) {
+	if cv.Value != "wip" && G.Pkgsrc.File(NewPath(cv.Value).JoinNoClean("Makefile")).IsFile() {
 		return
 	}
 
@@ -452,7 +452,7 @@ func (cv *VartypeCheck) DependencyWithPath() {
 		}
 
 		if !containsVarRef(relpath) {
-			MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(relpath)
+			MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(NewPath(relpath))
 		}
 
 		switch pkg {
@@ -1073,22 +1073,23 @@ func (cv *VartypeCheck) PkgOptionsVar() {
 func (cv *VartypeCheck) Pkgpath() {
 	cv.Pathname()
 
-	pkgpath := cv.Value
-	if pkgpath != cv.ValueNoVar || cv.Op == opUseMatch {
+	value := cv.Value
+	if value != cv.ValueNoVar || cv.Op == opUseMatch {
 		return
 	}
 
-	if !G.Wip && hasPrefix(pkgpath, "wip/") {
+	pkgpath := NewPath(value)
+	if !G.Wip && pkgpath.HasPrefixPath("wip") {
 		cv.MkLine.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
 	}
 
-	if !fileExists(G.Pkgsrc.File(joinPath(pkgpath, "Makefile"))) {
+	if !G.Pkgsrc.File(pkgpath.JoinNoClean("Makefile")).IsFile() {
 		cv.MkLine.Errorf("There is no package in %q.",
-			relpath(path.Dir(cv.MkLine.Filename), G.Pkgsrc.File(pkgpath)))
+			cv.MkLine.PathToFile(G.Pkgsrc.File(pkgpath)))
 		return
 	}
 
-	if !matches(pkgpath, `^([^./][^/]*/[^./][^/]*)$`) {
+	if !matches(value, `^([^./][^/]*/[^./][^/]*)$`) {
 		cv.MkLine.Errorf("%q is not a valid path to a package.", pkgpath)
 		cv.MkLine.Explain(
 			"A path to a package has the form \"category/pkgbase\".",
@@ -1164,7 +1165,7 @@ func (cv *VartypeCheck) RPkgVer() {
 
 // RelativePkgDir refers to a package directory, e.g. ../../category/pkgbase.
 func (cv *VartypeCheck) RelativePkgDir() {
-	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(cv.Value)
+	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(NewPath(cv.Value))
 }
 
 // RelativePkgPath refers to a file or directory, e.g. ../../category/pkgbase,
@@ -1172,7 +1173,7 @@ func (cv *VartypeCheck) RelativePkgDir() {
 //
 // See RelativePkgDir, which requires a directory, not a file.
 func (cv *VartypeCheck) RelativePkgPath() {
-	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePath(cv.Value, true)
+	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePath(NewPath(cv.Value), true)
 }
 
 func (cv *VartypeCheck) Restricted() {

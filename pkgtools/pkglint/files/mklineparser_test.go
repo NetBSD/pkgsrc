@@ -543,7 +543,7 @@ func (s *Suite) Test_MkLineParser_parseInclude(c *check.C) {
 	t.CheckEquals(mkline.IsInclude(), true)
 	t.CheckEquals(mkline.Indent(), "    ")
 	t.CheckEquals(mkline.MustExist(), true)
-	t.CheckEquals(mkline.IncludedFile(), "../../mk/bsd.prefs.mk")
+	t.CheckEquals(mkline.IncludedFile(), NewPath("../../mk/bsd.prefs.mk"))
 
 	t.CheckEquals(mkline.IsSysinclude(), false)
 }
@@ -557,7 +557,7 @@ func (s *Suite) Test_MkLineParser_parseSysinclude(c *check.C) {
 	t.CheckEquals(mkline.IsSysinclude(), true)
 	t.CheckEquals(mkline.Indent(), "    ")
 	t.CheckEquals(mkline.MustExist(), true)
-	t.CheckEquals(mkline.IncludedFile(), "subdir.mk")
+	t.CheckEquals(mkline.IncludedFile(), NewPath("subdir.mk"))
 
 	t.CheckEquals(mkline.IsInclude(), false)
 }
