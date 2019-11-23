@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5074 2019/11/22 18:09:07 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.5075 2019/11/23 07:04:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8187,3 +8187,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fluidsynth to 2.0.9 [nia 2019-11-22]
 	Removed graphics/gimp-webp [nia 2019-11-22]
 	Updated x11/mlterm to 3.8.9 [tsutsui 2019-11-22]
+	Updated devel/cflow to 1.6 [mef 2019-11-23]
+	Updated devel/cflow-mode to 1.6 [mef 2019-11-23]
+	Updated devel/cfitsio to 3.450 [mef 2019-11-23]
