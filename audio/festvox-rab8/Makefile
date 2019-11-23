@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.27 2012/09/11 23:59:35 asau Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/23 22:11:27 nia Exp $
 
 DISTNAME=	festvox_rablpc8k
-PKGNAME=	festvox-rab8-1.4.0
-PKGREVISION=	1
+PKGNAME=	festvox-rab8-1.95
 CATEGORIES=	audio
-MASTER_SITES=	http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
+MASTER_SITES=	http://festvox.org/packed/festival/${PKGVERSION_NOREV}/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
-COMMENT=	6khz British English male voice for the festival
+HOMEPAGE=	http://festvox.org/festival/index.html
+COMMENT=	8khz British English male voice for festival
 
 DEPENDS+=	festival>=1.4.0:../../audio/festival
 DEPENDS+=	festlex-poslex>=1.4.0:../../audio/festlex-poslex
