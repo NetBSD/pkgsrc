@@ -1,0 +1,14 @@
+$NetBSD: patch-vtemu_Makefile.in,v 1.1 2019/11/23 10:31:37 ryoon Exp $
+
+* Install lib/mlterm/libzmodem.* properly.
+
+--- vtemu/Makefile.in.orig	2019-11-22 16:32:07.000000000 +0000
++++ vtemu/Makefile.in
+@@ -63,6 +63,7 @@ install : $(LIBDIR)
+ 	if test "`echo @LMLTERM_CORE@|grep .la`" != "" ; then \
+ 		$(LIBTOOL_INSTALL) @LMLTERM_CORE@ $(LIBDIR) ; \
+ 	fi
++	mkdir -p $(LIBDIR)/mlterm
+ 	$(LIBTOOL_INSTALL) libzmodem.la $(LIBDIR)/mlterm
+ 
+ uninstall :
