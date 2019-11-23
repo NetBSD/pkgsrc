@@ -15,7 +15,6 @@ package pkglint
 
 import (
 	"netbsd.org/pkglint/regex"
-	"path"
 	"strconv"
 )
 
@@ -38,16 +37,16 @@ type RawLine struct {
 func (rline *RawLine) String() string { return sprintf("%d:%s", rline.Lineno, rline.textnl) }
 
 type Location struct {
-	Filename  string // uses / as directory separator on all platforms
-	firstLine int32  // zero means the whole file, -1 means EOF
-	lastLine  int32  // usually the same as firstLine, may differ in Makefiles
+	Filename  Path
+	firstLine int32 // zero means the whole file, -1 means EOF
+	lastLine  int32 // usually the same as firstLine, may differ in Makefiles
 }
 
 func (loc *Location) String() string {
-	return loc.Filename + ":" + loc.Linenos()
+	return loc.Filename.String() + ":" + loc.Linenos()
 }
 
-func NewLocation(filename string, firstLine, lastLine int) Location {
+func NewLocation(filename Path, firstLine, lastLine int) Location {
 	return Location{filename, int32(firstLine), int32(lastLine)}
 }
 
@@ -83,23 +82,23 @@ type Line struct {
 	// XXX: Filename and Basename could be replaced with a pointer to a Lines object.
 }
 
-func NewLine(filename string, lineno int, text string, rawLine *RawLine) *Line {
+func NewLine(filename Path, lineno int, text string, rawLine *RawLine) *Line {
 	assert(rawLine != nil) // Use NewLineMulti for creating a Line with no RawLine attached to it.
 	return NewLineMulti(filename, lineno, lineno, text, []*RawLine{rawLine})
 }
 
 // NewLineMulti is for logical Makefile lines that end with backslash.
-func NewLineMulti(filename string, firstLine, lastLine int, text string, rawLines []*RawLine) *Line {
-	return &Line{NewLocation(filename, firstLine, lastLine), path.Base(filename), text, rawLines, nil, Once{}}
+func NewLineMulti(filename Path, firstLine, lastLine int, text string, rawLines []*RawLine) *Line {
+	return &Line{NewLocation(filename, firstLine, lastLine), filename.Base(), text, rawLines, nil, Once{}}
 }
 
 // NewLineEOF creates a dummy line for logging, with the "line number" EOF.
-func NewLineEOF(filename string) *Line {
+func NewLineEOF(filename Path) *Line {
 	return NewLineMulti(filename, -1, 0, "", nil)
 }
 
 // NewLineWhole creates a dummy line for logging messages that affect a file as a whole.
-func NewLineWhole(filename string) *Line {
+func NewLineWhole(filename Path) *Line {
 	return NewLineMulti(filename, 0, 0, "", nil)
 }
 
@@ -111,7 +110,7 @@ func (line *Line) RefTo(other *Line) string {
 
 func (line *Line) RefToLocation(other Location) string {
 	if line.Filename != other.Filename {
-		return line.PathToFile(other.Filename) + ":" + other.Linenos()
+		return line.PathToFile(other.Filename).String() + ":" + other.Linenos()
 	}
 	return "line " + other.Linenos()
 }
@@ -119,8 +118,8 @@ func (line *Line) RefToLocation(other Location) string {
 // PathToFile returns the relative path from this line to the given file path.
 // This is typically used for arguments in diagnostics, which should always be
 // relative to the line with which the diagnostic is associated.
-func (line *Line) PathToFile(filePath string) string {
-	return relpath(path.Dir(line.Filename), filePath)
+func (line *Line) PathToFile(filePath Path) Path {
+	return relpath(line.Filename.Dir(), filePath)
 }
 
 func (line *Line) IsMultiline() bool {
