@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:12:30 agc Exp $
+$NetBSD: distinfo,v 1.5 2019/11/23 12:22:35 nia Exp $
 
-SHA1 (festvox_kallpc16k.tar.gz) = ad18502ae0fd10bdc3db189fa9afa8a167eceebb
-RMD160 (festvox_kallpc16k.tar.gz) = f8be814267359ac9d4fa5d0bcade18e15b64beb2
-SHA512 (festvox_kallpc16k.tar.gz) = ad8d45e04cb704f31a01de8f4d1b3adb4530563728e8b331b0a730c762bd0c0590e5d49f893404a0199f51fb6afce4b786107ae1fdbc4d1b61c3139ce805267c
-Size (festvox_kallpc16k.tar.gz) = 4104056 bytes
+SHA1 (festvox-kal16-2.5/festvox_kallpc16k.tar.gz) = c09679b8a599043176a2a57d34d1ad482a498d6c
+RMD160 (festvox-kal16-2.5/festvox_kallpc16k.tar.gz) = cbf15982b6cb87fb89b699cc9042a19467e7b386
+SHA512 (festvox-kal16-2.5/festvox_kallpc16k.tar.gz) = 5d8a57840220c00e281842fd38f16887b7403dc487782947eae4a0b2d36f951aa957182bb36a1b4824e40288a5ccc2e635f38f5a09277a0da8099aa6bf24d892
+Size (festvox-kal16-2.5/festvox_kallpc16k.tar.gz) = 4103663 bytes
