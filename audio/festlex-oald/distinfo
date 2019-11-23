@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:12:29 agc Exp $
+$NetBSD: distinfo,v 1.5 2019/11/23 12:09:43 nia Exp $
 
-SHA1 (festlex_OALD.tar.gz) = 53c9470d62da9754db85b11c2c82a3dd6b5ddc71
-RMD160 (festlex_OALD.tar.gz) = d3fc4c549626dcc2a0d5d37fee7d8ebb3bf89c20
-SHA512 (festlex_OALD.tar.gz) = 0221c3d78140c6cb4e74f98edbdf0dbe5987a8efa3e7205844a5c01c31a98aaced3b20e4a42b09aaa4a3c93c9225d9f24d96df3fb5d963092e955d4cb4674aac
-Size (festlex_OALD.tar.gz) = 1472516 bytes
+SHA1 (festlex-oald-2.5/festlex_OALD.tar.gz) = fc517917dba3c208f55146873624cf88c011e22f
+RMD160 (festlex-oald-2.5/festlex_OALD.tar.gz) = 67c05c10312b9c4736fc4601e72b531e5897e91e
+SHA512 (festlex-oald-2.5/festlex_OALD.tar.gz) = dc7ec5db71ef331f4c4460a741392d548e037369d47080dc734e912aa312bd5c11e66cdcb94bdc4746a3f6c16c0e0294ce159f07b46e350b85c0afab07cc2064
+Size (festlex-oald-2.5/festlex_OALD.tar.gz) = 1474233 bytes
