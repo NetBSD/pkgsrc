@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.151 2019/09/18 23:40:17 nia Exp $
+# $NetBSD: Makefile,v 1.152 2019/11/23 23:47:14 nia Exp $
 
-DISTNAME=	blender-2.80
+DISTNAME=	blender-2.81
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.blender.org/
@@ -32,6 +33,8 @@ CMAKE_ARGS+=	-DWITH_SDL=ON
 CMAKE_ARGS+=	-DWITH_SDL_DYNLOAD=OFF
 CMAKE_ARGS+=	-DWITH_CODEC_FFMPEG=ON
 CMAKE_ARGS+=	-DWITH_CODEC_SNDFILE=ON
+CMAKE_ARGS+=	-DWITH_SYSTEM_GLEW=ON
+CMAKE_ARGS+=	-DWITH_TBB=OFF
 
 CMAKE_ARGS+=	-DWITH_PYTHON_INSTALL_NUMPY=OFF
 CMAKE_ARGS+=	-DWITH_PYTHON_INSTALL_REQUESTS=OFF
@@ -63,6 +66,7 @@ pre-configure:
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
@@ -75,5 +79,6 @@ pre-configure:
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
