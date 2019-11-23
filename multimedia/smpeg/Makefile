@@ -1,42 +1,33 @@
-# $NetBSD: Makefile,v 1.34 2019/11/23 22:20:29 nia Exp $
-#
+# $NetBSD: Makefile,v 1.35 2019/11/23 23:03:01 nia Exp $
 
-DISTNAME=	smpeg-0.4.4
-PKGREVISION=	17
+DISTNAME=	smpeg-0.4.5
 CATEGORIES=	devel multimedia
 MASTER_SITES=	#
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://icculus.org/smpeg/
 COMMENT=	SDL MPEG Player Library
 LICENSE=	gnu-lgpl-v2
 
-USE_TOOLS+=	gmake
-GNU_CONFIGURE=	yes
+USE_TOOLS+=	aclocal automake autoconf gmake
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-Dunix=1
 
-# smpeg sources (glmovie.c & glmovie-tile.c) assume <malloc.h> exists.
-# Create a fake one for platforms that don't have it.
-#
-post-wrapper:
-	if ${TEST} ! -f /usr/include/malloc.h; then			\
-		${ECHO} "#include <stdlib.h>"				\
-			> ${BUILDLINK_DIR}/include/malloc.h;		\
-	fi
+LDFLAGS.SunOS+=	-shared -mimpure-text
 
-.include "../../mk/bsd.prefs.mk"
+CONFIGURE_ARGS+=	--disable-gtk-player
+CONFIGURE_ARGS+=	--disable-sdltest
 
-.if ${MACHINE_ARCH} == "i386"
-.  if ${OPSYS} != "Darwin" && \
-     empty(MACHINE_PLATFORM:MNetBSD-[89].*-i386)
-CONFIGURE_ARGS+=	--enable-mmx
-.  endif
-.endif
+pre-configure:
+	cd ${WRKSRC} && ${SH} autogen.sh
 
-MAKE_ENV.SunOS+=	SunOS_LDFLAGS="-shared -mimpure-text"
+post-install:
+	# gtk1 player is not installed
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gtv.1
 
 .include "options.mk"
 .include "../../devel/SDL/buildlink3.mk"

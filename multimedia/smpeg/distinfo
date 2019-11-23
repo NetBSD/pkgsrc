@@ -1,12 +1,7 @@
-$NetBSD: distinfo,v 1.9 2017/10/19 15:59:22 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2019/11/23 23:03:01 nia Exp $
 
-SHA1 (smpeg-0.4.4.tar.gz) = 6d7f4449472e6270ab435b2224f3fad951c35259
-RMD160 (smpeg-0.4.4.tar.gz) = d55249ad53417fa0df3d925aed0e83d2204e28b7
-SHA512 (smpeg-0.4.4.tar.gz) = d566bb68b0caacecdf61cd766b26e003fd4e153c243d873f7aae33ab69919202bd121bb9c10f494bd9530267ddec2a9e018eb46ee8bb9d502a29cd2de2f1bbfb
-Size (smpeg-0.4.4.tar.gz) = 315054 bytes
-SHA1 (patch-aa) = 0a691663e1966dbd5d37225b11b6f5f6d9ad0bf0
-SHA1 (patch-ab) = 8b4ef487dc7176dd0ef21e9a6d90e72e26d68c73
-SHA1 (patch-ac) = 6f0cdeb9864db4db6730c8137287a073172a09ab
-SHA1 (patch-ad) = 021ffc5024723173c8a6cda04ae6f70add974faa
-SHA1 (patch-ae) = 0c7646ec3ce331b6991d59d96efa1ba07fbb91e5
-SHA1 (patch-audio_huffmantable.cpp) = 4bde79539a6fe488bc6be7092f23fac18efa362e
+SHA1 (smpeg-0.4.5.tar.xz) = 3fb37e2f8d756231c1b2c8bbf248aa417a35ceae
+RMD160 (smpeg-0.4.5.tar.xz) = d4b3802f5cc15de155994f47f3b8e794590d9789
+SHA512 (smpeg-0.4.5.tar.xz) = ab0d589d7e4b3fcd444f8b740471ea1eb8105b55c3e3c913cd05afad49db33ba5a2dd68aca30b16338342843bf9804ee82950cd035db94a70b2f1539886863c8
+Size (smpeg-0.4.5.tar.xz) = 289524 bytes
+SHA1 (patch-audio_hufftable.cpp) = 0989457761d5a12206d1f5b3d949e0e5e30ff68b
