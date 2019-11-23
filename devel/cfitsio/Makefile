@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2017/08/01 14:58:54 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2019/11/23 06:58:14 mef Exp $
 
-DISTNAME=	cfitsio3390
+DISTNAME=	cfitsio3450
 PKGNAME=	${DISTNAME:S/o3/o-3./}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/
 
@@ -25,7 +24,7 @@ BUILD_TARGET=	all testprog
 
 INSTALLATION_DIRS=	include lib lib/pkgconfig share/doc/cfitsio
 
-CFITSIO_DOCS=	cfitsio.pdf cfitsio.doc cfortran.doc fitsio.pdf fitsio.doc \
+CFITSIO_DOCS=	cfitsio.pdf cfortran.doc fitsio.pdf fitsio.doc \
 		fpackguide.pdf quick.pdf
 
 post-build:
@@ -40,4 +39,5 @@ post-install:
 	cd ${WRKSRC}/docs; \
 	${INSTALL_DATA} ${CFITSIO_DOCS} ${DESTDIR}${PREFIX}/share/doc/cfitsio
 
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
