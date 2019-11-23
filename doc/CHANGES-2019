@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5080 2019/11/23 12:23:05 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5081 2019/11/23 12:23:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8196,3 +8196,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed audio/festival-doc [nia 2019-11-23]
 	Updated audio/festlex-cmu to 2.5 [nia 2019-11-23]
 	Updated audio/festlex-oald to 2.5 [nia 2019-11-23]
+	Updated audio/festlex-poslex to 2.5 [nia 2019-11-23]
