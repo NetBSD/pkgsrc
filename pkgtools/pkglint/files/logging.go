@@ -5,7 +5,6 @@ import (
 	"io"
 	"netbsd.org/pkglint/histogram"
 	"netbsd.org/pkglint/textproc"
-	"path"
 	"strings"
 )
 
@@ -126,12 +125,12 @@ func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interf
 	l.Logf(level, filename, linenos, format, msg)
 }
 
-func (l *Logger) FirstTime(filename, linenos, msg string) bool {
+func (l *Logger) FirstTime(filename Path, linenos, msg string) bool {
 	if l.Opts.LogVerbose {
 		return true
 	}
 
-	if !l.logged.FirstTimeSlice(path.Clean(filename), linenos, msg) {
+	if !l.logged.FirstTimeSlice(filename.Clean().String(), linenos, msg) {
 		l.suppressDiag = true
 		l.suppressExpl = true
 		return false
@@ -230,7 +229,7 @@ func (l *Logger) showSource(line *Line) {
 // IsAutofix returns whether one of the --show-autofix or --autofix options is active.
 func (l *Logger) IsAutofix() bool { return l.Opts.Autofix || l.Opts.ShowAutofix }
 
-func (l *Logger) Logf(level *LogLevel, filename, lineno, format, msg string) {
+func (l *Logger) Logf(level *LogLevel, filename Path, lineno, format, msg string) {
 	if l.suppressDiag {
 		l.suppressDiag = false
 		return
@@ -290,7 +289,7 @@ func (l *Logger) Logf(level *LogLevel, filename, lineno, format, msg string) {
 // Location.Filename. It may be followed by the usual ":123" for line numbers.
 //
 // For diagnostics, use Logf instead.
-func (l *Logger) Errorf(location string, format string, args ...interface{}) {
+func (l *Logger) Errorf(location Path, format string, args ...interface{}) {
 	msg := sprintf(format, args...)
 	var diag string
 	if l.Opts.GccOutput {

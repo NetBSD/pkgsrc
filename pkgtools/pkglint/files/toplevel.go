@@ -1,14 +1,14 @@
 package pkglint
 
 type Toplevel struct {
-	dir            string
-	previousSubdir string
-	subdirs        []string
+	dir            Path
+	previousSubdir Path
+	subdirs        []Path
 }
 
-func CheckdirToplevel(dir string) {
+func CheckdirToplevel(dir Path) {
 	if trace.Tracing {
-		defer trace.Call1(dir)()
+		defer trace.Call(dir)()
 	}
 
 	ctx := Toplevel{dir, "", nil}
@@ -36,7 +36,7 @@ func CheckdirToplevel(dir string) {
 }
 
 func (ctx *Toplevel) checkSubdir(mkline *MkLine) {
-	subdir := mkline.Value()
+	subdir := NewPath(mkline.Value())
 
 	if mkline.IsCommentedVarassign() {
 		if !mkline.HasComment() || mkline.Comment() == "" {
@@ -44,7 +44,7 @@ func (ctx *Toplevel) checkSubdir(mkline *MkLine) {
 		}
 	}
 
-	if containsVarRef(subdir) || !fileExists(joinPath(ctx.dir, subdir, "Makefile")) {
+	if containsVarRef(subdir.String()) || !ctx.dir.JoinNoClean(subdir).JoinNoClean("Makefile").IsFile() {
 		return
 	}
 
