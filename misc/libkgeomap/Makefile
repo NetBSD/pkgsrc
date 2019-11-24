@@ -1,37 +1,19 @@
-# $NetBSD: Makefile,v 1.42 2019/08/22 12:23:34 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.43 2019/11/24 03:47:22 markd Exp $
 
-PKGNAME=	libkgeomap-4.13.0
-PKGREVISION=	12
-DISTNAME=	digikam-4.13.0
+DISTNAME=	libkgeomap-${KAPPSVER}
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}
-EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.digikam.org/
+HOMEPAGE=	https://kde.org/applications/graphics/
 COMMENT=	World-Map Library interface for KDE
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v3 AND gnu-fdl-v1.2
 
-BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+.include "../../meta-pkgs/kde/applications.mk"
 
-USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		msgfmt pkg-config
+USE_TOOLS+=	msgmerge
 
-PKGCONFIG_OVERRIDE+=	libkgeomap.pc.cmake
-
-WRKSRC=			${WRKDIR}/${DISTNAME}/extra/libkgeomap
-
-#post-patch:
-#	${ECHO} "FIND_PACKAGE(Msgfmt REQUIRED)" >> ${WRKSRC}/CMakeLists.txt
-#	${ECHO} "FIND_PACKAGE(Gettext REQUIRED)" >> ${WRKSRC}/CMakeLists.txt
-#	${ECHO} "ADD_SUBDIRECTORY(po)" >> ${WRKSRC}/CMakeLists.txt
-#	ln -s ../../po ${WRKSRC}/po
-#	rm ${WRKSRC}/po/*/digikam.po ${WRKSRC}/po/*/kipiplug* ${WRKSRC}/po/*/libkipi*
-
-.include "../../meta-pkgs/kde4/kde4.mk"
+.include "../../devel/kio/buildlink3.mk"
 .include "../../graphics/libkexiv2/buildlink3.mk"
 .include "../../misc/marble/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
