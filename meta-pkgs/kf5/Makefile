@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2019/11/11 09:43:10 markd Exp $
+# $NetBSD: Makefile,v 1.13 2019/11/24 03:15:11 markd Exp $
 
 DISTNAME=	kf5-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -62,6 +63,7 @@ DEPENDS+=	kpeople-${KF5VER}{,nb[0-9]*}:../../devel/kpeople
 DEPENDS+=	kplotting-${KF5VER}{,nb[0-9]*}:../../graphics/kplotting
 DEPENDS+=	kpty-${KF5VER}{,nb[0-9]*}:../../devel/kpty
 DEPENDS+=	krunner-${KF5VER}{,nb[0-9]*}:../../devel/krunner
+DEPENDS+=	kross-${KF5VER}{,nb[0-9]*}:../../devel/kross
 DEPENDS+=	kservice-${KF5VER}{,nb[0-9]*}:../../devel/kservice
 DEPENDS+=	ktexteditor-${KF5VER}{,nb[0-9]*}:../../devel/ktexteditor
 DEPENDS+=	ktextwidgets-${KF5VER}{,nb[0-9]*}:../../x11/ktextwidgets
