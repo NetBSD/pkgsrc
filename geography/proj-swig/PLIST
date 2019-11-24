@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/12/06 02:15:48 gdt Exp $
-lib/libguile_proj.la
-${PYSITELIB}/_proj.so
-${PYSITELIB}/proj.py
-share/guile/site/proj.scm
