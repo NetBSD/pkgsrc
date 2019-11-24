@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/03 09:14:17 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/24 01:31:38 gdt Exp $
 
 DISTNAME=	qwt-6.1.4
 PKGNAME=	qwt6-qt5-6.1.4
@@ -11,6 +11,7 @@ HOMEPAGE=	https://sourceforge.net/projects/qwt/
 COMMENT=	Qt widget library for technical purposes
 LICENSE=	gnu-lgpl-v2
 
+EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
@@ -22,6 +23,10 @@ PLIST_SUBST+=	VERSION=${PKGVERSION_NOREV}
 
 do-configure:
 	cd ${WRKSRC} && env ${CONFIGURE_ENV} ${QTDIR}/bin/qmake
+
+# Appparently this plugin has a valid expectation that libqwt is
+# already loaded, at least as used in qgis.
+CHECK_SHLIBS_SKIP+=	qt5/plugins/designer/libqwt_designer_plugin.so
 
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
