@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.18 2019/08/07 07:34:32 adam Exp $
+$NetBSD: distinfo,v 1.19 2019/11/24 20:21:23 adam Exp $
 
-SHA1 (cli-6.10.3.tar.gz) = cf5b834eda98a60736f2611232e5c15d8ba28155
-RMD160 (cli-6.10.3.tar.gz) = af058bf57c6fe3a7d3d49ede91c44adcf078ef44
-SHA512 (cli-6.10.3.tar.gz) = af173c31c7713c83b083d5be1b75503db24d2228a942c94ee38757b847a15cf309abfe403328239085c93c1f6f42c3859fda4c88b8b80a07cb8d6f8b6b35b7f2
-Size (cli-6.10.3.tar.gz) = 5660267 bytes
+SHA1 (cli-6.13.1.tar.gz) = f39fe338ed0e64bc2bfab8441a8d536b3ff3581e
+RMD160 (cli-6.13.1.tar.gz) = 64fe0b3db9e41ad4b263066119ac00f31cbe5ffc
+SHA512 (cli-6.13.1.tar.gz) = dab02b3d01bbe84215de423674546d0bf09094f926b7b69054b651bf214d3420a3c86199ffa8487862d777d19a8116f5b149e477a6bbb9a59c802540d7b70fe5
+Size (cli-6.13.1.tar.gz) = 5624321 bytes
 SHA1 (marked-0.7.0.tar.gz) = 4094c4aa4bf00aa4d1bb0d2f0b9c50c1e81b7754
 RMD160 (marked-0.7.0.tar.gz) = 5fc126026dad9b24957089c147244217af9ecd83
 SHA512 (marked-0.7.0.tar.gz) = dc754b83f6bfa64ddc87b046935df91b16927eb98edaa47712610bfcb87f948ba878fa782e90b38213c710b33f512e65dc94d965e66e9ad14533b16b39861ee8
 Size (marked-0.7.0.tar.gz) = 160448 bytes
-SHA1 (patch-Makefile) = 29b3e9515ee2a45f3b12c116075c00faca73d270
+SHA1 (patch-Makefile) = 50cc950719f06198b7dffc8c740f08f3e5d4bb57
 SHA1 (patch-lib_config_defaults.js) = 5a00cbef781c9ab4efcec41ad781987f3f540886
 SHA1 (patch-node__modules_bin-links_index.js) = adbabdccde34483973ba134aa461b48ba690b5a2
 SHA1 (patch-node__modules_node-gyp_gyp_pylib_gyp_generator_make.py) = 291e079fb48caea7501ab864c19ef26672b76bc5
 SHA1 (patch-node__modules_node-gyp_gyp_pylib_gyp_xcode__emulation.py) = 7f9f5cd8aadafd309ba8dfb27f96fe8fa56a8af8
-SHA1 (patch-node__modules_node-gyp_lib_configure.js) = 3fb2fe036a4206c57c29da53009c81d4a05c7b96
+SHA1 (patch-node__modules_node-gyp_lib_configure.js) = 65e9e19fcf984bc7f5c100b2a280cc2a2406e30d
