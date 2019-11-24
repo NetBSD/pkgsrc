@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2012/12/12 10:44:11 wiz Exp $
+# $NetBSD: Makefile,v 1.13.58.1 2019/11/24 19:29:18 bsiegert Exp $
 
-DISTNAME=	bchunk-1.2.0
+DISTNAME=	bchunk-1.2.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://he.fi/bchunk/
 
