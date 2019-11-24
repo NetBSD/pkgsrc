@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2019/11/14 09:56:56 adam Exp $
+# $NetBSD: Makefile,v 1.260 2019/11/24 01:08:21 gdt Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -264,7 +264,7 @@ SUBST_STAGE.miniperl=	pre-install
 SUBST_FILES.miniperl=	lib/ExtUtils/xsubpp
 SUBST_SED.miniperl=	-e "1s:\#!./miniperl:\#!${PERL5}:"
 
-.if ${PKGSRC_COMPILER} == "xlc"
+.if ${PKGSRC_COMPILER:Mxlc}
 SUBST_CLASSES+=		cpprun
 SUBST_STAGE.cpprun=	pre-install
 SUBST_FILES.cpprun=	lib/Config_heavy.pl
