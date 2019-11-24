@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5102 2019/11/24 11:39:00 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5103 2019/11/24 13:38:14 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8226,3 +8226,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-pylint-django to 2.0.13 [adam 2019-11-24]
 	Updated security/py-passlib to 1.7.2 [adam 2019-11-24]
 	Updated devel/py-pyrsistent to 0.15.6 [adam 2019-11-24]
+	Updated audio/fasttracker2 to 1.02 [fox 2019-11-24]
