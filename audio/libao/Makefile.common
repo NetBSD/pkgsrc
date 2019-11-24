@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2017/08/16 20:21:03 wiz Exp $
+# $NetBSD: Makefile.common,v 1.40 2019/11/24 00:35:56 nia Exp $
 #
 # used by audio/libao-alsa/Makefile
 # used by audio/libao-arts/Makefile
@@ -9,9 +9,9 @@
 # used by audio/libao-sun/Makefile
 # used by audio/libao-pulse/Makefile
 
-DISTNAME=	libao-1.2.0
+DISTNAME=	libao-1.2.2
 CATEGORIES=	audio devel
-MASTER_SITES=	http://downloads.xiph.org/releases/ao/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=xiph/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.xiph.org/ao/
@@ -21,28 +21,34 @@ LICENSE=	gnu-gpl-v2
 DISTINFO_FILE=	${.CURDIR}/../../audio/libao/distinfo
 PATCHDIR=	${.CURDIR}/../../audio/libao/patches
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
-USE_LIBTOOL=		yes
-MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
-MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	autoreconf autoconf automake
+USE_TOOLS+=	gmake pkg-config
+USE_LIBTOOL=	yes
+
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
 PKGCONFIG_OVERRIDE+=	ao.pc.in
 
 CONFIGURE_ARGS+=	--disable-alsa
-CONFIGURE_ARGS+=	--disable-alsa09
 CONFIGURE_ARGS+=	--disable-arts
 CONFIGURE_ARGS+=	--disable-esd
+CONFIGURE_ARGS+=	--disable-esdtest
 CONFIGURE_ARGS+=	--disable-nas
 CONFIGURE_ARGS+=	--disable-pulse
-CONFIGURE_ARGS+=	ENABLE_AIX_AUDIO=no
-CONFIGURE_ARGS+=	ENABLE_IRIX=no
-CONFIGURE_ARGS+=	ENABLE_OSS=no
-CONFIGURE_ARGS+=	ENABLE_SUN_AUDIO=no
-CONFIGURE_ARGS+=	ENABLE_MACOSX=no
-CONFIGURE_ARGS+=	ENABLE_SOLARIS=no
+CONFIGURE_ENV+=		ac_cv_header_sys_audio_h=no # disable AIX audio by default
+CONFIGURE_ENV+=		ac_cv_lib_audio_ALwritesamps=no # disable IRIX audio by default
+CONFIGURE_ENV+=		ac_cv_header_sys_soundcard_h=no # disable OSS by default
+CONFIGURE_ENV+=		ac_cv_header_machine_soundcard_h=no
+CONFIGURE_ENV+=		ac_cv_header_sys_audioio_h=no # disable Sun audio by default
+CONFIGURE_ENV+=		ac_cv_header_sndio_h=no # disable sndio by default
+CONFIGURE_ENV+=		have_macosx=no # disable macOS audio by default
 
-MAKE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl}
+MAKE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl:Q}
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -isf
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
