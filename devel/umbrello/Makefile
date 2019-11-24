@@ -1,39 +1,23 @@
-# $NetBSD: Makefile,v 1.51 2019/09/02 13:19:41 adam Exp $
+# $NetBSD: Makefile,v 1.52 2019/11/24 04:01:14 markd Exp $
 
-DISTNAME=	umbrello-${_KDE_VERSION}
-PKGREVISION=	15
+DISTNAME=	umbrello-${KAPPSVER}
 CATEGORIES=	devel
+
+HOMEPAGE=	https://kde.org/applications/development/umbrello/
 COMMENT=	UML Modeller
+LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 4.11.3
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
-REPLACE_PERL+= \
-	umbrello/headings/heading.pm
+USE_TOOLS+=	msgmerge
 
-REPLACE_PYTHON+= \
-	umbrello/headings/heading.py
-
-REPLACE_RUBY+= \
-	umbrello/headings/heading.rb
-
-#BUILDLINK_DEPMETHOD.qt4-tools=	full
-.include "../../meta-pkgs/kde4/kde4.mk"
-
-.include "../../devel/boost-libs/buildlink3.mk"
-#.include "../../devel/libltdl/buildlink3.mk"
-#.include "../../devel/subversion-base/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/ktexteditor/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/ruby/replace.mk"
-#.include "../../misc/kdepimlibs4/buildlink3.mk"
-#.include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-#.include "../../textproc/hunspell/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-#.include "../../x11/kde-baseapps4/buildlink3.mk"
-#.include "../../x11/kde-runtime4/buildlink3.mk"
-#.include "../../x11/kde-workspace4/buildlink3.mk"
-
+.include "../../x11/kdelibs4support/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
