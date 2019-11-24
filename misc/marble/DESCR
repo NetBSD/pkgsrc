@@ -1,1 +1,20 @@
-KDE desktop globe
+Marble is an application that displays a view of the earth.  It is
+both a valuable application in its own right, but also an example
+program that shows how you can use the Marble widgets in your own
+applications.
+
+The Marble application makes use of the following classes and widgets:
+
+1. MarbleWidget, the main widget in any application using the Marble
+   framework.  This widget displays a view of the earth or any other
+   globe, depending on which dataset is used.  The user can navigate
+   the globe using either a control widget, e.g. the MarbleNavigator,
+   or the mouse.
+
+2. MarbleModel, the data storage class that holds the data that is
+   visualized in the MarbleWidget. The MarbleModel is created internally
+   and can be accessed using the model() method.
+
+These two classes provide the core of the classes that comprise the
+Marble framework.  You can use only them and get a very capable
+application.
