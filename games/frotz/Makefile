@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2019/07/18 15:06:50 nia Exp $
+# $NetBSD: Makefile,v 1.35 2019/11/24 00:45:39 nia Exp $
 
-DISTNAME=	frotz-2.44
+DISTNAME=	frotz-2.50
 CATEGORIES=	games
 MASTER_SITES=	https://gitlab.com/DavidGriffith/frotz/-/archive/${PKGVERSION_NOREV}/
 
@@ -11,13 +11,9 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 
-.include "../../mk/bsd.prefs.mk"
+BUILD_TARGET=	curses
 
-.if ${OPSYS} != "Darwin"
-MAKE_FLAGS+=	SOUND_DEFS=-DOSS_SOUND
-MAKE_FLAGS+=	SOUND_LIB=${LIBOSSAUDIO}
-CPPFLAGS+=	-DSOUND_DEV=\"${DEVOSSSOUND}\"
-.endif
+FAKE_NCURSES=	yes
 
 MAKE_FLAGS+=	CONFIG_DIR=${PKG_SYSCONFDIR}
 
@@ -39,6 +35,9 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} README INSTALL HOW_TO_PLAY \
 		${DESTDIR}${DOCDIR}
 
+.include "../../audio/libao/buildlink3.mk"
+.include "../../audio/libmodplug/buildlink3.mk"
+.include "../../audio/libsamplerate/buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
