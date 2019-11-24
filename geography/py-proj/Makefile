@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/03/02 01:19:25 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2019/11/24 14:51:20 gdt Exp $
 
 VERSION=		1.9.4
 PKGNAMEBASE=		pyproj
@@ -11,7 +11,7 @@ CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jswhit/pyproj/archive/}
 
 MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		https://jswhit.github.io/pyproj/
+HOMEPAGE=		https://github.com/pyproj4/pyproj
 COMMENT=		Python wrapper for proj
 LICENSE=		mit
 
