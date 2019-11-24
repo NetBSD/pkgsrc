@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5098 2019/11/24 00:47:54 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5099 2019/11/24 04:19:25 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8214,3 +8214,10 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/libao to 1.2.2 [nia 2019-11-24]
 	Updated games/frotz to 2.50 [nia 2019-11-24]
 	Updated audio/audacity to 2.3.3 [nia 2019-11-24]
+	Added devel/kross version 5.64.0 [markd 2019-11-24]
+	Updated misc/marble to 19.08.3 [markd 2019-11-24]
+	Updated misc/libkgeomap to 19.08.3 [markd 2019-11-24]
+	Updated misc/kteatime to 19.08.3 [markd 2019-11-24]
+	Updated devel/poxml to 19.08.3 [markd 2019-11-24]
+	Updated devel/umbrello to 19.08.3 [markd 2019-11-24]
+	Updated devel/lokalize to 19.08.3 [markd 2019-11-24]
