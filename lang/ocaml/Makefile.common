@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2019/08/24 10:54:23 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.57 2019/11/24 09:23:13 adam Exp $
 
 # used by x11/labltk/Makefile
 DISTNAME=	ocaml-4.08.1
@@ -32,14 +32,6 @@ CONFIGURE_ARGS+=	--without-x
 .if ${OPSYS} == "Linux"
 INSTALL_UNSTRIPPED=	yes
 .endif
-
-#.if ${OPSYS} == "Darwin"
-#CONFIGURE_ENV+=	CC="${CC} -arch ${MACHINE_ARCH} ${CFLAGS}"
-#CONFIGURE_ENV+=	ASPP="${CC} -arch ${MACHINE_ARCH} -c"
-#CONFIGURE_ENV+=	AS="as -arch ${MACHINE_ARCH}"
-#.else
-#CONFIGURE_ENV+=	CC="${CC} ${CFLAGS}"
-#.endif
 
 .include "../../mk/bdb.buildlink3.mk"
 
