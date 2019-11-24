@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/11/15 09:18:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/24 21:43:40 wiz Exp $
 
 DISTNAME=	xorg-server-1.17.2
 PKGNAME=	${DISTNAME:S/xorg-server/modular-xorg-xquartz/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	https://www.x.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
@@ -103,7 +103,6 @@ MESSAGE_SUBST+=		PREFIX=${PREFIX}
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXfont/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
