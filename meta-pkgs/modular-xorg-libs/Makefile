@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2019/07/19 21:13:27 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/24 21:59:34 wiz Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-libs-1.8
+PKGNAME=	modular-xorg-libs-1.9
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 DISTFILES=	# empty
@@ -49,7 +49,6 @@ META_PACKAGE=	yes
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXvMC/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
-.include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" \
     || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
