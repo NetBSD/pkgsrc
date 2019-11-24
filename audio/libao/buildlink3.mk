@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2018/01/07 13:03:54 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2019/11/24 00:35:56 nia Exp $
 
 BUILDLINK_TREE+=	libao
 
@@ -11,10 +11,14 @@ BUILDLINK_PKGSRCDIR.libao?=	../../audio/libao
 
 .if !defined(_LIBAO_BUILDING_PLUGIN)
 .  include "../../mk/bsd.fast.prefs.mk"
-.  if ${OPSYS} != "Darwin" && ${OPSYS} != "Interix" && ${OPSYS} != "SunOS"
-_LIBAO_DEFAULT_PLUGIN=		oss
-.  elif ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+.  if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 _LIBAO_DEFAULT_PLUGIN=		sun
+.  elif ${OPSYS} == "Linux"
+_LIBAO_DEFAULT_PLUGIN=		alsa
+.  elif ${OPSYS} == "Darwin"
+_LIBAO_DEFAULT_PLUGIN=		macosx
+.  elif ${OPSYS} != "Interix"
+_LIBAO_DEFAULT_PLUGIN=		oss
 .  else
 _LIBAO_DEFAULT_PLUGIN=
 .  endif
