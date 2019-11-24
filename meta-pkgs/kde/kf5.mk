@@ -1,4 +1,4 @@
-# $NetBSD: kf5.mk,v 1.5 2019/11/11 06:49:26 markd Exp $
+# $NetBSD: kf5.mk,v 1.6 2019/11/24 03:12:53 markd Exp $
 # used by archivers/karchive/Makefile
 # used by devel/kbookmarks/Makefile
 # used by devel/kcmutils/Makefile
@@ -17,6 +17,7 @@
 # used by devel/kparts/Makefile
 # used by devel/kpeople/Makefile
 # used by devel/kpty/Makefile
+# used by devel/kross/Makefile
 # used by devel/krunner/Makefile
 # used by devel/kservice/Makefile
 # used by devel/ktexteditor/Makefile
