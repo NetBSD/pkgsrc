@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.30 2019/11/02 22:18:23 rillig Exp $
+# $NetBSD: options.mk,v 1.31 2019/11/24 14:34:02 gdt Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
 PKG_OPTIONS_REQUIRED_GROUPS=	auth storage mio
@@ -100,7 +100,6 @@ CONFIGURE_ARGS+=	--enable-mio=select
 .endif
 
 .if !empty(PKG_OPTIONS:Mwebsocket)
-PLIST.ws=		yes
 CONFIGURE_ARGS+=	--enable-websocket
 .include  "../../www/http-parser/buildlink3.mk"
 .else
