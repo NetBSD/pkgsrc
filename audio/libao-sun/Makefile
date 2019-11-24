@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/03/27 22:45:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/24 00:35:57 nia Exp $
 
 .include "../../audio/libao/Makefile.common"
 
@@ -9,7 +9,7 @@ COMMENT+=	(Sun audio plugin)
 # no support for the sun audio interface
 NOT_FOR_PLATFORM+=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-*
 
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/ENABLE_SUN_AUDIO=no/ENABLE_SUN_AUDIO=yes/g}
+CONFIGURE_ENV:=		${CONFIGURE_ENV:S/ac_cv_header_sys_audioio_h=no//1}
 BUILD_DIRS=		src/plugins/sun
 INSTALL_DIRS=		src/plugins/sun
 

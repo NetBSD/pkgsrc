@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2013/04/06 15:46:33 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/24 00:35:56 nia Exp $
 
 .include "../../audio/libao/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/libao/libao-alsa/}
 
-COMMENT+=	(OSS plugin)
+COMMENT+=	(ALSA plugin)
 
 CONFIGURE_ARGS=		--enable-alsa
 BUILD_DIRS=		src/plugins/alsa

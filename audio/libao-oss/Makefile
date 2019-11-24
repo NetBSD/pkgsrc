@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/04/06 15:46:34 rodent Exp $
+# $NetBSD: Makefile,v 1.11 2019/11/24 00:35:57 nia Exp $
 
 .include "../../audio/libao/Makefile.common"
 
@@ -8,7 +8,9 @@ COMMENT+=	(OSS plugin)
 
 NOT_FOR_PLATFORM+=	Darwin-*-* Interix-*-* SunOS-5.[0-9]-* SunOS-5.10-*
 
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/ENABLE_OSS=no/ENABLE_OSS=yes/g}
+CONFIGURE_ENV:=	${CONFIGURE_ENV:S/ac_cv_header_sys_soundcard_h=no//1}
+CONFIGURE_ENV:=	${CONFIGURE_ENV:S/ac_cv_header_machine_soundcard_h=no//1}
+
 BUILD_DIRS=		src/plugins/oss
 INSTALL_DIRS=		src/plugins/oss
 

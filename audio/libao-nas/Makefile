@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/02/15 21:50:17 hans Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/24 00:35:57 nia Exp $
 
 .include "../../audio/libao/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/libao/libao-nas/}
 
-COMMENT+=	(nas plugin)
+COMMENT+=	(NAS plugin)
 
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/disable-nas/enable-nas/g}
 BUILD_DIRS=		src/plugins/nas
