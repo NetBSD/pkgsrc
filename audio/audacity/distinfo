@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.39 2019/10/26 17:22:08 nia Exp $
+$NetBSD: distinfo,v 1.40 2019/11/24 00:47:34 nia Exp $
 
-SHA1 (audacity-2.3.2.tar.gz) = b91b88aa68521a03fa5cc7dacaf5eb39f92e3b6f
-RMD160 (audacity-2.3.2.tar.gz) = 8bf05565f6a4afd464670b2e6fb5ed261a886ef2
-SHA512 (audacity-2.3.2.tar.gz) = a59d6e9e974d5f78f5ca561e3bea31fc1b3e88f9ea60b2df7ce8bcec264d886f3fdc8f20030e11a86daff8ffeb735850b5e5f73c45fbef0bfcc58692423e7cd0
-Size (audacity-2.3.2.tar.gz) = 61972597 bytes
+SHA1 (audacity-2.3.3.tar.gz) = 4c8c980208c18eda152b857ed1f81a1f5cbd108a
+RMD160 (audacity-2.3.3.tar.gz) = a3a6f2eae80d9b46fce7741c53646f6a0b499084
+SHA512 (audacity-2.3.3.tar.gz) = 766cc6cf21ff79a74f02497c21d8d28e1d06479218a0064fa252b187cc655845da3615045fc3f1088111441121b40147378dbb5078a4bb480bdd2224d09db3ba
+Size (audacity-2.3.3.tar.gz) = 62099027 bytes
 SHA1 (patch-Makefile.in) = 2aca8c2ae0af7863f8f090a707c08fba693c7c86
 SHA1 (patch-aa) = 67c0ec5ff99004d9035de13f0263add46ed8c994
 SHA1 (patch-lib-src_FileDialog_Makefile.am) = efa6ca612f3984a4cf8150e3c624e347d144af87
@@ -15,6 +15,4 @@ SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = 2d4558f059d86633a1fcdda2
 SHA1 (patch-lib-src_portmixer_src-extra_Makefile.am) = 9a0d5be37753683a2cade42673edb3d08e01ab4d
 SHA1 (patch-lib-src_sbsms_src-extra_Makefile.am) = 2beca18a286de1b26f4f96976fb58e1665d0531c
 SHA1 (patch-src_AudioIO.cpp) = 1b44c68c4233b24a5fa4e17515eb237fee0e283a
-SHA1 (patch-src_effects_Effect.cpp) = 78d9a8f1bdb70284d2ad57243d10f56c993759c6
-SHA1 (patch-src_effects_EffectManager.cpp) = 8ce8679cf4530b1fbb0b1d63896be98c41b27bb6
 SHA1 (patch-src_effects_NoiseRemoval.cpp) = 6d72545cde66ac90d4eb3821a3a3f384ccbf46f2
