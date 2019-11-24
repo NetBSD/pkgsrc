@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/08/11 13:22:27 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2019/11/24 01:20:56 gdt Exp $
 
 DISTNAME=		Socket6-0.29
 PKGNAME=		p5-${DISTNAME}
@@ -21,7 +21,7 @@ MAKE_ENV+=		CCFLAGS="${CFLAGS} ${CPPFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "AIX" && ${PKGSRC_COMPILER} == "xlc"
+.if ${OPSYS} == "AIX" && ${PKGSRC_COMPILER:Mxlc}
 MAKE_ENV+=		CC="cc_r"
 .endif
 
