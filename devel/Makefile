@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2954 2019/11/19 05:37:57 adam Exp $
+# $NetBSD: Makefile,v 1.2955 2019/11/24 03:11:08 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -586,6 +586,7 @@ SUBDIR+=	kpackage
 SUBDIR+=	kparts
 SUBDIR+=	kpeople
 SUBDIR+=	kpty
+SUBDIR+=	kross
 SUBDIR+=	krunner
 SUBDIR+=	kservice
 SUBDIR+=	ktexteditor
