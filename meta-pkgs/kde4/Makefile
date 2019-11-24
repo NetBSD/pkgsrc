@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2019/11/21 06:40:58 markd Exp $
+# $NetBSD: Makefile,v 1.50 2019/11/24 04:08:36 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -26,7 +26,7 @@ DEPENDS+=	ksystemlog-4.14.3{,nb[0-9]*}:../../sysutils/ksystemlog
 DEPENDS+=	kcron-4.14.3{,nb[0-9]*}:../../sysutils/kcron
 DEPENDS+=	kuser-16.08.0{,nb[0-9]*}:../../sysutils/kuser
 DEPENDS+=	kdeartwork4-15.08.3{,nb[0-9]*}:../../misc/kdeartwork4
-DEPENDS+=	marble-4.14.3{,nb[0-9]*}:../../misc/marble
+DEPENDS+=	marble>=4.14.3:../../misc/marble
 DEPENDS+=	blinken>=4.14.3:../../games/blinken
 DEPENDS+=	analitza>=4.14.3:../../math/analitza
 DEPENDS+=	cantor>=4.14.3:../../math/cantor
@@ -126,13 +126,13 @@ DEPENDS+=	kcachegrind-16.12.0{,nb[0-9]*}:../../devel/kcachegrind
 DEPENDS+=	kdesdk-strigi-analyzers-16.04.0{,nb[0-9]*}:../../devel/kdesdk-strigi-analyzers
 DEPENDS+=	kdesdk-thumbnailers-4.14.3{,nb[0-9]*}:../../devel/kdesdk-thumbnailers
 DEPENDS+=	kompare-4.14.3{,nb[0-9]*}:../../devel/kompare
-DEPENDS+=	lokalize-4.14.3{,nb[0-9]*}:../../devel/lokalize
+DEPENDS+=	lokalize>=4.14.3:../../devel/lokalize
 DEPENDS+=	okteta-4.14.3{,nb[0-9]*}:../../devel/okteta
-DEPENDS+=	poxml-4.14.3{,nb[0-9]*}:../../devel/poxml
-DEPENDS+=	umbrello-4.14.3{,nb[0-9]*}:../../devel/umbrello
+DEPENDS+=	poxml>=4.14.3:../../devel/poxml
+DEPENDS+=	umbrello>=4.14.3:../../devel/umbrello
 DEPENDS+=	kate>=4.14.3:../../editors/kate
 DEPENDS+=	amor-15.08.3{,nb[0-9]*}:../../games/amor
-DEPENDS+=	kteatime-4.14.3{,nb[0-9]*}:../../misc/kteatime
+DEPENDS+=	kteatime>=4.14.3:../../misc/kteatime
 DEPENDS+=	ktux-15.08.3{,nb[0-9]*}:../../misc/ktux
 DEPENDS+=	ark>=4.14.3:../../archivers/ark
 DEPENDS+=	filelight>=4.14.3:../../sysutils/filelight
