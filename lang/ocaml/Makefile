@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2019/10/04 10:33:21 maya Exp $
+# $NetBSD: Makefile,v 1.131 2019/11/24 09:23:13 adam Exp $
 
 .include "Makefile.common"
 
@@ -97,12 +97,15 @@ REPLACE_AWK+=		tools/ocaml-instr-report
 do-test:
 	cd ${WRKSRC}/testsuite && ${MAKE_PROGRAM} all
 
-#post-install:
-#	set -e ; cd ${DESTDIR}${PREFIX}/lib/ocaml/${PKGMANDIR}/man1;	\
-#	for m in *; do							\
-#	  ln -sf ${PREFIX}/lib/ocaml/${PKGMANDIR}/man1/$$m		\
-#		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$$m;		\
-#	done
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	for f in ${DESTDIR}${PREFIX}/lib/ocaml/*.so \
+		${DESTDIR}${PREFIX}/lib/ocaml/stublibs/*.so; do \
+		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
+	done
+.endif
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
