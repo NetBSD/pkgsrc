@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5099 2019/11/24 04:19:25 markd Exp $
+$NetBSD: CHANGES-2019,v 1.5100 2019/11/24 09:03:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8221,3 +8221,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/poxml to 19.08.3 [markd 2019-11-24]
 	Updated devel/umbrello to 19.08.3 [markd 2019-11-24]
 	Updated devel/lokalize to 19.08.3 [markd 2019-11-24]
+	Updated devel/check to 0.13.0nb1 [ryoon 2019-11-24]
