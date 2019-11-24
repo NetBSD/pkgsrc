@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5105 2019/11/24 20:23:45 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5106 2019/11/24 22:01:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8231,3 +8231,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/nodejs8 to 8.16.2 [adam 2019-11-24]
 	Updated lang/npm to 6.13.1 [adam 2019-11-24]
 	Updated devel/yarn to 1.19.1 [adam 2019-11-24]
+	Removed x11/libXxf86misc [wiz 2019-11-24]
