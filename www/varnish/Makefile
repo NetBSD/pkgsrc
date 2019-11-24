@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/04/25 07:33:28 maya Exp $
+# $NetBSD: Makefile,v 1.28 2019/11/24 01:05:37 gdt Exp $
 #
 
 DISTNAME=	varnish-3.0.6
@@ -55,7 +55,7 @@ CONFIGURE_ARGS+=	--with-rst2html=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
 .if ${OPSYS} == "SunOS"
 # Explicitly disable epoll on illumos, provided for Linux compat only.
 CONFIGURE_ENV+=	ac_cv_func_epoll_ctl=no
-.  if ${PKGSRC_COMPILER} == "sunpro"
+.  if ${PKGSRC_COMPILER:Msunpro}
 CONFIGURE_ENV+=	VCC_CC="cc ${_COMPILER_ABI_FLAG.${ABI}} -Kpic -G -o %o %s"
 .  else
 CONFIGURE_ENV+=	VCC_CC="gcc ${_COMPILER_ABI_FLAG.${ABI}} -fpic -shared -o %o %s"
