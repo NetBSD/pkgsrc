@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5095 2019/11/23 23:47:35 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5096 2019/11/24 00:36:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8211,3 +8211,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/smpeg to 0.4.5 [nia 2019-11-23]
 	Updated pkgtools/pkglint to 19.3.10 [rillig 2019-11-23]
 	Updated graphics/blender to 2.81 [nia 2019-11-23]
+	Updated audio/libao to 1.2.2 [nia 2019-11-24]
