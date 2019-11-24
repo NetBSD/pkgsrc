@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2019/11/24 13:15:16 nia Exp $
+# $NetBSD: Makefile,v 1.129 2019/11/24 14:34:37 nia Exp $
 
 DISTNAME=	audacity-2.3.3
 CATEGORIES=	audio
@@ -97,7 +97,7 @@ BUILDLINK_API_DEPENDS.twolame+=	twolame>=0.3.9
 .include "../../audio/libsoxr/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
-BUILDLINK_API_DEPENDS.portaudio+=	portaudio>=190600.20161030nb1
+BUILDLINK_API_DEPENDS.portaudio+=	portaudio>=190600.20161030nb2
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../audio/suil/buildlink3.mk"
 .include "../../audio/vamp-plugin-sdk/buildlink3.mk"
