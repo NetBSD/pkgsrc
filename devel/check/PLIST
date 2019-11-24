@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2018/03/30 19:16:55 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/11/24 09:02:56 ryoon Exp $
 include/check.h
 include/check_stdint.h
-info/check.info
 lib/libcheck.la
 lib/pkgconfig/check.pc
 man/man1/checkmk.1
@@ -10,24 +9,3 @@ share/doc/check/COPYING.LESSER
 share/doc/check/ChangeLog
 share/doc/check/NEWS
 share/doc/check/README
-share/doc/check/example/Makefile.am
-share/doc/check/example/README
-share/doc/check/example/configure.ac
-share/doc/check/example/src/Makefile.am
-share/doc/check/example/src/main.c
-share/doc/check/example/src/money.1.c
-share/doc/check/example/src/money.1.h
-share/doc/check/example/src/money.2.h
-share/doc/check/example/src/money.3.c
-share/doc/check/example/src/money.4.c
-share/doc/check/example/src/money.5.c
-share/doc/check/example/src/money.6.c
-share/doc/check/example/src/money.c
-share/doc/check/example/src/money.h
-share/doc/check/example/tests/Makefile.am
-share/doc/check/example/tests/check_money.1.c
-share/doc/check/example/tests/check_money.2.c
-share/doc/check/example/tests/check_money.3.c
-share/doc/check/example/tests/check_money.6.c
-share/doc/check/example/tests/check_money.7.c
-share/doc/check/example/tests/check_money.c
