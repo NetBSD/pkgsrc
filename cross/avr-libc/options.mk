@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/06/08 10:53:26 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2019/11/24 12:31:37 dsainty Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.avr-libc
 PKG_SUPPORTED_OPTIONS+=		doc
@@ -18,7 +18,9 @@ BUILD_DEPENDS+=		tex-adjustbox-[0-9]*:../../print/tex-adjustbox
 BUILD_DEPENDS+=		tex-caption-[0-9]*:../../print/tex-caption
 BUILD_DEPENDS+=		tex-collectbox-[0-9]*:../../print/tex-collectbox
 BUILD_DEPENDS+=		tex-colortbl-[0-9]*:../../print/tex-colortbl
+BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
 BUILD_DEPENDS+=		tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
+BUILD_DEPENDS+=		tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
 BUILD_DEPENDS+=		tex-float-[0-9]*:../../print/tex-float
 BUILD_DEPENDS+=		tex-geometry-[0-9]*:../../print/tex-geometry
 BUILD_DEPENDS+=		tex-graphics-cfg-[0-9]*:../../print/tex-graphics-cfg
@@ -30,6 +32,7 @@ BUILD_DEPENDS+=		tex-pgf-[0-9]*:../../print/tex-pgf
 BUILD_DEPENDS+=		tex-sectsty-[0-9]*:../../print/tex-sectsty
 BUILD_DEPENDS+=		tex-tabu-[0-9]*:../../print/tex-tabu
 BUILD_DEPENDS+=		tex-tocloft-[0-9]*:../../print/tex-tocloft
+BUILD_DEPENDS+=		tex-ulem-[0-9]*:../../print/tex-ulem
 BUILD_DEPENDS+=		tex-xcolor-[0-9]*:../../print/tex-xcolor
 BUILD_DEPENDS+=		tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 BUILD_DEPENDS+=		fig2dev-[0-9]*:../../print/fig2dev
