@@ -1,9 +1,9 @@
-# $NetBSD: tool.mk,v 1.1 2011/10/14 08:55:54 obache Exp $
+# $NetBSD: tool.mk,v 1.2 2019/11/24 11:41:15 nia Exp $
 #
 # Create `python' interpreter wrapper for applicable Python bin.
 #
 # This mk fragment can be included in all packages that uses `python'
-# as a tool without version suffix.
+# as a tool without a pkgsrc-style version suffix.
 #
 # Keywords: python
 #
@@ -19,11 +19,12 @@ BUILDLINK_TARGETS+=	buildlink-bin-python
 
 .PHONY: buildlink-bin-python
 buildlink-bin-python:
+.for bin in python python${PYVERSSUFFIX:R}
 	${RUN} \
-	f="${PYTHONBIN}"; \
-	t="${BUILDLINK_DIR}/bin/python"; \
-	if ${TEST} -f $$f -a ! -f $$t ; then \
-		${LN} -sf $$f $$t; \
+	t=${BUILDLINK_DIR}/bin/${bin}; \
+	if ${TEST} -f "${PYTHONBIN}" -a ! -f $$t; then \
+		${LN} -sf "${PYTHONBIN}" $$t; \
 	fi
+.endfor
 
 .endif # PYTHON_TOOL_MK
