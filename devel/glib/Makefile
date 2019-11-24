@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2019/05/23 19:22:58 rillig Exp $
+# $NetBSD: Makefile,v 1.96 2019/11/24 01:02:37 gdt Exp $
 
 DISTNAME=		glib-1.2.10
 PKGREVISION=		11
@@ -32,7 +32,7 @@ PTHREAD_OPTS+=		require
 CONFIGURE_ENV.NetBSD+=	glib_cv_rtldglobal_broken=no
 
 # Tests are insufficient, override with correct values.
-.if ${OPSYS} == "Darwin" && ${PKGSRC_COMPILER} == "clang"
+.if ${OPSYS} == "Darwin" && ${PKGSRC_COMPILER:Mclang}
 CONFIGURE_ENV+=		glib_cv_has__inline=yes
 CONFIGURE_ENV+=		glib_cv_has__inline__=yes
 CONFIGURE_ENV+=		glib_cv_hasinline=yes
