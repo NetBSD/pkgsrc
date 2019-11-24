@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2019/07/30 18:41:58 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2019/11/24 14:39:09 gdt Exp $
 #
 
+# (Note that there is a pending update in wip for jabberd14-1.6, not yet released.)
 DISTNAME=		jabber-1.4.2
 PKGNAME=		jabberd-1.4.2
 PKGREVISION=		13
