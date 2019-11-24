@@ -1,6 +1,8 @@
-$NetBSD: patch-af,v 1.6 2014/02/06 18:37:08 wiz Exp $
+$NetBSD: patch-src_plugins_alsa_ao__alsa.c,v 1.1 2019/11/24 00:35:56 nia Exp $
 
---- src/plugins/alsa/ao_alsa.c.orig	2014-01-27 17:02:05.000000000 +0000
+Allow building on non-Linux.
+
+--- src/plugins/alsa/ao_alsa.c.orig	2016-11-14 08:03:30.000000000 +0000
 +++ src/plugins/alsa/ao_alsa.c
 @@ -39,6 +39,10 @@
  #include <alsa/asoundlib.h>
