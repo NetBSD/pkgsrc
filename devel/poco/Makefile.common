@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2019/11/03 10:39:28 rillig Exp $
+# $NetBSD: Makefile.common,v 1.17 2019/11/24 01:03:28 gdt Exp $
 #
 # used by devel/poco/Makefile
 # used by databases/poco-data/Makefile
@@ -46,7 +46,7 @@ CONFIGURE_ARGS.NetBSD+=	--no-sharedmemory
 
 .if ${OPSYS} == "SunOS"
 .include "../../mk/compiler.mk"
-.  if ${PKGSRC_COMPILER} == "sunpro"
+.  if ${PKGSRC_COMPILER:Msunpro}
 CONFIGURE_ARGS+=	--config=SunOS-SunStudio
 .  else
 CONFIGURE_ARGS+=	--config=SunOS-GCC
