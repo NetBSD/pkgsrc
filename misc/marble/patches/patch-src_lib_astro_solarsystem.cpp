@@ -1,10 +1,10 @@
-$NetBSD: patch-src_lib_astro_solarsystem.cpp,v 1.1 2015/01/07 13:14:30 jperkin Exp $
+$NetBSD: patch-src_lib_astro_solarsystem.cpp,v 1.2 2019/11/24 03:41:55 markd Exp $
 
 Avoid 'sun' definition.
 
---- src/lib/astro/solarsystem.cpp.orig	2014-10-23 21:53:08.000000000 +0000
+--- src/lib/astro/solarsystem.cpp.orig	2019-11-04 06:55:40.000000000 +0000
 +++ src/lib/astro/solarsystem.cpp
-@@ -352,7 +352,7 @@ void SolarSystem::updateSolar()
+@@ -431,7 +431,7 @@ void SolarSystem::updateSolar()
  
    const double ae = 23454.77992; // 149597870.0/6378.14 =  1AE -> Earth Radii
    double dt, eps2;
@@ -12,8 +12,8 @@ Avoid 'sun' definition.
 +  Sun200 msun;
    Moon200 moon;
    Plan200 pln;
-   Vec3 coff;
-@@ -363,7 +363,7 @@ void SolarSystem::updateSolar()
+   Vec3 coff, r1, v1;
+@@ -442,7 +442,7 @@ void SolarSystem::updateSolar()
    // get positions in ecliptic coordinates of date
    dt = ss_time + ss_del_tdut/86400.0;
    dt = julcent (dt);
@@ -22,7 +22,7 @@ Avoid 'sun' definition.
    ss_rm = moon.position(dt)/ae;
    ss_pmer = pln.Mercury(dt);
    ss_pven = pln.Venus(dt);
-@@ -914,7 +914,7 @@ Vec3 SolarSystem::SnPos (double &ep2, do
+@@ -1515,7 +1515,7 @@ Vec3 SolarSystem::SnPos (double &ep2, do
    // return the apparent position of the Sun
    // and the Nutation ep2 value and the ecliptic longitude of the Sun els
  
@@ -31,7 +31,7 @@ Avoid 'sun' definition.
    Mat3 mx;
    Vec3 rs, s;
    double t;
-@@ -922,7 +922,7 @@ Vec3 SolarSystem::SnPos (double &ep2, do
+@@ -1523,7 +1523,7 @@ Vec3 SolarSystem::SnPos (double &ep2, do
    t = ss_time + ss_del_tdut/86400.0;
    t = julcent (t);
  
