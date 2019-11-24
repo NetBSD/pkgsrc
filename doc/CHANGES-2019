@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5104 2019/11/24 15:52:45 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5105 2019/11/24 20:23:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8229,3 +8229,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 1.02 [fox 2019-11-24]
 	Updated lang/nodejs to 10.17.0 [adam 2019-11-24]
 	Updated lang/nodejs8 to 8.16.2 [adam 2019-11-24]
+	Updated lang/npm to 6.13.1 [adam 2019-11-24]
+	Updated devel/yarn to 1.19.1 [adam 2019-11-24]
