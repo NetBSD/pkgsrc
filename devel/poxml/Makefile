@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.23 2019/08/22 12:23:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/24 03:57:31 markd Exp $
 
-DISTNAME=	poxml-${_KDE_VERSION}
-PKGREVISION=	14
+DISTNAME=	poxml-${KAPPSVER}
 CATEGORIES=	devel
+
+HOMEPAGE=	https://kde.org/applications/development/
 COMMENT=	Translates DocBook XML files using gettext po files
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+
+USE_TOOLS+=	msgmerge
 
 .include "../../devel/gettext-tools/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
