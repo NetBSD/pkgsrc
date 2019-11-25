@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.864 2019/11/24 22:01:36 wiz Exp $
+# $NetBSD: Makefile,v 1.865 2019/11/25 09:52:14 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -215,7 +215,6 @@ SUBDIR+=	libXcomposite
 SUBDIR+=	libXcursor
 SUBDIR+=	libXdamage
 SUBDIR+=	libXdmcp
-SUBDIR+=	libXevie
 SUBDIR+=	libXext
 SUBDIR+=	libXfixes
 SUBDIR+=	libXfont
