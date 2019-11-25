@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5116 2019/11/25 10:44:32 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5117 2019/11/25 11:57:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8253,3 +8253,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/ksystemlog to 19.08.3 [markd 2019-11-25]
 	Updated databases/py-peewee to 3.12.0 [adam 2019-11-25]
 	Updated textproc/py-sphinx-theme-cloud to 1.10.0 [adam 2019-11-25]
+	Updated devel/py-virtualenv to 16.7.8 [adam 2019-11-25]
+	Updated net/py-lexicon to 3.3.10 [adam 2019-11-25]
