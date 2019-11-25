@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/10/07 11:25:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/11/25 10:44:11 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,6 +12,9 @@ ${PYSITELIB}/cloud_sptheme/__init__.pyo
 ${PYSITELIB}/cloud_sptheme/ext/__init__.py
 ${PYSITELIB}/cloud_sptheme/ext/__init__.pyc
 ${PYSITELIB}/cloud_sptheme/ext/__init__.pyo
+${PYSITELIB}/cloud_sptheme/ext/allow_unreferenced_footnotes.py
+${PYSITELIB}/cloud_sptheme/ext/allow_unreferenced_footnotes.pyc
+${PYSITELIB}/cloud_sptheme/ext/allow_unreferenced_footnotes.pyo
 ${PYSITELIB}/cloud_sptheme/ext/auto_redirect.py
 ${PYSITELIB}/cloud_sptheme/ext/auto_redirect.pyc
 ${PYSITELIB}/cloud_sptheme/ext/auto_redirect.pyo
