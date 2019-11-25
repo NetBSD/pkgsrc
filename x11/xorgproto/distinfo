@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/11/15 10:01:35 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2019/11/25 10:07:43 wiz Exp $
 
 SHA1 (xorgproto-2019.2.tar.bz2) = 2dedbe3e4daccf0c3d675759ed82161a3e4cf1b5
 RMD160 (xorgproto-2019.2.tar.bz2) = f29bf0b62d163ac97096201bc4d74559c441d0dd
 SHA512 (xorgproto-2019.2.tar.bz2) = cbfdf6bb3d58d4d4e7788c9ed779402352715e9899f65594fbc527b3178f1dc5e03cebc8ba5a863b3c196a1a0f2026c2d0438207ca19f81f3c8b7da0c0667904
 Size (xorgproto-2019.2.tar.bz2) = 847374 bytes
-SHA1 (patch-Makefile.in) = 4ef6cd0b2f0c02cd9d59f4f8a3f8997746e6f76c
