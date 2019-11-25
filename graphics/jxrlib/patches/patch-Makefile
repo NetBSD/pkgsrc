@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile,v 1.1 2019/11/25 21:07:19 nros Exp $
+* take in CFLAGS from the environment so that _BIG__ENDIAN_ can be added
+--- Makefile.orig	2019-11-25 19:14:40.081612047 +0000
++++ Makefile
+@@ -39,7 +39,7 @@ DIR_GLUE=jxrgluelib
+ DIR_TEST=jxrtestlib
+ DIR_EXEC=jxrencoderdecoder
+ 
+-CFLAGS=-I. -Icommon/include -I$(DIR_SYS) -D__ANSI__ -DDISABLE_PERF_MEASUREMENT -w -O
++CFLAGS+=-I. -Icommon/include -I$(DIR_SYS) -D__ANSI__ -DDISABLE_PERF_MEASUREMENT -w -O
+ ##
+ ## Add following flag to CFLAGS above if target is a big endian machine
+ ## -D_BIG__ENDIAN_

@@ -1,6 +1,17 @@
-$NetBSD: distinfo,v 1.1 2017/04/04 13:07:07 wiz Exp $
+$NetBSD: distinfo,v 1.2 2019/11/25 21:07:18 nros Exp $
 
 SHA1 (jxrlib_1_1.tar.gz) = bf6cfa00087a67491a6ba55d6d96d74e94560430
 RMD160 (jxrlib_1_1.tar.gz) = 31b378cd0de3ce2c1d19fae3927c67046471d07b
 SHA512 (jxrlib_1_1.tar.gz) = c7d87647601e08b2dc18bda26faea80ad5b09c6e8412769cd203ce9e221b2b58425e9d59a506ae8bf61030195bccb51a9d1e893bf2d18e596b0687918b39e2df
 Size (jxrlib_1_1.tar.gz) = 338240 bytes
+SHA1 (patch-Makefile) = 581bdfdfee20fd1f6d0a2a3d1cf8ce877eb0629b
+SHA1 (patch-image_sys_strcodec.c) = 3cf7e93704c5849dcbb3ff435743f87fe8ebf042
+SHA1 (patch-image_sys_strcodec.h) = ef060597735fbc9529bd25cb3431eafaf3284ddc
+SHA1 (patch-jxrencoderdecoder_JxrDecApp.c) = ae71490d95c3f15cd65115872d2463468cda3a97
+SHA1 (patch-jxrencoderdecoder_JxrEncApp.c) = ff66c068348260291d51d21f8caf6059a63fac65
+SHA1 (patch-jxrgluelib_JXRGlueJxr.c) = adce3e44d470c62817ef83a3b0723818d8ecb810
+SHA1 (patch-jxrgluelib_JXRMeta.h) = b14f26ab80b1050879eac404283a11a795326444
+SHA1 (patch-jxrtestlib_JXRTest.c) = 2dcb7f4f953c129db1e7db4741439f1c5eb19e27
+SHA1 (patch-jxrtestlib_JXRTestHdr.c) = 8f5562dfe3d0dd1ddfb6b591facd51c45cd3d068
+SHA1 (patch-jxrtestlib_JXRTestPnm.c) = ea94a288d76d9e9c316716f07226640570136460
+SHA1 (patch-jxrtestlib_JXRTestTif.c) = f4c36e487a808e80ff75cd99fd693c555902d758
