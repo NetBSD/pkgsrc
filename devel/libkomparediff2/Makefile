@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.16 2019/08/22 12:23:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/25 09:56:34 markd Exp $
 
-DISTNAME=	libkomparediff2-${_KDE_VERSION}
-PKGREVISION=	15
+DISTNAME=	libkomparediff2-${KAPPSVER}
 CATEGORIES=	devel
+
+HOMEPAGE=	https://kde.org/applications/development/kompare/
 COMMENT=	Library to compare files and strings
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+USE_TOOLS+=	msgmerge
 
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../devel/kio/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
