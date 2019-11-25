@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.12 2019/11/17 08:40:01 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.13 2019/11/25 18:48:46 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q3 branch:
 
@@ -72,4 +72,10 @@ geography/opencpn: build fix
 Pullup ticket #6083 - requested by leot
 lang/go112: security update
 lang/go: update available version
+
+Pullup ticket #6087 - requested by nia
+sysutils/bchunk: security fix
+
+Pullup ticket #6089 - requested by bouyer
+geography/opencpn-plugin-draw: build fix (incomplete commit)
 
