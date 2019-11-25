@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5120 2019/11/25 22:35:58 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5121 2019/11/25 22:37:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8269,3 +8269,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated finance/py-bitcoinlib to 0.10.2 [adam 2019-11-25]
 	Updated converters/py-emoji to 0.5.4 [adam 2019-11-25]
 	Updated meta-pkgs/modular-xorg-libs to 1.11 [wiz 2019-11-25]
+	Removed x11/libxkbui [wiz 2019-11-25]
