@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/09/03 09:22:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/25 21:07:18 nros Exp $
 
 DISTNAME=	jxrlib_1_1
 PKGNAME=	jxrlib-1.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	# javascript link
 
@@ -10,7 +11,14 @@ HOMEPAGE=	https://github.com/curasystems/jxrlib
 COMMENT=	JPEG XR library
 LICENSE=	2-clause-bsd
 
+TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
+
 WRKSRC=		${WRKDIR}/jxrlib
+
+.include "../../mk/endian.mk"
+.if ${MACHINE_ENDIAN} == "big"
+CFLAGS+=-D_BIG__ENDIAN_
+.endif
 
 INSTALLATION_DIRS=	bin lib
 INSTALLATION_DIRS+=	include/jxrlib/common/include
@@ -20,6 +28,11 @@ INSTALLATION_DIRS+=	include/jxrlib/image/decode
 INSTALLATION_DIRS+=	include/jxrlib/image/x86
 INSTALLATION_DIRS+=	include/jxrgluelib
 INSTALLATION_DIRS+=	share/doc/jxrlib
+
+pre-patch:
+	dos2unix ${WRKSRC}/Makefile
+	find ${WRKSRC} -name '*.c' -print0 | xargs -0 dos2unix
+	find ${WRKSRC} -name '*.h' -print0 | xargs -0 dos2unix
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/JxrEncApp ${DESTDIR}${PREFIX}/bin
