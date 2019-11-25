@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/10/21 22:01:06 adam Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/25 10:44:11 adam Exp $
 
-DISTNAME=	cloud_sptheme-1.9.4
+DISTNAME=	cloud_sptheme-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/cloud_sptheme/sphinx-theme-cloud/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cloud_sptheme/}
