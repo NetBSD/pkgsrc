@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2019/11/24 04:08:36 markd Exp $
+# $NetBSD: Makefile,v 1.51 2019/11/25 10:20:26 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,9 +20,9 @@ DEPENDS+=	kde-baseapps4-15.12.0{,nb[0-9]*}:../../x11/kde-baseapps4
 DEPENDS+=	konsole-4.14.3{,nb[0-9]*}:../../x11/konsole
 DEPENDS+=	kaccessible-16.12.0{,nb[0-9]*}:../../misc/kaccessible
 DEPENDS+=	kmag>=16.12.0:../../misc/kmag
-DEPENDS+=	kmouth-4.14.3{,nb[0-9]*}:../../misc/kmouth
-DEPENDS+=	kmousetool-16.12.0{,nb[0-9]*}:../../misc/kmousetool
-DEPENDS+=	ksystemlog-4.14.3{,nb[0-9]*}:../../sysutils/ksystemlog
+DEPENDS+=	kmouth>=4.14.3:../../misc/kmouth
+DEPENDS+=	kmousetool>=16.12.0:../../misc/kmousetool
+DEPENDS+=	ksystemlog>=4.14.3:../../sysutils/ksystemlog
 DEPENDS+=	kcron-4.14.3{,nb[0-9]*}:../../sysutils/kcron
 DEPENDS+=	kuser-16.08.0{,nb[0-9]*}:../../sysutils/kuser
 DEPENDS+=	kdeartwork4-15.08.3{,nb[0-9]*}:../../misc/kdeartwork4
@@ -116,16 +116,16 @@ DEPENDS+=	kdenetwork-strigi-analyzers-16.04.0{,nb[0-9]*}:../../net/kdenetwork-st
 DEPENDS+=	kdepim4-4.14.10{,nb[0-9]*}:../../misc/kdepim4
 DEPENDS+=	kdepim-runtime4-4.14.10{,nb[0-9]*}:../../misc/kdepim-runtime4
 DEPENDS+=	kdeplasma-addons4-4.14.3{,nb[0-9]*}:../../misc/kdeplasma-addons4
-DEPENDS+=	cervisia-16.04.0{,nb[0-9]*}:../../devel/cervisia
-DEPENDS+=	kde-dev-scripts-4.14.3{,nb[0-9]*}:../../devel/kde-dev-scripts
-DEPENDS+=	kde-dev-utils-16.12.0{,nb[0-9]*}:../../devel/kde-dev-utils
+DEPENDS+=	cervisia>=16.04.0:../../devel/cervisia
+DEPENDS+=	kde-dev-scripts>=4.14.3:../../devel/kde-dev-scripts
+DEPENDS+=	kde-dev-utils>=16.12.0:../../devel/kde-dev-utils
 DEPENDS+=	dolphin-plugins-4.14.3{,nb[0-9]*}:../../devel/dolphin-plugins
-DEPENDS+=	kapptemplate-4.14.3{,nb[0-9]*}:../../devel/kapptemplate
-DEPENDS+=	kcachegrind-16.12.0{,nb[0-9]*}:../../devel/kcachegrind
+DEPENDS+=	kapptemplate>=4.14.3:../../devel/kapptemplate
+DEPENDS+=	kcachegrind>=16.12.0:../../devel/kcachegrind
 ###DEPENDS+=	kdesdk-kioslaves-4.14.3{,nb[0-9]*}:../../devel/kdesdk-kioslaves
 DEPENDS+=	kdesdk-strigi-analyzers-16.04.0{,nb[0-9]*}:../../devel/kdesdk-strigi-analyzers
 DEPENDS+=	kdesdk-thumbnailers-4.14.3{,nb[0-9]*}:../../devel/kdesdk-thumbnailers
-DEPENDS+=	kompare-4.14.3{,nb[0-9]*}:../../devel/kompare
+DEPENDS+=	kompare>=4.14.3:../../devel/kompare
 DEPENDS+=	lokalize>=4.14.3:../../devel/lokalize
 DEPENDS+=	okteta-4.14.3{,nb[0-9]*}:../../devel/okteta
 DEPENDS+=	poxml>=4.14.3:../../devel/poxml
