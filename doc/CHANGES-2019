@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5114 2019/11/25 10:08:03 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5115 2019/11/25 10:24:59 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8241,3 +8241,13 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/x11-links to 1.31 [wiz 2019-11-25]
 	Removed x11/libXevie [wiz 2019-11-25]
 	Updated x11/xorgproto to 2019.2nb3 [wiz 2019-11-25]
+	Updated devel/libkomparediff2 to 19.08.3 [markd 2019-11-25]
+	Updated devel/kompare to 19.08.3 [markd 2019-11-25]
+	Updated devel/cervisia to 19.08.3 [markd 2019-11-25]
+	Updated devel/kapptemplate to 19.08.3 [markd 2019-11-25]
+	Updated devel/kcachegrind to 19.08.3 [markd 2019-11-25]
+	Updated devel/kde-dev-scripts to 19.08.3 [markd 2019-11-25]
+	Updated devel/kde-dev-utils to 19.08.3 [markd 2019-11-25]
+	Updated misc/kmouth to 19.08.3 [markd 2019-11-25]
+	Updated misc/kmousetool to 19.08.3 [markd 2019-11-25]
+	Updated sysutils/ksystemlog to 19.08.3 [markd 2019-11-25]
