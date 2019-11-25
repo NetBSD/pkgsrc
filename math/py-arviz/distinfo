@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/25 04:08:33 minskim Exp $
+
+SHA1 (arviz-0.5.1.tar.gz) = dbf43b87e99854f9f8fe0f49bc9a474510153cb4
+RMD160 (arviz-0.5.1.tar.gz) = 47fe8fb776c1b943a81c559f7b60caef9f52680b
+SHA512 (arviz-0.5.1.tar.gz) = 79179870fc4529af495ff9f567222be3116bdeb85d71e5042a655374a4c07079af864d9b09e2b5f361356d825dbec956146d5201ff57d0df8b2d3c29dda42f33
+Size (arviz-0.5.1.tar.gz) = 1321172 bytes
