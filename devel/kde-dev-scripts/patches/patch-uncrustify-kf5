@@ -1,0 +1,37 @@
+$NetBSD: patch-uncrustify-kf5,v 1.1 2019/11/25 10:07:31 markd Exp $
+
+fix test ==
+
+--- uncrustify-kf5.orig	2019-11-25 09:27:21.260113613 +0000
++++ uncrustify-kf5
+@@ -53,14 +53,14 @@ if [ -z "$files" ]; then
+   exit 0
+ fi
+ 
+-if test -z "$QT_NORMALIZE_TOOL" && test "$ignore_connects" == "0"; then
++if test -z "$QT_NORMALIZE_TOOL" && test "$ignore_connects" = "0"; then
+   echo "Please export QT_NORMALIZE_TOOL=<qt5>/qtrepotools/util/normalize/normalize"
+   exit 1
+ fi
+ 
+ cfg=uncrustify.cfg
+ if ! test -f "$cfg"; then
+-  if test "$qt" == "1"; then
++  if test "$qt" = "1"; then
+     cfgfile=uncrustify-qt.cfg
+   else
+     cfgfile=uncrustify-kf5.cfg
+@@ -120,11 +120,11 @@ perl - $files <<EOF
+ EOF
+ 
+ # Normalize signals/slots
+-if test -n "$QT_NORMALIZE_TOOL" && test "$ignore_connects" == "1"; then
++if test -n "$QT_NORMALIZE_TOOL" && test "$ignore_connects" = "1"; then
+   $QT_NORMALIZE_TOOL --modify .
+ fi
+ 
+-if test "$commit" == "1"; then
++if test "$commit" = "1"; then
+   git commit -q -a -m "Code reformatted using kde-dev-scripts/`basename $0`"
+ fi
+ 
