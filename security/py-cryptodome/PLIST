@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/09/02 09:46:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/11/25 06:18:14 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -805,6 +805,9 @@ ${PYSITELIB}/Crypto/SelfTest/Util/test_asn1.pyo
 ${PYSITELIB}/Crypto/SelfTest/Util/test_number.py
 ${PYSITELIB}/Crypto/SelfTest/Util/test_number.pyc
 ${PYSITELIB}/Crypto/SelfTest/Util/test_number.pyo
+${PYSITELIB}/Crypto/SelfTest/Util/test_rfc1751.py
+${PYSITELIB}/Crypto/SelfTest/Util/test_rfc1751.pyc
+${PYSITELIB}/Crypto/SelfTest/Util/test_rfc1751.pyo
 ${PYSITELIB}/Crypto/SelfTest/Util/test_strxor.py
 ${PYSITELIB}/Crypto/SelfTest/Util/test_strxor.pyc
 ${PYSITELIB}/Crypto/SelfTest/Util/test_strxor.pyo
