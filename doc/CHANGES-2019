@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5110 2019/11/25 06:24:21 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5111 2019/11/25 06:42:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8236,3 +8236,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed graphics/libkface [markd 2019-11-25]
 	Updated security/py-cryptodome to 3.9.4 [adam 2019-11-25]
 	Updated devel/py-stevedore to 1.31.0 [adam 2019-11-25]
+	Updated time/py-parsedatetime to 2.5 [adam 2019-11-25]
+	Updated devel/py-parameterized to 0.7.1 [adam 2019-11-25]
