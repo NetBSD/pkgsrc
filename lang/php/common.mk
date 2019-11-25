@@ -1,4 +1,4 @@
-# $NetBSD: common.mk,v 1.6 2019/04/07 05:03:41 taca Exp $
+# $NetBSD: common.mk,v 1.7 2019/11/25 03:12:49 taca Exp $
 # used by lang/php56/Makefile.common
 # used by lang/php70/Makefile.common
 # used by lang/php71/Makefile.common
@@ -13,7 +13,7 @@ MASTER_SITES?=		https://www.php.net/distributions/ \
 			https://uk.php.net/distributions/ \
 			https://de.php.net/distributions/ \
 			https://us.php.net/distributions/
-EXTRACT_SUFX?=		.tar.bz2
+EXTRACT_SUFX?=		.tar.xz
 .endif
 
 HOMEPAGE?=		https://www.php.net/
