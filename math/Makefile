@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.437 2019/11/20 22:27:02 markd Exp $
+# $NetBSD: Makefile,v 1.438 2019/11/25 04:10:07 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -309,6 +309,7 @@ SUBDIR+=	py-Scientific-doc
 SUBDIR+=	py-Theano
 SUBDIR+=	py-abcpmc
 SUBDIR+=	py-almost
+SUBDIR+=	py-arviz
 SUBDIR+=	py-asteval
 SUBDIR+=	py-autograd
 SUBDIR+=	py-bottleneck
