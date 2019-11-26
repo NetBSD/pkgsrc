@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5155 2019/11/26 18:51:43 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5156 2019/11/26 18:53:32 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8307,3 +8307,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/gemrb to 0.8.6 [nia 2019-11-26]
 	Updated chat/bitlbee-mastodon to 1.4.3 [nia 2019-11-26]
 	Updated devel/flatzebra to 0.1.7 [nia 2019-11-26]
+	Added games/py-pysol_cards version 0.8.6 [markd 2019-11-26]
