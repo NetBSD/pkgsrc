@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.40 2019/08/22 12:23:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2019/11/26 18:10:55 markd Exp $
 
-DISTNAME=	kfloppy-${_KDE_VERSION}
-PKGREVISION=	14
+DISTNAME=	kfloppy-${KAPPSVER}
 CATEGORIES=	sysutils
+
+HOMEPAGE=	https://kde.org/applications/utilities/kfloppy/
 COMMENT=	KDE floppy formatter
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+
+USE_TOOLS+=	msgmerge
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/kxmlgui/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
