@@ -1,0 +1,3 @@
+Haunt is a static site generator written in Guile Scheme.
+Haunt features a functional build system and an extensible
+interface for reading articles in any format.
