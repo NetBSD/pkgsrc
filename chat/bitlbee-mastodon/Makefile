@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/07/28 15:21:08 nia Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/26 18:47:38 nia Exp $
 
-DISTNAME=	bitlbee-mastodon-1.4.2
+DISTNAME=	bitlbee-mastodon-1.4.3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kensanata/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +11,7 @@ COMMENT=	Mastodon protocol plugin for BitlBee
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	autoreconf autoconf automake
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gmake gsed
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
