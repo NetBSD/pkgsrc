@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19479 2019/11/26 12:32:50 wiz Exp $
+$NetBSD: TODO,v 1.19480 2019/11/26 12:40:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -885,7 +885,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmediawiki-4.14.0
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
-	o libntlm-1.5
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
