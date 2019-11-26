@@ -1,6 +1,7 @@
-$NetBSD: patch-src_sljit_sljitProtExecAllocator.c,v 1.1 2019/11/26 10:17:55 wiz Exp $
+$NetBSD: patch-src_sljit_sljitProtExecAllocator.c,v 1.2 2019/11/26 10:22:37 wiz Exp $
 
 NetBSD does not have secure_getenv.
+https://bugs.exim.org/show_bug.cgi?id=2469
 
 --- src/sljit/sljitProtExecAllocator.c.orig	2017-02-15 17:24:58.000000000 +0000
 +++ src/sljit/sljitProtExecAllocator.c
