@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.70 2019/11/20 18:13:52 adam Exp $
+# $NetBSD: Makefile,v 1.71 2019/11/26 10:22:17 wiz Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-base-${GIT_VERSION}
+PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (base package)
 
 CONFLICTS+=	scmgit-base-[0-9]*
@@ -94,8 +95,6 @@ CONFIGURE_ARGS+=	git_cv_ld_dashr=no
 INSTALL_ENV+=		NO_CROSS_DIRECTORY_HARDLINKS=1
 INSTALL_ENV+=		NO_INSTALL_HARDLINKS=1
 
-NOT_PAX_MPROTECT_SAFE=	bin/git	# pcre2
-
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/contrib/completion/git-completion.bash \
@@ -107,6 +106,7 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pcre2?=	pcre2>=10.34
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
