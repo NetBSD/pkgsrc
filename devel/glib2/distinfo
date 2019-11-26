@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.258 2019/11/14 12:26:05 ryoon Exp $
+$NetBSD: distinfo,v 1.259 2019/11/26 10:27:09 jperkin Exp $
 
 SHA1 (glib-2.62.2.tar.xz) = b2a4e6eea3132b4c8393c2f570711131ed960b73
 RMD160 (glib-2.62.2.tar.xz) = 4a2cb690579c755de38125081879633e739a3820
@@ -16,10 +16,11 @@ SHA1 (patch-gio_tests_gdbus-export.c) = 59d85ca079d02b52e33153c7d2ac1cc48c26707a
 SHA1 (patch-glib_gatomic.c) = 875ad9c828dcf2add356d4988d14fb4f1985aef8
 SHA1 (patch-glib_gatomic.h) = 21294cac483c3379198283c54fe6e24af3e630b1
 SHA1 (patch-glib_glibconfig.h.in) = 1964b5fb15317e681dad426d4862e3f48c4274f7
-SHA1 (patch-glib_gmain.c) = 2ab4b59e438d9f764bee62e0c1fa8bbd231b6e8d
+SHA1 (patch-glib_gmain.c) = b361e4f7fa285c1d9317468c2b1be390e8190e8b
 SHA1 (patch-glib_gtypes.h) = a659b770c55a8071a6e6afd8a9fccdf723e086e6
-SHA1 (patch-glib_meson.build) = f7990bc0a37c0d14437c7bbd44b1e60dd1f8245e
+SHA1 (patch-glib_meson.build) = bc429f6537c6dd5fa99137c35c0627a97d48a850
 SHA1 (patch-glib_tests_hash.c) = e928b22926ad917a7a201882a5105b25533554ae
+SHA1 (patch-glib_tests_include.c) = 12d98caebfb87c1146821d518c37c45f97fc7be0
 SHA1 (patch-glib_tests_meson.build) = d012ede92bd3202bde4e8fab9cf4c0ee9ca8d3d4
 SHA1 (patch-gmodule_gmodule-ar.c) = e382a0ada232e083d51cbede7f689a50ebeff4d8
 SHA1 (patch-gmodule_gmodule-dl.c) = b678a04debbc79ebb67d91db7716990658e76da4

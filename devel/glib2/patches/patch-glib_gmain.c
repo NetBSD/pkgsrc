@@ -1,4 +1,4 @@
-$NetBSD: patch-glib_gmain.c,v 1.2 2019/06/03 09:53:50 prlw1 Exp $
+$NetBSD: patch-glib_gmain.c,v 1.3 2019/11/26 10:27:09 jperkin Exp $
 
 Imported patch from the upstream Bugzilla:
 
@@ -7,9 +7,9 @@ Imported patch from the upstream Bugzilla:
 
 Tested on powerpc-apple-darwin9.
 
---- glib/gmain.c.orig	2014-11-09 21:54:26.000000000 +0000
+--- glib/gmain.c.orig	2019-10-21 17:18:40.000000000 +0000
 +++ glib/gmain.c
-@@ -2694,47 +2694,31 @@ g_get_monotonic_time (void)
+@@ -2758,47 +2758,31 @@ g_get_monotonic_time (void)
  gint64
  g_get_monotonic_time (void)
  {
@@ -27,13 +27,20 @@ Tested on powerpc-apple-darwin9.
 -       * picoseconds.  Try to deal nicely with that.
 -       */
 -      mach_timebase_info (&timebase_info);
--
++  /* we get nanoseconds from mach_absolute_time() using timebase_info */
++  mach_timebase_info (&timebase_info);
++  val = mach_absolute_time();
+ 
 -      /* We actually want microseconds... */
 -      if (timebase_info.numer % 1000 == 0)
 -        timebase_info.numer /= 1000;
 -      else
 -        timebase_info.denom *= 1000;
--
++  if (timebase_info.numer != timebase_info.denom)
++    {
++      guint64 t_high, t_low;
++      guint64 result_high, result_low;
+ 
 -      /* We want to make the numer 1 to avoid having to multiply... */
 -      if (timebase_info.denom % timebase_info.numer == 0)
 -        {
@@ -53,15 +60,6 @@ Tested on powerpc-apple-darwin9.
 -          g_error ("Got weird mach timebase info of %d/%d.  Please file a bug against GLib.",
 -                   timebase_info.numer, timebase_info.denom);
 -        }
-+  /* we get nanoseconds from mach_absolute_time() using timebase_info */
-+  mach_timebase_info (&timebase_info);
-+  val = mach_absolute_time();
-+
-+  if (timebase_info.numer != timebase_info.denom)
-+    {
-+      guint64 t_high, t_low;
-+      guint64 result_high, result_low;
-+
 +      /* 64 bit x 32 bit / 32 bit with 96-bit intermediate 
 +       * algorithm lifted from qemu */
 +      t_low = (val & 0xffffffffLL) * (guint64)timebase_info.numer;
