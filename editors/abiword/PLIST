@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2015/09/13 21:32:12 nros Exp $
+@comment $NetBSD: PLIST,v 1.28 2019/11/26 16:54:13 nia Exp $
 bin/abiword
 include/abiword-3.0/abiwidget.h
 include/abiword-3.0/libabiword.h
@@ -280,6 +280,7 @@ share/abiword-3.0/ui/xap_UnixDlg_Password.ui
 share/abiword-3.0/ui/xap_UnixDlg_PluginManager.ui
 share/abiword-3.0/ui/xap_UnixDlg_WindowMore.ui
 share/abiword-3.0/ui/xap_UnixDlg_Zoom.ui
+share/appdata/abiword.appdata.xml
 share/applications/abiword.desktop
 share/icons/hicolor/16x16/apps/abiword.png
 share/icons/hicolor/22x22/apps/abiword.png
