@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/04/27 18:33:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/11/26 10:17:55 wiz Exp $
 bin/pcre2-config
 bin/pcre2grep
 bin/pcre2test
@@ -35,6 +35,7 @@ man/man3/pcre2_general_context_create.3
 man/man3/pcre2_general_context_free.3
 man/man3/pcre2_get_error_message.3
 man/man3/pcre2_get_mark.3
+man/man3/pcre2_get_match_data_size.3
 man/man3/pcre2_get_ovector_count.3
 man/man3/pcre2_get_ovector_pointer.3
 man/man3/pcre2_get_startchar.3
@@ -45,6 +46,7 @@ man/man3/pcre2_jit_stack_assign.3
 man/man3/pcre2_jit_stack_create.3
 man/man3/pcre2_jit_stack_free.3
 man/man3/pcre2_maketables.3
+man/man3/pcre2_maketables_free.3
 man/man3/pcre2_match.3
 man/man3/pcre2_match_context_copy.3
 man/man3/pcre2_match_context_create.3
@@ -134,6 +136,7 @@ share/doc/pcre2/html/pcre2_general_context_create.html
 share/doc/pcre2/html/pcre2_general_context_free.html
 share/doc/pcre2/html/pcre2_get_error_message.html
 share/doc/pcre2/html/pcre2_get_mark.html
+share/doc/pcre2/html/pcre2_get_match_data_size.html
 share/doc/pcre2/html/pcre2_get_ovector_count.html
 share/doc/pcre2/html/pcre2_get_ovector_pointer.html
 share/doc/pcre2/html/pcre2_get_startchar.html
@@ -144,6 +147,7 @@ share/doc/pcre2/html/pcre2_jit_stack_assign.html
 share/doc/pcre2/html/pcre2_jit_stack_create.html
 share/doc/pcre2/html/pcre2_jit_stack_free.html
 share/doc/pcre2/html/pcre2_maketables.html
+share/doc/pcre2/html/pcre2_maketables_free.html
 share/doc/pcre2/html/pcre2_match.html
 share/doc/pcre2/html/pcre2_match_context_copy.html
 share/doc/pcre2/html/pcre2_match_context_create.html
