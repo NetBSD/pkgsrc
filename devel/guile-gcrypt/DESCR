@@ -1,0 +1,8 @@
+Guile-Gcrypt provides a Guile 2.x interface to a subset of the
+GNU Libgcrypt crytographic library, which is itself used by the
+GNU Privacy Guard (GPG).
+
+Guile-Gcrypt provides modules for cryptographic hash functions,
+message authentication codes (MAC), public-key cryptography, strong
+randomness, and more. It is implemented using the foreign function
+interface (FFI) of Guile.
