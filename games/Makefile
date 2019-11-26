@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.470 2019/11/17 17:56:48 nia Exp $
+# $NetBSD: Makefile,v 1.471 2019/11/26 18:52:04 markd Exp $
 #
 
 COMMENT=	Games
@@ -318,6 +318,7 @@ SUBDIR+=	prboom-plus
 SUBDIR+=	pushover
 SUBDIR+=	puzzles
 SUBDIR+=	py-easyAI
+SUBDIR+=	py-pysol_cards
 SUBDIR+=	py-ranking
 SUBDIR+=	py-renpy
 SUBDIR+=	py-trueskill
