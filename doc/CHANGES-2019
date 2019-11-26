@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5122 2019/11/26 09:05:36 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5123 2019/11/26 09:06:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8271,3 +8271,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated meta-pkgs/modular-xorg-libs to 1.11 [wiz 2019-11-25]
 	Removed x11/libxkbui [wiz 2019-11-25]
 	Updated x11/xdpyinfo to 1.3.2nb3 [wiz 2019-11-26]
+	Updated meta-pkgs/modular-xorg-libs to 1.12 [wiz 2019-11-26]
