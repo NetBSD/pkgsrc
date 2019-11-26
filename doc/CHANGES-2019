@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5152 2019/11/26 18:35:44 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.5153 2019/11/26 18:42:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8304,3 +8304,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed graphics/ksnapshot successor graphics/spectacle [markd 2019-11-26]
 	Updated devel/include-what-you-use to 0.13 [nia 2019-11-26]
 	Updated www/nsm to 1.20 [ng0 2019-11-26]
+	Updated games/gemrb to 0.8.6 [nia 2019-11-26]
