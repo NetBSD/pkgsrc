@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/26 18:50:59 markd Exp $
+
+SHA1 (pysol_cards-0.8.6.tar.gz) = e24e4310fbb96eaf183298e14351d2b7499e4a9a
+RMD160 (pysol_cards-0.8.6.tar.gz) = 5b3f8885fb9a8a51dbd9c9e91e48d1a150b5ff7d
+SHA512 (pysol_cards-0.8.6.tar.gz) = da446e0deed0f8ff60a4da82a8bce5d1884d35e52ee887a6b07b82fa6fbf04b07d1758b8039532db5163f89395239295f6eec1f278cd183b22e41f1e90416040
+Size (pysol_cards-0.8.6.tar.gz) = 17674 bytes
