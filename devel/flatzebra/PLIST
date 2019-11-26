@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/28 20:26:46 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/26 18:51:18 nia Exp $
 include/flatzebra-0.1/flatzebra/Couple.h
 include/flatzebra-0.1/flatzebra/GameEngine.h
 include/flatzebra-0.1/flatzebra/Joystick.h
@@ -13,8 +13,6 @@ lib/libflatzebra-0.1.la
 lib/pkgconfig/flatzebra-0.1.pc
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/COPYING
-share/doc/${PKGNAME}/INSTALL
 share/doc/${PKGNAME}/NEWS
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/THANKS
-share/doc/${PKGNAME}/TODO
