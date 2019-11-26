@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/06/02 08:45:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/11/26 18:34:31 nia Exp $
 bin/fix_includes.py
 bin/include-what-you-use
 bin/iwyu_tool.py
@@ -14,5 +14,6 @@ share/include-what-you-use/gcc.symbols.imp
 share/include-what-you-use/iwyu.gcc.imp
 share/include-what-you-use/libcxx.imp
 share/include-what-you-use/qt4.imp
+share/include-what-you-use/qt5_11.imp
 share/include-what-you-use/qt5_4.imp
 share/include-what-you-use/stl.c.headers.imp
