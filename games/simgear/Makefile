@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.95 2019/11/07 12:38:03 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2019/11/26 22:40:07 nia Exp $
 
-DISTNAME=	simgear-2018.3.2
-PKGREVISION=	11
+DISTNAME=	simgear-2019.1.1
 CATEGORIES=	games devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-2018.3/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.flightgear.org/
+HOMEPAGE=	https://www.flightgear.org/
 COMMENT=	Simulator Construction Tools
 LICENSE=	gnu-lgpl-v2
 

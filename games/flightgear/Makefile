@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.98 2019/11/07 12:38:05 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2019/11/26 22:40:07 nia Exp $
 
-DISTNAME=	flightgear-2018.3.2
-PKGREVISION=	14
+DISTNAME=	flightgear-2019.1.1
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-2018.3/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -30,7 +29,7 @@ pre-configure:
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.simgear+=	simgear>=2018.3.0
+BUILDLINK_API_DEPENDS.simgear+=	simgear>=2019.1.1
 .include "../../games/simgear/buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
