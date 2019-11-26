@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2019/05/06 10:24:25 adam Exp $
+# $NetBSD: Makefile,v 1.18 2019/11/26 19:13:01 adam Exp $
 
-DISTNAME=	daphne-2.3.0
+DISTNAME=	daphne-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/daphne/}
@@ -20,7 +20,8 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} daphne daphne-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} daphne daphne-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
