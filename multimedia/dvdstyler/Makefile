@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2019/07/21 22:25:25 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2019/11/26 14:15:22 wiz Exp $
 
-DISTNAME=	DVDStyler-2.7.1
-PKGREVISION=	19
+DISTNAME=	DVDStyler-3.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvdstyler/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,24 +19,22 @@ DEPENDS+=	dvd+rw-tools-[0-9]*:../../sysutils/dvd+rw-tools
 DEPENDS+=	mpgtx-[0-9]*:../../graphics/mpgtx
 # uses mplex (optionally)
 DEPENDS+=	mjpegtools-[0-9]*:../../multimedia/mjpegtools
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake lex pkg-config msgfmt zip
 GNU_CONFIGURE=		yes
 LDFLAGS+=		-ljpeg
-CONFIGURE_ARGS+=	FFMPEG_PATH=${BUILDLINK_PREFIX.ffmpeg1}/bin/ffmpeg1
+CONFIGURE_ARGS+=	FFMPEG_PATH=${BUILDLINK_PREFIX.ffmpeg4}/bin/ffmpeg4
 
 post-install:
 	cd ${WRKSRC}/templates && ${SETENV} ${INSTALL_ENV} ${GMAKE} install
 
-.include "../../graphics/libexif/buildlink3.mk"
-BUILDLINK_API_DEPENDS.wxsvg+= wxsvg>=1.1.14
+#.include "../../graphics/libexif/buildlink3.mk"
+BUILDLINK_API_DEPENDS.wxsvg+= wxsvg>=1.5.20
 .include "../../graphics/wxsvg/buildlink3.mk"
-.include "../../multimedia/ffmpeg1/buildlink3.mk"
-# needs mediactrl
-BUILDLINK_API_DEPENDS.wxGTK28+= wxGTK28>=2.8.10nb14
-.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
