@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2019/11/23 06:58:14 mef Exp $
+# $NetBSD: Makefile,v 1.34 2019/11/26 10:24:11 markd Exp $
 
-DISTNAME=	cfitsio3450
-PKGNAME=	${DISTNAME:S/o3/o-3./}
+DISTNAME=	cfitsio-3.47
+PKGNAME=	${DISTNAME}0
 CATEGORIES=	devel
 MASTER_SITES=	http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/
 
@@ -11,7 +11,6 @@ COMMENT=	FITS (flexible image transport system) file input and output
 # similar; no copyright claim.
 LICENSE=	isc
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/-.*//}
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c # fortran
 USE_LIBTOOL=	YES
