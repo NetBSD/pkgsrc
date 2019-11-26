@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2013/09/15 17:32:44 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2019/11/26 12:39:45 wiz Exp $
 
-DISTNAME=	libntlm-1.4
+DISTNAME=	libntlm-1.5
 CATEGORIES=	security
 MASTER_SITES=	http://www.nongnu.org/libntlm/releases/
 
