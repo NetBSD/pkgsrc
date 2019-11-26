@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5126 2019/11/26 10:05:28 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5127 2019/11/26 10:18:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8275,3 +8275,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/libdmx [wiz 2019-11-26]
 	Updated x11/modular-xorg-server to 1.20.6 [wiz 2019-11-26]
 	Updated x11/xkbprint to 1.0.5 [wiz 2019-11-26]
+	Updated devel/pcre2 to 10.34 [wiz 2019-11-26]
