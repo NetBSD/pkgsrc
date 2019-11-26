@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/28 23:18:26 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/26 18:54:05 nia Exp $
 bin/burgerspace
 bin/burgerspace-server
 man/man6/burgerspace-server.6
@@ -6,11 +6,9 @@ man/man6/burgerspace.6
 share/applications/burgerspace.desktop
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/COPYING
-share/doc/${PKGNAME}/INSTALL
 share/doc/${PKGNAME}/NEWS
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/THANKS
-share/doc/${PKGNAME}/TODO
 share/pixmaps/burgerspace.png
 share/sounds/burgerspace/chef-gets-treat.wav
 share/sounds/burgerspace/chef-shoots-blanks.wav
