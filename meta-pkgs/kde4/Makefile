@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2019/11/25 10:20:26 markd Exp $
+# $NetBSD: Makefile,v 1.52 2019/11/26 18:23:57 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -88,8 +88,6 @@ DEPENDS+=	picmi>=4.14.3:../../games/picmi
 DEPENDS+=	kamera>=4.14.3:../../graphics/kamera
 DEPENDS+=	kde-base-artwork-15.08.3{,nb[0-9]*}:../../graphics/kde-base-artwork
 DEPENDS+=	gwenview>=4.14.3:../../graphics/gwenview
-DEPENDS+=	ksaneplugin-16.12.0{,nb[0-9]*}:../../graphics/ksaneplugin
-DEPENDS+=	ksnapshot-15.08.3{,nb[0-9]*}:../../graphics/ksnapshot
 DEPENDS+=	kcolorchooser>=15.12.0:../../graphics/kcolorchooser
 DEPENDS+=	kgamma-4.14.3{,nb[0-9]*}:../../graphics/kgamma
 DEPENDS+=	kruler>=4.14.3:../../graphics/kruler
@@ -139,7 +137,7 @@ DEPENDS+=	filelight>=4.14.3:../../sysutils/filelight
 DEPENDS+=	kcalc>=4.14.3:../../math/kcalc
 DEPENDS+=	kcharselect>=4.14.3:../../misc/kcharselect
 DEPENDS+=	kdf>=16.04.0:../../sysutils/kdf
-DEPENDS+=	kfloppy-4.14.3{,nb[0-9]*}:../../sysutils/kfloppy
+DEPENDS+=	kfloppy>=4.14.3:../../sysutils/kfloppy
 DEPENDS+=	kremotecontrol-16.12.0{,nb[0-9]*}:../../misc/kremotecontrol
 DEPENDS+=	ktimer>=4.14.3:../../time/ktimer
 DEPENDS+=	kwalletmanager-4.14.3{,nb[0-9]*}:../../security/kwalletmanager
