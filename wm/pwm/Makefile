@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.38 2019/01/26 20:50:50 is Exp $
-#
+# $NetBSD: Makefile,v 1.39 2019/11/26 13:34:05 wiz Exp $
 
-DISTNAME=	pwm-20060517
-PKGNAME=	${DISTNAME:S/-/-1.0./}
-PKGREVISION=	3
+DISTNAME=	pwm-20070720
 CATEGORIES=	wm x11
-MASTER_SITES=	http://modeemi.fi/~tuomov/pwm/dl/
+MASTER_SITES=	https://tuomov.iki.fi/software/dl/
 
 MAINTAINER=	salo@NetBSD.org
-#HOMEPAGE=	http://modeemi.fi/~tuomov/ion/pwm.html
+HOMEPAGE=	https://tuomov.iki.fi/software/
 COMMENT=	Window manager that frames multiple client windows in a single frame
 
 # pwm is linked against libtu.a before it is build.

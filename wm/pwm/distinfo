@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.21 2019/01/26 20:50:50 is Exp $
+$NetBSD: distinfo,v 1.22 2019/11/26 13:34:05 wiz Exp $
 
-SHA1 (pwm-20060517.tar.gz) = d69dd232e07c20a053d1eec92355ee5134a422b3
-RMD160 (pwm-20060517.tar.gz) = a2df30c1a4b68b569b5c9e3ec3a8c4ff003714ab
-SHA512 (pwm-20060517.tar.gz) = bcdfc21183acdce5fa7ece6fc5dc305397981ab9c0f6a8c3e41421ddd56b12c26ee06d1b69ffc40fc7f8cde2e988707ca772d79aafcf39e5f309e6c1bdc2fbc3
-Size (pwm-20060517.tar.gz) = 153106 bytes
+SHA1 (pwm-20070720.tar.gz) = f1985c729cb0a4158d2b7f55d23ad58f6d323c55
+RMD160 (pwm-20070720.tar.gz) = 6fe8e4f42fd69c1cbdf2f87e41fc7ff99a3a622e
+SHA512 (pwm-20070720.tar.gz) = 26712b0d7962a97410a559b98642a4e94d001103f45e96a67ff8bfa35574144fd3411206d84bbbe02a417ccf31f709de569a9be59d48bfad98cd2c54989f2f4e
+Size (pwm-20070720.tar.gz) = 158213 bytes
 SHA1 (patch-aa) = 991d7871bc2f804163483cce9935c4e8c914d7d4
 SHA1 (patch-ac) = 793f1348e45a6ee3e21b5fa5ff02b00d1dd48ef1
 SHA1 (patch-af) = 1f302ae3b78c436bd5170dea55e77e8e00f789d0
