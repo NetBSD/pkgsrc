@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/11/29 18:35:37 wiedi Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/26 12:43:42 wiz Exp $
 
-DISTNAME=	hiredis-0.13.3
+DISTNAME=	hiredis-0.14.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=redis/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
