@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.840 2019/10/21 19:15:52 adam Exp $
+# $NetBSD: Makefile,v 1.841 2019/11/26 19:36:19 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -315,7 +315,6 @@ SUBDIR+=	iwi-firmware
 SUBDIR+=	iwi-firmware3
 SUBDIR+=	iwn-firmware
 SUBDIR+=	k3b
-SUBDIR+=	k4dirstat
 SUBDIR+=	kcron
 SUBDIR+=	kdbusaddons
 SUBDIR+=	kdf
