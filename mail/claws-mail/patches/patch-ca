@@ -1,8 +1,8 @@
-$NetBSD: patch-ca,v 1.4 2016/01/31 13:37:08 nros Exp $
+$NetBSD: patch-ca,v 1.5 2019/11/26 19:13:25 nia Exp $
 
---- src/plugins/vcalendar/vcal_folder.c.orig	2014-01-14 12:32:26.000000000 +0000
+--- src/plugins/vcalendar/vcal_folder.c.orig	2019-01-27 15:57:37.000000000 +0000
 +++ src/plugins/vcalendar/vcal_folder.c
-@@ -766,7 +766,7 @@ GSList *vcal_get_events_list(FolderItem 
+@@ -778,7 +778,7 @@ GSList *vcal_get_events_list(FolderItem 
          			struct icaltimetype dtstart;
          			struct icaltimetype next;
          			icalrecur_iterator* ritr;
@@ -10,3 +10,4 @@ $NetBSD: patch-ca,v 1.4 2016/01/31 13:37:08 nros Exp $
 +				time_t duration = (time_t) 0;
  				struct icaldurationtype ical_dur;
  				int i = 0;
+ 
