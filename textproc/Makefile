@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1071 2019/11/19 21:30:15 maya Exp $
+# $NetBSD: Makefile,v 1.1072 2019/11/26 16:52:25 ng0 Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -238,6 +238,7 @@ SUBDIR+=	gspell
 SUBDIR+=	gtk-doc
 SUBDIR+=	gtkspell
 SUBDIR+=	gtkspell3
+SUBDIR+=	guile-commonmark
 SUBDIR+=	guile-json
 SUBDIR+=	guile-syntax-highlight
 SUBDIR+=	gutcheck
