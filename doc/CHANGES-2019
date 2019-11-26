@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5147 2019/11/26 16:55:23 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5148 2019/11/26 17:41:02 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8297,3 +8297,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added textproc/guile-commonmark version 0.1.2 [ng0 2019-11-26]
 	Updated editors/abiword to 3.0.3 [nia 2019-11-26]
 	Updated editors/abiword-plugins to 3.0.3 [nia 2019-11-26]
+	Added devel/guile-gcrypt version 0.1.0 [ng0 2019-11-26]
