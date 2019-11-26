@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5136 2019/11/26 12:51:00 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5137 2019/11/26 12:59:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8286,3 +8286,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-setuptools to 42.0.1 [wiz 2019-11-26]
 	Updated databases/hiredis to 0.14.0 [wiz 2019-11-26]
 	Updated graphics/ImageMagick to 7.0.9.5 [wiz 2019-11-26]
+	Updated devel/glib2 to 2.62.3 [wiz 2019-11-26]
