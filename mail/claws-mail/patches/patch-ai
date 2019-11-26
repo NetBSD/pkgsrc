@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.2 2015/04/03 12:34:44 nros Exp $
+$NetBSD: patch-ai,v 1.3 2019/11/26 19:13:25 nia Exp $
 
---- src/Makefile.in.orig	2014-10-27 18:59:09.000000000 +0000
+--- src/Makefile.in.orig	2019-07-26 11:01:25.000000000 +0000
 +++ src/Makefile.in
-@@ -614,7 +614,7 @@ top_srcdir = @top_srcdir@
+@@ -734,7 +734,7 @@ unity_LIBS = @unity_LIBS@
  @CLAWS_LIBETPAN_TRUE@etpan_dir = etpan
  @CLAWS_LIBETPAN_FALSE@etpan_library = 
  @CLAWS_LIBETPAN_TRUE@etpan_library = etpan/libclawsetpan.la
--SUBDIRS = common gtk $(etpan_dir) . plugins 
-+SUBDIRS = common gtk $(etpan_dir) . 
- @PLATFORM_WIN32_TRUE@LTRCCOMPILE = $(LIBTOOL) --mode=compile --tag=RC $(RC) \
- @PLATFORM_WIN32_TRUE@     `echo $(DEFS) $(DEFAULT_INCLUDES) $(IFLAGS) | \
- @PLATFORM_WIN32_TRUE@     sed -e 's/-I/--include-dir /g;s/-D/--define /g'`
+-SUBDIRS = common gtk $(etpan_dir) . plugins $(am__append_1)
++SUBDIRS = common gtk $(etpan_dir) . $(am__append_1)
+ @BUILD_TESTS_TRUE@GTESTER = gtester
+ @BUILD_TESTS_TRUE@GTESTER_REPORT = gtester-report
+ 
