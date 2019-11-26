@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/11/25 22:32:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/11/26 10:02:42 wiz Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
 PKGNAME=	modular-xorg-xwayland-${XORG_VERSION}
-PKGREVISION=	2
 
 DISTINFO_FILE=		${.CURDIR}/../../x11/modular-xorg-server/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/modular-xorg-server/patches
