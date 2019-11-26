@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5146 2019/11/26 16:54:35 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5147 2019/11/26 16:55:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8296,3 +8296,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/rust to 1.39.0nb1 [ryoon 2019-11-26]
 	Added textproc/guile-commonmark version 0.1.2 [ng0 2019-11-26]
 	Updated editors/abiword to 3.0.3 [nia 2019-11-26]
+	Updated editors/abiword-plugins to 3.0.3 [nia 2019-11-26]
