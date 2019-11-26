@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2019/11/25 22:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2019/11/26 09:05:40 wiz Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-libs-1.11
+PKGNAME=	modular-xorg-libs-1.12
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 DISTFILES=	# empty
@@ -18,7 +18,6 @@ META_PACKAGE=	yes
 .if ${OPSYS} == "Darwin"
 .include "../../wm/libAppleWM/buildlink3.mk"
 .endif
-.include "../../x11/libdmx/buildlink3.mk"
 .include "../../x11/libFS/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
