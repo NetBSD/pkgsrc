@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/10/22 10:34:34 ng0 Exp $
+$NetBSD: distinfo,v 1.2 2019/11/26 18:32:29 ng0 Exp $
 
-SHA1 (nsm-1.15.tar.gz) = 8122a8faba3be0f74277ffe9b2c646e1a1858da9
-RMD160 (nsm-1.15.tar.gz) = e7988ea76ce0cccfdd45f18be0f3506fe7e2644a
-SHA512 (nsm-1.15.tar.gz) = cbd8d0f791f5715b1995bc06baa41c4e79fef4feaf38df2c8735021fe20b8c410d127bcb4b01caf97039e686bb451ecb0f326ed8de3ca954c37c29207c4ab023
-Size (nsm-1.15.tar.gz) = 96116 bytes
-SHA1 (patch-Makefile) = d38e46954af1630dc603e2d135e02884c50c2b27
+SHA1 (nsm-1.20.tar.gz) = 80988b78c96ff44521c280f808a563f9d3603732
+RMD160 (nsm-1.20.tar.gz) = fba7c59414550658ca2444a8056688af971e6b72
+SHA512 (nsm-1.20.tar.gz) = 0964b920dde598795dde7f3fe96480b27c73e66f5fc0d9a73603c231b6a56e3676b4de33b92a0862833f3af26c12bdca8f79dee3f852397e12c4e9cb03ffc29b
+Size (nsm-1.20.tar.gz) = 34184 bytes
