@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2019/10/18 12:31:02 nia Exp $
+# $NetBSD: Makefile,v 1.83 2019/11/26 22:14:41 nia Exp $
 
 DISTNAME=	brasero-3.12.2
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/brasero/3.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/brasero/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,6 +17,7 @@ USE_TOOLS+=	msgfmt xgettext
 USE_TOOLS+=	gmake
 
 TOOL_DEPENDS+=	p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 CONFIGURE_ARGS+=	--disable-nautilus
 
