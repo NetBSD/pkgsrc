@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5138 2019/11/26 13:08:07 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5139 2019/11/26 13:11:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8288,3 +8288,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/ImageMagick to 7.0.9.5 [wiz 2019-11-26]
 	Updated devel/glib2 to 2.62.3 [wiz 2019-11-26]
 	Updated multimedia/py-gstreamer1 to 1.16.1 [wiz 2019-11-26]
+	Updated security/py-asn1-modules to 0.2.8 [wiz 2019-11-26]
