@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.131 2019/11/20 19:07:12 minskim Exp $
+# $NetBSD: Makefile,v 1.132 2019/11/26 14:41:13 ryoon Exp $
 
 DISTNAME=	rustc-1.39.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
@@ -284,6 +285,9 @@ BUILD_DEPENDS+=		gzip>=0:../../archivers/gzip
 TOOLS_CREATE+=		md5sum
 TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
 TOOLS_PLATFORM.gzcat=	${PREFIX}/bin/gzip -cd
+.endif
+.if ${OPSYS} == "NetBSD"
+DEPENDS+=		mozilla-rootcerts-openssl-[0-9]*:../../security/mozilla-rootcerts-openssl
 .endif
 
 SUBST_CLASSES+=		rpath
