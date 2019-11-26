@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19478 2019/11/26 10:18:19 wiz Exp $
+$NetBSD: TODO,v 1.19479 2019/11/26 12:32:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,7 +422,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap-scgi-1.15
 	o ap-xslt-1.4.3
 	o ap2-auth-ldap-3.11
-	o ap2-perl-2.0.11
 	o ap2-transform-0.6.0
 	o ap22-authnz-external-3.3.2
 	o ap22-limitipconn-0.24
@@ -651,7 +650,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glib2-2.62.3
 	o gliv-1.9.7
 	o glom-1.14.2
-	o gmime3-3.2.5
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.30.1
