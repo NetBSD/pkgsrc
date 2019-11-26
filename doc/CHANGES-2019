@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5130 2019/11/26 11:03:24 leot Exp $
+$NetBSD: CHANGES-2019,v 1.5131 2019/11/26 12:32:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8279,3 +8279,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/git-base to 2.24.0nb1 [wiz 2019-11-26]
 	Updated devel/cfitsio to 3.470 [markd 2019-11-26]
 	Updated news/sfeed to 0.9.15 [leot 2019-11-26]
+	Updated mail/gmime3 to 3.2.5 [wiz 2019-11-26]
