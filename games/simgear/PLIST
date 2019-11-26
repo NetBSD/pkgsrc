@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/03/15 13:59:05 nia Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/11/26 22:40:07 nia Exp $
 include/simgear/bucket/newbucket.hxx
 include/simgear/bvh/BVHBoundingBoxVisitor.hxx
 include/simgear/bvh/BVHGroup.hxx
@@ -270,6 +270,7 @@ include/simgear/scene/util/QuadTreeBuilder.hxx
 include/simgear/scene/util/RenderConstants.hxx
 include/simgear/scene/util/SGDebugDrawCallback.hxx
 include/simgear/scene/util/SGEnlargeBoundingBox.hxx
+include/simgear/scene/util/SGImageUtils.hxx
 include/simgear/scene/util/SGNodeMasks.hxx
 include/simgear/scene/util/SGPickCallback.hxx
 include/simgear/scene/util/SGReaderWriterOptions.hxx
@@ -285,6 +286,11 @@ include/simgear/scene/util/UpdateOnceCallback.hxx
 include/simgear/scene/util/VectorArrayAdapter.hxx
 include/simgear/scene/util/parse_color.hxx
 include/simgear/scene/util/project.hxx
+include/simgear/scene/viewer/ClusteredForward.hxx
+include/simgear/scene/viewer/Compositor.hxx
+include/simgear/scene/viewer/CompositorBuffer.hxx
+include/simgear/scene/viewer/CompositorPass.hxx
+include/simgear/scene/viewer/CompositorUtil.hxx
 include/simgear/screen/colors.hxx
 include/simgear/screen/extensions.hxx
 include/simgear/screen/screen-dump.hxx
