@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.25 2018/11/08 07:29:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.26 2019/11/26 19:13:25 nia Exp $
 bin/claws-mail
-bin/sylpheed-claws
+bin/claws-mail-shred
 include/claws-mail/account.h
 include/claws-mail/action.h
 include/claws-mail/adbookbase.h
@@ -29,9 +29,10 @@ include/claws-mail/autofaces.h
 include/claws-mail/avatars.h
 include/claws-mail/browseldap.h
 include/claws-mail/claws-features.h
-include/claws-mail/codeconv.h
 include/claws-mail/common/claws.h
+include/claws-mail/common/codeconv.h
 include/claws-mail/common/defs.h
+include/claws-mail/common/file-utils.h
 include/claws-mail/common/hooks.h
 include/claws-mail/common/log.h
 include/claws-mail/common/md5.h
@@ -54,6 +55,7 @@ include/claws-mail/common/tags.h
 include/claws-mail/common/template.h
 include/claws-mail/common/timing.h
 include/claws-mail/common/tlds.h
+include/claws-mail/common/unmime.h
 include/claws-mail/common/utils.h
 include/claws-mail/common/uuencode.h
 include/claws-mail/common/version.h
@@ -72,8 +74,8 @@ include/claws-mail/editldap.h
 include/claws-mail/editldap_basedn.h
 include/claws-mail/edittags.h
 include/claws-mail/editvcard.h
-include/claws-mail/entity.h
 include/claws-mail/enriched.h
+include/claws-mail/entity.h
 include/claws-mail/etpan/etpan-errors.h
 include/claws-mail/etpan/etpan-ssl.h
 include/claws-mail/etpan/etpan-thread-manager-types.h
@@ -102,7 +104,6 @@ include/claws-mail/gtk/combobox.h
 include/claws-mail/gtk/description_window.h
 include/claws-mail/gtk/filesel.h
 include/claws-mail/gtk/foldersort.h
-include/claws-mail/gtk/gdkkeysyms-new.h
 include/claws-mail/gtk/gtkaspell.h
 include/claws-mail/gtk/gtkcmclist.h
 include/claws-mail/gtk/gtkcmctree.h
@@ -222,7 +223,6 @@ include/claws-mail/summaryview.h
 include/claws-mail/textview.h
 include/claws-mail/toolbar.h
 include/claws-mail/undo.h
-include/claws-mail/unmime.h
 include/claws-mail/uri_opener.h
 include/claws-mail/vcard.h
 include/claws-mail/viewtypes.h
@@ -254,6 +254,7 @@ share/locale/nb/LC_MESSAGES/claws-mail.mo
 share/locale/nl/LC_MESSAGES/claws-mail.mo
 share/locale/pl/LC_MESSAGES/claws-mail.mo
 share/locale/pt_BR/LC_MESSAGES/claws-mail.mo
+share/locale/pt_PT/LC_MESSAGES/claws-mail.mo
 share/locale/ro/LC_MESSAGES/claws-mail.mo
 share/locale/ru/LC_MESSAGES/claws-mail.mo
 share/locale/sk/LC_MESSAGES/claws-mail.mo

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2018/12/01 17:31:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/26 19:13:26 nia Exp $
 #
 META_PACKAGE=	yes
 
-PKGREVISION= 1
 .include "../../mail/claws-mail/Makefile.vers"
 
 DISTNAME=	claws-mail-pgp-${CLAWS_VERSION}

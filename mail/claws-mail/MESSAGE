@@ -1,14 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2008/10/15 16:22:02 smb Exp $
+$NetBSD: MESSAGE,v 1.3 2019/11/26 19:13:25 nia Exp $
 
 All Claws-Mail plug-ins are separate packages, and must be installed
 separately.
-
-When upgrading to 3.6.1 from earlier versions, be aware of two things.
-First, all user-specified keyboard shortcuts will have to be recreated.
-Second, the default spell-checker has changed from aspell to enchant, and
-the default installation of enchant from pkgsrc does not include aspell.
-You'll need to either install per-language dictionaries for the supported
-spell-checkers or rebuild enchant with aspell enabled.
 
 ===========================================================================
