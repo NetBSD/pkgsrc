@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/10/22 10:34:34 ng0 Exp $
+# $NetBSD: Makefile,v 1.2 2019/11/26 18:32:29 ng0 Exp $
 
-DISTNAME=	nsm-1.15
+DISTNAME=	nsm-1.20
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nifty-site-manager/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
