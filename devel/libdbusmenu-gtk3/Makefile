@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/06 14:34:30 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/26 14:28:20 jmcneill Exp $
 
 PKGREVISION= 15
 .include "../../meta-pkgs/libdbusmenu/Makefile.common"
@@ -18,6 +18,8 @@ post-configure:
 		${WRKSRC}/libdbusmenu-glib/
 
 BUILD_DIRS=	libdbusmenu-gtk
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../devel/libdbusmenu-glib/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
