@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2015/03/01 12:17:57 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/11/26 14:14:23 wiz Exp $
 bin/svgview
 include/wxSVG/Animated.h
+include/wxSVG/CSSRule.h
 include/wxSVG/CSSStyleDeclaration.h
 include/wxSVG/CSSValue.h
 include/wxSVG/CSSValues.h
@@ -10,6 +11,7 @@ include/wxSVG/DocumentEvent.h
 include/wxSVG/Element.h
 include/wxSVG/ElementTimeControl.h
 include/wxSVG/EventTarget.h
+include/wxSVG/ExifHandler.h
 include/wxSVG/GetSVGDocument.h
 include/wxSVG/NodeList.h
 include/wxSVG/NodeListCls.h
@@ -181,6 +183,7 @@ include/wxSVG/SVGViewSpec.h
 include/wxSVG/SVGZoomAndPan.h
 include/wxSVG/SVGZoomEvent.h
 include/wxSVG/String_wxsvg.h
+include/wxSVG/UIEvent.h
 include/wxSVG/ViewCSS.h
 include/wxSVG/imagsvg.h
 include/wxSVG/mediadec_ffmpeg.h
