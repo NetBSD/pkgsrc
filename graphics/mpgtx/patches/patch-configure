@@ -1,0 +1,20 @@
+$NetBSD: patch-configure,v 1.1 2019/11/26 13:52:23 wiz Exp $
+
+Honor CFLAGS/LDFLAGS from environment.
+
+--- configure.orig	2005-01-02 21:19:23.000000000 +0000
++++ configure
+@@ -15,11 +15,11 @@ devel_cflags="-g -Werror -fno-builtin"
+ optimization_cflags="-O3"
+ release_cflags=$optimization_cflags
+ OFLAGS="-ansi"
+-cflags=$common_cflags
++cflags=$common_cflags ${CFLAGS}
+ 
+ #linker flags
+ 
+-lflags=""
++lflags=${LDFLAGS}
+ 
+ #state vars
+ debug="no"
