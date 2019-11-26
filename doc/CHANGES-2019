@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5163 2019/11/26 22:24:31 sevan Exp $
+$NetBSD: CHANGES-2019,v 1.5164 2019/11/26 22:40:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8317,3 +8317,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed sysutils/k4dirstat successor sysutils/qdirstat [markd 2019-11-26]
 	Added graphics/py-matplotlib-venn version 0.11.5 [minskim 2019-11-26]
 	Updated security/openssl to 1.0.2t [sevan 2019-11-26]
+	Updated games/simgear to 2019.1.1 [nia 2019-11-26]
