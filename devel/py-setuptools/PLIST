@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2019/10/29 15:15:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.49 2019/11/26 12:41:36 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -94,6 +94,9 @@ ${PYSITELIB}/setuptools/_vendor/packaging/requirements.pyo
 ${PYSITELIB}/setuptools/_vendor/packaging/specifiers.py
 ${PYSITELIB}/setuptools/_vendor/packaging/specifiers.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/specifiers.pyo
+${PYSITELIB}/setuptools/_vendor/packaging/tags.py
+${PYSITELIB}/setuptools/_vendor/packaging/tags.pyc
+${PYSITELIB}/setuptools/_vendor/packaging/tags.pyo
 ${PYSITELIB}/setuptools/_vendor/packaging/utils.py
 ${PYSITELIB}/setuptools/_vendor/packaging/utils.pyc
 ${PYSITELIB}/setuptools/_vendor/packaging/utils.pyo
@@ -203,21 +206,24 @@ ${PYSITELIB}/setuptools/depends.pyo
 ${PYSITELIB}/setuptools/dist.py
 ${PYSITELIB}/setuptools/dist.pyc
 ${PYSITELIB}/setuptools/dist.pyo
+${PYSITELIB}/setuptools/errors.py
+${PYSITELIB}/setuptools/errors.pyc
+${PYSITELIB}/setuptools/errors.pyo
 ${PYSITELIB}/setuptools/extension.py
 ${PYSITELIB}/setuptools/extension.pyc
 ${PYSITELIB}/setuptools/extension.pyo
 ${PYSITELIB}/setuptools/extern/__init__.py
 ${PYSITELIB}/setuptools/extern/__init__.pyc
 ${PYSITELIB}/setuptools/extern/__init__.pyo
-${PYSITELIB}/setuptools/glibc.py
-${PYSITELIB}/setuptools/glibc.pyc
-${PYSITELIB}/setuptools/glibc.pyo
 ${PYSITELIB}/setuptools/glob.py
 ${PYSITELIB}/setuptools/glob.pyc
 ${PYSITELIB}/setuptools/glob.pyo
 ${PYSITELIB}/setuptools/gui-32.exe
 ${PYSITELIB}/setuptools/gui-64.exe
 ${PYSITELIB}/setuptools/gui.exe
+${PYSITELIB}/setuptools/installer.py
+${PYSITELIB}/setuptools/installer.pyc
+${PYSITELIB}/setuptools/installer.pyo
 ${PYSITELIB}/setuptools/launch.py
 ${PYSITELIB}/setuptools/launch.pyc
 ${PYSITELIB}/setuptools/launch.pyo
@@ -236,9 +242,6 @@ ${PYSITELIB}/setuptools/namespaces.pyo
 ${PYSITELIB}/setuptools/package_index.py
 ${PYSITELIB}/setuptools/package_index.pyc
 ${PYSITELIB}/setuptools/package_index.pyo
-${PYSITELIB}/setuptools/pep425tags.py
-${PYSITELIB}/setuptools/pep425tags.pyc
-${PYSITELIB}/setuptools/pep425tags.pyo
 ${PYSITELIB}/setuptools/py27compat.py
 ${PYSITELIB}/setuptools/py27compat.pyc
 ${PYSITELIB}/setuptools/py27compat.pyo
