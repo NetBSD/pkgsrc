@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5151 2019/11/26 18:34:50 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5152 2019/11/26 18:35:44 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8303,3 +8303,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed graphics/ksaneplugin [markd 2019-11-26]
 	Removed graphics/ksnapshot successor graphics/spectacle [markd 2019-11-26]
 	Updated devel/include-what-you-use to 0.13 [nia 2019-11-26]
+	Updated www/nsm to 1.20 [ng0 2019-11-26]
