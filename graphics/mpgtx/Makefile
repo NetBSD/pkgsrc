@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2019/11/02 22:38:00 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.19 2019/11/26 13:52:23 wiz Exp $
 
 DISTNAME=	mpgtx-1.3.1
+PKGREVISION=	1
 CATEGORIES=	audio graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpgtx/}
 
