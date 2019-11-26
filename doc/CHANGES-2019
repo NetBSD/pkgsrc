@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5150 2019/11/26 18:21:20 markd Exp $
+$NetBSD: CHANGES-2019,v 1.5151 2019/11/26 18:34:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8302,3 +8302,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/kfloppy to 19.08.3 [markd 2019-11-26]
 	Removed graphics/ksaneplugin [markd 2019-11-26]
 	Removed graphics/ksnapshot successor graphics/spectacle [markd 2019-11-26]
+	Updated devel/include-what-you-use to 0.13 [nia 2019-11-26]
