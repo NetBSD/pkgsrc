@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5149 2019/11/26 18:11:25 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.5150 2019/11/26 18:21:20 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8299,3 +8299,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated editors/abiword-plugins to 3.0.3 [nia 2019-11-26]
 	Added devel/guile-gcrypt version 0.1.0 [ng0 2019-11-26]
 	Added www/guile-haunt version 0.2.4 [ng0 2019-11-26]
+	Updated sysutils/kfloppy to 19.08.3 [markd 2019-11-26]
+	Removed graphics/ksaneplugin [markd 2019-11-26]
+	Removed graphics/ksnapshot successor graphics/spectacle [markd 2019-11-26]
