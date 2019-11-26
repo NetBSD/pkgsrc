@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5131 2019/11/26 12:32:50 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5132 2019/11/26 12:37:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8280,3 +8280,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/cfitsio to 3.470 [markd 2019-11-26]
 	Updated news/sfeed to 0.9.15 [leot 2019-11-26]
 	Updated mail/gmime3 to 3.2.5 [wiz 2019-11-26]
+	Updated textproc/py-lxml to 4.4.2 [adam 2019-11-26]
+	Updated www/py-gunicorn to 20.0.3 [adam 2019-11-26]
