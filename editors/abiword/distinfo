@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.78 2019/06/08 10:40:53 rillig Exp $
+$NetBSD: distinfo,v 1.79 2019/11/26 16:54:13 nia Exp $
 
-SHA1 (abiword-3.0.2.tar.gz) = 8226e0962e6667e0a461955a0ac680a629e0b55a
-RMD160 (abiword-3.0.2.tar.gz) = fde551492b0cffa7d522082906f374490bd47f5c
-SHA512 (abiword-3.0.2.tar.gz) = 29ce9e80b3b85ab2933e7d39216771d8c4e05db5255eaed0cf8e1d032ffaac2cb1880bf24e754196ad5dae4969a1c2101ce4dc9c1db14604adc2f852b6a17fe3
-Size (abiword-3.0.2.tar.gz) = 11154333 bytes
+SHA1 (abiword-3.0.3.tar.gz) = bdc9cb32b1f17d7245c45eac3256d49b85e41e8d
+RMD160 (abiword-3.0.3.tar.gz) = d52c30a9a10f1f89dff8c7df6bd50911f14cbdcf
+SHA512 (abiword-3.0.3.tar.gz) = cabe5cfea02b0656bc8b14b0daf3ea5bf6e1487c1eb5a8fa21b93723163d9798768d8aae3c9ece9a1d0e939592649783eb9c78d44ce7e03724eb57a824a080f9
+Size (abiword-3.0.3.tar.gz) = 10940348 bytes
 SHA1 (patch-configure.ac) = 239c0635c2c616c7e0a986a5fd92428393af38b7
-SHA1 (patch-plugin-configure.m4) = 50b5b6be8a1e8270c7ce45a4ed94cb5d436516f2
+SHA1 (patch-plugin-configure.m4) = 396c7ec04298b5af3807248f94f2c8630f3579ac
 SHA1 (patch-plugins_aiksaurus_Makefile.am) = 1529d5098b7fb798c428fe02cc50879374cb3e9d
 SHA1 (patch-plugins_command_Makefile.am) = e003a6bf9a6e0566abc85f09868fdf1aa93234d7
 SHA1 (patch-plugins_gimp_xp_AbiGimp.cpp) = 2b245de4beb2f4b9b8cd8593c811bb086bb2bde3
@@ -20,29 +20,10 @@ SHA1 (patch-plugins_wordperfect_xp_ie__imp__WordPerfect.h) = 4931688c7cb82b9fe41
 SHA1 (patch-plugins_wordperfect_xp_ie__impexp__WordPerfect.cpp) = 255ac57f2f127d76aff6bdbf1f0ddc223a673ca9
 SHA1 (patch-plugins_wordperfect_xp_ie__impexp__WordPerfect.h) = a3eac8abff26bf91f698948430e89bff13db710b
 SHA1 (patch-plugins_wpg_xp_ie__impGraphic__WPG.cpp) = 7eb0296fdff2fa27288f4c68fc337ba105695551
-SHA1 (patch-src_af_gr_gtk_gr__UnixCairoGraphics.cpp) = 2fb170202d13c9ddf077cea545d8d8f79fdbf5c2
-SHA1 (patch-src_af_gr_gtk_gr__UnixImage.cpp) = 2546621961ce959a8d5078ff52efa4650362be54
-SHA1 (patch-src_af_gr_xp_gr__Caret.cpp) = 96b186c4fc762f6734226b4505e2d4c64fb2b03a
-SHA1 (patch-src_af_gr_xp_gr__Caret.h) = f7ee697a720205cd9026a85d7683092fc147a237
-SHA1 (patch-src_af_gr_xp_gr__Graphics.cpp) = 9cf398ea8e787e5820d41182c005fe2906c7ec06
-SHA1 (patch-src_af_gr_xp_gr__Graphics.h) = a3539f0e2e3a8f661a01428f7550f8a4bebb1ee5
-SHA1 (patch-src_af_util_unix_ut__unixTimer.cpp) = 543d8977c8da5c1db4e26581d82f72a4f936f190
 SHA1 (patch-src_af_util_xp_ut__endian.h) = e1dd4cc0df3b0eb66dbd673fb5c0d2e3b24b30a4
 SHA1 (patch-src_af_util_xp_ut__iconv.cpp) = 18529454262fe6cb3ae15fd485c7bcc8adb00ae3
 SHA1 (patch-src_af_util_xp_ut__iconv.h) = bbcfa2098ea77d393feb50d69de9ae29fcce302f
 SHA1 (patch-src_af_util_xp_ut__mbtowc.cpp) = cf7078a6bfdf9ac9b30478d11d9d3a81a95b8ed1
 SHA1 (patch-src_af_util_xp_ut__misc.cpp) = f552ecbb87490355d8e74218dd59fd3961f1af5d
-SHA1 (patch-src_af_util_xp_ut__png.cpp) = 9f4ae043873fc6d66e063419d0736bb6104483b0
-SHA1 (patch-src_af_xap_gtk_xap__UnixFrameImpl.cpp) = 5b67bd234209beddc751e7c98b17cf1844b73b1a
-SHA1 (patch-src_af_xap_gtk_xap__UnixFrameImpl.h) = af256fec37a7b9cd4239802985ad1a46f8272ad8
 SHA1 (patch-src_af_xap_xp_enchant__checker.cpp) = 5ad3b8bb4e186e998d7e8930247534c9f058c534
-SHA1 (patch-src_af_xap_xp_xap__Frame.cpp) = d7f29f199b7109c8a09fa40f969be0db3a6b79ba
-SHA1 (patch-src_text_fmt_xp_fl__SectionLayout.cpp) = 3f1f9255bb979812c8062f542ed4b9faa488a368
 SHA1 (patch-src_text_fmt_xp_fv__FrameEdit.h) = 684310bf9aece4ce72d004dfae9a4b4b6ca69570
-SHA1 (patch-src_text_fmt_xp_fv__View.cpp) = 872f4d94a3797b0ae1c32500267e46afa5ebd3ac
-SHA1 (patch-src_text_fmt_xp_fv__ViewDoubleBuffering.cpp) = ef11cce5d6d07c33416666e30c1aed33abfa8e1c
-SHA1 (patch-src_text_fmt_xp_fv__View__protected.cpp) = c567a8962280aa6f5b20151b74616b14ff0c2aa7
-SHA1 (patch-src_text_ptbl_xp_pd__DocumentRDF.cpp) = 5673e9341372913156f2f722229569199d97af4c
-SHA1 (patch-src_wp_ap_gtk_ap__UnixFrameImpl.cpp) = 709abd20ccaffc96cf8b9e77ea506fe6732e6d62
-SHA1 (patch-src_wp_impexp_xp_ie__exp__DocRangeListener.cpp) = cab84cf239874409d8e349c58c3605d91712b3c4
-SHA1 (patch-src_wp_impexp_xp_ie__imp__RTF.cpp) = 89cddf0213c1aeb1c915f4722e5db3a68f553ae6
