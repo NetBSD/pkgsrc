@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/26 16:52:25 ng0 Exp $
+
+SHA1 (guile-commonmark-0.1.2.tar.gz) = a92c0a2ab62645255fe71aa675eccc38807c3d78
+RMD160 (guile-commonmark-0.1.2.tar.gz) = 5a54ba958bd7bb1081c75e2e4b2b80609a094e7a
+SHA512 (guile-commonmark-0.1.2.tar.gz) = a2ed34bb4bc5d7b33875beff7eb959c0119fa62950c8f9de2c5c59ef85301e47354af3d2b38990802389e6b9c94653b927d380c6918feaeb82099ad92a91bf07
+Size (guile-commonmark-0.1.2.tar.gz) = 243029 bytes
