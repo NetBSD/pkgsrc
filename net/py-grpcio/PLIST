@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/06 17:14:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/11/26 19:32:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -70,11 +70,11 @@ ${PYSITELIB}/grpc/experimental/aio/__init__.py
 ${PYSITELIB}/grpc/experimental/aio/__init__.pyc
 ${PYSITELIB}/grpc/experimental/aio/__init__.pyo
 ${PYSITELIB}/grpc/experimental/aio/_channel.py
-${PYSITELIB}/grpc/experimental/aio/_channel.pyc
-${PYSITELIB}/grpc/experimental/aio/_channel.pyo
+${PLIST.py3x}${PYSITELIB}/grpc/experimental/aio/_channel.pyc
+${PLIST.py3x}${PYSITELIB}/grpc/experimental/aio/_channel.pyo
 ${PYSITELIB}/grpc/experimental/aio/_server.py
-${PYSITELIB}/grpc/experimental/aio/_server.pyc
-${PYSITELIB}/grpc/experimental/aio/_server.pyo
+${PLIST.py3x}${PYSITELIB}/grpc/experimental/aio/_server.pyc
+${PLIST.py3x}${PYSITELIB}/grpc/experimental/aio/_server.pyo
 ${PYSITELIB}/grpc/experimental/gevent.py
 ${PYSITELIB}/grpc/experimental/gevent.pyc
 ${PYSITELIB}/grpc/experimental/gevent.pyo
