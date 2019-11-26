@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5164 2019/11/26 22:40:30 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5165 2019/11/26 22:41:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8318,3 +8318,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/py-matplotlib-venn version 0.11.5 [minskim 2019-11-26]
 	Updated security/openssl to 1.0.2t [sevan 2019-11-26]
 	Updated games/simgear to 2019.1.1 [nia 2019-11-26]
+	Updated games/flightgear to 2019.1.1 [nia 2019-11-26]
