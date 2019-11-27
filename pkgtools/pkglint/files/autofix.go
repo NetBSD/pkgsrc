@@ -29,7 +29,6 @@ type autofixShortTerm struct {
 	diagFormat  string          // Is logged only if it couldn't be fixed automatically
 	diagArgs    []interface{}   //
 	explanation []string        // Is printed together with the diagnostic
-	anyway      bool            // Print the diagnostic even if it cannot be autofixed
 }
 
 type autofixAction struct {
@@ -297,15 +296,6 @@ func (fix *Autofix) Describef(lineno int, format string, args ...interface{}) {
 	fix.actions = append(fix.actions, autofixAction{sprintf(format, args...), lineno})
 }
 
-// Anyway has the effect of showing the diagnostic even when nothing can
-// be fixed automatically.
-//
-// As usual, the diagnostic is only shown if neither --show-autofix nor
-// --autofix mode is given.
-func (fix *Autofix) Anyway() {
-	fix.anyway = !G.Logger.IsAutofix()
-}
-
 // Apply does the actual work.
 // Depending on the pkglint mode, it either:
 //
@@ -330,7 +320,7 @@ func (fix *Autofix) Apply() {
 		fix.autofixShortTerm = autofixShortTerm{}
 	}
 
-	if !(G.Logger.Relevant(fix.diagFormat) && (len(fix.actions) > 0 || fix.anyway)) {
+	if !(G.Logger.Relevant(fix.diagFormat) && (len(fix.actions) > 0 || !G.Logger.IsAutofix())) {
 		reset()
 		return
 	}
@@ -488,12 +478,12 @@ func SaveAutofixChanges(lines *Lines) (autofixed bool) {
 		}
 		err := tmpName.WriteString(text.String())
 		if err != nil {
-			G.Logger.Errorf(tmpName, "Cannot write: %s", err)
+			G.Logger.TechErrorf(tmpName, "Cannot write: %s", err)
 			continue
 		}
 		err = tmpName.Rename(filename)
 		if err != nil {
-			G.Logger.Errorf(tmpName, "Cannot overwrite with autofixed content: %s", err)
+			G.Logger.TechErrorf(tmpName, "Cannot overwrite with autofixed content: %s", err)
 			continue
 		}
 		autofixed = true
