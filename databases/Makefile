@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.589 2019/11/17 05:48:43 markd Exp $
+# $NetBSD: Makefile,v 1.590 2019/11/27 10:34:22 ng0 Exp $
 
 COMMENT=	Databases
 
@@ -41,6 +41,7 @@ SUBDIR+=	gnome-mime-data
 SUBDIR+=	go-etcd
 SUBDIR+=	go-ldap
 SUBDIR+=	go-sqlite3
+SUBDIR+=	go-tiedot
 SUBDIR+=	gourmet
 SUBDIR+=	gq
 SUBDIR+=	gramps3
