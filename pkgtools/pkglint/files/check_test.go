@@ -88,23 +88,10 @@ func (s *Suite) TearDownTest(c *check.C) {
 	assertNil(err, "Cannot chdir back to previous dir: %s", err)
 
 	if t.seenSetupPkgsrc > 0 && !t.seenFinish && !t.seenMain {
-		t.Errorf("After t.SetupPkgsrc(), either t.FinishSetUp() or t.Main() must be called.")
+		t.InternalErrorf("After t.SetupPkgsrc(), either t.FinishSetUp() or t.Main() must be called.")
 	}
 
-	if out := t.Output(); out != "" {
-		var msg strings.Builder
-		msg.WriteString("\n")
-		_, _ = fmt.Fprintf(&msg, "Unchecked output in %s; check with:\n", c.TestName())
-		msg.WriteString("\n")
-		msg.WriteString("t.CheckOutputLines(\n")
-		lines := strings.Split(strings.TrimSpace(out), "\n")
-		for i, line := range lines {
-			_, _ = fmt.Fprintf(&msg, "\t%q%s\n", line, condStr(i == len(lines)-1, ")", ","))
-		}
-		_, _ = fmt.Fprintf(&msg, "\n")
-		_, _ = os.Stderr.WriteString(msg.String())
-	}
-
+	t.ReportUncheckedOutput()
 	t.tmpdir = ""
 	t.DisableTracing()
 
@@ -160,7 +147,9 @@ func (t *Tester) SetUpCommandLine(args ...string) {
 	//
 	// It also reveals diagnostics that are logged multiple times per
 	// line and thus can easily get annoying to the pkgsrc developers.
-	G.Logger.Opts.LogVerbose = true
+	//
+	// To avoid running a check multiple times, see Line.once or MkLines.once.
+	G.Logger.verbose = true
 
 	t.seenSetUpCommandLine = true
 }
@@ -623,7 +612,10 @@ func (t *Tester) SetUpHierarchy() (
 			case string:
 				addLine(arg)
 			case *MkLines:
-				text := sprintf(".include %q", relpath(filename.Dir(), arg.lines.Filename))
+				fromDir := G.Pkgsrc.File(filename.Dir())
+				to := G.Pkgsrc.File(arg.lines.Filename)
+				rel := G.Pkgsrc.Relpath(fromDir, to)
+				text := sprintf(".include %q", rel)
 				addLine(text)
 				lines = append(lines, arg.lines.Lines...)
 			default:
@@ -678,14 +670,14 @@ func (s *Suite) Test_Tester_SetUpHierarchy(c *check.C) {
 
 func (t *Tester) FinishSetUp() {
 	if t.seenSetupPkgsrc == 0 {
-		t.Errorf("Unnecessary t.FinishSetUp() since t.SetUpPkgsrc() has not been called.")
+		t.InternalErrorf("Unnecessary t.FinishSetUp() since t.SetUpPkgsrc() has not been called.")
 	}
 
 	if !t.seenFinish {
 		t.seenFinish = true
 		G.Pkgsrc.LoadInfrastructure()
 	} else {
-		t.Errorf("Redundant t.FinishSetup() since it was called multiple times.")
+		t.InternalErrorf("Redundant t.FinishSetup() since it was called multiple times.")
 	}
 }
 
@@ -698,11 +690,11 @@ func (t *Tester) FinishSetUp() {
 // Does not work in combination with SetUpOption.
 func (t *Tester) Main(args ...string) int {
 	if t.seenFinish && !t.seenMain {
-		t.Errorf("Calling t.FinishSetup() before t.Main() is redundant " +
+		t.InternalErrorf("Calling t.FinishSetup() before t.Main() is redundant " +
 			"since t.Main() loads the pkgsrc infrastructure.")
 	}
 	if t.seenSetUpCommandLine {
-		t.Errorf("Calling t.SetupCommandLine() before t.Main() is redundant " +
+		t.InternalErrorf("Calling t.SetupCommandLine() before t.Main() is redundant " +
 			"since t.Main() accepts the command line options directly.")
 	}
 
@@ -741,7 +733,10 @@ func (t *Tester) CheckDeepEquals(actual interface{}, expected interface{}) bool 
 	return t.c.Check(actual, check.DeepEquals, expected)
 }
 
-func (t *Tester) Errorf(format string, args ...interface{}) {
+// InternalErrorf reports a consistency error in the tests.
+func (t *Tester) InternalErrorf(format string, args ...interface{}) {
+	// It is not possible to panic here since check.v1 would then
+	// ignore all subsequent tests.
 	_, _ = fmt.Fprintf(os.Stderr, "In %s: %s\n", t.testName, sprintf(format, args...))
 }
 
@@ -815,6 +810,18 @@ func (t *Tester) ExpectPanicMatches(action func(), expectedMessage string) {
 //      func() { /* do something that panics */ })
 func (t *Tester) ExpectAssert(action func()) {
 	t.Check(action, check.Panics, "Pkglint internal error")
+}
+
+// ExpectDiagnosticsAutofix first runs the given action with -Wall, and
+// then another time with -Wall --autofix.
+func (t *Tester) ExpectDiagnosticsAutofix(action func(), diagnostics ...string) {
+	t.SetUpCommandLine("-Wall")
+	action()
+
+	t.SetUpCommandLine("-Wall", "--autofix")
+	action()
+
+	t.CheckOutput(diagnostics)
 }
 
 // NewRawLines creates lines from line numbers and raw text, including newlines.
@@ -1173,4 +1180,23 @@ func (t *Tester) Shquote(format string, rels ...Path) string {
 		subs = append(subs, strings.Replace(quoted, t.tmpdir.String(), "~", -1))
 	}
 	return sprintf(format, subs...)
+}
+
+func (t *Tester) ReportUncheckedOutput() {
+	out := t.Output()
+	if out == "" {
+		return
+	}
+
+	var msg strings.Builder
+	msg.WriteString("\n")
+	_, _ = fmt.Fprintf(&msg, "Unchecked output in %s; check with:\n", t.testName)
+	msg.WriteString("\n")
+	msg.WriteString("t.CheckOutputLines(\n")
+	lines := strings.Split(strings.TrimSpace(out), "\n")
+	for i, line := range lines {
+		_, _ = fmt.Fprintf(&msg, "\t%q%s\n", line, condStr(i == len(lines)-1, ")", ","))
+	}
+	_, _ = fmt.Fprintf(&msg, "\n")
+	_, _ = os.Stderr.WriteString(msg.String())
 }
