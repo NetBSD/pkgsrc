@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5176 2019/11/27 22:10:19 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.5177 2019/11/27 22:33:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8343,3 +8343,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/mlt to 6.18.0 [markd 2019-11-27]
 	Updated multimedia/kdenlive to 19.08.3 [markd 2019-11-27]
 	Updated pkgtools/pkglint to 19.3.11 [rillig 2019-11-27]
+	Updated textproc/jsoncpp to 1.9.2 [adam 2019-11-27]
+	Updated devel/cmake to 3.16.0 [adam 2019-11-27]
+	Added devel/cmake-gui version 3.16.0 [adam 2019-11-27]
