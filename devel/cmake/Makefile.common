@@ -1,0 +1,17 @@
+# $NetBSD: Makefile.common,v 1.1 2019/11/27 22:33:03 adam Exp $
+# used by devel/cmake-gui/Makefile
+
+.include "Makefile.version"
+
+DISTNAME=	cmake-${CMAKE_VERSION}
+CATEGORIES=	devel
+MASTER_SITES=	https://cmake.org/files/v${CMAKE_API}/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.cmake.org/
+LICENSE=	modified-bsd
+
+DISTINFO_FILE=	${.CURDIR}/../../devel/cmake/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/cmake/patches
+
+USE_LANGUAGES=	c c++11
