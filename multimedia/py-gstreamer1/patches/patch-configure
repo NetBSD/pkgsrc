@@ -1,15 +1,22 @@
-$NetBSD: patch-configure,v 1.1 2018/11/13 12:55:31 adam Exp $
+$NetBSD: patch-configure,v 1.2 2019/11/27 03:37:17 ryoon Exp $
 
-python-config --ldflags is for linking executables; use --libs instead
+* python-config --ldflags is for linking executables; use --libs instead
+* Python 3.8's python3.8-config --libs does not return -lpython3.8 any more.
+  Use --embed flag. See:
+  https://docs.python.org/3/whatsnew/3.8.html#debug-build-uses-the-same-abi-as-release-build
 
---- configure.orig	2018-11-13 12:01:21.000000000 +0000
+--- configure.orig	2019-09-23 10:19:47.000000000 +0000
 +++ configure
-@@ -14460,7 +14460,7 @@ fi
+@@ -14463,7 +14463,11 @@ fi
  $as_echo_n "checking for libraries required to embed python... " >&6; }
  
  if $PYTHON-config --help 1>/dev/null 2>/dev/null; then
 -  PYTHON_LIBS=`$PYTHON-config --ldflags 2>/dev/null`
-+  PYTHON_LIBS=`$PYTHON-config --libs 2>/dev/null`
++  if $PYTHON-config --libs --embed 1>/dev/null 2>/dev/null; then
++    PYTHON_LIBS=`$PYTHON-config --libs --embed 2>/dev/null`
++  else
++    PYTHON_LIBS=`$PYTHON-config --libs 2>/dev/null`
++  fi
    PYTHON_LIB=`$PYTHON -c "import distutils.sysconfig as s; print(s.get_python_lib(standard_lib=1))"`
    if echo "$host_os" | grep darwin >/dev/null 2>&1; then
                  PYTHON_LIB_LOC=/usr/lib
