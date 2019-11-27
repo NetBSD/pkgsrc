@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/27 21:23:53 markd Exp $
+
+SHA1 (rttr-0.9.6-src.tar.gz) = ac0dde0d1b1cc8037165ba1defeee4f42c17229f
+RMD160 (rttr-0.9.6-src.tar.gz) = af3da2dc958731f18c68b39645dddfe2c1f23d6f
+SHA512 (rttr-0.9.6-src.tar.gz) = 7e0d4fa87f83feda0b926d4d0e52aaf0f369f25fe7e23e5ffe86c0bba159e8353cef44eed37611a81e8ccc8d6facb36942f940d0d0b965f873177d7078f91cf4
+Size (rttr-0.9.6-src.tar.gz) = 1137269 bytes
