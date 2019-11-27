@@ -1,17 +1,34 @@
-# $NetBSD: Makefile,v 1.30 2019/08/22 12:23:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/27 21:20:52 markd Exp $
 
-DISTNAME=	kpat-${_KDE_VERSION}
-PKGREVISION=	14
+DISTNAME=	kpat-${KAPPSVER}
 CATEGORIES=	games
-COMMENT=	a multiplicity of different solitaire games
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+HOMEPAGE=	https://kde.org/applications/games/kpat/
+COMMENT=	Multiplicity of different solitaire games
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+.include "../../meta-pkgs/kde/applications.mk"
 
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+
+USE_TOOLS+=	msgmerge pkg-config
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	themes/CMakeLists.txt
+SUBST_FILES.xdg+=	libkcardgame/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kcardtheme.knsrc \
+		${PKG_SYSCONFDIR}/xdg/kcardtheme.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kpat.knsrc \
+		${PKG_SYSCONFDIR}/xdg/kpat.knsrc
+
+.include "../../games/freecell-solver/buildlink3.mk"
 .include "../../games/libkdegames/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
