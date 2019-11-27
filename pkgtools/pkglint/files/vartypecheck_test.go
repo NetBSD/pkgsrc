@@ -897,13 +897,14 @@ func (s *Suite) Test_VartypeCheck_LdFlag(c *check.C) {
 func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 	t := s.Init(c)
 
+	t.Chdir(".")
 	t.SetUpPkgsrc() // Adds the gnu-gpl-v2 and 2-clause-bsd licenses
 	t.SetUpPackage("category/package")
 	t.FinishSetUp()
 
 	G.Pkg = NewPackage(t.File("category/package"))
 
-	mklines := t.NewMkLines("perl5.mk",
+	mklines := t.SetUpFileMkLines("perl5.mk",
 		MkCvsID,
 		"PERL5_LICENSE= gnu-gpl-v2 OR artistic")
 	// Also registers the PERL5_LICENSE variable in the package.
@@ -920,7 +921,7 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 
 	vt.Output(
 		"ERROR: filename.mk:2: Parse error for license condition \"AND mit\".",
-		"WARN: filename.mk:3: License file ~/licenses/artistic does not exist.",
+		"WARN: filename.mk:3: License file licenses/artistic does not exist.",
 		"ERROR: filename.mk:4: Parse error for license condition \"${UNKNOWN_LICENSE}\".")
 
 	vt.Op(opAssignAppend)
@@ -930,7 +931,7 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 
 	vt.Output(
 		"ERROR: filename.mk:11: Parse error for appended license condition \"gnu-gpl-v2\".",
-		"WARN: filename.mk:12: License file ~/licenses/mit does not exist.")
+		"WARN: filename.mk:12: License file licenses/mit does not exist.")
 }
 
 func (s *Suite) Test_VartypeCheck_MachineGnuPlatform(c *check.C) {
