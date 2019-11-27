@@ -330,9 +330,8 @@ func (mkline *MkLine) Tokenize(text string, warn bool) []*MkToken {
 		if warn {
 			line = mkline.Line
 		}
-		p := NewMkParser(line, text)
-		tokens = p.MkTokens()
-		rest = p.Rest()
+		p := NewMkLexer(text, line)
+		tokens, rest = p.MkTokens()
 	}
 
 	if warn && rest != "" {
@@ -502,9 +501,8 @@ func (mkline *MkLine) ValueTokens() ([]*MkToken, string) {
 
 	// No error checking here since all this has already been done when the
 	// whole line was parsed in MkLineParser.Parse.
-	p := NewMkParser(nil, value)
-	assign.valueMk = p.MkTokens()
-	assign.valueMkRest = p.Rest()
+	p := NewMkLexer(value, nil)
+	assign.valueMk, assign.valueMkRest = p.MkTokens()
 	return assign.valueMk, assign.valueMkRest
 }
 
@@ -545,7 +543,8 @@ func (mkline *MkLine) Fields() []string {
 
 func (*MkLine) WithoutMakeVariables(value string) string {
 	var valueNovar strings.Builder
-	for _, token := range NewMkParser(nil, value).MkTokens() {
+	tokens, _ := NewMkLexer(value, nil).MkTokens()
+	for _, token := range tokens {
 		if token.Varuse == nil {
 			valueNovar.WriteString(token.Text)
 		}
@@ -567,7 +566,7 @@ func (mkline *MkLine) ResolveVarsInRelativePath(relativePath Path) Path {
 
 	tmp := relativePath
 	if tmp.ContainsText("PKGSRCDIR") {
-		pkgsrcdir := relpath(basedir, G.Pkgsrc.File("."))
+		pkgsrcdir := G.Pkgsrc.Relpath(basedir, G.Pkgsrc.File("."))
 
 		if G.Testing {
 			// Relative pkgsrc paths usually only contain two or three levels.
@@ -789,7 +788,8 @@ func (mkline *MkLine) ForEachUsed(action func(varUse *MkVarUse, time VucTime)) {
 			return
 		}
 
-		for _, token := range NewMkParser(nil, text).MkTokens() {
+		tokens, _ := NewMkLexer(text, nil).MkTokens()
+		for _, token := range tokens {
 			if token.Varuse != nil {
 				searchInVarUse(token.Varuse, time)
 			}

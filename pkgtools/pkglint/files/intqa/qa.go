@@ -38,12 +38,15 @@ const (
 	// The file of the test method does not correspond to the
 	// file of the testee.
 	EFile
+
+	// All methods of a type must be in the same file as the type definition.
+	EMethodsSameFile
 )
 
-// TestNameChecker ensures that all test names follow a common naming scheme:
+// QAChecker ensures that all test names follow a common naming scheme:
 //  Test_${Type}_${Method}__${description_using_underscores}
 // Each of the variable parts may be omitted.
-type TestNameChecker struct {
+type QAChecker struct {
 	errorf func(format string, args ...interface{})
 
 	filters []filter
@@ -56,11 +59,11 @@ type TestNameChecker struct {
 	out    io.Writer
 }
 
-// NewTestNameChecker creates a new checker.
+// NewQAChecker creates a new checker.
 // By default, all errors are enabled;
 // call Configure to disable them selectively.
-func NewTestNameChecker(errorf func(format string, args ...interface{})) *TestNameChecker {
-	ck := TestNameChecker{errorf: errorf, out: os.Stderr}
+func NewQAChecker(errorf func(format string, args ...interface{})) *QAChecker {
+	ck := QAChecker{errorf: errorf, out: os.Stderr}
 
 	// For test fixtures from https://gopkg.in/check/v1.
 	ck.Configure("*_test.go", "*", "SetUpTest", -EMissingTest)
@@ -81,11 +84,11 @@ func NewTestNameChecker(errorf func(format string, args ...interface{})) *TestNa
 // Individual errors can be enabled by giving their constant and disabled
 // by negating them, such as -EMissingTestee. To reset everything, use
 // either EAll or ENone.
-func (ck *TestNameChecker) Configure(filenames, typeNames, funcNames string, errors ...Error) {
+func (ck *QAChecker) Configure(filenames, typeNames, funcNames string, errors ...Error) {
 	ck.filters = append(ck.filters, filter{filenames, typeNames, funcNames, errors})
 }
 
-func (ck *TestNameChecker) Check() {
+func (ck *QAChecker) Check() {
 	ck.load(".")
 	ck.checkTestees()
 	ck.checkTests()
@@ -94,7 +97,7 @@ func (ck *TestNameChecker) Check() {
 }
 
 // load loads all type, function and method names from the current package.
-func (ck *TestNameChecker) load(dir string) {
+func (ck *QAChecker) load(dir string) {
 
 	fileSet := token.NewFileSet()
 	pkgs, err := parser.ParseDir(fileSet, dir, nil, 0)
@@ -117,7 +120,7 @@ func (ck *TestNameChecker) load(dir string) {
 }
 
 // loadDecl adds a single type or function declaration to the known elements.
-func (ck *TestNameChecker) loadDecl(decl ast.Decl, filename string) {
+func (ck *QAChecker) loadDecl(decl ast.Decl, filename string) {
 	switch decl := decl.(type) {
 
 	case *ast.GenDecl:
@@ -125,26 +128,31 @@ func (ck *TestNameChecker) loadDecl(decl ast.Decl, filename string) {
 			switch spec := spec.(type) {
 			case *ast.TypeSpec:
 				typeName := spec.Name.Name
-				ck.addCode(code{filename, typeName, "", 0})
+				ck.addCode(code{filename, typeName, "", 0}, nil)
 			}
 		}
 
 	case *ast.FuncDecl:
-		typeName := ""
-		if decl.Recv != nil {
-			typeExpr := decl.Recv.List[0].Type.(ast.Expr)
-			if star, ok := typeExpr.(*ast.StarExpr); ok {
-				typeName = star.X.(*ast.Ident).Name
-			} else {
-				typeName = typeExpr.(*ast.Ident).Name
-			}
-		}
-		funcName := decl.Name.Name
-		ck.addCode(code{filename, typeName, funcName, 0})
+		code := ck.parseFuncDecl(filename, decl)
+		ck.addCode(code, decl)
 	}
 }
 
-func (ck *TestNameChecker) addCode(code code) {
+func (*QAChecker) parseFuncDecl(filename string, decl *ast.FuncDecl) code {
+	typeName := ""
+	if decl.Recv != nil {
+		typeExpr := decl.Recv.List[0].Type.(ast.Expr)
+		if star, ok := typeExpr.(*ast.StarExpr); ok {
+			typeExpr = star.X
+		}
+		typeName = typeExpr.(*ast.Ident).Name
+	}
+
+	funcName := decl.Name.Name
+	return code{filename, typeName, funcName, 0}
+}
+
+func (ck *QAChecker) addCode(code code, decl *ast.FuncDecl) {
 	if code.isTestScope() && code.isFunc() && code.Func == "TestMain" {
 		// This is not a test for Main, but a wrapper function of the test.
 		// Therefore it is completely ignored.
@@ -160,19 +168,39 @@ func (ck *TestNameChecker) addCode(code code) {
 		return
 	}
 
-	if code.isTest() {
+	if ck.isTest(code, decl) {
 		ck.addTest(code)
 	} else {
 		ck.addTestee(code)
 	}
 }
 
-func (ck *TestNameChecker) addTestee(code code) {
+func (*QAChecker) isTest(code code, decl *ast.FuncDecl) bool {
+	if !code.isTestScope() || !strings.HasPrefix(code.Func, "Test") {
+		return false
+	}
+	if decl.Type.Params.NumFields() != 1 {
+		return false
+	}
+
+	paramType := decl.Type.Params.List[0].Type
+	if star, ok := paramType.(*ast.StarExpr); ok {
+		paramType = star.X
+	}
+	if sel, ok := paramType.(*ast.SelectorExpr); ok {
+		paramType = sel.Sel
+	}
+
+	paramTypeName := paramType.(*ast.Ident).Name
+	return paramTypeName == "C" || paramTypeName == "T"
+}
+
+func (ck *QAChecker) addTestee(code code) {
 	code.order = ck.nextOrder()
 	ck.testees = append(ck.testees, &testee{code})
 }
 
-func (ck *TestNameChecker) addTest(code code) {
+func (ck *QAChecker) addTest(code code) {
 	if !strings.HasPrefix(code.Func, "Test_") &&
 		code.Func != "Test" &&
 		ck.addError(
@@ -203,14 +231,14 @@ func (ck *TestNameChecker) addTest(code code) {
 	ck.tests = append(ck.tests, &test{code, testeeName, descr, nil})
 }
 
-func (ck *TestNameChecker) nextOrder() int {
+func (ck *QAChecker) nextOrder() int {
 	id := ck.order
 	ck.order++
 	return id
 }
 
 // relate connects the tests to their testees.
-func (ck *TestNameChecker) relate() {
+func (ck *QAChecker) relate() {
 	testeesByPrefix := make(map[string]*testee)
 	for _, testee := range ck.testees {
 		prefix := join(testee.Type, "_", testee.Func)
@@ -222,7 +250,7 @@ func (ck *TestNameChecker) relate() {
 	}
 }
 
-func (ck *TestNameChecker) checkTests() {
+func (ck *QAChecker) checkTests() {
 	for _, test := range ck.tests {
 		ck.checkTestFile(test)
 		ck.checkTestTestee(test)
@@ -230,13 +258,13 @@ func (ck *TestNameChecker) checkTests() {
 	}
 }
 
-func (ck *TestNameChecker) checkTestFile(test *test) {
+func (ck *QAChecker) checkTestFile(test *test) {
 	testee := test.testee
 	if testee == nil || testee.file == test.file {
 		return
 	}
 
-	correctTestFile := strings.TrimSuffix(testee.file, ".go") + "_test.go"
+	correctTestFile := testee.testFile()
 	if correctTestFile == test.file {
 		return
 	}
@@ -248,7 +276,7 @@ func (ck *TestNameChecker) checkTestFile(test *test) {
 		test.fullName(), testee.fullName(), correctTestFile, test.file)
 }
 
-func (ck *TestNameChecker) checkTestTestee(test *test) {
+func (ck *QAChecker) checkTestTestee(test *test) {
 	testee := test.testee
 	if testee != nil || test.testeeName == "" {
 		return
@@ -265,7 +293,7 @@ func (ck *TestNameChecker) checkTestTestee(test *test) {
 // checkTestDescr ensures that the type or function name of the testee
 // does not accidentally end up in the description of the test. This could
 // happen if there is a double underscore instead of a single underscore.
-func (ck *TestNameChecker) checkTestDescr(test *test) {
+func (ck *QAChecker) checkTestDescr(test *test) {
 	testee := test.testee
 	if testee == nil || testee.isMethod() || !isCamelCase(test.descr) {
 		return
@@ -278,32 +306,77 @@ func (ck *TestNameChecker) checkTestDescr(test *test) {
 		test.fullName(), test.descr)
 }
 
-func (ck *TestNameChecker) checkTestees() {
+func (ck *QAChecker) checkTestees() {
+	ck.checkTesteesTest()
+	ck.checkTesteesMethodsSameFile()
+}
+
+// checkTesteesTest ensures that each testee has a corresponding unit test.
+func (ck *QAChecker) checkTesteesTest() {
 	tested := make(map[*testee]bool)
 	for _, test := range ck.tests {
 		tested[test.testee] = true
 	}
 
 	for _, testee := range ck.testees {
-		ck.checkTesteeTest(testee, tested)
+		if tested[testee] {
+			continue
+		}
+
+		testName := "Test_" + join(testee.Type, "_", testee.Func)
+		ck.addError(
+			EMissingTest,
+			testee.code,
+			"Missing unit test %q for %q.",
+			testName, testee.fullName())
 	}
 }
 
-func (ck *TestNameChecker) checkTesteeTest(testee *testee, tested map[*testee]bool) {
-	if tested[testee] || testee.isType() {
-		return
+// checkTesteesMethodsSameFile ensures that all methods of a type are
+// defined in the same file or in the corresponding test file.
+func (ck *QAChecker) checkTesteesMethodsSameFile() {
+	types := map[string]*testee{}
+	for _, testee := range ck.testees {
+		if testee.isType() {
+			types[testee.Type] = testee
+		}
 	}
 
-	testName := "Test_" + join(testee.Type, "_", testee.Func)
-	ck.addError(
-		EMissingTest,
-		testee.code,
-		"Missing unit test %q for %q.",
-		testName, testee.fullName())
+	for _, testee := range ck.testees {
+		if !testee.isMethod() {
+			continue
+		}
+		method := testee
+
+		typ := types[method.Type]
+		if typ == nil || method.file == typ.file {
+			continue
+		}
+
+		if method.isTestScope() == typ.isTestScope() {
+			ck.addError(
+				EMethodsSameFile,
+				testee.code,
+				"Method %s must be in %s, like its type.",
+				testee.fullName(), typ.file)
+			continue
+		}
+
+		correctFile := typ.testFile()
+		if method.file == correctFile {
+			continue
+		}
+
+		ck.addError(
+			EMethodsSameFile,
+			testee.code,
+			"Method %s must be in %s, corresponding to its type.",
+			testee.fullName(), correctFile)
+	}
 }
 
 // isRelevant checks whether the given error is enabled.
-func (ck *TestNameChecker) isRelevant(filename, typeName, funcName string, e Error) bool {
+func (ck *QAChecker) isRelevant(filename, typeName, funcName string, e Error) bool {
 	mask := ^uint64(0)
 	for _, filter := range ck.filters {
 		if matches(filename, filter.filenames) &&
@@ -315,7 +388,7 @@ func (ck *TestNameChecker) isRelevant(filename, typeName, funcName string, e Err
 	return mask&ck.errorsMask(0, e) != 0
 }
 
-func (ck *TestNameChecker) errorsMask(mask uint64, errors ...Error) uint64 {
+func (ck *QAChecker) errorsMask(mask uint64, errors ...Error) uint64 {
 	for _, err := range errors {
 		if err == ENone {
 			mask = 0
@@ -332,7 +405,7 @@ func (ck *TestNameChecker) errorsMask(mask uint64, errors ...Error) uint64 {
 
 // checkOrder ensures that the tests appear in the same order as their
 // counterparts in the main code.
-func (ck *TestNameChecker) checkOrder() {
+func (ck *QAChecker) checkOrder() {
 	maxOrderByFile := make(map[string]*test)
 
 	for _, test := range ck.tests {
@@ -364,7 +437,7 @@ func (ck *TestNameChecker) checkOrder() {
 	}
 }
 
-func (ck *TestNameChecker) addError(e Error, c code, format string, args ...interface{}) bool {
+func (ck *QAChecker) addError(e Error, c code, format string, args ...interface{}) bool {
 	relevant := ck.isRelevant(c.file, c.Type, c.Func, e)
 	if relevant {
 		ck.errors = append(ck.errors, fmt.Sprintf(format, args...))
@@ -372,7 +445,7 @@ func (ck *TestNameChecker) addError(e Error, c code, format string, args ...inte
 	return relevant
 }
 
-func (ck *TestNameChecker) print() {
+func (ck *QAChecker) print() {
 	for _, msg := range ck.errors {
 		_, _ = fmt.Fprintln(ck.out, msg)
 	}
@@ -418,11 +491,15 @@ func (c *code) isFunc() bool     { return c.Type == "" }
 func (c *code) isType() bool     { return c.Func == "" }
 func (c *code) isMethod() bool   { return c.Type != "" && c.Func != "" }
 
-func (c *code) isTest() bool {
-	return c.isTestScope() && strings.HasPrefix(c.Func, "Test")
-}
 func (c *code) isTestScope() bool {
 	return strings.HasSuffix(c.file, "_test.go")
+}
+
+func (c *code) testFile() string {
+	if strings.HasSuffix(c.file, "_test.go") {
+		return c.file
+	}
+	return strings.TrimSuffix(c.file, ".go") + "_test.go"
 }
 
 func isCamelCase(str string) bool {
