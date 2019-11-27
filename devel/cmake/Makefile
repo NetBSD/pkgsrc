@@ -1,18 +1,10 @@
-# $NetBSD: Makefile,v 1.167 2019/09/05 08:39:09 adam Exp $
+# $NetBSD: Makefile,v 1.168 2019/11/27 22:32:27 adam Exp $
 
-.include "Makefile.version"
+.include "Makefile.common"
 
-DISTNAME=	cmake-${CMAKE_VERSION}
-CATEGORIES=	devel
-MASTER_SITES=	https://cmake.org/files/v${CMAKE_API}/
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cmake.org/
 COMMENT=	Cross platform make
-LICENSE=	modified-bsd
 
 USE_TOOLS+=		gmake
-USE_LANGUAGES=		c c++11
 GCC_REQD+=		4.8
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	bootstrap
