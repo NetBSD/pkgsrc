@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2019/11/20 06:22:22 gutteridge Exp $
+$NetBSD: distinfo,v 1.18 2019/11/27 12:28:39 mef Exp $
 
-SHA1 (EV-4.28.tar.gz) = df1fd18f8ab4a9978f0559288705af8ce280576b
-RMD160 (EV-4.28.tar.gz) = a554a64e840927015526bcada73645cd10adc89f
-SHA512 (EV-4.28.tar.gz) = d27517fe11f9085d638ab12c21e5a3b625d3bdb8e0155033672b2b4bc64a73841d1aedbd29da687d7254d76bbea3bba5dd1313e6fc04693a46c113f4133fe770
-Size (EV-4.28.tar.gz) = 212550 bytes
+SHA1 (EV-4.30.tar.gz) = 308395a556a23c04a8364e8edbdf6180c68dc2d2
+RMD160 (EV-4.30.tar.gz) = 8ba42b76beea2d1694d79983d7926a76863d13c2
+SHA512 (EV-4.30.tar.gz) = e1ad5279a50e156c98411652710feb7473cef6cfe3b8db3a9f5fdcf34017be5b53025e34d301de18e9389c61f323b94f64a0b4798bbfba159b5e67f1d520b7b8
+Size (EV-4.30.tar.gz) = 214156 bytes
 SHA1 (patch-libev_ev.h) = 4a64abdc7d4d936623ad7a6a68195bf65218e1ed
