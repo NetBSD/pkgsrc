@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/27 10:27:09 ng0 Exp $
+
+SHA1 (jwt-go/v3.2.0.tar.gz) = 1d18073e8186b7de6eb57f4745d7c9cfe1bde971
+RMD160 (jwt-go/v3.2.0.tar.gz) = 8ecc67ba00e3cb91468f362c4379c5a7ff1d7b20
+SHA512 (jwt-go/v3.2.0.tar.gz) = 782dd5fb85e56915fca96b894eb4c6f57ea05cc2ed725f3504868a7acf9c75a4ce1acc46d179b3e4ab14100ec7eb05a906fd291bf016897c4490c27126c0fb0f
+Size (jwt-go/v3.2.0.tar.gz) = 36960 bytes
