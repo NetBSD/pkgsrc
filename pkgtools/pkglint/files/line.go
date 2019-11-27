@@ -119,7 +119,7 @@ func (line *Line) RefToLocation(other Location) string {
 // This is typically used for arguments in diagnostics, which should always be
 // relative to the line with which the diagnostic is associated.
 func (line *Line) PathToFile(filePath Path) Path {
-	return relpath(line.Filename.Dir(), filePath)
+	return G.Pkgsrc.Relpath(line.Filename.Dir(), filePath)
 }
 
 func (line *Line) IsMultiline() bool {
@@ -182,6 +182,10 @@ func (line *Line) String() string {
 func (line *Line) Autofix() *Autofix {
 	if line.autofix == nil {
 		line.autofix = NewAutofix(line)
+	} else {
+		// This assertion fails if an Autofix is reused before
+		// its Apply method is called.
+		assert(line.autofix.autofixShortTerm.diagFormat == "")
 	}
 	return line.autofix
 }

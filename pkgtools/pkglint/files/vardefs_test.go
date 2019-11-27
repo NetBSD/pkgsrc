@@ -94,10 +94,36 @@ func (s *Suite) Test_VarTypeRegistry_enumFrom__no_tracing(c *check.C) {
 	t.CheckEquals(nonexistentType.AllowedEnums(), "defval")
 }
 
+func (s *Suite) Test_VarTypeRegistry_enumFrom__no_testing(c *check.C) {
+	t := s.Init(c)
+
+	G.Testing = false
+
+	t.ExpectFatal(
+		t.SetUpVartypes,
+		"FATAL: ~/mk/compiler.mk: Cannot be read.")
+
+	t.CreateFileLines("mk/compiler.mk",
+		MkCvsID)
+
+	t.ExpectFatal(
+		t.SetUpVartypes,
+		"FATAL: ~/mk/compiler.mk: Must contain at least 1 variable "+
+			"definition for _COMPILERS or _PSEUDO_COMPILERS.")
+
+	t.CreateFileLines("mk/compiler.mk",
+		MkCvsID,
+		"_COMPILERS=\tgcc")
+
+	t.ExpectFatal(
+		t.SetUpVartypes,
+		"FATAL: ~/editors/emacs/modules.mk: Cannot be read.")
+}
+
 func (s *Suite) Test_VarTypeRegistry_enumFromDirs(c *check.C) {
 	t := s.Init(c)
 
-	// To make the test useful, these directories must differ from the
+	// To make the test observable, these directories must differ from the
 	// PYPKGPREFIX default value in vardefs.go.
 	t.CreateFileLines("lang/python28/Makefile", MkCvsID)
 	t.CreateFileLines("lang/python33/Makefile", MkCvsID)
@@ -110,6 +136,20 @@ func (s *Suite) Test_VarTypeRegistry_enumFromDirs(c *check.C) {
 	}
 
 	test("PYPKGPREFIX", "enum: py28 py33  (system-provided)")
+}
+
+func (s *Suite) Test_VarTypeRegistry_enumFromDirs__no_testing(c *check.C) {
+	t := s.Init(c)
+
+	G.Testing = false
+
+	t.ExpectFatal(
+		func() {
+			G.Pkgsrc.vartypes.enumFromDirs(
+				&G.Pkgsrc, "category", `^pack.*`, "$0", "default")
+		},
+		"FATAL: category: Must contain at least 1 "+
+			"subdirectory matching \"^pack.*\".")
 }
 
 func (s *Suite) Test_VarTypeRegistry_enumFromFiles(c *check.C) {
@@ -128,6 +168,20 @@ func (s *Suite) Test_VarTypeRegistry_enumFromFiles(c *check.C) {
 	}
 
 	test("OPSYS", "enum: NetBSD SunOS  (system-provided)")
+}
+
+func (s *Suite) Test_VarTypeRegistry_enumFromFiles__no_testing(c *check.C) {
+	t := s.Init(c)
+
+	G.Testing = false
+
+	t.ExpectFatal(
+		func() {
+			G.Pkgsrc.vartypes.enumFromFiles(
+				"mk/platform", `^(\w+)\.mk$`, "$1", "default")
+		},
+		"FATAL: mk/platform: Must contain at least 1 "+
+			"file matching \"^(\\\\w+)\\\\.mk$\".")
 }
 
 func (s *Suite) Test_VarTypeRegistry_Init(c *check.C) {
@@ -178,7 +232,8 @@ func (s *Suite) Test_VarTypeRegistry_Init__no_testing(c *check.C) {
 	G.Testing = false
 	t.ExpectFatal(
 		t.FinishSetUp,
-		"FATAL: ~/editors/emacs/modules.mk: Cannot be read.")
+		"FATAL: ~/mk/compiler.mk: Must contain at least 1 "+
+			"variable definition for _COMPILERS or _PSEUDO_COMPILERS.")
 }
 
 func (s *Suite) Test_VarTypeRegistry_Init__MASTER_SITES(c *check.C) {

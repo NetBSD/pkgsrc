@@ -43,7 +43,7 @@ type Pkglint struct {
 	interner  StringInterner
 
 	// cwd is the absolute path to the current working
-	// directory. It is used for speeding up relpath and abspath.
+	// directory. It is used for speeding up Relpath and abspath.
 	// There is no other use for it.
 	cwd Path
 
@@ -106,7 +106,7 @@ type pkglintFatal struct{}
 // G is the abbreviation for "global state";
 // this and the tracer are the only global variables in this Go package.
 var (
-	G     = NewPkglint(nil, nil)
+	G     = NewPkglint(os.Stdout, os.Stderr)
 	trace tracePkg.Tracer
 )
 
@@ -179,7 +179,8 @@ func (pkglint *Pkglint) setUpProfiling() func() {
 
 	f, err := os.Create("pkglint.pprof")
 	if err != nil {
-		dummyLine.Fatalf("Cannot create profiling file: %s", err)
+		pkglint.Logger.TechErrorf("pkglint.pprof", "Cannot create profiling file: %s", err)
+		panic(pkglintFatal{})
 	}
 	atExit(func() { assertNil(f.Close(), "") })
 
@@ -217,11 +218,11 @@ func (pkglint *Pkglint) prepareMainLoop() {
 		// pkglint doesn't know where to load the infrastructure files from,
 		// and these are needed for virtually every single check.
 		// Therefore, the only sensible thing to do is to quit immediately.
-		dummyLine.Fatalf("%q must be inside a pkgsrc tree.", firstDir)
+		NewLineWhole(firstDir).Fatalf("Must be inside a pkgsrc tree.")
 	}
 
 	pkglint.Pkgsrc = NewPkgsrc(joinPath(firstDir, relTopdir))
-	pkglint.Wip = pkglint.Pkgsrc.ToRel(firstDir).HasPrefixPath("wip") // Same as in Pkglint.Check.
+	pkglint.Wip = pkglint.Pkgsrc.IsWip(firstDir) // See Pkglint.checkMode.
 	pkglint.Pkgsrc.LoadInfrastructure()
 
 	currentUser, err := user.Current()
@@ -244,7 +245,6 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) int {
 	opts.AddFlagVar('h', "help", &gopts.ShowHelp, false, "show a detailed usage message")
 	opts.AddFlagVar('I', "dumpmakefile", &gopts.DumpMakefile, false, "dump the Makefile after parsing")
 	opts.AddFlagVar('i', "import", &gopts.Import, false, "prepare the import of a wip package")
-	opts.AddFlagVar('m', "log-verbose", &lopts.LogVerbose, false, "allow the same diagnostic more than once")
 	opts.AddStrList('o', "only", &gopts.LogOnly, "only log diagnostics containing the given text")
 	opts.AddFlagVar('p', "profiling", &gopts.Profiling, false, "profile the executing program")
 	opts.AddFlagVar('q', "quiet", &lopts.Quiet, false, "don't show a summary line when finishing")
@@ -338,9 +338,8 @@ func (pkglint *Pkglint) checkMode(dirent Path, mode os.FileMode) {
 	}
 
 	if isReg {
-		depth := pkgsrcRel.Count() - 1 // FIXME
 		pkglint.checkExecutable(dirent, mode)
-		pkglint.checkReg(dirent, basename, depth)
+		pkglint.checkReg(dirent, basename, pkgsrcRel.Count())
 		return
 	}
 
@@ -448,7 +447,8 @@ func CheckLinesDescr(lines *Lines) {
 		ck.CheckValidCharacters()
 
 		if containsVarRef(line.Text) {
-			for _, token := range NewMkParser(nil, line.Text).MkTokens() {
+			tokens, _ := NewMkLexer(line.Text, nil).MkTokens()
+			for _, token := range tokens {
 				if token.Varuse != nil && G.Pkgsrc.VariableType(nil, token.Varuse.varname) != nil {
 					line.Notef("Variables are not expanded in the DESCR file.")
 				}
@@ -546,9 +546,13 @@ func CheckFileMk(filename Path) {
 	mklines.SaveAutofixChanges()
 }
 
+// checkReg checks the given regular file.
+// depth is 3 for files in the package directory, and 4 or more for files
+// deeper in the directory hierarchy, such as in files/ or patches/.
 func (pkglint *Pkglint) checkReg(filename Path, basename string, depth int) {
 
-	if depth == 2 && !pkglint.Wip {
+	if depth == 3 && !pkglint.Wip {
+		// FIXME: There's no good reason for prohibiting a README file.
 		if contains(basename, "README") || contains(basename, "TODO") {
 			NewLineWhole(filename).Errorf("Packages in main pkgsrc must not have a %s file.", basename)
 			// TODO: Add a convincing explanation.
@@ -560,8 +564,8 @@ func (pkglint *Pkglint) checkReg(filename Path, basename string, depth int) {
 	case hasSuffix(basename, "~"),
 		hasSuffix(basename, ".orig"),
 		hasSuffix(basename, ".rej"),
-		contains(basename, "README") && depth == 2,
-		contains(basename, "TODO") && depth == 2:
+		contains(basename, "README") && depth == 3,
+		contains(basename, "TODO") && depth == 3:
 		if pkglint.Opts.Import {
 			NewLineWhole(filename).Errorf("Must be cleaned up before committing the package.")
 		}
@@ -605,7 +609,7 @@ func (pkglint *Pkglint) checkReg(filename Path, basename string, depth int) {
 			CheckLinesPatch(lines)
 		}
 
-	case matches(filename.String(), `(?:^|/)patches/manual[^/]*$`):
+	case filename.Dir().Base() == "patches" && matches(filename.Base(), `^manual[^/]*$`):
 		if trace.Tracing {
 			trace.Stepf("Unchecked file %q.", filename)
 		}
@@ -677,7 +681,7 @@ func (pkglint *Pkglint) checkExecutable(filename Path, mode os.FileMode) {
 		fix.Describef(0, "Clearing executable bits")
 		if autofix {
 			if err := filename.Chmod(mode &^ 0111); err != nil {
-				G.Logger.Errorf(cleanpath(filename), "Cannot clear executable bits: %s", err)
+				G.Logger.TechErrorf(cleanpath(filename), "Cannot clear executable bits: %s", err)
 			}
 		}
 	})

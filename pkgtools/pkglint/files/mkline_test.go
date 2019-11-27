@@ -282,7 +282,9 @@ func (s *Suite) Test_MkLine_ValueFields__compared_to_splitIntoShellTokens(c *che
 	url := "http://registry.gimp.org/file/fix-ca.c?action=download&id=9884&file="
 	mkline := t.NewMkLine("filename.mk", 123, "MASTER_SITES=\t"+url)
 
-	words, rest := splitIntoShellTokens(dummyLine, url) // Doesn't really make sense
+	// Splitting a URL into shell tokens doesn't really make sense,
+	// but is used here anyway.
+	words, rest := splitIntoShellTokens(mkline.Line, url)
 
 	t.CheckDeepEquals(words, []string{
 		"http://registry.gimp.org/file/fix-ca.c?action=download",

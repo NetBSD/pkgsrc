@@ -57,7 +57,7 @@ func (s *Suite) Test_MkLineChecker_Check__buildlink3_include_prefs(c *check.C) {
 	// relative path fails since that depends on the actual file system,
 	// not on syntactical paths; see os.Stat in CheckRelativePath.
 	//
-	// TODO: Refactor relpath to be independent of a filesystem.
+	// TODO: Refactor Relpath to be independent of a filesystem.
 
 	mklines.Check()
 
@@ -102,7 +102,9 @@ func (s *Suite) Test_MkLineChecker_Check__varuse_modifier_L(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: x11/xkeyboard-config/Makefile:3: "+
 			"Invalid part \"/xkbcomp\" after variable name \"${XKBBASE}\".",
-		// TODO: Avoid this duplicate diagnostic.
+		// TODO: Avoid these duplicate diagnostics.
+		"WARN: x11/xkeyboard-config/Makefile:3: "+
+			"Invalid part \"/xkbcomp\" after variable name \"${XKBBASE}\".",
 		"WARN: x11/xkeyboard-config/Makefile:3: "+
 			"Invalid part \"/xkbcomp\" after variable name \"${XKBBASE}\".",
 		"WARN: x11/xkeyboard-config/Makefile:3: XKBBASE is used but not defined.")
@@ -125,6 +127,7 @@ func (s *Suite) Test_MkLineChecker_checkEmptyContinuation(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
+		"NOTE: ~/filename.mk:2--3: Trailing whitespace.",
 		"WARN: ~/filename.mk:3: This line looks empty but continues the previous line.")
 }
 
@@ -2238,6 +2241,22 @@ func (s *Suite) Test_MkLineChecker_checkInclude__builtin_mk(c *check.C) {
 		"ERROR: ~/category/package/Makefile:20: " +
 			"../../category/package/builtin.mk must not be included directly. " +
 			"Include \"../../category/package/buildlink3.mk\" instead.")
+}
+
+func (s *Suite) Test_MkLineChecker_checkInclude__buildlink3_mk_includes_builtin_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	mklines := t.SetUpFileMkLines("category/package/buildlink3.mk",
+		MkCvsID,
+		".include \"builtin.mk\"")
+	t.CreateFileLines("category/package/builtin.mk",
+		MkCvsID)
+	t.FinishSetUp()
+
+	mklines.Check()
+
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkLineChecker_checkInclude__builtin_mk_rationale(c *check.C) {

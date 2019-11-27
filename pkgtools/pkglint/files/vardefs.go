@@ -406,6 +406,12 @@ func (reg *VarTypeRegistry) enumFrom(pkgsrc *Pkgsrc, filename Path, defval strin
 		return enum(joined)
 	}
 
+	if !G.Testing {
+		mklines.Whole().Fatalf(
+			"Must contain at least 1 variable definition for %s.",
+			joinSkipEmptyCambridge("or", varcanons...))
+	}
+
 	if trace.Tracing {
 		trace.Stepf("Enum from default value: %s", defval)
 	}
@@ -421,8 +427,13 @@ func (reg *VarTypeRegistry) enumFrom(pkgsrc *Pkgsrc, filename Path, defval strin
 func (reg *VarTypeRegistry) enumFromDirs(pkgsrc *Pkgsrc, category Path, re regex.Pattern, repl string, defval string) *BasicType {
 	versions := pkgsrc.ListVersions(category, re, repl, false)
 	if len(versions) == 0 {
+		if !G.Testing {
+			NewLineWhole(category).Fatalf(
+				"Must contain at least 1 subdirectory matching %q.", re)
+		}
 		return enum(defval)
 	}
+
 	return enum(strings.Join(versions, " "))
 }
 
@@ -440,8 +451,13 @@ func (reg *VarTypeRegistry) enumFromFiles(basedir Path, re regex.Pattern, repl s
 		}
 	}
 	if len(relevant) == 0 {
+		if !G.Testing {
+			NewLineWhole(basedir).Fatalf(
+				"Must contain at least 1 file matching %q.", re)
+		}
 		return enum(defval)
 	}
+
 	return enum(strings.Join(relevant, " "))
 }
 

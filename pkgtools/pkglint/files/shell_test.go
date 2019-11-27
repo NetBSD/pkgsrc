@@ -838,7 +838,7 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__implementation(c *c
 	// foobar="`echo \"foo   bar\"`"
 	text := "foobar=\"`echo \\\"foo   bar\\\"`\""
 
-	tokens, rest := splitIntoShellTokens(dummyLine, text)
+	tokens, rest := splitIntoShellTokens(ck.mkline.Line, text)
 
 	t.CheckDeepEquals(tokens, []string{text})
 	t.CheckEquals(rest, "")
@@ -907,13 +907,17 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__shell_variables(c *
 	ck.CheckShellCommandLine(text)
 
 	t.CheckOutputLines(
+		// TODO: Avoid these duplicate diagnostics.
 		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
 		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
 		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
 		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
 		"NOTE: Makefile:3: Please use the SUBST framework instead of ${SED} and ${MV}.",
+		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
+		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
+		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
+		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
 		"WARN: Makefile:3: f is used but not defined.",
-		// TODO: Avoid these duplicate diagnostics.
 		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.",
 		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Make variable or $$f if you mean a shell variable.")
 
@@ -1557,19 +1561,21 @@ func (s *Suite) Test_ShellLineChecker_checkInstallCommand(c *check.C) {
 func (s *Suite) Test_splitIntoShellTokens__line_continuation(c *check.C) {
 	t := s.Init(c)
 
-	words, rest := splitIntoShellTokens(dummyLine, "if true; then \\")
+	line := t.NewLine("filename.mk", 1, "")
+	words, rest := splitIntoShellTokens(line, "if true; then \\")
 
 	t.CheckDeepEquals(words, []string{"if", "true", ";", "then"})
 	t.CheckEquals(rest, "\\")
 
 	t.CheckOutputLines(
-		"WARN: Internal pkglint error in ShTokenizer.ShAtom at \"\\\\\" (quoting=plain).")
+		"WARN: filename.mk:1: Internal pkglint error in ShTokenizer.ShAtom at \"\\\\\" (quoting=plain).")
 }
 
 func (s *Suite) Test_splitIntoShellTokens__dollar_slash(c *check.C) {
 	t := s.Init(c)
 
-	words, rest := splitIntoShellTokens(dummyLine, "pax -s /.*~$$//g")
+	line := t.NewLine("filename.mk", 1, "")
+	words, rest := splitIntoShellTokens(line, "pax -s /.*~$$//g")
 
 	t.CheckDeepEquals(words, []string{"pax", "-s", "/.*~$$//g"})
 	t.CheckEquals(rest, "")
@@ -1578,7 +1584,8 @@ func (s *Suite) Test_splitIntoShellTokens__dollar_slash(c *check.C) {
 func (s *Suite) Test_splitIntoShellTokens__dollar_subshell(c *check.C) {
 	t := s.Init(c)
 
-	words, rest := splitIntoShellTokens(dummyLine, "id=$$(${AWK} '{print}' < ${WRKSRC}/idfile) && echo \"$$id\"")
+	line := t.NewLine("filename.mk", 1, "")
+	words, rest := splitIntoShellTokens(line, "id=$$(${AWK} '{print}' < ${WRKSRC}/idfile) && echo \"$$id\"")
 
 	t.CheckDeepEquals(words, []string{"id=$$(${AWK} '{print}' < ${WRKSRC}/idfile)", "&&", "echo", "\"$$id\""})
 	t.CheckEquals(rest, "")
@@ -1587,7 +1594,8 @@ func (s *Suite) Test_splitIntoShellTokens__dollar_subshell(c *check.C) {
 func (s *Suite) Test_splitIntoShellTokens__semicolons(c *check.C) {
 	t := s.Init(c)
 
-	words, rest := splitIntoShellTokens(dummyLine, "word1 word2;;;")
+	line := t.NewLine("filename.mk", 1, "")
+	words, rest := splitIntoShellTokens(line, "word1 word2;;;")
 
 	t.CheckDeepEquals(words, []string{"word1", "word2", ";;", ";"})
 	t.CheckEquals(rest, "")
@@ -1597,7 +1605,8 @@ func (s *Suite) Test_splitIntoShellTokens__whitespace(c *check.C) {
 	t := s.Init(c)
 
 	text := "\t${RUN} cd ${WRKSRC}&&(${ECHO} ${PERL5:Q};${ECHO})|${BASH} ./install"
-	words, rest := splitIntoShellTokens(dummyLine, text)
+	line := t.NewLine("filename.mk", 1, "")
+	words, rest := splitIntoShellTokens(line, text)
 
 	t.CheckDeepEquals(words, []string{
 		"${RUN}",
@@ -1611,7 +1620,8 @@ func (s *Suite) Test_splitIntoShellTokens__finished_dquot(c *check.C) {
 	t := s.Init(c)
 
 	text := "\"\""
-	words, rest := splitIntoShellTokens(dummyLine, text)
+	line := t.NewLine("filename.mk", 1, "")
+	words, rest := splitIntoShellTokens(line, text)
 
 	t.CheckDeepEquals(words, []string{"\"\""})
 	t.CheckEquals(rest, "")
@@ -1621,7 +1631,8 @@ func (s *Suite) Test_splitIntoShellTokens__unfinished_dquot(c *check.C) {
 	t := s.Init(c)
 
 	text := "\t\""
-	words, rest := splitIntoShellTokens(dummyLine, text)
+	line := t.NewLine("filename.mk", 1, "")
+	words, rest := splitIntoShellTokens(line, text)
 
 	c.Check(words, check.IsNil)
 	t.CheckEquals(rest, "\"")
@@ -1631,7 +1642,8 @@ func (s *Suite) Test_splitIntoShellTokens__unescaped_dollar_in_dquot(c *check.C)
 	t := s.Init(c)
 
 	text := "echo \"$$\""
-	words, rest := splitIntoShellTokens(dummyLine, text)
+	line := t.NewLine("filename.mk", 1, "")
+	words, rest := splitIntoShellTokens(line, text)
 
 	t.CheckDeepEquals(words, []string{"echo", "\"$$\""})
 	t.CheckEquals(rest, "")
@@ -1643,7 +1655,8 @@ func (s *Suite) Test_splitIntoShellTokens__varuse_with_embedded_space_and_other_
 	t := s.Init(c)
 
 	varuseWord := "${GCONF_SCHEMAS:@.s.@${INSTALL_DATA} ${WRKSRC}/src/common/dbus/${.s.} ${DESTDIR}${GCONF_SCHEMAS_DIR}/@}"
-	words, rest := splitIntoShellTokens(dummyLine, varuseWord)
+	line := t.NewLine("filename.mk", 1, "")
+	words, rest := splitIntoShellTokens(line, varuseWord)
 
 	t.CheckDeepEquals(words, []string{varuseWord})
 	t.CheckEquals(rest, "")
@@ -1655,7 +1668,8 @@ func (s *Suite) Test_splitIntoShellTokens__two_shell_variables(c *check.C) {
 	t := s.Init(c)
 
 	code := "echo $$i$$j"
-	words, rest := splitIntoShellTokens(dummyLine, code)
+	line := t.NewLine("filename.mk", 1, "")
+	words, rest := splitIntoShellTokens(line, code)
 
 	t.CheckDeepEquals(words, []string{"echo", "$$i$$j"})
 	t.CheckEquals(rest, "")
@@ -1664,7 +1678,8 @@ func (s *Suite) Test_splitIntoShellTokens__two_shell_variables(c *check.C) {
 func (s *Suite) Test_splitIntoShellTokens__varuse_with_embedded_space(c *check.C) {
 	t := s.Init(c)
 
-	words, rest := splitIntoShellTokens(dummyLine, "${VAR:S/ /_/g}")
+	line := t.NewLine("filename.mk", 1, "")
+	words, rest := splitIntoShellTokens(line, "${VAR:S/ /_/g}")
 
 	t.CheckDeepEquals(words, []string{"${VAR:S/ /_/g}"})
 	t.CheckEquals(rest, "")
@@ -1673,7 +1688,8 @@ func (s *Suite) Test_splitIntoShellTokens__varuse_with_embedded_space(c *check.C
 func (s *Suite) Test_splitIntoShellTokens__redirect(c *check.C) {
 	t := s.Init(c)
 
-	words, rest := splitIntoShellTokens(dummyLine, "echo 1>output 2>>append 3>|clobber 4>&5 6<input >>append")
+	line := t.NewLine("filename.mk", 1, "")
+	words, rest := splitIntoShellTokens(line, "echo 1>output 2>>append 3>|clobber 4>&5 6<input >>append")
 
 	t.CheckDeepEquals(words, []string{
 		"echo",
@@ -1685,7 +1701,7 @@ func (s *Suite) Test_splitIntoShellTokens__redirect(c *check.C) {
 		">>", "append"})
 	t.CheckEquals(rest, "")
 
-	words, rest = splitIntoShellTokens(dummyLine, "echo 1> output 2>> append 3>| clobber 4>& 5 6< input >> append")
+	words, rest = splitIntoShellTokens(line, "echo 1> output 2>> append 3>| clobber 4>& 5 6< input >> append")
 
 	t.CheckDeepEquals(words, []string{
 		"echo",

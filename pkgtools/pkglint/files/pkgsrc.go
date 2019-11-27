@@ -813,7 +813,7 @@ func (src *Pkgsrc) ListVersions(category Path, re regex.Pattern, repl string, er
 	}
 	if len(names) == 0 {
 		if errorIfEmpty {
-			dummyLine.Errorf("Cannot find package versions of %q in %q.", re, src.File(category))
+			NewLineWhole(src.File(category)).Errorf("Cannot find package versions of %q.", re)
 		}
 		src.listVersions[cacheKey] = nil
 		return nil
@@ -1035,13 +1035,92 @@ func (src *Pkgsrc) Load(filename Path, options LoadOptions) *Lines {
 	return Load(src.File(filename), options)
 }
 
+// Relpath returns the canonical relative path from the directory "from"
+// to the filesystem entry "to".
+//
+// The relative path is built by going from the "from" directory up to the
+// pkgsrc root and from there to the "to" filename. This produces the form
+// "../../category/package" that is found in DEPENDS and .include lines.
+//
+// Both from and to are interpreted relative to the current working directory,
+// unless they are absolute paths.
+//
+// This function should only be used if the relative path from one file to
+// another cannot be computed in another way. The preferred way is to take
+// the relative filenames directly from the .include or exists() where they
+// appear.
+//
+// TODO: Invent data types for all kinds of relative paths that occur in pkgsrc
+//  and pkglint. Make sure that these paths cannot be accidentally mixed.
+func (src *Pkgsrc) Relpath(from, to Path) (result Path) {
+	cfrom := from.Clean()
+	cto := to.Clean()
+
+	if cfrom == cto {
+		return "."
+	}
+
+	// Take a shortcut for the common case from "dir" to "dir/subdir/...".
+	if cto.HasPrefixPath(cfrom) {
+		rel := cfrom.Rel(cto)
+		if !rel.HasPrefixPath("..") {
+			return rel
+		}
+	}
+
+	// Take a shortcut for the common case from "category/package" to ".".
+	// This is the most common variant in a complete pkgsrc scan.
+	if cto == "." {
+		fromParts := cfrom.Parts()
+		if len(fromParts) == 2 && fromParts[0] != ".." && fromParts[1] != ".." {
+			return "../.."
+		}
+	}
+
+	if cfrom == "." && !cto.IsAbs() {
+		return cto.Clean()
+	}
+
+	absFrom := abspath(cfrom)
+	absTopdir := abspath(src.topdir)
+	absTo := abspath(cto)
+
+	up := absFrom.Rel(absTopdir)
+	down := absTopdir.Rel(absTo)
+
+	if absFrom.HasPrefixPath(absTo) || absTo.HasPrefixPath(absFrom) {
+		return absFrom.Rel(absTo)
+	}
+
+	fromParts := absTopdir.Rel(absFrom).Parts()
+	toParts := down.Parts()
+
+	if len(fromParts) >= 2 && len(toParts) >= 2 {
+		if fromParts[0] == toParts[0] && fromParts[1] == toParts[1] {
+			var relParts []string
+			for _ = range fromParts[2:] {
+				relParts = append(relParts, "..")
+			}
+			relParts = append(relParts, toParts[2:]...)
+			return NewPath(strings.Join(relParts, "/")).CleanDot()
+		}
+	}
+
+	result = up.JoinNoClean(down).CleanDot()
+	return
+}
+
 // File resolves a filename relative to the pkgsrc top directory.
 //
 // Example:
 //  NewPkgsrc("/usr/pkgsrc").File("distfiles") => "/usr/pkgsrc/distfiles"
 func (src *Pkgsrc) File(relativeName Path) Path {
+	cleaned := relativeName.Clean()
+	if cleaned == "." {
+		return src.topdir.CleanDot()
+	}
 	// TODO: Package.File resolves variables, Pkgsrc.File doesn't. They should behave the same.
-	return cleanpath(joinPath(src.topdir, relativeName))
+	return src.topdir.JoinNoClean(cleaned).CleanDot()
 }
 
 // ToRel returns the path of `filename`, relative to the pkgsrc top directory.
@@ -1049,14 +1128,24 @@ func (src *Pkgsrc) File(relativeName Path) Path {
 // Example:
 //  NewPkgsrc("/usr/pkgsrc").ToRel("/usr/pkgsrc/distfiles") => "distfiles"
 func (src *Pkgsrc) ToRel(filename Path) Path {
-	return relpath(src.topdir, filename)
+	return src.Relpath(src.topdir, filename)
 }
 
-// IsInfra returns whether the given filename (relative to the pkglint
+// IsInfra returns whether the given filename (relative to the current
 // working directory) is part of the pkgsrc infrastructure.
 func (src *Pkgsrc) IsInfra(filename Path) bool {
 	rel := src.ToRel(filename)
 	return rel.HasPrefixPath("mk") || rel.HasPrefixPath("wip/mk")
+}
+
+func (src *Pkgsrc) IsInfraMain(filename Path) bool {
+	rel := src.ToRel(filename)
+	return rel.HasPrefixPath("mk")
+}
+
+func (src *Pkgsrc) IsWip(filename Path) bool {
+	rel := src.ToRel(filename)
+	return rel.HasPrefixPath("wip")
 }
 
 // Change describes a modification to a single package, from the doc/CHANGES-* files.
