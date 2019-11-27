@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2019/11/18 12:09:15 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2019/11/27 16:22:27 jakllsch Exp $
 
 SHA1 (firefox-68.2.0esr.source.tar.xz) = 19815556c558a99ea76b4abb357eddb684cfd05a
 RMD160 (firefox-68.2.0esr.source.tar.xz) = 25c7447814adb99efea7632b539312becd3b9096
@@ -22,6 +22,7 @@ SHA1 (patch-ipc_glue_CrossProcessSemaphore__posix.cpp) = f8d155ee66008b7cc4052b6
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 260c29bacd8bf265951b7a412f850bf2b292c836
 SHA1 (patch-js_src_threading_posix_Thread.cpp) = 47e612a676e614fd6dd43b8a3140218a3fbdc7fa
 SHA1 (patch-js_src_util_NativeStack.cpp) = 2c6f844d38343f40ebbc8fd665279256e4ae6d35
+SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9ea5862558a
 SHA1 (patch-media_libcubeb_gtest_moz.build) = ea6dcc7ceeb76ce1fb9d508cf43080a2eef3a9e4
 SHA1 (patch-media_libcubeb_src_cubeb.c) = e3446562ed16ec9643df42ee0b9c46ee91f22913
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = f359a66a22f11142d05746e15894d998d3e3bf5a
