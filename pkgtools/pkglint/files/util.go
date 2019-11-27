@@ -239,7 +239,7 @@ func assertf(cond bool, format string, args ...interface{}) {
 }
 
 func isEmptyDir(filename Path) bool {
-	if filename.HasSuffixText("/CVS") {
+	if filename.HasSuffixPath("CVS") {
 		return true
 	}
 
@@ -457,6 +457,7 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 	})
 }
 
+// FIXME: Replace with Path.JoinNoClean
 func joinPath(a, b Path, others ...Path) Path {
 	if len(others) == 0 {
 		return a + "/" + b
@@ -466,69 +467,6 @@ func joinPath(a, b Path, others ...Path) Path {
 		parts = append(parts, part.String())
 	}
 	return NewPath(strings.Join(parts, "/"))
-}
-
-// relpath returns the relative path from the directory "from"
-// to the filesystem entry "to".
-//
-// The relative path is built by going from the "from" directory via the
-// pkgsrc root to the "to" filename. This produces the form
-// "../../category/package" that is found in DEPENDS and .include lines.
-//
-// Both from and to are interpreted relative to the current working directory,
-// unless they are absolute paths.
-//
-// This function should only be used if the relative path from one file to
-// another cannot be computed in another way. The preferred way is to take
-// the relative filenames directly from the .include or exists() where they
-// appear.
-//
-// TODO: Invent data types for all kinds of relative paths that occur in pkgsrc
-//  and pkglint. Make sure that these paths cannot be accidentally mixed.
-func relpath(from, to Path) (result Path) {
-
-	if trace.Tracing {
-		defer trace.Call(from, to, trace.Result(&result))()
-	}
-
-	cfrom := cleanpath(from)
-	cto := cleanpath(to)
-
-	if cfrom == cto {
-		return "."
-	}
-
-	// Take a shortcut for the common case from "dir" to "dir/subdir/...".
-	if cto.HasPrefixPath(cfrom) {
-		return cleanpath(cto[len(cfrom)+1:])
-	}
-
-	// Take a shortcut for the common case from "category/package" to ".".
-	// This is the most common variant in a complete pkgsrc scan.
-	if cto == "." {
-		fromParts := cfrom.Parts()
-		if len(fromParts) == 2 && !hasPrefix(fromParts[0], ".") && !hasPrefix(fromParts[1], ".") {
-			return "../.."
-		}
-	}
-
-	if cfrom == "." && !cto.IsAbs() {
-		return cto.Clean()
-	}
-
-	absFrom := abspath(cfrom)
-	absTopdir := abspath(G.Pkgsrc.topdir)
-	absTo := abspath(cto)
-
-	toTop := absFrom.Rel(absTopdir)
-	fromTop := absTopdir.Rel(absTo)
-
-	result = cleanpath(toTop.JoinNoClean(fromTop))
-
-	if trace.Tracing {
-		trace.Stepf("relpath from %q to %q = %q", cfrom, cto, result)
-	}
-	return
 }
 
 func abspath(filename Path) Path {

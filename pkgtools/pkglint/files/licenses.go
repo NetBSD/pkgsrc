@@ -36,7 +36,8 @@ func (lc *LicenseChecker) checkName(license string) {
 	}
 
 	if !licenseFile.IsFile() {
-		lc.MkLine.Warnf("License file %s does not exist.", cleanpath(licenseFile))
+		lc.MkLine.Warnf("License file %s does not exist.",
+			lc.MkLine.PathToFile(licenseFile))
 	}
 
 	switch license {

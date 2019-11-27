@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/11/23 23:35:55 rillig Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/11/27 22:10:06 rillig Exp $
 bin/pkglint
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/getopt.a
@@ -30,8 +30,8 @@ gopkg/src/netbsd.org/pkglint/getopt/getopt_test.go
 gopkg/src/netbsd.org/pkglint/histogram/histogram.go
 gopkg/src/netbsd.org/pkglint/histogram/histogram_test.go
 gopkg/src/netbsd.org/pkglint/intqa/ideas.go
-gopkg/src/netbsd.org/pkglint/intqa/testnames.go
-gopkg/src/netbsd.org/pkglint/intqa/testnames_test.go
+gopkg/src/netbsd.org/pkglint/intqa/qa.go
+gopkg/src/netbsd.org/pkglint/intqa/qa_test.go
 gopkg/src/netbsd.org/pkglint/licenses.go
 gopkg/src/netbsd.org/pkglint/licenses/licenses.go
 gopkg/src/netbsd.org/pkglint/licenses/licenses.y
@@ -49,6 +49,8 @@ gopkg/src/netbsd.org/pkglint/lines.go
 gopkg/src/netbsd.org/pkglint/lines_test.go
 gopkg/src/netbsd.org/pkglint/logging.go
 gopkg/src/netbsd.org/pkglint/logging_test.go
+gopkg/src/netbsd.org/pkglint/mklexer.go
+gopkg/src/netbsd.org/pkglint/mklexer_test.go
 gopkg/src/netbsd.org/pkglint/mkline.go
 gopkg/src/netbsd.org/pkglint/mkline_test.go
 gopkg/src/netbsd.org/pkglint/mklinechecker.go
