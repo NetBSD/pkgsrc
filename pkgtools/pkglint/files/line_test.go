@@ -53,3 +53,21 @@ func (s *Suite) Test_Line_Fatalf__trace(c *check.C) {
 		"TRACE: - (*Suite).Test_Line_Fatalf__trace.func2()",
 		"FATAL: filename:123: Cannot continue because of \"reason 1\" and \"reason 2\".")
 }
+
+func (s *Suite) Test_Line_Autofix__reuse_incomplete(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("filename.mk", 1, "")
+
+	fix := line.Autofix()
+	fix.Warnf("Warning.")
+	// For some reason, the other required calls are left out.
+
+	t.ExpectAssert(func() { _ = line.Autofix() })
+
+	// Properly finish the standard call sequence for an Autofix.
+	fix.Apply()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:1: Warning.")
+}
