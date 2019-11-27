@@ -1,0 +1,12 @@
+$NetBSD: patch-src_meson.build,v 1.1 2019/11/27 13:36:51 nia Exp $
+
+Install configuration file to examples directory.
+
+--- src/meson.build.orig	2019-08-28 17:57:55.000000000 +0000
++++ src/meson.build
+@@ -16,4 +16,4 @@ vdpau = shared_library('vdpau',
+     install : true,
+ )
+ 
+-install_data('vdpau_wrapper.cfg', install_dir : get_option('sysconfdir'))
++install_data('vdpau_wrapper.cfg', install_dir : get_option('egdir'))
