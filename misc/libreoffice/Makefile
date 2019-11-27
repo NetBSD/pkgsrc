@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2019/11/15 13:26:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.214 2019/11/27 07:55:36 martin Exp $
 
 VERREL=		6.3.3
 VERRC=		2
@@ -280,7 +280,7 @@ pre-configure: provide-python3
 .PHONY: provide-python3
 provide-python3:
 	# install phase uses python3 command
-	${LN} -s ${PYTHONBIN} "${BUILDLINK_DIR}/bin/python3"
+	[ -h "${BUILDLINK_DIR}/bin/python3" ] || ${LN} -s ${PYTHONBIN} "${BUILDLINK_DIR}/bin/python3"
 
 do-install:
 	cd ${WRKSRC} && make DESTDIR="${DESTDIR}" PREFIXDIR="${PREFIX}" distro-pack-install
