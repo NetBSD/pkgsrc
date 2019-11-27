@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5173 2019/11/27 16:03:59 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5174 2019/11/27 21:49:55 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8336,3 +8336,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/notmuch to 0.29.3 [ryoon 2019-11-27]
 	Updated editors/abiword to 3.0.4 [nia 2019-11-27]
 	Updated editors/abiword-plugins to 3.0.4 [nia 2019-11-27]
+	Added devel/py-random2 version 1.0.1 [markd 2019-11-27]
+	Added games/freecell-solver version 5.14.0 [markd 2019-11-27]
+	Updated games/kpat to 19.08.3 [markd 2019-11-27]
+	Added devel/rttr version 0.9.6 [markd 2019-11-27]
+	Updated multimedi/mlt to 6.18.0 [markd 2019-11-27]
+	Updated multimedia/kdenlive to 19.08.3 [markd 2019-11-27]
