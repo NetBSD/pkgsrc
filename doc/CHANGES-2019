@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5167 2019/11/27 10:27:45 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.5168 2019/11/27 10:34:59 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8321,3 +8321,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/flightgear to 2019.1.1 [nia 2019-11-26]
 	Updated games/flightgear-data to 2019.1.1 [nia 2019-11-26]
 	Added devel/go-jwt-go version 3.2.0 [ng0 2019-11-27]
+	Added databases/go-tiedot version 3.4 [ng0 2019-11-27]
