@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/11/26 18:23:57 markd Exp $
+# $NetBSD: Makefile,v 1.53 2019/11/27 21:43:26 markd Exp $
 
 DISTNAME=	kde4-4.14.3
 PKGREVISION=	20
@@ -72,7 +72,7 @@ DEPENDS+=	knetwalk>=4.14.3:../../games/knetwalk
 DEPENDS+=	kolf>=4.14.3:../../games/kolf
 DEPENDS+=	kollision>=4.14.3:../../games/kollision
 DEPENDS+=	konquest>=4.14.3:../../games/konquest
-DEPENDS+=	kpat-4.14.3{,nb[0-9]*}:../../games/kpat
+DEPENDS+=	kpat>=4.14.3:../../games/kpat
 DEPENDS+=	kreversi>=4.14.3:../../games/kreversi
 DEPENDS+=	kshisen>=4.14.3:../../games/kshisen
 DEPENDS+=	ksirk>=4.14.3:../../games/ksirk
