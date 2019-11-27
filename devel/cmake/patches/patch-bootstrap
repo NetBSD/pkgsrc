@@ -1,11 +1,11 @@
-$NetBSD: patch-bootstrap,v 1.2 2017/12/14 22:13:34 adam Exp $
+$NetBSD: patch-bootstrap,v 1.3 2019/11/27 22:32:27 adam Exp $
 
 Use external libuv; the one included with cmake makes building fail.
 
---- bootstrap.orig	2017-11-20 15:19:54.000000000 +0000
+--- bootstrap.orig	2019-11-26 14:18:07.000000000 +0000
 +++ bootstrap
-@@ -1305,11 +1306,8 @@ objs=""
- for a in ${CMAKE_CXX_SOURCES} ${CMAKE_C_SOURCES} ${LexerParser_CXX_SOURCES} ${LexerParser_C_SOURCES} ${KWSYS_CXX_SOURCES} ${KWSYS_C_SOURCES}; do
+@@ -1440,11 +1440,8 @@ objs=""
+ for a in ${CMAKE_CXX_SOURCES} ${CMAKE_C_SOURCES} ${CMAKE_STD_CXX_SOURCES} ${LexerParser_CXX_SOURCES} ${LexerParser_C_SOURCES} ${KWSYS_CXX_SOURCES} ${KWSYS_C_SOURCES}; do
    objs="${objs} ${a}.o"
  done
 -for a in ${LIBUV_C_SOURCES}; do
@@ -17,7 +17,7 @@ Use external libuv; the one included with cmake makes building fail.
  
  uv_c_flags=""
  if ${cmake_system_mingw}; then
-@@ -1419,11 +1417,6 @@ for a in ${KWSYS_CXX_SOURCES}; do
+@@ -1568,11 +1565,6 @@ for a in ${KWSYS_CXX_SOURCES}; do
    echo "${a}.o : ${src} ${dep}" >> "${cmake_bootstrap_dir}/Makefile"
    echo "	${cmake_cxx_compiler} ${cmake_cxx_flags} -DKWSYS_NAMESPACE=cmsys ${src_flags} -c ${src} -o ${a}.o" >> "${cmake_bootstrap_dir}/Makefile"
  done
