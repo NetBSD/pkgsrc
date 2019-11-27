@@ -1,37 +1,50 @@
-# $NetBSD: Makefile,v 1.53 2019/08/22 12:23:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2019/11/27 21:36:56 markd Exp $
 
-DISTNAME=	kdenlive-0.9.10
-PKGREVISION=	14
+DISTNAME=	kdenlive-${KAPPSVER}
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_KDE:=kdenlive/0.9.10/src/}
-EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.kdenlive.org/
+HOMEPAGE=	https://www.kdenlive.org/
 COMMENT=	KDE video editor
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+.include "../../meta-pkgs/kde/applications.mk"
+
+BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 DEPENDS+=	dvdauthor>=0.6.18:../../multimedia/dvdauthor
+DEPENDS+=	ffplay4-[0-9]*:../../multimedia/ffplay4
 
-# LDFLAGS=-g
-# CFLAGS+=-g
-# CXXFLAGS+=-g
+USE_TOOLS+=	msgmerge
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	msgfmt perl pkg-config
+CXXFLAGS.NetBSD+=	-DHAVE_LOCALE_H
+CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_LibV4L2=TRUE
+CMAKE_ARGS+=		-DFFMPEG_SUFFIX=4
 
-CMAKE_ARGS+=	-DWITH_LibV4L2=OFF
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	data/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/share/icons/oxygen/*/mimetypes/application-x-kdenlivetitle.png
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kdenlive_keyboardschemes.knsrc \
+		${PKG_SYSCONFDIR}/xdg/kdenlive_keyboardschemes.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kdenlive_renderprofiles.knsrc \
+		${PKG_SYSCONFDIR}/xdg/kdenlive_renderprofiles.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kdenlive_titles.knsrc \
+		${PKG_SYSCONFDIR}/xdg/kdenlive_titles.knsrc
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kdenlive_wipes.knsrc \
+		${PKG_SYSCONFDIR}/xdg/kdenlive_wipes.knsrc
 
-.include "../../meta-pkgs/kde4/kde4.mk"
-.include "../../devel/qjson/buildlink3.mk"
+.include "../../devel/kdeclarative/buildlink3.mk"
+.include "../../devel/knotifyconfig/buildlink3.mk"
+.include "../../devel/rttr/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/frei0r/buildlink3.mk"
 .include "../../multimedia/mlt/buildlink3.mk"
+.include "../../net/knewstuff/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../sysutils/kfilemetadata5/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
