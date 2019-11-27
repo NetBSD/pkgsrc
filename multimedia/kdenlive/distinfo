@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/04/09 14:43:15 abs Exp $
+$NetBSD: distinfo,v 1.6 2019/11/27 21:36:56 markd Exp $
 
-SHA1 (kdenlive-0.9.10.tar.bz2) = e9496e58314751e8fdb62f3a679838f8cd38cffa
-RMD160 (kdenlive-0.9.10.tar.bz2) = d9c59cb57b96a15987510380185d1dc3cb6ff9ee
-SHA512 (kdenlive-0.9.10.tar.bz2) = 47314e4a095a74fb6e0d9aec8450d857a3624c0127372c88c94a73ae504f565b77c8197970dc61f9a2478664069e6bf822495b50c92491a4aae5d43c9afc4e2a
-Size (kdenlive-0.9.10.tar.bz2) = 4666332 bytes
+SHA1 (kdenlive-19.08.3.tar.xz) = cb2a38115aef004e757c04a66b2be28f6645f85f
+RMD160 (kdenlive-19.08.3.tar.xz) = 26724566b7869f84b9131c160f173e9092f5af47
+SHA512 (kdenlive-19.08.3.tar.xz) = 187651de7542b86f9332c3eb79e2a27b664f0b4ead19fbb6035963b7be41a2a53b65de37e8c18c50aa794145cfaa2ebaf1b9f721d379c014da9c5f9475048738
+Size (kdenlive-19.08.3.tar.xz) = 12418064 bytes
