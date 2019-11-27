@@ -1,18 +1,18 @@
-$NetBSD: patch-Source_cmArchiveWrite.cxx,v 1.1 2019/07/19 09:06:23 adam Exp $
+$NetBSD: patch-Source_cmArchiveWrite.cxx,v 1.2 2019/11/27 22:32:27 adam Exp $
 
 Allow older libarchive without ZSTD support.
 
---- Source/cmArchiveWrite.cxx.orig	2019-07-19 08:41:01.000000000 +0000
+--- Source/cmArchiveWrite.cxx.orig	2019-11-26 14:18:07.000000000 +0000
 +++ Source/cmArchiveWrite.cxx
-@@ -137,6 +137,7 @@ cmArchiveWrite::cmArchiveWrite(std::ostr
+@@ -141,6 +141,7 @@ cmArchiveWrite::cmArchiveWrite(std::ostr
          return;
        }
        break;
 +#ifdef ARCHIVE_FILTER_ZSTD
      case CompressZstd:
        if (archive_write_add_filter_zstd(this->Archive) != ARCHIVE_OK) {
-         this->Error = "archive_write_add_filter_zstd: ";
-@@ -144,6 +145,7 @@ cmArchiveWrite::cmArchiveWrite(std::ostr
+         this->Error = cmStrCat("archive_write_add_filter_zstd: ",
+@@ -148,6 +149,7 @@ cmArchiveWrite::cmArchiveWrite(std::ostr
          return;
        }
        break;
