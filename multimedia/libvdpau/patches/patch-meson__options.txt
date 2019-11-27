@@ -1,0 +1,13 @@
+$NetBSD: patch-meson__options.txt,v 1.1 2019/11/27 13:36:51 nia Exp $
+
+Install configuration file to examples directory.
+
+--- meson_options.txt.orig	2019-08-28 17:57:55.000000000 +0000
++++ meson_options.txt
+@@ -11,3 +11,6 @@ option('dri2',
+ option('moduledir',
+     type : 'string',
+     description : 'Module directory')
++option('egdir',
++    type : 'string',
++    description : 'Example configuration file directory')
