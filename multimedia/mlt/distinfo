@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 23:54:30 agc Exp $
+$NetBSD: distinfo,v 1.10 2019/11/27 21:32:09 markd Exp $
 
-SHA1 (mlt-0.9.0.tar.gz) = 76bf18f4442801fae963c5a676d6626e383d1617
-RMD160 (mlt-0.9.0.tar.gz) = c58b21463562367ad1fad46fa3e524f283bd4c82
-SHA512 (mlt-0.9.0.tar.gz) = 631ab41ee6e3673c712f784b9c02b567a5e3b982d49eabe032ef20e89be9424cf9ce6d97fe6906f03b0ac082544316ba8524ae041d017aeac009ab9b98d457d9
-Size (mlt-0.9.0.tar.gz) = 1167943 bytes
-SHA1 (patch-configure) = 0abcfe32e1e9c5505e00690226e7ae99349839bb
-SHA1 (patch-src_framework_mlt__properties.c) = 9a4f0351ddcbed4c431a65a16375a19357605d76
-SHA1 (patch-src_framework_mlt__property.c) = 7471031721b64dfcc8dccc828ca10b5eee1fb37d
-SHA1 (patch-src_framework_mlt__property.h) = 638ec43f6ad073b0f5dff48604f20e59dd0460e4
-SHA1 (patch-src_modules_gtk2_producer__pango.c) = 86d7df6d82fe795a0f94afb9fae1d025bb4a7f4a
+SHA1 (mlt-6.18.0.tar.gz) = 6c6f2678ebe0bb4f2311eae6ab04c3b548257c89
+RMD160 (mlt-6.18.0.tar.gz) = 89cdbdea82e4d322ab1b429a2c576991e9a25756
+SHA512 (mlt-6.18.0.tar.gz) = cbd2dc15864d4e64aaead433c5873cbe4039c77416536809c7281f31b2468159e35e2cfe1aac3b87acb2ee728c1bacb9a0ba2650af1de343f7487ca93d9d36d2
+Size (mlt-6.18.0.tar.gz) = 1430398 bytes
+SHA1 (patch-src_framework_mlt__properties.c) = 5e8b30cdabb90ed96a122a2654dc254f74a87374
+SHA1 (patch-src_framework_mlt__property.h) = d477cd70b6fecba00f26a5c8f155c9bab73aea03
