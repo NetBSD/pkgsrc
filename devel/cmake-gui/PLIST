@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/27 22:32:27 adam Exp $
+bin/cmake-gui
+share/applications/cmake-gui.desktop
+share/icons/hicolor/128x128/apps/CMakeSetup.png
+share/icons/hicolor/32x32/apps/CMakeSetup.png
+share/mime/packages/cmakecache.xml
