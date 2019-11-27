@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/14 10:38:07 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/11/27 13:36:50 nia Exp $
 
 DISTNAME=	libvdpau-1.3
 CATEGORIES=	multimedia
@@ -10,8 +10,8 @@ HOMEPAGE=	http://http.download.nvidia.com/XFree86/vdpau/doxygen/html/index.html
 COMMENT=	Video Decode and Presentation API for Unix
 LICENSE=	mit
 
-USE_TOOLS+=		pkg-config
-USE_LANGUAGES=		c c++
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
 
 #PKGCONFIG_OVERRIDE+=	vdpau.pc.in
 
@@ -19,16 +19,13 @@ EGDIR=		${PREFIX}/share/examples/libvdpau
 CONF_FILES=	${EGDIR}/vdpau_wrapper.cfg \
 		${PKG_SYSCONFDIR}/vdpau_wrapper.cfg
 
-INSTALLATION_DIRS=	${EGDIR}
+MESON_ARGS+=	-Degdir=${EGDIR}
 
 .include "available.mk"
 
 .if ${VDPAU_AVAILABLE} == no
 PKG_SKIP_REASON+=	"VDPAU is not available on this platform"
 .endif
-
-post-install:
-	${MV} ${DESTDIR}${PREFIX}/etc/vdpau_wrapper.cfg ${DESTDIR}${EGDIR}
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
