@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/27 13:41:54 nia Exp $
+# $NetBSD: Makefile,v 1.17 2019/11/27 13:46:53 nia Exp $
 
 DISTNAME=	libvdpau-1.3
 CATEGORIES=	multimedia
@@ -13,13 +13,14 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-#PKGCONFIG_OVERRIDE+=	vdpau.pc.in
-
 EGDIR=		${PREFIX}/share/examples/libvdpau
 CONF_FILES=	${EGDIR}/vdpau_wrapper.cfg \
 		${PKG_SYSCONFDIR}/vdpau_wrapper.cfg
 
 MESON_ARGS+=	-Degdir=${EGDIR}
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/vdpau.pc
 
 .include "available.mk"
 
