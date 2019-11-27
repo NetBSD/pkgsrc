@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2019/11/26 19:13:25 nia Exp $
+# $NetBSD: Makefile.common,v 1.22 2019/11/27 14:25:56 nia Exp $
 
 # used by mail/claws-mail/plugins.mk
 
@@ -45,14 +45,20 @@ CONFIGURE_ARGS+=	--disable-bsfilter-plugin
 CONFIGURE_ARGS+=	--disable-clamd-plugin
 CONFIGURE_ARGS+=	--disable-fancy-plugin
 CONFIGURE_ARGS+=	--disable-fetchinfo-plugin
+CONFIGURE_ARGS+=	--disable-gdata-plugin
+CONFIGURE_ARGS+=	--disable-litehtml_viewer-plugin
 CONFIGURE_ARGS+=	--disable-mailmbox-plugin
 CONFIGURE_ARGS+=	--disable-managesieve-plugin
 CONFIGURE_ARGS+=	--disable-newmail-plugin
 CONFIGURE_ARGS+=	--disable-notification-plugin
+CONFIGURE_ARGS+=	--disable-pdf_viewer-plugin
+CONFIGURE_ARGS+=	--disable-python-plugin
 CONFIGURE_ARGS+=	--disable-rssyl-plugin
+CONFIGURE_ARGS+=	--disable-smime-plugin
 CONFIGURE_ARGS+=	--disable-spam_report-plugin
 CONFIGURE_ARGS+=	--disable-tnef_parse-plugin
 CONFIGURE_ARGS+=	--disable-perl-plugin
+CONFIGURE_ARGS+=	--disable-vcalendar-plugin
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mail/libetpan/buildlink3.mk"
