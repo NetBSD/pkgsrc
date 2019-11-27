@@ -15,7 +15,8 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 	}
 
 	test := func(program string, output ...string) {
-		list, err := parseShellProgram(dummyLine, program)
+		line := t.NewLine("filename.mk", 1, "")
+		list, err := parseShellProgram(line, program)
 
 		if !c.Check(err, check.IsNil) || !c.Check(list, check.NotNil) {
 			return
@@ -244,7 +245,8 @@ func (s *Suite) Test_MkShWalker_Walk__empty_callback(c *check.C) {
 	t := s.Init(c)
 
 	test := func(program string) {
-		list, err := parseShellProgram(dummyLine, program)
+		line := t.NewLine("filename.mk", 1, "")
+		list, err := parseShellProgram(line, program)
 		assertNil(err, "")
 
 		walker := NewMkShWalker()
@@ -270,7 +272,8 @@ func (s *Suite) Test_MkShWalker_Walk__empty_callback(c *check.C) {
 func (s *Suite) Test_MkShWalker_Walk__assertion(c *check.C) {
 	t := s.Init(c)
 
-	list, err := parseShellProgram(dummyLine, "echo \"hello, world\"")
+	line := t.NewLine("filename.mk", 1, "")
+	list, err := parseShellProgram(line, "echo \"hello, world\"")
 	assertNil(err, "")
 
 	walker := NewMkShWalker()

@@ -248,6 +248,10 @@ func (s *Suite) Test_Logger_Diag__show_source_with_whole_file(c *check.C) {
 func (s *Suite) Test_Logger_Diag__source_duplicates(c *check.C) {
 	t := s.Init(c)
 
+	// Up to pkglint 19.3.10, this variable had been reset during
+	// command line parsing. In 19.3.11 the command line option has
+	// been removed, therefore it must be reset manually.
+	G.Logger.verbose = false
 	t.SetUpPkgsrc()
 	t.CreateFileLines("category/dependency/patches/patch-aa",
 		CvsID,
@@ -682,7 +686,7 @@ func (s *Suite) Test_Logger_Logf__duplicate_messages(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--explain")
-	G.Logger.Opts.LogVerbose = false
+	G.Logger.verbose = false
 	line := t.NewLine("README.txt", 123, "text")
 
 	// Is logged because it is the first appearance of this warning.
@@ -780,7 +784,7 @@ func (s *Suite) Test_Logger_Logf__duplicate_autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--explain", "--autofix")
-	G.Logger.Opts.LogVerbose = false // See SetUpTest
+	G.Logger.verbose = false // See SetUpTest
 	line := t.NewLine("README.txt", 123, "text")
 
 	fix := line.Autofix()
@@ -801,12 +805,12 @@ func (s *Suite) Test_Logger_Logf__panic(c *check.C) {
 		"Pkglint internal error: Diagnostic format \"No period\" must end in a period.")
 }
 
-func (s *Suite) Test_Logger_Errorf__gcc_format(c *check.C) {
+func (s *Suite) Test_Logger_TechErrorf__gcc_format(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--gcc-output-format")
 
-	G.Logger.Errorf("filename", "Cannot be opened for %s.", "reading")
+	G.Logger.TechErrorf("filename", "Cannot be opened for %s.", "reading")
 
 	t.CheckOutputLines(
 		"filename: error: Cannot be opened for reading.")

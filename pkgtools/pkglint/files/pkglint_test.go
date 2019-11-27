@@ -58,7 +58,6 @@ func (s *Suite) Test_Pkglint_Main__help(c *check.C) {
 		"  -h, --help                  show a detailed usage message",
 		"  -I, --dumpmakefile          dump the Makefile after parsing",
 		"  -i, --import                prepare the import of a wip package",
-		"  -m, --log-verbose           allow the same diagnostic more than once",
 		"  -o, --only                  only log diagnostics containing the given text",
 		"  -p, --profiling             profile the executing program",
 		"  -q, --quiet                 don't show a summary line when finishing",
@@ -102,7 +101,7 @@ func (s *Suite) Test_Pkglint_Main__no_args(c *check.C) {
 	// The "." from the error message is the implicit argument added in Pkglint.Main.
 	t.CheckEquals(exitcode, 1)
 	t.CheckOutputLines(
-		"FATAL: \".\" must be inside a pkgsrc tree.")
+		"FATAL: .: Must be inside a pkgsrc tree.")
 }
 
 func (s *Suite) Test_Pkglint_Main__unknown_option(c *check.C) {
@@ -331,7 +330,19 @@ func (s *Suite) Test_Pkglint_Main__profiling_error(c *check.C) {
 
 	t.CheckEquals(exitcode, 1)
 	t.CheckOutputMatches(
-		`FATAL: Cannot create profiling file: open pkglint\.pprof: .*`)
+		`ERROR: pkglint\.pprof: Cannot create profiling file: open pkglint\.pprof: .*`)
+}
+
+// Branch coverage for Logger.Logf, the level != Fatal case.
+func (s *Suite) Test_Pkglint_prepareMainLoop__fatal(c *check.C) {
+	t := s.Init(c)
+
+	t.Chdir(".")
+	t.Main("--profiling", t.File("does-not-exist").String())
+
+	t.CheckOutputLines(
+		"fileCache: 0 hits, 0 misses",
+		"FATAL: does-not-exist: Must be inside a pkgsrc tree.")
 }
 
 func (s *Suite) Test_Pkglint_ParseCommandLine__only(c *check.C) {
@@ -874,12 +885,12 @@ func (s *Suite) Test_Pkglint_checkReg__file_not_found(c *check.C) {
 
 	t.Chdir(".")
 
-	G.checkReg("buildlink3.mk", "buildlink3.mk", 2)
-	G.checkReg("DESCR", "DESCR", 2)
-	G.checkReg("distinfo", "distinfo", 2)
-	G.checkReg("MESSAGE", "MESSAGE", 2)
-	G.checkReg("patches/patch-aa", "patch-aa", 2)
-	G.checkReg("PLIST", "PLIST", 2)
+	G.checkReg("buildlink3.mk", "buildlink3.mk", 3)
+	G.checkReg("DESCR", "DESCR", 3)
+	G.checkReg("distinfo", "distinfo", 3)
+	G.checkReg("MESSAGE", "MESSAGE", 3)
+	G.checkReg("patches/patch-aa", "patch-aa", 3)
+	G.checkReg("PLIST", "PLIST", 3)
 
 	t.CheckOutputLines(
 		"ERROR: buildlink3.mk: Cannot be read.",
@@ -897,7 +908,7 @@ func (s *Suite) Test_Pkglint_checkReg__no_tracing(c *check.C) {
 	t.Chdir(".")
 	t.DisableTracing()
 
-	G.checkReg("patches/manual-aa", "manual-aa", 2)
+	G.checkReg("patches/manual-aa", "manual-aa", 4)
 
 	t.CheckOutputEmpty()
 }
@@ -1001,7 +1012,7 @@ func (s *Suite) Test_Pkglint_checkReg__unknown_file_in_patches(c *check.C) {
 
 	t.CreateFileDummyPatch("category/Makefile/patches/index")
 
-	G.checkReg(t.File("category/Makefile/patches/index"), "index", 3)
+	G.checkReg(t.File("category/Makefile/patches/index"), "index", 4)
 
 	t.CheckOutputLines(
 		"WARN: ~/category/Makefile/patches/index: " +
@@ -1014,7 +1025,7 @@ func (s *Suite) Test_Pkglint_checkReg__patch_for_Makefile_fragment(c *check.C) {
 	t.CreateFileDummyPatch("category/package/patches/patch-compiler.mk")
 	t.Chdir("category/package")
 
-	G.checkReg(t.File("patches/patch-compiler.mk"), "patch-compiler.mk", 3)
+	G.checkReg(t.File("patches/patch-compiler.mk"), "patch-compiler.mk", 4)
 
 	t.CheckOutputEmpty()
 }
@@ -1024,7 +1035,7 @@ func (s *Suite) Test_Pkglint_checkReg__file_in_files(c *check.C) {
 
 	t.CreateFileLines("category/package/files/index")
 
-	G.checkReg(t.File("category/package/files/index"), "index", 3)
+	G.checkReg(t.File("category/package/files/index"), "index", 4)
 
 	// These files are ignored since they could contain anything.
 	t.CheckOutputEmpty()
@@ -1036,8 +1047,8 @@ func (s *Suite) Test_Pkglint_checkReg__spec(c *check.C) {
 	t.CreateFileLines("category/package/spec")
 	t.CreateFileLines("regress/package/spec")
 
-	G.checkReg(t.File("category/package/spec"), "spec", 2)
-	G.checkReg(t.File("regress/package/spec"), "spec", 2)
+	G.checkReg(t.File("category/package/spec"), "spec", 3)
+	G.checkReg(t.File("regress/package/spec"), "spec", 3)
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/spec: Only packages in regress/ may have spec files.")
@@ -1047,7 +1058,7 @@ func (s *Suite) Test_Pkglint_checkExecutable(c *check.C) {
 	t := s.Init(c)
 
 	filename := t.CreateFileLines("file.mk")
-	err := os.Chmod(filename.String(), 0555)
+	err := filename.Chmod(0555)
 	assertNil(err, "")
 
 	G.checkExecutable(filename, 0555)

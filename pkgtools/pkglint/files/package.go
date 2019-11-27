@@ -230,7 +230,7 @@ func (pkg *Package) parse(mklines *MkLines, allLines *MkLines, includingFileForU
 	filename := mklines.lines.Filename
 	if filename.Base() == "buildlink3.mk" {
 		builtin := cleanpath(filename.Dir().JoinNoClean("builtin.mk"))
-		builtinRel := relpath(pkg.dir, builtin)
+		builtinRel := G.Pkgsrc.Relpath(pkg.dir, builtin)
 		if pkg.included.FirstTime(builtinRel.String()) && builtin.IsFile() {
 			builtinMkLines := LoadMk(builtin, MustSucceed|LogErrors)
 			pkg.parse(builtinMkLines, allLines, "")
@@ -297,7 +297,7 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile Path) (includedMk
 	dirname, _ := includingFile.Split()
 	dirname = cleanpath(dirname)
 	fullIncluded := joinPath(dirname, includedFile)
-	relIncludedFile := relpath(pkg.dir, fullIncluded)
+	relIncludedFile := G.Pkgsrc.Relpath(pkg.dir, fullIncluded)
 
 	if !pkg.shouldDiveInto(includingFile, includedFile) {
 		return nil, true
@@ -371,7 +371,7 @@ func (pkg *Package) resolveIncludedFile(mkline *MkLine, includingFilename Path) 
 	}
 
 	if mkline.Basename != "buildlink3.mk" {
-		if includedFile.HasSuffixText("/buildlink3.mk") {
+		if includedFile.HasSuffixPath("buildlink3.mk") {
 			pkg.bl3[includedFile] = mkline
 			if trace.Tracing {
 				trace.Step1("Buildlink3 file in package: %q", includedText)
@@ -392,11 +392,9 @@ func (*Package) shouldDiveInto(includingFile, includedFile Path) bool {
 		return false
 	}
 
-	// FIXME: includingFile may be "../../mk/../devel/readline/buildlink.mk" and thus contain "mk"
-	//  even though the resolved file is not part of the pkgsrc infrastructure.
-	if includingFile.ContainsPath("mk") && !G.Pkgsrc.ToRel(includingFile).HasPrefixPath("wip/mk") {
-		// TODO: try ".buildlink.mk", ".builtin.mk" instead, see wip/clfswm.
-		return includingFile.HasSuffixText("buildlink3.mk") && includedFile.HasSuffixText("builtin.mk")
+	if G.Pkgsrc.IsInfraMain(includingFile) {
+		return includingFile.HasSuffixText(".buildlink3.mk") &&
+			includedFile.HasSuffixText(".builtin.mk")
 	}
 
 	return true
@@ -971,7 +969,7 @@ func (pkg *Package) checkUseLanguagesCompilerMk(mklines *MkLines) {
 		}
 
 		if mkline.Basename == "compiler.mk" {
-			if relpath(pkg.dir, mkline.Filename) == "../../mk/compiler.mk" {
+			if G.Pkgsrc.Relpath(pkg.dir, mkline.Filename) == "../../mk/compiler.mk" {
 				return
 			}
 		}
@@ -1075,7 +1073,10 @@ func (pkg *Package) nbPart() string {
 }
 
 func (pkg *Package) pkgnameFromDistname(pkgname, distname string) (string, bool) {
-	tokens := NewMkParser(nil, pkgname).MkTokens()
+	tokens, rest := NewMkLexer(pkgname, nil).MkTokens()
+	if rest != "" {
+		return "", false
+	}
 
 	// TODO: Make this resolving of variable references available to all other variables as well.
 
@@ -1206,9 +1207,7 @@ func (pkg *Package) checkDirent(dirent Path, mode os.FileMode) {
 	switch {
 
 	case mode.IsRegular():
-		pkgsrcRel := G.Pkgsrc.ToRel(dirent)
-		depth := pkgsrcRel.Count() - 1 // FIXME
-		G.checkReg(dirent, basename, depth)
+		G.checkReg(dirent, basename, G.Pkgsrc.ToRel(dirent).Count())
 
 	case hasPrefix(basename, "work"):
 		if G.Opts.Import {
@@ -1377,6 +1376,13 @@ func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Inden
 		}
 	}
 
+	dependingOn := func(varnames []string) string {
+		if len(varnames) == 0 {
+			return ""
+		}
+		return sprintf(" (depending on %s)", strings.Join(varnames, ", "))
+	}
+
 	if indentation.IsConditional() {
 		if other := pkg.unconditionalIncludes[key]; other != nil {
 			if !pkg.Once.FirstTimeSlice("checkIncludeConditionally", mkline.Location.String(), other.Location.String()) {
@@ -1384,9 +1390,11 @@ func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Inden
 			}
 
 			mkline.Warnf(
-				"%q is included conditionally here (depending on %s) "+
+				"%q is included conditionally here%s "+
 					"and unconditionally in %s.",
-				cleanpath(mkline.IncludedFile()), strings.Join(mkline.ConditionalVars(), ", "), mkline.RefTo(other))
+				cleanpath(mkline.IncludedFile()),
+				dependingOn(mkline.ConditionalVars()),
+				mkline.RefTo(other))
 
 			explainPkgOptions(other, mkline)
 		}
@@ -1399,8 +1407,10 @@ func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Inden
 
 			mkline.Warnf(
 				"%q is included unconditionally here "+
-					"and conditionally in %s (depending on %s).",
-				cleanpath(mkline.IncludedFile()), mkline.RefTo(other), strings.Join(other.ConditionalVars(), ", "))
+					"and conditionally in %s%s.",
+				cleanpath(mkline.IncludedFile()),
+				mkline.RefTo(other),
+				dependingOn(other.ConditionalVars()))
 
 			explainPkgOptions(mkline, other)
 		}
@@ -1441,7 +1451,7 @@ func (pkg *Package) File(relativeFileName Path) Path {
 // Example:
 //  NewPackage("category/package").Rel("other/package") == "../../other/package"
 func (pkg *Package) Rel(filename Path) Path {
-	return relpath(pkg.dir, filename)
+	return G.Pkgsrc.Relpath(pkg.dir, filename)
 }
 
 // Returns whether the given file (relative to the package directory)

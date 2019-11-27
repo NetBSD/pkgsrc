@@ -1,6 +1,10 @@
 package pkglint
 
-import "gopkg.in/check.v1"
+import (
+	"gopkg.in/check.v1"
+	"os"
+	"path/filepath"
+)
 
 func (s *Suite) Test_Pkgsrc__frozen(c *check.C) {
 	t := s.Init(c)
@@ -827,7 +831,7 @@ func (s *Suite) Test_Pkgsrc_Latest__not_found(c *check.C) {
 	t.CheckEquals(latest, "")
 
 	t.CheckOutputLines(
-		"ERROR: Cannot find package versions of \"^python[0-9]+$\" in \"~/lang\".")
+		"ERROR: ~/lang: Cannot find package versions of \"^python[0-9]+$\".")
 }
 
 // In 2017, PostgreSQL changed their versioning scheme to SemVer,
@@ -956,7 +960,7 @@ func (s *Suite) Test_Pkgsrc_ListVersions__no_basedir(c *check.C) {
 
 	c.Check(versions, check.HasLen, 0)
 	t.CheckOutputLines(
-		"ERROR: Cannot find package versions of \"^python[0-9]+$\" in \"~/lang\".")
+		"ERROR: ~/lang: Cannot find package versions of \"^python[0-9]+$\".")
 }
 
 func (s *Suite) Test_Pkgsrc_ListVersions__no_subdirs(c *check.C) {
@@ -968,7 +972,7 @@ func (s *Suite) Test_Pkgsrc_ListVersions__no_subdirs(c *check.C) {
 
 	c.Check(versions, check.HasLen, 0)
 	t.CheckOutputLines(
-		"ERROR: Cannot find package versions of \"^python[0-9]+$\" in \"~/lang\".")
+		"ERROR: ~/lang: Cannot find package versions of \"^python[0-9]+$\".")
 }
 
 // Ensures that failed lookups are also cached since they can be assumed
@@ -980,7 +984,7 @@ func (s *Suite) Test_Pkgsrc_ListVersions__error_is_cached(c *check.C) {
 
 	c.Check(versions, check.HasLen, 0)
 	t.CheckOutputLines(
-		"ERROR: Cannot find package versions of \"^python[0-9]+$\" in \"~/lang\".")
+		"ERROR: ~/lang: Cannot find package versions of \"^python[0-9]+$\".")
 
 	versions2 := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
 
@@ -1143,7 +1147,7 @@ func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
 	t.Main("-r", "-Cglobal", ".")
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package2/Makefile:11: License file ~/licenses/missing does not exist.",
+		"WARN: ~/category/package2/Makefile:11: License file ../../licenses/missing does not exist.",
 		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.", // Added by Tester.SetUpPkgsrc
 		"WARN: ~/licenses/gnu-gpl-v3: This license seems to be unused.",
 		"3 warnings found.")
@@ -1167,6 +1171,147 @@ func (s *Suite) Test_Pkgsrc_ReadDir(c *check.C) {
 	}
 
 	t.CheckDeepEquals(names, []string{"aaa-subdir", "file", "subdir"})
+}
+
+func (s *Suite) Test_Pkgsrc_Relpath(c *check.C) {
+	t := s.Init(c)
+
+	t.Chdir(".")
+	t.CheckEquals(G.Pkgsrc.topdir, t.tmpdir)
+
+	test := func(from, to Path, result Path) {
+		t.CheckEquals(G.Pkgsrc.Relpath(from, to), result)
+	}
+
+	// TODO: add tests going from each of (top, cat, pkg, pkgsub) to the others
+
+	test("some/dir", "some/directory", "../../some/directory")
+	test("some/directory", "some/dir", "../../some/dir")
+
+	test("category/package/.", ".", "../..")
+
+	// This case is handled by one of the shortcuts that avoid file system access.
+	test(
+		"./.",
+		"x11/frameworkintegration/../../meta-pkgs/kde/kf5.mk",
+		"meta-pkgs/kde/kf5.mk")
+
+	test(".hidden/dir", ".", "../..")
+	test("dir/.hidden", ".", "../..")
+
+	// This happens when "pkglint -r x11" is run.
+	G.Pkgsrc.topdir = "x11/.."
+
+	test(
+		"./.",
+		"x11/frameworkintegration/../../meta-pkgs/kde/kf5.mk",
+		"meta-pkgs/kde/kf5.mk")
+	test(
+		"x11/..",
+		"x11/frameworkintegration/../../meta-pkgs/kde/kf5.mk",
+		"meta-pkgs/kde/kf5.mk")
+
+	volume := NewPathSlash(filepath.VolumeName(t.tmpdir.String()))
+	G.Pkgsrc.topdir = volume.JoinNoClean("usr/pkgsrc")
+
+	// Taken from Test_MkLineChecker_CheckRelativePath__wip_mk
+	test(
+		G.Pkgsrc.File("wip/package"),
+		G.Pkgsrc.File("wip/package/../mk/git-package.mk"),
+		"../../wip/mk/git-package.mk")
+
+	// Taken from Test_Package_parse__relative
+	test(
+		G.Pkgsrc.File("category/package"),
+		G.Pkgsrc.File("category/package/../package/extra.mk"),
+		"extra.mk")
+
+	// Make sure that .. in later positions is resolved correctly as well.
+	test(
+		G.Pkgsrc.File("category/package"),
+		G.Pkgsrc.File("category/package/sub/../../package/extra.mk"),
+		"extra.mk")
+
+	G.Pkgsrc.topdir = t.tmpdir
+
+	test("some/dir", "some/dir/../..", "../..")
+	test("some/dir", "some/dir/./././../..", "../..")
+	test("some/dir", "some/dir/", ".")
+
+	test("some/dir", ".", "../..")
+	test("some/dir/.", ".", "../..")
+
+	chdir := func(path Path) {
+		// See Tester.Chdir; a direct Chdir works here since this test
+		// neither loads lines nor processes them.
+		assertNil(os.Chdir(path.String()), "Chdir %s", path)
+		G.cwd = abspath(path)
+	}
+
+	t.CreateFileLines("testdir/subdir/dummy")
+	chdir("testdir/subdir")
+
+	test(".", ".", ".")
+	test("./.", "./dir", "dir")
+
+	test("dir", ".", "..")
+	test("dir", "dir", ".")
+	test("dir", "dir/file", "file")
+	test("dir", "dir/..", "..")
+
+	test(".", "../../other/package", "../../other/package")
+
+	// Even though this path could be shortened to "../package",
+	// in pkgsrc the convention is to always go from a package
+	// directory up to the root and then back to the other package
+	// directory.
+	test(".", "../../testdir/package", "../../testdir/package")
+
+	chdir("..")
+
+	// When pkglint is run from a category directory to test
+	// the complete pkgsrc.
+	test("..", "../other/package", "other/package")
+
+	chdir(t.tmpdir.JoinNoClean(".."))
+
+	test(
+		"pkgsrc/category/package",
+		"pkgsrc/category/package/../../other/package",
+		"../../other/package")
+
+	test(
+		"pkgsrc/category/package",
+		"pkgsrc/category/package/../../category/other",
+		"../../category/other")
+
+	chdir(t.tmpdir.JoinNoClean("testdir").JoinNoClean("subdir"))
+
+	test("..", ".", "subdir")
+	test("../..", ".", "testdir/subdir")
+	test("../../", ".", "testdir/subdir")
+}
+
+func (s *Suite) Test_Pkgsrc_File(c *check.C) {
+	t := s.Init(c)
+
+	G.Pkgsrc.topdir = "$pkgsrcdir"
+
+	test := func(rel, resolved Path) {
+		t.CheckEquals(G.Pkgsrc.File(rel), resolved)
+	}
+
+	test(".", "$pkgsrcdir")
+	test("category", "$pkgsrcdir/category")
+
+	test(
+		"category/package/../../mk/bsd.prefs.mk",
+		"$pkgsrcdir/mk/bsd.prefs.mk")
+
+	G.Pkgsrc.topdir = "."
+
+	test(".", ".")
+	test("filename", "filename")
 }
 
 func (s *Suite) Test_Change_Version(c *check.C) {

@@ -93,8 +93,8 @@ func (s *Suite) Test_newVersion(c *check.C) {
 		&version{[]int{3, 0, 5, 0, 4, 5, 22, 1710}, 0})
 }
 
-func (s *Suite) Test__test_names(c *check.C) {
-	ck := intqa.NewTestNameChecker(c.Errorf)
+func (s *Suite) Test__qa(c *check.C) {
+	ck := intqa.NewQAChecker(c.Errorf)
 	ck.Configure("*", "*", "*", -intqa.EMissingTest)
 	ck.Check()
 }

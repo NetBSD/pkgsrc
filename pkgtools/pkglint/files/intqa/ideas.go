@@ -5,8 +5,5 @@ package intqa
 // then the current package, then a package-qualified identifier.
 // As if there were a "_ = XYZ" at the beginning of the function.
 
-// XXX: All methods should be defined in the same file as their receiver type.
-// If that is not possible, there should only be a small list of exceptions.
-
 // XXX: If there is a constructor for a type, only that constructor may be used
 // for constructing objects. All other forms (var x Type; x := &Type{}) should be forbidden.

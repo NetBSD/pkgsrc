@@ -104,11 +104,32 @@ func (s *Suite) Test_Path_Parts(c *check.C) {
 		t.CheckDeepEquals(NewPath(p).Parts(), parts)
 	}
 
-	test("", []string{}...)
-	test("././././", ".", ".", ".", ".") // No trailing ""
-	test("/root", "root")                // No leading ""
-	test("filename", "filename")
-	test("dir/filename", "dir", "filename")
+	// Only the empty path returns an empty slice.
+	test("", nil...)
+
+	// The standard cases for relative paths.
+	test("relative", "relative")
+	test("relative/subdir", "relative", "subdir")
+	test("relative////subdir", "relative", "subdir")
+	test("relative/..", "relative", "..")
+	test("relative/.", "relative")
+
+	// Leading dots are removed when they are followed by something.
+	test("./relative", "relative")
+
+	// A path consisting of only dots produces a single dot.
+	test("./././.", ".")
+
+	// Slashes at the end are treated like a single dot.
+	test("././././", ".")
+	test(".///////", ".")
+
+	// Absolute paths have an empty first component.
+	test("/", "")
+	test("/.", "")
+	test("/root", "", "root")
+
+	// The backslash is not a path separator.
 	test("dir/filename\\with\\backslash", "dir", "filename\\with\\backslash")
 }
 
@@ -119,11 +140,35 @@ func (s *Suite) Test_Path_Count(c *check.C) {
 		t.CheckEquals(NewPath(p).Count(), count)
 	}
 
-	test("", 0) // FIXME
-	test("././././", 4)
-	test("/root", 1) // FIXME
+	test("././././", 1)
+	test("/root", 2)
 	test("filename", 1)
 	test("dir/filename", 2)
+	test("dir/filename\\with\\backslash", 2)
+
+	// Only the empty path returns an empty slice.
+	test("", 0)
+
+	// The standard cases for canonical relative paths.
+	test("relative", 1)
+	test("relative/subdir", 2)
+	test("relative////subdir", 2)
+	test("relative/..", 2)
+	test("relative/.", 1)
+
+	// A path consisting of only dots produces a single dot.
+	test("./././.", 1)
+
+	// Slashes at the end are treated like a single dot.
+	test("././././", 1)
+	test(".///////", 1)
+
+	// Absolute paths have an empty first component.
+	test("/", 1)
+	test("/.", 1)
+	test("/root", 2)
+
+	// The backslash is not a path separator.
 	test("dir/filename\\with\\backslash", 2)
 }
 
@@ -155,9 +200,21 @@ func (s *Suite) Test_Path_HasPrefixPath(c *check.C) {
 	test("", "x", false)
 	test("/root", "/r", false)
 	test("/root", "/root", true)
-	test("/root", "/root/", false)
+
+	// Even though the textual representation of the prefix is longer than
+	// the path. The trailing slash marks the path as a directory, and
+	// there are only a few cases where the difference matters, such as
+	// in rsync and mkdir.
+	test("/root", "/root/", true)
+
 	test("/root/", "/root", true)
+	test("/root/", "root", false)
 	test("/root/subdir", "/root", true)
+	test("filename", ".", true)
+	test("filename", "./filename", true)
+	test("filename", "./file", false)
+	test("filename", "./filename/sub", false)
+	test("/anything", ".", false)
 }
 
 func (s *Suite) Test_Path_ContainsText(c *check.C) {
@@ -341,6 +398,23 @@ func (s *Suite) Test_Path_Clean(c *check.C) {
 	test(".", ".")
 	test("./././", ".")
 	test("a/bb///../c", "a/c")
+}
+
+func (s *Suite) Test_Path_CleanDot(c *check.C) {
+	t := s.Init(c)
+
+	test := func(p, result Path) {
+		t.CheckEquals(p.CleanDot(), result)
+	}
+
+	test("", "")
+	test(".", ".")
+	test("./././", ".")
+	test("a/bb///../c", "a/bb/../c")
+	test("./filename", "filename")
+	test("/absolute", "/absolute")
+	test("/usr/pkgsrc/wip/package", "/usr/pkgsrc/wip/package")
+	test("/usr/pkgsrc/wip/package/../mk/git-package.mk", "/usr/pkgsrc/wip/package/../mk/git-package.mk")
 }
 
 func (s *Suite) Test_Path_IsAbs(c *check.C) {
