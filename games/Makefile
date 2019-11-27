@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.471 2019/11/26 18:52:04 markd Exp $
+# $NetBSD: Makefile,v 1.472 2019/11/27 21:18:20 markd Exp $
 #
 
 COMMENT=	Games
@@ -130,6 +130,7 @@ SUBDIR+=	fortunes-de
 SUBDIR+=	fortunes-futurama
 SUBDIR+=	fortunes-h2g2
 SUBDIR+=	fortunes-it
+SUBDIR+=	freecell-solver
 SUBDIR+=	freeciv-client
 SUBDIR+=	freeciv-manual
 SUBDIR+=	freeciv-server
