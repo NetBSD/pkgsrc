@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/27 10:34:22 ng0 Exp $
+
+SHA1 (tiedot/3.4.tar.gz) = 09cc4f454f132307c7c47e91e1f981e9607f465f
+RMD160 (tiedot/3.4.tar.gz) = ade0eaf9885707099dd30cedf05612359badc910
+SHA512 (tiedot/3.4.tar.gz) = e87e37d3330da1b3915e7e0c136419e5b9041ca0e66465986615e57ca34054261a120da1a62ec6279da20ecf672f9b2d011d8fb3eca40daf31c404ff82ece98d
+Size (tiedot/3.4.tar.gz) = 608687 bytes
