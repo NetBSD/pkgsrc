@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5174 2019/11/27 21:49:55 markd Exp $
+$NetBSD: CHANGES-2019,v 1.5175 2019/11/27 21:52:04 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8340,5 +8340,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/freecell-solver version 5.14.0 [markd 2019-11-27]
 	Updated games/kpat to 19.08.3 [markd 2019-11-27]
 	Added devel/rttr version 0.9.6 [markd 2019-11-27]
-	Updated multimedi/mlt to 6.18.0 [markd 2019-11-27]
+	Updated multimedia/mlt to 6.18.0 [markd 2019-11-27]
 	Updated multimedia/kdenlive to 19.08.3 [markd 2019-11-27]
