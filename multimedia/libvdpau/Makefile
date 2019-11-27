@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/11/27 13:36:50 nia Exp $
+# $NetBSD: Makefile,v 1.16 2019/11/27 13:41:54 nia Exp $
 
 DISTNAME=	libvdpau-1.3
 CATEGORIES=	multimedia
@@ -6,7 +6,7 @@ MASTER_SITES=	https://gitlab.freedesktop.org/vdpau/libvdpau/-/archive/${PKGVERSI
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://http.download.nvidia.com/XFree86/vdpau/doxygen/html/index.html
+HOMEPAGE=	https://www.freedesktop.org/wiki/Software/VDPAU/
 COMMENT=	Video Decode and Presentation API for Unix
 LICENSE=	mit
 
