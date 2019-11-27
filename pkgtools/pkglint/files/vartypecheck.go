@@ -726,8 +726,6 @@ func (cv *VartypeCheck) Homepage() {
 		"Defining MASTER_SITES=${HOMEPAGE} is ok, though.")
 	if baseURL != "" {
 		fix.Replace(wrong, fixedURL)
-	} else {
-		fix.Anyway()
 	}
 	fix.Apply()
 }
@@ -1083,9 +1081,10 @@ func (cv *VartypeCheck) Pkgpath() {
 		cv.MkLine.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
 	}
 
-	if !G.Pkgsrc.File(pkgpath.JoinNoClean("Makefile")).IsFile() {
+	pkgdir := G.Pkgsrc.File(pkgpath)
+	if !pkgdir.JoinNoClean("Makefile").IsFile() {
 		cv.MkLine.Errorf("There is no package in %q.",
-			cv.MkLine.PathToFile(G.Pkgsrc.File(pkgpath)))
+			cv.MkLine.PathToFile(pkgdir))
 		return
 	}
 

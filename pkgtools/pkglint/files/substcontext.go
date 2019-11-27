@@ -142,6 +142,7 @@ func (ctx *SubstContext) Varassign(mkline *MkLine) {
 			fix.Replace("pre-patch", "post-extract")
 			fix.Replace("post-patch", "pre-configure")
 			fix.Apply()
+			// FIXME: Add test that has "SUBST_STAGE.id=pre-patch # or rather post-patch?"
 		}
 
 		if G.Pkg != nil && (value == "pre-configure" || value == "post-configure") {
@@ -270,7 +271,6 @@ func (ctx *SubstContext) suggestSubstVars(mkline *MkLine) {
 		if !mkline.HasComment() && len(tokens) == 2 && tokens[0] == "-e" {
 			fix.Replace(mkline.Text, alignWith(varop, mkline.ValueAlign())+varname)
 		}
-		fix.Anyway()
 		fix.Apply()
 
 		ctx.curr.seenVars = true
@@ -280,7 +280,7 @@ func (ctx *SubstContext) suggestSubstVars(mkline *MkLine) {
 // extractVarname extracts the variable name from a sed command of the form
 // s,@VARNAME@,${VARNAME}, and some related variants thereof.
 func (*SubstContext) extractVarname(token string) string {
-	parser := NewMkParser(nil, token)
+	parser := NewMkLexer(token, nil)
 	lexer := parser.lexer
 	if !lexer.SkipByte('s') {
 		return ""

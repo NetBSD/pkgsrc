@@ -89,6 +89,11 @@ func (s *Suite) Test_isEmptyDir(c *check.C) {
 
 	t.CheckEquals(isEmptyDir(t.File(".")), true)
 	t.CheckEquals(isEmptyDir(t.File("CVS")), true)
+
+	t.Chdir(".")
+
+	t.CheckEquals(isEmptyDir("."), true)
+	t.CheckEquals(isEmptyDir("CVS"), true)
 }
 
 func (s *Suite) Test_isEmptyDir__and_getSubdirs(c *check.C) {
@@ -330,60 +335,6 @@ func (s *Suite) Test__regex_ReplaceFirst(c *check.C) {
 	c.Assert(m, check.NotNil)
 	t.CheckDeepEquals(m, []string{"a+b", "a", "+", "b"})
 	t.CheckEquals(rest, "X+c+d")
-}
-
-func (s *Suite) Test_relpath(c *check.C) {
-	t := s.Init(c)
-
-	t.Chdir(".")
-	t.CheckEquals(G.Pkgsrc.topdir, t.tmpdir)
-
-	test := func(from, to Path, result Path) {
-		t.CheckEquals(relpath(from, to), result)
-	}
-
-	test("some/dir", "some/directory", "../../some/directory")
-	test("some/directory", "some/dir", "../../some/dir")
-
-	test("category/package/.", ".", "../..")
-
-	// This case is handled by one of the shortcuts that avoid file system access.
-	test(
-		"./.",
-		"x11/frameworkintegration/../../meta-pkgs/kde/kf5.mk",
-		"meta-pkgs/kde/kf5.mk")
-
-	test(".hidden/dir", ".", "../..")
-	test("dir/.hidden", ".", "../..")
-
-	// This happens when "pkglint -r x11" is run.
-	G.Pkgsrc.topdir = "x11/.."
-
-	test(
-		"./.",
-		"x11/frameworkintegration/../../meta-pkgs/kde/kf5.mk",
-		"meta-pkgs/kde/kf5.mk")
-	test(
-		"x11/..",
-		"x11/frameworkintegration/../../meta-pkgs/kde/kf5.mk",
-		"meta-pkgs/kde/kf5.mk")
-}
-
-// Relpath is called so often that handling the most common calls
-// without file system IO makes sense.
-func (s *Suite) Test_relpath__quick(c *check.C) {
-	t := s.Init(c)
-
-	test := func(from, to Path, result Path) {
-		t.CheckEquals(relpath(from, to), result)
-	}
-
-	test("some/dir", "some/dir/../..", "../..")
-	test("some/dir", "some/dir/./././../..", "../..")
-	test("some/dir", "some/dir/", ".")
-
-	test("some/dir", ".", "../..")
-	test("some/dir/.", ".", "../..")
 }
 
 func (s *Suite) Test_cleanpath(c *check.C) {

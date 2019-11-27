@@ -676,7 +676,7 @@ func (VaralignSplitter) parseVarnameOp(parser *MkParser, initial bool) (string, 
 	}
 
 	mark := lexer.Mark()
-	_ = parser.Varname()
+	_ = parser.mklex.Varname()
 	lexer.SkipHspace()
 	ok, _ := parser.Op()
 	assert(ok)

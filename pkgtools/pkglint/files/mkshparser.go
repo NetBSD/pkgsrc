@@ -238,7 +238,7 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 		lex.atCommandStart = false
 	case lex.atCommandStart && matches(token, `^[A-Za-z_]\w*=`):
 		ttype = tkASSIGNMENT_WORD
-		p := NewShTokenizer(dummyLine, token, false) // Just for converting the string to a ShToken
+		p := NewShTokenizer(nil, token, false)
 		lval.Word = p.ShToken()
 	case hasPrefix(token, "#"):
 		// This doesn't work for multiline shell programs.
@@ -246,7 +246,7 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 		return 0
 	default:
 		ttype = tkWORD
-		p := NewShTokenizer(dummyLine, token, false) // Just for converting the string to a ShToken
+		p := NewShTokenizer(nil, token, false)
 		lval.Word = p.ShToken()
 		lex.atCommandStart = false
 

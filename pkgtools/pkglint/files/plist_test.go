@@ -707,7 +707,7 @@ func (s *Suite) Test_PlistChecker_checkPathShareIcons__using_gnome_icon_theme(c 
 	// This variant is typical for recursive runs of pkglint.
 	G.Check("./graphics/gnome-icon-theme-extras")
 
-	// Up to March 2019, a bug in relpath produced different behavior
+	// Up to March 2019, a bug in Relpath produced different behavior
 	// depending on the leading dot.
 	t.CheckOutputEmpty()
 }

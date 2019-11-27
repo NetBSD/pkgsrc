@@ -13,6 +13,12 @@ import (
 // Some paths may contain placeholders like @VAR@ or ${VAR}.
 // The base directory of relative paths depends on the context
 // in which the path is used.
+//
+// TODO: Consider adding several more specialized types of path:
+// TODO: CurrPath, relative to the current working directory
+// TODO: PkgsrcPath, relative to the pkgsrc root
+// TODO: PackagePath, relative to the package directory
+// TODO: RelativePath, relative to some other basedir
 type Path string
 
 func NewPath(name string) Path { return Path(name) }
@@ -32,10 +38,33 @@ func (p Path) Split() (dir Path, base string) {
 	return Path(strDir), strBase
 }
 
+// Parts splits the path into its components.
+// Multiple adjacent slashes are treated like a single slash.
+// Parts that are single dots are skipped.
+// Absolute paths have an empty string as its first part.
+// All other parts are nonempty.
 func (p Path) Parts() []string {
-	return strings.FieldsFunc(string(p), func(r rune) bool { return r == '/' })
+	if p == "" {
+		return nil
+	}
+
+	parts := strings.Split(string(p), "/")
+	j := 0
+	for i, part := range parts {
+		if (i == 0 || part != "") && part != "." {
+			parts[j] = part
+			j++
+		}
+	}
+	parts = parts[:j]
+	if len(parts) == 0 {
+		return []string{"."}
+	}
+	return parts
 }
 
+// Count returns the number of meaningful parts of the path.
+// See Parts.
 func (p Path) Count() int { return len(p.Parts()) }
 
 func (p Path) HasPrefixText(prefix string) bool {
@@ -45,8 +74,26 @@ func (p Path) HasPrefixText(prefix string) bool {
 // HasPrefixPath returns whether the path starts with the given prefix.
 // The basic unit of comparison is a path component, not a character.
 func (p Path) HasPrefixPath(prefix Path) bool {
-	return hasPrefix(string(p), string(prefix)) &&
-		(len(p) == len(prefix) || p[len(prefix)] == '/')
+	// Handle the simple case first, without any memory allocations.
+	if hasPrefix(string(p), string(prefix)) {
+		return len(p) == len(prefix) || p[len(prefix)] == '/'
+	}
+
+	if prefix == "." {
+		return !p.IsAbs()
+	}
+
+	parts := p.Parts()
+	prefixParts := prefix.Parts()
+	if len(prefixParts) > len(parts) {
+		return false
+	}
+	for i, prefixPart := range prefixParts {
+		if parts[i] != prefixPart {
+			return false
+		}
+	}
+	return true
 }
 
 // TODO: Check each call whether ContainsPath is more appropriate; add tests
@@ -75,7 +122,6 @@ func (p Path) ContainsPathCanonical(sub Path) bool {
 	return cleaned.ContainsPath(sub)
 }
 
-// TODO: Check each call whether HasSuffixPath is more appropriate; add tests
 func (p Path) HasSuffixText(suffix string) bool {
 	return hasSuffix(string(p), suffix)
 }
@@ -107,15 +153,35 @@ func (p Path) JoinNoClean(s Path) Path {
 
 func (p Path) Clean() Path { return NewPath(path.Clean(string(p))) }
 
+// CleanDot returns the path with single dots removed and double slashes
+// collapsed.
+func (p Path) CleanDot() Path {
+	if !p.ContainsText(".") {
+		return p
+	}
+
+	var parts []string
+	for i, part := range p.Parts() {
+		if !(part == "." || i > 0 && part == "") { // See Parts
+			parts = append(parts, part)
+		}
+	}
+	if len(parts) == 0 {
+		return "."
+	}
+	return NewPath(strings.Join(parts, "/"))
+}
+
 func (p Path) IsAbs() bool {
 	return p.HasPrefixText("/") || filepath.IsAbs(filepath.FromSlash(string(p)))
 }
 
+// Rel returns the relative path from this path to the other.
 func (p Path) Rel(other Path) Path {
 	fp := filepath.FromSlash(p.String())
 	fpOther := filepath.FromSlash(other.String())
 	rel, err := filepath.Rel(fp, fpOther)
-	assertNil(err, "relpath from %q to %q", p, other)
+	assertNil(err, "Relpath from %q to %q", p, other)
 	return NewPath(filepath.ToSlash(rel))
 }
 

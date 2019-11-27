@@ -387,7 +387,7 @@ func (ck MkLineChecker) checkTextVarUse(text string, vartype *Vartype, time VucT
 		defer trace.Call(vartype, time)()
 	}
 
-	tokens := NewMkParser(nil, text).MkTokens()
+	tokens, _ := NewMkLexer(text, nil).MkTokens()
 	for i, token := range tokens {
 		if token.Varuse != nil {
 			spaceLeft := i-1 < 0 || matches(tokens[i-1].Text, `[\t ]$`)
@@ -814,7 +814,6 @@ func (ck MkLineChecker) checkVarUseQuoting(varUse *MkVarUse, vartype *Vartype, v
 				fix.Explain(
 					seeGuide("Echoing a string exactly as-is", "echo-literal"))
 				fix.Replace("${"+varname+mod+"}", "${"+varname+correctMod+"}")
-				fix.Anyway()
 				fix.Apply()
 			} else {
 				mkline.Warnf("Please use ${%s%s} instead of ${%s%s} and make sure"+
@@ -1103,7 +1102,6 @@ func (ck MkLineChecker) checkVarassignRightCategory() {
 	if len(categories) > 1 && categories[1] == expected {
 		fix.Replace(categories[0]+" "+categories[1], categories[1]+" "+categories[0])
 	}
-	fix.Anyway()
 	fix.Apply()
 }
 
@@ -1341,7 +1339,7 @@ func (ck MkLineChecker) checkInclude() {
 	case includedFile.HasSuffixPath("intltool/buildlink3.mk"):
 		mkline.Warnf("Please write \"USE_TOOLS+= intltool\" instead of this line.")
 
-	case includedFile.HasSuffixText("/builtin.mk"): // TODO: maybe HasSuffixPath
+	case includedFile != "builtin.mk" && includedFile.HasSuffixPath("builtin.mk"):
 		if mkline.Basename != "hacks.mk" && !mkline.HasRationale() {
 			fix := mkline.Autofix()
 			fix.Errorf("%s must not be included directly. Include \"%s/buildlink3.mk\" instead.", includedFile, includedFile.Dir())
@@ -1671,7 +1669,6 @@ func (ck MkLineChecker) simplifyCondition(varuse *MkVarUse, fromEmpty bool, notE
 			"An entirely different case is when the pattern contains wildcards like ^, *, $.",
 			"In such a case, using the :M or :N modifiers is useful and preferred.")
 		fix.Replace(replace(varname, positive, pattern))
-		fix.Anyway()
 		fix.Apply()
 	}
 }
@@ -1741,7 +1738,6 @@ func (ck MkLineChecker) checkCompareVarStrCompiler(op string, value string) {
 		"Therefore, comparing it using == or != leads to wrong results in these cases.")
 	fix.Replace("${PKGSRC_COMPILER} "+op+" "+value, "${PKGSRC_COMPILER:"+matchOp+value+"}")
 	fix.Replace("${PKGSRC_COMPILER} "+op+" \""+value+"\"", "${PKGSRC_COMPILER:"+matchOp+value+"}")
-	fix.Anyway()
 	fix.Apply()
 }
 
@@ -1807,10 +1803,10 @@ func (ck MkLineChecker) checkDependencyRule(allowedTargets map[string]bool) {
 }
 
 func (ck MkLineChecker) checkDependencyTarget(target string, allowedTargets map[string]bool) {
-	if target == ".PHONY" ||
-		target == ".ORDER" ||
-		NewMkParser(nil, target).VarUse() != nil ||
-		allowedTargets[target] {
+	if target == ".PHONY" || target == ".ORDER" || allowedTargets[target] {
+		return
+	}
+	if NewMkLexer(target, nil).VarUse() != nil {
 		return
 	}
 

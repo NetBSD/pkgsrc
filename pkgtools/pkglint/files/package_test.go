@@ -116,7 +116,7 @@ func (s *Suite) Test_Package__relative_included_filenames_in_same_directory(c *c
 	// TODO: Since other.mk is referenced via "../../category/package",
 	//  it would be nice if this relative path would be reflected in the output
 	//  instead of referring just to "other.mk".
-	//  This needs to be fixed somewhere near relpath.
+	//  This needs to be fixed somewhere near Relpath.
 	//
 	// The notes are in reverse order because they are produced when checking
 	// other.mk, and there the relative order is correct (line 2 before line 3).
@@ -1063,7 +1063,7 @@ func (s *Suite) Test_Package_resolveIncludedFile__skipping(c *check.C) {
 
 func (s *Suite) Test_Package_shouldDiveInto(c *check.C) {
 	t := s.Init(c)
-	t.Chdir(".")
+	t.Chdir("category/package")
 
 	test := func(including, included Path, expected bool) {
 		actual := (*Package)(nil).shouldDiveInto(including, included)
@@ -2432,6 +2432,15 @@ func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 		"WARN: ~/category/package/Makefile:4: Invalid variable modifier \"c,d\" for \"DISTNAME\".")
 
 	test("${DISTFILE:C,\\..*,,}", "aspell-af-0.50-0", "")
+
+	// Parse error because of missing closing brace, parsing succeeds.
+	test("${DISTNAME:M", "package-1.0", "",
+		"WARN: ~/category/package/Makefile:4: "+
+			"Missing closing \"}\" for \"DISTNAME\".")
+
+	// Parse error with an unparseable rest.
+	test("$", "package-1.0", "",
+		nil...)
 }
 
 func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
@@ -2987,6 +2996,45 @@ func (s *Suite) Test_Package_checkIncludeConditionally__no_explanation(c *check.
 		"WARN: Makefile:21: " +
 			"\"../../devel/zlib/buildlink3.mk\" is included conditionally here " +
 			"(depending on OPSYS) and unconditionally in buildlink3.mk:12.")
+}
+
+func (s *Suite) Test_Package_checkIncludeConditionally__conditionally_no_variable(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("zlib", "")
+	t.SetUpPackage("category/package",
+		".include \"../../devel/zlib/buildlink3.mk\"",
+		".if exists(/usr/include)",
+		".include \"../../sysutils/coreutils/buildlink3.mk\"",
+		".endif")
+	t.CreateFileLines("mk/bsd.options.mk", "")
+	t.CreateFileLines("devel/zlib/buildlink3.mk", "")
+	t.CreateFileLines("sysutils/coreutils/buildlink3.mk", "")
+
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\t# none",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if exists(/usr/include)",
+		".  include \"../../devel/zlib/buildlink3.mk\"",
+		".endif",
+		".include \"../../sysutils/coreutils/buildlink3.mk\"")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.checkdirPackage(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:20: \"../../devel/zlib/buildlink3.mk\" "+
+			"is included unconditionally here "+
+			"and conditionally in options.mk:9.",
+		"WARN: Makefile:22: \"../../sysutils/coreutils/buildlink3.mk\" "+
+			"is included conditionally here "+
+			"and unconditionally in options.mk:11.")
 }
 
 func (s *Suite) Test_Package_checkIncludeConditionally__explain_PKG_OPTIONS_in_options_mk(c *check.C) {

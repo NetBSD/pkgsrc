@@ -4,6 +4,8 @@ import (
 	"bytes"
 	"fmt"
 	"go/ast"
+	"go/parser"
+	"go/token"
 	"gopkg.in/check.v1"
 	"io/ioutil"
 	"path"
@@ -12,7 +14,7 @@ import (
 
 type Suite struct {
 	c       *check.C
-	ck      *TestNameChecker
+	ck      *QAChecker
 	summary string
 }
 
@@ -21,19 +23,21 @@ func Test(t *testing.T) {
 	check.TestingT(t)
 }
 
-func (s *Suite) Init(c *check.C) *TestNameChecker {
+func (s *Suite) Init(c *check.C) *QAChecker {
 	errorf := func(format string, args ...interface{}) {
 		s.summary = fmt.Sprintf(format, args...)
 	}
 
 	s.c = c
-	s.ck = NewTestNameChecker(errorf)
+	s.ck = NewQAChecker(errorf)
 	s.ck.out = ioutil.Discard
 	return s.ck
 }
 
 func (s *Suite) TearDownTest(c *check.C) {
 	s.c = c
+	// The testees and tests are not validated to be checked
+	// since that would create too much boilerplate code.
 	s.CheckErrors(nil...)
 	s.CheckSummary("")
 }
@@ -67,7 +71,7 @@ func (s *Suite) CheckSummary(summary string) {
 	s.summary = ""
 }
 
-func (s *Suite) Test_NewTestNameChecker(c *check.C) {
+func (s *Suite) Test_NewQAChecker(c *check.C) {
 	ck := s.Init(c)
 
 	c.Check(ck.isRelevant("*_test.go", "Suite", "SetUpTest", EAll), check.Equals, true)
@@ -77,7 +81,7 @@ func (s *Suite) Test_NewTestNameChecker(c *check.C) {
 	c.Check(ck.isRelevant("*_test.go", "Suite", "TearDownTest", EMissingTest), check.Equals, false)
 }
 
-func (s *Suite) Test_TestNameChecker_Configure(c *check.C) {
+func (s *Suite) Test_QAChecker_Configure(c *check.C) {
 	ck := s.Init(c)
 
 	ck.Configure("*", "*", "*", ENone) // overwrite initialization from Suite.Init
@@ -111,7 +115,7 @@ func (s *Suite) Test_TestNameChecker_Configure(c *check.C) {
 	c.Check(ck.isRelevant("", "", "", EMissingTest), check.Equals, false)
 }
 
-func (s *Suite) Test_TestNameChecker_Configure__ignore_single_function(c *check.C) {
+func (s *Suite) Test_QAChecker_Configure__ignore_single_function(c *check.C) {
 	ck := s.Init(c)
 
 	ck.Configure("*", "*", "*", EAll)
@@ -127,32 +131,35 @@ func (s *Suite) Test_TestNameChecker_Configure__ignore_single_function(c *check.
 	c.Check(ck.isRelevant("file_test.go", "*", "TestMain", EAll), check.Equals, true)
 }
 
-func (s *Suite) Test_TestNameChecker_Check(c *check.C) {
+func (s *Suite) Test_QAChecker_Check(c *check.C) {
 	ck := s.Init(c)
 
+	ck.Configure("*", "*", "", -EMissingTest)
 	ck.Configure("*", "Suite", "*", -EMissingTest)
 
 	ck.Check()
 
 	s.CheckErrors(
-		"Missing unit test \"Test_TestNameChecker_addCode\" for \"TestNameChecker.addCode\".",
-		"Missing unit test \"Test_TestNameChecker_relate\" for \"TestNameChecker.relate\".",
-		"Missing unit test \"Test_TestNameChecker_isRelevant\" for \"TestNameChecker.isRelevant\".")
+		"Missing unit test \"Test_QAChecker_addCode\" for \"QAChecker.addCode\".",
+		"Missing unit test \"Test_QAChecker_relate\" for \"QAChecker.relate\".",
+		"Missing unit test \"Test_QAChecker_isRelevant\" for \"QAChecker.isRelevant\".")
 	s.CheckSummary("3 errors.")
 }
 
-func (s *Suite) Test_TestNameChecker_load__filtered_nothing(c *check.C) {
+func (s *Suite) Test_QAChecker_load__filtered_nothing(c *check.C) {
 	ck := s.Init(c)
 
 	ck.Configure("*", "*", "*", ENone)
 
 	ck.load(".")
 
-	c.Check(ck.testees, check.IsNil)
-	c.Check(ck.tests, check.IsNil)
+	s.CheckTestees(
+		nil...)
+	s.CheckTests(
+		nil...)
 }
 
-func (s *Suite) Test_TestNameChecker_load__filtered_only_Value(c *check.C) {
+func (s *Suite) Test_QAChecker_load__filtered_only_Value(c *check.C) {
 	ck := s.Init(c)
 
 	ck.Configure("*", "*", "*", ENone)
@@ -160,13 +167,14 @@ func (s *Suite) Test_TestNameChecker_load__filtered_only_Value(c *check.C) {
 
 	ck.load(".")
 
-	c.Check(ck.testees, check.DeepEquals, []*testee{
-		{code{"testnames_test.go", "Value", "", 0}},
-		{code{"testnames_test.go", "Value", "Method", 1}}})
-	c.Check(ck.tests, check.IsNil)
+	s.CheckTestees(
+		s.newTestee("qa_test.go", "Value", "", 0),
+		s.newTestee("qa_test.go", "Value", "Method", 1))
+	s.CheckTests(
+		nil...)
 }
 
-func (s *Suite) Test_TestNameChecker_load__panic(c *check.C) {
+func (s *Suite) Test_QAChecker_load__panic(c *check.C) {
 	ck := s.Init(c)
 
 	c.Check(
@@ -175,34 +183,36 @@ func (s *Suite) Test_TestNameChecker_load__panic(c *check.C) {
 		`^open does-not-exist\b.*`)
 }
 
-func (s *Suite) Test_TestNameChecker_loadDecl(c *check.C) {
+func (s *Suite) Test_QAChecker_loadDecl(c *check.C) {
 	ck := s.Init(c)
 
-	typeDecl := func(name string) *ast.GenDecl {
-		return &ast.GenDecl{Specs: []ast.Spec{&ast.TypeSpec{Name: &ast.Ident{Name: name}}}}
-	}
-	funcDecl := func(name string) *ast.FuncDecl {
-		return &ast.FuncDecl{Name: &ast.Ident{Name: name}}
-	}
-	methodDecl := func(typeName, methodName string) *ast.FuncDecl {
-		return &ast.FuncDecl{
-			Name: &ast.Ident{Name: methodName},
-			Recv: &ast.FieldList{List: []*ast.Field{{Type: &ast.Ident{Name: typeName}}}}}
+	load := func(filename, decl string) {
+		fset := token.NewFileSet()
+		file, err := parser.ParseFile(fset, filename, "package p; "+decl, 0)
+		c.Assert(err, check.IsNil)
+		ck.loadDecl(file.Decls[0], filename)
 	}
 
-	ck.loadDecl(typeDecl("TypeName"), "file_test.go")
+	load("file_test.go", "type TypeName int")
 
 	s.CheckTestees(
 		s.newTestee("file_test.go", "TypeName", "", 0))
 
 	// The freestanding TestMain function is ignored by a hardcoded rule,
 	// independently of the configuration.
-	ck.loadDecl(funcDecl("TestMain"), "file_test.go")
+	load("file_test.go", "func TestMain() {}")
+
+	s.CheckTestees(
+		nil...)
+	s.CheckTests(
+		nil...)
 
 	// The TestMain method on a type is relevant, but violates the naming rule.
 	// Therefore it is ignored.
-	ck.loadDecl(methodDecl("Suite", "TestMain"), "file_test.go")
+	load("file_test.go", "func (Suite) TestMain(*check.C) {}")
 
+	s.CheckTestees(
+		nil...)
 	s.CheckTests(
 		nil...)
 	s.CheckErrors(
@@ -211,38 +221,101 @@ func (s *Suite) Test_TestNameChecker_loadDecl(c *check.C) {
 	// The above error can be disabled, and then the method is handled
 	// like any other test method.
 	ck.Configure("*", "Suite", "*", -EName)
-	ck.loadDecl(methodDecl("Suite", "TestMain"), "file_test.go")
+	load("file_test.go", "func (Suite) TestMain(*check.C) {}")
 
+	s.CheckTestees(
+		nil...)
 	s.CheckTests(
 		s.newTest("file_test.go", "Suite", "TestMain", 1, "Main", "", nil))
 
 	// There is no special handling for TestMain method with a description.
-	ck.loadDecl(methodDecl("Suite", "TestMain__descr"), "file_test.go")
+	load("file_test.go", "func (Suite) TestMain__descr(*check.C) {}")
 
+	s.CheckTestees(
+		nil...)
 	s.CheckTests(
 		s.newTest("file_test.go", "Suite", "TestMain__descr", 2, "Main", "descr", nil))
+	s.CheckErrors(
+		nil...)
 }
 
-func (s *Suite) Test_TestNameChecker_addTestee(c *check.C) {
+func (s *Suite) Test_QAChecker_parseFuncDecl(c *check.C) {
+	_ = s.Init(c)
+
+	testFunc := func(filename, decl, typeName, funcName string) {
+		fset := token.NewFileSet()
+		file, err := parser.ParseFile(fset, filename, "package p; "+decl, 0)
+		c.Assert(err, check.IsNil)
+		fn := file.Decls[0].(*ast.FuncDecl)
+		actual := (*QAChecker).parseFuncDecl(nil, filename, fn)
+		c.Check(actual, check.Equals, code{filename, typeName, funcName, 0})
+	}
+
+	testFunc("f_test.go", "func (t Type) Test() {}",
+		"Type", "Test")
+	testFunc("f_test.go", "func (t Type) Test_Type_Method() {}",
+		"Type", "Test_Type_Method")
+	testFunc("f_test.go", "func Test() {}",
+		"", "Test")
+	testFunc("f_test.go", "func Test_Type_Method() {}",
+		"", "Test_Type_Method")
+}
+
+func (s *Suite) Test_QAChecker_isTest(c *check.C) {
+	_ = s.Init(c)
+
+	test := func(filename, typeName, funcName string, isTest bool) {
+		code := code{filename, typeName, funcName, 0}
+		c.Check((*QAChecker).isTest(nil, code, nil), check.Equals, isTest)
+	}
+
+	testFunc := func(filename, decl string, isTest bool) {
+		fset := token.NewFileSet()
+		file, err := parser.ParseFile(fset, filename, "package p; "+decl, 0)
+		c.Assert(err, check.IsNil)
+		fn := file.Decls[0].(*ast.FuncDecl)
+		code := (*QAChecker).parseFuncDecl(nil, filename, fn)
+		c.Check((*QAChecker).isTest(nil, code, fn), check.Equals, isTest)
+	}
+
+	test("f.go", "Type", "", false)
+	test("f.go", "", "Func", false)
+	test("f.go", "Type", "Method", false)
+	test("f.go", "Type", "Test", false)
+	test("f.go", "Type", "Test_Type_Method", false)
+	test("f.go", "", "Test_Type_Method", false)
+
+	testFunc("f_test.go", "func (t Type) Test(c *check.C) {}", true)
+	testFunc("f_test.go", "func (t Type) Test_Type_Method(c *check.C) {}", true)
+	testFunc("f_test.go", "func Test_Type_Method(c *check.C) {}", true)
+	testFunc("f_test.go", "func Test_Type_Method(c *C) {}", true)
+	testFunc("f_test.go", "func Test_Type_Method(c C) {}", true)
+	testFunc("f_test.go", "func Test_Type_Method(t *testing.T) {}", true)
+	testFunc("f_test.go", "func Test_Type_Method(X) {}", false)
+	testFunc("f_test.go", "func Test_Type_Method(int) {}", false)
+}
+
+func (s *Suite) Test_QAChecker_addTestee(c *check.C) {
 	ck := s.Init(c)
 
-	code := code{"filename.go", "Type", "Method", 0}
-	ck.addTestee(code)
+	ck.addTestee(code{"filename.go", "Type", "Method", 0})
 
-	c.Check(ck.testees, check.DeepEquals, []*testee{{code}})
+	s.CheckTestees(
+		s.newTestee("filename.go", "Type", "Method", 0))
 }
 
-func (s *Suite) Test_TestNameChecker_addTest(c *check.C) {
+func (s *Suite) Test_QAChecker_addTest(c *check.C) {
 	ck := s.Init(c)
 
 	ck.addTest(code{"filename.go", "Type", "Method", 0})
 
-	c.Check(ck.tests, check.IsNil)
+	s.CheckTests(
+		nil...)
 	s.CheckErrors(
 		"Test \"Type.Method\" must start with \"Test_\".")
 }
 
-func (s *Suite) Test_TestNameChecker_addTest__empty_description(c *check.C) {
+func (s *Suite) Test_QAChecker_addTest__empty_description(c *check.C) {
 	ck := s.Init(c)
 
 	ck.addTest(code{"f_test.go", "Suite", "Test_Method__", 0})
@@ -258,7 +331,7 @@ func (s *Suite) Test_TestNameChecker_addTest__empty_description(c *check.C) {
 		nil...)
 }
 
-func (s *Suite) Test_TestNameChecker_addTest__suppressed_empty_description(c *check.C) {
+func (s *Suite) Test_QAChecker_addTest__suppressed_empty_description(c *check.C) {
 	ck := s.Init(c)
 
 	ck.Configure("*", "*", "*", -EName)
@@ -275,7 +348,7 @@ func (s *Suite) Test_TestNameChecker_addTest__suppressed_empty_description(c *ch
 		"Missing testee \"Method\" for test \"Suite.Test_Method__\".")
 }
 
-func (s *Suite) Test_TestNameChecker_nextOrder(c *check.C) {
+func (s *Suite) Test_QAChecker_nextOrder(c *check.C) {
 	ck := s.Init(c)
 
 	c.Check(ck.nextOrder(), check.Equals, 0)
@@ -283,7 +356,7 @@ func (s *Suite) Test_TestNameChecker_nextOrder(c *check.C) {
 	c.Check(ck.nextOrder(), check.Equals, 2)
 }
 
-func (s *Suite) Test_TestNameChecker_checkTests(c *check.C) {
+func (s *Suite) Test_QAChecker_checkTests(c *check.C) {
 	ck := s.Init(c)
 
 	ck.tests = append(ck.tests,
@@ -297,7 +370,7 @@ func (s *Suite) Test_TestNameChecker_checkTests(c *check.C) {
 			"must be in source_test.go instead of wrong_test.go.")
 }
 
-func (s *Suite) Test_TestNameChecker_checkTestFile__global(c *check.C) {
+func (s *Suite) Test_QAChecker_checkTestFile__global(c *check.C) {
 	ck := s.Init(c)
 
 	ck.checkTestFile(&test{
@@ -311,7 +384,7 @@ func (s *Suite) Test_TestNameChecker_checkTestFile__global(c *check.C) {
 			"must be in other_test.go instead of demo_test.go.")
 }
 
-func (s *Suite) Test_TestNameChecker_checkTestTestee__global(c *check.C) {
+func (s *Suite) Test_QAChecker_checkTestTestee__global(c *check.C) {
 	ck := s.Init(c)
 
 	ck.checkTestTestee(&test{
@@ -324,7 +397,7 @@ func (s *Suite) Test_TestNameChecker_checkTestTestee__global(c *check.C) {
 		nil...)
 }
 
-func (s *Suite) Test_TestNameChecker_checkTestTestee__no_testee(c *check.C) {
+func (s *Suite) Test_QAChecker_checkTestTestee__no_testee(c *check.C) {
 	ck := s.Init(c)
 
 	ck.checkTestTestee(&test{
@@ -337,7 +410,7 @@ func (s *Suite) Test_TestNameChecker_checkTestTestee__no_testee(c *check.C) {
 		"Missing testee \"Missing\" for test \"Suite.Test_Missing\".")
 }
 
-func (s *Suite) Test_TestNameChecker_checkTestTestee__testee_exists(c *check.C) {
+func (s *Suite) Test_QAChecker_checkTestTestee__testee_exists(c *check.C) {
 	ck := s.Init(c)
 
 	ck.checkTestTestee(&test{
@@ -350,7 +423,7 @@ func (s *Suite) Test_TestNameChecker_checkTestTestee__testee_exists(c *check.C) 
 		nil...)
 }
 
-func (s *Suite) Test_TestNameChecker_checkTestDescr__camel_case(c *check.C) {
+func (s *Suite) Test_QAChecker_checkTestDescr__camel_case(c *check.C) {
 	ck := s.Init(c)
 
 	ck.checkTestDescr(&test{
@@ -364,7 +437,7 @@ func (s *Suite) Test_TestNameChecker_checkTestDescr__camel_case(c *check.C) {
 			"must not use CamelCase in the first word.")
 }
 
-func (s *Suite) Test_TestNameChecker_checkTestees(c *check.C) {
+func (s *Suite) Test_QAChecker_checkTestees(c *check.C) {
 	ck := s.Init(c)
 
 	ck.testees = []*testee{s.newTestee("s.go", "", "Func", 0)}
@@ -376,25 +449,50 @@ func (s *Suite) Test_TestNameChecker_checkTestees(c *check.C) {
 		"Missing unit test \"Test_Func\" for \"Func\".")
 }
 
-func (s *Suite) Test_TestNameChecker_checkTesteeTest(c *check.C) {
+func (s *Suite) Test_QAChecker_checkTesteesTest(c *check.C) {
 	ck := s.Init(c)
 
-	ck.checkTesteeTest(
-		&testee{code{"demo.go", "Type", "", 0}},
-		nil)
-	ck.checkTesteeTest(
-		&testee{code{"demo.go", "", "Func", 0}},
-		nil)
-	ck.checkTesteeTest(
-		&testee{code{"demo.go", "Type", "Method", 0}},
-		nil)
+	ck.addTestee(code{"demo.go", "Type", "", 0})
+	ck.addTestee(code{"demo.go", "", "Func", 0})
+	ck.addTestee(code{"demo.go", "Type", "Method", 0})
+	ck.addTestee(code{"demo.go", "OkType", "", 0})
+	ck.addTestee(code{"demo.go", "", "OkFunc", 0})
+	ck.addTestee(code{"demo.go", "OkType", "Method", 0})
+	ck.addTest(code{"demo_test.go", "", "Test_OkType", 0})
+	ck.addTest(code{"demo_test.go", "", "Test_OkFunc", 0})
+	ck.addTest(code{"demo_test.go", "", "Test_OkType_Method", 0})
+	ck.relate()
+
+	ck.checkTesteesTest()
 
 	s.CheckErrors(
+		"Missing unit test \"Test_Type\" for \"Type\".",
 		"Missing unit test \"Test_Func\" for \"Func\".",
 		"Missing unit test \"Test_Type_Method\" for \"Type.Method\".")
 }
 
-func (s *Suite) Test_TestNameChecker_errorsMask(c *check.C) {
+func (s *Suite) Test_QAChecker_checkTesteesMethodsSameFile(c *check.C) {
+	ck := s.Init(c)
+
+	ck.addTestee(code{"main.go", "Main", "", 0})
+	ck.addTestee(code{"main.go", "Main", "MethodOk", 1})
+	ck.addTestee(code{"other.go", "Main", "MethodWrong", 2})
+	ck.addTestee(code{"main_test.go", "Main", "MethodOkTest", 3})
+	ck.addTestee(code{"other_test.go", "Main", "MethodWrongTest", 4})
+	ck.addTestee(code{"main_test.go", "T", "", 100})
+	ck.addTestee(code{"main_test.go", "T", "MethodOk", 101})
+	ck.addTestee(code{"other_test.go", "T", "MethodWrong", 102})
+
+	ck.checkTesteesMethodsSameFile()
+
+	s.CheckErrors(
+		"Method Main.MethodWrong must be in main.go, like its type.",
+		"Method Main.MethodWrongTest must be in main_test.go, "+
+			"corresponding to its type.",
+		"Method T.MethodWrong must be in main_test.go, like its type.")
+}
+
+func (s *Suite) Test_QAChecker_errorsMask(c *check.C) {
 	ck := s.Init(c)
 
 	c.Check(ck.errorsMask(0, EAll), check.Equals, ^uint64(0))
@@ -403,7 +501,7 @@ func (s *Suite) Test_TestNameChecker_errorsMask(c *check.C) {
 	c.Check(ck.errorsMask(2, EMissingTest), check.Equals, uint64(10))
 }
 
-func (s *Suite) Test_TestNameChecker_checkOrder(c *check.C) {
+func (s *Suite) Test_QAChecker_checkOrder(c *check.C) {
 	ck := s.Init(c)
 
 	ck.addTestee(code{"f.go", "T", "", 10})
@@ -430,7 +528,7 @@ func (s *Suite) Test_TestNameChecker_checkOrder(c *check.C) {
 		"Test \"S.Test_T_M2__1\" must be ordered before \"S.Test_T_M3\".")
 }
 
-func (s *Suite) Test_TestNameChecker_addError(c *check.C) {
+func (s *Suite) Test_QAChecker_addError(c *check.C) {
 	ck := s.Init(c)
 
 	ck.Configure("ignored*", "*", "*", -EName)
@@ -443,7 +541,7 @@ func (s *Suite) Test_TestNameChecker_addError(c *check.C) {
 		"E2")
 }
 
-func (s *Suite) Test_TestNameChecker_print__empty(c *check.C) {
+func (s *Suite) Test_QAChecker_print__empty(c *check.C) {
 	var out bytes.Buffer
 	ck := s.Init(c)
 	ck.out = &out
@@ -453,7 +551,7 @@ func (s *Suite) Test_TestNameChecker_print__empty(c *check.C) {
 	c.Check(out.String(), check.Equals, "")
 }
 
-func (s *Suite) Test_TestNameChecker_print__1_error(c *check.C) {
+func (s *Suite) Test_QAChecker_print__1_error(c *check.C) {
 	var out bytes.Buffer
 	ck := s.Init(c)
 	ck.out = &out
@@ -466,7 +564,7 @@ func (s *Suite) Test_TestNameChecker_print__1_error(c *check.C) {
 	s.CheckSummary("1 error.")
 }
 
-func (s *Suite) Test_TestNameChecker_print__2_errors(c *check.C) {
+func (s *Suite) Test_QAChecker_print__2_errors(c *check.C) {
 	var out bytes.Buffer
 	ck := s.Init(c)
 	ck.out = &out
@@ -532,25 +630,6 @@ func (s *Suite) Test_code_isMethod(c *check.C) {
 	test("Type", "Method", true)
 }
 
-func (s *Suite) Test_code_isTest(c *check.C) {
-	_ = s.Init(c)
-
-	test := func(filename, typeName, funcName string, isTest bool) {
-		code := code{filename, typeName, funcName, 0}
-		c.Check(code.isTest(), check.Equals, isTest)
-	}
-
-	test("f.go", "Type", "", false)
-	test("f.go", "", "Func", false)
-	test("f.go", "Type", "Method", false)
-	test("f.go", "Type", "Test", false)
-	test("f.go", "Type", "Test_Type_Method", false)
-	test("f.go", "", "Test_Type_Method", false)
-	test("f_test.go", "Type", "Test", true)
-	test("f_test.go", "Type", "Test_Type_Method", true)
-	test("f_test.go", "", "Test_Type_Method", true)
-}
-
 func (s *Suite) Test_code_isTestScope(c *check.C) {
 	_ = s.Init(c)
 
@@ -564,6 +643,21 @@ func (s *Suite) Test_code_isTestScope(c *check.C) {
 	test("_test.go", true)
 	test("file_test.go", true)
 	test("file_linux_test.go", true)
+}
+
+func (s *Suite) Test_code_testFile(c *check.C) {
+	_ = s.Init(c)
+
+	test := func(filename string, testFile string) {
+		code := code{filename, "", "", 0}
+		c.Check(code.testFile(), check.Equals, testFile)
+	}
+
+	test("f.go", "f_test.go")
+	test("test.go", "test_test.go")
+	test("_test.go", "_test.go")
+	test("file_test.go", "file_test.go")
+	test("file_linux_test.go", "file_linux_test.go")
 }
 
 func (s *Suite) Test_isCamelCase(c *check.C) {
@@ -624,5 +718,5 @@ func (s *Suite) Test_Value_Method(c *check.C) {
 type Value struct{}
 
 // Method has no star on the receiver,
-// for code coverage of TestNameChecker.loadDecl.
+// for code coverage of QAChecker.loadDecl.
 func (Value) Method() {}

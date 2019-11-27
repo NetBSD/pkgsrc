@@ -18,6 +18,7 @@ type Logger struct {
 	suppressExpl bool
 	prevLine     *Line
 
+	verbose   bool // allow duplicate diagnostics, even in the same line
 	logged    Once
 	explained Once
 	histo     *histogram.Histogram
@@ -34,7 +35,6 @@ type LoggerOpts struct {
 	Autofix,
 	Explain,
 	ShowSource,
-	LogVerbose,
 	GccOutput,
 	Quiet bool
 }
@@ -51,8 +51,6 @@ var (
 	Note            = &LogLevel{"NOTE", "note"}
 	AutofixLogLevel = &LogLevel{"AUTOFIX", "autofix"}
 )
-
-var dummyLine = NewLineMulti("", 0, 0, "", nil)
 
 // Explain outputs an explanation for the preceding diagnostic
 // if the --explain option is given. Otherwise it just records
@@ -126,7 +124,7 @@ func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interf
 }
 
 func (l *Logger) FirstTime(filename Path, linenos, msg string) bool {
-	if l.Opts.LogVerbose {
+	if l.verbose {
 		return true
 	}
 
@@ -283,13 +281,13 @@ func (l *Logger) Logf(level *LogLevel, filename Path, lineno, format, msg string
 	}
 }
 
-// Errorf logs a technical error on the error output.
+// TechErrorf logs a technical error on the error output.
 //
 // location must be a slash-separated filename, such as the one in
 // Location.Filename. It may be followed by the usual ":123" for line numbers.
 //
 // For diagnostics, use Logf instead.
-func (l *Logger) Errorf(location Path, format string, args ...interface{}) {
+func (l *Logger) TechErrorf(location Path, format string, args ...interface{}) {
 	msg := sprintf(format, args...)
 	var diag string
 	if l.Opts.GccOutput {
@@ -359,6 +357,7 @@ type SeparatorWriter struct {
 }
 
 func NewSeparatorWriter(out io.Writer) *SeparatorWriter {
+	assertNotNil(out)
 	return &SeparatorWriter{out, 3, bytes.Buffer{}}
 }
 
