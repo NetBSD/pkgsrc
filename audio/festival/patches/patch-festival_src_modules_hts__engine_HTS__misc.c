@@ -1,4 +1,4 @@
-$NetBSD: patch-festival_src_modules_hts__engine_HTS__misc.c,v 1.1 2019/09/11 10:03:17 nia Exp $
+$NetBSD: patch-festival_src_modules_hts__engine_HTS__misc.c,v 1.2 2019/11/27 14:44:05 nia Exp $
 
 Support NetBSD and FreeBSD.
 
@@ -9,7 +9,7 @@ Support NetBSD and FreeBSD.
        fpos_t pos;
        fgetpos((FILE *) fp->pointer, &pos);
 -#if defined(_WIN32) || defined(__CYGWIN__) || defined(__APPLE__)
-+#if defined(_WIN32) || defined(__CYGWIN__) || defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(_WIN32) || defined(__CYGWIN__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__sun)
        return (size_t) pos;
 +#elif defined(__NetBSD__)
 +      return (size_t) pos._pos;
