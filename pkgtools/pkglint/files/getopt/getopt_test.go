@@ -409,8 +409,8 @@ func (s *Suite) Test_Options_Help__with_flag_group(c *check.C) {
 		"  (Prefix a flag with \"no-\" to disable it.)\n")
 }
 
-func (s *Suite) Test__test_names(c *check.C) {
-	ck := intqa.NewTestNameChecker(c.Errorf)
+func (s *Suite) Test__qa(c *check.C) {
+	ck := intqa.NewQAChecker(c.Errorf)
 	ck.Configure("*", "*", "*", -intqa.EMissingTest)
 	ck.Check()
 }
