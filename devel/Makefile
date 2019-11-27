@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2956 2019/11/26 17:40:25 ng0 Exp $
+# $NetBSD: Makefile,v 1.2957 2019/11/27 10:27:09 ng0 Exp $
 #
 
 COMMENT=	Development utilities
@@ -409,6 +409,7 @@ SUBDIR+=	go-ini
 SUBDIR+=	go-iochan
 SUBDIR+=	go-isatty
 SUBDIR+=	go-jwalterweatherman
+SUBDIR+=	go-jwt-go
 SUBDIR+=	go-kingpin.v3-unstable
 SUBDIR+=	go-locker
 SUBDIR+=	go-logrus
