@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/20 11:51:58 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/28 16:18:54 nia Exp $
 bin/spd-say
 bin/spdsend
 bin/speech-dispatcher
@@ -7,14 +7,19 @@ include/speech-dispatcher/libspeechd_version.h
 include/speech-dispatcher/spd_audio_plugin.h
 include/speech-dispatcher/speechd_defines.h
 include/speech-dispatcher/speechd_types.h
+info/spd-say.info
+info/speech-dispatcher-cs.info
+info/speech-dispatcher.info
+info/ssip.info
 lib/libspeechd.la
 lib/pkgconfig/speech-dispatcher.pc
 lib/speech-dispatcher-modules/sd_cicero
 lib/speech-dispatcher-modules/sd_dummy
+lib/speech-dispatcher-modules/sd_espeak
 lib/speech-dispatcher-modules/sd_festival
+lib/speech-dispatcher-modules/sd_flite
 lib/speech-dispatcher-modules/sd_generic
-lib/speech-dispatcher/spd_oss.la
-lib/speech-dispatcher/spd_pulse.la
+lib/speech-dispatcher/spd_libao.la
 share/examples/speech-dispatcher/clients/emacs.conf
 share/examples/speech-dispatcher/modules/cicero.conf
 share/examples/speech-dispatcher/modules/dtk-generic.conf
@@ -30,11 +35,6 @@ share/examples/speech-dispatcher/modules/llia_phon-generic.conf
 share/examples/speech-dispatcher/modules/pico-generic.conf
 share/examples/speech-dispatcher/modules/swift-generic.conf
 share/examples/speech-dispatcher/speechd.conf
-share/info/dir
-share/info/spd-say.info
-share/info/speech-dispatcher-cs.info
-share/info/speech-dispatcher.info
-share/info/ssip.info
 share/sounds/speech-dispatcher/dummy-message.wav
 share/speech-dispatcher/conf/clients/emacs.conf
 share/speech-dispatcher/conf/modules/cicero.conf
