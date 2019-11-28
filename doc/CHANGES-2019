@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5182 2019/11/28 13:28:25 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5183 2019/11/28 13:49:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8367,3 +8367,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/p5-WWW-Mechanize-Shell to 0.58 [mef 2019-11-28]
 	Updated www/p5-libwww to 6.43 [mef 2019-11-28]
 	Added fonts/cascadia-ttf version 1911.21 [wiz 2019-11-28]
+	Updated security/py-backports.ssl_match_hostname to 3.7.0.1 [adam 2019-11-28]
+	Updated multimedia/py-m3u8 to 0.5.2 [adam 2019-11-28]
