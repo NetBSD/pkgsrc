@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.264 2019/11/26 10:27:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.265 2019/11/28 09:23:32 bsiegert Exp $
 
 .include "Makefile.common"
 
@@ -13,6 +13,7 @@ MESON_ARGS+=	-Dlibmount=false
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC}/output/gobject:${WRKSRC}/output/gmodule
 
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 LDFLAGS.SunOS+=		-liconv -lintl -lnsl -lsocket
 
 REPLACE_PYTHON+=	gio/gio-querymodules-wrapper.py
