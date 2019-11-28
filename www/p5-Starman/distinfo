@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2016/02/01 12:16:53 mef Exp $
+$NetBSD: distinfo,v 1.12 2019/11/28 12:09:58 mef Exp $
 
-SHA1 (Starman-0.4014.tar.gz) = 810d3731c7f67b229dc9a16a5b6b4405896dfdec
-RMD160 (Starman-0.4014.tar.gz) = e522fb2cf0f52ca8c8bd2517b01c669c60441d0e
-SHA512 (Starman-0.4014.tar.gz) = 27e5735a1bd2c29944c469f19a6e05cae038da0f678ca6a12bdae87dd075e4e433e3f4126507f90284a71aa5baf1b8babd120603d265d8b1f3b7b1a6528e0c9f
-Size (Starman-0.4014.tar.gz) = 29002 bytes
+SHA1 (Starman-0.4015.tar.gz) = fea0e8274d13c0f54843511dbab3a1bea963cec2
+RMD160 (Starman-0.4015.tar.gz) = debb1488b2566d11fef03824c82bd4438b1c3b93
+SHA512 (Starman-0.4015.tar.gz) = 8e603dfc27ee54b577c24bd521da08ecb56ae2b6992ad2304156a23b917465b3a14d11e1f038ca809ff6359798e03d3ce6d6aa705e55637401d8391ec5086ade
+Size (Starman-0.4015.tar.gz) = 30692 bytes
