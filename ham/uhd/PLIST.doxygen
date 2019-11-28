@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST.doxygen,v 1.13 2019/03/22 17:58:27 adam Exp $
+@comment $NetBSD: PLIST.doxygen,v 1.14 2019/11/28 19:41:38 adam Exp $
 share/doc/uhd/doxygen/html/Ettus_Logo.png
 share/doc/uhd/doxygen/html/N2xx-JTAG.jpg
 share/doc/uhd/doxygen/html/N310fp.png
 share/doc/uhd/doxygen/html/N310isoExplode.png
 share/doc/uhd/doxygen/html/N310rp.png
+share/doc/uhd/doxygen/html/N320_Front.png
+share/doc/uhd/doxygen/html/N320_Rear.png
+share/doc/uhd/doxygen/html/N321_16_Channel_Example.png
+share/doc/uhd/doxygen/html/N321_Front.png
+share/doc/uhd/doxygen/html/N321_LO_Distribution_Block_Diagram.png
+share/doc/uhd/doxygen/html/N321_Rear.png
 share/doc/uhd/doxygen/html/TRRS.png
 share/doc/uhd/doxygen/html/TwinRX_Block_Diagram.png
 share/doc/uhd/doxygen/html/algorithm_8hpp.html
@@ -314,6 +320,7 @@ share/doc/uhd/doxygen/html/clock__config_8hpp.html
 share/doc/uhd/doxygen/html/clock__config_8hpp_source.html
 share/doc/uhd/doxygen/html/closed.png
 share/doc/uhd/doxygen/html/coding_8dox.html
+share/doc/uhd/doxygen/html/compat_8dox.html
 share/doc/uhd/doxygen/html/component__file_8hpp.html
 share/doc/uhd/doxygen/html/component__file_8hpp.js
 share/doc/uhd/doxygen/html/component__file_8hpp_source.html
@@ -348,6 +355,7 @@ share/doc/uhd/doxygen/html/dboard__iface_8hpp_source.html
 share/doc/uhd/doxygen/html/dboard__manager_8hpp.html
 share/doc/uhd/doxygen/html/dboard__manager_8hpp_source.html
 share/doc/uhd/doxygen/html/dboards_8dox.html
+share/doc/uhd/doxygen/html/deprecated.html
 share/doc/uhd/doxygen/html/deprecated_8hpp.html
 share/doc/uhd/doxygen/html/deprecated_8hpp_source.html
 share/doc/uhd/doxygen/html/device3_8hpp.html
@@ -387,6 +395,7 @@ share/doc/uhd/doxygen/html/dirty__tracked_8hpp_source.html
 share/doc/uhd/doxygen/html/doc.png
 share/doc/uhd/doxygen/html/doxygen.css
 share/doc/uhd/doxygen/html/doxygen.png
+share/doc/uhd/doxygen/html/dpdk_8dox.html
 share/doc/uhd/doxygen/html/dynsections.js
 share/doc/uhd/doxygen/html/e3x0_fp_overlay.png
 share/doc/uhd/doxygen/html/e3x0_gpio_conn.png
@@ -454,6 +463,7 @@ share/doc/uhd/doxygen/html/functions_func_u.html
 share/doc/uhd/doxygen/html/functions_func_v.html
 share/doc/uhd/doxygen/html/functions_func_w.html
 share/doc/uhd/doxygen/html/functions_func_x.html
+share/doc/uhd/doxygen/html/functions_func_z.html
 share/doc/uhd/doxygen/html/functions_func_~.html
 share/doc/uhd/doxygen/html/functions_g.html
 share/doc/uhd/doxygen/html/functions_h.html
@@ -475,6 +485,7 @@ share/doc/uhd/doxygen/html/functions_v.html
 share/doc/uhd/doxygen/html/functions_vars.html
 share/doc/uhd/doxygen/html/functions_w.html
 share/doc/uhd/doxygen/html/functions_x.html
+share/doc/uhd/doxygen/html/functions_z.html
 share/doc/uhd/doxygen/html/functions_~.html
 share/doc/uhd/doxygen/html/gain__group_8hpp.html
 share/doc/uhd/doxygen/html/gain__group_8hpp_source.html
@@ -512,7 +523,6 @@ share/doc/uhd/doxygen/html/image__loader_8hpp.html
 share/doc/uhd/doxygen/html/image__loader_8hpp_source.html
 share/doc/uhd/doxygen/html/images_8dox.html
 share/doc/uhd/doxygen/html/index.html
-share/doc/uhd/doxygen/html/index.js
 share/doc/uhd/doxygen/html/install_8dox.html
 share/doc/uhd/doxygen/html/io__type_8hpp.html
 share/doc/uhd/doxygen/html/io__type_8hpp_source.html
@@ -597,6 +607,7 @@ share/doc/uhd/doxygen/html/navtreedata.js
 share/doc/uhd/doxygen/html/navtreeindex0.js
 share/doc/uhd/doxygen/html/navtreeindex1.js
 share/doc/uhd/doxygen/html/navtreeindex10.js
+share/doc/uhd/doxygen/html/navtreeindex11.js
 share/doc/uhd/doxygen/html/navtreeindex2.js
 share/doc/uhd/doxygen/html/navtreeindex3.js
 share/doc/uhd/doxygen/html/navtreeindex4.js
@@ -618,6 +629,7 @@ share/doc/uhd/doxygen/html/page_calibration.html
 share/doc/uhd/doxygen/html/page_capi.html
 share/doc/uhd/doxygen/html/page_coding.html
 share/doc/uhd/doxygen/html/page_coding.js
+share/doc/uhd/doxygen/html/page_compat.html
 share/doc/uhd/doxygen/html/page_configfiles.html
 share/doc/uhd/doxygen/html/page_configuration.html
 share/doc/uhd/doxygen/html/page_converters.html
@@ -625,6 +637,7 @@ share/doc/uhd/doxygen/html/page_dboards.html
 share/doc/uhd/doxygen/html/page_dboards.js
 share/doc/uhd/doxygen/html/page_devices.html
 share/doc/uhd/doxygen/html/page_devices.js
+share/doc/uhd/doxygen/html/page_dpdk.html
 share/doc/uhd/doxygen/html/page_general.html
 share/doc/uhd/doxygen/html/page_gpio_api.html
 share/doc/uhd/doxygen/html/page_gpsdo.html
@@ -662,6 +675,7 @@ share/doc/uhd/doxygen/html/page_usrp_e1x0.js
 share/doc/uhd/doxygen/html/page_usrp_e320.html
 share/doc/uhd/doxygen/html/page_usrp_e3x0.html
 share/doc/uhd/doxygen/html/page_usrp_n3xx.html
+share/doc/uhd/doxygen/html/page_usrp_n3xx.js
 share/doc/uhd/doxygen/html/page_usrp_x3x0.html
 share/doc/uhd/doxygen/html/page_usrp_x3x0.js
 share/doc/uhd/doxygen/html/page_usrp_x3x0_config.html
@@ -933,6 +947,8 @@ share/doc/uhd/doxygen/html/search/functions_16.html
 share/doc/uhd/doxygen/html/search/functions_16.js
 share/doc/uhd/doxygen/html/search/functions_17.html
 share/doc/uhd/doxygen/html/search/functions_17.js
+share/doc/uhd/doxygen/html/search/functions_18.html
+share/doc/uhd/doxygen/html/search/functions_18.js
 share/doc/uhd/doxygen/html/search/functions_2.html
 share/doc/uhd/doxygen/html/search/functions_2.js
 share/doc/uhd/doxygen/html/search/functions_3.html
