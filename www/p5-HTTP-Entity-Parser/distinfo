@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/03/04 16:10:04 wiz Exp $
+$NetBSD: distinfo,v 1.5 2019/11/28 11:36:23 mef Exp $
 
-SHA1 (HTTP-Entity-Parser-0.21.tar.gz) = 57285459d61cf7d34f02d3bbafee5fe70a330258
-RMD160 (HTTP-Entity-Parser-0.21.tar.gz) = c6f3cd85effa6137eb3041aa4b0f3be6f23a310d
-SHA512 (HTTP-Entity-Parser-0.21.tar.gz) = 3852741017748205d9e030a6a42d5a949e3497c5e119713d81c9bf6ee42f9a0a822e65f4be9b8785840b6e81841c7715d34aabcb9b8d950611ce528f702fffd1
-Size (HTTP-Entity-Parser-0.21.tar.gz) = 23733 bytes
+SHA1 (HTTP-Entity-Parser-0.22.tar.gz) = cb074f568f65b4347678ca524c5a965074f23470
+RMD160 (HTTP-Entity-Parser-0.22.tar.gz) = cb1cefde14f22f113e853a9df74077ee9bc3e313
+SHA512 (HTTP-Entity-Parser-0.22.tar.gz) = fc54b92af197ec4dbdb1069f5a7a8db0892483f80a3737f4914cb6d03dd0ec01b2b215bed96b6736474d2d484516071926774610ace475199cae44174cc2abd0
+Size (HTTP-Entity-Parser-0.22.tar.gz) = 23903 bytes

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2019/08/11 13:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/28 11:36:23 mef Exp $
 
-DISTNAME=	HTTP-Entity-Parser-0.21
+DISTNAME=	HTTP-Entity-Parser-0.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
@@ -17,9 +16,8 @@ DEPENDS+=	p5-HTTP-MultiPartParser>=0:../../www/p5-HTTP-MultiPartParser
 DEPENDS+=	p5-Hash-MultiValue-[0-9]*:../../devel/p5-Hash-MultiValue
 DEPENDS+=	p5-Stream-Buffered-[0-9]*:../../devel/p5-Stream-Buffered
 
-# for make test
-BUILD_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
-BUILD_DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
+TEST_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
+TEST_DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/HTTP/Entity/Parser/.packlist
