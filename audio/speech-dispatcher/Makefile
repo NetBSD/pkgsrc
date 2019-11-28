@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/09/18 14:17:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2019/11/28 13:38:06 nia Exp $
 
 DISTNAME=	speech-dispatcher-0.8.4
 PKGREVISION=	6
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool pkg-config
+USE_TOOLS+=	msgfmt msgmerge xgettext
 
 PKGCONFIG_OVERRIDE+=	speech-dispatcher.pc.in
 
