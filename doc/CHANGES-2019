@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5180 2019/11/28 12:22:05 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5181 2019/11/28 13:10:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8352,4 +8352,17 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test5 to 5.3.1 [adam 2019-11-28]
 	Updated databases/prometheus to 2.14.0 [adam 2019-11-28]
 	Updated archivers/unrar to 5.8.4 [adam 2019-11-28]
+	Updated www/p5-Apache2-AuthCookie to 3.28 [mef 2019-11-28]
+	Updated www/p5-HTTP-Cookies to 6.07 [mef 2019-11-28]
+	Updated www/p5-HTTP-Date to 6.05 [mef 2019-11-28]
+	Updated www/p5-HTTP-Entity-Parser to 0.22 [mef 2019-11-28]
+	Updated www/p5-LWP-Protocol-Net-Curl to 0.026 [mef 2019-11-28]
+	Updated www/p5-LWP-Protocol-PSGI to 0.11 [mef 2019-11-28]
+	Updated www/p5-Starman to 0.4015 [mef 2019-11-28]
+	Updated www/p5-Task-CatInABox to 0.04 [mef 2019-11-28]
 	Removed graphics/f-spot [nia 2019-11-28]
+	Updated www/p5-Test-WWW-Mechanize-Catalyst to 0.62 [mef 2019-11-28]
+	Updated www/p5-Test-WWW-Mechanize-PSGI to 0.39 [mef 2019-11-28]
+	Updated www/p5-WWW-Mechanize-Cached to 1.52 [mef 2019-11-28]
+	Updated www/p5-WWW-Mechanize-Shell to 0.58 [mef 2019-11-28]
+	Updated www/p5-libwww to 6.43 [mef 2019-11-28]
