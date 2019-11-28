@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/11/26 10:06:25 wiz Exp $
+$NetBSD: distinfo,v 1.6 2019/11/28 12:47:53 mef Exp $
 
-SHA1 (Test-WWW-Mechanize-PSGI-0.38.tar.gz) = b47b2ac16368abd1934e2377168ddb5fdbecf01e
-RMD160 (Test-WWW-Mechanize-PSGI-0.38.tar.gz) = 264d65b504108485dee7e507c376eb40ae66c8df
-SHA512 (Test-WWW-Mechanize-PSGI-0.38.tar.gz) = ec5c0962d8e05ac68c487fe29b4f37a3b7b9ee85e99c8b8d589bcb57168cf3e331ea1185f36a8e006be6172c85a5143d3b99fbd48d7e04b726050fcbee61bb9d
-Size (Test-WWW-Mechanize-PSGI-0.38.tar.gz) = 27173 bytes
+SHA1 (Test-WWW-Mechanize-PSGI-0.39.tar.gz) = f25d0a651f0deab4d99c452dfbcdba09d00282b8
+RMD160 (Test-WWW-Mechanize-PSGI-0.39.tar.gz) = 33c0f2b598e08bc848eb6d72c3d6be62acc03f77
+SHA512 (Test-WWW-Mechanize-PSGI-0.39.tar.gz) = edbc5f70e0aa71eca056a80e161d310319896016d90ff469d6a6b0f828ab584cc1568eb3a28c0969bc59ec4cf9591a4a1efc7e9990f9d92c189aa04547f9de7b
+Size (Test-WWW-Mechanize-PSGI-0.39.tar.gz) = 25842 bytes
