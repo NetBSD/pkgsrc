@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2018/12/15 17:12:44 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2019/11/28 14:54:50 taca Exp $
 # used by lang/php73/Makefile.php
 # used by lang/php/ext.mk
 # used by meta-pkgs/php73-extensions/Makefile
@@ -12,6 +12,11 @@ MAINTAINER?=		pkgsrc-users@NetBSD.org
 
 # needed due to (broken?) configure checks in php-xmlrpc and php5-dom
 CONFIGURE_ENV+=		PHP_LIBXML_SHARED="1"
+
+# avoid to use ifunc on NetBSD
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	ax_cv_have_func_attribute_ifunc=no
+.endif
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
