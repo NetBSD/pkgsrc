@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5184 2019/11/28 16:52:10 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5185 2019/11/28 20:48:15 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8370,3 +8370,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-backports.ssl_match_hostname to 3.7.0.1 [adam 2019-11-28]
 	Updated multimedia/py-m3u8 to 0.5.2 [adam 2019-11-28]
 	Updated audio/speech-dispatcher to 0.9.1 [nia 2019-11-28]
+	Updated shells/standalone-tcsh to 6.22.00 [leot 2019-11-28]
+	Updated shells/static-tcsh to 6.22.00 [leot 2019-11-28]
+	Updated shells/tcsh to 6.22.00 [leot 2019-11-28]
