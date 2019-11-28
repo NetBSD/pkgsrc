@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/10/07 20:10:26 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/28 06:25:06 adam Exp $
 
-DISTNAME=	prompt_toolkit-2.0.10
+DISTNAME=	prompt_toolkit-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prompt_toolkit/}
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 USE_LANGUAGES=	# none
 
 PYSETUPTESTTARGET=	pytest
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
