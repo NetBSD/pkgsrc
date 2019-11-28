@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2019/11/28 13:38:06 nia Exp $
+# $NetBSD: Makefile,v 1.10 2019/11/28 16:18:54 nia Exp $
 
 DISTNAME=	speech-dispatcher-0.8.4
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	http://devel.freebsoft.org/pub/projects/speechd/
 
@@ -15,7 +15,19 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool pkg-config
 USE_TOOLS+=	msgfmt msgmerge xgettext
 
+INFO_FILES=	yes
+
+# To avoid PLIST complexity, let the libao package select the most
+# fitting audio backend for the platform.
+CONFIGURE_ARGS+=	--with-libao
+CONFIGURE_ARGS+=	--without-alsa
+CONFIGURE_ARGS+=	--without-nas
+CONFIGURE_ARGS+=	--without-oss
+CONFIGURE_ARGS+=	--without-pulse
+
 PKGCONFIG_OVERRIDE+=	speech-dispatcher.pc.in
+
+PKG_SYSCONFSUBDIR=	speech-dispatcher
 
 CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/clients/emacs.conf \
 		${PKG_SYSCONFDIR}/clients/emacs.conf
@@ -48,10 +60,12 @@ CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/modules/swift-generic.co
 CONF_FILES+=	${PREFIX}/share/examples/speech-dispatcher/speechd.conf \
 		${PKG_SYSCONFDIR}/speechd.conf
 
+.include "../../audio/espeak/buildlink3.mk"
+.include "../../audio/flite/buildlink3.mk"
+.include "../../audio/libao/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/dotconf/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
