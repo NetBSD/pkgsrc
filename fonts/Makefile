@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.330 2019/08/22 09:32:50 nia Exp $
+# $NetBSD: Makefile,v 1.331 2019/11/28 13:28:05 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -37,6 +37,7 @@ SUBDIR+=	bakoma-fonts
 SUBDIR+=	bdftopcf
 SUBDIR+=	biznet-iso8859_2
 SUBDIR+=	cantarell-fonts
+SUBDIR+=	cascadia-ttf
 SUBDIR+=	chkfontpath
 SUBDIR+=	consolamono-ttf
 SUBDIR+=	courier-prime
