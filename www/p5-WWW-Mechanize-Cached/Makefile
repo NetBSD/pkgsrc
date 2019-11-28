@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2019/11/04 22:10:10 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2019/11/28 12:52:33 mef Exp $
 
-DISTNAME=	WWW-Mechanize-Cached-1.51
+DISTNAME=	WWW-Mechanize-Cached-1.52
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
@@ -16,11 +15,10 @@ DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
 DEPENDS+=	p5-WWW-Mechanize-[0-9]*:../../www/p5-WWW-Mechanize
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
-# TEST_DEPENDS
-BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
-BUILD_DEPENDS+=	p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInternet
-BUILD_DEPENDS+=	p5-Find-Lib-[0-9]*:../../devel/p5-Find-Lib
-BUILD_DEPENDS+=	p5-CHI-[0-9]*:../../devel/p5-CHI
+TEST_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+TEST_DEPENDS+=	p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInternet
+TEST_DEPENDS+=	p5-Find-Lib-[0-9]*:../../devel/p5-Find-Lib
+TEST_DEPENDS+=	p5-CHI-[0-9]*:../../devel/p5-CHI
 
 PERL5_PACKLIST=		auto/WWW/Mechanize/Cached/.packlist
 USE_LANGUAGES=		# none
