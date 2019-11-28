@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2019/11/04 22:10:10 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2019/11/28 12:39:43 mef Exp $
 
-DISTNAME=	Test-WWW-Mechanize-Catalyst-0.60
+DISTNAME=	Test-WWW-Mechanize-Catalyst-0.62
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -20,9 +19,10 @@ DEPENDS+=	p5-WWW-Mechanize>=1.54:../../www/p5-WWW-Mechanize
 DEPENDS+=	p5-libwww>=5.816:../../www/p5-libwww
 DEPENDS+=	p5-namespace-clean>=0.09:../../devel/p5-namespace-clean
 
-BUILD_DEPENDS+=	p5-Catalyst-Plugin-Session-[0-9]*:../../www/p5-Catalyst-Plugin-Session
-BUILD_DEPENDS+=	p5-Catalyst-Plugin-Session-State-Cookie-[0-9]*:../../www/p5-Catalyst-Plugin-Session-State-Cookie
-BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TEST_DEPENDS+=	p5-Catalyst-Plugin-Session-[0-9]*:../../www/p5-Catalyst-Plugin-Session
+TEST_DEPENDS+=	p5-Catalyst-Plugin-Session-State-Cookie-[0-9]*:../../www/p5-Catalyst-Plugin-Session-State-Cookie
+TEST_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+TEST_DEPENDS+=	p5-Test-utf8-[0-9]*:../../devel/p5-Test-utf8
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/WWW/Mechanize/Catalyst/.packlist
