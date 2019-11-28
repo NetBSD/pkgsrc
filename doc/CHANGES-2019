@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5177 2019/11/27 22:33:42 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5178 2019/11/28 06:28:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8346,3 +8346,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/jsoncpp to 1.9.2 [adam 2019-11-27]
 	Updated devel/cmake to 3.16.0 [adam 2019-11-27]
 	Added devel/cmake-gui version 3.16.0 [adam 2019-11-27]
+	Updated geography/py-country to 19.8.18 [adam 2019-11-28]
+	Updated devel/py-prompt_toolkit2 to 3.0.0 [adam 2019-11-28]
+	Updated devel/py-ipython to 7.10.0 [adam 2019-11-28]
+	Updated devel/py-test5 to 5.3.1 [adam 2019-11-28]
