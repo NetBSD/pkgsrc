@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:24:24 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2019/11/28 11:22:13 mef Exp $
 
-DISTNAME=	Apache-AuthCookie-3.27
+DISTNAME=	Apache-AuthCookie-3.28
 PKGNAME=	p5-${DISTNAME:S/Apache/Apache2/}
-PKGREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MS/MSCHOUT/
 
