@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2019/10/15 12:24:01 ng0 Exp $
+# $NetBSD: Makefile,v 1.5 2019/11/29 15:27:42 ng0 Exp $
 
 DISTNAME=	doas-6.2p2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=slicer69/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	ng0@NetBSD.org
 HOMEPAGE=	https://github.com/slicer69/doas/
 COMMENT=	Execute commands as another user
 LICENSE=	2-clause-bsd AND isc AND modified-bsd
