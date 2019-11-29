@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/11/21 02:39:22 markd Exp $
+# $NetBSD: Makefile,v 1.55 2019/11/29 20:58:01 markd Exp $
 
 DISTNAME=	cantor-${KAPPSVER}
 CATEGORIES=	math
@@ -23,6 +23,7 @@ SUBST_CLASSES+=		py3
 SUBST_STAGE.py3=	pre-configure
 SUBST_FILES.py3=	cmake/FindPythonLibs3.cmake
 SUBST_SED.py3=		-e 's:python3):python-${PYVERSSUFFIX}):'
+SUBST_SED.py3+=		-e 's:python3.6m python3.7m:python3.6m python3.6 python3.7m python3.7:'
 
 REPLACE_SH+=	src/backends/sage/cantor-execsage
 
