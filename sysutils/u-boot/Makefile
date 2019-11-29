@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2019/10/19 18:05:47 jmcneill Exp $
+# $NetBSD: Makefile,v 1.24 2019/11/29 19:12:05 jakllsch Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
 DISTNAME=	u-boot-${UBOOT_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	meta-pkgs sysutils u-boot
 MASTER_SITES=	# empty
 
@@ -54,6 +54,7 @@ DEPENDS+=	u-boot-odroid-c2-[0-9]*:../../sysutils/u-boot-odroid-c2
 .endif
 DEPENDS+=	u-boot-odroid-xu3-[0-9]*:../../sysutils/u-boot-odroid-xu3
 DEPENDS+=	u-boot-orangepi-2-[0-9]*:../../sysutils/u-boot-orangepi-2
+DEPENDS+=	u-boot-orangepi-lite-[0-9]*:../../sysutils/u-boot-orangepi-lite
 DEPENDS+=	u-boot-orangepi-one-[0-9]*:../../sysutils/u-boot-orangepi-one
 DEPENDS+=	u-boot-orangepi-plus2e-[0-9]*:../../sysutils/u-boot-orangepi-plus2e
 DEPENDS+=	u-boot-orangepi-zero-[0-9]*:../../sysutils/u-boot-orangepi-zero
