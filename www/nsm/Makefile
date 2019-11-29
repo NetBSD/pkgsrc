@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/11/26 18:32:29 ng0 Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/29 22:03:38 ng0 Exp $
 
-DISTNAME=	nsm-1.20
+DISTNAME=	nsm-1.21
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nifty-site-manager/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,19 @@ LICENSE=	mit
 
 USE_LANGUAGES=		c++
 INSTALLATION_DIRS=	bin
-BUILD_TARGET=		nsm
+
+# Avoid building 2 binaries with the exact same content
+# where we can symlink instead. This safes 50 percent
+# of the binary size and some double computation.
+# closed upstream ticket:
+# https://github.com/nifty-site-manager/nsm/issues/2
+SUBST_CLASSES+=		nift
+SUBST_STAGE.nift=	pre-configure
+SUBST_FILES.nift=	Makefile
+SUBST_SED.nift=		-e '/nift/ s,^,\#,g'
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s nsm nift
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
