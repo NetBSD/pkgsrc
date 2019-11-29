@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5187 2019/11/29 15:11:02 jakllsch Exp $
+$NetBSD: CHANGES-2019,v 1.5188 2019/11/29 19:12:25 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8375,3 +8375,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated shells/tcsh to 6.22.00 [leot 2019-11-28]
 	Updated net/youtube-dl to 20191128 [leot 2019-11-28]
 	Added sysutils/u-boot-orangepi-lite version 2018.11nb4 [jakllsch 2019-11-29]
+	Updated sysutils/u-boot to 2018.11nb7 [jakllsch 2019-11-29]
