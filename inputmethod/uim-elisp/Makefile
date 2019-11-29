@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/05 21:32:14 nia Exp $
+# $NetBSD: Makefile,v 1.14 2019/11/29 03:19:55 nia Exp $
 
 .include		"../../inputmethod/uim/Makefile.common"
 PKGNAME=		${EMACS_PKGNAME_PREFIX}uim-elisp-${DISTNAME:S/^uim-//1}
@@ -8,7 +8,8 @@ COMMENT=		Emacs LISP for inputmethod/uim
 LICENSE=		modified-bsd
 
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		autopoint intltool msgfmt
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-libgcroots=installed
