@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/11/30 21:44:27 markd Exp $
+
+SHA1 (khelpcenter-19.08.3.tar.xz) = a7724bb82d9bb4c2fb85c2b7537d26bac717de7f
+RMD160 (khelpcenter-19.08.3.tar.xz) = 3a27c4fa1e233446ba2cb1b70f178e52a6cc32ac
+SHA512 (khelpcenter-19.08.3.tar.xz) = 8d495eb4d6387bfb7f567c4b9f1cef3d48d1ef5317692a702c8c5e983c2feb209b1bab981d40064b4a0ab31063ec5fde24f77223e052f5650dc42b199dd2fdaa
+Size (khelpcenter-19.08.3.tar.xz) = 3846196 bytes
