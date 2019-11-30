@@ -29,6 +29,10 @@ func (p Path) String() string { return string(p) }
 
 func (p Path) GoString() string { return sprintf("%q", string(p)) }
 
+// IsEmpty returns true if the path is completely empty,
+// which is usually a sign of an uninitialized variable.
+func (p Path) IsEmpty() bool { return p == "" }
+
 func (p Path) Dir() Path { return Path(path.Dir(string(p))) }
 
 func (p Path) Base() string { return path.Base(string(p)) }
@@ -96,7 +100,6 @@ func (p Path) HasPrefixPath(prefix Path) bool {
 	return true
 }
 
-// TODO: Check each call whether ContainsPath is more appropriate; add tests
 func (p Path) ContainsText(contained string) bool {
 	return contains(string(p), contained)
 }
@@ -126,7 +129,7 @@ func (p Path) HasSuffixText(suffix string) bool {
 	return hasSuffix(string(p), suffix)
 }
 
-// HasSuffixPath returns whether the path ends with the given prefix.
+// HasSuffixPath returns whether the path ends with the given suffix.
 // The basic unit of comparison is a path component, not a character.
 func (p Path) HasSuffixPath(suffix Path) bool {
 	return hasSuffix(string(p), string(suffix)) &&

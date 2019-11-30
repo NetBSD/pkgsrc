@@ -387,80 +387,6 @@ func (s *Suite) Test_cleanpath(c *check.C) {
 	test(".././././././././", "..")
 }
 
-func (s *Suite) Test_pathContains(c *check.C) {
-	t := s.Init(c)
-
-	test := func(haystack, needle string, expected bool) {
-		actual := pathContains(haystack, needle)
-		t.CheckEquals(actual, expected)
-	}
-
-	testPanic := func(haystack, needle string) {
-		t.c.Check(
-			func() { _ = pathContains(haystack, needle) },
-			check.PanicMatches,
-			`runtime error: index out of range.*`)
-	}
-
-	testPanic("", "")
-	testPanic("a", "")
-	testPanic("a/b/c", "")
-
-	test("a", "a", true)
-	test("a", "b", false)
-	test("a", "A", false)
-	test("a/b/c", "a", true)
-	test("a/b/c", "b", true)
-	test("a/b/c", "c", true)
-	test("a/b/c", "a/b", true)
-	test("a/b/c", "b/c", true)
-	test("a/b/c", "a/b/c", true)
-	test("aa/bb/cc", "a/b", false)
-	test("aa/bb/cc", "a/bb", false)
-	test("aa/bb/cc", "aa/b", false)
-	test("aa/bb/cc", "aa/bb", true)
-	test("aa/bb/cc", "a", false)
-	test("aa/bb/cc", "b", false)
-	test("aa/bb/cc", "c", false)
-}
-
-func (s *Suite) Test_pathContainsDir(c *check.C) {
-	t := s.Init(c)
-
-	test := func(haystack, needle Path, expected bool) {
-		actual := pathContainsDir(haystack, needle)
-		t.CheckEquals(actual, expected)
-	}
-
-	testPanic := func(haystack, needle Path) {
-		t.c.Check(
-			func() { _ = pathContainsDir(haystack, needle) },
-			check.PanicMatches,
-			`^runtime error: index out of range.*`)
-	}
-
-	testPanic("", "")
-	testPanic("a", "")
-	testPanic("a/b/c", "")
-
-	test("a", "a", false)
-	test("a", "b", false)
-	test("a", "A", false)
-	test("a/b/c", "a", true)
-	test("a/b/c", "b", true)
-	test("a/b/c", "c", false)
-	test("a/b/c", "a/b", true)
-	test("a/b/c", "b/c", false)
-	test("a/b/c", "a/b/c", false)
-	test("aa/bb/cc", "a/b", false)
-	test("aa/bb/cc", "a/bb", false)
-	test("aa/bb/cc", "aa/b", false)
-	test("aa/bb/cc", "aa/bb", true)
-	test("aa/bb/cc", "a", false)
-	test("aa/bb/cc", "b", false)
-	test("aa/bb/cc", "c", false)
-}
-
 const reMkIncludeBenchmark = `^\.([\t ]*)(s?include)[\t ]+\"([^\"]+)\"[\t ]*(?:#.*)?$`
 const reMkIncludeBenchmarkPositive = `^\.([\t ]*)(s?include)[\t ]+\"(.+)\"[\t ]*(?:#.*)?$`
 
@@ -1110,4 +1036,92 @@ func (s *Suite) Test_shquote(c *check.C) {
 	test("'", "''\\'''")
 	test("simple", "simple")
 	test("~", "'~'")
+}
+
+func (s *Suite) Test_LazyStringBuilder_WriteByte__exact_match(c *check.C) {
+	t := s.Init(c)
+
+	sb := NewLazyStringBuilder("word")
+
+	sb.WriteByte('w')
+	sb.WriteByte('o')
+	sb.WriteByte('r')
+	sb.WriteByte('d')
+
+	t.CheckEquals(sb.String(), "word")
+	c.Check(sb.buf, check.IsNil)
+}
+
+func (s *Suite) Test_LazyStringBuilder_WriteByte__longer_than_expected(c *check.C) {
+	t := s.Init(c)
+
+	sb := NewLazyStringBuilder("word")
+	sb.WriteByte('w')
+	sb.WriteByte('o')
+	sb.WriteByte('r')
+	sb.WriteByte('d')
+	sb.WriteByte('s')
+
+	t.CheckEquals(sb.String(), "words")
+	t.CheckDeepEquals(sb.buf, []byte{'w', 'o', 'r', 'd', 's'})
+}
+
+func (s *Suite) Test_LazyStringBuilder_WriteByte__shorter_than_expected(c *check.C) {
+	t := s.Init(c)
+
+	sb := NewLazyStringBuilder("word")
+	sb.WriteByte('w')
+	sb.WriteByte('o')
+
+	t.CheckEquals(sb.String(), "wo")
+	c.Check(sb.buf, check.IsNil)
+
+	sb.WriteByte('r')
+	sb.WriteByte('d')
+
+	t.CheckEquals(sb.String(), "word")
+	c.Check(sb.buf, check.IsNil)
+}
+
+func (s *Suite) Test_LazyStringBuilder_WriteByte__other_than_expected(c *check.C) {
+	t := s.Init(c)
+
+	sb := NewLazyStringBuilder("word")
+	sb.WriteByte('w')
+	sb.WriteByte('o')
+	sb.WriteByte('l')
+	sb.WriteByte('f')
+
+	t.CheckEquals(sb.String(), "wolf")
+	t.CheckDeepEquals(sb.buf, []byte{'w', 'o', 'l', 'f'})
+}
+
+func (s *Suite) Test_LazyStringBuilder_Reset(c *check.C) {
+	t := s.Init(c)
+
+	sb := NewLazyStringBuilder("word")
+	sb.WriteByte('w')
+
+	sb.Reset("other")
+
+	t.CheckEquals(sb.String(), "")
+
+	sb.WriteString("word")
+
+	t.CheckEquals(sb.String(), "word")
+	t.CheckEquals(sb.usingBuf, true)
+	t.CheckDeepEquals(sb.buf, []byte("word"))
+
+	sb.Reset("")
+
+	t.CheckEquals(sb.String(), "")
+	t.CheckEquals(sb.usingBuf, false)
+	t.CheckDeepEquals(sb.buf, []byte("word"))
+
+	sb.WriteByte('x')
+
+	// Ensure that the buffer is reset properly.
+	t.CheckEquals(sb.String(), "x")
+	t.CheckEquals(sb.usingBuf, true)
+	t.CheckDeepEquals(sb.buf, []byte("x"))
 }

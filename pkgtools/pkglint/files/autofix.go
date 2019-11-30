@@ -442,8 +442,8 @@ func SaveAutofixChanges(lines *Lines) (autofixed bool) {
 	}
 
 	if G.Testing {
-		abs := abspath(lines.Filename)
-		absTmp := abspath(NewPathSlash(os.TempDir()))
+		abs := G.Abs(lines.Filename)
+		absTmp := G.Abs(NewPathSlash(os.TempDir()))
 		assertf(abs.HasPrefixPath(absTmp), "%q must be inside %q", abs, absTmp)
 	}
 

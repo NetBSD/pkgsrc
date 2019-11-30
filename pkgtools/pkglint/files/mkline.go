@@ -414,15 +414,16 @@ var notSpace = textproc.Space.Inverse()
 // See UnquoteShell.
 func (mkline *MkLine) ValueFields(value string) []string {
 	var fields []string
-	var field strings.Builder
 
 	lexer := NewMkTokensLexer(mkline.Tokenize(value, false))
 	lexer.SkipHspace()
 
+	field := NewLazyStringBuilder(lexer.Rest())
+
 	emit := func() {
 		if field.Len() > 0 {
 			fields = append(fields, field.String())
-			field.Reset()
+			field.Reset(lexer.Rest())
 		}
 	}
 
@@ -542,7 +543,7 @@ func (mkline *MkLine) Fields() []string {
 }
 
 func (*MkLine) WithoutMakeVariables(value string) string {
-	var valueNovar strings.Builder
+	valueNovar := NewLazyStringBuilder(value)
 	tokens, _ := NewMkLexer(value, nil).MkTokens()
 	for _, token := range tokens {
 		if token.Varuse == nil {
@@ -828,7 +829,7 @@ func (mkline *MkLine) ForEachUsed(action func(varUse *MkVarUse, time VucTime)) {
 //
 // See ValueFields.
 func (mkline *MkLine) UnquoteShell(str string, warn bool) string {
-	var sb strings.Builder
+	sb := NewLazyStringBuilder(str)
 	lexer := NewMkTokensLexer(mkline.Tokenize(str, false))
 
 	plain := func() {

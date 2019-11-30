@@ -194,7 +194,7 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 
 	distdir := G.Pkgsrc.File("distfiles")
 
-	distfile := cleanpath(joinPath(distdir, info.filename()))
+	distfile := cleanpath(distdir.JoinNoClean(info.filename()))
 	if !distfile.IsFile() {
 
 		// It's a rare situation that the explanation is generated
@@ -370,7 +370,7 @@ func (ck *distinfoLinesChecker) checkUncommittedPatch(info distinfoHash) {
 	hash := info.hash
 	line := info.line
 
-	patchFileName := joinPath(ck.patchdir, patchName)
+	patchFileName := ck.patchdir.JoinNoClean(patchName)
 	resolvedPatchFileName := ck.pkg.File(patchFileName)
 	if ck.distinfoIsCommitted && !isCommitted(resolvedPatchFileName) {
 		line.Warnf("%s is registered in distinfo but not added to CVS.", line.PathToFile(resolvedPatchFileName))

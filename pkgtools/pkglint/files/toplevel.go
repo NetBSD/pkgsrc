@@ -62,6 +62,6 @@ func (ctx *Toplevel) checkSubdir(mkline *MkLine) {
 	ctx.previousSubdir = subdir
 
 	if !mkline.IsCommentedVarassign() {
-		ctx.subdirs = append(ctx.subdirs, joinPath(ctx.dir, subdir))
+		ctx.subdirs = append(ctx.subdirs, ctx.dir.JoinNoClean(subdir))
 	}
 }

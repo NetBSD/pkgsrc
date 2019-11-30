@@ -81,8 +81,7 @@ type CmdOpts struct {
 	WarnExtra,
 	WarnPerm,
 	WarnQuoting,
-	WarnSpace,
-	WarnStyle bool
+	WarnSpace bool
 
 	Profiling,
 	ShowHelp,
@@ -221,7 +220,7 @@ func (pkglint *Pkglint) prepareMainLoop() {
 		NewLineWhole(firstDir).Fatalf("Must be inside a pkgsrc tree.")
 	}
 
-	pkglint.Pkgsrc = NewPkgsrc(joinPath(firstDir, relTopdir))
+	pkglint.Pkgsrc = NewPkgsrc(firstDir.JoinNoClean(relTopdir))
 	pkglint.Wip = pkglint.Pkgsrc.IsWip(firstDir) // See Pkglint.checkMode.
 	pkglint.Pkgsrc.LoadInfrastructure()
 
@@ -259,7 +258,6 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) int {
 	warn.AddFlagVar("perm", &gopts.WarnPerm, false, "warn about unforeseen variable definition and use")
 	warn.AddFlagVar("quoting", &gopts.WarnQuoting, false, "warn about quoting issues")
 	warn.AddFlagVar("space", &gopts.WarnSpace, false, "warn about inconsistent use of whitespace")
-	warn.AddFlagVar("style", &gopts.WarnStyle, false, "warn about stylistic issues")
 
 	remainingArgs, err := opts.Parse(args)
 	if err != nil {
@@ -377,7 +375,7 @@ func (pkglint *Pkglint) checkdirPackage(dir Path) {
 // Returns the pkgsrc top-level directory, relative to the given directory.
 func findPkgsrcTopdir(dirname Path) Path {
 	for _, dir := range [...]Path{".", "..", "../..", "../../.."} {
-		if joinPath(dirname, dir, "mk/bsd.pkg.mk").IsFile() {
+		if dirname.JoinNoClean(dir).JoinNoClean("mk/bsd.pkg.mk").IsFile() {
 			return dir
 		}
 	}
@@ -618,7 +616,7 @@ func (pkglint *Pkglint) checkReg(filename Path, basename string, depth int) {
 		NewLineWhole(filename).Warnf("Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.")
 
 	case (hasPrefix(basename, "Makefile") || hasSuffix(basename, ".mk")) &&
-		!pathContainsDir(filename, "files"): // FIXME: G.Pkgsrc.Rel(filename) instead of filename
+		!filename.Dir().ContainsPath("files"): // FIXME: G.Pkgsrc.Rel(filename) instead of filename
 		CheckFileMk(filename)
 
 	case hasPrefix(basename, "PLIST"):
@@ -784,6 +782,13 @@ func (pkglint *Pkglint) loadCvsEntries(filename Path) map[string]CvsEntry {
 	pkglint.cvsEntriesDir = dir
 	pkglint.cvsEntries = entries
 	return entries
+}
+
+func (pkglint *Pkglint) Abs(filename Path) Path {
+	if !filename.IsAbs() {
+		return pkglint.cwd.JoinNoClean(filename).Clean()
+	}
+	return filename.Clean()
 }
 
 type InterPackage struct {
