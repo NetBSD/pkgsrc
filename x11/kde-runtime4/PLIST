@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/01/17 19:07:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/11/30 21:39:08 markd Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -9,7 +9,6 @@ bin/kdebugdialog
 bin/keditfiletype
 bin/kfile4
 bin/kglobalaccel
-bin/khelpcenter
 bin/khotnewstuff-upload
 bin/khotnewstuff4
 bin/kiconfinder
@@ -173,11 +172,6 @@ lib/kde4/libexec/kdeeject
 lib/kde4/libexec/kdesu
 ${PLIST.x11}lib/kde4/libexec/kdesud
 lib/kde4/libexec/kdontchangethehostname
-lib/kde4/libexec/khc_docbookdig.pl
-lib/kde4/libexec/khc_htdig.pl
-lib/kde4/libexec/khc_htsearch.pl
-lib/kde4/libexec/khc_indexbuilder
-lib/kde4/libexec/khc_mansearch.pl
 lib/kde4/libexec/kioexec
 lib/kde4/libexec/knetattach
 lib/kde4/libkmanpart.so
@@ -251,7 +245,6 @@ lib/kde4/windowsexethumbnail.so
 lib/kde4/windowsimagethumbnail.so
 lib/libkdeinit4_kcmshell4.so
 lib/libkdeinit4_kglobalaccel.so
-lib/libkdeinit4_khelpcenter.so
 lib/libkdeinit4_kuiserver.so
 lib/libkdeinit4_kwalletd.so
 lib/libknotifyplugin.so
@@ -264,10 +257,8 @@ lib/libmolletnetwork.so.${KDELIBSVER}
 man/man1/kdesu.1
 man/man1/plasmapkg.1
 ${PLIST.polkit}share/polkit-1/actions/org.kde.kcontrol.kcmremotewidgets.policy
-share/applications/kde4/Help.desktop
 share/applications/kde4/knetattach.desktop
 share/dbus-1/interfaces/org.kde.KTimeZoned.xml
-share/dbus-1/interfaces/org.kde.khelpcenter.kcmhelpcenter.xml
 share/dbus-1/interfaces/org.kde.network.kioslavenotifier.xml
 share/dbus-1/services/org.kde.knotify.service
 share/dbus-1/services/org.kde.kuiserver.service
@@ -781,38 +772,6 @@ share/kde/apps/kconf_update/kuriikwsfilter.upd
 share/kde/apps/kconf_update/kwallet-4.13.upd
 share/kde/apps/kde/kde.notifyrc
 share/kde/apps/kglobalaccel/kglobalaccel.notifyrc
-share/kde/apps/khelpcenter/glossary.html.in
-share/kde/apps/khelpcenter/glossary.xslt
-share/kde/apps/khelpcenter/index.html.in
-share/kde/apps/khelpcenter/khelpcenterui.rc
-share/kde/apps/khelpcenter/plugins/Applications/.directory
-share/kde/apps/khelpcenter/plugins/Manpages/.directory
-share/kde/apps/khelpcenter/plugins/Manpages/man1.desktop
-share/kde/apps/khelpcenter/plugins/Manpages/man2.desktop
-share/kde/apps/khelpcenter/plugins/Manpages/man3.desktop
-share/kde/apps/khelpcenter/plugins/Manpages/man4.desktop
-share/kde/apps/khelpcenter/plugins/Manpages/man5.desktop
-share/kde/apps/khelpcenter/plugins/Manpages/man6.desktop
-share/kde/apps/khelpcenter/plugins/Manpages/man7.desktop
-share/kde/apps/khelpcenter/plugins/Manpages/man8.desktop
-share/kde/apps/khelpcenter/plugins/Scrollkeeper/.directory
-share/kde/apps/khelpcenter/plugins/Scrollkeeper/scrollkeeper.desktop
-share/kde/apps/khelpcenter/plugins/browsercontrolmodules.desktop
-share/kde/apps/khelpcenter/plugins/filemanagercontrolmodules.desktop
-share/kde/apps/khelpcenter/plugins/fundamentals.desktop
-share/kde/apps/khelpcenter/plugins/info.desktop
-share/kde/apps/khelpcenter/plugins/kcontrolmodules.desktop
-share/kde/apps/khelpcenter/plugins/kicmodules.desktop
-share/kde/apps/khelpcenter/plugins/kioslaves.desktop
-share/kde/apps/khelpcenter/plugins/konquerorcontrolmodules.desktop
-share/kde/apps/khelpcenter/plugins/onlinehelp.desktop
-share/kde/apps/khelpcenter/plugins/othercontrolmodules.desktop
-share/kde/apps/khelpcenter/plugins/plasma.desktop
-share/kde/apps/khelpcenter/searchhandlers/docbook.desktop
-share/kde/apps/khelpcenter/searchhandlers/htdig.desktop
-share/kde/apps/khelpcenter/searchhandlers/htdig/htdig_long.html
-share/kde/apps/khelpcenter/searchhandlers/man.desktop
-share/kde/apps/khelpcenter/table-of-contents.xslt
 share/kde/apps/kio_bookmarks/kio_bookmarks.css
 share/kde/apps/kio_desktop/DesktopLinks/Home.desktop
 share/kde/apps/kio_desktop/directory.desktop
@@ -834,7 +793,6 @@ share/kde/apps/phonon/phonon.notifyrc
 share/kde/apps/remoteview/network.desktop
 ${PLIST.smb}share/kde/apps/remoteview/smb-network.desktop
 share/kde/config.kcfg/jpegcreatorsettings.kcfg
-share/kde/config.kcfg/khelpcenter.kcfg
 share/kde/config/emoticons.knsrc
 share/kde/config/icons.knsrc
 share/kde/config/khotnewstuff.knsrc
@@ -887,7 +845,6 @@ share/kde4/services/kded/remotedirnotify.desktop
 share/kde4/services/kded/solidautoeject.desktop
 share/kde4/services/kded/soliduiserver.desktop
 share/kde4/services/kglobalaccel.desktop
-share/kde4/services/khelpcenter.desktop
 share/kde4/services/kmanpart.desktop
 share/kde4/services/knotify4.desktop
 share/kde4/services/kshorturifilter.desktop
