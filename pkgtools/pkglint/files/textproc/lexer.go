@@ -59,7 +59,8 @@ func (l *Lexer) TestByteSet(set *ByteSet) bool {
 	return 0 < len(rest) && set.Contains(rest[0])
 }
 
-// Skip skips the next n bytes.
+// Skip skips the next n bytes, or panics if the rest is shorter than n bytes.
+// Returns false only if n == 0.
 func (l *Lexer) Skip(n int) bool {
 	l.rest = l.rest[n:]
 	return n > 0

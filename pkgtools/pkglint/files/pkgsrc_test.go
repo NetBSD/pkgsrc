@@ -1245,7 +1245,7 @@ func (s *Suite) Test_Pkgsrc_Relpath(c *check.C) {
 		// See Tester.Chdir; a direct Chdir works here since this test
 		// neither loads lines nor processes them.
 		assertNil(os.Chdir(path.String()), "Chdir %s", path)
-		G.cwd = abspath(path)
+		G.cwd = G.Abs(path)
 	}
 
 	t.CreateFileLines("testdir/subdir/dummy")

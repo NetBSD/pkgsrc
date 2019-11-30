@@ -8,6 +8,15 @@ import (
 
 // MkLexer splits a text into a sequence of variable uses
 // and plain text.
+//
+// The actual parsing algorithm in devel/bmake/files/var.c differs from
+// pkglint's parser in many ways and produces different results in
+// almost all edge cases. See devel/bmake/files/var.c:/'\\\\'/.
+//
+// The pkglint parser had been built from scratch using naive assumptions
+// about how bmake parses these expressions. These assumptions do not hold
+// a strict test, but luckily the pkgsrc package developers don't explore
+// these edge cases anyway.
 type MkLexer struct {
 	lexer *textproc.Lexer
 	line  *Line
@@ -153,10 +162,12 @@ func (p *MkLexer) Varname() string {
 // This is used for the :L and :? modifiers since they accept arbitrary
 // text as the "variable name" and effectively interpret it as the variable
 // value instead.
+//
+// See devel/bmake/files/var.c:/^VarGetPattern/
 func (p *MkLexer) varUseText(closing byte) string {
 	lexer := p.lexer
 	start := lexer.Mark()
-	re := regcomp(regex.Pattern(condStr(closing == '}', `^([^$:}]|\$\$)+`, `^([^$:)]|\$\$)+`)))
+	re := regcomp(regex.Pattern(condStr(closing == '}', `^([^$:\\}]|\$\$|\\.)+`, `^([^$:\\)]|\$\$|\\.)+`)))
 	for p.VarUse() != nil || lexer.SkipRegexp(re) {
 	}
 	return lexer.Since(start)
@@ -213,34 +224,14 @@ func (p *MkLexer) varUseModifier(varname string, closing byte) string {
 		}
 
 		if hasPrefix(mod, "ts") {
-			// See devel/bmake/files/var.c:/case 't'
-			sep := mod[2:] + p.varUseText(closing)
-			switch {
-			case sep == "":
-				lexer.SkipString(":")
-			case len(sep) == 1:
-				break
-			case matches(sep, `^\\\d+`):
-				break
-			default:
-				if p.line != nil {
-					p.line.Warnf("Invalid separator %q for :ts modifier of %q.", sep, varname)
-					p.line.Explain(
-						"The separator for the :ts modifier must be either a single character",
-						"or an escape sequence like \\t or \\n or an octal or decimal escape",
-						"sequence; see the bmake man page for further details.")
-				}
-			}
-			return lexer.Since(mark)
+			return p.varUseModifierSeparator(mod, closing, lexer, varname, mark)
 		}
 
-	case '=', 'D', 'M', 'N', 'U':
-		lexer.Skip(1)
-		re := regcomp(regex.Pattern(condStr(closing == '}', `^([^$:\\}]|\$\$|\\.)+`, `^([^$:\\)]|\$\$|\\.)+`)))
-		for p.VarUse() != nil || lexer.SkipRegexp(re) {
-		}
-		arg := lexer.Since(mark)
-		return strings.Replace(arg, "\\:", ":", -1)
+	case 'D', 'U':
+		return p.varUseText(closing)
+
+	case 'M', 'N':
+		return p.varUseModifierMatch(closing)
 
 	case 'C', 'S':
 		if ok, _, _, _, _ := p.varUseModifierSubst(closing); ok {
@@ -268,10 +259,7 @@ func (p *MkLexer) varUseModifier(varname string, closing byte) string {
 
 	lexer.Reset(mark)
 
-	re := regcomp(regex.Pattern(condStr(closing == '}', `^([^:$}]|\$\$)+`, `^([^:$)]|\$\$)+`)))
-	for p.VarUse() != nil || lexer.SkipRegexp(re) {
-	}
-	modifier := lexer.Since(mark)
+	modifier := p.varUseText(closing)
 
 	// ${SOURCES:%.c=%.o} or ${:!uname -a!:[2]}
 	if contains(modifier, "=") || (hasPrefix(modifier, "!") && hasSuffix(modifier, "!")) {
@@ -283,6 +271,79 @@ func (p *MkLexer) varUseModifier(varname string, closing byte) string {
 	}
 
 	return ""
+}
+
+// varUseModifierSeparator parses the :ts modifier.
+//
+// The API of this method is tricky.
+// It is only extracted from varUseModifier to make the latter smaller.
+func (p *MkLexer) varUseModifierSeparator(
+	mod string, closing byte, lexer *textproc.Lexer, varname string,
+	mark textproc.LexerMark) string {
+
+	// See devel/bmake/files/var.c:/case 't'
+	sep := mod[2:] + p.varUseText(closing)
+	switch {
+	case sep == "":
+		lexer.SkipString(":")
+	case len(sep) == 1:
+		break
+	case matches(sep, `^\\\d+`):
+		break
+	default:
+		if p.line != nil {
+			p.line.Warnf("Invalid separator %q for :ts modifier of %q.", sep, varname)
+			p.line.Explain(
+				"The separator for the :ts modifier must be either a single character",
+				"or an escape sequence like \\t or \\n or an octal or decimal escape",
+				"sequence; see the bmake man page for further details.")
+		}
+	}
+	return lexer.Since(mark)
+}
+
+// varUseModifierMatch parses an :M or :N pattern.
+//
+// See devel/bmake/files/var.c:/^ApplyModifiers/, case 'M'.
+func (p *MkLexer) varUseModifierMatch(closing byte) string {
+	lexer := p.lexer
+	mark := lexer.Mark()
+	lexer.Skip(1)
+	opening := byte(condInt(closing == '}', '{', '('))
+	_ = opening
+
+	nest := 1
+	seenBackslash := false
+	for !lexer.EOF() {
+		ch := lexer.PeekByte()
+		if ch == ':' && nest == 1 {
+			break
+		}
+
+		if ch == '\\' {
+			seenBackslash = true
+			lexer.Skip(1)
+			_ = lexer.SkipByte(':') || lexer.SkipByte(opening) || lexer.SkipByte(closing)
+			continue
+		}
+
+		if ch == '(' || ch == '{' {
+			nest++
+		} else if ch == ')' || ch == '}' {
+			nest--
+			if nest == 0 {
+				break
+			}
+		}
+		lexer.Skip(1)
+	}
+
+	arg := lexer.Since(mark)
+	if seenBackslash {
+		re := regex.Pattern(condStr(closing == '}', `\\([:}])`, `\\([:)])`))
+		arg = replaceAll(arg, re, "$1")
+	}
+	return arg
 }
 
 // varUseModifierSubst parses a :S,from,to, or a :C,from,to, modifier.

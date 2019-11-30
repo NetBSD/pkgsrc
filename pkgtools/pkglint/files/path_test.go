@@ -48,6 +48,18 @@ func (s *Suite) Test_Path_GoString(c *check.C) {
 	test("c\\d", "\"c\\\\d\"")
 }
 
+func (s *Suite) Test_Path_IsEmpty(c *check.C) {
+	t := s.Init(c)
+
+	test := func(p Path, isEmpty bool) {
+		t.CheckEquals(p.IsEmpty(), isEmpty)
+	}
+
+	test("", true)
+	test(".", false)
+	test("/", false)
+}
+
 func (s *Suite) Test_Path_Dir(c *check.C) {
 	t := s.Init(c)
 
@@ -247,7 +259,7 @@ func (s *Suite) Test_Path_ContainsPath(c *check.C) {
 
 	test("", "", true)          // It doesn't make sense to search for empty paths.
 	test(".", "", false)        // It doesn't make sense to search for empty paths.
-	test("filename", ".", true) // Every path contains "." implicitly at the beginning
+	test("filename", ".", true) // Every relative path contains "." implicitly at the beginning
 	test("a.b", ".", true)
 	test("..", ".", true)
 	test("filename", "", false)
@@ -263,6 +275,23 @@ func (s *Suite) Test_Path_ContainsPath(c *check.C) {
 	test("a/bb/c", "b/c", false)
 	test("mk/fetch/fetch.mk", "mk", true)
 	test("category/package/../../wip/mk/../..", "mk", true)
+
+	test("a", "a", true)
+	test("a", "b", false)
+	test("a", "A", false)
+	test("a/b/c", "a", true)
+	test("a/b/c", "b", true)
+	test("a/b/c", "c", true)
+	test("a/b/c", "a/b", true)
+	test("a/b/c", "b/c", true)
+	test("a/b/c", "a/b/c", true)
+	test("aa/bb/cc", "a/b", false)
+	test("aa/bb/cc", "a/bb", false)
+	test("aa/bb/cc", "aa/b", false)
+	test("aa/bb/cc", "aa/bb", true)
+	test("aa/bb/cc", "a", false)
+	test("aa/bb/cc", "b", false)
+	test("aa/bb/cc", "c", false)
 }
 
 func (s *Suite) Test_Path_ContainsPathCanonical(c *check.C) {

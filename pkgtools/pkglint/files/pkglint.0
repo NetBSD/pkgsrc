@@ -81,9 +81,6 @@ DDEESSCCRRIIPPTTIIOONN
 
      [[nnoo‐‐]]ssppaaccee          Emit notes for inconsistent use of whitespace.
 
-     [[nnoo‐‐]]ssttyyllee          Warn for stylistic issues that don’t affect the build
-                         process.
-
    OOtthheerr aarrgguummeennttss
            _d_i_r _._._.             The pkgsrc directories to be checked.  If omit‐
                                ted, the current directory is checked.
@@ -114,4 +111,4 @@ BBUUGGSS
      If you don’t understand the messages, feel free to ask the author or on
      the ⟨pkgsrc‐users@pkgsrc.org⟩ mailing list.
 
-NetBSD 8.0                       June 17, 2019                      NetBSD 8.0
+NetBSD 8.0                     November 30, 2019                    NetBSD 8.0

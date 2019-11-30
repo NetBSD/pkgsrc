@@ -158,7 +158,7 @@ func CheckdirCategory(dir Path) {
 		var recurseInto []Path
 		for _, msub := range mSubdirs {
 			if !msub.line.IsCommentedVarassign() {
-				recurseInto = append(recurseInto, joinPath(dir, msub.name))
+				recurseInto = append(recurseInto, dir.JoinNoClean(msub.name))
 			}
 		}
 		G.Todo.PushFront(recurseInto...)
