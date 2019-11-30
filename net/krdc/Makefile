@@ -1,17 +1,25 @@
-# $NetBSD: Makefile,v 1.30 2019/08/22 12:23:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2019/11/30 19:28:45 markd Exp $
 
-DISTNAME=	krdc-15.12.0
-PKGREVISION=	17
+DISTNAME=	krdc-${KAPPSVER}
 CATEGORIES=	net
+
+HOMEPAGE=	https://kde.org/applications/internet/krdc/
 COMMENT=	KDE remote desktop client
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
+LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
+USE_TOOLS+=	msgmerge pkg-config
+
+.include "../../devel/kcmutils/buildlink3.mk"
+.include "../../devel/knotifyconfig/buildlink3.mk"
+.include "../../net/freerdp2/buildlink3.mk"
+.include "../../net/kdnssd/buildlink3.mk"
 .include "../../net/libvncserver/buildlink3.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
+.include "../../security/libssh/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
