@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.524 2019/11/22 23:30:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.525 2019/11/30 21:46:35 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -138,6 +138,7 @@ SUBDIR+=	kdrill
 SUBDIR+=	kemoticons
 SUBDIR+=	kgeography
 SUBDIR+=	khard
+SUBDIR+=	khelpcenter
 SUBDIR+=	kidentitymanagement
 SUBDIR+=	kig
 SUBDIR+=	kiten
