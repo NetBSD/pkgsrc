@@ -1,0 +1,16 @@
+$NetBSD: patch-cmake_modules_FindLibVNCServer.cmake,v 1.1 2019/11/30 19:35:11 markd Exp $
+
+Skip test - pkgsrc supplied version works.
+
+--- cmake/modules/FindLibVNCServer.cmake.orig	2019-11-01 21:57:16.000000000 +0000
++++ cmake/modules/FindLibVNCServer.cmake
+@@ -25,7 +25,8 @@ FIND_LIBRARY(LIBVNCCLIENT_LIBRARIES NAME
+ 
+ IF (LIBVNCSERVER_INCLUDE_DIR AND LIBVNCSERVER_LIBRARIES)
+    SET(CMAKE_REQUIRED_INCLUDES "${LIBVNCSERVER_INCLUDE_DIR}" "${CMAKE_REQUIRED_INCLUDES}")
+-   CHECK_STRUCT_HAS_MEMBER("struct _rfbClient" GotXCutText rfb/rfbclient.h LIBVNCSERVER_FOUND)
++#   CHECK_STRUCT_HAS_MEMBER("struct _rfbClient" GotXCutText rfb/rfbclient.h LIBVNCSERVER_FOUND)
++   SET(LIBVNCSERVER_FOUND TRUE)
+ ENDIF (LIBVNCSERVER_INCLUDE_DIR AND LIBVNCSERVER_LIBRARIES)
+ 
+ IF (LIBVNCSERVER_FOUND)
