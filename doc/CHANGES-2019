@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5200 2019/11/30 19:45:01 markd Exp $
+$NetBSD: CHANGES-2019,v 1.5201 2019/11/30 20:35:23 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8391,3 +8391,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/krdc to 19.08.3 [markd 2019-11-30]
 	Updated net/krfb to 19.08.3 [markd 2019-11-30]
 	Updated security/kwalletmanager to 19.08.3 [markd 2019-11-30]
+	Updated pkgtools/pkglint to 19.3.12 [rillig 2019-11-30]
