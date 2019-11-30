@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"gopkg.in/check.v1"
 	"netbsd.org/pkglint/intqa"
+	"netbsd.org/pkglint/textproc"
 	"strings"
 	"testing"
 )
@@ -22,6 +23,7 @@ func (s *Suite) Test_Parse(c *check.C) {
 	testDeep("gnu-gpl-v2", NewName("gnu-gpl-v2"))
 
 	test("gnu-gpl-v2", "{Name:gnu-gpl-v2}")
+	test("citrix_ica-license", "{Name:citrix_ica-license}")
 
 	test("a AND b", "{And:true,Children:[{Name:a},{Name:b}]}")
 	test("a OR b", "{Or:true,Children:[{Name:a},{Name:b}]}")
@@ -106,6 +108,39 @@ func (s *Suite) Test_Condition_Walk(c *check.C) {
 	})
 
 	c.Check(out, check.DeepEquals, []string{"a", "b", "OR", "()", "c", "d", "AND", "()", "AND"})
+}
+
+func (s *Suite) Test_licenseLexer_Lex(c *check.C) {
+
+	test := func(text string, tokenType int) {
+		lexer := &licenseLexer{lexer: textproc.NewLexer(text)}
+		var token liyySymType
+		lex := lexer.Lex(&token)
+		c.Check(lex, check.Equals, tokenType)
+	}
+	testName := func(text string, name string) {
+		lexer := &licenseLexer{lexer: textproc.NewLexer(text)}
+		var token liyySymType
+		lex := lexer.Lex(&token)
+		c.Check(lex, check.Equals, ltNAME)
+		c.Check(token.Node.Name, check.Equals, name)
+	}
+
+	test("", 0)
+	test("(", ltOPEN)
+	test(")", ltCLOSE)
+	test("AND", ltAND)
+	test("OR", ltOR)
+	test("?", -1)
+	test("license-name", ltNAME)
+	test("license_name", ltNAME)
+
+	test("AND rest", ltAND)
+	test("AND-rest", ltNAME)
+
+	testName("license-name", "license-name")
+	testName("license_name", "license_name")
+	testName("AND-rest", "AND-rest")
 }
 
 func NewName(name string) *Condition {
