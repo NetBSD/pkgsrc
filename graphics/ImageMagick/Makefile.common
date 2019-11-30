@@ -1,8 +1,4 @@
-# $NetBSD: Makefile.common,v 1.198 2019/11/29 19:40:36 jperkin Exp $
-#
-# When updating this package, please upload the distfile
-# since they disappear immediately when new releases happen,
-# which is quite often.
+# $NetBSD: Makefile.common,v 1.199 2019/11/30 09:46:12 jperkin Exp $
 #
 # used by graphics/p5-PerlMagick/Makefile
 
@@ -19,14 +15,8 @@ DISTSUFFIX=	${IM_MAJOR_VER}
 DISTNAME=	ImageMagick-${DISTSUFFIX}
 DISTVERSION=	${DISTSUFFIX:S/-/./}
 
-#
-# Please always run `upload-distfiles' after every update!
-# (upstream usually get rid of old version and only the latest stable versions
-# are available in the mirrors)
-#
 CATEGORIES=	graphics
-MASTER_SITES=	https://www.imagemagick.org/download/
-MASTER_SITES+=	https://ftp.gnome.org/mirror/imagemagick.org/ftp/releases/
+MASTER_SITES=	https://www.imagemagick.org/download/releases/
 EXTRACT_SUFX=	.tar.xz
 
 HOMEPAGE=	https://www.imagemagick.org/
