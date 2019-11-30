@@ -304,7 +304,7 @@ func (MkLineParser) split(line *Line, text string, trimComment bool) mkLineSplit
 	lexer := parser.lexer
 
 	parseOther := func() string {
-		var sb strings.Builder
+		sb := NewLazyStringBuilder(lexer.Rest())
 
 		for !lexer.EOF() {
 			if lexer.SkipString("$$") {
