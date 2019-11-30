@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/09/15 00:11:57 maya Exp $
+$NetBSD: distinfo,v 1.5 2019/11/30 17:23:08 sjmulder Exp $
 
-SHA1 (ncdu-1.13.tar.gz) = 3233c4185208d9989ac528a94817ed92dd59c773
-RMD160 (ncdu-1.13.tar.gz) = 948a45d5a5c3607dd3a7ae9236cd369ae24e1205
-SHA512 (ncdu-1.13.tar.gz) = f1f417caa9bd9e9d9aa6311962b461e48301cf9eab5d0f57073e25df01f96ded05dd093627b95b43afc659ad99aed869efd4a98d723f5835b100747b5525a60c
-Size (ncdu-1.13.tar.gz) = 143819 bytes
+SHA1 (ncdu-1.14.1.tar.gz) = 143c09158094adbb44f37945b7ba8bb1428862b1
+RMD160 (ncdu-1.14.1.tar.gz) = 033f15375d7cbb46d5ebcfad67f8eac7debe47a8
+SHA512 (ncdu-1.14.1.tar.gz) = 7db9115f7ba20d43c47bc7187347658d7a4dc36da6ffdc54308d3966a431c24b87c3266854d69685c3ea5e29805b5a631805a783d6431e30bd83c411b398515d
+Size (ncdu-1.14.1.tar.gz) = 146346 bytes
