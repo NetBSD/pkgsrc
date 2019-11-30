@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.576 2019/11/25 12:30:16 nia Exp $
+# $NetBSD: Makefile,v 1.577 2019/11/30 13:35:42 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -251,6 +251,7 @@ SUBDIR+=	libmtag
 SUBDIR+=	libmusepack
 SUBDIR+=	libmusicbrainz
 SUBDIR+=	libmusicbrainz5
+SUBDIR+=	libmysofa
 SUBDIR+=	libofa
 SUBDIR+=	libopenmpt
 SUBDIR+=	libopenspc

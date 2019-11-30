@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2019/11/30 13:35:42 nia Exp $
+include/mysofa.h
+lib/libmysofa.a
+lib/libmysofa.so
+lib/libmysofa.so.0
+lib/libmysofa.so.0.5.1
+lib/pkgconfig/libmysofa.pc
+share/libmysofa/MIT_KEMAR_normal_pinna.sofa
+share/libmysofa/default.sofa
