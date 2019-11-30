@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5192 2019/11/30 13:40:50 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5193 2019/11/30 13:43:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8380,3 +8380,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/mikutter to 3.9.8 [tsutsui 2019-11-30]
 	Added audio/libmysofa version 0.9 [nia 2019-11-30]
 	Updated audio/openal-soft to 1.20.0 [nia 2019-11-30]
+	Updated net/get_iplayer to 3.23 [nia 2019-11-30]
