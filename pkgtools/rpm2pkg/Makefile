@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2018/10/29 14:41:56 abs Exp $
+# $NetBSD: Makefile,v 1.70 2019/11/30 23:31:30 rin Exp $
 
-PKGNAME=	rpm2pkg-3.2.3
+PKGNAME=	rpm2pkg-3.3.0
 CATEGORIES=	pkgtools
 NO_CHECKSUM=	yes
 
@@ -45,5 +45,6 @@ do-install:
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
