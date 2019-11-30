@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5193 2019/11/30 13:43:22 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5194 2019/11/30 16:43:54 fox Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8381,3 +8381,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added audio/libmysofa version 0.9 [nia 2019-11-30]
 	Updated audio/openal-soft to 1.20.0 [nia 2019-11-30]
 	Updated net/get_iplayer to 3.23 [nia 2019-11-30]
+	Updated audio/fasttracker2 to 1.03 [fox 2019-11-30]
