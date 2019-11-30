@@ -457,29 +457,9 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 	})
 }
 
-// FIXME: Replace with Path.JoinNoClean
-func joinPath(a, b Path, others ...Path) Path {
-	if len(others) == 0 {
-		return a + "/" + b
-	}
-	parts := []string{a.String(), b.String()}
-	for _, part := range others {
-		parts = append(parts, part.String())
-	}
-	return NewPath(strings.Join(parts, "/"))
-}
-
-func abspath(filename Path) Path {
-	abs := filename
-	if !filename.IsAbs() {
-		abs = joinPath(G.cwd, abs)
-	}
-	return abs.Clean()
-}
-
 // Differs from path.Clean in that only "../../" is replaced, not "../".
 // Also, the initial directory is always kept.
-// This is to provide the package path as context in recursive invocations of pkglint.
+// This is to provide the package path as context in deeply nested .include chains.
 func cleanpath(filename Path) Path {
 	parts := make([]string, 0, 5)
 	lex := textproc.NewLexer(filename.String())
@@ -513,34 +493,6 @@ func cleanpath(filename Path) Path {
 		return "."
 	}
 	return NewPath(strings.Join(parts, "/"))
-}
-
-func pathContains(haystack, needle string) bool {
-	n0 := needle[0]
-	for i := 0; i < 1+len(haystack)-len(needle); i++ {
-		if haystack[i] == n0 && hasPrefix(haystack[i:], needle) {
-			if i == 0 || haystack[i-1] == '/' {
-				if i+len(needle) == len(haystack) || haystack[i+len(needle)] == '/' {
-					return true
-				}
-			}
-		}
-	}
-	return false
-}
-
-func pathContainsDir(haystack, needle Path) bool {
-	n0 := needle[0]
-	for i := 0; i < 1+len(haystack)-len(needle); i++ {
-		if haystack[i] == n0 && hasPrefix(haystack.String()[i:], needle.String()) {
-			if i == 0 || haystack[i-1] == '/' {
-				if i+len(needle) < len(haystack) && haystack[i+len(needle)] == '/' {
-					return true
-				}
-			}
-		}
-	}
-	return false
 }
 
 func containsVarRef(s string) bool {
@@ -1128,23 +1080,13 @@ func wrap(max int, lines ...string) []string {
 // at the risk of interpreting malicious data from the files checked by pkglint.
 // This escaping is not reversible, and it doesn't need to.
 func escapePrintable(s string) string {
-	i := 0
-	for i < len(s) && textproc.XPrint.Contains(s[i]) {
-		i++
-	}
-	if i == len(s) {
-		return s
-	}
-
-	var escaped strings.Builder
-	escaped.WriteString(s[:i])
-	rest := s[i:]
-	for j, r := range rest {
+	escaped := NewLazyStringBuilder(s)
+	for i, r := range s {
 		switch {
-		case rune(byte(r)) == r && textproc.XPrint.Contains(byte(rest[j])):
+		case rune(byte(r)) == r && textproc.XPrint.Contains(s[i]):
 			escaped.WriteByte(byte(r))
-		case r == 0xFFFD && !hasPrefix(rest[j:], "\uFFFD"):
-			_, _ = fmt.Fprintf(&escaped, "<0x%02X>", rest[j])
+		case r == 0xFFFD && !hasPrefix(s[i:], "\uFFFD"):
+			_, _ = fmt.Fprintf(&escaped, "<0x%02X>", s[i])
 		default:
 			_, _ = fmt.Fprintf(&escaped, "<%U>", r)
 		}
@@ -1347,4 +1289,74 @@ func (q *PathQueue) Pop() Path {
 	front := q.entries[0]
 	q.entries = q.entries[1:]
 	return front
+}
+
+// LazyStringBuilder builds a string that is most probably equal to an
+// already existing string. In that case, it avoids any memory allocations.
+type LazyStringBuilder struct {
+	Expected string
+	len      int
+	usingBuf bool
+	buf      []byte
+}
+
+func (b *LazyStringBuilder) Write(p []byte) (n int, err error) {
+	for _, c := range p {
+		b.WriteByte(c)
+	}
+	return len(p), nil
+}
+
+func NewLazyStringBuilder(expected string) LazyStringBuilder {
+	return LazyStringBuilder{Expected: expected}
+}
+
+func (b *LazyStringBuilder) Len() int {
+	return b.len
+}
+
+func (b *LazyStringBuilder) WriteString(s string) {
+	if !b.usingBuf && b.len+len(s) <= len(b.Expected) && hasPrefix(b.Expected[b.len:], s) {
+		b.len += len(s)
+		return
+	}
+	for _, c := range []byte(s) {
+		b.WriteByte(c)
+	}
+}
+
+func (b *LazyStringBuilder) WriteByte(c byte) {
+	if !b.usingBuf && b.len < len(b.Expected) && b.Expected[b.len] == c {
+		b.len++
+		return
+	}
+	b.writeToBuf(c)
+}
+
+func (b *LazyStringBuilder) writeToBuf(c byte) {
+	if !b.usingBuf {
+		if cap(b.buf) >= b.len {
+			b.buf = b.buf[:b.len]
+			assert(copy(b.buf, b.Expected) == b.len)
+		} else {
+			b.buf = []byte(b.Expected)[:b.len]
+		}
+		b.usingBuf = true
+	}
+
+	b.buf = append(b.buf, c)
+	b.len++
+}
+
+func (b *LazyStringBuilder) Reset(expected string) {
+	b.Expected = expected
+	b.usingBuf = false
+	b.len = 0
+}
+
+func (b *LazyStringBuilder) String() string {
+	if b.usingBuf {
+		return string(b.buf[:b.len])
+	}
+	return b.Expected[:b.len]
 }

@@ -200,7 +200,7 @@ func (p *MkParser) mkCondTerm() *MkCondTerm {
 	lexer.Reset(mark)
 
 	lexer.Skip(1)
-	var rhsText strings.Builder
+	rhsText := NewLazyStringBuilder(lexer.Rest())
 loop:
 	for {
 		m := lexer.Mark()
