@@ -38,7 +38,7 @@ func (m *MkTokensLexer) EOF() bool { return m.Lexer.EOF() && len(m.tokens) == 0 
 
 // Rest returns the string concatenation of the tokens that have not yet been consumed.
 func (m *MkTokensLexer) Rest() string {
-	var sb strings.Builder
+	sb := NewLazyStringBuilder(m.Lexer.Rest())
 	sb.WriteString(m.Lexer.Rest())
 	for _, token := range m.tokens {
 		sb.WriteString(token.Text)

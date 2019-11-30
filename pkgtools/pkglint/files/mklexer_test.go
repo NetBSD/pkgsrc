@@ -482,6 +482,44 @@ func (s *Suite) Test_MkLexer_Varname(c *check.C) {
 	testRest("VARNAME/rest", "VARNAME", "/rest")
 }
 
+func (s *Suite) Test_MkLexer_varUseText(c *check.C) {
+	t := s.Init(c)
+
+	test := func(text string, expected string, diagnostics ...string) {
+		line := t.NewLine("Makefile", 20, "\t"+text)
+		p := NewMkLexer(text, line)
+
+		actual := p.varUseText('}')
+
+		t.CheckDeepEquals(actual, expected)
+		t.CheckEquals(p.Rest(), text[len(expected):])
+		t.CheckOutput(diagnostics)
+	}
+
+	test("", "")
+	test("asdf", "asdf")
+
+	test("a$$a b", "a$$a b")
+	test("a$$a b", "a$$a b")
+
+	test("a$a b", "a$a b",
+		"WARN: Makefile:20: $a is ambiguous. Use ${a} if you mean "+
+			"a Make variable or $$a if you mean a shell variable.")
+
+	test("a${INNER} b", "a${INNER} b")
+
+	test("a${${${${${$(NESTED)}}}}}", "a${${${${${$(NESTED)}}}}}",
+		"WARN: Makefile:20: Please use curly braces {} "+
+			"instead of round parentheses () for NESTED.")
+
+	test("a)b", "a)b") // Since the closing character is '}', not ')'.
+
+	test("a:b", "a")
+	test("a\\ba", "a\\ba")
+	test("a\\:a", "a\\:a")
+	test("a\\\\:a", "a\\\\")
+}
+
 func (s *Suite) Test_MkLexer_VarUseModifiers(c *check.C) {
 	t := s.Init(c)
 
@@ -518,6 +556,11 @@ func (s *Suite) Test_MkLexer_VarUseModifiers(c *check.C) {
 	test("${BUILD_DIRS:[3]:L}", varUse("BUILD_DIRS", "[3]", "L"))
 
 	test("${PATH:ts::Q}", varUse("PATH", "ts:", "Q"))
+
+	// The :Q at the end is part of the right-hand side of the = modifier.
+	// It does not quote anything.
+	// See devel/bmake/files/var.c:/^VarGetPattern/.
+	test("${VAR:old=new:Q}", varUse("VAR", "old=new", "Q")) // FIXME
 }
 
 func (s *Suite) Test_MkLexer_varUseModifier__invalid_ts_modifier_with_warning(c *check.C) {
@@ -615,6 +658,131 @@ func (s *Suite) Test_MkLexer_varUseModifier__varuse_in_malformed_modifier(c *che
 
 	t.CheckOutputLines(
 		"WARN: filename.mk:123: Invalid variable modifier \"?yes${INNER}\" for \"${VAR}\".")
+}
+
+func (s *Suite) Test_MkLexer_varUseModifier__eq_suffix_replacement(c *check.C) {
+	t := s.Init(c)
+
+	test := func(input, modifier, rest string) {
+		line := t.NewLine("filename.mk", 123, "")
+		p := NewMkLexer(input, line)
+
+		actual := p.varUseModifier("VARNAME", '}')
+
+		t.CheckDeepEquals(actual, modifier)
+		t.CheckEquals(p.Rest(), rest)
+	}
+
+	test("%.c=%.o", "%.c=%.o", "")
+	test("%\\:c=%.o", "%\\:c=%.o", "") // FIXME: remove the escaping.
+	test("%\\:c=%.o", "%\\:c=%.o", "") // FIXME: remove the escaping.
+
+	// The backslashes are only removed before parentheses,
+	// braces and colons; see devel/bmake/files/var.c:/^VarGetPattern/
+	test(".\\a\\b\\c=.abc", ".\\a\\b\\c=.abc", "")
+
+	// See devel/bmake/files/var.c:/^#define IS_A_MATCH/.
+	// FIXME: The :rest must be part of the replacement.
+	test("%.c=%.o:rest", "%.c=%.o", ":rest")
+	test("\\}\\\\\\$=", "\\}\\\\\\$=", "")
+	// FIXME: test("\\}\\\\\\$=", "}\\$=", "")
+	test("=\\}\\\\\\$\\&", "=\\}\\\\\\$\\&", "")
+	// FIXME: test("=\\}\\\\\\$\\&", "=}\\$&", "")
+}
+
+func (s *Suite) Test_MkLexer_varUseModifierMatch(c *check.C) {
+	t := s.Init(c)
+
+	testClosing := func(input string, closing byte, modifier, rest string, diagnostics ...string) {
+		line := t.NewLine("filename.mk", 123, "")
+		p := NewMkLexer(input, line)
+
+		actual := p.varUseModifier("VARNAME", closing)
+
+		t.CheckDeepEquals(actual, modifier)
+		t.CheckEquals(p.Rest(), rest)
+		t.CheckOutput(diagnostics)
+	}
+
+	test := func(input, modifier, rest string, diagnostics ...string) {
+		testClosing(input, '}', modifier, rest, diagnostics...)
+	}
+	testParen := func(input, modifier, rest string, diagnostics ...string) {
+		testClosing(input, ')', modifier, rest, diagnostics...)
+	}
+
+	// Backslashes are removed only for : and the closing character.
+	test("M\\(\\{\\}\\)\\::rest", "M\\(\\{}\\):", ":rest")
+
+	// But not before other backslashes.
+	// Therefore, the first backslash does not escape the second.
+	// The second backslash doesn't have an effect either,
+	// since the parenthesis is just an ordinary character here.
+	test("M\\\\(:nested):rest", "M\\\\(:nested)", ":rest")
+
+	// If the variable uses parentheses instead of braces,
+	// the opening parenthesis is escaped by the second backslash
+	// and thus doesn't increase the nesting level.
+	// Nevertheless it is not unescaped. This is probably a bug in bmake.
+	testParen("M\\\\(:rest", "M\\\\(", ":rest")
+	testParen("M(:nested):rest", "M(:nested)", ":rest")
+
+	test("Mpattern", "Mpattern", "")
+	test("Mpattern}closed", "Mpattern", "}closed")
+	test("Mpattern:rest", "Mpattern", ":rest")
+
+	test("M{{{}}}}", "M{{{}}}", "}")
+
+	// See devel/bmake/files/var.c:/== '\('/.
+	test("M(}}", "M(}", "}")
+}
+
+// See src/usr.bin/make/unit-tests/varmod-edge.mk 1.4.
+//
+// The difference between this test and the bmake unit test is that in
+// this test the pattern is visible, while in the bmake test it is hidden
+// and can only be made visible by adding a fprintf to Str_Match or by
+// carefully analyzing the result of Str_Match, which removes another level
+// of backslashes.
+func (s *Suite) Test_MkLexer_varUseModifierMatch__varmod_edge(c *check.C) {
+	t := s.Init(c)
+
+	test := func(input, modifier, rest string, diagnostics ...string) {
+		line := t.NewLine("filename.mk", 123, "")
+		p := NewMkLexer(input, line)
+
+		actual := p.varUseModifier("VARNAME", '}')
+
+		t.CheckDeepEquals(actual, modifier)
+		t.CheckEquals(p.Rest(), rest)
+		t.CheckOutput(diagnostics)
+	}
+
+	// M-paren
+	test("M(*)}", "M(*)", "}")
+
+	// M-mixed
+	test("M(*}}", "M(*}", "}")
+
+	// M-nest-mix
+	test("M${:U*)}}", "M${:U*)", "}}")
+
+	// M-nest-brk
+	test("M${:U[[[[[]}}", "M${:U[[[[[]}", "}")
+
+	// M-pat-err
+	// TODO: Warn about the malformed pattern, since bmake doesn't.
+	//  See devel/bmake/files/str.c:/^Str_Match/.
+	test("M${:U[[}}", "M${:U[[}", "}")
+
+	// M-bsbs
+	test("M\\\\(}}", "M\\\\(}", "}")
+
+	// M-bs1-par
+	test("M\\(:M*}}", "M\\(:M*}", "}")
+
+	// M-bs2-par
+	test("M\\\\(:M*}}", "M\\\\(:M*}", "}")
 }
 
 func (s *Suite) Test_MkLexer_varUseModifierSubst(c *check.C) {
