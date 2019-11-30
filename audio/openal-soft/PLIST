@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2019/03/25 14:20:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/11/30 13:40:29 nia Exp $
 bin/altonegen
-bin/makehrtf
+bin/makemhr
 bin/openal-info
 include/AL/al.h
 include/AL/alc.h
