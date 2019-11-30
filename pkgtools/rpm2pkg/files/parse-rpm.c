@@ -1,7 +1,7 @@
-/*	$NetBSD: parse-rpm.c,v 1.1 2011/01/12 00:26:33 tron Exp $	*/
+/*	$NetBSD: parse-rpm.c,v 1.2 2019/11/30 23:31:30 rin Exp $	*/
 
 /*-
- * Copyright (c) 2001-2011 The NetBSD Foundation, Inc.
+ * Copyright (c) 2001-2019 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -69,9 +69,10 @@ typedef struct RPMHeader_s {
 
 static const uint8_t RPMHeaderMagic[] = { 0x8e, 0xad, 0xe8 };
 
-/* Magic bytes for "bzip2" and "gzip" compressed files. */
+/* Magic bytes for "bzip2", "gzip", and "zstd" compressed files. */
 static const unsigned char BZipMagic[] = { 'B', 'Z', 'h' };
 static const unsigned char GZipMagic[] = { 0x1f, 0x8b, 0x08 };
+static const unsigned char ZstdMagic[] = { 0x28, 0xb5, 0x2f, 0xfd };
 
 /* Magic bytes for a cpio(1) archive. */
 static const unsigned char CPIOMagic[] = {'0','7','0','7','0','1'};
@@ -156,6 +157,9 @@ OpenRPM(int *fd_p)
 	} else if (memcmp(buffer, GZipMagic, sizeof(GZipMagic)) == 0) {
 		/* gzip archive */
 		fh = FileHandleZLib(fd_p);
+	} else if (memcmp(buffer, ZstdMagic, sizeof(ZstdMagic)) == 0) {
+		/* zstd archive */
+		fh = FileHandleZstd(fd_p);
 	} else {
 		/* lzma ... hopefully */
 		fh = FileHandleLZMA(fd_p);
