@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1417 2019/11/26 18:10:54 ng0 Exp $
+# $NetBSD: Makefile,v 1.1418 2019/11/30 22:10:52 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -164,7 +164,6 @@ SUBDIR+=	jetty7
 SUBDIR+=	jetty9
 SUBDIR+=	kahua
 SUBDIR+=	kannel
-SUBDIR+=	kdewebdev4
 SUBDIR+=	kdewebkit
 SUBDIR+=	khtml
 SUBDIR+=	kimagemapeditor
