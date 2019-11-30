@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/03 10:39:07 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/11/30 13:50:37 jperkin Exp $
 
 DISTNAME=	breezy-3.0.1
 CATEGORIES=	devel scm
@@ -21,7 +21,7 @@ TEST_DEPENDS+=		${PYPKGPREFIX}-testtools>=0:../../devel/py-testtools
 
 USE_TOOLS+=		gmake msgfmt
 
-PYTHON_VERSIONS_ACCEPTED=	38 37 36 35 34 33
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	breezy/git/bzr-receive-pack
 REPLACE_PYTHON+=	breezy/git/bzr-upload-pack
