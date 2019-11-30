@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2019/11/30 19:28:45 markd Exp $
+
+pkgsrc renames it xfreerdp2
+
+--- CMakeLists.txt.orig	2019-11-30 10:51:05.350928530 +0000
++++ CMakeLists.txt
+@@ -81,7 +81,7 @@ set_package_properties("libssh" PROPERTI
+ )
+ 
+ # Needs porting
+-find_program(FREERDP_EXECUTABLE xfreerdp)
++find_program(FREERDP_EXECUTABLE xfreerdp2)
+ if(FREERDP_EXECUTABLE)
+     set(FREERDP_FOUND true) # mark the package found
+     set(FREERDP_EXECUTABLE_FOUND true)
