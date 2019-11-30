@@ -578,8 +578,7 @@ func (s *Suite) Test_Autofix_ReplaceAt(c *check.C) {
 		"AUTOFIX: filename.mk:1: Replacing \"=\" with \"+=\".")
 
 	// If the text at the precisely given position does not match,
-	// the note is still printed because of the fix.Anyway(), but
-	// nothing is replaced automatically.
+	// the note is still printed, but nothing is replaced automatically.
 	test(
 		lines(
 			"VAR=value1 \\",
@@ -997,9 +996,9 @@ func (s *Suite) Test_Autofix_Apply__autofix_and_show_autofix_options(c *check.C)
 		"AUTOFIX: filename:5: Replacing \"text\" with \"replacement\".")
 }
 
-// In --autofix mode or --show-autofix mode, the fix.Anyway doesn't
-// have any effect, therefore the errors from such autofixes are
-// not counted, and the exitcode stays at 0.
+// In --autofix mode or --show-autofix mode, those errors that have
+// been automatically fixed are not counted, and the others are filtered
+// out, therefore the exitcode stays at 0.
 func (s *Suite) Test_Autofix_Apply__anyway_error(c *check.C) {
 	t := s.Init(c)
 
@@ -1036,8 +1035,8 @@ func (s *Suite) Test_Autofix_Apply__source_autofix_no_change(c *check.C) {
 	// Nothing is replaced since, as of June 2019, pkglint doesn't
 	// know which of the three "word" should be replaced.
 	//
-	// The note is not logged since fix.Anyway only applies when neither
-	// --show-autofix nor --autofix is given in the command line.
+	// The note is not logged since --show-autofix nor --autofix is
+	// given in the command line.
 	t.CheckOutputEmpty()
 	t.CheckFileLines("filename",
 		"word word word")
