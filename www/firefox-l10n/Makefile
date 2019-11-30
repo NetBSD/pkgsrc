@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2019/11/04 22:09:54 rillig Exp $
+# $NetBSD: Makefile,v 1.162 2019/11/30 21:03:23 rillig Exp $
 #
 
 FIREFOX_VER=	70.0.1
@@ -13,25 +13,22 @@ HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
 COMMENT=	Language packs for www/firefox (version ${PKGVERSION_NOREV:C/\..*//})
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
-DISTFILES=	${XPI_FILES}
+DISTFILES=	${FIREFOX_LOCALES:=.xpi}
 
 NO_BUILD=	yes
 
 INSTALLATION_DIRS=	lib/firefox/browser/extensions
 
-FIREFOX_LOCALES=	ach af an ar ast az be bg bn br bs ca cak	\
-			cs cy da de dsb el en-CA en-GB en-US eo es-AR	\
-			es-CL es-ES 	\
-			es-MX et eu fa ff fi fr fy-NL ga-IE gd gl gn gu-IN	\
-			he hi-IN hr hsb hu hy-AM ia id is it ja ka kab kk km kn	\
-			ko	\
-			lij lt lv mk mr ms my nb-NO ne-NP nl nn-NO oc \
-			pa-IN pl	\
-			pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta te th	\
-			tr uk uz vi xh zh-CN zh-TW
+FIREFOX_LOCALES= \
+	ach af an ar ast az be bg bn br bs ca cak cs cy da de dsb	\
+	el en-CA en-GB en-US eo es-AR es-CL es-ES es-MX et eu		\
+	fa ff fi fr fy-NL ga-IE gd gl gn gu-IN				\
+	he hi-IN hr hsb hu hy-AM ia id is it ja ka kab kk km kn	ko	\
+	lij lt lv mk mr ms my nb-NO ne-NP nl nn-NO oc			\
+	pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE		\
+	ta te th tr uk uz vi xh zh-CN zh-TW
 
 EXTENSIONS_DIR=		${PREFIX}/lib/firefox/browser/extensions
-XPI_FILES=		${FIREFOX_LOCALES:=.xpi}
 
 do-install:
 .for f in ${FIREFOX_LOCALES}
