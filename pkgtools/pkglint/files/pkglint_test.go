@@ -78,7 +78,6 @@ func (s *Suite) Test_Pkglint_Main__help(c *check.C) {
 		"    perm      warn about unforeseen variable definition and use (disabled)",
 		"    quoting   warn about quoting issues (disabled)",
 		"    space     warn about inconsistent use of whitespace (disabled)",
-		"    style     warn about stylistic issues (disabled)",
 		"",
 		"  (Prefix a flag with \"no-\" to disable it.)")
 }

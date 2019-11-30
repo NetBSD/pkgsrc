@@ -294,9 +294,9 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile Path) (includedMk
 		return nil, true
 	}
 
-	dirname, _ := includingFile.Split()
+	dirname, _ := includingFile.Split() // TODO: .Dir?
 	dirname = cleanpath(dirname)
-	fullIncluded := joinPath(dirname, includedFile)
+	fullIncluded := dirname.JoinNoClean(includedFile)
 	relIncludedFile := G.Pkgsrc.Relpath(pkg.dir, fullIncluded)
 
 	if !pkg.shouldDiveInto(includingFile, includedFile) {
@@ -334,7 +334,7 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile Path) (includedMk
 
 	dirname = pkgBasedir
 
-	fullIncludedFallback := joinPath(dirname, includedFile)
+	fullIncludedFallback := dirname.JoinNoClean(includedFile)
 	includedMklines = LoadMk(fullIncludedFallback, 0)
 	if includedMklines == nil {
 		return nil, false
@@ -1080,7 +1080,7 @@ func (pkg *Package) pkgnameFromDistname(pkgname, distname string) (string, bool)
 
 	// TODO: Make this resolving of variable references available to all other variables as well.
 
-	var result strings.Builder
+	result := NewLazyStringBuilder(pkgname)
 	for _, token := range tokens {
 		if token.Varuse != nil {
 			if token.Varuse.varname != "DISTNAME" {
