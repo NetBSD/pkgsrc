@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/06/30 21:49:41 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/11/30 11:47:15 nia Exp $
 bin/7kaa
 share/7kaa/ENCYC/FIRM/FACTORY.COL
 share/7kaa/ENCYC/FIRM/FACTORY.ICN
@@ -497,8 +497,8 @@ share/7kaa/TUTORIAL/SPYING.TUT
 share/applications/7kaa.desktop
 share/doc/7kaa/COPYING
 share/doc/7kaa/README
-share/icons/hicolor/32x32/apps/7kaa.png
 share/locale/de/LC_MESSAGES/7kaa.mo
 share/locale/es/LC_MESSAGES/7kaa.mo
 share/locale/pt_BR/LC_MESSAGES/7kaa.mo
 share/locale/ru/LC_MESSAGES/7kaa.mo
+share/pixmaps/7kaa.png
