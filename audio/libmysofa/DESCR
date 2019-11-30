@@ -1,0 +1,2 @@
+This is a simple set of C functions to read AES SOFA files, if they contain
+HRTFs stored according to the AES69-2015 standard.
