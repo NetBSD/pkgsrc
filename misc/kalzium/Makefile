@@ -1,19 +1,37 @@
-# $NetBSD: Makefile,v 1.43 2019/08/22 12:23:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2019/11/30 19:22:30 markd Exp $
 
-DISTNAME=	kalzium-16.08.0
-PKGREVISION=	9
+DISTNAME=	kalzium-${KAPPSVER}
 CATEGORIES=	misc
+
+HOMEPAGE=	https://kde.org/applications/education/kalzium/
 COMMENT=	Periodic table of elements
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.08.0/src/}
+LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
+
+USE_TOOLS+=	msgmerge pkg-config
+
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	src/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{CONFIG_INSTALL_DIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kalzium.knsrc \
+		${PKG_SYSCONFDIR}/xdg/kalzium.knsrc
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-#BUILDLINK_API_DEPENDS.eigen2+=  eigen2>=2.0.3
+.include "../../graphics/kplotting/buildlink3.mk"
+.include "../../lang/ocaml/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../math/eigen3/buildlink3.mk"
+.include "../../misc/kunitconversion/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
-
+.include "../../www/khtml/buildlink3.mk"
+.include "../../x11/kwidgetsaddons/buildlink3.mk"
+.include "../../x11/kxmlgui/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
