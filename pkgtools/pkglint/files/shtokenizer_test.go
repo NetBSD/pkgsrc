@@ -511,6 +511,18 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 		subshBackt(text("nested-subshell")),
 		subsh(operator("`")),
 		operator(")"))
+
+	// Subshell with unbalanced parentheses, taken from src/build.sh,
+	// around line 160. Many shells (and pkglint) fail this test,
+	// therefore just don't write code like this.
+	test("var=$$(case x in x) still-subshell;; esac);",
+		text("var="), subsh(subshell),
+		subsh(text("case")), subsh(space), subsh(text("x")), subsh(space),
+		subsh(text("in")), subsh(space), subsh(text("x")),
+		// XXX: The parenthesis is for the case pattern, not the end of the subshell.
+		operator(")"), space,
+		text("still-subshell"), operator(";;"), space,
+		text("esac"), operator(")"), operator(";"))
 }
 
 func (s *Suite) Test_ShTokenizer_ShAtom__quoting(c *check.C) {
