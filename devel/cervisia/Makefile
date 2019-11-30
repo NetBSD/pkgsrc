@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/11/29 20:35:24 markd Exp $
+# $NetBSD: Makefile,v 1.46 2019/11/30 08:55:49 markd Exp $
 
 DISTNAME=	cervisia-${KAPPSVER}
 CATEGORIES=	devel
@@ -10,6 +10,7 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 .include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+DEPENDS+=	kinit>=${KF5VER}:../../x11/kinit
 
 USE_TOOLS+=	msgmerge
 
@@ -17,6 +18,5 @@ USE_TOOLS+=	msgmerge
 .include "../../security/kdesu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kinit/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
