@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5199 2019/11/30 17:27:20 hauke Exp $
+$NetBSD: CHANGES-2019,v 1.5200 2019/11/30 19:45:01 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8387,3 +8387,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/sc-im to 0.7.0nb5 [sjmulder 2019-11-30]
 	Updated sysutils/ncdu to 1.14.1 [sjmulder 2019-11-30]
 	Updated security/stunnel to 5.56 [hauke 2019-11-30]
+	Updated misc/kalzium to 19.08.3 [markd 2019-11-30]
+	Updated net/krdc to 19.08.3 [markd 2019-11-30]
+	Updated net/krfb to 19.08.3 [markd 2019-11-30]
+	Updated security/kwalletmanager to 19.08.3 [markd 2019-11-30]
