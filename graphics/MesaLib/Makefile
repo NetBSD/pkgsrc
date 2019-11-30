@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2019/11/14 13:07:41 nia Exp $
+# $NetBSD: Makefile,v 1.177 2019/11/30 11:02:39 nia Exp $
 
 DISTNAME=	mesa-19.2.4
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -43,7 +43,7 @@ PLIST_VARS+=		i915 i965 r100 r200 nouveau_dri
 PLIST_VARS+=		r300 svga nouveau vc4 lima panfrost
 
 # other features
-PLIST_VARS+=		egl gbm vaapi xatracker
+PLIST_VARS+=		kms vaapi
 
 .if ${MESALIB_SUPPORTS_DRI} == "yes"
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.81
@@ -52,9 +52,7 @@ MESA_PLATFORMS+=	drm
 MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
 MESON_ARGS+=		-Dgallium-xa=true
-PLIST.egl=		yes
-PLIST.gbm=		yes
-PLIST.xatracker=	yes
+PLIST.kms=		yes
 .  include "../../multimedia/libva/available.mk"
 .  if ${VAAPI_AVAILABLE} == "yes"
 MESON_ARGS+=		-Dgallium-va=true
