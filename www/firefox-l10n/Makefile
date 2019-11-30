@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.162 2019/11/30 21:03:23 rillig Exp $
+# $NetBSD: Makefile,v 1.163 2019/11/30 22:14:39 rillig Exp $
 #
 
 FIREFOX_VER=	70.0.1
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/esr//}
+PKGREVISION=	1
 DISTNAME=	# empty
 CATEGORIES=	www
 #MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/linux-i686/xpi/}
@@ -10,7 +11,8 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
-COMMENT=	Language packs for www/firefox (version ${PKGVERSION_NOREV:C/\..*//})
+COMMENT=	Language packs for www/firefox
+LICENSE=	mpl-2.0 AND mpl-1.1 AND gnu-lgpl-v3 # as of 70.0.1
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${FIREFOX_LOCALES:=.xpi}
@@ -31,9 +33,13 @@ FIREFOX_LOCALES= \
 EXTENSIONS_DIR=		${PREFIX}/lib/firefox/browser/extensions
 
 do-install:
-.for f in ${FIREFOX_LOCALES}
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f}.xpi \
-	${DESTDIR}${EXTENSIONS_DIR}/langpack-${f}@firefox.mozilla.org.xpi
+.for locale in ${FIREFOX_LOCALES}
+	${INSTALL_DATA} ${WRKSRC}/${locale}.xpi \
+	${DESTDIR}${EXTENSIONS_DIR}/langpack-${locale}@firefox.mozilla.org.xpi
 .endfor
+
+.if make(list-licenses)
+.include "list-licenses.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
