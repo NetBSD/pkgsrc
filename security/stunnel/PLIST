@@ -1,22 +1,21 @@
-@comment $NetBSD: PLIST,v 1.15 2016/06/03 23:12:06 jym Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/11/30 17:27:09 hauke Exp $
 bin/stunnel
 bin/stunnel3
 lib/stunnel/libstunnel.la
 man/man8/stunnel.8
 man/man8/stunnel.pl.8
-share/doc/stunnel/AUTHORS
-share/doc/stunnel/BUGS
-share/doc/stunnel/COPYING
-share/doc/stunnel/COPYRIGHT.GPL
-share/doc/stunnel/CREDITS
-share/doc/stunnel/ChangeLog
-share/doc/stunnel/INSTALL
-share/doc/stunnel/INSTALL.FIPS
-share/doc/stunnel/INSTALL.W32
-share/doc/stunnel/INSTALL.WCE
-share/doc/stunnel/PORTS
-share/doc/stunnel/README
-share/doc/stunnel/TODO
+share/doc/stunnel/AUTHORS.md
+share/doc/stunnel/BUGS.md
+share/doc/stunnel/COPYING.md
+share/doc/stunnel/COPYRIGHT.md
+share/doc/stunnel/CREDITS.md
+share/doc/stunnel/INSTALL.FIPS.md
+share/doc/stunnel/INSTALL.W32.md
+share/doc/stunnel/INSTALL.WCE.md
+share/doc/stunnel/NEWS.md
+share/doc/stunnel/PORTS.md
+share/doc/stunnel/README.md
+share/doc/stunnel/TODO.md
 share/doc/stunnel/examples/ca.html
 share/doc/stunnel/examples/ca.pl
 share/doc/stunnel/examples/importCA.html
