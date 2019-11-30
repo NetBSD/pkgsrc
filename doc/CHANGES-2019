@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5201 2019/11/30 20:35:23 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.5202 2019/11/30 22:15:29 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8392,3 +8392,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/krfb to 19.08.3 [markd 2019-11-30]
 	Updated security/kwalletmanager to 19.08.3 [markd 2019-11-30]
 	Updated pkgtools/pkglint to 19.3.12 [rillig 2019-11-30]
+	Updated time/rsibreak to 0.12.11 [markd 2019-11-30]
+	Added misc/khelpcenter version 19.08.3 [markd 2019-11-30]
+	Removed www/kdewebdev4 successor www/kimagemapeditor [markd 2019-11-30]
