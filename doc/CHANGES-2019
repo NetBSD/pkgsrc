@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5189 2019/11/29 22:04:09 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.5190 2019/11/30 09:32:14 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8377,3 +8377,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/u-boot-orangepi-lite version 2018.11nb4 [jakllsch 2019-11-29]
 	Updated sysutils/u-boot to 2018.11nb7 [jakllsch 2019-11-29]
 	Updated www/nsm to 1.21 [ng0 2019-11-29]
+	Updated net/mikutter to 3.9.8 [tsutsui 2019-11-30]
