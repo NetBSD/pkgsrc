@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2019/11/22 17:20:42 nia Exp $
+# $NetBSD: Makefile,v 1.32 2019/12/01 12:51:57 nia Exp $
 
-DISTNAME=	fluidsynth-2.0.9
+DISTNAME=	fluidsynth-2.1.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FluidSynth/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
