@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5208 2019/12/01 12:49:51 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5209 2019/12/01 12:52:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8403,3 +8403,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-prompt_toolkit2 to 3.0.2 [adam 2019-12-01]
 	Updated sysutils/ansible to 2.9.1 [adam 2019-12-01]
 	Removed sysutils/ansible2 successor sysutils/ansible [adam 2019-12-01]
+	Updated audio/fluidsynth to 2.1.0 [nia 2019-12-01]
