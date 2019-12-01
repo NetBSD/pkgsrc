@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2019/12/01 14:30:44 adam Exp $
+# $NetBSD: Makefile,v 1.87 2019/12/01 14:46:29 adam Exp $
 
-DISTNAME=	PyQt4-4.12.3
+DISTNAME=	PyQt4_gpl_${PYQT_SYS}-4.12.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt4/qt4/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--sipdir ${PREFIX}/share/sip${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	-q ${QTDIR}/bin/qmake
 CONFIGURE_ARGS+=	--confirm-license
 CONFIGURE_ARGS+=	--qsci-api
-#CONFIGURE_ARGS+=	--sip ${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
+CONFIGURE_ARGS+=	--verbose
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
@@ -51,11 +51,15 @@ SUBST_MESSAGE.PIC=	Adding -fPIC to CXXFLAGS.
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin" || make(distinfo) || make (makesum) || make(mdi)
-DISTFILES+=		${DISTNAME:S/PyQt4/PyQt4_gpl_mac/}${EXTRACT_SUFX}
+.if ${OPSYS} == "Darwin"
+PYQT_SYS=	mac
+.else
+PYQT_SYS=	x11
 .endif
-.if ${OPSYS} != "Darwin" || make(distinfo) || make (makesum) || make(mdi)
-DISTFILES+=		${DISTNAME:S/PyQt4/PyQt4_gpl_x11/}${EXTRACT_SUFX}
+
+.if make(distinfo) || make (makesum) || make(mdi)
+DISTFILES+=	PyQt4_gpl_mac-${PKGVERSION_NOREV}${EXTRACT_SUFX}
+DISTFILES+=	PyQt4_gpl_x11-${PKGVERSION_NOREV}${EXTRACT_SUFX}
 .endif
 
 .include "../../lang/python/extension.mk"
@@ -70,8 +74,6 @@ SUBST_MESSAGE.fix-pyuic4=	Fixing python interpreter path in pyuic4
 SUBST_FILES.fix-pyuic4=		pyuic/pyuic4
 SUBST_SED.fix-pyuic4=		-e 's,python[^ ]*,${PYTHONBIN},'
 
-CONFIGURE_ARGS+=	--verbose
-
 do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} configure.py ${CONFIGURE_ARGS})
@@ -84,7 +86,7 @@ UIC_PORT_REMOVE=	port_v2
 .endif
 
 post-install:
-	rm -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt4/uic/${UIC_PORT_REMOVE}
+	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt4/uic/${UIC_PORT_REMOVE}
 	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt4
 
 .include "../../x11/py-sip/buildlink3.mk"
