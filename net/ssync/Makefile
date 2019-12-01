@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2013/03/14 16:36:48 kim Exp $
+# $NetBSD: Makefile,v 1.14 2019/12/01 05:18:56 kim Exp $
 #
 
 DISTNAME=		ssync-1.9.1
 CATEGORIES=		net
-MASTER_SITES=		http://oss.gw.com/people/kim/
+MASTER_SITES=		http://software.kimmo.suominen.com/
 
-MAINTAINER=		kim@tac.nyc.ny.us
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Invoke rsync to distribute files to a set of hosts
 
 DEPENDS+=		netname-[0-9]*:../../net/netname
