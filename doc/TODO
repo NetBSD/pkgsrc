@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19489 2019/12/01 04:23:28 kim Exp $
+$NetBSD: TODO,v 1.19490 2019/12/01 10:15:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -379,6 +379,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.9.7
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o OdfConverter-4.0
@@ -519,6 +520,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dar-2.4.14
 	o darcs-2.12.0
 	o dasher-4.11
+	o dbus-python-common-1.2.14
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o ddrescue-1.21
@@ -599,8 +601,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fet-5.28.6
 	o fetchyahoo-2.14.0
 	o filerunner-14.06.18.10
+	o filezilla-3.46.0
 	o flashplayer-0.4.13
 	o flow-tools-0.411
+	o fluidsynth-2.1.0
 	o fop-2.1
 	o fortunes-calvin-0.3
 	o freeciv-2.6.0
@@ -710,6 +714,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gthumb-3.4.0
+	o gtk3-3.24.13
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
 	o gtkmagnetic-23
@@ -793,6 +798,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ike-2.0.1 [pkg/37032]
 	o imapsync-1.678
 	o imp-6.2.12
+	o include-what-you-use-3.3
 	o ingo-3.2.8
 	o input-pad-1.4.2
 	o instiki-0.13
@@ -864,6 +870,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcarddav-14.0.4
 	o libconfuse-3.1
 	o libffi-3.3
+	o libfilezilla-0.19.1
 	o libflash-0.4.13
 	o libfolks-0.10.1 [wip]
 	o libgfshare-2.0.0
@@ -888,6 +895,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
+	o librsvg-2.46.4
 	o libstree-0.4.2
 	o libtecla-1.6.3
 	o libv4l-0.8.5
@@ -920,6 +928,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.216
 	o manedit-1.2.1
 	o mapserver-7.0.1
 	o matchbox-panel-0.9.3
@@ -990,6 +999,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ocrad-0.25
 	o odbc-postgresql-09.03.0400
 	o olvwm-4.5
+	o oniguruma-6.9.4
 	o oo2c-2.1.7
 	o opal-3.16.2
 	o openafs-1.8
@@ -1062,6 +1072,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polkit-0.116 [needs mozjs-60]
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o poppler-0.83.0
 	o postal-0.72
 	o pound-2.8a
 	o povray-3.7.0.0
@@ -1083,12 +1094,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-cassa-1.11.0
+	o py-dbus-1.2.14
 	o py-ephem3-3.7.6.0
 	o py-gds-1.4.2
 	o py-gnome-menus-3.8.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
+	o py-more-itertools-8.0.0
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
@@ -1282,6 +1295,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vnstat-1.15
 	o vtk-5.10.1
 	o wMosaic-3.8.22
+	o waf-2.0.19
 	o wap-utils-1.4.1
 	o warmux-11.04.1
 	o wcalc-2.4
