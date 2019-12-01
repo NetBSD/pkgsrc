@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2015/11/04 01:32:28 agc Exp $
+$NetBSD: distinfo,v 1.14 2019/12/01 04:30:45 kim Exp $
 
-SHA1 (roller-1.20.tar.gz) = 98f0964392705c47706306ca8301c0cbe325ca44
-RMD160 (roller-1.20.tar.gz) = 034e3ee1745978c05811e5b9fc84937010a60ef2
-SHA512 (roller-1.20.tar.gz) = 4f6f5a78e8d7ecba9983f5512162d5d747ff1d6f44d7ee07328e4df551d5602da04ca8751e6260b16243e335c7ef42c4e934e7c82bc9e5a7c9d929a422e6c0a8
-Size (roller-1.20.tar.gz) = 37097 bytes
+SHA1 (roller-1.21.tar.gz) = c4330101555ef9c99203bf5f9d50cd25fa7ba8c9
+RMD160 (roller-1.21.tar.gz) = 6866d869ebda6d2a0be3095057f92778a2fc9910
+SHA512 (roller-1.21.tar.gz) = b8320056e16ab2faed8aa692fe3268fb616fd6b28fa79909c3054724cd055e2f17c952e837abffbaed858dafe426e50cb73a08d6824f11f5b5bd846a18cefd4f
+Size (roller-1.21.tar.gz) = 37149 bytes
