@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2013/03/14 12:32:51 kim Exp $
+# $NetBSD: Makefile,v 1.15 2019/12/01 05:18:56 kim Exp $
 #
 
 DISTNAME=		logtime-1.2
 PKGREVISION=		1
 CATEGORIES=		sysutils time
-MASTER_SITES=		http://oss.gw.com/people/kim/
+MASTER_SITES=		http://software.kimmo.suominen.com/
 
-MAINTAINER=		kim@tac.nyc.ny.us
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Prints date and time in a standard format
 
 NO_CONFIGURE=		yes
