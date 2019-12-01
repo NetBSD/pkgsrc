@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/01 16:13:38 minskim Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/sklearn_pandas/__init__.py
+${PYSITELIB}/sklearn_pandas/__init__.pyc
+${PYSITELIB}/sklearn_pandas/__init__.pyo
+${PYSITELIB}/sklearn_pandas/categorical_imputer.py
+${PYSITELIB}/sklearn_pandas/categorical_imputer.pyc
+${PYSITELIB}/sklearn_pandas/categorical_imputer.pyo
+${PYSITELIB}/sklearn_pandas/cross_validation.py
+${PYSITELIB}/sklearn_pandas/cross_validation.pyc
+${PYSITELIB}/sklearn_pandas/cross_validation.pyo
+${PYSITELIB}/sklearn_pandas/dataframe_mapper.py
+${PYSITELIB}/sklearn_pandas/dataframe_mapper.pyc
+${PYSITELIB}/sklearn_pandas/dataframe_mapper.pyo
+${PYSITELIB}/sklearn_pandas/features_generator.py
+${PYSITELIB}/sklearn_pandas/features_generator.pyc
+${PYSITELIB}/sklearn_pandas/features_generator.pyo
+${PYSITELIB}/sklearn_pandas/pipeline.py
+${PYSITELIB}/sklearn_pandas/pipeline.pyc
+${PYSITELIB}/sklearn_pandas/pipeline.pyo
+${PYSITELIB}/sklearn_pandas/transformers.py
+${PYSITELIB}/sklearn_pandas/transformers.pyc
+${PYSITELIB}/sklearn_pandas/transformers.pyo
