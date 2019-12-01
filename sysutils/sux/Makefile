@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2013/03/14 16:47:44 kim Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/01 05:18:56 kim Exp $
 #
 
 DISTNAME=		sux-1.0
 PKGREVISION=		1
 CATEGORIES=		sysutils
-MASTER_SITES=		http://oss.gw.com/people/kim/
+MASTER_SITES=		http://software.kimmo.suominen.com/
 
-MAINTAINER=		kim@tac.nyc.ny.us
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Set user id, preserving shell and environment, checking ssh agent
 
 DEPENDS+=		osname-[0-9]*:../../sysutils/osname

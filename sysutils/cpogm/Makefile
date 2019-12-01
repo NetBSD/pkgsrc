@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:23:06 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/12/01 05:18:56 kim Exp $
 #
 
 DISTNAME=		cpogm-1.0
 PKGREVISION=		7
 CATEGORIES=		sysutils
-MASTER_SITES=		http://oss.gw.com/people/kim/
+MASTER_SITES=		http://software.kimmo.suominen.com/
 
-MAINTAINER=		kim@tac.nyc.ny.us
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Copy owner, group and mode of a file
 
 USE_TOOLS+=		perl:run

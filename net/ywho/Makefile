@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2013/03/14 17:09:10 kim Exp $
+# $NetBSD: Makefile,v 1.17 2019/12/01 05:18:56 kim Exp $
 #
 
 DISTNAME=		ywho-1.3
 CATEGORIES=		net
-MASTER_SITES=		http://oss.gw.com/people/kim/
+MASTER_SITES=		http://software.kimmo.suominen.com/
 
-MAINTAINER=		kim@tac.nyc.ny.us
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Who, users, uptime on clients in a sun-RPC network
 
 NO_CONFIGURE=		yes
