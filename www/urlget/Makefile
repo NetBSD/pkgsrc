@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2016/02/26 10:57:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2019/12/01 05:18:57 kim Exp $
 #
 
 DISTNAME=		urlget-1.5
 CATEGORIES=		www
-MASTER_SITES=		http://oss.gw.com/people/kim/
+MASTER_SITES=		http://software.kimmo.suominen.com/
 
-MAINTAINER=		kim@tac.nyc.ny.us
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Simple command-line tool to retrieve an HTTP URL
 
 BUILD_TARGET.SunOS=	svr4
