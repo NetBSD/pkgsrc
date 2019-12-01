@@ -1,75 +1,63 @@
-# $NetBSD: Makefile,v 1.26 2019/11/02 15:18:34 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2019/12/01 12:47:09 adam Exp $
 
-DISTNAME=	ansible-1.9.4
-PKGREVISION=	2
-#PKGNAME=	${PYPKGPREFIX}-${DISTNAME} # XXX: for when package is py3x-ready
-CATEGORIES=	python sysutils
-MASTER_SITES=	http://releases.ansible.com/ansible/
+DISTNAME=	ansible-2.9.1
+CATEGORIES=	sysutils python
+MASTER_SITES=	https://releases.ansible.com/ansible/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ansible.com/
+HOMEPAGE=	https://www.ansible.com/
 COMMENT=	SSH-based configuration management, deployment, and task execution
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
+DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-crypto>=2.6:../../security/py-crypto
+DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_TOOLS+=	gmake
-AUTO_MKDIRS=	yes
-EGDIR=		${PREFIX}/share/examples/ansible
 
-SUBST_CLASSES+=		dirs
-SUBST_STAGE.dirs=	pre-configure
-SUBST_FILES.dirs+=	docs/man/man1/ansible.1
-SUBST_FILES.dirs+=	docs/man/man1/ansible.1.asciidoc.in
-SUBST_FILES.dirs+=	docs/man/man1/ansible-galaxy.1
-SUBST_FILES.dirs+=	docs/man/man1/ansible-galaxy.1.asciidoc.in
-SUBST_FILES.dirs+=	docs/man/man1/ansible-playbook.1
-SUBST_FILES.dirs+=	docs/man/man1/ansible-playbook.1.asciidoc.in
-SUBST_FILES.dirs+=	examples/ansible.cfg examples/hosts
-SUBST_FILES.dirs+=	lib/ansible/constants.py lib/ansible/callbacks.py
-SUBST_FILES.dirs+=	lib/ansible/modules/core/system/ping.py
-SUBST_FILES.dirs+=	lib/ansible/modules/core/system/setup.py
-SUBST_FILES.dirs+=	lib/ansible/modules/extras/database/misc/riak.py
-SUBST_FILES.dirs+=	lib/ansible/modules/extras/monitoring/nagios.py
-SUBST_FILES.dirs+=	lib/ansible/modules/extras/packaging/os/pkgin.py
-SUBST_FILES.dirs+=	plugins/README.md plugins/inventory/cobbler.py
-SUBST_FILES.dirs+=	plugins/inventory/collins.py
-SUBST_VARS.dirs=	PREFIX PKG_SYSCONFBASE PKG_SYSCONFDIR
+PKG_SYSCONFSUBDIR=	ansible
+EGDIR=			${PREFIX}/share/examples/ansible
 
-SUBST_CLASSES+=			pythonbin
-SUBST_STAGE.pythonbin=		pre-configure
-SUBST_FILES.pythonbin=		Makefile
-SUBST_MESSAGE.pythonbin=	Fixing path to PYTHONBIN.
-SUBST_SED.pythonbin=		-e "s,PYTHON=python,PYTHON=${PYTHONBIN},"
+REPLACE_PYTHON=		test/lib/ansible_test/_data/*.py
+REPLACE_PYTHON+=	test/lib/ansible_test/_data/*/*.py
+REPLACE_PYTHON+=	test/lib/ansible_test/_data/*/*/*.py
 
-PYTHON_VERSIONS_ACCEPTED=	27 # py-paramiko
+CHECK_INTERPRETER_SKIP+=${PYSITELIB}/ansible_test/_data/requirements/sanity.ps1
+CHECK_INTERPRETER_SKIP+=${PYSITELIB}/ansible_test/_data/sanity/pslint/pslint.ps1
+CHECK_INTERPRETER_SKIP+=${PYSITELIB}/ansible_test/_data/sanity/validate-modules/validate_modules/ps_argspec.ps1
 
-REPLACE_PYTHON=		lib/ansible/runner/action_plugins/synchronize.py
-REPLACE_PYTHON+=	lib/ansible/utils/module_docs.py
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths+=	docs/man/man1/*.1
+SUBST_FILES.paths+=	examples/ansible.cfg
+SUBST_FILES.paths+=	examples/hosts
+SUBST_FILES.paths+=	lib/ansible/config/base.yml
+SUBST_FILES.paths+=	lib/ansible/module_utils/urls.py
+SUBST_FILES.paths+=	lib/ansible/modules/system/setup.py
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
+SUBST_SED.paths=	-e "s,/usr/share/ansible,${PREFIX}/share/ansible,g"
+SUBST_SED.paths+=	-e "s,/etc/ansible,${PKG_SYSCONFDIR},g"
 
-INSTALLATION_DIRS=	${EGDIR}/playbooks share/ansible/roles
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKG_SYSCONFDIR} ${EGDIR}
+OWN_DIRS=		${PREFIX}/share/ansible
 
-MAKE_DIRS=		${PREFIX}/share/ansible
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/action_plugins
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/callback_plugins
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/connection_plugins
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/lookup_plugins
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/vars_plugins
-MAKE_DIRS+=		${PREFIX}/share/ansible/ansible_plugins/filter_plugins
+CONF_FILES=		${EGDIR}/ansible.cfg ${PKG_SYSCONFDIR}/ansible.cfg
+CONF_FILES+=		${EGDIR}/hosts ${PKG_SYSCONFDIR}/hosts
 
-pre-install:
-	find ${WRKSRC} -name \*.orig -exec rm {} \;
+# Contains hardcoded paths to expected locations of package managers.
+CHECK_WRKREF_SKIP+=	*/ansible/module_utils/facts/system/pkg_mgr.py
 
 post-install:
-	cd ${WRKSRC}/docs/man/man1 && \
-	${INSTALL_MAN} ./*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
-	cd ${WRKSRC}/examples && \
-	${INSTALL_DATA} ansible.cfg hosts ${DESTDIR}/${EGDIR}
+.for f in ansible-console.1 ansible-doc.1 ansible-galaxy.1 ansible-inventory.1 \
+	ansible-playbook.1 ansible-pull.1 ansible-vault.1 ansible.1
+	${INSTALL_MAN} ${WRKSRC}/docs/man/man1/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+.endfor
+.for f in ansible.cfg hosts
+	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${DESTDIR}/${EGDIR}
+.endfor
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
