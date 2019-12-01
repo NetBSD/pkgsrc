@@ -1,24 +1,6 @@
-$NetBSD: distinfo,v 1.13 2017/08/07 17:56:13 jlam Exp $
+$NetBSD: distinfo,v 1.14 2019/12/01 12:47:09 adam Exp $
 
-SHA1 (ansible-1.9.4.tar.gz) = f71f451d96239d08396d20fff2d9b8840426f714
-RMD160 (ansible-1.9.4.tar.gz) = a88a7a1a19a82e6ca17ca77ae8d64a428cf37fe8
-SHA512 (ansible-1.9.4.tar.gz) = 53ef5b3390be620cedc92687c7c9853c42f38547494f9b77056d5ea48ccd8f43d193648a7f4569fcba5afad343a9202b123296ab47c8cd02eecfe455d83b9586
-Size (ansible-1.9.4.tar.gz) = 937120 bytes
-SHA1 (patch-docs_man_man1_ansible) = 9d8931a24d7ad836a05a8c23a0931aa839b3c8d8
-SHA1 (patch-docs_man_man1_ansible-asciidoc) = 9e0c962be185ae221a33c3207aae968e50882e34
-SHA1 (patch-docs_man_man1_ansible-galaxy) = 34f2eec381a02a11f496cc1850d8d7036adb8c0f
-SHA1 (patch-docs_man_man1_ansible-galaxy-asciidoc) = a6deca5dbd88027c0ec602dc291331f066908399
-SHA1 (patch-docs_man_man1_ansible-playbook) = c887c712521af0229dd81ebc08197d2a83a13375
-SHA1 (patch-docs_man_man1_ansible-playbook-asciidoc) = 48c0209fdbf62569043408a352330b844dbbcc93
-SHA1 (patch-examples_ansible) = aa6bda94e658f882add389d2318cdffc79caafa2
-SHA1 (patch-examples_hosts) = c2a34131b3f24c1322ce5645a378ef9949420421
-SHA1 (patch-lib_ansible_callbacks) = bdcec47047b5361012472f6276df21618cc664bb
-SHA1 (patch-lib_ansible_constants) = a5b234e7995914660d70a5dd4db3ec4a9ed20132
-SHA1 (patch-lib_ansible_modules_core_system_ping) = 1b91dbdb74e8cfc5e0bf99628e5ebb4bbd54dead
-SHA1 (patch-lib_ansible_modules_core_system_setup) = a9a92a4a8786e0f96155cbd6d4d7b459d7728f0c
-SHA1 (patch-lib_ansible_modules_extras_database_misc_riak) = cec7d7c38810644938ac5ddca351dbcce96472d6
-SHA1 (patch-lib_ansible_modules_extras_monitoring_nagios) = d17d2a7424712924b9600fe4d0c5842503fcf4f2
-SHA1 (patch-lib_ansible_modules_extras_packaging_os_pkgin) = a8e2be00ff309be676435b7333e9b9ceebaba810
-SHA1 (patch-plugins_README) = 84f4b9b16363157ad0b223c00e8c1b10c43479da
-SHA1 (patch-plugins_inventory_cobbler) = 885165d2b30de20120977490dfc1b92db4799f5f
-SHA1 (patch-plugins_inventory_collins) = 3ec96844fe1a382e68676ec3c8a6eb662d892db1
+SHA1 (ansible-2.9.1.tar.gz) = fb0e72d73ffa705632289c42013488e819d8c7f3
+RMD160 (ansible-2.9.1.tar.gz) = 8b061945f93e5e31b465f7d9b9a4a83253a8c305
+SHA512 (ansible-2.9.1.tar.gz) = fdb25017b96475a6c182bba2f32050f0eaa6f22d17f166b98ce0f0cb40fd12dbbc5ede9912624fa4c5d4a8de472b28c2eb2b569700537c7d4b4c568d7e38f21b
+Size (ansible-2.9.1.tar.gz) = 14144123 bytes
