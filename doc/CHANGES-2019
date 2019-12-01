@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5210 2019/12/01 14:31:11 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5211 2019/12/01 16:19:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8405,3 +8405,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed sysutils/ansible2 successor sysutils/ansible [adam 2019-12-01]
 	Updated audio/fluidsynth to 2.1.0 [nia 2019-12-01]
 	Updated x11/py-qt4 to 4.12.3 [adam 2019-12-01]
+	Added math/py-sklearn-pandas version 1.8.0 [minskim 2019-12-01]
