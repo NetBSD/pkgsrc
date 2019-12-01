@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.116 2019/10/28 19:37:41 maya Exp $
+$NetBSD: distinfo,v 1.117 2019/12/01 13:28:09 adam Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.7.tar.gz) = 76aef40335c0701e5be7bb3a9101df5d22fe3666
 RMD160 (qt-everywhere-opensource-src-4.8.7.tar.gz) = afb5e5a99388e6429faca59cb5000054feffd166
@@ -78,6 +78,7 @@ SHA1 (patch-src_corelib_io_io.pri) = cde98927b524c92fae1e053c2359e77bde2c240a
 SHA1 (patch-src_corelib_io_qfilesystemwatcher.cpp) = bb16b95d20286b1aa069dc25843d7e0067cc0268
 SHA1 (patch-src_corelib_thread_qthread__unix.cpp) = 67fbdc29d6da0aa7309a7aeb653a5abf10bd4d78
 SHA1 (patch-src_gui_painting_qpaintengine__mac.cpp) = dc44116d5d138020e5d525ec5b7fd0f1b44ebeca
+SHA1 (patch-src_gui_text_qfontengine__coretext.mm) = bf9b280a00ca062c60b311e6bbe57592b2b1dec5
 SHA1 (patch-src_network_ssl_qsslcertificate.cpp) = 92d6a3cd5deacd75ada210bed56f4d4ba749d2ba
 SHA1 (patch-src_network_ssl_qsslkey.cpp) = f17f52ba3aa37c9b2211dfcf1c7c2c12aa5d6473
 SHA1 (patch-src_network_ssl_qsslsocket__openssl.cpp) = 145fb594ba1e5153b0811ff37eb2a4bb1c41b4ba
