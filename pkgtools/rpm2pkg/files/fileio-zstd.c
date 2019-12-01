@@ -1,4 +1,5 @@
-/*	$NetBSD: fileio-zstd.c,v 1.2 2019/12/01 06:03:58 rin Exp $	*/
+/*	$NetBSD: fileio-zstd.c,v 1.3 2019/12/01 06:05:44 rin Exp $	*/
+/*	NetBSD: fileio-bzlib.c,v 1.2 2019/12/01 06:03:58 rin Exp	*/
 
 /*-
  * Copyright (c) 2011, 2019 The NetBSD Foundation, Inc.
