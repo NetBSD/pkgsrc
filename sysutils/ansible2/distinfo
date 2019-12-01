@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2018/09/14 15:43:23 jperkin Exp $
-
-SHA1 (ansible-2.6.4.tar.gz) = d17399bd005ac225957a635b6610045100261853
-RMD160 (ansible-2.6.4.tar.gz) = 0d634b39df433f04d3ba1fed6e643cfd0b5b204e
-SHA512 (ansible-2.6.4.tar.gz) = b3dc3469dd7e34e3b39b3382df65c3684a44be0515f68861997a4d0e5fce44d64000bc0da0b38fd3d27b45aa1ec3973da581482e0de54c5cc41eb761b230b116
-Size (ansible-2.6.4.tar.gz) = 10751810 bytes
