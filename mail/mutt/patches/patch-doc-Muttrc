@@ -1,9 +1,9 @@
-$NetBSD: patch-ap,v 1.2 2018/05/20 07:54:23 tron Exp $
+$NetBSD: patch-doc-Muttrc,v 1.1 2019/12/01 00:02:34 tron Exp $
 
 Rewrite hard coded pathnames configuration file documentation
 
---- doc/Muttrc.orig	2018-05-19 18:47:52.000000000 +0100
-+++ doc/Muttrc	2018-05-20 08:49:45.043893966 +0100
+--- doc/Muttrc.orig	2019-11-30 18:14:44.000000000 +0000
++++ doc/Muttrc	2019-11-30 23:50:15.102043333 +0000
 @@ -23,7 +23,7 @@
  "call urlview to extract URLs out of a message"
  
@@ -12,8 +12,8 @@ Rewrite hard coded pathnames configuration file documentation
 +macro generic,pager <F1> "<shell-escape> less @DOCDIR@/manual.txt<Enter>" "show Mutt documentation"
  
  # show the incoming mailboxes list (just like "mutt -y") and back when pressing "y"
- macro index y "<change-folder>?<toggle-mailboxes>" "show incoming mailboxes list"
-@@ -995,11 +995,11 @@
+ # note: these macros have been subsumed by the <browse-mailboxes> function.
+@@ -1183,11 +1183,11 @@
  # filtered message is read from the standard output.
  # 
  # 
@@ -27,7 +27,7 @@ Rewrite hard coded pathnames configuration file documentation
  # 
  # 
  # Contains the path of the mutt_dotlock(8) binary to be used by
-@@ -5430,7 +5430,7 @@
+@@ -5923,7 +5923,7 @@
  # Setting this variable will cause mutt to open a pipe to a command
  # instead of a raw socket. You may be able to use this to set up
  # preauthenticated connections to your IMAP/POP3/SMTP server. Example:

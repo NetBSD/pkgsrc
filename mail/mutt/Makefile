@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.215 2019/11/02 16:25:23 rillig Exp $
+# $NetBSD: Makefile,v 1.216 2019/12/01 00:02:34 tron Exp $
 
-DISTNAME=		mutt-1.12.2
+DISTNAME=		mutt-1.13.0
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mutt.org/pub/mutt/
 
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--enable-pop
 CONFIGURE_ARGS+=	--enable-imap
 CONFIGURE_ARGS.SunOS+=	--disable-filemonitor
 INFO_FILES=		yes
+
+REPLACE_PYTHON+=	contrib/markdown2html
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
 # Force sendmail to /usr/sbin to avoid postfix's
@@ -67,5 +69,6 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/libxslt/xsltproc-nonet.mk"
+.include "../../lang/python/application.mk"
 
 .include "../../mk/bsd.pkg.mk"
