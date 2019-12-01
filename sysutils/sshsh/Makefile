@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2013/03/14 16:09:20 kim Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/01 05:18:56 kim Exp $
 #
 
 DISTNAME=		sshsh-1.0
 CATEGORIES=		sysutils
-MASTER_SITES=		http://oss.gw.com/people/kim/
+MASTER_SITES=		http://software.kimmo.suominen.com/
 
-MAINTAINER=		kim@tac.nyc.ny.us
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Run a new shell with an SSH identity
 
 NO_CONFIGURE=		yes
