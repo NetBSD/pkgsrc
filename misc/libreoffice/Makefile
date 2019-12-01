@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2019/11/27 07:55:36 martin Exp $
+# $NetBSD: Makefile,v 1.215 2019/12/01 04:59:43 ryoon Exp $
 
 VERREL=		6.3.3
 VERRC=		2
@@ -33,6 +33,9 @@ GCC_REQD+=	7
 
 .include "../../mk/bsd.prefs.mk"
 
+CHECK_BUILTIN.freetype2:=	yes
+.include "../../graphics/freetype2/builtin.mk"
+CHECK_BUILTIN.freetype2:=	no
 .if !empty(USE_BUILTIN.freetype2:M[Yy][Ee][Ss]) && \
 	!empty(BUILTIN_VERSION.freetype2:M2.10.0)
 CFLAGS+=			-D_FT_CONST=
