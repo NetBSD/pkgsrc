@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19488 2019/12/01 00:03:05 tron Exp $
+$NetBSD: TODO,v 1.19489 2019/12/01 04:23:28 kim Exp $
 
 Suggested new packages
 ======================
@@ -1024,7 +1024,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcc-current-20160305
 	o pdmenu-1.2.87
 	o pessulus-2.30.3
-	o pflogsumm-1.1.5
 	o pgadmin4-1.0
 	o pgbuildfarm-4.17
 	o php-basercms-4.0.0
