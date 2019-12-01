@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5206 2019/12/01 04:31:05 kim Exp $
+$NetBSD: CHANGES-2019,v 1.5207 2019/12/01 11:46:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8399,3 +8399,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/mutt to 1.13.0 [tron 2019-12-01]
 	Updated sysutils/pflogsumm to 1.1.5 [kim 2019-12-01]
 	Updated sysutils/roller to 1.21 [kim 2019-12-01]
+	Updated security/py-asyncssh to 2.1.0 [adam 2019-12-01]
+	Updated devel/py-prompt_toolkit2 to 3.0.2 [adam 2019-12-01]
