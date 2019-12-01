@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2016/02/25 16:20:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2019/12/01 05:18:55 kim Exp $
 #
 
 DISTNAME=	netname-2.2
 CATEGORIES=	net
-MASTER_SITES=	http://oss.gw.com/people/kim/
+MASTER_SITES=	http://software.kimmo.suominen.com/
 
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Return the canonical network name of a host
 
 BUILD_TARGET.SunOS=	svr4
