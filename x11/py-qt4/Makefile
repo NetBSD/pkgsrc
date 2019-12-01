@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2019/11/03 09:14:15 rillig Exp $
+# $NetBSD: Makefile,v 1.86 2019/12/01 14:30:44 adam Exp $
 
-PKGNAME=	${PYPKGPREFIX}-qt4-${PYQT_VERSION}
-PKGREVISION=	1
-PYQT_VERSION=	4.12.1
+DISTNAME=	PyQt4-4.12.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt4/qt4/}
 CATEGORIES=	x11 python
-#MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/PyQt4/
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
-
 CONFIGURE_ARGS+=	-b ${PREFIX}/bin
 CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
 CONFIGURE_ARGS+=	--sipdir ${PREFIX}/share/sip${PYVERSSUFFIX}
@@ -54,10 +51,11 @@ SUBST_MESSAGE.PIC=	Adding -fPIC to CXXFLAGS.
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
-DISTNAME=		PyQt4_gpl_mac-${PYQT_VERSION}
-.else
-DISTNAME=		PyQt4_gpl_x11-${PYQT_VERSION}
+.if ${OPSYS} == "Darwin" || make(distinfo) || make (makesum) || make(mdi)
+DISTFILES+=		${DISTNAME:S/PyQt4/PyQt4_gpl_mac/}${EXTRACT_SUFX}
+.endif
+.if ${OPSYS} != "Darwin" || make(distinfo) || make (makesum) || make(mdi)
+DISTFILES+=		${DISTNAME:S/PyQt4/PyQt4_gpl_x11/}${EXTRACT_SUFX}
 .endif
 
 .include "../../lang/python/extension.mk"
