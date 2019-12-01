@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/12/01 05:18:57 kim Exp $
+# $NetBSD: Makefile,v 1.24 2019/12/01 05:29:31 kim Exp $
 
 DISTNAME=		webnew-1.3
 PKGREVISION=		8
@@ -6,7 +6,7 @@ CATEGORIES=		www
 MASTER_SITES=		http://software.kimmo.suominen.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://kimmo.suominen.com/sw/webnew/
+HOMEPAGE=		https://kimmo.suominen.com/sw/webnew/
 COMMENT=		Retrieve modification times of web documents
 
 USE_TOOLS+=		perl:run
