@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/01 16:13:38 minskim Exp $
+
+SHA1 (sklearn-pandas-1.8.0.tar.gz) = 9afb4e79c0d8c44ff8f44ba4591fd72e1a32c8c7
+RMD160 (sklearn-pandas-1.8.0.tar.gz) = 8f0fbf76ca959540ef7898ad8020a8230d1f3ea2
+SHA512 (sklearn-pandas-1.8.0.tar.gz) = 8b63eb590e16e4fa37a7912e33f0a69fc5fc8283cd1da03a274e5ae4f1f70b13aca84b178b22651c778b39d07ba2dac189689f1017c111b2528dc818f23c755a
+Size (sklearn-pandas-1.8.0.tar.gz) = 16388 bytes
