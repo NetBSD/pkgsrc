@@ -1,3 +1,5 @@
+/*	$NetBSD: fileio-bzlib.c,v 1.2 2019/12/01 06:03:58 rin Exp $	*/
+
 /*-
  * Copyright (c) 2011 The NetBSD Foundation, Inc.
  * All rights reserved.
