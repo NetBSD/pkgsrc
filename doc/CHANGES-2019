@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5203 2019/11/30 23:35:05 rin Exp $
+$NetBSD: CHANGES-2019,v 1.5204 2019/12/01 00:03:05 tron Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8396,3 +8396,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added misc/khelpcenter version 19.08.3 [markd 2019-11-30]
 	Removed www/kdewebdev4 successor www/kimagemapeditor [markd 2019-11-30]
 	Updated pkgtools/rpm2pkg to 3.3.0 [rin 2019-11-30]
+	Updated mail/mutt to 1.13.0 [tron 2019-12-01]
