@@ -1,0 +1,15 @@
+$NetBSD: patch-makefile,v 1.1 2019/12/02 02:00:41 minskim Exp $
+
+Do not override compiler set by pkgsrc.
+
+--- makefile.orig	2017-07-16 22:46:08.000000000 +0000
++++ makefile
+@@ -1,6 +1,6 @@
+-CC = gcc
++CC?= gcc
+ #Using -Ofast instead of -O3 might result in faster code, but is supported only by newer GCC versions
+-CFLAGS = -lm -pthread -O3 -march=native -Wall -funroll-loops -Wno-unused-result
++CFLAGS+= -lm -pthread -Wall -funroll-loops -Wno-unused-result
+ 
+ all: word2vec word2phrase distance word-analogy compute-accuracy
+ 
