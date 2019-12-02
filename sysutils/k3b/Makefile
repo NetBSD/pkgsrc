@@ -1,26 +1,24 @@
-# $NetBSD: Makefile,v 1.102 2019/11/04 21:28:47 rillig Exp $
+# $NetBSD: Makefile,v 1.103 2019/12/02 09:38:09 markd Exp $
 
-DISTNAME=		k3b-2.0.3a
-PKGREVISION=		24
-CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_KDE:=k3b/}
-EXTRACT_SUFX=		.tar.xz
+DISTNAME=	k3b-${KAPPSVER}
+CATEGORIES=	sysutils
 
-MAINTAINER=		markd@NetBSD.org
-HOMEPAGE=		http://www.k3b.org/
-COMMENT=		DVD and CD authoring program
+HOMEPAGE=	https://userbase.kde.org/K3b
+COMMENT=	DVD and CD authoring program
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
-BUILD_DEPENDS+=		automoc4>=0.9.87:../../devel/automoc4
-DEPENDS+=		cdrdao-[0-9]*:../../sysutils/cdrdao
-DEPENDS+=		{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
+.include "../../meta-pkgs/kde/applications.mk"
 
-USE_TOOLS+=		perl pkg-config gmake msgfmt
-USE_LANGUAGES=		c c++
+BUILD_DEPENDS+=	kdoctools>=5.64.0:../../devel/kdoctools
+DEPENDS+=	cdrdao-[0-9]*:../../sysutils/cdrdao
+DEPENDS+=	{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
 
-CMAKE_ARGS+=		-DK3B_BUILD_MUSE_DECODER_PLUGIN=OFF
+USE_TOOLS+=	msgmerge pkg-config perl
 
-CONF_FILES=		${PREFIX}/share/examples/kde4-dbus/org.kde.kcontrol.k3bsetup.conf \
-			${PKG_SYSCONFBASE}/dbus-1/system.d/org.kde.kcontrol.k3bsetup.conf
+CMAKE_ARGS+=	-DK3B_BUILD_MUSE_DECODER_PLUGIN=OFF
+CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/k3b
+
+INSTALLATION_DIRS+=	share/examples/k3b
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* Linux-*-* NetBSD-*-* DragonFly-*-*
 
@@ -30,29 +28,44 @@ SUBST_MESSAGE.pathfix=	Add cdrtools path.
 SUBST_FILES.pathfix=	libk3b/core/k3bexternalbinmanager.cpp
 SUBST_SED.pathfix=	-e 's:"/usr/bin/":"${LOCALBASE}/bin", "/usr/bin/":g'
 
-WRKSRC=			${WRKDIR}/k3b-2.0.3
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/plugins/*/*/CMakeFiles/*_autogen.dir/AutogenInfo.cmake
+SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
-pre-configure:
-	# buildlink loses this symlink
-	ln -s ${BUILDLINK_PREFIX.qt4-libs}/qt4/mkspecs/default ${BUILDLINK_DIR}/qt4/mkspecs/default
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Install via examples dir.
+SUBST_FILES.xdg=	src/CMakeLists.txt
+SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
+
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg
+CONF_FILES+=		${PREFIX}/share/examples/kde-xdg/k3btheme.knsrc \
+			${PKG_SYSCONFDIR}/xdg/k3btheme.knsrc
+CONF_FILES+=		${PREFIX}/share/examples/k3b/org.kde.k3b.conf \
+			${PKG_SYSCONFBASE}/dbus-1/system.d/org.kde.k3b.conf
 
 .include "../../mk/dlopen.buildlink3.mk"
-BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
-.include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
-#.include "../../audio/musepack/buildlink3.mk"
-.include "../../audio/libsndfile/buildlink3.mk"
-.include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
+#.include "../../audio/musepack/buildlink3.mk"
+.include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
+.include "../../devel/kcmutils/buildlink3.mk"
+.include "../../devel/knotifyconfig/buildlink3.mk"
+.include "../../net/knewstuff/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
-.include "../../multimedia/libkcddb/buildlink3.mk"
-.include "../../security/polkit-qt/buildlink3.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../wip/libkcddb/buildlink3.mk"
+.include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
