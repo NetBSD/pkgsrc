@@ -17,9 +17,8 @@ import (
 // Everything else (distfile hashes, package names) is recorded in the Pkglint
 // type instead.
 type Pkgsrc struct {
-	// The top directory (PKGSRCDIR), either absolute or relative to
-	// the current working directory.
-	topdir Path
+	// The top directory (PKGSRCDIR).
+	topdir CurrPath
 
 	// The set of user-defined variables that are added to BUILD_DEFS
 	// within the bsd.pkg.mk file.
@@ -35,7 +34,7 @@ type Pkgsrc struct {
 	suggestedUpdates    []SuggestedUpdate
 	suggestedWipUpdates []SuggestedUpdate
 
-	LastChange      map[Path]*Change
+	LastChange      map[PkgsrcPath]*Change
 	LastFreezeStart string // e.g. "2018-01-01", or ""
 	LastFreezeEnd   string // e.g. "2018-01-01", or ""
 
@@ -52,7 +51,7 @@ type Pkgsrc struct {
 	vartypes   VarTypeRegistry
 }
 
-func NewPkgsrc(dir Path) Pkgsrc {
+func NewPkgsrc(dir CurrPath) Pkgsrc {
 	return Pkgsrc{
 		dir,
 		make(map[string]bool),
@@ -62,7 +61,7 @@ func NewPkgsrc(dir Path) Pkgsrc {
 		make(map[string]string),
 		nil,
 		nil,
-		make(map[Path]*Change),
+		make(map[PkgsrcPath]*Change),
 		"",
 		"",
 		make(map[string][]string),
@@ -156,7 +155,7 @@ func (src *Pkgsrc) loadDocChanges() {
 		}
 	}
 
-	src.LastChange = make(map[Path]*Change)
+	src.LastChange = make(map[PkgsrcPath]*Change)
 	for _, filename := range filenames {
 		changes := src.loadDocChangesFromFile(docDir.JoinNoClean(filename))
 		for _, change := range changes {
@@ -170,7 +169,7 @@ func (src *Pkgsrc) loadDocChanges() {
 	src.checkRemovedAfterLastFreeze()
 }
 
-func (src *Pkgsrc) loadDocChangesFromFile(filename Path) []*Change {
+func (src *Pkgsrc) loadDocChangesFromFile(filename CurrPath) []*Change {
 
 	warn := G.Opts.CheckGlobal && !G.Wip
 
@@ -312,7 +311,7 @@ func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {
 		return &Change{
 			Location: line.Location,
 			Action:   action,
-			Pkgpath:  NewPath(intern(pkgpath)),
+			Pkgpath:  NewPkgsrcPath(NewPath(intern(pkgpath))),
 			target:   intern(condStr(n == 6, f[3], "")),
 			Author:   intern(author),
 			Date:     intern(date),
@@ -405,7 +404,7 @@ func (src *Pkgsrc) loadUserDefinedVars() {
 func (src *Pkgsrc) loadTools() {
 	tools := src.Tools
 
-	toolFiles := []Path{"defaults.mk"}
+	toolFiles := []RelPath{"defaults.mk"}
 	{
 		toc := src.File("mk/tools/bsd.tools.mk")
 		mklines := LoadMk(toc, MustSucceed|NotEmpty)
@@ -413,7 +412,7 @@ func (src *Pkgsrc) loadTools() {
 			if mkline.IsInclude() {
 				includedFile := mkline.IncludedFile()
 				if !includedFile.ContainsText("/") {
-					toolFiles = append(toolFiles, includedFile)
+					toolFiles = append(toolFiles, NewRelPath(includedFile))
 				}
 			}
 		}
@@ -430,13 +429,13 @@ func (src *Pkgsrc) loadTools() {
 	tools.def("true", "TRUE", true, AfterPrefsMk, nil)
 
 	for _, basename := range toolFiles {
-		mklines := src.LoadMk("mk/tools/"+basename, MustSucceed|NotEmpty)
+		mklines := src.LoadMk(NewPkgsrcPath("mk/tools").JoinRel(basename), MustSucceed|NotEmpty)
 		mklines.ForEach(func(mkline *MkLine) {
 			tools.ParseToolLine(mklines, mkline, true, !mklines.indentation.IsConditional())
 		})
 	}
 
-	for _, relativeName := range [...]Path{"mk/bsd.prefs.mk", "mk/bsd.pkg.mk"} {
+	for _, relativeName := range [...]PkgsrcPath{"mk/bsd.prefs.mk", "mk/bsd.pkg.mk"} {
 
 		mklines := src.LoadMk(relativeName, MustSucceed|NotEmpty)
 		mklines.ForEach(func(mkline *MkLine) {
@@ -670,7 +669,7 @@ func (src *Pkgsrc) loadUntypedVars() {
 		}
 	}
 
-	handleMkFile := func(path Path) {
+	handleMkFile := func(path CurrPath) {
 		mklines := LoadMk(path, MustSucceed)
 		mklines.collectVariables()
 		mklines.collectUsedVariables()
@@ -686,7 +685,7 @@ func (src *Pkgsrc) loadUntypedVars() {
 		assertNil(err, "handleFile %q", pathName)
 		baseName := info.Name()
 		if info.Mode().IsRegular() && (hasSuffix(baseName, ".mk") || baseName == "mk.conf") {
-			handleMkFile(NewPath(filepath.ToSlash(pathName))) // FIXME: This is too deep to handle os-specific paths
+			handleMkFile(NewCurrPathSlash(pathName)) // FIXME: This is too deep to handle os-specific paths
 		}
 		return nil
 	}
@@ -775,7 +774,7 @@ func (src *Pkgsrc) loadDefaultBuildDefs() {
 // Example:
 //  Latest("lang", `^php[0-9]+$`, "../../lang/$0")
 //      => "../../lang/php72"
-func (src *Pkgsrc) Latest(category Path, re regex.Pattern, repl string) string {
+func (src *Pkgsrc) Latest(category PkgsrcPath, re regex.Pattern, repl string) string {
 	versions := src.ListVersions(category, re, repl, true)
 
 	if len(versions) > 0 {
@@ -791,7 +790,7 @@ func (src *Pkgsrc) Latest(category Path, re regex.Pattern, repl string) string {
 // Example:
 //  ListVersions("lang", `^php[0-9]+$`, "php-$0")
 //      => {"php-53", "php-56", "php-73"}
-func (src *Pkgsrc) ListVersions(category Path, re regex.Pattern, repl string, errorIfEmpty bool) []string {
+func (src *Pkgsrc) ListVersions(category PkgsrcPath, re regex.Pattern, repl string, errorIfEmpty bool) []string {
 	if G.Testing {
 		// Regular expression must be anchored at both ends, to avoid typos.
 		assert(hasPrefix(string(re), "^"))
@@ -995,7 +994,7 @@ func (src *Pkgsrc) IsBuildDef(varname string) bool {
 // ReadDir lists the files and subdirectories from the given directory
 // (relative to the pkgsrc root), filtering out any ignored files (CVS/*)
 // and empty directories.
-func (src *Pkgsrc) ReadDir(dirName Path) []os.FileInfo {
+func (src *Pkgsrc) ReadDir(dirName PkgsrcPath) []os.FileInfo {
 	dir := src.File(dirName)
 	files, err := dir.ReadDir()
 	if err != nil {
@@ -1017,7 +1016,7 @@ func (src *Pkgsrc) ReadDir(dirName Path) []os.FileInfo {
 //
 // During pkglint testing, these files often don't exist, as they are
 // emulated by setting their data structures manually.
-func (src *Pkgsrc) LoadMkExisting(filename Path) *MkLines {
+func (src *Pkgsrc) LoadMkExisting(filename PkgsrcPath) *MkLines {
 	options := NotEmpty
 	if !G.Testing {
 		options |= MustSucceed
@@ -1026,12 +1025,12 @@ func (src *Pkgsrc) LoadMkExisting(filename Path) *MkLines {
 }
 
 // LoadMk loads the Makefile relative to the pkgsrc top directory.
-func (src *Pkgsrc) LoadMk(filename Path, options LoadOptions) *MkLines {
+func (src *Pkgsrc) LoadMk(filename PkgsrcPath, options LoadOptions) *MkLines {
 	return LoadMk(src.File(filename), options)
 }
 
 // Load loads the file relative to the pkgsrc top directory.
-func (src *Pkgsrc) Load(filename Path, options LoadOptions) *Lines {
+func (src *Pkgsrc) Load(filename PkgsrcPath, options LoadOptions) *Lines {
 	return Load(src.File(filename), options)
 }
 
@@ -1042,9 +1041,6 @@ func (src *Pkgsrc) Load(filename Path, options LoadOptions) *Lines {
 // pkgsrc root and from there to the "to" filename. This produces the form
 // "../../category/package" that is found in DEPENDS and .include lines.
 //
-// Both from and to are interpreted relative to the current working directory,
-// unless they are absolute paths.
-//
 // This function should only be used if the relative path from one file to
 // another cannot be computed in another way. The preferred way is to take
 // the relative filenames directly from the .include or exists() where they
@@ -1052,7 +1048,7 @@ func (src *Pkgsrc) Load(filename Path, options LoadOptions) *Lines {
 //
 // TODO: Invent data types for all kinds of relative paths that occur in pkgsrc
 //  and pkglint. Make sure that these paths cannot be accidentally mixed.
-func (src *Pkgsrc) Relpath(from, to Path) (result Path) {
+func (src *Pkgsrc) Relpath(from, to CurrPath) Path {
 	cfrom := from.Clean()
 	cto := to.Clean()
 
@@ -1062,23 +1058,20 @@ func (src *Pkgsrc) Relpath(from, to Path) (result Path) {
 
 	// Take a shortcut for the common case from "dir" to "dir/subdir/...".
 	if cto.HasPrefixPath(cfrom) {
-		rel := cfrom.Rel(cto)
-		if !rel.HasPrefixPath("..") {
-			return rel
-		}
+		return cfrom.Rel(cto)
 	}
 
 	// Take a shortcut for the common case from "category/package" to ".".
 	// This is the most common variant in a complete pkgsrc scan.
 	if cto == "." {
 		fromParts := cfrom.Parts()
-		if len(fromParts) == 2 && fromParts[0] != ".." && fromParts[1] != ".." {
+		if len(fromParts) == 2 && fromParts[0] != ".." {
 			return "../.."
 		}
 	}
 
 	if cfrom == "." && !cto.IsAbs() {
-		return cto.Clean()
+		return cto.Clean().AsPath()
 	}
 
 	absFrom := G.Abs(cfrom)
@@ -1098,7 +1091,7 @@ func (src *Pkgsrc) Relpath(from, to Path) (result Path) {
 	if len(fromParts) >= 2 && len(toParts) >= 2 {
 		if fromParts[0] == toParts[0] && fromParts[1] == toParts[1] {
 			var relParts []string
-			for _ = range fromParts[2:] {
+			for range fromParts[2:] {
 				relParts = append(relParts, "..")
 			}
 			relParts = append(relParts, toParts[2:]...)
@@ -1106,16 +1099,15 @@ func (src *Pkgsrc) Relpath(from, to Path) (result Path) {
 		}
 	}
 
-	result = up.JoinNoClean(down).CleanDot()
-	return
+	return up.JoinNoClean(down).CleanDot()
 }
 
 // File resolves a filename relative to the pkgsrc top directory.
 //
 // Example:
 //  NewPkgsrc("/usr/pkgsrc").File("distfiles") => "/usr/pkgsrc/distfiles"
-func (src *Pkgsrc) File(relativeName Path) Path {
-	cleaned := relativeName.Clean()
+func (src *Pkgsrc) File(relativeName PkgsrcPath) CurrPath {
+	cleaned := relativeName.AsPath().Clean()
 	if cleaned == "." {
 		return src.topdir.CleanDot()
 	}
@@ -1127,23 +1119,23 @@ func (src *Pkgsrc) File(relativeName Path) Path {
 //
 // Example:
 //  NewPkgsrc("/usr/pkgsrc").ToRel("/usr/pkgsrc/distfiles") => "distfiles"
-func (src *Pkgsrc) ToRel(filename Path) Path {
-	return src.Relpath(src.topdir, filename)
+func (src *Pkgsrc) ToRel(filename CurrPath) PkgsrcPath {
+	return NewPkgsrcPath(src.Relpath(src.topdir, filename))
 }
 
-// IsInfra returns whether the given filename (relative to the current
-// working directory) is part of the pkgsrc infrastructure.
-func (src *Pkgsrc) IsInfra(filename Path) bool {
+// IsInfra returns whether the given filename is part of the pkgsrc
+// infrastructure.
+func (src *Pkgsrc) IsInfra(filename CurrPath) bool {
 	rel := src.ToRel(filename)
 	return rel.HasPrefixPath("mk") || rel.HasPrefixPath("wip/mk")
 }
 
-func (src *Pkgsrc) IsInfraMain(filename Path) bool {
+func (src *Pkgsrc) IsInfraMain(filename CurrPath) bool {
 	rel := src.ToRel(filename)
 	return rel.HasPrefixPath("mk")
 }
 
-func (src *Pkgsrc) IsWip(filename Path) bool {
+func (src *Pkgsrc) IsWip(filename CurrPath) bool {
 	rel := src.ToRel(filename)
 	return rel.HasPrefixPath("wip")
 }
@@ -1152,7 +1144,7 @@ func (src *Pkgsrc) IsWip(filename Path) bool {
 type Change struct {
 	Location Location
 	Action   ChangeAction // Added, Updated, Downgraded, Renamed, Moved, Removed
-	Pkgpath  Path         // For renamed or moved packages, the previous PKGPATH
+	Pkgpath  PkgsrcPath   // For renamed or moved packages, the previous PKGPATH
 	target   string       // The path or version number, depending on the action
 	Author   string
 	Date     string
@@ -1165,9 +1157,9 @@ func (ch *Change) Version() string {
 }
 
 // Target returns the target PKGPATH for a Renamed or Moved package.
-func (ch *Change) Target() Path {
+func (ch *Change) Target() PkgsrcPath {
 	assert(ch.Action == Renamed || ch.Action == Moved)
-	return NewPath(ch.target)
+	return NewPkgsrcPath(NewPath(ch.target))
 }
 
 // Successor returns the successor for a Removed package.
