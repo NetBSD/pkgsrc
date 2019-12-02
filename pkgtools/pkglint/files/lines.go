@@ -5,12 +5,12 @@ import (
 )
 
 type Lines struct {
-	Filename Path
+	Filename CurrPath
 	BaseName string // TODO: consider converting to Path
 	Lines    []*Line
 }
 
-func NewLines(filename Path, lines []*Line) *Lines {
+func NewLines(filename CurrPath, lines []*Line) *Lines {
 	return &Lines{filename, filename.Base(), lines}
 }
 

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"netbsd.org/pkglint/intqa"
 	"netbsd.org/pkglint/regex"
 	"os"
 	"regexp"
@@ -74,7 +75,7 @@ func (s *Suite) SetUpTest(c *check.C) {
 
 	prevdir, err := os.Getwd()
 	assertNil(err, "Cannot get current working directory: %s", err)
-	t.prevdir = prevdir
+	t.prevdir = NewCurrPathString(prevdir)
 
 	// No longer usable; see https://github.com/go-check/check/issues/22
 	t.c = nil
@@ -84,7 +85,7 @@ func (s *Suite) TearDownTest(c *check.C) {
 	t := s.Tester
 	t.c = nil // No longer usable; see https://github.com/go-check/check/issues/22
 
-	err := os.Chdir(t.prevdir)
+	err := os.Chdir(t.prevdir.String())
 	assertNil(err, "Cannot chdir back to previous dir: %s", err)
 
 	if t.seenSetupPkgsrc > 0 && !t.seenFinish && !t.seenMain {
@@ -96,6 +97,19 @@ func (s *Suite) TearDownTest(c *check.C) {
 	t.DisableTracing()
 
 	G = unusablePkglint()
+}
+
+// Ensures that all test names follow a common naming scheme:
+//
+//  Test_${Type}_${Method}__${description_using_underscores}
+func (s *Suite) Test__qa(c *check.C) {
+	ck := intqa.NewQAChecker(c.Errorf)
+	ck.Configure("*", "*", "*", -intqa.EMissingTest)
+	ck.Configure("path.go", "*", "*", +intqa.EMissingTest)
+	ck.Configure("*yacc.go", "*", "*", intqa.ENone)
+	ck.Configure("*", "*", "", -intqa.EMissingTest)
+	ck.Configure("*.go", "Suite", "*", -intqa.EMethodsSameFile)
+	ck.Check()
 }
 
 var _ = check.Suite(new(Suite))
@@ -113,9 +127,9 @@ type Tester struct {
 
 	stdout  bytes.Buffer
 	stderr  bytes.Buffer
-	tmpdir  Path
-	prevdir string // The current working directory before the test started
-	relCwd  Path   // See Tester.Chdir
+	tmpdir  CurrPath
+	prevdir CurrPath // The current working directory before the test started
+	cwd     RelPath  // relative to tmpdir; see Tester.Chdir
 
 	seenSetUpCommandLine bool
 	seenSetupPkgsrc      int
@@ -193,33 +207,33 @@ func (t *Tester) SetUpTool(name, varname string, validity Validity) *Tool {
 // The file is then read in, without interpreting line continuations.
 //
 // See SetUpFileMkLines for loading a Makefile fragment.
-func (t *Tester) SetUpFileLines(relativeFileName Path, lines ...string) *Lines {
-	filename := t.CreateFileLines(relativeFileName, lines...)
-	return Load(filename, MustSucceed)
+func (t *Tester) SetUpFileLines(filename RelPath, lines ...string) *Lines {
+	abs := t.CreateFileLines(filename, lines...)
+	return Load(abs, MustSucceed)
 }
 
 // SetUpFileLines creates a temporary file and writes the given lines to it.
 // The file is then read in, handling line continuations for Makefiles.
 //
 // See SetUpFileLines for loading an ordinary file.
-func (t *Tester) SetUpFileMkLines(relativeFileName Path, lines ...string) *MkLines {
-	filename := t.CreateFileLines(relativeFileName, lines...)
-	return LoadMk(filename, MustSucceed)
+func (t *Tester) SetUpFileMkLines(filename RelPath, lines ...string) *MkLines {
+	abs := t.CreateFileLines(filename, lines...)
+	return LoadMk(abs, MustSucceed)
 }
 
 // LoadMkInclude loads the given Makefile fragment and all the files it includes,
 // merging all the lines into a single MkLines object.
 //
 // This is useful for testing code related to Package.readMakefile.
-func (t *Tester) LoadMkInclude(relativeFileName Path) *MkLines {
+func (t *Tester) LoadMkInclude(filename RelPath) *MkLines {
 	var lines []*Line
 
 	// TODO: Include files with multiple-inclusion guard only once.
 	// TODO: Include files without multiple-inclusion guard as often as needed.
 	// TODO: Set an upper limit, to prevent denial of service.
 
-	var load func(filename Path)
-	load = func(filename Path) {
+	var load func(filename CurrPath)
+	load = func(filename CurrPath) {
 		for _, mkline := range NewMkLines(Load(filename, MustSucceed)).mklines {
 			lines = append(lines, mkline.Line)
 
@@ -229,11 +243,11 @@ func (t *Tester) LoadMkInclude(relativeFileName Path) *MkLines {
 		}
 	}
 
-	load(t.File(relativeFileName))
+	load(t.File(filename))
 
 	// This assumes that the test files do not contain parse errors.
 	// Otherwise the diagnostics would appear twice.
-	return NewMkLines(NewLines(t.File(relativeFileName), lines))
+	return NewMkLines(NewLines(t.File(filename), lines))
 }
 
 // SetUpPkgsrc sets up a minimal but complete pkgsrc installation in the
@@ -319,8 +333,8 @@ func (t *Tester) SetUpPkgsrc() {
 
 // SetUpCategory makes the given category valid by creating a dummy Makefile.
 // After that, it can be mentioned in the CATEGORIES variable of a package.
-func (t *Tester) SetUpCategory(name Path) {
-	assert(name.Count() == 1)
+func (t *Tester) SetUpCategory(name RelPath) {
+	assert(G.Pkgsrc.ToRel(t.File(name)).Count() == 1)
 
 	makefile := name.JoinNoClean("Makefile")
 	if !t.File(makefile).IsFile() {
@@ -340,11 +354,13 @@ func (t *Tester) SetUpCategory(name Path) {
 // After calling this method, individual files can be overwritten as necessary.
 // At the end of the setup phase, t.FinishSetUp() must be called to load all
 // the files.
-func (t *Tester) SetUpPackage(pkgpath Path, makefileLines ...string) Path {
-	assertf(matches(pkgpath.String(), `^[^/]+/[^/]+$`), "pkgpath %q must have the form \"category/package\"", pkgpath)
+func (t *Tester) SetUpPackage(pkgpath RelPath, makefileLines ...string) CurrPath {
+	assertf(
+		matches(pkgpath.String(), `^[^/]+/[^/]+$`),
+		"pkgpath %q must have the form \"category/package\"", pkgpath)
 
 	distname := pkgpath.Base()
-	category := pkgpath.Dir()
+	category := pkgpath.DirNoClean()
 	if category == "wip" {
 		// To avoid boilerplate CATEGORIES definitions for wip packages.
 		category = "local"
@@ -431,29 +447,32 @@ line:
 // given lines to it.
 //
 // It returns the full path to the created file.
-func (t *Tester) CreateFileLines(relativeFileName Path, lines ...string) (filename Path) {
+func (t *Tester) CreateFileLines(filename RelPath, lines ...string) CurrPath {
 	var content strings.Builder
 	for _, line := range lines {
 		content.WriteString(line)
 		content.WriteString("\n")
 	}
 
-	filename = t.File(relativeFileName)
-	err := os.MkdirAll(filename.Dir().String(), 0777)
+	abs := t.File(filename)
+	err := os.MkdirAll(abs.DirNoClean().String(), 0777)
 	t.c.Assert(err, check.IsNil)
 
-	err = filename.WriteString(content.String())
+	err = abs.WriteString(content.String())
 	t.c.Assert(err, check.IsNil)
 
-	G.fileCache.Evict(filename)
+	G.fileCache.Evict(abs)
 
-	return filename
+	return abs
 }
 
 // CreateFileDummyPatch creates a patch file with the given name in the
 // temporary directory.
-func (t *Tester) CreateFileDummyPatch(relativeFileName Path) {
-	t.CreateFileLines(relativeFileName,
+func (t *Tester) CreateFileDummyPatch(filename RelPath) {
+	// Patch files only make sense in category/package/patches directories.
+	assert(G.Pkgsrc.ToRel(t.File(filename)).Count() == 4)
+
+	t.CreateFileLines(filename,
 		CvsID,
 		"",
 		"Documentation",
@@ -465,9 +484,11 @@ func (t *Tester) CreateFileDummyPatch(relativeFileName Path) {
 		"+new")
 }
 
-func (t *Tester) CreateFileDummyBuildlink3(relativeFileName Path, customLines ...string) {
-	assert(relativeFileName.Count() == 3)
-	dir := relativeFileName.Dir()
+func (t *Tester) CreateFileDummyBuildlink3(filename RelPath, customLines ...string) {
+	// Buildlink3.mk files only make sense in category/package directories.
+	assert(G.Pkgsrc.ToRel(t.File(filename)).Count() == 3)
+
+	dir := filename.DirClean()
 	lower := dir.Base()
 	// see pkgtools/createbuildlink/files/createbuildlink, "package specific variables"
 	upper := strings.Replace(strings.ToUpper(lower), "-", "_", -1)
@@ -502,32 +523,33 @@ func (t *Tester) CreateFileDummyBuildlink3(relativeFileName Path, customLines ..
 		"",
 		sprintf("BUILDLINK_TREE+=\t-%s", lower))
 
-	t.CreateFileLines(relativeFileName, lines...)
+	t.CreateFileLines(filename, lines...)
 }
 
 // File returns the absolute path to the given file in the
 // temporary directory. It doesn't check whether that file exists.
 // Calls to Tester.Chdir change the base directory for the relative filename.
-func (t *Tester) File(relativeFileName Path) Path {
-	if t.tmpdir == "" {
-		t.tmpdir = NewPathSlash(t.c.MkDir())
+func (t *Tester) File(filename RelPath) CurrPath {
+	if t.tmpdir.IsEmpty() {
+		t.tmpdir = NewCurrPathSlash(t.c.MkDir())
 	}
-	if t.relCwd != "" {
-		return relativeFileName.Clean()
+	if t.cwd != "" {
+		return NewCurrPath(filename.Clean().AsPath())
 	}
-	return t.tmpdir.JoinClean(relativeFileName)
+	return t.tmpdir.JoinClean(filename.AsPath())
 }
 
 // Copy copies a file inside the temporary directory.
-func (t *Tester) Copy(relativeSrc, relativeDst Path) {
-	src := t.File(relativeSrc)
-	dst := t.File(relativeDst)
+func (t *Tester) Copy(source, target RelPath) {
+	absSource := t.File(source)
+	absTarget := t.File(target)
 
-	data, err := src.ReadString()
+	data, err := absSource.ReadString()
 	assertNil(err, "Copy.Read")
-	err = os.MkdirAll(dst.Dir().String(), 0777)
+	// FIXME: consider DirNoClean
+	err = os.MkdirAll(absTarget.DirClean().String(), 0777)
 	assertNil(err, "Copy.MkdirAll")
-	err = dst.WriteString(data)
+	err = absTarget.WriteString(data)
 	assertNil(err, "Copy.Write")
 }
 
@@ -543,29 +565,30 @@ func (t *Tester) Copy(relativeSrc, relativeDst Path) {
 //
 // As long as this method is not called in a test, the current working
 // directory is indeterminate.
-func (t *Tester) Chdir(relativeDirName Path) {
-	if t.relCwd != "" {
+func (t *Tester) Chdir(dirname RelPath) {
+	if t.cwd != "" {
 		// When multiple calls of Chdir are mixed with calls to CreateFileLines,
 		// the resulting Lines and MkLines variables will use relative filenames,
 		// and these will point to different areas in the file system. This is
 		// usually not indented and therefore prevented.
-		t.c.Fatalf("Chdir must only be called once per test; already in %q.", t.relCwd)
+		t.c.Fatalf("Chdir must only be called once per test; already in %q.", t.cwd)
 	}
 
-	absDirName := t.File(relativeDirName)
+	absDirName := t.File(dirname)
 	assertNil(os.MkdirAll(absDirName.String(), 0700), "MkDirAll")
 	assertNil(os.Chdir(absDirName.String()), "Chdir")
-	t.relCwd = relativeDirName
+	t.cwd = dirname
 	G.cwd = absDirName
+	G.Pkgsrc.topdir = NewCurrPath(absDirName.Rel(G.Pkgsrc.topdir))
 }
 
 // Remove removes the file or directory from the temporary directory.
 // The file or directory must exist.
-func (t *Tester) Remove(relativeFileName Path) {
-	filename := t.File(relativeFileName)
-	err := os.Remove(filename.String())
+func (t *Tester) Remove(filename RelPath) {
+	abs := t.File(filename)
+	err := os.Remove(abs.String())
 	t.c.Assert(err, check.IsNil)
-	G.fileCache.Evict(filename)
+	G.fileCache.Evict(abs)
 }
 
 // SetUpHierarchy provides a function for creating hierarchies of MkLines
@@ -588,22 +611,42 @@ func (t *Tester) Remove(relativeFileName Path) {
 //  module := get("subdir/module.mk")
 //
 // The filenames passed to the include function are all relative to the
-// same location, but that location is irrelevant in practice. The generated
-// .include lines take the relative paths into account. For example, when
-// subdir/module.mk includes subdir/version.mk, the include line is just:
+// same location, which is typically the pkgsrc root or a package directory,
+// but the code doesn't care.
+//
+// The generated .include lines take the relative paths into account.
+// For example, when subdir/module.mk includes subdir/version.mk,
+// the include line is just:
 //  .include "version.mk"
 func (t *Tester) SetUpHierarchy() (
-	include func(filename Path, args ...interface{}) *MkLines,
-	get func(Path) *MkLines) {
+	include func(filename RelPath, args ...interface{}) *MkLines,
+	get func(path RelPath) *MkLines) {
 
-	files := map[Path]*MkLines{}
+	files := map[RelPath]*MkLines{}
+	basedir := NewPath(".")
 
-	include = func(filename Path, args ...interface{}) *MkLines {
+	// includePath returns the path to be used in an .include.
+	//
+	// This is the same mechanism that is used in Pkgsrc.Relpath.
+	includePath := func(including, included Path) Path {
+		// FIXME: consider DirNoClean
+		fromDir := including.DirClean()
+		to := basedir.Rel(included)
+		// FIXME: consider DirNoClean
+		if fromDir == to.DirClean() {
+			return NewPath(to.Base())
+		} else {
+			return fromDir.Rel(basedir).JoinNoClean(to).CleanDot()
+		}
+	}
+
+	include = func(filename RelPath, args ...interface{}) *MkLines {
 		var lines []*Line
 		lineno := 1
+		relFilename := basedir.Rel(filename.AsPath())
 
 		addLine := func(text string) {
-			lines = append(lines, t.NewLine(filename, lineno, text))
+			lines = append(lines, t.NewLine(NewCurrPath(relFilename), lineno, text))
 			lineno++
 		}
 
@@ -612,24 +655,21 @@ func (t *Tester) SetUpHierarchy() (
 			case string:
 				addLine(arg)
 			case *MkLines:
-				fromDir := G.Pkgsrc.File(filename.Dir())
-				to := G.Pkgsrc.File(arg.lines.Filename)
-				rel := G.Pkgsrc.Relpath(fromDir, to)
-				text := sprintf(".include %q", rel)
-				addLine(text)
+				rel := includePath(relFilename, arg.lines.Filename.AsPath())
+				addLine(sprintf(".include %q", rel))
 				lines = append(lines, arg.lines.Lines...)
 			default:
 				panic("invalid type")
 			}
 		}
 
-		mklines := NewMkLines(NewLines(filename, lines))
+		mklines := NewMkLines(NewLines(NewCurrPath(relFilename), lines))
 		assertf(files[filename] == nil, "MkLines with name %q already exists.", filename)
 		files[filename] = mklines
 		return mklines
 	}
 
-	get = func(filename Path) *MkLines {
+	get = func(filename RelPath) *MkLines {
 		assertf(files[filename] != nil, "MkLines with name %q doesn't exist.", filename)
 		return files[filename]
 	}
@@ -707,7 +747,7 @@ func (t *Tester) Main(args ...string) int {
 
 	argv := []string{"pkglint"}
 	for _, arg := range args {
-		fileArg := t.File(NewPath(arg))
+		fileArg := t.File(NewRelPathString(arg))
 		if fileArg.Exists() {
 			argv = append(argv, fileArg.String())
 		} else {
@@ -851,14 +891,14 @@ func (t *Tester) NewRawLines(args ...interface{}) []*RawLine {
 
 // NewLine creates an in-memory line with the given text.
 // This line does not correspond to any line in a file.
-func (t *Tester) NewLine(filename Path, lineno int, text string) *Line {
+func (t *Tester) NewLine(filename CurrPath, lineno int, text string) *Line {
 	textnl := text + "\n"
 	rawLine := RawLine{lineno, textnl, textnl}
 	return NewLine(filename, lineno, text, &rawLine)
 }
 
 // NewMkLine creates an in-memory line in the Makefile format with the given text.
-func (t *Tester) NewMkLine(filename Path, lineno int, text string) *MkLine {
+func (t *Tester) NewMkLine(filename CurrPath, lineno int, text string) *MkLine {
 	basename := filename.Base()
 	assertf(
 		hasSuffix(basename, ".mk") ||
@@ -878,14 +918,14 @@ func (t *Tester) NewShellLineChecker(text string) *ShellLineChecker {
 // NewLines returns a list of simple lines that belong together.
 //
 // To work with line continuations like in Makefiles, use SetUpFileMkLines.
-func (t *Tester) NewLines(filename Path, lines ...string) *Lines {
+func (t *Tester) NewLines(filename CurrPath, lines ...string) *Lines {
 	return t.NewLinesAt(filename, 1, lines...)
 }
 
 // NewLinesAt returns a list of simple lines that belong together.
 //
 // To work with line continuations like in Makefiles, use SetUpFileMkLines.
-func (t *Tester) NewLinesAt(filename Path, firstLine int, texts ...string) *Lines {
+func (t *Tester) NewLinesAt(filename CurrPath, firstLine int, texts ...string) *Lines {
 	lines := make([]*Line, len(texts))
 	for i, text := range texts {
 		lines[i] = t.NewLine(filename, i+firstLine, text)
@@ -899,7 +939,7 @@ func (t *Tester) NewLinesAt(filename Path, firstLine int, texts ...string) *Line
 //
 // No actual file is created for the lines;
 // see SetUpFileMkLines for loading Makefile fragments with line continuations.
-func (t *Tester) NewMkLines(filename Path, lines ...string) *MkLines {
+func (t *Tester) NewMkLines(filename CurrPath, lines ...string) *MkLines {
 	basename := filename.Base()
 	assertf(
 		hasSuffix(basename, ".mk") || basename == "Makefile" || hasPrefix(basename, "Makefile."),
@@ -980,7 +1020,7 @@ func (t *Tester) CheckOutputLinesMatching(pattern regex.Pattern, expectedLines .
 // See CheckOutputEmpty, CheckOutputLines.
 func (t *Tester) CheckOutputLinesIgnoreSpace(expectedLines ...string) {
 	assertf(len(expectedLines) > 0, "To check empty lines, use CheckOutputEmpty instead.")
-	assertf(t.tmpdir != "", "Tester must be initialized before checking the output.")
+	assertf(!t.tmpdir.IsEmpty(), "Tester must be initialized before checking the output.")
 
 	rawOutput := t.stdout.String() + t.stderr.String()
 	_ = t.Output() // Just to consume the output
@@ -989,7 +1029,7 @@ func (t *Tester) CheckOutputLinesIgnoreSpace(expectedLines ...string) {
 	t.CheckDeepEquals(actual, expected)
 }
 
-func (t *Tester) compareOutputIgnoreSpace(rawOutput string, expectedLines []string, tmpdir Path) ([]string, []string) {
+func (t *Tester) compareOutputIgnoreSpace(rawOutput string, expectedLines []string, tmpdir CurrPath) ([]string, []string) {
 	whitespace := regexp.MustCompile(`\s+`)
 
 	// Replace all occurrences of tmpdir in the raw output with a tilde,
@@ -1023,7 +1063,7 @@ func (s *Suite) Test_Tester_compareOutputIgnoreSpace(c *check.C) {
 	t := s.Init(c)
 
 	lines := func(lines ...string) []string { return lines }
-	test := func(rawOutput string, expectedLines []string, tmpdir Path, eq bool) {
+	test := func(rawOutput string, expectedLines []string, tmpdir CurrPath, eq bool) {
 		actual, expected := t.compareOutputIgnoreSpace(rawOutput, expectedLines, tmpdir)
 		t.CheckEquals(actual == nil && expected == nil, eq)
 	}
@@ -1143,8 +1183,8 @@ func (t *Tester) DisableTracing() {
 
 // CheckFileLines loads the lines from the temporary file and checks that
 // they equal the given lines.
-func (t *Tester) CheckFileLines(relativeFileName Path, lines ...string) {
-	content, err := t.File(relativeFileName).ReadString()
+func (t *Tester) CheckFileLines(filename RelPath, lines ...string) {
+	content, err := t.File(filename).ReadString()
 	t.c.Assert(err, check.IsNil)
 	actualLines := strings.Split(content, "\n")
 	actualLines = actualLines[:len(actualLines)-1]
@@ -1155,8 +1195,8 @@ func (t *Tester) CheckFileLines(relativeFileName Path, lines ...string) {
 // that they equal the given lines. The loaded file may use tabs or spaces
 // for indentation, while the lines in the code use spaces exclusively,
 // in order to make the depth of the indentation clearly visible in the test code.
-func (t *Tester) CheckFileLinesDetab(relativeFileName Path, lines ...string) {
-	actualLines := Load(t.File(relativeFileName), MustSucceed)
+func (t *Tester) CheckFileLinesDetab(filename RelPath, lines ...string) {
+	actualLines := Load(t.File(filename), MustSucceed)
 
 	var detabbedLines []string
 	for _, line := range actualLines.Lines {

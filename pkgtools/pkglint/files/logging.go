@@ -57,7 +57,6 @@ var (
 // that an explanation is available.
 func (l *Logger) Explain(explanation ...string) {
 	if l.suppressExpl {
-		l.suppressExpl = false
 		return
 	}
 
@@ -123,7 +122,7 @@ func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interf
 	l.Logf(level, filename, linenos, format, msg)
 }
 
-func (l *Logger) FirstTime(filename Path, linenos, msg string) bool {
+func (l *Logger) FirstTime(filename CurrPath, linenos, msg string) bool {
 	if l.verbose {
 		return true
 	}
@@ -227,7 +226,7 @@ func (l *Logger) showSource(line *Line) {
 // IsAutofix returns whether one of the --show-autofix or --autofix options is active.
 func (l *Logger) IsAutofix() bool { return l.Opts.Autofix || l.Opts.ShowAutofix }
 
-func (l *Logger) Logf(level *LogLevel, filename Path, lineno, format, msg string) {
+func (l *Logger) Logf(level *LogLevel, filename CurrPath, lineno, format, msg string) {
 	if l.suppressDiag {
 		l.suppressDiag = false
 		return
@@ -246,8 +245,8 @@ func (l *Logger) Logf(level *LogLevel, filename Path, lineno, format, msg string
 		}
 	}
 
-	if filename != "" {
-		filename = cleanpath(filename)
+	if !filename.IsEmpty() {
+		filename = filename.CleanPath()
 	}
 	if G.Opts.Profiling && format != AutofixFormat && level != Fatal {
 		l.histo.Add(format, 1)
@@ -258,8 +257,8 @@ func (l *Logger) Logf(level *LogLevel, filename Path, lineno, format, msg string
 		out = l.err
 	}
 
-	filenameSep := condStr(filename != "", ": ", "")
-	effLineno := condStr(filename != "", lineno, "")
+	filenameSep := condStr(!filename.IsEmpty(), ": ", "")
+	effLineno := condStr(!filename.IsEmpty(), lineno, "")
 	linenoSep := condStr(effLineno != "", ":", "")
 	var diag string
 	if l.Opts.GccOutput {
@@ -287,7 +286,7 @@ func (l *Logger) Logf(level *LogLevel, filename Path, lineno, format, msg string
 // Location.Filename. It may be followed by the usual ":123" for line numbers.
 //
 // For diagnostics, use Logf instead.
-func (l *Logger) TechErrorf(location Path, format string, args ...interface{}) {
+func (l *Logger) TechErrorf(location CurrPath, format string, args ...interface{}) {
 	msg := sprintf(format, args...)
 	var diag string
 	if l.Opts.GccOutput {

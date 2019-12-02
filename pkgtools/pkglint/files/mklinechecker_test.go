@@ -780,14 +780,13 @@ func (s *Suite) Test_MkLineChecker_CheckVaruse__build_defs(c *check.C) {
 	t.SetUpPkgsrc()
 	t.CreateFileLines("mk/defaults/mk.conf",
 		"VARBASE?= /usr/pkg/var")
-	t.SetUpCommandLine("-Wall,no-space")
 	t.FinishSetUp()
 
 	mklines := t.SetUpFileMkLines("options.mk",
 		MkCvsID,
-		"COMMENT=                ${VARBASE} ${X11_TYPE}",
-		"PKG_FAIL_REASON+=       ${VARBASE} ${X11_TYPE}",
-		"BUILD_DEFS+=            X11_TYPE")
+		"COMMENT=\t\t${VARBASE} ${X11_TYPE}",
+		"PKG_FAIL_REASON+=\t${VARBASE} ${X11_TYPE}",
+		"BUILD_DEFS+=\t\tX11_TYPE")
 
 	mklines.Check()
 
@@ -1462,18 +1461,17 @@ func (s *Suite) Test_MkLineChecker_checkVarUseQuoting(c *check.C) {
 func (s *Suite) Test_MkLineChecker_checkVarUseQuoting__mstar(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
 	t.SetUpVartypes()
 	mklines := t.SetUpFileMkLines("options.mk",
 		MkCvsID,
-		"CONFIGURE_ARGS+=        CFLAGS=${CFLAGS:Q}",
-		"CONFIGURE_ARGS+=        CFLAGS=${CFLAGS:M*:Q}",
-		"CONFIGURE_ARGS+=        ADA_FLAGS=${ADA_FLAGS:Q}",
-		"CONFIGURE_ARGS+=        ADA_FLAGS=${ADA_FLAGS:M*:Q}",
-		"CONFIGURE_ENV+=         CFLAGS=${CFLAGS:Q}",
-		"CONFIGURE_ENV+=         CFLAGS=${CFLAGS:M*:Q}",
-		"CONFIGURE_ENV+=         ADA_FLAGS=${ADA_FLAGS:Q}",
-		"CONFIGURE_ENV+=         ADA_FLAGS=${ADA_FLAGS:M*:Q}")
+		"CONFIGURE_ARGS+=\tCFLAGS=${CFLAGS:Q}",
+		"CONFIGURE_ARGS+=\tCFLAGS=${CFLAGS:M*:Q}",
+		"CONFIGURE_ARGS+=\tADA_FLAGS=${ADA_FLAGS:Q}",
+		"CONFIGURE_ARGS+=\tADA_FLAGS=${ADA_FLAGS:M*:Q}",
+		"CONFIGURE_ENV+=\t\tCFLAGS=${CFLAGS:Q}",
+		"CONFIGURE_ENV+=\t\tCFLAGS=${CFLAGS:M*:Q}",
+		"CONFIGURE_ENV+=\t\tADA_FLAGS=${ADA_FLAGS:Q}",
+		"CONFIGURE_ENV+=\t\tADA_FLAGS=${ADA_FLAGS:M*:Q}")
 
 	mklines.Check()
 
@@ -1486,7 +1484,6 @@ func (s *Suite) Test_MkLineChecker_checkVarUseQuoting__mstar(c *check.C) {
 func (s *Suite) Test_MkLineChecker_checkVarUseQuoting__mstar_not_needed(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
 	pkg := t.SetUpPackage("category/package",
 		"MAKE_FLAGS+=\tCFLAGS=${CFLAGS:M*:Q}",
 		"MAKE_FLAGS+=\tLFLAGS=${LDFLAGS:M*:Q}")
@@ -1668,11 +1665,10 @@ func (s *Suite) Test_MkLineChecker_checkText(c *check.C) {
 
 	t.SetUpPkgsrc()
 
-	t.SetUpCommandLine("-Wall,no-space")
 	mklines := t.SetUpFileMkLines("module.mk",
 		MkCvsID,
-		"CFLAGS+=                -Wl,--rpath,${PREFIX}/lib",
-		"PKG_FAIL_REASON+=       \"Group ${GAMEGRP} doesn't exist.\"")
+		"CFLAGS+=\t\t-Wl,--rpath,${PREFIX}/lib",
+		"PKG_FAIL_REASON+=\t\"Group ${GAMEGRP} doesn't exist.\"")
 	t.FinishSetUp()
 
 	mklines.Check()
@@ -1985,17 +1981,17 @@ func (s *Suite) Test_MkLineChecker_checkVarassignMisc(c *check.C) {
 
 	t.SetUpPkgsrc()
 	t.SetUpMasterSite("MASTER_SITE_GITHUB", "https://download.github.com/")
-	t.SetUpCommandLine("-Wall,no-space")
+
 	mklines := t.SetUpFileMkLines("module.mk",
 		MkCvsID,
-		"EGDIR=                  ${PREFIX}/etc/rc.d",
-		"RPMIGNOREPATH+=         ${PREFIX}/etc/rc.d",
-		"_TOOLS_VARNAME.sed=     SED",
-		"DIST_SUBDIR=            ${PKGNAME}",
-		"WRKSRC=                 ${PKGNAME}",
-		"SITES_distfile.tar.gz=  ${MASTER_SITE_GITHUB:=user/}",
-		"MASTER_SITES=           https://cdn.example.org/${PKGNAME}/",
-		"MASTER_SITES=           https://cdn.example.org/distname-${PKGVERSION}/")
+		"EGDIR=\t\t\t${PREFIX}/etc/rc.d",
+		"RPMIGNOREPATH+=\t\t${PREFIX}/etc/rc.d",
+		"_TOOLS_VARNAME.sed=\tSED",
+		"DIST_SUBDIR=\t\t${PKGNAME}",
+		"WRKSRC=\t\t\t${PKGNAME}",
+		"SITES_distfile.tar.gz=\t${MASTER_SITE_GITHUB:=user/}",
+		"MASTER_SITES=\t\thttps://cdn.example.org/${PKGNAME}/",
+		"MASTER_SITES=\t\thttps://cdn.example.org/distname-${PKGVERSION}/")
 	t.FinishSetUp()
 
 	mklines.Check()
@@ -2282,7 +2278,7 @@ func (s *Suite) Test_MkLineChecker_checkInclude__builtin_mk_rationale(c *check.C
 func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation__autofix(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("--autofix", "-Wspace")
+	t.SetUpCommandLine("--autofix")
 	lines := t.SetUpFileLines("filename.mk",
 		MkCvsID,
 		".if defined(A)",
@@ -2435,7 +2431,7 @@ func (s *Suite) Test_MkLineChecker_CheckRelativePkgdir(c *check.C) {
 
 	t.CreateFileLines("other/package/Makefile")
 
-	test := func(relativePkgdir Path, diagnostics ...string) {
+	test := func(relativePkgdir RelPath, diagnostics ...string) {
 		// Must be in the filesystem because of directory references.
 		mklines := t.SetUpFileMkLines("category/package/Makefile",
 			"# dummy")

@@ -169,8 +169,6 @@ type varalignLine struct {
 
 func (va *VaralignBlock) Process(mkline *MkLine) {
 	switch {
-	case !G.Opts.WarnSpace:
-
 	case mkline.IsEmpty():
 		va.Finish()
 
@@ -299,7 +297,7 @@ func (*VaralignBlock) rightMargin(infos []*varalignLine) int {
 			}
 		}
 	}
-	return (min & -8) + 8
+	return min&-8 + 8
 }
 
 // optimalWidth computes the desired screen width for the variable assignment
@@ -333,7 +331,7 @@ func (*VaralignBlock) optimalWidth(infos []*varalignLine) int {
 	// Widths of the current indentation (including whitespace)
 	var spaceWidths mklineInts
 	for _, info := range infos {
-		if info.multiEmpty || info.rawIndex > 0 || (outlier > 0 && info.varnameOpWidth() == outlier) {
+		if info.multiEmpty || info.rawIndex > 0 || outlier > 0 && info.varnameOpWidth() == outlier {
 			continue
 		}
 		spaceWidths.append(info.mkline, info.varnameOpSpaceWidth())
@@ -362,7 +360,7 @@ func (*VaralignBlock) optimalWidth(infos []*varalignLine) int {
 		return 0
 	}
 
-	return (minVarnameOpWidth & -8) + 8
+	return minVarnameOpWidth&-8 + 8
 }
 
 // adjustLong allows any follow-up line to start either in column 8 or at
@@ -464,7 +462,7 @@ func (*VaralignBlock) realignMultiEmptyInitial(info *varalignLine, newWidth int)
 	if hasSpace && column != oldColumn {
 		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", column+1)
 	} else if column != oldColumn {
-		fix.Notef("This variable value should be aligned to column %d.", column+1)
+		fix.Notef("This variable value should be aligned to column %d.", column+1) // TODO: to column %d instead of %d.
 	} else {
 		fix.Notef("Variable values should be aligned with tabs, not spaces.")
 	}

@@ -252,7 +252,6 @@ func (s *Suite) Test_CheckLinesOptionsMk__conditionals(c *check.C) {
 func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
 	t.SetUpVartypes()
 	t.SetUpOption("mc-charset", "")
 	t.SetUpOption("mysql", "")
@@ -268,17 +267,17 @@ func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 	mklines := t.SetUpFileMkLines("category/package/options.mk",
 		MkCvsID,
 		"",
-		"PKG_OPTIONS_VAR=                PKG_OPTIONS.mc",
-		"PKG_OPTIONS_REQUIRED_GROUPS=    screen",
-		"PKG_OPTIONS_GROUP.screen=       ncurses slang",
-		"PKG_SUPPORTED_OPTIONS=          mc-charset x11 lang-${l} negative",
-		"PKG_SUGGESTED_OPTIONS=          mc-charset slang",
-		"PKG_OPTIONS_NONEMPTY_SETS+=     db",
-		"PKG_OPTIONS_SET.db=             mysql sqlite",
+		"PKG_OPTIONS_VAR=\t\tPKG_OPTIONS.mc",
+		"PKG_OPTIONS_REQUIRED_GROUPS=\tscreen",
+		"PKG_OPTIONS_GROUP.screen=\tncurses slang",
+		"PKG_SUPPORTED_OPTIONS=\t\tmc-charset x11 lang-${l} negative",
+		"PKG_SUGGESTED_OPTIONS=\t\tmc-charset slang",
+		"PKG_OPTIONS_NONEMPTY_SETS+=\tdb",
+		"PKG_OPTIONS_SET.db=\t\tmysql sqlite",
 		"",
 		".include \"../../mk/bsd.options.mk\"",
 		"",
-		"PKGNAME?=  default-pkgname-1.",
+		"PKGNAME?=\tdefault-pkgname-1.",
 		"",
 		".if !empty(PKG_OPTIONS:Mx11)",
 		".endif",
@@ -323,7 +322,6 @@ func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 func (s *Suite) Test_CheckLinesOptionsMk__unexpected_line(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wno-space")
 	t.SetUpVartypes()
 
 	t.CreateFileLines("mk/bsd.options.mk",
@@ -332,7 +330,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__unexpected_line(c *check.C) {
 	mklines := t.SetUpFileMkLines("category/package/options.mk",
 		MkCvsID,
 		"",
-		"PKG_OPTIONS_VAR=                PKG_OPTIONS.mc",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.mc",
 		"",
 		"pre-configure:",
 		"\techo \"In the pre-configure stage.\"")
@@ -340,14 +338,15 @@ func (s *Suite) Test_CheckLinesOptionsMk__unexpected_line(c *check.C) {
 	CheckLinesOptionsMk(mklines)
 
 	t.CheckOutputLines(
-		"ERROR: ~/category/package/options.mk: " +
+		"WARN: ~/category/package/options.mk:6: "+
+			"Unknown shell command \"echo\".",
+		"ERROR: ~/category/package/options.mk: "+
 			"Each options.mk file must .include \"../../mk/bsd.options.mk\".")
 }
 
 func (s *Suite) Test_CheckLinesOptionsMk__malformed_condition(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wno-space")
 	t.SetUpVartypes()
 	t.SetUpOption("mc-charset", "")
 	t.SetUpOption("ncurses", "")
@@ -360,9 +359,9 @@ func (s *Suite) Test_CheckLinesOptionsMk__malformed_condition(c *check.C) {
 	mklines := t.SetUpFileMkLines("category/package/options.mk",
 		MkCvsID,
 		"",
-		"PKG_OPTIONS_VAR=                PKG_OPTIONS.mc",
-		"PKG_SUPPORTED_OPTIONS=          # none",
-		"PKG_SUGGESTED_OPTIONS=          # none",
+		"PKG_OPTIONS_VAR=\t\tPKG_OPTIONS.mc",
+		"PKG_SUPPORTED_OPTIONS=\t\t# none",
+		"PKG_SUGGESTED_OPTIONS=\t\t# none",
 		"",
 		"# Comments and conditionals are allowed at this point.",
 		".if ${OPSYS} == NetBSD",

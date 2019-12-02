@@ -1085,10 +1085,10 @@ func (ck MkLineChecker) checkVarassignRightCategory() {
 
 	categories := mkline.ValueFields(mkline.Value())
 	actual := categories[0]
-	expected := mkline.Filename.Dir().Dir().Base()
-	if expected == "." {
-		expected = G.Pkgsrc.ToRel(mkline.Filename).Dir().Dir().Base()
-	}
+	// FIXME: consider DirNoClean
+	// FIXME: consider DirNoClean
+	expected := G.Pkgsrc.ToRel(mkline.Filename).DirClean().DirClean().Base()
+
 	if expected == "wip" || actual == expected {
 		return
 	}
@@ -1258,7 +1258,7 @@ func (ck MkLineChecker) checkShellCommand() {
 	mkline := ck.MkLine
 
 	shellCommand := mkline.ShellCommand()
-	if G.Opts.WarnSpace && hasPrefix(mkline.Text, "\t\t") {
+	if hasPrefix(mkline.Text, "\t\t") {
 		lexer := textproc.NewLexer(mkline.raw[0].textnl)
 		tabs := lexer.NextBytesFunc(func(b byte) bool { return b == '\t' })
 
@@ -1305,7 +1305,7 @@ func (ck MkLineChecker) checkInclude() {
 	if trace.Tracing {
 		trace.Stepf("includingFile=%s includedFile=%s", mkline.Filename, includedFile)
 	}
-	ck.CheckRelativePath(includedFile, mustExist)
+	ck.CheckRelativePath(NewRelPath(includedFile), mustExist)
 
 	switch {
 	case includedFile.HasBase("Makefile"):
@@ -1342,7 +1342,9 @@ func (ck MkLineChecker) checkInclude() {
 	case includedFile != "builtin.mk" && includedFile.HasSuffixPath("builtin.mk"):
 		if mkline.Basename != "hacks.mk" && !mkline.HasRationale() {
 			fix := mkline.Autofix()
-			fix.Errorf("%s must not be included directly. Include \"%s/buildlink3.mk\" instead.", includedFile, includedFile.Dir())
+			// FIXME: Use %q instead of %s.
+			// FIXME: consider DirNoClean
+			fix.Errorf("%s must not be included directly. Include \"%s/buildlink3.mk\" instead.", includedFile, includedFile.DirClean())
 			fix.Replace("builtin.mk", "buildlink3.mk")
 			fix.Apply()
 		}
@@ -1350,9 +1352,6 @@ func (ck MkLineChecker) checkInclude() {
 }
 
 func (ck MkLineChecker) checkDirectiveIndentation(expectedDepth int) {
-	if !G.Opts.WarnSpace {
-		return
-	}
 	mkline := ck.MkLine
 	indent := mkline.Indent()
 	if expected := strings.Repeat(" ", expectedDepth); indent != expected {
@@ -1365,7 +1364,7 @@ func (ck MkLineChecker) checkDirectiveIndentation(expectedDepth int) {
 
 // CheckRelativePath checks a relative path that leads to the directory of another package
 // or to a subdirectory thereof or a file within there.
-func (ck MkLineChecker) CheckRelativePath(relativePath Path, mustExist bool) {
+func (ck MkLineChecker) CheckRelativePath(relativePath RelPath, mustExist bool) {
 	if trace.Tracing {
 		defer trace.Call(relativePath, mustExist)()
 	}
@@ -1380,12 +1379,13 @@ func (ck MkLineChecker) CheckRelativePath(relativePath Path, mustExist bool) {
 		return
 	}
 
-	if resolvedPath.IsAbs() {
+	if resolvedPath.AsPath().IsAbs() {
 		mkline.Errorf("The path %q must be relative.", resolvedPath)
 		return
 	}
 
-	abs := mkline.Filename.Dir().JoinNoClean(resolvedPath)
+	// FIXME: consider DirNoClean
+	abs := mkline.Filename.DirClean().JoinNoClean(resolvedPath.AsPath())
 	if !abs.Exists() {
 		if mustExist && !ck.MkLines.indentation.HasExists(resolvedPath) {
 			mkline.Errorf("Relative path %q does not exist.", resolvedPath)
@@ -1428,13 +1428,13 @@ func (ck MkLineChecker) CheckRelativePath(relativePath Path, mustExist bool) {
 //
 // When used in .include directives, the relative package directories must be written
 // with the leading ../.. anyway, so the benefit might not be too big at all.
-func (ck MkLineChecker) CheckRelativePkgdir(pkgdir Path) {
+func (ck MkLineChecker) CheckRelativePkgdir(pkgdir RelPath) {
 	if trace.Tracing {
 		defer trace.Call(pkgdir)()
 	}
 
 	mkline := ck.MkLine
-	ck.CheckRelativePath(pkgdir+"/Makefile", true)
+	ck.CheckRelativePath(pkgdir.JoinNoClean("Makefile"), true)
 	pkgdir = mkline.ResolveVarsInRelativePath(pkgdir)
 
 	if !matches(pkgdir.String(), `^\.\./\.\./([^./][^/]*/[^./][^/]*)$`) && !containsVarRef(pkgdir.String()) {
