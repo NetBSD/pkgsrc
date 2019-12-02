@@ -200,7 +200,7 @@ func (ck *PatchChecker) checkBeginDiff(line *Line, patchedFiles int) {
 			"be mentioned in this file, to prevent duplicate work.")
 	}
 
-	if G.Opts.WarnSpace && !ck.previousLineEmpty {
+	if !ck.previousLineEmpty {
 		fix := line.Autofix()
 		fix.Notef("Empty line expected.")
 		fix.InsertBefore("")
