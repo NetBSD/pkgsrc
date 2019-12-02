@@ -713,7 +713,7 @@ func (s *ShSuite) Test_parseShellProgram__io_here(c *check.C) {
 
 func (s *ShSuite) init(c *check.C) *MkShBuilder {
 	s.c = c
-	tmpdir := NewPath("The ShSuite tests don't need a temporary directory")
+	tmpdir := NewCurrPath("The ShSuite tests don't need a temporary directory")
 	s.t = &Tester{c: c, testName: c.TestName(), tmpdir: tmpdir}
 	G = NewPkglint(&s.t.stdout, &s.t.stderr)
 	return NewMkShBuilder()

@@ -148,7 +148,7 @@ func (s *Suite) Test_VarTypeRegistry_enumFromDirs__no_testing(c *check.C) {
 			G.Pkgsrc.vartypes.enumFromDirs(
 				&G.Pkgsrc, "category", `^pack.*`, "$0", "default")
 		},
-		"FATAL: category: Must contain at least 1 "+
+		"FATAL: ~/category: Must contain at least 1 "+
 			"subdirectory matching \"^pack.*\".")
 }
 
@@ -177,10 +177,10 @@ func (s *Suite) Test_VarTypeRegistry_enumFromFiles__no_testing(c *check.C) {
 
 	t.ExpectFatal(
 		func() {
-			G.Pkgsrc.vartypes.enumFromFiles(
+			G.Pkgsrc.vartypes.enumFromFiles(&G.Pkgsrc,
 				"mk/platform", `^(\w+)\.mk$`, "$1", "default")
 		},
-		"FATAL: mk/platform: Must contain at least 1 "+
+		"FATAL: ~/mk/platform: Must contain at least 1 "+
 			"file matching \"^(\\\\w+)\\\\.mk$\".")
 }
 

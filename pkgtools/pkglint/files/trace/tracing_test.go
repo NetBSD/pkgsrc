@@ -93,16 +93,28 @@ func (s *Suite) Test__fixed_argument_variants(c *check.C) {
 		"TRACE: - netbsd.org/pkglint/trace.(*Suite).Test__fixed_argument_variants.func1()\n")
 }
 
-func (s *Suite) Test__stringer_arg(c *check.C) {
+func (s *Suite) Test_Tracer_Call__Stringer_arg(c *check.C) {
 	tracer := &s.Tracer
 
 	output := s.captureTracingOutput(func() {
-		defer tracer.Call(str{}, &str{})()
+		defer tracer.Call(stringer{}, &stringer{})()
 	})
 
 	c.Check(output, check.Equals, ""+
-		"TRACE: + netbsd.org/pkglint/trace.(*Suite).Test__stringer_arg.func1(It's a string, It's a string)\n"+
-		"TRACE: - netbsd.org/pkglint/trace.(*Suite).Test__stringer_arg.func1(It's a string, It's a string)\n")
+		"TRACE: + netbsd.org/pkglint/trace.(*Suite).Test_Tracer_Call__Stringer_arg.func1(It's a string, It's a string)\n"+
+		"TRACE: - netbsd.org/pkglint/trace.(*Suite).Test_Tracer_Call__Stringer_arg.func1(It's a string, It's a string)\n")
+}
+
+func (s *Suite) Test_Tracer_Call__GoStringer_arg(c *check.C) {
+	tracer := &s.Tracer
+
+	output := s.captureTracingOutput(func() {
+		defer tracer.Call(goStringer{}, &goStringer{})()
+	})
+
+	c.Check(output, check.Equals, ""+
+		"TRACE: + netbsd.org/pkglint/trace.(*Suite).Test_Tracer_Call__GoStringer_arg.func1(\"It's a string\", \"It's a string\")\n"+
+		"TRACE: - netbsd.org/pkglint/trace.(*Suite).Test_Tracer_Call__GoStringer_arg.func1(\"It's a string\", \"It's a string\")\n")
 }
 
 func (s *Suite) Test_Tracer_traceCall__panic(c *check.C) {
@@ -137,14 +149,16 @@ func (s *Suite) captureTracingOutput(action func()) string {
 	return out.String()
 }
 
-type str struct{}
+type stringer struct{}
 
-func (str) String() string {
-	return "It's a string"
-}
+func (stringer) String() string { return "It's a string" }
 
-func (s *Suite) Test__qa(c *check.C) {
-	ck := intqa.NewQAChecker(c.Errorf)
+type goStringer struct{}
+
+func (goStringer) GoString() string { return "\"It's a string\"" }
+
+func Test__qa(t *testing.T) {
+	ck := intqa.NewQAChecker(t.Errorf)
 	ck.Configure("*", "*", "*", -intqa.EMissingTest)
 	ck.Check()
 }
