@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func CheckdirCategory(dir Path) {
+func CheckdirCategory(dir CurrPath) {
 	if trace.Tracing {
 		defer trace.Call(dir)()
 	}
@@ -64,7 +64,7 @@ func CheckdirCategory(dir Path) {
 	for !mlex.EOF() {
 		mkline := mlex.CurrentMkLine()
 
-		if (mkline.IsVarassignMaybeCommented()) && mkline.Varname() == "SUBDIR" {
+		if mkline.IsVarassignMaybeCommented() && mkline.Varname() == "SUBDIR" {
 			mlex.Skip()
 
 			name := mkline.Value() // TODO: Maybe NewPath here already
@@ -155,7 +155,7 @@ func CheckdirCategory(dir Path) {
 	mklines.SaveAutofixChanges()
 
 	if G.Opts.Recursive {
-		var recurseInto []Path
+		var recurseInto []CurrPath
 		for _, msub := range mSubdirs {
 			if !msub.line.IsCommentedVarassign() {
 				recurseInto = append(recurseInto, dir.JoinNoClean(msub.name))

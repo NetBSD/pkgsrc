@@ -17,7 +17,7 @@ func CheckLinesDistinfo(pkg *Package, lines *Lines) {
 	}
 
 	filename := lines.Filename
-	patchdir := NewPath("patches")
+	patchdir := NewPackagePath("patches")
 	if pkg != nil && pkg.File(pkg.Patchdir).IsDir() {
 		patchdir = pkg.Patchdir
 	}
@@ -40,7 +40,7 @@ func CheckLinesDistinfo(pkg *Package, lines *Lines) {
 type distinfoLinesChecker struct {
 	pkg                 *Package
 	lines               *Lines
-	patchdir            Path // Relative to pkg
+	patchdir            PackagePath
 	distinfoIsCommitted bool
 
 	filenames []Path // For keeping the order from top to bottom
@@ -89,7 +89,7 @@ func (ck *distinfoLinesChecker) parse() {
 			continue
 		}
 
-		if prevFilename != "" && filename != prevFilename {
+		if !prevFilename.IsEmpty() && filename != prevFilename {
 			finishGroup()
 		}
 		prevFilename = filename
@@ -97,7 +97,7 @@ func (ck *distinfoLinesChecker) parse() {
 		hashes = append(hashes, distinfoHash{line, filename, alg, hash})
 	}
 
-	if prevFilename != "" {
+	if !prevFilename.IsEmpty() {
 		finishGroup()
 	}
 }
@@ -194,7 +194,7 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 
 	distdir := G.Pkgsrc.File("distfiles")
 
-	distfile := cleanpath(distdir.JoinNoClean(info.filename()))
+	distfile := distdir.JoinNoClean(info.filename()).CleanPath()
 	if !distfile.IsFile() {
 
 		// It's a rare situation that the explanation is generated
@@ -380,7 +380,7 @@ func (ck *distinfoLinesChecker) checkUncommittedPatch(info distinfoHash) {
 	}
 }
 
-func (ck *distinfoLinesChecker) checkPatchSha1(line *Line, patchFileName Path, distinfoSha1Hex string) {
+func (ck *distinfoLinesChecker) checkPatchSha1(line *Line, patchFileName PackagePath, distinfoSha1Hex string) {
 	lines := Load(ck.pkg.File(patchFileName), 0)
 	if lines == nil {
 		line.Errorf("Patch %s does not exist.", patchFileName)

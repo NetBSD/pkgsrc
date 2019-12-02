@@ -341,6 +341,7 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 	vt := NewVartypeCheckTester(t, BtDependencyWithPath)
 
 	t.CreateFileLines("category/package/Makefile")
+	t.CreateFileLines("category/package/files/dummy")
 	t.CreateFileLines("databases/py-sqlite3/Makefile")
 	t.CreateFileLines("devel/gettext/Makefile")
 	t.CreateFileLines("devel/gmake/Makefile")
@@ -404,6 +405,14 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 			"Invalid dependency pattern \"${PYPKGPREFIX}-sqlite3\".",
 		"WARN: ~/category/package/filename.mk:22: "+
 			"Invalid dependency pattern \"${PYPKGPREFIX}-sqlite3\".")
+
+	vt.Values(
+		"gettext-[0-9]*:files/../../../databases/py-sqlite3")
+
+	vt.Output(
+		"WARN: ~/category/package/filename.mk:31: " +
+			"\"files/../../../databases/py-sqlite3\" is " +
+			"not a valid relative package directory.")
 }
 
 func (s *Suite) Test_VartypeCheck_DistSuffix(c *check.C) {
@@ -1544,6 +1553,16 @@ func (s *Suite) Test_VartypeCheck_Tool(c *check.C) {
 		"${t}\\:build")
 
 	vt.OutputEmpty()
+
+	vt.Op(opAssignAppend)
+	vt.Values(
+		"tool1:bootstrap",
+		"tool1:build",
+		"tool1:pkgsrc",
+		"tool1:run",
+		"tool1:test")
+
+	vt.OutputEmpty()
 }
 
 func (s *Suite) Test_VartypeCheck_URL(c *check.C) {
@@ -1771,6 +1790,24 @@ func (s *Suite) Test_VartypeCheck_YesNo(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:3: PKG_DEVELOPER should be set to YES, yes, NO, or no.",
 		"WARN: filename.mk:4: PKG_DEVELOPER should be set to YES, yes, NO, or no.")
+
+	vt.Op(opUseMatch)
+	vt.Values(
+		"yes",
+		"[Yy]es",
+		"[Yy][Ee][Ss]",
+		"[yY][eE][sS]",
+		"[Nn]o",
+		"[Nn][Oo]",
+		"[nN][oO]")
+
+	vt.Output(
+		"WARN: filename.mk:11: PKG_DEVELOPER should be matched against "+
+			"\"[yY][eE][sS]\" or \"[nN][oO]\", not \"yes\".",
+		"WARN: filename.mk:12: PKG_DEVELOPER should be matched against "+
+			"\"[yY][eE][sS]\" or \"[nN][oO]\", not \"[Yy]es\".",
+		"WARN: filename.mk:15: PKG_DEVELOPER should be matched against "+
+			"\"[yY][eE][sS]\" or \"[nN][oO]\", not \"[Nn]o\".")
 }
 
 func (s *Suite) Test_VartypeCheck_YesNoIndirectly(c *check.C) {
@@ -1793,7 +1830,7 @@ func (s *Suite) Test_VartypeCheck_YesNoIndirectly(c *check.C) {
 type VartypeCheckTester struct {
 	tester    *Tester
 	basicType *BasicType
-	filename  Path
+	filename  CurrPath
 	lineno    int
 	varname   string
 	op        MkOperator
@@ -1821,7 +1858,7 @@ func (vt *VartypeCheckTester) Varname(varname string) {
 	vt.nextSection()
 }
 
-func (vt *VartypeCheckTester) File(filename Path) {
+func (vt *VartypeCheckTester) File(filename CurrPath) {
 	vt.filename = filename
 	vt.lineno = 1
 }

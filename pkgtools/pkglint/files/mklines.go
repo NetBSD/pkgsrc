@@ -440,7 +440,7 @@ func (mklines *MkLines) checkVarassignPlist(mkline *MkLine) {
 
 // CheckUsedBy checks that this file (a Makefile.common) has the given
 // relativeName in one of the "# used by" comments at the beginning of the file.
-func (mklines *MkLines) CheckUsedBy(relativeName Path) {
+func (mklines *MkLines) CheckUsedBy(relativeName PkgsrcPath) {
 	lines := mklines.lines
 	if lines.Len() < 3 {
 		return

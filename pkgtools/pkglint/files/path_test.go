@@ -16,17 +16,6 @@ func (s *Suite) Test_NewPath(c *check.C) {
 	c.Check(NewPath("\\"), check.Not(check.Equals), NewPath("/"))
 }
 
-func (s *Suite) Test_NewPathSlash(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(NewPathSlash("filename"), NewPathSlash("filename"))
-	t.CheckEquals(NewPathSlash("\\"), NewPathSlash("\\"))
-
-	t.CheckEquals(
-		NewPathSlash("\\"),
-		NewPathSlash(condStr(runtime.GOOS == "windows", "/", "\\")))
-}
-
 func (s *Suite) Test_Path_String(c *check.C) {
 	t := s.Init(c)
 
@@ -60,11 +49,29 @@ func (s *Suite) Test_Path_IsEmpty(c *check.C) {
 	test("/", false)
 }
 
-func (s *Suite) Test_Path_Dir(c *check.C) {
+func (s *Suite) Test_Path_DirClean(c *check.C) {
 	t := s.Init(c)
 
 	test := func(p, dir Path) {
-		t.CheckEquals(p.Dir(), dir)
+		t.CheckEquals(p.DirClean(), dir)
+	}
+
+	test("", ".")
+	test("././././", ".")
+	test("/root", "/")
+	test("filename", ".")
+	test("dir/filename", "dir")
+	test("dir/filename\\with\\backslash", "dir")
+
+	// TODO: I didn't expect that Dir would return the cleaned path.
+	test("././././dir/filename", "dir")
+}
+
+func (s *Suite) Test_Path_DirNoClean(c *check.C) {
+	t := s.Init(c)
+
+	test := func(p, dir Path) {
+		t.CheckEquals(p.DirNoClean(), dir)
 	}
 
 	test("", ".")
@@ -294,32 +301,6 @@ func (s *Suite) Test_Path_ContainsPath(c *check.C) {
 	test("aa/bb/cc", "c", false)
 }
 
-func (s *Suite) Test_Path_ContainsPathCanonical(c *check.C) {
-	t := s.Init(c)
-
-	test := func(p, sub Path, contains bool) {
-		t.CheckEquals(p.ContainsPathCanonical(sub), contains)
-	}
-
-	test("", "", false)
-	test(".", "", false)
-	test("filename", "", false)
-	test("filename", "filename", true)
-	test("a/b/c", "a", true)
-	test("a/b/c", "b", true)
-	test("a/b/c", "c", true)
-	test("a/b/c", "a/b", true)
-	test("a/b/c", "b/c", true)
-	test("a/b/c", "a/b/c", true)
-	test("aa/b/c", "a", false)
-	test("a/bb/c", "b", false)
-	test("a/bb/c", "b/c", false)
-	test("mk/fetch/fetch.mk", "mk", true)
-	test("category/package/../../wip/mk", "mk", true)
-	test("category/package/../../wip/mk/..", "mk", true) // FIXME
-	test("category/package/../../wip/mk/../..", "mk", false)
-}
-
 func (s *Suite) Test_Path_HasSuffixText(c *check.C) {
 	t := s.Init(c)
 
@@ -444,6 +425,61 @@ func (s *Suite) Test_Path_CleanDot(c *check.C) {
 	test("/absolute", "/absolute")
 	test("/usr/pkgsrc/wip/package", "/usr/pkgsrc/wip/package")
 	test("/usr/pkgsrc/wip/package/../mk/git-package.mk", "/usr/pkgsrc/wip/package/../mk/git-package.mk")
+	test("a//b", "a/b")
+}
+
+func (s *Suite) Test_Path_CleanPath(c *check.C) {
+	t := s.Init(c)
+
+	test := func(from, to Path) {
+		t.CheckEquals(from.CleanPath(), to)
+	}
+
+	test("simple/path", "simple/path")
+	test("/absolute/path", "/absolute/path")
+
+	// Single dot components are removed, unless it's the only component of the path.
+	test("./././.", ".")
+	test("./././", ".")
+	test("dir/multi/././/file", "dir/multi/file")
+	test("dir/", "dir")
+
+	test("dir/", "dir")
+
+	// Components like aa/bb/../.. are removed, but not in the initial part of the path,
+	// and only if they are not followed by another "..".
+	test("dir/../dir/../dir/../dir/subdir/../../Makefile", "dir/../dir/../dir/../Makefile")
+	test("111/222/../../333/444/../../555/666/../../777/888/9", "111/222/../../777/888/9")
+	test("1/2/3/../../4/5/6/../../7/8/9/../../../../10", "1/2/3/../../4/7/8/9/../../../../10")
+	test("cat/pkg.v1/../../cat/pkg.v2/Makefile", "cat/pkg.v1/../../cat/pkg.v2/Makefile")
+	test("aa/../../../../../a/b/c/d", "aa/../../../../../a/b/c/d")
+	test("aa/bb/../../../../a/b/c/d", "aa/bb/../../../../a/b/c/d")
+	test("aa/bb/cc/../../../a/b/c/d", "aa/bb/cc/../../../a/b/c/d")
+	test("aa/bb/cc/dd/../../a/b/c/d", "aa/bb/a/b/c/d")
+	test("aa/bb/cc/dd/ee/../a/b/c/d", "aa/bb/cc/dd/ee/../a/b/c/d")
+	test("../../../../../a/b/c/d", "../../../../../a/b/c/d")
+	test("aa/../../../../a/b/c/d", "aa/../../../../a/b/c/d")
+	test("aa/bb/../../../a/b/c/d", "aa/bb/../../../a/b/c/d")
+	test("aa/bb/cc/../../a/b/c/d", "aa/bb/cc/../../a/b/c/d")
+	test("aa/bb/cc/dd/../a/b/c/d", "aa/bb/cc/dd/../a/b/c/d")
+	test("aa/../cc/../../a/b/c/d", "aa/../cc/../../a/b/c/d")
+
+	// The initial 2 components of the path are typically category/package, when
+	// pkglint is called from the pkgsrc top-level directory.
+	// This path serves as the context and therefore is always kept.
+	test("aa/bb/../../cc/dd/../../ee/ff", "aa/bb/../../ee/ff")
+	test("aa/bb/../../cc/dd/../..", "aa/bb/../..")
+	test("aa/bb/cc/dd/../..", "aa/bb")
+	test("aa/bb/../../cc/dd/../../ee/ff/buildlink3.mk", "aa/bb/../../ee/ff/buildlink3.mk")
+	test("./aa/bb/../../cc/dd/../../ee/ff/buildlink3.mk", "aa/bb/../../ee/ff/buildlink3.mk")
+
+	test("../.", "..")
+	test("../././././././.", "..")
+	test(".././././././././", "..")
+
+	test(
+		"x11/kde-runtime4/../../misc/kdepimlibs4/../../databases/openldap-client/buildlink3.mk",
+		"x11/kde-runtime4/../../databases/openldap-client/buildlink3.mk")
 }
 
 func (s *Suite) Test_Path_IsAbs(c *check.C) {
@@ -473,13 +509,332 @@ func (s *Suite) Test_Path_Rel(c *check.C) {
 	t.CheckEquals(abc.Rel(base), NewPath("../../../."))
 }
 
-func (s *Suite) Test_Path_Rename(c *check.C) {
+func (s *Suite) Test_NewCurrPath(c *check.C) {
+	t := s.Init(c)
+
+	curr := NewCurrPath("dir/.///file")
+
+	t.CheckEquals(curr.String(), "dir/.///file")
+}
+
+func (s *Suite) Test_NewCurrPathString(c *check.C) {
+	t := s.Init(c)
+
+	curr := NewCurrPathString("dir/.///file")
+
+	t.CheckEquals(curr.String(), "dir/.///file")
+}
+
+func (s *Suite) Test_NewCurrPathSlash(c *check.C) {
+	t := s.Init(c)
+
+	test := func(path, curr string) {
+		t.CheckEquals(NewCurrPathSlash(path).String(), curr)
+	}
+	testWindows := func(path, currWindows, currOther string) {
+		t.CheckEquals(
+			NewCurrPathSlash(path).String(),
+			condStr(runtime.GOOS == "windows", currWindows, currOther))
+	}
+
+	test("filename", "filename")
+	test("dir/.///file", "dir/.///file")
+
+	testWindows("\\", "/", "\\")
+}
+
+func (s *Suite) Test_NewCurrPathSlash__windows(c *check.C) {
+	t := s.Init(c)
+
+	if runtime.GOOS != "windows" {
+		return
+	}
+
+	curr := NewCurrPathSlash("dir\\.\\\\\\file")
+
+	t.CheckEquals(curr.String(), "dir/.///file")
+}
+
+func (s *Suite) Test_CurrPath_GoString(c *check.C) {
+	t := s.Init(c)
+
+	// Tabs in filenames are rare, probably typos.
+	curr := NewCurrPath("dir/file\t")
+
+	t.CheckEquals(curr.GoString(), "\"dir/file\\t\"")
+}
+
+func (s *Suite) Test_CurrPath_String(c *check.C) {
+	t := s.Init(c)
+
+	// Tabs in filenames are rare, probably typos.
+	curr := NewCurrPath("dir/file\t")
+
+	t.CheckEquals(curr.String(), "dir/file\t")
+}
+
+func (s *Suite) Test_CurrPath_AsPath(c *check.C) {
+	t := s.Init(c)
+
+	// Tabs in filenames are rare, probably typos.
+	curr := NewCurrPath("dir/file\t")
+
+	t.CheckEquals(curr.AsPath(), NewPath("dir/file\t"))
+}
+
+func (s *Suite) Test_CurrPath_IsEmpty(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, isEmpty bool) {
+		t.CheckEquals(curr.IsEmpty(), isEmpty)
+	}
+
+	test("", true)
+	test(".", false)
+	test("/", false)
+}
+
+func (s *Suite) Test_CurrPath_DirClean(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr, dir CurrPath) {
+		t.CheckEquals(curr.DirClean(), dir)
+	}
+
+	test("./dir/../dir///./file", "dir")
+}
+
+func (s *Suite) Test_CurrPath_DirNoClean(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr, dir CurrPath) {
+		t.CheckEquals(curr.DirNoClean(), dir)
+	}
+
+	test("./dir/../dir///./file", "./dir/../dir")
+}
+
+func (s *Suite) Test_CurrPath_Base(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, base string) {
+		t.CheckEquals(curr.Base(), base)
+	}
+
+	test("dir/file", "file")
+}
+
+func (s *Suite) Test_CurrPath_Split(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr, dir CurrPath, base string) {
+		actualDir, actualBase := curr.Split()
+		t.CheckEquals(actualDir, dir)
+		t.CheckEquals(actualBase, base)
+	}
+
+	test("dir/file", "dir/", "file")
+}
+
+func (s *Suite) Test_CurrPath_Parts(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, parts ...string) {
+		t.CheckDeepEquals(curr.Parts(), parts)
+	}
+
+	test("dir/file", "dir", "file")
+}
+
+func (s *Suite) Test_CurrPath_IsAbs(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, isAbs bool) {
+		t.CheckDeepEquals(curr.IsAbs(), isAbs)
+	}
+
+	test("/", true)
+	test("./", false)
+	test("C:/", runtime.GOOS == "windows")
+}
+
+func (s *Suite) Test_CurrPath_HasPrefixPath(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr, prefix CurrPath, hasPrefix bool) {
+		t.CheckEquals(curr.HasPrefixPath(prefix), hasPrefix)
+	}
+
+	test("dir/file", "dir", true)
+	test("dir/file", "file", false)
+	test("dir", ".", true)
+}
+
+func (s *Suite) Test_CurrPath_ContainsPath(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, sub Path, hasPrefix bool) {
+		t.CheckEquals(curr.ContainsPath(sub), hasPrefix)
+	}
+
+	test("dir/file", "dir", true)
+	test("dir/file", "file", true)
+	test("dir/file", "fi", false)
+	test("dir", ".", true)
+}
+
+func (s *Suite) Test_CurrPath_ContainsText(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, sub string, hasPrefix bool) {
+		t.CheckEquals(curr.ContainsText(sub), hasPrefix)
+	}
+
+	test("dir/file", "dir", true)
+	test("dir/file", "r/f", true)
+}
+
+func (s *Suite) Test_CurrPath_HasSuffixPath(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, suffix Path, hasPrefix bool) {
+		t.CheckEquals(curr.HasSuffixPath(suffix), hasPrefix)
+	}
+
+	test("dir/file", "dir", false)
+	test("dir/file", "file", true)
+	test("dir/file", "le", false)
+
+	// In contrast to HasPrefixPath, it doesn't really make sense to
+	// ask whether a path ends with the current directory.
+	test("dir", ".", false)
+}
+
+func (s *Suite) Test_CurrPath_HasSuffixText(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, suffix string, hasPrefix bool) {
+		t.CheckEquals(curr.HasSuffixText(suffix), hasPrefix)
+	}
+
+	test("dir/file", "dir", false)
+	test("dir/file", "file", true)
+	test("dir/file", "le", true)
+}
+
+func (s *Suite) Test_CurrPath_HasBase(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, base string, hasPrefix bool) {
+		t.CheckEquals(curr.HasBase(base), hasPrefix)
+	}
+
+	test("dir/file", "dir", false)
+	test("dir/file", "file", true)
+	test("dir/file", "le", false)
+}
+
+func (s *Suite) Test_CurrPath_TrimSuffix(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, suffix string, trimmed CurrPath) {
+		t.CheckEquals(curr.TrimSuffix(suffix), trimmed)
+	}
+
+	test("dir/file", "dir", "dir/file")
+	test("dir/file", "file", "dir/")
+	test("dir/file", "le", "dir/fi")
+}
+
+func (s *Suite) Test_CurrPath_ReplaceSuffix(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, from, to string, replaced CurrPath) {
+		t.CheckEquals(curr.ReplaceSuffix(from, to), replaced)
+	}
+
+	test("dir/file", "file", "subdir", "dir/subdir")
+
+	// The path must actually end with the suffix, otherwise there is
+	// the risk of creating unintended paths.
+	t.ExpectAssert(
+		func() { test("dir/file", "no-match", "anything", "dir/file") })
+}
+
+func (s *Suite) Test_CurrPath_Clean(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr, cleaned CurrPath) {
+		t.CheckEquals(curr.Clean(), cleaned)
+	}
+
+	test("dir/file", "dir/file")
+	test("dir/.////../file", "file")
+}
+
+func (s *Suite) Test_CurrPath_CleanDot(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr, cleaned CurrPath) {
+		t.CheckEquals(curr.CleanDot(), cleaned)
+	}
+
+	test("dir/file", "dir/file")
+	test("dir/.////../file", "dir/../file")
+}
+
+func (s *Suite) Test_CurrPath_CleanPath(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr, cleaned CurrPath) {
+		t.CheckEquals(curr.CleanPath(), cleaned)
+	}
+
+	test("a/b/../../c/d/../../e/../f", "a/b/../../e/../f")
+}
+
+func (s *Suite) Test_CurrPath_JoinNoClean(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, other Path, joined CurrPath) {
+		t.CheckEquals(curr.JoinNoClean(other), joined)
+	}
+
+	test("", "", "/")
+	test(".", "file", "./file")
+	test("dir", "subdir/file", "dir/subdir/file")
+}
+
+func (s *Suite) Test_CurrPath_JoinClean(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr CurrPath, other Path, joined CurrPath) {
+		t.CheckEquals(curr.JoinClean(other), joined)
+	}
+
+	test("", "", "")
+	test(".", "./////file", "file")
+	test("dir/./.", "../subdir/file", "subdir/file")
+}
+
+func (s *Suite) Test_CurrPath_Rel(c *check.C) {
+	t := s.Init(c)
+
+	test := func(curr, suffix CurrPath, rel Path) {
+		t.CheckEquals(curr.Rel(suffix), rel)
+	}
+
+	test("dir/subdir", "dir", "..")
+	test("dir/subdir", "file", "../../file")
+}
+
+func (s *Suite) Test_CurrPath_Rename(c *check.C) {
 	t := s.Init(c)
 
 	f := t.CreateFileLines("filename.old",
 		"line 1")
 	t.CheckEquals(f.IsFile(), true)
-	dst := NewPath(f.TrimSuffix(".old").String() + ".new")
+	dst := f.ReplaceSuffix(".old", ".new")
 
 	err := f.Rename(dst)
 
@@ -489,10 +844,10 @@ func (s *Suite) Test_Path_Rename(c *check.C) {
 		"line 1")
 }
 
-func (s *Suite) Test_Path_Lstat(c *check.C) {
+func (s *Suite) Test_CurrPath_Lstat(c *check.C) {
 	t := s.Init(c)
 
-	testDir := func(f Path, isDir bool) {
+	testDir := func(f CurrPath, isDir bool) {
 		st, err := f.Lstat()
 		assertNil(err, "Lstat")
 		t.CheckEquals(st.Mode()&os.ModeDir != 0, isDir)
@@ -505,10 +860,10 @@ func (s *Suite) Test_Path_Lstat(c *check.C) {
 	testDir(t.File("file"), false)
 }
 
-func (s *Suite) Test_Path_Stat(c *check.C) {
+func (s *Suite) Test_CurrPath_Stat(c *check.C) {
 	t := s.Init(c)
 
-	testDir := func(f Path, isDir bool) {
+	testDir := func(f CurrPath, isDir bool) {
 		st, err := f.Stat()
 		assertNil(err, "Stat")
 		t.CheckEquals(st.Mode()&os.ModeDir != 0, isDir)
@@ -521,10 +876,10 @@ func (s *Suite) Test_Path_Stat(c *check.C) {
 	testDir(t.File("file"), false)
 }
 
-func (s *Suite) Test_Path_Exists(c *check.C) {
+func (s *Suite) Test_CurrPath_Exists(c *check.C) {
 	t := s.Init(c)
 
-	test := func(f Path, exists bool) {
+	test := func(f CurrPath, exists bool) {
 		t.CheckEquals(f.Exists(), exists)
 	}
 
@@ -536,7 +891,7 @@ func (s *Suite) Test_Path_Exists(c *check.C) {
 	test(t.File("enoent"), false)
 }
 
-func (s *Suite) Test_Path_IsFile(c *check.C) {
+func (s *Suite) Test_CurrPath_IsFile(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("dir/file")
@@ -547,7 +902,7 @@ func (s *Suite) Test_Path_IsFile(c *check.C) {
 	t.CheckEquals(t.File("dir/file").IsFile(), true)
 }
 
-func (s *Suite) Test_Path_IsDir(c *check.C) {
+func (s *Suite) Test_CurrPath_IsDir(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("dir/file")
@@ -558,10 +913,10 @@ func (s *Suite) Test_Path_IsDir(c *check.C) {
 	t.CheckEquals(t.File("dir/file").IsDir(), false)
 }
 
-func (s *Suite) Test_Path_Chmod(c *check.C) {
+func (s *Suite) Test_CurrPath_Chmod(c *check.C) {
 	t := s.Init(c)
 
-	testWritable := func(f Path, writable bool) {
+	testWritable := func(f CurrPath, writable bool) {
 		lstat, err := f.Lstat()
 		assertNil(err, "Lstat")
 		t.CheckEquals(lstat.Mode().Perm()&0200 != 0, writable)
@@ -576,7 +931,7 @@ func (s *Suite) Test_Path_Chmod(c *check.C) {
 	testWritable(f, false)
 }
 
-func (s *Suite) Test_Path_ReadDir(c *check.C) {
+func (s *Suite) Test_CurrPath_ReadDir(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("subdir/file")
@@ -595,7 +950,23 @@ func (s *Suite) Test_Path_ReadDir(c *check.C) {
 	t.CheckDeepEquals(names, []string{".git", "CVS", "file", "subdir"})
 }
 
-func (s *Suite) Test_Path_Open(c *check.C) {
+func (s *Suite) Test_CurrPath_ReadPaths(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("dir/subdir/file")
+	t.CreateFileLines("dir/CVS/Entries")
+	t.CreateFileLines("dir/file")
+
+	p := t.File("dir")
+
+	paths := p.ReadPaths()
+
+	t.CheckDeepEquals(paths, []CurrPath{
+		t.File("dir/file"),
+		t.File("dir/subdir")})
+}
+
+func (s *Suite) Test_CurrPath_Open(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("filename",
@@ -613,7 +984,7 @@ func (s *Suite) Test_Path_Open(c *check.C) {
 	t.CheckEquals(sb.String(), "line 1\nline 2\n")
 }
 
-func (s *Suite) Test_Path_ReadString(c *check.C) {
+func (s *Suite) Test_CurrPath_ReadString(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("filename",
@@ -626,7 +997,7 @@ func (s *Suite) Test_Path_ReadString(c *check.C) {
 	t.CheckEquals(text, "line 1\nline 2\n")
 }
 
-func (s *Suite) Test_Path_WriteString(c *check.C) {
+func (s *Suite) Test_CurrPath_WriteString(c *check.C) {
 	t := s.Init(c)
 
 	err := t.File("filename").WriteString("line 1\nline 2\n")
@@ -635,4 +1006,332 @@ func (s *Suite) Test_Path_WriteString(c *check.C) {
 	t.CheckFileLines("filename",
 		"line 1",
 		"line 2")
+}
+
+func (s *Suite) Test_NewPkgsrcPath(c *check.C) {
+	t := s.Init(c)
+
+	p := NewPkgsrcPath("category/package")
+
+	t.CheckEquals(p.AsPath(), NewPath("category/package"))
+}
+
+func (s *Suite) Test_PkgsrcPath_String(c *check.C) {
+	t := s.Init(c)
+
+	p := NewPkgsrcPath("any string..././")
+
+	str := p.String()
+
+	// No normalization takes place because it is typically not needed.
+	t.CheckEquals(str, "any string..././")
+}
+
+func (s *Suite) Test_PkgsrcPath_AsPath(c *check.C) {
+	t := s.Init(c)
+
+	pp := NewPkgsrcPath("./category/package/Makefile")
+
+	p := pp.AsPath()
+
+	t.CheckEquals(p.String(), "./category/package/Makefile")
+}
+
+func (s *Suite) Test_PkgsrcPath_DirClean(c *check.C) {
+	t := s.Init(c)
+
+	pp := NewPkgsrcPath("./dir/../dir/base///.")
+
+	dir := pp.DirClean()
+
+	t.CheckEquals(dir, NewPkgsrcPath("dir/base"))
+}
+
+func (s *Suite) Test_PkgsrcPath_DirNoClean(c *check.C) {
+	t := s.Init(c)
+
+	pp := NewPkgsrcPath("./dir/../dir/base///.")
+
+	dir := pp.DirNoClean()
+
+	t.CheckEquals(dir, NewPkgsrcPath("./dir/../dir/base"))
+}
+
+func (s *Suite) Test_PkgsrcPath_Base(c *check.C) {
+	t := s.Init(c)
+
+	pp := NewPkgsrcPath("dir/base///.")
+
+	base := pp.Base()
+
+	t.CheckEquals(base, ".")
+}
+
+func (s *Suite) Test_PkgsrcPath_Count(c *check.C) {
+	t := s.Init(c)
+
+	pp := NewPkgsrcPath("./...////dir")
+
+	count := pp.Count()
+
+	t.CheckEquals(count, 2)
+}
+
+func (s *Suite) Test_PkgsrcPath_HasPrefixPath(c *check.C) {
+	t := s.Init(c)
+
+	pp := NewPkgsrcPath("./././///prefix/suffix")
+
+	hasPrefixPath := pp.HasPrefixPath("prefix")
+
+	t.CheckEquals(hasPrefixPath, true)
+}
+
+func (s *Suite) Test_PkgsrcPath_JoinNoClean(c *check.C) {
+	t := s.Init(c)
+
+	pp := NewPkgsrcPath("base///.")
+
+	joined := pp.JoinNoClean("./../rel")
+
+	t.CheckEquals(joined, NewPkgsrcPath("base///././../rel"))
+}
+
+func (s *Suite) Test_PkgsrcPath_JoinRel(c *check.C) {
+	t := s.Init(c)
+
+	pp := NewPkgsrcPath("base///.")
+
+	joined := pp.JoinRel("./../rel")
+
+	t.CheckEquals(joined, NewPkgsrcPath("base///././../rel"))
+}
+
+func (s *Suite) Test_NewPackagePath(c *check.C) {
+	t := s.Init(c)
+
+	p := NewPackagePath("../../category/package")
+
+	t.CheckEquals(p.AsPath(), NewPath("../../category/package"))
+}
+
+func (s *Suite) Test_PackagePath_AsPath(c *check.C) {
+	t := s.Init(c)
+
+	pp := NewPackagePath("../../category/package/Makefile")
+
+	p := pp.AsPath()
+
+	t.CheckEquals(p.String(), "../../category/package/Makefile")
+}
+
+func (s *Suite) Test_PackagePath_String(c *check.C) {
+	t := s.Init(c)
+
+	pp := NewPackagePath("../../category/package/Makefile")
+
+	str := pp.String()
+
+	t.CheckEquals(str, "../../category/package/Makefile")
+}
+
+func (s *Suite) Test_PackagePath_JoinNoClean(c *check.C) {
+	t := s.Init(c)
+
+	pp := NewPackagePath("../../category/package/Makefile")
+
+	p := pp.JoinNoClean("patches")
+
+	t.CheckEquals(p.String(), "../../category/package/Makefile/patches")
+}
+
+func (s *Suite) Test_PackagePath_IsEmpty(c *check.C) {
+	t := s.Init(c)
+
+	test := func(p PackagePath, isEmpty bool) {
+		t.CheckEquals(p.IsEmpty(), isEmpty)
+	}
+
+	test("", true)
+	test(".", false)
+}
+
+func (s *Suite) Test_NewRelPath(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("dir/file")
+
+	t.CheckEquals(rel.String(), "dir/file")
+}
+
+func (s *Suite) Test_NewRelPathString(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPathString("dir/file")
+
+	t.CheckEquals(rel.String(), "dir/file")
+}
+
+func (s *Suite) Test_RelPath_AsPath(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("relative")
+
+	path := rel.AsPath()
+
+	t.CheckEquals(path.String(), "relative")
+}
+
+func (s *Suite) Test_RelPath_String(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath(".///rel")
+
+	str := rel.String()
+
+	t.CheckEquals(str, ".///rel")
+}
+
+func (s *Suite) Test_RelPath_DirClean(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("./dir/../dir///./file")
+
+	dir := rel.DirClean()
+
+	t.CheckEquals(dir, NewRelPath("dir"))
+}
+
+func (s *Suite) Test_RelPath_DirNoClean(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("./dir/../dir///./file")
+
+	dir := rel.DirNoClean()
+
+	t.CheckEquals(dir, NewRelPath("./dir/../dir"))
+}
+
+func (s *Suite) Test_RelPath_Base(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("./dir////./file")
+
+	base := rel.Base()
+
+	t.CheckEquals(base, "file")
+}
+
+func (s *Suite) Test_RelPath_HasBase(c *check.C) {
+	t := s.Init(c)
+
+	test := func(rel RelPath, base string, hasBase bool) {
+		t.CheckEquals(rel.HasBase(base), hasBase)
+	}
+
+	test("./dir/Makefile", "Makefile", true)
+	test("./dir/Makefile", "Make", false)
+	test("./dir/Makefile", "file", false)
+	test("./dir/Makefile", "dir/Makefile", false)
+}
+
+func (s *Suite) Test_RelPath_Parts(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("./dir/.///base")
+
+	parts := rel.Parts()
+
+	t.CheckDeepEquals(parts, []string{"dir", "base"})
+}
+
+func (s *Suite) Test_RelPath_Count(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("./dir/.///base")
+
+	count := rel.Count()
+
+	t.CheckDeepEquals(count, 2)
+}
+
+func (s *Suite) Test_RelPath_Clean(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("a/b/../../c/d/../../e/../f")
+
+	cleaned := rel.Clean()
+
+	t.CheckEquals(cleaned, NewRelPath("f"))
+}
+
+func (s *Suite) Test_RelPath_CleanPath(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("a/b/../../c/d/../../e/../f")
+
+	cleaned := rel.CleanPath()
+
+	t.CheckEquals(cleaned, NewRelPath("a/b/../../e/../f"))
+}
+
+func (s *Suite) Test_RelPath_JoinNoClean(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("basedir/.//")
+
+	joined := rel.JoinNoClean("./other")
+
+	t.CheckEquals(joined, NewRelPath("basedir/.///./other"))
+}
+
+func (s *Suite) Test_RelPath_Replace(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("dir/subdir/file")
+
+	replaced := rel.Replace("/", ":")
+
+	t.CheckEquals(replaced, NewRelPath("dir:subdir:file"))
+}
+
+func (s *Suite) Test_RelPath_HasPrefixPath(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("dir/subdir/file")
+
+	t.CheckEquals(rel.HasPrefixPath("dir"), true)
+	t.CheckEquals(rel.HasPrefixPath("dir/sub"), false)
+	t.CheckEquals(rel.HasPrefixPath("subdir"), false)
+}
+
+func (s *Suite) Test_RelPath_ContainsPath(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("dir/subdir/file")
+
+	t.CheckEquals(rel.ContainsPath("dir"), true)
+	t.CheckEquals(rel.ContainsPath("dir/sub"), false)
+	t.CheckEquals(rel.ContainsPath("subdir"), true)
+}
+
+func (s *Suite) Test_RelPath_ContainsText(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("dir/subdir/file")
+
+	t.CheckEquals(rel.ContainsText("dir"), true)
+	t.CheckEquals(rel.ContainsText("dir/sub"), true)
+	t.CheckEquals(rel.ContainsText("subdir"), true)
+	t.CheckEquals(rel.ContainsText("super"), false)
+}
+
+func (s *Suite) Test_RelPath_HasSuffixPath(c *check.C) {
+	t := s.Init(c)
+
+	rel := NewRelPath("dir/subdir/file")
+
+	t.CheckEquals(rel.HasSuffixPath("file"), true)
+	t.CheckEquals(rel.HasSuffixPath("subdir/file"), true)
+	t.CheckEquals(rel.HasSuffixPath("subdir"), false)
 }

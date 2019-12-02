@@ -4,6 +4,7 @@ import "netbsd.org/pkglint/textproc"
 
 type ShTokenizer struct {
 	parser *MkLexer
+	inWord bool
 }
 
 func NewShTokenizer(line *Line, text string, emitWarnings bool) *ShTokenizer {
@@ -13,7 +14,7 @@ func NewShTokenizer(line *Line, text string, emitWarnings bool) *ShTokenizer {
 		emitWarnings = true
 	}
 	mklex := NewMkLexer(text, line)
-	return &ShTokenizer{mklex}
+	return &ShTokenizer{mklex, false}
 }
 
 // ShAtom parses a basic building block of a shell program.
@@ -81,6 +82,8 @@ func (p *ShTokenizer) shAtomPlain() *ShAtom {
 	if op := p.shOperator(q); op != nil {
 		return op
 	}
+	inWord := p.inWord
+	p.inWord = false
 	lexer := p.parser.lexer
 	mark := lexer.Mark()
 	switch {
@@ -92,7 +95,7 @@ func (p *ShTokenizer) shAtomPlain() *ShAtom {
 		return &ShAtom{shtText, lexer.Since(mark), shqSquot, nil}
 	case lexer.SkipByte('`'):
 		return &ShAtom{shtText, lexer.Since(mark), shqBackt, nil}
-	case lexer.PeekByte() == '#':
+	case lexer.PeekByte() == '#' && !inWord:
 		rest := lexer.Rest()
 		lexer.Skip(len(rest))
 		return &ShAtom{shtComment, rest, q, nil}
@@ -293,6 +296,7 @@ func (p *ShTokenizer) shAtomDquotBacktSquot() *ShAtom {
 //  ${var:=default}
 func (p *ShTokenizer) shAtomInternal(q ShQuoting, dquot, squot bool) *ShAtom {
 	if shVarUse := p.shVarUse(q); shVarUse != nil {
+		p.inWord = true
 		return shVarUse
 	}
 
@@ -332,6 +336,7 @@ loop:
 	}
 
 	if token := lexer.Since(mark); token != "" {
+		p.inWord = true
 		return &ShAtom{shtText, token, q, nil}
 	}
 	return nil

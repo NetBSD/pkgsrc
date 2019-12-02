@@ -49,3 +49,18 @@ func (s *Suite) Test_LinesLexer_SkipEmptyOrNote__end_of_file(c *check.C) {
 	t.CheckOutputLines(
 		"NOTE: file.txt:2: Empty line expected after this line.")
 }
+
+func (s *Suite) Test_MkLinesLexer_SkipIf(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("filename.mk",
+		"# comment",
+		"VAR=\tnot a comment")
+	mlex := NewMkLinesLexer(mklines)
+
+	t.CheckEquals(mlex.SkipIf((*MkLine).IsComment), true)
+	t.CheckEquals(mlex.SkipIf((*MkLine).IsComment), false)
+	t.CheckEquals(mlex.SkipIf((*MkLine).IsVarassign), true)
+	t.CheckEquals(mlex.SkipIf((*MkLine).IsVarassign), false)
+	t.CheckEquals(mlex.EOF(), true)
+}
