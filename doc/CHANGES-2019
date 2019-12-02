@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5219 2019/12/02 13:51:01 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5220 2019/12/02 16:42:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8416,3 +8416,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/ardour to 5.12.0 [nia 2019-12-02]
 	Updated multimedia/harvid to 0.8.3 [nia 2019-12-02]
 	Updated audio/xjadeo to 0.8.9 [nia 2019-12-02]
+	Updated mail/swaks to 20190914.0 [schmonz 2019-12-02]
