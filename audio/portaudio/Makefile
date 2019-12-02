@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/11/24 14:44:18 nia Exp $
+# $NetBSD: Makefile,v 1.28 2019/12/02 10:08:20 nia Exp $
 
 DISTNAME=	pa_stable_v190600_20161030
 PKGNAME=	${DISTNAME:S/^pa_stable_v/portaudio-/1:S/_/./g}
@@ -19,6 +19,9 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+
+# No rule to make target '../../../lib/libportaudio.la', needed by 'libportaudiocpp.la'.  Stop.
+MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE_LIBSUBDIR=	portaudio2
 
