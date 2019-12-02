@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/02 02:00:41 minskim Exp $
+bin/compute-accuracy
+bin/distance
+bin/word-analogy
+bin/word2phrase
+bin/word2vec
