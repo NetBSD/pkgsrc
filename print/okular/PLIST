@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/11/17 05:08:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/12/02 07:18:36 markd Exp $
 bin/okular
 bin/okularkirigami
 include/okular/core/action.h
@@ -61,6 +61,7 @@ qt5/plugins/okular/generators/okularGenerator_fax.so
 qt5/plugins/okular/generators/okularGenerator_fb.so
 qt5/plugins/okular/generators/okularGenerator_ghostview.so
 qt5/plugins/okular/generators/okularGenerator_kimgio.so
+qt5/plugins/okular/generators/okularGenerator_md.so
 qt5/plugins/okular/generators/okularGenerator_mobi.so
 qt5/plugins/okular/generators/okularGenerator_ooo.so
 qt5/plugins/okular/generators/okularGenerator_plucker.so
@@ -82,6 +83,7 @@ share/applications/okularApplication_fax.desktop
 share/applications/okularApplication_fb.desktop
 share/applications/okularApplication_ghostview.desktop
 share/applications/okularApplication_kimgio.desktop
+share/applications/okularApplication_md.desktop
 share/applications/okularApplication_mobi.desktop
 share/applications/okularApplication_ooo.desktop
 share/applications/okularApplication_pdf.desktop
@@ -98,6 +100,7 @@ share/applications/org.kde.mobile.okular_fax.desktop
 share/applications/org.kde.mobile.okular_fb.desktop
 share/applications/org.kde.mobile.okular_ghostview.desktop
 share/applications/org.kde.mobile.okular_kimgio.desktop
+share/applications/org.kde.mobile.okular_md.desktop
 share/applications/org.kde.mobile.okular_mobi.desktop
 share/applications/org.kde.mobile.okular_ooo.desktop
 share/applications/org.kde.mobile.okular_pdf.desktop
@@ -277,6 +280,7 @@ share/kservices5/okularFax.desktop
 share/kservices5/okularFb.desktop
 share/kservices5/okularGhostview.desktop
 share/kservices5/okularKimgio.desktop
+share/kservices5/okularMd.desktop
 share/kservices5/okularMobi.desktop
 share/kservices5/okularOoo.desktop
 share/kservices5/okularPlucker.desktop
@@ -1196,6 +1200,7 @@ share/metainfo/org.kde.okular-epub.metainfo.xml
 share/metainfo/org.kde.okular-fax.metainfo.xml
 share/metainfo/org.kde.okular-fb.metainfo.xml
 share/metainfo/org.kde.okular-kimgio.metainfo.xml
+share/metainfo/org.kde.okular-md.metainfo.xml
 share/metainfo/org.kde.okular-mobipocket.metainfo.xml
 share/metainfo/org.kde.okular-ooo.metainfo.xml
 share/metainfo/org.kde.okular-plucker.metainfo.xml
