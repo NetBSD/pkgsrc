@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2019/12/02 02:00:41 minskim Exp $
+
+SHA1 (word2vec-0.1c-20c129af10659f7c50e86e3be406df663beff438.tar.gz) = 4f0e872348d60223ba3b8412c0b9ccd7dbd07551
+RMD160 (word2vec-0.1c-20c129af10659f7c50e86e3be406df663beff438.tar.gz) = de98886c52303242566eacd5a3eaf4459026bd71
+SHA512 (word2vec-0.1c-20c129af10659f7c50e86e3be406df663beff438.tar.gz) = 698fa7e2e3ce3be4e4ecbe59bfe7f83640f4bc004b089b2b2cd9daa8233e98fbc5b541433317c647a0c796dd9aa2cd3aa186a1f8287e9f536104ed5fc6c1f65c
+Size (word2vec-0.1c-20c129af10659f7c50e86e3be406df663beff438.tar.gz) = 104875 bytes
+SHA1 (patch-makefile) = 2e32c5af8922008c2961fb2a7a4f59fd31ae0df9
+SHA1 (patch-word2phrase.c) = 47ccf0897b76960a6ef48ddfffc60cc4c59afaee
+SHA1 (patch-word2vec.c) = 1f0e2cf42c6156268f60075aa0a60ab750bc8bfd
