@@ -99,7 +99,8 @@ func (ck *Buildlink3Checker) checkUniquePkgbase(pkgbase string, mkline *MkLine) 
 		return
 	}
 
-	base, name := trimCommon(pkgbase, mkline.Filename.Dir().Base())
+	dirname := G.Pkgsrc.ToRel(mkline.Filename.DirNoClean()).Base()
+	base, name := trimCommon(pkgbase, dirname)
 	if base == "" && matches(name, `^(\d*|-cvs|-fossil|-git|-hg|-svn|-devel|-snapshot)$`) {
 		return
 	}

@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func CheckFileAlternatives(filename Path) {
+func CheckFileAlternatives(filename CurrPath) {
 	lines := Load(filename, NotEmpty|LogErrors)
 	if lines == nil {
 		return
