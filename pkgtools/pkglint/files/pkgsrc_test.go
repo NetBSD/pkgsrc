@@ -1132,6 +1132,7 @@ func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
 
 	t.CreateFileLines("category/Makefile",
 		MkCvsID,
+		"",
 		"COMMENT=\tExample category",
 		"",
 		"SUBDIR+=\tpackage",
@@ -1176,14 +1177,18 @@ func (s *Suite) Test_Pkgsrc_ReadDir(c *check.C) {
 func (s *Suite) Test_Pkgsrc_Relpath(c *check.C) {
 	t := s.Init(c)
 
-	t.Chdir(".")
 	t.CheckEquals(G.Pkgsrc.topdir, t.tmpdir)
+	t.Chdir(".")
+	t.CheckEquals(G.Pkgsrc.topdir, NewCurrPath("."))
 
-	test := func(from, to Path, result Path) {
+	test := func(from, to CurrPath, result Path) {
 		t.CheckEquals(G.Pkgsrc.Relpath(from, to), result)
 	}
 
 	// TODO: add tests going from each of (top, cat, pkg, pkgsub) to the others
+
+	test("category", "other/package", "../other/package")
+	test("category/package", "other", "../../other")
 
 	test("some/dir", "some/directory", "../../some/directory")
 	test("some/directory", "some/dir", "../../some/dir")
@@ -1211,7 +1216,7 @@ func (s *Suite) Test_Pkgsrc_Relpath(c *check.C) {
 		"x11/frameworkintegration/../../meta-pkgs/kde/kf5.mk",
 		"meta-pkgs/kde/kf5.mk")
 
-	volume := NewPathSlash(filepath.VolumeName(t.tmpdir.String()))
+	volume := NewCurrPathSlash(filepath.VolumeName(t.tmpdir.String()))
 	G.Pkgsrc.topdir = volume.JoinNoClean("usr/pkgsrc")
 
 	// Taken from Test_MkLineChecker_CheckRelativePath__wip_mk
@@ -1241,7 +1246,7 @@ func (s *Suite) Test_Pkgsrc_Relpath(c *check.C) {
 	test("some/dir", ".", "../..")
 	test("some/dir/.", ".", "../..")
 
-	chdir := func(path Path) {
+	chdir := func(path CurrPath) {
 		// See Tester.Chdir; a direct Chdir works here since this test
 		// neither loads lines nor processes them.
 		assertNil(os.Chdir(path.String()), "Chdir %s", path)
@@ -1297,7 +1302,7 @@ func (s *Suite) Test_Pkgsrc_File(c *check.C) {
 
 	G.Pkgsrc.topdir = "$pkgsrcdir"
 
-	test := func(rel, resolved Path) {
+	test := func(rel PkgsrcPath, resolved CurrPath) {
 		t.CheckEquals(G.Pkgsrc.File(rel), resolved)
 	}
 
@@ -1337,8 +1342,8 @@ func (s *Suite) Test_Change_Target(c *check.C) {
 	moved := Change{loc, Moved, "category/path", "category/other", "author", "2019-01-01"}
 	downgraded := Change{loc, Downgraded, "category/path", "1.0", "author", "2019-01-01"}
 
-	t.CheckEquals(renamed.Target(), NewPath("category/other"))
-	t.CheckEquals(moved.Target(), NewPath("category/other"))
+	t.CheckEquals(renamed.Target(), NewPkgsrcPath("category/other"))
+	t.CheckEquals(moved.Target(), NewPkgsrcPath("category/other"))
 	t.ExpectAssert(func() { downgraded.Target() })
 }
 

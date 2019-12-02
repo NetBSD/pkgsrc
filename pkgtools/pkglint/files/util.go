@@ -121,6 +121,7 @@ func rtrimHspace(str string) string {
 	return str[:end]
 }
 
+// trimCommon returns the middle portion of the given strings that differs.
 func trimCommon(a, b string) (string, string) {
 	// trim common prefix
 	for len(a) > 0 && len(b) > 0 && a[0] == b[0] {
@@ -238,7 +239,7 @@ func assertf(cond bool, format string, args ...interface{}) {
 	}
 }
 
-func isEmptyDir(filename Path) bool {
+func isEmptyDir(filename CurrPath) bool {
 	if filename.HasSuffixPath("CVS") {
 		return true
 	}
@@ -261,7 +262,7 @@ func isEmptyDir(filename Path) bool {
 	return true
 }
 
-func getSubdirs(filename Path) []Path {
+func getSubdirs(filename CurrPath) []Path {
 	dirents, err := filename.ReadDir()
 	if err != nil {
 		NewLineWhole(filename).Fatalf("Cannot be read: %s", err)
@@ -285,22 +286,8 @@ func isIgnoredFilename(filename string) bool {
 	return hasPrefix(filename, ".#")
 }
 
-func dirglob(dirname Path) []Path {
-	infos, err := dirname.ReadDir()
-	if err != nil {
-		return nil
-	}
-	var filenames []Path
-	for _, info := range infos {
-		if !(isIgnoredFilename(info.Name())) {
-			filenames = append(filenames, cleanpath(dirname.JoinNoClean(NewPath(info.Name()))))
-		}
-	}
-	return filenames
-}
-
 // Checks whether a file is already committed to the CVS repository.
-func isCommitted(filename Path) bool {
+func isCommitted(filename CurrPath) bool {
 	entries := G.loadCvsEntries(filename)
 	_, found := entries[filename.Base()]
 	return found
@@ -311,7 +298,7 @@ func isCommitted(filename Path) bool {
 //
 // There is no corresponding test for Git (as used by pkgsrc-wip) since that
 // is more difficult to implement than simply reading a CVS/Entries file.
-func isLocallyModified(filename Path) bool {
+func isLocallyModified(filename CurrPath) bool {
 	entries := G.loadCvsEntries(filename)
 	entry, found := entries[filename.Base()]
 	if !found {
@@ -455,44 +442,6 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 		}
 		return match
 	})
-}
-
-// Differs from path.Clean in that only "../../" is replaced, not "../".
-// Also, the initial directory is always kept.
-// This is to provide the package path as context in deeply nested .include chains.
-func cleanpath(filename Path) Path {
-	parts := make([]string, 0, 5)
-	lex := textproc.NewLexer(filename.String())
-	for lex.SkipString("./") {
-	}
-
-	for !lex.EOF() {
-		part := lex.NextBytesFunc(func(b byte) bool { return b != '/' })
-		parts = append(parts, part)
-		if lex.SkipByte('/') {
-			for lex.SkipByte('/') || lex.SkipString("./") {
-			}
-		}
-	}
-
-	for len(parts) > 1 && parts[len(parts)-1] == "." {
-		parts = parts[:len(parts)-1]
-	}
-
-	for i := 2; i+3 < len(parts); /* nothing */ {
-		if parts[i] != ".." && parts[i+1] != ".." && parts[i+2] == ".." && parts[i+3] == ".." {
-			if i+4 == len(parts) || parts[i+4] != ".." {
-				parts = append(parts[:i], parts[i+4:]...)
-				continue
-			}
-		}
-		i++
-	}
-
-	if len(parts) == 0 {
-		return "."
-	}
-	return NewPath(strings.Join(parts, "/"))
 }
 
 func containsVarRef(s string) bool {
@@ -926,7 +875,7 @@ func NewFileCache(size int) *FileCache {
 		0}
 }
 
-func (c *FileCache) Put(filename Path, options LoadOptions, lines *Lines) {
+func (c *FileCache) Put(filename CurrPath, options LoadOptions, lines *Lines) {
 	key := c.key(filename)
 
 	entry := c.mapping[key]
@@ -980,7 +929,7 @@ func (c *FileCache) removeOldEntries() {
 	}
 }
 
-func (c *FileCache) Get(filename Path, options LoadOptions) *Lines {
+func (c *FileCache) Get(filename CurrPath, options LoadOptions) *Lines {
 	key := c.key(filename)
 	entry, found := c.mapping[key]
 	if found && entry.options == options {
@@ -997,7 +946,7 @@ func (c *FileCache) Get(filename Path, options LoadOptions) *Lines {
 	return nil
 }
 
-func (c *FileCache) Evict(filename Path) {
+func (c *FileCache) Evict(filename CurrPath) {
 	key := c.key(filename)
 	entry, found := c.mapping[key]
 	if !found {
@@ -1015,7 +964,7 @@ func (c *FileCache) Evict(filename Path) {
 	}
 }
 
-func (c *FileCache) key(filename Path) string { return filename.Clean().String() }
+func (c *FileCache) key(filename CurrPath) string { return filename.Clean().String() }
 
 func bmakeHelp(topic string) string { return bmake("help topic=" + topic) }
 
@@ -1265,27 +1214,27 @@ func pathMatches(pattern, s string) bool {
 	return err == nil && matched
 }
 
-type PathQueue struct {
-	entries []Path
+type CurrPathQueue struct {
+	entries []CurrPath
 }
 
-func (q *PathQueue) PushFront(entries ...Path) {
-	q.entries = append(append([]Path(nil), entries...), q.entries...)
+func (q *CurrPathQueue) PushFront(entries ...CurrPath) {
+	q.entries = append(append([]CurrPath(nil), entries...), q.entries...)
 }
 
-func (q *PathQueue) Push(entries ...Path) {
+func (q *CurrPathQueue) Push(entries ...CurrPath) {
 	q.entries = append(q.entries, entries...)
 }
 
-func (q *PathQueue) IsEmpty() bool {
+func (q *CurrPathQueue) IsEmpty() bool {
 	return len(q.entries) == 0
 }
 
-func (q *PathQueue) Front() Path {
+func (q *CurrPathQueue) Front() CurrPath {
 	return q.entries[0]
 }
 
-func (q *PathQueue) Pop() Path {
+func (q *CurrPathQueue) Pop() CurrPath {
 	front := q.entries[0]
 	q.entries = q.entries[1:]
 	return front
@@ -1294,7 +1243,7 @@ func (q *PathQueue) Pop() Path {
 // LazyStringBuilder builds a string that is most probably equal to an
 // already existing string. In that case, it avoids any memory allocations.
 type LazyStringBuilder struct {
-	Expected string
+	expected string
 	len      int
 	usingBuf bool
 	buf      []byte
@@ -1308,7 +1257,7 @@ func (b *LazyStringBuilder) Write(p []byte) (n int, err error) {
 }
 
 func NewLazyStringBuilder(expected string) LazyStringBuilder {
-	return LazyStringBuilder{Expected: expected}
+	return LazyStringBuilder{expected: expected}
 }
 
 func (b *LazyStringBuilder) Len() int {
@@ -1316,7 +1265,7 @@ func (b *LazyStringBuilder) Len() int {
 }
 
 func (b *LazyStringBuilder) WriteString(s string) {
-	if !b.usingBuf && b.len+len(s) <= len(b.Expected) && hasPrefix(b.Expected[b.len:], s) {
+	if !b.usingBuf && b.len+len(s) <= len(b.expected) && hasPrefix(b.expected[b.len:], s) {
 		b.len += len(s)
 		return
 	}
@@ -1326,7 +1275,7 @@ func (b *LazyStringBuilder) WriteString(s string) {
 }
 
 func (b *LazyStringBuilder) WriteByte(c byte) {
-	if !b.usingBuf && b.len < len(b.Expected) && b.Expected[b.len] == c {
+	if !b.usingBuf && b.len < len(b.expected) && b.expected[b.len] == c {
 		b.len++
 		return
 	}
@@ -1337,9 +1286,9 @@ func (b *LazyStringBuilder) writeToBuf(c byte) {
 	if !b.usingBuf {
 		if cap(b.buf) >= b.len {
 			b.buf = b.buf[:b.len]
-			assert(copy(b.buf, b.Expected) == b.len)
+			assert(copy(b.buf, b.expected) == b.len)
 		} else {
-			b.buf = []byte(b.Expected)[:b.len]
+			b.buf = []byte(b.expected)[:b.len]
 		}
 		b.usingBuf = true
 	}
@@ -1349,7 +1298,7 @@ func (b *LazyStringBuilder) writeToBuf(c byte) {
 }
 
 func (b *LazyStringBuilder) Reset(expected string) {
-	b.Expected = expected
+	b.expected = expected
 	b.usingBuf = false
 	b.len = 0
 }
@@ -1358,5 +1307,5 @@ func (b *LazyStringBuilder) String() string {
 	if b.usingBuf {
 		return string(b.buf[:b.len])
 	}
-	return b.Expected[:b.len]
+	return b.expected[:b.len]
 }

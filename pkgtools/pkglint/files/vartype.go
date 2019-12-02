@@ -349,9 +349,9 @@ var (
 	BtRelativePkgPath        = &BasicType{"RelativePkgPath", (*VartypeCheck).RelativePkgPath}
 	BtRestricted             = &BasicType{"Restricted", (*VartypeCheck).Restricted}
 	BtSedCommands            = &BasicType{"SedCommands", (*VartypeCheck).SedCommands}
-	BtShellCommand           = &BasicType{"ShellCommand", nil}
-	BtShellCommands          = &BasicType{"ShellCommands", nil}
-	BtShellWord              = &BasicType{"ShellWord", nil}
+	BtShellCommand           = &BasicType{"ShellCommand", nil}  // see func init below
+	BtShellCommands          = &BasicType{"ShellCommands", nil} // see func init below
+	BtShellWord              = &BasicType{"ShellWord", nil}     // see func init below
 	BtStage                  = &BasicType{"Stage", (*VartypeCheck).Stage}
 	BtTool                   = &BasicType{"Tool", (*VartypeCheck).Tool}
 	BtUnknown                = &BasicType{"Unknown", (*VartypeCheck).Unknown}

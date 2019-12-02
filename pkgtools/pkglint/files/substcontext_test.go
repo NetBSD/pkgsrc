@@ -301,16 +301,16 @@ func (s *Suite) Test_SubstContext__nested_conditionals(c *check.C) {
 func (s *Suite) Test_SubstContext__pre_patch(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wextra,no-space", "--show-autofix")
+	t.SetUpCommandLine("-Wextra", "--show-autofix")
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
 		MkCvsID,
 		"",
-		"SUBST_CLASSES+=         os",
-		"SUBST_STAGE.os=         pre-patch",
-		"SUBST_FILES.os=         guess-os.h",
-		"SUBST_SED.os=           -e s,@OPSYS@,Darwin,")
+		"SUBST_CLASSES+=\tos",
+		"SUBST_STAGE.os=\tpre-patch",
+		"SUBST_FILES.os=\tguess-os.h",
+		"SUBST_SED.os=\t-e s,@OPSYS@,Darwin,")
 
 	mklines.Check()
 
@@ -322,16 +322,16 @@ func (s *Suite) Test_SubstContext__pre_patch(c *check.C) {
 func (s *Suite) Test_SubstContext__post_patch(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wextra,no-space", "--show-autofix")
+	t.SetUpCommandLine("-Wextra", "--show-autofix")
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
 		MkCvsID,
 		"",
-		"SUBST_CLASSES+=         os",
-		"SUBST_STAGE.os=         post-patch",
-		"SUBST_FILES.os=         guess-os.h",
-		"SUBST_SED.os=           -e s,@OPSYS@,Darwin,")
+		"SUBST_CLASSES+=\tos",
+		"SUBST_STAGE.os=\tpost-patch",
+		"SUBST_FILES.os=\tguess-os.h",
+		"SUBST_SED.os=\t-e s,@OPSYS@,Darwin,")
 
 	mklines.Check()
 
@@ -343,24 +343,23 @@ func (s *Suite) Test_SubstContext__post_patch(c *check.C) {
 func (s *Suite) Test_SubstContext__with_NO_CONFIGURE(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
 	pkg := t.SetUpPackage("category/package",
-		"SUBST_CLASSES+=         pre",
-		"SUBST_STAGE.pre=        pre-configure",
-		"SUBST_FILES.pre=        guess-os.h",
-		"SUBST_SED.pre=          -e s,@OPSYS@,Darwin,",
+		"SUBST_CLASSES+=\t\tpre",
+		"SUBST_STAGE.pre=\tpre-configure",
+		"SUBST_FILES.pre=\tguess-os.h",
+		"SUBST_SED.pre=\t\t-e s,@OPSYS@,Darwin,",
 		"",
-		"SUBST_CLASSES+=         post",
-		"SUBST_STAGE.post=       post-configure",
-		"SUBST_FILES.post=       guess-os.h",
-		"SUBST_SED.post=         -e s,@OPSYS@,Darwin,",
+		"SUBST_CLASSES+=\t\tpost",
+		"SUBST_STAGE.post=\tpost-configure",
+		"SUBST_FILES.post=\tguess-os.h",
+		"SUBST_SED.post=\t\t-e s,@OPSYS@,Darwin,",
 		"",
-		"SUBST_CLASSES+=         e",
-		"SUBST_STAGE.e=          post-extract",
-		"SUBST_FILES.e=          guess-os.h",
-		"SUBST_SED.e=            -e s,@OPSYS@,Darwin,",
+		"SUBST_CLASSES+=\te",
+		"SUBST_STAGE.e=\tpost-extract",
+		"SUBST_FILES.e=\tguess-os.h",
+		"SUBST_SED.e=\t-e s,@OPSYS@,Darwin,",
 		"",
-		"NO_CONFIGURE=           yes")
+		"NO_CONFIGURE=\tyes")
 	t.FinishSetUp()
 
 	G.Check(pkg)
@@ -375,12 +374,11 @@ func (s *Suite) Test_SubstContext__with_NO_CONFIGURE(c *check.C) {
 func (s *Suite) Test_SubstContext__without_NO_CONFIGURE(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
 	pkg := t.SetUpPackage("category/package",
-		"SUBST_CLASSES+=         pre",
-		"SUBST_STAGE.pre=        pre-configure",
-		"SUBST_FILES.pre=        guess-os.h",
-		"SUBST_SED.pre=          -e s,@OPSYS@,Darwin,")
+		"SUBST_CLASSES+=\t\tpre",
+		"SUBST_STAGE.pre=\tpre-configure",
+		"SUBST_FILES.pre=\tguess-os.h",
+		"SUBST_SED.pre=\t\t-e s,@OPSYS@,Darwin,")
 	t.FinishSetUp()
 
 	G.Check(pkg)
@@ -397,15 +395,15 @@ func (s *Suite) Test_SubstContext__adjacent(c *check.C) {
 	mklines := t.NewMkLines("os.mk",
 		MkCvsID,
 		"",
-		"SUBST_CLASSES+=         1",
-		"SUBST_STAGE.1=          pre-configure",
-		"SUBST_FILES.1=          file1",
-		"SUBST_SED.1=            -e s,subst1,repl1,",
-		"SUBST_CLASSES+=         2",
-		"SUBST_SED.1+=           -e s,subst1b,repl1b,", // Misplaced
-		"SUBST_STAGE.2=          pre-configure",
-		"SUBST_FILES.2=          file2",
-		"SUBST_SED.2=            -e s,subst2,repl2,")
+		"SUBST_CLASSES+=\t1",
+		"SUBST_STAGE.1=\tpre-configure",
+		"SUBST_FILES.1=\tfile1",
+		"SUBST_SED.1=\t-e s,subst1,repl1,",
+		"SUBST_CLASSES+=\t2",
+		"SUBST_SED.1+=\t-e s,subst1b,repl1b,", // Misplaced
+		"SUBST_STAGE.2=\tpre-configure",
+		"SUBST_FILES.2=\tfile2",
+		"SUBST_SED.2=\t-e s,subst2,repl2,")
 
 	mklines.Check()
 
@@ -416,16 +414,15 @@ func (s *Suite) Test_SubstContext__adjacent(c *check.C) {
 func (s *Suite) Test_SubstContext__do_patch(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wextra,no-space")
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
 		MkCvsID,
 		"",
-		"SUBST_CLASSES+=         os",
-		"SUBST_STAGE.os=         do-patch",
-		"SUBST_FILES.os=         guess-os.h",
-		"SUBST_SED.os=           -e s,@OPSYS@,Darwin,")
+		"SUBST_CLASSES+=\tos",
+		"SUBST_STAGE.os=\tdo-patch",
+		"SUBST_FILES.os=\tguess-os.h",
+		"SUBST_SED.os=\t-e s,@OPSYS@,Darwin,")
 
 	mklines.Check()
 
@@ -439,18 +436,17 @@ func (s *Suite) Test_SubstContext__do_patch(c *check.C) {
 func (s *Suite) Test_SubstContext__SUBST_VARS_defined_in_block(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wextra,no-space")
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
 		MkCvsID,
 		"",
-		"SUBST_CLASSES+=         os",
-		"SUBST_STAGE.os=         pre-configure",
-		"SUBST_FILES.os=         guess-os.h",
-		"SUBST_VARS.os=          TODAY1",
-		"TODAY1!=                date",
-		"TODAY2!=                date")
+		"SUBST_CLASSES+=\tos",
+		"SUBST_STAGE.os=\tpre-configure",
+		"SUBST_FILES.os=\tguess-os.h",
+		"SUBST_VARS.os=\tTODAY1",
+		"TODAY1!=\tdate",
+		"TODAY2!=\tdate")
 
 	mklines.Check()
 
@@ -464,19 +460,18 @@ func (s *Suite) Test_SubstContext__SUBST_VARS_defined_in_block(c *check.C) {
 func (s *Suite) Test_SubstContext__SUBST_VARS_in_next_paragraph(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wextra,no-space")
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
 		MkCvsID,
 		"",
-		"SUBST_CLASSES+=         os",
-		"SUBST_STAGE.os=         pre-configure",
-		"SUBST_FILES.os=         guess-os.h",
-		"SUBST_VARS.os=          TODAY1",
+		"SUBST_CLASSES+=\tos",
+		"SUBST_STAGE.os=\tpre-configure",
+		"SUBST_FILES.os=\tguess-os.h",
+		"SUBST_VARS.os=\tTODAY1",
 		"",
-		"TODAY1!=                date",
-		"TODAY2!=                date")
+		"TODAY1!=\tdate",
+		"TODAY2!=\tdate")
 
 	mklines.Check()
 
@@ -487,16 +482,16 @@ func (s *Suite) Test_SubstContext__SUBST_VARS_in_next_paragraph(c *check.C) {
 func (s *Suite) Test_SubstContext__multiple_SUBST_VARS(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wextra,no-space")
+	t.SetUpCommandLine("-Wextra")
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("os.mk",
 		MkCvsID,
 		"",
-		"SUBST_CLASSES+=         os",
-		"SUBST_STAGE.os=         pre-configure",
-		"SUBST_FILES.os=         guess-os.h",
-		"SUBST_VARS.os=          PREFIX VARBASE")
+		"SUBST_CLASSES+=\tos",
+		"SUBST_STAGE.os=\tpre-configure",
+		"SUBST_FILES.os=\tguess-os.h",
+		"SUBST_VARS.os=\tPREFIX VARBASE")
 
 	mklines.Check()
 
@@ -530,7 +525,6 @@ func (s *Suite) Test_SubstContext__unusual_variable_order(c *check.C) {
 func (s *Suite) Test_SubstContext_Directive__before_SUBST_CLASSES(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wextra,no-space")
 	t.SetUpVartypes()
 	t.DisableTracing() // Just for branch coverage.
 
@@ -539,7 +533,7 @@ func (s *Suite) Test_SubstContext_Directive__before_SUBST_CLASSES(c *check.C) {
 		"",
 		".if 0",
 		".endif",
-		"SUBST_CLASSES+=         os",
+		"SUBST_CLASSES+=\tos",
 		".elif 0") // Just for branch coverage.
 
 	mklines.Check()

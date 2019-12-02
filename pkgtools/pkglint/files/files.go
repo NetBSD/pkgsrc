@@ -14,7 +14,7 @@ const (
 	LogErrors                           //
 )
 
-func LoadMk(filename Path, options LoadOptions) *MkLines {
+func LoadMk(filename CurrPath, options LoadOptions) *MkLines {
 	lines := Load(filename, options|Makefile)
 	if lines == nil {
 		return nil
@@ -22,7 +22,7 @@ func LoadMk(filename Path, options LoadOptions) *MkLines {
 	return NewMkLines(lines)
 }
 
-func Load(filename Path, options LoadOptions) *Lines {
+func Load(filename CurrPath, options LoadOptions) *Lines {
 	if fromCache := G.fileCache.Get(filename, options); fromCache != nil {
 		return fromCache
 	}
@@ -59,7 +59,7 @@ func Load(filename Path, options LoadOptions) *Lines {
 	return result
 }
 
-func convertToLogicalLines(filename Path, rawText string, joinBackslashLines bool) *Lines {
+func convertToLogicalLines(filename CurrPath, rawText string, joinBackslashLines bool) *Lines {
 	var rawLines []*RawLine
 	for lineno, rawLine := range strings.SplitAfter(rawText, "\n") {
 		if rawLine != "" {
@@ -89,7 +89,7 @@ func convertToLogicalLines(filename Path, rawText string, joinBackslashLines boo
 	return NewLines(filename, loglines)
 }
 
-func nextLogicalLine(filename Path, rawLines []*RawLine, index int) (*Line, int) {
+func nextLogicalLine(filename CurrPath, rawLines []*RawLine, index int) (*Line, int) {
 	{ // Handle the common case efficiently
 		rawLine := rawLines[index]
 		textnl := rawLine.textnl

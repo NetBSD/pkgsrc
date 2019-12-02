@@ -77,7 +77,6 @@ func (s *Suite) Test_Pkglint_Main__help(c *check.C) {
 		"    extra     enable some extra warnings (disabled)",
 		"    perm      warn about unforeseen variable definition and use (disabled)",
 		"    quoting   warn about quoting issues (disabled)",
-		"    space     warn about inconsistent use of whitespace (disabled)",
 		"",
 		"  (Prefix a flag with \"no-\" to disable it.)")
 }
@@ -307,7 +306,7 @@ func (s *Suite) Test_Pkglint_Main__profiling(c *check.C) {
 
 	// Pkglint always writes the profiling data into the current directory.
 	// TODO: Make the location of the profiling log a mandatory parameter.
-	t.CheckEquals(NewPath("pkglint.pprof").IsFile(), true)
+	t.CheckEquals(NewCurrPath("pkglint.pprof").IsFile(), true)
 
 	err := os.Remove("pkglint.pprof")
 	c.Check(err, check.IsNil)
@@ -494,7 +493,7 @@ func (s *Suite) Test_Pkglint_Check(c *check.C) {
 func (s *Suite) Test_Pkglint_Check__invalid_files_before_import(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Call", "-Wall,no-space", "--import")
+	t.SetUpCommandLine("-Call", "-Wall", "--import")
 	pkg := t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/work/log")
 	t.CreateFileLines("category/package/Makefile~")
@@ -640,7 +639,6 @@ func (s *Suite) Test_Pkglint_checkdirPackage__filename_with_variable(c *check.C)
 func (s *Suite) Test_Pkglint_checkdirPackage__ALTERNATIVES(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
 	pkg := t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/ALTERNATIVES",
 		"bin/wrapper bin/wrapper-impl")
@@ -929,7 +927,7 @@ func (s *Suite) Test_Pkglint_checkReg__in_current_working_directory(c *check.C) 
 func (s *Suite) Test_Pkglint_checkReg__other(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Call", "-Wall,no-space")
+	t.SetUpCommandLine("-Call", "-Wall")
 	pkg := t.SetUpPackage("category/package")
 	t.CreateFileLines("category/package/INSTALL",
 		"#! /bin/sh")
@@ -953,10 +951,10 @@ func (s *Suite) Test_Pkglint_checkReg__readme_and_todo(c *check.C) {
 	t.CreateFileDummyPatch("category/package/patches/patch-README")
 	t.CreateFileLines("category/package/Makefile",
 		MkCvsID,
-		"CATEGORIES=category",
+		"CATEGORIES=\tcategory",
 		"",
-		"COMMENT=Comment",
-		"LICENSE=2-clause-bsd")
+		"COMMENT=\tComment",
+		"LICENSE=\t2-clause-bsd")
 	t.CreateFileLines("category/package/PLIST",
 		PlistCvsID,
 		"bin/program")

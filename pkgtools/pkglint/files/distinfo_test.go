@@ -116,7 +116,6 @@ func (s *Suite) Test_distinfoLinesChecker_check__missing_php_patches(c *check.C)
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpCommandLine("-Wall,no-space")
 	t.CreateFileLines("licenses/unknown-license")
 	t.CreateFileLines("lang/php/ext.mk",
 		MkCvsID,
@@ -142,7 +141,7 @@ func (s *Suite) Test_distinfoLinesChecker_check__missing_php_patches(c *check.C)
 	t.CreateFileLines("archivers/php-bz2/Makefile",
 		MkCvsID,
 		"",
-		"USE_PHP_EXT_PATCHES=    yes",
+		"USE_PHP_EXT_PATCHES=\tyes",
 		"",
 		".include \"../../lang/php/ext.mk\"",
 		".include \"../../mk/bsd.pkg.mk\"")

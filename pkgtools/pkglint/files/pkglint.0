@@ -79,8 +79,6 @@ DDEESSCCRRIIPPTTIIOONN
      [[nnoo‐‐]]qquuoottiinngg        Warn for possibly invalid quoting of make variables
                          in shell programs and shell variables themselves.
 
-     [[nnoo‐‐]]ssppaaccee          Emit notes for inconsistent use of whitespace.
-
    OOtthheerr aarrgguummeennttss
            _d_i_r _._._.             The pkgsrc directories to be checked.  If omit‐
                                ted, the current directory is checked.

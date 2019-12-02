@@ -278,10 +278,11 @@ func (mkline *MkLine) MustExist() bool { return mkline.data.(*mkLineInclude).mus
 
 func (mkline *MkLine) IncludedFile() Path { return mkline.data.(*mkLineInclude).includedFile }
 
-// IncludedFileFull returns the path to the included file, relative to the
-// current working directory.
-func (mkline *MkLine) IncludedFileFull() Path {
-	return cleanpath(mkline.Filename.Dir().JoinClean(mkline.IncludedFile())) // FIXME: JoinNoClean?
+// IncludedFileFull returns the path to the included file.
+func (mkline *MkLine) IncludedFileFull() CurrPath {
+	// FIXME: consider DirNoClean
+	// FIXME: consider JoinNoClean
+	return mkline.Filename.DirClean().JoinClean(mkline.IncludedFile()).CleanPath()
 }
 
 func (mkline *MkLine) Targets() string { return mkline.data.(mkLineDependency).targets }
@@ -553,16 +554,17 @@ func (*MkLine) WithoutMakeVariables(value string) string {
 	return valueNovar.String()
 }
 
-func (mkline *MkLine) ResolveVarsInRelativePath(relativePath Path) Path {
+func (mkline *MkLine) ResolveVarsInRelativePath(relativePath RelPath) RelPath {
 	if !containsVarRef(relativePath.String()) {
-		return cleanpath(relativePath)
+		return relativePath.CleanPath()
 	}
 
-	var basedir Path
+	var basedir CurrPath
 	if G.Pkg != nil {
 		basedir = G.Pkg.File(".")
 	} else {
-		basedir = mkline.Filename.Dir()
+		// FIXME: consider DirNoClean
+		basedir = mkline.Filename.DirClean()
 	}
 
 	tmp := relativePath
@@ -596,7 +598,7 @@ func (mkline *MkLine) ResolveVarsInRelativePath(relativePath Path) Path {
 	// TODO: Add test that suggests ${.PARSEDIR} in .include to be omitted.
 	tmp = tmp.Replace("${.PARSEDIR}", ".")
 
-	replaceLatest := func(varuse string, category Path, pattern regex.Pattern, replacement string) {
+	replaceLatest := func(varuse string, category PkgsrcPath, pattern regex.Pattern, replacement string) {
 		if tmp.ContainsText(varuse) {
 			latest := G.Pkgsrc.Latest(category, pattern, replacement)
 			tmp = tmp.Replace(varuse, latest)
@@ -620,7 +622,7 @@ func (mkline *MkLine) ResolveVarsInRelativePath(relativePath Path) Path {
 		tmp = tmp.Replace("${PKGDIR}", G.Pkg.Pkgdir.String())
 	}
 
-	tmp = cleanpath(tmp)
+	tmp = tmp.CleanPath()
 
 	if trace.Tracing && relativePath != tmp {
 		trace.Stepf("resolveVarsInRelativePath: %q => %q", relativePath, tmp)
@@ -1053,7 +1055,7 @@ type indentationLevel struct {
 	// pkglint will happily accept .include "fname" in both the then and
 	// the else branch. This is ok since the primary job of this file list
 	// is to prevent wrong pkglint warnings about missing files.
-	checkedFiles []Path
+	checkedFiles []RelPath
 
 	// whether the line is a multiple-inclusion guard
 	guard bool
@@ -1158,14 +1160,16 @@ func (ind *Indentation) Args() string {
 	return ind.top().args
 }
 
-func (ind *Indentation) AddCheckedFile(filename Path) {
+func (ind *Indentation) AddCheckedFile(filename RelPath) {
 	top := ind.top()
 	top.checkedFiles = append(top.checkedFiles, filename)
 }
 
 // HasExists returns whether the given filename has been tested in an
 // exists(filename) condition and thus may or may not exist.
-func (ind *Indentation) HasExists(filename Path) bool {
+//
+// FIXME: Replace RelPath with PkgsrcPath, to make the filenames reliable.
+func (ind *Indentation) HasExists(filename RelPath) bool {
 	for _, level := range ind.levels {
 		for _, levelFilename := range level.checkedFiles {
 			if filename == levelFilename {
@@ -1240,13 +1244,13 @@ func (ind *Indentation) TrackAfter(mkline *MkLine) {
 		cond.Walk(&MkCondCallback{
 			Call: func(name string, arg string) {
 				if name == "exists" {
-					ind.AddCheckedFile(NewPath(arg))
+					ind.AddCheckedFile(NewRelPathString(arg))
 				}
 			}})
 	}
 }
 
-func (ind *Indentation) CheckFinish(filename Path) {
+func (ind *Indentation) CheckFinish(filename CurrPath) {
 	if ind.IsEmpty() {
 		return
 	}
@@ -1291,7 +1295,7 @@ func MatchMkInclude(text string) (m bool, indentation, directive string, filenam
 				// here. But since these usually don't contain double quotes, it has
 				// worked fine up to now.
 				filename = NewPath(lexer.NextBytesFunc(func(c byte) bool { return c != '"' }))
-				if filename != "" && lexer.SkipByte('"') {
+				if !filename.IsEmpty() && lexer.SkipByte('"') {
 					lexer.NextHspace()
 					if lexer.EOF() {
 						m = true

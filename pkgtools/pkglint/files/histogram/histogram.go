@@ -35,7 +35,7 @@ func (h *Histogram) PrintStats(out io.Writer, caption string, limit int) {
 	sort.SliceStable(entries, func(i, j int) bool {
 		ei := entries[i]
 		ej := entries[j]
-		return ej.count < ei.count || (ei.count == ej.count && ei.s < ej.s)
+		return ej.count < ei.count || ei.count == ej.count && ei.s < ej.s
 	})
 
 	for i, entry := range entries {

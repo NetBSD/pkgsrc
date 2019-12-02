@@ -344,55 +344,6 @@ func (s *Suite) Test_SimpleCommandChecker_checkEchoN(c *check.C) {
 		"WARN: Makefile:4: Please use ${ECHO_N} instead of \"echo -n\".")
 }
 
-func (s *Suite) Test_ShellLineChecker__shell_comment_with_line_continuation(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpTool("echo", "", AtRunTime)
-
-	test := func(lines ...string) {
-		i := 0
-		for ; i < len(lines) && hasPrefix(lines[i], "\t"); i++ {
-		}
-
-		mklines := t.SetUpFileMkLines("Makefile",
-			append([]string{MkCvsID, "pre-install:"},
-				lines[:i]...)...)
-
-		mklines.Check()
-
-		t.CheckOutput(lines[i:])
-	}
-
-	// The comment can start at the beginning of a follow-up line.
-	test(
-		"\techo first; \\",
-		"\t# comment at the beginning of a command \\",
-		"\techo \"hello\"",
-
-		// TODO: Warn that the "echo hello" is commented out.
-	)
-
-	// The comment can start at the beginning of a simple command.
-	test(
-		"\techo first; # comment at the beginning of a command \\",
-		"\techo \"hello\"",
-
-		// TODO: Warn that the "echo hello" is commented out.
-	)
-
-	// The comment can start at a word in the middle of a command.
-	test(
-		// TODO: Warn that the "echo hello" is commented out.
-		"\techo # comment starts inside a command \\",
-		"\techo \"hello\"")
-
-	// If the comment starts in the last line, there's no further
-	// line that might be commented out accidentally.
-	test(
-		"\techo 'first line'; \\",
-		"\t# comment in last line")
-}
-
 func (s *Suite) Test_ShellLineChecker_checkConditionalCd(c *check.C) {
 	t := s.Init(c)
 
@@ -944,6 +895,55 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__sed_and_mv(c *check
 
 	t.CheckOutputLines(
 		"NOTE: filename.mk:1: Please use the SUBST framework instead of ${SED} and ${MV}.")
+}
+
+func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__sed_and_mv_explained(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain")
+	t.SetUpVartypes()
+	t.SetUpTool("sed", "SED", AtRunTime)
+	t.SetUpTool("mv", "MV", AtRunTime)
+	ck := t.NewShellLineChecker("\t${RUN} ${SED} 's,#,// comment:,g' filename > filename.tmp; ${MV} filename.tmp filename")
+
+	ck.CheckShellCommandLine(ck.mkline.ShellCommand())
+
+	t.CheckOutputLines(
+		"NOTE: filename.mk:1: Please use the SUBST framework instead of ${SED} and ${MV}.",
+		"",
+		"\tUsing the SUBST framework instead of explicit commands is easier to",
+		"\tunderstand, since all the complexity of using sed and mv is hidden",
+		"\tbehind the scenes.",
+		"",
+		sprintf("\tRun %q for more information.", bmakeHelp("subst")),
+		"",
+		"\tWhen migrating to the SUBST framework, pay attention to \"#\"",
+		"\tcharacters. In shell commands, make(1) does not interpret them as",
+		"\tcomment character, but in variable assignments it does. Therefore,",
+		"\tinstead of the shell command",
+		"",
+		"\t\tsed -e 's,#define foo,,'",
+		"",
+		"\tyou need to write",
+		"",
+		"\t\tSUBST_SED.foo+=\t's,\\#define foo,,'",
+		"")
+}
+
+func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__sed_and_mv_autofix_explained(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain", "--autofix")
+	t.SetUpVartypes()
+	t.SetUpTool("sed", "SED", AtRunTime)
+	t.SetUpTool("mv", "MV", AtRunTime)
+	ck := t.NewShellLineChecker("\t${RUN} ${SED} 's,#,// comment:,g' filename > filename.tmp; ${MV} filename.tmp filename")
+
+	ck.CheckShellCommandLine(ck.mkline.ShellCommand())
+
+	// Only ever output an explanation if there's a corresponding diagnostic.
+	// Even if Explain is called twice in a row.
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__subshell(c *check.C) {
@@ -1558,6 +1558,74 @@ func (s *Suite) Test_ShellLineChecker_checkInstallCommand(c *check.C) {
 		"WARN: filename.mk:1: ${CP} should not be used to install files.")
 }
 
+func (s *Suite) Test_ShellLineChecker_checkMultiLineComment(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpTool("echo", "", AtRunTime)
+	t.SetUpTool("sed", "", AtRunTime)
+	t.SetUpVartypes()
+
+	test := func(lines ...string) {
+		i := 0
+		for ; i < len(lines) && hasPrefix(lines[i], "\t"); i++ {
+		}
+
+		mklines := t.SetUpFileMkLines("Makefile",
+			append([]string{MkCvsID, "pre-build:"},
+				lines[:i]...)...)
+
+		mklines.Check()
+
+		t.CheckOutput(lines[i:])
+	}
+
+	// The comment can start at the beginning of a follow-up line.
+	test(
+		"\techo first; \\",
+		"\t# comment at the beginning of a command \\",
+		"\techo \"hello\"",
+
+		"WARN: ~/Makefile:4: "+
+			"The shell comment does not stop at the end of this line.")
+
+	// The comment can start at the beginning of a simple command.
+	test(
+		"\techo first; # comment at the beginning of a command \\",
+		"\techo \"hello\"",
+
+		"WARN: ~/Makefile:3: "+
+			"The shell comment does not stop at the end of this line.")
+
+	// The comment can start at a word in the middle of a command.
+	test(
+		"\techo # comment starts inside a command \\",
+		"\techo \"hello\"",
+
+		"WARN: ~/Makefile:3: "+
+			"The shell comment does not stop at the end of this line.")
+
+	// If the comment starts in the last line, there's no further
+	// line that might be commented out accidentally.
+	test(
+		"\techo 'first line'; \\",
+		"\t# comment in last line")
+
+	// If there's a shell token that extends over several lines,
+	// that's unusual enough that pkglint refuses to check this.
+	test(
+		"\techo 'before \\",
+		"\t\tafter'; \\",
+		"\t# comment \\",
+		"\techo 'still a comment'")
+
+	test(
+		"\tsed -e s#@PREFIX@#${PREFIX}#g \\",
+		"\tfilename",
+
+		"WARN: ~/Makefile:3--4: Substitution commands like "+
+			"\"s#@PREFIX@#${PREFIX}#g\" should always be quoted.")
+}
+
 func (s *Suite) Test_splitIntoShellTokens__line_continuation(c *check.C) {
 	t := s.Init(c)
 
@@ -1712,4 +1780,25 @@ func (s *Suite) Test_splitIntoShellTokens__redirect(c *check.C) {
 		"6<", "input",
 		">>", "append"})
 	t.CheckEquals(rest, "")
+}
+
+func (s *Suite) Test_splitIntoShellTokens__varuse(c *check.C) {
+	t := s.Init(c)
+
+	test := func(text string, tokens ...string) {
+		line := t.NewLine("filename.mk", 1, "")
+
+		words, rest := splitIntoShellTokens(line, text)
+
+		t.CheckDeepEquals(words, tokens)
+		t.CheckEquals(rest, "")
+	}
+
+	test(
+		"sed -e s#@PREFIX@#${PREFIX}#g filename",
+
+		"sed",
+		"-e",
+		"s#@PREFIX@#${PREFIX}#g",
+		"filename")
 }

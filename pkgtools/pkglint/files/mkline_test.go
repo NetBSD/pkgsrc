@@ -505,7 +505,7 @@ func (s *Suite) Test_MkLine_ResolveVarsInRelativePath(c *check.C) {
 		MkCvsID)
 	mkline := mklines.mklines[0]
 
-	test := func(before Path, after Path) {
+	test := func(before RelPath, after RelPath) {
 		t.CheckEquals(mkline.ResolveVarsInRelativePath(before), after)
 	}
 
@@ -962,16 +962,15 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__only_remove_known(c *check.C) 
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__shellword_part(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
 	t.SetUpVartypes()
 
 	mklines := t.SetUpFileMkLines("Makefile",
 		MkCvsID,
 		"",
-		"SUBST_CLASSES+=    class",
-		"SUBST_STAGE.class= pre-configure",
-		"SUBST_FILES.class= files",
-		"SUBST_SED.class=-e s:@LINKER_RPATH_FLAG@:${LINKER_RPATH_FLAG}:g")
+		"SUBST_CLASSES+=\t\tclass",
+		"SUBST_STAGE.class=\tpre-configure",
+		"SUBST_FILES.class=\tfiles",
+		"SUBST_SED.class=\t-e s:@LINKER_RPATH_FLAG@:${LINKER_RPATH_FLAG}:g")
 
 	mklines.Check()
 
@@ -984,14 +983,13 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__shellword_part(c *check.C) {
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__tool_in_shell_command(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
 	t.SetUpVartypes()
 	t.SetUpTool("bash", "BASH", AtRunTime)
 
 	mklines := t.SetUpFileMkLines("Makefile",
 		MkCvsID,
 		"",
-		"CONFIG_SHELL= ${BASH}")
+		"CONFIG_SHELL=\t${BASH}")
 
 	mklines.Check()
 
@@ -1048,17 +1046,17 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__only_D_modifier(c *check.C) {
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__uncovered_cases(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space", "--explain")
+	t.SetUpCommandLine("-Wall", "--explain")
 	t.SetUpVartypes()
 
 	mklines := t.SetUpFileMkLines("Makefile",
 		MkCvsID,
 		"",
-		"GO_SRCPATH=             ${HOMEPAGE:S,https://,,}",
-		"LINKER_RPATH_FLAG:=     ${LINKER_RPATH_FLAG:S/-rpath/& /}",
-		"HOMEPAGE=               http://godoc.org/${GO_SRCPATH}",
-		"PATH:=                  ${PREFIX}/cross/bin:${PATH}",
-		"NO_SRC_ON_FTP=          ${RESTRICTED}")
+		"GO_SRCPATH=\t\t${HOMEPAGE:S,https://,,}",
+		"LINKER_RPATH_FLAG:=\t${LINKER_RPATH_FLAG:S/-rpath/& /}",
+		"HOMEPAGE=\t\thttp://godoc.org/${GO_SRCPATH}",
+		"PATH:=\t\t\t${PREFIX}/cross/bin:${PATH}",
+		"NO_SRC_ON_FTP=\t\t${RESTRICTED}")
 
 	mklines.Check()
 

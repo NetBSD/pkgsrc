@@ -225,18 +225,18 @@ func (cv *VartypeCheck) BuildlinkDepmethod() {
 }
 
 func (cv *VartypeCheck) Category() {
-	if cv.Value != "wip" && G.Pkgsrc.File(NewPath(cv.Value).JoinNoClean("Makefile")).IsFile() {
+	if cv.Value != "wip" && G.Pkgsrc.File(NewPkgsrcPath(NewPath(cv.Value)).JoinNoClean("Makefile")).IsFile() {
 		return
 	}
 
 	switch cv.Value {
 	case
-		"chinese", "crosspkgtools",
+		"chinese",
 		"gnome", "gnustep",
 		"japanese", "java",
 		"kde", "korean",
 		"linux", "local",
-		"packages", "perl5", "plan9", "python",
+		"perl5", "plan9", "python",
 		"R", "ruby",
 		"scm",
 		"tcl", "tk",
@@ -442,17 +442,17 @@ func (cv *VartypeCheck) DependencyWithPath() {
 	parts := cv.MkLine.ValueSplit(value, ":")
 	if len(parts) == 2 {
 		pattern := parts[0]
-		relpath := parts[1]
-		pathParts := cv.MkLine.ValueSplit(relpath, "/")
+		relpath := NewRelPathString(parts[1])
+		pathParts := relpath.Parts()
 		pkg := pathParts[len(pathParts)-1]
 
-		if matches(relpath, `^\.\./[^.]`) {
+		if len(pathParts) >= 2 && pathParts[0] == ".." && pathParts[1] != ".." {
 			cv.Warnf("Dependency paths should have the form \"../../category/package\".")
 			cv.MkLine.ExplainRelativeDirs()
 		}
 
-		if !containsVarRef(relpath) {
-			MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(NewPath(relpath))
+		if !containsVarRef(relpath.String()) {
+			MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(relpath)
 		}
 
 		switch pkg {
@@ -1076,7 +1076,7 @@ func (cv *VartypeCheck) Pkgpath() {
 		return
 	}
 
-	pkgpath := NewPath(value)
+	pkgpath := NewPkgsrcPath(NewPath(value))
 	if !G.Wip && pkgpath.HasPrefixPath("wip") {
 		cv.MkLine.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
 	}
@@ -1164,7 +1164,7 @@ func (cv *VartypeCheck) RPkgVer() {
 
 // RelativePkgDir refers to a package directory, e.g. ../../category/pkgbase.
 func (cv *VartypeCheck) RelativePkgDir() {
-	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(NewPath(cv.Value))
+	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(NewRelPathString(cv.Value))
 }
 
 // RelativePkgPath refers to a file or directory, e.g. ../../category/pkgbase,
@@ -1172,7 +1172,7 @@ func (cv *VartypeCheck) RelativePkgDir() {
 //
 // See RelativePkgDir, which requires a directory, not a file.
 func (cv *VartypeCheck) RelativePkgPath() {
-	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePath(NewPath(cv.Value), true)
+	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePath(NewRelPathString(cv.Value), true)
 }
 
 func (cv *VartypeCheck) Restricted() {

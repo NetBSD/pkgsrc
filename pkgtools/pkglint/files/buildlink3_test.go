@@ -599,7 +599,7 @@ func (s *Suite) Test_Buildlink3Checker_checkUniquePkgbase(c *check.C) {
 
 	G.InterPackage.Enable()
 
-	test := func(pkgbase string, pkgpath Path, diagnostics ...string) {
+	test := func(pkgbase string, pkgpath RelPath, diagnostics ...string) {
 		mkline := t.NewMkLine(t.File(pkgpath+"/buildlink3.mk"), 123, "")
 
 		(*Buildlink3Checker).checkUniquePkgbase(nil, pkgbase, mkline)
@@ -611,7 +611,7 @@ func (s *Suite) Test_Buildlink3Checker_checkUniquePkgbase(c *check.C) {
 	test("php", "lang/php56",
 		nil...)
 
-	// No warning since "php" is a valid buildlink3 basename for "php56".
+	// No warning since "php" is a valid buildlink3 basename for "php72".
 	test("php", "lang/php72",
 		nil...)
 
@@ -644,6 +644,30 @@ func (s *Suite) Test_Buildlink3Checker_checkUniquePkgbase(c *check.C) {
 		nil...)
 
 	test("package", "wip/package",
+		nil...)
+}
+
+func (s *Suite) Test_Buildlink3Checker_checkUniquePkgbase__chdir(c *check.C) {
+	t := s.Init(c)
+
+	G.InterPackage.Enable()
+	t.Chdir("lang/php56")
+
+	test := func(pkgbase string, path CurrPath, diagnostics ...string) {
+		mkline := t.NewMkLine(path.JoinNoClean("buildlink3.mk"), 123, "")
+
+		(*Buildlink3Checker).checkUniquePkgbase(nil, pkgbase, mkline)
+
+		t.CheckOutput(diagnostics)
+	}
+
+	test("php", "../../lang/php72",
+		nil...)
+
+	// Using the identifier "php" is ok in the current directory since
+	// its relative path from the pkgsrc root is "lang/php56", which
+	// starts with "php" as well.
+	test("php", ".",
 		nil...)
 }
 

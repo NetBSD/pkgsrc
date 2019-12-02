@@ -335,6 +335,7 @@ func (reg *VarTypeRegistry) compilerLanguages(src *Pkgsrc) *BasicType {
 	languages := make(map[string]bool)
 	if mklines != nil {
 		for _, mkline := range mklines.mklines {
+
 			if mkline.IsVarassign() && mkline.Varname() == "_CXX_STD_VERSIONS" {
 				words := mkline.ValueFields(mkline.Value())
 				for _, word := range words {
@@ -368,10 +369,13 @@ func (reg *VarTypeRegistry) compilerLanguages(src *Pkgsrc) *BasicType {
 // and for all variables matching one of the varcanons, all values
 // are added as allowed values.
 //
-// If the file cannot be found, the allowed values are taken from
-// defval. This is mostly useful when testing pkglint.
-func (reg *VarTypeRegistry) enumFrom(pkgsrc *Pkgsrc, filename Path, defval string, varcanons ...string) *BasicType {
-	mklines := pkgsrc.LoadMkExisting(filename)
+// If the file is not found, the allowed values are taken from
+// defval. This is only done in the pkglint tests.
+func (reg *VarTypeRegistry) enumFrom(
+	src *Pkgsrc, filename PkgsrcPath, defval string,
+	varcanons ...string) *BasicType {
+
+	mklines := src.LoadMkExisting(filename)
 	if mklines == nil {
 		return enum(defval)
 	}
@@ -422,13 +426,16 @@ func (reg *VarTypeRegistry) enumFrom(pkgsrc *Pkgsrc, filename Path, defval strin
 // that have a single number in them (such as php72) and ranks them
 // from earliest to latest.
 //
-// If the directories cannot be found, the allowed values are taken
-// from defval. This is mostly useful when testing pkglint.
-func (reg *VarTypeRegistry) enumFromDirs(pkgsrc *Pkgsrc, category Path, re regex.Pattern, repl string, defval string) *BasicType {
-	versions := pkgsrc.ListVersions(category, re, repl, false)
+// If no directories are found, the allowed values are taken
+// from defval. This is only done in the pkglint tests.
+func (reg *VarTypeRegistry) enumFromDirs(
+	src *Pkgsrc, category PkgsrcPath, re regex.Pattern, repl string,
+	defval string) *BasicType {
+
+	versions := src.ListVersions(category, re, repl, false)
 	if len(versions) == 0 {
 		if !G.Testing {
-			NewLineWhole(category).Fatalf(
+			NewLineWhole(src.File(category)).Fatalf(
 				"Must contain at least 1 subdirectory matching %q.", re)
 		}
 		return enum(defval)
@@ -441,10 +448,13 @@ func (reg *VarTypeRegistry) enumFromDirs(pkgsrc *Pkgsrc, category Path, re regex
 // filtering it through the regular expression and the replacement.
 //
 // If no files are found, the allowed values are taken
-// from defval. This should only happen in the pkglint tests.
-func (reg *VarTypeRegistry) enumFromFiles(basedir Path, re regex.Pattern, repl string, defval string) *BasicType {
+// from defval. This is only done in the pkglint tests.
+func (reg *VarTypeRegistry) enumFromFiles(
+	src *Pkgsrc, basedir PkgsrcPath, re regex.Pattern, repl string,
+	defval string) *BasicType {
+
 	var relevant []string
-	for _, filename := range dirglob(G.Pkgsrc.File(basedir)) {
+	for _, filename := range src.File(basedir).ReadPaths() {
 		basename := filename.Base()
 		if matches(basename, re) {
 			relevant = append(relevant, replaceAll(basename, re, repl))
@@ -452,7 +462,7 @@ func (reg *VarTypeRegistry) enumFromFiles(basedir Path, re regex.Pattern, repl s
 	}
 	if len(relevant) == 0 {
 		if !G.Testing {
-			NewLineWhole(basedir).Fatalf(
+			NewLineWhole(src.File(basedir)).Fatalf(
 				"Must contain at least 1 file matching %q.", re)
 		}
 		return enum(defval)
@@ -491,6 +501,11 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		"mk/java-vm.mk",
 		"openjdk8 oracle-jdk8 openjdk7 sun-jdk7 jdk16 jdk15 kaffe",
 		"_PKG_JVMS.*")
+
+	platforms := reg.enumFromFiles(src,
+		"mk/platform",
+		`(.*)\.mk$`, "$1",
+		"Cygwin DragonFly FreeBSD Linux NetBSD SunOS")
 
 	// Last synced with mk/defaults/mk.conf revision 1.300 (fe3d998769f).
 	reg.usr("USE_CWRAPPERS", enum("yes no auto"))
@@ -1264,7 +1279,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sys("MANOWN", BtUserGroupName)
 	reg.pkglist("MASTER_SITES", BtFetchURL)
 
-	for _, filename := range []Path{"mk/fetch/sites.mk", "mk/fetch/fetch.mk"} {
+	for _, filename := range []PkgsrcPath{"mk/fetch/sites.mk", "mk/fetch/fetch.mk"} {
 		sitesMk := src.LoadMkExisting(filename)
 		if sitesMk != nil {
 			sitesMk.ForEach(func(mkline *MkLine) {
@@ -1307,8 +1322,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglistrat("ONLY_FOR_COMPILER", compilers)
 	reg.pkglistrat("ONLY_FOR_PLATFORM", BtMachinePlatformPattern)
 	reg.pkgrat("ONLY_FOR_UNPRIVILEGED", BtYesNo)
-	reg.sysload("OPSYS", reg.enumFromFiles("mk/platform", `(.*)\.mk$`, "$1",
-		"Cygwin DragonFly FreeBSD Linux NetBSD SunOS"))
+	reg.sysload("OPSYS", platforms)
 	reg.pkglistbl3("OPSYSVARS", BtVariableName)
 	reg.pkg("OSVERSION_SPECIFIC", BtYes)
 	reg.sysload("OS_VERSION", BtVersion)

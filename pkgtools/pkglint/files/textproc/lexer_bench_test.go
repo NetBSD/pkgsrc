@@ -181,7 +181,7 @@ func Benchmark_Direct_Compare_fold_case(b *testing.B) {
 	var sum int
 	for i := 0; i < b.N; i++ {
 		i := byte(i)
-		if 'A' <= (i&^0x20) && (i&^0x20) <= 'Z' || '0' <= i && i <= '9' || i == '_' {
+		if 'A' <= i&^0x20 && i&^0x20 <= 'Z' || '0' <= i && i <= '9' || i == '_' {
 			sum++
 		}
 	}

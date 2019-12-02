@@ -163,7 +163,6 @@ func (s *Suite) Test_MkLineParser_parseVarassign__space_around_operator(c *check
 func (s *Suite) Test_MkLineParser_parseVarassign__autofix_space_after_varname(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wspace")
 	filename := t.CreateFileLines("Makefile",
 		MkCvsID,
 		"VARNAME +=\t${VARNAME}",
@@ -178,9 +177,12 @@ func (s *Suite) Test_MkLineParser_parseVarassign__autofix_space_after_varname(c 
 		"NOTE: ~/Makefile:2: Unnecessary space after variable name \"VARNAME\".",
 
 		// The assignment operators other than = and += cannot lead to ambiguities.
-		"NOTE: ~/Makefile:5: Unnecessary space after variable name \"VARNAME+\".")
+		"NOTE: ~/Makefile:5: Unnecessary space after variable name \"VARNAME+\".",
 
-	t.SetUpCommandLine("-Wspace", "--autofix")
+		"WARN: ~/Makefile:5: "+
+			"Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".")
+
+	t.SetUpCommandLine("-Wall", "--autofix")
 
 	CheckFileMk(filename)
 

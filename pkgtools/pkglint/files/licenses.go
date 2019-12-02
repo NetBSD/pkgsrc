@@ -24,13 +24,14 @@ func (lc *LicenseChecker) Check(value string, op MkOperator) {
 }
 
 func (lc *LicenseChecker) checkName(license string) {
-	licenseFile := NewPath("")
+	licenseFile := NewCurrPath("")
 	if G.Pkg != nil {
 		if mkline := G.Pkg.vars.FirstDefinition("LICENSE_FILE"); mkline != nil {
-			licenseFile = G.Pkg.File(mkline.ResolveVarsInRelativePath(NewPath(mkline.Value())))
+			rel := mkline.ResolveVarsInRelativePath(NewRelPathString(mkline.Value()))
+			licenseFile = G.Pkg.File(NewPackagePath(rel.AsPath()))
 		}
 	}
-	if licenseFile == "" {
+	if licenseFile.IsEmpty() {
 		licenseFile = G.Pkgsrc.File("licenses").JoinNoClean(NewPath(license))
 		G.InterPackage.UseLicense(license)
 	}

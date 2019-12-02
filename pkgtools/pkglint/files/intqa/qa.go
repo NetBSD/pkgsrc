@@ -43,7 +43,9 @@ const (
 	EMethodsSameFile
 )
 
-// QAChecker ensures that all test names follow a common naming scheme:
+// QAChecker analyzes Go source code for consistency.
+//
+// Among others, it enforces a strict naming scheme for test methods:
 //  Test_${Type}_${Method}__${description_using_underscores}
 // Each of the variable parts may be omitted.
 type QAChecker struct {
@@ -90,8 +92,9 @@ func (ck *QAChecker) Configure(filenames, typeNames, funcNames string, errors ..
 
 func (ck *QAChecker) Check() {
 	ck.load(".")
-	ck.checkTestees()
+	ck.checkTesteesTest()
 	ck.checkTests()
+	ck.checkMethodsSameFile()
 	ck.checkOrder()
 	ck.print()
 }
@@ -306,11 +309,6 @@ func (ck *QAChecker) checkTestDescr(test *test) {
 		test.fullName(), test.descr)
 }
 
-func (ck *QAChecker) checkTestees() {
-	ck.checkTesteesTest()
-	ck.checkTesteesMethodsSameFile()
-}
-
 // checkTesteesTest ensures that each testee has a corresponding unit test.
 func (ck *QAChecker) checkTesteesTest() {
 	tested := make(map[*testee]bool)
@@ -334,20 +332,24 @@ func (ck *QAChecker) checkTesteesTest() {
 
 // checkTesteesMethodsSameFile ensures that all methods of a type are
 // defined in the same file or in the corresponding test file.
-func (ck *QAChecker) checkTesteesMethodsSameFile() {
-	types := map[string]*testee{}
+func (ck *QAChecker) checkMethodsSameFile() {
+	types := map[string]*code{}
+	var methods []*code
+
 	for _, testee := range ck.testees {
 		if testee.isType() {
-			types[testee.Type] = testee
+			types[testee.Type] = &testee.code
+		} else if testee.isMethod() {
+			methods = append(methods, &testee.code)
+		}
+	}
+	for _, test := range ck.tests {
+		if test.isMethod() {
+			methods = append(methods, &test.code)
 		}
 	}
 
-	for _, testee := range ck.testees {
-		if !testee.isMethod() {
-			continue
-		}
-		method := testee
-
+	for _, method := range methods {
 		typ := types[method.Type]
 		if typ == nil || method.file == typ.file {
 			continue
@@ -356,9 +358,9 @@ func (ck *QAChecker) checkTesteesMethodsSameFile() {
 		if method.isTestScope() == typ.isTestScope() {
 			ck.addError(
 				EMethodsSameFile,
-				testee.code,
+				*method,
 				"Method %s must be in %s, like its type.",
-				testee.fullName(), typ.file)
+				method.fullName(), typ.file)
 			continue
 		}
 
@@ -369,9 +371,9 @@ func (ck *QAChecker) checkTesteesMethodsSameFile() {
 
 		ck.addError(
 			EMethodsSameFile,
-			testee.code,
+			*method,
 			"Method %s must be in %s, corresponding to its type.",
-			testee.fullName(), correctFile)
+			method.fullName(), correctFile)
 	}
 }
 

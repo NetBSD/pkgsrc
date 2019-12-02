@@ -443,12 +443,12 @@ func SaveAutofixChanges(lines *Lines) (autofixed bool) {
 
 	if G.Testing {
 		abs := G.Abs(lines.Filename)
-		absTmp := G.Abs(NewPathSlash(os.TempDir()))
+		absTmp := G.Abs(NewCurrPathSlash(os.TempDir()))
 		assertf(abs.HasPrefixPath(absTmp), "%q must be inside %q", abs, absTmp)
 	}
 
-	changes := make(map[Path][]string)
-	changed := make(map[Path]bool)
+	changes := make(map[CurrPath][]string)
+	changed := make(map[CurrPath]bool)
 	for _, line := range lines.Lines {
 		chlines := changes[line.Filename]
 		if fix := line.autofix; fix != nil {
