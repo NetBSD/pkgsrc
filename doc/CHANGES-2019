@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5212 2019/12/02 02:00:47 minskim Exp $
+$NetBSD: CHANGES-2019,v 1.5213 2019/12/02 04:04:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8407,3 +8407,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/py-qt4 to 4.12.3 [adam 2019-12-01]
 	Added math/py-sklearn-pandas version 1.8.0 [minskim 2019-12-01]
 	Added textproc/word2vec version 0.1c [minskim 2019-12-02]
+	Updated textproc/py-jsonschema to 3.1.1nb1 [minskim 2019-12-02]
