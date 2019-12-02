@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5214 2019/12/02 09:44:59 markd Exp $
+$NetBSD: CHANGES-2019,v 1.5215 2019/12/02 10:57:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8410,3 +8410,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-jsonschema to 3.1.1nb1 [minskim 2019-12-02]
 	Updated multimedia/libkcddb to 19.08.3 [markd 2019-12-02]
 	Updated sysutils/k3b to 19.08.3 [markd 2019-12-02]
+	Updated lang/rust to 1.39.0nb2 [ryoon 2019-12-02]
