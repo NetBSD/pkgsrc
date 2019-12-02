@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2019/11/30 11:02:39 nia Exp $
+# $NetBSD: Makefile,v 1.178 2019/12/02 10:09:29 jperkin Exp $
 
 DISTNAME=	mesa-19.2.4
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -178,6 +178,10 @@ pre-configure:
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/drirc.d/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
+.if ${OPSYS} == "Darwin"
+	install_name_tool -id ${PREFIX}/lib/dri/swrast_dri.so \
+	    ${DESTDIR}${PREFIX}/lib/dri/swrast_dri.so
+.endif
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
