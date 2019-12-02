@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/11/23 08:06:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/02 13:50:39 nia Exp $
 
-DISTNAME=	xjadeo-0.8.7
-PKGREVISION=	3
+DISTNAME=	xjadeo-0.8.9
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=x42/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,12 +16,18 @@ USE_TOOLS+=	automake aclocal autoheader autoconf pkg-config
 
 GNU_CONFIGURE=	yes
 
+CONFIGURE_ARGS+=	--disable-ltc
+CONFIGURE_ARGS+=	--disable-sdl
+
 pre-configure:
 	${RUN} cd ${WRKSRC} && ./autogen.sh
 
 .include "../../audio/jack/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../multimedia/ffmpeg3/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
