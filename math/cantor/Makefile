@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2019/11/29 20:58:01 markd Exp $
+# $NetBSD: Makefile,v 1.56 2019/12/02 07:13:49 markd Exp $
 
 DISTNAME=	cantor-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	math
 
 HOMEPAGE=	https://kde.org/applications/education/cantor/
@@ -61,5 +62,6 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_scilab.knsrc \
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/discount/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
