@@ -48,7 +48,7 @@ func (p *MkParser) MkCond() *MkCond {
 	for {
 		mark := p.lexer.Mark()
 		p.lexer.SkipHspace()
-		if !(p.lexer.SkipString("||")) {
+		if !p.lexer.SkipString("||") {
 			break
 		}
 		next := p.mkCondAnd()
