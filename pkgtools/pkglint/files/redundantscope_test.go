@@ -1525,7 +1525,7 @@ func (s *Suite) Test_RedundantScope_handleVarassign__commented_variable_assignme
 func (s *Suite) Test_includePath_includes(c *check.C) {
 	t := s.Init(c)
 
-	path := func(locations ...Path) includePath {
+	path := func(locations ...CurrPath) includePath {
 		return includePath{locations}
 	}
 
@@ -1550,7 +1550,7 @@ func (s *Suite) Test_includePath_includes(c *check.C) {
 func (s *Suite) Test_includePath_equals(c *check.C) {
 	t := s.Init(c)
 
-	path := func(locations ...Path) includePath {
+	path := func(locations ...CurrPath) includePath {
 		return includePath{locations}
 	}
 

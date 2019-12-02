@@ -207,7 +207,6 @@ func (s *Suite) Test_Tools__builtin_mk(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpCommandLine("-Wall,no-space")
 	t.CreateFileLines("mk/tools/defaults.mk",
 		"TOOLS_CREATE+=  load",
 		"TOOLS_CREATE+=  run",
@@ -228,19 +227,19 @@ func (s *Suite) Test_Tools__builtin_mk(c *check.C) {
 	mklines := t.SetUpFileMkLines("category/package/builtin.mk",
 		MkCvsID,
 		"",
-		"VAR!=   ${ECHO} 'too early'",
-		"VAR!=   ${LOAD} 'too early'",
-		"VAR!=   ${RUN_CMD} 'never allowed'",
-		"VAR!=   ${NOWHERE} 'never allowed'",
+		"VAR!=\t${ECHO} 'too early'",
+		"VAR!=\t${LOAD} 'too early'",
+		"VAR!=\t${RUN_CMD} 'never allowed'",
+		"VAR!=\t${NOWHERE} 'never allowed'",
 		"",
 		".include \"../../mk/buildlink3/bsd.builtin.mk\"",
 		"",
-		"VAR!=   ${ECHO} 'valid'",
-		"VAR!=   ${LOAD} 'valid'",
-		"VAR!=   ${RUN_CMD} 'never allowed'",
-		"VAR!=   ${NOWHERE} 'never allowed'",
+		"VAR!=\t${ECHO} 'valid'",
+		"VAR!=\t${LOAD} 'valid'",
+		"VAR!=\t${RUN_CMD} 'never allowed'",
+		"VAR!=\t${NOWHERE} 'never allowed'",
 		"",
-		"VAR!=   ${VAR}")
+		"VAR!=\t${VAR}")
 
 	mklines.Check()
 
@@ -257,7 +256,6 @@ func (s *Suite) Test_Tools__implicit_definition_in_bsd_pkg_mk(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpCommandLine("-Wall,no-space")
 	t.CreateFileLines("mk/tools/defaults.mk",
 		MkCvsID) // None
 	t.CreateFileLines("mk/bsd.prefs.mk",
@@ -278,7 +276,6 @@ func (s *Suite) Test_Tools__both_prefs_and_pkg_mk(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpCommandLine("-Wall,no-space")
 	t.CreateFileLines("mk/tools/defaults.mk",
 		MkCvsID)
 	t.CreateFileLines("mk/bsd.prefs.mk",
@@ -297,7 +294,6 @@ func (s *Suite) Test_Tools__tools_having_the_same_variable_name(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	t.SetUpCommandLine("-Wall,no-space")
 	t.CreateFileLines("mk/tools/defaults.mk",
 		"_TOOLS_VARNAME.awk=     AWK",
 		"_TOOLS_VARNAME.gawk=    AWK",

@@ -262,7 +262,7 @@ func (p *MkLexer) varUseModifier(varname string, closing byte) string {
 	modifier := p.varUseText(closing)
 
 	// ${SOURCES:%.c=%.o} or ${:!uname -a!:[2]}
-	if contains(modifier, "=") || (hasPrefix(modifier, "!") && hasSuffix(modifier, "!")) {
+	if contains(modifier, "=") || hasPrefix(modifier, "!") && hasSuffix(modifier, "!") {
 		return modifier
 	}
 

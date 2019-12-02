@@ -337,56 +337,6 @@ func (s *Suite) Test__regex_ReplaceFirst(c *check.C) {
 	t.CheckEquals(rest, "X+c+d")
 }
 
-func (s *Suite) Test_cleanpath(c *check.C) {
-	t := s.Init(c)
-
-	test := func(from, to Path) {
-		t.CheckEquals(cleanpath(from), to)
-	}
-
-	test("simple/path", "simple/path")
-	test("/absolute/path", "/absolute/path")
-
-	// Single dot components are removed, unless it's the only component of the path.
-	test("./././.", ".")
-	test("./././", ".")
-	test("dir/multi/././/file", "dir/multi/file")
-	test("dir/", "dir")
-
-	test("dir/", "dir")
-
-	// Components like aa/bb/../.. are removed, but not in the initial part of the path,
-	// and only if they are not followed by another "..".
-	test("dir/../dir/../dir/../dir/subdir/../../Makefile", "dir/../dir/../dir/../Makefile")
-	test("111/222/../../333/444/../../555/666/../../777/888/9", "111/222/../../777/888/9")
-	test("1/2/3/../../4/5/6/../../7/8/9/../../../../10", "1/2/3/../../4/7/8/9/../../../../10")
-	test("cat/pkg.v1/../../cat/pkg.v2/Makefile", "cat/pkg.v1/../../cat/pkg.v2/Makefile")
-	test("aa/../../../../../a/b/c/d", "aa/../../../../../a/b/c/d")
-	test("aa/bb/../../../../a/b/c/d", "aa/bb/../../../../a/b/c/d")
-	test("aa/bb/cc/../../../a/b/c/d", "aa/bb/cc/../../../a/b/c/d")
-	test("aa/bb/cc/dd/../../a/b/c/d", "aa/bb/a/b/c/d")
-	test("aa/bb/cc/dd/ee/../a/b/c/d", "aa/bb/cc/dd/ee/../a/b/c/d")
-	test("../../../../../a/b/c/d", "../../../../../a/b/c/d")
-	test("aa/../../../../a/b/c/d", "aa/../../../../a/b/c/d")
-	test("aa/bb/../../../a/b/c/d", "aa/bb/../../../a/b/c/d")
-	test("aa/bb/cc/../../a/b/c/d", "aa/bb/cc/../../a/b/c/d")
-	test("aa/bb/cc/dd/../a/b/c/d", "aa/bb/cc/dd/../a/b/c/d")
-	test("aa/../cc/../../a/b/c/d", "aa/../cc/../../a/b/c/d")
-
-	// The initial 2 components of the path are typically category/package, when
-	// pkglint is called from the pkgsrc top-level directory.
-	// This path serves as the context and therefore is always kept.
-	test("aa/bb/../../cc/dd/../../ee/ff", "aa/bb/../../ee/ff")
-	test("aa/bb/../../cc/dd/../..", "aa/bb/../..")
-	test("aa/bb/cc/dd/../..", "aa/bb")
-	test("aa/bb/../../cc/dd/../../ee/ff/buildlink3.mk", "aa/bb/../../ee/ff/buildlink3.mk")
-	test("./aa/bb/../../cc/dd/../../ee/ff/buildlink3.mk", "aa/bb/../../ee/ff/buildlink3.mk")
-
-	test("../.", "..")
-	test("../././././././.", "..")
-	test(".././././././././", "..")
-}
-
 const reMkIncludeBenchmark = `^\.([\t ]*)(s?include)[\t ]+\"([^\"]+)\"[\t ]*(?:#.*)?$`
 const reMkIncludeBenchmarkPositive = `^\.([\t ]*)(s?include)[\t ]+\"(.+)\"[\t ]*(?:#.*)?$`
 
@@ -705,15 +655,15 @@ func (s *Suite) Test_FileCache(c *check.C) {
 	c.Check(cache.Get("Makefile", MustSucceed|LogErrors), check.IsNil) // Wrong LoadOptions.
 
 	linesFromCache := cache.Get("Makefile", 0)
-	t.CheckEquals(linesFromCache.Filename, NewPath("Makefile"))
+	t.CheckEquals(linesFromCache.Filename, NewCurrPath("Makefile"))
 	c.Check(linesFromCache.Lines, check.HasLen, 2)
-	t.CheckEquals(linesFromCache.Lines[0].Filename, NewPath("Makefile"))
+	t.CheckEquals(linesFromCache.Lines[0].Filename, NewCurrPath("Makefile"))
 
 	// Cache keys are normalized using path.Clean.
 	linesFromCache2 := cache.Get("./Makefile", 0)
-	t.CheckEquals(linesFromCache2.Filename, NewPath("./Makefile"))
+	t.CheckEquals(linesFromCache2.Filename, NewCurrPath("./Makefile"))
 	c.Check(linesFromCache2.Lines, check.HasLen, 2)
-	t.CheckEquals(linesFromCache2.Lines[0].Filename, NewPath("./Makefile"))
+	t.CheckEquals(linesFromCache2.Lines[0].Filename, NewCurrPath("./Makefile"))
 
 	cache.Put("file1.mk", 0, lines)
 	cache.Put("file2.mk", 0, lines)
@@ -1094,6 +1044,23 @@ func (s *Suite) Test_LazyStringBuilder_WriteByte__other_than_expected(c *check.C
 
 	t.CheckEquals(sb.String(), "wolf")
 	t.CheckDeepEquals(sb.buf, []byte{'w', 'o', 'l', 'f'})
+}
+
+func (s *Suite) Test_LazyStringBuilder_writeToBuf__assertion(c *check.C) {
+	t := s.Init(c)
+
+	sb := NewLazyStringBuilder("0123456789abcdef0123456789abcdef")
+	sb.WriteString("0123456789abcdef0123456789abcdeX")
+
+	t.CheckEquals(cap(sb.buf), 32)
+
+	sb.Reset("0123456789abcdef")
+	sb.WriteString("01234567")
+
+	// Intentionally violate the invariant of the LazyStringBuilder that
+	// as long as sb.usingBuf is false, sb.len is at most len(sb.expected).
+	sb.expected = ""
+	t.ExpectAssert(func() { sb.writeToBuf('x') })
 }
 
 func (s *Suite) Test_LazyStringBuilder_Reset(c *check.C) {
