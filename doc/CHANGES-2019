@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5216 2019/12/02 11:47:16 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5217 2019/12/02 13:35:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8413,3 +8413,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/rust to 1.39.0nb2 [ryoon 2019-12-02]
 	Updated devel/py-ipython to 7.10.1 [adam 2019-12-02]
 	Updated www/py-django2 to 2.2.8 [adam 2019-12-02]
+	Updated audio/ardour to 5.12.0 [nia 2019-12-02]
