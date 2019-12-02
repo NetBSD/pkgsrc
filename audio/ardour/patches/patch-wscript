@@ -1,45 +1,33 @@
-$NetBSD: patch-wscript,v 1.1 2016/06/20 08:17:43 kamil Exp $
+$NetBSD: patch-wscript,v 1.2 2019/12/02 13:34:33 nia Exp $
 
-ALSA and PortAudio are supported on NetBSD.
+Support NetBSD.
 
---- wscript.orig	2016-02-19 01:28:56.000000000 +0000
+--- wscript.orig	2017-09-15 20:56:23.000000000 +0000
 +++ wscript
-@@ -924,7 +924,7 @@ def configure(conf):
-                   okmsg = 'ok',
-                   errmsg = 'too old\nPlease install boost version 1.39 or higher.')
+@@ -610,7 +610,7 @@ int main() { return 0; }''',
+     if opt.stl_debug:
+         cxx_flags.append("-D_GLIBCXX_DEBUG")
  
--    if re.search ("linux", sys.platform) != None and Options.options.dist_target != 'mingw':
-+    if (re.search ("linux", sys.platform) != None or sys.platform.startswith('netbsd')) and Options.options.dist_target != 'mingw':
-         autowaf.check_pkg(conf, 'alsa', uselib_store='ALSA')
+-    if re.search ("freebsd", sys.platform) != None or re.search ("openbsd", sys.platform) != None:
++    if re.search ("[a-z]*bsd", sys.platform) != None:
+         linker_flags.append('-lexecinfo')
  
-     autowaf.check_pkg(conf, 'glib-2.0', uselib_store='GLIB', atleast_version='2.28', mandatory=True)
-@@ -1093,16 +1093,16 @@ int main () { return 0; }
-     conf.env['BUILD_PABACKEND'] = any('portaudio' in b for b in backends)
-     conf.env['BUILD_CORECRAPPITA'] = any('coreaudio' in b for b in backends)
+     if conf.env['DEBUG_RT_ALLOC']:
+@@ -1009,7 +1009,7 @@ def configure(conf):
  
--    if re.search ("linux", sys.platform) != None and Options.options.dist_target != 'mingw' and conf.env['BUILD_PABACKEND']:
--        print("PortAudio Backend is not for Linux")
-+    if (re.search ("linux", sys.platform) != None or sys.platform.startswith('netbsd')) and Options.options.dist_target != 'mingw' and conf.env['BUILD_PABACKEND']:
-+        print("PortAudio Backend is not for Linux/NetBSD")
-         sys.exit(1)
- 
-     if sys.platform != 'darwin' and conf.env['BUILD_CORECRAPPITA']:
-         print("Coreaudio backend is only available for OSX")
-         sys.exit(1)
- 
--    if re.search ("linux", sys.platform) == None and conf.env['BUILD_ALSABACKEND']:
--        print("ALSA Backend is only available on Linux")
-+    if re.search ("linux", sys.platform) == None and not sys.platform.startswith('netbsd') and conf.env['BUILD_ALSABACKEND']:
-+        print("ALSA Backend is only available on Linux/NetBSD")
-         sys.exit(1)
- 
-     set_compiler_flags (conf, Options.options)
-@@ -1241,7 +1241,7 @@ def build(bld):
-     for i in children:
-         bld.recurse(i)
- 
+     # executing a test program is n/a when cross-compiling
+     if Options.options.dist_target != 'mingw':
+-        if Options.options.dist_target != 'msvc' and re.search ("openbsd", sys.platform) == None:
++        if Options.options.dist_target != 'msvc' and re.search ("openbsd", sys.platform) == None and re.search ("netbsd", sys.platform) == None:
+             if re.search ("freebsd", sys.platform) != None:
+                 conf.check_cc(function_name='dlopen', header_name='dlfcn.h', uselib_store='DL')
+             else:
+@@ -1366,7 +1366,7 @@ def build(bld):
+     if bld.is_defined ('BEATBOX'):
+         bld.recurse('tools/bb')
+             
 -    bld.install_files (bld.env['CONFDIR'], 'system_config')
 +    bld.install_files (os.environ['EGDIR'], 'system_config')
  
-     if bld.env['RUN_TESTS']:
-         bld.add_post_fun(test)
+     bld.install_files (os.path.join (bld.env['DATADIR'], 'templates'), bld.path.ant_glob ('templates/**'), cwd=bld.path.find_dir ('templates'), relative_trick=True)
+ 
