@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2019/11/02 21:09:14 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2019/12/02 11:46:08 nia Exp $
 
 DISTNAME=	jack-audio-connection-kit-0.125.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/audio-connection-kit-//}
 CATEGORIES=	audio
 MASTER_SITES=	http://jackaudio.org/downloads/
@@ -68,11 +68,9 @@ PLIST.coreaudio=	yes
 .else
 CONFIGURE_ARGS+=	--disable-coreaudio
 .endif
-###
-### XXX The sun driver is buggy on NetBSD right now.  I hope to remedy
-###	this shortly.
-###
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "SunOS"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "SunOS" || \
+    exists(/usr/include/sys/audioio.h)
 CONFIGURE_ARGS+=	--enable-sun
 PLIST.sunaudio=		yes
 .else
@@ -81,7 +79,7 @@ CONFIGURE_ARGS+=	--disable-sun
 
 .include "../../mk/oss.buildlink3.mk"
 
-.if ${OSS_TYPE} != "none"
+.if ${OSS_TYPE} != "none" && ${OPSYS} != "NetBSD" && ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--enable-oss
 PLIST.oss=		yes
 MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO}
