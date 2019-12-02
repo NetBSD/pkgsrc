@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5215 2019/12/02 10:57:46 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.5216 2019/12/02 11:47:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8411,3 +8411,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/libkcddb to 19.08.3 [markd 2019-12-02]
 	Updated sysutils/k3b to 19.08.3 [markd 2019-12-02]
 	Updated lang/rust to 1.39.0nb2 [ryoon 2019-12-02]
+	Updated devel/py-ipython to 7.10.1 [adam 2019-12-02]
+	Updated www/py-django2 to 2.2.8 [adam 2019-12-02]
