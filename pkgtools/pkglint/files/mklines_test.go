@@ -557,25 +557,24 @@ func (s *Suite) Test_MkLines_collectDocumentedVariables(c *check.C) {
 func (s *Suite) Test_MkLines_collectVariables(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
 	t.SetUpPkgsrc()
 	t.CreateFileLines("mk/tools/defaults.mk",
 		"USE_TOOLS+=     autoconf autoconf213")
 	mklines := t.NewMkLines("determine-defined-variables.mk",
 		MkCvsID,
 		"",
-		"USE_TOOLS+=             autoconf213 autoconf",
+		"USE_TOOLS+=\t\tautoconf213 autoconf",
 		"",
-		"OPSYSVARS+=             OSV",
-		"OSV.NetBSD=             NetBSD-specific value",
+		"OPSYSVARS+=\t\tOSV",
+		"OSV.NetBSD=\t\tNetBSD-specific value",
 		"",
-		"SUBST_CLASSES+=         subst",
-		"SUBST_STAGE.subst=      pre-configure",
-		"SUBST_FILES.subst=      file",
-		"SUBST_VARS.subst=       SUV",
-		"SUV=                    value for substitution",
+		"SUBST_CLASSES+=\t\tsubst",
+		"SUBST_STAGE.subst=\tpre-configure",
+		"SUBST_FILES.subst=\tfile",
+		"SUBST_VARS.subst=\tSUV",
+		"SUV=\t\t\tvalue for substitution",
 		"",
-		"#BUILD_DEFS+=           VARBASE",
+		"#BUILD_DEFS+=\t\tVARBASE",
 		"",
 		"pre-configure:",
 		"\t${RUN} autoreconf; autoheader-2.13",
@@ -594,15 +593,14 @@ func (s *Suite) Test_MkLines_collectVariables(c *check.C) {
 func (s *Suite) Test_MkLines_collectVariables__BUILTIN_FIND_FILES_VAR(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
 	t.SetUpPackage("category/package")
 	t.CreateFileLines("mk/buildlink3/bsd.builtin.mk",
 		MkCvsID)
 	mklines := t.SetUpFileMkLines("category/package/builtin.mk",
 		MkCvsID,
 		"",
-		"BUILTIN_FIND_FILES_VAR:=        H_XFT2",
-		"BUILTIN_FIND_FILES.H_XFT2=      ${X11BASE}/include/X11/Xft/Xft.h",
+		"BUILTIN_FIND_FILES_VAR:=\tH_XFT2",
+		"BUILTIN_FIND_FILES.H_XFT2=\t${X11BASE}/include/X11/Xft/Xft.h",
 		"",
 		".include \"../../mk/buildlink3/bsd.builtin.mk\"",
 		"",
@@ -637,7 +635,6 @@ func (s *Suite) Test_MkLines_collectVariables__no_tracing(c *check.C) {
 func (s *Suite) Test_MkLines_ForEach__conditional_variables(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
 	t.SetUpVartypes()
 	mklines := t.NewMkLines("conditional.mk",
 		MkCvsID,
@@ -673,7 +670,6 @@ func (s *Suite) Test_MkLines_ForEach__conditional_variables(c *check.C) {
 func (s *Suite) Test_MkLines_collectElse(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wno-space")
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("module.mk",
@@ -763,7 +759,6 @@ func (s *Suite) Test_MkLines_checkAll__unknown_options(c *check.C) {
 func (s *Suite) Test_MkLines_checkAll__PLIST_VARS(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wno-space")
 	t.SetUpVartypes()
 	t.SetUpOption("both", "")
 	t.SetUpOption("only-added", "")
@@ -773,20 +768,20 @@ func (s *Suite) Test_MkLines_checkAll__PLIST_VARS(c *check.C) {
 	mklines := t.SetUpFileMkLines("category/package/options.mk",
 		MkCvsID,
 		"",
-		"PKG_OPTIONS_VAR=        PKG_OPTIONS.pkg",
-		"PKG_SUPPORTED_OPTIONS=  both only-added only-defined",
-		"PKG_SUGGESTED_OPTIONS=  # none",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.pkg",
+		"PKG_SUPPORTED_OPTIONS=\tboth only-added only-defined",
+		"PKG_SUGGESTED_OPTIONS=\t# none",
 		"",
 		".include \"../../mk/bsd.options.mk\"",
 		"",
-		"PLIST_VARS+=            both only-added",
+		"PLIST_VARS+=\t\tboth only-added",
 		"",
 		".if !empty(PKG_OPTIONS:Mboth)",
-		"PLIST.both=             yes",
+		"PLIST.both=\t\tyes",
 		".endif",
 		"",
 		".if !empty(PKG_OPTIONS:Monly-defined)",
-		"PLIST.only-defined=     yes",
+		"PLIST.only-defined=\tyes",
 		".endif")
 
 	mklines.Check()
@@ -799,7 +794,6 @@ func (s *Suite) Test_MkLines_checkAll__PLIST_VARS(c *check.C) {
 func (s *Suite) Test_MkLines_checkAll__PLIST_VARS_indirect(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wno-space")
 	t.SetUpVartypes()
 	t.SetUpOption("option1", "")
 	t.SetUpOption("option2", "")
@@ -807,18 +801,18 @@ func (s *Suite) Test_MkLines_checkAll__PLIST_VARS_indirect(c *check.C) {
 	mklines := t.SetUpFileMkLines("module.mk",
 		MkCvsID,
 		"",
-		"MY_PLIST_VARS=  option1 option2",
-		"PLIST_VARS+=    ${MY_PLIST_VARS}",
+		"MY_PLIST_VARS=\toption1 option2",
+		"PLIST_VARS+=\t${MY_PLIST_VARS}",
 		".for option in option3",
-		"PLIST_VARS+=    ${option}",
+		"PLIST_VARS+=\t${option}",
 		".endfor",
 		"",
 		".if 0",
-		"PLIST.option1=  yes",
+		"PLIST.option1=\tyes",
 		".endif",
 		"",
 		".if 1",
-		"PLIST.option2=  yes",
+		"PLIST.option2=\tyes",
 		".endif")
 
 	mklines.Check()
@@ -835,7 +829,6 @@ func (s *Suite) Test_MkLines_checkAll__PLIST_VARS_indirect(c *check.C) {
 func (s *Suite) Test_MkLines_checkAll__PLIST_VARS_indirect_2(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wno-space")
 	t.SetUpVartypes()
 	t.SetUpOption("a", "")
 	t.SetUpOption("b", "")
@@ -844,12 +837,12 @@ func (s *Suite) Test_MkLines_checkAll__PLIST_VARS_indirect_2(c *check.C) {
 	mklines := t.NewMkLines("module.mk",
 		MkCvsID,
 		"",
-		"PKG_SUPPORTED_OPTIONS=  a b c",
-		"PLIST_VARS+=            ${PKG_SUPPORTED_OPTIONS:S,a,,g}",
+		"PKG_SUPPORTED_OPTIONS=\ta b c",
+		"PLIST_VARS+=\t\t${PKG_SUPPORTED_OPTIONS:S,a,,g}",
 		"",
-		"PLIST_VARS+=            only-added",
+		"PLIST_VARS+=\t\tonly-added",
 		"",
-		"PLIST.only-defined=     yes")
+		"PLIST.only-defined=\tyes")
 
 	mklines.Check()
 
@@ -862,21 +855,20 @@ func (s *Suite) Test_MkLines_checkAll__PLIST_VARS_indirect_2(c *check.C) {
 func (s *Suite) Test_MkLines_checkAll__defined_and_used_variables(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wno-space")
 	t.SetUpVartypes()
 
 	mklines := t.NewMkLines("module.mk",
 		MkCvsID,
 		"",
 		".for lang in de fr",
-		"PLIST_VARS+=            ${lang}",
+		"PLIST_VARS+=\t${lang}",
 		".endif",
 		"",
 		".for language in de fr",
-		"PLIST.${language}=      yes",
+		"PLIST.${language}=\tyes",
 		".endif",
 		"",
-		"PLIST.other=            yes")
+		"PLIST.other=\tyes")
 
 	mklines.Check()
 
@@ -889,12 +881,11 @@ func (s *Suite) Test_MkLines_checkAll__defined_and_used_variables(c *check.C) {
 func (s *Suite) Test_MkLines_checkAll__hacks_mk(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Wall,no-space")
 	t.SetUpVartypes()
 	mklines := t.NewMkLines("hacks.mk",
 		MkCvsID,
 		"",
-		"PKGNAME?=       pkgbase-1.0")
+		"PKGNAME?=\tpkgbase-1.0")
 
 	mklines.Check()
 
@@ -1026,13 +1017,13 @@ func (s *Suite) Test_MkLines_checkAll__extra_warnings(c *check.C) {
 		"",
 		".for word in ${PKG_FAIL_REASON}",
 		"CONFIGURE_ARGS+=\t--sharedir=${PREFIX}/share/kde",
-		"COMMENT=\t# defined",
+		"COMMENT=\t\t# defined",
 		".endfor",
-		"GAMES_USER?=pkggames",
-		"GAMES_GROUP?=pkggames",
-		"PLIST_SUBST+= CONDITIONAL=${CONDITIONAL}",
-		"CONDITIONAL=\"@comment\"",
-		"BUILD_DIRS=\t${WRKSRC}/../build")
+		"GAMES_USER?=\t\tpkggames",
+		"GAMES_GROUP?=\t\tpkggames",
+		"PLIST_SUBST+=\t\tCONDITIONAL=${CONDITIONAL}",
+		"CONDITIONAL=\t\t\"@comment\"",
+		"BUILD_DIRS=\t\t${WRKSRC}/../build")
 
 	mklines.Check()
 
@@ -1069,7 +1060,7 @@ func (s *Suite) Test_MkLines_CheckUsedBy__show_autofix(c *check.C) {
 
 	t.SetUpCommandLine("--show-autofix")
 
-	test := func(pkgpath Path, lines []string, diagnostics []string) {
+	test := func(pkgpath PkgsrcPath, lines []string, diagnostics []string) {
 		mklines := t.NewMkLines("Makefile.common", lines...)
 
 		mklines.CheckUsedBy(pkgpath)
@@ -1155,7 +1146,7 @@ func (s *Suite) Test_MkLines_CheckUsedBy__show_autofix(c *check.C) {
 func (s *Suite) Test_MkLines_CheckUsedBy(c *check.C) {
 	t := s.Init(c)
 
-	test := func(pkgpath Path, lines []string, diagnostics []string) {
+	test := func(pkgpath PkgsrcPath, lines []string, diagnostics []string) {
 		mklines := t.NewMkLines("Makefile.common", lines...)
 
 		mklines.CheckUsedBy(pkgpath)

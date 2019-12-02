@@ -111,12 +111,15 @@ func (ck *PlistChecker) collectFilesAndDirs(plines []*PlistLine) {
 				if prev := ck.allFiles[path]; prev == nil || stringSliceLess(pline.conditions, prev.conditions) {
 					ck.allFiles[path] = pline
 				}
-				for dir := path.Dir(); dir != "."; dir = dir.Dir() {
+				// FIXME: consider DirNoClean
+				// FIXME: consider DirNoClean
+				for dir := path.DirClean(); dir != "."; dir = dir.DirClean() {
 					ck.allDirs[dir] = pline
 				}
 			case first == '@':
 				if m, dirname := match1(text, `^@exec \$\{MKDIR\} %D/(.*)$`); m {
-					for dir := NewPath(dirname); dir != "."; dir = dir.Dir() {
+					// FIXME: consider DirNoClean
+					for dir := NewPath(dirname); dir != "."; dir = dir.DirClean() {
 						ck.allDirs[dir] = pline
 					}
 				}
@@ -560,8 +563,8 @@ func (s *plistLineSorter) Sort() {
 		mi := s.middle[i]
 		mj := s.middle[j]
 		less := mi.text < mj.text ||
-			(mi.text == mj.text && stringSliceLess(mi.conditions, mj.conditions))
-		if (i < j) != less {
+			mi.text == mj.text && stringSliceLess(mi.conditions, mj.conditions)
+		if i < j != less {
 			s.changed = true
 		}
 		return less

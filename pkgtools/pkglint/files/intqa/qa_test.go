@@ -293,6 +293,15 @@ func (s *Suite) Test_QAChecker_isTest(c *check.C) {
 	testFunc("f_test.go", "func Test_Type_Method(t *testing.T) {}", true)
 	testFunc("f_test.go", "func Test_Type_Method(X) {}", false)
 	testFunc("f_test.go", "func Test_Type_Method(int) {}", false)
+
+	// Having such a method in a test suite is unlikely since check.v1
+	// checks the number of parameters.
+	testFunc("f_test.go", "func Test_Type_Method() {}", false)
+	testFunc("f_test.go", "func (s *Suite) Test(int, int) {}", false)
+
+	// In a test helper type, it is reasonable that some of the method
+	// names start with "Test". This doesn't make them tests though.
+	testFunc("f_test.go", "func (h *Helper) TestEqInt(int, int) {}", false)
 }
 
 func (s *Suite) Test_QAChecker_addTestee(c *check.C) {
@@ -437,18 +446,6 @@ func (s *Suite) Test_QAChecker_checkTestDescr__camel_case(c *check.C) {
 			"must not use CamelCase in the first word.")
 }
 
-func (s *Suite) Test_QAChecker_checkTestees(c *check.C) {
-	ck := s.Init(c)
-
-	ck.testees = []*testee{s.newTestee("s.go", "", "Func", 0)}
-	ck.tests = nil // force an error
-
-	ck.checkTestees()
-
-	s.CheckErrors(
-		"Missing unit test \"Test_Func\" for \"Func\".")
-}
-
 func (s *Suite) Test_QAChecker_checkTesteesTest(c *check.C) {
 	ck := s.Init(c)
 
@@ -471,7 +468,7 @@ func (s *Suite) Test_QAChecker_checkTesteesTest(c *check.C) {
 		"Missing unit test \"Test_Type_Method\" for \"Type.Method\".")
 }
 
-func (s *Suite) Test_QAChecker_checkTesteesMethodsSameFile(c *check.C) {
+func (s *Suite) Test_QAChecker_checkMethodsSameFile(c *check.C) {
 	ck := s.Init(c)
 
 	ck.addTestee(code{"main.go", "Main", "", 0})
@@ -482,14 +479,17 @@ func (s *Suite) Test_QAChecker_checkTesteesMethodsSameFile(c *check.C) {
 	ck.addTestee(code{"main_test.go", "T", "", 100})
 	ck.addTestee(code{"main_test.go", "T", "MethodOk", 101})
 	ck.addTestee(code{"other_test.go", "T", "MethodWrong", 102})
+	ck.addTest(code{"main_test.go", "T", "Test_MethodOk", 101})
+	ck.addTest(code{"other_test.go", "T", "Test_MethodWrong", 102})
 
-	ck.checkTesteesMethodsSameFile()
+	ck.checkMethodsSameFile()
 
 	s.CheckErrors(
 		"Method Main.MethodWrong must be in main.go, like its type.",
 		"Method Main.MethodWrongTest must be in main_test.go, "+
 			"corresponding to its type.",
-		"Method T.MethodWrong must be in main_test.go, like its type.")
+		"Method T.MethodWrong must be in main_test.go, like its type.",
+		"Method T.Test_MethodWrong must be in main_test.go, like its type.")
 }
 
 func (s *Suite) Test_QAChecker_errorsMask(c *check.C) {
