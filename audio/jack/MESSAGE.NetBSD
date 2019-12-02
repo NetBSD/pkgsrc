@@ -1,18 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2019/12/02 11:46:08 nia Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.2 2019/12/02 11:48:38 nia Exp $
 
-Realtime support is currently problematic. When running jackd as non-root,
-you need to pass -r to disable it, e.g:
+Realtime support is currently problematic.
+You need to pass -r to disable it, e.g:
 
-`jackd -r -d sun`
+$ jackd -r -d sun
 
-If you have an external mic:
+If you have an external USB mic:
 
-`jackd -r -d sun -P /dev/audio -C /dev/audio1`
-
-When running jackd as root you need to use the no-mlock option instead:
-
-`jackd -m -d sun`
+$ jackd -r -d sun -P /dev/audio -C /dev/audio1
 
 Note that to use JACK on NetBSD you need procfs mounted.
 This should be done by default.
