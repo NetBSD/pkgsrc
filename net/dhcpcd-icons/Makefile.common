@@ -1,14 +1,14 @@
-# $NetBSD: Makefile.common,v 1.5 2017/09/16 08:37:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2019/12/03 15:40:05 roy Exp $
 
 # used by net/dhcpcd-gtk/Makefile
 # used by net/dhcpcd-qt/Makefile
 
-DHCPCD_UI_VERSION=	0.7.5
+DHCPCD_UI_VERSION=	0.7.7
 DISTNAME=		dhcpcd-ui-${DHCPCD_UI_VERSION}
 MASTER_SITES=		https://roy.marples.name/downloads/dhcpcd/
 MASTER_SITES+=		ftp://roy.marples.name/pub/dhcpcd/
 MASTER_SITES+=		http://roy.aydogan.net/dhcpcd/
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		https://roy.marples.name/projects/dhcpcd-ui/
@@ -17,6 +17,7 @@ LICENSE=		modified-bsd
 USE_LANGUAGES=		c99
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-dhcpcd-online
+CONFIGURE_ARGS+=	--without-curses
 CONFIGURE_ARGS+=	--without-gtk+
 CONFIGURE_ARGS+=	--without-qt
 CONFIGURE_ARGS+=	--without-icons
