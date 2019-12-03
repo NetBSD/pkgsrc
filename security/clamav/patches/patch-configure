@@ -1,11 +1,10 @@
-$NetBSD: patch-configure,v 1.6 2019/10/31 11:22:15 jperkin Exp $
+$NetBSD: patch-configure,v 1.7 2019/12/03 12:55:16 taca Exp $
 
 Portability fixes.
-Move the checks for $have_milter to after it is defined.
 
---- configure.orig	2019-10-01 17:24:08.000000000 +0000
+--- configure.orig	2019-11-20 04:42:24.000000000 +0000
 +++ configure
-@@ -18269,7 +18269,7 @@ else
+@@ -18272,7 +18272,7 @@ else
  fi
  
  
@@ -14,7 +13,7 @@ Move the checks for $have_milter to after it is defined.
    BUILD_LIBCLAMAV_ONLY_TRUE=
    BUILD_LIBCLAMAV_ONLY_FALSE='#'
  else
-@@ -18278,8 +18278,8 @@ else
+@@ -18281,8 +18281,8 @@ else
  fi
  
  
@@ -25,7 +24,7 @@ Move the checks for $have_milter to after it is defined.
    BUILD_CLAMONACC_TRUE=
    BUILD_CLAMONACC_FALSE='#'
  else
-@@ -21224,7 +21224,7 @@ $as_echo "yes" >&6; }
+@@ -21227,7 +21227,7 @@ $as_echo "yes" >&6; }
  	HAVE_LIBCHECK=yes
  fi
  
@@ -34,20 +33,7 @@ Move the checks for $have_milter to after it is defined.
      CHECK_CPPFLAGS=$CHECK_CFLAGS
  else
  
-@@ -24689,6 +24689,12 @@ fi
- { $as_echo "$as_me:${as_lineno-$LINENO}: result: checking for systemd system unit installation directory... $with_systemdsystemunitdir" >&5
- $as_echo "checking for systemd system unit installation directory... $with_systemdsystemunitdir" >&6; }
- 
-+# Check whether --enable-milter was given.
-+if test "${enable_milter+set}" = set; then :
-+  enableval=$enable_milter; have_milter=$enableval
-+else
-+  have_milter="no"
-+fi
- 
- if test "$have_milter" = "yes"; then
- 
-@@ -29013,10 +29019,10 @@ fi
+@@ -29918,10 +29918,10 @@ fi
  
  			;;
  		*)
@@ -60,7 +46,7 @@ Move the checks for $have_milter to after it is defined.
    BUILD_CLAMONACC_TRUE=
    BUILD_CLAMONACC_FALSE='#'
  else
-@@ -29027,7 +29033,7 @@ fi
+@@ -29932,7 +29932,7 @@ fi
                          ;;
  	esac
  else
@@ -69,16 +55,3 @@ Move the checks for $have_milter to after it is defined.
    BUILD_CLAMONACC_TRUE=
    BUILD_CLAMONACC_FALSE='#'
  else
-@@ -29296,12 +29302,6 @@ if test $ac_cv_func_setpgrp_void = yes;
- fi
- fi
- 
--# Check whether --enable-milter was given.
--if test "${enable_milter+set}" = set; then :
--  enableval=$enable_milter; have_milter=$enableval
--else
--  have_milter="no"
--fi
- 
- 
- # Check whether --enable-id-check was given.
