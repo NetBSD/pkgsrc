@@ -1,0 +1,4 @@
+# $NetBSD: site.config.m4-gethostbyname2,v 1.1 2019/12/03 18:51:02 bouyer Exp $
+
+# has gethostbyname2()
+APPENDDEF(`confENVDEF', `-DHAS_GETHOSTBYNAME2')
