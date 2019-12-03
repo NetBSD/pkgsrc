@@ -1,15 +1,15 @@
-$NetBSD: patch-src_netbase.cpp,v 1.2 2019/09/20 16:57:28 adam Exp $
+$NetBSD: patch-src_netbase.cpp,v 1.3 2019/12/03 16:30:35 adam Exp $
 
 It is unclear why this patch exists.  NetBSD 6 and 7 have AI_ADDRCONFIG,
 although NetBSD 5 does not.  Arguably upstream should have an autoconf
 test instead.  This is not known to be reported upstream.
 
---- src/netbase.cpp.orig	2019-09-20 11:57:52.000000000 +0000
+--- src/netbase.cpp.orig	2019-11-18 09:44:44.000000000 +0000
 +++ src/netbase.cpp
-@@ -80,7 +80,11 @@ bool static LookupIntern(const char *psz
-     aiHint.ai_socktype = SOCK_STREAM;
-     aiHint.ai_protocol = IPPROTO_TCP;
-     aiHint.ai_family = AF_UNSPEC;
+@@ -91,7 +91,11 @@ bool static LookupIntern(const char *psz
+     // If we don't allow lookups, then use the AI_NUMERICHOST flag for
+     // getaddrinfo to only decode numerical network addresses and suppress
+     // hostname lookups.
 +#ifdef AI_ADDRCONFIG
      aiHint.ai_flags = fAllowLookup ? AI_ADDRCONFIG : AI_NUMERICHOST;
 +#else

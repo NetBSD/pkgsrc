@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.4 2019/09/20 16:57:28 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/12/03 16:30:35 adam Exp $
 
-SHA1 (bitcoin-0.18.1.tar.gz) = 319cecf510805ad7a0844d26564550300eaab5f2
-RMD160 (bitcoin-0.18.1.tar.gz) = 57c4f73f64ca695b649f87ec3fdf1b1659150dbb
-SHA512 (bitcoin-0.18.1.tar.gz) = 40c2d76e7ae9e61ba9daed84a5d9118aab8d9c342ea1a621f730ce5fc02971138fc6eb343876b0950c10b997bdb4fe32b98bd6bb90b812c4abfdc2ef99a05fe7
-Size (bitcoin-0.18.1.tar.gz) = 7379509 bytes
+SHA1 (bitcoin-0.19.0.1.tar.gz) = ea47611c499ecfb435d3c3404ce99c33f4ac6515
+RMD160 (bitcoin-0.19.0.1.tar.gz) = 68aebc32d91724640b8112d1524adf3dd089e892
+SHA512 (bitcoin-0.19.0.1.tar.gz) = e5ae7c54e343453c6d3a7fabb056081e433f953080c542621b76bdd0200feb42fb3e18229b4b5adb87691a7c295da7a56615ffc21bd64ecde28ad07c598a9d3f
+Size (bitcoin-0.19.0.1.tar.gz) = 7386333 bytes
 SHA1 (patch-src_leveldb_port_port__posix.h) = 6a3cde12951b9801e8ffe19b6134ca48ad0d876c
-SHA1 (patch-src_netbase.cpp) = 5f9589a6572ff7d23f5f135beaf6c6533eaafe73
-SHA1 (patch-src_secp256k1_configure) = e3ef7209dc9e2c42e1d70612a774323a28a40abc
+SHA1 (patch-src_netbase.cpp) = 676ea8643f1ad86d4c94c4ed8e179b58aa1e2f95
