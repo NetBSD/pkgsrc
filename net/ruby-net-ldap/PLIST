@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/03/20 14:37:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/12/03 13:14:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
@@ -39,20 +39,15 @@ ${GEM_LIBDIR}/lib/net/ldap/version.rb
 ${GEM_LIBDIR}/lib/net/snmp.rb
 ${GEM_LIBDIR}/net-ldap.gemspec
 ${GEM_LIBDIR}/script/changelog
-${GEM_LIBDIR}/script/generate-fixture-ca
-${GEM_LIBDIR}/script/install-openldap
+${GEM_LIBDIR}/script/ldap-docker
 ${GEM_LIBDIR}/script/package
 ${GEM_LIBDIR}/script/release
 ${GEM_LIBDIR}/test/ber/core_ext/test_array.rb
 ${GEM_LIBDIR}/test/ber/core_ext/test_string.rb
 ${GEM_LIBDIR}/test/ber/test_ber.rb
-${GEM_LIBDIR}/test/fixtures/ca/ca.info
-${GEM_LIBDIR}/test/fixtures/ca/cacert.pem
-${GEM_LIBDIR}/test/fixtures/ca/cakey.pem
-${GEM_LIBDIR}/test/fixtures/openldap/memberof.ldif
-${GEM_LIBDIR}/test/fixtures/openldap/retcode.ldif
-${GEM_LIBDIR}/test/fixtures/openldap/slapd.conf.ldif
-${GEM_LIBDIR}/test/fixtures/seed.ldif
+${GEM_LIBDIR}/test/fixtures/ca/docker-ca.pem
+${GEM_LIBDIR}/test/fixtures/ldif/06-retcode.ldif
+${GEM_LIBDIR}/test/fixtures/ldif/50-seed.ldif
 ${GEM_LIBDIR}/test/integration/test_add.rb
 ${GEM_LIBDIR}/test/integration/test_ber.rb
 ${GEM_LIBDIR}/test/integration/test_bind.rb
@@ -62,8 +57,6 @@ ${GEM_LIBDIR}/test/integration/test_password_modify.rb
 ${GEM_LIBDIR}/test/integration/test_return_codes.rb
 ${GEM_LIBDIR}/test/integration/test_search.rb
 ${GEM_LIBDIR}/test/support/vm/openldap/.gitignore
-${GEM_LIBDIR}/test/support/vm/openldap/README.md
-${GEM_LIBDIR}/test/support/vm/openldap/Vagrantfile
 ${GEM_LIBDIR}/test/test_auth_adapter.rb
 ${GEM_LIBDIR}/test/test_dn.rb
 ${GEM_LIBDIR}/test/test_entry.rb
