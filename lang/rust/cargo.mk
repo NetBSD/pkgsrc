@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.9 2019/12/03 02:09:06 minskim Exp $
+# $NetBSD: cargo.mk,v 1.10 2019/12/03 16:29:39 minskim Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -21,7 +21,6 @@
 # See also www/geckodriver for a full example.
 
 MASTER_SITES?=	-${MASTER_SITE_CRATESIO}${PKGBASE}/${PKGVERSION_NOREV}/download
-DIST_SUBDIR?=	crates.io
 
 BUILD_DEPENDS+=	rust-[0-9]*:../../lang/rust
 
