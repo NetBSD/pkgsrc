@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2019/12/02 09:38:09 markd Exp $
+# $NetBSD: Makefile,v 1.104 2019/12/03 14:12:21 wiz Exp $
 
 DISTNAME=	k3b-${KAPPSVER}
 CATEGORIES=	sysutils
@@ -63,7 +63,7 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
-.include "../../wip/libkcddb/buildlink3.mk"
+.include "../../multimedia/libkcddb/buildlink3.mk"
 .include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
