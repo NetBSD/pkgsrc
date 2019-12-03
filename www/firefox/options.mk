@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.50 2019/11/04 22:09:54 rillig Exp $
+# $NetBSD: options.mk,v 1.51 2019/12/03 14:21:20 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
-PKG_SUPPORTED_OPTIONS+=	alsa oss pulseaudio dbus
+PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio dbus
 PLIST_VARS+=		gnome jemalloc debug
 
 .if ${OPSYS} == "Linux"
@@ -22,11 +22,6 @@ CONFIGURE_ARGS+=	--enable-alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-alsa
-.endif
-
-.if !empty(PKG_OPTIONS:Moss)
-CONFIGURE_ARGS+=	--with-oss
-.include "../../mk/oss.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
@@ -70,16 +65,16 @@ CONFIGURE_ARGS+=	--enable-dbus
 CONFIGURE_ARGS+=	--disable-dbus
 .endif
 
-PLIST_VARS+=		branding nobranding
+#PLIST_VARS+=		branding nobranding
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 CONFIGURE_ARGS+=	--enable-official-branding
 LICENSE=		mozilla-trademark-license
 RESTRICTED=		Trademark holder prohibits distribution of modified versions.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
-PLIST.branding=		yes
+#PLIST.branding=		yes
 .else
-PLIST.nobranding=	yes
+#PLIST.nobranding=	yes
 .endif
 
 PLIST_VARS+=		webrtc
