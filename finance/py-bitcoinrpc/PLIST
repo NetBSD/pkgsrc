@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/03 16:32:16 adam Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/bitcoinrpc/__init__.py
+${PYSITELIB}/bitcoinrpc/__init__.pyc
+${PYSITELIB}/bitcoinrpc/__init__.pyo
+${PYSITELIB}/bitcoinrpc/authproxy.py
+${PYSITELIB}/bitcoinrpc/authproxy.pyc
+${PYSITELIB}/bitcoinrpc/authproxy.pyo
