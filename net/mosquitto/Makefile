@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/12/03 17:45:21 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/03 17:50:57 gdt Exp $
 
 VERSION=	1.6.8
 DISTNAME=	mosquitto-${VERSION}
@@ -32,10 +32,10 @@ CONF_FILES=	${PREFIX}/share/examples/mosquitto/mosquitto.conf \
 		${PKG_SYSCONFDIR}/mosquitto.conf
 
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	post-configure
 SUBST_MESSAGE.paths=	Substituting paths
 SUBST_FILES.paths=	mosquitto.conf
-SUBST_SED.paths=	-e "s,@SSLCERTS@,${SSLCERTS},g"
+SUBST_VARS.paths=	SSLCERTS
 
 RCD_SCRIPTS=	mosquitto
 FILES_SUBST+=	MOSQUITTO_USER=${MOSQUITTO_USER}
