@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2018/03/17 01:07:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/12/03 14:29:21 ryoon Exp $
 bin/certutil
 bin/cmsutil
 bin/crlutil
@@ -129,6 +129,7 @@ include/nss/nss/utilrename.h
 lib/nss/libcrmf.a
 lib/nss/libfreebl3.so
 lib/nss/libnss3.so
+lib/nss/libnssckbi-testlib.so
 lib/nss/libnssckbi.so
 lib/nss/libnssdbm3.so
 lib/nss/libnssutil3.so
