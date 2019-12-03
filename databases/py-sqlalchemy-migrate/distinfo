@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/02/20 15:58:24 adam Exp $
+$NetBSD: distinfo,v 1.7 2019/12/03 18:23:01 adam Exp $
 
-SHA1 (sqlalchemy-migrate-0.12.0.tar.gz) = 2580889aa588146f8f1d02f96ceca14b327a2fb8
-RMD160 (sqlalchemy-migrate-0.12.0.tar.gz) = e13c95d254ad2ce47e67920dc624d136dce98c77
-SHA512 (sqlalchemy-migrate-0.12.0.tar.gz) = bbab28a67afadfeb33a0a3c303c7e623de051923fef7c30b1896cb2f34fe325036c3730d93ad5f88ffb35aff25de22e1c770dff68dedd6acfbc4027e127857fb
-Size (sqlalchemy-migrate-0.12.0.tar.gz) = 128499 bytes
+SHA1 (sqlalchemy-migrate-0.13.0.tar.gz) = 40e01d66d3750b2e16abd75cb0797f4609f82113
+RMD160 (sqlalchemy-migrate-0.13.0.tar.gz) = 2bdb42599cb9a2e4dc73317948f958df498eb9e2
+SHA512 (sqlalchemy-migrate-0.13.0.tar.gz) = 1ca826a5d80c1373ffc4b2366dfb6d5dd24204964462873451c97d8ff4d75fc6c63f663c4769b7f6cc00002f6a98d425f41d759e5c010b4b81a8b74ffbb102b6
+Size (sqlalchemy-migrate-0.13.0.tar.gz) = 131424 bytes
