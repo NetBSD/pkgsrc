@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5227 2019/12/03 13:09:46 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5228 2019/12/03 13:14:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8425,3 +8425,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/clamav-doc to 0.102.1 [taca 2019-12-03]
 	Updated lang/pear to 1.10.10 [taca 2019-12-03]
 	Updated net/pear-Net_SMTP to 1.9.0 [taca 2019-12-03]
+	Updated net/ruby-net-ldap to 0.16.2 [taca 2019-12-03]
