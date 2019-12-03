@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/03 16:32:16 adam Exp $
+
+SHA1 (python-bitcoinrpc-1.0.tar.gz) = c345fbf5a98f77d940fa58bad664211124899a63
+RMD160 (python-bitcoinrpc-1.0.tar.gz) = fc396d742c86b72d87d3e44f810a97e9ae38bfbf
+SHA512 (python-bitcoinrpc-1.0.tar.gz) = 75e6fe804b3e6340164030a25fde0ebee1fe573d590745d4f5634e2d850d35bdd20956b3a8523aabb55441eb6486f601d3cdb48564a8469df7656e7468b43608
+Size (python-bitcoinrpc-1.0.tar.gz) = 13146 bytes
