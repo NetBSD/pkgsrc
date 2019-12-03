@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/10/07 12:54:51 hauke Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/03 16:41:21 adam Exp $
 
-DISTNAME=	importlib_metadata-0.23
-PKGREVISION=	1
+DISTNAME=	importlib_metadata-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
@@ -22,8 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
 
 USE_LANGUAGES=	# none
 
-post-extract:
-	cd ${WRKSRC} && find . -xdev -type f -exec chmod go-w {} +
+xx-post-extract:
+	cd ${WRKSRC} && ${FIND} . -xdev -type f -exec chmod go-w {} +
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
