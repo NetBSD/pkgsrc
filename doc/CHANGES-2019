@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5234 2019/12/03 16:32:44 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5235 2019/12/03 16:35:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8433,3 +8433,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/cbindgen to 0.10.1 [minskim 2019-12-03]
 	Updated finance/bitcoin to 0.19.0.1 [adam 2019-12-03]
 	Added finance/py-bitcoinrpc version 1.0 [adam 2019-12-03]
+	Updated textproc/ripgrep to 11.0.2 [minskim 2019-12-03]
