@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19492 2019/12/02 13:35:05 nia Exp $
+$NetBSD: TODO,v 1.19493 2019/12/03 14:53:31 taca Exp $
 
 Suggested new packages
 ======================
@@ -396,7 +396,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o admesh-0.98.2
 	o adms-2.3.6
 	o adocman-0.13
-	o adodb-5.20.7 [security]
+	o adodb-5.20.15 [security]
 	o aegis-4.25
 	o aewm++-1.1.5
 	o afbinit-1.0.1
@@ -436,6 +436,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o arirang-1.70
 	o asapm-3.1
 	o asn1c-0.9.27
+	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
 	o asterisk13-13.21.1
 	o autoconvert-0.3.16
@@ -470,6 +471,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-svn-1.2.2
 	o bzrtools-2.6.0
 	o c4-1.10
+	o cacti-1.2.7
+	o cacti-spine-1.2.7
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
@@ -622,7 +625,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fvwm-devel-2.7.0
 	o fvwm2-themes-0.7.0
 	o gallery3-3.0.2
-	o ganglia-3.7.1
+	o ganglia-3.7.5
+	o ganglia-webfrontend-3.7.5
 	o gap-4r4p9
 	o gbrainy-2.27
 	o gcal-4
@@ -634,6 +638,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdeskcal-1.01
 	o gdm-2.32.2
 	o gdm-3.0.3
+	o geeklog-2.2.0
 	o geany-1.36.0
 	o genius-1.0.21
 	o gens-2.15.5
@@ -792,7 +797,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icdprog-0.5
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
-	o icinga-base-2.4.1
+	o icinga-base-2.11.2
 	o ike-2.0.1 [pkg/37032]
 	o imapsync-1.678
 	o imp-6.2.12
@@ -919,6 +924,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mDNSResponder-878.30.4
 	o mDNSResponder-nss-576.30.4
 	o maelstrom-x11-2.0.7
+	o magento-2.3.3
 	o magic-8.1.89
 	o magit-2.5
 	o mailman-3.0.3
@@ -928,6 +934,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o makeztxt-1.60
 	o mame-0.216
 	o manedit-1.2.1
+	o mantis-2.22.1
 	o mapserver-7.0.1
 	o matchbox-panel-0.9.3
 	o mbedtls1-1.3.22
@@ -935,6 +942,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcollective-2.3.2
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
+	o mediawiki-1.34
 	o memached-1.5.6
 	o mergeant-0.67
 	o merkaator-0.18.3
@@ -974,6 +982,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mysql-connector-c++-8.0.17
 	o mysql-server-8.0.18
 	o mysql-workbench-6.3
+	o nagios-base-4.4.5
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
@@ -1034,21 +1043,28 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pessulus-2.30.3
 	o pgadmin4-1.0
 	o pgbuildfarm-4.17
+	o phoronix-test-suite-9.0.1
 	o php-basercms-4.0.0
 	o php-concrete5-8.3.2
+	o php-gearman-2.0.6
+	o php-igbinary-3.0.1
 	o php-jpgraph-3.5.0b1
 	o php-memcache-3.0.8
-	o php-mrbs-1.5.0
+	o php-memcached-3.1.4
+	o php-mrbs-1.7.4
 	o php-orangehrm-3.3.1
 	o php-phrasea2-3.8.6 (php-phrasea-3.8.6?)
-	o php-pthread-3.1.6
+	o php-piwigo-2.10.1
 	o php-pthreads-3.1.6
+	o php-raphf2-2.0.1
 	o php-rrd-2.0.0
-	o php-soycms-1.8.11
+	o php-soycms-3.0.2
 	o php-tiki6-6.14
 	o php-tt-rss-1.15.3
 	o php-tt-rss-fever-plugin-1.4.7
-	o php-xdebug-2.8.0
+	o php-xdebug-2.8.1
+	o phpldapadmin-1.2.5
+	o phppgadmin-7.12.0
 	o phraseanet-3.8.6
 	o phraseanet-indexer-3.8.6
 	o picocom-3.0
@@ -1360,13 +1376,16 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o yodl-2.14.3
 	o yorick-2.1.05
 	o yudit-2.9.6
+	o z-push-2.5.1
 	o z26-2.14
+	o zabbix-4.4.3
+	o zabbix-frontend-4.4.3
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zephyr-20070719
 	o zile-2.4.11
 	o zim-0.65
 	o zkt-1.1.3
-	o zoneminder-1.29.0
+	o zoneminder-1.32.3
 	o zopeedit-0.8
 
 Licenses of packages
