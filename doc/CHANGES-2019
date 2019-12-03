@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5235 2019/12/03 16:35:02 minskim Exp $
+$NetBSD: CHANGES-2019,v 1.5236 2019/12/03 17:18:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8434,3 +8434,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated finance/bitcoin to 0.19.0.1 [adam 2019-12-03]
 	Added finance/py-bitcoinrpc version 1.0 [adam 2019-12-03]
 	Updated textproc/ripgrep to 11.0.2 [minskim 2019-12-03]
+	Updated devel/py-importlib-metadata to 1.1.0 [adam 2019-12-03]
+	Updated textproc/py-jsonschema to 3.2.0 [adam 2019-12-03]
+	Updated net/py-responses to 0.10.7 [adam 2019-12-03]
+	Updated misc/py-tqdm to 4.40.0 [adam 2019-12-03]
