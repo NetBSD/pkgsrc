@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5221 2019/12/02 23:32:25 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.5222 2019/12/03 08:09:36 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8418,3 +8418,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/xjadeo to 0.8.9 [nia 2019-12-02]
 	Updated mail/swaks to 20190914.0 [schmonz 2019-12-02]
 	Updated pkgtools/pkglint to 19.3.13 [rillig 2019-12-02]
+	Updated net/unbound to 1.9.5nb1 [he 2019-12-03]
