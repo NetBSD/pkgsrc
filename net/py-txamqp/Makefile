@@ -1,23 +1,19 @@
-# $NetBSD: Makefile,v 1.9 2019/11/03 11:45:51 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/03 17:19:01 adam Exp $
 
-DISTNAME=	python-txamqp_0.3.orig
-PKGNAME=	${PYPKGPREFIX}-txamqp-0.3
-CATEGORIES=	net
-MASTER_SITES=	http://launchpadlibrarian.net/30388120/
+DISTNAME=	txAMQP-0.8.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+CATEGORIES=	net python
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/txAMQP/}
 
-MAINTAINER=	pkgsrc@NetBSD.org
-HOMEPAGE=	https://launchpad.net/txamqp/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/txamqp/txamqp
 COMMENT=	Python library for communicating with AMQP using Twisted
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
-
-PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.3
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
-
-WRKSRC=		${WRKDIR}/python-txamqp-0.3
-EGG_NAME=	txAMQP-${PKGVERSION_NOREV}
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

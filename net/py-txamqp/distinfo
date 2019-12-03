@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:58 joerg Exp $
+$NetBSD: distinfo,v 1.3 2019/12/03 17:19:01 adam Exp $
 
-SHA1 (python-txamqp_0.3.orig.tar.gz) = 2834e1f1986744f8ff5a59b1114ba3de261058c5
-RMD160 (python-txamqp_0.3.orig.tar.gz) = 73abf0fb9caa3bbbcbbda02220d51ed549824024
-SHA512 (python-txamqp_0.3.orig.tar.gz) = ff872ce681b8cb07c5c15097d363348339e2970c0636c14d54ce89346a7a549cee079ed828b4fb39b457a055b908bb09c8e695e941cbe3e22f465f529b3908dd
-Size (python-txamqp_0.3.orig.tar.gz) = 153402 bytes
+SHA1 (txAMQP-0.8.2.tar.gz) = 385771e5f351a949960d81e15d8735e6a4cde5f3
+RMD160 (txAMQP-0.8.2.tar.gz) = 9d0e604ff26affc11dfb46c0dda4361fe0bb41e5
+SHA512 (txAMQP-0.8.2.tar.gz) = 2af6695ce9ec92f06ef52028564072d47d8fd025ae2d39ef7d7c0e8e9c18f4b6e669e6adb4eee59c913e475e692b6bdee94c1661c8144d7c02f04947671a3db7
+Size (txAMQP-0.8.2.tar.gz) = 39673 bytes
