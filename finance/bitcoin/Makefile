@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2019/09/20 16:57:28 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/12/03 16:30:35 adam Exp $
 
-DISTNAME=	bitcoin-0.18.1
+DISTNAME=	bitcoin-0.19.0.1
 CATEGORIES=	finance
 MASTER_SITES=	https://bitcoincore.org/bin/bitcoin-core-${PKGVERSION_NOREV}/
 
@@ -14,6 +14,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--disable-hardening # uses -fPIE which is problemtic
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 PKGCONFIG_OVERRIDE=	libbitcoinconsensus.pc.in
