@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.54 2019/11/19 10:10:44 he Exp $
+$NetBSD: distinfo,v 1.55 2019/12/03 08:08:58 he Exp $
 
 SHA1 (unbound-1.9.5.tar.gz) = e5a417fe46e5f2911b91e5ec6bbedc2ed14d9d0b
 RMD160 (unbound-1.9.5.tar.gz) = a49319ccc743709687792a57f1796acfa22e791e
 SHA512 (unbound-1.9.5.tar.gz) = 0b198b49165b25c93899ca41fead67c479e5b6fd255f7e2af6930f4b9898c73d8a72caf376fce9a2a33199d0764db58388371c3fdbd442999ddfdb0b8b5394ea
 Size (unbound-1.9.5.tar.gz) = 5686689 bytes
 SHA1 (patch-configure) = eabd0c478e92ebe37adf143849389e0e792dc77f
+SHA1 (patch-util_netevent.c) = 3fba509f23d74fce18e45ffe1fcdb97ad609be46
