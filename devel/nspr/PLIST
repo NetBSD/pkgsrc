@@ -1,30 +1,24 @@
-@comment $NetBSD: PLIST,v 1.15 2012/12/15 01:31:33 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/12/03 14:28:26 ryoon Exp $
 bin/compile-et.pl
 bin/nspr-config
 bin/prerr.properties
 include/nspr/md/_aix32.cfg
 include/nspr/md/_aix64.cfg
-include/nspr/md/_beos.cfg
 include/nspr/md/_bsdi.cfg
 include/nspr/md/_darwin.cfg
-include/nspr/md/_dgux.cfg
 include/nspr/md/_dragonfly.cfg
 include/nspr/md/_freebsd.cfg
 include/nspr/md/_hpux32.cfg
 include/nspr/md/_hpux64.cfg
-include/nspr/md/_irix32.cfg
-include/nspr/md/_irix64.cfg
 include/nspr/md/_linux.cfg
 include/nspr/md/_netbsd.cfg
 include/nspr/md/_nto.cfg
 include/nspr/md/_openbsd.cfg
 include/nspr/md/_os2.cfg
-include/nspr/md/_osf1.cfg
 include/nspr/md/_qnx.cfg
 include/nspr/md/_riscos.cfg
 include/nspr/md/_scoos.cfg
 include/nspr/md/_solaris.cfg
-include/nspr/md/_symbian.cfg
 include/nspr/md/_unixware.cfg
 include/nspr/md/_unixware7.cfg
 include/nspr/md/_win95.cfg
