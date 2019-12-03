@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19494 2019/12/03 15:51:41 minskim Exp $
+$NetBSD: TODO,v 1.19495 2019/12/03 16:35:02 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1150,7 +1150,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o resize_image-0.7
 	o rexx-regina-3.9.0
 	o rio500-0.8.1
-	o ripgrep-11.0.1
 	o robotfindskitten-2.7182818.701
 	o root-6.08.02
 	o root-tail-1.2
