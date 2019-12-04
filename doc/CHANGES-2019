@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5247 2019/12/04 12:53:51 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.5248 2019/12/04 12:57:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8453,3 +8453,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/erlang to 22.1.8 [nia 2019-12-04]
 	Updated net/dnscrypt-proxy2 to 2.0.34 [nia 2019-12-04]
 	Updated devel/nspr to 4.24 [ryoon 2019-12-04]
+	Updated devel/libuv to 1.34.0 [adam 2019-12-04]
+	Updated www/py-gunicorn to 20.0.4 [adam 2019-12-04]
