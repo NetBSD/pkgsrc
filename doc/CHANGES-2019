@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5246 2019/12/04 11:46:56 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5247 2019/12/04 12:53:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8452,3 +8452,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xf86-video-sis to 0.12.0 [wiz 2019-12-04]
 	Updated lang/erlang to 22.1.8 [nia 2019-12-04]
 	Updated net/dnscrypt-proxy2 to 2.0.34 [nia 2019-12-04]
+	Updated devel/nspr to 4.24 [ryoon 2019-12-04]
