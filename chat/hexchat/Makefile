@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/12/04 11:57:05 nia Exp $
+# $NetBSD: Makefile,v 1.40 2019/12/04 11:59:54 nia Exp $
 
 DISTNAME=	hexchat-2.14.2
 PKGREVISION=	3
@@ -19,9 +19,6 @@ PKGCONFIG_OVERRIDE+=	share/pkgconfig/hexchat-plugin.pc.in
 
 # XXX fails without GNU msgfmt
 _TOOLS_USE_PKGSRC.msgfmt=	yes
-
-# Meson
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 MESON_ARGS+=		-Dwith-text=true
 MESON_ARGS+=		-Dwith-appdata=false
