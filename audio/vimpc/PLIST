@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/04 11:02:33 nia Exp $
+bin/vimpc
+man/man1/vimpc.1
+share/doc/vimpc/help.txt
