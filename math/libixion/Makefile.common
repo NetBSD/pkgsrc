@@ -1,0 +1,26 @@
+# $NetBSD: Makefile.common,v 1.1 2019/12/04 13:33:15 nros Exp $
+#
+# used by math/libixion/Makefile
+# used by math/py-libixion/Makefile
+
+DISTNAME=	libixion-0.14.1
+CATEGORIES=	math devel
+MASTER_SITES=	http://kohei.us/files/ixion/src/
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://gitlab.com/ixion/ixion
+COMMENT=	General purpose formula parser & interpreter
+LICENSE=	mpl-2.0
+
+PATCHDIR=	../../math/libixion/patches
+DISTINFO_FILE=	../../math/libixion/distinfo
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
+
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
+
+PTHREAD_AUTO_VARS=	yes
