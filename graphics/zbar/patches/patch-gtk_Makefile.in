@@ -1,0 +1,17 @@
+$NetBSD: patch-gtk_Makefile.in,v 1.1 2019/12/04 11:17:32 leot Exp $
+
+Avoid gmake-isms.
+
+XXX: Probably that's wrong and needs to be discussed with upstream!
+
+--- gtk/Makefile.in.orig	2019-05-23 21:12:07.000000000 +0000
++++ gtk/Makefile.in
+@@ -887,7 +887,7 @@ uninstall-am: uninstall-dist_girDATA uni
+ 
+ # GObject Introspection
+ 
+-include $(INTROSPECTION_MAKEFILE)
++include $(INTROSPECTION_MAKEFILE) # am--include-marker
+ 
+ # This may generate some warnings, but it is needed for "make dist"
+ ZBar-1.0.gir: $(lib_LTLIBRARIES)
