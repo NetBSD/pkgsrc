@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5239 2019/12/04 05:10:02 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.5240 2019/12/04 07:51:15 morr Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8445,3 +8445,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/py-sqlalchemy-migrate to 0.13.0 [adam 2019-12-03]
 	Updated databases/py-sqlalchemy-utils to 0.35.0 [adam 2019-12-03]
 	Updated devel/autoconf-archive to 2019.01.06 [gutteridge 2019-12-04]
+	Updated net/haproxy to 2.0.10 [morr 2019-12-04]
