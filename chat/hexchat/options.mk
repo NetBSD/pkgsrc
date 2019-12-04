@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2019/11/02 22:18:22 rillig Exp $
+# $NetBSD: options.mk,v 1.9 2019/12/04 11:57:05 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hexchat
 PKG_SUPPORTED_OPTIONS=	dbus gtk2 libcanberra libnotify libpci libproxy
@@ -95,4 +95,5 @@ PLIST.python=		yes
 MESON_ARGS+=		-Dwith-python=python-${PYVERSSUFFIX}
 .else
 MESON_ARGS+=		-Dwith-python=false
+PYTHON_FOR_BUILD_ONLY=	tool
 .endif
