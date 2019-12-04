@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/04 11:17:32 leot Exp $
+${PLIST.imagemagick}bin/zbarimg
+include/zbar.h
+include/zbar/Decoder.h
+include/zbar/Exception.h
+include/zbar/Image.h
+include/zbar/ImageScanner.h
+include/zbar/Processor.h
+include/zbar/Scanner.h
+include/zbar/Symbol.h
+include/zbar/Video.h
+include/zbar/Window.h
+lib/libzbar.la
+lib/pkgconfig/zbar.pc
+${PLIST.imagemagick}man/man1/zbarimg.1
+share/doc/zbar/COPYING
+share/doc/zbar/HACKING.md
+share/doc/zbar/INSTALL.md
+share/doc/zbar/LICENSE.md
+share/doc/zbar/NEWS.md
+share/doc/zbar/README.md
+share/doc/zbar/TODO.md
