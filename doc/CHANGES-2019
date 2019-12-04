@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5242 2019/12/04 11:02:57 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5243 2019/12/04 11:18:18 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8448,3 +8448,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/haproxy to 2.0.10 [morr 2019-12-04]
 	Updated www/wordpress to 5.3 [morr 2019-12-04]
 	Added audio/vimpc version 0.09.2 [nia 2019-12-04]
+	Added graphics/zbar version 0.23 [leot 2019-12-04]
