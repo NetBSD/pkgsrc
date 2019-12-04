@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2019/11/26 12:37:18 adam Exp $
+$NetBSD: distinfo,v 1.13 2019/12/04 12:57:06 adam Exp $
 
-SHA1 (gunicorn-20.0.3.tar.gz) = c19d9c5d1c8b9e3a69ef4b17915ae34106246465
-RMD160 (gunicorn-20.0.3.tar.gz) = 3c31dd821e3eb0e64fade53cfed7e37769f2c409
-SHA512 (gunicorn-20.0.3.tar.gz) = 72c13d934673ea4757bee5c74d1e26739c1c1ed9c488875539e65983efb3dcc4d708ec78f4ded699437b39202c63f212b49d34deb371c6d9c7882dfefbbe96c5
-Size (gunicorn-20.0.3.tar.gz) = 375511 bytes
+SHA1 (gunicorn-20.0.4.tar.gz) = 9f149347ba329636c99322fcc3e85ce48317c18f
+RMD160 (gunicorn-20.0.4.tar.gz) = a2647958fb7192a4307d2c6e64f7e11dcf88a1ad
+SHA512 (gunicorn-20.0.4.tar.gz) = 706620f165e36c178a6d3e65f51a9bb7746abd40dfc7c0f1b3b523771be953dd03b36111f192407aef474ad44afdffd11b6502e51376d11465ffac2255822d5e
+Size (gunicorn-20.0.4.tar.gz) = 373841 bytes
