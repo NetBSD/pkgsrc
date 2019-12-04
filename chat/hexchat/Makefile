@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2019/10/07 09:28:09 prlw1 Exp $
+# $NetBSD: Makefile,v 1.39 2019/12/04 11:57:05 nia Exp $
 
 DISTNAME=	hexchat-2.14.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	https://dl.hexchat.net/hexchat/
 EXTRACT_SUFX=	.tar.xz
@@ -20,17 +20,12 @@ PKGCONFIG_OVERRIDE+=	share/pkgconfig/hexchat-plugin.pc.in
 # XXX fails without GNU msgfmt
 _TOOLS_USE_PKGSRC.msgfmt=	yes
 
-.include "options.mk"
+# Meson
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 MESON_ARGS+=		-Dwith-text=true
 MESON_ARGS+=		-Dwith-appdata=false
 
-# XXX meson
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-.if empty(PKG_OPTIONS:Mpython)
-PYTHON_FOR_BUILD_ONLY=	yes
-.endif
-.include "../../lang/python/pyversion.mk"
 REPLACE_PYTHON+=	plugins/perl/generate_header.py
 REPLACE_PYTHON+=	src/common/make-te.py
 REPLACE_PYTHON+=	meson_post_install.py
@@ -42,12 +37,14 @@ PLIST_SUBST+=		SOEXT=${SOEXT}
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
+.include "options.mk"
 .include "../../devel/meson/build.mk"
-.include "../../textproc/iso-codes/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
