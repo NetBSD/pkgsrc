@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.23 2019/11/02 19:07:25 nia Exp $
+$NetBSD: distinfo,v 1.24 2019/12/04 11:37:16 nia Exp $
 
 SHA1 (mpc-0.33.tar.xz) = e6d5d7d46bed3e41741221846ac438af9b7e987a
 RMD160 (mpc-0.33.tar.xz) = 5dc046e58b7f72d425df57d0082cc0bb9a607513
 SHA512 (mpc-0.33.tar.xz) = d3247dfb54ac3c95caf5666088968a952b33eb7e8f941bca4f3715603839cf5a1bc5300488c78fdce6e38f612b243f2252ea682b8d0fec9f230acd760bf3560c
 Size (mpc-0.33.tar.xz) = 45044 bytes
+SHA1 (patch-doc_meson.build) = 49744b643095d5181804d60fc3ba85ddfd74701f
