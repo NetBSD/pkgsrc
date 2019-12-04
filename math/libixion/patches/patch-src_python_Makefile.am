@@ -1,0 +1,16 @@
+$NetBSD: patch-src_python_Makefile.am,v 1.1 2019/12/04 13:31:43 nros Exp $
+* use pkgsrc libixion, used by math/py-libixion
+--- src/python/Makefile.am.orig	2018-09-08 01:05:48.000000000 +0000
++++ src/python/Makefile.am
+@@ -11,9 +11,9 @@ ixion_la_SOURCES = \
+ 	sheet.cpp
+ 
+ ixion_la_LDFLAGS = -module -avoid-version -export-symbols-regex PyInit_ixion
+-ixion_la_CPPFLAGS = -I$(top_srcdir)/include $(PYTHON_CFLAGS) $(MDDS_CFLAGS)
++ixion_la_CPPFLAGS = -I$(top_srcdir)/include $(PYTHON_CFLAGS) $(MDDS_CFLAGS) $(DEPLIBIXION_CFLAGS)
+ ixion_la_LIBADD = \
+-	../libixion/libixion-@IXION_API_VERSION@.la \
++	$(DEPLIBIXION_LIBS)\
+ 	$(PYTHON_LIBS)
+ 
+ if OSX
