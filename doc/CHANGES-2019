@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5245 2019/12/04 11:45:01 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5246 2019/12/04 11:46:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8451,3 +8451,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/zbar version 0.23 [leot 2019-12-04]
 	Updated x11/xf86-video-sis to 0.12.0 [wiz 2019-12-04]
 	Updated lang/erlang to 22.1.8 [nia 2019-12-04]
+	Updated net/dnscrypt-proxy2 to 2.0.34 [nia 2019-12-04]
