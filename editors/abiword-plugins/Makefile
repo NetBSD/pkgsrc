@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2019/11/27 16:01:09 nia Exp $
+# $NetBSD: Makefile,v 1.108 2019/12/04 05:40:47 gutteridge Exp $
 
 .include	"../../editors/abiword/Makefile.common"
 DISTNAME=	abiword-${ABIVERSION}
@@ -15,6 +15,8 @@ DISTINFO_FILE=	${.CURDIR}/../../editors/abiword/distinfo
 PATCHDIR=	${.CURDIR}/../../editors/abiword/patches
 
 CONFLICTS=	abiword-plugins-[0-9]* abiword-personal-[0-9]* abiword2-[0-9]*
+
+BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
