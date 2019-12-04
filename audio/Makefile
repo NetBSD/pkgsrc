@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.577 2019/11/30 13:35:42 nia Exp $
+# $NetBSD: Makefile,v 1.578 2019/12/04 11:02:33 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -461,6 +461,7 @@ SUBDIR+=	twolame
 SUBDIR+=	ubs
 SUBDIR+=	vamp-plugin-sdk
 SUBDIR+=	vcf
+SUBDIR+=	vimpc
 SUBDIR+=	vorbis-tools
 SUBDIR+=	vorbisgain
 SUBDIR+=	wavesurfer
