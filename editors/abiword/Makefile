@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2019/11/27 16:01:09 nia Exp $
+# $NetBSD: Makefile,v 1.193 2019/12/04 05:40:47 gutteridge Exp $
 
 .include 	"Makefile.common"
 
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS=	abiword-personal-[0-9]* abiword2-[0-9]*
 
 DEPENDS+=	adwaita-icon-theme>0:../../graphics/adwaita-icon-theme
+BUILD_DEPENDS+=	autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
