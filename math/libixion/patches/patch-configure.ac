@@ -1,0 +1,12 @@
+$NetBSD: patch-configure.ac,v 1.1 2019/12/04 13:31:43 nros Exp $
+* check for pkgsrc libixion, used by math/py-libixion
+--- configure.ac.orig	2018-09-14 19:32:48.000000000 +0000
++++ configure.ac
+@@ -123,6 +123,7 @@ PKG_CHECK_MODULES([MDDS],[mdds-1.4 >= 1.
+ AS_IF([test "x$enable_python" != "xno"], [
+     AM_PATH_PYTHON(3)
+     PKG_CHECK_MODULES([PYTHON], [python3 >= 3.4])
++    PKG_CHECK_MODULES([DEPLIBIXION], [libixion-$IXION_API_VERSION >= $IXION_API_VERSION])
+ ])
+ 
+ AS_IF([test "x$enable_threads" != "xno"], [
