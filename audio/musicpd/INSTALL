@@ -1,0 +1,10 @@
+# $NetBSD: INSTALL,v 1.1 2019/12/04 11:00:23 nia Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	${TOUCH} @VARBASE@/lib/mpd/db
+	${CHOWN} @MPD_USER@:@MPD_GROUP@ @VARBASE@/lib/mpd/db
+	${TOUCH} @VARBASE@/lib/mpd/.mpdstate
+	${CHOWN} @MPD_USER@:@MPD_GROUP@ @VARBASE@/lib/mpd/.mpdstate
+	;;
+esac
