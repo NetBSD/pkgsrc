@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5241 2019/12/04 08:06:50 morr Exp $
+$NetBSD: CHANGES-2019,v 1.5242 2019/12/04 11:02:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8447,3 +8447,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/autoconf-archive to 2019.01.06 [gutteridge 2019-12-04]
 	Updated net/haproxy to 2.0.10 [morr 2019-12-04]
 	Updated www/wordpress to 5.3 [morr 2019-12-04]
+	Added audio/vimpc version 0.09.2 [nia 2019-12-04]
