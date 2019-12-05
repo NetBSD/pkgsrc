@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2019/10/02 14:50:25 kamil Exp $
+# $NetBSD: Makefile,v 1.107 2019/12/05 11:23:44 jperkin Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -22,6 +22,8 @@ GNU_CONFIGURE_STRICT=	no # because of the nested itcl4.1.2
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 INSTALL_TARGET=		install
+
+CONFIGURE_ARGS+=	--without-tzdata
 
 PKGCONFIG_OVERRIDE+=	unix/tcl.pc.in
 
