@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/02/28 13:49:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/12/05 10:02:12 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/zmq/__init__.py
 ${PYSITELIB}/zmq/__init__.pyc
@@ -240,6 +240,9 @@ ${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/_test_asyncio.pyo
 ${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/test_asyncio.py
 ${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/test_asyncio.pyc
 ${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/test_asyncio.pyo
+${PYSITELIB}/zmq/tests/conftest.py
+${PYSITELIB}/zmq/tests/conftest.pyc
+${PYSITELIB}/zmq/tests/conftest.pyo
 ${PYSITELIB}/zmq/tests/test_auth.py
 ${PYSITELIB}/zmq/tests/test_auth.pyc
 ${PYSITELIB}/zmq/tests/test_auth.pyo
