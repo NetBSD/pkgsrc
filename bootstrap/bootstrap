@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.272 2019/11/05 13:58:06 triaxx Exp $
+# $NetBSD: bootstrap,v 1.273 2019/12/05 22:19:56 sevan Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -226,12 +226,7 @@ get_machine_arch_darwin()
 		echo `uname -m`
 		;;
 	powerpc)
-		# sysctl mib exists on 64-bit hardware
-		if [ -n "`sysctl -n hw.optional.64bitops 2>/dev/null`" ]; then
-			echo "powerpc64"
-		else
-			echo "powerpc"
-		fi
+		echo "powerpc"
 		;;
 	esac
 }
