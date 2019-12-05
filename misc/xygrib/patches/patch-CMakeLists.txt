@@ -1,10 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2019/11/04 18:53:13 nros Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2019/12/05 17:56:15 nros Exp $
 
 * sanitze the names and dirs to search for libs and headers files
 * use PATH_SUFFIX fix to find openjpeg
 * install bins and data into the right directory
 * don't regenerate translations (no need for qttools dependecy)
 * don't install cmake files in the translation directory
+* don't generate an app bundle on MacOS X
 * install icon and desktop files
 * install hi-res maps
 
@@ -86,7 +87,7 @@ $NetBSD: patch-CMakeLists.txt,v 1.2 2019/11/04 18:53:13 nros Exp $
       REQUIRED
   )
  include_directories(${OPENJPEG_INCLUDE_DIR})
-@@ -212,22 +164,18 @@ include_directories(${PNG_INCLUDE_DIR})
+@@ -212,33 +164,30 @@ include_directories(${PNG_INCLUDE_DIR})
  configure_file(cmake/Version.h.in ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/include/Version.h)
  include_directories(${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/include)
  
@@ -113,9 +114,15 @@ $NetBSD: patch-CMakeLists.txt,v 1.2 2019/11/04 18:53:13 nros Exp $
  
  # Installation
  # macOS bundle parameters
-@@ -241,4 +189,14 @@ set_target_properties(${PROJECT_NAME} PR
- set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_BUNDLE_VERSION "${XYGRIB_VERSION}")
- set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_COPYRIGHT "${PROJECT_NAME} Authors")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/cmake/MacOSXBundleInfo.plist.in")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_INFO_STRING "${PROJECT_NAME}")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_ICON_FILE "xyGrib.icns")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_GUI_IDENTIFIER "${PROJECT_NAME}")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_LONG_VERSION_STRING "${XYGRIB_VERSION}")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME "${PROJECT_NAME}")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_SHORT_VERSION_STRING "${XYGRIB_VERSION}")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_BUNDLE_VERSION "${XYGRIB_VERSION}")
+-set_target_properties(${PROJECT_NAME} PROPERTIES MACOSX_BUNDLE_COPYRIGHT "${PROJECT_NAME} Authors")
  # Install data
 -install(DIRECTORY data DESTINATION ${PREFIX_PKGDATA})
 +install(DIRECTORY data DESTINATION ${PREFIX_PKGDATA}
