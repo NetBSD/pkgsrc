@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5255 2019/12/05 14:51:19 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5256 2019/12/05 18:42:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8467,3 +8467,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/nnn to 2.8.1 [sjmulder 2019-12-05]
 	Updated sysutils/py-xattr to 0.9.7 [adam 2019-12-05]
 	Updated devel/py-daemon to 2.2.4 [adam 2019-12-05]
+	Updated net/wireshark to 3.0.7 [adam 2019-12-05]
+	Updated graphics/gnuplot to 5.2.8 [adam 2019-12-05]
