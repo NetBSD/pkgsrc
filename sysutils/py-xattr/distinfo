@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/08/04 11:24:52 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/12/05 14:46:43 adam Exp $
 
-SHA1 (xattr-0.9.6.tar.gz) = 2b02755354879aafbf46dfd6860edb80f0948b90
-RMD160 (xattr-0.9.6.tar.gz) = 53b0bcd0dd7ec35f5495c5d9a57245e22c45de31
-SHA512 (xattr-0.9.6.tar.gz) = e62239341453ca69e7c05da1676b53d42c96a354f6ba8c58cfeb58a584dfe4c3a4e33a0d1ae0c1e9e398a03979fc0bc2099e1272956cb58ead784ac4e61ca2ea
-Size (xattr-0.9.6.tar.gz) = 13284 bytes
+SHA1 (xattr-0.9.7.tar.gz) = 09afacb4ac56115df441bfa75a1ecf45ad582147
+RMD160 (xattr-0.9.7.tar.gz) = 48424e7c2812dd341b1e09bc9b8278f1a2bf2529
+SHA512 (xattr-0.9.7.tar.gz) = 98473ad4ac270b747416e448f426eb55888ed1a641027f27fc9ced58eff29c6866de6b1d914628e9be1785a93dc857977d172e6bcbe5233e6449447dd08d9bd0
+Size (xattr-0.9.7.tar.gz) = 13389 bytes
