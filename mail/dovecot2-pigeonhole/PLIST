@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2018/10/23 16:30:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/12/05 09:37:35 adam Exp $
 bin/sieve-dump
 bin/sieve-filter
 bin/sieve-test
@@ -25,6 +25,7 @@ include/dovecot/sieve/sieve-config.h
 include/dovecot/sieve/sieve-dump.h
 include/dovecot/sieve/sieve-error-private.h
 include/dovecot/sieve/sieve-error.h
+include/dovecot/sieve/sieve-execute.h
 include/dovecot/sieve/sieve-ext-copy.h
 include/dovecot/sieve/sieve-ext-enotify.h
 include/dovecot/sieve/sieve-ext-environment.h
