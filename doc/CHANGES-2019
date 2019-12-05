@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5251 2019/12/04 14:00:36 sjmulder Exp $
+$NetBSD: CHANGES-2019,v 1.5252 2019/12/05 09:43:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8458,3 +8458,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/qpdf to 9.1.0 [ryoon 2019-12-04]
 	Added math/py-libixion version 0.14.1 [nros 2019-12-04]
 	Updated sysutils/nnn to 2.8 [sjmulder 2019-12-04]
+	Updated mail/dovecot2 to 2.3.9 [adam 2019-12-05]
+	Updated mail/dovecot2-pigeonhole to 0.5.9 [adam 2019-12-05]
+	Updated multimedia/x265 to 3.2.1 [adam 2019-12-05]
+	Updated textproc/py-validators to 0.14.1 [adam 2019-12-05]
