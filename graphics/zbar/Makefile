@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/12/04 11:17:32 leot Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/05 23:58:06 wiz Exp $
 
 DISTNAME=	zbar-0.23
 CATEGORIES=	graphics
@@ -25,7 +25,7 @@ PKGCONFIG_OVERRIDE+=	zbar-gtk.pc.in
 PKGCONFIG_OVERRIDE+=	zbar-qt.pc.in
 PKGCONFIG_OVERRIDE+=	zbar.pc.in
 
-.include "options.mk"
+#.include "options.mk"
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
