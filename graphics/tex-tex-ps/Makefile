@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/06 16:49:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:04:38 markd Exp $
 
 DISTNAME=	tex-ps
 PKGNAME=	tex-${DISTNAME}-2010
@@ -10,5 +10,6 @@ LICENSE=	public-domain
 
 DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

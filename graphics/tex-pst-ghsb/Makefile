@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/18 21:38:28 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:32 markd Exp $
 
 DISTNAME=	pst-ghsb
 PKGNAME=	tex-${DISTNAME}-2010
@@ -9,5 +9,6 @@ COMMENT=	PSTricks package for HSB gradients
 
 DEPENDS+=	tex-pstricks-[0-9]*:../../graphics/tex-pstricks
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/01/29 06:45:25 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:04:26 markd Exp $
 
 DISTNAME=	metapost
 PKGNAME=	tex-${DISTNAME}-1.803pl49482
@@ -13,5 +13,6 @@ DEPENDS+=	web2c>=2011:../../print/web2c
 
 TEX_MAP_FILES=		troff-updmap.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

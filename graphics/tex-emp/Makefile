@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 13:47:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:21 markd Exp $
 
 DISTNAME=	emp
 PKGNAME=	tex-${DISTNAME}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/emp
 COMMENT=	"Encapsulate" MetaPost figures in a document
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/04 01:40:36 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:39 markd Exp $
 
 DISTNAME=	tikz-3dplot.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2015
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tikz-3dplot
 COMMENT=	Documentation for tex-tikz-3dplot
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

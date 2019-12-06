@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/01 21:07:29 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:40 markd Exp $
 
 DISTNAME=	tikzposter
 PKGNAME=	tex-${DISTNAME}-2.0
@@ -18,5 +18,6 @@ DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 DEPENDS+=	tex-xstring-[0-9]*:../../print/tex-xstring
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

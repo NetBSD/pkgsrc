@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/08/11 05:03:12 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:04:19 markd Exp $
 
 DISTNAME=	circuitikz
 PKGNAME=	tex-${DISTNAME}-0.9.3
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c OR gnu-gpl-v1
 
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

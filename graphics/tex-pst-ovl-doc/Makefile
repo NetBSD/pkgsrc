@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/10/23 09:31:34 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:04:34 markd Exp $
 
 DISTNAME=	pst-ovl.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.07a
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/pst-ovl
 COMMENT=	Documentation for tex-pst-ovl
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

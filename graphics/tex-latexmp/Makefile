@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 13:47:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:24 markd Exp $
 
 DISTNAME=	latexmp
 PKGNAME=	tex-${DISTNAME}-1.2.1
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/latexmp
 COMMENT=	Interface for LaTeX-based typesetting in MetaPost
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/05/11 22:31:42 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 20:04:33 markd Exp $
 
 DISTNAME=	pst-node.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.42
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/pst-node
 COMMENT=	Documentation for tex-pst-node
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

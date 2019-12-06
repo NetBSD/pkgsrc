@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/06 10:40:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:04:36 markd Exp $
 
 DISTNAME=	roex
 PKGNAME=	tex-${DISTNAME}-0.56
@@ -9,5 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Metafont definitions for `remove overlap' and `expand stroke'
 #LICENSE=	no idea
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
