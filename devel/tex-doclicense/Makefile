@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/05 11:14:51 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 19:18:33 markd Exp $
 
 DISTNAME=	doclicense
 PKGNAME=	tex-${DISTNAME}-1.10.0
@@ -14,5 +14,6 @@ DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-xifthen-[0-9]*:../../devel/tex-xifthen
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
