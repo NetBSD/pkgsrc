@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 05:36:12 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 19:18:35 markd Exp $
 
 DISTNAME=	lualibs
 PKGNAME=	tex-${DISTNAME}-2.66
@@ -11,5 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	luatex-[0-9]*:../../print/luatex
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
