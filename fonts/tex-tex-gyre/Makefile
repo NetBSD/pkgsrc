@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/01/24 11:10:42 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:32:28 markd Exp $
 
 DISTNAME=	tex-gyre
 PKGNAME=	tex-${DISTNAME}-2.501
@@ -21,5 +21,6 @@ TEX_MAP_FILES+=	qpl.map
 TEX_MAP_FILES+=	qtm.map
 TEX_MAP_FILES+=	qzc.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

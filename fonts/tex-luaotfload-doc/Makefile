@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 05:40:19 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 19:30:12 markd Exp $
 
 DISTNAME=	luaotfload.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.98
@@ -11,5 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf-dist
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

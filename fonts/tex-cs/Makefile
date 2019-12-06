@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/08/07 07:17:36 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:29:48 markd Exp $
 
 DISTNAME=	cs
 PKGNAME=	tex-${DISTNAME}-2016.41553
@@ -14,5 +14,6 @@ DEPENDS+=	tex-cmexb-[0-9]*:../../fonts/tex-cmexb
 TEX_MAP_FILES+=	cs-charter.map
 TEX_MAP_FILES+=	csfonts.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

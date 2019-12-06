@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/14 10:16:51 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:32:20 markd Exp $
 
 DISTNAME=	ptex-fontmaps.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-20190506.0
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/ptex-fontmaps
 COMMENT=	Documentation for tex-ptex-fontmaps
 LICENSE=	gnu-gpl-v3 AND public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

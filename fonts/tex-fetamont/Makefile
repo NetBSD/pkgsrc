@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/06/21 06:13:15 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:29:58 markd Exp $
 
 DISTNAME=	fetamont
 PKGNAME=	tex-${DISTNAME}-20170415
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	fetamont.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
