@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/13 20:28:15 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:39 markd Exp $
 
 DISTNAME=	tikz-feynhand.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.0.0
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/tikz-feynhand
 COMMENT=	Documentation for tex-tikz-feynhand
 LICENSE=	gnu-gpl-v3
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

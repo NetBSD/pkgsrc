@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/05/07 10:54:35 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 20:04:41 markd Exp $
 
 DISTNAME=	tikzsymbols.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-4.10c
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tikzsymbols
 COMMENT=	Documentation for tex-tikzsymbols
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

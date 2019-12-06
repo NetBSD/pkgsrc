@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/30 04:05:50 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:04:30 markd Exp $
 
 DISTNAME=	psgo
 PKGNAME=	tex-${DISTNAME}-0.17
@@ -13,5 +13,6 @@ DEPENDS+=	tex-pst-node-[0-9]*:../../graphics/tex-pst-node
 DEPENDS+=	tex-pstricks-[0-9]*:../../graphics/tex-pstricks
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
