@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/04 12:13:52 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 20:21:36 markd Exp $
 
 DISTNAME=	hyphen-czech
 PKGNAME=	tex-${DISTNAME}-2019.51186
@@ -22,5 +22,6 @@ TEX_HYPHEN_LUA+=	['czech']={ \
 			  hyphenation='hyph-cs.hyp.txt', \
 			},
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

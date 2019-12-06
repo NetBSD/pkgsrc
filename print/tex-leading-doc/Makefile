@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/06/22 10:53:02 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:52 markd Exp $
 
 DISTNAME=	leading.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.3
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/leading
 COMMENT=	Documentation for tex-leading
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

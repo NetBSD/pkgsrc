@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/30 03:26:09 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:02 markd Exp $
 # TeX Live Revision 17087
 
 DISTNAME=	boxedminipage.doc
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-boxedminipage
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

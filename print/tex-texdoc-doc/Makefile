@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/05/12 03:26:38 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 20:23:27 markd Exp $
 
 DISTNAME=	texdoc.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2019
@@ -11,5 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	texlive-tetex<2011nb1
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/05/05 21:22:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 20:21:44 markd Exp $
 
 DISTNAME=	ifxetex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.6
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/ifxetex
 COMMENT=	Documentation for tex-ifxetex
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

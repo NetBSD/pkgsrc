@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/07/29 11:02:18 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:25 markd Exp $
 
 DISTNAME=	tensind
 PKGNAME=	tex-${DISTNAME}-1.1
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/tensind
 COMMENT=	Typeset tensors
 LICENSE=	mit
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

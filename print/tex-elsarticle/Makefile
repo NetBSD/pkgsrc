@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/05/12 03:48:43 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:19:28 markd Exp $
 
 DISTNAME=	elsarticle
 PKGNAME=	tex-${DISTNAME}-3.2
@@ -16,5 +16,6 @@ DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-times-[0-9]*:../../fonts/tex-times
 DEPENDS+=	tex-txfonts-[0-9]*:../../fonts/tex-txfonts
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

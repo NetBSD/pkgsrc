@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/20 12:50:00 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:24 markd Exp $
 
 DISTNAME=	tap.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.77
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tap
 COMMENT=	Documentation for tex-tap
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 19:58:08 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:24 markd Exp $
 
 DISTNAME=	tamethebeast.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.4
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tamethebeast
 COMMENT=	Manual about bibliographies and especially BibTeX
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

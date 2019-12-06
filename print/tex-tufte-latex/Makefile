@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/08/02 10:23:12 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:36 markd Exp $
 
 DISTNAME=	tufte-latex
 PKGNAME=	tex-${DISTNAME}-3.5.2
@@ -34,5 +34,6 @@ DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xifthen-[0-9]*:../../devel/tex-xifthen
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

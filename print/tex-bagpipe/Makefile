@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/09 22:44:22 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:18:58 markd Exp $
 
 DISTNAME=	bagpipe
 PKGNAME=	tex-${DISTNAME}-3.02
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-musixtex>=1.15:../../print/tex-musixtex
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

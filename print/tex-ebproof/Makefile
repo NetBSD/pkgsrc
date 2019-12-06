@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/05/22 21:08:47 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:28 markd Exp $
 
 DISTNAME=	ebproof
 PKGNAME=	tex-${DISTNAME}-2.0
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
