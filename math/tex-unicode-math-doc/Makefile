@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/05/11 22:39:42 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 19:07:33 markd Exp $
 
 DISTNAME=	unicode-math.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.8o
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/unicode-math
 COMMENT=	Documentation for tex-unicode-math
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

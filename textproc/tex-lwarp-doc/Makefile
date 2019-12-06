@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 10:16:12 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 19:04:13 markd Exp $
 
 DISTNAME=	lwarp.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.73
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/lwarp
 COMMENT=	Documentation for tex-lwarp
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
