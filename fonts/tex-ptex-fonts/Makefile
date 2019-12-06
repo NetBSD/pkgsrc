@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/05/12 01:53:37 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 19:32:21 markd Exp $
 
 DISTNAME=	ptex-fonts
 PKGNAME=	tex-${DISTNAME}-2018
@@ -11,5 +11,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	tex-ptex-fontmaps-[0-9]*:../../fonts/tex-ptex-fontmaps
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

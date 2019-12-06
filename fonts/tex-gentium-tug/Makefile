@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/08/11 04:21:42 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:30:02 markd Exp $
 
 DISTNAME=	gentium-tug
 PKGNAME=	tex-${DISTNAME}-1.1.1
@@ -11,5 +11,6 @@ LICENSE=	ofl-v1.1
 
 TEX_MAP_FILES+=	gentium-type1.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

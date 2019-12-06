@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/20 21:01:17 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:39 markd Exp $
 
 DISTNAME=	boondox.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.02d
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/boondox
 COMMENT=	Documentation for tex-boondox
 LICENSE=	lppl-1.3c AND ofl-v1.1
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

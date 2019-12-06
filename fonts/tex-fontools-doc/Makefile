@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/09/14 13:22:56 mef Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 19:30:00 markd Exp $
 
 DISTNAME=	fontools.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2019.51625
@@ -12,5 +12,6 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	perl
 REPLACE_PERL+=	texmf-dist/doc/support/fontools/splitttc
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

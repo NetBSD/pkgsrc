@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/02 11:06:14 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:55 markd Exp $
 
 DISTNAME=	esrelation
 PKGNAME=	tex-${DISTNAME}-2015
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	esrelation.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

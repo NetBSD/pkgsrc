@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:53 markd Exp $
 
 DISTNAME=	eiad-ltx
 PKGNAME=	tex-${DISTNAME}-1.0
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/eiad-ltx
 COMMENT=	LaTeX support for the eiad font
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:57 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:31 markd Exp $
 
 DISTNAME=	venturisadf.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.005
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/venturisadf
 COMMENT=	Documentation for tex-venturisadf
 #LICENSE=	other-free
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
