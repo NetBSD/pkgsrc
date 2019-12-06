@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/06/23 23:28:29 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:07:33 markd Exp $
 
 DISTNAME=	mathspec
 PKGNAME=	tex-${DISTNAME}-0.2b
@@ -13,5 +13,6 @@ DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
