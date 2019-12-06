@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/06 16:49:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:32:22 markd Exp $
 
 DISTNAME=	pxfonts.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2010
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pxfonts
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/06 16:49:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:29:52 markd Exp $
 
 DISTNAME=	ec
 PKGNAME=	tex-${DISTNAME}-1.0
@@ -8,5 +8,6 @@ DIST_SUBDIR=	tex-${DISTNAME}-${TEXLIVE_REV}.2010
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Computer modern fonts in T1 and TS1 encodings
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
