@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/05/05 20:30:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:23:28 markd Exp $
 
 DISTNAME=	texlive-docindex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -15,6 +15,7 @@ SUBST_SED.paths=	-e 's,<a href="texmf,<a href="../../texmf,g'
 
 INSTALLATION_DIRS+=	share/doc/texlive
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/25 04:26:47 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:23:09 markd Exp $
 
 DISTNAME=	ptex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-3.2pl36135
@@ -11,5 +11,6 @@ TEXLIVE_IGNORE_PATTERNS=	texmf/doc/man
 
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

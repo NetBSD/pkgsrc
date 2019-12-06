@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/01/12 20:14:10 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:18:49 markd Exp $
 
 DISTNAME=	apacite.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-6.03
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/apacite
 COMMENT=	Documentation for tex-apacite
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

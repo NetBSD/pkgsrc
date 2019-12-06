@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/12 11:40:53 markd Exp $
+# $NetBSD: Makefile,v 1.26 2019/12/06 20:22:56 markd Exp $
 
 DISTNAME=	oberdiek
 PKGNAME=	tex-${DISTNAME}-2019
@@ -24,6 +24,7 @@ REPLACE_PERL=	bin/pdfatfi
 
 INSTALLATION_DIRS+=	bin
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

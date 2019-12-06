@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/01/20 21:43:59 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:55 markd Exp $
 
 DISTNAME=	longfbox.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.0
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/longfbox
 COMMENT=	Documentation for tex-longfbox
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

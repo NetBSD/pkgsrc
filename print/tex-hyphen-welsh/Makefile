@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/04 21:02:45 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 20:21:42 markd Exp $
 
 DISTNAME=	hyphen-welsh
 PKGNAME=	tex-${DISTNAME}-2019.51186
@@ -22,5 +22,6 @@ TEX_HYPHEN_LUA+=	['welsh']={ \
 			  hyphenation='', \
 			},
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/07/29 10:52:52 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:18:44 markd Exp $
 
 DISTNAME=	accents.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.4
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/accents
 COMMENT=	Documentation for tex-accents
 LICENSE=	mit
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

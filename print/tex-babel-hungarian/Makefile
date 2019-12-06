@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/01/30 08:36:22 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:18:53 markd Exp $
 
 DISTNAME=	babel-hungarian
 PKGNAME=	tex-${DISTNAME}-1.5c.49701
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-babel>=3.9l:../../print/tex-babel
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 14:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:05 markd Exp $
 
 DISTNAME=	plstmary.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.5c
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/plstmary
 COMMENT=	Documentation for tex-plstmary
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

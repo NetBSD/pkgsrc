@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/05/06 02:24:06 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 20:19:23 markd Exp $
 
 DISTNAME=	cyrillic.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2018
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/cyrillic
 COMMENT=	Documentation for tex-cyrillic
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
