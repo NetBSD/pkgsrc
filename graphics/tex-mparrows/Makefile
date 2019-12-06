@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/01/20 23:06:05 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:27 markd Exp $
 
 DISTNAME=	mparrows
 PKGNAME=	tex-${DISTNAME}-0.1
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/mparrows
 COMMENT=	MetaPost module with different types of arrow heads
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

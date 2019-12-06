@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/10/16 10:35:44 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 20:04:31 markd Exp $
 
 DISTNAME=	pst-barcode.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.18
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/pst-barcode
 COMMENT=	Documentation for tex-pst-barcode
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

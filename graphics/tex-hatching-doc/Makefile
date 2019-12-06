@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 13:47:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:24 markd Exp $
 
 DISTNAME=	hatching.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.11
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/hatching
 COMMENT=	Documentation for tex-hatching
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
