@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/11 10:16:12 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 19:04:13 markd Exp $
 
 DISTNAME=	lwarp
 PKGNAME=	tex-${DISTNAME}-0.73
@@ -22,5 +22,6 @@ post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MV} ${WRKSRC}/texmf-dist/scripts/lwarp/lwarpmk.lua ${WRKSRC}/bin/lwarpmk
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

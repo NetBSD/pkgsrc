@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/05/13 21:09:30 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:04:12 markd Exp $
 
 DISTNAME=	csvsimple
 PKGNAME=	tex-${DISTNAME}-1.21
@@ -14,5 +14,6 @@ DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

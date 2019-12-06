@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/01/30 08:47:04 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:07:32 markd Exp $
 
 DISTNAME=	fp.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.1d
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/fp
 COMMENT=	Documentation for tex-fp
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

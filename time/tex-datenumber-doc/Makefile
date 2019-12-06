@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/24 02:29:57 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:00:17 markd Exp $
 
 DISTNAME=	datenumber.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.02
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/datenumber
 COMMENT=	Documentation for tex-datenumber
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

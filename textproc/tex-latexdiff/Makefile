@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:24:01 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 19:04:12 markd Exp $
 
 DISTNAME=	latexdiff
 PKGNAME=	tex-${DISTNAME}-1.3.0
@@ -20,5 +20,6 @@ post-install:
 	${LN} ${DESTDIR}${PREFIX}/share/texmf-dist/scripts/latexdiff/latexdiff.pl ${DESTDIR}${PREFIX}/bin/latexdiff
 	${LN} ${DESTDIR}${PREFIX}/share/texmf-dist/scripts/latexdiff/latexrevise.pl ${DESTDIR}${PREFIX}/bin/latexrevise
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
