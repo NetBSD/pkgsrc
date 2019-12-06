@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/02 02:46:55 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:14 markd Exp $
 
 DISTNAME=	semantic
 PKGNAME=	tex-${DISTNAME}-2.0
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/semantic
 COMMENT=	Help for writing programming language semantics
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

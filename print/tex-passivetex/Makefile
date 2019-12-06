@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/09/06 10:40:32 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:23:00 markd Exp $
 
 DISTNAME=	passivetex
 PKGNAME=	tex-${DISTNAME}-1.25
@@ -23,5 +23,6 @@ DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-url>=3.2:../../print/tex-url
 DEPENDS+=	tex-xmltex-[0-9]*:../../textproc/tex-xmltex
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

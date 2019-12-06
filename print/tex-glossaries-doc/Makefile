@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/01/30 06:16:44 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 20:21:31 markd Exp $
 
 DISTNAME=	glossaries.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-4.42
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf-dist
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

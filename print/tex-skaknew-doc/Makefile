@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/06 09:05:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:18 markd Exp $
 
 DISTNAME=	skaknew.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2010
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/skaknew
 COMMENT=	Documentation for tex-skaknew
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/10/21 03:38:01 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:31 markd Exp $
 
 DISTNAME=	eqparbox.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-4.1
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/eqparbox
 COMMENT=	Documentation for tex-eqparbox
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/06 10:50:02 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:07 markd Exp $
 
 DISTNAME=	chessboard
 PKGNAME=	tex-${DISTNAME}-1.8
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/chessboard
 COMMENT=	Print chess boards
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

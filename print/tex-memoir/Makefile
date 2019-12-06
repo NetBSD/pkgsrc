@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/01/28 11:27:57 markd Exp $
+# $NetBSD: Makefile,v 1.14 2019/12/06 20:21:59 markd Exp $
 
 DISTNAME=	memoir
 PKGNAME=	tex-${DISTNAME}-3.7h
@@ -12,5 +12,6 @@ LICENSE=	lppl-1.3c
 DEPENDS+=	tex-ifxetex>=0.6:../../print/tex-ifxetex
 DEPENDS+=	tex-oberdiek>=2009nb1:../../print/tex-oberdiek
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

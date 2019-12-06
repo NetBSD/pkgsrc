@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/06/03 01:27:21 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:21:55 markd Exp $
 
 DISTNAME=	lollipop
 PKGNAME=	tex-${DISTNAME}-1.07
@@ -16,6 +16,7 @@ INSTALLATION_DIRS+=	bin
 
 TEX_FORMATS+=	"lollipop tex - lollipop.ini\\n"
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

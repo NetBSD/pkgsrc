@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/10/15 20:38:19 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:37 markd Exp $
 
 DISTNAME=	ucharcat.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.03
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/ucharcat
 COMMENT=	Documentation for tex-ucharcat
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

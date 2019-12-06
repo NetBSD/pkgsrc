@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/05/12 01:16:54 markd Exp $
+# $NetBSD: Makefile,v 1.13 2019/12/06 20:23:01 markd Exp $
 
 DISTNAME=	pdfpages
 PKGNAME=	tex-${DISTNAME}-0.5l
@@ -16,5 +16,6 @@ DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-ms-[0-9]*:../../print/tex-ms
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

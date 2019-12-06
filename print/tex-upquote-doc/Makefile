@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/26 10:39:31 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:39 markd Exp $
 
 DISTNAME=	upquote.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.3
@@ -8,5 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-upquote
 LICENSE=	lppl-1.2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
