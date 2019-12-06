@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:30:03 markd Exp $
 
 DISTNAME=	gfsneohellenic
 PKGNAME=	tex-${DISTNAME}-2014
@@ -11,5 +11,6 @@ COMMENT=	Greek font in the Neo-Hellenic style
 
 TEX_MAP_FILES+=	gfsneohellenic.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

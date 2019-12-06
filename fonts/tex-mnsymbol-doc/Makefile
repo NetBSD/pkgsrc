@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:50 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:30:17 markd Exp $
 
 DISTNAME=	mnsymbol.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.4
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/mnsymbol
 COMMENT=	Documentation for tex-mnsymbol
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/04/08 01:42:42 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:46 markd Exp $
 
 DISTNAME=	cm-unicode
 PKGNAME=	tex-${DISTNAME}-0.7.0
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Computer Modern Unicode font family
 LICENSE=	ofl-v1.1
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

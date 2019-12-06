@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/01/23 11:07:45 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:30:07 markd Exp $
 
 DISTNAME=	ipaex-type1
 PKGNAME=	tex-${DISTNAME}-0.5
@@ -11,5 +11,6 @@ COMMENT=	IPAex fonts converted to Type-1 format Unicode subfonts
 
 TEX_MAP_FILES+=	ipaex-type1.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

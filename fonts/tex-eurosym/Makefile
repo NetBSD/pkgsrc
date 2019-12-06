@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/06 16:49:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:29:57 markd Exp $
 
 DISTNAME=	eurosym
 PKGNAME=	tex-${DISTNAME}-1.4
@@ -12,5 +12,6 @@ COMMENT=	MetaFont and macros for Euro sign
 
 TEX_MIXEDMAP_FILES+=	eurosym.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

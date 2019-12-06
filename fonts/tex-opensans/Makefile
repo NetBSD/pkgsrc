@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/06 11:29:55 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:32:18 markd Exp $
 
 DISTNAME=	opensans
 PKGNAME=	tex-${DISTNAME}-2.2
@@ -11,5 +11,6 @@ LICENSE=	apache-2.0 AND lppl-1.3c
 
 TEX_MAP_FILES+=	opensans.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

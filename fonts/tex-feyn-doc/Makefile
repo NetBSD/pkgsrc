@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/05/06 02:51:25 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:58 markd Exp $
 
 DISTNAME=	feyn.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.4.1
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/feyn
 COMMENT=	Documentation for tex-feyn
 LICENSE=	modified-bsd
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

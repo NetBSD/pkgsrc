@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:17 markd Exp $
 
 DISTNAME=	ocr-b-outline
 PKGNAME=	tex-${DISTNAME}-2014
@@ -11,5 +11,6 @@ COMMENT=	OCR-B fonts in Type 1 and OpenType
 
 TEX_MAP_FILES+=	ocrb.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

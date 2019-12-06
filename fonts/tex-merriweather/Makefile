@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/05 10:57:00 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:30:15 markd Exp $
 
 DISTNAME=	merriweather
 PKGNAME=	tex-${DISTNAME}-2019
@@ -11,5 +11,6 @@ LICENSE=	ofl-v1.1
 
 TEX_MAP_FILES+=	merriweather.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

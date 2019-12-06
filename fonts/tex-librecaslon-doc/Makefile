@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/06 11:18:16 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:30:11 markd Exp $
 
 DISTNAME=	librecaslon.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2019
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/librecaslon
 COMMENT=	Documentation for tex-librecaslon
 LICENSE=	ofl-v1.1
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

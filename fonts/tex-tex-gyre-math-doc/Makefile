@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/16 03:57:31 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:32:28 markd Exp $
 
 DISTNAME=	tex-gyre-math.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2016
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tex-gyre-math
 COMMENT=	Documentation for tex-tex-gyre-math
 LICENSE=	gfsl
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

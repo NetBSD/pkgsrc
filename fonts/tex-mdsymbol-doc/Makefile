@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:30:15 markd Exp $
 
 DISTNAME=	mdsymbol.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.5
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/mdsymbol
 COMMENT=	Documentation for tex-mdsymbol
 LICENSE=	ofl-v1.1
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

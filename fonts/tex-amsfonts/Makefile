@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/09/06 16:27:19 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 19:29:31 markd Exp $
 
 DISTNAME=	amsfonts
 PKGNAME=	tex-${DISTNAME}-3.04
@@ -19,5 +19,6 @@ TEX_MIXEDMAP_FILES+=	cyrillic.map
 TEX_MIXEDMAP_FILES+=	latxfont.map
 TEX_MIXEDMAP_FILES+=	symbols.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/01/23 11:07:45 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:30:07 markd Exp $
 
 DISTNAME=	ipaex-type1.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.5
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/ipaex-type1
 COMMENT=	Documentation for tex-ipaex-type1
 #LICENSE=	other-free
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

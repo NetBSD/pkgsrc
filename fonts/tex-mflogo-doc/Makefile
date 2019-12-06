@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/06/16 03:57:30 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 19:30:16 markd Exp $
 
 DISTNAME=	mflogo.doc
 # should be
@@ -11,5 +11,6 @@ HOMEPAGE=	http://ctan.org/pkg/mflogo
 COMMENT=	Documentation for tex-mflogo
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

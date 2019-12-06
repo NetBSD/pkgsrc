@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:39 markd Exp $
 
 DISTNAME=	brushscr
 PKGNAME=	tex-${DISTNAME}-2014
@@ -11,5 +11,6 @@ LICENSE=	public-domain
 
 TEX_MAP_FILES+=	pbsi.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

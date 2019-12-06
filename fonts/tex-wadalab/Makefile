@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/06 08:43:30 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:32:31 markd Exp $
 
 DISTNAME=	wadalab
 PKGNAME=	tex-${DISTNAME}-2011
@@ -15,5 +15,6 @@ TEX_MAP_FILES+=	mcj.map
 TEX_MAP_FILES+=	mr2j.map
 TEX_MAP_FILES+=	mrj.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

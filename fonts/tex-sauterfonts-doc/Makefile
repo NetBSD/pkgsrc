@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:25 markd Exp $
 
 DISTNAME=	sauterfonts.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/sauterfonts
 COMMENT=	Documentation for tex-sauterfonts
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/05/08 11:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:32:16 markd Exp $
 
 DISTNAME=	ocherokee
 PKGNAME=	tex-${DISTNAME}-2014
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	cherokee.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/01/30 04:56:44 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 19:32:28 markd Exp $
 
 DISTNAME=	tipa
 PKGNAME=	tex-${DISTNAME}-1.3pl29349
@@ -12,5 +12,6 @@ DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 
 TEX_MIXEDMAP_FILES+=	tipa.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

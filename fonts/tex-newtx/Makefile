@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/01/24 09:14:30 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 19:32:15 markd Exp $
 
 DISTNAME=	newtx
 PKGNAME=	tex-${DISTNAME}-1.554
@@ -13,5 +13,6 @@ DEPENDS+=	tex-kastrup-[0-9]*:../../math/tex-kastrup
 
 TEX_MAP_FILES+=	newtx.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

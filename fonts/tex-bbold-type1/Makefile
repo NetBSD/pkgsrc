@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/25 05:39:28 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:29:37 markd Exp $
 
 DISTNAME=	bbold-type1
 PKGNAME=	tex-${DISTNAME}-2014
@@ -9,5 +9,6 @@ COMMENT=	Adobe Type 1 format version of the bbold font
 
 TEX_MIXEDMAP_FILES=	bbold.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

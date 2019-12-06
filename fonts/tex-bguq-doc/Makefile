@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:38 markd Exp $
 
 DISTNAME=	bguq.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.4
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/bguq
 COMMENT=	Documentation for tex-bguq
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

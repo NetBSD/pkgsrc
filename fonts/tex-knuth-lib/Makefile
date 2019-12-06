@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/05 18:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:30:09 markd Exp $
 
 DISTNAME=	knuth-lib
 PKGNAME=	tex-${DISTNAME}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/knuth-lib
 COMMENT=	Small library of MetaFont sources
 #LICENSE=	knuth
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

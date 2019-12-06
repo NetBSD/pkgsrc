@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:30:14 markd Exp $
 
 DISTNAME=	mathabx-type1.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/mathabx-type1
 COMMENT=	Documentation for tex-mathabx-type1
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

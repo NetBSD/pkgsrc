@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/05/06 04:03:31 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:30:03 markd Exp $
 
 DISTNAME=	gfsdidot.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2018
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/gfsdidot
 COMMENT=	Documentation for tex-gfsdidot
 #LICENSE=	other-free
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/11 04:55:54 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:31 markd Exp $
 
 DISTNAME=	anonymouspro
 PKGNAME=	tex-${DISTNAME}-2.2
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	AnonymousPro.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

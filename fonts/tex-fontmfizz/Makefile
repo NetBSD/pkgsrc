@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/21 06:13:16 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:30:00 markd Exp $
 
 DISTNAME=	fontmfizz
 PKGNAME=	tex-${DISTNAME}-2017
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/fontmfizz
 COMMENT=	Font Mfizz icons for use in LaTeX
 LICENSE=	mit
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

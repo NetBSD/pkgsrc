@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/06 10:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:32:22 markd Exp $
 
 DISTNAME=	qpxqtx.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2016
@@ -9,5 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-qpxqtx
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

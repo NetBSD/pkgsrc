@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/11 13:21:02 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 19:32:20 markd Exp $
 
 DISTNAME=	ptex-fontmaps
 PKGNAME=	tex-${DISTNAME}-20190506.0
@@ -19,5 +19,6 @@ USE_TOOLS+=	perl:run
 REPLACE_PERL+=	texmf-dist/scripts/ptex-fontmaps/kanji-config-updmap.pl
 REPLACE_PERL+=	texmf-dist/scripts/ptex-fontmaps/kanji-fontmap-creator.pl
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

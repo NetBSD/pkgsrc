@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/06 16:49:24 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 19:30:12 markd Exp $
 
 DISTNAME=	lm.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.004
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-lm
 LICENSE=	gfsl
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

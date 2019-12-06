@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/08/05 11:37:40 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:32:24 markd Exp $
 
 DISTNAME=	sansmathfonts
 PKGNAME=	tex-${DISTNAME}-2019.51356
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	sansmathfonts.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

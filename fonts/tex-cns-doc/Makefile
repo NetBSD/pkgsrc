@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/05/06 01:51:54 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:46 markd Exp $
 
 DISTNAME=	cns.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2018
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/cjk-fonts
 COMMENT=	Documentation for tex-cns
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

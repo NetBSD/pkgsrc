@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/05/08 11:16:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:29:41 markd Exp $
 
 DISTNAME=	cbfonts
 PKGNAME=	tex-${DISTNAME}-2014
@@ -14,5 +14,6 @@ DEPENDS+=	tex-cbfonts-fd-[0-9]*:../../fonts/tex-cbfonts-fd
 
 TEX_MIXEDMAP_FILES+=	cbgreek-full.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

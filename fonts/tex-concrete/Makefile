@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/05 14:51:53 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:47 markd Exp $
 
 DISTNAME=	concrete
 PKGNAME=	tex-${DISTNAME}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/concrete
 COMMENT=	Concrete Roman fonts
 # LICENSE=	knuth
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

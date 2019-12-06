@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:25 markd Exp $
 
 DISTNAME=	skull
 PKGNAME=	tex-${DISTNAME}-0.1
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/skull
 COMMENT=	Font to draw a skull
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

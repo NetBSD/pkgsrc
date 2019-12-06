@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/08/09 06:14:09 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:32:24 markd Exp $
 
 DISTNAME=	rsfso.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.02
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/rsfso
 COMMENT=	Documentation for tex-rsfso
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
