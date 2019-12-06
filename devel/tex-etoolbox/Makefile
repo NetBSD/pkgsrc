@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/01/26 01:30:03 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 19:18:33 markd Exp $
 
 DISTNAME=	etoolbox
 PKGNAME=	tex-${DISTNAME}-2.5f
@@ -12,5 +12,6 @@ LICENSE=	lppl-1.3c
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-etex-pkg-[0-9]*:../../print/tex-etex-pkg
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
