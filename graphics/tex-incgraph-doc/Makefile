@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/01/20 21:09:07 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:24 markd Exp $
 
 DISTNAME=	incgraph.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.12
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/incgraph
 COMMENT=	Documentation for tex-incgraph
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/04 01:40:37 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:41 markd Exp $
 
 DISTNAME=	tikzscale.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.2.6
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tikzscale
 COMMENT=	Documentation for tex-tikzscale
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

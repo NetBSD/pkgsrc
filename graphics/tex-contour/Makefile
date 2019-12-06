@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/06/05 21:20:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:20 markd Exp $
 
 DISTNAME=	contour
 PKGNAME=	tex-${DISTNAME}-2.14
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

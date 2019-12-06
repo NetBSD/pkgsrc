@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/30 04:05:54 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:04:36 markd Exp $
 
 DISTNAME=	pst-vue3d.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.24
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pst-vue3d
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
