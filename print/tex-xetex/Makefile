@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/05/12 02:12:24 markd Exp $
+# $NetBSD: Makefile,v 1.12 2019/12/06 20:23:44 markd Exp $
 
 DISTNAME=	xetex
 PKGNAME=	tex-${DISTNAME}-2018
@@ -24,6 +24,7 @@ INSTALLATION_DIRS+=	bin
 TEX_FORMATS+=		"xetex xetex language.def -etex xetex.ini\\nxelatex xetex language.dat -etex xelatex.ini\\n"
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

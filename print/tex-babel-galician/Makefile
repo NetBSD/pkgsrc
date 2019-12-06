@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/20 21:01:16 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:18:53 markd Exp $
 
 DISTNAME=	babel-galician
 PKGNAME=	tex-${DISTNAME}-2017
@@ -10,5 +10,6 @@ HOMEPAGE=	http://ctan.org/pkg/babel-galician
 COMMENT=	Babel support for Galician
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

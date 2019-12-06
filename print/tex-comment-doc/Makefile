@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/06/20 22:07:25 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:19:12 markd Exp $
 
 DISTNAME=	comment.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-3.8
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/comment
 COMMENT=	Documentation for tex-comment
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

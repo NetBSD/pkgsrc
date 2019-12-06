@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/01 21:17:55 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:21 markd Exp $
 
 DISTNAME=	cuisine
 PKGNAME=	tex-${DISTNAME}-0.7
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-units-[0-9]*:../../print/tex-units
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

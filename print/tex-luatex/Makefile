@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/05/14 12:25:36 markd Exp $
+# $NetBSD: Makefile,v 1.23 2019/12/06 20:21:56 markd Exp $
 
 DISTNAME=	luatex
 PKGNAME=	tex-${DISTNAME}-1.10.0
@@ -42,6 +42,7 @@ INSTALLATION_DIRS+=	bin
 
 TEX_FORMATS+=	"luatex luatex language.def,language.dat.lua luatex.ini\\ndviluatex luatex language.def,language.dat.lua dviluatex.ini\\n"
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

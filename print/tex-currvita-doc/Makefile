@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/20 12:53:51 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:22 markd Exp $
 
 DISTNAME=	currvita.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2016
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/currvita
 COMMENT=	Documentation for tex-currvita
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/06/16 04:06:13 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:00 markd Exp $
 
 DISTNAME=	pbibtex-base
 PKGNAME=	tex-${DISTNAME}-0.0.2016
@@ -15,5 +15,6 @@ post-patch:
 	mkdir ${WRKSRC}/texmf-dist
 	mv ${WRKSRC}/pbibtex ${WRKSRC}/texmf-dist/pbibtex
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

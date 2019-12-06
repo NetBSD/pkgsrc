@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 19:58:05 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:50 markd Exp $
 
 DISTNAME=	latexcourse-rug.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.05
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/latexcourse-rug
 COMMENT=	LaTeX course book
 #LICENSE=	other-free
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

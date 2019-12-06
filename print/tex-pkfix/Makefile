@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/08/11 13:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/12/06 20:23:03 markd Exp $
 
 DISTNAME=	pkfix
 PKGNAME=	tex-${DISTNAME}-1.7
@@ -29,6 +29,7 @@ INSTALLATION_DIRS+=	bin
 
 TEX_TEXMF_DIRS=	none
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

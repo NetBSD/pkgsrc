@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/04 03:56:09 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:19:20 markd Exp $
 
 DISTNAME=	csquotes
 PKGNAME=	tex-${DISTNAME}-5.2e
@@ -14,5 +14,6 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-relsize-[0-9]*:../../print/tex-relsize
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

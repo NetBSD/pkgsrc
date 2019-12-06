@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/05/12 01:19:48 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 20:23:02 markd Exp $
 
 DISTNAME=	pgfplots
 PKGNAME=	tex-${DISTNAME}-1.16
@@ -13,5 +13,6 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

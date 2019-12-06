@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/01/24 09:31:46 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:23 markd Exp $
 
 DISTNAME=	filecontents.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.4
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/filecontents
 COMMENT=	Documentation for tex-filecontents
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

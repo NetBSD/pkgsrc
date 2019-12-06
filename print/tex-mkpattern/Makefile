@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 14:09:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:22:02 markd Exp $
 
 DISTNAME=	mkpattern
 PKGNAME=	tex-${DISTNAME}-1.2
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/mkpattern
 COMMENT=	Utility for making hyphenation patterns
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

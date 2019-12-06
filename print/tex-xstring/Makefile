@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/05/06 21:28:33 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:23:46 markd Exp $
 
 DISTNAME=	xstring
 PKGNAME=	tex-${DISTNAME}-1.83
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/xstring
 COMMENT=	String manipulation for (La)TeX
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

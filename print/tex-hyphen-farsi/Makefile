@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/05/11 06:57:25 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:21:37 markd Exp $
 
 DISTNAME=	hyphen-farsi
 PKGNAME=	tex-${DISTNAME}-2019
@@ -23,5 +23,6 @@ TEX_HYPHEN_LUA+=	['farsi']={ \
 			  patterns='', \
 			},
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

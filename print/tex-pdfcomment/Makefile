@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/01/26 11:47:12 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:01 markd Exp $
 
 DISTNAME=	pdfcomment
 PKGNAME=	tex-${DISTNAME}-2.4a
@@ -17,5 +17,6 @@ DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

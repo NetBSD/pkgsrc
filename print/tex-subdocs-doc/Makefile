@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/07/29 11:01:04 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:21 markd Exp $
 
 DISTNAME=	subdocs.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.1
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/subdocs
 COMMENT=	Documentation for tex-subdocs
 LICENSE=	mit
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
