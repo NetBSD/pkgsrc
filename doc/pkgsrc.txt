@@ -1138,10 +1138,10 @@ files.
 
 5.1.5. Checking for security vulnerabilities in installed packages
 
-The NetBSD Security-Officer and Packages Groups maintain a list of known
-security vulnerabilities to packages which are (or have been) included in
-pkgsrc. The list is available from the NetBSD FTP site at http://ftp.NetBSD.org
-/pub/pkgsrc/distfiles/vulnerabilities.
+The pkgsrc Security Team and Packages Groups maintain a list of known security
+vulnerabilities to packages which are (or have been) included in pkgsrc. The
+list is available from the NetBSD FTP site at http://ftp.netbsd.org/pub/NetBSD/
+packages/vulns/pkg-vulnerabilities.
 
 Through pkg_admin fetch-pkg-vulnerabilities, this list can be downloaded
 automatically, and a security audit of all packages installed on a system can
