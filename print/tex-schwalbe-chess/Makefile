@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/01/29 19:35:59 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:23:13 markd Exp $
 
 DISTNAME=	schwalbe-chess
 PKGNAME=	tex-${DISTNAME}-2.3
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.2
 
 DEPENDS+=	tex-chess-problem-diagrams-[0-9]*:../../print/tex-chess-problem-diagrams
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

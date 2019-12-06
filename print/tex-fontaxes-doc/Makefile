@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/01/20 21:43:59 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:26 markd Exp $
 
 DISTNAME=	fontaxes.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.0d
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/fontaxes
 COMMENT=	Documentation for tex-fontaxes
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

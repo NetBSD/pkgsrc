@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 19:58:08 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:28 markd Exp $
 
 DISTNAME=	tex-overview.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.1f
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tex-overview
 COMMENT=	Overview of the development of TeX
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

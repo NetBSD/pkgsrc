@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/27 16:05:47 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:23:37 markd Exp $
 
 DISTNAME=	ucs.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.2
@@ -14,5 +14,6 @@ REPLACE_PERL+=	doc/latex/ucs/unsupported/u2ps
 CHECK_INTERPRETER_SKIP+=	share/texmf-dist/doc/latex/ucs/*.pl \
 				share/texmf-dist/doc/latex/ucs/unsupported/u2ps
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

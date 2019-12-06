@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/09/06 16:29:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 20:23:09 markd Exp $
 
 DISTNAME=	ptex
 PKGNAME=	tex-${DISTNAME}-3.2pl41220
@@ -26,6 +26,7 @@ DEPENDS+=	web2c>=2010nb5:../../print/web2c
 TEX_FORMATS+=		"ptex ptex - ptex.ini\\neptex eptex language.def *eptex.ini\\n"
 TEX_KANJIMAP_FILES+=	morisawa.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 .include "../../mk/bsd.pkg.mk"

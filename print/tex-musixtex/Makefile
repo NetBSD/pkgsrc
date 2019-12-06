@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/05/23 19:23:14 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2019/12/06 20:22:04 markd Exp $
 
 DISTNAME=	musixtex
 PKGNAME=	tex-${DISTNAME}-1.29
@@ -23,6 +23,7 @@ SUBST_VARS.paths=	LOCALBASE
 
 REPLACE_TEXLUA=		bin/musixflx bin/musixtex
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

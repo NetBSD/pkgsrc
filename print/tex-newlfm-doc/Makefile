@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/01 21:17:55 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:22:53 markd Exp $
 
 DISTNAME=	newlfm.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-9.4
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/newlfm
 COMMENT=	Documentation for tex-newlfm
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/05/08 11:19:35 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:17 markd Exp $
 
 DISTNAME=	skak
 PKGNAME=	tex-${DISTNAME}-1.5.3
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-chessfss-[0-9]*:../../print/tex-chessfss
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

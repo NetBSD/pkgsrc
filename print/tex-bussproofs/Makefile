@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/29 11:37:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:03 markd Exp $
 
 DISTNAME=	bussproofs
 PKGNAME=	tex-${DISTNAME}-1.1
@@ -8,5 +8,6 @@ MAINTAINER=	jaapb@NetBSD.org
 COMMENT=	Proof trees in the style of the sequent calculus
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

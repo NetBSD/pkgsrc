@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/04/06 19:28:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 20:22:59 markd Exp $
 
 DISTNAME=	overpic
 PKGNAME=	tex-${DISTNAME}-1.2
@@ -13,5 +13,6 @@ LICENSE=	lppl-1.3c
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-eepic-[0-9]*:../../graphics/tex-eepic
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

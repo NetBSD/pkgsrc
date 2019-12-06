@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/02/01 21:46:29 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:23:32 markd Exp $
 
 DISTNAME=	todonotes
 PKGNAME=	tex-${DISTNAME}-1.1.2
@@ -13,5 +13,6 @@ DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

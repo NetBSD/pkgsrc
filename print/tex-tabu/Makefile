@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/01/30 08:16:36 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:23:23 markd Exp $
 
 DISTNAME=	tabu
 PKGNAME=	tex-${DISTNAME}-2.9
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-varwidth-[0-9]*:../../print/tex-varwidth
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

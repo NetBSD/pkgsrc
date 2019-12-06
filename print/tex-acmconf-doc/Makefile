@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/01/30 03:26:05 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:18:45 markd Exp $
 # TeX Live Revision 15878
 
 DISTNAME=	acmconf.doc
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-acmconf
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

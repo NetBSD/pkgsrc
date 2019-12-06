@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:18 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:13 markd Exp $
 
 DISTNAME=	scale.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.1.2
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/scale
 COMMENT=	Documentation for tex-scale
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

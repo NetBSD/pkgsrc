@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/14 12:02:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:56 markd Exp $
 
 DISTNAME=	luacode.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.2a
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/luacode
 COMMENT=	Documentation for tex-luacode
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/05/12 03:44:29 markd Exp $
+# $NetBSD: Makefile,v 1.12 2019/12/06 20:19:24 markd Exp $
 
 DISTNAME=	dehyph-exptl
 PKGNAME=	tex-${DISTNAME}-0.6
@@ -34,5 +34,6 @@ TEX_HYPHEN_LUA+=	['ngerman-x-2019-04-04']={ \
 			  hyphenation='hyph-de-1996.hyp.txt', \
 			},
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

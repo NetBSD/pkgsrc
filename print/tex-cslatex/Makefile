@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/05/11 22:24:29 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:19:20 markd Exp $
 
 DISTNAME=	cslatex
 PKGNAME=	tex-${DISTNAME}-2014
@@ -17,6 +17,7 @@ INSTALLATION_DIRS+=	bin
 
 TEX_FORMATS+=	"cslatex pdftex - -etex cslatex.ini\\npdfcslatex pdftex - -etex cslatex.ini\\n"
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/01/24 10:45:19 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:23 markd Exp $
 
 DISTNAME=	t2
 PKGNAME=	tex-${DISTNAME}-2018.47870
@@ -12,5 +12,6 @@ LICENSE=	lppl-1.3c
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/30 03:26:08 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:01 markd Exp $
 # TeX Live Revision 17209
 
 DISTNAME=	block.doc
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-block
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

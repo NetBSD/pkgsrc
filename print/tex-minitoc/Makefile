@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/01/24 19:51:31 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:22:02 markd Exp $
 
 DISTNAME=	minitoc
 PKGNAME=	tex-${DISTNAME}-62
@@ -15,5 +15,6 @@ DEPENDS+=	tex-latex-bin>=2010:../../print/tex-latex-bin
 DEPENDS+=	tex-notoccite>=2009:../../print/tex-notoccite
 DEPENDS+=	tex-placeins>=2.2:../../print/tex-placeins
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

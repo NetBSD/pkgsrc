@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 19:58:09 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:32 markd Exp $
 
 DISTNAME=	tlc2.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tlc2-examples
 COMMENT=	Examples from "The LaTeX Companion", second edition
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

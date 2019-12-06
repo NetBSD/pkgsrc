@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/05/12 04:16:32 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 20:23:04 markd Exp $
 
 DISTNAME=	platex
 PKGNAME=	tex-${DISTNAME}-2019
@@ -15,6 +15,7 @@ INSTALLATION_DIRS+=	bin
 
 TEX_FORMATS+=	"platex eptex language.dat *platex.ini\\n"
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

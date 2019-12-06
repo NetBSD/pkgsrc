@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/16 04:06:02 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:19:21 markd Exp $
 
 DISTNAME=	ctable
 PKGNAME=	tex-${DISTNAME}-1.31
@@ -8,5 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Flexible typesetting of table and figure floats using key/value directives
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

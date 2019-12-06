@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 17:58:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:10 markd Exp $
 
 DISTNAME=	classpack.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.77
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/classpack
 COMMENT=	Documentation for tex-classpack
 #LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

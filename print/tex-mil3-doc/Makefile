@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 19:58:06 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:22:02 markd Exp $
 
 DISTNAME=	mil3.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/mil3
 COMMENT=	Samples from Math into LaTeX, third edition
 #LICENSE=	other-free
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/06/21 08:28:41 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:21:47 markd Exp $
 
 DISTNAME=	kotex-oblivoir.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.1.8
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/kotex-oblivoir
 COMMENT=	Documentation for tex-kotex-oblivoir
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

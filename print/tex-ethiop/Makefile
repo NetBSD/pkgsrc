@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/03 19:26:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:32 markd Exp $
 
 DISTNAME=	ethiop
 PKGNAME=	tex-${DISTNAME}-0.7
@@ -8,5 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	LaTeX macros and fonts for typesetting Amharic
 # LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

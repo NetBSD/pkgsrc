@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/31 06:45:32 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:28 markd Exp $
 
 DISTNAME=	edmac
 PKGNAME=	tex-${DISTNAME}-3.17
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/edmac
 COMMENT=	Typeset critical editions
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

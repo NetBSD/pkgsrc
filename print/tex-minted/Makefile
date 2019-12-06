@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/04/25 07:33:15 maya Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 20:22:02 markd Exp $
 
 DISTNAME=	minted
 PKGNAME=	tex-${DISTNAME}-2.5
@@ -19,6 +19,7 @@ DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-xstring-[0-9]*:../../print/tex-xstring
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

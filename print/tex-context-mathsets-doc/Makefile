@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/07/18 17:07:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:17 markd Exp $
 
 DISTNAME=	context-mathsets.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2015
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/context-mathsets
 COMMENT=	Documentation for tex-context-mathsets
 LICENSE=	2-clause-bsd
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

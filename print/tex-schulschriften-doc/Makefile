@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 08:59:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:13 markd Exp $
 
 DISTNAME=	schulschriften.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-4
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/schulschriften
 COMMENT=	Documentation for tex-schulschriften
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

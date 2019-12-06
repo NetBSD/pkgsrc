@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/04 12:47:12 markd Exp $
+# $NetBSD: Makefile,v 1.15 2019/12/06 20:21:38 markd Exp $
 
 DISTNAME=	hyphen-german
 PKGNAME=	tex-${DISTNAME}-2019.51186
@@ -45,5 +45,6 @@ TEX_HYPHEN_LUA+=	['swissgerman']={ \
 			  hyphenation='', \
 			},
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

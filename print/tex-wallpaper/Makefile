@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/01/26 10:29:52 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:23:43 markd Exp $
 # TeX Live Revision 15878
 
 DISTNAME=	wallpaper
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-eso-pic-[0-9]*:../../print/tex-eso-pic
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

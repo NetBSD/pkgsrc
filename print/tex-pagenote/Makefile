@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/10/23 10:28:49 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:22:59 markd Exp $
 
 DISTNAME=	pagenote
 PKGNAME=	tex-${DISTNAME}-1.1a
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/pagenote
 COMMENT=	Notes at end of document
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

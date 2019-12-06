@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/17 21:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:17 markd Exp $
 
 DISTNAME=	context-notes-zh-cn.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2015
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/context-notes-zh-cn
 COMMENT=	Introductory tutorial for ConTeXt in Chinese
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

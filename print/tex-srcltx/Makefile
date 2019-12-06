@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/26 11:11:45 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:19 markd Exp $
 # TeX Live Revision 15878
 
 DISTNAME=	srcltx
@@ -8,5 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Jump between DVI and TeX files
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/01/25 20:10:40 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:19:15 markd Exp $
 
 DISTNAME=	context-filter
 PKGNAME=	tex-${DISTNAME}-2018.48390
@@ -11,5 +11,6 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	tex-context-[0-9]*:../../print/tex-context
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/31 06:45:33 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:20 markd Exp $
 
 DISTNAME=	startex
 PKGNAME=	tex-${DISTNAME}-1.04
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/startex
 COMMENT=	An XML-inspired format for student use
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

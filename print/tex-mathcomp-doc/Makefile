@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:17 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:58 markd Exp $
 
 DISTNAME=	mathcomp.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.1f
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/mathcomp
 COMMENT=	Documentation for tex-mathcomp
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

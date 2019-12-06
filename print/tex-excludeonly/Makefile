@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/27 10:53:22 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:34 markd Exp $
 # TeX Live Revision 17262
 
 DISTNAME=	excludeonly
@@ -10,5 +10,6 @@ LICENSE=	public-domain
 
 CONFLICTS+=	tex-ltxmisc<2009
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/04 19:58:06 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:22:03 markd Exp $
 
 DISTNAME=	moderncv
 PKGNAME=	tex-${DISTNAME}-2.0.0
@@ -28,5 +28,6 @@ DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xifthen-[0-9]*:../../devel/tex-xifthen
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

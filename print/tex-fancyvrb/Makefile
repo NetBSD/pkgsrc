@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/01/30 09:03:12 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 20:21:22 markd Exp $
 
 DISTNAME=	fancyvrb
 PKGNAME=	tex-${DISTNAME}-3.2a
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

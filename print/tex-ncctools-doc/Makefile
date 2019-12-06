@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/01/24 19:32:07 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:22:52 markd Exp $
 
 DISTNAME=	ncctools.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-3.5.2
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/ncctools
 COMMENT=	Documentation for tex-ncctools
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

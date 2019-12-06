@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/01/20 21:43:59 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:55 markd Exp $
 
 DISTNAME=	longfbox
 PKGNAME=	tex-${DISTNAME}-1.0
@@ -14,5 +14,6 @@ DEPENDS+=	tex-mdwtools-[0-9]*:../../print/tex-mdwtools
 DEPENDS+=	tex-options-[0-9]*:../../print/tex-options
 DEPENDS+=	tex-pict2e-[0-9]*:../../print/tex-pict2e
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

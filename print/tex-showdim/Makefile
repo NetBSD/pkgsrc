@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:18 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:16 markd Exp $
 
 DISTNAME=	showdim
 PKGNAME=	tex-${DISTNAME}-1.2
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/showdim
 COMMENT=	Variants on printing dimensions
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

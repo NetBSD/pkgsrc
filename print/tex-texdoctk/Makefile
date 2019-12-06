@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/05/12 03:23:32 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:27 markd Exp $
 
 DISTNAME=	texdoctk
 PKGNAME=	tex-${DISTNAME}-0.6.0.50602
@@ -20,5 +20,6 @@ post-extract:
 		${WRKSRC}/bin/texdoctk
 	${RMDIR} ${WRKSRC}/texmf-dist/scripts/texdoctk
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

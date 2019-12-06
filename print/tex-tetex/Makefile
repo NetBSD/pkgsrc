@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/08/11 13:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2019/12/06 20:23:26 markd Exp $
 
 DISTNAME=	tetex
 PKGNAME=	tex-${DISTNAME}-3.0.50602
@@ -49,6 +49,7 @@ CONF_FILES+=	${PREFIX}/share/texmf-dist/web2c/updmap.cfg \
 
 TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR} ${PREFIX}/share/texmf-dist
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

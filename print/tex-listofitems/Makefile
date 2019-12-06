@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/08/04 04:35:35 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:21:54 markd Exp $
 
 DISTNAME=	listofitems
 PKGNAME=	tex-${DISTNAME}-1.62
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/listofitems
 COMMENT=	Grab items in lists using user-specified sep char
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

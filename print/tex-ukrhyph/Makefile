@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/09/06 16:49:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 20:23:38 markd Exp $
 
 DISTNAME=	ukrhyph
 PKGNAME=	tex-${DISTNAME}-2010
@@ -10,5 +10,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-ruhyphen>=1.6:../../print/tex-ruhyphen
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/06 16:49:43 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:23:08 markd Exp $
 
 DISTNAME=	pslatex
 PKGNAME=	tex-${DISTNAME}-2009
@@ -9,5 +9,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Use PostScript fonts by default
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

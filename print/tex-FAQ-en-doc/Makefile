@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 19:58:01 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:17:03 markd Exp $
 
 DISTNAME=	FAQ-en.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-3.28
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/uk-tex-faq
 COMMENT=	Compilation of Frequently Asked Questions with answers
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

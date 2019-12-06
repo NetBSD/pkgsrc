@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/09/06 16:49:39 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/12/06 20:21:50 markd Exp $
 
 DISTNAME=	latexconfig
 PKGNAME=	tex-${DISTNAME}-2016
@@ -9,5 +9,6 @@ COMMENT=	Files used to generate LaTeX formats
 
 CONFLICTS+=	tex-bin-latex<2008.12778nb5
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

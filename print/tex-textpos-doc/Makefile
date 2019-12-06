@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/05/13 11:52:22 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:23:30 markd Exp $
 
 DISTNAME=	textpos.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.9.1
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/textpos
 COMMENT=	Documentation for tex-textpos
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

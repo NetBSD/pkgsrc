@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/04 19:58:06 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:22:55 markd Exp $
 
 DISTNAME=		ntheorem
 PKGNAME=		tex-${DISTNAME}-1.31
@@ -9,5 +9,6 @@ MAINTAINER=	jaapb@NetBSD.org
 COMMENT=	Enhanced theorem environment for LaTeX
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

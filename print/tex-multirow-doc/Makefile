@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/08/05 10:34:33 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 20:22:04 markd Exp $
 
 DISTNAME=	multirow.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.5
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/multirow
 COMMENT=	Documentation for tex-multirow
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

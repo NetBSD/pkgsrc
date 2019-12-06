@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/10/12 08:58:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:18:59 markd Exp $
 
 DISTNAME=	biblatex-ieee.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.3a
@@ -10,5 +10,6 @@ HOMEPAGE=	https://ctan.org/pkg/biblatex-ieee
 COMMENT=	Documentation for tex-biblatex-ieee
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
