@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/01 21:17:55 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:22:53 markd Exp $
 
 DISTNAME=	newlfm
 PKGNAME=	tex-${DISTNAME}-9.4
@@ -18,5 +18,6 @@ DEPENDS+=	tex-rotating-[0-9]*:../../print/tex-rotating
 DEPENDS+=	tex-setspace-[0-9]*:../../print/tex-setspace
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

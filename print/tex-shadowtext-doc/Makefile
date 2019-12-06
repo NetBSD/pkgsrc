@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/29 22:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:16 markd Exp $
 
 DISTNAME=	shadowtext.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.3
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/shadowtext
 COMMENT=	Documentation for tex-shadowtext
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

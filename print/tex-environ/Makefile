@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/01/27 10:53:21 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:19:29 markd Exp $
 
 DISTNAME=	environ
 PKGNAME=	tex-${DISTNAME}-0.3
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	New interface for environments in LaTeX
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

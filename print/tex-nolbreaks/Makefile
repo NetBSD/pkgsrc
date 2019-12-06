@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/01/27 10:00:26 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:22:54 markd Exp $
 
 DISTNAME=	nolbreaks
 PKGNAME=	tex-${DISTNAME}-1.2
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	No line breaks in text
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

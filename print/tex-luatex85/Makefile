@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/08/07 09:09:39 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:56 markd Exp $
 
 DISTNAME=	luatex85
 PKGNAME=	tex-${DISTNAME}-1.4
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/luatex85
 COMMENT=	pdfTeX aliases for LuaTeX
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

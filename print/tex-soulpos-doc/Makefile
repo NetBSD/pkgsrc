@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/07/29 10:59:34 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:19 markd Exp $
 
 DISTNAME=	soulpos.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.1
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/soulpos
 COMMENT=	Documentation for tex-soulpos
 LICENSE=	mit
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

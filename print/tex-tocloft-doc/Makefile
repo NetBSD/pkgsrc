@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/10/21 03:11:10 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:23:32 markd Exp $
 
 DISTNAME=	tocloft.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.3i
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tocloft
 COMMENT=	Documentation for tex-tocloft
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/06 16:49:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:18:46 markd Exp $
 
 DISTNAME=	aleph
 PKGNAME=	tex-${DISTNAME}-0.2.40768
@@ -18,6 +18,7 @@ INSTALLATION_DIRS+=	bin
 TEX_FORMATS+=		"aleph aleph - *aleph.ini\\nlamed aleph language.dat *lambda.ini\\n"
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/01/27 10:13:21 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:22:03 markd Exp $
 
 DISTNAME=	moreverb.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.3a
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-moreverb
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/12 11:09:38 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:23:44 markd Exp $
 
 DISTNAME=	xcjk2uni
 PKGNAME=	tex-${DISTNAME}-0.8
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/xcjk2uni
 COMMENT=	Convert CJK characters to Unicode, in pdfTeX
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

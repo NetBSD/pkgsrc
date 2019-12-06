@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:18 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:00 markd Exp $
 
 DISTNAME=	pb-diagram.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-5.0
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/pb-diagram
 COMMENT=	Documentation for tex-pb-diagram
 #LICENSE=	other-free
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

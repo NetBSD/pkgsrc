@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/26 21:06:21 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:43 markd Exp $
 
 DISTNAME=	ifnextok
 PKGNAME=	tex-${DISTNAME}-0.3
@@ -9,5 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Utility macro: peek ahead without ignoring spaces
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

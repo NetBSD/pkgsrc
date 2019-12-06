@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/17 21:59:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:13 markd Exp $
 
 DISTNAME=	context-account.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2015
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/context-account
 COMMENT=	Documentation for tex-context-account
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

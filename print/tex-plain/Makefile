@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/09/08 02:47:24 markd Exp $
+# $NetBSD: Makefile,v 1.17 2019/12/06 20:23:04 markd Exp $
 
 DISTNAME=	plain
 PKGNAME=	tex-${DISTNAME}-3.141592653.43076
@@ -15,5 +15,6 @@ DEPENDS+=	tex-cm-[0-9]*:../../fonts/tex-cm
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-knuth-lib-[0-9]*:../../fonts/tex-knuth-lib
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

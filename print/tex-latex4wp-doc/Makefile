@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 19:58:05 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:49 markd Exp $
 
 DISTNAME=	latex4wp.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.0.10
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/latex4wp
 COMMENT=	LaTeX guide specifically designed for word processor users
 LICENSE=	gnu-fdl-v1.3
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

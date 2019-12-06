@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/28 20:08:35 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:45 markd Exp $
 
 DISTNAME=	jknapltx
 PKGNAME=	tex-${DISTNAME}-2014
@@ -8,5 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Miscellaneous packages by Joerg Knappen
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

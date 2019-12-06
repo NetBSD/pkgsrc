@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/02 01:54:22 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:27 markd Exp $
 
 DISTNAME=	easy-todo
 PKGNAME=	tex-${DISTNAME}-20140101
@@ -11,5 +11,6 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	tex-tocloft-[0-9]*:../../print/tex-tocloft
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

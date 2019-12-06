@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/06/22 10:53:01 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:33 markd Exp $
 
 DISTNAME=	hanging.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.2b
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/hanging
 COMMENT=	Documentation for tex-hanging
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

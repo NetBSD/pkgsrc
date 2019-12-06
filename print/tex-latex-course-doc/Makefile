@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 19:58:04 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:50 markd Exp $
 
 DISTNAME=	latex-course.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/latex-course
 COMMENT=	LaTeX course as a projected presentation
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

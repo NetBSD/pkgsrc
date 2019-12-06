@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/05/13 11:44:25 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:30 markd Exp $
 
 DISTNAME=	epigraph
 PKGNAME=	tex-${DISTNAME}-1.5c
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/epigraph
 COMMENT=	Package for typesetting epigraphs
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

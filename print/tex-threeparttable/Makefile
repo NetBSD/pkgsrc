@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/12 20:59:29 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:30 markd Exp $
 # TeX Live Revision 17383
 
 DISTNAME=	threeparttable
@@ -9,5 +9,6 @@ COMMENT=	LaTeX tables with captions and notes all the same width
 
 CONFLICTS+=	tex-ltxmisc<2009
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

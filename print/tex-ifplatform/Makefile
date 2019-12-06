@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/05/06 11:55:13 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:44 markd Exp $
 
 DISTNAME=	ifplatform
 PKGNAME=	tex-${DISTNAME}-0.4a
@@ -12,5 +12,6 @@ LICENSE=	lppl-1.3c
 DEPENDS+=	tex-ifluatex-[0-9]*:../../print/tex-ifluatex
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

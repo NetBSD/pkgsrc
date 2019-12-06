@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/10/21 03:03:47 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:06 markd Exp $
 
 DISTNAME=	powerdot
 PKGNAME=	tex-${DISTNAME}-1.5c
@@ -14,5 +14,6 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

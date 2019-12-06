@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/08/07 10:32:06 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:32 markd Exp $
 
 DISTNAME=	graphics-cfg
 PKGNAME=	tex-${DISTNAME}-2016.41448
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/graphics-cfg
 COMMENT=	Sample configuration files for LaTeX color and graphics
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/05/02 11:45:41 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 20:18:47 markd Exp $
 
 DISTNAME=	amscls
 PKGNAME=	tex-${DISTNAME}-2018	# actually 2.20.4
@@ -14,5 +14,6 @@ DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-url>=3.2:../../print/tex-url
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/11/04 19:58:03 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2019/12/06 20:19:12 markd Exp $
 
 DISTNAME=	context
 PKGNAME=	tex-${DISTNAME}-2019
@@ -33,6 +33,7 @@ TEX_MAP_FILES+=		original-context-symbol.map
 
 INSTALLATION_DIRS+=	bin
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

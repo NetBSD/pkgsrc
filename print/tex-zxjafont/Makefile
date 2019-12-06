@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/08/06 20:55:22 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:23:47 markd Exp $
 
 DISTNAME=	zxjafont
 PKGNAME=	tex-${DISTNAME}-0.5
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/zxjafont
 COMMENT=	Set up Japanese font families for XeLaTeX
 LICENSE=	mit
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

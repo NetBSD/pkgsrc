@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/06/14 12:50:01 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:19:09 markd Exp $
 
 DISTNAME=	cjk
 PKGNAME=	tex-${DISTNAME}-4.8.4
@@ -22,5 +22,6 @@ DEPENDS+=	tex-uhc-[0-9]*:../../fonts/tex-uhc
 DEPENDS+=	tex-ulem-[0-9]*:../../print/tex-ulem
 DEPENDS+=	tex-wadalab-[0-9]*:../../fonts/tex-wadalab
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/05/14 12:37:40 markd Exp $
+# $NetBSD: Makefile,v 1.19 2019/12/06 20:21:48 markd Exp $
 
 DISTNAME=	kpathsea.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2019
@@ -19,5 +19,6 @@ TEXLIVE_IGNORE_PATTERNS=	texmf-dist/doc/info/[kw]* \
 				texmf-dist/doc/man/man1/mktex[l-z]* \
 				texmf-dist/doc/man/man1/t*
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

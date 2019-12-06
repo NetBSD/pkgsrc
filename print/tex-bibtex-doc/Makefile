@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/09/06 16:49:31 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:19:00 markd Exp $
 
 DISTNAME=	bibtex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.99d
@@ -12,5 +12,6 @@ COMMENT=	Documentation for tex-bibtex
 
 TEXLIVE_IGNORE_PATTERNS=	texmf-dist/doc/man
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

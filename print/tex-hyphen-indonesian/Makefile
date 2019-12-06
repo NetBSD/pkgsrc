@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/04 19:49:13 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 20:21:39 markd Exp $
 
 DISTNAME=	hyphen-indonesian
 PKGNAME=	tex-${DISTNAME}-2019.51186
@@ -22,5 +22,6 @@ TEX_HYPHEN_LUA+=	['indonesian']={ \
 			  hyphenation='hyph-id.hyp.txt', \
 			},
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

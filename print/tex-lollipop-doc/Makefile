@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/08/07 09:09:39 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:21:55 markd Exp $
 
 DISTNAME=	lollipop.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.07
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/lollipop
 COMMENT=	Documentation for tex-lollipop
 LICENSE=	gnu-gpl-v3
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

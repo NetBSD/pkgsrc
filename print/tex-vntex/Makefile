@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 19:58:09 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:42 markd Exp $
 
 DISTNAME=	vntex
 PKGNAME=	tex-${DISTNAME}-3.2
@@ -19,5 +19,6 @@ TEX_MIXEDMAP_FILES+=	vnrother.map
 TEX_MIXEDMAP_FILES+=	vnrtext.map
 TEX_MAP_FILES+=		vntopia.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
