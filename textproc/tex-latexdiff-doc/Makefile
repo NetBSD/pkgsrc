@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 19:04:13 markd Exp $
 
 DISTNAME=	latexdiff.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.3.0
@@ -15,5 +15,6 @@ REPLACE_PERL+=	texmf-dist/doc/support/latexdiff/latexdiff
 REPLACE_PERL+=	texmf-dist/doc/support/latexdiff/latexdiff-fast
 REPLACE_BASH+=	texmf-dist/doc/support/latexdiff/contrib/latexdiff-wrap
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

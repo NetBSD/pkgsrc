@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/05/11 22:39:41 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 19:07:33 markd Exp $
 
 DISTNAME=	unicode-math
 PKGNAME=	tex-${DISTNAME}-0.8o
@@ -14,5 +14,6 @@ DEPENDS+=	tex-fontspec-[0-9]*:../../fonts/tex-fontspec
 DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
 DEPENDS+=	tex-lm-math-[0-9]*:../../fonts/tex-lm-math
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

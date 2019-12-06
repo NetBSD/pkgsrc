@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/06/23 23:28:29 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:07:33 markd Exp $
 
 DISTNAME=	mathspec.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.2b
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/mathspec
 COMMENT=	Documentation for tex-mathspec
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
