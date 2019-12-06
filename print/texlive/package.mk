@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.24 2016/02/01 18:47:23 leot Exp $
+# $NetBSD: package.mk,v 1.25 2019/12/06 20:27:43 markd Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # TeX Live packages.
@@ -25,6 +25,10 @@
 #	value of "revision" line usually available in
 #	${WRKSRC}/tlpkg/tlpobj/${DISTNAME}.tlpobj
 #
+# TEXLIVE_UNVERSIONED
+#	The distfile is an oldstyle unversioned one, normally
+#	retrived from NetBSD repositories.
+#
 # TEX_FORMATS
 #	See ../../print/tex-tetex/format.mk.
 #
@@ -41,6 +45,10 @@
 #
 
 CATEGORIES?=	print
+.if empty(TEXLIVE_UNVERSIONED)
+DISTFILES?=	${DISTNAME}.r${TEXLIVE_REV}${EXTRACT_SUFX}
+MASTER_SITES?=	${MASTER_SITE_TEX_CTAN:=systems/texlive/tlnet/archive/}
+.else
 .if empty(TEXLIVE_USE_CTAN)
 MASTER_SITES?=	${MASTER_SITE_BACKUP}
 .else
@@ -50,6 +58,7 @@ MASTER_SITES?=	${MASTER_SITE_TEX_CTAN:=systems/texlive/tlnet/archive/}
 DIST_SUBDIR?=	${PKGNAME_NOREV}
 .else
 DIST_SUBDIR?=	${PKGBASE:S/-doc$//}-${TEXLIVE_REV}
+.endif
 .endif
 EXTRACT_SUFX?=	.tar.xz
 
