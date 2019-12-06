@@ -1140,7 +1140,7 @@ files.
 
 The pkgsrc Security Team and Packages Groups maintain a list of known security
 vulnerabilities to packages which are (or have been) included in pkgsrc. The
-list is available from the NetBSD FTP site at http://ftp.netbsd.org/pub/NetBSD/
+list is available from the NetBSD FTP site at http://ftp.NetBSD.org/pub/NetBSD/
 packages/vulns/pkg-vulnerabilities.
 
 Through pkg_admin fetch-pkg-vulnerabilities, this list can be downloaded
