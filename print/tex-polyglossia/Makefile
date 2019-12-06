@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/05/12 04:02:15 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:05 markd Exp $
 
 DISTNAME=	polyglossia
 PKGNAME=	tex-${DISTNAME}-1.44
@@ -14,5 +14,6 @@ DEPENDS+=	tex-fontspec>=2.4c:../../fonts/tex-fontspec
 DEPENDS+=	tex-makecmds-[0-9]*:../../print/tex-makecmds
 DEPENDS+=	xetex>=0.9995.3nb1:../../print/xetex
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

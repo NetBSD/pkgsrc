@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/05/12 01:56:57 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:37 markd Exp $
 
 DISTNAME=	udesoftec.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.6.2
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/udesoftec
 COMMENT=	Documentation for tex-udesoftec
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

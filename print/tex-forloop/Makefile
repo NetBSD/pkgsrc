@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/06/19 04:26:38 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:28 markd Exp $
 #
 
 DISTNAME=		forloop
@@ -10,5 +10,6 @@ COMMENT=		Provide the LaTeX command \forloop
 
 LICENSE=		gnu-lgpl-v2.1
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

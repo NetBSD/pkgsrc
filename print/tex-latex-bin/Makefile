@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/01/26 04:12:18 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 20:21:49 markd Exp $
 
 DISTNAME=	latex-bin
 PKGNAME=	tex-${DISTNAME}-2016
@@ -20,6 +20,7 @@ INSTALLATION_DIRS=	bin
 TEX_FORMATS+=	"latex pdftex language.dat -translate-file=cp227.tcx *latex.ini\\npdflatex pdftex language.dat -translate-file=cp227.tcx *pdflatex.ini\\ndvilualatex luatex language.dat,language.dat.lua dvilualatex.ini\\nlualatex luatex language.dat,language.dat.lua lualatex.ini\\n"
 TEX_TEXMF_DIRS=	# empty
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/05/11 22:22:54 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 20:23:24 markd Exp $
 
 DISTNAME=	tcolorbox
 PKGNAME=	tex-${DISTNAME}-4.20
@@ -26,5 +26,6 @@ DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

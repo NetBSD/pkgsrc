@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/06 08:40:42 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:07 markd Exp $
 
 DISTNAME=	chess
 PKGNAME=	tex-${DISTNAME}-1.2
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/chess
 COMMENT=	Fonts for typesetting chess boards
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

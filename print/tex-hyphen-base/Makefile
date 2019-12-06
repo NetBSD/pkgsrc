@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/05/11 06:57:23 markd Exp $
+# $NetBSD: Makefile,v 1.19 2019/12/06 20:21:35 markd Exp $
 
 DISTNAME=	hyphen-base
 PKGNAME=	tex-${DISTNAME}-2019
@@ -20,5 +20,6 @@ CONF_FILES+=	${PREFIX}/share/texmf-dist/tex/generic/config/language.def \
 
 TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR} ${PREFIX}/share/texmf-dist
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

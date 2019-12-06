@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/01/23 19:30:55 markd Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 20:23:17 markd Exp $
 
 DISTNAME=	siunitx
 PKGNAME=	tex-${DISTNAME}-2.7s
@@ -12,5 +12,6 @@ LICENSE=	lppl-1.3c
 DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
 DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
