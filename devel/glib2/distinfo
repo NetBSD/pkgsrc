@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.261 2019/11/28 18:11:48 jperkin Exp $
+$NetBSD: distinfo,v 1.262 2019/12/06 14:36:58 nros Exp $
 
 SHA1 (glib-2.62.3.tar.xz) = a8970ea4a9fbaf3050172d63f17372ead2894798
 RMD160 (glib-2.62.3.tar.xz) = 1aca0cf7e3a64e18eeea3d928e15280062a06f55
@@ -16,6 +16,7 @@ SHA1 (patch-gio_tests_gdbus-export.c) = 59d85ca079d02b52e33153c7d2ac1cc48c26707a
 SHA1 (patch-glib_gatomic.c) = 875ad9c828dcf2add356d4988d14fb4f1985aef8
 SHA1 (patch-glib_gatomic.h) = 21294cac483c3379198283c54fe6e24af3e630b1
 SHA1 (patch-glib_glibconfig.h.in) = 1964b5fb15317e681dad426d4862e3f48c4274f7
+SHA1 (patch-glib_gmacros.h) = 641107ccb6b285c472ed6cb337e53e4764f8d6a8
 SHA1 (patch-glib_gmain.c) = b361e4f7fa285c1d9317468c2b1be390e8190e8b
 SHA1 (patch-glib_gtypes.h) = a659b770c55a8071a6e6afd8a9fccdf723e086e6
 SHA1 (patch-glib_meson.build) = bc429f6537c6dd5fa99137c35c0627a97d48a850
