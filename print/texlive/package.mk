@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.25 2019/12/06 20:27:43 markd Exp $
+# $NetBSD: package.mk,v 1.26 2019/12/06 21:29:53 wiz Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # TeX Live packages.
@@ -27,7 +27,7 @@
 #
 # TEXLIVE_UNVERSIONED
 #	The distfile is an oldstyle unversioned one, normally
-#	retrived from NetBSD repositories.
+#	retrieved from NetBSD repositories.
 #
 # TEX_FORMATS
 #	See ../../print/tex-tetex/format.mk.
