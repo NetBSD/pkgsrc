@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/11 11:36:08 markd Exp $
+# $NetBSD: Makefile,v 1.20 2019/12/06 20:21:34 markd Exp $
 
 DISTNAME=	hyperref
 PKGNAME=	tex-${DISTNAME}-6.88h
@@ -15,5 +15,6 @@ DEPENDS+=	tex-latex-bin>=2009nb1:../../print/tex-latex-bin
 DEPENDS+=	tex-oberdiek>=2009nb1:../../print/tex-oberdiek
 DEPENDS+=	tex-url>=3.2:../../print/tex-url
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

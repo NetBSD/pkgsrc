@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/02 01:56:40 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:24 markd Exp $
 
 DISTNAME=	fixmetodonotes
 PKGNAME=	tex-${DISTNAME}-0.2.2
@@ -12,5 +12,6 @@ LICENSE=	public-domain
 DEPENDS+=	tex-tocloft-[0-9]*:../../print/tex-tocloft
 DEPENDS+=	tex-ulem-[0-9]*:../../print/tex-ulem
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

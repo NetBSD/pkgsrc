@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/05/06 01:41:23 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:19:10 markd Exp $
 
 DISTNAME=	cjkutils.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-4.8.4
@@ -11,5 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 #TEXLIVE_IGNORE_PATTERNS+=	texmf-dist/doc/man
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

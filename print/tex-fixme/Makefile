@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/01/29 10:10:18 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:21:23 markd Exp $
 
 DISTNAME=	fixme
 PKGNAME=	tex-${DISTNAME}-4.5
@@ -19,5 +19,6 @@ DEPENDS+=	tex-tools>=2010:../../print/tex-tools
 DEPENDS+=	tex-xcolor>=2.11:../../print/tex-xcolor
 DEPENDS+=	tex-xkeyval>=2.6a:../../print/tex-xkeyval
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

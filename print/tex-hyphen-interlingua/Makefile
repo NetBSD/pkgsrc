@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/04 19:51:44 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 20:21:39 markd Exp $
 
 DISTNAME=	hyphen-interlingua
 PKGNAME=	tex-${DISTNAME}-2019.51186
@@ -22,5 +22,6 @@ TEX_HYPHEN_LUA+=	['interlingua']={ \
 			  hyphenation='hyph-ia.hyp.txt', \
 			},
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

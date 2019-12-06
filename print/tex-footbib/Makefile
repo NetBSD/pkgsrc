@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:15 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:27 markd Exp $
 
 DISTNAME=	footbib
 PKGNAME=	tex-${DISTNAME}-2.0.7
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/footbib
 COMMENT=	Bibliographic references as footnotes
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

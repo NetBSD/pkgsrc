@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/06/21 08:28:41 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:21:47 markd Exp $
 
 DISTNAME=	kotex-oblivoir
 PKGNAME=	tex-${DISTNAME}-2.1.8
@@ -12,5 +12,6 @@ LICENSE=	lppl-1.3c
 DEPENDS+=	tex-memoir-[0-9]*:../../print/tex-memoir
 DEPENDS+=	tex-kotex-utf-[0-9]*:../../print/tex-kotex-utf
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

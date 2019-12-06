@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/06/23 23:13:34 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:23 markd Exp $
 
 DISTNAME=	filehook.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.5d
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/filehook
 COMMENT=	Documentation for tex-filehook
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

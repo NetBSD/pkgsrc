@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/09 22:15:46 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:18:48 markd Exp $
 
 DISTNAME=	antomega
 PKGNAME=	tex-${DISTNAME}-0.8
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-omega-[0-9]*:../../print/tex-omega
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

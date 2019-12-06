@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 19:58:04 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:44 markd Exp $
 
 DISTNAME=	impatient.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/impatient
 COMMENT=	Free edition of the book "TeX for the Impatient"
 LICENSE=	gnu-fdl-v1.3
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

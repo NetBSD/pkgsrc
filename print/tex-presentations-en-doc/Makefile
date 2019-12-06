@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/04 19:58:07 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:23:06 markd Exp $
 
 DISTNAME=	presentations-en.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -12,5 +12,6 @@ LICENSE=	lppl-1.3c
 
 REPLACE_SH+=	doc/latex/presentations-en/runAll
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

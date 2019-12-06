@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/08/17 02:11:03 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:18:50 markd Exp $
 
 DISTNAME=	arabi.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.1pl44662
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/arabi
 COMMENT=	Documentation for tex-arabi
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

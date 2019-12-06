@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/05/19 12:29:48 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:09 markd Exp $
 
 DISTNAME=	qtree
 PKGNAME=	tex-${DISTNAME}-3.1b
@@ -9,5 +9,6 @@ COMMENT=	TeX package to print a simple trees
 
 DEPENDS+=	tex-pict2e-[0-9]*:../../print/tex-pict2e
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

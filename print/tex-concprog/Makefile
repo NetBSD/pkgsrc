@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/05 14:52:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:12 markd Exp $
 
 DISTNAME=	concprog
 PKGNAME=	tex-${DISTNAME}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/concprog
 COMMENT=	Concert programmes
 # LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/30 03:26:11 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:07 markd Exp $
 # TeX Live Revision 17120
 
 DISTNAME=	chbibref.doc
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-chbibref
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

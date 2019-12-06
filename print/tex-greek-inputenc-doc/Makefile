@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/11 04:27:00 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:32 markd Exp $
 
 DISTNAME=	greek-inputenc.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.7
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/greek-inputenc
 COMMENT=	Documentation for tex-greek-inputenc
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

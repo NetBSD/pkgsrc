@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/01/20 23:22:49 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:37 markd Exp $
 
 DISTNAME=	uhrzeit
 PKGNAME=	tex-${DISTNAME}-0.2c
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-soul-[0-9]*:../../print/tex-soul
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

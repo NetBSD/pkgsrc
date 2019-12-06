@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/01/27 00:31:30 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:18:59 markd Exp $
 
 DISTNAME=	biblatex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-3.12
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/biblatex
 COMMENT=	Documentation for tex-biblatex
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

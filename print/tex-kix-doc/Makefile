@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/01/27 10:23:47 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:21:46 markd Exp $
 
 DISTNAME=	kix.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2010
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-kix
 LICENSE=	lppl-1.0
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

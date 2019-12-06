@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/11 13:22:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:07 markd Exp $
 
 DISTNAME=	checkend
 PKGNAME=	tex-${DISTNAME}-1.0
@@ -10,5 +10,6 @@ HOMEPAGE=	https://ctan.org/pkg/checkend
 COMMENT=	Extend "improperly closed environment" messages
 LICENSE=	mit
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/25 05:28:37 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:23:45 markd Exp $
 
 DISTNAME=	xkeyval.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.7a
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-xkeyval
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

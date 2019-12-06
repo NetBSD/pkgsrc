@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/08/17 02:11:03 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 20:18:49 markd Exp $
 
 DISTNAME=	arabi
 PKGNAME=	tex-${DISTNAME}-1.1pl44662
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	arabi.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

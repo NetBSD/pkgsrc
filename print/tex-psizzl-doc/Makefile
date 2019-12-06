@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/31 06:45:33 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:08 markd Exp $
 
 DISTNAME=	psizzl.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.35
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/psizzl
 COMMENT=	Documentation for tex-psizzl
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

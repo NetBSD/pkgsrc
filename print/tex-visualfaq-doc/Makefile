@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 19:58:09 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:42 markd Exp $
 
 DISTNAME=	visualfaq.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/visualfaq
 COMMENT=	Visual LaTeX FAQ
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

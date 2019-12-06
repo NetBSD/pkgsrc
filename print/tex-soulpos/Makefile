@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/07/29 10:59:34 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:18 markd Exp $
 
 DISTNAME=	soulpos
 PKGNAME=	tex-${DISTNAME}-1.1
@@ -11,5 +11,6 @@ LICENSE=	mit
 
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

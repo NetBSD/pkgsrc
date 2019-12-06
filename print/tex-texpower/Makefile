@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/04 19:58:08 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:23:28 markd Exp $
 # TeX Live Revision 15878
 
 DISTNAME=	texpower
@@ -10,5 +10,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tex-tpslifonts-[0-9]*:../../print/tex-tpslifonts
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

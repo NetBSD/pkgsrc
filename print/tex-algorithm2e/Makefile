@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/08/17 04:30:59 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:18:46 markd Exp $
 
 DISTNAME=	algorithm2e
 PKGNAME=	tex-${DISTNAME}-5.2
@@ -17,5 +17,6 @@ DEPENDS+=	tex-relsize-[0-9]*:../../print/tex-relsize
 DEPENDS+=	tex-tocbibind-[0-9]*:../../print/tex-tocbibind
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

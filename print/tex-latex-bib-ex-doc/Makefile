@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/14 17:07:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:49 markd Exp $
 
 DISTNAME=	latex-bib-ex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/latex-bib-ex
 COMMENT=	Examples for the book Bibliografien mit LaTeX
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

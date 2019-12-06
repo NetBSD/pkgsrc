@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/08/12 11:21:52 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 20:23:33 markd Exp $
 
 DISTNAME=	toptesi.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-6.3.06
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/toptesi
 COMMENT=	Documentation for tex-toptesi
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/01/30 08:24:32 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:19:33 markd Exp $
 
 DISTNAME=	europasscv
 PKGNAME=	tex-${DISTNAME}-2018.49703
@@ -23,5 +23,6 @@ DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/28 11:59:09 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:19 markd Exp $
 
 DISTNAME=	spanish-mx
 PKGNAME=	tex-${DISTNAME}-1.1a
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/spanish-mx
 COMMENT=	Typeset Spanish as in Mexico
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

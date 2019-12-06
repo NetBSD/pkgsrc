@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/05/07 11:26:44 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:06 markd Exp $
 
 DISTNAME=	present.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.2.1
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/present
 COMMENT=	Documentation for tex-present
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

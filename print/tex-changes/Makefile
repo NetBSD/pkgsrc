@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/11 11:15:53 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 20:19:06 markd Exp $
 
 DISTNAME=	changes
 PKGNAME=	tex-${DISTNAME}-3.1.3
@@ -19,5 +19,6 @@ DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 REPLACE_PYTHON+=	${WRKSRC}/scripts/changes/pyMergeChanges.py
 
 .include "../../lang/python/application.mk"
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

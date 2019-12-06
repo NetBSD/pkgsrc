@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/06/19 04:43:45 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:22:58 markd Exp $
 
 DISTNAME=	oubraces
 PKGNAME=	tex-${DISTNAME}-2010
@@ -9,5 +9,6 @@ COMMENT=	Braces over and under a formula
 
 CONFLICTS+=	tex-ltxmisc<2009
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

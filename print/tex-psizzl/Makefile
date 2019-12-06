@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/07/10 17:20:48 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:08 markd Exp $
 
 DISTNAME=	psizzl
 PKGNAME=	tex-${DISTNAME}-0.35
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/psizzl
 COMMENT=	TeX format for physics papers
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

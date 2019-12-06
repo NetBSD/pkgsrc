@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/05/05 17:10:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 20:19:32 markd Exp $
 
 DISTNAME=	etex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.1.31600
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/etex
 COMMENT=	Documentation for tex-etex
 #LICENSE=	knuth
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

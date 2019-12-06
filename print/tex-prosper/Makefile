@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/09/06 09:03:04 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2019/12/06 20:23:07 markd Exp $
 
 DISTNAME=	prosper
 PKGNAME=	tex-${DISTNAME}-1.5
@@ -19,5 +19,6 @@ DEPENDS+=	tex-multido-[0-9]*:../../devel/tex-multido
 DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-seminar-[0-9]*:../../print/tex-seminar
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

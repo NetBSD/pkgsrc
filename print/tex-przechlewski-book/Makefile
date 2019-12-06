@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/01/20 23:22:49 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:08 markd Exp $
 
 DISTNAME=	przechlewski-book
 PKGNAME=	tex-${DISTNAME}-2016
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/przechlewski-book
 COMMENT=	Examples from Przechlewski's LaTeX book
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

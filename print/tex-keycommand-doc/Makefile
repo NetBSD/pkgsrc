@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/02 02:45:45 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:46 markd Exp $
 
 DISTNAME=	keycommand.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-3.1415
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/keycommand
 COMMENT=	Documentation for tex-keycommand
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 14:09:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:46 markd Exp $
 
 DISTNAME=	js-misc
 PKGNAME=	tex-${DISTNAME}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/js-misc
 COMMENT=	Miscellaneous macros from Joachim Schrod
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/22 22:33:25 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:21:28 markd Exp $
 
 DISTNAME=	framed
 PKGNAME=	tex-${DISTNAME}-0.96
@@ -9,5 +9,6 @@ COMMENT=	Framed or shaded regions that can break across pages
 
 CONFLICTS+=	tex-ltxmisc<2009
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

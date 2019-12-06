@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/08/02 11:09:07 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:19:27 markd Exp $
 
 DISTNAME=	draftwatermark.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.2
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/draftwatermark
 COMMENT=	Documentation for tex-draftwatermark
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

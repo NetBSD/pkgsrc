@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/05/08 11:24:18 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:23:20 markd Exp $
 
 DISTNAME=	standalone.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.3a
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/standalone
 COMMENT=	Documentation for tex-standalone
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/01/26 07:20:07 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:19:03 markd Exp $
 
 DISTNAME=	breqn
 PKGNAME=	tex-${DISTNAME}-0.98f
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/breqn
 COMMENT=	Automatic line breaking of displayed equations
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/14 17:07:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:31 markd Exp $
 
 DISTNAME=	tipa-de.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.3
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tipa-de
 COMMENT=	German translation of tipa documentation
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/01/28 11:19:19 markd Exp $
+# $NetBSD: Makefile,v 1.14 2019/12/06 20:18:47 markd Exp $
 
 DISTNAME=	amsmath.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.17a.49390
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/latex-amsmath
 COMMENT=	Documentation for tex-amsmath
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

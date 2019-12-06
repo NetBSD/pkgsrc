@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/08/07 10:32:05 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 20:19:27 markd Exp $
 
 DISTNAME=	dvipdfmx
 PKGNAME=	tex-${DISTNAME}-2016.41623
@@ -15,5 +15,6 @@ DEPENDS+=	tex-graphics-def-[0-9]*:../../print/tex-graphics-def
 TEXLIVE_IGNORE_PATTERNS=	texmf-dist/dvipdfmx
 TEXLIVE_IGNORE_PATTERNS+=	tlpkg/tlpostcode
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

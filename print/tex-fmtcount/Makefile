@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/05/06 02:57:21 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 20:21:25 markd Exp $
 
 DISTNAME=	fmtcount
 PKGNAME=	tex-${DISTNAME}-3.05
@@ -14,5 +14,6 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-bin>=2010:../../print/tex-latex-bin
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/23 12:11:48 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:57 markd Exp $
 
 DISTNAME=	magaz
 PKGNAME=	tex-${DISTNAME}-0.4
@@ -9,5 +9,6 @@ COMMENT=	Magazine layout
 
 CONFLICTS+=	tex-ltxmisc<2009
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

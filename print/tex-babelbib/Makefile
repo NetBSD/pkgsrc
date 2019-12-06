@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/11 23:03:02 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:18:51 markd Exp $
 
 DISTNAME=	babelbib
 PKGNAME=	tex-${DISTNAME}-1.32
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/babelbib
 COMMENT=	Multilingual bibliographies
 LICENSE=	lppl-1.0
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 10:44:43 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 20:23:31 markd Exp $
 
 DISTNAME=	titlesec
 PKGNAME=	tex-${DISTNAME}-2.11
@@ -11,5 +11,6 @@ LICENSE=	mit
 
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

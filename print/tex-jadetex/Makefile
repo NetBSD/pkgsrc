@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/01/26 04:15:48 markd Exp $
+# $NetBSD: Makefile,v 1.34 2019/12/06 20:21:45 markd Exp $
 
 DISTNAME=	jadetex
 PKGNAME=	tex-${DISTNAME}-3.13
@@ -32,6 +32,7 @@ INSTALLATION_DIRS+=	bin
 TEX_FORMATS+=	"jadetex pdftex language.dat *jadetex.ini\\npdfjadetex pdftex language.dat *pdfjadetex.ini\\n"
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf-dist
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

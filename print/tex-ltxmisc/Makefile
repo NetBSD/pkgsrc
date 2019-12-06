@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/07/14 22:07:17 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 20:21:56 markd Exp $
 
 DISTNAME=	ltxmisc
 PKGNAME=	tex-${DISTNAME}-2010.21927
@@ -17,5 +17,6 @@ DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
 DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

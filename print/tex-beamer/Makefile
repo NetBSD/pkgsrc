@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/11 11:20:13 markd Exp $
+# $NetBSD: Makefile,v 1.13 2019/12/06 20:18:58 markd Exp $
 
 DISTNAME=	beamer
 PKGNAME=	tex-${DISTNAME}-3.56
@@ -18,5 +18,6 @@ DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 DEPENDS+=	tex-translator-[0-9]*:../../print/tex-translator
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

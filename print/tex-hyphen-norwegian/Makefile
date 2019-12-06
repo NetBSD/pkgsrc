@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/04 20:07:57 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 20:21:40 markd Exp $
 
 DISTNAME=	hyphen-norwegian
 PKGNAME=	tex-${DISTNAME}-2019.51186
@@ -36,5 +36,6 @@ TEX_HYPHEN_LUA+=	['nynorsk']={ \
 			  hyphenation='hyph-nn.hyp.txt', \
 			},
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/02/01 21:41:27 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:18:48 markd Exp $
 
 DISTNAME=	amstex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.2.49810
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/amstex
 COMMENT=	Documentation for tex-amstex
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

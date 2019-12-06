@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/06 10:33:30 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:19:29 markd Exp $
 
 DISTNAME=	enumitem
 PKGNAME=	tex-${DISTNAME}-3.9
@@ -11,5 +11,6 @@ LICENSE=	mit
 
 DEPENDS+=	tex-graphics>=1.0onb1:../../print/tex-graphics
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

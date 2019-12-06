@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/14 17:07:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:32 markd Exp $
 
 DISTNAME=	etoolbox-de.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/etoolbox-de
 COMMENT=	German translation of documentation of etoolbox
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

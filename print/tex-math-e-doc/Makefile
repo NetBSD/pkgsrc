@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/04 19:58:05 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:58 markd Exp $
 
 DISTNAME=	math-e.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/math-e
 COMMENT=	Examples from the book Typesetting Mathematics with LaTeX
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

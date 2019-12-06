@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/08/11 13:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2019/12/06 20:23:28 markd Exp $
 
 DISTNAME=	texlive.infra
 PKGNAME=	tex-${DISTNAME}-2019
@@ -21,6 +21,7 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	tlpkg/TeXLive/TLPaper.pm tlpkg/TeXLive/TLUtils.pm
 SUBST_SED.paths=	-e 's,@KPSEWHICH@,${PREFIX}/bin/kpsewhich,g'
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 do-install:

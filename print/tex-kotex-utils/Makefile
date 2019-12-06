@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2019/12/06 20:21:48 markd Exp $
 
 DISTNAME=	kotex-utils
 PKGNAME=	tex-${DISTNAME}-2.1.0
@@ -17,6 +17,7 @@ REPLACE_PERL=	bin/jamo-normalize bin/komkindex bin/ttf2kotexfont
 
 INSTALLATION_DIRS+=	bin
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

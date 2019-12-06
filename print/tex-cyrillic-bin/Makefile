@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/04 18:57:01 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:23 markd Exp $
 
 DISTNAME=	cyrillic-bin
 PKGNAME=	tex-${DISTNAME}-2013
@@ -13,6 +13,7 @@ REPLACE_SH=	bin/rubibtex bin/rumakeindex
 
 TEX_TEXMF_DIRS=	# none
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

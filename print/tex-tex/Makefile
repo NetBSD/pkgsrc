@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/09/06 16:49:45 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 20:23:26 markd Exp $
 
 DISTNAME=	tex
 PKGNAME=	tex-${DISTNAME}-3.14159265
@@ -16,5 +16,6 @@ SUPERSEDES=	tex-bin-tex<2009
 TEX_FORMATS+=	"tex tex - tex.ini\\n"
 TEX_TEXMF_DIRS=	# empty
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

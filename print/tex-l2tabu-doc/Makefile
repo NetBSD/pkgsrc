@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/14 17:07:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:48 markd Exp $
 
 DISTNAME=	l2tabu.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.3
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/l2tabu
 COMMENT=	Obsolete packages and commands
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/03/06 21:36:48 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:19:08 markd Exp $
 
 DISTNAME=	chessfss
 PKGNAME=	tex-${DISTNAME}-1.2a
@@ -14,5 +14,6 @@ DEPENDS+=	tex-lambda-lists-[0-9]*:../../print/tex-lambda-lists
 DEPENDS+=	tex-skaknew-[0-9]*:../../print/tex-skaknew
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

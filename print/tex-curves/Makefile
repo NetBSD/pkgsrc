@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/10/21 04:01:35 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:22 markd Exp $
 
 DISTNAME=	curves
 PKGNAME=	tex-${DISTNAME}-1.55
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/curves
 COMMENT=	Curves for LaTeX picture environment
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

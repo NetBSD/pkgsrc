@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/27 10:21:54 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:54 markd Exp $
 
 DISTNAME=	lkproof
 PKGNAME=	tex-${DISTNAME}-3.1
@@ -8,5 +8,6 @@ MAINTAINER=	markd@NetBSD.org
 COMMENT=	LK Proof figure macros
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

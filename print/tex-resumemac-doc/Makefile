@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 14:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:11 markd Exp $
 
 DISTNAME=	resumemac.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/resumemac
 COMMENT=	Documentation for tex-resumemac
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

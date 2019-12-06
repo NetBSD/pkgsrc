@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/05/06 09:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:23:18 markd Exp $
 
 DISTNAME=	skaknew
 PKGNAME=	tex-${DISTNAME}-2010
@@ -12,5 +12,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	SkakNew.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

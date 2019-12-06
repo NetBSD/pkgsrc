@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/08/05 10:32:46 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:19:30 markd Exp $
 
 DISTNAME=	eplain.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-3.9
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/eplain
 COMMENT=	Documentation for tex-eplain
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

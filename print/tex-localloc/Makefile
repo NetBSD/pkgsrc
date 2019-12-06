@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/20 12:47:52 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:54 markd Exp $
 
 DISTNAME=	localloc
 PKGNAME=	tex-${DISTNAME}-1.1b
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/localloc
 COMMENT=	Macros for localizing TeX register allocations
 #LICENSE=	other-free
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

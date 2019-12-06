@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/04 20:51:38 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:21:41 markd Exp $
 
 DISTNAME=	hyphen-spanish
 PKGNAME=	tex-${DISTNAME}-4.5.2019.51186
@@ -24,5 +24,6 @@ TEX_HYPHEN_LUA+=	['spanish']={ \
 			  hyphenation='', \
 			},
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

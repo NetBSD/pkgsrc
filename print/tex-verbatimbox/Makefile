@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/26 21:45:14 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:41 markd Exp $
 
 DISTNAME=	verbatimbox
 PKGNAME=	tex-${DISTNAME}-3.13
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-readarray-[0-9]*:../../print/tex-readarray
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/01/30 03:26:07 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:18:48 markd Exp $
 
 DISTNAME=	answers
 PKGNAME=	tex-${DISTNAME}-2.16
@@ -8,5 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Setting questions (or exercises) and answers
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/06/21 06:13:14 markd Exp $
+# $NetBSD: Makefile,v 1.20 2019/12/06 20:19:27 markd Exp $
 
 DISTNAME=	dvips.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2017
@@ -13,5 +13,6 @@ CONFLICTS+=	tex-bin-dvipsk-doc-[0-9]*
 
 TEXLIVE_IGNORE_PATTERNS=	texmf-dist/doc/info texmf-dist/doc/man
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

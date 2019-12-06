@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/21 08:28:42 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 20:21:52 markd Exp $
 
 DISTNAME=	leaflet.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.1b
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/leaflet
 COMMENT=	Documentation for tex-leaflet
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

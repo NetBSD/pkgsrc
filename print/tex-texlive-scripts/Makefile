@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/02/02 01:11:17 markd Exp $
+# $NetBSD: Makefile,v 1.18 2019/12/06 20:23:28 markd Exp $
 
 DISTNAME=	texlive-scripts
 PKGNAME=	tex-${DISTNAME}-2018.49884
@@ -24,6 +24,7 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	bin/rungs
 SUBST_SED.paths+=	-e 's,@GS@,${TOOLS_PATH.gs},g'
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

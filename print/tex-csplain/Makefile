@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/05 11:01:28 markd Exp $
+# $NetBSD: Makefile,v 1.15 2019/12/06 20:19:20 markd Exp $
 
 DISTNAME=	csplain
 PKGNAME=	tex-${DISTNAME}-2019.51317
@@ -20,6 +20,7 @@ TEX_FORMATS+=	"csplain pdftex - -etex -enc csplain-utf8.ini\\npdfcsplain pdftex 
 # execute AddFormat name=pdfcsplain engine=xetex        options="-etex csplain.ini"
 # execute AddFormat name=pdfcsplain engine=luatex       options="-etex csplain.ini"
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

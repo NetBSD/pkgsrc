@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/04 20:05:53 markd Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/06 20:21:40 markd Exp $
 
 DISTNAME=	hyphen-mongolian
 PKGNAME=	tex-${DISTNAME}-2019.51186
@@ -31,5 +31,6 @@ TEX_HYPHEN_LUA+=	['mongolianlmc']={ \
 			  special='disabled:only+for+8bit+montex+with+lmc+encoding', \
 			},
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
