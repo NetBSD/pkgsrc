@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 14:09:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:03 markd Exp $
 
 DISTNAME=	pitex
 PKGNAME=	tex-${DISTNAME}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/pitex
 COMMENT=	Documentation macros
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

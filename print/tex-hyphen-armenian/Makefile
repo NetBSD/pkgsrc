@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/04 11:48:20 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:21:35 markd Exp $
 
 DISTNAME=	hyphen-armenian
 PKGNAME=	tex-${DISTNAME}-2019.51186
@@ -22,5 +22,6 @@ TEX_HYPHEN_LUA+=	['armenian']={ \
 			  hyphenation='', \
 			},
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

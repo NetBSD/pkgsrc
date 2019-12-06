@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/11 13:22:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:39 markd Exp $
 
 DISTNAME=	urlbst
 PKGNAME=	tex-${DISTNAME}-0.8
@@ -19,5 +19,6 @@ post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MV} ${WRKSRC}/texmf-dist/scripts/urlbst/urlbst ${WRKSRC}/bin/urlbst
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

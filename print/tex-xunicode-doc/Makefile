@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/25 05:31:06 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:47 markd Exp $
 
 DISTNAME=	xunicode.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.981
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-xunicode
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

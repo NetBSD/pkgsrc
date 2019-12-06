@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/13 02:32:06 brook Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:22:59 markd Exp $
 
 DISTNAME=	outline.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2019
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/outline
 COMMENT=	Documentation for tex-outline
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

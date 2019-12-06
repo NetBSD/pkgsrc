@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:04 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:27 markd Exp $
 
 DISTNAME=	font-change.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2015.2
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/font-change
 COMMENT=	Documentation for tex-font-change
 #LICENSE=	other-free
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

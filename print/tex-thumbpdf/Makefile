@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/11/04 19:58:08 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:23:30 markd Exp $
 
 DISTNAME=	thumbpdf
 PKGNAME=	tex-${DISTNAME}-3.17
@@ -14,6 +14,7 @@ REPLACE_PERL=	bin/thumbpdf
 
 INSTALLATION_DIRS+=	bin
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

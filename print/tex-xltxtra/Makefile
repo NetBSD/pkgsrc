@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/01/29 08:29:49 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 20:23:46 markd Exp $
 
 DISTNAME=	xltxtra
 PKGNAME=	tex-${DISTNAME}-0.7
@@ -16,5 +16,6 @@ DEPENDS+=	tex-metalogo-[0-9]*:../../print/tex-metalogo
 DEPENDS+=	tex-realscripts-[0-9]*:../../print/tex-realscripts
 DEPENDS+=	tex-xetex-[0-9]*:../../print/tex-xetex
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

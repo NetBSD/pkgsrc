@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/05/11 22:17:52 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:22:01 markd Exp $
 
 DISTNAME=	microtype
 PKGNAME=	tex-${DISTNAME}-2.7b
@@ -12,5 +12,6 @@ LICENSE=	lppl-1.3c
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-pdftex>=1.30:../../print/tex-pdftex
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

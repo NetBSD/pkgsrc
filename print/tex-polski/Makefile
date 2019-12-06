@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/21 11:45:57 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:05 markd Exp $
 
 DISTNAME=	polski
 PKGNAME=	tex-${DISTNAME}-1.3.4
@@ -12,5 +12,6 @@ LICENSE=	lppl-1.2
 DEPENDS+=	tex-pl-[0-9]*:../../fonts/tex-pl
 DEPENDS+=	tex-hyphen-polish-[0-9]*:../../print/tex-hyphen-polish
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/05/07 10:28:55 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:29 markd Exp $
 
 DISTNAME=	fvextra
 PKGNAME=	tex-${DISTNAME}-1.4
@@ -14,5 +14,6 @@ DEPENDS+=	tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
 DEPENDS+=	tex-lineno-[0-9]*:../../print/tex-lineno
 DEPENDS+=	tex-upquote-[0-9]*:../../print/tex-upquote
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/01/07 08:24:57 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:59 markd Exp $
 
 DISTNAME=	mdframed
 PKGNAME=	tex-${DISTNAME}-1.9b
@@ -14,5 +14,6 @@ DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-needspace-[0-9]*:../../print/tex-needspace
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
