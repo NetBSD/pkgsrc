@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5259 2019/12/05 22:56:44 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5260 2019/12/06 13:27:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8472,3 +8472,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/shelldap to 1.5.1 [sevan 2019-12-05]
 	Updated audio/libmpdclient to 2.17 [nia 2019-12-05]
 	Updated emulators/dosbox-x to 0.82.24 [nia 2019-12-05]
+	Updated archivers/p5-Archive-Extract to 0.86 [wen 2019-12-06]
