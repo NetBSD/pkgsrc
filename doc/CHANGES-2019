@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5262 2019/12/06 14:00:49 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5263 2019/12/06 17:31:13 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8475,3 +8475,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/p5-Archive-Extract to 0.86 [wen 2019-12-06]
 	Updated devel/p5-Type-Tiny to 1.006000 [wen 2019-12-06]
 	Updated security/gnutls to 3.6.11.1 [nia 2019-12-06]
+	Updated sysutils/xenkernel411 to 4.11.2nb3 [bouyer 2019-12-06]
