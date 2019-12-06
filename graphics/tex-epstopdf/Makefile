@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/12/06 20:04:22 markd Exp $
 
 DISTNAME=	epstopdf
 PKGNAME=	tex-${DISTNAME}-2.28
@@ -26,6 +26,7 @@ SUBST_SED.paths+=	-e 's,@KPSEWHICH@,${LOCALBASE}/bin/kpsewhich,g'
 INSTALLATION_DIRS=	bin
 TEX_TEXMF_DIRS=		# empty
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

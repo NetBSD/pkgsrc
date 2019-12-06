@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/11 10:22:56 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:04:34 markd Exp $
 
 DISTNAME=	pst-plot.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.92
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/pst-plot
 COMMENT=	Documentation for tex-pst-plot
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/02 00:35:39 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:26 markd Exp $
 
 DISTNAME=	metapost-colorbrewer
 PKGNAME=	tex-${DISTNAME}-2018
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/metapost-colorbrewer
 COMMENT=	Implementation of the colorbrewer2.org colours for MetaPost
 LICENSE=	gnu-gpl-v3
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

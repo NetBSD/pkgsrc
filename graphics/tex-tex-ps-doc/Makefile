@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/06 16:49:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:04:38 markd Exp $
 
 DISTNAME=	tex-ps.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2010
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-tex-ps
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

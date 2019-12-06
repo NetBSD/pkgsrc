@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/04 04:14:30 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:04:40 markd Exp $
 
 DISTNAME=	tikzmark
 PKGNAME=	tex-${DISTNAME}-1.7
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

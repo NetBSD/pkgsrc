@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/05/12 01:38:07 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:04:36 markd Exp $
 
 DISTNAME=	pst-tools.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.09b
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/pst-tools
 COMMENT=	Documentation for tex-pst-tools
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/16 22:07:28 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:18 markd Exp $
 
 DISTNAME=	auto-pst-pdf
 PKGNAME=	tex-${DISTNAME}-0.6
@@ -12,5 +12,6 @@ DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-ifplatform-[0-9]*:../../print/tex-ifplatform
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

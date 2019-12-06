@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/01/20 21:09:07 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:24 markd Exp $
 
 DISTNAME=	incgraph
 PKGNAME=	tex-${DISTNAME}-1.12
@@ -13,5 +13,6 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
