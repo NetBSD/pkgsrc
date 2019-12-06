@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/01/27 00:41:13 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:30:01 markd Exp $
 
 DISTNAME=	fonts-tlwg
 PKGNAME=	tex-${DISTNAME}-0.7.1
@@ -14,5 +14,6 @@ TEX_MAP_FILES+=	nf.map
 TEX_MAP_FILES+=	sipa.map
 TEX_MAP_FILES+=	tlwg.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

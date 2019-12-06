@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/12/03 09:32:01 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 19:30:11 markd Exp $
 
 DISTNAME=	libertine
 PKGNAME=	tex-${DISTNAME}-5.3.0.51174
@@ -16,5 +16,6 @@ DEPENDS+=	tex-boondox-[0-9]*:../../fonts/tex-boondox
 DEPENDS+=	tex-fontaxes-[0-9]*:../../print/tex-fontaxes
 DEPENDS+=	tex-mweights-[0-9]*:../../print/tex-mweights
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

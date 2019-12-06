@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:57 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:31 markd Exp $
 
 DISTNAME=	venturisadf
 PKGNAME=	tex-${DISTNAME}-1.005
@@ -15,5 +15,6 @@ TEX_MAP_FILES+=	yv3.map
 TEX_MAP_FILES+=	yvo.map
 TEX_MAP_FILES+=	yvt.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

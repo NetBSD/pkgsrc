@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/02 22:24:43 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:30:04 markd Exp $
 
 DISTNAME=	gnu-freefont.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -57,5 +57,6 @@ CHECK_INTERPRETER_SKIP+=	share/texmf-dist/doc/fonts/gnu-freefont/tools/utility/h
 CHECK_INTERPRETER_SKIP+=	share/texmf-dist/doc/fonts/gnu-freefont/tools/utility/metafont/bulk_eps_import.py
 CHECK_INTERPRETER_SKIP+=	share/texmf-dist/doc/fonts/gnu-freefont/tools/utility/special-purpose/makeBraille.py
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

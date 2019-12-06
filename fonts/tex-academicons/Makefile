@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/01/24 11:40:25 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 19:29:29 markd Exp $
 
 DISTNAME=	academicons
 PKGNAME=	tex-${DISTNAME}-1.8.62
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/academicons
 COMMENT=	Font containing icons of online academic profiles
 LICENSE=	lppl-1.3c AND ofl-v1.0
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

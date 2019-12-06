@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/22 16:27:36 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:16 markd Exp $
 
 DISTNAME=	ocr-b
 PKGNAME=	tex-${DISTNAME}-2011
@@ -9,5 +9,6 @@ COMMENT=	Fonts for OCR-B
 
 SUPERSEDES=	tex-ocrb-[0-9]*
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

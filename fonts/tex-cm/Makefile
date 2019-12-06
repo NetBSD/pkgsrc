@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/01/26 11:37:11 markd Exp $
+# $NetBSD: Makefile,v 1.12 2019/12/06 19:29:43 markd Exp $
 
 DISTNAME=	cm
 PKGNAME=	tex-${DISTNAME}-2018.49028
@@ -12,5 +12,6 @@ COMMENT=	Computer Modern fonts
 
 TEX_MIXEDMAP_FILES+=	cmtext-bsr-interpolated.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

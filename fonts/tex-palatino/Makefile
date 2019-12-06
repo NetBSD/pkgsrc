@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/06 16:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 19:32:18 markd Exp $
 
 DISTNAME=	palatino
 PKGNAME=	tex-${DISTNAME}-2014
@@ -10,5 +10,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	upl.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/01/24 10:16:06 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 19:32:15 markd Exp $
 
 DISTNAME=	newtxsf
 PKGNAME=	tex-${DISTNAME}-1.051
@@ -11,5 +11,6 @@ LICENSE=	ofl-v1.1
 
 TEX_MAP_FILES+=	newtxsf.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:54 markd Exp $
 
 DISTNAME=	electrum
 PKGNAME=	tex-${DISTNAME}-1.005.b
@@ -11,5 +11,6 @@ COMMENT=	Electrum ADF fonts collection
 
 TEX_MAP_FILES+=	yes.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

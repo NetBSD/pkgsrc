@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:55 markd Exp $
 
 DISTNAME=	epsdice
 PKGNAME=	tex-${DISTNAME}-2.1
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/epsdice
 COMMENT=	Scalable dice "font"
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

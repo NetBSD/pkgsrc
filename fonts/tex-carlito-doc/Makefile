@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:40 markd Exp $
 
 DISTNAME=	carlito.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/carlito
 COMMENT=	Documentation for tex-carlito
 LICENSE=	ofl-v1.1
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

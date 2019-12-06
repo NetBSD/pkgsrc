@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/01/30 04:56:41 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:29:56 markd Exp $
 
 DISTNAME=	euenc.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.1h
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-euenc
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/11 13:21:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 19:29:29 markd Exp $
 
 DISTNAME=	accfonts
 PKGNAME=	tex-${DISTNAME}-0.25
@@ -17,6 +17,7 @@ REPLACE_PERL=	bin/mkt1font bin/vpl2ovp  bin/vpl2vpl
 
 INSTALLATION_DIRS+=	bin
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

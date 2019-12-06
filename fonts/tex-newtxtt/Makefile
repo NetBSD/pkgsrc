@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/06/21 10:14:21 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:32:15 markd Exp $
 
 DISTNAME=	newtxtt
 PKGNAME=	tex-${DISTNAME}-1.055
@@ -11,5 +11,6 @@ LICENSE=	gnu-gpl-v3 AND lppl-1.3c
 
 TEX_MAP_FILES+=	newtxtt.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

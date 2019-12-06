@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/20 12:27:48 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:42 markd Exp $
 
 DISTNAME=	cc-pl.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.02.2
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/cc-pl
 COMMENT=	Documentation for tex-cc-pl
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
