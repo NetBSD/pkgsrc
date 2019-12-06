@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/04 12:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:19 markd Exp $
 
 DISTNAME=	pl
 PKGNAME=	tex-${DISTNAME}-1.09
@@ -12,5 +12,6 @@ LICENSE=	public-domain
 TEX_MIXEDMAP_FILES+=	plother.map
 TEX_MIXEDMAP_FILES+=	pltext.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

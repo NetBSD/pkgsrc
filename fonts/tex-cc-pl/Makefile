@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/06 16:49:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:42 markd Exp $
 
 DISTNAME=	cc-pl
 PKGNAME=	tex-${DISTNAME}-1.02.2
@@ -11,5 +11,6 @@ LICENSE=	public-domain
 
 TEX_MIXEDMAP_FILES+=	ccpl.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/20 21:01:17 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:36 markd Exp $
 
 DISTNAME=	baskervaldx.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.072
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/baskervaldx
 COMMENT=	Documentation for tex-baskervaldx
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:51 markd Exp $
 
 DISTNAME=	duerer
 PKGNAME=	tex-${DISTNAME}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/duerer
 COMMENT=	Computer Duerer fonts
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:17 markd Exp $
 
 DISTNAME=	oldlatin.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.00
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/oldlatin
 COMMENT=	Documentation for tex-oldlatin
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

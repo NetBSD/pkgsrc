@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/05/06 03:02:09 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 19:30:00 markd Exp $
 
 DISTNAME=	fontname.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2018
@@ -11,5 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 INFO_FILES=	yes
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

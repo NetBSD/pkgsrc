@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/17 06:16:22 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:30 markd Exp $
 
 DISTNAME=	afm2pl
 PKGNAME=	tex-${DISTNAME}-0.7.1
@@ -10,5 +10,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	afm2pl>=0.7.1:../../fonts/afm2pl
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

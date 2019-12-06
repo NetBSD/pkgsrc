@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/20 20:56:52 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:31 markd Exp $
 
 DISTNAME=	allrunes
 PKGNAME=	tex-${DISTNAME}-2.1.1
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MIXEDMAP_FILES+=	allrunes.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

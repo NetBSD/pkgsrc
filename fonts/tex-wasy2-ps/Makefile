@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/04/26 03:15:12 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:32 markd Exp $
 
 DISTNAME=	wasy2-ps
 PKGNAME=	tex-${DISTNAME}-2014
@@ -13,5 +13,6 @@ DEPENDS+=	tex-wasy-[0-9]*:../../fonts/tex-wasy
 
 TEX_MIXEDMAP_FILES+=	wasy.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
