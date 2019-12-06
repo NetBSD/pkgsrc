@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/05 11:14:51 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 19:18:33 markd Exp $
 
 DISTNAME=	doclicense.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.10.0
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/doclicense
 COMMENT=	Documentation for tex-doclicense
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

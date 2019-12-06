@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/11 03:32:46 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:18:34 markd Exp $
 
 DISTNAME=	l3backend.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2019
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/l3backend
 COMMENT=	Documentation for tex-l3backend
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

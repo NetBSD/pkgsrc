@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 11:40:46 markd Exp $
+# $NetBSD: Makefile,v 1.15 2019/12/06 19:18:34 markd Exp $
 
 DISTNAME=	l3kernel
 PKGNAME=	tex-${DISTNAME}-2019.51745
@@ -24,5 +24,6 @@ DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-underscore-[0-9]*:../../print/tex-underscore
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
