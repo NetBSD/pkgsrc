@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.47 2019/12/06 14:20:44 leot Exp $ -->
+<!-- $NetBSD: using.xml,v 1.48 2019/12/06 14:30:12 leot Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -142,7 +142,7 @@ and you can still use binary packages from someone else.</para>
       The pkgsrc Security Team and Packages Groups maintain a list of
       known security vulnerabilities to packages which are (or have been)
       included in pkgsrc.  The list is available from the NetBSD
-      FTP site at <ulink url="http://ftp.netbsd.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities"/>.
+      FTP site at <ulink url="http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities"/>.
     </para>
 
     <para>
