@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/08/11 11:05:45 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:18:36 markd Exp $
 
 DISTNAME=	tlshell
 PKGNAME=	tex-${DISTNAME}-2019.51677
@@ -20,5 +20,6 @@ post-extract:
 	${MV} ${WRKSRC}/texmf-dist/scripts/tlshell/tlshell.tcl ${WRKSRC}/bin/tlshell
 	${RM} -rf ${WRKSRC}/texmf-dist
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

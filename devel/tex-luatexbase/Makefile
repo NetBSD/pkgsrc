@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/07/14 12:12:55 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 19:18:35 markd Exp $
 
 DISTNAME=	luatexbase
 PKGNAME=	tex-${DISTNAME}-1.3
@@ -13,5 +13,6 @@ DEPENDS+=	tex-ctablestack-[0-9]*:../../print/tex-ctablestack
 DEPENDS+=	tex-ifluatex-[0-9]*:../../print/tex-ifluatex
 DEPENDS+=	tex-luatex-[0-9]*:../../print/tex-luatex
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
