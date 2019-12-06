@@ -1,4 +1,4 @@
-$NetBSD: patch-cmake_ssl.cmake,v 1.1 2019/11/14 16:59:38 adam Exp $
+$NetBSD: patch-cmake_ssl.cmake,v 1.2 2019/12/06 14:05:11 jperkin Exp $
 
 Allow OpenSSH versions below 1.0.
 Do not prefer static libraries (or linking will fail).
@@ -15,7 +15,14 @@ Do not prefer static libraries (or linking will fail).
        MESSAGE(STATUS "suffixes <${CMAKE_FIND_LIBRARY_SUFFIXES}>")
      ENDIF()
  
-@@ -198,8 +196,7 @@ MACRO (MYSQL_CHECK_SSL)
+@@ -192,14 +190,13 @@ MACRO (MYSQL_CHECK_SSL)
+     IF("${OPENSSL_MAJOR_VERSION}.${OPENSSL_MINOR_VERSION}.${OPENSSL_FIX_VERSION}" VERSION_GREATER "1.1.0")
+        ADD_DEFINITIONS(-DHAVE_TLSv13)
+        SET(HAVE_TLSv13 1)
+-       IF(SOLARIS)
++       IF(SOLARIS AND CMAKE_C_COMPILER_ID MATCHES "SunPro")
+          SET(FORCE_SSL_SOLARIS "-Wl,--undefined,address_of_sk_new_null")
+        ENDIF()
      ENDIF()
      IF(OPENSSL_INCLUDE_DIR AND
         OPENSSL_LIBRARY   AND
