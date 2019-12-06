@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/01/30 04:05:50 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:04:29 markd Exp $
 
 DISTNAME=	pdfcrop.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.37
@@ -10,5 +10,6 @@ LICENSE=	lppl-1.3c
 
 TEX_TEXMF_DIRS=	texmf-dist
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

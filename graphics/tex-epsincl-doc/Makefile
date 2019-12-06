@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 13:47:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:21 markd Exp $
 
 DISTNAME=	epsincl.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.2
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/epsincl
 COMMENT=	Documentation for tex-epsincl
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
