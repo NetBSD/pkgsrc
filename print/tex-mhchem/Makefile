@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/01/24 11:28:33 markd Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 20:22:01 markd Exp $
 
 DISTNAME=	mhchem
 PKGNAME=	tex-${DISTNAME}-4.08
@@ -17,5 +17,6 @@ DEPENDS+=	tex-oberdiek>=2009nb2:../../print/tex-oberdiek
 DEPENDS+=	tex-pgf>=2.00nb1:../../print/tex-pgf
 DEPENDS+=	tex-tools>=2010:../../print/tex-tools
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

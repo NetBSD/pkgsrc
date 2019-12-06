@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/05/05 20:31:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/06 20:23:28 markd Exp $
 
 DISTNAME=	texlive-en.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -11,5 +11,6 @@ DEPENDS+=	tex-texlive-common-doc>=2013nb1:../../print/tex-texlive-common-doc
 
 INFO_FILES=	tlbuild.info
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

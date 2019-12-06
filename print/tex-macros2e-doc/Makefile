@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/04 19:58:05 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 20:21:57 markd Exp $
 
 DISTNAME=	macros2e.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.4
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/macros2e
 COMMENT=	List of internal LaTeX2e macros
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

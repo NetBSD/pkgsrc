@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/28 12:08:03 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:21 markd Exp $
 
 DISTNAME=	ctib
 PKGNAME=	tex-${DISTNAME}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/ctib4tex
 COMMENT=	Tibetan for TeX and LATeX2e
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

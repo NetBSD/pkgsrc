@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/08/12 11:21:52 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 20:23:33 markd Exp $
 
 DISTNAME=	toptesi
 PKGNAME=	tex-${DISTNAME}-6.3.06
@@ -15,5 +15,6 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

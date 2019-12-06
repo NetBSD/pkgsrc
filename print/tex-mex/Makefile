@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/06 16:49:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:22:00 markd Exp $
 
 DISTNAME=	mex
 PKGNAME=	tex-${DISTNAME}-1.05
@@ -20,6 +20,7 @@ INSTALLATION_DIRS+=	bin
 TEX_FORMATS+=	"mex pdftex mexconf.tex -translate-file=cp227.tcx *mex.ini\\npdfmex pdftex mexconf.tex -translate-file=cp227.tcx *pdfmex.ini\\n"
 #utf8mex pdftex mexconf.tex -translate-file=cp227.tcx *utf8mex.ini\\n"
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

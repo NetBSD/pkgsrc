@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/04 11:46:16 markd Exp $
+# $NetBSD: Makefile,v 1.13 2019/12/06 20:21:35 markd Exp $
 
 DISTNAME=	hyphen-ancientgreek
 PKGNAME=	tex-${DISTNAME}-2019.51186
@@ -31,5 +31,6 @@ TEX_HYPHEN_LUA+=	['ibycus']={ \
 			  special='disabled:8-bit+only', \
 			},
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

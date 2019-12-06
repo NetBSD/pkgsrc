@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/05/12 01:19:48 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 20:23:02 markd Exp $
 
 DISTNAME=	pgfplots.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.16
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/pgfplots
 COMMENT=	Documentation for tex-pgfplots
 LICENSE=	gnu-gpl-v3
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

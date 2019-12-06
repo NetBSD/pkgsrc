@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/03/06 21:36:04 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:10 markd Exp $
 
 DISTNAME=	readarray
 PKGNAME=	tex-${DISTNAME}-2.0
@@ -13,5 +13,6 @@ LICENSE=	lppl-1.3c
 DEPENDS+=	tex-ifnextok-[0-9]*:../../print/tex-ifnextok
 DEPENDS+=	tex-listofitems-[0-9]*:../../print/tex-listofitems
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

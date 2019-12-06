@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/05/14 09:54:13 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 20:22:54 markd Exp $
 
 DISTNAME=	nomencl
 PKGNAME=	tex-${DISTNAME}-5.2
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/nomencl
 COMMENT=	Produce lists of symbols as in nomenclature
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

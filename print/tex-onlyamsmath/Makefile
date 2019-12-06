@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/21 10:14:21 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:22:57 markd Exp $
 
 DISTNAME=	onlyamsmath
 PKGNAME=	tex-${DISTNAME}-0.20
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/onlyamsmath
 COMMENT=	Inhibit use of non-amsmath mathematics markup when using amsmath
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

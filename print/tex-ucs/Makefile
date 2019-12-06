@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/04/25 05:20:08 markd Exp $
+# $NetBSD: Makefile,v 1.14 2019/12/06 20:23:37 markd Exp $
 
 DISTNAME=	ucs
 PKGNAME=	tex-${DISTNAME}-2.2
@@ -13,5 +13,6 @@ DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
