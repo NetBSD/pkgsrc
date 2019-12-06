@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:30:11 markd Exp $
 
 DISTNAME=	libris.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.007
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/libris
 COMMENT=	Documentation for tex-libris
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

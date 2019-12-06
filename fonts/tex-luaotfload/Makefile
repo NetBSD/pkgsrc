@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/11/02 22:24:43 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/06 19:30:12 markd Exp $
 
 DISTNAME=	luaotfload
 PKGNAME=	tex-${DISTNAME}-2.98
@@ -15,5 +15,6 @@ DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
 CHECK_INTERPRETER_SKIP=	share/texmf-dist/scripts/luaotfload/*
 TEX_TEXMF_DIRS=		${PREFIX}/share/texmf-dist
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

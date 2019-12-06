@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:28 markd Exp $
 
 DISTNAME=	tfrupee
 PKGNAME=	tex-${DISTNAME}-1.02
@@ -11,5 +11,6 @@ LICENSE=	gnu-gpl-v3
 
 TEX_MAP_FILES+=	tfrupee.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

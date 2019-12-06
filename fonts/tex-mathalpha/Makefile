@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/07/29 11:24:35 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:30:14 markd Exp $
 
 DISTNAME=	mathalpha
 PKGNAME=	tex-${DISTNAME}-1.12
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

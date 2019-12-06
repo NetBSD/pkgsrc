@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:31 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:34 markd Exp $
 
 DISTNAME=	aurical
 PKGNAME=	tex-${DISTNAME}-1.5
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	aurical.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/11 13:21:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 19:29:50 markd Exp $
 
 DISTNAME=	dosepsbin
 PKGNAME=	tex-${DISTNAME}-1.2
@@ -15,6 +15,7 @@ REPLACE_PERL=	bin/dosepsbin
 
 INSTALLATION_DIRS+=	bin
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

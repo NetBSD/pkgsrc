@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/06/03 01:30:21 markd Exp $
+# $NetBSD: Makefile,v 1.13 2019/12/06 19:30:15 markd Exp $
 
 DISTNAME=	metafont
 # should be this instead:
@@ -18,5 +18,6 @@ DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
 TEX_FORMATS=	"mf mf-nowin - -translate-file=cp227.tcx mf.ini\\n"
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

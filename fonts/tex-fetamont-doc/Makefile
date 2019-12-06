@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/06/21 06:13:16 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:29:58 markd Exp $
 
 DISTNAME=	fetamont.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-20170415
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/fetamont
 COMMENT=	Documentation for tex-fetamont
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

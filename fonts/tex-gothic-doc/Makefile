@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/02 22:24:43 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:30:05 markd Exp $
 
 DISTNAME=	gothic.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2018
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/gothic
 COMMENT=	Documentation for tex-gothic
 # LICENSE=	collection
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

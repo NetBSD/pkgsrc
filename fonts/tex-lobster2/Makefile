@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:30:12 markd Exp $
 
 DISTNAME=	lobster2
 PKGNAME=	tex-${DISTNAME}-2014
@@ -11,5 +11,6 @@ LICENSE=	ofl-v1.1
 
 TEX_MAP_FILES+=	LobsterTwo.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

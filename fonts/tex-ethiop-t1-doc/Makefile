@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/14 17:36:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:56 markd Exp $
 
 DISTNAME=	ethiop-t1.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/ethiop-t1
 COMMENT=	Documentation for tex-ethiop-t1
 LICENSE=	gnu-gpl-v2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

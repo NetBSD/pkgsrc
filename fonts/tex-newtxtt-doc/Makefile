@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/06/21 10:14:21 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:32:16 markd Exp $
 
 DISTNAME=	newtxtt.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.055
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/newtxtt
 COMMENT=	Documentation for tex-newtxtt
 LICENSE=	gnu-gpl-v3 AND lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/06 11:09:16 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:51 markd Exp $
 
 DISTNAME=	droid.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-3.2
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/droid
 COMMENT=	Documentation for tex-droid
 LICENSE=	apache-2.0 AND lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

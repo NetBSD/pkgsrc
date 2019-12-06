@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/05/06 04:03:30 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:30:03 markd Exp $
 
 DISTNAME=	gfsdidot
 PKGNAME=	tex-${DISTNAME}-2018
@@ -11,5 +11,6 @@ COMMENT=	Greek font based on Didot's work
 
 TEX_MAP_FILES+=	gfsdidot.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

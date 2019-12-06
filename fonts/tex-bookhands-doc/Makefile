@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/05/03 12:45:53 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:38 markd Exp $
 
 DISTNAME=	bookhands.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2018
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/bookhands
 COMMENT=	Documentation for tex-bookhands
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

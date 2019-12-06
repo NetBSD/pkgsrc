@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/01/29 07:41:32 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:48 markd Exp $
 
 DISTNAME=	countriesofeurope
 PKGNAME=	tex-${DISTNAME}-0.22
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	CountriesofEurope.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

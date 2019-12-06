@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/04 18:00:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:44 markd Exp $
 
 DISTNAME=	cmexb.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2016
@@ -9,5 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-cmexb
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
