@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:19 markd Exp $
 
 DISTNAME=	phaistos.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.0
@@ -12,5 +12,6 @@ LICENSE=	lppl-1.3c
 REPLACE_PERL+=			doc/fonts/phaistos/getglyphs
 CHECK_INTERPRETER_SKIP+=	share/texmf-dist/doc/fonts/phaistos/getglyphs
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

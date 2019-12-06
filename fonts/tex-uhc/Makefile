@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/01/30 04:56:45 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:32:30 markd Exp $
 
 DISTNAME=	uhc
 PKGNAME=	tex-${DISTNAME}-2011
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	umj.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

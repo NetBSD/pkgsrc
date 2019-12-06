@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:28 markd Exp $
 
 DISTNAME=	tfrupee.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.02
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tfrupee
 COMMENT=	Documentation for tex-tfrupee
 LICENSE=	gnu-gpl-v3
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

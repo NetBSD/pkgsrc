@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:37 markd Exp $
 
 DISTNAME=	berenisadf
 PKGNAME=	tex-${DISTNAME}-1.004
@@ -11,5 +11,6 @@ COMMENT=	Berenis ADF fonts and TeX/LaTeX support
 
 TEX_MAP_FILES+=	ybd.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

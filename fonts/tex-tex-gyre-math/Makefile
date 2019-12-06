@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/16 03:57:31 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:32:28 markd Exp $
 
 DISTNAME=	tex-gyre-math
 PKGNAME=	tex-${DISTNAME}-2016
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tex-gyre-math
 COMMENT=	Maths fonts to match tex-gyre text fonts
 LICENSE=	gfsl
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

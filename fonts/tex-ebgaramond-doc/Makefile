@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/08/04 04:07:59 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 19:29:52 markd Exp $
 
 DISTNAME=	ebgaramond.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2019.51134
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/ebgaramond
 COMMENT=	Documentation for tex-ebgaramond
 LICENSE=	ofl-v1.1 AND lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

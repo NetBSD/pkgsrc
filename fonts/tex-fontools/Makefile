@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:21:02 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2019/12/06 19:30:00 markd Exp $
 
 DISTNAME=	fontools
 PKGNAME=	tex-${DISTNAME}-2019.51625
@@ -15,6 +15,7 @@ REPLACE_PERL=	bin/afm2afm bin/autoinst bin/ot2kpx
 
 INSTALLATION_DIRS+=	bin
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:
