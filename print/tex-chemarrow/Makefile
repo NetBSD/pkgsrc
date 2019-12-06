@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/01/30 03:26:11 markd Exp $
+# $NetBSD: Makefile,v 1.14 2019/12/06 20:19:07 markd Exp $
 
 DISTNAME=	chemarrow
 PKGNAME=	tex-${DISTNAME}-0.9
@@ -11,5 +11,6 @@ LICENSE=	public-domain
 
 TEX_MAP_FILES+=	chemarrow.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

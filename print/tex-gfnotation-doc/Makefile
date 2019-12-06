@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/02 21:02:39 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:31 markd Exp $
 
 DISTNAME=	gfnotation.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.9
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/gfnotation
 COMMENT=	Documentation for tex-gfnotation
 #LICENSE=	gnu-gpl-v3
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

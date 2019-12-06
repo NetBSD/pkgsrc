@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:15 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:26 markd Exp $
 
 DISTNAME=	dinbrief.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/dinbrief
 COMMENT=	Documentation for tex-dinbrief
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

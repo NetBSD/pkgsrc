@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:17 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:00 markd Exp $
 
 DISTNAME=	pb-diagram
 PKGNAME=	tex-${DISTNAME}-5.0
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/pb-diagram
 COMMENT=	A commutative diagram package using LAMSTeX or Xy-pic fonts
 #LICENSE=	other-free
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

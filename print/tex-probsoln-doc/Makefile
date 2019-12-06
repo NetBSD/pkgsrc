@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/17 03:42:18 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:07 markd Exp $
 
 DISTNAME=	probsoln.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-3.05
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/probsoln
 COMMENT=	Documentation for tex-probsoln
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
