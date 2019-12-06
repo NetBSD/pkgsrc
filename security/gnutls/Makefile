@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.203 2019/10/04 17:25:53 nia Exp $
+# $NetBSD: Makefile,v 1.204 2019/12/06 14:00:08 nia Exp $
 
-DISTNAME=	gnutls-3.6.10
+DISTNAME=	gnutls-3.6.11.1
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/
 EXTRACT_SUFX=	.tar.xz
@@ -16,8 +16,8 @@ PLIST_SRC=	PLIST
 
 USE_LANGUAGES=			c c++
 USE_LIBTOOL=			yes
-USE_PKGLOCALEDIR=		yes
 USE_TOOLS+=			gmake gsed perl pkg-config bash
+USE_TOOLS+=			msgfmt msgmerge xgettext
 GNU_CONFIGURE=			yes
 # this library duplicates (and conflicts with) openssl
 CONFIGURE_ARGS+=		--disable-openssl-compatibility
