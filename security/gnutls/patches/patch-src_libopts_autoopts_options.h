@@ -1,8 +1,8 @@
-$NetBSD: patch-src_libopts_autoopts_options.h,v 1.2 2015/06/01 21:50:22 spz Exp $
+$NetBSD: patch-src_libopts_autoopts_options.h,v 1.3 2019/12/06 14:00:08 nia Exp $
 
 Workaround for older OSX.
 
---- src/libopts/autoopts/options.h.orig	2015-03-23 07:19:23.000000000 +0000
+--- src/libopts/autoopts/options.h.orig	2019-12-01 21:25:38.000000000 +0000
 +++ src/libopts/autoopts/options.h
 @@ -62,7 +62,7 @@
  #    include <sysexits.h>
@@ -11,5 +11,5 @@ Workaround for older OSX.
 -#  if defined(HAVE_STDBOOL_H)
 +#  if defined(HAVE_STDBOOL_H) || defined(__APPLE__)
  #    include <stdbool.h>
- #  else
+ #  elif ! defined(bool)
       typedef enum { false = 0, true = 1 } _Bool;
