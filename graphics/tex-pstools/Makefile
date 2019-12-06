@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/12/04 18:34:47 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:33 markd Exp $
 
 DISTNAME=	pstools
 PKGNAME=	tex-${DISTNAME}-1.68
@@ -18,6 +18,7 @@ REPLACE_SH=	bin/ps2frag bin/pslatex
 
 TEX_TEXMF_DIRS=	# none
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/04 04:14:30 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 20:04:40 markd Exp $
 
 DISTNAME=	tikzmark.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.7
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/tikzmark
 COMMENT=	Documentation for tex-tikzmark
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/06/21 11:45:58 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:04:30 markd Exp $
 
 DISTNAME=	pst-3dplot
 PKGNAME=	tex-${DISTNAME}-2.04
@@ -16,5 +16,6 @@ DEPENDS+=	tex-pst-plot-[0-9]*:../../graphics/tex-pst-plot
 DEPENDS+=	tex-pstricks-[0-9]*:../../graphics/tex-pstricks
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

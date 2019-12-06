@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/06/24 00:10:08 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:28 markd Exp $
 
 DISTNAME=	mptrees
 PKGNAME=	tex-${DISTNAME}-17.06
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/mptrees
 COMMENT=	Probability trees with MetaPost
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

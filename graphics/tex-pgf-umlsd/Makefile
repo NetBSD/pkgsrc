@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/02 02:11:33 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:29 markd Exp $
 
 DISTNAME=	pgf-umlsd
 PKGNAME=	tex-${DISTNAME}-0.7
@@ -11,5 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

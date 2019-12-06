@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/05/06 04:12:47 markd Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/06 20:04:24 markd Exp $
 
 DISTNAME=	graphics-pln
 PKGNAME=	tex-${DISTNAME}-2018
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/graphics-pln
 COMMENT=	LaTeX-style graphics for Plain TeX users
 LICENSE=	lppl-1.0
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

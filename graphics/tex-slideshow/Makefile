@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 13:47:42 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:37 markd Exp $
 
 DISTNAME=	slideshow
 PKGNAME=	tex-${DISTNAME}-1.0
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/slideshow
 COMMENT=	Generate slideshow with MetaPost
 #LICENSE=	other-free
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
