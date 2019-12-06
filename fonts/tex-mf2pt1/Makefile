@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/11 13:21:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 19:30:15 markd Exp $
 
 DISTNAME=	mf2pt1
 PKGNAME=	tex-${DISTNAME}-2.5a
@@ -15,6 +15,7 @@ REPLACE_PERL=	bin/mf2pt1
 
 INSTALLATION_DIRS+=	bin
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

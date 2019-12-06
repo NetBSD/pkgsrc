@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/10/23 00:51:46 markd Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/06 19:29:57 markd Exp $
 
 DISTNAME=	fbb
 PKGNAME=	tex-${DISTNAME}-1.14
@@ -11,5 +11,6 @@ LICENSE=	ofl-v1.1 AND lppl-1.3c
 
 TEX_MAP_FILES+=	fbb.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

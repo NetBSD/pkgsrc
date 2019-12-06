@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/20 21:01:17 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:36 markd Exp $
 
 DISTNAME=	baskervaldx
 PKGNAME=	tex-${DISTNAME}-1.072
@@ -11,5 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 TEX_MAP_FILES+=	baskervaldx.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

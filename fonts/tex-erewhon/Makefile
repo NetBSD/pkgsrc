@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/05 11:43:01 markd Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 19:29:55 markd Exp $
 
 DISTNAME=	erewhon
 PKGNAME=	tex-${DISTNAME}-1.093
@@ -11,5 +11,6 @@ LICENSE=	ofl-v1.1 AND lppl-1.3c
 
 TEX_MAP_FILES+=	erewhon.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

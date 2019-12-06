@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/08 22:24:40 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:30:14 markd Exp $
 
 DISTNAME=	mathabx-type1
 PKGNAME=	tex-${DISTNAME}-2014
@@ -13,5 +13,6 @@ DEPENDS+=	tex-mathabx-[0-9]*:../../fonts/tex-mathabx
 
 TEX_MAP_FILES+=	mathabx.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

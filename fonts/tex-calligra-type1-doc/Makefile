@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:40 markd Exp $
 
 DISTNAME=	calligra-type1.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-001.000
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/calligra-type1
 COMMENT=	Documentation for tex-calligra-type1
 #LICENSE=	other-free
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

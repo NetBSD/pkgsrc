@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/16 03:57:27 markd Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/06 19:29:51 markd Exp $
 
 DISTNAME=	drm.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-4.4
@@ -14,5 +14,6 @@ REPLACE_SH+=		doc/fonts/drm/convert.sh
 # fontforge
 CHECK_INTERPRETER_SKIP=	share/texmf-dist/doc/fonts/drm/fontconvert.sh
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
