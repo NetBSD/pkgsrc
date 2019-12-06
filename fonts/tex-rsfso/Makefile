@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/08/09 06:14:09 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:32:24 markd Exp $
 
 DISTNAME=	rsfso
 PKGNAME=	tex-${DISTNAME}-1.02
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	rsfso.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

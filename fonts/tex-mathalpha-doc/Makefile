@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/07/29 11:24:35 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:30:14 markd Exp $
 
 DISTNAME=	mathalpha.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.12
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/mathalpha
 COMMENT=	Documentation for tex-mathalpha
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

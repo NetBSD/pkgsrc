@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/06 16:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/06 19:30:13 markd Exp $
 
 DISTNAME=	marvosym
 PKGNAME=	tex-${DISTNAME}-2.2a
@@ -10,5 +10,6 @@ LICENSE=	ofl-v1.1
 
 TEX_MAP_FILES+=	marvosym.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

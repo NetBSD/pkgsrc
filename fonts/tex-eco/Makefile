@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/30 04:56:41 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:53 markd Exp $
 
 DISTNAME=	eco
 PKGNAME=	tex-${DISTNAME}-1.3
@@ -11,5 +11,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
