@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/01 21:07:29 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:41 markd Exp $
 
 DISTNAME=	tikzposter.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.0
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/tikzposter
 COMMENT=	Documentation for tex-tikzposter
 LICENSE=	lppl-1.2
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
