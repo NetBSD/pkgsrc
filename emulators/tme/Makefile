@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2019/08/11 13:20:58 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2019/12/06 05:38:02 mrg Exp $
 #
 
 DISTNAME=		tme-0.8
@@ -18,7 +18,10 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl:run pkg-config yacc
 
+.if empty(CFLAGS:M*-g*)
 CONFIGURE_ARGS+=	--disable-debug
+.endif
+
 # XXX Turn off -Werror for now; there are a very very large number of
 # warnings generated, increasing with every compiler version.
 CONFIGURE_ARGS+=	--disable-warnings
