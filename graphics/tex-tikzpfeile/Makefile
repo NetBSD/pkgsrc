@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/04 01:40:37 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:40 markd Exp $
 
 DISTNAME=	tikzpfeile
 PKGNAME=	tex-${DISTNAME}-1.0
@@ -11,5 +11,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

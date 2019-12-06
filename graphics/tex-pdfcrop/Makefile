@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/11 13:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2019/12/06 20:04:29 markd Exp $
 
 DISTNAME=	pdfcrop
 PKGNAME=	tex-${DISTNAME}-1.37
@@ -21,6 +21,7 @@ SUBST_SED.paths+=	-e 's,@GHOSTSCRIPT@,${TOOLS_PATH.gs},g'
 
 TEX_TEXMF_DIRS=	# empty
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

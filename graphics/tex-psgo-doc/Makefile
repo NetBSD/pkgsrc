@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/30 04:05:50 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:04:30 markd Exp $
 
 DISTNAME=	psgo.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.17
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-psgo
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

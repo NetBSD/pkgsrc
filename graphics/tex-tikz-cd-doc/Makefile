@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/01/27 01:17:05 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 20:04:39 markd Exp $
 
 DISTNAME=	tikz-cd.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.9f
@@ -12,5 +12,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	# none
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
