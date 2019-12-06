@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:40 markd Exp $
 
 DISTNAME=	calligra-type1
 PKGNAME=	tex-${DISTNAME}-001.000
@@ -11,5 +11,6 @@ COMMENT=	Type 1 version of Calligra
 
 TEX_MAP_FILES+=	calligra.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

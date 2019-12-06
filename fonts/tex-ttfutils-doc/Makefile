@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/11/17 17:07:05 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:32:29 markd Exp $
 
 DISTNAME=	ttfutils.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2013
@@ -9,5 +9,6 @@ COMMENT=	Documentation for tex-ttfutils
 
 TEXLIVE_IGNORE_PATTERNS=	texmf-dist/doc/man
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

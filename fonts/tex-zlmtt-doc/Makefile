@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/06 10:19:34 markd Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:32:33 markd Exp $
 
 DISTNAME=	zlmtt.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.02
@@ -9,5 +9,6 @@ HOMEPAGE=	https://ctan.org/pkg/zlmtt
 COMMENT=	Documentation for tex-zlmtt
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

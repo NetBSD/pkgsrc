@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/06 10:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 19:30:02 markd Exp $
 
 DISTNAME=	garuda-c90
 PKGNAME=	tex-${DISTNAME}-2015
@@ -12,5 +12,6 @@ DEPENDS+=	tex-fonts-tlwg>=0.6.1:../../fonts/tex-fonts-tlwg
 
 TEX_MAP_FILES+=	garuda-c90.map
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

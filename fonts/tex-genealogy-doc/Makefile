@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:43 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/06 19:30:02 markd Exp $
 
 DISTNAME=	genealogy.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/genealogy
 COMMENT=	Documentation for tex-genealogy
 LICENSE=	lppl-1.3c
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/01/30 04:56:45 markd Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/06 19:32:32 markd Exp $
 
 DISTNAME=	wasy.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -8,5 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-wasy
 LICENSE=	public-domain
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

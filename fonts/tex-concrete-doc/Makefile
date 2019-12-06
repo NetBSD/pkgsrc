@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/02 22:24:43 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:47 markd Exp $
 
 DISTNAME=	concrete.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
@@ -9,5 +9,6 @@ HOMEPAGE=	http://ctan.org/pkg/concrete
 COMMENT=	Documentation for tex-concrete
 # LICENSE=	knuth
 
+TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
