@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/11/03 11:51:01 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2019/12/07 10:24:02 mrg Exp $
 
 DISTNAME=		csound-${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
@@ -41,10 +41,11 @@ post-install:
 		rm -f bin/csound6 && \
 		${LN} -s ../lib/csound6/csound bin/csound6
 
+.include "options.mk"
+
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
