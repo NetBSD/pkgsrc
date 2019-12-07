@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/11/18 09:11:49 markd Exp $
+# $NetBSD: Makefile,v 1.34 2019/12/07 19:29:31 mrg Exp $
 
 DISTNAME=	libkdegames-${KAPPSVER}
 CATEGORIES=	games
@@ -11,6 +11,7 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
 USE_TOOLS+=	msgmerge
 
+.include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/kdeclarative/buildlink3.mk"
 .include "../../net/kdnssd/buildlink3.mk"
 .include "../../net/knewstuff/buildlink3.mk"
