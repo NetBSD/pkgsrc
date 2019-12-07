@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2019/12/07 04:50:49 gutteridge Exp $
+# $NetBSD: Makefile,v 1.74 2019/12/07 05:34:10 gutteridge Exp $
 
 DISTNAME=	e16-1.0.21
 PKGNAME=	${DISTNAME:S/e16/enlightenment/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://enlightenment.org/
 COMMENT=	Highly themeable and configurable window manager
 LICENSE=	enlightenment16
 
-USE_TOOLS+=		perl:run pkg-config
+USE_TOOLS+=		gmake perl:run pkg-config
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-hints-gnome
