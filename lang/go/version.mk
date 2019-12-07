@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.71 2019/11/03 19:04:01 rillig Exp $
+# $NetBSD: version.mk,v 1.72 2019/12/07 18:15:13 rillig Exp $
 
 CTF_SUPPORTED=		no
 SSP_SUPPORTED=		no
@@ -57,3 +57,6 @@ PLIST_SUBST+=		GO_PLATFORM=${GO_PLATFORM:Q} GOARCH=${GOARCH:Q}
 PLIST_SUBST+=		GOCHAR=${GOCHAR:Q}
 
 PRINT_PLIST_AWK+=	{ sub("/${GO_PLATFORM}/", "/$${GO_PLATFORM}/") }
+
+TOOLS_CREATE+=		go
+TOOLS_PATH.go=		${GO}
