@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.102 2019/09/02 02:23:02 rillig Exp $
+# $NetBSD: license.mk,v 1.103 2019/12/07 04:47:32 gutteridge Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -182,6 +182,9 @@ DEFAULT_ACCEPTABLE_LICENSES+=	purdue
 #
 # derived from BSD
 DEFAULT_ACCEPTABLE_LICENSES+=	info-zip
+# Derived from MIT, with an advertising clause added (and previously
+# included in Debian main as such).
+DEFAULT_ACCEPTABLE_LICENSES+=	enlightenment16
 
 # The following licenses do not currently meet our standards for
 # inclusion.
