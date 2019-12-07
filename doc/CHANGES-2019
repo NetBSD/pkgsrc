@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5264 2019/12/07 04:53:13 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.5265 2019/12/07 05:05:22 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8477,3 +8477,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/gnutls to 3.6.11.1 [nia 2019-12-06]
 	Updated sysutils/xenkernel411 to 4.11.2nb3 [bouyer 2019-12-06]
 	Updated wm/enlightenment to 1.0.21 [gutteridge 2019-12-07]
+	Updated wm/ethemes to 0.1nb4 [gutteridge 2019-12-07]
