@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2019/11/11 11:59:06 rin Exp $
+# $NetBSD: Makefile.common,v 1.39 2019/12/07 13:27:08 rhialto Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -11,7 +11,7 @@
 #	The desired owner and the file mode of game executables.
 #
 
-NETHACK_BASEVER=	3.6.2
+NETHACK_BASEVER=	3.6.3
 NETHACK_VERSION=	${NETHACK_BASEVER}
 NETHACK_DISTVER=	${NETHACK_BASEVER:S/.//g}
 NETHACK_DIR=		nethackdir${NETHACK_SAVEVER:S/.//g}
@@ -33,7 +33,7 @@ MAKE_JOBS_SAFE=		no
 
 .if !defined(META_PACKAGE)
 
-WRKSRC=			${WRKDIR}/nethack-${NETHACK_BASEVER}
+WRKSRC=			${WRKDIR}/NetHack-NetHack-${NETHACK_BASEVER}_Released
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 USE_TOOLS+=		gzip yacc lex awk
