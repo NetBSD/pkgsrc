@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/07/21 22:25:51 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2019/12/07 04:57:06 gutteridge Exp $
 #
 
 DISTNAME=		e16menuedit2-0.0.3
@@ -10,7 +10,7 @@ MAINTAINER=		chriswareham@chriswareham.demon.co.uk
 HOMEPAGE=		https://www.enlightenment.org/
 COMMENT=		Menu editor for the Enlightenment window manager
 
-DEPENDS+=		enlightenment-0.16.*:../../wm/enlightenment
+DEPENDS+=		enlightenment>=0.16:../../wm/enlightenment
 
 BROKEN_GETTEXT_DETECTION=	yes
 
