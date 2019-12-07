@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/07 19:00:06 nia Exp $
+
+SHA1 (aiomixer-1.0.0.tar.gz) = 16380f932e780ca00fe7ebdb5f2e7e92299adb3b
+RMD160 (aiomixer-1.0.0.tar.gz) = 4c2518776532e619d8b424890920a44b5c594fe9
+SHA512 (aiomixer-1.0.0.tar.gz) = 463478047cd24f466ac08e6595a9b61aa62cb281a2827cea06551546885daa8e4b9b94846ae5e0ac268458d46b166f947a894cbd04e073452d8167fa131e967f
+Size (aiomixer-1.0.0.tar.gz) = 6330 bytes
