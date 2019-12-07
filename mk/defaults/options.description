@@ -604,6 +604,7 @@ p0f			Enable support for passive OS fingerprinting.
 p5-module-build-dist-authoring		Enable building distfiles.
 p5-module-build-license-creation	Enable license creation.
 pam			Enable PAM support.
+pango			Enable Pango support.
 pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre			Enable Perl-compatible regular expressions.
 pcre2-jit		Enable JIT (just-in-time) support in pcre2.
@@ -816,6 +817,7 @@ vaapi			Enable support for VAAPI.
 valgrind		Enable Valgrind debugging and profiling support.
 vbr			Enable Vouch By Reference support.
 vdpau			Enable support for VDPAU.
+vera-ttf		Include the Vera TTF fonts.
 vflib			Enable support for Japanese vector font library.
 via-padlock		Enable support for the VIA PadLock Security Engine.
 vice-ethernet		Enable Ethernet cartridge support.
