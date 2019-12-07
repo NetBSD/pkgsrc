@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5271 2019/12/07 19:23:58 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5272 2019/12/07 21:34:58 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8486,3 +8486,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added audio/aiomixer version 1.0.0 [nia 2019-12-07]
 	Updated multimedia/frei0r to 1.7.0 [nia 2019-12-07]
 	Updated www/gitea to 1.10.1 [nia 2019-12-07]
+	Added lang/go113 version 1.13.5 [bsiegert 2019-12-07]
