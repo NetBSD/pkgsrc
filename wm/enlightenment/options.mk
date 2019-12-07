@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2019/12/07 04:50:49 gutteridge Exp $
+# $NetBSD: options.mk,v 1.2 2019/12/07 05:11:27 gutteridge Exp $
 
 # e16 is used here instead of enlightenment to avoid
 # potential conflict with x11/enlightenment.
@@ -27,9 +27,9 @@ CONFIGURE_ARGS+=	--with-sndldr=audiofile
 .include "../../audio/esound/buildlink3.mk"
 .endif
 
-# The upstream package includes its own Vera fonts. Because these have
-# a different (non-default) license, and are also included in some base
-# OS distributions (like NetBSD's native X11), this has been made
+# The upstream package includes its own Vera fonts. Because these
+# have a different license, and are also included in some base OS
+# distributions (like NetBSD's native X11), this has been made
 # optional.
 .if !empty(PKG_OPTIONS:Mvera-ttf)
 DEPENDS+=	vera-ttf>=1.10:../../fonts/vera-ttf
