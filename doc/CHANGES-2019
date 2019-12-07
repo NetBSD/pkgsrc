@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5270 2019/12/07 19:18:18 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5271 2019/12/07 19:23:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8485,3 +8485,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/mozilla-rootcerts-openssl to 2.3 [sevan 2019-12-07]
 	Added audio/aiomixer version 1.0.0 [nia 2019-12-07]
 	Updated multimedia/frei0r to 1.7.0 [nia 2019-12-07]
+	Updated www/gitea to 1.10.1 [nia 2019-12-07]
