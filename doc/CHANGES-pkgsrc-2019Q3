@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.13 2019/11/25 18:48:46 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.14 2019/12/07 19:14:00 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q3 branch:
 
@@ -78,4 +78,22 @@ sysutils/bchunk: security fix
 
 Pullup ticket #6089 - requested by bouyer
 geography/opencpn-plugin-draw: build fix (incomplete commit)
+
+Pullup ticket #6090 - requested by nia
+www/firefox68: security fix
+
+Pullup ticket #6091 - requested by leot
+shells/tcsh: bugfix
+
+Pullup ticket #6093 - requested by he
+net/unbound: security fix
+
+Pullup ticket #6094 - requested by tm
+databases/phpmyadmin: security fix (CVE-2019-18622)
+
+Pullup ticket #6095 - requested by morr
+net/haproxy: security fix
+
+Pullup ticket #6096 - requested by bouyer
+sysutils/xenkernel411: security fix
 
