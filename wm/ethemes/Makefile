@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2019/11/04 21:50:16 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2019/12/07 05:05:10 gutteridge Exp $
 
 DISTNAME=	ethemes-0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://themes.org/pub/themes/e/
 DISTFILES=	${E_THEMES}
@@ -9,8 +9,11 @@ DISTFILES=	${E_THEMES}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://e.themes.org/
 COMMENT=	Themes for the window manager Enlightenment
+#LICENSE=	(No licenses are specified for these individual themes.)
 
-DEPENDS+=	enlightenment>=0.16.2<0.17:../../wm/enlightenment
+# wm/enlightenment is E16, which now has 1.x release numbering,
+# while x11/enlightenment continues to have 0.x numbering.
+DEPENDS+=	enlightenment>=1.0:../../wm/enlightenment
 
 DIST_SUBDIR=	ethemes
 NO_BUILD=	yes
@@ -19,7 +22,7 @@ EXTRACT_ONLY=
 
 USE_TOOLS+=	gtar
 
-E_DATADIR=	share/enlightenment/themes
+E_DATADIR=	share/e16/themes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -44,10 +47,11 @@ do-install:
 	${GTAR} -C ${DESTDIR}${PREFIX}/${E_DATADIR}/$$NAME \
 		-xzf ${DISTDIR}/${DIST_SUBDIR}/${file}
 .endfor
-.for dir in Absolute_E ApplePlatinum FinalE
-	cd ${DESTDIR}${PREFIX}/${E_DATADIR}/${dir} \
-		&& ${CHMOD} go+rx `${FIND} . -type d -print` \
-		&& ${CHMOD} go+r `${FIND} . -type f -print`
+.for dir in ${E_THEMES}
+	NAME=`${ECHO} ${dir} | ${SED} -e s/-DR16.*//` ; \
+	cd ${DESTDIR}${PREFIX}/${E_DATADIR}/$$NAME \
+		&& ${CHMOD} ${BINMODE} `${FIND} . -type d -print` \
+		&& ${CHMOD} ${SHAREMODE} `${FIND} . -type f -print`
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
