@@ -115,7 +115,22 @@ func (s *Suite) Test_VartypeCheck_Category(c *check.C) {
 		"chinese",
 		"arabic",
 		"filesyscategory",
-		"wip")
+		"wip",
+		"gnome",
+		"gnustep",
+		"java",
+		"kde",
+		"korean",
+		"linux",
+		"local",
+		"plan9",
+		"R",
+		"ruby",
+		"scm",
+		"tcl",
+		"tk",
+		"windowmaker",
+		"xmms")
 
 	vt.Output(
 		"ERROR: filename.mk:2: Invalid category \"arabic\".",
@@ -481,11 +496,15 @@ func (s *Suite) Test_VartypeCheck_Enum(c *check.C) {
 func (s *Suite) Test_VartypeCheck_Enum__use_match(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
+	t.SetUpPkgsrc()
+	t.Chdir("category/package")
+	t.FinishSetUp()
 	t.SetUpCommandLine("-Wall", "--explain")
 
 	mklines := t.NewMkLines("module.mk",
 		MkCvsID,
+		"",
+		".include \"../../mk/bsd.prefs.mk\"",
 		"",
 		".if !empty(MACHINE_ARCH:Mi386) || ${MACHINE_ARCH} == i386",
 		".endif",
@@ -497,17 +516,19 @@ func (s *Suite) Test_VartypeCheck_Enum__use_match(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"NOTE: module.mk:3: MACHINE_ARCH should be compared using == instead of matching against \":Mi386\".",
+		"NOTE: module.mk:5: MACHINE_ARCH "+
+			"should be compared using \"${MACHINE_ARCH} == i386\" "+
+			"instead of matching against \":Mi386\".",
 		"",
 		"\tThis variable has a single value, not a list of values. Therefore it",
 		"\tfeels strange to apply list operators like :M and :N onto it. A more",
 		"\tdirect approach is to use the == and != operators.",
 		"",
 		"\tAn entirely different case is when the pattern contains wildcards",
-		"\tlike ^, *, $. In such a case, using the :M or :N modifiers is useful",
-		"\tand preferred.",
+		"\tlike *, ?, []. In such a case, using the :M or :N modifiers is",
+		"\tuseful and preferred.",
 		"",
-		"ERROR: module.mk:5: Use ${PKGSRC_COMPILER:Mclang} instead of the == operator.",
+		"ERROR: module.mk:7: Use ${PKGSRC_COMPILER:Mclang} instead of the == operator.",
 		"",
 		"\tThe PKGSRC_COMPILER can be a list of chained compilers, e.g. \"ccache",
 		"\tdistcc clang\". Therefore, comparing it using == or != leads to wrong",
@@ -907,8 +928,9 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 	t := s.Init(c)
 
 	t.Chdir(".")
-	t.SetUpPkgsrc() // Adds the gnu-gpl-v2 and 2-clause-bsd licenses
+	// Adds the gnu-gpl-v2 and 2-clause-bsd licenses
 	t.SetUpPackage("category/package")
+	t.CreateFileLines("licenses/mit", "...")
 	t.FinishSetUp()
 
 	G.Pkg = NewPackage(t.File("category/package"))
@@ -930,7 +952,7 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 
 	vt.Output(
 		"ERROR: filename.mk:2: Parse error for license condition \"AND mit\".",
-		"WARN: filename.mk:3: License file licenses/artistic does not exist.",
+		"ERROR: filename.mk:3: License file licenses/artistic does not exist.",
 		"ERROR: filename.mk:4: Parse error for license condition \"${UNKNOWN_LICENSE}\".")
 
 	vt.Op(opAssignAppend)
@@ -939,8 +961,7 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 		"AND mit")
 
 	vt.Output(
-		"ERROR: filename.mk:11: Parse error for appended license condition \"gnu-gpl-v2\".",
-		"WARN: filename.mk:12: License file licenses/mit does not exist.")
+		"ERROR: filename.mk:11: Parse error for appended license condition \"gnu-gpl-v2\".")
 }
 
 func (s *Suite) Test_VartypeCheck_MachineGnuPlatform(c *check.C) {
@@ -1266,10 +1287,14 @@ func (s *Suite) Test_VartypeCheck_PrefixPathname(c *check.C) {
 	vt.Varname("PKGMANDIR")
 	vt.Values(
 		"man/man1",
-		"share/locale")
+		"share/locale",
+		"/absolute")
 
 	vt.Output(
-		"WARN: filename.mk:1: Please use \"${PKGMANDIR}/man1\" instead of \"man/man1\".")
+		"WARN: filename.mk:1: "+
+			"Please use \"${PKGMANDIR}/man1\" instead of \"man/man1\".",
+		"ERROR: filename.mk:3: The pathname \"/absolute\" in PKGMANDIR "+
+			"must be relative to ${PREFIX}.")
 }
 
 func (s *Suite) Test_VartypeCheck_PythonDependency(c *check.C) {

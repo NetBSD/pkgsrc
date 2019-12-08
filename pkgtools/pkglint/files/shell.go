@@ -211,7 +211,8 @@ func (scc *SimpleCommandChecker) checkAutoMkdirs() {
 			if m, dirname := match1(arg, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)`); m {
 				autoMkdirs := false
 				if G.Pkg != nil {
-					plistLine := G.Pkg.Plist.Dirs[NewPath(dirname)]
+					// FIXME: Add test for absolute path.
+					plistLine := G.Pkg.Plist.Dirs[NewRelPathString(dirname)]
 					if plistLine != nil && !containsVarRef(plistLine.Text) {
 						autoMkdirs = true
 					}
@@ -317,10 +318,10 @@ func (scc *SimpleCommandChecker) Explain(explanation ...string) {
 	scc.mkline.Explain(explanation...)
 }
 
-// ShellLineChecker is either a line from a Makefile starting with a tab,
+// ShellLineChecker checks either a line from a Makefile starting with a tab,
 // thereby containing shell commands to be executed.
 //
-// Or it is a variable assignment line from a Makefile with a left-hand
+// Or it checks a variable assignment line from a Makefile with a left-hand
 // side variable that is of some shell-like type; see Vartype.IsShell.
 type ShellLineChecker struct {
 	MkLines *MkLines
@@ -529,6 +530,8 @@ func (ck *ShellLineChecker) checkPipeExitcode(pipeline *MkShPipeline) {
 }
 
 var shellCommandsType = NewVartype(BtShellCommands, NoVartypeOptions, NewACLEntry("*", aclpAllRuntime))
+
+// FIXME: Why is this called shell_Word_Vuc and not shell_Commands_Vuc?
 var shellWordVuc = &VarUseContext{shellCommandsType, VucUnknownTime, VucQuotPlain, false}
 
 func NewShellLineChecker(mklines *MkLines, mkline *MkLine) *ShellLineChecker {
@@ -588,7 +591,7 @@ func (ck *ShellLineChecker) CheckShellCommandLine(shelltext string) {
 	setE := lexer.SkipString("${RUN}")
 	if !setE {
 		if lexer.NextString("${_PKG_SILENT}${_PKG_DEBUG}") != "" {
-			line.Warnf("Use of _PKG_SILENT and _PKG_DEBUG is deprecated. Use ${RUN} instead.")
+			line.Errorf("Use of _PKG_SILENT and _PKG_DEBUG is obsolete. Use ${RUN} instead.")
 		}
 	}
 
@@ -707,7 +710,7 @@ func (ck *ShellLineChecker) CheckWord(token string, checkQuoting bool, time Tool
 	// to the MkLineChecker. Examples for these are ${VAR:Mpattern} or $@.
 	if varuse := ToVarUse(token); varuse != nil {
 		if ck.checkVarUse {
-			MkLineChecker{ck.MkLines, ck.mkline}.CheckVaruse(varuse, shellWordVuc)
+			NewMkVarUseChecker(varuse, ck.MkLines, ck.mkline).Check(shellWordVuc)
 		}
 		return
 	}
@@ -782,7 +785,7 @@ outer:
 
 	if trimHspace(tok.Rest()) != "" {
 		ck.Warnf("Internal pkglint error in ShellLine.CheckWord at %q (quoting=%s), rest: %s",
-			token, quoting, tok.Rest())
+			token, quoting.String(), tok.Rest())
 	}
 }
 
@@ -897,13 +900,15 @@ func (ck *ShellLineChecker) checkVaruseToken(atoms *[]*ShAtom, quoting ShQuoting
 	varname := varuse.varname
 
 	if varname == "@" {
+		// No autofix here since it may be a simple typo.
+		// Maybe the package developer meant the shell variable instead.
 		ck.Warnf("Please use \"${.TARGET}\" instead of \"$@\".")
 		ck.Explain(
 			"The variable $@ can easily be confused with the shell variable of",
 			"the same name, which has a completely different meaning.")
 
 		varname = ".TARGET"
-		varuse = &MkVarUse{varname, varuse.modifiers}
+		varuse = NewMkVarUse(varname, varuse.modifiers...)
 	}
 
 	switch {
@@ -942,7 +947,7 @@ func (ck *ShellLineChecker) checkVaruseToken(atoms *[]*ShAtom, quoting ShQuoting
 
 	if ck.checkVarUse {
 		vuc := VarUseContext{shellCommandsType, VucUnknownTime, quoting.ToVarUseContext(), true}
-		MkLineChecker{ck.MkLines, ck.mkline}.CheckVaruse(varuse, &vuc)
+		NewMkVarUseChecker(varuse, ck.MkLines, ck.mkline).Check(&vuc)
 	}
 
 	return true

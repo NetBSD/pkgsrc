@@ -52,9 +52,14 @@ func (s *Suite) Test_MkLines__for_loop_multiple_variables(c *check.C) {
 func (s *Suite) Test_MkLines__comparing_YesNo_variable_to_string(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
-	mklines := t.NewMkLines("databases/gdbm_compat/builtin.mk",
+	t.SetUpPkgsrc()
+	t.Chdir(".")
+	t.FinishSetUp()
+	mklines := t.SetUpFileMkLines("databases/gdbm_compat/builtin.mk",
 		MkCvsID,
+		"",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
 		".if ${USE_BUILTIN.gdbm} == \"no\"",
 		".endif",
 		".if ${USE_BUILTIN.gdbm:tu} == \"no\"", // Can never be true, since "no" is not uppercase.
@@ -63,7 +68,7 @@ func (s *Suite) Test_MkLines__comparing_YesNo_variable_to_string(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: databases/gdbm_compat/builtin.mk:2: " +
+		"WARN: databases/gdbm_compat/builtin.mk:5: " +
 			"USE_BUILTIN.gdbm should be matched against \"[yY][eE][sS]\" or \"[nN][oO]\", " +
 			"not compared with \"no\".")
 }
@@ -197,9 +202,14 @@ func (s *Suite) Test_MkLines_Check__loop_modifier(c *check.C) {
 func (s *Suite) Test_MkLines_Check__PKG_SKIP_REASON_depending_on_OPSYS(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
+	t.SetUpPkgsrc()
+	t.Chdir("category/package")
+	t.FinishSetUp()
 	mklines := t.NewMkLines("Makefile",
 		MkCvsID,
+		"",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
 		"PKG_SKIP_REASON+=\t\"Fails everywhere\"",
 		".if ${OPSYS} == \"Cygwin\"",
 		"PKG_SKIP_REASON+=\t\"Fails on Cygwin\"",
@@ -208,7 +218,7 @@ func (s *Suite) Test_MkLines_Check__PKG_SKIP_REASON_depending_on_OPSYS(c *check.
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"NOTE: Makefile:4: Consider setting NOT_FOR_PLATFORM instead of PKG_SKIP_REASON depending on ${OPSYS}.")
+		"NOTE: Makefile:7: Consider setting NOT_FOR_PLATFORM instead of PKG_SKIP_REASON depending on ${OPSYS}.")
 }
 
 func (s *Suite) Test_MkLines_Check__use_list_variable_as_part_of_word(c *check.C) {
@@ -229,9 +239,14 @@ func (s *Suite) Test_MkLines_Check__use_list_variable_as_part_of_word(c *check.C
 func (s *Suite) Test_MkLines_Check__absolute_pathname_depending_on_OPSYS(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
-	mklines := t.NewMkLines("games/heretic2-demo/Makefile",
+	t.SetUpPkgsrc()
+	t.Chdir(".")
+	t.FinishSetUp()
+	mklines := t.SetUpFileMkLines("games/heretic2-demo/Makefile",
 		MkCvsID,
+		"",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
 		".if ${OPSYS} == \"DragonFly\"",
 		"TAR_CMD=\t/usr/bin/bsdtar",
 		".endif",
@@ -246,15 +261,20 @@ func (s *Suite) Test_MkLines_Check__absolute_pathname_depending_on_OPSYS(c *chec
 	// Shell commands that are specific to an operating system are probably defined
 	// and used intentionally, so even commands that are not known tools are allowed.
 	t.CheckOutputLines(
-		"WARN: games/heretic2-demo/Makefile:5: Unknown shell command \"/usr/bin/bsdtar\".")
+		"WARN: games/heretic2-demo/Makefile:8: Unknown shell command \"/usr/bin/bsdtar\".")
 }
 
 func (s *Suite) Test_MkLines_Check__indentation(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
+	t.SetUpPkgsrc()
+	t.Chdir("category/package")
+	t.FinishSetUp()
 	mklines := t.NewMkLines("options.mk",
 		MkCvsID,
+		"",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
 		". if !defined(GUARD_MK)",
 		". if ${OPSYS} == ${OPSYS}",
 		".   for i in ${FILES}",
@@ -273,27 +293,27 @@ func (s *Suite) Test_MkLines_Check__indentation(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"NOTE: options.mk:2: This directive should be indented by 0 spaces.",
-		"WARN: options.mk:2: GUARD_MK is used but not defined.",
-		"NOTE: options.mk:3: This directive should be indented by 0 spaces.",
-		"NOTE: options.mk:4: This directive should be indented by 2 spaces.",
-		"WARN: options.mk:4: FILES is used but not defined.",
-		"NOTE: options.mk:5: This directive should be indented by 4 spaces.",
-		"WARN: options.mk:5: GUARD2_MK is used but not defined.",
-		"NOTE: options.mk:6: This directive should be indented by 4 spaces.",
-		"NOTE: options.mk:7: This directive should be indented by 4 spaces.",
-		"NOTE: options.mk:8: This directive should be indented by 2 spaces.",
-		"NOTE: options.mk:9: This directive should be indented by 2 spaces.",
-		"WARN: options.mk:9: COND1 is used but not defined.",
-		"NOTE: options.mk:10: This directive should be indented by 2 spaces.",
-		"WARN: options.mk:10: COND2 is used but not defined.",
+		"NOTE: options.mk:5: This directive should be indented by 0 spaces.",
+		"WARN: options.mk:5: GUARD_MK is used but not defined.",
+		"NOTE: options.mk:6: This directive should be indented by 0 spaces.",
+		"NOTE: options.mk:7: This directive should be indented by 2 spaces.",
+		"WARN: options.mk:7: FILES is used but not defined.",
+		"NOTE: options.mk:8: This directive should be indented by 4 spaces.",
+		"WARN: options.mk:8: GUARD2_MK is used but not defined.",
+		"NOTE: options.mk:9: This directive should be indented by 4 spaces.",
+		"NOTE: options.mk:10: This directive should be indented by 4 spaces.",
 		"NOTE: options.mk:11: This directive should be indented by 2 spaces.",
-		"ERROR: options.mk:11: \".else\" does not take arguments. If you meant \"else if\", use \".elif\".",
 		"NOTE: options.mk:12: This directive should be indented by 2 spaces.",
-		"NOTE: options.mk:13: This directive should be indented by 0 spaces.",
-		"NOTE: options.mk:14: This directive should be indented by 0 spaces.",
-		"NOTE: options.mk:15: This directive should be indented by 0 spaces.",
-		"ERROR: options.mk:15: Unmatched .endif.")
+		"WARN: options.mk:12: COND1 is used but not defined.",
+		"NOTE: options.mk:13: This directive should be indented by 2 spaces.",
+		"WARN: options.mk:13: COND2 is used but not defined.",
+		"NOTE: options.mk:14: This directive should be indented by 2 spaces.",
+		"ERROR: options.mk:14: \".else\" does not take arguments. If you meant \"else if\", use \".elif\".",
+		"NOTE: options.mk:15: This directive should be indented by 2 spaces.",
+		"NOTE: options.mk:16: This directive should be indented by 0 spaces.",
+		"NOTE: options.mk:17: This directive should be indented by 0 spaces.",
+		"NOTE: options.mk:18: This directive should be indented by 0 spaces.",
+		"ERROR: options.mk:18: Unmatched .endif.")
 }
 
 // The .include directives do not need to be indented. They have the
@@ -303,12 +323,16 @@ func (s *Suite) Test_MkLines_Check__indentation(c *check.C) {
 func (s *Suite) Test_MkLines_Check__indentation_include(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
+	t.SetUpPkgsrc()
+	t.Chdir("category/package")
+	t.FinishSetUp()
 	t.CreateFileLines("included.mk")
 	mklines := t.SetUpFileMkLines("module.mk",
 		MkCvsID,
 		"",
-		".if ${PKGPATH} == \"category/package\"",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
+		".if ${PKGPATH} == \"category/nonexistent\"",
 		".include \"included.mk\"",
 		". include \"included.mk\"",
 		".  include \"included.mk\"",
@@ -318,17 +342,22 @@ func (s *Suite) Test_MkLines_Check__indentation_include(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"ERROR: ~/module.mk:3: There is no package in \"category/package\".",
-		"NOTE: ~/module.mk:5: This directive should be indented by 2 spaces.",
-		"NOTE: ~/module.mk:7: This directive should be indented by 2 spaces.")
+		// TODO: Use relative path for missing package.
+		"ERROR: module.mk:5: There is no package in \"../../category/nonexistent\".",
+		"NOTE: module.mk:7: This directive should be indented by 2 spaces.",
+		"NOTE: module.mk:9: This directive should be indented by 2 spaces.")
 }
 
 func (s *Suite) Test_MkLines_Check__unfinished_directives(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
+	t.SetUpPkgsrc()
+	t.Chdir("category/package")
+	t.FinishSetUp()
 	mklines := t.NewMkLines("opsys.mk",
 		MkCvsID,
+		"",
+		".include \"../../mk/bsd.prefs.mk\"",
 		"",
 		".for i in 1 2 3 4 5",
 		".  if ${OPSYS} == NetBSD",
@@ -338,18 +367,22 @@ func (s *Suite) Test_MkLines_Check__unfinished_directives(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
+		"ERROR: opsys.mk:EOF: .if from line 8 must be closed.",
+		"ERROR: opsys.mk:EOF: .if from line 7 must be closed.",
 		"ERROR: opsys.mk:EOF: .if from line 6 must be closed.",
-		"ERROR: opsys.mk:EOF: .if from line 5 must be closed.",
-		"ERROR: opsys.mk:EOF: .if from line 4 must be closed.",
-		"ERROR: opsys.mk:EOF: .for from line 3 must be closed.")
+		"ERROR: opsys.mk:EOF: .for from line 5 must be closed.")
 }
 
 func (s *Suite) Test_MkLines_Check__unbalanced_directives(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
+	t.SetUpPkgsrc()
+	t.Chdir("category/package")
+	t.FinishSetUp()
 	mklines := t.NewMkLines("opsys.mk",
 		MkCvsID,
+		"",
+		".include \"../../mk/bsd.prefs.mk\"",
 		"",
 		".for i in 1 2 3 4 5",
 		".  if ${OPSYS} == NetBSD",
@@ -628,6 +661,49 @@ func (s *Suite) Test_MkLines_collectVariables__no_tracing(c *check.C) {
 	mklines.collectVariables()
 
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkLines_collectVariables__BUILD_DEFS(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"",
+		"BUILD_DEFS+=\t\tBD_VAR",
+		// In practice, these variables are called *_GROUP.
+		"PKG_GROUPS_VARS+=\tGRP",
+		// In practice, these variables are called *_USER.
+		"PKG_USERS_VARS+=\tUSR")
+
+	mklines.Check()
+
+	t.CheckDeepEquals(
+		keys(mklines.buildDefs),
+		[]string{"BD_VAR", "GRP", "USR"})
+}
+
+func (s *Suite) Test_MkLines_collectVariables__find_files_and_headers(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("builtin.mk",
+		MkCvsID,
+		"",
+		"BUILTIN_FIND_FILES_VAR=\t\tX1_FILE X2_FILE",
+		"BUILTIN_FIND_HEADERS_VAR=\tX1_HEADER X2_HEADER")
+
+	mklines.Check()
+
+	t.CheckDeepEquals(
+		keys(mklines.vars.firstDef),
+		[]string{
+			"BUILTIN_FIND_FILES_VAR",
+			"BUILTIN_FIND_HEADERS_VAR",
+			"X1_FILE",
+			"X1_HEADER",
+			"X2_FILE",
+			"X2_HEADER"})
 }
 
 // Ensures that during MkLines.ForEach, the conditional variables in

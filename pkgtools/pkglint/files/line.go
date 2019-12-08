@@ -42,12 +42,12 @@ type Location struct {
 	lastLine  int32 // usually the same as firstLine, may differ in Makefiles
 }
 
-func (loc *Location) String() string {
-	return loc.Filename.String() + ":" + loc.Linenos()
-}
-
 func NewLocation(filename CurrPath, firstLine, lastLine int) Location {
 	return Location{filename, int32(firstLine), int32(lastLine)}
+}
+
+func (loc *Location) String() string {
+	return loc.Filename.String() + ":" + loc.Linenos()
 }
 
 func (loc *Location) Linenos() string {
@@ -61,6 +61,10 @@ func (loc *Location) Linenos() string {
 	default:
 		return sprintf("%d--%d", loc.firstLine, loc.lastLine)
 	}
+}
+
+func (loc *Location) File(rel RelPath) CurrPath {
+	return loc.Filename.DirNoClean().JoinNoClean(rel)
 }
 
 // Line represents a line of text from a file.
@@ -102,25 +106,24 @@ func NewLineWhole(filename CurrPath) *Line {
 	return NewLineMulti(filename, 0, 0, "", nil)
 }
 
-// RefTo returns a reference to another line,
+// RelLine returns a reference to another line,
 // which can be in the same file or in a different file.
-func (line *Line) RefTo(other *Line) string {
-	return line.RefToLocation(other.Location)
+func (line *Line) RelLine(other *Line) string {
+	return line.RelLocation(other.Location)
 }
 
-func (line *Line) RefToLocation(other Location) string {
+func (line *Line) RelLocation(other Location) string {
 	if line.Filename != other.Filename {
-		return line.PathToFile(other.Filename).String() + ":" + other.Linenos()
+		return line.Rel(other.Filename).String() + ":" + other.Linenos()
 	}
 	return "line " + other.Linenos()
 }
 
-// PathToFile returns the relative path from this line to the given file path.
+// Rel returns the relative path from this line to the given file path.
 // This is typically used for arguments in diagnostics, which should always be
 // relative to the line with which the diagnostic is associated.
-func (line *Line) PathToFile(filePath CurrPath) Path {
-	// FIXME: consider DirNoClean
-	return G.Pkgsrc.Relpath(line.Filename.DirClean(), filePath)
+func (line *Line) Rel(other CurrPath) RelPath {
+	return G.Pkgsrc.Relpath(line.Filename.DirNoClean(), other)
 }
 
 func (line *Line) IsMultiline() bool {
