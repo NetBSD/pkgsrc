@@ -248,7 +248,7 @@ func (p MkLineParser) parseSysinclude(line *Line, splitResult mkLineSplitResult)
 		return nil
 	}
 
-	return &MkLine{line, splitResult, &mkLineInclude{directive == "include", true, indent, NewPath(includedFile), nil}}
+	return &MkLine{line, splitResult, &mkLineInclude{directive == "include", true, indent, NewRelPathString(includedFile), nil}}
 }
 
 func (p MkLineParser) parseDependency(line *Line, splitResult mkLineSplitResult) *MkLine {
@@ -290,7 +290,7 @@ func (p MkLineParser) parseMergeConflict(line *Line, splitResult mkLineSplitResu
 // but hasComment will always be false, and comment will always be empty.
 // This behavior is useful for shell commands (which are indented with a
 // single tab).
-func (MkLineParser) split(line *Line, text string, trimComment bool) mkLineSplitResult {
+func (MkLineParser) split(diag Autofixer, text string, trimComment bool) mkLineSplitResult {
 	assert(!hasPrefix(text, "\t"))
 
 	var mainWithSpaces, comment string
@@ -300,7 +300,7 @@ func (MkLineParser) split(line *Line, text string, trimComment bool) mkLineSplit
 		mainWithSpaces = text
 	}
 
-	parser := NewMkLexer(mainWithSpaces, line)
+	parser := NewMkLexer(mainWithSpaces, diag)
 	lexer := parser.lexer
 
 	parseOther := func() string {

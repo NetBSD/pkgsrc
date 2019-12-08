@@ -2,8 +2,11 @@ package pkglint
 
 import (
 	"errors"
+	"fmt"
 	"gopkg.in/check.v1"
 	"os"
+	"reflect"
+	"sort"
 	"testing"
 	"time"
 )
@@ -104,12 +107,12 @@ func (s *Suite) Test_isEmptyDir__and_getSubdirs(c *check.C) {
 
 	if dir := t.File("."); true {
 		t.CheckEquals(isEmptyDir(dir), true)
-		t.CheckDeepEquals(getSubdirs(dir), []Path(nil))
+		t.CheckDeepEquals(getSubdirs(dir), []RelPath(nil))
 
 		t.CreateFileLines("somedir/file")
 
 		t.CheckEquals(isEmptyDir(dir), false)
-		t.CheckDeepEquals(getSubdirs(dir), []Path{"somedir"})
+		t.CheckDeepEquals(getSubdirs(dir), []RelPath{"somedir"})
 	}
 
 	if absent := t.File("nonexistent"); true {
@@ -129,7 +132,27 @@ func (s *Suite) Test_getSubdirs(c *check.C) {
 	t.CreateFileLines("empty/file")
 	c.Check(os.Remove(t.File("empty/file").String()), check.IsNil)
 
-	t.CheckDeepEquals(getSubdirs(t.File(".")), []Path{"subdir"})
+	t.CheckDeepEquals(getSubdirs(t.File(".")), []RelPath{"subdir"})
+}
+
+func (s *Suite) Test_isIgnoredFilename(c *check.C) {
+	t := s.Init(c)
+
+	test := func(filename string, isIgnored bool) {
+		t.CheckEquals(isIgnoredFilename(filename), isIgnored)
+	}
+
+	test("filename.mk", false)
+	test(".gitignore", false)
+	test(".git", true)
+	test(".gitattributes", false)
+	test("CVS", true)
+	test(".svn", true)
+	test(".hg", true)
+
+	// There is actually an IDEA plugin for pkgsrc.
+	// See https://github.com/rillig/intellij-pkgsrc.
+	test(".idea", true)
 }
 
 func (s *Suite) Test_isLocallyModified(c *check.C) {
@@ -401,6 +424,38 @@ func emptyToNil(slice []string) []string {
 	return slice
 }
 
+func (s *Suite) Test_containsVarRef(c *check.C) {
+	t := s.Init(c)
+
+	test := func(str string, containsVar bool) {
+		// TODO: rename to containsVarUse
+		t.CheckEquals(containsVarRef(str), containsVar)
+	}
+
+	test("", false)
+	test("$", false) // A syntax error.
+
+	// See the bmake manual page.
+	test("$>", false) // FIXME: true; .ALLSRC
+	test("$!", false) // FIXME: true; .ARCHIVE
+	test("$<", false) // FIXME: true; .IMPSRC
+	test("$%", false) // FIXME: true; .MEMBER
+	test("$?", false) // FIXME: true; .OODATE
+	test("$*", false) // FIXME: true; .PREFIX
+	test("$@", false) // FIXME: true; .TARGET
+
+	test("$V", false) // FIXME: true
+	test("$v", false) // FIXME: true
+	test("${Var}", true)
+	test("${VAR.${param}}", true)
+	test("$(VAR)", true)
+
+	test("$$", false)     // An escaped dollar character.
+	test("$$(VAR)", true) // FIXME: false; An escaped dollar character; probably a subshell.
+	test("$${VAR}", true) // FIXME: false; An escaped dollar character; probably a shell variable.
+	test("$$VAR", false)  // An escaped dollar character.
+}
+
 func (s *Suite) Test_hasAlnumPrefix(c *check.C) {
 	t := s.Init(c)
 
@@ -553,6 +608,10 @@ func (s *Suite) Test_Scope_FirstDefinition(c *check.C) {
 	// These sneaky variables with implicit definition are an edge
 	// case that only few people actually know. It's better that way.
 	t.Check(scope.FirstDefinition("SNEAKY"), check.IsNil)
+
+	t.CheckOutputLines(
+		"ERROR: fname.mk:3: Assignment modifiers like \":=\" " +
+			"must not be used at all.")
 }
 
 func (s *Suite) Test_Scope_Commented(c *check.C) {
@@ -1091,4 +1150,23 @@ func (s *Suite) Test_LazyStringBuilder_Reset(c *check.C) {
 	t.CheckEquals(sb.String(), "x")
 	t.CheckEquals(sb.usingBuf, true)
 	t.CheckDeepEquals(sb.buf, []byte("x"))
+}
+
+// sortedKeys takes the keys from an arbitrary map,
+// converts them to strings if necessary,
+// and then returns them sorted.
+//
+// It is only available during tests since it uses reflection.
+func keys(m interface{}) []string {
+	var keys []string
+	for _, key := range reflect.ValueOf(m).MapKeys() {
+		switch key := key.Interface().(type) {
+		case fmt.Stringer:
+			keys = append(keys, key.String())
+		default:
+			keys = append(keys, key.(string))
+		}
+	}
+	sort.Strings(keys)
+	return keys
 }

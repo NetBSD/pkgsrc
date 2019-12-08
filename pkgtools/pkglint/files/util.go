@@ -254,7 +254,7 @@ func isEmptyDir(filename CurrPath) bool {
 		if isIgnoredFilename(name) {
 			continue
 		}
-		if dirent.IsDir() && isEmptyDir(filename.JoinNoClean(NewPath(name))) {
+		if dirent.IsDir() && isEmptyDir(filename.JoinNoClean(NewRelPathString(name))) {
 			continue
 		}
 		return false
@@ -262,17 +262,17 @@ func isEmptyDir(filename CurrPath) bool {
 	return true
 }
 
-func getSubdirs(filename CurrPath) []Path {
+func getSubdirs(filename CurrPath) []RelPath {
 	dirents, err := filename.ReadDir()
 	if err != nil {
 		NewLineWhole(filename).Fatalf("Cannot be read: %s", err)
 	}
 
-	var subdirs []Path
+	var subdirs []RelPath
 	for _, dirent := range dirents {
 		name := dirent.Name()
-		if dirent.IsDir() && !isIgnoredFilename(name) && !isEmptyDir(filename.JoinNoClean(NewPath(name))) {
-			subdirs = append(subdirs, NewPath(name))
+		if dirent.IsDir() && !isIgnoredFilename(name) && !isEmptyDir(filename.JoinNoClean(NewRelPathString(name))) {
+			subdirs = append(subdirs, NewRelPathString(name))
 		}
 	}
 	return subdirs
@@ -280,7 +280,7 @@ func getSubdirs(filename CurrPath) []Path {
 
 func isIgnoredFilename(filename string) bool {
 	switch filename {
-	case ".", "..", "CVS", ".svn", ".git", ".hg", ".idea":
+	case "CVS", ".svn", ".git", ".hg", ".idea":
 		return true
 	}
 	return hasPrefix(filename, ".#")
@@ -431,6 +431,10 @@ func toInt(s string, def int) int {
 }
 
 // mkopSubst evaluates make(1)'s :S substitution operator.
+// It does not resolve any variables.
+// FIXME: Move this function to the MkVarUseModifier type.
+// FIXME: Clearly signal that substituting is not possible if either
+//  of the strings contains a variable reference.
 func mkopSubst(s string, left bool, from string, right bool, to string, flags string) string {
 	re := regex.Pattern(condStr(left, "^", "") + regexp.QuoteMeta(from) + condStr(right, "$", ""))
 	done := false
@@ -555,12 +559,14 @@ func (s *Scope) Define(varname string, mkline *MkLine) {
 		// see MkLines.collectDocumentedVariables.
 		if mkline.IsVarassign() {
 			switch mkline.Op() {
-			case opAssign, opAssignEval, opAssignShell:
-				s.value[name] = mkline.Value()
 			case opAssignAppend:
 				s.value[name] += " " + mkline.Value()
 			case opAssignDefault:
 				// No change to the value.
+			case opAssignShell:
+				s.value[name] = mkline.Value() // FIXME: Really?
+			default:
+				s.value[name] = mkline.Value()
 			}
 		}
 	}
@@ -665,7 +671,7 @@ func (s *Scope) FirstDefinition(varname string) *MkLine {
 		lastLine := s.LastDefinition(varname)
 		if trace.Tracing && lastLine != mkline {
 			trace.Stepf("%s: FirstDefinition differs from LastDefinition in %s.",
-				mkline.String(), mkline.RefTo(lastLine))
+				mkline.String(), mkline.RelMkLine(lastLine))
 		}
 		return mkline
 	}
@@ -836,19 +842,30 @@ func naturalLess(str1, str2 string) bool {
 	return len1 < len2
 }
 
-// IsPrefs returns whether the given file, when included, loads the user
+// LoadsPrefs returns whether the given file, when included, loads the user
 // preferences.
-func IsPrefs(filename Path) bool {
+func LoadsPrefs(filename RelPath) bool {
 	switch filename.Base() {
 	case // See https://github.com/golang/go/issues/28057
 		"bsd.prefs.mk",         // in mk/
 		"bsd.fast.prefs.mk",    // in mk/
 		"bsd.builtin.mk",       // in mk/buildlink3/
 		"pkgconfig-builtin.mk", // in mk/buildlink3/
+		"pkg-build-options.mk", // in mk/
+		"compiler.mk",          // in mk/
+		"options.mk",           // in package directories
 		"bsd.options.mk":       // in mk/
 		return true
 	}
-	return false
+
+	// Just assume that every pkgsrc infrastructure file includes
+	// bsd.prefs.mk, at least indirectly.
+	return filename.ContainsPath("mk")
+}
+
+func IsPrefs(filename RelPath) bool {
+	base := filename.Base()
+	return base == "bsd.prefs.mk" || base == "bsd.fast.prefs.mk"
 }
 
 // FileCache reduces the IO load for commonly loaded files by about 50%,

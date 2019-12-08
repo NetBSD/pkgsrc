@@ -371,7 +371,7 @@ func (s *Suite) Test_Pkglint_Check__outside(c *check.C) {
 	// pkglint will exit with a fatal error message since it doesn't
 	// know where to load the infrastructure files from.
 	t.CheckOutputLines(
-		"ERROR: ~: Cannot determine the pkgsrc root directory for \"~\".")
+		"ERROR: Cannot determine the pkgsrc root directory for \"~\".")
 }
 
 func (s *Suite) Test_Pkglint_Check__empty_directory(c *check.C) {
@@ -1272,7 +1272,7 @@ func (s *Suite) Test_InterPackage_Bl3__same_identifier(c *check.C) {
 		"PKGNAME=\t${DISTNAME:@v@${v}@}") // Make the package name non-obvious.
 	t.SetUpPackage("category/package2",
 		"PKGNAME=\t${DISTNAME:@v@${v}@}") // Make the package name non-obvious.
-	t.CreateFileDummyBuildlink3("category/package1/buildlink3.mk")
+	t.CreateFileBuildlink3("category/package1/buildlink3.mk")
 	t.Copy("category/package1/buildlink3.mk", "category/package2/buildlink3.mk")
 	t.Chdir(".")
 	t.FinishSetUp()

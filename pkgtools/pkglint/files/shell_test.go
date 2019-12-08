@@ -5,6 +5,45 @@ import (
 	"strings"
 )
 
+// When pkglint is called without -Wextra, the check for unknown shell
+// commands is disabled, as it is still unreliable. As of December 2019
+// there are around 500 warnings in pkgsrc, and several of them are wrong.
+func (s *Suite) Test_SimpleCommandChecker_checkCommandStart__unknown_default(c *check.C) {
+	t := s.Init(c)
+
+	test := func(commandLineArg string, diagnostics ...string) {
+		t.SetUpCommandLine(commandLineArg)
+		mklines := t.NewMkLines("Makefile",
+			MkCvsID,
+			"",
+			"MY_TOOL.i386=\t${PREFIX}/bin/tool-i386",
+			"MY_TOOL.x86_64=\t${PREFIX}/bin/tool-x86_64",
+			"",
+			"pre-configure:",
+			"\t${MY_TOOL.amd64} -e 'print 12345'",
+			"\t${UNKNOWN_TOOL}")
+
+		mklines.Check()
+
+		t.CheckOutput(diagnostics)
+	}
+
+	t.SetUpPackage("category/package")
+	G.Pkg = NewPackage(t.File("category/package"))
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	test(".", // Override the default -Wall option.
+		nil...)
+
+	test("-Wall,no-extra",
+		nil...)
+
+	test("-Wall",
+		"WARN: Makefile:8: Unknown shell command \"${UNKNOWN_TOOL}\".",
+		"WARN: Makefile:8: UNKNOWN_TOOL is used but not defined.")
+}
+
 func (s *Suite) Test_SimpleCommandChecker_handleForbiddenCommand(c *check.C) {
 	t := s.Init(c)
 
@@ -111,6 +150,33 @@ func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable__from_package(c 
 	G.Check(pkg)
 
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_SimpleCommandChecker_handleShellBuiltin(c *check.C) {
+	t := s.Init(c)
+
+	test := func(command string, isBuiltin bool) {
+		token := NewShToken(command, NewShAtom(shtText, command, shqPlain))
+		simpleCommand := &MkShSimpleCommand{Name: token}
+		scc := NewSimpleCommandChecker(nil, simpleCommand, RunTime)
+		t.CheckEquals(scc.handleShellBuiltin(), isBuiltin)
+	}
+
+	test(":", true)
+	test("break", true)
+	test("cd", true)
+	test("continue", true)
+	test("eval", true)
+	test("exec", true)
+	test("exit", true)
+	test("export", true)
+	test("read", true)
+	test("set", true)
+	test("shift", true)
+	test("umask", true)
+	test("unset", true)
+
+	test("git", false)
 }
 
 func (s *Suite) Test_SimpleCommandChecker_checkRegexReplace(c *check.C) {
@@ -436,8 +502,10 @@ func (s *Suite) Test_ShellLineChecker_canFail(c *check.C) {
 	t.SetUpTool("dirname", "", AtRunTime)
 	t.SetUpTool("echo", "", AtRunTime)
 	t.SetUpTool("env", "", AtRunTime)
+	t.SetUpTool("ggrep", "", AtRunTime)
 	t.SetUpTool("grep", "GREP", AtRunTime)
 	t.SetUpTool("sed", "", AtRunTime)
+	t.SetUpTool("gsed", "", AtRunTime)
 	t.SetUpTool("touch", "", AtRunTime)
 	t.SetUpTool("tr", "tr", AtRunTime)
 	t.SetUpTool("true", "TRUE", AtRunTime)
@@ -474,6 +542,30 @@ func (s *Suite) Test_ShellLineChecker_canFail(c *check.C) {
 	test("${ECHO_MSG} \"Message\"",
 		nil...)
 
+	test("${PHASE_MSG} \"Message\"",
+		nil...)
+
+	test("${STEP_MSG} \"Message\"",
+		nil...)
+
+	test("${INFO_MSG} \"Message\"",
+		nil...)
+
+	test("${WARNING_MSG} \"Message\"",
+		nil...)
+
+	test("${ERROR_MSG} \"Message\"",
+		nil...)
+
+	test("${WARNING_CAT} \"Message\"",
+		nil...)
+
+	test("${ERROR_CAT} \"Message\"",
+		nil...)
+
+	test("${DO_NADA} \"Message\"",
+		nil...)
+
 	test("${FAIL_MSG} \"Failure\"",
 		"WARN: Makefile:3: Please switch to \"set -e\" mode before using a semicolon "+
 			"(after \"${FAIL_MSG} \\\"Failure\\\"\") to separate commands.")
@@ -490,6 +582,24 @@ func (s *Suite) Test_ShellLineChecker_canFail(c *check.C) {
 
 	test("sed s,in,out,",
 		nil...)
+
+	test("gsed -e s,in,out,",
+		nil...)
+
+	test("gsed s,in,out,",
+		nil...)
+
+	test("gsed s,in,out, filename",
+		"WARN: Makefile:3: Please switch to \"set -e\" mode "+
+			"before using a semicolon (after \"gsed s,in,out, filename\") "+
+			"to separate commands.")
+
+	test("ggrep input",
+		nil...)
+
+	test("ggrep pattern file...",
+		"WARN: Makefile:3: Please switch to \"set -e\" mode before using a semicolon "+
+			"(after \"ggrep pattern file...\") to separate commands.")
 
 	test("grep input",
 		nil...)
@@ -522,6 +632,9 @@ func (s *Suite) Test_ShellLineChecker_canFail(c *check.C) {
 		nil...)
 
 	test("dirname dir/file",
+		nil...)
+
+	test("tr A-Z a-z",
 		nil...)
 }
 
@@ -604,7 +717,7 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine(c *check.C) {
 
 		// ShellLineChecker.checkVaruseToken
 		//     MkLineChecker.CheckVaruse
-		//         MkLineChecker.checkVarUseQuoting
+		//         MkVarUseChecker.checkQuoting
 		"WARN: filename.mk:1: Please use ${CFLAGS:M*:Q} instead of ${CFLAGS:Q} "+
 			"and make sure the variable appears outside of any quoting characters.")
 
@@ -1000,8 +1113,11 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__install_option_d(c 
 func (s *Suite) Test_ShellLineChecker_checkHiddenAndSuppress(c *check.C) {
 	t := s.Init(c)
 
+	t.SetUpVartypes()
 	t.SetUpTool("echo", "ECHO", AtRunTime)
 	t.SetUpTool("ls", "LS", AtRunTime)
+	t.SetUpTool("mkdir", "MKDIR", AtRunTime)
+	t.SetUpTool("printf", "PRINTF", AtRunTime)
 	mklines := t.NewMkLines("Makefile",
 		MkCvsID,
 		"",
@@ -1014,13 +1130,31 @@ func (s *Suite) Test_ShellLineChecker_checkHiddenAndSuppress(c *check.C) {
 		"\t@ls 'may be hidden'",
 		"",
 		"pre-configure:",
-		"\t@")
+		"\t@",
+		"\t@mkdir ${WRKSRC}",
+		"\t@${DELAYED_ERROR_MSG} 'ok'",
+		"\t@${DELAYED_WARNING_MSG} 'ok'",
+		"\t@${DO_NADA} 'ok'",
+		"\t@${ECHO} 'ok'",
+		"\t@${ECHO_MSG} 'ok'",
+		"\t@${ECHO_N} 'ok'",
+		"\t@${ERROR_CAT} 'ok'",
+		"\t@${ERROR_MSG} 'ok'",
+		"\t@${FAIL_MSG} 'ok'",
+		"\t@${INFO_MSG} 'ok'",
+		"\t@${PHASE_MSG} 'ok'",
+		"\t@${PRINTF} 'ok'",
+		"\t@${SHCOMMENT} 'ok'",
+		"\t@${STEP_MSG} 'ok'",
+		"\t@${WARNING_CAT} 'ok'",
+		"\t@${WARNING_MSG} 'ok'")
 
 	mklines.Check()
 
 	// No warning about the hidden ls since the target names start
 	// with "show-" or end with "-message".
-	t.CheckOutputEmpty()
+	t.CheckOutputLines(
+		"WARN: Makefile:13: The shell command \"mkdir\" should not be hidden.")
 }
 
 func (s *Suite) Test_ShellLineChecker_checkHiddenAndSuppress__no_tracing(c *check.C) {
@@ -1419,6 +1553,15 @@ func (s *Suite) Test_ShellLineChecker_unescapeBackticks(c *check.C) {
 		"WARN: filename.mk:1: Backslashes should be doubled inside backticks.",
 		"WARN: filename.mk:1: Double quotes inside backticks inside double quotes are error prone.",
 		"WARN: filename.mk:1: Double quotes inside backticks inside double quotes are error prone.")
+
+	// The inner shell command in the backticks is malformed since it
+	// contains an unpaired backtick.
+	test("`echo \\``rest", "echo `", "rest")
+
+	// Enclosing the inner backtick in single quotes makes it valid.
+	test("`echo '\\`'`rest", "echo '`'", "rest")
+
+	test("`echo \\$$var`rest", "echo $$var", "rest")
 }
 
 func (s *Suite) Test_ShellLineChecker_unescapeBackticks__dquotBacktDquot(c *check.C) {
@@ -1541,21 +1684,66 @@ func (s *Suite) Test_ShellLineChecker_variableNeedsQuoting__integration(c *check
 func (s *Suite) Test_ShellLineChecker_checkInstallCommand(c *check.C) {
 	t := s.Init(c)
 
-	mklines := t.NewMkLines("filename.mk",
-		"\t# dummy")
-	mklines.target = "do-install"
+	test := func(lines ...string) {
+		var cmds []string
+		i := 0
+		for i < len(lines) && lines[i] != "" {
+			cmds = append(cmds, "\t"+lines[i])
+			i++
+		}
+		diagnostics := lines[i+1:]
 
-	ck := NewShellLineChecker(mklines, mklines.mklines[0])
+		mklines := t.NewMkLines("filename.mk", cmds...)
+		mklines.target = "do-install"
 
-	ck.checkInstallCommand("sed")
+		mklines.ForEach(func(mkline *MkLine) {
+			ck := NewShellLineChecker(mklines, mkline)
+			ck.checkInstallCommand(mkline.ShellCommand())
+		})
 
-	t.CheckOutputLines(
-		"WARN: filename.mk:1: The shell command \"sed\" should not be used in the install phase.")
+		t.CheckOutput(diagnostics)
+	}
 
-	ck.checkInstallCommand("cp")
+	test(
+		"sed",
+		"${SED}",
+		"",
+		"WARN: filename.mk:1: The shell command \"sed\" "+
+			"should not be used in the install phase.",
+		"WARN: filename.mk:2: The shell command \"${SED}\" "+
+			"should not be used in the install phase.")
 
-	t.CheckOutputLines(
-		"WARN: filename.mk:1: ${CP} should not be used to install files.")
+	test(
+		"tr",
+		"${TR}",
+		"",
+		"WARN: filename.mk:1: The shell command \"tr\" "+
+			"should not be used in the install phase.",
+		"WARN: filename.mk:2: The shell command \"${TR}\" "+
+			"should not be used in the install phase.")
+
+	test(
+		"cp",
+		"${CP}",
+		"",
+		"WARN: filename.mk:1: ${CP} should not be used to install files.",
+		"WARN: filename.mk:2: ${CP} should not be used to install files.")
+
+	test(
+		"${INSTALL}",
+		"${INSTALL_DATA}",
+		"${INSTALL_DATA_DIR}",
+		"${INSTALL_LIB}",
+		"${INSTALL_LIB_DIR}",
+		"${INSTALL_MAN}",
+		"${INSTALL_MAN_DIR}",
+		"${INSTALL_PROGRAM}",
+		"${INSTALL_PROGRAM_DIR}",
+		"${INSTALL_SCRIPT}",
+		"${LIBTOOL}",
+		"${LN}",
+		"${PAX}",
+		"")
 }
 
 func (s *Suite) Test_ShellLineChecker_checkMultiLineComment(c *check.C) {

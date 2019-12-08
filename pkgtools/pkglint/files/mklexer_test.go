@@ -1,6 +1,34 @@
 package pkglint
 
-import "gopkg.in/check.v1"
+import (
+	"gopkg.in/check.v1"
+	"netbsd.org/pkglint/textproc"
+)
+
+func (s *Suite) Test_NewMkLexer__with_diag(c *check.C) {
+	t := s.Init(c)
+
+	diag := t.NewLine("filename.mk", 123, "")
+
+	lex := NewMkLexer("${", diag)
+
+	use := lex.VarUse()
+	t.CheckDeepEquals(use, NewMkVarUse(""))
+	t.CheckEquals(lex.Rest(), "")
+	t.CheckOutputLines(
+		"WARN: filename.mk:123: Missing closing \"}\" for \"\".")
+}
+
+func (s *Suite) Test_NewMkLexer__without_diag(c *check.C) {
+	t := s.Init(c)
+
+	lex := NewMkLexer("${", nil)
+
+	use := lex.VarUse()
+	t.CheckDeepEquals(use, NewMkVarUse(""))
+	t.CheckEquals(lex.Rest(), "")
+	t.CheckOutputEmpty()
+}
 
 func (s *Suite) Test_MkLexer_MkTokens(c *check.C) {
 	t := s.Init(c)
@@ -79,6 +107,7 @@ func (s *Suite) Test_MkLexer_VarUse(c *check.C) {
 	varuse := b.VaruseToken
 	varuseText := b.VaruseTextToken
 
+	// FIXME: This function does much more than necessary to test VarUse.
 	testRest := func(input string, expectedTokens []*MkToken, expectedRest string, diagnostics ...string) {
 		line := t.NewLines("Test_MkLexer_VarUse.mk", input).Lines[0]
 		p := NewMkLexer(input, line)
@@ -179,10 +208,13 @@ func (s *Suite) Test_MkLexer_VarUse(c *check.C) {
 	test("${PKGNAME:C/-[0-9].*$/-[0-9]*/}",
 		varuse("PKGNAME", "C/-[0-9].*$/-[0-9]*/"))
 
-	// TODO: Does the $@ refer to ${.TARGET}, or is it just an unmatchable
-	//  regular expression?
-	test("${PKGNAME:C/$@/target?/}",
-		varuse("PKGNAME", "C/$@/target?/"))
+	// The $@ in the :S modifier refers to ${.TARGET}.
+	// When used in a target called "target",
+	// the whole expression evaluates to "-replaced-".
+	test("${:U-target-:S/$@/replaced/:Q}",
+		varuse("", "U-target-", "S/$@/replaced/", "Q"))
+	test("${:U-target-:C/$@/replaced/:Q}",
+		varuse("", "U-target-", "C/$@/replaced/", "Q"))
 
 	test("${PKGNAME:S/py${_PYTHON_VERSION}/py${i}/:C/-[0-9].*$/-[0-9]*/}",
 		varuse("PKGNAME", "S/py${_PYTHON_VERSION}/py${i}/", "C/-[0-9].*$/-[0-9]*/"))
@@ -295,23 +327,6 @@ func (s *Suite) Test_MkLexer_VarUse(c *check.C) {
 	test("${VAR:Sahara}",
 		varuse("VAR", "Sahara"))
 
-	// The separator character can be left out, which means empty.
-	test("${VAR:ts}",
-		varuse("VAR", "ts"))
-
-	// The separator character can be a long octal number.
-	test("${VAR:ts\\000012}",
-		varuse("VAR", "ts\\000012"))
-
-	// Or even decimal.
-	test("${VAR:ts\\124}",
-		varuse("VAR", "ts\\124"))
-
-	// The :ts modifier only takes single-character separators.
-	test("${VAR:ts---}",
-		varuse("VAR", "ts---"),
-		"WARN: Test_MkLexer_VarUse.mk:1: Invalid separator \"---\" for :ts modifier of \"VAR\".")
-
 	test("$<",
 		varuseText("$<", "<")) // Same as ${.IMPSRC}
 
@@ -377,38 +392,9 @@ func (s *Suite) Test_MkLexer_VarUse(c *check.C) {
 	test("${arbitrary text}",
 		varuse("arbitrary text"),
 		"WARN: Test_MkLexer_VarUse.mk:1: Invalid part \" text\" after variable name \"arbitrary\".")
-}
 
-func (s *Suite) Test_MkLexer_VarUse__ambiguous(c *check.C) {
-	t := s.Init(c)
-	b := NewMkTokenBuilder()
-
-	t.SetUpCommandLine("--explain")
-
-	line := t.NewLine("module.mk", 123, "\t$Varname $X")
-	p := NewMkLexer(line.Text[1:], line)
-
-	tokens, rest := p.MkTokens()
-	t.CheckDeepEquals(tokens, b.Tokens(
-		b.VaruseTextToken("$V", "V"),
-		b.TextToken("arname "),
-		b.VaruseTextToken("$X", "X")))
-	t.CheckEquals(rest, "")
-
-	t.CheckOutputLines(
-		"ERROR: module.mk:123: $Varname is ambiguous. Use ${Varname} if you mean a Make variable or $$Varname if you mean a shell variable.",
-		"",
-		"\tOnly the first letter after the dollar is the variable name.",
-		"\tEverything following it is normal text, even if it looks like a",
-		"\tvariable name to human readers.",
-		"",
-		"WARN: module.mk:123: $X is ambiguous. Use ${X} if you mean a Make variable or $$X if you mean a shell variable.",
-		"",
-		"\tIn its current form, this variable is parsed as a Make variable. For",
-		"\thuman readers though, $x looks more like a shell variable than a",
-		"\tMake variable, since Make variables are usually written using braces",
-		"\t(BSD-style) or parentheses (GNU-style).",
-		"")
+	test("${:!command!:Q}",
+		varuse("", "!command!", "Q"))
 }
 
 // Pkglint can replace $(VAR) with ${VAR}. It doesn't look at all components
@@ -520,6 +506,35 @@ func (s *Suite) Test_MkLexer_varUseText(c *check.C) {
 	test("a\\\\:a", "a\\\\")
 }
 
+func (s *Suite) Test_MkLexer_varUseModifierSysV(c *check.C) {
+	t := s.Init(c)
+
+	test := func(input string, closing byte, mod, modNoVar string, rest string, diagnostics ...string) {
+		diag := t.NewLine("filename.mk", 123, "")
+		lex := NewMkLexer(input, diag)
+
+		actualMod, actualModNoVar := lex.varUseModifierSysV(closing)
+
+		t.CheckDeepEquals(
+			[]interface{}{actualMod, actualModNoVar, lex.Rest()},
+			[]interface{}{mod, modNoVar, rest})
+		t.CheckOutput(diagnostics)
+	}
+
+	// The shortest possible SysV substitution:
+	// replace nothing with nothing.
+	test(":=}rest", '}',
+		":=", ":=", "}rest",
+		nil...)
+
+	// Parsing the SysV modifier produces no parse error.
+	// This will be done by the surrounding VarUse when it doesn't find
+	// the closing parenthesis (in this case, or usually a brace).
+	test(":=}rest", ')',
+		":=}rest", ":=}rest", "",
+		nil...)
+}
+
 func (s *Suite) Test_MkLexer_VarUseModifiers(c *check.C) {
 	t := s.Init(c)
 
@@ -555,12 +570,38 @@ func (s *Suite) Test_MkLexer_VarUseModifiers(c *check.C) {
 	// variable name, in this case BUILD_DIRS.
 	test("${BUILD_DIRS:[3]:L}", varUse("BUILD_DIRS", "[3]", "L"))
 
-	test("${PATH:ts::Q}", varUse("PATH", "ts:", "Q"))
-
 	// The :Q at the end is part of the right-hand side of the = modifier.
 	// It does not quote anything.
 	// See devel/bmake/files/var.c:/^VarGetPattern/.
-	test("${VAR:old=new:Q}", varUse("VAR", "old=new", "Q")) // FIXME
+	test("${VAR:old=new:Q}", varUse("VAR", "old=new:Q"),
+		"WARN: Makefile:20: The text \":Q\" looks like a modifier but isn't.")
+}
+
+func (s *Suite) Test_MkLexer_varUseModifier(c *check.C) {
+	t := s.Init(c)
+
+	p := NewMkLexer("${VAR:R:E:Ox:tA:tW:tw}", nil)
+
+	varUse := p.VarUse()
+
+	t.CheckDeepEquals(varUse.modifiers, []MkVarUseModifier{
+		{"R"}, {"E"}, {"Ox"}, {"tA"}, {"tW"}, {"tw"}})
+}
+
+func (s *Suite) Test_MkLexer_varUseModifier__S_parse_error(c *check.C) {
+	t := s.Init(c)
+
+	diag := t.NewLine("filename.mk", 123, "")
+	p := NewMkLexer("S,}", diag)
+
+	mod := p.varUseModifier("VAR", '}')
+
+	t.CheckEquals(mod, "")
+	// FIXME: The "S," has just disappeared.
+	t.CheckEquals(p.Rest(), "}")
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:123: Invalid variable modifier \"S,\" for \"VAR\".")
 }
 
 func (s *Suite) Test_MkLexer_varUseModifier__invalid_ts_modifier_with_warning(c *check.C) {
@@ -663,7 +704,7 @@ func (s *Suite) Test_MkLexer_varUseModifier__varuse_in_malformed_modifier(c *che
 func (s *Suite) Test_MkLexer_varUseModifier__eq_suffix_replacement(c *check.C) {
 	t := s.Init(c)
 
-	test := func(input, modifier, rest string) {
+	test := func(input, modifier, rest string, diagnostics ...string) {
 		line := t.NewLine("filename.mk", 123, "")
 		p := NewMkLexer(input, line)
 
@@ -671,23 +712,119 @@ func (s *Suite) Test_MkLexer_varUseModifier__eq_suffix_replacement(c *check.C) {
 
 		t.CheckDeepEquals(actual, modifier)
 		t.CheckEquals(p.Rest(), rest)
+		t.CheckOutput(diagnostics)
 	}
 
 	test("%.c=%.o", "%.c=%.o", "")
-	test("%\\:c=%.o", "%\\:c=%.o", "") // FIXME: remove the escaping.
-	test("%\\:c=%.o", "%\\:c=%.o", "") // FIXME: remove the escaping.
+	test("%\\:c=%.o", "%\\:c=%.o", "", // XXX: maybe someday remove the escaping.
+		"WARN: filename.mk:123: The text \":c=%.o\" looks like a modifier but isn't.")
+	test("%\\:c=%.o", "%\\:c=%.o", "", // XXX: maybe someday remove the escaping.
+		"WARN: filename.mk:123: The text \":c=%.o\" looks like a modifier but isn't.")
 
 	// The backslashes are only removed before parentheses,
 	// braces and colons; see devel/bmake/files/var.c:/^VarGetPattern/
 	test(".\\a\\b\\c=.abc", ".\\a\\b\\c=.abc", "")
 
 	// See devel/bmake/files/var.c:/^#define IS_A_MATCH/.
-	// FIXME: The :rest must be part of the replacement.
-	test("%.c=%.o:rest", "%.c=%.o", ":rest")
+	test("%.c=%.o:rest", "%.c=%.o:rest", "",
+		"WARN: filename.mk:123: The text \":rest\" looks like a modifier but isn't.")
 	test("\\}\\\\\\$=", "\\}\\\\\\$=", "")
-	// FIXME: test("\\}\\\\\\$=", "}\\$=", "")
+	// XXX: maybe someday test("\\}\\\\\\$=", "}\\$=", "")
 	test("=\\}\\\\\\$\\&", "=\\}\\\\\\$\\&", "")
-	// FIXME: test("=\\}\\\\\\$\\&", "=}\\$&", "")
+	// XXX: maybe someday test("=\\}\\\\\\$\\&", "=}\\$&", "")
+
+	// The colon in the nested variable expression does not count as
+	// a separator for parsing the outer modifier.
+	test("=${VAR:D/}}", "=${VAR:D/}", "}")
+}
+
+func (s *Suite) Test_MkLexer_varUseModifier__assigment(c *check.C) {
+	t := s.Init(c)
+
+	test := func(varname, input, modifier, rest string, diagnostics ...string) {
+		line := t.NewLine("filename.mk", 123, "")
+		p := NewMkLexer(input, line)
+
+		actual := p.varUseModifier(varname, '}')
+
+		t.CheckDeepEquals(actual, modifier)
+		t.CheckEquals(p.Rest(), rest)
+		t.CheckOutput(diagnostics)
+	}
+
+	test("VAR", ":!=${OTHER}:rest", ":!=${OTHER}", ":rest",
+		"ERROR: filename.mk:123: "+
+			"Assignment modifiers like \":!=\" must not be used at all.")
+	test("VAR", ":=${OTHER}:rest", ":=${OTHER}", ":rest",
+		"ERROR: filename.mk:123: "+
+			"Assignment modifiers like \":=\" must not be used at all.")
+	test("VAR", ":+=${OTHER}:rest", ":+=${OTHER}", ":rest",
+		"ERROR: filename.mk:123: "+
+			"Assignment modifiers like \":+=\" must not be used at all.")
+	test("VAR", ":?=${OTHER}:rest", ":?=${OTHER}", ":rest",
+		"ERROR: filename.mk:123: "+
+			"Assignment modifiers like \":?=\" must not be used at all.")
+
+	// This one is not treated as an assignment operator since at this
+	// point the operators := and = are equivalent. There is no special
+	// parsing code for this case, therefore it falls back to the SysV
+	// interpretation of the :from=to modifier, which consumes all the
+	// remaining text.
+	//
+	// See devel/bmake/files/var.c:/tstr\[2\] == '='/.
+	test("VAR", "::=${OTHER}:rest", "::=${OTHER}:rest", "",
+		"WARN: filename.mk:123: The text \"::=${OTHER}:rest\" "+
+			"looks like a modifier but isn't.")
+
+	test("", ":=value", ":=value", "",
+		"ERROR: filename.mk:123: "+
+			"Assignment to the empty variable is not possible.",
+		"WARN: filename.mk:123: The text \":=value\" "+
+			"looks like a modifier but isn't.")
+}
+
+func (s *Suite) Test_MkLexer_varUseModifierTs(c *check.C) {
+	t := s.Init(c)
+
+	test := func(input string, closing byte, mod string, rest string, diagnostics ...string) {
+		diag := t.NewLine("filename.mk", 123, "")
+		lex := NewMkLexer(input, diag)
+		mark := lex.lexer.Mark()
+		alnum := lex.lexer.NextBytesSet(textproc.Alnum)
+
+		actualMod := lex.varUseModifierTs(alnum, closing, lex.lexer, "VAR", mark)
+
+		t.CheckDeepEquals(
+			[]interface{}{actualMod, lex.Rest()},
+			[]interface{}{mod, rest})
+		t.CheckOutput(diagnostics)
+	}
+
+	// The separator character can be left out, which means empty.
+	test("ts}", '}',
+		"ts", "}",
+		nil...)
+
+	// The separator character can be a long octal number.
+	test("ts\\000012}", '}',
+		"ts\\000012", "}",
+		nil...)
+
+	// Or even decimal.
+	test("ts\\124}", '}',
+		"ts\\124", "}",
+		nil...)
+
+	// The :ts modifier only takes single-character separators.
+	test("ts---}", '}',
+		"ts---", "}",
+		"WARN: filename.mk:123: Invalid separator \"---\" for :ts modifier of \"VAR\".")
+
+	// Using a colon as separator looks a bit strange but works.
+	// The first colon is the separator, the second one starts the :Q.
+	test("ts::Q}", '}',
+		"ts:", ":Q}",
+		nil...)
 }
 
 func (s *Suite) Test_MkLexer_varUseModifierMatch(c *check.C) {
@@ -788,49 +925,67 @@ func (s *Suite) Test_MkLexer_varUseModifierMatch__varmod_edge(c *check.C) {
 func (s *Suite) Test_MkLexer_varUseModifierSubst(c *check.C) {
 	t := s.Init(c)
 
-	varUse := NewMkTokenBuilder().VarUse
-	test := func(text string, varUse *MkVarUse, rest string, diagnostics ...string) {
-		line := t.NewLine("Makefile", 20, "\t"+text)
-		p := NewMkLexer(text, line)
+	test := func(mod string, regex bool, from, to, options, rest string, diagnostics ...string) {
+		line := t.NewLine("Makefile", 20, "")
+		p := NewMkLexer(mod, line)
 
-		actual := p.VarUse()
+		ok, actualRegex, actualFrom, actualTo, actualOptions := p.varUseModifierSubst('}')
 
-		t.CheckDeepEquals(actual, varUse)
-		t.CheckEquals(p.Rest(), rest)
+		t.CheckDeepEquals(
+			[]interface{}{ok, actualRegex, actualFrom, actualTo, actualOptions, p.Rest()},
+			[]interface{}{true, regex, from, to, options, rest})
 		t.CheckOutput(diagnostics)
 	}
 
-	test("${VAR:S", varUse("VAR"), "",
-		"WARN: Makefile:20: Invalid variable modifier \"S\" for \"VAR\".",
-		"WARN: Makefile:20: Missing closing \"}\" for \"VAR\".")
+	testFail := func(mod, rest string, diagnostics ...string) {
+		line := t.NewLine("Makefile", 20, "")
+		p := NewMkLexer(mod, line)
 
-	test("${VAR:S}", varUse("VAR"), "",
-		"WARN: Makefile:20: Invalid variable modifier \"S\" for \"VAR\".")
+		ok, regex, from, to, options := p.varUseModifierSubst('}')
+		if !ok {
+			return
+		}
+		t.CheckDeepEquals(
+			[]interface{}{ok, regex, from, to, options, p.Rest()},
+			[]interface{}{false, false, "", "", "", rest})
+		t.CheckOutput(diagnostics)
+	}
 
-	test("${VAR:S,}", varUse("VAR"), "",
+	testFail("S", "S",
+		nil...)
+
+	testFail("S}", "S}",
+		nil...)
+
+	testFail("S,}", "S,}",
 		"WARN: Makefile:20: Invalid variable modifier \"S,\" for \"VAR\".")
 
-	test("${VAR:S,from,to}", varUse("VAR"), "",
+	testFail("S,from,to}", "",
 		"WARN: Makefile:20: Invalid variable modifier \"S,from,to\" for \"VAR\".")
 
-	test("${VAR:S,from,to,}", varUse("VAR", "S,from,to,"), "")
+	// Up to 2019-12-05, these were considered valid substitutions,
+	// having [ as the separator and ss] as the rest.
+	testFail("M[Y][eE][sS]", "M[Y][eE][sS]",
+		nil...)
+	testFail("N[Y][eE][sS]", "M[Y][eE][sS]",
+		nil...)
 
-	test("${VAR:S,^from$,to,}", varUse("VAR", "S,^from$,to,"), "")
+	test("S,from,to,}", false, "from", "to", "", "}")
 
-	test("${VAR:S,@F@,${F},}", varUse("VAR", "S,@F@,${F},"), "")
+	test("S,^from$,to,}", false, "^from$", "to", "", "}")
 
-	test("${VAR:S,from,to,1}", varUse("VAR", "S,from,to,1"), "")
-	test("${VAR:S,from,to,g}", varUse("VAR", "S,from,to,g"), "")
-	test("${VAR:S,from,to,W}", varUse("VAR", "S,from,to,W"), "")
+	test("S,@F@,${F},}", false, "@F@", "${F}", "", "}")
 
-	test("${VAR:S,from,to,1gW}", varUse("VAR", "S,from,to,1gW"), "")
+	test("S,from,to,1}", false, "from", "to", "1", "}")
+	test("S,from,to,g}", false, "from", "to", "g", "}")
+	test("S,from,to,W}", false, "from", "to", "W", "}")
+
+	test("S,from,to,1gW}", false, "from", "to", "1gW", "}")
 
 	// Inside the :S or :C modifiers, neither a colon nor the closing
 	// brace need to be escaped. Otherwise these patterns would become
 	// too difficult to read and write.
-	test("${VAR:C/[[:alnum:]]{2}/**/g}",
-		varUse("VAR", "C/[[:alnum:]]{2}/**/g"),
-		"")
+	test("C/[[:alnum:]]{2}/**/g}", true, "[[:alnum:]]{2}", "**", "g", "}")
 
 	// Some pkgsrc users really explore the darkest corners of bmake by using
 	// the backslash as the separator in the :S modifier. Sure, it works, it
@@ -838,9 +993,7 @@ func (s *Suite) Test_MkLexer_varUseModifierSubst(c *check.C) {
 	//
 	// Using the backslash as separator means that it cannot be used for anything
 	// else, not even for escaping other characters.
-	test("${VAR:S\\.post1\\\\1}",
-		varUse("VAR", "S\\.post1\\\\1"),
-		"")
+	test("S\\.post1\\\\1}", false, ".post1", "", "1", "}")
 }
 
 func (s *Suite) Test_MkLexer_varUseModifierAt__missing_at_after_variable_name(c *check.C) {
@@ -915,4 +1068,218 @@ func (s *Suite) Test_MkLexer_varUseModifierAt(c *check.C) {
 	test("${PKG_GROUPS:@g@${g:Q}:${PKG_GID.${g}:Q}@:C/:*$//g}",
 		varUse("PKG_GROUPS", "@g@${g:Q}:${PKG_GID.${g}:Q}@", "C/:*$//g"),
 		"")
+}
+
+func (s *Suite) Test_MkLexer_varUseAlnum(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain")
+
+	test := func(input, varname, rest string, diagnostics ...string) {
+		lex := NewMkLexer(input, t.NewLine("filename.mk", 123, ""))
+
+		use := lex.varUseAlnum()
+
+		t.CheckDeepEquals(use, NewMkVarUse(varname))
+		t.CheckEquals(lex.Rest(), rest)
+		t.CheckOutput(diagnostics)
+	}
+
+	test("$Varname:rest",
+		"V", "arname:rest",
+
+		"ERROR: filename.mk:123: $Varname is ambiguous. "+
+			"Use ${Varname} if you mean a Make variable "+
+			"or $$Varname if you mean a shell variable.",
+		"",
+		"\tOnly the first letter after the dollar is the variable name.",
+		"\tEverything following it is normal text, even if it looks like a",
+		"\tvariable name to human readers.",
+		"")
+
+	test("$X:rest",
+		"X", ":rest",
+
+		"WARN: filename.mk:123: $X is ambiguous. "+
+			"Use ${X} if you mean a Make variable "+
+			"or $$X if you mean a shell variable.",
+		"",
+		"\tIn its current form, this variable is parsed as a Make variable. For",
+		"\thuman readers though, $x looks more like a shell variable than a",
+		"\tMake variable, since Make variables are usually written using braces",
+		"\t(BSD-style) or parentheses (GNU-style).",
+		"")
+}
+
+func (s *Suite) Test_MkLexer_EOF(c *check.C) {
+	t := s.Init(c)
+
+	test := func(input string, eof bool) {
+		lex := NewMkLexer(input, nil)
+		t.CheckEquals(lex.EOF(), eof)
+	}
+
+	test("", true)
+	test("x", false)
+	test("$$", false)
+	test("${VAR}", false)
+}
+
+func (s *Suite) Test_MkLexer_Rest(c *check.C) {
+	t := s.Init(c)
+
+	test := func(input, str, rest string) {
+		lex := NewMkLexer(input, nil)
+
+		lex.lexer.NextString(str)
+
+		t.CheckEquals(lex.Rest(), rest)
+	}
+
+	test("", "", "")
+	test("x", "", "x")
+	test("x", "x", "")
+	test("$$", "", "$$")
+	test("${VAR}rest", "${VAR}", "rest")
+}
+
+func (s *Suite) Test_MkLexer_Errorf(c *check.C) {
+	t := s.Init(c)
+
+	test := func(diag Autofixer, diagnostics ...string) {
+		lex := NewMkLexer("", diag)
+		lex.Errorf("Must %q.", "arg")
+		t.CheckOutput(diagnostics)
+	}
+
+	test(
+		nil,
+
+		nil...)
+
+	test(
+		t.NewLine("filename.mk", 123, ""),
+
+		"ERROR: filename.mk:123: Must \"arg\".")
+}
+
+func (s *Suite) Test_MkLexer_Warnf(c *check.C) {
+	t := s.Init(c)
+
+	test := func(diag Autofixer, diagnostics ...string) {
+		lex := NewMkLexer("", diag)
+		lex.Warnf("Should %q.", "arg")
+		t.CheckOutput(diagnostics)
+	}
+
+	test(
+		nil,
+
+		nil...)
+
+	test(
+		t.NewLine("filename.mk", 123, ""),
+
+		"WARN: filename.mk:123: Should \"arg\".")
+}
+
+func (s *Suite) Test_MkLexer_Notef(c *check.C) {
+	t := s.Init(c)
+
+	test := func(diag Autofixer, diagnostics ...string) {
+		lex := NewMkLexer("", diag)
+		lex.Notef("Can %q.", "arg")
+		t.CheckOutput(diagnostics)
+	}
+
+	test(
+		nil,
+
+		nil...)
+
+	test(
+		t.NewLine("filename.mk", 123, ""),
+
+		"NOTE: filename.mk:123: Can \"arg\".")
+}
+
+func (s *Suite) Test_MkLexer_Explain(c *check.C) {
+	t := s.Init(c)
+
+	test := func(option string, diag Autofixer, diagnostics ...string) {
+		t.SetUpCommandLine(option)
+		lex := NewMkLexer("", diag)
+		lex.Warnf("Should %q.", "arg")
+
+		lex.Explain(
+			"Explanation.")
+
+		t.CheckOutput(diagnostics)
+	}
+
+	test(
+		"--explain",
+		nil,
+
+		nil...)
+
+	test(
+		"--explain=no",
+		nil,
+
+		nil...)
+
+	test(
+		"--explain",
+		t.NewLine("filename.mk", 123, ""),
+
+		"WARN: filename.mk:123: Should \"arg\".",
+		"",
+		"\tExplanation.",
+		"")
+
+	test(
+		"--explain=no",
+		t.NewLine("filename.mk", 123, ""),
+
+		"WARN: filename.mk:123: Should \"arg\".")
+}
+
+func (s *Suite) Test_MkLexer_Autofix(c *check.C) {
+	t := s.Init(c)
+
+	test := func() {
+		mklines := t.SetUpFileMkLines("filename.mk",
+			"# before")
+		lex := NewMkLexer("", mklines.lines.Lines[0])
+
+		fix := lex.Autofix()
+		fix.Warnf("Warning.")
+		fix.Replace("before", "after")
+		fix.Apply()
+	}
+
+	t.ExpectDiagnosticsAutofix(
+		test,
+		"WARN: ~/filename.mk:1: Warning.",
+		"AUTOFIX: ~/filename.mk:1: Replacing \"before\" with \"after\".")
+}
+
+func (s *Suite) Test_MkLexer_Autofix__nil(c *check.C) {
+	t := s.Init(c)
+
+	t.ExpectPanicMatches(
+		func() { NewMkLexer("", nil).Autofix() },
+		`^runtime error: invalid memory address or nil pointer dereference`)
+}
+
+func (s *Suite) Test_MkLexer_HasDiag(c *check.C) {
+	t := s.Init(c)
+
+	test := func(diag Autofixer, hasDiag bool) {
+		t.CheckEquals(NewMkLexer("", diag).HasDiag(), hasDiag)
+	}
+
+	test(nil, false)
+	test(t.NewLine("filename", 123, ""), true)
 }
