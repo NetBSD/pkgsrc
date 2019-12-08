@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5278 2019/12/08 21:56:42 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5279 2019/12/08 22:03:53 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8494,3 +8494,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/firefox68 to 68.3.0 [nia 2019-12-08]
 	Updated databases/py-peewee to 3.13.1 [adam 2019-12-08]
 	Updated textproc/py-sphinx to 2.2.2 [adam 2019-12-08]
+	Updated pkgtools/pkglint to 19.3.15 [rillig 2019-12-08]
