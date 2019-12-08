@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5272 2019/12/07 21:34:58 bsiegert Exp $
+$NetBSD: CHANGES-2019,v 1.5273 2019/12/08 00:06:48 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8487,3 +8487,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/frei0r to 1.7.0 [nia 2019-12-07]
 	Updated www/gitea to 1.10.1 [nia 2019-12-07]
 	Added lang/go113 version 1.13.5 [bsiegert 2019-12-07]
+	Updated pkgtools/pkglint to 19.3.14 [rillig 2019-12-08]
