@@ -41,7 +41,7 @@ func (s *Suite) Test_ShTokenizer__examples_from_fuzzing(c *check.C) {
 		"WARN: filename.mk:2: Pkglint ShellLine.CheckShellCommand: splitIntoShellTokens couldn't parse \"\\\"`'`y\"")
 
 	// Covers shAtomDquotBackt: return nil
-	// FIXME: Pkglint must parse unescaped dollar in the same way, everywhere.
+	// XXX: Pkglint should parse unescaped dollar in the same way, everywhere.
 	test(
 		"\"`$|",
 		"WARN: filename.mk:2: Internal pkglint error in ShTokenizer.ShAtom at \"$|\" (quoting=db).",
@@ -49,7 +49,7 @@ func (s *Suite) Test_ShTokenizer__examples_from_fuzzing(c *check.C) {
 		"WARN: filename.mk:2: Internal pkglint error in MkLine.Tokenize at \"$|\".")
 
 	// Covers shAtomDquotBacktDquot: return nil
-	// FIXME: Pkglint must support unlimited nesting.
+	// XXX: Pkglint should support unlimited nesting.
 	test(
 		"\"`\"`",
 		"WARN: filename.mk:2: Internal pkglint error in ShTokenizer.ShAtom at \"`\" (quoting=dbd).",

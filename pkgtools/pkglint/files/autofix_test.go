@@ -164,7 +164,8 @@ func (s *Suite) Test_Autofix__lonely_source(c *check.C) {
 
 	t.CheckOutputLines(
 		">\tPRE_XORGPROTO_LIST_MISSING =\tapplewmproto",
-		"NOTE: x11/xorgproto/builtin.mk:5: Unnecessary space after variable name \"PRE_XORGPROTO_LIST_MISSING\".")
+		"NOTE: x11/xorg-cf-files/../../x11/xorgproto/builtin.mk:5: "+
+			"Unnecessary space after variable name \"PRE_XORGPROTO_LIST_MISSING\".")
 }
 
 // Up to 2018-11-26, pkglint in some cases logged only the source without
@@ -557,7 +558,7 @@ func (s *Suite) Test_Autofix_ReplaceAt(c *check.C) {
 	lines := func(lines ...string) []string { return lines }
 	test := func(texts []string, rawIndex int, column int, from, to string, diagnostics ...string) {
 
-		mainPart := func() {
+		mainPart := func(autofix bool) {
 			mklines := t.NewMkLines("filename.mk", texts...)
 			assert(len(mklines.mklines) == 1)
 			mkline := mklines.mklines[0]

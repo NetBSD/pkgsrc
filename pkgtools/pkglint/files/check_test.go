@@ -102,8 +102,8 @@ func (s *Suite) TearDownTest(c *check.C) {
 // Ensures that all test names follow a common naming scheme:
 //
 //  Test_${Type}_${Method}__${description_using_underscores}
-func (s *Suite) Test__qa(c *check.C) {
-	ck := intqa.NewQAChecker(c.Errorf)
+func Test__qa(t *testing.T) {
+	ck := intqa.NewQAChecker(t.Errorf)
 
 	ck.Configure("autofix.go", "*", "*", -intqa.EMissingTest)        // TODO
 	ck.Configure("buildlink3.go", "*", "*", -intqa.EMissingTest)     // TODO
@@ -131,7 +131,6 @@ func (s *Suite) Test__qa(c *check.C) {
 	ck.Configure("patches.go", "*", "*", -intqa.EMissingTest)        // TODO
 	ck.Configure("pkglint.go", "*", "*", -intqa.EMissingTest)        // TODO
 	ck.Configure("pkgsrc.go", "*", "*", -intqa.EMissingTest)         // TODO
-	ck.Configure("plist.go", "*", "*", -intqa.EMissingTest)          // TODO
 	ck.Configure("redundantscope.go", "*", "*", -intqa.EMissingTest) // TODO
 	ck.Configure("shell.go", "*", "*", -intqa.EMissingTest)          // TODO
 	ck.Configure("shtokenizer.go", "*", "*", -intqa.EMissingTest)    // TODO
@@ -144,7 +143,6 @@ func (s *Suite) Test__qa(c *check.C) {
 	ck.Configure("vardefs.go", "*", "*", -intqa.EMissingTest)        // TODO
 	ck.Configure("vargroups.go", "*", "*", -intqa.EMissingTest)      // TODO
 	ck.Configure("vartype.go", "*", "*", -intqa.EMissingTest)        // TODO
-	ck.Configure("vartypecheck.go", "*", "*", -intqa.EMissingTest)   // TODO
 
 	// For now, don't require tests for all the test code.
 	// Having good coverage for the main code is more important.
@@ -260,6 +258,27 @@ func (t *Tester) SetUpOption(name, description string) {
 
 func (t *Tester) SetUpTool(name, varname string, validity Validity) *Tool {
 	return G.Pkgsrc.Tools.def(name, varname, false, validity, nil)
+}
+
+// SetUpType defines a variable to have a certain type and access permissions,
+// like in the type definitions in vardefs.go.
+//
+// Example:
+//  SetUpType("PKGPATH", BtPkgpath, DefinedIfInScope|NonemptyIfDefined,
+//      "Makefile, *.mk: default, set, append, use, use-loadtime")
+func (t *Tester) SetUpType(varname string, basicType *BasicType,
+	options vartypeOptions, aclEntries ...string) {
+
+	if len(aclEntries) == 0 {
+		aclEntries = []string{"Makefile, *.mk: default, set, append, use, use-loadtime"}
+	}
+
+	G.Pkgsrc.vartypes.acl(varname, basicType, options, aclEntries...)
+
+	// Make sure that registering the type succeeds.
+	// This is necessary for BtUnknown and guessed types.
+	vartype := G.Pkgsrc.VariableType(nil, varname)
+	t.c.Assert(vartype.basicType, check.Equals, basicType)
 }
 
 // SetUpFileLines creates a temporary file and writes the given lines to it.
@@ -399,7 +418,7 @@ func (t *Tester) SetUpPkgsrc() {
 // SetUpCategory makes the given category valid by creating a dummy Makefile.
 // After that, it can be mentioned in the CATEGORIES variable of a package.
 func (t *Tester) SetUpCategory(name RelPath) {
-	assert(G.Pkgsrc.ToRel(t.File(name)).Count() == 1)
+	assert(G.Pkgsrc.Rel(t.File(name)).Count() == 1)
 
 	makefile := name.JoinNoClean("Makefile")
 	if !t.File(makefile).IsFile() {
@@ -535,7 +554,7 @@ func (t *Tester) CreateFileLines(filename RelPath, lines ...string) CurrPath {
 // temporary directory.
 func (t *Tester) CreateFileDummyPatch(filename RelPath) {
 	// Patch files only make sense in category/package/patches directories.
-	assert(G.Pkgsrc.ToRel(t.File(filename)).Count() == 4)
+	assert(G.Pkgsrc.Rel(t.File(filename)).Count() == 4)
 
 	t.CreateFileLines(filename,
 		CvsID,
@@ -551,7 +570,7 @@ func (t *Tester) CreateFileDummyPatch(filename RelPath) {
 
 func (t *Tester) CreateFileBuildlink3(filename RelPath, customLines ...string) {
 	// Buildlink3.mk files only make sense in category/package directories.
-	assert(G.Pkgsrc.ToRel(t.File(filename)).Count() == 3)
+	assert(G.Pkgsrc.Rel(t.File(filename)).Count() == 3)
 
 	dir := filename.DirClean()
 	lower := dir.Base()
@@ -924,12 +943,12 @@ func (t *Tester) ExpectAssert(action func()) {
 
 // ExpectDiagnosticsAutofix first runs the given action with -Wall, and
 // then another time with -Wall --autofix.
-func (t *Tester) ExpectDiagnosticsAutofix(action func(), diagnostics ...string) {
+func (t *Tester) ExpectDiagnosticsAutofix(action func(autofix bool), diagnostics ...string) {
 	t.SetUpCommandLine("-Wall")
-	action()
+	action(false)
 
 	t.SetUpCommandLine("-Wall", "--autofix")
-	action()
+	action(true)
 
 	t.CheckOutput(diagnostics)
 }

@@ -408,8 +408,7 @@ func NewPackagePath(p RelPath) PackagePath {
 }
 
 func NewPackagePathString(p string) PackagePath {
-	_ = NewRelPathString(p)
-	return PackagePath(p)
+	return PackagePath(NewRelPathString(p))
 }
 
 func (p PackagePath) AsPath() Path { return Path(p) }
@@ -434,8 +433,7 @@ func NewRelPath(p Path) RelPath {
 }
 
 func NewRelPathString(p string) RelPath {
-	assert(!NewPath(p).IsAbs())
-	return RelPath(p)
+	return NewRelPath(NewPath(p))
 }
 
 func (p RelPath) AsPath() Path { return NewPath(string(p)) }
