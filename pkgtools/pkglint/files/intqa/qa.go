@@ -322,11 +322,16 @@ func (ck *QAChecker) checkTesteesTest() {
 		}
 
 		testName := "Test_" + join(testee.Type, "_", testee.Func)
+
+		testCode := code{testee.testFile(), "", testName, 0}
+		test := test{testCode, testee.fullName(), "", testee}
+		insertion := ck.insertionSuggestion(&test)
+
 		ck.addError(
 			EMissingTest,
 			testee.code,
-			"Missing unit test %q for %q.",
-			testName, testee.fullName())
+			"Missing unit test %q for %q. %s",
+			testName, testee.fullName(), insertion)
 	}
 }
 
@@ -458,6 +463,39 @@ func (ck *QAChecker) print() {
 	} else if n == 1 {
 		ck.errorf("%d error.", n)
 	}
+}
+
+func (ck *QAChecker) insertionSuggestion(newTest *test) string {
+	// Find the testee directly above the testee of newTest.
+	var before *testee
+	for _, testee := range ck.testees {
+		if testee.order > newTest.testee.order {
+			break
+		}
+		if testee.testFile() != newTest.file {
+			continue
+		}
+		if before != nil && before.order > testee.order {
+			break
+		}
+		before = testee
+	}
+
+	if before == nil {
+		return fmt.Sprintf("Insert it at the top of %q.", newTest.file)
+	}
+
+	for _, test := range ck.tests {
+		if test.testee == nil || test.testee.order < newTest.testee.order {
+			continue
+		}
+		if test.file != before.testFile() {
+			break
+		}
+		return fmt.Sprintf("Insert it in %q, above %q.", newTest.file, test.fullName())
+	}
+
+	return fmt.Sprintf("Insert it at the bottom of %q.", newTest.file)
 }
 
 type filter struct {

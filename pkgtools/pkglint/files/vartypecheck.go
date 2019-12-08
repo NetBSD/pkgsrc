@@ -887,8 +887,9 @@ func (cv *VartypeCheck) MailAddress() {
 	}
 }
 
-// Message is a plain string. It should not be enclosed in quotes since
-// that is the job of the code that uses the message.
+// Message is a plain string. When defining a message variable, it should
+// not be enclosed in quotes since that is the job of the code that uses
+// the message.
 //
 // Lists of messages use a different type since they need the quotes
 // around each message; see PKG_FAIL_REASON.
@@ -1078,19 +1079,19 @@ func (cv *VartypeCheck) Pkgpath() {
 
 	pkgpath := NewPkgsrcPath(NewPath(value))
 	if !G.Wip && pkgpath.HasPrefixPath("wip") {
-		cv.MkLine.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
+		cv.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
 	}
 
 	pkgdir := G.Pkgsrc.File(pkgpath)
 	if !pkgdir.JoinNoClean("Makefile").IsFile() {
-		cv.MkLine.Errorf("There is no package in %q.",
-			cv.MkLine.PathToFile(pkgdir))
+		cv.Errorf("There is no package in %q.",
+			cv.MkLine.Rel(pkgdir))
 		return
 	}
 
 	if !matches(value, `^([^./][^/]*/[^./][^/]*)$`) {
-		cv.MkLine.Errorf("%q is not a valid path to a package.", pkgpath)
-		cv.MkLine.Explain(
+		cv.Errorf("%q is not a valid path to a package.", pkgpath.String())
+		cv.Explain(
 			"A path to a package has the form \"category/pkgbase\".",
 			"It is relative to the pkgsrc root.")
 	}
@@ -1113,6 +1114,12 @@ func (cv *VartypeCheck) Pkgrevision() {
 
 // PrefixPathname checks for a pathname relative to ${PREFIX}.
 func (cv *VartypeCheck) PrefixPathname() {
+	if NewPath(cv.Value).IsAbs() {
+		cv.Errorf("The pathname %q in %s must be relative to ${PREFIX}.",
+			cv.Value, cv.Varname)
+		return
+	}
+
 	if m, manSubdir := match1(cv.Value, `^man/(.+)`); m {
 		from := "${PKGMANDIR}/" + manSubdir
 		fix := cv.Autofix()
@@ -1164,6 +1171,11 @@ func (cv *VartypeCheck) RPkgVer() {
 
 // RelativePkgDir refers to a package directory, e.g. ../../category/pkgbase.
 func (cv *VartypeCheck) RelativePkgDir() {
+	if NewPath(cv.Value).IsAbs() {
+		cv.Errorf("The path %q must be relative.", cv.Value)
+		return
+	}
+
 	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(NewRelPathString(cv.Value))
 }
 
@@ -1172,6 +1184,11 @@ func (cv *VartypeCheck) RelativePkgDir() {
 //
 // See RelativePkgDir, which requires a directory, not a file.
 func (cv *VartypeCheck) RelativePkgPath() {
+	if NewPath(cv.Value).IsAbs() {
+		cv.Errorf("The path %q must be relative.", cv.Value)
+		return
+	}
+
 	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePath(NewRelPathString(cv.Value), true)
 }
 

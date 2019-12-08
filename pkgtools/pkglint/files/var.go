@@ -211,7 +211,7 @@ func (v *Var) update(mkline *MkLine, update *string) {
 	case opAssignAppend:
 		*update += " " + value
 
-	case opAssignShell:
+	default:
 		// Ignore these for now.
 		// Later it might be useful to parse the shell commands to
 		// evaluate simple commands like "test && echo yes || echo no".
@@ -269,7 +269,7 @@ func (v *Var) updateConstantValue(mkline *MkLine) {
 	case opAssignAppend:
 		v.constantValue += " " + value
 
-	case opAssignShell:
+	default:
 		v.constantState = 3
 		v.constantValue = ""
 	}

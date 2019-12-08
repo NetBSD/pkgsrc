@@ -96,7 +96,7 @@ func (ck *VargroupsChecker) init() {
 
 			if ck.registered[varname] != nil {
 				mkline.Warnf("Duplicate variable name %s, already appeared in %s.",
-					varname, mkline.RefTo(ck.registered[varname]))
+					varname, mkline.RelMkLine(ck.registered[varname]))
 			} else {
 				ck.registered[varname] = mkline
 			}

@@ -180,7 +180,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 		Downgraded, "category/package", "1.2", "author7", "2018-01-07"})
 
 	t.CheckOutputLines(
-		"WARN: ~/doc/CHANGES-2018:1: Year \"2015\" for category/package does not match the filename ~/doc/CHANGES-2018.",
+		"WARN: ~/doc/CHANGES-2018:1: Year \"2015\" for category/package does not match the filename CHANGES-2018.",
 		"WARN: ~/doc/CHANGES-2018:6: Date \"2018-01-06\" for category/package is earlier than \"2018-01-09\" in line 5.",
 		"WARN: ~/doc/CHANGES-2018:8: Invalid doc/CHANGES line: \tReworked category/package to 1.2 [author8 2018-01-08]",
 		"WARN: ~/doc/CHANGES-2018:10: Invalid doc/CHANGES line: \ttoo few fields",
@@ -254,7 +254,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__default(c *check.C) {
 		"WARN: ~/doc/CHANGES-2018:6: Date \"2018-01-01\" for sysutils/checkperms is earlier than \"2018-01-05\" in line 5.",
 		"WARN: ~/doc/CHANGES-2018:7: Package changes should be indented using a single tab, not \"\\t\\t\".",
 		"WARN: ~/doc/CHANGES-2018:8: Invalid doc/CHANGES line: \tInvalid pkgpath to 1.16 [rillig 2019-06-16]",
-		"WARN: ~/doc/CHANGES-2018:9: Year \"2019\" for category/package does not match the filename ~/doc/CHANGES-2018.",
+		"WARN: ~/doc/CHANGES-2018:9: Year \"2019\" for category/package does not match the filename CHANGES-2018.",
 		"4 warnings found.",
 		t.Shquote("(Run \"pkglint -e -Cglobal -Wall %s\" to show explanations.)", "."))
 }
@@ -688,7 +688,9 @@ func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
 		"\t@${ECHO} ${PKG_SYSCONFDIR} ${VARBASE}")
 	t.CreateFileLines("mk/bsd.pkg.mk",
 		MkCvsID,
-		"_BUILD_DEFS+=\tPKG_SYSCONFBASEDIR PKG_SYSCONFDIR")
+		"_BUILD_DEFS+=\tPKG_SYSCONFBASEDIR PKG_SYSCONFDIR",
+		"",
+		"BUILD_DEFINITIONS+=\tIGNORED\t")
 	t.CreateFileLines("mk/defaults/mk.conf",
 		MkCvsID,
 		"",
@@ -705,6 +707,48 @@ func (s *Suite) Test_Pkgsrc_loadTools__BUILD_DEFS(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:21: " +
 			"The user-defined variable VARBASE is used but not added to BUILD_DEFS.")
+}
+
+func (s *Suite) Test_Pkgsrc_loadTools__conditional_in_mk_tools(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("mk/tools/defaults.mk",
+		".if 0",
+		"USE_TOOLS+=\tcond-false",
+		".endif",
+		".if 1",
+		"USE_TOOLS+=\tcond-true",
+		".endif",
+		"USE_TOOLS+=\tunconditional")
+	t.FinishSetUp()
+
+	// The above FinishSetUp implicitly and indirectly calls loadTools.
+
+	t.CheckEquals(G.Pkgsrc.Tools.ByName("cond-false").Validity, Nowhere)
+	t.CheckEquals(G.Pkgsrc.Tools.ByName("cond-true").Validity, Nowhere)
+	t.CheckEquals(G.Pkgsrc.Tools.ByName("unconditional").Validity, AtRunTime)
+}
+
+func (s *Suite) Test_Pkgsrc_loadTools__conditional_in_bsd_pkg_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("mk/bsd.pkg.mk",
+		".if 0",
+		"USE_TOOLS+=\tcond-false",
+		".endif",
+		".if 1",
+		"USE_TOOLS+=\tcond-true",
+		".endif",
+		"USE_TOOLS+=\tunconditional")
+	t.FinishSetUp()
+
+	// The above FinishSetUp implicitly and indirectly calls loadTools.
+
+	t.CheckEquals(G.Pkgsrc.Tools.ByName("cond-false").Validity, Nowhere)
+	t.CheckEquals(G.Pkgsrc.Tools.ByName("cond-true").Validity, Nowhere)
+	t.CheckEquals(G.Pkgsrc.Tools.ByName("unconditional").Validity, AtRunTime)
 }
 
 func (s *Suite) Test_Pkgsrc_loadTools__no_tools_found(c *check.C) {
@@ -807,6 +851,41 @@ func (s *Suite) Test_Pkgsrc_loadUntypedVars__badly_named_directory(c *check.C) {
 
 	// Even when a directory is named *.mk, pkglint doesn't crash.
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Pkgsrc_loadUntypedVars__loop_variable(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("mk/check/check-files.mk",
+		MkCvsID,
+		"${:U}=\t${CHECK_FILES_SKIP:@f@${f}@}",
+		"\t${/} ${} ${UNKNOWN}")
+
+	G.Pkgsrc.loadUntypedVars()
+
+	ignored := func(varname string) {
+		vartype := G.Pkgsrc.VariableType(nil, varname)
+		t.Check(vartype, check.IsNil, check.Commentf("%s", varname))
+	}
+	added := func(varname string, basicType *BasicType) {
+		vartype := G.Pkgsrc.VariableType(nil, "CHECK_FILES_SKIP")
+		if t.Check(vartype, check.NotNil) {
+			t.CheckEquals(vartype.basicType, BtPathPattern)
+		}
+	}
+
+	added("CHECK_FILES_SKIP", BtPathPattern)
+	added("UNKNOWN", BtUnknown)
+
+	ignored("")
+	ignored("f")
+	ignored(".f.")
+	ignored("/")
+	ignored("PREFIX")
+
+	t.CheckOutputLines(
+		"WARN: ~/mk/check/check-files.mk:3: " +
+			"Invalid part \"/\" after variable name \"\".")
 }
 
 func (s *Suite) Test_Pkgsrc_Latest__multiple_candidates(c *check.C) {
@@ -1109,7 +1188,7 @@ func (s *Suite) Test_Pkgsrc_guessVariableType__SKIP(c *check.C) {
 	// aclpUseLoadtime. Therefore there should be a warning about the VarUse in
 	// the .if line. As of March 2019, pkglint skips the permissions check for
 	// guessed variables since that variable might have an entirely different
-	// meaning; see MkLineChecker.checkVarusePermissions.
+	// meaning; see MkVarUseChecker.checkPermissions.
 	//
 	// There is no warning for the += operator in line 3 since the variable type
 	// (although guessed) is a list of things, and lists may be appended to.
@@ -1148,10 +1227,11 @@ func (s *Suite) Test_Pkgsrc_checkToplevelUnusedLicenses(c *check.C) {
 	t.Main("-r", "-Cglobal", ".")
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package2/Makefile:11: License file ../../licenses/missing does not exist.",
+		"ERROR: ~/category/package2/Makefile:11: License file ../../licenses/missing does not exist.",
 		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.", // Added by Tester.SetUpPkgsrc
 		"WARN: ~/licenses/gnu-gpl-v3: This license seems to be unused.",
-		"3 warnings found.")
+		"1 error and 2 warnings found.",
+		t.Shquote("(Run \"pkglint -e -r -Cglobal %s\" to show explanations.)", "."))
 }
 
 func (s *Suite) Test_Pkgsrc_ReadDir(c *check.C) {
@@ -1181,7 +1261,7 @@ func (s *Suite) Test_Pkgsrc_Relpath(c *check.C) {
 	t.Chdir(".")
 	t.CheckEquals(G.Pkgsrc.topdir, NewCurrPath("."))
 
-	test := func(from, to CurrPath, result Path) {
+	test := func(from, to CurrPath, result RelPath) {
 		t.CheckEquals(G.Pkgsrc.Relpath(from, to), result)
 	}
 

@@ -104,11 +104,70 @@ func (s *Suite) TearDownTest(c *check.C) {
 //  Test_${Type}_${Method}__${description_using_underscores}
 func (s *Suite) Test__qa(c *check.C) {
 	ck := intqa.NewQAChecker(c.Errorf)
-	ck.Configure("*", "*", "*", -intqa.EMissingTest)
-	ck.Configure("path.go", "*", "*", +intqa.EMissingTest)
+
+	ck.Configure("autofix.go", "*", "*", -intqa.EMissingTest)        // TODO
+	ck.Configure("buildlink3.go", "*", "*", -intqa.EMissingTest)     // TODO
+	ck.Configure("distinfo.go", "*", "*", -intqa.EMissingTest)       // TODO
+	ck.Configure("files.go", "*", "*", -intqa.EMissingTest)          // TODO
+	ck.Configure("licenses.go", "*", "*", -intqa.EMissingTest)       // TODO
+	ck.Configure("line.go", "*", "*", -intqa.EMissingTest)           // TODO
+	ck.Configure("linechecker.go", "*", "*", -intqa.EMissingTest)    // TODO
+	ck.Configure("lineslexer.go", "*", "*", -intqa.EMissingTest)     // TODO
+	ck.Configure("lines.go", "*", "*", -intqa.EMissingTest)          // TODO
+	ck.Configure("logging.go", "*", "*", -intqa.EMissingTest)        // TODO
+	ck.Configure("mkline.go", "*", "*", -intqa.EMissingTest)         // TODO
+	ck.Configure("mklineparser.go", "*", "*", -intqa.EMissingTest)   // TODO
+	ck.Configure("mklinechecker.go", "*", "*", -intqa.EMissingTest)  // TODO
+	ck.Configure("mklines.go", "*", "*", -intqa.EMissingTest)        // TODO
+	ck.Configure("mkparser.go", "*", "*", -intqa.EMissingTest)       // TODO
+	ck.Configure("mkshparser.go", "*", "*", -intqa.EMissingTest)     // TODO
+	ck.Configure("mkshtypes.go", "*", "*", -intqa.EMissingTest)      // TODO
+	ck.Configure("mkshwalker.go", "*", "*", -intqa.EMissingTest)     // TODO
+	ck.Configure("mktokenslexer.go", "*", "*", -intqa.EMissingTest)  // TODO
+	ck.Configure("mktypes.go", "*", "*", -intqa.EMissingTest)        // TODO
+	ck.Configure("options.go", "*", "*", -intqa.EMissingTest)        // TODO
+	ck.Configure("package.go", "*", "*", -intqa.EMissingTest)        // TODO
+	ck.Configure("paragraph.go", "*", "*", -intqa.EMissingTest)      // TODO
+	ck.Configure("patches.go", "*", "*", -intqa.EMissingTest)        // TODO
+	ck.Configure("pkglint.go", "*", "*", -intqa.EMissingTest)        // TODO
+	ck.Configure("pkgsrc.go", "*", "*", -intqa.EMissingTest)         // TODO
+	ck.Configure("plist.go", "*", "*", -intqa.EMissingTest)          // TODO
+	ck.Configure("redundantscope.go", "*", "*", -intqa.EMissingTest) // TODO
+	ck.Configure("shell.go", "*", "*", -intqa.EMissingTest)          // TODO
+	ck.Configure("shtokenizer.go", "*", "*", -intqa.EMissingTest)    // TODO
+	ck.Configure("shtypes.go", "*", "*", -intqa.EMissingTest)        // TODO
+	ck.Configure("substcontext.go", "*", "*", -intqa.EMissingTest)   // TODO
+	ck.Configure("tools.go", "*", "*", -intqa.EMissingTest)          // TODO
+	ck.Configure("util.go", "*", "*", -intqa.EMissingTest)           // TODO
+	ck.Configure("var.go", "*", "*", -intqa.EMissingTest)            // TODO
+	ck.Configure("varalignblock.go", "*", "*", -intqa.EMissingTest)  // TODO
+	ck.Configure("vardefs.go", "*", "*", -intqa.EMissingTest)        // TODO
+	ck.Configure("vargroups.go", "*", "*", -intqa.EMissingTest)      // TODO
+	ck.Configure("vartype.go", "*", "*", -intqa.EMissingTest)        // TODO
+	ck.Configure("vartypecheck.go", "*", "*", -intqa.EMissingTest)   // TODO
+
+	// For now, don't require tests for all the test code.
+	// Having good coverage for the main code is more important.
+	ck.Configure("*_test.go", "*", "*", -intqa.EMissingTest)
+
+	// These helper methods are usually so simple that they don't need
+	// separate tests.
+	// They are tested indirectly by the tests of their corresponding checks.
+	ck.Configure("*", "*", "warn[A-Z]*", -intqa.EMissingTest)
+
+	// Generated code doesn't need a unit test.
+	// If any, every grammar production in the corresponding yacc file
+	// should have a unit test.
 	ck.Configure("*yacc.go", "*", "*", intqa.ENone)
+
+	// Type definitions don't need a unit test.
+	// Only functions and methods do.
 	ck.Configure("*", "*", "", -intqa.EMissingTest)
+
+	// The Suite type is used for testing all parts of pkglint.
+	// Therefore its test methods may be everywhere.
 	ck.Configure("*.go", "Suite", "*", -intqa.EMethodsSameFile)
+
 	ck.Check()
 }
 
@@ -216,6 +275,8 @@ func (t *Tester) SetUpFileLines(filename RelPath, lines ...string) *Lines {
 // The file is then read in, handling line continuations for Makefiles.
 //
 // See SetUpFileLines for loading an ordinary file.
+//
+// If the filename is irrelevant for the particular test, take filename.mk.
 func (t *Tester) SetUpFileMkLines(filename RelPath, lines ...string) *MkLines {
 	abs := t.CreateFileLines(filename, lines...)
 	return LoadMk(abs, MustSucceed)
@@ -327,6 +388,10 @@ func (t *Tester) SetUpPkgsrc() {
 
 	// Category Makefiles require this file for the common definitions.
 	t.CreateFileLines("mk/misc/category.mk")
+
+	// TODO
+	// assert(!t.File("mk/bsd.options.mk").IsFile())
+	// t.CreateFileLines("mk/bsd.options.mk")
 
 	t.seenSetupPkgsrc++
 }
@@ -484,7 +549,7 @@ func (t *Tester) CreateFileDummyPatch(filename RelPath) {
 		"+new")
 }
 
-func (t *Tester) CreateFileDummyBuildlink3(filename RelPath, customLines ...string) {
+func (t *Tester) CreateFileBuildlink3(filename RelPath, customLines ...string) {
 	// Buildlink3.mk files only make sense in category/package directories.
 	assert(G.Pkgsrc.ToRel(t.File(filename)).Count() == 3)
 
@@ -536,7 +601,7 @@ func (t *Tester) File(filename RelPath) CurrPath {
 	if t.cwd != "" {
 		return NewCurrPath(filename.Clean().AsPath())
 	}
-	return t.tmpdir.JoinClean(filename.AsPath())
+	return t.tmpdir.JoinClean(filename)
 }
 
 // Copy copies a file inside the temporary directory.
@@ -546,7 +611,6 @@ func (t *Tester) Copy(source, target RelPath) {
 
 	data, err := absSource.ReadString()
 	assertNil(err, "Copy.Read")
-	// FIXME: consider DirNoClean
 	err = os.MkdirAll(absTarget.DirClean().String(), 0777)
 	assertNil(err, "Copy.MkdirAll")
 	err = absTarget.WriteString(data)
@@ -579,7 +643,7 @@ func (t *Tester) Chdir(dirname RelPath) {
 	assertNil(os.Chdir(absDirName.String()), "Chdir")
 	t.cwd = dirname
 	G.cwd = absDirName
-	G.Pkgsrc.topdir = NewCurrPath(absDirName.Rel(G.Pkgsrc.topdir))
+	G.Pkgsrc.topdir = NewCurrPath(absDirName.Rel(G.Pkgsrc.topdir).AsPath())
 }
 
 // Remove removes the file or directory from the temporary directory.
@@ -628,13 +692,11 @@ func (t *Tester) SetUpHierarchy() (
 	// includePath returns the path to be used in an .include.
 	//
 	// This is the same mechanism that is used in Pkgsrc.Relpath.
-	includePath := func(including, included Path) Path {
-		// FIXME: consider DirNoClean
+	includePath := func(including, included RelPath) RelPath {
 		fromDir := including.DirClean()
-		to := basedir.Rel(included)
-		// FIXME: consider DirNoClean
-		if fromDir == to.DirClean() {
-			return NewPath(to.Base())
+		to := basedir.Rel(included.AsPath())
+		if fromDir == to.DirNoClean() {
+			return NewRelPathString(to.Base())
 		} else {
 			return fromDir.Rel(basedir).JoinNoClean(to).CleanDot()
 		}
@@ -646,7 +708,7 @@ func (t *Tester) SetUpHierarchy() (
 		relFilename := basedir.Rel(filename.AsPath())
 
 		addLine := func(text string) {
-			lines = append(lines, t.NewLine(NewCurrPath(relFilename), lineno, text))
+			lines = append(lines, t.NewLine(NewCurrPath(relFilename.AsPath()), lineno, text))
 			lineno++
 		}
 
@@ -655,7 +717,7 @@ func (t *Tester) SetUpHierarchy() (
 			case string:
 				addLine(arg)
 			case *MkLines:
-				rel := includePath(relFilename, arg.lines.Filename.AsPath())
+				rel := includePath(relFilename, NewRelPath(arg.lines.Filename.AsPath()))
 				addLine(sprintf(".include %q", rel))
 				lines = append(lines, arg.lines.Lines...)
 			default:
@@ -663,7 +725,7 @@ func (t *Tester) SetUpHierarchy() (
 			}
 		}
 
-		mklines := NewMkLines(NewLines(NewCurrPath(relFilename), lines))
+		mklines := NewMkLines(NewLines(NewCurrPath(relFilename.AsPath()), lines))
 		assertf(files[filename] == nil, "MkLines with name %q already exists.", filename)
 		files[filename] = mklines
 		return mklines
@@ -708,6 +770,8 @@ func (s *Suite) Test_Tester_SetUpHierarchy(c *check.C) {
 		"NOTE: subdir/env.mk:1: Text is: VAR= env")
 }
 
+// FinishSetup loads the pkgsrc infrastructure.
+// Later changes to the files in mk/ have no effect.
 func (t *Tester) FinishSetUp() {
 	if t.seenSetupPkgsrc == 0 {
 		t.InternalErrorf("Unnecessary t.FinishSetUp() since t.SetUpPkgsrc() has not been called.")
@@ -747,9 +811,15 @@ func (t *Tester) Main(args ...string) int {
 
 	argv := []string{"pkglint"}
 	for _, arg := range args {
-		fileArg := t.File(NewRelPathString(arg))
-		if fileArg.Exists() {
-			argv = append(argv, fileArg.String())
+		fileArg := NewCurrPathSlash(arg)
+		if fileArg.IsAbs() {
+			argv = append(argv, arg)
+			continue
+		}
+
+		file := t.File(NewRelPathString(arg))
+		if file.Exists() {
+			argv = append(argv, file.String())
 		} else {
 			argv = append(argv, arg)
 		}
@@ -939,6 +1009,13 @@ func (t *Tester) NewLinesAt(filename CurrPath, firstLine int, texts ...string) *
 //
 // No actual file is created for the lines;
 // see SetUpFileMkLines for loading Makefile fragments with line continuations.
+//
+// After calling Tester.Chdir, NewMkLines creates the same object as
+// SetUpFileMkLines, just without anything being written to disk.
+// This can lead to strange error messages such as "Relative path %s does
+// not exist." because an intermediate directory in the path does not exist.
+//
+// If the filename is irrelevant for the particular test, take filename.mk.
 func (t *Tester) NewMkLines(filename CurrPath, lines ...string) *MkLines {
 	basename := filename.Base()
 	assertf(
@@ -1213,7 +1290,12 @@ func (t *Tester) CheckFileLinesDetab(filename RelPath, lines ...string) {
 // development.
 func (t *Tester) Use(...interface{}) {}
 
-func (t *Tester) Shquote(format string, rels ...Path) string {
+// Shquote renders the given paths into the message, adding shell quoting
+// around the paths if necessary.
+//
+// It is typically used to check the advertisement lines at the very end
+// of the pkglint output. ("Run \"pkglint -e %s\" to show explanations.")
+func (t *Tester) Shquote(format string, rels ...RelPath) string {
 	var subs []interface{}
 	for _, rel := range rels {
 		quoted := shquote(t.tmpdir.JoinClean(rel).String())

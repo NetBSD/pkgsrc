@@ -19,11 +19,11 @@ import (
 // these edge cases anyway.
 type MkLexer struct {
 	lexer *textproc.Lexer
-	line  *Line
+	diag  Autofixer
 }
 
-func NewMkLexer(text string, line *Line) *MkLexer {
-	return &MkLexer{textproc.NewLexer(text), line}
+func NewMkLexer(text string, diag Autofixer) *MkLexer {
+	return &MkLexer{textproc.NewLexer(text), diag}
 }
 
 // MkTokens splits a text like in the following example:
@@ -58,6 +58,7 @@ func (p *MkLexer) MkTokens() ([]*MkToken, string) {
 	return tokens, lexer.Rest()
 }
 
+// VarUse parses a variable expression like ${VAR}, $@, ${VAR:Mpattern:Ox}.
 func (p *MkLexer) VarUse() *MkVarUse {
 	rest := p.lexer.Rest()
 	if len(rest) < 2 || rest[0] != '$' {
@@ -82,7 +83,7 @@ func (p *MkLexer) VarUse() *MkVarUse {
 		//
 		// TODO: Find out whether $" is a variable use when it appears in the :M modifier.
 		p.lexer.Skip(2)
-		return &MkVarUse{rest[1:2], nil}
+		return NewMkVarUse(rest[1:2])
 
 	default:
 		return p.varUseAlnum()
@@ -115,9 +116,9 @@ func (p *MkLexer) varUseBrace(usingRoundParen bool) *MkVarUse {
 
 	closed := lexer.SkipByte(closing)
 
-	if p.line != nil {
+	if p.diag != nil {
 		if !closed {
-			p.line.Warnf("Missing closing %q for %q.", string(rune(closing)), varExpr)
+			p.Warnf("Missing closing %q for %q.", string(rune(closing)), varExpr)
 		}
 
 		if usingRoundParen && closed {
@@ -127,18 +128,18 @@ func (p *MkLexer) varUseBrace(usingRoundParen bool) *MkVarUse {
 			edit[len(edit)-1] = '}'
 			bracesVaruse := string(edit)
 
-			fix := p.line.Autofix()
+			fix := p.Autofix()
 			fix.Warnf("Please use curly braces {} instead of round parentheses () for %s.", varExpr)
 			fix.Replace(parenVaruse, bracesVaruse)
 			fix.Apply()
 		}
 
-		if len(varExpr) > len(varname) && !(&MkVarUse{varExpr, modifiers}).IsExpression() {
-			p.line.Warnf("Invalid part %q after variable name %q.", varExpr[len(varname):], varname)
+		if len(varExpr) > len(varname) && !NewMkVarUse(varExpr, modifiers...).IsExpression() {
+			p.Warnf("Invalid part %q after variable name %q.", varExpr[len(varname):], varname)
 		}
 	}
 
-	return &MkVarUse{varExpr, modifiers}
+	return NewMkVarUse(varExpr, modifiers...)
 }
 
 func (p *MkLexer) Varname() string {
@@ -171,6 +172,32 @@ func (p *MkLexer) varUseText(closing byte) string {
 	for p.VarUse() != nil || lexer.SkipRegexp(re) {
 	}
 	return lexer.Since(start)
+}
+
+// varUseText parses any text up to the closing mark, including any colons.
+//
+// This is used for the :from=to modifier.
+//
+// See devel/bmake/files/var.c:/eqFound = FALSE/
+func (p *MkLexer) varUseModifierSysV(closing byte) (string, string) {
+	lexer := p.lexer
+	start := lexer.Mark()
+	re := regcomp(regex.Pattern(condStr(closing == '}', `^([^$\\}]|\$\$|\\.)+`, `^([^$\\)]|\$\$|\\.)+`)))
+
+	noVars := NewLazyStringBuilder(lexer.Rest())
+	// pkglint deviates from bmake here by properly parsing nested
+	// variables. bmake only counts opening and closing characters.
+	for {
+		if p.VarUse() != nil {
+			continue
+		}
+		m := lexer.NextRegexp(re)
+		if len(m) == 0 {
+			break
+		}
+		noVars.WriteString(m[0])
+	}
+	return lexer.Since(start), noVars.String()
 }
 
 // VarUseModifiers parses the modifiers of a variable being used, such as :Q, :Mpattern.
@@ -224,7 +251,7 @@ func (p *MkLexer) varUseModifier(varname string, closing byte) string {
 		}
 
 		if hasPrefix(mod, "ts") {
-			return p.varUseModifierSeparator(mod, closing, lexer, varname, mark)
+			return p.varUseModifierTs(mod, closing, lexer, varname, mark)
 		}
 
 	case 'D', 'U':
@@ -255,29 +282,75 @@ func (p *MkLexer) varUseModifier(varname string, closing byte) string {
 			p.varUseText(closing)
 			return lexer.Since(mark)
 		}
+
+	case ':':
+		lexer.Skip(1)
+		if !lexer.SkipRegexp(regcomp(`^[!+?]?=`)) {
+			break
+		}
+
+		// The corresponding code in bmake is much more complicated
+		// because it evaluates the expression immediately instead of
+		// only parsing it.
+		//
+		// This modifier should not be used at all since it hides
+		// variable assignments deep in a line.
+		//
+		// It could also happen that the assignment happens in an
+		// indirect variable reference, which is even more unexpected.
+		if varname == "" {
+			p.Errorf("Assignment to the empty variable is not possible.")
+			break
+		}
+
+		p.Errorf("Assignment modifiers like %q must not be used at all.",
+			lexer.Since(mark))
+		p.Explain(
+			"These modifiers modify other variables when they are evaluated.",
+			"This makes it more difficult to understand them since all the",
+			"other modifiers only affect the one expression that is being",
+			"evaluated, without any long-lasting side effects.",
+			"",
+			"A similarly unpredictable mechanism are shell commands,",
+			"but even these have only local consequences.")
+
+		p.varUseText(closing)
+		return lexer.Since(mark)
 	}
 
+	// ${SOURCES:%.c=%.o}
 	lexer.Reset(mark)
-
-	modifier := p.varUseText(closing)
-
-	// ${SOURCES:%.c=%.o} or ${:!uname -a!:[2]}
-	if contains(modifier, "=") || hasPrefix(modifier, "!") && hasSuffix(modifier, "!") {
+	modifier, modifierNoVar := p.varUseModifierSysV(closing)
+	if contains(modifier, "=") {
+		if contains(modifierNoVar, ":") {
+			unrealModifier := modifier[strings.Index(modifier, ":"):]
+			p.Warnf("The text %q looks like a modifier but isn't.", unrealModifier)
+			p.Explain(
+				"The :from=to modifier consumes all the text until the end of the variable.",
+				"There cannot be any further modifiers after it.")
+		}
 		return modifier
 	}
 
-	if p.line != nil && modifier != "" {
-		p.line.Warnf("Invalid variable modifier %q for %q.", modifier, varname)
+	// ${:!uname -a!:[2]}
+	lexer.Reset(mark)
+	modifier = p.varUseText(closing)
+	if hasPrefix(modifier, "!") && hasSuffix(modifier, "!") {
+		return modifier
+	}
+
+	if modifier != "" {
+		p.Warnf("Invalid variable modifier %q for %q.", modifier, varname)
 	}
 
 	return ""
 }
 
-// varUseModifierSeparator parses the :ts modifier.
+// varUseModifierTs parses the :ts modifier.
 //
 // The API of this method is tricky.
 // It is only extracted from varUseModifier to make the latter smaller.
-func (p *MkLexer) varUseModifierSeparator(
+func (p *MkLexer) varUseModifierTs(
 	mod string, closing byte, lexer *textproc.Lexer, varname string,
 	mark textproc.LexerMark) string {
 
@@ -291,13 +364,11 @@ func (p *MkLexer) varUseModifierSeparator(
 	case matches(sep, `^\\\d+`):
 		break
 	default:
-		if p.line != nil {
-			p.line.Warnf("Invalid separator %q for :ts modifier of %q.", sep, varname)
-			p.line.Explain(
-				"The separator for the :ts modifier must be either a single character",
-				"or an escape sequence like \\t or \\n or an octal or decimal escape",
-				"sequence; see the bmake man page for further details.")
-		}
+		p.Warnf("Invalid separator %q for :ts modifier of %q.", sep, varname)
+		p.Explain(
+			"The separator for the :ts modifier must be either a single character",
+			"or an escape sequence like \\t or \\n or an octal or decimal escape",
+			"sequence; see the bmake man page for further details.")
 	}
 	return lexer.Since(mark)
 }
@@ -349,8 +420,10 @@ func (p *MkLexer) varUseModifierMatch(closing byte) string {
 // varUseModifierSubst parses a :S,from,to, or a :C,from,to, modifier.
 func (p *MkLexer) varUseModifierSubst(closing byte) (ok bool, regex bool, from string, to string, options string) {
 	lexer := p.lexer
-	regex = lexer.PeekByte() == 'C'
-	lexer.Skip(1 /* the initial S or C */)
+	regex = lexer.SkipByte('C')
+	if !regex && !lexer.SkipByte('S') {
+		return
+	}
 
 	sep := lexer.PeekByte() // bmake allows _any_ separator, even letters.
 	if sep == -1 || byte(sep) == closing {
@@ -430,8 +503,8 @@ func (p *MkLexer) varUseModifierAt(lexer *textproc.Lexer, varname string) bool {
 	for p.VarUse() != nil || lexer.SkipString("$$") || lexer.SkipRegexp(re) {
 	}
 
-	if !lexer.SkipByte('@') && p.line != nil {
-		p.line.Warnf("Modifier ${%s:@%s@...@} is missing the final \"@\".", varname, loopVar)
+	if !lexer.SkipByte('@') {
+		p.Warnf("Modifier ${%s:@%s@...@} is missing the final \"@\".", varname, loopVar)
 	}
 
 	return true
@@ -447,23 +520,21 @@ func (p *MkLexer) varUseAlnum() *MkVarUse {
 
 	lexer.Skip(2)
 
-	if p.line != nil {
-		if len(apparentVarname) > 1 {
-			p.line.Errorf("$%[1]s is ambiguous. Use ${%[1]s} if you mean a Make variable or $$%[1]s if you mean a shell variable.",
-				apparentVarname)
-			p.line.Explain(
-				"Only the first letter after the dollar is the variable name.",
-				"Everything following it is normal text, even if it looks like a variable name to human readers.")
-		} else {
-			p.line.Warnf("$%[1]s is ambiguous. Use ${%[1]s} if you mean a Make variable or $$%[1]s if you mean a shell variable.", apparentVarname)
-			p.line.Explain(
-				"In its current form, this variable is parsed as a Make variable.",
-				"For human readers though, $x looks more like a shell variable than a Make variable,",
-				"since Make variables are usually written using braces (BSD-style) or parentheses (GNU-style).")
-		}
+	if len(apparentVarname) > 1 {
+		p.Errorf("$%[1]s is ambiguous. Use ${%[1]s} if you mean a Make variable or $$%[1]s if you mean a shell variable.",
+			apparentVarname)
+		p.Explain(
+			"Only the first letter after the dollar is the variable name.",
+			"Everything following it is normal text, even if it looks like a variable name to human readers.")
+	} else {
+		p.Warnf("$%[1]s is ambiguous. Use ${%[1]s} if you mean a Make variable or $$%[1]s if you mean a shell variable.", apparentVarname)
+		p.Explain(
+			"In its current form, this variable is parsed as a Make variable.",
+			"For human readers though, $x looks more like a shell variable than a Make variable,",
+			"since Make variables are usually written using braces (BSD-style) or parentheses (GNU-style).")
 	}
 
-	return &MkVarUse{apparentVarname[:1], nil}
+	return NewMkVarUse(apparentVarname[:1])
 }
 
 func (p *MkLexer) EOF() bool {
@@ -473,3 +544,34 @@ func (p *MkLexer) EOF() bool {
 func (p *MkLexer) Rest() string {
 	return p.lexer.Rest()
 }
+
+func (p *MkLexer) Errorf(format string, args ...interface{}) {
+	if p.HasDiag() {
+		p.diag.Errorf(format, args...)
+	}
+}
+
+func (p *MkLexer) Warnf(format string, args ...interface{}) {
+	if p.HasDiag() {
+		p.diag.Warnf(format, args...)
+	}
+}
+
+func (p *MkLexer) Notef(format string, args ...interface{}) {
+	if p.HasDiag() {
+		p.diag.Notef(format, args...)
+	}
+}
+
+func (p *MkLexer) Explain(explanation ...string) {
+	if p.HasDiag() {
+		p.diag.Explain(explanation...)
+	}
+}
+
+// Autofix must only be called if HasDiag returns true.
+func (p *MkLexer) Autofix() *Autofix {
+	return p.diag.Autofix()
+}
+
+func (p *MkLexer) HasDiag() bool { return p.diag != nil }
