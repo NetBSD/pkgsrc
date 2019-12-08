@@ -305,7 +305,7 @@ func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:6: l is used but not defined.",
 		"WARN: ~/category/package/options.mk:18: Unknown option \"undeclared\".",
-		"NOTE: ~/category/package/options.mk:21: "+
+		"WARN: ~/category/package/options.mk:21: "+
 			"The positive branch of the .if/.else should be the one where the option is set.",
 		// TODO: The diagnostics should appear in the correct order.
 		"WARN: ~/category/package/options.mk:6: "+
