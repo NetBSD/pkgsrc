@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/02/05 19:10:50 nia Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/12/08 03:55:05 nia Exp $
 anope/data/modules/webcpanel/templates/default/chanserv/access.html
 anope/data/modules/webcpanel/templates/default/chanserv/akick.html
 anope/data/modules/webcpanel/templates/default/chanserv/chanlist.html
@@ -90,6 +90,7 @@ lib/anope/modules/hs_set.so
 lib/anope/modules/hybrid.so
 lib/anope/modules/inspircd12.so
 lib/anope/modules/inspircd20.so
+lib/anope/modules/inspircd3.so
 lib/anope/modules/m_dns.so
 lib/anope/modules/m_dnsbl.so
 lib/anope/modules/m_helpchan.so
