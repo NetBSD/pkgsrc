@@ -45,9 +45,10 @@ func (ck *MkVarUseChecker) checkUndefined() {
 	case !G.Opts.WarnExtra,
 		// Well-known variables are probably defined by the infrastructure.
 		vartype != nil && !vartype.IsGuessed(),
-		ck.MkLines.vars.IsDefinedSimilar(varname),
+		// TODO: At load time, check ck.MkLines.loadVars instead of allVars.
+		ck.MkLines.allVars.IsDefinedSimilar(varname),
 		ck.MkLines.forVars[varname],
-		ck.MkLines.vars.Mentioned(varname) != nil,
+		ck.MkLines.allVars.Mentioned(varname) != nil,
 		G.Pkg != nil && G.Pkg.vars.IsDefinedSimilar(varname),
 		containsVarRef(varname),
 		G.Pkgsrc.vartypes.IsDefinedCanon(varname),
@@ -61,9 +62,7 @@ func (ck *MkVarUseChecker) checkUndefined() {
 }
 
 func (ck *MkVarUseChecker) checkModifiers() {
-	varuse := ck.use
-	mods := varuse.modifiers
-	if len(mods) == 0 {
+	if len(ck.use.modifiers) == 0 {
 		return
 	}
 

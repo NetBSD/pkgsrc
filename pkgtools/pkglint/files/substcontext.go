@@ -142,7 +142,7 @@ func (ctx *SubstContext) Varassign(mkline *MkLine) {
 			fix.Replace("pre-patch", "post-extract")
 			fix.Replace("post-patch", "pre-configure")
 			fix.Apply()
-			// FIXME: Add test that has "SUBST_STAGE.id=pre-patch # or rather post-patch?"
+			// XXX: Add test that has "SUBST_STAGE.id=pre-patch # or rather post-patch?"
 		}
 
 		if G.Pkg != nil && (value == "pre-configure" || value == "post-configure") {

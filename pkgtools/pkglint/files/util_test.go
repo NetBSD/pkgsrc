@@ -436,24 +436,24 @@ func (s *Suite) Test_containsVarRef(c *check.C) {
 	test("$", false) // A syntax error.
 
 	// See the bmake manual page.
-	test("$>", false) // FIXME: true; .ALLSRC
-	test("$!", false) // FIXME: true; .ARCHIVE
-	test("$<", false) // FIXME: true; .IMPSRC
-	test("$%", false) // FIXME: true; .MEMBER
-	test("$?", false) // FIXME: true; .OODATE
-	test("$*", false) // FIXME: true; .PREFIX
-	test("$@", false) // FIXME: true; .TARGET
+	test("$>", true) // .ALLSRC
+	test("$!", true) // .ARCHIVE
+	test("$<", true) // .IMPSRC
+	test("$%", true) // .MEMBER
+	test("$?", true) // .OODATE
+	test("$*", true) // .PREFIX
+	test("$@", true) // .TARGET
 
-	test("$V", false) // FIXME: true
-	test("$v", false) // FIXME: true
+	test("$V", true)
+	test("$v", true)
 	test("${Var}", true)
 	test("${VAR.${param}}", true)
 	test("$(VAR)", true)
 
-	test("$$", false)     // An escaped dollar character.
-	test("$$(VAR)", true) // FIXME: false; An escaped dollar character; probably a subshell.
-	test("$${VAR}", true) // FIXME: false; An escaped dollar character; probably a shell variable.
-	test("$$VAR", false)  // An escaped dollar character.
+	test("$$", false)      // An escaped dollar character.
+	test("$$(VAR)", false) // An escaped dollar character; probably a subshell.
+	test("$${VAR}", false) // An escaped dollar character; probably a shell variable.
+	test("$$VAR", false)   // An escaped dollar character.
 }
 
 func (s *Suite) Test_hasAlnumPrefix(c *check.C) {
@@ -645,7 +645,8 @@ func (s *Suite) Test_Scope_LastValue(c *check.C) {
 
 	mklines.Check()
 
-	t.CheckEquals(mklines.vars.LastValue("VAR"), "third (conditional)")
+	// TODO: At load time, use loadVars instead of allVars.
+	t.CheckEquals(mklines.allVars.LastValue("VAR"), "third (conditional)")
 
 	t.CheckOutputLines(
 		"WARN: file.mk:2: VAR is defined but not used.")
