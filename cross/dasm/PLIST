@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2013/06/16 09:40:58 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/12/08 23:59:25 ng0 Exp $
 bin/dasm
 bin/ftohex
-share/dasm/dasm.txt
-share/dasm/ftohex.txt
+share/dasm/DASM.TXT
+share/dasm/FTOHEX.TXT
