@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: anope.sh,v 1.2 2019/02/05 19:10:50 nia Exp $
+# $NetBSD: anope.sh,v 1.3 2019/12/08 03:55:05 nia Exp $
 #
 # PROVIDE: anope
 # REQUIRE: DAEMON
@@ -10,7 +10,7 @@
 name="anope"
 rcvar=${name}
 command="@PREFIX@/bin/anope"
-command_args="--confdir=@PKG_SYSCONFDIR@/anope"
+command_args="--confdir=@PKG_SYSCONFDIR@"
 command_args="${command_args} --dbdir=@PREFIX@/anope/data"
 command_args="${command_args} --localedir=@PREFIX@/@PKGLOCALEDIR@/locale"
 command_args="${command_args} --logdir=@PREFIX@/anope/logs"
