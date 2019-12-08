@@ -16,6 +16,7 @@ type MkLines struct {
 	indentation   *Indentation       // Indentation depth of preprocessing directives; only available during MkLines.ForEach.
 	forVars       map[string]bool    // The variables currently used in .for loops; only available during MkLines.checkAll.
 	once          Once
+	postLine      func(mkline *MkLine) // Custom action that is run after checking each line
 
 	// TODO: Consider extracting plistVarAdded, plistVarSet, plistVarSkip into an own type.
 	// TODO: Describe where each of the above fields is valid.
@@ -42,7 +43,8 @@ func NewMkLines(lines *Lines) *MkLines {
 		tools,
 		nil,
 		make(map[string]bool),
-		Once{}}
+		Once{},
+		nil}
 }
 
 // TODO: Consider defining an interface MkLinesChecker (different name, though, since this one confuses even me)
@@ -363,62 +365,74 @@ func (mklines *MkLines) checkAll() {
 	vargroupsChecker := NewVargroupsChecker(mklines)
 	isHacksMk := mklines.lines.BaseName == "hacks.mk"
 
-	lineAction := func(mkline *MkLine) bool {
-		if isHacksMk {
-			// Needs to be set here because it is reset in MkLines.ForEach.
-			mklines.Tools.SeenPrefs = true
-		}
-
-		ck := MkLineChecker{mklines, mkline}
-		ck.Check()
-		vargroupsChecker.Check(mkline)
-
-		varalign.Process(mkline)
-		mklines.Tools.ParseToolLine(mklines, mkline, false, false)
-		substContext.Process(mkline)
-
-		switch {
-
-		case mkline.IsVarassign():
-			mklines.target = ""
-			mkline.Tokenize(mkline.Value(), true) // Just for the side-effect of the warnings.
-
-			mklines.checkVarassignPlist(mkline)
-
-		case mkline.IsInclude():
-			mklines.target = ""
-			if G.Pkg != nil {
-				G.Pkg.checkIncludeConditionally(mkline, mklines.indentation)
-			}
-
-		case mkline.IsDirective():
-			ck.checkDirective(mklines.forVars, mklines.indentation)
-
-		case mkline.IsDependency():
-			ck.checkDependencyRule(allowedTargets)
-			mklines.target = mkline.Targets()
-
-		case mkline.IsShellCommand():
-			mkline.Tokenize(mkline.ShellCommand(), true) // Just for the side-effect of the warnings.
-		}
-
-		return true
-	}
-
-	atEnd := func(mkline *MkLine) {
-		mklines.indentation.CheckFinish(mklines.lines.Filename)
-		vargroupsChecker.Finish(mkline)
-	}
-
 	if trace.Tracing {
 		trace.Stepf("Starting main checking loop")
 	}
-	mklines.ForEachEnd(lineAction, atEnd)
+	mklines.ForEachEnd(
+		func(mkline *MkLine) bool {
+			if isHacksMk {
+				// Needs to be set here because it is reset in MkLines.ForEach.
+				mklines.Tools.SeenPrefs = true
+			}
+			mklines.checkLine(mkline, vargroupsChecker, &varalign, substContext, allowedTargets)
+			return true
+		},
+		func(mkline *MkLine) {
+			// This check is not done by ForEach because ForEach only
+			// manages the iteration, not the actual checks.
+			mklines.indentation.CheckFinish(mklines.lines.Filename)
+			vargroupsChecker.Finish(mkline)
+		})
 
 	substContext.Finish(mklines.EOFLine())
 	varalign.Finish()
 
 	CheckLinesTrailingEmptyLines(mklines.lines)
+}
+
+func (mklines *MkLines) checkLine(
+	mkline *MkLine,
+	vargroupsChecker *VargroupsChecker,
+	varalign *VaralignBlock,
+	substContext *SubstContext,
+	allowedTargets map[string]bool) {
+
+	ck := MkLineChecker{mklines, mkline}
+	ck.Check()
+	vargroupsChecker.Check(mkline)
+
+	varalign.Process(mkline)
+	mklines.Tools.ParseToolLine(mklines, mkline, false, false)
+	substContext.Process(mkline)
+
+	switch {
+
+	case mkline.IsVarassign():
+		mklines.target = ""
+		mkline.Tokenize(mkline.Value(), true) // Just for the side-effect of the warnings.
+
+		mklines.checkVarassignPlist(mkline)
+
+	case mkline.IsInclude():
+		mklines.target = ""
+		if G.Pkg != nil {
+			G.Pkg.checkIncludeConditionally(mkline, mklines.indentation)
+		}
+
+	case mkline.IsDirective():
+		ck.checkDirective(mklines.forVars, mklines.indentation)
+
+	case mkline.IsDependency():
+		ck.checkDependencyRule(allowedTargets)
+		mklines.target = mkline.Targets()
+
+	case mkline.IsShellCommand():
+		mkline.Tokenize(mkline.ShellCommand(), true) // Just for the side-effect of the warnings.
+	}
+
+	if mklines.postLine != nil {
+		mklines.postLine(mkline)
+	}
 }
 
 func (mklines *MkLines) checkVarassignPlist(mkline *MkLine) {
