@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.76 2019/10/21 20:47:55 nia Exp $
+# $NetBSD: options.mk,v 1.77 2019/12/08 13:07:20 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 
@@ -68,16 +68,6 @@ MESON_ARGS+=		-Dvulkan-drivers=""
 .endif
 
 #
-# Wayland support
-#
-.if !empty(PKG_OPTIONS:Mwayland)
-MESA_PLATFORMS+=	wayland
-PLIST.wayland=		yes
-.  include "../../devel/wayland/buildlink3.mk"
-.  include "../../devel/wayland-protocols/buildlink3.mk"
-.endif
-
-#
 # X11 support
 #
 .if !empty(PKG_OPTIONS:Mx11)
@@ -107,4 +97,14 @@ MESON_ARGS+=		-Dgallium-vdpau=false
 .else
 MESON_ARGS+=		-Dglx=disabled
 MESON_ARGS+=		-Dgallium-vdpau=false
+.endif
+
+#
+# Wayland support
+#
+.if !empty(PKG_OPTIONS:Mwayland)
+MESA_PLATFORMS+=	wayland
+PLIST.wayland=		yes
+.  include "../../devel/wayland/buildlink3.mk"
+.  include "../../devel/wayland-protocols/buildlink3.mk"
 .endif
