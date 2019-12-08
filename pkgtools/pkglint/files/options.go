@@ -184,7 +184,8 @@ func (ck *OptionsLinesChecker) handleLowerCondition(mkline *MkLine, cond *MkCond
 		Var:   recordVarUse})
 
 	if cond.Empty != nil && cond.Empty.varname == "PKG_OPTIONS" && mkline.HasElseBranch() {
-		mkline.Notef("The positive branch of the .if/.else should be the one where the option is set.")
+		mkline.Warnf("The positive branch of the .if/.else " +
+			"should be the one where the option is set.")
 		mkline.Explain(
 			"For consistency among packages, the upper branch of this",
 			".if/.else statement should always handle the case where the",

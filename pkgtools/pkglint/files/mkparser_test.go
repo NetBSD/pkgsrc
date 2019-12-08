@@ -12,7 +12,7 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 
 	testRest := func(input string, expectedTree *MkCond, expectedRest string) {
 		// As of July 2019 p.MkCond does not emit warnings;
-		// this is left to MkLineChecker.checkDirectiveCond.
+		// this is left to MkCondChecker.Check.
 		line := t.NewLine("filename.mk", 1, ".if "+input)
 		p := NewMkParser(line, input)
 		actualTree := p.MkCond()
