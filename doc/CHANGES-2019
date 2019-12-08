@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5276 2019/12/08 13:07:41 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5277 2019/12/08 20:10:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8491,3 +8491,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/anope to 2.0.7 [nia 2019-12-08]
 	Updated mail/rspamd to 2.2 [triaxx 2019-12-08]
 	Updated graphics/MesaLib to 19.2.7 [nia 2019-12-08]
+	Updated www/firefox68 to 68.3.0 [nia 2019-12-08]
