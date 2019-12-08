@@ -106,7 +106,7 @@ func (ck *Buildlink3Checker) checkUniquePkgbase(pkgbase string, mkline *MkLine) 
 	}
 
 	mkline.Errorf("Duplicate package identifier %q already appeared in %s.",
-		pkgbase, mkline.RefToLocation(*prev))
+		pkgbase, mkline.RelLocation(*prev))
 	mkline.Explain(
 		"Each buildlink3.mk file must have a unique identifier.",
 		"These identifiers are used for multiple-inclusion guards,",
@@ -134,7 +134,7 @@ func (ck *Buildlink3Checker) checkSecondParagraph(mlex *MkLinesLexer) bool {
 	ucPkgbase := strings.ToUpper(strings.Replace(pkgbase, "-", "_", -1))
 	if ucPkgbase != pkgupper && !containsVarRef(pkgbase) {
 		pkgupperLine.Errorf("Package name mismatch between multiple-inclusion guard %q (expected %q) and package name %q (from %s).",
-			pkgupper, ucPkgbase, pkgbase, pkgupperLine.RefTo(ck.pkgbaseLine))
+			pkgupper, ucPkgbase, pkgbase, pkgupperLine.RelMkLine(ck.pkgbaseLine))
 	}
 	ck.checkPkgbaseMismatch(pkgbase)
 
@@ -156,7 +156,7 @@ func (ck *Buildlink3Checker) checkPkgbaseMismatch(bl3base string) {
 	}
 
 	ck.pkgbaseLine.Errorf("Package name mismatch between %q in this file and %q from %s.",
-		bl3base, mkbase, ck.pkgbaseLine.RefTo(G.Pkg.EffectivePkgnameLine))
+		bl3base, mkbase, ck.pkgbaseLine.RelMkLine(G.Pkg.EffectivePkgnameLine))
 }
 
 // Third paragraph: Package information.
@@ -218,7 +218,7 @@ func (ck *Buildlink3Checker) checkVarassign(mlex *MkLinesLexer, mkline *MkLine, 
 	if doCheck && ck.abi != nil && ck.api != nil && ck.abi.Pkgbase != ck.api.Pkgbase {
 		if !hasPrefix(ck.api.Pkgbase, "{") {
 			ck.abiLine.Warnf("Package name mismatch between ABI %q and API %q (from %s).",
-				ck.abi.Pkgbase, ck.api.Pkgbase, ck.abiLine.RefTo(ck.apiLine))
+				ck.abi.Pkgbase, ck.api.Pkgbase, ck.abiLine.RelMkLine(ck.apiLine))
 		}
 	}
 
@@ -227,7 +227,7 @@ func (ck *Buildlink3Checker) checkVarassign(mlex *MkLinesLexer, mkline *MkLine, 
 			if ck.api != nil && ck.api.Lower != "" && !containsVarRef(ck.api.Lower) {
 				if pkgver.Compare(ck.abi.Lower, ck.api.Lower) < 0 {
 					ck.abiLine.Warnf("ABI version %q should be at least API version %q (see %s).",
-						ck.abi.Lower, ck.api.Lower, ck.abiLine.RefTo(ck.apiLine))
+						ck.abi.Lower, ck.api.Lower, ck.abiLine.RelMkLine(ck.apiLine))
 				}
 			}
 		}
