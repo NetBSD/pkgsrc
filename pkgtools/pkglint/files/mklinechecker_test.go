@@ -209,7 +209,7 @@ func (s *Suite) Test_MkLineChecker_checkVartype(c *check.C) {
 		MkCvsID,
 		"DISTNAME=\tgcc-${GCC_VERSION}")
 
-	mklines.vars.Define("GCC_VERSION", mklines.mklines[1])
+	mklines.allVars.Define("GCC_VERSION", mklines.mklines[1])
 	mklines.Check()
 
 	t.CheckOutputEmpty()

@@ -14,7 +14,7 @@ func NewMkCondChecker(mkLine *MkLine, mkLines *MkLines) *MkCondChecker {
 	return &MkCondChecker{MkLine: mkLine, MkLines: mkLines}
 }
 
-func (ck *MkCondChecker) checkDirectiveCond() {
+func (ck *MkCondChecker) Check() {
 	mkline := ck.MkLine
 	if trace.Tracing {
 		defer trace.Call1(mkline.Args())()
@@ -39,26 +39,26 @@ func (ck *MkCondChecker) checkDirectiveCond() {
 	checkNotEmpty := func(not *MkCond) {
 		empty := not.Empty
 		if empty != nil {
-			ck.checkDirectiveCondEmpty(empty, true, true)
+			ck.checkEmpty(empty, true, true)
 			done[empty] = true
 		}
 
 		if not.Term != nil && not.Term.Var != nil {
 			varUse := not.Term.Var
-			ck.checkDirectiveCondEmpty(varUse, false, false)
+			ck.checkEmpty(varUse, false, false)
 			done[varUse] = true
 		}
 	}
 
 	checkEmpty := func(empty *MkVarUse) {
 		if !done[empty] {
-			ck.checkDirectiveCondEmpty(empty, true, false)
+			ck.checkEmpty(empty, true, false)
 		}
 	}
 
 	checkVar := func(varUse *MkVarUse) {
 		if !done[varUse] {
-			ck.checkDirectiveCondEmpty(varUse, false, true)
+			ck.checkEmpty(varUse, false, true)
 		}
 	}
 
@@ -66,19 +66,19 @@ func (ck *MkCondChecker) checkDirectiveCond() {
 		Not:     checkNotEmpty,
 		Empty:   checkEmpty,
 		Var:     checkVar,
-		Compare: ck.checkDirectiveCondCompare,
+		Compare: ck.checkCompare,
 		VarUse:  checkVarUse})
 }
 
-// checkDirectiveCondEmpty checks a condition of the form empty(VAR),
+// checkEmpty checks a condition of the form empty(VAR),
 // empty(VAR:Mpattern) or ${VAR:Mpattern} in an .if directive.
-func (ck *MkCondChecker) checkDirectiveCondEmpty(varuse *MkVarUse, fromEmpty bool, neg bool) {
-	ck.checkDirectiveCondEmptyExpr(varuse)
-	ck.checkDirectiveCondEmptyType(varuse)
-	ck.simplifyCondition(varuse, fromEmpty, neg)
+func (ck *MkCondChecker) checkEmpty(varuse *MkVarUse, fromEmpty bool, neg bool) {
+	ck.checkEmptyExpr(varuse)
+	ck.checkEmptyType(varuse)
+	ck.simplify(varuse, fromEmpty, neg)
 }
 
-func (ck *MkCondChecker) checkDirectiveCondEmptyExpr(varuse *MkVarUse) {
+func (ck *MkCondChecker) checkEmptyExpr(varuse *MkVarUse) {
 	if !matches(varuse.varname, `^\$.*:[MN]`) {
 		return
 	}
@@ -97,7 +97,7 @@ func (ck *MkCondChecker) checkDirectiveCondEmptyExpr(varuse *MkVarUse) {
 		"\t${VARNAME:Mpattern}")
 }
 
-func (ck *MkCondChecker) checkDirectiveCondEmptyType(varuse *MkVarUse) {
+func (ck *MkCondChecker) checkEmptyType(varuse *MkVarUse) {
 	for _, modifier := range varuse.modifiers {
 		ok, _, pattern, _ := modifier.MatchMatch()
 		if ok {
@@ -123,14 +123,14 @@ var mkCondStringLiteralUnquoted = textproc.NewByteSet("+---./0-9@A-Z_a-z")
 // that are interpreted literally in the :M and :N modifiers.
 var mkCondModifierPatternLiteral = textproc.NewByteSet("+---./0-9<=>@A-Z_a-z")
 
-// simplifyCondition replaces an unnecessarily complex condition with
+// simplify replaces an unnecessarily complex condition with
 // a simpler condition that's still equivalent.
 //
 // * fromEmpty is true for the form empty(VAR...), and false for ${VAR...}.
 //
 // * neg is true for the form !empty(VAR...), and false for empty(VAR...).
 // It also applies to the ${VAR} form.
-func (ck *MkCondChecker) simplifyCondition(varuse *MkVarUse, fromEmpty bool, neg bool) {
+func (ck *MkCondChecker) simplify(varuse *MkVarUse, fromEmpty bool, neg bool) {
 	varname := varuse.varname
 	mods := varuse.modifiers
 	modifiers := mods
@@ -147,7 +147,8 @@ func (ck *MkCondChecker) simplifyCondition(varuse *MkVarUse, fromEmpty bool, neg
 			return true
 		}
 
-		if ck.MkLines.vars.IsDefined(varname) {
+		// TODO: Use ck.MkLines.loadVars instead.
+		if ck.MkLines.allVars.IsDefined(varname) {
 			return true
 		}
 
@@ -218,7 +219,8 @@ func (ck *MkCondChecker) simplifyCondition(varuse *MkVarUse, fromEmpty bool, neg
 	}
 
 	fix := ck.MkLine.Autofix()
-	fix.Notef("%s should be compared using \"%s\" instead of matching against %q.",
+	fix.Notef("%s can be compared using the simpler \"%s\" "+
+		"instead of matching against %q.",
 		varname, to, ":"+modifier.Text)
 	fix.Explain(
 		"This variable has a single value, not a list of values.",
@@ -232,19 +234,24 @@ func (ck *MkCondChecker) simplifyCondition(varuse *MkVarUse, fromEmpty bool, neg
 	fix.Apply()
 }
 
-func (ck *MkCondChecker) checkDirectiveCondCompare(left *MkCondTerm, op string, right *MkCondTerm) {
+func (ck *MkCondChecker) checkCompare(left *MkCondTerm, op string, right *MkCondTerm) {
 	switch {
 	case left.Var != nil && right.Var == nil && right.Num == "":
-		ck.checkDirectiveCondCompareVarStr(left.Var, op, right.Str)
+		ck.checkCompareVarStr(left.Var, op, right.Str)
 	}
 }
 
-func (ck *MkCondChecker) checkDirectiveCondCompareVarStr(varuse *MkVarUse, op string, str string) {
+func (ck *MkCondChecker) checkCompareVarStr(varuse *MkVarUse, op string, str string) {
 	varname := varuse.varname
 	varmods := varuse.modifiers
 	switch len(varmods) {
 	case 0:
-		ck.checkCompareVarStr(varname, op, str)
+		mkLineChecker := NewMkLineChecker(ck.MkLines, ck.MkLine)
+		mkLineChecker.checkVartype(varname, opUseCompare, str, "")
+
+		if varname == "PKGSRC_COMPILER" {
+			ck.checkCompareVarStrCompiler(op, str)
+		}
 
 	case 1:
 		if m, _, pattern, _ := varmods[0].MatchMatch(); m {
@@ -269,15 +276,6 @@ func (ck *MkCondChecker) checkDirectiveCondCompareVarStr(varuse *MkVarUse, op st
 			trace.Stepf("checkCompareVarStr ${%s%s} %s %s",
 				varuse.varname, varuse.Mod(), op, str)
 		}
-	}
-}
-
-func (ck *MkCondChecker) checkCompareVarStr(varname, op, value string) {
-	mkLineChecker := NewMkLineChecker(ck.MkLines, ck.MkLine)
-	mkLineChecker.checkVartype(varname, opUseCompare, value, "")
-
-	if varname == "PKGSRC_COMPILER" {
-		ck.checkCompareVarStrCompiler(op, value)
 	}
 }
 

@@ -89,7 +89,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeft(c *check.C) {
 		MkCvsID,
 		"_VARNAME=\tvalue")
 	// Only to prevent "defined but not used".
-	mklines.vars.Use("_VARNAME", mklines.mklines[1], VucRunTime)
+	mklines.allVars.Use("_VARNAME", mklines.mklines[1], VucRunTime)
 
 	mklines.Check()
 
@@ -380,7 +380,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignLeftUserSettable__after_prefs
 func (s *Suite) Test_MkAssignChecker_checkVarassignLeftUserSettable__vartype_nil(c *check.C) {
 	t := s.Init(c)
 
-	t.CreateFileLines("category/package/vars.mk",
+	t.CreateFileLines("category/package/allVars.mk",
 		MkCvsID,
 		"#",
 		"# User-settable variables:",
@@ -651,7 +651,7 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignOpShell(c *check.C) {
 		"",
 		"MUST_BE_EARLY!=\techo 123 # must be evaluated early",
 		"",
-		"show-package-vars: .PHONY",
+		"show-package-allVars: .PHONY",
 		"\techo OS_NAME=${OS_NAME:Q}",
 		"\techo MUST_BE_EARLY=${MUST_BE_EARLY:Q}")
 	t.FinishSetUp()

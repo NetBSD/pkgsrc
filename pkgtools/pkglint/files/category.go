@@ -148,7 +148,7 @@ func CheckdirCategory(dir CurrPath) {
 		mlex.SkipEmptyOrNote()
 		mlex.SkipContainsOrWarn(".include \"../mk/misc/category.mk\"")
 		if !mlex.EOF() {
-			mlex.CurrentLine().Errorf("The file should end here.")
+			mlex.CurrentLine().Errorf("The file must end here.")
 		}
 	}
 

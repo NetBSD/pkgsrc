@@ -404,7 +404,7 @@ func (s *Suite) Test_MkLexer_VarUse(c *check.C) {
 func (s *Suite) Test_MkLexer_varUseBrace__autofix_parentheses(c *check.C) {
 	t := s.Init(c)
 
-	test := func() {
+	test := func(autofix bool) {
 		mklines := t.SetUpFileMkLines("Makefile",
 			MkCvsID,
 			"COMMENT=\t$(P1) $(P2)) $(P3:Q) ${BRACES} $(A.$(B.$(C))) $(A:M\\#)",
@@ -1248,7 +1248,7 @@ func (s *Suite) Test_MkLexer_Explain(c *check.C) {
 func (s *Suite) Test_MkLexer_Autofix(c *check.C) {
 	t := s.Init(c)
 
-	test := func() {
+	test := func(autofix bool) {
 		mklines := t.SetUpFileMkLines("filename.mk",
 			"# before")
 		lex := NewMkLexer("", mklines.lines.Lines[0])

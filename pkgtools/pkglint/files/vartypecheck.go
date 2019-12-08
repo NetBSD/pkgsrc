@@ -4,7 +4,6 @@ import (
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/textproc"
 	"path"
-	"sort"
 	"strings"
 )
 
@@ -81,7 +80,7 @@ func (cv *VartypeCheck) WithVarnameValue(varname, value string) *VartypeCheck {
 // and the value.
 //
 // This is typically used when checking parts of composite types,
-// especially patterns.
+// such as the patterns from ONLY_FOR_PLATFORM.
 func (cv *VartypeCheck) WithVarnameValueMatch(varname, value string) *VartypeCheck {
 	newVc := *cv
 	newVc.Varname = varname
@@ -90,61 +89,6 @@ func (cv *VartypeCheck) WithVarnameValueMatch(varname, value string) *VartypeChe
 	newVc.ValueNoVar = cv.MkLine.WithoutMakeVariables(value)
 	return &newVc
 }
-
-const (
-	machineOpsysValues = "" + // See mk/platform
-		"AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD " +
-		"HPUX Haiku IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare"
-
-		// See mk/emulator/emulator-vars.mk.
-	emulOpsysValues = "" +
-		"bitrig bsdos cygwin darwin dragonfly freebsd " +
-		"haiku hpux interix irix linux mirbsd netbsd openbsd osf1 solaris sunos"
-
-	// Hardware architectures having the same name in bsd.own.mk and the GNU world.
-	// These are best-effort guesses, since they depend on the operating system.
-	archValues = "" +
-		"aarch64 alpha amd64 arc arm cobalt convex dreamcast i386 " +
-		"hpcmips hpcsh hppa hppa64 ia64 " +
-		"m68k m88k mips mips64 mips64el mipseb mipsel mipsn32 mlrisc " +
-		"ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sparc sparc64 vax x86_64"
-
-	// See mk/bsd.prefs.mk:/^GNU_ARCH\./
-	machineArchValues = "" +
-		archValues + " " +
-		"aarch64eb amd64 arm26 arm32 coldfire earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 " +
-		"earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm " +
-		"i386 i586 i686 m68000 mips mips64eb sh3eb sh3el"
-
-	// See mk/bsd.prefs.mk:/^GNU_ARCH\./
-	machineGnuArchValues = "" +
-		archValues + " " +
-		"aarch64_be arm armeb armv4 armv4eb armv6 armv6eb armv7 armv7eb " +
-		"i486 m5407 m68010 mips64 mipsel sh shle x86_64"
-)
-
-func enumFromValues(spaceSeparated string) *BasicType {
-	values := strings.Fields(spaceSeparated)
-	sort.Strings(values)
-	seen := make(map[string]bool)
-	var unique []string
-	for _, value := range values {
-		if !seen[value] {
-			seen[value] = true
-			unique = append(unique, value)
-		}
-	}
-	return enum(strings.Join(unique, " "))
-}
-
-var (
-	enumMachineOpsys            = enumFromValues(machineOpsysValues)
-	enumMachineArch             = enumFromValues(machineArchValues)
-	enumMachineGnuArch          = enumFromValues(machineGnuArchValues)
-	enumEmulOpsys               = enumFromValues(emulOpsysValues)
-	enumEmulArch                = enumFromValues(machineArchValues) // Just a wild guess.
-	enumMachineGnuPlatformOpsys = enumEmulOpsys
-)
 
 func (cv *VartypeCheck) AwkCommand() {
 	if trace.Tracing {
@@ -497,10 +441,10 @@ func (cv *VartypeCheck) EmulPlatform() {
 	const rePair = `^(` + rePart + `)-(` + rePart + `)$`
 	if m, opsysPattern, archPattern := match2(cv.Value, rePair); m {
 		opsysCv := cv.WithVarnameValue("the operating system part of "+cv.Varname, opsysPattern)
-		enumEmulOpsys.checker(opsysCv)
+		BtEmulOpsys.checker(opsysCv)
 
 		archCv := cv.WithVarnameValue("the hardware architecture part of "+cv.Varname, archPattern)
-		enumEmulArch.checker(archCv)
+		BtEmulArch.checker(archCv)
 	} else {
 		cv.Warnf("%q is not a valid emulation platform.", cv.Value)
 		cv.Explain(
@@ -806,14 +750,14 @@ func (cv *VartypeCheck) MachineGnuPlatform() {
 		archCv := cv.WithVarnameValueMatch(
 			"the hardware architecture part of "+cv.Varname,
 			archPattern)
-		enumMachineGnuArch.checker(archCv)
+		BtMachineGnuArch.checker(archCv)
 
 		_ = vendorPattern
 
 		opsysCv := cv.WithVarnameValueMatch(
 			"the operating system part of "+cv.Varname,
 			opsysPattern)
-		enumMachineGnuPlatformOpsys.checker(opsysCv)
+		BtMachineGnuPlatformOpsys.checker(opsysCv)
 
 	} else {
 		cv.Warnf("%q is not a valid platform pattern.", cv.Value)
@@ -848,13 +792,13 @@ func (cv *VartypeCheck) MachinePlatformPattern() {
 
 	if m, opsysPattern, versionPattern, archPattern := match3(pattern, reTriple); m {
 		opsysCv := cv.WithVarnameValueMatch("the operating system part of "+cv.Varname, opsysPattern)
-		enumMachineOpsys.checker(opsysCv)
+		BtMachineOpsys.checker(opsysCv)
 
 		versionCv := cv.WithVarnameValueMatch("the version part of "+cv.Varname, versionPattern)
 		versionCv.Version()
 
 		archCv := cv.WithVarnameValueMatch("the hardware architecture part of "+cv.Varname, archPattern)
-		enumMachineArch.checker(archCv)
+		BtMachineArch.checker(archCv)
 
 	} else {
 		cv.Warnf("%q is not a valid platform pattern.", cv.Value)
@@ -1099,7 +1043,7 @@ func (cv *VartypeCheck) Pkgpath() {
 
 func (cv *VartypeCheck) Pkgrevision() {
 	if !matches(cv.Value, `^[1-9]\d*$`) {
-		cv.Warnf("%s must be a positive integer number.", cv.Varname)
+		cv.Errorf("%s must be a positive integer number.", cv.Varname)
 	}
 	if cv.MkLine.Basename != "Makefile" {
 		cv.Errorf("%s only makes sense directly in the package Makefile.", cv.Varname)
@@ -1253,7 +1197,7 @@ func (cv *VartypeCheck) SedCommands() {
 			i++
 			ncommands++
 			if ncommands > 1 {
-				cv.Notef("Each sed command should appear in an assignment of its own.")
+				cv.Warnf("Each sed command should appear in an assignment of its own.")
 				cv.Explain(
 					"For example, instead of",
 					"    SUBST_SED.foo+=        -e s,command1,, -e s,command2,,",

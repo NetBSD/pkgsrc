@@ -275,7 +275,25 @@ func (s *Suite) Test_MkVarUseChecker_checkUndefined__documented(c *check.C) {
 }
 
 func (s *Suite) Test_MkVarUseChecker_checkModifiers(c *check.C) {
-	// FIXME
+	t := s.Init(c)
+
+	test := func(text string, diagnostics ...string) {
+		mklines := t.NewMkLines("filename.mk",
+			text)
+		mklines.ForEach(func(mkline *MkLine) {
+			mkline.ForEachUsed(func(varUse *MkVarUse, time VucTime) {
+				ck := NewMkVarUseChecker(varUse, mklines, mkline)
+				ck.checkModifiers()
+			})
+		})
+		t.CheckOutput(diagnostics)
+	}
+
+	test("\t${VAR}",
+		nil...)
+
+	test("\t${VAR:from=to:Q}",
+		"WARN: filename.mk:1: The text \":Q\" looks like a modifier but isn't.")
 }
 
 func (s *Suite) Test_MkVarUseChecker_checkModifiersSuffix(c *check.C) {
@@ -1075,7 +1093,7 @@ func (s *Suite) Test_MkVarUseChecker_fixQuotingModifiers(c *check.C) {
 
 	t.SetUpVartypes()
 
-	test := func() {
+	test := func(autofix bool) {
 		mklines := t.SetUpFileMkLines("filename.mk",
 			MkCvsID,
 			"",

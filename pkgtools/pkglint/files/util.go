@@ -449,7 +449,17 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 }
 
 func containsVarRef(s string) bool {
-	return contains(s, "${") || contains(s, "$(")
+	if !contains(s, "$") {
+		return false
+	}
+	lex := NewMkLexer(s, nil)
+	tokens, _ := lex.MkTokens()
+	for _, token := range tokens {
+		if token.Varuse != nil {
+			return true
+		}
+	}
+	return false
 }
 
 func hasAlnumPrefix(s string) bool { return s != "" && textproc.AlnumU.Contains(s[0]) }

@@ -131,7 +131,7 @@ func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable__followed_by_lit
 // On the contrary, when pkglint checks a single .mk file, these
 // commands are not guaranteed to be defined, not even when the
 // .mk file includes the file defining the command.
-// FIXME: This paragraph sounds wrong. All commands from included files should be valid.
+// TODO: This paragraph sounds wrong. All commands from included files should be valid.
 //
 // The PYTHON_BIN variable below must not be called *_CMD, or another code path is taken.
 func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable__from_package(c *check.C) {
@@ -1222,9 +1222,9 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommand__subshell(c *check.C) {
 
 	mklines.Check()
 
-	// FIXME: Fix the parse errors (nested subshells).
-	// FIXME: Fix the duplicate diagnostic in line 6.
-	// FIXME: "(" is not a shell command, it's an operator.
+	// XXX: Fix the parse errors (nested subshells).
+	// XXX: Fix the duplicate diagnostic in line 6.
+	// TODO: "(" is not a shell command, it's an operator.
 	t.CheckOutputLines(
 		"WARN: Makefile:4: The shell command \"(\" should not be hidden.",
 		"WARN: Makefile:5: Internal pkglint error in ShTokenizer.ShAtom at \"$$(echo 1024))\" (quoting=S).",
@@ -1350,7 +1350,7 @@ func (s *Suite) Test_ShellLineChecker_CheckWord__dquot_dollar(c *check.C) {
 
 	ck.CheckWord(ck.mkline.ShellCommand(), false, RunTime)
 
-	// FIXME: Make consumes the dollar silently.
+	// XXX: Make consumes the dollar silently.
 	//  This could be worth another pkglint warning.
 	t.CheckOutputEmpty()
 }

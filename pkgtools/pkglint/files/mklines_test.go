@@ -496,8 +496,8 @@ func (s *Suite) Test_MkLines_collectUsedVariables__simple(c *check.C) {
 
 	mklines.collectUsedVariables()
 
-	t.CheckDeepEquals(mklines.vars.used, map[string]*MkLine{"VAR": mkline})
-	t.CheckEquals(mklines.vars.FirstUse("VAR"), mkline)
+	t.CheckDeepEquals(mklines.allVars.used, map[string]*MkLine{"VAR": mkline})
+	t.CheckEquals(mklines.allVars.FirstUse("VAR"), mkline)
 }
 
 func (s *Suite) Test_MkLines_collectUsedVariables__nested(c *check.C) {
@@ -515,12 +515,12 @@ func (s *Suite) Test_MkLines_collectUsedVariables__nested(c *check.C) {
 
 	mklines.collectUsedVariables()
 
-	t.CheckEquals(len(mklines.vars.used), 5)
-	t.CheckEquals(mklines.vars.FirstUse("lparam"), assignMkline)
-	t.CheckEquals(mklines.vars.FirstUse("rparam"), assignMkline)
-	t.CheckEquals(mklines.vars.FirstUse("inner"), shellMkline)
-	t.CheckEquals(mklines.vars.FirstUse("outer.*"), shellMkline)
-	t.CheckEquals(mklines.vars.FirstUse("outer.${inner}"), shellMkline)
+	t.CheckEquals(len(mklines.allVars.used), 5)
+	t.CheckEquals(mklines.allVars.FirstUse("lparam"), assignMkline)
+	t.CheckEquals(mklines.allVars.FirstUse("rparam"), assignMkline)
+	t.CheckEquals(mklines.allVars.FirstUse("inner"), shellMkline)
+	t.CheckEquals(mklines.allVars.FirstUse("outer.*"), shellMkline)
+	t.CheckEquals(mklines.allVars.FirstUse("outer.${inner}"), shellMkline)
 }
 
 func (s *Suite) Test_MkLines_collectDocumentedVariables(c *check.C) {
@@ -572,7 +572,7 @@ func (s *Suite) Test_MkLines_collectDocumentedVariables(c *check.C) {
 	mklines.collectDocumentedVariables()
 
 	var varnames []string
-	for varname, mkline := range mklines.vars.used {
+	for varname, mkline := range mklines.allVars.used {
 		varnames = append(varnames, sprintf("%s (line %s)", varname, mkline.Linenos()))
 	}
 	sort.Strings(varnames)
@@ -696,7 +696,7 @@ func (s *Suite) Test_MkLines_collectVariables__find_files_and_headers(c *check.C
 	mklines.Check()
 
 	t.CheckDeepEquals(
-		keys(mklines.vars.firstDef),
+		keys(mklines.allVars.firstDef),
 		[]string{
 			"BUILTIN_FIND_FILES_VAR",
 			"BUILTIN_FIND_HEADERS_VAR",

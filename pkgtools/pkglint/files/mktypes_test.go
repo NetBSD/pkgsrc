@@ -192,7 +192,9 @@ func (s *Suite) Test_MkVarUseModifier_ChangesList(c *check.C) {
 	test("E", false)
 	test("H", false)
 
-	// FIXME: The :M and :N modifiers obviously change the number of words.
+	// The :M and :N modifiers may reduce the number of words in a
+	// variable, but they don't change the interpretation from a list
+	// to a non-list.
 	test("Mpattern", false)
 	test("Npattern", false)
 

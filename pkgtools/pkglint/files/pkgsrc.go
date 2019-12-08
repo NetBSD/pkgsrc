@@ -150,8 +150,8 @@ func (src *Pkgsrc) loadDocChanges() {
 	var filenames []RelPath
 	for _, file := range files {
 		filename := file.Name()
-		if matches(filename, `^CHANGES-20\d\d$`) && filename >= "CHANGES-2011" { // TODO: Why 2011?
-			filenames = append(filenames, NewRelPathString(filename)) // FIXME: low-level API
+		if matches(filename, `^CHANGES-20\d\d$`) && filename >= "CHANGES-2011" { // XXX: Why 2011?
+			filenames = append(filenames, NewRelPathString(filename)) // XXX: low-level API
 		}
 	}
 
@@ -676,10 +676,10 @@ func (src *Pkgsrc) loadUntypedVars() {
 		mklines := LoadMk(path, MustSucceed)
 		mklines.collectVariables()
 		mklines.collectUsedVariables()
-		for varname, mkline := range mklines.vars.firstDef {
+		for varname, mkline := range mklines.allVars.firstDef {
 			define(varnameCanon(varname), mkline)
 		}
-		for varname, mkline := range mklines.vars.used {
+		for varname, mkline := range mklines.allVars.used {
 			define(varnameCanon(varname), mkline)
 		}
 	}
@@ -688,7 +688,7 @@ func (src *Pkgsrc) loadUntypedVars() {
 		assertNil(err, "handleFile %q", pathName)
 		baseName := info.Name()
 		if info.Mode().IsRegular() && (hasSuffix(baseName, ".mk") || baseName == "mk.conf") {
-			handleMkFile(NewCurrPathSlash(pathName)) // FIXME: This is too deep to handle os-specific paths
+			handleMkFile(NewCurrPathSlash(pathName)) // XXX: This is too deep to handle os-specific paths
 		}
 		return nil
 	}
@@ -1117,29 +1117,28 @@ func (src *Pkgsrc) File(relativeName PkgsrcPath) CurrPath {
 	return src.topdir.JoinNoClean(cleaned).CleanDot()
 }
 
-// ToRel returns the path of `filename`, relative to the pkgsrc top directory.
+// Rel returns the path of `filename`, relative to the pkgsrc top directory.
 //
 // Example:
-//  NewPkgsrc("/usr/pkgsrc").ToRel("/usr/pkgsrc/distfiles") => "distfiles"
-// FIXME: Rename to Rel.
-func (src *Pkgsrc) ToRel(filename CurrPath) PkgsrcPath {
+//  NewPkgsrc("/usr/pkgsrc").Rel("/usr/pkgsrc/distfiles") => "distfiles"
+func (src *Pkgsrc) Rel(filename CurrPath) PkgsrcPath {
 	return NewPkgsrcPath(src.Relpath(src.topdir, filename).AsPath())
 }
 
 // IsInfra returns whether the given filename is part of the pkgsrc
 // infrastructure.
 func (src *Pkgsrc) IsInfra(filename CurrPath) bool {
-	rel := src.ToRel(filename)
+	rel := src.Rel(filename)
 	return rel.HasPrefixPath("mk") || rel.HasPrefixPath("wip/mk")
 }
 
 func (src *Pkgsrc) IsInfraMain(filename CurrPath) bool {
-	rel := src.ToRel(filename)
+	rel := src.Rel(filename)
 	return rel.HasPrefixPath("mk")
 }
 
 func (src *Pkgsrc) IsWip(filename CurrPath) bool {
-	rel := src.ToRel(filename)
+	rel := src.Rel(filename)
 	return rel.HasPrefixPath("wip")
 }
 

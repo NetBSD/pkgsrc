@@ -97,7 +97,7 @@ func (s *RedundantScope) handleVarassign(mkline *MkLine, ind *Indentation) {
 		effOp = opAssign
 	}
 
-	// FIXME: Skip the whole redundancy check if the value is not known to be constant.
+	// TODO: Skip the whole redundancy check if the value is not known to be constant.
 	if effOp == opAssign && info.vari.Value() == value {
 		effOp = opAssignDefault
 	}

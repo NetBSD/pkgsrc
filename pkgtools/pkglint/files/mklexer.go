@@ -73,13 +73,20 @@ func (p *MkLexer) VarUse() *MkVarUse {
 		// This is an escaped dollar character and not a variable use.
 		return nil
 
-	case '@', '<', ' ':
+	case '>', '!', '<', '%', '?', '*', '@', ' ':
 		// These variable names are known to exist.
 		//
 		// Many others are also possible but not used in practice.
 		// In particular, when parsing the :C or :S modifier,
 		// the $ must not be interpreted as a variable name,
 		// even when it looks like $/ could refer to the "/" variable.
+		//
+		// Example:
+		//  ${:U }= space
+		//  ${:U"}= quot
+		//
+		//  all:
+		//	    @echo ${ } $ d, ${"} $"ed   # space spaced, quote quoted
 		//
 		// TODO: Find out whether $" is a variable use when it appears in the :M modifier.
 		p.lexer.Skip(2)
