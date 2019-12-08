@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5279 2019/12/08 22:03:53 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.5280 2019/12/08 22:10:29 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8495,3 +8495,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated databases/py-peewee to 3.13.1 [adam 2019-12-08]
 	Updated textproc/py-sphinx to 2.2.2 [adam 2019-12-08]
 	Updated pkgtools/pkglint to 19.3.15 [rillig 2019-12-08]
+	Updated shells/standalone-tcsh to 6.22.02 [leot 2019-12-08]
+	Updated shells/static-tcsh to 6.22.02 [leot 2019-12-08]
+	Updated shells/tcsh to 6.22.02 [leot 2019-12-08]
