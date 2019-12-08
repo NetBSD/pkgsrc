@@ -128,7 +128,7 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 
 	// When the package author has explicitly defined a command
 	// variable, assume it to be valid.
-	if scc.MkLines.vars.IsDefinedSimilar(varname) {
+	if scc.MkLines.allVars.IsDefinedSimilar(varname) {
 		return true
 	}
 
@@ -531,7 +531,7 @@ func (ck *ShellLineChecker) checkPipeExitcode(pipeline *MkShPipeline) {
 
 var shellCommandsType = NewVartype(BtShellCommands, NoVartypeOptions, NewACLEntry("*", aclpAllRuntime))
 
-// FIXME: Why is this called shell_Word_Vuc and not shell_Commands_Vuc?
+// XXX: Why is this called shell_Word_Vuc and not shell_Commands_Vuc?
 var shellWordVuc = &VarUseContext{shellCommandsType, VucUnknownTime, VucQuotPlain, false}
 
 func NewShellLineChecker(mklines *MkLines, mkline *MkLine) *ShellLineChecker {
@@ -657,7 +657,7 @@ func (ck *ShellLineChecker) CheckShellCommand(shellcmd string, pSetE *bool, time
 
 	line := ck.mkline.Line
 	program, err := parseShellProgram(line, shellcmd)
-	// FIXME: This code is duplicated in checkWordQuoting.
+	// XXX: This code is duplicated in checkWordQuoting.
 	if err != nil && contains(shellcmd, "$$(") { // Hack until the shell parser can handle subshells.
 		line.Warnf("Invoking subshells via $(...) is not portable enough.")
 		return

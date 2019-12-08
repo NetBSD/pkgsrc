@@ -4,6 +4,126 @@ import (
 	"gopkg.in/check.v1"
 )
 
+func (s *Suite) Test_VartypeCheck_Errorf(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("filename.mk", 123, "")
+	cv := VartypeCheck{MkLine: mkline}
+
+	cv.Errorf("Error %q.", "message")
+
+	t.CheckOutputLines(
+		"ERROR: filename.mk:123: Error \"message\".")
+}
+
+func (s *Suite) Test_VartypeCheck_Warnf(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("filename.mk", 123, "")
+	cv := VartypeCheck{MkLine: mkline}
+
+	cv.Warnf("Warning %q.", "message")
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:123: Warning \"message\".")
+}
+
+func (s *Suite) Test_VartypeCheck_Notef(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("filename.mk", 123, "")
+	cv := VartypeCheck{MkLine: mkline}
+
+	cv.Notef("Note %q.", "message")
+
+	t.CheckOutputLines(
+		"NOTE: filename.mk:123: Note \"message\".")
+}
+
+func (s *Suite) Test_VartypeCheck_Explain(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--explain")
+	mkline := t.NewMkLine("filename.mk", 123, "")
+	cv := VartypeCheck{MkLine: mkline}
+
+	cv.Notef("Note %q.", "message")
+	cv.Explain("Explanation.")
+
+	t.CheckOutputLines(
+		"NOTE: filename.mk:123: Note \"message\".",
+		"",
+		"\tExplanation.",
+		"")
+}
+
+func (s *Suite) Test_VartypeCheck_Autofix(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("filename.mk", 123, "")
+	cv := VartypeCheck{MkLine: mkline}
+
+	t.CheckEquals(cv.Autofix(), mkline.Autofix())
+}
+
+func (s *Suite) Test_VartypeCheck_WithValue(c *check.C) {
+	t := s.Init(c)
+
+	cv := VartypeCheck{
+		Varname:    "OLD",
+		Value:      "oldValue${VAR}",
+		ValueNoVar: "oldValue",
+	}
+
+	copied := cv.WithValue("newValue${NEW_VAR}")
+
+	t.CheckEquals(copied.Varname, "OLD")
+	t.CheckEquals(copied.Value, "newValue${NEW_VAR}")
+	t.CheckEquals(copied.ValueNoVar, "newValue")
+	t.CheckEquals(cv.Value, "oldValue${VAR}")
+	t.CheckEquals(cv.ValueNoVar, "oldValue")
+}
+
+func (s *Suite) Test_VartypeCheck_WithVarnameValue(c *check.C) {
+	t := s.Init(c)
+
+	cv := VartypeCheck{
+		Varname:    "OLD",
+		Value:      "oldValue${VAR}",
+		ValueNoVar: "oldValue",
+	}
+
+	copied := cv.WithVarnameValue("NEW", "newValue${NEW_VAR}")
+
+	t.CheckEquals(copied.Varname, "NEW")
+	t.CheckEquals(copied.Value, "newValue${NEW_VAR}")
+	t.CheckEquals(copied.ValueNoVar, "newValue")
+	t.CheckEquals(cv.Value, "oldValue${VAR}")
+	t.CheckEquals(cv.ValueNoVar, "oldValue")
+}
+
+func (s *Suite) Test_VartypeCheck_WithVarnameValueMatch(c *check.C) {
+	t := s.Init(c)
+
+	cv := VartypeCheck{
+		Varname:    "OLD",
+		Op:         opAssign,
+		Value:      "oldValue${VAR}",
+		ValueNoVar: "oldValue",
+	}
+
+	copied := cv.WithVarnameValueMatch("NEW", "newValue${NEW_VAR}")
+
+	t.CheckEquals(copied.Varname, "NEW")
+	t.CheckEquals(copied.Op, opUseMatch)
+	t.CheckEquals(copied.Value, "newValue${NEW_VAR}")
+	t.CheckEquals(copied.ValueNoVar, "newValue")
+	t.CheckEquals(cv.Varname, "OLD")
+	t.CheckEquals(cv.Op, opAssign)
+	t.CheckEquals(cv.Value, "oldValue${VAR}")
+	t.CheckEquals(cv.ValueNoVar, "oldValue")
+}
+
 func (s *Suite) Test_VartypeCheck_AwkCommand(c *check.C) {
 	t := s.Init(c)
 	vt := NewVartypeCheckTester(t, BtAwkCommand)
@@ -516,8 +636,8 @@ func (s *Suite) Test_VartypeCheck_Enum__use_match(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"NOTE: module.mk:5: MACHINE_ARCH "+
-			"should be compared using \"${MACHINE_ARCH} == i386\" "+
+		"NOTE: module.mk:5: MACHINE_ARCH can be "+
+			"compared using the simpler \"${MACHINE_ARCH} == i386\" "+
 			"instead of matching against \":Mi386\".",
 		"",
 		"\tThis variable has a single value, not a list of values. Therefore it",
@@ -626,15 +746,17 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 
 	vt.Values(
 		"https://example.org/pub",
-		"https://example.org/$@", // Doesn't make sense at all.
+		"https://example.org/$@",
 		"https://example.org/?f=",
 		"https://example.org/download:",
-		"https://example.org/download?")
+		"https://example.org/download?",
+		"https://example.org/$$")
 
 	vt.Output(
 		"WARN: filename.mk:71: The fetch URL \"https://example.org/pub\" should end with a slash.",
-		"WARN: filename.mk:72: \"https://example.org/$@\" is not a valid URL.",
-		"WARN: filename.mk:75: The fetch URL \"https://example.org/download?\" should end with a slash.")
+		"WARN: filename.mk:75: The fetch URL \"https://example.org/download?\" should end with a slash.",
+		"WARN: filename.mk:76: \"https://example.org/$$\" is not a valid URL.",
+		"WARN: filename.mk:76: The fetch URL \"https://example.org/$$\" should end with a slash.")
 
 	// The transport protocol doesn't matter for matching the MASTER_SITEs.
 	// See url2pkg.py, function adjust_site_from_sites_mk.
@@ -659,6 +781,15 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 			"instead of \"-ftp://ftp.gnu.org/pub/gnu/bash/bash-5.0.tar.gz\".",
 		"WARN: filename.mk:86: Please use ${MASTER_SITE_GNU:S,^,-,:=bash/bash-5.0.tar.gz} "+
 			"instead of \"-https://ftp.gnu.org/pub/gnu/bash/bash-5.0.tar.gz\".")
+
+	// The ${.TARGET} variable doesn't make sense at all in a URL.
+	// Other variables might, and there could be checks for them.
+	// As of December 2019 these are skipped completely,
+	// see containsVarRef in VartypeCheck.URL.
+	vt.Values(
+		"https://example.org/$@")
+
+	vt.OutputEmpty()
 }
 
 func (s *Suite) Test_VartypeCheck_FetchURL__without_package(c *check.C) {
@@ -992,6 +1123,60 @@ func (s *Suite) Test_VartypeCheck_MachineGnuPlatform(c *check.C) {
 		"WARN: filename.mk:6: \"x86_64-pc\" is not a valid platform pattern.")
 }
 
+func (s *Suite) Test_VartypeCheck_MachinePlatform(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), BtMachinePlatform)
+
+	// There is no need to test the assignment operators since the
+	// only variable of this type is read-only.
+
+	vt.Varname("MACHINE_PLATFORM")
+	vt.Op(opUseMatch)
+	vt.Values(
+		"linux-i386",
+		"nextbsd-5.0-8087",
+		"netbsd-7.0-l*",
+		"NetBSD-1.6.2-i386",
+		"FreeBSD*",
+		"FreeBSD-*",
+		"${LINUX}",
+		"NetBSD-[0-1]*-*")
+
+	vt.Output(
+		"WARN: filename.mk:1: \"linux-i386\" is not a valid platform pattern.",
+		"WARN: filename.mk:2: The pattern \"nextbsd\" cannot match any of "+
+			"{ AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku "+
+			"IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare "+
+			"} for the operating system part of MACHINE_PLATFORM.",
+		"WARN: filename.mk:2: The pattern \"8087\" cannot match any of "+
+			"{ aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 "+
+			"cobalt coldfire convex dreamcast "+
+			"earm earmeb earmhf earmhfeb earmv4 earmv4eb "+
+			"earmv5 earmv5eb earmv6 earmv6eb earmv6hf "+
+			"earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 "+
+			"i386 i586 i686 ia64 m68000 m68k m88k "+
+			"mips mips64 mips64eb mips64el mipseb mipsel mipsn32 "+
+			"mlrisc ns32k pc532 pmax powerpc powerpc64 "+
+			"rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 "+
+			"} for the hardware architecture part of MACHINE_PLATFORM.",
+		"WARN: filename.mk:3: The pattern \"netbsd\" cannot match any of "+
+			"{ AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku "+
+			"IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare "+
+			"} for the operating system part of MACHINE_PLATFORM.",
+		"WARN: filename.mk:3: The pattern \"l*\" cannot match any of "+
+			"{ aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 "+
+			"cobalt coldfire convex dreamcast "+
+			"earm earmeb earmhf earmhfeb earmv4 earmv4eb "+
+			"earmv5 earmv5eb earmv6 earmv6eb earmv6hf "+
+			"earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 "+
+			"i386 i586 i686 ia64 m68000 m68k m88k "+
+			"mips mips64 mips64eb mips64el mipseb mipsel mipsn32 "+
+			"mlrisc ns32k pc532 pmax powerpc powerpc64 "+
+			"rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 "+
+			"} for the hardware architecture part of MACHINE_PLATFORM.",
+		"WARN: filename.mk:5: \"FreeBSD*\" is not a valid platform pattern.",
+		"WARN: filename.mk:8: Please use \"[0-1].*\" instead of \"[0-1]*\" as the version pattern.")
+}
+
 func (s *Suite) Test_VartypeCheck_MachinePlatformPattern(c *check.C) {
 	vt := NewVartypeCheckTester(s.Init(c), BtMachinePlatformPattern)
 
@@ -1271,7 +1456,7 @@ func (s *Suite) Test_VartypeCheck_Pkgrevision(c *check.C) {
 		"3a")
 
 	vt.Output(
-		"WARN: filename.mk:1: PKGREVISION must be a positive integer number.",
+		"ERROR: filename.mk:1: PKGREVISION must be a positive integer number.",
 		"ERROR: filename.mk:1: PKGREVISION only makes sense directly in the package Makefile.")
 
 	vt.File("Makefile")
@@ -1354,6 +1539,31 @@ func (s *Suite) Test_VartypeCheck_RPkgVer(c *check.C) {
 	vt.OutputEmpty()
 }
 
+func (s *Suite) Test_VartypeCheck_RelativePkgDir(c *check.C) {
+	t := s.Init(c)
+	vt := NewVartypeCheckTester(t, BtRelativePkgDir)
+
+	t.CreateFileLines("category/other-package/Makefile")
+	t.Chdir("category/package")
+
+	vt.Varname("PKGDIR")
+	vt.Values(
+		"category/other-package",
+		"../../category/other-package",
+		"${OTHER_VAR}",
+		"invalid",
+		"../../invalid/relative",
+		"/absolute")
+
+	vt.Output(
+		"ERROR: filename.mk:1: Relative path \"category/other-package/Makefile\" does not exist.",
+		"WARN: filename.mk:1: \"category/other-package\" is not a valid relative package directory.",
+		"ERROR: filename.mk:4: Relative path \"invalid/Makefile\" does not exist.",
+		"WARN: filename.mk:4: \"invalid\" is not a valid relative package directory.",
+		"ERROR: filename.mk:5: Relative path \"../../invalid/relative/Makefile\" does not exist.",
+		"ERROR: filename.mk:6: The path \"/absolute\" must be relative.")
+}
+
 func (s *Suite) Test_VartypeCheck_RelativePkgPath(c *check.C) {
 	t := s.Init(c)
 	vt := NewVartypeCheckTester(t, BtRelativePkgPath)
@@ -1367,12 +1577,14 @@ func (s *Suite) Test_VartypeCheck_RelativePkgPath(c *check.C) {
 		"../../category/other-package",
 		"${OTHER_VAR}",
 		"invalid",
-		"../../invalid/relative")
+		"../../invalid/relative",
+		"/absolute")
 
 	vt.Output(
 		"ERROR: filename.mk:1: Relative path \"category/other-package\" does not exist.",
 		"ERROR: filename.mk:4: Relative path \"invalid\" does not exist.",
-		"ERROR: filename.mk:5: Relative path \"../../invalid/relative\" does not exist.")
+		"ERROR: filename.mk:5: Relative path \"../../invalid/relative\" does not exist.",
+		"ERROR: filename.mk:6: The path \"/absolute\" must be relative.")
 }
 
 func (s *Suite) Test_VartypeCheck_Restricted(c *check.C) {
@@ -1405,7 +1617,7 @@ func (s *Suite) Test_VartypeCheck_SedCommands(c *check.C) {
 
 	vt.Output(
 		"NOTE: filename.mk:1: Please always use \"-e\" in sed commands, even if there is only one substitution.",
-		"NOTE: filename.mk:2: Each sed command should appear in an assignment of its own.",
+		"WARN: filename.mk:2: Each sed command should appear in an assignment of its own.",
 		"WARN: filename.mk:3: The # character starts a Makefile comment.",
 		"ERROR: filename.mk:3: Invalid shell words \"\\\"s,\" in sed commands.",
 		"WARN: filename.mk:8: Unknown sed command \"1d\".",
@@ -1590,6 +1802,23 @@ func (s *Suite) Test_VartypeCheck_Tool(c *check.C) {
 	vt.OutputEmpty()
 }
 
+func (s *Suite) Test_VartypeCheck_Unknown(c *check.C) {
+	t := s.Init(c)
+	vt := NewVartypeCheckTester(t, BtUnknown)
+
+	vt.Varname("BDB185_DEFAULT")
+	vt.Values(
+		"# empty",
+		"Something",
+		"'quotes are ok'",
+		"!\"#$%&/()*+,-./0-9:;<=>?@A-Z[\\]^_a-z{|}~")
+
+	// This warning is produced as a side effect of parsing the lines.
+	// It is not specific to the BtUnknown type.
+	vt.Output(
+		"WARN: filename.mk:4: The # character starts a Makefile comment.")
+}
+
 func (s *Suite) Test_VartypeCheck_URL(c *check.C) {
 	t := s.Init(c)
 	vt := NewVartypeCheckTester(t, BtURL)
@@ -1747,6 +1976,30 @@ func (s *Suite) Test_VartypeCheck_WrapperTransform(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:7: Unknown wrapper transform command \"rpath:/usr/lib\".",
 		"WARN: filename.mk:8: Unknown wrapper transform command \"unknown\".")
+}
+
+func (s *Suite) Test_VartypeCheck_WrkdirSubdirectory(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), BtWrkdirSubdirectory)
+
+	vt.Varname("WRKSRC")
+	vt.Op(opAssign)
+	vt.Values(
+		"${WRKDIR}",
+		"${WRKDIR}/",
+		"${WRKDIR}/.",
+		"${WRKDIR}/subdir",
+		".",
+		"${DISTNAME}",
+		"${PKGNAME_NOREV}",
+		"two words",
+		"../other",
+		"${WRKSRC}", // Recursive definition.
+		"${PKGDIR}/files")
+
+	// XXX: Many more consistency checks are possible here.
+	vt.Output(
+		"WARN: filename.mk:8: The pathname \"two words\" " +
+			"contains the invalid character \" \".")
 }
 
 func (s *Suite) Test_VartypeCheck_WrksrcSubdirectory(c *check.C) {

@@ -255,6 +255,15 @@ func (l *Logger) Logf(level *LogLevel, filename CurrPath, lineno, format, msg st
 		return
 	}
 
+	if G.Testing {
+		if level != Error {
+			assertf(!contains(format, "must"), "Must must only appear in errors: %s", format)
+		}
+		if level != Warn && level != Note {
+			assertf(!contains(format, "should"), "Should must only appear in warnings: %s", format)
+		}
+	}
+
 	if G.Testing && format != AutofixFormat {
 		if textproc.Alpha.Contains(format[0]) {
 			assertf(

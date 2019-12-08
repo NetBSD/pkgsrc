@@ -913,7 +913,7 @@ func (s *Suite) Test_MkLineParser_split(c *check.C) {
 			comment:            " comment after spaces",
 		})
 
-	// FIXME: This theoretical edge case is interpreted differently
+	// XXX: This theoretical edge case is interpreted differently
 	//  between bmake and pkglint. Pkglint treats the # as a comment,
 	//  while bmake interprets it as a regular character.
 	test("\\[#",
