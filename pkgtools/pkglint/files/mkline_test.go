@@ -114,6 +114,34 @@ func (s *Suite) Test_MkLine_Cond(c *check.C) {
 	t.CheckEquals(mkline.Cond(), cond)
 }
 
+func (s *Suite) Test_MkLine_IncludedFileFull(c *check.C) {
+	t := s.Init(c)
+
+	test := func(including CurrPath, included RelPath, resolved CurrPath) {
+		text := sprintf(".include %q", included)
+		mkline := t.NewMkLine(including, 123, text)
+
+		t.CheckEquals(mkline.IncludedFileFull(), resolved)
+	}
+
+	test("Makefile", "options.mk", "options.mk")
+	test("Makefile", "../options.mk", "../options.mk")
+	test("Makefile", "../options.mk", "../options.mk")
+
+	// Keep a bit of context information in the path.
+	test(
+		t.File("subdir/Makefile"), "../options.mk",
+		t.File("subdir").JoinNoClean("../options.mk"))
+
+	t.Chdir(".")
+	test("category/package/Makefile", "../../devel/lib/buildlink3.mk",
+		"category/package/../../devel/lib/buildlink3.mk")
+
+	// Keep a bit of context information in the path.
+	test("a/b/c.mk", "../../d/e/../../f/g/h.mk",
+		"a/b/../../f/g/h.mk")
+}
+
 // Ensures that the conditional variables of a line can be set even
 // after initializing the MkLine.
 //
@@ -562,6 +590,21 @@ func (s *Suite) Test_MkLine_ResolveVarsInRelativePath__without_tracing(c *check.
 		"WARN: ~/buildlink3.mk:2: PKGPATH.multimedia/totem is used but not defined.")
 }
 
+func (s *Suite) Test_MkLine_ResolveVarsInRelativePath__assertion(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	t.Chdir(".")
+	mkline := t.NewMkLine("a/b/c/d/e/f/g.mk", 123, "")
+
+	t.ExpectPanic(
+		func() { mkline.ResolveVarsInRelativePath("${PKGSRCDIR}") },
+		"Pkglint internal error: "+
+			"Relative path \"../../../../../..\" for \"a/b/c/d/e/f\" is too deep "+
+			"below the pkgsrc root \".\".")
+
+}
+
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__unknown_rhs(c *check.C) {
 	t := s.Init(c)
 
@@ -569,7 +612,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__unknown_rhs(c *check.C) {
 	t.SetUpVartypes()
 
 	vuc := VarUseContext{G.Pkgsrc.VariableType(nil, "PKGNAME"), VucLoadTime, VucQuotUnknown, false}
-	nq := mkline.VariableNeedsQuoting(nil, &MkVarUse{"UNKNOWN", nil}, nil, &vuc)
+	nq := mkline.VariableNeedsQuoting(nil, NewMkVarUse("UNKNOWN"), nil, &vuc)
 
 	t.CheckEquals(nq, unknown)
 }
@@ -585,11 +628,11 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__append_URL_to_list_of_URLs(c *
 	mkline := mklines.mklines[1]
 
 	vuc := VarUseContext{G.Pkgsrc.vartypes.Canon("MASTER_SITES"), VucRunTime, VucQuotPlain, false}
-	nq := mkline.VariableNeedsQuoting(nil, &MkVarUse{"HOMEPAGE", nil}, G.Pkgsrc.vartypes.Canon("HOMEPAGE"), &vuc)
+	nq := mkline.VariableNeedsQuoting(nil, NewMkVarUse("HOMEPAGE"), G.Pkgsrc.vartypes.Canon("HOMEPAGE"), &vuc)
 
 	t.CheckEquals(nq, no)
 
-	MkLineChecker{mklines, mkline}.checkVarassign()
+	NewMkAssignChecker(mkline, mklines).checkVarassign()
 
 	t.CheckOutputEmpty() // Up to version 5.3.6, pkglint warned about a missing :Q here, which was wrong.
 }
@@ -603,7 +646,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__append_list_to_list(c *check.C
 		MkCvsID,
 		"MASTER_SITES=\t${MASTER_SITE_SOURCEFORGE:=squirrel-sql/}")
 
-	MkLineChecker{mklines, mklines.mklines[1]}.checkVarassign()
+	NewMkAssignChecker(mklines.mklines[1], mklines).checkVarassign()
 
 	// Assigning lists to lists is ok.
 	t.CheckOutputEmpty()
@@ -612,15 +655,24 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__append_list_to_list(c *check.C
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__eval_shell(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
+	t.SetUpPkgsrc()
+	t.Chdir("category/package")
+	t.FinishSetUp()
 	mklines := t.NewMkLines("builtin.mk",
 		MkCvsID,
+		"",
+		".include \"../../mk/bsd.fast.prefs.mk\"",
+		"",
 		"USE_BUILTIN.Xfixes!=\t${PKG_ADMIN} pmatch 'pkg-[0-9]*' ${BUILTIN_PKG.Xfixes:Q}")
 
-	MkLineChecker{mklines, mklines.mklines[1]}.checkVarassign()
+	mklines.ForEach(func(mkline *MkLine) {
+		if mkline.IsVarassign() {
+			NewMkAssignChecker(mkline, mklines).checkVarassign()
+		}
+	})
 
 	t.CheckOutputLines(
-		"NOTE: builtin.mk:2: The :Q modifier isn't necessary for ${BUILTIN_PKG.Xfixes} here.")
+		"NOTE: builtin.mk:5: The :Q modifier isn't necessary for ${BUILTIN_PKG.Xfixes} here.")
 }
 
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__command_in_single_quotes(c *check.C) {
@@ -631,7 +683,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__command_in_single_quotes(c *ch
 		MkCvsID,
 		"SUBST_SED.hpath=\t-e 's|^\\(INSTALL[\t:]*=\\).*|\\1${INSTALL}|'")
 
-	MkLineChecker{mklines, mklines.mklines[1]}.checkVarassign()
+	NewMkAssignChecker(mklines.mklines[1], mklines).checkVarassign()
 
 	t.CheckOutputLines(
 		"WARN: Makefile:2: Please use ${INSTALL:Q} instead of ${INSTALL} " +
@@ -880,7 +932,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__PKGNAME_and_URL_list_in_URL_li
 		MkCvsID,
 		"MASTER_SITES=\tftp://ftp.gtk.org/${PKGNAME}/ ${MASTER_SITE_GNOME:=subdir/}")
 
-	MkLineChecker{mklines, mklines.mklines[1]}.checkVarassignRightVaruse()
+	NewMkAssignChecker(mklines.mklines[1], mklines).checkVarassignRightVaruse()
 
 	t.CheckOutputEmpty() // Don't warn about missing :Q modifiers.
 }
@@ -895,7 +947,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__tool_in_CONFIGURE_ENV(c *check
 		"",
 		"CONFIGURE_ENV+=\tSYS_TAR_COMMAND_PATH=${TOOLS_TAR:Q}")
 
-	MkLineChecker{mklines, mklines.mklines[2]}.checkVarassignRightVaruse()
+	NewMkAssignChecker(mklines.mklines[2], mklines).checkVarassignRightVaruse()
 
 	// The TOOLS_* variables only contain the path to the tool,
 	// without any additional arguments that might be necessary
@@ -916,8 +968,8 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__backticks(c *check.C) {
 		"COMPILE_CMD=\tcc `${CAT} ${WRKDIR}/compileflags`",
 		"COMMENT_CMD=\techo `echo ${COMMENT}`")
 
-	MkLineChecker{mklines, mklines.mklines[2]}.checkVarassignRightVaruse()
-	MkLineChecker{mklines, mklines.mklines[3]}.checkVarassignRightVaruse()
+	NewMkAssignChecker(mklines.mklines[2], mklines).checkVarassignRightVaruse()
+	NewMkAssignChecker(mklines.mklines[3], mklines).checkVarassignRightVaruse()
 
 	// Both CAT and WRKDIR are safe from quoting, therefore no warnings.
 	// But COMMENT may contain arbitrary characters and therefore must
@@ -994,6 +1046,34 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__tool_in_shell_command(c *check
 	mklines.Check()
 
 	t.CheckOutputEmpty()
+}
+
+// This test provides code coverage for the "switch vuc.quoting" in the case
+// that vuc.quoting is VucQuotUnknown.
+//
+// It is not possible to construct this scenario by calling mklines.Check(),
+// therefore it is specially crafted.
+func (s *Suite) Test_MkLine_VariableNeedsQuoting__tool_in_unknown_quotes(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	t.SetUpTool("bash", "BASH", AtRunTime)
+
+	mklines := t.SetUpFileMkLines("Makefile",
+		"\t:")
+	mkline := mklines.mklines[0]
+
+	varUse := NewMkVarUse("BASH")
+	vartype := G.Pkgsrc.VariableType(mklines, "BASH")
+	vuc := VarUseContext{
+		vartype:    NewVartype(BtShellWord, NoVartypeOptions, NewACLEntry("*", aclpAll)),
+		time:       VucRunTime,
+		quoting:    VucQuotUnknown,
+		IsWordPart: false}
+	needsQuoting := mkline.VariableNeedsQuoting(mklines, varUse, vartype, &vuc)
+
+	// This "yes" comes from the end of the "wantList != haveList" branch.
+	t.CheckEquals(needsQuoting, yes)
 }
 
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__D_and_U_modifiers(c *check.C) {
@@ -1364,11 +1444,13 @@ func (s *Suite) Test_Indentation_Varnames__repetition(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/other")
-	t.CreateFileDummyBuildlink3("category/other/buildlink3.mk")
+	t.CreateFileBuildlink3("category/other/buildlink3.mk")
 	t.SetUpPackage("category/package",
 		"DISTNAME=\tpackage-1.0",
 		".include \"../../category/other/buildlink3.mk\"")
-	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk",
+	t.CreateFileBuildlink3("category/package/buildlink3.mk",
+		".include \"../../mk/bsd.fast.prefs.mk\"",
+		"",
 		".if ${OPSYS} == NetBSD || ${OPSYS} == FreeBSD",
 		".  if ${OPSYS} == NetBSD",
 		".    include \"../../category/other/buildlink3.mk\"",
@@ -1382,7 +1464,31 @@ func (s *Suite) Test_Indentation_Varnames__repetition(c *check.C) {
 		"WARN: ~/category/package/Makefile:20: " +
 			"\"../../category/other/buildlink3.mk\" is included " +
 			"unconditionally here and " +
-			"conditionally in buildlink3.mk:14 (depending on OPSYS).")
+			"conditionally in buildlink3.mk:16 (depending on OPSYS).")
+}
+
+// Multiple-inclusion guards are too technical to be of any use on
+// the application level. Therefore they are filtered out early, in
+// Indentation.AddVar.
+func (s *Suite) Test_Indentation_Varnames__guard(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		".if !defined(GUARD_MK)",
+		".  if !defined(VAR)",
+		"VAR=\tvalue",
+		".  endif",
+		".endif")
+
+	var varnames []string
+	mklines.ForEach(func(mkline *MkLine) {
+		if mkline.IsVarassign() {
+			varnames = mklines.indentation.Varnames()
+		}
+	})
+
+	t.CheckDeepEquals(varnames, []string{"VAR"})
 }
 
 func (s *Suite) Test_Indentation_TrackAfter__checked_files(c *check.C) {
@@ -1426,7 +1532,7 @@ func (s *Suite) Test_Indentation_TrackAfter__lonely_else(c *check.C) {
 func (s *Suite) Test_MatchMkInclude(c *check.C) {
 	t := s.Init(c)
 
-	test := func(input, expectedIndent, expectedDirective string, expectedFilename Path, expectedComment string) {
+	test := func(input, expectedIndent, expectedDirective string, expectedFilename RelPath, expectedComment string) {
 		splitResult := NewMkLineParser().split(nil, input, true)
 		m, indent, directive, args := MatchMkInclude(splitResult.main)
 		t.CheckDeepEquals(
