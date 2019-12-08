@@ -538,6 +538,64 @@ func (s *Suite) Test_PatchChecker_Check__missing_CVS_Id(c *check.C) {
 		"ERROR: ~/patch-aa: Contains no patch.")
 }
 
+func (s *Suite) Test_PatchChecker_Check__add_file(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetUpFileLines("patch-aa",
+		CvsID,
+		"",
+		"This patch creates a new file.",
+		"",
+		"--- /dev/null",
+		"+++ added-file",
+		"@@ -0,0 +1,1 @@",
+		"+ added line")
+
+	CheckLinesPatch(lines)
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_PatchChecker_Check__delete_file(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetUpFileLines("patch-aa",
+		CvsID,
+		"",
+		"This patch deletes an existing file.",
+		"",
+		"--- deleted-file",
+		"+++ /dev/null",
+		"@@ -1,1 +0,0 @@",
+		"- deleted line")
+
+	CheckLinesPatch(lines)
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_PatchChecker_Check__absolute_path(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetUpFileLines("patch-aa",
+		CvsID,
+		"",
+		"This patch deletes an existing file.",
+		"",
+		"--- /absolute",
+		"+++ /absolute",
+		"@@ -1,1 +1,1 @@",
+		"- deleted line",
+		"+ added line")
+
+	CheckLinesPatch(lines)
+
+	// FIXME: Patches must not apply to absolute paths.
+	// The only allowed exception is /dev/null.
+	// ^(---|\+\+\+) /(?!dev/null)
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_PatchChecker_checkUnifiedDiff__lines_at_end(c *check.C) {
 	t := s.Init(c)
 
@@ -620,6 +678,52 @@ func (s *Suite) Test_PatchChecker_checkConfigure__GNU(c *check.C) {
 		"",
 		"--- configure.orig",
 		"+++ configure",
+		"@@ -1,1 +1,1 @@",
+		"-old line",
+		"+: Avoid regenerating within pkgsrc")
+
+	CheckLinesPatch(lines)
+
+	t.CheckOutputLines(
+		"ERROR: ~/patch-aa:9: This code must not be included in patches.")
+}
+
+// I'm not sure whether configure.in is really relevant for this check.
+// As of December 2019, there is absolutely no package that uses
+// CONFIGURE_SCRIPTS_OVERRIDE.
+func (s *Suite) Test_PatchChecker_checkConfigure__configure_in(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetUpFileLines("patch-aa",
+		CvsID,
+		"",
+		"Documentation",
+		"",
+		"--- configure.in.orig",
+		"+++ configure.in",
+		"@@ -1,1 +1,1 @@",
+		"-old line",
+		"+: Avoid regenerating within pkgsrc")
+
+	CheckLinesPatch(lines)
+
+	t.CheckOutputLines(
+		"ERROR: ~/patch-aa:9: This code must not be included in patches.")
+}
+
+// I'm not sure whether configure.ac is really relevant for this check.
+// As of December 2019, there is absolutely no package that uses
+// CONFIGURE_SCRIPTS_OVERRIDE.
+func (s *Suite) Test_PatchChecker_checkConfigure__configure_ac(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetUpFileLines("patch-aa",
+		CvsID,
+		"",
+		"Documentation",
+		"",
+		"--- configure.ac.orig",
+		"+++ configure.ac",
 		"@@ -1,1 +1,1 @@",
 		"-old line",
 		"+: Avoid regenerating within pkgsrc")

@@ -18,6 +18,37 @@ func (s *Suite) Test_Tool_UsableAtLoadTime(c *check.C) {
 	t.CheckEquals(run.UsableAtLoadTime(true), false)
 }
 
+func (s *Suite) Test_Tool_UsableAtLoadTime__pkgconfig_builtin_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("-Wall", "--explain")
+	t.SetUpTool("tool1", "TOOL1", AfterPrefsMk)
+	t.SetUpTool("tool2", "TOOL2", AfterPrefsMk)
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("mk/buildlink3/pkgconfig-builtin.mk")
+	t.FinishSetUp()
+
+	mklines := t.SetUpFileMkLines("category/package/filename.mk",
+		MkCvsID,
+		"",
+		"OUT!=\t${TOOL1} ${OUT}",
+		"",
+		".include \"../../mk/buildlink3/pkgconfig-builtin.mk\"",
+		"",
+		"OUT!=\t${TOOL2} ${OUT}")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/filename.mk:3: " +
+			"To use the tool ${TOOL1} at load time, " +
+			"bsd.prefs.mk has to be included before.")
+	// Maybe an explanation might help here.
+	// There is surprisingly few feedback on any of the explanations
+	// though (about 0 in 10 years), therefore I don't even know
+	// whether anyone reads them.
+}
+
 func (s *Suite) Test_Tool_UsableAtRunTime(c *check.C) {
 	t := s.Init(c)
 

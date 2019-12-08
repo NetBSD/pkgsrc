@@ -360,7 +360,7 @@ func (s *Suite) Test_Package_load__buildlink3_mk_includes_other_mk(c *check.C) {
 
 	t.SetUpCommandLine("-Wall", "--explain")
 	t.SetUpPackage("multimedia/libav")
-	t.CreateFileDummyBuildlink3("multimedia/libav/buildlink3.mk",
+	t.CreateFileBuildlink3("multimedia/libav/buildlink3.mk",
 		".include \"available.mk\"")
 	t.CreateFileLines("multimedia/libav/available.mk",
 		MkCvsID,
@@ -897,7 +897,7 @@ func (s *Suite) Test_Package_parse__builtin_mk(c *check.C) {
 		"",
 		"show-var-from-builtin: .PHONY",
 		"\techo ${VAR_FROM_BUILTIN} ${OTHER_VAR}")
-	t.CreateFileDummyBuildlink3("category/lib1/buildlink3.mk")
+	t.CreateFileBuildlink3("category/lib1/buildlink3.mk")
 	t.CreateFileLines("category/lib1/builtin.mk",
 		MkCvsID,
 		"VAR_FROM_BUILTIN=\t# defined")
@@ -919,7 +919,7 @@ func (s *Suite) Test_Package_parse__included(c *check.C) {
 		".include \"../../devel/library/buildlink3.mk\"",
 		".include \"../../lang/language/module.mk\"")
 	t.SetUpPackage("devel/library")
-	t.CreateFileDummyBuildlink3("devel/library/buildlink3.mk")
+	t.CreateFileBuildlink3("devel/library/buildlink3.mk")
 	t.CreateFileLines("devel/library/builtin.mk",
 		MkCvsID)
 	t.CreateFileLines("lang/language/module.mk",
@@ -1015,10 +1015,10 @@ func (s *Suite) Test_Package_loadIncluded__nested_inclusion(c *check.C) {
 	t.SetUpPackage("x11/kde-runtime4",
 		".include \"../../x11/kde-libs4/buildlink3.mk\"")
 	t.SetUpPackage("x11/kde-libs4")
-	t.CreateFileDummyBuildlink3("x11/kde-libs4/buildlink3.mk",
+	t.CreateFileBuildlink3("x11/kde-libs4/buildlink3.mk",
 		".include \"../../databases/openldap/buildlink3.mk\"")
 	t.SetUpPackage("databases/openldap")
-	t.CreateFileDummyBuildlink3("databases/openldap/buildlink3.mk",
+	t.CreateFileBuildlink3("databases/openldap/buildlink3.mk",
 		"VAR=\tvalue",
 		"VAR=\tvalue") // Provoke a warning in this file.
 	t.FinishSetUp()
@@ -1090,8 +1090,9 @@ func (s *Suite) Test_Package_shouldDiveInto(c *check.C) {
 	t := s.Init(c)
 	t.Chdir("category/package")
 
-	test := func(including CurrPath, included Path, expected bool) {
-		actual := (*Package)(nil).shouldDiveInto(including, included)
+	test := func(including CurrPath, included RelPath, expected bool) {
+		pkg := NewPackage(".")
+		actual := pkg.shouldDiveInto(including, included)
 		t.CheckEquals(actual, expected)
 	}
 
@@ -1184,13 +1185,13 @@ func (s *Suite) Test_Package_loadPlistDirs__empty(c *check.C) {
 	pkg := NewPackage(t.File("category/package"))
 	pkg.load()
 
-	var dirs []Path
+	var dirs []RelPath
 	for dir := range pkg.Plist.Dirs {
 		dirs = append(dirs, dir)
 	}
 	sort.Slice(dirs, func(i, j int) bool { return dirs[i] < dirs[j] })
 
-	t.CheckDeepEquals(dirs, []Path{"bin"})
+	t.CheckDeepEquals(dirs, []RelPath{"bin"})
 }
 
 func (s *Suite) Test_Package_loadPlistDirs(c *check.C) {
@@ -1207,13 +1208,13 @@ func (s *Suite) Test_Package_loadPlistDirs(c *check.C) {
 	pkg := NewPackage(t.File("category/package"))
 	pkg.load()
 
-	var dirs []Path
+	var dirs []RelPath
 	for dir := range pkg.Plist.Dirs {
 		dirs = append(dirs, dir)
 	}
 	sort.Slice(dirs, func(i, j int) bool { return dirs[i] < dirs[j] })
 
-	t.CheckDeepEquals(dirs, []Path{"bin", "dir", "dir/subdir"})
+	t.CheckDeepEquals(dirs, []RelPath{"bin", "dir", "dir/subdir"})
 }
 
 func (s *Suite) Test_Package_check__files_Makefile(c *check.C) {
@@ -1436,6 +1437,70 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__distfiles(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: ~/category/package/distinfo: " +
 			"A package that downloads files should have a distinfo file.")
+}
+
+// The fonts/t1lib package has split the options handling between the
+// package Makefile and options.mk. Make sure that this situation is
+// handled correctly by pkglint.
+//
+// See "tr.SeenPrefs = true".
+func (s *Suite) Test_Package_checkfilePackageMakefile__options_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("option", "An example option")
+	t.SetUpPackage("category/package",
+		".include \"options.mk\"",
+		"",
+		".if ${PKG_OPTIONS:Moption}",
+		".endif")
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"PKG_SUPPORTED_OPTIONS=\toption",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		".if ${PKG_OPTIONS:Moption}",
+		".endif")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Package_checkfilePackageMakefile__prefs_indirect(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("option", "An example option")
+	t.SetUpPackage("category/package",
+		".include \"common.mk\"",
+		".if ${OPSYS} == NetBSD",
+		".endif")
+	t.CreateFileLines("category/package/common.mk",
+		MkCvsID,
+		"",
+		".include \"../../mk/bsd.prefs.mk\"")
+	t.FinishSetUp()
+	pkg := NewPackage(t.File("category/package"))
+	G.Pkg = pkg
+	defer func() { G.Pkg = nil }()
+
+	files, mklines, allLines := G.Pkg.load()
+
+	t.CheckEquals(G.Pkg.seenPrefs, false)
+	t.CheckEquals(G.Pkg.prefsLine, mklines.mklines[19])
+
+	G.Pkg.check(files, mklines, allLines)
+
+	t.CheckEquals(G.Pkg.seenPrefs, true)
+	t.CheckEquals(G.Pkg.prefsLine, mklines.mklines[19])
+
+	// Since bsd.prefs.mk is included indirectly by common.mk,
+	// OPSYS may be used at load time in line 21.
+	t.CheckOutputEmpty()
 }
 
 // When a package defines PLIST_SRC, it may or may not use the
@@ -1993,6 +2058,27 @@ func (s *Suite) Test_Package_checkCategories__redundant_but_not_constant(c *chec
 	// No diagnostics at all, because CATEGORIES is not constant,
 	// as "chinese" may or may not be added.
 	t.CheckOutputEmpty()
+}
+
+// The := assignment operator is equivalent to the simple = operator
+// if its right-hand side does not contain references to any variables.
+func (s *Suite) Test_Package_checkCategories__eval_assignment(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"CATEGORIES:=\tcategory",
+		".include \"included.mk\"")
+	t.CreateFileLines("category/package/included.mk",
+		MkCvsID,
+		"CATEGORIES+=\tcategory")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"NOTE: included.mk:2: " +
+			"Category \"category\" is already added in Makefile:5.")
 }
 
 func (s *Suite) Test_Package_checkGnuConfigureUseLanguages__no_C(c *check.C) {
@@ -2875,7 +2961,7 @@ func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__infra_buildlink_file
 
 	t.SetUpPackage("category/package",
 		".include \"../../mk/motif.buildlink3.mk\"")
-	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk",
+	t.CreateFileBuildlink3("category/package/buildlink3.mk",
 		".include \"../../mk/motif.buildlink3.mk\"")
 	t.CreateFileLines("mk/motif.buildlink3.mk",
 		MkCvsID)
@@ -2908,12 +2994,94 @@ func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__package_but_not_file
 		"TRACE: - (*Package).checkLinesBuildlink3Inclusion()")
 }
 
+// The file mk/ocaml.mk uses ../.. to reach PKGSRCDIR.
+// The canonical path is .. since ocaml.mk is only one directory away
+// from PKGSRCDIR.
+// Before 2019-12-07, pkglint didn't resolve the resulting path correctly.
+func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__mk_dotdot_dotdot(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("x11/ocaml-graphics",
+		".include \"../../mk/ocaml.mk\"")
+	t.CreateFileLines("mk/ocaml.mk",
+		MkCvsID,
+		".include \"../../lang/ocaml/buildlink3.mk\"")
+	t.CreateFileLines("lang/ocaml/buildlink3.mk",
+		MkCvsID)
+	t.Chdir(".")
+	t.FinishSetUp()
+	pkg := NewPackage("x11/ocaml-graphics")
+	G.Pkg = pkg
+
+	files, mklines, allLines := pkg.load()
+	pkg.check(files, mklines, allLines)
+
+	t.CheckDeepEquals(
+		keys(pkg.bl3),
+		[]string{"../../lang/ocaml/buildlink3.mk"})
+	t.CheckOutputEmpty()
+}
+
+// Ocaml packages include ../../mk/ocaml.mk.
+// That file uses the canonical .. to reach PKGSRCDIR,
+// not the ../.. that is typically used in packages.
+func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__mk_dotdot(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("x11/ocaml-graphics",
+		".include \"../../mk/ocaml.mk\"")
+	t.CreateFileLines("mk/ocaml.mk",
+		MkCvsID,
+		".include \"../lang/ocaml/buildlink3.mk\"")
+	t.CreateFileLines("lang/ocaml/buildlink3.mk",
+		MkCvsID)
+	t.Chdir(".")
+	t.FinishSetUp()
+	pkg := NewPackage("x11/ocaml-graphics")
+	G.Pkg = pkg
+
+	files, mklines, allLines := pkg.load()
+	pkg.check(files, mklines, allLines)
+
+	t.CheckDeepEquals(
+		keys(pkg.bl3),
+		[]string{"../../lang/ocaml/buildlink3.mk"})
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__ocaml(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("x11/ocaml-graphics",
+		".include \"../../mk/ocaml.mk\"")
+	t.CreateFileBuildlink3("x11/ocaml-graphics/buildlink3.mk",
+		".include \"../../lang/ocaml/buildlink3.mk\"")
+	t.CreateFileLines("mk/ocaml.mk",
+		MkCvsID,
+		// Note: this is ../.. even though .. is enough.
+		".include \"../../lang/ocaml/buildlink3.mk\"")
+	t.CreateFileLines("lang/ocaml/buildlink3.mk",
+		MkCvsID)
+	t.Chdir(".")
+	t.FinishSetUp()
+
+	G.Check("mk/ocaml.mk")
+	G.checkdirPackage("x11/ocaml-graphics")
+
+	t.CheckOutputLines(
+		// This error is only reported if the file is checked on its own.
+		// If it is checked as part of a package, both bmake and pkglint
+		// use the package path as the fallback search path.
+		"ERROR: mk/ocaml.mk:2: Relative path " +
+			"\"../../lang/ocaml/buildlink3.mk\" does not exist.")
+}
+
 // Just for code coverage.
 func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__no_tracing(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package")
-	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk")
+	t.CreateFileBuildlink3("category/package/buildlink3.mk")
 	t.FinishSetUp()
 
 	t.DisableTracing()
@@ -2927,6 +3095,7 @@ func (s *Suite) Test_Package_checkIncludeConditionally__conditional_and_uncondit
 
 	t.SetUpOption("zlib", "")
 	t.SetUpPackage("category/package",
+		".include \"../../mk/bsd.prefs.mk\"",
 		".include \"../../devel/zlib/buildlink3.mk\"",
 		".if ${OPSYS} == \"Linux\"",
 		".include \"../../sysutils/coreutils/buildlink3.mk\"",
@@ -2953,10 +3122,10 @@ func (s *Suite) Test_Package_checkIncludeConditionally__conditional_and_uncondit
 	G.checkdirPackage(".")
 
 	t.CheckOutputLines(
-		"WARN: Makefile:20: \"../../devel/zlib/buildlink3.mk\" is included "+
+		"WARN: Makefile:21: \"../../devel/zlib/buildlink3.mk\" is included "+
 			"unconditionally here "+
 			"and conditionally in options.mk:9 (depending on PKG_OPTIONS).",
-		"WARN: Makefile:22: \"../../sysutils/coreutils/buildlink3.mk\" is included "+
+		"WARN: Makefile:23: \"../../sysutils/coreutils/buildlink3.mk\" is included "+
 			"conditionally here (depending on OPSYS) and "+
 			"unconditionally in options.mk:11.")
 }
@@ -2980,7 +3149,7 @@ func (s *Suite) Test_Package_checkIncludeConditionally__explain_PKG_OPTIONS_in_M
 		".if ${PKG_OPTIONS:Mzlib}",
 		".include \"../../devel/zlib/buildlink3.mk\"",
 		".endif")
-	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk",
+	t.CreateFileBuildlink3("category/package/buildlink3.mk",
 		".include \"../../devel/zlib/buildlink3.mk\"")
 	t.Chdir("category/package")
 	t.FinishSetUp()
@@ -3007,10 +3176,12 @@ func (s *Suite) Test_Package_checkIncludeConditionally__no_explanation(c *check.
 	t.CreateFileLines("devel/zlib/buildlink3.mk",
 		MkCvsID)
 	t.SetUpPackage("category/package",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
 		".if ${OPSYS} == Linux",
 		".include \"../../devel/zlib/buildlink3.mk\"",
 		".endif")
-	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk",
+	t.CreateFileBuildlink3("category/package/buildlink3.mk",
 		".include \"../../devel/zlib/buildlink3.mk\"")
 	t.Chdir("category/package")
 	t.FinishSetUp()
@@ -3018,7 +3189,7 @@ func (s *Suite) Test_Package_checkIncludeConditionally__no_explanation(c *check.
 	G.checkdirPackage(".")
 
 	t.CheckOutputLines(
-		"WARN: Makefile:21: " +
+		"WARN: Makefile:23: " +
 			"\"../../devel/zlib/buildlink3.mk\" is included conditionally here " +
 			"(depending on OPSYS) and unconditionally in buildlink3.mk:12.")
 }
@@ -3085,7 +3256,7 @@ func (s *Suite) Test_Package_checkIncludeConditionally__explain_PKG_OPTIONS_in_o
 		".if ${PKG_OPTIONS:Mzlib}",
 		".include \"../../devel/zlib/buildlink3.mk\"",
 		".endif")
-	t.CreateFileDummyBuildlink3("category/package/buildlink3.mk",
+	t.CreateFileBuildlink3("category/package/buildlink3.mk",
 		".include \"../../devel/zlib/buildlink3.mk\"")
 	t.Chdir("category/package")
 	t.FinishSetUp()
@@ -3113,6 +3284,8 @@ func (s *Suite) Test_Package_checkIncludeConditionally__unconditionally_first(c 
 	t.CreateFileLines("including.mk",
 		MkCvsID,
 		"",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
 		".include \"included.mk\"",
 		".if ${OPSYS} == \"Linux\"",
 		".include \"included.mk\"",
@@ -3124,14 +3297,16 @@ func (s *Suite) Test_Package_checkIncludeConditionally__unconditionally_first(c 
 	G.Check(".")
 
 	t.CheckOutputLines(
-		"WARN: including.mk:3: \"included.mk\" is included " +
-			"unconditionally here and conditionally in line 5 (depending on OPSYS).")
+		"WARN: including.mk:5: \"included.mk\" is included " +
+			"unconditionally here and conditionally in line 7 (depending on OPSYS).")
 }
 
 func (s *Suite) Test_Package_checkIncludeConditionally__only_conditionally(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
 		".if ${OPSYS} == \"Linux\"",
 		".include \"included.mk\"",
 		".endif")
@@ -3153,6 +3328,8 @@ func (s *Suite) Test_Package_checkIncludeConditionally__conditionally_first(c *c
 	t.CreateFileLines("including.mk",
 		MkCvsID,
 		"",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
 		".if ${OPSYS} == \"Linux\"",
 		".include \"included.mk\"",
 		".endif",
@@ -3164,8 +3341,8 @@ func (s *Suite) Test_Package_checkIncludeConditionally__conditionally_first(c *c
 	G.Check(".")
 
 	t.CheckOutputLines(
-		"WARN: including.mk:4: \"included.mk\" is included " +
-			"conditionally here (depending on OPSYS) and unconditionally in line 6.")
+		"WARN: including.mk:6: \"included.mk\" is included " +
+			"conditionally here (depending on OPSYS) and unconditionally in line 8.")
 }
 
 func (s *Suite) Test_Package_checkIncludeConditionally__included_multiple_times(c *check.C) {
@@ -3175,6 +3352,8 @@ func (s *Suite) Test_Package_checkIncludeConditionally__included_multiple_times(
 	t.Chdir("category/package")
 	t.CreateFileLines("including.mk",
 		MkCvsID,
+		"",
+		".include \"../../mk/bsd.prefs.mk\"",
 		"",
 		".include \"included.mk\"",
 		".if ${OPSYS} == \"Linux\"",
@@ -3192,12 +3371,12 @@ func (s *Suite) Test_Package_checkIncludeConditionally__included_multiple_times(
 	G.Check(".")
 
 	t.CheckOutputLines(
-		"WARN: including.mk:3: \"included.mk\" is included "+
-			"unconditionally here and conditionally in line 10 (depending on OPSYS).",
 		"WARN: including.mk:5: \"included.mk\" is included "+
-			"conditionally here (depending on OPSYS) and unconditionally in line 8.",
-		"WARN: including.mk:8: \"included.mk\" is included "+
-			"unconditionally here and conditionally in line 10 (depending on OPSYS).")
+			"unconditionally here and conditionally in line 12 (depending on OPSYS).",
+		"WARN: including.mk:7: \"included.mk\" is included "+
+			"conditionally here (depending on OPSYS) and unconditionally in line 10.",
+		"WARN: including.mk:10: \"included.mk\" is included "+
+			"unconditionally here and conditionally in line 12 (depending on OPSYS).")
 }
 
 // For preferences files, it doesn't matter whether they are included

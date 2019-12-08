@@ -347,14 +347,15 @@ func (s *Suite) Test_CheckLinesOptionsMk__unexpected_line(c *check.C) {
 func (s *Suite) Test_CheckLinesOptionsMk__malformed_condition(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpVartypes()
+	t.SetUpPkgsrc()
+	t.Chdir(".")
 	t.SetUpOption("mc-charset", "")
 	t.SetUpOption("ncurses", "")
 	t.SetUpOption("slang", "")
 	t.SetUpOption("x11", "")
-
 	t.CreateFileLines("mk/bsd.options.mk",
 		MkCvsID)
+	t.FinishSetUp()
 
 	mklines := t.SetUpFileMkLines("category/package/options.mk",
 		MkCvsID,
@@ -362,6 +363,8 @@ func (s *Suite) Test_CheckLinesOptionsMk__malformed_condition(c *check.C) {
 		"PKG_OPTIONS_VAR=\t\tPKG_OPTIONS.mc",
 		"PKG_SUPPORTED_OPTIONS=\t\t# none",
 		"PKG_SUGGESTED_OPTIONS=\t\t# none",
+		"",
+		".include \"../../mk/bsd.fast.prefs.mk\"",
 		"",
 		"# Comments and conditionals are allowed at this point.",
 		".if ${OPSYS} == NetBSD",
@@ -375,7 +378,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__malformed_condition(c *check.C) {
 	CheckLinesOptionsMk(mklines)
 
 	t.CheckOutputLines(
-		"WARN: ~/category/package/options.mk:13: Invalid condition, unrecognized part: \"${OPSYS} == 'Darwin'\".")
+		"WARN: category/package/options.mk:15: Invalid condition, unrecognized part: \"${OPSYS} == 'Darwin'\".")
 }
 
 func (s *Suite) Test_CheckLinesOptionsMk__PLIST_VARS_based_on_PKG_SUPPORTED_OPTIONS(c *check.C) {
@@ -570,6 +573,11 @@ func (s *Suite) Test_CheckLinesOptionsMk__partly_indirect(c *check.C) {
 		".include \"options.mk\"")
 	t.CreateFileLines("category/package/options.mk",
 		MkCvsID,
+		"",
+		"# Including bsd.prefs.mk is not necessary here since the OPSYS",
+		"# in PKG_SUPPORTED_OPTIONS is only evaluated lazily inside",
+		"# bsd.options.mk, at which point bsd.prefs.mk will be included",
+		"# as well.",
 		"",
 		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
 		"PKG_SUPPORTED_OPTIONS=\tgeneric-${OPSYS}",

@@ -8,7 +8,7 @@ import (
 // MkParser wraps a Parser and provides methods for parsing
 // things related to Makefiles.
 type MkParser struct {
-	Line         *Line
+	diag         Diagnoser
 	mklex        *MkLexer
 	lexer        *textproc.Lexer
 	EmitWarnings bool
@@ -30,9 +30,9 @@ func (p *MkParser) Rest() string {
 // The text argument is assumed to be after unescaping the # character,
 // which means the # is a normal character and does not introduce a Makefile comment.
 // For VarUse, this distinction is irrelevant.
-func NewMkParser(line *Line, text string) *MkParser {
-	mklex := NewMkLexer(text, line)
-	return &MkParser{line, mklex, mklex.lexer, line != nil}
+func NewMkParser(diag Autofixer, text string) *MkParser {
+	mklex := NewMkLexer(text, diag)
+	return &MkParser{diag, mklex, mklex.lexer, diag != nil}
 }
 
 // MkCond parses a condition like ${OPSYS} == "NetBSD".
@@ -89,10 +89,6 @@ func (p *MkParser) mkCondAnd() *MkCond {
 	}
 	return &MkCond{And: atoms}
 }
-
-// mkCondLiteralChars contains the characters that may be used outside
-// quotes in a comparison condition such as ${PKGPATH} == category/package.
-var mkCondLiteralChars = textproc.NewByteSet("+---./0-9A-Z_a-z")
 
 func (p *MkParser) mkCondCompare() *MkCond {
 	if trace.Tracing {
@@ -158,7 +154,7 @@ func (p *MkParser) mkCondCompare() *MkCond {
 			return &MkCond{Compare: &MkCondCompare{*lhs, op, *rhs}}
 		}
 
-		if str := lexer.NextBytesSet(mkCondLiteralChars); str != "" {
+		if str := lexer.NextBytesSet(mkCondStringLiteralUnquoted); str != "" {
 			return &MkCond{Compare: &MkCondCompare{*lhs, op, MkCondTerm{Str: str}}}
 		}
 	}
@@ -247,7 +243,7 @@ func (p *MkParser) mkCondFunc() *MkCond {
 		if varname := p.mklex.Varname(); varname != "" {
 			modifiers := p.mklex.VarUseModifiers(varname, ')')
 			if lexer.SkipByte(')') {
-				return &MkCond{Empty: &MkVarUse{varname, modifiers}}
+				return &MkCond{Empty: NewMkVarUse(varname, modifiers...)}
 			}
 		}
 
@@ -527,7 +523,7 @@ func (w *MkCondWalker) Walk(cond *MkCond, callback *MkCondCallback) {
 		if callback.VarUse != nil {
 			// This is not really a VarUse, it's more a VarUseDefined.
 			// But in practice they are similar enough to be treated the same.
-			callback.VarUse(&MkVarUse{cond.Defined, nil})
+			callback.VarUse(NewMkVarUse(cond.Defined))
 		}
 
 	case cond.Term != nil && cond.Term.Var != nil:

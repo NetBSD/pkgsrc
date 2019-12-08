@@ -16,6 +16,7 @@ package pkglint
 type RedundantScope struct {
 	vars        map[string]*redundantScopeVarinfo
 	includePath includePath
+	IsRelevant  func(mkline *MkLine) bool
 }
 type redundantScopeVarinfo struct {
 	vari         *Var
@@ -24,7 +25,7 @@ type redundantScopeVarinfo struct {
 }
 
 func NewRedundantScope() *RedundantScope {
-	return &RedundantScope{vars: make(map[string]*redundantScopeVarinfo)}
+	return &RedundantScope{make(map[string]*redundantScopeVarinfo), includePath{}, nil}
 }
 
 func (s *RedundantScope) Check(mklines *MkLines) {
@@ -86,11 +87,6 @@ func (s *RedundantScope) handleVarassign(mkline *MkLine, ind *Indentation) {
 	effOp := mkline.Op()
 	value := mkline.Value()
 
-	// FIXME: Skip the whole redundancy check if the value is not known to be constant.
-	if effOp == opAssign && info.vari.Value() == value {
-		effOp = opAssignDefault
-	}
-
 	if effOp == opAssignEval && value == mkline.WithoutMakeVariables(value) {
 		// Maybe add support for VAR:= ${OTHER} later. This involves evaluating
 		// the OTHER variable though using the appropriate scope. Oh, wait,
@@ -99,6 +95,11 @@ func (s *RedundantScope) handleVarassign(mkline *MkLine, ind *Indentation) {
 		//
 		// TODO: The above idea seems possible and useful.
 		effOp = opAssign
+	}
+
+	// FIXME: Skip the whole redundancy check if the value is not known to be constant.
+	if effOp == opAssign && info.vari.Value() == value {
+		effOp = opAssignDefault
 	}
 
 	switch effOp {
@@ -196,18 +197,24 @@ func (s *RedundantScope) access(varname string) {
 }
 
 func (s *RedundantScope) onRedundant(redundant *MkLine, because *MkLine) {
+	if s.IsRelevant != nil && !s.IsRelevant(redundant) {
+		return
+	}
 	if redundant.Op() == opAssignDefault {
 		redundant.Notef("Default assignment of %s has no effect because of %s.",
-			because.Varname(), redundant.RefTo(because))
+			because.Varname(), redundant.RelMkLine(because))
 	} else {
 		redundant.Notef("Definition of %s is redundant because of %s.",
-			because.Varname(), redundant.RefTo(because))
+			because.Varname(), redundant.RelMkLine(because))
 	}
 }
 
 func (s *RedundantScope) onOverwrite(overwritten *MkLine, by *MkLine) {
+	if s.IsRelevant != nil && !s.IsRelevant(overwritten) {
+		return
+	}
 	overwritten.Warnf("Variable %s is overwritten in %s.",
-		overwritten.Varname(), overwritten.RefTo(by))
+		overwritten.Varname(), overwritten.RelMkLine(by))
 	overwritten.Explain(
 		"The variable definition in this line does not have an effect since",
 		"it is overwritten elsewhere.",

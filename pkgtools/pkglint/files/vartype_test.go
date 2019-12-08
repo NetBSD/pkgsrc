@@ -150,11 +150,36 @@ func (s *Suite) Test_Vartype_MayBeAppendedTo(c *check.C) {
 
 	t.SetUpVartypes()
 
-	t.CheckEquals(G.Pkgsrc.VariableType(nil, "COMMENT").MayBeAppendedTo(), true)
-	t.CheckEquals(G.Pkgsrc.VariableType(nil, "DEPENDS").MayBeAppendedTo(), true)
-	t.CheckEquals(G.Pkgsrc.VariableType(nil, "PKG_FAIL_REASON").MayBeAppendedTo(), true)
-	t.CheckEquals(G.Pkgsrc.VariableType(nil, "CONF_FILES").MayBeAppendedTo(), true)
+	test := func(varname string, isAppendAllowed bool) {
+		vartype := G.Pkgsrc.VariableType(nil, varname)
+
+		t.CheckEquals(vartype.MayBeAppendedTo(), isAppendAllowed)
+	}
+
+	// There are several packages that append a parenthesized addition
+	// to the comment, such as "(command-line version)".
+	test("COMMENT", true)
+
+	// Appending to a list is always ok.
+	test("DEPENDS", true)
+	test("PKG_FAIL_REASON", true)
+
+	// This type is not marked as a list since it does not support
+	// appending a single element, therefore the above rule does not apply.
+	// Whenever something is appended, it must be in pairs of two words.
+	test("CONF_FILES", true)
+
+	// By convention, all variables ending in _AWK contain AWK code.
+	// It is usual to append a single rule to it, such as:
+	//  EXAMPLE_AWK+=   /condition/ { action }
+	test("EXAMPLE_AWK", true)
+
+	// This is another variable where the appended things should always
+	// come in pairs. A typical example is:
+	//  SUBST_SED.id+=  -e s,from,to,
+	test("SUBST_SED.id", true)
 }
+
 func (s *Suite) Test_Vartype_String(c *check.C) {
 	t := s.Init(c)
 
@@ -162,6 +187,54 @@ func (s *Suite) Test_Vartype_String(c *check.C) {
 
 	vartype := G.Pkgsrc.VariableType(nil, "PKG_DEBUG_LEVEL")
 	t.CheckEquals(vartype.String(), "Integer (command-line-provided)")
+}
+
+func (s *Suite) Test_BasicType_NeedsQ(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	test := func(varname string, isAppendAllowed bool) {
+		vartype := G.Pkgsrc.VariableType(nil, varname)
+
+		t.CheckEquals(vartype.basicType.NeedsQ(), isAppendAllowed)
+	}
+
+	test("BUILDLINK_DEPMETHOD.pkgbase", false)
+	test("CATEGORIES", false)
+	test("EXTRACT_SUFX", false)
+	test("EMUL_PLATFORM", false)
+	test("BINMODE", false)
+
+	// Typically safe, seldom used in practice.
+	test("DISTFILES", false)
+
+	// XXX: BtIdentifier is used for several other purposes
+	test("PLIST_VARS", false)
+
+	test("MAKE_JOBS", false) // XXX: What if MAKE_JOBS is undefined?
+	test("PKGREVISION", false)
+
+	// A specific platform does not have special characters.
+	// The patterns for such platforms typically do, such as
+	// x86_64-*-*.
+	test("MACHINE_GNU_PLATFORM", false)
+
+	// A specific platform does not have special characters.
+	// The patterns for such platforms typically do, such as
+	// NetBSD-*-*.
+	test("MACHINE_PLATFORM", false)
+
+	test("PERL5_PACKLIST", false)
+	test("PKG_OPTIONS_VAR", false)
+	test("PYTHON_VERSIONED_DEPENDENCIES", false)
+	test("SUBST_STAGE.id", false)
+	test("IS_BUILTIN.pkgbase", false)
+
+	test("COMMENT", true)
+	test("PKG_FAIL_REASON", true)
+	test("SUBST_MESSAGE.id", true)
+	test("CC", true)
 }
 
 func (s *Suite) Test_BasicType_HasEnum(c *check.C) {

@@ -147,11 +147,11 @@ func (src *Pkgsrc) loadDocChanges() {
 		NewLineWhole(docDir).Fatalf("Cannot be read for loading the package changes.")
 	}
 
-	var filenames []Path
+	var filenames []RelPath
 	for _, file := range files {
 		filename := file.Name()
 		if matches(filename, `^CHANGES-20\d\d$`) && filename >= "CHANGES-2011" { // TODO: Why 2011?
-			filenames = append(filenames, NewPath(filename))
+			filenames = append(filenames, NewRelPathString(filename)) // FIXME: low-level API
 		}
 	}
 
@@ -219,13 +219,13 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename CurrPath) []*Change {
 
 		if year != "" && change.Date[0:4] != year {
 			line.Warnf("Year %q for %s does not match the filename %s.",
-				change.Date[0:4], change.Pkgpath, filename)
+				change.Date[0:4], change.Pkgpath.String(), line.Rel(filename))
 		}
 
 		if len(changes) >= 2 && year != "" {
 			if prev := changes[len(changes)-2]; change.Date < prev.Date {
 				line.Warnf("Date %q for %s is earlier than %q in %s.",
-					change.Date, change.Pkgpath, prev.Date, line.RefToLocation(prev.Location))
+					change.Date, change.Pkgpath.String(), prev.Date, line.RelLocation(prev.Location))
 				line.Explain(
 					"The entries in doc/CHANGES should be in chronological order, and",
 					"all dates are assumed to be in the UTC timezone, to prevent time",
@@ -343,7 +343,7 @@ func (src *Pkgsrc) checkRemovedAfterLastFreeze() {
 		// without the wrong text. That's only because I'm too lazy loading
 		// the file again, and the original text is not lying around anywhere.
 		line := NewLineMulti(change.Location.Filename, int(change.Location.firstLine), int(change.Location.lastLine), "", nil)
-		line.Errorf("Package %s must either exist or be marked as removed.", change.Pkgpath)
+		line.Errorf("Package %s must either exist or be marked as removed.", change.Pkgpath.String())
 	}
 }
 
@@ -412,7 +412,7 @@ func (src *Pkgsrc) loadTools() {
 			if mkline.IsInclude() {
 				includedFile := mkline.IncludedFile()
 				if !includedFile.ContainsText("/") {
-					toolFiles = append(toolFiles, NewRelPath(includedFile))
+					toolFiles = append(toolFiles, includedFile)
 				}
 			}
 		}
@@ -429,9 +429,10 @@ func (src *Pkgsrc) loadTools() {
 	tools.def("true", "TRUE", true, AfterPrefsMk, nil)
 
 	for _, basename := range toolFiles {
-		mklines := src.LoadMk(NewPkgsrcPath("mk/tools").JoinRel(basename), MustSucceed|NotEmpty)
+		mklines := src.LoadMk(NewPkgsrcPath("mk/tools").JoinNoClean(basename), MustSucceed|NotEmpty)
 		mklines.ForEach(func(mkline *MkLine) {
-			tools.ParseToolLine(mklines, mkline, true, !mklines.indentation.IsConditional())
+			conditional := mklines.indentation.IsConditional()
+			tools.ParseToolLine(mklines, mkline, true, !conditional)
 		})
 	}
 
@@ -443,7 +444,8 @@ func (src *Pkgsrc) loadTools() {
 				varname := mkline.Varname()
 				switch varname {
 				case "USE_TOOLS":
-					tools.ParseToolLine(mklines, mkline, true, !mklines.indentation.IsConditional())
+					conditional := mklines.indentation.IsConditional()
+					tools.ParseToolLine(mklines, mkline, true, !conditional)
 
 				case "_BUILD_DEFS":
 					// TODO: Compare with src.loadDefaultBuildDefs; is it redundant?
@@ -648,9 +650,10 @@ func (src *Pkgsrc) loadUntypedVars() {
 		case src.vartypes.IsDefinedCanon(varcanon):
 			// Already defined, can also be a tool.
 
-		case hasPrefix(varcanon, "_"):
-			// Variables starting with an underscore are reserved for the
-			// infrastructure and are not available for use by packages.
+		case !matches(varcanon, `^[A-Z]`):
+			// This filters out several unwanted variables: empty strings,
+			// punctuation, lowercase letters (that are used in .for loops),
+			// dotted names (that are used in ${VAR:@f@${f}@}).
 
 		case contains(varcanon, "$"):
 			// Indirect, but not the usual parameterized form. Variables of
@@ -812,7 +815,7 @@ func (src *Pkgsrc) ListVersions(category PkgsrcPath, re regex.Pattern, repl stri
 	}
 	if len(names) == 0 {
 		if errorIfEmpty {
-			NewLineWhole(src.File(category)).Errorf("Cannot find package versions of %q.", re)
+			G.Logger.TechErrorf(src.File(category), "Cannot find package versions of %q.", string(re))
 		}
 		src.listVersions[cacheKey] = nil
 		return nil
@@ -938,6 +941,8 @@ func (src *Pkgsrc) guessVariableType(varname string) (vartype *Vartype) {
 	case hasSuffix(varbase, "_MK"):
 		// TODO: Add BtGuard for inclusion guards, since these variables may only be checked using defined().
 		return plainType(BtUnknown, aclpAll)
+	case hasSuffix(varbase, "_AWK"):
+		return plainType(BtAwkCommand, aclpAll)
 	case hasSuffix(varbase, "_SKIP"):
 		return listType(BtPathPattern, aclpAllRuntime)
 	}
@@ -970,7 +975,7 @@ func (src *Pkgsrc) checkToplevelUnusedLicenses() {
 	for _, licenseFile := range src.ReadDir("licenses") {
 		licenseName := licenseFile.Name()
 		if !G.InterPackage.IsLicenseUsed(licenseName) {
-			licensePath := licensesDir.JoinNoClean(NewPath(licenseName))
+			licensePath := licensesDir.JoinNoClean(NewRelPathString(licenseName))
 			NewLineWhole(licensePath).Warnf("This license seems to be unused.")
 		}
 	}
@@ -1004,7 +1009,7 @@ func (src *Pkgsrc) ReadDir(dirName PkgsrcPath) []os.FileInfo {
 	var relevantFiles []os.FileInfo
 	for _, dirent := range files {
 		name := dirent.Name()
-		if !dirent.IsDir() || !isIgnoredFilename(name) && !isEmptyDir(dir.JoinNoClean(NewPath(name))) {
+		if !dirent.IsDir() || !isIgnoredFilename(name) && !isEmptyDir(dir.JoinNoClean(NewRelPathString(name))) {
 			relevantFiles = append(relevantFiles, dirent)
 		}
 	}
@@ -1045,10 +1050,7 @@ func (src *Pkgsrc) Load(filename PkgsrcPath, options LoadOptions) *Lines {
 // another cannot be computed in another way. The preferred way is to take
 // the relative filenames directly from the .include or exists() where they
 // appear.
-//
-// TODO: Invent data types for all kinds of relative paths that occur in pkgsrc
-//  and pkglint. Make sure that these paths cannot be accidentally mixed.
-func (src *Pkgsrc) Relpath(from, to CurrPath) Path {
+func (src *Pkgsrc) Relpath(from, to CurrPath) RelPath {
 	cfrom := from.Clean()
 	cto := to.Clean()
 
@@ -1071,7 +1073,7 @@ func (src *Pkgsrc) Relpath(from, to CurrPath) Path {
 	}
 
 	if cfrom == "." && !cto.IsAbs() {
-		return cto.Clean().AsPath()
+		return NewRelPath(cto.Clean().AsPath())
 	}
 
 	absFrom := G.Abs(cfrom)
@@ -1095,7 +1097,7 @@ func (src *Pkgsrc) Relpath(from, to CurrPath) Path {
 				relParts = append(relParts, "..")
 			}
 			relParts = append(relParts, toParts[2:]...)
-			return NewPath(strings.Join(relParts, "/")).CleanDot()
+			return NewRelPath(NewPath(strings.Join(relParts, "/")).CleanDot())
 		}
 	}
 
@@ -1107,7 +1109,7 @@ func (src *Pkgsrc) Relpath(from, to CurrPath) Path {
 // Example:
 //  NewPkgsrc("/usr/pkgsrc").File("distfiles") => "/usr/pkgsrc/distfiles"
 func (src *Pkgsrc) File(relativeName PkgsrcPath) CurrPath {
-	cleaned := relativeName.AsPath().Clean()
+	cleaned := NewRelPath(relativeName.AsPath()).Clean()
 	if cleaned == "." {
 		return src.topdir.CleanDot()
 	}
@@ -1119,8 +1121,9 @@ func (src *Pkgsrc) File(relativeName PkgsrcPath) CurrPath {
 //
 // Example:
 //  NewPkgsrc("/usr/pkgsrc").ToRel("/usr/pkgsrc/distfiles") => "distfiles"
+// FIXME: Rename to Rel.
 func (src *Pkgsrc) ToRel(filename CurrPath) PkgsrcPath {
-	return NewPkgsrcPath(src.Relpath(src.topdir, filename))
+	return NewPkgsrcPath(src.Relpath(src.topdir, filename).AsPath())
 }
 
 // IsInfra returns whether the given filename is part of the pkgsrc

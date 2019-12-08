@@ -28,7 +28,7 @@ func CheckLinesDistinfo(pkg *Package, lines *Lines) {
 	distinfoIsCommitted := isCommitted(filename)
 	ck := distinfoLinesChecker{
 		pkg, lines, patchdir, distinfoIsCommitted,
-		nil, make(map[Path]distinfoFileInfo)}
+		nil, make(map[RelPath]distinfoFileInfo)}
 	ck.parse()
 	ck.check()
 	CheckLinesTrailingEmptyLines(lines)
@@ -43,8 +43,8 @@ type distinfoLinesChecker struct {
 	patchdir            PackagePath
 	distinfoIsCommitted bool
 
-	filenames []Path // For keeping the order from top to bottom
-	infos     map[Path]distinfoFileInfo
+	filenames []RelPath // For keeping the order from top to bottom
+	infos     map[RelPath]distinfoFileInfo
 }
 
 func (ck *distinfoLinesChecker) parse() {
@@ -56,7 +56,7 @@ func (ck *distinfoLinesChecker) parse() {
 	}
 	llex.SkipEmptyOrNote()
 
-	prevFilename := NewPath("")
+	prevFilename := NewRelPath("")
 	var hashes []distinfoHash
 
 	isPatch := func() YesNoUnknown {
@@ -83,7 +83,7 @@ func (ck *distinfoLinesChecker) parse() {
 		llex.Skip()
 
 		m, alg, file, hash := match3(line.Text, `^(\w+) \((\w[^)]*)\) = (\S+(?: bytes)?)$`)
-		filename := NewPath(file)
+		filename := NewRelPathString(file)
 		if !m {
 			line.Errorf("Invalid line: %s", line.Text)
 			continue
@@ -151,7 +151,7 @@ func (ck *distinfoLinesChecker) checkAlgorithms(info distinfoFileInfo) {
 		}
 
 		line.Warnf("Patch file %q does not exist in directory %q.",
-			filename, line.PathToFile(ck.pkg.File(ck.patchdir)))
+			filename, line.Rel(ck.pkg.File(ck.patchdir)))
 		line.Explain(
 			"If the patches directory looks correct, the patch may have been",
 			"removed without updating the distinfo file.",
@@ -262,7 +262,7 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 			// Do not try to autofix anything in this situation.
 			// Wrong hashes are a serious issue.
 			line.Errorf("The %s checksum for %q is %s in distinfo, %s in %s.",
-				alg, hash.filename, hash.hash, computed, line.PathToFile(distfile))
+				alg, hash.filename, hash.hash, computed, line.Rel(distfile))
 			return
 		}
 	}
@@ -310,11 +310,11 @@ func (ck *distinfoLinesChecker) checkUnrecordedPatches() {
 	}
 
 	for _, file := range patchFiles {
-		patchName := NewPath(file.Name())
+		patchName := NewRelPathString(file.Name())
 		if file.Mode().IsRegular() && ck.infos[patchName].isPatch != yes && patchName.HasPrefixText("patch-") {
 			line := NewLineWhole(ck.lines.Filename)
 			line.Errorf("Patch %q is not recorded. Run %q.",
-				line.PathToFile(ck.pkg.File(ck.patchdir.JoinNoClean(patchName))),
+				line.Rel(ck.pkg.File(ck.patchdir.JoinNoClean(patchName))),
 				bmake("makepatchsum"))
 		}
 	}
@@ -359,7 +359,7 @@ func (ck *distinfoLinesChecker) checkGlobalDistfileMismatch(info distinfoHash) {
 	if otherHash != nil {
 		if !bytes.Equal(otherHash.hash, hashBytes) {
 			line.Errorf("The %s hash for %s is %s, which conflicts with %s in %s.",
-				alg, filename, hash, hex.EncodeToString(otherHash.hash), line.RefToLocation(otherHash.location))
+				alg, filename, hash, hex.EncodeToString(otherHash.hash), line.RelLocation(otherHash.location))
 		}
 	}
 }
@@ -373,7 +373,7 @@ func (ck *distinfoLinesChecker) checkUncommittedPatch(info distinfoHash) {
 	patchFileName := ck.patchdir.JoinNoClean(patchName)
 	resolvedPatchFileName := ck.pkg.File(patchFileName)
 	if ck.distinfoIsCommitted && !isCommitted(resolvedPatchFileName) {
-		line.Warnf("%s is registered in distinfo but not added to CVS.", line.PathToFile(resolvedPatchFileName))
+		line.Warnf("%s is registered in distinfo but not added to CVS.", line.Rel(resolvedPatchFileName))
 	}
 	if alg == "SHA1" {
 		ck.checkPatchSha1(line, patchFileName, hash)
@@ -383,7 +383,7 @@ func (ck *distinfoLinesChecker) checkUncommittedPatch(info distinfoHash) {
 func (ck *distinfoLinesChecker) checkPatchSha1(line *Line, patchFileName PackagePath, distinfoSha1Hex string) {
 	lines := Load(ck.pkg.File(patchFileName), 0)
 	if lines == nil {
-		line.Errorf("Patch %s does not exist.", patchFileName)
+		line.Errorf("Patch %s does not exist.", patchFileName.AsRelPath())
 		return
 	}
 
@@ -391,7 +391,7 @@ func (ck *distinfoLinesChecker) checkPatchSha1(line *Line, patchFileName Package
 	if distinfoSha1Hex != fileSha1Hex {
 		fix := line.Autofix()
 		fix.Errorf("SHA1 hash of %s differs (distinfo has %s, patch file has %s).",
-			line.PathToFile(ck.pkg.File(patchFileName)), distinfoSha1Hex, fileSha1Hex)
+			line.Rel(ck.pkg.File(patchFileName)), distinfoSha1Hex, fileSha1Hex)
 		fix.Explain(
 			"To fix the hashes, either let pkglint --autofix do the work",
 			sprintf("or run %q.", bmake("makepatchsum")))
@@ -408,8 +408,8 @@ type distinfoFileInfo struct {
 	hashes  []distinfoHash
 }
 
-func (info *distinfoFileInfo) filename() Path { return info.hashes[0].filename }
-func (info *distinfoFileInfo) line() *Line    { return info.hashes[0].line }
+func (info *distinfoFileInfo) filename() RelPath { return info.hashes[0].filename }
+func (info *distinfoFileInfo) line() *Line       { return info.hashes[0].line }
 
 func (info *distinfoFileInfo) algorithms() string {
 	var algs []string
@@ -421,7 +421,7 @@ func (info *distinfoFileInfo) algorithms() string {
 
 type distinfoHash struct {
 	line      *Line
-	filename  Path
+	filename  RelPath
 	algorithm string
 	hash      string
 }

@@ -2,6 +2,17 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
+func (s *Suite) Test_VarTypeRegistry_acl__assertion(c *check.C) {
+	t := s.Init(c)
+
+	reg := NewVarTypeRegistry()
+	reg.pkg("VARNAME", BtUnknown)
+
+	t.ExpectPanic(
+		func() { reg.pkg("VARNAME", BtUnknown) },
+		"Pkglint internal error: Variable \"VARNAME\" must only be defined once.")
+}
+
 func (s *Suite) Test_VarTypeRegistry_compilerLanguages(c *check.C) {
 	t := s.Init(c)
 
@@ -182,6 +193,18 @@ func (s *Suite) Test_VarTypeRegistry_enumFromFiles__no_testing(c *check.C) {
 		},
 		"FATAL: ~/mk/platform: Must contain at least 1 "+
 			"file matching \"^(\\\\w+)\\\\.mk$\".")
+}
+
+func (s *Suite) Test_VarTypeRegistry_options__assertion(c *check.C) {
+	t := s.Init(c)
+
+	reg := NewVarTypeRegistry()
+
+	t.ExpectAssert(func() {
+		reg.options(
+			SystemProvided,
+			[]vartypeOptions{DefinedIfInScope, NonemptyIfDefined})
+	})
 }
 
 func (s *Suite) Test_VarTypeRegistry_Init(c *check.C) {

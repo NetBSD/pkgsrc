@@ -7,13 +7,13 @@ type ShTokenizer struct {
 	inWord bool
 }
 
-func NewShTokenizer(line *Line, text string, emitWarnings bool) *ShTokenizer {
+func NewShTokenizer(diag Autofixer, text string, emitWarnings bool) *ShTokenizer {
 	// TODO: Switching to NewMkParser is nontrivial since emitWarnings must equal (line != nil).
 	// assert((line != nil) == emitWarnings)
-	if line != nil {
+	if diag != nil {
 		emitWarnings = true
 	}
-	mklex := NewMkLexer(text, line)
+	mklex := NewMkLexer(text, diag)
 	return &ShTokenizer{mklex, false}
 }
 
@@ -69,9 +69,11 @@ func (p *ShTokenizer) ShAtom(quoting ShQuoting) *ShAtom {
 	if atom == nil {
 		lexer.Reset(mark)
 		if hasPrefix(lexer.Rest(), "$${") {
-			p.parser.line.Warnf("Unclosed shell variable starting at %q.", shorten(lexer.Rest(), 20))
+			p.parser.Warnf("Unclosed shell variable starting at %q.", shorten(lexer.Rest(), 20))
 		} else {
-			p.parser.line.Warnf("Internal pkglint error in ShTokenizer.ShAtom at %q (quoting=%s).", lexer.Rest(), quoting)
+			p.parser.Warnf("Internal pkglint error in ShTokenizer.ShAtom at %q (quoting=%s).",
+				// TODO: shorten(lexer.Rest(), 20)
+				lexer.Rest(), quoting.String())
 		}
 	}
 	return atom

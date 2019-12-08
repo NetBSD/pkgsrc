@@ -59,7 +59,7 @@ type mkLineInclude struct {
 	mustExist       bool     // for .sinclude, nonexistent files are ignored
 	sys             bool     // whether the include uses <file.mk> (very rare) instead of "file.mk"
 	indent          string   // the space between the leading "." and the directive
-	includedFile    Path     // the text between the <brackets> or "quotes"
+	includedFile    RelPath  // the text between the <brackets> or "quotes"
 	conditionalVars []string // variables on which this inclusion depends (filled in later, as needed)
 }
 
@@ -276,13 +276,13 @@ func (mkline *MkLine) SetHasElseBranch(elseLine *MkLine) {
 
 func (mkline *MkLine) MustExist() bool { return mkline.data.(*mkLineInclude).mustExist }
 
-func (mkline *MkLine) IncludedFile() Path { return mkline.data.(*mkLineInclude).includedFile }
+func (mkline *MkLine) IncludedFile() RelPath { return mkline.data.(*mkLineInclude).includedFile }
 
 // IncludedFileFull returns the path to the included file.
 func (mkline *MkLine) IncludedFileFull() CurrPath {
-	// FIXME: consider DirNoClean
-	// FIXME: consider JoinNoClean
-	return mkline.Filename.DirClean().JoinClean(mkline.IncludedFile()).CleanPath()
+	dir := mkline.Filename.DirNoClean()
+	joined := dir.JoinNoClean(mkline.IncludedFile())
+	return joined.CleanPath()
 }
 
 func (mkline *MkLine) Targets() string { return mkline.data.(mkLineDependency).targets }
@@ -327,11 +327,11 @@ func (mkline *MkLine) Tokenize(text string, warn bool) []*MkToken {
 	if mkline.IsVarassignMaybeCommented() && text == mkline.Value() {
 		tokens, rest = mkline.ValueTokens()
 	} else {
-		var line *Line
+		var diag Autofixer
 		if warn {
-			line = mkline.Line
+			diag = mkline.Line
 		}
-		p := NewMkLexer(text, line)
+		p := NewMkLexer(text, diag)
 		tokens, rest = p.MkTokens()
 	}
 
@@ -563,8 +563,7 @@ func (mkline *MkLine) ResolveVarsInRelativePath(relativePath RelPath) RelPath {
 	if G.Pkg != nil {
 		basedir = G.Pkg.File(".")
 	} else {
-		// FIXME: consider DirNoClean
-		basedir = mkline.Filename.DirClean()
+		basedir = mkline.Filename.DirNoClean()
 	}
 
 	tmp := relativePath
@@ -637,13 +636,13 @@ func (mkline *MkLine) ExplainRelativeDirs() {
 		"main pkgsrc repository.")
 }
 
-// RefTo returns a reference to another line,
+// RelMkLine returns a reference to another line,
 // which can be in the same file or in a different file.
 //
 // If there is a type mismatch when calling this function, try to add ".line" to
 // either the method receiver or the other line.
-func (mkline *MkLine) RefTo(other *MkLine) string {
-	return mkline.Line.RefTo(other.Line)
+func (mkline *MkLine) RelMkLine(other *MkLine) string {
+	return mkline.Line.RelLine(other.Line)
 }
 
 var (
@@ -750,7 +749,7 @@ func (mkline *MkLine) VariableNeedsQuoting(mklines *MkLines, varuse *MkVarUse, v
 
 		// .for dir in ${PATH:C,:, ,g}
 		for _, modifier := range varuse.modifiers {
-			if modifier.ChangesWords() {
+			if modifier.ChangesList() {
 				return unknown
 			}
 		}
@@ -1055,7 +1054,7 @@ type indentationLevel struct {
 	// pkglint will happily accept .include "fname" in both the then and
 	// the else branch. This is ok since the primary job of this file list
 	// is to prevent wrong pkglint warnings about missing files.
-	checkedFiles []RelPath
+	checkedFiles []PkgsrcPath
 
 	// whether the line is a multiple-inclusion guard
 	guard bool
@@ -1100,7 +1099,7 @@ func (ind *Indentation) Push(mkline *MkLine, indent int, args string, guard bool
 //
 // Variables named *_MK are ignored since they are usually not interesting.
 func (ind *Indentation) AddVar(varname string) {
-	if hasSuffix(varname, "_MK") || ind.IsEmpty() {
+	if hasSuffix(varname, "_MK") {
 		return
 	}
 
@@ -1146,9 +1145,6 @@ func (ind *Indentation) Varnames() []string {
 	varnames := NewStringSet()
 	for _, level := range ind.levels {
 		for _, levelVarname := range level.conditionalVars {
-			// multiple-inclusion guard must be filtered out earlier.
-			assert(!hasSuffix(levelVarname, "_MK"))
-
 			varnames.Add(levelVarname)
 		}
 	}
@@ -1160,7 +1156,7 @@ func (ind *Indentation) Args() string {
 	return ind.top().args
 }
 
-func (ind *Indentation) AddCheckedFile(filename RelPath) {
+func (ind *Indentation) AddCheckedFile(filename PkgsrcPath) {
 	top := ind.top()
 	top.checkedFiles = append(top.checkedFiles, filename)
 }
@@ -1168,8 +1164,7 @@ func (ind *Indentation) AddCheckedFile(filename RelPath) {
 // HasExists returns whether the given filename has been tested in an
 // exists(filename) condition and thus may or may not exist.
 //
-// FIXME: Replace RelPath with PkgsrcPath, to make the filenames reliable.
-func (ind *Indentation) HasExists(filename RelPath) bool {
+func (ind *Indentation) HasExists(filename PkgsrcPath) bool {
 	for _, level := range ind.levels {
 		for _, levelFilename := range level.checkedFiles {
 			if filename == levelFilename {
@@ -1243,8 +1238,9 @@ func (ind *Indentation) TrackAfter(mkline *MkLine) {
 
 		cond.Walk(&MkCondCallback{
 			Call: func(name string, arg string) {
-				if name == "exists" {
-					ind.AddCheckedFile(NewRelPathString(arg))
+				if name == "exists" && !NewPath(arg).IsAbs() {
+					rel := G.Pkgsrc.ToRel(mkline.File(NewRelPathString(arg)))
+					ind.AddCheckedFile(rel)
 				}
 			}})
 	}
@@ -1257,7 +1253,7 @@ func (ind *Indentation) CheckFinish(filename CurrPath) {
 	eofLine := NewLineEOF(filename)
 	for !ind.IsEmpty() {
 		openingMkline := ind.top().mkline
-		eofLine.Errorf(".%s from %s must be closed.", openingMkline.Directive(), eofLine.RefTo(openingMkline.Line))
+		eofLine.Errorf(".%s from %s must be closed.", openingMkline.Directive(), eofLine.RelLine(openingMkline.Line))
 		ind.Pop()
 	}
 }
@@ -1280,7 +1276,7 @@ var (
 	VarparamBytes = textproc.NewByteSet("A-Za-z_0-9#*+---./[")
 )
 
-func MatchMkInclude(text string) (m bool, indentation, directive string, filename Path) {
+func MatchMkInclude(text string) (m bool, indentation, directive string, filename RelPath) {
 	lexer := textproc.NewLexer(text)
 	if lexer.SkipByte('.') {
 		indentation = lexer.NextHspace()
@@ -1294,7 +1290,7 @@ func MatchMkInclude(text string) (m bool, indentation, directive string, filenam
 				// Note: strictly speaking, the full MkVarUse would have to be parsed
 				// here. But since these usually don't contain double quotes, it has
 				// worked fine up to now.
-				filename = NewPath(lexer.NextBytesFunc(func(c byte) bool { return c != '"' }))
+				filename = NewRelPathString(lexer.NextBytesFunc(func(c byte) bool { return c != '"' }))
 				if !filename.IsEmpty() && lexer.SkipByte('"') {
 					lexer.NextHspace()
 					if lexer.EOF() {

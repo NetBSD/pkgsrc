@@ -2,7 +2,7 @@ package pkglint
 
 type Toplevel struct {
 	dir            CurrPath
-	previousSubdir Path
+	previousSubdir RelPath
 	subdirs        []CurrPath
 }
 
@@ -36,7 +36,7 @@ func CheckdirToplevel(dir CurrPath) {
 }
 
 func (ctx *Toplevel) checkSubdir(mkline *MkLine) {
-	subdir := NewPath(mkline.Value())
+	subdir := NewRelPathString(mkline.Value())
 
 	if mkline.IsCommentedVarassign() {
 		if !mkline.HasComment() || mkline.Comment() == "" {

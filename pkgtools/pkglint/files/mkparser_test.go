@@ -163,6 +163,18 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	test("\"${VAR}str\"",
 		&MkCond{Term: &MkCondTerm{Str: "${VAR}str"}})
 
+	test("commands(show-var)",
+		&MkCond{Call: &MkCondCall{"commands", "show-var"}})
+
+	test("exists(/usr/bin)",
+		&MkCond{Call: &MkCondCall{"exists", "/usr/bin"}})
+
+	test("make(show-var)",
+		&MkCond{Call: &MkCondCall{"make", "show-var"}})
+
+	test("target(do-build)",
+		&MkCond{Call: &MkCondCall{"target", "do-build"}})
+
 	// Errors
 
 	testRest("defined()",
@@ -248,6 +260,10 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	testRest("!empty{USE_CROSS_COMPILE:M[yY][eE][sS]}",
 		nil,
 		"empty{USE_CROSS_COMPILE:M[yY][eE][sS]}")
+
+	testRest("unknown(arg)",
+		nil,
+		"unknown(arg)")
 }
 
 func (s *Suite) Test_MkParser_mkCondCompare(c *check.C) {

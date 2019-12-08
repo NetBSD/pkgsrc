@@ -285,7 +285,7 @@ func (tr *Tools) ParseToolLine(mklines *MkLines, mkline *MkLine, fromInfrastruct
 		}
 
 	case mkline.IsInclude():
-		if IsPrefs(mkline.IncludedFile()) {
+		if LoadsPrefs(mkline.IncludedFile()) {
 			tr.SeenPrefs = true
 		}
 	}
@@ -345,7 +345,7 @@ func (tr *Tools) implicitTools(toolName string) []string {
 
 func (tr *Tools) validity(basename string, useTools bool) Validity {
 	switch {
-	case IsPrefs(NewPath(basename)): // IsPrefs is not 100% accurate here but good enough
+	case LoadsPrefs(NewRelPathString(basename)): // LoadsPrefs is not 100% accurate here but good enough
 		return AfterPrefsMk
 	case basename == "Makefile" && !tr.SeenPrefs:
 		return AfterPrefsMk
