@@ -49,7 +49,7 @@ func CheckdirCategory(dir CurrPath) {
 	mlex.SkipEmptyOrNote()
 
 	type subdir struct {
-		name Path
+		name RelPath
 		line *MkLine
 	}
 
@@ -73,7 +73,7 @@ func CheckdirCategory(dir CurrPath) {
 			}
 
 			if prev := seen[name]; prev != nil {
-				mkline.Errorf("%q must only appear once, already seen in %s.", name, mkline.RefTo(prev))
+				mkline.Errorf("%q must only appear once, already seen in %s.", name, mkline.RelMkLine(prev))
 			}
 			seen[name] = mkline
 
@@ -83,7 +83,7 @@ func CheckdirCategory(dir CurrPath) {
 				}
 			}
 
-			mSubdirs = append(mSubdirs, subdir{NewPath(name), mkline})
+			mSubdirs = append(mSubdirs, subdir{NewRelPathString(name), mkline})
 
 		} else {
 			if !mkline.IsEmpty() {
@@ -96,8 +96,8 @@ func CheckdirCategory(dir CurrPath) {
 	// To prevent unnecessary warnings about subdirectories that are
 	// in one list but not in the other, generate the sets of
 	// subdirs of each list.
-	fCheck := make(map[Path]bool)
-	mCheck := make(map[Path]bool)
+	fCheck := make(map[RelPath]bool)
+	mCheck := make(map[RelPath]bool)
 	for _, fsub := range fSubdirs {
 		fCheck[fsub] = true
 	}

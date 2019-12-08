@@ -429,7 +429,6 @@ func (va *VaralignBlock) realign(info *varalignLine, newWidth int, indentDiffSet
 		assert(*indentDiffSet)
 		va.realignMultiFollow(info, newWidth, *indentDiff)
 	} else {
-		assert(!*indentDiffSet)
 		va.realignSingle(info, newWidth)
 	}
 }

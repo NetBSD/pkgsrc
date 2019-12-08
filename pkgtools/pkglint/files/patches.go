@@ -2,10 +2,7 @@ package pkglint
 
 // Checks for patch files.
 
-import (
-	"path"
-	"strings"
-)
+import "strings"
 
 func CheckLinesPatch(lines *Lines) {
 	(&PatchChecker{lines, NewLinesLexer(lines), false, false}).Check()
@@ -41,7 +38,7 @@ func (ck *PatchChecker) Check() {
 		if ck.llex.SkipRegexp(rePatchUniFileDel) {
 			if m := ck.llex.NextRegexp(rePatchUniFileAdd); m != nil {
 				ck.checkBeginDiff(line, patchedFiles)
-				ck.checkUnifiedDiff(m[1])
+				ck.checkUnifiedDiff(NewPath(m[1]))
 				patchedFiles++
 				continue
 			}
@@ -50,7 +47,7 @@ func (ck *PatchChecker) Check() {
 		}
 
 		if m := ck.llex.NextRegexp(rePatchUniFileAdd); m != nil {
-			patchedFile := m[1]
+			patchedFile := NewPath(m[1])
 			if ck.llex.SkipRegexp(rePatchUniFileDel) {
 				ck.checkBeginDiff(line, patchedFiles)
 				ck.llex.PreviousLine().Warnf("Unified diff headers should be first ---, then +++.")
@@ -95,7 +92,7 @@ func (ck *PatchChecker) Check() {
 }
 
 // See https://www.gnu.org/software/diffutils/manual/html_node/Detailed-Unified.html
-func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
+func (ck *PatchChecker) checkUnifiedDiff(patchedFile Path) {
 	isConfigure := ck.isConfigure(patchedFile)
 
 	hasHunks := false
@@ -161,7 +158,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 	}
 
 	if !hasHunks {
-		ck.llex.CurrentLine().Errorf("No patch hunks for %q.", patchedFile)
+		ck.llex.CurrentLine().Errorf("No patch hunks for %q.", patchedFile.String())
 	}
 
 	if !ck.llex.EOF() {
@@ -265,8 +262,8 @@ func (ck *PatchChecker) isEmptyLine(text string) bool {
 		hasPrefix(text, "=============")
 }
 
-func (*PatchChecker) isConfigure(filename string) bool {
-	switch path.Base(filename) {
+func (*PatchChecker) isConfigure(filename Path) bool {
+	switch filename.Base() {
 	case "configure", "configure.in", "configure.ac":
 		return true
 	}

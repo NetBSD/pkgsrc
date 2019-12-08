@@ -687,7 +687,7 @@ func (s *Suite) Test_PlistChecker_checkPathShare(c *check.C) {
 func (s *Suite) Test_PlistChecker_checkPathShareIcons__using_gnome_icon_theme(c *check.C) {
 	t := s.Init(c)
 
-	t.CreateFileDummyBuildlink3("graphics/gnome-icon-theme/buildlink3.mk")
+	t.CreateFileBuildlink3("graphics/gnome-icon-theme/buildlink3.mk")
 	t.SetUpPackage("graphics/gnome-icon-theme-extras",
 		"ICON_THEMES=\tyes",
 		".include \"../../graphics/gnome-icon-theme/buildlink3.mk\"")
@@ -715,7 +715,7 @@ func (s *Suite) Test_PlistChecker_checkPathShareIcons__using_gnome_icon_theme(c 
 func (s *Suite) Test_PlistChecker_checkPathShareIcons__gnome_icon_theme_itself(c *check.C) {
 	t := s.Init(c)
 
-	t.CreateFileDummyBuildlink3("graphics/gnome-icon-theme/buildlink3.mk",
+	t.CreateFileBuildlink3("graphics/gnome-icon-theme/buildlink3.mk",
 		"ICON_THEMES=\tyes")
 	t.SetUpPackage("graphics/gnome-icon-theme",
 		".include \"../../graphics/gnome-icon-theme/buildlink3.mk\"")
