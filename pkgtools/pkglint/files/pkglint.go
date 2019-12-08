@@ -314,8 +314,7 @@ func (pkglint *Pkglint) checkMode(dirent CurrPath, mode os.FileMode) {
 
 	dir := dirent
 	if !isDir {
-		// FIXME: consider DirNoClean
-		dir = dirent.DirClean()
+		dir = dirent.DirNoClean()
 	}
 
 	basename := dirent.Base()
@@ -325,7 +324,9 @@ func (pkglint *Pkglint) checkMode(dirent CurrPath, mode os.FileMode) {
 	pkglint.Infrastructure = pkgsrcRel.HasPrefixPath("mk")
 	pkgsrcdir := findPkgsrcTopdir(dir)
 	if pkgsrcdir.IsEmpty() {
-		NewLineWhole(dirent).Errorf("Cannot determine the pkgsrc root directory for %q.", dir.CleanPath())
+		G.Logger.TechErrorf("",
+			"Cannot determine the pkgsrc root directory for %q.",
+			dirent)
 		return
 	}
 
@@ -360,15 +361,12 @@ func (pkglint *Pkglint) checkdirPackage(dir CurrPath) {
 
 	pkglint.Pkg = NewPackage(dir)
 	defer func() { pkglint.Pkg = nil }()
-	pkg := pkglint.Pkg
-
-	files, mklines, allLines := pkg.load()
-	pkg.check(files, mklines, allLines)
+	pkglint.Pkg.Check()
 }
 
 // Returns the pkgsrc top-level directory, relative to the given directory.
-func findPkgsrcTopdir(dirname CurrPath) Path {
-	for _, dir := range [...]Path{".", "..", "../..", "../../.."} {
+func findPkgsrcTopdir(dirname CurrPath) RelPath {
+	for _, dir := range [...]RelPath{".", "..", "../..", "../../.."} {
 		if dirname.JoinNoClean(dir).JoinNoClean("mk/bsd.pkg.mk").IsFile() {
 			return dir
 		}
@@ -786,7 +784,7 @@ func (pkglint *Pkglint) loadCvsEntries(filename CurrPath) map[string]CvsEntry {
 
 func (pkglint *Pkglint) Abs(filename CurrPath) CurrPath {
 	if !filename.IsAbs() {
-		return pkglint.cwd.JoinNoClean(filename.AsPath()).Clean()
+		return pkglint.cwd.JoinNoClean(NewRelPath(filename.AsPath())).Clean()
 	}
 	return filename.Clean()
 }
@@ -806,7 +804,7 @@ func (ip *InterPackage) Enable() {
 
 func (ip *InterPackage) Enabled() bool { return ip.hashes != nil }
 
-func (ip *InterPackage) Hash(alg string, filename Path, hashBytes []byte, loc *Location) *Hash {
+func (ip *InterPackage) Hash(alg string, filename RelPath, hashBytes []byte, loc *Location) *Hash {
 	key := alg + ":" + filename.String()
 	if otherHash := ip.hashes[key]; otherHash != nil {
 		return otherHash
