@@ -310,7 +310,7 @@ func (ck MkLineChecker) CheckRelativePath(relativePath RelPath, mustExist bool) 
 
 	abs := mkline.Filename.DirNoClean().JoinNoClean(resolvedPath)
 	if !abs.Exists() {
-		pkgsrcPath := G.Pkgsrc.ToRel(ck.MkLine.File(resolvedPath))
+		pkgsrcPath := G.Pkgsrc.Rel(ck.MkLine.File(resolvedPath))
 		if mustExist && !ck.MkLines.indentation.HasExists(pkgsrcPath) {
 			mkline.Errorf("Relative path %q does not exist.", resolvedPath)
 		}
@@ -327,7 +327,7 @@ func (ck MkLineChecker) CheckRelativePath(relativePath RelPath, mustExist bool) 
 	case matches(resolvedPath.String(), `^\.\./\.\./[^./][^/]*/[^/]`):
 		// From a package to another package.
 
-	case resolvedPath.HasPrefixPath("../mk") && G.Pkgsrc.ToRel(mkline.Filename).Count() == 2:
+	case resolvedPath.HasPrefixPath("../mk") && G.Pkgsrc.Rel(mkline.Filename).Count() == 2:
 		// For category Makefiles.
 		// TODO: Or from a pkgsrc wip package to wip/mk.
 
@@ -406,7 +406,7 @@ func (ck MkLineChecker) checkDirective(forVars map[string]bool, ind *Indentation
 
 	case directive == "if" || directive == "elif":
 		mkCondChecker := NewMkCondChecker(mkline, ck.MkLines)
-		mkCondChecker.checkDirectiveCond()
+		mkCondChecker.Check()
 
 	case directive == "ifdef" || directive == "ifndef":
 		mkline.Warnf("The \".%s\" directive is deprecated. Please use \".if %sdefined(%s)\" instead.",

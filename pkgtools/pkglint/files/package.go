@@ -78,7 +78,7 @@ type Package struct {
 }
 
 func NewPackage(dir CurrPath) *Package {
-	pkgpath := G.Pkgsrc.ToRel(dir)
+	pkgpath := G.Pkgsrc.Rel(dir)
 
 	// Package directory must be two subdirectories below the pkgsrc root.
 	// As of November 2019, it is technically possible to create packages
@@ -143,8 +143,7 @@ func (pkg *Package) load() ([]CurrPath, *MkLines, *MkLines) {
 		if !hasPrefix(basename, "Makefile.") && !filename.HasSuffixText(".mk") {
 			return false
 		}
-		// FIXME: consider DirNoClean
-		if filename.DirClean().Base() == "patches" {
+		if filename.DirNoClean().Base() == "patches" {
 			return false
 		}
 		if pkg.Pkgdir == "." {
@@ -247,15 +246,14 @@ func (pkg *Package) parse(mklines *MkLines, allLines *MkLines, includingFileForU
 		func(mkline *MkLine) {})
 
 	if includingFileForUsedCheck != "" {
-		mklines.CheckUsedBy(G.Pkgsrc.ToRel(includingFileForUsedCheck))
+		mklines.CheckUsedBy(G.Pkgsrc.Rel(includingFileForUsedCheck))
 	}
 
 	// For every included buildlink3.mk, include the corresponding builtin.mk
 	// automatically since the pkgsrc infrastructure does the same.
 	filename := mklines.lines.Filename
 	if filename.Base() == "buildlink3.mk" {
-		// FIXME: consider DirNoClean
-		builtin := filename.DirClean().JoinNoClean("builtin.mk").CleanPath()
+		builtin := filename.DirNoClean().JoinNoClean("builtin.mk").CleanPath()
 		builtinRel := G.Pkgsrc.Relpath(pkg.dir, builtin)
 		if pkg.included.FirstTime(builtinRel.String()) && builtin.IsFile() {
 			builtinMkLines := LoadMk(builtin, MustSucceed|LogErrors)
@@ -276,7 +274,7 @@ func (pkg *Package) parseLine(mklines *MkLines, mkline *MkLine, allLines *MkLine
 		includedMkLines, skip := pkg.loadIncluded(mkline, includingFile)
 
 		if includedMkLines == nil {
-			pkgsrcPath := G.Pkgsrc.ToRel(mkline.File(includedFile))
+			pkgsrcPath := G.Pkgsrc.Rel(mkline.File(includedFile))
 			if skip || mklines.indentation.HasExists(pkgsrcPath) {
 				return true // See https://github.com/rillig/pkglint/issues/1
 			}
@@ -372,7 +370,7 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile CurrPath) (includ
 		return nil, false
 	}
 
-	mkline.Notef("The path to the included file should be %q.",
+	mkline.Warnf("The path to the included file should be %q.",
 		mkline.Rel(fullIncludedFallback))
 	mkline.Explain(
 		"The .include directive first searches the file relative to the including file.",
@@ -389,7 +387,7 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile CurrPath) (includ
 // their actual values.
 func (pkg *Package) resolveIncludedFile(mkline *MkLine, includingFilename CurrPath) RelPath {
 
-	// FIXME: resolveVariableRefs uses G.Pkg implicitly. It should be made explicit.
+	// XXX: resolveVariableRefs uses G.Pkg implicitly. It should be made explicit.
 	// TODO: Try to combine resolveVariableRefs and ResolveVarsInRelativePath.
 	resolved := mkline.ResolveVarsInRelativePath(mkline.IncludedFile())
 	includedText := resolveVariableRefs(nil /* XXX: or maybe some mklines? */, resolved.String())
@@ -515,7 +513,7 @@ func (pkg *Package) check(filenames []CurrPath, mklines, allLines *MkLines) {
 			// since all those files come from calls to dirglob.
 			break
 
-		case filename.HasBase("Makefile") && G.Pkgsrc.ToRel(filename).Count() == 3:
+		case filename.HasBase("Makefile") && G.Pkgsrc.Rel(filename).Count() == 3:
 			G.checkExecutable(filename, st.Mode())
 			pkg.checkfilePackageMakefile(filename, mklines, allLines)
 
@@ -593,10 +591,13 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 
 	pkg.redundant = NewRedundantScope()
 	pkg.redundant.IsRelevant = func(mkline *MkLine) bool {
-		if !G.Infrastructure && !G.Opts.CheckGlobal {
-			return !G.Pkgsrc.IsInfra(mkline.Filename)
-		}
-		return true
+		// As of December 2019, the RedundantScope is only used for
+		// checking a whole package. Therefore, G.Infrastructure can
+		// never be true and there is no point testing it.
+		//
+		// If the RedundantScope is applied also to individual files,
+		// it would have to be added here.
+		return G.Opts.CheckGlobal || !G.Pkgsrc.IsInfra(mkline.Filename)
 	}
 	pkg.redundant.Check(allLines) // Updates the variables in the scope
 	pkg.checkCategories()
@@ -941,7 +942,7 @@ func (pkg *Package) checkCategories() {
 		return
 	}
 
-	// FIXME: Decide what exactly this map means.
+	// XXX: Decide what exactly this map means.
 	//  Is it "this category has been seen somewhere",
 	//  or is it "this category has definitely been added"?
 	seen := map[string]*MkLine{}
@@ -949,7 +950,7 @@ func (pkg *Package) checkCategories() {
 		switch mkline.Op() {
 		case opAssignDefault:
 			for _, category := range mkline.ValueFields(mkline.Value()) {
-				// FIXME: This looks wrong. It should probably be replaced by
+				// XXX: This looks wrong. It should probably be replaced by
 				//  an "if len(seen) == 0" outside the for loop.
 				if seen[category] == nil {
 					seen[category] = mkline
@@ -1267,7 +1268,7 @@ func (pkg *Package) checkDirent(dirent CurrPath, mode os.FileMode) {
 	switch {
 
 	case mode.IsRegular():
-		G.checkReg(dirent, basename, G.Pkgsrc.ToRel(dirent).Count())
+		G.checkReg(dirent, basename, G.Pkgsrc.Rel(dirent).Count())
 
 	case hasPrefix(basename, "work"):
 		if G.Opts.Import {
@@ -1279,8 +1280,7 @@ func (pkg *Package) checkDirent(dirent CurrPath, mode os.FileMode) {
 		switch {
 		case basename == "files",
 			basename == "patches",
-			// FIXME: consider DirNoClean
-			dirent.DirClean().Base() == "files",
+			dirent.DirNoClean().Base() == "files",
 			isEmptyDir(dirent):
 			break
 
