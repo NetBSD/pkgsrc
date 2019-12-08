@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2019/12/07 10:24:02 mrg Exp $
+# $NetBSD: Makefile,v 1.43 2019/12/08 02:01:07 nia Exp $
 
 DISTNAME=		csound-${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GITHUB:=csound/}
 GITHUB_PROJECT=		csound
@@ -17,8 +18,9 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison
 CFLAGS+=		-g -D__PKGSRC_PREFIX__=\"${PREFIX}/\" -DBETA
 USE_CMAKE=		yes
-CMAKE_ARGS+=		-DUSE_PULSEAUDIO:BOOL=ON
-CMAKE_ARGS+=		-DBUILD_RELEASE=1 -DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=		-DBUILD_RELEASE=1
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=		-DBUILD_HDF5_OPCODES=OFF
 # CMAKE_INSTALL_RPATH doesn't work for some reason, so do it here.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/csound6
 
@@ -30,7 +32,10 @@ PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 5.01
 INSTALLATION_DIRS=	bin
 
 CHECK_PORTABILITY_SKIP+=	installer/misc/makedeb.sh \
+				installer/macosx/beta-build.sh \
+				installer/macosx/release-build.sh \
 				installer/macosx/release-build-10.8.sh \
+				installer/macosx/release-build-10.10.sh \
 				frontends/max_csound_tilde/installer/build-installer.sh \
 				frontends/max_csound_tilde/installer/build-installer-windows.sh
 
