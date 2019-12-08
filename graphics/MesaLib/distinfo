@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.144 2019/11/29 10:34:13 jperkin Exp $
+$NetBSD: distinfo,v 1.145 2019/12/08 13:07:20 nia Exp $
 
-SHA1 (mesa-19.2.4.tar.xz) = 85cc1b57840f14d720f806f8160356b8c9b13a7f
-RMD160 (mesa-19.2.4.tar.xz) = f2c7d454fb67cc27bf28de3ea4f5c85979523e96
-SHA512 (mesa-19.2.4.tar.xz) = e8a0e90460f3153d730f8fb13f2c912a9826c05d2af9e22dc575bcd8885bf6a33c0af1c6659e81701ff097a132df88eead208e89dceb552b9da809ab543fa479
-Size (mesa-19.2.4.tar.xz) = 11458340 bytes
+SHA1 (mesa-19.2.7.tar.xz) = 9b8ebf66770353a48bd710e12e2727fb33645f44
+RMD160 (mesa-19.2.7.tar.xz) = 5323b623ac22c168b86548cf6d842ce004e346a9
+SHA512 (mesa-19.2.7.tar.xz) = 87a82664381432e956ee23dc92bec5accf667606232e38d9458d67132c16fdc44584f65671293b83f00c58ad7742b80e942a5d1bd66d457705be60aaaf35395b
+Size (mesa-19.2.7.tar.xz) = 11460812 bytes
 SHA1 (patch-include_c11_threads__posix.h) = e1dca04b5c514d20123ef99338c6dabedbc14c5f
 SHA1 (patch-src_amd_common_ac__debug.c) = 8233367c3b5bc344442ea8d19488fdd1e3791ae9
 SHA1 (patch-src_compiler_builtin__type__macros.h) = e4868011711fb89a293580a12eb603b8e7162336
