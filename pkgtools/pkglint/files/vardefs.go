@@ -1282,13 +1282,13 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglist("LTCONFIG_OVERRIDE", BtPathPattern)
 
 	// See devel/bmake/files/main.c:/Var_Set."MACHINE_ARCH"/.
-	reg.sysload("MACHINE_ARCH", enumMachineArch, AlwaysInScope|DefinedIfInScope|NonemptyIfDefined)
+	reg.sysload("MACHINE_ARCH", BtMachineArch, AlwaysInScope|DefinedIfInScope|NonemptyIfDefined)
 
 	// From mk/endian.mk, determined by a shell program that compiles
 	// a C program. That's just too much for pkglint to analyze.
 	reg.sysload("MACHINE_ENDIAN", enum("big little unknown"), DefinedIfInScope|NonemptyIfDefined)
 
-	reg.sysload("MACHINE_GNU_ARCH", enumMachineGnuArch, DefinedIfInScope|NonemptyIfDefined)
+	reg.sysload("MACHINE_GNU_ARCH", BtMachineGnuArch, DefinedIfInScope|NonemptyIfDefined)
 	reg.sysload("MACHINE_GNU_PLATFORM", BtMachineGnuPlatform, DefinedIfInScope|NonemptyIfDefined)
 	reg.sysload("MACHINE_PLATFORM", BtMachinePlatform, DefinedIfInScope|NonemptyIfDefined)
 	reg.pkg("MAINTAINER", BtMailAddress)
