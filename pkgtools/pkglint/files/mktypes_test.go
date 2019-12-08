@@ -36,7 +36,7 @@ func (MkTokenBuilder) VarUse(varname string, modifiers ...string) *MkVarUse {
 	for _, modifier := range modifiers {
 		mods = append(mods, MkVarUseModifier{modifier})
 	}
-	return &MkVarUse{varname, mods}
+	return NewMkVarUse(varname, mods...)
 }
 
 func (s *Suite) Test_MkVarUseModifier_MatchSubst(c *check.C) {
@@ -140,6 +140,21 @@ func (s *Suite) Test_MkVarUseModifier_Subst__C_with_complex_replacement(c *check
 	t.CheckEquals(result, "")
 }
 
+func (s *Suite) Test_MkVarUseModifier_Subst__S_dollar_at(c *check.C) {
+	t := s.Init(c)
+
+	mod := MkVarUseModifier{"S/$@/replaced/"}
+
+	result, ok := mod.Subst("The target")
+
+	// As of December 2019, nothing is substituted. If pkglint should ever
+	// handle variables in the modifier, this test would been to provide a
+	// context in which to resolve the variables. If that happens, the
+	// .TARGET variable needs to be set to "target".
+	t.CheckEquals(ok, true)
+	t.CheckEquals(result, "The target")
+}
+
 func (s *Suite) Test_MkVarUseModifier_MatchMatch(c *check.C) {
 	t := s.Init(c)
 
@@ -165,29 +180,38 @@ func (s *Suite) Test_MkVarUseModifier_MatchMatch(c *check.C) {
 	test("Npattern", false, "pattern", true)
 }
 
-func (s *Suite) Test_MkVarUseModifier_ChangesWords(c *check.C) {
+func (s *Suite) Test_MkVarUseModifier_ChangesList(c *check.C) {
 	t := s.Init(c)
 
 	test := func(modifier string, changes bool) {
 		mod := MkVarUseModifier{modifier}
-		t.CheckEquals(mod.ChangesWords(), changes)
+		t.CheckEquals(mod.ChangesList(), changes)
 	}
 
+	test("C,from,to,", true)
 	test("E", false)
-	test("R", false)
+	test("H", false)
+
+	// FIXME: The :M and :N modifiers obviously change the number of words.
 	test("Mpattern", false)
 	test("Npattern", false)
-	test("S,from,to,", true)
-	test("C,from,to,", true)
-	test("tl", false)
-	test("tu", false)
-	test("sh", true)
 
-	test("unknown", true)
+	test("O", false)
+	test("Q", true)
+	test("R", false)
+	test("S,from,to,", true)
+	test("T", false)
+	test("invalid", true)
+	test("sh", true)
+	test("tl", false)
+	test("tW", true)
+	test("tu", false)
+	test("tw", true)
 }
 
-// Ensures that ChangesWords cannot be called with an empty string as modifier.
-func (s *Suite) Test_MkVarUseModifier_ChangesWords__empty(c *check.C) {
+// Ensures that ChangesList cannot be called with an empty string as modifier.
+// Therefore it is safe to index text[0] without a preceding length check.
+func (s *Suite) Test_MkVarUseModifier_ChangesList__empty(c *check.C) {
 	t := s.Init(c)
 
 	mkline := t.NewMkLine("filename.mk", 123, "\t${VAR:}")
@@ -196,7 +220,7 @@ func (s *Suite) Test_MkVarUseModifier_ChangesWords__empty(c *check.C) {
 	mkline.ForEachUsed(func(varUse *MkVarUse, time VucTime) {
 		n += 100
 		for _, mod := range varUse.modifiers {
-			mod.ChangesWords()
+			mod.ChangesList()
 			n++
 		}
 	})

@@ -523,6 +523,16 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 		operator(")"), space,
 		text("still-subshell"), operator(";;"), space,
 		text("esac"), operator(")"), operator(";"))
+
+	testRest("`echo \\${VAR}`",
+		atoms(
+			backt(text("`")),
+			backt(text("echo")),
+			backt(space)),
+		"\\${VAR}`")
+	t.CheckOutputLines(
+		"WARN: filename.mk:1: Internal pkglint error " +
+			"in ShTokenizer.ShAtom at \"\\\\${VAR}`\" (quoting=b).")
 }
 
 func (s *Suite) Test_ShTokenizer_ShAtom__quoting(c *check.C) {
@@ -560,6 +570,21 @@ func (s *Suite) Test_ShTokenizer_ShAtom__quoting(c *check.C) {
 	test("x\"x\\\"x\\'x\\`x\\\\", "x\"[d]x\\\"x\\'x\\`x\\\\")
 	test("x'x\\\"x\\'x\\`x\\\\", "x'[s]x\\\"x\\'[plain]x\\`x\\\\")
 	test("x`x\\\"x\\'x\\`x\\\\", "x`[b]x\\\"x\\'x\\`x\\\\")
+}
+
+// The switch statement in ShTokenizer.ShAtom is exhaustive.
+// If a new quoting mode is added (in which case the shell tokenizer
+// should rather be rewritten completely and correctly), it is ok
+// to panic if ShQuoting is not adjusted in the same commit.
+func (s *Suite) Test_ShTokenizer_ShAtom__internal_error(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("filename.mk", 123, "\ttoken")
+	tok := NewShTokenizer(line, line.Text, true)
+	t.ExpectPanicMatches(
+		func() { tok.ShAtom(^ShQuoting(0)) },
+		// Normalize the panic message, for Go < 12 if I remember correctly.
+		`^runtime error: index out of range.*`)
 }
 
 func (s *Suite) Test_ShTokenizer_shVarUse(c *check.C) {
