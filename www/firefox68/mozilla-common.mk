@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.4 2019/11/18 12:08:10 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.5 2019/12/08 20:09:41 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -163,6 +163,13 @@ PLIST.sps=	yes
 PLIST.tremor=	yes
 .else
 PLIST.vorbis=	yes
+.endif
+
+.include "../../mk/pkg-build-options.mk"
+
+PLIST_VARS+=	wayland
+.if !empty(PKG_BUILD_OPTIONS.gtk3:Mwayland)
+PLIST.wayland=	yes
 .endif
 
 # See ${WRKSRC}/mozglue/build/moz.build: libmozglue is built and
