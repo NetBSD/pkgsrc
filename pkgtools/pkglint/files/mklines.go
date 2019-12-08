@@ -7,7 +7,7 @@ type MkLines struct {
 	mklines       []*MkLine
 	lines         *Lines
 	target        string             // Current make(1) target; only available during checkAll
-	vars          Scope              //
+	allVars       Scope              // The variables after loading the complete file
 	buildDefs     map[string]bool    // Variables that are registered in BUILD_DEFS, to ensure that all user-defined variables are added to it.
 	plistVarAdded map[string]*MkLine // Identifiers that are added to PLIST_VARS.
 	plistVarSet   map[string]*MkLine // Identifiers for which PLIST.${id} is defined.
@@ -124,7 +124,7 @@ func (mklines *MkLines) collectUsedVariables() {
 // UseVar remembers that the given variable is used in the given line.
 // This controls the "defined but not used" warning.
 func (mklines *MkLines) UseVar(mkline *MkLine, varname string, time VucTime) {
-	mklines.vars.Use(varname, mkline, time)
+	mklines.allVars.Use(varname, mkline, time)
 	if G.Pkg != nil {
 		G.Pkg.vars.Use(varname, mkline, time)
 	}
@@ -148,8 +148,8 @@ func (mklines *MkLines) collectDocumentedVariables() {
 		// leaving 2 of these 3 lines for the actual documentation.
 		if commentLines >= 3 && relevant {
 			for varname, mkline := range scope.used {
-				mklines.vars.Define(varname, mkline)
-				mklines.vars.Use(varname, mkline, VucRunTime)
+				mklines.allVars.Define(varname, mkline)
+				mklines.allVars.Use(varname, mkline, VucRunTime)
 			}
 		}
 
@@ -231,7 +231,7 @@ func (mklines *MkLines) collectVariables() {
 			"BUILTIN_FIND_FILES_VAR",
 			"BUILTIN_FIND_HEADERS_VAR":
 			for _, varname := range mkline.Fields() {
-				mklines.vars.Define(varname, mkline)
+				mklines.allVars.Define(varname, mkline)
 			}
 
 		case "PLIST_VARS":
@@ -284,6 +284,9 @@ func (mklines *MkLines) ForEachEnd(action func(mkline *MkLine) bool, atEnd func(
 	// Multiple of these line checkers could be run in parallel, so that
 	// the diagnostics appear in the correct order, from top to bottom.
 
+	// ForEachEnd must not be called within itself.
+	assert(mklines.indentation == nil)
+
 	mklines.indentation = NewIndentation()
 	mklines.Tools.SeenPrefs = false
 
@@ -307,7 +310,7 @@ func (mklines *MkLines) ForEachEnd(action func(mkline *MkLine) bool, atEnd func(
 
 // defineVar marks a variable as defined in both the current package and the current file.
 func (mklines *MkLines) defineVar(pkg *Package, mkline *MkLine, varname string) {
-	mklines.vars.Define(varname, mkline)
+	mklines.allVars.Define(varname, mkline)
 	if pkg != nil {
 		pkg.vars.Define(varname, mkline)
 	}

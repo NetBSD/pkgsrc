@@ -87,6 +87,8 @@ func (s *Suite) Test_Path_DirNoClean(c *check.C) {
 	test("filename", ".")
 	test("dir/filename", "dir")
 	test("dir/filename\\with\\backslash", "dir")
+	test("dir/./file", "dir")
+	test("./file", ".")
 }
 
 func (s *Suite) Test_Path_Base(c *check.C) {
@@ -427,6 +429,7 @@ func (s *Suite) Test_Path_CleanDot(c *check.C) {
 	test("", "")
 	test(".", ".")
 	test("./././", ".")
+	test("dir/", "dir/") // TODO: Or maybe "dir/."?
 	test("a/bb///../c", "a/bb/../c")
 	test("./filename", "filename")
 	test("/absolute", "/absolute")
