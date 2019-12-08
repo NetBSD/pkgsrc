@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.93 2019/11/28 20:46:39 leot Exp $
+# $NetBSD: Makefile,v 1.94 2019/12/08 22:08:55 leot Exp $
 #
 # used by shells/standalone-tcsh/Makefile
 # used by shells/static-tcsh/Makefile
 
-DISTNAME=	tcsh-6.22.00
+DISTNAME=	tcsh-6.22.02
 PKGREVISION?=	0			# use ?= to allow for overrides.
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/
