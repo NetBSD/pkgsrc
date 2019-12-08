@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/12/07 10:24:02 mrg Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/12/08 02:01:07 nia Exp $
 bin/csound6
 include/csound6/CppSound.hpp
 include/csound6/CsoundFile.hpp
@@ -75,6 +75,8 @@ lib/csound6/plugins-6.0/libgetftargs.so
 lib/csound6/plugins-6.0/libgtf.so
 lib/csound6/plugins-6.0/libimage.so
 lib/csound6/plugins-6.0/libipmidi.so
+${PLIST.jack}lib/csound6/plugins-6.0/libjackTransport.so
+${PLIST.jack}lib/csound6/plugins-6.0/libjacko.so
 lib/csound6/plugins-6.0/libliveconv.so
 lib/csound6/plugins-6.0/libmixer.so
 lib/csound6/plugins-6.0/libpadsynth.so
@@ -82,6 +84,9 @@ lib/csound6/plugins-6.0/libplaterev.so
 lib/csound6/plugins-6.0/libpvsops.so
 lib/csound6/plugins-6.0/libpy.so
 lib/csound6/plugins-6.0/libquadbezier.so
+${PLIST.alsa}lib/csound6/plugins-6.0/librtalsa.so
+${PLIST.jack}lib/csound6/plugins-6.0/librtjack.so
+${PLIST.portaudio}lib/csound6/plugins-6.0/librtpa.so
 ${PLIST.pulseaudio}lib/csound6/plugins-6.0/librtpulse.so
 lib/csound6/plugins-6.0/libscansyn.so
 lib/csound6/plugins-6.0/libscugens.so
