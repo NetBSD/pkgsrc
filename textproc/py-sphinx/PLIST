@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/10/21 21:01:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2019/12/08 21:56:23 adam Exp $
 bin/sphinx-apidoc-${PYVERSSUFFIX}
 bin/sphinx-autogen-${PYVERSSUFFIX}
 bin/sphinx-build-${PYVERSSUFFIX}
@@ -416,6 +416,9 @@ ${PYSITELIB}/sphinx/locale/sl/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/sl/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/sl/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/sphinx.pot
+${PYSITELIB}/sphinx/locale/sq/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/sq/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/sq/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/sr/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/sr/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/sr/LC_MESSAGES/sphinx.po
