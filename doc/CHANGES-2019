@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5285 2019/12/09 12:59:50 rin Exp $
+$NetBSD: CHANGES-2019,v 1.5286 2019/12/09 18:47:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8503,3 +8503,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/youtube-dl to 20191128nb1 [leot 2019-12-09]
 	Updated net/gallery-dl to 1.12.0 [leot 2019-12-09]
 	Updated graphics/gnuplot to 5.2.8nb1 [rin 2019-12-09]
+	Updated security/gnupg2 to 2.2.19 [adam 2019-12-09]
+	Updated mail/exim to 4.93 [adam 2019-12-09]
+	Updated mail/exim-html to 4.93 [adam 2019-12-09]
