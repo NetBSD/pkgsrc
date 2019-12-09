@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.ac,v 1.1 2019/12/09 09:31:06 nros Exp $
+* use AM_ICONV to get ICONV_CONST
+* applied upstream https://github.com/Qalculate/libqalculate/pull/168
+--- configure.ac.orig	2019-11-05 09:31:45.000000000 +0000
++++ configure.ac
+@@ -129,7 +129,7 @@ PKG_CHECK_MODULES(LIBXML, [libxml-2.0 >=
+ AC_SUBST(LIBXML_CFLAGS)
+ AC_SUBST(LIBXML_LIBS)
+ 
+-AM_ICONV_LINK()
++AM_ICONV()
+ 
+ dnl  --------------------------------
+ dnl | check for readline            |-----------------------------------------
