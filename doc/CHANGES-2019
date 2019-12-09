@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5282 2019/12/09 09:30:10 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.5283 2019/12/09 11:46:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8500,3 +8500,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated shells/tcsh to 6.22.02 [leot 2019-12-08]
 	Updated mail/postfix to 3.4.8 [triaxx 2019-12-09]
 	Updated cross/dasm to 2.20.11nb1 [ng0 2019-12-09]
+	Updated net/youtube-dl to 20191128nb1 [leot 2019-12-09]
