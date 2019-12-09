@@ -1,8 +1,8 @@
-$NetBSD: patch-deps_v8_src_compiler_types.h,v 1.2 2017/06/05 21:14:04 fhajny Exp $
+$NetBSD: patch-deps_v8_src_compiler_types.h,v 1.3 2019/12/09 20:03:51 adam Exp $
 
 NetBSD 6 doesn't have nearbyint/nearbyintf.
 
---- deps/v8/src/compiler/types.h.orig	2017-05-30 17:31:37.000000000 +0000
+--- deps/v8/src/compiler/types.h.orig	2019-11-19 08:29:07.000000000 +0000
 +++ deps/v8/src/compiler/types.h
 @@ -5,6 +5,14 @@
  #ifndef V8_COMPILER_TYPES_H_
@@ -17,5 +17,5 @@ NetBSD 6 doesn't have nearbyint/nearbyintf.
 +#endif
 +
  #include "src/base/compiler-specific.h"
- #include "src/conversions.h"
- #include "src/globals.h"
+ #include "src/common/globals.h"
+ #include "src/compiler/heap-refs.h"
