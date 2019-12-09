@@ -1327,8 +1327,22 @@ func (cv *VartypeCheck) URL() {
 }
 
 func (cv *VartypeCheck) UserGroupName() {
-	if cv.Value == cv.ValueNoVar && !matches(cv.Value, `^[0-9_a-z][0-9_a-z-]*[0-9_a-z]$`) {
-		cv.Warnf("Invalid user or group name %q.", cv.Value)
+	value := cv.Value
+	if value != cv.ValueNoVar {
+		return
+	}
+	invalid := invalidCharacters(value, textproc.NewByteSet("---0-9_a-z"))
+	if invalid != "" {
+		cv.Warnf("User or group name %q contains invalid characters: %s",
+			value, invalid)
+		return
+	}
+
+	if hasPrefix(value, "-") {
+		cv.Errorf("User or group name %q must not start with a hyphen.", value)
+	}
+	if hasSuffix(value, "-") {
+		cv.Errorf("User or group name %q must not end with a hyphen.", value)
 	}
 }
 
@@ -1473,7 +1487,7 @@ func (cv *VartypeCheck) Yes() {
 			"but using \".if defined(VARNAME)\" alone.")
 
 	default:
-		if !matches(cv.Value, `^(?:YES|yes)(?:[\t ]+#.*)?$`) {
+		if cv.Value != "YES" && cv.Value != "yes" {
 			cv.Warnf("%s should be set to YES or yes.", cv.Varname)
 			cv.Explain(
 				"This variable means \"yes\" if it is defined, and \"no\" if it is undefined.",
@@ -1511,7 +1525,7 @@ func (cv *VartypeCheck) YesNo() {
 			"both forms are actually used.",
 			"As long as this is the case, when checking the variable value,",
 			"both must be accepted.")
-	} else if !matches(cv.Value, `^(?:YES|yes|NO|no)(?:[\t ]+#.*)?$`) {
+	} else if !matches(cv.Value, `^(?:YES|yes|NO|no)$`) {
 		cv.Warnf("%s should be set to YES, yes, NO, or no.", cv.Varname)
 	}
 }
