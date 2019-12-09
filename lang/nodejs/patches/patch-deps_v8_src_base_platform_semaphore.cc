@@ -1,4 +1,5 @@
-$NetBSD: patch-deps_v8_src_base_platform_semaphore.cc,v 1.5 2016/10/25 19:50:40 fhajny Exp $
+$NetBSD: patch-deps_v8_src_base_platform_semaphore.cc,v 1.6 2019/12/09 20:03:51 adam Exp $
+
 Work around lack of sem_timedwait(3) in NetBSD < 6.99.4.
 Adapted from d4f11c0cf476dd854eaebec1cbacb1afc7bea18e of the Chromium V8 sources.
 
