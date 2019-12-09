@@ -525,8 +525,10 @@ func (s *Suite) Test_Path_Rel(c *check.C) {
 	test("a/../b", "c/../d", "../d")
 
 	test(".", "dir/file", "dir/file")
-	test(".", "dir/subdir/", "dir/subdir")  // FIXME: missing /. at the end
-	test(".", "dir/subdir/.", "dir/subdir") // FIXME: missing /. at the end
+	// XXX: maybe the /. is missing at the end
+	test(".", "dir/subdir/", "dir/subdir")
+	// XXX: maybe the /. is missing at the end
+	test(".", "dir/subdir/.", "dir/subdir")
 }
 
 func (s *Suite) Test_NewCurrPath(c *check.C) {
