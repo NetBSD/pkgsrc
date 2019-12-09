@@ -44,6 +44,74 @@ func (s *Suite) Test_SimpleCommandChecker_checkCommandStart__unknown_default(c *
 		"WARN: Makefile:8: UNKNOWN_TOOL is used but not defined.")
 }
 
+func (s *Suite) Test_SimpleCommandChecker_checkInstallCommand(c *check.C) {
+	t := s.Init(c)
+
+	lines := func(lines ...string) []string { return lines }
+
+	test := func(lines []string, diagnostics ...string) {
+		mklines := t.NewMkLines("filename.mk",
+			mapStr(lines, func(s string) string { return "\t" + s })...)
+		mklines.target = "do-install"
+
+		mklines.ForEach(func(mkline *MkLine) {
+			program, err := parseShellProgram(nil, mkline.ShellCommand())
+			assertNil(err, "")
+
+			walker := NewMkShWalker()
+			walker.Callback.SimpleCommand = func(command *MkShSimpleCommand) {
+				scc := NewSimpleCommandChecker(command, RunTime, mkline, mklines)
+				scc.checkInstallCommand(command.Name.MkText)
+			}
+			walker.Walk(program)
+		})
+
+		t.CheckOutput(diagnostics)
+	}
+
+	test(
+		lines(
+			"sed",
+			"${SED}"),
+		"WARN: filename.mk:1: The shell command \"sed\" "+
+			"should not be used in the install phase.",
+		"WARN: filename.mk:2: The shell command \"${SED}\" "+
+			"should not be used in the install phase.")
+
+	test(
+		lines(
+			"tr",
+			"${TR}"),
+		"WARN: filename.mk:1: The shell command \"tr\" "+
+			"should not be used in the install phase.",
+		"WARN: filename.mk:2: The shell command \"${TR}\" "+
+			"should not be used in the install phase.")
+
+	test(
+		lines(
+			"cp",
+			"${CP}"),
+		"WARN: filename.mk:1: ${CP} should not be used to install files.",
+		"WARN: filename.mk:2: ${CP} should not be used to install files.")
+
+	test(
+		lines(
+			"${INSTALL}",
+			"${INSTALL_DATA}",
+			"${INSTALL_DATA_DIR}",
+			"${INSTALL_LIB}",
+			"${INSTALL_LIB_DIR}",
+			"${INSTALL_MAN}",
+			"${INSTALL_MAN_DIR}",
+			"${INSTALL_PROGRAM}",
+			"${INSTALL_PROGRAM_DIR}",
+			"${INSTALL_SCRIPT}",
+			"${LIBTOOL}",
+			"${LN}",
+			"${PAX}"),
+		nil...)
+}
+
 func (s *Suite) Test_SimpleCommandChecker_handleForbiddenCommand(c *check.C) {
 	t := s.Init(c)
 
@@ -155,10 +223,14 @@ func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable__from_package(c 
 func (s *Suite) Test_SimpleCommandChecker_handleShellBuiltin(c *check.C) {
 	t := s.Init(c)
 
+	mklines := t.NewMkLines("filename.mk",
+		"\t:")
+	mkline := mklines.mklines[0]
+
 	test := func(command string, isBuiltin bool) {
 		token := NewShToken(command, NewShAtom(shtText, command, shqPlain))
 		simpleCommand := &MkShSimpleCommand{Name: token}
-		scc := NewSimpleCommandChecker(nil, simpleCommand, RunTime)
+		scc := NewSimpleCommandChecker(simpleCommand, RunTime, mkline, mklines)
 		t.CheckEquals(scc.handleShellBuiltin(), isBuiltin)
 	}
 
@@ -350,6 +422,83 @@ func (s *Suite) Test_SimpleCommandChecker_checkAutoMkdirs__conditional_PLIST(c *
 		"NOTE: Makefile:25: You can use "+
 			"\"INSTALLATION_DIRS+= ${LIB_SUBDIR}\" "+
 			"instead of \"${INSTALL_DATA_DIR}\".")
+}
+
+func (s *Suite) Test_SimpleCommandChecker_checkAutoMkdirs__strange_paths(c *check.C) {
+	t := s.Init(c)
+
+	test := func(path string, diagnostics ...string) {
+		mklines := t.NewMkLines("filename.mk",
+			"\t${INSTALL_DATA_DIR} "+path)
+		mklines.ForEach(func(mkline *MkLine) {
+			program, err := parseShellProgram(nil, mkline.ShellCommand())
+			assertNil(err, "")
+
+			walker := NewMkShWalker()
+			walker.Callback.SimpleCommand = func(command *MkShSimpleCommand) {
+				scc := NewSimpleCommandChecker(command, RunTime, mkline, mklines)
+				scc.checkAutoMkdirs()
+			}
+			walker.Walk(program)
+		})
+		t.CheckOutput(diagnostics)
+	}
+
+	t.Chdir("category/package")
+
+	test("${PREFIX}",
+		nil...)
+
+	test("${PREFIX}/",
+		nil...)
+
+	test("${PREFIX}//",
+		nil...)
+
+	test("${PREFIX}/.",
+		nil...)
+
+	test("${PREFIX}//non-canonical",
+		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= non-canonical\" "+
+			"instead of \"${INSTALL_DATA_DIR}\".")
+
+	test("${PREFIX}/non-canonical/////",
+		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= non-canonical\" "+
+			"instead of \"${INSTALL_DATA_DIR}\".")
+
+	test("${PREFIX}/${VAR}",
+		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= ${VAR}\" "+
+			"instead of \"${INSTALL_DATA_DIR}\".")
+
+	test("${PREFIX}/${VAR.param}",
+		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= ${VAR.param}\" "+
+			"instead of \"${INSTALL_DATA_DIR}\".")
+
+	test("${PREFIX}/${.CURDIR}",
+		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= ${.CURDIR}\" "+
+			"instead of \"${INSTALL_DATA_DIR}\".")
+
+	// Internal variables are ok.
+	test("${PREFIX}/${_INTERNAL}",
+		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= ${_INTERNAL}\" "+
+			"instead of \"${INSTALL_DATA_DIR}\".")
+
+	// Ignore variables from a :@ modifier.
+	test("${PREFIX}/${.f.}",
+		nil...)
+
+	// Ignore variables from a .for loop.
+	test("${PREFIX}/${f}",
+		nil...)
+
+	// Ignore variables from a .for loop.
+	test("${PREFIX}/${_f_}",
+		nil...)
+
+	// Ignore paths containing shell variables as it is hard to
+	// predict their values using static analysis.
+	test("${PREFIX}/$$f",
+		nil...)
 }
 
 // This test ensures that the command line options to INSTALL_*_DIR are properly
@@ -1679,71 +1828,6 @@ func (s *Suite) Test_ShellLineChecker_variableNeedsQuoting__integration(c *check
 	// See ShellLine.CheckShellCommand, spc.checkWord.
 	t.CheckOutputLines(
 		"WARN: filename.mk:3: Unquoted shell variable \"target\".")
-}
-
-func (s *Suite) Test_ShellLineChecker_checkInstallCommand(c *check.C) {
-	t := s.Init(c)
-
-	test := func(lines ...string) {
-		var cmds []string
-		i := 0
-		for i < len(lines) && lines[i] != "" {
-			cmds = append(cmds, "\t"+lines[i])
-			i++
-		}
-		diagnostics := lines[i+1:]
-
-		mklines := t.NewMkLines("filename.mk", cmds...)
-		mklines.target = "do-install"
-
-		mklines.ForEach(func(mkline *MkLine) {
-			ck := NewShellLineChecker(mklines, mkline)
-			ck.checkInstallCommand(mkline.ShellCommand())
-		})
-
-		t.CheckOutput(diagnostics)
-	}
-
-	test(
-		"sed",
-		"${SED}",
-		"",
-		"WARN: filename.mk:1: The shell command \"sed\" "+
-			"should not be used in the install phase.",
-		"WARN: filename.mk:2: The shell command \"${SED}\" "+
-			"should not be used in the install phase.")
-
-	test(
-		"tr",
-		"${TR}",
-		"",
-		"WARN: filename.mk:1: The shell command \"tr\" "+
-			"should not be used in the install phase.",
-		"WARN: filename.mk:2: The shell command \"${TR}\" "+
-			"should not be used in the install phase.")
-
-	test(
-		"cp",
-		"${CP}",
-		"",
-		"WARN: filename.mk:1: ${CP} should not be used to install files.",
-		"WARN: filename.mk:2: ${CP} should not be used to install files.")
-
-	test(
-		"${INSTALL}",
-		"${INSTALL_DATA}",
-		"${INSTALL_DATA_DIR}",
-		"${INSTALL_LIB}",
-		"${INSTALL_LIB_DIR}",
-		"${INSTALL_MAN}",
-		"${INSTALL_MAN_DIR}",
-		"${INSTALL_PROGRAM}",
-		"${INSTALL_PROGRAM_DIR}",
-		"${INSTALL_SCRIPT}",
-		"${LIBTOOL}",
-		"${LN}",
-		"${PAX}",
-		"")
 }
 
 func (s *Suite) Test_ShellLineChecker_checkMultiLineComment(c *check.C) {
