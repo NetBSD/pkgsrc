@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2019/09/30 19:25:58 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/12/09 18:46:01 adam Exp $
 share/doc/exim/html/spec_html/ch-access_control_lists.html
 share/doc/exim/html/spec_html/ch-adding_a_local_scan_function_to_exim.html
 share/doc/exim/html/spec_html/ch-adding_new_drivers_or_lookup_types.html
@@ -8,7 +8,7 @@ share/doc/exim/html/spec_html/ch-building_and_installing_exim.html
 share/doc/exim/html/spec_html/ch-concept_index.html
 share/doc/exim/html/spec_html/ch-content_scanning_at_acl_time.html
 share/doc/exim/html/spec_html/ch-customizing_bounce_and_warning_messages.html
-share/doc/exim/html/spec_html/ch-dkim_and_spf.html
+share/doc/exim/html/spec_html/ch-dkim_spf_and_dmarc.html
 share/doc/exim/html/spec_html/ch-domain_host_address_and_local_part_lists.html
 share/doc/exim/html/spec_html/ch-embedded_perl.html
 share/doc/exim/html/spec_html/ch-encrypted_smtp_connections_using_tlsssl.html
@@ -48,6 +48,7 @@ share/doc/exim/html/spec_html/ch-the_dovecot_authenticator.html
 share/doc/exim/html/spec_html/ch-the_exim_command_line.html
 share/doc/exim/html/spec_html/ch-the_exim_monitor.html
 share/doc/exim/html/spec_html/ch-the_exim_runtime_configuration_file.html
+share/doc/exim/html/spec_html/ch-the_external_authenticator.html
 share/doc/exim/html/spec_html/ch-the_gsasl_authenticator.html
 share/doc/exim/html/spec_html/ch-the_heimdalgssapi_authenticator.html
 share/doc/exim/html/spec_html/ch-the_ipliteral_router.html
@@ -127,6 +128,7 @@ share/doc/exim/html/spec_html/ch61.html
 share/doc/exim/html/spec_html/ch62.html
 share/doc/exim/html/spec_html/ch63.html
 share/doc/exim/html/spec_html/ch64.html
+share/doc/exim/html/spec_html/ch65.html
 share/doc/exim/html/spec_html/filter.html
 share/doc/exim/html/spec_html/filter_ch-exim_filter_files.html
 share/doc/exim/html/spec_html/filter_ch-forwarding_and_filtering_in_exim.html
@@ -156,3 +158,6 @@ share/doc/exim/html/static/doc/security/CVE-2019-13917.txt
 share/doc/exim/html/static/doc/security/CVE-2019-15846.txt
 share/doc/exim/html/static/doc/security/CVE-2019-16928.txt
 share/doc/exim/html/static/js/common.js
+share/doc/exim/html/static/keys/hs@schlittermann.de.asc
+share/doc/exim/html/static/keys/jgh@wizmail.org.asc
+share/doc/exim/html/static/keys/phil.pennock@spodhuis.org.asc

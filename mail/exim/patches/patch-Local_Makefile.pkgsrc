@@ -1,8 +1,8 @@
-$NetBSD: patch-Local_Makefile.pkgsrc,v 1.1 2017/03/18 07:08:23 adam Exp $
+$NetBSD: patch-Local_Makefile.pkgsrc,v 1.2 2019/12/09 18:46:00 adam Exp $
 
---- Local/Makefile.pkgsrc.orig	2017-03-18 06:47:43.000000000 +0000
+--- Local/Makefile.pkgsrc.orig	2019-12-09 08:46:14.000000000 +0000
 +++ Local/Makefile.pkgsrc
-@@ -98,7 +98,7 @@
+@@ -100,7 +100,7 @@
  # /usr/local/sbin. The installation script will try to create this directory,
  # and any superior directories, if they do not exist.
  
@@ -11,7 +11,7 @@ $NetBSD: patch-Local_Makefile.pkgsrc,v 1.1 2017/03/18 07:08:23 adam Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -114,7 +114,7 @@ BIN_DIRECTORY=/usr/exim/bin
+@@ -116,7 +116,7 @@ BIN_DIRECTORY=/usr/exim/bin
  # don't exist. It will also install a default runtime configuration if this
  # file does not exist.
  
@@ -20,7 +20,7 @@ $NetBSD: patch-Local_Makefile.pkgsrc,v 1.1 2017/03/18 07:08:23 adam Exp $
  
  # It is possible to specify a colon-separated list of files for CONFIGURE_FILE.
  # In this case, Exim will use the first of them that exists when it is run.
-@@ -131,7 +131,7 @@ CONFIGURE_FILE=/usr/exim/configure
+@@ -133,7 +133,7 @@ CONFIGURE_FILE=/usr/exim/configure
  # deliveries. (Local deliveries run as various non-root users, typically as the
  # owner of a local mailbox.) Specifying these values as root is not supported.
  
@@ -29,7 +29,7 @@ $NetBSD: patch-Local_Makefile.pkgsrc,v 1.1 2017/03/18 07:08:23 adam Exp $
  
  # If you specify EXIM_USER as a name, this is looked up at build time, and the
  # uid number is built into the binary. However, you can specify that this
-@@ -152,7 +152,7 @@ EXIM_USER=
+@@ -154,7 +154,7 @@ EXIM_USER=
  # for EXIM_USER (e.g. EXIM_USER=exim), you don't need to set EXIM_GROUP unless
  # you want to use a group other than the default group for the given user.
  
@@ -38,7 +38,7 @@ $NetBSD: patch-Local_Makefile.pkgsrc,v 1.1 2017/03/18 07:08:23 adam Exp $
  
  # Many sites define a user called "exim", with an appropriate default group,
  # and use
-@@ -173,7 +173,7 @@ EXIM_USER=
+@@ -175,7 +175,7 @@ EXIM_USER=
  
  # Almost all installations choose this:
  
@@ -47,16 +47,7 @@ $NetBSD: patch-Local_Makefile.pkgsrc,v 1.1 2017/03/18 07:08:23 adam Exp $
  
  
  
-@@ -380,7 +380,7 @@ PCRE_CONFIG=yes
- # files are defaulted in the OS/Makefile-Default file, but can be overridden in
- # local OS-specific make files.
- 
--EXIM_MONITOR=eximon.bin
-+# EXIM_MONITOR=eximon.bin
- 
- 
- #------------------------------------------------------------------------------
-@@ -622,7 +622,7 @@ FIXED_NEVER_USERS=root
+@@ -752,7 +752,7 @@ FIXED_NEVER_USERS=root
  # included in the Exim binary. You will then need to set up the run time
  # configuration to make use of the mechanism(s) selected.
  
@@ -64,8 +55,8 @@ $NetBSD: patch-Local_Makefile.pkgsrc,v 1.1 2017/03/18 07:08:23 adam Exp $
 +AUTH_CRAM_MD5=yes
  # AUTH_CYRUS_SASL=yes
  # AUTH_DOVECOT=yes
- # AUTH_GSASL=yes
-@@ -630,8 +630,8 @@ FIXED_NEVER_USERS=root
+ # AUTH_EXTERNAL=yes
+@@ -761,8 +761,8 @@ FIXED_NEVER_USERS=root
  # AUTH_HEIMDAL_GSSAPI=yes
  # AUTH_HEIMDAL_GSSAPI_PC=heimdal-gssapi
  # AUTH_HEIMDAL_GSSAPI_PC=heimdal-gssapi heimdal-krb5
@@ -76,7 +67,7 @@ $NetBSD: patch-Local_Makefile.pkgsrc,v 1.1 2017/03/18 07:08:23 adam Exp $
  # AUTH_TLS=yes
  
  # Heimdal through 1.5 required pkg-config 'heimdal-gssapi'; Heimdal 7.1
-@@ -831,7 +831,7 @@ HEADERS_CHARSET="ISO-8859-1"
+@@ -896,7 +896,7 @@ HEADERS_CHARSET="ISO-8859-1"
  # %s. This will be replaced by one of the strings "main", "panic", or "reject"
  # to form the final file names. Some installations may want something like this:
  
@@ -85,7 +76,7 @@ $NetBSD: patch-Local_Makefile.pkgsrc,v 1.1 2017/03/18 07:08:23 adam Exp $
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -1119,13 +1119,13 @@ SYSTEM_ALIASES_FILE=/etc/aliases
+@@ -1201,13 +1201,13 @@ SYSTEM_ALIASES_FILE=/etc/aliases
  # haven't got Perl, Exim will still build and run; you just won't be able to
  # use those utilities.
  
@@ -106,7 +97,7 @@ $NetBSD: patch-Local_Makefile.pkgsrc,v 1.1 2017/03/18 07:08:23 adam Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -1327,7 +1327,7 @@ EXIM_TMPDIR="/tmp"
+@@ -1409,7 +1409,7 @@ EXIM_TMPDIR="/tmp"
  # (process id) to a file so that it can easily be identified. The path of the
  # file can be specified here. Some installations may want something like this:
  
@@ -115,14 +106,17 @@ $NetBSD: patch-Local_Makefile.pkgsrc,v 1.1 2017/03/18 07:08:23 adam Exp $
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
  # using the name "exim-daemon.pid".
-@@ -1399,3 +1399,10 @@ EXIM_TMPDIR="/tmp"
- # ENABLE_DISABLE_FSYNC=yes
+@@ -1465,6 +1465,13 @@ EXIM_TMPDIR="/tmp"
  
- # End of EDITME for Exim 4.
-+
+ # EXPAND_LISTMATCH_RHS=yes
+ 
 +EXTRALIBS_EXIM=-liconv
 +
 +@EXIM_USE_DB_CONFIG@
 +@EXIM_DBMLIB@
 +INCLUDE=@EXIM_INCLUDE@
 +LOOKUP_LIBS=@LOOKUP_LIBS@
++
+ #------------------------------------------------------------------------------
+ # Disabling the use of fsync(): DO NOT UNCOMMENT THE FOLLOWING LINE unless you
+ # really, really, really know what you are doing. And even then, think again.
