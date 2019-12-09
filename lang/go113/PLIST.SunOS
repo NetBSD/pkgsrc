@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2019/12/07 21:34:17 bsiegert Exp $
-go113/pkg/${GO_PLATFORM}/internal/x/net/lif.a
+@comment $NetBSD: PLIST.SunOS,v 1.2 2019/12/09 10:13:38 jperkin Exp $
+go113/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/lif.a
