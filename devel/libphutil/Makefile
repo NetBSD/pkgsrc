@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2017/06/27 10:35:46 roy Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/09 14:20:55 taca Exp $
 
 DISTNAME=		libphutil-20170609
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
 # Track the stable branch
