@@ -25,7 +25,7 @@ func (ck *MkVarUseChecker) Check(vuc *VarUseContext) {
 	ck.checkUndefined()
 	ck.checkPermissions(vuc)
 
-	ck.checkVarname()
+	ck.checkVarname(vuc.time)
 	ck.checkModifiers()
 	ck.checkQuoting(vuc)
 
@@ -130,7 +130,7 @@ func (ck *MkVarUseChecker) checkModifiersRange() {
 	fix.Apply()
 }
 
-func (ck *MkVarUseChecker) checkVarname() {
+func (ck *MkVarUseChecker) checkVarname(time VucTime) {
 	varname := ck.use.varname
 	if varname == "@" {
 		ck.MkLine.Warnf("Please use %q instead of %q.", "${.TARGET}", "$@")
@@ -139,7 +139,7 @@ func (ck *MkVarUseChecker) checkVarname() {
 			"of the same name.")
 	}
 
-	if varname == "LOCALBASE" && !G.Infrastructure {
+	if varname == "LOCALBASE" && !G.Infrastructure && time == VucRunTime {
 		fix := ck.MkLine.Autofix()
 		fix.Warnf("Please use PREFIX instead of LOCALBASE.")
 		fix.ReplaceRegex(`\$\{LOCALBASE\b`, "${PREFIX", 1)
@@ -380,12 +380,10 @@ func (ck *MkVarUseChecker) checkUseAtLoadTime(time VucTime) {
 		return
 	}
 
-	if ck.vartype.IsPackageSettable() &&
-		basename != "Makefile" && basename != "options.mk" {
-
-		// For package-settable variables, the explanation doesn't
-		// make sense since it talks about completely different
-		// types of variables.
+	if ck.vartype.IsPackageSettable() {
+		// For package-settable variables, the explanation below
+		// doesn't make sense since including bsd.prefs.mk won't
+		// define any package-settable variables.
 		return
 	}
 
