@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2019/11/02 16:25:20 rillig Exp $
+# $NetBSD: options.mk,v 1.25 2019/12/09 18:46:00 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
@@ -110,6 +110,7 @@ LOOKUP_LIBS+=-lwrap
 
 .if !empty(PKG_OPTIONS:Mexim-tls)
 LOCAL_MAKEFILE_OPTIONS+=SUPPORT_TLS=yes
+LOCAL_MAKEFILE_OPTIONS+=USE_OPENSSL=yes
 LOOKUP_LIBS+=-lssl -lcrypto
 .  include "../../security/openssl/buildlink3.mk"
 .endif
