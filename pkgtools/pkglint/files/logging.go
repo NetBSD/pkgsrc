@@ -257,10 +257,14 @@ func (l *Logger) Logf(level *LogLevel, filename CurrPath, lineno, format, msg st
 
 	if G.Testing {
 		if level != Error {
-			assertf(!contains(format, "must"), "Must must only appear in errors: %s", format)
+			assertf(
+				!contains(format, "must"),
+				"The word \"must\" must only appear in errors: %s", format)
 		}
 		if level != Warn && level != Note {
-			assertf(!contains(format, "should"), "Should must only appear in warnings: %s", format)
+			assertf(
+				!contains(format, "should"),
+				"The word \"should\" must only appear in warnings: %s", format)
 		}
 	}
 

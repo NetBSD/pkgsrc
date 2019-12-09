@@ -227,9 +227,9 @@ func (s *Suite) Test_alignWith(c *check.C) {
 	// At least one tab is _always_ added.
 	test("", "", "\t")
 
-	test("VAR=", "1234567", "VAR=\t")
+	test("VAR=", "1234567", "VAR=   ")
 	test("VAR=", "12345678", "VAR=\t")
-	test("VAR=", "123456789", "VAR=\t\t")
+	test("VAR=", "123456789", "VAR=\t ")
 
 	// At least one tab is added in any case,
 	// even if the other string is shorter.
@@ -454,14 +454,6 @@ func (s *Suite) Test_containsVarRef(c *check.C) {
 	test("$$(VAR)", false) // An escaped dollar character; probably a subshell.
 	test("$${VAR}", false) // An escaped dollar character; probably a shell variable.
 	test("$$VAR", false)   // An escaped dollar character.
-}
-
-func (s *Suite) Test_hasAlnumPrefix(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(hasAlnumPrefix(""), false)
-	t.CheckEquals(hasAlnumPrefix("A"), true)
-	t.CheckEquals(hasAlnumPrefix(","), false)
 }
 
 func (s *Suite) Test_Once(c *check.C) {
