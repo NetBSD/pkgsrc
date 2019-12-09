@@ -743,6 +743,28 @@ func (s *Suite) Test_MkLines_ForEach__conditional_variables(c *check.C) {
 	t.CheckEquals(seenUsesGettext, true)
 }
 
+func (s *Suite) Test_MkLines_ForEachEnd(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID)
+
+	// Calls to MkLines.ForEach cannot nest since they modify fields
+	// in the MkLines type. As of December 2019 there is no separation
+	// between:
+	//  - The MkLines as a collection of data
+	//  - An iterator over the MkLines
+	//  - The MkLinesChecker
+	t.ExpectAssert(func() {
+		mklines.ForEach(func(mkline *MkLine) {
+			mklines.ForEach(func(mkline *MkLine) {
+			})
+		})
+	})
+}
+
 func (s *Suite) Test_MkLines_collectElse(c *check.C) {
 	t := s.Init(c)
 
