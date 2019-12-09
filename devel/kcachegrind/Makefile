@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2019/11/25 10:04:55 markd Exp $
+# $NetBSD: Makefile,v 1.29 2019/12/09 14:20:55 taca Exp $
 
 DISTNAME=	kcachegrind-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/kcachegrind/
