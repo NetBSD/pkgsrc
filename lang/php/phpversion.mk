@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.276 2019/12/09 14:19:44 taca Exp $
+# $NetBSD: phpversion.mk,v 1.277 2019/12/09 14:23:45 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -67,7 +67,7 @@
 #	The directory of the PHP implementation, relative to the
 #	package directory.
 #
-#	Example: ../../lang/php71
+#	Example: ../../lang/php73
 #
 # PHP_PKG_PREFIX
 #	The prefix that is prepended to the package name.
@@ -78,7 +78,7 @@
 #	Relative path to ${PREFIX} for PHP's extensions.  It is derived from
 #	initial release of major version.
 #
-#	Example: lib/php/20140828
+#	Example: lib/php/20181200
 #
 # Keywords: php
 #
