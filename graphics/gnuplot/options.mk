@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.15 2019/10/28 08:33:24 kamil Exp $
+# $NetBSD: options.mk,v 1.16 2019/12/09 12:57:22 rin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuplot
 PKG_SUPPORTED_OPTIONS=	cairo cerf gd gnuplot-pdf-doc lua pdf qt5 wxwidgets x11
-PKG_SUGGESTED_OPTIONS=	cairo cerf gd gnuplot-pdf-doc x11
+PKG_SUGGESTED_OPTIONS=	cairo cerf gd x11
 
 .include "../../mk/bsd.options.mk"
 
