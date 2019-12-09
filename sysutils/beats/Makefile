@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/10/18 14:58:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.46 2019/12/09 10:11:35 jperkin Exp $
 
 DISTNAME=		beats-6.6.2
 PKGREVISION=		6
@@ -18,9 +18,7 @@ USE_TOOLS+=		gmake
 GO_DIST_BASE=		${PKGBASE}-${GITHUB_TAG:S/v//}
 GO_SRCPATH=		github.com/elastic/beats
 
-TOOLS_CREATE+=		go
-TOOLS_PATH.go=		${GO}
-
+.include "../../lang/go/go-vars.mk"
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=		audit
