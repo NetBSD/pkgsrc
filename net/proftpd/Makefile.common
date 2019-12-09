@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2019/10/13 19:52:47 maya Exp $
+# $NetBSD: Makefile.common,v 1.10 2019/12/09 19:22:57 nros Exp $
 
 # used by net/proftpd/Makefile
 # used by net/proftpd/Makefile.module
@@ -41,7 +41,8 @@ CHECK_SHLIBS_SKIP=	libexec/proftpd/*.a
 CHECK_SSP_SKIP=		${CHECK_SHLIBS_SKIP}
 
 pre-configure:
-	cd ${WRKSRC} && ${TOOLS_CMD.autoconf}
+	cd ${WRKSRC} && ${TOOLS_CMD.autoconf} &&\
+	cd contrib/mod_load && ${TOOLS_CMD.autoconf}
 
 .include "options.mk"
 

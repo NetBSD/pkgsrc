@@ -1,0 +1,14 @@
+$NetBSD: patch-contrib_mod__load_mod__load.h.in,v 1.1 2019/12/09 19:22:57 nros Exp $
+* solaris and derivates has loadavg in sys/loadavg.h
+--- contrib/mod_load/mod_load.h.in.orig	2019-12-09 18:10:43.656037132 +0000
++++ contrib/mod_load/mod_load.h.in
+@@ -51,6 +51,9 @@
+ /* Define if you have the <stdlib.h> header file. */
+ #undef HAVE_STDLIB_H
+ 
++/* Define if you have the <sys/loadavg.h> header file. */
++#undef HAVE_SYS_LOADAVG_H
++
+ /* Define if you have the <unistd.h> header file.  */
+ #undef HAVE_UNISTD_H
+ 
