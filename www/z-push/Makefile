@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2019/11/04 22:10:16 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/09 14:20:57 taca Exp $
 #
 
 DISTNAME=	z-push-${ZPUSH_VERSION}
 ZPUSH_VERSION=	2.2.10
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.z-push.org/final/2.2/
 

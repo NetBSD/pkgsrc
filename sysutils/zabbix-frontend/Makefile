@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/07/26 08:24:06 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/09 14:20:56 taca Exp $
 
+PKGREVISION= 1
 .include "../../sysutils/zabbix/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-frontend-/}
