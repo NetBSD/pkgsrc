@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/11/24 15:52:13 adam Exp $
+# $NetBSD: Makefile,v 1.22 2019/12/09 20:06:43 adam Exp $
 
 DISTNAME=	node-v8.16.2
 
@@ -7,8 +7,10 @@ GCC_REQD+=	4.9.4
 
 .include "options.mk"
 
+CONFIGURE_ARGS+=	--shared-http-parser
 CONFIGURE_ARGS+=	--with-intl=system-icu
 
 .include "../../lang/nodejs/Makefile.common"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../www/http-parser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
