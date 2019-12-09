@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/11/10 17:49:21 maya Exp $
+# $NetBSD: Makefile,v 1.16 2019/12/09 04:51:57 gutteridge Exp $
 
 DISTNAME=	guile-2.2.6
 PKGNAME=	${DISTNAME:S/guile/guile22/}
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--disable-shared
 # not until boehm-gc is threaded
 CONFIGURE_ARGS+=	--without-threads
 CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL}
+# Needed to work around broken configure check for accept4()
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .if !empty(GUILE_SUBDIR)
 # Installation prefix is non-default.
