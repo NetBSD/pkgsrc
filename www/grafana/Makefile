@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/12/05 15:36:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2019/12/09 10:11:35 jperkin Exp $
 
 DISTNAME=	grafana-6.3.4
 PKGREVISION=	2
@@ -51,7 +51,7 @@ FILES_SUBST+=		GRAFANA_USER=${GRAFANA_USER:Q}
 FILES_SUBST+=		GRAFANA_GROUP=${GRAFANA_GROUP:Q}
 FILES_SUBST+=		DATADIR=${DATADIR:Q}
 
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-vars.mk"
 .include "../../mk/bsd.prefs.mk"
 
 GRAFANA_USER?=		grafana
@@ -82,4 +82,5 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rw conf \
 		${DESTDIR}${PREFIX}/share/grafana/
 
+.include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
