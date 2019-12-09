@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2019/11/24 20:21:23 adam Exp $
+# $NetBSD: Makefile,v 1.29 2019/12/09 20:10:19 adam Exp $
 
-DISTNAME=	cli-6.13.1
+DISTNAME=	cli-6.13.2
 PKGNAME=	${DISTNAME:S/cli/npm/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=npm/}
