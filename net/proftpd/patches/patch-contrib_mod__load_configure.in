@@ -1,0 +1,13 @@
+$NetBSD: patch-contrib_mod__load_configure.in,v 1.1 2019/12/09 19:22:57 nros Exp $
+* solaris and derivates has loadavg in sys/loadavg.h
+--- contrib/mod_load/configure.in.orig	2019-12-09 18:12:06.479685628 +0000
++++ contrib/mod_load/configure.in
+@@ -63,7 +63,7 @@ AC_ARG_WITH(libraries,
+   ])
+ 
+ AC_HEADER_STDC
+-AC_CHECK_HEADERS(stdlib.h unistd.h limits.h fcntl.h)
++AC_CHECK_HEADERS(stdlib.h unistd.h limits.h fcntl.h sys/loadavg.h)
+ 
+ AC_SUBST(LDFLAGS)
+ 
