@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2019/06/10 02:48:23 jym Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/09 14:20:54 taca Exp $
 #
 
 DISTNAME=	phoronix-test-suite-${PTS_VERSION}
 PTS_VERSION=	8.8.1
+PKGREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	https://www.phoronix-test-suite.com/releases/
 
