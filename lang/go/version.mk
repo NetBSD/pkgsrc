@@ -1,10 +1,10 @@
-# $NetBSD: version.mk,v 1.73 2019/12/08 14:42:02 bsiegert Exp $
+# $NetBSD: version.mk,v 1.74 2019/12/09 09:59:31 jperkin Exp $
 
-CTF_SUPPORTED=		no
-SSP_SUPPORTED=		no
-STRIP_DEBUG_SUPPORTED=	no
-
-.include "../../mk/bsd.prefs.mk"
+#
+# If bsd.prefs.mk is included before go-package.mk in a package, then this
+# file must be included directly in the package prior to bsd.prefs.mk.
+#
+.include "go-vars.mk"
 
 GO113_VERSION=	1.13.5
 GO112_VERSION=	1.12.12
@@ -13,6 +13,8 @@ GO110_VERSION=	1.10.8
 GO19_VERSION=	1.9.7
 GO14_VERSION=	1.4.3
 GO_VERSION=	${GO110_VERSION}
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD" && ${OS_VERSION:M6.*}
 # 1.9 is the last Go version to support NetBSD 6
