@@ -805,6 +805,23 @@ func (s *Suite) Test_Logger_Logf__panic(c *check.C) {
 		"Pkglint internal error: Diagnostic format \"No period\" must end in a period.")
 }
 
+func (s *Suite) Test_Logger_Logf__wording(c *check.C) {
+	t := s.Init(c)
+
+	t.ExpectPanic(
+		func() { G.Logger.Logf(Error, "filename", "13", "This should.", "This should.") },
+		"Pkglint internal error: The word \"should\" must only appear in warnings: This should.")
+
+	t.ExpectPanic(
+		func() { G.Logger.Logf(Warn, "filename", "13", "This must.", "This must.") },
+		"Pkglint internal error: The word \"must\" must only appear in errors: This must.")
+
+	G.Logger.Logf(Note, "filename", "13", "This should.", "This should.")
+
+	t.CheckOutputLines(
+		"NOTE: filename:13: This should.")
+}
+
 func (s *Suite) Test_Logger_TechErrorf__gcc_format(c *check.C) {
 	t := s.Init(c)
 

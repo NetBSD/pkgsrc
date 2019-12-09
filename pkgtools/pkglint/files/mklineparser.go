@@ -72,33 +72,8 @@ func (p MkLineParser) parseVarassign(line *Line, text string, splitResult mkLine
 		return nil
 	}
 
-	if a.spaceAfterVarname != "" {
-		varname := a.varname
-		op := a.op
-		switch {
-		case hasSuffix(varname, "+") && (op == opAssign || op == opAssignAppend):
-			break
-		case matches(varname, `^[a-z]`) && op == opAssignEval:
-			break
-		default:
-			fix := line.Autofix()
-			fix.Notef("Unnecessary space after variable name %q.", varname)
-			fix.Replace(varname+a.spaceAfterVarname+op.String(), varname+op.String())
-			fix.Apply()
-			// FIXME: Preserve the alignment of the variable value.
-		}
-	}
-
-	if splitResult.hasComment && a.value != "" && splitResult.spaceBeforeComment == "" {
-		line.Warnf("The # character starts a Makefile comment.")
-		line.Explain(
-			"In a variable assignment, an unescaped # starts a comment that",
-			"continues until the end of the line.",
-			"To escape the #, write \\#.",
-			"",
-			"If this # character intentionally starts a comment,",
-			"it should be preceded by a space in order to make it more visible.")
-	}
+	p.fixSpaceAfterVarname(line, a)
+	p.checkUnintendedComment(&splitResult, a, line)
 
 	return &MkLine{line, splitResult, a}
 }
@@ -179,6 +154,45 @@ func (p MkLineParser) MatchVarassign(line *Line, text string, splitResult *mkLin
 		valueMkRest:       "",  // filled in lazily
 		fields:            nil, // filled in lazily
 	}
+}
+
+func (p MkLineParser) fixSpaceAfterVarname(line *Line, a *mkLineAssign) {
+	if !(a.spaceAfterVarname != "") {
+		return
+	}
+
+	varname := a.varname
+	op := a.op
+	switch {
+	case hasSuffix(varname, "+") && (op == opAssign || op == opAssignAppend):
+		break
+	case matches(varname, `^[a-z]`) && op == opAssignEval:
+		break
+
+	default:
+		before := a.valueAlign
+		after := alignWith(varname+op.String(), before)
+
+		fix := line.Autofix()
+		fix.Notef("Unnecessary space after variable name %q.", varname)
+		fix.Replace(before, after)
+		fix.Apply()
+	}
+}
+
+func (p MkLineParser) checkUnintendedComment(splitResult *mkLineSplitResult, a *mkLineAssign, line *Line) {
+	if !(splitResult.hasComment && a.value != "" && splitResult.spaceBeforeComment == "") {
+		return
+	}
+
+	line.Warnf("The # character starts a Makefile comment.")
+	line.Explain(
+		"In a variable assignment, an unescaped # starts a comment that",
+		"continues until the end of the line.",
+		"To escape the #, write \\#.",
+		"",
+		"If this # character intentionally starts a comment,",
+		"it should be preceded by a space in order to make it more visible.")
 }
 
 func (p MkLineParser) parseShellcmd(line *Line, splitResult mkLineSplitResult) *MkLine {

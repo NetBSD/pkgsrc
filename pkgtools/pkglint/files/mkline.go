@@ -1277,29 +1277,46 @@ var (
 )
 
 func MatchMkInclude(text string) (m bool, indentation, directive string, filename RelPath) {
-	lexer := textproc.NewLexer(text)
-	if lexer.SkipByte('.') {
-		indentation = lexer.NextHspace()
-		directive = lexer.NextString("include")
-		if directive == "" {
-			directive = lexer.NextString("sinclude")
-		}
-		if directive != "" {
-			lexer.NextHspace()
-			if lexer.SkipByte('"') {
-				// Note: strictly speaking, the full MkVarUse would have to be parsed
-				// here. But since these usually don't contain double quotes, it has
-				// worked fine up to now.
-				filename = NewRelPathString(lexer.NextBytesFunc(func(c byte) bool { return c != '"' }))
-				if !filename.IsEmpty() && lexer.SkipByte('"') {
-					lexer.NextHspace()
-					if lexer.EOF() {
-						m = true
-						return
-					}
-				}
-			}
-		}
+	tokens, rest := NewMkLexer(text, nil).MkTokens()
+	if rest != "" {
+		return false, "", "", ""
 	}
-	return false, "", "", ""
+
+	lexer := NewMkTokensLexer(tokens)
+	if !lexer.SkipByte('.') {
+		return false, "", "", ""
+	}
+
+	indentation = lexer.NextHspace()
+
+	directive = lexer.NextString("include")
+	if directive == "" {
+		directive = lexer.NextString("sinclude")
+	}
+	if directive == "" {
+		return false, "", "", ""
+	}
+
+	lexer.SkipHspace()
+	if !lexer.SkipByte('"') {
+		return false, "", "", ""
+	}
+
+	mark := lexer.Mark()
+	for lexer.NextBytesFunc(func(c byte) bool { return c != '"' && c != '$' }) != "" ||
+		lexer.NextVarUse() != nil {
+	}
+	enclosed := NewPath(lexer.Since(mark))
+
+	if enclosed.IsEmpty() || enclosed.IsAbs() || !lexer.SkipByte('"') {
+		return false, "", "", ""
+	}
+	lexer.SkipHspace()
+	if !lexer.EOF() {
+		return false, "", "", ""
+	}
+
+	filename = NewRelPath(enclosed)
+	m = true
+	return
 }

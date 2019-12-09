@@ -355,7 +355,24 @@ func (s *Suite) Test_MkVarUseChecker_checkModifiersRange(c *check.C) {
 }
 
 func (s *Suite) Test_MkVarUseChecker_checkVarname(c *check.C) {
-	// FIXME
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("filename.mk",
+		"\t: $@",
+		".if ${LOCALBASE} == /usr/pkg", // Use at load time
+		"\t: ${LOCALBASE}",             // Use at run time
+		".endif")
+
+	mklines.ForEach(func(mkline *MkLine) {
+		mkline.ForEachUsed(func(varUse *MkVarUse, time VucTime) {
+			ck := NewMkVarUseChecker(varUse, mklines, mkline)
+			ck.checkVarname(time)
+		})
+	})
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:1: Please use \"${.TARGET}\" instead of \"$@\".",
+		"WARN: filename.mk:3: Please use PREFIX instead of LOCALBASE.")
 }
 
 func (s *Suite) Test_MkVarUseChecker_checkPermissions(c *check.C) {
@@ -428,33 +445,6 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__explain(c *check.C) {
 		"",
 		"\tIf these rules seem to be incorrect, please ask on the",
 		"\ttech-pkg@NetBSD.org mailing list.", "")
-}
-
-func (s *Suite) Test_MkVarUseChecker_checkPermissions__load_time(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpPkgsrc()
-	t.Chdir("category/package")
-	t.FinishSetUp()
-	mklines := t.NewMkLines("options.mk",
-		MkCvsID,
-		"",
-		"# don't include bsd.prefs.mk here",
-		"",
-		"WRKSRC:=\t${.CURDIR}",
-		".if ${PKG_SYSCONFDIR.gdm} != \"etc\"",
-		".endif")
-
-	mklines.Check()
-
-	// The PKG_SYSCONFDIR.* depend on the directory layout that is
-	// specified in mk.conf, therefore bsd.prefs.mk must be included first.
-	//
-	// Evaluating .CURDIR at load time is definitely ok since it is defined
-	// internally by bmake to be AlwaysInScope.
-	t.CheckOutputLines(
-		"WARN: options.mk:6: To use PKG_SYSCONFDIR.gdm at load time, " +
-			".include \"../../mk/bsd.prefs.mk\" first.")
 }
 
 func (s *Suite) Test_MkVarUseChecker_checkPermissions__load_time_in_condition(c *check.C) {
@@ -858,6 +848,52 @@ func (s *Suite) Test_MkVarUseChecker_checkUseAtLoadTime__other_mk(c *check.C) {
 	t.CheckOutputLines(
 		"WARN: filename.mk:2: To use OPSYS at load time, " +
 			".include \"../../mk/bsd.prefs.mk\" first.")
+}
+
+func (s *Suite) Test_MkVarUseChecker_checkUseAtLoadTime__PKG_SYSCONFDIR(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	t.Chdir("category/package")
+	mklines := t.NewMkLines("options.mk",
+		MkCvsID,
+		".if ${PKG_SYSCONFDIR.gdm} != \"etc\"",
+		".endif")
+
+	mklines.Check()
+
+	// The PKG_SYSCONFDIR.* directories typically start with ${PREFIX}.
+	// Since PREFIX is not defined until bsd.pkg.mk, including bsd.prefs.mk
+	// wouldn't help, therefore pkglint doesn't suggest it.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_MkVarUseChecker_checkUseAtLoadTime__package_settable(c *check.C) {
+	t := s.Init(c)
+
+	btAnything := &BasicType{"Anything", func(cv *VartypeCheck) {}}
+	t.SetUpType("PKG", btAnything, PackageSettable)
+	t.Chdir("category/package")
+
+	test := func(filename CurrPath, diagnostics ...string) {
+		mklines := t.NewMkLines(filename,
+			MkCvsID,
+			".if ${PKG} != \"etc\"",
+			".endif")
+
+		mklines.Check()
+
+		t.CheckOutput(diagnostics)
+	}
+
+	test("Makefile",
+		nil...)
+
+	test("options.mk",
+		nil...)
+
+	test("other.mk",
+		nil...)
 }
 
 func (s *Suite) Test_MkVarUseChecker_warnToolLoadTime(c *check.C) {
