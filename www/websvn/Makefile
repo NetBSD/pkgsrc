@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2019/05/23 19:23:22 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2019/12/09 14:20:57 taca Exp $
 #
 
 DISTNAME=	websvn-2.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/45918/
 

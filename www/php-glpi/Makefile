@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2019/11/04 22:10:11 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/09 14:20:57 taca Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
 GLPI_VERSION=	9.4.4
+PKGREVISION=	1
 CATEGORIES=	www
 
 MASTER_SITES=	https://github.com/glpi-project/glpi/releases/download/${GLPI_VERSION}/
