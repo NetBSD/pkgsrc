@@ -1,17 +1,17 @@
-$NetBSD: patch-deps_v8_src_base_atomicops.h,v 1.2 2016/10/25 19:50:40 fhajny Exp $
+$NetBSD: patch-deps_v8_src_base_atomicops.h,v 1.3 2019/12/09 20:03:51 adam Exp $
 
---- deps/v8/src/base/atomicops.h.orig	2016-10-25 13:26:03.000000000 +0000
+--- deps/v8/src/base/atomicops.h.orig	2019-11-19 08:29:07.000000000 +0000
 +++ deps/v8/src/base/atomicops.h
-@@ -52,9 +52,13 @@ typedef intptr_t Atomic64;
+@@ -52,9 +52,13 @@ using Atomic64 = intptr_t;
  #endif  // defined(__ILP32__)
  #endif  // defined(V8_HOST_ARCH_64_BIT)
  
 +#if defined(__NetBSD__) && defined(__arm__)
-+typedef int32_t AtomicWord;
++using AtomicWord = int32_t;
 +#else
  // Use AtomicWord for a machine-sized pointer.  It will use the Atomic32 or
  // Atomic64 routines below, depending on your architecture.
- typedef intptr_t AtomicWord;
+ using AtomicWord = intptr_t;
 +#endif
  
  // Atomically execute:

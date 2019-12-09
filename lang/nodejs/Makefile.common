@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.28 2019/11/03 19:04:03 rillig Exp $
+# $NetBSD: Makefile.common,v 1.29 2019/12/09 20:03:51 adam Exp $
 # used by lang/nodejs/Makefile
-# used by lang/nodejs6/Makefile
 # used by lang/nodejs8/Makefile
+# used by lang/nodejs10/Makefile
+# used by lang/nodejs12/Makefile
 
-CATEGORIES=	devel
+CATEGORIES=	lang
 MASTER_SITES=	https://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
 
@@ -24,7 +25,6 @@ GCC_REQD+=		4.8
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--shared-cares
-CONFIGURE_ARGS+=	--shared-http-parser
 CONFIGURE_ARGS+=	--shared-libuv
 CONFIGURE_ARGS+=	--shared-zlib
 CONFIGURE_ARGS+=	--without-npm
@@ -49,15 +49,18 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 TEST_TARGET=		check
 
 .if defined(TOOLS_PLATFORM.paxctl)
-SUBST_CLASSES+=			mksnapshot
-SUBST_STAGE.mksnapshot=		post-configure
-# nodejs6
-SUBST_FILES.mksnapshot=		out/deps/v8/tools/gyp/mksnapshot.target.mk
+SUBST_CLASSES+=		mktools
+SUBST_STAGE.mktools=	post-configure
 # nodejs8
-SUBST_FILES.mksnapshot+=	out/deps/v8/src/mksnapshot.target.mk
-# nodejs10+
-SUBST_FILES.mksnapshot+=	out/deps/v8/gypfiles/mksnapshot.target.mk
-SUBST_SED.mksnapshot+=		-e 's|call do_cmd,link)|call do_cmd,link)\${.newline}	${TOOLS_PLATFORM.paxctl} +m $$@|'
+SUBST_FILES.mktools+=	out/deps/v8/src/mksnapshot.target.mk
+# nodejs10
+SUBST_FILES.mktools+=	out/deps/v8/gypfiles/mksnapshot.target.mk
+# nodejs12
+SUBST_FILES.mktools+=	out/mkcodecache.target.mk
+SUBST_FILES.mktools+=	out/tools/v8_gypfiles/mksnapshot.target.mk
+# nodejs13
+SUBST_FILES.mktools+=	out/node_mksnapshot.target.mk
+SUBST_SED.mktools+=	-e 's|call do_cmd,link)|call do_cmd,link)\${.newline}	${TOOLS_PLATFORM.paxctl} +m $$@|'
 .endif
 
 CFLAGS.SunOS+=		-D_FILE_OFFSET_BITS=64
@@ -79,5 +82,4 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../net/libcares/buildlink3.mk"
-.include "../../www/http-parser/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
