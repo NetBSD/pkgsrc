@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5288 2019/12/09 20:15:57 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5289 2019/12/09 20:38:25 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8512,3 +8512,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed lang/nodejs6 [adam 2019-12-09]
 	Updated lang/npm to 6.13.2 [adam 2019-12-09]
 	Updated devel/yarn to 1.19.2 [adam 2019-12-09]
+	Updated pkgtools/pkglint to 19.3.16 [rillig 2019-12-09]
