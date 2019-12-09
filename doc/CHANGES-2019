@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5286 2019/12/09 18:47:29 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5287 2019/12/09 20:08:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8506,3 +8506,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/gnupg2 to 2.2.19 [adam 2019-12-09]
 	Updated mail/exim to 4.93 [adam 2019-12-09]
 	Updated mail/exim-html to 4.93 [adam 2019-12-09]
+	Moved lang/nodejs to lang/nodejs10 [adam 2019-12-09]
+	Updated lang/nodejs to 13.3.0 [adam 2019-12-09]
+	Added lang/nodejs12 version 12.13.1 [adam 2019-12-09]
+	Removed lang/nodejs6 [adam 2019-12-09]
