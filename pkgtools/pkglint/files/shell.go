@@ -9,15 +9,17 @@ import (
 // Parsing and checking shell commands embedded in Makefiles
 
 type SimpleCommandChecker struct {
-	*ShellLineChecker
 	cmd    *MkShSimpleCommand
 	strcmd *StrCommand
 	time   ToolTime
+
+	mkline  *MkLine
+	mklines *MkLines
 }
 
-func NewSimpleCommandChecker(ck *ShellLineChecker, cmd *MkShSimpleCommand, time ToolTime) *SimpleCommandChecker {
+func NewSimpleCommandChecker(cmd *MkShSimpleCommand, time ToolTime, mkline *MkLine, mklines *MkLines) *SimpleCommandChecker {
 	strcmd := NewStrCommand(cmd)
-	return &SimpleCommandChecker{ck, cmd, strcmd, time}
+	return &SimpleCommandChecker{cmd, strcmd, time, mkline, mklines}
 
 }
 
@@ -58,7 +60,7 @@ func (scc *SimpleCommandChecker) checkCommandStart() {
 	case matches(shellword, `\$\{(PKGSRCDIR|PREFIX)(:Q)?\}`):
 		break
 	default:
-		if G.Opts.WarnExtra && !scc.MkLines.indentation.DependsOn("OPSYS") {
+		if G.Opts.WarnExtra && !scc.mklines.indentation.DependsOn("OPSYS") {
 			scc.mkline.Warnf("Unknown shell command %q.", shellword)
 			scc.mkline.Explain(
 				"To make the package portable to all platforms that pkgsrc supports,",
@@ -66,6 +68,51 @@ func (scc *SimpleCommandChecker) checkCommandStart() {
 				"",
 				"To run custom shell commands, prefix them with \"./\" or with \"${PREFIX}/\".")
 		}
+	}
+}
+
+// Some shell commands should not be used in the install phase.
+func (scc *SimpleCommandChecker) checkInstallCommand(shellcmd string) {
+	if trace.Tracing {
+		defer trace.Call0()()
+	}
+
+	if !matches(scc.mklines.target, `^(?:pre|do|post)-install$`) {
+		return
+	}
+
+	line := scc.mkline.Line
+	switch shellcmd {
+	case "${INSTALL}",
+		"${INSTALL_DATA}", "${INSTALL_DATA_DIR}",
+		"${INSTALL_LIB}", "${INSTALL_LIB_DIR}",
+		"${INSTALL_MAN}", "${INSTALL_MAN_DIR}",
+		"${INSTALL_PROGRAM}", "${INSTALL_PROGRAM_DIR}",
+		"${INSTALL_SCRIPT}",
+		"${LIBTOOL}",
+		"${LN}",
+		"${PAX}":
+		return
+
+	case "sed", "${SED}",
+		"tr", "${TR}":
+		// TODO: Pkglint should not complain when sed and tr are used to transform filenames.
+		line.Warnf("The shell command %q should not be used in the install phase.", shellcmd)
+		line.Explain(
+			"In the install phase, the only thing that should be done is to",
+			"install the prepared files to their final location.",
+			"The file's contents should not be changed anymore.")
+
+	case "cp", "${CP}":
+		line.Warnf("${CP} should not be used to install files.")
+		line.Explain(
+			"The ${CP} command is highly platform dependent and cannot overwrite read-only files.",
+			"Please use ${PAX} instead.",
+			"",
+			"For example, instead of:",
+			"\t${CP} -R ${WRKSRC}/* ${PREFIX}/foodir",
+			"use:",
+			"\tcd ${WRKSRC} && ${PAX} -wr * ${PREFIX}/foodir")
 	}
 }
 
@@ -95,7 +142,7 @@ func (scc *SimpleCommandChecker) handleTool() bool {
 
 	command := scc.strcmd.Name
 
-	tool, usable := G.Tool(scc.MkLines, command, scc.time)
+	tool, usable := G.Tool(scc.mklines, command, scc.time)
 
 	if tool != nil && !usable {
 		scc.mkline.Warnf("The %q tool is used but not added to USE_TOOLS.", command)
@@ -121,14 +168,14 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 
 	varname := varuse.varname
 
-	if vartype := G.Pkgsrc.VariableType(scc.MkLines, varname); vartype != nil && vartype.basicType.name == "ShellCommand" {
+	if vartype := G.Pkgsrc.VariableType(scc.mklines, varname); vartype != nil && vartype.basicType.name == "ShellCommand" {
 		scc.checkInstallCommand(shellword)
 		return true
 	}
 
 	// When the package author has explicitly defined a command
 	// variable, assume it to be valid.
-	if scc.MkLines.allVars.IsDefinedSimilar(varname) {
+	if scc.mklines.allVars.IsDefinedSimilar(varname) {
 		return true
 	}
 
@@ -205,44 +252,63 @@ func (scc *SimpleCommandChecker) checkAutoMkdirs() {
 		return
 	}
 
-	for _, arg := range scc.strcmd.Args {
-		// TODO: Replace regex with proper VarUse.
-		if !contains(arg, "$$") && !matches(arg, `\$\{[_.]*[a-z]`) {
-			if m, dirname := match1(arg, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)`); m {
-				autoMkdirs := false
-				if G.Pkg != nil {
-					// FIXME: Add test for absolute path.
-					plistLine := G.Pkg.Plist.Dirs[NewRelPathString(dirname)]
-					if plistLine != nil && !containsVarRef(plistLine.Text) {
-						autoMkdirs = true
-					}
-				}
-
-				if autoMkdirs {
-					scc.Notef("You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= %s\" instead of %q.", dirname, cmdname)
-					scc.Explain(
-						"Many packages include a list of all needed directories in their",
-						"PLIST file.",
-						"In such a case, you can just set AUTO_MKDIRS=yes and be done.",
-						"The pkgsrc infrastructure will then create all directories in advance.",
-						"",
-						"To create directories that are not mentioned in the PLIST file,",
-						"it is easier to just list them in INSTALLATION_DIRS than to execute the",
-						"commands explicitly.",
-						"That way, you don't have to think about which",
-						"of the many INSTALL_*_DIR variables is appropriate, since",
-						"INSTALLATION_DIRS takes care of that.")
-				} else {
-					scc.Notef("You can use \"INSTALLATION_DIRS+= %s\" instead of %q.", dirname, cmdname)
-					scc.Explain(
-						"To create directories during installation, it is easier to just",
-						"list them in INSTALLATION_DIRS than to execute the commands",
-						"explicitly.",
-						"That way, you don't have to think about which",
-						"of the many INSTALL_*_DIR variables is appropriate,",
-						"since INSTALLATION_DIRS takes care of that.")
-				}
+	containsIgnoredVar := func(arg string) bool {
+		for _, token := range scc.mkline.Tokenize(arg, false) {
+			if token.Varuse != nil && matches(token.Varuse.varname, `^[_.]*[a-z]`) {
+				return true
 			}
+		}
+		return false
+	}
+
+	for _, arg := range scc.strcmd.Args {
+		if contains(arg, "$$") || containsIgnoredVar(arg) {
+			continue
+		}
+
+		m, dirname := match1(arg, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/+([^/]\S*)$`)
+		if !m {
+			continue
+		}
+
+		prefixRel := NewRelPathString(dirname).Clean()
+		if prefixRel == "." {
+			continue
+		}
+
+		autoMkdirs := false
+		if G.Pkg != nil && prefixRel != "." {
+			plistLine := G.Pkg.Plist.Dirs[prefixRel]
+			if plistLine != nil && !containsVarRef(plistLine.Text) {
+				autoMkdirs = true
+			}
+		}
+
+		if autoMkdirs {
+			scc.Notef("You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= %s\" instead of %q.",
+				prefixRel.String(), cmdname)
+			scc.Explain(
+				"Many packages include a list of all needed directories in their",
+				"PLIST file.",
+				"In such a case, you can just set AUTO_MKDIRS=yes and be done.",
+				"The pkgsrc infrastructure will then create all directories in advance.",
+				"",
+				"To create directories that are not mentioned in the PLIST file,",
+				"it is easier to just list them in INSTALLATION_DIRS than to execute the",
+				"commands explicitly.",
+				"That way, you don't have to think about which",
+				"of the many INSTALL_*_DIR variables is appropriate, since",
+				"INSTALLATION_DIRS takes care of that.")
+		} else {
+			scc.Notef("You can use \"INSTALLATION_DIRS+= %s\" instead of %q.",
+				prefixRel.String(), cmdname)
+			scc.Explain(
+				"To create directories during installation, it is easier to just",
+				"list them in INSTALLATION_DIRS than to execute the commands",
+				"explicitly.",
+				"That way, you don't have to think about which",
+				"of the many INSTALL_*_DIR variables is appropriate,",
+				"since INSTALLATION_DIRS takes care of that.")
 		}
 	}
 }
@@ -283,7 +349,7 @@ func (scc *SimpleCommandChecker) checkPaxPe() {
 
 	if (scc.strcmd.Name == "${PAX}" || scc.strcmd.Name == "pax") && scc.strcmd.HasOption("-pe") {
 		scc.Warnf("Please use the -pp option to pax(1) instead of -pe.")
-		scc.mkline.Explain(
+		scc.Explain(
 			"The -pe option tells pax to preserve the ownership of the files.",
 			"",
 			"When extracting distfiles as root user, this means that whatever numeric uid was",
@@ -301,7 +367,7 @@ func (scc *SimpleCommandChecker) checkEchoN() {
 	}
 
 	if scc.strcmd.Name == "${ECHO}" && scc.strcmd.HasOption("-n") {
-		scc.mkline.Warnf("Please use ${ECHO_N} instead of \"echo -n\".")
+		scc.Warnf("Please use ${ECHO_N} instead of \"echo -n\".")
 	}
 }
 
@@ -671,7 +737,7 @@ func (ck *ShellLineChecker) CheckShellCommand(shellcmd string, pSetE *bool, time
 
 	walker := NewMkShWalker()
 	walker.Callback.SimpleCommand = func(command *MkShSimpleCommand) {
-		scc := NewSimpleCommandChecker(ck, command, time)
+		scc := NewSimpleCommandChecker(command, time, ck.mkline, ck.MkLines)
 		scc.Check()
 		// TODO: Implement getopt parsing for StrCommand.
 		if scc.strcmd.Name == "set" && scc.strcmd.AnyArgMatches(`^-.*e`) {
@@ -951,51 +1017,6 @@ func (ck *ShellLineChecker) checkVaruseToken(atoms *[]*ShAtom, quoting ShQuoting
 	}
 
 	return true
-}
-
-// Some shell commands should not be used in the install phase.
-func (ck *ShellLineChecker) checkInstallCommand(shellcmd string) {
-	if trace.Tracing {
-		defer trace.Call0()()
-	}
-
-	if !matches(ck.MkLines.target, `^(?:pre|do|post)-install$`) {
-		return
-	}
-
-	line := ck.mkline.Line
-	switch shellcmd {
-	case "${INSTALL}",
-		"${INSTALL_DATA}", "${INSTALL_DATA_DIR}",
-		"${INSTALL_LIB}", "${INSTALL_LIB_DIR}",
-		"${INSTALL_MAN}", "${INSTALL_MAN_DIR}",
-		"${INSTALL_PROGRAM}", "${INSTALL_PROGRAM_DIR}",
-		"${INSTALL_SCRIPT}",
-		"${LIBTOOL}",
-		"${LN}",
-		"${PAX}":
-		return
-
-	case "sed", "${SED}",
-		"tr", "${TR}":
-		// TODO: Pkglint should not complain when sed and tr are used to transform filenames.
-		line.Warnf("The shell command %q should not be used in the install phase.", shellcmd)
-		line.Explain(
-			"In the install phase, the only thing that should be done is to",
-			"install the prepared files to their final location.",
-			"The file's contents should not be changed anymore.")
-
-	case "cp", "${CP}":
-		line.Warnf("${CP} should not be used to install files.")
-		line.Explain(
-			"The ${CP} command is highly platform dependent and cannot overwrite read-only files.",
-			"Please use ${PAX} instead.",
-			"",
-			"For example, instead of:",
-			"\t${CP} -R ${WRKSRC}/* ${PREFIX}/foodir",
-			"use:",
-			"\tcd ${WRKSRC} && ${PAX} -wr * ${PREFIX}/foodir")
-	}
 }
 
 func (ck *ShellLineChecker) checkMultiLineComment() {

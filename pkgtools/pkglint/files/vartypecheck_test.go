@@ -1875,11 +1875,20 @@ func (s *Suite) Test_VartypeCheck_UserGroupName(c *check.C) {
 		"typical_username",
 		"user123",
 		"domain\\user",
-		"${OTHER_VAR}")
+		"${OTHER_VAR}",
+		"r",
+		"-rf",
+		"rf-")
 
 	vt.Output(
-		"WARN: filename.mk:1: Invalid user or group name \"user with spaces\".",
-		"WARN: filename.mk:4: Invalid user or group name \"domain\\\\user\".")
+		"WARN: filename.mk:1: User or group name \"user with spaces\" "+
+			"contains invalid characters: U+0020 U+0020",
+		"WARN: filename.mk:4: User or group name \"domain\\\\user\" "+
+			"contains invalid characters: U+005C",
+		"ERROR: filename.mk:7: User or group name \"-rf\" "+
+			"must not start with a hyphen.",
+		"ERROR: filename.mk:8: User or group name \"rf-\" "+
+			"must not end with a hyphen.")
 }
 
 func (s *Suite) Test_VartypeCheck_VariableName(c *check.C) {
@@ -2053,6 +2062,14 @@ func (s *Suite) Test_VartypeCheck_Yes(c *check.C) {
 		"WARN: filename.mk:11: BUILD_USES_MSGFMT should only be used in a \".if defined(...)\" condition.",
 		"WARN: filename.mk:12: BUILD_USES_MSGFMT should only be used in a \".if defined(...)\" condition.",
 		"WARN: filename.mk:13: BUILD_USES_MSGFMT should only be used in a \".if defined(...)\" condition.")
+
+	vt.Op(opAssign)
+	vt.Values(
+		// This was accidentally accepted until 2019-12-09.
+		"yes \\# this is not a comment")
+
+	vt.Output(
+		"WARN: filename.mk:21: BUILD_USES_MSGFMT should be set to YES or yes.")
 }
 
 func (s *Suite) Test_VartypeCheck_YesNo(c *check.C) {
@@ -2063,11 +2080,15 @@ func (s *Suite) Test_VartypeCheck_YesNo(c *check.C) {
 		"yes",
 		"no",
 		"ja",
-		"${YESVAR}")
+		"${YESVAR}",
+		"yes # comment",
+		"no # comment",
+		"Yes indeed")
 
 	vt.Output(
 		"WARN: filename.mk:3: PKG_DEVELOPER should be set to YES, yes, NO, or no.",
-		"WARN: filename.mk:4: PKG_DEVELOPER should be set to YES, yes, NO, or no.")
+		"WARN: filename.mk:4: PKG_DEVELOPER should be set to YES, yes, NO, or no.",
+		"WARN: filename.mk:7: PKG_DEVELOPER should be set to YES, yes, NO, or no.")
 
 	vt.Op(opUseMatch)
 	vt.Values(
@@ -2086,6 +2107,14 @@ func (s *Suite) Test_VartypeCheck_YesNo(c *check.C) {
 			"\"[yY][eE][sS]\" or \"[nN][oO]\", not \"[Yy]es\".",
 		"WARN: filename.mk:15: PKG_DEVELOPER should be matched against "+
 			"\"[yY][eE][sS]\" or \"[nN][oO]\", not \"[Nn]o\".")
+
+	vt.Op(opAssign)
+	vt.Values(
+		// This was accidentally accepted until 2019-12-09.
+		"yes \\# this is not a comment")
+
+	vt.Output(
+		"WARN: filename.mk:21: PKG_DEVELOPER should be set to YES, yes, NO, or no.")
 }
 
 func (s *Suite) Test_VartypeCheck_YesNoIndirectly(c *check.C) {

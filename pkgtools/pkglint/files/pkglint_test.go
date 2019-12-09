@@ -275,12 +275,18 @@ func (s *Suite) Test_Pkglint_Main__autofix_exitcode(c *check.C) {
 // install https://github.com/rillig/gobco and adjust the following code:
 //
 //  env \
-//  PKGLINT_TESTDIR=C:/Users/rillig/git/pkgsrc \
-//  PKGLINT_TESTCMDLINE="-r -Wall -Call -e" \
-//  gobco -test.covermode=count \
-//      -test.coverprofile=pkglint-pkgsrc.pprof \
-//      -timeout=3600s -check.f '^Test_Pkglint__realistic' \
-//      > pkglint-pkgsrc.out
+//      PKGLINT_TESTDIR="C:/Users/rillig/git/pkgsrc" \
+//      PKGLINT_TESTCMDLINE="-r -Wall -Call -p -s -e" \
+//  gobco \
+//      -test=-test.covermode=count
+//      -test=-test.coverprofile="C:/Users/rillig/go/src/netbsd.org/pkglint/stats-go.txt"
+//      -test=-timeout=3600s \
+//      -test=-check.f="^Test_Pkglint_Main__realistic" \
+//      -stats="stats-gobco.json" \
+//      > out
+//
+// Note that the path to -test.coverprofile must be absolute, since gobco
+// runs "go test" in a temporary directory.
 //
 // See https://github.com/rillig/gobco for the tool to measure the branch coverage.
 func (s *Suite) Test_Pkglint_Main__realistic(c *check.C) {

@@ -1547,13 +1547,6 @@ func (s *Suite) Test_MatchMkInclude(c *check.C) {
 		}
 	}
 
-	testFail("")
-	testFail(".")
-	testFail(".include")
-	testFail(".include \"")
-	testFail(".include \"other.mk")
-	testFail(".include \"other.mk\" \"")
-
 	test(".include \"other.mk\"",
 		"", "include", "other.mk", "")
 
@@ -1566,5 +1559,25 @@ func (s *Suite) Test_MatchMkInclude(c *check.C) {
 	test(".include \"other.mk\"\t# comment",
 		"", "include", "other.mk", "# comment")
 
-	t.CheckOutputEmpty()
+	test(".  include \"${DIR}/file.mk\"",
+		"  ", "include", "${DIR}/file.mk", "")
+
+	test(".  include \"${DIR:S,\",',g}/file.mk\"",
+		"  ", "include", "${DIR:S,\",',g}/file.mk", "")
+
+	test(".include \"${}\"",
+		"", "include", "${}", "")
+
+	testFail("")
+	testFail(".")
+	testFail(".include")
+	testFail(".include \"")
+	testFail(".include \"\"")
+	testFail(".include \"$\"")
+	testFail(".include \"$$\"")
+	testFail(".include \"other.mk")
+	testFail(".include \"other.mk\" \"")
+	testFail(".include \"/absolute\"")
+	testFail(".include \"/absolute\"rest")
+	testFail(".include \"/absolute\" rest")
 }

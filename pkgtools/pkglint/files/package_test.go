@@ -1471,13 +1471,25 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__options_mk(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+// When the lines of the package Makefile are checked, it is necessary
+// to know whether bsd.prefs.mk has already been included.
+//
+// When the files are loaded recursively, Package.seenPrefs is set to
+// true as soon as some file includes bsd.prefs.mk. After that, when
+// loading reaches the main package Makefile again, Package.prefsLine
+// is set to the line that had just been included.
+//
+// In this test case, the preferences are loaded indirectly by line 22,
+// which includes common.mk, and that in turn includes bsd.prefs.mk.
 func (s *Suite) Test_Package_checkfilePackageMakefile__prefs_indirect(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpOption("option", "An example option")
+	// FIXME: remove t.SetUpOption("option", "An example option")
 	t.SetUpPackage("category/package",
-		".include \"common.mk\"",
-		".if ${OPSYS} == NetBSD",
+		".if ${OPSYS} == NetBSD", // 20: OPSYS is not yet defined here.
+		".endif",                 // 21
+		".include \"common.mk\"", // 22: OPSYS gets defined.
+		".if ${OPSYS} == NetBSD", // 23: Now OPSYS is defined.
 		".endif")
 	t.CreateFileLines("category/package/common.mk",
 		MkCvsID,
@@ -1491,16 +1503,19 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__prefs_indirect(c *check.C
 	files, mklines, allLines := G.Pkg.load()
 
 	t.CheckEquals(G.Pkg.seenPrefs, false)
-	t.CheckEquals(G.Pkg.prefsLine, mklines.mklines[19])
+	t.CheckEquals(G.Pkg.prefsLine, mklines.mklines[21])
 
 	G.Pkg.check(files, mklines, allLines)
 
 	t.CheckEquals(G.Pkg.seenPrefs, true)
-	t.CheckEquals(G.Pkg.prefsLine, mklines.mklines[19])
+	t.CheckEquals(G.Pkg.prefsLine, mklines.mklines[21])
 
 	// Since bsd.prefs.mk is included indirectly by common.mk,
-	// OPSYS may be used at load time in line 21.
-	t.CheckOutputEmpty()
+	// OPSYS may be used at load time in line 23, but not in line 20.
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:20: " +
+			"To use OPSYS at load time, " +
+			".include \"../../mk/bsd.prefs.mk\" first.")
 }
 
 func (s *Suite) Test_Package_checkfilePackageMakefile__redundancy_in_infra(c *check.C) {
