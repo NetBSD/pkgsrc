@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2019/12/01 12:47:09 adam Exp $
+# $NetBSD: Makefile,v 1.28 2019/12/10 22:26:34 adam Exp $
 
-DISTNAME=	ansible-2.9.1
+DISTNAME=	ansible-2.9.2
 CATEGORIES=	sysutils python
 MASTER_SITES=	https://releases.ansible.com/ansible/
 
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.ansible.com/
 COMMENT=	SSH-based configuration management, deployment, and task execution
 LICENSE=	gnu-gpl-v3
+
+PREV_PKGPATH=	sysutils/ansible2
 
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
