@@ -1,0 +1,13 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2019/12/10 13:55:44 nros Exp $
+* don't create bundle under OSX
+--- src/CMakeLists.txt.orig	2019-12-10 11:27:27.459588414 +0000
++++ src/CMakeLists.txt
+@@ -112,7 +112,7 @@ ENDIF()
+ 
+ qt5_wrap_cpp(xygrib_mocs ${XYGRIB_SRCS} ${XYGRIB_HDRS})
+ 
+-add_executable(${CMAKE_PROJECT_NAME} WIN32 MACOSX_BUNDLE ${XYGRIB_SRCS} ${xygrib_mocs})
++add_executable(${CMAKE_PROJECT_NAME} WIN32 ${XYGRIB_SRCS} ${xygrib_mocs})
+ 
+ install(TARGETS
+     ${CMAKE_PROJECT_NAME}
