@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2018/05/25 10:16:03 maya Exp $
+@comment $NetBSD: PLIST,v 1.29 2019/12/10 13:04:05 nia Exp $
 bin/weechat
 bin/weechat-curses
 bin/weechat-headless
@@ -20,7 +20,13 @@ ${PLIST.ruby}lib/weechat/plugins/ruby.so
 lib/weechat/plugins/script.so
 lib/weechat/plugins/trigger.so
 lib/weechat/plugins/xfer.so
+share/applications/weechat.desktop
+share/icons/hicolor/128x128/apps/weechat.png
+share/icons/hicolor/16x16/apps/weechat.png
+share/icons/hicolor/256x256/apps/weechat.png
 share/icons/hicolor/32x32/apps/weechat.png
+share/icons/hicolor/512x512/apps/weechat.png
+share/icons/hicolor/64x64/apps/weechat.png
 share/locale/cs/LC_MESSAGES/weechat.mo
 share/locale/de/LC_MESSAGES/weechat.mo
 share/locale/es/LC_MESSAGES/weechat.mo
