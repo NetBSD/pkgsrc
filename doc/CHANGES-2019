@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5291 2019/12/10 10:44:20 leot Exp $
+$NetBSD: CHANGES-2019,v 1.5292 2019/12/10 13:04:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8515,3 +8515,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/pkglint to 19.3.16 [rillig 2019-12-09]
 	Updated graphics/jbig2dec to 0.17 [leot 2019-12-10]
 	Updated print/ghostscript-agpl to 9.50 [leot 2019-12-10]
+	Updated chat/weechat to 2.7 [nia 2019-12-10]
