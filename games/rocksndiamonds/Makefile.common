@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.17 2019/05/05 07:59:38 adam Exp $
+# $NetBSD: Makefile.common,v 1.18 2019/12/10 22:22:22 adam Exp $
 # used by games/mirrormagic/Makefile
 # used by games/rocksndiamonds/Makefile
 
 CATEGORIES=	games
-MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/${PKGBASE}/
+MASTER_SITES=	https://www.artsoft.org/RELEASES/unix/${PKGBASE}/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.artsoft.org/${PKGBASE}/
+HOMEPAGE=	https://www.artsoft.org/${PKGBASE}/
 LICENSE=	gnu-gpl-v2
 
 USE_GAMESGROUP=		yes
