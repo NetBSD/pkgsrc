@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5293 2019/12/10 13:06:13 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5294 2019/12/10 13:07:06 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8517,3 +8517,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/ghostscript-agpl to 9.50 [leot 2019-12-10]
 	Updated chat/weechat to 2.7 [nia 2019-12-10]
 	Updated net/dnscrypt-proxy2 to 2.0.35 [nia 2019-12-10]
+	Updated net/tor to 0.4.2.5 [ng0 2019-12-10]
