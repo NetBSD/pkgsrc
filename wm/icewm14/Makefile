@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/07/21 22:25:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/10 19:22:36 plunky Exp $
 
 DISTNAME=	icewm-1.4.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bbidulock/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -22,6 +22,8 @@ USE_LANGUAGES=	c c++03
 USE_TOOLS+=	msgfmt pkg-config
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
+
+CMAKE_ARGS.NetBSD+=	-DCMAKE_CXX_FLAGS="-DHAVE_SYSCTL_CP_TIME"
 
 post-extract:
 	cp ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
