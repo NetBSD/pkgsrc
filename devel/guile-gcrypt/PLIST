@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/26 17:40:25 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/12/10 18:03:51 ng0 Exp $
 guile/2.2/info/guile-gcrypt.info
 guile/2.2/lib/guile/2.2/site-ccache/gcrypt/base16.go
 guile/2.2/lib/guile/2.2/site-ccache/gcrypt/base64.go
 guile/2.2/lib/guile/2.2/site-ccache/gcrypt/common.go
 guile/2.2/lib/guile/2.2/site-ccache/gcrypt/hash.go
 guile/2.2/lib/guile/2.2/site-ccache/gcrypt/hmac.go
+guile/2.2/lib/guile/2.2/site-ccache/gcrypt/internal.go
+guile/2.2/lib/guile/2.2/site-ccache/gcrypt/mac.go
 guile/2.2/lib/guile/2.2/site-ccache/gcrypt/package-config.go
 guile/2.2/lib/guile/2.2/site-ccache/gcrypt/pk-crypto.go
 guile/2.2/lib/guile/2.2/site-ccache/gcrypt/random.go
@@ -14,6 +16,8 @@ guile/2.2/share/guile/site/2.2/gcrypt/base64.scm
 guile/2.2/share/guile/site/2.2/gcrypt/common.scm
 guile/2.2/share/guile/site/2.2/gcrypt/hash.scm
 guile/2.2/share/guile/site/2.2/gcrypt/hmac.scm
+guile/2.2/share/guile/site/2.2/gcrypt/internal.scm
+guile/2.2/share/guile/site/2.2/gcrypt/mac.scm
 guile/2.2/share/guile/site/2.2/gcrypt/package-config.scm
 guile/2.2/share/guile/site/2.2/gcrypt/pk-crypto.scm
 guile/2.2/share/guile/site/2.2/gcrypt/random.scm
