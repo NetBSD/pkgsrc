@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/10 21:14:58 otis Exp $
+
+SHA1 (virt-what-1.20.tar.gz) = 0ca1802b454290c5b676609aa585f3f3d7597e47
+RMD160 (virt-what-1.20.tar.gz) = e613845491394f7d0d6f4a23f13ef3827d4bd3d9
+SHA512 (virt-what-1.20.tar.gz) = edf74903122bfb422c7a5ecba711bb64d6ef668828f208dfc0571ef14f2643456c14bc9a77dfea209df3d93869ac0a2c9fd039779922eddc6ebd9d988585dea4
+Size (virt-what-1.20.tar.gz) = 459243 bytes

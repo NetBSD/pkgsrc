@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/10 21:14:58 otis Exp $
+libexec/virt-what-cpuid-helper
+man/man1/virt-what.1
+sbin/virt-what
