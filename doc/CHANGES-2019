@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5298 2019/12/10 18:04:20 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.5299 2019/12/10 18:17:16 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8522,3 +8522,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/atheme to 7.2.10.r2 [nia 2019-12-10]
 	Updated www/nsm to 1.23 [ng0 2019-12-10]
 	Updated devel/guile-gcrypt to 0.2.0 [ng0 2019-12-10]
+	Updated textproc/guile-json to 3.3.0 [ng0 2019-12-10]
