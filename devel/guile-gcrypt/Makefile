@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/11/26 17:40:25 ng0 Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/10 18:03:51 ng0 Exp $
 
-DISTNAME=	v0.1.0
+DISTNAME=	v0.2.0
 DIST_SUBDIR=	guile-gcrypt
 PKGNAME=	guile-gcrypt-${DISTNAME:S/v//}
 CATEGORIES=	devel
