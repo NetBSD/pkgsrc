@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.102 2019/11/24 18:42:16 ng0 Exp $
+$NetBSD: distinfo,v 1.103 2019/12/10 13:06:23 ng0 Exp $
 
 SHA1 (digest-0.7.2.crate) = 5b9c88bbbd10db277eb81489d4fd98222c81f654
 RMD160 (digest-0.7.2.crate) = e1754858a8cc3376e4b1faaa2ab950f5c5a9ff26
@@ -20,10 +20,10 @@ SHA1 (rand_core-0.2.0-pre.0.crate) = 21ea25e01766a26dbbd71997c5c3f358f3454980
 RMD160 (rand_core-0.2.0-pre.0.crate) = cbd3dc9ad06727ca36c296f4d33ec695e25b7bb9
 SHA512 (rand_core-0.2.0-pre.0.crate) = b14f88e529fe99b7b9774fc8e1233b44192e253a8a27bfc4da1a7ae99104b6b697068bd19faab85df3427e557a5182892f81f481dd89e8eb6921ec390ca752e9
 Size (rand_core-0.2.0-pre.0.crate) = 19211 bytes
-SHA1 (tor-0.4.1.6.tar.gz) = 43dbea19932ec589c498d27f64df41816d9043c7
-RMD160 (tor-0.4.1.6.tar.gz) = 4d4ccc798a057a75e6d5282d01ddaf306341e0f4
-SHA512 (tor-0.4.1.6.tar.gz) = 9e4625216e25b9498d6054a9920e5a8932ca7b28c5131062eac637b69c80cdf05bc3fd008b833e5359d8849e256f1f405abd56b07f50fd91077b153ba60503da
-Size (tor-0.4.1.6.tar.gz) = 7390096 bytes
+SHA1 (tor-0.4.2.5.tar.gz) = 975653be50ff68040734ed422fb517799c4914ed
+RMD160 (tor-0.4.2.5.tar.gz) = a9e4a5b96fb75445e711cda7c9ecccb927046449
+SHA512 (tor-0.4.2.5.tar.gz) = e63157713caa3590324f652f17c5c5634bab015dcde5c7832eb725351c3a91c1051dd8a95650502703e9c3dd5daefc2867ff3d20530dfec17310bb3dd4bb5b7d
+Size (tor-0.4.2.5.tar.gz) = 7596836 bytes
 SHA1 (typenum-1.9.0.crate) = 76b18bc10204c28798cd32d10fd0df349d4cb5e4
 RMD160 (typenum-1.9.0.crate) = 6468f8efe8e91edac71dfd4e28c46581a2f0d457
 SHA512 (typenum-1.9.0.crate) = 8b72af1e370cf9d9308287baf4fc7c6096c4923d1c52fe0313c23c84077d74196aa4d997ecf195842d8242c871b0fd0da111f7914664be1841c97315e3ba6abb
