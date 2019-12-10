@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5295 2019/12/10 13:14:09 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5296 2019/12/10 13:21:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8519,3 +8519,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated chat/weechat to 2.7 [nia 2019-12-10]
 	Updated net/dnscrypt-proxy2 to 2.0.35 [nia 2019-12-10]
 	Updated net/tor to 0.4.2.5 [ng0 2019-12-10]
+	Updated chat/atheme to 7.2.10.r2 [nia 2019-12-10]
