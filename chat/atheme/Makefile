@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2019/02/13 15:20:27 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.18 2019/12/10 13:21:36 nia Exp $
 
-DISTNAME=	atheme-7.2.9
-PKGREVISION=	1
+DISTNAME=	atheme-v7.2.10-r2
+PKGNAME=	${DISTNAME:S/-v/-/1:S/-r/.r/1}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=atheme/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 GITHUB_PROJECT=	atheme
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV:S/.r/-r/1}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://atheme.github.io/atheme.html
@@ -16,13 +15,18 @@ LICENSE=	isc
 
 .include "../../mk/bsd.prefs.mk"
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config msgfmt msgmerge xgettext
-BUILD_DEFS+=		VARBASE
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	msgfmt msgmerge xgettext
+MAKE_JOBS_SAFE=	NO
+
+BUILD_DEFS+=	VARBASE
+
 PKG_SYSCONFSUBDIR=	atheme
+
 EGDIR=			${PREFIX}/share/examples/atheme
 DOC_FILES=		INSTALL README.md
-MAKE_JOBS_SAFE=		NO
+
 ATHEME_USER?=		atheme
 ATHEME_GROUP?=		atheme
 
@@ -47,12 +51,12 @@ PLIST_VARS+=		posixcrypt
 PLIST.posixcrypt=	yes
 .endif
 
-CFLAGS.SunOS+=		-Dfaultcode_t=foo_faultcode_t -Dboolean_t=foo_boolean_t
+CFLAGS.SunOS+=		-Dfaultcode_t=foo_faultcode_t
+CFLAGS.SunOS+=		-Dboolean_t=foo_boolean_t
 
-CONFIGURE_ARGS+=	--with-libmowgli=no # use internal libmowgli
 CONFIGURE_ARGS+=	--enable-reproducible-builds
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--enable-fhs-paths
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 CONF_FILES_PERMS=	${EGDIR}/atheme.conf.example \
@@ -80,6 +84,8 @@ MAKE_DIRS_PERMS+=	${VARBASE}/run/atheme \
 
 INSTALLATION_DIRS+=	${EGDIR}
 
+PKGCONFIG_OVERRIDE+=	atheme-services.pc.in
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/dbverify \
 	    ${DESTDIR}${PREFIX}/bin/atheme-dbverify
@@ -102,6 +108,7 @@ post-install:
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libmowgli/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/qrencode/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
