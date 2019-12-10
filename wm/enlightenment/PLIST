@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.15 2019/12/07 04:50:49 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/12/10 02:41:56 gutteridge Exp $
 bin/e16
 bin/edox
 bin/eesh
 bin/epp
 bin/starte16
-${PLIST.libhack}lib/libe16_hack.la
+${PLIST.libhack}lib/e16/libhack.so
 man/man1/e16.1
 share/applications/e16.desktop
 share/doc/e16/e16.html
