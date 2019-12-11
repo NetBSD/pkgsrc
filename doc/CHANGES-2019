@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5315 2019/12/11 13:52:34 mef Exp $
+$NetBSD: CHANGES-2019,v 1.5316 2019/12/11 14:09:17 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8547,3 +8547,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-meld3 to 2.0.0 [adam 2019-12-11]
 	Updated archivers/py-libarchive-c to 2.9 [adam 2019-12-11]
 	Updated fonts/FiraCode to 2 [mef 2019-12-11]
+	Updated multimedia/adobe-flash-player to 32.0.0.303 [tsutsui 2019-12-11]
