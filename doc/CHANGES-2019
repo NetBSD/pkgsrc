@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5309 2019/12/11 10:45:16 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5310 2019/12/11 12:45:42 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8538,3 +8538,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-sphinxcontrib-websupport to 1.1.2 [adam 2019-12-11]
 	Updated net/py-smb to 1.1.28 [adam 2019-12-11]
 	Updated security/py-paramiko to 2.7.1 [adam 2019-12-11]
+	Updated devel/meson to 0.52.0nb1 [jperkin 2019-12-11]
