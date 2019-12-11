@@ -1,0 +1,3 @@
+wld is a drawing library that targets Wayland.
+
+Currently, this package only supports unaccelerated rendering on NetBSD.
