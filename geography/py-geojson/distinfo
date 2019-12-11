@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2018/11/10 16:12:19 kleink Exp $
+$NetBSD: distinfo,v 1.15 2019/12/11 18:58:58 adam Exp $
 
-SHA1 (geojson-2.4.1.tar.gz) = d1db97a545baa8823f181dd12480b968176c879c
-RMD160 (geojson-2.4.1.tar.gz) = 383f7b0b9b113241e234a9523217f788a44ce96c
-SHA512 (geojson-2.4.1.tar.gz) = d4eccc6b269a0ba0ee52f480c6e3f2f3b11119b7f8a37191a6438516bf615d6969cbccc7bf62c4a8209a4b05fc0d4a9cda2a6dba881100e9a024beaa28c9981b
-Size (geojson-2.4.1.tar.gz) = 22730 bytes
+SHA1 (geojson-2.5.0.tar.gz) = 02ae522a407a1520c89192717216209e9747f2df
+RMD160 (geojson-2.5.0.tar.gz) = 72cae53bbe871d370d6da7c75ba24a8b7ec2cec1
+SHA512 (geojson-2.5.0.tar.gz) = 68d59a6c7d796549dba4e4e71219901c2d939c7f8f5794c1e6be7cadffb006ad99ac658e0159977b3ecc88cf5ef4f908d3837dddc54c70261291f8fa7b8ffbae
+Size (geojson-2.5.0.tar.gz) = 23086 bytes
