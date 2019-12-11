@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2019/07/03 18:18:44 adam Exp $
+# $NetBSD: Makefile,v 1.56 2019/12/11 20:29:51 adam Exp $
 
-DISTNAME=	matplotlib-3.1.1
+DISTNAME=	matplotlib-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
@@ -18,8 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-kiwisolver>=1.0.1:../../math/py-kiwisolver
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.2.0:../../devel/py-pyparsing
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
