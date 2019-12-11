@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2019/12/11 21:19:29 nia Exp $
+
+To edit the configuration file, copy it into place:
+
+$ cp ${PREFIX}/share/examples/velox.conf ~/.velox.conf
+
+Most packages in pkgsrc will need wayland support enabled explicitly,
+velox currently does not support X11 applications.
+
+To launch velox, use swc-launch:
+
+$ mkdir /tmp/$(whoami)-runtime
+$ export XDG_RUNTIME_DIR=/tmp/$(whoami)-runtime
+$ swc-launch velox
+
+You may find information in this repository useful:
+https://github.com/niacat/pkgsrc-wayland
+
+===========================================================================
