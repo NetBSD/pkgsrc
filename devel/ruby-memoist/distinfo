@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/07/08 03:11:05 tsutsui Exp $
+$NetBSD: distinfo,v 1.4 2019/12/11 14:51:36 tsutsui Exp $
 
-SHA1 (memoist-0.16.0.gem) = daa70c5adf7777010fa29a80ed798334780cb31f
-RMD160 (memoist-0.16.0.gem) = 764a9f6e9edd10080a28f5346bdf0bb95990b31a
-SHA512 (memoist-0.16.0.gem) = 55a560793cfb911ef15085de6fac2816e8340b9939394a4c2c01264e0da3ca4008081916a0431e6f76e6b90c0294305cbd0803643f159f946973ff4dc7c94df5
-Size (memoist-0.16.0.gem) = 12288 bytes
+SHA1 (memoist-0.16.2.gem) = 7034eafcf51617380816322bec1ed8dea482c78a
+RMD160 (memoist-0.16.2.gem) = ef0123708b1be2b65c2d36c48df036d13e66c52e
+SHA512 (memoist-0.16.2.gem) = 8de7c73362e621c420f04e1b37c27a21fdc46c5e341c8cfbfd835f1cb53eb1a763dc43565fcc9723bcbdaa439a7c6921a8541a741646db4ef127cb8f6018fb10
+Size (memoist-0.16.2.gem) = 13824 bytes
