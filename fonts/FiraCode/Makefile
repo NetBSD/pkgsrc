@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/11/02 22:24:37 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/11 13:52:07 mef Exp $
 
-DISTNAME=	FiraCode_1.204
-PKGNAME=	${DISTNAME:S/_/-/}
+DISTNAME=	FiraCode-2
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tonsky/}
-GITHUB_RELEASE=	${DISTNAME:S/FiraCode_//}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tonsky/FiraCode/
@@ -16,10 +13,9 @@ USE_LANGUAGES=		# none
 NO_BUILD=		yes
 FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/OTF ${PREFIX}/share/fonts/X11/TTF
 INSTALLATION_DIRS=	share/fonts/X11/OTF share/fonts/X11/TTF
-WRKSRC=			${WRKDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/otf/*.otf  ${DESTDIR}${PREFIX}/share/fonts/X11/OTF
-	${INSTALL_DATA} ${WRKSRC}/ttf/*.ttf  ${DESTDIR}${PREFIX}/share/fonts/X11/TTF
+	${INSTALL_DATA} ${WRKSRC}/distr/otf/*.otf  ${DESTDIR}${PREFIX}/share/fonts/X11/OTF
+	${INSTALL_DATA} ${WRKSRC}/distr/ttf/*.ttf  ${DESTDIR}${PREFIX}/share/fonts/X11/TTF
 
 .include "../../mk/bsd.pkg.mk"
