@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2018/02/11 15:40:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/11 13:18:19 mef Exp $
 
-DISTNAME=	Hack-v2_020-ttf
-PKGNAME=	Hack-ttf-2.020
+VERSION=	3.003
+DISTNAME=	Hack-${VERSION}
+PKGNAME=	Hack-ttf-${VERSION}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrissimpkins/}
 GITHUB_PROJECT=	Hack
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.zip
+GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sourcefoundry.org/hack/
@@ -16,12 +16,10 @@ LICENSE=	vera-ttf-license AND ofl-v1.1 # with modifications
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
 
-WRKSRC=		${WRKDIR}
-
 FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/TTF
 INSTALLATION_DIRS=	${FONTS_DIRS.ttf}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/*ttf ${DESTDIR}/${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/build/ttf/*ttf ${DESTDIR}/${FONTS_DIRS.ttf}
 
 .include "../../mk/bsd.pkg.mk"
