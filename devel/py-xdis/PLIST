@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/11/20 09:29:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/12/11 13:18:25 adam Exp $
 bin/pydisasm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -141,6 +141,9 @@ ${PYSITELIB}/xdis/opcodes/opcode_37.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_38.py
 ${PYSITELIB}/xdis/opcodes/opcode_38.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_38.pyo
+${PYSITELIB}/xdis/opcodes/opcode_39.py
+${PYSITELIB}/xdis/opcodes/opcode_39.pyc
+${PYSITELIB}/xdis/opcodes/opcode_39.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_3x.py
 ${PYSITELIB}/xdis/opcodes/opcode_3x.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_3x.pyo
