@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19496 2019/12/11 01:51:13 gutteridge Exp $
+$NetBSD: TODO,v 1.19497 2019/12/11 01:57:02 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -564,6 +564,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o elscreen-1.5.3
 	o embryo-1.7.10
 	o emerillon-0.1.90
+	o enlightenment-0.23.1
 	o eog-plugins-3.6.1
 	o epic4-2.10.6
 	o epiphany-3.16.0
