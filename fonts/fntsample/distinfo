@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.5 2019/07/20 19:17:55 tnn Exp $
+$NetBSD: distinfo,v 1.6 2019/12/11 14:57:43 mef Exp $
 
 SHA1 (Blocks-20190308.txt) = eb65255e32bca86611f5fd9b45e4daa16ddff072
 RMD160 (Blocks-20190308.txt) = 98b04f33af81c08f81659062b7ebb0e16f9e0a33
 SHA512 (Blocks-20190308.txt) = 2cd8a92ec3feabd77ddd48f7553287c057b9ff968244a91a29754837fe4e02175a0fd9d848bdab946fc44bd249442fe5862bb892d0e714ee3dadd571f1f7b77c
 Size (Blocks-20190308.txt) = 10086 bytes
-SHA1 (fntsample-5.2.tar.gz) = aa4e179f45113b0517f81038cf0d491591ca4e80
-RMD160 (fntsample-5.2.tar.gz) = b02651b7025f305b7bab1a32f467d300649c1199
-SHA512 (fntsample-5.2.tar.gz) = f80304471c214fb974623df26c6397a1b675a48aa54104217cbca6fdbc28ca746c37470ba97e6f4f5c2ce18ca233900bbf58dffc0480d3454c6c975090926a03
-Size (fntsample-5.2.tar.gz) = 55990 bytes
+SHA1 (fntsample-5.3.tar.gz) = af3cd3434321c87d8fa584b93e07630b9a620f83
+RMD160 (fntsample-5.3.tar.gz) = 20dfc32f6de931b90f2e110804151f9dcae4dfec
+SHA512 (fntsample-5.3.tar.gz) = 8490ce8746debf1e056ebed71fe5b4023e2ba6905bec100687c69b062bc31fbdfa98ba57ebdc05d7399c3d2ce946513c70f1eb38d842324710065976ed0aa341
+Size (fntsample-5.3.tar.gz) = 56508 bytes
