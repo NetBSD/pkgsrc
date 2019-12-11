@@ -1,0 +1,4 @@
+velox is a tiling window manager based on the Simple Wayland Compositor
+library.
+
+It is inspired by dwm and xmonad.
