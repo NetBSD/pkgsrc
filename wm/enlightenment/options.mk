@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/12/08 13:26:55 nia Exp $
+# $NetBSD: options.mk,v 1.4 2019/12/11 01:50:31 gutteridge Exp $
 
 # e16 is used here instead of enlightenment to avoid
 # potential conflict with x11/enlightenment.
@@ -7,8 +7,8 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.e16
 PKG_OPTIONS_OPTIONAL_GROUPS=	sound
 PKG_OPTIONS_GROUP.sound=	pulseaudio esound
 
-PKG_SUPPORTED_OPTIONS=		pango pulseaudio vera-ttf
-PKG_SUGGESTED_OPTIONS=		pango esound
+PKG_SUPPORTED_OPTIONS=		pango vera-ttf
+PKG_SUGGESTED_OPTIONS=		pango esound vera-ttf
 
 .include "../../mk/bsd.options.mk"
 
