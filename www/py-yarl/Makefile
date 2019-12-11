@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2019/04/26 13:14:22 maya Exp $
+# $NetBSD: Makefile,v 1.20 2019/12/11 09:00:36 adam Exp $
 
-DISTNAME=	yarl-1.3.0
+DISTNAME=	yarl-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yarl/}
