@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2019/11/04 21:12:52 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2019/12/11 01:44:37 manu Exp $
 
-VERSION=	0.7.0
+VERSION=	0.9.2
 DISTNAME=	gnupg-pkcs11-scd-${VERSION}
-PKGREVISION=	12
+#PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnupg-pkcs11/gnupg-pkcs11-scd/${VERSION}/}
+GITHUB_PROJECT=	gnupg-pkcs11-scd
+GITHUB_RELEASE=	${DISTNAME}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=alonbl/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
