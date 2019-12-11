@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/11 21:19:29 nia Exp $
+bin/velox
+lib/pkgconfig/velox.pc
+libexec/velox/status_bar
+share/examples/velox/velox.conf
+share/velox/velox.xml
