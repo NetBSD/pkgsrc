@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/11/20 09:30:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/12/11 13:19:20 adam Exp $
 bin/pydisassemble-${PYVERSSUFFIX}
 bin/uncompyle6-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -107,6 +107,9 @@ ${PYSITELIB}/uncompyle6/parsers/parse36.pyo
 ${PYSITELIB}/uncompyle6/parsers/parse37.py
 ${PYSITELIB}/uncompyle6/parsers/parse37.pyc
 ${PYSITELIB}/uncompyle6/parsers/parse37.pyo
+${PYSITELIB}/uncompyle6/parsers/parse37base.py
+${PYSITELIB}/uncompyle6/parsers/parse37base.pyc
+${PYSITELIB}/uncompyle6/parsers/parse37base.pyo
 ${PYSITELIB}/uncompyle6/parsers/parse38.py
 ${PYSITELIB}/uncompyle6/parsers/parse38.pyc
 ${PYSITELIB}/uncompyle6/parsers/parse38.pyo
@@ -206,9 +209,15 @@ ${PYSITELIB}/uncompyle6/scanners/scanner36.pyo
 ${PYSITELIB}/uncompyle6/scanners/scanner37.py
 ${PYSITELIB}/uncompyle6/scanners/scanner37.pyc
 ${PYSITELIB}/uncompyle6/scanners/scanner37.pyo
+${PYSITELIB}/uncompyle6/scanners/scanner37base.py
+${PYSITELIB}/uncompyle6/scanners/scanner37base.pyc
+${PYSITELIB}/uncompyle6/scanners/scanner37base.pyo
 ${PYSITELIB}/uncompyle6/scanners/scanner38.py
 ${PYSITELIB}/uncompyle6/scanners/scanner38.pyc
 ${PYSITELIB}/uncompyle6/scanners/scanner38.pyo
+${PYSITELIB}/uncompyle6/scanners/scanner39.py
+${PYSITELIB}/uncompyle6/scanners/scanner39.pyc
+${PYSITELIB}/uncompyle6/scanners/scanner39.pyo
 ${PYSITELIB}/uncompyle6/scanners/tok.py
 ${PYSITELIB}/uncompyle6/scanners/tok.pyc
 ${PYSITELIB}/uncompyle6/scanners/tok.pyo
