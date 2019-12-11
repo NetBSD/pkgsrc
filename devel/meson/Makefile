@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/12/11 12:45:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/11 12:48:07 adam Exp $
 
-DISTNAME=	meson-0.52.0
-PKGREVISION=	1
+DISTNAME=	meson-0.52.1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mesonbuild.com/
+HOMEPAGE=	https://mesonbuild.com/
 COMMENT=	Open source build system meant to be fast and user friendly
 LICENSE=	apache-2.0
 
