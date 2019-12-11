@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.151 2019/08/16 15:12:19 adam Exp $
+$NetBSD: distinfo,v 1.152 2019/12/11 16:44:22 jperkin Exp $
 
 SHA1 (qemu-4.1.0.tar.xz) = 29c99be326cd8f3b2b75d7fec9066ca24854df1e
 RMD160 (qemu-4.1.0.tar.xz) = 7f95536777579cec1793c894089a2f72bb7f09d8
@@ -7,6 +7,7 @@ Size (qemu-4.1.0.tar.xz) = 54001708 bytes
 SHA1 (patch-Makefile) = 85d24d842ad2f7e1e2ec6f0e0e3268c21ef9bf0d
 SHA1 (patch-accel_tcg_user-exec.c) = 86ee62f6e5c8cd7942cf0aa9c9f64e4b0879ff33
 SHA1 (patch-audio_audio.c) = 98a1de2fd48638886b5d16f6a61dc72910e98b41
+SHA1 (patch-capstone_Makefile) = f59870031de8c4385a591362749ec82f57fd4c27
 SHA1 (patch-configure) = 14c09363622bcee113b7fda5bd3f031bd9ff6b90
 SHA1 (patch-contrib_ivshmem-client_ivshmem-client.c) = 40c8751607cbf66a37e4c4e08f2664b864e2e984
 SHA1 (patch-contrib_ivshmem-server_ivshmem-server.c) = d8f53432b5752f4263dc4ef96108a976a05147a3
@@ -17,5 +18,7 @@ SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_tpm_tpm__ioctl.h) = a350c1708e1f9d85e07c4c354068703a45174baf
 SHA1 (patch-hw_usb_dev-mtp.c) = 0f9034fb3904e5d5e3b98d24b94e054181687d95
 SHA1 (patch-include_sysemu_kvm.h) = f99e8ad021f6c8e89e3ca52538bd9b0656e6f619
+SHA1 (patch-net_tap-solaris.c) = 74f27ae747e1ebcd37f8f1f50ddacf2be5f7ee46
 SHA1 (patch-roms_u-boot_tools_imx8m__image.sh) = e4c452062f40569e33aa93eec4a65bd3af2e74fc
 SHA1 (patch-target_i386_kvm-stub.c) = 4cd2b7a8d8d8a317829f982b5acff7fdf2479d9f
+SHA1 (patch-util_drm.c) = b30a46d623d9431c5af2f3cd101adb89be3f0c2b
