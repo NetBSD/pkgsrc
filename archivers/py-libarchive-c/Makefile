@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2018/06/15 08:08:18 adam Exp $
+# $NetBSD: Makefile,v 1.13 2019/12/11 13:46:46 adam Exp $
 
-DISTNAME=	libarchive-c-2.8
+DISTNAME=	libarchive-c-2.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel python
+CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libarchive-c/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
