@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5320 2019/12/11 14:42:17 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5321 2019/12/11 14:49:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8557,3 +8557,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/py-certifi to 2019.11.28 [adam 2019-12-11]
 	Updated devel/py-dulwich to 0.19.14 [adam 2019-12-11]
 	Updated net/py-kombu to 4.6.7 [adam 2019-12-11]
+	Updated devel/py-Pyro to 4.77 [adam 2019-12-11]
+	Updated net/py-Socks to 1.7.1 [adam 2019-12-11]
