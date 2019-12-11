@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/11 23:36:29 ng0 Exp $
+
+SHA1 (samurai-0.7.tar.gz) = 8d6bd5492026e2a256699a47d3895fa35c774491
+RMD160 (samurai-0.7.tar.gz) = ac8677acec4beb99b2596a4238058c88aa8dc356
+SHA512 (samurai-0.7.tar.gz) = c47120a2b516c0d130c5a01d99972979c69103d1c6b110722c4c6fcac3147df25d60d9d19913d7c78902c257800d6a5e1bcbb775618058ebfe6db29098dc4001
+Size (samurai-0.7.tar.gz) = 28197 bytes
