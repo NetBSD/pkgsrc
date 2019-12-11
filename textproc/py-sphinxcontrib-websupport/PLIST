@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/05/18 20:02:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/12/11 10:34:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
@@ -19,6 +20,15 @@ ${PYSITELIB}/sphinxcontrib/websupport/core.pyo
 ${PYSITELIB}/sphinxcontrib/websupport/errors.py
 ${PYSITELIB}/sphinxcontrib/websupport/errors.pyc
 ${PYSITELIB}/sphinxcontrib/websupport/errors.pyo
+${PYSITELIB}/sphinxcontrib/websupport/files/ajax-loader.gif
+${PYSITELIB}/sphinxcontrib/websupport/files/comment-bright.png
+${PYSITELIB}/sphinxcontrib/websupport/files/comment-close.png
+${PYSITELIB}/sphinxcontrib/websupport/files/comment.png
+${PYSITELIB}/sphinxcontrib/websupport/files/down-pressed.png
+${PYSITELIB}/sphinxcontrib/websupport/files/down.png
+${PYSITELIB}/sphinxcontrib/websupport/files/up-pressed.png
+${PYSITELIB}/sphinxcontrib/websupport/files/up.png
+${PYSITELIB}/sphinxcontrib/websupport/files/websupport.js
 ${PYSITELIB}/sphinxcontrib/websupport/search/__init__.py
 ${PYSITELIB}/sphinxcontrib/websupport/search/__init__.pyc
 ${PYSITELIB}/sphinxcontrib/websupport/search/__init__.pyo
