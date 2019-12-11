@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5323 2019/12/11 14:52:35 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.5324 2019/12/11 14:58:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8561,3 +8561,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/py-Socks to 1.7.1 [adam 2019-12-11]
 	Updated devel/ruby-memoist to 0.16.2 [tsutsui 2019-12-11]
 	Updated textproc/ruby-nokogiri to 1.10.7 [tsutsui 2019-12-11]
+	Updated fonts/fntsample to 5.3 [mef 2019-12-11]
