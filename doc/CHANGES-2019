@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5318 2019/12/11 14:19:55 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5319 2019/12/11 14:28:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8553,3 +8553,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-protobuf to 3.11.1 [adam 2019-12-11]
 	Updated textproc/py-tabulate to 0.8.6 [adam 2019-12-11]
 	Updated devel/py-setuptools to 42.0.2 [adam 2019-12-11]
+	Updated devel/py-jupyter_core to 4.6.1 [adam 2019-12-11]
+	Updated security/py-certifi to 2019.11.28 [adam 2019-12-11]
