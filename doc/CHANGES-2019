@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5330 2019/12/11 21:19:53 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5331 2019/12/11 21:21:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8575,3 +8575,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-cython to 0.29.14nb1 [adam 2019-12-11]
 	Updated graphics/py-matplotlib to 3.1.2 [adam 2019-12-11]
 	Added graphics/wld version 0.0.0.20191211 [nia 2019-12-11]
+	Added wm/swc version 0.0.0.20191211 [nia 2019-12-11]
