@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5308 2019/12/11 10:30:40 leot Exp $
+$NetBSD: CHANGES-2019,v 1.5309 2019/12/11 10:45:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8534,3 +8534,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/py-yarl to 1.4.2 [adam 2019-12-11]
 	Updated devel/py-importlib-metadata to 1.3.0 [adam 2019-12-11]
 	Updated time/py-icalendar to 4.0.4 [adam 2019-12-11]
+	Updated devel/py-test-mock to 1.13.0 [adam 2019-12-11]
+	Updated textproc/py-sphinxcontrib-websupport to 1.1.2 [adam 2019-12-11]
+	Updated net/py-smb to 1.1.28 [adam 2019-12-11]
+	Updated security/py-paramiko to 2.7.1 [adam 2019-12-11]
