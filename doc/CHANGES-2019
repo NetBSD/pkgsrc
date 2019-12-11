@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5313 2019/12/11 13:20:20 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5314 2019/12/11 13:47:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8544,3 +8544,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/Hack-ttf to 3.003 [mef 2019-12-11]
 	Updated devel/py-xdis to 4.2.0 [adam 2019-12-11]
 	Updated lang/py-uncompyle6 to 3.6.0 [adam 2019-12-11]
+	Updated www/py-meld3 to 2.0.0 [adam 2019-12-11]
+	Updated archivers/py-libarchive-c to 2.9 [adam 2019-12-11]
