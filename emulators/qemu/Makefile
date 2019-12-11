@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2019/11/03 19:24:33 rillig Exp $
+# $NetBSD: Makefile,v 1.221 2019/12/11 16:44:22 jperkin Exp $
 
 DISTNAME=	qemu-4.1.0
 PKGREVISION=	2
@@ -127,6 +127,7 @@ PLIST.ivshmem=			yes
 PLIST.pr-helper=		yes
 PLIST.virtfs-proxy-helper=	yes
 .elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
+PLIST.ivshmem=			yes
 PLIST.nbd=			yes
 CONFIGURE_ARGS+=		--disable-coroutine-pool
 .endif
@@ -140,6 +141,11 @@ PLIST.${pvar}=		yes
 PLIST_SRC=	PLIST ${WRKDIR}/PLIST.STATIC
 
 TEST_TARGET=		check
+
+# Some dependencies aren't correct and this tries to be re-made on install,
+# failing due to configure bugs.
+post-build:
+	${TOUCH} ${WRKSRC}/config-host.mak
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \
