@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/10/07 20:19:14 adam Exp $
+$NetBSD: distinfo,v 1.6 2019/12/11 14:17:49 adam Exp $
 
-SHA1 (tabulate-0.8.5.tar.gz) = 9f3658c289b332d2d7afd2cfa8f28e002d03fb28
-RMD160 (tabulate-0.8.5.tar.gz) = a8f86bf5742c2592344be68cca56be5f9985f9b7
-SHA512 (tabulate-0.8.5.tar.gz) = 137f576ac5adc29ad82f77da499804b110ddc7f12c5f85cdc79bdd5dfd37404d49f1c5667e6f8721e48f949b684c71b330b8e4fae4ef8a933af24d68fd0665c5
-Size (tabulate-0.8.5.tar.gz) = 45867 bytes
+SHA1 (tabulate-0.8.6.tar.gz) = 60a6aac78905f74ea147f73a8747446568161ed7
+RMD160 (tabulate-0.8.6.tar.gz) = 7b9e2043175fea507485ec5e48765fd52891620c
+SHA512 (tabulate-0.8.6.tar.gz) = 10e331db1f8d6ea921654c3955efc4929827b003328c4e2ae663748ce5d5a3e473fe7abb4606147c00aec60ff44d3115c353d6f0e1417305166343212d77600e
+Size (tabulate-0.8.6.tar.gz) = 45535 bytes
