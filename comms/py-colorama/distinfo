@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/11/30 11:21:37 adam Exp $
+$NetBSD: distinfo,v 1.7 2019/12/11 19:01:00 adam Exp $
 
-SHA1 (colorama-0.4.1.tar.gz) = 8ab233ceaebc08970e04e35ee1e26a37f91278bc
-RMD160 (colorama-0.4.1.tar.gz) = 394b56b9a61bbe3be247f61386b5c78c408f8a65
-SHA512 (colorama-0.4.1.tar.gz) = 5d0ea1ae1b6e499c4c15845d69670555386283c5b9ebc7580aacc3edeb3088056f8842c740b26b2bdadc0d02e778282d47307db0f658662c5afab3c4beb65586
-Size (colorama-0.4.1.tar.gz) = 24104 bytes
+SHA1 (colorama-0.4.3.tar.gz) = e5d6a5f36e831d4258424848ff635dc931f6d77e
+RMD160 (colorama-0.4.3.tar.gz) = f89f18525f19877eb048d287407f3da7a8adc249
+SHA512 (colorama-0.4.3.tar.gz) = 4a8028d35e12f740bf37be10a5663f91d4b15b81d7dd8460304f98153a2fb1520858b2a807e9225277fe08628d7a74281bafe764d00cd7fcb9a2ad68ab9e8d8d
+Size (colorama-0.4.3.tar.gz) = 27328 bytes
