@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5327 2019/12/11 18:51:10 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5328 2019/12/11 19:07:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8568,3 +8568,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/yarn to 1.21.1 [adam 2019-12-11]
 	Updated archivers/unrar to 5.8.5 [adam 2019-12-11]
 	Updated textproc/oniguruma to 6.9.4 [adam 2019-12-11]
+	Updated geography/py-geojson to 2.5.0 [adam 2019-12-11]
+	Updated comms/py-colorama to 0.4.3 [adam 2019-12-11]
+	Updated textproc/py-colored to 1.4.2 [adam 2019-12-11]
+	Updated lang/py-mypy to 0.750 [adam 2019-12-11]
