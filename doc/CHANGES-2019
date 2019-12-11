@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5306 2019/12/11 09:00:56 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5307 2019/12/11 10:29:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8532,3 +8532,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/cmake to 3.16.1 [adam 2019-12-11]
 	Updated databases/py-multidict to 4.7.0 [adam 2019-12-11]
 	Updated www/py-yarl to 1.4.2 [adam 2019-12-11]
+	Updated devel/py-importlib-metadata to 1.3.0 [adam 2019-12-11]
+	Updated time/py-icalendar to 4.0.4 [adam 2019-12-11]
