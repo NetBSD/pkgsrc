@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2960 2019/11/27 22:32:27 adam Exp $
+# $NetBSD: Makefile,v 1.2961 2019/12/11 23:36:29 ng0 Exp $
 #
 
 COMMENT=	Development utilities
@@ -2744,6 +2744,7 @@ SUBDIR+=	rudiments
 SUBDIR+=	rvm
 SUBDIR+=	rx
 SUBDIR+=	sablecc
+SUBDIR+=	samurai
 SUBDIR+=	scintilla
 SUBDIR+=	scmcvs
 SUBDIR+=	scons
