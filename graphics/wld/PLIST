@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/11 21:15:10 nia Exp $
+include/wld/drm.h
+include/wld/pixman.h
+include/wld/wayland.h
+include/wld/wld.h
+lib/libwld.a
+lib/libwld.so
+lib/libwld.so.0
+lib/libwld.so.0.0
+lib/pkgconfig/wld.pc
