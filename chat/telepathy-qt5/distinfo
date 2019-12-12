@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2019/12/12 16:44:53 nros Exp $
+
+SHA1 (telepathy-qt-0.9.8.tar.gz) = cb4bf4a69e38451880ac88fa0e44a8a6f5bfe9cb
+RMD160 (telepathy-qt-0.9.8.tar.gz) = 52f5ab2f9491d4f80648a44497dba298b9a30d45
+SHA512 (telepathy-qt-0.9.8.tar.gz) = fad662c02417c8e4e239d438ea3549226e589442aea8418c8922a6b78ff88422a36c1cc0d2e3591240fac115390a7fbdb1b4deea98187051cc811175b60b9e8b
+Size (telepathy-qt-0.9.8.tar.gz) = 6448686 bytes
+SHA1 (patch-CMakeLists.txt) = 3a0ddbf024856e5df6e099a84b85c78de6e75977
+SHA1 (patch-TelepathyQt_Farstream_CMakeLists.txt) = 20d7fcc75ac0f5ae0e6e551bb5996cac692bcc14
+SHA1 (patch-TelepathyQt_Farstream_TelepathyQtFarstream.pc.in) = 1b5c5ec551c6b07f0fb62515ed68c16d2bc69e87
+SHA1 (patch-TelepathyQt_TelepathyQt.pc.in) = 95aa392effba29f5c949c3d864432c468ce52444
+SHA1 (patch-TelepathyQt_TelepathyQtService.pc.in) = 92f3add54fbf7365f4517d0bc718cfcfd9de2c37
+SHA1 (patch-TelepathyQt_referenced-handles.cpp) = 927724288977b0d0991d9a82d9f5b72e309808dc
+SHA1 (patch-tests_channel-class-spec.cpp) = 2d78aabad331815871785f81a9495e7dd131f963
+SHA1 (patch-tests_dbus_account-basics.cpp) = ea9f85062411832b4d0c2846491826df7f6bb5a3
+SHA1 (patch-tests_dbus_client.cpp) = 51be87a5a40d69883cd9e7ce154eaa2d2756d2a5
+SHA1 (patch-tests_features.cpp) = 324b265a7bcb0f730b967324cdcd5c3174ff0d49
