@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2018/04/03 18:22:47 adam Exp $
+# $NetBSD: Makefile,v 1.67 2019/12/12 10:46:15 markd Exp $
 
 PKGNAME=	${PYPKGPREFIX}-Tk-${PY_DISTVERSION}
 PKGREVISION=	5
@@ -34,6 +34,9 @@ PY_SETUP_SUBST+=	X11LIB=\'X11\'
 
 .if ${_PYTHON_VERSION} >= 27
 EXTRACT_ELEMENTS+=	${PYSUBDIR}/Modules/tkinter.h
+.endif
+.if ${_PYTHON_VERSION} >= 38
+EXTRACT_ELEMENTS+=	${PYSUBDIR}/Modules/clinic
 .endif
 
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
