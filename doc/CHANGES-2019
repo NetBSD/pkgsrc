@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5342 2019/12/12 16:23:31 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5343 2019/12/12 16:46:52 nros Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8589,3 +8589,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/ruby-rouge to 3.14.0 [fcambus 2019-12-12]
 	Updated pkgtools/pkgin to 0.14.0 [jperkin 2019-12-12]
 	Removed textproc/ruby-builder30 [taca 2019-12-12]
+	Added chat/telepathy-qt5 version 0.9.8 [nros 2019-12-12]
