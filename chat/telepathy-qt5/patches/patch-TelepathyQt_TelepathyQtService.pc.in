@@ -1,0 +1,13 @@
+$NetBSD: patch-TelepathyQt_TelepathyQtService.pc.in,v 1.1 2019/12/12 16:44:53 nros Exp $
+* move Qt5Core and Qt5DBus to Requires since headers requests their headers
+--- TelepathyQt/TelepathyQtService.pc.in.orig	2019-12-10 18:08:40.297294454 +0000
++++ TelepathyQt/TelepathyQtService.pc.in
+@@ -4,6 +4,7 @@ includedir=${INCLUDE_INSTALL_DIR}
+ Name: TelepathyQt${QT_VERSION_MAJOR}Service
+ Description: Qt Telepathy Service side bindings
+ Version: ${PACKAGE_VERSION}
+-Requires.private: Qt${QT_VERSION_PC}Core >= ${QT_MIN_VERSION}, Qt${QT_VERSION_PC}Core < ${QT_MAX_VERSION}, Qt${QT_VERSION_PC}DBus >= ${QT_MIN_VERSION}, Qt${QT_VERSION_PC}DBus < ${QT_MAX_VERSION}, TelepathyQt${QT_VERSION_MAJOR} = ${PACKAGE_VERSION}
++Requires: Qt${QT_VERSION_PC}Core >= ${QT_MIN_VERSION}, Qt${QT_VERSION_PC}Core < ${QT_MAX_VERSION}, Qt${QT_VERSION_PC}DBus >= ${QT_MIN_VERSION}, Qt${QT_VERSION_PC}DBus < ${QT_MAX_VERSION}
++Requires.private: TelepathyQt${QT_VERSION_MAJOR} = ${PACKAGE_VERSION}
+ Libs: -L${LIB_INSTALL_DIR} -ltelepathy-qt${QT_VERSION_MAJOR}-service
+ Cflags: -I${INCLUDE_INSTALL_DIR}/telepathy-qt${QT_VERSION_MAJOR}
