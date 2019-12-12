@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.20 2018/06/06 14:49:41 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.21 2019/12/12 14:15:50 leot Exp $
 #
 # used by print/evince3/Makefile
 # would probably be used by print/evince3-nautilus/Makefile if that existed
 
-DISTNAME=		evince-3.28.2
+DISTNAME=		evince-3.34.2
 CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
@@ -22,7 +22,11 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LANGUAGES=		c c++
 
+# Requires --desktop in msgfmt.
+_TOOLS_USE_PKGSRC.msgfmt=	yes
+
 CONFIGURE_ARGS+=	--disable-browser-plugin
+CONFIGURE_ARGS+=	--without-gspell
 # Disable thumbnail cache
 CONFIGURE_ARGS+=	--disable-libgnome-desktop
 
