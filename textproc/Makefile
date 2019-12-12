@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1073 2019/12/02 02:00:43 minskim Exp $
+# $NetBSD: Makefile,v 1.1074 2019/12/12 16:21:38 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -936,7 +936,6 @@ SUBDIR+=	ruby-amrita
 SUBDIR+=	ruby-bluecloth
 SUBDIR+=	ruby-buftok
 SUBDIR+=	ruby-builder
-SUBDIR+=	ruby-builder30
 SUBDIR+=	ruby-cabocha
 SUBDIR+=	ruby-classifier-reborn
 SUBDIR+=	ruby-coderay
