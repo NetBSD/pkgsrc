@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/04/25 07:32:58 maya Exp $
+# $NetBSD: Makefile,v 1.12.4.1 2019/12/12 10:14:10 bsiegert Exp $
 
 DISTNAME=	jbig2dec-0.16
 PKGREVISION=	1
@@ -9,7 +9,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.ghostscript.com/jbig2dec.html
 COMMENT=	JBIG2 decoder library
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-agpl-v3
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoreconf autoconf automake
