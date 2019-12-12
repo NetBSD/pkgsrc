@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5333 2019/12/12 00:24:39 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.5334 2019/12/12 00:25:52 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8577,5 +8577,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added graphics/wld version 0.0.0.20191211 [nia 2019-12-11]
 	Added wm/swc version 0.0.0.20191211 [nia 2019-12-11]
 	Added wm/velox version 0.0.3.20191211 [nia 2019-12-11]
-	Added devel/samurai version 0.7 [ng0 2019-12-12]
 	Added devel/samurai version 0.7 [ng0 2019-12-12]
