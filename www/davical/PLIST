@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/05/10 12:25:04 hauke Exp $
+@comment $NetBSD: PLIST,v 1.12 2019/12/12 08:12:27 hauke Exp $
 share/davical/dba/appuser_permissions.txt
 share/davical/dba/base-data.sql
 share/davical/dba/better_perms.sql
@@ -111,6 +111,7 @@ share/davical/inc/caldav-REPORT.php
 share/davical/inc/caldav-client-v2.php
 share/davical/inc/caldav-client.php
 share/davical/inc/check_UTF8.php
+share/davical/inc/csrf_tokens.php
 share/davical/inc/davical_configuration_missing.php
 share/davical/inc/drivers_imap_pam.php
 share/davical/inc/drivers_ldap.php
