@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/12/10 13:21:36 nia Exp $
+# $NetBSD: Makefile,v 1.19 2019/12/12 20:28:55 nia Exp $
 
 DISTNAME=	atheme-v7.2.10-r2
 PKGNAME=	${DISTNAME:S/-v/-/1:S/-r/.r/1}
@@ -85,6 +85,10 @@ MAKE_DIRS_PERMS+=	${VARBASE}/run/atheme \
 INSTALLATION_DIRS+=	${EGDIR}
 
 PKGCONFIG_OVERRIDE+=	atheme-services.pc.in
+
+# It tries to use git to generate this.
+pre-build:
+	${ECHO} '#define SERNO "${PKGVERSION_NOREV}-pkgsrc"' > ${WRKSRC}/include/serno.h
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/dbverify \
