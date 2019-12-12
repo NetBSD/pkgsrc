@@ -1,0 +1,26 @@
+$NetBSD: patch-TelepathyQt_Farstream_CMakeLists.txt,v 1.1 2019/12/12 16:44:53 nros Exp $
+* don't put GLib etc in interface libraries, they are private in the pc files.
+  Fixes link break when linking with telepathy-qt5-farstream from cmake.
+--- TelepathyQt/Farstream/CMakeLists.txt.orig	2019-12-11 17:51:44.129571773 +0000
++++ TelepathyQt/Farstream/CMakeLists.txt
+@@ -41,14 +41,17 @@ if(FARSTREAM_COMPONENTS_FOUND)
+ 
+     # Link
+     target_link_libraries(telepathy-qt${QT_VERSION_MAJOR}-farstream
++        PUBLIC
+         Qt5::Core
+         Qt5::DBus
++        telepathy-qt${QT_VERSION_MAJOR}
++        ${TP_QT_LIBRARY_LINKER_FLAGS})
++    target_link_libraries(telepathy-qt${QT_VERSION_MAJOR}-farstream
++        PRIVATE
+         ${GOBJECT_LIBRARIES}
+         ${GLIB2_LIBRARIES}
+         ${TELEPATHY_FARSTREAM_LIBRARIES}
+-        ${TELEPATHY_GLIB_LIBRARIES}
+-        telepathy-qt${QT_VERSION_MAJOR}
+-        ${TP_QT_LIBRARY_LINKER_FLAGS})
++        ${TELEPATHY_GLIB_LIBRARIES})
+ 
+     if (ENABLE_COMPILER_COVERAGE)
+         target_link_libraries(telepathy-qt${QT_VERSION_MAJOR}-farstream gcov)
