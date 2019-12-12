@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5336 2019/12/12 10:05:06 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.5337 2019/12/12 13:18:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8580,3 +8580,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/samurai version 0.7 [ng0 2019-12-12]
 	Updated www/davical to 1.1.9.2 [hauke 2019-12-12]
 	Updated graphics/ansilove to 4.0.6 [fcambus 2019-12-12]
+	Updated net/py-botocore to 1.13.37 [adam 2019-12-12]
+	Updated net/py-boto3 to 1.10.37 [adam 2019-12-12]
+	Updated net/py-awscli to 1.16.301 [adam 2019-12-12]
+	Updated textproc/py-regex to 2019.12.9 [adam 2019-12-12]
