@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5340 2019/12/12 15:35:16 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.5341 2019/12/12 15:53:02 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8587,3 +8587,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/evince3 to 3.34.2 [leot 2019-12-12]
 	Updated net/unbound to 1.9.6 [he 2019-12-12]
 	Updated www/ruby-rouge to 3.14.0 [fcambus 2019-12-12]
+	Updated pkgtools/pkgin to 0.14.0 [jperkin 2019-12-12]
