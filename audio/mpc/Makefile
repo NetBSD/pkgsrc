@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/12/04 11:37:16 nia Exp $
+# $NetBSD: Makefile,v 1.34 2019/12/12 16:24:22 nia Exp $
 
 DISTNAME=		mpc-0.33
 PKGREVISION=		1
@@ -29,4 +29,5 @@ PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
 BUILDLINK_API_DEPENDS.libmpdclient+=	libmpdclient>=2.9
 .include "../../audio/libmpdclient/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
