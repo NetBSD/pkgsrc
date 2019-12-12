@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.9 2019/10/25 11:01:55 nia Exp $
+$NetBSD: distinfo,v 1.10 2019/12/12 00:13:52 nia Exp $
 
 SHA1 (inspircd-3.4.0.tar.gz) = 62229ac2827c0377cf0f3f52cc016b2a14600b46
 RMD160 (inspircd-3.4.0.tar.gz) = 3b2e28f8f1825b6d2de3b2ebbf98a6756f44f6f9
 SHA512 (inspircd-3.4.0.tar.gz) = 871fefff5e337dc6228fae223ff7ac534e159b5bfb838419247b1d16339c860b0b939a28dd4610cf3b8c37328b5e6ccba2ddd80adbd27638f4f3fa28e4f99066
 Size (inspircd-3.4.0.tar.gz) = 809845 bytes
-SHA1 (patch-configure) = b58da682a8add14cf9c35ea9af0020c7dfde6e14
+SHA1 (patch-configure) = cd3a8459c60539fd505b36523129cebc3804e3a8
 SHA1 (patch-docs_conf_inspircd.conf.example) = 077c5b474c7ce70096b25b48b66817422b134ce0
 SHA1 (patch-docs_conf_modules.conf.example) = 4a4ef063ae1c908268a34f0407a00c1df70a6a18
 SHA1 (patch-docs_conf_services_anope.conf.example) = ab9078cf3bbe5e7393a8463c95b8db02bc5c019f
