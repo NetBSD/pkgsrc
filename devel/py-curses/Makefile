@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2019/11/03 10:18:26 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2019/12/12 10:43:32 markd Exp $
 
 PKGNAME=	${PYPKGPREFIX}-curses-${PY_DISTVERSION}
 PKGREVISION=	5
@@ -29,6 +29,11 @@ do-patch:
 	done
 
 .include "../../lang/python/extension.mk"
+
+.if ${_PYTHON_VERSION} >= 38
+EXTRACT_ELEMENTS+=	${PYSUBDIR}/Modules/clinic
+.endif
+
 .include "../../lang/python/srcdist.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
