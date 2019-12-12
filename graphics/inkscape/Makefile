@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2019/11/23 09:23:21 martin Exp $
+# $NetBSD: Makefile,v 1.199 2019/12/12 12:00:22 jperkin Exp $
 
 DISTNAME=	inkscape-0.92.4
 PKGREVISION=	9
@@ -70,6 +70,8 @@ CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/genpofiles.sh
 CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/simplepath.rb
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/Resources/bin/inkscape
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/ScriptExec/launcher-quartz-no-macintegration.sh
+
+CMAKE_ARGS+=	-DPACKAGE_LOCALE_DIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
 .include "options.mk"
 
