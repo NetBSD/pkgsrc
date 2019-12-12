@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5345 2019/12/12 20:19:08 fcambus Exp $
+$NetBSD: CHANGES-2019,v 1.5346 2019/12/12 20:57:06 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8592,3 +8592,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added chat/telepathy-qt5 version 0.9.8 [nros 2019-12-12]
 	Updated textproc/lowdown to 0.4.6 [fcambus 2019-12-12]
 	Updated fonts/spleen to 1.6.0 [fcambus 2019-12-12]
+	Updated lang/yabasic to 2.86.2 [fcambus 2019-12-12]
