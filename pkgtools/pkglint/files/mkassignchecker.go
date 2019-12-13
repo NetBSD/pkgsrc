@@ -547,7 +547,7 @@ func (ck *MkAssignChecker) checkVarassignVaruseShell(vartype *Vartype, time VucT
 	}
 
 	mkline := ck.MkLine
-	atoms := NewShTokenizer(mkline.Line, mkline.Value(), false).ShAtoms()
+	atoms := NewShTokenizer(mkline.Line, mkline.Value()).ShAtoms()
 	for i, atom := range atoms {
 		if varuse := atom.VarUse(); varuse != nil {
 			wordPart := isWordPart(atoms, i)

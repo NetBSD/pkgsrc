@@ -968,9 +968,41 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 		"WARN: filename.mk:41: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 }
 
-func (s *Suite) Test_VartypeCheck_Identifier(c *check.C) {
+func (s *Suite) Test_VartypeCheck_IdentifierDirect(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, BtIdentifier)
+	vt := NewVartypeCheckTester(t, BtIdentifierDirect)
+
+	vt.Varname("PKGBASE")
+	vt.Values(
+		"${OTHER_VAR}",
+		"identifiers cannot contain spaces",
+		"id/cannot/contain/slashes",
+		"id-${OTHER_VAR}",
+		"")
+
+	vt.Output(
+		"ERROR: filename.mk:1: Identifiers for PKGBASE "+
+			"must not refer to other variables.",
+		"WARN: filename.mk:2: Invalid identifier \"identifiers cannot contain spaces\".",
+		"WARN: filename.mk:3: Invalid identifier \"id/cannot/contain/slashes\".",
+		"ERROR: filename.mk:4: Identifiers for PKGBASE "+
+			"must not refer to other variables.",
+		"WARN: filename.mk:5: Invalid identifier \"\".")
+
+	vt.Op(opUseMatch)
+	vt.Values(
+		"[A-Z]",
+		"[A-Z.]",
+		"${PKG_OPTIONS:Moption}",
+		"A*B")
+
+	vt.Output(
+		"WARN: filename.mk:12: Invalid identifier pattern \"[A-Z.]\" for PKGBASE.")
+}
+
+func (s *Suite) Test_VartypeCheck_IdentifierIndirect(c *check.C) {
+	t := s.Init(c)
+	vt := NewVartypeCheckTester(t, BtIdentifierIndirect)
 
 	vt.Varname("MYSQL_CHARSET")
 	vt.Values(
