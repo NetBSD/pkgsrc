@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.15 2019/11/03 11:45:37 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2019/12/13 21:52:04 dmcmahill Exp $
 
-DISTNAME=	inadyn-1.99.15
+DISTNAME=	inadyn-2.5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=troglobit/}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://troglobit.com/inadyn.html
 COMMENT=	Dynamic DNS client
 LICENSE=	gnu-gpl-v2
 
-GITHUB_RELEASE=	1.99.15
+GITHUB_RELEASE=	v2.5
 GITHUB_TYPE=	release
 
-USE_TOOLS+=	autoconf automake gmake
+USE_TOOLS+=	gmake pkg-config
 RCD_SCRIPTS=	inadyn
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-openssl --disable-gitcheck
+CONFIGURE_ARGS+=	--enable-openssl
 
 LIBS.SunOS=	-lsocket -lnsl
 
@@ -30,15 +29,9 @@ BUILD_DEFS+=		VARBASE
 
 SUBST_CLASSES+=		etc
 SUBST_SED.etc=		-e "s|/etc|${PKG_SYSCONFDIR}|g"
-SUBST_FILES.etc=	man/inadyn.conf.5 man/inadyn.8 include/ddns.h
+SUBST_FILES.etc=	man/inadyn.conf.5 man/inadyn.8
 SUBST_MESSAGE.etc=	Fixing path to configuration file
 SUBST_STAGE.etc=	pre-configure
-
-SUBST_CLASSES+=		var
-SUBST_SED.var=		-e "s|/var|${VARBASE}|"
-SUBST_FILES.var=	man/inadyn.conf.5 man/inadyn.8 include/ddns.h
-SUBST_MESSAGE.var=	Adjusting path to VARBASE
-SUBST_STAGE.var=	pre-configure
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -54,10 +47,9 @@ PKG_SUPPORTED_OPTIONS=	static
 LDFLAGS+=	-static
 .endif
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf -i
-
 .include "../../security/openssl/buildlink3.mk"
+.include "../../devel/confuse/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libite/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
