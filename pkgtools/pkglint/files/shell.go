@@ -793,7 +793,7 @@ func (ck *ShellLineChecker) CheckWord(token string, checkQuoting bool, time Tool
 }
 
 func (ck *ShellLineChecker) checkWordQuoting(token string, checkQuoting bool, time ToolTime) {
-	tok := NewShTokenizer(ck.mkline.Line, token, true)
+	tok := NewShTokenizer(ck.mkline.Line, token)
 
 	atoms := tok.ShAtoms()
 	quoting := shqPlain
@@ -1092,7 +1092,7 @@ func splitIntoShellTokens(line *Line, text string) (tokens []string, rest string
 	// TODO: Check whether this function is used correctly by all callers.
 	//  It may be better to use a proper shell parser instead of this tokenizer.
 
-	p := NewShTokenizer(line, text, false)
+	p := NewShTokenizer(line, text)
 	for {
 		token := p.ShToken()
 		if token == nil {

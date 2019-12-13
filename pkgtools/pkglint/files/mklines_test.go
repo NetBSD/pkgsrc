@@ -411,9 +411,7 @@ func (s *Suite) Test_MkLines_Check__incomplete_subst_at_end(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"WARN: subst.mk:EOF: Incomplete SUBST block: SUBST_STAGE.class missing.",
-		"WARN: subst.mk:EOF: Incomplete SUBST block: SUBST_FILES.class missing.",
-		"WARN: subst.mk:EOF: Incomplete SUBST block: SUBST_SED.class, SUBST_VARS.class or SUBST_FILTER_CMD.class missing.")
+		"WARN: subst.mk:EOF: Missing SUBST block for \"class\".")
 }
 
 func (s *Suite) Test_MkLines_collectRationale(c *check.C) {

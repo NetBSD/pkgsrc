@@ -155,6 +155,48 @@ func (s *Suite) Test_MkVarUseModifier_Subst__S_dollar_at(c *check.C) {
 	t.CheckEquals(result, "The target")
 }
 
+func (s *Suite) Test_MkVarUseModifier_EvalSubst(c *check.C) {
+	t := s.Init(c)
+
+	test := func(s string, left bool, from string, right bool, to string, flags string, ok bool, result string) {
+		mod := MkVarUseModifier{}
+
+		actualOk, actual := mod.EvalSubst(s, left, from, right, to, flags)
+
+		t.CheckEquals(actualOk, ok)
+		t.CheckEquals(actual, result)
+	}
+
+	// Replace anywhere
+	test("pkgname", false, "kgna", false, "ri", "", true, "prime")
+	test("pkgname", false, "pkgname", false, "replacement", "", true, "replacement")
+	test("aaaaaaa", false, "a", false, "b", "", true, "baaaaaa")
+
+	// Anchored at the beginning
+	test("pkgname", true, "kgna", false, "ri", "", true, "pkgname")
+	test("pkgname", true, "pkgname", false, "replacement", "", true, "replacement")
+
+	// Anchored at the end
+	test("pkgname", false, "kgna", true, "ri", "", true, "pkgname")
+	test("pkgname", false, "pkgname", true, "replacement", "", true, "replacement")
+
+	// Anchored at both sides
+	test("pkgname", true, "kgna", true, "ri", "", true, "pkgname")
+	test("pkgname", false, "pkgname", false, "replacement", "", true, "replacement")
+
+	// Replace all
+	test("aaaaa", false, "a", false, "b", "g", true, "bbbbb")
+	test("aaaaa", true, "a", false, "b", "g", true, "baaaa")
+	test("aaaaa", false, "a", true, "b", "g", true, "aaaab")
+	test("aaaaa", true, "a", true, "b", "g", true, "aaaaa")
+
+	// Replacements using variables are trickier to get right.
+	test("anything", false, "${VAR}", false, "replacement", "", false, "")
+	test("anything", false, "pattern", false, "${VAR}", "", false, "")
+	test("echo $$$$", false, "$$", false, "dollar", "", true, "echo dollar$$")
+	test("echo $$$$", false, "$$", false, "dollar", "g", true, "echo dollardollar")
+}
+
 func (s *Suite) Test_MkVarUseModifier_MatchMatch(c *check.C) {
 	t := s.Init(c)
 
