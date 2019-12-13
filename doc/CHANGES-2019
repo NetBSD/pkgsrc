@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5353 2019/12/13 13:06:54 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5354 2019/12/13 13:45:35 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8603,3 +8603,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated filesystems/py-fs to 2.4.11 [adam 2019-12-13]
 	Updated print/ghostscript-agpl to 9.50nb1 [leot 2019-12-13]
 	Updated mail/dovecot2 to 2.3.9.1 [adam 2019-12-13]
+	Updated sysutils/xenkernel411 to 4.11.3nb1 [bouyer 2019-12-13]
+	Updated sysutils/xentools411 to 4.11.3 [bouyer 2019-12-13]
