@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/02/20 10:18:40 hauke Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/13 09:08:01 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-backports-1.0
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=	https://pypi.python.org/pypi/backports
 COMMENT=	Namespace for backported Python features
 LICENSE=	python-software-foundation
 
-WRKSRC=		${WRKDIR}/bp
 PY_PATCHPLIST=	yes
 
 PYTHON_VERSIONS_ACCEPTED=	27
@@ -18,11 +17,11 @@ PYTHON_VERSIONS_ACCEPTED=	27
 INSTALLATION_DIRS+=	${PYSITELIB}/backports
 
 do-extract:
-	mkdir ${WRKDIR}/bp
+	${MKDIR} ${WRKSRC}
 	${CP} ${FILESDIR}/__init__.py ${WRKSRC}
 
 do-build:
-	cd ${WRKSRC}; ${PYTHONBIN} -m compileall .; ${PYTHONBIN} -O -m compileall .
+	cd ${WRKSRC} && ${PY_COMPILE_ALL} . && ${PY_COMPILE_O_ALL} .
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/__init__.* ${DESTDIR}${PREFIX}/${PYSITELIB}/backports/
