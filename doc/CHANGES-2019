@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5347 2019/12/13 01:39:33 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.5348 2019/12/13 07:39:55 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8594,3 +8594,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/spleen to 1.6.0 [fcambus 2019-12-12]
 	Updated lang/yabasic to 2.86.2 [fcambus 2019-12-12]
 	Updated pkgtools/pkglint to 19.3.17 [rillig 2019-12-13]
+	Updated lang/go112 to 1.12.14 [bsiegert 2019-12-13]
