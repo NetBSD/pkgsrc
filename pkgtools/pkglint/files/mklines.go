@@ -103,11 +103,24 @@ func (mklines *MkLines) collectRationale() {
 		return mkline.IsComment() && !mkline.IsCommentedVarassign()
 	}
 
-	rationale := false
+	var rat strings.Builder
 	for _, mkline := range mklines.mklines {
-		rationale = rationale || isRealComment(mkline) && isUseful(mkline)
-		mkline.splitResult.hasRationale = rationale || isUseful(mkline)
-		rationale = rationale && !mkline.IsEmpty()
+		if isRealComment(mkline) && isUseful(mkline) {
+			rat.WriteString(mkline.Comment())
+			rat.WriteString("\n")
+		}
+
+		var lineRat strings.Builder
+		lineRat.WriteString(rat.String())
+		if isUseful(mkline) {
+			lineRat.WriteString(mkline.Comment())
+			lineRat.WriteString("\n")
+		}
+
+		mkline.splitResult.rationale = lineRat.String()
+		if mkline.IsEmpty() {
+			rat.Reset()
+		}
 	}
 }
 

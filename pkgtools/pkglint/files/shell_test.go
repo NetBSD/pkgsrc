@@ -130,22 +130,30 @@ func (s *Suite) Test_SimpleCommandChecker_handleForbiddenCommand(c *check.C) {
 func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpTool("perl", "PERL5", AtRunTime)
-	t.SetUpTool("perl6", "PERL6", Nowhere)
+	t.SetUpTool("runtime", "RUNTIME", AtRunTime)
+	t.SetUpTool("nowhere", "NOWHERE", Nowhere)
 	mklines := t.NewMkLines("Makefile",
 		MkCvsID,
 		"",
-		"PERL5_VARS_CMD=\t${PERL5:Q}",
-		"PERL5_VARS_CMD=\t${PERL6:Q}",
+		"RUNTIME_Q_CMD=\t${RUNTIME:Q}",
+		"NOWHERE_Q_CMD=\t${NOWHERE:Q}",
+		"RUNTIME_CMD=\t${RUNTIME}",
+		"NOWHERE_CMD=\t${NOWHERE}",
 		"",
 		"pre-configure:",
-		"\t${PERL5_VARS_CMD} -e 'print 12345'")
+		"\t: ${RUNTIME_Q_CMD} ${NOWHERE_Q_CMD}",
+		"\t: ${RUNTIME_CMD} ${NOWHERE_CMD}")
 
 	mklines.Check()
 
-	// FIXME: In PERL5:Q and PERL6:Q, the :Q is wrong.
+	// A tool that appears as the name of a shell command is exactly
+	// intended to be used without quotes, so that its possible
+	// command line options are treated as separate arguments.
+	//
+	// TODO: Add a warning that in lines 3 and 4, the :Q is wrong.
 	t.CheckOutputLines(
-		"WARN: Makefile:4: The \"${PERL6:Q}\" tool is used but not added to USE_TOOLS.")
+		"WARN: Makefile:4: The \"${NOWHERE:Q}\" tool is used but not added to USE_TOOLS.",
+		"WARN: Makefile:6: The \"${NOWHERE}\" tool is used but not added to USE_TOOLS.")
 }
 
 func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable__parameterized(c *check.C) {
@@ -1485,7 +1493,7 @@ func (s *Suite) Test_ShellLineChecker_CheckWord__squot_dollar(c *check.C) {
 
 	ck.CheckWord(ck.mkline.ShellCommand(), false, RunTime)
 
-	// FIXME: Should be parsed correctly. Make passes the dollar through (probably),
+	// XXX: Should be parsed correctly. Make passes the dollar through (probably),
 	//  and the shell parser should complain about the unfinished string literal.
 	t.CheckOutputLines(
 		"WARN: filename.mk:1: Internal pkglint error in ShTokenizer.ShAtom at \"$\" (quoting=s).",
@@ -1649,7 +1657,7 @@ func (s *Suite) Test_ShellLineChecker_unescapeBackticks(c *check.C) {
 	test := func(input string, expectedOutput string, expectedRest string, diagnostics ...string) {
 		ck := t.NewShellLineChecker("# dummy")
 
-		tok := NewShTokenizer(nil, input, false)
+		tok := NewShTokenizer(nil, input)
 		atoms := tok.ShAtoms()
 
 		// Set up the correct quoting mode for the test by skipping
@@ -1765,7 +1773,7 @@ func (s *Suite) Test_ShellLineChecker_checkShVarUsePlain__Wall(c *check.C) {
 
 	mklines.Check()
 
-	// FIXME: It is inconsistent that the check for unquoted shell
+	// XXX: It is inconsistent that the check for unquoted shell
 	//  variables is enabled for CONFIGURE_ARGS (where shell variables
 	//  don't make sense at all) but not for real shell commands.
 	t.CheckOutputLines(

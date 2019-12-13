@@ -840,7 +840,7 @@ func (s *Suite) Test_RedundantScope__branch_with_set_then_set(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-// FIXME: Continue the systematic redundancy tests.
+// TODO: Continue the systematic redundancy tests.
 //
 // Tests where the variables are defined in a .for loop that might not be
 // evaluated at all.

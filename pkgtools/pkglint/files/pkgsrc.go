@@ -494,7 +494,6 @@ func (src *Pkgsrc) initDeprecatedVars() {
 		"NO_WRKSUBDIR":       "Use WRKSRC=${WRKDIR} instead.",
 		"PATCH_SITE_SUBDIR":  "Use some form of PATCHES_SITES instead.",
 		"PATCH_SUM_FILE":     "Use DISTINFO_FILE instead.",
-		"PKG_JVM":            "Use PKG_DEFAULT_JVM instead.",
 		"USE_BUILDLINK2":     "You can just remove it.",
 		"USE_BUILDLINK3":     "You can just remove it.",
 		"USE_CANNA":          "Use the PKG_OPTIONS framework instead.",
@@ -600,9 +599,6 @@ func (src *Pkgsrc) initDeprecatedVars() {
 		"_PKG_SILENT": "Use RUN (with more error checking) instead.",
 		"_PKG_DEBUG":  "Use RUN (with more error checking) instead.",
 		"LICENCE":     "Use LICENSE instead.",
-
-		// November 2007
-		// USE_NCURSES: Include "../../devel/ncurses/buildlink3.mk" instead.
 
 		// December 2007
 		"INSTALLATION_DIRS_FROM_PLIST": "Use AUTO_MKDIRS instead.",

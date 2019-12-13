@@ -1007,7 +1007,7 @@ func (b *MkShBuilder) Redirected(cmd *MkShCommand, redirects ...*MkShRedirection
 
 func (b *MkShBuilder) Token(mktext string) *ShToken {
 	line := NewLine("MkShBuilder.Token.mk", 1, "", &RawLine{1, "\n", "\n"})
-	tokenizer := NewShTokenizer(line, mktext, false)
+	tokenizer := NewShTokenizer(line, mktext)
 	token := tokenizer.ShToken()
 	assertf(tokenizer.parser.EOF(), "Invalid token: %q", tokenizer.parser.Rest())
 	return token

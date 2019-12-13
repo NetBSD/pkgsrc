@@ -221,19 +221,26 @@ func (s *Suite) Test_alignWith(c *check.C) {
 	t := s.Init(c)
 
 	test := func(str, other, expected string) {
-		t.CheckEquals(alignWith(str, other), expected)
+		aligned := alignWith(str, other)
+		t.CheckEquals(aligned, expected)
+		t.CheckEquals(hasPrefix(aligned, str), true)
+
+		// It would be unusual to call this function with a string
+		// that itself ends with space.
+		t.CheckEquals(rtrimHspace(aligned), str)
 	}
 
-	// At least one tab is _always_ added.
-	test("", "", "\t")
+	// The needed alignment may be empty.
+	// In some contexts like the value of a variable assignment, this
+	// should not happen. In other contexts it's ok.
+	test("", "", "")
 
 	test("VAR=", "1234567", "VAR=   ")
 	test("VAR=", "12345678", "VAR=\t")
 	test("VAR=", "123456789", "VAR=\t ")
 
-	// At least one tab is added in any case,
-	// even if the other string is shorter.
-	test("1234567890=", "V=", "1234567890=\t")
+	// If the other string is shorter, no extra tab is added.
+	test("1234567890=", "V=", "1234567890=")
 }
 
 func (s *Suite) Test_indent(c *check.C) {
@@ -252,6 +259,9 @@ func (s *Suite) Test_indent(c *check.C) {
 	test(15, "\t       ")
 	test(16, "\t\t")
 	test(72, "\t\t\t\t\t\t\t\t\t")
+	test(79, "\t\t\t\t\t\t\t\t\t       ")
+	test(80, "\t\t\t\t\t\t\t\t\t\t")
+	test(87, "\t\t\t\t\t\t\t\t\t\t       ")
 }
 
 func (s *Suite) Test_alignmentAfter(c *check.C) {
@@ -310,44 +320,6 @@ func (s *Suite) Test_varnameParam(c *check.C) {
 	t.CheckEquals(varnameParam("VAR"), "")
 	t.CheckEquals(varnameParam("VAR.param"), "param")
 	t.CheckEquals(varnameParam(".CURDIR"), "")
-}
-
-func (s *Suite) Test_mkopSubst__middle(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(mkopSubst("pkgname", false, "kgna", false, "ri", ""), "prime")
-	t.CheckEquals(mkopSubst("pkgname", false, "pkgname", false, "replacement", ""), "replacement")
-	t.CheckEquals(mkopSubst("aaaaaaa", false, "a", false, "b", ""), "baaaaaa")
-}
-
-func (s *Suite) Test_mkopSubst__left(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(mkopSubst("pkgname", true, "kgna", false, "ri", ""), "pkgname")
-	t.CheckEquals(mkopSubst("pkgname", true, "pkgname", false, "replacement", ""), "replacement")
-}
-
-func (s *Suite) Test_mkopSubst__right(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(mkopSubst("pkgname", false, "kgna", true, "ri", ""), "pkgname")
-	t.CheckEquals(mkopSubst("pkgname", false, "pkgname", true, "replacement", ""), "replacement")
-}
-
-func (s *Suite) Test_mkopSubst__left_and_right(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(mkopSubst("pkgname", true, "kgna", true, "ri", ""), "pkgname")
-	t.CheckEquals(mkopSubst("pkgname", false, "pkgname", false, "replacement", ""), "replacement")
-}
-
-func (s *Suite) Test_mkopSubst__gflag(c *check.C) {
-	t := s.Init(c)
-
-	t.CheckEquals(mkopSubst("aaaaa", false, "a", false, "b", "g"), "bbbbb")
-	t.CheckEquals(mkopSubst("aaaaa", true, "a", false, "b", "g"), "baaaa")
-	t.CheckEquals(mkopSubst("aaaaa", false, "a", true, "b", "g"), "aaaab")
-	t.CheckEquals(mkopSubst("aaaaa", true, "a", true, "b", "g"), "aaaaa")
 }
 
 func (s *Suite) Test__regex_ReplaceFirst(c *check.C) {
@@ -520,18 +492,33 @@ func (s *Suite) Test_Scope_Define(c *check.C) {
 	t := s.Init(c)
 
 	scope := NewScope()
-	scope.Define("BUILD_DIRS", t.NewMkLine("file.mk", 121, "BUILD_DIRS=\tone two three"))
 
-	t.CheckEquals(scope.LastValue("BUILD_DIRS"), "one two three")
+	test := func(line string, ok bool, value string) {
+		scope.Define("BUILD_DIRS", t.NewMkLine("file.mk", 123, line))
 
-	scope.Define("BUILD_DIRS", t.NewMkLine("file.mk", 123, "BUILD_DIRS+=\tfour"))
+		actualValue, actualFound := scope.LastValueFound("BUILD_DIRS")
 
-	t.CheckEquals(scope.LastValue("BUILD_DIRS"), "one two three four")
+		t.CheckEquals(actualValue, value)
+		t.CheckEquals(actualFound, ok)
+	}
+
+	test("BUILD_DIRS?=\tdefault",
+		true, "default")
+
+	test(
+		"BUILD_DIRS=\tone two three",
+		true, "one two three")
+
+	test(
+		"BUILD_DIRS+=\tfour",
+		true, "one two three four")
 
 	// Later default assignments do not have an effect.
-	scope.Define("BUILD_DIRS", t.NewMkLine("file.mk", 123, "BUILD_DIRS?=\tdefault"))
+	test("BUILD_DIRS?=\tdefault",
+		true, "one two three four")
 
-	t.CheckEquals(scope.LastValue("BUILD_DIRS"), "one two three four")
+	test("BUILD_DIRS!=\techo dynamic",
+		false, "")
 }
 
 func (s *Suite) Test_Scope_Mentioned(c *check.C) {

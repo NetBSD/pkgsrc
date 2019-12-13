@@ -209,7 +209,7 @@ func (s *Suite) Test_BasicType_NeedsQ(c *check.C) {
 	// Typically safe, seldom used in practice.
 	test("DISTFILES", false)
 
-	// XXX: BtIdentifier is used for several other purposes
+	test("SUBST_CLASSES", false)
 	test("PLIST_VARS", false)
 
 	test("MAKE_JOBS", false) // XXX: What if MAKE_JOBS is undefined?

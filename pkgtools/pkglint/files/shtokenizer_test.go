@@ -96,7 +96,7 @@ func (s *Suite) Test_ShTokenizer__fuzzing(c *check.C) {
 
 	defer fuzzer.CheckOk()
 	for i := 0; i < 1000; i++ {
-		tokenizer := NewShTokenizer(line, fuzzer.Generate(50), false)
+		tokenizer := NewShTokenizer(line, fuzzer.Generate(50))
 		tokenizer.ShAtoms()
 		t.Output() // Discard the output, only react on panics.
 	}
@@ -110,7 +110,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 	// atoms, and returns the remaining text.
 	testRest := func(s string, expectedAtoms []*ShAtom, expectedRest string) {
 		line := t.NewLine("filename.mk", 1, "")
-		p := NewShTokenizer(line, s, false)
+		p := NewShTokenizer(line, s)
 
 		actualAtoms := p.ShAtoms()
 
@@ -540,7 +540,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom__quoting(c *check.C) {
 
 	test := func(input, expectedOutput string) {
 		line := t.NewLine("filename.mk", 1, "")
-		p := NewShTokenizer(line, input, false)
+		p := NewShTokenizer(line, input)
 		q := shqPlain
 		result := ""
 		for {
@@ -580,7 +580,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom__internal_error(c *check.C) {
 	t := s.Init(c)
 
 	line := t.NewLine("filename.mk", 123, "\ttoken")
-	tok := NewShTokenizer(line, line.Text, true)
+	tok := NewShTokenizer(line, line.Text)
 	t.ExpectPanicMatches(
 		func() { tok.ShAtom(^ShQuoting(0)) },
 		// Normalize the panic message, for Go < 12 if I remember correctly.
@@ -591,7 +591,7 @@ func (s *Suite) Test_ShTokenizer_shVarUse(c *check.C) {
 	t := s.Init(c)
 
 	test := func(input string, output *ShAtom, rest string) {
-		tok := NewShTokenizer(nil, input, false)
+		tok := NewShTokenizer(nil, input)
 		actual := tok.shVarUse(shqPlain)
 
 		t.CheckDeepEquals(actual, output)
@@ -645,7 +645,7 @@ func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
 	// tokens, and returns the remaining text.
 	testRest := func(str string, expected ...string) string {
 		line := t.NewLine("testRest.mk", 1, "")
-		p := NewShTokenizer(line, str, false)
+		p := NewShTokenizer(line, str)
 		for _, exp := range expected {
 			t.CheckEquals(p.ShToken().MkText, exp)
 		}
@@ -654,7 +654,7 @@ func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
 
 	test := func(str string, expected ...string) {
 		line := t.NewLine("test.mk", 1, "")
-		p := NewShTokenizer(line, str, false)
+		p := NewShTokenizer(line, str)
 		for _, exp := range expected {
 			t.CheckEquals(p.ShToken().MkText, exp)
 		}
@@ -664,7 +664,7 @@ func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
 
 	testNil := func(str string) {
 		line := t.NewLine("testNil.mk", 1, "")
-		p := NewShTokenizer(line, str, false)
+		p := NewShTokenizer(line, str)
 		c.Check(p.ShToken(), check.IsNil)
 		t.CheckEquals(p.Rest(), "")
 		t.CheckOutputEmpty()
