@@ -116,7 +116,7 @@ func (p Path) ContainsText(contained string) bool {
 // ContainsPath returns whether the sub path is part of the path.
 // The basic unit of comparison is a path component, not a character.
 //
-// Note that the paths used in pkglint may contains seemingly unnecessary
+// Note that the paths used in pkglint may contain seemingly unnecessary
 // components, like "../../wip/mk/../../devel/gettext-lib". To ignore these
 // components, use ContainsPathCanonical instead.
 func (p Path) ContainsPath(sub Path) bool {

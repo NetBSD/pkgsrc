@@ -39,23 +39,30 @@ func (p *MkLexer) MkTokens() ([]*MkToken, string) {
 
 	var tokens []*MkToken
 	for !lexer.EOF() {
-		mark := lexer.Mark()
-		if varuse := p.VarUse(); varuse != nil {
-			tokens = append(tokens, &MkToken{Text: lexer.Since(mark), Varuse: varuse})
-			continue
+		token := p.MkToken()
+		if token == nil {
+			break
 		}
-
-		for lexer.NextBytesFunc(func(b byte) bool { return b != '$' }) != "" || lexer.SkipString("$$") {
-		}
-		text := lexer.Since(mark)
-		if text != "" {
-			tokens = append(tokens, &MkToken{Text: text})
-			continue
-		}
-
-		break
+		tokens = append(tokens, token)
 	}
 	return tokens, lexer.Rest()
+}
+
+func (p *MkLexer) MkToken() *MkToken {
+	lexer := p.lexer
+
+	mark := lexer.Mark()
+	if varuse := p.VarUse(); varuse != nil {
+		return &MkToken{Text: lexer.Since(mark), Varuse: varuse}
+	}
+
+	for lexer.NextBytesFunc(func(b byte) bool { return b != '$' }) != "" || lexer.SkipString("$$") {
+	}
+	text := lexer.Since(mark)
+	if text != "" {
+		return &MkToken{Text: text}
+	}
+	return nil
 }
 
 // VarUse parses a variable expression like ${VAR}, $@, ${VAR:Mpattern:Ox}.

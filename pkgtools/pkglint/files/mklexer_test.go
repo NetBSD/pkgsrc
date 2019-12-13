@@ -101,31 +101,52 @@ func (s *Suite) Test_MkLexer_MkTokens(c *check.C) {
 		"")
 }
 
+func (s *Suite) Test_MkLexer_MkToken(c *check.C) {
+	t := s.Init(c)
+
+	test := func(input string, expectedToken *MkToken, expectedRest string, diagnostics ...string) {
+		lexer := NewMkLexer(input, t.NewLine("Test_MkLexer_VarUse.mk", 1, ""))
+		actualToken := lexer.MkToken()
+		rest := lexer.Rest()
+
+		t.CheckDeepEquals(actualToken, expectedToken)
+		t.CheckEquals(rest, expectedRest)
+		t.CheckOutput(diagnostics)
+	}
+
+	test("${VARIABLE}rest",
+		&MkToken{"${VARIABLE}", NewMkVarUse("VARIABLE")}, "rest")
+
+	test("$@rest",
+		&MkToken{"$@", NewMkVarUse("@")}, "rest")
+
+	test("text$$",
+		&MkToken{"text$$", nil}, "")
+
+	test("text$$${REST}",
+		&MkToken{"text$$", nil}, "${REST}")
+
+	test("",
+		nil, "")
+}
+
 func (s *Suite) Test_MkLexer_VarUse(c *check.C) {
 	t := s.Init(c)
 	b := NewMkTokenBuilder()
 	varuse := b.VaruseToken
 	varuseText := b.VaruseTextToken
 
-	// FIXME: This function does much more than necessary to test VarUse.
-	testRest := func(input string, expectedTokens []*MkToken, expectedRest string, diagnostics ...string) {
-		line := t.NewLines("Test_MkLexer_VarUse.mk", input).Lines[0]
-		p := NewMkLexer(input, line)
+	testRest := func(input string, expectedToken *MkToken, expectedRest string, diagnostics ...string) {
+		lexer := NewMkLexer(input, t.NewLine("Test_MkLexer_VarUse.mk", 1, ""))
+		actualToken := lexer.MkToken()
+		rest := lexer.Rest()
 
-		actualTokens, rest := p.MkTokens()
-
-		t.CheckDeepEquals(actualTokens, expectedTokens)
-		for i, expectedToken := range expectedTokens {
-			if i < len(actualTokens) {
-				t.CheckDeepEquals(*actualTokens[i], *expectedToken)
-				t.CheckDeepEquals(actualTokens[i].Varuse, expectedToken.Varuse)
-			}
-		}
+		t.CheckDeepEquals(actualToken, expectedToken)
 		t.CheckEquals(rest, expectedRest)
 		t.CheckOutput(diagnostics)
 	}
 	test := func(input string, expectedToken *MkToken, diagnostics ...string) {
-		testRest(input, b.Tokens(expectedToken), "", diagnostics...)
+		testRest(input, expectedToken, "", diagnostics...)
 	}
 
 	t.Use(testRest, test, varuse, varuseText)
@@ -597,7 +618,7 @@ func (s *Suite) Test_MkLexer_varUseModifier__S_parse_error(c *check.C) {
 	mod := p.varUseModifier("VAR", '}')
 
 	t.CheckEquals(mod, "")
-	// FIXME: The "S," has just disappeared.
+	// XXX: The "S," has just disappeared.
 	t.CheckEquals(p.Rest(), "}")
 
 	t.CheckOutputLines(

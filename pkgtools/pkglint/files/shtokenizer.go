@@ -7,14 +7,8 @@ type ShTokenizer struct {
 	inWord bool
 }
 
-func NewShTokenizer(diag Autofixer, text string, emitWarnings bool) *ShTokenizer {
-	// TODO: Switching to NewMkParser is nontrivial since emitWarnings must equal (line != nil).
-	// assert((line != nil) == emitWarnings)
-	if diag != nil {
-		emitWarnings = true
-	}
-	mklex := NewMkLexer(text, diag)
-	return &ShTokenizer{mklex, false}
+func NewShTokenizer(diag Autofixer, text string) *ShTokenizer {
+	return &ShTokenizer{NewMkLexer(text, diag), false}
 }
 
 // ShAtom parses a basic building block of a shell program.

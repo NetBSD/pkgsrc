@@ -1484,7 +1484,6 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__options_mk(c *check.C) {
 func (s *Suite) Test_Package_checkfilePackageMakefile__prefs_indirect(c *check.C) {
 	t := s.Init(c)
 
-	// FIXME: remove t.SetUpOption("option", "An example option")
 	t.SetUpPackage("category/package",
 		".if ${OPSYS} == NetBSD", // 20: OPSYS is not yet defined here.
 		".endif",                 // 21

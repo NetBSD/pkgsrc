@@ -9,6 +9,7 @@ import (
 	"netbsd.org/pkglint/regex"
 	"os"
 	"regexp"
+	"strconv"
 	"strings"
 	"testing"
 
@@ -139,10 +140,13 @@ func Test__qa(t *testing.T) {
 	ck.Configure("tools.go", "*", "*", -intqa.EMissingTest)          // TODO
 	ck.Configure("util.go", "*", "*", -intqa.EMissingTest)           // TODO
 	ck.Configure("var.go", "*", "*", -intqa.EMissingTest)            // TODO
-	ck.Configure("varalignblock.go", "*", "*", -intqa.EMissingTest)  // TODO
-	ck.Configure("vardefs.go", "*", "*", -intqa.EMissingTest)        // TODO
-	ck.Configure("vargroups.go", "*", "*", -intqa.EMissingTest)      // TODO
-	ck.Configure("vartype.go", "*", "*", -intqa.EMissingTest)        // TODO
+
+	ck.Configure("varalignblock.go", "*", "*", -intqa.EMissingTest)            // TODO
+	ck.Configure("varalignblock.go", "varalignLine", "*", +intqa.EMissingTest) // TODO: remove as redundant
+
+	ck.Configure("vardefs.go", "*", "*", -intqa.EMissingTest)   // TODO
+	ck.Configure("vargroups.go", "*", "*", -intqa.EMissingTest) // TODO
+	ck.Configure("vartype.go", "*", "*", -intqa.EMissingTest)   // TODO
 
 	// For now, don't require tests for all the test code.
 	// Having good coverage for the main code is more important.
@@ -165,6 +169,7 @@ func Test__qa(t *testing.T) {
 	// The Suite type is used for testing all parts of pkglint.
 	// Therefore its test methods may be everywhere.
 	ck.Configure("*.go", "Suite", "*", -intqa.EMethodsSameFile)
+	ck.Configure("*.go", "Tester", "*", -intqa.EMethodsSameFile)
 
 	ck.Check()
 }
@@ -858,8 +863,18 @@ func (t *Tester) CheckEquals(actual interface{}, expected interface{}) bool {
 	return t.c.Check(actual, check.Equals, expected)
 }
 
+func (t *Tester) CheckEqualsf(actual interface{}, expected interface{}, format string, args ...interface{}) bool {
+	return t.c.Check(actual, check.Equals, expected,
+		check.Commentf(format, args...))
+}
+
 func (t *Tester) CheckDeepEquals(actual interface{}, expected interface{}) bool {
 	return t.c.Check(actual, check.DeepEquals, expected)
+}
+
+func (t *Tester) CheckDeepEqualsf(actual interface{}, expected interface{}, format string, args ...interface{}) bool {
+	return t.c.Check(actual, check.DeepEquals, expected,
+		check.Commentf(format, args...))
 }
 
 // InternalErrorf reports a consistency error in the tests.
@@ -1097,7 +1112,6 @@ func (t *Tester) CheckOutputLines(expectedLines ...string) {
 func (t *Tester) CheckOutputLinesMatching(pattern regex.Pattern, expectedLines ...string) {
 	output := t.Output()
 	var actualLines []string
-	actualLines = append(actualLines)
 	for _, line := range strings.Split(strings.TrimSuffix(output, "\n"), "\n") {
 		if matches(line, pattern) {
 			actualLines = append(actualLines, line)
@@ -1302,6 +1316,22 @@ func (t *Tester) CheckFileLinesDetab(filename RelPath, lines ...string) {
 	t.CheckDeepEquals(detabbedLines, lines)
 }
 
+// CheckDotColumns verifies that each appearance of "..34" is indeed
+// right-aligned at column 34, taking tabs into account.
+// Columns are zero-based.
+func (t *Tester) CheckDotColumns(lines ...string) {
+	for index, line := range lines {
+		ms := regcomp(`\.\.(\d+)`).FindAllStringSubmatchIndex(line, -1)
+		for _, m := range ms {
+			prefix := line[:m[1]]
+			width := tabWidth(prefix)
+			num, err := strconv.Atoi(line[m[2]:m[3]])
+			assertNil(err, "")
+			t.CheckEqualsf(num, width, "lines[%d]", index)
+		}
+	}
+}
+
 // Use marks all passed functions as used for the Go compiler.
 //
 // This means that the test cases that follow do not have to use each of them,
@@ -1340,4 +1370,13 @@ func (t *Tester) ReportUncheckedOutput() {
 	}
 	_, _ = fmt.Fprintf(&msg, "\n")
 	_, _ = os.Stderr.WriteString(msg.String())
+}
+
+// SplitStringsBool unpacks the given varargs into a string slice and a bool.
+func (t *Tester) SplitStringsBool(data []interface{}) ([]string, bool) {
+	var strs []string
+	for _, text := range data[:len(data)-1] {
+		strs = append(strs, text.(string))
+	}
+	return strs, data[len(data)-1].(bool)
 }
