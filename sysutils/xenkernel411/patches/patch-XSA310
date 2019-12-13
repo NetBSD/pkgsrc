@@ -1,0 +1,348 @@
+$NetBSD: patch-XSA310,v 1.1 2019/12/13 13:44:21 bouyer Exp $
+
+From 7c537dc8d28a03064a14171ed5c6fc329531816a Mon Sep 17 00:00:00 2001
+From: George Dunlap <george.dunlap@citrix.com>
+Date: Tue, 19 Nov 2019 11:40:34 +0000
+Subject: [PATCH 1/3] x86/mm: Set old_guest_table when destroying vcpu
+ pagetables
+
+Changeset 6c4efc1eba ("x86/mm: Don't drop a type ref unless you held a
+ref to begin with"), part of XSA-299, changed the calling discipline
+of put_page_type() such that if put_page_type() returned -ERESTART
+(indicating a partially de-validated page), subsequent calls to
+put_page_type() must be called with PTF_partial_set.  If called on a
+partially de-validated page but without PTF_partial_set, Xen will
+BUG(), because to do otherwise would risk opening up the kind of
+privilege escalation bug described in XSA-299.
+
+One place this was missed was in vcpu_destroy_pagetables().
+put_page_and_type_preemptible() is called, but on -ERESTART, the
+entire operation is simply restarted, causing put_page_type() to be
+called on a partially de-validated page without PTF_partial_set.  The
+result was that if such an operation were interrupted, Xen would hit a
+BUG().
+
+Fix this by having vcpu_destroy_pagetables() consistently pass off
+interrupted de-validations to put_old_page_type():
+- Unconditionally clear references to the page, even if
+  put_page_and_type failed
+- Set old_guest_table and old_guest_table_partial appropriately
+
+While here, do some refactoring:
+
+ - Move clearing of arch.cr3 to the top of the function
+
+ - Now that clearing is unconditional, move the unmap to the same
+   conditional as the l4tab mapping.  This also allows us to reduce
+   the scope of the l4tab variable.
+
+ - Avoid code duplication by looping to drop references on
+   guest_table_user
+
+This is part of XSA-310.
+
+Reported-by: Sarah Newman <srn@prgmr.com>
+Signed-off-by: George Dunlap <george.dunlap@citrix.com>
+Reviewed-by: Jan Beulich <jbeulich@suse.com>
+---
+Added in v2.
+
+Changes in v3:
+- Minor comment / whitespace fixes
+---
+ xen/arch/x86/mm.c | 75 +++++++++++++++++++++++++++++------------------
+ 1 file changed, 47 insertions(+), 28 deletions(-)
+
+diff --git a/xen/arch/x86/mm.c b/xen/arch/x86/mm.c
+index 01393fb0da..a759afc9e3 100644
+--- xen/arch/x86/mm.c.orig
++++ xen/arch/x86/mm.c
+@@ -3142,40 +3142,36 @@ int put_old_guest_table(struct vcpu *v)
+ int vcpu_destroy_pagetables(struct vcpu *v)
+ {
+     unsigned long mfn = pagetable_get_pfn(v->arch.guest_table);
+-    struct page_info *page;
+-    l4_pgentry_t *l4tab = NULL;
++    struct page_info *page = NULL;
+     int rc = put_old_guest_table(v);
++    bool put_guest_table_user = false;
+ 
+     if ( rc )
+         return rc;
+ 
++    v->arch.cr3 = 0;
++
++    /*
++     * Get the top-level guest page; either the guest_table itself, for
++     * 64-bit, or the top-level l4 entry for 32-bit.  Either way, remove
++     * the reference to that page.
++     */
+     if ( is_pv_32bit_vcpu(v) )
+     {
+-        l4tab = map_domain_page(_mfn(mfn));
+-        mfn = l4e_get_pfn(*l4tab);
+-    }
++        l4_pgentry_t *l4tab = map_domain_page(_mfn(mfn));
+ 
+-    if ( mfn )
+-    {
+-        page = mfn_to_page(_mfn(mfn));
+-        if ( paging_mode_refcounts(v->domain) )
+-            put_page(page);
+-        else
+-            rc = put_page_and_type_preemptible(page);
+-    }
+-
+-    if ( l4tab )
+-    {
+-        if ( !rc )
+-            l4e_write(l4tab, l4e_empty());
++        mfn = l4e_get_pfn(*l4tab);
++        l4e_write(l4tab, l4e_empty());
+         unmap_domain_page(l4tab);
+     }
+-    else if ( !rc )
++    else
+     {
+         v->arch.guest_table = pagetable_null();
++        put_guest_table_user = true;
++    }
+ 
+-        /* Drop ref to guest_table_user (from MMUEXT_NEW_USER_BASEPTR) */
+-        mfn = pagetable_get_pfn(v->arch.guest_table_user);
++    /* Free that page if non-zero */
++    do {
+         if ( mfn )
+         {
+             page = mfn_to_page(_mfn(mfn));
+@@ -3183,18 +3179,41 @@ int vcpu_destroy_pagetables(struct vcpu *v)
+                 put_page(page);
+             else
+                 rc = put_page_and_type_preemptible(page);
++            mfn = 0;
+         }
+-        if ( !rc )
+-            v->arch.guest_table_user = pagetable_null();
+-    }
+ 
+-    v->arch.cr3 = 0;
++        if ( !rc && put_guest_table_user )
++        {
++            /* Drop ref to guest_table_user (from MMUEXT_NEW_USER_BASEPTR) */
++            mfn = pagetable_get_pfn(v->arch.guest_table_user);
++            v->arch.guest_table_user = pagetable_null();
++            put_guest_table_user = false;
++        }
++    } while ( mfn );
+ 
+     /*
+-     * put_page_and_type_preemptible() is liable to return -EINTR. The
+-     * callers of us expect -ERESTART so convert it over.
++     * If a "put" operation was interrupted, finish things off in
++     * put_old_guest_table() when the operation is restarted.
+      */
+-    return rc != -EINTR ? rc : -ERESTART;
++    switch ( rc )
++    {
++    case -EINTR:
++    case -ERESTART:
++        v->arch.old_guest_ptpg = NULL;
++        v->arch.old_guest_table = page;
++        v->arch.old_guest_table_partial = (rc == -ERESTART);
++        rc = -ERESTART;
++        break;
++    default:
++        /*
++         * Failure to 'put' a page may cause it to leak, but that's
++         * less bad than a crash.
++         */
++        ASSERT(rc == 0);
++        break;
++    }
++
++    return rc;
+ }
+ 
+ int new_guest_cr3(mfn_t mfn)
+-- 
+2.24.0
+
+From 128cb126aee9b4a2855ab898fdfbfe7009fbf1f5 Mon Sep 17 00:00:00 2001
+From: George Dunlap <george.dunlap@citrix.com>
+Date: Thu, 31 Oct 2019 11:17:38 +0000
+Subject: [PATCH 2/3] x86/mm: alloc/free_lN_table: Retain partial_flags on
+ -EINTR
+
+When validating or de-validating pages (in alloc_lN_table and
+free_lN_table respectively), the `partial_flags` local variable is
+used to keep track of whether the "current" PTE started the entire
+operation in a "may be partial" state.
+
+One of the patches in XSA-299 addressed the fact that it is possible
+for a previously-partially-validated entry to subsequently be found to
+have invalid entries (indicated by returning -EINVAL); in which case
+page->partial_flags needs to be set to indicate that the current PTE
+may have the partial bit set (and thus _put_page_type() should be
+called with PTF_partial_set).
+
+Unfortunately, the patches in XSA-299 assumed that once
+put_page_from_lNe() returned -ERESTART on a page, it was not possible
+for it to return -EINTR.  This turns out to be true for
+alloc_lN_table() and free_lN_table, but not for _get_page_type() and
+_put_page_type(): both can return -EINTR when called on pages with
+PGT_partial set.  In these cases, the pages PGT_partial will still be
+set; failing to set partial_flags appropriately may allow an attacker
+to do a privilege escalation similar to those described in XSA-299.
+
+Fix this by always copying the local partial_flags variable into
+page->partial_flags when exiting early.
+
+NB that on the "get" side, no adjustment to nr_validated_entries is
+needed: whether pte[i] is partially validated or entirely
+un-validated, we want nr_validated_entries = i.  On the "put" side,
+however, we need to adjust nr_validated_entries appropriately: if
+pte[i] is entirely validated, we want nr_validated_entries = i + 1; if
+pte[i] is partially validated, we want nr_validated_entries = i.
+
+This is part of XSA-310.
+
+Reported-by: Sarah Newman <srn@prgmr.com>
+Signed-off-by: George Dunlap <george.dunlap@citrix.com>
+Reviewed-by: Jan Beulich <jbeulich@suse.com>
+---
+ xen/arch/x86/mm.c | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/xen/arch/x86/mm.c b/xen/arch/x86/mm.c
+index a759afc9e3..97c8d73b7b 100644
+--- xen/arch/x86/mm.c.orig
++++ xen/arch/x86/mm.c
+@@ -1557,7 +1557,7 @@ static int alloc_l2_table(struct page_info *page, unsigned long type)
+         if ( rc == -EINTR && i )
+         {
+             page->nr_validated_ptes = i;
+-            page->partial_flags = 0;
++            page->partial_flags = partial_flags;;
+             rc = -ERESTART;
+         }
+         else if ( rc < 0 && rc != -EINTR )
+@@ -1660,7 +1660,7 @@ static int alloc_l3_table(struct page_info *page)
+         else if ( rc == -EINTR && i )
+         {
+             page->nr_validated_ptes = i;
+-            page->partial_flags = 0;
++            page->partial_flags = partial_flags;
+             rc = -ERESTART;
+         }
+         if ( rc < 0 )
+@@ -1982,8 +1982,8 @@ static int free_l2_table(struct page_info *page)
+     }
+     else if ( rc == -EINTR && i < L2_PAGETABLE_ENTRIES - 1 )
+     {
+-        page->nr_validated_ptes = i + 1;
+-        page->partial_flags = 0;
++        page->nr_validated_ptes = i + !(partial_flags & PTF_partial_set);
++        page->partial_flags = partial_flags;
+         rc = -ERESTART;
+     }
+ 
+@@ -2030,8 +2030,8 @@ static int free_l3_table(struct page_info *page)
+     }
+     else if ( rc == -EINTR && i < L3_PAGETABLE_ENTRIES - 1 )
+     {
+-        page->nr_validated_ptes = i + 1;
+-        page->partial_flags = 0;
++        page->nr_validated_ptes = i + !(partial_flags & PTF_partial_set);
++        page->partial_flags = partial_flags;
+         rc = -ERESTART;
+     }
+     return rc > 0 ? 0 : rc;
+@@ -2061,8 +2061,8 @@ static int free_l4_table(struct page_info *page)
+     }
+     else if ( rc == -EINTR && i < L4_PAGETABLE_ENTRIES - 1 )
+     {
+-        page->nr_validated_ptes = i + 1;
+-        page->partial_flags = 0;
++        page->nr_validated_ptes = i + !(partial_flags & PTF_partial_set);
++        page->partial_flags = partial_flags;
+         rc = -ERESTART;
+     }
+ 
+-- 
+2.24.0
+
+From e9f835982a726ae16997c566b5eafab74f8b4cb7 Mon Sep 17 00:00:00 2001
+From: George Dunlap <george.dunlap@citrix.com>
+Date: Mon, 28 Oct 2019 14:33:51 +0000
+Subject: [PATCH 3/3] x86/mm: relinquish_memory: Grab an extra type ref when
+ setting PGT_partial
+
+The PGT_partial bit in page->type_info holds both a type count and a
+general ref count.  During domain tear-down, when free_page_type()
+returns -ERESTART, relinquish_memory() correctly handles the general
+ref count, but fails to grab an extra type count when setting
+PGT_partial.  When this bit is eventually cleared, type_count underflows
+and triggers the following BUG in page_alloc.c:free_domheap_pages():
+
+    BUG_ON((pg[i].u.inuse.type_info & PGT_count_mask) != 0);
+
+As far as we can tell, this page underflow cannot be exploited any any
+other way: The page can't be used as a pagetable by the dying domain
+because it's dying; it can't be used as a pagetable by any other
+domain since it belongs to the dying domain; and ownership can't
+transfer to any other domain without hitting the BUG_ON() in
+free_domheap_pages().
+
+(steal_page() won't work on a page in this state, since it requires
+PGC_allocated to be set, and PGC_allocated will already have been
+cleared.)
+
+Fix this by grabbing an extra type ref if setting PGT_partial in
+relinquish_memory.
+
+This is part of XSA-310.
+
+Reported-by: Sarah Newman <srn@prgmr.com>
+Signed-off-by: George Dunlap <george.dunlap@citrix.com>
+Acked-by: Jan Beulich <jbeulich@suse.com>
+---
+v2:
+- Move discussion of potential exploits into the commit message
+- Keep PGT_partial and put_page() ordering
+---
+ xen/arch/x86/domain.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+
+diff --git a/xen/arch/x86/domain.c b/xen/arch/x86/domain.c
+index f1dd86e12e..51880fc50d 100644
+--- xen/arch/x86/domain.c.orig
++++ xen/arch/x86/domain.c
+@@ -2049,6 +2049,25 @@ static int relinquish_memory(
+                     goto out;
+                 case -ERESTART:
+                     page_list_add(page, list);
++                    /*
++                     * PGT_partial holds a type ref and a general ref.
++                     * If we came in with PGT_partial set, then we 1)
++                     * don't need to grab an extra type count, and 2)
++                     * do need to drop the extra page ref we grabbed
++                     * at the top of the loop.  If we didn't come in
++                     * with PGT_partial set, we 1) do need to drab an
++                     * extra type count, but 2) can transfer the page
++                     * ref we grabbed above to it.
++                     *
++                     * Note that we must increment type_info before
++                     * setting PGT_partial.  Theoretically it should
++                     * be safe to drop the page ref before setting
++                     * PGT_partial, but do it afterwards just to be
++                     * extra safe.
++                     */
++                    if ( !(x & PGT_partial) )
++                        page->u.inuse.type_info++;
++                    smp_wmb();
+                     page->u.inuse.type_info |= PGT_partial;
+                     if ( x & PGT_partial )
+                         put_page(page);
+-- 
+2.24.0
+
