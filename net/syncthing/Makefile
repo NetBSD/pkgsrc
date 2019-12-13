@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2019/11/13 15:51:00 nia Exp $
+# $NetBSD: Makefile,v 1.100 2019/12/13 07:43:49 bsiegert Exp $
 
 # Upstream used to frequently break protocol compatibility, but since
 # 2018 or so this has been much better.  While users of pkgsrc
@@ -19,6 +19,7 @@
 # a fuller explanation.
 DISTNAME=	syncthing-source-v1.3.1
 PKGNAME=	${DISTNAME:S,source-v,,}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
