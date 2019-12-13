@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/12/09 04:51:57 gutteridge Exp $
+# $NetBSD: Makefile,v 1.17 2019/12/13 00:47:23 gutteridge Exp $
 
 DISTNAME=	guile-2.2.6
 PKGNAME=	${DISTNAME:S/guile/guile22/}
@@ -42,6 +42,7 @@ INFO_FILES=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 USE_TOOLS.Darwin+=	gsed
+USE_TOOLS.SunOS+=	gsed
 
 PKGCONFIG_OVERRIDE+=	meta/guile-2.2.pc.in
 # known broken: test-loose-ends on NetBSD/current
