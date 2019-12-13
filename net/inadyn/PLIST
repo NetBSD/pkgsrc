@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2016/05/29 22:32:11 abs Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/12/13 21:52:04 dmcmahill Exp $
 man/man5/inadyn.conf.5
 man/man8/inadyn.8
 sbin/inadyn
-share/doc/inadyn/AUTHORS
 share/doc/inadyn/COPYING
-share/doc/inadyn/ChangeLog
-share/doc/inadyn/NEWS
-share/doc/inadyn/README
+share/doc/inadyn/ChangeLog.md
+share/doc/inadyn/README.md
+share/doc/inadyn/examples/README.md
+share/doc/inadyn/examples/custom.conf
+share/doc/inadyn/examples/dyndns.conf
+share/doc/inadyn/examples/freedns.conf
+share/doc/inadyn/examples/freemyip.conf
+share/doc/inadyn/examples/inadyn.conf
