@@ -676,7 +676,7 @@ func (cv *VartypeCheck) Homepage() {
 
 // Identifier checks for valid identifiers in various contexts, limiting the
 // valid characters to A-Za-z0-9_.
-func (cv *VartypeCheck) Identifier() {
+func (cv *VartypeCheck) IdentifierDirect() {
 	if cv.Op == opUseMatch {
 		if cv.Value == cv.ValueNoVar && !matches(cv.Value, `^[\w*\-?\[\]]+$`) {
 			cv.Warnf("Invalid identifier pattern %q for %s.", cv.Value, cv.Varname)
@@ -685,8 +685,8 @@ func (cv *VartypeCheck) Identifier() {
 	}
 
 	if cv.Value != cv.ValueNoVar {
-		// TODO: Activate this warning again, or document why that is not useful.
-		//  line.logWarning("Identifiers should be given directly.")
+		cv.Errorf("Identifiers for %s must not refer to other variables.", cv.Varname)
+		return
 	}
 
 	switch {
@@ -698,6 +698,14 @@ func (cv *VartypeCheck) Identifier() {
 
 	default:
 		cv.Warnf("Invalid identifier %q.", cv.Value)
+	}
+}
+
+// Identifier checks for valid identifiers in various contexts, limiting the
+// valid characters to A-Za-z0-9_.
+func (cv *VartypeCheck) IdentifierIndirect() {
+	if cv.Value == cv.ValueNoVar {
+		cv.IdentifierDirect()
 	}
 }
 

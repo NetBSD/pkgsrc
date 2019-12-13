@@ -141,30 +141,8 @@ import (
 //      dürfen die weiteren Fortsetzungszeilen weiter eingerückt sein als die erste.
 //      Ihre Einrückung besteht aus Tabs, gefolgt von 0 bis 7 Leerzeichen.
 type VaralignBlock struct {
-	infos []*varalignLine
-	skip  bool
-}
-
-type varalignLine struct {
-	mkline   *MkLine
-	rawIndex int
-
-	// Is true for multilines that don't have a value in their first
-	// physical line.
-	//
-	// The follow-up lines of these lines may be indented with as few
-	// as a single tab. Example:
-	//  VAR= \
-	//          value1 \
-	//          value2
-	// In all other lines, the indentation must be at least the indentation
-	// of the first value found.
-	multiEmpty bool
-
-	// Whether the line is so long that it may use a single tab as indentation.
-	long bool
-
-	varalignParts
+	mkinfos []*varalignMkLine
+	skip    bool
 }
 
 func (va *VaralignBlock) Process(mkline *MkLine) {
@@ -206,6 +184,7 @@ func (va *VaralignBlock) processVarassign(mkline *MkLine) {
 	}
 
 	follow := false
+	var infos []*varalignLine
 	for i, raw := range mkline.raw {
 		parts := NewVaralignSplitter().split(strings.TrimSuffix(raw.textnl, "\n"), i == 0)
 		info := varalignLine{mkline, i, follow, false, parts}
@@ -215,89 +194,52 @@ func (va *VaralignBlock) processVarassign(mkline *MkLine) {
 			info.multiEmpty = true
 		}
 
-		va.infos = append(va.infos, &info)
+		infos = append(infos, &info)
 	}
+	va.mkinfos = append(va.mkinfos, &varalignMkLine{infos})
 }
 
 func (va *VaralignBlock) Finish() {
-	infos := va.infos
+	mkinfos := va.mkinfos
 	skip := va.skip
 	*va = VaralignBlock{} // overwrites infos and skip
 
-	if len(infos) == 0 || skip {
+	if len(mkinfos) == 0 || skip {
 		return
 	}
 
 	if trace.Tracing {
-		defer trace.Call(infos[0].mkline.Line)()
+		defer trace.Call()()
 	}
 
-	newWidth := va.optimalWidth(infos)
-	va.adjustLong(newWidth, infos)
-	rightMargin := 0
+	newWidth := va.optimalWidth(mkinfos)
+	va.adjustLong(newWidth, mkinfos)
 
-	// When the indentation of the initial line of a multiline is
-	// changed, all its follow-up lines are shifted by the same
-	// amount and in the same direction. Typical examples are
-	// SUBST_SED, shell programs and AWK programs like in
-	// GENERATE_PLIST.
-	indentDiffSet := false
-	// The amount by which the follow-up lines are shifted.
-	// Positive values mean shifting to the right, negative values
-	// mean shifting to the left.
-	indentDiff := 0
+	for _, mkinfo := range mkinfos {
 
-	for i, info := range infos {
-		if info.rawIndex == 0 {
-			indentDiffSet = false
-			indentDiff = 0
-			restIndex := i + condInt(info.value != "", 0, 1)
-			rightMargin = va.rightMargin(infos[restIndex:])
-		}
+		// When the indentation of the initial line of a multiline is
+		// changed, all its follow-up lines are shifted by the same
+		// amount and in the same direction. Typical examples are
+		// SUBST_SED, shell programs and AWK programs like in
+		// GENERATE_PLIST.
+		indentDiffSet := false
 
-		va.checkRightMargin(info, newWidth, rightMargin)
+		// The amount by which the follow-up lines are shifted.
+		// Positive values mean shifting to the right, negative values
+		// mean shifting to the left.
+		indentDiff := 0
 
-		if newWidth > 0 || info.rawIndex > 0 {
-			va.realign(info, newWidth, &indentDiffSet, &indentDiff)
-		}
-	}
-}
+		_, rightMargin := mkinfo.rightMargin()
+		for _, info := range mkinfo.infos {
 
-// rightMargin calculates the column in which the continuation backslashes
-// should be placed.
-func (*VaralignBlock) rightMargin(infos []*varalignLine) int {
-	var columns []int
-	for _, info := range infos {
-		if info.isContinuation() {
-			space := info.spaceBeforeContinuation()
-			if space != "" && space != " " {
-				columns = append(columns, info.continuationColumn())
+			// TODO: move below va.realign
+			info.alignContinuation(newWidth, rightMargin)
+
+			if newWidth > 0 || info.rawIndex > 0 {
+				va.realign(info, newWidth, &indentDiffSet, &indentDiff)
 			}
 		}
 	}
-
-	sort.Ints(columns)
-
-	for i := len(columns) - 2; i >= 0; i-- {
-		if columns[i] == columns[i+1] {
-			return columns[i]
-		}
-	}
-
-	if len(columns) <= 1 {
-		return 0
-	}
-
-	var min int
-	for _, info := range infos {
-		if info.isContinuation() {
-			mainWidth := info.uptoCommentWidth()
-			if mainWidth > min {
-				min = mainWidth
-			}
-		}
-	}
-	return min&-8 + 8
 }
 
 // optimalWidth computes the desired screen width for the variable assignment
@@ -306,18 +248,23 @@ func (*VaralignBlock) rightMargin(infos []*varalignLine) int {
 // There may be a single line sticking out from the others (called outlier).
 // This is to prevent a single SITES.* variable from forcing the rest of the
 // paragraph to be indented too far to the right.
-func (*VaralignBlock) optimalWidth(infos []*varalignLine) int {
+func (*VaralignBlock) optimalWidth(mkinfos []*varalignMkLine) int {
 
-	var widths mklineInts
-	for _, info := range infos {
-		if !info.multiEmpty && info.rawIndex == 0 {
-			widths.append(info.mkline, info.varnameOpWidth())
+	var widths bag
+	for _, mkinfo := range mkinfos {
+		for _, info := range mkinfo.infos {
+			if !info.multiEmpty && info.rawIndex == 0 {
+				widths.Add(info.fixer, info.varnameOpWidth())
+			}
 		}
 	}
 	widths.sortDesc()
 
 	longest := widths.opt(0)
-	longestLine := widths.optLine(0)
+	var longestLine *MkLine
+	if len(widths.slice) > 0 {
+		longestLine = widths.key(0).(*MkLine)
+	}
 	secondLongest := widths.opt(1)
 
 	haveOutlier := secondLongest != 0 &&
@@ -329,12 +276,14 @@ func (*VaralignBlock) optimalWidth(infos []*varalignLine) int {
 	outlier := condInt(haveOutlier, longest, 0)
 
 	// Widths of the current indentation (including whitespace)
-	var spaceWidths mklineInts
-	for _, info := range infos {
-		if info.multiEmpty || info.rawIndex > 0 || outlier > 0 && info.varnameOpWidth() == outlier {
-			continue
+	var spaceWidths bag
+	for _, mkinfo := range mkinfos {
+		for _, info := range mkinfo.infos {
+			if info.multiEmpty || info.rawIndex > 0 || outlier > 0 && info.varnameOpWidth() == outlier {
+				continue
+			}
+			spaceWidths.Add(nil, info.varnameOpSpaceWidth())
 		}
-		spaceWidths.append(info.mkline, info.varnameOpSpaceWidth())
 	}
 	spaceWidths.sortDesc()
 
@@ -366,60 +315,33 @@ func (*VaralignBlock) optimalWidth(infos []*varalignLine) int {
 // adjustLong allows any follow-up line to start either in column 8 or at
 // least in column newWidth. But only if there is at least one continuation
 // line that starts in column 8 and needs the full width up to column 72.
-func (va *VaralignBlock) adjustLong(newWidth int, infos []*varalignLine) {
+func (va *VaralignBlock) adjustLong(newWidth int, mkinfos []*varalignMkLine) {
 	anyLong := false
-	for i, info := range infos {
-		if info.rawIndex == 0 {
-			anyLong = false
-			for _, follow := range infos[i+1:] {
-				if follow.rawIndex == 0 {
-					break
-				}
-				if !follow.multiEmpty && follow.spaceBeforeValue == "\t" && follow.varnameOpSpaceWidth() < newWidth && follow.widthAlignedAt(newWidth) > 72 {
-					anyLong = true
-					break
+	for _, mkinfo := range mkinfos {
+		infos := mkinfo.infos
+		for i, info := range infos {
+			if info.rawIndex == 0 {
+				anyLong = false
+				for _, follow := range infos[i+1:] {
+					if follow.rawIndex == 0 {
+						break
+					}
+					if !follow.multiEmpty && follow.spaceBeforeValue == "\t" && follow.varnameOpSpaceWidth() < newWidth && follow.widthAlignedAt(newWidth) > 72 {
+						anyLong = true
+						break
+					}
 				}
 			}
+
+			info.long = anyLong && info.varnameOpSpaceWidth() == 8
 		}
-
-		info.long = anyLong && info.varnameOpSpaceWidth() == 8
 	}
-}
-
-func (va *VaralignBlock) checkRightMargin(info *varalignLine, newWidth int, rightMargin int) {
-	if !info.isContinuation() {
-		return
-	}
-
-	oldSpace := info.spaceBeforeContinuation()
-	if oldSpace == " " || oldSpace == "\t" {
-		return
-	}
-
-	column := info.continuationColumn()
-	if column == 72 || column == rightMargin || column <= newWidth {
-		return
-	}
-
-	newSpace := " "
-	fix := info.mkline.Autofix()
-	if oldSpace == "" || rightMargin == 0 || info.uptoCommentWidth() >= rightMargin {
-		fix.Notef("The continuation backslash should be preceded by a single space or tab.")
-	} else {
-		newSpace = alignmentAfter(info.uptoComment(), rightMargin)
-		fix.Notef(
-			"The continuation backslash should be preceded by a single space or tab, "+
-				"or be in column %d, not %d.",
-			rightMargin+1, column+1)
-	}
-	fix.ReplaceAt(info.rawIndex, info.continuationIndex()-len(oldSpace), oldSpace, newSpace)
-	fix.Apply()
 }
 
 func (va *VaralignBlock) realign(info *varalignLine, newWidth int, indentDiffSet *bool, indentDiff *int) {
 	if info.multiEmpty {
 		if info.rawIndex == 0 {
-			va.realignMultiEmptyInitial(info, newWidth)
+			info.alignValueMultiEmptyInitial(newWidth)
 		} else {
 			va.realignMultiEmptyFollow(info, newWidth, indentDiffSet, indentDiff)
 		}
@@ -427,46 +349,10 @@ func (va *VaralignBlock) realign(info *varalignLine, newWidth int, indentDiffSet
 		va.realignMultiInitial(info, newWidth, indentDiffSet, indentDiff)
 	} else if info.rawIndex > 0 {
 		assert(*indentDiffSet)
-		va.realignMultiFollow(info, newWidth, *indentDiff)
+		info.alignValueMultiFollow(newWidth, *indentDiff)
 	} else {
-		va.realignSingle(info, newWidth)
+		info.alignValueSingle(newWidth)
 	}
-}
-
-func (*VaralignBlock) realignMultiEmptyInitial(info *varalignLine, newWidth int) {
-	leadingComment := info.leadingComment
-	varnameOp := info.varnameOp
-	oldSpace := info.spaceBeforeValue
-
-	// Indent the outlier and any other lines that stick out
-	// with a space instead of a tab to keep the line short.
-	newSpace := " "
-	if info.varnameOpSpaceWidth() <= newWidth {
-		newSpace = alignmentAfter(leadingComment+varnameOp, newWidth)
-	}
-
-	if newSpace == oldSpace {
-		return
-	}
-
-	if newSpace == " " {
-		return // This case is handled by checkRightMargin.
-	}
-
-	hasSpace := strings.IndexByte(oldSpace, ' ') != -1
-	oldColumn := info.varnameOpSpaceWidth()
-	column := tabWidthSlice(leadingComment, varnameOp, newSpace)
-
-	fix := info.mkline.Autofix()
-	if hasSpace && column != oldColumn {
-		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", column+1)
-	} else if column != oldColumn {
-		fix.Notef("This variable value should be aligned to column %d.", column+1) // TODO: to column %d instead of %d.
-	} else {
-		fix.Notef("Variable values should be aligned with tabs, not spaces.")
-	}
-	fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
-	fix.Apply()
 }
 
 func (va *VaralignBlock) realignMultiEmptyFollow(info *varalignLine, newWidth int, indentDiffSet *bool, indentDiff *int) {
@@ -481,141 +367,14 @@ func (va *VaralignBlock) realignMultiEmptyFollow(info *varalignLine, newWidth in
 		}
 	}
 
-	newSpace := indent(imax(oldWidth+*indentDiff, 8))
-	if newSpace == oldSpace {
-		return
-	}
-
-	// Below a continuation marker, there may be a completely empty line.
-	// This is confusing to the human readers, but technically allowed.
-	if info.varalignParts.isEmpty() {
-		return
-	}
-
-	fix := info.mkline.Autofix()
-	fix.Notef("This continuation line should be indented with %q.", newSpace)
-	fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
-	fix.Apply()
+	info.alignValueMultiEmptyFollow(imax(oldWidth+*indentDiff, 8))
 }
 
 func (va *VaralignBlock) realignMultiInitial(info *varalignLine, newWidth int, indentDiffSet *bool, indentDiff *int) {
-	leadingComment := info.leadingComment
-	varnameOp := info.varnameOp
-	oldSpace := info.spaceBeforeValue
-
 	*indentDiffSet = true
-	oldWidth := info.varnameOpSpaceWidth()
-	*indentDiff = newWidth - oldWidth
+	*indentDiff = newWidth - info.varnameOpSpaceWidth()
 
-	newSpace := alignmentAfter(leadingComment+varnameOp, newWidth)
-	if newSpace == oldSpace {
-		return
-	}
-
-	hasSpace := strings.IndexByte(oldSpace, ' ') != -1
-	width := tabWidthSlice(leadingComment, varnameOp, newSpace)
-
-	fix := info.mkline.Autofix()
-	if hasSpace && width != oldWidth {
-		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", width+1)
-	} else if width != oldWidth {
-		fix.Notef("This variable value should be aligned to column %d.", width+1)
-	} else {
-		fix.Notef("Variable values should be aligned with tabs, not spaces.")
-	}
-	fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
-	fix.Apply()
-}
-
-func (va *VaralignBlock) realignMultiFollow(info *varalignLine, newWidth int, indentDiff int) {
-	oldSpace := info.spaceBeforeValue
-	newSpace := indent(tabWidth(oldSpace) + indentDiff)
-	if tabWidth(newSpace) < newWidth {
-		newSpace = indent(newWidth)
-	}
-	if newSpace == oldSpace || info.long {
-		return
-	}
-
-	fix := info.mkline.Autofix()
-	fix.Notef("This continuation line should be indented with %q.", indent(newWidth))
-	modified, replaced := fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
-	assert(modified)
-	if info.continuation != "" && info.continuationColumn() == 72 {
-		orig := strings.TrimSuffix(replaced, "\n")
-		base := rtrimHspace(strings.TrimSuffix(orig, "\\"))
-		spaceIndex := len(base)
-		oldSuffix := orig[spaceIndex:]
-		newSuffix := " \\"
-		if tabWidth(base) < 72 {
-			newSuffix = alignmentAfter(base, 72) + "\\"
-		}
-		if newSuffix != oldSuffix {
-			fix.ReplaceAt(info.rawIndex, spaceIndex, oldSuffix, newSuffix)
-		}
-	}
-	fix.Apply()
-}
-
-func (va *VaralignBlock) realignSingle(info *varalignLine, newWidth int) {
-	leadingComment := info.leadingComment
-	varnameOp := info.varnameOp
-	oldSpace := info.spaceBeforeValue
-
-	newSpace := ""
-	for tabWidthSlice(leadingComment, varnameOp, newSpace) < newWidth {
-		newSpace += "\t"
-	}
-
-	// Indent the outlier with a space instead of a tab to keep the line short.
-	if newSpace == "" && info.isCanonicalInitial(newWidth) {
-		return
-	}
-	if newSpace == "" {
-		newSpace = " "
-	}
-
-	if newSpace == oldSpace {
-		return
-	}
-
-	hasSpace := strings.IndexByte(oldSpace, ' ') != -1
-	oldColumn := tabWidthSlice(leadingComment, varnameOp, oldSpace)
-	column := tabWidthSlice(leadingComment, varnameOp, newSpace)
-
-	fix := info.mkline.Autofix()
-	if newSpace == " " {
-		fix.Notef("This outlier variable value should be aligned with a single space.")
-		va.explainWrongColumn(fix)
-	} else if hasSpace && column != oldColumn {
-		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", column+1)
-		va.explainWrongColumn(fix)
-	} else if column != oldColumn {
-		fix.Notef("This variable value should be aligned to column %d.", column+1)
-		va.explainWrongColumn(fix)
-	} else {
-		fix.Notef("Variable values should be aligned with tabs, not spaces.")
-	}
-	fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
-	fix.Apply()
-}
-
-func (va *VaralignBlock) explainWrongColumn(fix *Autofix) {
-	fix.Explain(
-		"Normally, all variable values in a block should start at the same column.",
-		"This provides orientation, especially for sequences",
-		"of variables that often appear in the same order.",
-		"For these it suffices to look at the variable values only.",
-		"",
-		"There are some exceptions to this rule:",
-		"",
-		"Definitions for long variable names may be indented with a single space instead of tabs,",
-		"but only if they appear in a block that is otherwise indented with tabs.",
-		"",
-		"Variable definitions that span multiple lines are not checked for alignment at all.",
-		"",
-		"When the block contains something else than variable definitions",
-		"and directives like .if or .for, it is not checked at all.")
+	info.alignValueMultiInitial(newWidth)
 }
 
 // VaralignSplitter parses the text of a raw line into those parts that
@@ -713,6 +472,278 @@ func (VaralignSplitter) parseValue(lexer *textproc.Lexer) (string, string, strin
 	return value, space, continuation
 }
 
+type varalignMkLine struct {
+	infos []*varalignLine
+}
+
+// rightMargin calculates the column in which the continuation backslashes
+// should be placed.
+// In addition it returns whether the right margin is already in its
+// canonical form.
+func (l *varalignMkLine) rightMargin() (ok bool, margin int) {
+	restIndex := condInt(l.infos[0].value == "", 1, 0)
+	infos := l.infos[restIndex:]
+
+	var columns []int
+	for _, info := range infos {
+		if info.isContinuation() {
+			space := info.spaceBeforeContinuation()
+			if space != "" && space != " " {
+				columns = append(columns, info.continuationColumn())
+			}
+		}
+	}
+
+	if len(columns) <= 1 {
+		return false, 0
+	}
+
+	sort.Ints(columns)
+
+	for i := len(columns) - 2; i >= 0; i-- {
+		col := columns[i]
+		if col == columns[i+1] {
+			ok := columns[0] == columns[len(columns)-1] && col <= 72
+			return ok, imin(col, 72)
+		}
+	}
+
+	var min int
+	for _, info := range infos {
+		if info.isContinuation() {
+			mainWidth := info.uptoValueWidth()
+			if mainWidth > min {
+				min = mainWidth
+			}
+		}
+	}
+	return false, min&-8 + 8
+}
+
+type varalignLine struct {
+	fixer    Autofixer
+	rawIndex int
+
+	// Is true for multilines that don't have a value in their first
+	// physical line.
+	//
+	// The follow-up lines of these lines may be indented with as few
+	// as a single tab. Example:
+	//  VAR= \
+	//          value1 \
+	//          value2
+	// In all other lines, the indentation must be at least the indentation
+	// of the first value found.
+	multiEmpty bool
+
+	// Whether the line is so long that it may use a single tab as indentation.
+	long bool
+
+	varalignParts
+}
+
+func (info *varalignLine) alignValueSingle(newWidth int) {
+	leadingComment := info.leadingComment
+	varnameOp := info.varnameOp
+
+	oldSpace := info.spaceBeforeValue
+	newSpace := alignmentToWidths(tabWidthSlice(leadingComment, varnameOp), newWidth)
+
+	// Indent the outlier with a space instead of a tab to keep the line short.
+	if newSpace == "" && info.isCanonicalInitial(newWidth) {
+		return
+	}
+	if newSpace == "" {
+		newSpace = " "
+	}
+
+	if newSpace == oldSpace {
+		return
+	}
+
+	hasSpace := strings.IndexByte(oldSpace, ' ') != -1
+	oldColumn := tabWidthSlice(leadingComment, varnameOp, oldSpace)
+	column := tabWidthSlice(leadingComment, varnameOp, newSpace)
+
+	fix := info.fixer.Autofix()
+	if newSpace == " " {
+		fix.Notef("This outlier variable value should be aligned with a single space.")
+		info.explainWrongColumn(fix)
+	} else if hasSpace && column != oldColumn {
+		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", column+1)
+		info.explainWrongColumn(fix)
+	} else if column != oldColumn {
+		fix.Notef("This variable value should be aligned to column %d.", column+1)
+		info.explainWrongColumn(fix)
+	} else {
+		fix.Notef("Variable values should be aligned with tabs, not spaces.")
+	}
+	fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
+	fix.Apply()
+}
+
+func (info *varalignLine) alignValueMultiEmptyInitial(newWidth int) {
+	leadingComment := info.leadingComment
+	varnameOp := info.varnameOp
+	oldSpace := info.spaceBeforeValue
+
+	// Indent the outlier and any other lines that stick out
+	// with a space instead of a tab to keep the line short.
+	newSpace := " "
+	if info.varnameOpSpaceWidth() <= newWidth {
+		newSpace = alignmentAfter(leadingComment+varnameOp, newWidth)
+	}
+
+	if newSpace == oldSpace {
+		return
+	}
+
+	if newSpace == " " {
+		return // This case is handled by checkRightMargin.
+	}
+
+	hasSpace := strings.IndexByte(oldSpace, ' ') != -1
+	oldColumn := info.varnameOpSpaceWidth()
+	column := tabWidthSlice(leadingComment, varnameOp, newSpace)
+
+	fix := info.fixer.Autofix()
+	if hasSpace && column != oldColumn {
+		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", column+1)
+	} else if column != oldColumn {
+		fix.Notef("This variable value should be aligned to column %d.", column+1) // TODO: to column %d instead of %d.
+	} else {
+		fix.Notef("Variable values should be aligned with tabs, not spaces.")
+	}
+	fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
+	fix.Apply()
+}
+
+func (info *varalignLine) alignValueMultiInitial(column int) {
+	leadingComment := info.leadingComment
+	varnameOp := info.varnameOp
+	oldSpace := info.spaceBeforeValue
+
+	newSpace := alignmentAfter(leadingComment+varnameOp, column)
+	if newSpace == oldSpace {
+		return
+	}
+
+	oldWidth := info.varnameOpSpaceWidth()
+	width := tabWidthSlice(leadingComment, varnameOp, newSpace)
+
+	fix := info.fixer.Autofix()
+	if width != oldWidth && contains(oldSpace, " ") {
+		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", width+1)
+	} else if width != oldWidth {
+		fix.Notef("This variable value should be aligned to column %d.", width+1)
+	} else {
+		fix.Notef("Variable values should be aligned with tabs, not spaces.")
+	}
+	fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
+	fix.Apply()
+}
+
+func (info *varalignLine) alignValueMultiEmptyFollow(column int) {
+	oldSpace := info.spaceBeforeValue
+	newSpace := indent(column)
+	if newSpace == oldSpace {
+		return
+	}
+
+	// Below a continuation marker, there may be a completely empty line.
+	// This is confusing to the human readers, but technically allowed.
+	if info.varalignParts.isEmpty() {
+		return
+	}
+
+	fix := info.fixer.Autofix()
+	fix.Notef("This continuation line should be indented with %q.", newSpace)
+	fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
+	fix.Apply()
+
+	// TODO: Merge with alignValueMultiFollow
+}
+
+func (info *varalignLine) alignValueMultiFollow(column, indentDiff int) {
+	oldSpace := info.spaceBeforeValue
+	newWidth := imax(column, tabWidth(oldSpace)+indentDiff)
+	newSpace := indent(newWidth)
+	if newSpace == oldSpace || info.long || info.isTooLongFor(newWidth) {
+		return
+	}
+
+	fix := info.fixer.Autofix()
+	fix.Notef("This continuation line should be indented with %q.", newSpace)
+	modified, replaced := fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
+	assert(modified)
+	if info.continuation != "" && info.continuationColumn() == 72 {
+		orig := strings.TrimSuffix(replaced, "\n")
+		base := rtrimHspace(strings.TrimSuffix(orig, "\\"))
+		spaceIndex := len(base)
+		oldSuffix := orig[spaceIndex:]
+		newSuffix := " \\"
+		if tabWidth(base) < 72 {
+			newSuffix = alignmentAfter(base, 72) + "\\"
+		}
+		if newSuffix != oldSuffix {
+			fix.ReplaceAt(info.rawIndex, spaceIndex, oldSuffix, newSuffix)
+		}
+	}
+	fix.Apply()
+}
+
+func (info *varalignLine) alignContinuation(valueColumn, rightMarginColumn int) {
+	if !info.isContinuation() {
+		return
+	}
+
+	oldSpace := info.spaceBeforeContinuation()
+	if oldSpace == " " || oldSpace == "\t" {
+		return
+	}
+
+	column := info.continuationColumn()
+	if column == 72 || column == rightMarginColumn || column <= valueColumn {
+		return
+	}
+
+	newSpace := " "
+	fix := info.fixer.Autofix()
+	if oldSpace == "" || rightMarginColumn == 0 {
+		fix.Notef("The continuation backslash should be preceded by a single space or tab.")
+	} else if info.isTooLongFor(valueColumn) {
+		fix.Notef("The continuation backslash should be preceded by a single space.")
+	} else if info.uptoValueWidth() >= rightMarginColumn {
+		fix.Notef("The continuation backslash should be preceded by a single space or tab.")
+	} else {
+		newSpace = alignmentAfter(info.uptoValue(), rightMarginColumn)
+		fix.Notef(
+			"The continuation backslash should be in column %d, not %d.",
+			rightMarginColumn+1, column+1)
+	}
+	index := info.continuationIndex() - len(oldSpace)
+	fix.ReplaceAt(info.rawIndex, index, oldSpace, newSpace)
+	fix.Apply()
+}
+
+func (*varalignLine) explainWrongColumn(fix *Autofix) {
+	fix.Explain(
+		"Normally, all variable values in a block should start at the same column.",
+		"This provides orientation, especially for sequences",
+		"of variables that often appear in the same order.",
+		"For these it suffices to look at the variable values only.",
+		"",
+		"There are some exceptions to this rule:",
+		"",
+		"Definitions for long variable names may be indented with a single space instead of tabs,",
+		"but only if they appear in a block that is otherwise indented with tabs.",
+		"",
+		"Variable definitions that span multiple lines are not checked for alignment at all.",
+		"",
+		"When the block contains something else than variable definitions",
+		"and directives like .if or .for, it is not checked at all.")
+}
+
 type varalignParts struct {
 	leadingComment   string // either the # or some rarely used U+0020 spaces
 	varnameOp        string // empty iff it is a follow-up line
@@ -720,6 +751,13 @@ type varalignParts struct {
 	value            string // including any trailing comment
 	spaceAfterValue  string
 	continuation     string // either a single backslash or empty
+}
+
+func (p *varalignParts) String() string {
+	return p.leadingComment +
+		p.varnameOp + p.spaceBeforeValue +
+		p.value + p.spaceAfterValue +
+		p.continuation
 }
 
 // continuation returns whether this line ends with a backslash.
@@ -758,13 +796,13 @@ func (p *varalignParts) spaceBeforeContinuation() string {
 	return p.spaceAfterValue
 }
 
-func (p *varalignParts) uptoCommentWidth() int {
+func (p *varalignParts) uptoValueWidth() int {
 	return tabWidth(rtrimHspace(p.leadingComment +
 		p.varnameOp + p.spaceBeforeValue +
 		p.value))
 }
 
-func (p *varalignParts) uptoComment() string {
+func (p *varalignParts) uptoValue() string {
 	return rtrimHspace(p.leadingComment +
 		p.varnameOp + p.spaceBeforeValue +
 		p.value)
@@ -826,39 +864,44 @@ func (p *varalignParts) widthAlignedAt(valueAlign int) int {
 		p.value+p.spaceAfterValue+p.continuation)
 }
 
-type mklineInts struct {
+func (p *varalignParts) isTooLongFor(valueColumn int) bool {
+	column := tabWidthAppend(valueColumn, p.value)
+	if p.isContinuation() {
+		column += 2
+	}
+	return column > 73
+}
+
+type bag struct {
 	slice []struct {
-		mkline *MkLine
-		value  int
+		key   interface{}
+		value int
 	}
 }
 
-func (mi mklineInts) sortDesc() {
+func (mi *bag) sortDesc() {
 	less := func(i, j int) bool { return mi.slice[j].value < mi.slice[i].value }
 	sort.SliceStable(mi.slice, less)
 }
 
-func (mi mklineInts) opt(index int) int {
+func (mi *bag) opt(index int) int {
 	if uint(index) < uint(len(mi.slice)) {
 		return mi.slice[index].value
 	}
 	return 0
 }
 
-func (mi mklineInts) optLine(index int) *MkLine {
-	if uint(index) < uint(len(mi.slice)) {
-		return mi.slice[index].mkline
-	}
-	return nil
+func (mi *bag) key(index int) interface{} {
+	return mi.slice[index].key
 }
 
-func (mi *mklineInts) append(mkline *MkLine, value int) {
+func (mi *bag) Add(key interface{}, value int) {
 	mi.slice = append(mi.slice, struct {
-		mkline *MkLine
-		value  int
-	}{mkline, value})
+		key   interface{}
+		value int
+	}{key, value})
 }
 
-func (mi mklineInts) min() int { return mi.opt(0) }
+func (mi *bag) min() int { return mi.opt(0) }
 
-func (mi mklineInts) max() int { return mi.opt(len(mi.slice) - 1) }
+func (mi *bag) max() int { return mi.opt(len(mi.slice) - 1) }

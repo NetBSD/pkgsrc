@@ -722,6 +722,9 @@ func (s *Suite) Test_sortedKeys(c *check.C) {
 func (s *Suite) Test_Value_Method(c *check.C) {
 	_ = s.Init(c)
 
+	// To make it appear actually used to golangci-lint.
+	_ = Value{}
+
 	// Just for code coverage of checkTestFile, to have a piece of code
 	// that lives in the same file as its test.
 }

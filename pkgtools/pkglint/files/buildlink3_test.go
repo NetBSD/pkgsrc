@@ -856,9 +856,13 @@ func (s *Suite) Test_Buildlink3Checker_checkVaruseInPkgbase__PKGBASE_with_variab
 	CheckLinesBuildlink3Mk(mklines)
 
 	t.CheckOutputLines(
+		"ERROR: x11/php-wxwidgets/buildlink3.mk:3: "+
+			"Identifiers for BUILDLINK_TREE must not refer to other variables.",
 		"WARN: x11/php-wxwidgets/buildlink3.mk:8: "+
 			"To use PHP_PKG_PREFIX at load time, "+
 			".include \"../../mk/bsd.fast.prefs.mk\" first.",
+		"ERROR: x11/php-wxwidgets/buildlink3.mk:13: "+
+			"Identifiers for BUILDLINK_TREE must not refer to other variables.",
 		"WARN: x11/php-wxwidgets/buildlink3.mk:3: "+
 			"Please use \"php\" instead of \"${PHP_PKG_PREFIX}\" "+
 			"(also in other variables in this file).")
@@ -888,9 +892,13 @@ func (s *Suite) Test_Buildlink3Checker_checkVaruseInPkgbase__PKGBASE_with_variab
 	CheckLinesBuildlink3Mk(mklines)
 
 	t.CheckOutputLines(
+		"ERROR: x11/py-wxwidgets/buildlink3.mk:3: "+
+			"Identifiers for BUILDLINK_TREE must not refer to other variables.",
 		"WARN: x11/py-wxwidgets/buildlink3.mk:8: "+
 			"To use PYPKGPREFIX at load time, "+
 			".include \"../../mk/bsd.fast.prefs.mk\" first.",
+		"ERROR: x11/py-wxwidgets/buildlink3.mk:13: "+
+			"Identifiers for BUILDLINK_TREE must not refer to other variables.",
 		"WARN: x11/py-wxwidgets/buildlink3.mk:3: "+
 			"Please use \"py\" instead of \"${PYPKGPREFIX}\" "+
 			"(also in other variables in this file).")
@@ -920,9 +928,13 @@ func (s *Suite) Test_Buildlink3Checker_checkVaruseInPkgbase__PKGBASE_with_variab
 	CheckLinesBuildlink3Mk(mklines)
 
 	t.CheckOutputLines(
+		"ERROR: x11/ruby1-wxwidgets/buildlink3.mk:3: "+
+			"Identifiers for BUILDLINK_TREE must not refer to other variables.",
 		"WARN: x11/ruby1-wxwidgets/buildlink3.mk:8: "+
 			"To use RUBY_BASE at load time, "+
 			".include \"../../mk/bsd.fast.prefs.mk\" first.",
+		"ERROR: x11/ruby1-wxwidgets/buildlink3.mk:13: "+
+			"Identifiers for BUILDLINK_TREE must not refer to other variables.",
 		"WARN: x11/ruby1-wxwidgets/buildlink3.mk:3: "+
 			"Please use \"ruby\" instead of \"${RUBY_BASE}\" "+
 			"(also in other variables in this file).")
@@ -952,9 +964,13 @@ func (s *Suite) Test_Buildlink3Checker_checkVaruseInPkgbase__PKGBASE_with_variab
 	CheckLinesBuildlink3Mk(mklines)
 
 	t.CheckOutputLines(
+		"ERROR: x11/ruby2-wxwidgets/buildlink3.mk:3: "+
+			"Identifiers for BUILDLINK_TREE must not refer to other variables.",
 		"WARN: x11/ruby2-wxwidgets/buildlink3.mk:8: "+
 			"To use RUBY_PKGPREFIX at load time, "+
 			".include \"../../mk/bsd.fast.prefs.mk\" first.",
+		"ERROR: x11/ruby2-wxwidgets/buildlink3.mk:13: "+
+			"Identifiers for BUILDLINK_TREE must not refer to other variables.",
 		"WARN: x11/ruby2-wxwidgets/buildlink3.mk:3: "+
 			"Please use \"ruby\" instead of \"${RUBY_PKGPREFIX}\" "+
 			"(also in other variables in this file).")
@@ -984,6 +1000,7 @@ func (s *Suite) Test_Buildlink3Checker_checkVaruseInPkgbase__PKGBASE_with_unknow
 	CheckLinesBuildlink3Mk(mklines)
 
 	t.CheckOutputLines(
+		"ERROR: buildlink3.mk:3: Identifiers for BUILDLINK_TREE must not refer to other variables.",
 		"WARN: buildlink3.mk:3: LICENSE should not be used in this file; "+
 			"it would be ok in Makefile, Makefile.* or *.mk, but not buildlink3.mk or builtin.mk.",
 		"WARN: buildlink3.mk:3: The variable LICENSE should be quoted as part of a shell word.",
@@ -991,6 +1008,7 @@ func (s *Suite) Test_Buildlink3Checker_checkVaruseInPkgbase__PKGBASE_with_unknow
 		"WARN: buildlink3.mk:8: The variable LICENSE should be quoted as part of a shell word.",
 		"WARN: buildlink3.mk:9: The variable LICENSE should be quoted as part of a shell word.",
 		"WARN: buildlink3.mk:9: The variable LICENSE should be quoted as part of a shell word.",
+		"ERROR: buildlink3.mk:13: Identifiers for BUILDLINK_TREE must not refer to other variables.",
 		"WARN: buildlink3.mk:13: The variable LICENSE should be quoted as part of a shell word.",
 		"WARN: buildlink3.mk:3: Please replace \"${LICENSE}\" with a simple string "+
 			"(also in other variables in this file).")

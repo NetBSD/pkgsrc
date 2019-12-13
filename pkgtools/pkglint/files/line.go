@@ -16,6 +16,7 @@ package pkglint
 import (
 	"netbsd.org/pkglint/regex"
 	"strconv"
+	"strings"
 )
 
 type RawLine struct {
@@ -35,6 +36,13 @@ type RawLine struct {
 }
 
 func (rline *RawLine) String() string { return sprintf("%d:%s", rline.Lineno, rline.textnl) }
+
+func (rline *RawLine) text() string {
+	// TODO: use this method everywhere
+	// TODO: add orig()
+	// TODO: export these two functions
+	return strings.TrimSuffix(rline.textnl, "\n")
+}
 
 type Location struct {
 	Filename  CurrPath
