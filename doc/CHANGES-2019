@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5350 2019/12/13 10:43:08 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5351 2019/12/13 11:23:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8598,3 +8598,6 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/py-backports.os version 0.1.1 [adam 2019-12-13]
 	Updated sysutils/py-psutil to 5.6.7 [adam 2019-12-13]
 	Updated x11/libXpm to 3.5.13 [wiz 2019-12-13]
+	Updated net/py-pyftpdlib to 1.5.5 [adam 2019-12-13]
+	Updated devel/py-test-randomly to 3.1.0 [adam 2019-12-13]
+	Updated filesystems/py-fs to 2.4.11 [adam 2019-12-13]
