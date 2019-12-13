@@ -140,6 +140,8 @@ func (l *Lexer) NextByte() byte {
 
 // NextBytesFunc chops off the longest prefix (possibly empty) consisting
 // solely of bytes for which fn returns true.
+//
+// TODO: SkipBytesFunc
 func (l *Lexer) NextBytesFunc(fn func(b byte) bool) string {
 	i := 0
 	rest := l.rest
