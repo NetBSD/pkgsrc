@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5355 2019/12/13 14:32:38 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5356 2019/12/13 14:41:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8606,3 +8606,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/xenkernel411 to 4.11.3nb1 [bouyer 2019-12-13]
 	Updated sysutils/xentools411 to 4.11.3 [bouyer 2019-12-13]
 	Updated wm/swc to 0.0.0.20191213 [nia 2019-12-13]
+	Updated fonts/Inter-UI to 3.11 [mef 2019-12-13]
