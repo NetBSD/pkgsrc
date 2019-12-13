@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5349 2019/12/13 09:48:48 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5350 2019/12/13 10:43:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8597,3 +8597,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/go112 to 1.12.14 [bsiegert 2019-12-13]
 	Added devel/py-backports.os version 0.1.1 [adam 2019-12-13]
 	Updated sysutils/py-psutil to 5.6.7 [adam 2019-12-13]
+	Updated x11/libXpm to 3.5.13 [wiz 2019-12-13]
