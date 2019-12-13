@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2016/09/20 11:52:15 mef Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/13 14:52:48 mef Exp $
 #
 
-DISTNAME=	cantarell-fonts-0.0.25
+DISTNAME=	cantarell-fonts-0.111
 CATEGORIES=	fonts
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/cantarell-fonts/0.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/cantarell-fonts/0.111/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,7 +24,7 @@ INSTALL_FONTS=		Cantarell-Bold.otf \
 
 do-install:
 .for f in ${INSTALL_FONTS}
-	${INSTALL_DATA} ${WRKSRC}/otf/${f} ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/prebuilt/${f} ${DESTDIR}${FONTDIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
