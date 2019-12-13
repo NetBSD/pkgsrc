@@ -1,9 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/13 21:19:52 bsiegert Exp $
-share/fonts/X11/TTF/Inter-UI-Black.otf
-share/fonts/X11/TTF/Inter-UI-BlackItalic.otf
-share/fonts/X11/TTF/Inter-UI-Bold.otf
-share/fonts/X11/TTF/Inter-UI-BoldItalic.otf
-share/fonts/X11/TTF/Inter-UI-Italic.otf
-share/fonts/X11/TTF/Inter-UI-Medium.otf
-share/fonts/X11/TTF/Inter-UI-MediumItalic.otf
-share/fonts/X11/TTF/Inter-UI-Regular.otf
+@comment $NetBSD: PLIST,v 1.2 2019/12/13 14:41:31 mef Exp $
+share/fonts/X11/TTF/Inter-Black.otf
+share/fonts/X11/TTF/Inter-BlackItalic.otf
+share/fonts/X11/TTF/Inter-Bold.otf
+share/fonts/X11/TTF/Inter-BoldItalic.otf
+share/fonts/X11/TTF/Inter-ExtraBold.otf
+share/fonts/X11/TTF/Inter-ExtraBoldItalic.otf
+share/fonts/X11/TTF/Inter-ExtraLight.otf
+share/fonts/X11/TTF/Inter-ExtraLightItalic.otf
+share/fonts/X11/TTF/Inter-Italic.otf
+share/fonts/X11/TTF/Inter-Light.otf
+share/fonts/X11/TTF/Inter-LightItalic.otf
+share/fonts/X11/TTF/Inter-Medium.otf
+share/fonts/X11/TTF/Inter-MediumItalic.otf
+share/fonts/X11/TTF/Inter-Regular.otf
+share/fonts/X11/TTF/Inter-SemiBold.otf
+share/fonts/X11/TTF/Inter-SemiBoldItalic.otf
+share/fonts/X11/TTF/Inter-Thin.otf
+share/fonts/X11/TTF/Inter-ThinItalic.otf
+share/fonts/X11/TTF/Inter-V.var.otf
+share/fonts/X11/TTF/Inter-italic.var.otf
+share/fonts/X11/TTF/Inter-roman.var.otf
+share/fonts/X11/TTF/Inter.var.otf
