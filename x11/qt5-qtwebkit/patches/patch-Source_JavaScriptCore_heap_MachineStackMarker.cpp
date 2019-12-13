@@ -1,28 +1,25 @@
-$NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.2 2018/01/17 19:37:33 markd Exp $
+$NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.3 2019/12/13 09:48:02 mrg Exp $
 
-Support NetBSD
+Support NetBSD on x86, arm, arm64 and mips.
 
-XXXX - currently only did CPU(X86_64) and guessed those values.
-    rest are currently jsut copied from FreeBSD
-
---- Source/JavaScriptCore/heap/MachineStackMarker.cpp.orig	2017-06-04 20:16:05.000000000 +0000
-+++ Source/JavaScriptCore/heap/MachineStackMarker.cpp
-@@ -665,6 +665,22 @@ void* MachineThreads::Thread::Registers:
+--- Source/JavaScriptCore/heap/MachineStackMarker.cpp.orig	2019-06-26 09:25:02.000000000 -0700
++++ Source/JavaScriptCore/heap/MachineStackMarker.cpp	2019-12-12 19:40:05.519044971 -0800
+@@ -665,6 +665,22 @@
  #error Unknown Architecture
  #endif
  
 +#elif OS(NETBSD)
 +
 +#if CPU(X86)
-+    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_ebp);
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_EBP]);
 +#elif CPU(X86_64)
 +    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_RBP]);
 +#elif CPU(ARM)
 +    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_FP]);
 +#elif CPU(ARM64)
-+    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_gpregs.gp_x[29]);
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_X29]);
 +#elif CPU(MIPS)
-+    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_regs[30]);
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_S8]);
 +#else
 +#error Unknown Architecture
 +#endif
@@ -30,22 +27,22 @@ XXXX - currently only did CPU(X86_64) and guessed those values.
  #elif defined(__GLIBC__)
  
  // The following sequence depends on glibc's sys/ucontext.h.
-@@ -747,6 +763,22 @@ void* MachineThreads::Thread::Registers:
+@@ -747,6 +763,22 @@
  #error Unknown Architecture
  #endif
  
 +#elif OS(NETBSD)
 +
 +#if CPU(X86)
-+    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_eip);
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_EIP]);
 +#elif CPU(X86_64)
 +    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_RIP]);
 +#elif CPU(ARM)
 +    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_PC]);
 +#elif CPU(ARM64)
-+    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_gpregs.gp_elr);
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_ELR]);
 +#elif CPU(MIPS)
-+    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_pc);
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_EPC]);
 +#else
 +#error Unknown Architecture
 +#endif
@@ -53,22 +50,22 @@ XXXX - currently only did CPU(X86_64) and guessed those values.
  #elif defined(__GLIBC__)
  
  // The following sequence depends on glibc's sys/ucontext.h.
-@@ -838,6 +870,22 @@ void* MachineThreads::Thread::Registers:
+@@ -838,6 +870,22 @@
  #error Unknown Architecture
  #endif
  
 +#elif OS(NETBSD)
 +
 +#if CPU(X86)
-+    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_esi);
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_ESI]);
 +#elif CPU(X86_64)
 +    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_R8]);
 +#elif CPU(ARM)
 +    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_R8]);
 +#elif CPU(ARM64)
-+    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_gpregs.gp_x[4]);
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_R4]);
 +#elif CPU(MIPS)
-+    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.mc_regs[12]);
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_T4]);
 +#else
 +#error Unknown Architecture
 +#endif
