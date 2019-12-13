@@ -71,6 +71,11 @@ func replaceAllFunc(s string, re regex.Pattern, repl func(string) string) string
 	return G.res.Compile(re).ReplaceAllStringFunc(s, repl)
 }
 
+func containsWord(s, word string) bool {
+	return strings.Contains(s, word) &&
+		matches(s, regex.Pattern(`\b`+regexp.QuoteMeta(word)+`\b`))
+}
+
 func containsStr(slice []string, s string) bool {
 	for _, str := range slice {
 		if s == str {
@@ -202,6 +207,13 @@ func forEachStringMkLine(m map[string]*MkLine, action func(s string, mkline *MkL
 
 func imax(a, b int) int {
 	if a > b {
+		return a
+	}
+	return b
+}
+
+func imin(a, b int) int {
+	if a < b {
 		return a
 	}
 	return b
@@ -386,19 +398,35 @@ func detab(s string) string {
 // alignWith extends str with as many tabs and spaces as needed to reach
 // the same screen width as the other string.
 func alignWith(str, other string) string {
+	return str + alignmentTo(str, other)
+}
+
+// alignmentTo returns the whitespace that is necessary to
+// bring str to the same width as other.
+func alignmentTo(str, other string) string {
 	strWidth := tabWidth(str)
 	otherWidth := tabWidth(other)
+	return alignmentToWidths(strWidth, otherWidth)
+}
+
+func alignmentToWidths(strWidth, otherWidth int) string {
 	if otherWidth <= strWidth {
-		return str + "\t"
+		return ""
 	}
 	if strWidth&-8 != otherWidth&-8 {
 		strWidth &= -8
 	}
-	alignment := indent(otherWidth - strWidth)
-	return str + alignment
+	return indent(otherWidth - strWidth)
 }
 
 func indent(width int) string {
+	const tabsAndSpaces = "\t\t\t\t\t\t\t\t\t       "
+	middle := len(tabsAndSpaces) - 7
+	if width <= 8*middle+7 {
+		start := middle - width>>3
+		end := middle + width&7
+		return tabsAndSpaces[start:end]
+	}
 	return strings.Repeat("\t", width>>3) + "       "[:width&7]
 }
 
@@ -452,24 +480,6 @@ func toInt(s string, def int) int {
 	return def
 }
 
-// mkopSubst evaluates make(1)'s :S substitution operator.
-// It does not resolve any variables.
-// FIXME: Move this function to the MkVarUseModifier type.
-// FIXME: Clearly signal that substituting is not possible if either
-//  of the strings contains a variable reference.
-func mkopSubst(s string, left bool, from string, right bool, to string, flags string) string {
-	re := regex.Pattern(condStr(left, "^", "") + regexp.QuoteMeta(from) + condStr(right, "$", ""))
-	done := false
-	gflag := contains(flags, "g")
-	return replaceAllFunc(s, re, func(match string) string {
-		if gflag || !done {
-			done = !gflag
-			return to
-		}
-		return match
-	})
-}
-
 func containsVarRef(s string) bool {
 	if !contains(s, "$") {
 		return false
@@ -478,6 +488,20 @@ func containsVarRef(s string) bool {
 	tokens, _ := lex.MkTokens()
 	for _, token := range tokens {
 		if token.Varuse != nil {
+			return true
+		}
+	}
+	return false
+}
+
+func containsVarRefLong(s string) bool {
+	if !contains(s, "$") {
+		return false
+	}
+	lex := NewMkLexer(s, nil)
+	tokens, _ := lex.MkTokens()
+	for _, token := range tokens {
+		if token.Varuse != nil && len(token.Text) > 2 {
 			return true
 		}
 	}
@@ -594,7 +618,7 @@ func (s *Scope) Define(varname string, mkline *MkLine) {
 			case opAssignDefault:
 				// No change to the value.
 			case opAssignShell:
-				s.value[name] = mkline.Value() // FIXME: Really?
+				delete(s.value, name)
 			default:
 				s.value[name] = mkline.Value()
 			}
@@ -759,7 +783,8 @@ func (s *Scope) FirstUse(varname string) *MkLine {
 //
 // If an empty string is returned this can mean either that the
 // variable value is indeed the empty string or that the variable
-// was not found. To distinguish these cases, call LastValueFound instead.
+// was not found, or that the variable value cannot be determined
+// reliably. To distinguish these cases, call LastValueFound instead.
 func (s *Scope) LastValue(varname string) string {
 	value, _ := s.LastValueFound(varname)
 	return value
@@ -772,7 +797,7 @@ func (s *Scope) LastValueFound(varname string) (value string, found bool) {
 	}
 
 	mkline := s.LastDefinition(varname)
-	if mkline != nil {
+	if mkline != nil && mkline.Op() != opAssignShell {
 		return mkline.Value(), true
 	}
 	if fallback, ok := s.fallback[varname]; ok {
