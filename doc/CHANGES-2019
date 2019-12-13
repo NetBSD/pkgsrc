@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5359 2019/12/13 15:33:14 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5360 2019/12/13 21:53:06 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8610,3 +8610,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/cantarell-fonts to 0.111 [mef 2019-12-13]
 	Updated fonts/p5-Font-FreeType to 0.13 [mef 2019-12-13]
 	Updated mail/dovecot2 to 2.3.9.2 [taca 2019-12-13]
+	Updated net/inadyn to 2.5 [dmcmahill 2019-12-13]
