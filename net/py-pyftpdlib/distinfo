@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/01/16 08:31:52 adam Exp $
+$NetBSD: distinfo,v 1.2 2019/12/13 11:19:42 adam Exp $
 
-SHA1 (pyftpdlib-1.5.4.tar.gz) = 2155043d2ae70a64baf535ca28446f4b044c19f1
-RMD160 (pyftpdlib-1.5.4.tar.gz) = 82d10dec815bdefa9840a37a5bd84797f66bd2a4
-SHA512 (pyftpdlib-1.5.4.tar.gz) = 6eb308021dad28c1c51a88b366947a71b7bc1802571dc14cedf3a264bd0cb8504ef990d7e3110d10709f971d4d5b0001bee859b58fb4d02a1b0d46532acc9295
-Size (pyftpdlib-1.5.4.tar.gz) = 184986 bytes
+SHA1 (pyftpdlib-1.5.5.tar.gz) = 893933132fdff151af89a9e91e7773733a7af309
+RMD160 (pyftpdlib-1.5.5.tar.gz) = 9590b9a1e4ab81df6e75529e33a0718e78504003
+SHA512 (pyftpdlib-1.5.5.tar.gz) = 27427154f893812f689adf3a9ceb4ec2d8f0ea7a4bf7b08671dc146c95f09ddd596a27c85e009d8d6647277def48c0bf0a8b76fb3fba5818eda3dfdc6c10795e
+Size (pyftpdlib-1.5.5.tar.gz) = 184314 bytes
