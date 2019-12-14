@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/04/14 06:28:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/12/14 00:47:01 mef Exp $
 share/fonts/X11/OTF/PublicSans-Black.otf
 share/fonts/X11/OTF/PublicSans-BlackItalic.otf
 share/fonts/X11/OTF/PublicSans-Bold.otf
@@ -17,6 +17,8 @@ share/fonts/X11/OTF/PublicSans-SemiBold.otf
 share/fonts/X11/OTF/PublicSans-SemiBoldItalic.otf
 share/fonts/X11/OTF/PublicSans-Thin.otf
 share/fonts/X11/OTF/PublicSans-ThinItalic.otf
+share/fonts/X11/TTF/Public-Sans-Italic-VF.ttf
+share/fonts/X11/TTF/Public-Sans-Roman-VF.ttf
 share/fonts/X11/TTF/PublicSans-Black.ttf
 share/fonts/X11/TTF/PublicSans-BlackItalic.ttf
 share/fonts/X11/TTF/PublicSans-Bold.ttf
@@ -25,14 +27,12 @@ share/fonts/X11/TTF/PublicSans-ExtraBold.ttf
 share/fonts/X11/TTF/PublicSans-ExtraBoldItalic.ttf
 share/fonts/X11/TTF/PublicSans-ExtraLight.ttf
 share/fonts/X11/TTF/PublicSans-ExtraLightItalic.ttf
-share/fonts/X11/TTF/PublicSans-Italic-GX.ttf
 share/fonts/X11/TTF/PublicSans-Italic.ttf
 share/fonts/X11/TTF/PublicSans-Light.ttf
 share/fonts/X11/TTF/PublicSans-LightItalic.ttf
 share/fonts/X11/TTF/PublicSans-Medium.ttf
 share/fonts/X11/TTF/PublicSans-MediumItalic.ttf
 share/fonts/X11/TTF/PublicSans-Regular.ttf
-share/fonts/X11/TTF/PublicSans-Roman-GX.ttf
 share/fonts/X11/TTF/PublicSans-SemiBold.ttf
 share/fonts/X11/TTF/PublicSans-SemiBoldItalic.ttf
 share/fonts/X11/TTF/PublicSans-Thin.ttf
