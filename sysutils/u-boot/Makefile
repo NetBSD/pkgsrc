@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2019/11/29 19:12:05 jakllsch Exp $
+# $NetBSD: Makefile,v 1.25 2019/12/14 02:21:26 khorben Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
 DISTNAME=	u-boot-${UBOOT_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	meta-pkgs sysutils u-boot
 MASTER_SITES=	# empty
 
@@ -65,6 +65,7 @@ DEPENDS+=	u-boot-pinebook-[0-9]*:../../sysutils/u-boot-pinebook
 DEPENDS+=	u-boot-pocketchip-[0-9]*:../../sysutils/u-boot-pocketchip
 DEPENDS+=	u-boot-rock64-[0-9]*:../../sysutils/u-boot-rock64
 DEPENDS+=	u-boot-rockpro64-[0-9]*:../../sysutils/u-boot-rockpro64
+DEPENDS+=	u-boot-rpi3-32b-[0-9]*:../../sysutils/u-boot-rpi3-32b
 DEPENDS+=	u-boot-sopine-baseboard-[0-9]*:../../sysutils/u-boot-sopine-baseboard
 
 .include "../../mk/bsd.pkg.mk"
