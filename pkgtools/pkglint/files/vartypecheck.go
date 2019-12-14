@@ -799,8 +799,14 @@ func (cv *VartypeCheck) MachinePlatformPattern() {
 	}
 
 	if m, opsysPattern, versionPattern, archPattern := match3(pattern, reTriple); m {
+		// This is cheated, but the dynamically loaded enums are not
+		// provided in a type registry where they could be looked up
+		// by a name. The following line therefore assumes that OPSYS
+		// is an operating system name, which sounds like a safe bet.
+		btOpsys := G.Pkgsrc.vartypes.types["OPSYS"].basicType
+
 		opsysCv := cv.WithVarnameValueMatch("the operating system part of "+cv.Varname, opsysPattern)
-		BtMachineOpsys.checker(opsysCv)
+		btOpsys.checker(opsysCv)
 
 		versionCv := cv.WithVarnameValueMatch("the version part of "+cv.Varname, versionPattern)
 		versionCv.Version()

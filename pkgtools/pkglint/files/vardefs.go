@@ -518,7 +518,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		"openjdk8 oracle-jdk8 openjdk7 sun-jdk7 jdk16 jdk15 kaffe",
 		"_PKG_JVMS.*")
 
-	platforms := reg.enumFromFiles(src,
+	operatingSystems := reg.enumFromFiles(src,
 		"mk/platform",
 		`(.*)\.mk$`, "$1",
 		"Cygwin DragonFly FreeBSD Linux NetBSD SunOS")
@@ -1362,7 +1362,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglistrat("ONLY_FOR_COMPILER", compilers)
 	reg.pkglistrat("ONLY_FOR_PLATFORM", BtMachinePlatformPattern)
 	reg.pkgrat("ONLY_FOR_UNPRIVILEGED", BtYesNo)
-	reg.sysload("OPSYS", platforms, DefinedIfInScope|NonemptyIfDefined)
+	reg.sysload("OPSYS", operatingSystems, DefinedIfInScope|NonemptyIfDefined)
 	reg.pkglistbl3("OPSYSVARS", BtVariableName)
 	reg.pkg("OSVERSION_SPECIFIC", BtYes)
 	reg.sysload("OS_VARIANT", BtIdentifierDirect, DefinedIfInScope)
