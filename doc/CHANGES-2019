@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5379 2019/12/14 17:33:27 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5380 2019/12/14 17:35:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8634,3 +8634,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/suil to 0.10.6 [nia 2019-12-14]
 	Updated textproc/serd to 0.30.2 [nia 2019-12-14]
 	Updated textproc/sord to 0.16.4 [nia 2019-12-14]
+	Updated converters/sratom to 0.6.4 [nia 2019-12-14]
