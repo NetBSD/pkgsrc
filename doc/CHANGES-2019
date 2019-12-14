@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5376 2019/12/14 17:18:48 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5377 2019/12/14 17:28:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8631,3 +8631,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/doas to 6.2p2nb1 [ng0 2019-12-14]
 	Updated math/p5-Algorithm-Cluster to 1.59 [mef 2019-12-14]
 	Updated games/yquake2 to 7.42 [nia 2019-12-14]
+	Updated audio/suil to 0.10.6 [nia 2019-12-14]
