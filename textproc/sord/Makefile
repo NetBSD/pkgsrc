@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/12/14 17:33:04 nia Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/14 17:53:39 nia Exp $
 
 DISTNAME=	sord-0.16.4
 CATEGORIES=	textproc
@@ -13,23 +13,11 @@ LICENSE=	isc
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gsed pkg-config
 
+PYTHON_FOR_BUILD_ONLY=	tool
 PKGCONFIG_OVERRIDE+=	sord.pc.in
 
 .include "options.mk"
-
-BUILD_OPTIONS=	${BUILD_DEBUG} ${BUILD_DOC} ${BUILD_TESTS} ${BUILD_VALGRIND}
-
-do-configure:
-	cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf configure \
-			--destdir=${DESTDIR} --mandir=${PREFIX}/${PKGMANDIR} \
-				${BUILD_OPTIONS}
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./waf build
-
-do-install:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} ./waf install
-
+.include "../../devel/waf/waf.mk"
 .include "../../devel/pcre/buildlink3.mk"
 BUILDLINK_API_DEPENDS.serd+=	serd>=0.30.0
 .include "../../textproc/serd/buildlink3.mk"
