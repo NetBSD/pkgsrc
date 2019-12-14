@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.472 2019/11/27 21:18:20 markd Exp $
+# $NetBSD: Makefile,v 1.473 2019/12/14 19:16:39 nia Exp $
 #
 
 COMMENT=	Games
@@ -85,6 +85,7 @@ SUBDIR+=	d2x
 SUBDIR+=	dd2
 SUBDIR+=	defendguin
 SUBDIR+=	devilutionx
+SUBDIR+=	dhewm3
 SUBDIR+=	digger
 SUBDIR+=	dipmap
 SUBDIR+=	doom-pwad-sigil
