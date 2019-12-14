@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/14 10:22:30 khorben Exp $
+share/u-boot/rpi3-32/u-boot.bin
