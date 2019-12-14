@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5369 2019/12/14 10:27:04 khorben Exp $
+$NetBSD: CHANGES-2019,v 1.5370 2019/12/14 10:46:29 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8620,3 +8620,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/libgit2 to 0.28.4 [nia 2019-12-14]
 	Added sysutils/u-boot-rpi3-32 version 2018.11 [khorben 2019-12-14]
 	Removed sysutils/u-boot-rpi3-32b successor sysutils/u-boot-rpi3-32 [khorben 2019-12-14]
+	Updated security/yara to 3.11.0 [khorben 2019-12-14]
