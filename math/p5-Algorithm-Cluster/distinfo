@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2019/01/12 04:07:08 wen Exp $
+$NetBSD: distinfo,v 1.8 2019/12/14 14:36:06 mef Exp $
 
-SHA1 (Algorithm-Cluster-1.57.tar.gz) = b3ac8b3421a4321f59190426174dd7061d3fdf04
-RMD160 (Algorithm-Cluster-1.57.tar.gz) = 617fd878491422eea74fd5c58c3008ec096730fc
-SHA512 (Algorithm-Cluster-1.57.tar.gz) = c9cd90040cab5648943a6aa947bda5c79f074b1dbdf40af2180e4d60879cdc3b52d374beb034b6fb40c2ff41c1e43bef9c0132fcfb8424df1f1ad588cdc8596b
-Size (Algorithm-Cluster-1.57.tar.gz) = 461381 bytes
+SHA1 (Algorithm-Cluster-1.59.tar.gz) = 56ceb3aa6a9526fc4536091a9de0d14857ac0e68
+RMD160 (Algorithm-Cluster-1.59.tar.gz) = 7d4fe5f976fc4720c471c56bc296b8fbe9f71196
+SHA512 (Algorithm-Cluster-1.59.tar.gz) = 40cc8ded06fd236fd604595b8ccebfe98b931f629dccc2a6b4aa50c52fb50a4809c1fcea21f1e9b84903cefa66aaad1759f84b8549ac4d70e8dbcb328e31faf5
+Size (Algorithm-Cluster-1.59.tar.gz) = 461420 bytes
 SHA1 (patch-src_Makefile.PL) = 004dd2a40bf8e77b6efd425dcc64afbab2d8416a
