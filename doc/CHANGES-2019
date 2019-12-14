@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5371 2019/12/14 10:48:29 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5372 2019/12/14 10:50:31 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8623,3 +8623,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/yara to 3.11.0 [khorben 2019-12-14]
 	Updated fonts/py-fonttools to 4.2.2 [adam 2019-12-14]
 	Removed fonts/py-TTFQuery [adam 2019-12-14]
+	Updated security/py-yara to 3.11.0 [khorben 2019-12-14]
