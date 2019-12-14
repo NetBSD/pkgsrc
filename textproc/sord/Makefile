@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/04/25 07:33:25 maya Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/14 17:33:04 nia Exp $
 
-DISTNAME=	sord-0.16.2
-PKGREVISION=	1
+DISTNAME=	sord-0.16.4
 CATEGORIES=	textproc
-MASTER_SITES=	http://download.drobilla.net/
+MASTER_SITES=	https://download.drobilla.net/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://drobilla.net/software/sord/
+HOMEPAGE=	https://drobilla.net/software/sord/
 COMMENT=	Lightweight C library for storing RDF data in memory
 LICENSE=	isc
 
