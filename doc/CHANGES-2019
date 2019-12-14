@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5365 2019/12/14 01:26:35 mef Exp $
+$NetBSD: CHANGES-2019,v 1.5366 2019/12/14 02:56:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8616,3 +8616,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/u-boot-rpi3-32b version 2018.11 [khorben 2019-12-14]
 	Updated audio/p5-MusicBrainz-DiscID to 0.06 [mef 2019-12-14]
 	Updated audio/pianobar to 2019.02.14 [mef 2019-12-14]
+	Updated converters/fribidi to 1.0.8 [nia 2019-12-14]
