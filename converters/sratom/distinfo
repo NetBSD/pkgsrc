@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/01/02 20:20:00 bsiegert Exp $
+$NetBSD: distinfo,v 1.4 2019/12/14 17:35:31 nia Exp $
 
-SHA1 (sratom-0.6.2.tar.bz2) = 18cf9bdd5994e3561ddaa6913d8cba981370a04f
-RMD160 (sratom-0.6.2.tar.bz2) = 18035b8c70cbb7bf30e092c0dc984574251113dd
-SHA512 (sratom-0.6.2.tar.bz2) = 356e1dfde07fcc3eff99186ff79501557572f5d73338fd096bf639a82d1d4fe3c0e790627c8eb088053e4a2aeed4e548aca0a5572d1ab26316cfdb13374f10ac
-Size (sratom-0.6.2.tar.bz2) = 229079 bytes
+SHA1 (sratom-0.6.4.tar.bz2) = 37e7fc03e46f2a90e2585cf913a429607c7c565d
+RMD160 (sratom-0.6.4.tar.bz2) = 9ccf7602b1a8579a9dd3f81f2eb8fab96945acd9
+SHA512 (sratom-0.6.4.tar.bz2) = 6462d8d33ed7ddaa2aea267fab14c9a15bfc077a4f8d26eb493be4c48c95d8dcec614f540bd82fe22aecca641771326a44d175c3991cd473ae371062c78aaac3
+Size (sratom-0.6.4.tar.bz2) = 339707 bytes
