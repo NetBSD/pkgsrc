@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/10/31 10:24:52 adam Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/14 10:54:16 adam Exp $
 
-DISTNAME=	joblib-0.14.0
+DISTNAME=	joblib-0.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/joblib/}
