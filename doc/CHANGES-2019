@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5381 2019/12/14 18:03:10 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5382 2019/12/14 18:04:42 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8636,3 +8636,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/sord to 0.16.4 [nia 2019-12-14]
 	Updated converters/sratom to 0.6.4 [nia 2019-12-14]
 	Updated audio/lilv to 0.24.6 [nia 2019-12-14]
+	Updated pkgtools/pkglint to 19.3.18 [rillig 2019-12-14]
