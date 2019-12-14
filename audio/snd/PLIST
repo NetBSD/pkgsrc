@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/11/27 09:33:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2019/12/14 18:34:18 nia Exp $
 bin/snd
 man/man1/snd.1
 share/snd/CM_patterns.scm
@@ -23,6 +23,7 @@ share/snd/clm.fs
 share/snd/clm.rb
 share/snd/clm23.scm
 share/snd/cload.scm
+share/snd/coretemp.scm
 share/snd/dlocsig.rb
 share/snd/dlocsig.scm
 share/snd/draw.fs
@@ -60,6 +61,7 @@ share/snd/grani.rb
 share/snd/grani.scm
 share/snd/gtk-effects-utils.scm
 share/snd/gtk-effects.scm
+share/snd/gtkex.scm
 share/snd/heart.scm
 share/snd/hooks.fs
 share/snd/hooks.rb
@@ -68,6 +70,7 @@ share/snd/index.rb
 share/snd/index.scm
 share/snd/jcrev.scm
 share/snd/jcvoi.scm
+share/snd/json.scm
 share/snd/libc.scm
 share/snd/libdl.scm
 share/snd/libgdbm.scm
@@ -93,7 +96,6 @@ share/snd/musglyphs.rb
 share/snd/musglyphs.scm
 share/snd/nb.rb
 share/snd/nb.scm
-share/snd/new-backgrounds.scm
 share/snd/new-effects.scm
 share/snd/noise.rb
 share/snd/noise.scm
@@ -115,6 +117,7 @@ share/snd/profile.scm
 share/snd/pvoc.rb
 share/snd/pvoc.scm
 share/snd/r7rs.scm
+share/snd/reactive.scm
 share/snd/repl.scm
 share/snd/rgb.fs
 share/snd/rgb.rb
@@ -138,7 +141,6 @@ share/snd/snd-test.rb
 share/snd/snd-test.scm
 share/snd/snd-xm.fs
 share/snd/snd-xm.rb
-share/snd/snd14.scm
 share/snd/snd15.scm
 share/snd/snddiff.scm
 share/snd/sndlib-ws.scm
