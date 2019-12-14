@@ -467,7 +467,6 @@ var (
 	BtYesNo                  = &BasicType{"YesNo", (*VartypeCheck).YesNo}
 	BtYesNoIndirectly        = &BasicType{"YesNoIndirectly", (*VartypeCheck).YesNoIndirectly}
 
-	BtMachineOpsys            = enumFromValues(machineOpsysValues)
 	BtMachineArch             = enumFromValues(machineArchValues)
 	BtMachineGnuArch          = enumFromValues(machineGnuArchValues)
 	BtEmulOpsys               = enumFromValues(emulOpsysValues)
@@ -490,10 +489,6 @@ func init() {
 // TODO: Move these values to VarTypeRegistry.Init and read them from the
 //  pkgsrc infrastructure files, as far as possible.
 const (
-	machineOpsysValues = "" + // See mk/platform
-		"AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD " +
-		"HPUX Haiku IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare"
-
 	// See mk/emulator/emulator-vars.mk.
 	emulOpsysValues = "" +
 		"bitrig bsdos cygwin darwin dragonfly freebsd " +
