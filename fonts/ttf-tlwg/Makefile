@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/10/29 20:52:04 scole Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/14 01:01:15 mef Exp $
 
 DISTNAME=	ttf-tlwg-${TLWG_VERSION}
 CATEGORIES=	fonts
@@ -6,7 +6,7 @@ CATEGORIES=	fonts
 MASTER_SITES=	ftp://linux.thai.net/pub/thailinux/software/fonts-tlwg/fonts/
 EXTRACT_SUFX=	.tar.xz
 
-TLWG_VERSION=	0.6.4
+TLWG_VERSION=	0.7.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://linux.thai.net/projects/thaifonts-scalable
@@ -46,7 +46,7 @@ do-install:
 	cd ${WRKSRC} && for f in *.ttf ; do \
 		${INSTALL_DATA} $$f ${DESTDIR}${FONTDIR}/$$f; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/etc/fonts/conf.avail/* \
+	${INSTALL_DATA} ${WRKSRC}/fontconfig/conf.avail/* \
 		${DESTDIR}${PREFIX}/share/fontconfig/conf.avail
 
 .include "../../mk/bsd.pkg.mk"
