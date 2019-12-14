@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5361 2019/12/14 00:47:26 mef Exp $
+$NetBSD: CHANGES-2019,v 1.5362 2019/12/14 01:01:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8612,3 +8612,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/dovecot2 to 2.3.9.2 [taca 2019-12-13]
 	Updated net/inadyn to 2.5 [dmcmahill 2019-12-13]
 	Updated fonts/public-sans to 1.007 [mef 2019-12-14]
+	Updated fonts/ttf-tlwg to 0.7.1 [mef 2019-12-14]
