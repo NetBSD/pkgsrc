@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5366 2019/12/14 02:56:46 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5367 2019/12/14 02:57:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8617,3 +8617,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/p5-MusicBrainz-DiscID to 0.06 [mef 2019-12-14]
 	Updated audio/pianobar to 2019.02.14 [mef 2019-12-14]
 	Updated converters/fribidi to 1.0.8 [nia 2019-12-14]
+	Updated devel/libgit2 to 0.28.4 [nia 2019-12-14]
