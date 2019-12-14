@@ -73,8 +73,7 @@ func (s *Suite) Test_MkCondChecker_Check(c *check.C) {
 	test(".if ${MACHINE_PLATFORM:MUnknownOS-*-*} || ${MACHINE_ARCH:Mx86}",
 		"WARN: filename.mk:4: "+
 			"The pattern \"UnknownOS\" cannot match any of "+
-			"{ AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku "+
-			"IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare "+
+			"{ Cygwin DragonFly FreeBSD Linux NetBSD SunOS "+
 			"} for the operating system part of MACHINE_PLATFORM.",
 		"WARN: filename.mk:4: "+
 			"The pattern \"x86\" cannot match any of "+
