@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/02/20 02:59:38 kamil Exp $
+$NetBSD: distinfo,v 1.3 2019/12/14 01:26:11 mef Exp $
 
-SHA1 (pianobar-2017.08.30.tar.gz) = bda570c73b9cfdcabbcf0dd1d91493b8a9f62e6d
-RMD160 (pianobar-2017.08.30.tar.gz) = 5ccfd0e2de8a0cab2eda2a6944fe0baca437ed23
-SHA512 (pianobar-2017.08.30.tar.gz) = c2cd425377bacc35899a72021fb24c8cc506a5ced9bab74fd2ad6ef4b589788bb8e6294fcd5dade5c8bac31fe52866214bebd6c89989e2b929f12542d90a3b6d
-Size (pianobar-2017.08.30.tar.gz) = 54202 bytes
+SHA1 (pianobar-2019.02.14.tar.gz) = b831274943ef811c4b0c7066381b1a26ce3af1ca
+RMD160 (pianobar-2019.02.14.tar.gz) = 8267e68cabd11b109baab1723142bcf34c9d2118
+SHA512 (pianobar-2019.02.14.tar.gz) = 9ca461680d9e0a26e5636c0008b5bb7b7d8beccbf8d0855682f89fab009cbbd7c5a77d5ec309e6c33b9388c5ba1e6299044b12ccf5be3f12e02a1c595d206f0a
+Size (pianobar-2019.02.14.tar.gz) = 56530 bytes
