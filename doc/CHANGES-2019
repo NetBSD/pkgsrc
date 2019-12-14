@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5362 2019/12/14 01:01:38 mef Exp $
+$NetBSD: CHANGES-2019,v 1.5363 2019/12/14 01:15:03 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8613,3 +8613,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/inadyn to 2.5 [dmcmahill 2019-12-13]
 	Updated fonts/public-sans to 1.007 [mef 2019-12-14]
 	Updated fonts/ttf-tlwg to 0.7.1 [mef 2019-12-14]
+	Added sysutils/u-boot-rpi3-32b version 2018.11 [khorben 2019-12-14]
