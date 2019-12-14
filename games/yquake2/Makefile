@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/10/03 22:31:17 nia Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/14 17:18:28 nia Exp $
 
-DISTNAME=	quake2-7.41
+DISTNAME=	quake2-7.42
 PKGNAME=	y${DISTNAME}
 CATEGORIES=	games
 MASTER_SITES=	https://deponie.yamagi.org/quake2/
