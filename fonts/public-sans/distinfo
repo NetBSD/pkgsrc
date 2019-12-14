@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/04/14 06:28:13 wiz Exp $
+$NetBSD: distinfo,v 1.2 2019/12/14 00:47:01 mef Exp $
 
-SHA1 (public-sans-v1.0.0.zip) = 6e81c08d37e589b76bd10beef44cd6ca7396b412
-RMD160 (public-sans-v1.0.0.zip) = 089aa56e8a20cebbe6bf3f09d046af124d405e42
-SHA512 (public-sans-v1.0.0.zip) = cd33af4456382d511d48bee71c30a093389da8d79adcb8df972ef5b32742eb4346399dee504db670dfc7d2136585ed373f5a12137929dae3bac4db043a18c25c
-Size (public-sans-v1.0.0.zip) = 3943535 bytes
+SHA1 (public-sans-v1.007.tar.gz) = 8429943ee7bff25202ff00f97d37209fd3277daa
+RMD160 (public-sans-v1.007.tar.gz) = 8fcbc603279ff6aa1d61f5b57dbcd4f903253d14
+SHA512 (public-sans-v1.007.tar.gz) = f9b233a56c7575247991d990710cb4524dc9d4fc5f56e8932126d9507b4e879e2e79863501cead8e96e4ddfeaff736e74bebef5dfcba18c9bbd85ead1fbbe3e4
+Size (public-sans-v1.007.tar.gz) = 12122456 bytes
