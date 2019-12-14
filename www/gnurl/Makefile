@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/12/14 12:35:20 ng0 Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/14 13:28:29 ng0 Exp $
 
 DISTNAME=	gnurl-7.67.0
 CATEGORIES=	www
@@ -21,8 +21,8 @@ INSTALLATION_DIRS=	share/doc/gnurl
 
 .include "../../mk/bsd.prefs.mk"
 
-# or "check"?
-TEST_TARGET=		-C tests test
+TEST_MAKE_FLAGS=	-C tests
+TEST_TARGET=		test
 
 CONFIGURE_ARGS+=	--without-libssh2
 CONFIGURE_ARGS+=	--without-libmetalink
