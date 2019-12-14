@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/14 19:16:39 nia Exp $
+
+SHA1 (dhewm3-1.5.0-src.tar.xz) = 4dd50a0d046565f17ca7737c922f9510f3cf0e21
+RMD160 (dhewm3-1.5.0-src.tar.xz) = c9b376d22381e8cfd5657c079ba26eb07c9f1217
+SHA512 (dhewm3-1.5.0-src.tar.xz) = 0a52744818205f842bf5d32d27310acb890999555258a94b589d8369f3804c0d4888fb594261791abff193e8d6b853b5d818205e66ef3928a2d1d361135e9a5d
+Size (dhewm3-1.5.0-src.tar.xz) = 3815488 bytes

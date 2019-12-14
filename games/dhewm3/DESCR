@@ -1,0 +1,10 @@
+dhewm 3 is a Doom 3 GPL source port. The goal of dhewm 3 is bring DOOM 3
+with the help of SDL to all suitable platforms.
+
+Compared to the original version of Doom 3, dhewm3 has many bugfixes, supports
+EAX-like sound effects on all operating systems and hardware (via OpenAL
+Softs EFX support), has much better support for widescreen resolutions and
+has 64-bit support.
+
+Note that while the Doom 3 source code has been released under GPL, you
+still need to legally own the game and provide dhewm3 the game data to play.
