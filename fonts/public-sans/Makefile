@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2019/04/14 06:28:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/14 00:47:01 mef Exp $
 
-DISTNAME=	public-sans-v1.0.0
+VERSION=	1.007
+DISTNAME=	public-sans-v${VERSION}
 PKGNAME=	${DISTNAME:S/v1/1/}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=uswds/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.zip
+GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/uswds/public-sans/
