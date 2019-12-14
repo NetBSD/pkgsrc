@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2015/04/20 03:21:58 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2019/12/14 18:02:50 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lilv
 PKG_SUPPORTED_OPTIONS=	debug doc tests
@@ -8,22 +8,16 @@ PLIST_VARS+=		doc
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdebug)
-BUILD_DEBUG=		--debug
-.else
-BUILD_DEBUG=		# blank
+WAF_ARGS+=		--debug
 .endif
 
 .if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DOC=		--docs
+WAF_ARGS+=		--docs
 BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 BUILD_DEPENDS+=		graphviz-[0-9]*:../../graphics/graphviz
 PLIST.doc=		yes
-.else
-BUILD_DOC=		# blank
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)
-BUILD_TESTS=		--test
-.else
-BUILD_TESTS=		# blank
+WAF_ARGS+=		--test
 .endif
