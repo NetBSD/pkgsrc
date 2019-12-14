@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.11 2017/11/15 18:22:22 he Exp $
+$NetBSD: distinfo,v 1.12 2019/12/14 10:46:08 khorben Exp $
 
-SHA1 (yara-3.7.0.tar.gz) = 89fd429bf40db1039c0a3ff7cd94d79ec450c024
-RMD160 (yara-3.7.0.tar.gz) = 069f9815ead81ebf2be3151b14a4fcc3046770d7
-SHA512 (yara-3.7.0.tar.gz) = cd0214d39c6d1c5bc8410a1ec67e42ec8a672be382fb11e0a0f98cb03af1ef5db92e74216a9b98a6bdedf9721d4470639e340edbd39ca0184233652839742a33
-Size (yara-3.7.0.tar.gz) = 558035 bytes
-SHA1 (patch-common.h) = 199ab70fb828124e07ae51a467ed50ad95f2b616
-SHA1 (patch-libyara_modules_pe.c) = db69a250dabc9a074cd17c795e7b0d117b2585bf
+SHA1 (yara-3.11.0.tar.gz) = 81a243423352d66f5ec0cb657098c27f035cd164
+RMD160 (yara-3.11.0.tar.gz) = 18f28d9c6cface071f2526ca7d7c64a0b3a848f9
+SHA512 (yara-3.11.0.tar.gz) = 26d800284a2de07195e4a480eb7125b1f5ad0265b284bfbeee10dbab162ea0f419c9e2ea5c4ed5fa25a46a2c9e3c6b077dfe1cafece79251e20d5d70f91b80a8
+Size (yara-3.11.0.tar.gz) = 772122 bytes
+SHA1 (patch-common.h) = d85b8be6ee384630f8e1b7ffc3c126f25d13e956
+SHA1 (patch-libyara_libyara.c) = 3be4325f344676cc490ff262483b76fab4b080fa
+SHA1 (patch-libyara_re.c) = 4376d943b32fc0e13cb2b4ced99467da1f263da0
 SHA1 (patch-libyara_re__lexer.l) = 169802090dd922f06d8c32a0d1ea5409cf660f61

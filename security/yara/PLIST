@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2017/11/15 18:22:22 he Exp $
+@comment $NetBSD: PLIST,v 1.6 2019/12/14 10:46:08 khorben Exp $
 bin/yara
 bin/yarac
 include/yara.h
 include/yara/ahocorasick.h
 include/yara/arena.h
 include/yara/atoms.h
+include/yara/bitmask.h
 include/yara/compiler.h
 include/yara/error.h
 include/yara/exec.h
@@ -22,7 +23,10 @@ include/yara/proc.h
 include/yara/re.h
 include/yara/rules.h
 include/yara/scan.h
+include/yara/scanner.h
 include/yara/sizedstr.h
+include/yara/stack.h
+include/yara/stopwatch.h
 include/yara/stream.h
 include/yara/strutils.h
 include/yara/threading.h
