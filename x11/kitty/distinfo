@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.2 2019/02/04 01:11:15 gutteridge Exp $
+$NetBSD: distinfo,v 1.3 2019/12/14 22:08:10 nia Exp $
 
-SHA1 (kitty-0.13.3.tar.gz) = ee8222e270c18a0318cf23563e946af5fae1ff5e
-RMD160 (kitty-0.13.3.tar.gz) = 4eafc1541cc99ae1e22ffd4da0d6cb8684070666
-SHA512 (kitty-0.13.3.tar.gz) = 71273c0cd71ee2c49af5addeb9512c077f29d3f6e1843243c2cc174292e9ace18cbabd041ba8ef9ad8f41630cdaad01e0869c919634bb084e9724d612cd3a502
-Size (kitty-0.13.3.tar.gz) = 3510975 bytes
-SHA1 (patch-kitty_threading.h) = d6bf2285a2100479c44de2f9aa842b910ca8ba6d
-SHA1 (patch-setup.py) = dabdaa69ca56e799c93aa299635e0d2bd1d27f49
+SHA1 (kitty-0.15.0.tar.xz) = 8b4f57a4f291de2de047a6905a9c383f9e218589
+RMD160 (kitty-0.15.0.tar.xz) = a116d11f9bb331ce72c0db3781b454b640b76969
+SHA512 (kitty-0.15.0.tar.xz) = 4e546fb9ad0cf34df8aa5ef3787224e8dd820fadb474faddc5f47b987bbc46fb62350a64bcacbdccd7e7cd287df22045ed742b89f613e402f033dc8bb73d8688
+Size (kitty-0.15.0.tar.xz) = 2978152 bytes
+SHA1 (patch-kitty_threading.h) = 04886ab09ac2ab6f4925cd20e739e6b634299d55
