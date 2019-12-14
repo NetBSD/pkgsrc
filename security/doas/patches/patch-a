@@ -1,0 +1,75 @@
+$NetBSD: patch-a,v 1.1 2019/12/14 11:19:54 ng0 Exp $
+
+manpages: patch in the correct installed location of the config file.
+This resolves PR pkg/54717
+Upstream commited as dad0c102327a69cd629bb8035f171929864bd5b0
+
+--- /dev/null
++++ .gitignore
+@@ -0,0 +1,4 @@
++*.o
++*.final
++y.tab.c
++doas
+
+--- Makefile
++++ Makefile
+@@ -1,3 +1,4 @@
++AWK?=awk
+ CC?=clang
+ YACC?=yacc
+ BIN=doas
+@@ -39,7 +40,7 @@ ifeq ($(UNAME_S),Darwin)
+     MANDIR=$(DESTDIR)$(PREFIX)/share/man
+ endif
+ 
+-all: $(OBJECTS)
++all: $(OBJECTS) doas.1.final doas.conf.5.final
+ 	$(CC) -o $(BIN) $(OBJECTS) $(LDFLAGS)
+ 
+ env.o: doas.h env.c
+@@ -59,10 +60,18 @@ install: $(BIN)
+ 	cp $(BIN) $(DESTDIR)$(PREFIX)/bin/
+ 	chmod 4755 $(DESTDIR)$(PREFIX)/bin/$(BIN)
+ 	mkdir -p $(MANDIR)/man1
+-	cp doas.1 $(MANDIR)/man1/
++	cp doas.1.final $(MANDIR)/man1/doas.1
+ 	mkdir -p $(MANDIR)/man5
+-	cp doas.conf.5 $(MANDIR)/man5/
++	cp doas.conf.5.final $(MANDIR)/man5/doas.conf.5
+ 
+ clean:
+ 	rm -f $(BIN) $(OBJECTS) y.tab.c
++	rm -f *.final
+ 
++# Doing it this way allows to change the original files
++# only partially instead of renaming them.
++doas.1.final:
++	$(AWK) -v pfx="$(SYSCONFDIR)" '{gsub("@SUBSTSYSCONFDIR@",pfx); print $$0}' < doas.1 > doas.1.final
++
++doas.conf.5.final:
++	$(AWK) -v pfx="$(SYSCONFDIR)" '{gsub("@SUBSTSYSCONFDIR@",pfx); print $$0}' < doas.conf.5 > doas.conf.5.final
+
+--- doas.1
++++ doas.1
+@@ -91,7 +91,7 @@ It may fail for one of the following reasons:
+ .Bl -bullet -compact
+ .It
+ The config file
+-.Pa /usr/local/etc/doas.conf
++.Pa @SUBSTSYSCONFDIR@/doas.conf
+ could not be parsed.
+ .It
+ The user attempted to run a command which is not permitted.
+
+--- doas.conf.5
++++ doas.conf.5
+@@ -20,7 +20,7 @@
+ .Nm doas.conf
+ .Nd doas configuration file
+ .Sh SYNOPSIS
+-.Nm /usr/local/etc/doas.conf
++.Nm @SUBSTSYSCONFDIR@/doas.conf
+ .Sh DESCRIPTION
+ The
+ .Xr doas 1
