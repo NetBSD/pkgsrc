@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5370 2019/12/14 10:46:29 khorben Exp $
+$NetBSD: CHANGES-2019,v 1.5371 2019/12/14 10:48:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8621,3 +8621,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/u-boot-rpi3-32 version 2018.11 [khorben 2019-12-14]
 	Removed sysutils/u-boot-rpi3-32b successor sysutils/u-boot-rpi3-32 [khorben 2019-12-14]
 	Updated security/yara to 3.11.0 [khorben 2019-12-14]
+	Updated fonts/py-fonttools to 4.2.2 [adam 2019-12-14]
+	Removed fonts/py-TTFQuery [adam 2019-12-14]
