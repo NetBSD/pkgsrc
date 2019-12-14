@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/22 21:00:04 adam Exp $
+$NetBSD: distinfo,v 1.8 2019/12/14 10:52:18 adam Exp $
 
-SHA1 (pydash-4.7.5.tar.gz) = 898eacaf5d0c2f376c27a7aee6e99432db03d28f
-RMD160 (pydash-4.7.5.tar.gz) = 2fc91baa651087b0aef35cbc6e501bbef055d12c
-SHA512 (pydash-4.7.5.tar.gz) = 8a2eb660b7427b95e15224d3c8a4b065163f9eac9b44c6a1b5888b79f297e3cd7ad60be4e2ba9d9203394bcd8083443c5fe2d9addff8bd69f970f849cdc6b009
-Size (pydash-4.7.5.tar.gz) = 133988 bytes
+SHA1 (pydash-4.7.6.tar.gz) = 245b9607da643935449e8cbc50af67734aa76a9f
+RMD160 (pydash-4.7.6.tar.gz) = 0ebf3421651162c6df4cd51a6d57618cda6b7a44
+SHA512 (pydash-4.7.6.tar.gz) = bf8c6c633cf13cd9a91049cb16b4a00af88e78c39c13f53d838f3f92c45b3052c2266e5b27e5f55e61bf2ad18ce9b8585c732549a5ebdbf8503c721fefeb149e
+Size (pydash-4.7.6.tar.gz) = 134403 bytes
