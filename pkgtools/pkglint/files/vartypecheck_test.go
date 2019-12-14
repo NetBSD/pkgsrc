@@ -1176,8 +1176,7 @@ func (s *Suite) Test_VartypeCheck_MachinePlatform(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:1: \"linux-i386\" is not a valid platform pattern.",
 		"WARN: filename.mk:2: The pattern \"nextbsd\" cannot match any of "+
-			"{ AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku "+
-			"IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare "+
+			"{ Cygwin DragonFly FreeBSD Linux NetBSD SunOS "+
 			"} for the operating system part of MACHINE_PLATFORM.",
 		"WARN: filename.mk:2: The pattern \"8087\" cannot match any of "+
 			"{ aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 "+
@@ -1191,8 +1190,7 @@ func (s *Suite) Test_VartypeCheck_MachinePlatform(c *check.C) {
 			"rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 "+
 			"} for the hardware architecture part of MACHINE_PLATFORM.",
 		"WARN: filename.mk:3: The pattern \"netbsd\" cannot match any of "+
-			"{ AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku "+
-			"IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare "+
+			"{ Cygwin DragonFly FreeBSD Linux NetBSD SunOS "+
 			"} for the operating system part of MACHINE_PLATFORM.",
 		"WARN: filename.mk:3: The pattern \"l*\" cannot match any of "+
 			"{ aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 "+
@@ -1227,8 +1225,7 @@ func (s *Suite) Test_VartypeCheck_MachinePlatformPattern(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:1: \"linux-i386\" is not a valid platform pattern.",
 		"WARN: filename.mk:2: The pattern \"nextbsd\" cannot match any of "+
-			"{ AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku "+
-			"IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare "+
+			"{ Cygwin DragonFly FreeBSD Linux NetBSD SunOS "+
 			"} for the operating system part of ONLY_FOR_PLATFORM.",
 		"WARN: filename.mk:2: The pattern \"8087\" cannot match any of "+
 			"{ aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 "+
@@ -1242,8 +1239,7 @@ func (s *Suite) Test_VartypeCheck_MachinePlatformPattern(c *check.C) {
 			"rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 "+
 			"} for the hardware architecture part of ONLY_FOR_PLATFORM.",
 		"WARN: filename.mk:3: The pattern \"netbsd\" cannot match any of "+
-			"{ AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku "+
-			"IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare "+
+			"{ Cygwin DragonFly FreeBSD Linux NetBSD SunOS "+
 			"} for the operating system part of ONLY_FOR_PLATFORM.",
 		"WARN: filename.mk:3: The pattern \"l*\" cannot match any of "+
 			"{ aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 "+
