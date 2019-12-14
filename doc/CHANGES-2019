@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5367 2019/12/14 02:57:24 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5368 2019/12/14 10:24:07 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8618,3 +8618,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/pianobar to 2019.02.14 [mef 2019-12-14]
 	Updated converters/fribidi to 1.0.8 [nia 2019-12-14]
 	Updated devel/libgit2 to 0.28.4 [nia 2019-12-14]
+	Added sysutils/u-boot-rpi3-32 version 2018.11 [khorben 2019-12-14]
