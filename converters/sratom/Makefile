@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/12/14 17:35:31 nia Exp $
+# $NetBSD: Makefile,v 1.16 2019/12/14 17:53:39 nia Exp $
 
 DISTNAME=	sratom-0.6.4
 CATEGORIES=	converters
@@ -13,28 +13,15 @@ LICENSE=	isc
 USE_LANGUAGES=	c99
 USE_TOOLS+=	gsed pkg-config
 
+PYTHON_FOR_BUILD_ONLY=	tool
 PKGCONFIG_OVERRIDE+=	sratom.pc.in
 
 .include "options.mk"
-
-BUILD_OPTIONS=	${BUILD_DEBUG} ${BUILD_DOC} ${BUILD_TESTS}
-
-do-configure:
-	cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf configure \
-			--destdir=${DESTDIR} --mandir=${PREFIX}/${PKGMANDIR} \
-				${BUILD_OPTIONS}
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./waf build
-
-do-install:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} ./waf install
-
+.include "../../devel/waf/waf.mk"
 BUILDLINK_API_DEPENDS.sord+=	sord>=0.14.0
 .include "../../textproc/sord/buildlink3.mk"
 BUILDLINK_API_DEPENDS.serd+=	serd>=0.30.0
 .include "../../textproc/serd/buildlink3.mk"
 BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.10.0
 .include "../../audio/lv2/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
