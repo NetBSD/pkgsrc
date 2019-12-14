@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5374 2019/12/14 11:20:41 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.5375 2019/12/14 14:36:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8629,3 +8629,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-joblib to 0.14.1 [adam 2019-12-14]
 	Updated devel/py-future to 0.18.2 [adam 2019-12-14]
 	Updated security/doas to 6.2p2nb1 [ng0 2019-12-14]
+	Updated math/p5-Algorithm-Cluster to 1.59 [mef 2019-12-14]
