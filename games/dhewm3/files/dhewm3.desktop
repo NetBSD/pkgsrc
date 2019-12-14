@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=dhewm3
+Comment=Source port of the original Doom 3
+Icon=doom3
+Exec=dhewm3
+Terminal=false
+Categories=Game;Shooter;

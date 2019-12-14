@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/14 19:16:39 nia Exp $
+bin/dhewm3
+bin/dhewm3ded
+lib/dhewm3/base.so
+lib/dhewm3/d3xp.so
+share/applications/dhewm3.desktop
+share/pixmaps/doom3.png
