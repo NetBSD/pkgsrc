@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2019/12/15 14:05:47 nia Exp $
+
+SHA1 (picom-7.5.tar.gz) = 60f3700cb4c728e801caf6981a7bcdfcee0fa45e
+RMD160 (picom-7.5.tar.gz) = e1c889539b6d414c5a7f45b48abc7bd8a6a4ddef
+SHA512 (picom-7.5.tar.gz) = 6535e5eab1a243bbee62448bc48830b7ea3566f94b2c45d9ca76fd8b8056e1f00e55f0e4b58110364d2c4f56652cc005622d644c1db1db41d2811ecc19e6d44a
+Size (picom-7.5.tar.gz) = 219456 bytes
+SHA1 (patch-src_backend_gl_gl__common.c) = 6b42dc1a4dd061046d23d123ccc4df4dea2ab48f
+SHA1 (patch-src_utils.h) = 31f422592b5f9d232d26f437808b64dc2fb4c0f2

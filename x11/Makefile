@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.867 2019/11/26 09:07:16 wiz Exp $
+# $NetBSD: Makefile,v 1.868 2019/12/15 14:05:47 nia Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -28,7 +28,6 @@ SUBDIR+=	clipit
 SUBDIR+=	clisp-gtk2
 SUBDIR+=	clisp-mit-clx
 SUBDIR+=	clisp-new-clx
-SUBDIR+=	compton
 SUBDIR+=	deforaos-integration
 SUBDIR+=	deforaos-keyboard
 SUBDIR+=	deforaos-libdesktop
@@ -306,6 +305,7 @@ SUBDIR+=	p5-Wx
 SUBDIR+=	p5-Wx-Perl-ProcessStream
 SUBDIR+=	p5-X11-Protocol
 SUBDIR+=	p5-gtk2
+SUBDIR+=	picom
 SUBDIR+=	pixman
 SUBDIR+=	plasma-framework
 SUBDIR+=	py-Pmw
