@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2019/07/21 22:26:01 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2019/12/15 23:52:58 gutteridge Exp $
 
-DISTNAME=	lxrandr-0.3.1
-PKGREVISION=	8
+DISTNAME=	lxrandr-0.3.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
