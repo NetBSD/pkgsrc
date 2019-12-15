@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.39 2019/11/04 22:09:54 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2019/12/15 18:27:24 taca Exp $
 #
 
-DISTNAME=	fengoffice_3.2.2.1
+DISTNAME=	fengoffice-${FO_VERSION}
 PKGNAME=	${DISTNAME:S/_/-/:C/.rc$/rc1/}
-PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengoo/}
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=fengoffice/}
+GITHUB_TYPE=	tag
+GITHUB_PROJECT=	fengoffice
+GITHUB_RELEASE=	${FO_VERSION}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://fengoffice.com/web/community/community_index.php
@@ -15,15 +16,15 @@ LICENSE=	gnu-agpl-v3
 
 CONFLICTS+=	opengoo-[0-9]*
 
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.1.0:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=7.1:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.1.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.1.0:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>=5.1.0:../../mail/php-imap
 
-PHP_VERSIONS_ACCEPTED=	56
+FO_VERSION=	3.7.2.16
 
-WRKSRC=		${WRKDIR}/fengoffice
+#EXTRACT_USING=	bsd-tar
 USE_TOOLS=	pax
 NO_BUILD=	yes
 
