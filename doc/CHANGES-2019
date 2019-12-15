@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5394 2019/12/15 12:29:38 mef Exp $
+$NetBSD: CHANGES-2019,v 1.5395 2019/12/15 12:51:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8672,3 +8672,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-coverage to 5.0 [adam 2019-12-15]
 	Updated devel/py-more-itertools to 8.0.2 [adam 2019-12-15]
 	Updated sysutils/bfs to 1.5.1 [mef 2019-12-15]
+	Updated sysutils/py-setconf to 0.7.6 [mef 2019-12-15]
