@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.75 2019/08/11 13:23:06 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2019/12/15 11:49:28 mef Exp $
 
-PKGREVISION= 3
 .include "../../sysutils/coreutils/Makefile.common"
 
 CONFIGURE_ARGS+=	--without-gmp

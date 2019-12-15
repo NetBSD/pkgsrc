@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.2 2014/02/04 15:07:46 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2019/12/15 11:49:28 mef Exp $
 
 Target for misc/gnuls package.
 
---- Makefile.in.orig	2013-12-13 15:20:00.000000000 +0000
-+++ Makefile.in
-@@ -4395,6 +4395,9 @@ pr_data = \
+--- Makefile.in.orig	2019-03-11 09:07:54.000000000 +0900
++++ Makefile.in	2019-12-15 20:20:53.851783141 +0900
+@@ -6350,6 +6350,9 @@ pr_data = \
  all: $(BUILT_SOURCES)
  	$(MAKE) $(AM_MAKEFLAGS) all-recursive
  
@@ -12,5 +12,5 @@ Target for misc/gnuls package.
 +	$(MAKE) $(AM_MAKEFLAGS) src/dircolors src/ls man/dircolors.1 man/ls.1
 +
  .SUFFIXES:
- .SUFFIXES: .1 .c .dvi .log .o .obj .pl .pl$(EXEEXT) .ps .sed .sh .sh$(EXEEXT) .sin .trs .x .xpl .xpl$(EXEEXT) .y
+ .SUFFIXES: .1 .c .dvi .log .o .obj .pl .pl$(EXEEXT) .ps .sh .sh$(EXEEXT) .trs .x .xpl .xpl$(EXEEXT) .y
  am--refresh: Makefile

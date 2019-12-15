@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.20 2018/01/01 22:29:56 rillig Exp $
+@comment $NetBSD: PLIST,v 1.21 2019/12/15 11:49:28 mef Exp $
 bin/g[
 bin/gb2sum
 bin/gbase32
 bin/gbase64
 bin/gbasename
+bin/gbasenc
 bin/gcat
 bin/gchcon
 bin/gchgrp
@@ -319,6 +320,7 @@ man/man1/gb2sum.1
 man/man1/gbase32.1
 man/man1/gbase64.1
 man/man1/gbasename.1
+man/man1/gbasenc.1
 man/man1/gcat.1
 man/man1/gchcon.1
 man/man1/gchgrp.1
