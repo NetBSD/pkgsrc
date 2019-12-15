@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2017/02/12 21:50:17 adam Exp $
+$NetBSD: distinfo,v 1.5 2019/12/15 21:32:52 adam Exp $
 
-SHA1 (pfstools-2.0.5.tgz) = 69e01a1079f7a0d764022d59f1463c775c2ad8f5
-RMD160 (pfstools-2.0.5.tgz) = 01679b504f7e8697cc7225878173e52e6c691865
-SHA512 (pfstools-2.0.5.tgz) = 6aec71369f31b25443f11a6d715c43f82ac028cbe2472d1515c6a6fde7afaa32f8fd5856d8330481481e6c84d89b72077edf4d90012ff8e547f7f13b0fc110a4
-Size (pfstools-2.0.5.tgz) = 582119 bytes
+SHA1 (pfstools-2.1.0.tgz) = 7190c55b3c0af2cbabf6d326895bab8b9b8b8dbe
+RMD160 (pfstools-2.1.0.tgz) = 701b96e9f566fae061bdd3b46d5fc846537d4a65
+SHA512 (pfstools-2.1.0.tgz) = 2117d638a807ec803fec0e8a2d1478f2771cc39fb349b582ab2727762379dc52c9b2a50c276d123c2c7456cdc7518ae60bdaa6d2e3ff179f9f43df63f2b57012
+Size (pfstools-2.1.0.tgz) = 596136 bytes
 SHA1 (patch-CMakeLists.txt) = 344903c4b26414f75c415a0c00dd520e2d3641dc
 SHA1 (patch-src_octave_pfscrop) = 5291c0ffecb0cf04004c7460d0639618595a9b1a
