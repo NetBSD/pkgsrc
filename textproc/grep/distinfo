@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.25 2019/06/11 10:17:28 jperkin Exp $
+$NetBSD: distinfo,v 1.26 2019/12/15 21:12:33 rhialto Exp $
 
-SHA1 (grep-3.1.tar.xz) = d1d677e959c7d874e18e7e3839f26a0f0c1733d5
-RMD160 (grep-3.1.tar.xz) = 6eaaac1245c653628fd57f07df25b3a60e842891
-SHA512 (grep-3.1.tar.xz) = 05494381c7dd8aad7e2ee4c17450de8d7b969a99dcfe17747db60df3475bf02d5323d091e896e8343e4f3251c29dc7f0b7a9f93c575c9d58ee2a57014c2c9d26
-Size (grep-3.1.tar.xz) = 1370880 bytes
+SHA1 (grep-3.3.tar.xz) = e0befe21e7d9caa8e5e98385c96355d890f83123
+RMD160 (grep-3.3.tar.xz) = dd32e6f23b55fd7bde6adec25c4d2666b9d4daf1
+SHA512 (grep-3.3.tar.xz) = e4805dbddf7cd0f0faf412557d408509650c1ccf703bc450f10a3f727c690dbfaa1235aa81939a0e4b7ac6190f88c15ea1fcc562b343d4b4c7550f967aeb15db
+Size (grep-3.3.tar.xz) = 1473056 bytes
 SHA1 (patch-src_Makefile.in) = 9efe4748d4b1ff33adca4e251e2e4249c62f0035
