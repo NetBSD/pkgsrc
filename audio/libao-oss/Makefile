@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2019/11/24 00:35:57 nia Exp $
+# $NetBSD: Makefile,v 1.12 2019/12/15 23:15:01 nia Exp $
 
 .include "../../audio/libao/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/libao/libao-oss/}
+PKGREVISION=	1
 
 COMMENT+=	(OSS plugin)
 
@@ -13,6 +14,14 @@ CONFIGURE_ENV:=	${CONFIGURE_ENV:S/ac_cv_header_machine_soundcard_h=no//1}
 
 BUILD_DIRS=		src/plugins/oss
 INSTALL_DIRS=		src/plugins/oss
+
+.include "../../mk/oss.buildlink3.mk"
+
+.if ${OSS_TYPE} != "none"
+LDFLAGS+=		${LIBOSSAUDIO}
+.else
+PKG_SKIP_REASON=	"OSS not available"
+.endif
 
 SUBST_CLASSES+=		oss
 SUBST_MESSAGE.oss=	Fixing paths to OSS devices.
@@ -26,5 +35,4 @@ BUILDLINK_API_DEPENDS.libao+=	libao>=0.8.6nb1
 _LIBAO_BUILDING_PLUGIN=	yes
 
 .include "../../audio/libao/buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
