@@ -1,14 +1,14 @@
-$NetBSD: patch-src_utils.h,v 1.1 2019/09/17 11:43:29 tnn Exp $
+$NetBSD: patch-src_utils.h,v 1.1 2019/12/15 14:05:47 nia Exp $
 
-Use libc popcountl if present.
+Conflicting type definition with libc popcountl
 
---- src/utils.h.orig	2019-08-18 21:40:33.000000000 +0000
+--- src/utils.h.orig	2019-11-18 21:59:30.000000000 +0000
 +++ src/utils.h
 @@ -114,9 +114,11 @@ static inline int attr_const normalize_i
  /// clamp `val` into interval [min, max]
  #define clamp(val, min, max) max2(min2(val, max), min)
  
-+#ifndef HAS_POPCOUNTL
++#ifndef __NetBSD__
  static inline int attr_const popcountl(unsigned long a) {
  	return __builtin_popcountl(a);
  }
