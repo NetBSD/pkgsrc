@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/06/20 16:43:38 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/12/15 19:03:51 schmonz Exp $
 include/skalibs/alarm.h
 include/skalibs/alloc.h
 include/skalibs/allreadwrite.h
@@ -7,6 +7,7 @@ include/skalibs/avltree.h
 include/skalibs/avltreen.h
 include/skalibs/biguint.h
 include/skalibs/bitarray.h
+include/skalibs/bsdsnowflake.h
 include/skalibs/bufalloc.h
 include/skalibs/buffer.h
 include/skalibs/bytestr.h
@@ -80,17 +81,12 @@ include/skalibs/unixconnection.h
 include/skalibs/unixmessage.h
 include/skalibs/unixonacid.h
 include/skalibs/webipc.h
-${PLIST.include-shared-objects}lib/libskarnet.so
-${PLIST.include-shared-objects}lib/libskarnet.so.${PKGVERSION}
-${PLIST.include-shared-objects}lib/libskarnet.so.2.8
-${PLIST.include-shared-objects}lib/libskarnet.so.2.8.1
+lib/libskarnet.la
 lib/skalibs/libskarnet.a
 lib/skalibs/sysdeps/socket.lib
 lib/skalibs/sysdeps/spawn.lib
 lib/skalibs/sysdeps/sysclock.lib
 lib/skalibs/sysdeps/sysdeps
-lib/skalibs/sysdeps/sysdeps.h
-lib/skalibs/sysdeps/tainnow.lib
 lib/skalibs/sysdeps/target
 lib/skalibs/sysdeps/timer.lib
 lib/skalibs/sysdeps/util.lib
