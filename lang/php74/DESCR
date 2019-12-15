@@ -1,0 +1,23 @@
+PHP is a widely-used open source general-purpose scripting language
+that is especially suited for web development and can be embedded
+into HTML.  It is modular, and object-oriented.  Much of its syntax
+is borrowed from C, Java and Perl with a couple of unique PHP-specific
+features thrown in.  The language is designed to allow web developers
+to write dynamically generated pages quickly.
+
+PHP 7.4 comes with numerous improvements and new features such as
+
+* Typed Properties
+* Arrow Functions
+* Limited Return Type Covariance and Argument Type Contravariance
+* Unpacking Inside Arrays
+* Numeric Literal Separator
+* Weak References
+* Allow Exceptions from __toString()
+* Opcache Preloading
+* Several Deprecations
+* Extensions Removed from the Core
+
+For source downloads of PHP 7.4 please visit our downloads page Windows
+binaries can be found on the PHP for Windows site.  The list of changes is
+recorded in the ChangeLog.
