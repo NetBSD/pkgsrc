@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19504 2019/12/15 18:34:18 taca Exp $
+$NetBSD: TODO,v 1.19505 2019/12/15 18:43:21 adam Exp $
 
 Suggested new packages
 ======================
@@ -1094,7 +1094,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o qbzr-0.23.2
-	o qemu-4.2.0
 	o qlandkartegt-1.8.1 [pkg/53376]
 	o qt4-creator-3.4.0
 	o racket-7.1
