@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/02 17:36:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/12/15 09:48:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,10 +8,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/certbot_dns_google/__init__.py
 ${PYSITELIB}/certbot_dns_google/__init__.pyc
 ${PYSITELIB}/certbot_dns_google/__init__.pyo
-${PYSITELIB}/certbot_dns_google/dns_google.py
-${PYSITELIB}/certbot_dns_google/dns_google.pyc
-${PYSITELIB}/certbot_dns_google/dns_google.pyo
-${PYSITELIB}/certbot_dns_google/dns_google_test.py
-${PYSITELIB}/certbot_dns_google/dns_google_test.pyc
-${PYSITELIB}/certbot_dns_google/dns_google_test.pyo
-${PYSITELIB}/certbot_dns_google/testdata/discovery.json
+${PYSITELIB}/certbot_dns_google/_internal/__init__.py
+${PYSITELIB}/certbot_dns_google/_internal/__init__.pyc
+${PYSITELIB}/certbot_dns_google/_internal/__init__.pyo
+${PYSITELIB}/certbot_dns_google/_internal/dns_google.py
+${PYSITELIB}/certbot_dns_google/_internal/dns_google.pyc
+${PYSITELIB}/certbot_dns_google/_internal/dns_google.pyo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/02 17:36:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/12/15 09:48:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,9 +8,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/certbot_dns_ovh/__init__.py
 ${PYSITELIB}/certbot_dns_ovh/__init__.pyc
 ${PYSITELIB}/certbot_dns_ovh/__init__.pyo
-${PYSITELIB}/certbot_dns_ovh/dns_ovh.py
-${PYSITELIB}/certbot_dns_ovh/dns_ovh.pyc
-${PYSITELIB}/certbot_dns_ovh/dns_ovh.pyo
-${PYSITELIB}/certbot_dns_ovh/dns_ovh_test.py
-${PYSITELIB}/certbot_dns_ovh/dns_ovh_test.pyc
-${PYSITELIB}/certbot_dns_ovh/dns_ovh_test.pyo
+${PYSITELIB}/certbot_dns_ovh/_internal/__init__.py
+${PYSITELIB}/certbot_dns_ovh/_internal/__init__.pyc
+${PYSITELIB}/certbot_dns_ovh/_internal/__init__.pyo
+${PYSITELIB}/certbot_dns_ovh/_internal/dns_ovh.py
+${PYSITELIB}/certbot_dns_ovh/_internal/dns_ovh.pyc
+${PYSITELIB}/certbot_dns_ovh/_internal/dns_ovh.pyo
