@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.21 2019/11/24 01:05:00 gdt Exp $
+# $NetBSD: Makefile.common,v 1.22 2019/12/15 11:49:28 mef Exp $
 #
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
 
-DISTNAME=	coreutils-8.29
+DISTNAME=	coreutils-8.31
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
 EXTRACT_SUFX=	.tar.xz

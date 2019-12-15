@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_fflush.c,v 1.1 2018/05/09 08:41:19 wen Exp $
+$NetBSD: patch-lib_fflush.c,v 1.2 2019/12/15 11:49:28 mef Exp $
+
+Add NetBSD support
 
 --- lib/fflush.c.orig	2018-05-09 07:57:42.000000000 +0000
 +++ lib/fflush.c
