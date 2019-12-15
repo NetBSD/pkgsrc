@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.213 2019/11/03 19:04:06 rillig Exp $
+# $NetBSD: rubyversion.mk,v 1.214 2019/12/15 15:37:26 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -11,7 +11,7 @@
 #	The preferered Ruby version to use.
 #
 #		Possible values: 22 24 25 26
-#		Default: 24
+#		Default: 26
 #
 # RUBY_BUILD_DOCUMENT
 #	Build documentation of this package and so that install formated
@@ -219,7 +219,7 @@ RUBY25_API_VERSION=	2.5.0
 RUBY26_API_VERSION=	2.6.0
 
 #
-RUBY_VERSION_DEFAULT?=	24
+RUBY_VERSION_DEFAULT?=	26
 
 # supported Ruby's version
 RUBY_VERSIONS_SUPPORTED=	24 25 26 22
