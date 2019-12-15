@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5395 2019/12/15 12:51:28 mef Exp $
+$NetBSD: CHANGES-2019,v 1.5396 2019/12/15 13:11:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8673,3 +8673,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-more-itertools to 8.0.2 [adam 2019-12-15]
 	Updated sysutils/bfs to 1.5.1 [mef 2019-12-15]
 	Updated sysutils/py-setconf to 0.7.6 [mef 2019-12-15]
+	Updated sysutils/riemann-client to 1.10.4 [mef 2019-12-15]
