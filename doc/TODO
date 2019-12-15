@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19500 2019/12/15 11:48:10 wiz Exp $
+$NetBSD: TODO,v 1.19501 2019/12/15 11:56:09 adam Exp $
 
 Suggested new packages
 ======================
@@ -1119,20 +1119,15 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ephem3-3.7.6.0
 	o py-gds-1.4.2
 	o py-gnome-menus-3.8.0
-	o py-google-auth-1.8.2
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-mercurial-5.2.1
-	o py-more-itertools-8.0.2
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
-	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
-	o py-pycountry-1.20
 	o py-pygit2-1.0.0
-	o py-setuptools-42.0.2
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
