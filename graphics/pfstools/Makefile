@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2019/10/28 09:42:28 kamil Exp $
+# $NetBSD: Makefile,v 1.55 2019/12/15 21:32:52 adam Exp $
 
-DISTNAME=	pfstools-2.0.5
-PKGREVISION=	14
+DISTNAME=	pfstools-2.1.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pfstools/}
 EXTRACT_SUFX=	.tgz
@@ -11,25 +10,24 @@ HOMEPAGE=	http://pfstools.sourceforge.net/
 COMMENT=	Tools for manipulating HDR images and video frames
 LICENSE=	gnu-lgpl-v2.1
 
+DEPENDS+=	dcraw-[0-9]*:../../graphics/dcraw
+
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash perl pkg-config
+PKGCONFIG_OVERRIDE+=	src/pfs/pfs.pc.in
 CMAKE_ARGS+=		-DBASH_EXECUTABLE=${TOOLS_BASH}
 CMAKE_ARGS+=		-DPKGMANDIR=${PKGMANDIR}
-CMAKE_ARGS+=		-DWITH_MATLAB=NO
-CMAKE_ARGS+=		-DWITH_OpenCV=NO
-CMAKE_ARGS+=		-DWITH_QT=NO
-
-PKGCONFIG_OVERRIDE+=	src/pfs/pfs.pc.in
-
-DEPENDS+=	dcraw-[0-9]*:../../graphics/dcraw
+CMAKE_ARGS+=		-DWITH_MATLAB=OFF
+CMAKE_ARGS+=		-DWITH_OpenCV=OFF
+CXXFLAGS+=		-std=c++14  # OpenEXR
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing paths in CMake modules.
 SUBST_FILES.paths=	cmake/Find*.cmake
-SUBST_SED.paths=	-e 's,/usr/local,${LOCALBASE},g'
+SUBST_SED.paths=	-e 's,/usr/local,${PREFIX},g'
 
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	pre-configure
@@ -43,6 +41,6 @@ SUBST_SED.perl=		-e 's,@PERL_PATH@,${PERL5},g'
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../math/fftw/buildlink3.mk"
+.include "../../math/fftwf/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
