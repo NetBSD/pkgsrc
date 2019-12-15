@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5396 2019/12/15 13:11:15 mef Exp $
+$NetBSD: CHANGES-2019,v 1.5397 2019/12/15 14:07:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8674,3 +8674,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/bfs to 1.5.1 [mef 2019-12-15]
 	Updated sysutils/py-setconf to 0.7.6 [mef 2019-12-15]
 	Updated sysutils/riemann-client to 1.10.4 [mef 2019-12-15]
+	Added x11/picom version 7.5 [nia 2019-12-15]
+	Removed x11/compton successor x11/picom [nia 2019-12-15]
