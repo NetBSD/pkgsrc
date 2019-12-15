@@ -1,0 +1,14 @@
+$NetBSD: patch-qemu-doc.texi,v 1.1 2019/12/15 18:35:49 adam Exp $
+
+Remove reference to nonexistent node `QEMU Guest Agent'.
+
+--- qemu-doc.texi.orig	2019-12-15 14:15:26.000000000 +0000
++++ qemu-doc.texi
+@@ -38,7 +38,6 @@
+ * Introduction::
+ * QEMU PC System emulator::
+ * QEMU System emulator for non PC targets::
+-* QEMU Guest Agent::
+ * QEMU User space emulator::
+ * System requirements::
+ * Security::
