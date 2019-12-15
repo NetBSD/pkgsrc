@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/11/14 10:41:31 adam Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/15 11:22:34 adam Exp $
 
-DISTNAME=	google-auth-1.7.1
+DISTNAME=	google-auth-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-auth/}
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-cachetools>=2.0.0:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-rsa>=3.1.4:../../security/py-rsa
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.3.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-oauth2client-[0-9]*:../../security/py-oauth2client
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
