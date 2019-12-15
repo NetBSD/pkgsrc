@@ -1,8 +1,8 @@
-# $NetBSD: tool.mk,v 1.2 2019/11/24 11:41:15 nia Exp $
+# $NetBSD: tool.mk,v 1.3 2019/12/15 23:59:00 gutteridge Exp $
 #
 # Create `python' interpreter wrapper for applicable Python bin.
 #
-# This mk fragment can be included in all packages that uses `python'
+# This mk fragment can be included in all packages that use `python'
 # as a tool without a pkgsrc-style version suffix.
 #
 # Keywords: python
