@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2019/08/11 13:23:23 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2019/12/15 21:12:33 rhialto Exp $
 
-DISTNAME=	grep-3.1
+DISTNAME=	grep-3.3
 PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=grep/}
