@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/10/03 10:47:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/12/15 21:47:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -50,6 +50,9 @@ ${PYSITELIB}/explorer/migrations/0006_query_connection.pyo
 ${PYSITELIB}/explorer/migrations/0007_querylog_connection.py
 ${PYSITELIB}/explorer/migrations/0007_querylog_connection.pyc
 ${PYSITELIB}/explorer/migrations/0007_querylog_connection.pyo
+${PYSITELIB}/explorer/migrations/0008_auto_20190308_1642.py
+${PYSITELIB}/explorer/migrations/0008_auto_20190308_1642.pyc
+${PYSITELIB}/explorer/migrations/0008_auto_20190308_1642.pyo
 ${PYSITELIB}/explorer/migrations/__init__.py
 ${PYSITELIB}/explorer/migrations/__init__.pyc
 ${PYSITELIB}/explorer/migrations/__init__.pyo

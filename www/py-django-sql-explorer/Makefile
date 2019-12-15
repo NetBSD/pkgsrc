@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/10/03 10:47:20 adam Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/15 21:47:20 adam Exp $
 
-DISTNAME=	django-sql-explorer-1.1.2
+DISTNAME=	django-sql-explorer-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-sql-explorer/}
@@ -15,11 +15,11 @@ DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.1.18:../../databases/py-sqlparse
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-unicodecsv>=0.14.1:../../databases/py-unicodecsv
 
-USE_LANGUAGES=		# empty
+USE_LANGUAGES=	# none
 
 # remove cache files from the distribution
 post-extract:
-	find ${WRKSRC} -type f \( -name '*.pyc' -or -name .DS_Store \) -print -delete
+	${FIND} ${WRKSRC} -type f -name '*.pyc' -print -delete
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
