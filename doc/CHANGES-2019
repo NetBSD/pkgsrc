@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5398 2019/12/15 14:26:54 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5399 2019/12/15 14:52:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8678,3 +8678,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed x11/compton successor x11/picom [nia 2019-12-15]
 	Updated devel/blosc to 1.17.1 [adam 2019-12-15]
 	Updated misc/rhash to 1.3.9 [adam 2019-12-15]
+	Updated devel/py-guppy3 to 3.0.9 [adam 2019-12-15]
+	Updated net/py-responses to 0.10.8 [adam 2019-12-15]
