@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2019/07/20 22:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2019/12/15 13:10:51 mef Exp $
 
 GITHUB_PROJECT=	riemann-c-client
 GITHUB_TAG=	${DISTNAME}
-DISTNAME=	riemann-c-client-1.10.3
+DISTNAME=	riemann-c-client-1.10.4
 PKGNAME=	${DISTNAME:S/c-//}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=algernon/}
 
@@ -16,6 +15,8 @@ LICENSE=	gnu-lgpl-v3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake autoreconf gmake pkg-config
+
+TEST_TARGET=	check
 
 LDFLAGS.SunOS+=	-lsocket
 
