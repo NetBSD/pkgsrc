@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/23 10:15:01 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/12/15 23:52:58 gutteridge Exp $
 bin/lxrandr
 man/man1/lxrandr.1
 share/applications/lxrandr.desktop
@@ -29,6 +29,7 @@ share/locale/hr/LC_MESSAGES/lxrandr.mo
 share/locale/hu/LC_MESSAGES/lxrandr.mo
 share/locale/id/LC_MESSAGES/lxrandr.mo
 share/locale/is/LC_MESSAGES/lxrandr.mo
+share/locale/it/LC_MESSAGES/lxrandr.mo
 share/locale/ja/LC_MESSAGES/lxrandr.mo
 share/locale/kk/LC_MESSAGES/lxrandr.mo
 share/locale/ko/LC_MESSAGES/lxrandr.mo
