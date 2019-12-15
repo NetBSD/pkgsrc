@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5403 2019/12/15 18:20:57 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5404 2019/12/15 18:27:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8684,3 +8684,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added meta-pkgs/php74-extensions version 7.4.0 [taca 2019-12-15]
 	Updated www/php-apcu to 5.1.18 [taca 2019-12-15]
 	Updated www/php-apcu_bc to 1.0.5 [taca 2019-12-15]
+	Updated www/fengoffice to 3.7.2.16 [taca 2019-12-15]
