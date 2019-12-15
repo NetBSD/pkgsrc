@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2019/09/09 09:32:36 nia Exp $
+$NetBSD: distinfo,v 1.3 2019/12/15 12:29:01 mef Exp $
 
-SHA1 (bfs-1.1.3.tar.gz) = c18273c935241df7d97dbe9430067f88303089a1
-RMD160 (bfs-1.1.3.tar.gz) = aff90ce1031399ae2568c9468dfb3239464a8734
-SHA512 (bfs-1.1.3.tar.gz) = 32a05a312549e53f1f0a4413a5f0d3695a6c9219326518b9c6e89ad3f050cc94666ec2661d84c9ea377718342e7483d1b50caf6a268afa24d1f0fa53e22b10c4
-Size (bfs-1.1.3.tar.gz) = 71109 bytes
-SHA1 (patch-mtab.c) = 17e17af347b4e38b44e8be730c9a4509cc77a4e2
+SHA1 (bfs-1.5.1.tar.gz) = c30b54309acff433f0cd78e9117d0b725d269fcc
+RMD160 (bfs-1.5.1.tar.gz) = 101a5bf416ae81db4b1654c76d6c7ff3293269ce
+SHA512 (bfs-1.5.1.tar.gz) = f501f2acaa19c772a350863539030c60299c3b001ebd3d473add4e8975f4fda3a79a6a524a0d1fbf729a66a943557cb66aa6d65a8aae41ab88b81a7740b17874
+Size (bfs-1.5.1.tar.gz) = 113824 bytes
+SHA1 (patch-mtab.c) = 591269c91adff55bae9c4b9ab7b66a621b11486f
