@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2019/12/13 01:39:23 rillig Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/12/15 01:29:06 rillig Exp $
 bin/pkglint
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint.a
 gopkg/pkg/${GO_PLATFORM}/netbsd.org/pkglint/getopt.a
@@ -49,8 +49,6 @@ gopkg/src/netbsd.org/pkglint/lineslexer.go
 gopkg/src/netbsd.org/pkglint/lineslexer_test.go
 gopkg/src/netbsd.org/pkglint/logging.go
 gopkg/src/netbsd.org/pkglint/logging_test.go
-gopkg/src/netbsd.org/pkglint/mkalign.go
-gopkg/src/netbsd.org/pkglint/mkalign_test.go
 gopkg/src/netbsd.org/pkglint/mkassignchecker.go
 gopkg/src/netbsd.org/pkglint/mkassignchecker_test.go
 gopkg/src/netbsd.org/pkglint/mkcondchecker.go
