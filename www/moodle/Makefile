@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2019/12/09 14:20:56 taca Exp $
+# $NetBSD: Makefile,v 1.80 2019/12/15 18:24:32 taca Exp $
 
 DISTNAME=	moodle-3.8
 PKGREVISION=	1
@@ -33,8 +33,7 @@ INSTALLATION_DIRS=	${EGDIR} share/moodle
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-PHP_VERSIONS_INCOMPATIBLE=	56
-PHP_VERSIONS_ACCEPTED=		71 72
+PHP_VERSIONS_ACCEPTED=		71 72 73
 
 PKG_GROUPS_VARS=	APACHE_GROUP
 PKG_USERS_VARS=		APACHE_USER
