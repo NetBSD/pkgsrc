@@ -1,0 +1,67 @@
+$NetBSD: patch-configure,v 1.1 2019/12/15 17:56:34 taca Exp $
+
+* Do not include "PKG_CONFIG*" in CONFIGURE_OPTIONS.
+* Don't automatically add libgcc on SunOS. Reported upstream as #75941.
+* Don't autodetect maintainer-zts.
+* The meta_ccld removal reported upstream as #75940.
+
+--- configure.orig	2019-11-26 20:13:36.000000000 +0000
++++ configure
+@@ -3682,6 +3682,10 @@ EOF
+    else
+     break
+    fi
++   case "$CURRENT_ARG" in
++       \'PKG_CONFIG\=*)	CURRENT_ARG="'PKG_CONFIG=@TOOLS_PATH.pkg-config@'";;
++       \'PKG_CONFIG_LIBDIR\=*)	CURRENT_ARG="'PKG_CONFIG_LIBDIR=@PHP_PKGCONFIG_PATH@'";;
++   esac
+    $as_echo "$CURRENT_ARG \\" >>config.nice
+    CONFIGURE_OPTIONS="$CONFIGURE_OPTIONS $CURRENT_ARG"
+   done
+@@ -5642,9 +5646,6 @@ fi
+ case $host_alias in
+   *solaris*)
+     CPPFLAGS="$CPPFLAGS -D_POSIX_PTHREAD_SEMANTICS"
+-    if test "${enable_libgcc+set}" != "set" && test "$GCC" = "yes"; then
+-      enable_libgcc=yes
+-    fi
+     ;;
+   *dgux*)
+     CPPFLAGS="$CPPFLAGS -D_BSD_TIMEOFDAY_FLAVOR"
+@@ -6892,27 +6893,6 @@ EOF
+     ;;
+   esac
+ 
+-  if test "$APACHE_VERSION" -lt 2004001; then
+-    APXS_MPM=`$APXS -q MPM_NAME`
+-    if test "$APXS_MPM" != "prefork" && test "$APXS_MPM" != "peruser" && test "$APXS_MPM" != "itk"; then
+-
+-  enable_maintainer_zts=yes
+-  if test "$pthreads_working" != "yes"; then
+-    as_fn_error $? "ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." "$LINENO" 5
+-  fi
+-
+-    fi
+-  else
+-    APACHE_THREADED_MPM=`$APXS_HTTPD -V 2>/dev/null | grep 'threaded:.*yes'`
+-    if test -n "$APACHE_THREADED_MPM"; then
+-
+-  enable_maintainer_zts=yes
+-  if test "$pthreads_working" != "yes"; then
+-    as_fn_error $? "ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." "$LINENO" 5
+-  fi
+-
+-    fi
+-  fi
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 
+@@ -74443,7 +74423,7 @@ $as_echo "#define HAVE_TIDYBUFFIO_H 1" >
+   fi
+ 
+   TIDY_LIBDIR=$TIDY_DIR/$PHP_LIBDIR
+-  if test "$TIDY_LIB_NAME" == 'tidyp'; then
++  if test "$TIDY_LIB_NAME" = 'tidyp'; then
+ 
+ $as_echo "#define HAVE_TIDYP_H 1" >>confdefs.h
+ 
