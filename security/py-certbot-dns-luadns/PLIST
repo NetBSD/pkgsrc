@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/02 17:36:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/12/15 09:48:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,9 +8,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/certbot_dns_luadns/__init__.py
 ${PYSITELIB}/certbot_dns_luadns/__init__.pyc
 ${PYSITELIB}/certbot_dns_luadns/__init__.pyo
-${PYSITELIB}/certbot_dns_luadns/dns_luadns.py
-${PYSITELIB}/certbot_dns_luadns/dns_luadns.pyc
-${PYSITELIB}/certbot_dns_luadns/dns_luadns.pyo
-${PYSITELIB}/certbot_dns_luadns/dns_luadns_test.py
-${PYSITELIB}/certbot_dns_luadns/dns_luadns_test.pyc
-${PYSITELIB}/certbot_dns_luadns/dns_luadns_test.pyo
+${PYSITELIB}/certbot_dns_luadns/_internal/__init__.py
+${PYSITELIB}/certbot_dns_luadns/_internal/__init__.pyc
+${PYSITELIB}/certbot_dns_luadns/_internal/__init__.pyo
+${PYSITELIB}/certbot_dns_luadns/_internal/dns_luadns.py
+${PYSITELIB}/certbot_dns_luadns/_internal/dns_luadns.pyc
+${PYSITELIB}/certbot_dns_luadns/_internal/dns_luadns.pyo
