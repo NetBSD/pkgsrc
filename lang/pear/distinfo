@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.36 2019/12/03 13:07:59 taca Exp $
+$NetBSD: distinfo,v 1.37 2019/12/15 18:28:55 taca Exp $
 
-SHA1 (pear20151210/Archive_Tar-1.4.8.tgz) = e2547a99b08b29019ac500002f4c386df2e2921e
-RMD160 (pear20151210/Archive_Tar-1.4.8.tgz) = 5de621c75bb628b00c3aec82af6ae0ce7dc54326
-SHA512 (pear20151210/Archive_Tar-1.4.8.tgz) = b4fe4944a6f261de0c9e28aeee7f50fc7220400c6abad3093c81b1b3b98cbb179abb17b53e90071af6f2fb0f13dfabb24a51d826f4bc632631f1e60e038728e1
-Size (pear20151210/Archive_Tar-1.4.8.tgz) = 21236 bytes
+SHA1 (pear20151210/Archive_Tar-1.4.9.tgz) = b65e16f04e9f73c526d3a88765028cd3244c7f21
+RMD160 (pear20151210/Archive_Tar-1.4.9.tgz) = 6426a5f93369be42b1eaca2b843e5a2722907351
+SHA512 (pear20151210/Archive_Tar-1.4.9.tgz) = c0cce8213926aa9fde07bf46d77015b2dfbfe878cf386df43fcd4cf346b4ffdb2587676cfb69fc917cc31b63507c33702938a22aeb26e16b5ea27039c525c4e1
+Size (pear20151210/Archive_Tar-1.4.9.tgz) = 21343 bytes
 SHA1 (pear20151210/Console_Getopt-1.4.3.tgz) = 88b7bfce2f71cd99b922fa5eff5247bd754a3bc1
 RMD160 (pear20151210/Console_Getopt-1.4.3.tgz) = 05dbb1aad76fc53cd25ee282df0bd2112310fbc5
 SHA512 (pear20151210/Console_Getopt-1.4.3.tgz) = 7803e063576e9dac6833064b5a1479d22ca31c2a8ef8036ae530271e4e824fedb94e54d63266be8929f90f8df745b3ada7185dc98319b331f8dc5e9cac5445a0
@@ -16,7 +16,7 @@ SHA1 (pear20151210/Structures_Graph-1.1.1.tgz) = 2a9e5999e035aa3a6789011238b0a9a
 RMD160 (pear20151210/Structures_Graph-1.1.1.tgz) = fff02cabb75ee3531eedae19a2dffe999258a96c
 SHA512 (pear20151210/Structures_Graph-1.1.1.tgz) = 28465396cd540fd1619e0c1bec68fa8c3dff440a6e89c3c5583570edbd3de285e101de7c00e60d49d791ff10d8311f8a38d73ea3cdf52cfc74ecbe2f1842693f
 Size (pear20151210/Structures_Graph-1.1.1.tgz) = 12579 bytes
-SHA1 (pear20151210/XML_Util-1.4.3.tgz) = 95e07febe0b6c843c51bfd0157e61fd1ba1e5626
-RMD160 (pear20151210/XML_Util-1.4.3.tgz) = 55308486e8a32d7bcb775c286d487b1db4a3f00b
-SHA512 (pear20151210/XML_Util-1.4.3.tgz) = c21a7cef90743e124c4bc8e0453b634de8f6a6b0aac060acc1a17f481a2eb8757d322b05c69151280b7651cea927b2c64b7d49b9fd815dcdc606d0472d967310
-Size (pear20151210/XML_Util-1.4.3.tgz) = 18842 bytes
+SHA1 (pear20151210/XML_Util-1.4.4.tgz) = f7eed824b57f3c0fcfa7eff273daa0c6c2839391
+RMD160 (pear20151210/XML_Util-1.4.4.tgz) = 66c62671d5aff3f77606ed0a6fbf308adb151177
+SHA512 (pear20151210/XML_Util-1.4.4.tgz) = 3c2ae4492e76729da561398a43416cd540284297b497d2c1526515c00ba2918b9d520b580e21111cf9f9e133d473289cc9c896bc28ddd0c64a849ee66f897e42
+Size (pear20151210/XML_Util-1.4.4.tgz) = 19069 bytes
