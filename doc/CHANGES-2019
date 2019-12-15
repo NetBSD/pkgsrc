@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5386 2019/12/15 00:10:29 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5387 2019/12/15 08:03:20 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8641,3 +8641,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added games/dhewm3 version 1.5.0 [nia 2019-12-14]
 	Updated x11/kitty to 0.15.0 [nia 2019-12-14]
 	Updated audio/aiomixer to 1.0.1 [nia 2019-12-15]
+	Updated wm/wmakerconf to 2.11nb52 [gutteridge 2019-12-15]
