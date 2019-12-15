@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2019/11/02 12:54:38 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2019/12/15 18:17:21 taca Exp $
 
 MODNAME=	apcu
-PECL_VERSION=	5.1.17
+PECL_VERSION=	5.1.18
 CATEGORIES+=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	APCu - APC User Cache
 LICENSE=	php
 
-PHP_VERSIONS_ACCEPTED=	71 72 73
+PHP_VERSIONS_ACCEPTED=	71 72 73 74
 
 GNU_CONFIGURE_STRICT=	no # --with-pcre-dir is added for all PHP extensions
 CONFIGURE_ARGS+=	--enable-${MODNAME}
