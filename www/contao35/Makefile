@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/11/04 22:09:52 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2019/12/15 18:22:10 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
@@ -19,6 +19,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.4.0:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.4.0:../../net/php-soap
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.4.0:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4.0:../../archivers/php-zlib
+
+PHP_VERSIONS_ACCEPTED=	56 71 72 73
 
 CT_VERSION=	3.5.40
 USE_TOOLS=	bash:run pax
