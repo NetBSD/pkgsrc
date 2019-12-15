@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/11/03 10:18:27 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2019/12/15 14:42:27 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-cursespanel-${PY_DISTVERSION}
 PKGREVISION=	4
@@ -15,7 +15,6 @@ FAKE_NCURSES=	yes
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_curses_panel.c
 PYDISTUTILSPKG=		yes
-PY_PATCHPLIST=		yes
 
 PY_SETUP_SUBST=		NCURSESPREFIX=${BUILDLINK_PREFIX.ncurses}
 PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
