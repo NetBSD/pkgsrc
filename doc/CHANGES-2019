@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5390 2019/12/15 11:25:13 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5391 2019/12/15 11:37:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8663,3 +8663,7 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-contextlib2 to 0.6.0 [adam 2019-12-15]
 	Updated security/py-google-auth to 1.8.2 [adam 2019-12-15]
 	Updated security/py-pydeep to 0.4 [adam 2019-12-15]
+	Updated devel/py-hypothesis to 4.53.3 [adam 2019-12-15]
+	Updated devel/py-test5 to 5.3.2 [adam 2019-12-15]
+	Updated textproc/py-yaml to 5.2 [adam 2019-12-15]
+	Updated devel/py-semantic_version to 2.8.3 [adam 2019-12-15]
