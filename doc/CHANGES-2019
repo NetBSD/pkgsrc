@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5416 2019/12/15 23:51:33 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.5417 2019/12/15 23:53:11 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8701,3 +8701,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/lxpanel to 0.10.0 [gutteridge 2019-12-15]
 	Updated sysutils/lxtask to 0.1.9 [gutteridge 2019-12-15]
 	Updated x11/lxsession to 0.5.4 [gutteridge 2019-12-15]
+	Updated x11/lxrandr to 0.3.2 [gutteridge 2019-12-15]
