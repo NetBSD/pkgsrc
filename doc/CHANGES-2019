@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5410 2019/12/15 21:13:36 rhialto Exp $
+$NetBSD: CHANGES-2019,v 1.5411 2019/12/15 21:33:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8692,3 +8692,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/skalibs to 2.9.1.0 [schmonz 2019-12-15]
 	Updated sysutils/fdtools to 2015.03.28nb2 [schmonz 2019-12-15]
 	Updated textproc/grep to 3.3nb4 [rhialto 2019-12-15]
+	Updated graphics/liblqr to 0.4.2 [adam 2019-12-15]
+	Updated graphics/pfstools to 2.1.0 [adam 2019-12-15]
