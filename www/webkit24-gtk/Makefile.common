@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2019/09/02 13:20:03 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2019/12/15 15:38:59 taca Exp $
 # used by www/webkit24-gtk/Makefile
 # used by www/webkit24-gtk3/Makefile
 
@@ -88,6 +88,7 @@ BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 # A correct Webkit build requires flex 2.5.33
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 BUILDLINK_API_DEPENDS.png+= png>=1.5.1beta08
 .include "../../graphics/png/buildlink3.mk"
