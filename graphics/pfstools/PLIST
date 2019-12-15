@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/02/12 21:50:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/12/15 21:32:52 adam Exp $
 bin/dcraw2hdrgen
 bin/jpeg2hdrgen
 bin/pfsabsolute
@@ -22,6 +22,7 @@ bin/pfsinpfm
 bin/pfsinppm
 bin/pfsinrgbe
 bin/pfsintiff
+bin/pfsinyuv
 ${PLIST.octave}bin/pfsoctavelum
 ${PLIST.octave}bin/pfsoctavergb
 bin/pfsout
@@ -32,6 +33,7 @@ bin/pfsoutpfm
 bin/pfsoutppm
 bin/pfsoutrgbe
 bin/pfsouttiff
+bin/pfsoutyuv
 bin/pfspad
 bin/pfspanoramic
 bin/pfsplotresponse
@@ -43,7 +45,7 @@ bin/pfstag
 bin/pfstmo_drago03
 bin/pfstmo_durand02
 bin/pfstmo_fattal02
-${PLIST.fftw}bin/pfstmo_ferradans11
+bin/pfstmo_ferradans11
 bin/pfstmo_mai11
 bin/pfstmo_mantiuk06
 bin/pfstmo_mantiuk08
@@ -56,13 +58,6 @@ include/pfs/array2d.h
 include/pfs/pfs.h
 lib/libpfs.a
 lib/pkgconfig/pfs.pc
-${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfsclose.oct
-${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfsget.oct
-${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfsopen.oct
-${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfsput.oct
-${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfsread.oct
-${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfstransform_colorspace.oct
-${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfswrite.oct
 man/man1/dcraw2hdrgen.1
 man/man1/jpeg2hdrgen.1
 man/man1/pfsabsolute.1
@@ -86,6 +81,7 @@ man/man1/pfsinpfm.1
 man/man1/pfsinppm.1
 man/man1/pfsinrgbe.1
 man/man1/pfsintiff.1
+man/man1/pfsinyuv.1
 ${PLIST.octave}man/man1/pfsoctavelum.1
 ${PLIST.octave}man/man1/pfsoctavergb.1
 man/man1/pfsout.1
@@ -96,6 +92,7 @@ man/man1/pfsoutpfm.1
 man/man1/pfsoutppm.1
 man/man1/pfsoutrgbe.1
 man/man1/pfsouttiff.1
+man/man1/pfsoutyuv.1
 man/man1/pfspad.1
 man/man1/pfspanoramic.1
 man/man1/pfsplotresponse.1
@@ -107,7 +104,7 @@ man/man1/pfstag.1
 man/man1/pfstmo_drago03.1
 man/man1/pfstmo_durand02.1
 man/man1/pfstmo_fattal02.1
-${PLIST.fftw}man/man1/pfstmo_ferradans11.1
+man/man1/pfstmo_ferradans11.1
 man/man1/pfstmo_mai11.1
 man/man1/pfstmo_mantiuk06.1
 man/man1/pfstmo_mantiuk08.1
@@ -149,3 +146,10 @@ ${PLIST.octave}${OCT_LOCALVERFCNFILEDIR}/pfstools/pfssize.m
 ${PLIST.octave}${OCT_LOCALVERFCNFILEDIR}/pfstools/pfsview.m
 ${PLIST.octave}${OCT_LOCALVERFCNFILEDIR}/pfstools/pfsview_list.m
 ${PLIST.octave}${OCT_LOCALVERFCNFILEDIR}/pfstools/pfsview_rgb.m
+${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfsclose.oct
+${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfsget.oct
+${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfsopen.oct
+${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfsput.oct
+${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfsread.oct
+${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfstransform_colorspace.oct
+${PLIST.octave}${OCT_LOCALVEROCTFILEDIR}/pfstools/pfswrite.oct
