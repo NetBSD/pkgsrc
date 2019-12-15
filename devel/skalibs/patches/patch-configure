@@ -1,10 +1,11 @@
-$NetBSD: patch-configure,v 1.2 2018/08/26 19:35:42 schmonz Exp $
+$NetBSD: patch-configure,v 1.3 2019/12/15 19:03:51 schmonz Exp $
 
 Lower _XOPEN_SOURCE to fix SmartOS build.
+Libtoolize for shared libraries on Darwin.
 
---- configure.orig	2018-05-03 07:14:29.000000000 +0000
+--- configure.orig	2019-09-20 21:59:33.000000000 +0000
 +++ configure
-@@ -211,7 +211,7 @@ trylibs () {
+@@ -335,7 +335,7 @@ trylibs () {
  # Actual script
  
  CC_AUTO=
@@ -13,3 +14,12 @@ Lower _XOPEN_SOURCE to fix SmartOS build.
  CPPFLAGS_POST="$CPPFLAGS"
  CPPFLAGS=
  CFLAGS_AUTO="-pipe -Wall"
+@@ -685,7 +685,7 @@ else
+   echo "STATIC_LIBS :="
+ fi
+ if $shared ; then
+-  echo "SHARED_LIBS := libskarnet.so.xyzzy"
++  echo "SHARED_LIBS := libskarnet.la"
+ else
+   echo "SHARED_LIBS :="
+ fi
