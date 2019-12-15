@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5388 2019/12/15 09:20:15 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5389 2019/12/15 09:50:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8644,3 +8644,18 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated wm/wmakerconf to 2.11nb52 [gutteridge 2019-12-15]
 	Updated devel/py-ipython to 7.10.2 [adam 2019-12-15]
 	Updated net/py-lexicon to 3.3.11 [adam 2019-12-15]
+	Updated security/py-acme to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-apache to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-dns-dnsimple to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-dns-gehirn to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-dns-google to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-dns-linode to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-dns-luadns to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-dns-nsone to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-dns-ovh to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-dns-rfc2136 to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-dns-route53 to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-dns-sakuracloud to 1.0.0 [adam 2019-12-15]
+	Updated security/py-certbot-nginx to 1.0.0 [adam 2019-12-15]
