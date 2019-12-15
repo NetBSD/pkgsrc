@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5400 2019/12/15 17:57:36 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5401 2019/12/15 18:07:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8681,3 +8681,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-guppy3 to 3.0.9 [adam 2019-12-15]
 	Updated net/py-responses to 0.10.8 [adam 2019-12-15]
 	Added lang/php74 version 7.4.0 [taca 2019-12-15]
+	Added meta-pkgs/php74-extensions version 7.4.0 [taca 2019-12-15]
