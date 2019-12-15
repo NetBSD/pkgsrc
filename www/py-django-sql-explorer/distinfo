@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/10/03 10:47:20 adam Exp $
+$NetBSD: distinfo,v 1.3 2019/12/15 21:47:20 adam Exp $
 
-SHA1 (django-sql-explorer-1.1.2.tar.gz) = 049d2a0444a389cbf9b04063b89ef73c5018ed31
-RMD160 (django-sql-explorer-1.1.2.tar.gz) = 23e3cafcd51e5934cfabe129b4e21697183b0188
-SHA512 (django-sql-explorer-1.1.2.tar.gz) = 597ffbe4b21a4d1cfdee90a3b3efc3a17f5e2ba60bb4d7ff88b7d100ac7971bb174442d2472c64437cd48d0889e1228390e81513d99de2b23b76b182fe9e8fcb
-Size (django-sql-explorer-1.1.2.tar.gz) = 154526 bytes
+SHA1 (django-sql-explorer-1.1.3.tar.gz) = 5654088500630b0f5a290a1e9e85a3db33961502
+RMD160 (django-sql-explorer-1.1.3.tar.gz) = 937275ef9223a73f0771befb3be8d3178ad5784d
+SHA512 (django-sql-explorer-1.1.3.tar.gz) = 91d88ef63e9171e216624af74b20e4f80cf890fe5a508edfbe17e3da2c18e6ea1d4a64e2c0309ef880c9c6bfe3a205d0782ec4611d808d5fcf00301d5f2f55ea
+Size (django-sql-explorer-1.1.3.tar.gz) = 182208 bytes
