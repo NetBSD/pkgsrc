@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/11/04 22:10:15 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2019/12/15 18:25:22 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.3.7:../../net/php-soap
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.7:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.7:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.3.7:../../archivers/php-zlib
+
+PHP_VERSIONS_ACCEPTED=	56
 
 VER=		6.2.31
 NO_BUILD=	yes
