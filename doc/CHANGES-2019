@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5409 2019/12/15 19:08:49 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.5410 2019/12/15 21:13:36 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8691,3 +8691,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/sudo to 1.8.29 [adam 2019-12-15]
 	Updated devel/skalibs to 2.9.1.0 [schmonz 2019-12-15]
 	Updated sysutils/fdtools to 2015.03.28nb2 [schmonz 2019-12-15]
+	Updated textproc/grep to 3.3nb4 [rhialto 2019-12-15]
