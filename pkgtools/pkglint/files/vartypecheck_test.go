@@ -1641,7 +1641,8 @@ func (s *Suite) Test_VartypeCheck_SedCommands(c *check.C) {
 		"1d",
 		"-e",
 		"-i s,from,to,",
-		"-e s,$${unclosedShellVar") // Just for code coverage.
+		"-e s,$${unclosedShellVar", // Just for code coverage.
+		"-e s,...")                 // Syntactically invalid sed command.
 
 	vt.Output(
 		"NOTE: filename.mk:1: Please always use \"-e\" in sed commands, even if there is only one substitution.",
@@ -1652,14 +1653,13 @@ func (s *Suite) Test_VartypeCheck_SedCommands(c *check.C) {
 		"ERROR: filename.mk:9: The -e option to sed requires an argument.",
 		"WARN: filename.mk:10: Unknown sed command \"-i\".",
 		"NOTE: filename.mk:10: Please always use \"-e\" in sed commands, even if there is only one substitution.",
-		// TODO: duplicate warning
+		// XXX: duplicate warning
 		"WARN: filename.mk:11: Unclosed shell variable starting at \"$${unclosedShellVar\".",
 		"WARN: filename.mk:11: Unclosed shell variable starting at \"$${unclosedShellVar\".")
 }
 
 func (s *Suite) Test_VartypeCheck_SedCommands__experimental(c *check.C) {
 	vt := NewVartypeCheckTester(s.Init(c), BtSedCommands)
-	G.Experimental = true
 
 	vt.Varname("SUBST_SED.dummy")
 
@@ -2072,12 +2072,15 @@ func (s *Suite) Test_VartypeCheck_Yes(c *check.C) {
 	vt.Varname("APACHE_MODULE")
 	vt.Values(
 		"yes",
+		"YES",
 		"no",
+		"NO",
 		"${YESVAR}")
 
 	vt.Output(
-		"WARN: filename.mk:2: APACHE_MODULE should be set to YES or yes.",
-		"WARN: filename.mk:3: APACHE_MODULE should be set to YES or yes.")
+		"WARN: filename.mk:3: APACHE_MODULE should be set to YES or yes.",
+		"WARN: filename.mk:4: APACHE_MODULE should be set to YES or yes.",
+		"WARN: filename.mk:5: APACHE_MODULE should be set to YES or yes.")
 
 	vt.Varname("BUILD_USES_MSGFMT")
 	vt.Op(opUseMatch)
@@ -2106,7 +2109,9 @@ func (s *Suite) Test_VartypeCheck_YesNo(c *check.C) {
 	vt.Varname("PKG_DEVELOPER")
 	vt.Values(
 		"yes",
+		"YES",
 		"no",
+		"NO",
 		"ja",
 		"${YESVAR}",
 		"yes # comment",
@@ -2114,9 +2119,9 @@ func (s *Suite) Test_VartypeCheck_YesNo(c *check.C) {
 		"Yes indeed")
 
 	vt.Output(
-		"WARN: filename.mk:3: PKG_DEVELOPER should be set to YES, yes, NO, or no.",
-		"WARN: filename.mk:4: PKG_DEVELOPER should be set to YES, yes, NO, or no.",
-		"WARN: filename.mk:7: PKG_DEVELOPER should be set to YES, yes, NO, or no.")
+		"WARN: filename.mk:5: PKG_DEVELOPER should be set to YES, yes, NO, or no.",
+		"WARN: filename.mk:6: PKG_DEVELOPER should be set to YES, yes, NO, or no.",
+		"WARN: filename.mk:9: PKG_DEVELOPER should be set to YES, yes, NO, or no.")
 
 	vt.Op(opUseMatch)
 	vt.Values(

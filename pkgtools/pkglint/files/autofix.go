@@ -21,8 +21,7 @@ type Autofix struct {
 	line        *Line
 	linesBefore []string // Newly inserted lines, including \n
 	linesAfter  []string // Newly inserted lines, including \n
-	// Whether an actual fix has been applied (or, without --show-autofix,
-	// whether a fix is applicable)
+	// Whether an actual fix has been applied to the text of the raw lines
 	modified bool
 
 	autofixShortTerm
@@ -30,11 +29,18 @@ type Autofix struct {
 
 // autofixShortTerm is the part of the Autofix that is reset after each call to Apply.
 type autofixShortTerm struct {
-	actions     []autofixAction // Human-readable description of the actual autofix actions
-	level       *LogLevel       //
-	diagFormat  string          // Is logged only if it couldn't be fixed automatically
-	diagArgs    []interface{}   //
-	explanation []string        // Is printed together with the diagnostic
+	// Human-readable description of the actual autofix actions.
+	// There can be more than one action in cases where a follow-up
+	// fix is necessary.
+	actions []autofixAction
+
+	// The diagnostic to be logged.
+	// It is subject to the --only command line option.
+	// In --autofix mode it is suppressed if there were no actual actions.
+	level       *LogLevel
+	diagFormat  string
+	diagArgs    []interface{}
+	explanation []string
 }
 
 type autofixAction struct {
@@ -49,11 +55,11 @@ type autofixAction struct {
 // to log a diagnostic by other means.
 const SilentAutofixFormat = "SilentAutofixFormat"
 
-// AutofixFormat is a special value that is used for logging
+// autofixFormat is a special value that is used for logging
 // diagnostics like "Replacing \"old\" with \"new\".".
 //
 // Since these are not really diagnostics, duplicates are not suppressed.
-const AutofixFormat = "AutofixFormat"
+const autofixFormat = "AutofixFormat"
 
 func NewAutofix(line *Line) *Autofix {
 	return &Autofix{line: line}
@@ -77,20 +83,22 @@ func (fix *Autofix) Notef(format string, args ...interface{}) {
 // Explain remembers the explanation for logging it later when Apply is called.
 func (fix *Autofix) Explain(explanation ...string) {
 	// Since a silent fix doesn't have a diagnostic, its explanation would
-	// not provide any clue as to what diagnostic it belongs. That would
-	// be confusing, therefore this case is not allowed.
+	// not provide any clue as to what diagnostic it belongs.
+	// That would be confusing, therefore this case is not allowed.
 	assert(fix.diagFormat != SilentAutofixFormat)
 
 	fix.explanation = explanation
 }
 
 // Replace replaces "from" with "to", a single time.
+// If the text is not found exactly once, nothing is replaced at all.
 func (fix *Autofix) Replace(from string, to string) {
 	fix.ReplaceAfter("", from, to)
 }
 
 // ReplaceAfter replaces the text "prefix+from" with "prefix+to", a single time.
 // In the diagnostic, only the replacement of "from" with "to" is mentioned.
+// If the text is not found exactly once, nothing is replaced at all.
 func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 	fix.assertRealLine()
 	if fix.skip() {
@@ -121,6 +129,9 @@ func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 				// TODO: Do this properly by parsing the whole line again,
 				//  and ideally everything that depends on the parsed line.
 				//  This probably requires a generic notification mechanism.
+				//
+				// FIXME: Only actually update fix.line.Text if the replacement
+				//  has been done exactly once; see ReplaceAt.
 				fix.line.Text = strings.Replace(fix.line.Text, prefixFrom, prefixTo, 1)
 			}
 			fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
@@ -130,38 +141,38 @@ func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 }
 
 // ReplaceAt replaces the text "from" with "to", a single time.
-// But only if the text at the given position is indeed "from".
-func (fix *Autofix) ReplaceAt(rawIndex int, textIndex int, from string, to string) (modified bool, replaced string) {
+// If the text at the given position does not match, ReplaceAt panics.
+func (fix *Autofix) ReplaceAt(rawIndex int, textIndex int, from string, to string) {
 	assert(from != to)
 	fix.assertRealLine()
 
+	// XXX: This should only affect the diagnostics, but not the modifications
+	//  to the text of the affected line, since that text will be used in
+	//  further checks.
 	if fix.skip() {
-		return false, ""
+		return
 	}
 
 	rawLine := fix.line.raw[rawIndex]
-	if textIndex >= len(rawLine.textnl) || !hasPrefix(rawLine.textnl[textIndex:], from) {
-		return false, ""
+	assert(textIndex < len(rawLine.textnl))
+	assert(hasPrefix(rawLine.textnl[textIndex:], from))
+
+	replaced := rawLine.textnl[:textIndex] + to + rawLine.textnl[textIndex+len(from):]
+
+	rawLine.textnl = replaced
+
+	// Fix the parsed text as well.
+	// This is only approximate and won't work in some edge cases
+	// that involve escaped comments or replacements across line breaks.
+	//
+	// TODO: Do this properly by parsing the whole line again,
+	//  and ideally everything that depends on the parsed line.
+	//  This probably requires a generic notification mechanism.
+	if strings.Count(fix.line.Text, from) == 1 {
+		fix.line.Text = strings.Replace(fix.line.Text, from, to, 1)
 	}
 
-	replaced = rawLine.textnl[:textIndex] + to + rawLine.textnl[textIndex+len(from):]
-
-	if G.Logger.IsAutofix() {
-		rawLine.textnl = replaced
-
-		// Fix the parsed text as well.
-		// This is only approximate and won't work in some edge cases
-		// that involve escaped comments or replacements across line breaks.
-		//
-		// TODO: Do this properly by parsing the whole line again,
-		//  and ideally everything that depends on the parsed line.
-		//  This probably requires a generic notification mechanism.
-		if strings.Count(fix.line.Text, from) == 1 {
-			fix.line.Text = strings.Replace(fix.line.Text, from, to, 1)
-		}
-	}
 	fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
-	return true, replaced
 }
 
 // ReplaceRegex replaces the first howOften or all occurrences (if negative)
@@ -206,6 +217,9 @@ func (fix *Autofix) ReplaceRegex(from regex.Pattern, toText string, howOften int
 	// TODO: Do this properly by parsing the whole line again,
 	//  and ideally everything that depends on the parsed line.
 	//  This probably requires a generic notification mechanism.
+	//
+	// FIXME: Only actually update fix.line.Text if the replacement
+	//  has been done exactly once.
 	done = 0
 	fix.line.Text = replaceAllFunc(
 		fix.line.Text,
@@ -270,19 +284,18 @@ func (fix *Autofix) Delete() {
 // The fixer function must check whether it can actually fix something,
 // and if so, call Describef to describe the actual fix.
 //
-// If showAutofix and autofix are both false, the fix must only be
-// described by calling Describef. No observable modification must be done,
-// not even in memory.
-//
-// If showAutofix is true but autofix is false, the fix should be done in
-// memory as far as possible. For example, changing the text of Line.raw
-// is appropriate, but changing files in the file system is not.
+// If autofix is false, the the fix should be applied, as far as only
+// in-memory data structures are effected, and these are not written
+// back to disk. No externally observable modification must be done.
+// For example, changing the text of Line.raw is appropriate,
+// but changing files in the file system is not.
 //
 // Only if autofix is true, fixes other than modifying the current Line
 // should be done persistently, such as changes to the file system.
 //
-// In any case, changes to the current Line will be written back to disk
-// by SaveAutofixChanges, after fixing all the lines in the file at once.
+// If pkglint is run in --autofix mode, all changes to the lines of a
+// file will be collected in memory and are written back to disk by
+// SaveAutofixChanges, once at the end.
 func (fix *Autofix) Custom(fixer func(showAutofix, autofix bool)) {
 	// Contrary to the fixes that modify the line text, this one
 	// can be run even on dummy lines (like those standing for a
@@ -295,21 +308,29 @@ func (fix *Autofix) Custom(fixer func(showAutofix, autofix bool)) {
 	fixer(G.Logger.Opts.ShowAutofix, G.Logger.Opts.Autofix)
 }
 
-// Describef is used while Autofix.Custom is called to remember a description
-// of the actual fix for logging it later when Apply is called.
+// Describef can be called from within an Autofix.Custom call to remember a
+// description of the actual fix for logging it later when Apply is called.
 // Describef may be called multiple times before calling Apply.
 func (fix *Autofix) Describef(lineno int, format string, args ...interface{}) {
 	fix.actions = append(fix.actions, autofixAction{sprintf(format, args...), lineno})
 }
 
-// Apply does the actual work.
-// Depending on the pkglint mode, it either:
+// Apply does the actual work that has been prepared by previous calls to
+// Errorf, Warnf, Notef, Describef, Replace, Delete and so on.
 //
-// * logs the associated message (default) but does not record the fixes in the line
+// In default mode, the diagnostic is logged even when nothing has actually
+// been fixed. This frees the calling code from distinguishing the cases where
+// a fix can or cannot be applied automatically.
 //
-// * logs what would be fixed (--show-autofix) and records the fixes in the line
+// In --show-autofix mode, only those diagnostics are logged that actually fix
+// something. This is done to hide possibly distracting, unrelated diagnostics.
 //
-// * records the fixes in the line (--autofix), ready for SaveAutofixChanges
+// In --autofix mode, only the actual changes are logged, but not the
+// corresponding diagnostics. To get both, specify --show-autofix as well.
+//
+// Apply does the modifications only in memory. To actually save them to disk,
+// SaveAutofixChanges needs to be called. For example, this is done by
+// MkLines.Check.
 func (fix *Autofix) Apply() {
 	line := fix.line
 
@@ -356,7 +377,7 @@ func (fix *Autofix) Apply() {
 			if action.lineno != 0 {
 				lineno = strconv.Itoa(action.lineno)
 			}
-			G.Logger.Logf(AutofixLogLevel, line.Filename, lineno, AutofixFormat, action.description)
+			G.Logger.Logf(AutofixLogLevel, line.Filename, lineno, autofixFormat, action.description)
 		}
 		G.Logger.showSource(line)
 	}
@@ -416,18 +437,21 @@ func (fix *Autofix) affectedLinenos() string {
 func (fix *Autofix) skip() bool {
 	assert(fix.diagFormat != "") // The diagnostic must be given before the action.
 
-	// This check is necessary for the --only command line option.
 	return !G.Logger.shallBeLogged(fix.diagFormat)
 }
 
 func (fix *Autofix) assertRealLine() {
-	assert(fix.line.firstLine >= 1) // Cannot autofix this line since it is not a real line.
+	// Some Line objects do not correspond to real lines of a file.
+	// These cannot be fixed since they are neither part of Lines nor of MkLines.
+	assert(fix.line.firstLine >= 1)
 }
 
 // SaveAutofixChanges writes the given lines back into their files,
 // applying the autofix changes.
 // The lines may come from different files.
 // Only files that actually have changed lines are saved.
+//
+// This only happens in --autofix mode.
 func SaveAutofixChanges(lines *Lines) (autofixed bool) {
 	if trace.Tracing {
 		defer trace.Call0()()
@@ -450,6 +474,14 @@ func SaveAutofixChanges(lines *Lines) (autofixed bool) {
 	if G.Testing {
 		abs := G.Abs(lines.Filename)
 		absTmp := G.Abs(NewCurrPathSlash(os.TempDir()))
+
+		// This assertion prevents the pkglint tests from overwriting files
+		// on disk. This can easily happen if a test creates Lines or MkLines
+		// using a relative path.
+		//
+		// By default, these paths are relative to the current working
+		// directory. To let them refer to the temporary directory used by
+		// the tests, call t.Chdir(".").
 		assertf(abs.HasPrefixPath(absTmp), "%q must be inside %q", abs, absTmp)
 	}
 
