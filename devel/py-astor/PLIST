@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2018/07/06 08:09:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/12/16 10:18:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/astor/VERSION
 ${PYSITELIB}/astor/__init__.py
 ${PYSITELIB}/astor/__init__.pyc
 ${PYSITELIB}/astor/__init__.pyo
