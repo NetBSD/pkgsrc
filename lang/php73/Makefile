@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/10/02 14:08:05 taca Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/16 15:58:19 taca Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -27,6 +27,8 @@ MAKE_ENV+=		INSTALL_ROOT=${DESTDIR}
 
 CONF_FILES=		${EGDIR}/php.ini-production ${PKG_SYSCONFDIR}/php.ini
 PLIST_SUBST+=		PHPEXTDIR="${PHP_EXTENSION_DIR}"
+
+REPLACE_PHP=		ext/phar/phar/phar.php run-tests.php
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing common paths.
@@ -59,4 +61,5 @@ post-install:
 		${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/php.gif ${DESTDIR}${PREFIX}/share/php
 
+.include "../../lang/php/replace.mk"
 .include "../../mk/bsd.pkg.mk"

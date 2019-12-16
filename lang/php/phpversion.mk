@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.278 2019/12/15 17:54:58 taca Exp $
+# $NetBSD: phpversion.mk,v 1.279 2019/12/16 15:58:18 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -206,39 +206,29 @@ PHP_VERSION_REQD:=	${PKG_PHP_VERSION}
 # set variables for the version we decided to use:
 #
 .if ${_PHP_VERSION} == "56"
-PHPPKGSRCDIR=		../../lang/php56
 PHP_VERSION=		${PHP56_VERSION}
 PHP_INITIAL_TEENY=	3
-PHP_PKG_PREFIX=		php56
 PHP_EXTENSION_DIR=	lib/php/${PHP56_RELDATE}
 .elif ${_PHP_VERSION} == "71"
-PHPPKGSRCDIR=		../../lang/php71
 PHP_VERSION=		${PHP71_VERSION}
-PHP_INITIAL_TEENY=	0
-PHP_PKG_PREFIX=		php71
 PHP_EXTENSION_DIR=	lib/php/${PHP71_RELDATE}
 .elif ${_PHP_VERSION} == "72"
-PHPPKGSRCDIR=		../../lang/php72
 PHP_VERSION=		${PHP72_VERSION}
-PHP_INITIAL_TEENY=	0
-PHP_PKG_PREFIX=		php72
 PHP_EXTENSION_DIR=	lib/php/${PHP72_RELDATE}
 .elif ${_PHP_VERSION} == "73"
-PHPPKGSRCDIR=		../../lang/php73
 PHP_VERSION=		${PHP73_VERSION}
-PHP_INITIAL_TEENY=	0
-PHP_PKG_PREFIX=		php73
 PHP_EXTENSION_DIR=	lib/php/${PHP73_RELDATE}
 .elif ${_PHP_VERSION} == "74"
-PHPPKGSRCDIR=		../../lang/php74
 PHP_VERSION=		${PHP74_VERSION}
-PHP_INITIAL_TEENY=	0
-PHP_PKG_PREFIX=		php74
 PHP_EXTENSION_DIR=	lib/php/${PHP74_RELDATE}
 .else
 # force an error
 PKG_FAIL_REASON+=	"${PKG_PHP} is not a valid package"
 .endif
+
+PHP_INITIAL_TEENY?=	0
+PHPPKGSRCDIR=		../../lang/php${PKG_PHP_VERSION}
+PHP_PKG_PREFIX=		php${PKG_PHP_VERSION}
 
 _PHP_VER_MAJOR=		${PHP_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
 _PHP_VER_MINOR=		${PHP_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
