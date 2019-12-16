@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2019/11/03 10:39:12 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2019/12/16 14:44:56 kim Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-m4-/}
+PKGREVISION=	1
 COMMENT=	Autoconf/automake m4 files for GNU NLS library
 LICENSE=	gnu-gpl-v2
 
@@ -14,16 +15,28 @@ NO_CONFIGURE=		yes
 
 INSTALLATION_DIRS+=	share/aclocal
 
+GNULIB_M4_FILES=			\
+	codeset.m4		\
+	extern-inline.m4	\
+	host-cpu-c-abi.m4	\
+	lcmessage.m4		\
+	lib-ld.m4		\
+	lib-link.m4		\
+	lib-prefix.m4		\
+	lock.m4			\
+	longlong.m4		\
+	threadlib.m4		\
+	wchar_t.m4		\
+	wint_t.m4		\
+
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gettext-runtime/m4/*.m4 \
 		${DESTDIR}${PREFIX}/share/aclocal
 	${INSTALL_DATA} ${WRKSRC}/gettext-tools/m4/*.m4 \
 		${DESTDIR}${PREFIX}/share/aclocal
-.for i in lib-ld.m4 lib-link.m4 lib-prefix.m4 extern-inline.m4 \
-	    lock.m4 longlong.m4 lcmessage.m4 threadlib.m4 wchar_t.m4 \
-	    wint_t.m4 codeset.m4
-	    ${INSTALL_DATA} ${WRKSRC}/gettext-tools/gnulib-m4/${i} \
-		${DESTDIR}${PREFIX}/share/aclocal
+.for i in ${GNULIB_M4_FILES}
+	${INSTALL_DATA} ${WRKSRC}/gettext-tools/gnulib-m4/${i} \
+	    ${DESTDIR}${PREFIX}/share/aclocal
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
