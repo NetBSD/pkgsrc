@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/03/06 05:48:55 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/12/16 04:08:11 gutteridge Exp $
 bin/atril
 bin/atril-previewer
 bin/atril-thumbnailer
@@ -386,6 +386,9 @@ share/help/ia/atril/legal.xml
 share/help/id/atril/figures/atril_start_window.png
 share/help/id/atril/index.docbook
 share/help/id/atril/legal.xml
+share/help/ie/atril/figures/atril_start_window.png
+share/help/ie/atril/index.docbook
+share/help/ie/atril/legal.xml
 share/help/ig/atril/figures/atril_start_window.png
 share/help/ig/atril/index.docbook
 share/help/ig/atril/legal.xml
@@ -637,6 +640,7 @@ share/locale/hu/LC_MESSAGES/atril.mo
 share/locale/hy/LC_MESSAGES/atril.mo
 share/locale/ia/LC_MESSAGES/atril.mo
 share/locale/id/LC_MESSAGES/atril.mo
+share/locale/ie/LC_MESSAGES/atril.mo
 share/locale/ig/LC_MESSAGES/atril.mo
 share/locale/is/LC_MESSAGES/atril.mo
 share/locale/it/LC_MESSAGES/atril.mo
