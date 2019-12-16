@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19505 2019/12/15 18:43:21 adam Exp $
+$NetBSD: TODO,v 1.19506 2019/12/16 18:04:36 nia Exp $
 
 Suggested new packages
 ======================
@@ -305,10 +305,6 @@ Suggested new packages
 	Shotcut [pkgsrc-wip]
 	https://www.shotcut.org/
 	MLT-based video editor
-
-	qBittorrent [pkgsrc-wip]
-	https://www.qbittorrent.org/
-	Bittorrent client, open source alternative to uTorrent
 
 	luakit [pkgsrc-wip]
 	https://luakit.github.io/
