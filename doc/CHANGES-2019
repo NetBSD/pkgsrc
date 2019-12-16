@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5430 2019/12/16 16:10:17 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5431 2019/12/16 16:53:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8718,3 +8718,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated meta-pkgs/bulk-medium to 20191216 [taca 2019-12-16]
 	Removed lang/php71 [taca 2019-12-16]
 	Removed meta-pkgs/php71-extensions [taca 2019-12-16]
+	Updated www/php-ja-wordpress to 5.3.1 [taca 2019-12-16]
