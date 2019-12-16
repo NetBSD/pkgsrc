@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5427 2019/12/16 12:30:56 micha Exp $
+$NetBSD: CHANGES-2019,v 1.5428 2019/12/16 12:53:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8714,3 +8714,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/py-test-rerunfailures to 8.0 [adam 2019-12-16]
 	Added x11/qt5ct version 0.41 [kamil 2019-12-16]
 	Updated news/flnews to 0.17 [micha 2019-12-16]
+	Updated net/fstrm to 0.6.0nb1 [he 2019-12-16]
