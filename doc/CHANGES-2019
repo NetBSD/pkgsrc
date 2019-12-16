@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5428 2019/12/16 12:53:28 he Exp $
+$NetBSD: CHANGES-2019,v 1.5429 2019/12/16 16:00:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8715,3 +8715,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added x11/qt5ct version 0.41 [kamil 2019-12-16]
 	Updated news/flnews to 0.17 [micha 2019-12-16]
 	Updated net/fstrm to 0.6.0nb1 [he 2019-12-16]
+	Updated meta-pkgs/bulk-medium to 20191216 [taca 2019-12-16]
