@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2017/09/03 08:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2019/12/16 16:52:40 taca Exp $
 
 DISTNAME=		wordpress-${VERSION}-ja
 PKGNAME=		${PHP_PKG_PREFIX}-ja-wordpress-${VERSION}
-VERSION=		4.5.3
+VERSION=		5.3.1
 CATEGORIES=		www
 MASTER_SITES=		https://ja.wordpress.org/
 
@@ -12,8 +12,6 @@ COMMENT=		Blogging tool written in php (Localized for Japanese)
 LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		pax
-
-PHP_VERSIONS_ACCEPTED=	56
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
@@ -42,10 +40,24 @@ OWN_DIRS_PERMS+=	${WPHOME}/wp-content/uploads \
 
 INSTALLATION_DIRS+=	${DOCDIR} ${WPHOME} ${EGDIR}
 
-DEPENDS+=		${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
+DEPENDS+=		${PHP_PKG_PREFIX}-mysqli>=5.6.20:../../databases/php-mysqli
+DEPENDS+=		${PHP_PKG_PREFIX}-gd>=5.6.20:../../graphics/php-gd
+DEPENDS+=		${PHP_PKG_PREFIX}-curl>=5.6.20:../../www/php-curl
+DEPENDS+=		${PHP_PKG_PREFIX}-zip>=5.6.20:../../archivers/php-zip
+DEPENDS+=		${PHP_PKG_PREFIX}-zlib>=5.6.20:../../archivers/php-zlib
 
-do-configure:
-	${SED} -e "s:@WPHOME@:${WPHOME}:g" <${FILESDIR}/wordpress.conf >${WRKDIR}/ja-wordpress.conf
+SUBST_CLASSES+=		conf
+SUBST_MESSAGE.conf=	Fixing pathnames in configuration file.
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	../ja-wordpress.conf
+SUBST_VARS.conf=	WPHOME
+.if !empty(PKG_OPTIONS:Map-php) && ${PKG_APACHE} == "apache24"
+SUBST_SED.conf+=	-e "/Order allow,deny/d"
+SUBST_SED.conf+=	-e "s,Allow from all,Require all granted,g"
+.endif
+
+post-extract:
+	${CP} ${FILESDIR}/wordpress.conf ${WRKDIR}/ja-wordpress.conf
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/readme.html ${DESTDIR}${DOCDIR}
