@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/12/15 17:56:34 taca Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/16 15:58:19 taca Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -40,12 +40,13 @@ PKGCONFIG_PATHS+=	${X11BASE}/lib/pkgconfig
 
 PHP_PKGCONFIG_PATH=	${PKGCONFIG_PATHS:ts:}
 
+REPLACE_PHP=		ext/phar/phar/phar.php run-tests.php
+
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing common paths.
 SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	configure
-SUBST_FILES.path+=	ext/phar/phar/phar.php
-SUBST_FILES.path+=	php.ini-development php.ini-production run-tests.php
+SUBST_FILES.path+=	php.ini-development php.ini-production
 SUBST_FILES.path+=	sapi/cgi/Makefile.frag
 SUBST_VARS.path=	CGIDIR
 SUBST_VARS.path+=	PREFIX
@@ -72,4 +73,5 @@ post-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-development php.ini-production \
 		${DESTDIR}${EGDIR}
 
+.include "../../lang/php/replace.mk"
 .include "../../mk/bsd.pkg.mk"

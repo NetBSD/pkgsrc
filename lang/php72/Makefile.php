@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.13 2019/10/02 14:05:22 taca Exp $
+# $NetBSD: Makefile.php,v 1.14 2019/12/16 15:58:18 taca Exp $
 # used by lang/php72/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -13,16 +13,16 @@ CONFIGURE_ARGS+=	--disable-gcc-global-regs
 # the binary actually needs full dep on PCRE
 BUILDLINK_DEPMETHOD.pcre=	full
 
-.include "../../lang/php72/Makefile.common"
-
-DISTINFO_FILE=	${.CURDIR}/../../lang/php72/distinfo
-PATCHDIR=	${.CURDIR}/../../lang/php72/patches
-
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 BUILD_DEFS+=		VARBASE
 PLIST_VARS+=		dtrace
+
+.include "../../lang/php72/Makefile.common"
+
+DISTINFO_FILE=	${.CURDIR}/../../lang/php72/distinfo
+PATCHDIR=	${.CURDIR}/../../lang/php72/patches
 
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
