@@ -1,4 +1,4 @@
-# $NetBSD: waf.mk,v 1.7 2019/03/25 14:09:55 tnn Exp $
+# $NetBSD: waf.mk,v 1.8 2019/12/16 13:31:52 nia Exp $
 
 # XXX why does this does not respect the standard pkgsrc variables like
 # CONFIGURE_ENV et al?
@@ -28,6 +28,8 @@ WAF_ARGS+=		--mandir=${PREFIX}/${PKGMANDIR}
 
 WAF_REPLACE_EXECUTABLE?=        yes
 .if !empty(WAF_REPLACE_EXECUTABLE:M[yY][eE][sS])
+TOOL_DEPENDS+=	waf-[0-9]*:../../devel/waf
+
 post-extract:
 	cp ${PREFIX}/bin/waf ${WRKSRC}
 .endif
