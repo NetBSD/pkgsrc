@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2019/04/24 19:34:45 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2019/12/16 08:24:39 adam Exp $
 
 Do not build third party libraries on Darwin.
 
---- CMakeLists.txt.orig	2019-04-24 11:18:07.000000000 +0000
+--- CMakeLists.txt.orig	2019-10-09 11:42:29.000000000 +0000
 +++ CMakeLists.txt
-@@ -211,13 +211,13 @@ OCV_OPTION(OPENCV_ENABLE_NONFREE "Enable
+@@ -201,13 +201,13 @@ OCV_OPTION(OPENCV_ENABLE_NONFREE "Enable
  
  # 3rd party libs
  OCV_OPTION(OPENCV_FORCE_3RDPARTY_BUILD   "Force using 3rdparty code from source" OFF)
@@ -24,4 +24,4 @@ Do not build third party libraries on Darwin.
 +OCV_OPTION(BUILD_WEBP               "Build WebP from source"             (((WIN32 OR ANDROID) AND NOT WINRT) OR OPENCV_FORCE_3RDPARTY_BUILD) )
  OCV_OPTION(BUILD_TBB                "Download and build TBB from source" (ANDROID OR OPENCV_FORCE_3RDPARTY_BUILD) )
  OCV_OPTION(BUILD_IPP_IW             "Build IPP IW from source"           (NOT MINGW OR OPENCV_FORCE_3RDPARTY_BUILD) IF (X86_64 OR X86) AND NOT WINRT )
- OCV_OPTION(BUILD_ITT                "Build Intel ITT from source"        (NOT MINGW OR OPENCV_FORCE_3RDPARTY_BUILD) IF (X86_64 OR X86) AND NOT WINRT AND NOT APPLE_FRAMEWORK )
+ OCV_OPTION(BUILD_ITT                "Build Intel ITT from source"
