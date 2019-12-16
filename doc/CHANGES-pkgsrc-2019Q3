@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.15 2019/12/12 12:14:21 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q3,v 1.1.2.16 2019/12/16 13:52:39 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q3 branch:
 
@@ -105,4 +105,13 @@ devel/git: security fix (update to 2.23.1)
 
 Pullup ticket #6100 - requested by hauke
 www/davical: security fix
+
+Pullup ticket #6101 - requested by nia
+converters/fribidi: security fix
+
+Pullup ticket #6102 - requested by nia
+devel/libgit2: security fix
+
+Pullup ticket #6104 - requested by bouyer
+sysutils/xenkernel411, sysutils/xentools411: security fix
 
