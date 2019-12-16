@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1280 2019/12/16 18:03:20 nia Exp $
+# $NetBSD: Makefile,v 1.1281 2019/12/16 18:07:40 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -47,8 +47,6 @@ SUBDIR+=	bird
 SUBDIR+=	bird6
 SUBDIR+=	bittornado
 SUBDIR+=	bittornado-gui
-SUBDIR+=	bittorrent
-SUBDIR+=	bittorrent-gui
 SUBDIR+=	bmon
 SUBDIR+=	bounce
 SUBDIR+=	bridged
