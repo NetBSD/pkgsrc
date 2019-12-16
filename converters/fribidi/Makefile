@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2019/09/17 16:43:01 nia Exp $
+# $NetBSD: Makefile,v 1.25.2.1 2019/12/16 13:10:50 bsiegert Exp $
 
-DISTNAME=	fribidi-1.0.5
+DISTNAME=	fribidi-1.0.8
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fribidi/}
 EXTRACT_SUFX=	.tar.bz2
