@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5433 2019/12/16 17:06:23 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.5434 2019/12/16 18:01:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8721,3 +8721,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated www/php-ja-wordpress to 5.3.1 [taca 2019-12-16]
 	Updated www/ruby-puma to 4.3.1 [taca 2019-12-16]
 	Updated pkgtools/pkglint to 19.3.19 [rillig 2019-12-16]
+	Added net/libtorrent-rasterbar version 1.2.2 [nia 2019-12-16]
