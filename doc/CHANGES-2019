@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5438 2019/12/16 21:26:17 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.5439 2019/12/16 21:26:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8727,3 +8727,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed net/bittorrent-gui [nia 2019-12-16]
 	Updated net/fehqlibs to 0.9.13c [schmonz 2019-12-16]
 	Updated net/ucspi-tcp6 to 1.11.0 [schmonz 2019-12-16]
+	Updated net/ucspi-ssl to 0.999.11.1 [schmonz 2019-12-16]
