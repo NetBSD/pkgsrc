@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/05/23 19:23:12 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/16 12:27:53 micha Exp $
 
-FLNEWS_VERSION=	0.16
+FLNEWS_VERSION=	0.17
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
 CATEGORIES=	news
@@ -9,7 +9,7 @@ MASTER_SITES+=	http://www.ybtra.de/flnews-mirror/src/
 MASTER_SITES+=	http://www.southcity.de/flnews/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	michael.baeuerle@gmx.net
+MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	http://micha.freeshell.org/flnews/
 COMMENT=	Fast and lightweight USENET newsreader with GUI
 LICENSE=	modified-bsd AND 2-clause-bsd AND unicode
@@ -38,7 +38,7 @@ SUBST_SED.edit-config+=		-e 's,@IP6@,${FLNEWS_OPT_DISABLE_IP6},g'
 SUBST_SED.edit-config+=		-e 's,@NLS@,${FLNEWS_OPT_DISABLE_NLS},g'
 SUBST_SED.edit-config+=		-e 's,@XDBE@,${FLNEWS_OPT_DISABLE_XDBE},g'
 SUBST_SED.edit-config+=		-e 's,@MAN_PATH@,${PREFIX}/${PKGMANDIR},g'
-# NetBSD reports X/Open XSI extension as not available using the POSIX
+# NetBSD 7 reports X/Open XSI extension as not available using the POSIX
 # sysconf(_SC_XOPEN_VERSION) call, but has a sufficient implementation
 # => Force using it
 .if ${OPSYS} == "NetBSD"
@@ -46,7 +46,7 @@ SUBST_SED.edit-config+=		-e 's,@FORCE_XSI@,1,g'
 .else
 SUBST_SED.edit-config+=		-e 's,@FORCE_XSI@,0,g'
 .endif
-# NetBSD reports IPv6 as not available using the POSIX sysconf(_SC_IPV6)
+# NetBSD 7 reports IPv6 as not available using the POSIX sysconf(_SC_IPV6)
 # call, but has a sufficient implementation
 # => Force using it if inet6 option of pkgsrc package is selected
 .if ${OPSYS} == "NetBSD" && ${FLNEWS_OPT_DISABLE_IP6} == 0
@@ -76,6 +76,7 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 # OpenSSL 1.1 API is required for signature algorithm negotiation
 # OpenSSL 1.1 API is required for TLSv1.2 FFDHE group check
 # At least OpenSSL 1.1.1 is required for TLSv1.3
+# OpenSSL 3 API is required for FFDHE group negotiation
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.0
 .include "../../security/openssl/buildlink3.mk"
 # FLTK must be compiled with multithreading support
