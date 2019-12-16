@@ -66,27 +66,14 @@ func (ctx *SubstContext) varassign(mkline *MkLine) {
 		}
 	}
 
-	if hasPrefix(mkline.Varname(), "SUBST_") && mkline.Varparam() != ctx.activeId() {
+	if mkline.Varparam() != ctx.activeId() {
 		if !ctx.varassignDifferentClass(mkline) {
 			return
 		}
 	}
 
 	block := ctx.block()
-	switch varcanon {
-	case "SUBST_STAGE.*":
-		block.varassignStage(mkline)
-	case "SUBST_MESSAGE.*":
-		block.varassignMessages(mkline)
-	case "SUBST_FILES.*":
-		block.varassignFiles(mkline)
-	case "SUBST_SED.*":
-		block.varassignSed(mkline)
-	case "SUBST_VARS.*":
-		block.varassignVars(mkline)
-	case "SUBST_FILTER_CMD.*":
-		block.varassignFilterCmd(mkline)
-	}
+	block.varassign(mkline)
 }
 
 func (ctx *SubstContext) varassignClasses(mkline *MkLine) {
@@ -138,7 +125,7 @@ func (ctx *SubstContext) varassignOutsideBlock(mkline *MkLine) (continueWithNewI
 func (ctx *SubstContext) varassignDifferentClass(mkline *MkLine) (ok bool) {
 	varname := mkline.Varname()
 	unknown := ctx.lookup(mkline.Varparam()) == nil
-	if unknown && ctx.isActive() && !ctx.block().isComplete() {
+	if unknown && !ctx.block().isComplete() {
 		mkline.Warnf("Variable %q does not match SUBST class %q.",
 			varname, ctx.activeId())
 		if !ctx.block().seenEmpty {
@@ -319,8 +306,22 @@ func (s *substScope) emptyLine() {
 // finish brings all blocks that are defined in the current scope
 // to an end.
 func (s *substScope) finish(diag Diagnoser) {
+	foreignOk := map[string]bool{}
+	for _, def := range s.defs {
+		for allowed := range def.foreignAllowed {
+			foreignOk[allowed] = true
+		}
+	}
+
 	for _, block := range s.defs {
 		block.finish(diag)
+
+		for _, mkline := range block.foreign {
+			if !foreignOk[mkline.Varname()] {
+				mkline.Warnf("Foreign variable %q in SUBST block.",
+					mkline.Varname())
+			}
+		}
 	}
 }
 
@@ -393,6 +394,23 @@ type substBlock struct {
 func newSubstBlock(id string) *substBlock {
 	assert(id != "")
 	return &substBlock{id: id, conds: []*substCond{newSubstCond()}}
+}
+
+func (b *substBlock) varassign(mkline *MkLine) {
+	switch mkline.Varcanon() {
+	case "SUBST_STAGE.*":
+		b.varassignStage(mkline)
+	case "SUBST_MESSAGE.*":
+		b.varassignMessages(mkline)
+	case "SUBST_FILES.*":
+		b.varassignFiles(mkline)
+	case "SUBST_SED.*":
+		b.varassignSed(mkline)
+	case "SUBST_VARS.*":
+		b.varassignVars(mkline)
+	default:
+		b.varassignFilterCmd(mkline)
+	}
 }
 
 func (b *substBlock) varassignStage(mkline *MkLine) {
@@ -660,16 +678,6 @@ func (b *substBlock) finish(diag Diagnoser) {
 			"Incomplete SUBST block: SUBST_SED.%[1]s, "+
 				"SUBST_VARS.%[1]s or SUBST_FILTER_CMD.%[1]s missing.",
 			b.id)
-	}
-
-	b.checkForeignVariables()
-}
-
-func (b *substBlock) checkForeignVariables() {
-	for _, mkline := range b.foreign {
-		if _, ok := b.foreignAllowed[mkline.Varname()]; !ok {
-			mkline.Warnf("Foreign variable %q in SUBST block.", mkline.Varname())
-		}
 	}
 }
 

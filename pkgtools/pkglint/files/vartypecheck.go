@@ -689,14 +689,7 @@ func (cv *VartypeCheck) IdentifierDirect() {
 		return
 	}
 
-	switch {
-	case matches(cv.ValueNoVar, `^[+\-.\w]+$`):
-		// Fine.
-
-	case cv.Value != "" && cv.ValueNoVar == "":
-		// Don't warn here.
-
-	default:
+	if !matches(cv.ValueNoVar, `^[+\-.\w]+$`) {
 		cv.Warnf("Invalid identifier %q.", cv.Value)
 	}
 }

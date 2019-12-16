@@ -403,7 +403,7 @@ func (pkg *Package) resolveIncludedFile(mkline *MkLine, includingFilename CurrPa
 	if mkline.Basename != "buildlink3.mk" {
 		if includedFile.HasSuffixPath("buildlink3.mk") {
 			curr := mkline.File(includedFile)
-			if G.Pkg != nil && !curr.ContainsText("$") && !curr.IsFile() {
+			if G.Pkg != nil && !curr.IsFile() {
 				curr = G.Pkg.File(PackagePath(includedFile))
 			}
 			packagePath := pkg.Rel(curr)

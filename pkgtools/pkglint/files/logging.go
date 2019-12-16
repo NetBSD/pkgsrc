@@ -268,7 +268,7 @@ func (l *Logger) Logf(level *LogLevel, filename CurrPath, lineno, format, msg st
 		}
 	}
 
-	if G.Testing && format != AutofixFormat {
+	if G.Testing && format != autofixFormat {
 		if textproc.Alpha.Contains(format[0]) {
 			assertf(
 				textproc.Upper.Contains(format[0]),
@@ -284,7 +284,7 @@ func (l *Logger) Logf(level *LogLevel, filename CurrPath, lineno, format, msg st
 	if !filename.IsEmpty() {
 		filename = filename.CleanPath()
 	}
-	if G.Opts.Profiling && format != AutofixFormat && level != Fatal {
+	if G.Opts.Profiling && format != autofixFormat && level != Fatal {
 		l.histo.Add(format, 1)
 	}
 

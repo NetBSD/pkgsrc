@@ -61,8 +61,6 @@ func (s *Suite) SetUpTest(c *check.C) {
 	G.Testing = true
 	trace.Out = &t.stdout
 
-	// XXX: Maybe the tests can run a bit faster when they don't
-	// create a temporary directory each.
 	G.Pkgsrc = NewPkgsrc(t.File("."))
 
 	t.c = c
@@ -1327,7 +1325,8 @@ func (t *Tester) CheckDotColumns(lines ...string) {
 			width := tabWidth(prefix)
 			num, err := strconv.Atoi(line[m[2]:m[3]])
 			assertNil(err, "")
-			t.CheckEqualsf(num, width, "lines[%d]", index)
+			t.CheckEqualsf(num, width,
+				"The dots in lines[%d] are wrong.", index)
 		}
 	}
 }

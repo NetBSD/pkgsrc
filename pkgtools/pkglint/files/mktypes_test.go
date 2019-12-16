@@ -87,72 +87,67 @@ func (s *Suite) Test_MkVarUseModifier_MatchSubst__backslash_as_separator(c *chec
 	t.CheckEquals(options, "1")
 }
 
-// As of 2019-03-24, pkglint doesn't know how to handle complicated
-// :C modifiers.
-func (s *Suite) Test_MkVarUseModifier_Subst__regexp(c *check.C) {
+func (s *Suite) Test_MkVarUseModifier_Subst(c *check.C) {
 	t := s.Init(c)
 
-	mod := MkVarUseModifier{"C,.*,,"}
+	test := func(mod, str, result string, ok bool) {
+		m := MkVarUseModifier{mod}
 
-	empty, ok := mod.Subst("anything")
+		actualResult, actualOk := m.Subst(str)
 
-	t.CheckEquals(ok, false)
-	t.CheckEquals(empty, "")
-}
+		t.CheckDeepEquals(
+			[]interface{}{actualResult, actualOk},
+			[]interface{}{result, ok})
+	}
 
-// When given a modifier that is not actually a :S or :C, Subst
-// doesn't do anything.
-func (s *Suite) Test_MkVarUseModifier_Subst__invalid_argument(c *check.C) {
-	t := s.Init(c)
+	test("???", "anything", "", false)
 
-	mod := MkVarUseModifier{"Mpattern"}
+	test("S,from,to,", "from", "to", true)
 
-	empty, ok := mod.Subst("anything")
+	test("C,from,to,", "from", "to", true)
 
-	t.CheckEquals(ok, false)
-	t.CheckEquals(empty, "")
-}
+	test("C,syntax error", "anything", "", false)
 
-func (s *Suite) Test_MkVarUseModifier_Subst__no_tracing(c *check.C) {
-	t := s.Init(c)
+	// The substitution modifier does not match, therefore
+	// the value is returned unmodified, but successful.
+	test("C,no_match,replacement,", "value", "value", true)
 
-	mod := MkVarUseModifier{"S,from,to,"}
-	t.DisableTracing()
+	// As of December 2019, pkglint doesn't know how to handle
+	// complicated :C modifiers.
+	test("C,.*,,", "anything", "", false)
 
-	result, ok := mod.Subst("from a to b")
+	// When given a modifier that is not actually a :S or :C, Subst
+	// doesn't do anything.
+	test("Mpattern", "anything", "", false)
 
-	t.CheckEquals(ok, true)
-	t.CheckEquals(result, "to a to b")
-}
+	test("S,from,to,", "from a to b", "to a to b", true)
 
-// Since the replacement text is not a simple string, the :C modifier
-// cannot be treated like the :S modifier. The variable could contain
-// one of the special characters that would need to be escaped in the
-// replacement text.
-func (s *Suite) Test_MkVarUseModifier_Subst__C_with_complex_replacement(c *check.C) {
-	t := s.Init(c)
-
-	mod := MkVarUseModifier{"C,from,${VAR},"}
-
-	result, ok := mod.Subst("from a to b")
-
-	t.CheckEquals(ok, false)
-	t.CheckEquals(result, "")
-}
-
-func (s *Suite) Test_MkVarUseModifier_Subst__S_dollar_at(c *check.C) {
-	t := s.Init(c)
-
-	mod := MkVarUseModifier{"S/$@/replaced/"}
-
-	result, ok := mod.Subst("The target")
+	// Since the replacement text is not a simple string, the :C modifier
+	// cannot be treated like the :S modifier. The variable could contain
+	// one of the special characters that would need to be escaped in the
+	// replacement text.
+	test("C,from,${VAR},", "from a to b", "", false)
 
 	// As of December 2019, nothing is substituted. If pkglint should ever
-	// handle variables in the modifier, this test would been to provide a
+	// handle variables in the modifier, this test would need to provide a
 	// context in which to resolve the variables. If that happens, the
 	// .TARGET variable needs to be set to "target".
-	t.CheckEquals(ok, true)
-	t.CheckEquals(result, "The target")
+	test("S/$@/replaced/", "The target", "The target", true)
+	test("S,${PREFIX},/prefix,", "${PREFIX}/dir", "", false)
+
+	// Just for code coverage.
+	t.DisableTracing()
+	test("S,long,long long,g", "A long story", "A long long story", true)
+	t.EnableTracing()
+
+	// And now again with full tracing, to investigate cases where
+	// pkglint produces results that are not easily understandable.
+	t.EnableTracingToLog()
+	test("S,long,long long,g", "A long story", "A long long story", true)
+	t.EnableTracing()
+	t.CheckOutputLines(
+		"TRACE:   Subst: \"A long story\" " +
+			"\"S,long,long long,g\" => \"A long long story\"")
 }
 
 func (s *Suite) Test_MkVarUseModifier_EvalSubst(c *check.C) {

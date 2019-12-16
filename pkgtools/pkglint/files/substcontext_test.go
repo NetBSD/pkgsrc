@@ -410,6 +410,54 @@ func (s *Suite) Test_SubstContext_varassignOutsideBlock__rationale(c *check.C) {
 			"the SUBST class should be declared using \"SUBST_CLASSES+= libs\".")
 }
 
+func (s *Suite) Test_SubstContext_varassignDifferentClass__same_paragraph(c *check.C) {
+	t := s.Init(c)
+
+	t.RunSubst(
+		"SUBST_CLASSES+= 1",
+		"SUBST_STAGE.1=  pre-configure",
+		"SUBST_FILES.1=  files",
+		"SUBST_VARS.x=   VAR",
+		"SUBST_VARS.x=   VAR")
+
+	// There is a switch of the SUBST class in the middle of the paragraph.
+	// This is often a typo, therefore pkglint still expects the SUBST class
+	// 1 to be continued in line 4.
+	//
+	// If there were an empty line before line 4, pkglint would have
+	// interpreted that as an intention to start a new block in the next
+	// paragraph.
+	t.CheckOutputLines(
+		"WARN: filename.mk:4: Variable \"SUBST_VARS.x\" "+
+			"does not match SUBST class \"1\".",
+		"WARN: filename.mk:5: Variable \"SUBST_VARS.x\" "+
+			"does not match SUBST class \"1\".",
+		"WARN: filename.mk:EOF: Incomplete SUBST block: "+
+			"SUBST_SED.1, SUBST_VARS.1 or SUBST_FILTER_CMD.1 missing.")
+}
+
+func (s *Suite) Test_SubstContext_varassignDifferentClass__next_paragraph(c *check.C) {
+	t := s.Init(c)
+
+	t.RunSubst(
+		"SUBST_CLASSES+= 1",
+		"SUBST_STAGE.1=  pre-configure",
+		"SUBST_FILES.1=  files",
+		"",
+		"SUBST_VARS.x=   VAR",
+		"SUBST_VARS.x=   VAR")
+
+	// There is a switch of the SUBST class at the end of the paragraph.
+	// Pkglint sees that as an intention to start a new SUBST block.
+	t.CheckOutputLines(
+		"WARN: filename.mk:5: Variable \"SUBST_VARS.x\" "+
+			"does not match SUBST class \"1\".",
+		"WARN: filename.mk:5: Incomplete SUBST block: "+
+			"SUBST_SED.1, SUBST_VARS.1 or SUBST_FILTER_CMD.1 missing.",
+		"WARN: filename.mk:5: Before defining SUBST_VARS.x, "+
+			"the SUBST class should be declared using \"SUBST_CLASSES+= x\".")
+}
+
 // Unbalanced conditionals must not lead to a panic.
 func (s *Suite) Test_SubstContext_directive__before_SUBST_CLASSES(c *check.C) {
 	t := s.Init(c)
@@ -721,6 +769,56 @@ func (s *Suite) Test_SubstContext_leave__nested_conditionals(c *check.C) {
 		"WARN: filename.mk:EOF: Incomplete SUBST block: SUBST_FILES.os missing.")
 }
 
+func (s *Suite) Test_SubstContext_activeId__SUBST_CLASSES_in_separate_paragraph(c *check.C) {
+	t := s.Init(c)
+
+	ctx := NewSubstContext()
+
+	checkNoActiveId := func() {
+		t.CheckEquals(ctx.isActive(), false)
+	}
+	checkActiveId := func(id string) {
+		t.CheckEquals(ctx.activeId(), id)
+	}
+	lineno := 1
+	line := func(text string) {
+		ctx.Process(t.NewMkLine("filename.mk", lineno, text))
+		lineno++
+	}
+
+	line("SUBST_CLASSES+= 1 2 3 4")
+	checkNoActiveId()
+
+	line("")
+	checkNoActiveId()
+
+	line("SUBST_STAGE.1=  post-configure")
+	checkActiveId("1")
+
+	line("SUBST_FILES.1=  files")
+	line("SUBST_VARS.1=   VAR1")
+	checkActiveId("1")
+
+	line("")
+	checkActiveId("1")
+
+	line("SUBST_STAGE.2=  post-configure")
+	checkActiveId("2")
+
+	line("SUBST_FILES.2=  files")
+	line("SUBST_VARS.2=   VAR1")
+	line("")
+	line("SUBST_STAGE.3=  post-configure")
+	line("SUBST_FILES.3=  files")
+	line("SUBST_VARS.3=   VAR1")
+
+	ctx.Finish(NewLineEOF("filename.mk"))
+
+	t.CheckOutputLines(
+		"NOTE: filename.mk:1: Please add only one class at a time to SUBST_CLASSES.",
+		"WARN: filename.mk:EOF: Missing SUBST block for \"4\".")
+}
+
 // With every .if directive, a new scope is created, to properly
 // keep track of the conditional level at which the SUBST classes
 // are declared.
@@ -774,6 +872,85 @@ func (s *Suite) Test_substScope__conditionals(c *check.C) {
 	ctx.Finish(NewLineEOF("filename.mk"))
 }
 
+func (s *Suite) Test_substScope_define__assertion(c *check.C) {
+	t := s.Init(c)
+
+	scope := newSubstScope()
+	scope.define("id")
+
+	t.ExpectAssert(
+		func() { scope.define("id") })
+}
+
+// Variables mentioned in SUBST_VARS may appear in the same paragraph,
+// or alternatively anywhere else in the file.
+func (s *Suite) Test_substScope_finish__foreign_in_next_paragraph(c *check.C) {
+	t := s.Init(c)
+
+	t.RunSubst(
+		"SUBST_CLASSES+=\tos",
+		"SUBST_STAGE.os=\tpre-configure",
+		"SUBST_FILES.os=\tguess-os.h",
+		"SUBST_VARS.os=\tTODAY1",
+		"",
+		"TODAY1!=\tdate",
+		"TODAY2!=\tdate")
+
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_substScope_finish__foreign_mixed_separate(c *check.C) {
+	t := s.Init(c)
+
+	t.RunSubst(
+		"SUBST_CLASSES+= 1",
+		"SUBST_STAGE.1=  post-configure",
+		"SUBST_FILES.1=  files",
+		"",
+		"SUBST_VARS.1=   VAR",
+		"USE_TOOLS+=     gmake")
+
+	// The USE_TOOLS is not in the SUBST block anymore since there is
+	// an empty line between SUBST_CLASSES and SUBST_VARS.
+	t.CheckOutputEmpty()
+}
+
+// Variables mentioned in SUBST_VARS are not considered "foreign"
+// in the block and may be mixed with the other SUBST variables.
+func (s *Suite) Test_substScope_finish__foreign_in_block(c *check.C) {
+	t := s.Init(c)
+
+	t.RunSubst(
+		"SUBST_CLASSES+=\tos",
+		"SUBST_STAGE.os=\tpre-configure",
+		"SUBST_FILES.os=\tguess-os.h",
+		"SUBST_VARS.os=\tTODAY1",
+		"TODAY1!=\tdate",
+		"TODAY2!=\tdate")
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:6: Foreign variable \"TODAY2\" in SUBST block.")
+}
+
+func (s *Suite) Test_substScope_finish__foreign_two_blocks_one_paragraph(c *check.C) {
+	t := s.Init(c)
+
+	t.RunSubst(
+		"SUBST_CLASSES+= 1 2",
+		"SUBST_STAGE.1=  pre-configure",
+		"VAR2=           value2",
+		"SUBST_FILES.1=  files",
+		"SUBST_VARS.1=   VAR1",
+		"SUBST_STAGE.2=  pre-configure",
+		"SUBST_FILES.2=  files",
+		"VAR1=           value1",
+		"SUBST_VARS.2=   VAR2")
+
+	t.CheckOutputLines(
+		"NOTE: filename.mk:1: " +
+			"Please add only one class at a time to SUBST_CLASSES.")
+}
+
 func (s *Suite) Test_substScope_prepareSubstClasses(c *check.C) {
 	t := s.Init(c)
 
@@ -807,6 +984,113 @@ func (s *Suite) Test_substScope_prepareSubstClasses__nested(c *check.C) {
 		"WARN: filename.mk:EOF: Incomplete SUBST block: SUBST_FILES.1 missing.",
 		"WARN: filename.mk:EOF: Incomplete SUBST block: "+
 			"SUBST_SED.1, SUBST_VARS.1 or SUBST_FILTER_CMD.1 missing.")
+}
+
+func (s *Suite) Test_substBlock__enter_leave_and_finish(c *check.C) {
+	t := s.Init(c)
+
+	mkline := t.NewMkLine("filename.mk", 123, "")
+	b := newSubstBlock("id")
+
+	t.CheckEquals(len(b.conds), 1)
+
+	b.enter()
+
+	t.CheckEquals(len(b.conds), 2)
+
+	b.leave()
+
+	t.CheckEquals(len(b.conds), 1)
+
+	b.finish(mkline)
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:123: Missing SUBST block for \"id\".")
+}
+
+// In a conditional without an else branch, none of the variable
+// definitions from the then branch are seen in the outer scope.
+func (s *Suite) Test_substBlock__enter_and_leave_without_else(c *check.C) {
+	t := s.Init(c)
+
+	b := newSubstBlock("id")
+
+	b.enter()        // .if
+	b.addSeen(ssSed) // SUBST_SED
+	b.leave()        // .endif
+
+	t.CheckEquals(b.allSeen(), ssNone)
+	t.CheckEquals(b.done, false)
+}
+
+func (s *Suite) Test_substBlock__enter_and_leave_with_else(c *check.C) {
+	t := s.Init(c)
+
+	b := newSubstBlock("id")
+
+	b.enter()              // .if
+	b.addSeen(ssVars)      // SUBST_VARS
+	b.addSeen(ssTransform) // SUBST_VARS
+	b.nextBranch(true)     // .else
+	b.addSeen(ssSed)       // SUBST_SED
+	b.addSeen(ssTransform) // SUBST_SED
+	b.leave()              // .endif
+
+	t.CheckEquals(b.hasSeen(ssTransform), true)
+	t.CheckEquals(b.done, false)
+}
+
+func (s *Suite) Test_substBlock__enter_and_leave_with_elif(c *check.C) {
+	t := s.Init(c)
+
+	b := newSubstBlock("id")
+
+	b.enter()           // .if
+	b.addSeen(ssFiles)  // SUBST_FILES
+	b.addSeen(ssVars)   // SUBST_VARS
+	b.nextBranch(false) // .elif
+	b.addSeen(ssFiles)  // SUBST_FILES
+	b.addSeen(ssSed)    // SUBST_SED
+	b.nextBranch(true)  // .else
+	b.addSeen(ssFiles)  // SUBST_FILES
+	b.addSeen(ssSed)    // SUBST_SED
+	b.leave()           // .endif
+
+	t.CheckEquals(b.hasSeen(ssFiles), true)
+	t.CheckEquals(b.done, false)
+}
+
+func (s *Suite) Test_newSubstBlock(c *check.C) {
+	t := s.Init(c)
+
+	b := newSubstBlock("id")
+
+	t.CheckEquals(b.id, "id")
+	t.CheckEquals(len(b.conds), 1)
+	t.CheckEquals(b.done, false)
+	t.CheckEquals(b.allSeen(), ssNone)
+}
+
+func (s *Suite) Test_newSubstBlock__assertion(c *check.C) {
+	t := s.Init(c)
+
+	t.ExpectAssert(
+		func() { newSubstBlock("") })
+}
+
+func (s *Suite) Test_substBlock_varassign__typo_in_subst_variable(c *check.C) {
+	t := s.Init(c)
+
+	t.RunSubst(
+		"SUBST_CLASSES+=\tos",
+		"SUBST_STAGE.os=\tdo-patch",
+		"SUBST_FILES.os=\tguess-os.h",
+		"SUBST_DED.os=\t-e s,@OPSYS@,Darwin,")
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:EOF: Incomplete SUBST block: "+
+			"SUBST_SED.os, SUBST_VARS.os or SUBST_FILTER_CMD.os missing.",
+		"WARN: filename.mk:4: Foreign variable \"SUBST_DED.os\" in SUBST block.")
 }
 
 func (s *Suite) Test_substBlock_varassignStage__do_patch(c *check.C) {
@@ -1501,52 +1785,32 @@ func (s *Suite) Test_substBlock_finish__files_missing(c *check.C) {
 			"SUBST_SED.one, SUBST_VARS.one or SUBST_FILTER_CMD.one missing.")
 }
 
-// Variables mentioned in SUBST_VARS may appear in the same paragraph,
-// or alternatively anywhere else in the file.
-func (s *Suite) Test_substBlock_checkForeignVariables__in_next_paragraph(c *check.C) {
+func (s *Suite) Test_substBlock_finish__assertion(c *check.C) {
 	t := s.Init(c)
 
-	t.RunSubst(
-		"SUBST_CLASSES+=\tos",
-		"SUBST_STAGE.os=\tpre-configure",
-		"SUBST_FILES.os=\tguess-os.h",
-		"SUBST_VARS.os=\tTODAY1",
-		"",
-		"TODAY1!=\tdate",
-		"TODAY2!=\tdate")
+	b := newSubstBlock("id")
+	b.enter()
 
-	t.CheckOutputEmpty()
+	t.ExpectAssert(
+		func() { b.finish(nil) })
 }
 
-func (s *Suite) Test_substBlock_checkForeignVariables__mixed_separate(c *check.C) {
+func (s *Suite) Test_substSeen_set__assertion(c *check.C) {
 	t := s.Init(c)
 
-	t.RunSubst(
-		"SUBST_CLASSES+= 1",
-		"SUBST_STAGE.1=  post-configure",
-		"SUBST_FILES.1=  files",
-		"",
-		"SUBST_VARS.1=   VAR",
-		"USE_TOOLS+=     gmake")
-
-	// The USE_TOOLS is not in the SUBST block anymore since there is
-	// an empty line between SUBST_CLASSES and SUBST_VARS.
-	t.CheckOutputEmpty()
+	t.ExpectAssert(
+		func() {
+			seen := ssAll
+			seen.set(ssAll)
+		})
 }
 
-// Variables mentioned in SUBST_VARS are not considered "foreign"
-// in the block and may be mixed with the other SUBST variables.
-func (s *Suite) Test_substBlock_checkForeignVariables__in_block(c *check.C) {
+func (s *Suite) Test_substSeen_has__assertion(c *check.C) {
 	t := s.Init(c)
 
-	t.RunSubst(
-		"SUBST_CLASSES+=\tos",
-		"SUBST_STAGE.os=\tpre-configure",
-		"SUBST_FILES.os=\tguess-os.h",
-		"SUBST_VARS.os=\tTODAY1",
-		"TODAY1!=\tdate",
-		"TODAY2!=\tdate")
-
-	t.CheckOutputLines(
-		"WARN: filename.mk:6: Foreign variable \"TODAY2\" in SUBST block.")
+	t.ExpectAssert(
+		func() {
+			seen := ssAll
+			seen.has(ssAll)
+		})
 }
