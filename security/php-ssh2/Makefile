@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/11/04 21:12:58 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2019/12/16 16:30:14 taca Exp $
 #
 
 MODNAME=		ssh2
@@ -12,7 +12,7 @@ LICENSE=		php
 
 CONFLICTS=	${PHP_PKG_PREFIX}-${MODNAME}<1.0
 
-PHP_VERSIONS_ACCEPTED=	71 72
+PHP_VERSIONS_ACCEPTED=	72
 
 CONFIGURE_ARGS+=	--with-ssh2=${PREFIX}
 
