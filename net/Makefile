@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1279 2019/12/16 18:00:51 nia Exp $
+# $NetBSD: Makefile,v 1.1280 2019/12/16 18:03:20 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -737,6 +737,7 @@ SUBDIR+=	py-zeep
 SUBDIR+=	py-zmq
 SUBDIR+=	pygopherd
 SUBDIR+=	qadsl
+SUBDIR+=	qbittorrent
 SUBDIR+=	quagga
 SUBDIR+=	queryperf
 SUBDIR+=	quvi
