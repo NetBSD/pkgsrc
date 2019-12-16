@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5421 2019/12/16 04:08:20 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.5422 2019/12/16 04:09:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8706,3 +8706,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/xfce4-exo to 0.12.10 [gutteridge 2019-12-16]
 	Added devel/py-setuptools-rust version 0.10.6 [minskim 2019-12-16]
 	Updated print/atril to 1.22.3 [gutteridge 2019-12-16]
+	Updated wm/marco to 1.22.4 [gutteridge 2019-12-16]
