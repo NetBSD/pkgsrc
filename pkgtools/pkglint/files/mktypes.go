@@ -61,8 +61,9 @@ func (m MkVarUseModifier) MatchSubst() (ok bool, regex bool, from string, to str
 //  MkVarUseModifier{"S,name,file,g"}.Subst("distname-1.0") => "distfile-1.0"
 func (m MkVarUseModifier) Subst(str string) (string, bool) {
 	// XXX: The call to MatchSubst is usually redundant because MatchSubst
-	// is typically called directly before calling Subst.
-	ok, regex, from, to, options := m.MatchSubst()
+	//  is typically called directly before calling Subst.
+	//  This comes from a time when there was no boolean return value.
+	ok, isRegex, from, to, options := m.MatchSubst()
 	if !ok {
 		return "", false
 	}
@@ -77,14 +78,14 @@ func (m MkVarUseModifier) Subst(str string) (string, bool) {
 		from = from[:len(from)-1]
 	}
 
-	if regex && matches(from, `^[\w-]+$`) && matches(to, `^[^&$\\]*$`) {
+	if isRegex && matches(from, `^[\w-]+$`) && matches(to, `^[^&$\\]*$`) {
 		// The "from" pattern is so simple that it doesn't matter whether
 		// the modifier is :S or :C, therefore treat it like the simpler :S.
-		regex = false
+		isRegex = false
 	}
 
-	if regex {
-		// TODO: Maybe implement regular expression substitutions later.
+	if isRegex {
+		// XXX: Maybe implement regular expression substitutions later.
 		return "", false
 	}
 

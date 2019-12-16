@@ -310,23 +310,24 @@ func (s *Suite) Test_MkLineChecker_checkVartype__CFLAGS(c *check.C) {
 func (s *Suite) Test_MkLineChecker_checkShellCommand__indentation(c *check.C) {
 	t := s.Init(c)
 
-	mklines := t.SetUpFileMkLines("filename.mk",
-		MkCvsID,
-		"",
-		"do-install:",
-		"\t\techo 'unnecessarily indented'",
-		"\t\tfor var in 1 2 3; do \\",
-		"\t\t\techo \"$$var\"; \\",
-		"\t                echo \"spaces\"; \\",
-		"\t\tdone",
-		"",
-		"\t\t\t\t\t# comment, not a shell command")
+	doTest := func(bool) {
+		mklines := t.SetUpFileMkLines("filename.mk",
+			MkCvsID,
+			"",
+			"do-install:",
+			"\t\techo 'unnecessarily indented'",
+			"\t\tfor var in 1 2 3; do \\",
+			"\t\t\techo \"$$var\"; \\",
+			"\t                echo \"spaces\"; \\",
+			"\t\tdone",
+			"",
+			"\t\t\t\t\t# comment, not a shell command")
 
-	mklines.Check()
-	t.SetUpCommandLine("-Wall", "--autofix")
-	mklines.Check()
+		mklines.Check()
+	}
 
-	t.CheckOutputLines(
+	t.ExpectDiagnosticsAutofix(
+		doTest,
 		"NOTE: ~/filename.mk:4: Shell programs should be indented with a single tab.",
 		"WARN: ~/filename.mk:4: Unknown shell command \"echo\".",
 		"NOTE: ~/filename.mk:5--8: Shell programs should be indented with a single tab.",
