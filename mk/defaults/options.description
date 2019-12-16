@@ -28,6 +28,7 @@ anope-dbencryption	Enable database encryption.
 anthy			Use Anthy as Japanese conversion program.
 anthy-2ch-dict		Include the 2ch dictionary.
 anthy-okinawa-dict	Include the okinawa dictionary.
+ap-php			Use PHP via Apache module.
 apache			Enable support for Apache web server.
 apache-mpm-event	Use multi-threaded workers in Apache web server.
 apache-mpm-prefork	Use pre-forked workers in Apache web server.
@@ -35,6 +36,7 @@ apache-mpm-worker	Use multiple processes of multi-threaded workers in Apache web
 apple-common-crypto	Use Apple's CommonCrypto.
 ares			Use the ares library for asynchronous name resolution.
 aria2-metalink		Enable Metalink support.
+argon2			Enable support for Argon2 password-hashing function.
 arts			Use the aRts audio daemon.
 aspell			Add spell checking support using aspell.
 async	Use the async library
@@ -129,6 +131,7 @@ debug			Enable debugging facilities in the package.
 debug-info		Enable debug info in generated binaries (e.g. for crash analysis), but not full scale debugging.
 deliver-suid		Install deliver executable setuid root.
 disable-compile-inits	Disable compile time implicit initialization.
+disable-filter-url	Disable php://filter URL feature.
 djbdns-cachestats	Patch to add stats for cache hits/misses.
 djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
 djbdns-mergequeries	Patch to address dnscache poisoning weakness.
@@ -613,6 +616,8 @@ pdf			Enable PDF support.
 perl			Enable Perl support.
 pgadmin-db-designer	Enable pgAdmin database-designer functionality.
 pgsql			Enable PostgreSQL support.
+php-cgi			Use PHP via CGI.
+php-fpm			Use PHP via FastCGI Process Manager.
 php-sockets		Enable php-sockets support.
 pic			Enable compiling with -fPIC
 pim			Enable pim (personal information management) support.
