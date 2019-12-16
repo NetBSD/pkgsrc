@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/05/27 13:21:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/12/16 14:44:56 kim Exp $
 share/aclocal/codeset.m4
 share/aclocal/exported.m4
 share/aclocal/extern-inline.m4
@@ -7,6 +7,7 @@ share/aclocal/flexmember.m4
 share/aclocal/gettext.m4
 share/aclocal/glibc2.m4
 share/aclocal/glibc21.m4
+share/aclocal/host-cpu-c-abi.m4
 share/aclocal/hostname.m4
 share/aclocal/iconv.m4
 share/aclocal/intdiv0.m4
