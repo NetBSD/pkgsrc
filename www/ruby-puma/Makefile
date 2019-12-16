@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2018/09/23 16:55:59 taca Exp $
+# $NetBSD: Makefile,v 1.18 2019/12/16 17:02:54 taca Exp $
 
-DISTNAME=	puma-3.12.0
+DISTNAME=	puma-4.3.1
 CATEGORIES=	www
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://puma.io/
 COMMENT=	Modern concurrent web server for Ruby
 LICENSE=	mit
+
+DEPENDS+=	${RUBY_PKGPREFIX}-nio4r>=2.0<3:../../net/ruby-nio4r
 
 RUBYGEM_OPTIONS+=	--format-executable
 USE_GCC_RUNTIME=	yes
