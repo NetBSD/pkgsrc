@@ -40,6 +40,14 @@ CFG_NLS_DISABLE=@NLS@
 # that underlaying libraries contain known security vulnerabilities
 # Set this to 1 if you don't want to get such warnings
 CFG_TLS_WARNING_DISABLE=1
+
+# The TLS module can use CRLs to check for revoked X.509 certificates
+# Usage and update interval can be configured via configfile (see manual page)
+# CRLs are downloaded automatically and must be available via HTTP protocol
+# (CRL distribution point entries in certificates)
+# Note: Not all CAs provide CRL distribution points in their certificates
+# Set this to 0 to check the whole chain for revoked certificates
+CFG_TLS_CRLS_DISABLE=0
 # ==============================================================================
 
 
