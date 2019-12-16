@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2019/04/25 07:32:59 maya Exp $
+# $NetBSD: Makefile,v 1.16 2019/12/16 08:24:39 adam Exp $
 
 .include "../../graphics/opencv/Makefile.common"
 
 DISTNAME=	opencv_contrib-${OPENCV_VERSION}
 PKGNAME=	${DISTNAME:S/_contrib/-contrib-face/}
-PKGREVISION=	1
 GITHUB_PROJECT=	opencv_contrib
 
 MAINTAINER=	markd@NetBSD.org
