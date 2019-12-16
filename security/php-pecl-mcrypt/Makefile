@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/04/30 04:05:45 taca Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/16 00:10:37 taca Exp $
 #
 
 MODNAME=	mcrypt
-PECL_VERSION=	1.0.2
+PECL_VERSION=	1.0.3
 PKGNAME=	${PHP_PKG_PREFIX}-pecl-${MODNAME}-${PECL_VERSION}
 CATEGORIES=	security
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://pecl.php.net/package/mcrypt
 COMMENT=	Bindings for the libmcrypt library
 LICENSE=	php
 
-PHP_VERSIONS_ACCEPTED=	71 72 73
+PHP_VERSIONS_ACCEPTED=	71 72 73 74
 
 CONFIGURE_ARGS+=	--with-mcrypt=${PREFIX}
 
