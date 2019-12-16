@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5439 2019/12/16 21:26:48 schmonz Exp $
+$NetBSD: CHANGES-2019,v 1.5440 2019/12/16 21:27:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8728,3 +8728,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/fehqlibs to 0.9.13c [schmonz 2019-12-16]
 	Updated net/ucspi-tcp6 to 1.11.0 [schmonz 2019-12-16]
 	Updated net/ucspi-ssl to 0.999.11.1 [schmonz 2019-12-16]
+	Updated net/djbdnscurve6 to 36a [schmonz 2019-12-16]
