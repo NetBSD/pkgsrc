@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/04/24 19:34:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2019/12/16 08:24:39 adam Exp $
 bin/opencv_annotation
 bin/opencv_createsamples
 bin/opencv_interactive-calibration
@@ -21,6 +21,7 @@ include/opencv2/calib3d/calib3d.hpp
 include/opencv2/calib3d/calib3d_c.h
 include/opencv2/core.hpp
 include/opencv2/core/affine.hpp
+include/opencv2/core/async.hpp
 include/opencv2/core/base.hpp
 include/opencv2/core/bindings_utils.hpp
 include/opencv2/core/bufferpool.hpp
@@ -66,6 +67,8 @@ include/opencv2/core/cv_cpu_helper.h
 include/opencv2/core/cvdef.h
 include/opencv2/core/cvstd.hpp
 include/opencv2/core/cvstd.inl.hpp
+include/opencv2/core/detail/async_promise.hpp
+include/opencv2/core/detail/exception_ptr.hpp
 include/opencv2/core/directx.hpp
 include/opencv2/core/eigen.hpp
 include/opencv2/core/fast_math.hpp
@@ -73,12 +76,16 @@ include/opencv2/core/hal/hal.hpp
 include/opencv2/core/hal/interface.h
 include/opencv2/core/hal/intrin.hpp
 include/opencv2/core/hal/intrin_avx.hpp
+include/opencv2/core/hal/intrin_avx512.hpp
 include/opencv2/core/hal/intrin_cpp.hpp
 include/opencv2/core/hal/intrin_forward.hpp
+include/opencv2/core/hal/intrin_msa.hpp
 include/opencv2/core/hal/intrin_neon.hpp
 include/opencv2/core/hal/intrin_sse.hpp
 include/opencv2/core/hal/intrin_sse_em.hpp
 include/opencv2/core/hal/intrin_vsx.hpp
+include/opencv2/core/hal/intrin_wasm.hpp
+include/opencv2/core/hal/msa_macros.h
 include/opencv2/core/ippasync.hpp
 include/opencv2/core/mat.hpp
 include/opencv2/core/mat.inl.hpp
@@ -111,12 +118,15 @@ include/opencv2/core/ovx.hpp
 include/opencv2/core/persistence.hpp
 include/opencv2/core/ptr.inl.hpp
 include/opencv2/core/saturate.hpp
+include/opencv2/core/simd_intrinsics.hpp
 include/opencv2/core/softfloat.hpp
 include/opencv2/core/sse_utils.hpp
 include/opencv2/core/traits.hpp
 include/opencv2/core/types.hpp
 include/opencv2/core/types_c.h
 include/opencv2/core/utility.hpp
+include/opencv2/core/utils/allocator_stats.hpp
+include/opencv2/core/utils/allocator_stats.impl.hpp
 include/opencv2/core/utils/filesystem.hpp
 include/opencv2/core/utils/logger.defines.hpp
 include/opencv2/core/utils/logger.hpp
@@ -335,5 +345,5 @@ share/OpenCV/lbpcascades/lbpcascade_profileface.xml
 share/OpenCV/lbpcascades/lbpcascade_silverware.xml
 share/OpenCV/valgrind.supp
 share/OpenCV/valgrind_3rdparty.supp
-@pkgdir share/doc/opencv/ref/pics
 @pkgdir share/doc/opencv/papers
+@pkgdir share/doc/opencv/ref/pics
