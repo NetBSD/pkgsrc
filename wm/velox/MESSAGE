@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2019/12/11 21:19:29 nia Exp $
+$NetBSD: MESSAGE,v 1.2 2019/12/16 21:01:41 nia Exp $
 
 To edit the configuration file, copy it into place:
 
-$ cp ${PREFIX}/share/examples/velox.conf ~/.velox.conf
+$ cp ${PREFIX}/share/examples/velox/velox.conf ~/.velox.conf
 
 Most packages in pkgsrc will need wayland support enabled explicitly,
 velox currently does not support X11 applications.
