@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/11/03 10:39:28 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2019/12/16 16:30:13 taca Exp $
 
 MODNAME=	gearman
 PECL_VERSION=	2.0.5
@@ -18,7 +18,7 @@ LICENSE=	php
 
 WRKSRC=	${WRKDIR}/pecl-gearman-gearman-${PECL_VERSION}
 
-PHP_VERSIONS_ACCEPTED=	71 72
+PHP_VERSIONS_ACCEPTED=	72
 
 CONFIGURE_ARGS+=	--with-gearman=shared,${BUILDLINK_PREFIX.gearmand}
 
