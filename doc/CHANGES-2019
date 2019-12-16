@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5435 2019/12/16 18:03:46 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5436 2019/12/16 18:09:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8723,3 +8723,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated pkgtools/pkglint to 19.3.19 [rillig 2019-12-16]
 	Added net/libtorrent-rasterbar version 1.2.2 [nia 2019-12-16]
 	Added net/qbittorrent version 4.2.0 [nia 2019-12-16]
+	Removed net/bittorrent [nia 2019-12-16]
+	Removed net/bittorrent-gui [nia 2019-12-16]
