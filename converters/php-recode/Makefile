@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/12/15 18:01:05 taca Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/16 16:30:13 taca Exp $
 
 MODNAME=		recode
 CATEGORIES=		converters
@@ -8,7 +8,7 @@ LICENSE=		php
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.recode}
 
-PHP_VERSIONS_ACCEPTED=	56 71 72 73
+PHP_VERSIONS_ACCEPTED=	56 72 73
 USE_PHP_EXT_PATCHES=	yes
 
 .include "../../lang/php/ext.mk"

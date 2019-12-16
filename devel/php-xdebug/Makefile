@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/12/15 18:33:09 taca Exp $
+# $NetBSD: Makefile,v 1.26 2019/12/16 16:30:13 taca Exp $
 #
 
 MODNAME=		xdebug
@@ -14,7 +14,7 @@ LICENSE=		php
 
 PHP_ZEND_EXTENSION=	yes
 
-PHP_VERSIONS_ACCEPTED=	71 72 73 74
+PHP_VERSIONS_ACCEPTED=	72 73 74
 
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
