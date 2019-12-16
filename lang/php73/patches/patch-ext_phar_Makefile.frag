@@ -1,4 +1,6 @@
-$NetBSD: patch-ext_phar_Makefile.frag,v 1.1 2018/12/15 17:12:44 taca Exp $
+$NetBSD: patch-ext_phar_Makefile.frag,v 1.2 2019/12/16 15:58:19 taca Exp $
+
+Set shbang for phar correctly.
 
 --- ext/phar/Makefile.frag.orig	2015-06-23 17:33:33.000000000 +0000
 +++ ext/phar/Makefile.frag

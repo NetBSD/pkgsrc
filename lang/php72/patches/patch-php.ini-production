@@ -1,4 +1,6 @@
-$NetBSD: patch-php.ini-production,v 1.1 2017/11/15 08:56:12 jdolecek Exp $
+$NetBSD: patch-php.ini-production,v 1.2 2019/12/16 15:58:18 taca Exp $
+
+Set proper default configuration values.
 
 --- php.ini-production.orig	2015-06-23 17:33:33.000000000 +0000
 +++ php.ini-production

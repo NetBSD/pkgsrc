@@ -1,4 +1,6 @@
-$NetBSD: patch-ext_tidy_config.m4,v 1.1 2018/12/15 17:12:44 taca Exp $
+$NetBSD: patch-ext_tidy_config.m4,v 1.2 2019/12/16 15:58:19 taca Exp $
+
+Fix portability.
 
 --- ext/tidy/config.m4.orig	2018-12-04 16:12:28.000000000 +0000
 +++ ext/tidy/config.m4
