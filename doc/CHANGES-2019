@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5418 2019/12/16 00:11:05 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5419 2019/12/16 00:44:48 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8703,3 +8703,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/lxsession to 0.5.4 [gutteridge 2019-12-15]
 	Updated x11/lxrandr to 0.3.2 [gutteridge 2019-12-15]
 	Updated security/php-pecl-mcrypt to 1.0.3 [taca 2019-12-16]
+	Updated x11/xfce4-exo to 0.12.10 [gutteridge 2019-12-16]
