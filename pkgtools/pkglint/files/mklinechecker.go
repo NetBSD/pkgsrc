@@ -64,14 +64,14 @@ func (ck MkLineChecker) checkTextVarUse(text string, vartype *Vartype, time VucT
 
 	tokens, _ := NewMkLexer(text, nil).MkTokens()
 	for i, token := range tokens {
-		// TODO: flatten
-		if token.Varuse != nil {
-			spaceLeft := i-1 < 0 || matches(tokens[i-1].Text, `[\t ]$`)
-			spaceRight := i+1 >= len(tokens) || matches(tokens[i+1].Text, `^[\t ]`)
-			isWordPart := !(spaceLeft && spaceRight)
-			vuc := VarUseContext{vartype, time, VucQuotPlain, isWordPart}
-			NewMkVarUseChecker(token.Varuse, ck.MkLines, ck.MkLine).Check(&vuc)
+		if token.Varuse == nil {
+			continue
 		}
+		spaceLeft := i-1 < 0 || matches(tokens[i-1].Text, `[\t ]$`)
+		spaceRight := i+1 >= len(tokens) || matches(tokens[i+1].Text, `^[\t ]`)
+		isWordPart := !(spaceLeft && spaceRight)
+		vuc := VarUseContext{vartype, time, VucQuotPlain, isWordPart}
+		NewMkVarUseChecker(token.Varuse, ck.MkLines, ck.MkLine).Check(&vuc)
 	}
 }
 

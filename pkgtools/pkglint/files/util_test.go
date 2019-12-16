@@ -1150,3 +1150,26 @@ func keys(m interface{}) []string {
 	sort.Strings(keys)
 	return keys
 }
+
+func (s *Suite) Test_interval(c *check.C) {
+	t := s.Init(c)
+
+	i := newInterval()
+
+	t.CheckEquals(i.min > i.max, true)
+
+	i.add(3)
+
+	t.CheckEquals(i.min, 3)
+	t.CheckEquals(i.max, 3)
+
+	i.add(7)
+
+	t.CheckEquals(i.min, 3)
+	t.CheckEquals(i.max, 7)
+
+	i.add(-5)
+
+	t.CheckEquals(i.min, -5)
+	t.CheckEquals(i.max, 7)
+}
