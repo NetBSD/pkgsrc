@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5436 2019/12/16 18:09:05 nia Exp $
+$NetBSD: CHANGES-2019,v 1.5437 2019/12/16 21:25:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8725,3 +8725,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added net/qbittorrent version 4.2.0 [nia 2019-12-16]
 	Removed net/bittorrent [nia 2019-12-16]
 	Removed net/bittorrent-gui [nia 2019-12-16]
+	Updated net/fehqlibs to 0.9.13c [schmonz 2019-12-16]
