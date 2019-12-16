@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5420 2019/12/16 01:12:35 minskim Exp $
+$NetBSD: CHANGES-2019,v 1.5421 2019/12/16 04:08:20 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8705,3 +8705,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/php-pecl-mcrypt to 1.0.3 [taca 2019-12-16]
 	Updated x11/xfce4-exo to 0.12.10 [gutteridge 2019-12-16]
 	Added devel/py-setuptools-rust version 0.10.6 [minskim 2019-12-16]
+	Updated print/atril to 1.22.3 [gutteridge 2019-12-16]
