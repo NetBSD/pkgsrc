@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2962 2019/12/13 09:40:06 adam Exp $
+# $NetBSD: Makefile,v 1.2963 2019/12/16 01:12:30 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2403,6 +2403,7 @@ SUBDIR+=	py-selectors2
 SUBDIR+=	py-semantic_version
 SUBDIR+=	py-serpent
 SUBDIR+=	py-setuptools
+SUBDIR+=	py-setuptools-rust
 SUBDIR+=	py-setuptools_scm
 SUBDIR+=	py-setuptools_scm_git_archive
 SUBDIR+=	py-setuptools_trial
