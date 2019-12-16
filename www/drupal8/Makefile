@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/12/15 18:24:32 taca Exp $
+# $NetBSD: Makefile,v 1.29 2019/12/16 16:30:14 taca Exp $
 
 DISTNAME=	drupal-8.7.10
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.0:../../textproc/php-json
 
-PHP_VERSIONS_ACCEPTED=	71 72 73
+PHP_VERSIONS_ACCEPTED=	72 73
 
 NO_BUILD=	YES
 DRUPAL=		share/drupal
