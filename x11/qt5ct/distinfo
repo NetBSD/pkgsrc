@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/16 12:08:02 kamil Exp $
+
+SHA1 (qt5ct-0.41.tar.bz2) = f2d91248aa4fe54f73881e000621d61460dd78ee
+RMD160 (qt5ct-0.41.tar.bz2) = 7a7752de9adfdeb2b3ff0fad6865e3b0c6fed075
+SHA512 (qt5ct-0.41.tar.bz2) = a94f9996dc2198d3c8c9af8610912d12b915b8c547a49c36f7bc083b6f237b318d7903e91fb6fcfe06996a319c361104c1923e6d0c49446b6fb66a1e44fae009
+Size (qt5ct-0.41.tar.bz2) = 73009 bytes
