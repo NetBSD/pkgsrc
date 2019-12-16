@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1278 2019/11/19 14:31:22 wiz Exp $
+# $NetBSD: Makefile,v 1.1279 2019/12/16 18:00:51 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -327,6 +327,7 @@ SUBDIR+=	libsoup
 SUBDIR+=	libsscript
 SUBDIR+=	libtelnet
 SUBDIR+=	libtorrent
+SUBDIR+=	libtorrent-rasterbar
 SUBDIR+=	libtrace
 SUBDIR+=	libupnp
 SUBDIR+=	libvncserver
