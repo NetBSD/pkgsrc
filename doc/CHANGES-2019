@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5423 2019/12/16 08:10:29 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.5424 2019/12/16 08:25:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8708,3 +8708,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/atril to 1.22.3 [gutteridge 2019-12-16]
 	Updated wm/marco to 1.22.4 [gutteridge 2019-12-16]
 	Updated www/libmicrohttpd to 0.9.69 [ng0 2019-12-16]
+	Updated graphics/opencv to 3.4.8 [adam 2019-12-16]
+	Updated graphics/opencv-contrib-face to 3.4.8 [adam 2019-12-16]
