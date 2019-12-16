@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5432 2019/12/16 17:03:27 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5433 2019/12/16 17:06:23 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8720,3 +8720,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed meta-pkgs/php71-extensions [taca 2019-12-16]
 	Updated www/php-ja-wordpress to 5.3.1 [taca 2019-12-16]
 	Updated www/ruby-puma to 4.3.1 [taca 2019-12-16]
+	Updated pkgtools/pkglint to 19.3.19 [rillig 2019-12-16]
