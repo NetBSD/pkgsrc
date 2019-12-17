@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/17 09:37:33 leot Exp $
+
+SHA1 (publicsuffix2-2.20190812.tar.gz) = d755339d88d35cd1602d8f05a06a27a3081beb49
+RMD160 (publicsuffix2-2.20190812.tar.gz) = b9751a510468316b6945d924a9ac89de17407682
+SHA512 (publicsuffix2-2.20190812.tar.gz) = bfc7859f356e963d887623042276e7ed7ab6dc97d75eaf98d699d35f0cc77c25c4d6a90bfd55fe9e74ef5bbfa94f84330064b9e33f636c0bc35615e3ecbd8ceb
+Size (publicsuffix2-2.20190812.tar.gz) = 98348 bytes
