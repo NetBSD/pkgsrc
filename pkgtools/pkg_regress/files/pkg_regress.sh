@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: pkg_regress.sh,v 1.7 2018/11/30 19:07:37 rillig Exp $
+# $NetBSD: pkg_regress.sh,v 1.8 2019/12/17 15:38:43 rillig Exp $
 #
 set -e
 
@@ -105,14 +105,20 @@ do_runtest() {
 # one test do not interfere with other tests.
 runtest() {
 	if [ "$verbose" = "yes" ]; then
-		echo "Running $1"
+		echo "pkg_regress: Running $1"
 	fi
 
 	if (do_runtest "$1"); then
 		passed=`expr $passed + 1`
+		if [ "$verbose" = "yes" ]; then
+			echo "pkg_regress: Finished $1 (passed)"
+		fi
 	else
 		failed=`expr $failed + 1`
 		failed_names="$failed_names $1"
+		if [ "$verbose" = "yes" ]; then
+			echo "pkg_regress: Finished $1 (failed)"
+		fi
     	fi
 }
 
