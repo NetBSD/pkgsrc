@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5448 2019/12/17 10:16:20 leot Exp $
+$NetBSD: CHANGES-2019,v 1.5449 2019/12/17 10:22:02 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8737,3 +8737,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/py-ruamel-yaml-clib version 0.2.0 [leot 2019-12-17]
 	Updated devel/py-ruamel-yaml to 0.16.5 [leot 2019-12-17]
 	Added archivers/py-brotli version 1.0.7 [leot 2019-12-17]
+	Updated net/mitmproxy to 5.0.0 [leot 2019-12-17]
