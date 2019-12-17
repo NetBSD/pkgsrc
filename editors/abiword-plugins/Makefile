@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2019/12/04 05:40:47 gutteridge Exp $
+# $NetBSD: Makefile,v 1.109 2019/12/17 01:59:31 gutteridge Exp $
 
 .include	"../../editors/abiword/Makefile.common"
 DISTNAME=	abiword-${ABIVERSION}
@@ -27,7 +27,6 @@ BUILD_DIRS=	plugins
 
 # All configure_args here
 CONFIGURE_ARGS+=	--disable-default-plugins	#do not build any plugins by default
-CONFIGURE_ARGS+=	--enable-builtin-plugins
 CONFIGURE_ARGS+=	--enable-spell         # (Gtk+ only) include spell checking support
 CONFIGURE_ARGS+=	--with-inter7eps=no
 
