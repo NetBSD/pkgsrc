@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/17 10:15:37 leot Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/_brotli.so
+${PYSITELIB}/brotli.py
+${PYSITELIB}/brotli.pyc
+${PYSITELIB}/brotli.pyo
