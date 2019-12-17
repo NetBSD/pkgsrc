@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/17 10:15:37 leot Exp $
+
+SHA1 (py-brotli/Brotli-1.0.7.zip) = 707c9a4eb4aefb60b8ece34b246ea2c1fee88fad
+RMD160 (py-brotli/Brotli-1.0.7.zip) = d9924953377fa7d766da673529eb5be03123d08d
+SHA512 (py-brotli/Brotli-1.0.7.zip) = 1c491fcea970e9c966b27ded03d50b7f77a038f228edb66c9ace383d9ceb4dc17e9f34cf957f3a0e8050847b7476bef7f42f39e10c6fc2a56686b6e29241e248
+Size (py-brotli/Brotli-1.0.7.zip) = 496391 bytes
