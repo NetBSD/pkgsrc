@@ -14,3 +14,5 @@ not supported.  PAE is mandatory; on i386 one must use XEN3PAE_DOM[0U].
 This is the last release to support python-based tools (xm), rather
 than the newer xl.  It remains in pkgsrc as a courtesy to those who
 have not yet migrated.
+
+This version no longer receives security updates.
