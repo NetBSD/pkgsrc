@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/17 10:05:23 leot Exp $
+
+SHA1 (ruamel.yaml.clib-0.2.0.tar.gz) = 489ab4a88d8dedbdb04b4b772bb478e51c88d851
+RMD160 (ruamel.yaml.clib-0.2.0.tar.gz) = acd23a8ef6f99c3c1d0ad76fe083c6fe98616e2b
+SHA512 (ruamel.yaml.clib-0.2.0.tar.gz) = 7d716e27963b97a1735ba7ff0e581f7ecdfa62725cc42def59ad0ccdf9e23a9f7dfbc3cac298bb3e29362535036b07ba0f523452d6f73248be53c69796637e34
+Size (ruamel.yaml.clib-0.2.0.tar.gz) = 178084 bytes
