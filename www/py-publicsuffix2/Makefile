@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/12/17 09:37:33 leot Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/17 09:39:47 leot Exp $
 
 DISTNAME=	publicsuffix2-2.20190812
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/nexb/python-publicsuffix2
 COMMENT=	Public suffix for a domain name using the Public Suffix List
 LICENSE=	mit AND mpl-2.0
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
