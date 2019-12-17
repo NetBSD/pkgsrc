@@ -1,4 +1,4 @@
-# $NetBSD: spec,v 1.1.1.1 2006/09/06 03:37:14 ben Exp $
+# $NetBSD: spec,v 1.2 2019/12/17 16:01:28 rillig Exp $
 #
 
 do_test() {
@@ -10,5 +10,5 @@ do_test() {
 }
 
 check_result() {
-	output_require "^The variable MAKE_ENV remains unchanged\\.\$"
+	output_require '^The variable MAKE_ENV remains unchanged.*$'
 }
