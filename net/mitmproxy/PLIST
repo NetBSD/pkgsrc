@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/08/09 11:51:41 leot Exp $
+@comment $NetBSD: PLIST,v 1.13 2019/12/17 10:21:51 leot Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -37,6 +37,9 @@ ${PYSITELIB}/mitmproxy/addons/check_ca.pyo
 ${PYSITELIB}/mitmproxy/addons/clientplayback.py
 ${PYSITELIB}/mitmproxy/addons/clientplayback.pyc
 ${PYSITELIB}/mitmproxy/addons/clientplayback.pyo
+${PYSITELIB}/mitmproxy/addons/command_history.py
+${PYSITELIB}/mitmproxy/addons/command_history.pyc
+${PYSITELIB}/mitmproxy/addons/command_history.pyo
 ${PYSITELIB}/mitmproxy/addons/core.py
 ${PYSITELIB}/mitmproxy/addons/core.pyc
 ${PYSITELIB}/mitmproxy/addons/core.pyo
@@ -67,9 +70,6 @@ ${PYSITELIB}/mitmproxy/addons/onboarding.pyo
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/__init__.py
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/__init__.pyc
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/__init__.pyo
-${PYSITELIB}/mitmproxy/addons/onboardingapp/app.py
-${PYSITELIB}/mitmproxy/addons/onboardingapp/app.pyc
-${PYSITELIB}/mitmproxy/addons/onboardingapp/app.pyo
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/static/bootstrap.min.css
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/static/fontawesome/css/font-awesome.css
 ${PYSITELIB}/mitmproxy/addons/onboardingapp/static/fontawesome/css/font-awesome.min.css
@@ -102,6 +102,9 @@ ${PYSITELIB}/mitmproxy/addons/script.pyo
 ${PYSITELIB}/mitmproxy/addons/serverplayback.py
 ${PYSITELIB}/mitmproxy/addons/serverplayback.pyc
 ${PYSITELIB}/mitmproxy/addons/serverplayback.pyo
+${PYSITELIB}/mitmproxy/addons/session.py
+${PYSITELIB}/mitmproxy/addons/session.pyc
+${PYSITELIB}/mitmproxy/addons/session.pyo
 ${PYSITELIB}/mitmproxy/addons/setheaders.py
 ${PYSITELIB}/mitmproxy/addons/setheaders.pyc
 ${PYSITELIB}/mitmproxy/addons/setheaders.pyo
@@ -135,6 +138,9 @@ ${PYSITELIB}/mitmproxy/certs.pyo
 ${PYSITELIB}/mitmproxy/command.py
 ${PYSITELIB}/mitmproxy/command.pyc
 ${PYSITELIB}/mitmproxy/command.pyo
+${PYSITELIB}/mitmproxy/command_lexer.py
+${PYSITELIB}/mitmproxy/command_lexer.pyc
+${PYSITELIB}/mitmproxy/command_lexer.pyo
 ${PYSITELIB}/mitmproxy/connections.py
 ${PYSITELIB}/mitmproxy/connections.pyc
 ${PYSITELIB}/mitmproxy/connections.pyo
@@ -288,9 +294,20 @@ ${PYSITELIB}/mitmproxy/io/__init__.pyo
 ${PYSITELIB}/mitmproxy/io/compat.py
 ${PYSITELIB}/mitmproxy/io/compat.pyc
 ${PYSITELIB}/mitmproxy/io/compat.pyo
+${PYSITELIB}/mitmproxy/io/db.py
+${PYSITELIB}/mitmproxy/io/db.pyc
+${PYSITELIB}/mitmproxy/io/db.pyo
 ${PYSITELIB}/mitmproxy/io/io.py
 ${PYSITELIB}/mitmproxy/io/io.pyc
 ${PYSITELIB}/mitmproxy/io/io.pyo
+${PYSITELIB}/mitmproxy/io/proto/http.proto
+${PYSITELIB}/mitmproxy/io/proto/http_pb2.py
+${PYSITELIB}/mitmproxy/io/proto/http_pb2.pyc
+${PYSITELIB}/mitmproxy/io/proto/http_pb2.pyo
+${PYSITELIB}/mitmproxy/io/protobuf.py
+${PYSITELIB}/mitmproxy/io/protobuf.pyc
+${PYSITELIB}/mitmproxy/io/protobuf.pyo
+${PYSITELIB}/mitmproxy/io/sql/session_create.sql
 ${PYSITELIB}/mitmproxy/io/tnetstring.py
 ${PYSITELIB}/mitmproxy/io/tnetstring.pyc
 ${PYSITELIB}/mitmproxy/io/tnetstring.pyo
