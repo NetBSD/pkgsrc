@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5450 2019/12/17 10:50:53 leot Exp $
+$NetBSD: CHANGES-2019,v 1.5451 2019/12/17 15:13:41 tron Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8739,3 +8739,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added archivers/py-brotli version 1.0.7 [leot 2019-12-17]
 	Updated net/mitmproxy to 5.0.0 [leot 2019-12-17]
 	Updated archivers/py-zstandard to 0.12.0nb1 [leot 2019-12-17]
+	Updated mail/mutt to 1.13.1 [tron 2019-12-17]
