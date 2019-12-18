@@ -1,0 +1,31 @@
+$NetBSD: patch-src_Makevars,v 1.1 2019/12/18 12:44:39 joerg Exp $
+
+--- src/Makevars.orig	2019-04-05 20:06:25.000000000 +0000
++++ src/Makevars
+@@ -9,7 +9,7 @@ ifeq ($(UNAME), Darwin)
+ FRAMEWORK = -framework CoreServices
+ endif
+ 
+-PKG_LIBS = ./libuv/.libs/libuv.a ./http-parser/http_parser.o ./sha1/sha1.o ./base64/base64.o $(FRAMEWORK) -pthread
++PKG_LIBS = -luv ./http-parser/http_parser.o ./sha1/sha1.o ./base64/base64.o $(FRAMEWORK) -pthread
+ ifeq ($(UNAME), SunOS)
+ PKG_LIBS += -lkstat -lsendfile -lsocket -lxnet
+ endif
+@@ -22,7 +22,7 @@ endif
+ 
+ PKG_CFLAGS = $(C_VISIBILITY) -DSTRICT_R_HEADERS
+ PKG_CXXFLAGS = $(CXX_VISIBILITY) -DSTRICT_R_HEADERS
+-PKG_CPPFLAGS = -Ilibuv/include -pthread
++PKG_CPPFLAGS = -I${PREFIX} -pthread
+ 
+ # To avoid spurious warnings from `R CMD check --as-cran`, about compiler
+ # warning flags like -Werror.
+@@ -44,7 +44,7 @@ CONFIGURE_FLAGS="--quiet"
+ # PKG_CPPFLAGS += -D_GLIBCXX_ASSERTIONS
+ 
+ 
+-$(SHLIB): libuv/.libs/libuv.a http-parser/http_parser.o sha1/sha1.o base64/base64.o
++$(SHLIB): http-parser/http_parser.o sha1/sha1.o base64/base64.o
+ 
+ # We needed to rename lt~obsolete.m4 because the name causes problems with R
+ # CMD check. Here we rename it back.
