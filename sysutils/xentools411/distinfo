@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2019/12/13 13:44:21 bouyer Exp $
+$NetBSD: distinfo,v 1.9 2019/12/18 13:37:39 bouyer Exp $
 
 SHA1 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = 272b8c904dc0127690eca2c5c20c67479e40da34
 RMD160 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = cfcb4a314c15da19b36132b27126f3bd9699d0e5
@@ -26,7 +26,7 @@ SHA1 (patch-extras_mini-os_include_time.h) = ab3b0794bf892ce6a036aa889c6852d65b5
 SHA1 (patch-extras_mini-os_lib_sys.c) = f6514ad743a206c0e81dcccd2586e8fe65bfd1b9
 SHA1 (patch-extras_mini-os_lock.c) = e28753793dee483c1ffad8ea8ed2706353046b50
 SHA1 (patch-m4_paths.m4) = 19250964fd808cad30a2aca3de011650a2788251
-SHA1 (patch-tools_Makefile) = a4f873797469190d58cc27bbb55d1afb151a2ff8
+SHA1 (patch-tools_Makefile) = b1ac601abfbef67dacc1a6d74da52e803c8e115b
 SHA1 (patch-tools_Rules.mk) = c15994d1e0c089674fdea874b56950a07be3deb5
 SHA1 (patch-tools_configure) = aa0838a1eadf70f5ed99748926234c0376989ff5
 SHA1 (patch-tools_console_daemon_utils.c) = 1c954e1edadad2607f7b87eaf2d6285be7f968ff
