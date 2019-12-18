@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/06/07 07:29:48 adam Exp $
+# $NetBSD: Makefile,v 1.10 2019/12/18 12:38:13 joerg Exp $
 
 DISTNAME=	typed_ast-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -18,7 +18,7 @@ SUBST_MESSAGE.fix-incl=	Make includes more specific to avoid conflicts.
 SUBST_FILES.fix-incl=	ast27/*/*.[ch]
 SUBST_FILES.fix-incl+=	ast3/*/*.[ch]
 .for f in Python-ast.h asdl.h ast.h bitset.h compile.h compile-ast3.h \
-	errcode.h graminit.h grammar.h node.h parsetok.h token.h
+	errcode.h graminit.h grammar.h node.h parsetok.h pgenheaders.h token.h
 SUBST_SED.fix-incl+=	-e 's,^\#include "${f}",\#include "Include/${f}",'
 .endfor
 
