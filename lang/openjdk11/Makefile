@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/06 23:04:31 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/18 12:59:10 wiz Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -124,11 +124,6 @@ PLIST.internal_vm_compiler=	yes
 
 .if ${OPSYS} == "NetBSD"
 TOOLS_PLATFORM.unzip=
-
-# not completely true, but too many jobs kill the build on NetBSD 9.99.x
-# see PR 54619
-MAKE_JOBS_SAFE=		no
-.endif
 
 post-extract:
 # These libs are bundled w/ the netbsd-7 bootstrap to facilitate building with
