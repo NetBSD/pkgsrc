@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5456 2019/12/18 13:36:41 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.5457 2019/12/18 13:48:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8744,3 +8744,4 @@ Changes to the packages collection and infrastructure in 2019:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2019Q4 branch [gdt 2019-12-17]
 	Updated textproc/libhighlight to 3.54 [schmonz 2019-12-18]
 	Updated editors/emacs-snapshot to 27.0.50 [mef 2019-12-18]
+	Updated mail/neomutt to 20191129 [wiz 2019-12-18]
