@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2019/11/24 00:47:34 nia Exp $
+$NetBSD: distinfo,v 1.41 2019/12/18 12:36:51 joerg Exp $
 
 SHA1 (audacity-2.3.3.tar.gz) = 4c8c980208c18eda152b857ed1f81a1f5cbd108a
 RMD160 (audacity-2.3.3.tar.gz) = a3a6f2eae80d9b46fce7741c53646f6a0b499084
@@ -6,6 +6,8 @@ SHA512 (audacity-2.3.3.tar.gz) = 766cc6cf21ff79a74f02497c21d8d28e1d06479218a0064
 Size (audacity-2.3.3.tar.gz) = 62099027 bytes
 SHA1 (patch-Makefile.in) = 2aca8c2ae0af7863f8f090a707c08fba693c7c86
 SHA1 (patch-aa) = 67c0ec5ff99004d9035de13f0263add46ed8c994
+SHA1 (patch-configure) = 2cf208a6104c73c761156e2373d21af64606c31e
+SHA1 (patch-configure.ac) = b34f733208080d57b30877d762e61a3d3fdec888
 SHA1 (patch-lib-src_FileDialog_Makefile.am) = efa6ca612f3984a4cf8150e3c624e347d144af87
 SHA1 (patch-lib-src_FileDialog_Makefile.in) = 44ca2539d68ab3951ae44377ed56f574785c1b08
 SHA1 (patch-lib-src_lib-widget-extra_Makefile.am) = 03d080c141259fbf02a9c5a70ce06625fcebf75e
