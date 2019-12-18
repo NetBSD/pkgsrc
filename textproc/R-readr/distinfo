@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2019/07/31 13:52:15 brook Exp $
+$NetBSD: distinfo,v 1.2 2019/12/18 12:42:04 joerg Exp $
 
 SHA1 (R/readr_1.3.1.tar.gz) = 82b92ca252d6079778c32ed634fe1e3fc4cb109e
 RMD160 (R/readr_1.3.1.tar.gz) = d513393cf41e234fa907d55e2902252bdbb30353
 SHA512 (R/readr_1.3.1.tar.gz) = 343079275436fedf6a6c539692cdf23a7b877c2f62c439ab030fb72aa145bd39bf8d2574aaf095e1c6baadba1be3ae44789e209386bd27cfe1c8d1512d14b9fd
 Size (R/readr_1.3.1.tar.gz) = 268853 bytes
+SHA1 (patch-src_Makevars) = 8f0f388c32b19e82bf4899a3c3bd4da42b8860dd
