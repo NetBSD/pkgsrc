@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/08/30 17:01:33 nia Exp $
+# $NetBSD: Makefile,v 1.15 2019/12/18 12:38:38 joerg Exp $
 #
 
 DISTNAME=	BillardGL-1.75
@@ -34,4 +34,5 @@ INSTALLATION_DIRS=	bin
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
