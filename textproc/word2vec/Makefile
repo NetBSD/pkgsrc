@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/12/02 02:00:41 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/18 00:47:22 minskim Exp $
 
 DISTNAME=	word2vec-0.1c
 CATEGORIES=	textproc
@@ -7,7 +7,7 @@ GITHUB_TAG=	20c129af10659f7c50e86e3be406df663beff438
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/tmikolov/word2vec
-COMMENT=	Tools for computing distributed representtion of words
+COMMENT=	Tools for computing distributed representation of words
 LICENSE=	apache-2.0
 
 NO_CONFIGURE=	yes
