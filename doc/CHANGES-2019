@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5457 2019/12/18 13:48:19 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5458 2019/12/18 14:02:25 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8745,3 +8745,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/libhighlight to 3.54 [schmonz 2019-12-18]
 	Updated editors/emacs-snapshot to 27.0.50 [mef 2019-12-18]
 	Updated mail/neomutt to 20191129 [wiz 2019-12-18]
+	Updated graphics/libsixel to 1.8.3 [tsutsui 2019-12-18]
