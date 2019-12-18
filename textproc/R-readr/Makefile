@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/09/25 17:35:51 brook Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/18 12:42:04 joerg Exp $
 
 R_PKGNAME=	readr
 R_PKGVER=	1.3.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -30,6 +31,10 @@ post-install:
 .endif
 
 .include "../../math/R/Makefile.extension"
+
+# Can't find librcon.so during test.
+R_PKG_INSTALL_ARGS+=	--no-test-load
+
 .include "../../devel/R-Rcpp/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
