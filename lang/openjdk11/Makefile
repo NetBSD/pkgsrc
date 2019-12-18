@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/12/18 12:59:10 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/18 13:14:50 ryoon Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -124,6 +124,7 @@ PLIST.internal_vm_compiler=	yes
 
 .if ${OPSYS} == "NetBSD"
 TOOLS_PLATFORM.unzip=
+.endif
 
 post-extract:
 # These libs are bundled w/ the netbsd-7 bootstrap to facilitate building with
