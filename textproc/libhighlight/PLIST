@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/08/13 01:48:49 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.11 2019/12/18 01:34:33 schmonz Exp $
 lib/libhighlight.la
 share/doc/highlight/AUTHORS
 share/doc/highlight/COPYING
@@ -85,6 +85,7 @@ share/highlight/langDefs/autohotkey.lang
 share/highlight/langDefs/autoit.lang
 share/highlight/langDefs/avenue.lang
 share/highlight/langDefs/awk.lang
+share/highlight/langDefs/ballerina.lang
 share/highlight/langDefs/bat.lang
 share/highlight/langDefs/bbcode.lang
 share/highlight/langDefs/bcpl.lang
@@ -322,6 +323,7 @@ share/highlight/plugins/outhtml_add_background_svg.lua
 share/highlight/plugins/outhtml_add_figure.lua
 share/highlight/plugins/outhtml_add_line.lua
 share/highlight/plugins/outhtml_add_shadow.lua
+share/highlight/plugins/outhtml_ansi_esc.lua
 share/highlight/plugins/outhtml_codefold.lua
 share/highlight/plugins/outhtml_curly_brackets_matcher.lua
 share/highlight/plugins/outhtml_ie7_webctrl.lua

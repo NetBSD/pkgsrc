@@ -1,8 +1,8 @@
-$NetBSD: patch-src_makefile,v 1.7 2019/08/13 01:48:49 schmonz Exp $
+$NetBSD: patch-src_makefile,v 1.8 2019/12/18 01:34:34 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
---- src/makefile.orig	2019-07-31 21:48:56.000000000 +0000
+--- src/makefile.orig	2019-11-11 16:57:10.000000000 +0000
 +++ src/makefile
 @@ -8,18 +8,18 @@
  # See ../makefile for the definition of ${data_dir}
@@ -95,9 +95,9 @@ Use pkgsrc-specified compiler and flags.
  platform_fs.o: ${CORE_DIR}platform_fs.cpp ${INCLUDE_DIR}platform_fs.h
  	${CXX_COMPILE} ${CORE_DIR}platform_fs.cpp
 @@ -206,7 +209,7 @@ main.o: ${CLI_DIR}main.cpp ${CLI_DIR}mai
-   ${INCLUDE_DIR}syntaxreader.h ${INCLUDE_DIR}themereader.h ${INCLUDE_DIR}elementstyle.h \
-   ${INCLUDE_DIR}stylecolour.h  ${INCLUDE_DIR}preformatter.h \
-   ${CLI_DIR}help.h ${INCLUDE_DIR}version.h
+ 	${INCLUDE_DIR}syntaxreader.h ${INCLUDE_DIR}themereader.h ${INCLUDE_DIR}elementstyle.h \
+ 	${INCLUDE_DIR}stylecolour.h  ${INCLUDE_DIR}preformatter.h \
+ 	${CLI_DIR}help.h ${INCLUDE_DIR}version.h
 -	${CXX_COMPILE} ${CLI_DIR}main.cpp ${CXX_DIR}
 +	${CXX_COMPILE} ${CLI_DIR}main.cpp
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-extras_swig_makefile,v 1.2 2018/05/27 11:50:26 schmonz Exp $
+$NetBSD: patch-extras_swig_makefile,v 1.3 2019/12/18 01:34:34 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
---- extras/swig/makefile.orig	2018-04-30 12:17:04.000000000 +0000
+--- extras/swig/makefile.orig	2019-11-11 16:57:10.000000000 +0000
 +++ extras/swig/makefile
 @@ -1,6 +1,6 @@
  
@@ -17,26 +17,26 @@ Use pkgsrc-specified compiler and flags.
  PHP_INC=$(shell php-config --includes)
  
  lib-stamp:
--	make -C ${HL_SRC} -f ./makefile clean
--	PIC=1 make -C ${HL_SRC} -f ./makefile CFLAGS="${CFLAGS}" libhighlight.a
-+	#make -C ${HL_SRC} -f ./makefile clean
-+	#PIC=1 make -C ${HL_SRC} -f ./makefile CFLAGS="${CFLAGS}" libhighlight.a
+-	make -C ../.. -f ./makefile clean-obj
+-	PIC=1 make -C ../.. -f ./makefile CFLAGS="${CFLAGS}" lib-static
++	#make -C ../.. -f ./makefile clean-obj
++	#PIC=1 make -C ../.. -f ./makefile CFLAGS="${CFLAGS}" lib-static
  	touch $@
  
  python: lib-stamp
 -	swig -c++ -python -o highlight_wrap.cpp  highlight.i
--	${CXX} ${CFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PYTHON_CFLAGS} -I${HL_INC} 
+-	${CXX} ${CFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PYTHON_CFLAGS} -I${HL_INC}
 -	${CXX} -shared -s highlight_wrap.o  -L${HL_SRC} -lhighlight ${LUA_LIBS} -lpython2.7 -o _highlight.so
 +	swig3.0 -c++ -python -o highlight_wrap.cpp  highlight.i
-+	${CXX} ${CFLAGS} ${LDFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PYTHON_CFLAGS} -I${HL_INC} 
++	${CXX} ${CFLAGS} ${LDFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PYTHON_CFLAGS} -I${HL_INC}
 +	${CXX} ${CXXFLAGS} ${LDFLAGS} -shared -s highlight_wrap.o  -L${HL_SRC} -lhighlight ${LUA_LIBS} -lpython2.7 -o _highlight.so
  
  perl: lib-stamp
 -	swig -c++ -perl -o highlight_wrap.cpp  highlight.i
--	${CXX} ${CFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PERL_INC} -I${HL_INC} 
+-	${CXX} ${CFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PERL_INC} -I${HL_INC}
 -	${CXX} -shared -s highlight_wrap.o  -L${HL_SRC} -lhighlight ${LUA_LIBS} -o highlight.so
 +	swig3.0 -c++ -perl -o highlight_wrap.cpp  highlight.i
-+	${CXX} ${CFLAGS} ${LDFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PERL_INC} -I${HL_INC} 
++	${CXX} ${CFLAGS} ${LDFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PERL_INC} -I${HL_INC}
 +	${CXX} ${CXXFLAGS} ${LDFLAGS} -shared -s highlight_wrap.o  -L${HL_SRC} -lhighlight ${LUA_LIBS} -lperl -o highlight.so
  
  php: lib-stamp
@@ -45,7 +45,7 @@ Use pkgsrc-specified compiler and flags.
 -	${CXX} -shared -s highlight_wrap.o -L${HL_SRC} -lhighlight ${LUA_LIBS} -o highlight.so
 +	swig3.0 -c++ -php -o highlight_wrap.cpp highlight.i
 +	${CXX} ${CFLAGS} ${LDFLAGS} -c highlight_wrap.cpp ${LUA_CFLAGS} ${PHP_INC} -I${HL_INC}
-+	${CXX} ${CXXFLAGS} ${LDFLAGS} -shared -s highlight_wrap.o -L${HL_SRC} -lhighlight ${LUA_LIBS} -o highlight.so
++	${CXX} ${CXXFLAGS} ${LDFLAGS} -shared -s highlight_wrap.o -L${HL_SRC} -lhighlight ${LUA_LIBS} -lphp -o highlight.so
  
  clean: python-clean perl-clean php-clean
  	rm -f *-stamp
