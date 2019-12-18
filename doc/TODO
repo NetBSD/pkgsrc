@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19508 2019/12/17 16:35:44 wiz Exp $
+$NetBSD: TODO,v 1.19509 2019/12/18 13:48:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -958,7 +958,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nas-auscope-1.9.4
 	o nautilus-actions-2.30.3
 	o ncview-2.1.6
-	o neomutt-20191129
 	o netbt-hcidump-5.37
 	o netio-1.32
 	o netramet-50
