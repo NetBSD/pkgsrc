@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2009/06/05 21:18:02 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2019/12/18 12:38:48 mef Exp $
 
 BUILDLINK_TREE+=	emacs
 
 .if !defined(EMACS_BUILDLINK3_MK)
 EMACS_BUILDLINK3_MK:=
 
-.include "../../editors/emacs/modules.mk"
+.include "../../editors/emacs-snapshot/modules.mk"
 BUILDLINK_API_DEPENDS.emacs+=	${_EMACS_REQD}
 BUILDLINK_PKGSRCDIR.emacs?=	${_EMACS_PKGDIR}
 
