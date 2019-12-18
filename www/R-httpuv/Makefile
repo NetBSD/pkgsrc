@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/09/26 22:18:09 brook Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/18 12:44:39 joerg Exp $
 
 R_PKGNAME=	httpuv
 R_PKGVER=	1.5.1
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,5 +19,6 @@ USE_LANGUAGES=	c c++
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/libuv/buildlink3.mk"
 .include "../../sysutils/R-later/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
