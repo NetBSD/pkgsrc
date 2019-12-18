@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2019/12/18 12:36:51 joerg Exp $
+
+Don't force -latomic for clang.
+
+--- configure.orig	2019-12-13 12:16:52.853439357 +0000
++++ configure
+@@ -19205,10 +19205,6 @@ if test x$enable_universal_binary = xyes
+    esac
+ fi
+ 
+-if ($CXX --version | grep 'clang version' > /dev/null); then
+-    LDFLAGS="${LDFLAGS} -latomic"
+-fi
+-
+ if test x$enable_sse = xyes; then
+ 
+    if test "${ax_cv_cxx_compiler_vendor}" = "gnu"; then
