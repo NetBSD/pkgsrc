@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 23:27:01 agc Exp $
+$NetBSD: distinfo,v 1.9 2019/12/18 12:39:09 joerg Exp $
 
 SHA1 (avenger-0.8.4.tar.gz) = 109d17e2be2fa5f93e4302fefe5b1847458d33bb
 RMD160 (avenger-0.8.4.tar.gz) = 762f3f260d2be8466109d24d59b196b14adc04d4
@@ -7,5 +7,6 @@ Size (avenger-0.8.4.tar.gz) = 890192 bytes
 SHA1 (patch-aa) = c7ae855eab4995164de44c861480f263adbb4bc9
 SHA1 (patch-ab) = 831944e8447433b2697db2b3a58650aab19f4a19
 SHA1 (patch-ac) = 9b3625a090e0f9091468b86a99d0bea6535ac371
+SHA1 (patch-asmtpd_starttls.C) = 64bcc7313d5b76b9d0aca6ec0c9a220e75cfd146
 SHA1 (patch-libasync_ihash.h) = 45cfb9081f3a4176e32668dd80bd09fb4ba97e27
 SHA1 (patch-util_avutil.h) = 66d99fcb4bae3e2477089222cdc8dea6fa030d42
