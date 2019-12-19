@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/11/03 01:31:38 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/19 21:19:43 markd Exp $
 
 DISTNAME=	gns3-server-2.2.1
 CATEGORIES=	emulators
@@ -23,14 +23,19 @@ DEPENDS+=	${PYPKGPREFIX}-psutil>=3.0.0:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-async-timeout>=3.0.1:../../devel/py-async-timeout
 DEPENDS+=	${PYPKGPREFIX}-zipstream>=1.1.4:../../archivers/py-zipstream
 
-CHECK_INTERPRETER_SKIP+=	lib/python3.7/site-packages/gns3server/compute/docker/resources/init.sh
-CHECK_INTERPRETER_SKIP+=	lib/python3.7/site-packages/gns3server/compute/docker/resources/etc/udhcpc/default.script
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/gns3server/compute/docker/resources/init.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/gns3server/compute/docker/resources/etc/udhcpc/default.script
 
 # we have newer jsonschema and it seems fine
 SUBST_CLASSES+=		inst
 SUBST_STAGE.inst=	pre-configure
 SUBST_FILES.inst=	requirements.txt
 SUBST_SED.inst=		-e "s:jsonschema==2.6.0:jsonschema:"
+
+post-install:
+	chmod go-w ${DESTDIR}${PREFIX}/${PYSITELIB}/gns3server/compute/docker/resources/init.sh
+	chmod go-w ${DESTDIR}${PREFIX}/${PYSITELIB}/gns3server/compute/docker/resources/etc/udhcpc/default.script
+	chmod go-w ${DESTDIR}${PREFIX}/${PYSITELIB}/gns3server/compute/docker/resources/bin/busybox
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
