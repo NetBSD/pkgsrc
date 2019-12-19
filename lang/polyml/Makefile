@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/11/03 19:04:05 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2019/12/19 22:18:47 joerg Exp $
 
 DISTNAME=	polyml-5.7.1
 CATEGORIES=	lang
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-system-libffi
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c gnu++03
 TEST_TARGET=	tests
 
 PKGCONFIG_OVERRIDE=	libpolyml/polyml.pc.in
