@@ -1,0 +1,22 @@
+$NetBSD: patch-server_net.c__tmp,v 1.1 2019/12/19 22:14:46 joerg Exp $
+
+--- server/net.c_tmp.orig	2019-12-19 20:56:09.046271448 +0000
++++ server/net.c_tmp
+@@ -1041,7 +1041,7 @@ static char * http_get(char * host, int 
+ 
+                         checkedCode = 1;
+                         start = headers;
+-                        while (!isspace(*start) && *start)
++                        while (!isspace((unsigned char)*start) && *start)
+                                 start++;
+                         if (!*start) {
+                                 close(sock);
+@@ -1051,7 +1051,7 @@ static char * http_get(char * host, int 
+                         start++;
+ 
+                         end = start;
+-                        while (!isspace(*end) && *end)
++                        while (!isspace((unsigned char)*end) && *end)
+                                 end++;
+                         if (!*end) {
+                                 close(sock);
