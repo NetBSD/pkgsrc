@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/07/21 22:23:58 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2019/12/19 22:10:10 joerg Exp $
 
 DISTNAME=	telepathy-mission-control-4.67
 PKGREVISION=	37
@@ -12,6 +12,8 @@ COMMENT=	Telepathy component providing abstractions for "end-user" applications
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 PKGCONFIG_OVERRIDE+=	libmcclient.pc.in
 PKGCONFIG_OVERRIDE+=	libmissioncontrol.pc.in
