@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/10 01:01:34 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/19 22:21:01 joerg Exp $
 
 DISTNAME=	tmate-2.2.1
 CATEGORIES=	misc
@@ -19,6 +19,7 @@ pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
 .include "../../devel/libevent/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/msgpack/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
