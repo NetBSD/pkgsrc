@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2018/08/28 11:54:54 schmonz Exp $
+$NetBSD: distinfo,v 1.14 2019/12/19 22:20:18 joerg Exp $
 
 SHA1 (xfractint-20.04p14.tar.gz) = fff0a713145ffd271c6ce4bf8ad657404959895a
 RMD160 (xfractint-20.04p14.tar.gz) = 8d69895ca3237caa76c9c1c93ee5abaeb77191c2
 SHA512 (xfractint-20.04p14.tar.gz) = 7d13c719f4f4b0680455b9b7f86644928d8145606973d208e5bf0d26b4f7b04ddbf8d2080ea35c872b21e079f1a116f3ef94e9acb36a45d43c16403c473e2acd
 Size (xfractint-20.04p14.tar.gz) = 1336285 bytes
-SHA1 (patch-Makefile) = 03a988a7e92d657ce127c86fe9ae5e096d8f496c
+SHA1 (patch-Makefile) = 8cf2e46eb7dc720507827c6f61649a0c417ae71d
 SHA1 (patch-common_biginit.c) = 41a1bdf7f9fe36ffb1a1b68cff680d0f325bc097
 SHA1 (patch-common_fracsubr.c) = 8b2b1229cf0b596fb2991237f834d1f756d6b3ce
 SHA1 (patch-common_fractalb.c) = 37c07f9721f7854bb7e731e583255bfa69e4602c
