@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2019/11/03 19:32:08 rillig Exp $
+# $NetBSD: Makefile,v 1.83 2019/12/19 22:18:17 joerg Exp $
 #
 
 DISTNAME=	xlog-2.0.17
@@ -22,8 +22,8 @@ CONFIGURE_ARGS+=	--enable-hamlib
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
-_WRAP_EXTRA_ARGS.CC+=	-Wno-error=parentheses-equality -Wno-error=tautological-compare
-CWRAPPERS_APPEND.cc+=	-Wno-error=parentheses-equality -Wno-error=tautological-compare
+_WRAP_EXTRA_ARGS.CC+=	-Wno-error=parentheses-equality -Wno-error=tautological-compare -Wno-unknown-warning-option -Wno-deprecated-declarations
+CWRAPPERS_APPEND.cc+=	-Wno-error=parentheses-equality -Wno-error=tautological-compare -Wno-unknown-warning-option -Wno-deprecated-declarations
 .endif
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
