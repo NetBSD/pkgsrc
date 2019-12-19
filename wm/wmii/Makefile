@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/04/28 23:57:25 mef Exp $
+# $NetBSD: Makefile,v 1.37 2019/12/19 22:25:06 joerg Exp $
 
 DISTNAME=		wmii+ixp-3.9.2
 PKGNAME=		wmii-3.9.2
@@ -13,7 +13,7 @@ LICENSE=		mit
 
 DEPENDS+=		dmenu>=3.7:../../x11/dmenu
 
-USE_TOOLS+=		tbl
+USE_TOOLS+=		tbl pkg-config
 
 BUILD_DEFS+=		PKG_SYSCONFBASE
 MAKE_ENV+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
