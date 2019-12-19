@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makevars,v 1.1 2019/12/18 12:44:39 joerg Exp $
+$NetBSD: patch-src_Makevars,v 1.2 2019/12/19 22:25:27 joerg Exp $
 
 --- src/Makevars.orig	2019-04-05 20:06:25.000000000 +0000
 +++ src/Makevars
@@ -16,7 +16,7 @@ $NetBSD: patch-src_Makevars,v 1.1 2019/12/18 12:44:39 joerg Exp $
  PKG_CFLAGS = $(C_VISIBILITY) -DSTRICT_R_HEADERS
  PKG_CXXFLAGS = $(CXX_VISIBILITY) -DSTRICT_R_HEADERS
 -PKG_CPPFLAGS = -Ilibuv/include -pthread
-+PKG_CPPFLAGS = -I${PREFIX} -pthread
++PKG_CPPFLAGS = -I${PREFIX}/include -pthread
  
  # To avoid spurious warnings from `R CMD check --as-cran`, about compiler
  # warning flags like -Werror.
