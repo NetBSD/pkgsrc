@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5459 2019/12/19 00:40:21 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5460 2019/12/19 13:40:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8748,3 +8748,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated graphics/libsixel to 1.8.3 [tsutsui 2019-12-18]
 	Updated www/drupal7 to 7.69 [taca 2019-12-19]
 	Updated www/drupal8 to 8.7.11 [taca 2019-12-19]
+	Updated www/py-django to 1.11.27 [adam 2019-12-19]
+	Updated www/py-django2 to 2.2.9 [adam 2019-12-19]
