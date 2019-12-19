@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/20 15:20:20 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/19 22:10:35 joerg Exp $
 
 # using configure options and sources from
 # https://github.com/earlephilhower/esp-quick-toolchain
@@ -53,7 +53,7 @@ FILESDIR=	${.CURDIR}/../../cross/xtensa-lx106-elf-binutils/files
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES+=		c c++03
 USE_TOOLS+=		bash gmake makeinfo perl
 
 # for http://gcc.gnu.org/bugzilla/show_bug.cgi?id=33549
@@ -89,7 +89,7 @@ post-extract:
 	${LN} -s ${WRKDIR}/newlib-*/libgloss ${WRKSRC}/libgloss
 
 pre-configure:
-	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
+	${MKDIR} ${WRKSRC}/${OBJDIR}
 	${CP} ${FILESDIR}/xtensa-config.h ${WRKSRC}/include/xtensa-config.h
 
 .include "../../devel/gmp/buildlink3.mk"
