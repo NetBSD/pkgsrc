@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2019/12/07 13:27:08 rhialto Exp $
+# $NetBSD: Makefile.common,v 1.40 2019/12/19 14:41:59 rhialto Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -11,7 +11,7 @@
 #	The desired owner and the file mode of game executables.
 #
 
-NETHACK_BASEVER=	3.6.3
+NETHACK_BASEVER=	3.6.4
 NETHACK_VERSION=	${NETHACK_BASEVER}
 NETHACK_DISTVER=	${NETHACK_BASEVER:S/.//g}
 NETHACK_DIR=		nethackdir${NETHACK_SAVEVER:S/.//g}

@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.23 2019/12/07 13:27:08 rhialto Exp $
+$NetBSD: distinfo,v 1.24 2019/12/19 14:41:59 rhialto Exp $
 
-SHA1 (nethack-363-src.tgz) = 75af7872011852577f95597b4797a127db58604c
-RMD160 (nethack-363-src.tgz) = d860a8974a86d36a05e5472a4d1be6d3487919bc
-SHA512 (nethack-363-src.tgz) = 38bc6140b12188397539f28528dd8e34364fb7efeb42dbe36d86fea6cc473e292b7f47fba01db19cf7641414dee86092e33deb3b074afa0e8b811e71be71e1d1
-Size (nethack-363-src.tgz) = 5568657 bytes
+SHA1 (nethack-364-src.tgz) = e8166806a65893d7b843718c37b8aa9e87cfcef1
+RMD160 (nethack-364-src.tgz) = 0af138fd481e6359f265d85423a36a160692dc92
+SHA512 (nethack-364-src.tgz) = c951f939d50027b4468ebd2e32f79771e696035df0918b814bf02899f5c1e89d462ebc3f63155c23f5c627e66ca74244512d666b102c380242df1500a2c0afa9
+Size (nethack-364-src.tgz) = 5573777 bytes
 SHA1 (patch-ai) = 73c5b2ea1227531089474705f2f18bc411366365
 SHA1 (patch-include_config.h) = d3e054a8b30d628513dcb445b10ce586685c7ea6
 SHA1 (patch-include_system.h) = b1b53f513c3f6983e0e56eace74c71875b5df3f2
