@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2019/11/03 11:45:44 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2019/12/19 21:15:39 markd Exp $
 
 DISTNAME=	ns-src-2.35
 PKGNAME=	ns-2.35
@@ -27,6 +27,12 @@ CONFIGURE_ARGS+=	--with-otcl=${BUILDLINK_PREFIX.tcl-otcl}
 CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tcl-tclcl}
 CONFIGURE_ENV+=		X11LIBDIR=${X11BASE}/lib${LIBABISUFFIX}
 CONFIGURE_ENV+=		X11INCDIR=${X11BASE}/include
+
+SUBST_CLASSES+=		char
+SUBST_STAGE.char=	pre-configure
+SUBST_MESSAGE.char=	unsigned char needed for 8bit values
+SUBST_FILES.char=	bitmap/*.xbm
+SUBST_SED.char=		-e 's,char,u_char,'
 
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
 
