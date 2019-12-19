@@ -1,0 +1,13 @@
+$NetBSD: patch-ffi_Makefile.linux,v 1.1 2019/12/19 22:12:43 joerg Exp $
+
+--- ffi/Makefile.linux.orig	2019-12-19 19:40:48.890888990 +0000
++++ ffi/Makefile.linux
+@@ -19,7 +19,7 @@ all: $(OUTPUT)
+ $(OUTPUT): $(SRC) $(INCLUDE)
+ 	# static-libstdc++ avoids runtime dependencies on a
+ 	# particular libstdc++ version.
+-	$(CXX) $(CXX_STATIC_LINK) -shared $(CXXFLAGS) $(SRC) -o $(OUTPUT) $(LDFLAGS) $(LIBS)
++	$(CXX) $(CXX_STATIC_LINK) -shared $(CXXFLAGS) $(SRC) -o $(OUTPUT) $(LDFLAGS) $(LIBS) -fPIC
+ 
+ clean:
+ 	rm -rf test $(OUTPUT)
