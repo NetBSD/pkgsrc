@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.8 2018/12/14 17:27:01 triaxx Exp $
+$NetBSD: distinfo,v 1.9 2019/12/19 22:16:05 joerg Exp $
 
 SHA1 (warzone2100-3.2.3.tar.xz) = 33bf08ac130d54d36550ada4e3db99c3545ef153
 RMD160 (warzone2100-3.2.3.tar.xz) = 12b5615b6cea9ea13848dc1a130ca535c7539ad5
 SHA512 (warzone2100-3.2.3.tar.xz) = 4b1bc0a0bb50a8b4726a2762a922ee233b92f9835e38bbab80c159a9cb301df7434a73ba5acfb17404031467c02a9b3480d6a0d44906d70896311b3468141746
 Size (warzone2100-3.2.3.tar.xz) = 81314060 bytes
-SHA1 (patch-lib_exceptionhandler_exceptionhandler.cpp) = 04345173f2fc98da9f26c30963507972786571c0
+SHA1 (patch-lib_exceptionhandler_exceptionhandler.cpp) = d20b232d4d93789b4ae6355ed0fdaca6e16ad6fc
+SHA1 (patch-lib_netplay_netplay.cpp) = f78a4aa26702654e32829babb3ce74748b68ef0e
 SHA1 (patch-lib_qtgame_wzapp__qt.cpp) = 45564765d911a52534a14966c1f9418fd417956f
