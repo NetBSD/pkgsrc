@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2018/03/12 11:17:21 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2019/12/19 21:14:02 markd Exp $
 
 DISTNAME=	nam-src-1.15
 PKGNAME=	nam-1.15
@@ -23,6 +23,12 @@ CONFIGURE_ARGS+=	--with-otcl=${BUILDLINK_PREFIX.tcl-otcl}
 CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tcl-tclcl}
 
 CONFIGURE_ENV+=		V_LIBS="`${CONFIG_SHELL} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH}; ${ECHO} $$TK_LIBS'`"
+
+SUBST_CLASSES+=		char
+SUBST_STAGE.char=	pre-configure
+SUBST_MESSAGE.char=	unsigned char needed for 8bit values
+SUBST_FILES.char=	bitmap/*.xbm
+SUBST_SED.char=		-e 's,char,u_char,'
 
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
 
