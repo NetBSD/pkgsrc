@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2019/08/30 17:56:33 nia Exp $
+# $NetBSD: Makefile,v 1.66 2019/12/19 22:17:10 joerg Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -39,4 +39,5 @@ DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../lang/perl5/module.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
