@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2019/09/02 13:20:00 adam Exp $
+# $NetBSD: Makefile,v 1.62 2019/12/19 22:19:17 joerg Exp $
 
 DISTNAME=	ScientificPython-2.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python//}
@@ -15,12 +15,12 @@ CONFLICTS+=	py-Scientific-[0-9]*
 
 MAKE_ENV+=	NETCDF_PREFIX=${BUILDLINK_PREFIX.netcdf}
 
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.8.1
+
 .include "../../lang/python/pyversion.mk"
 
 PYPLAT_CMD=	${PYTHONBIN} -c "import sys; print sys.platform"
 PLIST_SUBST+=	PYPLAT=${PYPLAT_CMD:sh}
-
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.8.1
 
 INSTALLATION_DIRS=	bin
 
