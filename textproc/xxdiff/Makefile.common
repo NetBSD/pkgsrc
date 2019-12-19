@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2018/03/11 20:52:38 ginsbach Exp $
+# $NetBSD: Makefile.common,v 1.2 2019/12/19 22:24:54 joerg Exp $
 # used by textproc/xxdiff/Makefile
 # used by textproc/xxdiff-scripts/Makefile
 
@@ -16,3 +16,5 @@ LICENSE=	gnu-gpl-v2
 DISTINFO_FILE=	${.CURDIR}/../../textproc/xxdiff/distinfo
 
 XXDIFFDOCDIR=	share/doc/xxdiff
+
+PYTHON_VERSIONS_ACCEPTED=	27
