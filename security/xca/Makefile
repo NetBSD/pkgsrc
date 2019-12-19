@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/10/27 12:08:29 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/19 22:22:50 joerg Exp $
 
 DISTNAME=	xca-2.1.2
 PKGREVISION=	1
@@ -25,4 +25,5 @@ INSTALLATION_DIRS+=	share/doc/xca share/xca
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
