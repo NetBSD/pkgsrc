@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/11/03 01:33:51 markd Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/19 21:22:02 markd Exp $
 
 DISTNAME=	gns3-gui-2.2.1
 CATEGORIES=	emulators
@@ -22,6 +22,10 @@ SUBST_CLASSES+=		inst
 SUBST_STAGE.inst=	pre-configure
 SUBST_FILES.inst=	requirements.txt
 SUBST_SED.inst=		-e "s:jsonschema==2.6.0:jsonschema:"
+
+post-install:
+	chmod go-w,a-x ${DESTDIR}${PREFIX}/${PYSITELIB}/gns3/ui/*.ui
+	chmod go-w,a-x ${DESTDIR}${PREFIX}/${PYSITELIB}/gns3/modules/*/ui/*.ui
 
 .include "../../lang/python/egg.mk"
 
