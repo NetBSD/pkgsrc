@@ -1,15 +1,15 @@
-$NetBSD: patch-contrib_mod__load_mod__load.c,v 1.1 2019/12/09 19:22:57 nros Exp $
+$NetBSD: patch-contrib_mod__load_mod__load.c,v 1.2 2019/12/19 12:52:28 nros Exp $
 * solaris and derivates has loadavg in sys/loadavg.h
---- contrib/mod_load/mod_load.c.orig	2019-12-09 18:07:41.734696143 +0000
+--- contrib/mod_load/mod_load.c.orig	2017-04-10 02:31:02.000000000 +0000
 +++ contrib/mod_load/mod_load.c
-@@ -303,6 +303,10 @@
- #  define LDAV_SYMBOL "avenrun"
- # endif
+@@ -49,6 +49,10 @@
+ # include <sys/param.h>
+ #endif
  
-+# ifdef HAVE_SYS_LOADAVG_H
-+#  include <sys/loadavg.h>
-+# endif
++#if defined (HAVE_SYS_LOADAVG_H)
++# include <sys/loadavg.h>
++#endif
 +
- # ifdef HAVE_UNISTD_H
- #  include <unistd.h>
- # endif
+ #ifndef HAVE_GETLOADAVG
+ # if !defined(LDAV_CVT) && defined(LOAD_AVE_CVT)
+ #  define LDAV_CVT(n) (LOAD_AVE_CVT (n) / 100.0)
