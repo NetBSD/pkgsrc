@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2019/05/11 06:48:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2019/12/19 00:38:39 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -920,6 +920,7 @@ share/drupal/modules/taxonomy/taxonomy.module
 share/drupal/modules/taxonomy/taxonomy.pages.inc
 share/drupal/modules/taxonomy/taxonomy.test
 share/drupal/modules/taxonomy/taxonomy.tokens.inc
+share/drupal/modules/toolbar/toolbar-print.css
 share/drupal/modules/toolbar/toolbar-rtl.css
 share/drupal/modules/toolbar/toolbar.css
 share/drupal/modules/toolbar/toolbar.info
@@ -984,6 +985,8 @@ share/drupal/modules/update/update.settings.inc
 share/drupal/modules/update/update.test
 share/drupal/modules/user/tests/user_form_test.info
 share/drupal/modules/user/tests/user_form_test.module
+share/drupal/modules/user/tests/user_session_test.info
+share/drupal/modules/user/tests/user_session_test.module
 share/drupal/modules/user/user-picture.tpl.php
 share/drupal/modules/user/user-profile-category.tpl.php
 share/drupal/modules/user/user-profile-item.tpl.php
