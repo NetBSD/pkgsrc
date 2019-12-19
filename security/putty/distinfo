@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2019/10/01 15:22:41 ryoon Exp $
+$NetBSD: distinfo,v 1.28 2019/12/19 22:22:33 joerg Exp $
 
 SHA1 (putty-0.73.tar.gz) = 17daebb82e476adfd578f6934c28f4d2c209b7d8
 RMD160 (putty-0.73.tar.gz) = 9e7c0084464963581bc47ce1b87e25ba51d27743
@@ -6,7 +6,7 @@ SHA512 (putty-0.73.tar.gz) = 4ada4b8c6d68be44afede2676bc661fedfd1ea0b574b8232ad9
 Size (putty-0.73.tar.gz) = 2459115 bytes
 SHA1 (patch-ldisc.c) = cf31a65f920a3ea9b4a70602e4b2fd4d5df8d3e8
 SHA1 (patch-misc.c) = fa1c2db8eb20ceaadb4b57b6aefa57f22d2ae26f
-SHA1 (patch-terminal.c) = 9e57f754bb2071c8c6b6a92ae63772eb10790121
+SHA1 (patch-terminal.c) = 30d6196e371b5369f9ea69e193662a47dbefaa10
 SHA1 (patch-timing.c) = a6a492fc8b22c58e2973c854bffa4c8bf71eb6a7
 SHA1 (patch-unix_Makefile.gtk) = 7fe7859ad91afb57ef3ba31194ffd2ef784f638d
 SHA1 (patch-unix_uxnet.c) = 2d1c2939721993fe5616c2fe3f1935c03a31bb35
