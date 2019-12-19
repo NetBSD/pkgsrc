@@ -1,13 +1,14 @@
-$NetBSD: patch-src_limits.c,v 1.1 2019/12/18 15:56:11 kim Exp $
+$NetBSD: patch-src_limits.c,v 1.2 2019/12/19 16:59:44 kim Exp $
 
+* Disable RLIMIT_STACK on NetBSD, see https://gnats.netbsd.org/51158
 * Indicate the name of the resource for which setrlimit fails.
 * Simplify resource limit fallback logic a bit.
 * Don't set the RLIMIT_STACK soft/hard limits to unlimited.
 * macOS does not allow rlim_cur to be set to RLIM_INFINITY for RLIMIT_NOFILE.
 
 --- src/limits.c.orig	2019-10-28 14:28:52.000000000 +0200
-+++ src/limits.c	2019-12-18 17:22:45.500245697 +0200
-@@ -37,28 +37,46 @@
++++ src/limits.c	2019-12-19 18:52:11.232251175 +0200
+@@ -37,28 +37,48 @@
  #ifdef __linux__
  # include <sys/prctl.h>
  #endif
@@ -57,13 +58,15 @@ $NetBSD: patch-src_limits.c,v 1.1 2019/12/18 15:56:11 kim Exp $
  #ifdef RLIMIT_RSS
 -    { RLIMIT_RSS },
 +    { "RLIMIT_RSS", RLIMIT_RSS, false, NULL, { RLIM_INFINITY, RLIM_INFINITY } },
++#endif
++#ifndef __NetBSD__
++    { "RLIMIT_STACK", RLIMIT_STACK, false, &stack_fallback, { 8192 * 1024, RLIM_INFINITY } }
  #endif
 -    { RLIMIT_STACK }
-+    { "RLIMIT_STACK", RLIMIT_STACK, false, &stack_fallback, { 8192 * 1024, RLIM_INFINITY } }
  };
  
  static struct rlimit corelimit;
-@@ -160,21 +178,39 @@
+@@ -160,21 +180,39 @@
  void
  unlimit_sudo(void)
  {
@@ -110,7 +113,7 @@ $NetBSD: patch-src_limits.c,v 1.1 2019/12/18 15:56:11 kim Exp $
  	}
      }
  
-@@ -194,8 +230,8 @@
+@@ -194,8 +232,8 @@
      for (idx = 0; idx < nitems(saved_limits); idx++) {
  	struct saved_limit *lim = &saved_limits[idx];
  	if (lim->saved) {
