@@ -1,7 +1,16 @@
-$NetBSD: patch-Makefile,v 1.1 2018/08/28 11:54:54 schmonz Exp $
+$NetBSD: patch-Makefile,v 1.2 2019/12/19 22:20:18 joerg Exp $
 
 --- Makefile.orig	2014-05-03 13:12:33.000000000 +0000
 +++ Makefile
+@@ -147,7 +147,7 @@ endif
+ # For Sun Solaris 2.x w/SparcCompilerC (cc), use CC = cc.
+ # For Sun Solaris 2.x w/GNU gcc, use CC = gcc
+ #CC = gcc
+-CC = /usr/bin/gcc
++#CC = /usr/bin/gcc
+ 
+ # For HPUX, use LIBS = -L/usr/lib/X11R4 -lX11 -lm -lcurses -ltermcap
+ # For AIX or OSF/1, add -lbsd
 @@ -159,19 +159,21 @@ CC = /usr/bin/gcc
  # LIBS = -L/usr/X11R6/lib -lX11 -lm -lncurses
  # LIBS = -lX11 -lm -lcurses
