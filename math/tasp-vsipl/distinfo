@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 23:33:44 agc Exp $
+$NetBSD: distinfo,v 1.12 2019/12/19 22:20:01 joerg Exp $
 
 SHA1 (tasp-vsipl/tvcpp0p8.tar.gz) = e1f0dc818458393807a7a5c6e3357305720039a8
 RMD160 (tasp-vsipl/tvcpp0p8.tar.gz) = 5443143cacb6612f0454a50d210e7ffaad23b5c2
@@ -6,7 +6,7 @@ SHA512 (tasp-vsipl/tvcpp0p8.tar.gz) = 3b520305c02451674f3d020d945eb8ccfb488a98b8
 Size (tasp-vsipl/tvcpp0p8.tar.gz) = 1461591 bytes
 SHA1 (patch-.._src_vsip_chold_f.c) = 657e9b65b5451eff2bb0708a03807ccd74569d43
 SHA1 (patch-aa) = 225d275620785928564b9db187fead28d535e839
-SHA1 (patch-ab) = dabd2c59c5d70460e7b74405d923ccb03dae7b82
-SHA1 (patch-ac) = 8f0a43973368551bbe982a75719ff3d9e79e16df
-SHA1 (patch-ad) = 13be2c4a4f4765be39de955bfb4dc9c6961663cb
+SHA1 (patch-ab) = 5915b5c10fb873946da1dcba028f8d019b0952c0
+SHA1 (patch-ac) = 954af77f5a725ffb761d14bd4f14f233d6cba0a3
+SHA1 (patch-ad) = 0b1cccc6775c18459d40a14af1552962729ecb16
 SHA1 (patch-ae) = c4a3d4c74e9af434fafb77b7afd8fa2b565fdab3
