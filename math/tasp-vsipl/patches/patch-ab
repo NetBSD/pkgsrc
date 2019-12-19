@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2009/12/12 20:39:57 asau Exp $
+$NetBSD: patch-ab,v 1.4 2019/12/19 22:20:01 joerg Exp $
 
 --- /dev/null
 +++ libvsip/Makefile
-@@ -0,0 +1,475 @@
+@@ -0,0 +1,476 @@
 +LIB=	vsip
 +
 +SHLIB_MAJOR= 0
@@ -15,6 +15,7 @@ $NetBSD: patch-ab,v 1.3 2009/12/12 20:39:57 asau Exp $
 +LDADD+= -lm
 +
 +NOLINT= 1
++MKPICINSTALL= no
 +
 +SRCS=	vsip_CADDm_d.c vsip_CADDm_f.c vsip_CDIVm_d.c vsip_CDIVm_f.c		\
 +	vsip_CEXPm_d.c vsip_CEXPm_f.c vsip_CJMULm_d.c vsip_CJMULm_f.c		\

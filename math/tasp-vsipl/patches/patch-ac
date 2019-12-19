@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2009/12/12 20:39:57 asau Exp $
+$NetBSD: patch-ac,v 1.5 2019/12/19 22:20:01 joerg Exp $
 
 --- /dev/null
 +++ libVU/Makefile
-@@ -0,0 +1,28 @@
+@@ -0,0 +1,29 @@
 +LIB= 	VU
 +
 +SHLIB_MAJOR= 0
@@ -13,6 +13,7 @@ $NetBSD: patch-ac,v 1.4 2009/12/12 20:39:57 asau Exp $
 +CPPFLAGS+= -I${.CURDIR}/../../include -I${X11BASE}/include
 +
 +NOLINT= 1
++MKPICINSTALL= no
 +
 +SRCS=	VU_mprintm_f.c VU_ansi_c_clock.c VU_cmprintm_d.c VU_cmprintm_f.c	\
 +	VU_cmreadf_d.c VU_cmreadf_f.c VU_ctprintm_d.c VU_ctprintm_f.c		\
