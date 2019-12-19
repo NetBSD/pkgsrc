@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/10/30 13:05:16 kamil Exp $
+# $NetBSD: Makefile,v 1.42 2019/12/19 22:21:24 joerg Exp $
 #
 
 DISTNAME=		vym-2.7.1
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.insilmaril.de/vym/
 COMMENT=		Generate and manipulate maps which show your thoughts
 LICENSE=		gnu-gpl-v2
+
+EXTRACT_USING=		bsdtar
 
 DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
 
