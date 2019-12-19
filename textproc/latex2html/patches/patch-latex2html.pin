@@ -1,0 +1,16 @@
+$NetBSD: patch-latex2html.pin,v 1.1 2019/12/19 22:24:01 joerg Exp $
+
+Newer Perl complains about:
+Unescaped left brace in regex is illegal here in regex
+
+--- latex2html.pin.orig	2019-12-19 18:41:23.595437753 +0000
++++ latex2html.pin
+@@ -6507,7 +6507,7 @@ sub parse_keyvalues {
+     print "\nATTRIBS: $saved\n" if ($VERBOSITY > 6);
+ 
+     $saved =~ s/$percent_mark/%/g;
+-    $saved =~ s/((^|[\s,=])')\\\W{(\w)}/$1$3/g
++    $saved =~ s/((^|[\s,=])')\\\W\{(\w)}/$1$3/g
+ 	if $is_german;  #unwanted accents, from active "
+     if (@tags) {
+ 	foreach $tag (@tags) {
