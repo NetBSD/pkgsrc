@@ -1,3 +1,5 @@
+# $NetBSD: makefile.test,v 1.5 2019/12/20 00:02:06 joerg Exp $
+
 TORTURE= torture sptort ztorture memtort itertort mfuntort iotort
 
 CPPFLAGS+= -I@PREFIX@/include
