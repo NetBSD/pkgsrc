@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 22:50:45 agc Exp $
+$NetBSD: distinfo,v 1.9 2019/12/20 00:01:37 joerg Exp $
 
 SHA1 (squeak/Squeak-4.10.2.2614-src.tar.gz) = bd807730537122b220840b4a89f04a6689f435c2
 RMD160 (squeak/Squeak-4.10.2.2614-src.tar.gz) = 8e8a94ef036aa9ca51ade7683c3c9c8844a56660
@@ -13,4 +13,5 @@ SHA1 (patch-ac) = bad06ae257766407c90a62f5927a53c97ee8072a
 SHA1 (patch-ad) = e426d1de4b496704be08c67d2d2ab61a24735017
 SHA1 (patch-ae) = 73c358e42d153c9e6fe605fa1c77360ad48c6ec3
 SHA1 (patch-af) = 529550d988f5655791942145c79f5448431c04c4
+SHA1 (patch-unix_plugins_SerialPlugin_sqUnixSerial.c) = 674a9cf191958ecff2cfd1d6527fcff803f27861
 SHA1 (patch-unix_plugins_UUIDPlugin_sqUnixUUID.c) = 949ca3dff48806d99ea8d54d485fea1b6449a6e9
