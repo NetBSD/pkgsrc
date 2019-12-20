@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2012/09/11 23:04:23 asau Exp $
+# $NetBSD: Makefile,v 1.20 2019/12/20 00:02:06 joerg Exp $
 
 DISTNAME=		mesch12b
 PKGNAME=		meschach-1.2b
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		http://www.math.uiowa.edu/~dstewart/meschach/
 
