@@ -1,3 +1,4 @@
+# $NetBSD: makefile.in,v 1.6 2019/12/20 00:02:06 joerg Exp $
 LIB= meschach
 
 SHLIB_MAJOR= 0
@@ -9,6 +10,7 @@ LDADD+= @LIBS@
 LIBDIR= ${PREFIX}/lib
 
 NOLINT= 1
+MKPICINSTALL= no
 
 SRCS=  copy.c err.c matrixio.c memory.c vecop.c matop.c pxop.c		   \
 	submat.c init.c otherio.c machine.c matlab.c ivecop.c version.c	   \
