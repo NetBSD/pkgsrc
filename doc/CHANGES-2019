@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5463 2019/12/20 02:27:25 fox Exp $
+$NetBSD: CHANGES-2019,v 1.5464 2019/12/20 05:00:25 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8753,3 +8753,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated games/nethack to 3.6.4 [rhialto 2019-12-19]
 	Updated mail/mutt to 1.13.2 [tron 2019-12-19]
 	Updated audio/fasttracker2 to 1.04 [fox 2019-12-20]
+	Added sysutils/ufetch version 0.1 [kamil 2019-12-20]
