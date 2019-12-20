@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/11/28 16:51:49 nia Exp $
+# $NetBSD: Makefile,v 1.12 2019/12/20 00:00:11 joerg Exp $
 
 DISTNAME=	speech-dispatcher-0.9.1
 CATEGORIES=	audio
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool pkg-config
 USE_TOOLS+=	msgfmt msgmerge xgettext
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 INFO_FILES=	yes
 
