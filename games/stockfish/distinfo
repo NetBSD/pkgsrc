@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/02/28 22:20:43 wiz Exp $
+$NetBSD: distinfo,v 1.2 2019/12/20 00:00:55 joerg Exp $
 
 SHA1 (stockfish-9-src.zip) = c30ccc1c077c6817a101ed36ebaee9dcd43db879
 RMD160 (stockfish-9-src.zip) = 7002a4050f71b7a33888460ea552d0063d6c761b
 SHA512 (stockfish-9-src.zip) = 47b5dfea9e015dd68e33c8b1a131ed83710e4e5d67abe0c278a423f2940b07c7a5d661ce27915257ae3dad83fc2bb8e50d3d28bfa11a7c4cdf396d0378cd80f8
 Size (stockfish-9-src.zip) = 171925 bytes
+SHA1 (patch-pawns.cpp) = d643c725310a723151e2af3d5dd6eaae0dddf105
