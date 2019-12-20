@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.46 2019/11/30 16:43:11 fox Exp $
+# $NetBSD: Makefile,v 1.47 2019/12/20 02:26:40 fox Exp $
 
-DISTNAME=	ft2-clone-v${PKGVERSION_NOREV}-code
+DISTNAME=	ft2-clone
 PKGNAME=	fasttracker2-${DISTVERSION}
-DISTVERSION=	1.03
+DISTVERSION=	1.04
 CATEGORIES=	audio
-MASTER_SITES=	https://16-bits.org/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=8bitbubsy/}
+GITHUB_PROJECT=	${DISTNAME}
+GITHUB_TAG=	v${DISTVERSION}
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://16-bits.org/
 COMMENT=	Portable Fasttracker II clone in C using SDL 2
 LICENSE=	modified-bsd AND cc-by-nc-sa-v4.0-license
 
-WRKSRC=		${WRKDIR}/ft2-clone-code
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
 
