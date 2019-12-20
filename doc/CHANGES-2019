@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5464 2019/12/20 05:00:25 kamil Exp $
+$NetBSD: CHANGES-2019,v 1.5465 2019/12/20 10:12:06 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8754,3 +8754,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated mail/mutt to 1.13.2 [tron 2019-12-19]
 	Updated audio/fasttracker2 to 1.04 [fox 2019-12-20]
 	Added sysutils/ufetch version 0.1 [kamil 2019-12-20]
+	Updated graphics/girara to 0.3.3 [leot 2019-12-20]
