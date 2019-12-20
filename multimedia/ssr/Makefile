@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/09/18 14:17:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2019/12/20 00:02:25 joerg Exp $
 #
 
 DISTNAME=	ssr-0.3.11
@@ -31,5 +31,6 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
