@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/12/20 00:02:06 joerg Exp $
 include/meschach/err.h
 include/meschach/iter.h
 include/meschach/machine.h
@@ -16,7 +16,6 @@ lib/libmeschach.so
 lib/libmeschach.so.0
 lib/libmeschach.so.0.0
 lib/libmeschach_p.a
-lib/libmeschach_pic.a
 share/meschach/README
 share/meschach/copyright
 share/meschach/fnindex.txt
