@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2019/12/20 04:58:35 kamil Exp $
-
-SHA1 (ufetch-v0.1.tar.gz) = 409d7391a57a0e569f9cb0068a8175cc9a6e4511
-RMD160 (ufetch-v0.1.tar.gz) = 4e923db3337ff9251a9adbabd86cc4c4a6ccde56
-SHA512 (ufetch-v0.1.tar.gz) = 8ae9165d9fb00dce9317ea8ac0ad99bcb5a85f5edf9ca3fa4129b66d9cccedbf1c5fdede6a1b6d466e1cc1293983436a2e33498f7bc5849d22bbe1257882f136
-Size (ufetch-v0.1.tar.gz) = 44131 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.847 2019/12/20 04:59:42 kamil Exp $
+# $NetBSD: Makefile,v 1.848 2019/12/20 12:47:16 kamil Exp $
 #
 
 COMMENT=	System utilities
@@ -672,7 +672,6 @@ SUBDIR+=	u-boot-rpi3-32
 SUBDIR+=	u-boot-sopine-baseboard
 SUBDIR+=	u-boot-tinker
 SUBDIR+=	u-boot-zynq-zybo-z7
-SUBDIR+=	ufetch
 SUBDIR+=	upower
 SUBDIR+=	ups-nut
 SUBDIR+=	ups-nut-cgi
