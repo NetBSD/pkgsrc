@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5469 2019/12/20 22:11:23 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.5470 2019/12/20 22:28:15 roy Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8757,3 +8757,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated print/zathura to 0.4.4 [leot 2019-12-20]
 	Updated games/tcl-theo to 0.0.1nb1 [kamil 2019-12-20]
 	Updated security/libprelude to 0.9.24.1nb19 [gutteridge 2019-12-20]
+	Updated net/dhcpcd to 8.1.4 [roy 2019-12-20]
