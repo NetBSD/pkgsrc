@@ -1,10 +1,13 @@
-$NetBSD: patch-src_libprelude-error_Makefile.in,v 1.1 2017/09/12 05:58:41 dholland Exp $
+$NetBSD: patch-src_libprelude-error_Makefile.in,v 1.2 2019/12/20 22:11:02 gutteridge Exp $
 
 Use -P when preprocessing error symbols to avoid getting line number
 output, which on gcc5 introduces extra line breaks and makes the
 downstream processing fail miserably.
 
---- src/libprelude-error/Makefile.in~	2017-09-12 05:42:25.856481751 +0000
+Also, rename the awk variable "namespace" to "name_space", since the
+former is now a reserved word with GNU awk 5.0.
+
+--- src/libprelude-error/Makefile.in.orig	2009-08-11 15:05:56.000000000 +0000
 +++ src/libprelude-error/Makefile.in
 @@ -1201,7 +1201,7 @@ code-to-errno.h: Makefile mkerrnos.awk e
  
@@ -15,3 +18,12 @@ downstream processing fail miserably.
  	-rm _$@
  
  # It is correct to use $(CC_FOR_BUILD) here.  We want to run the
+@@ -1214,7 +1214,7 @@ code-from-errno.h: mkerrcodes Makefile
+ 
+ errnos-sym.h: Makefile mkstrtable.awk errnos.in
+ 	LANG="" $(AWK) -f $(srcdir)/mkstrtable.awk -v textidx=2 -v nogettext=1 \
+-	-v prefix=PRELUDE_ERROR_ -v namespace=errnos_ \
++	-v prefix=PRELUDE_ERROR_ -v name_space=errnos_ \
+ 	$(srcdir)/errnos.in >$@
+ 
+ prelude-error.h: Makefile mkheader.awk err-sources.h.in err-codes.h.in errnos.in prelude-error.h.in
