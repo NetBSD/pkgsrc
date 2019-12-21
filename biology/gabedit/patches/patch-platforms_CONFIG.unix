@@ -1,0 +1,13 @@
+$NetBSD: patch-platforms_CONFIG.unix,v 1.1 2019/12/21 23:28:02 joerg Exp $
+
+--- platforms/CONFIG.unix.orig	2019-12-20 02:12:57.631729445 +0000
++++ platforms/CONFIG.unix
+@@ -19,7 +19,7 @@ X11LIB   = -lX11
+ CC = gcc 
+ enable_omp = 1
+ ifeq ($(enable_omp),1)
+-OMPLIB=-L/usr/lib -lgomp
++OMPLIB=-fopenmp
+ OMPCFLAGS=-DENABLE_OMP -fopenmp
+ endif
+ #DRAWGEOMGL= 
