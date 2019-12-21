@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2019/01/16 14:43:22 martin Exp $
+$NetBSD: patch-Makefile,v 1.2 2019/12/21 23:44:45 joerg Exp $
 
 - Use CC instead of C to specify the C compiler and do not hardcode gcc
 - Honors user's {C,LD}FLAGS
@@ -6,17 +6,17 @@ $NetBSD: patch-Makefile,v 1.1 2019/01/16 14:43:22 martin Exp $
 
 --- Makefile.orig	2015-09-20 14:07:55.000000000 +0000
 +++ Makefile
-@@ -5,23 +5,29 @@
+@@ -5,23 +5,28 @@
  #
  
  
 -C=gcc
 -CFLAGS=-c -Wall 
 -LDFLAGS= -lm -lstdc++
-+CC=c++
-+CFLAGS+=-c -Wall -D__linux__
-+LDFLAGS+= -lm -lstdc++
- SOURCES=sunwait.cpp sunriset.cpp print.cpp sunwait.h sunriset.h print.h
++CFLAGS+=-c -Wall
++LDFLAGS+= -lm
+-SOURCES=sunwait.cpp sunriset.cpp print.cpp sunwait.h sunriset.h print.h
++SOURCES=sunwait.cpp sunriset.cpp print.cpp
  OBJECTS=$(SOURCES:.cpp=.o)
  EXECUTABLE=sunwait
  
@@ -29,11 +29,11 @@ $NetBSD: patch-Makefile,v 1.1 2019/01/16 14:43:22 martin Exp $
  	
  $(EXECUTABLE): $(OBJECTS)
 -	$(C) $(OBJECTS) -o $@ $(LDFLAGS)
-+	$(CC) $(OBJECTS) -o $@ $(LDFLAGS)
++	$(CXX) $(OBJECTS) -o $@ $(LDFLAGS)
  
  .cpp.o:
 -	$(C) $(CFLAGS) $< -o $@
-+	$(CC) $(CFLAGS) $< -o $@
++	$(CXX) -c $(CFLAGS) $< -o $@
  
  clean:
  	rm -f *.o sunwait
