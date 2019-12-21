@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/13 12:21:28 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/12/21 22:43:45 ng0 Exp $
 guile/2.2/lib/guile/2.2/site-ccache/git.go
 guile/2.2/lib/guile/2.2/site-ccache/git/annotated.go
 guile/2.2/lib/guile/2.2/site-ccache/git/attr.go
@@ -73,5 +73,4 @@ guile/2.2/share/guile/site/2.2/git/web/mime-types.scm
 guile/2.2/share/guile/site/2.2/git/web/querystring.scm
 guile/2.2/share/guile/site/2.2/git/web/repository.scm
 guile/2.2/share/guile/site/2.2/git/web/template.scm
-guile/2.2/share/info/dir
-guile/2.2/share/info/guile-git.info
+guile/2.2/info/guile-git.info
