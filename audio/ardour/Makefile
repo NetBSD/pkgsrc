@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/12/12 16:19:48 nia Exp $
+# $NetBSD: Makefile,v 1.33 2019/12/21 23:27:03 joerg Exp $
 
 DISTNAME=	Ardour-5.12.0
 PKGNAME=	${DISTNAME:tl}
@@ -72,6 +72,10 @@ PYTHON_FOR_BUILD_ONLY=		tool
 
 INSTALLATION_DIRS+=	share/appdata
 INSTALLATION_DIRS+=	share/applications
+
+pre-patch:
+	cd ${WRKSRC} && ${PYTHONBIN} waf --help > /dev/null
+	rm ${WRKSRC}/.waf-1.6.11-06ee4b7efbeab1252ed3b11499834d2a/waflib/Tools/c_config.pyc
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/build/gtk2_ardour/ardour5.appdata.xml \
