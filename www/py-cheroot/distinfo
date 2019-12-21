@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.23 2019/09/18 20:23:12 adam Exp $
+$NetBSD: distinfo,v 1.24 2019/12/21 23:51:56 joerg Exp $
 
 SHA1 (cheroot-6.5.8.tar.gz) = fb7f6e0eab185b36ac754bd26fd3ca8a40b810e3
 RMD160 (cheroot-6.5.8.tar.gz) = 02e2cc0314d587e93b71b4cfd4353a0d0b8a9486
 SHA512 (cheroot-6.5.8.tar.gz) = 5abdf51ddb48b2519c795c5bcefce3d024dbf0fa0f881e94060444d9f5051a2e15b71aa0b3e2823dd7cd8b0e5f1b778580342332bbd3456c61e5493a84199966
 Size (cheroot-6.5.8.tar.gz) = 86158 bytes
+SHA1 (patch-setup.cfg) = a8e2352c4ca85c82fddc375bb3912a2581307679
+SHA1 (patch-setup.py) = d3261389a4422608df336940e73de6634633574c
