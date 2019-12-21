@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/07/21 22:25:51 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2019/12/21 23:48:26 joerg Exp $
 #
 
 DISTNAME=	fluxconf-0.9.9
@@ -19,8 +19,8 @@ USE_TOOLS+=		msgfmt pkg-config
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-_WRAP_EXTRA_ARGS.CC+=	-Wno-error=invalid-source-encoding -Wno-error=format-security -Wno-error=self-assign
-CWRAPPERS_APPEND.cc+=	-Wno-error=invalid-source-encoding -Wno-error=format-security -Wno-error=self-assign
+_WRAP_EXTRA_ARGS.CC+=	-Wno-error=invalid-source-encoding -Wno-error=format-security -Wno-error=self-assign -Wno-error=deprecated-declarations
+CWRAPPERS_APPEND.cc+=	-Wno-error=invalid-source-encoding -Wno-error=format-security -Wno-error=self-assign -Wno-error=deprecated-declarations
 .elif !empty(PKGSRC_COMPILER:Mgcc)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=unused-but-set-parameter -Wno-error=unused-but-set-variable
 CWRAPPERS_APPEND.cc+=	-Wno-error=unused-but-set-parameter -Wno-error=unused-but-set-variable
