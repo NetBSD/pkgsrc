@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2016/01/14 23:12:41 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2019/12/21 21:08:42 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pidgin
 PKG_SUPPORTED_OPTIONS+=		dbus debug gtkspell x11
@@ -11,6 +11,8 @@ PLIST_VARS+=		dbus vv x11
 .if !empty(PKG_OPTIONS:Mdbus)
 CONFIGURE_ARGS+=	--enable-dbus
 PLIST.dbus=		yes
+PYTHON_FOR_BUILD_ONLY=	tool
+.  include "../../lang/python/tool.mk"
 .  include "../../sysutils/dbus/buildlink3.mk"
 .  include "../../sysutils/dbus-glib/buildlink3.mk"
 .endif
