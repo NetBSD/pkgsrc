@@ -1,22 +1,22 @@
-$NetBSD: patch-plugins_sysinfo_meson.build,v 1.1 2018/03/17 11:56:15 tnn Exp $
+$NetBSD: patch-plugins_sysinfo_meson.build,v 1.2 2019/12/21 14:41:32 nia Exp $
 
 XXX this is incomplete
 
---- plugins/sysinfo/meson.build.orig	2018-03-14 02:27:13.000000000 +0000
+--- plugins/sysinfo/meson.build.orig	2019-12-21 06:43:47.652401700 +0000
 +++ plugins/sysinfo/meson.build
 @@ -13,13 +13,13 @@ sysinfo_includes = []
  sysinfo_cargs = []
  
  system = host_machine.system()
--if system == 'linux' or system == 'darwin'
-+if system == 'linux' or system == 'darwin' or system == 'netbsd'
+-if system == 'linux' or system == 'gnu' or system.startswith('gnu/') or system == 'darwin'
++if system == 'linux' or system == 'gnu' or system.startswith('gnu/') or system == 'darwin' or system == 'netbsd':
    sysinfo_includes += 'shared'
    sysinfo_sources += [
      'shared/df.c'
    ]
  
--  if system == 'linux'
-+  if system == 'linux' or system == 'netbsd'
+-  if system == 'linux' or system == 'gnu' or system.startswith('gnu/')
++  if system == 'linux' or system == 'gnu' or system.startswith('gnu/') or system == 'netbsd':
      libpci = dependency('libpci', required: false, method: 'pkg-config')
      if libpci.found()
        sysinfo_deps += libpci
