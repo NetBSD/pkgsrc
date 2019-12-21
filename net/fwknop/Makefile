@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/03 11:45:35 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/21 23:44:59 joerg Exp $
 
 DISTNAME=	fwknop-2.6.9
 CATEGORIES=	net
@@ -14,6 +14,7 @@ DEPENDS+=	wget-[0-9]*:../../net/wget
 
 USE_TOOLS+=	aclocal autoconf automake autoheader makeinfo
 
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 
