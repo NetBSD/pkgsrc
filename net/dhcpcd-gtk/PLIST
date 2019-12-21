@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/10/06 19:46:59 roy Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/12/21 23:09:23 nros Exp $
 bin/dhcpcd-gtk
 man/man8/dhcpcd-gtk.8
-share/applications/dhcpcd-gtk.desktop
+share/examples/dhcpcd-gtk/xdg/autostart/dhcpcd-gtk.desktop
