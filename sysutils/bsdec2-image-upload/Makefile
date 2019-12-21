@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/05/22 08:58:39 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/21 23:45:22 joerg Exp $
 
 GITHUB_PROJECT=	bsdec2-image-upload
 DISTNAME=	1.2.2
@@ -22,6 +22,9 @@ CFLAGS+=	-DCERTFILE=\"${PREFIX}/share/mozilla-rootcerts/cacert.pem\"
 CFLAGS+=	-Wno-error=pointer-sign \
 		-Wno-error=maybe-uninitialized \
 		-Wno-error=discarded-qualifiers
+.elif !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-unknown-warning-option -Wno-pointer-sign \
+		-Wno-incompatible-pointer-types-discards-qualifiers
 .endif
 
 INSTALLATION_DIRS+=	bin
