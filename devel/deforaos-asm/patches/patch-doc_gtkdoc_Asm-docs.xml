@@ -1,0 +1,12 @@
+$NetBSD: patch-doc_gtkdoc_Asm-docs.xml,v 1.1 2019/12/21 23:35:05 joerg Exp $
+
+--- doc/gtkdoc/Asm-docs.xml.orig	2019-12-20 00:43:15.928965058 +0000
++++ doc/gtkdoc/Asm-docs.xml
+@@ -20,7 +20,6 @@
+   <chapter>
+     <title>&title;</title>
+     <xi:include href="xml/arch.xml"/>
+-    <xi:include href="xml/asm.xml"/>
+     <xi:include href="xml/code.xml"/>
+     <xi:include href="xml/common.xml"/>
+     <xi:include href="xml/format.xml"/>
