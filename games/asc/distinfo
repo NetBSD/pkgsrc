@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2019/10/28 12:38:35 nia Exp $
+$NetBSD: distinfo,v 1.15 2019/12/21 23:40:43 joerg Exp $
 
 SHA1 (asc/asc-2.6.1.0.tar.bz2) = 3731e8016143d3c83364f67f4ac7d8e7491b7a50
 RMD160 (asc/asc-2.6.1.0.tar.bz2) = f66fd672638c13661618b0e9a7e364a694793322
@@ -17,3 +17,4 @@ RMD160 (asc/time_to_strike.ogg) = 03f67601e729ba8cbdeb01b6e0b4317bbe10e435
 SHA512 (asc/time_to_strike.ogg) = 2ed946116cac2ea63d401eb7415d5b3e4e548bc5a5b00b01a6f1c4db6a242895810dfefdf1ace9652f01dc934a70b756aa74d01630cfac97b19ce84a93b772ee
 Size (asc/time_to_strike.ogg) = 3830679 bytes
 SHA1 (patch-configure) = 03ab5b82af9ec361dd671194554ca30abf9b240e
+SHA1 (patch-source_libs_paragui_include_pgbutton.h) = f4c4f54ddedd68ce956c6fb65d86c599decc6456
