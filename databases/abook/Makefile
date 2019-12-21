@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/09/22 08:54:00 tm Exp $
+# $NetBSD: Makefile,v 1.30 2019/12/21 23:30:44 joerg Exp $
 #
 
 DISTNAME=	abook-0.6.1
@@ -12,10 +12,11 @@ LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
+USE_NCURSES=		yes # mouse API
 GNU_CONFIGURE=		yes
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
