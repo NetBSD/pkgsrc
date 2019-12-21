@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2018/08/13 15:53:49 nia Exp $
+$NetBSD: distinfo,v 1.2 2019/12/21 23:30:21 joerg Exp $
 
 SHA1 (dsk2rom-0.80.tar.gz) = ed1ff7e18f9698cc1141197cb188de326a38b7b0
 RMD160 (dsk2rom-0.80.tar.gz) = 0d32fe2519013a77e6b28e0c4e833afc101fd6d8
 SHA512 (dsk2rom-0.80.tar.gz) = 846736ee6a552eaef48bfae76a123ec1dda4304f7e5ab09a5c70c939a1586c29b976e6cb55de0f75ed61e98be323f4be540ee5c4c172f5d5822c351406874fc2
 Size (dsk2rom-0.80.tar.gz) = 28727 bytes
-SHA1 (patch-Makefile) = e81bc8fbfe9dc02d82d216ccc57e3a36883eb7b4
-SHA1 (patch-pletter_pletter.cpp) = f478b46342b598af14e09a2cde8bcb762d9589e8
+SHA1 (patch-Makefile) = b3e27f2343af67b7bf3aa1f1488389e40887c9ad
+SHA1 (patch-pletter_pletter.cpp) = 2dd14d10119c1e5311db258de403ec653208ca42
