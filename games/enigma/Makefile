@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/11/11 22:03:01 maya Exp $
+# $NetBSD: Makefile,v 1.38 2019/12/21 23:41:05 joerg Exp $
 
 DISTNAME=	enigma-1.21
 PKGNAME=	${DISTNAME:S/-r/./}
@@ -11,12 +11,15 @@ COMMENT=	Puzzle game similar to Oxyd/Rock'n'Roll/Marble Madness
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
+TOOL_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-r1914//}
 USE_LANGUAGES=		c c++11
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ARGS.NetBSD+=	ac_cv_func_gethostbyname_r=no
 
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.6
 BUILDLINK_API_DEPENDS.SDL+=		SDL>=1.2.9
