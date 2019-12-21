@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2018/01/24 05:51:40 jnemeth Exp $
+$NetBSD: distinfo,v 1.8 2019/12/21 23:29:04 joerg Exp $
 
 SHA1 (asterisk-14.7.5/asterisk-14.7.5.tar.gz) = b378be5598e76f2385298bab346bf489796cefa7
 RMD160 (asterisk-14.7.5/asterisk-14.7.5.tar.gz) = 1cd1ac72c758bebe54d7fdefe2a7fd59640d7863
@@ -20,7 +20,7 @@ SHA1 (patch-cdr_cdr__pgsql.c) = 82b002a1f5ed3b7361a98e2bffb5cea8833949b8
 SHA1 (patch-cel_cel__pgsql.c) = b280efab2b035ce60be268bac9bc8824910b2b8f
 SHA1 (patch-channels_chan__oss.c) = 8a1c32462097f4a58f48a1a994aff5a8ab4c9fb2
 SHA1 (patch-channels_chan__sip.c) = a4abe1dcdec3db719a7fd0e5dbefb9c12f6a37db
-SHA1 (patch-configure) = 53e5ea06ba9796eb6621193364b1131e895944a1
+SHA1 (patch-configure) = fe6389a05f6b1d58148c54521cdd4b341f416bea
 SHA1 (patch-configure.ac) = fa68fb905ceb8d1ee399d01f60ae70c4b11e77e0
 SHA1 (patch-contrib_scripts_vmail.cgi) = 672827eedf315a82a289c82d1ae8b935166e9319
 SHA1 (patch-funcs_func__env.c) = 0faf9eafe2a5f1701924973a54d0ab49ba62a3b3
