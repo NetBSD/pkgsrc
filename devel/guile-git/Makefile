@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/15 15:56:03 ng0 Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/21 22:43:45 ng0 Exp $
 
 DISTNAME=	guile-git-0.2.0
 CATEGORIES=	devel
@@ -16,6 +16,8 @@ USE_TOOLS+=		pkg-config
 DEPENDS+=		guile-bytestructures>=1.0.5:../../devel/guile-bytestructures
 
 CONFIGURE_ENV+=		LIBGIT2_LIBDIR=${BUILDLINK_PREFIX.libgit2}/lib
+
+INFO_FILES=	YES
 
 .include "../../lang/guile22/module.mk"
 .include "../../devel/libgit2/buildlink3.mk"
