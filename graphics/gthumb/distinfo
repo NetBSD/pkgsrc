@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2015/11/03 21:34:02 agc Exp $
+$NetBSD: distinfo,v 1.31 2019/12/21 23:43:26 joerg Exp $
 
 SHA1 (gthumb-2.14.4.tar.xz) = ed7fb3649303527b3704b8d28ea9d49e2e65f7ef
 RMD160 (gthumb-2.14.4.tar.xz) = 384b4441ed3d4022b6e5c5301b5a3c422f8b101b
@@ -11,3 +11,4 @@ SHA1 (patch-ae) = 2ce0608493b3a261a0c0b5a67932173081837522
 SHA1 (patch-af) = 55ce1101c8e06f6341934c474772d3bac7680046
 SHA1 (patch-ag) = cb1fe9401d9ea3a89ce797465c548b01f99db129
 SHA1 (patch-ah) = d6ebd939dda6459a1dd20b4e7921ada2c9f6fdd2
+SHA1 (patch-extensions_exiv2__tools_exiv2-utils.cpp) = cf67e3993ba51b2a6e3f9627f1b4d8cdcfe06621
