@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2019/12/16 08:24:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2019/12/21 22:50:00 markd Exp $
 bin/opencv_annotation
 bin/opencv_createsamples
 bin/opencv_interactive-calibration
@@ -312,11 +312,11 @@ lib/libopencv_videostab.so.${PKGVERSION}
 lib/libopencv_videostab.so.3.4
 lib/pkgconfig/opencv.pc
 ${PYSITELIB}/cv2/__init__.py
-${PYSITELIB}/cv2/config-3.7.py
+${PYSITELIB}/cv2/config-${PYVERSSUFFIX}.py
 ${PYSITELIB}/cv2/config.py
 ${PYSITELIB}/cv2/load_config_py2.py
 ${PYSITELIB}/cv2/load_config_py3.py
-${PYSITELIB}/cv2/python-3.7/cv2.so
+${PYSITELIB}/cv2/python-${PYVERSSUFFIX}/cv2.so
 share/OpenCV/OpenCVConfig-version.cmake
 share/OpenCV/OpenCVConfig.cmake
 share/OpenCV/OpenCVModules-release.cmake
