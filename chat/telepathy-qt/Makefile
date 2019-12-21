@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/02 22:18:26 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2019/12/21 16:43:59 nros Exp $
 
 DISTNAME=	telepathy-qt-0.9.6.1
 PKGREVISION=	3
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2.1
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+CMAKE_ARGS+=-DDISABLE_WERROR=ON
 
 PKGCONFIG_OVERRIDE+=	TelepathyQt/TelepathyQt.pc.in
 PKGCONFIG_OVERRIDE+=	TelepathyQt/TelepathyQtService.pc.in
