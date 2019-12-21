@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/07/21 22:25:29 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2019/12/21 23:09:23 nros Exp $
 #
 
 PKGNAME=		dhcpcd-gtk-${DHCPCD_UI_VERSION}
@@ -14,6 +14,12 @@ DEPENDS+=	dhcpcd-icons>=${DHCPCD_UI_VERSION}:../../net/dhcpcd-icons
 
 USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	--with-gtk+
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+MAKEFLAGS+=		SYSCONFDIR=${EGDIR}
+
+CONF_FILES=		${EGDIR}/xdg/autostart/${PKGBASE}.desktop \
+			${PKG_SYSCONFDIR}/xdg/autostart/${PKGBASE}.desktop
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg/autostart
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
