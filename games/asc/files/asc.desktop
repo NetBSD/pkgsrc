@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Advanced Strategic Command
+GenericName=Strategy Game
+Comment=Defend your Command
+Comment[de]=Verteidige deinen Kommandobereich
+Type=Application
+Exec=asc
+Icon=asc
+Terminal=false
+Categories=Game;StrategyGame;
+Keywords=strategy;battle;isle;turn-based;hexagon;tiles;multiplayer;singleplayer;AI;maps;editor;
