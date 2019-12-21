@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/08/30 18:05:08 nia Exp $
+# $NetBSD: Makefile,v 1.28 2019/12/21 23:48:08 joerg Exp $
 #
 
 DISTNAME=		glclock-6.0b6.0
@@ -34,4 +34,6 @@ do-install:
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
