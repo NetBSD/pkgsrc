@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2019/01/16 14:43:22 martin Exp $
+$NetBSD: distinfo,v 1.2 2019/12/21 23:44:45 joerg Exp $
 
 SHA1 (sunwait-0.8.tar.gz) = eed1453e288d03d200d4f74634324a343434f426
 RMD160 (sunwait-0.8.tar.gz) = ffad86c063eac4952141016fde056056d44963b4
 SHA512 (sunwait-0.8.tar.gz) = 974aec925e08d42f6b9d617cd033ab21af314b04a0bab100f9b473e038df7eb65a86de2240ef2d5308af5385c929607d591c6f7b738925622e38040af6368166
 Size (sunwait-0.8.tar.gz) = 20302 bytes
-SHA1 (patch-Makefile) = 63276adb2587a251d9bb896ec82cd5ba6b3d6c07
+SHA1 (patch-Makefile) = a3ba723c2868ce7628f5bc4b93633a3abacd5c56
 SHA1 (patch-sunriset.cpp) = 759aa1f2c0301f8fab3a264167d25a077ed205ee
 SHA1 (patch-sunwait.cpp) = cf5b2251a4b0de5e95cdbd06a432824b623df42b
