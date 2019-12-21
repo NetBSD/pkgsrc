@@ -1,7 +1,16 @@
-$NetBSD: patch-configure,v 1.1 2019/08/20 13:47:42 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2019/12/21 23:29:05 joerg Exp $
 
 --- configure.orig	2019-07-25 09:38:14.000000000 +0000
 +++ configure
+@@ -9120,7 +9120,7 @@ $as_echo_n "checking for clang -fblocks.
+ 				AST_CLANG_BLOCKS="-Wno-unknown-warning-option -fblocks"
+ 				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+-			elif test "`echo 'int main(){return ^{return 42;}();}' | ${CC} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
++			elif test "`echo 'int main(){return ^{return 42;}();}' | ${CC} ${LDFLAGS} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
+ 				AST_CLANG_BLOCKS_LIBS="-lBlocksRuntime"
+ 				AST_CLANG_BLOCKS="-fblocks"
+ 				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 @@ -14838,7 +14838,7 @@ fi
  
  
