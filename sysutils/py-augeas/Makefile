@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/02/12 12:21:00 adam Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/21 23:46:41 joerg Exp $
 
 DISTNAME=	python-augeas-1.0.3
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -11,8 +11,6 @@ COMMENT=	Python bindings for Augeas
 LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.0:../../devel/py-cffi
-
-USE_LANGUAGES=	# none
 
 do-test:
 	cd ${WRKSRC}/test && ${PYTHONBIN} test_augeas.py
