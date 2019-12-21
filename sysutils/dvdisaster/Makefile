@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/07/21 22:25:42 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2019/12/21 23:46:19 joerg Exp $
 
 DISTNAME=	dvdisaster-0.79.5
 PKGREVISION=	5
@@ -10,6 +10,9 @@ MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://www.dvdisaster.net/en/
 COMMENT=	Protects data on optical media with error correcting codes
 LICENSE=	gnu-gpl-v2
+
+# msgmerge: error while opening "messages.pot" for reading: No such file or directory
+MAKE_JOBS_SAFE=	no
 
 ONLY_FOR_PLATFORM=	Darwin-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 
