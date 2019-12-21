@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2006/06/09 09:58:57 rillig Exp $
+$NetBSD: patch-ab,v 1.5 2019/12/21 23:44:00 joerg Exp $
 
 --- /dev/null	Thu Feb  8 05:50:43 2001
 +++ src/Makefile
-@@ -0,0 +1,14 @@
+@@ -0,0 +1,15 @@
 +LIB= 	dcdflib_c
 +
 +SHLIB_MAJOR=0
@@ -11,6 +11,7 @@ $NetBSD: patch-ab,v 1.4 2006/06/09 09:58:57 rillig Exp $
 +LIBDIR=${PREFIX}/lib
 +
 +NOLINT=1
++MKPICINSTALL=no
 +
 +SRCS= 	dcdflib.c ipmpar.c
 +
