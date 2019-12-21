@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/12/08 02:01:07 nia Exp $
+# $NetBSD: Makefile,v 1.44 2019/12/21 21:25:51 nia Exp $
 
 DISTNAME=		csound-${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
@@ -54,7 +54,6 @@ post-install:
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
 .include "../../x11/fltk13/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
