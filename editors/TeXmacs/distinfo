@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.70 2019/10/28 15:10:00 kamil Exp $
+$NetBSD: distinfo,v 1.71 2019/12/21 23:38:52 joerg Exp $
 
 SHA1 (TeXmacs-1.99.11-src.tar.gz) = 53abe8011df033005ffa3530f23501833afed440
 RMD160 (TeXmacs-1.99.11-src.tar.gz) = 25a17545389f06b4ac49899fc2c8554612708b48
 SHA512 (TeXmacs-1.99.11-src.tar.gz) = 3f3481834baeeee93afc2c2de1666297b8c02d7dc5223b00ee93120e175503c91bdcc3d9ff4d8df498033064b2e67b12ffd47af9e8b95ad5eee12b47ec076855
 Size (TeXmacs-1.99.11-src.tar.gz) = 32798336 bytes
+SHA1 (patch-3rdparty_benchmark_CMakeLists.txt) = 3977244d6f130d6135f9eac5fc03ee41c40efb9d
 SHA1 (patch-cmake_FindGuile.cmake) = cb6085af098467d320ff65451df33bf552b2ddaa
 SHA1 (patch-misc_CMakeLists.txt) = 0534c9a1c66315d3189a4d6932ce56b3d7c2978a
