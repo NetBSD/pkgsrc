@@ -1,8 +1,17 @@
-$NetBSD: patch-configure,v 1.1.1.1 2016/10/25 08:17:07 jnemeth Exp $
+$NetBSD: patch-configure,v 1.2 2019/12/21 23:29:04 joerg Exp $
 
---- configure.orig	2015-10-09 21:48:48.000000000 +0000
+--- configure.orig	2017-12-22 22:26:07.000000000 +0000
 +++ configure
-@@ -12920,7 +12920,7 @@ fi
+@@ -9192,7 +9192,7 @@ $as_echo_n "checking for clang -fblocks.
+ 				AST_CLANG_BLOCKS="-Wno-unknown-warning-option -fblocks"
+ 				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+-			elif test "`echo "int main(){return ^{return 42;}();}" | ${CC} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
++			elif test "`echo "int main(){return ^{return 42;}();}" | ${CC} ${LDFLAGS} -o /dev/null -fblocks -x c -lBlocksRuntime - 2>&1`" = ""; then
+ 				AST_CLANG_BLOCKS_LIBS="-lBlocksRuntime"
+ 				AST_CLANG_BLOCKS="-fblocks"
+ 				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+@@ -14129,7 +14129,7 @@ fi
  
  
  
@@ -11,7 +20,7 @@ $NetBSD: patch-configure,v 1.1.1.1 2016/10/25 08:17:07 jnemeth Exp $
    as_fn_error $? "*** JSON support not found (this typically means the libjansson development package is missing)" "$LINENO" 5
  fi
  
-@@ -13441,7 +13441,7 @@ fi
+@@ -14756,7 +14756,7 @@ fi
  done
  
  
@@ -20,7 +29,7 @@ $NetBSD: patch-configure,v 1.1.1.1 2016/10/25 08:17:07 jnemeth Exp $
  if test "x$ac_cv_header_sys_poll_h" = xyes; then :
  
  else
-@@ -15496,7 +15496,7 @@ fi
+@@ -16771,7 +16771,7 @@ fi
  done
  
  
@@ -29,7 +38,7 @@ $NetBSD: patch-configure,v 1.1.1.1 2016/10/25 08:17:07 jnemeth Exp $
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
  ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
-@@ -15731,7 +15731,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -17006,7 +17006,7 @@ rm -f core conftest.err conftest.$ac_obj
  LDFLAGS=${old_LDFLAGS}
  rm -f conftest.dynamics
  
@@ -38,7 +47,7 @@ $NetBSD: patch-configure,v 1.1.1.1 2016/10/25 08:17:07 jnemeth Exp $
  if test "x$ac_cv_header_sys_poll_h" = xyes; then :
    HAS_POLL=1
  
-@@ -18063,6 +18063,148 @@ fi
+@@ -19545,6 +19545,148 @@ fi
  
  
  
@@ -187,7 +196,7 @@ $NetBSD: patch-configure,v 1.1.1.1 2016/10/25 08:17:07 jnemeth Exp $
  # The cast to long int works around a bug in the HP C Compiler
  # version HP92453-01 B.11.11.23709.GP, which incorrectly rejects
  # declarations like `int a3[[(sizeof (unsigned char)) >= 0]];'.
-@@ -19313,6 +19455,8 @@ $as_echo_n "checking if \"struct ifaddrs
+@@ -20797,6 +20939,8 @@ $as_echo_n "checking if \"struct ifaddrs
  
  	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */

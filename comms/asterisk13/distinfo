@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2018/01/23 08:26:08 jnemeth Exp $
+$NetBSD: distinfo,v 1.16 2019/12/21 23:29:04 joerg Exp $
 
 SHA1 (asterisk-13.19.0/asterisk-13.19.0.tar.gz) = b519e16016a8e07230a16159d88aa06280d70ddb
 RMD160 (asterisk-13.19.0/asterisk-13.19.0.tar.gz) = 2d448476e2a9a52e8aa30361c5091e72f06bf58d
@@ -20,7 +20,7 @@ SHA1 (patch-cdr_cdr__pgsql.c) = 02dc677126a8fb00b30f7f073a60b68942281dfe
 SHA1 (patch-cel_cel__pgsql.c) = b280efab2b035ce60be268bac9bc8824910b2b8f
 SHA1 (patch-channels_chan__oss.c) = 8a1c32462097f4a58f48a1a994aff5a8ab4c9fb2
 SHA1 (patch-channels_chan__sip.c) = a4abe1dcdec3db719a7fd0e5dbefb9c12f6a37db
-SHA1 (patch-configure) = 53e5ea06ba9796eb6621193364b1131e895944a1
+SHA1 (patch-configure) = bec979040b515444f0bbc823c92e6e4a0b0365a3
 SHA1 (patch-configure.ac) = fa68fb905ceb8d1ee399d01f60ae70c4b11e77e0
 SHA1 (patch-contrib_scripts_vmail.cgi) = 672827eedf315a82a289c82d1ae8b935166e9319
 SHA1 (patch-funcs_func__env.c) = 0faf9eafe2a5f1701924973a54d0ab49ba62a3b3

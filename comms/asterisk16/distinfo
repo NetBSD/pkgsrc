@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2019/08/20 13:47:42 ryoon Exp $
+$NetBSD: distinfo,v 1.31 2019/12/21 23:29:05 joerg Exp $
 
 SHA1 (asterisk-16.5.0/asterisk-16.5.0.tar.gz) = 1cddd614029cdbb7ee4321b44d93f855d95e10dc
 RMD160 (asterisk-16.5.0/asterisk-16.5.0.tar.gz) = a683018660bfb733a785fef569a8a2b7849c28a6
@@ -19,7 +19,7 @@ Size (asterisk-16.5.0/pjproject-2.9.tar.bz2) = 5009546 bytes
 SHA1 (patch-Makefile) = 232cacb5a6ceaa88eaf6f2db126b1899e1bb1be0
 SHA1 (patch-build__tools_mkpkgconfig) = 7fab8fcf46d9f8a3b98455674fec6307ec472b23
 SHA1 (patch-channels_Makefile) = b32bb8439ae07ed361ab7cb811b4766a27f09ec9
-SHA1 (patch-configure) = ce2a262b048b7bab0d94b99d0334330c2db3ab27
+SHA1 (patch-configure) = b25ac1178eb77a1d0ecb57f5b37813cf1a4ad5c6
 SHA1 (patch-configure.ac) = 63a54b310ea38216861206f07116614ddfb90e20
 SHA1 (patch-contrib_scripts_vmail.cgi) = 7935ce96ea319eb19cc2ce999813eb837d5357c0
 SHA1 (patch-include_asterisk_autoconfig.h.in) = 2f8a986bd3b35ebb384280f0dbf81c32d689ddd2
