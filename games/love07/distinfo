@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2018/09/30 19:10:10 maya Exp $
+$NetBSD: distinfo,v 1.2 2019/12/22 22:26:04 joerg Exp $
 
 SHA1 (love-0.7.2-linux-src.tar.gz) = 876f527fc6908a6dd462080aa599ffa1ad47afa5
 RMD160 (love-0.7.2-linux-src.tar.gz) = e976925fd67e5c7714438c5135b516fb9c9bdc9a
@@ -9,6 +9,8 @@ SHA1 (patch-src_love.cpp) = 21d180811e7e9dddfb136a1fd6f449d568ca016a
 SHA1 (patch-src_modules_audio_openal_Audio.h) = 5af2420188c5245767ab8425113386a4fe25a312
 SHA1 (patch-src_modules_audio_openal_Pool.h) = 89c0cce11a2ca9ac88e6e9388fe02f0229cfe887
 SHA1 (patch-src_modules_event_sdl_Event.h) = b3609e5490c401b45a46c0b054c9155f7b02e3d7
+SHA1 (patch-src_modules_graphics_opengl_Framebuffer.cpp) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (patch-src_modules_graphics_opengl_GLee.h) = 335cdd70352ab110c92da80b1755324e1beb4d0d
 SHA1 (patch-src_modules_graphics_opengl_Graphics.h) = 040566b7bb98f877f3f8134ab875b0c9115c256e
 SHA1 (patch-src_modules_graphics_opengl_ParticleSystem.cpp) = 6b640ce319d3bd26ff1238522d772bf70a1f17b2
 SHA1 (patch-src_modules_joystick_sdl_Joystick.h) = e49e7721986638f51f38891dfb5e707c67ab64cc
