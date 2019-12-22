@@ -1,15 +1,18 @@
-$NetBSD: patch-src_torrent_poll__kqueue.cc,v 1.2 2018/06/24 16:57:58 adam Exp $
+$NetBSD: patch-src_torrent_poll__kqueue.cc,v 1.3 2019/12/22 22:28:15 joerg Exp $
 
 Add a cast so that this builds with the c++ in 8.0.
 https://github.com/rakshasa/libtorrent/issues/159
 
---- src/torrent/poll_kqueue.cc.orig	2018-06-07 04:24:45.000000000 +0000
+--- src/torrent/poll_kqueue.cc.orig	2019-07-19 11:44:08.000000000 +0000
 +++ src/torrent/poll_kqueue.cc
-@@ -69,6 +69,12 @@ namespace torrent {
+@@ -69,6 +69,15 @@ namespace torrent {
  
  #ifdef USE_KQUEUE
  
 +#if defined(__NetBSD__)
++#include <sys/param.h>
++#endif
++#if defined(__NetBSD__) && (__NetBSD_Version__ - 0 < 999001500)
 +#define LIBEV_UDATA(a) ((intptr_t)(a))
 +#else
 +#define LIBEV_UDATA(a) (a)
@@ -18,7 +21,7 @@ https://github.com/rakshasa/libtorrent/issues/159
  inline uint32_t
  PollKQueue::event_mask(Event* e) {
    assert(e->file_descriptor() != -1);
-@@ -111,7 +117,7 @@ PollKQueue::modify(Event* event, unsigne
+@@ -111,7 +120,7 @@ PollKQueue::modify(Event* event, unsigne
    struct kevent* itr = m_changes + (m_changedEvents++);
  
    assert(event == m_table[event->file_descriptor()].second);
@@ -27,7 +30,7 @@ https://github.com/rakshasa/libtorrent/issues/159
  }
  
  PollKQueue*
-@@ -314,11 +320,11 @@ PollKQueue::close(Event* event) {
+@@ -314,11 +323,11 @@ PollKQueue::close(Event* event) {
  
    // Shouldn't be needed anymore.
    for (struct kevent *itr = m_events, *last = m_events + m_waitingEvents; itr != last; ++itr)
@@ -41,7 +44,7 @@ https://github.com/rakshasa/libtorrent/issues/159
  }
  
  void
-@@ -340,11 +346,11 @@ PollKQueue::closed(Event* event) {
+@@ -340,11 +349,11 @@ PollKQueue::closed(Event* event) {
  
    // Shouldn't be needed anymore.
    for (struct kevent *itr = m_events, *last = m_events + m_waitingEvents; itr != last; ++itr)
