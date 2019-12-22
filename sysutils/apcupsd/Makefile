@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2019/11/04 21:28:41 rillig Exp $
+# $NetBSD: Makefile,v 1.89 2019/12/22 15:57:36 jmcneill Exp $
 
 DISTNAME=		apcupsd-3.14.13r2365
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		sysutils
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 MASTER_SITES=		${MASTER_SITE_LOCAL}
@@ -114,5 +114,5 @@ post-install:
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/libusb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
