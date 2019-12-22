@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19509 2019/12/18 13:48:19 wiz Exp $
+$NetBSD: TODO,v 1.19510 2019/12/22 11:08:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -375,17 +375,17 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.9.8
+	o ImageMagick-7.0.9.9
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-19.3
+	o MesaLib-19.3.1
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
 	o R-akima-11
 	o R-mapproj-3
 	o R-ncdf-1.6.8
-	o Sigil-0.9.18 [needs QtWebEngine]
+	o Sigil-1.0.0 [needs QtWebEngine]
 	o TeXmacs-1.99.12
 	o TiffIO-140a
 	o YoSucker-81
@@ -503,6 +503,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o courier-imap-4.16.1
 	o courier-mta-0.74.2
 	o cpmtools-2.20
+	o cppunit-1.15.0
 	o crafty-25.0.1
 	o cross-h8300-hms-binutils-2.17
 	o csharp-mysql-6.9.8
@@ -595,7 +596,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fet-5.28.6
 	o fetchyahoo-2.14.0
 	o filerunner-14.06.18.10
-	o filezilla-3.46.0
+	o filezilla-3.46.2
 	o flashplayer-0.4.13
 	o flow-tools-0.411
 	o fortunes-calvin-0.3
@@ -643,6 +644,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
 	o glib-networking-2.62.2
+	o glib2-2.62.4
 	o gliv-1.9.7
 	o glom-1.14.2
 	o gnet1-1.1.9
@@ -845,8 +847,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libbpg-0.9.6
 	o libcaca-0.99.19
 	o libcarddav-14.0.4
+	o libev-4.31
 	o libffi-3.3
-	o libfilezilla-0.19.1
+	o libfilezilla-0.19.3
 	o libflash-0.4.13
 	o libfolks-0.10.1 [wip]
 	o libgfshare-2.0.0
@@ -874,6 +877,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libtecla-1.6.3
 	o libv4l-0.8.5
 	o libvirt-2.3
+	o libvpx-1.8.2
 	o libwnck3-3.32.0
 	o libxdg-basedir-1.2.0
 	o libykneomgr-0.1.8
@@ -948,6 +952,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-master-2.0.52
 	o munin-node-2.0.52
 	o muse-0.9.2
+	o musicpd-0.21.17
 	o myodbc-5.3.4
 	o mysql-connector-c++-8.0.17
 	o mysql-server-8.0.18
@@ -1071,23 +1076,29 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-asttokens-2.0.3
+	o py-cachetools-4.0.0
 	o py-cassa-1.11.0
 	o py-dbus-1.2.14
 	o py-ephem3-3.7.6.0
 	o py-gds-1.4.2
 	o py-gnome-menus-3.8.0
+	o py-google-auth-1.10.0
 	o py-hgview-1.9.0
+	o py-httplib2-0.15.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
+	o py-mechanize-0.4.5
 	o py-mercurial-5.2.1
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
 	o py-ptt-1.10.2
-	o py-pygit2-1.0.0
+	o py-pygit2-1.0.1
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
+	o py-uritemplate-3.0.1
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1214,7 +1225,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tfmxplay-1.1.6
 	o thunderbird-enigmail-2.1.4
 	o tig-2.2
-	o tigervnc-1.10.0
+	o tigervnc-1.10.1
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tileworld-1.3.2
@@ -1276,6 +1287,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o wine-4.0.1
 	o wine-devel-3.7
+	o wireshark-3.2.0
 	o wkhtmltopdf-0.12.5
 	o wmi-11
 	o wmx-8
