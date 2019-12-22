@@ -1,9 +1,10 @@
-#	$NetBSD: Makefile,v 1.1 2017/02/08 01:02:19 kamil Exp $
+#	$NetBSD: Makefile,v 1.2 2019/12/22 22:23:55 joerg Exp $
 #
 
 #.include <bsd.own.mk>
 
 LIB=	pthread_dbg
+MKPICINSTALL=	no
 
 SRCS=	pthread_dbg.c 
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/02/08 02:06:34 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/22 22:23:55 joerg Exp $
 #
 
 PKGNAME=	libpthread_dbg-20161124
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
