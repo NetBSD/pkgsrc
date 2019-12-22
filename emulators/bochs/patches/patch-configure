@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.6 2019/01/21 10:04:45 markd Exp $
+$NetBSD: patch-configure,v 1.7 2019/12/22 22:09:53 markd Exp $
 
-Deal with Linux 4.x
+Deal with Linux 4.x and 5.x
 
 --- configure.orig	2015-05-03 06:37:18.754341000 +0000
 +++ configure
@@ -9,7 +9,7 @@ Deal with Linux 4.x
                KERNEL_MODULE_SUFFIX="o"
                ;;
 -            2.6*|3.*)
-+            2.6*|3.*|4.*)
++            2.6*|3.*|4.*|5.*)
                PCIDEV_MODULE_MAKE_ALL="all-kernel26"
                KERNEL_MODULE_SUFFIX="ko"
                ;;
