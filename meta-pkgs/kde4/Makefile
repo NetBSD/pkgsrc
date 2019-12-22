@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2019/11/30 19:59:34 markd Exp $
+# $NetBSD: Makefile,v 1.55 2019/12/22 23:59:46 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -96,7 +96,7 @@ DEPENDS+=	kdegraphics-mobipocket>=16.08.0:../../graphics/kdegraphics-mobipocket
 #DEPENDS+=	kdegraphics-strigi-analyzer-16.04.0{,nb[0-9]*}:../../graphics/kdegraphics-strigi-analyzer
 DEPENDS+=	kdegraphics-thumbnailers>=4.14.3:../../graphics/kdegraphics-thumbnailers
 DEPENDS+=	svgpart>=16.08.0:../../graphics/svgpart
-DEPENDS+=	audiocd-kio-16.08.0{,nb[0-9]*}:../../multimedia/audiocd-kio
+#DEPENDS+=	audiocd-kio-16.08.0{,nb[0-9]*}:../../multimedia/audiocd-kio
 DEPENDS+=	dragon>=4.14.3:../../multimedia/dragon
 DEPENDS+=	ffmpegthumbs-4.14.3{,nb[0-9]*}:../../multimedia/ffmpegthumbs
 DEPENDS+=	juk>=4.14.3:../../multimedia/juk
