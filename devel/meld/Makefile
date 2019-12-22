@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2019/07/21 22:24:38 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2019/12/22 20:40:50 markd Exp $
 
 DISTNAME=		meld-3.20.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/meld/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz
@@ -12,6 +12,7 @@ COMMENT=		Visual diff and merge tool (GTK3 version)
 LICENSE=		gnu-gpl-v2
 
 BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
+BUILD_DEPENDS+=		${PYPKGPREFIX}-distro-[0-9]*:../../devel/py-distro
 DEPENDS+=		${PYPKGPREFIX}-gobject3>=3.8:../../devel/py-gobject3
 DEPENDS+=		gsettings-desktop-schemas-[0-9]*:../../sysutils/gsettings-desktop-schemas
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
