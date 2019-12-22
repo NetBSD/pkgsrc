@@ -1,7 +1,15 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:17:48 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/12/22 22:28:54 joerg Exp $
 
 SHA1 (libcurvecpr-20130806/master.zip) = 4083d5edaec792f68bfd91414ce5d4aedab8a688
 RMD160 (libcurvecpr-20130806/master.zip) = ae87ec907de18324c38e147b30c8cc7103380a48
 SHA512 (libcurvecpr-20130806/master.zip) = c26cfd8444eb8124be804e26935ba60b430454dcfe84b3c707f88e1b87c2b0fdb09197c38345d1b7f9efeb86402afe50767144c48cf25d368b16cc7af853c6c3
 Size (libcurvecpr-20130806/master.zip) = 110182 bytes
 SHA1 (patch-configure.ac) = ae60603706decaf38ad0b4b70aa98da6fee2a983
+SHA1 (patch-libcurvecpr-glib_include_curvecpr__glib_client__messager__glib.h) = a4397c537e0dd403f0637ea7e24b3e775bbb869a
+SHA1 (patch-libcurvecpr-glib_include_curvecpr__glib_messager__glib.h) = ff17155ae34f90a3e9645da1725d56b1af7c1b5c
+SHA1 (patch-libcurvecpr_include_curvecpr_block.h) = 7c965ec47344bfd3d90f848fe1e2ce9a5c32ec76
+SHA1 (patch-libcurvecpr_include_curvecpr_bytes.h) = bd2a94c3b0e036b868fb6bae4f8f60da0ead87e6
+SHA1 (patch-libcurvecpr_include_curvecpr_messager.h) = f16c137b8cef90efb9315a10a81b6b08b308b156
+SHA1 (patch-libcurvecpr_include_curvecpr_session.h) = 31c4e1fe6e052f3881f88bd315305fe4c3c2e1d5
+SHA1 (patch-libcurvecpr_lib_bytes.c) = 24387243c172526c872eddb676125a32d0c015a6
+SHA1 (patch-libcurvecpr_lib_messager.c) = e30f3ee305acd102209b70a1aff4f99b7dbaa703
