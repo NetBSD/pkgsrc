@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5473 2019/12/22 02:58:48 tsutsui Exp $
+$NetBSD: CHANGES-2019,v 1.5474 2019/12/22 13:12:26 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8763,3 +8763,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/php72 to 7.2.26 [taca 2019-12-21]
 	Updated chat/hexchat to 2.14.3 [nia 2019-12-21]
 	Updated graphics/libsixel to 1.8.4 [tsutsui 2019-12-22]
+	Updated fonts/ibm-plex-ttf to 4.0.2 [ng0 2019-12-22]
