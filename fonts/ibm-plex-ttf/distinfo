@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/11/19 23:57:21 ng0 Exp $
+$NetBSD: distinfo,v 1.3 2019/12/22 13:10:26 ng0 Exp $
 
-SHA1 (ibm-plex-ttf-4.0.1/TrueType.zip) = 5a405056a2a27ffa5a8196dfbc5a35c212cd8d68
-RMD160 (ibm-plex-ttf-4.0.1/TrueType.zip) = a6640518e92b0bf4f7da6617e003df3d30577ee6
-SHA512 (ibm-plex-ttf-4.0.1/TrueType.zip) = d661e64ea20ee2210af4efe78d10a2b3bb0ee58eb6a7fc03e4c3a4721311814fe77326a66954a1af0b690510dadf3b9c23ff85a8a677960562e0f850aac754fa
-Size (ibm-plex-ttf-4.0.1/TrueType.zip) = 7659225 bytes
+SHA1 (ibm-plex-ttf-4.0.2/TrueType.zip) = 496cc20a069f4681842e8d4248ecbcd36b32bf48
+RMD160 (ibm-plex-ttf-4.0.2/TrueType.zip) = 07fad48733538d78b33f2b84569fa68aa2cafcf0
+SHA512 (ibm-plex-ttf-4.0.2/TrueType.zip) = 45185397e50916b4fd508d4f387d80ff3729b84f5b164b9cfe2b0141b7bcffe73ce7bfe3ce3a374e5fca9241d916e675ebcb24e244b32eb2ea1ea9771e778dd4
+Size (ibm-plex-ttf-4.0.2/TrueType.zip) = 7658406 bytes
