@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.166 2019/12/22 06:17:10 markd Exp $
+# $NetBSD: Makefile,v 1.167 2019/12/22 06:19:54 markd Exp $
 
 DISTNAME=	rhythmbox-3.4.2
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/3.4/}
 EXTRACT_SUFX=	.tar.xz
@@ -38,7 +38,6 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 .include "../../lang/python/application.mk"
 .include "../../audio/libgpod/buildlink3.mk"
-.include "../../comms/lirc/buildlink3.mk"
 .include "../../databases/tdb/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
