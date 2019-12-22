@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/11/24 13:43:36 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/12/22 22:27:40 joerg Exp $
 share/doc/${SUBDIR}/color.html
 share/doc/${SUBDIR}/doxygen-build.stamp
 share/doc/${SUBDIR}/draft-ietf-avt-rtp-theora-00.txt
@@ -10,8 +10,6 @@ share/doc/${SUBDIR}/html/classes.html
 share/doc/${SUBDIR}/html/closed.png
 share/doc/${SUBDIR}/html/codec_8h.html
 share/doc/${SUBDIR}/html/codec_8h_source.html
-share/doc/${SUBDIR}/html/dir_000000.html
-share/doc/${SUBDIR}/html/dir_000001.html
 share/doc/${SUBDIR}/html/doc.png
 share/doc/${SUBDIR}/html/doxygen.css
 share/doc/${SUBDIR}/html/doxygen.png
@@ -72,8 +70,6 @@ share/doc/${SUBDIR}/html/theoraenc_8h_source.html
 share/doc/${SUBDIR}/latex/Makefile
 share/doc/${SUBDIR}/latex/annotated.tex
 share/doc/${SUBDIR}/latex/codec_8h.tex
-share/doc/${SUBDIR}/latex/dir_000000.tex
-share/doc/${SUBDIR}/latex/dir_000001.tex
 share/doc/${SUBDIR}/latex/doxygen.sty
 share/doc/${SUBDIR}/latex/files.tex
 share/doc/${SUBDIR}/latex/group__basefuncs.tex
@@ -81,6 +77,7 @@ share/doc/${SUBDIR}/latex/group__decfuncs.tex
 share/doc/${SUBDIR}/latex/group__encfuncs.tex
 share/doc/${SUBDIR}/latex/group__oldfuncs.tex
 share/doc/${SUBDIR}/latex/index.tex
+share/doc/${SUBDIR}/latex/longtable_doxygen.sty
 share/doc/${SUBDIR}/latex/modules.tex
 share/doc/${SUBDIR}/latex/refman.tex
 share/doc/${SUBDIR}/latex/structth__comment.tex
@@ -94,6 +91,7 @@ share/doc/${SUBDIR}/latex/structtheora__comment.tex
 share/doc/${SUBDIR}/latex/structtheora__info.tex
 share/doc/${SUBDIR}/latex/structtheora__state.tex
 share/doc/${SUBDIR}/latex/structyuv__buffer.tex
+share/doc/${SUBDIR}/latex/tabu_doxygen.sty
 share/doc/${SUBDIR}/latex/theora_8h.tex
 share/doc/${SUBDIR}/latex/theoradec_8h.tex
 share/doc/${SUBDIR}/latex/theoraenc_8h.tex
