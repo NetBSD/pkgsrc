@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2018/05/29 03:26:10 youri Exp $
+@comment $NetBSD: PLIST,v 1.30 2019/12/22 06:17:10 markd Exp $
 bin/rhythmbox
 bin/rhythmbox-client
 include/rhythmbox/backends/rb-encoder.h
@@ -85,6 +85,8 @@ lib/rhythmbox/plugins/audiocd/audiocd.plugin
 lib/rhythmbox/plugins/audiocd/libaudiocd.la
 lib/rhythmbox/plugins/audioscrobbler/audioscrobbler.plugin
 lib/rhythmbox/plugins/audioscrobbler/libaudioscrobbler.la
+lib/rhythmbox/plugins/cd-recorder/cd-recorder.plugin
+lib/rhythmbox/plugins/cd-recorder/libcd-recorder.la
 lib/rhythmbox/plugins/dbus-media-server/dbus-media-server.plugin
 lib/rhythmbox/plugins/dbus-media-server/libdbus-media-server.la
 lib/rhythmbox/plugins/generic-player/generic-player.plugin
@@ -97,8 +99,8 @@ lib/rhythmbox/plugins/mmkeys/libmmkeys.la
 lib/rhythmbox/plugins/mmkeys/mmkeys.plugin
 lib/rhythmbox/plugins/mpris/libmpris.la
 lib/rhythmbox/plugins/mpris/mpris.plugin
-lib/rhythmbox/plugins/mtpdevice/libmtpdevice.la
-lib/rhythmbox/plugins/mtpdevice/mtpdevice.plugin
+${PLIST.hal}lib/rhythmbox/plugins/mtpdevice/libmtpdevice.la
+${PLIST.hal}lib/rhythmbox/plugins/mtpdevice/mtpdevice.plugin
 lib/rhythmbox/plugins/notification/libnotification.la
 lib/rhythmbox/plugins/notification/notification.plugin
 lib/rhythmbox/plugins/power-manager/libpower-manager.la
