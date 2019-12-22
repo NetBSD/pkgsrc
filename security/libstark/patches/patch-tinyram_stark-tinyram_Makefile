@@ -1,0 +1,13 @@
+$NetBSD: patch-tinyram_stark-tinyram_Makefile,v 1.1 2019/12/22 22:29:39 joerg Exp $
+
+--- tinyram/stark-tinyram/Makefile.orig	2019-12-22 19:03:25.777546794 +0000
++++ tinyram/stark-tinyram/Makefile
+@@ -8,7 +8,7 @@ LIBS=						\
+ 	FFT
+ 
+ LIBFLAGS=$(addprefix -l, $(LIBS))
+-LNKFLAGS=-L"$(ALGEBRALNKDIR)" -L"$(FFTLIBLNKDIR)" -L"$(GADGET3LNKDIR)" -L"$(LIBSTARKLINKDIR)" -lgomp
++LNKFLAGS=-L"$(ALGEBRALNKDIR)" -L"$(FFTLIBLNKDIR)" -L"$(GADGET3LNKDIR)" -L"$(LIBSTARKLINKDIR)" -fopenmp
+ 
+ SRCDIR  = src
+ SRCEXT  = cpp
