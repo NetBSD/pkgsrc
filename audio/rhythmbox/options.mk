@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2010/02/03 12:45:15 drochner Exp $
+# $NetBSD: options.mk,v 1.3 2019/12/22 06:17:10 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rhythmbox
 PKG_SUPPORTED_OPTIONS=	hal daap
@@ -8,13 +8,9 @@ PLIST_VARS+=		hal daap
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mhal)
-CONFIGURE_ARGS+=	--with-ipod
-.include "../../audio/libgpod/buildlink3.mk"
-# needs a newer libmtp
-#CONFIGURE_ARGS+=	--with-mtp
-#.include "../../devel/libmtp/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-hal
 PLIST.hal=		yes
+.include "../../devel/libmtp/buildlink3.mk"
 .include "../../sysutils/hal/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-hal
