@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2019/01/21 10:04:45 markd Exp $
+$NetBSD: distinfo,v 1.34 2019/12/22 22:09:53 markd Exp $
 
 SHA1 (bochs-2.6.9.tar.gz) = 1aec18479c33d9abc7a43c0fbd744eb86199c55d
 RMD160 (bochs-2.6.9.tar.gz) = d437bbaa04b8bb9f3b42a51860459dcc4e308616
@@ -6,7 +6,7 @@ SHA512 (bochs-2.6.9.tar.gz) = dfecf3a1bad07f06c2f7bb989d146e4a8eaeca493b598d415f
 Size (bochs-2.6.9.tar.gz) = 5169187 bytes
 SHA1 (patch-.bochsrc) = df5b8879ec005fe44bca8bee42c549095012013d
 SHA1 (patch-Makefile.in) = ca8d485a9f4901df15eb3e521105de2ae833cfcb
-SHA1 (patch-configure) = 3c8de4efa55dac9f672ad087e35dd7512ae5db8e
+SHA1 (patch-configure) = 47774947feb4ddbdeb9f3df68f345cd42ab76a7b
 SHA1 (patch-iodev_network_eth__socket.cc) = 37c4ab50da3f646ffc541001e8a8b7c93a7995c4
 SHA1 (patch-iodev_network_slirp_compat_cc) = a48d112daac6049c0ee8076eb012ab2f44740889
 SHA1 (patch-iodev_network_slirp_slirp.h) = c0920978ca5f004be603950240e4a988bee6d4f9
