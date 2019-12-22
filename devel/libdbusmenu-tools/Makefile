@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/06 14:34:30 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2019/12/22 22:22:27 joerg Exp $
 
 PKGREVISION= 15
 .include "../../meta-pkgs/libdbusmenu/Makefile.common"
@@ -13,6 +13,12 @@ CONFIGURE_ARGS+=	--enable-dumper
 CONFIGURE_ARGS+=	--disable-introspection
 CONFIGURE_ARGS+=	--disable-vala
 CONFIGURE_ARGS+=	--enable-tests
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-deprecated-declarations
+.endif
 
 post-configure:
 	${LN} -sf ${BUILDLINK_DIR}/lib/libdbusmenu-glib.la \
