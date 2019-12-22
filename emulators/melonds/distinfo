@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2019/09/13 10:12:07 nia Exp $
+$NetBSD: distinfo,v 1.2 2019/12/22 22:25:21 joerg Exp $
 
 SHA1 (melonDS-0.8.3.tar.gz) = 9c1a71a05bfa041b727effe6180f6f7b590713a5
 RMD160 (melonDS-0.8.3.tar.gz) = d0753d1a8e959b76f77eac31babbc2b32b2940c4
 SHA512 (melonDS-0.8.3.tar.gz) = 4fed77abd231812d2f9ddb19a7fe6e808fb8e92035bb2fea220032b7c0a98671b4fd79ef0f7c7c559e92f3d1875ea119afaa581be2edacaa10f4437620eecd76
 Size (melonDS-0.8.3.tar.gz) = 965501 bytes
 SHA1 (patch-src_libui__sdl_LAN__PCap.cpp) = 1fd806b6b446622e5d214091e96aac3d6eec8490
+SHA1 (patch-src_libui__sdl_OSD.cpp) = 34c386cd5babf0f7dfb82f29b3f7255039ce7e15
