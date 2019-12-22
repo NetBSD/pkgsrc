@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/12/13 07:44:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2019/12/22 10:38:15 bsiegert Exp $
 
 DISTNAME=	parse-2.3.5
 PKGNAME=	go-${DISTNAME}
@@ -15,6 +15,9 @@ LICENSE=	mit
 
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/tdewolff/parse
+
+post-install:
+	find ${DESTDIR}${PREFIX} -name "*.orig" -exec rm \{\} \;
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
