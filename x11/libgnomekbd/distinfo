@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2018/06/01 17:04:18 youri Exp $
+$NetBSD: distinfo,v 1.16 2019/12/22 22:30:58 joerg Exp $
 
 SHA1 (libgnomekbd-3.6.0.tar.xz) = 4375d2cb8cbdbad7a4f59a8b99edd58cfa328597
 RMD160 (libgnomekbd-3.6.0.tar.xz) = 59ecbefb14f92e7c896ca4416d5f09e45a2b30a9
 SHA512 (libgnomekbd-3.6.0.tar.xz) = 27d0711eeebba91ca0dbed079c17acfec97116153a01f4f6e78cb30044afc534c438f655c6836b74b377acb8116d3b70e1f09578f182bb4fc51d8d05e89c6f17
 Size (libgnomekbd-3.6.0.tar.xz) = 373588 bytes
+SHA1 (patch-libgnomekbd_gkbd-keyboard-config.c) = 89f8b3e8e809c896c3aa0a549f5c43ee2aaf36b8
