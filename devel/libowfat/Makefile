@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/07/16 21:39:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/22 22:23:00 joerg Exp $
 #
 
 DISTNAME=	libowfat-0.32
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.xz
