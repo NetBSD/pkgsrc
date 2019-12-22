@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2018/06/02 13:16:42 prlw1 Exp $
+$NetBSD: distinfo,v 1.7 2019/12/22 22:21:58 joerg Exp $
 
 SHA1 (glmark2-2017.07-168d2f1650c84be3f13d1a5b76ccec8cbb89188e.tar.gz) = 5a27940b9e4ae2a1bc025079802e116af127479a
 RMD160 (glmark2-2017.07-168d2f1650c84be3f13d1a5b76ccec8cbb89188e.tar.gz) = 60572134a88fb3fd1a95f3be35d26b6c4edd852b
 SHA512 (glmark2-2017.07-168d2f1650c84be3f13d1a5b76ccec8cbb89188e.tar.gz) = 9e2c8a2e2da5514476c3fe09e5d87380654b052b8488cfff2d7b06127bfcb92ca81eac09aea34d194ac4e0b9a0758696cc0ac0d4bc1117be5ed858a0ee22a3cc
 Size (glmark2-2017.07-168d2f1650c84be3f13d1a5b76ccec8cbb89188e.tar.gz) = 7827207 bytes
+SHA1 (patch-waflib_Tools_c__config.py) = 8bb7716b211731cb8cfa8a73276e950fa363f710
