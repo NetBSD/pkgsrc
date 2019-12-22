@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/03 17:12:02 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/22 22:27:21 joerg Exp $
 
 DISTNAME=	libva-utils-2.3.0
 CATEGORIES=	multimedia
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/intel/libva-utils/
 COMMENT=	Collection of tests for VA-API
 LICENSE=	mit
 
+USE_LIBTOOL=	yes
 USE_TOOLS+=	automake pkg-config
 USE_LANGUAGES=	c c++
 
