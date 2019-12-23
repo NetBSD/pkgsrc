@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2019/06/08 22:46:03 nia Exp $
+# $NetBSD: options.mk,v 1.2 2019/12/23 23:03:24 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mgba
 
@@ -37,6 +37,7 @@ CMAKE_ARGS+=	-DBUILD_QT=OFF
 CMAKE_ARGS+=	-DBUILD_GL=ON
 CMAKE_ARGS+=	-DUSE_EPOXY=ON
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/libepoxy/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DBUILD_GL=OFF
