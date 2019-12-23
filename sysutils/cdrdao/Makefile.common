@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2018/11/15 01:13:01 markd Exp $
+# $NetBSD: Makefile.common,v 1.17 2019/12/23 20:38:15 markd Exp $
 #
 # used by sysutils/cdrdao/Makefile
 # used by sysutils/gcdmaster/Makefile
@@ -17,7 +17,7 @@ DISTINFO_FILE=		${.CURDIR}/../../sysutils/cdrdao/distinfo
 
 CDRDAO_VER=		1.2.4
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--with-pcctsbin=${PREFIX}/bin
 CONFIGURE_ARGS+=	--with-pcctsinc=${PREFIX}/include/pccts
