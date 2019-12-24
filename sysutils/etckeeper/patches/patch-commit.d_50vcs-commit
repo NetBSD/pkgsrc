@@ -1,13 +1,13 @@
-$NetBSD: patch-commit.d_50vcs-commit,v 1.3 2017/06/29 17:19:13 schmonz Exp $
+$NetBSD: patch-commit.d_50vcs-commit,v 1.4 2019/12/24 06:00:24 schmonz Exp $
 
 Test more carefully for a possibly missing binary. From Nathan Arthur in
 private mail.
 
---- commit.d/50vcs-commit.orig	2016-07-17 23:01:39.000000000 +0000
+--- commit.d/50vcs-commit.orig	2019-11-29 15:43:52.000000000 +0000
 +++ commit.d/50vcs-commit
 @@ -23,9 +23,11 @@ fi
  
- hostname=`hostname`
+ hostname=`hostname 2>/dev/null || cat /etc/hostname`
  hostname="${hostname%%.*}"
 -dnsdomainname=`dnsdomainname 2>/dev/null || true`
 -if [ -n "$dnsdomainname" ]; then
