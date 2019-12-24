@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2019/11/03 09:14:16 rillig Exp $
+# $NetBSD: Makefile,v 1.86 2019/12/24 06:21:20 dbj Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -92,6 +92,13 @@ LDFLAGS+=			-lexecinfo
 .elif ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=		-platform macx-clang
 CONFIGURE_ARGS+=		-no-framework
+   # pkgsrc has a patch to avoid using SDK, but the configure
+   # logic gets confused if it can't find the header files
+   # so give it a direct path to them if they aren't installed
+   # in /usr/include
+.  if !exists(/usr/include)
+CONFIGURE_ARGS+=	-I "$$(xcrun --show-sdk-path)"/usr/include
+.  endif
 .  if exists(/usr/lib/libresolv.dylib)
 LDFLAGS+=			-lresolv
 .  endif
