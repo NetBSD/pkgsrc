@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/09/09 09:08:07 nia Exp $
+# $NetBSD: Makefile,v 1.15 2019/12/24 20:22:17 schmonz Exp $
 
 DISTNAME=	Pound-2.8
 PKGNAME=	${DISTNAME:S/Pound/pound/}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.apsis.ch/pound/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.apsis.ch/pound/
+HOMEPAGE=	https://www.apsis.ch/pound.html
 COMMENT=	Reverse proxy, load balancer and HTTPS front-end
 LICENSE=	gnu-gpl-v3
 
