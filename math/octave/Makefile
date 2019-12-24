@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2019/11/02 16:16:20 rillig Exp $
+# $NetBSD: Makefile,v 1.196 2019/12/24 01:59:15 dbj Exp $
 
 DISTNAME=	octave-5.1.0
 PKGREVISION=	8
@@ -28,7 +28,6 @@ USE_LANGUAGES=		c c++ fortran77
 
 # needed for loading of shared objects such as those in the
 # octave-forge package or user written ones compiled with mkoctfile
-CONFIGURE_ARGS+=	--enable-dl
 CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ARGS+=	--enable-shared
 
@@ -47,8 +46,8 @@ CONFIGURE_ENV+=		MKOCTFILE_F77=${FCPATH}
 # which conflicts with the one in the X11 headers, so avoid pulling in X11.
 CONFIGURE_ARGS.Darwin+=	--without-x
 
-# The OpenGL framework doesn't have osmesa and the X11 one has header conflicts with the framework
-CONFIGURE_ARGS.Darwin+=	--without-OSMesa
+# This is needed on Darwin or we get link failures on modules.
+CONFIGURE_ARGS.Darwin+=	--enable-link-all-dependencies
 
 # We use this to install .oct files so it doesn't strip them.
 CONFIGURE_ENV+=		INSTALL_LIB=${INSTALL_LIB:Q}
