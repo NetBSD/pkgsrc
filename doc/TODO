@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19510 2019/12/22 11:08:22 wiz Exp $
+$NetBSD: TODO,v 1.19511 2019/12/24 05:38:00 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -570,6 +570,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o esh-0.8.5
 	o ess-15.09
 	o etach-1.4.1
+	o etckeeper-1.18.13
 	o etm-3.0.43 [wip/py-etmtk]
 	o etm-891
 	o ettercap-0.7.6
