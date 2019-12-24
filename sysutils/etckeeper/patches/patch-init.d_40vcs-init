@@ -1,26 +1,15 @@
-$NetBSD: patch-init.d_40vcs-init,v 1.1 2013/05/27 08:36:00 sbd Exp $
+$NetBSD: patch-init.d_40vcs-init,v 1.2 2019/12/24 06:00:24 schmonz Exp $
 
 Change '/etc' to ${ETCKEEPER_DIR}
 
---- init.d/40vcs-init.orig	2011-02-22 20:19:36.000000000 +0000
+--- init.d/40vcs-init.orig	2019-11-29 15:43:52.000000000 +0000
 +++ init.d/40vcs-init
-@@ -3,15 +3,15 @@ set -e
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ set -e
  
+-description="$(hostname 2>/dev/null || cat /etc/hostname) /etc repository"
++description="$(hostname 2>/dev/null || cat /etc/hostname) ${ETCKEEPER_DIR} repository"
  if [ "$VCS" = git ] && [ ! -e .git ]; then
  	git init
--	echo "$(hostname) /etc repository" > .git/description
-+	echo "$(hostname) ${ETCKEEPER_DIR} repository" > .git/description
- elif [ "$VCS" = hg ] && [ ! -e .hg ]; then
- 	hg init
- 	echo  "[web]" > .hg/hgrc
--	echo  "description = $(hostname) /etc repository" >> .hg/hgrc
-+	echo  "description = $(hostname) ${ETCKEEPER_DIR} repository" >> .hg/hgrc
- elif [ "$VCS" = bzr ] && [ ! -e .bzr ]; then
- 	bzr init
--	bzr nick "$(hostname) /etc repository"
-+	bzr nick "$(hostname) ${ETCKEEPER_DIR} repository"
- elif [ "$VCS" = darcs ] && [ ! -e _darcs ]; then
- 	darcs initialize
--	echo "$(hostname) /etc repository" > _darcs/prefs/motd
-+	echo "$(hostname) ${ETCKEEPER_DIR} repository" > _darcs/prefs/motd
- fi
+ 	echo "$description" > .git/description
