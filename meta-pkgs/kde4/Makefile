@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2019/12/22 23:59:46 markd Exp $
+# $NetBSD: Makefile,v 1.56 2019/12/24 03:31:53 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -145,7 +145,7 @@ DEPENDS+=	kgpg-16.08.0{,nb[0-9]*}:../../security/kgpg
 #DEPENDS+=	superkaramba-15.08.3{,nb[0-9]*}:../../misc/superkaramba
 DEPENDS+=	sweeper-16.12.0{,nb[0-9]*}:../../misc/sweeper
 DEPENDS+=	kimagemapeditor>=19.08.0:../../www/kimagemapeditor
-DEPENDS+=	baloo-4.14.3{,nb[0-9]*}:../../sysutils/baloo
+#DEPENDS+=	baloo-4.14.3{,nb[0-9]*}:../../sysutils/baloo
 
 META_PACKAGE=	yes
 
