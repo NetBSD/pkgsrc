@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5477 2019/12/23 13:44:55 sjmulder Exp $
+$NetBSD: CHANGES-2019,v 1.5478 2019/12/24 01:43:38 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8767,3 +8767,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated fonts/ibm-plex-otf to 4.0.2 [ng0 2019-12-22]
 	Updated textproc/libxlsxwriter to 0.8.9 [sjmulder 2019-12-23]
 	Updated math/sc-im to 0.7.0nb6 [sjmulder 2019-12-23]
+	Updated lang/guile to 1.8.8nb10 [gutteridge 2019-12-24]
