@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2019/11/24 00:35:56 nia Exp $
+# $NetBSD: Makefile.common,v 1.41 2019/12/24 05:07:45 dbj Exp $
 #
 # used by audio/libao-alsa/Makefile
 # used by audio/libao-arts/Makefile
@@ -43,7 +43,6 @@ CONFIGURE_ENV+=		ac_cv_header_sys_soundcard_h=no # disable OSS by default
 CONFIGURE_ENV+=		ac_cv_header_machine_soundcard_h=no
 CONFIGURE_ENV+=		ac_cv_header_sys_audioio_h=no # disable Sun audio by default
 CONFIGURE_ENV+=		ac_cv_header_sndio_h=no # disable sndio by default
-CONFIGURE_ENV+=		have_macosx=no # disable macOS audio by default
 
 MAKE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl:Q}
 
