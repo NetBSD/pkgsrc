@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.56 2019/03/05 11:11:12 ryoon Exp $
+$NetBSD: distinfo,v 1.57 2019/12/24 01:58:48 dbj Exp $
 
 SHA1 (octave-5.1.0.tar.gz) = 75a5ec450473e4c39290fdab9feade4a5739e465
 RMD160 (octave-5.1.0.tar.gz) = b8b4469d70f1b67be688e12ff551e6b614c70213
@@ -11,6 +11,7 @@ SHA1 (patch-libgnu_stdio.in.h) = 112a424655d46c75fb68531fe7a84d9a0e97a984
 SHA1 (patch-libinterp_corefcn_input.cc) = 1dc78f00ffbb41f493ebc0889cc0a37d598507c5
 SHA1 (patch-libinterp_dldfcn_config-module.awk) = 54b64357b1ef80c5e55eb5eccf742d2267eb277d
 SHA1 (patch-libinterp_dldfcn_module.mk) = 2362d824497a8892078437c24757ae1e40e2e556
+SHA1 (patch-liboctave_util_quit.cc) = 8e0209068be7d48ccebbce0e08a29072c07b0d22
 SHA1 (patch-liboctave_wrappers_iconv-wrappers.h) = 9995e784844ae2c2d7a77f975cd8b8954ab8a773
 SHA1 (patch-m4_acinclude.m4) = 16dfa3a47403b0c6bc5935fdb5f1162a393b3f25
 SHA1 (patch-scripts_miscellaneous_unpack.m) = 82c9ca170762e223c8e5a6f88a7dd9fe2a2a33d0
