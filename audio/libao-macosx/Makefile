@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/11/24 00:35:57 nia Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/24 05:07:45 dbj Exp $
 
 .include "../../audio/libao/Makefile.common"
 
@@ -8,7 +8,6 @@ COMMENT+=	(MacOS X plugin)
 
 ONLY_FOR_PLATFORM+=	Darwin-*-*
 
-CONFIGURE_ENV:=		${CONFIGURE_ENV:S/have_macosx=no//1}
 BUILD_DIRS=		src/plugins/macosx
 INSTALL_DIRS=		src/plugins/macosx
 
