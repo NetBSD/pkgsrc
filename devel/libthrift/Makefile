@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2019/09/18 11:27:52 adam Exp $
+# $NetBSD: Makefile,v 1.77 2019/12/25 14:08:41 taca Exp $
 
 .include "../../devel/thrift/Makefile.common"
 
@@ -14,6 +14,7 @@ PKGCONFIG_OVERRIDE+=	lib/cpp/thrift-z.pc.in
 PKGCONFIG_OVERRIDE+=	lib/cpp/thrift.pc.in
 
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
