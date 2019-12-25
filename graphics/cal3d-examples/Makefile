@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/08/30 18:39:22 nia Exp $
+# $NetBSD: Makefile,v 1.25 2019/12/25 00:14:41 joerg Exp $
 #
 
 PKGNAME=	cal3d-examples-${CAL3D_VERSION}
@@ -51,4 +51,5 @@ post-install:
 .include "../../graphics/freeglut/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-glut=${BUILDLINK_PREFIX.freeglut}
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
