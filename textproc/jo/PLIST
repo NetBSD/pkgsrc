@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/26 17:29:22 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/12/25 12:49:27 adam Exp $
 bin/jo
 man/man1/jo.1
+share/bash_completion.d/jo.bash
