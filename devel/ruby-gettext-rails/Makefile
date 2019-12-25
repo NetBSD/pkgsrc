@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/03/18 14:21:20 taca Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/25 00:17:23 joerg Exp $
 
 DISTNAME=	gettext_rails-2.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
@@ -14,6 +14,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-locale-rails>=2.0.5:../../devel/ruby-locale-rails
 DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
 DEPENDS+=	${RUBY_RAILS_DEPENDS}
 
+RUBY_VERSIONS_INCOMPATIBLE=	24
 RUBY_RAILS_ACCEPTED=	# defined
 
 post-extract:
