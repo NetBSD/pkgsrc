@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/03/18 14:21:21 taca Exp $
+# $NetBSD: Makefile,v 1.4 2019/12/25 00:17:24 joerg Exp $
 
 DISTNAME=	sprockets-rails-3.2.1
 CATEGORIES=	www
@@ -13,6 +13,7 @@ DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
 #DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 
 RUBY_RAILS_ACCEPTED=	42
+RUBY_VERSIONS_INCOMPATIBLE=	24
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
