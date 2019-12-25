@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/08/29 16:20:40 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/12/25 14:29:24 schmonz Exp $
 ${RUBY_SITEARCHLIB}/_xapian.a
 ${RUBY_SITEARCHLIB}/_xapian.${RUBY_DLEXT}
 ${RUBY_SITELIB}/xapian.rb
@@ -64,7 +64,6 @@ share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/images/wrench_orange.png
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/images/zoom.png
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/index.html
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/js/darkfish.js
-${PLIST.jquery}share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/js/jquery.js
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/js/navigation.js
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/js/navigation.js.gz
 share/doc/xapian-bindings/${RUBY_PKGPREFIX}/rdocs/js/search.js
