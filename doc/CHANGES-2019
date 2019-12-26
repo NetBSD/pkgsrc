@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5481 2019/12/25 17:35:12 sjmulder Exp $
+$NetBSD: CHANGES-2019,v 1.5482 2019/12/26 05:46:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8771,3 +8771,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/etckeeper to 1.18.12 [schmonz 2019-12-24]
 	Updated math/sc-im to 0.7.0nb7 [sjmulder 2019-12-25]
 	Updated devel/mustach to 0.99nb1 [sjmulder 2019-12-25]
+	Updated www/ruby-sass-rails to 5.0.7nb1 [taca 2019-12-26]
