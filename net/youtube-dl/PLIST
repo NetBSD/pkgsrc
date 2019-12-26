@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.96 2019/11/28 21:22:07 leot Exp $
+@comment $NetBSD: PLIST,v 1.97 2019/12/26 22:12:27 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -845,6 +845,9 @@ ${PYSITELIB}/youtube_dl/extractor/ign.pyo
 ${PYSITELIB}/youtube_dl/extractor/imdb.py
 ${PYSITELIB}/youtube_dl/extractor/imdb.pyc
 ${PYSITELIB}/youtube_dl/extractor/imdb.pyo
+${PYSITELIB}/youtube_dl/extractor/imggaming.py
+${PYSITELIB}/youtube_dl/extractor/imggaming.pyc
+${PYSITELIB}/youtube_dl/extractor/imggaming.pyo
 ${PYSITELIB}/youtube_dl/extractor/imgur.py
 ${PYSITELIB}/youtube_dl/extractor/imgur.pyc
 ${PYSITELIB}/youtube_dl/extractor/imgur.pyo
@@ -950,9 +953,6 @@ ${PYSITELIB}/youtube_dl/extractor/kinopoisk.pyo
 ${PYSITELIB}/youtube_dl/extractor/konserthusetplay.py
 ${PYSITELIB}/youtube_dl/extractor/konserthusetplay.pyc
 ${PYSITELIB}/youtube_dl/extractor/konserthusetplay.pyo
-${PYSITELIB}/youtube_dl/extractor/kontrtube.py
-${PYSITELIB}/youtube_dl/extractor/kontrtube.pyc
-${PYSITELIB}/youtube_dl/extractor/kontrtube.pyo
 ${PYSITELIB}/youtube_dl/extractor/krasview.py
 ${PYSITELIB}/youtube_dl/extractor/krasview.pyc
 ${PYSITELIB}/youtube_dl/extractor/krasview.pyo
@@ -1172,9 +1172,6 @@ ${PYSITELIB}/youtube_dl/extractor/mtv.pyo
 ${PYSITELIB}/youtube_dl/extractor/muenchentv.py
 ${PYSITELIB}/youtube_dl/extractor/muenchentv.pyc
 ${PYSITELIB}/youtube_dl/extractor/muenchentv.pyo
-${PYSITELIB}/youtube_dl/extractor/musicplayon.py
-${PYSITELIB}/youtube_dl/extractor/musicplayon.pyc
-${PYSITELIB}/youtube_dl/extractor/musicplayon.pyo
 ${PYSITELIB}/youtube_dl/extractor/mwave.py
 ${PYSITELIB}/youtube_dl/extractor/mwave.pyc
 ${PYSITELIB}/youtube_dl/extractor/mwave.pyo
@@ -2120,9 +2117,6 @@ ${PYSITELIB}/youtube_dl/extractor/videofyme.pyo
 ${PYSITELIB}/youtube_dl/extractor/videomore.py
 ${PYSITELIB}/youtube_dl/extractor/videomore.pyc
 ${PYSITELIB}/youtube_dl/extractor/videomore.pyo
-${PYSITELIB}/youtube_dl/extractor/videopremium.py
-${PYSITELIB}/youtube_dl/extractor/videopremium.pyc
-${PYSITELIB}/youtube_dl/extractor/videopremium.pyo
 ${PYSITELIB}/youtube_dl/extractor/videopress.py
 ${PYSITELIB}/youtube_dl/extractor/videopress.pyc
 ${PYSITELIB}/youtube_dl/extractor/videopress.pyo
