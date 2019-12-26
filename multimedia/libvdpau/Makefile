@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/11/27 13:46:53 nia Exp $
+# $NetBSD: Makefile,v 1.18 2019/12/26 21:44:06 gdt Exp $
 
 DISTNAME=	libvdpau-1.3
 CATEGORIES=	multimedia
@@ -18,6 +18,7 @@ CONF_FILES=	${EGDIR}/vdpau_wrapper.cfg \
 		${PKG_SYSCONFDIR}/vdpau_wrapper.cfg
 
 MESON_ARGS+=	-Degdir=${EGDIR}
+MESON_ARGS+=	-Ddocumentation=false
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/vdpau.pc
