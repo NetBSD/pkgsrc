@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/12/26 05:45:33 taca Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/27 03:17:53 taca Exp $
 
 DISTNAME=	sass-rails-5.0.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rails-/rails${RUBY_RAILS}-/}
@@ -18,6 +18,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-tilt1>=1.3<3:../../textproc/ruby-tilt1
 USE_LANGUAGES=	# none
 
 RUBY_RAILS_ACCEPTED=	42 51
+RUBY_VERSIONS_ACCEPTED=	25 26
 
 OVERRIDE_GEMSPEC=	sprockets-rails>=3
 
