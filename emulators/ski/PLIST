@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:29:27 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2019/12/27 16:43:44 scole Exp $
 bin/bski
 bin/bskinc
 ${PLIST.gski}bin/gski
@@ -30,4 +30,4 @@ ${PLIST.gski}man/man1/gski.1
 man/man1/ski.1
 ${PLIST.xski}man/man1/xski.1
 share/ski/SkiManualMasterDoc.pdf
-${PLIST.gski}share/ski/gski.glade
+share/ski/gski.glade
