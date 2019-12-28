@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.126 2019/11/04 19:57:59 rillig Exp $
+# $NetBSD: Makefile,v 1.127 2019/12/28 21:48:08 gutteridge Exp $
 
 DISTNAME=	lilypond-2.18.2
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	print
 MASTER_SITES=	http://download.linuxaudio.org/lilypond/sources/v2.18/
 

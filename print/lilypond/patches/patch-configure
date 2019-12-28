@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2018/06/19 08:46:41 fhajny Exp $
+$NetBSD: patch-configure,v 1.5 2019/12/28 21:48:09 gutteridge Exp $
 
 Disable c/c++ version check; it fails e.g. with clang emulating gcc.
 Allow more metapost versions than upstream until pkgsrc contains
@@ -6,8 +6,66 @@ a new enough metapost.
 
 Ignore result of broken pkg-config version test.
 
+Fix various searches for executables: "type -p" no longer works in
+NetBSD's /bin/sh, nor does it work as expected on some other OSes
+(e.g. DragonFly). As discussed in NetBSD PR bin/54803.
+
 --- configure.orig	2014-03-17 15:29:16.000000000 +0000
 +++ configure
+@@ -2264,7 +2264,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -2413,7 +2413,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -2563,7 +2563,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -2820,7 +2820,7 @@ $as_echo_n "checking for python... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+ 	if ! $exe -V > /dev/null 2>&1 ; then
+ 	    continue
+@@ -4331,7 +4331,7 @@ $as_echo_n "checking for python... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+ 	if ! $exe -V > /dev/null 2>&1 ; then
+ 	    continue
+@@ -5240,7 +5240,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
 @@ -5297,7 +5297,7 @@ $as_echo_n "checking $r version... " >&6
  `
      { $as_echo "$as_me:$LINENO: result: $ver" >&5
@@ -17,6 +75,15 @@ Ignore result of broken pkg-config version test.
  
      eval "REQUIRED"=\"`eval echo \"'$'REQUIRED\" \""$r >= 3.4 (installed: $ver)"\"`\"
  
+@@ -5757,7 +5757,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
 @@ -5814,7 +5814,7 @@ $as_echo_n "checking $r version... " >&6
  `
      { $as_echo "$as_me:$LINENO: result: $ver" >&5
@@ -26,6 +93,69 @@ Ignore result of broken pkg-config version test.
  
      eval "REQUIRED"=\"`eval echo \"'$'REQUIRED\" \""$r >= 3.4 (installed: $ver)"\"`\"
  
+@@ -6063,7 +6063,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -6557,7 +6557,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -6638,7 +6638,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -6795,7 +6795,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -7676,7 +7676,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -7827,7 +7827,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -7976,7 +7976,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
 @@ -8087,11 +8087,11 @@ $as_echo "$ver" >&6; }
      {printf "%.0f\n", $1*1000000 + $2*1000 + three}'
  `
@@ -41,6 +171,69 @@ Ignore result of broken pkg-config version test.
      fi
  
      { $as_echo "$as_me:$LINENO: checking for working metafont mode" >&5
+@@ -8192,7 +8192,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -8292,7 +8292,7 @@ $as_echo_n "checking for guile-config...
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+ 	if ! $exe --version > /dev/null 2>&1 ; then
+ 	    continue
+@@ -8397,7 +8397,7 @@ $as_echo "$ver" >&6; }
+     ## command -v doesn't work in zsh
+     ## command -v "$guile_config" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $guile_config 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $guile_config 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -x $exe; then
+ 	{ $as_echo "$as_me:$LINENO: checking guile compile flags" >&5
+@@ -9298,7 +9298,7 @@ $as_echo_n "checking for python... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+ 	if ! $exe -V > /dev/null 2>&1 ; then
+ 	    continue
+@@ -9779,7 +9779,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -9976,7 +9976,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -10890,7 +10890,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
 @@ -10947,11 +10947,6 @@ $as_echo_n "checking $r version... " >&6
  `
      { $as_echo "$as_me:$LINENO: result: $ver" >&5
@@ -53,3 +246,156 @@ Ignore result of broken pkg-config version test.
      vervar="`echo PKG_CONFIG | tr 'a-z' 'A-Z'`_VERSION"
      eval `echo $vervar=$num`
  ##    AC_SUBST(`eval echo $vervar`)
+@@ -11792,7 +11787,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -11876,7 +11871,7 @@ $as_echo_n "checking for guile... " >&6;
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+ 	if ! $exe --version > /dev/null 2>&1 ; then
+ 	    continue
+@@ -12092,7 +12087,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -12292,7 +12287,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -12497,7 +12492,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -12648,7 +12643,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -12797,7 +12792,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -12946,7 +12941,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -13095,7 +13090,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -13244,7 +13239,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -13393,7 +13388,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -13542,7 +13537,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -13691,7 +13686,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -13866,7 +13861,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -14015,7 +14010,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -14165,7 +14160,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
+@@ -14314,7 +14309,7 @@ $as_echo_n "checking $r version... " >&6
+     ## command -v doesn't work in zsh
+     ## command -v "$r" 2>&1
+     ## this test should work in ash, bash, pdksh (ksh), zsh
+-    type -p $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
++    command -v $r 2>/dev/null | tail -n 1 | awk '{print $NF}'
+ `
+     if test -n ""; then
+         ver=""
