@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2019/08/22 12:23:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2019/12/28 11:28:09 wiz Exp $
 
 DISTNAME=	gri-2.12.23
 PKGREVISION=	23
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gri.sourceforge.net/
 COMMENT=	Language for scientific graphics applications
 LICENSE=	gnu-gpl-v3
+
+BROKEN=		ImageMagick cannot convert the documentation PS files to PNG files due to security policy.
 
 BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
 BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
