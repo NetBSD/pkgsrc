@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5509 2019/12/28 22:41:07 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5510 2019/12/28 23:04:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8805,3 +8805,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py36-html-docs to 3.6.10 [adam 2019-12-28]
 	Updated lang/py37-html-docs to 3.7.6 [adam 2019-12-28]
 	Updated lang/py38-html-docs to 3.8.1 [adam 2019-12-28]
+	Updated devel/nss to 3.48 [ryoon 2019-12-28]
