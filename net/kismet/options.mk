@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.3 2017/02/17 17:10:05 joerg Exp $
-#
+# $NetBSD: options.mk,v 1.4 2019/12/28 12:43:47 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kismet
 PKG_SUPPORTED_OPTIONS=	gps
-PKG_SUGGESTED_OPTIONS=	gps
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgps)
+BROKEN=			"configure does not recognize ImageMagick"
 PLIST_SRC+=		PLIST.gps
 DEPENDS+=		wget>=1.9.1:../../net/wget
 .include "../../devel/gmp/buildlink3.mk"
