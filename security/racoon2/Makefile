@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2019/11/04 21:13:01 rillig Exp $
-#
-
-PKGREVISION=		2
-CATEGORIES=		security net
-#DISTNAME=		racoon2-20100526a
-#MASTER_SITES=		ftp://ftp.racoon2.wide.ad.jp/pub/racoon2/
-#EXTRACT_SUFX=		.tgz
+# $NetBSD: Makefile,v 1.18 2019/12/28 12:50:19 wiz Exp $
 
 DISTNAME=		racoon2
 PKGNAME=		racoon2-20180701
+PKGREVISION=		3
+CATEGORIES=		security net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=zoulasc/}
 GITHUB_PROJECT=		racoon2
 GITHUB_TAG=		b2a193fc9875d1fb89c0a51690745379bc135fcf
@@ -70,7 +65,6 @@ RCD_SCRIPT_SRC.iked=	${WRKSRC}/samples/rc.d-iked
 RCD_SCRIPT_SRC.kinkd=	${WRKSRC}/samples/rc.d-kinkd
 RCD_SCRIPT_SRC.spmd=	${WRKSRC}/samples/rc.d-spmd
 RCD_SCRIPT_SRC.racoon2=	${WRKSRC}/samples/rc.d-racoon2
-CONFIGURE_ARGS+=	--disable-startup-scripts
 
 SAMPLE_CONFS=		default.conf racoon2.conf vals.conf \
 			transport_ike.conf tunnel_ike.conf \

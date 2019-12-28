@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/06/07 03:43:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/12/28 12:50:19 wiz Exp $
 ${IKED}man/man8/iked.8
 ${KINKD}man/man8/kinkd.8
 man/man8/pskgen.8
@@ -10,39 +10,44 @@ sbin/pskgen
 sbin/spmd
 sbin/spmdctl
 share/doc/racoon2/COPYRIGHT
-share/doc/racoon2/README
-share/doc/racoon2/NEWS
 share/doc/racoon2/INSTALL
+share/doc/racoon2/NEWS
+share/doc/racoon2/README
 share/doc/racoon2/USAGE
 share/doc/racoon2/cfg-usage.txt
 share/doc/racoon2/config-usage.txt
 share/examples/racoon2/default.conf
-share/examples/racoon2/racoon2.conf
-share/examples/racoon2/vals.conf
-share/examples/racoon2/transport_ike.conf
-share/examples/racoon2/tunnel_ike.conf
-share/examples/racoon2/tunnel_ike_natt.conf
-share/examples/racoon2/transport_kink.conf
-share/examples/racoon2/tunnel_kink.conf
-share/examples/racoon2/local-test.conf
-share/examples/racoon2/hook/functions
-share/examples/racoon2/hook/child-up
-share/examples/racoon2/hook/child-up.d/00childup_sample
+share/examples/racoon2/default.conf.sample
 share/examples/racoon2/hook/child-down
 share/examples/racoon2/hook/child-rekey
-share/examples/racoon2/hook/ikesa-up
-share/examples/racoon2/hook/ikesa-up.d/00ikesaup_sample
+share/examples/racoon2/hook/child-up
+share/examples/racoon2/hook/child-up.d/00childup_sample
+share/examples/racoon2/hook/functions
 share/examples/racoon2/hook/ikesa-down
 share/examples/racoon2/hook/ikesa-rekey
+share/examples/racoon2/hook/ikesa-up
+share/examples/racoon2/hook/ikesa-up.d/00ikesaup_sample
 share/examples/racoon2/hook/migration
-share/examples/racoon2/hook/ph1-up
 share/examples/racoon2/hook/ph1-down
-@pkgdir share/examples/racoon2/hook/child-down.d
-@pkgdir share/examples/racoon2/hook/child-rekey.d
-@pkgdir share/examples/racoon2/hook/ikesa-down.d
-@pkgdir share/examples/racoon2/hook/ikesa-rekey.d
-@pkgdir share/examples/racoon2/hook/migration.d
-@pkgdir share/examples/racoon2/hook/ph1-up.d
-@pkgdir share/examples/racoon2/hook/ph1-down.d
+share/examples/racoon2/hook/ph1-up
+share/examples/racoon2/init.d/iked
+share/examples/racoon2/init.d/kinkd
+share/examples/racoon2/init.d/spmd
+share/examples/racoon2/local-test.conf
+share/examples/racoon2/local-test.conf.sample
+share/examples/racoon2/racoon2.conf
+share/examples/racoon2/racoon2.conf.sample
+share/examples/racoon2/transport_ike.conf
+share/examples/racoon2/transport_ike.conf.sample
+share/examples/racoon2/transport_kink.conf
+share/examples/racoon2/transport_kink.conf.sample
+share/examples/racoon2/tunnel_ike.conf
+share/examples/racoon2/tunnel_ike.conf.sample
+share/examples/racoon2/tunnel_ike_natt.conf
+share/examples/racoon2/tunnel_ike_natt.conf.sample
+share/examples/racoon2/tunnel_kink.conf
+share/examples/racoon2/tunnel_kink.conf.sample
+share/examples/racoon2/vals.conf
+share/examples/racoon2/vals.conf.sample
 @exec %D/sbin/pskgen -r -o ${PKG_SYSCONFDIR}/spmd.pwd
 @unexec ${RM} ${PKG_SYSCONFDIR}/spmd.pwd
