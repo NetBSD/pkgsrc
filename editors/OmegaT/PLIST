@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/10/04 13:04:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/12/28 23:22:19 ryoon Exp $
 bin/OmegaT
 share/OmegaT/OmegaT.jar
 share/OmegaT/lib/ANTLR_3_License.txt
@@ -143,7 +143,7 @@ share/OmegaT/lib/lucene-analyzers-smartcn-5.2.1.jar
 share/OmegaT/lib/lucene-analyzers-stempel-5.2.1.jar
 share/OmegaT/lib/lucene-backward-codecs-5.2.1.jar
 share/OmegaT/lib/lucene-core-5.2.1-1.jar
-share/OmegaT/lib/lucene-gosen-${PKGVERSION}-ipadic.jar
+share/OmegaT/lib/lucene-gosen-5.0.0-ipadic.jar
 share/OmegaT/lib/mALIGNa_LICENSE.txt
 share/OmegaT/lib/maligna-3.0.0.jar
 share/OmegaT/lib/morfologik-fsa-2.1.0.jar
@@ -343,10 +343,14 @@ share/doc/OmegaT/cs/appendix.Scripts.inOmegaT.html
 share/doc/OmegaT/cs/appendix.TeamProjects.html
 share/doc/OmegaT/cs/appendix.Tokenizers.inOmegaT.html
 share/doc/OmegaT/cs/appendix.acknowledgements.html
+share/doc/OmegaT/cs/appendix.dictionaries.html
+share/doc/OmegaT/cs/appendix.glossaries.html
 share/doc/OmegaT/cs/appendix.keyboard.html
 share/doc/OmegaT/cs/appendix.languages.html
 share/doc/OmegaT/cs/appendix.legal.notices.html
+share/doc/OmegaT/cs/appendix.regexp.html
 share/doc/OmegaT/cs/appendix.shortcut.custom.html
+share/doc/OmegaT/cs/appendix.spellchecker.html
 share/doc/OmegaT/cs/appendix.website.html
 share/doc/OmegaT/cs/chapter.TaaS.html
 share/doc/OmegaT/cs/chapter.about.OmegaT.html
@@ -371,11 +375,13 @@ share/doc/OmegaT/cs/chapter.spellchecker.html
 share/doc/OmegaT/cs/chapter.translation.editing.html
 share/doc/OmegaT/cs/chapter.translation.memories.html
 share/doc/OmegaT/cs/chapter.user.interface.html
+share/doc/OmegaT/cs/howtos.html
 share/doc/OmegaT/cs/images/AppleKey.gif
 share/doc/OmegaT/cs/images/AsciiFilteroptions.png
 share/doc/OmegaT/cs/images/Comments_25.png
 share/doc/OmegaT/cs/images/DictMerriamWebster.png
 share/doc/OmegaT/cs/images/Dock.gif
+share/doc/OmegaT/cs/images/Dock.png
 share/doc/OmegaT/cs/images/EditingBehaviourOptions.png
 share/doc/OmegaT/cs/images/EditingBehaviourOptions25.png
 share/doc/OmegaT/cs/images/GlossaryEntry_25.png
@@ -390,7 +396,9 @@ share/doc/OmegaT/cs/images/MatchesPane.png
 share/doc/OmegaT/cs/images/MatchesPaneSetup.png
 share/doc/OmegaT/cs/images/MatchesPane_25.png
 share/doc/OmegaT/cs/images/Maximize.gif
+share/doc/OmegaT/cs/images/Maximize.png
 share/doc/OmegaT/cs/images/Minimize.gif
+share/doc/OmegaT/cs/images/Minimize.png
 share/doc/OmegaT/cs/images/MobyDick.png
 share/doc/OmegaT/cs/images/MultiTerm_Glossary_25.png
 share/doc/OmegaT/cs/images/NewProject.png
@@ -410,6 +418,7 @@ share/doc/OmegaT/cs/images/ProjectFiles.png
 share/doc/OmegaT/cs/images/RegexTester.png
 share/doc/OmegaT/cs/images/RegexTester___.png
 share/doc/OmegaT/cs/images/Restore.gif
+share/doc/OmegaT/cs/images/Restore.png
 share/doc/OmegaT/cs/images/ScriptingDialog.png
 share/doc/OmegaT/cs/images/SpellcheckerSetup2.png
 share/doc/OmegaT/cs/images/SpellcheckerSetup_25.png
@@ -427,6 +436,7 @@ share/doc/OmegaT/cs/images/TextSearch.png
 share/doc/OmegaT/cs/images/TextSearch25.png
 share/doc/OmegaT/cs/images/TortoiseExplorerExtension.png
 share/doc/OmegaT/cs/images/Undock.gif
+share/doc/OmegaT/cs/images/Undock.png
 share/doc/OmegaT/cs/images/saveglossary.png
 share/doc/OmegaT/cs/images/tagged_segment.png
 share/doc/OmegaT/cs/images/tagged_segment_target.png
@@ -434,7 +444,11 @@ share/doc/OmegaT/cs/index.html
 share/doc/OmegaT/cs/instantStartGuideNoTOC.html
 share/doc/OmegaT/cs/ix01.html
 share/doc/OmegaT/cs/license.txt
+share/doc/OmegaT/cs/menus.html
+share/doc/OmegaT/cs/panes.html
+share/doc/OmegaT/cs/project.folder.html
 share/doc/OmegaT/cs/version_cs.properties
+share/doc/OmegaT/cs/windows.and.dialogs.html
 share/doc/OmegaT/cy/OmegaT.css
 share/doc/OmegaT/cy/images/InstantGuide_1.png
 share/doc/OmegaT/cy/images/InstantGuide_2.png
