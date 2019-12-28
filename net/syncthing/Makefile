@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2019/12/13 07:43:49 bsiegert Exp $
+# $NetBSD: Makefile,v 1.101 2019/12/28 02:28:46 gdt Exp $
 
 # Upstream used to frequently break protocol compatibility, but since
 # 2018 or so this has been much better.  While users of pkgsrc
@@ -14,12 +14,8 @@
 # current syncthing-android in f-droid must be tested against the
 # android version from f-droid prior to commiting.  (This is an
 # attempt to avoid having to version syncthing in pkgsrc.)
-# Note that the android versioning is disconnected from syncthing versioning;
-# see https://github.com/syncthing/syncthing-android/issues/652 for
-# a fuller explanation.
-DISTNAME=	syncthing-source-v1.3.1
+DISTNAME=	syncthing-source-v1.3.2
 PKGNAME=	${DISTNAME:S,source-v,,}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
