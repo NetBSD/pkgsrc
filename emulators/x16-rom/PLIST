@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/28 19:31:38 thorpej Exp $
+share/x16/rom.bin
