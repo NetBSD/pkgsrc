@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5501 2019/12/28 17:24:01 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5502 2019/12/28 19:00:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8791,3 +8791,4 @@ Changes to the packages collection and infrastructure in 2019:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q4 branch [gdt 2019-12-28]
 	Updated multimedia/mpv to 0.31.0 [leot 2019-12-28]
 	Updated textproc/icu to 64.2nb2 [wiz 2019-12-28]
+	Updated net/ucspi-tcp6 to 1.11.1 [schmonz 2019-12-28]
