@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5510 2019/12/28 23:04:38 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.5511 2019/12/28 23:11:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8806,3 +8806,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py37-html-docs to 3.7.6 [adam 2019-12-28]
 	Updated lang/py38-html-docs to 3.8.1 [adam 2019-12-28]
 	Updated devel/nss to 3.48 [ryoon 2019-12-28]
+	Updated www/php-nextcloud to 17.0.2 [ryoon 2019-12-28]
