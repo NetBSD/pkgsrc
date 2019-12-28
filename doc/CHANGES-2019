@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5505 2019/12/28 20:00:16 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5506 2019/12/28 20:44:22 kim Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8796,3 +8796,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added emulators/x16-emulator version 35 [thorpej 2019-12-28]
 	Updated audio/fasttracker2 to 1.05 [fox 2019-12-28]
 	Updated audio/wavpack to 5.2.0 [adam 2019-12-28]
+	Updated security/sudo to 1.8.30beta3 [kim 2019-12-28]
