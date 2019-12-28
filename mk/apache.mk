@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.31 2018/01/01 10:23:09 wiz Exp $
+# $NetBSD: apache.mk,v 1.32 2019/12/28 11:43:58 wiz Exp $
 #
 # This file is meant to be included by packages that require an apache
 # web server.
@@ -33,7 +33,7 @@
 # APACHE_PKG_PREFIX
 #	The package name prefix for apache modules.
 #
-#	Possible values: ap22 ap24
+#	Possible values: ap24
 #
 
 .if !defined(APACHE_MK)
