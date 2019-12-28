@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile,v 1.1 2019/12/28 19:32:18 thorpej Exp $
+
+Allow the default location of the X16 ROM to be overridden.
+
+--- Makefile.orig	2019-12-28 18:52:41.000000000 +0000
++++ Makefile
+@@ -48,6 +48,9 @@ ifneq ("$(wildcard ./rom_labels.h)","")
+ HEADERS+=rom_labels.h
+ endif
+ 
++ifdef ROM_RELATIVE_PATH
++	CFLAGS+=-DROM_RELATIVE_PATH=\"$(ROM_RELATIVE_PATH)\"
++endif
+ 
+ all: $(OBJS) $(HEADERS)
+ 	$(CC) -o $(OUTPUT) $(OBJS) $(LDFLAGS)
