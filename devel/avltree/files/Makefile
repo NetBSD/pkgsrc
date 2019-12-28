@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/10/22 07:12:14 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.2 2019/12/28 12:53:00 wiz Exp $
 
 LIB=		avltree
 SRCS=		avltree.c
@@ -11,5 +10,6 @@ MAN=		avltree.3
 INCS=		avltree.h
 
 NOLINT=		yes
+MKPICINSTALL=	no
 
 .include <bsd.lib.mk>
