@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5499 2019/12/28 17:13:11 gdt Exp $
+$NetBSD: CHANGES-2019,v 1.5500 2019/12/28 17:20:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8789,3 +8789,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/racoon2 to 20180701nb3 [wiz 2019-12-28]
 	Updated devel/avltree to 1.1nb1 [wiz 2019-12-28]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2019Q4 branch [gdt 2019-12-28]
+	Updated multimedia/mpv to 0.31.0 [leot 2019-12-28]
