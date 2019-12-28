@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19511 2019/12/24 05:38:00 schmonz Exp $
+$NetBSD: TODO,v 1.19512 2019/12/28 13:28:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -470,7 +470,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-4.6.0
+	o calibre-4.7.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -517,6 +517,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dap-3.10
 	o dar-2.4.14
 	o darcs-2.12.0
+	o darktable-3.0.0
 	o dasher-4.11
 	o dbus-python-common-1.2.14
 	o dd_rescue-1.46
@@ -906,7 +907,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o mame-0.216
+	o mame-0.217
 	o manedit-1.2.1
 	o mantis-2.22.1
 	o mapserver-7.0.1
