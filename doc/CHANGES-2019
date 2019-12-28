@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5506 2019/12/28 20:44:22 kim Exp $
+$NetBSD: CHANGES-2019,v 1.5507 2019/12/28 21:45:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8797,3 +8797,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audio/fasttracker2 to 1.05 [fox 2019-12-28]
 	Updated audio/wavpack to 5.2.0 [adam 2019-12-28]
 	Updated security/sudo to 1.8.30beta3 [kim 2019-12-28]
+	Updated net/gallery-dl to 1.12.1 [leot 2019-12-28]
