@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/01/20 13:42:36 taca Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/28 12:17:21 wiz Exp $
 
 DISTNAME=	cucumber-core-4.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
