@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2019/11/03 10:39:06 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2019/12/28 12:53:00 wiz Exp $
 
 DISTNAME=	avltree-1.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://odin.compchem.ucsf.edu/pub/amber/
 
