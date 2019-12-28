@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.127 2019/11/04 21:43:37 rillig Exp $
+# $NetBSD: Makefile,v 1.128 2019/12/28 17:23:52 wiz Exp $
 
 DISTNAME=	icu4c-64_2-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.icu-project.org/files/icu4c/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ENV+=		U_MAKE=${TOOLS_GMAKE}
 
 CHECK_SSP_SKIP=		lib/libicudata.so*
+
+PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../mk/pthread.buildlink3.mk"
 
