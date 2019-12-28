@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5497 2019/12/28 12:50:29 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5498 2019/12/28 12:53:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8787,3 +8787,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated cad/tnt-mmtl to 1.2.2nb13 [wiz 2019-12-28]
 	Updated net/kismet to 2008.05.01nb49 [wiz 2019-12-28]
 	Updated security/racoon2 to 20180701nb3 [wiz 2019-12-28]
+	Updated devel/avltree to 1.1nb1 [wiz 2019-12-28]
