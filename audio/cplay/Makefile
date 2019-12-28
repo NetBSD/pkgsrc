@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2019/04/25 07:32:34 maya Exp $
+# $NetBSD: Makefile,v 1.22 2019/12/28 11:26:37 maya Exp $
 
 DISTNAME=		cplay-1.49
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		audio
 MASTER_SITES=		# ${HOMEPAGE}
 
@@ -12,7 +12,8 @@ LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
-REPLACE_PYTHON=	cplay
+PYTHON_VERSIONS_ACCEPTED=	27
+REPLACE_PYTHON=			cplay
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
