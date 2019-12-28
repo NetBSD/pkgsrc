@@ -1,0 +1,15 @@
+$NetBSD: patch-samples_Makefile.in,v 1.1 2019/12/28 12:50:19 wiz Exp $
+
+Install config into examples directory.
+
+--- samples/Makefile.in.orig	2018-07-01 15:39:24.000000000 +0000
++++ samples/Makefile.in
+@@ -2,7 +2,7 @@
+ 
+ srcdir=@srcdir@
+ prefix=@prefix@
+-sysconfdir=@sysconfdir@
++sysconfdir=${DESTDIR}${PREFIX}/share/examples/racoon2
+ datarootdir=@datarootdir@  
+ INSTALL =@INSTALL@ @INSTALL_OPTS@
+ INSTALL_PROGRAM=@INSTALL_PROGRAM@
