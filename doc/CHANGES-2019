@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5495 2019/12/28 12:35:54 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5496 2019/12/28 12:44:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8785,3 +8785,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated math/randlib to 1.3nb1 [wiz 2019-12-28]
 	Updated devel/qof to 0.7.5nb19 [wiz 2019-12-28]
 	Updated cad/tnt-mmtl to 1.2.2nb13 [wiz 2019-12-28]
+	Updated net/kismet to 2008.05.01nb49 [wiz 2019-12-28]
