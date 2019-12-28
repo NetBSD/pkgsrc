@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2001/02/08 06:10:41 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2019/12/28 11:47:35 wiz Exp $
 
---- /dev/null	Thu Feb  8 06:06:37 2001
+--- Makefile.orig	2019-12-28 11:46:09.222077493 +0000
 +++ Makefile
-@@ -0,0 +1,14 @@
+@@ -0,0 +1,15 @@
 +LIB= 	randlib
 +
 +SHLIB_MAJOR=0
@@ -11,6 +11,7 @@ $NetBSD: patch-aa,v 1.1 2001/02/08 06:10:41 jtb Exp $
 +LIBDIR=${PREFIX}/lib
 +
 +NOLINT=1
++MKPICINSTALL=no
 +
 +SRCS = com.c randlib.c linpack.c
 +
