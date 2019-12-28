@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2019/12/09 11:56:17 leot Exp $
+# $NetBSD: Makefile,v 1.47 2019/12/28 21:44:17 leot Exp $
 
-DISTNAME=	gallery_dl-1.12.0
+DISTNAME=	gallery_dl-1.12.1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gallery-dl/}
@@ -21,6 +21,8 @@ SUBST_SED.paths+=	-e 's,etc/bash_completion\.d,share/bash_completion.d,'
 SUBST_SED.paths+=	-e 's,share/man,${PKGMANDIR},g'
 
 USE_LANGUAGES=			# none
+
+# Only for Python 3
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2019/11/11 05:24:23 leot Exp $
+@comment $NetBSD: PLIST,v 1.35 2019/12/28 21:44:17 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -300,6 +300,9 @@ ${PYSITELIB}/gallery_dl/extractor/reactor.pyo
 ${PYSITELIB}/gallery_dl/extractor/readcomiconline.py
 ${PYSITELIB}/gallery_dl/extractor/readcomiconline.pyc
 ${PYSITELIB}/gallery_dl/extractor/readcomiconline.pyo
+${PYSITELIB}/gallery_dl/extractor/realbooru.py
+${PYSITELIB}/gallery_dl/extractor/realbooru.pyc
+${PYSITELIB}/gallery_dl/extractor/realbooru.pyo
 ${PYSITELIB}/gallery_dl/extractor/recursive.py
 ${PYSITELIB}/gallery_dl/extractor/recursive.pyc
 ${PYSITELIB}/gallery_dl/extractor/recursive.pyo
