@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.102 2019/12/03 14:29:21 ryoon Exp $
+$NetBSD: distinfo,v 1.103 2019/12/28 23:04:04 ryoon Exp $
 
-SHA1 (nss-3.47.1.tar.gz) = 527b6a50b31eed96d4d6ad71a1002404c8aa7458
-RMD160 (nss-3.47.1.tar.gz) = cc281100c6ae0cc0c9c45918f79b518cbc61b3d5
-SHA512 (nss-3.47.1.tar.gz) = ddee53f58929e5f3849c9f88a3a6735453a258c3c32a7e3e73cc949e0b7ad2dff81b21db31c9c5e1ef3eb79d63c31660e38ce76c06ca54a5681dd611dc2e2ae9
-Size (nss-3.47.1.tar.gz) = 76462846 bytes
+SHA1 (nss-3.48.tar.gz) = 4a1f06ba4bfa06da2df94a98c793b17942a58652
+RMD160 (nss-3.48.tar.gz) = 4bdf2b350cf61cf401de6e6275d160779929cc95
+SHA512 (nss-3.48.tar.gz) = 71aefe323501dd8d750ed36606554f2e67ecb2bca85b55bc798d5dfc3a47f3d454348ca950971aaaafb16f6d847c098d2b1c40d40b50380e0c2540ed1b9a9e9a
+Size (nss-3.48.tar.gz) = 76481237 bytes
 SHA1 (patch-am) = fea682bf03bc8b645049f93ed58554ca45f47aca
 SHA1 (patch-an) = 4ab22f2a575676b5b640bc9a760b83eb05c75e69
 SHA1 (patch-md) = 8547c9414332c02221b96719dea1e09cb741f4d1
@@ -15,7 +15,7 @@ SHA1 (patch-mj) = 08ca1a37afce99e0292a20348fc6855547f44e8a
 SHA1 (patch-mn) = 5b79783e48249044be1a904a6cfd20ba175b5fd4
 SHA1 (patch-nss_cmd_platlibs.mk) = 01f4350de601b29c94e8a791a28daca226866bb6
 SHA1 (patch-nss_coreconf_OpenBSD.mk) = 1a4c3711d5d1f7f9e8d58b36145b15d7e444d754
-SHA1 (patch-nss_coreconf_command.mk) = 008f7670f164bf19555a7691f5a59fc8bf687078
+SHA1 (patch-nss_coreconf_command.mk) = a7b682d367825b48f8802fa30cee83f10680bb74
 SHA1 (patch-nss_lib_freebl_md5.c) = 5cbec40695e296f0713895fb85cd37f6df76b85b
 SHA1 (patch-nss_lib_util_utilpars.c) = 5d3000515b01037929730a752b7d7a0f46f06deb
 SHA1 (patch-nss_tests_all.sh) = b328778b538db66f5447f962f23afd6f650f7071
