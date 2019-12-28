@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/10/16 07:04:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/12/28 22:30:24 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2706,6 +2706,9 @@ lib/python${PY_VER_SUFFIX}/test/dataclass_module_2.pyo
 lib/python${PY_VER_SUFFIX}/test/dataclass_module_2_str.py
 lib/python${PY_VER_SUFFIX}/test/dataclass_module_2_str.pyc
 lib/python${PY_VER_SUFFIX}/test/dataclass_module_2_str.pyo
+lib/python${PY_VER_SUFFIX}/test/dataclass_textanno.py
+lib/python${PY_VER_SUFFIX}/test/dataclass_textanno.pyc
+lib/python${PY_VER_SUFFIX}/test/dataclass_textanno.pyo
 lib/python${PY_VER_SUFFIX}/test/datetimetester.py
 lib/python${PY_VER_SUFFIX}/test/datetimetester.pyc
 lib/python${PY_VER_SUFFIX}/test/datetimetester.pyo
