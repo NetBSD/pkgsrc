@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.7 2019/11/09 20:01:15 jperkin Exp $
+# $NetBSD: mozilla-common.mk,v 1.8 2019/12/28 05:48:06 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 
 CONFIGURE_ENV+=		BINDGEN_CFLAGS="-isystem${PREFIX}/include/nspr \
 			-isystem${X11BASE}/include/pixman-1"
+# with files/*.rs for Rust 1.39.0
+CONFIGURE_ARGS+=	--disable-stylo-build-bindgen
 
 test:
 	cd ${WRKSRC}/${OBJDIR}/dist/bin &&	\
