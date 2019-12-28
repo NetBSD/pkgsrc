@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/11/24 13:43:35 mef Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/12/28 11:52:55 wiz Exp $
 include/qof/deprecated.h
 include/qof/guid.h
 include/qof/kvpframe.h
@@ -68,7 +68,7 @@ share/doc/qof/html/doxy/doxygen.png
 share/doc/qof/html/doxy/doxygen__main__page_8c_source.html
 share/doc/qof/html/doxy/dynsections.js
 share/doc/qof/html/doxy/files.html
-share/doc/qof/html/doxy/files.js
+share/doc/qof/html/doxy/files_dup.js
 share/doc/qof/html/doxy/folderclosed.png
 share/doc/qof/html/doxy/folderopen.png
 share/doc/qof/html/doxy/functions.html
@@ -153,7 +153,6 @@ share/doc/qof/html/doxy/group__QOF.js
 share/doc/qof/html/doxy/group__QOFTIME.html
 share/doc/qof/html/doxy/group__QOFTIME.js
 share/doc/qof/html/doxy/group__QSF.html
-share/doc/qof/html/doxy/group__QSF.js
 share/doc/qof/html/doxy/group__Query.html
 share/doc/qof/html/doxy/group__Query.js
 share/doc/qof/html/doxy/group__Reference.html
@@ -161,7 +160,6 @@ share/doc/qof/html/doxy/group__Reference.js
 share/doc/qof/html/doxy/group__SQL.html
 share/doc/qof/html/doxy/group__SQL.js
 share/doc/qof/html/doxy/group__SQLite.html
-share/doc/qof/html/doxy/group__SQLite.js
 share/doc/qof/html/doxy/group__Session.html
 share/doc/qof/html/doxy/group__Session.js
 share/doc/qof/html/doxy/group__Trace.html
