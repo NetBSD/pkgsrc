@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/09/21 11:20:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2019/12/28 12:37:28 wiz Exp $
 
 DISTNAME=		medium
 PKGNAME=		gnuchess-book-${DISTNAME}-20000511
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Chess opening book for GNU Chess (medium)
 LICENSE=		public-domain
+
+BROKEN=			pgn_next_game(): malformed tag at line 32140, column 7
 
 DEPENDS+=		gnuchess>=6:../../games/gnuchess
 
