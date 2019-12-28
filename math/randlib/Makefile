@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2019/11/02 16:16:22 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2019/12/28 11:47:34 wiz Exp $
 
 DISTNAME=	randlib.c-1.3
 PKGNAME=	randlib-1.3
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	# ftp://odin.mdacc.tmc.edu/pub/source/
 
