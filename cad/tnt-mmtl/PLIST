@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:35:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/12/28 12:35:45 wiz Exp $
 bin/bem
-@comment bin/calcCAP
-@comment bin/calcRL
 bin/tnt-mmtl
 bin/tnt.tcl
 lib/bem1.0/bem.tcl
@@ -13,13 +11,6 @@ lib/bem1.0/bem_sweep.tcl
 lib/bem1.0/bem_view.tcl
 lib/bem1.0/bem_welement.itcl
 lib/bem1.0/pkgIndex.tcl
-@comment lib/calccap/calcCAP.tcl
-@comment lib/calccap/calcCAP_exe.tcl
-@comment lib/calccap/epl.bit
-@comment lib/calccap/pkgIndex.tcl
-@comment lib/calcrl/calcRL.tcl
-@comment lib/calcrl/calcRL_exe.tcl
-@comment lib/calcrl/pkgIndex.tcl
 lib/csdl1.0.1/csdl.tcl
 lib/csdl1.0.1/csdl_hlcsdl.itcl
 lib/csdl1.0.1/csdl_llcsdl.itcl
@@ -81,17 +72,6 @@ share/tnt-mmtl/user-guide/images.log
 share/tnt-mmtl/user-guide/images.out
 share/tnt-mmtl/user-guide/images.pl
 share/tnt-mmtl/user-guide/images.tex
-share/tnt-mmtl/user-guide/img1.png
-share/tnt-mmtl/user-guide/img10.png
-share/tnt-mmtl/user-guide/img11.png
-share/tnt-mmtl/user-guide/img2.png
-share/tnt-mmtl/user-guide/img3.png
-share/tnt-mmtl/user-guide/img4.png
-share/tnt-mmtl/user-guide/img5.png
-share/tnt-mmtl/user-guide/img6.png
-share/tnt-mmtl/user-guide/img7.png
-share/tnt-mmtl/user-guide/img8.png
-share/tnt-mmtl/user-guide/img9.png
 share/tnt-mmtl/user-guide/index.html
 share/tnt-mmtl/user-guide/internals.pl
 share/tnt-mmtl/user-guide/labels.pl
