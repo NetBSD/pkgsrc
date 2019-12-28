@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5508 2019/12/28 21:48:24 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.5509 2019/12/28 22:41:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8799,3 +8799,9 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/sudo to 1.8.30beta3 [kim 2019-12-28]
 	Updated net/gallery-dl to 1.12.1 [leot 2019-12-28]
 	Updated print/lilypond to 2.18.2nb17 [gutteridge 2019-12-28]
+	Updated lang/python36 to 3.6.10 [adam 2019-12-28]
+	Updated lang/python37 to 3.7.6 [adam 2019-12-28]
+	Updated lang/python38 to 3.8.1 [adam 2019-12-28]
+	Updated lang/py36-html-docs to 3.6.10 [adam 2019-12-28]
+	Updated lang/py37-html-docs to 3.7.6 [adam 2019-12-28]
+	Updated lang/py38-html-docs to 3.8.1 [adam 2019-12-28]
