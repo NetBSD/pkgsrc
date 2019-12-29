@@ -1,6 +1,8 @@
-$NetBSD: patch-glib_gmacros.h,v 1.1 2019/12/06 14:36:58 nros Exp $
+$NetBSD: patch-glib_gmacros.h,v 1.2 2019/12/29 19:58:47 triaxx Exp $
+
 * on some compilers __STDC_VERSION__ is defined when using c++
   but _Static_assert is not available
+
 --- glib/gmacros.h.orig	2019-12-06 12:21:18.948881370 +0000
 +++ glib/gmacros.h
 @@ -734,7 +734,7 @@
