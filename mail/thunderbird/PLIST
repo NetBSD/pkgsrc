@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2019/11/02 13:02:55 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.74 2019/12/29 00:51:06 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AudioPlaybackChild.jsm
 lib/thunderbird/actors/AutoplayChild.jsm
@@ -2942,6 +2942,7 @@ lib/thunderbird/chrome/messenger/content/messenger/SearchDialog.js
 lib/thunderbird/chrome/messenger/content/messenger/SearchDialog.xul
 lib/thunderbird/chrome/messenger/content/messenger/SmtpServerEdit.js
 lib/thunderbird/chrome/messenger/content/messenger/SmtpServerEdit.xul
+lib/thunderbird/chrome/messenger/content/messenger/schemas/messageDisplayAction.json
 lib/thunderbird/chrome/messenger/content/messenger/about-support/aboutSupport.js
 lib/thunderbird/chrome/messenger/content/messenger/about-support/aboutSupport.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/about-support/accounts.js
@@ -3203,6 +3204,7 @@ lib/thunderbird/chrome/messenger/content/messenger/parent/ext-mail.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-mailTabs.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-menus.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-messageDisplay.js
+lib/thunderbird/chrome/messenger/content/messenger/parent/ext-messageDisplayAction.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-messages.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-pkcs11.js
 lib/thunderbird/chrome/messenger/content/messenger/parent/ext-tabs.js
