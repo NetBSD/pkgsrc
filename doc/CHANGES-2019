@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5523 2019/12/29 04:45:37 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.5524 2019/12/29 06:29:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8826,3 +8826,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added net/py-ifaddr version 0.1.6 [ryoon 2019-12-29]
 	Added net/py-zeroconf version 0.24.3 [ryoon 2019-12-29]
 	Added net/py-pychromecast version 4.1.0 [ryoon 2019-12-29]
+	Updated devel/sdcc3 to 3.9.0 [ryoon 2019-12-29]
