@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2019/10/01 17:47:01 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2019/12/29 16:24:30 adam Exp $
 
 Do not use ccache.
 Do not use application bundle on Darwin.
 
---- CMakeLists.txt.orig	2019-09-29 09:29:34.000000000 +0000
+--- CMakeLists.txt.orig	2019-12-22 10:23:41.000000000 +0000
 +++ CMakeLists.txt
-@@ -89,12 +89,6 @@ IF(OPENGL_DEBUG_LOGGING)
+@@ -98,12 +98,6 @@ IF(OPENGL_DEBUG_LOGGING)
       ADD_DEFINITIONS(-DQ_ENABLE_OPENGL_FUNCTIONS_DEBUG)
  ENDIF()
  
@@ -18,8 +18,8 @@ Do not use application bundle on Darwin.
  
  # Add gprof build options if necessary.  Note gmon.out will be created in working directory when Stellarium is executed
  IF(${CMAKE_BUILD_TYPE} MATCHES "GProf")
-@@ -109,7 +103,7 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Valgrind
-      SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g")
+@@ -132,7 +126,7 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "UBSan")
+      SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=undefined -g")
  ENDIF()
  
 -IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
@@ -27,7 +27,7 @@ Do not use application bundle on Darwin.
       SET(APPLE 1)
       SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
       # share data location:
-@@ -224,7 +218,7 @@ IF(${CMAKE_SYSTEM_NAME} STREQUAL "FreeBS
+@@ -249,7 +243,7 @@ IF(${CMAKE_SYSTEM_NAME} STREQUAL "FreeBS
  ENDIF()
  
  # best way to get to APPLE?
@@ -36,7 +36,7 @@ Do not use application bundle on Darwin.
       SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-common -Wall -Wextra")
       # using regular Clang or AppleClang
       IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
-@@ -542,7 +536,7 @@ ENDIF()
+@@ -593,7 +587,7 @@ ENDIF()
  
  ########### Set some global variables ###########
  IF(UNIX AND NOT WIN32)
@@ -45,7 +45,7 @@ Do not use application bundle on Darwin.
            SET(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/Stellarium.app/Contents")
       ELSE()
            ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/${SDATALOC}")          
-@@ -707,7 +701,7 @@ IF(GENERATE_PACKAGE_TARGET)
+@@ -758,7 +752,7 @@ IF(GENERATE_PACKAGE_TARGET)
  ENDIF()
  
  ########### OS X Bundling ###############
