@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2019/07/16 15:36:02 nia Exp $
+# $NetBSD: options.mk,v 1.9 2019/12/29 10:00:08 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opencv
 PKG_SUPPORTED_OPTIONS=	ffmpeg jasper
@@ -7,9 +7,9 @@ PKG_SUPPORTED_OPTIONS=	ffmpeg jasper
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
 CMAKE_ARGS+=	-DWITH_FFMPEG=ON
-CMAKE_ARGS+=	-DFFMPEG_INCLUDE_DIR=${PREFIX}/include/ffmpeg2
-CMAKE_ARGS+=	-DFFMPEG_LIB_DIR=${PREFIX}/lib/ffmpeg2
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
+CMAKE_ARGS+=	-DFFMPEG_INCLUDE_DIR=${PREFIX}/include/ffmpeg4
+CMAKE_ARGS+=	-DFFMPEG_LIB_DIR=${PREFIX}/lib/ffmpeg4
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DWITH_FFMPEG=OFF
 .endif
