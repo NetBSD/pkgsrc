@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2013/04/08 11:17:18 rodent Exp $
+$NetBSD: MESSAGE,v 1.4 2019/12/29 17:14:08 sevan Exp $
 
 The openvpn rc.d script looks for configuration files in:
 
 	${PKG_SYSCONFDIR}
 
-and by default will start an openvpn process for each config file in
+and by default will start an openvpn process for each config file found in
 that directory.
 
 The sample configuration files have been installed into:
