@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2019/12/29 12:44:15 plunky Exp $
+$NetBSD: distinfo,v 1.35 2019/12/29 14:18:20 plunky Exp $
 
 SHA1 (qcad-3.24.0.1.tar.gz) = 39cf137348dfa28ddfa565b6d894da539a17fd44
 RMD160 (qcad-3.24.0.1.tar.gz) = e5a6c008443546f1f35939ba0c439df2b619e8fa
@@ -26,7 +26,8 @@ SHA1 (patch-src_grid_grid.pro) = 65f5f47cce612b31181a0ac3e153214d29f08767
 SHA1 (patch-src_gui_gui.pro) = 938fdcb8715ec78550ebff80400ab66be551584d
 SHA1 (patch-src_io_dxf_dxf.pro) = d386b09c217fcebd7fae68807950aa7b80c3a6c8
 SHA1 (patch-src_operations_operations.pro) = d10b38594f29ae07febdb52339049646926c2252
-SHA1 (patch-src_run_run.pri) = c5d8b641649ba1689558b82c5ac25a617c9d62b7
+SHA1 (patch-src_run_main.cpp) = 4f3cae015852ab4b4550c897d82e9f30ac14d3d1
+SHA1 (patch-src_run_run.pri) = fca4570872f9fc7b25beac8dfd0c4802b81d3972
 SHA1 (patch-src_scripting_ecmaapi_ecmaapi.pro) = 8105fd89a8b52962f9e0c1ff80cf154ceb09145e
 SHA1 (patch-src_snap_snap.pro) = 9464576805a1d2baa81c91f759e59a8cc3989b6a
 SHA1 (patch-src_spatialindex_spatialindex.pro) = 3afcdcd036b0ee183220cc5406accbf0756841e7
