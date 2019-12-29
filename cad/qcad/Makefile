@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2019/12/29 14:18:20 plunky Exp $
+# $NetBSD: Makefile,v 1.85 2019/12/29 14:27:52 plunky Exp $
 #
 
 DISTNAME=		qcad-3.24.0.1
@@ -32,16 +32,6 @@ SUBST_STAGE.icon=	pre-configure
 SUBST_MESSAGE.icon=	Fix icon name.
 SUBST_FILES.icon=	qcad.desktop
 SUBST_SED.icon=		-e s,qcad_icon,qcad,g
-
-.include "../../mk/bsd.prefs.mk"
-PLIST_VARS+=	glx egl
-.if ${OPSYS} != "Darwin"
-PLIST.glx=	yes
-.  include "../../graphics/MesaLib/buildlink3.mk"
-.  if ${MESALIB_SUPPORTS_EGL} == "yes"
-PLIST.egl=	yes
-.  endif
-.endif
 
 AUTO_MKDIRS=	yes
 
