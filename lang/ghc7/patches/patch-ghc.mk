@@ -1,23 +1,14 @@
-$NetBSD: patch-ghc.mk,v 1.1 2013/12/12 12:47:17 obache Exp $
+$NetBSD: patch-ghc.mk,v 1.2 2019/12/29 16:59:09 pho Exp $
 
-We want bootstrapping bindists to be as small as possible, and bzip2
-is not enough:
+Fix building bootkits: we don't generate documentation for them.
 
-  % du -sh ghc-*.tar*
-  291M    ghc-7.6.2-boot-powerpc-apple-darwin.tar
-   60M    ghc-7.6.2-boot-powerpc-apple-darwin.tar.bz2
-   32M    ghc-7.6.2-boot-powerpc-apple-darwin.tar.xz
-
-
---- ghc.mk.orig	2013-02-14 02:24:35.000000000 +0000
+--- ghc.mk.orig	2019-12-27 02:36:02.858039422 +0000
 +++ ghc.mk
-@@ -1009,7 +1009,8 @@ unix-binary-dist-prep:
- 	$(call removeFiles,$(BIN_DIST_PREP_TAR))
- # h means "follow symlinks", e.g. if aclocal.m4 is a symlink to a source
- # tree then we want to include the real file, not a symlink to it
--	cd bindistprep && "$(TAR_CMD)" hcf - -T ../$(BIN_DIST_LIST) | bzip2 -c > ../$(BIN_DIST_PREP_TAR_BZ2)
-+	"$(MKDIRHIER)" compiler/stage2/doc # Workaround needed when building no docs.
-+	cd bindistprep && "$(TAR_CMD)" hcf ../$(BIN_DIST_PREP_TAR) -T ../$(BIN_DIST_LIST)
- 
- windows-binary-dist-prep:
- 	$(call removeTrees,bindistprep/)
+@@ -989,7 +989,6 @@ $(eval $(call bindist,.,\
+     $(INSTALL_LIBRARY_DOCS) \
+     $(addsuffix /*,$(INSTALL_HTML_DOC_DIRS)) \
+     docs/index.html \
+-    compiler/stage2/doc \
+     $(wildcard libraries/*/dist-install/doc/) \
+     $(wildcard libraries/*/*/dist-install/doc/) \
+     $(filter-out settings,$(INSTALL_LIBS)) \
