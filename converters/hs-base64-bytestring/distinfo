@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 01:43:48 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/12/29 23:26:43 pho Exp $
 
-SHA1 (base64-bytestring-1.0.0.1.tar.gz) = ff4bfb12aa25a5947f9818dd6cd974dba145fb70
-RMD160 (base64-bytestring-1.0.0.1.tar.gz) = 2de8049cd79525f1590f70f75b7199217c664fc9
-SHA512 (base64-bytestring-1.0.0.1.tar.gz) = 6936b34955b89a275f5bd71c74bbad2be6ff9e2023ac652bdbc9c5b10dd624e3862fc348849858fdb5c7b8aacc36ab4cda8bc6ea797c129b6b28d7e2e2e610e7
-Size (base64-bytestring-1.0.0.1.tar.gz) = 9080 bytes
+SHA1 (base64-bytestring-1.0.0.2.tar.gz) = 64108bf146df5e0cd0c9c082cba0ac4fe419cf00
+RMD160 (base64-bytestring-1.0.0.2.tar.gz) = 9333a4a0f1df7e29ead2f3b4f1a30da4e542eafc
+SHA512 (base64-bytestring-1.0.0.2.tar.gz) = 8d8880cf806aa3932068e0a6faecde084829e72e73cf0a6b4eac99ae852dffbd85f968918546e18920044dd34c65b67bed1c62b6fe71f48b118bc337d86030e4
+Size (base64-bytestring-1.0.0.2.tar.gz) = 9830 bytes
