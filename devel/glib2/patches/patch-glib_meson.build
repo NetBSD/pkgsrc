@@ -1,10 +1,10 @@
-$NetBSD: patch-glib_meson.build,v 1.6 2019/11/26 10:27:09 jperkin Exp $
+$NetBSD: patch-glib_meson.build,v 1.7 2019/12/29 19:40:56 triaxx Exp $
 
 - On Darwin, allow building without Cocoa.
 - Don't bother with gtester as it's slated for deprecation anyway:
   https://gitlab.gnome.org/GNOME/glib/issues/1441
 
---- glib/meson.build.orig	2019-10-21 17:18:40.000000000 +0000
+--- glib/meson.build.orig	2019-12-19 16:33:15.000000000 +0000
 +++ glib/meson.build
 @@ -316,7 +316,7 @@ else
    platform_deps = []
@@ -25,7 +25,7 @@ $NetBSD: patch-glib_meson.build,v 1.6 2019/11/26 10:27:09 jperkin Exp $
 -    c_args : ['-UG_DISABLE_ASSERT'],
 -    include_directories : configinc,
 -    dependencies : [libglib_dep])
--endif
+ endif
 -
 -report_conf = configuration_data()
 -report_conf.set('GLIB_VERSION', glib_version)
@@ -37,7 +37,6 @@ $NetBSD: patch-glib_meson.build,v 1.6 2019/11/26 10:27:09 jperkin Exp $
 -  configuration: report_conf,
 -  install_mode: 'rwxr-xr-x'
 -)
-+endif
  
  install_data('glib_gdb.py', install_dir : join_paths(glib_pkgdatadir, 'gdb'))
  
