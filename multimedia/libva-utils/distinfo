@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/11/24 14:08:56 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2019/12/29 01:32:53 ryoon Exp $
 
-SHA1 (libva-utils-2.3.0.tar.gz) = 91e470d0755ec7a102a4e4ce694190e5e95b9c7f
-RMD160 (libva-utils-2.3.0.tar.gz) = 6ee770190beded34c0507f498fa50537e0332798
-SHA512 (libva-utils-2.3.0.tar.gz) = ae36afb19f3414f4a3b857bbaeedd088e91e8a11cc785c4b945af0c7bf0e7bca7821ea5731b0868a26f273e323c0b155b12d87b4740fe8b2893ef024b8a979d8
-Size (libva-utils-2.3.0.tar.gz) = 1086331 bytes
+SHA1 (libva-utils-2.6.0.tar.gz) = 0b94f6a8bdf3bd63bdf22db289b3d54bc1b9c589
+RMD160 (libva-utils-2.6.0.tar.gz) = 3c94bf349a7ad63dfc9101695adf08b614fa6b88
+SHA512 (libva-utils-2.6.0.tar.gz) = 2722504861d09e049495ffaa07cfb5fb23720770e19d6d5e03b10592e20d99c87d9e401e8db26edd00cb7edb7e85438ca721c8c323b23664bd5a1e094bbed8d4
+Size (libva-utils-2.6.0.tar.gz) = 1196875 bytes
+SHA1 (patch-vendor_intel_sfcsample_VDecAccelVA.cpp) = df6193829cce4db37ce585812dea22eea7139c24
