@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/07/15 19:45:40 rjs Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/12/29 01:32:53 ryoon Exp $
 bin/avcenc
 bin/avcstreamoutdemo
 bin/h264encode
@@ -8,7 +8,14 @@ bin/loadjpeg
 bin/mpeg2vaenc
 bin/mpeg2vldemo
 bin/putsurface
+bin/sfcsample
 bin/vainfo
 bin/vavpp
 bin/vp8enc
 bin/vp9enc
+bin/vppblending
+bin/vppchromasitting
+bin/vppdenoise
+bin/vppscaling_csc
+bin/vppscaling_n_out_usrptr
+bin/vppsharpness
