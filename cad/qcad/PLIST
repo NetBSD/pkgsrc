@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/12/29 14:15:32 plunky Exp $
+@comment $NetBSD: PLIST,v 1.18 2019/12/29 14:18:20 plunky Exp $
 bin/qcad
 lib/libdxflib.so
 lib/libopennurbs.so
@@ -342,26 +342,8 @@ lib/qcad/patterns/metric/trans.pat
 lib/qcad/patterns/metric/tri-overlap.pat
 lib/qcad/patterns/metric/triang.pat
 lib/qcad/patterns/metric/zigzag.pat
-lib/qcad/platforminputcontexts/libcomposeplatforminputcontextplugin.so
-lib/qcad/platforminputcontexts/libibusplatforminputcontextplugin.so
-lib/qcad/platforminputcontexts/readme.txt
-lib/qcad/platforms/libqminimal.so
-lib/qcad/platforms/libqoffscreen.so
-lib/qcad/platforms/libqxcb.so
-lib/qcad/platforms/readme.txt
-lib/qcad/plugins/codecs/readme.txt
 lib/qcad/plugins/designer/libqcadcustomwidgets.so
-lib/qcad/plugins/designer/readme.txt
-lib/qcad/plugins/imageformats/libqgif.so
-lib/qcad/plugins/imageformats/libqico.so
-lib/qcad/plugins/imageformats/libqjpeg.so
-lib/qcad/plugins/imageformats/libqsvg.so
-lib/qcad/plugins/imageformats/libqtga.so
-lib/qcad/plugins/imageformats/libqtiff.so
-lib/qcad/plugins/imageformats/readme.txt
 lib/qcad/plugins/libqcaddxf.so
-lib/qcad/plugins/printsupport/libcupsprintersupport.so
-lib/qcad/plugins/printsupport/readme.txt
 lib/qcad/plugins/script/libqtscript_core.so
 lib/qcad/plugins/script/libqtscript_core.so.1
 lib/qcad/plugins/script/libqtscript_core.so.1.0
@@ -402,8 +384,6 @@ lib/qcad/plugins/script/libqtscript_xmlpatterns.so
 lib/qcad/plugins/script/libqtscript_xmlpatterns.so.1
 lib/qcad/plugins/script/libqtscript_xmlpatterns.so.1.0
 lib/qcad/plugins/script/libqtscript_xmlpatterns.so.1.0.0
-lib/qcad/plugins/sqldrivers/libqsqlite.so
-lib/qcad/plugins/sqldrivers/readme.txt
 lib/qcad/scripts/AddOn.js
 lib/qcad/scripts/Apollonius.js
 lib/qcad/scripts/Block/AddBlock/AddBlock-inverse.svg
@@ -10542,9 +10522,6 @@ lib/qcad/ts/scripts_zh_CN.qm
 lib/qcad/ts/scripts_zh_CN.ts
 lib/qcad/ts/scripts_zh_TW.qm
 lib/qcad/ts/scripts_zh_TW.ts
-${PLIST.egl}lib/qcad/xcbglintegrations/libqxcb-egl-integration.so
-${PLIST.glx}lib/qcad/xcbglintegrations/libqxcb-glx-integration.so
-lib/qcad/xcbglintegrations/readme.txt
 man/man1/qcad.1
 share/applications/qcad.desktop
 share/icons/hicolor/256x256/apps/qcad.png
