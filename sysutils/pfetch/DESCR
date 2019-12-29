@@ -1,0 +1,3 @@
+Pretty and simple system information tool written in POSIX sh, supporting:
+Linux; Android; MacOS; OpenBSD; FreeBSD; NetBSD; Haiku; Minix; Solaris; and
+more.
