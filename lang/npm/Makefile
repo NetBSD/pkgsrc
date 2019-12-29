@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2019/12/09 20:10:19 adam Exp $
+# $NetBSD: Makefile,v 1.30 2019/12/29 16:22:42 adam Exp $
 
-DISTNAME=	cli-6.13.2
+DISTNAME=	cli-6.13.4
 PKGNAME=	${DISTNAME:S/cli/npm/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=npm/}
@@ -12,16 +12,11 @@ HOMEPAGE=	https://github.com/npm/cli
 COMMENT=	Package manager for JavaScript
 LICENSE=	artistic-2.0
 
-# Pre-fetch marked so that man pages can be built offline
-MARKED=			marked-0.7.0
-DISTFILES+=		${DISTNAME}${EXTRACT_SUFX} ${MARKED}.tar.gz
-SITES.${MARKED}.tar.gz=	${MASTER_SITE_GITHUB:S,^,-,:=markedjs/marked/archive/v${MARKED:S/marked-//}.tar.gz}
-
 DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 USE_TOOLS+=	bash gmake perl
 
-PYTHON_VERSIONS_ACCEPTED=	27 # required by gyp scripts included
+MAKE_JOBS_SAFE=	no	# building man-pages
 
 REPLACE_INTERPRETER+=	node
 REPLACE.node.old=	.*node
@@ -44,10 +39,6 @@ SUBST_VARS.man-directory=	PKGMANDIR
 CHECK_INTERPRETER_SKIP+=	lib/node_modules/npm/*
 
 .include "../../mk/bsd.prefs.mk"
-
-pre-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} node bin/npm-cli.js install \
-		${WRKDIR}/${MARKED} --no-global --no-timing --no-save
 
 do-install:
 	${FIND} ${WRKSRC} -type f -name '*.orig' -delete
