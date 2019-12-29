@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/10/03 20:33:15 nia Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/29 06:44:27 ryoon Exp $
 
-DISTNAME=	obs-studio-24.0.1
+DISTNAME=	obs-studio-24.0.5
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=obsproject/}
 
