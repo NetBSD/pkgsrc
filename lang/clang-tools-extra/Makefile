@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2019/10/24 11:40:00 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2019/12/29 15:31:22 adam Exp $
 
 .include "../../lang/clang/Makefile.common"
 
-PKGNAME=	${DISTNAME:S/cfe/clang-tools-extra/:S/.src//}
-PKGREVISION=	1
+PKGNAME=	${DISTNAME:S/clang/clang-tools-extra/:S/.src//}
 
 COMMENT=	Extra Clang tools
 
-_EXTRA_DIST=		${DISTNAME:S/cfe/clang-tools-extra/}${EXTRACT_SUFX}
+_EXTRA_DIST=		${DISTNAME:S/clang/clang-tools-extra/}${EXTRACT_SUFX}
+SITES.${_EXTRA_DIST}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
 DISTFILES=	${DEFAULT_DISTFILES} ${_EXTRA_DIST}
 
@@ -25,6 +25,6 @@ REPLACE_PYTHON+=	tools/extra/clang-tidy/tool/run-clang-tidy.py
 .PHONY: inject-clang-tools
 post-extract: inject-clang-tools
 inject-clang-tools:
-	${MV} ${WRKDIR}/${DISTNAME:S/cfe/clang-tools-extra/} ${WRKSRC}/tools/extra
+	${MV} ${WRKDIR}/${DISTNAME:S/clang/clang-tools-extra/} ${WRKSRC}/tools/extra
 
 .include "../../mk/bsd.pkg.mk"

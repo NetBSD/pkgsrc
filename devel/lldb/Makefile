@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2019/10/24 11:52:21 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2019/12/29 15:31:21 adam Exp $
 
-DISTNAME=	lldb-9.0.0.src
-PKGREVISION=	1
+.include "../../lang/llvm/version.mk"
+
+DISTNAME=	lldb-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
-MASTER_SITES=	http://releases.llvm.org/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lldb.org/

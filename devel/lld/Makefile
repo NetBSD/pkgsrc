@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2019/11/03 12:40:40 kamil Exp $
+# $NetBSD: Makefile,v 1.13 2019/12/29 15:31:21 adam Exp $
 
-DISTNAME=	lld-9.0.0.src
+.include "../../lang/llvm/version.mk"
+
+DISTNAME=	lld-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	4
 CATEGORIES=	devel
-MASTER_SITES=	http://releases.llvm.org/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lld.llvm.org/
@@ -29,6 +28,6 @@ post-extract:
 	${MKDIR} ${WRKDIR}/build
 
 .include "options.mk"
-.include "../../lang/python/tool.mk"
 .include "../../lang/llvm/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
