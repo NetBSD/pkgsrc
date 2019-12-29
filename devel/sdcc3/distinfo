@@ -1,20 +1,7 @@
-$NetBSD: distinfo,v 1.9 2018/06/25 14:02:45 bouyer Exp $
+$NetBSD: distinfo,v 1.10 2019/12/29 06:29:23 ryoon Exp $
 
-SHA1 (sdcc-src-3.7.0.tar.bz2) = 67153fa08e04b7a79f95c23b68e1a0144dbf7f2b
-RMD160 (sdcc-src-3.7.0.tar.bz2) = 816b428f200770adb045276593bf07106877bc02
-SHA512 (sdcc-src-3.7.0.tar.bz2) = f36a7471eb14dd03bd42b676f73c3aedb26831eede7bcbbff6c3875326ce6be350d963496b6c2104e1bd7db18926d6f78cb51e9bc14a5cc0121d4a6b7d28cc87
-Size (sdcc-src-3.7.0.tar.bz2) = 17944920 bytes
-SHA1 (patch-Makefile_in) = 58be6bfe1ddc055883ef171adc71f363e6ade121
-SHA1 (patch-aa) = fc702b7de0c871761f959a4fbdfee26f5e1a2cc5
-SHA1 (patch-device_non-free_lib_Makefile.in) = 49894224d38ccf614c636831a61e569a48921850
-SHA1 (patch-device_non-free_lib_pic14_libdev_Makefile.in) = 4b77e9bd4fb4571afa317ebbd5bc3537d8dda491
-SHA1 (patch-doc_Makefile_in) = 8679551d6439dcd0064afbd2a43125f9bd1fb7d3
-SHA1 (patch-sim_ucsim_cmd.src_Makefile.in) = d29c69af814d4404aba64328e69e93189220a49d
-SHA1 (patch-sim_ucsim_doc_Makefile_in) = 781a8cf0a9eb3b5d6130e0621ef464a53b0086d6
-SHA1 (patch-sim_ucsim_sim.src_Makefile.in) = 2ad1a61fd9f21f6d767e0cb4e09aee1480a29000
-SHA1 (patch-support_cpp_Makefile.in) = 7bc2a33eb42afd18930ddaf6d75b981135fca36f
-SHA1 (patch-support_makebin_Makefile_in) = 6045bc4a0870b57f74c597b4a6215bf3accd1a46
-SHA1 (patch-support_scripts_Makefile.in) = f292001be4a7dc0a629529087838138e1bb52161
-SHA1 (patch-support_sdbinutils_Makefile.in) = 5d8fce39c55d44340a6431426aa01690e39b7c67
-SHA1 (patch-support_sdbinutils_bfd_asxxxx.c) = 3163003fec4ea548dc89ce35ef0e9b7ed53c67f9
-SHA1 (patch-support_sdbinutils_libiberty_Makefile.in) = 42f1467c07c28e510ed47f876a0cd8d1657c50ce
+SHA1 (sdcc-src-3.9.0.tar.bz2) = 0c9f701bff044b58381ebceeed7383e20e860be0
+RMD160 (sdcc-src-3.9.0.tar.bz2) = cbe4d96fabe2eaf11da7c896a85921071c71bf00
+SHA512 (sdcc-src-3.9.0.tar.bz2) = 513f6388c7005e6722ad5220cbd70da04f5848896fb42738b1536fe4fa44906e2d2efe0e3e9f68e0c224e0fd2dedd75663bf382e389392ef038b2ae5f16339b0
+Size (sdcc-src-3.9.0.tar.bz2) = 19155256 bytes
+SHA1 (patch-aa) = 0c2e99b5c61b8717d8226acb6242a9eb4866bdac

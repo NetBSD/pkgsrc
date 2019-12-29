@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2019/08/22 12:23:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2019/12/29 06:29:23 ryoon Exp $
 
-DISTNAME=	sdcc-src-3.7.0
+DISTNAME=	sdcc-src-3.9.0
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	7
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdcc/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,9 +21,9 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison makeinfo
 INFO_FILES=	yes
 
-BUILD_TARGET=	dep all
+#BUILD_TARGET=	dep all
 
-WRKSRC=			${WRKDIR}/sdcc
+WRKSRC=			${WRKDIR}/sdcc-${PKGVERSION_NOREV}
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake lex:run perl:run
 
