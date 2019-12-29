@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/29 06:38:56 ryoon Exp $
+lib/gstreamer-1.0/libgstvaapi.so
