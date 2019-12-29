@@ -1,6 +1,6 @@
-$NetBSD: patch-rts_PosixSource.h,v 1.1 2018/05/25 15:24:02 jperkin Exp $
+$NetBSD: patch-rts_PosixSource.h,v 1.2 2019/12/29 16:59:09 pho Exp $
 
-Set _XOPEN_SOURCE correctly on SunOS.
+Set _XOPEN_SOURCE correctly on SunOS. Fixed in later versions.
 
 --- rts/PosixSource.h.orig	2013-04-18 21:22:46.000000000 +0000
 +++ rts/PosixSource.h
