@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5540 2019/12/29 18:24:25 leot Exp $
+$NetBSD: CHANGES-2019,v 1.5541 2019/12/29 19:53:40 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8857,3 +8857,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated textproc/py-xlsxwriter to 1.2.7 [adam 2019-12-29]
 	Updated x11/ruby-tk-gem to 0.2.0nb1 [taca 2019-12-29]
 	Updated lang/ghc7 to 7.10.3 [pho 2019-12-29]
+	Updated devel/glib2 to 2.62.4 [triaxx 2019-12-29]
+	Updated devel/gdbus-codegen to 2.62.4 [triaxx 2019-12-29]
