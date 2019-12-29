@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2019/12/29 14:16:05 plunky Exp $
+# $NetBSD: Makefile,v 1.84 2019/12/29 14:18:20 plunky Exp $
 #
 
 DISTNAME=		qcad-3.24.0.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
 EXTRACT_USING=		bsdtar
@@ -55,7 +55,6 @@ BUILD_TARGET=	release
 # allow pkgsrc to use DESTDIR
 #
 do-configure:
-	cd ${WRKSRC} && ${MKDIR} release
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake -r -after DESTDIR=
 
 do-install:
@@ -79,8 +78,7 @@ do-install:
 	${FIND} ${WRKSRC}/scripts -name \*.orig -delete
 	${FIND} ${WRKSRC} -name \*.gitignore -delete
 	cd ${WRKSRC} && ${PAX} -rwpm \
-	    fonts linetypes patterns plugins platforminputcontexts platforms \
-	    xcbglintegrations scripts themes ts \
+	    fonts linetypes patterns scripts themes ts \
 	    ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 	cd ${WRKSRC} && ${PAX} -rwpm \
 	    readme.txt examples libraries \
