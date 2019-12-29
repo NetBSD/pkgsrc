@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.18 2019/03/08 18:14:45 ryoon Exp $
+$NetBSD: distinfo,v 1.19 2019/12/29 01:00:22 ryoon Exp $
 
-SHA1 (isync-1.3.0.tar.gz) = 07f6d7cfc39ed2678791f625de70cdeff3d3bfba
-RMD160 (isync-1.3.0.tar.gz) = 01d7b028fc61e7ad3b51b529a082637fbc4a6816
-SHA512 (isync-1.3.0.tar.gz) = b5186f2afe97cab58ce55d3ec19ae7371676ae614448614a9e3e02d09662c34b74e559f0926661fa0300ab22dab9e2e9089b78ee38b94141ff3f8b4d75578ffa
-Size (isync-1.3.0.tar.gz) = 309459 bytes
+SHA1 (isync-1.3.1.tar.gz) = 6806fbe99537c119d2c4e40b9189d4d05f870bda
+RMD160 (isync-1.3.1.tar.gz) = 65ce1693e2eec5619fc9648e6c568eb4bf9679be
+SHA512 (isync-1.3.1.tar.gz) = 59d702d41d4a4e72f03cb282b414d0bb859593171763e845bc24d116a74f807a79e5be61f1dd1f59a9ece492322bceac156b08958a246cbfbe7f230fab4cdda2
+Size (isync-1.3.1.tar.gz) = 311868 bytes
 SHA1 (patch-ae) = e1a1badcb99fe6089a15a259985933aceedfc110
-SHA1 (patch-af) = 14e50c12d34af78b379ea9b8bacbf835b6a009ce
 SHA1 (patch-src_Makefile.in) = b989a7627dbb7c989dd26c3e20beeceb000a7a47
 SHA1 (patch-src_compat_Makefile.in) = ffaba182c6b6b5c50fe82104d508438a3b62ecfd
-SHA1 (patch-src_socket.c) = 33706f994ccd5f2f1263174bfe9d357bd8afe7c1
