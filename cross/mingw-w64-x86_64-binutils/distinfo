@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/05/10 19:30:03 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2019/12/29 01:08:14 ryoon Exp $
 
-SHA1 (binutils-2.32.tar.bz2) = ee5ae264f29c0c89fbaa817ee629675acd815d26
-RMD160 (binutils-2.32.tar.bz2) = 4d6c948ded0c20afeb4e7807d120b50d534770cc
-SHA512 (binutils-2.32.tar.bz2) = 99ec7ed2b5ebfd3ac16cecb1567ec4a72f81ac30717002d601708f7547b2f8122ffcce076c986f22894aede33c54c73012210a4e973ba9b6e2d87a242a2bee12
-Size (binutils-2.32.tar.bz2) = 30782392 bytes
+SHA1 (binutils-2.33.1.tar.bz2) = 332c7df7e1830c1e756cf4a5542a7952200210c1
+RMD160 (binutils-2.33.1.tar.bz2) = 07e40dafa809953f88f2ea5178b096e77e93cc1f
+SHA512 (binutils-2.33.1.tar.bz2) = bfdbb49a9002dd9bae8ab3c9347e05bd968ad97837c3e71b046eb8721c45a73db01f880dbdf0911bb37a97be37d6cc3b26d0855964a011f593ccbf1d08641c87
+Size (binutils-2.33.1.tar.bz2) = 32160315 bytes
