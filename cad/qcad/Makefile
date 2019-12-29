@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2019/12/29 12:44:15 plunky Exp $
+# $NetBSD: Makefile,v 1.82 2019/12/29 14:15:32 plunky Exp $
 #
 
 DISTNAME=		qcad-3.24.0.1
+PKGREVISION=		1
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
 EXTRACT_USING=		bsdtar
@@ -25,6 +26,12 @@ SUBST_FILES.paths+=	shared.pri src/core/RS.cpp src/core/RSettings.cpp
 SUBST_FILES.paths+=	scripts/Help/ShowReadme/ShowReadme.js
 SUBST_FILES.paths+=	scripts/Widgets/LibraryBrowser/LibraryBrowser.js
 SUBST_VARS.paths=	PREFIX
+
+SUBST_CLASSES+=		icon
+SUBST_STAGE.icon=	pre-configure
+SUBST_MESSAGE.icon=	Fix icon name.
+SUBST_FILES.icon=	qcad.desktop
+SUBST_SED.icon=		-e s,qcad_icon,qcad,g
 
 .include "../../mk/bsd.prefs.mk"
 PLIST_VARS+=	glx egl
@@ -56,15 +63,15 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/qcad.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/support/logo/logo_512.svg \
-	    ${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/qcad_icon.svg
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/qcad.svg
 	${INSTALL_DATA} ${WRKSRC}/support/logo/logo_512.svg \
-	    ${DESTDIR}${PREFIX}/share/icons/hicolor/512x512/apps/qcad_icon.svg
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/512x512/apps/qcad.svg
 	${INSTALL_DATA} ${WRKSRC}/support/logo/logo_512.png \
-	    ${DESTDIR}${PREFIX}/share/icons/hicolor/512x512/apps/qcad_icon.png
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/512x512/apps/qcad.png
 	${INSTALL_DATA} ${WRKSRC}/scripts/qcad_icon.png \
-	    ${DESTDIR}${PREFIX}/share/icons/hicolor/256x256/apps/qcad_icon.png
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/256x256/apps/qcad.png
 	${INSTALL_DATA} ${WRKSRC}/support/doc/api/qcad_icon.png \
-	    ${DESTDIR}${PREFIX}/share/icons/hicolor/64x64/apps/qcad_icon.png
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/64x64/apps/qcad.png
 	${INSTALL_LIB} ${WRKSRC}/src/3rdparty/qt-labs-qtscriptgenerator-*/qtbindings/qtscript_*/libqtscript_*.so* \
 	    ${DESTDIR}${PREFIX}/lib/qcad/plugins/script
 	${INSTALL_MAN} ${WRKSRC}/qcad.1 \
