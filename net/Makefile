@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1283 2019/12/29 04:41:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.1284 2019/12/29 04:46:28 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -701,6 +701,7 @@ SUBDIR+=	py-portend
 SUBDIR+=	py-prometheus_client
 SUBDIR+=	py-ptt
 SUBDIR+=	py-py3dns
+SUBDIR+=	py-pychromecast
 SUBDIR+=	py-pydns
 SUBDIR+=	py-pyftpdlib
 SUBDIR+=	py-pylint-celery
