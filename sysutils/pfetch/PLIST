@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/29 01:29:40 fox Exp $
+bin/pfetch
