@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.869 2019/12/11 21:15:10 nia Exp $
+# $NetBSD: Makefile,v 1.870 2019/12/29 21:31:34 ng0 Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -259,6 +259,7 @@ SUBDIR+=	jbig2dec
 SUBDIR+=	jbig2enc
 SUBDIR+=	jbigkit
 SUBDIR+=	jhead
+SUBDIR+=	jp2a
 SUBDIR+=	jpeg
 SUBDIR+=	jpeg2ps
 SUBDIR+=	jpeg_ls
