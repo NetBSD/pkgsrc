@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2019/12/22 22:27:21 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/29 01:32:53 ryoon Exp $
 
-DISTNAME=	libva-utils-2.3.0
+DISTNAME=	libva-utils-2.6.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 GITHUB_PROJECT=	libva-utils
+GITHUB_TAG=	2.6.0
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/intel/libva-utils/
@@ -16,6 +17,7 @@ USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	autogen.sh
+CONFIGURE_ARGS+=	--enable-x11
 
 SUBST_CLASSES+=		getopt
 SUBST_STAGE.getopt=	pre-configure
@@ -27,4 +29,6 @@ LIBS+=	-lm
 
 .include "../../multimedia/libva/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
