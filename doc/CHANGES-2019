@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5533 2019/12/29 15:58:46 sevan Exp $
+$NetBSD: CHANGES-2019,v 1.5534 2019/12/29 16:24:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8849,3 +8849,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/nodejs10 to 10.18.0 [adam 2019-12-29]
 	Updated lang/nodejs8 to 8.17.0 [adam 2019-12-29]
 	Updated audo/py-beets to 1.4.9 [sevan 2019-12-29]
+	Updated lang/npm to 6.13.4 [adam 2019-12-29]
+	Updated misc/stellarium to 0.19.3 [adam 2019-12-29]
