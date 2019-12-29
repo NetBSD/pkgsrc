@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5530 2019/12/29 12:49:34 leot Exp $
+$NetBSD: CHANGES-2019,v 1.5531 2019/12/29 15:33:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8832,3 +8832,15 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/cmake to 3.16.2 [adam 2019-12-29]
 	Updated cad/qcad to 3.24.0.1 [plunky 2019-12-29]
 	Updated mail/msmtp to 1.8.7 [leot 2019-12-29]
+	Updated lang/llvm to 9.0.1 [adam 2019-12-29]
+	Updated lang/compiler-rt to 9.0.1 [adam 2019-12-29]
+	Updated lang/clang to 9.0.1 [adam 2019-12-29]
+	Updated lang/clang-static-analyzer to 9.0.1 [adam 2019-12-29]
+	Updated lang/clang-tools-extra to 9.0.1 [adam 2019-12-29]
+	Updated lang/libcxx to 9.0.1 [adam 2019-12-29]
+	Updated lang/libcxxabi to 9.0.1 [adam 2019-12-29]
+	Updated lang/libunwind to 9.0.1 [adam 2019-12-29]
+	Updated devel/lld to 9.0.1 [adam 2019-12-29]
+	Updated devel/lldb to 9.0.1 [adam 2019-12-29]
+	Updated devel/polly to 9.0.1 [adam 2019-12-29]
+	Updated parallel/openmp to 9.0.1 [adam 2019-12-29]
