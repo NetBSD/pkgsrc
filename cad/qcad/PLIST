@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/10/27 15:43:23 nia Exp $
+@comment $NetBSD: PLIST,v 1.16 2019/12/29 12:44:15 plunky Exp $
 bin/qcad
 lib/libdxflib.so
 lib/libopennurbs.so
@@ -175,10 +175,19 @@ lib/qcad/patterns/imperial/ar-parq1.pat
 lib/qcad/patterns/imperial/ar-rroof.pat
 lib/qcad/patterns/imperial/ar-rshke.pat
 lib/qcad/patterns/imperial/ar-sand.pat
+lib/qcad/patterns/imperial/blocks-01.pat
+lib/qcad/patterns/imperial/blocks-02.pat
+lib/qcad/patterns/imperial/box-overlap.pat
 lib/qcad/patterns/imperial/box.pat
+lib/qcad/patterns/imperial/boxjoin-01.pat
+lib/qcad/patterns/imperial/boxjoin-02.pat
 lib/qcad/patterns/imperial/brass.pat
 lib/qcad/patterns/imperial/brick.pat
 lib/qcad/patterns/imperial/brstone.pat
+lib/qcad/patterns/imperial/celtic-01.pat
+lib/qcad/patterns/imperial/celtic-02.pat
+lib/qcad/patterns/imperial/circles-02.pat
+lib/qcad/patterns/imperial/circles.pat
 lib/qcad/patterns/imperial/clay.pat
 lib/qcad/patterns/imperial/cork.pat
 lib/qcad/patterns/imperial/cross.pat
@@ -187,26 +196,44 @@ lib/qcad/patterns/imperial/dolmit.pat
 lib/qcad/patterns/imperial/dots.pat
 lib/qcad/patterns/imperial/earth.pat
 lib/qcad/patterns/imperial/escher.pat
+lib/qcad/patterns/imperial/explosion.pat
 lib/qcad/patterns/imperial/flex.pat
 lib/qcad/patterns/imperial/grass.pat
 lib/qcad/patterns/imperial/grate.pat
 lib/qcad/patterns/imperial/gravel.pat
 lib/qcad/patterns/imperial/hex.pat
+lib/qcad/patterns/imperial/hexagons.pat
+lib/qcad/patterns/imperial/hexjoin-01.pat
+lib/qcad/patterns/imperial/hexjoin-02.pat
+lib/qcad/patterns/imperial/holly.pat
 lib/qcad/patterns/imperial/honey.pat
 lib/qcad/patterns/imperial/hound.pat
 lib/qcad/patterns/imperial/insul.pat
+lib/qcad/patterns/imperial/lattice-01.pat
+lib/qcad/patterns/imperial/lattice-02.pat
+lib/qcad/patterns/imperial/lattice-03.pat
+lib/qcad/patterns/imperial/lattice-04.pat
+lib/qcad/patterns/imperial/lattice-05.pat
+lib/qcad/patterns/imperial/lattice-06.pat
 lib/qcad/patterns/imperial/line.pat
+lib/qcad/patterns/imperial/maze-01.pat
+lib/qcad/patterns/imperial/maze-02.pat
 lib/qcad/patterns/imperial/mudst.pat
 lib/qcad/patterns/imperial/net.pat
 lib/qcad/patterns/imperial/net3.pat
 lib/qcad/patterns/imperial/plast.pat
 lib/qcad/patterns/imperial/plasti.pat
+lib/qcad/patterns/imperial/qcad-logo.pat
 lib/qcad/patterns/imperial/sacncr.pat
+lib/qcad/patterns/imperial/scaffold.pat
 lib/qcad/patterns/imperial/square.pat
+lib/qcad/patterns/imperial/squiggle-01.pat
+lib/qcad/patterns/imperial/squiggle-02.pat
 lib/qcad/patterns/imperial/stars.pat
 lib/qcad/patterns/imperial/steel.pat
 lib/qcad/patterns/imperial/swamp.pat
 lib/qcad/patterns/imperial/trans.pat
+lib/qcad/patterns/imperial/tri-overlap.pat
 lib/qcad/patterns/imperial/triang.pat
 lib/qcad/patterns/imperial/zigzag.pat
 lib/qcad/patterns/metric/acad_iso02w100.pat
@@ -243,10 +270,19 @@ lib/qcad/patterns/metric/ar-parq1.pat
 lib/qcad/patterns/metric/ar-rroof.pat
 lib/qcad/patterns/metric/ar-rshke.pat
 lib/qcad/patterns/metric/ar-sand.pat
+lib/qcad/patterns/metric/blocks-01.pat
+lib/qcad/patterns/metric/blocks-02.pat
+lib/qcad/patterns/metric/box-overlap.pat
 lib/qcad/patterns/metric/box.pat
+lib/qcad/patterns/metric/boxjoin-01.pat
+lib/qcad/patterns/metric/boxjoin-02.pat
 lib/qcad/patterns/metric/brass.pat
 lib/qcad/patterns/metric/brick.pat
 lib/qcad/patterns/metric/brstone.pat
+lib/qcad/patterns/metric/celtic-01.pat
+lib/qcad/patterns/metric/celtic-02.pat
+lib/qcad/patterns/metric/circles-02.pat
+lib/qcad/patterns/metric/circles.pat
 lib/qcad/patterns/metric/clay.pat
 lib/qcad/patterns/metric/cork.pat
 lib/qcad/patterns/metric/cross.pat
@@ -255,11 +291,16 @@ lib/qcad/patterns/metric/dolmit.pat
 lib/qcad/patterns/metric/dots.pat
 lib/qcad/patterns/metric/earth.pat
 lib/qcad/patterns/metric/escher.pat
+lib/qcad/patterns/metric/explosion.pat
 lib/qcad/patterns/metric/flex.pat
 lib/qcad/patterns/metric/grass.pat
 lib/qcad/patterns/metric/grate.pat
 lib/qcad/patterns/metric/gravel.pat
 lib/qcad/patterns/metric/hex.pat
+lib/qcad/patterns/metric/hexagons.pat
+lib/qcad/patterns/metric/hexjoin-01.pat
+lib/qcad/patterns/metric/hexjoin-02.pat
+lib/qcad/patterns/metric/holly.pat
 lib/qcad/patterns/metric/honey.pat
 lib/qcad/patterns/metric/hound.pat
 lib/qcad/patterns/metric/insul.pat
@@ -274,18 +315,31 @@ lib/qcad/patterns/metric/jis_rc_30.pat
 lib/qcad/patterns/metric/jis_stn_1e.pat
 lib/qcad/patterns/metric/jis_stn_2.5.pat
 lib/qcad/patterns/metric/jis_wood.pat
+lib/qcad/patterns/metric/lattice-01.pat
+lib/qcad/patterns/metric/lattice-02.pat
+lib/qcad/patterns/metric/lattice-03.pat
+lib/qcad/patterns/metric/lattice-04.pat
+lib/qcad/patterns/metric/lattice-05.pat
+lib/qcad/patterns/metric/lattice-06.pat
 lib/qcad/patterns/metric/line.pat
+lib/qcad/patterns/metric/maze-01.pat
+lib/qcad/patterns/metric/maze-02.pat
 lib/qcad/patterns/metric/mudst.pat
 lib/qcad/patterns/metric/net.pat
 lib/qcad/patterns/metric/net3.pat
 lib/qcad/patterns/metric/plast.pat
 lib/qcad/patterns/metric/plasti.pat
+lib/qcad/patterns/metric/qcad-logo.pat
 lib/qcad/patterns/metric/sacncr.pat
+lib/qcad/patterns/metric/scaffold.pat
 lib/qcad/patterns/metric/square.pat
+lib/qcad/patterns/metric/squiggle-01.pat
+lib/qcad/patterns/metric/squiggle-02.pat
 lib/qcad/patterns/metric/stars.pat
 lib/qcad/patterns/metric/steel.pat
 lib/qcad/patterns/metric/swamp.pat
 lib/qcad/patterns/metric/trans.pat
+lib/qcad/patterns/metric/tri-overlap.pat
 lib/qcad/patterns/metric/triang.pat
 lib/qcad/patterns/metric/zigzag.pat
 lib/qcad/platforminputcontexts/libcomposeplatforminputcontextplugin.so
@@ -1429,9 +1483,11 @@ lib/qcad/scripts/Draw/Circle/Circle2TP/Circle2TPInit.js
 lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest00.js
 lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest01.js
 lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest02.js
+lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest03.js
 lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest00_000.dxf
 lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest01_000.dxf
 lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest02_000.dxf
+lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest03_000.dxf
 lib/qcad/scripts/Draw/Circle/Circle2TP/doc/Circle2TP.png
 lib/qcad/scripts/Draw/Circle/Circle2TP/doc/Circle2TP_de.html
 lib/qcad/scripts/Draw/Circle/Circle2TP/doc/Circle2TP_desc_de.html
@@ -5056,6 +5112,7 @@ lib/qcad/scripts/Help/About/doc/About_desc_ru.html
 lib/qcad/scripts/Help/About/doc/About_desc_sl.html
 lib/qcad/scripts/Help/About/doc/About_ja.html
 lib/qcad/scripts/Help/About/doc/About_nl.html
+lib/qcad/scripts/Help/About/doc/About_pt.html
 lib/qcad/scripts/Help/About/doc/About_ru.html
 lib/qcad/scripts/Help/About/doc/About_sl.html
 lib/qcad/scripts/Help/BrowseUserManual/BrowseUserManual-inverse.svg
@@ -5095,6 +5152,7 @@ lib/qcad/scripts/Help/FAQ/doc/FAQ_desc_ru.html
 lib/qcad/scripts/Help/FAQ/doc/FAQ_desc_sl.html
 lib/qcad/scripts/Help/FAQ/doc/FAQ_ja.html
 lib/qcad/scripts/Help/FAQ/doc/FAQ_nl.html
+lib/qcad/scripts/Help/FAQ/doc/FAQ_pt.html
 lib/qcad/scripts/Help/FAQ/doc/FAQ_ru.html
 lib/qcad/scripts/Help/FAQ/doc/FAQ_sl.html
 lib/qcad/scripts/Help/Forum/Forum.js
@@ -5113,6 +5171,7 @@ lib/qcad/scripts/Help/Forum/doc/Forum_desc_ru.html
 lib/qcad/scripts/Help/Forum/doc/Forum_desc_sl.html
 lib/qcad/scripts/Help/Forum/doc/Forum_ja.html
 lib/qcad/scripts/Help/Forum/doc/Forum_nl.html
+lib/qcad/scripts/Help/Forum/doc/Forum_pt.html
 lib/qcad/scripts/Help/Forum/doc/Forum_ru.html
 lib/qcad/scripts/Help/Forum/doc/Forum_sl.html
 lib/qcad/scripts/Help/Help.js
@@ -5133,6 +5192,7 @@ lib/qcad/scripts/Help/ReportBug/doc/ReportBug_desc_ru.html
 lib/qcad/scripts/Help/ReportBug/doc/ReportBug_desc_sl.html
 lib/qcad/scripts/Help/ReportBug/doc/ReportBug_ja.html
 lib/qcad/scripts/Help/ReportBug/doc/ReportBug_nl.html
+lib/qcad/scripts/Help/ReportBug/doc/ReportBug_pt.html
 lib/qcad/scripts/Help/ReportBug/doc/ReportBug_ru.html
 lib/qcad/scripts/Help/ReportBug/doc/ReportBug_sl.html
 lib/qcad/scripts/Help/ReportTranslationError/ReportTranslationError.js
@@ -5141,6 +5201,7 @@ lib/qcad/scripts/Help/ReportTranslationError/ReportTranslationErrorInit.js
 lib/qcad/scripts/Help/ReportTranslationError/doc/ReportTranslationError_de.html
 lib/qcad/scripts/Help/ReportTranslationError/doc/ReportTranslationError_ja.html
 lib/qcad/scripts/Help/ReportTranslationError/doc/ReportTranslationError_nl.html
+lib/qcad/scripts/Help/ReportTranslationError/doc/ReportTranslationError_pt.html
 lib/qcad/scripts/Help/ReportTranslationError/doc/ReportTranslationError_ru.html
 lib/qcad/scripts/Help/ReportTranslationError/doc/ReportTranslationError_sl.html
 lib/qcad/scripts/Help/ShowReadme/ShowReadme.js
@@ -5150,6 +5211,7 @@ lib/qcad/scripts/Help/ShowReadme/ShowReadmeInit.js
 lib/qcad/scripts/Help/ShowReadme/doc/ShowReadme_de.html
 lib/qcad/scripts/Help/ShowReadme/doc/ShowReadme_ja.html
 lib/qcad/scripts/Help/ShowReadme/doc/ShowReadme_nl.html
+lib/qcad/scripts/Help/ShowReadme/doc/ShowReadme_pt.html
 lib/qcad/scripts/Help/ShowReadme/doc/ShowReadme_ru.html
 lib/qcad/scripts/Help/ShowReadme/doc/ShowReadme_sl.html
 lib/qcad/scripts/Help/Website/Website.js
@@ -5168,12 +5230,14 @@ lib/qcad/scripts/Help/Website/doc/Website_desc_ru.html
 lib/qcad/scripts/Help/Website/doc/Website_desc_sl.html
 lib/qcad/scripts/Help/Website/doc/Website_ja.html
 lib/qcad/scripts/Help/Website/doc/Website_nl.html
+lib/qcad/scripts/Help/Website/doc/Website_pt.html
 lib/qcad/scripts/Help/Website/doc/Website_ru.html
 lib/qcad/scripts/Help/Website/doc/Website_sl.html
 lib/qcad/scripts/Help/dir/dir.pro
 lib/qcad/scripts/Help/doc/Help_de.html
 lib/qcad/scripts/Help/doc/Help_ja.html
 lib/qcad/scripts/Help/doc/Help_nl.html
+lib/qcad/scripts/Help/doc/Help_pt.html
 lib/qcad/scripts/Help/doc/Help_ru.html
 lib/qcad/scripts/Help/doc/Help_sl.html
 lib/qcad/scripts/ImportExport/ImportExport.pro
@@ -6032,6 +6096,47 @@ lib/qcad/scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js
 lib/qcad/scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.pro
 lib/qcad/scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js
 lib/qcad/scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.pro
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/CurtainRope.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterTemplates/PainterConstruct_Rope.dxf
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterTemplates/PainterTestEntities.dxf
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/1OrthoPointGlobal.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/1OrthoPointGlobalFlex.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/2OrthoPointsGlobal.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/2OrthoPointsGlobalFlex.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/3PhaseWaveGlobal.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/AllPainterDataTypes.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/CurtainRopeProto.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/CurtainRopeProtoKnot.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/GreekMeander15.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/GreekMeander15Flexing.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/OrthogonalBar.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/OrthogonalMark.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/RailwayTrackConcrete.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/RailwayTrackLineArt.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/RulerInch.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/RulerMetric.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/SawtoothWave.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/SawtoothWaveGlobal.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/SinusoidWave.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/SinusoidWaveGlobal.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/SqaureWave.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/SqaureWaveFlexing.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/SqaureWaveGlobal.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/SqauredShape.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/SqauredShapeFlexing.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/SteppedWave.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/SteppedWaveGlobal.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/TelephoneCoilMedio.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/TriangleWave.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/Icons/TriangleWaveGlobal.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/PreserveLookOff.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/PreserveLookOffSq.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/PreserveLookOn.svg
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/PreserveLookOnSq.svg
 lib/qcad/scripts/Misc/Examples/MathExamples/MathExamples.js
 lib/qcad/scripts/Misc/Examples/MathExamples/MathExamples.pro
 lib/qcad/scripts/Misc/Examples/MathExamples/dir/dir.pro
@@ -7308,9 +7413,11 @@ lib/qcad/scripts/Modify/Scale/Tests/ScaleTest05.js
 lib/qcad/scripts/Modify/Scale/Tests/ScaleTest06.js
 lib/qcad/scripts/Modify/Scale/Tests/ScaleTest07.js
 lib/qcad/scripts/Modify/Scale/Tests/ScaleTest08.js
+lib/qcad/scripts/Modify/Scale/Tests/ScaleTest09.js
 lib/qcad/scripts/Modify/Scale/Tests/data/arcs.dxf
 lib/qcad/scripts/Modify/Scale/Tests/data/circles.dxf
 lib/qcad/scripts/Modify/Scale/Tests/data/ellipses_ellipse_arcs.dxf
+lib/qcad/scripts/Modify/Scale/Tests/data/entities.dxf
 lib/qcad/scripts/Modify/Scale/Tests/data/lines.dxf
 lib/qcad/scripts/Modify/Scale/Tests/data/mtext.dxf
 lib/qcad/scripts/Modify/Scale/Tests/data/points.dxf
@@ -7326,6 +7433,7 @@ lib/qcad/scripts/Modify/Scale/Tests/required/ScaleTest05_000.dxf
 lib/qcad/scripts/Modify/Scale/Tests/required/ScaleTest06_000.dxf
 lib/qcad/scripts/Modify/Scale/Tests/required/ScaleTest07_000.dxf
 lib/qcad/scripts/Modify/Scale/Tests/required/ScaleTest08_000.dxf
+lib/qcad/scripts/Modify/Scale/Tests/required/ScaleTest09_000.dxf
 lib/qcad/scripts/Modify/Scale/doc/ByMouse.png
 lib/qcad/scripts/Modify/Scale/doc/ByMouseSq.png
 lib/qcad/scripts/Modify/Scale/doc/KeepProportionsOff.png
@@ -9733,6 +9841,9 @@ lib/qcad/scripts/Widgets/LibraryBrowser/doc/ShowOptionsDown.png
 lib/qcad/scripts/Widgets/LibraryBrowser/doc/ShowOptionsUp.png
 lib/qcad/scripts/Widgets/LibraryBrowser/doc/Sync.png
 lib/qcad/scripts/Widgets/LibraryBrowser/doc/Tag.png
+lib/qcad/scripts/Widgets/MenuBar/MenuBar.js
+lib/qcad/scripts/Widgets/MenuBar/MenuBar.pro
+lib/qcad/scripts/Widgets/MenuBar/PreferencesPage.ui
 lib/qcad/scripts/Widgets/MouseDisplay/Mouse-inverse.svg
 lib/qcad/scripts/Widgets/MouseDisplay/Mouse.svg
 lib/qcad/scripts/Widgets/MouseDisplay/MouseDisplay.js
@@ -10598,6 +10709,8 @@ share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Din6771-1_quer_A4.dxf
 share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Din6771_quer_A3.dxf
 share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Din7200_quer_A3.dxf
 share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Plankopf gross_quer_A3.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vorlage_elt_2.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vorlage_elt_3.dxf
 share/qcad/libraries/templates/metric/dl3dl/_META/meta.rdf
 share/qcad/libraries/templates/metric/dl3dl/nur Plankopf.dxf
 share/qcad/libraries/templates/metric/iso_en_a0.dxf
@@ -10620,3 +10733,111 @@ share/qcad/libraries/templates/metric/iso_en_a4_metric_portrait_aec.rdf
 share/qcad/libraries/templates/metric/title_block_80mm_x_80mm.dxf
 share/qcad/libraries/templates/metric/title_block_80mm_x_80mm.rdf
 share/qcad/readme.txt
+@pkgdir lib/qcad/scripts/Snap/SnapMiddleManual/Tests/actual
+@pkgdir lib/qcad/scripts/Snap/SnapIntersectionManual/Tests/actual
+@pkgdir lib/qcad/scripts/Snap/SnapIntersection/Tests/actual
+@pkgdir lib/qcad/scripts/Snap/SnapDistanceManual/Tests/actual
+@pkgdir lib/qcad/scripts/Projection/IsometricProjection/IsoProject/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/TrimBoth/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Trim/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/TranslateRotate/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Translate/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Stretch/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Scale/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Round/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Rotate2/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Rotate/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Reverse/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Offset/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Mirror/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Lengthen/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/FlipVertical/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/FlipHorizontal/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Explode/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Divide/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/BreakOutManual/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/BreakOutGap/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/BreakOut/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/Bevel/Tests/actual
+@pkgdir lib/qcad/scripts/Modify/AutoTrim/Tests/actual
+@pkgdir lib/qcad/scripts/Layer/AddLayer/Tests/actual
+@pkgdir lib/qcad/scripts/Information/InfoPolylineArea/Tests/actual
+@pkgdir lib/qcad/scripts/Information/InfoDistancePP/Tests/actual
+@pkgdir lib/qcad/scripts/Information/InfoDistanceEP/Tests/actual
+@pkgdir lib/qcad/scripts/Information/InfoDistanceEE/Tests/actual
+@pkgdir lib/qcad/scripts/Edit/Paste/Tests/actual
+@pkgdir lib/qcad/scripts/Edit/Esc/Tests/actual
+@pkgdir lib/qcad/scripts/Edit/Duplicate/Tests/actual
+@pkgdir lib/qcad/scripts/Edit/Delete/Tests/actual
+@pkgdir lib/qcad/scripts/Edit/CutWithReference/Tests/actual
+@pkgdir lib/qcad/scripts/Edit/Cut/Tests/actual
+@pkgdir lib/qcad/scripts/Edit/CopyWithReference/Tests/actual
+@pkgdir lib/qcad/scripts/Edit/Copy/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Text/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Spline/SplineControlPoints/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Shape/ShapePolygonPP/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Shape/ShapePolygonCP/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Shape/ShapePolygonAFCP/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Polyline/DrawPolyline/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Point/Point1P/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Line/LineVertical/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Line/LineTangent2/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Line/LineTangent1/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Line/LineRelativeAngle/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Line/LineParallelThrough/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Line/LineParallel/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Line/LineOrthogonalTangent/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Line/LineOrthogonal/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Line/LineHorizontal/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Line/LineBisector/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Line/LineAngle/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Line/Line2P/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Ellipse/EllipseRR/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Ellipse/EllipseOffsetThrough/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Ellipse/EllipseOffset/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Ellipse/EllipseDD/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Ellipse/EllipseCPP/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Ellipse/EllipseArcCPPA/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Dimension/Leader/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Dimension/DimVertical/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Dimension/DimRotated/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Dimension/DimRadial/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Dimension/DimOrdinate/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Dimension/DimHorizontal/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Dimension/DimDiametric/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Dimension/DimAngular/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Dimension/DimAligned/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Circle/CircleTPR/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Circle/CircleT2P/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Circle/CircleConcentricThrough/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Circle/CircleConcentric/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Circle/CircleCR/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Circle/CircleCP/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Circle/CircleCD/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Circle/Circle3T/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Circle/Circle3P/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Circle/Circle2TR/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Circle/Circle2P/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Arc/ArcTangential/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Arc/ArcTPR/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Arc/ArcConcentricThrough/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Arc/ArcConcentric/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Arc/ArcCPA/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Arc/Arc3P/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Arc/Arc2PR/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Arc/Arc2PL/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Arc/Arc2PH/Tests/actual
+@pkgdir lib/qcad/scripts/Draw/Arc/Arc2PA/Tests/actual
+@pkgdir lib/qcad/scripts/Block/RenameBlock/Tests/actual
+@pkgdir lib/qcad/scripts/Block/RemoveBlock/Tests/actual
+@pkgdir lib/qcad/scripts/Block/InsertBlock/Tests/actual
+@pkgdir lib/qcad/scripts/Block/EditFromReference/Tests/actual
+@pkgdir lib/qcad/scripts/Block/EditBlock/Tests/actual
+@pkgdir lib/qcad/scripts/Block/CreateBlock/Tests/actual
+@pkgdir lib/qcad/scripts/Block/AddBlock/Tests/actual
