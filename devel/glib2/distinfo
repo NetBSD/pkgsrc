@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.263 2019/12/29 19:40:56 triaxx Exp $
+$NetBSD: distinfo,v 1.264 2019/12/29 19:58:47 triaxx Exp $
 
 SHA1 (glib-2.62.4.tar.xz) = f9a493c86f98482f13c6ed742c19487e6fa8f34b
 RMD160 (glib-2.62.4.tar.xz) = 4cac1bc54a690b007c859db2e9d65c33dc97395c
@@ -17,7 +17,7 @@ SHA1 (patch-glib_gatomic.c) = 875ad9c828dcf2add356d4988d14fb4f1985aef8
 SHA1 (patch-glib_gatomic.h) = 21294cac483c3379198283c54fe6e24af3e630b1
 SHA1 (patch-glib_genviron.c) = 7182f5ef2ebc7f17d8d4fb892e946c52c8c0ad1d
 SHA1 (patch-glib_glibconfig.h.in) = 1964b5fb15317e681dad426d4862e3f48c4274f7
-SHA1 (patch-glib_gmacros.h) = 641107ccb6b285c472ed6cb337e53e4764f8d6a8
+SHA1 (patch-glib_gmacros.h) = b2737b6b089556ca9bb54176a41371042e329b9c
 SHA1 (patch-glib_gmain.c) = 4c834b3cb35b1e64b77dfe15f4b3aa01d4d5daa1
 SHA1 (patch-glib_gspawn.c) = 17a6f1b38660123eafd6fb66966eb240dee26db7
 SHA1 (patch-glib_gtypes.h) = ad193e4a991a9df84b0c38f5464d58d8025ee44c
