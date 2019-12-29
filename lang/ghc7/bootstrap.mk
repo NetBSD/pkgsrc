@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.26 2019/11/03 19:04:00 rillig Exp $
+# $NetBSD: bootstrap.mk,v 1.27 2019/12/29 16:59:08 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -6,51 +6,46 @@
 #   This variable is set to the name of compressed archive file of a
 #   bootstrapping compiler for the current platform.
 #
-# BOOT_TARBALL
-#   Similar to BOOT_ARCHIVE, but "*.tar" not "*.tar.xz".
-#
 # BOOT_VERSION
 #   Version of the bootstrapping compiler to use. This can be
 #   overriden for specific platforms.
 #
 .include "../../mk/bsd.prefs.mk"
 
-# Use the same version as the package itself by default.
-BOOT_VERSION:=	${PKGNAME:C/^.*-//}
+# Notes on version dependencies:
+# * GHC 8.8.1 requires 8.4 or later to bootstrap.
+# * GHC 8.4.4 requires 8.0 or later to bootstrap.
+# * GHC 8.0.2 requires 7.8 or later to bootstrap.
+# * GHC 7.10.3 requires 7.6 or later to bootstrap.
 
-.if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || make(distinfo) || make (makesum) || make(mdi)
+BOOT_VERSION:=	7.6.3
 BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-powerpc-apple-darwin.tar.xz
 DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 .endif
 
-.if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
+BOOT_VERSION:=	7.6.3
 BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-i386-unknown-freebsd.tar.xz
 DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 .endif
 
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo)
-BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-linux.tar.xz
-#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE}
-.endif
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo)
-BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-i386-unknown-netbsd.tar.xz
-#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE}
-.endif
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+BOOT_VERSION:=	7.10.3
 BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-netbsd.tar.xz
 DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 .endif
 
-.if !empty(MACHINE_PLATFORM:MSunOS-5.11-i386) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MSunOS-*-i386) || make(distinfo) || make (makesum) || make(mdi)
+BOOT_VERSION:=	7.6.3
 BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-i386-unknown-solaris2.tar.xz
-#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE}
+DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 .endif
 
-.if !empty(MACHINE_PLATFORM:MSunOS-5.11-x86_64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+BOOT_VERSION:=	7.6.3
 BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-solaris2.tar.xz
-#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE}
+DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 .endif
 
 .if empty(BOOT_ARCHIVE)
@@ -64,8 +59,6 @@ PKG_FAIL_REASON+=	"internal error: unsupported platform"
 .for i in ${DISTFILES:M*-boot-*}
 SITES.${i}?=	${MASTER_SITE_LOCAL}
 .endfor
-
-BOOT_TARBALL=	${BOOT_ARCHIVE:C/\.xz$//}
 
 # Existence of libelf makes LeadingUnderscore being "NO", which is
 # incorrect for this platform. See ${WRKSRC}/aclocal.m4
@@ -85,7 +78,7 @@ USE_BUILTIN.iconv=	no
 .endif
 
 # current bootstrap binary kit for SmartOS is built with ncurses5
-.if !empty(MACHINE_PLATFORM:MSunOS-5.11-*) && !empty(OS_VARIANT:U:MSmartOS)
+.if !empty(MACHINE_PLATFORM:MSunOS-*) && !empty(OS_VARIANT:U:MSmartOS)
 BUILD_DEPENDS+=	ncurses>=5.0:../../devel/ncurses
 .endif
 
@@ -96,22 +89,23 @@ BUILD_DEPENDS+=	ncurses>=5.0:../../devel/ncurses
 # Install a bootstrapping compiler directly into TOOLS_DIR so that
 # ./configure can find it.
 #
-USE_TOOLS+=	gmake xzcat xz
+USE_TOOLS+=	gmake xzcat xz gtar
 
 pre-configure:
-	@${TEST} -f ${DISTDIR:Q}/${DIST_SUBDIR:Q}/${BOOT_ARCHIVE} || \
+	${RUN}${TEST} -f ${DISTDIR:Q}/${DIST_SUBDIR:Q}/${BOOT_ARCHIVE} || \
 	${FAIL_MSG}  "Put your trusted bootstrap archive as ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE}"
 
 	@${PHASE_MSG} "Extracting bootstrapping compiler for ${PKGNAME}"
-	${RUN} ${MKDIR} ${WRKDIR:Q}/build-extract
-	${RUN} cd ${WRKDIR:Q}/build-extract && \
-		${EXTRACT_CMD_DEFAULT} ${DISTDIR:Q}/${DIST_SUBDIR:Q}/${BOOT_ARCHIVE}
+	${RUN}${MKDIR} ${WRKDIR:Q}/build-extract
+	${RUN}cd ${WRKDIR:Q}/build-extract && \
+		${XZCAT} ${DISTDIR:Q}/${DIST_SUBDIR:Q}/${BOOT_ARCHIVE} | \
+		${GTAR} -xf -
 
 # It is important to install the stage-0 compiler with our rpath flags
 # configured, otherwise it will produce executables with no rpath and
 # fail in the configure phase.
 	@${PHASE_MSG} "Preparing bootstrapping compiler for ${PKGNAME}"
-	${RUN} cd ${WRKDIR:Q}/build-extract/${PKGNAME_NOREV}-boot && \
+	${RUN}cd ${WRKDIR:Q}/build-extract/${PKGNAME_NOREV}-boot && \
 		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure \
 			--prefix=${TOOLS_DIR:Q} && \
 		${MAKE_PROGRAM} install
@@ -125,7 +119,6 @@ pre-configure:
 # important to build it with the fewest possible run-time
 # dependencies, otherwise the resulting binary can easily get
 # unusable.
-#
 
 # We don't want our bootkits to have a run-time dependency on
 # libgcc. In fact GHC's implementation of Haskell exception handling
@@ -184,19 +177,26 @@ BUILDLINK_PASSTHRU_DIRS+=	${BOOT_GHC_LIBDIR}
 # barrier. See ../../mk/buildlink3/bsd.buildlink3.mk and
 # ../../mk/bsd.pkg.barrier.mk
 .PHONY: bootstrap
+BOOT_ARCHIVE.new=		${BOOT_ARCHIVE:S/-${BOOT_VERSION}-/-${PKGVERSION_NOREV}-/}
 .if make(bootstrap)
 _BARRIER_CMDLINE_TARGETS+=	bootstrap
 .endif
 .if !defined(_PKGSRC_BARRIER)
 bootstrap: barrier
 .else
-bootstrap: pre-bootstrap .WAIT ${WRKDIR}/${BOOT_ARCHIVE} .WAIT post-bootstrap
+bootstrap: pre-bootstrap .WAIT ${WRKDIR}/stamp-dist-boot .WAIT post-bootstrap
 .endif
+
+# For normal build we use pkgsrc libffi, but for bootkits we can't do
+# that because that would mean bootkits have run-time dependency on
+# it. So we build the bundled one and statically link with it.
+CONFIGURE_ARGS.boot=	${CONFIGURE_ARGS.common}
+CONFIGURE_ARGS.boot+=	--without-system-libffi
 
 .PHONY: pre-bootstrap
 pre-bootstrap: wrapper
 .if empty(BOOT_GHC_LIBDIR)
-	@if ${BOOT_GHC_LIBDIR_CMD} 2>/dev/null 1>&2; then \
+	${RUN}if ${BOOT_GHC_LIBDIR_CMD} 2>/dev/null 1>&2; then \
 		${ERROR_MSG} "Running \"${BOOT_GHC_LIBDIR_CMD}\" has failed during wrapper phase."; \
 		${FAIL_MSG}  "Please run \"${MAKE} clean\" and try again."; \
 	else \
@@ -207,7 +207,7 @@ pre-bootstrap: wrapper
 	fi
 .endif
 # ${_COOKIE.configure} is not defined yet so we can't use .if here.
-	@if ${TEST} -f ${_COOKIE.configure}; then \
+	${RUN}if ${TEST} -f ${_COOKIE.configure}; then \
 		${ERROR_MSG} "You have already configured the package in a way\
 		that building bootstrapping compiler is impossible."; \
 		${FAIL_MSG}  "Please run \"${MAKE} clean\" first."; \
@@ -225,40 +225,28 @@ ${WRKDIR}/stamp-lndir-boot: ${WRKDIR}/lndir
 		${WRKDIR}/lndir -silent ../${PKGNAME_NOREV:Q}
 	${TOUCH} ${.TARGET}
 
-# For terminfo_CONFIGURE_OPTS, see
-# https://ghc.haskell.org/trac/ghc/ticket/10096
 ${WRKDIR}/stamp-configure-boot: ${WRKDIR}/stamp-lndir-boot
 	@${PHASE_MSG} "Configuring bootstrapping compiler ${PKGNAME_NOREV}"
 	${MKDIR} ${WRKDIR:Q}/build-boot
 	cd ${WRKDIR:Q}/build-boot && \
-		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure ${CONFIGURE_ARGS} && \
-		${CP} -f ${FILESDIR:Q}/bootstrap.build.mk mk/build.mk && \
-		${ECHO} >> mk/build.mk && \
-		${ECHO} "libraries/terminfo_CONFIGURE_OPTS += \
-			--configure-option=--with-curses-includes=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_INCDIRS.curses:Q} \
-			--configure-option=--with-curses-libraries=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_LIBDIRS.curses:Q}" \
-			>> mk/build.mk
+		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure ${CONFIGURE_ARGS.boot} && \
+		${CP} -f ${FILESDIR:Q}/bootstrap.build.mk mk/build.mk
 	${TOUCH} ${.TARGET}
 
 ${WRKDIR}/stamp-build-boot: ${WRKDIR}/stamp-configure-boot
 	@${PHASE_MSG} "Building bootstrapping compiler ${PKGNAME_NOREV}"
-	${RUN} cd ${WRKDIR:Q}/build-boot && ${BUILD_MAKE_CMD}
+	${RUN}cd ${WRKDIR:Q}/build-boot && ${BUILD_MAKE_CMD}
 	${TOUCH} ${.TARGET}
 
-${WRKDIR}/${BOOT_TARBALL}: ${WRKDIR}/stamp-build-boot
+${WRKDIR}/stamp-dist-boot: ${WRKDIR}/stamp-build-boot
 	@${PHASE_MSG} "Creating binary distribution of bootstrapping ${PKGNAME_NOREV}"
-	${RUN} cd ${WRKDIR:Q}/build-boot && ${BUILD_MAKE_CMD} binary-dist
-	${MV} -f ${WRKDIR:Q}/build-boot/${BOOT_TARBALL} ${.TARGET}
-
-# This can take up half an hour. Memory usage is also very high, about 680 MiB.
-${WRKDIR}/${BOOT_ARCHIVE}: ${WRKDIR}/${BOOT_TARBALL}
-	@${PHASE_MSG} "Compressing binary distribution of bootstrapping ${PKGNAME_NOREV}"
-	${XZ} --verbose -9 --extreme ${WRKDIR:Q}/${BOOT_TARBALL}
+	${RUN}cd ${WRKDIR:Q}/build-boot && ${BUILD_MAKE_CMD} binary-dist
+	${MV} -f ${WRKDIR:Q}/build-boot/${BOOT_ARCHIVE.new} ${WRKDIR:Q}/${BOOT_ARCHIVE.new}
 
 .PHONY: post-bootstrap
 post-bootstrap:
 	@${ECHO} "=========================================================================="
-	@${ECHO} "Done creating ${BOOT_ARCHIVE}"
+	@${ECHO} "Done creating ${BOOT_ARCHIVE.new}"
 	@${ECHO} "  in ${WRKDIR}"
 	@${ECHO}
 	@${ECHO} "Now you can copy it into ${DISTDIR}/${DIST_SUBDIR} to use it as your"
