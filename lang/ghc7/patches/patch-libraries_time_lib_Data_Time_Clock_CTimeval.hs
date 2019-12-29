@@ -1,4 +1,4 @@
-$NetBSD: patch-libraries_time_Data_Time_Clock_CTimeval.hs,v 1.1 2015/02/13 19:28:40 pho Exp $
+$NetBSD: patch-libraries_time_lib_Data_Time_Clock_CTimeval.hs,v 1.1 2019/12/29 16:59:09 pho Exp $
 
 Suppress linker warnings about compatibility syscall wrappers by using
 "capi" instead of "ccall". In Haskell FFI, "ccall" is actually an
@@ -15,14 +15,14 @@ In other words, you can safely use "ccall" only when you are sure the
 symbol you want to import is actually a symbol in the ABI sense, which
 is not always the case for the POSIX API.
 
---- libraries/time/Data/Time/Clock/CTimeval.hs.orig	2015-02-13 15:42:45.000000000 +0000
-+++ libraries/time/Data/Time/Clock/CTimeval.hs
+--- libraries/time/lib/Data/Time/Clock/CTimeval.hs.orig	2015-07-23 22:04:53.000000000 +0000
++++ libraries/time/lib/Data/Time/Clock/CTimeval.hs
 @@ -1,3 +1,4 @@
 +{-# LANGUAGE CApiFFI #-}
  -- #hide
  module Data.Time.Clock.CTimeval where
  
-@@ -20,7 +21,7 @@ instance Storable CTimeval where
+@@ -24,7 +25,7 @@ instance Storable CTimeval where
  		pokeElemOff (castPtr p) 0 s
  		pokeElemOff (castPtr p) 1 mus
  

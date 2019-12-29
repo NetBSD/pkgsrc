@@ -1,4 +1,4 @@
-$NetBSD: patch-libraries_unix_System_Posix_Signals.hsc,v 1.1 2015/02/13 19:28:40 pho Exp $
+$NetBSD: patch-libraries_unix_System_Posix_Signals.hsc,v 1.2 2019/12/29 16:59:09 pho Exp $
 
 Suppress linker warnings about compatibility syscall wrappers by using
 "capi" instead of "ccall". In Haskell FFI, "ccall" is actually an
@@ -18,9 +18,9 @@ In other words, you can safely use "ccall" only when you are sure the
 symbol you want to import is actually a symbol in the ABI sense, which
 is not always the case for the POSIX API.
 
---- libraries/unix/System/Posix/Signals.hsc.orig	2015-02-13 15:40:27.000000000 +0000
+--- libraries/unix/System/Posix/Signals.hsc.orig	2015-07-23 22:04:56.000000000 +0000
 +++ libraries/unix/System/Posix/Signals.hsc
-@@ -598,7 +598,7 @@ awaitSignal maybe_sigset = do
+@@ -603,7 +603,7 @@ awaitSignal maybe_sigset = do
    -- XXX My manpage says it can also return EFAULT. And why is ignoring
    -- EINTR the right thing to do?
  
@@ -29,11 +29,10 @@ is not always the case for the POSIX API.
    c_sigsuspend :: Ptr CSigset -> IO CInt
  #endif
  
-@@ -622,6 +622,6 @@ foreign import capi unsafe "signal.h sig
+@@ -638,5 +638,5 @@ foreign import capi unsafe "signal.h sig
    c_sigismember :: Ptr CSigset -> CInt -> IO CInt
  #endif /* __HUGS__ */
  
 -foreign import ccall unsafe "sigpending"
 +foreign import capi unsafe "signal.h sigpending"
    c_sigpending :: Ptr CSigset -> IO CInt
- 
