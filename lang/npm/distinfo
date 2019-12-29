@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.20 2019/12/09 20:10:19 adam Exp $
+$NetBSD: distinfo,v 1.21 2019/12/29 16:22:42 adam Exp $
 
-SHA1 (cli-6.13.2.tar.gz) = 53ad30d12cd81ece1cdbee2a5c6b2c69f692847d
-RMD160 (cli-6.13.2.tar.gz) = 7fb1366d3e57985a436510827690f00936bab02b
-SHA512 (cli-6.13.2.tar.gz) = c1609d6181b46a51509ecb45a25badba9e6c97624569a4a7e3a26178599a90ad3397b4abdf461bc11744978cebbd7fdc258e5ba1f1d54683694b555aac67e3ad
-Size (cli-6.13.2.tar.gz) = 5626942 bytes
-SHA1 (marked-0.7.0.tar.gz) = 4094c4aa4bf00aa4d1bb0d2f0b9c50c1e81b7754
-RMD160 (marked-0.7.0.tar.gz) = 5fc126026dad9b24957089c147244217af9ecd83
-SHA512 (marked-0.7.0.tar.gz) = dc754b83f6bfa64ddc87b046935df91b16927eb98edaa47712610bfcb87f948ba878fa782e90b38213c710b33f512e65dc94d965e66e9ad14533b16b39861ee8
-Size (marked-0.7.0.tar.gz) = 160448 bytes
+SHA1 (cli-6.13.4.tar.gz) = 7b3656faf900e999838cb9cfceecf1e9e89d4a48
+RMD160 (cli-6.13.4.tar.gz) = 4361cf8e56c573c62e3919271355d019beffd76e
+SHA512 (cli-6.13.4.tar.gz) = 0b7b591bb73ea0ca25a5675e6c01c6289bdc85fd22cea399d0b7a0e428bda838d1f4ac279ee674de6ed7fcd1f3d2e91a3c8bd023ea8eaef211b8f4cee7ec718a
+Size (cli-6.13.4.tar.gz) = 5660059 bytes
 SHA1 (patch-Makefile) = 50cc950719f06198b7dffc8c740f08f3e5d4bb57
 SHA1 (patch-lib_config_defaults.js) = 5a00cbef781c9ab4efcec41ad781987f3f540886
 SHA1 (patch-node__modules_bin-links_index.js) = adbabdccde34483973ba134aa461b48ba690b5a2
