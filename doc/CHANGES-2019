@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5524 2019/12/29 06:29:52 ryoon Exp $
+$NetBSD: CHANGES-2019,v 1.5525 2019/12/29 06:40:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8827,3 +8827,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added net/py-zeroconf version 0.24.3 [ryoon 2019-12-29]
 	Added net/py-pychromecast version 4.1.0 [ryoon 2019-12-29]
 	Updated devel/sdcc3 to 3.9.0 [ryoon 2019-12-29]
+	Added multimedia/gst-plugins1-vaapi version 1.16.2 [ryoon 2019-12-29]
