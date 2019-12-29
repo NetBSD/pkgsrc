@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2019/08/11 13:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2019/12/29 01:00:22 ryoon Exp $
 
-DISTNAME=	isync-1.3.0
-PKGREVISION=	2
+DISTNAME=	isync-1.3.1
 CATEGORIES=	mail net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=isync/}
 
@@ -15,6 +14,7 @@ USE_TOOLS+=		perl
 BDB_ACCEPTED=		db4 db5
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 LDFLAGS+=		-lcrypto
 
 post-patch:
@@ -22,5 +22,6 @@ post-patch:
 
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 .include "../../security/openssl/buildlink3.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
