@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/12/29 12:44:15 plunky Exp $
+@comment $NetBSD: PLIST,v 1.17 2019/12/29 14:15:32 plunky Exp $
 bin/qcad
 lib/libdxflib.so
 lib/libopennurbs.so
@@ -10547,11 +10547,11 @@ ${PLIST.glx}lib/qcad/xcbglintegrations/libqxcb-glx-integration.so
 lib/qcad/xcbglintegrations/readme.txt
 man/man1/qcad.1
 share/applications/qcad.desktop
-share/icons/hicolor/256x256/apps/qcad_icon.png
-share/icons/hicolor/512x512/apps/qcad_icon.png
-share/icons/hicolor/512x512/apps/qcad_icon.svg
-share/icons/hicolor/64x64/apps/qcad_icon.png
-share/icons/hicolor/scalable/apps/qcad_icon.svg
+share/icons/hicolor/256x256/apps/qcad.png
+share/icons/hicolor/512x512/apps/qcad.png
+share/icons/hicolor/512x512/apps/qcad.svg
+share/icons/hicolor/64x64/apps/qcad.png
+share/icons/hicolor/scalable/apps/qcad.svg
 share/qcad/examples/calibration.dxf
 share/qcad/examples/colors.dxf
 share/qcad/examples/entities.dxf
