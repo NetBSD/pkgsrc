@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5534 2019/12/29 16:24:49 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5535 2019/12/29 16:48:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8851,3 +8851,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated audo/py-beets to 1.4.9 [sevan 2019-12-29]
 	Updated lang/npm to 6.13.4 [adam 2019-12-29]
 	Updated misc/stellarium to 0.19.3 [adam 2019-12-29]
+	Updated graphics/tesseract to 4.1.1 [adam 2019-12-29]
+	Updated www/nginx-devel to 1.17.7 [adam 2019-12-29]
