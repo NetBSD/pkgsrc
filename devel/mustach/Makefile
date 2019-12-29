@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/12/25 17:34:31 sjmulder Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/29 21:46:59 sjmulder Exp $
 
 DISTNAME=	mustach-0.99
 PKGREVISION=	1
@@ -14,6 +14,16 @@ LICENSE=	apache-2.0
 
 # Workaround is portable, might as well use it everywhere.
 CFLAGS+=	-DNO_OPEN_MEMSTREAM
+
+# install_name must be set on macOS. Upstream PR:
+# https://gitlab.com/jobol/mustach/merge_requests/16
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	install_name_tool -id ${PREFIX}/lib/libmustach.so \
+	    ${DESTDIR}${PREFIX}/lib/libmustach.so
+.endif
 
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
