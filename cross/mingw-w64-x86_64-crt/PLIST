@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/05/10 19:30:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/12/29 01:08:14 ryoon Exp $
 cross/x86_64-w64-mingw32/mingw/include/agtctl_i.c
 cross/x86_64-w64-mingw32/mingw/include/agtsvr_i.c
 cross/x86_64-w64-mingw32/mingw/include/cdoex_i.c
@@ -190,6 +190,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libdbghelp.a
 cross/x86_64-w64-mingw32/mingw/lib/libdbnetlib.a
 cross/x86_64-w64-mingw32/mingw/lib/libdbnmpntw.a
 cross/x86_64-w64-mingw32/mingw/lib/libdciman32.a
+cross/x86_64-w64-mingw32/mingw/lib/libdcomp.a
 cross/x86_64-w64-mingw32/mingw/lib/libddraw.a
 cross/x86_64-w64-mingw32/mingw/lib/libdelayimp.a
 cross/x86_64-w64-mingw32/mingw/lib/libdevmgr.a
@@ -481,6 +482,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libmsobmain.a
 cross/x86_64-w64-mingw32/mingw/lib/libmsoe.a
 cross/x86_64-w64-mingw32/mingw/lib/libmsoeacct.a
 cross/x86_64-w64-mingw32/mingw/lib/libmsoert2.a
+cross/x86_64-w64-mingw32/mingw/lib/libmsoledbsql.a
 cross/x86_64-w64-mingw32/mingw/lib/libmspatcha.a
 cross/x86_64-w64-mingw32/mingw/lib/libmsports.a
 cross/x86_64-w64-mingw32/mingw/lib/libmsrating.a
@@ -540,6 +542,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libnormaliz.a
 cross/x86_64-w64-mingw32/mingw/lib/libnpptools.a
 cross/x86_64-w64-mingw32/mingw/lib/libnshipsec.a
 cross/x86_64-w64-mingw32/mingw/lib/libntdll.a
+cross/x86_64-w64-mingw32/mingw/lib/libntdllcrt.a
 cross/x86_64-w64-mingw32/mingw/lib/libntdsapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libntdsbcli.a
 cross/x86_64-w64-mingw32/mingw/lib/libntlanman.a
@@ -680,6 +683,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libsfc.a
 cross/x86_64-w64-mingw32/mingw/lib/libsfc_os.a
 cross/x86_64-w64-mingw32/mingw/lib/libsfcfiles.a
 cross/x86_64-w64-mingw32/mingw/lib/libsfmapi.a
+cross/x86_64-w64-mingw32/mingw/lib/libshcore.a
 cross/x86_64-w64-mingw32/mingw/lib/libshdocvw.a
 cross/x86_64-w64-mingw32/mingw/lib/libshell32.a
 cross/x86_64-w64-mingw32/mingw/lib/libshfolder.a
@@ -848,6 +852,7 @@ cross/x86_64-w64-mingw32/mingw/lib/libwscsvc.a
 cross/x86_64-w64-mingw32/mingw/lib/libwsdapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libwshatm.a
 cross/x86_64-w64-mingw32/mingw/lib/libwshbth.a
+cross/x86_64-w64-mingw32/mingw/lib/libwslapi.a
 cross/x86_64-w64-mingw32/mingw/lib/libwsock32.a
 cross/x86_64-w64-mingw32/mingw/lib/libwtsapi32.a
 cross/x86_64-w64-mingw32/mingw/lib/libx3daudio.a
