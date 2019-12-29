@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2019/09/18 15:36:43 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2019/12/29 01:08:14 ryoon Exp $
 #
 # used by cross/mingw-w64-i686-winpthreads/Makefile
 # used by cross/mingw-w64-x86_64-winpthreads/Makefile
 
-DISTNAME=		mingw-w64-v6.0.0
+DISTNAME=		mingw-w64-v7.0.0
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw-w64/}
 EXTRACT_SUFX=		.tar.bz2

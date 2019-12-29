@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/05/10 19:30:03 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2019/12/29 01:08:13 ryoon Exp $
 cross/i686-w64-mingw32/mingw/include/agtctl_i.c
 cross/i686-w64-mingw32/mingw/include/agtsvr_i.c
 cross/i686-w64-mingw32/mingw/include/cdoex_i.c
@@ -125,6 +125,7 @@ cross/i686-w64-mingw32/mingw/lib/libdavclnt.a
 cross/i686-w64-mingw32/mingw/lib/libdavhlpr.a
 cross/i686-w64-mingw32/mingw/lib/libdbgeng.a
 cross/i686-w64-mingw32/mingw/lib/libdbghelp.a
+cross/i686-w64-mingw32/mingw/lib/libdcomp.a
 cross/i686-w64-mingw32/mingw/lib/libddraw.a
 cross/i686-w64-mingw32/mingw/lib/libdelayimp.a
 cross/i686-w64-mingw32/mingw/lib/libdevmgr.a
@@ -225,6 +226,7 @@ cross/i686-w64-mingw32/mingw/lib/libmshtml.a
 cross/i686-w64-mingw32/mingw/lib/libmshtmled.a
 cross/i686-w64-mingw32/mingw/lib/libmsi.a
 cross/i686-w64-mingw32/mingw/lib/libmsimg32.a
+cross/i686-w64-mingw32/mingw/lib/libmsoledbsql.a
 cross/i686-w64-mingw32/mingw/lib/libmstask.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcp120_app.a
 cross/i686-w64-mingw32/mingw/lib/libmsvcp60.a
@@ -250,6 +252,7 @@ cross/i686-w64-mingw32/mingw/lib/libnetutils.a
 cross/i686-w64-mingw32/mingw/lib/libnewdev.a
 cross/i686-w64-mingw32/mingw/lib/libnormaliz.a
 cross/i686-w64-mingw32/mingw/lib/libntdll.a
+cross/i686-w64-mingw32/mingw/lib/libntdllcrt.a
 cross/i686-w64-mingw32/mingw/lib/libntdsapi.a
 cross/i686-w64-mingw32/mingw/lib/libntmsapi.a
 cross/i686-w64-mingw32/mingw/lib/libntoskrnl.a
@@ -302,6 +305,7 @@ cross/i686-w64-mingw32/mingw/lib/libsecur32.a
 cross/i686-w64-mingw32/mingw/lib/libsecurity.a
 cross/i686-w64-mingw32/mingw/lib/libsensorsapi.a
 cross/i686-w64-mingw32/mingw/lib/libsetupapi.a
+cross/i686-w64-mingw32/mingw/lib/libshcore.a
 cross/i686-w64-mingw32/mingw/lib/libshell32.a
 cross/i686-w64-mingw32/mingw/lib/libshfolder.a
 cross/i686-w64-mingw32/mingw/lib/libshlwapi.a
