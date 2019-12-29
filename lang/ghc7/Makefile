@@ -1,32 +1,33 @@
-# $NetBSD: Makefile,v 1.36 2019/11/01 06:10:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.37 2019/12/29 16:59:08 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
-DISTNAME=	ghc-7.6.3-src
+DISTNAME=	ghc-7.10.3-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	14
 CATEGORIES=	lang
-MASTER_SITES=	https://www.haskell.org/ghc/dist/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://www.haskell.org/ghc/
-COMMENT=	Compiler for the functional language Haskell
+COMMENT=	Compiler for the functional language Haskell - 7.10 Release Series
 LICENSE=	modified-bsd
+
+# TODO: We should be using the alternatives framework.
+CONFLICTS+=	ghc-[0-9]*
 
 # GHC requires GHC to build itself. Formerly we could work around this
 # bootstrapping problem by creating a special archive containing C
 # sources compiled from Haskell sources, but that's no longer
 # possible. So we have to prepare stripped-down binaries sufficient to
 # bootstrap compilers for each platforms. If you want to build them
-# yourself, follow an instruction in the ./TODO file.
+# yourself, follow instructions in ./bootstrap.mk
 BROKEN_EXCEPT_ON_PLATFORM+= \
 	Darwin-*-powerpc \
 	FreeBSD-*-i386 \
-	Linux-*-x86_64 \
-	NetBSD-*-i386 \
 	NetBSD-*-x86_64 \
-	SunOS-5.11-*
+	SunOS-*-i386 \
+	SunOS-*-x86_64
 
 
 # -----------------------------------------------------------------------------
@@ -42,31 +43,39 @@ EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 # -----------------------------------------------------------------------------
 # Tools
 #
+# The runtime dependency on perl is due to the evil splitter
+# (lib/${PKGNAME_NOREV}/ghc-split).
 USE_TOOLS+=			autoconf gmake gzip perl:run
 GNU_CONFIGURE=			yes
 USE_GNU_CONFIGURE_HOST=		no
 USE_LIBTOOL=			yes
 
-CONFIGURE_ARGS+= \
+CONFIGURE_ARGS.common= \
 	--with-gcc=${CC:Q} \
+	--with-curses-includes=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_INCDIRS.curses:Q} \
+	--with-curses-libraries=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_LIBDIRS.curses:Q} \
 	--with-gmp-includes=${BUILDLINK_PREFIX.gmp:Q}/${BUILDLINK_INCDIRS.gmp:Q} \
 	--with-gmp-libraries=${BUILDLINK_PREFIX.gmp:Q}/${BUILDLINK_LIBDIRS.gmp:Q} \
 	--with-iconv-includes=${BUILDLINK_PREFIX.iconv:Q}/${BUILDLINK_INCDIRS.iconv:Q} \
-	--with-iconv-libraries=${BUILDLINK_PREFIX.iconv:Q}/${BUILDLINK_LIBDIRS.iconv:Q}
+	--with-iconv-libraries=${BUILDLINK_PREFIX.iconv:Q}/${BUILDLINK_LIBDIRS.iconv:Q} \
+	--with-system-libffi \
+	--with-ffi-includes=${BUILDLINK_PREFIX.libffi:Q}/${BUILDLINK_INCDIRS.libffi:Q} \
+	--with-ffi-libraries=${BUILDLINK_PREFIX.libffi:Q}/${BUILDLINK_LIBDIRS.libffi:Q}
+
+CONFIGURE_ARGS+= ${CONFIGURE_ARGS.common}
 
 CONFIGURE_ENV+= \
 	ac_cv_path_fp_prog_ar=${AR:Q} \
 	PerlCmd=${PERL5:Q}
 
-# CFLAGS and LDFLAGS are currently not honored by "./configure". Since
-# LDFLAGS contains rpath flags it's very important to force GHC to
-# honor it. Otherwise neither GHC itself nor executables it produces
-# will have any rpaths so users will have to put "${PREFIX}/lib" into
-# their "/etc/ld-elf.so.conf". See
+# LDFLAGS is currently not honored by "./configure". Since LDFLAGS
+# contains rpath flags it's very important to force GHC to honor
+# it. Otherwise neither GHC itself nor executables it produces will
+# have any rpaths so users will have to put "${PREFIX}/lib" into their
+# "/etc/ld-elf.so.conf". See
 # http://hackage.haskell.org/trac/ghc/ticket/2933
 .for stage in 0 1 2
 CONFIGURE_ENV+= \
-	CONF_CC_OPTS_STAGE${stage}=${CFLAGS:Q} \
 	CONF_GCC_LINKER_OPTS_STAGE${stage}=${LDFLAGS:Q}
 # Note that CONF_LD_LINKER_OPTS_STAGE{0,1,2} are only used for
 # creating static GHCi libraries (HS*.o). Setting them to ${LDFLAGS}
@@ -77,10 +86,19 @@ CONFIGURE_ENV+= \
 # the buildlink.
 .endfor
 
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGNAME_NOREV}/ghc
-NOT_PAX_MPROTECT_SAFE+=	lib/${PKGNAME_NOREV}/ghc-pkg
-NOT_PAX_ASLR_SAFE+=	lib/${PKGNAME_NOREV}/ghc
-NOT_PAX_ASLR_SAFE+=	lib/${PKGNAME_NOREV}/ghc-pkg
+# The runtime system of GHC (rts) tends to conflict with PaX MPROTECT
+# because it needs to generate various kinds of code at run time. The
+# RTS linker, whose job is to load *static* objects at run time,
+# doesn't play nice with ASLR either. This means most executables
+# produced by GHC need them to be disabled. Perhaps we should patch
+# rts/sm/Storage.c so that it uses ffi_closure_alloc(3) on every
+# platform, not just Linux, and also drop support for static library
+# loading and switch to dynamic libraries entirely.
+.for f in ghc ghc-pkg haddock hpc hsc2hs runghc
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGNAME_NOREV}/bin/${f}
+NOT_PAX_ASLR_SAFE+=	lib/${PKGNAME_NOREV}/bin/${f}
+.endfor
+
 
 # -----------------------------------------------------------------------------
 # Build hooks
@@ -92,33 +110,15 @@ post-patch:
 	${RUN} cd ${WRKSRC:Q}/libraries/base        && autoconf
 	${RUN} cd ${WRKSRC:Q}/libraries/integer-gmp && autoconf
 
-
 # Define the target "pre-configure" and non-standard "bootstrap".
 .include "../../lang/ghc7/bootstrap.mk"
 
 # Our pre-configure phase installs a bindist of bootstrapping compiler
 # directly into TOOLS_DIR so that ./configure can find it.
 
-
 # Here we generate mk/build.mk dynamically.
 post-configure:
 	${RUN} ${RM} -f ${WRKSRC:Q}/mk/build.mk
-
-# See https://ghc.haskell.org/trac/ghc/ticket/10096
-	${RUN} ${ECHO} "libraries/terminfo_CONFIGURE_OPTS += \
-		--configure-option=--with-curses-includes=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_INCDIRS.curses:Q} \
-		--configure-option=--with-curses-libraries=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_LIBDIRS.curses:Q}" \
-		>> ${WRKSRC:Q}/mk/build.mk
-
-# The ghc compiler does normally split the generated asm files into small
-# parts before sending them to gcc, to enable the linker to eliminate
-# unused parts.  This does however not play nice with the pkgsrc
-# framework, and the result is that the build takes more than 5 times
-# as long than when the files are not split.  See
-#    http://mail-index.netbsd.org/tech-pkg/2006/07/30/0005.html
-# for a description of the problem.
-# Disable file splitting until pkgsrc gets improved.
-	${RUN} ${ECHO} "SplitObjs         = NO" >> ${WRKSRC:Q}/mk/build.mk
 
 # If there is HsColour in the PATH, GHC's build system tries to use it
 # without even checking if it really works. That's not what we
@@ -145,18 +145,13 @@ post-install:
 # -----------------------------------------------------------------------------
 # PLIST
 #
-# We can't use static PLIST because the package installs some files
-# whose names are randomly generated, namely
-# lib/${PKGNAME}/package.conf.d/*.conf
-#
-PRINT_PLIST_AWK+=	/lib\/${PKGNAME_NOREV}\/package\.conf\.d/ { next; }
-
-# If we were lucky we could just use "PLIST_TYPE = dynamic", but the
-# feature has seemingly bitrotted.
-.include "../../mk/bsd.prefs.mk"
+# We can't use static PLIST because the package installs files with a
+# hashed name. And "PLIST_TYPE = dynamic" appears to be broken atm
+# [2019-12-27; pho].
 GENERATE_PLIST+= \
-	cd ${DESTDIR}${PREFIX} && \
-		${FIND} lib/${PKGNAME_NOREV}/package.conf.d -xdev -newer ${_COOKIE.extract} \! -type d -print | ${SORT} -d;
+	cd ${DESTDIR:Q}${PREFIX:Q} && \
+		${FIND} * \( -type f -o -type l \) | ${SORT};
+
 
 # -----------------------------------------------------------------------------
 # Sanity checks
@@ -165,26 +160,25 @@ GENERATE_PLIST+= \
 # There is an unused script which don't pass the portability test.
 CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
 
-# Dynamic Haskell libraries currently have no rpaths to any dependent
-# Haskell libraries so we must skip shlibs check for them. Note that
-# the situation seems to be changed in GHC 7.8.1 so we should
-# readdress this later. See
-# https://ghc.haskell.org/trac/ghc/ticket/8266 (slightly off-topic but
-# pho@ found no description for the -fuse-rpath flag.)
-.if !empty(PKGNAME:Mghc-7.6.*)
+# Dynamically linked Haskell executables and libraries have rpaths to
+# dependent Haskell libraries, but the problem is that they are
+# specified with $ORIGIN, which isn't currently supported by
+# ../../mk/check/check-shlibs-elf.awk.
 CHECK_SHLIBS_SKIP+=		*/libHS*-ghc${PKGVERSION_NOREV}.*
-.endif
+.for f in ghc ghc-pkg haddock hpc hsc2hs runghc
+CHECK_SHLIBS_SKIP+=		lib/${PKGNAME_NOREV}/bin/${f}
+.endfor
 
 # ghc57207_0.s: failed to add inputs for merge: Resource temporarily unavailable
-CTF_FILES_SKIP+=		*/libHSghc-7.6.3-ghc7.6.3.so
+CTF_FILES_SKIP+=		*/libHS*-ghc${PKGVERSION_NOREV}.*
 
 # ld: fatal: relocation error ... relocation requires reference symbol
 STRIP_FILES_SKIP+=		lib/${PKGNAME_NOREV}/libHSrts.a
 
+
 # -----------------------------------------------------------------------------
 # Dependencies
 #
-
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
@@ -196,10 +190,11 @@ BUILD_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
 # In a sandboxed build environment, we have to reach over to the
 # installed libraries themselves, since the symlinks compat80 adds
 # to the /usr tree can't be applied.
-MAKE_ENV+=	LD_LIBRARY_PATH=${LOCALBASE}/emul/netbsd/usr/lib
+MAKE_ENV+=	LD_LIBRARY_PATH=${PREFIX:Q}/emul/netbsd/usr/lib
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
