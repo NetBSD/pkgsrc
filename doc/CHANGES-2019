@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5537 2019/12/29 17:00:07 taca Exp $
+$NetBSD: CHANGES-2019,v 1.5538 2019/12/29 17:02:45 pho Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8856,3 +8856,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated archivers/py-zstandard to 0.13.0 [adam 2019-12-29]
 	Updated textproc/py-xlsxwriter to 1.2.7 [adam 2019-12-29]
 	Updated x11/ruby-tk-gem to 0.2.0nb1 [taca 2019-12-29]
+	Updated lang/ghc7 to 7.10.3 [pho 2019-12-29]
+	Updated lang/ghc7 to 7.10.3 [pho 2019-12-29]
