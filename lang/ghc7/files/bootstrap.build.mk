@@ -29,3 +29,13 @@ INTEGER_LIBRARY    = integer-simple
 
 # We'd like to distinguish bootstrapping bindists from normal ones.
 BIN_DIST_NAME      = ghc-$(ProjectVersion)-boot
+
+# Don't build or use dynamic Haskell libraries.
+DYNAMIC_GHC_PROGRAMS = NO
+
+# We want our bootkits to be as small as possible, even though `xz
+# -9e' is very slow and consumes about 680 MiB of memory.
+TAR_COMP           = xz
+TAR_COMP_CMD       = $(XZ_CMD)
+TAR_COMP_EXT       = xz
+XZ_CMD             = xz --verbose -9 --extreme
