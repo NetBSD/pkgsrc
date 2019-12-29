@@ -1,4 +1,4 @@
-$NetBSD: patch-glib_gmain.c,v 1.3 2019/11/26 10:27:09 jperkin Exp $
+$NetBSD: patch-glib_gmain.c,v 1.4 2019/12/29 19:40:56 triaxx Exp $
 
 Imported patch from the upstream Bugzilla:
 
@@ -7,7 +7,7 @@ Imported patch from the upstream Bugzilla:
 
 Tested on powerpc-apple-darwin9.
 
---- glib/gmain.c.orig	2019-10-21 17:18:40.000000000 +0000
+--- glib/gmain.c.orig	2019-12-19 16:33:15.000000000 +0000
 +++ glib/gmain.c
 @@ -2758,47 +2758,31 @@ g_get_monotonic_time (void)
  gint64
@@ -18,7 +18,12 @@ Tested on powerpc-apple-darwin9.
 +  guint64 val;
  
 -  if (timebase_info.denom == 0)
--    {
++  /* we get nanoseconds from mach_absolute_time() using timebase_info */
++  mach_timebase_info (&timebase_info);
++  val = mach_absolute_time();
++
++  if (timebase_info.numer != timebase_info.denom)
+     {
 -      /* This is a fraction that we must use to scale
 -       * mach_absolute_time() by in order to reach nanoseconds.
 -       *
@@ -27,20 +32,15 @@ Tested on powerpc-apple-darwin9.
 -       * picoseconds.  Try to deal nicely with that.
 -       */
 -      mach_timebase_info (&timebase_info);
-+  /* we get nanoseconds from mach_absolute_time() using timebase_info */
-+  mach_timebase_info (&timebase_info);
-+  val = mach_absolute_time();
++      guint64 t_high, t_low;
++      guint64 result_high, result_low;
  
 -      /* We actually want microseconds... */
 -      if (timebase_info.numer % 1000 == 0)
 -        timebase_info.numer /= 1000;
 -      else
 -        timebase_info.denom *= 1000;
-+  if (timebase_info.numer != timebase_info.denom)
-+    {
-+      guint64 t_high, t_low;
-+      guint64 result_high, result_low;
- 
+-
 -      /* We want to make the numer 1 to avoid having to multiply... */
 -      if (timebase_info.denom % timebase_info.numer == 0)
 -        {

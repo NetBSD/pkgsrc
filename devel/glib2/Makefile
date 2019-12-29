@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2019/11/28 09:23:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.266 2019/12/29 19:40:56 triaxx Exp $
 
 .include "Makefile.common"
 
@@ -15,6 +15,7 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC}/
 
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 LDFLAGS.SunOS+=		-liconv -lintl -lnsl -lsocket
+LDFLAGS.FreeBSD+=	-liconv
 
 REPLACE_PYTHON+=	gio/gio-querymodules-wrapper.py
 REPLACE_PYTHON+=	gio/tests/gengiotypefuncs.py
