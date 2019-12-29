@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.9 2019/10/19 13:52:40 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2019/12/29 15:31:21 adam Exp $
 
 BUILDLINK_TREE+=	llvm
 
 .if !defined(LLVM_BUILDLINK3_MK)
 LLVM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=9.0.0
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=9.0.1
 BUILDLINK_PKGSRCDIR.llvm?=	../../lang/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config

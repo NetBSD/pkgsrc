@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2019/11/03 19:04:02 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2019/12/29 15:31:22 adam Exp $
 
-DISTNAME=	libcxx-9.0.0.src
-PKGREVISION=	1
+.include "../../lang/llvm/version.mk"
+
+DISTNAME=	libcxx-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
-MASTER_SITES=	http://releases.llvm.org/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libcxx.llvm.org/
@@ -18,6 +17,7 @@ LICENSE=	apache-2.0
 # circular dependencies.  This must be kept in sync with libcxxabi/Makefile.
 LIBCXXABI=		${DISTNAME:S/cxx/cxxabi/}
 _EXTRA_DIST=		${LIBCXXABI}${EXTRACT_SUFX}
+SITES.${_EXTRA_DIST}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
 DISTFILES=	${DEFAULT_DISTFILES} ${_EXTRA_DIST}
 

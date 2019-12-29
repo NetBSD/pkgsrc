@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2019/10/24 11:52:20 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2019/12/29 15:31:22 adam Exp $
 
-DISTNAME=	libcxxabi-9.0.0.src
-PKGREVISION=	1
+.include "../../lang/llvm/version.mk"
+
+DISTNAME=	libcxxabi-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
-MASTER_SITES=	http://releases.llvm.org/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libcxxabi.llvm.org/

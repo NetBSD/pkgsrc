@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2019/10/24 11:52:20 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2019/12/29 15:31:21 adam Exp $
 
-DISTNAME=	polly-9.0.0.src
-PKGREVISION=	1
+.include "../../lang/llvm/version.mk"
+
+DISTNAME=	polly-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	devel
-MASTER_SITES=	http://releases.llvm.org/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://polly.llvm.org/
