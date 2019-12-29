@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5520 2019/12/29 01:36:10 fox Exp $
+$NetBSD: CHANGES-2019,v 1.5521 2019/12/29 02:25:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8823,3 +8823,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated multimedia/libva to 2.6.0 [ryoon 2019-12-29]
 	Updated multimedia/libva-utils to 2.6.0 [ryoon 2019-12-29]
 	Added sysutils/pfetch version 0.4.0 [fox 2019-12-29]
+	Added net/py-ifaddr version 0.1.6 [ryoon 2019-12-29]
