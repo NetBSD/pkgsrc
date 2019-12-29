@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19515 2019/12/29 19:53:40 triaxx Exp $
+$NetBSD: TODO,v 1.19516 2019/12/29 22:10:07 ng0 Exp $
 
 Suggested new packages
 ======================
@@ -1282,7 +1282,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webalizer-2.23.05
 	o websvn-2.3.3
 	o weewm-0.01
-	o wgetpaste-2.26
 	o whowatch-1.8.5
 	o windowlab-1.40
 	o wine-4.0.1
