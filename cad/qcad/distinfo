@@ -1,28 +1,23 @@
-$NetBSD: distinfo,v 1.33 2019/09/19 21:59:36 nia Exp $
+$NetBSD: distinfo,v 1.34 2019/12/29 12:44:15 plunky Exp $
 
-SHA1 (qcad-3.23.0.0.tar.gz) = 4d54082ae447f8bd388708ffaa845fb4b0b5b572
-RMD160 (qcad-3.23.0.0.tar.gz) = 277073e7ceaf713aa8c8e7a99dab95dd278da7ad
-SHA512 (qcad-3.23.0.0.tar.gz) = defec8cedfe2f7ef9963b4802a441172cef53d54cb9e30109b999c787f93b86f1ca4901a3960711ba54f05eee4c7a60d7a0a7807413826d1be621355c5956dd1
-Size (qcad-3.23.0.0.tar.gz) = 33296984 bytes
+SHA1 (qcad-3.24.0.1.tar.gz) = 39cf137348dfa28ddfa565b6d894da539a17fd44
+RMD160 (qcad-3.24.0.1.tar.gz) = e5a6c008443546f1f35939ba0c439df2b619e8fa
+SHA512 (qcad-3.24.0.1.tar.gz) = 1c4c03a0fdfb768285dca75469309bfd2cb65ddb6990f39b4990f1596f4ce3efbfa38f18d81b16290bcb5003ac55e8d25a8e0a2356f4a9ab74fdd8a452c7ed93
+Size (qcad-3.24.0.1.tar.gz) = 33773334 bytes
 SHA1 (patch-qcad.pro) = b8dafdf3105ff3580815bb82a6a84b71f4d0b172
-SHA1 (patch-scripts_Help_About_About.js) = c1d12d2dc6cdf5a4452d9872a11bc887c6729ce5
 SHA1 (patch-scripts_Help_ShowReadme_ShowReadme.js) = 96412237a7c4422f02dc5d2ab3634457b376a2d2
-SHA1 (patch-scripts_Widgets_CommandLine_CommandLine.js) = 3e8313d04f43a0115949d8a20b01a7cbbe097ef3
 SHA1 (patch-scripts_Widgets_LibraryBrowser_LibraryBrowser.js) = 65f988e553259eb93217ea12e9cb429fe52f05be
 SHA1 (patch-shared.pri) = f0b3ca615636c7fc2edc1af3b25b7aef2d9393ac
 SHA1 (patch-shared__app.pri) = a3957987228dcadb6eb8a8bb282d6d8baee643c2
 SHA1 (patch-src_3rdparty_3rdparty.pro) = e0954d186ef57d26fe9af5e29160e25ad6aea2ab
 SHA1 (patch-src_3rdparty_dxflib_dxflib.pro) = 7229800bfa5f04a475111f68cf26581e6ea41e83
-SHA1 (patch-src_3rdparty_dxflib_src_dl__writer.h) = 7009daf3a87ca82f3299f5b22b936e149c0ed036
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs.pro) = d96e1ce129d32703fc474aea71afdae1d4b537ed
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs__zlib.cpp) = 26385c45b2132909470aba79181c242c785614a7
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs__zlib.h) = 333fe1510cc5ea2457eefd7d07ccaf034ee5d22f
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs_opennurbs.pro) = 7120c49027d4a50c23b1e9e60c44a1e0a239d6ac
 SHA1 (patch-src_3rdparty_spatialindexnavel_spatialindexnavel.pro) = d3af7c7c8da0d3bc297fb8cd19d0c91125bfcdfe
 SHA1 (patch-src_3rdparty_stemmer_stemmer.pro) = 22e2e937f6a19277608bad11676b156e87cf1826
-SHA1 (patch-src_core_RMetaTypes.h) = 8e3a2c7c7fc08a8608dcb64c9521c5449dd13fe8
 SHA1 (patch-src_core_RS.cpp) = 7864f7a99904401ad9eae01dfd1304f062a52d6a
-SHA1 (patch-src_core_RSPlatform.cpp) = 6df8bce2057748955873cd564512a1a3f88421f5
 SHA1 (patch-src_core_RSettings.cpp) = 3fc5cea42fae1b9ace651f68f38dad62dfe0e88a
 SHA1 (patch-src_core_core.pro) = 3b2c68139457f08205896b94e44ebf6c09eb6bfe
 SHA1 (patch-src_customwidgets_customwidgets.pro) = 8bac25b8f02092464591019be961470a45c810cc
