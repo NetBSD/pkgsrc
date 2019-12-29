@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/11/24 20:21:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2019/12/29 16:22:42 adam Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/.licensee.json
@@ -1635,6 +1635,7 @@ lib/node_modules/npm/node_modules/gentle-fs/CHANGELOG.md
 lib/node_modules/npm/node_modules/gentle-fs/LICENSE
 lib/node_modules/npm/node_modules/gentle-fs/README.md
 lib/node_modules/npm/node_modules/gentle-fs/index.js
+lib/node_modules/npm/node_modules/gentle-fs/lib/bin-link.js
 lib/node_modules/npm/node_modules/gentle-fs/lib/chown.js
 lib/node_modules/npm/node_modules/gentle-fs/lib/link.js
 lib/node_modules/npm/node_modules/gentle-fs/lib/mkdir.js
@@ -2752,6 +2753,17 @@ lib/node_modules/npm/node_modules/npm-logical-tree/LICENSE.md
 lib/node_modules/npm/node_modules/npm-logical-tree/README.md
 lib/node_modules/npm/node_modules/npm-logical-tree/index.js
 lib/node_modules/npm/node_modules/npm-logical-tree/package.json
+lib/node_modules/npm/node_modules/npm-normalize-package-bin/.github/settings.yml
+lib/node_modules/npm/node_modules/npm-normalize-package-bin/.npmignore
+lib/node_modules/npm/node_modules/npm-normalize-package-bin/LICENSE
+lib/node_modules/npm/node_modules/npm-normalize-package-bin/README.md
+lib/node_modules/npm/node_modules/npm-normalize-package-bin/index.js
+lib/node_modules/npm/node_modules/npm-normalize-package-bin/package-lock.json
+lib/node_modules/npm/node_modules/npm-normalize-package-bin/package.json
+lib/node_modules/npm/node_modules/npm-normalize-package-bin/test/array.js
+lib/node_modules/npm/node_modules/npm-normalize-package-bin/test/nobin.js
+lib/node_modules/npm/node_modules/npm-normalize-package-bin/test/object.js
+lib/node_modules/npm/node_modules/npm-normalize-package-bin/test/string.js
 lib/node_modules/npm/node_modules/npm-package-arg/CHANGELOG.md
 lib/node_modules/npm/node_modules/npm-package-arg/LICENSE
 lib/node_modules/npm/node_modules/npm-package-arg/README.md
@@ -3383,9 +3395,6 @@ lib/node_modules/npm/node_modules/signal-exit/README.md
 lib/node_modules/npm/node_modules/signal-exit/index.js
 lib/node_modules/npm/node_modules/signal-exit/package.json
 lib/node_modules/npm/node_modules/signal-exit/signals.js
-lib/node_modules/npm/node_modules/slash/index.js
-lib/node_modules/npm/node_modules/slash/package.json
-lib/node_modules/npm/node_modules/slash/readme.md
 lib/node_modules/npm/node_modules/slide/LICENSE
 lib/node_modules/npm/node_modules/slide/README.md
 lib/node_modules/npm/node_modules/slide/index.js
