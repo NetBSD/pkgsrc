@@ -1,23 +1,24 @@
-$NetBSD: patch-aa,v 1.2 2014/12/30 22:23:27 ryoon Exp $
+$NetBSD: patch-aa,v 1.3 2019/12/29 06:29:23 ryoon Exp $
 
  - avoid installing various trash files
  - use find correctly when doing so
  - stop on error when doing so
 
---- device/lib/Makefile.in.orig	2013-11-16 16:53:35.000000000 +0000
+--- device/lib/Makefile.in.orig	2019-03-21 14:49:01.000000000 +0000
 +++ device/lib/Makefile.in
-@@ -511,27 +511,6 @@ clean_intermediate-pic14:
+@@ -574,28 +574,6 @@ clean_intermediate-pic14:
  # ---------------------------------------------------
  install: all installdirs
  	[ ! -d "$(BUILDDIR)" ] || $(CP_U) -r $(BUILDDIR)/* $(sdcc_libdir)
 -	$(CP_U) -r $(MODELS) $(srcdir)/mcs51 $(srcdir)/ds390 $(srcdir)/ds400 \
--	                     $(srcdir)/z80 $(srcdir)/z180 $(srcdir)/r2k $(srcdir)/r3ka $(srcdir)/tlcs90 $(srcdir)/gbz80 \
+-	                     $(srcdir)/z80 $(srcdir)/z180 $(srcdir)/ez80_z80 $(srcdir)/r2k $(srcdir)/r3ka $(srcdir)/tlcs90 $(srcdir)/gbz80 \
 -	                     $(srcdir)/hc08 $(srcdir)/s08 \
 -	                     $(srcdir)/stm8 \
+-	                     $(srcdir)/pdk14 $(srcdir)/pdk15 \
 -	                     $(srcdir)/pic14 $(srcdir)/pic16 $(srcdir)/*.c $(sdcc_libdir)/src
--	$(CP_U) -r $(MODELS) mcs51 ds390 ds400 z80 z180 r2k r3ka tlcs90 gbz80 hc08 s08 stm8 $(sdcc_libdir)/src
+-	$(CP_U) -r $(MODELS) mcs51 ds390 ds400 z80 z180 ez80_z80 r2k r3ka tlcs90 gbz80 hc08 s08 stm8 pdk14 pdk15 $(sdcc_libdir)/src
 -
--	for src in $(MODELS) ds390 ds400 z80 z180 r2k r3ka tlcs90 gbz80 hc08 s08 stm8 pic14 pic16; do \
+-	for src in $(MODELS) ds390 ds400 z80 z180 ez80_z80 r2k r3ka tlcs90 gbz80 hc08 s08 stm8 pdk14 pdk15 pic14 pic16; do \
 -	  find $(sdcc_libdir)/src/$$src -depth \
 -	    \( -name '*.rel' -o -name '*.dump*' -o -name '*.sym' -o -name '*.o' -o -name '*.lib' -o \
 -	    -name '*.lst' -o -name '*.asm' -o -name '.svn' -o -name 'autom4te.cache' -o \
