@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5527 2019/12/29 08:53:39 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5528 2019/12/29 12:44:38 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8830,3 +8830,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added multimedia/gst-plugins1-vaapi version 1.16.2 [ryoon 2019-12-29]
 	Updated multimedia/obs-studio to 24.0.5 [ryoon 2019-12-29]
 	Updated devel/cmake to 3.16.2 [adam 2019-12-29]
+	Updated cad/qcad to 3.24.0.1 [plunky 2019-12-29]
