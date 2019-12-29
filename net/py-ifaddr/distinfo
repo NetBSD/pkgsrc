@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/29 02:24:18 ryoon Exp $
+
+SHA1 (ifaddr-0.1.6.tar.gz) = 9e3577dc7c123ef602545c52ebd9fc64943afb44
+RMD160 (ifaddr-0.1.6.tar.gz) = a8821b461fa66445d6b18c40b8595b12b7ee7297
+SHA512 (ifaddr-0.1.6.tar.gz) = 911f81c32e808b9e61f7e98b8c67dc9b40cb64de864843cd7239f08538c9ff7cd45c8f16428b2ce200ea5f213a539c7ed8479432e02feb5e82e917f838ee0cb6
+Size (ifaddr-0.1.6.tar.gz) = 6526 bytes
