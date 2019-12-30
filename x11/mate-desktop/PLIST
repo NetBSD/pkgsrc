@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/05/08 01:12:54 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/12/30 22:51:10 gutteridge Exp $
 bin/mate-about
 bin/mate-color-select
 include/mate-desktop-2.0/libmate-desktop/mate-bg-crossfade.h
@@ -129,6 +129,7 @@ share/locale/hu/LC_MESSAGES/mate-desktop.mo
 share/locale/hy/LC_MESSAGES/mate-desktop.mo
 share/locale/ia/LC_MESSAGES/mate-desktop.mo
 share/locale/id/LC_MESSAGES/mate-desktop.mo
+share/locale/ie/LC_MESSAGES/mate-desktop.mo
 share/locale/ig/LC_MESSAGES/mate-desktop.mo
 share/locale/is/LC_MESSAGES/mate-desktop.mo
 share/locale/it/LC_MESSAGES/mate-desktop.mo
