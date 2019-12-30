@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5570 2019/12/30 22:29:57 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.5571 2019/12/30 22:31:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8894,3 +8894,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated security/sslsplit to 0.5.5 [rhialto 2019-12-30]
 	Updated x11/mate-panel to 1.22.2 [gutteridge 2019-12-30]
 	Updated x11/mate-settings-daemon to 1.22.1 [gutteridge 2019-12-30]
+	Updated x11/mate-session-manager to 1.22.3 [gutteridge 2019-12-30]
