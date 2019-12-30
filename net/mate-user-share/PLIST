@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/02/17 06:22:37 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/12/30 23:50:20 gutteridge Exp $
 bin/mate-file-share-properties
 lib/caja/extensions-2.0/libcaja-user-share.la
 libexec/mate-user-share
@@ -291,6 +291,12 @@ share/help/id/mate-user-share/figures/sharing-over-bluetooth.png
 share/help/id/mate-user-share/figures/sharing-over-the-network.png
 share/help/id/mate-user-share/index.docbook
 share/help/id/mate-user-share/legal.xml
+share/help/ie/mate-user-share/figures/file-sharing-preferences.png
+share/help/ie/mate-user-share/figures/receiving-over-bluetooth.png
+share/help/ie/mate-user-share/figures/sharing-over-bluetooth.png
+share/help/ie/mate-user-share/figures/sharing-over-the-network.png
+share/help/ie/mate-user-share/index.docbook
+share/help/ie/mate-user-share/legal.xml
 share/help/ig/mate-user-share/figures/file-sharing-preferences.png
 share/help/ig/mate-user-share/figures/receiving-over-bluetooth.png
 share/help/ig/mate-user-share/figures/sharing-over-bluetooth.png
@@ -701,6 +707,7 @@ share/locale/hu/LC_MESSAGES/mate-user-share.mo
 share/locale/hy/LC_MESSAGES/mate-user-share.mo
 share/locale/ia/LC_MESSAGES/mate-user-share.mo
 share/locale/id/LC_MESSAGES/mate-user-share.mo
+share/locale/ie/LC_MESSAGES/mate-user-share.mo
 share/locale/ig/LC_MESSAGES/mate-user-share.mo
 share/locale/is/LC_MESSAGES/mate-user-share.mo
 share/locale/it/LC_MESSAGES/mate-user-share.mo
