@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2019/12/30 03:50:07 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1 2019/12/30 04:23:08 gutteridge Exp $
 
-DISTNAME=	ethemes-0.1
+DISTNAME=	e16themes-0.1
 PKGREVISION=	5
-CATEGORIES=	x11 wm
+CATEGORIES=	wm x11
 MASTER_SITES=	ftp://themes.org/pub/themes/e/
 DISTFILES=	${E_THEMES}
 
@@ -13,7 +13,7 @@ COMMENT=	Themes for the window manager Enlightenment
 
 # wm/enlightenment is E16, which now has 1.x release numbering,
 # while x11/enlightenment continues to have 0.x numbering.
-DEPENDS+=	enlightenment16>=0.16:../../wm/enlightenment16
+DEPENDS+=	enlightenment16>=1.0:../../wm/enlightenment16
 
 DIST_SUBDIR=	ethemes
 NO_BUILD=	yes
