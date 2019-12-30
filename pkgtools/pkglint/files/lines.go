@@ -58,7 +58,7 @@ func (ls *Lines) CheckCvsID(index int, prefixRe regex.Pattern, suggestedPrefix s
 				"",
 				"To preserve the history of the CVS Id, should that ever be needed,",
 				"remove the leading $.")
-			fix.ReplaceRegex(`.*`, suggestedPrefix+"$"+"NetBSD$", 1)
+			fix.Replace(line.Text, suggestedPrefix+"$"+"NetBSD$")
 			fix.Apply()
 		}
 
