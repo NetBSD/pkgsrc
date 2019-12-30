@@ -1444,7 +1444,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	// be set in a package Makefile.
 	// See VartypeCheck.Pkgrevision for details.
 	reg.acl("PKGREVISION", BtPkgrevision,
-		PackageSettable,
+		PackageSettable|NonemptyIfDefined,
 		"Makefile: set")
 	reg.sysload("PKGSRCDIR", BtPathname, DefinedIfInScope|NonemptyIfDefined)
 	// This definition is only valid in the top-level Makefile,

@@ -1310,9 +1310,10 @@ func (cv *VartypeCheck) URL() {
 
 	} else if m, _, host, _, _ := match4(value, `^(https?|ftp|gopher)://([-0-9A-Za-z.]+)(?::(\d+))?/([-%&+,./0-9:;=?@A-Z_a-z~]|#)*$`); m {
 		if matches(host, `(?i)\.NetBSD\.org$`) && !matches(host, `\.NetBSD\.org$`) {
+			prefix := host[:len(host)-len(".NetBSD.org")]
 			fix := cv.Autofix()
 			fix.Warnf("Please write NetBSD.org instead of %s.", host)
-			fix.ReplaceRegex(`(?i)NetBSD\.org`, "NetBSD.org", 1)
+			fix.Replace(host, prefix+".NetBSD.org")
 			fix.Apply()
 		}
 

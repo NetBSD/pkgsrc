@@ -1547,6 +1547,23 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__redundancy_in_infra(c *ch
 	// The redundancy check is only performed when a whole package
 	// is checked. Therefore nothing is reported here.
 	t.CheckOutputEmpty()
+
+	// If the global checks are enabled, redundancy warnings from the
+	// pkgsrc infrastructure are reported as well.
+	//
+	// This prevents the redundant PKG_OPTIONS definition from
+	// mk/bsd.options.mk to be shown when checking a normal package.
+	t.SetUpCommandLine("-Wall", "-Cglobal")
+
+	G.checkdirPackage("category/package")
+
+	t.CheckOutputLines(
+		"NOTE: category/package/../../mk/redundant.mk:3: "+
+			"Definition of INFRA_REDUNDANT is redundant because of line 2.",
+		"NOTE: category/package/redundant.mk:3: "+
+			"Definition of PKG_REDUNDANT is redundant because of line 2.",
+		"WARN: category/package/redundant.mk:2: "+
+			"PKG_REDUNDANT is defined but not used.")
 }
 
 // When a package defines PLIST_SRC, it may or may not use the

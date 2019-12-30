@@ -3109,74 +3109,6 @@ func (s *Suite) Test_varalignLine_realignDetails(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-// This example is quite unrealistic since typically the first line is
-// the least indented.
-//
-// All follow-up lines are indented with at least one tab, to make clear
-// they are continuation lines.
-func (s *Suite) Test_varalignLine_realignMultiEmptyFollow(c *check.C) {
-	vt := NewVaralignTester(s, c)
-	vt.Input(
-		"VAR= \\",
-		"        value1 \\",
-		"          value2 \\",
-		"      value3 \\",
-		"value4 \\",
-		"\\",
-		"# comment")
-	vt.Internals(
-		"04 05 05",
-		"   08 15",
-		"   10 17",
-		"   06 13",
-		"   00 07",
-		"   00 00",
-		"   00")
-	vt.Diagnostics(
-		"NOTE: Makefile:2: This continuation line should be indented with \"\\t\".",
-		"NOTE: Makefile:3: This continuation line should be indented with \"\\t  \".",
-		"NOTE: Makefile:4: This continuation line should be indented with \"\\t\".",
-		"NOTE: Makefile:5: This continuation line should be indented with \"\\t\".",
-		"NOTE: Makefile:6: This continuation line should be indented with \"\\t\".",
-		"NOTE: Makefile:7: This continuation line should be indented with \"\\t\".")
-	vt.Autofixes(
-		"AUTOFIX: Makefile:2: Replacing \"        \" with \"\\t\".",
-		"AUTOFIX: Makefile:3: Replacing \"          \" with \"\\t  \".",
-		"AUTOFIX: Makefile:4: Replacing \"      \" with \"\\t\".",
-		"AUTOFIX: Makefile:5: Replacing \"\" with \"\\t\".",
-		"AUTOFIX: Makefile:6: Replacing \"\" with \"\\t\".",
-		"AUTOFIX: Makefile:7: Replacing \"\" with \"\\t\".")
-	vt.Fixed(
-		"VAR= \\",
-		"        value1 \\",
-		"          value2 \\",
-		"        value3 \\",
-		"        value4 \\",
-		"        \\",
-		"        # comment")
-	vt.Run()
-}
-
-func (s *Suite) Test_varalignLine_realignMultiInitial__spaces(c *check.C) {
-	vt := NewVaralignTester(s, c)
-	vt.Input(
-		"VAR=    value1 \\",
-		"        value2")
-	vt.Internals(
-		"04 08 15",
-		"   08")
-	vt.Diagnostics(
-		"NOTE: Makefile:1: Variable values should be aligned with tabs, not spaces.",
-		"NOTE: Makefile:2: This continuation line should be indented with \"\\t\".")
-	vt.Autofixes(
-		"AUTOFIX: Makefile:1: Replacing \"    \" with \"\\t\".",
-		"AUTOFIX: Makefile:2: Replacing \"        \" with \"\\t\".")
-	vt.Fixed(
-		"VAR=    value1 \\",
-		"        value2")
-	vt.Run()
-}
-
 func (s *Suite) Test_VaralignSplitter_split(c *check.C) {
 	t := s.Init(c)
 
@@ -3402,7 +3334,7 @@ func (s *Suite) Test_VaralignSplitter_split(c *check.C) {
 func (s *Suite) Test_varalignMkLine_rightMargin(c *check.C) {
 	t := s.Init(c)
 
-	test := func(common bool, margin int, lines ...string) {
+	test := func(common bool, expectedRightMargin int, lines ...string) {
 		t.CheckDotColumns(lines...)
 		mklines := t.NewMkLines("filename.mk",
 			lines...)
@@ -3417,7 +3349,7 @@ func (s *Suite) Test_varalignMkLine_rightMargin(c *check.C) {
 			actualCommon, actualMargin := mkinfo.rightMargin()
 			t.CheckDeepEquals(
 				[]interface{}{actualCommon, actualMargin},
-				[]interface{}{common, margin})
+				[]interface{}{common, expectedRightMargin})
 		}
 	}
 
@@ -3574,6 +3506,18 @@ func (s *Suite) Test_varalignMkLine_rightMargin(c *check.C) {
 		"VAR....8......16..=\t\t......40......48.\t\t\t\t\\",   // column 80
 		"\t\t\t......32......40......48......56......64..\t\\", // column 72
 		"\t\t\t...29")
+
+	// If the right margin lies completely off-screen (that is, beyond
+	// column 72), it counts as a right margin, but not as canonical.
+	// The preferred right margin is shifted left to column 72,
+	// to make it actually visible.
+	test(false, 72,
+		"VAR=\t\\",                    // column 16
+		"\tv\t\t\t\t\t\t\t\t\t\t\t\\", // column 96
+		"\tv\t\t\t\t\t\t\t\t\t\t\t\\", // column 96
+		"\tv\t\t\t\t\t\t\t\t\t\t\t\\", // column 96
+		"\tv\t\t\t\t\t\t\t\t\t\t\t\\", // column 96
+		"\tv")
 }
 
 func (s *Suite) Test_varalignLine_alignValueSingle(c *check.C) {
@@ -3585,7 +3529,7 @@ func (s *Suite) Test_varalignLine_alignValueSingle(c *check.C) {
 			t.CheckDotColumns(before)
 			mkline := t.NewMkLine("filename.mk", 123, before)
 			parts := NewVaralignSplitter().split(before, true)
-			info := &varalignLine{mkline, 0, false, false, parts}
+			info := &varalignLine{mkline, 0, false, parts}
 
 			info.alignValueSingle(column)
 
@@ -3676,7 +3620,7 @@ func (s *Suite) Test_varalignLine_alignValueSingle(c *check.C) {
 		"AUTOFIX: filename.mk:123: Replacing \"\\t\\t\\t \\t\\t\" with \" \".")
 }
 
-func (s *Suite) Test_varalignLine_alignValueMultiEmptyInitial(c *check.C) {
+func (s *Suite) Test_varalignLine_alignValueInitial__empty(c *check.C) {
 	t := s.Init(c)
 
 	mklines := t.NewMkLines("filename.mk",
@@ -3691,7 +3635,7 @@ func (s *Suite) Test_varalignLine_alignValueMultiEmptyInitial(c *check.C) {
 		"NOTE: filename.mk:3: The continuation backslash should be preceded by a single space or tab.")
 }
 
-func (s *Suite) Test_varalignLine_alignValueMultiEmptyInitial__spaces(c *check.C) {
+func (s *Suite) Test_varalignLine_alignValueInitial__empty_spaces(c *check.C) {
 	vt := NewVaralignTester(s, c)
 	vt.Input(
 		"VAR=    \\",
@@ -3715,7 +3659,27 @@ func (s *Suite) Test_varalignLine_alignValueMultiEmptyInitial__spaces(c *check.C
 	vt.Run()
 }
 
-func (s *Suite) Test_varalignLine_alignValueMultiInitial(c *check.C) {
+func (s *Suite) Test_varalignLine_alignValueInitial__spaces(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"VAR=    value1 \\",
+		"        value2")
+	vt.Internals(
+		"04 08 15",
+		"   08")
+	vt.Diagnostics(
+		"NOTE: Makefile:1: Variable values should be aligned with tabs, not spaces.",
+		"NOTE: Makefile:2: This continuation line should be indented with \"\\t\".")
+	vt.Autofixes(
+		"AUTOFIX: Makefile:1: Replacing \"    \" with \"\\t\".",
+		"AUTOFIX: Makefile:2: Replacing \"        \" with \"\\t\".")
+	vt.Fixed(
+		"VAR=    value1 \\",
+		"        value2")
+	vt.Run()
+}
+
+func (s *Suite) Test_varalignLine_alignValueInitial(c *check.C) {
 	t := s.Init(c)
 
 	test := func(before string, column int, after string, diagnostics ...string) {
@@ -3730,9 +3694,9 @@ func (s *Suite) Test_varalignLine_alignValueMultiInitial(c *check.C) {
 
 			text := mkline.raw[0].text()
 			parts := NewVaralignSplitter().split(text, true)
-			info := &varalignLine{mkline, 0, false, false, parts}
+			info := &varalignLine{mkline, 0, false, parts}
 
-			info.alignValueMultiInitial(column)
+			info.alignValueInitial(column)
 
 			t.CheckEqualsf(
 				mkline.raw[0].text(), after,
@@ -3782,22 +3746,59 @@ func (s *Suite) Test_varalignLine_alignValueMultiInitial(c *check.C) {
 		"AUTOFIX: filename.mk:1: Replacing \"  \\t    \" with \"\\t\\t\".")
 }
 
-func (s *Suite) Test_varalignLine_alignValueMultiEmptyFollow(c *check.C) {
-	t := s.Init(c)
-
-	test := func(diagnostics ...string) {
-		// FIXME
-		t.CheckOutput(diagnostics)
-	}
-
-	test()
+// This example is quite unrealistic since typically the first line is
+// the least indented.
+//
+// All follow-up lines are indented with at least one tab, to make clear
+// they are continuation lines.
+func (s *Suite) Test_varalignLine_alignValueMultiFollow__unrealistic(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"VAR= \\",
+		"        value1 \\",
+		"          value2 \\",
+		"      value3 \\",
+		"value4 \\",
+		"\\",
+		"# comment")
+	vt.Internals(
+		"04 05 05",
+		"   08 15",
+		"   10 17",
+		"   06 13",
+		"   00 07",
+		"   00 00",
+		"   00")
+	vt.Diagnostics(
+		"NOTE: Makefile:2: This continuation line should be indented with \"\\t\".",
+		"NOTE: Makefile:3: This continuation line should be indented with \"\\t  \".",
+		"NOTE: Makefile:4: This continuation line should be indented with \"\\t\".",
+		"NOTE: Makefile:5: This continuation line should be indented with \"\\t\".",
+		"NOTE: Makefile:6: This continuation line should be indented with \"\\t\".",
+		"NOTE: Makefile:7: This continuation line should be indented with \"\\t\".")
+	vt.Autofixes(
+		"AUTOFIX: Makefile:2: Replacing \"        \" with \"\\t\".",
+		"AUTOFIX: Makefile:3: Replacing \"          \" with \"\\t  \".",
+		"AUTOFIX: Makefile:4: Replacing \"      \" with \"\\t\".",
+		"AUTOFIX: Makefile:5: Replacing \"\" with \"\\t\".",
+		"AUTOFIX: Makefile:6: Replacing \"\" with \"\\t\".",
+		"AUTOFIX: Makefile:7: Replacing \"\" with \"\\t\".")
+	vt.Fixed(
+		"VAR= \\",
+		"        value1 \\",
+		"          value2 \\",
+		"        value3 \\",
+		"        value4 \\",
+		"        \\",
+		"        # comment")
+	vt.Run()
 }
 
 func (s *Suite) Test_varalignLine_alignValueMultiFollow(c *check.C) {
 	t := s.Init(c)
 
 	// newLine creates a line consisting of either 2 or 3 physical lines.
-	// The text ends up in the raw line with index 1.
+	// The given text ends up in the raw line with index 1.
 	newLine := func(text string, column, indentDiff int) (*varalignLine, *RawLine) {
 		t.CheckDotColumns("", text)
 
@@ -3812,16 +3813,16 @@ func (s *Suite) Test_varalignLine_alignValueMultiFollow(c *check.C) {
 		mkline := mklines.mklines[0]
 
 		parts := NewVaralignSplitter().split(text, false)
-		isLong := parts.isTooLongFor(column + indentDiff)
-		return &varalignLine{mkline, 1, isLong, false, parts}, mkline.raw[1]
+		return &varalignLine{mkline, 1, false, parts}, mkline.raw[1]
 	}
 
 	test := func(before string, column, indentDiff int, after string, diagnostics ...string) {
 
 		doTest := func(autofix bool) {
 			info, raw := newLine(before, column, indentDiff)
+			width := imax(column, info.valueColumn()+indentDiff)
 
-			info.alignValueMultiFollow(column, indentDiff)
+			info.alignValueMultiFollow(width)
 
 			t.CheckEquals(raw.text(), after)
 		}
@@ -3856,8 +3857,18 @@ func (s *Suite) Test_varalignLine_alignValueMultiFollow(c *check.C) {
 		"AUTOFIX: filename.mk:2: Replacing \"\" with \"\\t\\t\\t\".",
 		"AUTOFIX: filename.mk:2: Replacing \"   \\\\\" with \" \\\\\".")
 
-	// As a special case, a continuation backslash in column 72 is preserved.
-	// TODO: Make this more general.
+	// The position of the continuation backslash is preserved.
+	test(
+		"value\t\t\t\t\t\t\\", 24, 0,
+		"\t\t\tvalue\t\t\t\\",
+
+		"NOTE: filename.mk:2: This continuation line should be indented "+
+			"with \"\\t\\t\\t\".",
+		"AUTOFIX: filename.mk:2: Replacing \"\" with \"\\t\\t\\t\".",
+		"AUTOFIX: filename.mk:2: "+
+			"Replacing \"\\t\\t\\t\\t\\t\\t\\\\\" "+
+			"with \"\\t\\t\\t\\\\\".")
+
 	test(
 		"value\t\t\t\t\t\t\t\t\t\\", 24, 0,
 		"\t\t\tvalue\t\t\t\t\t\t\\",
@@ -3879,6 +3890,69 @@ func (s *Suite) Test_varalignLine_alignValueMultiFollow(c *check.C) {
 		"NOTE: filename.mk:2: This continuation line should be indented with \"\\t\\t\\t\".",
 		"AUTOFIX: filename.mk:2: Replacing \"\" with \"\\t\\t\\t\".",
 		"AUTOFIX: filename.mk:2: Replacing \"\\t\\\\\" with \" \\\\\".")
+
+	// The indentation of the continuation backslash is even preserved
+	// when it is not aligned with tabs only but with spaces.
+	test(
+		"value\t\t\t\t\t\t   \\", 24, 0,
+		"\t\t\tvalue\t\t\t   \\",
+
+		"NOTE: filename.mk:2: This continuation line should be indented "+
+			"with \"\\t\\t\\t\".",
+		"AUTOFIX: filename.mk:2: Replacing \"\" with \"\\t\\t\\t\".",
+		"AUTOFIX: filename.mk:2: "+
+			"Replacing \"\\t\\t\\t\\t\\t\\t   \\\\\" "+
+			"with \"\\t\\t\\t   \\\\\".")
+
+	// Since the value is shifted to the right, the position of the
+	// continuation backslash cannot be preserved, therefore it is
+	// shifted to the right along with the value.
+	test(
+		"value \\", 24, 0,
+		"\t\t\tvalue \\",
+
+		"NOTE: filename.mk:2: This continuation line should be indented "+
+			"with \"\\t\\t\\t\".",
+		"AUTOFIX: filename.mk:2: Replacing \"\" with \"\\t\\t\\t\".")
+
+	// The second line is indented deeper (40) than the first line (24).
+	// Assuming that the relative indentation was intended, it is preserved.
+	test(
+		"\t\t\t\t\t...45 \\", 24, 0,
+		"\t\t\t\t\t...45 \\",
+
+		nil...)
+
+	// The second line is indented deeper (35) than the first line (24).
+	// It uses tabs and spaces for indentation.
+	// Assuming that the relative indentation was intended, it is preserved.
+	test(
+		"\t\t\t\t   ...40 \\", 24, 0,
+		"\t\t\t\t   ...40 \\",
+
+		nil...)
+
+	// The value is missing in this line, there is only the continuation
+	// backslash. It is preserved as well.
+	test(
+		"\t\t\t\t   \\", 24, 0,
+		"\t\t\t\t   \\",
+
+		nil...)
+
+	// If the indentation is not in the canonical form, it is corrected.
+	test(
+		"\t   \t\t\t   \\", 24, 0,
+		"\t\t\t\t   \\",
+
+		// The diagnostic is carefully chosen to just say how this
+		// particular line should be indented. It does not mention the rule
+		// that the indentation should be preferably tabs and up to 7 spaces.
+		//
+		// Above all, the diagnostic does not say "be indented with tabs",
+		// as that would be wrong for follow-up lines.
+		"NOTE: filename.mk:2: This continuation line should be indented with \"\\t\\t\\t\\t   \".",
+		"AUTOFIX: filename.mk:2: Replacing \"\\t   \\t\\t\\t   \" with \"\\t\\t\\t\\t   \".")
 }
 
 func (s *Suite) Test_varalignLine_alignValueMultiFollow__unindent_long_lines(c *check.C) {
@@ -3991,6 +4065,98 @@ func (s *Suite) Test_varalignLine_alignValueMultiFollow__unindent_long_initial_l
 	vt.Run()
 }
 
+func (s *Suite) Test_varalignLine_alignValue(c *check.C) {
+	t := s.Init(c)
+
+	test := func(before string, column int, after string, diagnostics ...string) {
+		t.CheckDotColumns(before)
+
+		doTest := func(autofix bool) {
+			mklines := t.NewMkLines("filename.mk",
+				before,
+				"\t...13")
+			assert(len(mklines.mklines) == 1)
+			mkline := mklines.mklines[0]
+
+			text := mkline.raw[0].text()
+			parts := NewVaralignSplitter().split(text, true)
+			info := &varalignLine{mkline, 0, false, parts}
+
+			info.alignValue(column)
+
+			t.CheckEqualsf(
+				mkline.raw[0].text(), after,
+				"Line.raw.text, autofix=%v", autofix)
+
+			t.CheckEqualsf(info.String(), after,
+				"info.String, autofix=%v", autofix)
+		}
+
+		t.ExpectDiagnosticsAutofix(doTest, diagnostics...)
+	}
+
+	testAssert := func(before string, column int) {
+		t.CheckDotColumns(before)
+
+		doTest := func(autofix bool) {
+			mklines := t.NewMkLines("filename.mk",
+				before,
+				"\t...13")
+			assert(len(mklines.mklines) == 1)
+			mkline := mklines.mklines[0]
+
+			text := mkline.raw[0].text()
+			parts := NewVaralignSplitter().split(text, true)
+			info := &varalignLine{mkline, 0, false, parts}
+
+			t.ExpectAssert(
+				func() { info.alignValue(column) })
+
+			t.CheckEqualsf(
+				mkline.raw[0].text(), before,
+				"Line.raw.text, autofix=%v", autofix)
+
+			t.CheckEqualsf(info.String(), before,
+				"info.String, autofix=%v", autofix)
+		}
+
+		t.ExpectDiagnosticsAutofix(doTest, nil...)
+	}
+
+	// The value is already in column 8, thus nothing to do.
+	testAssert(
+		"VAR=\tvalue \\",
+		8)
+
+	test(
+		"VAR=\tvalue \\",
+		16,
+
+		"VAR=\t\tvalue \\",
+		"NOTE: filename.mk:1: This variable value should be aligned to column 17.",
+		"AUTOFIX: filename.mk:1: Replacing \"\\t\" with \"\\t\\t\".")
+
+	// The column is already correct,
+	// but the alignment should be done with tabs, not spaces.
+	test(
+		"VAR=  \t  \tvalue \\",
+		16,
+
+		"VAR=\t\tvalue \\",
+		"NOTE: filename.mk:1: Variable values should be aligned with tabs, not spaces.",
+		"AUTOFIX: filename.mk:1: Replacing \"  \\t  \\t\" with \"\\t\\t\".")
+
+	// Both the column and the use of spaces in the alignment
+	// need to be fixed.
+	test(
+		"VAR=  \t    value \\",
+		16,
+
+		"VAR=\t\tvalue \\",
+		"NOTE: filename.mk:1: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"AUTOFIX: filename.mk:1: Replacing \"  \\t    \" with \"\\t\\t\".")
+}
+
 // The seemingly empty line 3 is actually a continuation from the line above it.
 // Its indentation is is not fixed since that would lead to trailing whitespace.
 func (s *Suite) Test_varalignLine_alignFollow(c *check.C) {
@@ -4028,7 +4194,7 @@ func (s *Suite) Test_varalignLine_alignContinuation(c *check.C) {
 
 			text := mkline.raw[rawIndex].text()
 			parts := NewVaralignSplitter().split(text, rawIndex == 0)
-			info := &varalignLine{mkline, rawIndex, false, false, parts}
+			info := &varalignLine{mkline, rawIndex, false, parts}
 
 			info.alignContinuation(valueColumn, rightMarginColumn)
 
@@ -4251,6 +4417,21 @@ func (s *Suite) Test_varalignParts_spaceBeforeContinuation__continued_comment(c 
 		"        still comment \\",
 		"        and still")
 	vt.Run()
+}
+
+func (s *Suite) Test_varalignParts_spaceBeforeContinuationIndex__assertion(c *check.C) {
+	t := s.Init(c)
+
+	test := func(value, continuation string) {
+		parts := varalignParts{value: value, continuation: continuation}
+
+		t.ExpectAssert(
+			func() { _ = parts.spaceBeforeContinuationIndex() })
+	}
+
+	test("", "")
+	test("value", "")
+	test("", "\\")
 }
 
 // This test runs isCanonicalInitial directly since as of August 2019
