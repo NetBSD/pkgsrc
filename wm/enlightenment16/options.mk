@@ -1,8 +1,6 @@
-# $NetBSD: options.mk,v 1.4 2019/12/11 01:50:31 gutteridge Exp $
+# $NetBSD: options.mk,v 1.1 2019/12/30 03:50:06 gutteridge Exp $
 
-# e16 is used here instead of enlightenment to avoid
-# potential conflict with x11/enlightenment.
-PKG_OPTIONS_VAR=	PKG_OPTIONS.e16
+PKG_OPTIONS_VAR=	PKG_OPTIONS.enlightenment16
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	sound
 PKG_OPTIONS_GROUP.sound=	pulseaudio esound
