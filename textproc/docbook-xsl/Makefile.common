@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.common,v 1.6 2016/03/05 01:12:13 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.7 2019/12/30 06:15:18 taca Exp $
 #
-# used by textproc/dbtoepub/Makefile
 
 DISTNAME=	docbook-xsl-1.79.1
 CATEGORIES=	textproc
