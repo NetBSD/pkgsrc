@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/12/30 03:50:06 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/30 04:05:32 gutteridge Exp $
 
 DISTNAME=	e16-1.0.21
 PKGNAME=	${DISTNAME:S/e/enlightenment/}
@@ -10,6 +10,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://enlightenment.org/
 COMMENT=	Highly themeable and configurable window manager
 LICENSE=	enlightenment16
+
+# This looks unusual and is incomplete because there were two distinct
+# enlightenment packages in different parts of the tree. This package
+# went from 0.16.x to 1.0.x release numbering, while x11/enlightenment
+# reflects development that continues to use 0.x release numbering.
+# This package isn't intended to conflict with or supersede
+# x11/enlightenment.
+CONFLICTS=	enlightenment>=1.0
+SUPERSEDES=	enlightenment>=1.0
 
 USE_TOOLS+=		gmake perl:run pkg-config
 USE_PKGLOCALEDIR=	YES
