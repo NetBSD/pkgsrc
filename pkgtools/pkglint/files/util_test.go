@@ -59,6 +59,32 @@ func (s *Suite) Test_trimCommon(c *check.C) {
 		"a", "")
 }
 
+func (s *Suite) Test_replaceOnce(c *check.C) {
+	t := s.Init(c)
+
+	test := func(s, from, to, result string) {
+		ok, actualResult := replaceOnce(s, from, to)
+
+		t.CheckEquals(actualResult, result)
+		t.CheckEquals(ok, result != s)
+	}
+
+	// The text does not occur at all.
+	test("something else", "from", "to", "something else")
+
+	// The text occurs exactly once.
+	test("from", "from", "to", "to")
+
+	// The text occurs at two places, non-overlapping.
+	test("from from", "from", "to", "from from")
+
+	// The text occurs at three places, non-overlapping.
+	test("aaa", "a", "b", "aaa")
+
+	// The text occurs at two places, the occurrences overlap.
+	test("aaa", "aa", "b", "aaa")
+}
+
 func (s *Suite) Test_assertNil(c *check.C) {
 	t := s.Init(c)
 

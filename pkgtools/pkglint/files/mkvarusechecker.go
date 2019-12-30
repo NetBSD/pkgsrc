@@ -142,7 +142,7 @@ func (ck *MkVarUseChecker) checkVarname(time VucTime) {
 	if varname == "LOCALBASE" && !G.Infrastructure && time == VucRunTime {
 		fix := ck.MkLine.Autofix()
 		fix.Warnf("Please use PREFIX instead of LOCALBASE.")
-		fix.ReplaceRegex(`\$\{LOCALBASE\b`, "${PREFIX", 1)
+		fix.ReplaceAfter("${", "LOCALBASE", "PREFIX")
 		fix.Apply()
 	}
 }

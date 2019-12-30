@@ -15,7 +15,7 @@ func CheckLinesPlist(pkg *Package, lines *Lines) {
 
 	if idOk && lines.Len() == 1 {
 		line := lines.Lines[0]
-		line.Warnf("PLIST files shouldn't be empty.")
+		line.Errorf("PLIST files must not be empty.")
 		line.Explain(
 			"One reason for empty PLISTs is that this is a newly created package",
 			sprintf("and that the author didn't run %q after installing the files.", bmake("print-PLIST")),
@@ -400,7 +400,7 @@ func (ck *PlistChecker) checkPathMan(pline *PlistLine) {
 			"configured by the pkgsrc user.",
 			"Compression and decompression takes place automatically,",
 			"no matter if the .gz extension is mentioned in the PLIST or not.")
-		fix.ReplaceRegex(`\.gz\n`, "\n", 1)
+		fix.ReplaceAt(0, len(pline.Text)-len(".gz"), ".gz", "")
 		fix.Apply()
 	}
 }
@@ -578,7 +578,7 @@ func NewPlistLineSorter(plines []*PlistLine) *plistLineSorter {
 
 func (s *plistLineSorter) Sort() {
 	if line := s.unsortable; line != nil {
-		if G.Logger.IsAutofix() && trace.Tracing {
+		if trace.Tracing {
 			trace.Stepf("%s: This line prevents pkglint from sorting the PLIST automatically.", line)
 		}
 		return
