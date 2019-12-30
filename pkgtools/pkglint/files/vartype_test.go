@@ -32,6 +32,23 @@ func (s *Suite) Test_ACLPermissions_HumanString(c *check.C) {
 		"set, given a default value, appended to, used at load time, or used")
 }
 
+func (s *Suite) Test_Vartype_IsNonemptyIfDefined(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	test := func(varname string, isNonempty bool) {
+		vartype := G.Pkgsrc.VariableType(nil, varname)
+
+		t.CheckEquals(vartype.IsNonemptyIfDefined(), isNonempty)
+	}
+
+	test("PKGPATH", true)
+	test("PKGREVISION", true)
+	test("OPSYS", true)
+	test("OS_VERSION", false)
+}
+
 func (s *Suite) Test_Vartype_EffectivePermissions(c *check.C) {
 	t := s.Init(c)
 

@@ -1076,6 +1076,34 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__tool_in_unknown_quotes(c *chec
 	t.CheckEquals(needsQuoting, yes)
 }
 
+func (s *Suite) Test_MkLine_VariableNeedsQuoting__tool_in_quoted_word_part(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	t.SetUpTool("tool", "TOOL", AtRunTime)
+
+	test := func(line string, diagnostics ...string) {
+		mklines := t.SetUpFileMkLines("Makefile",
+			MkCvsID,
+			line)
+
+		mklines.Check()
+
+		t.CheckOutput(diagnostics)
+	}
+
+	test("\t: x${TOOL}",
+		"WARN: ~/Makefile:2: Please use ${TOOL:Q} instead of ${TOOL}.")
+
+	test("\t: \"x${TOOL}\"")
+
+	test("\t: 'x${TOOL}'")
+
+	test("\t: `x${TOOL}`",
+		"WARN: ~/Makefile:2: Unknown shell command \"x${TOOL}\".",
+		"WARN: ~/Makefile:2: Please use ${TOOL:Q} instead of ${TOOL}.")
+}
+
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__D_and_U_modifiers(c *check.C) {
 	t := s.Init(c)
 

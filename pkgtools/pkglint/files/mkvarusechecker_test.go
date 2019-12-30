@@ -363,16 +363,20 @@ func (s *Suite) Test_MkVarUseChecker_checkVarname(c *check.C) {
 		"\t: ${LOCALBASE}",             // Use at run time
 		".endif")
 
-	mklines.ForEach(func(mkline *MkLine) {
-		mkline.ForEachUsed(func(varUse *MkVarUse, time VucTime) {
-			ck := NewMkVarUseChecker(varUse, mklines, mkline)
-			ck.checkVarname(time)
+	doTest := func(autofix bool) {
+		mklines.ForEach(func(mkline *MkLine) {
+			mkline.ForEachUsed(func(varUse *MkVarUse, time VucTime) {
+				ck := NewMkVarUseChecker(varUse, mklines, mkline)
+				ck.checkVarname(time)
+			})
 		})
-	})
+	}
 
-	t.CheckOutputLines(
+	t.ExpectDiagnosticsAutofix(
+		doTest,
 		"WARN: filename.mk:1: Please use \"${.TARGET}\" instead of \"$@\".",
-		"WARN: filename.mk:3: Please use PREFIX instead of LOCALBASE.")
+		"WARN: filename.mk:3: Please use PREFIX instead of LOCALBASE.",
+		"AUTOFIX: filename.mk:3: Replacing \"LOCALBASE\" with \"PREFIX\".")
 }
 
 func (s *Suite) Test_MkVarUseChecker_checkPermissions(c *check.C) {
