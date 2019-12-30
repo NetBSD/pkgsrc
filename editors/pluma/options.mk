@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2019/10/05 21:32:12 gutteridge Exp $
+# $NetBSD: options.mk,v 1.13 2019/12/30 23:38:57 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pluma
 PKG_SUPPORTED_OPTIONS=	enchant
@@ -6,13 +6,10 @@ PKG_SUGGESTED_OPTIONS=	enchant
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	enchant python
-
 .if !empty(PKG_OPTIONS:Menchant)
 .include "../../textproc/enchant2/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-spell
-PLIST.enchant=	yes
 .else
 CONFIGURE_ARGS+=	--disable-spell
 .endif
@@ -22,7 +19,6 @@ CONFIGURE_ARGS+=	--disable-spell
 # as being incompatible, leaving us with no remaining choices.
 .if !empty(PKG_OPTIONS:Mpython)
 CONFIGURE_ARGS+=	--enable-python
-PLIST.python=	yes
 PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2, also via py-gtksourceview
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
