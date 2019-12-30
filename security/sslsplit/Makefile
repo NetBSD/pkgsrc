@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/03/05 11:29:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2019/12/30 22:17:29 rhialto Exp $
 
-DISTNAME=	sslsplit-0.4.10
-PKGREVISION=	1
+DISTNAME=	sslsplit-0.5.5
 CATEGORIES=	security
 MASTER_SITES=	http://mirror.roe.ch/rel/sslsplit/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +15,7 @@ USE_TOOLS+=	gmake
 
 MAKE_ENV+=	LIBEVENT_BASE=${BUILDLINK_PREFIX.libevent}
 MAKE_ENV+=	OPENSSL_BASE=${BUILDLINK_PREFIX.openssl}
+MAKE_ENV+=	LIBNET_BASE=${BUILDLINK_PREFIX.libnet11}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
@@ -24,5 +24,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/sslsplit.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/libevent/buildlink3.mk"
+.include "../../devel/libnet11/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
