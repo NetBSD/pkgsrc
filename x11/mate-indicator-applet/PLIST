@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/02/17 06:15:37 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/12/30 23:44:16 gutteridge Exp $
 libexec/mate-indicator-applet
 libexec/mate-indicator-applet-appmenu
 libexec/mate-indicator-applet-complete
@@ -55,10 +55,12 @@ share/locale/eu/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/fa/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/fi/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/fr/LC_MESSAGES/mate-indicator-applet.mo
+share/locale/fr_CA/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/frp/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/fur/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/fy/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ga/LC_MESSAGES/mate-indicator-applet.mo
+share/locale/gd/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/gl/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/gu/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ha/LC_MESSAGES/mate-indicator-applet.mo
@@ -69,12 +71,14 @@ share/locale/hu/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/hy/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ia/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/id/LC_MESSAGES/mate-indicator-applet.mo
+share/locale/ie/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ig/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/is/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/it/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ja/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/jv/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ka/LC_MESSAGES/mate-indicator-applet.mo
+share/locale/kab/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/kk/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/km/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/kn/LC_MESSAGES/mate-indicator-applet.mo
@@ -137,9 +141,9 @@ share/locale/vi/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/wa/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/xh/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/yo/LC_MESSAGES/mate-indicator-applet.mo
+share/locale/zh-Hans/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/zh_CN/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/zh_HK/LC_MESSAGES/mate-indicator-applet.mo
-share/locale/zh-Hans/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/zh_TW/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/zu/LC_MESSAGES/mate-indicator-applet.mo
 share/mate-panel/applets/org.ayatana.panel.IndicatorApplet.mate-panel-applet
