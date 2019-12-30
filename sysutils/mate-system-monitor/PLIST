@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/01/16 18:15:35 youri Exp $
+@comment $NetBSD: PLIST,v 1.4 2019/12/30 23:34:16 gutteridge Exp $
 bin/mate-system-monitor
 libexec/mate-system-monitor/msm-kill
 libexec/mate-system-monitor/msm-renice
@@ -756,6 +756,21 @@ share/help/id/mate-system-monitor/figures/systemMonitor.png
 share/help/id/mate-system-monitor/figures/viewMenu.png
 share/help/id/mate-system-monitor/index.docbook
 share/help/id/mate-system-monitor/legal.xml
+share/help/ie/mate-system-monitor/figures/addColumn.png
+share/help/ie/mate-system-monitor/figures/changePriority.png
+share/help/ie/mate-system-monitor/figures/colorPanel.png
+share/help/ie/mate-system-monitor/figures/columnContextMenu.png
+share/help/ie/mate-system-monitor/figures/mate-system-monitor_window.png
+share/help/ie/mate-system-monitor/figures/memoryMaps.png
+share/help/ie/mate-system-monitor/figures/moreInfo.png
+share/help/ie/mate-system-monitor/figures/processListing.png
+share/help/ie/mate-system-monitor/figures/sortButton.png
+share/help/ie/mate-system-monitor/figures/sortMenu.png
+share/help/ie/mate-system-monitor/figures/sortMenu2.png
+share/help/ie/mate-system-monitor/figures/systemMonitor.png
+share/help/ie/mate-system-monitor/figures/viewMenu.png
+share/help/ie/mate-system-monitor/index.docbook
+share/help/ie/mate-system-monitor/legal.xml
 share/help/is/mate-system-monitor/figures/addColumn.png
 share/help/is/mate-system-monitor/figures/changePriority.png
 share/help/is/mate-system-monitor/figures/colorPanel.png
@@ -1673,6 +1688,7 @@ share/locale/hu/LC_MESSAGES/mate-system-monitor.mo
 share/locale/hy/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ia/LC_MESSAGES/mate-system-monitor.mo
 share/locale/id/LC_MESSAGES/mate-system-monitor.mo
+share/locale/ie/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ig/LC_MESSAGES/mate-system-monitor.mo
 share/locale/is/LC_MESSAGES/mate-system-monitor.mo
 share/locale/it/LC_MESSAGES/mate-system-monitor.mo
