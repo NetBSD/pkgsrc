@@ -1,0 +1,27 @@
+$NetBSD: patch-GNUmakefile,v 1.1 2019/12/30 22:17:29 rhialto Exp $
+
+Our package libnet11 is installed in slightly different directories.
+
+--- GNUmakefile.orig	2019-08-30 11:09:00.000000000 +0000
++++ GNUmakefile
+@@ -335,9 +335,9 @@ endif
+ 
+ # Always search filesystem for libnet because libnet-config is unreliable
+ ifneq ($(filter -DWITHOUT_MIRROR,$(FEATURES)),-DWITHOUT_MIRROR)
+-LIBNET_FOUND:=	$(call locate,libnet,include/libnet-1.1/libnet.h,$(LIBNET_BASE))
++LIBNET_FOUND:=	$(call locate,libnet,include/libnet11/libnet.h,$(LIBNET_BASE))
+ ifdef LIBNET_FOUND
+-LIBNET_FOUND_INC:=	$(LIBNET_FOUND)/include/libnet-1.1
++LIBNET_FOUND_INC:=	$(LIBNET_FOUND)/include/libnet11
+ else
+ LIBNET_FOUND:=	$(call locate,libnet,include/libnet.h,$(LIBNET_BASE))
+ LIBNET_FOUND_INC:=	$(LIBNET_FOUND)/include
+@@ -367,7 +367,7 @@ endif
+ ifneq ($(filter -DWITHOUT_MIRROR,$(FEATURES)),-DWITHOUT_MIRROR)
+ ifdef LIBNET_FOUND
+ PKG_CPPFLAGS+=	-I$(LIBNET_FOUND_INC)
+-PKG_LDFLAGS+=	-L$(LIBNET_FOUND)/lib
++PKG_LDFLAGS+=	-L$(LIBNET_FOUND)/lib/libnet11
+ PKG_LIBS+=	-lnet
+ endif
+ ifdef LIBPCAP_FOUND
