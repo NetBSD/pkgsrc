@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5589 2019/12/30 23:42:09 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.5590 2019/12/30 23:44:33 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8913,3 +8913,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/mate-notification-daemon to 1.22.1 [gutteridge 2019-12-30]
 	Updated editors/pluma to 1.22.2 [gutteridge 2019-12-30]
 	Updated graphics/eom to 1.22.2 [gutteridge 2019-12-30]
+	Updated x11/mate-indicator-applet to 1.22.1 [gutteridge 2019-12-30]
