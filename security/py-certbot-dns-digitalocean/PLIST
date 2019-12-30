@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2019/12/30 19:41:31 triaxx Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/certbot_dns_digitalocean/__init__.py
+${PYSITELIB}/certbot_dns_digitalocean/__init__.pyo
+${PYSITELIB}/certbot_dns_digitalocean/__init__.pyc
+${PYSITELIB}/certbot_dns_digitalocean/_internal/__init__.py
+${PYSITELIB}/certbot_dns_digitalocean/_internal/__init__.pyo
+${PYSITELIB}/certbot_dns_digitalocean/_internal/__init__.pyc
+${PYSITELIB}/certbot_dns_digitalocean/_internal/dns_digitalocean.pyo
+${PYSITELIB}/certbot_dns_digitalocean/_internal/dns_digitalocean.pyc
+${PYSITELIB}/certbot_dns_digitalocean/_internal/dns_digitalocean.py
