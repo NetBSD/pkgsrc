@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5561 2019/12/30 17:53:19 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5562 2019/12/30 18:01:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8885,3 +8885,5 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/wireshark to 3.2.0 [adam 2019-12-30]
 	Updated net/py-responses to 0.10.9 [adam 2019-12-30]
 	Updated textproc/py-xmlschema to 1.0.18 [adam 2019-12-30]
+	Updated devel/protobuf to 3.11.2 [adam 2019-12-30]
+	Updated devel/py-protobuf to 3.11.2 [adam 2019-12-30]
