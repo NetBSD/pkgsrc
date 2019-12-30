@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5577 2019/12/30 22:48:30 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.5578 2019/12/30 22:51:23 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8901,3 +8901,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated misc/mate-calc to 1.22.2 [gutteridge 2019-12-30]
 	Updated devel/mate-common to 1.22.2 [gutteridge 2019-12-30]
 	Updated x11/mate-control-center to 1.22.2 [gutteridge 2019-12-30]
+	Updated x11/mate-desktop to 1.22.2 [gutteridge 2019-12-30]
