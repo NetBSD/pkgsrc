@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1284 2019/12/29 04:46:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.1285 2019/12/30 19:38:27 triaxx Exp $
 #
 
 COMMENT=	Networking tools
@@ -657,6 +657,7 @@ SUBDIR+=	py-caldav
 SUBDIR+=	py-cares
 SUBDIR+=	py-celery
 SUBDIR+=	py-cymruwhois
+SUBDIR+=	py-digitalocean
 SUBDIR+=	py-dns
 SUBDIR+=	py-dnsdiag
 SUBDIR+=	py-dpkt
