@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/09/24 03:59:41 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/12/30 02:16:15 minskim Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -47,6 +47,9 @@ ${PYSITELIB}/pandas_datareader/conftest.pyo
 ${PYSITELIB}/pandas_datareader/data.py
 ${PYSITELIB}/pandas_datareader/data.pyc
 ${PYSITELIB}/pandas_datareader/data.pyo
+${PYSITELIB}/pandas_datareader/econdb.py
+${PYSITELIB}/pandas_datareader/econdb.pyc
+${PYSITELIB}/pandas_datareader/econdb.pyo
 ${PYSITELIB}/pandas_datareader/enigma.py
 ${PYSITELIB}/pandas_datareader/enigma.pyc
 ${PYSITELIB}/pandas_datareader/enigma.pyo
@@ -62,18 +65,6 @@ ${PYSITELIB}/pandas_datareader/famafrench.pyo
 ${PYSITELIB}/pandas_datareader/fred.py
 ${PYSITELIB}/pandas_datareader/fred.pyc
 ${PYSITELIB}/pandas_datareader/fred.pyo
-${PYSITELIB}/pandas_datareader/google/__init__.py
-${PYSITELIB}/pandas_datareader/google/__init__.pyc
-${PYSITELIB}/pandas_datareader/google/__init__.pyo
-${PYSITELIB}/pandas_datareader/google/daily.py
-${PYSITELIB}/pandas_datareader/google/daily.pyc
-${PYSITELIB}/pandas_datareader/google/daily.pyo
-${PYSITELIB}/pandas_datareader/google/options.py
-${PYSITELIB}/pandas_datareader/google/options.pyc
-${PYSITELIB}/pandas_datareader/google/options.pyo
-${PYSITELIB}/pandas_datareader/google/quotes.py
-${PYSITELIB}/pandas_datareader/google/quotes.pyc
-${PYSITELIB}/pandas_datareader/google/quotes.pyo
 ${PYSITELIB}/pandas_datareader/iex/__init__.py
 ${PYSITELIB}/pandas_datareader/iex/__init__.pyc
 ${PYSITELIB}/pandas_datareader/iex/__init__.pyo
@@ -110,12 +101,6 @@ ${PYSITELIB}/pandas_datareader/io/util.pyo
 ${PYSITELIB}/pandas_datareader/moex.py
 ${PYSITELIB}/pandas_datareader/moex.pyc
 ${PYSITELIB}/pandas_datareader/moex.pyo
-${PYSITELIB}/pandas_datareader/mstar/__init__.py
-${PYSITELIB}/pandas_datareader/mstar/__init__.pyc
-${PYSITELIB}/pandas_datareader/mstar/__init__.pyo
-${PYSITELIB}/pandas_datareader/mstar/daily.py
-${PYSITELIB}/pandas_datareader/mstar/daily.pyc
-${PYSITELIB}/pandas_datareader/mstar/daily.pyo
 ${PYSITELIB}/pandas_datareader/nasdaq_trader.py
 ${PYSITELIB}/pandas_datareader/nasdaq_trader.pyc
 ${PYSITELIB}/pandas_datareader/nasdaq_trader.pyo
@@ -149,15 +134,6 @@ ${PYSITELIB}/pandas_datareader/tests/av/test_av_sector.pyo
 ${PYSITELIB}/pandas_datareader/tests/av/test_av_time_series.py
 ${PYSITELIB}/pandas_datareader/tests/av/test_av_time_series.pyc
 ${PYSITELIB}/pandas_datareader/tests/av/test_av_time_series.pyo
-${PYSITELIB}/pandas_datareader/tests/google/__init__.py
-${PYSITELIB}/pandas_datareader/tests/google/__init__.pyc
-${PYSITELIB}/pandas_datareader/tests/google/__init__.pyo
-${PYSITELIB}/pandas_datareader/tests/google/test_google.py
-${PYSITELIB}/pandas_datareader/tests/google/test_google.pyc
-${PYSITELIB}/pandas_datareader/tests/google/test_google.pyo
-${PYSITELIB}/pandas_datareader/tests/google/test_options.py
-${PYSITELIB}/pandas_datareader/tests/google/test_options.pyc
-${PYSITELIB}/pandas_datareader/tests/google/test_options.pyo
 ${PYSITELIB}/pandas_datareader/tests/io/__init__.py
 ${PYSITELIB}/pandas_datareader/tests/io/__init__.pyc
 ${PYSITELIB}/pandas_datareader/tests/io/__init__.pyo
@@ -167,12 +143,6 @@ ${PYSITELIB}/pandas_datareader/tests/io/test_jsdmx.pyo
 ${PYSITELIB}/pandas_datareader/tests/io/test_sdmx.py
 ${PYSITELIB}/pandas_datareader/tests/io/test_sdmx.pyc
 ${PYSITELIB}/pandas_datareader/tests/io/test_sdmx.pyo
-${PYSITELIB}/pandas_datareader/tests/mstar/__init__.py
-${PYSITELIB}/pandas_datareader/tests/mstar/__init__.pyc
-${PYSITELIB}/pandas_datareader/tests/mstar/__init__.pyo
-${PYSITELIB}/pandas_datareader/tests/mstar/test_daily.py
-${PYSITELIB}/pandas_datareader/tests/mstar/test_daily.pyc
-${PYSITELIB}/pandas_datareader/tests/mstar/test_daily.pyo
 ${PYSITELIB}/pandas_datareader/tests/test_bankofcanada.py
 ${PYSITELIB}/pandas_datareader/tests/test_bankofcanada.pyc
 ${PYSITELIB}/pandas_datareader/tests/test_bankofcanada.pyo
@@ -182,6 +152,9 @@ ${PYSITELIB}/pandas_datareader/tests/test_base.pyo
 ${PYSITELIB}/pandas_datareader/tests/test_data.py
 ${PYSITELIB}/pandas_datareader/tests/test_data.pyc
 ${PYSITELIB}/pandas_datareader/tests/test_data.pyo
+${PYSITELIB}/pandas_datareader/tests/test_econdb.py
+${PYSITELIB}/pandas_datareader/tests/test_econdb.pyc
+${PYSITELIB}/pandas_datareader/tests/test_econdb.pyo
 ${PYSITELIB}/pandas_datareader/tests/test_enigma.py
 ${PYSITELIB}/pandas_datareader/tests/test_enigma.pyc
 ${PYSITELIB}/pandas_datareader/tests/test_enigma.pyo
@@ -224,6 +197,9 @@ ${PYSITELIB}/pandas_datareader/tests/test_tiingo.pyo
 ${PYSITELIB}/pandas_datareader/tests/test_tsp.py
 ${PYSITELIB}/pandas_datareader/tests/test_tsp.pyc
 ${PYSITELIB}/pandas_datareader/tests/test_tsp.pyo
+${PYSITELIB}/pandas_datareader/tests/test_utils.py
+${PYSITELIB}/pandas_datareader/tests/test_utils.pyc
+${PYSITELIB}/pandas_datareader/tests/test_utils.pyo
 ${PYSITELIB}/pandas_datareader/tests/test_wb.py
 ${PYSITELIB}/pandas_datareader/tests/test_wb.pyc
 ${PYSITELIB}/pandas_datareader/tests/test_wb.pyo
