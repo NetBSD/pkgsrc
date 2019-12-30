@@ -1,15 +1,14 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2019/05/06 09:36:47 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2019/12/30 17:48:05 adam Exp $
 
 Do not make application bundle on Darwin.
-Store correct version number in version.h.
 Avoid
 	CMake Error at CMakeLists.txt:3021 (install):
   	install FILES given directory
   	"${WRKDIR}/.buildlink/cmake-Modules" to install.
 
---- CMakeLists.txt.orig	2019-04-08 18:39:58.000000000 +0000
+--- CMakeLists.txt.orig	2019-12-18 18:27:56.000000000 +0000
 +++ CMakeLists.txt
-@@ -1319,7 +1319,7 @@ else ()
+@@ -1359,7 +1359,7 @@ else ()
  	set(EXTCAP_INSTALL_LIBDIR "${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME}/extcap" CACHE INTERNAL "The extcap dir")
  endif()
  
@@ -18,19 +17,8 @@ Avoid
  	#
  	# As https://developer.apple.com/library/archive/technotes/tn2206/_index.html
  	# says,
-@@ -1462,9 +1462,7 @@ gmx_test_large_files(GMX_LARGEFILES)
- set( VERSION ${PROJECT_VERSION} )
- add_custom_target(version
- 	BYPRODUCTS version.h
--	COMMAND ${PERL_EXECUTABLE}
--		${CMAKE_SOURCE_DIR}/tools/make-version.pl
--		${CMAKE_SOURCE_DIR}
-+	COMMAND ${CMAKE_COMMAND} -E echo '\#define VCSVERSION \"${VERSION}\"' > ${CMAKE_BINARY_DIR}/version.h
- )
- set_target_properties(version PROPERTIES FOLDER "Auxiliary")
- 
-@@ -2229,7 +2227,11 @@ if(BUILD_wireshark AND QT_FOUND)
- 		$<$<BOOL:${WIN32}>:UxTheme.lib>
+@@ -2280,7 +2280,11 @@ if(BUILD_wireshark AND QT_FOUND)
+ 		${MINIZIP_LIBRARIES}
  	)
  
 -	add_executable(wireshark WIN32 MACOSX_BUNDLE ${wireshark_FILES} ${EXTRA_BUNDLE_FILES})
@@ -39,10 +27,10 @@ Avoid
 +	else()
 +		add_executable(wireshark WIN32 ${wireshark_FILES} ${EXTRA_BUNDLE_FILES})
 +	endif()
- 	set(PROGLIST ${PROGLIST} wireshark)
- 	set_target_properties(wireshark PROPERTIES
- 		LINK_FLAGS "${WS_LINK_FLAGS}"
-@@ -3022,11 +3024,11 @@ endif()
+ 	if(WIN32)
+ 		set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT wireshark)
+ 	endif()
+@@ -3196,11 +3200,11 @@ endif()
  
  install(
  	FILES
