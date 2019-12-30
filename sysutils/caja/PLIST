@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/03/06 06:02:25 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.8 2019/12/30 22:39:31 gutteridge Exp $
 bin/caja
 bin/caja-autorun-software
 bin/caja-connect-server
@@ -159,6 +159,7 @@ share/locale/hu/LC_MESSAGES/caja.mo
 share/locale/hy/LC_MESSAGES/caja.mo
 share/locale/ia/LC_MESSAGES/caja.mo
 share/locale/id/LC_MESSAGES/caja.mo
+share/locale/ie/LC_MESSAGES/caja.mo
 share/locale/ig/LC_MESSAGES/caja.mo
 share/locale/is/LC_MESSAGES/caja.mo
 share/locale/it/LC_MESSAGES/caja.mo
