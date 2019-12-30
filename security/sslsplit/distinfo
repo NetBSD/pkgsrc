@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:18:11 agc Exp $
+$NetBSD: distinfo,v 1.3 2019/12/30 22:17:29 rhialto Exp $
 
-SHA1 (sslsplit-0.4.10.tar.bz2) = 6027a3fdb356cdd2dbd3ac566296ca779db0d076
-RMD160 (sslsplit-0.4.10.tar.bz2) = 1c41142c6d27046126ccc3b3dbbb0c4110d6147a
-SHA512 (sslsplit-0.4.10.tar.bz2) = c169c55dfb203525863c4c337ef3459b3ec15ee8c7f5b544e5545a4d48efc79f798715b37234982e955589b55d9325ce29f30c9dd04a26e75de01aed6c20258b
-Size (sslsplit-0.4.10.tar.bz2) = 266830 bytes
+SHA1 (sslsplit-0.5.5.tar.bz2) = 1e861265cfb0e9738a325155a58c52380261d640
+RMD160 (sslsplit-0.5.5.tar.bz2) = 9835bd8286383453a916aa906516b3ee60b85e2b
+SHA512 (sslsplit-0.5.5.tar.bz2) = 1d4968382659e975cd59692f3de80d79831a7842c9b909bb3cefedb5e2928254394e0f593c3409e3d5b1d0b192d8f8123ae10b08cecfd65584d790437d9f3d2a
+Size (sslsplit-0.5.5.tar.bz2) = 532788 bytes
+SHA1 (patch-GNUmakefile) = 0d6f386ffbaacaaa5bcfdb514e7c1272d696bbfc
+SHA1 (patch-main.c) = b0483283a99cf2aaca5248dcd2a66a64e7d0cd39
