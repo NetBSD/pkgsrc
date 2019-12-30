@@ -1,7 +1,6 @@
 package pkglint
 
 import (
-	"netbsd.org/pkglint/regex"
 	"os"
 	"strconv"
 	"strings"
@@ -117,8 +116,8 @@ func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 	}
 
 	for _, rawLine := range fix.line.raw {
-		replaced := strings.Replace(rawLine.textnl, prefixFrom, prefixTo, 1)
-		if replaced != rawLine.textnl {
+		ok, replaced := replaceOnce(rawLine.textnl, prefixFrom, prefixTo)
+		if ok {
 			if G.Logger.IsAutofix() {
 				rawLine.textnl = replaced
 
@@ -129,10 +128,7 @@ func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 				// TODO: Do this properly by parsing the whole line again,
 				//  and ideally everything that depends on the parsed line.
 				//  This probably requires a generic notification mechanism.
-				//
-				// FIXME: Only actually update fix.line.Text if the replacement
-				//  has been done exactly once; see ReplaceAt.
-				fix.line.Text = strings.Replace(fix.line.Text, prefixFrom, prefixTo, 1)
+				_, fix.line.Text = replaceOnce(fix.line.Text, prefixFrom, prefixTo)
 			}
 			fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
 			return
@@ -168,69 +164,9 @@ func (fix *Autofix) ReplaceAt(rawIndex int, textIndex int, from string, to strin
 	// TODO: Do this properly by parsing the whole line again,
 	//  and ideally everything that depends on the parsed line.
 	//  This probably requires a generic notification mechanism.
-	if strings.Count(fix.line.Text, from) == 1 {
-		fix.line.Text = strings.Replace(fix.line.Text, from, to, 1)
-	}
+	_, fix.line.Text = replaceOnce(fix.line.Text, from, to)
 
 	fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
-}
-
-// ReplaceRegex replaces the first howOften or all occurrences (if negative)
-// of the `from` pattern with the fixed string `toText`.
-//
-// Placeholders like `$1` are _not_ expanded in the `toText`.
-// (If you know how to do the expansion correctly, feel free to implement it.)
-func (fix *Autofix) ReplaceRegex(from regex.Pattern, toText string, howOften int) {
-	fix.assertRealLine()
-	if fix.skip() {
-		return
-	}
-
-	done := 0
-	for _, rawLine := range fix.line.raw {
-		var froms []string // The strings that have actually changed
-
-		replace := func(fromText string) string {
-			if howOften >= 0 && done >= howOften {
-				return fromText
-			}
-			froms = append(froms, fromText)
-			done++
-			return toText
-		}
-
-		replaced := replaceAllFunc(rawLine.textnl, from, replace)
-		if replaced != rawLine.textnl {
-			if G.Logger.IsAutofix() {
-				rawLine.textnl = replaced
-			}
-			for _, fromText := range froms {
-				fix.Describef(rawLine.Lineno, "Replacing %q with %q.", fromText, toText)
-			}
-		}
-	}
-
-	// Fix the parsed text as well.
-	// This is only approximate and won't work in some edge cases
-	// that involve escaped comments or replacements across line breaks.
-	//
-	// TODO: Do this properly by parsing the whole line again,
-	//  and ideally everything that depends on the parsed line.
-	//  This probably requires a generic notification mechanism.
-	//
-	// FIXME: Only actually update fix.line.Text if the replacement
-	//  has been done exactly once.
-	done = 0
-	fix.line.Text = replaceAllFunc(
-		fix.line.Text,
-		from,
-		func(fromText string) string {
-			if howOften >= 0 && done >= howOften {
-				return fromText
-			}
-			done++
-			return toText
-		})
 }
 
 // InsertBefore prepends a line before the current line.
@@ -241,9 +177,7 @@ func (fix *Autofix) InsertBefore(text string) {
 		return
 	}
 
-	if G.Logger.IsAutofix() {
-		fix.linesBefore = append(fix.linesBefore, text+"\n")
-	}
+	fix.linesBefore = append(fix.linesBefore, text+"\n")
 	fix.Describef(fix.line.raw[0].Lineno, "Inserting a line %q before this line.", text)
 }
 
@@ -255,9 +189,7 @@ func (fix *Autofix) InsertAfter(text string) {
 		return
 	}
 
-	if G.Logger.IsAutofix() {
-		fix.linesAfter = append(fix.linesAfter, text+"\n")
-	}
+	fix.linesAfter = append(fix.linesAfter, text+"\n")
 	fix.Describef(fix.line.raw[len(fix.line.raw)-1].Lineno, "Inserting a line %q after this line.", text)
 }
 
@@ -271,9 +203,7 @@ func (fix *Autofix) Delete() {
 	}
 
 	for _, line := range fix.line.raw {
-		if G.Logger.IsAutofix() {
-			line.textnl = ""
-		}
+		line.textnl = ""
 		fix.Describef(line.Lineno, "Deleting this line.")
 	}
 }
@@ -332,6 +262,12 @@ func (fix *Autofix) Describef(lineno int, format string, args ...interface{}) {
 // SaveAutofixChanges needs to be called. For example, this is done by
 // MkLines.Check.
 func (fix *Autofix) Apply() {
+	// XXX: Make the following annotations actually do something.
+	// gobco:beforeCall:!G.Opts.ShowAutofix && !G.Opts.Autofix
+	// gobco:beforeCall:G.Opts.ShowAutofix
+	// gobco:beforeCall:G.Opts.Autofix
+	// See https://github.com/rillig/gobco
+
 	line := fix.line
 
 	// Each autofix must have a log level and a diagnostic.
@@ -366,7 +302,7 @@ func (fix *Autofix) Apply() {
 		linenos := fix.affectedLinenos()
 		msg := sprintf(fix.diagFormat, fix.diagArgs...)
 		if !logFix && G.Logger.FirstTime(line.Filename, linenos, msg) {
-			G.Logger.showSource(line)
+			G.Logger.writeSource(line)
 		}
 		G.Logger.Logf(fix.level, line.Filename, linenos, fix.diagFormat, msg)
 	}
@@ -379,7 +315,7 @@ func (fix *Autofix) Apply() {
 			}
 			G.Logger.Logf(AutofixLogLevel, line.Filename, lineno, autofixFormat, action.description)
 		}
-		G.Logger.showSource(line)
+		G.Logger.writeSource(line)
 	}
 
 	if logDiagnostic && len(fix.explanation) > 0 {

@@ -1,7 +1,6 @@
 package pkglint
 
 import (
-	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/textproc"
 	"strings"
 )
@@ -286,7 +285,9 @@ func (ck MkLineChecker) checkDirectiveIndentation(expectedDepth int) {
 	if expected := strings.Repeat(" ", expectedDepth); indent != expected {
 		fix := mkline.Line.Autofix()
 		fix.Notef("This directive should be indented by %d spaces.", expectedDepth)
-		fix.ReplaceRegex(regex.Pattern(`^\.`+indent), "."+expected, 1)
+		if hasPrefix(mkline.Line.raw[0].text(), "."+indent) {
+			fix.ReplaceAt(0, 0, "."+indent, "."+expected)
+		}
 		fix.Apply()
 	}
 }
