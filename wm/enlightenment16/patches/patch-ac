@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2019/12/07 04:50:49 gutteridge Exp $
+$NetBSD: patch-ac,v 1.1 2019/12/30 03:50:07 gutteridge Exp $
 
 Apply pkgsrc-specific paths.
 
