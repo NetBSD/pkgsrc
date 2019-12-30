@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2019/11/10 17:01:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2019/12/30 13:58:35 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -500,6 +500,7 @@ ${PYSITELIB}/samba/tests/security.py
 ${PYSITELIB}/samba/tests/segfault.py
 ${PYSITELIB}/samba/tests/smb.py
 ${PYSITELIB}/samba/tests/smbd_base.py
+${PYSITELIB}/samba/tests/smbd_fuzztest.py
 ${PYSITELIB}/samba/tests/source.py
 ${PYSITELIB}/samba/tests/strings.py
 ${PYSITELIB}/samba/tests/subunitrun.py
