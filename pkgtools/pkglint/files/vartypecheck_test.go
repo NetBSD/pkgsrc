@@ -1891,6 +1891,16 @@ func (s *Suite) Test_VartypeCheck_URL(c *check.C) {
 	vt.Values(
 		"gopher://bitreich.org/1/scm/geomyidae")
 	vt.OutputEmpty()
+
+	G.Logger.Opts.Autofix = true
+	vt.Values(
+		"# none",
+		"${OTHER_VAR}",
+		"https://www.NetBSD.org/",
+		"https://www.netbsd.org/")
+	vt.Output(
+		"AUTOFIX: filename.mk:34: " +
+			"Replacing \"www.netbsd.org\" with \"www.NetBSD.org\".")
 }
 
 func (s *Suite) Test_VartypeCheck_UserGroupName(c *check.C) {

@@ -317,14 +317,15 @@ func (s *Suite) Test_Logger_shallBeLogged(c *check.C) {
 // to first show the code and then show the diagnostic. This allows
 // the diagnostics to underline the relevant part of the source code
 // and reminds of the squiggly line used for spellchecking.
-func (s *Suite) Test_Logger_showSource__separator(c *check.C) {
+func (s *Suite) Test_Logger_writeSource__separator(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--source")
 	lines := t.SetUpFileLines("DESCR",
 		"The first line",
 		"The second line",
-		"The third line")
+		"The third line",
+		"The fourth line")
 
 	fix := lines.Lines[1].Autofix()
 	fix.Warnf("Using \"second\" is deprecated.")
@@ -338,16 +339,21 @@ func (s *Suite) Test_Logger_showSource__separator(c *check.C) {
 	fix.Replace("third", "bronze medal")
 	fix.Apply()
 
+	lines.Lines[3].Warnf("No autofix, just a warning.")
+
 	t.CheckOutputLines(
 		">\tThe second line",
 		"WARN: ~/DESCR:2: Using \"second\" is deprecated.",
 		"",
 		">\tThe third line",
 		"WARN: ~/DESCR:3: Dummy warning.",
-		"WARN: ~/DESCR:3: Using \"third\" is deprecated.")
+		"WARN: ~/DESCR:3: Using \"third\" is deprecated.",
+		"",
+		">\tThe fourth line",
+		"WARN: ~/DESCR:4: No autofix, just a warning.")
 }
 
-func (s *Suite) Test_Logger_showSource__with_explanation(c *check.C) {
+func (s *Suite) Test_Logger_writeSource__with_explanation(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--source", "--explain")
@@ -388,7 +394,7 @@ func (s *Suite) Test_Logger_showSource__with_explanation(c *check.C) {
 // if there are several diagnostics for the same line. In this case though,
 // there is an explanation between the diagnostics, and because it may get
 // quite long, it's better to repeat the source code once again.
-func (s *Suite) Test_Logger_showSource__with_explanation_in_same_line(c *check.C) {
+func (s *Suite) Test_Logger_writeSource__with_explanation_in_same_line(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--source", "--explain")
@@ -421,7 +427,7 @@ func (s *Suite) Test_Logger_showSource__with_explanation_in_same_line(c *check.C
 
 // When there is no explanation after the first diagnostic, it is not
 // necessary to repeat the source code again for the second diagnostic.
-func (s *Suite) Test_Logger_showSource__without_explanation_in_same_line(c *check.C) {
+func (s *Suite) Test_Logger_writeSource__without_explanation_in_same_line(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--source", "--explain")
@@ -453,14 +459,15 @@ func (s *Suite) Test_Logger_showSource__without_explanation_in_same_line(c *chec
 // the "Replacing" message. Since these are shown in diff style, they
 // must be kept together. And since the "+" line must be below the "Replacing"
 // line, this order of lines seems to be the most intuitive.
-func (s *Suite) Test_Logger_showSource__separator_show_autofix(c *check.C) {
+func (s *Suite) Test_Logger_writeSource__separator_show_autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--source", "--show-autofix")
 	lines := t.SetUpFileLines("DESCR",
 		"The first line",
 		"The second line",
-		"The third line")
+		"The third line",
+		"The fourth line")
 
 	fix := lines.Lines[1].Autofix()
 	fix.Warnf("Using \"second\" is deprecated.")
@@ -474,6 +481,8 @@ func (s *Suite) Test_Logger_showSource__separator_show_autofix(c *check.C) {
 	fix.Replace("third", "bronze medal")
 	fix.Apply()
 
+	lines.Lines[3].Warnf("No autofix, just a warning.")
+
 	t.CheckOutputLines(
 		"WARN: ~/DESCR:2: Using \"second\" is deprecated.",
 		"AUTOFIX: ~/DESCR:2: Replacing \"second\" with \"silver medal\".",
@@ -486,14 +495,15 @@ func (s *Suite) Test_Logger_showSource__separator_show_autofix(c *check.C) {
 		"+\tThe bronze medal line")
 }
 
-func (s *Suite) Test_Logger_showSource__separator_show_autofix_with_explanation(c *check.C) {
+func (s *Suite) Test_Logger_writeSource__separator_show_autofix_with_explanation(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--source", "--show-autofix", "--explain")
 	lines := t.SetUpFileLines("DESCR",
 		"The first line",
 		"The second line",
-		"The third line")
+		"The third line",
+		"The fourth line")
 
 	fix := lines.Lines[1].Autofix()
 	fix.Warnf("Using \"second\" is deprecated.")
@@ -508,6 +518,8 @@ func (s *Suite) Test_Logger_showSource__separator_show_autofix_with_explanation(
 	fix.Explain("Explanation 2.")
 	fix.Replace("third", "bronze medal")
 	fix.Apply()
+
+	lines.Lines[3].Warnf("No autofix, just a warning.")
 
 	t.CheckOutputLines(
 		"WARN: ~/DESCR:2: Using \"second\" is deprecated.",
@@ -526,19 +538,41 @@ func (s *Suite) Test_Logger_showSource__separator_show_autofix_with_explanation(
 		"")
 }
 
+func (s *Suite) Test_Logger_writeSource__fatal_with_show_autofix(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--source", "--show-autofix")
+	lines := t.SetUpFileLines("DESCR",
+		"The first line")
+
+	// In the unusual constellation where a fatal error occurs with both
+	// --source and --show-autofix, and the line has not had any autofix,
+	// the cited source code is shown above the diagnostic. This is
+	// different from the usual order in --show-autofix mode, which is to
+	// show the diagnostic first and then its effects.
+	//
+	// This inconsistency does not matter though since it is extremely
+	// rare.
+	t.ExpectFatal(
+		func() { lines.Lines[0].Fatalf("Fatal.") },
+		">\tThe first line",
+		"FATAL: ~/DESCR:1: Fatal.")
+}
+
 // See Test__show_source_separator_show_autofix for the ordering of the
 // output lines.
 //
 // TODO: Giving the diagnostics again would be useful, but the warning and
 //  error counters should not be affected, as well as the exitcode.
-func (s *Suite) Test_Logger_showSource__separator_autofix(c *check.C) {
+func (s *Suite) Test_Logger_writeSource__separator_autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--source", "--autofix")
 	lines := t.SetUpFileLines("DESCR",
 		"The first line",
 		"The second line",
-		"The third line")
+		"The third line",
+		"The fourth line")
 
 	fix := lines.Lines[1].Autofix()
 	fix.Warnf("Using \"second\" is deprecated.")
@@ -551,6 +585,8 @@ func (s *Suite) Test_Logger_showSource__separator_autofix(c *check.C) {
 	fix.Warnf("Using \"third\" is deprecated.")
 	fix.Replace("third", "bronze medal")
 	fix.Apply()
+
+	lines.Lines[3].Warnf("No autofix, just a warning.")
 
 	t.CheckOutputLines(
 		"AUTOFIX: ~/DESCR:2: Replacing \"second\" with \"silver medal\".",
@@ -789,11 +825,12 @@ func (s *Suite) Test_Logger_Logf__duplicate_autofix(c *check.C) {
 
 	fix := line.Autofix()
 	fix.Warnf("T should always be uppercase.")
-	fix.ReplaceRegex(`t`, "T", -1)
+	fix.Replace("te", "Te")
+	fix.Replace("t", "T")
 	fix.Apply()
 
 	t.CheckOutputLines(
-		"AUTOFIX: README.txt:123: Replacing \"t\" with \"T\".",
+		"AUTOFIX: README.txt:123: Replacing \"te\" with \"Te\".",
 		"AUTOFIX: README.txt:123: Replacing \"t\" with \"T\".")
 }
 

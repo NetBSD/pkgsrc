@@ -956,6 +956,10 @@ func (t *Tester) ExpectAssert(action func()) {
 
 // ExpectDiagnosticsAutofix first runs the given action with -Wall, and
 // then another time with -Wall --autofix.
+//
+// Note that to be realistic, the action must work with completely freshly
+// created objects, to prevent suppression of duplicate diagnostics and
+// changes to the text due to autofixes.
 func (t *Tester) ExpectDiagnosticsAutofix(action func(autofix bool), diagnostics ...string) {
 	t.SetUpCommandLine("-Wall")
 	action(false)

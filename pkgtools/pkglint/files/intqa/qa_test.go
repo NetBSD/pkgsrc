@@ -9,6 +9,7 @@ import (
 	"gopkg.in/check.v1"
 	"io/ioutil"
 	"path"
+	"strings"
 	"testing"
 )
 
@@ -145,10 +146,8 @@ func (s *Suite) Test_QAChecker_Check(c *check.C) {
 		"Missing unit test \"Test_QAChecker_relate\" for \"QAChecker.relate\". "+
 			"Insert it in \"qa_test.go\", above \"Suite.Test_QAChecker_checkTests\".",
 		"Missing unit test \"Test_QAChecker_isRelevant\" for \"QAChecker.isRelevant\". "+
-			"Insert it in \"qa_test.go\", above \"Suite.Test_QAChecker_errorsMask\".",
-		"Missing unit test \"Test_QAChecker_insertionSuggestion\" for \"QAChecker.insertionSuggestion\". "+
-			"Insert it in \"qa_test.go\", above \"Suite.Test_code_fullName\".")
-	s.CheckSummary("4 errors.")
+			"Insert it in \"qa_test.go\", above \"Suite.Test_QAChecker_errorsMask\".")
+	s.CheckSummary("3 errors.")
 }
 
 func (s *Suite) Test_QAChecker_load__filtered_nothing(c *check.C) {
@@ -487,6 +486,7 @@ func (s *Suite) Test_QAChecker_checkMethodsSameFile(c *check.C) {
 	ck.addTestee(code{"other.go", "Main", "MethodWrong", 2})
 	ck.addTestee(code{"main_test.go", "Main", "MethodOkTest", 3})
 	ck.addTestee(code{"other_test.go", "Main", "MethodWrongTest", 4})
+	ck.addTestee(code{"other_test.go", "Elsewhere", "Func", 4})
 	ck.addTestee(code{"main_test.go", "T", "", 100})
 	ck.addTestee(code{"main_test.go", "T", "MethodOk", 101})
 	ck.addTestee(code{"other_test.go", "T", "MethodWrong", 102})
@@ -587,6 +587,52 @@ func (s *Suite) Test_QAChecker_print__2_errors(c *check.C) {
 	c.Check(out.String(), check.Equals, "1\n2\n")
 	s.CheckErrors("1", "2")
 	s.CheckSummary("2 errors.")
+}
+
+func (s *Suite) Test_QAChecker_insertionSuggestion(c *check.C) {
+	ck := s.Init(c)
+
+	ck.addTestee(code{"file1.go", "Type1", "", 1})
+	ck.addTestee(code{"file2.go", "", "Func4", 2})
+	ck.addTestee(code{"file2.go", "", "Func5", 3})
+	ck.addTestee(code{"file2.go", "", "Func6", 4})
+	ck.addTestee(code{"file3.go", "Type3", "Method", 5})
+	ck.addTest(code{"file2_test.go", "", "Test_Func5", 6})
+	ck.relate()
+
+	testeeFor := func(name string) *testee {
+		for _, testee := range ck.testees {
+			if testee.fullName() == name {
+				return testee
+			}
+		}
+		panic(name)
+	}
+
+	test := func(testFile, testName, msg string) {
+		testTarget := strings.SplitN(testName, "_", 2)[1]
+		testeeName := strings.Replace(testTarget, "_", ".", -1)
+		testee := testeeFor(testeeName)
+		actual := ck.insertionSuggestion(
+			&test{code{testFile, "", testName, 0}, testName, "", testee})
+		c.Check(actual, check.Equals, msg)
+	}
+
+	test(
+		"file1_test.go", "Test_Type1",
+		"Insert it at the bottom of \"file1_test.go\".")
+
+	test(
+		"file2_test.go", "Test_Func4",
+		"Insert it in \"file2_test.go\", above \"Test_Func5\".")
+
+	test(
+		"file2_test.go", "Test_Func5",
+		"Insert it in \"file2_test.go\", above \"Test_Func5\".")
+
+	test(
+		"file2_test.go", "Test_Func6",
+		"Insert it at the bottom of \"file2_test.go\".")
 }
 
 func (s *Suite) Test_code_fullName(c *check.C) {
