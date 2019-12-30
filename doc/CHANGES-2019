@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5548 2019/12/30 00:04:07 pho Exp $
+$NetBSD: CHANGES-2019,v 1.5549 2019/12/30 00:56:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8865,3 +8865,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated converters/hs-base64-bytestring to 1.0.0.2 [pho 2019-12-29]
 	Added devel/hs-colour version 2.3.3 [pho 2019-12-29]
 	Updated devel/hs-ansi-terminal to 0.10.2 [pho 2019-12-30]
+	Added graphics/py-wand version 0.5.8 [mef 2019-12-30]
