@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/30 12:55:13 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2019/12/30 12:35:42 sjmulder Exp $
 include/xlsxwriter.h
 include/xlsxwriter/app.h
 include/xlsxwriter/chart.h
@@ -16,6 +16,7 @@ include/xlsxwriter/shared_strings.h
 include/xlsxwriter/styles.h
 include/xlsxwriter/theme.h
 include/xlsxwriter/third_party/ioapi.h
+include/xlsxwriter/third_party/md5.h
 include/xlsxwriter/third_party/queue.h
 include/xlsxwriter/third_party/tmpfileplus.h
 include/xlsxwriter/third_party/tree.h
