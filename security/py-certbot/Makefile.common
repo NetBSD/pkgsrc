@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.39 2019/12/15 09:48:37 adam Exp $
+# $NetBSD: Makefile.common,v 1.40 2019/12/30 19:43:56 triaxx Exp $
 # used by security/py-acme/Makefile
 # used by security/py-certbot/Makefile
 # used by security/py-certbot-apache/Makefile
+# used by security/py-certbot-dns-digitalocean/Makefile
 # used by security/py-certbot-dns-dnsimple/Makefile
 # used by security/py-certbot-dns-dnsmadeeasy/Makefile
 # used by security/py-certbot-dns-gehirn/Makefile
