@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2019/09/09 13:25:46 nia Exp $
+# $NetBSD: Makefile,v 1.17 2019/12/30 23:44:16 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-indicator-applet-${VERSION}
-PKGREVISION=	3
+DISTNAME=	mate-indicator-applet-${VERSION:R}.1
 CATEGORIES=	x11
 
 COMMENT=	MATE indicator applet
