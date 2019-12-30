@@ -88,7 +88,7 @@ func (s *Suite) Test_CheckLinesPlist__empty(c *check.C) {
 	CheckLinesPlist(nil, lines)
 
 	t.CheckOutputLines(
-		"WARN: PLIST:1: PLIST files shouldn't be empty.")
+		"ERROR: PLIST:1: PLIST files must not be empty.")
 }
 
 func (s *Suite) Test_CheckLinesPlist__common_end(c *check.C) {
@@ -877,15 +877,21 @@ func (s *Suite) Test_PlistChecker_checkPathMan(c *check.C) {
 func (s *Suite) Test_PlistChecker_checkPathMan__gz(c *check.C) {
 	t := s.Init(c)
 
-	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	lines := t.NewLines("PLIST",
-		PlistCvsID,
-		"man/man3/strerror.3.gz")
+	G.Pkg = NewPackage(t.File("category/package"))
+	t.Chdir("category/package")
 
-	CheckLinesPlist(G.Pkg, lines)
+	doTest := func(bool) {
+		lines := t.NewLines("PLIST",
+			PlistCvsID,
+			"man/man3/strerror.3.gz")
 
-	t.CheckOutputLines(
-		"NOTE: PLIST:2: The .gz extension is unnecessary for manual pages.")
+		CheckLinesPlist(G.Pkg, lines)
+	}
+
+	t.ExpectDiagnosticsAutofix(
+		doTest,
+		"NOTE: PLIST:2: The .gz extension is unnecessary for manual pages.",
+		"AUTOFIX: PLIST:2: Replacing \".gz\" with \"\".")
 }
 
 func (s *Suite) Test_PlistChecker_checkPathShare(c *check.C) {

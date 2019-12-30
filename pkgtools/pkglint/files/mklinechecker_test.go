@@ -127,7 +127,6 @@ func (s *Suite) Test_MkLineChecker_checkEmptyContinuation(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		"NOTE: ~/filename.mk:2--3: Trailing whitespace.",
 		"WARN: ~/filename.mk:3: This line looks empty but continues the previous line.")
 }
 
@@ -548,6 +547,66 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation__autofix_multiline(
 		".  if \\",
 		"   ${PLATFORM:MNetBSD-4.*}",
 		".  endif",
+		".endif")
+}
+
+// Having a continuation line between the dot and the directive is so
+// unusual that pkglint doesn't fix it automatically. It also doesn't panic.
+func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation__multiline(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	t.ExpectDiagnosticsAutofix(
+		func(autofix bool) {
+			mklines := t.SetUpFileMkLines("options.mk",
+				MkCvsID,
+				".\\",
+				"if ${MACHINE_PLATFORM:MNetBSD-4.*}",
+				".endif")
+
+			mklines.Check()
+		},
+		"NOTE: ~/options.mk:2--3: "+
+			"This directive should be indented by 0 spaces.",
+		"WARN: ~/options.mk:2--3: "+
+			"To use MACHINE_PLATFORM at load time, "+
+			".include \"mk/bsd.prefs.mk\" first.")
+}
+
+// Another strange edge case that doesn't occur in practice.
+func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation__multiline_indented(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	doTest := func(autofix bool) {
+		mklines := t.SetUpFileMkLines("options.mk",
+			MkCvsID,
+			". \\",
+			"if ${PLATFORM:MNetBSD-4.*}",
+			".endif")
+
+		mklines.Check()
+	}
+
+	t.ExpectDiagnosticsAutofix(
+		doTest,
+		"NOTE: ~/options.mk:2: This directive should be indented by 0 spaces.",
+		"WARN: ~/options.mk:2--3: PLATFORM is used but not defined.",
+		// If the indentation should ever change here, it is probably
+		// because MkLineParser.parseDirective has been changed to
+		// behave more like bmake, which preserves a bit more of the
+		// whitespace.
+		"AUTOFIX: ~/options.mk:2: Replacing \". \" with \".\".")
+
+	// It's not really fixed since the backslash is still replaced
+	// with a single space when being parsed.
+	// At least pkglint doesn't make the situation worse than before.
+	t.CheckFileLines("options.mk",
+		MkCvsID,
+		".\\",
+		"if ${PLATFORM:MNetBSD-4.*}",
 		".endif")
 }
 
