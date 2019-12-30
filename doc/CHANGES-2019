@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5572 2019/12/30 22:36:33 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.5573 2019/12/30 22:39:43 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8896,3 +8896,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/mate-settings-daemon to 1.22.1 [gutteridge 2019-12-30]
 	Updated x11/mate-session-manager to 1.22.3 [gutteridge 2019-12-30]
 	Updated x11/mate-applets to 1.22.2 [gutteridge 2019-12-30]
+	Updated sysutils/caja to 1.22.2 [gutteridge 2019-12-30]
