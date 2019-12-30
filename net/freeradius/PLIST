@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2019/07/04 07:44:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2019/12/30 18:17:22 adam Exp $
 bin/dhcpclient
 bin/map_unit
 bin/rad_counter
@@ -384,6 +384,7 @@ share/examples/freeradius/mods-available/passwd
 share/examples/freeradius/mods-available/perl
 share/examples/freeradius/mods-available/preprocess
 share/examples/freeradius/mods-available/python
+share/examples/freeradius/mods-available/python3
 share/examples/freeradius/mods-available/radutmp
 share/examples/freeradius/mods-available/realm
 share/examples/freeradius/mods-available/redis
@@ -440,6 +441,8 @@ share/examples/freeradius/mods-config/sql/ippool-dhcp/oracle/queries.conf
 share/examples/freeradius/mods-config/sql/ippool-dhcp/oracle/schema.sql
 share/examples/freeradius/mods-config/sql/ippool-dhcp/sqlite/queries.conf
 share/examples/freeradius/mods-config/sql/ippool-dhcp/sqlite/schema.sql
+share/examples/freeradius/mods-config/sql/ippool/mongo/queries.conf
+share/examples/freeradius/mods-config/sql/ippool/mysql/procedure.sql
 share/examples/freeradius/mods-config/sql/ippool/mysql/queries.conf
 share/examples/freeradius/mods-config/sql/ippool/mysql/schema.sql
 share/examples/freeradius/mods-config/sql/ippool/oracle/procedures.sql
@@ -450,6 +453,7 @@ share/examples/freeradius/mods-config/sql/ippool/postgresql/queries.conf
 share/examples/freeradius/mods-config/sql/ippool/postgresql/schema.sql
 share/examples/freeradius/mods-config/sql/ippool/sqlite/queries.conf
 share/examples/freeradius/mods-config/sql/ippool/sqlite/schema.sql
+share/examples/freeradius/mods-config/sql/main/mongo/queries.conf
 share/examples/freeradius/mods-config/sql/main/mssql/queries.conf
 share/examples/freeradius/mods-config/sql/main/mssql/schema.sql
 share/examples/freeradius/mods-config/sql/main/mysql/extras/wimax/queries.conf
@@ -529,6 +533,7 @@ share/examples/freeradius/sites-available/challenge
 share/examples/freeradius/sites-available/channel_bindings
 share/examples/freeradius/sites-available/check-eap-tls
 share/examples/freeradius/sites-available/coa
+share/examples/freeradius/sites-available/coa-relay
 share/examples/freeradius/sites-available/control-socket
 share/examples/freeradius/sites-available/copy-acct-to-home-server
 share/examples/freeradius/sites-available/decoupled-accounting
@@ -626,6 +631,7 @@ share/freeradius/dictionary.erx
 share/freeradius/dictionary.extreme
 share/freeradius/dictionary.f5
 share/freeradius/dictionary.fdxtended
+share/freeradius/dictionary.force10
 share/freeradius/dictionary.fortinet
 share/freeradius/dictionary.foundry
 share/freeradius/dictionary.freedhcp
@@ -748,6 +754,7 @@ share/freeradius/dictionary.telkom
 share/freeradius/dictionary.terena
 share/freeradius/dictionary.trapeze
 share/freeradius/dictionary.travelping
+share/freeradius/dictionary.tripplite
 share/freeradius/dictionary.tropos
 share/freeradius/dictionary.ukerna
 share/freeradius/dictionary.unix
