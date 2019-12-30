@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5549 2019/12/30 00:56:15 mef Exp $
+$NetBSD: CHANGES-2019,v 1.5550 2019/12/30 02:16:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8866,3 +8866,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/hs-colour version 2.3.3 [pho 2019-12-29]
 	Updated devel/hs-ansi-terminal to 0.10.2 [pho 2019-12-30]
 	Added graphics/py-wand version 0.5.8 [mef 2019-12-30]
+	Updated math/py-pandas-datareader to 0.8.1 [minskim 2019-12-30]
