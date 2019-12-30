@@ -1,18 +1,25 @@
-$NetBSD: patch-configure,v 1.1 2019/01/23 15:25:36 youri Exp $
+$NetBSD: patch-configure,v 1.2 2019/12/30 22:36:19 gutteridge Exp $
 
 Allow configure to enable cpufreq.
 
---- configure.orig	2018-11-18 07:55:11.000000000 +0000
+--- configure.orig	2019-09-19 12:20:19.000000000 +0000
 +++ configure
-@@ -16881,9 +16881,9 @@ fi
+@@ -16910,7 +16910,7 @@ if test "x$HAVE_POLKIT" = "xyes"; then
+ fi
  
- build_cpufreq_applet=no
+ build_cpufreq_applet=yes
+-if test "x$disable_cpufreq" = "xno"; then :
++if test "x$enable_cpufreq" = "xyes"; then :
  
--if test x$disable_cpufreq = xno; then
-+if test x$enable_cpufreq = xyes; then
-    case "${host}" in
--      *linux*)
-+      *linux*|*-*-netbsd*)
-          build_cpufreq_applet=yes
- 	 ;;
-       *)
+   case "${host}" in
+     *linux*)
+@@ -17126,6 +17126,9 @@ fi
+ 
+ 
+       ;;
++    *netbsd*)
++      build_cpufreq_applet=yes
++      ;;
+     *)
+       { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: ${host} is not supported by cpufreq applet, not building" >&5
+ $as_echo "$as_me: WARNING: ${host} is not supported by cpufreq applet, not building" >&2;}
