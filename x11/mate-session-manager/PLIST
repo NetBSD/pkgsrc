@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/03/06 07:37:51 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/12/30 22:31:08 gutteridge Exp $
 bin/mate-session
 bin/mate-session-inhibit
 bin/mate-session-properties
@@ -82,6 +82,7 @@ share/locale/hu/LC_MESSAGES/mate-session-manager.mo
 share/locale/hy/LC_MESSAGES/mate-session-manager.mo
 share/locale/ia/LC_MESSAGES/mate-session-manager.mo
 share/locale/id/LC_MESSAGES/mate-session-manager.mo
+share/locale/ie/LC_MESSAGES/mate-session-manager.mo
 share/locale/ig/LC_MESSAGES/mate-session-manager.mo
 share/locale/is/LC_MESSAGES/mate-session-manager.mo
 share/locale/it/LC_MESSAGES/mate-session-manager.mo
