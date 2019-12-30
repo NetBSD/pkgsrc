@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5551 2019/12/30 04:13:48 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.5552 2019/12/30 04:33:01 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8870,3 +8870,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Removed wm/enlightenment successor wm/enlightenment16 [gutteridge 2019-12-30]
 	Updated wm/e16menuedit2 to 0.0.3nb33 [gutteridge 2019-12-30]
 	Updated wm/ethemes to 0.1nb5 [gutteridge 2019-12-30]
+	Removed wm/ethemes successor wm/e16themes [gutteridge 2019-12-30]
