@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/12/30 04:23:08 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/30 04:30:06 gutteridge Exp $
 
 DISTNAME=	e16themes-0.1
 PKGREVISION=	5
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://e.themes.org/
 COMMENT=	Themes for the window manager Enlightenment
 #LICENSE=	(No licenses are specified for these individual themes.)
+
+CONFLICTS=	ethemes-[0-9]*
+SUPERSEDES=	ethemes-[0-9]*
 
 # wm/enlightenment is E16, which now has 1.x release numbering,
 # while x11/enlightenment continues to have 0.x numbering.
