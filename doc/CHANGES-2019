@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5579 2019/12/30 22:55:08 gutteridge Exp $
+$NetBSD: CHANGES-2019,v 1.5580 2019/12/30 22:57:42 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8903,3 +8903,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/mate-control-center to 1.22.2 [gutteridge 2019-12-30]
 	Updated x11/mate-desktop to 1.22.2 [gutteridge 2019-12-30]
 	Updated misc/mate-utils to 1.22.2 [gutteridge 2019-12-30]
+	Updated x11/mate-screensaver to 1.22.2 [gutteridge 2019-12-30]
