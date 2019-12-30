@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5559 2019/12/30 16:27:29 rillig Exp $
+$NetBSD: CHANGES-2019,v 1.5560 2019/12/30 17:48:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8882,3 +8882,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/haproxy to 2.0.12 [adam 2019-12-30]
 	Updated net/samba4 to 4.11.4 [adam 2019-12-30]
 	Updated pkgtools/pkglint to 19.4.0 [rillig 2019-12-30]
+	Updated net/wireshark to 3.2.0 [adam 2019-12-30]
