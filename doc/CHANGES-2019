@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5567 2019/12/30 20:37:26 triaxx Exp $
+$NetBSD: CHANGES-2019,v 1.5568 2019/12/30 22:17:52 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8891,3 +8891,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added net/py-digitalocean version 1.14.0 [triaxx 2019-12-30]
 	Added security/py-certbot-dns-digitalocean version 1.0.0 [triaxx 2019-12-30]
 	Updated security/openpam to 20190224 [triaxx 2019-12-30]
+	Updated security/sslsplit to 0.5.5 [rhialto 2019-12-30]
