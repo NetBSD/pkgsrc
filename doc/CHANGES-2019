@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5563 2019/12/30 18:17:55 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5564 2019/12/30 19:26:56 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8888,3 +8888,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/protobuf to 3.11.2 [adam 2019-12-30]
 	Updated devel/py-protobuf to 3.11.2 [adam 2019-12-30]
 	Updated net/freeradius to 3.0.20 [adam 2019-12-30]
+	Updated net/py-digitalocean to 1.14.0 [triaxx 2019-12-30]
