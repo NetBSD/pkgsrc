@@ -1427,15 +1427,17 @@ func (s *Suite) Test_RedundantScope__procedure_parameters(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_RedundantScope__infra(c *check.C) {
+func (s *Suite) Test_RedundantScope__is_relevant_for_infrastructure(c *check.C) {
 	t := s.Init(c)
 
 	t.CreateFileLines("mk/bsd.options.mk",
 		"PKG_OPTIONS:=\t# empty",
-		"PKG_OPTIONS=\t# empty")
+		"PKG_OPTIONS=\t# empty",
+		"PKG_OPTIONS=\toverwritten")
 	t.CreateFileLines("options.mk",
 		"OUTSIDE:=\t# empty",
 		"OUTSIDE=\t# empty",
+		"OUTSIDE=\toverwritten",
 		".include \"mk/bsd.options.mk\"")
 
 	test := func(diagnostics ...string) {
@@ -1457,16 +1459,22 @@ func (s *Suite) Test_RedundantScope__infra(c *check.C) {
 	}
 
 	test(
-		"NOTE: ~/options.mk:2: " +
-			"Definition of OUTSIDE is redundant because of line 1.")
+		"NOTE: ~/options.mk:2: "+
+			"Definition of OUTSIDE is redundant because of line 1.",
+		"WARN: ~/options.mk:2: "+
+			"Variable OUTSIDE is overwritten in line 3.")
 
 	t.SetUpCommandLine("-Cglobal")
 
 	test(
 		"NOTE: ~/options.mk:2: "+
 			"Definition of OUTSIDE is redundant because of line 1.",
+		"WARN: ~/options.mk:2: "+
+			"Variable OUTSIDE is overwritten in line 3.",
 		"NOTE: ~/mk/bsd.options.mk:2: "+
-			"Definition of PKG_OPTIONS is redundant because of line 1.")
+			"Definition of PKG_OPTIONS is redundant because of line 1.",
+		"WARN: ~/mk/bsd.options.mk:2: "+
+			"Variable PKG_OPTIONS is overwritten in line 3.")
 }
 
 // Branch coverage for info.vari.IsConstant(). The other tests typically

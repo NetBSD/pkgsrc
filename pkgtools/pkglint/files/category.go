@@ -1,10 +1,6 @@
 package pkglint
 
-import (
-	"fmt"
-	"netbsd.org/pkglint/textproc"
-	"strings"
-)
+import "netbsd.org/pkglint/textproc"
 
 func CheckdirCategory(dir CurrPath) {
 	if trace.Tracing {
@@ -26,21 +22,11 @@ func CheckdirCategory(dir CurrPath) {
 	if mlex.SkipIf(func(mkline *MkLine) bool { return mkline.IsVarassign() && mkline.Varname() == "COMMENT" }) {
 		mkline := mlex.PreviousMkLine()
 
-		lex := textproc.NewLexer(mkline.Value())
 		valid := textproc.NewByteSet("--- '(),/0-9A-Za-z")
-		invalid := valid.Inverse()
-		var uni strings.Builder
-
-		for !lex.EOF() {
-			_ = lex.NextBytesSet(valid)
-			ch := lex.NextByteSet(invalid)
-			if ch != -1 {
-				_, _ = fmt.Fprintf(&uni, " %U", ch)
-			}
-		}
-
-		if uni.Len() > 0 {
-			mkline.Warnf("%s contains invalid characters (%s).", mkline.Varname(), uni.String()[1:])
+		invalid := invalidCharacters(mkline.Value(), valid)
+		if invalid != "" {
+			mkline.Warnf("%s contains invalid characters (%s).",
+				mkline.Varname(), invalid)
 		}
 
 	} else {

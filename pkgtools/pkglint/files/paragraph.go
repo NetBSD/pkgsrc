@@ -5,9 +5,6 @@ import "strings"
 // Paragraph is a slice of Makefile lines that is surrounded by empty lines.
 //
 // All variable assignments in a paragraph should be aligned in the same column.
-//
-// If the paragraph adds an identifier to SUBST_CLASSES, the rest of the SUBST
-// block should be defined in the same paragraph.
 type Paragraph struct {
 	mklines *MkLines
 	from    int

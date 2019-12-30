@@ -277,7 +277,7 @@ func (scc *SimpleCommandChecker) checkAutoMkdirs() {
 		}
 
 		autoMkdirs := false
-		if G.Pkg != nil && prefixRel != "." {
+		if G.Pkg != nil {
 			plistLine := G.Pkg.Plist.Dirs[prefixRel]
 			if plistLine != nil && !containsVarRef(plistLine.Text) {
 				autoMkdirs = true
@@ -597,8 +597,7 @@ func (ck *ShellLineChecker) checkPipeExitcode(pipeline *MkShPipeline) {
 
 var shellCommandsType = NewVartype(BtShellCommands, NoVartypeOptions, NewACLEntry("*", aclpAllRuntime))
 
-// XXX: Why is this called shell_Word_Vuc and not shell_Commands_Vuc?
-var shellWordVuc = &VarUseContext{shellCommandsType, VucUnknownTime, VucQuotPlain, false}
+var shellCommandsVuc = &VarUseContext{shellCommandsType, VucUnknownTime, VucQuotPlain, false}
 
 func NewShellLineChecker(mklines *MkLines, mkline *MkLine) *ShellLineChecker {
 	assertNotNil(mklines)
@@ -776,7 +775,8 @@ func (ck *ShellLineChecker) CheckWord(token string, checkQuoting bool, time Tool
 	// to the MkLineChecker. Examples for these are ${VAR:Mpattern} or $@.
 	if varuse := ToVarUse(token); varuse != nil {
 		if ck.checkVarUse {
-			NewMkVarUseChecker(varuse, ck.MkLines, ck.mkline).Check(shellWordVuc)
+			varUseChecker := NewMkVarUseChecker(varuse, ck.MkLines, ck.mkline)
+			varUseChecker.Check(shellCommandsVuc)
 		}
 		return
 	}

@@ -20,21 +20,55 @@ func (s *Suite) Test_LineChecker_CheckLength(c *check.C) {
 func (s *Suite) Test_LineChecker_CheckTrailingWhitespace(c *check.C) {
 	t := s.Init(c)
 
-	line := t.NewLine("Makefile", 32, "The line must go on   ")
+	doTest := func(autofix bool) {
+		line := t.NewLine("Makefile", 32, "The line must go on   ")
 
-	LineChecker{line}.CheckTrailingWhitespace()
+		LineChecker{line}.CheckTrailingWhitespace()
+	}
 
-	t.CheckOutputLines(
-		"NOTE: Makefile:32: Trailing whitespace.")
+	t.ExpectDiagnosticsAutofix(
+		doTest,
+		"NOTE: Makefile:32: Trailing whitespace.",
+		"AUTOFIX: Makefile:32: Replacing \"   \" with \"\".")
 }
 
 func (s *Suite) Test_LineChecker_CheckTrailingWhitespace__tab(c *check.C) {
 	t := s.Init(c)
 
-	line := t.NewLine("Makefile", 32, "The line must go on\t")
+	doTest := func(autofix bool) {
+		line := t.NewLine("Makefile", 32, "The line must go on\t")
 
-	LineChecker{line}.CheckTrailingWhitespace()
+		LineChecker{line}.CheckTrailingWhitespace()
+	}
 
-	t.CheckOutputLines(
-		"NOTE: Makefile:32: Trailing whitespace.")
+	t.ExpectDiagnosticsAutofix(
+		doTest,
+		"NOTE: Makefile:32: Trailing whitespace.",
+		"AUTOFIX: Makefile:32: Replacing \"\\t\" with \"\".")
+}
+
+// Even though the logical text of the Makefile line ends with a space,
+// the check for trailing whitespace doesn't catch it.
+//
+// The check only looks at the actual lines, not at the logical text after
+// joining the continuation lines. Line 2 is empty and thus doesn't contain
+// any whitespace that might be trailing.
+//
+// See Test_MkLineChecker_checkEmptyContinuation.
+func (s *Suite) Test_LineChecker_CheckTrailingWhitespace__multi(c *check.C) {
+	t := s.Init(c)
+
+	doTest := func(autofix bool) {
+		mklines := t.NewMkLines("Makefile",
+			MkCvsID,
+			"VAR=\tThis line \\",
+			"")
+		mkline := mklines.mklines[0]
+
+		LineChecker{mkline.Line}.CheckTrailingWhitespace()
+	}
+
+	t.ExpectDiagnosticsAutofix(
+		doTest,
+		nil...)
 }

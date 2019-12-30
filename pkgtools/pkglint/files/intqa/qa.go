@@ -466,33 +466,16 @@ func (ck *QAChecker) print() {
 }
 
 func (ck *QAChecker) insertionSuggestion(newTest *test) string {
-	// Find the testee directly above the testee of newTest.
-	var before *testee
-	for _, testee := range ck.testees {
-		if testee.order > newTest.testee.order {
-			break
-		}
-		if testee.testFile() != newTest.file {
-			continue
-		}
-		if before != nil && before.order > testee.order {
-			break
-		}
-		before = testee
-	}
-
-	if before == nil {
-		return fmt.Sprintf("Insert it at the top of %q.", newTest.file)
-	}
+	testFile := newTest.testee.testFile()
 
 	for _, test := range ck.tests {
-		if test.testee == nil || test.testee.order < newTest.testee.order {
-			continue
+		if test.testee != nil &&
+			test.testee.order >= newTest.testee.order &&
+			test.file == testFile {
+
+			return fmt.Sprintf("Insert it in %q, above %q.",
+				newTest.file, test.fullName())
 		}
-		if test.file != before.testFile() {
-			break
-		}
-		return fmt.Sprintf("Insert it in %q, above %q.", newTest.file, test.fullName())
 	}
 
 	return fmt.Sprintf("Insert it at the bottom of %q.", newTest.file)

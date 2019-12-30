@@ -139,7 +139,7 @@ func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interf
 		if line != l.prevLine {
 			l.out.Separate()
 		}
-		l.showSource(line)
+		l.writeSource(line)
 	}
 
 	l.Logf(level, filename, linenos, format, msg)
@@ -186,7 +186,7 @@ func (l *Logger) shallBeLogged(format string) bool {
 	return false
 }
 
-func (l *Logger) showSource(line *Line) {
+func (l *Logger) writeSource(line *Line) {
 	if !G.Logger.Opts.ShowSource {
 		return
 	}
@@ -198,51 +198,57 @@ func (l *Logger) showSource(line *Line) {
 		l.prevLine = line
 	}
 
-	out := l.out
-	writeLine := func(prefix, line string) {
-		out.Write(prefix)
-		out.Write(escapePrintable(line))
-		if !hasSuffix(line, "\n") {
-			out.Write("\n")
-		}
-	}
-
-	printDiff := func(rawLines []*RawLine) {
-		prefix := ">\t"
-		for _, rawLine := range rawLines {
-			if rawLine.textnl != rawLine.orignl {
-				prefix = "\t" // Make it look like an actual diff
-			}
-		}
-
-		for _, rawLine := range rawLines {
-			if rawLine.textnl != rawLine.orignl {
-				writeLine("-\t", rawLine.orignl)
-				if rawLine.textnl != "" {
-					writeLine("+\t", rawLine.textnl)
-				}
-			} else {
-				writeLine(prefix, rawLine.orignl)
-			}
-		}
-	}
-
 	if !l.IsAutofix() {
 		l.out.Separate()
 	}
-	if line.autofix != nil {
+	if l.IsAutofix() && line.autofix != nil {
 		for _, before := range line.autofix.linesBefore {
-			writeLine("+\t", before)
+			l.writeLine("+\t", before)
 		}
-		printDiff(line.raw)
+		l.writeDiff(line)
 		for _, after := range line.autofix.linesAfter {
-			writeLine("+\t", after)
+			l.writeLine("+\t", after)
 		}
 	} else {
-		printDiff(line.raw)
+		l.writeDiff(line)
 	}
 	if l.IsAutofix() {
 		l.out.Separate()
+	}
+}
+
+func (l *Logger) writeDiff(line *Line) {
+	showAsChanged := func(rawLine *RawLine) bool {
+		return l.IsAutofix() && rawLine.textnl != rawLine.orignl
+	}
+
+	rawLines := line.raw
+
+	prefix := ">\t"
+	for _, rawLine := range rawLines {
+		if showAsChanged(rawLine) {
+			prefix = "\t" // Make it look like an actual diff
+		}
+	}
+
+	for _, rawLine := range rawLines {
+		if showAsChanged(rawLine) {
+			l.writeLine("-\t", rawLine.orignl)
+			if rawLine.textnl != "" {
+				l.writeLine("+\t", rawLine.textnl)
+			}
+		} else {
+			l.writeLine(prefix, rawLine.orignl)
+		}
+	}
+}
+
+func (l *Logger) writeLine(prefix, line string) {
+	out := l.out
+	out.Write(prefix)
+	out.Write(escapePrintable(line))
+	if !hasSuffix(line, "\n") {
+		out.Write("\n")
 	}
 }
 
