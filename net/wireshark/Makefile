@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.220 2019/12/05 18:41:30 adam Exp $
+# $NetBSD: Makefile,v 1.221 2019/12/30 17:48:05 adam Exp $
 
-DISTNAME=	wireshark-3.0.7
+DISTNAME=	wireshark-3.2.0
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.xz
@@ -15,6 +15,7 @@ CONFLICTS+=	ethereal-[0-9]*
 USE_CMAKE=		yes
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=		-DENABLE_APPLICATION_BUNDLE=OFF
+CMAKE_ARGS+=		-DVCSVERSION_OVERRIDE=${PKGVERSION_NOREV}
 CMAKE_ARG_PATH=		..
 CONFIGURE_DIRS=		build
 
@@ -23,6 +24,7 @@ USE_TOOLS+=		gmake perl pkg-config yacc lex
 PKGCONFIG_OVERRIDE+=	wireshark.pc.in
 
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/*/*
+CHECK_PORTABILITY_SKIP+=	tools/bsd-setup.sh
 
 PTHREAD_OPTS+=		require
 
@@ -63,7 +65,10 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 # [-Wint-conversion]
 BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
 
+.include "../../archivers/brotli/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
+.include "../../audio/speexdsp/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libsmi/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
