@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2019/12/11 21:19:29 nia Exp $
+# $NetBSD: Makefile,v 1.143 2019/12/30 04:25:17 gutteridge Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -31,9 +31,9 @@ SUBDIR+=	ctwm
 SUBDIR+=	cwm
 SUBDIR+=	dwm
 SUBDIR+=	e16menuedit2
+SUBDIR+=	e16themes
 SUBDIR+=	echinus
-SUBDIR+=	enlightenment
-SUBDIR+=	ethemes
+SUBDIR+=	enlightenment16
 SUBDIR+=	evilwm
 SUBDIR+=	fluxbox
 SUBDIR+=	fluxconf
