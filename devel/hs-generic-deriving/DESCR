@@ -1,0 +1,9 @@
+This package provides functionality for generalising the deriving mechanism
+in Haskell to arbitrary classes. It was first described in the paper:
+
+  A generic deriving mechanism for Haskell. Jose Pedro Magalhaes,
+  Atze Dijkstra, Johan Jeuring, and Andres Loeh. Haskell'10.
+
+The current implementation integrates with the new GHC Generics. See
+http://www.haskell.org/haskellwiki/GHC.Generics for more information.
+Template Haskell code is provided for supporting GHC before version 7.2.
