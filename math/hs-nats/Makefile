@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2016/01/10 11:49:10 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/31 13:55:47 pho Exp $
 
-DISTNAME=	nats-0.2
-PKGREVISION=	8
+DISTNAME=	nats-1.1.2
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Haskell 98 natural numbers
 LICENSE=	modified-bsd
+
+# This package becomes essentially blank when built with GHC >=
+# 7.10. Haddock complains when there are no input files.
+HASKELL_ENABLE_HADDOCK_DOCUMENTATION=	no
 
 .include "../../mk/haskell.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
