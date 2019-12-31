@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5623 2019/12/31 13:15:00 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5624 2019/12/31 13:24:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8949,3 +8949,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/ioping to 1.1 [mef 2019-12-31]
 	Updated sysutils/amtterm to 1.6 [mef 2019-12-31]
 	Updated emulators/unicorn to 1.0.1nb2 [wiz 2019-12-31]
+	Updated sysutils/file to 5.38 [mef 2019-12-31]
