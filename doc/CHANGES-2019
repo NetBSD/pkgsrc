@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5595 2019/12/31 07:17:09 pho Exp $
+$NetBSD: CHANGES-2019,v 1.5596 2019/12/31 07:23:02 pho Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8919,3 +8919,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/mate-user-share to 1.22.1 [gutteridge 2019-12-30]
 	Updated sysutils/py-diffoscope to 134 [ng0 2019-12-31]
 	Updated devel/hs-data-default-class to 0.1.2.0 [pho 2019-12-31]
+	Updated devel/hs-data-default-instances-base to 0.1.0.1 [pho 2019-12-31]
