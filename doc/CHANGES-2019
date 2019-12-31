@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5607 2019/12/31 10:45:19 adam Exp $
+$NetBSD: CHANGES-2019,v 1.5608 2019/12/31 11:17:27 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8933,3 +8933,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated lang/py-uncompyle6 to 3.6.1 [adam 2019-12-31]
 	Updated lang/py-parso to 0.5.2 [adam 2019-12-31]
 	Updated textproc/py-sphinx to 2.3.1 [adam 2019-12-31]
+	Added sysutils/ufetch version 0.2 [ng0 2019-12-31]
