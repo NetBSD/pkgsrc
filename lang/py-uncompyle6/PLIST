@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/12/11 13:19:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/12/31 10:22:46 adam Exp $
 bin/pydisassemble-${PYVERSSUFFIX}
 bin/uncompyle6-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -111,8 +111,6 @@ ${PYSITELIB}/uncompyle6/parsers/parse37base.py
 ${PYSITELIB}/uncompyle6/parsers/parse37base.pyc
 ${PYSITELIB}/uncompyle6/parsers/parse37base.pyo
 ${PYSITELIB}/uncompyle6/parsers/parse38.py
-${PYSITELIB}/uncompyle6/parsers/parse38.pyc
-${PYSITELIB}/uncompyle6/parsers/parse38.pyo
 ${PYSITELIB}/uncompyle6/parsers/treenode.py
 ${PYSITELIB}/uncompyle6/parsers/treenode.pyc
 ${PYSITELIB}/uncompyle6/parsers/treenode.pyo
@@ -281,6 +279,9 @@ ${PYSITELIB}/uncompyle6/semantics/transform.pyo
 ${PYSITELIB}/uncompyle6/show.py
 ${PYSITELIB}/uncompyle6/show.pyc
 ${PYSITELIB}/uncompyle6/show.pyo
+${PYSITELIB}/uncompyle6/util.py
+${PYSITELIB}/uncompyle6/util.pyc
+${PYSITELIB}/uncompyle6/util.pyo
 ${PYSITELIB}/uncompyle6/verify.py
 ${PYSITELIB}/uncompyle6/verify.pyc
 ${PYSITELIB}/uncompyle6/verify.pyo
