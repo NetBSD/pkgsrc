@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2019/12/30 19:25:02 triaxx Exp $
+$NetBSD: distinfo,v 1.2 2019/12/31 13:05:10 triaxx Exp $
 
 SHA1 (python-digitalocean-1.14.0.tar.gz) = ec1d51ee9f569405e147a62eab6f88d08775ed0d
 RMD160 (python-digitalocean-1.14.0.tar.gz) = 91c14977438af01043f317b4f3eaa330b6e2d512
 SHA512 (python-digitalocean-1.14.0.tar.gz) = 821116dfdfa2191af409f3433d1edee4b6d2f97700b1b8ba6d7ca1cd6e38dd555e8dcf83e0b631d1a4e958abd0e989e3001d774916f94b2244a9d9f6bcffbf4e
 Size (python-digitalocean-1.14.0.tar.gz) = 50405 bytes
+SHA1 (patch-DESCRIPTION.rst) = 0d74aec943a63da60b1060e2b94317d43a3463a6
