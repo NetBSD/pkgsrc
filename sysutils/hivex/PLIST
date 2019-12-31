@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2018/10/04 16:05:56 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2019/12/31 13:33:26 mef Exp $
 ${PLIST.tools}bin/hivexget
 ${PLIST.tools}bin/hivexml
-${PLIST.tools}bin/hivexsh
 ${PLIST.perl}bin/hivexregedit
+${PLIST.tools}bin/hivexsh
 include/hivex.h
 lib/libhivex.la
 ${PLIST.ocaml}${OCAML_SITELIB}/hivex/META
@@ -22,7 +22,7 @@ ${PLIST.ruby}${RUBY_SITELIB}/hivex.rb
 ${PLIST.ruby}${RUBY_SITEARCHLIB}/_hivex.${RUBY_DLEXT}
 ${PLIST.tools}man/man1/hivexget.1
 ${PLIST.tools}man/man1/hivexml.1
-${PLIST.tools}man/man1/hivexsh.1
 ${PLIST.perl}man/man1/hivexregedit.1
+${PLIST.tools}man/man1/hivexsh.1
 man/man3/hivex.3
 ${PLIST.ocaml}@pkgdir lib/ocaml/site-lib
