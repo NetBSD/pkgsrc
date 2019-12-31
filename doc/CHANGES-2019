@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5634 2019/12/31 14:47:21 pho Exp $
+$NetBSD: CHANGES-2019,v 1.5635 2019/12/31 15:35:07 pho Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8960,3 +8960,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/dnscrypt-proxy2 to 2.0.36 [nia 2019-12-31]
 	Updated emulators/vice to 3.4 [rhialto 2019-12-31]
 	Updated devel/hs-tagged to 0.8.6 [pho 2019-12-31]
+	Added devel/hs-th-abstraction version 0.3.1.0 [pho 2019-12-31]
