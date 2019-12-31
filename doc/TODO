@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19542 2019/12/31 16:36:18 pho Exp $
+$NetBSD: TODO,v 1.19543 2019/12/31 17:34:06 pho Exp $
 
 Suggested new packages
 ======================
@@ -735,7 +735,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hs-MonadRandom-0.4.2.2
 	o hs-QuickCheck-2.8.2
 	o hs-aeson-0.11.1.0
-	o hs-attoparsec-0.13.0.1
 	o hs-blaze-builder-0.4.0.1
 	o hs-blaze-html-0.8.1.1
 	o hs-blaze-markup-0.7.0.3
