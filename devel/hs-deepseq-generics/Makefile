@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/08/16 21:56:30 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/31 07:52:47 pho Exp $
 
-DISTNAME=	deepseq-generics-0.1.1.1
+DISTNAME=	deepseq-generics-0.2.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org
