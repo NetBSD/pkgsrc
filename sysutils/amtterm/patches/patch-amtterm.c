@@ -1,4 +1,6 @@
-$NetBSD: patch-amtterm.c,v 1.1 2017/02/18 13:58:33 joerg Exp $
+$NetBSD: patch-amtterm.c,v 1.2 2019/12/31 13:10:00 mef Exp $
+
+Add missing include.
 
 --- amtterm.c.orig	2017-02-18 02:24:13.146730774 +0000
 +++ amtterm.c
