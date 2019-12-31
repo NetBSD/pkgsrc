@@ -1,21 +1,21 @@
-# $NetBSD: options.mk,v 1.10 2018/12/31 15:38:55 rhialto Exp $
+# $NetBSD: options.mk,v 1.11 2019/12/31 14:42:22 rhialto Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vice
-PKG_SUPPORTED_OPTIONS=		ffmpeg
+PKG_SUPPORTED_OPTIONS=		ffmpeg x64 cpuhistory
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
 PKG_OPTIONS_GROUP.gui=		gtk3 sdl sdl2
 PKG_SUGGESTED_OPTIONS=		gtk3 ffmpeg
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	pcf sdl x11
+PLIST_VARS+=	gtk sdl x64
 
 .if !empty(PKG_OPTIONS:Mgtk3)
 CONFIGURE_ARGS+=	--enable-native-gtk3ui
-PLIST.pcf=		yes
-PLIST.x11=		yes
+PLIST.gtk=		yes
 .  include "../../x11/gtk3/buildlink3.mk"
 TOOL_DEPENDS+=		glib2-tools>=2.56:../../devel/glib2-tools
+.  include "../../graphics/glew/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl)
@@ -36,4 +36,14 @@ PLIST.sdl=		yes
 #BUILDLINK_DEPMETHOD.ffmpeg?=	build
 CONFIGURE_ARGS+=	--enable-external-ffmpeg
 .  include "../../multimedia/ffmpeg3/buildlink3.mk"
+.endif
+
+# Building x64 is deprecated, in favour of x64sc (but that is slower).
+.if !empty(PKG_OPTIONS:Mx64)
+CONFIGURE_ARGS+=	--enable-x64
+PLIST.x64=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mcpuhistory)
+CONFIGURE_ARGS+=	--enable-cpuhistory
 .endif
