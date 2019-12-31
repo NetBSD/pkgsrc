@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/12/13 14:06:53 szptvlfn Exp $
+$NetBSD: distinfo,v 1.5 2019/12/31 17:25:06 pho Exp $
 
-SHA1 (primitive-0.6.1.0.tar.gz) = 2c1aea8754e9dad7adeb16a0052e6c32f8058ac5
-RMD160 (primitive-0.6.1.0.tar.gz) = 001324da6b15c9220304ab23d0cba166fa3e19d9
-SHA512 (primitive-0.6.1.0.tar.gz) = 7d75602732aae7af4ea5fb6678f669b103c5c40035c2fa2cc27d940e911054722d20f1b53865cfd0b430785baa0843de89de7195bb2d72c5bc1e5aeb4fdc5f82
-Size (primitive-0.6.1.0.tar.gz) = 12857 bytes
+SHA1 (primitive-0.6.4.0.tar.gz) = 44a7377813c97699ae3b6e4cb7e7e83f8a5b97e4
+RMD160 (primitive-0.6.4.0.tar.gz) = f8d0bec3981b9c24db73eaadeff79b3a9511638c
+SHA512 (primitive-0.6.4.0.tar.gz) = a9d31b386c41abd4a5e601883b6f4d230c9669d1eda840a3491fc2e5961e8bce0c2bc1026426b92a36790cd372db954b3003499c540605289540e26543e12b80
+Size (primitive-0.6.4.0.tar.gz) = 45937 bytes
