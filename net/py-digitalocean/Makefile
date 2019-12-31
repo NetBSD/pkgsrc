@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/12/30 19:25:02 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/31 13:05:10 triaxx Exp $
 
 DISTNAME=	python-digitalocean-1.14.0
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=koalalorenzo/}
