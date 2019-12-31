@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/05/19 21:18:40 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/31 07:22:02 pho Exp $
 
-DISTNAME=	data-default-instances-base-0.0.1
+DISTNAME=	data-default-instances-base-0.1.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org
