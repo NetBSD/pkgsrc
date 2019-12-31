@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5618 2019/12/31 12:27:12 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5619 2019/12/31 12:28:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8944,3 +8944,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated x11/gtk3 to 3.24.13 [wiz 2019-12-31]
 	Updated audio/musicpd to 0.21.18 [wiz 2019-12-31]
 	Updated security/libssh to 0.93 [wiz 2019-12-31]
+	Updated devel/libev to 4.31 [wiz 2019-12-31]
