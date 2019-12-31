@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5638 2019/12/31 16:26:45 pho Exp $
+$NetBSD: CHANGES-2019,v 1.5639 2019/12/31 16:36:18 pho Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8964,3 +8964,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added devel/hs-generic-deriving version 1.13.1 [pho 2019-12-31]
 	Updated devel/hs-transformers-compat to 0.6.5 [pho 2019-12-31]
 	Updated devel/hs-unordered-containers to 0.2.10.0 [pho 2019-12-31]
+	Updated math/hs-semigroups to 0.19.1 [pho 2019-12-31]
