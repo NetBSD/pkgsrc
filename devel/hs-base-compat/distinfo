@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/31 17:40:50 pho Exp $
+
+SHA1 (base-compat-0.11.0.tar.gz) = d75237bf446fbdeba39479e38398e83a8453d07e
+RMD160 (base-compat-0.11.0.tar.gz) = df437663bec4bb208b4e0b4aa7ce45fea20f698b
+SHA512 (base-compat-0.11.0.tar.gz) = b9f3f29d2282bb51a1dafbe9db728d4e568bda07d9695d829d91ae2ea14157645c93289538039aedcce0d23c90ad07fa247a83c8e1093bb251d7af33ac828bc8
+Size (base-compat-0.11.0.tar.gz) = 33338 bytes
