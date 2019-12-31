@@ -1,23 +1,20 @@
-$NetBSD: patch-aa,v 1.1 2014/07/22 08:20:24 manu Exp $
+$NetBSD: patch-aa,v 1.2 2019/12/31 13:55:14 mef Exp $
 
 Disable the NFS code
 
---- src/killall5.c.orig	2014-07-01 02:01:37.000000000 +0200
-+++ src/killall5.c	2014-07-03 09:53:15.000000000 +0200
-@@ -42,9 +42,11 @@
-  */
- #include <dirent.h>
+--- src/killall5.c.orig	2019-09-12 02:43:12.000000000 +0900
++++ src/killall5.c	2019-12-31 22:43:43.093313776 +0900
+@@ -44,7 +44,9 @@
  #include <errno.h>
  #include <getopt.h>
+ #include <limits.h>
 +#ifdef linux
  #include <mntent.h>
 +#endif
  #include <stdarg.h>
  #include <stdio.h>
  #include <stdlib.h>
- #include <signal.h>
-@@ -236,8 +238,9 @@
- 	}
+@@ -253,6 +255,7 @@ static inline int isnetfs(const char * t
  	return 0;
  }
  
@@ -25,9 +22,7 @@ Disable the NFS code
  /*
   *     Remember all NFS typed partitions.
   */
- void init_nfs(void)
-@@ -301,8 +304,9 @@
- 		}
+@@ -318,6 +321,7 @@ void init_nfs(void)
  	}
  	endmntent(mnt);
  }
@@ -35,19 +30,15 @@ Disable the NFS code
  
  static void clear_shadow(SHADOW *restrict shadow)
  {
- 	SHADOW *s, *n, *l;
-@@ -365,8 +369,9 @@
- out:
- 	return 0;
+@@ -396,6 +400,7 @@ static int maxsymlinks(void)
+ 	return v;
  }
  
 +#ifdef linux
  /*
   *     Check path is located on a network based partition.
   */
- int check4nfs(const char * path, char * real)
-@@ -430,8 +435,9 @@
- 	}
+@@ -465,6 +470,7 @@ int check4nfs(const char * path, char * 
  
  	return 0;
  }
@@ -55,23 +46,20 @@ Disable the NFS code
  
  int readarg(FILE *fp, char *buf, int sz)
  {
- 	int		c = 0, f = 0;
-@@ -607,11 +613,13 @@
- 
+@@ -683,10 +689,12 @@ int readproc(int do_stat)
  		p->nfs = 0;
  
  		switch (do_stat) {
 +#ifdef linux
  		case DO_NETFS:
  			if ((p->nfs = check4nfs(path, buf)))
- 				break;
+ 				goto link;
+                         /* else fall through */
 +#endif
  		case DO_STAT:
- 			if (stat(path, &st) != 0)
- 				break;
- 			p->dev = st.st_dev;
-@@ -695,10 +703,12 @@
- 	/* Try to stat the executable. */
+ 			if (stat(path, &st) != 0) {
+ 				char * ptr;
+@@ -806,8 +814,10 @@ PIDQ_HEAD *pidof(char *prog)
  	if (prog[0] == '/') {
  		memset(&real[0], 0, sizeof(real));
  
@@ -82,9 +70,7 @@ Disable the NFS code
  
  		if (real[0] != '\0')
  			prog = &real[0];	/* Binary located on network FS. */
- 
-@@ -926,10 +936,12 @@
- 			exit(1);
+@@ -1089,8 +1099,10 @@ int main_pidof(int argc, char **argv)
  		}
  	}
  
@@ -95,4 +81,3 @@ Disable the NFS code
  
  	/* Print out process-ID's one by one. */
  	readproc((flags & PIDOF_NETFS) ? DO_NETFS : DO_STAT);
- 
