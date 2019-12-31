@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5597 2019/12/31 07:33:27 pho Exp $
+$NetBSD: CHANGES-2019,v 1.5598 2019/12/31 07:43:24 pho Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8921,3 +8921,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/hs-data-default-class to 0.1.2.0 [pho 2019-12-31]
 	Updated devel/hs-data-default-instances-base to 0.1.0.1 [pho 2019-12-31]
 	Updated devel/hs-dlist to 0.8.0.7 [pho 2019-12-31]
+	Added devel/hs-old-locale version 1.0.0.7 [pho 2019-12-31]
