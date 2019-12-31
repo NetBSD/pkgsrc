@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2018/10/04 16:01:40 tnn Exp $
+$NetBSD: distinfo,v 1.3 2019/12/31 13:33:26 mef Exp $
 
-SHA1 (hivex-1.3.15.tar.gz) = 0b93f6947223bfa16012cb23d29437b8074fd29f
-RMD160 (hivex-1.3.15.tar.gz) = 31a243d63822006026ec239ecc6ac33ac1b68981
-SHA512 (hivex-1.3.15.tar.gz) = 7ce4fd6842c7545a41dc4c4268db5f0629d618a17f29a68dda6990a0dd4530cdf0e0c654f00104274c57e792aa4bcf712bcac1c76e2fd2dbce9aeae1e5751517
-Size (hivex-1.3.15.tar.gz) = 1542436 bytes
+SHA1 (hivex-1.3.18.tar.gz) = d66131981d2c978ab9cfc7e28dd052e7e273ae18
+RMD160 (hivex-1.3.18.tar.gz) = 7fc4345eb90031df6070ec4cc0d765c29f98223c
+SHA512 (hivex-1.3.18.tar.gz) = 1851351118921e81df9e505f90d00048a178572c2edd3de40194a69915176bdb615e2eb5afea408d57063e98257c8d1e3d0cd6730407153892cc9e3befc4aa3a
+Size (hivex-1.3.18.tar.gz) = 1542133 bytes
 SHA1 (patch-ocaml_Makefile.in) = de989be1269d59bc626bd2ddb42785102b695de6
 SHA1 (patch-perl_Makefile.in) = a5776c1b6b382af85e3f8927a83cfd147105e3ee
