@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/31 18:06:15 pho Exp $
+
+SHA1 (time-compat-1.9.2.2.tar.gz) = eef4651e2ded276321a8f7cae7b5b1766d772b2f
+RMD160 (time-compat-1.9.2.2.tar.gz) = 8999a63b4c62ba9c3adf4f1f2998b2348e22ad71
+SHA512 (time-compat-1.9.2.2.tar.gz) = 210e1d6b6b1dcf30337c72d45dd5f229dfbd023a1612f13dccad23131f16437b2b6a43a46e5e1341751c7b6f88f8ef1a9b5efe91b1328b12ff20552e2a952f44
+Size (time-compat-1.9.2.2.tar.gz) = 49652 bytes
