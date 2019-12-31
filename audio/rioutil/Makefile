@@ -1,21 +1,25 @@
-# $NetBSD: Makefile,v 1.26 2018/02/27 23:56:07 khorben Exp $
+# $NetBSD: Makefile,v 1.27 2019/12/31 12:10:20 schmonz Exp $
 #
 
-DISTNAME=	rioutil-1.5.0
-PKGREVISION=	1
+DISTNAME=	rioutil-${GITHUB_TAG}
+PKGNAME=	${DISTNAME:S/-v/-/}
+GITHUB_TAG=	v1.5.4
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rioutil/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=hjelmn/}
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://rioutil.sourceforge.net/
+HOMEPAGE=	https://github.com/hjelmn/rioutil/
 COMMENT=	Program and library to interface with Rio 600, 800, Nike psa[play
 LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
+USE_TOOLS+=		autoreconf autoconf automake aclocal pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-libusb
 
-ONLY_FOR_PLATFORM=	Darwin-*-* Linux-*-* NetBSD-1.6*-* NetBSD-[2-9]*-*
+pre-configure:
+	cd ${WRKSRC} && autoreconf -ivf
+
+ONLY_FOR_PLATFORM=	Darwin-*-* Linux-*-* NetBSD-1.6.*-* NetBSD-[2-9].*-*
 # depends on -r1.6 of sys/dev/usb/urio.c
 ONLY_FOR_PLATFORM+=	NetBSD-1.5Z-* NetBSD-1.5Z[A-Z]-*
 ONLY_FOR_PLATFORM+=	DragonFly-*-* FreeBSD-*-* OpenBSD-*-*

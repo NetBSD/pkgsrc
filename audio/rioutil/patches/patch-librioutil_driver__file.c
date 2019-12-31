@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2007/01/06 04:21:24 schmonz Exp $
+$NetBSD: patch-librioutil_driver__file.c,v 1.1 2019/12/31 12:10:20 schmonz Exp $
 
---- librioutil/driver_file.c.orig	2006-08-07 11:47:28.000000000 -0400
+Support DragonFly.
+
+--- librioutil/driver_file.c.orig	2019-05-14 19:24:11.000000000 +0000
 +++ librioutil/driver_file.c
 @@ -32,7 +32,7 @@
  char driver_method[] = "device file";
