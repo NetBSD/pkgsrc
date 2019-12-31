@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5647 2019/12/31 19:07:10 pho Exp $
+$NetBSD: CHANGES-2019,v 1.5648 2019/12/31 20:26:14 markd Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8973,3 +8973,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added time/hs-time-compat version 1.9.2.2 [pho 2019-12-31]
 	Updated multimedia/intel-vaapi-driver to 2.4.0 [leot 2019-12-31]
 	Removed devel/hs-transformers [pho 2019-12-31]
+	Removed x11/py-kde4 [markd 2019-12-31]
