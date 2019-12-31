@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5614 2019/12/31 12:08:27 mef Exp $
+$NetBSD: CHANGES-2019,v 1.5615 2019/12/31 12:10:40 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8940,3 +8940,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/py-dbus to 1.2.14 [wiz 2019-12-31]
 	Updated sysutils/dbus-python-common to 1.2.14 [wiz 2019-12-31]
 	Updated sysutils/R-later to 1.0.0 [mef 2019-12-31]
+	Updated audio/rioutil to 1.5.4 [schmonz 2019-12-31]
