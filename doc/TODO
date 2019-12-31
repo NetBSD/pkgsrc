@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19522 2019/12/30 22:17:52 rhialto Exp $
+$NetBSD: TODO,v 1.19523 2019/12/31 07:52:59 pho Exp $
 
 Suggested new packages
 ======================
@@ -747,7 +747,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hs-cgrep-6.6.3
 	o hs-cmdargs-0.10.14
 	o hs-cpphs-1.20.1
-	o hs-deepseq-generics-0.2.0.0
 	o hs-distributive-0.5.0.2
 	o hs-exceptions-0.8.2.1
 	o hs-hashable-1.2.4.0
