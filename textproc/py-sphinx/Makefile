@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.68 2019/12/08 21:56:23 adam Exp $
+# $NetBSD: Makefile,v 1.69 2019/12/31 10:38:46 adam Exp $
 
-DISTNAME=	Sphinx-2.2.2
+DISTNAME=	Sphinx-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://sphinx.pocoo.org/
+HOMEPAGE=	http://www.sphinx-doc.org/
 COMMENT=	Python documentation generator
 LICENSE=	modified-bsd
 
