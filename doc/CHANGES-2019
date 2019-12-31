@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5594 2019/12/31 00:32:22 ng0 Exp $
+$NetBSD: CHANGES-2019,v 1.5595 2019/12/31 07:17:09 pho Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8918,3 +8918,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/hs-base-unicode-symbols to 0.2.4.2 [pho 2019-12-30]
 	Updated net/mate-user-share to 1.22.1 [gutteridge 2019-12-30]
 	Updated sysutils/py-diffoscope to 134 [ng0 2019-12-31]
+	Updated devel/hs-data-default-class to 0.1.2.0 [pho 2019-12-31]
