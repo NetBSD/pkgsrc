@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/08/11 13:18:09 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2019/12/31 19:46:12 markd Exp $
 
 DISTNAME=	bibtex2html-1.98
 PKGREVISION=	14
@@ -32,6 +32,8 @@ SUBST_SED.paths=	-e 's,/usr/share,${PREFIX}/share,g'
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
+
+MAKE_ENV+=	ZLIB=-unsafe-string
 
 .include "../../lang/ocaml/buildlink3.mk"
 
