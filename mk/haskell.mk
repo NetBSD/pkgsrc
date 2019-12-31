@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.5 2019/12/29 16:59:55 pho Exp $
+# $NetBSD: haskell.mk,v 1.6 2019/12/31 07:16:25 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -214,25 +214,27 @@ _check-ignored-plist: error-check
 .endif
 
 # We might not have any working Haskell interpreter so compile
-# Setup.?hs to a binary.
+# Setup.?hs to a binary. Since dynamic linkage is much faster, we try
+# it and then fall back to static linkage if that didn't work.
 pre-configure: ${WRKSRC}/Setup
 
 ${WRKSRC}/Setup:
-	${RUN} cd ${WRKSRC} && \
-		${_HASKELL_BIN:Q} --make Setup
+	${RUN}cd ${WRKSRC} && \
+		( ${_HASKELL_BIN:Q} --make Setup -dynamic || \
+			${_HASKELL_BIN:Q} --make Setup -static )
 
 # Define configure target.
 do-configure:
-	${RUN} cd ${WRKSRC:Q} && \
+	${RUN}cd ${WRKSRC:Q} && \
 		${SETENV} ${CONFIGURE_ENV} \
 			./Setup configure ${CONFIGURE_ARGS}
 
 # Define build target.
 do-build:
-	${RUN} cd ${WRKSRC:Q} && \
+	${RUN}cd ${WRKSRC:Q} && \
 		./Setup build
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
-	${RUN} cd ${WRKSRC:Q} && \
+	${RUN}cd ${WRKSRC:Q} && \
 		./Setup haddock
 .endif
 
@@ -243,7 +245,7 @@ _HASKELL_PKG_DESCR_FILE=	${_HASKELL_PKG_DESCR_DIR}/package-description
 
 INSTALLATION_DIRS+=		${_HASKELL_PKG_DESCR_DIR}
 do-install:
-	${RUN} cd ${WRKSRC} && \
+	${RUN}cd ${WRKSRC} && \
 		./Setup register --gen-pkg-config=dist/package-description && \
 		./Setup copy --destdir=${DESTDIR:Q} && \
 		if [ -f dist/package-description ]; then \
@@ -252,7 +254,7 @@ do-install:
 
 # Define test target.
 do-test:
-	${RUN} cd ${WRKSRC} && \
+	${RUN}cd ${WRKSRC} && \
 		./Setup test
 
 # Substitutions for INSTALL and DEINSTALL.
