@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5616 2019/12/31 12:21:10 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5617 2019/12/31 12:25:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8942,3 +8942,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/R-later to 1.0.0 [mef 2019-12-31]
 	Updated audio/rioutil to 1.5.4 [schmonz 2019-12-31]
 	Updated x11/gtk3 to 3.24.13 [wiz 2019-12-31]
+	Updated audio/musicpd to 0.21.18 [wiz 2019-12-31]
