@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2019/11/03 10:39:16 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2019/12/31 12:28:23 wiz Exp $
 
-DISTNAME=	libev-4.27
+DISTNAME=	libev-4.31
 CATEGORIES=	devel
 MASTER_SITES=	http://dist.schmorp.de/libev/
 
