@@ -1,0 +1,6 @@
+Math.NumberTheory.Logarithms and Math.NumberTheory.Powers.Integer from
+the arithmoi package.
+
+Also provides GHC.Integer.Logarithms.Compat and
+Math.NumberTheory.Power.Natural modules, as well as some additional
+functions in migrated modules.
