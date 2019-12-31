@@ -1,9 +1,9 @@
-$NetBSD: patch-biboutput.ml,v 1.1 2018/03/14 08:28:44 dholland Exp $
+$NetBSD: patch-biboutput.ml,v 1.2 2019/12/31 19:46:12 markd Exp $
 
-Fix build with ocaml 4.06.
-Silence deprecation warnings.
+fixed compilation with recent versions of OCaml 
+git commit 8f25afb95a839c9f9522a34013d5c905af14378b 
 
---- biboutput.ml~	2014-07-04 07:51:21.000000000 +0000
+--- biboutput.ml.orig	2014-07-04 07:51:21.000000000 +0000
 +++ biboutput.ml
 @@ -32,7 +32,7 @@ let is_url s = Str.string_match url_re s
  
@@ -35,25 +35,39 @@ Silence deprecation warnings.
  		     print_link_field ch l
  	           else
  		     print_atom_list html ch l
-@@ -162,17 +162,17 @@ let add_backslashes s =
-          | _ -> 1)
+@@ -154,26 +154,16 @@ exception Bad_input_for_php of string
+ 
+ (* inspired from String.escaped *)
+ let add_backslashes s =
+-  let n = ref 0 in
+-  for i = 0 to String.length s - 1 do
+-    n := !n +
+-      (match String.unsafe_get s i with
+-         | '\'' | '\\' -> 2
+-         | _ -> 1)
++  let n = String.length s in
++  let b = Buffer.create (2 * n) in
++  for i = 0 to n - 1 do
++    let c = String.unsafe_get s i in
++    begin match c with
++    | '\'' | '\\' -> Buffer.add_char b '\\'
++    | _ -> () end;
++    Buffer.add_char b c
    done;
-   if !n = String.length s then s else begin
+-  if !n = String.length s then s else begin
 -    let s' = String.create !n in
-+    let s' = Bytes.create !n in
-     n := 0;
-     for i = 0 to String.length s - 1 do
-       let c = String.unsafe_get s i in
-       begin match c with
+-    n := 0;
+-    for i = 0 to String.length s - 1 do
+-      let c = String.unsafe_get s i in
+-      begin match c with
 -        | ('\'' | '\\') -> String.unsafe_set s' !n '\\'; incr n
-+        | ('\'' | '\\') -> Bytes.unsafe_set s' !n '\\'; incr n
-         | _ -> ()
-       end;
+-        | _ -> ()
+-      end;
 -      String.unsafe_set s' !n c; incr n
-+      Bytes.unsafe_set s' !n c; incr n
-     done;
+-    done;
 -    s'
-+    Bytes.to_string s'
-   end
+-  end
++  Buffer.contents b
  
  let php_print_atom ch = function
+   | Id s -> fprintf ch "\'%s\'" s
