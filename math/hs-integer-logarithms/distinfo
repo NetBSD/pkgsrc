@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2019/12/31 14:04:52 pho Exp $
+
+SHA1 (integer-logarithms-1.0.3.tar.gz) = cccdce7725227dd7fbad4ed5d8485941bc38bbb7
+RMD160 (integer-logarithms-1.0.3.tar.gz) = ac15eb20926ddbe7e8fb66c1d3239ced8dcae16b
+SHA512 (integer-logarithms-1.0.3.tar.gz) = b211127620bb52398ae7e64281f991d9dd016d5f74ff5d939275afea15689b01f82577efeaa2dfcdf4230cfea841f6c14f731ba16d38192f48e2e7ae90e704f3
+Size (integer-logarithms-1.0.3.tar.gz) = 8840 bytes
