@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/08/16 09:40:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2019/12/31 08:46:23 wiz Exp $
 include/libfilezilla/apply.hpp
 include/libfilezilla/buffer.hpp
 include/libfilezilla/encode.hpp
@@ -21,6 +21,8 @@ include/libfilezilla/private/defs.hpp
 include/libfilezilla/private/visibility.hpp
 include/libfilezilla/private/windows.hpp
 include/libfilezilla/process.hpp
+include/libfilezilla/rate_limited_layer.hpp
+include/libfilezilla/rate_limiter.hpp
 include/libfilezilla/recursive_remove.hpp
 include/libfilezilla/shared.hpp
 include/libfilezilla/signature.hpp
@@ -35,6 +37,7 @@ include/libfilezilla/tls_system_trust_store.hpp
 include/libfilezilla/translate.hpp
 include/libfilezilla/uri.hpp
 include/libfilezilla/util.hpp
+include/libfilezilla/version.hpp
 lib/libfilezilla.la
 lib/pkgconfig/libfilezilla.pc
 share/locale/an/LC_MESSAGES/libfilezilla.mo
