@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/12/28 19:31:38 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/31 10:23:37 mef Exp $
 
 DISTNAME=	x16-rom-35
 CATEGORIES=	emulators
@@ -13,7 +13,7 @@ LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	cc65-[0-9]*:../../cross/cc65
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake bash
 
 INSTALLATION_DIRS= share/x16
 
