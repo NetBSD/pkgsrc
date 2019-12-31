@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5630 2019/12/31 14:25:09 pho Exp $
+$NetBSD: CHANGES-2019,v 1.5631 2019/12/31 14:36:37 pho Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8956,3 +8956,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added math/hs-integer-logarithms version 1.0.3 [pho 2019-12-31]
 	Updated math/hs-scientific to 0.3.6.2 [pho 2019-12-31]
 	Added devel/hs-fail version 4.9.0.0 [pho 2019-12-31]
+	Updated devel/hs-transformers to 0.5.6.2 [pho 2019-12-31]
