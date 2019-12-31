@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.869 2019/12/16 12:08:41 kamil Exp $
+# $NetBSD: Makefile,v 1.870 2019/12/31 20:22:41 markd Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -317,7 +317,6 @@ SUBDIR+=	py-gnome2-desktop
 SUBDIR+=	py-gnome2-extras
 SUBDIR+=	py-gtk2
 SUBDIR+=	py-gtksourceview
-SUBDIR+=	py-kde4
 SUBDIR+=	py-keybinder
 SUBDIR+=	py-kiwi
 SUBDIR+=	py-pyperclip
