@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5628 2019/12/31 14:05:03 pho Exp $
+$NetBSD: CHANGES-2019,v 1.5629 2019/12/31 14:11:06 pho Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8954,3 +8954,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated sysutils/pidof to 2.96 [mef 2019-12-31]
 	Updated math/hs-nats to 1.1.2 [pho 2019-12-31]
 	Added math/hs-integer-logarithms version 1.0.3 [pho 2019-12-31]
+	Updated math/hs-scientific to 0.3.6.2 [pho 2019-12-31]
