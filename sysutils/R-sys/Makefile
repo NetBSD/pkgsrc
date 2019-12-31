@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 18:36:29 brook Exp $
+# $NetBSD: Makefile,v 1.2 2019/12/31 11:41:22 mef Exp $
 
 R_PKGNAME=	sys
-R_PKGVER=	3.2
+R_PKGVER=	3.3
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
