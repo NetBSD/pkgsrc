@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5643 2019/12/31 17:41:00 pho Exp $
+$NetBSD: CHANGES-2019,v 1.5644 2019/12/31 17:57:56 pho Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8969,3 +8969,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated editors/emacs-snapshot to 27.0.60 [mef 2019-12-31]
 	Updated textproc/hs-attoparsec to 0.13.2.3 [pho 2019-12-31]
 	Added devel/hs-base-compat version 0.11.0 [pho 2019-12-31]
+	Added devel/hs-base-orphans version 0.8.1 [pho 2019-12-31]
