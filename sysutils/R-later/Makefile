@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/09/07 08:38:27 maya Exp $
+# $NetBSD: Makefile,v 1.3 2019/12/31 12:08:15 mef Exp $
 
 R_PKGNAME=	later
-R_PKGVER=	0.8.0
+R_PKGVER=	1.0.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
