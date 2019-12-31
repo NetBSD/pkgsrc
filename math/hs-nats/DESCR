@@ -1,1 +1,4 @@
 Natural numbers.
+
+This is a compatibility package for old packages that still depends on
+"nats". The module Numeric.Natural is now a part of the base package.
