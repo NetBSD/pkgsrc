@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5612 2019/12/31 11:53:51 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5613 2019/12/31 11:54:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8938,3 +8938,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated net/libsoup to 2.68.3 [wiz 2019-12-31]
 	Updated sysutils/R-sys to 3.3 [mef 2019-12-31]
 	Updated sysutils/py-dbus to 1.2.14 [wiz 2019-12-31]
+	Updated sysutils/dbus-python-common to 1.2.14 [wiz 2019-12-31]
