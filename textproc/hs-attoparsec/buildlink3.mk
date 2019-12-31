@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2019/12/31 17:33:18 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2019/12/31 19:00:39 pho Exp $
 
 BUILDLINK_TREE+=	hs-attoparsec
 
@@ -13,7 +13,6 @@ BUILDLINK_PKGSRCDIR.hs-attoparsec?=	../../textproc/hs-attoparsec
 .include "../../math/hs-semigroups/buildlink3.mk"
 .include "../../math/hs-scientific/buildlink3.mk"
 .include "../../devel/hs-text/buildlink3.mk"
-.include "../../devel/hs-transformers/buildlink3.mk"
 .endif	# HS_ATTOPARSEC_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-attoparsec
