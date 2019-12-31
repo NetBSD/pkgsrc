@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5610 2019/12/31 11:39:36 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5611 2019/12/31 11:41:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8936,3 +8936,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Added sysutils/ufetch version 0.2 [ng0 2019-12-31]
 	Updated graphics/librsvg to 2.46.4 [wiz 2019-12-31]
 	Updated net/libsoup to 2.68.3 [wiz 2019-12-31]
+	Updated sysutils/R-sys to 3.3 [mef 2019-12-31]
