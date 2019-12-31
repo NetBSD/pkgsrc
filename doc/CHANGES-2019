@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2019,v 1.5602 2019/12/31 08:44:00 wiz Exp $
+$NetBSD: CHANGES-2019,v 1.5603 2019/12/31 08:46:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2019:
 
@@ -8926,3 +8926,4 @@ Changes to the packages collection and infrastructure in 2019:
 	Updated devel/hs-deepseq-generics to 0.2.0.0 [pho 2019-12-31]
 	Updated devel/hs-ghc-paths to 0.1.0.12 [pho 2019-12-31]
 	Updated devel/cppunit to 1.15.1 [wiz 2019-12-31]
+	Updated net/libfilezilla to 0.19.3 [wiz 2019-12-31]
