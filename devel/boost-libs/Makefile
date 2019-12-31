@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2019/11/03 10:39:06 rillig Exp $
+# $NetBSD: Makefile,v 1.78 2019/12/31 13:30:27 nros Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -44,7 +44,7 @@ PLIST.longdbl=		yes
 # libboost_stacktrace_backtrace requires libbacktrace.
 # FIXME: The condition needs to be refined for non-Debian/Ubuntu
 # platforms shipped with libbacktrace.
-.if ${OPSYS} == "Linux" && exists(/etc/debian_version)
+.if ${OPSYS} == "Linux" && (exists(/etc/debian_version) || exists(/etc/devuan_version))
 PLIST.backtrace=	yes
 .endif
 
