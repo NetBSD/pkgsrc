@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2016/01/10 11:49:10 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.11 2019/12/31 16:36:07 pho Exp $
 
-DISTNAME=	semigroups-0.15.3
-PKGREVISION=	7
+DISTNAME=	semigroups-0.19.1
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
@@ -10,7 +9,9 @@ LICENSE=	2-clause-bsd
 
 .include "../../mk/haskell.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
-.include "../../math/hs-nats/buildlink3.mk"
+.include "../../devel/hs-tagged/buildlink3.mk"
 .include "../../devel/hs-text/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-transformers-compat/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
