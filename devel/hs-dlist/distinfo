@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/01/04 12:21:11 szptvlfn Exp $
+$NetBSD: distinfo,v 1.6 2019/12/31 07:33:17 pho Exp $
 
-SHA1 (dlist-0.7.1.2.tar.gz) = 808e09c1328f6de41110b3337243af7f9dd8a9d4
-RMD160 (dlist-0.7.1.2.tar.gz) = 44c577f9cb52014e8383d761a2251a6826d053bb
-SHA512 (dlist-0.7.1.2.tar.gz) = 471059e0a4702eca3c5c9457ea1179bf032ff48813776a283a0993abfb713e25fc12a0171b44535729f2c241dcb69496273abe9dbac181af5ef4404be95d5780
-Size (dlist-0.7.1.2.tar.gz) = 6301 bytes
+SHA1 (dlist-0.8.0.7.tar.gz) = 0e7e13eef242694168c9f767a86eba0b35d213d7
+RMD160 (dlist-0.8.0.7.tar.gz) = 539db15d2724c0d40e48232567c5cd74b38f6a59
+SHA512 (dlist-0.8.0.7.tar.gz) = e98ce96819bc8c7a86f1eb402ba7c6aea95fc87502afbb40a4b61ac6dc9a9793ca6f6042f633733c9e0e7c7f3f77711809767ecd213639bfa3b77e71bd6bd806
+Size (dlist-0.8.0.7.tar.gz) = 9228 bytes
