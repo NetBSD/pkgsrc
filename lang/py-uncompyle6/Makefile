@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2019/12/11 13:19:20 adam Exp $
+# $NetBSD: Makefile,v 1.17 2019/12/31 10:22:46 adam Exp $
 
-DISTNAME=	uncompyle6-3.6.0
+DISTNAME=	uncompyle6-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uncompyle6/}
@@ -11,7 +11,7 @@ COMMENT=	Python cross-version byte-code decompiler
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-spark-parser>=1.8.9:../../lang/py-spark-parser
-DEPENDS+=	${PYPKGPREFIX}-xdis>=4.2.0:../../devel/py-xdis
+DEPENDS+=	${PYPKGPREFIX}-xdis>=4.2.2:../../devel/py-xdis
 
 USE_LANGUAGES=	# none
 
