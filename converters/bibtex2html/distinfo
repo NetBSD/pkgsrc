@@ -1,9 +1,20 @@
-$NetBSD: distinfo,v 1.17 2018/03/14 08:28:44 dholland Exp $
+$NetBSD: distinfo,v 1.18 2019/12/31 19:46:12 markd Exp $
 
 SHA1 (bibtex2html-1.98.tar.gz) = daaa082885a30dae38263614565298d4862b8331
 RMD160 (bibtex2html-1.98.tar.gz) = f47dda14108c3f53bca64352bfb7455f1b79d964
 SHA512 (bibtex2html-1.98.tar.gz) = 7d8480ed87bef74a1e0c970446fba4d30b103df3e78f127a051efff875032ac7f52d3d6baab0c6a2fc67ca11f3d558d7be4439311934f99067993b5891ff6ad4
 Size (bibtex2html-1.98.tar.gz) = 92719 bytes
-SHA1 (patch-biboutput.ml) = 42d07071fd85fd1be47e522a4f957b53693d5b0d
-SHA1 (patch-bibtex__lexer.mll) = 207d8442dc87465cfed478d2d97445ba3bd90d9f
-SHA1 (patch-condition.ml) = f00078a8a16a6c47416e08b378d51db782f8e7f2
+SHA1 (patch-bbl_lexer.mll) = e63157f319825aad196f0628f04e1065e5f3cfa8
+SHA1 (patch-bib2bib.ml) = 37e8ac8e9f7453f304423dce25bd3b5481909aaf
+SHA1 (patch-bibfilter.ml) = 52f74806d12bd1d4838ac02ed1cce4a835f6cdc1
+SHA1 (patch-biboutput.ml) = 434f695c89aeeb4c6768d9d78502b5995aeb772c
+SHA1 (patch-bibtex.ml) = 4e68071f920d7d04b0fe8e40c3e5196d6a5742da
+SHA1 (patch-bibtex__lexer.mll) = 0e5ea0a0d0f3500a73635a9ddebad93175400027
+SHA1 (patch-bibtex_parser.mly) = dbd957eb6a47203baea103ef015583073128c1b7
+SHA1 (patch-condition.ml) = ff4cb8380df6f324554037ab4ae9d42d7fe28eb9
+SHA1 (patch-condition_parser.mly) = 7d44a5606c969fa1eb40ee1bc3f93ab8ae4e1c66
+SHA1 (patch-expand.ml) = d83740b76bbedb375519db2d2cd9d8458daa5ba8
+SHA1 (patch-latexmacros.ml) = a3beb18495de348246e7a8039838bab3d7c766e7
+SHA1 (patch-main.ml) = 3afed48b57d5858962f4b4bc5be15190014db41c
+SHA1 (patch-readbib.ml) = 888fbca4bad5c0597af1315b834574072ca005fb
+SHA1 (patch-translate.ml) = 222d3a9a1208e54fd54c1bc52ed784c59bf2a531
