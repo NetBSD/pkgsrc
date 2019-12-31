@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2007/01/06 04:21:24 schmonz Exp $
+$NetBSD: patch-linux__driver_rio__usb.h,v 1.1 2019/12/31 12:10:20 schmonz Exp $
 
---- linux_driver/rio_usb.h.orig	2006-08-07 11:47:28.000000000 -0400
+Support DragonFly.
+
+--- linux_driver/rio_usb.h.orig	2019-05-14 19:24:11.000000000 +0000
 +++ linux_driver/rio_usb.h
 @@ -61,7 +61,7 @@ struct RioCommand {
  	int timeout;
