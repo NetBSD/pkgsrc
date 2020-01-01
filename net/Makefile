@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1285 2019/12/30 19:38:27 triaxx Exp $
+# $NetBSD: Makefile,v 1.1286 2020/01/01 14:05:55 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -187,7 +187,6 @@ SUBDIR+=	gnapfetch
 SUBDIR+=	gnet
 SUBDIR+=	gnet1
 SUBDIR+=	gnetcat
-SUBDIR+=	gnome-netstatus
 SUBDIR+=	gnome-nettool
 SUBDIR+=	gnome-online-accounts
 SUBDIR+=	gnome-vfs-smb
