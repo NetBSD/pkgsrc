@@ -109,7 +109,7 @@ courier-esmtp		ESMTP mail delivery.
 courier-gnutls		Support using GNU TLS instead of OpenSSL.
 courier-local		Local mail delivery.
 courier-uucp		UUCP mail delivery.
-cpuhistory		Enable the 65xx cpu history feature.
+vice-cpuhistory		Enable the 65xx cpu history feature.
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
 curses			Enable curses support.
@@ -856,7 +856,7 @@ wxwidgets		Enable wxWidgets support.
 x11			Enable X11 support.
 x264			Enable x264 support.
 x265			Enable x265 support.
-x64			Enable building of the old x64 emulator.
+vice-x64		Enable building of the old x64 emulator.
 xapian-flint-backend	Enable "Flint" format Xapian database support.
 xapian-quartz-backend	Enable "Quartz" format Xapian database support.
 xatracker		Enable XA X Acceleration API support.
