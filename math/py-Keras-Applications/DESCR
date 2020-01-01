@@ -1,0 +1,4 @@
+Keras Applications is the applications module of the Keras deep
+learning library. It provides model definitions and pre-trained
+weights for a number of popular archictures, such as VGG16, ResNet50,
+Xception, MobileNet, and more.
