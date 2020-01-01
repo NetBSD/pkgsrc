@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2967 2020/01/01 02:23:20 pho Exp $
+# $NetBSD: Makefile,v 1.2968 2020/01/01 03:41:45 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -519,6 +519,7 @@ SUBDIR+=	hs-resourcet
 SUBDIR+=	hs-safe
 SUBDIR+=	hs-setlocale
 SUBDIR+=	hs-split
+SUBDIR+=	hs-splitmix
 SUBDIR+=	hs-stm
 SUBDIR+=	hs-syb
 SUBDIR+=	hs-tagged
