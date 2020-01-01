@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.54 2020/01/01 22:12:21 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.55 2020/01/01 23:03:46 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -70,3 +70,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/haproxy to 2.1.2 [adam 2020-01-01]
 	Updated net/mitmproxy to 5.0.1 [leot 2020-01-01]
 	Updated editors/le to 1.16.7 [fcambus 2020-01-01]
+	Updated graphics/libansilove to 1.1.7 [fcambus 2020-01-01]
