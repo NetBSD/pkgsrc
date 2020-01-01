@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/12/13 14:08:12 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/01 02:43:35 pho Exp $
 
-DISTNAME=	vector-0.11.0.0
+DISTNAME=	vector-0.12.0.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
@@ -9,4 +9,6 @@ LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"
 .include "../../devel/hs-primitive/buildlink3.mk"
+.include "../../devel/hs-fail/buildlink3.mk"
+.include "../../math/hs-semigroups/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
