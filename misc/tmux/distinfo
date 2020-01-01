@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.42 2019/06/20 08:54:19 leot Exp $
+$NetBSD: distinfo,v 1.43 2020/01/01 15:06:07 leot Exp $
 
-SHA1 (tmux-2.9a.tar.gz) = 33cba73e64c62f46bd244d4472c59371fb747f56
-RMD160 (tmux-2.9a.tar.gz) = e5460971073abb865adcea2a6711e82d84c53838
-SHA512 (tmux-2.9a.tar.gz) = aca6882688727c10c5647443fdd18bbd6c0f80b7a3bf9667903d1b89d523e604cd715f176f33f2e5673258f00e626a6dc273f80fe97ae4f91621814d89985713
-Size (tmux-2.9a.tar.gz) = 510915 bytes
-SHA1 (patch-osdep-netbsd.c) = dc70c92e536eb8fe85e1296e860c49ad95b638d8
+SHA1 (tmux-3.0a.tar.gz) = 0cc951b9ff545b429c101eb562e0be9c5aba5ed4
+RMD160 (tmux-3.0a.tar.gz) = 2b781a3632c11098184f787774742b5e5af761ce
+SHA512 (tmux-3.0a.tar.gz) = f326ee9c0e5e9a46ce9c99c76407b8cf35feea5f898c3c937fd8c5e488ff9a809272de19226d9d10f864e11051dcf633327820b7f8d86d85962da61174bbfb0b
+Size (tmux-3.0a.tar.gz) = 546377 bytes
