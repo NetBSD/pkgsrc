@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.16 2020/01/01 02:51:06 pho Exp $
+$NetBSD: CHANGES-2020,v 1.17 2020/01/01 02:55:17 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -20,3 +20,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/hs-contravariant version 1.5.2 [pho 2020-01-01]
 	Updated devel/hs-vector to 0.12.0.3 [pho 2020-01-01]
 	Updated converters/hs-aeson to 1.4.6.0 [pho 2020-01-01]
+	Updated devel/hs-mtl to 2.2.2 [pho 2020-01-01]
