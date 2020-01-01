@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/12/30 00:52:30 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/01 06:13:37 mef Exp $
 
 VERSION=	0.5.8
 DISTNAME=	wand-${VERSION}
@@ -15,6 +15,9 @@ EGG_NAME=	Wand-${VERSION}
 PKGCONFIG_OVERRIDE+=	Wand.pc.in
 
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
+
+post-install:
+	${MV}	${DESTDIR}${PREFIX}/README.rst	${DESTDIR}${PREFIX}/${PYSITELIB}/wand
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
