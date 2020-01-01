@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.37 2020/01/01 05:44:53 mef Exp $
+$NetBSD: CHANGES-2020,v 1.38 2020/01/01 06:44:18 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -52,3 +52,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/alex to 3.2.5 [pho 2020-01-01]
 	Updated devel/happy to 1.19.12 [pho 2020-01-01]
 	Updated devel/p5-Perl-Critic to 1.136 [mef 2020-01-01]
+	Updated devel/hs-blaze-builder to 0.4.1.0 [pho 2020-01-01]
