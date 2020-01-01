@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.52 2020/01/01 21:18:24 adam Exp $
+$NetBSD: CHANGES-2020,v 1.53 2020/01/01 21:30:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -68,3 +68,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/fetchmail to 6.4.1 [triaxx 2020-01-01]
 	Updated graphics/libepoxy to 1.5.4 [adam 2020-01-01]
 	Updated net/haproxy to 2.1.2 [adam 2020-01-01]
+	Updated net/mitmproxy to 5.0.1 [leot 2020-01-01]
