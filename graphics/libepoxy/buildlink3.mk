@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2019/09/04 16:38:06 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2020/01/01 21:16:12 adam Exp $
 
 BUILDLINK_TREE+=	libepoxy
 
@@ -8,7 +8,9 @@ LIBEPOXY_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libepoxy+=	libepoxy>=1.2
 BUILDLINK_PKGSRCDIR.libepoxy?=		../../graphics/libepoxy
 
+.if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.endif
 .endif	# LIBEPOXY_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libepoxy
