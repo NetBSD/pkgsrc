@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.174 2019/12/28 20:43:56 kim Exp $
+# $NetBSD: Makefile,v 1.175 2020/01/01 01:47:29 kim Exp $
 
-DISTNAME=	sudo-1.8.30b3
-PKGNAME=	${DISTNAME:S/b/beta/}
+DISTNAME=	sudo-1.8.30
 CATEGORIES=	security
 MASTER_SITES=	https://www.sudo.ws/dist/
-MASTER_SITES=	https://www.sudo.ws/dist/beta/
 MASTER_SITES+=	ftp://ftp.sudo.ws/pub/sudo/
 MASTER_SITES+=	ftp://ftp.uwsg.indiana.edu/pub/security/sudo/
 MASTER_SITES+=	ftp://ftp.twaren.net/Unix/Security/Sudo/
