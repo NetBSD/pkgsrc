@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19550 2020/01/01 03:44:15 pho Exp $
+$NetBSD: TODO,v 1.19551 2020/01/01 04:23:42 pho Exp $
 
 Suggested new packages
 ======================
@@ -739,7 +739,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hs-cgrep-6.6.3
 	o hs-cpphs-1.20.1
 	o hs-distributive-0.5.0.2
-	o hs-exceptions-0.8.2.1
 	o hs-hscolour-1.24
 	o hs-lifted-base-0.2.3.6
 	o hs-mmorph-1.0.6
