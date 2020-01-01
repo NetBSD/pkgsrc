@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.444 2020/01/01 16:31:23 minskim Exp $
+# $NetBSD: Makefile,v 1.445 2020/01/01 16:38:17 minskim Exp $
 
 COMMENT=	Mathematics
 
@@ -304,6 +304,7 @@ SUBDIR+=	php-stats
 SUBDIR+=	ppl
 SUBDIR+=	prng
 SUBDIR+=	pspp
+SUBDIR+=	py-Keras-Applications
 SUBDIR+=	py-Keras-Preprocessing
 SUBDIR+=	py-Numeric
 SUBDIR+=	py-Scientific
