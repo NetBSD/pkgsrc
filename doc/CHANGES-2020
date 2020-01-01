@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.27 2020/01/01 04:36:11 pho Exp $
+$NetBSD: CHANGES-2020,v 1.28 2020/01/01 04:47:56 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -33,3 +33,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/hs-QuickCheck to 2.13.2 [pho 2020-01-01]
 	Updated devel/hs-exceptions to 0.10.4 [pho 2020-01-01]
 	Updated devel/hs-mmorph to 1.1.3 [pho 2020-01-01]
+	Updated devel/hs-transformers-base to 0.4.5.2 [pho 2020-01-01]
