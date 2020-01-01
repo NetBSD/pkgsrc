@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/01 02:22:40 pho Exp $
+
+SHA1 (StateVar-1.2.tar.gz) = f5783216e997ca13b5da87fb96c6105fd5ff62e3
+RMD160 (StateVar-1.2.tar.gz) = f45b0d43284b3af13071809973716fcfbdc6824c
+SHA512 (StateVar-1.2.tar.gz) = 25c0269a90445ed8166950f51ff45f96672d6b63527387ec4ac1430188eab38bbd1e15a3cd732a5b18b128127e02c276f8117f08572874b50cfa7b26800127f1
+Size (StateVar-1.2.tar.gz) = 4770 bytes
