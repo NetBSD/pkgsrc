@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.79 2019/07/20 22:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2020/01/01 16:21:02 leot Exp $
 
-DISTNAME=	aria2-1.32.0
-PKGREVISION=	9
+DISTNAME=	aria2-1.35.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aria2/}
+GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://aria2.github.io/
 COMMENT=	Multi-threaded, multi-protocol, flexible download accelerator
 LICENSE=	gnu-gpl-v2
-
-GITHUB_PROJECT=	aria2
-GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 
 # Minimum requirement is 4.8.3
 GCC_REQD+=	4.8
