@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.8 2020/01/01 01:47:43 kim Exp $
+$NetBSD: CHANGES-2020,v 1.9 2020/01/01 02:09:37 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -9,3 +9,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/json-yaml to 1.2.1 [sjmulder 2020-01-01]
 	Updated security/doas to 6.2p4 [ng0 2020-01-01]
 	Updated security/sudo to 1.8.30 [kim 2020-01-01]
+	Added devel/hs-uuid-types version 1.0.3 [pho 2020-01-01]
