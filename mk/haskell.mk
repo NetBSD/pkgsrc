@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.7 2020/01/01 04:35:29 pho Exp $
+# $NetBSD: haskell.mk,v 1.8 2020/01/01 04:54:10 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -150,7 +150,7 @@ _HASKELL_BIN=		${_GHC_BIN} # Expose to the outer scope.
 _HASKELL_PKG_BIN=	${_GHC_PKG_BIN} # Expose to the outer scope.
 
 # Determine GHC version.
-_GHC_VERSION_CMD=	${_GHC_BIN} -V | ${CUT} -d ' ' -f 8
+_GHC_VERSION_CMD=	${_GHC_BIN} -V 2>/dev/null | ${CUT} -d ' ' -f 8
 _GHC_VERSION=		${_GHC_VERSION_CMD:sh}
 _GHC_VERSION_FULL=	ghc-${_GHC_VERSION}
 _HASKELL_VERSION=	${_GHC_VERSION_FULL} # Expose to the outer scope.
