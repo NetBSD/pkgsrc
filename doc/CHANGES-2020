@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.23 2020/01/01 03:33:20 pho Exp $
+$NetBSD: CHANGES-2020,v 1.24 2020/01/01 03:41:14 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -29,3 +29,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/hs-syb to 0.7.1 [pho 2020-01-01]
 	Updated devel/hdevtools to 0.1.8.0 [pho 2020-01-01]
 	Updated devel/hs-MonadRandom to 0.3nb1 [pho 2020-01-01]
+	Added devel/hs-splitmix version 0.0.3 [pho 2020-01-01]
