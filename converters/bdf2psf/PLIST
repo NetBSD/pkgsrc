@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/16 19:31:42 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/01 22:26:59 fcambus Exp $
 bin/bdf2psf
 man/man1/bdf2psf.1
+share/bdf2psf/arabic.equivalents
+share/bdf2psf/ascii.set
 share/bdf2psf/fontsets/Arabic.512
 share/bdf2psf/fontsets/Armenian.256
 share/bdf2psf/fontsets/CyrAsia.256
@@ -20,4 +22,7 @@ share/bdf2psf/fontsets/Uni1.512
 share/bdf2psf/fontsets/Uni2.512
 share/bdf2psf/fontsets/Uni3.512
 share/bdf2psf/fontsets/Vietnamese.512
+share/bdf2psf/freebsd.set
+share/bdf2psf/linux.set
 share/bdf2psf/standard.equivalents
+share/bdf2psf/useful.set
