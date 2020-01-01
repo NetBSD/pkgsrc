@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/12/11 23:36:29 ng0 Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/01 01:04:28 ng0 Exp $
 
-DISTNAME=	samurai-0.7
+DISTNAME=	samurai-1.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=michaelforney/}
 
