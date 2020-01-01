@@ -1,0 +1,15 @@
+$NetBSD: patch-resourcet.cabal,v 1.1 2020/01/01 05:15:20 pho Exp $
+
+Relax the upper bound on transformers-compat
+
+--- resourcet.cabal.orig	2018-01-10 03:12:07.000000000 +0000
++++ resourcet.cabal
+@@ -24,7 +24,7 @@ Library
+                      , monad-control            >= 0.3.1        && < 1.1
+                      , containers
+                      , transformers             >= 0.2.2
+-                     , transformers-compat      >= 0.3          && < 0.6
++                     , transformers-compat      >= 0.3          && < 0.7
+                      , mtl                      >= 2.0          && < 2.3
+                      , mmorph
+                      , exceptions               >= 0.5
