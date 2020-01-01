@@ -1,2 +1,6 @@
+$NetBSD: CHANGES-2020,v 1.3 2020/01/01 00:56:09 leot Exp $
+
+Changes to the packages collection and infrastructure in 2020:
+
 	Updated devel/p5-Date-Manip to 6.79 [mef 2020-01-01]
 	Updated devel/p5-IO-Async to 0.75 [mef 2020-01-01]
