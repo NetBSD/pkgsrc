@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19555 2020/01/01 05:12:43 pho Exp $
+$NetBSD: TODO,v 1.19556 2020/01/01 05:15:31 pho Exp $
 
 Suggested new packages
 ======================
@@ -743,7 +743,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hs-mwc-random-0.13.4.0
 	o hs-pandoc-types-1.16.1
 	o hs-reflection-2.1.2
-	o hs-resourcet-1.1.7.3
 	o hs-safe-0.3.9
 	o hs-split-0.2.3
 	o hs-stringsearch-0.3.6.6
