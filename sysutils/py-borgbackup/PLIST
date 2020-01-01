@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/12/02 08:53:10 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/01/01 18:21:49 bsiegert Exp $
 bin/borg-${PYVERSSUFFIX}
 bin/borgfs-${PYVERSSUFFIX}
 ${PYSITELIB}/borg/__init__.py
@@ -50,6 +50,20 @@ ${PYSITELIB}/borg/algorithms/__init__.py
 ${PYSITELIB}/borg/algorithms/__init__.pyo
 ${PYSITELIB}/borg/algorithms/__init__.pyc
 ${PYSITELIB}/borg/algorithms/checksums.so
+${PYSITELIB}/borg/algorithms/msgpack/__init__.py
+${PYSITELIB}/borg/algorithms/msgpack/__init__.pyo
+${PYSITELIB}/borg/algorithms/msgpack/__init__.pyc
+${PYSITELIB}/borg/algorithms/msgpack/_version.pyo
+${PYSITELIB}/borg/algorithms/msgpack/_version.pyc
+${PYSITELIB}/borg/algorithms/msgpack/exceptions.pyo
+${PYSITELIB}/borg/algorithms/msgpack/exceptions.pyc
+${PYSITELIB}/borg/algorithms/msgpack/fallback.pyo
+${PYSITELIB}/borg/algorithms/msgpack/fallback.pyc
+${PYSITELIB}/borg/algorithms/msgpack/_packer.so
+${PYSITELIB}/borg/algorithms/msgpack/_unpacker.so
+${PYSITELIB}/borg/algorithms/msgpack/_version.py
+${PYSITELIB}/borg/algorithms/msgpack/exceptions.py
+${PYSITELIB}/borg/algorithms/msgpack/fallback.py
 ${PYSITELIB}/borg/archive.py
 ${PYSITELIB}/borg/archiver.py
 ${PYSITELIB}/borg/cache.py
