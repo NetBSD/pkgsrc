@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.49 2020/01/01 18:22:06 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.50 2020/01/01 18:34:55 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -64,3 +64,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/py-Keras-Applications version 1.0.8 [minskim 2020-01-01]
 	Added devel/go-xerrors version 20190719 [bsiegert 2020-01-01]
 	Updated sysutils/py-borgbackup to 1.1.10 [bsiegert 2020-01-01]
+	Updated sysutils/augeas to 1.12.0 [bsiegert 2020-01-01]
