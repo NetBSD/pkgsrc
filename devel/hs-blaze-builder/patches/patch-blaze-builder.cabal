@@ -1,0 +1,15 @@
+$NetBSD: patch-blaze-builder.cabal,v 1.1 2020/01/01 06:44:06 pho Exp $
+
+Relax the upper bound on semigroups
+
+--- blaze-builder.cabal.orig	2018-03-14 21:11:24.000000000 +0000
++++ blaze-builder.cabal
+@@ -80,7 +80,7 @@ Library
+      build-depends:  bytestring >= 0.10.4 && < 1.0
+ 
+   if impl(ghc < 8.0)
+-     build-depends: semigroups >= 0.16 && < 0.19
++     build-depends: semigroups >= 0.16 && < 0.20
+ 
+ test-suite test
+   type:           exitcode-stdio-1.0
