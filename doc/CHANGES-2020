@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.41 2020/01/01 14:06:41 nia Exp $
+$NetBSD: CHANGES-2020,v 1.42 2020/01/01 15:06:36 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -56,3 +56,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed x11/grandr_applet [nia 2020-01-01]
 	Removed x11/fast-user-switch-applet [nia 2020-01-01]
 	Removed net/gnome-netstatus [nia 2020-01-01]
+	Updated misc/tmux to 3.0a [leot 2020-01-01]
