@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.10 2020/01/01 02:13:22 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.11 2020/01/01 02:18:21 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -12,3 +12,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed graphics/qiviewer [kamil 2020-01-01]
 	Removed math/extcalc [kamil 2020-01-01]
 	Added devel/hs-uuid-types version 1.0.3 [pho 2020-01-01]
+	Updated devel/hs-stm to 2.5.0.0 [pho 2020-01-01]
