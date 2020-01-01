@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2969 2020/01/01 05:03:44 pho Exp $
+# $NetBSD: Makefile,v 1.2970 2020/01/01 17:42:11 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -440,6 +440,7 @@ SUBDIR+=	go-thrift
 SUBDIR+=	go-tools
 SUBDIR+=	go-try
 SUBDIR+=	go-viper
+SUBDIR+=	go-xerrors
 SUBDIR+=	go-yaml
 SUBDIR+=	gob2
 SUBDIR+=	gobject-introspection
