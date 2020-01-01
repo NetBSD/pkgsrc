@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.39 2020/01/01 14:01:42 nia Exp $
+$NetBSD: CHANGES-2020,v 1.40 2020/01/01 14:03:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -54,3 +54,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Perl-Critic to 1.136 [mef 2020-01-01]
 	Updated devel/hs-blaze-builder to 0.4.1.0 [pho 2020-01-01]
 	Removed x11/grandr_applet [nia 2020-01-01]
+	Removed x11/fast-user-switch-applet [nia 2020-01-01]
