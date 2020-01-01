@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2020/01/01 05:58:27 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/01/01 06:13:37 mef Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/wand/README.rst
 ${PYSITELIB}/wand/__init__.py
 ${PYSITELIB}/wand/__init__.pyc
 ${PYSITELIB}/wand/__init__.pyo
@@ -73,4 +74,3 @@ ${PYSITELIB}/wand/sequence.pyo
 ${PYSITELIB}/wand/version.py
 ${PYSITELIB}/wand/version.pyc
 ${PYSITELIB}/wand/version.pyo
-README.rst
