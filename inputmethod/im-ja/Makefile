@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2019/07/21 22:25:10 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2020/01/01 14:16:41 nia Exp $
 #
 
 DISTNAME=	im-ja-1.5
-PKGREVISION=	66
+PKGREVISION=	67
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://im-ja.sourceforge.net/
 
@@ -20,14 +20,9 @@ GCONF_SCHEMAS+=	im-ja.schemas
 GTK2_IMMODULES=	yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--disable-gnome
 
 .include "options.mk"
-
-SUBST_CLASSES+=		fixpkgcfg
-SUBST_STAGE.fixpkgcfg=	pre-configure
-SUBST_FILES.fixpkgcfg=	configure
-SUBST_SED.fixpkgcfg=	-e 's|libpanelapplet-2.0|libgnomeui-2.0 libpanelapplet-2.0|g'
-
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
