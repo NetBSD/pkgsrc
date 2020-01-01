@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.11 2019/12/31 14:42:22 rhialto Exp $
+# $NetBSD: options.mk,v 1.12 2020/01/01 16:30:37 rhialto Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vice
-PKG_SUPPORTED_OPTIONS=		ffmpeg x64 cpuhistory
+PKG_SUPPORTED_OPTIONS=		ffmpeg vice-x64 vice-cpuhistory
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
 PKG_OPTIONS_GROUP.gui=		gtk3 sdl sdl2
 PKG_SUGGESTED_OPTIONS=		gtk3 ffmpeg
@@ -39,11 +39,11 @@ CONFIGURE_ARGS+=	--enable-external-ffmpeg
 .endif
 
 # Building x64 is deprecated, in favour of x64sc (but that is slower).
-.if !empty(PKG_OPTIONS:Mx64)
+.if !empty(PKG_OPTIONS:Mvice-x64)
 CONFIGURE_ARGS+=	--enable-x64
 PLIST.x64=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mcpuhistory)
+.if !empty(PKG_OPTIONS:Mvice-cpuhistory)
 CONFIGURE_ARGS+=	--enable-cpuhistory
 .endif
