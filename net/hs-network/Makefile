@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2016/01/10 11:49:10 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/01 03:10:36 pho Exp $
 
-DISTNAME=	network-2.5.0.0
-PKGREVISION=	11
+DISTNAME=	network-3.1.1.1
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org
@@ -9,5 +8,4 @@ COMMENT=	Haskell Low-level networking interface
 LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"
-.include "../../textproc/hs-parsec/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
