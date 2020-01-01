@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:23:01 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/01 15:50:30 leot Exp $
 
-DISTNAME=	sqlmap-1.3.7
-PKGREVISION=	1
+DISTNAME=	sqlmap-1.4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
@@ -14,6 +13,7 @@ USE_TOOLS+=	bash:run perl:run
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
+REPLACE_BASH+=	sqlmap/extra/shutils/autocompletion.sh
 REPLACE_BASH+=	sqlmap/extra/shutils/blanks.sh
 REPLACE_BASH+=	sqlmap/extra/shutils/drei.sh
 REPLACE_BASH+=	sqlmap/extra/shutils/junk.sh
