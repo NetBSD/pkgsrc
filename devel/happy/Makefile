@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/01/08 11:50:54 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/01 05:37:22 pho Exp $
 
-DISTNAME=	happy-1.19.5
+DISTNAME=	happy-1.19.12
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
 
 MAINTAINER=	esg@sdf.lonestar.org
-COMMENT=	Happy is a parser generator for Haskell
+COMMENT=	Parser generator for Haskell
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	autoconf
