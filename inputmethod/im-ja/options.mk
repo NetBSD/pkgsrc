@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.2 2012/03/10 15:24:50 obache Exp $
+# $NetBSD: options.mk,v 1.3 2020/01/01 14:16:41 nia Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.im-ja
-PKG_SUPPORTED_OPTIONS=	anthy canna wnn4 skk gnome xim
-PKG_SUGGESTED_OPTIONS=	anthy canna skk gnome xim
+PKG_SUPPORTED_OPTIONS=	anthy canna wnn4 skk xim
+PKG_SUGGESTED_OPTIONS=	anthy canna skk xim
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gnome xim
+PLIST_VARS+=		xim
 
 #
 # Canna support
@@ -41,16 +41,6 @@ CONFIGURE_ARGS+=	--disable-wnn
 #
 .if empty(PKG_OPTIONS:Mskk)
 CONFIGURE_ARGS+=	--disable-skk
-.endif
-
-#
-# Gnome applet
-#
-.if !empty(PKG_OPTIONS:Mgnome)
-.include "../../x11/gnome-panel/buildlink3.mk"
-PLIST.gnome=	yes
-.else
-CONFIGURE_ARGS+=	--disable-gnome
 .endif
 
 #
