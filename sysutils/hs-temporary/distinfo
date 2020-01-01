@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:17 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/01/01 05:24:54 pho Exp $
 
-SHA1 (temporary-1.2.0.3.tar.gz) = 7f3468c837d1b82b9c684dce68581c5ab4f6b849
-RMD160 (temporary-1.2.0.3.tar.gz) = be576becdb377708ccd69973fcffc7332d755680
-SHA512 (temporary-1.2.0.3.tar.gz) = ceada89c2166c315b2a54cae0a636eb0b38e6e89481ef32d3d1e4305d4e601305b4cb88fba3069493e8fe2014e3d237348a37567aba61e617c69707f0a16dd34
-Size (temporary-1.2.0.3.tar.gz) = 5308 bytes
+SHA1 (temporary-1.3.tar.gz) = e7b96ac6866a93147c229d972c2438618fe46452
+RMD160 (temporary-1.3.tar.gz) = 87a3a76754eab4db36f5c3d716bbfb4220d36fdd
+SHA512 (temporary-1.3.tar.gz) = e3078caf54da95c4efa9e9c936b35a98b62296ecce2242cd4e103605a9d29e8a9d6c7027dbf50d02b6a893bea558ea5b07dbb1df7c59bf26d86db76ccf112f25
+Size (temporary-1.3.tar.gz) = 5686 bytes
