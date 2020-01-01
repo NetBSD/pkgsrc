@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.870 2019/12/31 20:22:41 markd Exp $
+# $NetBSD: Makefile,v 1.871 2020/01/01 14:01:00 nia Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -77,7 +77,6 @@ SUBDIR+=	gnopernicus
 SUBDIR+=	gnustep-back
 SUBDIR+=	gnustep-gui
 SUBDIR+=	gnustep-preferences
-SUBDIR+=	grandr_applet
 SUBDIR+=	gromit
 SUBDIR+=	gselt
 SUBDIR+=	gst-plugins0.10-x11
