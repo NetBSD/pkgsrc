@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.19 2020/01/01 03:10:45 pho Exp $
+$NetBSD: CHANGES-2020,v 1.20 2020/01/01 03:12:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -18,8 +18,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-StateVar version 1.2 [pho 2020-01-01]
 	Updated devel/p5-ExtUtils-MakeMaker to 7.42 [mef 2020-01-01]
 	Added math/hs-contravariant version 1.5.2 [pho 2020-01-01]
+	Updated devel/p5-Alien-Build to 1.94 [mef 2020-01-01]
 	Updated devel/hs-vector to 0.12.0.3 [pho 2020-01-01]
 	Updated converters/hs-aeson to 1.4.6.0 [pho 2020-01-01]
 	Updated devel/hs-mtl to 2.2.2 [pho 2020-01-01]
 	Updated devel/hs-cmdargs to 0.10.20 [pho 2020-01-01]
+	Updated devel/p5-CPAN-Perl-Releases to 5.20191220 [mef 2020-01-01]
+	Updated devel/p5-Compress-Raw-Zlib to 2.093 [mef 2020-01-01]
 	Updated net/hs-network to 3.1.1.1 [pho 2020-01-01]
