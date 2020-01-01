@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.50 2020/01/01 18:34:55 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.51 2020/01/01 20:37:13 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -65,3 +65,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/go-xerrors version 20190719 [bsiegert 2020-01-01]
 	Updated sysutils/py-borgbackup to 1.1.10 [bsiegert 2020-01-01]
 	Updated sysutils/augeas to 1.12.0 [bsiegert 2020-01-01]
+	Updated mail/fetchmail to 6.4.1 [triaxx 2020-01-01]
