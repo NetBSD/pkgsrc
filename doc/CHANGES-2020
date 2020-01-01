@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.46 2020/01/01 16:31:27 minskim Exp $
+$NetBSD: CHANGES-2020,v 1.47 2020/01/01 16:38:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -61,3 +61,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/sqlmap to 1.4 [leot 2020-01-01]
 	Updated net/aria2 to 1.35.0 [leot 2020-01-01]
 	Added math/py-Keras-Preprocessing version 1.1.0 [minskim 2020-01-01]
+	Added math/py-Keras-Applications version 1.0.8 [minskim 2020-01-01]
