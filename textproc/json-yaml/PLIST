@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2018/12/06 19:41:08 leot Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/01/01 01:19:00 sjmulder Exp $
 bin/json-yaml
+bin/yaml-json
 man/man1/json-yaml.1
+man/man1/yaml-json.1
