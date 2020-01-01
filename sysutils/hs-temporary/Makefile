@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/11/23 12:52:33 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/01 05:24:54 pho Exp $
 
-DISTNAME=	temporary-1.2.0.3
-PKGREVISION=	1
+DISTNAME=	temporary-1.3
 CATEGORIES=	sysutils
 
 MAINTAINER=	szptvlfn@NetBSD.org
@@ -10,5 +9,5 @@ LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"
 .include "../../devel/hs-exceptions/buildlink3.mk"
-.include "../../devel/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-random/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
