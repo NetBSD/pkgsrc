@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.7 2020/01/01 01:30:37 ng0 Exp $
+$NetBSD: CHANGES-2020,v 1.8 2020/01/01 01:47:43 kim Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -8,3 +8,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/nsm to 1.25 [ng0 2020-01-01]
 	Updated textproc/json-yaml to 1.2.1 [sjmulder 2020-01-01]
 	Updated security/doas to 6.2p4 [ng0 2020-01-01]
+	Updated security/sudo to 1.8.30 [kim 2020-01-01]
