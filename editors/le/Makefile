@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/08/18 08:23:47 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/01 22:12:08 fcambus Exp $
 
-DISTNAME=	le-1.16.6
+DISTNAME=	le-1.16.7
 CATEGORIES=	editors
 MASTER_SITES=	http://lav.yar.ru/download/le/
 
