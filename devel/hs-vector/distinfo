@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/12/13 14:08:12 szptvlfn Exp $
+$NetBSD: distinfo,v 1.7 2020/01/01 02:43:35 pho Exp $
 
-SHA1 (vector-0.11.0.0.tar.gz) = ff428de60145127a7c4de7b66a1c70eb11b87c3a
-RMD160 (vector-0.11.0.0.tar.gz) = 7d4b4839385bcfed622b9be1d40801b7b33f03b2
-SHA512 (vector-0.11.0.0.tar.gz) = 4f31e45d08a08c09e5ce73cca4da70e954bf3921d05130b9458c7f2ba267602e0aafc96496595000fd7b82f80aa9147c880917dc64086dab7bf5b2cd426539e0
-Size (vector-0.11.0.0.tar.gz) = 115558 bytes
+SHA1 (vector-0.12.0.3.tar.gz) = c57440b2887ed62f7c83526f99e3ce8201e433c7
+RMD160 (vector-0.12.0.3.tar.gz) = c030f62c6116e7701ec727b18a9c630a77f70281
+SHA512 (vector-0.12.0.3.tar.gz) = 176646ae612866064303cd200e9d940fec1645bb88176a89adb00df3b9a6df96200e3c9cf85a57af3a1481d6633b353da8e03d7a6c467c40e926275fe8d36853
+Size (vector-0.12.0.3.tar.gz) = 124899 bytes
+SHA1 (patch-vector.cabal) = 878fc2b59215ca4bcc3e418534ef7b29f24ce743
