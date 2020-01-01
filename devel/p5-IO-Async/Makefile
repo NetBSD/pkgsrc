@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 10:15:55 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/01 00:41:29 mef Exp $
 
-DISTNAME=	IO-Async-0.74
+DISTNAME=	IO-Async-0.75
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
