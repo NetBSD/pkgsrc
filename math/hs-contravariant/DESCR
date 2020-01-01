@@ -1,0 +1,4 @@
+Contravariant functors, sometimes referred to colloquially as
+cofunctor, even though the dual of a functor is just a functor. As
+with functor the definition of contravariant for a given ADT is
+unambiguous.
