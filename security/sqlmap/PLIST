@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/07/21 12:56:26 leot Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/01/01 15:50:30 leot Exp $
 bin/sqlmap
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -13,6 +13,7 @@ ${PYSITELIB}/sqlmap/README.md
 ${PYSITELIB}/sqlmap/__init__.py
 ${PYSITELIB}/sqlmap/__init__.pyc
 ${PYSITELIB}/sqlmap/__init__.pyo
+${PYSITELIB}/sqlmap/data/html/index.html
 ${PYSITELIB}/sqlmap/data/procs/README.txt
 ${PYSITELIB}/sqlmap/data/procs/mssqlserver/activate_sp_oacreate.sql
 ${PYSITELIB}/sqlmap/data/procs/mssqlserver/configure_openrowset.sql
@@ -100,8 +101,6 @@ ${PYSITELIB}/sqlmap/data/xml/payloads/union_query.xml
 ${PYSITELIB}/sqlmap/data/xml/queries.xml
 ${PYSITELIB}/sqlmap/doc/AUTHORS
 ${PYSITELIB}/sqlmap/doc/CHANGELOG.md
-${PYSITELIB}/sqlmap/doc/FAQ.pdf
-${PYSITELIB}/sqlmap/doc/README.pdf
 ${PYSITELIB}/sqlmap/doc/THANKS.md
 ${PYSITELIB}/sqlmap/doc/THIRD-PARTY.md
 ${PYSITELIB}/sqlmap/doc/translations/README-bg-BG.md
@@ -113,6 +112,7 @@ ${PYSITELIB}/sqlmap/doc/translations/README-hr-HR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-id-ID.md
 ${PYSITELIB}/sqlmap/doc/translations/README-it-IT.md
 ${PYSITELIB}/sqlmap/doc/translations/README-ja-JP.md
+${PYSITELIB}/sqlmap/doc/translations/README-ko-KR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-pl-PL.md
 ${PYSITELIB}/sqlmap/doc/translations/README-pt-BR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-ru-RUS.md
@@ -162,17 +162,11 @@ ${PYSITELIB}/sqlmap/extra/runcmd/src/runcmd/runcmd.cpp
 ${PYSITELIB}/sqlmap/extra/runcmd/src/runcmd/runcmd.vcproj
 ${PYSITELIB}/sqlmap/extra/runcmd/src/runcmd/stdafx.cpp
 ${PYSITELIB}/sqlmap/extra/runcmd/src/runcmd/stdafx.h
-${PYSITELIB}/sqlmap/extra/safe2bin/README.txt
-${PYSITELIB}/sqlmap/extra/safe2bin/__init__.py
-${PYSITELIB}/sqlmap/extra/safe2bin/__init__.pyc
-${PYSITELIB}/sqlmap/extra/safe2bin/__init__.pyo
-${PYSITELIB}/sqlmap/extra/safe2bin/safe2bin.py
-${PYSITELIB}/sqlmap/extra/safe2bin/safe2bin.pyc
-${PYSITELIB}/sqlmap/extra/safe2bin/safe2bin.pyo
 ${PYSITELIB}/sqlmap/extra/shellcodeexec/README.txt
 ${PYSITELIB}/sqlmap/extra/shellcodeexec/linux/shellcodeexec.x32_
 ${PYSITELIB}/sqlmap/extra/shellcodeexec/linux/shellcodeexec.x64_
 ${PYSITELIB}/sqlmap/extra/shellcodeexec/windows/shellcodeexec.x32.exe_
+${PYSITELIB}/sqlmap/extra/shutils/autocompletion.sh
 ${PYSITELIB}/sqlmap/extra/shutils/blanks.sh
 ${PYSITELIB}/sqlmap/extra/shutils/drei.sh
 ${PYSITELIB}/sqlmap/extra/shutils/duplicates.py
@@ -256,6 +250,9 @@ ${PYSITELIB}/sqlmap/lib/core/enums.pyo
 ${PYSITELIB}/sqlmap/lib/core/exception.py
 ${PYSITELIB}/sqlmap/lib/core/exception.pyc
 ${PYSITELIB}/sqlmap/lib/core/exception.pyo
+${PYSITELIB}/sqlmap/lib/core/gui.py
+${PYSITELIB}/sqlmap/lib/core/gui.pyc
+${PYSITELIB}/sqlmap/lib/core/gui.pyo
 ${PYSITELIB}/sqlmap/lib/core/log.py
 ${PYSITELIB}/sqlmap/lib/core/log.pyc
 ${PYSITELIB}/sqlmap/lib/core/log.pyo
@@ -466,9 +463,9 @@ ${PYSITELIB}/sqlmap/lib/utils/hash.pyo
 ${PYSITELIB}/sqlmap/lib/utils/hashdb.py
 ${PYSITELIB}/sqlmap/lib/utils/hashdb.pyc
 ${PYSITELIB}/sqlmap/lib/utils/hashdb.pyo
-${PYSITELIB}/sqlmap/lib/utils/htmlentities.py
-${PYSITELIB}/sqlmap/lib/utils/htmlentities.pyc
-${PYSITELIB}/sqlmap/lib/utils/htmlentities.pyo
+${PYSITELIB}/sqlmap/lib/utils/httpd.py
+${PYSITELIB}/sqlmap/lib/utils/httpd.pyc
+${PYSITELIB}/sqlmap/lib/utils/httpd.pyo
 ${PYSITELIB}/sqlmap/lib/utils/pivotdumptable.py
 ${PYSITELIB}/sqlmap/lib/utils/pivotdumptable.pyc
 ${PYSITELIB}/sqlmap/lib/utils/pivotdumptable.pyo
@@ -478,6 +475,9 @@ ${PYSITELIB}/sqlmap/lib/utils/progress.pyo
 ${PYSITELIB}/sqlmap/lib/utils/purge.py
 ${PYSITELIB}/sqlmap/lib/utils/purge.pyc
 ${PYSITELIB}/sqlmap/lib/utils/purge.pyo
+${PYSITELIB}/sqlmap/lib/utils/safe2bin.py
+${PYSITELIB}/sqlmap/lib/utils/safe2bin.pyc
+${PYSITELIB}/sqlmap/lib/utils/safe2bin.pyo
 ${PYSITELIB}/sqlmap/lib/utils/search.py
 ${PYSITELIB}/sqlmap/lib/utils/search.pyc
 ${PYSITELIB}/sqlmap/lib/utils/search.pyo
