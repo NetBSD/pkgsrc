@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2019/10/19 13:42:08 mef Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/01 03:50:08 mef Exp $
 
-DISTNAME=	Glib-Object-Introspection-0.047
+DISTNAME=	Glib-Object-Introspection-0.048
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
@@ -14,7 +14,6 @@ LICENSE=	gnu-lgpl-v2.1
 DEPENDS+=	p5-ExtUtils-Depends>=0.300:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1.000:../../devel/p5-ExtUtils-PkgConfig
 
-USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config
 
 PERL5_PACKLIST=		auto/Glib/Object/Introspection/.packlist
