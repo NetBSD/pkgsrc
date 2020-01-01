@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2968 2020/01/01 03:41:45 pho Exp $
+# $NetBSD: Makefile,v 1.2969 2020/01/01 05:03:44 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -528,6 +528,7 @@ SUBDIR+=	hs-tf-random
 SUBDIR+=	hs-transformers-base
 SUBDIR+=	hs-transformers-compat
 SUBDIR+=	hs-uniplate
+SUBDIR+=	hs-unliftio-core
 SUBDIR+=	hs-unordered-containers
 SUBDIR+=	hs-utf8-string
 SUBDIR+=	hs-uuid-types
