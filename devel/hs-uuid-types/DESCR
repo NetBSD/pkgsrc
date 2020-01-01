@@ -1,0 +1,3 @@
+This library contains type definitions for Universally Unique
+Identifiers and basic conversion functions. See
+http://en.wikipedia.org/wiki/UUID for the general idea.
