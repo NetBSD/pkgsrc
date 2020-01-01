@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/12/13 14:14:35 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/01 03:44:06 pho Exp $
 
-DISTNAME=	QuickCheck-2.7.6
-PKGREVISION=	3
+DISTNAME=	QuickCheck-2.13.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
@@ -10,6 +9,5 @@ LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"
 .include "../../devel/hs-random/buildlink3.mk"
-.include "../../devel/hs-tf-random/buildlink3.mk"
-.include "../../devel/hs-transformers/buildlink3.mk"
+.include "../../devel/hs-splitmix/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
