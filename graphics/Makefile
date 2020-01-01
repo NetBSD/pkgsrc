@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.871 2019/12/30 00:56:15 mef Exp $
+# $NetBSD: Makefile,v 1.872 2020/01/01 01:57:59 kamil Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -489,7 +489,6 @@ SUBDIR+=	py-uniconvertor
 SUBDIR+=	py-wand
 SUBDIR+=	qimageblitz
 SUBDIR+=	qiv
-SUBDIR+=	qiviewer
 SUBDIR+=	qore-glut-module
 SUBDIR+=	qore-opengl-module
 SUBDIR+=	quesoglc
