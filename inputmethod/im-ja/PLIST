@@ -1,16 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:39 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/01/01 14:16:41 nia Exp $
 bin/im-ja-conf
 ${PLIST.xim}bin/im-ja-xim-server
-${PLIST.gnome}lib/bonobo/servers/GNOME_ImJaApplet.server
 lib/gtk-2.0/2.10.0/immodules/im-ja.la
-${PLIST.gnome}libexec/im-ja/im-ja-applet
 libexec/im-ja/im-ja-helper
 libexec/im-ja/kpengine
 man/man1/im-ja-conf.1
 ${PLIST.xim}man/man1/im-ja-xim-server.1
 share/applications/im-ja.desktop
 share/gconf/schemas/im-ja.schemas
-${PLIST.gnome}share/gnome-2.0/ui/GNOME_ImJaApplet.xml
 share/im-ja/01.unistrok
 share/im-ja/02.unistrok
 share/im-ja/03.unistrok
