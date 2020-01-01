@@ -1,7 +1,8 @@
-$NetBSD: CHANGES-2020,v 1.4 2020/01/01 01:05:19 ng0 Exp $
+$NetBSD: CHANGES-2020,v 1.5 2020/01/01 01:10:58 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
 	Updated devel/p5-Date-Manip to 6.79 [mef 2020-01-01]
 	Updated devel/p5-IO-Async to 0.75 [mef 2020-01-01]
 	Updated devel/samurai to 1.0 [ng0 2020-01-01]
+	Updated www/nsm to 1.25 [ng0 2020-01-01]
