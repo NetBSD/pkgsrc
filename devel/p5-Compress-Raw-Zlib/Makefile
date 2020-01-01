@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2019/11/27 12:18:23 mef Exp $
+# $NetBSD: Makefile,v 1.52 2020/01/01 03:09:21 mef Exp $
 
-DISTNAME=	Compress-Raw-Zlib-2.091
+DISTNAME=	Compress-Raw-Zlib-2.093
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Compress/}
@@ -12,7 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 
-USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Compress/Raw/Zlib/.packlist
 MAKE_ENV+=		BUILD_ZLIB=False
 MAKE_ENV+=		OLD_ZLIB=False
