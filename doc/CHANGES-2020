@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.17 2020/01/01 02:55:17 pho Exp $
+$NetBSD: CHANGES-2020,v 1.18 2020/01/01 03:01:25 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -21,3 +21,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/hs-vector to 0.12.0.3 [pho 2020-01-01]
 	Updated converters/hs-aeson to 1.4.6.0 [pho 2020-01-01]
 	Updated devel/hs-mtl to 2.2.2 [pho 2020-01-01]
+	Updated devel/hs-cmdargs to 0.10.20 [pho 2020-01-01]
