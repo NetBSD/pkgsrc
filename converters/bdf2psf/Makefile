@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/11/19 14:33:04 fcambus Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/01 22:26:59 fcambus Exp $
 
 DISTNAME=	console-setup_1.194
 PKGNAME=	bdf2psf-1.194
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/c/console-setup/}
 EXTRACT_SUFX=	.tar.xz
@@ -27,8 +28,8 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Fonts/${PKGBASE} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/${PKGBASE}.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/Fonts/standard.equivalents \
-		${DESTDIR}${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/Fonts/*.equivalents ${DESTDIR}${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/Fonts/*.set ${DESTDIR}${SHAREDIR}
 	${INSTALL_DATA} ${WRKSRC}/Fonts/fontsets/* \
 		${DESTDIR}${SHAREDIR}/fontsets
 
