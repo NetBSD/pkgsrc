@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/09/06 14:43:14 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2020/01/01 05:32:03 pho Exp $
 
-SHA1 (alex-3.1.7.tar.gz) = c2c66eb9a4ba6c4c972b4efe0c9916cbd3eba29b
-RMD160 (alex-3.1.7.tar.gz) = f96a1970e649c5928c8e4450517fa721e8059e10
-SHA512 (alex-3.1.7.tar.gz) = 0c4e87011617d8f8ad7cdf32b91e3ecc65ad66ea378c8086de8cbeb7ae3b37df478fb834e3bc453e3448fcae9d03b19ce9844bba35ad66a3cdf6e912790fe0a1
-Size (alex-3.1.7.tar.gz) = 103624 bytes
+SHA1 (alex-3.2.5.tar.gz) = b3c20439916813ecd81604813594bd4ee2fd3331
+RMD160 (alex-3.2.5.tar.gz) = d1ba9a2e529ec162c9c9a9c45b4dc1babc05a1f6
+SHA512 (alex-3.2.5.tar.gz) = 5823fb066c5ec67256108cfc1550703b86881f319337922e7248fb33def374f0010c60605538a49cfaaa880b0f73ace9dba6d088c078f3c455c5d9adce2719c9
+Size (alex-3.2.5.tar.gz) = 108531 bytes
