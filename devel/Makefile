@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2964 2019/12/17 10:05:57 leot Exp $
+# $NetBSD: Makefile,v 1.2965 2020/01/01 02:01:07 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -486,6 +486,7 @@ SUBDIR+=	hs-QuickCheck
 SUBDIR+=	hs-ansi-terminal
 SUBDIR+=	hs-base-unicode-symbols
 SUBDIR+=	hs-blaze-builder
+SUBDIR+=	hs-colour
 SUBDIR+=	hs-cmdargs
 SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-data-default
@@ -498,6 +499,8 @@ SUBDIR+=	hs-deepseq-generics
 SUBDIR+=	hs-dlist
 SUBDIR+=	hs-exceptions
 SUBDIR+=	hs-extensible-exceptions
+SUBDIR+=	hs-fail
+SUBDIR+=	hs-generic-deriving
 SUBDIR+=	hs-ghc-mtl
 SUBDIR+=	hs-ghc-paths
 SUBDIR+=	hs-hashable
@@ -507,6 +510,7 @@ SUBDIR+=	hs-lifted-base
 SUBDIR+=	hs-mmorph
 SUBDIR+=	hs-monad-control
 SUBDIR+=	hs-mtl
+SUBDIR+=	hs-old-locale
 SUBDIR+=	hs-primitive
 SUBDIR+=	hs-random
 SUBDIR+=	hs-reflection
@@ -519,7 +523,6 @@ SUBDIR+=	hs-syb
 SUBDIR+=	hs-tagged
 SUBDIR+=	hs-text
 SUBDIR+=	hs-tf-random
-SUBDIR+=	hs-transformers
 SUBDIR+=	hs-transformers-base
 SUBDIR+=	hs-transformers-compat
 SUBDIR+=	hs-uniplate
