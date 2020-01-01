@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2019/02/11 18:40:37 bsiegert Exp $
+$NetBSD: distinfo,v 1.17 2020/01/01 18:21:49 bsiegert Exp $
 
-SHA1 (borgbackup-1.1.9.tar.gz) = 6028a5b867b0a7d87e1ca67b1e4f60a15e048bfd
-RMD160 (borgbackup-1.1.9.tar.gz) = b40a6bf068d557bd7359ca77da53417fe403092e
-SHA512 (borgbackup-1.1.9.tar.gz) = 466288258700fb0b3dae936c79fd423d26bea2d721dd70112b3cfd0f8e2bb335144a00de76743c31d336f6c19793775260d154326ec70d6d6d0a4e5ad6a59e59
-Size (borgbackup-1.1.9.tar.gz) = 3468259 bytes
-SHA1 (patch-setup.py) = 00e64219203374efccc2b0260b5d2fde482d61dc
+SHA1 (borgbackup-1.1.10.tar.gz) = 0e9a7ae059117ebb69009d55b5250f29bddf5e46
+RMD160 (borgbackup-1.1.10.tar.gz) = 4d02f9363b585a703c90854f22f8260cc596c84a
+SHA512 (borgbackup-1.1.10.tar.gz) = 9315335208f10427e3105e10819817d15fd05171479252903bd51eaacb016bc3ff792d505b9203ce0b9b41ec350472bdb9a23b0128e7fe156aaa47c1608451c0
+Size (borgbackup-1.1.10.tar.gz) = 3610011 bytes
+SHA1 (patch-src_borg_helpers.py) = 3c918f2f280406d16da0d8aba993b0e264508be2
