@@ -1,0 +1,15 @@
+$NetBSD: patch-vector.cabal,v 1.1 2020/01/01 02:43:36 pho Exp $
+
+Relax the upper bound on semigroups
+
+--- vector.cabal.orig	2001-09-09 01:46:40.000000000 +0000
++++ vector.cabal
+@@ -150,7 +150,7 @@ Library
+                , deepseq >= 1.1 && < 1.5
+   if !impl(ghc > 8.0)
+     Build-Depends: fail == 4.9.*
+-                 , semigroups >= 0.18 && < 0.19
++                 , semigroups >= 0.18 && < 0.20
+ 
+   Ghc-Options: -O2 -Wall
+ 
