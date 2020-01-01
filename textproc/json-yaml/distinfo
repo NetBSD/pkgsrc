@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/12/06 19:41:08 leot Exp $
+$NetBSD: distinfo,v 1.3 2020/01/01 01:19:00 sjmulder Exp $
 
-SHA1 (json-yaml-1.1.2.tar.gz) = 52252bd2ad5200f0dd44f32e4d75dba558e0104c
-RMD160 (json-yaml-1.1.2.tar.gz) = 975a9b54a30ffedd98b7163ad3dc4b399bb7d0ad
-SHA512 (json-yaml-1.1.2.tar.gz) = 1aad3ae60b4a6215b894966f2857701911262e146be18c223c4ece4ca23fc4746038f0e5200807f29e2e1808ab124217122107b4790b7302fbcb3224e3f94c3e
-Size (json-yaml-1.1.2.tar.gz) = 4381 bytes
+SHA1 (json-yaml-1.2.1.tar.gz) = 41e4e638db3c14ef4ffa9433caf9f7c10c03e456
+RMD160 (json-yaml-1.2.1.tar.gz) = 87d0e805b6e5a4b6fdf201b3b993a7b4ca5aaabb
+SHA512 (json-yaml-1.2.1.tar.gz) = b5fa09329205d4f8e2ff02f2a2e60085102af4d4c4b21fe3f4196bdf86a98c38fe4213da6ec52e3b15625d6254796541e1429b6728c076edb7d72e6cf30dc385
+Size (json-yaml-1.2.1.tar.gz) = 5409 bytes
