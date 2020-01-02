@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/11/04 21:28:44 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/02 19:34:29 bsiegert Exp $
 
-DISTNAME=	di-4.47
+DISTNAME=	di-4.47.3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://gentoo.com/di/
 
