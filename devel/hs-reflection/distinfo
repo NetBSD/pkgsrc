@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:33 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/01/02 07:16:27 pho Exp $
 
-SHA1 (reflection-1.5.1.tar.gz) = cb0c9630b562667fe4044b329309c8aae792b9fe
-RMD160 (reflection-1.5.1.tar.gz) = 2069fc51ecc5e26e733929c3172bc4bb131c7849
-SHA512 (reflection-1.5.1.tar.gz) = 8872bb50c2e059455f4dc80803747f2dcb08953176db99ddd2b49e55933a85278f6a354425145d32957055b7925d47677b4b85a88560b73263c54ae4700de451
-Size (reflection-1.5.1.tar.gz) = 9436 bytes
+SHA1 (reflection-2.1.5.tar.gz) = 4cafda8b1f6e88d138b5d6d1ca3bcbac24d09188
+RMD160 (reflection-2.1.5.tar.gz) = 70dd58a3e57667dd1720ab7ef0b09b419034cb17
+SHA512 (reflection-2.1.5.tar.gz) = 4b7c909d61ba6d19f8e120e9e53de7bf9e3fb69038cfa7e3027160e4c6e22b415d1d0cce60476e14bf0a205b848d53f1751915bdebfe83a400003f4aaf6286eb
+Size (reflection-2.1.5.tar.gz) = 19532 bytes
