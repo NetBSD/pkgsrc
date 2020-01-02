@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.94 2020/01/02 15:27:34 pho Exp $
+$NetBSD: CHANGES-2020,v 1.95 2020/01/02 15:34:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -111,3 +111,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/cups to 2.3.1 [leot 2020-01-02]
 	Updated print/cups-base to 2.3.1 [leot 2020-01-02]
 	Added net/hs-network-uri version 2.6.1.0 [pho 2020-01-02]
+	Updated sysutils/entr to 4.3 [leot 2020-01-02]
