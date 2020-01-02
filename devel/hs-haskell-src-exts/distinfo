@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/12/05 14:08:39 szptvlfn Exp $
+$NetBSD: distinfo,v 1.6 2020/01/02 04:52:43 pho Exp $
 
-SHA1 (haskell-src-exts-1.17.1.tar.gz) = 905497194bc10ad06bd1826936b78334d7f9b6b1
-RMD160 (haskell-src-exts-1.17.1.tar.gz) = fcd3d819912313e1b38a574ca6bf2165ab787819
-SHA512 (haskell-src-exts-1.17.1.tar.gz) = e08bc31720640e595803ff33d454b717cd015cf8b70f0196f387e7ebaca4b3551aa41ce6c900370496a68e48e1a9c078235674f7050f6de42ffdfc9fce6544e2
-Size (haskell-src-exts-1.17.1.tar.gz) = 2489624 bytes
+SHA1 (haskell-src-exts-1.22.0.tar.gz) = cec1e41617e9cfcaf251572477d3e6ade1201397
+RMD160 (haskell-src-exts-1.22.0.tar.gz) = d9d4b87c3d2899e7c2bc3d076e70e725e54474d7
+SHA512 (haskell-src-exts-1.22.0.tar.gz) = 7d55ffacdc63c12a5f96825c21c04eee1bdb383662c9804b4ceeb2054a513a2439b3a715148bc0080d4aeaf07271c8cfaf2a2c6196020061849a4bd0756ff9ad
+Size (haskell-src-exts-1.22.0.tar.gz) = 1257756 bytes
