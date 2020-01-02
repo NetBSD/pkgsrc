@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.104 2020/01/02 18:56:08 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.105 2020/01/02 19:23:09 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -121,3 +121,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-gcs-oauth2-boto-plugin to 2.5 [bsiegert 2020-01-02]
 	Added devel/hs-async version 2.2.2 [pho 2020-01-02]
 	Updated x11/mate-terminal to 1.22.1nb3 [gutteridge 2020-01-02]
+	Updated net/py-gsutil to 4.45 [bsiegert 2020-01-02]
