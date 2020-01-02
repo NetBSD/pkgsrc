@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.56 2020/01/01 23:09:46 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.57 2020/01/02 02:00:30 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -72,3 +72,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/le to 1.16.7 [fcambus 2020-01-01]
 	Updated graphics/libansilove to 1.1.7 [fcambus 2020-01-01]
 	Updated lang/yabasic to 2.86.3 [fcambus 2020-01-01]
+	Added fonts/unscii version 1.1 [ng0 2020-01-02]
