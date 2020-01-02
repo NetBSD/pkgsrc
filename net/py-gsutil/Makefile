@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/10/07 11:20:25 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/02 19:22:40 bsiegert Exp $
 
-DISTNAME=	gsutil-4.34
+DISTNAME=	gsutil-4.45
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gsutil/}
@@ -10,25 +10,27 @@ HOMEPAGE=	https://cloud.google.com/storage/docs/gsutil
 COMMENT=	Command line tool for interacting with cloud storage services
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONS_ACCEPTED=	27
-REPLACE_PYTHON=			test/gsutil_measure_imports
+REPLACE_PYTHON+=	test/gsutil_measure_imports
+REPLACE_PYTHON+=	gslib/vendored/boto/boto/pyami/launch_ami.py
+REPLACE_PYTHON+=	gslib/vendored/boto/boto/services/bs.py
+REPLACE_PYTHON+=	gslib/vendored/boto/tests/fps/test.py
+REPLACE_PYTHON+=	gslib/vendored/boto/tests/test.py
 
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.13:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-SocksiPy-branch>=1.01:../../net/py-socksipy-branch
 DEPENDS+=	${PYPKGPREFIX}-argcomplete>=1.9.4:../../devel/py-argcomplete
 DEPENDS+=	${PYPKGPREFIX}-boto>=2.48.0:../../net/py-boto
 DEPENDS+=	${PYPKGPREFIX}-crcmod>=1.7:../../security/py-crcmod
 DEPENDS+=	${PYPKGPREFIX}-fasteners>=0.14.1:../../devel/py-fasteners
-DEPENDS+=	${PYPKGPREFIX}-gcs-oauth2-boto-plugin>=2.1:../../net/py-gcs-oauth2-boto-plugin
-DEPENDS+=	${PYPKGPREFIX}-gflags>=3.1.2nb1:../../devel/py-gflags
-DEPENDS+=	${PYPKGPREFIX}-google-apitools>=0.5.22:../../www/py-google-apitools
+DEPENDS+=	${PYPKGPREFIX}-gcs-oauth2-boto-plugin>=2.5:../../net/py-gcs-oauth2-boto-plugin
+DEPENDS+=	${PYPKGPREFIX}-google-apitools>=0.5.30:../../www/py-google-apitools
 DEPENDS+=	${PYPKGPREFIX}-google-reauth>=0.1.0:../../security/py-google-reauth
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.11.3:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-monotonic>=1.4:../../time/py-monotonic
-DEPENDS+=	${PYPKGPREFIX}-oauth2client>=4.1.2:../../security/py-oauth2client
+DEPENDS+=	${PYPKGPREFIX}-oauth2client-4.1.3*:../../security/py-oauth2client
 DEPENDS+=	${PYPKGPREFIX}-retry_decorator>=1.0.0:../../devel/py-retry_decorator
-DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
