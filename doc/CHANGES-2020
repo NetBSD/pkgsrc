@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.102 2020/01/02 17:37:03 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.103 2020/01/02 17:38:01 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -119,3 +119,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/hs-X11 to 1.9.1 [pho 2020-01-02]
 	Updated wm/xmonad to 0.14 [pho 2020-01-02]
 	Updated net/py-gcs-oauth2-boto-plugin to 2.5 [bsiegert 2020-01-02]
+	Added devel/hs-async version 2.2.2 [pho 2020-01-02]
