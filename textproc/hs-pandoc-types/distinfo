@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:31 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/01/02 14:41:22 pho Exp $
 
-SHA1 (pandoc-types-1.12.4.1.tar.gz) = 9855c768dbae08c0588753051ee4ef5b912e539b
-RMD160 (pandoc-types-1.12.4.1.tar.gz) = e038c591b3c2e81bcd1485e29762be11a0f2513a
-SHA512 (pandoc-types-1.12.4.1.tar.gz) = 20b6f0044350a4dc773d8a3b11b0d78b52033b649efac643108efa5d45e2b192f3e2e82fa8ed5612a94e72fbbf5caa0e4e242baf9cdd4992709a9c7c123edadb
-Size (pandoc-types-1.12.4.1.tar.gz) = 18909 bytes
+SHA1 (pandoc-types-1.17.6.1.tar.gz) = 908f0e9674533525ebceec40964bad693d487abf
+RMD160 (pandoc-types-1.17.6.1.tar.gz) = 9672cb3876bc718b8df4767371541d2e9e212925
+SHA512 (pandoc-types-1.17.6.1.tar.gz) = f6de0793ad2680faf4595154ebe376e1830c93927f31b728e6e9aabdac467267cd7c2333b6ba420ab808da1228e7265d23455d87b8f93d81f04aa97888fab6e1
+Size (pandoc-types-1.17.6.1.tar.gz) = 26363 bytes
+SHA1 (patch-pandoc-types.cabal) = 9af9b5437291b95871eab58cc9cfc0b73bacaa65
