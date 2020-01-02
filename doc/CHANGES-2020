@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.62 2020/01/02 04:52:53 pho Exp $
+$NetBSD: CHANGES-2020,v 1.63 2020/01/02 04:58:20 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -78,3 +78,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/hs-polyparse to 1.13 [pho 2020-01-02]
 	Updated devel/hs-cpphs to 1.20.8 [pho 2020-01-02]
 	Updated devel/hs-haskell-src-exts to 1.22.0 [pho 2020-01-02]
+	Updated devel/hs-hint to 0.7.0 [pho 2020-01-02]
