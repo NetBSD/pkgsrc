@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.71 2020/01/02 10:26:48 adam Exp $
+$NetBSD: CHANGES-2020,v 1.72 2020/01/02 10:28:34 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -88,3 +88,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added games/xkanon version 090830 [tsutsui 2020-01-02]
 	Updated devel/py-ipython to 7.11.1 [adam 2020-01-02]
 	Updated multimedia/ffmpeg4 to 4.2.2 [adam 2020-01-02]
+	Updated devel/hs-vector-algorithms to 0.8.0.3 [pho 2020-01-02]
