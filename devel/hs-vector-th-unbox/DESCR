@@ -1,0 +1,3 @@
+A Template Haskell deriver for unboxed vectors, given a pair of
+coercion functions to and from some existing type with an Unbox
+instance.
