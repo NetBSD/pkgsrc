@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2019/07/21 22:26:00 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/02 22:43:42 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	libmatekbd-${VERSION}
+DISTNAME=	libmatekbd-${VERSION:R}.0
 PKGREVISION=	2
 CATEGORIES=	x11
 
