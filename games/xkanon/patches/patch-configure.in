@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.in,v 1.1 2020/01/02 09:56:49 tsutsui Exp $
+
+Fix for "ERROR: [check-portability.awk] => Found test ... == ...:" warning.
+
+--- configure.in.orig	2008-01-06 06:20:00.000000000 +0000
++++ configure.in
+@@ -140,7 +140,7 @@ dnl Checks for libraries.
+ have_alsa=no
+ AC_ARG_ENABLE(alsa,
+   [  --enable-alsa             Try to use ALSA])
+-if test "$enable_alsa" == "yes" ; then
++if test "$enable_alsa" = "yes" ; then
+   AM_PATH_ALSA(0.9.0)
+   if test "$have_alsa" = "error" ; then
+     have_alsa=no

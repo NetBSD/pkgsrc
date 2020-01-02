@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/01/02 09:56:49 tsutsui Exp $
+
+Handle DESTDIR and build .mo file on make all.
+
+--- Makefile.in.orig	2008-01-06 06:20:00.000000000 +0000
++++ Makefile.in
+@@ -31,14 +31,14 @@ MUSIC_OBJ=system_music.o contrib/contrib
+ 
+ OBJ=main.o file.o initial.o $(IMAGE_OBJ) option.o game_opt.o check_cgm.o system.o system_config.o system_graphics.o anm.o ard.o $(SENARIO_OBJ) window.o window_text.o window_name.o window_menu.o window_all.o $(MUSIC_OBJ) $(TTFONT_OBJ)
+ 
+-all: $(BIN)
++all: $(BIN) ayusys_gtk2.ja.mo
+ install: all install-mo
+-	mkdir -p $(BINDIR)
+-	cp -f $(BIN) $(BINDIR)
++	mkdir -p ${DESTDIR}$(BINDIR)
++	cp -f $(BIN) ${DESTDIR}$(BINDIR)
+ 
+ install-mo: ayusys_gtk2.ja.mo
+-	-mkdir -p $(LOCALEDIR)/ja/LC_MESSAGES
+-	-cp -f ayusys_gtk2.ja.mo $(LOCALEDIR)/ja/LC_MESSAGES/ayusys_gtk2.mo
++	-mkdir -p ${DESTDIR}$(LOCALEDIR)/ja/LC_MESSAGES
++	-cp -f ayusys_gtk2.ja.mo ${DESTDIR}$(LOCALEDIR)/ja/LC_MESSAGES/ayusys_gtk2.mo
+ 
+ ayusys_gtk2.ja.mo: ayusys_gtk2.ja.po
+ 	-msgfmt -o ayusys_gtk2.ja.mo ayusys_gtk2.ja.po

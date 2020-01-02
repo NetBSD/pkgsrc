@@ -1,0 +1,18 @@
+$NetBSD: patch-ayusys__gtk2.ja.po,v 1.1 2020/01/02 09:56:49 tsutsui Exp $
+
+Add proper headers to print Japanese encoding messages.
+
+--- ayusys_gtk2.ja.po.orig	2012-01-20 16:45:37.000000000 +0000
++++ ayusys_gtk2.ja.po
+@@ -1,6 +1,8 @@
+-# SOME DESCRIPTIVE TITLE.
+-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+-#
++msgid ""
++msgstr ""
++"MIME-Version: 1.0\n"
++"Content-Type: text/plain; charset=EUC-JP\n"
++"Content-Transfer-Encoding: 8bit\n"
+ 
+ msgid "No Wait"
+ msgstr "ノーウェイト"
