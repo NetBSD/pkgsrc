@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.72 2020/01/02 10:28:34 pho Exp $
+$NetBSD: CHANGES-2020,v 1.73 2020/01/02 10:29:26 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -89,3 +89,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-ipython to 7.11.1 [adam 2020-01-02]
 	Updated multimedia/ffmpeg4 to 4.2.2 [adam 2020-01-02]
 	Updated devel/hs-vector-algorithms to 0.8.0.3 [pho 2020-01-02]
+	Updated x11/xscreensaver to 5.43 [hauke 2020-01-02]
