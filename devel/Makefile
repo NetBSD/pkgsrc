@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2971 2020/01/02 02:54:51 pho Exp $
+# $NetBSD: Makefile,v 1.2972 2020/01/02 11:01:05 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -539,6 +539,7 @@ SUBDIR+=	hs-uuid-types
 SUBDIR+=	hs-vault
 SUBDIR+=	hs-vector
 SUBDIR+=	hs-vector-algorithms
+SUBDIR+=	hs-vector-th-unbox
 SUBDIR+=	hs-void
 SUBDIR+=	ht
 SUBDIR+=	hugs-HUnit
