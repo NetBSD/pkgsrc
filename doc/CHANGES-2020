@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.80 2020/01/02 11:51:37 pho Exp $
+$NetBSD: CHANGES-2020,v 1.81 2020/01/02 11:53:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -97,3 +97,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/hs-mwc-random to 0.14.0.0 [pho 2020-01-02]
 	Updated textproc/hs-blaze-markup to 0.8.2.3 [pho 2020-01-02]
 	Updated textproc/hs-blaze-html to 0.9.1.2 [pho 2020-01-02]
+	Updated net/hub to 2.13.0 [leot 2020-01-02]
