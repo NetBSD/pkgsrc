@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2019/11/03 10:39:14 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/02 03:27:12 pho Exp $
 
-DISTNAME=		cpphs-1.19.2
-PKGREVISION=		1
+DISTNAME=		cpphs-1.20.8
 CATEGORIES=		devel
 
 MAINTAINER=		esg@sdf.lonestar.org
@@ -14,5 +13,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/cpphs.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/haskell.mk"
+.include "../../devel/hs-old-locale/buildlink3.mk"
+.include "../../time/hs-old-time/buildlink3.mk"
 .include "../../textproc/hs-polyparse/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
