@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2019/03/22 08:23:04 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/02 12:55:07 adam Exp $
 
-DISTNAME=	leptonica-1.78.0
+DISTNAME=	leptonica-1.79.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=danbloomberg/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.leptonica.org/
 COMMENT=	Software for image processing and image analysis applications
 LICENSE=	2-clause-bsd
-
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
