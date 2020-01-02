@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2019/12/16 12:52:23 he Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/02 03:31:24 leot Exp $
 
 DISTNAME=	fstrm-0.6.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=farsightsec/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
