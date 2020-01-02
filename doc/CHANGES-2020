@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.98 2020/01/02 15:46:28 leot Exp $
+$NetBSD: CHANGES-2020,v 1.99 2020/01/02 15:50:09 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -115,3 +115,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/hs-texmath to 0.11.3 [pho 2020-01-02]
 	Updated time/hs-timezone-series to 0.1.9 [pho 2020-01-02]
 	Updated net/py-rt to 1.0.12 [leot 2020-01-02]
+	Updated www/hs-HTTP to 4000.3.14 [pho 2020-01-02]
