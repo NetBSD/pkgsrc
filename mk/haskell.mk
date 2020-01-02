@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.9 2020/01/02 16:34:47 pho Exp $
+# $NetBSD: haskell.mk,v 1.10 2020/01/02 16:45:15 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -173,11 +173,15 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 # Shared libraries
 .if ${HASKELL_ENABLE_SHARED_LIBRARY} == "yes"
 CONFIGURE_ARGS+=	--enable-shared --enable-executable-dynamic
+.else
+CONFIGURE_ARGS+=	--disable-shared --disable-executable-dynamic
 .endif
 
 # Library profiling
 .if ${HASKELL_ENABLE_LIBRARY_PROFILING} == "yes"
-CONFIGURE_ARGS+=	-p
+CONFIGURE_ARGS+=	--enable-library-profiling
+.else
+CONFIGURE_ARGS+=	--disable-library-profiling
 .endif
 
 
