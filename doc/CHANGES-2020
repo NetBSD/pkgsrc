@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.89 2020/01/02 15:03:28 pho Exp $
+$NetBSD: CHANGES-2020,v 1.90 2020/01/02 15:06:09 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -106,3 +106,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/hs-parsec to 3.1.14.0 [pho 2020-01-02]
 	Updated textproc/hs-regex-base to 0.94.0.0 [pho 2020-01-02]
 	Updated textproc/hs-regex-posix to 0.96.0.0 [pho 2020-01-02]
+	Updated textproc/hs-stringsearch to 0.3.6.6 [pho 2020-01-02]
