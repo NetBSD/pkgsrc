@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.105 2020/01/02 19:23:09 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.106 2020/01/02 19:34:46 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -122,3 +122,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-async version 2.2.2 [pho 2020-01-02]
 	Updated x11/mate-terminal to 1.22.1nb3 [gutteridge 2020-01-02]
 	Updated net/py-gsutil to 4.45 [bsiegert 2020-01-02]
+	Updated sysutils/di to 4.47.3 [bsiegert 2020-01-02]
