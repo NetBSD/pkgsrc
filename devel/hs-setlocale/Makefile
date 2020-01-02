@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/01/04 12:25:08 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/02 09:07:04 pho Exp $
 
-DISTNAME=	setlocale-1.0.0.3
+DISTNAME=	setlocale-1.0.0.9
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org
