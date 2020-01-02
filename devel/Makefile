@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2972 2020/01/02 11:01:05 pho Exp $
+# $NetBSD: Makefile,v 1.2973 2020/01/02 17:38:23 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -486,6 +486,7 @@ SUBDIR+=	hs-MonadRandom
 SUBDIR+=	hs-QuickCheck
 SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-ansi-terminal
+SUBDIR+=	hs-async
 SUBDIR+=	hs-base-compat
 SUBDIR+=	hs-base-orphans
 SUBDIR+=	hs-base-unicode-symbols
