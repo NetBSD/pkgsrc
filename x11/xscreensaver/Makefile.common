@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.128 2018/09/02 20:12:03 wiz Exp $
+# $NetBSD: Makefile.common,v 1.129 2020/01/02 10:29:00 hauke Exp $
 #
 # used by x11/xscreensaver/Makefile
 # used by x11/xscreensaver-demo/Makefile
 
-DISTNAME=		xscreensaver-5.40
+DISTNAME=		xscreensaver-5.43
 CATEGORIES=		x11
 MASTER_SITES=		https://www.jwz.org/xscreensaver/
 DIST_SUBDIR=		xscreensaver
@@ -12,6 +12,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.jwz.org/xscreensaver/
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c99
 USE_TOOLS+=		gmake msgfmt perl pkg-config
 
 CHECK_PORTABILITY_SKIP+=	OSX/fuzztest.sh
