@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/08/01 20:58:03 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/02 09:11:33 pho Exp $
 
-DISTNAME=	split-0.2.2
+DISTNAME=	split-0.2.3.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
