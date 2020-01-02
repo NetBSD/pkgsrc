@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.106 2020/01/02 19:34:46 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.107 2020/01/02 20:10:50 abs Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -123,3 +123,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/mate-terminal to 1.22.1nb3 [gutteridge 2020-01-02]
 	Updated net/py-gsutil to 4.45 [bsiegert 2020-01-02]
 	Updated sysutils/di to 4.47.3 [bsiegert 2020-01-02]
+	Updated devel/gradle to 4.10.3 [abs 2020-01-02]
