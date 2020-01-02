@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/10/07 11:02:01 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/02 17:36:42 bsiegert Exp $
 
-DISTNAME=	gcs-oauth2-boto-plugin-2.2
+DISTNAME=	gcs-oauth2-boto-plugin-2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gcs-oauth2-boto-plugin/}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-google-reauth>=0.1.0:../../security/py-google-reauth
 DEPENDS+=	${PYPKGPREFIX}-oauth2client>=2.2.0:../../security/py-oauth2client
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.13:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-retry_decorator>=1.0.0:../../devel/py-retry_decorator
-DEPENDS+=	${PYPKGPREFIX}-six>=1.6.1:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-SocksiPy-branch-1.01*:../../net/py-socksipy-branch
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
