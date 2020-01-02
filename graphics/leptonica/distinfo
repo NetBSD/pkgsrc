@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2019/03/22 08:23:04 adam Exp $
+$NetBSD: distinfo,v 1.15 2020/01/02 12:55:07 adam Exp $
 
-SHA1 (leptonica-1.78.0.tar.gz) = ab387b6ae0a3358017c277aac1cd6985c8501a35
-RMD160 (leptonica-1.78.0.tar.gz) = 6ab179da9136d719a89a6847c45ce89791d3b841
-SHA512 (leptonica-1.78.0.tar.gz) = f059ccc8e7b5ff2c796aeb4ab18bd25e133ec4f38c36b9e2ee203db35a1e68cf45b8baf78ebc4acba4e3607328d1374ea0e8425f35cbe06c6c5728a1ec8c3f50
-Size (leptonica-1.78.0.tar.gz) = 12905925 bytes
+SHA1 (leptonica-1.79.0.tar.gz) = be08309753e949ae9321aeca802a2f6f72d5f2a3
+RMD160 (leptonica-1.79.0.tar.gz) = b5d535994fad46ddfd2b67c707b79f08070265d7
+SHA512 (leptonica-1.79.0.tar.gz) = 4d0830683757004bb47752a17985d80c6758b97c0fd6ec64d23bbf43c9c68b04bee751831574afa4c25f5d5030c0c9f7fc22d9fc8ef932aa990401344f588ba5
+Size (leptonica-1.79.0.tar.gz) = 13438669 bytes
+SHA1 (patch-src_Makefile.in) = 6a412f514c630c5bea12f6ec228796c6f942acc2
