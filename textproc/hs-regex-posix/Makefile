@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2014/11/23 12:52:33 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/02 15:03:19 pho Exp $
 
-DISTNAME=	regex-posix-0.95.2
-PKGREVISION=	1
+DISTNAME=	regex-posix-0.96.0.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
-COMMENT=	Replaces/Enhances Haskell Text.Regex
+COMMENT=	POSIX Backend for "Text.Regex" (regex-base)
 LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"

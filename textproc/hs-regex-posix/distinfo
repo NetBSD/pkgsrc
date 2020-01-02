@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:31 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/01/02 15:03:19 pho Exp $
 
-SHA1 (regex-posix-0.95.2.tar.gz) = 280a3aec0de94f03909d67e644f67bd918dff43f
-RMD160 (regex-posix-0.95.2.tar.gz) = 7ee59eb760bb8c0c7fe17e17d90eb0623b9fd5bb
-SHA512 (regex-posix-0.95.2.tar.gz) = 2d22951f0302de144483d2c11d0711dc2cbd2fc6a0eac0126011eaa6f577837ae8c2a9516badb4beed6c18311241458dd6ad9f82a11d6f3763891880ebbc8c41
-Size (regex-posix-0.95.2.tar.gz) = 42916 bytes
+SHA1 (regex-posix-0.96.0.0.tar.gz) = 33425ada76edbf02d1de6607a937b57ce141865a
+RMD160 (regex-posix-0.96.0.0.tar.gz) = d0e569bf459edc2d5a23f01e9f9377e16779ad61
+SHA512 (regex-posix-0.96.0.0.tar.gz) = 91bdc672a535cd1a6a65b1ae2adef43605b792ec9f99150fa239ab4353cddad47988ac7baa65673c53be36e83c8fad1511ba85fb5f7b43c51b4ae526d9af248a
+Size (regex-posix-0.96.0.0.tar.gz) = 12529 bytes
