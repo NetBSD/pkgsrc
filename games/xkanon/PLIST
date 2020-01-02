@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/02 09:56:49 tsutsui Exp $
+bin/xair
+bin/xair-install
+bin/xayusys_gtk2
+bin/xkanon
+bin/xkanon-all
+bin/xkanon-all-install
+bin/xkanon-install
+bin/xsense-off
+bin/xsense-off-install
+bin/xsense-off-trial
+bin/xsense-off-trial-install
+share/locale/ja/LC_MESSAGES/ayusys_gtk2.mo
