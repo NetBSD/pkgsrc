@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2020/01/01 06:13:37 mef Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/02 09:07:46 mef Exp $
 
 VERSION=	0.5.8
 DISTNAME=	wand-${VERSION}
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=emcconville/}
+GITHUB_PROJECT= Wand
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://docs.wand-py.org/
