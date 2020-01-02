@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2015/11/03 23:54:22 agc Exp $
+$NetBSD: distinfo,v 1.25 2020/01/02 19:47:04 rhialto Exp $
 
 SHA1 (avidemux_2.5.4.tar.gz) = 83d6f6d87442ce4fc4e4806735ec27ef5e90364c
 RMD160 (avidemux_2.5.4.tar.gz) = e20454a558210d5f7ab1418ae4013b618d1001d9
@@ -13,11 +13,17 @@ SHA1 (patch-avidemux_ADM__coreImage_src_ADM__vidFieldBlend.cpp) = 91c6741ad967e6
 SHA1 (patch-avidemux_ADM__coreUI_include_DIA__factory.h) = 1aa53bdb0519122e63ac8fbcb76ca389cc97d6ba
 SHA1 (patch-avidemux_ADM__core_include_ADM__assert.h) = ff039fcb901aa78a01c1fda07295ae170a5aaee4
 SHA1 (patch-avidemux_ADM__core_include_ADM__mangle.h) = 54d580839fb5c1007379692e5e33979f72eedcbf
+SHA1 (patch-avidemux_ADM__inputs_ADM__h263_ADM__h263.cpp) = 1740fb04b5aa2a6ffa33827f336442ecdcf91e34
+SHA1 (patch-avidemux_ADM__inputs_ADM__ogm_ADM__ogmAudio.cpp) = 639802f8e4d9031706fdf88f4a545959e967d54e
+SHA1 (patch-avidemux_ADM__outputs_oplug__ogm_op__ogsave.cpp) = 8e3d0d0d824e5afb0450a5edf9c41f20e13c777e
 SHA1 (patch-avidemux_ADM__userInterfaces_ADM__GTK_ADM__toolkit__gtk_jogshuttle.c) = d9fb28f3db0978cff3e90746aa9efcef0084daa3
+SHA1 (patch-avidemux_ADM__userInterfaces_ADM__commonUI_DIA__bitrateHisto.cpp) = adddbcfe6c0e1893afc91e38266b5924b2af83ba
 SHA1 (patch-avidemux_ADM_core_src_ADM_cpuCap.cpp) = c344cf9707c2e8dc9f03b6379f749997bf01b22b
 SHA1 (patch-avidemux_ADM_core_src_ADM_crashdump.cpp) = cdbd0419a100601b0c8f125228b2e3bf1c42fd14
 SHA1 (patch-avidemux_ADM_userInterfaces_ADM_render_GUI_sdlRender.cpp) = 334fb6c2195b0e9e294ea461aa88ab9bd4828c53
 SHA1 (patch-avidemux_CMakeLists.txt) = 00b6e92b77af1d575e801a824664921dae067db0
+SHA1 (patch-avidemux_gtk__gui.cpp) = b822944f236ff7e9fedab89ec1523cdcf28f0a3a
+SHA1 (patch-avidemux_gui__navigate.cpp) = f57df69cbf571f22e239af2db499debe8aac1a24
 SHA1 (patch-ax) = 09d676d910dfcccb30b4f73d1a935647492c259a
 SHA1 (patch-cmake_admCheckMiscLibs.cmake) = 2ece918805b2561f2ec47510265aed6352433c42
 SHA1 (patch-cmake_admFFmpegPrepareTar.cmake) = 690039fb2a74f628c905200a5e767da2904f2df3
