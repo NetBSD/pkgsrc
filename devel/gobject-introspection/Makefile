@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2019/10/14 03:28:01 gutteridge Exp $
+# $NetBSD: Makefile,v 1.67 2020/01/02 15:45:43 gutteridge Exp $
 
 DISTNAME=	gobject-introspection-1.62.0
 CATEGORIES=	devel gnome
@@ -36,9 +36,6 @@ SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,glong,g'
 .endif
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/girepository
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ninja -C output test
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.58.0
 .include "../../devel/glib2/buildlink3.mk"
