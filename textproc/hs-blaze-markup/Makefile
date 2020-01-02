@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2016/01/10 11:49:10 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/02 11:47:47 pho Exp $
 
-DISTNAME=	blaze-markup-0.6.1.1
-PKGREVISION=	5
+DISTNAME=	blaze-markup-0.8.2.3
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@NetBSD.org
