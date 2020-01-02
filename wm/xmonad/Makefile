@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/11/04 21:50:16 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/02 17:11:37 pho Exp $
 
-DISTNAME=	xmonad-0.12
+DISTNAME=	xmonad-0.14
 PKGNAME=	${DISTNAME}
 CATEGORIES=	wm
 
@@ -19,6 +19,11 @@ SUBST_STAGE.2=		pre-configure
 SUBST_FILES.2=		xmonad.cabal
 SUBST_FILTER_CMD.2=	${TR} '+' \\n
 
+# Work around a Cabal bug. It ignores "ld-options" in
+# {package}.buildinfo while linking shared libraries:
+# https://github.com/haskell/cabal/issues/4925
+HASKELL_ENABLE_SHARED_LIBRARY= no
+
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 post-install:
@@ -27,6 +32,7 @@ post-install:
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../devel/hs-extensible-exceptions/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
+.include "../../math/hs-semigroups/buildlink3.mk"
 .include "../../devel/hs-setlocale/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../mk/haskell.mk"
