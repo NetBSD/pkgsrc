@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:31 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/01/02 14:56:10 pho Exp $
 
-SHA1 (regex-base-0.93.2.tar.gz) = 96ceb1ca8df2397a4dffba570e24d438401e4ffd
-RMD160 (regex-base-0.93.2.tar.gz) = c009e193dd453666c7c3b585a25f3a8add7ec6b6
-SHA512 (regex-base-0.93.2.tar.gz) = 4f6269cb1c1fefa2164d999e2e787118edc5fd88e356535e50f143d0b98de4fa1854959955e183aed27a77335b81063a2385bb6bdeb8cb80e7fdd812ab96d22a
-Size (regex-base-0.93.2.tar.gz) = 9156 bytes
+SHA1 (regex-base-0.94.0.0.tar.gz) = c0bcdee3f49a1db4a56d1c53b6a9e69a5692f816
+RMD160 (regex-base-0.94.0.0.tar.gz) = 5abbf62a363e78f9f57316e9211e8cab772a997a
+SHA512 (regex-base-0.94.0.0.tar.gz) = 4e7120e1a2b63fd3e4e15cefc540e82ab0949f51e19f495d4cf4edbe8428ffdf2f114df3504f66049fbb790d5310c59daaf0ed3a71c5acccfe205dccc4567045
+Size (regex-base-0.94.0.0.tar.gz) = 9679 bytes
