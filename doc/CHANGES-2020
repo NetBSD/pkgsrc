@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.75 2020/01/02 10:39:05 pho Exp $
+$NetBSD: CHANGES-2020,v 1.76 2020/01/02 11:00:38 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -92,3 +92,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xscreensaver to 5.43 [hauke 2020-01-02]
 	Updated x11/xscreensaver-demo to 5.43 [hauke 2020-01-02]
 	Updated devel/hs-void to 0.7.3 [pho 2020-01-02]
+	Added devel/hs-vector-th-unbox version 0.2.1.7 [pho 2020-01-02]
