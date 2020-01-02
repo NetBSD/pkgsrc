@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.108 2020/01/02 20:33:30 sevan Exp $
+$NetBSD: CHANGES-2020,v 1.109 2020/01/02 20:57:33 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -125,3 +125,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/di to 4.47.3 [bsiegert 2020-01-02]
 	Updated devel/gradle to 4.10.3 [abs 2020-01-02]
 	Updated security/openssl to 1.0.2u [sevan 2020-01-02]
+	Updated multimedia/nostt to 1.2 [sjmulder 2020-01-02]
