@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/08/22 12:23:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/02 20:57:21 sjmulder Exp $
 
-DISTNAME=	nostt-1.1.1
-PKGREVISION=	4
+DISTNAME=	nostt-1.2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sjmulder/}
 
