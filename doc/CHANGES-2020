@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.78 2020/01/02 11:34:37 pho Exp $
+$NetBSD: CHANGES-2020,v 1.79 2020/01/02 11:47:59 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -95,3 +95,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-vector-th-unbox version 0.2.1.7 [pho 2020-01-02]
 	Added math/hs-math-functions version 0.3.3.0 [pho 2020-01-02]
 	Updated math/hs-mwc-random to 0.14.0.0 [pho 2020-01-02]
+	Updated textproc/hs-blaze-markup to 0.8.2.3 [pho 2020-01-02]
