@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.8 2020/01/01 04:54:10 pho Exp $
+# $NetBSD: haskell.mk,v 1.9 2020/01/02 16:34:47 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -222,15 +222,15 @@ ${WRKSRC}/Setup:
 do-configure:
 	${RUN}cd ${WRKSRC:Q} && \
 		${SETENV} ${CONFIGURE_ENV} \
-			./Setup configure ${CONFIGURE_ARGS}
+			./Setup configure ${PKG_VERBOSE:D-v} ${CONFIGURE_ARGS}
 
 # Define build target.
 do-build:
 	${RUN}cd ${WRKSRC:Q} && \
-		./Setup build
+		./Setup build ${PKG_VERBOSE:D-v}
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
 	${RUN}cd ${WRKSRC:Q} && \
-		./Setup haddock
+		./Setup haddock ${PKG_VERBOSE:D-v}
 .endif
 
 # Define install target. We need installed-pkg-config to be installed
@@ -241,8 +241,8 @@ _HASKELL_PKG_DESCR_FILE=	${_HASKELL_PKG_DESCR_DIR}/package-description
 INSTALLATION_DIRS+=		${_HASKELL_PKG_DESCR_DIR}
 do-install:
 	${RUN}cd ${WRKSRC} && \
-		./Setup register --gen-pkg-config=dist/package-description && \
-		./Setup copy --destdir=${DESTDIR:Q} && \
+		./Setup register ${PKG_VERBOSE:D-v} --gen-pkg-config=dist/package-description && \
+		./Setup copy ${PKG_VERBOSE:D-v} --destdir=${DESTDIR:Q} && \
 		if [ -f dist/package-description ]; then \
 			${INSTALL_DATA} dist/package-description ${DESTDIR:Q}${_HASKELL_PKG_DESCR_FILE:Q}; \
 		fi \
@@ -250,7 +250,7 @@ do-install:
 # Define test target.
 do-test:
 	${RUN}cd ${WRKSRC} && \
-		./Setup test
+		./Setup test ${PKG_VERBOSE:D-v}
 
 # Substitutions for INSTALL and DEINSTALL.
 FILES_SUBST+=	DISTNAME=${DISTNAME}
