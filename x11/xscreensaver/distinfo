@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.77 2018/09/02 20:27:20 wiz Exp $
+$NetBSD: distinfo,v 1.78 2020/01/02 10:29:00 hauke Exp $
 
-SHA1 (xscreensaver/xscreensaver-5.40.tar.gz) = 82c7433fe008e6ea9ab8683cf3325a673b8a8233
-RMD160 (xscreensaver/xscreensaver-5.40.tar.gz) = 05dd6ff6fc607c4364adb9485b9888134ebaa56b
-SHA512 (xscreensaver/xscreensaver-5.40.tar.gz) = e3b5fe03ee56596fd5b0bf4e805ec341906db9665d553a110b4e874e37406fbb596f7bd29da57871c59e8d90bcc97eba9ba92afd79c48139ac021eb9cf6af68d
-Size (xscreensaver/xscreensaver-5.40.tar.gz) = 12248135 bytes
+SHA1 (xscreensaver/xscreensaver-5.43.tar.gz) = 7a0e24b224e1316f0a211446db301de1c22daaa0
+RMD160 (xscreensaver/xscreensaver-5.43.tar.gz) = cd289aa0c083c517b5e2b525dc07ebfd508cd132
+SHA512 (xscreensaver/xscreensaver-5.43.tar.gz) = 7ccaf30fb05ae2110f742f1a5c99f83cd4c8e6749124066b5a418cf3e0ba1b8ff09858eeec29c11b0c8ea428b95b2916481c50cee6a5d952ec941b3ad1b6adcd
+Size (xscreensaver/xscreensaver-5.43.tar.gz) = 26973508 bytes
 SHA1 (patch-ad) = ff03b044ca82964c3b9535b84a7dcca6d5f8f1bb
 SHA1 (patch-af) = 4ee300a205a0ac448939ac2776087db48d808ad8
-SHA1 (patch-utils_Makefile.in) = 1a493bc42689be5c03c54c97f316c2638dae25e3
+SHA1 (patch-utils_Makefile.in) = 785112970eb71334d89e560b2b251e5053374748
