@@ -1,1 +1,5 @@
-The posix regex haskell backend for regex-base.
+The POSIX regex backend for regex-base.
+
+The main appeal of this backend is that it's very lightweight due to
+its reliance on the ubiquitous POSIX.2 regex facility that is provided
+by the standard C library on most POSIX platforms.
