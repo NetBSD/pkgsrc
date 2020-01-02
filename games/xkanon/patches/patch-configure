@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/01/02 09:56:49 tsutsui Exp $
+
+Fix for "ERROR: [check-portability.awk] => Found test ... == ...:" warning.
+
+--- configure.orig	2008-01-06 06:20:00.000000000 +0000
++++ configure
+@@ -13804,7 +13804,7 @@ if test "${enable_alsa+set}" = set; then
+   enableval="$enable_alsa"
+ 
+ fi;
+-if test "$enable_alsa" == "yes" ; then
++if test "$enable_alsa" = "yes" ; then
+   alsa_save_CFLAGS="$CFLAGS"
+ alsa_save_LDFLAGS="$LDFLAGS"
+ alsa_save_LIBS="$LIBS"
