@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/10/07 09:28:13 prlw1 Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/02 16:52:28 gutteridge Exp $
 
 DISTNAME=	json-glib-1.4.4
 CATEGORIES=	textproc gnome
@@ -17,9 +17,6 @@ CONFIGURE_ARGS+=	--disable-man
 # workaround for build failure
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/json-glib
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ninja -C output test
 
 .include "options.mk"
 
