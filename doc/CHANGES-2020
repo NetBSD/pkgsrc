@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.60 2020/01/02 03:21:19 pho Exp $
+$NetBSD: CHANGES-2020,v 1.61 2020/01/02 03:27:22 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -76,3 +76,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/hs-MonadRandom to 0.5.1.1 [pho 2020-01-02]
 	Added time/hs-old-time version 1.1.0.3 [pho 2020-01-02]
 	Updated textproc/hs-polyparse to 1.13 [pho 2020-01-02]
+	Updated devel/hs-cpphs to 1.20.8 [pho 2020-01-02]
