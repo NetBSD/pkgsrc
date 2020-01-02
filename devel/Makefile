@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2970 2020/01/01 17:42:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2971 2020/01/02 02:54:51 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -483,13 +483,15 @@ SUBDIR+=	hoe
 SUBDIR+=	honggfuzz
 SUBDIR+=	hptools
 SUBDIR+=	hs-MonadRandom
-SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-QuickCheck
+SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-ansi-terminal
+SUBDIR+=	hs-base-compat
+SUBDIR+=	hs-base-orphans
 SUBDIR+=	hs-base-unicode-symbols
 SUBDIR+=	hs-blaze-builder
-SUBDIR+=	hs-colour
 SUBDIR+=	hs-cmdargs
+SUBDIR+=	hs-colour
 SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-data-default
 SUBDIR+=	hs-data-default-class
@@ -526,6 +528,7 @@ SUBDIR+=	hs-syb
 SUBDIR+=	hs-tagged
 SUBDIR+=	hs-text
 SUBDIR+=	hs-tf-random
+SUBDIR+=	hs-th-abstraction
 SUBDIR+=	hs-transformers-base
 SUBDIR+=	hs-transformers-compat
 SUBDIR+=	hs-uniplate
