@@ -1,0 +1,4 @@
+This library contain collection of various utilities for numerical
+computing. So far there're special mathematical functions, compensated
+summation algorithm, summation of series, root finding for real
+functions, polynomial summation and Chebyshev polynomials.
