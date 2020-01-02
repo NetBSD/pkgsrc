@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.96 2020/01/02 15:37:22 pho Exp $
+$NetBSD: CHANGES-2020,v 1.97 2020/01/02 15:41:11 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -113,3 +113,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/hs-network-uri version 2.6.1.0 [pho 2020-01-02]
 	Updated sysutils/entr to 4.3 [leot 2020-01-02]
 	Updated textproc/hs-texmath to 0.11.3 [pho 2020-01-02]
+	Updated time/hs-timezone-series to 0.1.9 [pho 2020-01-02]
