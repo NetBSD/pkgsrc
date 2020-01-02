@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.64 2020/01/02 07:16:35 pho Exp $
+$NetBSD: CHANGES-2020,v 1.65 2020/01/02 07:19:31 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -80,3 +80,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/hs-haskell-src-exts to 1.22.0 [pho 2020-01-02]
 	Updated devel/hs-hint to 0.7.0 [pho 2020-01-02]
 	Updated devel/hs-reflection to 2.1.5 [pho 2020-01-02]
+	Updated devel/hs-safe to 0.3.18 [pho 2020-01-02]
