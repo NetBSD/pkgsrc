@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2016/01/04 12:24:25 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/02 16:48:30 pho Exp $
 
-DISTNAME=	X11-1.6.1.2
-PKGREVISION=	3
+DISTNAME=	X11-1.9.1
 CATEGORIES=	x11 graphics
 
 MAINTAINER=	esg@sdf.lonestar.org
 COMMENT=	Haskell binding to the X11 graphics library
 LICENSE=	modified-bsd
+
+# Work around a Cabal bug. It ignores "ld-options" in X11.buildinfo
+# while linking shared libraries:
+# https://github.com/haskell/cabal/issues/4925
+HASKELL_ENABLE_SHARED_LIBRARY= no
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
