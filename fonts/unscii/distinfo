@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/02 01:59:47 ng0 Exp $
+
+SHA1 (unscii-1.1-src.tar.gz) = a7123c1a90006b2bd9aa07d5f9dd073a586b96c4
+RMD160 (unscii-1.1-src.tar.gz) = e09c95553b50c6470b57d23489e49cba36ded7ce
+SHA512 (unscii-1.1-src.tar.gz) = 4b172c8bfce53c588c10affc5f9b044ab099b3d87a00059de256543f46a7978ebc4e9470a6886ef379024bf18f2ed96968b31bfd25a3ff3db44d03c80f6fb55a
+Size (unscii-1.1-src.tar.gz) = 1181933 bytes
