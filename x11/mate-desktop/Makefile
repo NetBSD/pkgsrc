@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/12/30 22:51:10 gutteridge Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/02 19:00:48 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -21,7 +21,6 @@ SUBST_STAGE.prefix=	pre-install
 SUBST_SED.prefix=	-e 's,$${prefix},${PREFIX},'
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/librsvg/tool.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../devel/dconf/buildlink3.mk"
