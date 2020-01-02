@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:59:31 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/01/02 03:21:09 pho Exp $
 
-SHA1 (polyparse-1.11.tar.gz) = c8f7568552a34708518e936deee2bc127d92adeb
-RMD160 (polyparse-1.11.tar.gz) = 411758cdc183e2c8d69206d28155c2abda6f3797
-SHA512 (polyparse-1.11.tar.gz) = b2cecc633596caaa2b8a00ceb16f141cd69de9ec697ce53cd827a17c82cac70ffaf10bc1d8669156ed4d28589b11ac56820b5c02905c8a6bdcae65112126fa5e
-Size (polyparse-1.11.tar.gz) = 22978 bytes
+SHA1 (polyparse-1.13.tar.gz) = 14fdc1d9b7e30605ab0ec25559ccad29118744fa
+RMD160 (polyparse-1.13.tar.gz) = 2d69cf98cfc034414b0feeb9f92061aeb47ffc9f
+SHA512 (polyparse-1.13.tar.gz) = 3b66a73f97d6b5b6628193f87cae1ae1a68d63df0058532b2ac9a62af82dabe28e15fe1464075a2f436e70a7d20b57e72fdd7831f8b11035ff8117becb08d18e
+Size (polyparse-1.13.tar.gz) = 33144 bytes
