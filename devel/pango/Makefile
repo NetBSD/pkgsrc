@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.229 2019/11/06 13:26:21 wiz Exp $
+# $NetBSD: Makefile,v 1.230 2020/01/02 15:54:53 gutteridge Exp $
 
 DISTNAME=	pango-1.44.7
 CATEGORIES=	devel fonts
@@ -30,9 +30,6 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=implicit-fallthrough # clang10svn
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/pango-view.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pango-view.1 || ${TRUE}
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ninja -C output test
 
 .include "options.mk"
 .include "../../graphics/librsvg/available.mk"
