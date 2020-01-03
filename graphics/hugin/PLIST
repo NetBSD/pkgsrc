@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/04/30 09:19:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/01/03 18:15:21 adam Exp $
 bin/PTBatcherGUI
 bin/align_image_stack
 bin/autooptimiser
@@ -98,8 +98,6 @@ share/hugin/data/normal_smartblend.executor
 share/hugin/data/plugins-templates/dual_use.py
 share/hugin/data/plugins-templates/plugin_skeleton.py
 share/hugin/data/plugins/README_woa.txt
-share/hugin/data/plugins/crop_cp.py
-share/hugin/data/plugins/shooting_pattern.py
 share/hugin/data/plugins/top_five.py
 share/hugin/data/plugins/woa.py
 share/hugin/data/scanned.assistant
