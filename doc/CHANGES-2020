@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.136 2020/01/03 13:20:38 adam Exp $
+$NetBSD: CHANGES-2020,v 1.137 2020/01/03 13:26:19 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -164,3 +164,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pyparsing to 2.4.6 [adam 2020-01-03]
 	Updated devel/py-coverage to 5.0.1 [adam 2020-01-03]
 	Updated devel/py-pebble to 4.4.1 [adam 2020-01-03]
+	Updated print/cups-filters to 1.26.1 [leot 2020-01-03]
