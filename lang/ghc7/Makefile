@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2019/12/31 07:10:30 pho Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/03 11:11:29 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-7.10.3-src
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/-src$//}
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
@@ -22,7 +22,7 @@ CONFLICTS+=	ghc-[0-9]*
 # sources compiled from Haskell sources, but that's no longer
 # possible. So we have to prepare stripped-down binaries sufficient to
 # bootstrap compilers for each platforms. If you want to build them
-# yourself, follow instructions in ./bootstrap.mk
+# yourself, follow instructions in BOOTSTRAP.txt and ./bootstrap.mk
 BROKEN_EXCEPT_ON_PLATFORM+= \
 	Darwin-*-powerpc \
 	FreeBSD-*-i386 \
@@ -53,6 +53,7 @@ USE_LIBTOOL=			yes
 
 CONFIGURE_ARGS.common= \
 	--with-gcc=${CC:Q} \
+	--with-ld=${LD:Q} \
 	--with-curses-includes=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_INCDIRS.curses:Q} \
 	--with-curses-libraries=${BUILDLINK_PREFIX.curses:Q}/${BUILDLINK_LIBDIRS.curses:Q} \
 	--with-gmp-includes=${BUILDLINK_PREFIX.gmp:Q}/${BUILDLINK_INCDIRS.gmp:Q} \
