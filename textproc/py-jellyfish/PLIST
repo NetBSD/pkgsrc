@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/05/09 13:17:59 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/03 08:37:56 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,9 +10,6 @@ ${PYSITELIB}/jellyfish/_jellyfish.py
 ${PYSITELIB}/jellyfish/_jellyfish.pyc
 ${PYSITELIB}/jellyfish/_jellyfish.pyo
 ${PYSITELIB}/jellyfish/cjellyfish.so
-${PYSITELIB}/jellyfish/compat.py
-${PYSITELIB}/jellyfish/compat.pyc
-${PYSITELIB}/jellyfish/compat.pyo
 ${PYSITELIB}/jellyfish/porter.py
 ${PYSITELIB}/jellyfish/porter.pyc
 ${PYSITELIB}/jellyfish/porter.pyo
