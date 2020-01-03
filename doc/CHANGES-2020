@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.113 2020/01/03 01:55:14 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.114 2020/01/03 02:36:35 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -129,3 +129,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/fetchmailconf to 6.4.1 [wiz 2020-01-02]
 	Updated devel/ruby-delayer to 1.1.0 [tsutsui 2020-01-03]
 	Updated graphics/libsixel to 1.8.5 [tsutsui 2020-01-03]
+	Added games/xclannad version 0.07hc [tsutsui 2020-01-03]
