@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2018/11/14 10:26:59 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/03 12:17:37 adam Exp $
 
-DISTNAME=	simpleeval-0.9.8
+DISTNAME=	simpleeval-0.9.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/simpleeval/}
