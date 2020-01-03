@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/10/28 08:49:30 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/03 08:27:43 adam Exp $
 
-DISTNAME=	ruamel.ordereddict-0.4.13
+DISTNAME=	ruamel.ordereddict-0.4.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./-/1}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruamel.ordereddict/}
