@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.138 2020/01/03 14:55:42 leot Exp $
+$NetBSD: CHANGES-2020,v 1.139 2020/01/03 15:24:26 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -166,3 +166,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pebble to 4.4.1 [adam 2020-01-03]
 	Updated print/cups-filters to 1.26.1 [leot 2020-01-03]
 	Updated www/vimb to 3.6.0 [leot 2020-01-03]
+	Added lang/ghc80 version 8.0.2 [pho 2020-01-03]
