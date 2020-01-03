@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.141 2020/01/03 18:15:46 adam Exp $
+$NetBSD: CHANGES-2020,v 1.142 2020/01/03 19:26:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -169,3 +169,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added lang/ghc80 version 8.0.2 [pho 2020-01-03]
 	Updated devel/guile-gcrypt to 0.2.1 [ng0 2020-01-03]
 	Updated graphics/hugin to 2019.2.0 [adam 2020-01-03]
+	Updated lang/rust to 1.40.0 [jperkin 2020-01-03]
