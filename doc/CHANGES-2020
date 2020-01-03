@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.115 2020/01/03 04:36:47 pho Exp $
+$NetBSD: CHANGES-2020,v 1.116 2020/01/03 04:45:39 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -131,3 +131,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/libsixel to 1.8.5 [tsutsui 2020-01-03]
 	Added games/xclannad version 0.07hc [tsutsui 2020-01-03]
 	Added math/hs-comonad version 5.0.6 [pho 2020-01-03]
+	Added math/hs-bifunctors version 5.5.6 [pho 2020-01-03]
