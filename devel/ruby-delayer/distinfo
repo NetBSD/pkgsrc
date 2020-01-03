@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/06/16 16:05:21 tsutsui Exp $
+$NetBSD: distinfo,v 1.4 2020/01/03 01:45:20 tsutsui Exp $
 
-SHA1 (delayer-1.0.0.gem) = 440a4276f976b04a08694c77236e4e0830b97cf3
-RMD160 (delayer-1.0.0.gem) = e2cbdde482507f9aeecf7583a5b6d1b3d936f959
-SHA512 (delayer-1.0.0.gem) = 2dfe3590381796f50dc89c17b038fd94cba21660e6863c60600e590f449180eb5e424f81340c6698dffddcf64f5218dadbdc96f1553e2eef96be2b1fbe2d1fb3
-Size (delayer-1.0.0.gem) = 10240 bytes
+SHA1 (delayer-1.0.1.gem) = 919c0e8b7a3bc70c26f43957f1e60ae7234ab088
+RMD160 (delayer-1.0.1.gem) = 68230a1802413a9cdce5fa679d2f47f00e47c061
+SHA512 (delayer-1.0.1.gem) = 1ed9b13513a68c4900784c80588231576be032b2c1636e49e510b6c3f6fd37c237a02ba541cc9aa0cbbebeadc53b5d8f7119d84674e94089427d69f813e17e86
+Size (delayer-1.0.1.gem) = 10240 bytes
