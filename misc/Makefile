@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.525 2019/11/30 21:46:35 markd Exp $
+# $NetBSD: Makefile,v 1.526 2020/01/03 06:05:20 pho Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -108,6 +108,7 @@ SUBDIR+=	heirloom-tcopy
 SUBDIR+=	heirloom-time
 SUBDIR+=	heyu
 SUBDIR+=	howm
+SUBDIR+=	hs-extra
 SUBDIR+=	ibutton-pdkit
 SUBDIR+=	ini_file_manager
 SUBDIR+=	ipbt
