@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.140 2020/01/03 17:17:50 ng0 Exp $
+$NetBSD: CHANGES-2020,v 1.141 2020/01/03 18:15:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -168,3 +168,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/vimb to 3.6.0 [leot 2020-01-03]
 	Added lang/ghc80 version 8.0.2 [pho 2020-01-03]
 	Updated devel/guile-gcrypt to 0.2.1 [ng0 2020-01-03]
+	Updated graphics/hugin to 2019.2.0 [adam 2020-01-03]
