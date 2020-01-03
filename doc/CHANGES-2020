@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.123 2020/01/03 06:44:59 pho Exp $
+$NetBSD: CHANGES-2020,v 1.124 2020/01/03 06:48:20 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -139,3 +139,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added misc/hs-extra version 1.6.18 [pho 2020-01-03]
 	Added textproc/hs-regex-pcre version 0.95.0.0 [pho 2020-01-03]
 	Added textproc/hs-unicode-show version 0.1.0.4 [pho 2020-01-03]
+	Added devel/hs-unix-compat version 0.5.2 [pho 2020-01-03]
