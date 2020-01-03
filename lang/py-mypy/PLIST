@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/12/11 19:06:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/01/03 11:53:09 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc
@@ -120,9 +120,6 @@ ${PYSITELIB}/mypy/indirection.pyo
 ${PYSITELIB}/mypy/infer.py
 ${PYSITELIB}/mypy/infer.pyc
 ${PYSITELIB}/mypy/infer.pyo
-${PYSITELIB}/mypy/interpreted_plugin.py
-${PYSITELIB}/mypy/interpreted_plugin.pyc
-${PYSITELIB}/mypy/interpreted_plugin.pyo
 ${PYSITELIB}/mypy/ipc.py
 ${PYSITELIB}/mypy/ipc.pyc
 ${PYSITELIB}/mypy/ipc.pyo
@@ -487,7 +484,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/2/_sre.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/_struct.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/_symtable.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/_threading_local.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/2/_warnings.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/ast.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2/atexit.pyi
@@ -610,6 +606,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/2and3/_csv.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/_curses.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/_heapq.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/_random.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/2and3/_warnings.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/_weakref.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/_weakrefset.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/aifc.pyi
@@ -728,10 +725,13 @@ ${PYSITELIB}/mypy/typeshed/stdlib/2and3/logging/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/logging/config.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/logging/handlers.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/macpath.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/2and3/mailbox.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/2and3/mailcap.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/marshal.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/math.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/mimetypes.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/mmap.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/2and3/modulefinder.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/netrc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/nis.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/2and3/ntpath.pyi
@@ -838,7 +838,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/3/_subprocess.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/_thread.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/_threading_local.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/_tracemalloc.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/3/_warnings.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/_winapi.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/3/ast.pyi
