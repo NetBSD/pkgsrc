@@ -1,0 +1,4 @@
+This package provides a PCRE backend for the regex-base API.
+
+See also https://wiki.haskell.org/Regular_expressions for more
+information.
