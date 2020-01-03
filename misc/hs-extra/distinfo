@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/03 06:04:34 pho Exp $
+
+SHA1 (extra-1.6.18.tar.gz) = 62ae1a6542d8a71bb1daafbb678c1ca7fa93bb0c
+RMD160 (extra-1.6.18.tar.gz) = 9c53a5e2f4e1f20fbdfe2eeb5fd177d160c126f3
+SHA512 (extra-1.6.18.tar.gz) = df64f8b93826e3fcb13e41fc3eed22c2bfeca93d70125b0e73b4f62a8109a46cda2bc2a4e0c973d9ca23199664670a89a42e7ef6f685e3420103c76cd942f06a
+Size (extra-1.6.18.tar.gz) = 40194 bytes
