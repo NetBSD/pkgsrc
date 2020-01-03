@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.116 2020/01/03 04:45:39 pho Exp $
+$NetBSD: CHANGES-2020,v 1.117 2020/01/03 05:04:22 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -132,3 +132,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added games/xclannad version 0.07hc [tsutsui 2020-01-03]
 	Added math/hs-comonad version 5.0.6 [pho 2020-01-03]
 	Added math/hs-bifunctors version 5.5.6 [pho 2020-01-03]
+	Added math/hs-profunctors version 5.5.1 [pho 2020-01-03]
