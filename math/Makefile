@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.449 2020/01/03 05:04:51 pho Exp $
+# $NetBSD: Makefile,v 1.450 2020/01/03 05:15:55 pho Exp $
 
 COMMENT=	Mathematics
 
@@ -195,6 +195,7 @@ SUBDIR+=	hs-mwc-random
 SUBDIR+=	hs-nats
 SUBDIR+=	hs-profunctors
 SUBDIR+=	hs-scientific
+SUBDIR+=	hs-semigroupoids
 SUBDIR+=	hs-semigroups
 SUBDIR+=	ipopt
 SUBDIR+=	isl
