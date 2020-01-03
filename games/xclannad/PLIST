@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
+bin/nwatowav
+bin/xclannad
