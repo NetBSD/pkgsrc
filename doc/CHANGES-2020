@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.139 2020/01/03 15:24:26 pho Exp $
+$NetBSD: CHANGES-2020,v 1.140 2020/01/03 17:17:50 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -167,3 +167,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/cups-filters to 1.26.1 [leot 2020-01-03]
 	Updated www/vimb to 3.6.0 [leot 2020-01-03]
 	Added lang/ghc80 version 8.0.2 [pho 2020-01-03]
+	Updated devel/guile-gcrypt to 0.2.1 [ng0 2020-01-03]
