@@ -1,21 +1,32 @@
-# $NetBSD: Makefile,v 1.16 2016/01/10 11:49:11 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/03 08:22:08 pho Exp $
 
-DISTNAME=	cgrep-6.4.5
-PKGREVISION=	15
+DISTNAME=	cgrep-6.6.30
+#PKGNAME=	${DISTNAME} # This package should probably be renamed to textproc/cgrep
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@NetBSD.org
-COMMENT=	Command line tool
+COMMENT=	Context-aware grep for source codes
 LICENSE=	gnu-gpl-v2
 
 .include "../../mk/haskell.mk"
+.include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
+.include "../../devel/hs-async/buildlink3.mk"
 .include "../../devel/hs-cmdargs/buildlink3.mk"
 .include "../../devel/hs-dlist/buildlink3.mk"
+.include "../../devel/hs-either/buildlink3.mk"
+.include "../../devel/hs-exceptions/buildlink3.mk"
+.include "../../misc/hs-extra/buildlink3.mk"
+.include "../../devel/hs-mtl/buildlink3.mk"
+.include "../../textproc/hs-regex-base/buildlink3.mk"
+.include "../../textproc/hs-regex-pcre/buildlink3.mk"
 .include "../../textproc/hs-regex-posix/buildlink3.mk"
 .include "../../devel/hs-safe/buildlink3.mk"
 .include "../../devel/hs-split/buildlink3.mk"
 .include "../../devel/hs-stm/buildlink3.mk"
 .include "../../textproc/hs-stringsearch/buildlink3.mk"
+.include "../../textproc/hs-unicode-show/buildlink3.mk"
+.include "../../devel/hs-unix-compat/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
+.include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
