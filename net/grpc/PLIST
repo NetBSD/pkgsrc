@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/11/06 17:14:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/01/03 08:21:36 adam Exp $
 bin/grpc_cpp_plugin
 bin/grpc_csharp_plugin
 bin/grpc_node_plugin
@@ -207,6 +207,7 @@ include/grpcpp/impl/codegen/rpc_service_method.h
 include/grpcpp/impl/codegen/security/auth_context.h
 include/grpcpp/impl/codegen/serialization_traits.h
 include/grpcpp/impl/codegen/server_callback.h
+include/grpcpp/impl/codegen/server_callback_handlers.h
 include/grpcpp/impl/codegen/server_callback_impl.h
 include/grpcpp/impl/codegen/server_context.h
 include/grpcpp/impl/codegen/server_context_impl.h
@@ -319,6 +320,9 @@ lib/libgrpc_unsecure.so.1
 lib/libgrpcpp_channelz.so
 lib/libgrpcpp_channelz.so.${PKGVERSION}
 lib/libgrpcpp_channelz.so.1
+lib/libupb.so
+lib/libupb.so.${PKGVERSION}
+lib/libupb.so.9
 lib/pkgconfig/gpr.pc
 lib/pkgconfig/grpc++.pc
 lib/pkgconfig/grpc++_unsecure.pc
