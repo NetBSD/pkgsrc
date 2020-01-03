@@ -1,0 +1,2 @@
+A Comonad is a Functor and provides duals of the Monad "return" and
+">>=". Instead of wrapping, you can extract a value from a Comonad.
