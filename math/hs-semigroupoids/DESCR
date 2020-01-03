@@ -1,0 +1,18 @@
+Provides a wide array of (semi)groupoids and operations for working with them.
+
+A Semigroupoid is a Category without the requirement of identity arrows
+for every object in the category.
+
+A Category is any Semigroupoid for which the Yoneda lemma holds.
+
+When working with comonads you often have the <*> portion of an Applicative,
+but not the pure. This was captured in Uustalu and Vene's
+"Essence of Dataflow Programming" in the form of the ComonadZip class
+in the days before Applicative. Apply provides a weaker invariant,
+but for the comonads used for data flow programming
+(found in the streams package), this invariant is preserved.
+Applicative function composition forms a semigroupoid.
+
+Similarly many structures are nearly a comonad, but not quite,
+for instance lists provide a reasonable extend operation in the form of tails,
+but do not always contain a value.
