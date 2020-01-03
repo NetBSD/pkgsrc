@@ -1,12 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2019/04/30 09:19:25 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2020/01/03 18:15:21 adam Exp $
 
 Do not make an application bundle on OS X.
 
---- CMakeLists.txt.orig	2019-03-23 07:16:59.000000000 +0000
+--- CMakeLists.txt.orig	2019-12-15 15:44:00.000000000 +0000
 +++ CMakeLists.txt
 @@ -2,10 +2,6 @@
- # require at least cmake 3.1
- cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR )
+ # require at least cmake 3.8
+ cmake_minimum_required(VERSION 3.8 FATAL_ERROR )
  
 -# prevent in-tree building
 -if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
@@ -15,7 +15,7 @@ Do not make an application bundle on OS X.
  
  if(COMMAND cmake_policy)
    cmake_policy(SET CMP0003 NEW)
-@@ -595,16 +591,6 @@ IF (APPLE)
+@@ -557,16 +553,6 @@ IF (APPLE)
    ENDIF (NOT MAC_SELF_CONTAINED_BUNDLE)
  ENDIF (APPLE)
  
