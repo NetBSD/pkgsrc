@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.131 2020/01/03 11:47:29 nia Exp $
+$NetBSD: CHANGES-2020,v 1.132 2020/01/03 11:54:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -152,3 +152,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/py-beets to 1.4.9nb1 [adam 2020-01-03]
 	Updated net/dhcpcd to 8.1.5 [roy 2020-01-03]
 	Updated misc/mdp to 1.0.15 [nia 2020-01-03]
+	Updated devel/py-test-xdist to 1.31.0 [adam 2020-01-03]
+	Updated textproc/py-parse to 1.14.0 [adam 2020-01-03]
+	Updated devel/py-logbook to 1.5.3 [adam 2020-01-03]
+	Updated lang/py-mypy to 0.761 [adam 2020-01-03]
