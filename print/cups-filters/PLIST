@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2019/10/20 12:17:18 leot Exp $
+@comment $NetBSD: PLIST,v 1.23 2020/01/03 13:26:08 leot Exp $
 bin/driverless
 bin/foomatic-rip
 bin/ttfread
@@ -6,6 +6,7 @@ include/cupsfilters/colord.h
 include/cupsfilters/colormanager.h
 include/cupsfilters/driver.h
 include/cupsfilters/image.h
+include/cupsfilters/ipp.h
 include/cupsfilters/pdftoippprinter.h
 include/cupsfilters/ppdgenerator.h
 include/cupsfilters/raster.h
