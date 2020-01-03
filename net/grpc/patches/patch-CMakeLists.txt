@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2019/08/25 18:52:37 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2020/01/03 08:21:36 adam Exp $
 
 Add version number to shared libraries.
 
---- CMakeLists.txt.orig	2019-08-14 21:29:55.000000000 +0000
+--- CMakeLists.txt.orig	2019-12-18 01:29:27.000000000 +0000
 +++ CMakeLists.txt
-@@ -205,7 +205,7 @@ function(protobuf_generate_grpc_cpp)
+@@ -212,7 +212,7 @@ function(protobuf_generate_grpc_cpp)
               "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}_mock.grpc.pb.h"
               "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.cc"
               "${_gRPC_PROTO_GENS_DIR}/${RELFIL_WE}.pb.h"
@@ -13,9 +13,9 @@ Add version number to shared libraries.
        ARGS --grpc_out=generate_mock_code=true:${_gRPC_PROTO_GENS_DIR}
             --cpp_out=${_gRPC_PROTO_GENS_DIR}
             --plugin=protoc-gen-grpc=${_gRPC_CPP_PLUGIN}
-@@ -19451,5 +19451,22 @@ foreach(_config gRPCConfig gRPCConfigVer
-   )
- endforeach()
+@@ -18361,6 +18361,23 @@ install(FILES
+   DESTINATION ${gRPC_INSTALL_CMAKEDIR}
+ )
  
 +foreach(_lib
 +  address_sorting
@@ -36,3 +36,4 @@ Add version number to shared libraries.
 +
  install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/etc/roots.pem
    DESTINATION ${gRPC_INSTALL_SHAREDIR})
+ 
