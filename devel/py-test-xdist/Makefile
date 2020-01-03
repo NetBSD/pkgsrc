@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2019/10/02 10:18:58 adam Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/03 11:44:04 adam Exp $
 
-DISTNAME=	pytest-xdist-1.30.0
+DISTNAME=	pytest-xdist-1.31.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-xdist/}
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-test>=4.4.0:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-test-forked-[0-9]*:../../devel/py-test-forked
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TEST_DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 
 USE_LANGUAGES=	# none
 
