@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1076 2020/01/03 06:45:23 pho Exp $
+# $NetBSD: Makefile,v 1.1077 2020/01/03 08:03:35 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -292,6 +292,7 @@ SUBDIR+=	hs-tagsoup
 SUBDIR+=	hs-texmath
 SUBDIR+=	hs-unicode-show
 SUBDIR+=	hs-xml
+SUBDIR+=	hs-yaml
 SUBDIR+=	html
 SUBDIR+=	html2text
 SUBDIR+=	html2wml
