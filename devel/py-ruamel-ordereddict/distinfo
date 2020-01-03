@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/10/28 08:49:30 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/01/03 08:27:43 adam Exp $
 
-SHA1 (ruamel.ordereddict-0.4.13.tar.gz) = d1f3187f0df90522e5bcd5235be3aa75390cc663
-RMD160 (ruamel.ordereddict-0.4.13.tar.gz) = a8fbb1b63e37ebabfe030e0fb198d4a7bad4fdfe
-SHA512 (ruamel.ordereddict-0.4.13.tar.gz) = d345e3e388618c76323605497c104cc2c8fc1f14f8cd6ba2bc942a9f034135a5be25b46ff5e0cdf94a5b496991ae3af4d1c34a8dd7314dddd5bc952148f01ede
-Size (ruamel.ordereddict-0.4.13.tar.gz) = 57711 bytes
+SHA1 (ruamel.ordereddict-0.4.14.tar.gz) = 70f3c7ede06aa525f420533039aca50f02cfb3c8
+RMD160 (ruamel.ordereddict-0.4.14.tar.gz) = d44ab8814b3e6283a88c42cc2e88f5864a91ead0
+SHA512 (ruamel.ordereddict-0.4.14.tar.gz) = 1ab54df5b138851b0bc22d46c76389df7e5b09825151bbb8080cc2fa3f50b444a7ec07f9cf219efd64a20f17599d47c4c4b26d7b59871e43aee151e52fc42a55
+Size (ruamel.ordereddict-0.4.14.tar.gz) = 60892 bytes
