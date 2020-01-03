@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/01/02 19:22:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/03 12:09:06 adam Exp $
 
-DISTNAME=	gsutil-4.45
+DISTNAME=	gsutil-4.46
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gsutil/}
@@ -28,7 +28,7 @@ DEPENDS+=	${PYPKGPREFIX}-google-reauth>=0.1.0:../../security/py-google-reauth
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.11.3:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-monotonic>=1.4:../../time/py-monotonic
-DEPENDS+=	${PYPKGPREFIX}-oauth2client-4.1.3*:../../security/py-oauth2client
+DEPENDS+=	${PYPKGPREFIX}-oauth2client>=4.1.3:../../security/py-oauth2client
 DEPENDS+=	${PYPKGPREFIX}-retry_decorator>=1.0.0:../../devel/py-retry_decorator
 DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 
