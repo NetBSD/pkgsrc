@@ -1,0 +1,5 @@
+Provides support for parsing and emitting Yaml documents.
+
+Data.Yaml provides a high-level interface based around the JSON
+datatypes provided by the aeson package. It uses Text.Libyaml from
+libyaml in its implementation of the low-level yaml encoder/decoder.
