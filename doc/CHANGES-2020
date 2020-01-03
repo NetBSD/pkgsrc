@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.128 2020/01/03 08:32:22 adam Exp $
+$NetBSD: CHANGES-2020,v 1.129 2020/01/03 08:43:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -148,3 +148,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/py-grpcio-testing version 1.26.0 [adam 2020-01-03]
 	Updated devel/py-ruamel-ordereddict to 0.4.14 [adam 2020-01-03]
 	Updated databases/py-multidict to 4.7.3 [adam 2020-01-03]
+	Updated textproc/py-jellyfish to 0.7.2 [adam 2020-01-03]
+	Updated audio/py-beets to 1.4.9nb1 [adam 2020-01-03]
