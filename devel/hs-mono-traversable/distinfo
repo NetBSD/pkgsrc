@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/03 07:42:18 pho Exp $
+$NetBSD: distinfo,v 1.2 2020/01/03 07:46:30 pho Exp $
 
-SHA1 (mono-traversable-1.0.15.1.tar.gz) = 89791be9da3b10403e89bca9d944174ccf3edcb6
-RMD160 (mono-traversable-1.0.15.1.tar.gz) = a237864e150973285f40b9a042f1c32f51a4b0c2
-SHA512 (mono-traversable-1.0.15.1.tar.gz) = adf1af35b93af0605667d8b033415f318c6dab225499fdd1d9eab349fb1eedca2623c98f9dce83f94ed27db75b6f0aa88027daa748c7b3db05f47f68b505b0c8
-Size (mono-traversable-1.0.15.1.tar.gz) = 40815 bytes
+SHA1 (mono-traversable-1.0.8.1.tar.gz) = 6436c98add73e6faf0099ece34fe04136fb5ea15
+RMD160 (mono-traversable-1.0.8.1.tar.gz) = ffe54685a4e70e3ed263e2cc6f61c949fc14a7b1
+SHA512 (mono-traversable-1.0.8.1.tar.gz) = cb3ea7efd1995be5f3af2b71cb8ed105801de6e2496fdd2644f90b223a33aa9b1e2e70837acaf3289aa4354ec217daf9bb77b44e7b745c3c84866ec40be5e062
+Size (mono-traversable-1.0.8.1.tar.gz) = 39037 bytes
