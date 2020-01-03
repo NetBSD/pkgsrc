@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.446 2020/01/02 11:16:04 pho Exp $
+# $NetBSD: Makefile,v 1.447 2020/01/03 04:37:07 pho Exp $
 
 COMMENT=	Mathematics
 
@@ -185,6 +185,7 @@ SUBDIR+=	harminv
 SUBDIR+=	heirloom-factor
 SUBDIR+=	heirloom-units
 SUBDIR+=	herisvm
+SUBDIR+=	hs-comonad
 SUBDIR+=	hs-contravariant
 SUBDIR+=	hs-distributive
 SUBDIR+=	hs-integer-logarithms
