@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.119 2020/01/03 05:21:42 pho Exp $
+$NetBSD: CHANGES-2020,v 1.120 2020/01/03 05:32:05 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -135,3 +135,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/hs-profunctors version 5.5.1 [pho 2020-01-03]
 	Added math/hs-semigroupoids version 5.3.4 [pho 2020-01-03]
 	Added devel/hs-either version 5.0.1.1 [pho 2020-01-03]
+	Added time/hs-clock version 0.8 [pho 2020-01-03]
