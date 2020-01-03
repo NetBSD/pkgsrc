@@ -1,1 +1,1 @@
-bin/beet @PREFIX@/bin/beet@PYVERSSUFFIX@
+bin/beet @PREFIX@/bin/beet-@PYVERSSUFFIX@
