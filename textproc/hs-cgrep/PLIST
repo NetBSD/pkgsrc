@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/03 21:32:37 szptvlfn Exp $
-bin/cgrep
-share/doc/cgrep-${PKGVERSION}/LICENSE
