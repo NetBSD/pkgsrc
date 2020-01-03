@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.134 2020/01/03 12:38:13 adam Exp $
+$NetBSD: CHANGES-2020,v 1.135 2020/01/03 12:47:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -160,3 +160,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-simpleeval to 0.9.10 [adam 2020-01-03]
 	Updated devel/py-py to 1.8.1 [adam 2020-01-03]
 	Updated devel/py-fakefs to 3.7.1 [adam 2020-01-03]
+	Updated textproc/py-pallets-sphinx-themes to 1.2.3 [adam 2020-01-03]
+	Updated devel/py-pyparsing to 2.4.6 [adam 2020-01-03]
