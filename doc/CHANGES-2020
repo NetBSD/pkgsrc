@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.121 2020/01/03 06:04:43 pho Exp $
+$NetBSD: CHANGES-2020,v 1.122 2020/01/03 06:18:31 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -137,3 +137,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-either version 5.0.1.1 [pho 2020-01-03]
 	Added time/hs-clock version 0.8 [pho 2020-01-03]
 	Added misc/hs-extra version 1.6.18 [pho 2020-01-03]
+	Added textproc/hs-regex-pcre version 0.95.0.0 [pho 2020-01-03]
