@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.132 2020/01/03 11:54:27 adam Exp $
+$NetBSD: CHANGES-2020,v 1.133 2020/01/03 12:17:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -156,3 +156,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-parse to 1.14.0 [adam 2020-01-03]
 	Updated devel/py-logbook to 1.5.3 [adam 2020-01-03]
 	Updated lang/py-mypy to 0.761 [adam 2020-01-03]
+	Updated net/py-gsutil to 4.46 [adam 2020-01-03]
+	Updated math/py-simpleeval to 0.9.10 [adam 2020-01-03]
