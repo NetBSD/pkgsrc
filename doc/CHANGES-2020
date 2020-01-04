@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.144 2020/01/04 04:27:53 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.145 2020/01/04 10:09:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -172,3 +172,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rust to 1.40.0 [jperkin 2020-01-03]
 	Updated meta-pkgs/mate to 1.22.2 [gutteridge 2020-01-04]
 	Updated print/hplip to 3.19.12 [khorben 2020-01-04]
+	Updated net/bind911 to 9.11.14 [taca 2020-01-04]
