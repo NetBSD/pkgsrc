@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.156 2020/01/04 12:30:31 nia Exp $
+$NetBSD: CHANGES-2020,v 1.157 2020/01/04 12:58:42 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -184,3 +184,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/devilutionx to 1.0.0 [nia 2020-01-04]
 	Updated emulators/nestopia to 1.50 [nia 2020-01-04]
 	Updated emulators/libretro-nestopia to 1.50 [nia 2020-01-04]
+	Removed lang/go111 [bsiegert 2020-01-04]
