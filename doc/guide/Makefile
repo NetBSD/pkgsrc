@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2019/10/05 08:50:35 leot Exp $
+# $NetBSD: Makefile,v 1.58 2020/01/04 12:14:22 ryoon Exp $
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
 MASTER_SITES=		${MASTER_SITE_LOCAL}
-DISTFILES=		htdocs-share-20191005.tar.gz
+DISTFILES=		htdocs-share-20200104.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/docs/pkgsrc/
@@ -17,7 +17,7 @@ DIST_SUBDIR=		${PKGBASE}
 USE_LANGUAGES=		# empty
 MAKE_ENV+=		SED=${SED:Q}
 
-PLIST_VARS=		ascii html pdf
+PLIST_VARS=		ascii html pdf epub
 
 DOCDIR=			${PREFIX}/share/doc/pkgsrc
 .if exists(/usr/cvs/htdocs)
@@ -49,6 +49,10 @@ PLIST.html=		yes
 
 .  if !empty(OUTPUTS:Mpdf)
 PLIST.pdf=		yes
+.endif
+
+.  if !empty(OUTPUTS:Mepub)
+PLIST.epub=		yes
 .endif
 
 # only override the Makefile.common default if it is explicitly set
