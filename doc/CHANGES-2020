@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.145 2020/01/04 10:09:26 taca Exp $
+$NetBSD: CHANGES-2020,v 1.146 2020/01/04 10:10:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -173,3 +173,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/mate to 1.22.2 [gutteridge 2020-01-04]
 	Updated print/hplip to 3.19.12 [khorben 2020-01-04]
 	Updated net/bind911 to 9.11.14 [taca 2020-01-04]
+	Updated net/bind914 to 9.14.9 [taca 2020-01-04]
