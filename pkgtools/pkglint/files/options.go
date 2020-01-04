@@ -78,7 +78,7 @@ func (ck *OptionsLinesChecker) collect() {
 func (ck *OptionsLinesChecker) handleUpperLine(mkline *MkLine, seenPkgOptionsVar bool) {
 
 	declare := func(option string) {
-		if containsVarRef(option) {
+		if containsVarUse(option) {
 			ck.declaredArbitrary = true
 		} else {
 			ck.declaredOptions[option] = mkline
@@ -106,7 +106,7 @@ func (ck *OptionsLinesChecker) handleUpperLine(mkline *MkLine, seenPkgOptionsVar
 					declare(option)
 				}
 				if len(forVars) == 0 {
-					for _, option := range mkline.ValueFields(resolveVariableRefs(ck.mklines, option)) {
+					for _, option := range mkline.ValueFields(resolveVariableRefs(option, ck.mklines, nil)) {
 						declare(option)
 					}
 				}
@@ -138,7 +138,7 @@ func (ck *OptionsLinesChecker) handleLowerLine(mkline *MkLine) {
 func (ck *OptionsLinesChecker) handleLowerCondition(mkline *MkLine, cond *MkCond) {
 
 	recordOption := func(option string) {
-		if containsVarRef(option) {
+		if containsVarUse(option) {
 			ck.handledArbitrary = true
 			return
 		}

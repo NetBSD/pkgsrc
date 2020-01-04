@@ -46,7 +46,6 @@ func (cv *VartypeCheck) Explain(explanation ...string)             { cv.MkLine.E
 //
 //  fix.Replace("from", "to")
 //  fix.ReplaceAfter("prefix", "from", "to")
-//  fix.ReplaceRegex(`[\t ]+`, "space", -1)
 //  fix.InsertBefore("new line")
 //  fix.InsertAfter("new line")
 //  fix.Delete()
@@ -192,8 +191,6 @@ func (cv *VartypeCheck) Category() {
 }
 
 // CFlag is a single option to the C/C++ compiler.
-//
-// XXX: How can flags like "-D NAME" be handled?
 func (cv *VartypeCheck) CFlag() {
 	if cv.Op == opUseMatch {
 		return
@@ -230,9 +227,10 @@ func (cv *VartypeCheck) Comment() {
 		cv.Warnf("COMMENT should not begin with %q.", first)
 	}
 
-	if G.Pkg != nil && G.Pkg.EffectivePkgbase != "" {
-		pkgbase := G.Pkg.EffectivePkgbase
-		if hasPrefix(strings.ToLower(value), strings.ToLower(pkgbase+" ")) {
+	pkg := cv.MkLines.pkg
+	if pkg != nil && pkg.EffectivePkgbase != "" {
+		prefix := strings.ToLower(pkg.EffectivePkgbase + " ")
+		if hasPrefix(strings.ToLower(value), prefix) {
 			cv.Warnf("COMMENT should not start with the package name.")
 			cv.Explain(
 				"The COMMENT is usually displayed together with the package name.",
@@ -395,7 +393,7 @@ func (cv *VartypeCheck) DependencyWithPath() {
 			cv.MkLine.ExplainRelativeDirs()
 		}
 
-		if !containsVarRef(relpath.String()) {
+		if !containsVarUse(relpath.String()) {
 			MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(relpath)
 		}
 
@@ -529,7 +527,7 @@ func (cv *VartypeCheck) FetchURL() {
 		}
 
 		if G.Pkgsrc.MasterSiteVarToURL[name] == "" {
-			if G.Pkg == nil || !G.Pkg.vars.IsDefined(name) {
+			if cv.MkLines.pkg == nil || !cv.MkLines.pkg.vars.IsDefined(name) {
 				cv.Errorf("The site %s does not exist.", name)
 			}
 		}
@@ -590,8 +588,6 @@ func (cv *VartypeCheck) Filename() {
 
 func (cv *VartypeCheck) FilePattern() {
 
-	// TODO: Decide whether to call this a "mask" or a "pattern", and use only that word everywhere.
-
 	invalid := replaceAll(cv.ValueNoVar, `[%*+,\-.0-9?@A-Z\[\]_a-z~]`, "")
 	if invalid == "" {
 		return
@@ -641,10 +637,10 @@ func (cv *VartypeCheck) Homepage() {
 	}
 
 	baseURL := G.Pkgsrc.MasterSiteVarToURL[sitename]
-	if sitename == "MASTER_SITES" && G.Pkg != nil {
-		mkline := G.Pkg.vars.FirstDefinition("MASTER_SITES")
+	if sitename == "MASTER_SITES" && cv.MkLines.pkg != nil {
+		mkline := cv.MkLines.pkg.vars.FirstDefinition("MASTER_SITES")
 		if mkline != nil {
-			if !containsVarRef(mkline.Value()) {
+			if !containsVarUse(mkline.Value()) {
 				masterSites := cv.MkLine.ValueFields(mkline.Value())
 				if len(masterSites) > 0 {
 					baseURL = masterSites[0]
@@ -1305,7 +1301,7 @@ func (cv *VartypeCheck) URL() {
 	if value == "" && hasPrefix(cv.MkComment, "#") {
 		// Ok
 
-	} else if containsVarRef(value) {
+	} else if containsVarUse(value) {
 		// No further checks
 
 	} else if m, _, host, _, _ := match4(value, `^(https?|ftp|gopher)://([-0-9A-Za-z.]+)(?::(\d+))?/([-%&+,./0-9:;=?@A-Z_a-z~]|#)*$`); m {

@@ -92,10 +92,12 @@ func (llex *LinesLexer) SkipEmptyOrNote() bool {
 		return true
 	}
 
-	if llex.index == 0 {
+	if llex.index < llex.lines.Len() || llex.lines.Len() == 0 {
 		fix := llex.CurrentLine().Autofix()
 		fix.Notef("Empty line expected before this line.")
-		fix.InsertBefore("")
+		if !llex.EOF() {
+			fix.InsertBefore("")
+		}
 		fix.Apply()
 	} else {
 		fix := llex.PreviousLine().Autofix()

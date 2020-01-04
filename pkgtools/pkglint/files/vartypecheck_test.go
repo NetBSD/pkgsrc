@@ -306,10 +306,11 @@ func (s *Suite) Test_VartypeCheck_CFlag(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_Comment(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, BtComment)
 
-	G.Pkg = NewPackage(t.File("category/converter"))
-	G.Pkg.EffectivePkgbase = "converter"
+	pkg := NewPackage(t.File("category/converter"))
+	pkg.EffectivePkgbase = "converter"
+	vt := NewVartypeCheckTester(t, BtComment)
+	vt.Package(pkg)
 
 	vt.Varname("COMMENT")
 	vt.Values(
@@ -473,7 +474,6 @@ func (s *Suite) Test_VartypeCheck_Dependency(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, BtDependencyWithPath)
 
 	t.CreateFileLines("category/package/Makefile")
 	t.CreateFileLines("category/package/files/dummy")
@@ -482,11 +482,13 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 	t.CreateFileLines("devel/gmake/Makefile")
 	t.CreateFileLines("devel/py-module/Makefile")
 	t.CreateFileLines("x11/alacarte/Makefile")
-	G.Pkg = NewPackage(t.File("category/package"))
+	pkg := NewPackage(t.File("category/package"))
+	vt := NewVartypeCheckTester(t, BtDependencyWithPath)
+	vt.Package(pkg)
 
 	vt.Varname("DEPENDS")
 	vt.Op(opAssignAppend)
-	vt.File(G.Pkg.File("filename.mk"))
+	vt.File(pkg.File("filename.mk"))
 	vt.Values(
 		"Perl",
 		"perl5>=5.22:../perl5",
@@ -663,13 +665,14 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 		"MASTER_SITE_OWN=\thttps://example.org/")
 	t.FinishSetUp()
 
-	vt := NewVartypeCheckTester(t, BtFetchURL)
-
 	t.SetUpMasterSite("MASTER_SITE_GNU", "http://ftp.gnu.org/pub/gnu/")
 	t.SetUpMasterSite("MASTER_SITE_GITHUB", "https://github.com/")
 
-	G.Pkg = NewPackage(t.File("category/own-master-site"))
-	G.Pkg.load()
+	pkg := NewPackage(t.File("category/own-master-site"))
+	pkg.load()
+
+	vt := NewVartypeCheckTester(t, BtFetchURL)
+	vt.Package(pkg)
 
 	vt.Varname("MASTER_SITES")
 	vt.Values(
@@ -785,7 +788,7 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 	// The ${.TARGET} variable doesn't make sense at all in a URL.
 	// Other variables might, and there could be checks for them.
 	// As of December 2019 these are skipped completely,
-	// see containsVarRef in VartypeCheck.URL.
+	// see containsVarUse in VartypeCheck.URL.
 	vt.Values(
 		"https://example.org/$@")
 
@@ -918,7 +921,8 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:3: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
-	G.Pkg = NewPackage(t.File("category/package"))
+	pkg := NewPackage(t.File("category/package"))
+	vt.Package(pkg)
 
 	vt.Values(
 		"${MASTER_SITES}")
@@ -929,9 +933,9 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:11: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
-	delete(G.Pkg.vars.firstDef, "MASTER_SITES")
-	delete(G.Pkg.vars.lastDef, "MASTER_SITES")
-	G.Pkg.vars.Define("MASTER_SITES", t.NewMkLine(G.Pkg.File("Makefile"), 5,
+	delete(pkg.vars.firstDef, "MASTER_SITES")
+	delete(pkg.vars.lastDef, "MASTER_SITES")
+	pkg.vars.Define("MASTER_SITES", t.NewMkLine(pkg.File("Makefile"), 5,
 		"MASTER_SITES=\thttps://cdn.NetBSD.org/pub/pkgsrc/distfiles/"))
 
 	vt.Values(
@@ -941,9 +945,9 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 		"WARN: filename.mk:21: HOMEPAGE should not be defined in terms of MASTER_SITEs. " +
 			"Use https://cdn.NetBSD.org/pub/pkgsrc/distfiles/ directly.")
 
-	delete(G.Pkg.vars.firstDef, "MASTER_SITES")
-	delete(G.Pkg.vars.lastDef, "MASTER_SITES")
-	G.Pkg.vars.Define("MASTER_SITES", t.NewMkLine(G.Pkg.File("Makefile"), 5,
+	delete(pkg.vars.firstDef, "MASTER_SITES")
+	delete(pkg.vars.lastDef, "MASTER_SITES")
+	pkg.vars.Define("MASTER_SITES", t.NewMkLine(pkg.File("Makefile"), 5,
 		"MASTER_SITES=\t${MASTER_SITE_GITHUB}"))
 
 	vt.Values(
@@ -954,9 +958,9 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:31: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
-	delete(G.Pkg.vars.firstDef, "MASTER_SITES")
-	delete(G.Pkg.vars.lastDef, "MASTER_SITES")
-	G.Pkg.vars.Define("MASTER_SITES", t.NewMkLine(G.Pkg.File("Makefile"), 5,
+	delete(pkg.vars.firstDef, "MASTER_SITES")
+	delete(pkg.vars.lastDef, "MASTER_SITES")
+	pkg.vars.Define("MASTER_SITES", t.NewMkLine(pkg.File("Makefile"), 5,
 		"MASTER_SITES=\t# none"))
 
 	vt.Values(
@@ -1096,9 +1100,9 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 	t.CreateFileLines("licenses/mit", "...")
 	t.FinishSetUp()
 
-	G.Pkg = NewPackage(t.File("category/package"))
+	pkg := NewPackage(t.File("category/package"))
 
-	mklines := t.SetUpFileMkLines("perl5.mk",
+	mklines := t.SetUpFileMkLinesPkg("perl5.mk", pkg,
 		MkCvsID,
 		"PERL5_LICENSE= gnu-gpl-v2 OR artistic")
 	// Also registers the PERL5_LICENSE variable in the package.
@@ -1106,6 +1110,7 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 
 	vt := NewVartypeCheckTester(t, BtLicense)
 
+	vt.Package(pkg)
 	vt.Varname("LICENSE")
 	vt.Values(
 		"gnu-gpl-v2",
@@ -2184,6 +2189,7 @@ type VartypeCheckTester struct {
 	lineno    int
 	varname   string
 	op        MkOperator
+	pkg       *Package
 }
 
 // NewVartypeCheckTester starts the test with a filename of "filename", at line 1,
@@ -2196,8 +2202,10 @@ func NewVartypeCheckTester(t *Tester, basicType *BasicType) *VartypeCheckTester 
 		t.SetUpVartypes()
 	}
 
-	return &VartypeCheckTester{t, basicType, "filename.mk", 1, "", opAssign}
+	return &VartypeCheckTester{t, basicType, "filename.mk", 1, "", opAssign, nil}
 }
+
+func (vt *VartypeCheckTester) Package(pkg *Package) { vt.pkg = pkg }
 
 func (vt *VartypeCheckTester) Varname(varname string) {
 	vartype := G.Pkgsrc.VariableType(nil, varname)
@@ -2277,7 +2285,7 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 		text := toText(value)
 
 		line := vt.tester.NewLine(vt.filename, vt.lineno, text)
-		mklines := NewMkLines(NewLines(vt.filename, []*Line{line}))
+		mklines := NewMkLines(NewLines(vt.filename, []*Line{line}), vt.pkg)
 		vt.lineno++
 
 		mklines.ForEach(func(mkline *MkLine) { test(mklines, mkline, value) })

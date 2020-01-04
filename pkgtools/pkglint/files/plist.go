@@ -239,7 +239,7 @@ func (ck *PlistChecker) checkPathNonAscii(pline *PlistLine) {
 	text := pline.text
 
 	lex := textproc.NewLexer(text)
-	lex.NextBytesFunc(func(b byte) bool { return b >= ' ' && b <= '~' })
+	lex.SkipBytesFunc(func(b byte) bool { return b >= ' ' && b <= '~' })
 	ascii := lex.EOF()
 
 	switch {
@@ -472,7 +472,7 @@ func (pline *PlistLine) HasPlainPath() bool {
 	text := pline.text
 	return text != "" &&
 		plistLineStart.Contains(text[0]) &&
-		!containsVarRef(text)
+		!containsVarUse(text)
 }
 
 func (pline *PlistLine) CheckTrailingWhitespace() {
