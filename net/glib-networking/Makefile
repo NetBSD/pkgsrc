@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2019/11/14 11:51:48 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2020/01/04 19:04:11 wiz Exp $
 
-DISTNAME=	glib-networking-2.62.1
+DISTNAME=	glib-networking-2.62.2
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib-networking/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
