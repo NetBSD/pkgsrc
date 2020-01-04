@@ -35,13 +35,13 @@ apache-mpm-prefork	Use pre-forked workers in Apache web server.
 apache-mpm-worker	Use multiple processes of multi-threaded workers in Apache web server.
 apple-common-crypto	Use Apple's CommonCrypto.
 ares			Use the ares library for asynchronous name resolution.
-aria2-metalink		Enable Metalink support.
 argon2			Enable support for Argon2 password-hashing function.
+aria2-metalink		Enable Metalink support.
 arts			Use the aRts audio daemon.
 aspell			Add spell checking support using aspell.
-async	Use the async library
 ass			Enable subtitle renderer for the ASS/SSA format
 asterisk-config		Control installation of Asterisk sample config files.
+async	Use the async library
 aterm-big5		Enable Chinese support.
 aterm-greek		Enable Greek keyboard support.
 aterm-kanji		Enable kanji support.
@@ -109,7 +109,6 @@ courier-esmtp		ESMTP mail delivery.
 courier-gnutls		Support using GNU TLS instead of OpenSSL.
 courier-local		Local mail delivery.
 courier-uucp		UUCP mail delivery.
-vice-cpuhistory		Enable the 65xx cpu history feature.
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
 curses			Enable curses support.
@@ -236,9 +235,9 @@ fribidi			Enable BIDI support using fribidi.
 ftp			Enable File Transfer Protocol (FTP) support.
 fts			Enable full-text searching.
 fuse			Enable Filesystem in Userspace support.
-gamin			Enable Gamin file and directory monitoring system support.
 gallium-xa		Enable the Gallium xa state tracker.
 gallium-xvmc		Enable the Gallium xvmc state tracker.
+gamin			Enable Gamin file and directory monitoring system support.
 gcc-ada			Build the gcc Ada frontend and libraries.
 gcc-c++			Build the gcc C++ frontend and libraries.
 gcc-d			Build the gcc D frontend and libraries.
@@ -359,6 +358,7 @@ java			Enable Java support.
 javascript		Enable Javascript support.
 jdbc-mysql31		Enable MySQL JDBC driver.
 jdbc-mysql5		Enable MySQL JDBC driver.
+jp2			Enable JPEG 2000 support using the openjpeg library.
 jpeg			Enable JPEG support.
 json			Enable JSON (JavaScript Object Notation) support.
 jwhois-enable-cache	Enable cache support.
@@ -799,8 +799,8 @@ uds			Enable support for Unix domain sockets.
 uim			Enable UIM support.
 uim-fep			Enable UIM FEP support.
 umefont			Add Umefont.
-unix	Enable support for unix.
 unicode			Enable support for Unicode.
+unix	Enable support for unix.
 unixodbc		Enable ODBC support via unixODBC.
 unrealircd-chroot	Enable support for running in a chroot jail.
 unrealircd-disableusermod	Disable /sethost, /setident, /chgname, /chghost, and /chgident.
@@ -826,9 +826,11 @@ vdpau			Enable support for VDPAU.
 vera-ttf		Include the Vera TTF fonts.
 vflib			Enable support for Japanese vector font library.
 via-padlock		Enable support for the VIA PadLock Security Engine.
+vice-cpuhistory		Enable the 65xx cpu history feature.
 vice-ethernet		Enable Ethernet cartridge support.
 vice-fullscreen		Enable full-screen support.
 vice-hwscaling		Enable hardware-assisted screen scaling.
+vice-x64		Enable building of the old x64 emulator.
 vidix			Enable VIDIX (Video Interface for *niX support).
 viewvc-php		Use php to colorize .php and .inc files.
 vlc-skins		Enable skins support in VLC.
@@ -856,7 +858,6 @@ wxwidgets		Enable wxWidgets support.
 x11			Enable X11 support.
 x264			Enable x264 support.
 x265			Enable x265 support.
-vice-x64		Enable building of the old x64 emulator.
 xapian-flint-backend	Enable "Flint" format Xapian database support.
 xapian-quartz-backend	Enable "Quartz" format Xapian database support.
 xatracker		Enable XA X Acceleration API support.
