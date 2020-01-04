@@ -163,21 +163,29 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 
 	changes := G.Pkgsrc.loadDocChangesFromFile(t.File("doc/CHANGES-2018"))
 
-	c.Assert(changes, check.HasLen, 7) // TODO: refactor to CheckDeepEquals
-	t.CheckEquals(*changes[0], Change{changes[0].Location,
-		Added, "category/package", "1.0", "author1", "2015-01-01"})
-	t.CheckEquals(*changes[1], Change{changes[1].Location,
-		Updated, "category/package", "1.5", "author2", "2018-01-02"})
-	t.CheckEquals(*changes[2], Change{changes[2].Location,
-		Renamed, "category/package", "category/pkg", "author3", "2018-01-03"})
-	t.CheckEquals(*changes[3], Change{changes[3].Location,
-		Moved, "category/package", "other/package", "author4", "2018-01-04"})
-	t.CheckEquals(*changes[4], Change{changes[4].Location,
-		Removed, "category/package", "", "author5", "2018-01-09"})
-	t.CheckEquals(*changes[5], Change{changes[5].Location,
-		Removed, "category/package", "category/package2", "author6", "2018-01-06"})
-	t.CheckEquals(*changes[6], Change{changes[6].Location,
-		Downgraded, "category/package", "1.2", "author7", "2018-01-07"})
+	t.CheckDeepEquals(
+		changes, []*Change{
+			{changes[0].Location,
+				Added, "category/package", "1.0",
+				"author1", "2015-01-01"},
+			{changes[1].Location,
+				Updated, "category/package", "1.5",
+				"author2", "2018-01-02"},
+			{changes[2].Location,
+				Renamed, "category/package", "category/pkg",
+				"author3", "2018-01-03"},
+			{changes[3].Location,
+				Moved, "category/package", "other/package",
+				"author4", "2018-01-04"},
+			{changes[4].Location,
+				Removed, "category/package", "",
+				"author5", "2018-01-09"},
+			{changes[5].Location,
+				Removed, "category/package", "category/package2",
+				"author6", "2018-01-06"},
+			{changes[6].Location,
+				Downgraded, "category/package", "1.2",
+				"author7", "2018-01-07"}})
 
 	t.CheckOutputLines(
 		"WARN: ~/doc/CHANGES-2018:1: Year \"2015\" for category/package does not match the filename CHANGES-2018.",

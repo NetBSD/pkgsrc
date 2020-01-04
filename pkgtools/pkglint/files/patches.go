@@ -4,8 +4,8 @@ package pkglint
 
 import "strings"
 
-func CheckLinesPatch(lines *Lines) {
-	(&PatchChecker{lines, NewLinesLexer(lines), false, false}).Check()
+func CheckLinesPatch(lines *Lines, pkg *Package) {
+	(&PatchChecker{lines, NewLinesLexer(lines), false, false}).Check(pkg)
 }
 
 type PatchChecker struct {
@@ -21,7 +21,7 @@ const (
 	rePatchUniHunk    = `^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@(.*)$`
 )
 
-func (ck *PatchChecker) Check() {
+func (ck *PatchChecker) Check(pkg *Package) {
 	if ck.lines.CheckCvsID(0, ``, "") {
 		ck.llex.Skip()
 	}
@@ -84,10 +84,10 @@ func (ck *PatchChecker) Check() {
 
 	CheckLinesTrailingEmptyLines(ck.lines)
 	sha1Before := computePatchSha1Hex(ck.lines)
-	if SaveAutofixChanges(ck.lines) && G.Pkg != nil {
+	if SaveAutofixChanges(ck.lines) && pkg != nil {
 		linesAfter := Load(ck.lines.Filename, 0)
 		sha1After := computePatchSha1Hex(linesAfter)
-		G.Pkg.AutofixDistinfo(sha1Before, sha1After)
+		pkg.AutofixDistinfo(sha1Before, sha1After)
 	}
 }
 

@@ -53,12 +53,6 @@ func (s *Suite) Test_MkLineChecker_Check__buildlink3_include_prefs(c *check.C) {
 		".include \"../../mk/bsd.prefs.mk\"",
 		".include \"../../mk/bsd.fast.prefs.mk\"")
 
-	// If the buildlink3.mk file doesn't actually exist, resolving the
-	// relative path fails since that depends on the actual file system,
-	// not on syntactical paths; see os.Stat in CheckRelativePath.
-	//
-	// TODO: Refactor Relpath to be independent of a filesystem.
-
 	mklines.Check()
 
 	t.CheckOutputLines(
@@ -501,7 +495,7 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation__autofix(c *check.C
 		".endif",
 		".endfor",
 		".endif")
-	mklines := NewMkLines(lines)
+	mklines := NewMkLines(lines, nil)
 
 	mklines.Check()
 
@@ -838,8 +832,8 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveEnd__ending_comments(c *check.C
 		"",
 		".if ${OPSYS} == NetBSD",
 		".elif ${OPSYS} == FreeBSD",
-		".endif # NetBSD", // Wrong, should be FreeBSD from the .elif.
-		"",
+		".endif # NetBSD", // Wrong, should be OPSYS, which applies to all branches.
+		"",                // Or FreeBSD since that is the branch being closed right now.
 		".for ii in 1 2",
 		".  for jj in 1 2",
 		".  endfor # ii", // Note: a simple "i" would not generate a warning because it is found in the word "in".
@@ -849,13 +843,12 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveEnd__ending_comments(c *check.C
 	mklines.Check()
 
 	t.CheckOutputLines(
-		// TODO: mention the line number of the corresponding condition.
-		"WARN: opsys.mk:9: Comment \"MACHINE_ARCH\" does not match condition \"${OS_VERSION:M8.*}\".",
-		"WARN: opsys.mk:10: Comment \"OS_VERSION\" does not match condition \"${MACHINE_ARCH} == x86_64\".",
-		"WARN: opsys.mk:12: Comment \"j\" does not match loop \"i in 1 2 3 4 5\".",
+		"WARN: opsys.mk:9: Comment \"MACHINE_ARCH\" does not match condition \"${OS_VERSION:M8.*}\" in line 8.",
+		"WARN: opsys.mk:10: Comment \"OS_VERSION\" does not match condition \"${MACHINE_ARCH} == x86_64\" in line 7.",
+		"WARN: opsys.mk:12: Comment \"j\" does not match loop \"i in 1 2 3 4 5\" in line 5.",
 		"WARN: opsys.mk:14: Unknown option \"option\".",
-		"WARN: opsys.mk:22: Comment \"NetBSD\" does not match condition \"${OPSYS} == FreeBSD\".",
-		"WARN: opsys.mk:26: Comment \"ii\" does not match loop \"jj in 1 2\".")
+		"WARN: opsys.mk:22: Comment \"NetBSD\" does not match condition \"${OPSYS} == FreeBSD\" in line 21.",
+		"WARN: opsys.mk:26: Comment \"ii\" does not match loop \"jj in 1 2\" in line 25.")
 }
 
 // After removing the dummy indentation in commit d5a926af,

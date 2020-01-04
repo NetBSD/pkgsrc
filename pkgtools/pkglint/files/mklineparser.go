@@ -16,7 +16,6 @@ func NewMkLineParser() MkLineParser { return MkLineParser{} }
 func (p MkLineParser) Parse(line *Line) *MkLine {
 	text := line.Text
 
-	// XXX: This check should be moved somewhere else. NewMkLine should only be concerned with parsing.
 	if hasPrefix(text, " ") && line.Basename != "bsd.buildlink3.mk" {
 		line.Warnf("Makefile lines should not start with space characters.")
 		line.Explain(
@@ -135,7 +134,7 @@ func (p MkLineParser) MatchVarassign(line *Line, text string, splitResult *mkLin
 
 	value := trimHspace(lexer.Rest())
 	parsedValueAlign := condStr(commented, "#", "") + lexer.Since(mainStart)
-	valueAlign := p.getRawValueAlign(line.raw[0].orignl, parsedValueAlign)
+	valueAlign := p.getRawValueAlign(line.raw[0].Orig(), parsedValueAlign)
 	if value == "" {
 		valueAlign += splitResult.spaceBeforeComment
 		splitResult.spaceBeforeComment = ""

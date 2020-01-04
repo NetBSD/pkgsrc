@@ -60,7 +60,8 @@ func (ck *MkAssignChecker) checkVarassignLeftNotUsed() {
 		return
 	}
 
-	if G.Pkg != nil && G.Pkg.vars.IsUsedSimilar(varname) {
+	pkg := ck.MkLines.pkg
+	if pkg != nil && pkg.vars.IsUsedSimilar(varname) {
 		return
 	}
 
@@ -323,7 +324,7 @@ func (ck *MkAssignChecker) checkVarassignOpShell() {
 		// Authors of builtin.mk files usually know what they're doing.
 		return
 
-	case G.Pkg == nil || G.Pkg.vars.IsUsedAtLoadTime(mkline.Varname()):
+	case ck.MkLines.pkg == nil || ck.MkLines.pkg.vars.IsUsedAtLoadTime(mkline.Varname()):
 		return
 	}
 
@@ -477,11 +478,12 @@ func (ck *MkAssignChecker) checkVarassignDecreasingVersions() {
 func (ck *MkAssignChecker) checkVarassignMiscRedundantInstallationDirs() {
 	mkline := ck.MkLine
 	varname := mkline.Varname()
+	pkg := ck.MkLines.pkg
 
 	switch {
-	case G.Pkg == nil,
+	case pkg == nil,
 		varname != "INSTALLATION_DIRS",
-		!matches(G.Pkg.vars.LastValue("AUTO_MKDIRS"), `^[Yy][Ee][Ss]$`):
+		!matches(pkg.vars.LastValue("AUTO_MKDIRS"), `^[Yy][Ee][Ss]$`):
 		return
 	}
 
@@ -491,7 +493,7 @@ func (ck *MkAssignChecker) checkVarassignMiscRedundantInstallationDirs() {
 		}
 
 		rel := NewRelPathString(dir)
-		if G.Pkg.Plist.Dirs[rel] != nil {
+		if pkg.Plist.Dirs[rel] != nil {
 			mkline.Notef("The directory %q is redundant in %s.", rel, varname)
 			mkline.Explain(
 				"This package defines AUTO_MKDIR, and the directory is contained in the PLIST.",
@@ -523,7 +525,7 @@ func (ck *MkAssignChecker) checkVarassignRightVaruse() {
 
 	if vartype != nil && vartype.IsShell() {
 		ck.checkVarassignVaruseShell(vartype, time)
-	} else { // XXX: This else looks as if it should be omitted.
+	} else {
 		mkLineChecker := NewMkLineChecker(ck.MkLines, ck.MkLine)
 		mkLineChecker.checkTextVarUse(ck.MkLine.Value(), vartype, time)
 	}

@@ -185,7 +185,7 @@ func (va *VaralignBlock) processVarassign(mkline *MkLine) {
 
 	var infos []*varalignLine
 	for i, raw := range mkline.raw {
-		parts := NewVaralignSplitter().split(strings.TrimSuffix(raw.textnl, "\n"), i == 0)
+		parts := NewVaralignSplitter().split(raw.Text(), i == 0)
 		info := varalignLine{mkline, i, false, parts}
 		infos = append(infos, &info)
 	}
@@ -266,12 +266,14 @@ func (va *VaralignBlock) optimalWidth() int {
 	return minVarnameOpWidth&-8 + 8
 }
 
+// varnameOpWidths calculates the required width of varnameOp,
+// without the trailing whitespace, as well as the outlier.
 func (va *VaralignBlock) varnameOpWidths() (int, int) {
 	var widths bag
-	for _, mkinfo := range va.mkinfos {
+	for i, mkinfo := range va.mkinfos {
 		if !mkinfo.isMultiEmpty() {
 			info := mkinfo.infos[0]
-			widths.add(info.fixer, info.spaceBeforeValueColumn())
+			widths.add(i, info.spaceBeforeValueColumn())
 		}
 	}
 	if widths.len() == 0 {
@@ -281,17 +283,16 @@ func (va *VaralignBlock) varnameOpWidths() (int, int) {
 	widths.sortDesc()
 
 	longest := widths.opt(0)
-	longestLine := widths.key(0).(*MkLine)
 	secondLongest := widths.opt(1)
 
 	haveOutlier := secondLongest != 0 &&
 		secondLongest/8+1 < longest/8 &&
-		!longestLine.IsMultiline() // TODO: may be too imprecise
+		!va.mkinfos[widths.key(0).(int)].infos[0].isContinuation()
 
-	// Minimum required width of varnameOp, without the trailing whitespace.
-	minVarnameOpWidth := condInt(haveOutlier, secondLongest, longest)
-	outlier := condInt(haveOutlier, longest, 0)
-	return minVarnameOpWidth, outlier
+	if haveOutlier {
+		return secondLongest, longest
+	}
+	return longest, 0
 }
 
 func (va *VaralignBlock) spaceWidths(outlier int) (min, max int) {
@@ -541,13 +542,20 @@ func (info *varalignLine) alignValueSingle(newWidth int) {
 
 	fix := info.fixer.Autofix()
 	if newSpace == " " {
-		fix.Notef("This outlier variable value should be aligned with a single space.")
+		fix.Notef(
+			"This outlier variable value should be aligned " +
+				"with a single space.")
 		info.explainWrongColumn(fix)
 	} else if hasSpace && column != oldColumn {
-		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", column+1)
+		fix.Notef(
+			"This variable value should be aligned "+
+				"with tabs, not spaces, to column %d instead of %d.",
+			column+1, oldColumn+1)
 		info.explainWrongColumn(fix)
 	} else if column != oldColumn {
-		fix.Notef("This variable value should be aligned to column %d.", column+1)
+		fix.Notef(
+			"This variable value should be aligned to column %d instead of %d.",
+			column+1, oldColumn+1)
 		info.explainWrongColumn(fix)
 	} else {
 		fix.Notef("Variable values should be aligned with tabs, not spaces.")
@@ -583,9 +591,15 @@ func (info *varalignLine) alignValue(width int) {
 
 	fix := info.fixer.Autofix()
 	if width != oldWidth && contains(oldSpace, " ") {
-		fix.Notef("This variable value should be aligned with tabs, not spaces, to column %d.", width+1)
+		fix.Notef(
+			"This variable value should be aligned "+
+				"with tabs, not spaces, to column %d instead of %d.",
+			width+1, oldWidth+1)
 	} else if width != oldWidth {
-		fix.Notef("This variable value should be aligned to column %d.", width+1) // TODO: to column %d instead of %d.
+		fix.Notef(
+			"This variable value should be aligned "+
+				"to column %d instead of %d.",
+			width+1, oldWidth+1)
 	} else {
 		fix.Notef("Variable values should be aligned with tabs, not spaces.")
 	}

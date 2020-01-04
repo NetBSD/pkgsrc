@@ -600,10 +600,9 @@ func (s *Suite) Test_Buildlink3Checker_checkMainPart__if_else_endif(c *check.C) 
 	t.CheckOutputEmpty()
 }
 
-// Since the buildlink3 checker does not use MkLines.ForEach, it has to keep
-// track of the nesting depth of .if directives.
-//
-// TODO: Use MkLines.ForEach.
+// The buildlink3 checker does not use MkLines.ForEach since that would make
+// the code more difficult to understand. Without MkLines.ForEach, it has to
+// keep track of the nesting depth of .if directives itself.
 func (s *Suite) Test_Buildlink3Checker_checkMainPart__nested_if(c *check.C) {
 	t := s.Init(c)
 

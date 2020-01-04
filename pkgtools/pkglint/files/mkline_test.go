@@ -329,7 +329,8 @@ func (s *Suite) Test_MkLine_ValueFields__compared_to_splitIntoShellTokens(c *che
 	words = mkline.ValueFields("a b \"c  c  c\" d;;d;; \"e\"''`` 'rest")
 
 	t.CheckDeepEquals(words, []string{"a", "b", "\"c  c  c\"", "d;;d;;", "\"e\"''``"})
-	// TODO: c.Check(rest, equals, "'rest")
+	// The rest "'rest" is silently discarded.
+	// Most probably, the shell will complain about it when it is executed.
 }
 
 func (s *Suite) Test_MkLine_ValueTokens(c *check.C) {
@@ -532,9 +533,10 @@ func (s *Suite) Test_MkLine_ResolveVarsInRelativePath(c *check.C) {
 	mklines := t.SetUpFileMkLines("Makefile",
 		MkCvsID)
 	mkline := mklines.mklines[0]
+	var pkg *Package = nil
 
 	test := func(before RelPath, after RelPath) {
-		t.CheckEquals(mkline.ResolveVarsInRelativePath(before), after)
+		t.CheckEquals(mkline.ResolveVarsInRelativePath(before, pkg), after)
 	}
 
 	test("", ".")
@@ -547,7 +549,7 @@ func (s *Suite) Test_MkLine_ResolveVarsInRelativePath(c *check.C) {
 	test("${FILESDIR}", "${FILESDIR}")
 	test("${PKGDIR}", "${PKGDIR}")
 
-	G.Pkg = NewPackage(t.File("category/package"))
+	pkg = NewPackage(t.File("category/package"))
 
 	test("${FILESDIR}", "files")
 	test("${PKGDIR}", ".")
@@ -598,7 +600,7 @@ func (s *Suite) Test_MkLine_ResolveVarsInRelativePath__assertion(c *check.C) {
 	mkline := t.NewMkLine("a/b/c/d/e/f/g.mk", 123, "")
 
 	t.ExpectPanic(
-		func() { mkline.ResolveVarsInRelativePath("${PKGSRCDIR}") },
+		func() { mkline.ResolveVarsInRelativePath("${PKGSRCDIR}", nil) },
 		"Pkglint internal error: "+
 			"Relative path \"../../../../../..\" for \"a/b/c/d/e/f\" is too deep "+
 			"below the pkgsrc root \".\".")
@@ -696,8 +698,8 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__command_in_command(c *check.C)
 	t.SetUpVartypes()
 	t.SetUpTool("find", "FIND", AtRunTime)
 	t.SetUpTool("sort", "SORT", AtRunTime)
-	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	mklines := t.NewMkLines("Makefile",
+	pkg := NewPackage(t.File("category/pkgbase"))
+	mklines := t.NewMkLinesPkg("Makefile", pkg,
 		MkCvsID,
 		"GENERATE_PLIST= cd ${DESTDIR}${PREFIX}; ${FIND} * \\( -type f -or -type l \\) | ${SORT};")
 

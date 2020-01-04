@@ -43,7 +43,7 @@ func (ck MkLineChecker) checkEmptyContinuation() {
 	}
 
 	line := ck.MkLine.Line
-	if line.raw[len(line.raw)-1].orignl == "\n" {
+	if line.raw[len(line.raw)-1].Orig() == "" {
 		lastLine := NewLine(line.Filename, int(line.lastLine), "", line.raw[len(line.raw)-1])
 		lastLine.Warnf("This line looks empty but continues the previous line.")
 		lastLine.Explain(
@@ -190,7 +190,7 @@ func (ck MkLineChecker) checkShellCommand() {
 
 	shellCommand := mkline.ShellCommand()
 	if hasPrefix(mkline.Text, "\t\t") {
-		lexer := textproc.NewLexer(mkline.raw[0].textnl)
+		lexer := textproc.NewLexer(mkline.raw[0].Text())
 		tabs := lexer.NextBytesFunc(func(b byte) bool { return b == '\t' })
 
 		fix := mkline.Autofix()
@@ -202,7 +202,7 @@ func (ck MkLineChecker) checkShellCommand() {
 			"or to use more horizontal space than necessary.")
 
 		for i, raw := range mkline.Line.raw {
-			if hasPrefix(raw.textnl, tabs) {
+			if hasPrefix(raw.Text(), tabs) {
 				fix.ReplaceAt(i, 0, tabs, "\t")
 			}
 		}
@@ -285,7 +285,7 @@ func (ck MkLineChecker) checkDirectiveIndentation(expectedDepth int) {
 	if expected := strings.Repeat(" ", expectedDepth); indent != expected {
 		fix := mkline.Line.Autofix()
 		fix.Notef("This directive should be indented by %d spaces.", expectedDepth)
-		if hasPrefix(mkline.Line.raw[0].text(), "."+indent) {
+		if hasPrefix(mkline.Line.raw[0].Text(), "."+indent) {
 			fix.ReplaceAt(0, 0, "."+indent, "."+expected)
 		}
 		fix.Apply()
@@ -304,8 +304,8 @@ func (ck MkLineChecker) CheckRelativePath(relativePath RelPath, mustExist bool) 
 		mkline.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
 	}
 
-	resolvedPath := mkline.ResolveVarsInRelativePath(relativePath)
-	if containsVarRef(resolvedPath.String()) {
+	resolvedPath := mkline.ResolveVarsInRelativePath(relativePath, ck.MkLines.pkg)
+	if containsVarUse(resolvedPath.String()) {
 		return
 	}
 
@@ -360,9 +360,9 @@ func (ck MkLineChecker) CheckRelativePkgdir(pkgdir RelPath) {
 
 	mkline := ck.MkLine
 	ck.CheckRelativePath(pkgdir.JoinNoClean("Makefile"), true)
-	pkgdir = mkline.ResolveVarsInRelativePath(pkgdir)
+	pkgdir = mkline.ResolveVarsInRelativePath(pkgdir, ck.MkLines.pkg)
 
-	if !matches(pkgdir.String(), `^\.\./\.\./([^./][^/]*/[^./][^/]*)$`) && !containsVarRef(pkgdir.String()) {
+	if !matches(pkgdir.String(), `^\.\./\.\./([^./][^/]*/[^./][^/]*)$`) && !containsVarUse(pkgdir.String()) {
 		mkline.Warnf("%q is not a valid relative package directory.", pkgdir)
 		mkline.Explain(
 			"A relative pathname always starts with \"../../\", followed",
@@ -440,14 +440,16 @@ func (ck MkLineChecker) checkDirectiveEnd(ind *Indentation) {
 	}
 
 	if directive == "endif" {
-		if args := ind.Args(); !contains(args, comment) {
-			mkline.Warnf("Comment %q does not match condition %q.", comment, args)
+		if args, argsLine := ind.Args(); !contains(args, comment) {
+			mkline.Warnf("Comment %q does not match condition %q in %s.",
+				comment, args, mkline.RelMkLine(argsLine))
 		}
 	}
 
 	if directive == "endfor" {
-		if args := ind.Args(); !contains(args, comment) {
-			mkline.Warnf("Comment %q does not match loop %q.", comment, args)
+		if args, argsLine := ind.Args(); !contains(args, comment) {
+			mkline.Warnf("Comment %q does not match loop %q in %s.",
+				comment, args, mkline.RelMkLine(argsLine))
 		}
 	}
 }
@@ -474,12 +476,10 @@ func (ck MkLineChecker) checkDirectiveFor(forVars map[string]bool, indentation *
 			forVars[forvar] = true
 		}
 
-		// XXX: The type BtUnknown is very unspecific here. For known variables
-		// or constant values this could probably be improved.
-		//
-		// The guessed flag could also be determined more correctly. As of November 2018,
-		// running pkglint over the whole pkgsrc tree did not produce any different result
-		// whether guessed was true or false.
+		// The guessed flag could be determined more correctly.
+		// As of January 2020, running pkglint over the whole pkgsrc
+		// tree did not produce any different result whether guessed
+		// was true or false.
 		forLoopType := NewVartype(btForLoop, List, NewACLEntry("*", aclpAllRead))
 		forLoopContext := VarUseContext{forLoopType, VucLoadTime, VucQuotPlain, false}
 		mkline.ForEachUsed(func(varUse *MkVarUse, time VucTime) {

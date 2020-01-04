@@ -203,7 +203,7 @@ loop:
 		switch {
 		case p.mklex.VarUse() != nil,
 			lexer.NextBytesSet(textproc.Alnum) != "",
-			lexer.NextBytesFunc(func(b byte) bool { return b != '"' && b != '\\' }) != "":
+			lexer.SkipBytesFunc(func(b byte) bool { return b != '"' && b != '\\' }):
 			rhsText.WriteString(lexer.Since(m))
 
 		case lexer.SkipString("\\\""),
@@ -250,10 +250,11 @@ func (p *MkParser) mkCondFunc() *MkCond {
 		// TODO: Consider suggesting ${VAR} instead of !empty(VAR) since it is shorter and
 		//  avoids unnecessary negation, which makes the expression less confusing.
 		//  This applies especially to the ${VAR:Mpattern} form.
+		//  See MkCondChecker.simplify.
 
 	case "commands", "exists", "make", "target":
 		argMark := lexer.Mark()
-		for p.mklex.VarUse() != nil || lexer.NextBytesFunc(func(b byte) bool { return b != '$' && b != ')' }) != "" {
+		for p.mklex.VarUse() != nil || lexer.SkipBytesFunc(func(b byte) bool { return b != '$' && b != ')' }) {
 		}
 		arg := lexer.Since(argMark)
 		if lexer.SkipByte(')') {

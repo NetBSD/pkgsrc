@@ -422,12 +422,11 @@ func emptyToNil(slice []string) []string {
 	return slice
 }
 
-func (s *Suite) Test_containsVarRef(c *check.C) {
+func (s *Suite) Test_containsVarUse(c *check.C) {
 	t := s.Init(c)
 
 	test := func(str string, containsVar bool) {
-		// TODO: rename to containsVarUse
-		t.CheckEquals(containsVarRef(str), containsVar)
+		t.CheckEquals(containsVarUse(str), containsVar)
 	}
 
 	test("", false)

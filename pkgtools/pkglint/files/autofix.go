@@ -142,13 +142,6 @@ func (fix *Autofix) ReplaceAt(rawIndex int, textIndex int, from string, to strin
 	assert(from != to)
 	fix.assertRealLine()
 
-	// XXX: This should only affect the diagnostics, but not the modifications
-	//  to the text of the affected line, since that text will be used in
-	//  further checks.
-	if fix.skip() {
-		return
-	}
-
 	rawLine := fix.line.raw[rawIndex]
 	assert(textIndex < len(rawLine.textnl))
 	assert(hasPrefix(rawLine.textnl[textIndex:], from))
@@ -166,6 +159,9 @@ func (fix *Autofix) ReplaceAt(rawIndex int, textIndex int, from string, to strin
 	//  This probably requires a generic notification mechanism.
 	_, fix.line.Text = replaceOnce(fix.line.Text, from, to)
 
+	if fix.skip() {
+		return
+	}
 	fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
 }
 
