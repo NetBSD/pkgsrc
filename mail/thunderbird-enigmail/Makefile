@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2019/11/06 15:45:07 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/04 19:11:01 wiz Exp $
 
-DISTNAME=	enigmail-2.1.3
+DISTNAME=	enigmail-2.1.5
 PKGNAME=	thunderbird-${DISTNAME}
 CATEGORIES=	mail security
 MASTER_SITES=	http://www.enigmail.net/download/source/
@@ -28,7 +28,7 @@ DEPENDS+=		pinentry-gtk2-[0-9]*:../../security/pinentry-gtk2
 REPLACE_PERL+=	util/fixlang.pl
 REPLACE_PERL+=	util/make-lang-xpi.pl
 
-PYTHON_VERSIONS_ACCEPTED=	27 # as of 2.1.2
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON+=		util/checkFiles.py
 REPLACE_PYTHON+=		util/run-tests.py
 
