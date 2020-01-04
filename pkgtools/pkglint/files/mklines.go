@@ -4,9 +4,10 @@ import "strings"
 
 // MkLines contains data for the Makefile (or *.mk) that is currently checked.
 type MkLines struct {
-	mklines       []*MkLine
-	lines         *Lines
-	target        string             // Current make(1) target; only available during checkAll
+	mklines []*MkLine
+	lines   *Lines
+	pkg     *Package
+
 	allVars       Scope              // The variables after loading the complete file
 	buildDefs     map[string]bool    // Variables that are registered in BUILD_DEFS, to ensure that all user-defined variables are added to it.
 	plistVarAdded map[string]*MkLine // Identifiers that are added to PLIST_VARS.
@@ -14,15 +15,28 @@ type MkLines struct {
 	plistVarSkip  bool               // True if any of the PLIST_VARS identifiers refers to a variable.
 	Tools         *Tools             // Tools defined in file scope.
 	indentation   *Indentation       // Indentation depth of preprocessing directives; only available during MkLines.ForEach.
-	forVars       map[string]bool    // The variables currently used in .for loops; only available during MkLines.checkAll.
 	once          Once
-	postLine      func(mkline *MkLine) // Custom action that is run after checking each line
 
 	// TODO: Consider extracting plistVarAdded, plistVarSet, plistVarSkip into an own type.
 	// TODO: Describe where each of the above fields is valid.
+
+	checkAllData mklinesCheckAll
 }
 
-func NewMkLines(lines *Lines) *MkLines {
+type mklinesCheckAll struct {
+	// Current make(1) target
+	target string
+
+	vars Scope
+
+	// The variables currently used in .for loops
+	forVars map[string]bool
+
+	// Custom action that is run after checking each line
+	postLine func(mkline *MkLine)
+}
+
+func NewMkLines(lines *Lines, pkg *Package) *MkLines {
 	mklines := make([]*MkLine, lines.Len())
 	for i, line := range lines.Lines {
 		mklines[i] = NewMkLineParser().Parse(line)
@@ -34,7 +48,7 @@ func NewMkLines(lines *Lines) *MkLines {
 	return &MkLines{
 		mklines,
 		lines,
-		"",
+		pkg,
 		NewScope(),
 		make(map[string]bool),
 		make(map[string]*MkLine),
@@ -42,9 +56,12 @@ func NewMkLines(lines *Lines) *MkLines {
 		false,
 		tools,
 		nil,
-		make(map[string]bool),
 		Once{},
-		nil}
+		mklinesCheckAll{
+			target:   "",
+			vars:     NewScope(),
+			forVars:  make(map[string]bool),
+			postLine: nil}}
 }
 
 // TODO: Consider defining an interface MkLinesChecker (different name, though, since this one confuses even me)
@@ -81,9 +98,8 @@ func (mklines *MkLines) Check() {
 	mklines.collectUsedVariables()
 	mklines.collectVariables()
 	mklines.collectPlistVars()
-	mklines.collectElse()
-	if G.Pkg != nil {
-		G.Pkg.collectConditionalIncludes(mklines)
+	if mklines.pkg != nil {
+		mklines.pkg.collectConditionalIncludes(mklines)
 	}
 
 	// In the second pass, the actual checks are done.
@@ -138,8 +154,8 @@ func (mklines *MkLines) collectUsedVariables() {
 // This controls the "defined but not used" warning.
 func (mklines *MkLines) UseVar(mkline *MkLine, varname string, time VucTime) {
 	mklines.allVars.Use(varname, mkline, time)
-	if G.Pkg != nil {
-		G.Pkg.vars.Use(varname, mkline, time)
+	if mklines.pkg != nil {
+		mklines.pkg.vars.Use(varname, mkline, time)
 	}
 }
 
@@ -160,10 +176,10 @@ func (mklines *MkLines) collectDocumentedVariables() {
 		// The commentLines include the the line containing the variable name,
 		// leaving 2 of these 3 lines for the actual documentation.
 		if commentLines >= 3 && relevant {
-			for varname, mkline := range scope.used {
+			forEachStringMkLine(scope.used, func(varname string, mkline *MkLine) {
 				mklines.allVars.Define(varname, mkline)
 				mklines.allVars.Use(varname, mkline, VucRunTime)
-			}
+			})
 		}
 
 		scope = NewScope()
@@ -219,63 +235,67 @@ func (mklines *MkLines) collectVariables() {
 	}
 
 	mklines.ForEach(func(mkline *MkLine) {
-		mklines.Tools.ParseToolLine(mklines, mkline, false, true)
-
-		if !mkline.IsVarassignMaybeCommented() {
-			return
-		}
-
-		mklines.defineVar(G.Pkg, mkline, mkline.Varname())
-
-		varcanon := mkline.Varcanon()
-		switch varcanon {
-		case
-			"BUILD_DEFS",
-			"PKG_GROUPS_VARS", // see mk/misc/unprivileged.mk
-			"PKG_USERS_VARS":  // see mk/misc/unprivileged.mk
-			for _, varname := range mkline.Fields() {
-				mklines.buildDefs[varname] = true
-				if trace.Tracing {
-					trace.Step1("%q is added to BUILD_DEFS.", varname)
-				}
-			}
-
-		case
-			"BUILTIN_FIND_FILES_VAR",
-			"BUILTIN_FIND_HEADERS_VAR":
-			for _, varname := range mkline.Fields() {
-				mklines.allVars.Define(varname, mkline)
-			}
-
-		case "PLIST_VARS":
-			for _, id := range mkline.ValueFields(resolveVariableRefs(mklines, mkline.Value())) {
-				if trace.Tracing {
-					trace.Step1("PLIST.%s is added to PLIST_VARS.", id)
-				}
-
-				if containsVarRef(id) {
-					mklines.UseVar(mkline, "PLIST.*", mkline.Op().Time())
-					mklines.plistVarSkip = true
-				} else {
-					mklines.UseVar(mkline, "PLIST."+id, mkline.Op().Time())
-				}
-			}
-
-		case "SUBST_VARS.*":
-			for _, substVar := range mkline.Fields() {
-				mklines.UseVar(mkline, varnameCanon(substVar), mkline.Op().Time())
-				if trace.Tracing {
-					trace.Step1("varuse %s", substVar)
-				}
-			}
-
-		case "OPSYSVARS":
-			for _, opsysVar := range mkline.Fields() {
-				mklines.UseVar(mkline, opsysVar+".*", mkline.Op().Time())
-				mklines.defineVar(G.Pkg, mkline, opsysVar)
-			}
-		}
+		mklines.collectVariable(mkline)
 	})
+}
+
+func (mklines *MkLines) collectVariable(mkline *MkLine) {
+	mklines.Tools.ParseToolLine(mklines, mkline, false, true)
+
+	if !mkline.IsVarassignMaybeCommented() {
+		return
+	}
+
+	mklines.defineVar(mkline, mkline.Varname())
+
+	varcanon := mkline.Varcanon()
+	switch varcanon {
+	case
+		"BUILD_DEFS",
+		"PKG_GROUPS_VARS", // see mk/misc/unprivileged.mk
+		"PKG_USERS_VARS":  // see mk/misc/unprivileged.mk
+		for _, varname := range mkline.Fields() {
+			mklines.buildDefs[varname] = true
+			if trace.Tracing {
+				trace.Step1("%q is added to BUILD_DEFS.", varname)
+			}
+		}
+
+	case
+		"BUILTIN_FIND_FILES_VAR",
+		"BUILTIN_FIND_HEADERS_VAR":
+		for _, varname := range mkline.Fields() {
+			mklines.allVars.Define(varname, mkline)
+		}
+
+	case "PLIST_VARS":
+		for _, id := range mkline.ValueFields(resolveVariableRefs(mkline.Value(), mklines, nil)) {
+			if trace.Tracing {
+				trace.Step1("PLIST.%s is added to PLIST_VARS.", id)
+			}
+
+			if containsVarUse(id) {
+				mklines.UseVar(mkline, "PLIST.*", mkline.Op().Time())
+				mklines.plistVarSkip = true
+			} else {
+				mklines.UseVar(mkline, "PLIST."+id, mkline.Op().Time())
+			}
+		}
+
+	case "SUBST_VARS.*":
+		for _, substVar := range mkline.Fields() {
+			mklines.UseVar(mkline, varnameCanon(substVar), mkline.Op().Time())
+			if trace.Tracing {
+				trace.Step1("varuse %s", substVar)
+			}
+		}
+
+	case "OPSYSVARS":
+		for _, opsysVar := range mkline.Fields() {
+			mklines.UseVar(mkline, opsysVar+".*", mkline.Op().Time())
+			mklines.defineVar(mkline, opsysVar)
+		}
+	}
 }
 
 // ForEach calls the action for each line, until the action returns false.
@@ -322,10 +342,10 @@ func (mklines *MkLines) ForEachEnd(action func(mkline *MkLine) bool, atEnd func(
 }
 
 // defineVar marks a variable as defined in both the current package and the current file.
-func (mklines *MkLines) defineVar(pkg *Package, mkline *MkLine, varname string) {
+func (mklines *MkLines) defineVar(mkline *MkLine, varname string) {
 	mklines.allVars.Define(varname, mkline)
-	if pkg != nil {
-		pkg.vars.Define(varname, mkline)
+	if mklines.pkg != nil {
+		mklines.pkg.vars.Define(varname, mkline)
 	}
 }
 
@@ -335,8 +355,8 @@ func (mklines *MkLines) collectPlistVars() {
 		if mkline.IsVarassign() {
 			switch mkline.Varcanon() {
 			case "PLIST_VARS":
-				for _, id := range mkline.ValueFields(resolveVariableRefs(mklines, mkline.Value())) {
-					if containsVarRef(id) {
+				for _, id := range mkline.ValueFields(resolveVariableRefs(mkline.Value(), mklines, nil)) {
+					if containsVarUse(id) {
 						mklines.plistVarSkip = true
 					} else {
 						mklines.plistVarAdded[id] = mkline
@@ -344,7 +364,7 @@ func (mklines *MkLines) collectPlistVars() {
 				}
 			case "PLIST.*":
 				id := mkline.Varparam()
-				if containsVarRef(id) {
+				if containsVarUse(id) {
 					mklines.plistVarSkip = true
 				} else {
 					mklines.plistVarSet[id] = mkline
@@ -354,13 +374,11 @@ func (mklines *MkLines) collectPlistVars() {
 	}
 }
 
-func (mklines *MkLines) collectElse() {
-	// Make a dry-run over the lines, which sets data.elseLine (in mkline.go) as a side-effect.
-	mklines.ForEach(func(mkline *MkLine) {})
-	// TODO: Check whether this ForEach is redundant because it is already run somewhere else.
-}
-
 func (mklines *MkLines) checkAll() {
+	// checkAll must only be called once, even during tests, since it
+	// doesn't clean up all its effects on mklines.
+	assert(mklines.once.FirstTime("checkAll"))
+
 	allowedTargets := map[string]bool{
 		"pre-fetch": true, "do-fetch": true, "post-fetch": true,
 		"pre-extract": true, "do-extract": true, "post-extract": true,
@@ -376,7 +394,7 @@ func (mklines *MkLines) checkAll() {
 
 	mklines.lines.CheckCvsID(0, `#[\t ]+`, "# ")
 
-	substContext := NewSubstContext()
+	substContext := NewSubstContext(mklines.pkg)
 	var varalign VaralignBlock
 	vargroupsChecker := NewVargroupsChecker(mklines)
 	isHacksMk := mklines.lines.BaseName == "hacks.mk"
@@ -397,7 +415,7 @@ func (mklines *MkLines) checkAll() {
 			// This check is not done by ForEach because ForEach only
 			// manages the iteration, not the actual checks.
 			mklines.indentation.CheckFinish(mklines.lines.Filename)
-			vargroupsChecker.Finish(mkline)
+			vargroupsChecker.Finish()
 		})
 
 	substContext.Finish(mklines.EOFLine())
@@ -424,37 +442,39 @@ func (mklines *MkLines) checkLine(
 	switch {
 
 	case mkline.IsVarassign():
-		mklines.target = ""
+		mklines.checkAllData.target = ""
 		mkline.Tokenize(mkline.Value(), true) // Just for the side-effect of the warnings.
 
 		mklines.checkVarassignPlist(mkline)
+		varname := mkline.Varname()
+		mklines.checkAllData.vars.Define(varname, mkline)
 
 	case mkline.IsInclude():
-		mklines.target = ""
-		if G.Pkg != nil {
-			G.Pkg.checkIncludeConditionally(mkline, mklines.indentation)
+		mklines.checkAllData.target = ""
+		if mklines.pkg != nil {
+			mklines.pkg.checkIncludeConditionally(mkline, mklines.indentation)
 		}
 
 	case mkline.IsDirective():
-		ck.checkDirective(mklines.forVars, mklines.indentation)
+		ck.checkDirective(mklines.checkAllData.forVars, mklines.indentation)
 
 	case mkline.IsDependency():
 		ck.checkDependencyRule(allowedTargets)
-		mklines.target = mkline.Targets()
+		mklines.checkAllData.target = mkline.Targets()
 
 	case mkline.IsShellCommand():
 		mkline.Tokenize(mkline.ShellCommand(), true) // Just for the side-effect of the warnings.
 	}
 
-	if mklines.postLine != nil {
-		mklines.postLine(mkline)
+	if mklines.checkAllData.postLine != nil {
+		mklines.checkAllData.postLine(mkline)
 	}
 }
 
 func (mklines *MkLines) checkVarassignPlist(mkline *MkLine) {
 	switch mkline.Varcanon() {
 	case "PLIST_VARS":
-		for _, id := range mkline.ValueFields(resolveVariableRefs(mklines, mkline.Value())) {
+		for _, id := range mkline.ValueFields(resolveVariableRefs(mkline.Value(), mklines, nil)) {
 			if !mklines.plistVarSkip && mklines.plistVarSet[id] == nil {
 				mkline.Warnf("%q is added to PLIST_VARS, but PLIST.%s is not defined in this file.", id, id)
 			}
@@ -611,7 +631,7 @@ func (mklines *MkLines) ExpandLoopVar(varname string) []string {
 		}
 
 		// TODO: If needed, add support for multi-variable .for loops.
-		resolved := resolveVariableRefs(mklines, mkline.Args())
+		resolved := resolveVariableRefs(mkline.Args(), mklines, nil)
 		words := mkline.ValueFields(resolved)
 		if len(words) >= 3 && words[0] == varname && words[1] == "in" {
 			return words[2:]

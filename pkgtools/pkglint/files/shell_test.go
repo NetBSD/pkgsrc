@@ -11,9 +11,10 @@ import (
 func (s *Suite) Test_SimpleCommandChecker_checkCommandStart__unknown_default(c *check.C) {
 	t := s.Init(c)
 
+	var pkg *Package
 	test := func(commandLineArg string, diagnostics ...string) {
 		t.SetUpCommandLine(commandLineArg)
-		mklines := t.NewMkLines("Makefile",
+		mklines := t.NewMkLinesPkg("Makefile", pkg,
 			MkCvsID,
 			"",
 			"MY_TOOL.i386=\t${PREFIX}/bin/tool-i386",
@@ -29,7 +30,7 @@ func (s *Suite) Test_SimpleCommandChecker_checkCommandStart__unknown_default(c *
 	}
 
 	t.SetUpPackage("category/package")
-	G.Pkg = NewPackage(t.File("category/package"))
+	pkg = NewPackage(t.File("category/package"))
 	t.Chdir("category/package")
 	t.FinishSetUp()
 
@@ -52,7 +53,7 @@ func (s *Suite) Test_SimpleCommandChecker_checkInstallCommand(c *check.C) {
 	test := func(lines []string, diagnostics ...string) {
 		mklines := t.NewMkLines("filename.mk",
 			mapStr(lines, func(s string) string { return "\t" + s })...)
-		mklines.target = "do-install"
+		mklines.checkAllData.target = "do-install"
 
 		mklines.ForEach(func(mkline *MkLine) {
 			program, err := parseShellProgram(nil, mkline.ShellCommand())
@@ -160,10 +161,10 @@ func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable__parameterized(c
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package")
-	G.Pkg = NewPackage(t.File("category/package"))
+	pkg := NewPackage(t.File("category/package"))
 	t.FinishSetUp()
 
-	mklines := t.NewMkLines("Makefile",
+	mklines := t.NewMkLinesPkg("Makefile", pkg,
 		MkCvsID,
 		"",
 		"MY_TOOL.i386=\t${PREFIX}/bin/tool-i386",
@@ -184,10 +185,10 @@ func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable__followed_by_lit
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package")
-	G.Pkg = NewPackage(t.File("category/package"))
+	pkg := NewPackage(t.File("category/package"))
 	t.FinishSetUp()
 
-	mklines := t.NewMkLines("Makefile",
+	mklines := t.NewMkLinesPkg("Makefile", pkg,
 		MkCvsID,
 		"",
 		"QTDIR=\t${PREFIX}",
@@ -322,8 +323,10 @@ func (s *Suite) Test_SimpleCommandChecker_checkAutoMkdirs(c *check.C) {
 	t.SetUpTool("mkdir", "MKDIR", AtRunTime) // This is actually "mkdir -p".
 	t.SetUpTool("unzip", "UNZIP_CMD", AtRunTime)
 
+	var pkg *Package
+
 	test := func(shellCommand string, diagnostics ...string) {
-		mklines := t.NewMkLines("filename.mk",
+		mklines := t.NewMkLinesPkg("filename.mk", pkg,
 			"\t"+shellCommand)
 		ck := NewShellLineChecker(mklines, mklines.mklines[0])
 
@@ -343,8 +346,8 @@ func (s *Suite) Test_SimpleCommandChecker_checkAutoMkdirs(c *check.C) {
 		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= first\" instead of \"${INSTALL} -d\".",
 		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= second\" instead of \"${INSTALL} -d\".")
 
-	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	G.Pkg.Plist.Dirs["share/pkgbase"] = &PlistLine{
+	pkg = NewPackage(t.File("category/pkgbase"))
+	pkg.Plist.Dirs["share/pkgbase"] = &PlistLine{
 		t.NewLine("PLIST", 123, "share/pkgbase/file"),
 		nil,
 		"share/pkgbase/file"}
@@ -844,8 +847,9 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine(c *check.C) {
 	t.SetUpTool("mkdir", "MKDIR", AtRunTime) // This is actually "mkdir -p".
 	t.SetUpTool("unzip", "UNZIP_CMD", AtRunTime)
 
+	var pkg *Package
 	test := func(shellCommand string, diagnostics ...string) {
-		mklines := t.NewMkLines("filename.mk",
+		mklines := t.NewMkLinesPkg("filename.mk", pkg,
 			"\t"+shellCommand)
 		ck := NewShellLineChecker(mklines, mklines.mklines[0])
 
@@ -943,8 +947,8 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine(c *check.C) {
 	test("-${MKDIR} deeply/nested/subdir",
 		"WARN: filename.mk:1: Using a leading \"-\" to suppress errors is deprecated.")
 
-	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	G.Pkg.Plist.Dirs["share/pkgbase"] = &PlistLine{
+	pkg = NewPackage(t.File("category/pkgbase"))
+	pkg.Plist.Dirs["share/pkgbase"] = &PlistLine{
 		t.NewLine("PLIST", 123, "share/pkgbase/file"),
 		nil,
 		"share/pkgbase/file"}
@@ -961,7 +965,7 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine(c *check.C) {
 	test("${RUN} ${INSTALL_DATA_DIR} ${PREFIX}/share/other",
 		"NOTE: filename.mk:1: You can use \"INSTALLATION_DIRS+= share/other\" instead of \"${INSTALL_DATA_DIR}\".")
 
-	G.Pkg = nil
+	pkg = nil
 
 	// See PR 46570, item "1. It does not"
 	// No warning about missing error checking ("set -e").
@@ -1434,6 +1438,7 @@ func (s *Suite) Test_ShellLineChecker_CheckWord(c *check.C) {
 		"WARN: filename.mk:1: id is used but not defined.")
 
 	// TODO: Since $@ refers to ${.TARGET} and not sh.argv, there is no point in checking for quotes.
+	//  The corresponding code in ShellLineChecker.CheckWord should be removed.
 	// TODO: Having the same tests for $$@ would be much more interesting.
 
 	// The unquoted $@ takes a different code path in pkglint than the quoted $@.
@@ -1536,8 +1541,8 @@ func (s *Suite) Test_ShellLineChecker_CheckWord__PKGMANDIR(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: chat/ircII/Makefile:2: Please use ${PKGMANDIR} instead of \"man\".",
-		"NOTE: chat/ircII/Makefile:2: This variable value should be aligned to column 25.",
-		"NOTE: chat/ircII/Makefile:3: This variable value should be aligned to column 25.")
+		"NOTE: chat/ircII/Makefile:2: This variable value should be aligned to column 25 instead of 17.",
+		"NOTE: chat/ircII/Makefile:3: This variable value should be aligned to column 25 instead of 17.")
 }
 
 func (s *Suite) Test_ShellLineChecker_CheckWord__empty(c *check.C) {
