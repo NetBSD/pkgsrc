@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.158 2020/01/04 13:14:51 nia Exp $
+$NetBSD: CHANGES-2020,v 1.159 2020/01/04 13:17:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -186,3 +186,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/libretro-nestopia to 1.50 [nia 2020-01-04]
 	Removed lang/go111 [bsiegert 2020-01-04]
 	Removed misc/deskbar-applet [nia 2020-01-04]
+	Removed time/hamster-applet [nia 2020-01-04]
