@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19581 2020/01/04 19:04:19 wiz Exp $
+$NetBSD: TODO,v 1.19582 2020/01/04 19:05:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1024,7 +1024,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnome-menus-3.8.0
 	o py-google-auth-1.10.0
 	o py-hgview-1.9.0
-	o py-httplib2-0.15.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
 	o py-mechanize-0.4.5
