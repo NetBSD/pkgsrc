@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.169 2020/01/04 17:03:34 nia Exp $
+$NetBSD: CHANGES-2020,v 1.170 2020/01/04 19:02:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -197,3 +197,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/redeclipse to 2.0.0 [nia 2020-01-04]
 	Updated net/libtorrent-rasterbar to 1.2.3 [nia 2020-01-04]
 	Updated net/qbittorrent to 4.2.1 [nia 2020-01-04]
+	Updated graphics/ImageMagick to 7.0.9.13 [wiz 2020-01-04]
