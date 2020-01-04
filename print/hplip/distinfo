@@ -1,17 +1,19 @@
-$NetBSD: distinfo,v 1.35 2018/06/10 17:53:20 schnoebe Exp $
+$NetBSD: distinfo,v 1.36 2020/01/04 04:24:12 khorben Exp $
 
-SHA1 (hplip-3.18.5.tar.gz) = 19b527b0016ce65e69db872c2b519c93997cc0de
-RMD160 (hplip-3.18.5.tar.gz) = e89d0460da518e5ab46fe594805ade6a438165ae
-SHA512 (hplip-3.18.5.tar.gz) = 2c99bb446af604a2f011f9dd5ddf4bf5019b7cd36a0ecb1cbe6dce0c0358b8472a695ad85d09e52c3e63de8a69e2a3e7081c61ec36f44aae2770b5fef0f67516
-Size (hplip-3.18.5.tar.gz) = 22437406 bytes
+SHA1 (hplip-3.19.12.tar.gz) = 3d3cffb0808900ab4134df2acc246f22fb39aad7
+RMD160 (hplip-3.19.12.tar.gz) = c9e24b31dd51b2f1759e4f70c1c8617b49ace7c7
+SHA512 (hplip-3.19.12.tar.gz) = 5552cd717ae082ee55cdb77d79e8d035d8ecb7cf23c79d659fda43468d8ed414a33c4d869eab4ab83dee836f0d1cceb74c3c4a249e26f904a5ab2350e08a5677
+Size (hplip-3.19.12.tar.gz) = 25676247 bytes
 SHA1 (patch-ab) = 82b8ab80f778a6a31c1031688d9a16dbd4c55462
-SHA1 (patch-ae) = cb479c04ede40d4f15c0c69e10c82781d5e44f19
-SHA1 (patch-configure.in) = a155b9590a7ab93ca6922a3f55b09d8d531cb9e6
-SHA1 (patch-diagnose_queues.py) = 0ef5c12a3f3de217064d5b0c40611ba3f1e72c9e
-SHA1 (patch-installer_dcheck.py) = e381086ccdfbdcd84d3ffe29995d5d3643709be6
+SHA1 (patch-ae) = a15426c555b47806b47eb40e22c4ca6862d6ba18
+SHA1 (patch-configure.in) = d6e20d8d4f0b1042a32149eeca45d2ddc319f65f
+SHA1 (patch-diagnose__queues.py) = aa3e544dc131accf4f799d26924b50f511c8c69f
+SHA1 (patch-diagnose_queues.py) = 385c694642248818b28375711df244f12e63fdb4
+SHA1 (patch-installer_dcheck.py) = 9e8e6b552f935d2ed5a61060cc0a4541095e2751
 SHA1 (patch-io_hpmud_musb.h) = ad634f5a1f426877e1c88916b6468fcdb7598555
+SHA1 (patch-prnt_hpcups_HPCupsFilter.cpp) = 19a26044ce24433b0188c243925b4028bc388f1a
 SHA1 (patch-prnt_hpijs_context2.cpp) = f81148c1c334a9074453b27ac055833cd1669bd0
-SHA1 (patch-prnt_hpijs_foomatic-rip-hplip) = a94c7bbdc90dd68d001ce0325b7aabcd470233eb
+SHA1 (patch-prnt_hpijs_foomatic-rip-hplip) = c37ed4beda5a84fac65484d11af55bf80b3f9f7c
 SHA1 (patch-prnt_hpijs_hjzjscolor.cpp) = 5ca9c828ba4aff17a54a803d79c2dc169975d50c
 SHA1 (patch-protocol_discovery_mdns.c) = e2ca43f6ab13fe2124a38bcc0eff292a57b34b06
-SHA1 (patch-scan.py) = 4d942ee0580d5f1818e43164c07edd018529395d
+SHA1 (patch-scan.py) = b58ffdd4811b8b20973a07f3b9f60174a96beed4
