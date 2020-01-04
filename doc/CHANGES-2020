@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.153 2020/01/04 12:13:43 nia Exp $
+$NetBSD: CHANGES-2020,v 1.154 2020/01/04 12:14:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -181,3 +181,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/sameboy to 0.12.3 [nia 2020-01-04]
 	Updated emulators/libretro-sameboy to 0.12.3 [nia 2020-01-04]
 	Updated www/gitea to 1.10.2 [nia 2020-01-04]
+	Updated games/devilutionx to 1.0.0 [nia 2020-01-04]
