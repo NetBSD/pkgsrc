@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2017/02/20 09:35:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2020/01/04 12:14:22 ryoon Exp $
 #
 # This is included by doc/guide and meta-pkgs/pkgsrc-guide-tools.
 #
@@ -26,6 +26,10 @@ _GUIDE_DEPENDS+=	tidy-[0-9]*:../../www/tidy
 
 .if !empty(_GUIDE_OUTPUTS:Mascii)
 _GUIDE_DEPENDS+=	w3m>=0.4:../../www/w3m
+.endif
+
+.if !empty(_GUIDE_OUTPUTS:Mepub)
+.include "../../lang/ruby/rubyversion.mk"
 .endif
 
 .if !empty(_GUIDE_OUTPUTS:Mps) || !empty(_GUIDE_OUTPUTS:Mpdf)
