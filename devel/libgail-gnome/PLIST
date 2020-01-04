@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2012/11/23 17:14:12 drochner Exp $
-lib/gtk-2.0/modules/libgail-gnome.la
-lib/pkgconfig/libgail-gnome.pc
-share/gconf/schemas/libgail-gnome.schemas
