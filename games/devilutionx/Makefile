@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/10/16 12:00:51 nia Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/04 12:14:40 nia Exp $
 
-DISTNAME=	devilutionx-0.5.0
+DISTNAME=	devilutionx-1.0.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=diasurgical/}
 GITHUB_PROJECT=	devilutionX
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c99 c++14
 
 # std::make_unique, etc
 GCC_REQD+=	5
