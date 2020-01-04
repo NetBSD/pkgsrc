@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.143 2020/01/04 00:07:51 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.144 2020/01/04 04:27:53 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -171,3 +171,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/hugin to 2019.2.0 [adam 2020-01-03]
 	Updated lang/rust to 1.40.0 [jperkin 2020-01-03]
 	Updated meta-pkgs/mate to 1.22.2 [gutteridge 2020-01-04]
+	Updated print/hplip to 3.19.12 [khorben 2020-01-04]
