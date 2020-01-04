@@ -1,10 +1,5 @@
 package pkglint
 
-import (
-	"reflect"
-	"strings"
-)
-
 type MkShWalker struct {
 	Callback struct {
 		List               func(list *MkShList)
@@ -60,31 +55,6 @@ type MkShWalkerPathElement struct {
 
 func NewMkShWalker() *MkShWalker {
 	return &MkShWalker{}
-}
-
-// Path returns a representation of the path in the AST that is
-// currently visited.
-//
-// It is used for debugging only.
-//
-// See Test_MkShWalker_Walk, Callback.SimpleCommand for examples.
-func (w *MkShWalker) Path() string {
-	var path []string
-	for _, level := range w.Context {
-		elementType := reflect.TypeOf(level.Element)
-		typeName := elementType.Elem().Name()
-		if typeName == "" {
-			typeName = "[]" + elementType.Elem().Elem().Name()
-		}
-		abbreviated := strings.TrimPrefix(typeName, "MkSh")
-		if level.Index == -1 {
-			// TODO: This form should also be used if index == 0 and len == 1.
-			path = append(path, abbreviated)
-		} else {
-			path = append(path, sprintf("%s[%d]", abbreviated, level.Index))
-		}
-	}
-	return strings.Join(path, ".")
 }
 
 // Walk calls the given callback for each node of the parsed shell program,

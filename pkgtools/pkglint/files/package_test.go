@@ -524,9 +524,9 @@ func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
 		"PKGNAME=pkgname-1.67",
 		"DISTNAME=distfile_1_67",
 		".include \"../../category/package/Makefile\"")
-	G.Pkg = NewPackage(t.File("category/package"))
+	pkg := NewPackage(t.File("category/package"))
 
-	G.Pkg.loadPackageMakefile()
+	pkg.loadPackageMakefile()
 
 	// Including a package Makefile directly is an error (in the last line),
 	// but that is checked later.
@@ -673,9 +673,9 @@ func (s *Suite) Test_Package_parse__simple(c *check.C) {
 	t.Chdir("category/package")
 	t.FinishSetUp()
 
-	G.Pkg = NewPackage(".")
-	G.Pkg.included.Trace = true
-	G.Pkg.load()
+	pkg := NewPackage(".")
+	pkg.included.Trace = true
+	pkg.load()
 
 	t.CheckOutputLines(
 		"FirstTime: suppress-varorder.mk")
@@ -689,9 +689,9 @@ func (s *Suite) Test_Package_parse__nonexistent_Makefile(c *check.C) {
 	t.Remove("Makefile")
 	t.FinishSetUp()
 
-	G.Pkg = NewPackage(".")
-	G.Pkg.included.Trace = true
-	G.Pkg.load()
+	pkg := NewPackage(".")
+	pkg.included.Trace = true
+	pkg.load()
 
 	t.CheckOutputLines(
 		"ERROR: Makefile: Cannot be read.")
@@ -707,9 +707,9 @@ func (s *Suite) Test_Package_parse__include_in_same_directory(c *check.C) {
 		MkCvsID)
 	t.FinishSetUp()
 
-	G.Pkg = NewPackage(".")
-	G.Pkg.included.Trace = true
-	G.Pkg.load()
+	pkg := NewPackage(".")
+	pkg.included.Trace = true
+	pkg.load()
 
 	t.CheckOutputLines(
 		"FirstTime: suppress-varorder.mk",
@@ -724,9 +724,9 @@ func (s *Suite) Test_Package_parse__nonexistent_include(c *check.C) {
 	t.Chdir("category/package")
 	t.FinishSetUp()
 
-	G.Pkg = NewPackage(".")
-	G.Pkg.included.Trace = true
-	G.Pkg.load()
+	pkg := NewPackage(".")
+	pkg.included.Trace = true
+	pkg.load()
 
 	t.CheckOutputLines(
 		"FirstTime: suppress-varorder.mk",
@@ -748,9 +748,9 @@ func (s *Suite) Test_Package_parse__include_twice(c *check.C) {
 		MkCvsID)
 	t.FinishSetUp()
 
-	G.Pkg = NewPackage(".")
-	G.Pkg.included.Trace = true
-	G.Pkg.load()
+	pkg := NewPackage(".")
+	pkg.included.Trace = true
+	pkg.load()
 
 	t.CheckOutputLines(
 		"FirstTime: suppress-varorder.mk",
@@ -767,9 +767,9 @@ func (s *Suite) Test_Package_parse__include_in_other_directory(c *check.C) {
 		MkCvsID)
 	t.FinishSetUp()
 
-	G.Pkg = NewPackage(".")
-	G.Pkg.included.Trace = true
-	G.Pkg.load()
+	pkg := NewPackage(".")
+	pkg.included.Trace = true
+	pkg.load()
 
 	t.CheckOutputLines(
 		"FirstTime: suppress-varorder.mk",
@@ -791,9 +791,9 @@ func (s *Suite) Test_Package_parse__includes_in_other_directory(c *check.C) {
 		MkCvsID)
 	t.FinishSetUp()
 
-	G.Pkg = NewPackage(".")
-	G.Pkg.included.Trace = true
-	G.Pkg.load()
+	pkg := NewPackage(".")
+	pkg.included.Trace = true
+	pkg.load()
 
 	t.CheckOutputLines(
 		"FirstTime: suppress-varorder.mk",
@@ -812,9 +812,9 @@ func (s *Suite) Test_Package_parse__nonexistent_in_other_directory(c *check.C) {
 		".include \"version.mk\"")
 	t.FinishSetUp()
 
-	G.Pkg = NewPackage(".")
-	G.Pkg.included.Trace = true
-	G.Pkg.load()
+	pkg := NewPackage(".")
+	pkg.included.Trace = true
+	pkg.load()
 
 	t.CheckOutputLines(
 		"FirstTime: suppress-varorder.mk",
@@ -1496,18 +1496,16 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__prefs_indirect(c *check.C
 		".include \"../../mk/bsd.prefs.mk\"")
 	t.FinishSetUp()
 	pkg := NewPackage(t.File("category/package"))
-	G.Pkg = pkg
-	defer func() { G.Pkg = nil }()
 
-	files, mklines, allLines := G.Pkg.load()
+	files, mklines, allLines := pkg.load()
 
-	t.CheckEquals(G.Pkg.seenPrefs, false)
-	t.CheckEquals(G.Pkg.prefsLine, mklines.mklines[21])
+	t.CheckEquals(pkg.seenPrefs, false)
+	t.CheckEquals(pkg.prefsLine, mklines.mklines[21])
 
-	G.Pkg.check(files, mklines, allLines)
+	pkg.check(files, mklines, allLines)
 
-	t.CheckEquals(G.Pkg.seenPrefs, true)
-	t.CheckEquals(G.Pkg.prefsLine, mklines.mklines[21])
+	t.CheckEquals(pkg.seenPrefs, true)
+	t.CheckEquals(pkg.prefsLine, mklines.mklines[21])
 
 	// Since bsd.prefs.mk is included indirectly by common.mk,
 	// OPSYS may be used at load time in line 23, but not in line 20.
@@ -2623,18 +2621,18 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 	G.Pkgsrc.loadDocChanges()
 
 	t.Chdir("category/pkgbase")
-	G.Pkg = NewPackage(".")
-	G.Pkg.EffectivePkgname = "package-1.0nb15"
-	G.Pkg.EffectivePkgnameLine = t.NewMkLine("Makefile", 5, "PKGNAME=dummy")
+	pkg := NewPackage(".")
+	pkg.EffectivePkgname = "package-1.0nb15"
+	pkg.EffectivePkgnameLine = t.NewMkLine("Makefile", 5, "PKGNAME=dummy")
 
-	G.Pkg.checkPossibleDowngrade()
+	pkg.checkPossibleDowngrade()
 
 	t.CheckOutputLines(
 		"WARN: Makefile:5: The package is being downgraded from 1.8 (see ../../doc/CHANGES-2018:1) to 1.0nb15.")
 
 	G.Pkgsrc.LastChange["category/pkgbase"].target = "1.0nb22"
 
-	G.Pkg.checkPossibleDowngrade()
+	pkg.checkPossibleDowngrade()
 
 	t.CheckOutputEmpty()
 }
@@ -3001,14 +2999,14 @@ func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__file_but_not_package
 
 	t.CreateFileLines("category/dependency/buildlink3.mk")
 	t.CreateFileLines("category/dependency/module.mk")
-	G.Pkg = NewPackage(t.File("category/package"))
+	pkg := NewPackage(t.File("category/package"))
 	mklines := t.NewMkLines("category/package/buildlink3.mk",
 		MkCvsID,
 		"",
 		".include \"../../category/dependency/buildlink3.mk\"",
 		".include \"../../category/dependency/module.mk\"")
 
-	G.Pkg.checkLinesBuildlink3Inclusion(mklines)
+	pkg.checkLinesBuildlink3Inclusion(mklines)
 
 	t.CheckOutputLines(
 		"WARN: category/package/buildlink3.mk:3: " +
@@ -3038,14 +3036,14 @@ func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__package_but_not_file
 	t := s.Init(c)
 
 	t.CreateFileLines("category/dependency/buildlink3.mk")
-	G.Pkg = NewPackage(t.File("category/package"))
-	G.Pkg.bl3["../../category/dependency/buildlink3.mk"] =
+	pkg := NewPackage(t.File("category/package"))
+	pkg.bl3["../../category/dependency/buildlink3.mk"] =
 		t.NewMkLine("../../category/dependency/buildlink3.mk", 1, "")
 	mklines := t.NewMkLines("category/package/buildlink3.mk",
 		MkCvsID)
 
 	t.EnableTracingToLog()
-	G.Pkg.checkLinesBuildlink3Inclusion(mklines)
+	pkg.checkLinesBuildlink3Inclusion(mklines)
 
 	// This is only traced but not logged as a regular warning since
 	// several packages have build dependencies that are not needed
@@ -3074,7 +3072,6 @@ func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__mk_dotdot_dotdot(c *
 	t.Chdir(".")
 	t.FinishSetUp()
 	pkg := NewPackage("x11/ocaml-graphics")
-	G.Pkg = pkg
 
 	files, mklines, allLines := pkg.load()
 	pkg.check(files, mklines, allLines)
@@ -3101,7 +3098,6 @@ func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__mk_dotdot(c *check.C
 	t.Chdir(".")
 	t.FinishSetUp()
 	pkg := NewPackage("x11/ocaml-graphics")
-	G.Pkg = pkg
 
 	files, mklines, allLines := pkg.load()
 	pkg.check(files, mklines, allLines)
@@ -3499,10 +3495,10 @@ func (s *Suite) Test_Package_AutofixDistinfo__missing_file(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	G.Pkg = NewPackage(t.File("category/package"))
+	pkg := NewPackage(t.File("category/package"))
 	t.FinishSetUp()
 
-	G.Pkg.AutofixDistinfo("old", "new")
+	pkg.AutofixDistinfo("old", "new")
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/distinfo: Cannot be read.")

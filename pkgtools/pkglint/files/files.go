@@ -14,12 +14,12 @@ const (
 	LogErrors                           //
 )
 
-func LoadMk(filename CurrPath, options LoadOptions) *MkLines {
+func LoadMk(filename CurrPath, pkg *Package, options LoadOptions) *MkLines {
 	lines := Load(filename, options|Makefile)
 	if lines == nil {
 		return nil
 	}
-	return NewMkLines(lines)
+	return NewMkLines(lines, pkg)
 }
 
 func Load(filename CurrPath, options LoadOptions) *Lines {
@@ -76,7 +76,7 @@ func convertToLogicalLines(filename CurrPath, rawText string, joinBackslashLines
 		}
 	} else {
 		for _, rawLine := range rawLines {
-			text := strings.TrimSuffix(rawLine.textnl, "\n")
+			text := rawLine.Text()
 			logline := NewLine(filename, rawLine.Lineno, text, rawLine)
 			loglines = append(loglines, logline)
 		}
@@ -92,9 +92,9 @@ func convertToLogicalLines(filename CurrPath, rawText string, joinBackslashLines
 func nextLogicalLine(filename CurrPath, rawLines []*RawLine, index int) (*Line, int) {
 	{ // Handle the common case efficiently
 		rawLine := rawLines[index]
-		textnl := rawLine.textnl
-		if hasSuffix(textnl, "\n") && !hasSuffix(textnl, "\\\n") {
-			return NewLine(filename, rawLine.Lineno, textnl[:len(textnl)-1], rawLines[index]), index + 1
+		text := rawLine.Text()
+		if !hasSuffix(text, "\\") {
+			return NewLine(filename, rawLine.Lineno, text, rawLines[index]), index + 1
 		}
 	}
 
@@ -105,7 +105,7 @@ func nextLogicalLine(filename CurrPath, rawLines []*RawLine, index int) (*Line, 
 	trim := ""
 
 	for i, rawLine := range interestingRawLines {
-		indent, rawText, outdent, cont := matchContinuationLine(rawLine.textnl)
+		indent, rawText, outdent, cont := matchContinuationLine(rawLine.Text())
 
 		if text.Len() == 0 {
 			text.WriteString(indent)
@@ -130,36 +130,32 @@ func nextLogicalLine(filename CurrPath, rawLines []*RawLine, index int) (*Line, 
 	return NewLineMulti(filename, firstlineno, lastlineno, text.String(), lineRawLines), index + 1
 }
 
-func matchContinuationLine(textnl string) (leadingWhitespace, text, trailingWhitespace, cont string) {
-	j := len(textnl)
+func matchContinuationLine(text string) (leadingWhitespace, result, trailingWhitespace, cont string) {
+	end := len(text)
 
-	if textnl[j-1] == '\n' {
+	j := end
+	for j > 0 && text[j-1] == '\\' {
 		j--
 	}
-
-	backslashes := 0
-	for j > 0 && textnl[j-1] == '\\' {
-		j--
-		backslashes++
-	}
-	cont = textnl[j : j+backslashes%2]
-	j += backslashes / 2
+	backslashes := (end - j) % 2
+	j = end - backslashes
+	cont = text[j:end]
 
 	trailingEnd := j
-	for j > 0 && isHspace(textnl[j-1]) {
+	for j > 0 && isHspace(text[j-1]) {
 		j--
 	}
 	trailingStart := j
-	trailingWhitespace = textnl[trailingStart:trailingEnd]
+	trailingWhitespace = text[trailingStart:trailingEnd]
 
 	i := 0
 	leadingStart := i
-	for i < j && isHspace(textnl[i]) {
+	for i < j && isHspace(text[i]) {
 		i++
 	}
 	leadingEnd := i
-	leadingWhitespace = textnl[leadingStart:leadingEnd]
+	leadingWhitespace = text[leadingStart:leadingEnd]
 
-	text = textnl[leadingEnd:trailingStart]
+	result = text[leadingEnd:trailingStart]
 	return
 }

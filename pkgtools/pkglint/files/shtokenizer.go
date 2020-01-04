@@ -66,8 +66,7 @@ func (p *ShTokenizer) ShAtom(quoting ShQuoting) *ShAtom {
 			p.parser.Warnf("Unclosed shell variable starting at %q.", shorten(lexer.Rest(), 20))
 		} else {
 			p.parser.Warnf("Internal pkglint error in ShTokenizer.ShAtom at %q (quoting=%s).",
-				// TODO: shorten(lexer.Rest(), 20)
-				lexer.Rest(), quoting.String())
+				shorten(lexer.Rest(), 20), quoting.String())
 		}
 	}
 	return atom
@@ -386,7 +385,7 @@ func (p *ShTokenizer) shOperator(q ShQuoting) *ShAtom {
 	case lexer.SkipString("||"),
 		lexer.SkipString("&&"),
 		lexer.SkipString(";;"),
-		lexer.NextBytesFunc(func(b byte) bool { return b == '\n' }) != "",
+		lexer.SkipBytesFunc(func(b byte) bool { return b == '\n' }),
 		lexer.SkipByte(';'),
 		lexer.SkipByte('('),
 		lexer.SkipByte(')'),

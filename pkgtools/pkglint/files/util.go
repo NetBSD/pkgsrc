@@ -93,6 +93,16 @@ func mapStr(slice []string, fn func(s string) string) []string {
 	return result
 }
 
+func filterStr(slice []string, fn func(s string) bool) []string {
+	result := make([]string, 0, len(slice))
+	for _, str := range slice {
+		if fn(str) {
+			result = append(result, str)
+		}
+	}
+	return result
+}
+
 func invalidCharacters(s string, valid *textproc.ByteSet) string {
 	var unis strings.Builder
 
@@ -489,7 +499,7 @@ func toInt(s string, def int) int {
 	return def
 }
 
-func containsVarRef(s string) bool {
+func containsVarUse(s string) bool {
 	if !contains(s, "$") {
 		return false
 	}
@@ -609,40 +619,47 @@ func NewScope() Scope {
 
 // Define marks the variable and its canonicalized form as defined.
 func (s *Scope) Define(varname string, mkline *MkLine) {
-	def := func(name string) {
-		if s.firstDef[name] == nil {
-			s.firstDef[name] = mkline
-			if trace.Tracing {
-				trace.Step2("Defining %q for the first time in %s", name, mkline.String())
-			}
-		} else if trace.Tracing {
-			trace.Step2("Defining %q in %s", name, mkline.String())
-		}
-
-		s.lastDef[name] = mkline
-
-		// In most cases the defining lines are indeed variable assignments.
-		// Exceptions are comments from documentation sections, which still mark
-		// it as defined so that it doesn't produce the "used but not defined" warning;
-		// see MkLines.collectDocumentedVariables.
-		if mkline.IsVarassign() {
-			switch mkline.Op() {
-			case opAssignAppend:
-				s.value[name] += " " + mkline.Value()
-			case opAssignDefault:
-				// No change to the value.
-			case opAssignShell:
-				delete(s.value, name)
-			default:
-				s.value[name] = mkline.Value()
-			}
-		}
-	}
-
-	def(varname)
+	s.def(varname, mkline)
 	varcanon := varnameCanon(varname)
 	if varcanon != varname {
-		def(varcanon)
+		s.def(varcanon, mkline)
+	}
+}
+
+func (s *Scope) def(name string, mkline *MkLine) {
+	if s.firstDef[name] == nil {
+		s.firstDef[name] = mkline
+		if trace.Tracing {
+			trace.Step2("Defining %q for the first time in %s", name, mkline.String())
+		}
+	} else if trace.Tracing {
+		trace.Step2("Defining %q in %s", name, mkline.String())
+	}
+
+	s.lastDef[name] = mkline
+
+	// In most cases the defining lines are indeed variable assignments.
+	// Exceptions are comments from documentation sections, which still mark
+	// it as defined so that it doesn't produce the "used but not defined" warning;
+	// see MkLines.collectDocumentedVariables.
+	if !mkline.IsVarassign() {
+		return
+	}
+
+	switch mkline.Op() {
+	case opAssignAppend:
+		value := mkline.Value()
+		if trace.Tracing {
+			trace.Stepf("Scope.Define.append %s: %s = %q + %q",
+				&mkline.Location, name, s.value[name], value)
+		}
+		s.value[name] += " " + value
+	case opAssignDefault:
+		// No change to the value.
+	case opAssignShell:
+		delete(s.value, name)
+	default:
+		s.value[name] = mkline.Value()
 	}
 }
 

@@ -10,8 +10,8 @@ func (s *Suite) Test_MkLines__quoting_LDFLAGS_for_GNU_configure(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
-	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	mklines := t.NewMkLines("Makefile",
+	pkg := NewPackage(t.File("category/pkgbase"))
+	mklines := t.NewMkLinesPkg("Makefile", pkg, // XXX: Is in wrong directory.
 		MkCvsID,
 		"GNU_CONFIGURE=\tyes",
 		"CONFIGURE_ENV+=\tX_LIBS=${X11_LDFLAGS:Q}")
@@ -342,7 +342,6 @@ func (s *Suite) Test_MkLines_Check__indentation_include(c *check.C) {
 	mklines.Check()
 
 	t.CheckOutputLines(
-		// TODO: Use relative path for missing package.
 		"ERROR: module.mk:5: There is no package in \"../../category/nonexistent\".",
 		"NOTE: module.mk:7: This directive should be indented by 2 spaces.",
 		"NOTE: module.mk:9: This directive should be indented by 2 spaces.")
@@ -763,7 +762,7 @@ func (s *Suite) Test_MkLines_ForEachEnd(c *check.C) {
 	})
 }
 
-func (s *Suite) Test_MkLines_collectElse(c *check.C) {
+func (s *Suite) Test_MkLines_checkAll__collect_else(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
@@ -782,7 +781,9 @@ func (s *Suite) Test_MkLines_collectElse(c *check.C) {
 		".elif 0",
 		".endif")
 
-	mklines.collectElse()
+	// As a side-effect of MkLines.ForEach,
+	// the HasElseBranch in the lines is updated.
+	mklines.collectVariables()
 
 	t.CheckEquals(mklines.mklines[2].HasElseBranch(), false)
 	t.CheckEquals(mklines.mklines[5].HasElseBranch(), true)
@@ -1107,8 +1108,8 @@ func (s *Suite) Test_MkLines_checkAll__extra_warnings(c *check.C) {
 
 	t.SetUpCommandLine("-Wextra")
 	t.SetUpVartypes()
-	G.Pkg = NewPackage(t.File("category/pkgbase"))
-	mklines := t.NewMkLines("options.mk",
+	pkg := NewPackage(t.File("category/pkgbase"))
+	mklines := t.NewMkLinesPkg("options.mk", pkg,
 		MkCvsID,
 		"",
 		".for word in ${PKG_FAIL_REASON}",
@@ -1128,6 +1129,20 @@ func (s *Suite) Test_MkLines_checkAll__extra_warnings(c *check.C) {
 		"WARN: options.mk:7: Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".",
 		"WARN: options.mk:11: Building the package should take place entirely inside ${WRKSRC}, not \"${WRKSRC}/..\".",
 		"NOTE: options.mk:11: You can use \"../build\" instead of \"${WRKSRC}/../build\".")
+}
+
+// Between 2019-12-31 and 2020-01-01, pkglint panicked because it didn't
+// expect that a package would define PKGDIR to point to itself.
+func (s *Suite) Test_MkLines_checkAll__assertion(c *check.C) {
+	t := s.Init(c)
+
+	pkg := NewPackage(t.SetUpPackage("category/package",
+		"PKGDIR=\t../../category/package"))
+	t.FinishSetUp()
+
+	pkg.Check()
+
+	t.CheckOutputEmpty()
 }
 
 // At 2018-12-02, pkglint had resolved ${MY_PLIST_VARS} into a single word,
