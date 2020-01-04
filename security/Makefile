@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.721 2019/12/30 19:44:33 triaxx Exp $
+# $NetBSD: Makefile,v 1.722 2020/01/04 14:04:29 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -559,7 +559,6 @@ SUBDIR+=	scanssh
 SUBDIR+=	scm-blackbox
 SUBDIR+=	scrypt
 SUBDIR+=	seahorse
-SUBDIR+=	seahorse-plugins
 SUBDIR+=	seccure
 SUBDIR+=	secpanel
 SUBDIR+=	sfs
