@@ -37,9 +37,9 @@ func (s *Suite) Test_MkAssignChecker_checkVarassign(c *check.C) {
 func (s *Suite) Test_MkAssignChecker_checkVarassign__URL_with_shell_special_characters(c *check.C) {
 	t := s.Init(c)
 
-	G.Pkg = NewPackage(t.File("graphics/gimp-fix-ca"))
+	pkg := NewPackage(t.File("graphics/gimp-fix-ca"))
 	t.SetUpVartypes()
-	mklines := t.NewMkLines("filename.mk",
+	mklines := t.NewMkLinesPkg("filename.mk", pkg,
 		MkCvsID,
 		"MASTER_SITES=\thttp://registry.gimp.org/file/fix-ca.c?action=download&id=9884&file=")
 
@@ -871,32 +871,60 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignMisc(c *check.C) {
 
 	t.SetUpPkgsrc()
 	t.SetUpMasterSite("MASTER_SITE_GITHUB", "https://download.github.com/")
-
-	mklines := t.SetUpFileMkLines("module.mk",
-		MkCvsID,
-		"EGDIR=\t\t\t${PREFIX}/etc/rc.d",
-		"RPMIGNOREPATH+=\t\t${PREFIX}/etc/rc.d",
-		"_TOOLS_VARNAME.sed=\tSED",
-		"DIST_SUBDIR=\t\t${PKGNAME}",
-		"WRKSRC=\t\t\t${PKGNAME}",
-		"SITES_distfile.tar.gz=\t${MASTER_SITE_GITHUB:=user/}",
-		"MASTER_SITES=\t\thttps://cdn.example.org/${PKGNAME}/",
-		"MASTER_SITES=\t\thttps://cdn.example.org/distname-${PKGVERSION}/")
 	t.FinishSetUp()
 
-	mklines.Check()
+	test := func(text string, diagnostics ...string) {
+		mklines := t.NewMkLines("filename.mk",
+			MkCvsID,
+			text)
 
-	// TODO: Split this test into several, one for each topic.
-	t.CheckOutputLines(
-		"WARN: ~/module.mk:2: Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to ${RCD_SCRIPTS_EXAMPLEDIR}.",
-		"WARN: ~/module.mk:4: Variable names starting with an underscore (_TOOLS_VARNAME.sed) are reserved for internal pkgsrc use.",
-		"WARN: ~/module.mk:4: _TOOLS_VARNAME.sed is defined but not used.",
-		"WARN: ~/module.mk:5: PKGNAME should not be used in DIST_SUBDIR as it includes the PKGREVISION. Please use PKGNAME_NOREV instead.",
-		"WARN: ~/module.mk:6: PKGNAME should not be used in WRKSRC as it includes the PKGREVISION. Please use PKGNAME_NOREV instead.",
-		"WARN: ~/module.mk:7: SITES_distfile.tar.gz is defined but not used.",
-		"WARN: ~/module.mk:7: SITES_* is deprecated. Please use SITES.* instead.",
-		"WARN: ~/module.mk:8: PKGNAME should not be used in MASTER_SITES as it includes the PKGREVISION. Please use PKGNAME_NOREV instead.",
-		"WARN: ~/module.mk:9: PKGVERSION should not be used in MASTER_SITES as it includes the PKGREVISION. Please use PKGVERSION_NOREV instead.")
+		mklines.Check()
+
+		t.CheckOutput(diagnostics)
+	}
+
+	test(
+		"EGDIR=\t\t\t${PREFIX}/etc/rc.d",
+		"WARN: filename.mk:2: Please use the RCD_SCRIPTS mechanism "+
+			"to install rc.d scripts automatically "+
+			"to ${RCD_SCRIPTS_EXAMPLEDIR}.")
+
+	// Since RPMIGNOREPATH effectively excludes the path, it is ok to
+	// mention etc/rc.d there.
+	test(
+		"RPMIGNOREPATH+=\t\t${PREFIX}/etc/rc.d",
+		nil...)
+
+	test(
+		"_TOOLS_VARNAME.sed=\tSED",
+		"WARN: filename.mk:2: Variable names starting with an underscore "+
+			"(_TOOLS_VARNAME.sed) are reserved for internal pkgsrc use.",
+		"WARN: filename.mk:2: _TOOLS_VARNAME.sed is defined but not used.")
+
+	test(
+		"DIST_SUBDIR=\t\t${PKGNAME}",
+		"WARN: filename.mk:2: PKGNAME should not be used in DIST_SUBDIR "+
+			"as it includes the PKGREVISION. Please use PKGNAME_NOREV instead.")
+
+	test(
+		"WRKSRC=\t\t\t${PKGNAME}",
+		"WARN: filename.mk:2: PKGNAME should not be used in WRKSRC "+
+			"as it includes the PKGREVISION. Please use PKGNAME_NOREV instead.")
+
+	test(
+		"SITES_distfile.tar.gz=\t${MASTER_SITE_GITHUB:=user/}",
+		"WARN: filename.mk:2: SITES_distfile.tar.gz is defined but not used.",
+		"WARN: filename.mk:2: SITES_* is deprecated. Please use SITES.* instead.")
+
+	test(
+		"MASTER_SITES=\t\thttps://cdn.example.org/${PKGNAME}/",
+		"WARN: filename.mk:2: PKGNAME should not be used in MASTER_SITES "+
+			"as it includes the PKGREVISION. Please use PKGNAME_NOREV instead.")
+
+	test(
+		"MASTER_SITES=\t\thttps://cdn.example.org/distname-${PKGVERSION}/",
+		"WARN: filename.mk:2: PKGVERSION should not be used in MASTER_SITES "+
+			"as it includes the PKGREVISION. Please use PKGVERSION_NOREV instead.")
 }
 
 func (s *Suite) Test_MkAssignChecker_checkVarassignMisc__multiple_inclusion_guards(c *check.C) {

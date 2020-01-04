@@ -62,8 +62,9 @@ func (ck *Buildlink3Checker) Check() {
 		llex.CurrentLine().Warnf("The file should end here.")
 	}
 
-	if G.Pkg != nil {
-		G.Pkg.checkLinesBuildlink3Inclusion(mklines)
+	pkg := ck.mklines.pkg
+	if pkg != nil {
+		pkg.checkLinesBuildlink3Inclusion(mklines)
 	}
 
 	mklines.SaveAutofixChanges()
@@ -81,8 +82,8 @@ func (ck *Buildlink3Checker) checkFirstParagraph(mlex *MkLinesLexer) bool {
 	pkgbase := m[1]
 	pkgbaseLine := mlex.PreviousMkLine()
 
-	if containsVarRef(pkgbase) {
-		ck.checkVaruseInPkgbase(pkgbase, pkgbaseLine)
+	if containsVarUse(pkgbase) {
+		ck.checkVaruseInPkgbase(pkgbaseLine)
 	}
 
 	ck.checkUniquePkgbase(pkgbase, pkgbaseLine)
@@ -132,7 +133,7 @@ func (ck *Buildlink3Checker) checkSecondParagraph(mlex *MkLinesLexer) bool {
 
 	// See pkgtools/createbuildlink/files/createbuildlink, keyword PKGUPPER
 	ucPkgbase := strings.ToUpper(strings.Replace(pkgbase, "-", "_", -1))
-	if ucPkgbase != pkgupper && !containsVarRef(pkgbase) {
+	if ucPkgbase != pkgupper && !containsVarUse(pkgbase) {
 		pkgupperLine.Errorf("Package name mismatch between multiple-inclusion guard %q (expected %q) and package name %q (from %s).",
 			pkgupper, ucPkgbase, pkgbase, pkgupperLine.RelMkLine(ck.pkgbaseLine))
 	}
@@ -142,11 +143,12 @@ func (ck *Buildlink3Checker) checkSecondParagraph(mlex *MkLinesLexer) bool {
 }
 
 func (ck *Buildlink3Checker) checkPkgbaseMismatch(bl3base string) {
-	if G.Pkg == nil {
+	pkg := ck.mklines.pkg
+	if pkg == nil {
 		return
 	}
 
-	mkbase := G.Pkg.EffectivePkgbase
+	mkbase := pkg.EffectivePkgbase
 	if mkbase == "" || mkbase == bl3base || strings.TrimPrefix(mkbase, "lib") == bl3base {
 		return
 	}
@@ -156,7 +158,7 @@ func (ck *Buildlink3Checker) checkPkgbaseMismatch(bl3base string) {
 	}
 
 	ck.pkgbaseLine.Errorf("Package name mismatch between %q in this file and %q from %s.",
-		bl3base, mkbase, ck.pkgbaseLine.RelMkLine(G.Pkg.EffectivePkgnameLine))
+		bl3base, mkbase, ck.pkgbaseLine.RelMkLine(pkg.EffectivePkgnameLine))
 }
 
 // Third paragraph: Package information.
@@ -172,7 +174,7 @@ func (ck *Buildlink3Checker) checkMainPart(mlex *MkLinesLexer) bool {
 
 		switch {
 		case mkline.IsVarassign():
-			ck.checkVarassign(mlex, mkline, pkgbase)
+			ck.checkVarassign(mkline, pkgbase)
 
 		case mkline.IsDirective() && mkline.Directive() == "if":
 			indentLevel++
@@ -193,7 +195,7 @@ func (ck *Buildlink3Checker) checkMainPart(mlex *MkLinesLexer) bool {
 	return true
 }
 
-func (ck *Buildlink3Checker) checkVarassign(mlex *MkLinesLexer, mkline *MkLine, pkgbase string) {
+func (ck *Buildlink3Checker) checkVarassign(mkline *MkLine, pkgbase string) {
 	varname, value := mkline.Varname(), mkline.Value()
 	doCheck := false
 
@@ -223,8 +225,8 @@ func (ck *Buildlink3Checker) checkVarassign(mlex *MkLinesLexer, mkline *MkLine, 
 	}
 
 	if doCheck {
-		if ck.abi != nil && ck.abi.Lower != "" && !containsVarRef(ck.abi.Lower) {
-			if ck.api != nil && ck.api.Lower != "" && !containsVarRef(ck.api.Lower) {
+		if ck.abi != nil && ck.abi.Lower != "" && !containsVarUse(ck.abi.Lower) {
+			if ck.api != nil && ck.api.Lower != "" && !containsVarUse(ck.api.Lower) {
 				if pkgver.Compare(ck.abi.Lower, ck.api.Lower) < 0 {
 					ck.abiLine.Warnf("ABI version %q should be at least API version %q (see %s).",
 						ck.abi.Lower, ck.api.Lower, ck.abiLine.RelMkLine(ck.apiLine))
@@ -240,7 +242,7 @@ func (ck *Buildlink3Checker) checkVarassign(mlex *MkLinesLexer, mkline *MkLine, 
 	}
 }
 
-func (ck *Buildlink3Checker) checkVaruseInPkgbase(pkgbase string, pkgbaseLine *MkLine) {
+func (ck *Buildlink3Checker) checkVaruseInPkgbase(pkgbaseLine *MkLine) {
 	tokens, _ := pkgbaseLine.ValueTokens()
 	for _, token := range tokens {
 		if token.Varuse == nil {

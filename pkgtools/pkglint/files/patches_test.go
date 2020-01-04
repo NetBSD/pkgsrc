@@ -23,7 +23,7 @@ func (s *Suite) Test_CheckLinesPatch__with_comment(c *check.C) {
 		"+new line",
 		" context after")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputEmpty()
 }
@@ -51,12 +51,12 @@ func (s *Suite) Test_CheckLinesPatch__without_empty_line__autofix(c *check.C) {
 		"SHA1 (some patch) = 49abd735b7e706ea9ed6671628bb54e91f7f5ffb")
 
 	t.SetUpCommandLine("-Wall", "--autofix")
-	G.Pkg = NewPackage(".")
+	pkg := NewPackage(".")
 
-	CheckLinesPatch(patchLines)
+	CheckLinesPatch(patchLines, pkg)
 
 	t.CheckOutputLines(
-		"AUTOFIX: patch-WithoutEmptyLines:1: Inserting a line \"\" after this line.",
+		"AUTOFIX: patch-WithoutEmptyLines:2: Inserting a line \"\" before this line.",
 		"AUTOFIX: patch-WithoutEmptyLines:3: Inserting a line \"\" before this line.",
 		"AUTOFIX: distinfo:3: Replacing \"49abd735b7e706ea9ed6671628bb54e91f7f5ffb\" "+
 			"with \"4938fc8c0b483dc2e33e741b0da883d199e78164\".")
@@ -90,7 +90,7 @@ func (s *Suite) Test_CheckLinesPatch__no_comment_and_no_empty_lines(c *check.C) 
 		"-old line",
 		"+new line")
 
-	CheckLinesPatch(patchLines)
+	CheckLinesPatch(patchLines, nil)
 
 	// These duplicate notes are actually correct. There should be an
 	// empty line above the documentation and one below it. Since there
@@ -98,7 +98,7 @@ func (s *Suite) Test_CheckLinesPatch__no_comment_and_no_empty_lines(c *check.C) 
 	// the same. Outside of the testing environment, this duplicate
 	// diagnostic is suppressed; see LogVerbose.
 	t.CheckOutputLines(
-		"NOTE: ~/patch-WithoutEmptyLines:1: Empty line expected after this line.",
+		"NOTE: ~/patch-WithoutEmptyLines:2: Empty line expected before this line.",
 		"ERROR: ~/patch-WithoutEmptyLines:2: Each patch must be documented.",
 		"NOTE: ~/patch-WithoutEmptyLines:2: Empty line expected.")
 }
@@ -117,7 +117,7 @@ func (s *Suite) Test_CheckLinesPatch__without_comment(c *check.C) {
 		"+old line",
 		" context after")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"ERROR: patch-WithoutComment:3: Each patch must be documented.")
@@ -142,7 +142,7 @@ func (s *Suite) Test_CheckLinesPatch__error_code(c *check.C) {
 		"+old line",
 		" context after")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputEmpty()
 }
@@ -164,7 +164,7 @@ func (s *Suite) Test_CheckLinesPatch__wrong_header_order(c *check.C) {
 		"+old line",
 		" context after")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"WARN: patch-WrongOrder:7: Unified diff headers should be first ---, then +++.")
@@ -181,7 +181,7 @@ func (s *Suite) Test_CheckLinesPatch__context_diff(c *check.C) {
 		"*** history.c.orig",
 		"--- history.c")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"ERROR: patch-ctx:4: Each patch must be documented.",
@@ -197,7 +197,7 @@ func (s *Suite) Test_CheckLinesPatch__no_patch(c *check.C) {
 		"-- oldfile",
 		"++ newfile")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"ERROR: patch-aa: Contains no patch.")
@@ -224,7 +224,7 @@ func (s *Suite) Test_CheckLinesPatch__two_patched_files(c *check.C) {
 		"-old",
 		"+new")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"WARN: patch-aa: Contains patches for 2 files, should be only one.")
@@ -250,7 +250,7 @@ func (s *Suite) Test_CheckLinesPatch__two_patched_files_for_CVE(c *check.C) {
 		"-old",
 		"+new")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputEmpty()
 }
@@ -268,7 +268,7 @@ func (s *Suite) Test_CheckLinesPatch__documentation_that_looks_like_patch_lines(
 		"",
 		"*** oldOrNewFile")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"ERROR: patch-aa: Contains no patch.")
@@ -285,7 +285,7 @@ func (s *Suite) Test_CheckLinesPatch__only_unified_header_but_no_content(c *chec
 		"--- file.orig",
 		"+++ file")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"ERROR: patch-unified:EOF: No patch hunks for \"file\".")
@@ -302,7 +302,7 @@ func (s *Suite) Test_CheckLinesPatch__only_context_header_but_no_content(c *chec
 		"*** file.orig",
 		"--- file")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	// Context diffs are deprecated, therefore it is not worth
 	// adding extra code for checking them thoroughly.
@@ -327,7 +327,7 @@ func (s *Suite) Test_CheckLinesPatch__no_newline_with_text_following(c *check.C)
 		"\\ No newline at end of file",
 		"last line (a comment)")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"WARN: patch-aa:12: Empty line or end of file expected.")
@@ -349,7 +349,7 @@ func (s *Suite) Test_CheckLinesPatch__no_newline(c *check.C) {
 		"+new",
 		"\\ No newline at end of file")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputEmpty()
 }
@@ -374,7 +374,7 @@ func (s *Suite) Test_CheckLinesPatch__empty_lines_left_out_at_eof(c *check.C) {
 		" 5",
 		" 6") // Line 7 was empty, therefore omitted
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputEmpty()
 }
@@ -397,7 +397,7 @@ func (s *Suite) Test_CheckLinesPatch__context_lines_with_tab_instead_of_space(c 
 		"+new",
 		"\tcontext")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputEmpty()
 }
@@ -411,7 +411,7 @@ func (s *Suite) Test_CheckLinesPatch__autofix_empty_patch(c *check.C) {
 	lines := t.NewLines("patch-aa",
 		CvsID)
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputEmpty()
 }
@@ -426,7 +426,7 @@ func (s *Suite) Test_CheckLinesPatch__autofix_long_empty_patch(c *check.C) {
 		CvsID,
 		"")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputEmpty()
 }
@@ -446,7 +446,7 @@ func (s *Suite) Test_CheckLinesPatch__crlf_autofix(c *check.C) {
 		"-old line",
 		"+new line")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	// To relieve the pkgsrc package maintainers from this boring work,
 	// the pkgsrc infrastructure could fix these issues before actually
@@ -469,7 +469,7 @@ func (s *Suite) Test_CheckLinesPatch__autogenerated(c *check.C) {
 		"-old line",
 		"+: Avoid regenerating within pkgsrc")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"ERROR: ~/patch-aa:9: This code must not be included in patches.")
@@ -490,7 +490,7 @@ func (s *Suite) Test_CheckLinesPatch__empty_context_lines_in_hunk(c *check.C) {
 		"-old line",
 		"+new line")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	// The first context line should start with a single space character,
 	// but that would mean trailing whitespace, so it may be left out.
@@ -516,7 +516,7 @@ func (s *Suite) Test_CheckLinesPatch__invalid_line_in_hunk(c *check.C) {
 		"<<<<<<<<",
 		"+new line")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"ERROR: ~/patch-aa:10: Invalid line in unified patch hunk: <<<<<<<<")
@@ -530,7 +530,7 @@ func (s *Suite) Test_PatchChecker_Check__missing_CVS_Id(c *check.C) {
 		"",
 		"Documentation")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		sprintf("ERROR: ~/patch-aa:1: Expected %q.", CvsID),
@@ -551,7 +551,7 @@ func (s *Suite) Test_PatchChecker_Check__add_file(c *check.C) {
 		"@@ -0,0 +1,1 @@",
 		"+ added line")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputEmpty()
 }
@@ -569,7 +569,7 @@ func (s *Suite) Test_PatchChecker_Check__delete_file(c *check.C) {
 		"@@ -1,1 +0,0 @@",
 		"- deleted line")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputEmpty()
 }
@@ -588,7 +588,7 @@ func (s *Suite) Test_PatchChecker_Check__absolute_path(c *check.C) {
 		"- deleted line",
 		"+ added line")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	// XXX: Patches must not apply to absolute paths.
 	// The only allowed exception is /dev/null.
@@ -613,7 +613,7 @@ func (s *Suite) Test_PatchChecker_checkUnifiedDiff__lines_at_end(c *check.C) {
 		"This line is not part of the patch. Since it is separated from",
 		"the patch by an empty line, there is no reason for a warning.")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputEmpty()
 }
@@ -636,7 +636,7 @@ func (s *Suite) Test_PatchChecker_checkBeginDiff__multiple_patches_without_docum
 		"- old",
 		"+ new")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	// The "must be documented" error message is only given before the first
 	// patch since that's the only place where the documentation is expected.
@@ -661,7 +661,7 @@ func (s *Suite) Test_PatchChecker_checkConfigure__no_GNU(c *check.C) {
 		"-old line",
 		"+: Avoid regenerating within pkgsrc")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	// No warning since configure.sh is probably not a GNU-style
 	// configure file.
@@ -682,7 +682,7 @@ func (s *Suite) Test_PatchChecker_checkConfigure__GNU(c *check.C) {
 		"-old line",
 		"+: Avoid regenerating within pkgsrc")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"ERROR: ~/patch-aa:9: This code must not be included in patches.")
@@ -705,7 +705,7 @@ func (s *Suite) Test_PatchChecker_checkConfigure__configure_in(c *check.C) {
 		"-old line",
 		"+: Avoid regenerating within pkgsrc")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"ERROR: ~/patch-aa:9: This code must not be included in patches.")
@@ -728,7 +728,7 @@ func (s *Suite) Test_PatchChecker_checkConfigure__configure_ac(c *check.C) {
 		"-old line",
 		"+: Avoid regenerating within pkgsrc")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"ERROR: ~/patch-aa:9: This code must not be included in patches.")
@@ -750,7 +750,7 @@ func (s *Suite) Test_PatchChecker_checktextCvsID(c *check.C) {
 		"+new line $varname",
 		" $"+"Author: authorship $")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"WARN: ~/patch-aa:7: Found CVS tag \"$"+"Id$\". Please remove it.",
@@ -777,7 +777,7 @@ func (s *Suite) Test_PatchChecker_isEmptyLine(c *check.C) {
 		"-old",
 		"+new")
 
-	CheckLinesPatch(lines)
+	CheckLinesPatch(lines, nil)
 
 	t.CheckOutputLines(
 		"ERROR: patch-aa:8: Each patch must be documented.")

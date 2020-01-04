@@ -181,7 +181,7 @@ func (vt *VaralignTester) checkTestName() {
 		}
 
 		for i, input := range mkline.raw {
-			parts := NewVaralignSplitter().split(strings.TrimSuffix(input.orignl, "\n"), i == 0)
+			parts := NewVaralignSplitter().split(input.Orig(), i == 0)
 			width = 0
 			if parts.leadingComment != "" {
 				describe(parts.leadingComment, "lead")
@@ -228,7 +228,7 @@ func (s *Suite) Test_VaralignBlock__var_none_value(c *check.C) {
 	vt.Internals(
 		"20 20")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 25.")
+		"NOTE: Makefile:1: This variable value should be aligned to column 25 instead of 21.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\" with \"\\t\".")
 	vt.Fixed(
@@ -247,7 +247,7 @@ func (s *Suite) Test_VaralignBlock__var_space_value(c *check.C) {
 	vt.Internals(
 		"20 21")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25 instead of 22.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\".")
 	vt.Fixed(
@@ -265,7 +265,7 @@ func (s *Suite) Test_VaralignBlock__var_spaces7_value(c *check.C) {
 	vt.Internals(
 		"04 07")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 9.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 9 instead of 8.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"   \" with \"\\t\".")
 	vt.Fixed(
@@ -284,8 +284,8 @@ func (s *Suite) Test_VaralignBlock__var4_space5_value_var4_spaces6_value(c *chec
 		"04 05",
 		"04 06")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 9.",
-		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 9.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 9 instead of 6.",
+		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 9 instead of 7.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \"  \" with \"\\t\".")
@@ -329,7 +329,7 @@ func (s *Suite) Test_VaralignBlock__var_spaces_value(c *check.C) {
 	vt.Internals(
 		"20 23")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25 instead of 24.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"   \" with \"\\t\".")
 	vt.Fixed(
@@ -359,7 +359,7 @@ func (s *Suite) Test_VaralignBlock__var_tsts_value(c *check.C) {
 	vt.Internals(
 		"20 33")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25 instead of 34.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\\t \\t \" with \"\\t\".")
 	vt.Fixed(
@@ -582,7 +582,7 @@ func (s *Suite) Test_VaralignBlock__var20_none_value_space_cont_indent20_value(c
 		"20 20 26",
 		"   20")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 25.",
+		"NOTE: Makefile:1: This variable value should be aligned to column 25 instead of 21.",
 		"NOTE: Makefile:2: This continuation line should be indented with \"\\t\\t\\t\".")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\" with \"\\t\".",
@@ -602,7 +602,7 @@ func (s *Suite) Test_VaralignBlock__var20_space_value_space_cont_spaces21_value(
 		"20 21 27",
 		"   21")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25.",
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25 instead of 22.",
 		"NOTE: Makefile:2: This continuation line should be indented with \"\\t\\t\\t\".")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\".",
@@ -638,7 +638,7 @@ func (s *Suite) Test_VaralignBlock__var_spaces_value_space_cont_spaces_value(c *
 		"20 23 29",
 		"   23")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25.",
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25 instead of 24.",
 		"NOTE: Makefile:2: This continuation line should be indented with \"\\t\\t\\t\".")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"   \" with \"\\t\".",
@@ -868,10 +868,10 @@ func (s *Suite) Test_VaralignBlock__var6_space_value_var7_space_value_var8_space
 		"08 09",
 		"09 10")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17.",
-		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 17.",
-		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17.",
-		"NOTE: Makefile:4: This variable value should be aligned with tabs, not spaces, to column 17.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17 instead of 8.",
+		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 17 instead of 9.",
+		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17 instead of 10.",
+		"NOTE: Makefile:4: This variable value should be aligned with tabs, not spaces, to column 17 instead of 11.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \" \" with \"\\t\\t\".",
@@ -919,8 +919,8 @@ func (s *Suite) Test_VaralignBlock__var_tab8_value_var_space15_value(c *check.C)
 		"06 08",
 		"14 15")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 17.",
-		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 17.")
+		"NOTE: Makefile:1: This variable value should be aligned to column 17 instead of 9.",
+		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 17 instead of 16.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\\t\" with \"\\t\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \" \" with \"\\t\".")
@@ -941,8 +941,8 @@ func (s *Suite) Test_VaralignBlock__var_tab8_value_var14_tabs40_value(c *check.C
 		"06 08",
 		"14 40")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 17.",
-		"NOTE: Makefile:2: This variable value should be aligned to column 17.")
+		"NOTE: Makefile:1: This variable value should be aligned to column 17 instead of 9.",
+		"NOTE: Makefile:2: This variable value should be aligned to column 17 instead of 41.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\\t\" with \"\\t\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \"\\t\\t\\t\\t\" with \"\\t\".")
@@ -982,7 +982,7 @@ func (s *Suite) Test_VaralignBlock__var17_none_value(c *check.C) {
 	vt.Internals(
 		"17 17")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 25.")
+		"NOTE: Makefile:1: This variable value should be aligned to column 25 instead of 18.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\" with \"\\t\".")
 	vt.Fixed(
@@ -1023,7 +1023,7 @@ func (s *Suite) Test_VaralignBlock__var_tab8_value_var4_space_cont_tab_value(c *
 		"04 05 05",
 		"   08")
 	vt.Diagnostics(
-		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 9.")
+		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 9 instead of 6.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:2: Replacing \" \" with \"\\t\".")
 	vt.Fixed(
@@ -1066,7 +1066,7 @@ func (s *Suite) Test_VaralignBlock__var14_tab_value_var4_tab_cont_tab_value(c *c
 		"04 08 08",
 		"   08")
 	vt.Diagnostics(
-		"NOTE: Makefile:2: This variable value should be aligned to column 17.")
+		"NOTE: Makefile:2: This variable value should be aligned to column 17 instead of 9.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:2: Replacing \"\\t\" with \"\\t\\t\".")
 	vt.Fixed(
@@ -1142,10 +1142,10 @@ func (s *Suite) Test_VaralignBlock__var_tab16_value_var_space_cont_tabs24_value_
 		"11 32",
 		"11 12")
 	vt.Diagnostics(
-		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 17 instead of 13.",
 		"NOTE: Makefile:3: This continuation line should be indented with \"\\t\\t\".",
-		"NOTE: Makefile:4: This variable value should be aligned to column 17.",
-		"NOTE: Makefile:5: This variable value should be aligned with tabs, not spaces, to column 17.")
+		"NOTE: Makefile:4: This variable value should be aligned to column 17 instead of 33.",
+		"NOTE: Makefile:5: This variable value should be aligned with tabs, not spaces, to column 17 instead of 13.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:2: Replacing \" \" with \"\\t\".",
 		"AUTOFIX: Makefile:3: Replacing \"\\t\\t\\t\" with \"\\t\\t\".",
@@ -1188,7 +1188,7 @@ func (s *Suite) Test_VaralignBlock__var_tabs16_value_var_tab24_value_space_cont_
 		"18 24 44",
 		"   24")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 25.")
+		"NOTE: Makefile:1: This variable value should be aligned to column 25 instead of 17.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\\t\\t\" with \"\\t\\t\\t\".")
 	vt.Fixed(
@@ -1215,7 +1215,7 @@ func (s *Suite) Test_VaralignBlock__var_tab8_value_var_tab16_value(c *check.C) {
 		"03 08",
 		"15 16")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 17.")
+		"NOTE: Makefile:1: This variable value should be aligned to column 17 instead of 9.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\\t\" with \"\\t\\t\".")
 	vt.Fixed(
@@ -1282,7 +1282,7 @@ func (s *Suite) Test_VaralignBlock__escaped_varname(c *check.C) {
 		"15 16", // 15, since the number sign is still escaped when computing the indentation
 		"21 24")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 25.")
+		"NOTE: Makefile:1: This variable value should be aligned to column 25 instead of 17.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\\t\" with \"\\t\\t\".")
 	vt.Fixed(
@@ -1310,7 +1310,7 @@ func (s *Suite) Test_VaralignBlock__var_tab8_value_var_tab16_value_var28_space_c
 		"   24 52",
 		"   24")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 17.",
+		"NOTE: Makefile:1: This variable value should be aligned to column 17 instead of 9.",
 		"NOTE: Makefile:4: This continuation line should be indented with \"\\t\\t\".",
 		"NOTE: Makefile:5: This continuation line should be indented with \"\\t\\t\".")
 	vt.Autofixes(
@@ -1345,7 +1345,7 @@ func (s *Suite) Test_VaralignBlock__var_tab8_value_var_tab16_value_var28_space_c
 		"   08 36",
 		"   08")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 17.")
+		"NOTE: Makefile:1: This variable value should be aligned to column 17 instead of 9.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\\t\" with \"\\t\\t\".")
 	vt.Fixed(
@@ -1375,14 +1375,19 @@ func (s *Suite) Test_VaralignBlock__var_tab8_value_var_tab16_value_var28_tab_val
 		"DISTFILES=\tdistfile-1.0.0.tar.gz",
 		"SITES.distfile-1.0.0.tar.gz=\t${MASTER_SITES_SOURCEFORGE} \\",
 		"\t\t\t\t${MASTER_SITES_GITHUB}")
+	vt.InputDetab(
+		"WRKSRC= ${WRKDIR}",
+		"DISTFILES=      distfile-1.0.0.tar.gz",
+		"SITES.distfile-1.0.0.tar.gz=    ${MASTER_SITES_SOURCEFORGE} \\",
+		"                                ${MASTER_SITES_GITHUB}")
 	vt.Internals(
 		"07 08",
 		"10 16",
 		"28 32 60",
 		"   32")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 33.",
-		"NOTE: Makefile:2: This variable value should be aligned to column 33.")
+		"NOTE: Makefile:1: This variable value should be aligned to column 33 instead of 9.",
+		"NOTE: Makefile:2: This variable value should be aligned to column 33 instead of 17.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\\t\" with \"\\t\\t\\t\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \"\\t\" with \"\\t\\t\\t\".")
@@ -1416,8 +1421,8 @@ func (s *Suite) Test_VaralignBlock__var_tab8_value_var_tab16_value_var13_space_c
 		"   36 46",
 		"   34")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 17.",
-		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"NOTE: Makefile:1: This variable value should be aligned to column 17 instead of 9.",
+		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17 instead of 15.",
 		"NOTE: Makefile:4: This continuation line should be indented with \"\\t\\t\".",
 		"NOTE: Makefile:5: This continuation line should be indented with \"\\t\\t  \".",
 		"NOTE: Makefile:6: This continuation line should be indented with \"\\t\\t\".")
@@ -1456,8 +1461,8 @@ func (s *Suite) Test_VaralignBlock__continuation_mixed_indentation_in_first_line
 		"   36 46",
 		"   34")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 17.",
-		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"NOTE: Makefile:1: This variable value should be aligned to column 17 instead of 9.",
+		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17 instead of 35.",
 		"NOTE: Makefile:4: This continuation line should be indented with \"\\t\\t  \".",
 		"NOTE: Makefile:5: This continuation line should be indented with \"\\t\\t\".")
 	vt.Autofixes(
@@ -1547,10 +1552,10 @@ func (s *Suite) Test_VaralignBlock__var_spaces24_value_space_cont_spaces24_value
 		"14 16",
 		"07 24")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17 instead of 25.",
 		"NOTE: Makefile:2: This continuation line should be indented with \"\\t\\t\".",
 		"NOTE: Makefile:4: Variable values should be aligned with tabs, not spaces.",
-		"NOTE: Makefile:6: This variable value should be aligned with tabs, not spaces, to column 17.")
+		"NOTE: Makefile:6: This variable value should be aligned with tabs, not spaces, to column 17 instead of 25.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"              \" with \"\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \"                        \" with \"\\t\\t\".",
@@ -1580,9 +1585,9 @@ func (s *Suite) Test_VaralignBlock__var_tab16_value_var16_space_value_var14_tab_
 		"16 17",
 		"14 16")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 25.",
-		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 25.",
-		"NOTE: Makefile:3: This variable value should be aligned to column 25.")
+		"NOTE: Makefile:1: This variable value should be aligned to column 25 instead of 17.",
+		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 25 instead of 18.",
+		"NOTE: Makefile:3: This variable value should be aligned to column 25 instead of 17.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\\t\" with \"\\t\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \" \" with \"\\t\".",
@@ -1609,9 +1614,9 @@ func (s *Suite) Test_VaralignBlock__var16_space_value_var16_space_value_var16_sp
 		"16 17",
 		"16 17")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25.",
-		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 25.",
-		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 25.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25 instead of 18.",
+		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 25 instead of 18.",
+		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 25 instead of 18.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \" \" with \"\\t\".",
@@ -1657,7 +1662,7 @@ func (s *Suite) Test_VaralignBlock__var2_space_value_var2_tab_value(c *check.C) 
 		"02 03",
 		"02 08")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 9.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 9 instead of 4.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\".")
 	vt.Fixed(
@@ -1698,8 +1703,8 @@ func (s *Suite) Test_VaralignBlock__var8_space_value_var2_tab_value(c *check.C) 
 		"08 09",
 		"02 08")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17.",
-		"NOTE: Makefile:2: This variable value should be aligned to column 17.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17 instead of 10.",
+		"NOTE: Makefile:2: This variable value should be aligned to column 17 instead of 9.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \"\\t\" with \"\\t\\t\".")
@@ -1722,7 +1727,7 @@ func (s *Suite) Test_VaralignBlock__var15_space_value_var2_tab_value(c *check.C)
 		"02 08")
 	vt.Diagnostics(
 		"NOTE: Makefile:1: Variable values should be aligned with tabs, not spaces.",
-		"NOTE: Makefile:2: This variable value should be aligned to column 17.")
+		"NOTE: Makefile:2: This variable value should be aligned to column 17 instead of 9.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \"\\t\" with \"\\t\\t\".")
@@ -1762,7 +1767,7 @@ func (s *Suite) Test_VaralignBlock__var2_space_value_var9_tab_value(c *check.C) 
 		"02 03",
 		"09 16")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17 instead of 4.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\\t\".")
 	vt.Fixed(
@@ -1781,8 +1786,8 @@ func (s *Suite) Test_VaralignBlock__var22_space_value_var9_tab_value(c *check.C)
 		"22 23",
 		"09 16")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25.",
-		"NOTE: Makefile:2: This variable value should be aligned to column 25.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25 instead of 24.",
+		"NOTE: Makefile:2: This variable value should be aligned to column 25 instead of 17.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \"\\t\" with \"\\t\\t\".")
@@ -1802,7 +1807,7 @@ func (s *Suite) Test_VaralignBlock__var23_space_value_var9_tab_value(c *check.C)
 		"09 16")
 	vt.Diagnostics(
 		"NOTE: Makefile:1: Variable values should be aligned with tabs, not spaces.",
-		"NOTE: Makefile:2: This variable value should be aligned to column 25.")
+		"NOTE: Makefile:2: This variable value should be aligned to column 25 instead of 17.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \"\\t\" with \"\\t\\t\".")
@@ -1839,8 +1844,8 @@ func (s *Suite) Test_VaralignBlock__var_tabs24_value_var_tabs40_value(c *check.C
 		"08 24",
 		"08 40")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 17.",
-		"NOTE: Makefile:2: This variable value should be aligned to column 17.")
+		"NOTE: Makefile:1: This variable value should be aligned to column 17 instead of 25.",
+		"NOTE: Makefile:2: This variable value should be aligned to column 17 instead of 41.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\\t\\t\" with \"\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \"\\t\\t\\t\\t\" with \"\\t\".")
@@ -1877,7 +1882,7 @@ func (s *Suite) Test_VaralignBlock__var6_space_value_var10_tab_value(c *check.C)
 		"06 07",
 		"10 16")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17 instead of 8.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\\t\".")
 	vt.Fixed(
@@ -1994,7 +1999,7 @@ func (s *Suite) Test_VaralignBlock__var_tabs24_value_var_tab24_value_var_space_c
 		"   08 23",
 		"   08")
 	vt.Diagnostics(
-		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 25.")
+		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 25 instead of 16.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:3: Replacing \" \" with \"\\t\\t\".")
 	vt.Fixed(
@@ -2016,7 +2021,7 @@ func (s *Suite) Test_VaralignBlock__lead_var_tab8_value_lead_var_tab16_value(c *
 		"05 08",
 		"11 16")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 17.")
+		"NOTE: Makefile:1: This variable value should be aligned to column 17 instead of 9.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\\t\" with \"\\t\\t\".")
 	vt.Fixed(
@@ -2106,7 +2111,7 @@ func (s *Suite) Test_VaralignBlock__continuation_line_last_empty(c *check.C) {
 		"   00",
 		"09 16")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17 instead of 12.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\".")
 	vt.Fixed(
@@ -2143,10 +2148,10 @@ func (s *Suite) Test_VaralignBlock__realign_commented_single_lines(c *check.C) {
 		"   01",
 		"06 08")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 17.",
-		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"NOTE: Makefile:1: This variable value should be aligned to column 17 instead of 9.",
+		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17 instead of 16.",
 		"NOTE: Makefile:6: This continuation line should be indented with \"\\t\\t\".",
-		"NOTE: Makefile:7: This variable value should be aligned to column 17.")
+		"NOTE: Makefile:7: This variable value should be aligned to column 17 instead of 9.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"\\t\" with \"\\t\\t\".",
 		"AUTOFIX: Makefile:3: Replacing \" \" with \"\\t\".",
@@ -2327,7 +2332,7 @@ func (s *Suite) Test_VaralignBlock__shift_already_long_line_to_the__right(c *che
 		"11 16 71",
 		"   16")
 	vt.Diagnostics(
-		"NOTE: Makefile:2: This variable value should be aligned to column 25.",
+		"NOTE: Makefile:2: This variable value should be aligned to column 25 instead of 17.",
 		"NOTE: Makefile:3: This continuation line should be indented with \"\\t\\t\\t\".")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:2: Replacing \"\\t\" with \"\\t\\t\".",
@@ -2440,7 +2445,7 @@ func (s *Suite) Test_VaralignBlock__command_with_arguments(c *check.C) {
 		"   08 18",
 		"   08")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25.",
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 25 instead of 22.",
 		"NOTE: Makefile:2: This continuation line should be indented with \"\\t\\t\\t\".",
 		"NOTE: Makefile:3: This continuation line should be indented with \"\\t\\t\\t\".",
 		"NOTE: Makefile:4: This continuation line should be indented with \"\\t\\t\\t\".")
@@ -2901,7 +2906,7 @@ func (s *Suite) Test_VaralignBlock_Process__var_spaces7_value(c *check.C) {
 	vt.Input(
 		"VAR=   value")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 9.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 9 instead of 8.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"   \" with \"\\t\".")
 	vt.Fixed(
@@ -2927,7 +2932,7 @@ func (s *Suite) Test_VaralignBlock_Process__var_spaces9_value(c *check.C) {
 	vt.Input(
 		"VAR=     value")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 9.")
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 9 instead of 10.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"     \" with \"\\t\".")
 	vt.Fixed(
@@ -2998,8 +3003,8 @@ func (s *Suite) Test_VaralignBlock_Process__reduce_indentation(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: file.mk:1: Variable values should be aligned with tabs, not spaces.",
-		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 9.",
-		"NOTE: file.mk:3: This variable value should be aligned to column 9.")
+		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 9 instead of 17.",
+		"NOTE: file.mk:3: This variable value should be aligned to column 9 instead of 33.")
 }
 
 // For every variable assignment, there is at least one space or tab between the variable
@@ -3013,10 +3018,14 @@ func (s *Suite) Test_VaralignBlock_Process__longest_line_no_space(c *check.C) {
 		"SUBST_FILES.123456= *.pl",
 		"SUBST_FILTER_CMD.123456=cat")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 33.",
-		"NOTE: Makefile:2: This variable value should be aligned with tabs, not spaces, to column 33.",
-		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 33.",
-		"NOTE: Makefile:4: This variable value should be aligned to column 33.")
+		"NOTE: Makefile:1: This variable value should be aligned "+
+			"with tabs, not spaces, to column 33 instead of 17.",
+		"NOTE: Makefile:2: This variable value should be aligned "+
+			"with tabs, not spaces, to column 33 instead of 21.",
+		"NOTE: Makefile:3: This variable value should be aligned "+
+			"with tabs, not spaces, to column 33 instead of 21.",
+		"NOTE: Makefile:4: This variable value should be aligned "+
+			"to column 33 instead of 25.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\\t\\t\".",
 		"AUTOFIX: Makefile:2: Replacing \" \" with \"\\t\\t\".",
@@ -3046,10 +3055,10 @@ func (s *Suite) Test_VaralignBlock_Process__only_spaces(c *check.C) {
 	varalign.Finish()
 
 	t.CheckOutputLines(
-		"NOTE: file.mk:1: This variable value should be aligned with tabs, not spaces, to column 33.",
-		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 33.",
-		"NOTE: file.mk:3: This variable value should be aligned with tabs, not spaces, to column 33.",
-		"NOTE: file.mk:4: This variable value should be aligned with tabs, not spaces, to column 33.")
+		"NOTE: file.mk:1: This variable value should be aligned with tabs, not spaces, to column 33 instead of 17.",
+		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 33 instead of 23.",
+		"NOTE: file.mk:3: This variable value should be aligned with tabs, not spaces, to column 33 instead of 23.",
+		"NOTE: file.mk:4: This variable value should be aligned with tabs, not spaces, to column 33 instead of 28.")
 }
 
 func (s *Suite) Test_VaralignBlock_processVarassign__comment_with_continuation(c *check.C) {
@@ -3058,7 +3067,7 @@ func (s *Suite) Test_VaralignBlock_processVarassign__comment_with_continuation(c
 		"VAR.param= # comment \\",
 		"#\tthe comment continues")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"NOTE: Makefile:1: This variable value should be aligned with tabs, not spaces, to column 17 instead of 12.",
 		"NOTE: Makefile:2: This continuation line should be indented with \"\\t\\t\".")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \" \" with \"\\t\".",
@@ -3534,12 +3543,12 @@ func (s *Suite) Test_varalignLine_alignValueSingle(c *check.C) {
 			info.alignValueSingle(column)
 
 			t.CheckEqualsf(
-				mkline.raw[0].text(), after,
+				mkline.raw[0].Text(), after,
 				"Line.raw.text, autofix=%v", autofix)
 
 			// As of 2019-12-11, the info fields are not updated
 			// accordingly, but they should.
-			// TODO: update info accordingly
+			// FIXME: update info accordingly
 			t.CheckEqualsf(info.String(), before,
 				"info.String, autofix=%v", autofix)
 		}
@@ -3562,7 +3571,7 @@ func (s *Suite) Test_varalignLine_alignValueSingle(c *check.C) {
 
 		"VAR=\t\tvalue",
 		"NOTE: filename.mk:123: This variable value "+
-			"should be aligned to column 17.",
+			"should be aligned to column 17 instead of 9.",
 		"AUTOFIX: filename.mk:123: Replacing \"\\t\" with \"\\t\\t\".")
 
 	// Aligned to the wrong column, using a mixture of tabs and spaces.
@@ -3572,7 +3581,7 @@ func (s *Suite) Test_varalignLine_alignValueSingle(c *check.C) {
 
 		"VAR=\t\tvalue",
 		"NOTE: filename.mk:123: This variable value "+
-			"should be aligned with tabs, not spaces, to column 17.",
+			"should be aligned with tabs, not spaces, to column 17 instead of 13.",
 		"AUTOFIX: filename.mk:123: Replacing \"\\t    \" with \"\\t\\t\".")
 
 	// Correct column, but using spaces for indentation.
@@ -3593,7 +3602,7 @@ func (s *Suite) Test_varalignLine_alignValueSingle(c *check.C) {
 
 		"VAR=\tvalue",
 		"NOTE: filename.mk:123: "+
-			"This variable value should be aligned to column 9.",
+			"This variable value should be aligned to column 9 instead of 41.",
 		"AUTOFIX: filename.mk:123: Replacing \"\\t\\t\\t\\t\\t\" with \"\\t\".")
 
 	// An outlier should use a single space, to be as far to the
@@ -3648,7 +3657,7 @@ func (s *Suite) Test_varalignLine_alignValueInitial__empty_spaces(c *check.C) {
 		"04 05")
 	vt.Diagnostics(
 		"NOTE: Makefile:1: Variable values should be aligned with tabs, not spaces.",
-		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 9.")
+		"NOTE: Makefile:3: This variable value should be aligned with tabs, not spaces, to column 9 instead of 6.")
 	vt.Autofixes(
 		"AUTOFIX: Makefile:1: Replacing \"    \" with \"\\t\".",
 		"AUTOFIX: Makefile:3: Replacing \" \" with \"\\t\".")
@@ -3692,14 +3701,14 @@ func (s *Suite) Test_varalignLine_alignValueInitial(c *check.C) {
 			assert(len(mklines.mklines) == 1)
 			mkline := mklines.mklines[0]
 
-			text := mkline.raw[0].text()
+			text := mkline.raw[0].Text()
 			parts := NewVaralignSplitter().split(text, true)
 			info := &varalignLine{mkline, 0, false, parts}
 
 			info.alignValueInitial(column)
 
 			t.CheckEqualsf(
-				mkline.raw[0].text(), after,
+				mkline.raw[0].Text(), after,
 				"Line.raw.text, autofix=%v", autofix)
 
 			t.CheckEqualsf(info.String(), after,
@@ -3722,7 +3731,7 @@ func (s *Suite) Test_varalignLine_alignValueInitial(c *check.C) {
 		16,
 
 		"VAR=\t\tvalue \\",
-		"NOTE: filename.mk:1: This variable value should be aligned to column 17.",
+		"NOTE: filename.mk:1: This variable value should be aligned to column 17 instead of 9.",
 		"AUTOFIX: filename.mk:1: Replacing \"\\t\" with \"\\t\\t\".")
 
 	// The column is already correct,
@@ -3742,7 +3751,7 @@ func (s *Suite) Test_varalignLine_alignValueInitial(c *check.C) {
 		16,
 
 		"VAR=\t\tvalue \\",
-		"NOTE: filename.mk:1: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"NOTE: filename.mk:1: This variable value should be aligned with tabs, not spaces, to column 17 instead of 13.",
 		"AUTOFIX: filename.mk:1: Replacing \"  \\t    \" with \"\\t\\t\".")
 }
 
@@ -3824,7 +3833,7 @@ func (s *Suite) Test_varalignLine_alignValueMultiFollow(c *check.C) {
 
 			info.alignValueMultiFollow(width)
 
-			t.CheckEquals(raw.text(), after)
+			t.CheckEquals(raw.Text(), after)
 		}
 
 		t.ExpectDiagnosticsAutofix(
@@ -3985,8 +3994,8 @@ func (s *Suite) Test_varalignLine_alignValueMultiFollow__unindent_long_lines(c *
 		"   64 67",
 		"   64")
 	vt.Diagnostics(
-		"NOTE: Makefile:1: This variable value should be aligned to column 17.",
-		"NOTE: Makefile:2: This variable value should be aligned to column 17.",
+		"NOTE: Makefile:1: This variable value should be aligned to column 17 instead of 9.",
+		"NOTE: Makefile:2: This variable value should be aligned to column 17 instead of 41.",
 		"NOTE: Makefile:3: This continuation line should be indented with \"\\t\\t\\t\\t\\t\\t\".",
 		"NOTE: Makefile:4: This continuation line should be indented with \"\\t\\t\\t\\t\\t\\t\".",
 		"NOTE: Makefile:5: This continuation line should be indented with \"\\t\\t\\t\\t\\t\\t\".",
@@ -4078,14 +4087,14 @@ func (s *Suite) Test_varalignLine_alignValue(c *check.C) {
 			assert(len(mklines.mklines) == 1)
 			mkline := mklines.mklines[0]
 
-			text := mkline.raw[0].text()
+			text := mkline.raw[0].Text()
 			parts := NewVaralignSplitter().split(text, true)
 			info := &varalignLine{mkline, 0, false, parts}
 
 			info.alignValue(column)
 
 			t.CheckEqualsf(
-				mkline.raw[0].text(), after,
+				mkline.raw[0].Text(), after,
 				"Line.raw.text, autofix=%v", autofix)
 
 			t.CheckEqualsf(info.String(), after,
@@ -4105,7 +4114,7 @@ func (s *Suite) Test_varalignLine_alignValue(c *check.C) {
 			assert(len(mklines.mklines) == 1)
 			mkline := mklines.mklines[0]
 
-			text := mkline.raw[0].text()
+			text := mkline.raw[0].Text()
 			parts := NewVaralignSplitter().split(text, true)
 			info := &varalignLine{mkline, 0, false, parts}
 
@@ -4113,7 +4122,7 @@ func (s *Suite) Test_varalignLine_alignValue(c *check.C) {
 				func() { info.alignValue(column) })
 
 			t.CheckEqualsf(
-				mkline.raw[0].text(), before,
+				mkline.raw[0].Text(), before,
 				"Line.raw.text, autofix=%v", autofix)
 
 			t.CheckEqualsf(info.String(), before,
@@ -4133,7 +4142,7 @@ func (s *Suite) Test_varalignLine_alignValue(c *check.C) {
 		16,
 
 		"VAR=\t\tvalue \\",
-		"NOTE: filename.mk:1: This variable value should be aligned to column 17.",
+		"NOTE: filename.mk:1: This variable value should be aligned to column 17 instead of 9.",
 		"AUTOFIX: filename.mk:1: Replacing \"\\t\" with \"\\t\\t\".")
 
 	// The column is already correct,
@@ -4153,7 +4162,7 @@ func (s *Suite) Test_varalignLine_alignValue(c *check.C) {
 		16,
 
 		"VAR=\t\tvalue \\",
-		"NOTE: filename.mk:1: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"NOTE: filename.mk:1: This variable value should be aligned with tabs, not spaces, to column 17 instead of 13.",
 		"AUTOFIX: filename.mk:1: Replacing \"  \\t    \" with \"\\t\\t\".")
 }
 
@@ -4192,14 +4201,14 @@ func (s *Suite) Test_varalignLine_alignContinuation(c *check.C) {
 			assert(len(mklines.mklines) == 1)
 			mkline := mklines.mklines[0]
 
-			text := mkline.raw[rawIndex].text()
+			text := mkline.raw[rawIndex].Text()
 			parts := NewVaralignSplitter().split(text, rawIndex == 0)
 			info := &varalignLine{mkline, rawIndex, false, parts}
 
 			info.alignContinuation(valueColumn, rightMarginColumn)
 
 			t.CheckEqualsf(
-				mkline.raw[rawIndex].text(), after,
+				mkline.raw[rawIndex].Text(), after,
 				"Line.raw.text, autofix=%v", autofix)
 
 			t.CheckEqualsf(info.String(), after,

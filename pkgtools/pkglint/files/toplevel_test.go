@@ -31,7 +31,8 @@ func (s *Suite) Test_CheckdirToplevel(c *check.C) {
 
 		// This warning is at the very end because mklines.Check() is called at the end.
 		// Ideally it would be at the same place as the other warning from Makefile:3.
-		"NOTE: ~/Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17.")
+		"NOTE: ~/Makefile:3: This variable value should be aligned "+
+			"with tabs, not spaces, to column 17 instead of 10.")
 }
 
 func (s *Suite) Test_CheckdirToplevel__recursive(c *check.C) {
@@ -106,7 +107,7 @@ func (s *Suite) Test_CheckdirToplevel__indentation(c *check.C) {
 	t.Main("-Wall", ".")
 
 	t.CheckOutputLines(
-		"NOTE: ~/Makefile:4: This variable value should be aligned to column 17.",
+		"NOTE: ~/Makefile:4: This variable value should be aligned to column 17 instead of 25.",
 		"Looks fine.",
 		t.Shquote("(Run \"pkglint -e -Wall %s\" to show explanations.)", "."),
 		t.Shquote("(Run \"pkglint -fs -Wall %s\" to show what can be fixed automatically.)", "."),

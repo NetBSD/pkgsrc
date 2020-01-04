@@ -42,9 +42,9 @@ func (ck LineChecker) CheckTrailingWhitespace() {
 	// be Markdown files in pkgsrc, this code has to be adjusted.
 
 	rawIndex := len(ck.line.raw) - 1
-	text := ck.line.raw[rawIndex].text()
-	trimmed := rtrimHspace(text)
-	if len(trimmed) == len(text) {
+	text := ck.line.raw[rawIndex].Text()
+	trimmedLen := len(rtrimHspace(text))
+	if trimmedLen == len(text) {
 		return
 	}
 
@@ -52,6 +52,6 @@ func (ck LineChecker) CheckTrailingWhitespace() {
 	fix.Notef("Trailing whitespace.")
 	fix.Explain(
 		"This whitespace is irrelevant and can be removed.")
-	fix.ReplaceAt(rawIndex, len(trimmed), text[len(trimmed):], "")
+	fix.ReplaceAt(rawIndex, trimmedLen, text[trimmedLen:], "")
 	fix.Apply()
 }

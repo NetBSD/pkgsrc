@@ -7,15 +7,17 @@ import "netbsd.org/pkglint/textproc"
 //
 // See mk/subst.mk.
 type SubstContext struct {
+	// points to a block somewhere in scopes.
 	active *substBlock
 
 	scopes []*substScope
 
 	once Once
+	pkg  *Package
 }
 
-func NewSubstContext() *SubstContext {
-	return &SubstContext{scopes: []*substScope{newSubstScope()}}
+func NewSubstContext(pkg *Package) *SubstContext {
+	return &SubstContext{nil, []*substScope{newSubstScope()}, Once{}, pkg}
 }
 
 func (ctx *SubstContext) Process(mkline *MkLine) {
@@ -73,11 +75,11 @@ func (ctx *SubstContext) varassign(mkline *MkLine) {
 	}
 
 	block := ctx.block()
-	block.varassign(mkline)
+	block.varassign(mkline, ctx.pkg)
 }
 
 func (ctx *SubstContext) varassignClasses(mkline *MkLine) {
-	ids := mkline.ValueFields(mkline.WithoutMakeVariables(mkline.Value()))
+	ids := mkline.ValueFieldsLiteral()
 	if len(ids) == 0 {
 		return
 	}
@@ -396,10 +398,10 @@ func newSubstBlock(id string) *substBlock {
 	return &substBlock{id: id, conds: []*substCond{newSubstCond()}}
 }
 
-func (b *substBlock) varassign(mkline *MkLine) {
+func (b *substBlock) varassign(mkline *MkLine, pkg *Package) {
 	switch mkline.Varcanon() {
 	case "SUBST_STAGE.*":
-		b.varassignStage(mkline)
+		b.varassignStage(mkline, pkg)
 	case "SUBST_MESSAGE.*":
 		b.varassignMessages(mkline)
 	case "SUBST_FILES.*":
@@ -413,7 +415,7 @@ func (b *substBlock) varassign(mkline *MkLine) {
 	}
 }
 
-func (b *substBlock) varassignStage(mkline *MkLine) {
+func (b *substBlock) varassignStage(mkline *MkLine, pkg *Package) {
 	if b.isConditional() {
 		mkline.Warnf("%s should not be defined conditionally.", mkline.Varname())
 	}
@@ -437,8 +439,8 @@ func (b *substBlock) varassignStage(mkline *MkLine) {
 		fix.Apply()
 	}
 
-	if G.Pkg != nil && (value == "pre-configure" || value == "post-configure") {
-		if noConfigureLine := G.Pkg.vars.FirstDefinition("NO_CONFIGURE"); noConfigureLine != nil {
+	if pkg != nil && (value == "pre-configure" || value == "post-configure") {
+		if noConfigureLine := pkg.vars.FirstDefinition("NO_CONFIGURE"); noConfigureLine != nil {
 			mkline.Warnf("SUBST_STAGE %s has no effect when NO_CONFIGURE is set (in %s).",
 				value, mkline.RelMkLine(noConfigureLine))
 			mkline.Explain(

@@ -9,7 +9,6 @@ import (
 	tracePkg "netbsd.org/pkglint/trace"
 	"os"
 	"os/user"
-	"path"
 	"runtime"
 	"runtime/debug"
 	"runtime/pprof"
@@ -21,9 +20,8 @@ const confVersion = "@VERSION@"
 
 // Pkglint is a container for all global variables of this Go package.
 type Pkglint struct {
-	Opts   CmdOpts  // Command line options.
-	Pkgsrc Pkgsrc   // Global data, mostly extracted from mk/*.
-	Pkg    *Package // The package that is currently checked, or nil.
+	Opts   CmdOpts // Command line options.
+	Pkgsrc Pkgsrc  // Global data, mostly extracted from mk/*.
 
 	Todo CurrPathQueue // The files or directories that still need to be checked.
 
@@ -204,7 +202,7 @@ func (pkglint *Pkglint) prepareMainLoop() {
 		firstDir = firstDir.DirNoClean()
 	}
 
-	relTopdir := findPkgsrcTopdir(firstDir)
+	relTopdir := pkglint.findPkgsrcTopdir(firstDir)
 	if relTopdir.IsEmpty() {
 		// If the first argument to pkglint is not inside a pkgsrc tree,
 		// pkglint doesn't know where to load the infrastructure files from,
@@ -321,7 +319,7 @@ func (pkglint *Pkglint) checkMode(dirent CurrPath, mode os.FileMode) {
 
 	pkglint.Wip = pkgsrcRel.HasPrefixPath("wip")
 	pkglint.Infrastructure = pkgsrcRel.HasPrefixPath("mk")
-	pkgsrcdir := findPkgsrcTopdir(dir)
+	pkgsrcdir := pkglint.findPkgsrcTopdir(dir)
 	if pkgsrcdir.IsEmpty() {
 		G.Logger.TechErrorf("",
 			"Cannot determine the pkgsrc root directory for %q.",
@@ -331,7 +329,7 @@ func (pkglint *Pkglint) checkMode(dirent CurrPath, mode os.FileMode) {
 
 	if isReg {
 		pkglint.checkExecutable(dirent, mode)
-		pkglint.checkReg(dirent, basename, pkgsrcRel.Count())
+		pkglint.checkReg(dirent, basename, pkgsrcRel.Count(), nil)
 		return
 	}
 
@@ -358,13 +356,12 @@ func (pkglint *Pkglint) checkdirPackage(dir CurrPath) {
 		defer trace.Call(dir)()
 	}
 
-	pkglint.Pkg = NewPackage(dir)
-	defer func() { pkglint.Pkg = nil }()
-	pkglint.Pkg.Check()
+	pkg := NewPackage(dir)
+	pkg.Check()
 }
 
 // Returns the pkgsrc top-level directory, relative to the given directory.
-func findPkgsrcTopdir(dirname CurrPath) RelPath {
+func (*Pkglint) findPkgsrcTopdir(dirname CurrPath) RelPath {
 	for _, dir := range [...]RelPath{".", "..", "../..", "../../.."} {
 		if dirname.JoinNoClean(dir).JoinNoClean("mk/bsd.pkg.mk").IsFile() {
 			return dir
@@ -373,27 +370,33 @@ func findPkgsrcTopdir(dirname CurrPath) RelPath {
 	return ""
 }
 
-func resolveVariableRefs(mklines *MkLines, text string) (resolved string) {
+func resolveVariableRefs(text string, mklines *MkLines, pkg *Package) string {
 	// TODO: How does this fit into the Scope type, which is newer than this function?
 
-	if !containsVarRef(text) {
+	if !containsVarUse(text) {
 		return text
+	}
+
+	if pkg == nil {
+		pkg = mklines.pkg
 	}
 
 	visited := make(map[string]bool) // To prevent endless loops
 
-	replacer := func(m string) string {
+	replace := func(m string) string {
 		varname := m[2 : len(m)-1]
 		if !visited[varname] {
 			visited[varname] = true
-			if G.Pkg != nil {
-				if value, ok := G.Pkg.vars.LastValueFound(varname); ok {
-					return value
-				}
-			}
+
 			if mklines != nil {
 				// TODO: At load time, use mklines.loadVars instead.
 				if value, ok := mklines.allVars.LastValueFound(varname); ok {
+					return value
+				}
+			}
+
+			if pkg != nil {
+				if value, ok := pkg.vars.LastValueFound(varname); ok {
 					return value
 				}
 			}
@@ -404,7 +407,7 @@ func resolveVariableRefs(mklines *MkLines, text string) (resolved string) {
 	str := text
 	for {
 		// TODO: Replace regular expression with full parser.
-		replaced := replaceAllFunc(str, `\$\{([\w.]+)\}`, replacer)
+		replaced := replaceAllFunc(str, `\$\{([\w.]+)\}`, replace)
 		if replaced == str {
 			if trace.Tracing && str != text {
 				trace.Stepf("resolveVariableRefs %q => %q", text, replaced)
@@ -466,7 +469,7 @@ func CheckLinesDescr(lines *Lines) {
 	SaveAutofixChanges(lines)
 }
 
-func CheckLinesMessage(lines *Lines) {
+func CheckLinesMessage(lines *Lines, pkg *Package) {
 	if trace.Tracing {
 		defer trace.Call(lines.Filename)()
 	}
@@ -476,7 +479,7 @@ func CheckLinesMessage(lines *Lines) {
 	//
 	// If the need arises, some of the checks may be activated again, but
 	// that requires more sophisticated code.
-	if G.Pkg != nil && G.Pkg.vars.IsDefined("MESSAGE_SRC") {
+	if pkg != nil && pkg.vars.IsDefined("MESSAGE_SRC") {
 		return
 	}
 
@@ -524,18 +527,18 @@ func CheckLinesMessage(lines *Lines) {
 	SaveAutofixChanges(lines)
 }
 
-func CheckFileMk(filename CurrPath) {
+func CheckFileMk(filename CurrPath, pkg *Package) {
 	if trace.Tracing {
 		defer trace.Call(filename)()
 	}
 
-	mklines := LoadMk(filename, NotEmpty|LogErrors)
+	mklines := LoadMk(filename, pkg, NotEmpty|LogErrors)
 	if mklines == nil {
 		return
 	}
 
-	if G.Pkg != nil {
-		G.Pkg.checkFileMakefileExt(filename)
+	if pkg != nil {
+		pkg.checkFileMakefileExt(filename)
 	}
 
 	mklines.Check()
@@ -545,7 +548,7 @@ func CheckFileMk(filename CurrPath) {
 // checkReg checks the given regular file.
 // depth is 3 for files in the package directory, and 4 or more for files
 // deeper in the directory hierarchy, such as in files/ or patches/.
-func (pkglint *Pkglint) checkReg(filename CurrPath, basename string, depth int) {
+func (pkglint *Pkglint) checkReg(filename CurrPath, basename string, depth int, pkg *Package) {
 
 	if depth == 3 && !pkglint.Wip {
 		if contains(basename, "TODO") {
@@ -568,10 +571,10 @@ func (pkglint *Pkglint) checkReg(filename CurrPath, basename string, depth int) 
 
 	switch {
 	case basename == "ALTERNATIVES":
-		CheckFileAlternatives(filename)
+		CheckFileAlternatives(filename, pkg)
 
 	case basename == "buildlink3.mk":
-		if mklines := LoadMk(filename, NotEmpty|LogErrors); mklines != nil {
+		if mklines := LoadMk(filename, pkg, NotEmpty|LogErrors); mklines != nil {
 			CheckLinesBuildlink3Mk(mklines)
 		}
 
@@ -582,7 +585,7 @@ func (pkglint *Pkglint) checkReg(filename CurrPath, basename string, depth int) 
 
 	case basename == "distinfo":
 		if lines := Load(filename, NotEmpty|LogErrors); lines != nil {
-			CheckLinesDistinfo(G.Pkg, lines)
+			CheckLinesDistinfo(pkg, lines)
 		}
 
 	case basename == "DEINSTALL" || basename == "INSTALL":
@@ -590,17 +593,17 @@ func (pkglint *Pkglint) checkReg(filename CurrPath, basename string, depth int) 
 
 	case hasPrefix(basename, "MESSAGE"):
 		if lines := Load(filename, NotEmpty|LogErrors); lines != nil {
-			CheckLinesMessage(lines)
+			CheckLinesMessage(lines, pkg)
 		}
 
 	case basename == "options.mk":
-		if mklines := LoadMk(filename, NotEmpty|LogErrors); mklines != nil {
+		if mklines := LoadMk(filename, pkg, NotEmpty|LogErrors); mklines != nil {
 			CheckLinesOptionsMk(mklines)
 		}
 
 	case matches(basename, `^patch-[-\w.~+]*\w$`):
 		if lines := Load(filename, NotEmpty|LogErrors); lines != nil {
-			CheckLinesPatch(lines)
+			CheckLinesPatch(lines, pkg)
 		}
 
 	case filename.DirNoClean().Base() == "patches" && matches(filename.Base(), `^manual[^/]*$`):
@@ -613,11 +616,11 @@ func (pkglint *Pkglint) checkReg(filename CurrPath, basename string, depth int) 
 
 	case (hasPrefix(basename, "Makefile") || hasSuffix(basename, ".mk")) &&
 		!G.Pkgsrc.Rel(filename).AsPath().ContainsPath("files"):
-		CheckFileMk(filename)
+		CheckFileMk(filename, pkg)
 
 	case hasPrefix(basename, "PLIST"):
 		if lines := Load(filename, NotEmpty|LogErrors); lines != nil {
-			CheckLinesPlist(G.Pkg, lines)
+			CheckLinesPlist(pkg, lines)
 		}
 
 	case contains(basename, "README"):
@@ -635,21 +638,12 @@ func (pkglint *Pkglint) checkReg(filename CurrPath, basename string, depth int) 
 			NewLineWhole(filename).Warnf("Only packages in regress/ may have spec files.")
 		}
 
-	case pkglint.matchesLicenseFile(basename):
+	case pkg != nil && pkg.matchesLicenseFile(basename):
 		break
 
 	default:
 		NewLineWhole(filename).Warnf("Unexpected file found.")
 	}
-}
-
-func (pkglint *Pkglint) matchesLicenseFile(basename string) bool {
-	if pkglint.Pkg == nil {
-		return false
-	}
-
-	licenseFile := pkglint.Pkg.vars.LastValue("LICENSE_FILE")
-	return basename == path.Base(licenseFile)
 }
 
 func (pkglint *Pkglint) checkExecutable(filename CurrPath, mode os.FileMode) {

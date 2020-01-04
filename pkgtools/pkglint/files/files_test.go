@@ -166,17 +166,17 @@ func (s *Suite) Test_convertToLogicalLines__comments(c *check.C) {
 		"",
 		"# Multiline comment",
 		"# Another escaped comment that goes on and on",
-		"# This is NOT an escaped comment due to the double backslashes \\",
+		"# This is NOT an escaped comment due to the double backslashes \\\\",
 		"VAR=\tThis is not a comment",
 		"",
 		"# This is a comment",
-		"#\\",
-		"\tThis is no comment",
-		"#\\ This is a comment",
 		"#\\\\",
 		"\tThis is no comment",
 		"#\\\\ This is a comment",
-		"#\\\\\\",
+		"#\\\\\\\\",
+		"\tThis is no comment",
+		"#\\\\\\\\ This is a comment",
+		"#\\\\\\\\\\\\",
 		"\tThis is no comment"})
 
 	t.CheckOutputEmpty()
@@ -244,14 +244,14 @@ func (s *Suite) Test_nextLogicalLine__commented_multi(c *check.C) {
 func (s *Suite) Test_matchContinuationLine(c *check.C) {
 	t := s.Init(c)
 
-	leadingWhitespace, text, trailingWhitespace, continuation := matchContinuationLine("\n")
+	leadingWhitespace, text, trailingWhitespace, continuation := matchContinuationLine("")
 
 	t.CheckEquals(leadingWhitespace, "")
 	t.CheckEquals(text, "")
 	t.CheckEquals(trailingWhitespace, "")
 	t.CheckEquals(continuation, "")
 
-	leadingWhitespace, text, trailingWhitespace, continuation = matchContinuationLine("\tword   \\\n")
+	leadingWhitespace, text, trailingWhitespace, continuation = matchContinuationLine("\tword   \\")
 
 	t.CheckEquals(leadingWhitespace, "\t")
 	t.CheckEquals(text, "word")
