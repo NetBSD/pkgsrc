@@ -1,0 +1,17 @@
+# $NetBSD: Makefile.common,v 1.1 2020/01/04 12:30:07 nia Exp $
+# used by emulators/nestopia/Makefile
+# used by emulators/libretro-nestopia/Makefile
+
+DISTNAME=	nestopia-1.50
+CATEGORIES=	emulators
+MASTER_SITES=	${MASTER_SITE_GITHUB:=0ldsk00l/}
+GITHUB_PROJECT=	nestopia
+GITHUB_TAG=	${PKGVERSION_NOREV}
+
+LICENSE=	gnu-gpl-v2
+
+EXTRACT_USING=	bsdtar
+USE_LANGUAGES=	c c++03
+
+DISTINFO_FILE=	${.CURDIR}/../../emulators/nestopia/distinfo
+PATCHDIR=	${.CURDIR}/../../emulators/nestopia/patches
