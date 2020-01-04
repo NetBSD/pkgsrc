@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.176 2020/01/04 20:21:25 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.177 2020/01/04 20:41:50 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -204,3 +204,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/thunderbird-enigmail to 2.1.5 [wiz 2020-01-04]
 	Updated pkgtools/pkglint to 19.4.1 [rillig 2020-01-04]
 	Updated devel/py-mercurial to 5.2.1 [wiz 2020-01-04]
+	Updated www/liferea to 1.12.7 [leot 2020-01-04]
