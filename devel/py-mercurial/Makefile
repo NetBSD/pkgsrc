@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/11/13 12:26:40 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/04 20:21:15 wiz Exp $
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 # https://bz.mercurial-scm.org/show_bug.cgi?id=4485
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 USE_TOOLS+=	gmake msgfmt
 
