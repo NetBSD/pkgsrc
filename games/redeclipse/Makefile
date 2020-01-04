@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2019/06/30 20:53:09 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/04 16:16:25 nia Exp $
 
-DISTNAME=	redeclipse_1.6.0_nix
-PKGNAME=	redeclipse-1.6.0
+DISTNAME=	redeclipse_2.0.0_nix
+PKGNAME=	redeclipse-2.0.0
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=red-eclipse/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=redeclipse/}
 EXTRACT_SUFX=	.tar.bz2
 GITHUB_PROJECT=	base
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -16,7 +16,7 @@ LICENSE=	zlib AND cc-by-sa-v3.0
 WRKSRC=		${WRKDIR}/redeclipse-${PKGVERSION_NOREV}
 
 NO_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES+=	c c++
 
 BUILD_DIRS=	src
