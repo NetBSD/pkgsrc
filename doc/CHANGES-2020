@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.165 2020/01/04 14:06:40 nia Exp $
+$NetBSD: CHANGES-2020,v 1.166 2020/01/04 16:12:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -193,3 +193,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed x11/gnopernicus [nia 2020-01-04]
 	Removed x11/gnome-mag [nia 2020-01-04]
 	Removed security/seahorse-plugins [nia 2020-01-04]
+	Removed net/logjam [nia 2020-01-04]
