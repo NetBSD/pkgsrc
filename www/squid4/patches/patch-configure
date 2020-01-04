@@ -1,0 +1,133 @@
+$NetBSD: patch-configure,v 1.1 2020/01/04 10:57:18 taca Exp $
+
+* More support for OpenSSL 1.1; not only check SSL_Library_init() but
+  also check OPENSSL_init_ssl().
+* Fix syntax error by accidental new line.
+* Utilisze <stdlib.h> on BSD.
+
+--- configure.orig	2019-07-09 19:16:52.000000000 +0000
++++ configure
+@@ -24032,7 +24032,51 @@ if test "x$ac_cv_lib_ssl_SSL_library_ini
+   LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
+ else
+ 
+-      as_fn_error $? "library 'ssl' is required for OpenSSL" "$LINENO" 5
++      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OPENSSL_init_ssl in -lssl" >&5
++$as_echo_n "checking for OPENSSL_init_ssl in -lssl... " >&6; }
++if ${ac_cv_lib_ssl_OPENSSL_init_ssl+:} false; then :
++  $as_echo_n "(cached) " >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lssl $LIBOPENSSL_LIBS $LIBS"
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char OPENSSL_init_ssl ();
++int
++main ()
++{
++return OPENSSL_init_ssl ();
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_cxx_try_link "$LINENO"; then :
++  ac_cv_lib_ssl_OPENSSL_init_ssl=yes
++else
++  ac_cv_lib_ssl_OPENSSL_init_ssl=no
++fi
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_ssl_OPENSSL_init_ssl" >&5
++$as_echo "$ac_cv_lib_ssl_OPENSSL_init_ssl" >&6; }
++if test "x$ac_cv_lib_ssl_OPENSSL_init_ssl" = xyes; then :
++  LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
++else
++
++	as_fn_error $? "library 'ssl' is required for OpenSSL" "$LINENO" 5
++
++fi
++
++
+ 
+ fi
+ 
+@@ -24135,7 +24179,51 @@ if test "x$ac_cv_lib_ssl_SSL_library_ini
+   LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
+ else
+ 
+-      as_fn_error $? "library 'ssl' is required for OpenSSL" "$LINENO" 5
++      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OPENSSL_init_ssl in -lssl" >&5
++$as_echo_n "checking for OPENSSL_init_ssl in -lssl... " >&6; }
++if ${ac_cv_lib_ssl_OPENSSL_init_ssl+:} false; then :
++  $as_echo_n "(cached) " >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lssl $LIBOPENSSL_LIBS $LIBS"
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char OPENSSL_init_ssl ();
++int
++main ()
++{
++return OPENSSL_init_ssl ();
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_cxx_try_link "$LINENO"; then :
++  ac_cv_lib_ssl_OPENSSL_init_ssl=yes
++else
++  ac_cv_lib_ssl_OPENSSL_init_ssl=no
++fi
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_ssl_OPENSSL_init_ssl" >&5
++$as_echo "$ac_cv_lib_ssl_OPENSSL_init_ssl" >&6; }
++if test "x$ac_cv_lib_ssl_OPENSSL_init_ssl" = xyes; then :
++  LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
++else
++
++	as_fn_error $? "library 'ssl' is required for OpenSSL" "$LINENO" 5
++
++fi
++
++
+ 
+ fi
+ 
+@@ -39186,6 +39274,8 @@ else
+ # ifdef _MSC_VER
+ #  include <malloc.h>
+ #  define alloca _alloca
++# elif defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
++#   include <stdlib.h>
+ # else
+ #  ifdef HAVE_ALLOCA_H
+ #   include <alloca.h>
+@@ -42012,7 +42102,7 @@ _ACEOF
+ 
+ 
+ fi
+-ac_fn_cxx_check_member "$LINENO" "struct natlookup" "nl_realipaddr.in6"
++ac_fn_cxx_check_member "$LINENO" "struct natlookup" "nl_realipaddr.in6" \
+    "ac_cv_member_struct_natlookup_nl_realipaddr_in6___" "
+ #if USE_SOLARIS_IPFILTER_MINOR_T_HACK
+ #define minor_t fubar
