@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.178 2020/01/04 20:58:45 ng0 Exp $
+$NetBSD: CHANGES-2020,v 1.179 2020/01/04 22:56:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -206,3 +206,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-mercurial to 5.2.1 [wiz 2020-01-04]
 	Updated www/liferea to 1.12.7 [leot 2020-01-04]
 	Updated wm/cwm to 6.6 [ng0 2020-01-04]
+	Updated emulators/mame to 0.217 [wiz 2020-01-04]
