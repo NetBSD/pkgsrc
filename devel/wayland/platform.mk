@@ -1,12 +1,15 @@
-# $NetBSD: platform.mk,v 1.3 2019/11/03 10:39:32 rillig Exp $
+# $NetBSD: platform.mk,v 1.4 2020/01/04 01:49:26 nia Exp $
 
 .if !defined(PLATFORM_SUPPORTS_WAYLAND)
+.  include "../../mk/bsd.fast.prefs.mk"
 
 # Please only add operating systems here after verifying that both
 # devel/wayland and devel/wayland-protocols build.
-.  for _wayland_os in NetBSD Linux
-WAYLAND_PLATFORMS+=		${_wayland_os}-*-*
-.  endfor
+WAYLAND_PLATFORMS+=		Linux-*-*
+
+.if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-7].*)
+PLATFORM_SUPPORTS_WAYLAND=	yes
+.endif
 
 .  for _wayland_platform in ${WAYLAND_PLATFORMS}
 .    if !empty(MACHINE_PLATFORM:M${_wayland_platform})
