@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2018/08/11 20:26:12 nia Exp $
-
-SHA1 (libretro-nestopia-1.49.tar.gz) = c8c1f65ee06f31ef93a9e23452c0c6c2dfdf44e4
-RMD160 (libretro-nestopia-1.49.tar.gz) = cf363f152dfcd62e567d3064c8ffade1855b3940
-SHA512 (libretro-nestopia-1.49.tar.gz) = 1d96756692d5a08bddb75f2bafb2a2e72458386668637848b0da20401d71525641aaf54c0ad4c960bf7e893d9455043f8ed7c4fd5cc6595d6a566979a549a5e0
-Size (libretro-nestopia-1.49.tar.gz) = 1259705 bytes
-SHA1 (patch-libretro_libretro.cpp) = 1e578150a058d37ce9c988d6eb259ec0b0e9974b
