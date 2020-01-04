@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1288 2020/01/03 08:22:24 adam Exp $
+# $NetBSD: Makefile,v 1.1289 2020/01/04 16:12:00 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -334,7 +334,6 @@ SUBDIR+=	linc
 SUBDIR+=	lldpd
 SUBDIR+=	llnlxdir
 SUBDIR+=	llnlxftp
-SUBDIR+=	logjam
 SUBDIR+=	lopster
 SUBDIR+=	lua-copas
 SUBDIR+=	lua-socket
