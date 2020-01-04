@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.149 2020/01/04 11:55:03 nia Exp $
+$NetBSD: CHANGES-2020,v 1.150 2020/01/04 11:57:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -177,3 +177,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/squid4 version 4.9 [taca 2020-01-04]
 	Updated audio/libmysofa to 0.9.1 [nia 2020-01-04]
 	Updated emulators/dosbox-x to 0.82.25 [nia 2020-01-04]
+	Updated net/get_iplayer to 3.24 [nia 2020-01-04]
