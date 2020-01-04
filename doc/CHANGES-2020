@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.160 2020/01/04 13:25:11 nia Exp $
+$NetBSD: CHANGES-2020,v 1.161 2020/01/04 13:37:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -188,3 +188,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed misc/deskbar-applet [nia 2020-01-04]
 	Removed time/hamster-applet [nia 2020-01-04]
 	Removed comms/gnome-pilot [nia 2020-01-04]
+	Removed devel/libgail-gnome [nia 2020-01-04]
