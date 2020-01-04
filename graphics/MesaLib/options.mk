@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.77 2019/12/08 13:07:20 nia Exp $
+# $NetBSD: options.mk,v 1.78 2020/01/04 01:50:32 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 
@@ -11,6 +11,12 @@ PKG_SUPPORTED_OPTIONS+=		wayland
 .endif
 
 PKG_SUGGESTED_OPTIONS+=		x11
+
+.include "../../devel/wayland/platform.mk"
+
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+PKG_SUGGESTED_OPTIONS+=		wayland
+.endif
 
 # The LLVM option enables JIT accelerated software rendering and is also
 # required to support the latest RADEON GPUs.
