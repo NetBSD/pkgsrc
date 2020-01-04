@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.168 2019/09/10 22:53:54 leot Exp $
+# $NetBSD: Makefile,v 1.169 2020/01/04 20:41:29 leot Exp $
 
-DISTNAME=		liferea-1.12.5a
-PKGREVISION=		5
+DISTNAME=		liferea-1.12.7
 CATEGORIES=		www
-GITHUB_RELEASE=		v${PKGVERSION_NOREV:S/a//}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=lwindolf/}
-EXTRACT_SUFX=		.tar.bz2
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://lzone.de/liferea/
@@ -13,13 +11,16 @@ COMMENT=		Simple FeedReader clone for reading RSS/RDF feeds
 LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config msgfmt perl intltool
+USE_TOOLS+=		autoreconf autoconf automake gmake pkg-config msgfmt perl intltool
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
 SHLIBTOOL_OVERRIDE=	# empty
 
 GLIB_SCHEMAS=		net.sf.liferea.gschema.xml
+
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
