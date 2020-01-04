@@ -77,7 +77,7 @@ func (scc *SimpleCommandChecker) checkInstallCommand(shellcmd string) {
 		defer trace.Call0()()
 	}
 
-	if !matches(scc.mklines.target, `^(?:pre|do|post)-install$`) {
+	if !matches(scc.mklines.checkAllData.target, `^(?:pre|do|post)-install$`) {
 		return
 	}
 
@@ -148,7 +148,7 @@ func (scc *SimpleCommandChecker) handleTool() bool {
 		scc.mkline.Warnf("The %q tool is used but not added to USE_TOOLS.", command)
 	}
 
-	if tool != nil && tool.MustUseVarForm && !containsVarRef(command) {
+	if tool != nil && tool.MustUseVarForm && !containsVarUse(command) {
 		scc.mkline.Warnf("Please use \"${%s}\" instead of %q.", tool.Varname, command)
 	}
 
@@ -179,7 +179,7 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 		return true
 	}
 
-	return G.Pkg != nil && G.Pkg.vars.IsDefinedSimilar(varname)
+	return scc.mklines.pkg != nil && scc.mklines.pkg.vars.IsDefinedSimilar(varname)
 }
 
 func (scc *SimpleCommandChecker) handleShellBuiltin() bool {
@@ -277,9 +277,9 @@ func (scc *SimpleCommandChecker) checkAutoMkdirs() {
 		}
 
 		autoMkdirs := false
-		if G.Pkg != nil {
-			plistLine := G.Pkg.Plist.Dirs[prefixRel]
-			if plistLine != nil && !containsVarRef(plistLine.Text) {
+		if scc.mklines.pkg != nil {
+			plistLine := scc.mklines.pkg.Plist.Dirs[prefixRel]
+			if plistLine != nil && !containsVarUse(plistLine.Text) {
 				autoMkdirs = true
 			}
 		}
@@ -630,7 +630,6 @@ func (ck *ShellLineChecker) CheckShellCommandLine(shelltext string) {
 			"to understand, since all the complexity of using sed and mv is",
 			"hidden behind the scenes.",
 			"",
-			// TODO: Provide a copy-and-paste example.
 			sprintf("Run %q for more information.", bmakeHelp("subst")))
 		if contains(shelltext, "#") {
 			line.Explain(
@@ -673,7 +672,8 @@ func (ck *ShellLineChecker) checkHiddenAndSuppress(hiddenAndSuppress, rest strin
 	case !contains(hiddenAndSuppress, "@"):
 		// Nothing is hidden at all.
 
-	case hasPrefix(ck.MkLines.target, "show-") || hasSuffix(ck.MkLines.target, "-message"):
+	case hasPrefix(ck.MkLines.checkAllData.target, "show-"),
+		hasSuffix(ck.MkLines.checkAllData.target, "-message"):
 		// In these targets, all commands may be hidden.
 
 	case hasPrefix(rest, "#"):
@@ -899,7 +899,7 @@ func (ck *ShellLineChecker) unescapeBackticks(atoms *[]*ShAtom, quoting ShQuotin
 		}
 
 		// XXX: The regular expression is a bit cheated but is good enough until
-		// pkglint has a real parser for all shell constructs.
+		//  pkglint has a real parser for all shell constructs.
 		if atom.Quoting == shqDquotBackt && matches(atom.MkText, `(^|[^\\])"`) {
 			line.Warnf("Double quotes inside backticks inside double quotes are error prone.")
 			line.Explain(
@@ -1006,9 +1006,6 @@ func (ck *ShellLineChecker) checkVaruseToken(atoms *[]*ShAtom, quoting ShQuoting
 			"the correct form is ${VAR:Q}'' with either leading or trailing single or double quotes.",
 			"If the empty string should just be skipped,",
 			"a simple ${VAR:Q} without any surrounding quotes is correct.")
-
-		// TODO: What about single quotes?
-		// TODO: What about backticks?
 	}
 
 	if ck.checkVarUse {
@@ -1026,8 +1023,7 @@ func (ck *ShellLineChecker) checkMultiLineComment() {
 	}
 
 	for _, line := range mkline.raw[:len(mkline.raw)-1] {
-		text := strings.TrimSuffix(line.textnl, "\\\n")
-
+		text := strings.TrimSuffix(line.Text(), "\\")
 		tokens, rest := splitIntoShellTokens(nil, text)
 		if rest != "" {
 			return
@@ -1043,8 +1039,7 @@ func (ck *ShellLineChecker) checkMultiLineComment() {
 }
 
 func (ck *ShellLineChecker) warnMultiLineComment(raw *RawLine) {
-	text := strings.TrimSuffix(raw.textnl, "\n")
-	line := NewLine(ck.mkline.Filename, raw.Lineno, text, raw)
+	line := NewLine(ck.mkline.Filename, raw.Lineno, raw.Text(), raw)
 
 	line.Warnf("The shell comment does not stop at the end of this line.")
 	line.Explain(
@@ -1084,7 +1079,7 @@ func (ck *ShellLineChecker) Explain(explanation ...string) {
 // Example: "word1 word2;;;" => "word1", "word2", ";;", ";"
 //
 // TODO: Document what this function should be used for.
-func splitIntoShellTokens(line *Line, text string) (tokens []string, rest string) {
+func splitIntoShellTokens(line Autofixer, text string) (tokens []string, rest string) {
 	if trace.Tracing {
 		defer trace.Call(line, text)()
 	}

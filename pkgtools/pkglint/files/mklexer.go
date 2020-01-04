@@ -56,7 +56,7 @@ func (p *MkLexer) MkToken() *MkToken {
 		return &MkToken{Text: lexer.Since(mark), Varuse: varuse}
 	}
 
-	for lexer.NextBytesFunc(func(b byte) bool { return b != '$' }) != "" || lexer.SkipString("$$") {
+	for lexer.SkipBytesFunc(func(b byte) bool { return b != '$' }) || lexer.SkipString("$$") {
 	}
 	text := lexer.Since(mark)
 	if text != "" {
@@ -468,7 +468,7 @@ func (p *MkLexer) varUseModifierSubst(closing byte) (ok bool, regex bool, from s
 			case len(lexer.Rest()) >= 2 && lexer.PeekByte() == '\\' && separator != '\\':
 				_ = lexer.Skip(2)
 
-			case lexer.NextBytesFunc(isOther) != "":
+			case lexer.SkipBytesFunc(isOther):
 				break
 
 			default:
@@ -496,7 +496,7 @@ func (p *MkLexer) varUseModifierSubst(closing byte) (ok bool, regex bool, from s
 	}
 
 	optionsStart := lexer.Mark()
-	lexer.NextBytesFunc(func(b byte) bool { return b == '1' || b == 'g' || b == 'W' })
+	lexer.SkipBytesFunc(func(b byte) bool { return b == '1' || b == 'g' || b == 'W' })
 	options = lexer.Since(optionsStart)
 
 	ok = true

@@ -1,6 +1,37 @@
 package pkglint
 
-import "gopkg.in/check.v1"
+import (
+	"gopkg.in/check.v1"
+	"reflect"
+	"strings"
+)
+
+// Path returns a representation of the path in the AST that is
+// currently visited.
+//
+// It is used for debugging only.
+//
+// See Test_MkShWalker_Walk, Callback.SimpleCommand for examples.
+//
+// TODO: Move to test file.
+func (w *MkShWalker) Path() string {
+	var path []string
+	for _, level := range w.Context {
+		elementType := reflect.TypeOf(level.Element)
+		typeName := elementType.Elem().Name()
+		if typeName == "" {
+			typeName = "[]" + elementType.Elem().Elem().Name()
+		}
+		abbreviated := strings.TrimPrefix(typeName, "MkSh")
+		if level.Index == -1 {
+			// TODO: This form should also be used if index == 0 and len == 1.
+			path = append(path, abbreviated)
+		} else {
+			path = append(path, sprintf("%s[%d]", abbreviated, level.Index))
+		}
+	}
+	return strings.Join(path, ".")
+}
 
 func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 	t := s.Init(c)

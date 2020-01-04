@@ -51,7 +51,7 @@ func (ck *distinfoLinesChecker) parse() {
 	lines := ck.lines
 
 	llex := NewLinesLexer(lines)
-	if lines.CheckCvsID(0, ``, "") {
+	if !llex.EOF() && lines.CheckCvsID(0, ``, "") {
 		llex.Skip()
 	}
 	llex.SkipEmptyOrNote()

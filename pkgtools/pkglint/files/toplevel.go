@@ -14,7 +14,7 @@ func CheckdirToplevel(dir CurrPath) {
 	ctx := Toplevel{dir, "", nil}
 	filename := dir.JoinNoClean("Makefile")
 
-	mklines := LoadMk(filename, NotEmpty|LogErrors)
+	mklines := LoadMk(filename, nil, NotEmpty|LogErrors)
 	if mklines == nil {
 		return
 	}
@@ -44,7 +44,7 @@ func (ctx *Toplevel) checkSubdir(mkline *MkLine) {
 		}
 	}
 
-	if containsVarRef(subdir.String()) || !ctx.dir.JoinNoClean(subdir).JoinNoClean("Makefile").IsFile() {
+	if containsVarUse(subdir.String()) || !ctx.dir.JoinNoClean(subdir).JoinNoClean("Makefile").IsFile() {
 		return
 	}
 

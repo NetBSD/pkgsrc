@@ -47,10 +47,10 @@ func (ck *MkVarUseChecker) checkUndefined() {
 		vartype != nil && !vartype.IsGuessed(),
 		// TODO: At load time, check ck.MkLines.loadVars instead of allVars.
 		ck.MkLines.allVars.IsDefinedSimilar(varname),
-		ck.MkLines.forVars[varname],
+		ck.MkLines.checkAllData.forVars[varname],
 		ck.MkLines.allVars.Mentioned(varname) != nil,
-		G.Pkg != nil && G.Pkg.vars.IsDefinedSimilar(varname),
-		containsVarRef(varname),
+		ck.MkLines.pkg != nil && ck.MkLines.pkg.vars.IsDefinedSimilar(varname),
+		containsVarUse(varname),
 		G.Pkgsrc.vartypes.IsDefinedCanon(varname),
 		varname == "":
 		return
@@ -200,7 +200,9 @@ func (ck *MkVarUseChecker) checkPermissions(vuc *VarUseContext) {
 
 	effPerms := vartype.EffectivePermissions(basename)
 	if effPerms.Contains(aclpUseLoadtime) {
-		ck.checkUseAtLoadTime(vuc.time)
+		if vuc.time == VucLoadTime {
+			ck.checkUseAtLoadTime()
+		}
 
 		// Since the variable may be used at load time, it probably
 		// may be used at run time as well. If it weren't, that would
@@ -285,34 +287,32 @@ func (ck *MkVarUseChecker) warnPermissions(
 	}
 	alternativeFiles := vartype.AlternativeFiles(needed)
 
-	loadTimeExplanation := func() []string {
-		return []string{
-			"Many variables, especially lists of something, get their values incrementally.",
-			"Therefore it is generally unsafe to rely on their",
-			"value until it is clear that it will never change again.",
-			"This point is reached when the whole package Makefile is loaded and",
-			"execution of the shell commands starts; in some cases earlier.",
-			"",
-			"Additionally, when using the \":=\" operator, each $$ is replaced",
-			"with a single $, so variables that have references to shell",
-			"variables or regular expressions are modified in a subtle way."}
-	}
+	loadTimeExplanation := []string{
+		"Many variables, especially lists of something, get their values incrementally.",
+		"Therefore it is generally unsafe to rely on their",
+		"value until it is clear that it will never change again.",
+		"This point is reached when the whole package Makefile is loaded and",
+		"execution of the shell commands starts; in some cases earlier.",
+		"",
+		"Additionally, when using the \":=\" operator, each $$ is replaced",
+		"with a single $, so variables that have references to shell",
+		"variables or regular expressions are modified in a subtle way."}
 
 	switch {
 	case alternativeFiles == "" && directly:
 		mkline.Warnf("%s should not be used at load time in any file.", varname)
-		ck.explainPermissions(varname, vartype, loadTimeExplanation()...)
+		ck.explainPermissions(varname, vartype, loadTimeExplanation...)
 
 	case alternativeFiles == "":
 		mkline.Warnf("%s should not be used in any file.", varname)
-		ck.explainPermissions(varname, vartype, loadTimeExplanation()...)
+		ck.explainPermissions(varname, vartype, loadTimeExplanation...)
 
 	case directly:
 		mkline.Warnf(
 			"%s should not be used at load time in this file; "+
 				"it would be ok in %s.",
 			varname, alternativeFiles)
-		ck.explainPermissions(varname, vartype, loadTimeExplanation()...)
+		ck.explainPermissions(varname, vartype, loadTimeExplanation...)
 
 	default:
 		mkline.Warnf(
@@ -364,14 +364,11 @@ func (ck *MkVarUseChecker) explainPermissions(varname string, vartype *Vartype, 
 	ck.MkLine.Explain(expl...)
 }
 
-func (ck *MkVarUseChecker) checkUseAtLoadTime(time VucTime) {
-	if time != VucLoadTime {
-		return
-	}
+func (ck *MkVarUseChecker) checkUseAtLoadTime() {
 	if ck.vartype.IsAlwaysInScope() || ck.MkLines.Tools.SeenPrefs {
 		return
 	}
-	if G.Pkg != nil && G.Pkg.seenPrefs {
+	if ck.MkLines.pkg != nil && ck.MkLines.pkg.seenPrefs {
 		return
 	}
 	mkline := ck.MkLine
@@ -416,8 +413,6 @@ func (ck *MkVarUseChecker) warnToolLoadTime(varname string, tool *Tool) {
 	//  Even for shell builtins like echo and printf, bmake may decide
 	//  to skip the shell and execute the commands via execve, which
 	//  means that even echo is not a shell-builtin anymore.
-
-	// TODO: Replace "parse time" with "load time" everywhere.
 
 	if tool.Validity == AfterPrefsMk {
 		ck.MkLine.Warnf("To use the tool ${%s} at load time, bsd.prefs.mk has to be included before.", varname)
@@ -473,7 +468,7 @@ func (ck *MkVarUseChecker) checkQuoting(vuc *VarUseContext) {
 	// since the GNU configure scripts cannot handle these space characters.
 	//
 	// When doing checks outside a package, the :M* modifier is needed for safety.
-	needMstar := (G.Pkg == nil || G.Pkg.vars.IsDefined("GNU_CONFIGURE")) &&
+	needMstar := (ck.MkLines.pkg == nil || ck.MkLines.pkg.vars.IsDefined("GNU_CONFIGURE")) &&
 		matches(varUse.varname, `^(?:.*_)?(?:CFLAGS|CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$`)
 
 	mkline := ck.MkLine
@@ -502,11 +497,11 @@ func (ck *MkVarUseChecker) checkQuotingQM(mod string, needMstar bool, vuc *VarUs
 	if correctMod == mod+":Q" && vuc.IsWordPart && !vartype.IsShell() {
 
 		isSingleWordConstant := func() bool {
-			if G.Pkg == nil {
+			if ck.MkLines.pkg == nil {
 				return false
 			}
 
-			varinfo := G.Pkg.redundant.vars[varname]
+			varinfo := ck.MkLines.pkg.redundant.vars[varname]
 			if varinfo == nil || !varinfo.vari.IsConstant() {
 				return false
 			}

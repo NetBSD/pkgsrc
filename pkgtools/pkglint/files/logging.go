@@ -110,7 +110,7 @@ func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interf
 			case int, string, error:
 			default:
 				// All paths in diagnostics must be relative to the line.
-				// To achieve that, call line.File(currPath).
+				// To achieve that, call line.Rel(currPath).
 				_ = arg.(RelPath)
 			}
 		}

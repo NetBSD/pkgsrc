@@ -227,7 +227,7 @@ func (mkline *MkLine) FirstLineContainsValue() bool {
 	assert(mkline.IsMultiline())
 
 	// Parsing the continuation marker as variable value is cheating but works well.
-	text := strings.TrimSuffix(mkline.raw[0].orignl, "\n")
+	text := mkline.raw[0].Orig()
 	parser := NewMkLineParser()
 	splitResult := parser.split(nil, text, true)
 	_, a := parser.MatchVarassign(mkline.Line, text, &splitResult)
@@ -492,6 +492,12 @@ func (mkline *MkLine) ValueFields(value string) []string {
 	return fields
 }
 
+func (mkline *MkLine) ValueFieldsLiteral() []string {
+	return filterStr(
+		mkline.ValueFields(mkline.Value()),
+		func(s string) bool { return !containsVarUse(s) })
+}
+
 func (mkline *MkLine) ValueTokens() ([]*MkToken, string) {
 	value := mkline.Value()
 	if value == "" {
@@ -556,14 +562,14 @@ func (*MkLine) WithoutMakeVariables(value string) string {
 	return valueNovar.String()
 }
 
-func (mkline *MkLine) ResolveVarsInRelativePath(relativePath RelPath) RelPath {
-	if !containsVarRef(relativePath.String()) {
+func (mkline *MkLine) ResolveVarsInRelativePath(relativePath RelPath, pkg *Package) RelPath {
+	if !containsVarUse(relativePath.String()) {
 		return relativePath.CleanPath()
 	}
 
 	var basedir CurrPath
-	if G.Pkg != nil {
-		basedir = G.Pkg.File(".")
+	if pkg != nil {
+		basedir = pkg.File(".")
 	} else {
 		basedir = mkline.Filename.DirNoClean()
 	}
@@ -615,12 +621,12 @@ func (mkline *MkLine) ResolveVarsInRelativePath(relativePath RelPath) RelPath {
 	replaceLatest("${PYPACKAGE}", "lang", `^python[0-9]+$`, "$0")
 	replaceLatest("${SUSE_DIR_PREFIX}", "emulators", `^(suse[0-9]+)_base$`, "$1")
 
-	if G.Pkg != nil {
+	if pkg != nil {
 		// XXX: Even if these variables are defined indirectly,
 		// pkglint should be able to resolve them properly.
 		// There is already G.Pkg.Value, maybe that can be used here.
-		tmp = tmp.Replace("${FILESDIR}", G.Pkg.Filesdir.String())
-		tmp = tmp.Replace("${PKGDIR}", G.Pkg.Pkgdir.String())
+		tmp = tmp.Replace("${FILESDIR}", pkg.Filesdir.String())
+		tmp = tmp.Replace("${PKGDIR}", pkg.Pkgdir.String())
 	}
 
 	tmp = tmp.CleanPath()
@@ -1049,6 +1055,7 @@ type indentationLevel struct {
 	mkline          *MkLine  // The line in which the indentation started; the .if/.for
 	depth           int      // Number of space characters; always a multiple of 2
 	args            string   // The arguments from the .if or .for, or the latest .elif
+	argsLine        *MkLine  //
 	conditionalVars []string // Variables on which the current path depends
 
 	// Files whose existence has been checked in an if branch that is
@@ -1093,7 +1100,8 @@ func (ind *Indentation) Pop() {
 
 func (ind *Indentation) Push(mkline *MkLine, indent int, args string, guard bool) {
 	assert(mkline.IsDirective())
-	ind.levels = append(ind.levels, indentationLevel{mkline, indent, args, nil, nil, guard})
+	ind.levels = append(ind.levels,
+		indentationLevel{mkline, indent, args, mkline, nil, nil, guard})
 }
 
 // AddVar remembers that the current indentation depends on the given variable,
@@ -1154,8 +1162,8 @@ func (ind *Indentation) Varnames() []string {
 }
 
 // Args returns the arguments of the innermost .if, .elif or .for.
-func (ind *Indentation) Args() string {
-	return ind.top().args
+func (ind *Indentation) Args() (string, *MkLine) {
+	return ind.top().args, ind.top().argsLine
 }
 
 func (ind *Indentation) AddCheckedFile(filename PkgsrcPath) {
@@ -1216,6 +1224,7 @@ func (ind *Indentation) TrackAfter(mkline *MkLine) {
 		// Handled here instead of TrackBefore to allow the action to access the previous condition.
 		if !ind.IsEmpty() {
 			ind.top().args = args
+			ind.top().argsLine = mkline
 		}
 
 	case "else":
@@ -1305,7 +1314,7 @@ func MatchMkInclude(text string) (m bool, indentation, directive string, filenam
 	}
 
 	mark := lexer.Mark()
-	for lexer.NextBytesFunc(func(c byte) bool { return c != '"' && c != '$' }) != "" ||
+	for lexer.SkipBytesFunc(func(c byte) bool { return c != '"' && c != '$' }) ||
 		lexer.NextVarUse() != nil {
 	}
 	enclosed := NewPath(lexer.Since(mark))

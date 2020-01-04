@@ -18,7 +18,7 @@ import (
 // in pkgsrc, and some of them have very specific tasks, like buildlink3.mk,
 // builtin.mk and options.mk.
 //
-// TODO: There are separate permission rules for files from the pkgsrc
+// TODO: There should be separate permission rules for files from the pkgsrc
 //  infrastructure since the infrastructure basically provides the API, and
 //  the packages use the API.
 //
@@ -77,9 +77,9 @@ func (reg *VarTypeRegistry) Define(varname string, basicType *BasicType, options
 // to prevent typos. To use arbitrary filenames, prefix them with
 // "special:".
 //
-// TODO: To be implemented: when prefixed with "infra:", the entry only
-//  applies to files within the pkgsrc infrastructure. Without this prefix,
-//  the pattern only applies to files outside the pkgsrc infrastructure.
+// TODO: When prefixed with "infra:", the entry should only
+//  apply to files within the pkgsrc infrastructure. Without this prefix,
+//  the pattern should only apply to files outside the pkgsrc infrastructure.
 func (reg *VarTypeRegistry) DefineParse(varname string, basicType *BasicType, options vartypeOptions, aclEntries ...string) {
 	parsedEntries := reg.parseACLEntries(varname, aclEntries...)
 	reg.Define(varname, basicType, options, parsedEntries...)
@@ -1500,7 +1500,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	// In rare cases (audio/speex), ${MACHINE_ARCH} is used for selecting a group,
 	// but not for defining it.
 	//
-	// TODO: force the pkgsrc packages to only define options in the
+	// TODO: Consider forcing the pkgsrc packages to only define options in the
 	//  options.mk file. Most packages already do this, but some still
 	//  define them in the Makefile or Makefile.common.
 	reg.sysloadlist("PKG_OPTIONS", BtOption, DefinedIfInScope|NonemptyIfDefined)

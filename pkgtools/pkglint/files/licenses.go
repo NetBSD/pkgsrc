@@ -8,7 +8,7 @@ type LicenseChecker struct {
 }
 
 func (lc *LicenseChecker) Check(value string, op MkOperator) {
-	expanded := resolveVariableRefs(lc.MkLines, value) // For ${PERL5_LICENSE}
+	expanded := resolveVariableRefs(value, lc.MkLines, nil) // For ${PERL5_LICENSE}
 	cond := licenses.Parse(condStr(op == opAssignAppend, "append-placeholder ", "") + expanded)
 
 	if cond == nil {
@@ -25,10 +25,11 @@ func (lc *LicenseChecker) Check(value string, op MkOperator) {
 
 func (lc *LicenseChecker) checkName(license string) {
 	licenseFile := NewCurrPath("")
-	if G.Pkg != nil {
-		if mkline := G.Pkg.vars.FirstDefinition("LICENSE_FILE"); mkline != nil {
-			rel := mkline.ResolveVarsInRelativePath(NewRelPathString(mkline.Value()))
-			licenseFile = G.Pkg.File(NewPackagePath(rel))
+	pkg := lc.MkLines.pkg
+	if pkg != nil {
+		if mkline := pkg.vars.FirstDefinition("LICENSE_FILE"); mkline != nil {
+			rel := mkline.ResolveVarsInRelativePath(NewRelPathString(mkline.Value()), lc.MkLines.pkg)
+			licenseFile = pkg.File(NewPackagePath(rel))
 		}
 	}
 	if licenseFile.IsEmpty() {

@@ -94,23 +94,30 @@ func (src *Pkgsrc) loadMasterSites() {
 	mklines := src.LoadMk("mk/fetch/sites.mk", MustSucceed|NotEmpty)
 
 	for _, mkline := range mklines.mklines {
-		if mkline.IsVarassign() {
-			varname := mkline.Varname()
-			// TODO: Give a plausible reason for the MASTER_SITE_BACKUP exception.
-			if hasPrefix(varname, "MASTER_SITE_") && varname != "MASTER_SITE_BACKUP" {
-				for _, url := range mkline.ValueFields(mkline.Value()) {
-					if matches(url, `^(?:http://|https://|ftp://)`) {
-						src.registerMasterSite(varname, url)
-					}
-				}
+		if !mkline.IsVarassign() {
+			continue
+		}
+		varname := mkline.Varname()
 
-				// TODO: register variable type, to avoid redundant definitions in vardefs.go.
+		// MASTER_SITE_BACKUP is only used internally and should
+		// not appear in package definitions since it is not the
+		// primary, official source for getting the files.
+		if varname == "MASTER_SITE_BACKUP" {
+			continue
+		}
+		if !hasPrefix(varname, "MASTER_SITE_") {
+			continue
+		}
+
+		for _, url := range mkline.ValueFields(mkline.Value()) {
+			if matches(url, `^(?:http://|https://|ftp://)`) {
+				src.registerMasterSite(varname, url)
 			}
 		}
 	}
 
 	// Explicitly allowed, although not defined in mk/fetch/sites.mk.
-	// TODO: Document where this definition comes from and why it is good.
+	// It is defined in mk/fetch/fetch.mk instead.
 	src.registerMasterSite("MASTER_SITE_LOCAL", "ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/")
 
 	if trace.Tracing {
@@ -150,8 +157,9 @@ func (src *Pkgsrc) loadDocChanges() {
 	var filenames []RelPath
 	for _, file := range files {
 		filename := file.Name()
-		if matches(filename, `^CHANGES-20\d\d$`) && filename >= "CHANGES-2011" { // XXX: Why 2011?
-			filenames = append(filenames, NewRelPathString(filename)) // XXX: low-level API
+		// Files before 2011 are too far in the past to be still relevant today.
+		if matches(filename, `^CHANGES-20\d\d$`) && filename >= "CHANGES-2011" {
+			filenames = append(filenames, NewRelPathString(filename))
 		}
 	}
 
@@ -407,7 +415,7 @@ func (src *Pkgsrc) loadTools() {
 	toolFiles := []RelPath{"defaults.mk"}
 	{
 		toc := src.File("mk/tools/bsd.tools.mk")
-		mklines := LoadMk(toc, MustSucceed|NotEmpty)
+		mklines := LoadMk(toc, nil, MustSucceed|NotEmpty)
 		for _, mkline := range mklines.mklines {
 			if mkline.IsInclude() {
 				includedFile := mkline.IncludedFile()
@@ -669,22 +677,21 @@ func (src *Pkgsrc) loadUntypedVars() {
 	}
 
 	handleMkFile := func(path CurrPath) {
-		mklines := LoadMk(path, MustSucceed)
+		mklines := LoadMk(path, nil, MustSucceed)
 		mklines.collectVariables()
 		mklines.collectUsedVariables()
-		for varname, mkline := range mklines.allVars.firstDef {
+		def := func(varname string, mkline *MkLine) {
 			define(varnameCanon(varname), mkline)
 		}
-		for varname, mkline := range mklines.allVars.used {
-			define(varnameCanon(varname), mkline)
-		}
+		forEachStringMkLine(mklines.allVars.firstDef, def)
+		forEachStringMkLine(mklines.allVars.used, def)
 	}
 
 	handleFile := func(pathName string, info os.FileInfo, err error) error {
 		assertNil(err, "handleFile %q", pathName)
 		baseName := info.Name()
 		if info.Mode().IsRegular() && (hasSuffix(baseName, ".mk") || baseName == "mk.conf") {
-			handleMkFile(NewCurrPathSlash(pathName)) // XXX: This is too deep to handle os-specific paths
+			handleMkFile(NewCurrPathSlash(pathName))
 		}
 		return nil
 	}
@@ -796,7 +803,7 @@ func (src *Pkgsrc) ListVersions(category PkgsrcPath, re regex.Pattern, repl stri
 		assert(hasSuffix(string(re), "$"))
 	}
 
-	// TODO: Maybe convert cache key to a struct, to save allocations.
+	// XXX: Maybe convert cache key to a struct, to save allocations.
 	cacheKey := category.String() + "/" + string(re) + " => " + repl
 	if latest, found := src.listVersions[cacheKey]; found {
 		return latest
@@ -1027,7 +1034,7 @@ func (src *Pkgsrc) LoadMkExisting(filename PkgsrcPath) *MkLines {
 
 // LoadMk loads the Makefile relative to the pkgsrc top directory.
 func (src *Pkgsrc) LoadMk(filename PkgsrcPath, options LoadOptions) *MkLines {
-	return LoadMk(src.File(filename), options)
+	return LoadMk(src.File(filename), nil, options)
 }
 
 // Load loads the file relative to the pkgsrc top directory.

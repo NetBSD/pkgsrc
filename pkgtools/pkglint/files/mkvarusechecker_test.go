@@ -120,7 +120,7 @@ func (s *Suite) Test_MkVarUseChecker_Check__build_defs(c *check.C) {
 	t := s.Init(c)
 
 	// XXX: This paragraph should not be necessary since VARBASE and X11_TYPE
-	// are also defined in vardefs.go.
+	//  are also defined in vardefs.go.
 	t.SetUpPkgsrc()
 	t.CreateFileLines("mk/defaults/mk.conf",
 		"VARBASE?= /usr/pkg/var")
@@ -1085,7 +1085,8 @@ func (s *Suite) Test_MkVarUseChecker_checkQuoting__list_variable_with_single_con
 	G.Check(pkg)
 
 	// TODO: Don't warn here since BUILD_DIRS, although being a list
-	//  variable, contains only a single value.
+	//  variable, contains only a single value,
+	//  no matter which of the branches is taken.
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:26: " +
 			"The list variable BUILD_DIRS should not be embedded in a word.")
