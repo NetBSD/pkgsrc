@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19582 2020/01/04 19:05:47 wiz Exp $
+$NetBSD: TODO,v 1.19583 2020/01/04 19:06:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1036,7 +1036,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
-	o py-uritemplate-3.0.1
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
