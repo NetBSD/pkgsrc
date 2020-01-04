@@ -1,14 +1,19 @@
-# $NetBSD: options.mk,v 1.13 2019/08/18 16:16:24 nia Exp $
+# $NetBSD: options.mk,v 1.14 2020/01/04 01:52:23 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL2
 PKG_OPTIONS_REQUIRED_GROUPS=	gl
-PKG_SUPPORTED_OPTIONS=		alsa dbus esound nas oss jack pulseaudio wayland x11
+PKG_SUPPORTED_OPTIONS=		alsa dbus esound nas jack pulseaudio wayland x11
+PKG_SUGGESTED_OPTIONS.Linux=	alsa
 PKG_OPTIONS_GROUP.gl=		opengl
-PKG_SUGGESTED_OPTIONS+=		oss
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 .if ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=	x11
+.endif
+
+.include "../../devel/wayland/platform.mk"
+
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+PKG_SUGGESTED_OPTIONS+=	wayland
 .endif
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -58,12 +63,6 @@ CONFIGURE_ARGS+=	--disable-nas
 .  endif
 .else
 CONFIGURE_ARGS+=	--disable-video-opengl
-.endif
-
-.if !empty(PKG_OPTIONS:Moss)
-.include "../../mk/oss.buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-oss
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
