@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/11/13 12:26:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/01/04 20:21:15 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -1148,21 +1148,21 @@ ${PYSITELIB}/mercurial/thirdparty/attr/filters.pyo
 ${PYSITELIB}/mercurial/thirdparty/attr/validators.py
 ${PYSITELIB}/mercurial/thirdparty/attr/validators.pyc
 ${PYSITELIB}/mercurial/thirdparty/attr/validators.pyo
-${PYSITELIB}/mercurial/thirdparty/concurrent/__init__.py
-${PYSITELIB}/mercurial/thirdparty/concurrent/__init__.pyc
-${PYSITELIB}/mercurial/thirdparty/concurrent/__init__.pyo
-${PYSITELIB}/mercurial/thirdparty/concurrent/futures/__init__.py
-${PYSITELIB}/mercurial/thirdparty/concurrent/futures/__init__.pyc
-${PYSITELIB}/mercurial/thirdparty/concurrent/futures/__init__.pyo
-${PYSITELIB}/mercurial/thirdparty/concurrent/futures/_base.py
-${PYSITELIB}/mercurial/thirdparty/concurrent/futures/_base.pyc
-${PYSITELIB}/mercurial/thirdparty/concurrent/futures/_base.pyo
-${PYSITELIB}/mercurial/thirdparty/concurrent/futures/process.py
-${PYSITELIB}/mercurial/thirdparty/concurrent/futures/process.pyc
-${PYSITELIB}/mercurial/thirdparty/concurrent/futures/process.pyo
-${PYSITELIB}/mercurial/thirdparty/concurrent/futures/thread.py
-${PYSITELIB}/mercurial/thirdparty/concurrent/futures/thread.pyc
-${PYSITELIB}/mercurial/thirdparty/concurrent/futures/thread.pyo
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/__init__.py
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/__init__.pyc
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/__init__.pyo
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/futures/__init__.py
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/futures/__init__.pyc
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/futures/__init__.pyo
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/futures/_base.py
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/futures/_base.pyc
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/futures/_base.pyo
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/futures/process.py
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/futures/process.pyc
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/futures/process.pyo
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/futures/thread.py
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/futures/thread.pyc
+${PLIST.py2x}${PYSITELIB}/mercurial/thirdparty/concurrent/futures/thread.pyo
 ${PYSITELIB}/mercurial/thirdparty/selectors2.py
 ${PYSITELIB}/mercurial/thirdparty/selectors2.pyc
 ${PYSITELIB}/mercurial/thirdparty/selectors2.pyo
