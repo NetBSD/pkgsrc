@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.174 2020/01/04 19:11:10 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.175 2020/01/04 19:53:24 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -202,3 +202,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-httplib2 to 0.15.0 [wiz 2020-01-04]
 	Updated textproc/py-uritemplate to 3.0.1 [wiz 2020-01-04]
 	Updated mail/thunderbird-enigmail to 2.1.5 [wiz 2020-01-04]
+	Updated pkgtools/pkglint to 19.4.1 [rillig 2020-01-04]
