@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.163 2020/01/04 13:50:48 nia Exp $
+$NetBSD: CHANGES-2020,v 1.164 2020/01/04 13:53:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -191,3 +191,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/libgail-gnome [nia 2020-01-04]
 	Updated emulators/qemu to 4.2.0nb1 [ryoon 2020-01-04]
 	Removed x11/gnopernicus [nia 2020-01-04]
+	Removed x11/gnome-mag [nia 2020-01-04]
