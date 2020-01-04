@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2019/04/18 10:10:03 adam Exp $
+# $NetBSD: Makefile,v 1.132 2020/01/04 02:32:13 gutteridge Exp $
 
 .include "Makefile.common"
 
@@ -25,10 +25,6 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 # In the past, Linux had database corruption issues with pread, so
 # only enable it on safe platforms.
 CFLAGS.NetBSD+=		-DUSE_PREAD
-
-# This issue is fixed upstream and will be in the next release, so remove this
-# on the next update (https://bugzilla.mozilla.org/show_bug.cgi?id=1340028)
-CFLAGS.Darwin+=		-DSQLITE_DISABLE_INTRINSIC
 
 # Darwin < 9 (Mac OS X < 10.5 "Leopard") doesn't have gethostuuid(2)
 # and lacks the zone memory allocator
