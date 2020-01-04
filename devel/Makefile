@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2977 2020/01/03 07:52:42 pho Exp $
+# $NetBSD: Makefile,v 1.2978 2020/01/04 13:36:34 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -668,7 +668,6 @@ SUBDIR+=	libfirm
 SUBDIR+=	libfreefare
 SUBDIR+=	libftdi
 SUBDIR+=	libftdi1
-SUBDIR+=	libgail-gnome
 SUBDIR+=	libgcroots
 SUBDIR+=	libgee
 SUBDIR+=	libgee0.6
