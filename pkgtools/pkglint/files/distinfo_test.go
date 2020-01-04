@@ -21,9 +21,9 @@ func (s *Suite) Test_CheckLinesDistinfo__parse_errors(c *check.C) {
 		"SHA1 (patch-ab) = 6b98dd609f85a9eb9c4c1e4e7055a6aaa62b7cc7",
 		"Another invalid line",
 		"SHA1 (patch-nonexistent) = 1234")
-	G.Pkg = NewPackage(".")
+	pkg := NewPackage(".")
 
-	CheckLinesDistinfo(G.Pkg, lines)
+	CheckLinesDistinfo(pkg, lines)
 
 	t.CheckOutputLines(
 		"ERROR: distinfo:1: Expected \"$"+"NetBSD$\".",
@@ -36,7 +36,7 @@ func (s *Suite) Test_CheckLinesDistinfo__parse_errors(c *check.C) {
 		"WARN: distinfo:9: Patch file \"patch-nonexistent\" does not exist in directory \"patches\".")
 }
 
-func (s *Suite) Test_distinfoLinesChecker_parse__empty(c *check.C) {
+func (s *Suite) Test_distinfoLinesChecker_parse__trailing_empty_line(c *check.C) {
 	t := s.Init(c)
 
 	lines := t.SetUpFileLines("distinfo",
@@ -47,6 +47,46 @@ func (s *Suite) Test_distinfoLinesChecker_parse__empty(c *check.C) {
 
 	t.CheckOutputLines(
 		"NOTE: ~/distinfo:2: Trailing empty lines.")
+}
+
+func (s *Suite) Test_distinfoLinesChecker_parse__empty_file(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetUpFileLines("distinfo",
+		CvsID)
+
+	CheckLinesDistinfo(nil, lines)
+
+	t.CheckOutputLines(
+		"NOTE: ~/distinfo:1: Empty line expected after this line.")
+}
+
+func (s *Suite) Test_distinfoLinesChecker_parse__commented_first_line(c *check.C) {
+	t := s.Init(c)
+
+	// This mismatch can happen for inexperienced pkgsrc users.
+	// It's not easy to keep all these different file types apart.
+	lines := t.SetUpFileLines("distinfo",
+		PlistCvsID)
+
+	CheckLinesDistinfo(nil, lines)
+
+	t.CheckOutputLines(
+		"ERROR: ~/distinfo:1: Expected \""+CvsID+"\".",
+		"NOTE: ~/distinfo:1: Empty line expected before this line.",
+		"ERROR: ~/distinfo:1: Invalid line: "+PlistCvsID)
+}
+
+func (s *Suite) Test_distinfoLinesChecker_parse__completely_empty_file(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetUpFileLines("distinfo",
+		nil...)
+
+	CheckLinesDistinfo(nil, lines)
+
+	t.CheckOutputLines(
+		"NOTE: ~/distinfo:EOF: Empty line expected before this line.")
 }
 
 // When the distinfo file and the patches are placed in the same package,
@@ -96,9 +136,9 @@ func (s *Suite) Test_distinfoLinesChecker_check__manual_patches(c *check.C) {
 	// the PATCHDIR is not known and therefore no diagnostics are logged.
 	t.CheckOutputEmpty()
 
-	G.Pkg = NewPackage(".")
+	pkg := NewPackage(".")
 
-	CheckLinesDistinfo(G.Pkg, lines)
+	CheckLinesDistinfo(pkg, lines)
 
 	// When a distinfo file is checked in the context of a package,
 	// the PATCHDIR is known, therefore the check is active.
@@ -169,9 +209,9 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__nonexistent_distfile_
 		"",
 		"MD5 (patch-5.3.tar.gz) = 12345678901234567890123456789012",
 		"SHA1 (patch-5.3.tar.gz) = 1234567890123456789012345678901234567890")
-	G.Pkg = NewPackage(".")
+	pkg := NewPackage(".")
 
-	CheckLinesDistinfo(G.Pkg, lines)
+	CheckLinesDistinfo(pkg, lines)
 
 	// Even though the filename starts with "patch-" and therefore looks like
 	// a patch, it is a normal distfile because it has other hash algorithms
@@ -760,10 +800,10 @@ func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1__relative_path_in_disti
 func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1(c *check.C) {
 	t := s.Init(c)
 
-	G.Pkg = NewPackage(t.File("category/package"))
+	pkg := NewPackage(t.File("category/package"))
 	distinfoLine := t.NewLine(t.File("category/package/distinfo"), 5, "")
 
-	checker := distinfoLinesChecker{G.Pkg, nil, "", false, nil, nil}
+	checker := distinfoLinesChecker{pkg, nil, "", false, nil, nil}
 	checker.checkPatchSha1(distinfoLine, "patch-nonexistent", "distinfo-sha1")
 
 	t.CheckOutputLines(

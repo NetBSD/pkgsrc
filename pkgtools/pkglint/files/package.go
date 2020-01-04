@@ -131,7 +131,7 @@ func (pkg *Package) load() ([]CurrPath, *MkLines, *MkLines) {
 	}
 
 	files := pkg.File(".").ReadPaths()
-	if pkg.Pkgdir != "." {
+	if pkg.Pkgdir != "." && pkg.Rel(pkg.File(pkg.Pkgdir)) != "." {
 		files = append(files, pkg.File(pkg.Pkgdir).ReadPaths()...)
 	}
 	files = append(files, pkg.File(pkg.Patchdir).ReadPaths()...)
@@ -158,7 +158,7 @@ func (pkg *Package) load() ([]CurrPath, *MkLines, *MkLines) {
 	for _, filename := range files {
 		basename := filename.Base()
 		if isRelevantMk(filename, basename) {
-			fragmentMklines := LoadMk(filename, MustSucceed)
+			fragmentMklines := LoadMk(filename, pkg, MustSucceed)
 			pkg.collectConditionalIncludes(fragmentMklines)
 		}
 		if hasPrefix(basename, "PLIST") {
@@ -176,12 +176,12 @@ func (pkg *Package) loadPackageMakefile() (*MkLines, *MkLines) {
 		defer trace.Call(filename)()
 	}
 
-	mainLines := LoadMk(filename, NotEmpty|LogErrors)
+	mainLines := LoadMk(filename, pkg, NotEmpty|LogErrors)
 	if mainLines == nil {
 		return nil, nil
 	}
 
-	allLines := NewMkLines(NewLines("", nil))
+	allLines := NewMkLines(NewLines("", nil), pkg)
 	if !pkg.parse(mainLines, allLines, "", true) {
 		return nil, nil
 	}
@@ -256,7 +256,7 @@ func (pkg *Package) parse(mklines *MkLines, allLines *MkLines, includingFileForU
 		builtin := filename.DirNoClean().JoinNoClean("builtin.mk").CleanPath()
 		builtinRel := G.Pkgsrc.Relpath(pkg.dir, builtin)
 		if pkg.included.FirstTime(builtinRel.String()) && builtin.IsFile() {
-			builtinMkLines := LoadMk(builtin, MustSucceed|LogErrors)
+			builtinMkLines := LoadMk(builtin, pkg, MustSucceed|LogErrors)
 			pkg.parse(builtinMkLines, allLines, "", false)
 		}
 	}
@@ -342,7 +342,7 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile CurrPath) (includ
 	if trace.Tracing {
 		trace.Stepf("Including %q.", fullIncluded)
 	}
-	includedMklines = LoadMk(fullIncluded, 0)
+	includedMklines = LoadMk(fullIncluded, pkg, 0)
 	if includedMklines != nil {
 		return includedMklines, false
 	}
@@ -365,7 +365,7 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile CurrPath) (includ
 	dirname = pkgBasedir
 
 	fullIncludedFallback := dirname.JoinNoClean(includedFile)
-	includedMklines = LoadMk(fullIncludedFallback, 0)
+	includedMklines = LoadMk(fullIncludedFallback, pkg, 0)
 	if includedMklines == nil {
 		return nil, false
 	}
@@ -387,12 +387,11 @@ func (pkg *Package) loadIncluded(mkline *MkLine, includingFile CurrPath) (includ
 // their actual values.
 func (pkg *Package) resolveIncludedFile(mkline *MkLine, includingFilename CurrPath) RelPath {
 
-	// XXX: resolveVariableRefs uses G.Pkg implicitly. It should be made explicit.
 	// TODO: Try to combine resolveVariableRefs and ResolveVarsInRelativePath.
-	resolved := mkline.ResolveVarsInRelativePath(mkline.IncludedFile())
-	includedText := resolveVariableRefs(nil /* XXX: or maybe some mklines? */, resolved.String())
+	resolved := mkline.ResolveVarsInRelativePath(mkline.IncludedFile(), pkg)
+	includedText := resolveVariableRefs(resolved.String(), nil, pkg)
 	includedFile := NewRelPathString(includedText)
-	if containsVarRef(includedText) {
+	if containsVarUse(includedText) {
 		if trace.Tracing && !includingFilename.ContainsPath("mk") {
 			trace.Stepf("%s:%s: Skipping unresolvable include file %q.",
 				mkline.Filename, mkline.Linenos(), includedFile)
@@ -403,8 +402,8 @@ func (pkg *Package) resolveIncludedFile(mkline *MkLine, includingFilename CurrPa
 	if mkline.Basename != "buildlink3.mk" {
 		if includedFile.HasSuffixPath("buildlink3.mk") {
 			curr := mkline.File(includedFile)
-			if G.Pkg != nil && !curr.IsFile() {
-				curr = G.Pkg.File(PackagePath(includedFile))
+			if !curr.IsFile() {
+				curr = pkg.File(PackagePath(includedFile))
 			}
 			packagePath := pkg.Rel(curr)
 			pkg.bl3[packagePath] = mkline
@@ -496,7 +495,7 @@ func (pkg *Package) check(filenames []CurrPath, mklines, allLines *MkLines) {
 	havePatches := false
 
 	for _, filename := range filenames {
-		if containsVarRef(filename.String()) {
+		if containsVarUse(filename.String()) {
 			if trace.Tracing {
 				trace.Stepf("Skipping file %q because the name contains an unresolved variable.", filename)
 			}
@@ -513,7 +512,7 @@ func (pkg *Package) check(filenames []CurrPath, mklines, allLines *MkLines) {
 			// since all those files come from calls to dirglob.
 			break
 
-		case filename.HasBase("Makefile") && G.Pkgsrc.Rel(filename).Count() == 3:
+		case filename.HasBase("Makefile") && pkg.Rel(filename) == "Makefile":
 			G.checkExecutable(filename, st.Mode())
 			pkg.checkfilePackageMakefile(filename, mklines, allLines)
 
@@ -561,7 +560,7 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 		}
 	} else {
 		distinfoFile := pkg.File(pkg.DistinfoFile)
-		if !containsVarRef(distinfoFile.String()) && !distinfoFile.IsFile() {
+		if !containsVarUse(distinfoFile.String()) && !distinfoFile.IsFile() {
 			line := NewLineWhole(distinfoFile)
 			line.Warnf("A package that downloads files should have a distinfo file.")
 			line.Explain(
@@ -624,7 +623,7 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 	// TODO: Maybe later collect the conditional includes from allLines
 	//  instead of mklines. This will lead to about 6000 new warnings
 	//  though.
-	//  pkg.collectConditionalIncludes(allLines)
+	// pkg.collectConditionalIncludes(allLines)
 
 	allLines.collectVariables()    // To get the tool definitions
 	mklines.Tools = allLines.Tools // TODO: also copy the other collected data
@@ -634,7 +633,7 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 	//  set Tools.SeenPrefs, but it should.
 	//
 	// See Test_Package_checkfilePackageMakefile__options_mk.
-	mklines.postLine = func(mkline *MkLine) {
+	mklines.checkAllData.postLine = func(mkline *MkLine) {
 		if mkline == pkg.prefsLine {
 			pkg.seenPrefs = true
 		}
@@ -950,8 +949,6 @@ func (pkg *Package) checkCategories() {
 		switch mkline.Op() {
 		case opAssignDefault:
 			for _, category := range mkline.ValueFields(mkline.Value()) {
-				// XXX: This looks wrong. It should probably be replaced by
-				//  an "if len(seen) == 0" outside the for loop.
 				if seen[category] == nil {
 					seen[category] = mkline
 				}
@@ -1086,7 +1083,7 @@ func (pkg *Package) determineEffectivePkgVars() {
 		}
 	}
 
-	if pkgname == "" && distnameLine != nil && !containsVarRef(distname) && !matches(distname, rePkgname) {
+	if pkgname == "" && distnameLine != nil && !containsVarUse(distname) && !matches(distname, rePkgname) {
 		distnameLine.Warnf("As DISTNAME is not a valid package name, please define the PKGNAME explicitly.")
 	}
 
@@ -1094,7 +1091,7 @@ func (pkg *Package) determineEffectivePkgVars() {
 		distname = ""
 	}
 
-	if effname != "" && !containsVarRef(effname) {
+	if effname != "" && !containsVarUse(effname) {
 		if m, m1, m2 := match2(effname, rePkgname); m {
 			pkg.EffectivePkgname = effname + pkg.nbPart()
 			pkg.EffectivePkgnameLine = pkgnameLine
@@ -1103,7 +1100,7 @@ func (pkg *Package) determineEffectivePkgVars() {
 		}
 	}
 
-	if pkg.EffectivePkgnameLine == nil && distname != "" && !containsVarRef(distname) {
+	if pkg.EffectivePkgnameLine == nil && distname != "" && !containsVarUse(distname) {
 		if m, m1, m2 := match2(distname, rePkgname); m {
 			pkg.EffectivePkgname = distname + pkg.nbPart()
 			pkg.EffectivePkgnameLine = distnameLine
@@ -1268,7 +1265,7 @@ func (pkg *Package) checkDirent(dirent CurrPath, mode os.FileMode) {
 	switch {
 
 	case mode.IsRegular():
-		G.checkReg(dirent, basename, G.Pkgsrc.Rel(dirent).Count())
+		G.checkReg(dirent, basename, G.Pkgsrc.Rel(dirent).Count(), pkg)
 
 	case hasPrefix(basename, "work"):
 		if G.Opts.Import {
@@ -1361,7 +1358,8 @@ func (pkg *Package) checkFreeze(filename CurrPath) {
 		"See https://www.NetBSD.org/developers/pkgsrc/ for the exact rules.")
 }
 
-func (pkg *Package) checkFileMakefileExt(filename CurrPath) {
+// TODO: Move to MkLinesChecker.
+func (*Package) checkFileMakefileExt(filename CurrPath) {
 	base := filename.Base()
 	if !hasPrefix(base, "Makefile.") || base == "Makefile.common" {
 		return
@@ -1484,6 +1482,11 @@ func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Inden
 	//  already done with *_MK variables.
 }
 
+func (pkg *Package) matchesLicenseFile(basename string) bool {
+	licenseFile := NewPath(pkg.vars.LastValue("LICENSE_FILE"))
+	return basename == licenseFile.Base()
+}
+
 func (pkg *Package) AutofixDistinfo(oldSha1, newSha1 string) {
 	distinfoFilename := pkg.File(pkg.DistinfoFile)
 	if lines := Load(distinfoFilename, NotEmpty|LogErrors); lines != nil {
@@ -1502,7 +1505,7 @@ func (pkg *Package) AutofixDistinfo(oldSha1, newSha1 string) {
 // Variables that are known in the package are resolved, e.g. ${PKGDIR}.
 func (pkg *Package) File(relativeFileName PackagePath) CurrPath {
 	joined := pkg.dir.JoinNoClean(NewRelPath(relativeFileName.AsPath()))
-	resolved := resolveVariableRefs(nil /* XXX: or maybe some mklines? */, joined.String())
+	resolved := resolveVariableRefs(joined.String(), nil, pkg)
 	return NewCurrPathString(resolved).CleanPath()
 }
 

@@ -6,7 +6,7 @@ func (t *Tester) NewSubstAutofixTest(lines ...string) func(bool) {
 	return func(autofix bool) {
 		mklines := t.NewMkLines("filename.mk", lines...)
 		mklines.collectRationale()
-		ctx := NewSubstContext()
+		ctx := NewSubstContext(nil)
 
 		mklines.ForEach(ctx.Process)
 		ctx.Finish(mklines.EOFLine())
@@ -20,7 +20,7 @@ func (t *Tester) RunSubst(lines ...string) {
 
 	mklines := t.NewMkLines("filename.mk", lines...)
 	mklines.collectRationale()
-	ctx := NewSubstContext()
+	ctx := NewSubstContext(nil)
 
 	mklines.ForEach(ctx.Process)
 	ctx.Finish(mklines.EOFLine())
@@ -206,7 +206,7 @@ func (s *Suite) Test_SubstContext_varassign__late_addition_to_unknown_class(c *c
 	mklines := t.NewMkLines("filename.mk",
 		"SUBST_VARS.id=\tOPSYS",
 		"")
-	ctx := NewSubstContext()
+	ctx := NewSubstContext(nil)
 	mklines.collectRationale()
 
 	mklines.ForEach(ctx.Process)
@@ -257,7 +257,7 @@ func (s *Suite) Test_SubstContext_varassign__interleaved(c *check.C) {
 func (s *Suite) Test_SubstContext_varassignClasses__OPSYSVARS(c *check.C) {
 	t := s.Init(c)
 
-	ctx := NewSubstContext()
+	ctx := NewSubstContext(nil)
 
 	// SUBST_CLASSES is added to OPSYSVARS in mk/bsd.pkg.mk.
 	ctx.varassign(t.NewMkLine("filename.mk", 11, "SUBST_CLASSES.SunOS+=prefix"))
@@ -395,7 +395,7 @@ func (s *Suite) Test_SubstContext_varassignOutsideBlock__rationale(c *check.C) {
 		"# Rationale that is completely irrelevant.",
 		"SUBST_SED.libs+=\t-e sahara",
 		"")
-	ctx := NewSubstContext()
+	ctx := NewSubstContext(nil)
 	mklines.collectRationale()
 
 	mklines.ForEach(ctx.Process)
@@ -772,7 +772,7 @@ func (s *Suite) Test_SubstContext_leave__nested_conditionals(c *check.C) {
 func (s *Suite) Test_SubstContext_activeId__SUBST_CLASSES_in_separate_paragraph(c *check.C) {
 	t := s.Init(c)
 
-	ctx := NewSubstContext()
+	ctx := NewSubstContext(nil)
 
 	checkNoActiveId := func() {
 		t.CheckEquals(ctx.isActive(), false)
@@ -829,7 +829,7 @@ func (s *Suite) Test_SubstContext_activeId__SUBST_CLASSES_in_separate_paragraph(
 func (s *Suite) Test_substScope__conditionals(c *check.C) {
 	t := s.Init(c)
 
-	ctx := NewSubstContext()
+	ctx := NewSubstContext(nil)
 
 	line := func(text string) {
 		mkline := t.NewMkLine("filename.mk", 123, text)
@@ -1682,7 +1682,7 @@ func (s *Suite) Test_substBlock_extractVarname(c *check.C) {
 func (s *Suite) Test_substBlock_isComplete__incomplete(c *check.C) {
 	t := s.Init(c)
 
-	ctx := NewSubstContext()
+	ctx := NewSubstContext(nil)
 
 	ctx.varassign(t.NewMkLine("filename.mk", 10, "PKGNAME=pkgname-1.0"))
 
@@ -1712,7 +1712,7 @@ func (s *Suite) Test_substBlock_isComplete__incomplete(c *check.C) {
 func (s *Suite) Test_substBlock_isComplete__complete(c *check.C) {
 	t := s.Init(c)
 
-	ctx := NewSubstContext()
+	ctx := NewSubstContext(nil)
 
 	ctx.varassign(t.NewMkLine("filename.mk", 10, "PKGNAME=pkgname-1.0"))
 	ctx.varassign(t.NewMkLine("filename.mk", 11, "SUBST_CLASSES+=p"))
