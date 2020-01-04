@@ -160,6 +160,16 @@ func (s *Suite) Test_Lexer_NextByte(c *check.C) {
 	c.Check(lexer.NextByte, check.PanicMatches, "^runtime error: index out of range.*")
 }
 
+func (s *Suite) Test_Lexer_SkipBytesFunc(c *check.C) {
+	lexer := NewLexer("an alphanumerical string")
+
+	c.Check(lexer.SkipBytesFunc(func(b byte) bool { return 'A' <= b && b <= 'Z' }), equals, false)
+	c.Check(lexer.SkipBytesFunc(func(b byte) bool { return !unicode.IsSpace(rune(b)) }), equals, true)
+	c.Check(lexer.SkipHspace(), equals, true)
+	c.Check(lexer.SkipBytesFunc(func(b byte) bool { return 'a' <= b && b <= 'z' }), equals, true)
+	c.Check(lexer.SkipBytesFunc(func(b byte) bool { return true }), equals, true)
+}
+
 func (s *Suite) Test_Lexer_NextBytesFunc(c *check.C) {
 	lexer := NewLexer("an alphanumerical string")
 

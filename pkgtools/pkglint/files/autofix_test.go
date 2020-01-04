@@ -341,6 +341,32 @@ func (s *Suite) Test_Autofix__noop_replace(c *check.C) {
 		"WARN: Makefile:14: The word ABC should not be used.")
 }
 
+// Contrary to Line.Autofix(), the NewAutofix constructor does not check
+// whether the previous autofix is already finished, since it cannot know.
+func (s *Suite) Test_NewAutofix(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("filename.mk", 123, "")
+
+	fix := NewAutofix(line)
+	fix2 := NewAutofix(line)
+
+	t.Check(fix2, check.Not(check.Equals), fix)
+}
+
+func (s *Suite) Test_Autofix_Errorf(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("DESCR", 1, "Description of the package")
+
+	fix := line.Autofix()
+	fix.Errorf("Error.")
+	fix.Apply()
+
+	t.CheckOutputLines(
+		"ERROR: DESCR:1: Error.")
+}
+
 func (s *Suite) Test_Autofix_Warnf__duplicate(c *check.C) {
 	t := s.Init(c)
 
@@ -349,6 +375,19 @@ func (s *Suite) Test_Autofix_Warnf__duplicate(c *check.C) {
 	fix := line.Autofix()
 	fix.Warnf("Warning 1.")
 	t.ExpectAssert(func() { fix.Warnf("Warning 2.") })
+}
+
+func (s *Suite) Test_Autofix_Notef(c *check.C) {
+	t := s.Init(c)
+
+	line := t.NewLine("DESCR", 1, "Description of the package")
+
+	fix := line.Autofix()
+	fix.Notef("Note.")
+	fix.Apply()
+
+	t.CheckOutputLines(
+		"NOTE: DESCR:1: Note.")
 }
 
 func (s *Suite) Test_Autofix_Explain__without_explain_option(c *check.C) {
@@ -463,6 +502,23 @@ func (s *Suite) Test_Autofix_Explain__silent_with_diagnostic(c *check.C) {
 		"\tOtherwise the changes are not described to the human reader.",
 		"")
 	t.CheckEquals(fix.RawText(), "before\nText\nafter\n")
+}
+
+func (s *Suite) Test_Autofix_Replace(c *check.C) {
+	t := s.Init(c)
+
+	doTest := func(bool) {
+		line := t.NewLine("filename.mk", 123, "text")
+		fix := line.Autofix()
+		fix.Warnf("Warning.")
+		fix.Replace("text", "replacement")
+		fix.Apply()
+	}
+
+	t.ExpectDiagnosticsAutofix(
+		doTest,
+		"WARN: filename.mk:123: Warning.",
+		"AUTOFIX: filename.mk:123: Replacing \"text\" with \"replacement\".")
 }
 
 func (s *Suite) Test_Autofix_ReplaceAfter__autofix_in_continuation_line(c *check.C) {
@@ -708,6 +764,24 @@ func (s *Suite) Test_Autofix_InsertBefore(c *check.C) {
 		">\toriginal")
 }
 
+func (s *Suite) Test_Autofix_InsertAfter(c *check.C) {
+	t := s.Init(c)
+
+	doTest := func(bool) {
+		line := t.NewLine("DESCR", 1, "Description of the package")
+
+		fix := line.Autofix()
+		fix.Errorf("Error.")
+		fix.InsertAfter("after")
+		fix.Apply()
+	}
+
+	t.ExpectDiagnosticsAutofix(
+		doTest,
+		"ERROR: DESCR:1: Error.",
+		"AUTOFIX: DESCR:1: Inserting a line \"after\" after this line.")
+}
+
 func (s *Suite) Test_Autofix_Delete(c *check.C) {
 	t := s.Init(c)
 
@@ -819,6 +893,29 @@ func (s *Suite) Test_Autofix_Custom__in_memory(c *check.C) {
 	t.CheckOutputLines(
 		"AUTOFIX: Makefile:3: Converting to uppercase")
 	t.CheckEquals(lines.Lines[2].Text, "LINE3")
+}
+
+func (s *Suite) Test_Autofix_Describef(c *check.C) {
+	t := s.Init(c)
+
+	doTest := func(bool) {
+		line := t.NewLine("DESCR", 1, "Description of the package")
+
+		fix := line.Autofix()
+		fix.Errorf("Error.")
+		fix.Custom(func(showAutofix, autofix bool) {
+			fix.Describef(123, "Masking.")
+			raw := line.raw[0]
+			raw.textnl = replaceAll(raw.Text(), `\p{L}`, "*") + "\n"
+		})
+		fix.Apply()
+		t.CheckEquals(line.raw[0].Text(), "*********** ** *** *******")
+	}
+
+	t.ExpectDiagnosticsAutofix(
+		doTest,
+		"ERROR: DESCR:123: Error.",
+		"AUTOFIX: DESCR:123: Masking.")
 }
 
 // With the default command line options, this warning is printed.
@@ -1051,30 +1148,6 @@ func (s *Suite) Test_Autofix_Apply__source_without_explain(c *check.C) {
 // After fixing part of a line, the whole line needs to be parsed again.
 //
 // As of May 2019, this is not done yet.
-func (s *Suite) Test_Autofix_Apply__text_after_replacing_string(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpCommandLine("-Wall", "--autofix")
-	mkline := t.NewMkLine("filename.mk", 123, "VAR=\tvalue")
-
-	fix := mkline.Autofix()
-	fix.Notef("Just a demo.")
-	fix.Replace("value", "new value")
-	fix.Apply()
-
-	t.CheckOutputLines(
-		"AUTOFIX: filename.mk:123: Replacing \"value\" with \"new value\".")
-
-	t.CheckEquals(mkline.raw[0].textnl, "VAR=\tnew value\n")
-	t.CheckEquals(mkline.raw[0].orignl, "VAR=\tvalue\n")
-	t.CheckEquals(mkline.Text, "VAR=\tnew value")
-	// TODO: should be updated as well.
-	t.CheckEquals(mkline.Value(), "value")
-}
-
-// After fixing part of a line, the whole line needs to be parsed again.
-//
-// As of May 2019, this is not done yet.
 func (s *Suite) Test_Autofix_Apply__text_after_replacing(c *check.C) {
 	t := s.Init(c)
 
@@ -1202,7 +1275,7 @@ func (s *Suite) Test_Autofix_skip(c *check.C) {
 		"VAR=\t111 222 333 444 555 \\",
 		"666")
 	t.CheckEquals(fix.RawText(), ""+
-		"VAR=\t111 222 333 444 555 \\\n"+
+		"NEW=\t111 222 333 444 555 \\\n"+
 		"666\n")
 }
 
