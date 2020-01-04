@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.167 2020/01/04 16:16:36 nia Exp $
+$NetBSD: CHANGES-2020,v 1.168 2020/01/04 16:49:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -195,3 +195,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed security/seahorse-plugins [nia 2020-01-04]
 	Removed net/logjam [nia 2020-01-04]
 	Updated games/redeclipse to 2.0.0 [nia 2020-01-04]
+	Updated net/libtorrent-rasterbar to 1.2.3 [nia 2020-01-04]
