@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2019/09/18 14:17:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2020/01/04 01:52:23 nia Exp $
 
 DISTNAME=	SDL2-2.0.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -33,7 +33,6 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 CFLAGS+=	-DPREFIX=\"${PREFIX}\"
 
 .include "options.mk"
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/libusb.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
