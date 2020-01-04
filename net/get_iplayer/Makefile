@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2019/11/30 13:43:03 nia Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/04 11:57:19 nia Exp $
 
-DISTNAME=	get_iplayer-3.23
+DISTNAME=	get_iplayer-3.24
 CATEGORIES=	net multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=get-iplayer/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
