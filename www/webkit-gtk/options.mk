@@ -1,13 +1,17 @@
-# $NetBSD: options.mk,v 1.19 2019/10/05 14:59:47 nia Exp $
+# $NetBSD: options.mk,v 1.20 2020/01/05 17:55:21 nia Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
 PKG_SUPPORTED_OPTIONS=	debug enchant introspection opengl webkit-jit wayland
 PKG_SUGGESTED_OPTIONS=	enchant introspection opengl
+.include "../../devel/wayland/platform.mk"
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+PKG_SUGGESTED_OPTIONS+=	wayland
+.endif
 
 PLIST_VARS=	introspection
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
 #
 # Platforms that support the webkit-jit option
