@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2019/12/04 12:19:52 tnn Exp $
+$NetBSD: distinfo,v 1.6 2020/01/05 13:01:55 rhialto Exp $
 
 SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = d76599619b8bea879b8202b3efc38a82335d2e8c
 RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = a1b998e4e7edfb73ec35b0cc94895d9af16a8cd8
@@ -37,4 +37,5 @@ SHA1 (patch-src_java.base_bsd_native_libjava_ProcessHandleImpl__bsd.c) = fbc0aa6
 SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.c) = 39c7afb3c36fa9557d2a660c4b4068b5684c552f
 SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.h) = 121357cb76b4a96c06cc2bf670579e0b27f66fc1
 SHA1 (patch-src_java.base_unix_native_libjsig_jsig.c) = 82e3a8bad9ca18478cad85ada8544712ff117459
+SHA1 (patch-src_java.desktop_share_native_libfontmanager_harfbuzz_hb-blob.cc) = 0a78e7e8db513ddc06a75f6e504f8ce6132b97ec
 SHA1 (patch-src_java.desktop_unix_native_common_awt_fontpath.c) = c27a058dbcc836fa5a9f979f193284a706a7c50b
