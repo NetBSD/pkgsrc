@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2020/01/03 19:26:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.135 2020/01/05 21:37:43 adam Exp $
 
 DISTNAME=	rustc-1.40.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -364,8 +364,7 @@ GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-	for f in ${DESTDIR}${PREFIX}/lib/librustc_macros-*.dylib \
-		 ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/lib/librustc_macros-*.dylib; do \
+	for f in ${DESTDIR}${PREFIX}/lib/librustc_macros-*.dylib; do \
 		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
 	done
 .endif
