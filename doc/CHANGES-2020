@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.194 2020/01/05 21:48:45 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.195 2020/01/05 21:54:20 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -223,3 +223,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed net/stripes [kim 2020-01-05]
 	Added lang/gcc9 version 9.2.0 [rillig 2020-01-05]
 	Updated x11/xfce4-terminal to 0.8.9 [gutteridge 2020-01-05]
+	Updated net/gallery-dl to 1.12.2 [leot 2020-01-05]
