@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.52 2019/01/16 04:43:42 gutteridge Exp $
+# $NetBSD: plist.mk,v 1.53 2020/01/05 21:38:54 rillig Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -33,9 +33,9 @@
 #	PLIST
 #	PLIST.common_end
 #
-#    GENERATE_PLIST is a sequence of commands, terminating in a semicolon,
-#	that outputs contents for a PLIST to stdout and is appended to
-#	the contents of ${PLIST_SRC}.
+#    GENERATE_PLIST is a sequence of commands, each terminated with a
+#	semicolon. These commands output contents for a PLIST to stdout,
+#	which is appended to the contents of ${PLIST_SRC}.
 #
 #    IGNORE_INFO_DIRS is a list of ${PREFIX}-relative paths that do
 #	*not* contain info files.
