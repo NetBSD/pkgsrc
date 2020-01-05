@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.190 2020/01/05 19:24:40 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.191 2020/01/05 19:41:11 kim Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -219,3 +219,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/mkvtoolnix to 42.0.0 [adam 2020-01-05]
 	Updated sysutils/caja to 1.22.3 [gutteridge 2020-01-05]
 	Updated x11/xfce4-exo to 0.12.11 [gutteridge 2020-01-05]
+	Removed www/wml [kim 2020-01-05]
