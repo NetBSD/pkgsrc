@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/01/05 21:15:45 rillig Exp $
+
+SHA1 (gcc-9.2.0.tar.xz) = 306d27c3465fa36862c206738d06d65fff5c3645
+RMD160 (gcc-9.2.0.tar.xz) = a51d7f812f45980c517c4505e04a217cf319a992
+SHA512 (gcc-9.2.0.tar.xz) = a12dff52af876aee0fd89a8d09cdc455f35ec46845e154023202392adc164848faf8ee881b59b681b696e27c69fd143a214014db4214db62f9891a1c8365c040
+Size (gcc-9.2.0.tar.xz) = 70607648 bytes
+SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h) = f12f6a97f94d13efa73a2500411bc77b27887edd
+SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__configure__char.cc) = 007bce70f75deace18f60924b5a3f94bf7a0af2f
