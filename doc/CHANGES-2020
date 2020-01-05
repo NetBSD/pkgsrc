@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.188 2020/01/05 19:07:40 adam Exp $
+$NetBSD: CHANGES-2020,v 1.189 2020/01/05 19:12:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -217,3 +217,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/cisco-mibs to 20170101nb1 [kim 2020-01-05]
 	Updated textproc/docbook-xsl to 1.79.1nb5 [adam 2020-01-05]
 	Updated multimedia/mkvtoolnix to 42.0.0 [adam 2020-01-05]
+	Updated sysutils/caja to 1.22.3 [gutteridge 2020-01-05]
