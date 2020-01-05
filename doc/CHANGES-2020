@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.185 2020/01/05 11:43:12 nia Exp $
+$NetBSD: CHANGES-2020,v 1.186 2020/01/05 17:53:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -213,3 +213,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/darktable to 3.0.0 [ryoon 2020-01-05]
 	Updated multimedia/gpac to 0.8.0 [ryoon 2020-01-05]
 	Removed multimedia/totem-browser-plugin [nia 2020-01-05]
+	Added devel/py-Deprecated version 1.2.7 [minskim 2020-01-05]
