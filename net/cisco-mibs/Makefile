@@ -1,19 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2015/03/13 17:58:39 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/05 18:45:58 kim Exp $
 
-DISTNAME=	cisco-mibs-20050210
+DISTNAME=	cisco-mibs-20170101
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	# ftp://ftp.gw.com/pub/mibs/${DISTNAME}/
+MASTER_SITES=	ftp://ftp.cisco.com/pub/mibs/v1/
+MASTER_SITES+=	ftp://ftp.cisco.com/pub/mibs/v2/
 DISTFILES=	v1.tar.gz \
 		v2.tar.gz
 
-#
-# Files are tarred up every day at
-# ftp://ftp.cisco.com/pub/mibs/v1/
-# ftp://ftp.cisco.com/pub/mibs/v2/
-#
-
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Public SNMPv1 and SNMPv2 MIBs from Cisco
 
 WRKSRC=		${WRKDIR}
@@ -32,6 +27,7 @@ do-install:
 .for distfile in ${DISTFILES}
 	@${ECHO_MSG} -n "Extracting ${distfile} ... "
 	${GTAR} -xz \
+	    --strip-components=3 \
 	    --exclude=v1-readme \
 	    --exclude=v2-readme \
 	    -C ${DESTDIR}${MIBDIR} -f ${DISTDIR}/${DIST_SUBDIR}/${distfile}
