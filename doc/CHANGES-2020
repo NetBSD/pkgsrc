@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.197 2020/01/05 23:02:44 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.198 2020/01/05 23:05:53 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -226,3 +226,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/gallery-dl to 1.12.2 [leot 2020-01-05]
 	Updated devel/wayland-protocols to 1.18 [nia 2020-01-05]
 	Updated x11/xfce4-tumbler to 0.2.8 [gutteridge 2020-01-05]
+	Updated devel/mk-configure to 0.32.1 [cheusov 2020-01-05]
