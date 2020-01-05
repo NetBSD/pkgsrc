@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.180 2020/01/04 23:00:37 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.181 2020/01/05 02:19:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -208,3 +208,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/cwm to 6.6 [ng0 2020-01-04]
 	Updated emulators/mame to 0.217 [wiz 2020-01-04]
 	Updated devel/py-mercurial to 5.2.1nb1 [wiz 2020-01-04]
+	Updated www/firefox60 to 60.9.0nb1 [ryoon 2020-01-05]
