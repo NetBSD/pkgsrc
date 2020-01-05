@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2019/11/02 22:37:54 rillig Exp $
+# $NetBSD: Makefile,v 1.105 2020/01/05 02:30:08 ryoon Exp $
 
-DISTNAME=	darktable-2.6.0
-PKGREVISION=	7
+DISTNAME=	darktable-3.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darktable-org/}
 GITHUB_PROJECT=	darktable
@@ -18,7 +17,8 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config bash
 
-CFLAGS+=	-fopenmp
+#CFLAGS+=	-fopenmp
+CFLAGS+=	-Wno-reserved-id-macro
 
 CMAKE_ARGS+=	-DLENSFUN_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.glib2}/include/lensfun
 CMAKE_ARGS+=	-DGTHREAD_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.glib2}/include
@@ -72,6 +72,7 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.14.1nb1
 .include "../../devel/libinotify/buildlink3.mk"
 .endif
 .include "../../devel/libgphoto2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/GraphicsMagick/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
@@ -82,9 +83,14 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.14.1nb1
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+PKG_CC=		${PREFIX}/bin/clang
+PKG_CXX=	${PREFIX}/bin/clang++
+BUILDLINK_DEPMETHOD.clang=	build
+.include "../../lang/clang/buildlink3.mk"
 .include "../../lang/lua53/buildlink3.mk"
 .include "../../net/flickcurl/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
+.include "../../parallel/openmp/buildlink3.mk"
 .include "../../print/cups-base/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
