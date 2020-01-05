@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/04/08 21:42:57 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/01/05 23:05:38 cheusov Exp $
 bin/mkc_check_compiler
 bin/mkc_check_custom
 bin/mkc_check_decl
@@ -132,6 +132,10 @@ share/examples/mk-configure/hello_cxxlib/cxxlib/include/hello_msg.h
 share/examples/mk-configure/hello_cxxlib/cxxlib/include/impl/hello_msg1.h
 share/examples/mk-configure/hello_cxxlib/cxxlib/include/impl/hello_msg2.h
 share/examples/mk-configure/hello_cxxlib/cxxlib/linkme.mk
+share/examples/mk-configure/hello_cxxlib/cxxlib2/Makefile
+share/examples/mk-configure/hello_cxxlib/cxxlib2/hello_msg3.cxx
+share/examples/mk-configure/hello_cxxlib/cxxlib2/include/hello_msg2.h
+share/examples/mk-configure/hello_cxxlib/cxxlib2/linkme.mk
 share/examples/mk-configure/hello_cxxlib/expect.out
 share/examples/mk-configure/hello_cxxlib/test.mk
 share/examples/mk-configure/hello_dictd/Makefile
