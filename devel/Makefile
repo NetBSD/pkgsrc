@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2978 2020/01/04 13:36:34 nia Exp $
+# $NetBSD: Makefile,v 1.2979 2020/01/05 17:53:55 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2031,6 +2031,7 @@ SUBDIR+=	pthread-sem
 SUBDIR+=	ptlib
 SUBDIR+=	pvs
 SUBDIR+=	pwlib
+SUBDIR+=	py-Deprecated
 SUBDIR+=	py-InlineEgg
 SUBDIR+=	py-Optik
 SUBDIR+=	py-ParamUnittest
