@@ -1,23 +1,17 @@
-$NetBSD: distinfo,v 1.6 2019/09/09 20:26:58 nia Exp $
+$NetBSD: distinfo,v 1.7 2020/01/05 19:30:48 nia Exp $
 
 SHA1 (wayland-1.17.0.tar.xz) = 4d9e08a7a4a07fa37a25d7aa3ef83f08edec0600
 RMD160 (wayland-1.17.0.tar.xz) = 635494fb0f5d9eb1e782f98e08c3e0e26ff44268
 SHA512 (wayland-1.17.0.tar.xz) = c5051aab5ff078b368c196ecfedb33ccd961265bb914845d7ed81de361bb86ae18299575baa6c4eceb0d82cf8b495e8293f31b51d1cbc05d84af0a199ab3f946
 Size (wayland-1.17.0.tar.xz) = 437680 bytes
-SHA1 (patch-Makefile.am) = af2c47eb2e1a4924ea842aeea1d0f00832762ec0
-SHA1 (patch-configure.ac) = df15013a1639d673e5f0a86433a074f6201dbbc4
-SHA1 (patch-cursor_os-compatibility.c) = 9aac1c734199bc7e33e7735356bc8dbc80fba89d
-SHA1 (patch-cursor_wayland-cursor.c) = 81c6896b3a541e662db440d8557c6b3e70fcb580
-SHA1 (patch-src_event-loop.c) = 04d0eed4ba0708518201ec630dab97d52735fb0c
-SHA1 (patch-src_wayland-os.c) = 7297f8259aea9603a7ba20fe58f79e3fd0042990
-SHA1 (patch-src_wayland-os.h) = 1e01dfadb5ed5889d76e024d30537935f33631a3
-SHA1 (patch-src_wayland-server.c) = 335de8f5390eb337dfbde26f523162bd44c06baf
-SHA1 (patch-src_wayland-shm.c) = 694232eac180f1a6a31c96f9ac98cb0b5a016d20
-SHA1 (patch-tests_client-test.c) = 6ffe18dfd64176a92f6f795eb757c54a3cf0ad10
-SHA1 (patch-tests_connection-test.c) = af53116c99cbb8d6570bcec66bfd895c1ae01700
-SHA1 (patch-tests_event-loop-test.c) = 79909fdce7b73a7b19c58d3711329f6288fe7204
-SHA1 (patch-tests_os-wrappers-test.c) = 9d154702d0b0238cba554df18e5dbdc620bd9ab8
-SHA1 (patch-tests_queue-test.c) = 3ee8433faa50b033ab880d3c5b6a9846063d6bd6
-SHA1 (patch-tests_sanity-test.c) = 80e06834ccf344fda16a6a8f85e062f2b4a744ec
-SHA1 (patch-tests_test-helpers.c) = 1895c0bdadefdaeaa421e7051b71a297b3a5e2c3
-SHA1 (patch-tests_test-runner.c) = 35d911064c1b65537ef2276797b8041fd6b023f7
+SHA1 (patch-Makefile.am) = cfdf21bb32743590f88b6ab13ca00335f4e30475
+SHA1 (patch-configure.ac) = 57a86b0f77062d475e92123199ee61c0ac6d2443
+SHA1 (patch-cursor_os-compatibility.c) = 04bc63b40ba882dbc6babe8dca9d1619107fafb9
+SHA1 (patch-cursor_wayland-cursor.c) = 6dcb4bd2d241527e9ee62fb6ddad6447cc379ba8
+SHA1 (patch-src_event-loop.c) = 84128ea7ac073acc65d8ae2e6f4ea93f3c5fe9ec
+SHA1 (patch-src_wayland-os.c) = eb51bf1dc539926a14848097d04bb762cf1fe962
+SHA1 (patch-src_wayland-os.h) = d07a731f081c1600c3041cc1349120031d28337f
+SHA1 (patch-src_wayland-server.c) = 25c884c08a229f2e5fe56e4b864a68ffcce2eda5
+SHA1 (patch-src_wayland-shm.c) = 8a2e5ae22bc400cd2c5c9dec421d536229b2943f
+SHA1 (patch-tests_os-wrappers-test.c) = a17a2e3cbab039becc8c4cb2f1be379b3bffba0e
+SHA1 (patch-tests_test-runner.c) = e97cfc48340b0de1c2642cb7cc48d9acf0a533eb
