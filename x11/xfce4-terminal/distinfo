@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2019/08/08 20:23:29 nia Exp $
+$NetBSD: distinfo,v 1.13 2020/01/05 21:48:31 gutteridge Exp $
 
-SHA1 (xfce4-terminal-0.8.8.tar.bz2) = 11117241f5891ea1fd831e86b0db57ed37a60ee2
-RMD160 (xfce4-terminal-0.8.8.tar.bz2) = a85a46b264430e148001a2331c7bc0463a30968f
-SHA512 (xfce4-terminal-0.8.8.tar.bz2) = 0ceb130f0a0ceaa0a30a808fb7ff5070f75a84ef460c99799b267e5ecb1e0c15ef29558f78949d9a8968bfc50efebabc0f32dfc426a1db7ee6d225c6fdbf7645
-Size (xfce4-terminal-0.8.8.tar.bz2) = 938843 bytes
+SHA1 (xfce4-terminal-0.8.9.tar.bz2) = aa8f3f8b1d11c310561e44c262298168e0d8b4dc
+RMD160 (xfce4-terminal-0.8.9.tar.bz2) = c1c6b144d30a52b5e292fad87f47ad72def9beef
+SHA512 (xfce4-terminal-0.8.9.tar.bz2) = 6d3225395bcb7706bb0452a7102d5fdfa404d018909987c824ca90e4fb8765aec7ffbb6534df18020c7c9dd9c860aeca0686e755f10e1855c870ef953d857397
+Size (xfce4-terminal-0.8.9.tar.bz2) = 943101 bytes
