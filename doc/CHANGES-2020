@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.195 2020/01/05 21:54:20 leot Exp $
+$NetBSD: CHANGES-2020,v 1.196 2020/01/05 22:10:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -224,3 +224,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added lang/gcc9 version 9.2.0 [rillig 2020-01-05]
 	Updated x11/xfce4-terminal to 0.8.9 [gutteridge 2020-01-05]
 	Updated net/gallery-dl to 1.12.2 [leot 2020-01-05]
+	Updated devel/wayland-protocols to 1.18 [nia 2020-01-05]
