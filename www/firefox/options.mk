@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.52 2020/01/05 17:55:22 nia Exp $
+# $NetBSD: options.mk,v 1.53 2020/01/05 17:57:58 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -13,12 +13,14 @@ PKG_SUGGESTED_OPTIONS+= wayland
 .endif
 
 .if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus
+PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus webrtc
 .else
 PKG_SUGGESTED_OPTIONS+=	dbus
 .endif
 
-PKG_SUGGESTED_OPTIONS.Linux+=	webrtc
+.if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-8].*)
+PKG_SUGGESTED_OPTIONS+=	webrtc
+.endif
 
 .include "../../mk/bsd.options.mk"
 
