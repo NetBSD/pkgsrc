@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.189 2020/01/05 19:12:49 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.190 2020/01/05 19:24:40 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -218,3 +218,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/docbook-xsl to 1.79.1nb5 [adam 2020-01-05]
 	Updated multimedia/mkvtoolnix to 42.0.0 [adam 2020-01-05]
 	Updated sysutils/caja to 1.22.3 [gutteridge 2020-01-05]
+	Updated x11/xfce4-exo to 0.12.11 [gutteridge 2020-01-05]
