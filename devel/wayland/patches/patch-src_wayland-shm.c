@@ -1,6 +1,6 @@
-$NetBSD: patch-src_wayland-shm.c,v 1.2 2019/09/09 20:26:58 nia Exp $
+$NetBSD: patch-src_wayland-shm.c,v 1.3 2020/01/05 19:30:48 nia Exp $
 
-Support NetBSD-style mremap.
+NetBSD support
 
 --- src/wayland-shm.c.orig	2019-03-21 00:55:25.000000000 +0000
 +++ src/wayland-shm.c
