@@ -1,8 +1,13 @@
-# $NetBSD: options.mk,v 1.3 2019/09/04 11:31:34 nia Exp $
+# $NetBSD: options.mk,v 1.4 2020/01/05 22:20:40 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaDemos
 PKG_SUPPORTED_OPTIONS=		libdrm wayland x11
 PKG_SUGGESTED_OPTIONS=		libdrm x11
+
+.include "../../devel/wayland/platform.mk"
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+PKG_SUGGESTED_OPTIONS+=		wayland
+.endif
 
 .include "../../mk/bsd.options.mk"
 
