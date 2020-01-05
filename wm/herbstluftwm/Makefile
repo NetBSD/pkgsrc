@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/01 15:24:02 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/05 12:16:59 nia Exp $
 
 DISTNAME=	herbstluftwm-0.7.2
 CATEGORIES=	wm
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://herbstluftwm.org/
 COMMENT=	Manual tiling window manager for X11 using Xlib and Glib
 LICENSE=	modified-bsd
+
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config bash:run
