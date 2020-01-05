@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/05 19:30:48 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/05 22:05:29 nia Exp $
 
 DISTNAME=	wayland-1.17.0
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://wayland.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://wayland.freedesktop.org/
 COMMENT=	Display server protocol - development libraries
 LICENSE=	mit
