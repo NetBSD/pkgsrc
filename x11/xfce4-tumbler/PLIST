@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/07/13 00:24:21 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/01/05 23:02:25 gutteridge Exp $
 include/tumbler-1/tumbler/tumbler-abstract-thumbnailer.h
 include/tumbler-1/tumbler/tumbler-cache-plugin.h
 include/tumbler-1/tumbler/tumbler-cache.h
@@ -102,6 +102,7 @@ share/locale/ro/LC_MESSAGES/tumbler.mo
 share/locale/ru/LC_MESSAGES/tumbler.mo
 share/locale/si/LC_MESSAGES/tumbler.mo
 share/locale/sk/LC_MESSAGES/tumbler.mo
+share/locale/sl/LC_MESSAGES/tumbler.mo
 share/locale/sq/LC_MESSAGES/tumbler.mo
 share/locale/sr/LC_MESSAGES/tumbler.mo
 share/locale/sv/LC_MESSAGES/tumbler.mo
