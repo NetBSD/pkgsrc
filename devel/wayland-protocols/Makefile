@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/08/27 11:18:16 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/05 22:09:52 nia Exp $
 
-DISTNAME=	wayland-protocols-1.17
+DISTNAME=	wayland-protocols-1.18
 CATEGORIES=	devel
 MASTER_SITES=	https://wayland.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
