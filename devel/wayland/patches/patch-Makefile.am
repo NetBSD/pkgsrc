@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.am,v 1.1 2019/08/18 16:05:12 nia Exp $
+$NetBSD: patch-Makefile.am,v 1.2 2020/01/05 19:30:48 nia Exp $
 
 https://lists.freedesktop.org/archives/wayland-devel/2019-February/040024.html
 
@@ -9,8 +9,8 @@ https://lists.freedesktop.org/archives/wayland-devel/2019-February/040024.html
  	src/wayland-server.c			\
  	src/wayland-shm.c			\
 -	src/event-loop.c
-+	src/event-loop.c 			\
-+	src/event-loop-kqueue.c 
++	src/event-loop.c			\
++	src/event-loop-kqueue.c
  
  nodist_libwayland_server_la_SOURCES =		\
  	protocol/wayland-server-protocol.h	\

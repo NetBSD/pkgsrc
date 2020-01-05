@@ -1,6 +1,7 @@
-$NetBSD: patch-cursor_wayland-cursor.c,v 1.1 2019/09/09 20:08:29 nia Exp $
+$NetBSD: patch-cursor_wayland-cursor.c,v 1.2 2020/01/05 19:30:48 nia Exp $
 
-fallocate is currently a no-op on NetBSD.
+NetBSD support: no filesystems currently support posix_fallocate,
+so it always fails
 
 --- cursor/wayland-cursor.c.orig	2019-03-21 00:55:25.000000000 +0000
 +++ cursor/wayland-cursor.c
