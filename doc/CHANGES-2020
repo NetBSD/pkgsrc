@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.193 2020/01/05 21:16:00 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.194 2020/01/05 21:48:45 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -222,3 +222,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed www/wml [kim 2020-01-05]
 	Removed net/stripes [kim 2020-01-05]
 	Added lang/gcc9 version 9.2.0 [rillig 2020-01-05]
+	Updated x11/xfce4-terminal to 0.8.9 [gutteridge 2020-01-05]
