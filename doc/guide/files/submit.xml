@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.33 2017/09/18 14:25:27 wiz Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.34 2020/01/05 21:35:33 rillig Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -209,16 +209,22 @@ much easier to get wrong than <quote>cvs add</quote>.</para>
 
 <para>Renaming packages is not recommended.</para>
 
-
 <para>When renaming packages, be sure to fix any references to old name
   in other Makefiles, options, buildlink files, etc.</para>
 
-<para>Also When renaming a package, please define
-  <varname>SUPERSEDES</varname> to the package name and dewey version
-  pattern(s) of the previous package name.
+<para>
+  Also when renaming a package, please add
+  the package name and version pattern(s) of the previous package
+  to <varname>SUPERSEDES</varname>.
   This may be repeated for multiple renames.
   The new package would be an exact replacement.
+  Example:
 </para>
+
+<programlisting>
+SUPERSEDES+=    p5-IO-Compress-Zlib&lt;2.017
+SUPERSEDES+=    optcomp-[0-9]*
+</programlisting>
 
 <para>Note that <quote>successor</quote> in the
   CHANGES-<replaceable>YYYY</replaceable> file doesn't necessarily
