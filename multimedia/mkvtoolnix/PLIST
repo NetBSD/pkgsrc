@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/11/12 00:05:06 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/01/05 19:07:20 adam Exp $
 bin/mkvextract
 bin/mkvinfo
 bin/mkvmerge
@@ -19,6 +19,16 @@ man/es/man1/mkvextract.1
 man/es/man1/mkvinfo.1
 man/es/man1/mkvmerge.1
 man/es/man1/mkvpropedit.1
+man/fr/man1/mkvextract.1
+man/fr/man1/mkvinfo.1
+man/fr/man1/mkvmerge.1
+man/fr/man1/mkvpropedit.1
+man/fr/man1/mkvtoolnix-gui.1
+man/it/man1/mkvextract.1
+man/it/man1/mkvinfo.1
+man/it/man1/mkvmerge.1
+man/it/man1/mkvpropedit.1
+man/it/man1/mkvtoolnix-gui.1
 man/ja/man1/mkvextract.1
 man/ja/man1/mkvinfo.1
 man/ja/man1/mkvmerge.1
@@ -39,6 +49,11 @@ man/pl/man1/mkvextract.1
 man/pl/man1/mkvinfo.1
 man/pl/man1/mkvmerge.1
 man/pl/man1/mkvpropedit.1
+man/ru/man1/mkvextract.1
+man/ru/man1/mkvinfo.1
+man/ru/man1/mkvmerge.1
+man/ru/man1/mkvpropedit.1
+man/ru/man1/mkvtoolnix-gui.1
 man/uk/man1/mkvextract.1
 man/uk/man1/mkvinfo.1
 man/uk/man1/mkvmerge.1
@@ -47,6 +62,11 @@ man/zh_CN/man1/mkvextract.1
 man/zh_CN/man1/mkvinfo.1
 man/zh_CN/man1/mkvmerge.1
 man/zh_CN/man1/mkvpropedit.1
+man/zh_TW/man1/mkvextract.1
+man/zh_TW/man1/mkvinfo.1
+man/zh_TW/man1/mkvmerge.1
+man/zh_TW/man1/mkvpropedit.1
+man/zh_TW/man1/mkvtoolnix-gui.1
 share/locale/bg/LC_MESSAGES/mkvtoolnix.mo
 share/locale/ca/LC_MESSAGES/mkvtoolnix.mo
 share/locale/cs/LC_MESSAGES/mkvtoolnix.mo

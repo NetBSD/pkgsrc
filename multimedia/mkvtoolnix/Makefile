@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.141 2019/12/15 15:38:58 taca Exp $
+# $NetBSD: Makefile,v 1.142 2020/01/05 19:07:20 adam Exp $
 
-DISTNAME=	mkvtoolnix-41.0.0
-PKGREVISION=	1
+DISTNAME=	mkvtoolnix-42.0.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +10,7 @@ HOMEPAGE=	https://mkvtoolnix.download/
 COMMENT=	Set of tools to create, alter and inspect Matroska files
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+BUILD_DEPENDS+=	docbook-xsl>=1.79.1nb5:../../textproc/docbook-xsl
 BUILD_DEPENDS+=	po4a-[0-9]*:../../textproc/po4a
 BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
@@ -25,7 +24,6 @@ CONFIGURE_ARGS+=	--disable-update-check
 CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
 CONFIGURE_ARGS+=	--with-boost-date-time=boost_date_time
 CONFIGURE_ARGS+=	--with-boost-filesystem=boost_filesystem
-CONFIGURE_ARGS+=	--with-boost_regex=boost_regex
 CONFIGURE_ARGS+=	--with-boost-system=boost_system
 CONFIGURE_ARGS+=	--with-docbook-xsl-root=${PREFIX}/share/xsl/docbook
 
