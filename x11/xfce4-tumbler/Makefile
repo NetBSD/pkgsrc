@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2019/11/07 12:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2020/01/05 23:02:25 gutteridge Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.2.7
+VERSION=	0.2.8
 DISTNAME=	tumbler-${VERSION}
 PKGNAME=	xfce4-tumbler-${VERSION}
 CATEGORIES=	x11
