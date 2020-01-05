@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.149 2019/12/03 14:21:20 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.150 2020/01/05 17:55:22 nia Exp $
 bin/firefox
 lib/firefox/actors/AudioPlaybackChild.jsm
 lib/firefox/actors/AudioPlaybackParent.jsm
@@ -5106,6 +5106,7 @@ ${PLIST.ffvpx}lib/firefox/libmozavcodec.so
 ${PLIST.ffvpx}lib/firefox/libmozavutil.so
 lib/firefox/libmozgtk.so
 lib/firefox/libmozsqlite3.so
+${PLIST.wayland}lib/firefox68/libmozwayland.so
 lib/firefox/libxul.so
 lib/firefox/localization/en-US/crashreporter/aboutcrashes.ftl
 lib/firefox/localization/en-US/security/certificates/certManager.ftl
