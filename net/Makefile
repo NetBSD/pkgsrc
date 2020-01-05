@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1289 2020/01/04 16:12:00 nia Exp $
+# $NetBSD: Makefile,v 1.1290 2020/01/05 19:52:50 kim Exp $
 #
 
 COMMENT=	Networking tools
@@ -836,7 +836,6 @@ SUBDIR+=	sslh
 SUBDIR+=	ssmping
 SUBDIR+=	ssync
 SUBDIR+=	stagit-gopher
-SUBDIR+=	stripes
 SUBDIR+=	stund
 SUBDIR+=	sup
 SUBDIR+=	syncffsd
