@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2019/05/05 22:49:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/05 10:39:33 nia Exp $
 
 DISTNAME=	centerim5-5.0.1
 PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://www.centerim.org/download/cim5/
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://centerim.org/
 COMMENT=	Text-mode multi-protocol instant messaging client using libpurple
 LICENSE=	gnu-gpl-v2
