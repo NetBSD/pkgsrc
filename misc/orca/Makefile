@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/11/03 17:04:25 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2020/01/05 16:39:18 nia Exp $
 
 DISTNAME=	orca-2.32.1
 PKGREVISION=	2
@@ -21,7 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-gnome2>=2.28:../../x11/py-gnome2
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.22:../../x11/py-gtk2
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	gnome-speech>=0.4.25:../../audio/gnome-speech
-DEPENDS+=	gnome-mag>=0.16.2:../../x11/gnome-mag
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
