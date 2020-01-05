@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.534 2020/01/04 12:58:19 bsiegert Exp $
+# $NetBSD: Makefile,v 1.535 2020/01/05 21:19:40 rillig Exp $
 #
 
 COMMENT=	Programming languages
@@ -83,6 +83,7 @@ SUBDIR+=	gcc7
 SUBDIR+=	gcc7-libs
 SUBDIR+=	gcc8
 SUBDIR+=	gcc8-libs
+SUBDIR+=	gcc9
 SUBDIR+=	gforth
 SUBDIR+=	ghc
 SUBDIR+=	ghc-bootstrap
