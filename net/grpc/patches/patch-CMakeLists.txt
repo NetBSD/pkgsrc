@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2020/01/03 08:21:36 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2020/01/05 17:01:19 leot Exp $
 
 Add version number to shared libraries.
 
@@ -13,7 +13,7 @@ Add version number to shared libraries.
        ARGS --grpc_out=generate_mock_code=true:${_gRPC_PROTO_GENS_DIR}
             --cpp_out=${_gRPC_PROTO_GENS_DIR}
             --plugin=protoc-gen-grpc=${_gRPC_CPP_PLUGIN}
-@@ -18361,6 +18361,23 @@ install(FILES
+@@ -18361,6 +18361,24 @@ install(FILES
    DESTINATION ${gRPC_INSTALL_CMAKEDIR}
  )
  
@@ -30,6 +30,7 @@ Add version number to shared libraries.
 +  grpc_plugin_support
 +  grpc_unsecure
 +  grpcpp_channelz
++  upb
 +)
 +  set_target_properties(${_lib} PROPERTIES VERSION ${PACKAGE_VERSION} SOVERSION 1)
 +endforeach()

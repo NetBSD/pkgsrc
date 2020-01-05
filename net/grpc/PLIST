@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/01/03 08:21:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/01/05 17:01:19 leot Exp $
 bin/grpc_cpp_plugin
 bin/grpc_csharp_plugin
 bin/grpc_node_plugin
@@ -322,7 +322,7 @@ lib/libgrpcpp_channelz.so.${PKGVERSION}
 lib/libgrpcpp_channelz.so.1
 lib/libupb.so
 lib/libupb.so.${PKGVERSION}
-lib/libupb.so.9
+lib/libupb.so.1
 lib/pkgconfig/gpr.pc
 lib/pkgconfig/grpc++.pc
 lib/pkgconfig/grpc++_unsecure.pc
