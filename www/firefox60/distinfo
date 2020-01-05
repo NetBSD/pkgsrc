@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2019/12/28 05:48:06 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2020/01/05 02:18:53 ryoon Exp $
 
 SHA1 (firefox-60.9.0esr.source.tar.xz) = 616f8afdee741f0bea607a671b8515ef13c68b4a
 RMD160 (firefox-60.9.0esr.source.tar.xz) = f3ef7629ab28960fb383d3fb12dab69feb0f45ee
@@ -37,6 +37,8 @@ SHA1 (patch-servo_components_style__traits_lib.rs) = b07dfc91bae3f94b7da0c5dab52
 SHA1 (patch-servo_components_style_build__gecko.rs) = fca2260a70b496fc010f165ff4d68788b7e28632
 SHA1 (patch-servo_components_style_lib.rs) = 1df2f6580da3c4a2fadd7ddcead000fa3c8a6a14
 SHA1 (patch-third__party_rust_cssparser_src_parser.rs) = 97d89ca616271dea3dd564b1e96f0087c21e8be0
+SHA1 (patch-third__party_rust_url_src_form__urlencoded.rs) = 803c9501d2aec0ad1588cd05d625f679581841f6
+SHA1 (patch-third__party_rust_url_src_lib.rs) = 97730d2d9a1b6e3b42687da4cdb04b4ac1bd903b
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5b6d2e5c9f685d32894898d3ef3aec09a1a1e5ce
 SHA1 (patch-toolkit_library_moz.build) = ecb6125e996d5496335c58ecd3433ad3214f29f0
 SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
