@@ -11,7 +11,7 @@
       <service_fmri value="svc:/system/filesystem/local" />
     </dependency>
     <method_context></method_context>
-    <exec_method type="method" name="start" exec="@PREFIX@/bin/rspamd -u @RSPAMD_USER@ -g @RSPAMD_USER@ -c %{config_file}" timeout_seconds="60" />
+    <exec_method type="method" name="start" exec="@PREFIX@/@SMF_METHOD_FILE.rspamd@ -u @RSPAMD_USER@ -g @RSPAMD_USER@ -c %{config_file}" timeout_seconds="60" />
     <exec_method type="method" name="stop" exec=":kill" timeout_seconds="60" />
     <property_group name="startd" type="framework">
       <propval name="duration" type="astring" value="contract" />
