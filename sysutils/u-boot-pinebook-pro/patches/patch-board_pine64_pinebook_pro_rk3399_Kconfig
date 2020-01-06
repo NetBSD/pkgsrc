@@ -1,0 +1,25 @@
+$NetBSD: patch-board_pine64_pinebook_pro_rk3399_Kconfig,v 1.1 2020/01/06 08:41:44 mrg Exp $
+
+Pinebook Pro support from https://patchwork.ozlabs.org/patch/1194525/
+
+diff --git board/pine64/pinebook_pro_rk3399/Kconfig board/pine64/pinebook_pro_rk3399/Kconfig
+new file mode 100644
+index 0000000000..c37c643d6f
+--- /dev/null
++++ board/pine64/pinebook_pro_rk3399/Kconfig
+@@ -0,0 +1,15 @@
++if TARGET_PINEBOOK_PRO_RK3399
++
++config SYS_BOARD
++	default "pinebook_pro_rk3399"
++
++config SYS_VENDOR
++	default "pine64"
++
++config SYS_CONFIG_NAME
++	default "pinebook_pro_rk3399"
++
++config BOARD_SPECIFIC_OPTIONS
++	def_bool y
++
++endif
