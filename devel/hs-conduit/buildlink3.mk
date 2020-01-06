@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/01/03 07:52:17 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/01/06 11:53:23 pho Exp $
 
 BUILDLINK_TREE+=	hs-conduit
 
@@ -14,6 +14,7 @@ BUILDLINK_PKGSRCDIR.hs-conduit?=	../../devel/hs-conduit
 .include "../../devel/hs-mmorph/buildlink3.mk"
 .include "../../devel/hs-monad-control/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
+.include "../../devel/hs-primitive/buildlink3.mk"
 .include "../../devel/hs-resourcet/buildlink3.mk"
 .include "../../devel/hs-transformers-base/buildlink3.mk"
 .include "../../devel/hs-transformers-compat/buildlink3.mk"
