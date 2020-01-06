@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2020/01/06 08:41:44 mrg Exp $
+
+Examples command to install U-Boot to an empty SD card:
+
+# dd if=${LOCALBASE}/share/u-boot/pinebook-pro/idbloader.img seek=64 of=/dev/rld0d
+# dd if=${LOCALBASE}/share/u-boot/pinebook-pro/boot.itb seek=16384 of=/dev/rld0d
+
+You should make sure that the space is otherwise cleared of data, as old
+images may fool the boot loader paths.
+
+See also http://opensource.rock-chips.com/wiki_Boot_option
+
+===========================================================================
