@@ -1,0 +1,28 @@
+$NetBSD: patch-arch_arm_mach-rockchip_rk3399_Kconfig,v 1.1 2020/01/06 08:41:44 mrg Exp $
+
+Pinebook Pro support from https://patchwork.ozlabs.org/patch/1194525/
+
+--- arch/arm/mach-rockchip/rk3399/Kconfig.orig	2019-12-16 04:39:56.000000000 -0800
++++ arch/arm/mach-rockchip/rk3399/Kconfig	2020-01-03 09:31:11.465329801 -0800
+@@ -81,6 +81,13 @@
+ 	   * GPIO expansion ports
+ 	   * DC 12V/2A
+ 
++config TARGET_PINEBOOK_PRO_RK3399
++	bool "Pinebook Pro"
++	help
++	  Pinebook Pro is a laptop based on the Rockchip rk3399 SoC
++	  with 4Gb RAM, onboard eMMC, USB-C, a USB3 and USB2 port,
++	  1920*1080 screen and all the usual laptop features.
++
+ endchoice
+ 
+ config ROCKCHIP_BOOT_MODE_REG
+@@ -113,6 +120,7 @@
+ config SPL_STACK_R_ADDR
+ 	default 0x04000000
+ 
++source "board/pine64/pinebook_pro_rk3399/Kconfig"
+ source "board/rockchip/evb_rk3399/Kconfig"
+ source "board/theobroma-systems/puma_rk3399/Kconfig"
+ source "board/vamrs/rock960_rk3399/Kconfig"
