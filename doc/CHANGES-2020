@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.207 2020/01/06 12:06:17 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.208 2020/01/06 14:02:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -237,3 +237,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/zathura-djvu to 0.2.9 [leot 2020-01-06]
 	Updated misc/py-anita to 2.2 [gson 2020-01-06]
 	Updated mail/rspamd to 2.2nb1 [jperkin 2020-01-06]
+	Updated games/wesnoth to 1.15.2 [nia 2020-01-06]
