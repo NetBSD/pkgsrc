@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.65 2019/10/21 20:47:55 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.66 2020/01/06 10:01:30 nia Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -19,10 +19,6 @@ BUILDLINK_LDFLAGS.MesaLib+=	-Wl,-dylib_file,/System/Library/Frameworks/OpenGL.fr
 pkgbase:= MesaLib
 
 .include "../../mk/pkg-build-options.mk"
-
-.if !empty(PKG_BUILD_OPTIONS.MesaLib:Mwayland)
-.  include "../../devel/wayland/buildlink3.mk"
-.endif
 
 .if !empty(PKG_BUILD_OPTIONS.MesaLib:Mx11)
 .  include "../../x11/libX11/buildlink3.mk"
