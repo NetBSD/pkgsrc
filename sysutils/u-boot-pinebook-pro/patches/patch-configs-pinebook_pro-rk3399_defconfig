@@ -1,4 +1,4 @@
-$NetBSD: patch-configs-pinebook_pro-rk3399_defconfig,v 1.1 2020/01/06 08:41:44 mrg Exp $
+$NetBSD: patch-configs-pinebook_pro-rk3399_defconfig,v 1.2 2020/01/06 09:43:16 mrg Exp $
 
 Pinebook Pro support from https://patchwork.ozlabs.org/patch/1194525/
 
@@ -7,10 +7,11 @@ new file mode 100644
 index 0000000000..28577256e7
 --- /dev/null
 +++ configs/pinebook_pro-rk3399_defconfig
-@@ -0,0 +1,76 @@
+@@ -0,0 +1,77 @@
 +CONFIG_ARM=y
 +CONFIG_ARCH_ROCKCHIP=y
 +CONFIG_SYS_TEXT_BASE=0x00200000
++CONFIG_SYS_MMCSD_RAW_MODE_U_BOOT_SECTOR=0x200
 +CONFIG_ROCKCHIP_RK3399=y
 +CONFIG_TARGET_PINEBOOK_PRO_RK3399=y
 +CONFIG_SPL_SPI_FLASH_SUPPORT=y
