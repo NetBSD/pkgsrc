@@ -558,6 +558,11 @@ func (o *Once) Seen(what string) bool {
 	return seen
 }
 
+func (o *Once) SeenSlice(whats ...string) bool {
+	_, seen := o.seen[o.keyStrings(whats)]
+	return seen
+}
+
 func (*Once) keyString(what string) uint64 {
 	return crc64.Checksum([]byte(what), crc64.MakeTable(crc64.ECMA))
 }
@@ -656,6 +661,7 @@ func (s *Scope) def(name string, mkline *MkLine) {
 		s.value[name] += " " + value
 	case opAssignDefault:
 		// No change to the value.
+		// FIXME: If there is no value yet, set it.
 	case opAssignShell:
 		delete(s.value, name)
 	default:
