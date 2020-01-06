@@ -213,6 +213,10 @@ func (s *Suite) Test_MkLineParser_MatchVarassign(c *check.C) {
 	testLine := func(line *Line, commented bool, varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment string, diagnostics ...string) {
 		text := line.Text
 
+		t.CheckOutputEmpty()
+		valueAlign := NewMkLineParser().Parse(line).ValueAlign()
+		_ = t.Output()
+
 		parser := NewMkLineParser()
 		splitResult := parser.split(nil, text, true)
 		m, actual := parser.MatchVarassign(line, text, &splitResult)
@@ -225,13 +229,13 @@ func (s *Suite) Test_MkLineParser_MatchVarassign(c *check.C) {
 			varparam:          varnameParam(varname),
 			spaceAfterVarname: spaceAfterVarname,
 			op:                NewMkOperator(op),
-			valueAlign:        align,
 			value:             value,
 			valueMk:           nil,
 			valueMkRest:       "",
 			fields:            nil,
 		}
 		t.CheckDeepEquals(*actual, expected)
+		t.CheckEquals(valueAlign, align)
 		t.CheckEquals(splitResult.spaceBeforeComment, spaceAfterValue)
 		t.CheckEquals(splitResult.hasComment, comment != "")
 		t.CheckEquals(condStr(splitResult.hasComment, "#", "")+splitResult.comment, comment)

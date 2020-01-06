@@ -425,7 +425,11 @@ func (s *Suite) Test_MkLineChecker_checkInclude__hacks(c *check.C) {
 	// The purpose of this "nonexistent" diagnostic is only to show that
 	// hacks.mk is indeed parsed and checked.
 	t.CheckOutputLines(
-		"ERROR: ~/category/package/hacks.mk:2: " +
+		// XXX: The diagnostics should be the same since they
+		//  describe the same problem.
+		"ERROR: ~/category/package/hacks.mk:2: "+
+			"Cannot read \"../../category/package/nonexistent.mk\".",
+		"ERROR: ~/category/package/hacks.mk:2: "+
 			"Relative path \"../../category/package/nonexistent.mk\" does not exist.")
 }
 
@@ -495,7 +499,7 @@ func (s *Suite) Test_MkLineChecker_checkDirectiveIndentation__autofix(c *check.C
 		".endif",
 		".endfor",
 		".endif")
-	mklines := NewMkLines(lines, nil)
+	mklines := NewMkLines(lines, nil, nil)
 
 	mklines.Check()
 

@@ -19,7 +19,7 @@ func LoadMk(filename CurrPath, pkg *Package, options LoadOptions) *MkLines {
 	if lines == nil {
 		return nil
 	}
-	return NewMkLines(lines, pkg)
+	return NewMkLines(lines, pkg, nil)
 }
 
 func Load(filename CurrPath, options LoadOptions) *Lines {
