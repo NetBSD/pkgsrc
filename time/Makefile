@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2020/01/04 13:16:20 nia Exp $
+# $NetBSD: Makefile,v 1.195 2020/01/06 11:06:34 kim Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -200,7 +200,6 @@ SUBDIR+=	wxRemind
 SUBDIR+=	wyrd
 SUBDIR+=	xalarm
 SUBDIR+=	xbeats
-SUBDIR+=	xcal
 SUBDIR+=	xchrono
 SUBDIR+=	xclock
 SUBDIR+=	xdaliclock
