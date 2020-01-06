@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/05 21:15:45 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/06 15:43:51 rillig Exp $
 gcc9/bin/c++
 gcc9/bin/cc
 gcc9/bin/cpp
@@ -834,6 +834,7 @@ gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/finclude/openacc_lib.h
 gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/README
 gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/curses.h
 gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/limits.h
+${PLIST.fixed-malloc}gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/malloc.h
 gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/math.h
 gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/netinet/ip_fil.h
 gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/netinet/ip_lookup.h
