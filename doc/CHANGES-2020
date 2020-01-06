@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.205 2020/01/06 11:13:39 leot Exp $
+$NetBSD: CHANGES-2020,v 1.206 2020/01/06 11:49:37 gson Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -235,3 +235,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/girara to 0.3.4 [leot 2020-01-06]
 	Removed time/xcal [kim 2020-01-06]
 	Updated graphics/zathura-djvu to 0.2.9 [leot 2020-01-06]
+	Updated misc/py-anita to 2.2 [gson 2020-01-06]
