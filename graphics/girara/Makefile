@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2019/12/20 10:11:55 leot Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/06 11:07:00 leot Exp $
 
-DISTNAME=	girara-0.3.3
+DISTNAME=	girara-0.3.4
 CATEGORIES=	x11
 MASTER_SITES=	https://pwmt.org/projects/girara/download/
 EXTRACT_SUFX=	.tar.xz
