@@ -1010,6 +1010,102 @@ func (s *Suite) Test_PlistChecker_checkPathShareIcons__hicolor_ok(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_PlistChecker_checkPathCond(c *check.C) {
+	t := s.Init(c)
+
+	pkg := t.SetUpPackage("category/package",
+		"PLIST_VARS+=\tmk-undefined mk-yes both",
+		"PLIST.mk-yes=\tyes",
+		"PLIST.both=\tyes")
+	t.CreateFileLines("category/package/PLIST",
+		PlistCvsID,
+		"${PLIST.both}${PLIST.plist}bin/program")
+	t.FinishSetUp()
+
+	G.Check(pkg)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:20: "+
+			"\"mk-undefined\" is added to PLIST_VARS, "+
+			"but PLIST.mk-undefined is not defined in this file.",
+		"WARN: ~/category/package/PLIST:2: "+
+			"Condition \"plist\" should be added to PLIST_VARS "+
+			"in the package Makefile.")
+}
+
+func (s *Suite) Test_PlistChecker_checkCond(c *check.C) {
+	t := s.Init(c)
+
+	pkg := t.SetUpPackage("category/package",
+		"PLIST_VARS+=\tboth mk-yes",
+		"PLIST.mk-yes=\tyes",
+		"PLIST.both=\tyes")
+	t.CreateFileLines("category/package/PLIST",
+		PlistCvsID,
+		"${PLIST.both}${PLIST.plist}bin/program",
+		"${PLIST.both}${PLIST.plist}bin/program2")
+	t.FinishSetUp()
+
+	G.Check(pkg)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/PLIST:2: " +
+			"Condition \"plist\" should be added to PLIST_VARS " +
+			"in the package Makefile.")
+}
+
+// Because of the unresolvable variable in the package Makefile,
+// pkglint cannot be absolutely sure about the possible PLIST
+// conditions. Therefore all such warnings are suppressed.
+//
+// As of January 2020, this case typically occurs when PLIST_VARS
+// is defined based on PKG_SUPPORTED_OPTIONS. Expanding that variable
+// typically contains ${_o_} and ${_opt_}.
+//
+// See audio/cmus for an example package.
+func (s *Suite) Test_PlistChecker_checkCond__unresolvable_variable(c *check.C) {
+	t := s.Init(c)
+
+	pkg := t.SetUpPackage("category/package",
+		"PLIST_VARS+=\tmk-only ${UNRESOLVABLE}",
+		"PLIST.mk-only=\tyes")
+	t.CreateFileLines("category/package/PLIST",
+		PlistCvsID,
+		"${PLIST.plist}bin/program")
+	t.FinishSetUp()
+
+	G.Check(pkg)
+
+	t.CheckOutputLines(
+		"WARN: ~/category/package/Makefile:20: " +
+			"UNRESOLVABLE is used but not defined.")
+}
+
+func (s *Suite) Test_PlistChecker_checkCond__hacks_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"PLIST_VARS+=\tmk", // To get past the mkline == nil condition.
+		"PLIST.mk=\tyes")
+	t.Chdir("category/package")
+	t.CreateFileLines("hacks.mk",
+		MkCvsID,
+		"PLIST_VARS+=\thack",
+		"PLIST.hack=\tyes")
+	t.CreateFileLines("PLIST",
+		PlistCvsID,
+		"${PLIST.hack}${PLIST.plist}bin/program")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	// Since hacks.mk is included implicitly into the package Makefile,
+	// the condition that is defined there may be used in the PLIST.
+	t.CheckOutputLines(
+		"WARN: PLIST:2: Condition \"plist\" should be added to PLIST_VARS " +
+			"in the package Makefile.")
+}
+
 func (s *Suite) Test_PlistLine_Path(c *check.C) {
 	t := s.Init(c)
 
