@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2016/06/04 21:48:11 alnsn Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/06 23:55:47 mef Exp $
 
-DISTNAME=		luasec-0.6
+VERSION=		0.9
+DISTNAME=		luasec-${VERSION}
 PKGNAME=		${DISTNAME:S/luasec/${LUA_PKGPREFIX}-sec/}
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=brunoos/}
-GITHUB_TAG=		${DISTNAME}
+GITHUB_TAG=		v${VERSION}
 GITHUB_PROJECT=		${DISTNAME:S/-${PKGVERSION_NOREV}//}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -16,7 +17,7 @@ DEPENDS+=		${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
 
 USE_TOOLS+=		gmake
 
-WRKSRC=			${WRKDIR}/luasec-${DISTNAME}
+#RKSRC=			${WRKDIR}/luasec-${DISTNAME}
 INSTALLATION_DIRS+=	${LUA_CDIR} ${LUA_LDIR}
 
 BUILD_TARGET.SunOS=	solaris
