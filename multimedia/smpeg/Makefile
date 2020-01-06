@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/11/23 23:03:01 nia Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/06 16:20:37 jperkin Exp $
 
 DISTNAME=	smpeg-0.4.5
 CATEGORIES=	devel multimedia
@@ -16,8 +16,6 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-Dunix=1
-
-LDFLAGS.SunOS+=	-shared -mimpure-text
 
 CONFIGURE_ARGS+=	--disable-gtk-player
 CONFIGURE_ARGS+=	--disable-sdltest
