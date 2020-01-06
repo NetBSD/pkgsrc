@@ -6,7 +6,24 @@ import "strings"
 type MkLines struct {
 	mklines []*MkLine
 	lines   *Lines
-	pkg     *Package
+
+	// The package that provides further context for cross-checks,
+	// such as the conditionally included files.
+	//
+	// This package should be used mostly as a read-only storage of context
+	// information. To keep the code understandable, only few things should
+	// be changed, if at all. This is exactly the reason that the
+	// extraScope has been moved to a separate variable.
+	//
+	// XXX: Maybe split this field into two: pkg and pkgForModification.
+	pkg *Package
+
+	// The extra scope in which all variable assignments are recorded.
+	// In most cases this is nil.
+	//
+	// When loading the package Makefile with all its included files,
+	// it is set to pkg.vars.
+	extraScope *Scope
 
 	allVars       Scope              // The variables after loading the complete file
 	buildDefs     map[string]bool    // Variables that are registered in BUILD_DEFS, to ensure that all user-defined variables are added to it.
@@ -36,7 +53,7 @@ type mklinesCheckAll struct {
 	postLine func(mkline *MkLine)
 }
 
-func NewMkLines(lines *Lines, pkg *Package) *MkLines {
+func NewMkLines(lines *Lines, pkg *Package, extraScope *Scope) *MkLines {
 	mklines := make([]*MkLine, lines.Len())
 	for i, line := range lines.Lines {
 		mklines[i] = NewMkLineParser().Parse(line)
@@ -49,6 +66,7 @@ func NewMkLines(lines *Lines, pkg *Package) *MkLines {
 		mklines,
 		lines,
 		pkg,
+		extraScope,
 		NewScope(),
 		make(map[string]bool),
 		make(map[string]*MkLine),
@@ -154,8 +172,8 @@ func (mklines *MkLines) collectUsedVariables() {
 // This controls the "defined but not used" warning.
 func (mklines *MkLines) UseVar(mkline *MkLine, varname string, time VucTime) {
 	mklines.allVars.Use(varname, mkline, time)
-	if mklines.pkg != nil {
-		mklines.pkg.vars.Use(varname, mkline, time)
+	if mklines.extraScope != nil {
+		mklines.extraScope.Use(varname, mkline, time)
 	}
 }
 
@@ -344,8 +362,8 @@ func (mklines *MkLines) ForEachEnd(action func(mkline *MkLine) bool, atEnd func(
 // defineVar marks a variable as defined in both the current package and the current file.
 func (mklines *MkLines) defineVar(mkline *MkLine, varname string) {
 	mklines.allVars.Define(varname, mkline)
-	if mklines.pkg != nil {
-		mklines.pkg.vars.Define(varname, mkline)
+	if mklines.extraScope != nil {
+		mklines.extraScope.Define(varname, mkline)
 	}
 }
 

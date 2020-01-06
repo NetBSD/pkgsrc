@@ -15,6 +15,7 @@ func (s *Suite) Test_MkLines__quoting_LDFLAGS_for_GNU_configure(c *check.C) {
 		MkCvsID,
 		"GNU_CONFIGURE=\tyes",
 		"CONFIGURE_ENV+=\tX_LIBS=${X11_LDFLAGS:Q}")
+	mklines.extraScope = &pkg.vars
 
 	mklines.Check()
 
