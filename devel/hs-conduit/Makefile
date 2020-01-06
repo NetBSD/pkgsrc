@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/03 07:52:17 pho Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/06 11:53:23 pho Exp $
 
 DISTNAME=	conduit-1.2.13.1
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ LICENSE=	mit
 .include "../../devel/hs-mmorph/buildlink3.mk"
 .include "../../devel/hs-monad-control/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
+.include "../../devel/hs-primitive/buildlink3.mk"
 .include "../../devel/hs-resourcet/buildlink3.mk"
 .include "../../devel/hs-transformers-base/buildlink3.mk"
 .include "../../devel/hs-transformers-compat/buildlink3.mk"
