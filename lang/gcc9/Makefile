@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/05 21:15:45 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/06 15:43:51 rillig Exp $
 
 GCC9_PKGBASE=	gcc9
 GCC9_VERSION=	9.2.0
@@ -179,6 +179,11 @@ post-test:
 post-install:
 	${TEST} -f ${DESTDIR}${GCC9_PREFIX}/bin/cc \
 	|| (cd ${DESTDIR}${GCC9_PREFIX}/bin && ${LN} -f gcc cc)
+
+PLIST_VARS+=		fixed-malloc
+.if ${MACHINE_PLATFORM:MNetBSD-9.*-*}
+PLIST.fixed-malloc=	yes
+.endif
 
 PRINT_PLIST_AWK+=	{ gsub("${MACHINE_GNU_PLATFORM}", "$${MACHINE_GNU_PLATFORM}"); }
 
