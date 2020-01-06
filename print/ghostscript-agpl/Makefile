@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2020/01/03 23:56:09 sevan Exp $
+# $NetBSD: Makefile,v 1.50 2020/01/06 07:23:26 mef Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -105,6 +105,7 @@ post-extract:
 
 post-install:
 	${LN} -sf gsc ${DESTDIR}${PREFIX}/bin/gs
+	${RM} -f  ${DESTDIR}${PREFIX}/share/ghostscript/${PKGVERSION_NOREV}/Resource/Init/gs_ttf.ps.orig
 
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
