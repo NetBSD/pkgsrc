@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2979 2020/01/05 17:53:55 minskim Exp $
+# $NetBSD: Makefile,v 1.2980 2020/01/06 17:35:31 ng0 Exp $
 #
 
 COMMENT=	Development utilities
@@ -790,6 +790,7 @@ SUBDIR+=	lua-lrexlib
 SUBDIR+=	lua-lrexlib-onig
 SUBDIR+=	lua-lrexlib-pcre
 SUBDIR+=	lua-lrexlib-posix
+SUBDIR+=	lua-luke
 SUBDIR+=	lua-mode
 SUBDIR+=	lua-penlight
 SUBDIR+=	lua-posix
@@ -2541,6 +2542,7 @@ SUBDIR+=	readline
 SUBDIR+=	rebar
 SUBDIR+=	rebar3
 SUBDIR+=	refinecvs
+SUBDIR+=	remake
 SUBDIR+=	reposurgeon
 SUBDIR+=	rgbds
 SUBDIR+=	ropper
