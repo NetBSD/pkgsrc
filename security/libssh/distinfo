@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2019/12/31 12:27:03 wiz Exp $
+$NetBSD: distinfo,v 1.21 2020/01/06 12:04:12 pho Exp $
 
 SHA1 (libssh-0.9.3.tar.xz) = 24bb9d6f53691236f34cc8e6fec86dd659aef757
 RMD160 (libssh-0.9.3.tar.xz) = ef2f8e5564f7508db4829fe655644d959e35da5d
 SHA512 (libssh-0.9.3.tar.xz) = 6e59718565daeca6d224426cc1095a112deff9af8e0b021917e04f08bb7409263c35724de95f591f38e26f0fb3bbbbc69b679b6775edc21dec158d241b076c6f
 Size (libssh-0.9.3.tar.xz) = 500068 bytes
 SHA1 (patch-CompilerChecks.cmake) = 77b93572006132c557cb9a57698e8455f7874073
+SHA1 (patch-tests_torture.c) = 2c70e9d827f15ec36a62e0d0f5dd98774f24f79e
