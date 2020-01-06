@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.201 2020/01/06 08:43:38 mrg Exp $
+$NetBSD: CHANGES-2020,v 1.202 2020/01/06 09:39:10 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -231,3 +231,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Pegex to 0.72 [schmonz 2020-01-06]
 	Added sysutils/arm-trusted-firmware-rk3399 version v2.2 [mrg 2020-01-06]
 	Added sysutils/u-boot-pinebook-pro version 2020.01-rc5 [mrg 2020-01-06]
+	Updated pkgtools/pkgin to 0.15.0 [jperkin 2020-01-06]
