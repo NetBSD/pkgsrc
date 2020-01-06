@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/11/02 22:37:57 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/06 16:34:36 jperkin Exp $
 
 DISTNAME=	gdk-pixbuf-${PIXBUF2_VERSION}
 PKGNAME=	gdk-pixbuf2-xlib-${PIXBUF2_VERSION}
@@ -18,7 +18,7 @@ CONFLICTS+=	gtk2+<2.22
 
 .include "../../graphics/gdk-pixbuf2/Makefile.version"
 
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake msgfmt pkg-config
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
 
 MESON_ARGS+=			-D installed_tests=false
