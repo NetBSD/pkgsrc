@@ -1,0 +1,16 @@
+$NetBSD: patch-arch_arm_dts_Makefile,v 1.1 2020/01/06 08:41:44 mrg Exp $
+
+Pinebook Pro support from https://patchwork.ozlabs.org/patch/1194525/
+
+diff --git arch/arm/dts/Makefile arch/arm/dts/Makefile
+index 5a64fcc5a7..affedfd666 100644
+--- arch/arm/dts/Makefile
++++ arch/arm/dts/Makefile
+@@ -116,6 +116,7 @@ dtb-$(CONFIG_ROCKCHIP_RK3399) += \
+ 	rk3399-nanopi-m4.dtb \
+ 	rk3399-nanopi-neo4.dtb \
+ 	rk3399-orangepi.dtb \
++	rk3399-pinebook-pro.dtb \
+ 	rk3399-puma-ddr1333.dtb \
+ 	rk3399-puma-ddr1600.dtb \
+ 	rk3399-puma-ddr1866.dtb \
