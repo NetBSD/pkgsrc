@@ -1,19 +1,19 @@
-$NetBSD: patch-src_Makefile,v 1.1 2016/06/04 21:48:12 alnsn Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2020/01/06 23:55:47 mef Exp $
 
 Pass proper libs for SunOS.
 
---- src/Makefile.orig	2016-03-03 19:11:46.000000000 +0000
-+++ src/Makefile
-@@ -6,7 +6,7 @@ OBJS= \
-  context.o \
-  ssl.o
+--- src/Makefile.orig	2019-10-31 23:43:53.000000000 +0900
++++ src/Makefile	2020-01-07 08:51:05.242195762 +0900
+@@ -9,7 +9,7 @@ OBJS= \
+  config.o  \
+  ec.o
  
 -LIBS=-lssl -lcrypto -lluasocket
 +LIBS=-lssl -lcrypto -lluasocket $(MYLIBS)
  
  WARN=-Wall -pedantic
  
-@@ -20,6 +20,9 @@ MAC_ENV=env MACOSX_DEPLOYMENT_TARGET='$(
+@@ -23,6 +23,9 @@ MAC_ENV=env MACOSX_DEPLOYMENT_TARGET='$(
  MAC_CFLAGS=-O2 -fno-common $(WARN) $(INCDIR) $(DEFS)
  MAC_LDFLAGS=-bundle -undefined dynamic_lookup $(LIBDIR)
  
@@ -21,25 +21,25 @@ Pass proper libs for SunOS.
 +SOL_LDFLAGS=-O -shared -fpic $(LIBDIR)
 +
  INSTALL  = install
- CC       = cc
- LD       = $(MYENV) cc
-@@ -31,10 +34,11 @@ LDFLAGS += $(MYLDFLAGS)
+ CC      ?= cc
+ CCLD      ?= $(MYENV) $(CC)
+@@ -34,10 +37,11 @@ LDFLAGS += $(MYLDFLAGS)
  all:
  
  install: $(CMOD) $(LMOD)
--	$(INSTALL) -d $(LUAPATH)/ssl $(LUACPATH)
--	$(INSTALL) $(CMOD) $(LUACPATH)
--	$(INSTALL) -m644 $(LMOD) $(LUAPATH)
--	$(INSTALL) -m644 https.lua $(LUAPATH)/ssl
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(LUAPATH)/ssl
-+	$(BSD_INSTALL_LIB_DIR)  $(DESTDIR)$(LUACPATH)
-+	$(BSD_INSTALL_LIB) $(CMOD) $(DESTDIR)$(LUACPATH)
-+	$(BSD_INSTALL_DATA) $(LMOD) $(DESTDIR)$(LUAPATH)
-+	$(BSD_INSTALL_DATA) https.lua $(DESTDIR)$(LUAPATH)/ssl
+-	$(INSTALL) -d $(DESTDIR)$(LUAPATH)/ssl $(DESTDIR)$(LUACPATH)
+-	$(INSTALL) $(CMOD) $(DESTDIR)$(LUACPATH)
+-	$(INSTALL) -m644 $(LMOD) $(DESTDIR)$(LUAPATH)
+-	$(INSTALL) -m644 https.lua $(DESTDIR)$(LUAPATH)/ssl
++	$(BSD_INSTALL_DATA_DIR)             $(DESTDIR)$(LUAPATH)/ssl
++	$(BSD_INSTALL_LIB_DIR)              $(DESTDIR)$(LUACPATH)
++	$(BSD_INSTALL_DATA) $(CMOD)      $(DESTDIR)$(LUACPATH)
++	$(BSD_INSTALL_DATA) -m644 $(LMOD)   $(DESTDIR)$(LUAPATH)
++	$(BSD_INSTALL_DATA) -m644 https.lua $(DESTDIR)$(LUAPATH)/ssl
  
  linux:
  	@$(MAKE) $(CMOD) MYCFLAGS="$(LNX_CFLAGS)" MYLDFLAGS="$(LNX_LDFLAGS)" EXTRA="$(EXTRA)"
-@@ -45,6 +49,9 @@ bsd:
+@@ -48,6 +52,9 @@ bsd:
  macosx:
  	@$(MAKE) $(CMOD) MYCFLAGS="$(MAC_CFLAGS)" MYLDFLAGS="$(MAC_LDFLAGS)" MYENV="$(MAC_ENV)" EXTRA="$(EXTRA)"
  
