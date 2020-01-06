@@ -1096,18 +1096,18 @@ func (s *Suite) Test_VartypeCheck_License(c *check.C) {
 
 	t.Chdir(".")
 	// Adds the gnu-gpl-v2 and 2-clause-bsd licenses
-	t.SetUpPackage("category/package")
-	t.CreateFileLines("licenses/mit", "...")
-	t.FinishSetUp()
-
-	pkg := NewPackage(t.File("category/package"))
-
-	mklines := t.SetUpFileMkLinesPkg("perl5.mk", pkg,
+	t.SetUpPackage("category/package",
+		".include \"perl5.mk\"")
+	t.CreateFileLines("licenses/mit",
+		"Permission is hereby granted, ...")
+	t.CreateFileLines("category/package/perl5.mk",
 		MkCvsID,
 		"PERL5_LICENSE= gnu-gpl-v2 OR artistic")
-	// Also registers the PERL5_LICENSE variable in the package.
-	mklines.collectVariables()
-
+	t.FinishSetUp()
+	pkg := NewPackage(t.File("category/package"))
+	// This registers the PERL5_LICENSE variable in the package,
+	// since Makefile includes perl5.mk.
+	pkg.load()
 	vt := NewVartypeCheckTester(t, BtLicense)
 
 	vt.Package(pkg)
@@ -2285,7 +2285,7 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 		text := toText(value)
 
 		line := vt.tester.NewLine(vt.filename, vt.lineno, text)
-		mklines := NewMkLines(NewLines(vt.filename, []*Line{line}), vt.pkg)
+		mklines := NewMkLines(NewLines(vt.filename, []*Line{line}), vt.pkg, nil)
 		vt.lineno++
 
 		mklines.ForEach(func(mkline *MkLine) { test(mklines, mkline, value) })

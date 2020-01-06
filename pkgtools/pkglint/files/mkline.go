@@ -30,7 +30,6 @@ type mkLineAssign struct {
 	varparam          string // e.g. "", "perl"
 	spaceAfterVarname string
 	op                MkOperator //
-	valueAlign        string     // The text up to and including the assignment operator, e.g. VARNAME+=\t
 	value             string     // The trimmed value
 	valueMk           []*MkToken // The value, sent through splitIntoMkWords
 	valueMkRest       string     // nonempty in case of parse errors
@@ -211,7 +210,10 @@ func (mkline *MkLine) Op() MkOperator { return mkline.data.(*mkLineAssign).op }
 
 // ValueAlign applies to variable assignments and returns all the text
 // before the variable value, e.g. "VARNAME+=\t".
-func (mkline *MkLine) ValueAlign() string { return mkline.data.(*mkLineAssign).valueAlign }
+func (mkline *MkLine) ValueAlign() string {
+	parts := NewVaralignSplitter().split(mkline.Line.raw[0].Text(), true)
+	return parts.leadingComment + parts.varnameOp + parts.spaceBeforeValue
+}
 
 func (mkline *MkLine) Value() string { return mkline.data.(*mkLineAssign).value }
 

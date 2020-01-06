@@ -5,6 +5,8 @@ import (
 	"strings"
 )
 
+// MkLineParser parses a line of text into the syntactical parts of a
+// line in Makefiles.
 type MkLineParser struct{}
 
 func NewMkLineParser() MkLineParser { return MkLineParser{} }
@@ -147,7 +149,6 @@ func (p MkLineParser) MatchVarassign(line *Line, text string, splitResult *mkLin
 		varparam:          varnameParam(varname),
 		spaceAfterVarname: spaceAfterVarname,
 		op:                op,
-		valueAlign:        valueAlign,
 		value:             value,
 		valueMk:           nil, // filled in lazily
 		valueMkRest:       "",  // filled in lazily
@@ -169,7 +170,8 @@ func (p MkLineParser) fixSpaceAfterVarname(line *Line, a *mkLineAssign) {
 		break
 
 	default:
-		before := a.valueAlign
+		parts := NewVaralignSplitter().split(line.raw[0].Text(), true)
+		before := parts.leadingComment + parts.varnameOp + parts.spaceBeforeValue
 		after := alignWith(varname+op.String(), before)
 
 		fix := line.Autofix()
