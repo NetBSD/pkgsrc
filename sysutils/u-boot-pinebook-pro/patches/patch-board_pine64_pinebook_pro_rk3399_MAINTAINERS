@@ -1,0 +1,18 @@
+$NetBSD: patch-board_pine64_pinebook_pro_rk3399_MAINTAINERS,v 1.1 2020/01/06 08:41:44 mrg Exp $
+
+Pinebook Pro support from https://patchwork.ozlabs.org/patch/1194525/
+
+diff --git board/pine64/pinebook_pro_rk3399/MAINTAINERS board/pine64/pinebook_pro_rk3399/MAINTAINERS
+new file mode 100644
+index 0000000000..58400ebd28
+--- /dev/null
++++ board/pine64/pinebook_pro_rk3399/MAINTAINERS
+@@ -0,0 +1,8 @@
++PINEBOOK_PRO
++M:	Peter Robinson <pbrobinson at gmail.com>
++S:	Maintained
++F:	board/pine64/pinebook_pro_rk3399/
++F:	include/configs/pinebook_pro_rk3399.h
++F:	arch/arm/dts/rk3399-pinebook-pro.dts
++F:	arch/arm/dts/rk3399-pinebook-pro-u-boot.dtsi
++F:	configs/pinebook_pro-rk3399_defconfig
