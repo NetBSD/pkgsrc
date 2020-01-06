@@ -1,0 +1,35 @@
+$NetBSD: patch-arch_arm_dts_rk3399-pinebook-pro-u-boot.dtsi,v 1.1 2020/01/06 08:41:44 mrg Exp $
+
+Pinebook Pro support from https://patchwork.ozlabs.org/patch/1194525/
+
+diff --git arch/arm/dts/rk3399-pinebook-pro-u-boot.dtsi arch/arm/dts/rk3399-pinebook-pro-u-boot.dtsi
+new file mode 100644
+index 0000000000..9b0cb7010f
+--- /dev/null
++++ arch/arm/dts/rk3399-pinebook-pro-u-boot.dtsi
+@@ -0,0 +1,25 @@
++// SPDX-License-Identifier: GPL-2.0+
++/*
++ * Copyright (C) 2019 Peter Robinson <pbrobinson at gmail.com>
++ */
++
++#include "rk3399-u-boot.dtsi"
++#include "rk3399-sdram-lpddr4-100.dtsi"
++
++/ {
++	chosen {
++		u-boot,spl-boot-order = "same-as-spl", &sdhci, &sdmmc;
++	};
++};
++
++&pmugrf {
++	u-boot,dm-pre-reloc;
++};
++
++&spiflash {
++        u-boot,dm-pre-reloc;
++};
++
++&uart2 {
++        u-boot,dm-pre-reloc;
++};
