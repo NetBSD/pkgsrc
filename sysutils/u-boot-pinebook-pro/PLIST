@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/06 08:41:44 mrg Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/06 09:43:16 mrg Exp $
 share/u-boot/pinebook-pro/idbloader.img
+share/u-boot/pinebook-pro/rksd_loader.img
 share/u-boot/pinebook-pro/u-boot.itb
