@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2020/01/07 13:47:41 kim Exp $
+# $NetBSD: Makefile,v 1.74 2020/01/07 13:49:16 kim Exp $
 
 DISTNAME=	Apache-Gallery-1.0.2-withoutworldwriteables
 PKGNAME=	${DISTNAME:C/-without.*//}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics www
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/L/LE/LEGART/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://apachegallery.dk/
+HOMEPAGE=	https://metacpan.org/pod/Apache::Gallery
 COMMENT=	Perl5/Apache module for handling image directories
 LICENSE=	artistic
 
