@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.232 2020/01/07 16:16:01 nia Exp $
+$NetBSD: CHANGES-2020,v 1.233 2020/01/07 16:52:25 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -262,3 +262,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/thunderbird to 68.3.1nb1 [wiz 2020-01-07]
 	Removed filesystems/fuse-gstfs [nia 2020-01-07]
 	Added filesystems/fuse-gstfs-ng version 1.1 [nia 2020-01-07]
+	Added lang/ghc84 version 8.4.4 [pho 2020-01-07]
