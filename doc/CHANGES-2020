@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.219 2020/01/07 11:08:25 kim Exp $
+$NetBSD: CHANGES-2020,v 1.220 2020/01/07 11:40:36 kim Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -249,3 +249,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/py-tqdm to 4.41.1 [adam 2020-01-07]
 	Updated time/remind to 3.2.0 [kim 2020-01-07]
 	Updated net/tcptraceroute6 to 1.0.4 [kim 2020-01-07]
+	Updated sysutils/rsnapshot to 1.4.3 [kim 2020-01-07]
