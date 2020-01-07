@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2013/08/31 18:41:33 adam Exp $
+# $NetBSD: Makefile,v 1.49 2020/01/07 20:25:14 sevan Exp $
 
 .include "Makefile.common"
 
@@ -6,7 +6,7 @@ COMMENT=	GIF image format library
 
 CONFLICTS+=	libungif-[0-9]*
 
-BUILD_DIRS=	lib
-INSTALL_DIRS=	lib
+INSTALL_TARGET= 	install-include
+INSTALL_TARGET+= 	install-lib
 
 .include "../../mk/bsd.pkg.mk"
