@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.228 2020/01/07 13:37:16 nros Exp $
+$NetBSD: CHANGES-2020,v 1.229 2020/01/07 13:43:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -258,3 +258,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Test-Warnings to 0.028 [wen 2020-01-07]
 	Updated net/md-whois to 5.5.4 [otis 2020-01-07]
 	Added math/xyconvert version 1.5 [nros 2020-01-07]
+	Updated devel/p5-Perl-Tidy to 20191203 [wen 2020-01-07]
