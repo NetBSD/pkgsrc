@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/09/14 06:07:20 mef Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/07 10:37:04 kim Exp $
 #
 
 DISTNAME=		tcptraceroute-1.4
@@ -6,7 +6,7 @@ PKGREVISION=		5
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mct/}
 
-MAINTAINER=		kim@tac.nyc.ny.us
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/mct/tcptraceroute
 COMMENT=		Traceroute implementation using TCP packets
 LICENSE=		gnu-gpl-v2
