@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/01/07 10:09:38 kim Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/07 10:20:31 kim Exp $
 
 DISTNAME=	remind-03.02.00
 PKGNAME=	${DISTNAME:C/0([0-9])/\1/g}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://dianne.skoll.ca/projects/remind/
 COMMENT=	Calendar/alarm program with interpreted input language
 LICENSE=	gnu-gpl-v2
 
+EXTRACT_USING=	bsdtar
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
 USE_FEATURES=	glob
