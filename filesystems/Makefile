@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2019/10/07 10:13:16 bouyer Exp $
+# $NetBSD: Makefile,v 1.49 2020/01/07 16:15:25 nia Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -21,7 +21,7 @@ SUBDIR+=	fuse-exfat
 SUBDIR+=	fuse-ext2
 SUBDIR+=	fuse-gmailfs
 SUBDIR+=	fuse-gphotofs
-SUBDIR+=	fuse-gstfs
+SUBDIR+=	fuse-gstfs-ng
 SUBDIR+=	fuse-httpfs
 SUBDIR+=	fuse-loggedfs
 SUBDIR+=	fuse-lzofs
