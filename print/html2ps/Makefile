@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.41 2019/08/11 13:22:39 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2020/01/07 11:53:43 kim Exp $
 #
 
 DISTNAME=	html2ps-1.0b7
 PKGREVISION=	10
 CATEGORIES=	print
-MASTER_SITES=	http://user.it.uu.se/~jan/
+MASTER_SITES=	#http://user.it.uu.se/~jan/
 
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://user.it.uu.se/~jan/html2ps.html
 COMMENT=	HTML to PostScript converter
 
