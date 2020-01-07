@@ -1,24 +1,24 @@
-@comment $NetBSD: PLIST,v 1.4 2014/05/15 14:16:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/01/07 20:25:14 sevan Exp $
 bin/gif2rgb
 bin/gifbuild
 bin/gifclrmp
-bin/gifecho
 bin/giffix
-bin/gifinto
 bin/giftext
 bin/giftool
 man/man1/gif2rgb.1
+man/man1/gifbg.1
 man/man1/gifbuild.1
 man/man1/gifclrmp.1
+man/man1/gifcolor.1
 man/man1/gifecho.1
 man/man1/giffix.1
+man/man1/gifhisto.1
 man/man1/gifinto.1
 man/man1/giflib.1
 man/man1/giftext.1
 man/man1/giftool.1
+man/man1/gifwedge.1
 share/doc/giflib/gif2rgb.html
-share/doc/giflib/gif87.txt
-share/doc/giflib/gif89.txt
 share/doc/giflib/gif_lib.html
 share/doc/giflib/gifbg.html
 share/doc/giflib/gifbuild.html
@@ -29,11 +29,13 @@ share/doc/giflib/giffix.html
 share/doc/giflib/gifhisto.html
 share/doc/giflib/gifinto.html
 share/doc/giflib/giflib.html
+share/doc/giflib/gifstandard/gif87.txt
+share/doc/giflib/gifstandard/gif89.txt
 share/doc/giflib/giftext.html
 share/doc/giflib/giftool.html
 share/doc/giflib/gifwedge.html
+share/doc/giflib/index.html
 share/doc/giflib/intro.html
-share/doc/giflib/lzgif.txt
 share/doc/giflib/whatsinagif/animation_and_transparency.html
 share/doc/giflib/whatsinagif/bits_and_bytes.html
 share/doc/giflib/whatsinagif/comment_ext.gif
