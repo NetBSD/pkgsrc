@@ -1,0 +1,11 @@
+Qsmtp is a drop-in replacement for qmail-smtpd and qmail-remote.
+The benefits:
+
+- Fast and small: written in plain C
+- IPv6 clean
+- Many antispam modules included, e.g. SPF, IP blacklists, domain
+  blacklists, badmailfrom, helo filtering
+- Easy API to add your own spamfilters
+- For vpopmail hosts: does not create bounces for non-existing users
+- Tested: includes unit tests, nightly checks available at
+  <http://my.cdash.org/index.php?project=Qsmtp>
