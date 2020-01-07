@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2017/09/04 18:08:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/07 11:08:14 kim Exp $
 #
 
 DISTNAME=		ndisc6-${VERSION}
 PKGNAME=		tcptraceroute6-${VERSION}
-VERSION=		1.0.3
+VERSION=		1.0.4
 CATEGORIES=		net
 MASTER_SITES=		http://www.remlab.net/files/ndisc6/
 EXTRACT_SUFX=		.tar.bz2
@@ -31,7 +31,7 @@ INSTALL_MANS+=		rltraceroute6.8
 
 do-install:
 	for p in ${INSTALL_PROGS}; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/src/$$p \
+		${INSTALL_PROGRAM} ${WRKSRC}/$$p \
 			${DESTDIR}${PREFIX}/sbin; \
 	done
 	for m in ${INSTALL_MANS}; do \
