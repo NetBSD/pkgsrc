@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2019/11/02 21:09:15 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/07 13:47:41 kim Exp $
 
 DISTNAME=	mserv-0.39a
 PKGREVISION=	10
 CATEGORIES=	audio
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mserv/}
 
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=	kim@NetBSD.org
 #HOMEPAGE=	http://www.mserv.org/
 COMMENT=	Local centralised music server environment
 LICENSE=	original-bsd
