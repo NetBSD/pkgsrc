@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2019/08/29 12:12:29 micha Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/07 11:51:12 micha Exp $
 
-DISTNAME=		sigil_v1_1
-PKGNAME=		doom-pwad-sigil-1.1
+DISTNAME=		sigil_v1_21
+PKGNAME=		doom-pwad-sigil-1.21
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.fu-berlin.de/pc/games/idgames/levels/doom/Ports/s-u/
 MASTER_SITES+=		ftp://mirrors.syringanetworks.net/idgames/levels/doom/Ports/s-u/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		micha@NetBSD.org
+HOMEPAGE=		https://www.romerogames.ie/si6il/
 COMMENT=		Doom mod
 LICENSE=		doom-pwad-license
 
@@ -24,22 +25,26 @@ SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
 SUBST_FILES.install=	INSTALL.pkgsrc
 SUBST_SED.install=	-e 's,DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
+TOOL_DEPENDS+=		dos2unix-[0-9]*:../../converters/dos2unix
 NO_BUILD=		yes
+
+do-patch:
+	dos2unix ${WRKDIR}/SIGIL_instructions.txt
 
 pre-configure:
 	${MKDIR} ${WRKSRC}
 	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKSRC}
 
 do-install:
-	cd ${WRKDIR} &&							\
-		${INSTALL_DATA} SIGIL.wad				\
-			${DESTDIR}${PREFIX}/${DOOMWADDIR}/SIGIL.wad;	\
-		${INSTALL_DATA} SIGIL_COMPAT.wad			\
-			${DESTDIR}${PREFIX}/${DOOMWADDIR}/SIGIL_COMPAT.wad; \
-		${INSTALL_DATA} SIGIL.txt				\
-			${DESTDIR}${PREFIX}/${DOOMWADDIR}/SIGIL.txt
-	cd ${WRKSRC} &&							\
-		${INSTALL_DATA} INSTALL.pkgsrc				\
-			${DESTDIR}${PREFIX}/share/doc/doom-pwad-sigil/INSTALL.pkgsrc
+	cd ${WRKDIR} &&	${INSTALL_DATA} SIGIL_v1_21.wad			\
+		${DESTDIR}${PREFIX}/${DOOMWADDIR}/SIGIL.wad
+	cd ${WRKDIR} && ${INSTALL_DATA} SIGIL_COMPAT_v1_21.wad		\
+		${DESTDIR}${PREFIX}/${DOOMWADDIR}/SIGIL_COMPAT.wad
+	cd ${WRKDIR} && ${INSTALL_DATA} sigil_v1_21.txt			\
+		${DESTDIR}${PREFIX}/${DOOMWADDIR}/SIGIL.txt
+	cd ${WRKDIR} && ${INSTALL_DATA} SIGIL_instructions.txt		\
+		${DESTDIR}${PREFIX}/share/doc/doom-pwad-sigil/SIGIL_instructions.txt
+	cd ${WRKSRC} &&	${INSTALL_DATA} INSTALL.pkgsrc			\
+		${DESTDIR}${PREFIX}/share/doc/doom-pwad-sigil/INSTALL.pkgsrc
 
 .include "../../mk/bsd.pkg.mk"
