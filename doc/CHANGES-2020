@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.224 2020/01/07 13:04:06 wen Exp $
+$NetBSD: CHANGES-2020,v 1.225 2020/01/07 13:05:08 nros Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -254,3 +254,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated news/libcanlock to 3.1.1 [micha 2020-01-07]
 	Updated news/canlock-hp to 3.1.1 [micha 2020-01-07]
 	Updated devel/p5-Perl-PrereqScanner-NotQuiteLite to 0.9909 [wen 2020-01-07]
+	Updated math/xylib to 1.5 [nros 2020-01-07]
