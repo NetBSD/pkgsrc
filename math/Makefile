@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.450 2020/01/03 05:15:55 pho Exp $
+# $NetBSD: Makefile,v 1.451 2020/01/07 13:35:44 nros Exp $
 
 COMMENT=	Mathematics
 
@@ -413,6 +413,7 @@ SUBDIR+=	xldlas
 SUBDIR+=	xlife
 SUBDIR+=	xlispstat
 SUBDIR+=	xmgr
+SUBDIR+=	xyconvert
 SUBDIR+=	xylib
 SUBDIR+=	yacas
 SUBDIR+=	yices2
