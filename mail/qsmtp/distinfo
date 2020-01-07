@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/01/07 08:15:30 schmonz Exp $
+
+SHA1 (Qsmtp-0.37.tar.xz) = 768567e10adf47d651735bd8e7289a6b8a18d24a
+RMD160 (Qsmtp-0.37.tar.xz) = abf841db63e94142f309fcac93c29a29c1a4d692
+SHA512 (Qsmtp-0.37.tar.xz) = 911d9d956ef7d0c6ad150745db489dd96eca0b665d99c0db648b4382c0d21fc759ad4a138e7adf69c6749574ad619114e7f06f62c131d0ae103e9b0493d39ef3
+Size (Qsmtp-0.37.tar.xz) = 250100 bytes
+SHA1 (patch-CMakeLists.txt) = de0a0f4acd99e1573937063fd89fec3caa4232e3
