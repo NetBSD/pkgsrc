@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.52 2019/11/02 16:25:26 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2020/01/07 13:47:41 kim Exp $
 
 DISTNAME=	procmail-3.22
 PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.procmail.org/pub/procmail/
 
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=	kim@NetBSD.org
 HOMEPAGE=	http://www.procmail.org/
 COMMENT=	Local mail delivery agent
 LICENSE=	artistic OR gnu-gpl-v2
