@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2011/09/06 18:45:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/01/07 20:25:14 sevan Exp $
 include/gif_lib.h
-lib/libgif.la
+lib/libgif.a
+lib/libgif.so
+lib/libgif.so.7
+lib/libgif.so.7.2.0

@@ -1,0 +1,20 @@
+$NetBSD: patch-Makefile,v 1.1 2020/01/07 20:25:14 sevan Exp $
+
+- Inherit the PREFIX rather than hard-coding it.
+- Adjust location where manuals are installed.
+
+--- Makefile.orig	2019-06-24 16:08:57.000000000 +0000
++++ Makefile
+@@ -14,11 +14,10 @@ SHELL = /bin/sh
+ TAR = tar
+ INSTALL = install
+ 
+-PREFIX = /usr/local
+ BINDIR = $(PREFIX)/bin
+ INCDIR = $(PREFIX)/include
+ LIBDIR = $(PREFIX)/lib
+-MANDIR = $(PREFIX)/share/man
++MANDIR = $(PREFIX)/man
+ 
+ # No user-serviceable parts below this line
+ 
