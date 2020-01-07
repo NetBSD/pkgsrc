@@ -1,0 +1,22 @@
+# $NetBSD: Makefile.common,v 1.1 2020/01/07 13:03:50 nros Exp $
+#
+# used by math/xylib/Makefile
+#
+
+DISTNAME=	xylib-1.5
+CATEGORIES=	math
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wojdyr/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://xylib.sourceforge.net/
+
+LICENSE=	gnu-lgpl-v2
+
+#DISTINFO_FILE=	../../math/xylib/distinfo
+#PATCHDIR=	../../math/xylib/patches
+
+USE_LANGUAGES=	c c++03
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes

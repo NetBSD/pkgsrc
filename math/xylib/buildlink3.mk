@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2012/05/07 01:53:47 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2020/01/07 13:03:50 nros Exp $
 
 BUILDLINK_TREE+=	xylib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xylib
 XYLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xylib+=	xylib>=0.4
-BUILDLINK_ABI_DEPENDS.xylib+=	xylib>=0.8nb1
+BUILDLINK_ABI_DEPENDS.xylib+=	xylib>=1.5
 BUILDLINK_PKGSRCDIR.xylib?=	../../math/xylib
 
 .include "../../archivers/bzip2/buildlink3.mk"
