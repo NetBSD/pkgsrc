@@ -1,7 +1,19 @@
-$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.2 2019/12/30 20:12:35 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.3 2020/01/07 21:29:33 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q4 branch:
 
 Pullup ticket #6105 - requested by taca
 x11/ruby-tk-gem: build fix
+
+Pullup ticket #6107 - requested by is
+security/libssh: security fix
+
+Pullup ticket #6108 - requested by roy
+net/dhcpd: bugfix
+
+Pullup ticket #6109 - requested by sevan
+print/ghostscript-agpl: security fix
+
+Pullup ticket #6111 - requested by sevan
+graphics/openjpeg: security fix
 
