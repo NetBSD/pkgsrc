@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2019/08/11 13:24:13 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/07 10:09:38 kim Exp $
 
-DISTNAME=	remind-03.01.15
+DISTNAME=	remind-03.02.00
 PKGNAME=	${DISTNAME:C/0([0-9])/\1/g}
-PKGREVISION=	3
 CATEGORIES=	time
-MASTER_SITES=	http://www.roaringpenguin.com/files/download/
+MASTER_SITES=	https://dianne.skoll.ca/projects/remind/download/
 
-MAINTAINER=	kim@tac.nyc.ny.us
-HOMEPAGE=	http://www.roaringpenguin.com/products/remind
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://dianne.skoll.ca/projects/remind/
 COMMENT=	Calendar/alarm program with interpreted input language
 LICENSE=	gnu-gpl-v2
 
