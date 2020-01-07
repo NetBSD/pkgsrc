@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.63 2019/08/11 13:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2020/01/07 18:21:02 adam Exp $
 
-DISTNAME=	awstats-7.6
-PKGREVISION=	2
+DISTNAME=	awstats-7.7
 CATEGORIES=	www
-MASTER_SITES=	http://www.awstats.org/files/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=awstats/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.awstats.org/
+HOMEPAGE=	https://awstats.sourceforge.io/
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 LICENSE=	gnu-gpl-v3
 
@@ -60,9 +59,6 @@ INSTALLATION_DIRS+=	awstats/cgi-bin/plugins
 INSTALLATION_DIRS+=	share/doc/awstats
 INSTALLATION_DIRS+=	share/examples/awstats
 
-post-extract:
-	find ${WRKSRC} -name .cvsignore -exec rm {} \;
-
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/*.pl ${DESTDIR}${PREFIX}/awstats/bin
 	${FIND} ${WRKSRC}/wwwroot/cgi-bin -name \*.orig -exec ${RM} {} \;
@@ -76,26 +72,20 @@ do-install:
 	    ${DESTDIR}${PREFIX}/awstats/cgi-bin/plugins
 .for d in lang lib
 	cd ${WRKSRC}/wwwroot/cgi-bin					\
-		&& pax -rwpppm ${d} ${DESTDIR}${PREFIX}/awstats/cgi-bin/
+		&& ${PAX} -rwpppm ${d} ${DESTDIR}${PREFIX}/awstats/cgi-bin/
 	chown -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/awstats/cgi-bin/${d}
-	find ${DESTDIR}${PREFIX}/awstats/cgi-bin/${d} -type d -print	\
-		| xargs chmod ${PKGDIRMODE}
-	find ${DESTDIR}${PREFIX}/awstats/cgi-bin/${d} -type f -print	\
-		| xargs chmod ${SHAREMODE}
+	${FIND} ${DESTDIR}${PREFIX}/awstats/cgi-bin/${d} -type d -exec ${CHMOD} ${PKGDIRMODE} {} +
+	${FIND} ${DESTDIR}${PREFIX}/awstats/cgi-bin/${d} -type f -exec ${CHMOD} ${SHAREMODE} {} +
 .endfor
 .for d in classes css icon js
-	cd ${WRKSRC}/wwwroot && pax -rwpppm ${d} ${DESTDIR}${PREFIX}/awstats/
-	chown -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/awstats/${d}
-	find ${DESTDIR}${PREFIX}/awstats/${d} -type d -print	\
-		| xargs chmod ${PKGDIRMODE}
-	find ${DESTDIR}${PREFIX}/awstats/${d} -type f -print	\
-		| xargs chmod ${SHAREMODE}
+	cd ${WRKSRC}/wwwroot && ${PAX} -rwpppm ${d} ${DESTDIR}${PREFIX}/awstats/
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/awstats/${d}
+	${FIND} ${DESTDIR}${PREFIX}/awstats/${d} -type d -exec ${CHMOD} ${PKGDIRMODE} {} +
+	${FIND} ${DESTDIR}${PREFIX}/awstats/${d} -type f -exec ${CHMOD} ${SHAREMODE} {} +
 .endfor
-	cd ${WRKSRC}/docs && pax -rwpppm . ${DESTDIR}${PREFIX}/share/doc/awstats/
-	chown -R ${DOCOWN}:${DOCGRP} ${DESTDIR}${PREFIX}/share/doc/awstats/
-	find ${DESTDIR}${PREFIX}/share/doc/awstats/ -type d -print	\
-		| xargs chmod ${PKGDIRMODE}
-	find ${DESTDIR}${PREFIX}/share/doc/awstats/ -type f -print	\
-		| xargs chmod ${DOCMODE}
+	cd ${WRKSRC}/docs && ${PAX} -rwpppm . ${DESTDIR}${PREFIX}/share/doc/awstats/
+	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${DESTDIR}${PREFIX}/share/doc/awstats/
+	${FIND} ${DESTDIR}${PREFIX}/share/doc/awstats/ -type d -exec ${CHMOD} ${PKGDIRMODE} {} +
+	${FIND} ${DESTDIR}${PREFIX}/share/doc/awstats/ -type f -exec ${CHMOD} ${DOCMODE} {} +
 
 .include "../../mk/bsd.pkg.mk"

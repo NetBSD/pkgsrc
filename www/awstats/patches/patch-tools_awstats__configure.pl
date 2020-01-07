@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2013/04/27 11:19:39 adam Exp $
+$NetBSD: patch-tools_awstats__configure.pl,v 1.1 2020/01/07 18:21:02 adam Exp $
 
 Fix paths.
 
---- tools/awstats_configure.pl.orig	2008-04-06 15:45:24.000000000 +0200
+--- tools/awstats_configure.pl.orig	2016-08-27 18:59:01.000000000 +0000
 +++ tools/awstats_configure.pl
-@@ -29,12 +29,12 @@ $AWSTATS_MODEL_CONFIG
+@@ -28,12 +28,12 @@ $AWSTATS_MODEL_CONFIG
  $AWSTATS_DIRDATA_PATH
  /;
  $AWSTATS_PATH='';
@@ -23,7 +23,7 @@ Fix paths.
  
  
  
-@@ -64,6 +64,7 @@ use vars qw/
+@@ -63,6 +63,7 @@ use vars qw/
  '/etc/httpd/httpd.conf',
  '/usr/local/apache/conf/httpd.conf',
  '/usr/local/apache2/conf/httpd.conf',
@@ -31,7 +31,7 @@ Fix paths.
  );
  
  use vars qw/
-@@ -309,13 +310,13 @@ if ($OS eq 'linux') {
+@@ -308,13 +309,13 @@ if ($OS eq 'linux') {
  	$AWSTATS_PATH=`pwd`; $AWSTATS_PATH =~ s/[\r\n]//;
  	$AWSTATS_PATH=~s/tools[\\\/]?$//;
  	$AWSTATS_PATH=~s/[\\\/]$//;
@@ -48,7 +48,7 @@ Fix paths.
  		print "And then, run configure.pl from this location.\n";
  		print "Do you want to continue setup from this NON standard directory [yN] ? ";
  		my $bidon='';
-@@ -324,23 +325,23 @@ if ($OS eq 'linux') {
+@@ -323,23 +324,23 @@ if ($OS eq 'linux') {
  			print "configure.pl aborted.\n";
  			exit 1;
  		}
@@ -79,7 +79,7 @@ Fix paths.
  		print "And then, run configure.pl from this location.\n";
  		print "Do you want to continue setup from this NON standard directory [yN] ? ";
  		my $bidon='';
-@@ -349,10 +350,10 @@ elsif ($OS eq 'macosx') {
+@@ -348,10 +349,10 @@ elsif ($OS eq 'macosx') {
  			print "configure.pl aborted.\n";
  			exit 1;
  		}
@@ -94,7 +94,7 @@ Fix paths.
  	}
  }
  elsif ($OS eq 'windows') {
-@@ -421,6 +422,7 @@ if (! scalar keys %ApacheConfPath) {
+@@ -420,6 +421,7 @@ if (! scalar keys %ApacheConfPath) {
  		print "\n".($bidon?"Now, enter":"Enter")." full config file path of your Web server.\n";
  		print "Example: /etc/httpd/httpd.conf\n";
  		print "Example: /usr/local/apache2/conf/httpd.conf\n";
@@ -102,7 +102,7 @@ Fix paths.
  		print "Example: c:\\Program files\\apache group\\apache\\conf\\httpd.conf\n";
  		$bidon='';
  		while ($bidon ne 'none' && ! -f "$bidon") {
-@@ -546,8 +548,8 @@ EOF
+@@ -545,8 +547,8 @@ EOF
  # -----------------------------
  my $modelfile='';
  if ($OS eq 'linux') 		{ 
@@ -113,7 +113,7 @@ Fix paths.
  	}
  	else {
  		$modelfile="$AWSTATS_MODEL_CONFIG";
-@@ -555,7 +557,7 @@ if ($OS eq 'linux') 		{ 
+@@ -554,7 +556,7 @@ if ($OS eq 'linux') 		{ 
  	}
  }
  elsif ($OS eq "macosx") 		{ 
@@ -122,7 +122,7 @@ Fix paths.
  }
  elsif ($OS eq 'windows')	{ $modelfile="$AWSTATS_PATH\\wwwroot\\cgi-bin\\awstats.model.conf"; }
  else						{ $modelfile="$AWSTATS_PATH\\wwwroot\\cgi-bin\\awstats.model.conf"; }
-@@ -608,11 +610,11 @@ if ($bidon =~ /^y/i) {
+@@ -606,11 +608,11 @@ if ($bidon =~ /^y/i) {
  	if ($OS eq 'linux') 		{
  		print "\n-----> Define config file path\n";
  		print "In which directory do you plan to store your config file(s) ?\n";
