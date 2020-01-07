@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2019/12/29 00:51:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.75 2020/01/07 15:41:22 wiz Exp $
 bin/thunderbird
 lib/thunderbird/actors/AudioPlaybackChild.jsm
 lib/thunderbird/actors/AutoplayChild.jsm
@@ -2942,7 +2942,6 @@ lib/thunderbird/chrome/messenger/content/messenger/SearchDialog.js
 lib/thunderbird/chrome/messenger/content/messenger/SearchDialog.xul
 lib/thunderbird/chrome/messenger/content/messenger/SmtpServerEdit.js
 lib/thunderbird/chrome/messenger/content/messenger/SmtpServerEdit.xul
-lib/thunderbird/chrome/messenger/content/messenger/schemas/messageDisplayAction.json
 lib/thunderbird/chrome/messenger/content/messenger/about-support/aboutSupport.js
 lib/thunderbird/chrome/messenger/content/messenger/about-support/aboutSupport.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/about-support/accounts.js
@@ -3286,6 +3285,7 @@ lib/thunderbird/chrome/messenger/content/messenger/schemas/mailTabs.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/menus.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/menus_child.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/messageDisplay.json
+lib/thunderbird/chrome/messenger/content/messenger/schemas/messageDisplayAction.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/messages.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/pkcs11.json
 lib/thunderbird/chrome/messenger/content/messenger/schemas/tabs.json
@@ -4497,6 +4497,7 @@ lib/thunderbird/libldif60.so
 lib/thunderbird/liblgpllibs.so
 lib/thunderbird/libmozgtk.so
 lib/thunderbird/libmozsqlite3.so
+${PLIST.wayland}lib/thunderbird/libmozwayland.so
 lib/thunderbird/libprldap60.so
 lib/thunderbird/libxul.so
 lib/thunderbird/localization/en-US/branding/brand.ftl
