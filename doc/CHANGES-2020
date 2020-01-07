@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.230 2020/01/07 15:41:59 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.231 2020/01/07 16:15:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -260,3 +260,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/xyconvert version 1.5 [nros 2020-01-07]
 	Updated devel/p5-Perl-Tidy to 20191203 [wen 2020-01-07]
 	Updated mail/thunderbird to 68.3.1nb1 [wiz 2020-01-07]
+	Removed filesystems/fuse-gstfs [nia 2020-01-07]
