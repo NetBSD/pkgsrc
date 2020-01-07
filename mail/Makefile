@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.536 2019/11/17 05:42:30 markd Exp $
+# $NetBSD: Makefile,v 1.537 2020/01/07 08:16:47 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -324,6 +324,7 @@ SUBDIR+=	qmail-spp-spf
 SUBDIR+=	qmailanalog
 SUBDIR+=	qmqtool
 SUBDIR+=	qpopper
+SUBDIR+=	qsmtp
 SUBDIR+=	qtools
 SUBDIR+=	queue-fix
 SUBDIR+=	queue-repair
