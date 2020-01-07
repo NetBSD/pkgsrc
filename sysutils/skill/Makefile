@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2020/01/06 11:32:08 kim Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/07 08:37:34 kim Exp $
 
 DISTNAME=	skill-4.1.4
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.flux.utah.edu/pub/skill/
+MASTER_SITES=	http://www.marjum.com/jeffware/skill/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
