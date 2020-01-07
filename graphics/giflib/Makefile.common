@@ -1,22 +1,21 @@
-# $NetBSD: Makefile.common,v 1.11 2016/05/01 20:28:44 leot Exp $
+# $NetBSD: Makefile.common,v 1.12 2020/01/07 20:25:14 sevan Exp $
 # used by graphics/giflib/Makefile
 # used by graphics/giflib-util/Makefile
 
-DISTNAME=	giflib-5.1.4
+DISTNAME=	giflib-5.2.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=giflib/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://giflib.sourceforge.net/
 LICENSE=	mit
 
-#PATCHDIR=	${.CURDIR}/../../graphics/giflib/patches
+PATCHDIR=	${.CURDIR}/../../graphics/giflib/patches
 DISTINFO_FILE=	${.CURDIR}/../../graphics/giflib/distinfo
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+USE_TOOLS+= 		gmake
 
 SUBST_CLASSES+=		split
 SUBST_FILES.split+=	util/Makefile.in
