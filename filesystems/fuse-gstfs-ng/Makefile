@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/07 16:15:25 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/07 16:16:51 nia Exp $
 
 DISTNAME=	gstfs-ng-1.1
 PKGNAME=	fuse-${DISTNAME}
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rtyle/gstfs-ng
 COMMENT=	FUSE-based file system for dynamic gstreamer-based transcoding
 LICENSE=	gnu-lgpl-v3
+
+SUPERSEDES+=	fuse-gstfs-[0-9]*
 
 USE_TOOLS+=	pkg-config bash:run
 USE_LANGUAGES=	c c++03
