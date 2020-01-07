@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/07 13:35:44 nros Exp $
+bin/xyconvert
