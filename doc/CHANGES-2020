@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.229 2020/01/07 13:43:19 wen Exp $
+$NetBSD: CHANGES-2020,v 1.230 2020/01/07 15:41:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -259,3 +259,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/md-whois to 5.5.4 [otis 2020-01-07]
 	Added math/xyconvert version 1.5 [nros 2020-01-07]
 	Updated devel/p5-Perl-Tidy to 20191203 [wen 2020-01-07]
+	Updated mail/thunderbird to 68.3.1nb1 [wiz 2020-01-07]
