@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.223 2020/01/07 12:22:31 micha Exp $
+$NetBSD: CHANGES-2020,v 1.224 2020/01/07 13:04:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -253,3 +253,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/doom-pwad-sigil to 1.21 [micha 2020-01-07]
 	Updated news/libcanlock to 3.1.1 [micha 2020-01-07]
 	Updated news/canlock-hp to 3.1.1 [micha 2020-01-07]
+	Updated devel/p5-Perl-PrereqScanner-NotQuiteLite to 0.9909 [wen 2020-01-07]
