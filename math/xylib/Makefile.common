@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2020/01/07 13:03:50 nros Exp $
-#
+# $NetBSD: Makefile.common,v 1.2 2020/01/07 13:35:44 nros Exp $
 # used by math/xylib/Makefile
-#
+# used by math/xyconvert/Makefile
 
 DISTNAME=	xylib-1.5
 CATEGORIES=	math
@@ -13,9 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xylib.sourceforge.net/
 
 LICENSE=	gnu-lgpl-v2
-
-#DISTINFO_FILE=	../../math/xylib/distinfo
-#PATCHDIR=	../../math/xylib/patches
 
 USE_LANGUAGES=	c c++03
 USE_LIBTOOL=	yes
