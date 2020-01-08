@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.267 2020/01/08 15:25:48 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.268 2020/01/08 16:59:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -302,3 +302,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/py-uncompyle6 to 3.6.2 [adam 2020-01-08]
 	Updated devel/py-pathspec to 0.7.0 [adam 2020-01-08]
 	Added fonts/UnifrakturMaguntia-ttf version 0.20170319 [wiz 2020-01-08]
+	Updated games/7kaa to 2.15.3 [nia 2020-01-08]
