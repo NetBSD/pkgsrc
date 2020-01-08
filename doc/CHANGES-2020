@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.279 2020/01/08 21:33:16 adam Exp $
+$NetBSD: CHANGES-2020,v 1.280 2020/01/08 21:46:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -321,3 +321,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-beautifulsoup4 to 4.8.2 [adam 2020-01-08]
 	Updated devel/py-anytree to 2.7.3 [adam 2020-01-08]
 	Updated textproc/py-elementpath to 1.4.0 [adam 2020-01-08]
+	Updated www/py-nevow to 0.14.5 [adam 2020-01-08]
+	Updated devel/py-macholib to 1.13 [adam 2020-01-08]
