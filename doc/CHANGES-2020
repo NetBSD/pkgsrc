@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.274 2020/01/08 17:34:00 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.275 2020/01/08 19:10:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -307,3 +307,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/gnucash to 3.8b [wiz 2020-01-08]
 	Updated devel/py-setuptools to 44.0.0 [wiz 2020-01-08]
 	Updated www/py-mechanize to 0.4.5 [wiz 2020-01-08]
+	Updated www/py-h2 to 3.1.1 [adam 2020-01-08]
+	Updated www/py-django-treebeard to 4.3.1 [adam 2020-01-08]
