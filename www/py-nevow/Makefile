@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2018/06/19 12:12:25 adam Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/08 21:37:58 adam Exp $
 
-DISTNAME=	Nevow-0.14.4
+DISTNAME=	Nevow-0.14.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=N/Nevow/}
@@ -21,7 +21,7 @@ PYTHON_VERSIONS_ACCEPTED=	27
 INSTALLATION_DIRS+=	share/doc
 
 post-install:
-	cd ${DESTDIR}${PREFIX} && mv doc share/doc/py-nevow
+	cd ${DESTDIR}${PREFIX} && ${MV} doc share/doc/py-nevow
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
