@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/08 15:24:55 wiz Exp $
+share/fonts/X11/TTF/UnifrakturMaguntia.ttf
+share/fonts/X11/TTF/UnifrakturMaguntia16.ttf
+share/fonts/X11/TTF/UnifrakturMaguntia17.ttf
+share/fonts/X11/TTF/UnifrakturMaguntia18.ttf
+share/fonts/X11/TTF/UnifrakturMaguntia19.ttf
+share/fonts/X11/TTF/UnifrakturMaguntia20.ttf
+share/fonts/X11/TTF/UnifrakturMaguntia21.ttf
