@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.258 2020/01/08 13:41:42 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.259 2020/01/08 13:42:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -292,3 +292,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/simutrans to 121.0 [nia 2020-01-08]
 	Updated games/teeworlds to 0.7.4 [nia 2020-01-08]
 	Updated multimedia/ffmpeg3 to 3.4.7 [wiz 2020-01-08]
+	Updated multimedia/ffplay3 to 3.4.7 [wiz 2020-01-08]
