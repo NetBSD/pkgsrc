@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/01/08 13:44:42 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/08 21:19:55 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-expat-${PY_DISTVERSION}
 CATEGORIES=	textproc python
@@ -10,7 +10,6 @@ COMMENT=	Python interface to expat
 USE_GCC_RUNTIME=	yes
 
 PYDISTUTILSPKG=		yes
-PY_PATCHPLIST=		yes
 PY_SETUP_SUBST+=	EXPATPREFIX=${BUILDLINK_DIR}
 PY_SETUP_SUBST+=	EXPATRTPREFIX=${BUILDLINK_PREFIX.expat}
 
