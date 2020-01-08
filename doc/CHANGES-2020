@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.264 2020/01/08 14:27:09 nia Exp $
+$NetBSD: CHANGES-2020,v 1.265 2020/01/08 14:46:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -298,3 +298,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed chat/climm [nia 2020-01-08]
 	Removed chat/vicq [nia 2020-01-08]
 	Removed chat/icqlib [nia 2020-01-08]
+	Removed chat/p5-Net-ICQ2000 [nia 2020-01-08]
