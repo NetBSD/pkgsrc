@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/07/01 14:01:27 nia Exp $
+$NetBSD: distinfo,v 1.4 2020/01/08 13:40:19 nia Exp $
 
-SHA1 (teeworlds-0.7.3.1-src.tar.gz) = 303f12f1fc83773c242a84b40826b4e2c2897286
-RMD160 (teeworlds-0.7.3.1-src.tar.gz) = de2af1dcc356e9b1fe1a9fbd62c997d4b158f187
-SHA512 (teeworlds-0.7.3.1-src.tar.gz) = 7ead583136921d74d4e1923ac035e07e441e070681fa2abc030b99c4cac3b8ab62bc77c78b0901bfb2da2c94c6f33444841ccfda66de1cd21b64becb8a27c501
-Size (teeworlds-0.7.3.1-src.tar.gz) = 8682272 bytes
+SHA1 (teeworlds-0.7.4-src.tar.gz) = 237fc18b74a442633f963109e475cb1e80effe91
+RMD160 (teeworlds-0.7.4-src.tar.gz) = 5dd974c41bf2ca9fa07cb2e48eda19e933741413
+SHA512 (teeworlds-0.7.4-src.tar.gz) = 4c089f0eac26ad9956c8675aaf3504d4005d972c99f0f1c9e49e875bc2759ff2953961fedc0a75bd7debdfd9eb25b74bec32b2f94f319bbb7a5e3a985ddafd47
+Size (teeworlds-0.7.4-src.tar.gz) = 8924583 bytes
