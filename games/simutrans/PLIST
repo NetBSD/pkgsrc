@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/26 11:27:09 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/08 13:23:21 nia Exp $
 bin/simutrans
 share/applications/simutrans.desktop
 share/doc/simutrans/change_request.txt
@@ -86,6 +86,9 @@ share/simutrans/music/47-Salty-Breeze.mid
 share/simutrans/music/48-Techno-movement.mid
 share/simutrans/music/49-Last-Sunday.mid
 share/simutrans/music/50-Where-Thomassons-Lie.mid
+share/simutrans/music/51-Summer-Intersection.mid
+share/simutrans/music/52-Dreamy-Oriental-Nights.mid
+share/simutrans/music/53-Snowy-Road.mid
 share/simutrans/music/music.tab
 share/simutrans/music/readme.txt
 share/simutrans/script/ai_base.nut
@@ -680,7 +683,6 @@ share/simutrans/text/sk/schedule.txt
 share/simutrans/text/sk/shiptools.txt
 share/simutrans/text/sk/sound.txt
 share/simutrans/text/sk/station.txt
-share/simutrans/text/sq.tab
 share/simutrans/text/sv.tab
 share/simutrans/text/sv/airtools.txt
 share/simutrans/text/sv/baum_build.txt
@@ -692,7 +694,6 @@ share/simutrans/text/sv/signal_spacing.txt
 share/simutrans/text/sv/simutrans.txt
 share/simutrans/text/sv/underground.txt
 share/simutrans/text/th.tab
-share/simutrans/text/tr.tab
 share/simutrans/text/tr/airtools.txt
 share/simutrans/text/translate_users.txt
 share/simutrans/text/uk.tab
