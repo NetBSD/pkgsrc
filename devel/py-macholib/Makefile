@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2018/11/30 13:06:23 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/08 21:45:57 adam Exp $
 
-DISTNAME=	macholib-1.11
+DISTNAME=	macholib-1.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/macholib/}
@@ -20,9 +20,9 @@ REPLACE_PYTHON+=	macholib/macho_standalone.py
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} macho_dump macho_dump-${PYVERSSUFFIX} && \
-		${MV} macho_find macho_find-${PYVERSSUFFIX} && \
-		${MV} macho_standalone macho_standalone-${PYVERSSUFFIX} || ${TRUE}
+	${MV} macho_dump macho_dump-${PYVERSSUFFIX} && \
+	${MV} macho_find macho_find-${PYVERSSUFFIX} && \
+	${MV} macho_standalone macho_standalone-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
