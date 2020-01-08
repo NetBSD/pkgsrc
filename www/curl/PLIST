@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2019/11/06 09:17:29 leot Exp $
+@comment $NetBSD: PLIST,v 1.78 2020/01/08 11:59:18 leot Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -418,6 +418,7 @@ man/man3/curl_multi_socket_all.3
 man/man3/curl_multi_strerror.3
 man/man3/curl_multi_timeout.3
 man/man3/curl_multi_wait.3
+man/man3/curl_multi_wakeup.3
 man/man3/curl_share_cleanup.3
 man/man3/curl_share_init.3
 man/man3/curl_share_setopt.3
