@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2020/01/08 14:26:24 nia Exp $
+# $NetBSD: Makefile,v 1.235 2020/01/08 14:45:51 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -87,7 +87,6 @@ SUBDIR+=	p5-IRC-Utils
 SUBDIR+=	p5-Net-AIM
 SUBDIR+=	p5-Net-AOLIM
 SUBDIR+=	p5-Net-Goofey
-SUBDIR+=	p5-Net-ICQ2000
 SUBDIR+=	p5-Net-Jabber
 SUBDIR+=	p5-POE-Component-IRC
 SUBDIR+=	p5-POE-Filter-IRCD
