@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/06/21 09:57:57 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/01/08 19:08:18 adam Exp $
 
-SHA1 (h2-3.0.1.tar.gz) = cf645989412368f6c925145e9e97f946b4e20ee4
-RMD160 (h2-3.0.1.tar.gz) = 209dbe04edb223e4408f4730cb7e0ef13a21c79e
-SHA512 (h2-3.0.1.tar.gz) = 4206ed9b298477b02cb4ae6be3f3e421225f14b25c327a324544f8ffe2246b949d8f1f0171f2c6821afb32aa7a8c1ac976e1221217c0296d0e6ebea8877f4d02
-Size (h2-3.0.1.tar.gz) = 2208816 bytes
+SHA1 (h2-3.1.1.tar.gz) = c3f8ec250f663f490e06f1c9133dc84ffd038a84
+RMD160 (h2-3.1.1.tar.gz) = b65a0b4dcc2ad03b1021648eb35d01b364fc7e1c
+SHA512 (h2-3.1.1.tar.gz) = 6595b23f5b76eab7cd8b29fc96c9014fc58fe2974b306a067d5a0f6e3d2ce51a3e582bffc0004910eac7246add4347ac62db714de8f7def8196a65836db50d24
+Size (h2-3.1.1.tar.gz) = 2214612 bytes
