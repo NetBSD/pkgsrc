@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.285 2019/11/19 16:54:19 wiz Exp $
+# $NetBSD: Makefile,v 1.286 2020/01/08 17:31:11 wiz Exp $
 
-DISTNAME=		gnucash-3.7
+DISTNAME=		gnucash-3.8b
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,6 +17,7 @@ DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 # instead of USE_TOOLS+=msgfmt, since we need a newer version
 TOOL_DEPENDS+=		gettext-tools>=0.19.6:../../devel/gettext-tools
 
+WRKSRC=			${WRKDIR}/${DISTNAME:S/b$//}
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 USE_LIBTOOL=		yes
