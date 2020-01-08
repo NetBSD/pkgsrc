@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2017/08/16 20:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/08 11:48:57 nia Exp $
 
-DISTNAME=	cosmosmash-1.4.7
+DISTNAME=	cosmosmash-1.4.8
 CATEGORIES=	games
-MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/
+MASTER_SITES=	https://perso.b2b2c.ca/~sarrazip/dev/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://perso.b2b2c.ca/~sarrazip/dev/cosmosmash.html
+HOMEPAGE=	https://perso.b2b2c.ca/~sarrazip/dev/cosmosmash.html
 COMMENT=	Space rock shooting video game
 LICENSE=	gnu-gpl-v2
 
@@ -15,4 +15,5 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 .include "../../devel/flatzebra/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
