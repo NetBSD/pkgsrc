@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/08 20:04:28 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/sniffio/__init__.py
+${PYSITELIB}/sniffio/__init__.pyc
+${PYSITELIB}/sniffio/__init__.pyo
+${PYSITELIB}/sniffio/_impl.py
+${PYSITELIB}/sniffio/_impl.pyc
+${PYSITELIB}/sniffio/_impl.pyo
+${PYSITELIB}/sniffio/_tests/__init__.py
+${PYSITELIB}/sniffio/_tests/__init__.pyc
+${PYSITELIB}/sniffio/_tests/__init__.pyo
+${PYSITELIB}/sniffio/_tests/test_sniffio.py
+${PYSITELIB}/sniffio/_tests/test_sniffio.pyc
+${PYSITELIB}/sniffio/_tests/test_sniffio.pyo
+${PYSITELIB}/sniffio/_version.py
+${PYSITELIB}/sniffio/_version.pyc
+${PYSITELIB}/sniffio/_version.pyo
