@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.276 2020/01/08 20:04:56 adam Exp $
+$NetBSD: CHANGES-2020,v 1.277 2020/01/08 21:03:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -313,3 +313,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Added misc/py-immutables version 0.11 [adam 2020-01-08]
 	Added devel/py-contextvars version 2.4 [adam 2020-01-08]
 	Added misc/py-sniffio version 1.1.0 [adam 2020-01-08]
+	Added www/py-hstspreload version 2020.1.7 [adam 2020-01-08]
+	Added www/py-httpx version 0.10.1 [adam 2020-01-08]
+	Added www/py-uvicorn version 0.11.1 [adam 2020-01-08]
+	Updated www/py-sanic to 19.12.2 [adam 2020-01-08]
