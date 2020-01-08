@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/01/03 08:03:59 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/08 13:44:42 joerg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-cElementTree-${PY_DISTVERSION}
 CATEGORIES=	textproc python
@@ -7,23 +7,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.effbot.org/zone/celementtree.htm
 COMMENT=	C implementation of Python ElementTree API
 
-EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_elementtree.c
-
 USE_GCC_RUNTIME=	yes
-USE_TOOLS+=		patch
 
 PYDISTUTILSPKG=		yes
 PY_SETUP_SUBST+=	EXPATPREFIX=${BUILDLINK_DIR}
 PY_SETUP_SUBST+=	EXPATRTPREFIX=${BUILDLINK_PREFIX.expat}
 
 PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
-
-# ignore errors due to missing files (EXTRACT_ELEMENTS!)
-do-patch:
-	(cd ${WRKSRC}; \
-	for f in ${PATCHDIR}/patch-*;do \
-	${PATCH} --batch <$$f || ${TRUE}; \
-	done)
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../lang/python/extension.mk"

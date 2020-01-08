@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/11/03 10:18:28 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/08 13:44:41 joerg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-idle-${PY_DISTVERSION}
 CATEGORIES=	devel python
@@ -10,13 +10,6 @@ COMMENT=	IDLE - The Integrated DeveLopment Environment for Python
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 PY_PATCHPLIST=	yes
-
-# ignore errors due to missing files (EXTRACT_ELEMENTS!)
-do-patch:
-	(cd ${WRKSRC}; \
-	for f in ${PATCHDIR}/patch-*;do \
-	${PATCH} --batch <$$f || ${TRUE}; \
-	done)
 
 #
 # With Python-2.3 and up, the Idle code is part of the base library.
@@ -31,7 +24,6 @@ IDLE_NAME=	idle3
 IDLE_NAME=	idle
 .endif
 
-EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/scripts/${IDLE_NAME}
 REPLACE_PYTHON=		Tools/scripts/${IDLE_NAME}
 NO_BUILD=		yes
 INSTALLATION_DIRS=	bin
