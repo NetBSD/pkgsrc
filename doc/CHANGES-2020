@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.251 2020/01/08 12:48:03 nia Exp $
+$NetBSD: CHANGES-2020,v 1.252 2020/01/08 12:53:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -285,3 +285,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/hdf5-c++ to 1.10.6 [nia 2020-01-08]
 	Updated net/lftp to 4.9.0 [nia 2020-01-08]
 	Updated graphics/libwebp to 1.1.0 [nia 2020-01-08]
+	Removed wm/metacity successor wm/marco [nia 2020-01-08]
