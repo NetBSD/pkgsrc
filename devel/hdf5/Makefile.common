@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.19 2019/10/06 12:05:33 nia Exp $
+# $NetBSD: Makefile.common,v 1.20 2020/01/08 12:30:34 nia Exp $
 # used by devel/hdf5/Makefile
 # used by devel/hdf5-c++/Makefile
 
-DISTNAME=	hdf5-1.10.5
+DISTNAME=	hdf5-1.10.6
 CATEGORIES=	devel
 MASTER_SITES=	https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-${PKGVERSION_NOREV}/src/
 EXTRACT_SUFX=	.tar.bz2
