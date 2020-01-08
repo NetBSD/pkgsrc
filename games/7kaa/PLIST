@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/30 11:47:15 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/01/08 16:59:07 nia Exp $
 bin/7kaa
 share/7kaa/ENCYC/FIRM/FACTORY.COL
 share/7kaa/ENCYC/FIRM/FACTORY.ICN
@@ -310,6 +310,7 @@ share/7kaa/SCENARI2/SCN_14.SCT
 share/7kaa/SCENARI2/SCN_15.SCN
 share/7kaa/SCENARI2/SCN_15.SCP
 share/7kaa/SCENARI2/SCN_15.SCT
+share/7kaa/SCENARI2/config.txt
 share/7kaa/SCENARIO/7FOR7.SCN
 share/7kaa/SCENARIO/7FOR7.SCP
 share/7kaa/SCENARIO/7FOR7.SCT
@@ -379,6 +380,7 @@ share/7kaa/SCENARIO/VIKBLITZ.SCT
 share/7kaa/SCENARIO/WEAKENED.SCN
 share/7kaa/SCENARIO/WEAKENED.SCP
 share/7kaa/SCENARIO/WEAKENED.SCT
+share/7kaa/SCENARIO/config.txt
 share/7kaa/SOUND/FIRE.WAV
 share/7kaa/SOUND/QUAKE.WAV
 share/7kaa/SOUND/RAIN.WAV
@@ -494,6 +496,7 @@ share/7kaa/TUTORIAL/8FRYHTAN.TUT
 share/7kaa/TUTORIAL/9SEATPOW.TUT
 share/7kaa/TUTORIAL/LOYALTY.TUT
 share/7kaa/TUTORIAL/SPYING.TUT
+share/7kaa/TUTORIAL/config.txt
 share/applications/7kaa.desktop
 share/doc/7kaa/COPYING
 share/doc/7kaa/README
