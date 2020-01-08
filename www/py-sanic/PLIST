@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/04/04 12:25:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/01/08 21:03:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,15 +10,24 @@ ${PYSITELIB}/sanic/__init__.pyo
 ${PYSITELIB}/sanic/__main__.py
 ${PYSITELIB}/sanic/__main__.pyc
 ${PYSITELIB}/sanic/__main__.pyo
+${PYSITELIB}/sanic/__version__.py
+${PYSITELIB}/sanic/__version__.pyc
+${PYSITELIB}/sanic/__version__.pyo
 ${PYSITELIB}/sanic/app.py
 ${PYSITELIB}/sanic/app.pyc
 ${PYSITELIB}/sanic/app.pyo
+${PYSITELIB}/sanic/asgi.py
+${PYSITELIB}/sanic/asgi.pyc
+${PYSITELIB}/sanic/asgi.pyo
 ${PYSITELIB}/sanic/blueprint_group.py
 ${PYSITELIB}/sanic/blueprint_group.pyc
 ${PYSITELIB}/sanic/blueprint_group.pyo
 ${PYSITELIB}/sanic/blueprints.py
 ${PYSITELIB}/sanic/blueprints.pyc
 ${PYSITELIB}/sanic/blueprints.pyo
+${PYSITELIB}/sanic/compat.py
+${PYSITELIB}/sanic/compat.pyc
+${PYSITELIB}/sanic/compat.pyo
 ${PYSITELIB}/sanic/config.py
 ${PYSITELIB}/sanic/config.pyc
 ${PYSITELIB}/sanic/config.pyo
@@ -34,6 +43,9 @@ ${PYSITELIB}/sanic/exceptions.pyo
 ${PYSITELIB}/sanic/handlers.py
 ${PYSITELIB}/sanic/handlers.pyc
 ${PYSITELIB}/sanic/handlers.pyo
+${PYSITELIB}/sanic/headers.py
+${PYSITELIB}/sanic/headers.pyc
+${PYSITELIB}/sanic/headers.pyo
 ${PYSITELIB}/sanic/helpers.py
 ${PYSITELIB}/sanic/helpers.pyc
 ${PYSITELIB}/sanic/helpers.pyo
