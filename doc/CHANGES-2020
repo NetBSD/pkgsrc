@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.240 2020/01/08 11:46:36 nia Exp $
+$NetBSD: CHANGES-2020,v 1.241 2020/01/08 11:49:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -273,3 +273,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-google-auth to 1.10.0 [adam 2020-01-08]
 	Updated games/afternoonstalker to 1.1.6 [nia 2020-01-08]
 	Updated games/quadrupleback to 0.1.1 [nia 2020-01-08]
+	Updated games/cosmosmash to 1.4.8 [nia 2020-01-08]
