@@ -1,7 +1,0 @@
-climm is a very portable text-mode ICQ clone (formerly known as micq).
-
-Originally written by Matthew D. Smith, a great part of climm
-has been rewritten by Ruediger Kuhlmann, in particular the support
-for the new version 8 of the OSCAR protocol that became necessary,
-the internationalization, the file transfer and some restructuring
-of the code.
