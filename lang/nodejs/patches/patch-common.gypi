@@ -1,10 +1,10 @@
-$NetBSD: patch-common.gypi,v 1.7 2018/05/03 21:19:16 fhajny Exp $
+$NetBSD: patch-common.gypi,v 1.8 2020/01/08 22:30:38 adam Exp $
 
 Add support for NetBSD.
 
---- common.gypi.orig	2018-04-24 14:41:15.000000000 +0000
+--- common.gypi.orig	2020-01-07 22:07:48.000000000 +0000
 +++ common.gypi
-@@ -315,11 +315,11 @@
+@@ -326,11 +326,11 @@
            'BUILDING_UV_SHARED=1',
          ],
        }],
@@ -17,4 +17,4 @@ Add support for NetBSD.
 +      [ 'OS in "linux freebsd openbsd netbsd netbsd solaris android aix cloudabi"', {
          'cflags': [ '-Wall', '-Wextra', '-Wno-unused-parameter', ],
          'cflags_cc': [ '-fno-rtti', '-fno-exceptions', '-std=gnu++1y' ],
-         'ldflags': [ '-rdynamic' ],
+         'defines': [ '__STDC_FORMAT_MACROS' ],
