@@ -1,3 +1,6 @@
-Statsmodels is a Python package that provides a complement to scipy
-for statistical computations including descriptive statistics and
-estimation and inference for statistical models
+statsmodels is a Python module that provides classes and functions for
+the estimation of many different statistical models, as well as for
+conducting statistical tests, and statistical data exploration. An
+extensive list of result statistics are available for each
+estimator. The results are tested against existing statistical
+packages to ensure that they are correct.
