@@ -1,17 +1,15 @@
-$NetBSD: patch-setup.py,v 1.3 2019/04/04 12:25:38 adam Exp $
+$NetBSD: patch-setup.py,v 1.4 2020/01/08 21:03:21 adam Exp $
 
 Allow newer versions.
 
---- setup.py.orig	2019-03-23 02:52:58.000000000 +0000
+--- setup.py.orig	2020-01-02 21:35:13.000000000 +0000
 +++ setup.py
-@@ -81,8 +81,8 @@ requirements = [
-     uvloop,
-     ujson,
+@@ -84,7 +84,7 @@ requirements = [
      "aiofiles>=0.3.0",
--    "websockets>=6.0,<7.0",
--    "multidict>=4.0,<5.0",
-+    "websockets>=6.0",
-+    "multidict>=4.0",
+     "websockets>=7.0,<9.0",
+     "multidict>=4.0,<5.0",
+-    "httpx==0.9.3",
++    "httpx>=0.9.3",
  ]
  
  tests_require = [
