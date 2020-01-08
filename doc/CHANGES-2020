@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.277 2020/01/08 21:03:58 adam Exp $
+$NetBSD: CHANGES-2020,v 1.278 2020/01/08 21:08:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -317,3 +317,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/py-httpx version 0.10.1 [adam 2020-01-08]
 	Added www/py-uvicorn version 0.11.1 [adam 2020-01-08]
 	Updated www/py-sanic to 19.12.2 [adam 2020-01-08]
+	Updated www/py-websocket-client to 0.57.0 [adam 2020-01-08]
+	Updated www/py-beautifulsoup4 to 4.8.2 [adam 2020-01-08]
