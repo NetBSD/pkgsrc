@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/12/31 10:22:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/01/08 15:19:14 adam Exp $
 bin/pydisassemble-${PYVERSSUFFIX}
 bin/uncompyle6-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -111,6 +111,8 @@ ${PYSITELIB}/uncompyle6/parsers/parse37base.py
 ${PYSITELIB}/uncompyle6/parsers/parse37base.pyc
 ${PYSITELIB}/uncompyle6/parsers/parse37base.pyo
 ${PYSITELIB}/uncompyle6/parsers/parse38.py
+${PYSITELIB}/uncompyle6/parsers/parse38.pyc
+${PYSITELIB}/uncompyle6/parsers/parse38.pyo
 ${PYSITELIB}/uncompyle6/parsers/treenode.py
 ${PYSITELIB}/uncompyle6/parsers/treenode.pyc
 ${PYSITELIB}/uncompyle6/parsers/treenode.pyo
@@ -264,9 +266,15 @@ ${PYSITELIB}/uncompyle6/semantics/helper.pyo
 ${PYSITELIB}/uncompyle6/semantics/linemap.py
 ${PYSITELIB}/uncompyle6/semantics/linemap.pyc
 ${PYSITELIB}/uncompyle6/semantics/linemap.pyo
-${PYSITELIB}/uncompyle6/semantics/make_function.py
-${PYSITELIB}/uncompyle6/semantics/make_function.pyc
-${PYSITELIB}/uncompyle6/semantics/make_function.pyo
+${PYSITELIB}/uncompyle6/semantics/make_function2.py
+${PYSITELIB}/uncompyle6/semantics/make_function2.pyc
+${PYSITELIB}/uncompyle6/semantics/make_function2.pyo
+${PYSITELIB}/uncompyle6/semantics/make_function3.py
+${PYSITELIB}/uncompyle6/semantics/make_function3.pyc
+${PYSITELIB}/uncompyle6/semantics/make_function3.pyo
+${PYSITELIB}/uncompyle6/semantics/make_function36.py
+${PYSITELIB}/uncompyle6/semantics/make_function36.pyc
+${PYSITELIB}/uncompyle6/semantics/make_function36.pyo
 ${PYSITELIB}/uncompyle6/semantics/parser_error.py
 ${PYSITELIB}/uncompyle6/semantics/parser_error.pyc
 ${PYSITELIB}/uncompyle6/semantics/parser_error.pyo
