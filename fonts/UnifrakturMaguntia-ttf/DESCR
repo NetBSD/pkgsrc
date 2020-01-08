@@ -1,0 +1,20 @@
+UnifrakturMaguntia is a Unicode Fraktur Font.
+
+UnifrakturMaguntia is based on Peter Wiegel's font Berthold Mainzer
+Fraktur. The main differences from Peter Wiegel's font are the
+following:
+
+* UnifrakturMaguntia uses OpenType for displaying the font's
+  ligatures.
+
+* UnifrakturMaguntia is suitable for @font-face embedding on the
+  Internet. It has a permissive license, the OFL, that explicitly
+  allows font embedding.
+
+* G. Ansmann has carefully redrawn all glyphs and significantly
+  expanded the font.
+
+For an extensive documentation created by G. Ansmann, see
+UnifrakturMaguntia, Manual (with General Rules for Typesetting
+Fraktur), or UnifrakturMaguntia, Manual (with General Rules for
+Typesetting Fraktur).
