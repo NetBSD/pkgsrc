@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.12 2019/05/31 18:11:51 maya Exp $
-
-.include "../../mk/bsd.fast.prefs.mk"
+# $NetBSD: options.mk,v 1.13 2020/01/08 23:40:42 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.retroarch
 
 PKG_SUPPORTED_OPTIONS+=		libdrm sdl2 sixel qt5 x11 caca
 PKG_SUPPORTED_OPTIONS+=		ffmpeg freetype mbedtls
 PKG_SUPPORTED_OPTIONS+=		alsa jack openal pulseaudio
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == "Linux"
 PKG_SUPPORTED_OPTIONS+=		udev
