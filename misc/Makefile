@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.527 2020/01/04 13:13:59 nia Exp $
+# $NetBSD: Makefile,v 1.528 2020/01/08 20:01:40 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -246,6 +246,7 @@ SUBDIR+=	py-anita
 SUBDIR+=	py-ansi
 SUBDIR+=	py-asciinema
 SUBDIR+=	py-carddav
+SUBDIR+=	py-immutables
 SUBDIR+=	py-stdnum
 SUBDIR+=	py-tqdm
 SUBDIR+=	py-trytond-carrier
