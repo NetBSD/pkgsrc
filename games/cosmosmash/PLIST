@@ -1,14 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/28 23:35:15 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/08 11:48:57 nia Exp $
 bin/cosmosmash
 man/man6/cosmosmash.6
 share/applications/cosmosmash.desktop
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/COPYING
-share/doc/${PKGNAME}/INSTALL
 share/doc/${PKGNAME}/NEWS
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/THANKS
-share/doc/${PKGNAME}/TODO
 share/pixmaps/cosmosmash.png
 share/sounds/cosmosmash/hyperspace.wav
 share/sounds/cosmosmash/level-finished.wav
