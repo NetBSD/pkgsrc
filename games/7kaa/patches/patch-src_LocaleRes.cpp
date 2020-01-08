@@ -1,11 +1,11 @@
-$NetBSD: patch-src_LocaleRes.cpp,v 1.3 2019/10/25 10:00:58 kamil Exp $
+$NetBSD: patch-src_LocaleRes.cpp,v 1.4 2020/01/08 16:59:07 nia Exp $
 
 Support NetBSD and SunOS iconv being special.
 
---- src/LocaleRes.cpp.orig	2019-06-22 22:22:26.000000000 +0000
+--- src/LocaleRes.cpp.orig	2019-12-22 22:27:28.000000000 +0000
 +++ src/LocaleRes.cpp
-@@ -30,6 +30,15 @@
- #include <ODB.h>
+@@ -31,6 +31,15 @@
+ #include <ConfigAdv.h>
  #include <LocaleRes.h>
  
 +#if defined(__NetBSD__)
@@ -20,7 +20,7 @@ Support NetBSD and SunOS iconv being special.
  //------------- End of function Constructor -------//
  //
  LocaleRes::LocaleRes()
-@@ -169,7 +178,11 @@ const char *LocaleRes::conv_str(iconv_t 
+@@ -191,7 +200,11 @@ const char *LocaleRes::conv_str(iconv_t 
  	size_t c;
  	while( in_left>0 )
  	{
