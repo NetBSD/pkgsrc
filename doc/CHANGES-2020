@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.261 2020/01/08 13:57:16 wen Exp $
+$NetBSD: CHANGES-2020,v 1.262 2020/01/08 14:19:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -295,3 +295,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/ffplay3 to 3.4.7 [wiz 2020-01-08]
 	Updated www/p5-Dancer2 to 0.300000 [wen 2020-01-08]
 	Updated textproc/p5-Text-Xslate to 3.5.7 [wen 2020-01-08]
+	Removed chat/climm [nia 2020-01-08]
