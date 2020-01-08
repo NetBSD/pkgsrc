@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2019/11/28 06:44:12 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/01/08 22:33:05 adam Exp $
 
-SHA1 (prometheus-2.14.0.tar.gz) = 1aac259ad55d4882da81cc00d797db15c64a00a3
-RMD160 (prometheus-2.14.0.tar.gz) = 22f7a8eff328b7ac6c1788fb0662f5b67c241b12
-SHA512 (prometheus-2.14.0.tar.gz) = 077d83ef06a6ef77b6aa0d47ef0aa276f50b89c818f6cbe0163a4167d0ceb7fbcaf828a6341ba91cde303a0c6c7e2440de99ea0500a48a9059adb37a34a78a7a
-Size (prometheus-2.14.0.tar.gz) = 12755125 bytes
+SHA1 (prometheus-2.15.2.tar.gz) = 0e17ab634683b9495ec93fbd5265d7b538050b7a
+RMD160 (prometheus-2.15.2.tar.gz) = e6c1c4f380711cd4a3c73bf5ededed4be17c8109
+SHA512 (prometheus-2.15.2.tar.gz) = a444acd9b18aa3d62eab8e5807ef0cfee44165e1b80a979f61c42c99d104ad2a1991729704e5ae7423b881bc247de6f42eb2682c23e41cbbc31da58ad4e9b169
+Size (prometheus-2.15.2.tar.gz) = 12852804 bytes
 SHA1 (patch-cmd_prometheus_main.go) = b3f3f8872ad19f823424009090fdf4705e7af257
+SHA1 (patch-web_ui_ui.go) = e940f49f6f3dddf2d3bbae18a18f3b5411e68c11
