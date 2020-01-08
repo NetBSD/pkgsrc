@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.31 2016/10/19 11:59:25 fhajny Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/08 11:59:43 nia Exp $
 
-DISTNAME=	GeoIP-1.6.9
+DISTNAME=	GeoIP-1.6.12
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=maxmind/}
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.maxmind.com/app/c
-COMMENT=	GeoIP Legacy C API
-LICENSE=	gnu-lgpl-v2.1
-
 GITHUB_PROJECT=	geoip-api-c
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/maxmind/geoip-api-c
+COMMENT=	GeoIP Legacy C API
+LICENSE=	gnu-lgpl-v2.1
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
