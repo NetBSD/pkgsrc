@@ -1,10 +1,12 @@
-# $NetBSD: options.mk,v 1.1 2020/01/05 21:15:45 rillig Exp $
+# $NetBSD: options.mk,v 1.2 2020/01/08 17:00:06 minskim Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc9
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
 			gcc-go gcc-objc gcc-objc++ always-libgcc
 PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ \
 			gcc-inplace-math
+
+PLIST_VARS+=	nls
 
 .if ${OPSYS} == NetBSD || ${OPSYS} == Linux || ${OPSYS} == DragonFly
 PKG_SUGGESTED_OPTIONS+=	nls
@@ -75,6 +77,7 @@ USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
+PLIST.nls=		yes
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .else
