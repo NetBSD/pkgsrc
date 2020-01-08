@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.233 2020/01/08 14:19:23 nia Exp $
+# $NetBSD: Makefile,v 1.234 2020/01/08 14:26:24 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -42,7 +42,6 @@ SUBDIR+=	i2cb
 SUBDIR+=	i2cbd
 SUBDIR+=	icb
 SUBDIR+=	icbirc
-SUBDIR+=	icqlib
 SUBDIR+=	ii
 SUBDIR+=	inspircd
 SUBDIR+=	inspircd3
@@ -143,7 +142,6 @@ SUBDIR+=	tkirc2
 SUBDIR+=	tootstream
 SUBDIR+=	toxcore
 SUBDIR+=	unrealircd
-SUBDIR+=	vicq
 SUBDIR+=	weechat
 SUBDIR+=	xaric
 SUBDIR+=	ysm
