@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pre-build,v 1.14 2015/09/12 23:04:30 joerg Exp $
+# $NetBSD: pre-build,v 1.15 2020/01/08 15:12:01 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -114,6 +114,7 @@ compiler=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=PKGSRC_C
 echo "PLATFORM=${opsys} ${opver}/${platform}" > ${loc}/status
 echo "COMPILER=${compiler}" >> ${loc}/status
 
-date '+%Y-%m-%d %H:%M|%Y%m%d.%H%M' | sed 's/^\(.*\)|\(.*\)$/BUILD_START_ISO=\1\
-BUILD_START_DIR=\2/' >> ${loc}/status
+date '+BUILD_START_ISO=%Y-%m-%d %H:%M
+BUILD_START_DIR=%Y%m%d.%H%M
+BUILD_START_EPOCHE=%s' >> ${loc}/status
 echo "BASE_URL=${base_url}" >> ${loc}/status

@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: scan,v 1.9 2014/11/24 00:52:09 asau Exp $
+# $NetBSD: scan,v 1.10 2020/01/08 15:12:01 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -113,3 +113,4 @@ else
 		exit 1
 	fi
 fi
+date '+SCAN_END_EPOCHE=%s' >> ${loc}/status
