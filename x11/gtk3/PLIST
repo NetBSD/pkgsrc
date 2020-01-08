@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2019/11/06 14:51:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/01/08 14:57:29 adam Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -55,6 +55,7 @@ include/gtk-3.0/gdk/gdkvisual.h
 ${PLIST.wayland}include/gtk-3.0/gdk/gdkwayland.h
 include/gtk-3.0/gdk/gdkwindow.h
 ${PLIST.x11}include/gtk-3.0/gdk/gdkx.h
+${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartz-gtk-only.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzcursor.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzdevice-core.h
 ${PLIST.quartz}include/gtk-3.0/gdk/quartz/gdkquartzdevicemanager-core.h
@@ -425,6 +426,7 @@ include/gtk-3.0/unix-print/gtk/gtkunixprint.h
 lib/girepository-1.0/Gdk-3.0.typelib
 ${PLIST.x11}lib/girepository-1.0/GdkX11-3.0.typelib
 lib/girepository-1.0/Gtk-3.0.typelib
+@pkgdir lib/gtk-3.0/3.0.0/filesystems
 lib/gtk-3.0/3.0.0/immodules/im-am-et.la
 lib/gtk-3.0/3.0.0/immodules/im-cedilla.la
 lib/gtk-3.0/3.0.0/immodules/im-cyrillic-translit.la
@@ -442,6 +444,8 @@ ${PLIST.x11}lib/gtk-3.0/3.0.0/immodules/im-xim.la
 ${PLIST.cups}lib/gtk-3.0/3.0.0/printbackends/libprintbackend-cups.la
 lib/gtk-3.0/3.0.0/printbackends/libprintbackend-file.la
 lib/gtk-3.0/3.0.0/printbackends/libprintbackend-lpr.la
+@pkgdir lib/gtk-3.0/immodules
+@pkgdir lib/gtk-3.0/modules
 lib/libgailutil-3.la
 lib/libgdk-3.la
 lib/libgtk-3.la
@@ -1406,6 +1410,3 @@ share/locale/zh_TW/LC_MESSAGES/gtk30.mo
 share/themes/Default/gtk-3.0/gtk-keys.css
 share/themes/Emacs/gtk-3.0/gtk-keys.css
 ${PLIST.quartz}share/themes/Mac/gtk-3.0/gtk-keys.css
-@pkgdir lib/gtk-3.0/modules
-@pkgdir lib/gtk-3.0/immodules
-@pkgdir lib/gtk-3.0/3.0.0/filesystems
