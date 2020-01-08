@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/28 20:46:24 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/08 11:43:42 nia Exp $
 bin/afternoonstalker
 man/man6/afternoonstalker.6
 share/afternoonstalker/maze0.set
@@ -7,11 +7,9 @@ share/afternoonstalker/maze2.set
 share/applications/afternoonstalker.desktop
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/COPYING
-share/doc/${PKGNAME}/INSTALL
 share/doc/${PKGNAME}/NEWS
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/THANKS
-share/doc/${PKGNAME}/TODO
 share/pixmaps/afternoonstalker.png
 share/sounds/afternoonstalker/bat-killed.wav
 share/sounds/afternoonstalker/gun-pickup.wav
