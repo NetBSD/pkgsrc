@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.255 2020/01/08 13:15:51 nia Exp $
+$NetBSD: CHANGES-2020,v 1.256 2020/01/08 13:23:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -289,3 +289,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/quakespasm to 0.93.2 [nia 2020-01-08]
 	Updated devel/waf to 2.0.19 [wiz 2020-01-08]
 	Updated sysutils/screenfetch to 3.9.1 [nia 2020-01-08]
+	Updated games/simutrans to 121.0 [nia 2020-01-08]
