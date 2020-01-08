@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2019/11/04 21:43:42 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/08 13:55:32 wen Exp $
 
-DISTNAME=	Text-Xslate-v3.5.6
+DISTNAME=	Text-Xslate-v3.5.7
 PKGNAME=	p5-${DISTNAME:S/-v/-/}
-PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SK/SKAJI/}
 
