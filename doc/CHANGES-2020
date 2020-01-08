@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.244 2020/01/08 11:59:27 leot Exp $
+$NetBSD: CHANGES-2020,v 1.245 2020/01/08 11:59:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -277,3 +277,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/batrachians to 0.1.7 [nia 2020-01-08]
 	Updated graphics/feh to 3.3 [nia 2020-01-08]
 	Updated www/curl to 7.68.0 [leot 2020-01-08]
+	Updated net/GeoIP to 1.6.12 [nia 2020-01-08]
