@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2019/12/13 07:43:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/08 22:33:05 adam Exp $
 
-DISTNAME=	prometheus-2.14.0
+DISTNAME=	prometheus-2.15.2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
-PKGREVISION=	1
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -24,26 +23,37 @@ SUBST_FILES.paths+=	cmd/prometheus/main.go
 SUBST_STAGE.paths=	post-configure
 SUBST_VARS.paths=	PKG_SYSCONFDIR VARBASE
 
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/consoles ${PKG_SYSCONFDIR}/console_libraries
-EXAMPLE_DIR=		share/examples/prometheus
-EXAMPLE_FILES=		prometheus.yml
-EXAMPLE_FILES+=		consoles/index.html.example consoles/node-cpu.html \
-			consoles/node-disk.html consoles/node-overview.html \
-			consoles/node.html consoles/prometheus-overview.html \
-			consoles/prometheus.html
-EXAMPLE_FILES+=		console_libraries/menu.lib console_libraries/prom.lib
-INSTALLATION_DIRS+=	${PREFIX}/${EXAMPLE_DIR}
+SUBST_CLASSES+=		webui
+SUBST_FILES.webui=	web/ui/ui.go
+SUBST_STAGE.webui=	post-configure
+SUBST_VARS.webui=	WEBUI_DIR
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/consoles ${PKG_SYSCONFDIR}/console_libraries
+EXAMPLE_DIR=	share/examples/prometheus
+EXAMPLE_FILES=	prometheus.yml
+EXAMPLE_FILES+=	consoles/index.html.example consoles/node-cpu.html \
+		consoles/node-disk.html consoles/node-overview.html \
+		consoles/node.html consoles/prometheus-overview.html \
+		consoles/prometheus.html
+EXAMPLE_FILES+=	console_libraries/menu.lib console_libraries/prom.lib
+WEBUI_DIR=	${PREFIX}/share/prometheus
+
+INSTALLATION_DIRS+=	${PREFIX}/${EXAMPLE_DIR} ${WEBUI_DIR}
 
 .for f in ${EXAMPLE_FILES}
 CONF_FILES+=	${EXAMPLE_DIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/documentation/examples/prometheus.yml ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/documentation/examples/prometheus.yml \
+		${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
 	cd ${WRKDIR} && ${PAX} -rw bin ${DESTDIR}${PREFIX}
-	cd ${WRKSRC} && \
-		${PAX} -rw consoles ${DESTDIR}${PREFIX}/${EXAMPLE_DIR} && \
-		${PAX} -rw console_libraries ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
+.for f in consoles console_libraries
+	cd ${WRKSRC} && ${PAX} -rw ${f} ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
+.endfor
+.for f in static templates
+	cd ${WRKSRC}/web/ui && ${PAX} -rw ${f} ${DESTDIR}${WEBUI_DIR}
+.endfor
 
 post-install:
 .for f in ${EXAMPLE_FILES}
