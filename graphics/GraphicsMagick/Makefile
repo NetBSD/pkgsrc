@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.103 2020/01/08 12:11:36 nia Exp $
+# $NetBSD: Makefile,v 1.104 2020/01/08 17:32:15 nia Exp $
 
 .include "Makefile.common"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.graphicsmagick.org/
-COMMENT=	X application for displaying and manipulating images
+COMMENT=	Tools and libraries for reading, writing, and manipulating images
 LICENSE=	mit
 
 DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
