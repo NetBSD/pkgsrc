@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.221 2019/12/30 17:48:05 adam Exp $
+# $NetBSD: Makefile,v 1.222 2020/01/08 10:37:34 wiz Exp $
 
 DISTNAME=	wireshark-3.2.0
 CATEGORIES=	net
@@ -20,7 +20,7 @@ CMAKE_ARG_PATH=		..
 CONFIGURE_DIRS=		build
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake perl pkg-config yacc lex
+USE_TOOLS+=		gmake perl pkg-config bison lex
 PKGCONFIG_OVERRIDE+=	wireshark.pc.in
 
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/*/*
