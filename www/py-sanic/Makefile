@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/04/26 13:14:21 maya Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/08 21:03:21 adam Exp $
 
-DISTNAME=	sanic-19.3.1
+DISTNAME=	sanic-19.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
@@ -12,10 +12,14 @@ LICENSE=	mit AND apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.3.0:../../devel/py-aiofiles
 DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.10:../../www/py-httptools
+DEPENDS+=	${PYPKGPREFIX}-httpx>=0.9.3:../../www/py-httpx
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-ujson>=1.35:../../textproc/py-ujson
 DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.5.3:../../devel/py-uvloop
-DEPENDS+=	${PYPKGPREFIX}-websockets>=6.0:../../www/py-websockets
+DEPENDS+=	${PYPKGPREFIX}-websockets>=7.0:../../www/py-websockets
+TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
+
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
