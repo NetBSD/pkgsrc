@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/12/14 22:08:10 nia Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/08 12:31:45 nia Exp $
 
-DISTNAME=	kitty-0.15.0
+DISTNAME=	kitty-0.15.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
