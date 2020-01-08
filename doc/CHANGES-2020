@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.265 2020/01/08 14:46:14 nia Exp $
+$NetBSD: CHANGES-2020,v 1.266 2020/01/08 15:20:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -299,3 +299,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed chat/vicq [nia 2020-01-08]
 	Removed chat/icqlib [nia 2020-01-08]
 	Removed chat/p5-Net-ICQ2000 [nia 2020-01-08]
+	Updated lang/py-uncompyle6 to 3.6.2 [adam 2020-01-08]
+	Updated devel/py-pathspec to 0.7.0 [adam 2020-01-08]
