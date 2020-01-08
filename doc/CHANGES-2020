@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.249 2020/01/08 12:32:08 nia Exp $
+$NetBSD: CHANGES-2020,v 1.250 2020/01/08 12:38:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -283,3 +283,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/kitty to 0.15.1 [nia 2020-01-08]
 	Updated devel/hdf5 to 1.10.6 [nia 2020-01-08]
 	Updated devel/hdf5-c++ to 1.10.6 [nia 2020-01-08]
+	Updated net/lftp to 4.9.0 [nia 2020-01-08]
