@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19595 2020/01/08 17:32:33 wiz Exp $
+$NetBSD: TODO,v 1.19596 2020/01/08 17:34:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1027,7 +1027,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
-	o py-mechanize-0.4.5
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
