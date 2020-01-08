@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.281 2020/01/08 21:49:42 nia Exp $
+$NetBSD: CHANGES-2020,v 1.282 2020/01/08 22:34:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -324,3 +324,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-nevow to 0.14.5 [adam 2020-01-08]
 	Updated devel/py-macholib to 1.13 [adam 2020-01-08]
 	Updated www/firefox68 to 68.4.0 [nia 2020-01-08]
+	Updated lang/nodejs12 to 12.14.1 [adam 2020-01-08]
+	Updated lang/nodejs to 13.6.0 [adam 2020-01-08]
+	Updated databases/prometheus to 2.15.2 [adam 2020-01-08]
