@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.235 2020/01/07 20:28:30 sevan Exp $
+$NetBSD: CHANGES-2020,v 1.236 2020/01/08 01:23:25 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -266,3 +266,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/awstats to 7.7 [adam 2020-01-07]
 	Updated graphics/giflib to 5.2.1 [sevan 2020-01-07]
 	Updated graphics/giflib-util to 5.2.1 [sevan 2020-01-07]
+	Updated math/py-statsmodels to 0.10.2 [minskim 2020-01-08]
