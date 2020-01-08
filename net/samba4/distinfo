@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2019/12/30 13:58:35 adam Exp $
+$NetBSD: distinfo,v 1.40 2020/01/08 10:40:02 jperkin Exp $
 
 SHA1 (samba-4.11.4.tar.gz) = 923c21d75bc54f2305caf86374eaf62530885177
 RMD160 (samba-4.11.4.tar.gz) = ac3e90fbb260da95efc6154a9e4bddc8486d79fe
@@ -31,4 +31,5 @@ SHA1 (patch-source4_dsdb_samdb_ldb__modules_wscript__build__server) = c322cf5699
 SHA1 (patch-source4_heimdal__build_roken.h) = ee535f8e7cc46a3487d95bc859438c476a88fe60
 SHA1 (patch-source4_heimdal_include_heim__threads.h) = c93e0c80790ea2045333822c80e66d371bf2249c
 SHA1 (patch-source4_scripting_wsript_build) = bd4feddcaadf1c3d2d25eb7914e7b5843e4e9511
+SHA1 (patch-source4_utils_oLschema2ldif_wscript__build) = b0cbbcd4ebedd443dc9f9a59d1dad2e039bb9663
 SHA1 (patch-third__party_socket__wrapper_socket__wrapper.c) = 0cc01c932f21e9f6219fb9d204e6fdf3682938f8
