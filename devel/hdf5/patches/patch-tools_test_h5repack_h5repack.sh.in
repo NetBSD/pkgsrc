@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_test_h5repack_h5repack.sh.in,v 1.1 2020/01/08 12:30:50 nia Exp $
+
+test portability fix
+
+--- tools/test/h5repack/h5repack.sh.in.orig	2019-12-19 16:38:30.000000000 +0000
++++ tools/test/h5repack/h5repack.sh.in
+@@ -625,7 +625,7 @@ DIFFFAIL()
+         $RUNSERIAL $H5DIFF_BIN -q  "$@"
+     )
+     RET=$?
+-    if [ $RET == 0 ] ; then
++    if [ $RET = 0 ] ; then
+          echo "*FAILED*"
+          nerrors="`expr $nerrors + 1`"
+     else
