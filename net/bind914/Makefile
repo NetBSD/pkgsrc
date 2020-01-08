@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/04 10:10:02 taca Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/08 10:18:53 jperkin Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=		--with-python=no
 CONFIGURE_ARGS+=		--disable-atomic
 .endif
 CONFIGURE_ARGS.DragonFly+=	--disable-kqueue
+CONFIGURE_ARGS.SunOS+=		--disable-epoll
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-zrelax=transtls
 
