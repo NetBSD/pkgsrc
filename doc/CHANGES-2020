@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.263 2020/01/08 14:22:33 nia Exp $
+$NetBSD: CHANGES-2020,v 1.264 2020/01/08 14:27:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -297,3 +297,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-Text-Xslate to 3.5.7 [wen 2020-01-08]
 	Removed chat/climm [nia 2020-01-08]
 	Removed chat/vicq [nia 2020-01-08]
+	Removed chat/icqlib [nia 2020-01-08]
