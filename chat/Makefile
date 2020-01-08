@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.232 2019/12/12 16:44:53 nros Exp $
+# $NetBSD: Makefile,v 1.233 2020/01/08 14:19:23 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -17,7 +17,6 @@ SUBDIR+=	carbons-purple
 SUBDIR+=	centerim
 SUBDIR+=	centerim5
 SUBDIR+=	cgiirc
-SUBDIR+=	climm
 SUBDIR+=	coyim
 SUBDIR+=	ctrlproxy
 SUBDIR+=	dccserver
