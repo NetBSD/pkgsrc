@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/12/30 17:53:00 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/08 21:34:38 adam Exp $
 
 DISTNAME=	xmlschema-1.0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	xmlschema/tests/check_etree_import.py
 REPLACE_PYTHON+=	xmlschema/tests/check_memory.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-elementpath
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
