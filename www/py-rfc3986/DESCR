@@ -1,0 +1,3 @@
+rfc3986 is a Python implementation of RFC 3986 including validation and
+authority parsing. This module also supports RFC 6874 which adds support for
+zone identifiers to IPv6 Addresses.
