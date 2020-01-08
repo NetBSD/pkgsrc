@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/08/26 14:26:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/01/08 11:19:03 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -113,6 +113,9 @@ ${PYSITELIB}/stripe/api_resources/dispute.pyo
 ${PYSITELIB}/stripe/api_resources/ephemeral_key.py
 ${PYSITELIB}/stripe/api_resources/ephemeral_key.pyc
 ${PYSITELIB}/stripe/api_resources/ephemeral_key.pyo
+${PYSITELIB}/stripe/api_resources/error_object.py
+${PYSITELIB}/stripe/api_resources/error_object.pyc
+${PYSITELIB}/stripe/api_resources/error_object.pyo
 ${PYSITELIB}/stripe/api_resources/event.py
 ${PYSITELIB}/stripe/api_resources/event.pyc
 ${PYSITELIB}/stripe/api_resources/event.pyo
@@ -164,6 +167,9 @@ ${PYSITELIB}/stripe/api_resources/list_object.pyo
 ${PYSITELIB}/stripe/api_resources/login_link.py
 ${PYSITELIB}/stripe/api_resources/login_link.pyc
 ${PYSITELIB}/stripe/api_resources/login_link.pyo
+${PYSITELIB}/stripe/api_resources/mandate.py
+${PYSITELIB}/stripe/api_resources/mandate.pyc
+${PYSITELIB}/stripe/api_resources/mandate.pyo
 ${PYSITELIB}/stripe/api_resources/order.py
 ${PYSITELIB}/stripe/api_resources/order.pyc
 ${PYSITELIB}/stripe/api_resources/order.pyo
