@@ -1,0 +1,1 @@
+bin/uvicorn @PREFIX@/bin/uvicorn-@PYVERSSUFFIX@
