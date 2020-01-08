@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.333 2020/01/02 01:59:46 ng0 Exp $
+# $NetBSD: Makefile,v 1.334 2020/01/08 15:25:37 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -16,6 +16,7 @@ SUBDIR+=	Merriweather-ttf
 SUBDIR+=	Office-Code-Pro
 SUBDIR+=	SDL2_ttf
 SUBDIR+=	TextFonts-ttf
+SUBDIR+=	UnifrakturMaguntia-ttf
 SUBDIR+=	Xft2
 SUBDIR+=	Xg
 SUBDIR+=	adobe-cidfonts
