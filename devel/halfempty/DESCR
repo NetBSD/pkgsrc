@@ -1,0 +1,3 @@
+Halfempty is a new testcase minimization tool, designed with
+parallelization in mind. Halfempty was built to use strategies and
+techniques that dramatically speed up the minimization process.
