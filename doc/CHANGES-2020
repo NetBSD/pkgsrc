@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.287 2020/01/09 12:13:56 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.288 2020/01/09 12:22:03 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -332,3 +332,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/scons to 3.1.2 [adam 2020-01-09]
 	Updated time/py-arrow to 0.15.5 [adam 2020-01-09]
 	Added devel/halfempty version 0.30 [wiz 2020-01-09]
+	Updated math/bcal to 2.2 [sjmulder 2020-01-09]
