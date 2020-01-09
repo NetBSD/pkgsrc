@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.285 2020/01/09 12:00:03 leot Exp $
+$NetBSD: CHANGES-2020,v 1.286 2020/01/09 12:07:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -329,3 +329,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/prometheus to 2.15.2 [adam 2020-01-08]
 	Updated www/nsm to 2.0.1 [ng0 2020-01-09]
 	Updated net/hub to 2.13.0nb1 [leot 2020-01-09]
+	Updated devel/scons to 3.1.2 [adam 2020-01-09]
+	Updated time/py-arrow to 0.15.5 [adam 2020-01-09]
