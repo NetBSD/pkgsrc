@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.63 2019/06/13 22:05:24 nia Exp $
+$NetBSD: patch-aa,v 1.64 2020/01/09 15:06:29 ryoon Exp $
 
 * Add OSS audio support
 * Add Sun audio support
 * Disable libav-fft on SunOS (relocation errors)
+* Include include/nss/nss for workaround for neqo-crypto 0.1.6 of firefox-72.0
 
---- old-configure.in.orig	2019-05-29 15:39:16.000000000 +0000
+--- old-configure.in.orig	2020-01-03 18:58:03.000000000 +0000
 +++ old-configure.in
-@@ -2043,6 +2043,71 @@ MOZ_WEBM_ENCODER=1
+@@ -1960,6 +1960,71 @@ MOZ_WEBM_ENCODER=1
  AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  
@@ -78,3 +79,12 @@ $NetBSD: patch-aa,v 1.63 2019/06/13 22:05:24 nia Exp $
  dnl ========================================================
  dnl NegotiateAuth
  dnl ========================================================
+@@ -2744,7 +2809,7 @@ AC_SUBST_LIST(MOZ_CAIRO_LIBS)
+ AC_SUBST_LIST(MOZ_CAIRO_OSLIBS)
+ AC_SUBST(MOZ_TREE_PIXMAN)
+ 
+-BINDGEN_SYSTEM_FLAGS="$_BINDGEN_CFLAGS $NSPR_CFLAGS $NSS_CFLAGS $MOZ_PIXMAN_CFLAGS $MOZ_CAIRO_CFLAGS"
++BINDGEN_SYSTEM_FLAGS="$_BINDGEN_CFLAGS $NSPR_CFLAGS $NSS_CFLAGS $MOZ_PIXMAN_CFLAGS $MOZ_CAIRO_CFLAGS -I${PREFIX}/include/nss/nss"
+ AC_SUBST(BINDGEN_SYSTEM_FLAGS)
+ BINDGEN_SYSTEM_TOML_FLAGS="$BINDGEN_SYSTEM_FLAGS"
+ AC_SUBST_TOML_LIST(BINDGEN_SYSTEM_TOML_FLAGS)

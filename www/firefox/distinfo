@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.374 2019/12/03 14:21:20 ryoon Exp $
+$NetBSD: distinfo,v 1.375 2020/01/09 15:06:29 ryoon Exp $
 
-SHA1 (firefox-71.0.source.tar.xz) = 8cb0b0ba8473412e8e25cdcb0cfa225d15a15640
-RMD160 (firefox-71.0.source.tar.xz) = 264397af3901b6905cfb9dd2111d28f628d5428b
-SHA512 (firefox-71.0.source.tar.xz) = 2f60bb7513dc2e730d8d558faad30367e12d27cb24b630aaebeb0473d0a202a3d4838b253d631722d57fb26f54145e296a710ec1714d3ba27dd71c6c1c52e920
-Size (firefox-71.0.source.tar.xz) = 312341460 bytes
-SHA1 (patch-aa) = 1f292aae7d37bd480ba834324b737bfebee52503
+SHA1 (firefox-72.0.1.source.tar.xz) = bfe2a6c57cc9c192681388c9e4af9c0c44f315a6
+RMD160 (firefox-72.0.1.source.tar.xz) = 1332177b77c54b9a1ef2180730fc9c08a5a7b730
+SHA512 (firefox-72.0.1.source.tar.xz) = 8df6a64cde4bdb879c3cb9df7f8b43c7d67c47502e2dce1d3ee82de433931435963b3e51c99035a78f0a997bc934a838d198f2a1cd6a624441769d37b1469fcf
+Size (firefox-72.0.1.source.tar.xz) = 314963588 bytes
+SHA1 (patch-aa) = 317ee54588268d9cacd63fa2a8902f2012c7c9ab
 SHA1 (patch-browser_app_profile_firefox.js) = 076cc2892547bac07fe907533f4e821f13f5738e
 SHA1 (patch-build_moz.configure_old.configure) = 05963b12fd908d90e3378b30cff7e48291b8a447
 SHA1 (patch-build_moz.configure_rust.configure) = ee9e207e67709f3c9455b4d22f5f254890e99ca8
@@ -26,6 +26,7 @@ SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 31536f36cb33f16da309527b50eda9b7
 SHA1 (patch-media_libcubeb_src_moz.build) = dcca90cb5132442877712cd7b1f4e832c93d2655
 SHA1 (patch-media_libcubeb_update.sh) = 4508319d8534a0cc983e4767c2142169af9e5033
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
+SHA1 (patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 3755f32fea84900cc0f00af3d9f53ed5fcfb0b4b
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e5700d95302ef9672b404ab19e13ef7ba3ede5cf
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 22a39e54e042ab2270a3cb54e4e307c8900cad12
 SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
