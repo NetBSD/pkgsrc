@@ -1,0 +1,15 @@
+$NetBSD: patch-time-compat.cabal,v 1.1 2020/01/09 06:48:15 pho Exp $
+
+Fix build with GHC 8.8
+
+--- time-compat.cabal.orig	2001-09-09 01:46:40.000000000 +0000
++++ time-compat.cabal
+@@ -45,7 +45,7 @@ library
+       base          >=4.3     && <4.14
+     , base-orphans  >=0.8.1   && <0.9
+     , deepseq       >=1.3.0.0 && <1.4 || >=1.4.1.1 && <1.5
+-    , time          >=1.2     && <1.3 || >=1.4 && <1.7 || >=1.8 && <1.9 || >=1.9.2 && <1.9.3
++    , time          >=1.2     && <1.3 || >=1.4 && <1.7 || >=1.8 && <1.9 || >=1.9.2 && <1.9.4
+ 
+   if flag(old-locale)
+     build-depends:
