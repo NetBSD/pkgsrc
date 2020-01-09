@@ -1,3 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2018/02/27 17:08:35 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/09 11:59:53 leot Exp $
 bin/hub
+man/man1/hub-alias.1
+man/man1/hub-api.1
+man/man1/hub-browse.1
+man/man1/hub-ci-status.1
+man/man1/hub-compare.1
+man/man1/hub-create.1
+man/man1/hub-delete.1
+man/man1/hub-fork.1
+man/man1/hub-gist.1
+man/man1/hub-issue.1
+man/man1/hub-pr.1
+man/man1/hub-pull-request.1
+man/man1/hub-release.1
+man/man1/hub-sync.1
 man/man1/hub.1
