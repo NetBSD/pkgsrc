@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2018/03/28 01:51:16 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/09 14:02:32 wiz Exp $
 
-DISTNAME=	pyvex-7.8.2.21
+DISTNAME=	pyvex-8.20.1.7
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=angr/}
 GITHUB_PROJECT=	pyvex
-GITHUB_TAG=	29e88cbd20d628421a903e3dfec0027dd01be233
+GITHUB_TAG=	4fa68d58618a7635b281c9d06263c75fb9bf357f
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/angr/pyvex/
@@ -16,8 +15,9 @@ LICENSE=	2-clause-bsd
 USE_TOOLS+=	gmake
 
 DEPENDS+=	${PYPKGPREFIX}-archinfo-[0-9]*:../../devel/py-archinfo
+DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
 
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "vex-inplace.mk"
 .include "../../devel/libffi/buildlink3.mk"
