@@ -1,0 +1,20 @@
+GHC requires itself to build, and unfortunately the only way to get a
+working GHC for a foreign target is to do a cross-compilation.
+
+In order to build a bootkit for a new platform, you need to manually
+set up a cross-building C compiler and binutils, libc, libterminfo,
+and libiconv for the target. Then you can follow instructions in
+https://gitlab.haskell.org/ghc/ghc/wikis/building/cross-compiling
+
+Once you get a working GHC for the target platform, install it
+somewhere in your PATH, run "cd lang/ghc88; make clean; make bootstrap"
+on the target platform and you'll have a bootkit for the target.
+
+--
+
+GHC in fact has never supported bootstrapping only with a C compiler.
+Prior to GHC 7, it had a thing called "HC source", which was a set of
+C source files compiled from Haskell source, but it wasn't actually
+cross-platform. It was because HC files were generated with many
+assumptions about the platform, such as the layout of libc structs,
+the size of off_t and time_t, byte-order, word size, etc.
