@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/08 11:41:50 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/09 14:21:06 wiz Exp $
 
 DISTNAME=	google-auth-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-oauth2client-[0-9]*:../../security/py-oauth2client
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-localserver-[0-9]*:../../devel/py-test-localserver
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-cachetools
 
 USE_LANGUAGES=	# none
 
