@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2020/01/02 11:52:48 leot Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/09 11:59:53 leot Exp $
 
 DISTNAME=	hub-2.13.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=github/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -26,17 +27,41 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 CHECK_RELRO_SKIP+=	bin/hub
 
-# Generate hub(1) man page
+# List of hub commands to generate man pages, HELP_CMD list of ${WRKSRC}/Makefile
+HUB_COMMANDS=	alias \
+		api \
+		browse \
+		ci-status \
+		compare \
+		create \
+		delete \
+		fork \
+		gist \
+		pr \
+		pull-request \
+		release \
+		issue \
+		sync
+
+# Generate hub man pages
 pre-install:
+.for hc in ${HUB_COMMANDS}
+	cd ${WRKDIR} && \
+	    ./bin/hub help ${hc} --plain-text > \
+	        src/github.com/github/hub/share/man/man1/hub-${hc}.1.md
+.endfor
 	cd ${WRKDIR} && \
 	    ./bin/md2roff-bin --manual="hub manual" \
 		--version=${PKGVERSION_NOREV} \
 		--template=src/github.com/github/hub/man-template.html \
-		src/github.com/github/hub/share/man/man1/hub.1.md
+		src/github.com/github/hub/share/man/man1/*.md
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/hub ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/share/man/man1/hub.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.for hc in ${HUB_COMMANDS}
+	${INSTALL_MAN} ${WRKSRC}/share/man/man1/hub-${hc}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.endfor
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
