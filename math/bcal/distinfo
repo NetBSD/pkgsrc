@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/12/15 17:25:15 leot Exp $
+$NetBSD: distinfo,v 1.2 2020/01/09 12:21:37 sjmulder Exp $
 
-SHA1 (bcal-2.1.tar.gz) = 7d2740ee9abd18370449b4b3e46b8ecac77d7072
-RMD160 (bcal-2.1.tar.gz) = ad91e17d1dd2cf86c670929495eefc0b9cd3e468
-SHA512 (bcal-2.1.tar.gz) = 38965b0f27289e283ed9193c14cd962ec29ed401e8d60e7f012098cb62dacd357d8eac6a5e29f001c0ecf9541fdb55166b0ed2b2ac5c6bc98622244249cff03d
-Size (bcal-2.1.tar.gz) = 34175 bytes
-SHA1 (patch-Makefile) = 10df94f072e4d08e73458f690ec8df1cce356320
+SHA1 (bcal-2.2.tar.gz) = 83a07e924f70894e8cfa5bc5883aa1ba27a7323e
+RMD160 (bcal-2.2.tar.gz) = b2eb4c9effe6b73ad986c961e14409559c060f7a
+SHA512 (bcal-2.2.tar.gz) = ee9911f9770ed8124a652253f10c8bd5adac6f89086b01e58eef19b5cc4e4f166b45efc1b3104a9de746763fd37a99ef6753b0e7a20047a0f34fb730b1e0e901
+Size (bcal-2.2.tar.gz) = 34437 bytes
