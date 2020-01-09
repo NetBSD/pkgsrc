@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.282 2020/01/08 22:34:49 adam Exp $
+$NetBSD: CHANGES-2020,v 1.283 2020/01/09 10:18:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -260,8 +260,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/xyconvert version 1.5 [nros 2020-01-07]
 	Updated devel/p5-Perl-Tidy to 20191203 [wen 2020-01-07]
 	Updated mail/thunderbird to 68.3.1nb1 [wiz 2020-01-07]
-	Removed filesystems/fuse-gstfs [nia 2020-01-07]
 	Added filesystems/fuse-gstfs-ng version 1.1 [nia 2020-01-07]
+	Removed filesystems/fuse-gstfs successor filesystems/fuse-gstfs-ng [nia 2020-01-07]
 	Added lang/ghc84 version 8.4.4 [pho 2020-01-07]
 	Updated www/awstats to 7.7 [adam 2020-01-07]
 	Updated graphics/giflib to 5.2.1 [sevan 2020-01-07]
