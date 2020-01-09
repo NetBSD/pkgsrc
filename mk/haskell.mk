@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.10 2020/01/02 16:45:15 pho Exp $
+# $NetBSD: haskell.mk,v 1.11 2020/01/09 12:29:32 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -107,6 +107,7 @@ _DEF_VARS.haskell= \
 	_HASKELL_BIN \
 	_HASKELL_PKG_BIN \
 	_HASKELL_PKG_DESCR_FILE \
+	_HASKELL_PKG_ID_FILE \
 	_HASKELL_VERSION
 _USER_VARS.haskell= \
 	HASKELL_ENABLE_SHARED_LIBRARY \
@@ -140,7 +141,7 @@ HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	yes
 # Compiler specific variables and targets.
 .if ${HASKELL_COMPILER} == "ghc"
 
-# Add dependency to the GHC.
+# Add dependency on GHC.
 .include "../../lang/ghc7/buildlink3.mk"
 
 # Tools
@@ -241,15 +242,22 @@ do-build:
 # for package registration (if any).
 _HASKELL_PKG_DESCR_DIR=		${PREFIX}/lib/${DISTNAME}/${_HASKELL_VERSION}
 _HASKELL_PKG_DESCR_FILE=	${_HASKELL_PKG_DESCR_DIR}/package-description
+_HASKELL_PKG_ID_FILE=		${_HASKELL_PKG_DESCR_DIR}/package-id
 
 INSTALLATION_DIRS+=		${_HASKELL_PKG_DESCR_DIR}
 do-install:
 	${RUN}cd ${WRKSRC} && \
-		./Setup register ${PKG_VERBOSE:D-v} --gen-pkg-config=dist/package-description && \
+		./Setup register ${PKG_VERBOSE:D-v} \
+			--gen-pkg-config=dist/package-description \
+			--print-ipid \
+			> dist/package-id && \
 		./Setup copy ${PKG_VERBOSE:D-v} --destdir=${DESTDIR:Q} && \
 		if [ -f dist/package-description ]; then \
-			${INSTALL_DATA} dist/package-description ${DESTDIR:Q}${_HASKELL_PKG_DESCR_FILE:Q}; \
-		fi \
+			${INSTALL_DATA} dist/package-description \
+				${DESTDIR:Q}${_HASKELL_PKG_DESCR_FILE:Q}; \
+			${INSTALL_DATA} dist/package-id \
+				${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q}; \
+		fi
 
 # Define test target.
 do-test:
@@ -257,9 +265,9 @@ do-test:
 		./Setup test ${PKG_VERBOSE:D-v}
 
 # Substitutions for INSTALL and DEINSTALL.
-FILES_SUBST+=	DISTNAME=${DISTNAME}
 FILES_SUBST+=	HASKELL_PKG_BIN=${_HASKELL_PKG_BIN}
 FILES_SUBST+=	HASKELL_PKG_DESCR_FILE=${_HASKELL_PKG_DESCR_FILE}
+FILES_SUBST+=	HASKELL_PKG_ID_FILE=${_HASKELL_PKG_ID_FILE}
 
 INSTALL_TEMPLATES+=	../../mk/haskell/INSTALL.in
 DEINSTALL_TEMPLATES+=	../../mk/haskell/DEINSTALL.in
