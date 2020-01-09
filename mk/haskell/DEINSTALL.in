@@ -1,14 +1,13 @@
 # -*- sh -*-
-# $NetBSD: DEINSTALL.in,v 1.1 2014/02/05 07:02:30 obache Exp $
+# $NetBSD: DEINSTALL.in,v 1.2 2020/01/09 12:29:32 pho Exp $
 #
-DISTNAME="@DISTNAME@"
 HASKELL_PKG_BIN="@HASKELL_PKG_BIN@"
-HASKELL_PKG_DESCR_FILE="@HASKELL_PKG_DESCR_FILE@"
+HASKELL_PKG_ID_FILE="@HASKELL_PKG_ID_FILE@"
 
-case ${STAGE} in 
+case ${STAGE} in
     DEINSTALL)
-        if [ -f ${HASKELL_PKG_DESCR_FILE} ]; then
-            ${HASKELL_PKG_BIN} unregister --force ${DISTNAME}
+        if [ -f ${HASKELL_PKG_ID_FILE} ]; then
+            ${HASKELL_PKG_BIN} unregister --force --ipid `cat "$HASKELL_PKG_ID_FILE"`
         fi
         ;;
 esac
