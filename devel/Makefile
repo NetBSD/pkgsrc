@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2982 2020/01/08 20:03:07 adam Exp $
+# $NetBSD: Makefile,v 1.2983 2020/01/09 12:14:50 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -470,6 +470,7 @@ SUBDIR+=	guile-slib
 SUBDIR+=	guile-www
 SUBDIR+=	guile22-slib
 SUBDIR+=	gyp
+SUBDIR+=	halfempty
 SUBDIR+=	happy
 SUBDIR+=	haskell-mode
 SUBDIR+=	hdevtools
