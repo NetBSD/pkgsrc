@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.295 2020/01/09 15:56:40 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.296 2020/01/09 20:09:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -344,3 +344,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox-l10n to 72.0.1 [ryoon 2020-01-09]
 	Updated lang/mono6 to 6.6.0.161 [ryoon 2020-01-09]
 	Updated graphics/giflib to 5.2.1nb1 [ryoon 2020-01-09]
+	Updated net/6tunnel to 0.13 [nia 2020-01-09]
