@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/07/02 10:19:10 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/09 14:20:28 wiz Exp $
 
-DISTNAME=	cachetools-3.1.1
+DISTNAME=	cachetools-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cachetools/}
@@ -11,6 +11,8 @@ COMMENT=	Extensible memoizing collections and decorators
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
