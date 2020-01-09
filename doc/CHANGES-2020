@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.289 2020/01/09 14:03:57 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.290 2020/01/09 14:20:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -338,3 +338,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-cle to 8.20.1.7 [wiz 2020-01-09]
 	Updated devel/py-pyvex to 8.20.1.7 [wiz 2020-01-09]
 	Updated math/py-claripy to 8.20.1.7 [wiz 2020-01-09]
+	Updated devel/py-cachetools to 4.0.0 [wiz 2020-01-09]

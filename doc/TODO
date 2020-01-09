@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19596 2020/01/08 17:34:00 wiz Exp $
+$NetBSD: TODO,v 1.19597 2020/01/09 14:20:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1019,7 +1019,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-asttokens-2.0.3
-	o py-cachetools-4.0.0
 	o py-cassa-1.11.0
 	o py-ephem3-3.7.6.0
 	o py-gds-1.4.2
