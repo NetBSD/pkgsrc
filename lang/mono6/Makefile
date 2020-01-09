@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/10/10 00:06:12 maya Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/09 15:26:36 ryoon Exp $
 
-DISTNAME=	mono-6.4.0.198
+DISTNAME=	mono-6.6.0.161
 CATEGORIES=	lang
 MASTER_SITES=	https://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.xz
