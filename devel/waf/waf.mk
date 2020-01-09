@@ -1,4 +1,4 @@
-# $NetBSD: waf.mk,v 1.9 2020/01/08 13:15:09 wiz Exp $
+# $NetBSD: waf.mk,v 1.10 2020/01/09 23:09:58 nia Exp $
 
 # XXX why does this does not respect the standard pkgsrc variables like
 # CONFIGURE_ENV et al?
@@ -26,12 +26,14 @@ WAF_HAS_MANDIR?=	yes
 WAF_ARGS+=		--mandir=${PREFIX}/${PKGMANDIR}
 .endif
 
-WAF_REPLACE_EXECUTABLE?=	yes
+WAF_REPLACE_EXECUTABLE?=	no
 .if !empty(WAF_REPLACE_EXECUTABLE:M[yY][eE][sS])
 TOOL_DEPENDS+=	waf-[0-9]*:../../devel/waf
 
 post-extract:
 	cp ${PREFIX}/bin/waf ${WRKSRC}
+.else
+.  include "../../lang/python/tool.mk"
 .endif
 
 do-configure:
