@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2020/01/02 09:11:34 pho Exp $
+$NetBSD: distinfo,v 1.4 2020/01/09 00:51:03 pho Exp $
 
 SHA1 (split-0.2.3.3.tar.gz) = 1c07114307196b4c3f1d94fb9e30485872b01f21
 RMD160 (split-0.2.3.3.tar.gz) = 081190df13c62a04e9bc83fec2097845c32eb1c4
 SHA512 (split-0.2.3.3.tar.gz) = 40283ee2f5e2ab56207b05a1a7bc7de114ae0da52dc37ed32bd4e1dd3a3baa8d3346fed04af979fa5fc263b931c0b830832c0cad69e98d151f5550542af6f475
 Size (split-0.2.3.3.tar.gz) = 15681 bytes
+SHA1 (patch-split.cabal) = 54237ad504dd5672ef5e166ddc190c10f4d97f3d
