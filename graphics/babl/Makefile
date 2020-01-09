@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/11/10 11:19:50 nia Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/09 23:37:45 nia Exp $
 
 DISTNAME=	babl-0.1.72
 CATEGORIES=	graphics
@@ -19,7 +19,9 @@ PKGCONFIG_OVERRIDE+=	babl.pc.in
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script,babl.map
+# Apply removals to post-wrapper transformed arguments.
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,babl.map
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
