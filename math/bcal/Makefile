@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/06/12 20:57:07 sjmulder Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/09 12:21:37 sjmulder Exp $
 
-DISTNAME=	bcal-2.1
+DISTNAME=	bcal-2.2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jarun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,6 +16,9 @@ ONLY_FOR_PLATFORM=	${LP64PLATFORMS}
 USE_TOOLS+=	gmake
 DEPENDS+=	bc-[0-9]*:../../math/bc
 MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+# No -O3 and -Werror
+MAKE_FLAGS+=	CFLAGS_OPTIMIZATION=
+MAKE_FLAGS+=	CFLAGS_WARNINGS="-Wall -Wextra -Wno-unused-parameter"
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
