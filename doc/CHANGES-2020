@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.283 2020/01/09 10:18:39 nia Exp $
+$NetBSD: CHANGES-2020,v 1.284 2020/01/09 11:29:04 ng0 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -327,3 +327,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs12 to 12.14.1 [adam 2020-01-08]
 	Updated lang/nodejs to 13.6.0 [adam 2020-01-08]
 	Updated databases/prometheus to 2.15.2 [adam 2020-01-08]
+	Updated www/nsm to 2.0.1 [ng0 2020-01-09]
