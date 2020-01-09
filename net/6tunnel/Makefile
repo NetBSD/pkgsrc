@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2019/11/03 11:45:28 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.18 2020/01/09 20:09:34 nia Exp $
 
-DISTNAME=	6tunnel-0.11
+DISTNAME=	6tunnel-0.13
 CATEGORIES=	net
-MASTER_SITES=	http://toxygen.net/6tunnel/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wojtekka/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://toxygen.net/6tunnel/
+HOMEPAGE=	https://github.com/wojtekka/6tunnel
 COMMENT=	Tunnelling for applications that don't speak IPv6
 LICENSE=	gnu-gpl-v2
 
