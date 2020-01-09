@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/03 08:22:08 pho Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/09 11:45:15 pho Exp $
 
 DISTNAME=	cgrep-6.6.30
 #PKGNAME=	${DISTNAME} # This package should probably be renamed to textproc/cgrep
@@ -29,4 +29,5 @@ LICENSE=	gnu-gpl-v2
 .include "../../devel/hs-unix-compat/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
+.include "../../textproc/hs-yaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
