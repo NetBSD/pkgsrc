@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.288 2020/01/09 12:22:03 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.289 2020/01/09 14:03:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -333,3 +333,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/py-arrow to 0.15.5 [adam 2020-01-09]
 	Added devel/halfempty version 0.30 [wiz 2020-01-09]
 	Updated math/bcal to 2.2 [sjmulder 2020-01-09]
+	Updated devel/py-angr to 8.20.1.7 [wiz 2020-01-09]
+	Updated devel/py-archinfo to 8.20.1.7 [wiz 2020-01-09]
+	Updated devel/py-cle to 8.20.1.7 [wiz 2020-01-09]
+	Updated devel/py-pyvex to 8.20.1.7 [wiz 2020-01-09]
+	Updated math/py-claripy to 8.20.1.7 [wiz 2020-01-09]
