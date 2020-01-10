@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/09/01 11:44:19 nia Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/10 11:25:32 nia Exp $
 
 VERSION=	1.0
 DISTNAME=	supertuxkart-${VERSION}-src
@@ -25,6 +25,11 @@ CMAKE_ARGS+=	-DBUILD_RECORDER=OFF
 CMAKE_ARGS+=	-DENABLE_WAYLAND_DEVICE=OFF
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+# 64 bit atomic ops are required
+CXXFLAGS+=	-march=i586
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
