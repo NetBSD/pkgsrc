@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2019/08/22 12:22:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2020/01/10 15:46:36 nia Exp $
 
 DISTNAME=	unrealircd-4.2.4.1
 PKGREVISION=	2
@@ -58,6 +58,10 @@ OWN_DIRS_PERMS+=	${PREFIX}/unrealircd/tmp ${UIRCD_USER} ${UIRCD_GROUP} 0700
 
 CONFIGURE_ARGS+=	--with-sendq=${UIRCD_SENDQ:Q}
 CONFIGURE_ARGS+=	--with-nick-history=${UIRCD_NICKHIST:Q}
+
+CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_create=no
+CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_ctl=no
+CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_wait=no
 
 IRCD_EG=	${PREFIX}/share/examples/unrealircd
 
