@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/08/23 16:16:37 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/01/10 23:21:17 khorben Exp $
 bin/panel
 bin/panel-embed
 bin/panel-message
@@ -22,6 +22,7 @@ lib/Panel/applets/desktop.so
 lib/Panel/applets/embed.so
 lib/Panel/applets/gps.so
 lib/Panel/applets/gsm.so
+lib/Panel/applets/leds.so
 lib/Panel/applets/lock.so
 lib/Panel/applets/logout.so
 lib/Panel/applets/memory.so
@@ -32,7 +33,9 @@ lib/Panel/applets/pager.so
 lib/Panel/applets/phone.so
 lib/Panel/applets/rotate.so
 lib/Panel/applets/separator.so
+lib/Panel/applets/shutdown.so
 lib/Panel/applets/spacer.so
+lib/Panel/applets/suspend.so
 lib/Panel/applets/swap.so
 lib/Panel/applets/systray.so
 lib/Panel/applets/tasks.so
@@ -51,16 +54,21 @@ man/html1/panel-message.html
 man/html1/panel-notify.html
 man/html1/panel.html
 man/html1/panelctl.html
+man/html1/settings.html
 man/html1/wifibrowser.html
 man/man1/panel-embed.1
 man/man1/panel-message.1
 man/man1/panel-notify.1
 man/man1/panel.1
 man/man1/panelctl.1
+man/man1/settings.1
 man/man1/wifibrowser.1
 share/applications/deforaos-panel-settings.desktop
 share/applications/deforaos-settings.desktop
 share/applications/deforaos-wifibrowser.desktop
+share/doc/Panel/COPYING
+share/doc/Panel/README.md
+share/doc/Panel/wpa_supplicant.conf
 share/icons/hicolor/16x16/apps/panel-applet-bluetooth.png
 share/icons/hicolor/16x16/apps/panel-applet-desktop.png
 share/icons/hicolor/16x16/apps/panel-applet-usb.png
