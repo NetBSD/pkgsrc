@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/10 19:13:33 maya Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/10 19:26:31 maya Exp $
 
 DISTNAME=	slim-1.3.6
 PKGREVISION=	3
@@ -20,7 +20,6 @@ AUTO_MKDIRS=	yes
 RCD_SCRIPTS+=	slim
 
 DEPENDS+=	bash-[0-9]*:../../shells/bash
-DEPENDS+=	dbus-[0-9]*:../../sysutils/dbus
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
