@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.80 2019/12/08 13:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2020/01/10 13:24:19 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=	poppler-glib-${POPPLER_VERS}
-PKGREVISION=	1
 
 COMMENT=	PDF rendering library (GLib wrapper)
 
 CONFLICTS+=	poppler<0.4.5nb1
 
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-glib.pc.cmake
-
-USE_TOOLS+=	python
 
 # Don't build the splash graphics backend.
 CMAKE_ARGS+=	-DENABLE_SPLASH=OFF
