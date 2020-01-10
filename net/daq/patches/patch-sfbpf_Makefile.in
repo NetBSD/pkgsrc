@@ -1,8 +1,8 @@
-$NetBSD: patch-sfbpf_Makefile.am,v 1.2 2020/01/10 21:17:17 joerg Exp $
+$NetBSD: patch-sfbpf_Makefile.in,v 1.1 2020/01/10 21:17:17 joerg Exp $
 
---- sfbpf/Makefile.am.orig	2015-04-01 18:56:48.000000000 +0000
-+++ sfbpf/Makefile.am
-@@ -47,7 +47,7 @@ sf_scanner.c: $(srcdir)/scanner.l
+--- sfbpf/Makefile.in.orig	2020-01-10 00:23:05.893226310 +0000
++++ sfbpf/Makefile.in
+@@ -780,7 +780,7 @@ sf_scanner.c: $(srcdir)/scanner.l
  	@rm -f $(srcdir)/sf_scanner.c
  	$(srcdir)/runlex.sh $(V_LEX) -osf_scanner.c $(srcdir)/scanner.l
  
