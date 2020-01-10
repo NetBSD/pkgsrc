@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2019/05/23 19:23:12 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/10 12:20:50 leot Exp $
 #
 
-PKGNAME=	pkg_alternatives-1.6
+PKGNAME=	pkg_alternatives-1.7
 CATEGORIES=	pkgtools
 
 MAINTAINER=	jmmv@NetBSD.org
