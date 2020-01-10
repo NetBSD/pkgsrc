@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2020/01/08 17:00:06 minskim Exp $
+# $NetBSD: options.mk,v 1.3 2020/01/10 07:46:43 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc9
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -109,6 +109,7 @@ LIBS.SunOS+=		-lgmp
 .  include "../../math/mpfr/buildlink3.mk"
 .endif
 
+PLIST_VARS+=		objcxx
 .if ${PKG_OPTIONS:Mgcc-objc++}
 .  if !${PKG_OPTIONS:Mgcc-c++}
 PKG_OPTIONS+=		gcc-c++
@@ -116,19 +117,24 @@ PKG_OPTIONS+=		gcc-c++
 .  if !${PKG_OPTIONS:Mgcc-objc}
 PKG_OPTIONS+=		gcc-objc
 .  endif
+PLIST.objcxx=		yes
 LANGS+=			obj-c++
 .endif
 
+PLIST_VARS+=		objc
 .if ${PKG_OPTIONS:Mgcc-objc}
 LANGS+=			objc
+PLIST.objc=		yes
 .endif
 
 .if ${PKG_OPTIONS:Mgcc-go}
 LANGS+=			go
 .endif
 
+PLIST_VARS+=		fortran
 .if ${PKG_OPTIONS:Mgcc-fortran}
 LANGS+=			fortran
+PLIST.fortran=		yes
 .endif
 
 .if ${PKG_OPTIONS:Mgcc-c++}
@@ -136,7 +142,9 @@ LANGS+=			c++
 USE_TOOLS+=		perl
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--with-gxx-include-dir=${GCC9_PREFIX}/include/c++/
+PLIST_SUBST+=		CXXINCDIR=${GCC9_SUBPREFIX}/include/c++
 .else
 CONFIGURE_ARGS+=	--disable-build-with-cxx
 CONFIGURE_ARGS+=	--disable-build-poststage1-with-cxx
+PLIST_SUBST+=		CXXINCDIR=${GCC9_SUBPREFIX}/include/c++/${GCC9_VERSION}
 .endif
