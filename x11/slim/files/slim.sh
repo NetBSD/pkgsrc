@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $NetBSD: slim.sh,v 1.1 2018/05/18 14:51:17 youri Exp $
+# $NetBSD: slim.sh,v 1.2 2020/01/10 19:13:33 maya Exp $
 #
 
 # PROVIDE: slim
-# REQUIRE: DAEMON LOGIN wscons
+# REQUIRE: DAEMON LOGIN wscons dbus
 # KEYWORD: shutdown
 
 if [ -f /etc/rc.subr ]; then
