@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/12/01 08:18:46 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/10 21:12:58 joerg Exp $
 
 DISTNAME=	rttr-0.9.6-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -18,6 +18,11 @@ USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DBUILD_EXAMPLES=OFF
 CMAKE_ARGS+=	-DBUILD_UNIT_TESTS=OFF
 CMAKE_ARGS+=	-DBUILD_DOCUMENTATION=OFF
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-Wno-error=implicit-int-float-conversion
+.endif
 
 post-install:
 	chmod -R a+r ${DESTDIR}/${PREFIX}/include/rttr/
