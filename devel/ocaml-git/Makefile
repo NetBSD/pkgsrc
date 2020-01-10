@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/03 10:39:23 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/10 21:11:35 joerg Exp $
 
 GITHUB_PROJECT=	ocaml-git
 DISTNAME=	${GITHUB_PROJECT}-2.0.0
@@ -35,6 +35,7 @@ OPAM_INSTALL_FILES=	git
 .include "../../devel/ocaml-ocplib-endian/buildlink3.mk"
 .include "../../devel/ocaml-rresult/buildlink3.mk"
 .include "../../devel/ocamlgraph/buildlink3.mk"
+.include "../../www/ocaml-cohttp/buildlink3.mk"
 .include "../../www/ocaml-uri/buildlink3.mk"
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
