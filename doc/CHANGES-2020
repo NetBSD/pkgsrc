@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.300 2020/01/10 11:18:03 nia Exp $
+$NetBSD: CHANGES-2020,v 1.301 2020/01/10 12:07:22 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -349,3 +349,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/nss to 3.49 [ryoon 2020-01-10]
 	Removed emulators/zsnes [nia 2020-01-10]
 	Removed graphics/libglvnd [nia 2020-01-10]
+	Updated devel/smake to 1.3nb8 [micha 2020-01-10]
