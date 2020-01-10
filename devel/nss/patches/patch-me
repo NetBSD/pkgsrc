@@ -1,9 +1,9 @@
-$NetBSD: patch-me,v 1.5 2019/12/03 14:29:21 ryoon Exp $
+$NetBSD: patch-me,v 1.6 2020/01/10 03:43:20 ryoon Exp $
 
 Add DragonFly support.
 Always include GCM for aarch64.
 
---- nss/lib/freebl/Makefile.orig	2019-11-19 19:55:30.000000000 +0000
+--- nss/lib/freebl/Makefile.orig	2020-01-03 20:27:43.000000000 +0000
 +++ nss/lib/freebl/Makefile
 @@ -101,6 +101,9 @@ endif
  ifdef NSS_NO_INIT_SUPPORT
@@ -23,8 +23,8 @@ Always include GCM for aarch64.
 +    EXTRA_SRCS += aes-armv8.c
  endif
  ifeq ($(CPU_ARCH),arm)
-     ifdef CC_IS_CLANG
-@@ -318,7 +321,7 @@ endif
+     EXTRA_SRCS += gcm-arm32-neon.c
+@@ -320,7 +323,7 @@ endif
  # to bind the blapi function references in FREEBLVector vector
  # (ldvector.c) to the blapi functions defined in the freebl
  # shared libraries.
@@ -33,7 +33,7 @@ Always include GCM for aarch64.
      MKSHLIB += -Wl,-Bsymbolic
  endif
  
-@@ -470,7 +473,11 @@ else
+@@ -472,7 +475,11 @@ else
      ifdef NS_USE_GCC
  	LD = gcc
  	AS = gcc
