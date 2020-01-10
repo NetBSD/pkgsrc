@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/10/27 10:37:43 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/10 11:05:04 nia Exp $
 
 DISTNAME=	buzztrax-0.10.2
 CATEGORIES=	audio
@@ -30,6 +30,7 @@ PLIST_SRC+=	PLIST
 
 USE_PKGLOCALEDIR=	yes
 
+CONFIGURE_ARGS+=	--disable-dllwrapper
 CONFIGURE_ARGS+=	--disable-schemas-compile
 
 .include "options.mk"
