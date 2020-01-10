@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.309 2019/12/28 19:32:47 thorpej Exp $
+# $NetBSD: Makefile,v 1.310 2020/01/10 11:11:36 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -406,6 +406,5 @@ SUBDIR+=	xtrs
 SUBDIR+=	xyame
 SUBDIR+=	yabause
 SUBDIR+=	z26
-SUBDIR+=	zsnes
 
 .include "../mk/misc/category.mk"
