@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/01/21 16:49:08 he Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/01/10 22:53:13 khorben Exp $
 bin/widget
 include/Desktop.h
 include/Desktop/about.h
@@ -8,6 +8,7 @@ include/Desktop/help.h
 include/Desktop/menubar.h
 include/Desktop/message.h
 include/Desktop/mime.h
+include/Desktop/mimehandler.h
 include/Desktop/toolbar.h
 include/Desktop/widget.h
 lib/libDesktop.a
