@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.311 2020/01/10 17:07:39 plunky Exp $
+$NetBSD: CHANGES-2020,v 1.312 2020/01/10 18:27:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -373,3 +373,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/poppler-utils to 0.84.0 [wiz 2020-01-10]
 	Added databases/libtcd version 2.2.7r2 [plunky 2020-01-10]
 	Updated time/xtide to 2.15.2 [plunky 2020-01-10]
+	Added games/vvvvvv version 0.0.0.20200110 [nia 2020-01-10]
