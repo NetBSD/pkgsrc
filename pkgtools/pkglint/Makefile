@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.623 2020/01/06 20:38:42 rillig Exp $
+# $NetBSD: Makefile,v 1.624 2020/01/10 13:32:19 bsiegert Exp $
 
 PKGNAME=	pkglint-19.4.2
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 DISTNAME=	tools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=golang/}
