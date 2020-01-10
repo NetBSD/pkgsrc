@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2019/12/13 07:43:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/10 13:32:23 bsiegert Exp $
 
 DISTNAME=	jwalterweatherman-20181028
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=spf13/}
 CATEGORIES=	devel
 GITHUB_TAG=	94f6ae3ed3bceceafa716478c5fbf8d29ca601a1

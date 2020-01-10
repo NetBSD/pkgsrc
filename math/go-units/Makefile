@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2019/12/13 07:43:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/10 13:32:11 bsiegert Exp $
 
 DISTNAME=	units-0.0.20151021
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alecthomas/}
 GITHUB_PROJECT=	${PKGBASE:S/^go-//}

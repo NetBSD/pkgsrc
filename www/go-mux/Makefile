@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/12/13 07:44:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/10 13:32:14 bsiegert Exp $
 
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 DISTNAME=		go-mux-1.7.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gorilla/}
 GITHUB_PROJECT=		mux

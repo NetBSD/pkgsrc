@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/12/13 07:43:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/10 13:32:11 bsiegert Exp $
 
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 DISTNAME=		go-xxhash-2.1.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cespare/}
 GITHUB_PROJECT=		xxhash
