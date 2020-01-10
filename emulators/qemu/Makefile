@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2020/01/04 13:46:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.224 2020/01/10 20:27:03 adam Exp $
 
 DISTNAME=	qemu-4.2.0
 PKGREVISION=	1
@@ -132,7 +132,7 @@ PLIST.nbd=			yes
 CONFIGURE_ARGS+=		--disable-coroutine-pool
 .endif
 
-PLIST_VARS+=		${UE_ARCHS} bridge-helper ivshmem nbd pr-helper virtfs-proxy-helper
+PLIST_VARS+=		${UE_ARCHS} bridge-helper ivshmem keymap nbd pr-helper virtfs-proxy-helper
 .for pvar in ${USER_EMUL}
 PLIST.${pvar}=		yes
 .endfor
@@ -158,6 +158,8 @@ post-install:
 
 # On Darwin, qemu uses Cocoa and CoreAudio
 .if ${OPSYS} != "Darwin"
+PLIST.keymap=	yes
+.include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .endif
 .include "../../archivers/lzo/buildlink3.mk"
@@ -171,7 +173,6 @@ post-install:
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
