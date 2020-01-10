@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.316 2020/01/10 23:21:27 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.317 2020/01/10 23:24:25 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -378,3 +378,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/deforaos-libdesktop to 0.4.0 [khorben 2020-01-10]
 	Updated sysutils/deforaos-browser to 0.5.3 [khorben 2020-01-10]
 	Updated x11/deforaos-panel to 0.4.0 [khorben 2020-01-10]
+	Updated x11/deforaos-locker to 0.4.1 [khorben 2020-01-10]
