@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_alternatives.8,v 1.6 2013/07/20 21:50:53 wiz Exp $
+.\" $NetBSD: pkg_alternatives.8,v 1.7 2020/01/10 12:20:50 leot Exp $
 .\"
 .\" pkg_alternatives - Generic wrappers for programs with similar interfaces
 .\" Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd January 30, 2005
+.Dd January 10, 2020
 .Dt PKG_ALTERNATIVES 8
 .Os
 .Sh NAME
@@ -102,7 +102,7 @@ wrapper (replace the
 .Dq wrapper
 word with the wrapper's absolute file name):
 .Bl -tag -width XXXX
-.It Pa ~/.alternatives/wrapper
+.It Pa ~/.pkg_alternatives/wrapper
 This is called the
 .Em user configuration file
 and is only read when not running as
