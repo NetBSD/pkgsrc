@@ -1,0 +1,13 @@
+$NetBSD: patch-sfbpf_Makefile.in,v 1.1 2020/01/10 21:17:17 joerg Exp $
+
+--- sfbpf/Makefile.in.orig	2020-01-10 00:23:05.893226310 +0000
++++ sfbpf/Makefile.in
+@@ -780,7 +780,7 @@ sf_scanner.c: $(srcdir)/scanner.l
+ 	@rm -f $(srcdir)/sf_scanner.c
+ 	$(srcdir)/runlex.sh $(V_LEX) -osf_scanner.c $(srcdir)/scanner.l
+ 
+-sf_scanner.o: sf_scanner.c tokdefs.h
++libsfbpf_la-sf_scanner.lo: sf_scanner.c tokdefs.h
+ 
+ tokdefs.h: sf_grammar.c
+ sf_grammar.c: $(srcdir)/grammar.y

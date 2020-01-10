@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2019/04/27 11:33:03 wiz Exp $
+$NetBSD: distinfo,v 1.3 2020/01/10 21:17:17 joerg Exp $
 
 SHA1 (daq-2.0.6.tar.gz) = ec0ebfcd4568a3e4e58c774982c808c414dd71bc
 RMD160 (daq-2.0.6.tar.gz) = cf3a9df96829f63324a44dae5f2248d835e6ac4d
 SHA512 (daq-2.0.6.tar.gz) = 65d779651e6b193309159113f620dc843be4b5e142455a3b530b88ce7ca12c318935affa45f54e56427c9d5eb1239a47dc7a323325ccb394d1a888619c580f9e
 Size (daq-2.0.6.tar.gz) = 514687 bytes
-SHA1 (patch-sfbpf_Makefile.am) = 200e15424d2a6e8b5ec4f78b92c2203ae63726b6
+SHA1 (patch-sfbpf_Makefile.am) = 3697692267c3ff8e104103065a382e60089c641b
+SHA1 (patch-sfbpf_Makefile.in) = 93286e8b417dfc40e40a64544eaf6b443a9aaaaf
