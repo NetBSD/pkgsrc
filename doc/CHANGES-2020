@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.298 2020/01/10 03:43:51 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.299 2020/01/10 11:12:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -347,3 +347,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/6tunnel to 0.13 [nia 2020-01-09]
 	Updated www/firefox68 to 68.4.1 [nia 2020-01-09]
 	Updated devel/nss to 3.49 [ryoon 2020-01-10]
+	Removed emulators/zsnes [nia 2020-01-10]
