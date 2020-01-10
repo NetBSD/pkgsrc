@@ -1,0 +1,78 @@
+$NetBSD: patch-configure,v 1.1 2020/01/10 17:05:40 plunky Exp $
+
+ensure test statement is portable
+
+--- configure.orig	2019-02-24 20:18:33.000000000 +0000
++++ configure
+@@ -16825,7 +16825,7 @@ fi
+ # Check whether --enable-time-workaround was given.
+ if test "${enable_time_workaround+set}" = set; then :
+   enableval=$enable_time_workaround;
+-    if test "$enable_time_workaround" == yes; then :
++    if test "$enable_time_workaround" = yes; then :
+ 
+        { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Y2038 workaround is enabled; time zones are disabled." >&5
+ $as_echo "$as_me: WARNING: Y2038 workaround is enabled; time zones are disabled." >&2;}
+@@ -16840,7 +16840,7 @@ fi
+ # Check whether --enable-systemd was given.
+ if test "${enable_systemd+set}" = set; then :
+   enableval=$enable_systemd;
+-    if test "$enable_systemd" == yes; then :
++    if test "$enable_systemd" = yes; then :
+ 
+        { $as_echo "$as_me:${as_lineno-$LINENO}: Configuring xttpd for systemd." >&5
+ $as_echo "$as_me: Configuring xttpd for systemd." >&6;}
+@@ -16857,7 +16857,7 @@ fi
+ # Check whether --enable-gnu-attributes was given.
+ if test "${enable_gnu_attributes+set}" = set; then :
+   enableval=$enable_gnu_attributes;
+-    if test "$enable_gnu_attributes" == yes; then :
++    if test "$enable_gnu_attributes" = yes; then :
+ 
+        { $as_echo "$as_me:${as_lineno-$LINENO}: GNU attributes are enabled." >&5
+ $as_echo "$as_me: GNU attributes are enabled." >&6;}
+@@ -16872,7 +16872,7 @@ fi
+ # Check whether --enable-semicolon-pathsep was given.
+ if test "${enable_semicolon_pathsep+set}" = set; then :
+   enableval=$enable_semicolon_pathsep;
+-    if test "$enable_semicolon_pathsep" == yes; then :
++    if test "$enable_semicolon_pathsep" = yes; then :
+ 
+        { $as_echo "$as_me:${as_lineno-$LINENO}: Using semicolon as HFILE_PATH separator." >&5
+ $as_echo "$as_me: Using semicolon as HFILE_PATH separator." >&6;}
+@@ -16887,7 +16887,7 @@ fi
+ # Check whether --enable-local-files was given.
+ if test "${enable_local_files+set}" = set; then :
+   enableval=$enable_local_files;
+-    if test "$enable_local_files" == yes; then :
++    if test "$enable_local_files" = yes; then :
+ 
+        { $as_echo "$as_me:${as_lineno-$LINENO}: Using local files." >&5
+ $as_echo "$as_me: Using local files." >&6;}
+@@ -16902,7 +16902,7 @@ fi
+ # Check whether --enable-3d was given.
+ if test "${enable_3d+set}" = set; then :
+   enableval=$enable_3d;
+-    if test "$enable_3d" == no; then :
++    if test "$enable_3d" = no; then :
+ 
+        { $as_echo "$as_me:${as_lineno-$LINENO}: Forcing plain Athena Widgets." >&5
+ $as_echo "$as_me: Forcing plain Athena Widgets." >&6;}
+@@ -16915,7 +16915,7 @@ fi
+ # Check whether --enable-moon-age was given.
+ if test "${enable_moon_age+set}" = set; then :
+   enableval=$enable_moon_age;
+-    if test "$enable_moon_age" == yes; then :
++    if test "$enable_moon_age" = yes; then :
+ 
+        { $as_echo "$as_me:${as_lineno-$LINENO}: Enabling experimental moon age code." >&5
+ $as_echo "$as_me: Enabling experimental moon age code." >&6;}
+@@ -16930,7 +16930,7 @@ fi
+ # Check whether --enable-lm_hard was given.
+ if test "${enable_lm_hard+set}" = set; then :
+   enableval=$enable_lm_hard;
+-    if test "$enable_lm_hard" == yes; then :
++    if test "$enable_lm_hard" = yes; then :
+ 
+        { $as_echo "$as_me:${as_lineno-$LINENO}: Linking with libm_hard instead of libm." >&5
+ $as_echo "$as_me: Linking with libm_hard instead of libm." >&6;}
