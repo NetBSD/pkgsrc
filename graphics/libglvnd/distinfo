@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2019/08/30 12:33:22 nia Exp $
-
-SHA1 (libglvnd-1.1.1.tar.gz) = b7c6662c8f5206b6c67eb2f0fe8010291b6781f2
-RMD160 (libglvnd-1.1.1.tar.gz) = c9fd5b7e519b563bb8e42ee5d0afb98a5b40fc8e
-SHA512 (libglvnd-1.1.1.tar.gz) = 9106ae3cd3bdce8f4def3c7e08645f76e1a65f51e184510088e79b834899061d357422376e0efd56e1bc9dc7d3150f74837f43bd3e6c4c44faa3859844ab21b7
-Size (libglvnd-1.1.1.tar.gz) = 1851222 bytes
