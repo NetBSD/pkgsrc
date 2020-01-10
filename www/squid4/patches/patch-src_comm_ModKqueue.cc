@@ -1,14 +1,24 @@
-$NetBSD: patch-src_comm_ModKqueue.cc,v 1.1 2020/01/04 10:57:18 taca Exp $
+$NetBSD: patch-src_comm_ModKqueue.cc,v 1.2 2020/01/10 21:22:22 joerg Exp $
 
 * Fix kqueue(2) for NetBSD.
 
---- src/comm/ModKqueue.cc.orig	2019-07-09 19:05:20.000000000 +0000
+--- src/comm/ModKqueue.cc.orig	2019-11-05 19:14:40.000000000 +0000
 +++ src/comm/ModKqueue.cc
-@@ -109,7 +109,11 @@ kq_update_events(int fd, short filter, P
+@@ -43,6 +43,9 @@
+ #if HAVE_SYS_EVENT_H
+ #include <sys/event.h>
+ #endif
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#endif
+ 
+ #define KE_LENGTH        128
+ 
+@@ -109,7 +112,11 @@ kq_update_events(int fd, short filter, P
              kep_flags = EV_DELETE;
          }
  
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) && (__NetBSD_Version__ - 0 < 999001500)
 +        EV_SET(kep, (uintptr_t) fd, filter, kep_flags, 0, 0, (intptr_t)0);
 +#else
          EV_SET(kep, (uintptr_t) fd, filter, kep_flags, 0, 0, 0);
