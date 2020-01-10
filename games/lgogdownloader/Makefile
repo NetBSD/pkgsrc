@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/12/21 21:21:12 nia Exp $
+# $NetBSD: Makefile,v 1.43 2020/01/10 11:22:52 nia Exp $
 
 DISTNAME=	lgogdownloader-3.5
 PKGREVISION=	3
@@ -15,6 +15,13 @@ BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+# 64 bit atomic ops are required
+CXXFLAGS+=		-march=i586
+.endif
 
 CMAKE_ARGS+=	-DJSONCPP_INCLUDE_DIR=${BUILDLINK_DIR}/include/json
 
