@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.303 2020/01/10 12:25:29 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.304 2020/01/10 12:27:33 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -352,3 +352,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/smake to 1.3nb8 [micha 2020-01-10]
 	Updated pkgtools/pkg_alternatives to 1.7 [leot 2020-01-10]
 	Updated textproc/p5-Swim to 0.1.48 [schmonz 2020-01-10]
+	Updated archivers/star to 1.6.1nb4 [micha 2020-01-10]
