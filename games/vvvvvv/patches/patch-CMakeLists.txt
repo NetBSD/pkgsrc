@@ -1,0 +1,32 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/01/10 19:38:06 nia Exp $
+
+Use physfs from pkgsrc.
+
+--- CMakeLists.txt.orig	2020-01-10 16:45:29.000000000 +0000
++++ CMakeLists.txt
+@@ -27,7 +27,7 @@ ELSE()
+ ENDIF()
+ 
+ # Include Directories
+-INCLUDE_DIRECTORIES(src tinyxml physfs lodepng)
++INCLUDE_DIRECTORIES(src tinyxml lodepng)
+ 
+ # Source Lists
+ SET(VVV_SRC
+@@ -96,11 +96,14 @@ ENDIF()
+ 
+ # Library information
+ ADD_LIBRARY(tinyxml-static STATIC ${XML_SRC})
+-ADD_LIBRARY(physfs-static STATIC ${PFS_SRC} ${PFSP_SRC})
+ ADD_LIBRARY(lodepng-static STATIC ${PNG_SRC})
+ 
++find_package(PhysFS REQUIRED)
++TARGET_INCLUDE_DIRECTORIES(vvvvvv PUBLIC "${PHYSFS_INCLUDE_DIR}")
++TARGET_LINK_LIBRARIES(vvvvvv ${PHYSFS_LIBRARY})
++
+ # Static Dependencies
+-TARGET_LINK_LIBRARIES(vvvvvv physfs-static tinyxml-static lodepng-static)
++TARGET_LINK_LIBRARIES(vvvvvv tinyxml-static lodepng-static)
+ 
+ # SDL2 Dependency (Detection pulled from FAudio)
+ if (DEFINED SDL2_INCLUDE_DIRS AND DEFINED SDL2_LIBRARIES)
