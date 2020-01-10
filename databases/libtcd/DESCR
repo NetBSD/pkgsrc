@@ -1,0 +1,23 @@
+libtcd provides a software API for reading and writing Tide Constituent
+Database (TCD) files.
+
+The TCD file format and schema are used by XTide to retrieve constituent
+definitions (speeds, equilibrium arguments, and node factors), harmonic
+constants, subordinate station offsets and associated metadata for use
+in generating tide predictions.
+
+The TCD file format and schema were originally designed by Jan Depner
+to improve the performance of XTide and to meet additional requirements
+of the U.S. Naval Oceanographic Office (NAVO).  They are now maintained
+primarily by David Flater.
+
+The design goals for TCD included:
+
+ Available without installing heavy external packages.
+ Efficient for indexing and loading of stations.
+ Compact file format.
+ Translatable without loss from legacy XTide .txt and .xml files.
+ Exportable to legacy .txt and .xml formats.
+ Modifiable by end user using tideEditor.
+ Able to detect tampering (usually, misguided attempts to edit the
+ database in a word processor).

@@ -1,0 +1,111 @@
+$NetBSD: patch-configure,v 1.1 2020/01/10 16:57:25 plunky Exp $
+
+fix non-portable tests
+
+--- configure.orig	2016-01-25 17:29:39.000000000 +0000
++++ configure
+@@ -2373,7 +2373,7 @@ ver_COMPAT114=""
+ # Check whether --enable-COMPAT114 was given.
+ if test "${enable_COMPAT114+set}" = set; then :
+   enableval=$enable_COMPAT114;
+-    if test "$enable_COMPAT114" == yes; then :
++    if test "$enable_COMPAT114" = yes; then :
+ 
+        { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: COMPAT114 is enabled!" >&5
+ $as_echo "$as_me: WARNING: COMPAT114 is enabled!" >&2;}
+@@ -2400,7 +2400,7 @@ fi
+ # Check whether --enable-lm_hard was given.
+ if test "${enable_lm_hard+set}" = set; then :
+   enableval=$enable_lm_hard;
+-    if test "$enable_lm_hard" == yes; then :
++    if test "$enable_lm_hard" = yes; then :
+ 
+        { $as_echo "$as_me:${as_lineno-$LINENO}: Linking with libm_hard instead of libm." >&5
+ $as_echo "$as_me: Linking with libm_hard instead of libm." >&6;}
+@@ -11760,17 +11760,17 @@ _ACEOF
+ # header file that will work outside of autoconf.  Evil:  relying on
+ # internals of autoconf macro definitions.
+ 
+-if test "$ac_cv_header_sys_types_h" == yes; then :
++if test "$ac_cv_header_sys_types_h" = yes; then :
+   sub_systypes="#include <sys/types.h>"
+ 
+ else
+   sub_systypes=""
+ 
+ fi
+-if test "$ac_cv_header_inttypes_h" == yes; then :
++if test "$ac_cv_header_inttypes_h" = yes; then :
+   sub_inttypes="#include <inttypes.h>"
+ 
+-elif test "$ac_cv_header_stdint_h" == yes; then :
++elif test "$ac_cv_header_stdint_h" = yes; then :
+   sub_inttypes="#include <stdint.h>"
+ 
+ else
+@@ -11778,28 +11778,28 @@ else
+ 
+ fi
+ 
+-if test "$ac_cv_c_int8_t" == yes; then :
++if test "$ac_cv_c_int8_t" = yes; then :
+   sub_int8_t="int8_t"
+ 
+ else
+   sub_int8_t="$ac_cv_c_int8_t"
+ 
+ fi
+-if test "$ac_cv_c_int16_t" == yes; then :
++if test "$ac_cv_c_int16_t" = yes; then :
+   sub_int16_t="int16_t"
+ 
+ else
+   sub_int16_t="$ac_cv_c_int16_t"
+ 
+ fi
+-if test "$ac_cv_c_int32_t" == yes; then :
++if test "$ac_cv_c_int32_t" = yes; then :
+   sub_int32_t="int32_t"
+ 
+ else
+   sub_int32_t="$ac_cv_c_int32_t"
+ 
+ fi
+-if test "$ac_cv_c_int64_t" == yes; then :
++if test "$ac_cv_c_int64_t" = yes; then :
+   sub_int64_t="int64_t"
+ 
+ else
+@@ -11807,28 +11807,28 @@ else
+ 
+ fi
+ 
+-if test "$ac_cv_c_uint8_t" == yes; then :
++if test "$ac_cv_c_uint8_t" = yes; then :
+   sub_uint8_t="uint8_t"
+ 
+ else
+   sub_uint8_t="$ac_cv_c_uint8_t"
+ 
+ fi
+-if test "$ac_cv_c_uint16_t" == yes; then :
++if test "$ac_cv_c_uint16_t" = yes; then :
+   sub_uint16_t="uint16_t"
+ 
+ else
+   sub_uint16_t="$ac_cv_c_uint16_t"
+ 
+ fi
+-if test "$ac_cv_c_uint32_t" == yes; then :
++if test "$ac_cv_c_uint32_t" = yes; then :
+   sub_uint32_t="uint32_t"
+ 
+ else
+   sub_uint32_t="$ac_cv_c_uint32_t"
+ 
+ fi
+-if test "$ac_cv_c_uint64_t" == yes; then :
++if test "$ac_cv_c_uint64_t" = yes; then :
+   sub_uint64_t="uint64_t"
+ 
+ else
