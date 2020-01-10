@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.305 2020/01/10 12:43:33 micha Exp $
+$NetBSD: CHANGES-2020,v 1.306 2020/01/10 12:45:44 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -354,3 +354,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-Swim to 0.1.48 [schmonz 2020-01-10]
 	Updated archivers/star to 1.6.1nb4 [micha 2020-01-10]
 	Updated shells/bosh to 20192105 [micha 2020-01-10]
+	Updated shells/pbosh to 20192105 [micha 2020-01-10]
