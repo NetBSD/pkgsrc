@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.307 2020/01/10 12:50:00 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.308 2020/01/10 12:54:01 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -353,6 +353,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkg_alternatives to 1.7 [leot 2020-01-10]
 	Updated textproc/p5-Swim to 0.1.48 [schmonz 2020-01-10]
 	Updated archivers/star to 1.6.1nb4 [micha 2020-01-10]
+	Updated lang/go113 to 1.13.6 [bsiegert 2020-01-10]
 	Updated shells/bosh to 20192105 [micha 2020-01-10]
 	Updated shells/pbosh to 20192105 [micha 2020-01-10]
 	Updated multimedia/gst-plugins1-bad to 1.16.2 [wiz 2020-01-10]
@@ -363,3 +364,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/gst-plugins1-ugly to 1.16.2 [wiz 2020-01-10]
 	Updated multimedia/gstreamer1 to 1.16.2 [wiz 2020-01-10]
 	Updated multimedia/py-gstreamer1 to 1.16.2 [wiz 2020-01-10]
+	Updated lang/go112 to 1.12.15 [bsiegert 2020-01-10]
