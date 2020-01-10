@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/12/28 11:52:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/01/10 21:12:09 joerg Exp $
 include/qof/deprecated.h
 include/qof/guid.h
 include/qof/kvpframe.h
@@ -111,6 +111,7 @@ share/doc/qof/html/doxy/globals_s.html
 share/doc/qof/html/doxy/globals_t.html
 share/doc/qof/html/doxy/globals_type.html
 share/doc/qof/html/doxy/globals_u.html
+share/doc/qof/html/doxy/globals_vars.html
 share/doc/qof/html/doxy/globals_x.html
 share/doc/qof/html/doxy/group__Backend.html
 share/doc/qof/html/doxy/group__Backend.js
