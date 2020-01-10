@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/09/10 10:23:33 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/10 06:29:48 nros Exp $
 
 DISTNAME=	googletest-1.8.1
 CATEGORIES=	devel
@@ -12,7 +12,12 @@ LICENSE=	modified-bsd
 
 INSTALLATION_DIRS=	bin
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++11
+USE_CMAKE=		yes
+USE_LANGUAGES=		c c++11
+
+PKGCONFIG_OVERRIDE+=	googlemock/cmake/gmock.pc.in
+PKGCONFIG_OVERRIDE+=	googlemock/cmake/gmock_main.pc.in
+PKGCONFIG_OVERRIDE+=	googletest/cmake/gtest.pc.in
+PKGCONFIG_OVERRIDE+=	googletest/cmake/gtest_main.pc.in
 
 .include "../../mk/bsd.pkg.mk"
