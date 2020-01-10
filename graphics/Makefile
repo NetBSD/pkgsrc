@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.872 2020/01/01 01:57:59 kamil Exp $
+# $NetBSD: Makefile,v 1.873 2020/01/10 11:15:44 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -309,7 +309,6 @@ SUBDIR+=	libggiwmh
 SUBDIR+=	libgii
 SUBDIR+=	libgiigic
 SUBDIR+=	libgltf
-SUBDIR+=	libglvnd
 SUBDIR+=	libgnomecanvas
 SUBDIR+=	libgnomecanvasmm
 SUBDIR+=	libimagequant
