@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/01/10 15:27:25 nia Exp $
+
+Don't try to use epoll on SunOS, causes the build to fail
+
+--- CMakeLists.txt.orig	2019-03-31 02:13:04.000000000 +0000
++++ CMakeLists.txt
+@@ -364,7 +364,9 @@ check_include_file(strings.h HAVE_STRING
+ check_function_exists(strcasecmp HAVE_STRCASECMP)
+ check_function_exists(stricmp HAVE_STRICMP)
+ check_function_exists(umask HAVE_UMASK)
+-check_function_exists(epoll_wait HAVE_EPOLL)
++if(NOT CMAKE_SYSTEM_NAME MATCHES "SunOS")
++  check_function_exists(epoll_wait HAVE_EPOLL)
++endif()
+ check_function_exists(poll HAVE_POLL)
+ check_function_exists(kqueue HAVE_KQUEUE)
+ 
