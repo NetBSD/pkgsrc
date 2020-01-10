@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.31 2019/07/21 22:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/10 23:08:26 khorben Exp $
 #
 
-DISTNAME=	Browser-0.5.1
-PKGNAME=	deforaos-browser-0.5.1
-PKGREVISION=	8
+DISTNAME=	Browser-0.5.3
+PKGNAME=	deforaos-browser-0.5.3
 CATEGORIES=	sysutils
-MASTER_SITES=	https://www.defora.org/os/download/download/4442/
+MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Browser/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop file manager and desktop handler
 
-LICENSE=	modified-bsd
+LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
