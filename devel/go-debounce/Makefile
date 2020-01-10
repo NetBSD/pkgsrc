@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2019/12/13 07:43:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/10 13:32:24 bsiegert Exp $
 
 DISTNAME=	debounce-1.2.0
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bep/}
 CATEGORIES=	devel
 GITHUB_PROJECT=	${PKGBASE:S/^go-//}
