@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2020/01/04 13:46:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.65 2020/01/10 20:27:03 adam Exp $
 bin/elf2dmp
 ${PLIST.ivshmem}bin/ivshmem-client
 ${PLIST.ivshmem}bin/ivshmem-server
@@ -14,7 +14,7 @@ ${PLIST.hppa}bin/qemu-hppa
 ${PLIST.i386}bin/qemu-i386
 bin/qemu-img
 bin/qemu-io
-bin/qemu-keymap
+${PLIST.keymap}bin/qemu-keymap
 ${PLIST.m68k}bin/qemu-m68k
 ${PLIST.microblaze}bin/qemu-microblaze
 ${PLIST.microblazeel}bin/qemu-microblazeel
