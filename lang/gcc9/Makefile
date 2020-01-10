@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2020/01/06 15:43:51 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/10 07:50:25 rillig Exp $
 
 GCC9_PKGBASE=	gcc9
 GCC9_VERSION=	9.2.0
 
 DISTNAME=	gcc-${GCC9_VERSION}
 PKGNAME=	${GCC9_PKGBASE}-${GCC9_VERSION}
-## When bumping the PKGREVISION of this package, the PKGREVISION of
-## lang/gcc9-libs needs to be bumped to be at least 1 more than the
-## PKGREVISION of this package!
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC9_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
