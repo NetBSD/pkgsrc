@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.590 2019/11/27 10:34:22 ng0 Exp $
+# $NetBSD: Makefile,v 1.591 2020/01/10 16:57:48 plunky Exp $
 
 COMMENT=	Databases
 
@@ -81,6 +81,7 @@ SUBDIR+=	libgda-mysql
 SUBDIR+=	libgda-postgres
 SUBDIR+=	libmongo-client
 SUBDIR+=	libpqxx
+SUBDIR+=	libtcd
 SUBDIR+=	libzdb
 SUBDIR+=	liquibase
 SUBDIR+=	lmdb
