@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2019/07/01 15:48:53 jaapb Exp $
+# $NetBSD: options.mk,v 1.2 2020/01/10 21:19:20 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocaml-cohttp
 PKG_SUPPORTED_OPTIONS=	async lwt js_of_ocaml
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=	async lwt js_of_ocaml
 
 .include "../../mk/bsd.prefs.mk"
 
