@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.314 2020/01/10 22:53:58 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.315 2020/01/10 23:08:38 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -376,3 +376,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added games/vvvvvv version 0.0.0.20200110 [nia 2020-01-10]
 	Updated x11/slim to 1.3.6nb3 [maya 2020-01-10]
 	Updated x11/deforaos-libdesktop to 0.4.0 [khorben 2020-01-10]
+	Updated sysutils/deforaos-browser to 0.5.3 [khorben 2020-01-10]
