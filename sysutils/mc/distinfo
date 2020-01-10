@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2019/11/20 17:02:14 nia Exp $
+$NetBSD: distinfo,v 1.35 2020/01/10 21:18:44 joerg Exp $
 
 SHA1 (mc-4.8.23.tar.xz) = 021a33828922b45d18daa23189d6c86d17e61e09
 RMD160 (mc-4.8.23.tar.xz) = 4eda875d4988d1aa353c771e803b3dca9e3dee1a
@@ -6,5 +6,6 @@ SHA512 (mc-4.8.23.tar.xz) = e51c7f926d296280a57a8ecb5f4b296a850022b7ab9beaba89f5
 Size (mc-4.8.23.tar.xz) = 2552944 bytes
 SHA1 (patch-ac) = d01357b685acd8e863510248ed7519ae2821757f
 SHA1 (patch-ad) = 4484b91511cf5bac73f4ae940988d46239e2cd95
+SHA1 (patch-hacks_images_Makefile.in) = 556fc629ee603ecf036aa633e2de9ce2fbc1a987
 SHA1 (patch-src_subshell_common.c) = b6d390da68aa0028d21683b1959340e51f67efd6
 SHA1 (patch-src_vfs_sfs_Makefile.in) = 90ce81b0dcf2ef2134884137d86e147219d180ed
