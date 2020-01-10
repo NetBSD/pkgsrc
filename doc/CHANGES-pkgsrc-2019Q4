@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.3 2020/01/07 21:29:33 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.4 2020/01/10 15:25:55 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q4 branch:
 
@@ -16,4 +16,16 @@ print/ghostscript-agpl: security fix
 
 Pullup ticket #6111 - requested by sevan
 graphics/openjpeg: security fix
+
+Pullup ticket #6112 - requested by nia
+graphics/GraphicsMagick: security fix
+
+Pullup ticket #6114 - requested by nia
+misc/raspberrypi-userland: build fix
+
+Pullup ticket #6113 - requested by nia
+www/firefox68: security fix (zero-day)
+
+Pullup ticket #6115 - requested by nia
+net/libtorrent-rasterbar: NetBSD 8 build fix
 
