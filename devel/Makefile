@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2985 2020/01/11 07:06:43 mef Exp $
+# $NetBSD: Makefile,v 1.2986 2020/01/11 11:26:02 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -532,7 +532,6 @@ SUBDIR+=	hs-splitmix
 SUBDIR+=	hs-stm
 SUBDIR+=	hs-syb
 SUBDIR+=	hs-tagged
-SUBDIR+=	hs-text
 SUBDIR+=	hs-tf-random
 SUBDIR+=	hs-th-abstraction
 SUBDIR+=	hs-transformers-base
