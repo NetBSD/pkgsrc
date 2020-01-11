@@ -363,6 +363,7 @@ func (bt *BasicType) NeedsQ() bool {
 		BtPkgOptionsVar,
 		BtPkgpath,
 		BtPkgrevision,
+		BtPlistIdentifier,
 		BtPrefixPathname,
 		BtPythonDependency,
 		BtRPkgName,
@@ -440,6 +441,7 @@ var (
 	BtPkgpath                = &BasicType{"Pkgpath", (*VartypeCheck).Pkgpath}
 	BtPkgOptionsVar          = &BasicType{"PkgOptionsVar", (*VartypeCheck).PkgOptionsVar}
 	BtPkgrevision            = &BasicType{"Pkgrevision", (*VartypeCheck).Pkgrevision}
+	BtPlistIdentifier        = &BasicType{"PlistIdentifier", (*VartypeCheck).PlistIdentifier}
 	BtPrefixPathname         = &BasicType{"PrefixPathname", (*VartypeCheck).PrefixPathname}
 	BtPythonDependency       = &BasicType{"PythonDependency", (*VartypeCheck).PythonDependency}
 	BtRPkgName               = &BasicType{"RPkgName", (*VartypeCheck).RPkgName}
