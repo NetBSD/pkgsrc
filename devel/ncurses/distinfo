@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2019/02/25 11:54:05 jperkin Exp $
+$NetBSD: distinfo,v 1.37 2020/01/11 01:39:19 kim Exp $
 
 SHA1 (ncurses-6.1.tar.gz) = 57acf6bc24cacd651d82541929f726f4def780cc
 RMD160 (ncurses-6.1.tar.gz) = 938235f3922f9c6ef0f1081d643ecb2da1347a17
@@ -13,4 +13,10 @@ SHA1 (patch-configure.in) = 48a705b3f4de3a65c0c1c3648f5a24c5310ed3fa
 SHA1 (patch-misc_ncurses-config.in) = 43e4dc8abe85804513da1189aeffa5c7746ffcca
 SHA1 (patch-misc_terminfo.src) = 3423a09b0b6aac1139ab21f514c631ee8c36c2f7
 SHA1 (patch-ncurses_base_MKlib__gen.sh) = f8ce67fbd273529e4161a2820677d05a623fd527
+SHA1 (patch-ncurses_tinfo_alloc__entry.c) = a1fc6ce016f33aea422f82d4df2cd60ef352760e
+SHA1 (patch-ncurses_tinfo_alloc__ttype.c) = 6cec181b4dd24008ed62b90e6d6c508a7caccc0a
+SHA1 (patch-ncurses_tinfo_comp__hash.c) = 44c646f9fc5e6f7b3e4e4de5df0506b7bc8f8a25
+SHA1 (patch-ncurses_tinfo_comp__parse.c) = 98f9e7bbaf3aa7883a8bb2ec359fae3647e0989f
 SHA1 (patch-ncurses_tinfo_parse__entry.c) = 06d2b52e84595f8acd47ad36ded7b7d5bec95b8a
+SHA1 (patch-ncurses_tinfo_read__entry.c) = 251878d3625df25bdbb8c16f9ef619e50d786dae
+SHA1 (patch-progs_dump__entry.c) = 5cade588859c3e91287ef933253b792728df5a44
