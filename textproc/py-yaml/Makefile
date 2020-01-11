@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2019/12/15 11:33:18 adam Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/11 16:12:48 adam Exp $
 
-DISTNAME=	PyYAML-5.2
+DISTNAME=	PyYAML-5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyYAML/yaml/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyYAML/}
