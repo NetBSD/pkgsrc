@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.325 2020/01/11 07:46:08 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.326 2020/01/11 08:18:56 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -386,3 +386,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/dejagnu to 1.6.2 [mef 2020-01-11]
 	Added devel/R-RUnit version 0.4.32 [mef 2020-01-11]
 	Updated editors/deforaos-editor to 0.4.1 [khorben 2020-01-11]
+	Updated devel/hs-hint to 0.9.0.2 [pho 2020-01-11]
