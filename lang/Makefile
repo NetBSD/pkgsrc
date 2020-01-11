@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.536 2020/01/07 16:53:58 pho Exp $
+# $NetBSD: Makefile,v 1.537 2020/01/11 23:14:27 joerg Exp $
 #
 
 COMMENT=	Programming languages
@@ -90,6 +90,7 @@ SUBDIR+=	ghc-bootstrap
 SUBDIR+=	ghc7
 SUBDIR+=	ghc80
 SUBDIR+=	ghc84
+SUBDIR+=	ghc88
 SUBDIR+=	gjs
 SUBDIR+=	gnat_util
 SUBDIR+=	gnucobol
