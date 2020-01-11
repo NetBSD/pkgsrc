@@ -1,0 +1,6 @@
+The D at the end of the name is missing intentionally.
+
+Because of this missing letter, this file does not get recorded in
++BUILD_VERSION.
+
+$NetBS
