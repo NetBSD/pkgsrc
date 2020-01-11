@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2019/07/21 22:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2020/01/11 04:04:41 ryoon Exp $
 
 DISTNAME=	chemtool-1.6.14
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	biology
 MASTER_SITES=	http://ruby.chemie.uni-freiburg.de/~martin/chemtool/
 
@@ -19,6 +19,9 @@ CONFIGURE_ARGS+=	--without-gnomedir
 
 LIBS+=			${LDFLAGS}
 INSTALLATION_DIRS=	share/doc/chemtool share/examples/chemtool
+
+NOT_PAX_MPROTECT_SAFE+=	bin/chemtool
+NOT_PAX_MPROTECT_SAFE+=	bin/chemtoolbg
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/share/examples/chemtool
