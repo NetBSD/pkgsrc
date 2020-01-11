@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/11 08:09:43 pho Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/11 09:00:30 pho Exp $
 
 DISTNAME=	exceptions-0.10.4
 CATEGORIES=	devel
@@ -8,5 +8,4 @@ COMMENT=	Extensible optionally-pure exceptions
 LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"
-.include "../../devel/hs-stm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
