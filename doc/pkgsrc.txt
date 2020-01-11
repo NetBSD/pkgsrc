@@ -8045,11 +8045,11 @@ how regression tests work in pkgsrc and how you can add new tests.
 
 You first need to install the pkgtools/pkg_regress package, which provides the 
 pkg_regress command. Then you can simply run that command, which will run all
-tests in the regress category.
+tests in the regress/ directory.
 
 27.2. Adding a new regression test
 
-Every directory in the regress category that contains a file called spec is
+Every directory in the regress/ directory that contains a file called spec is
 considered a regression test. This file is a shell program that is included by
 the pkg_regress command. The following functions can be overridden to suit your
 needs.
@@ -8057,7 +8057,7 @@ needs.
 27.2.1. Overridable functions
 
 These functions do not take any parameters. Although they are called in "set -e
-" mode, they don't stop at the first failing command. See this StackOverflow
+" mode, they don't stop at the first failing command. See this Stack Overflow
 question for details.
 
 do_setup
@@ -8097,6 +8097,10 @@ do_cleanup
     it does nothing.
 
 27.2.2. Helper functions
+
+regress_fail message...
+
+    This function makes the test fail with the given error message.
 
 exit_status expected
 
