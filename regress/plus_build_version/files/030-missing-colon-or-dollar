@@ -1,0 +1,7 @@
+A complete RCS Id needs a colon or a dollar, otherwise it is not
+expanded.
+
+As of January 2020, this line gets unnecessarily recorded in
++BUILD_VERSION.
+
+$NetBSD

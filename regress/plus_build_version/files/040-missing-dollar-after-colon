@@ -1,0 +1,7 @@
+Each RCS Id must end with a second dollar in the same line. Just having
+the colon is not enough.
+
+As of January 2020, this line gets unnecessarily recorded in
++BUILD_VERSION.
+
+$NetBSD:
