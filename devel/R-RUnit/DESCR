@@ -1,0 +1,16 @@
+# RUnit
+
+Runit is a testing package for R code, inspired by the xUnit family of testing
+tools.
+
+Originally implemented by Thomas Koenig, Klaus Juenemann, and Matthias Burger,
+this package has served the R community for over a decade.
+
+Since RUnit is no longer actively developed, I provide maintenance of this
+package mostly to support older projects that still rely on RUnit.
+
+# Using RUnit
+
+To make RUnit work with `R CMD check`, create a following file in the `tests`
+subdirectory. This would run the actual tests stored in the packages
+`inst/tests` subdirectory.
