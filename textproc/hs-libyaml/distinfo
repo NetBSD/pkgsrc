@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/11 11:04:31 pho Exp $
+
+SHA1 (libyaml-0.1.1.1.tar.gz) = e100cdc7557f8d485201ddf1421abfc228980992
+RMD160 (libyaml-0.1.1.1.tar.gz) = 17a0576b30bf5ff6be0d7dac278285055624edb0
+SHA512 (libyaml-0.1.1.1.tar.gz) = d3a7848f77c20f2c6de2efa0fece4ae18309d58959ed98cc69810cd3b0a9d6bae053d6205dd5c1f12a69494f01ff64fd24015f05f854b3a4e8dbb3089fb9c6d4
+Size (libyaml-0.1.1.1.tar.gz) = 63430 bytes
