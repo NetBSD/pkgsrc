@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1077 2020/01/03 08:03:35 pho Exp $
+# $NetBSD: Makefile,v 1.1078 2020/01/11 10:32:13 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -282,7 +282,6 @@ SUBDIR+=	hs-case-insensitive
 SUBDIR+=	hs-cgrep
 SUBDIR+=	hs-hscolour
 SUBDIR+=	hs-pandoc-types
-SUBDIR+=	hs-parsec
 SUBDIR+=	hs-polyparse
 SUBDIR+=	hs-regex-base
 SUBDIR+=	hs-regex-pcre
