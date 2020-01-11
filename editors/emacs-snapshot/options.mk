@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.13 2019/12/18 12:38:48 mef Exp $
+# $NetBSD: options.mk,v 1.14 2020/01/11 11:43:04 mef Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=			dbus gconf gnutls imagemagick jansson svg xaw3d xft2 xml
-PKG_SUGGESTED_OPTIONS=			jansson
 # xaw3d is only valid with tookit = xaw
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=		window-system
@@ -21,7 +20,7 @@ PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 motif xaw lucid
 # gtk3 is default in the logic below (even not included in SUGGESTED_=
 # gconf, gtk* and xft2 will be ignored for nextstep even shown as selected.
 
-PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls gtk3 xaw3d xft2 xml x11
+PKG_SUGGESTED_OPTIONS=	dbus gconf gnutls gtk3 jansson xaw3d xft2 xml x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -89,15 +88,6 @@ CONFIGURE_ARGS+=	--without-gconf
 # DEPENDS+=	py[0-9]*-wand-[0-9]*:../../graphics/py-wand
 .  else
 CONFIGURE_ARGS+=	--without-imagemagick
-.  endif
-
-###
-### Support jansson (JSON library)
-###
-.  if !empty(PKG_OPTIONS:Mjansson)
-.include "../../textproc/jansson/buildlink3.mk"
-.  else
-CONFIGURE_ARGS+=	--without-json
 .  endif
 
 ###
@@ -192,6 +182,16 @@ post-install:
 
 .else  # no window system
 #.if empty(PKG_OPTIONS:Mx11)
+
+###
+### Support jansson (JSON library)
+###
+.  if !empty(PKG_OPTIONS:Mjansson)
+.include "../../textproc/jansson/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--without-json
+.  endif
+
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-xpm
 CONFIGURE_ARGS+=	--without-jpeg
