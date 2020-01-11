@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/06 11:51:04 pho Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/11 09:41:03 pho Exp $
 
 DISTNAME=	uuid-types-1.0.3
 CATEGORIES=	devel
@@ -10,5 +10,4 @@ LICENSE=	modified-bsd
 .include "../../mk/haskell.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
-.include "../../devel/hs-text/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
