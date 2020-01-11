@@ -107,10 +107,19 @@ func invalidCharacters(s string, valid *textproc.ByteSet) string {
 	var unis strings.Builder
 
 	for _, r := range s {
-		if r == rune(byte(r)) && valid.Contains(byte(r)) {
+		switch {
+		case r == rune(byte(r)) && valid.Contains(byte(r)):
 			continue
+		case '!' <= r && r <= '~':
+			unis.WriteByte(' ')
+			unis.WriteByte(byte(r))
+		case r == ' ':
+			unis.WriteString(" space")
+		case r == '\t':
+			unis.WriteString(" tab")
+		default:
+			_, _ = fmt.Fprintf(&unis, " %U", r)
 		}
-		_, _ = fmt.Fprintf(&unis, " %U", r)
 	}
 
 	if unis.Len() == 0 {
