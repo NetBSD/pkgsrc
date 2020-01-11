@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2019/12/31 08:59:52 pho Exp $
-
-SHA1 (text-1.2.4.0.tar.gz) = ffeacd3aad975ef68e2143558711672108e15d46
-RMD160 (text-1.2.4.0.tar.gz) = a0b7592e1e3a0930db536be283587610d460a832
-SHA512 (text-1.2.4.0.tar.gz) = a4bd566c7d0aea1bfeacf27332e9cff3ad894e7eed9f826b7e4fc7fb85e272164d18a34a81c89dd1ea802951a80ec1d82000ebef05748d419ddfff792c4525e3
-Size (text-1.2.4.0.tar.gz) = 171477 bytes
