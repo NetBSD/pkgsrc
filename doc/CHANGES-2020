@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.345 2020/01/11 15:18:58 nia Exp $
+$NetBSD: CHANGES-2020,v 1.346 2020/01/11 15:48:44 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -406,3 +406,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/hs-mtl [pho 2020-01-11]
 	Updated graphics/freeimage to 3.18.0 [nia 2020-01-11]
 	Added graphics/imv version 4.1.0 [nia 2020-01-11]
+	Updated pkgtools/pkglint to 19.4.3 [rillig 2020-01-11]
