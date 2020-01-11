@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/02 11:47:47 pho Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/11 11:15:53 pho Exp $
 
 DISTNAME=	blaze-markup-0.8.2.3
 CATEGORIES=	textproc
@@ -10,5 +10,4 @@ LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"
 .include "../../devel/hs-blaze-builder/buildlink3.mk"
-.include "../../devel/hs-text/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
