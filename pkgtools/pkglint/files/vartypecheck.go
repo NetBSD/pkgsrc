@@ -1059,6 +1059,38 @@ func (cv *VartypeCheck) Pkgrevision() {
 	}
 }
 
+// PlistIdentifier checks for valid identifiers in PLIST_VARS.
+// These identifiers are interpreted as regular expressions by
+// mk/plist/plist-subst.mk, therefore they are limited to very
+// few characters.
+func (cv *VartypeCheck) PlistIdentifier() {
+	if cv.Value != cv.ValueNoVar {
+		return
+	}
+
+	if cv.Op == opUseMatch {
+		invalidPatternChars := textproc.NewByteSet("A-Za-z0-9---_*?[]")
+		invalid := invalidCharacters(cv.Value, invalidPatternChars)
+		if invalid != "" {
+			cv.Warnf("PLIST identifier pattern %q contains invalid characters (%s).",
+				cv.Value, invalid)
+			cv.Explain(
+				"PLIST identifiers must consist of [A-Za-z0-9-_] only.",
+				"In patterns, the characters *?[] are allowed additionally.")
+		}
+		return
+	}
+
+	invalidChars := textproc.NewByteSet("A-Za-z0-9---_")
+	invalid := invalidCharacters(cv.Value, invalidChars)
+	if invalid != "" {
+		cv.Errorf("PLIST identifier %q contains invalid characters (%s).",
+			cv.Value, invalid)
+		cv.Explain(
+			"PLIST identifiers must consist of [A-Za-z0-9-_] only.")
+	}
+}
+
 // PrefixPathname checks for a pathname relative to ${PREFIX}.
 func (cv *VartypeCheck) PrefixPathname() {
 	if NewPath(cv.Value).IsAbs() {
