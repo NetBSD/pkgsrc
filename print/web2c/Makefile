@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2019/11/07 12:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2020/01/11 00:31:05 ryoon Exp $
 
 PKGREVISION= 3
 .include "../../print/texlive/Makefile.common"
@@ -14,13 +14,15 @@ DEPENDS+=	ptexenc>=1.3.7:../../print/ptexenc
 
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/web2c
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++14
 USE_TOOLS+=		gmake lex yacc
 GNU_CONFIGURE_STRICT=	no # texk/web2c/web2c doesn't know the options
 PKGCONFIG_OVERRIDE=	synctexdir/synctex.pc.in
 
 INFO_FILES=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/texk/web2c
+
+#CXXFLAGS+=		-fpermissive
 
 CONFIGURE_ARGS+=	--disable-luatex
 CONFIGURE_ARGS+=	--disable-luatex53
