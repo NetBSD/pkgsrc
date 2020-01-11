@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.347 2020/01/11 16:18:29 nia Exp $
+$NetBSD: CHANGES-2020,v 1.348 2020/01/11 16:22:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -408,3 +408,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/imv version 4.1.0 [nia 2020-01-11]
 	Updated pkgtools/pkglint to 19.4.3 [rillig 2020-01-11]
 	Added sysutils/dmenu-wld version 4.6.0.20191014 [nia 2020-01-11]
+	Updated textproc/py-yaml to 5.3 [adam 2020-01-11]
+	Updated net/py-lexicon to 3.3.16 [adam 2020-01-11]
+	Updated devel/py-wcwidth to 0.1.8 [adam 2020-01-11]
+	Updated devel/py-pygit2 to 1.0.2 [adam 2020-01-11]
