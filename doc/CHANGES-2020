@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.339 2020/01/11 13:11:00 pho Exp $
+$NetBSD: CHANGES-2020,v 1.340 2020/01/11 13:37:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -400,3 +400,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/hs-colour to 2.3.5 [pho 2020-01-11]
 	Updated time/hs-timezone-olson to 0.1.9 [pho 2020-01-11]
 	Removed devel/hs-stm [pho 2020-01-11]
+	Added graphics/numix-gtk-theme version 2.6.7 [nia 2020-01-11]
