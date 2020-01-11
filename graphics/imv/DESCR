@@ -1,0 +1,17 @@
+imv is a command line image viewer intended for use with tiling
+window managers.
+
+Features
+--------
+
+* Native Wayland and X11 support
+* Support for dozens of image formats including:
+  * PNG
+  * JPEG
+  * Animated GIFs
+  * SVG
+  * TIFF
+  * Various RAW formats
+  * Photoshop PSD files
+* Configurable key bindings and behaviour
+* Highly scriptable with IPC via imv-msg
