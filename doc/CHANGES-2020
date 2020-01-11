@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.319 2020/01/11 01:34:26 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.320 2020/01/11 02:41:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -381,3 +381,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/deforaos-locker to 0.4.1 [khorben 2020-01-10]
 	Updated www/deforaos-surfer to 0.3.0 [khorben 2020-01-10]
 	Updated comms/deforaos-phone to 0.6.0 [khorben 2020-01-11]
+	Updated www/firefox68-l10n to 68.4.1 [ryoon 2020-01-11]
