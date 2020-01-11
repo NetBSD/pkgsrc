@@ -1,4 +1,4 @@
-<!-- $NetBSD: regression.xml,v 1.6 2020/01/11 11:35:50 rillig Exp $ -->
+<!-- $NetBSD: regression.xml,v 1.7 2020/01/11 11:48:59 rillig Exp $ -->
 
 <chapter id="regression"> <?dbhtml filename="regression.html"?>
 <title>Regression tests</title>
@@ -99,6 +99,11 @@ check_result() {
 <title>Helper functions</title>
 
 <variablelist>
+
+	<varlistentry>
+	<term><varname>regress_fail <replaceable>message...</replaceable></varname></term>
+	<listitem><para>This function makes the test fail with the given error message.</para></listitem>
+	</varlistentry>
 
 	<varlistentry><term><varname>exit_status expected</varname></term>
 	<listitem><para>This function compares the exitcode of the
