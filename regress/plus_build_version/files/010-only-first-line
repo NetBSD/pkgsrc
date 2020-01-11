@@ -1,0 +1,6 @@
+From each file, only the first RCS Id is extracted.
+
+first	$NetBSD: 010-only-first-line,v 1.1 2020/01/11 12:24:32 rillig Exp $
+second	$NetBSD: 010-only-first-line,v 1.1 2020/01/11 12:24:32 rillig Exp $
+
+For this reason, each of these test cases is in its own file.
