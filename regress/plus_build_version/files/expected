@@ -1,5 +1,5 @@
-regress/plus_build_version/files/010-only-first-line:	*NetBSD*
+regress/plus_build_version/files/010-only-first-line:	*NetBSD: 010-only-first-line,v 1.1 2020/01/11 12:24:32 rillig Exp *
 regress/plus_build_version/files/021-long-name:	*NetBSDFoundation*
 regress/plus_build_version/files/030-missing-colon-or-dollar:	*
 regress/plus_build_version/files/040-missing-dollar-after-colon:	*
-regress/plus_build_version/spec:	*NetBSD*
+regress/plus_build_version/spec:	*NetBSD: spec,v 1.1 2020/01/11 12:24:32 rillig Exp *
