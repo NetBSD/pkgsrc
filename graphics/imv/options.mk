@@ -1,7 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2020/01/11 15:18:46 nia Exp $
+# $NetBSD: options.mk,v 1.2 2020/01/11 16:24:11 nia Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.imv
-PKG_SUPPORTED_OPTIONS=	svg wayland x11
+PKG_OPTIONS_VAR=		PKG_OPTIONS.imv
+PKG_SUPPORTED_OPTIONS=		svg
+
+PKG_OPTIONS_NONEMPTY_SETS=	display
+PKG_OPTIONS_SET.display=	wayland x11
 
 .include "../../devel/wayland/platform.mk"
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
@@ -27,8 +30,6 @@ MAKE_FLAGS+=		WINDOWS="all"
 MAKE_FLAGS+=		WINDOWS="wayland"
 .elif !empty(PKG_OPTIONS:Mx11)
 MAKE_FLAGS+=		WINDOWS="x11"
-.else
-PKG_FAIL_REASON+=	"Must select at least one windowing system"
 .endif
 
 .if !empty(PKG_OPTIONS:Mwayland)
