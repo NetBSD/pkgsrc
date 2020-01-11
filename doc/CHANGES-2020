@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.328 2020/01/11 08:30:47 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.329 2020/01/11 08:37:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -389,3 +389,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/hs-hint to 0.9.0.2 [pho 2020-01-11]
 	Updated devel/hs-resourcet to 1.2.2 [pho 2020-01-11]
 	Updated multimedia/deforaos-player to 0.2.0 [khorben 2020-01-11]
+	Updated comms/asterisk16 to 16.7.0 [ryoon 2020-01-11]
