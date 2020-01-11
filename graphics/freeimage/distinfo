@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.6 2017/12/26 11:55:01 he Exp $
+$NetBSD: distinfo,v 1.7 2020/01/11 14:40:44 nia Exp $
 
-SHA1 (FreeImage3170.zip) = 6752c83798c2f81dee71a2e8bb11657068672669
-RMD160 (FreeImage3170.zip) = c4e87846098327ee346c49ae81b6036f6d9ab36d
-SHA512 (FreeImage3170.zip) = 703c2626c0bcfe73eb40d720f45745208ca9650a7730759680a2b38ad3f6c719a43008477032bc70b76a95761f7d4b6f901b961359d36b54ace906dd78fb391b
-Size (FreeImage3170.zip) = 7020636 bytes
-SHA1 (patch-Makefile) = 196331f954913d5b49ae1e2464fb356a26212168
-SHA1 (patch-Makefile.fip) = c12dd636f83f774a11c91c4e3373176fd27e562d
-SHA1 (patch-Source_FreeImage_PluginPCX.cpp) = 26853626d1dc6a52804f946fd0576269de380512
-SHA1 (patch-Source_FreeImage_PluginXPM.cpp) = eac7be24c3d64593feebdb548df8a404db66c113
+SHA1 (FreeImage3180.zip) = 38daa9d8f1bca2330a2eaa42ec66fbe6ede7dce9
+RMD160 (FreeImage3180.zip) = b791715fccf49355a3cb27b6250d8ed809c2454e
+SHA512 (FreeImage3180.zip) = 9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
+Size (FreeImage3180.zip) = 7415716 bytes
+SHA1 (patch-Makefile) = d453337cb2a34f4480d1bd3c2115cb93715170b8
+SHA1 (patch-Makefile.fip) = 466b82e70d06f9552a73d86a742aa1bd3450f881
 SHA1 (patch-Source_LibOpenJPEG_opj__malloc.h) = 7e8b65d17cf1f0ed295964d477b96acac56bd927
-SHA1 (patch-Source_LibWebP_src_dsp_dsp.upsampling_mips_dsp_r2.c) = 9725fa20d545e6482f4396487b70c104ddb37ce6
-SHA1 (patch-Source_LibWebP_src_dsp_dsp.yuv_mips_dsp_r2.c) = bd569e2b2fa7b79a3651f53352fc8e5d26d0b2d3
