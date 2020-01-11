@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/11 13:45:37 pho Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/11 14:19:18 pho Exp $
 
 DISTNAME=	X11-1.9.1
 CATEGORIES=	x11 graphics
@@ -11,6 +11,8 @@ LICENSE=	modified-bsd
 # while linking shared libraries:
 # https://github.com/haskell/cabal/issues/4925
 HASKELL_ENABLE_SHARED_LIBRARY=	no
+# Note to devs: when you remove this please also remove it from
+# ../../x11/hs-X11/buildlink3.mk
 
 .include "../../mk/haskell.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
