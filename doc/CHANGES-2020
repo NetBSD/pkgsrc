@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.343 2020/01/11 14:30:08 pho Exp $
+$NetBSD: CHANGES-2020,v 1.344 2020/01/11 14:40:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -404,3 +404,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/xmonad to 0.15 [pho 2020-01-11]
 	Updated devel/R-Rcpp to 1.0.3 [mef 2020-01-11]
 	Removed devel/hs-mtl [pho 2020-01-11]
+	Updated graphics/freeimage to 3.18.0 [nia 2020-01-11]
