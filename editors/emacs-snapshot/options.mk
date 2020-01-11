@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2020/01/11 11:43:04 mef Exp $
+# $NetBSD: options.mk,v 1.15 2020/01/11 12:15:15 mef Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -183,6 +183,14 @@ post-install:
 .else  # no window system
 #.if empty(PKG_OPTIONS:Mx11)
 
+CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--without-xpm
+CONFIGURE_ARGS+=	--without-jpeg
+CONFIGURE_ARGS+=	--without-tiff
+CONFIGURE_ARGS+=	--without-gif
+CONFIGURE_ARGS+=	--without-png
+.endif
+
 ###
 ### Support jansson (JSON library)
 ###
@@ -191,14 +199,6 @@ post-install:
 .  else
 CONFIGURE_ARGS+=	--without-json
 .  endif
-
-CONFIGURE_ARGS+=	--without-x
-CONFIGURE_ARGS+=	--without-xpm
-CONFIGURE_ARGS+=	--without-jpeg
-CONFIGURE_ARGS+=	--without-tiff
-CONFIGURE_ARGS+=	--without-gif
-CONFIGURE_ARGS+=	--without-png
-.endif
 
 # Local Variables:
 # mode: outline-minor
