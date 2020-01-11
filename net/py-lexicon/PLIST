@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2019/11/14 18:01:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/01/11 16:17:39 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -90,6 +90,9 @@ ${PYSITELIB}/lexicon/providers/easydns.pyo
 ${PYSITELIB}/lexicon/providers/easyname.py
 ${PYSITELIB}/lexicon/providers/easyname.pyc
 ${PYSITELIB}/lexicon/providers/easyname.pyo
+${PYSITELIB}/lexicon/providers/euserv.py
+${PYSITELIB}/lexicon/providers/euserv.pyc
+${PYSITELIB}/lexicon/providers/euserv.pyo
 ${PYSITELIB}/lexicon/providers/exoscale.py
 ${PYSITELIB}/lexicon/providers/exoscale.pyc
 ${PYSITELIB}/lexicon/providers/exoscale.pyo
@@ -108,6 +111,9 @@ ${PYSITELIB}/lexicon/providers/godaddy.pyo
 ${PYSITELIB}/lexicon/providers/googleclouddns.py
 ${PYSITELIB}/lexicon/providers/googleclouddns.pyc
 ${PYSITELIB}/lexicon/providers/googleclouddns.pyo
+${PYSITELIB}/lexicon/providers/gransy.py
+${PYSITELIB}/lexicon/providers/gransy.pyc
+${PYSITELIB}/lexicon/providers/gransy.pyo
 ${PYSITELIB}/lexicon/providers/gratisdns.py
 ${PYSITELIB}/lexicon/providers/gratisdns.pyc
 ${PYSITELIB}/lexicon/providers/gratisdns.pyo
@@ -288,6 +294,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_easydns.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_easyname.py
 ${PYSITELIB}/lexicon/tests/providers/test_easyname.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_easyname.pyo
+${PYSITELIB}/lexicon/tests/providers/test_euserv.py
+${PYSITELIB}/lexicon/tests/providers/test_euserv.pyc
+${PYSITELIB}/lexicon/tests/providers/test_euserv.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_exoscale.py
 ${PYSITELIB}/lexicon/tests/providers/test_exoscale.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_exoscale.pyo
@@ -306,6 +315,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_godaddy.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_googleclouddns.py
 ${PYSITELIB}/lexicon/tests/providers/test_googleclouddns.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_googleclouddns.pyo
+${PYSITELIB}/lexicon/tests/providers/test_gransy.py
+${PYSITELIB}/lexicon/tests/providers/test_gransy.pyc
+${PYSITELIB}/lexicon/tests/providers/test_gransy.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_gratisdns.py
 ${PYSITELIB}/lexicon/tests/providers/test_gratisdns.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_gratisdns.pyo
@@ -399,9 +411,6 @@ ${PYSITELIB}/lexicon/tests/providers/test_sakuracloud.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_softlayer.py
 ${PYSITELIB}/lexicon/tests/providers/test_softlayer.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_softlayer.pyo
-${PYSITELIB}/lexicon/tests/providers/test_subreg.py
-${PYSITELIB}/lexicon/tests/providers/test_subreg.pyc
-${PYSITELIB}/lexicon/tests/providers/test_subreg.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_transip.py
 ${PYSITELIB}/lexicon/tests/providers/test_transip.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_transip.pyo
