@@ -1,0 +1,7 @@
+The RCS Id must be exactly NetBSD, not any longer name that happens to
+start with NetBSD. Only the exact name is expanded by CVS, therefore
+recording the other occurrences doesn't make sense.
+
+As of January 2020, this line gets recorded nevertheless.
+
+$NetBSDFoundation$

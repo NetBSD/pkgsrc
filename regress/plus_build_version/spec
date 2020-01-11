@@ -1,0 +1,42 @@
+#! /bin/sh
+# $NetBSD: spec,v 1.1 2020/01/11 12:24:32 rillig Exp $
+
+# This test demonstrates how the RCS Ids from the package files end up in
+# the +BUILD_VERSION file of the binary package.
+#
+# There are several places in pkgsrc that make use of these RCS Ids:
+#
+# * The SHA1 hash for a patch file ignores RCS Id lines.
+# * The RCS Ids end up in the +BUILD_VERSION of the binary package.
+# * The pbulk checks the RCS Ids to see whether the package needs to be
+#   built again.
+#
+# All these places must use the same patterns for extracting the RCS Ids.
+# As of January 2020, they don't.
+
+set -u
+
+tmpdir="${TMPDIR-/tmp}/plus-build-version"
+actual="$tmpdir/.pkgdb/+BUILD_VERSION"
+
+do_test() {
+	rm -rf "$tmpdir"
+	mkdir -p "$tmpdir/.pkgdb"
+	$TEST_MAKE \
+		PKGNAME="package-1.0" \
+		WRKDIR="$tmpdir" \
+		-f "../../mk/bsd.pkg.mk" \
+		"$actual"
+}
+
+check_result() {
+	# In files/expected, the $ characters are replaced with * to
+	# prevent them from being expanded by CVS.
+	tr '*' '$' < "files/expected" > "$tmpdir/expected"
+
+	diff -u "$tmpdir/expected" "$actual" || regress_fail "differ"
+}
+
+do_cleanup() {
+	rm -rf "$tmpdir"
+}
