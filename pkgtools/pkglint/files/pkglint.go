@@ -569,6 +569,8 @@ func (pkglint *Pkglint) checkReg(filename CurrPath, basename string, depth int, 
 		return
 	}
 
+	pkglint.checkRegCvsSubst(filename)
+
 	switch {
 	case basename == "ALTERNATIVES":
 		CheckFileAlternatives(filename, pkg)
@@ -644,6 +646,27 @@ func (pkglint *Pkglint) checkReg(filename CurrPath, basename string, depth int, 
 	default:
 		NewLineWhole(filename).Warnf("Unexpected file found.")
 	}
+}
+
+func (pkglint *Pkglint) checkRegCvsSubst(filename CurrPath) {
+	entries := G.loadCvsEntries(filename)
+	entry, found := entries[filename.Base()]
+	if !found || entry.Options == "" {
+		return
+	}
+
+	diag := NewLineWhole(filename)
+	diag.Errorf("The CVS keyword substitution must be the default one.")
+	diag.Explain(
+		"The CVS keyword \\$NetBSD\\$ is used throughout pkgsrc to record",
+		"changes to each file.",
+		"Based on this information, the bulk builds decide when a package",
+		"has to be rebuilt.",
+		"",
+		"For more information, see",
+		"https://www.gnu.org/software/trans-coord/manual/cvs/html_node/Substitution-modes.html.",
+		"",
+		sprintf("To fix this, run \"cvs admin -kkv %s\"", shquote(filename.Base())))
 }
 
 func (pkglint *Pkglint) checkExecutable(filename CurrPath, mode os.FileMode) {
