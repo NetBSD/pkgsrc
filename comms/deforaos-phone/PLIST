@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/04/13 11:26:18 khorben Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/01/11 01:34:11 khorben Exp $
 bin/gprs
 bin/phone
 bin/phonectl
@@ -37,6 +37,7 @@ share/applications/deforaos-phone-log.desktop
 share/applications/deforaos-phone-messages.desktop
 share/applications/deforaos-phone-settings.desktop
 share/applications/deforaos-phone-sofia.desktop
+share/doc/Phone/COPYING
 share/doc/Phone/gprs.conf
 share/doc/Phone/phone.conf
 share/doc/Phone/pppd-chat_gprs
