@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.341 2020/01/11 14:01:17 pho Exp $
+$NetBSD: CHANGES-2020,v 1.342 2020/01/11 14:12:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -402,3 +402,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/hs-stm [pho 2020-01-11]
 	Added graphics/numix-gtk-theme version 2.6.7 [nia 2020-01-11]
 	Updated wm/xmonad to 0.15 [pho 2020-01-11]
+	Updated devel/R-Rcpp to 1.0.3 [mef 2020-01-11]
