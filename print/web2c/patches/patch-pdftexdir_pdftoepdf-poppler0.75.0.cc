@@ -1,97 +1,65 @@
-$NetBSD: patch-pdftexdir_pdftoepdf-poppler0.75.0.cc,v 1.1 2019/05/14 13:23:10 adam Exp $
-
-Fix building.
+$NetBSD: patch-pdftexdir_pdftoepdf-poppler0.75.0.cc,v 1.2 2020/01/11 00:31:05 ryoon Exp $
 
 --- pdftexdir/pdftoepdf-poppler0.75.0.cc.orig	2019-03-21 06:38:16.000000000 +0000
 +++ pdftexdir/pdftoepdf-poppler0.75.0.cc
-@@ -275,7 +275,7 @@ static int getNewObjectNumber(Ref ref)
+@@ -22,7 +22,7 @@ This is based on the patch texlive-poppl
+ https://git.archlinux.org/svntogit/packages.git/plain/texlive-bin/trunk
+ by Arch Linux. A little modifications are made to avoid a crash for
+ some kind of pdf images, such as figure_missing.pdf in gnuplot.
+-The poppler should be 0.75.0 or newer versions.
++The poppler should be 0.83.0 or newer versions.
+ POPPLER_VERSION should be defined.
+ */
  
- static void copyObject(Object *);
+@@ -669,7 +669,7 @@ static void writeEncodings()
+             else
+                 glyphNames[i] = notdef;
+         }
+-        epdf_write_enc(glyphNames, r->enc_objnum);
++        epdf_write_enc(const_cast<const char**>(glyphNames), r->enc_objnum);
+     }
+     for (r = encodingList; r != 0; r = n) {
+         n = r->next;
+@@ -710,7 +710,7 @@ static const PDFRectangle *get_pagebox(P
  
--static void copyName(char *s)
-+static void copyName(const char *s)
+ int
+ read_pdf_info(char *image_name, char *page_name, int page_num,
+-              int pagebox_spec, int minor_pdf_version_wanted,
++              int pagebox_spec, /* int major_pdf_version_wanted, */ int minor_pdf_version_wanted,
+               int pdf_inclusion_errorlevel)
  {
-     pdf_puts("/");
-     for (; *s != 0; s++) {
-@@ -310,7 +310,7 @@ static void copyDict(Object * obj)
- static void copyFontDict(Object * obj, InObj * r)
- {
-     int i, l;
--    char *key;
-+    const char *key;
-     if (!obj->isDict())
-         pdftex_fail("PDF inclusion: invalid dict type <%s>",
-                     obj->getTypeName());
-@@ -382,7 +382,7 @@ static bool embeddableFont(Object * font
-     return false;
- }
- 
--static void copyFont(char *tag, Object * fontRef)
-+static void copyFont(const char *tag, Object * fontRef)
- {
-     Object fontdict, subtype, basefont, fontdescRef, fontdesc, charset,
-         stemV;
-@@ -467,7 +467,7 @@ static void copyFontResources(Object * o
-     pdf_puts(">>\n");
- }
- 
--static void copyOtherResources(Object * obj, char *key)
-+static void copyOtherResources(Object * obj, const char *key)
- {
-     // copies all other resources (write_epdf handles Fonts and ProcSets),
- 
-@@ -554,8 +554,8 @@ static void copyObject(Object * obj)
-     Object obj1;
-     int i, l, c;
-     Ref ref;
--    char *p;
--    GString *s;
-+    const char *p;
-+    const GString *s;
-     if (obj->isBool()) {
-         pdf_printf("%s", obj->getBool()? "true" : "false");
-     } else if (obj->isInt()) {
-@@ -655,7 +655,7 @@ static void writeRefs()
- static void writeEncodings()
- {
-     UsedEncoding *r, *n;
--    char *glyphNames[256], *s;
-+    const char *glyphNames[256], *s;
-     int i;
-     for (r = encodingList; r != 0; r = r->next) {
-         for (i = 0; i < 256; i++) {
-@@ -685,20 +685,24 @@ static void writeEncodings()
- // get the pagebox according to the pagebox_spec
- static const PDFRectangle *get_pagebox(Page * page, int pagebox_spec)
- {
-+    const PDFRectangle *ret;
-+
-     if (pagebox_spec == pdfboxspecmedia)
--        return page->getMediaBox();
-+        ret = page->getMediaBox();
-     else if (pagebox_spec == pdfboxspeccrop)
--        return page->getCropBox();
-+        ret = page->getCropBox();
-     else if (pagebox_spec == pdfboxspecbleed)
--        return page->getBleedBox();
-+        ret = page->getBleedBox();
-     else if (pagebox_spec == pdfboxspectrim)
--        return page->getTrimBox();
-+        ret = page->getTrimBox();
-     else if (pagebox_spec == pdfboxspecart)
--        return page->getArtBox();
-+        ret = page->getArtBox();
-     else
-         pdftex_fail("PDF inclusion: unknown value of pagebox spec (%i)",
-                     (int) pagebox_spec);
--    return page->getMediaBox(); // to make the compiler happy
-+    // ret = page->getMediaBox(); // to make the compiler happy
-+
-+    return const_cast<PDFRectangle*>(ret);
- }
- 
- 
-@@ -761,7 +765,7 @@ read_pdf_info(char *image_name, char *pa
+     PdfDocument *pdf_doc;
+@@ -723,7 +723,7 @@ read_pdf_info(char *image_name, char *pa
+ #endif
+     // initialize
+     if (!isInit) {
+-        globalParams = new GlobalParams();
++        globalParams = std::make_unique<GlobalParams>();
+         globalParams->setErrQuiet(false);
+         isInit = true;
+     }
+@@ -738,16 +738,16 @@ read_pdf_info(char *image_name, char *pa
+ #ifdef POPPLER_VERSION
+     pdf_major_version_found = pdf_doc->doc->getPDFMajorVersion();
+     pdf_minor_version_found = pdf_doc->doc->getPDFMinorVersion();
+-    if ((pdf_major_version_found > 1)
++    if ((pdf_major_version_found > /* major_pdf_version_wanted */ 1)
+      || (pdf_minor_version_found > minor_pdf_version_wanted)) {
+         const char *msg =
+-            "PDF inclusion: found PDF version <%d.%d>, but at most version <1.%d> allowed";
++            "PDF inclusion: found PDF version <%d.%d>, but at most version <%d.%d> allowed";
+         if (pdf_inclusion_errorlevel > 0) {
+-            pdftex_fail(msg, pdf_major_version_found, pdf_minor_version_found, minor_pdf_version_wanted);
++            pdftex_fail(msg, pdf_major_version_found, pdf_minor_version_found, /* major_pdf_version_wanted, */ minor_pdf_version_wanted);
+         } else if (pdf_inclusion_errorlevel < 0) {
+             ; /* do nothing */
+         } else { /* = 0, give warning */
+-            pdftex_warn(msg, pdf_major_version_found, pdf_minor_version_found, minor_pdf_version_wanted);
++            pdftex_warn(msg, pdf_major_version_found, pdf_minor_version_found, /* major_pdf_version_wanted, */ minor_pdf_version_wanted);
+         }
+     }
+ #else
+@@ -761,7 +761,7 @@ read_pdf_info(char *image_name, char *pa
          if (link == 0 || !link->isOk())
              pdftex_fail("PDF inclusion: invalid destination <%s>", page_name);
          Ref ref = link->getPageRef();
@@ -100,12 +68,11 @@ Fix building.
          if (page_num == 0)
              pdftex_fail("PDF inclusion: destination is not a page <%s>",
                          page_name);
-@@ -822,7 +826,7 @@ void write_epdf(void)
-     Object groupDict;
-     bool writeSepGroup = false;
-     Object info;
--    char *key;
-+    const char *key;
-     char s[256];
-     int i, l;
-     int rotate;
+@@ -1107,7 +1107,5 @@ void epdf_check_mem()
+             n = p->next;
+             delete_document(p);
+         }
+-        // see above for globalParams
+-        delete globalParams;
+     }
+ }
