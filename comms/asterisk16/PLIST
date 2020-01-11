@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2019/08/20 13:47:42 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.23 2020/01/11 08:36:13 ryoon Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -162,6 +162,7 @@ include/asterisk/security_events.h
 include/asterisk/security_events_defs.h
 include/asterisk/select.h
 include/asterisk/sem.h
+include/asterisk/serializer.h
 include/asterisk/sha1.h
 include/asterisk/silk.h
 include/asterisk/sip_api.h

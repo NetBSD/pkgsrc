@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2019/08/20 13:47:42 ryoon Exp $
+# $NetBSD: options.mk,v 1.16 2020/01/11 08:36:13 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		x11 unixodbc webvmail ldap spandsp
@@ -73,7 +73,7 @@ post-configure:
 .endif
 	${ECHO} "MENUSELECT_AGIS=agi-test.agi eagi-test eagi-sphinx-test jukebox.agi" >> ${WRKSRC}/pkgsrc.makeopts
 	# this is a hack to work around a bug in menuselect
-	cd ${WRKSRC} && make menuselect.makeopts
+	cd ${WRKSRC} && make ${MAKE_FLAGS} menuselect.makeopts
 
 .if !empty(PKG_OPTIONS:Mwebvmail)
 DEPENDS+=		p5-DBI-[0-9]*:../../databases/p5-DBI
