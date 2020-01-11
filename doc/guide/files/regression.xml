@@ -1,4 +1,4 @@
-<!-- $NetBSD: regression.xml,v 1.7 2020/01/11 11:48:59 rillig Exp $ -->
+<!-- $NetBSD: regression.xml,v 1.8 2020/01/11 11:50:51 rillig Exp $ -->
 
 <chapter id="regression"> <?dbhtml filename="regression.html"?>
 <title>Regression tests</title>
@@ -81,6 +81,7 @@ check_result() {
         output_require "Example"
         output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
         output_prohibit "no such file or directory"
+        regress_fail "expected $expected but got $actual for input $input"
 }
 </programlisting>
 
