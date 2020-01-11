@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/11 16:18:15 nia Exp $
+bin/dmenu-wld
+bin/dmenu-wld_run
+man/man1/dmenu-wld.1

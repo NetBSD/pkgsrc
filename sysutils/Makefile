@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.850 2019/12/31 11:16:49 ng0 Exp $
+# $NetBSD: Makefile,v 1.851 2020/01/11 16:18:15 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -137,6 +137,7 @@ SUBDIR+=	dirvish
 SUBDIR+=	disk-filltest
 SUBDIR+=	diskscrub
 SUBDIR+=	dmassage
+SUBDIR+=	dmenu-wld
 SUBDIR+=	dmesg2gif
 SUBDIR+=	dmg2img
 SUBDIR+=	dmidecode

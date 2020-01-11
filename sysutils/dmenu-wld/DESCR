@@ -1,0 +1,3 @@
+dmenu is an efficient dynamic menu for Wayland.
+
+Note: this is a fork of the X11 version, which lives in x11/dmenu.
