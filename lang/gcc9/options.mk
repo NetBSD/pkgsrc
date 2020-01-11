@@ -1,16 +1,11 @@
-# $NetBSD: options.mk,v 1.3 2020/01/10 07:46:43 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2020/01/11 09:48:11 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc9
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
 			gcc-go gcc-objc gcc-objc++ always-libgcc
-PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ \
-			gcc-inplace-math
+PKG_SUGGESTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
+			gcc-objc gcc-objc++
 
-PLIST_VARS+=	nls
-
-.if ${OPSYS} == NetBSD || ${OPSYS} == Linux || ${OPSYS} == DragonFly
-PKG_SUGGESTED_OPTIONS+=	nls
-.endif
 .if ${OPSYS} == "SunOS"
 PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math always-libgcc
 .endif
@@ -72,6 +67,7 @@ delete-installed-libgcc: .PHONY
 ###
 ### Native Language Support
 ###
+PLIST_VARS+=		nls
 .if ${PKG_OPTIONS:Mnls}
 USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--enable-nls
