@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2019/09/18 14:17:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/11 12:37:57 nros Exp $
 
 DISTNAME=	sqlitebrowser-3.11.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sqlitebrowser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,5 +21,6 @@ GCC_REQD+=	4.9
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qscintilla/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
