@@ -56,7 +56,7 @@ func (s *Suite) Test_CheckdirCategory__invalid_comment(c *check.C) {
 	CheckdirCategory(t.File("archivers"))
 
 	t.CheckOutputLines(
-		"WARN: ~/archivers/Makefile:3: COMMENT contains invalid characters (U+005C U+0024 U+0024 U+0024 U+0024 U+0022).")
+		"WARN: ~/archivers/Makefile:3: COMMENT contains invalid characters (\\ $ $ $ $ \").")
 }
 
 // The pkgsrc-wip Makefile has a large section with special code below
