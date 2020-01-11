@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/01/11 13:45:37 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2020/01/11 14:19:18 pho Exp $
 
 BUILDLINK_TREE+=	hs-X11
 
@@ -8,6 +8,13 @@ HS_X11_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.hs-X11+=	hs-X11>=1.9.1
 BUILDLINK_ABI_DEPENDS.hs-X11+=	hs-X11>=1.9.1
 BUILDLINK_PKGSRCDIR.hs-X11?=	../../x11/hs-X11
+
+# Work around a Cabal bug. It ignores "ld-options" in X11.buildinfo
+# while linking shared libraries:
+# https://github.com/haskell/cabal/issues/4925
+HASKELL_ENABLE_SHARED_LIBRARY=	no
+# Note to devs: when you remove this please also remove it from
+# ../../x11/hs-X11/Makefile
 
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
