@@ -1,0 +1,10 @@
+$NetBSD: patch-dmenu__run,v 1.1 2020/01/11 16:18:15 nia Exp $
+
+Avoid conflicts.
+
+--- dmenu_run.orig	2017-04-16 16:28:50.000000000 +0000
++++ dmenu_run
+@@ -1,2 +1,2 @@
+ #!/bin/sh
+-dmenu_path | dmenu "$@" | ${SHELL:-"/bin/sh"} &
++dmenu_path | dmenu-wld "$@" | ${SHELL:-"/bin/sh"} &
