@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/01/03 07:52:17 pho Exp $
+$NetBSD: distinfo,v 1.2 2020/01/11 09:04:18 pho Exp $
 
-SHA1 (conduit-1.2.13.1.tar.gz) = 950c04046b2174eefac96bbf77e8b9d14a0ea737
-RMD160 (conduit-1.2.13.1.tar.gz) = 6446a41eef6aa4df6e4b53a44a46d0ffc698b99d
-SHA512 (conduit-1.2.13.1.tar.gz) = ab44f970f991b6ffed88e7e71829bf73724057759c25d56382fe5c72170dc00805d99ca9d4062c2dc3556f83a85620cb63318147eeaf186e4d72e3b5c50af29a
-Size (conduit-1.2.13.1.tar.gz) = 50745 bytes
+SHA1 (conduit-1.3.1.2.tar.gz) = 7ef3ba0ff98f86dbe7f714f75191e7f2cb4e4e87
+RMD160 (conduit-1.3.1.2.tar.gz) = 3650a4a573ab6178e2bb5bfd1436a0e96a6bd094
+SHA512 (conduit-1.3.1.2.tar.gz) = a5873f42a75a3d9f404070fcd3c91efd5a38d7d9bb9cd313c2881ae82a79e79a5b87f76b11eb72dc6c6050306c55ecd5faca4ab24ae781503cefd66907911f32
+Size (conduit-1.3.1.2.tar.gz) = 87765 bytes
