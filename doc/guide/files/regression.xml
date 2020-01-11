@@ -1,4 +1,4 @@
-<!-- $NetBSD: regression.xml,v 1.5 2020/01/11 11:34:37 rillig Exp $ -->
+<!-- $NetBSD: regression.xml,v 1.6 2020/01/11 11:35:50 rillig Exp $ -->
 
 <chapter id="regression"> <?dbhtml filename="regression.html"?>
 <title>Regression tests</title>
@@ -19,15 +19,15 @@
 	role="pkg">pkgtools/pkg_regress</filename> package, which
 	provides the <command>pkg_regress</command> command. Then you
 	can simply run that command, which will run all tests in the
-	<filename>regress</filename> category.</para>
+	<filename>regress/</filename> directory.</para>
 
 </sect1>
 
 <sect1 id="regression.new">
 <title>Adding a new regression test</title>
 
-	<para>Every directory in the <filename>regress</filename>
-	category that contains a file called <filename>spec</filename>
+	<para>Every directory in the <filename>regress/</filename>
+	directory that contains a file called <filename>spec</filename>
 	is considered a regression test. This file is a shell program
 	that is included by the <command>pkg_regress</command> command.
 	The following functions can be overridden to suit your
