@@ -1,4 +1,4 @@
 The default CVS Id is not taken into account for the package build
-versions, even though it is expanded(?).
+versions, even though it is expanded.
 
-$Id: 050-cvs,v 1.1 2020/01/11 12:24:32 rillig Exp $
+$Id: 050-cvs,v 1.2 2020/01/11 12:26:37 rillig Exp $
