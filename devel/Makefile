@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2984 2020/01/11 06:59:57 mef Exp $
+# $NetBSD: Makefile,v 1.2985 2020/01/11 07:06:43 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -16,7 +16,7 @@ SUBDIR+=	R-IRdisplay
 SUBDIR+=	R-IRkernel
 SUBDIR+=	R-R6
 SUBDIR+=	R-Rcpp
-SUBDIR+=	R-Runit
+SUBDIR+=	R-RUnit
 SUBDIR+=	R-assertthat
 SUBDIR+=	R-bindr
 SUBDIR+=	R-bit
