@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2019/12/31 18:57:16 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2020/01/11 09:53:06 pho Exp $
 
 BUILDLINK_TREE+=	hs-semigroups
 
@@ -11,7 +11,6 @@ BUILDLINK_PKGSRCDIR.hs-semigroups?=	../../math/hs-semigroups
 
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-tagged/buildlink3.mk"
-.include "../../devel/hs-text/buildlink3.mk"
 .include "../../devel/hs-transformers-compat/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 .endif	# HS_SEMIGROUPS_BUILDLINK3_MK
