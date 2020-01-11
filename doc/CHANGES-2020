@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.338 2020/01/11 11:52:55 pho Exp $
+$NetBSD: CHANGES-2020,v 1.339 2020/01/11 13:11:00 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -399,3 +399,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/hs-text [pho 2020-01-11]
 	Updated devel/hs-colour to 2.3.5 [pho 2020-01-11]
 	Updated time/hs-timezone-olson to 0.1.9 [pho 2020-01-11]
+	Removed devel/hs-stm [pho 2020-01-11]
