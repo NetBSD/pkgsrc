@@ -9030,7 +9030,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm75601104"></a><dl>
+<a name="idm79113968"></a><dl>
 <dt>24.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9075,7 +9075,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm75600720"></a><p><b>24.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm79113584"></a><p><b>24.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9091,7 +9091,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm75604944"></a><p><b>24.2.</b></p>
+<a name="devfaq.make"></a><a name="idm79109488"></a><p><b>24.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9109,7 +9109,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm75608784"></a><p><b>24.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm79105136"></a><p><b>24.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9127,7 +9127,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm75612880"></a><p><b>24.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm79100912"></a><p><b>24.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9140,7 +9140,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm75610704"></a><p><b>24.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm79098736"></a><p><b>24.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9156,7 +9156,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm75615824"></a><p><b>24.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm79095536"></a><p><b>24.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9180,7 +9180,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm75625424"></a><p><b>24.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm79088752"></a><p><b>24.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9205,7 +9205,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm75629904"></a><p><b>24.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm79076720"></a><p><b>24.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9253,7 +9253,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm75631696"></a><p><b>24.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm79070192"></a><p><b>24.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9931,13 +9931,13 @@ CFLAGS+=                -Wall
 <p>You first need to install the <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_regress/README.html" target="_top"><code class="filename">pkgtools/pkg_regress</code></a> package, which
 	provides the <span class="command"><strong>pkg_regress</strong></span> command. Then you
 	can simply run that command, which will run all tests in the
-	<code class="filename">regress</code> category.</p>
+	<code class="filename">regress/</code> directory.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="regression.new"></a>27.2. Adding a new regression test</h2></div></div></div>
-<p>Every directory in the <code class="filename">regress</code>
-	category that contains a file called <code class="filename">spec</code>
+<p>Every directory in the <code class="filename">regress/</code>
+	directory that contains a file called <code class="filename">spec</code>
 	is considered a regression test. This file is a shell program
 	that is included by the <span class="command"><strong>pkg_regress</strong></span> command.
 	The following functions can be overridden to suit your
@@ -9947,7 +9947,7 @@ CFLAGS+=                -Wall
 <a name="regression.fun.override"></a>27.2.1. Overridable functions</h3></div></div></div>
 <p>These functions do not take any parameters. Although they
 	are called in <span class="quote">&#8220;<span class="quote">set -e</span>&#8221;</span> mode, they don't stop at the
-	first failing command. See <a class="ulink" href="http://stackoverflow.com/q/4072984" target="_top">this StackOverflow
+	first failing command. See <a class="ulink" href="http://stackoverflow.com/q/4072984" target="_top">this Stack Overflow
 	question</a> for details.</p>
 <div class="variablelist"><dl class="variablelist">
 <dt><span class="term"><code class="varname">do_setup</code></span></dt>
@@ -9981,6 +9981,7 @@ check_result() {
         output_require "Example"
         output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
         output_prohibit "no such file or directory"
+        regress_fail "expected $expected but got $actual for input $input"
 }
 </pre>
 </dd>
@@ -9993,6 +9994,8 @@ check_result() {
 <div class="titlepage"><div><div><h3 class="title">
 <a name="regression.fun.helper"></a>27.2.2. Helper functions</h3></div></div></div>
 <div class="variablelist"><dl class="variablelist">
+<dt><span class="term"><code class="varname">regress_fail <em class="replaceable"><code>message...</code></em></code></span></dt>
+<dd><p>This function makes the test fail with the given error message.</p></dd>
 <dt><span class="term"><code class="varname">exit_status expected</code></span></dt>
 <dd><p>This function compares the exitcode of the
 	<span class="command"><strong>do_test</strong></span> function with its first parameter.
