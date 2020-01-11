@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/01 05:37:22 pho Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/11 07:54:04 pho Exp $
 
 DISTNAME=	happy-1.19.12
 PKGNAME=	${DISTNAME}
@@ -19,5 +19,4 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/happy.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/haskell.mk"
-.include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
