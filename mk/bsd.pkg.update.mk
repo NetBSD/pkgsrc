@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.26 2014/02/14 07:14:23 obache Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.27 2020/01/11 19:30:50 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -37,29 +37,29 @@ update-create-ddir: ${_DDIR}
 
 .PHONY: update
 .if !target(update)
-.if exists(${_DDIR})
+.  if exists(${_DDIR})
 RESUMEUPDATE?=	YES
 CLEAR_DIRLIST?=	NO
 
 update:
 	@${PHASE_MSG} "Resuming update for ${PKGNAME}"
-.  if ${REINSTALL} != "NO" && ${UPDATE_TARGET} != "replace"
+.    if ${REINSTALL} != "NO" && ${UPDATE_TARGET} != "replace"
 	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL
-.  endif
-.else
+.    endif
+.  else
 RESUMEUPDATE?=	NO
 CLEAR_DIRLIST?=	YES
 
 update:
 	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} check-vulnerable
 	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} update-create-ddir
-.  if ${UPDATE_TARGET} != "replace"
+.    if ${UPDATE_TARGET} != "replace"
 	${RUN} if ${PKG_INFO} -qe ${PKGBASE}; then			\
 		${RECURSIVE_MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL \
 		|| (${RM} ${_DDIR} && ${FALSE});			\
 	fi
+.    endif
 .  endif
-.endif
 	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} ${UPDATE_TARGET} KEEP_WRKDIR=YES DEPENDS_TARGET=${DEPENDS_TARGET:Q}
 	${RUN}					\
 	[ ! -s ${_DDIR} ] || for dep in `${CAT} ${_DDIR}` ; do		\
@@ -77,9 +77,9 @@ update:
 			${PHASE_MSG} "Skipping removed directory $${dep}"; \
 		fi) ;							\
 	done
-.if ${NOCLEAN} == "NO"
+.  if ${NOCLEAN} == "NO"
 	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} clean-update CLEAR_DIRLIST=YES
-.endif
+.  endif
 
 
 .PHONY: clean-update
@@ -95,14 +95,14 @@ clean-update:
 			fi) ;						\
 		done ;							\
 	fi
-.if ${CLEAR_DIRLIST} != "NO"
+.  if ${CLEAR_DIRLIST} != "NO"
 	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} clean
-.else
+.  else
 	${RUN} ${RECURSIVE_MAKE} ${MAKEFLAGS} clean update-dirlist DIRLIST="`${CAT} ${_DDIR}`" PKGLIST="`${CAT} ${_DLIST}`"
 	@${WARNING_MSG} "preserved leftover directory list.  Your next"
 	@${WARNING_MSG} "\`\`${MAKE} update'' may fail.  It is advised to use"
 	@${WARNING_MSG} "\`\`${MAKE} update REINSTALL=YES'' instead!"
-.endif
+.  endif
 
 .endif	# !target(update)
 
