@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2020/01/02 14:49:43 pho Exp $
-
-SHA1 (parsec-3.1.14.0.tar.gz) = 373910b997620643be160bf89b03162ca2d8595e
-RMD160 (parsec-3.1.14.0.tar.gz) = f7d73b170914498ba47502ae1950bcccd8605600
-SHA512 (parsec-3.1.14.0.tar.gz) = db14f77a2d36da5e540be35f0facb7fa61f2c46057b98039bdf16c06fe9865d5ee47e3523a312201665ca133f3f93855b42f0d0a920b8e233ffc8274075c56d3
-Size (parsec-3.1.14.0.tar.gz) = 35688 bytes
