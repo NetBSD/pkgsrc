@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/11 15:18:46 nia Exp $
+
+SHA1 (imv-4.1.0.tar.gz) = 2c2bc59aab63e237178cc1cbac6d9f0d386f9b69
+RMD160 (imv-4.1.0.tar.gz) = b33143fa7595f81dbe16a3e15f4d114b40568d8c
+SHA512 (imv-4.1.0.tar.gz) = 92d7551bda55185b29724e90230dac608a82f4a45cd3cb9c7a5d261f65eede6dcdde78f5c16eecfc1242533ec8e155204189fab3cacf31ddc088707af5131b2a
+Size (imv-4.1.0.tar.gz) = 77341 bytes
