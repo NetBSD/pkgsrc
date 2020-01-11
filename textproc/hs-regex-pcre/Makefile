@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/03 06:18:21 pho Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/11 09:22:13 pho Exp $
 
 DISTNAME=	regex-pcre-0.95.0.0
 CATEGORIES=	textproc
@@ -9,6 +9,5 @@ LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"
 .include "../../textproc/hs-regex-base/buildlink3.mk"
-.include "../../devel/hs-fail/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
