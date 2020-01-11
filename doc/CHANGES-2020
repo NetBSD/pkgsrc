@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.349 2020/01/11 17:32:02 nia Exp $
+$NetBSD: CHANGES-2020,v 1.350 2020/01/11 23:59:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -413,3 +413,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-wcwidth to 0.1.8 [adam 2020-01-11]
 	Updated devel/py-pygit2 to 1.0.2 [adam 2020-01-11]
 	Updated wm/velox to 0.0.3.20200111 [nia 2020-01-11]
+	Updated wm/swc to 0.0.0.20200111 [nia 2020-01-11]
