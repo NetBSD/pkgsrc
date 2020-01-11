@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.321 2020/01/11 04:05:26 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.322 2020/01/11 06:21:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -383,3 +383,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated comms/deforaos-phone to 0.6.0 [khorben 2020-01-11]
 	Updated www/firefox68-l10n to 68.4.1 [ryoon 2020-01-11]
 	Updated biology/chemtool to 1.6.14nb12 [ryoon 2020-01-11]
+	Updated devel/dejagnu to 1.6.2 [mef 2020-01-11]
