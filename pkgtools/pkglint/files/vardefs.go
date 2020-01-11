@@ -1542,7 +1542,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglist("PKG_USERS_VARS", BtVariableName)
 	reg.pkg("PKG_USE_KERBEROS", BtYes)
 	reg.pkgload("PLIST.*", BtYes)
-	reg.pkgloadlist("PLIST_VARS", BtIdentifierIndirect)
+	reg.pkgloadlist("PLIST_VARS", BtPlistIdentifier)
 	reg.pkglist("PLIST_SRC", BtRelativePkgPath)
 	reg.pkglist("PLIST_SUBST", BtShellWord)
 	reg.pkg("PLIST_TYPE", enum("dynamic static"))

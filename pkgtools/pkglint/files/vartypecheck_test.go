@@ -1499,6 +1499,39 @@ func (s *Suite) Test_VartypeCheck_Pkgrevision(c *check.C) {
 	vt.OutputEmpty()
 }
 
+func (s *Suite) Test_VartypeCheck_PlistIdentifier(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), BtPlistIdentifier)
+
+	vt.Varname("PLIST_VARS")
+	vt.Values(
+		"gtk",
+		"gtk+",
+		"gcc-cxx",
+		"gcc-c__",
+		"package1.5")
+
+	vt.Output(
+		"ERROR: filename.mk:2: "+
+			"PLIST identifier \"gtk+\" contains invalid characters (+).",
+		"ERROR: filename.mk:5: "+
+			"PLIST identifier \"package1.5\" contains invalid characters (.).")
+
+	vt.Op(opUseMatch)
+	vt.Values(
+		"*",
+		"/",
+		"-",
+		"[A-Z]",
+		"gtk",
+		"***+")
+
+	vt.Output(
+		"WARN: filename.mk:12: PLIST identifier pattern \"/\" "+
+			"contains invalid characters (/).",
+		"WARN: filename.mk:16: PLIST identifier pattern \"***+\" "+
+			"contains invalid characters (+).")
+}
+
 func (s *Suite) Test_VartypeCheck_PrefixPathname(c *check.C) {
 	vt := NewVartypeCheckTester(s.Init(c), BtPrefixPathname)
 
@@ -1915,6 +1948,7 @@ func (s *Suite) Test_VartypeCheck_UserGroupName(c *check.C) {
 	vt.Varname("APACHE_USER")
 	vt.Values(
 		"user with spaces",
+		"user\twith\ttabs",
 		"typical_username",
 		"user123",
 		"domain\\user",
@@ -1925,12 +1959,14 @@ func (s *Suite) Test_VartypeCheck_UserGroupName(c *check.C) {
 
 	vt.Output(
 		"WARN: filename.mk:1: User or group name \"user with spaces\" "+
-			"contains invalid characters: U+0020 U+0020",
-		"WARN: filename.mk:4: User or group name \"domain\\\\user\" "+
-			"contains invalid characters: U+005C",
-		"ERROR: filename.mk:7: User or group name \"-rf\" "+
+			"contains invalid characters: space space",
+		"WARN: filename.mk:2: User or group name \"user\\twith\\ttabs\" "+
+			"contains invalid characters: tab tab",
+		"WARN: filename.mk:5: User or group name \"domain\\\\user\" "+
+			"contains invalid characters: \\",
+		"ERROR: filename.mk:8: User or group name \"-rf\" "+
 			"must not start with a hyphen.",
-		"ERROR: filename.mk:8: User or group name \"rf-\" "+
+		"ERROR: filename.mk:9: User or group name \"rf-\" "+
 			"must not end with a hyphen.")
 }
 
