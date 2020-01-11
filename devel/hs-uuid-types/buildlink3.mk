@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2020/01/06 11:51:04 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/01/11 09:41:03 pho Exp $
 
 BUILDLINK_TREE+=	hs-uuid-types
 
@@ -11,7 +11,6 @@ BUILDLINK_PKGSRCDIR.hs-uuid-types?=	../../devel/hs-uuid-types
 
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
-.include "../../devel/hs-text/buildlink3.mk"
 .endif	# HS_UUID_TYPES_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-uuid-types
