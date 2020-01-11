@@ -1,0 +1,2 @@
+This package provides a haskell wrapper over the libyaml C library
+version 0.2.1 by Kirill Simonov.
