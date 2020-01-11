@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.152 2020/01/09 15:06:28 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.153 2020/01/11 20:38:32 gutteridge Exp $
 bin/firefox
 lib/firefox/actors/AudioPlaybackChild.jsm
 lib/firefox/actors/AudioPlaybackParent.jsm
@@ -4443,7 +4443,7 @@ lib/firefox/chrome/en-US/locale/en-US/pluginproblem/pluginproblem.dtd
 lib/firefox/chrome/en-US/locale/en-US/services/sync.properties
 ${PLIST.debug}lib/firefox/chrome/layoutdebug/content/layoutdebug/layoutdebug-helper.js
 ${PLIST.debug}lib/firefox/chrome/layoutdebug/content/layoutdebug/layoutdebug.js
-${PLIST.debug}lib/firefox/chrome/layoutdebug/content/layoutdebug/layoutdebug.xul
+${PLIST.debug}lib/firefox/chrome/layoutdebug/content/layoutdebug/layoutdebug.xhtml
 ${PLIST.debug}lib/firefox/chrome/layoutdebug/locale/en-US/layoutdebug/layoutdebug.dtd
 lib/firefox/chrome/marionette/content/accessibility.js
 lib/firefox/chrome/marionette/content/action.js
