@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2019/05/14 13:23:10 adam Exp $
+$NetBSD: distinfo,v 1.35 2020/01/11 00:31:05 ryoon Exp $
 
 SHA1 (texlive-20190410-source.tar.xz) = d700878d3e19b6ad1313791dd5cef4bf0acfd675
 RMD160 (texlive-20190410-source.tar.xz) = a0cbe56b19b1f3d064315c37f8b5a4b04f82678b
@@ -7,6 +7,7 @@ Size (texlive-20190410-source.tar.xz) = 53783408 bytes
 SHA1 (patch-Makefile.in) = ec3cc8f935d7365c90aabcd68be431eb706d970e
 SHA1 (patch-man_Makefile.in) = 8d0cbcd73f113135ea400c0491a4c0cbd0b07c73
 SHA1 (patch-pdftexdir_pdftex-common.h) = 0f82056b5431c0a4718ab8609967f2ec9aeca3a9
-SHA1 (patch-pdftexdir_pdftoepdf-poppler0.75.0.cc) = fed92e4cc1fa8086eb70dd44726371e1df64f79f
-SHA1 (patch-pdftexdir_pdftosrc-newpoppler.cc) = ce79bc0fc98756493adb1b57724ccb7f7b2821aa
+SHA1 (patch-pdftexdir_pdftoepdf-poppler0.75.0.cc) = ac5c44afe5eacd6e7b955ba7acb335f10249d0c3
+SHA1 (patch-pdftexdir_pdftosrc-newpoppler.cc) = ff18cc9bcb0dc665f7981bf06fba753e67117269
+SHA1 (patch-pdftexdir_utils.c) = 989dc2fe8097d4d31ee2ba03885f00da0f1ab39b
 SHA1 (patch-pdftexdir_writeenc.c) = d2dfedf140c2c2c9143bc701291c09d3a8d3f3a4
