@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.334 2020/01/11 11:04:42 pho Exp $
+$NetBSD: CHANGES-2020,v 1.335 2020/01/11 11:09:00 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -395,3 +395,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/hs-texmath to 0.12 [pho 2020-01-11]
 	Removed textproc/hs-parsec [pho 2020-01-11]
 	Added textproc/hs-libyaml version 0.1.1.1 [pho 2020-01-11]
+	Updated textproc/hs-yaml to 0.11.2.0 [pho 2020-01-11]
