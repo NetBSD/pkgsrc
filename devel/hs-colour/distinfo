@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/12/29 23:57:51 pho Exp $
+$NetBSD: distinfo,v 1.2 2020/01/11 11:44:27 pho Exp $
 
-SHA1 (colour-2.3.3.tar.gz) = 86b35b8a12926ec779cd9dba7c738fcb66eee02a
-RMD160 (colour-2.3.3.tar.gz) = 38216602bc0b263d43d4b1a68642044ba25d4090
-SHA512 (colour-2.3.3.tar.gz) = 3498215698c3c4010a2bcb6ef87ad263f5a5425167751730919363a0e6806a5c8c2ba82b403b7898addd74feaa756c9df339a37a2b2f2d727680c14ffc21ccf8
-Size (colour-2.3.3.tar.gz) = 20392 bytes
+SHA1 (colour-2.3.5.tar.gz) = f4608b82a1f8b5b325102e3735da2c8b49305163
+RMD160 (colour-2.3.5.tar.gz) = 42466c4c6dd62c09e7fafa2c7f7e19769122895d
+SHA512 (colour-2.3.5.tar.gz) = 2232f51b3cfdda1a64436e8395c2441e49db083982a0370d3ec38c304b0a6234666887b3abc886107a9b21c425d3253284cce0186c1a210a302a0a14808364d8
+Size (colour-2.3.5.tar.gz) = 20485 bytes
