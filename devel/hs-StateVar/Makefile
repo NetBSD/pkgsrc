@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/01 02:22:40 pho Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/11 10:41:29 pho Exp $
 
 DISTNAME=	StateVar-1.2
 CATEGORIES=	devel
@@ -8,5 +8,4 @@ COMMENT=	State variables
 LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"
-.include "../../devel/hs-stm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
