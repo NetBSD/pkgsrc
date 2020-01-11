@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2016/05/20 22:54:23 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/01/11 06:21:33 mef Exp $
 bin/runtest
 include/dejagnu.h
 info/dejagnu.info
 man/man1/runtest.1
 share/dejagnu/baseboards/README
+share/dejagnu/baseboards/aarch64-sim.exp
 share/dejagnu/baseboards/am33_2.0-libremote.exp
 share/dejagnu/baseboards/androideabi.exp
 share/dejagnu/baseboards/arm-ice.exp
@@ -38,6 +39,7 @@ share/dejagnu/baseboards/mips-sim.exp
 share/dejagnu/baseboards/mmixware-sim.exp
 share/dejagnu/baseboards/mn10200-sim.exp
 share/dejagnu/baseboards/mn10300-sim.exp
+share/dejagnu/baseboards/msp430-sim.exp
 share/dejagnu/baseboards/mt-sid.exp
 share/dejagnu/baseboards/multi-sim.exp
 share/dejagnu/baseboards/powerpc-sim.exp
@@ -70,6 +72,7 @@ share/dejagnu/config/vxworks.exp
 share/dejagnu/debugger.exp
 share/dejagnu/dejagnu.exp
 share/dejagnu/dg.exp
+share/dejagnu/dmucs.exp
 share/dejagnu/framework.exp
 share/dejagnu/ftp.exp
 share/dejagnu/kermit.exp
@@ -79,6 +82,7 @@ share/dejagnu/remote.exp
 share/dejagnu/rlogin.exp
 share/dejagnu/rsh.exp
 share/dejagnu/runtest.exp
+share/dejagnu/ssh.exp
 share/dejagnu/standard.exp
 share/dejagnu/stub-loader.c
 share/dejagnu/target.exp
