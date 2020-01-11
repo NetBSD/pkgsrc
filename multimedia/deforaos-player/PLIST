@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/02 12:47:58 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/01/11 08:30:38 khorben Exp $
 bin/player
 bin/playerctl
 include/Desktop/Player.h
+man/html1/player.html
+man/html1/playerctl.html
 man/man1/player.1
 man/man1/playerctl.1
 share/Player/splash.png
-share/applications/player.desktop
-share/doc/deforaos-player/player.html
-share/doc/deforaos-player/playerctl.html
+share/applications/deforaos-player.desktop
+share/locale/es/LC_MESSAGES/Player.mo
 share/locale/fr/LC_MESSAGES/Player.mo
