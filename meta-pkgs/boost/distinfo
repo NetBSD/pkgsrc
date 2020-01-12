@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.128 2019/10/09 19:17:45 ryoon Exp $
+$NetBSD: distinfo,v 1.129 2020/01/12 10:10:04 adam Exp $
 
-SHA1 (boost_1_71_0.tar.bz2) = 5b0a3cef23f0c124dde5bbb64324f615ac843ace
-RMD160 (boost_1_71_0.tar.bz2) = a46b886ca26993610c84615fca4340ad3f955f81
-SHA512 (boost_1_71_0.tar.bz2) = b7937d50c4512cf13cadd0ca829de36cf2cbc6fb788f45b1d4565ad0753e2b206c545125a5862016c2f16016f2e4a6b687928963b466fff17c3e0a4437142c20
-Size (boost_1_71_0.tar.bz2) = 100124647 bytes
+SHA1 (boost_1_72_0.tar.bz2) = 88866e4075e12255e7a7189d0b8a686e0b1ee9c1
+RMD160 (boost_1_72_0.tar.bz2) = a2d89b52665a145d19e181a5d52682ca51526765
+SHA512 (boost_1_72_0.tar.bz2) = 63bbd1743e7c904b2e69fdc2eafd1c2a8a30fd70d960dcd366059d0100f000cb605d56cbd9397bb18421631f1c9552a772c434d0f0caddbe56302273f51fd1f6
+Size (boost_1_72_0.tar.bz2) = 106907358 bytes
 SHA1 (patch-boost_archive_basic__archive.hpp) = 7e7c88cfc00fbf524c70dedd8b9c3c889f8b684f
 SHA1 (patch-boost_asio_detail_config.hpp) = f3ae1fd0a026c21a89d196c74e02c4d3c8ea0808
 SHA1 (patch-boost_asio_detail_impl_kqueue__reactor.ipp) = ce16c7c875e6361f952513e700a14761312650fa
@@ -23,7 +23,7 @@ SHA1 (patch-boost_numeric_ublas_storage.hpp) = 282b5a3b5d09216ded14fae166169d64d
 SHA1 (patch-boost_property__tree_detail_xml__parser__read__rapidxml.hpp) = 3499fcc37e72396d23a9fce0f1c97891adf12a9f
 SHA1 (patch-boost_regex_config.hpp) = 6b752c7c23168c591cd391739c7a4539bef44c12
 SHA1 (patch-boost_stacktrace_detail_collect__unwind.ipp) = a5922dffd929f596b6e7d71b11f32d17e0bbd806
-SHA1 (patch-boost_test_impl_execution__monitor.ipp) = 6569cde4cda55a7607d9cbe7853a245ae75eef0d
+SHA1 (patch-boost_test_impl_execution__monitor.ipp) = ffd449576d00b7e6ea3081421e3e70decf5d7de8
 SHA1 (patch-boost_thread_pthread_thread__data.hpp) = 64d2edbaaa297408b8d0b8853611b1d3b0ceea7f
 SHA1 (patch-boostcpp.jam) = c545980fc72ce5a9fd2463899280927b495771b9
 SHA1 (patch-libs_config_configure) = e2f204d4fa4f1bd9b4131d28f9be0a1ac22bf711
