@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-up-to-date,v 1.9 2010/02/24 22:51:37 joerg Exp $
+# $NetBSD: pkg-up-to-date,v 1.10 2020/01/12 23:35:01 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -47,8 +47,16 @@ ${pkg_info} -qb ${pkg} | sed 's/:/ /' | while read file file_id; do
 	[ -z "$file" ] && continue
 	[ -e "${pkgsrc}/${file}" ]
 
-	id=`@SED@ -e '/[$]NetBSD/!d' -e 's/^.*\([$]NetBSD[^$]*[$]\).*$/\1/;q' ${pkgsrc}/${file}`
-	[ "$id" = "$file_id" ]
+	case $file_id in
+	[$]NetBSD*)
+		id=`@SED@ -e '/[$]NetBSD/!d' -e 's/^.*\([$]NetBSD[^$]*[$]\).*$/\1/;q' ${pkgsrc}/${file}`
+		[ "$id" = "$file_id" ]
+		;;
+	*)
+		hash=`${pkg_admin} digest ${pkgsrc}/${file}`
+		[ "$hash" = "$file_id" ]
+		;;
+	esac
 done
 
 # TODO: compare build options
