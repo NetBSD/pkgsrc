@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2019/12/25 14:08:41 taca Exp $
+# $NetBSD: Makefile,v 1.78 2020/01/12 20:20:11 ryoon Exp $
 
+PKGREVISION= 1
 .include "../../devel/thrift/Makefile.common"
 
 PKGNAME=	lib${DISTNAME}
