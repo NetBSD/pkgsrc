@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/12 20:20:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/12 23:01:05 joerg Exp $
 
 DISTNAME=	kore-3.3.1
 PKGREVISION=	1
@@ -15,6 +15,9 @@ USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	MAN_DIR="${PREFIX}/${PKGMANDIR}"
 MAKE_FLAGS+=	TASKS=1
+
+pre-build:
+	${MKDIR} ${WRKSRC}/obj
 
 .include "options.mk"
 
