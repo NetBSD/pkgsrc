@@ -1,10 +1,29 @@
-$NetBSD: patch-aclocal.m4,v 1.1 2020/01/09 12:32:24 pho Exp $
+$NetBSD: patch-aclocal.m4,v 1.2 2020/01/12 08:13:41 pho Exp $
 
-Canonicalize OS name netbsd* to "netbsd".
+Hunk #1:
+  Don't require Alex to build. Fixed in upstream:
+  https://gitlab.haskell.org/ghc/ghc/issues/16860
 
---- aclocal.m4.orig	2019-08-25 12:03:36.000000000 +0000
+Hunk #2:
+  Canonicalize OS name netbsd* to "netbsd".
+
+--- aclocal.m4.orig	2020-01-12 06:28:01.000000000 +0000
 +++ aclocal.m4
-@@ -2044,6 +2044,9 @@ AC_DEFUN([GHC_CONVERT_OS],[
+@@ -985,8 +985,11 @@ else
+ fi;
+ changequote([, ])dnl
+ ])
+-FP_COMPARE_VERSIONS([$fptools_cv_alex_version],[-lt],[3.1.7],
+-  [AC_MSG_ERROR([Alex version 3.1.7 or later is required to compile GHC.])])[]
++if test ! -f compiler/parser/Lexer.hs
++then
++    FP_COMPARE_VERSIONS([$fptools_cv_alex_version],[-lt],[3.1.7],
++      [AC_MSG_ERROR([Alex version 3.1.7 or later is required to compile GHC.])])[]
++fi
+ AlexVersion=$fptools_cv_alex_version;
+ AC_SUBST(AlexVersion)
+ ])
+@@ -2044,6 +2047,9 @@ AC_DEFUN([GHC_CONVERT_OS],[
        openbsd*)
          $3="openbsd"
          ;;

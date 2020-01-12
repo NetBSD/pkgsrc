@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.1 2020/01/09 12:32:24 pho Exp $
+$NetBSD: distinfo,v 1.2 2020/01/12 08:13:40 pho Exp $
 
+SHA1 (ghc-8.4.4-boot-x86_64-apple-darwin.tar.xz) = 688f5729992bd2476699d9067d97e79b06bdec60
+RMD160 (ghc-8.4.4-boot-x86_64-apple-darwin.tar.xz) = 4e9c52c8ef07343cc24528e3f8431754237d0be3
+SHA512 (ghc-8.4.4-boot-x86_64-apple-darwin.tar.xz) = abc92ca6822ba7fe2d09bc381a833c0cbd5f436b517fba003736195cec45f8ce2e33623a587ad35f5702baac791594d62fc829e2ea4dfceae2455875661b3ba6
+Size (ghc-8.4.4-boot-x86_64-apple-darwin.tar.xz) = 51700444 bytes
 SHA1 (ghc-8.4.4-boot-x86_64-unknown-netbsd.tar.xz) = bc7b0e203a6e7e6804c4be46957352d032cd22ec
 RMD160 (ghc-8.4.4-boot-x86_64-unknown-netbsd.tar.xz) = dd50835c50cd2102c1af4d2ed8f1148c8ac4d4d9
 SHA512 (ghc-8.4.4-boot-x86_64-unknown-netbsd.tar.xz) = 0cc836390985c56d79a5c08dd2117c53fc9802b969db408dab14cfd441d95b2b5c18fed5d0b6da8a8555501e668ba471d0b878ea11a0021fba76265ed4ef8f76
@@ -8,7 +12,7 @@ SHA1 (ghc-8.8.1-src.tar.xz) = 9d8c1b2e0bad002fed39ba8f53684615a96bc218
 RMD160 (ghc-8.8.1-src.tar.xz) = c514d565e9f808a58991e47b17dccb85f0c01056
 SHA512 (ghc-8.8.1-src.tar.xz) = 7268b012c3a6c34e7eac05c7d6959de6005651d33e870860bbfe589295502e8794a76580130b8f4da2f88032b68116dbbdbc4c1e900e0c862aaa9891fa788bef
 Size (ghc-8.8.1-src.tar.xz) = 28634672 bytes
-SHA1 (patch-aclocal.m4) = e4065df0cfc2924aa12f7b0f18a58ff80b1ff1dc
+SHA1 (patch-aclocal.m4) = a674a21f5be05f06a972b1dd42c05dca02e70740
 SHA1 (patch-compiler_main_DynFlags.hs) = 07bb2a5afdd087f4d2da5c035feecc13273aec70
 SHA1 (patch-configure.ac) = f521200b519fdaab1082c4a2fcac9c3dd9135d7b
 SHA1 (patch-ghc_ghc.mk) = 331b947f6a5af09b3fda82697f071941166edbd0
