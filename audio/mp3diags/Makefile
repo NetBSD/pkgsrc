@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2019/10/28 10:20:57 kamil Exp $
+# $NetBSD: Makefile,v 1.62 2020/01/12 20:20:03 ryoon Exp $
 
 DISTNAME=	MP3Diags-unstable-1.5.01
 PKGNAME=	${DISTNAME:S/MP3D/mp3d/:C/-unsable//}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3diags/}
 
