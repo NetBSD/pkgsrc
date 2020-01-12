@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2019/08/22 12:23:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/12 20:20:15 ryoon Exp $
 
 PKGNAME=	assaultcube-1.2.0.2
-PKGREVISION=	4
+PKGREVISION=	5
 DISTNAME=	AssaultCube_v${PKGVERSION_NOREV}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=assaultcube/}

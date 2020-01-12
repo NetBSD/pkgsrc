@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.150 2019/08/22 12:23:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.151 2020/01/12 20:20:41 ryoon Exp $
 
 DISTNAME=	gnupg-1.4.23
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/
 MASTER_SITES+=	ftp://ftp.ring.gr.jp/pub/net/gnupg/gnupg/
