@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/04/30 09:22:10 hauke Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/12 23:02:29 joerg Exp $
 #
 
 DISTNAME=	cacti-spine-1.2.2
@@ -12,6 +12,7 @@ COMMENT=	Cacti poller for large installations
 LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	cacti>=1.2.2:../../net/cacti
+BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
