@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.356 2020/01/12 15:50:18 mef Exp $
+$NetBSD: CHANGES-2020,v 1.357 2020/01/12 19:44:41 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -427,3 +427,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/public-sans to 1.008 [mef 2020-01-12]
 	Updated net/sayaka to 3.4.1 [tsutsui 2020-01-12]
 	Updated devel/R-callr to 3.4.0 [mef 2020-01-12]
+	Updated net/deforaos-vncviewer to 0.1.0 [khorben 2020-01-12]
