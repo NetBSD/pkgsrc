@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.17 2019/10/01 13:01:02 jperkin Exp $
+# $NetBSD: metadata.mk,v 1.18 2020/01/12 23:38:42 joerg Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -129,7 +129,46 @@ ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 ###
 _BUILD_VERSION_FILE=	${PKG_DB_TMPDIR}/+BUILD_VERSION
 _METADATA_TARGETS+=	${_BUILD_VERSION_FILE}
-
+.if !empty(USE_PKG_ADMIN_DIGEST:M[Yy][Ee][Ss])
+${_BUILD_VERSION_FILE}:
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}${RM} -f ${.TARGET}.tmp
+	${RUN}								\
+	exec 1>>${.TARGET}.tmp;						\
+	${FIND} ${FILESDIR} -type f 2> /dev/null | while read f; do	\
+		${TEST} ! -f "$$f" || ${ECHO} "$$f";			\
+	done
+	for f in ${.CURDIR}/Makefile ${PKGDIR}/*; do			\
+		${TEST} ! -f "$$f" || ${ECHO} "$$f";			\
+	done
+	${RUN}								\
+	exec 1>>${.TARGET}.tmp;						\
+	${TEST} -f ${DISTINFO_FILE:Q} || exit 0;			\
+	${CAT} ${DISTINFO_FILE} |					\
+	${AWK} 'NF == 4 && $$3 == "=" { gsub("[()]", "", $$2); print $$2 }' | \
+	while read file; do						\
+		${TEST} ! -f "${PATCHDIR}/$$file" ||			\
+			${ECHO} "${PATCHDIR}/$$file";			\
+	done
+	${RUN}								\
+	exec 1>>${.TARGET}.tmp;						\
+	${TEST} -d ${PATCHDIR} || exit 0;				\
+	cd ${PATCHDIR}; for f in *; do					\
+		case "$$f" in						\
+		"*"|*.orig|*.rej|*~)	;;				\
+		patch-*)		${ECHO} "${PATCHDIR}/$$f" ;;	\
+		esac;							\
+	done
+	${RUN}								\
+	${CAT} ${.TARGET}.tmp |						\
+	${AWK} '{ t=$$0; sub("^${PKGSRCDIR}/", "");			\
+		   printf "%s %s\n", t, $$0 }' |			\
+	while read file relfile; do					\
+		printf "%s: " "$$relfile";				\
+		${PKG_ADMIN} digest "$$file";				\
+	done |								\
+	${SORT} -u > ${.TARGET} && ${RM} -f ${.TARGET}.tmp
+.else
 ${_BUILD_VERSION_FILE}:
 	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}${RM} -f ${.TARGET}.tmp
@@ -158,7 +197,9 @@ ${_BUILD_VERSION_FILE}:
 	done
 	${RUN}								\
 	${CAT} ${.TARGET}.tmp |						\
-	while read file; do						\
+	${AWK} '{ t=$$0; sub("^${PKGSRCDIR}/", "");
+		   printf "%s %s\n"; t, $$0 }' | \
+	while read file relfile; do					\
 		${GREP} '\$$NetBSD' $$file 2>/dev/null |		\
 		${SED} -e "s|^|$$file:|;q";				\
 	done |								\
@@ -167,6 +208,7 @@ ${_BUILD_VERSION_FILE}:
 		  sub("[$$][^$$]*$$", "$$");				\
 		  print; }' |						\
 	${SORT} -u > ${.TARGET} && ${RM} -f ${.TARGET}.tmp
+.endif
 
 ######################################################################
 ###
