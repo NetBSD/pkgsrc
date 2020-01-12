@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.27 2019/12/29 16:59:08 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.28 2020/01/12 11:07:46 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -105,7 +105,7 @@ pre-configure:
 # configured, otherwise it will produce executables with no rpath and
 # fail in the configure phase.
 	@${PHASE_MSG} "Preparing bootstrapping compiler for ${PKGNAME}"
-	${RUN}cd ${WRKDIR:Q}/build-extract/${PKGNAME_NOREV}-boot && \
+	${RUN}cd ${WRKDIR:Q}/build-extract/ghc-${BOOT_VERSION}-boot && \
 		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure \
 			--prefix=${TOOLS_DIR:Q} && \
 		${MAKE_PROGRAM} install
