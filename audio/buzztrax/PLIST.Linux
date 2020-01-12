@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2020/01/12 20:41:55 nia Exp $
+include/libbuzztrax-ic/input-device.h
