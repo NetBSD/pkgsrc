@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2019/11/04 22:09:51 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2020/01/12 20:20:47 ryoon Exp $
 
 DISTNAME=	mod_auth_mellon-0.14.2
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
-PKGREVISION=	3
+PKGREVISION=	4
 #PKGREVISION=	1
 CATEGORIES=	www security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=UNINETT/}
