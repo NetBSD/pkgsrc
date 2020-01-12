@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2019/08/26 16:48:56 micha Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/12 08:45:15 mef Exp $
 share/doc/doom-pwad-sigil/INSTALL.pkgsrc
+share/doc/doom-pwad-sigil/SIGIL_instructions.txt
 share/doom/SIGIL.txt
 share/doom/SIGIL.wad
 share/doom/SIGIL_COMPAT.wad
