@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2019/08/22 12:23:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/12 20:20:46 ryoon Exp $
 
 DISTNAME=	mod_authnz_crowd-2.2.2
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.atlassian.com/software/crowd/downloads/cwdapache/
 
