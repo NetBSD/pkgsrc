@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/09/05 15:08:42 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/12 10:48:50 pho Exp $
 
 DISTNAME=	libffi-3.2.1
 PKGREVISION=	4
@@ -48,6 +48,12 @@ CPPFLAGS+=	-D__PIC__
 .if !empty(OPSYS:MIRIX)
 USE_TOOLS+=		bash gmake
 MAKE_FLAGS+=		SHELL=${TOOLS_DIR}/bin/bash
+.endif
+
+# On platforms where ld(1) is LLVM ld, relocations against read-only
+# segments has to be explicitly allowed.
+.if !empty(MACHINE_PLATFORM:MFreeBSD-1[2-9].*-*)
+CFLAGS+=	-Wl,-z,notext
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
