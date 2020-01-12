@@ -1,23 +1,20 @@
-# $NetBSD: Makefile,v 1.34 2020/01/10 21:15:21 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/12 09:09:24 khorben Exp $
 
-DISTNAME=	Mailer-0.1.8
-PKGNAME=	deforaos-mailer-0.1.8
-PKGREVISION=	9
+DISTNAME=	Mailer-0.2.0
+PKGNAME=	deforaos-mailer-0.2.0
 CATEGORIES=	mail
-MASTER_SITES=	https://www.defora.org/os/download/download/4439/
+MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Mailer/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop e-mail client
-LICENSE=	modified-bsd
+LICENSE=	2-clause-bsd
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	xgettext
-
-MAKE_JOBS_SAFE=	no
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}

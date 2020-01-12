@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/01/10 21:15:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/01/12 09:09:24 khorben Exp $
 bin/compose
 bin/mailer
 include/Desktop/Mailer.h
@@ -24,6 +24,8 @@ man/html1/mailer.html
 man/man1/compose.1
 man/man1/mailer.1
 share/applications/deforaos-mailer.desktop
+share/doc/Mailer/COPYING
+share/doc/Mailer/README.md
 share/gtk-doc/html/Mailer/Mailer-account.html
 share/gtk-doc/html/Mailer/Mailer-folder.html
 share/gtk-doc/html/Mailer/Mailer-helper.html
