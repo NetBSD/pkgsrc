@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.353 2020/01/12 10:11:35 adam Exp $
+$NetBSD: CHANGES-2020,v 1.354 2020/01/12 15:21:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -424,3 +424,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/boost-mpi to 1.72.0 [adam 2020-01-12]
 	Updated devel/py-boost to 1.72.0 [adam 2020-01-12]
 	Updated meta-pkgs/boost to 1.72.0 [adam 2020-01-12]
+	Updated fonts/public-sans to 1.008 [mef 2020-01-12]
