@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/09 12:12:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/12 13:22:29 wiz Exp $
 
 DISTNAME=	halfempty-0.30
 CATEGORIES=	devel
@@ -11,6 +11,17 @@ COMMENT=	Fast, parallel test case minimization tool
 LICENSE=	apache-2.0
 
 USE_TOOLS+=	gmake pkg-config
+#TEST_TARGET=	test
+
+INSTALLATION_DIRS=	bin share/doc/halfempty
+
+#TEST_DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/halfempty ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/halfempty
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+# for putting shuf from coreutils in path
+#PATH:=${PATH}:${PREFIX}/gnu/bin
