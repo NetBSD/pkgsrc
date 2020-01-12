@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2019/11/03 19:32:08 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2020/01/12 20:20:26 ryoon Exp $
 
 DISTNAME=		tqsl-2.4.7
+PKGREVISION=		1
 CATEGORIES=		ham
 MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
 

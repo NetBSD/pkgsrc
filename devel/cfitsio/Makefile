@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2019/11/26 10:24:11 markd Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/12 20:20:10 ryoon Exp $
 
 DISTNAME=	cfitsio-3.47
 PKGNAME=	${DISTNAME}0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/
 

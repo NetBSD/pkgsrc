@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2019/08/22 12:22:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/12 20:20:04 ryoon Exp $
 
 DISTNAME=	htslib-1.9
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 EXTRACT_SUFX=	.tar.bz2
