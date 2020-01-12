@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.44 2019/08/22 12:23:40 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2020/01/12 20:19:57 ryoon Exp $
 
 BUILDLINK_TREE+=	libgdata
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgdata
 LIBGDATA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgdata+=	libgdata>=0.6.4
-BUILDLINK_ABI_DEPENDS.libgdata+=	libgdata>=0.16.1nb24
+BUILDLINK_ABI_DEPENDS.libgdata+=	libgdata>=0.16.1nb25
 BUILDLINK_PKGSRCDIR.libgdata?=		../../net/libgdata
 
 

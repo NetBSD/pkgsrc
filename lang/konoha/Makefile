@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2019/08/22 12:23:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2020/01/12 20:20:27 ryoon Exp $
 #
 
 DISTNAME=	konoha-1.0.0-952
 PKGNAME=	konoha-1.0.0.952
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	lang
 MASTER_SITES=	http://konoha.googlecode.com/files/
 
