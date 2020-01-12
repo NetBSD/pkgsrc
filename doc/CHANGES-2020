@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.352 2020/01/12 09:09:41 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.353 2020/01/12 10:11:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -416,3 +416,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/swc to 0.0.0.20200111 [nia 2020-01-11]
 	Updated x11/deforaos-keyboard to 0.4.0 [khorben 2020-01-12]
 	Updated mail/deforaos-mailer to 0.2.0 [khorben 2020-01-12]
+	Updated devel/boost-build to 1.72.0 [adam 2020-01-12]
+	Updated devel/boost-docs to 1.72.0 [adam 2020-01-12]
+	Updated devel/boost-headers to 1.72.0 [adam 2020-01-12]
+	Updated devel/boost-jam to 1.72.0 [adam 2020-01-12]
+	Updated devel/boost-libs to 1.72.0 [adam 2020-01-12]
+	Updated devel/boost-mpi to 1.72.0 [adam 2020-01-12]
+	Updated devel/py-boost to 1.72.0 [adam 2020-01-12]
+	Updated meta-pkgs/boost to 1.72.0 [adam 2020-01-12]
