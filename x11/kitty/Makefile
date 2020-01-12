@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/08 12:31:45 nia Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/12 23:00:26 joerg Exp $
 
 DISTNAME=	kitty-0.15.1
 CATEGORIES=	x11
@@ -15,6 +15,9 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c99
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake pkg-config
+
+# don't force LTO
+BUILDLINK_TRANSFORM+=	rm:-flto
 
 # kitty's homegrown packaging expects the functionality of tic(1) that
 # comes with ncurses.
