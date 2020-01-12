@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.355 2020/01/12 15:22:32 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.356 2020/01/12 15:50:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -426,3 +426,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/boost to 1.72.0 [adam 2020-01-12]
 	Updated fonts/public-sans to 1.008 [mef 2020-01-12]
 	Updated net/sayaka to 3.4.1 [tsutsui 2020-01-12]
+	Updated devel/R-callr to 3.4.0 [mef 2020-01-12]
