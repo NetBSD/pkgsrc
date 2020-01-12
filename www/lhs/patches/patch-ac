@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2016/03/26 23:05:10 joerg Exp $
+$NetBSD: patch-ac,v 1.4 2020/01/12 23:01:38 joerg Exp $
 
 * Include sys/filio.h for FIONBIO etc.
 * Drop SSLv2 support
@@ -33,13 +33,15 @@ $NetBSD: patch-ac,v 1.3 2016/03/26 23:05:10 joerg Exp $
  	if (!ctx) {
  		fprintf(stderr, "SSL_CTX_new failed.\n");
  		return 0;
-@@ -512,12 +513,12 @@ SSL *init_ssl_socket(int sock)
+@@ -511,13 +512,13 @@ SSL *init_ssl_socket(int sock)
+ 		return NULL;
  	}
  //	SSL_set_session_id_context(ssl,AppContext,sizeof(AppContext));
- 	switch(ssl->session->ssl_version) {
+-	switch(ssl->session->ssl_version) {
 -		case SSL2_VERSION:
 -			debug("ssl2\n");
 -			break;	
++	switch(SSL_SESSION_get_protocol_version(SSL_get_session(ssl))) {
  		case SSL3_VERSION:
  			debug("ssl3\n");
  			break;
