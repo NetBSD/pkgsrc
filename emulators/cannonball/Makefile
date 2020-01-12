@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/10/24 00:32:36 fox Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/12 20:20:13 ryoon Exp $
 
 DISTNAME=	cannonball-0.3.20191023
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=djyt/}
 GITHUB_TAG=	b6aa525ddd552f96b43b3b3a6f69326a277206bd

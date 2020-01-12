@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2019/10/28 12:54:25 nia Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/12 20:20:18 ryoon Exp $
 
 PKGNAME=	minetest-5.1.0
+PKGREVISION=	1
 CATEGORIES=	games
 DIST_SUBDIR=	minetest-${PKGVERSION_NOREV}
 DISTFILES+=	minetest.tar.gz
