@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.364 2020/01/13 01:53:38 mef Exp $
+$NetBSD: CHANGES-2020,v 1.365 2020/01/13 02:17:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -435,3 +435,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added lang/adoptopenjdk11-bin version 11.0.5.10 [ryoon 2020-01-13]
 	Added devel/R-cliapp version 0.1.0 [mef 2020-01-13]
 	Added devel/R-prettycode version 1.1.0 [mef 2020-01-13]
+	Added textproc/R-selectr version 0.4.2 [mef 2020-01-13]
