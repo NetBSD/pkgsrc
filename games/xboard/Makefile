@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2020/01/13 13:31:50 hauke Exp $
+# $NetBSD: Makefile,v 1.60 2020/01/13 15:46:26 hauke Exp $
 
-DISTNAME=	xboard-4.8.0
-PKGREVISION=	13
+DISTNAME=	xboard-4.9.1
+#PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNU:=xboard/}
 
@@ -20,21 +20,25 @@ INFO_FILES=		yes
 REPLACE_PERL=		texi2man
 
 INSTALLATION_DIRS+=	share/examples/xboard
-CONF_FILES+=		${PREFIX}/share/examples/xboard/xboard.conf ${PKG_SYSCONFDIR}/xboard.conf
+CONF_FILES+=		${PREFIX}/share/examples/xboard/xboard.conf \
+			${PKG_SYSCONFDIR}/xboard.conf
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
-BUILD_DEFS+=		XAW_TYPE
-.if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm")
-CONFIGURE_ARGS+=	--with-Xaw3d
-.endif
+DEPENDS+=		gnuchess-[0-9]*:../../games/gnuchess
 
 SUBST_CLASSES+=		engine
 SUBST_MESSAGE.engine=	Setting gnuchess as default chess engine.
 SUBST_STAGE.engine=	pre-configure
 SUBST_FILES.engine=	xboard.conf
 SUBST_SED.engine=	-e '/ChessProgram / s,fairymax,gnuchess,'
-DEPENDS+=		gnuchess-[0-9]*:../../games/gnuchess
+
+SUBST_CLASSES+=			wavplayer
+SUBST_MESSAGE.wavplayer=	Setting wav player location.
+SUBST_STAGE.wavplayer=		post-build
+SUBST_FILES.wavplayer=		xboard.conf
+SUBST_SED.wavplayer=		-e 's,aplay -q,${WAVPLAYER},g'
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 WAVPLAYER=      /usr/bin/audioplay
@@ -59,12 +63,6 @@ DEPENDS+=       libsndfile-[0-9]*:../../audio/libsndfile
 .  endif
 .endif
 
-SUBST_CLASSES+=			wavplayer
-SUBST_MESSAGE.wavplayer=	Setting wav player location.
-SUBST_STAGE.wavplayer=		post-build
-SUBST_FILES.wavplayer=		xboard.conf
-SUBST_SED.wavplayer=		-e 's,aplay -q,${WAVPLAYER},g'
-
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cmail ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/xboard.conf ${DESTDIR}${PREFIX}/share/examples/xboard
@@ -73,7 +71,6 @@ post-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../mk/xaw.buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 
