@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2020/01/12 20:20:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.207 2020/01/13 17:36:48 rillig Exp $
 
 DISTNAME=	R-3.6.1
 PKGREVISION=	2
@@ -25,6 +25,7 @@ INFO_FILES=		yes
 PTHREAD_AUTO_VARS=	yes
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--enable-R-shlib
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-lapack
