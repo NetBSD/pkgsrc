@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.1 2020/01/03 15:24:08 pho Exp $
+$NetBSD: distinfo,v 1.2 2020/01/13 11:49:36 pho Exp $
 
+SHA1 (ghc-8.0.2-boot-i386-unknown-freebsd.tar.xz) = 0d6ffbb87f76aa4bfa243ba590978b993b359bd0
+RMD160 (ghc-8.0.2-boot-i386-unknown-freebsd.tar.xz) = cdcea446b5ae76ca90cac6fb3ae85c13fed04094
+SHA512 (ghc-8.0.2-boot-i386-unknown-freebsd.tar.xz) = 078290c325c8e5b8d861816750d58b4289ad51ac4f39b803b670d7ece5fb46e9fd39c1859ec54770ad9cfc7e423790d0f5a0c58e5881f96b4078763a6b48c0a0
+Size (ghc-8.0.2-boot-i386-unknown-freebsd.tar.xz) = 48217412 bytes
 SHA1 (ghc-8.0.2-boot-x86_64-unknown-netbsd.tar.xz) = 739ff0e666e5b3bb6e31d5c9b95ad01ab1225105
 RMD160 (ghc-8.0.2-boot-x86_64-unknown-netbsd.tar.xz) = 29f162e0547c686274eb8389c30e8a76b53a51eb
 SHA512 (ghc-8.0.2-boot-x86_64-unknown-netbsd.tar.xz) = 829ac54c9cf5031d93e994424a70093da38a612281ad2e8422a0dbd1e5beb34deecca042ae82706c97c3e4b9ab745140c796e3a6a16903cb04adfac52b8d83da
@@ -13,9 +17,9 @@ SHA1 (patch-libraries_base_GHC_Event_KQueue.hsc) = 8ee5da667a241a05fde3c580d3dc9
 SHA1 (patch-libraries_base_System_Environment.hs) = ec3dfd916593f600a397e5b594672e6d3564f042
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_CTimespec.hsc) = 758502590ac746990ffcc7fd08dda441ca003532
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_CTimeval.hs) = 8961cbf704b29c5e06ec6a95b9a9c9d0db69760a
-SHA1 (patch-libraries_unix_System_Posix_Env.hsc) = e94936c139ca15d45cac4a7feb74a601567913ab
+SHA1 (patch-libraries_unix_include_execvpe.h) = 67dd9720a71a6a55bbe2b50e61621ca60187ef00
 SHA1 (patch-libraries_unix_System_Posix_Env_ByteString.hsc) = 3f675fc5d6bf5cc59a2d5ccffeb9ccd51521645a
+SHA1 (patch-libraries_unix_System_Posix_Env.hsc) = e94936c139ca15d45cac4a7feb74a601567913ab
 SHA1 (patch-libraries_unix_System_Posix_Files_Common.hsc) = 6efef280832d376915a8987e4e8aac283408f607
 SHA1 (patch-libraries_unix_System_Posix_Signals.hsc) = 49215dce493a6bbc440f91a3959e592f86fc779b
-SHA1 (patch-libraries_unix_include_execvpe.h) = 67dd9720a71a6a55bbe2b50e61621ca60187ef00
 SHA1 (patch-rts_PosixSource.h) = 604608791f33245d9305dcbd6d9d5979fe162f21

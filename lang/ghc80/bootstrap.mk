@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.1 2020/01/03 15:24:08 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.2 2020/01/13 11:49:36 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -25,9 +25,9 @@
 .endif
 
 .if !empty(MACHINE_PLATFORM:MFreeBSD-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-#BOOT_VERSION:=	7.10.3
-#BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-i386-unknown-freebsd.tar.xz
-#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
+BOOT_VERSION:=	8.0.2
+BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-i386-unknown-freebsd.tar.xz
+DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
@@ -65,16 +65,6 @@ SITES.${i}?=	${MASTER_SITE_LOCAL}
 # (FP_LEADING_UNDERSCORE)
 .if ${OPSYS} == "Darwin"
 CONFLICTS+=	libelf-[0-9]*
-.endif
-
-# FreeBSD < 10 surprisingly doesn't have a native iconv so we need to
-# use pkgsrc libiconv for this OPSYS. And if a bootkit depends on
-# pkgsrc libiconv, the "normal" build must do the same because GHC
-# always needs to link executables with libiconv, just like libgmp
-# when integer-gmp is used. For this reason it might be desirable to
-# create two separate bootkits, one for < 10 and another for >= 10.
-.if ${OPSYS} == "FreeBSD"
-USE_BUILTIN.iconv=	no
 .endif
 
 # current bootstrap binary kit for SmartOS is built with ncurses5

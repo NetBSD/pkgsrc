@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/03 15:24:08 pho Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/13 11:49:36 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -23,7 +23,7 @@ CONFLICTS+=	ghc-[0-9]*
 # bootstrap compilers for each platforms. If you want to build them
 # yourself, follow instructions in BOOTSTRAP.txt and ./bootstrap.mk
 #BROKEN_EXCEPT_ON_PLATFORM+= Darwin-*-powerpc # Not available yet
-#BROKEN_EXCEPT_ON_PLATFORM+= FreeBSD-*-i386   # Not available yet
+BROKEN_EXCEPT_ON_PLATFORM+= FreeBSD-*-i386
 BROKEN_EXCEPT_ON_PLATFORM+= NetBSD-*-x86_64
 #BROKEN_EXCEPT_ON_PLATFORM+= SunOS-*-i386     # Not available yet
 #BROKEN_EXCEPT_ON_PLATFORM+= SunOS-*-x86_64   # Not available yet
