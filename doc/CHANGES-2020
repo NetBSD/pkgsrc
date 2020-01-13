@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.376 2020/01/13 15:46:36 hauke Exp $
+$NetBSD: CHANGES-2020,v 1.377 2020/01/13 18:06:57 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -450,3 +450,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-multidict to 4.7.4 [adam 2020-01-13]
 	Updated comms/gammu to 1.41.0 [leot 2020-01-13]
 	Updated games/xboard to 4.9.1 [hauke 2020-01-13]
+	Updated pkgtools/R2pkg to 0.6.4 [rillig 2020-01-13]
