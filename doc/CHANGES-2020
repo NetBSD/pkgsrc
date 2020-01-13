@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.370 2020/01/13 09:18:45 mef Exp $
+$NetBSD: CHANGES-2020,v 1.371 2020/01/13 10:06:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -441,3 +441,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/apache-tomcat85 to 8.5.50 [ryoon 2020-01-13]
 	Updated www/apache-tomcat9 to 9.0.30 [ryoon 2020-01-13]
 	Added devel/R-mockery version 0.4.2 [mef 2020-01-13]
+	Added textproc/R-rmarkdown version 2.0 [mef 2020-01-13]
+	Added textproc/R-crosstalk version 1.0.0 [mef 2020-01-13]
+	Added textproc/R-DT version 0.11 [mef 2020-01-13]
