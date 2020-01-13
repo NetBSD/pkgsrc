@@ -833,6 +833,7 @@ vice-hwscaling		Enable hardware-assisted screen scaling.
 vice-x64		Enable building of the old x64 emulator.
 vidix			Enable VIDIX (Video Interface for *niX support).
 viewvc-php		Use php to colorize .php and .inc files.
+virtfs-proxy-helper	Enable virtfs-proxy-helper support (Linux only).
 vlc-skins		Enable skins support in VLC.
 vorbis			Enable Ogg Vorbis support.
 vulkan			Enable support for the Vulkan 3D and compute API.
