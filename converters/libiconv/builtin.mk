@@ -1,4 +1,13 @@
-# $NetBSD: builtin.mk,v 1.24 2019/11/03 17:14:25 rillig Exp $
+# $NetBSD: builtin.mk,v 1.25 2020/01/13 17:35:05 rillig Exp $
+#
+# Package-settable variables:
+#
+# GNU_CONFIGURE_ICONV: YesNo
+#	Whether to add --with-libiconv-prefix to CONFIGURE_ARGS.
+#
+#	Default: yes
+#
+# Keywords: iconv
 
 BUILTIN_PKG:=	iconv
 
@@ -157,7 +166,7 @@ BUILDLINK_TRANSFORM+=		rm:-liconv
 .    endif
 .  endif
 
-.  if defined(GNU_CONFIGURE)
+.  if defined(GNU_CONFIGURE) && ${GNU_CONFIGURE_ICONV:Uyes:M[yY][eE][sS]}
 .    if !empty(USE_BUILTIN.iconv:M[nN][oO])
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 .    endif
