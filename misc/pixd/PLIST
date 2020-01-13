@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/13 22:30:34 nia Exp $
+bin/pixd
+man/man1/pixd.1
