@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.537 2020/01/11 23:14:27 joerg Exp $
+# $NetBSD: Makefile,v 1.538 2020/01/13 01:41:42 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -10,6 +10,7 @@ SUBDIR+=	R-sourcetools
 SUBDIR+=	STk
 SUBDIR+=	a60
 SUBDIR+=	abcl
+SUBDIR+=	adoptopenjdk11-bin
 SUBDIR+=	algol68g
 SUBDIR+=	asn1c
 SUBDIR+=	awka
