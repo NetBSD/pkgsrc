@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2019/07/21 22:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/13 00:40:38 khorben Exp $
 
-DISTNAME=	Coder-0.2.0
-PKGNAME=	deforaos-coder-0.2.0
-PKGREVISION=	10
+DISTNAME=	Coder-0.3.0
+PKGNAME=	deforaos-coder-0.3.0
 CATEGORIES=	devel
-MASTER_SITES=	https://www.defora.org/os/download/download/4420/
+MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Coder/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
@@ -31,10 +30,12 @@ AUTO_MKDIRS=	yes
 .if ${PKGMANDIR} != "share/man"
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/html1/coder.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/coder.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/debugger.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/debugger.html
 	${MV} ${DESTDIR}${PREFIX}/share/man/html1/sequel.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/sequel.html
 	${MV} ${DESTDIR}${PREFIX}/share/man/html1/simulator.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/simulator.html
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/html1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/coder.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/coder.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/debugger.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/debugger.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/sequel.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/sequel.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/simulator.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/simulator.1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
