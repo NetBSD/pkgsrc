@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.19 2020/01/13 03:38:01 ryoon Exp $
+# $NetBSD: metadata.mk,v 1.20 2020/01/13 06:52:57 taca Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -198,7 +198,7 @@ ${_BUILD_VERSION_FILE}:
 	${RUN}								\
 	${CAT} ${.TARGET}.tmp |						\
 	${AWK} '{ t=$$0; sub("^${PKGSRCDIR}/", "");			\
-		   printf "%s %s\n"; t, $$0 }' | \
+		   printf "%s %s\n", t, $$0 }' | \
 	while read file relfile; do					\
 		${GREP} '\$$NetBSD' $$file 2>/dev/null |		\
 		${SED} -e "s|^|$$file:|;q";				\
