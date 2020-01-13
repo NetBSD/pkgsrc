@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.225 2020/01/12 20:20:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.226 2020/01/13 02:50:25 gutteridge Exp $
 
 DISTNAME=	qemu-4.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -125,14 +125,13 @@ PLIST.bridge-helper=		yes
 PLIST.nbd=			yes
 PLIST.ivshmem=			yes
 PLIST.pr-helper=		yes
-PLIST.virtfs-proxy-helper=	yes
 .elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
 PLIST.ivshmem=			yes
 PLIST.nbd=			yes
 CONFIGURE_ARGS+=		--disable-coroutine-pool
 .endif
 
-PLIST_VARS+=		${UE_ARCHS} bridge-helper ivshmem keymap nbd pr-helper virtfs-proxy-helper
+PLIST_VARS+=		${UE_ARCHS} bridge-helper ivshmem keymap nbd pr-helper
 .for pvar in ${USER_EMUL}
 PLIST.${pvar}=		yes
 .endfor
