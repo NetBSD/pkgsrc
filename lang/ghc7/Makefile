@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/01/03 11:11:29 pho Exp $
+# $NetBSD: Makefile,v 1.40 2020/01/13 01:06:52 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -64,7 +64,7 @@ CONFIGURE_ARGS.common= \
 	--with-ffi-includes=${BUILDLINK_PREFIX.libffi:Q}/${BUILDLINK_INCDIRS.libffi:Q} \
 	--with-ffi-libraries=${BUILDLINK_PREFIX.libffi:Q}/${BUILDLINK_LIBDIRS.libffi:Q}
 
-CONFIGURE_ARGS+= ${CONFIGURE_ARGS.common}
+CONFIGURE_ARGS+=	${CONFIGURE_ARGS.common}
 
 CONFIGURE_ENV+= \
 	ac_cv_path_fp_prog_ar=${AR:Q} \
