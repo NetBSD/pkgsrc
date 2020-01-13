@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/12 08:13:40 pho Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/13 15:42:47 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -22,7 +22,7 @@ CONFLICTS+=	ghc-[0-9]*
 # BOOTSTRAP.txt and ./bootstrap.mk
 #BROKEN_EXCEPT_ON_PLATFORM+=	Darwin-*-powerpc # Not available yet
 BROKEN_EXCEPT_ON_PLATFORM+=	Darwin-*-x86_64
-#BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-i386   # Not available yet
+BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-i386
 BROKEN_EXCEPT_ON_PLATFORM+=	NetBSD-*-x86_64
 #BROKEN_EXCEPT_ON_PLATFORM+=	SunOS-*-i386     # Not available yet
 #BROKEN_EXCEPT_ON_PLATFORM+=	SunOS-*-x86_64   # Not available yet
