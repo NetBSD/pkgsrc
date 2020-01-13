@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.374 2020/01/13 11:03:40 adam Exp $
+$NetBSD: CHANGES-2020,v 1.375 2020/01/13 11:18:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -448,3 +448,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/R-covr to 3.4.0 [mef 2020-01-13]
 	Updated graphics/py-Pillow to 6.2.2 [adam 2020-01-13]
 	Updated databases/py-multidict to 4.7.4 [adam 2020-01-13]
+	Updated comms/gammu to 1.41.0 [leot 2020-01-13]
