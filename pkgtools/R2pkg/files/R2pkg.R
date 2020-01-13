@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.28 2020/01/13 18:06:47 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.29 2020/01/13 18:09:20 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -352,7 +352,6 @@ new.depends.pkg <- function(dependency)
 depends.pkg.fullname <- function(dependency, index=1) {
   cmd <- sprintf('cd %s && %s show-var VARNAME=PKGNAME',
     depends.pkg(dependency)[index], arg.make)
-message(cmd)
   system(cmd, intern = TRUE)
 }
 
