@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.530 2020/01/13 22:29:24 nia Exp $
+# $NetBSD: Makefile,v 1.531 2020/01/13 22:30:34 nia Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -241,6 +241,7 @@ SUBDIR+=	pdmenu
 SUBDIR+=	php-orangehrm
 SUBDIR+=	pick
 SUBDIR+=	pinfo
+SUBDIR+=	pixd
 SUBDIR+=	ppower
 SUBDIR+=	pty-redir
 SUBDIR+=	py-anita
