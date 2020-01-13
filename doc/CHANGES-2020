@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.377 2020/01/13 18:06:57 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.378 2020/01/13 20:40:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -451,3 +451,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated comms/gammu to 1.41.0 [leot 2020-01-13]
 	Updated games/xboard to 4.9.1 [hauke 2020-01-13]
 	Updated pkgtools/R2pkg to 0.6.4 [rillig 2020-01-13]
+	Added security/pius version 3.0.0 [schmonz 2020-01-13]
