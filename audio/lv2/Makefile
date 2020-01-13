@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/07/21 22:23:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/13 16:53:01 nia Exp $
 
 DISTNAME=	lv2-1.16.0
 PKGREVISION=	3
@@ -20,19 +20,10 @@ REPLACE_PYTHON+=	lv2specgen/lv2specgen.py
 
 .include "options.mk"
 
-BUILD_OPTIONS=	${BUILD_DEBUG} ${BUILD_DOC} ${BUILD_TESTS} ${BUILD_VALGRIND}
+WAF_ARGS+=	${BUILD_DEBUG} ${BUILD_DOC} ${BUILD_TESTS} ${BUILD_VALGRIND}
+WAF_ARGS+=	--copy-headers
 
-do-configure:
-	cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf configure \
-			--destdir=${DESTDIR} --mandir=${PREFIX}/${PKGMANDIR} \
-				--copy-headers ${BUILD_OPTIONS}
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./waf build
-
-do-install:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} ./waf install
-
+.include "../../devel/waf/waf.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8.10
 .include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2++=	gtk2+>=2.18.0
