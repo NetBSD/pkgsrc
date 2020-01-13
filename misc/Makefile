@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.529 2020/01/08 20:04:27 adam Exp $
+# $NetBSD: Makefile,v 1.530 2020/01/13 22:29:24 nia Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -105,6 +105,7 @@ SUBDIR+=	heirloom-sleep
 SUBDIR+=	heirloom-sum
 SUBDIR+=	heirloom-tcopy
 SUBDIR+=	heirloom-time
+SUBDIR+=	hexd
 SUBDIR+=	heyu
 SUBDIR+=	howm
 SUBDIR+=	hs-extra
