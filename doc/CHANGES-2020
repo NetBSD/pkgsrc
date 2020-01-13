@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.371 2020/01/13 10:06:33 mef Exp $
+$NetBSD: CHANGES-2020,v 1.372 2020/01/13 10:09:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -444,3 +444,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/R-rmarkdown version 2.0 [mef 2020-01-13]
 	Added textproc/R-crosstalk version 1.0.0 [mef 2020-01-13]
 	Added textproc/R-DT version 0.11 [mef 2020-01-13]
+	Added print/R-tinytex version 0.18 [mef 2020-01-13]
