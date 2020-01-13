@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/13 01:42:50 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/13 02:26:55 mef Exp $
 
 R_PKGNAME=	cliapp
 R_PKGVER=	0.1.0
@@ -18,7 +18,9 @@ DEPENDS+=	R-xml2>=1.2.2nb1:../../textproc/R-xml2
 TEST_DEPENDS+=	R-progress-[0-9]*:../../sysutils/R-progress
 TEST_DEPENDS+=	R-callr-[0-9]*:../../devel/R-callr
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
+TEST_DEPENDS+=	R-prettycode-[0-9]*:../../devel/R-prettycode
 TEST_DEPENDS+=	R-rstudioapi-[0-9]*:../../math/R-rstudioapi
+TEST_DEPENDS+=	R-selectr-[0-9]*:../../textproc/R-selectr
 
 USE_LANGUAGES=	# none
 
