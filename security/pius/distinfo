@@ -1,7 +1,12 @@
-$NetBSD: distinfo,v 1.1 2020/01/13 20:39:29 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2020/01/13 20:52:04 schmonz Exp $
 
 SHA1 (pius-3.0.0.tar.bz2) = 1a08e086057a601fcb6a5b8be2aacb001a9f4133
 RMD160 (pius-3.0.0.tar.bz2) = c8ddc1a1abc3033e41f049fccd099c951c37e061
 SHA512 (pius-3.0.0.tar.bz2) = 0c906574ac703f45e3318ae3e7994fe6580fd172849b2956d9084033d6fbfd69fec942b95bc2edadadc223fa0685ff0b9799ad03570b712b9cdb09d69491cc91
 Size (pius-3.0.0.tar.bz2) = 46643 bytes
+SHA1 (patch-doc_pius-keyring-mgr.1) = bd9e0d56258689538f3c750857d20202cc8f5173
+SHA1 (patch-doc_pius-report.1) = 7dabda6a2689e4edee4c94ebf2e5b67a42ef7bd1
+SHA1 (patch-doc_pius.1) = 61c296cf09d5e3e2b4b7cc04453c41cc2a830e11
+SHA1 (patch-libpius_constants.py) = 05fd45974c0a9a3d25ed9d258626ff76cfc3b077
+SHA1 (patch-pius-keyring-mgr) = f57bc0b7fd489c387e6aa192e0be9bf18052171d
 SHA1 (patch-setup.py) = 310344a8278e8e8274a1223bb77ab753470f1298
