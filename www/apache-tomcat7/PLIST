@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2019/03/26 20:56:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.23 2020/01/13 07:37:46 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -28,6 +28,7 @@ share/tomcat/bin/tomcat-juli.jar
 share/tomcat/bin/tomcat-native.tar.gz
 share/tomcat/bin/tool-wrapper.sh
 share/tomcat/bin/version.sh
+share/tomcat/conf/tomcat-users.xsd
 share/tomcat/lib/annotations-api.jar
 share/tomcat/lib/catalina-ant.jar
 share/tomcat/lib/catalina-ha.jar
@@ -42,10 +43,13 @@ share/tomcat/lib/servlet-api.jar
 share/tomcat/lib/tomcat-api.jar
 share/tomcat/lib/tomcat-coyote.jar
 share/tomcat/lib/tomcat-dbcp.jar
+share/tomcat/lib/tomcat-i18n-de.jar
 share/tomcat/lib/tomcat-i18n-es.jar
 share/tomcat/lib/tomcat-i18n-fr.jar
 share/tomcat/lib/tomcat-i18n-ja.jar
+share/tomcat/lib/tomcat-i18n-ko.jar
 share/tomcat/lib/tomcat-i18n-ru.jar
+share/tomcat/lib/tomcat-i18n-zh-CN.jar
 share/tomcat/lib/tomcat-jdbc.jar
 share/tomcat/lib/tomcat-util.jar
 share/tomcat/lib/tomcat7-websocket.jar
@@ -55,7 +59,6 @@ share/tomcat/webapps/ROOT/WEB-INF/web.xml
 share/tomcat/webapps/ROOT/asf-logo-wide.svg
 share/tomcat/webapps/ROOT/bg-button.png
 share/tomcat/webapps/ROOT/bg-middle.png
-share/tomcat/webapps/ROOT/bg-nav-item.png
 share/tomcat/webapps/ROOT/bg-nav.png
 share/tomcat/webapps/ROOT/bg-upper.png
 share/tomcat/webapps/ROOT/favicon.ico
@@ -205,10 +208,14 @@ share/tomcat/webapps/examples/WEB-INF/classes/CookieExample.java
 share/tomcat/webapps/examples/WEB-INF/classes/HelloWorldExample.class
 share/tomcat/webapps/examples/WEB-INF/classes/HelloWorldExample.java
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings.properties
-share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_en.properties
+share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_de.properties
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_es.properties
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_fr.properties
+share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_ja.properties
+share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_ko.properties
 share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_pt.properties
+share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_ru.properties
+share/tomcat/webapps/examples/WEB-INF/classes/LocalStrings_zh_CN.properties
 share/tomcat/webapps/examples/WEB-INF/classes/RequestHeaderExample.class
 share/tomcat/webapps/examples/WEB-INF/classes/RequestHeaderExample.java
 share/tomcat/webapps/examples/WEB-INF/classes/RequestInfoExample.class
@@ -628,4 +635,3 @@ share/tomcat/webapps/manager/images/void.gif
 share/tomcat/webapps/manager/index.jsp
 share/tomcat/webapps/manager/status.xsd
 share/tomcat/webapps/manager/xform.xsl
-@pkgdir share/tomcat/conf
