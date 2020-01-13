@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.365 2020/01/13 02:17:17 mef Exp $
+$NetBSD: CHANGES-2020,v 1.366 2020/01/13 02:50:48 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -436,3 +436,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/R-cliapp version 0.1.0 [mef 2020-01-13]
 	Added devel/R-prettycode version 1.1.0 [mef 2020-01-13]
 	Added textproc/R-selectr version 0.4.2 [mef 2020-01-13]
+	Updated emulators/qemu to 4.2.0nb3 [gutteridge 2020-01-13]
