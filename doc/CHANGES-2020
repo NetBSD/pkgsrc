@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.360 2020/01/13 00:40:49 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.361 2020/01/13 01:26:14 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -431,3 +431,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/grip to 4.0.1 [triaxx 2020-01-12]
 	Updated mail/mutt to 1.13.3 [tron 2020-01-12]
 	Updated devel/deforaos-coder to 0.3.0 [khorben 2020-01-13]
+	Updated audio/deforaos-mixer to 0.4.0 [khorben 2020-01-13]
