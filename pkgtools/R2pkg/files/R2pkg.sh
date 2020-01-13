@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: R2pkg.sh,v 1.13 2019/10/19 18:47:59 rillig Exp $
+# $NetBSD: R2pkg.sh,v 1.14 2020/01/13 18:06:47 rillig Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -160,6 +160,7 @@ make_package ()
 	RPKG_DESCRIPTION_URL="$rpkg_description_url" \
 	QUIET_CURL="$quiet_curl" \
 	LC_ALL="C" \
+	MAKE="$make" \
 	Rscript --no-save -e "source('@LIBDIR@/R2pkg.R'); main()"
     retval=${?}
     if [ $retval -ne 0 ]; then

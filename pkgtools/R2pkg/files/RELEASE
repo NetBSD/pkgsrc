@@ -1,4 +1,4 @@
-$NetBSD: RELEASE,v 1.6 2019/10/19 15:47:03 rillig Exp $
+$NetBSD: RELEASE,v 1.7 2020/01/13 18:06:47 rillig Exp $
 
 RELEASE
 =======
@@ -70,3 +70,8 @@ R2pkg v0.6.3 (2019-10-19)
 * Fix comparison of articles (a, an) in comments.
 
 * Lots of refactorings.
+
+R2pkg v0.6.4 (2020-01-13)
+-------------------------
+
+* Fix hardcoded use of bmake.
