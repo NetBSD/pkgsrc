@@ -1,0 +1,15 @@
+$NetBSD: patch-pius-keyring-mgr,v 1.1 2020/01/13 20:52:04 schmonz Exp $
+
+Use pkgsrc paths.
+
+--- pius-keyring-mgr.orig	2019-07-05 21:11:13.000000000 +0000
++++ pius-keyring-mgr
+@@ -37,7 +37,7 @@ DEFAULT_KEYSERVERS = [
+     "pgp.mit.edu",
+     "keys.gnupg.net",
+ ]
+-DEFAULT_GPG_PATH = "/usr/bin/gpg"
++DEFAULT_GPG_PATH = "@PREFIX@/bin/gpg"
+ DEFAULT_CSV_DELIMITER = ","
+ DEFAULT_CSV_NAME_FIELD = 2
+ DEFAULT_CSV_EMAIL_FIELD = 3
