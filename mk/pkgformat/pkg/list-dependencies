@@ -6,7 +6,7 @@
 #	list-dependencies -- build package dependencies list
 #
 # SYNOPSIS
-#	list-dependencies bootstrap build full
+#	list-dependencies bootstrap test tool build full
 #
 # DESCRIPTION
 #	For each (reduced) dependency a line of the following format is
@@ -14,7 +14,8 @@
 #
 #		<depends_type>	<pattern>	<directory>
 #
-#	Valid dependency types are "bootstrap", "build" and "full".
+#	Valid dependency types are "bootstrap", "test", "tool", "build"
+#	and "full".
 #
 # ENVIRONMENT
 #	AWK
@@ -36,9 +37,9 @@
 #
 ######################################################################
 
-: ${ECHO:=echo}
+: "${ECHO:=echo}"
 
-set -e
+set -eu
 
 trap "exit 1" USR1
 
