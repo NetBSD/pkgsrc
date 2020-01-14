@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.390 2020/01/14 16:25:53 adam Exp $
+$NetBSD: CHANGES-2020,v 1.391 2020/01/14 17:44:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -471,3 +471,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-httpx to 0.11.0 [adam 2020-01-14]
 	Updated devel/py-llvmlite to 0.31.0 [adam 2020-01-14]
 	Updated math/py-numba to 0.47.0 [adam 2020-01-14]
+	Updated net/glib-networking to 2.62.3 [wiz 2020-01-14]
