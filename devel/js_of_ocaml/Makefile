@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2019/11/03 10:39:14 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/14 20:56:09 jaapb Exp $
 #
 
 GITHUB_PROJECT=	js_of_ocaml
-DISTNAME=	${GITHUB_PROJECT}-3.4.0
+DISTNAME=	${GITHUB_PROJECT}-3.5.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -20,8 +20,8 @@ OPAM_INSTALL_FILES=	js_of_ocaml js_of_ocaml-ocamlbuild \
 			js_of_ocaml-ppx js_of_ocaml-ppx_deriving_json \
 			js_of_ocaml-lwt js_of_ocaml-compiler
 DUNE_BUILD_PACKAGES=	js_of_ocaml-compiler js_of_ocaml js_of_ocaml-ocamlbuild \
-	js_of_ocaml-ppx js_of_ocaml-ppx_deriving_json \
-	js_of_ocaml-lwt
+			js_of_ocaml-ppx js_of_ocaml-ppx_deriving_json \
+			js_of_ocaml-lwt
 
 .include "options.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"
@@ -31,6 +31,7 @@ DUNE_BUILD_PACKAGES=	js_of_ocaml-compiler js_of_ocaml js_of_ocaml-ocamlbuild \
 .include "../../devel/ocaml-migrate-parsetree/buildlink3.mk"
 .include "../../devel/ocaml-ppx_deriving/buildlink3.mk"
 .include "../../devel/ocaml-ppx_tools_versioned/buildlink3.mk"
+.include "../../devel/ocaml-ppxlib/buildlink3.mk"
 .include "../../textproc/ocaml-uchar/buildlink3.mk"
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
