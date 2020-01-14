@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.385 2020/01/14 13:28:56 nia Exp $
+$NetBSD: CHANGES-2020,v 1.386 2020/01/14 14:31:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -459,3 +459,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-absl-py to 0.9.0 [bsiegert 2020-01-14]
 	Updated devel/nss to 3.49.1 [ryoon 2020-01-14]
 	Added games/jumpnbump version 1.61 [nia 2020-01-14]
+	Updated mail/thunderbird to 68.4.1 [ryoon 2020-01-14]
