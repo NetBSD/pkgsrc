@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.401 2020/01/14 22:37:17 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.402 2020/01/14 22:42:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -483,3 +483,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-compiler-libs to 0.12.1 [jaapb 2020-01-14]
 	Updated security/keepassxc to 2.5.2 [wiz 2020-01-14]
 	Updated lang/py-asttokens to 2.0.3 [wiz 2020-01-14]
+	Updated devel/py-more-itertools to 8.1.0 [wiz 2020-01-14]
