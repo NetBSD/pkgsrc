@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/09/04 18:00:58 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/14 14:40:42 taca Exp $
 
 DISTNAME=	ming-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ming-${VER}
@@ -22,6 +22,8 @@ REPLACE_RUBY_DIRS=	${WRKSRC}/examples
 CONFIGURE_ARGS+=	--siteruby=${PREFIX}/${RUBY_VENDORLIB_BASE}
 CONFIGURE_ARGS+=	--siterubyver=${PREFIX}/${RUBY_VENDORLIB}
 CONFIGURE_ARGS+=	--siterubyverarch=${PREFIX}/${RUBY_VENDORARCHLIB}
+# pass more options to extconf.rb
+CONFIGURE_ARGS+=	-- --with-freetype-dir=${BUILDLINK_PREFIX.freetype2}
 
 SUBST_CLASSES+=		giflib
 SUBST_STAGE.giflib=	pre-configure
