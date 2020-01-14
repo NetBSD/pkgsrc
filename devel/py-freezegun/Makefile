@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2019/05/30 05:13:20 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/14 16:08:37 adam Exp $
 
-DISTNAME=	freezegun-0.3.12
+DISTNAME=	freezegun-0.3.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/freezegun/}
