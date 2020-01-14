@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/05/20 03:51:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/01/14 14:34:08 taca Exp $
 share/examples/roundcube/plugins/zipdownload/config.inc.php
 share/roundcube/plugins/zipdownload/README
 share/roundcube/plugins/zipdownload/composer.json
@@ -75,7 +75,9 @@ share/roundcube/plugins/zipdownload/localization/zh_CN.inc
 share/roundcube/plugins/zipdownload/localization/zh_TW.inc
 share/roundcube/plugins/zipdownload/skins/classic/zip.png
 share/roundcube/plugins/zipdownload/skins/classic/zipdownload.css
+share/roundcube/plugins/zipdownload/skins/classic/zipdownload.min.css
 share/roundcube/plugins/zipdownload/skins/larry/zipdownload.css
-share/roundcube/plugins/zipdownload/tests/Zipdownload.php
+share/roundcube/plugins/zipdownload/skins/larry/zipdownload.min.css
 share/roundcube/plugins/zipdownload/zipdownload.js
+share/roundcube/plugins/zipdownload/zipdownload.min.js
 share/roundcube/plugins/zipdownload/zipdownload.php
