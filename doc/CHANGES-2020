@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.380 2020/01/13 22:31:00 nia Exp $
+$NetBSD: CHANGES-2020,v 1.381 2020/01/14 08:48:57 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -454,3 +454,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/pius version 3.0.0 [schmonz 2020-01-13]
 	Added misc/hexd version 1.0.0 [nia 2020-01-13]
 	Added misc/pixd version 1.0.0 [nia 2020-01-13]
+	Updated games/eboard to 1.1.1 [hauke 2020-01-14]
