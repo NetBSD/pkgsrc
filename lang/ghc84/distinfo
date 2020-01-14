@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2020/01/13 14:15:11 pho Exp $
+$NetBSD: distinfo,v 1.4 2020/01/14 14:44:50 pho Exp $
 
 SHA1 (ghc-8.4.4-boot-i386-unknown-freebsd.tar.xz) = 04981802730423aa12999e59679be198d540222a
 RMD160 (ghc-8.4.4-boot-i386-unknown-freebsd.tar.xz) = f617e67f2c2f07c7211cb391a4bc2e7b304045e2
@@ -8,6 +8,10 @@ SHA1 (ghc-8.4.4-boot-x86_64-apple-darwin.tar.xz) = 688f5729992bd2476699d9067d97e
 RMD160 (ghc-8.4.4-boot-x86_64-apple-darwin.tar.xz) = 4e9c52c8ef07343cc24528e3f8431754237d0be3
 SHA512 (ghc-8.4.4-boot-x86_64-apple-darwin.tar.xz) = abc92ca6822ba7fe2d09bc381a833c0cbd5f436b517fba003736195cec45f8ce2e33623a587ad35f5702baac791594d62fc829e2ea4dfceae2455875661b3ba6
 Size (ghc-8.4.4-boot-x86_64-apple-darwin.tar.xz) = 51700444 bytes
+SHA1 (ghc-8.4.4-boot-x86_64-unknown-freebsd.tar.xz) = e16fcc19bc76eed3de81dd14064fd427d4f04c93
+RMD160 (ghc-8.4.4-boot-x86_64-unknown-freebsd.tar.xz) = 5e6eb0ca293c96dd7fa33e3ab8dc3541e2e2f441
+SHA512 (ghc-8.4.4-boot-x86_64-unknown-freebsd.tar.xz) = 2eccb6c0a64d505363cb340e9a603c744c48c59202a00f4c535ba0b278908fe58c126d7bfc3ae233ec097febfa3c395c3622a4cb4270b85af5189f2ceeda664a
+Size (ghc-8.4.4-boot-x86_64-unknown-freebsd.tar.xz) = 53872384 bytes
 SHA1 (ghc-8.4.4-boot-x86_64-unknown-netbsd.tar.xz) = bc7b0e203a6e7e6804c4be46957352d032cd22ec
 RMD160 (ghc-8.4.4-boot-x86_64-unknown-netbsd.tar.xz) = dd50835c50cd2102c1af4d2ed8f1148c8ac4d4d9
 SHA512 (ghc-8.4.4-boot-x86_64-unknown-netbsd.tar.xz) = 0cc836390985c56d79a5c08dd2117c53fc9802b969db408dab14cfd441d95b2b5c18fed5d0b6da8a8555501e668ba471d0b878ea11a0021fba76265ed4ef8f76
@@ -17,7 +21,7 @@ RMD160 (ghc-8.4.4-src.tar.xz) = d2be33c4b38ee0660fe081e625ad5242c819392c
 SHA512 (ghc-8.4.4-src.tar.xz) = 685e102eee8cf8b6a377afd7871998c8c368a5da288469367e3fb804aa6109e6f59be5945b8cd3d1e36c851190ea9a7f74c576528589589313d237b721d86da5
 Size (ghc-8.4.4-src.tar.xz) = 11319500 bytes
 SHA1 (patch-aclocal.m4) = 848cf4e1fdc8ccd066f5edca1eeef27182d13312
-SHA1 (patch-configure.ac) = f521200b519fdaab1082c4a2fcac9c3dd9135d7b
+SHA1 (patch-configure.ac) = a6e0fe61f6a9237c0b3e3a1dd489af761ce041fb
 SHA1 (patch-libraries_base_GHC_Event_KQueue.hsc) = 8ee5da667a241a05fde3c580d3dc9bdc05aa5f00
 SHA1 (patch-libraries_base_System_CPUTime_Posix_Times.hsc) = 2bfb779d534d12073287274ce5e90b99e457a860
 SHA1 (patch-libraries_base_System_Environment.hs) = 7d79a91f295915b4408d5f41d5405739d7189215
