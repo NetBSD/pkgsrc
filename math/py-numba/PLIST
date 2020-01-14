@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/10/19 14:17:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/01/14 16:25:34 adam Exp $
 bin/numba-${PYVERSSUFFIX}
 bin/pycc-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -59,6 +59,9 @@ ${PYSITELIB}/numba/array_analysis.pyo
 ${PYSITELIB}/numba/bytecode.py
 ${PYSITELIB}/numba/bytecode.pyc
 ${PYSITELIB}/numba/bytecode.pyo
+${PYSITELIB}/numba/byteflow.py
+${PYSITELIB}/numba/byteflow.pyc
+${PYSITELIB}/numba/byteflow.pyo
 ${PYSITELIB}/numba/caching.py
 ${PYSITELIB}/numba/caching.pyc
 ${PYSITELIB}/numba/caching.pyo
@@ -1060,9 +1063,9 @@ ${PYSITELIB}/numba/targets/linalg.pyo
 ${PYSITELIB}/numba/targets/listobj.py
 ${PYSITELIB}/numba/targets/listobj.pyc
 ${PYSITELIB}/numba/targets/listobj.pyo
-${PYSITELIB}/numba/targets/literal_dispatch.py
-${PYSITELIB}/numba/targets/literal_dispatch.pyc
-${PYSITELIB}/numba/targets/literal_dispatch.pyo
+${PYSITELIB}/numba/targets/literal.py
+${PYSITELIB}/numba/targets/literal.pyc
+${PYSITELIB}/numba/targets/literal.pyo
 ${PYSITELIB}/numba/targets/mathimpl.py
 ${PYSITELIB}/numba/targets/mathimpl.pyc
 ${PYSITELIB}/numba/targets/mathimpl.pyo
@@ -1291,6 +1294,9 @@ ${PYSITELIB}/numba/tests/test_auto_constants.pyo
 ${PYSITELIB}/numba/tests/test_blackscholes.py
 ${PYSITELIB}/numba/tests/test_blackscholes.pyc
 ${PYSITELIB}/numba/tests/test_blackscholes.pyo
+${PYSITELIB}/numba/tests/test_boundscheck.py
+${PYSITELIB}/numba/tests/test_boundscheck.pyc
+${PYSITELIB}/numba/tests/test_boundscheck.pyo
 ${PYSITELIB}/numba/tests/test_buffer_protocol.py
 ${PYSITELIB}/numba/tests/test_buffer_protocol.pyc
 ${PYSITELIB}/numba/tests/test_buffer_protocol.pyo
@@ -1510,18 +1516,27 @@ ${PYSITELIB}/numba/tests/test_locals.pyo
 ${PYSITELIB}/numba/tests/test_looplifting.py
 ${PYSITELIB}/numba/tests/test_looplifting.pyc
 ${PYSITELIB}/numba/tests/test_looplifting.pyo
+${PYSITELIB}/numba/tests/test_make_function_to_jit_function.py
+${PYSITELIB}/numba/tests/test_make_function_to_jit_function.pyc
+${PYSITELIB}/numba/tests/test_make_function_to_jit_function.pyo
 ${PYSITELIB}/numba/tests/test_mandelbrot.py
 ${PYSITELIB}/numba/tests/test_mandelbrot.pyc
 ${PYSITELIB}/numba/tests/test_mandelbrot.pyo
 ${PYSITELIB}/numba/tests/test_mangling.py
 ${PYSITELIB}/numba/tests/test_mangling.pyc
 ${PYSITELIB}/numba/tests/test_mangling.pyo
+${PYSITELIB}/numba/tests/test_map_filter_reduce.py
+${PYSITELIB}/numba/tests/test_map_filter_reduce.pyc
+${PYSITELIB}/numba/tests/test_map_filter_reduce.pyo
 ${PYSITELIB}/numba/tests/test_mathlib.py
 ${PYSITELIB}/numba/tests/test_mathlib.pyc
 ${PYSITELIB}/numba/tests/test_mathlib.pyo
 ${PYSITELIB}/numba/tests/test_maxmin.py
 ${PYSITELIB}/numba/tests/test_maxmin.pyc
 ${PYSITELIB}/numba/tests/test_maxmin.pyo
+${PYSITELIB}/numba/tests/test_mixed_tuple_unroller.py
+${PYSITELIB}/numba/tests/test_mixed_tuple_unroller.pyc
+${PYSITELIB}/numba/tests/test_mixed_tuple_unroller.pyo
 ${PYSITELIB}/numba/tests/test_multi3.py
 ${PYSITELIB}/numba/tests/test_multi3.pyc
 ${PYSITELIB}/numba/tests/test_multi3.pyo
@@ -1666,6 +1681,9 @@ ${PYSITELIB}/numba/tests/test_threadsafety.pyo
 ${PYSITELIB}/numba/tests/test_tracing.py
 ${PYSITELIB}/numba/tests/test_tracing.pyc
 ${PYSITELIB}/numba/tests/test_tracing.pyo
+${PYSITELIB}/numba/tests/test_try_except.py
+${PYSITELIB}/numba/tests/test_try_except.pyc
+${PYSITELIB}/numba/tests/test_try_except.pyo
 ${PYSITELIB}/numba/tests/test_tuples.py
 ${PYSITELIB}/numba/tests/test_tuples.pyc
 ${PYSITELIB}/numba/tests/test_tuples.pyo
@@ -1880,6 +1898,9 @@ ${PYSITELIB}/numba/unsafe/__init__.pyo
 ${PYSITELIB}/numba/unsafe/bytes.py
 ${PYSITELIB}/numba/unsafe/bytes.pyc
 ${PYSITELIB}/numba/unsafe/bytes.pyo
+${PYSITELIB}/numba/unsafe/eh.py
+${PYSITELIB}/numba/unsafe/eh.pyc
+${PYSITELIB}/numba/unsafe/eh.pyo
 ${PYSITELIB}/numba/unsafe/ndarray.py
 ${PYSITELIB}/numba/unsafe/ndarray.pyc
 ${PYSITELIB}/numba/unsafe/ndarray.pyo
