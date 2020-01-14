@@ -1,13 +1,13 @@
-$NetBSD: patch-config_config.inc.php.sample,v 1.1 2016/09/13 15:56:01 taca Exp $
+$NetBSD: patch-config_config.inc.php.sample,v 1.2 2020/01/14 14:30:00 taca Exp $
 
 Add default paths for log, tmp and MIME types.
 
---- config/config.inc.php.sample.orig	2016-04-17 16:22:20.000000000 +0000
+--- config/config.inc.php.sample.orig	2020-01-01 19:58:53.000000000 +0000
 +++ config/config.inc.php.sample
-@@ -83,3 +83,10 @@ $config['plugins'] = array(
+@@ -84,3 +84,10 @@ $config['plugins'] = array(
  
  // skin name: folder from skins/
- $config['skin'] = 'larry';
+ $config['skin'] = 'elastic';
 +
 +// use this folder to store log files (must be writeable for apache user)
 +// This is used by the 'file' log driver.

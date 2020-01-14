@@ -1,15 +1,15 @@
-$NetBSD: patch-af,v 1.7 2013/06/16 22:04:07 taca Exp $
+$NetBSD: patch-af,v 1.8 2020/01/14 14:30:00 taca Exp $
 
 Honor PKG_SYSCONFDIR.
 
---- program/include/iniset.php.orig	2013-06-16 15:12:21.000000000 +0000
+--- program/include/iniset.php.orig	2020-01-01 19:58:53.000000000 +0000
 +++ program/include/iniset.php
-@@ -29,7 +29,7 @@ if (!defined('INSTALL_PATH')) {
+@@ -28,7 +28,7 @@ if (!defined('INSTALL_PATH')) {
  }
  
  if (!defined('RCMAIL_CONFIG_DIR')) {
--    define('RCMAIL_CONFIG_DIR', INSTALL_PATH . 'config');
-+    define('RCMAIL_CONFIG_DIR', '@PKG_SYSCONFDIR@');
+-    define('RCMAIL_CONFIG_DIR', getenv('ROUNDCUBE_CONFIG_DIR') ?: (INSTALL_PATH . 'config'));
++    define('RCMAIL_CONFIG_DIR', getenv('ROUNDCUBE_CONFIG_DIR') ?: '@PKG_SYSCONFDIR@');
  }
  
  if (!defined('RCUBE_LOCALIZATION_DIR')) {
