@@ -1,0 +1,18 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/01/14 08:46:17 pho Exp $
+
+Fix build on FreeBSD/amd64.
+
+--- configure.ac.orig	2017-01-04 14:17:17.000000000 +0000
++++ configure.ac
+@@ -1060,6 +1060,11 @@ if test "$ac_cv_sizeof_void_p" -eq 8 ; then
+ 	    # The flag MAP_NORESERVE is supported for source compatibility reasons,
+ 	    # but is completely ignored by OS mmap
+             use_large_address_space=no
++        elif test "$ghc_host_os" = "freebsd" ; then
++            # FreeBSD doesn't support MAP_NORESERVE. The flag
++            # MAP_NORESERVE is supported for source compatibility
++            # reasons, but is completely ignored by OS mmap
++            use_large_address_space=no
+         else
+             AC_CHECK_DECLS([MAP_NORESERVE, MADV_FREE, MADV_DONTNEED],[],[],
+                 [
