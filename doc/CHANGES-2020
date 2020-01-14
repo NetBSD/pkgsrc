@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.381 2020/01/14 08:48:57 hauke Exp $
+$NetBSD: CHANGES-2020,v 1.382 2020/01/14 09:15:54 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -455,3 +455,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added misc/hexd version 1.0.0 [nia 2020-01-13]
 	Added misc/pixd version 1.0.0 [nia 2020-01-13]
 	Updated games/eboard to 1.1.1 [hauke 2020-01-14]
+	Updated cad/ng-spice to 31 [hauke 2020-01-14]
