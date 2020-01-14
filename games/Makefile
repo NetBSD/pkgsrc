@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.474 2020/01/02 09:57:24 tsutsui Exp $
+# $NetBSD: Makefile,v 1.475 2020/01/14 13:28:42 nia Exp $
 #
 
 COMMENT=	Games
@@ -192,6 +192,7 @@ SUBDIR+=	ivan
 SUBDIR+=	jetpack
 SUBDIR+=	jin
 SUBDIR+=	jools
+SUBDIR+=	jumpnbump
 SUBDIR+=	kajaani-kombat
 SUBDIR+=	kajongg
 SUBDIR+=	kanagram
@@ -394,6 +395,7 @@ SUBDIR+=	urban
 SUBDIR+=	velena
 SUBDIR+=	violetland
 SUBDIR+=	vms-empire
+SUBDIR+=	vvvvvv
 SUBDIR+=	wargames
 SUBDIR+=	warmux
 SUBDIR+=	warzone2100
@@ -411,6 +413,7 @@ SUBDIR+=	xboing
 SUBDIR+=	xbomb
 SUBDIR+=	xbomber
 SUBDIR+=	xbreaky
+SUBDIR+=	xclannad
 SUBDIR+=	xconq
 SUBDIR+=	xcowsay
 SUBDIR+=	xdemineur
