@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/09/01 13:10:39 taca Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/14 14:33:16 taca Exp $
 
 PLUGIN=		password
 
@@ -8,8 +8,6 @@ LICENSE=	gnu-gpl-v3
 
 REPLACE_PERL+=		plugins/password/helpers/change_ldap_pass.pl
 REPLACE_PYTHON+=	plugins/password/helpers/chpass-wrapper.py
-
-do-install: plugin-install
 
 .include "../../mail/roundcube/plugins.mk"
 .include "../../lang/python/application.mk"
