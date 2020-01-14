@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/03/08 14:11:24 mef Exp $
-bin/ngmakeidx
-bin/ngmultidec
-bin/ngnutmeg
-bin/ngproc2mod
-bin/ngsconvert
+@comment $NetBSD: PLIST,v 1.14 2020/01/14 09:15:42 hauke Exp $
 bin/ngspice
 include/ngspice/1-f-code.h
 include/ngspice/FastNorm3.h
@@ -41,6 +36,7 @@ include/ngspice/enh.h
 include/ngspice/enhtypes.h
 include/ngspice/evt.h
 include/ngspice/evtproto.h
+include/ngspice/evtshared.h
 include/ngspice/evttypes.h
 include/ngspice/evtudn.h
 include/ngspice/fftext.h
@@ -128,15 +124,7 @@ include/ngspice/typedefs.h
 include/ngspice/wallace.h
 include/ngspice/wordlist.h
 include/ngspice/wstdio.h
-man/man1/cmpp.1
-man/man1/ngmakeidx.1
-man/man1/ngmultidec.1
-man/man1/ngnutmeg.1
-man/man1/ngproc2mod.1
-man/man1/ngsconvert.1
 man/man1/ngspice.1
-share/ngspice/helpdir/ngspice.idx
-share/ngspice/helpdir/ngspice.txt
 share/ngspice/scripts/setplot
 share/ngspice/scripts/spectrum
 share/ngspice/scripts/spinit
