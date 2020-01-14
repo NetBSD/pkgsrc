@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile.common.in,v 1.1 2019/08/24 10:54:23 jaapb Exp $
+$NetBSD: patch-Makefile.common.in,v 1.2 2020/01/14 19:53:35 jaapb Exp $
 
 Use BSD_INSTALL_*
+
 --- Makefile.common.in.orig	2019-03-01 15:13:45.000000000 +0000
 +++ Makefile.common.in
 @@ -16,9 +16,9 @@
