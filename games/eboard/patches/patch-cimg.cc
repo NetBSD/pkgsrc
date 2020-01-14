@@ -1,11 +1,11 @@
-$NetBSD: patch-cimg.cc,v 1.2 2012/08/12 21:38:11 wiz Exp $
+$NetBSD: patch-cimg.cc,v 1.3 2020/01/14 08:48:44 hauke Exp $
 
 Fix build with png-1.5.
 https://sourceforge.net/tracker/?func=detail&aid=3515237&group_id=11164&atid=111164
 
---- cimg.cc.orig	2007-05-23 18:57:45.000000000 +0000
+--- cimg.cc.orig	2020-01-13 16:13:00.560205280 +0000
 +++ cimg.cc
-@@ -95,16 +95,16 @@ CImg::CImg(const char *filename) {
+@@ -94,11 +94,11 @@ CImg::CImg(const char *filename) {
        ct == PNG_COLOR_TYPE_GRAY_ALPHA)
      png_set_gray_to_rgb(pngp);
  
@@ -13,12 +13,6 @@ https://sourceforge.net/tracker/?func=detail&aid=3515237&group_id=11164&atid=111
 +  alloc(png_get_image_width(pngp, infp),png_get_image_height(pngp, infp));
    if (!ok) { fclose(f); return; }
    ok = 0;
- 
--  rp = (png_bytep *) malloc(sizeof(png_bytep) * (pngp->height));
-+  rp = (png_bytep *) malloc(sizeof(png_bytep) * (png_get_image_height(pngp, infp)));
-   if (rp==NULL) {
-     fclose(f); return;
-   }
  
 -  for(i=0;i<pngp->height;i++) {
 +  for(i=0;i<png_get_image_height(pngp, infp);i++) {
