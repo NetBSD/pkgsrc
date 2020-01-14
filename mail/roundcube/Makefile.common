@@ -1,22 +1,25 @@
-# $NetBSD: Makefile.common,v 1.15 2019/11/09 11:30:06 nia Exp $
+# $NetBSD: Makefile.common,v 1.16 2020/01/14 14:30:00 taca Exp $
 #
 # used by mail/roundcube/Makefile
 # used by mail/roundcube/plugins.mk
 
-DISTNAME=	roundcubemail-${RC_VERS}
+DISTNAME=	roundcubemail-${RC_VERS}-complete
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=roundcube/}
 GITHUB_PROJECT=	roundcubemail
+GITHUB_RELEASE=	${RC_VERS}
 HOMEPAGE=	https://roundcube.net/
-DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
-DIST_SUBDIR=	roundcube
 
-RC_VERS=	1.3.10
+RC_VERS=	1.4.2
 
 USE_LANGUAGES=		# none
 USE_TOOLS+=		pax
-EXTRACT_USING=		gtar
+EXTRACT_USING=		bsdtar
 NO_BUILD=		yes
+WRKNAME=		${DISTNAME:S/-complete//}
+WRKSRC=			${WRKDIR}/${WRKNAME}
+
+DISTINFO_FILE?=		${PKGDIR}/../../mail/roundcube/distinfo
 
 PKG_SYSCONFSUBDIR?=	roundcube
 
