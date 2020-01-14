@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 20:56:48 agc Exp $
+$NetBSD: distinfo,v 1.9 2020/01/14 08:48:44 hauke Exp $
 
-SHA1 (eboard-1.0.4.tar.bz2) = 44938754140043fc64143e91067c95b6c5c99709
-RMD160 (eboard-1.0.4.tar.bz2) = f12b0927ca848418eb45a75bcff8a641766ae33c
-SHA512 (eboard-1.0.4.tar.bz2) = f45024f32a6ccf4d35418844e30808f2b96c23344eb34452cf77fca8b431cfa7b93fce7f83e3139f13763abf96abf4fa97675314a2b78739fd71fb12b8556c1d
-Size (eboard-1.0.4.tar.bz2) = 453603 bytes
-SHA1 (patch-cimg.cc) = fc545a2f543a6fd863fe7f9c029c81fce0299eb9
+SHA1 (eboard-1.1.1.tar.bz2) = 029cf1e7503fc2a862b9880da9ea6ab91e5614cd
+RMD160 (eboard-1.1.1.tar.bz2) = 13bdfe6d33a143d619c6c5be8d849ced9b95e2c4
+SHA512 (eboard-1.1.1.tar.bz2) = 0e124abc786996070464c3d9ef5eafa107b990df7593d774bf302e01e0d07427f2a67bc33ab61a188d2902aa35abb8cec6356e4e088f4a6b40e189556b588704
+Size (eboard-1.1.1.tar.bz2) = 462386 bytes
+SHA1 (patch-cimg.cc) = 23c019b869c95d4336dda5272eb6c50177686b71
+SHA1 (patch-proto__xboard.cc) = 5792bee2f90f0576e8a401e6d405b5cfb8b3744e
