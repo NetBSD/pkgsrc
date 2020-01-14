@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2019/11/03 10:39:20 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/14 22:04:26 jaapb Exp $
 #
 
-DISTNAME=	menhir-20181113
+DISTNAME=	menhir-20190924
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.inria.fr/fpottier/${PKGBASE}/-/archive/${PKGVERSION_NOREV}/
 
@@ -16,6 +16,7 @@ MAKE_JOBS_SAFE=	no
 SUPERSEDES=		ocaml-menhir-[0-9]*
 OCAML_USE_FINDLIB=	yes
 OCAML_FINDLIB_REGISTER=	no
+CHECK_RELRO_SKIP+=	bin/menhir
 
 .include "../../mk/ocaml.mk"
 
