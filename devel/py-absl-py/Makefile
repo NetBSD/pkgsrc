@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/04/08 01:34:16 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/14 12:14:30 bsiegert Exp $
 
-DISTNAME=	absl-py-0.1.13
+DISTNAME=	absl-py-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/absl-py/}
