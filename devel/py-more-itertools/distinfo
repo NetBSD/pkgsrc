@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/12/15 11:55:24 adam Exp $
+$NetBSD: distinfo,v 1.11 2020/01/14 22:42:18 wiz Exp $
 
-SHA1 (more-itertools-8.0.2.tar.gz) = ff422d11455473b3153165b5485fe8e9a9408c2c
-RMD160 (more-itertools-8.0.2.tar.gz) = 16be2faef97fe5bb78d9669050e86a5a94d3780d
-SHA512 (more-itertools-8.0.2.tar.gz) = c309bfd988efb702c25c241ca76379e0be07e1fdfb9d648c257760ac76872fd1aa77b321d94c2af9be8fb9a6709b4c60a9e0e9eb7450757ee74046bb5f9101b4
-Size (more-itertools-8.0.2.tar.gz) = 77375 bytes
+SHA1 (more-itertools-8.1.0.tar.gz) = 6671ee02017865c54bcef7b2f43e7fc1d74ebfc6
+RMD160 (more-itertools-8.1.0.tar.gz) = fe3010fc98cefc4ea25c313f944443509f3c9f1f
+SHA512 (more-itertools-8.1.0.tar.gz) = 8428aa2388a0e29325a2a3a9af2a7892453047415e3f70bff4f4e91b996248665d1326c4341f9152aa95ccb45af3087f6aa238a3a4a0080f2f9004d7dae54c3d
+Size (more-itertools-8.1.0.tar.gz) = 78953 bytes
