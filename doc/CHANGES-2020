@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.393 2020/01/14 20:29:18 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.394 2020/01/14 20:42:54 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -474,3 +474,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/glib-networking to 2.62.3 [wiz 2020-01-14]
 	Updated lang/ocaml to 4.09.0 [jaapb 2020-01-14]
 	Updated databases/pgocaml to 4.2 [jaapb 2020-01-14]
+	Updated net/youtube-dl to 20200115 [leot 2020-01-14]
