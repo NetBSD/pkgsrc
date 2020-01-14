@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2019/12/28 17:20:32 leot Exp $
+# $NetBSD: Makefile,v 1.90 2020/01/14 10:46:41 wiz Exp $
 
 DISTNAME=	mpv-0.31.0
 CATEGORIES=	multimedia
@@ -19,6 +19,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 # ${WRKSRC}/bootstrap.py mentions needed version
 TOOL_DEPENDS+=	waf>=2.0.9:../../devel/waf
 
+WAF_REPLACE_EXECUTABLE=	yes
 WAF_CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 WAF_CONFIGURE_ARGS+=	--enable-dvdnav
 WAF_CONFIGURE_ARGS+=	--disable-egl-x11
