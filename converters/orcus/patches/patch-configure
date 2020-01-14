@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.8 2018/02/03 00:04:10 ryoon Exp $
+$NetBSD: patch-configure,v 1.9 2020/01/14 14:09:33 ryoon Exp $
+
+https://gitlab.com/orcus/orcus/merge_requests/67
 
 --- configure.orig	2018-01-27 02:07:29.000000000 +0000
 +++ configure
