@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19609 2020/01/14 22:42:27 wiz Exp $
+$NetBSD: TODO,v 1.19610 2020/01/14 22:51:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1026,7 +1026,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
 	o py-ptt-1.10.2
-	o py-setuptools-45.0.0
+	o py-setuptools-45.0.0 [drops python-2.x support]
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-stem-1.8
@@ -1279,7 +1279,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o zkt-1.1.3
 	o zoneminder-1.32.3
 	o zopeedit-0.8
-	o zsh-autosuggestions-0.6.4
 
 Licenses of packages
 ====================
