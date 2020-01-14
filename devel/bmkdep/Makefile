@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2017/08/01 16:51:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/14 23:05:23 cheusov Exp $
 
-DISTNAME=	bmkdep-20131215
+DISTNAME=	bmkdep-20140112
 CATEGORIES=	devel
-MASTER_SITES=	http://bmkdep.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=trociny/}
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	https://code.google.com/archive/p/bmkdep/
+HOMEPAGE=	https://github.com/trociny/bmkdep
 COMMENT=	NetBSD version of mkdep(1)
 LICENSE=	2-clause-bsd
+
+GITHUB_TAG=	${DISTNAME}
 
 MAKE_ENV=	BINOWN=${BINOWN} BINGRP=${BINGRP} \
 		MANOWN=${MANOWN} MANGRP=${MANGRP} \
