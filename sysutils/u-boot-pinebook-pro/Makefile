@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/01/14 08:44:03 mrg Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/14 09:01:53 mrg Exp $
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 UBOOT_TARGET=		pinebook-pro
 UBOOT_CONFIG=		pinebook_pro-rk3399_defconfig
