@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.389 2020/01/14 16:11:16 adam Exp $
+$NetBSD: CHANGES-2020,v 1.390 2020/01/14 16:25:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -469,3 +469,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-paste to 3.2.6 [adam 2020-01-14]
 	Updated devel/py-freezegun to 0.3.13 [adam 2020-01-14]
 	Updated www/py-httpx to 0.11.0 [adam 2020-01-14]
+	Updated devel/py-llvmlite to 0.31.0 [adam 2020-01-14]
+	Updated math/py-numba to 0.47.0 [adam 2020-01-14]
