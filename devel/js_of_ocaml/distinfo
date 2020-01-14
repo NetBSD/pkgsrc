@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2019/05/13 11:49:52 jaapb Exp $
+$NetBSD: distinfo,v 1.21 2020/01/14 20:56:09 jaapb Exp $
 
-SHA1 (js_of_ocaml-3.4.0.tar.gz) = d8c0a5a26eb4748c2d231cbaa2705603dbb12206
-RMD160 (js_of_ocaml-3.4.0.tar.gz) = 5cdecf1c0d9d3626764eebedc4e79b4418e67871
-SHA512 (js_of_ocaml-3.4.0.tar.gz) = 6ad8afee5836767431743cad5fc9f60dc3530790a659bdaedbfca90ace68155f161cbc6bf4a1fa55ed6b03ce83729f87452aa7ba762559345c3c56a28f810072
-Size (js_of_ocaml-3.4.0.tar.gz) = 1465587 bytes
+SHA1 (js_of_ocaml-3.5.2.tar.gz) = 1ebf5a72241f58f97f137b99b3eae3589ff0e4d7
+RMD160 (js_of_ocaml-3.5.2.tar.gz) = 6879c83ffbddb88a5c8a318c2ad2073bcc1af8e1
+SHA512 (js_of_ocaml-3.5.2.tar.gz) = 3ef87fa73ae80b83ece374c8d6744cccf4fc1ca80ba48a8ec6e6c0ba52390a4b5ebc8b0972824cae04171d04c44c818a3b1a41161dd19747f7f39f0cdca1e6b6
+Size (js_of_ocaml-3.5.2.tar.gz) = 1518393 bytes
