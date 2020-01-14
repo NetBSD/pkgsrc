@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/03/05 17:38:30 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/01/14 22:14:42 jaapb Exp $
 ${OCAML_SITELIB}/ocaml-compiler-libs/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/bytecomp/ocaml_bytecomp.a
 ${OCAML_SITELIB}/ocaml-compiler-libs/bytecomp/ocaml_bytecomp.cma
@@ -18,6 +18,14 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/common/ocaml_common.cmxs
 ${OCAML_SITELIB}/ocaml-compiler-libs/common/ocaml_common.ml
 ${OCAML_SITELIB}/ocaml-compiler-libs/dune-package
 ${OCAML_SITELIB}/ocaml-compiler-libs/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/optcomp/ocaml_optcomp.a
+${OCAML_SITELIB}/ocaml-compiler-libs/optcomp/ocaml_optcomp.cma
+${OCAML_SITELIB}/ocaml-compiler-libs/optcomp/ocaml_optcomp.cmi
+${OCAML_SITELIB}/ocaml-compiler-libs/optcomp/ocaml_optcomp.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/optcomp/ocaml_optcomp.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/optcomp/ocaml_optcomp.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/optcomp/ocaml_optcomp.cmxs
+${OCAML_SITELIB}/ocaml-compiler-libs/optcomp/ocaml_optcomp.ml
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/shadow/ocaml_shadow.a
 ${OCAML_SITELIB}/ocaml-compiler-libs/shadow/ocaml_shadow.cma
 ${OCAML_SITELIB}/ocaml-compiler-libs/shadow/ocaml_shadow.cmi
@@ -34,5 +42,5 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/toplevel/ocaml_toplevel.c
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/toplevel/ocaml_toplevel.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/toplevel/ocaml_toplevel.cmxs
 ${OCAML_SITELIB}/ocaml-compiler-libs/toplevel/ocaml_toplevel.ml
-share/doc/ocaml-compiler-libs/LICENSE.txt
+share/doc/ocaml-compiler-libs/LICENSE.md
 share/doc/ocaml-compiler-libs/README.org
