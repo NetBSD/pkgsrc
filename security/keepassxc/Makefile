@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2019/10/29 15:46:54 nia Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/14 22:32:17 wiz Exp $
 
 DISTNAME=	keepassxc-${GITHUB_RELEASE}-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	security x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keepassxreboot/}
-GITHUB_RELEASE=	2.4.3
+GITHUB_RELEASE=	2.5.2
 GITHUB_PROJECT=	keepassxc
 EXTRACT_SUFX=	.tar.xz
 
@@ -51,4 +50,5 @@ pre-configure:
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
