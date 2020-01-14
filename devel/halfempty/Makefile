@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/12 13:22:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/14 13:13:14 wiz Exp $
 
 DISTNAME=	halfempty-0.30
 CATEGORIES=	devel
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	bin share/doc/halfempty
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/halfempty ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/halfempty
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/halfempty
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
