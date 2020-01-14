@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.388 2020/01/14 14:36:15 taca Exp $
+$NetBSD: CHANGES-2020,v 1.389 2020/01/14 16:11:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -465,3 +465,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/roundcube-plugin-enigma to 1.4.2 [taca 2020-01-14]
 	Updated mail/roundcube-plugin-password to 1.4.2 [taca 2020-01-14]
 	Updated mail/roundcube-plugin-zipdownload to 1.4.2 [taca 2020-01-14]
+	Updated www/py-test-django to 3.8.0 [adam 2020-01-14]
+	Updated www/py-paste to 3.2.6 [adam 2020-01-14]
+	Updated devel/py-freezegun to 0.3.13 [adam 2020-01-14]
+	Updated www/py-httpx to 0.11.0 [adam 2020-01-14]
