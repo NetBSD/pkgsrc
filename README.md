@@ -26,7 +26,8 @@ Building packages
 	cd pkgsrc/category/package-name
 	$PREFIX/bin/bmake install
 
-Where `$PREFIX` is where you've chosen to install packages (typically`/usr/pkg`)
+Where `$PREFIX` is where you've chosen to install packages
+(typically `/usr/pkg`)
 
 On NetBSD, `bmake` is simply the built-in `make` tool.
 
