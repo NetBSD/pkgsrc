@@ -1,8 +1,13 @@
-$NetBSD: patch-configure.ac,v 1.1 2020/01/07 16:52:09 pho Exp $
+$NetBSD: patch-configure.ac,v 1.2 2020/01/14 14:44:50 pho Exp $
 
-Don't use non-portable operator ==.
+Hunk #0:
+  Don't use non-portable operator ==.
 
---- configure.ac.orig	2020-01-04 08:10:34.453377650 +0000
+
+Hunk #1:
+  Fix build on FreeBSD/amd64.
+
+--- configure.ac.orig	2018-10-13 19:49:38.000000000 +0000
 +++ configure.ac
 @@ -914,7 +914,7 @@ FP_CHECK_SIZEOF_AND_ALIGNMENT(uint64_t)
  
@@ -13,3 +18,15 @@ Don't use non-portable operator ==.
    AC_SUBST([Cabal64bit],[True])
  else
    AC_SUBST([Cabal64bit],[False])
+@@ -1172,6 +1172,11 @@ if test "$ac_cv_sizeof_void_p" -eq 8 ; then
+ 	    # as of OpenBSD 5.8 (2015), OpenBSD does not support mmap with MAP_NORESERVE.
+ 	    # The flag MAP_NORESERVE is supported for source compatibility reasons,
+ 	    # but is completely ignored by OS mmap
++            use_large_address_space=no
++        elif test "$ghc_host_os" = "freebsd" ; then
++            # FreeBSD doesn't support MAP_NORESERVE. The flag
++            # MAP_NORESERVE is supported for source compatibility
++            # reasons, but is completely ignored by OS mmap
+             use_large_address_space=no
+         else
+             AC_CHECK_DECLS([MAP_NORESERVE, MADV_FREE, MADV_DONTNEED],[],[],
