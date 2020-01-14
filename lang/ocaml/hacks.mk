@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.7 2019/08/24 10:54:23 jaapb Exp $
+# $NetBSD: hacks.mk,v 1.8 2020/01/14 19:53:35 jaapb Exp $
 
 .if !defined(OCAML_HACKS_MK)
 OCAML_HACKS_MK=	defined
