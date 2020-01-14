@@ -1,13 +1,35 @@
-$NetBSD: patch-arch_arm_dts_rk3399-pinebook-pro.dts,v 1.1 2020/01/06 08:41:44 mrg Exp $
+$NetBSD: patch-arch_arm_dts_rk3399-pinebook-pro.dts,v 1.2 2020/01/14 08:44:03 mrg Exp $
 
 Pinebook Pro support from https://patchwork.ozlabs.org/patch/1194525/
 
-diff --git arch/arm/dts/rk3399-pinebook-pro.dts arch/arm/dts/rk3399-pinebook-pro.dts
-new file mode 100644
-index 0000000000..85ce0206d7
---- /dev/null
-+++ arch/arm/dts/rk3399-pinebook-pro.dts
-@@ -0,0 +1,631 @@
+commit 2778aa7cb70946c4729ed6ae13dea5bd1cc688dc
+Author: dhivael <dhivael.git@eno.space>
+Date:   Sat Jan 11 15:02:44 2020 +0100
+
+    rk3399: pinebook: fix sdcard boot from emmc
+    
+    booting from emmc does not set all DT properties required for the sd
+    slot to function properly. this is a copy of the linux DT configuration
+    for the slot now.
+
+commit fd41e9330cf1635fa3bf4dabdfac42ee1bba963c
+Author: Emmanuel Vadot <manu@freebsd.org>
+Date:   Tue Dec 31 22:13:03 2019 +0100
+
+     PBP: Add regulator needed for usb
+    
+    The schematics indicate that the vcc3v3_s0 voltage is controlled by
+    the LDO2 of the RK808 but this isn't true.
+    It's controller by a gpio (named lcdvcc_en).
+    Remove the name from the RK808 regulator and add a regulator-fixed
+    controller by this gpio.
+    
+    Signed-off-by: Emmanuel Vadot <manu@freebsd.org>
+
+
+--- arch/arm/dts/rk3399-pinebook-pro.dts.orig	2020-01-13 16:59:26.353181190 -0800
++++ arch/arm/dts/rk3399-pinebook-pro.dts	2020-01-13 23:16:08.263344492 -0800
+@@ -0,0 +1,660 @@
 +/*
 + * Copyright (c) 2017 Fuzhou Rockchip Electronics Co., Ltd.
 + *
@@ -54,6 +76,7 @@ index 0000000000..85ce0206d7
 +		};
 +	};
 +
++	/*
 +	leds {
 +		status = "okay";
 +		compatible = "gpio-leds";
@@ -68,6 +91,7 @@ index 0000000000..85ce0206d7
 +			gpios = <&gpio0 RK_PA2 GPIO_ACTIVE_HIGH>;
 +		};
 +	};
++	*/
 +
 +	sdio_pwrseq: sdio-pwrseq {
 +		compatible = "mmc-pwrseq-simple";
@@ -75,6 +99,8 @@ index 0000000000..85ce0206d7
 +		clock-names = "ext_clock";
 +		pinctrl-names = "default";
 +		pinctrl-0 = <&wifi_enable_h>;
++		power-off-delay-us = <500000>;
++		post-power-on-delay-ms = <100>;
 +
 +		/*
 +		 * On the module itself this is one of these (depending
@@ -130,6 +156,16 @@ index 0000000000..85ce0206d7
 +		pinctrl-names = "default";
 +		pinctrl-0 = <&host_usb3_drv>;
 +		regulator-name = "vcc5v0_usb3_host";
++		regulator-always-on;
++	};
++
++	vcc3v3_s0: vcc3v3-s0-regulator {
++		compatible = "regulator-fixed";
++		enable-active-high;
++		gpio = <&gpio1 RK_PC6 GPIO_ACTIVE_HIGH>;
++		pinctrl-names = "default";
++		pinctrl-0 = <&lcdvcc_en>;
++		regulator-name = "vcc3v3_s0";
 +		regulator-always-on;
 +	};
 +
@@ -355,8 +391,8 @@ index 0000000000..85ce0206d7
 +				};
 +			};
 +
-+			vcc3v3_s0: SWITCH_REG2 {
-+				regulator-name = "vcc3v3_s0";
++			unused: SWITCH_REG2 {
++				regulator-name = "SWITCH_REG2";
 +				regulator-always-on;
 +				regulator-boot-on;
 +				regulator-state-mem {
@@ -492,6 +528,11 @@ index 0000000000..85ce0206d7
 +		host_usb3_drv: host-usb3-drv {
 +			rockchip,pins = <1 RK_PB5 RK_FUNC_GPIO &pcfg_pull_none>;
 +		};
++
++		/* Shared between LCD and usb */
++		lcdvcc_en: lcdvcc-en {
++			rockchip,pins = <1 RK_PC6 RK_FUNC_GPIO &pcfg_pull_none>;
++		};
 +	};
 +};
 +
@@ -513,8 +554,16 @@ index 0000000000..85ce0206d7
 +
 +&sdmmc {
 +	bus-width = <4>;
-+	status = "okay";
++	cap-mmc-highspeed;
++	cap-sd-highspeed;
++	cd-gpios = <&gpio0 RK_PA7 GPIO_ACTIVE_LOW>;
++	disable-wp;
++	sd-uhs-sdr104;
 +	max-frequency = <20000000>;
++	vqmmc-supply = <&vcc_sdio>;
++	pinctrl-names = "default";
++	pinctrl-0 = <&sdmmc_clk &sdmmc_cmd &sdmmc_bus4>;
++	status = "okay";
 +};
 +
 +&sdhci {
@@ -581,10 +630,12 @@ index 0000000000..85ce0206d7
 +};
 +
 +&usb_host1_ehci {
++	phy-supply = <&vcc3v3_s0>;
 +	status = "okay";
 +};
 +
 +&usb_host1_ohci {
++	phy-supply = <&vcc3v3_s0>;
 +	status = "okay";
 +};
 +

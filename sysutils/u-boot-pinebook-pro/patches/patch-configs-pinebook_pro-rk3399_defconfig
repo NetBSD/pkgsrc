@@ -1,12 +1,13 @@
-$NetBSD: patch-configs-pinebook_pro-rk3399_defconfig,v 1.2 2020/01/06 09:43:16 mrg Exp $
+$NetBSD: patch-configs-pinebook_pro-rk3399_defconfig,v 1.3 2020/01/14 08:44:03 mrg Exp $
 
 Pinebook Pro support from https://patchwork.ozlabs.org/patch/1194525/
 
-diff --git configs/pinebook_pro-rk3399_defconfig configs/pinebook_pro-rk3399_defconfig
-new file mode 100644
-index 0000000000..28577256e7
---- /dev/null
-+++ configs/pinebook_pro-rk3399_defconfig
+reduce pinebook_pro bootdelay to 2
+put uboot at 256K.
+
+
+--- configs/pinebook_pro-rk3399_defconfig.orig	2020-01-13 16:59:26.374914888 -0800
++++ configs/pinebook_pro-rk3399_defconfig	2020-01-13 23:15:39.294542172 -0800
 @@ -0,0 +1,77 @@
 +CONFIG_ARM=y
 +CONFIG_ARCH_ROCKCHIP=y
@@ -47,7 +48,7 @@ index 0000000000..28577256e7
 +CONFIG_OF_SPL_REMOVE_PROPS="pinctrl-0 pinctrl-names clock-names interrupt-parent assigned-clocks assigned-clock-rates assigned-clock-parents"
 +CONFIG_ROCKCHIP_GPIO=y
 +CONFIG_SYS_I2C_ROCKCHIP=y
-+CONFIG_BOOTDELAY=3
++CONFIG_BOOTDELAY=2
 +CONFIG_LED=y
 +CONFIG_LED_GPIO=y
 +CONFIG_MISC=y
