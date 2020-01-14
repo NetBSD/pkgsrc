@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/03/21 12:18:56 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/01/14 22:04:26 jaapb Exp $
 bin/menhir
 ${OCAML_SITELIB}/menhirLib/META
 ${OCAML_SITELIB}/menhirLib/menhirLib.cmi
@@ -12,9 +12,9 @@ ${OCAML_SITELIB}/menhirSdk/META
 ${OCAML_SITELIB}/menhirSdk/menhirSdk.cmi
 ${OCAML_SITELIB}/menhirSdk/menhirSdk.cmo
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/menhirSdk/menhirSdk.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/menhirSdk/menhirSdk.cmxs
+${OCAML_SITELIB}/menhirSdk/menhirSdk.cmxs
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/menhirSdk/menhirSdk.o
-man/menhir.1
+man/man1/menhir.1
 share/doc/menhir/demos/Makefile
 share/doc/menhir/demos/calc-alias/.gitignore
 share/doc/menhir/demos/calc-alias/.merlin
@@ -40,14 +40,6 @@ share/doc/menhir/demos/calc-dune/dune
 share/doc/menhir/demos/calc-dune/dune-project
 share/doc/menhir/demos/calc-dune/lexer.mll
 share/doc/menhir/demos/calc-dune/parser.mly
-share/doc/menhir/demos/calc-new-syntax-dune/.gitignore
-share/doc/menhir/demos/calc-new-syntax-dune/Makefile
-share/doc/menhir/demos/calc-new-syntax-dune/README.md
-share/doc/menhir/demos/calc-new-syntax-dune/calc.ml
-share/doc/menhir/demos/calc-new-syntax-dune/dune
-share/doc/menhir/demos/calc-new-syntax-dune/dune-project
-share/doc/menhir/demos/calc-new-syntax-dune/lexer.mll
-share/doc/menhir/demos/calc-new-syntax-dune/parser.mly
 share/doc/menhir/demos/calc-incremental-dune/.gitignore
 share/doc/menhir/demos/calc-incremental-dune/Makefile
 share/doc/menhir/demos/calc-incremental-dune/README.md
@@ -90,6 +82,14 @@ share/doc/menhir/demos/calc-inspection/README
 share/doc/menhir/demos/calc-inspection/calc.ml
 share/doc/menhir/demos/calc-inspection/lexer.mll
 share/doc/menhir/demos/calc-inspection/parser.mly
+share/doc/menhir/demos/calc-new-syntax-dune/.gitignore
+share/doc/menhir/demos/calc-new-syntax-dune/Makefile
+share/doc/menhir/demos/calc-new-syntax-dune/README.md
+share/doc/menhir/demos/calc-new-syntax-dune/calc.ml
+share/doc/menhir/demos/calc-new-syntax-dune/dune
+share/doc/menhir/demos/calc-new-syntax-dune/dune-project
+share/doc/menhir/demos/calc-new-syntax-dune/lexer.mll
+share/doc/menhir/demos/calc-new-syntax-dune/parser.mly
 share/doc/menhir/demos/calc-param-dune/.gitignore
 share/doc/menhir/demos/calc-param-dune/Makefile
 share/doc/menhir/demos/calc-param-dune/README
@@ -147,6 +147,12 @@ share/doc/menhir/demos/calc/README
 share/doc/menhir/demos/calc/calc.ml
 share/doc/menhir/demos/calc/lexer.mll
 share/doc/menhir/demos/calc/parser.mly
+share/doc/menhir/demos/coq-minicalc/Lexer.v
+share/doc/menhir/demos/coq-minicalc/Makefile
+share/doc/menhir/demos/coq-minicalc/MiniCalc.v
+share/doc/menhir/demos/coq-minicalc/Parser.vy
+share/doc/menhir/demos/coq-minicalc/README.md
+share/doc/menhir/demos/coq-minicalc/_CoqProject
 share/doc/menhir/demos/generate-printers-dune/.gitignore
 share/doc/menhir/demos/generate-printers-dune/Makefile
 share/doc/menhir/demos/generate-printers-dune/README.md
@@ -168,4 +174,4 @@ share/doc/menhir/manual.pdf
 share/doc/menhir/manual001.png
 share/doc/menhir/manual002.png
 share/doc/menhir/manual003.png
-share/menhir/standard.mly
+@pkgdir share/menhir

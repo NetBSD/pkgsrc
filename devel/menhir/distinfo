@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2019/03/21 12:18:56 jaapb Exp $
+$NetBSD: distinfo,v 1.11 2020/01/14 22:04:26 jaapb Exp $
 
-SHA1 (menhir-20181113.tar.gz) = b912ca1d1184d4f0bcb7e75ffdc8b0fafa0db5ec
-RMD160 (menhir-20181113.tar.gz) = bc711bd542f19044c53a19864875aecf1df3a5d1
-SHA512 (menhir-20181113.tar.gz) = 998ff8e5b5f8dbaf9c6500ffe798de14dd4d7437e674ee75a1d41f428480dc0f4095389da0eae692f72a9e8c42d7a9a156dd90d2221cdd67a54e9a10cdbe239b
-Size (menhir-20181113.tar.gz) = 1028432 bytes
-SHA1 (patch-Makefile) = 6cfc9c1c7d1289c41288852d8707a0d0a4232993
+SHA1 (menhir-20190924.tar.gz) = 289aa1a5b8dff3b6e8ab8134e8931dbf662f8933
+RMD160 (menhir-20190924.tar.gz) = 4f11eb980d6ce043c1453a474dd521fb85caf71b
+SHA512 (menhir-20190924.tar.gz) = 8036eb8a65f123ceadd21739d88dafca54a2338fc168922a1301a9fbe709ac5e8e7214d95d8114f3798c15f458822e64dcedb94f7fff18ab6f9ccfb6de462e46
+Size (menhir-20190924.tar.gz) = 2491000 bytes
+SHA1 (patch-Makefile) = e36784736e352adf4b595ac508e096b626790057
