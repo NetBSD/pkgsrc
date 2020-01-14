@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.21 2019/10/06 17:02:10 bad Exp $
+# $NetBSD: u-boot.mk,v 1.22 2020/01/14 08:30:20 mrg Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -19,7 +19,7 @@ COMMENT=	Das U-Boot, the Universal Boot Loader (${UBOOT_CONFIG})
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison gmake gsed pkg-config
+USE_TOOLS+=		bison gmake gsed pkg-config gawk
 PYTHON_FOR_BUILD_ONLY=	yes
 ALL_ENV+= 		PYTHON2=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
 ALL_ENV+=		PYTHONLIBPATH=-L$(LOCALBASE)/lib
