@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2019/10/21 22:54:23 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/14 21:37:58 adam Exp $
 
-DISTNAME=	cookiecutter-1.6.0
+DISTNAME=	cookiecutter-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cookiecutter/}
-# XXX: remove on next update
-DIST_SUBDIR=	cookiecutter
 
 MAINTAINER=	gde@llew.me
 HOMEPAGE=	https://github.com/audreyr/cookiecutter
@@ -14,7 +11,7 @@ COMMENT=	Command-line utility that creates projects from project templates
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-binaryornot>=0.2.0:../../devel/py-binaryornot
-DEPENDS+=	${PYPKGPREFIX}-click>=6.3:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-future>=0.15.2:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.7:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-jinja2-time>=0.1.0:../../time/py-jinja2-time
