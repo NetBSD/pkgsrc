@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.402 2020/01/14 22:42:27 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.403 2020/01/14 22:51:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -484,3 +484,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/keepassxc to 2.5.2 [wiz 2020-01-14]
 	Updated lang/py-asttokens to 2.0.3 [wiz 2020-01-14]
 	Updated devel/py-more-itertools to 8.1.0 [wiz 2020-01-14]
+	Updated shells/zsh-autosuggestions to 0.6.4 [wiz 2020-01-14]
