@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.403 2020/01/14 22:51:16 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.404 2020/01/14 23:05:39 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -485,3 +485,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/py-asttokens to 2.0.3 [wiz 2020-01-14]
 	Updated devel/py-more-itertools to 8.1.0 [wiz 2020-01-14]
 	Updated shells/zsh-autosuggestions to 0.6.4 [wiz 2020-01-14]
+	Updated devel/bmkdep to 20140112 [cheusov 2020-01-14]
