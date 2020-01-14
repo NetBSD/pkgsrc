@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/12/31 08:46:23 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/14 22:14:20 gutteridge Exp $
 
 DISTNAME=	libfilezilla-0.19.3
 CATEGORIES=	devel
@@ -20,6 +20,11 @@ PKGCONFIG_OVERRIDE+=	lib/libfilezilla.pc.in
 
 # for C++17
 GCC_REQD+=	7
+
+# As of 0.19, 64-bit atomic ops are required
+.if ${MACHINE_ARCH} == "i386"
+CXXFLAGS+=	-march=i586
+.endif
 
 BUILDLINK_API_DEPENDS.nettle+=	nettle>=3.1
 .include "../../security/nettle/buildlink3.mk"
