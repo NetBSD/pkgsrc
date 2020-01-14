@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/05/13 12:12:33 jaapb Exp $
+$NetBSD: distinfo,v 1.4 2020/01/14 20:29:07 jaapb Exp $
 
-SHA1 (pgocaml-3.2.tar.gz) = 140aa320f63742069a33aed68763a0ad6151eab1
-RMD160 (pgocaml-3.2.tar.gz) = d9a06ca5b81ed0180e90407af55e4543ba61ef32
-SHA512 (pgocaml-3.2.tar.gz) = 7f9c35844839df4b35083f8de18e0e55f82db80886d1f1251fa4a6bc894137da2f058c5a2e8bf3b308ed09b96120824248e8570aa1904d5247613a42ca9a8b77
-Size (pgocaml-3.2.tar.gz) = 108957 bytes
+SHA1 (pgocaml-4.2.tar.gz) = 46d468f1ba8717a4183f5f68bc1de148a5c3bd33
+RMD160 (pgocaml-4.2.tar.gz) = 07d4203e49c8d83c810beffd86f16591bdd0dd3a
+SHA512 (pgocaml-4.2.tar.gz) = 48c35659518242836fc5d0a5166bcdaeee2527ca55a0859373d4b1af01c8eefe2107059fd710d790dafc7e0ab31486fc6ced186ca38014810c122a48a99d25da
+Size (pgocaml-4.2.tar.gz) = 54381 bytes
