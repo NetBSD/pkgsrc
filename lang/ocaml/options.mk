@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2019/11/24 09:23:13 adam Exp $
+# $NetBSD: options.mk,v 1.4 2020/01/14 19:53:35 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocaml
 PKG_SUPPORTED_OPTIONS=	pic flambda spacetime
 PKG_SUGGESTED_OPTIONS=	pic
 
+.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mpic)

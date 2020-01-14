@@ -1,6 +1,7 @@
-$NetBSD: patch-asmrun_amd64.S,v 1.2 2019/08/24 10:54:23 jaapb Exp $
+$NetBSD: patch-asmrun_amd64.S,v 1.3 2020/01/14 19:53:35 jaapb Exp $
 
 Fix attributes and entry size for the .rodata mergable constant section
+
 --- runtime/amd64.S.orig	2018-07-17 21:24:20.027817665 +0000
 +++ runtime/amd64.S
 @@ -724,7 +724,7 @@ G(caml_system__spacetime_shapes):
