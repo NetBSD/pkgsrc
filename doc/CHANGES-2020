@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.400 2020/01/14 22:32:26 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.401 2020/01/14 22:37:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -482,3 +482,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/menhir to 20190924 [jaapb 2020-01-14]
 	Updated devel/ocaml-compiler-libs to 0.12.1 [jaapb 2020-01-14]
 	Updated security/keepassxc to 2.5.2 [wiz 2020-01-14]
+	Updated lang/py-asttokens to 2.0.3 [wiz 2020-01-14]
