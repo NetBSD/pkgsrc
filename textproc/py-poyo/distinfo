@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/02/14 16:54:24 minskim Exp $
+$NetBSD: distinfo,v 1.2 2020/01/14 21:35:45 adam Exp $
 
-SHA1 (poyo-0.4.0.tar.gz) = 28e72f8495b76c1ea37c2fb1e89848f923ec6b05
-RMD160 (poyo-0.4.0.tar.gz) = 14c4a60920906ad9b39319871ce0f010d38ca271
-SHA512 (poyo-0.4.0.tar.gz) = 93991b9d0f7983e99ef10ef9cc1ac62acbbf2cd24ef78480debf4eb3f4b64744c9e6bbb3fa83bee38fd58a9c1a373369e5eb60c185c0ebe67d7a1475c5b1996e
-Size (poyo-0.4.0.tar.gz) = 10797 bytes
+SHA1 (poyo-0.5.0.tar.gz) = 7ae657fef0a69a9d4ddb708f3e96659d63d44a3d
+RMD160 (poyo-0.5.0.tar.gz) = 65bbe4efb176a4970b9f4aeebafae103fdf85cac
+SHA512 (poyo-0.5.0.tar.gz) = aad4334a2aaf63cafab0ecdbdd6f94e9e3d412e6476d7ac13a4399b4af0f43b1eb910e6a3cc7438e84262bc39413fadbe91674534e1e66f446d738c1328b9905
+Size (poyo-0.5.0.tar.gz) = 15276 bytes
