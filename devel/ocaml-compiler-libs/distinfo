@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/05/09 14:42:48 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2020/01/14 22:14:42 jaapb Exp $
 
-SHA1 (ocaml-compiler-libs-0.11.0.tar.gz) = 8b8275a30ff8095d5f5d18dd5869ccff411844c9
-RMD160 (ocaml-compiler-libs-0.11.0.tar.gz) = 3f960135e58dbea2d79f3d92e3e58cf25803b1cc
-SHA512 (ocaml-compiler-libs-0.11.0.tar.gz) = 93acbb58b71b93901b90fce14957e4d8249a5268e5db1f34294a237bc8451ebe5cf3995d8f64172d332efdd7399380670eb33a3f5ccf143066fc34ce534359e9
-Size (ocaml-compiler-libs-0.11.0.tar.gz) = 6965 bytes
+SHA1 (ocaml-compiler-libs-0.12.1.tar.gz) = 2cf410247c584c27ae51f1205507bc6d0f9ed838
+RMD160 (ocaml-compiler-libs-0.12.1.tar.gz) = 52108127f4b67ca5dad88873cf2f01c6dcb7bc79
+SHA512 (ocaml-compiler-libs-0.12.1.tar.gz) = f4358ab6a1be8405b077d690ca636cc0af9507fdc7836609e0ddc1f841488f24cb9741869f1ea95ca3dff82f25f60dcf907f4f7c049bdf282c1936f3fefd6808
+Size (ocaml-compiler-libs-0.12.1.tar.gz) = 4790 bytes
