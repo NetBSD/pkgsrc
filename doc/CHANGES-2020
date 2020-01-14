@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.397 2020/01/14 21:38:18 adam Exp $
+$NetBSD: CHANGES-2020,v 1.398 2020/01/14 22:04:38 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -479,3 +479,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/js_of_ocaml to 3.5.2 [jaapb 2020-01-14]
 	Updated textproc/py-poyo to 0.5.0 [adam 2020-01-14]
 	Updated devel/py-cookiecutter to 1.7.0 [adam 2020-01-14]
+	Updated devel/menhir to 20190924 [jaapb 2020-01-14]
