@@ -1,9 +1,10 @@
-$NetBSD: patch-lex_Makefile,v 1.1 2019/08/24 10:54:23 jaapb Exp $
+$NetBSD: patch-lex_Makefile,v 1.2 2020/01/14 19:53:35 jaapb Exp $
 
 Honor LDFLAGS.
---- lex/Makefile.orig	2019-03-01 15:13:45.000000000 +0000
+
+--- lex/Makefile.orig	2019-09-11 14:40:30.000000000 +0000
 +++ lex/Makefile
-@@ -28,7 +28,7 @@ CAMLC = $(CAMLRUN) $(ROOTDIR)/boot/ocaml
+@@ -27,7 +27,7 @@ CAMLC = $(BOOT_OCAMLC) -strict-sequence 
  CAMLOPT = $(CAMLRUN) $(ROOTDIR)/ocamlopt -nostdlib -I $(ROOTDIR)/stdlib
  COMPFLAGS = $(INCLUDES) -absname -w +a-4-9-41-42-44-45-48 -warn-error A \
              -safe-string -strict-sequence -strict-formats -bin-annot
@@ -11,8 +12,8 @@ Honor LDFLAGS.
 +LINKFLAGS = -cclib "$(LDFLAGS)"
  YACCFLAGS = -v
  CAMLLEX = $(CAMLRUN) $(ROOTDIR)/boot/ocamllex
- CAMLDEP = $(CAMLRUN) $(ROOTDIR)/boot/ocamlc -depend
-@@ -47,7 +47,7 @@ ocamllex: $(OBJS)
+ CAMLDEP = $(BOOT_OCAMLC) -depend
+@@ -46,7 +46,7 @@ ocamllex: $(OBJS)
  	$(CAMLC) $(LINKFLAGS) -compat-32 -o ocamllex $(OBJS)
  
  ocamllex.opt: $(OBJS:.cmo=.cmx)
