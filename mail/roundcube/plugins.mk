@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.2 2018/04/30 06:44:11 taca Exp $
+# $NetBSD: plugins.mk,v 1.3 2020/01/14 14:30:00 taca Exp $
 #
 
 # plugin's PKGNAME
@@ -8,7 +8,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-roundcube>=${RC_VERS}:../../mail/roundcube
 
 #
 # a few parameters
-EXTRACT_ELEMENTS?=	${DISTNAME}/${PLUGIN_DIR}
+EXTRACT_ELEMENTS?=	${WRKNAME}/${PLUGIN_DIR}
 PLUGIN_DIR?=		plugins/${PLUGIN}
 CONF_PLUGINS?=		${PLUGIN}
 
@@ -23,7 +23,7 @@ CONF_FILES_PERMS+=	${EGDIR}/plugins/${f}/config.inc.php \
 			${WWW_USER} ${WWW_GROUP} 0640
 .endfor
 
-plugin-install:
+do-install:
 .for i in ${PLUGIN_DIR}
 	cd ${WRKSRC}/${i} && ${FIND} . -type f \! -name "*.orig" -print | \
 		${PAX} -rw ${DESTDIR}${PREFIX}/${RCDIR}/${i}
