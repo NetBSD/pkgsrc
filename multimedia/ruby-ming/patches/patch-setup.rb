@@ -1,6 +1,7 @@
-$NetBSD: patch-setup.rb,v 1.1 2015/06/08 14:55:17 taca Exp $
+$NetBSD: patch-setup.rb,v 1.2 2020/01/14 14:40:42 taca Exp $
 
-Fix build problem on Ruby 2.2 and later.
+* Fix build problem on Ruby 2.2 and later.
+* Remove duplicated line.
 
 --- setup.rb.orig	2004-10-30 14:17:39.000000000 +0000
 +++ setup.rb
@@ -13,7 +14,15 @@ Fix build problem on Ruby 2.2 and later.
  
  rubypath = c['bindir'] + '/' + c['ruby_install_name']
  
-@@ -1246,7 +1246,7 @@ class Installer
+@@ -355,7 +355,6 @@ class ConfigTable_class   # open again
+     'site-ruby-common' => 'siteruby',     # For backward compatibility
+     'site-ruby'        => 'siterubyver',  # For backward compatibility
+     'bin-dir'          => 'bindir',
+-    'bin-dir'          => 'bindir',
+     'rb-dir'           => 'rbdir',
+     'so-dir'           => 'sodir',
+     'data-dir'         => 'datadir',
+@@ -1246,7 +1245,7 @@ class Installer
  
    def ruby_extentions(dir)
      Dir.open(dir) {|d|
