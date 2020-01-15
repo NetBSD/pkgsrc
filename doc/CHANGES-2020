@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.435 2020/01/15 18:14:15 pho Exp $
+$NetBSD: CHANGES-2020,v 1.436 2020/01/15 19:13:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -519,3 +519,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-importlib-metadata to 1.4.0 [adam 2020-01-15]
 	Updated devel/py-faker to 4.0.0 [adam 2020-01-15]
 	Added www/hs-http-types version 0.12.3 [pho 2020-01-15]
+	Updated math/py-sympy to 1.4 [minskim 2020-01-15]
