@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.434 2020/01/15 18:05:49 adam Exp $
+$NetBSD: CHANGES-2020,v 1.435 2020/01/15 18:14:15 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -518,3 +518,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/hs-cookie version 0.4.5 [pho 2020-01-15]
 	Updated devel/py-importlib-metadata to 1.4.0 [adam 2020-01-15]
 	Updated devel/py-faker to 4.0.0 [adam 2020-01-15]
+	Added www/hs-http-types version 0.12.3 [pho 2020-01-15]
