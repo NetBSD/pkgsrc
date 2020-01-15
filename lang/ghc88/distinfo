@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2020/01/15 02:06:36 pho Exp $
+$NetBSD: distinfo,v 1.6 2020/01/15 02:10:29 pho Exp $
 
 SHA1 (ghc-8.4.4-boot-i386-unknown-freebsd.tar.xz) = 04981802730423aa12999e59679be198d540222a
 RMD160 (ghc-8.4.4-boot-i386-unknown-freebsd.tar.xz) = f617e67f2c2f07c7211cb391a4bc2e7b304045e2
@@ -22,7 +22,6 @@ SHA512 (ghc-8.8.1-src.tar.xz) = 7268b012c3a6c34e7eac05c7d6959de6005651d33e870860
 Size (ghc-8.8.1-src.tar.xz) = 28634672 bytes
 SHA1 (patch-aclocal.m4) = a674a21f5be05f06a972b1dd42c05dca02e70740
 SHA1 (patch-compiler_main_DynFlags.hs) = 07bb2a5afdd087f4d2da5c035feecc13273aec70
-SHA1 (patch-compiler_main_SysTools_Tasks.hs) = 69fb48ad609983441d369c9b1ba2cc8a3ffdc824
 SHA1 (patch-configure.ac) = f521200b519fdaab1082c4a2fcac9c3dd9135d7b
 SHA1 (patch-ghc_ghc.mk) = 331b947f6a5af09b3fda82697f071941166edbd0
 SHA1 (patch-libraries_base_GHC_Event_KQueue.hsc) = 8ee5da667a241a05fde3c580d3dc9bdc05aa5f00
