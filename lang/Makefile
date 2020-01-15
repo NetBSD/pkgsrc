@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.538 2020/01/13 01:41:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.539 2020/01/15 12:41:28 pho Exp $
 #
 
 COMMENT=	Programming languages
@@ -109,6 +109,7 @@ SUBDIR+=	guile20
 SUBDIR+=	guile22
 SUBDIR+=	gwydion-dylan
 SUBDIR+=	heirloom-awk
+SUBDIR+=	hs-hslua
 SUBDIR+=	hugs
 SUBDIR+=	icon
 SUBDIR+=	inform
