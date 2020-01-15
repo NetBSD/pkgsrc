@@ -1,0 +1,3 @@
+This package provides Haskell bindings for libcmark-gfm, the reference
+parser for GitHub Flavored Markdown, a fully specified variant of
+Markdown.
