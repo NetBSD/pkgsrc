@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/01/15 06:29:59 pho Exp $
+
+Allow in-source building.
+
+--- CMakeLists.txt.orig	2019-04-08 06:15:49.000000000 +0000
++++ CMakeLists.txt
+@@ -10,10 +10,6 @@ set(PROJECT_VERSION ${PROJECT_VERSION_MA
+ include("FindAsan.cmake")
+ include("CheckFileOffsetBits.cmake")
+ 
+-if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
+-    message(FATAL_ERROR "Do not build in-source.\nPlease remove CMakeCache.txt and the CMakeFiles/ directory.\nThen: mkdir build ; cd build ; cmake .. ; make")
+-endif()
+-
+ option(CMARK_TESTS "Build cmark-gfm tests and enable testing" ON)
+ option(CMARK_STATIC "Build static libcmark-gfm library" ON)
+ option(CMARK_SHARED "Build shared libcmark-gfm library" ON)
