@@ -1,0 +1,5 @@
+This package has an explicit dependency on the latest Extended Support
+Release version of the Mozilla Firefox web browser. In case there are multiple
+versions available, this package points to the most recent available version.
+
+It is intended to allow easy upgrades to the most recent ESR release.
