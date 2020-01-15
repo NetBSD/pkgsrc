@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.417 2020/01/15 11:36:11 pho Exp $
+$NetBSD: CHANGES-2020,v 1.418 2020/01/15 11:54:03 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -500,3 +500,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 72.0.1nb1 [ryoon 2020-01-15]
 	Added converters/hs-text-conversions version 0.3.0 [pho 2020-01-15]
 	Added textproc/hs-doctemplates version 0.8.1 [pho 2020-01-15]
+	Added converters/hs-emojis version 0.1 [pho 2020-01-15]
