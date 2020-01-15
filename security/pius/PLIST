@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/13 20:39:29 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/15 13:07:46 wiz Exp $
 bin/pius
 bin/pius-keyring-mgr
 bin/pius-party-worksheet
 bin/pius-report
-man/man1/pius-keyring-mgr.1
-man/man1/pius-party-worksheet.1
-man/man1/pius-report.1
-man/man1/pius.1
 ${PYSITELIB}/libpius/__init__.py
 ${PYSITELIB}/libpius/__init__.pyo
 ${PYSITELIB}/libpius/__init__.pyc
@@ -31,3 +27,8 @@ ${PYSITELIB}/libpius/signer.py
 ${PYSITELIB}/libpius/state.py
 ${PYSITELIB}/libpius/util.py
 ${PYSITELIB}/libpius/wotsap.py
+${PYSITELIB}/${EGG_FILE}
+man/man1/pius-keyring-mgr.1
+man/man1/pius-party-worksheet.1
+man/man1/pius-report.1
+man/man1/pius.1
