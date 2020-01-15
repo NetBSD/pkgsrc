@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/15 02:06:36 pho Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/15 05:46:55 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -49,6 +49,10 @@ GNU_CONFIGURE=			yes
 USE_GNU_CONFIGURE_HOST=		no
 USE_LIBTOOL=			yes
 
+
+# -----------------------------------------------------------------------------
+# Configuration
+#
 CONFIGURE_ARGS.common= \
 	--with-curses-libraries=${BUILDLINK_PREFIX.curses}/${BUILDLINK_LIBDIRS.curses:Q} \
 	--with-gmp-includes=${BUILDLINK_PREFIX.gmp}/${BUILDLINK_INCDIRS.gmp:Q} \
@@ -88,6 +92,10 @@ CONFIGURE_ENV+= \
 # the buildlink.
 .endfor
 
+
+# -----------------------------------------------------------------------------
+# Security
+#
 # The runtime system of GHC (rts) tends to conflict with PaX MPROTECT
 # because it needs to generate various kinds of code at run time. The
 # RTS linker, whose job is to load *static* objects at run time,
@@ -174,6 +182,11 @@ CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
 # dependent Haskell libraries, but the problem is that they are
 # specified with $ORIGIN, which isn't currently supported by
 # ../../mk/check/check-shlibs-elf.awk.
+#
+# Note that arguments like "-Wl,-rpath,$ORIGIN/.." are usually dropped
+# by the "cleanup" phase of wrappers. This is not the case in GHC
+# because GHC uses @file syntax while linking objects, and our
+# wrappers does nothing about it.
 CHECK_SHLIBS_SKIP+=		*/libHS*-ghc${PKGVERSION_NOREV}.*
 .for f in ghc ghc-iserv-dyn ghc-pkg haddock hpc hsc2hs runghc
 CHECK_SHLIBS_SKIP+=		lib/${PKGNAME_NOREV}/bin/${f}
