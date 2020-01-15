@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1081 2020/01/13 10:06:33 mef Exp $
+# $NetBSD: Makefile,v 1.1082 2020/01/15 06:30:31 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -157,6 +157,7 @@ SUBDIR+=	cityhash
 SUBDIR+=	cjose
 SUBDIR+=	cldr-emoji-annotation
 SUBDIR+=	cmark
+SUBDIR+=	cmark-gfm
 SUBDIR+=	cmigemo
 SUBDIR+=	coccigrep
 SUBDIR+=	colorit
