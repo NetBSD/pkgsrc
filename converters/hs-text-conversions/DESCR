@@ -1,0 +1,3 @@
+This package provides a set of typeclasses for safely converting
+between textual data. The built-in String type, as well as strict Text
+and lazy Text, are safely convertible between one another.
