@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.407 2020/01/15 06:04:31 pho Exp $
+$NetBSD: CHANGES-2020,v 1.408 2020/01/15 06:36:59 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -489,3 +489,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/gssdp12 to 1.2.2 [wiz 2020-01-15]
 	Updated net/gupnp12 to 1.2.2 [wiz 2020-01-15]
 	Added converters/hs-aeson-pretty version 0.8.8 [pho 2020-01-15]
+	Added textproc/cmark-gfm version 0.29.0.gfm.0 [pho 2020-01-15]
