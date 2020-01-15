@@ -1,0 +1,23 @@
+HsYAML is a YAML 1.2 processor, i.e. a library for parsing and
+serializing YAML documents.
+
+Features of HsYAML include:
+* Pure Haskell implementation with small dependency footprint and
+  emphasis on strict compliance with the YAML 1.2 specification.
+* Direct decoding to native Haskell types via (aeson-inspired)
+  typeclass-based API (see Data.YAML).
+* Allows round-tripping while preserving ordering, anchors, and
+  comments at Event-level.
+* Support for constructing custom YAML node graph representation
+  (including support for cyclic YAML data structures).
+* Support for the standard (untyped) Failsafe, (strict) JSON, and
+  (flexible) Core "schemas" providing implicit typing rules as defined
+  in the YAML 1.2 specification (including support for user-defined
+  custom schemas; see Data.YAML.Schema).
+* Support for emitting YAML using Failsafe, (strict) JSON, and
+  (flexible) Core "schemas" (including support for user-defined custom
+  encoding schemas; see Data.YAML.Schema).
+* Event-based API resembling LibYAML's Event-based API (see
+  Data.YAML.Event).
+* Low-level API access to lexical token-based scanner (see
+  Data.YAML.Token).
