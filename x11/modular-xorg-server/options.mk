@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2019/08/22 19:52:29 nia Exp $
+# $NetBSD: options.mk,v 1.22 2020/01/15 14:24:03 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	inet6 dri debug dtrace
@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=	inet6 dri
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dri dtrace wayland
+PLIST_VARS+=		dri dtrace
 
 .if !empty(PKG_OPTIONS:Mdri)
 .include "../../graphics/libepoxy/buildlink3.mk"
