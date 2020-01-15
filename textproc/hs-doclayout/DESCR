@@ -1,0 +1,3 @@
+doclayout is a prettyprinting library for laying out text documents,
+with several features not present in prettyprinting libraries designed
+for code. It was designed for use in pandoc.
