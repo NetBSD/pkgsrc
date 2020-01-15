@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.422 2020/01/15 13:07:54 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.423 2020/01/15 13:44:05 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -505,3 +505,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/hs-haddock-library version 1.8.0 [pho 2020-01-15]
 	Added lang/hs-hslua version 1.0.3.2 [pho 2020-01-15]
 	Updated security/pius to 3.0.0nb1 [wiz 2020-01-15]
+	Updated multimedia/adobe-flash-player to 32.0.0.314 [tsutsui 2020-01-15]
