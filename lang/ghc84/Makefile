@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/14 14:44:50 pho Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/15 02:05:46 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://www.haskell.org/ghc/
-COMMENT=	Compiler for the functional language Haskell - 8.0 Release Series
+COMMENT=	Compiler for the functional language Haskell - 8.4 Release Series
 LICENSE=	modified-bsd
 
 # TODO: We should be using the alternatives framework.
