@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/12/16 23:54:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/01/15 19:13:06 minskim Exp $
 bin/isympy${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -163,6 +163,9 @@ ${PYSITELIB}/sympy/codegen/algorithms.pyo
 ${PYSITELIB}/sympy/codegen/approximations.py
 ${PYSITELIB}/sympy/codegen/approximations.pyc
 ${PYSITELIB}/sympy/codegen/approximations.pyo
+${PYSITELIB}/sympy/codegen/array_utils.py
+${PYSITELIB}/sympy/codegen/array_utils.pyc
+${PYSITELIB}/sympy/codegen/array_utils.pyo
 ${PYSITELIB}/sympy/codegen/ast.py
 ${PYSITELIB}/sympy/codegen/ast.pyc
 ${PYSITELIB}/sympy/codegen/ast.pyo
@@ -202,6 +205,9 @@ ${PYSITELIB}/sympy/codegen/tests/test_applications.pyo
 ${PYSITELIB}/sympy/codegen/tests/test_approximations.py
 ${PYSITELIB}/sympy/codegen/tests/test_approximations.pyc
 ${PYSITELIB}/sympy/codegen/tests/test_approximations.pyo
+${PYSITELIB}/sympy/codegen/tests/test_array_utils.py
+${PYSITELIB}/sympy/codegen/tests/test_array_utils.pyc
+${PYSITELIB}/sympy/codegen/tests/test_array_utils.pyo
 ${PYSITELIB}/sympy/codegen/tests/test_ast.py
 ${PYSITELIB}/sympy/codegen/tests/test_ast.pyc
 ${PYSITELIB}/sympy/codegen/tests/test_ast.pyo
@@ -1400,6 +1406,9 @@ ${PYSITELIB}/sympy/matrices/expressions/__init__.pyo
 ${PYSITELIB}/sympy/matrices/expressions/adjoint.py
 ${PYSITELIB}/sympy/matrices/expressions/adjoint.pyc
 ${PYSITELIB}/sympy/matrices/expressions/adjoint.pyo
+${PYSITELIB}/sympy/matrices/expressions/applyfunc.py
+${PYSITELIB}/sympy/matrices/expressions/applyfunc.pyc
+${PYSITELIB}/sympy/matrices/expressions/applyfunc.pyo
 ${PYSITELIB}/sympy/matrices/expressions/blockmatrix.py
 ${PYSITELIB}/sympy/matrices/expressions/blockmatrix.pyc
 ${PYSITELIB}/sympy/matrices/expressions/blockmatrix.pyo
@@ -1451,6 +1460,9 @@ ${PYSITELIB}/sympy/matrices/expressions/tests/__init__.pyo
 ${PYSITELIB}/sympy/matrices/expressions/tests/test_adjoint.py
 ${PYSITELIB}/sympy/matrices/expressions/tests/test_adjoint.pyc
 ${PYSITELIB}/sympy/matrices/expressions/tests/test_adjoint.pyo
+${PYSITELIB}/sympy/matrices/expressions/tests/test_applyfunc.py
+${PYSITELIB}/sympy/matrices/expressions/tests/test_applyfunc.pyc
+${PYSITELIB}/sympy/matrices/expressions/tests/test_applyfunc.pyo
 ${PYSITELIB}/sympy/matrices/expressions/tests/test_blockmatrix.py
 ${PYSITELIB}/sympy/matrices/expressions/tests/test_blockmatrix.pyc
 ${PYSITELIB}/sympy/matrices/expressions/tests/test_blockmatrix.pyo
@@ -2253,9 +2265,6 @@ ${PYSITELIB}/sympy/physics/units/unitsystem.pyo
 ${PYSITELIB}/sympy/physics/units/util.py
 ${PYSITELIB}/sympy/physics/units/util.pyc
 ${PYSITELIB}/sympy/physics/units/util.pyo
-${PYSITELIB}/sympy/physics/unitsystems.py
-${PYSITELIB}/sympy/physics/unitsystems.pyc
-${PYSITELIB}/sympy/physics/unitsystems.pyo
 ${PYSITELIB}/sympy/physics/vector/__init__.py
 ${PYSITELIB}/sympy/physics/vector/__init__.pyc
 ${PYSITELIB}/sympy/physics/vector/__init__.pyo
@@ -2892,6 +2901,9 @@ ${PYSITELIB}/sympy/printing/str.pyo
 ${PYSITELIB}/sympy/printing/tableform.py
 ${PYSITELIB}/sympy/printing/tableform.pyc
 ${PYSITELIB}/sympy/printing/tableform.pyo
+${PYSITELIB}/sympy/printing/tensorflow.py
+${PYSITELIB}/sympy/printing/tensorflow.pyc
+${PYSITELIB}/sympy/printing/tensorflow.pyo
 ${PYSITELIB}/sympy/printing/tests/__init__.py
 ${PYSITELIB}/sympy/printing/tests/__init__.pyc
 ${PYSITELIB}/sympy/printing/tests/__init__.pyo
@@ -2973,6 +2985,9 @@ ${PYSITELIB}/sympy/printing/tests/test_str.pyo
 ${PYSITELIB}/sympy/printing/tests/test_tableform.py
 ${PYSITELIB}/sympy/printing/tests/test_tableform.pyc
 ${PYSITELIB}/sympy/printing/tests/test_tableform.pyo
+${PYSITELIB}/sympy/printing/tests/test_tensorflow.py
+${PYSITELIB}/sympy/printing/tests/test_tensorflow.pyc
+${PYSITELIB}/sympy/printing/tests/test_tensorflow.pyo
 ${PYSITELIB}/sympy/printing/tests/test_theanocode.py
 ${PYSITELIB}/sympy/printing/tests/test_theanocode.pyc
 ${PYSITELIB}/sympy/printing/tests/test_theanocode.pyo
@@ -3525,6 +3540,15 @@ ${PYSITELIB}/sympy/tensor/tests/test_indexed.pyo
 ${PYSITELIB}/sympy/tensor/tests/test_tensor.py
 ${PYSITELIB}/sympy/tensor/tests/test_tensor.pyc
 ${PYSITELIB}/sympy/tensor/tests/test_tensor.pyo
+${PYSITELIB}/sympy/tensor/tests/test_tensor_element.py
+${PYSITELIB}/sympy/tensor/tests/test_tensor_element.pyc
+${PYSITELIB}/sympy/tensor/tests/test_tensor_element.pyo
+${PYSITELIB}/sympy/tensor/tests/test_tensor_operators.py
+${PYSITELIB}/sympy/tensor/tests/test_tensor_operators.pyc
+${PYSITELIB}/sympy/tensor/tests/test_tensor_operators.pyo
+${PYSITELIB}/sympy/tensor/toperators.py
+${PYSITELIB}/sympy/tensor/toperators.pyc
+${PYSITELIB}/sympy/tensor/toperators.pyo
 ${PYSITELIB}/sympy/this.py
 ${PYSITELIB}/sympy/this.pyc
 ${PYSITELIB}/sympy/this.pyo
@@ -3603,6 +3627,9 @@ ${PYSITELIB}/sympy/utilities/lambdify.pyo
 ${PYSITELIB}/sympy/utilities/magic.py
 ${PYSITELIB}/sympy/utilities/magic.pyc
 ${PYSITELIB}/sympy/utilities/magic.pyo
+${PYSITELIB}/sympy/utilities/matchpy_connector.py
+${PYSITELIB}/sympy/utilities/matchpy_connector.pyc
+${PYSITELIB}/sympy/utilities/matchpy_connector.pyo
 ${PYSITELIB}/sympy/utilities/mathml/__init__.py
 ${PYSITELIB}/sympy/utilities/mathml/__init__.pyc
 ${PYSITELIB}/sympy/utilities/mathml/__init__.pyo
@@ -3690,6 +3717,9 @@ ${PYSITELIB}/sympy/utilities/tests/test_wester.pyo
 ${PYSITELIB}/sympy/utilities/timeutils.py
 ${PYSITELIB}/sympy/utilities/timeutils.pyc
 ${PYSITELIB}/sympy/utilities/timeutils.pyo
+${PYSITELIB}/sympy/utilities/tmpfiles.py
+${PYSITELIB}/sympy/utilities/tmpfiles.pyc
+${PYSITELIB}/sympy/utilities/tmpfiles.pyo
 ${PYSITELIB}/sympy/vector/__init__.py
 ${PYSITELIB}/sympy/vector/__init__.pyc
 ${PYSITELIB}/sympy/vector/__init__.pyo
