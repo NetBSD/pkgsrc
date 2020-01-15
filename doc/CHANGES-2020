@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.419 2020/01/15 12:15:21 pho Exp $
+$NetBSD: CHANGES-2020,v 1.420 2020/01/15 12:26:21 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -502,3 +502,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/hs-doctemplates version 0.8.1 [pho 2020-01-15]
 	Added converters/hs-emojis version 0.1 [pho 2020-01-15]
 	Added textproc/hs-Glob version 0.10.0 [pho 2020-01-15]
+	Added textproc/hs-haddock-library version 1.8.0 [pho 2020-01-15]
