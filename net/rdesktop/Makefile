@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2019/03/25 19:56:08 markd Exp $
+# $NetBSD: Makefile,v 1.50 2020/01/15 15:31:28 wiz Exp $
 
-DISTNAME=		rdesktop-1.8.4
-PKGREVISION=		1
+DISTNAME=		rdesktop-1.9.0
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rdesktop/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
@@ -36,6 +35,9 @@ CONFIGURE_ARGS+=	--with-sound=alsa
 .endif
 
 .include "../../audio/libsamplerate/buildlink3.mk"
+.include "../../security/libtasn1/buildlink3.mk"
+.include "../../security/nettle/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
