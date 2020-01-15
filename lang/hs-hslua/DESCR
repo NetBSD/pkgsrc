@@ -1,0 +1,2 @@
+HsLua provides bindings, wrappers, types, and helper functions to
+bridge Haskell and Lua.
