@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2020/01/12 23:35:01 joerg Exp $
+# $NetBSD: Makefile,v 1.85 2020/01/15 19:14:01 joerg Exp $
 
-PKGNAME=	pbulk-0.67
+PKGNAME=	pbulk-0.68
 COMMENT=	Modular bulk build framework
 
 .include "../../pkgtools/pbulk/Makefile.common"
@@ -33,13 +33,13 @@ SUBST_FILES.tools=	pbulk.conf scripts/build scripts/build-client-start \
 	scripts/create-report.awk
 SUBST_VARS.tools=	AWK BZIP2 CHOWN DIGEST GZIP_CMD ID MAIL_CMD NEATO \
 			PBULK_CONFIG PBULK_CONFIG_VERSION PKG_ADD_CMD \
-			PKG_DELETE_CMD PKG_INFO_CMD PREFIX SED SH TAR \
-			TARGET_MAKE
+			PKG_ADMIN_CMD PKG_DELETE_CMD PKG_INFO_CMD PREFIX
+			SED SH TAR TARGET_MAKE
 
 CONF_FILES+=	share/examples/pbulk/pbulk.conf ${PKG_SYSCONFDIR}/pbulk.conf
 
 PBULK_CONFIG=		${PKG_SYSCONFDIR}/pbulk.conf
-PBULK_CONFIG_VERSION=	0.67
+PBULK_CONFIG_VERSION=	0.68
 
 INSTALLATION_DIRS=	bin libexec/pbulk share/examples/pbulk
 USE_BSD_MAKEFILE=	yes
