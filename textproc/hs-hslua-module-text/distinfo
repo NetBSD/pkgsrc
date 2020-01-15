@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/15 15:51:22 pho Exp $
+
+SHA1 (hslua-module-text-0.2.1.tar.gz) = cb9a595ced6b4f9dd4806ddf79a2d23f1cebd44e
+RMD160 (hslua-module-text-0.2.1.tar.gz) = 9ad5138be867542f7f8e120912ffc2cf7149ba81
+SHA512 (hslua-module-text-0.2.1.tar.gz) = e2da17ec688c00968537e49c18d71a3e365a57bb0c8cb2639b2052d04771686ee695186726569e82f72723c78841bccdc0de33d0302e943e67f3432bd5fb9d13
+Size (hslua-module-text-0.2.1.tar.gz) = 3498 bytes
