@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.427 2020/01/15 14:37:18 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.428 2020/01/15 14:56:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -510,3 +510,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/modular-xorg-server to 1.20.7 [wiz 2020-01-15]
 	Updated textproc/libxlsxwriter to 0.9.3 [sjmulder 2020-01-15]
 	Updated math/sc-im to 0.7.0nb9 [sjmulder 2020-01-15]
+	Added misc/lr version 1.5 [nia 2020-01-15]
