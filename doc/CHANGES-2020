@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.436 2020/01/15 19:13:10 minskim Exp $
+$NetBSD: CHANGES-2020,v 1.437 2020/01/15 20:42:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -520,3 +520,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-faker to 4.0.0 [adam 2020-01-15]
 	Added www/hs-http-types version 0.12.3 [pho 2020-01-15]
 	Updated math/py-sympy to 1.4 [minskim 2020-01-15]
+	Added www/firefox-esr version 68 [nia 2020-01-15]
