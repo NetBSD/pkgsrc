@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.433 2020/01/15 16:56:03 pho Exp $
+$NetBSD: CHANGES-2020,v 1.434 2020/01/15 18:05:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -516,3 +516,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/hs-hslua-module-text version 0.2.1 [pho 2020-01-15]
 	Updated security/acmesh to 2.8.5 [ryoon 2020-01-15]
 	Added www/hs-cookie version 0.4.5 [pho 2020-01-15]
+	Updated devel/py-importlib-metadata to 1.4.0 [adam 2020-01-15]
+	Updated devel/py-faker to 4.0.0 [adam 2020-01-15]
