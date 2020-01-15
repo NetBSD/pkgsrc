@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.26 2019/03/25 19:56:08 markd Exp $
+$NetBSD: distinfo,v 1.27 2020/01/15 15:31:28 wiz Exp $
 
-SHA1 (rdesktop-1.8.4.tar.gz) = b937573e3f76a494a2b9092a440c9ea3e862d1f3
-RMD160 (rdesktop-1.8.4.tar.gz) = 5ad95433c369a9cff11b765e181d97ac41bf8582
-SHA512 (rdesktop-1.8.4.tar.gz) = 9e4f6723eb0baab31ad11f1c5c29a4753c655386c2381d01646b7834c959ffc2ec1e0c2f3f73626255aa018889709758d97387c7563da98bb1b7f269610929ae
-Size (rdesktop-1.8.4.tar.gz) = 321448 bytes
-SHA1 (patch-aa) = a56f15d51e32b3e53fd1e42736944a6805cbe9e0
-SHA1 (patch-ssl.c) = 491b8d8dc8b39d013469fc803177d8163dd42fa3
+SHA1 (rdesktop-1.9.0.tar.gz) = cbd6a4dab1f0638fe30354c0d081133562d2ca62
+RMD160 (rdesktop-1.9.0.tar.gz) = a403d660585dc4f8433ea885359e4452148a2c98
+SHA512 (rdesktop-1.9.0.tar.gz) = e101147b496ae70118c2756bf120007d4748aad9d9917d9ebc0878ffaf35764500861c548ef0528722777555c78e1d3d146b6f3691daa2b8657b0d3a541094f5
+Size (rdesktop-1.9.0.tar.gz) = 368980 bytes
+SHA1 (patch-Makefile.in) = 46cec50c90b5e7aff2ae0f3f02df7b7a5b709f0a
+SHA1 (patch-xwin.c) = 1910b5e237c66961061ef5a2e7404ad22444cee8
