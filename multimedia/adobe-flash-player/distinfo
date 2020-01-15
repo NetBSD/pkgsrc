@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.40 2020/01/15 13:43:51 tsutsui Exp $
+$NetBSD: distinfo,v 1.41 2020/01/15 16:43:49 tsutsui Exp $
 
 SHA1 (adobe-flash-player-32.0.0.314/flash_player_npapi_linux.i386.tar.gz) = 5a0d25eebd2a6be3ca82c6d80b44c95410863360
 RMD160 (adobe-flash-player-32.0.0.314/flash_player_npapi_linux.i386.tar.gz) = d37605360292ab0624158b28af395171314c1d05
 SHA512 (adobe-flash-player-32.0.0.314/flash_player_npapi_linux.i386.tar.gz) = 8271fc0062c2fb838c9fb0e6ae5e2cbdd9b314cd1b82304ca88a98151f02be9d67936aa43b7b207a020423240238b501b7ae869eb8470904871cc626ebe07b2d
 Size (adobe-flash-player-32.0.0.314/flash_player_npapi_linux.i386.tar.gz) = 8537211 bytes
+SHA1 (adobe-flash-player-32.0.0.314/flash_player_npapi_linux.x86_64.tar.gz) = 493b4b5ee4e1fcc528496154af24c01dceb38653
+RMD160 (adobe-flash-player-32.0.0.314/flash_player_npapi_linux.x86_64.tar.gz) = 1d341ef6a45bb06d4d66de54408b00f569cb33d6
+SHA512 (adobe-flash-player-32.0.0.314/flash_player_npapi_linux.x86_64.tar.gz) = 1d75b37d5f097f91ac1eac44293cb97728c6e50505dcb75e55135b79cb94929908616d51aed34697bf59dc46ffe9b49c2d24bd817c1ee720c0e34390fc6e4678
+Size (adobe-flash-player-32.0.0.314/flash_player_npapi_linux.x86_64.tar.gz) = 9243290 bytes
