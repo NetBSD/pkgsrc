@@ -17,6 +17,7 @@ bootstrap:
 	./bootstrap
 
 Note that this is only for the most simple case, using pkgsrc's defaults.
+
 Please consult `bootstrap/README` and `bootstrap/README.OS` for detailed
 information about bootstrapping.
 
@@ -57,7 +58,7 @@ Additional links
 
 - [The pkgsrc guide](https://www.netbsd.org/docs/pkgsrc/)
 - [pkgsrc in the NetBSD Wiki](https://wiki.netbsd.org/pkgsrc/)
-- [pkgsrc.se](http://pkgsrc.se/) - a browsable index for pkgsrc packages
+- [Searchable index of packages in pkgsrc](http://pkgsrc.se/)
 - [pkgsrc-wip](https://pkgsrc.org/wip/) - a project to get more people actively involved with creating packages for pkgsrc
 - [pkgsrc on Twitter](https://twitter.com/pkgsrc)
 - [pkgsrcCon](https://pkgsrc.org/pkgsrcCon)
