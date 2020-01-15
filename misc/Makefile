@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.531 2020/01/13 22:30:34 nia Exp $
+# $NetBSD: Makefile,v 1.532 2020/01/15 14:56:46 nia Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -180,6 +180,7 @@ SUBDIR+=	linux-words
 SUBDIR+=	loco
 SUBDIR+=	logsurfer
 SUBDIR+=	lookup
+SUBDIR+=	lr
 SUBDIR+=	lv
 SUBDIR+=	m17n-db
 SUBDIR+=	m17n-docs
