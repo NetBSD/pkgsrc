@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2019/11/14 10:42:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2020/01/15 18:05:31 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -20,9 +20,6 @@ ${PYSITELIB}/faker/build_docs.pyo
 ${PYSITELIB}/faker/cli.py
 ${PYSITELIB}/faker/cli.pyc
 ${PYSITELIB}/faker/cli.pyo
-${PYSITELIB}/faker/compat.py
-${PYSITELIB}/faker/compat.pyc
-${PYSITELIB}/faker/compat.pyo
 ${PYSITELIB}/faker/config.py
 ${PYSITELIB}/faker/config.pyc
 ${PYSITELIB}/faker/config.pyo
@@ -278,6 +275,9 @@ ${PYSITELIB}/faker/providers/color/__init__.pyo
 ${PYSITELIB}/faker/providers/color/ar_PS/__init__.py
 ${PYSITELIB}/faker/providers/color/ar_PS/__init__.pyc
 ${PYSITELIB}/faker/providers/color/ar_PS/__init__.pyo
+${PYSITELIB}/faker/providers/color/color.py
+${PYSITELIB}/faker/providers/color/color.pyc
+${PYSITELIB}/faker/providers/color/color.pyo
 ${PYSITELIB}/faker/providers/color/en_US/__init__.py
 ${PYSITELIB}/faker/providers/color/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/color/en_US/__init__.pyo
@@ -404,6 +404,9 @@ ${PYSITELIB}/faker/providers/credit_card/__init__.pyo
 ${PYSITELIB}/faker/providers/credit_card/en_US/__init__.py
 ${PYSITELIB}/faker/providers/credit_card/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/credit_card/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/credit_card/fa_IR/__init__.py
+${PYSITELIB}/faker/providers/credit_card/fa_IR/__init__.pyc
+${PYSITELIB}/faker/providers/credit_card/fa_IR/__init__.pyo
 ${PYSITELIB}/faker/providers/currency/__init__.py
 ${PYSITELIB}/faker/providers/currency/__init__.pyc
 ${PYSITELIB}/faker/providers/currency/__init__.pyo
@@ -1193,6 +1196,9 @@ ${PYSITELIB}/faker/providers/ssn/sv_SE/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/tl_PH/__init__.py
 ${PYSITELIB}/faker/providers/ssn/tl_PH/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/tl_PH/__init__.pyo
+${PYSITELIB}/faker/providers/ssn/tr_TR/__init__.py
+${PYSITELIB}/faker/providers/ssn/tr_TR/__init__.pyc
+${PYSITELIB}/faker/providers/ssn/tr_TR/__init__.pyo
 ${PYSITELIB}/faker/providers/ssn/uk_UA/__init__.py
 ${PYSITELIB}/faker/providers/ssn/uk_UA/__init__.pyc
 ${PYSITELIB}/faker/providers/ssn/uk_UA/__init__.pyo
@@ -1208,6 +1214,9 @@ ${PYSITELIB}/faker/providers/user_agent/__init__.pyo
 ${PYSITELIB}/faker/providers/user_agent/en_US/__init__.py
 ${PYSITELIB}/faker/providers/user_agent/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/user_agent/en_US/__init__.pyo
+${PYSITELIB}/faker/proxy.py
+${PYSITELIB}/faker/proxy.pyc
+${PYSITELIB}/faker/proxy.pyo
 ${PYSITELIB}/faker/utils/__init__.py
 ${PYSITELIB}/faker/utils/__init__.pyc
 ${PYSITELIB}/faker/utils/__init__.pyo
