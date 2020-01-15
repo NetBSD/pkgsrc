@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.425 2020/01/15 14:24:13 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.426 2020/01/15 14:36:31 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -508,3 +508,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/adobe-flash-player to 32.0.0.314 [tsutsui 2020-01-15]
 	Added devel/hs-hslua-module-system version 0.2.1 [pho 2020-01-15]
 	Updated x11/modular-xorg-server to 1.20.7 [wiz 2020-01-15]
+	Updated textproc/libxlsxwriter to 0.9.3 [sjmulder 2020-01-15]
