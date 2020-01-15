@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/01/15 14:56:46 nia Exp $
+
+SHA1 (lr-1.5.tar.gz) = ceeb27c471b78bb0a34f077138690511020efd6c
+RMD160 (lr-1.5.tar.gz) = 3045c617329176f6b804251446a82cf9ba468bdc
+SHA512 (lr-1.5.tar.gz) = f703dcc4e79c2ab631ac10b19a566074480c1f62ccbdea32ea550256cc6c907454c90e6fc8a93f23ce2ffbd6dfb631bacbbb2e1c1828cbebb8a9c4a79d605f12
+Size (lr-1.5.tar.gz) = 37824 bytes
+SHA1 (patch-Makefile) = 0a611c0e7448b7576279a5d62989800ce921e3f2
