@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1084 2020/01/15 06:45:51 pho Exp $
+# $NetBSD: Makefile,v 1.1085 2020/01/15 07:04:32 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -280,6 +280,7 @@ SUBDIR+=	hfstospell
 SUBDIR+=	highlight
 SUBDIR+=	highway
 SUBDIR+=	hre
+SUBDIR+=	hs-HsYAML
 SUBDIR+=	hs-attoparsec
 SUBDIR+=	hs-blaze-html
 SUBDIR+=	hs-blaze-markup
