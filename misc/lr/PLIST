@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/15 14:56:46 nia Exp $
+bin/lr
+man/man1/lr.1
+share/zsh/site-functions/_lr
