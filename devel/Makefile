@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2992 2020/01/15 07:20:11 pho Exp $
+# $NetBSD: Makefile,v 1.2993 2020/01/15 07:20:47 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -509,7 +509,7 @@ SUBDIR+=	hs-data-default-instances-old-locale
 SUBDIR+=	hs-deepseq-generics
 SUBDIR+=	hs-dlist
 SUBDIR+=	hs-either
-SUBDIR+=	hs-error
+SUBDIR+=	hs-errors
 SUBDIR+=	hs-exceptions
 SUBDIR+=	hs-extensible-exceptions
 SUBDIR+=	hs-fail
