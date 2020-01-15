@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/15 11:29:04 pho Exp $
+
+SHA1 (text-conversions-0.3.0.tar.gz) = 3555a90bbcff6f0a54ef8f373064450aea38cac8
+RMD160 (text-conversions-0.3.0.tar.gz) = 9e0ea86cb6dd9e1980a5556579344d78a5858396
+SHA512 (text-conversions-0.3.0.tar.gz) = 767816f953468932ab579d0cbdd20f7bbe1fc72c4ed8a857bc7bfa52a2d07abafc2065e9844ddea49f44bcf32b06e5c1abd64a222498cc6435129f2b36c036ec
+Size (text-conversions-0.3.0.tar.gz) = 5232 bytes
