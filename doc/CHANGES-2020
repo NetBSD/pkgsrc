@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.429 2020/01/15 15:01:42 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.430 2020/01/15 15:31:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -512,3 +512,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/sc-im to 0.7.0nb9 [sjmulder 2020-01-15]
 	Added misc/lr version 1.5 [nia 2020-01-15]
 	Updated graphics/libsixel to 1.8.6 [tsutsui 2020-01-15]
+	Updated net/rdesktop to 1.9.0 [wiz 2020-01-15]
