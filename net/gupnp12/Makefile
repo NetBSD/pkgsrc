@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/11/03 11:45:36 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/15 00:10:02 wiz Exp $
 
-DISTNAME=	gupnp-1.2.1
+DISTNAME=	gupnp-1.2.2
 PKGNAME=	${DISTNAME:S/gupnp/gupnp12/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gupnp/${PKGVERSION_NOREV:R}/}
@@ -33,7 +33,7 @@ pre-configure:
 .endif
 
 .include "../../archivers/xz/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.39.90
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.58.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/python/application.mk"
