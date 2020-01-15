@@ -1,0 +1,5 @@
+cmark-gfm is an extended version of the C reference implementation of
+CommonMark, a rationalized version of Markdown syntax with a spec.
+This package adds GitHub Flavored Markdown extensions to the upstream
+implementation (https://github.com/jgm/cmark), as defined in the spec
+(https://github.github.com/gfm/).
