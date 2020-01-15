@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/15 14:56:46 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/15 16:24:18 nia Exp $
 
 DISTNAME=	lr-1.5
 CATEGORIES=	misc
@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/leahneukirchen/lr
 COMMENT=	List files, recursively
 LICENSE=	mit
 
+MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.pkg.mk"
