@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/10/19 17:07:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/01/15 09:03:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -70,6 +70,12 @@ ${PYSITELIB}/anytree/node/node.pyo
 ${PYSITELIB}/anytree/node/nodemixin.py
 ${PYSITELIB}/anytree/node/nodemixin.pyc
 ${PYSITELIB}/anytree/node/nodemixin.pyo
+${PYSITELIB}/anytree/node/symlinknode.py
+${PYSITELIB}/anytree/node/symlinknode.pyc
+${PYSITELIB}/anytree/node/symlinknode.pyo
+${PYSITELIB}/anytree/node/symlinknodemixin.py
+${PYSITELIB}/anytree/node/symlinknodemixin.pyc
+${PYSITELIB}/anytree/node/symlinknodemixin.pyo
 ${PYSITELIB}/anytree/node/util.py
 ${PYSITELIB}/anytree/node/util.pyc
 ${PYSITELIB}/anytree/node/util.pyo
