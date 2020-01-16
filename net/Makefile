@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1292 2020/01/16 11:45:19 pho Exp $
+# $NetBSD: Makefile,v 1.1293 2020/01/16 14:03:50 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -121,7 +121,6 @@ SUBDIR+=	dynipclient
 SUBDIR+=	echoping
 SUBDIR+=	ed2k-gtk-gui
 SUBDIR+=	edonkey2k
-SUBDIR+=	ekiga
 SUBDIR+=	enet
 SUBDIR+=	entropy
 SUBDIR+=	erlang-esip
