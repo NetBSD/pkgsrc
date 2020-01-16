@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3002 2020/01/16 14:36:51 taca Exp $
+# $NetBSD: Makefile,v 1.3003 2020/01/16 15:51:17 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2737,6 +2737,7 @@ SUBDIR+=	ruby-rspec-mocks
 SUBDIR+=	ruby-rspec-rails
 SUBDIR+=	ruby-rspec-support
 SUBDIR+=	ruby-rspec_junit_formatter
+SUBDIR+=	ruby-ruby2_keywords
 SUBDIR+=	ruby-rugged
 SUBDIR+=	ruby-semantic_puppet
 SUBDIR+=	ruby-setup
