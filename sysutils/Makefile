@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.852 2020/01/16 15:05:10 nia Exp $
+# $NetBSD: Makefile,v 1.853 2020/01/16 15:08:43 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -215,7 +215,6 @@ SUBDIR+=	gnome-pkgview
 SUBDIR+=	gnome-vfs
 SUBDIR+=	gnome-vfs-monikers
 SUBDIR+=	gnome-vfsmm
-SUBDIR+=	gnome-volume-manager
 SUBDIR+=	gnometoaster
 SUBDIR+=	gnuit
 SUBDIR+=	goreman
