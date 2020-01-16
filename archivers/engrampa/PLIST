@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2019/09/13 05:42:26 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/01/16 02:31:41 gutteridge Exp $
 bin/engrampa
 lib/caja/extensions-2.0/libcaja-engrampa.la
 libexec/engrampa-server
 libexec/engrampa/isoinfo.sh
-libexec/engrampa/rpm2cpio
 man/man1/engrampa.1
 share/applications/engrampa.desktop
 share/caja/extensions/libcaja-engrampa.caja-extension
