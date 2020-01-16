@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.449 2020/01/16 10:20:25 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.450 2020/01/16 10:46:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -537,3 +537,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-limits to 1.4.1 [adam 2020-01-16]
 	Updated devel/ocaml-ppx_hash to 0.13.0 [jaapb 2020-01-16]
 	Updated devel/ocaml-ppx_let to 0.13.0 [jaapb 2020-01-16]
+	Updated devel/snappy to 1.1.8 [adam 2020-01-16]
+	Updated lang/npm to 6.13.6 [adam 2020-01-16]
