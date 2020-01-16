@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.513 2020/01/16 16:00:19 taca Exp $
+$NetBSD: CHANGES-2020,v 1.514 2020/01/16 16:02:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -602,3 +602,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/hs-JuicyPixels version 3.3.4 [pho 2020-01-16]
 	Added devel/ruby-ruby2_keywords version 0.0.1 [taca 2020-01-16]
 	Updated devel/ruby-ruby2_keywords to 0.0.2 [taca 2020-01-16]
+	Updated devel/ruby-stomp to 1.4.9 [taca 2020-01-16]
