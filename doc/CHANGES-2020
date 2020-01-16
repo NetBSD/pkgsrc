@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.470 2020/01/16 13:53:13 pho Exp $
+$NetBSD: CHANGES-2020,v 1.471 2020/01/16 13:54:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -559,3 +559,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-ppx_bin_prot to 0.13.0 [jaapb 2020-01-16]
 	Removed chat/gossip [nia 2020-01-16]
 	Added devel/hs-ipynb version 0.1 [pho 2020-01-16]
+	Updated graphics/ImageMagick to 7.0.9.14 [wiz 2020-01-16]
