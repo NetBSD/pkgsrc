@@ -19,5 +19,9 @@
 	<false/>
 	<key>LaunchOnlyOnce</key>
 	<true/>
+	<key>StandardOutPath</key>
+	<string>@VARBASE@/log/pkgsrc-rc.d-boot.out</string>
+	<key>StandardErrorPath</key>
+	<string>@VARBASE@/log/pkgsrc-rc.d-boot.err</string>
 </dict>
 </plist>
