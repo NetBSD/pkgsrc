@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.482 2020/01/16 14:24:20 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.483 2020/01/16 14:28:40 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -571,3 +571,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed misc/gnome-utils [nia 2020-01-16]
 	Updated devel/ocaml-ppx_expect to 0.13.0 [jaapb 2020-01-16]
 	Updated devel/ocaml-typerep to 0.13.0 [jaapb 2020-01-16]
+	Updated devel/ocaml-ppx_module_timer to 0.13.0 [jaapb 2020-01-16]
