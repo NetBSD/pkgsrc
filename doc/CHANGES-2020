@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.452 2020/01/16 12:40:47 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.453 2020/01/16 12:44:54 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -541,3 +541,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/npm to 6.13.6 [adam 2020-01-16]
 	Added net/hs-mime-types version 0.1.0.9 [pho 2020-01-16]
 	Updated devel/ocaml-base to 0.13.0 [jaapb 2020-01-16]
+	Updated devel/ocaml-stdio to 0.13.0 [jaapb 2020-01-16]
