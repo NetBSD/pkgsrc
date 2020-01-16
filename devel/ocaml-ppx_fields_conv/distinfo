@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/12 18:18:40 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/01/16 12:54:38 jaapb Exp $
 
-SHA1 (ppx_fields_conv-0.12.0.tar.gz) = 091fa3095491e1fb55b0263d721208ab9d013ad1
-RMD160 (ppx_fields_conv-0.12.0.tar.gz) = 389437d92cb75c8fe0d8a42967a4bc5f105f6fd4
-SHA512 (ppx_fields_conv-0.12.0.tar.gz) = 6edbf67be1135d4b98251957127ec9976bdac01fdf72186e6abfb8be3e899a0a5e9354342f7352f87331019ead84ca9bfbab9c624d22c8035304e2c0eff3624f
-Size (ppx_fields_conv-0.12.0.tar.gz) = 13678 bytes
+SHA1 (ppx_fields_conv-0.13.0.tar.gz) = c0c2b8ec32e75ad13e54da772e7437d2f956dea7
+RMD160 (ppx_fields_conv-0.13.0.tar.gz) = 2ca2d200a29e7b0fe304ab15a64abbf40f4ead19
+SHA512 (ppx_fields_conv-0.13.0.tar.gz) = 3524ade934de67d106d09efc244e187bea44ec8f5fe3272c8a0e13021a7ea01bfb0c86bdae881f47923e1fa7229c91b494dac56bf3b43cb71fa9e580f6bdc7bd
+Size (ppx_fields_conv-0.13.0.tar.gz) = 14324 bytes
