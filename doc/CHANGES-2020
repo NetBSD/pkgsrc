@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.521 2020/01/16 23:27:11 pho Exp $
+$NetBSD: CHANGES-2020,v 1.522 2020/01/16 23:54:11 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -610,3 +610,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/openssl to 1.1.1dnb1 [wiz 2020-01-16]
 	Added net/hs-socks version 0.6.1 [pho 2020-01-16]
 	Added time/hs-hourglass version 0.2.12 [pho 2020-01-16]
+	Added devel/hs-asn1-types version 0.3.3 [pho 2020-01-16]
