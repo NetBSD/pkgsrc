@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.438 2020/01/16 00:39:06 pho Exp $
+$NetBSD: CHANGES-2020,v 1.439 2020/01/16 01:00:33 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -522,3 +522,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-sympy to 1.4 [minskim 2020-01-15]
 	Added www/firefox-esr version 68 [nia 2020-01-15]
 	Added devel/hs-basement version 0.0.11 [pho 2020-01-16]
+	Added devel/hs-memory version 0.15.0 [pho 2020-01-16]
