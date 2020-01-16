@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/12 18:22:34 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/01/16 10:20:11 jaapb Exp $
 
-SHA1 (ppx_let-0.12.0.tar.gz) = e67b83a14f968c0291ab815d7a983cb12ca31c1f
-RMD160 (ppx_let-0.12.0.tar.gz) = 01b2ce2a06d79e139ef421f4931e2796a2f93cbf
-SHA512 (ppx_let-0.12.0.tar.gz) = 23b27f6c18e8975dcb264323156e9f6e8d99d8120a24eb611e333e3048586dad83adbae9ca42685b9c1d27971788fc87e3d1747c5b560e8dfe839ac73109581e
-Size (ppx_let-0.12.0.tar.gz) = 7782 bytes
+SHA1 (ppx_let-0.13.0.tar.gz) = 3a1c7c74acc7da22ebcf7b3ded3baba033e27df1
+RMD160 (ppx_let-0.13.0.tar.gz) = 2cf5123bf6162a492699a106566d6fab57686196
+SHA512 (ppx_let-0.13.0.tar.gz) = c6670c9e84dc7b7652b15426e8645994a8c343d5ba913c0149152de46b09dffaebfcbe44e7f26b1eab7b89d797facff5d43aaebbf956dfdee3d66ec4049bc95c
+Size (ppx_let-0.13.0.tar.gz) = 7932 bytes
