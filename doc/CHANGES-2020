@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.466 2020/01/16 13:37:22 pho Exp $
+$NetBSD: CHANGES-2020,v 1.467 2020/01/16 13:38:11 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -555,3 +555,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/openssl to 1.1.1d [jperkin 2020-01-16]
 	Updated devel/ocaml-base_quickcheck to 0.13.0 [jaapb 2020-01-16]
 	Added www/hs-http-client version 0.6.4 [pho 2020-01-16]
+	Updated devel/ocaml-ppx_variants_conv to 0.13.0 [jaapb 2020-01-16]
