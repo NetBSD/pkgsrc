@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/12/29 16:22:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/01/16 10:30:59 adam Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/.licensee.json
@@ -11,7 +11,6 @@ lib/node_modules/npm/CONTRIBUTING.md
 lib/node_modules/npm/LICENSE
 lib/node_modules/npm/Makefile
 lib/node_modules/npm/README.md
-lib/node_modules/npm/appveyor.yml
 lib/node_modules/npm/bin/node-gyp-bin/node-gyp
 lib/node_modules/npm/bin/node-gyp-bin/node-gyp.cmd
 lib/node_modules/npm/bin/npm
