@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.483 2020/01/16 14:28:40 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.484 2020/01/16 14:31:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -572,3 +572,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-ppx_expect to 0.13.0 [jaapb 2020-01-16]
 	Updated devel/ocaml-typerep to 0.13.0 [jaapb 2020-01-16]
 	Updated devel/ocaml-ppx_module_timer to 0.13.0 [jaapb 2020-01-16]
+	Updated devel/ruby-curses to 1.3.2 [taca 2020-01-16]
