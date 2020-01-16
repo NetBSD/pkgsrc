@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.468 2020/01/16 13:40:13 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.469 2020/01/16 13:44:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -557,3 +557,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/hs-http-client version 0.6.4 [pho 2020-01-16]
 	Updated devel/ocaml-ppx_variants_conv to 0.13.0 [jaapb 2020-01-16]
 	Updated devel/ocaml-ppx_bin_prot to 0.13.0 [jaapb 2020-01-16]
+	Removed chat/gossip [nia 2020-01-16]
