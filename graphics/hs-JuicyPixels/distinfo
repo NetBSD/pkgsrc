@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/16 15:51:15 pho Exp $
+
+SHA1 (JuicyPixels-3.3.4.tar.gz) = ca9d08097c386f6ebea7cc4128da4cf7de5e616c
+RMD160 (JuicyPixels-3.3.4.tar.gz) = 7c3b8ce6606c4c481ccd58e75fa13a77a3fde175
+SHA512 (JuicyPixels-3.3.4.tar.gz) = 26ceaa7b9d97507b8a46f22203b7abc9e6d1abdd61659710b8aa822690089e11bcdcd9369557225e52eac3ddc71c31c137e5acd701f3d41b20a4c5c3310eb812
+Size (JuicyPixels-3.3.4.tar.gz) = 131407 bytes
