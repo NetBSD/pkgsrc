@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/16 13:18:13 jaapb Exp $
+${OCAML_SITELIB}/ppx_cold/META
+${OCAML_SITELIB}/ppx_cold/dune-package
+${OCAML_SITELIB}/ppx_cold/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_cold/ppx_cold.a
+${OCAML_SITELIB}/ppx_cold/ppx_cold.cma
+${OCAML_SITELIB}/ppx_cold/ppx_cold.cmi
+${OCAML_SITELIB}/ppx_cold/ppx_cold.cmt
+${OCAML_SITELIB}/ppx_cold/ppx_cold.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_cold/ppx_cold.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_cold/ppx_cold.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_cold/ppx_cold.cmxs
+${OCAML_SITELIB}/ppx_cold/ppx_cold.ml
+${OCAML_SITELIB}/ppx_cold/ppx_cold.mli
+share/doc/ppx_cold/LICENSE.md
+share/doc/ppx_cold/README.md
