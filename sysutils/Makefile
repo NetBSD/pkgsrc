@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.851 2020/01/11 16:18:15 nia Exp $
+# $NetBSD: Makefile,v 1.852 2020/01/16 15:05:10 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -212,7 +212,6 @@ SUBDIR+=	gnome-menus
 SUBDIR+=	gnome-mount
 SUBDIR+=	gnome-nds-thumbnailer
 SUBDIR+=	gnome-pkgview
-SUBDIR+=	gnome-system-tools
 SUBDIR+=	gnome-vfs
 SUBDIR+=	gnome-vfs-monikers
 SUBDIR+=	gnome-vfsmm
