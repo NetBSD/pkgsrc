@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.440 2020/01/16 01:32:04 nia Exp $
+$NetBSD: CHANGES-2020,v 1.441 2020/01/16 02:31:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -524,3 +524,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-basement version 0.0.11 [pho 2020-01-16]
 	Added devel/hs-memory version 0.15.0 [pho 2020-01-16]
 	Updated audio/picard to 2.2.3 [nia 2020-01-16]
+	Updated archivers/engrampa to 1.22.3 [gutteridge 2020-01-16]
