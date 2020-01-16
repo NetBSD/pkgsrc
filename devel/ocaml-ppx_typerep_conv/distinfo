@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 10:32:11 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/01/16 14:06:43 jaapb Exp $
 
-SHA1 (ppx_typerep_conv-0.12.0.tar.gz) = ad0c1133d30f973aa64b7735549803728e938099
-RMD160 (ppx_typerep_conv-0.12.0.tar.gz) = 819a0b296484c8f7a59fb0cfd21f458aff80b16f
-SHA512 (ppx_typerep_conv-0.12.0.tar.gz) = 309cfe2ac18b66553e0b620466505a959a302be41b463ae4dbc4b4136c12917b47682bc65fe427dfe1d54424ecb26b920c98711ec01e332d54634c26b5c76651
-Size (ppx_typerep_conv-0.12.0.tar.gz) = 9377 bytes
+SHA1 (ppx_typerep_conv-0.13.0.tar.gz) = 2f936cb66dc9a4df7c6127d3802e6e2e7c1e61bc
+RMD160 (ppx_typerep_conv-0.13.0.tar.gz) = e7232866708878476c9ced4dcb14f62211400aeb
+SHA512 (ppx_typerep_conv-0.13.0.tar.gz) = 781138254753cde62fce02e1c5e3c415931b27736ca7bf7b8294683aa7048818e7e3c0b5b41a21337a370b595161c8c64f095a1a97dbea9dd1ce8bc1c5f1d3af
+Size (ppx_typerep_conv-0.13.0.tar.gz) = 9418 bytes
