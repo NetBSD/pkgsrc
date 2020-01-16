@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2018/03/13 17:00:51 taca Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/16 15:33:29 taca Exp $
 
-DISTNAME=	kgio-2.11.2
+DISTNAME=	kgio-2.11.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bogomips.org/kgio/
+HOMEPAGE=	https://yhbt.net/kgio/
 COMMENT=	Provides non-blocking I/O methods for Ruby
 LICENSE=	gnu-lgpl-v2.1
 
