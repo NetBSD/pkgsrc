@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/11/03 11:45:35 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2020/01/16 13:33:50 jperkin Exp $
 
 DISTNAME=	freerdp-1.0.2
 PKGREVISION=	36
@@ -14,7 +14,6 @@ TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 USE_CMAKE=		yes
 USE_TOOLS+=		pkg-config
-USE_OLD_DES_API=	yes
 
 PKGCONFIG_OVERRIDE+=	freerdp.pc.in
 

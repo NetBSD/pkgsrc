@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/11/03 11:45:34 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2020/01/16 13:33:50 jperkin Exp $
 
 DISTNAME=	freeradius-server-2.2.10
 PKGNAME=	${DISTNAME:S/-server//}
@@ -17,7 +17,6 @@ CONFLICTS+=		freeradius<2.0
 USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
-USE_OLD_DES_API=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

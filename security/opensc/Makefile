@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/10/13 10:54:04 mlelstv Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/16 13:33:51 jperkin Exp $
 
 OPENSC_PKG_VERSION=	0.19.0
 DISTNAME=		opensc-${OPENSC_PKG_VERSION}
@@ -14,7 +14,6 @@ BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_OLD_DES_API=	YES
 USE_TOOLS+=		gmake pkg-config
 WRKSRC=			${WRKDIR}/OpenSC-${OPENSC_PKG_VERSION}
 

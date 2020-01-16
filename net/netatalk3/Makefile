@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/11/03 11:45:44 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/16 13:33:50 jperkin Exp $
 
 DISTNAME=	netatalk-3.1.12
 PKGNAME=	${DISTNAME:C/-/3-/}
@@ -13,7 +13,6 @@ COMMENT=	Netatalk AFP file services
 LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
-USE_OLD_DES_API=	yes
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 PKG_CONFIG=		yes
