@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.497 2020/01/16 15:22:16 taca Exp $
+$NetBSD: CHANGES-2020,v 1.498 2020/01/16 15:29:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -586,3 +586,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/ruby-sequel to 5.28.0 [taca 2020-01-16]
 	Updated databases/ruby-sqlite3 to 1.4.2 [taca 2020-01-16]
 	Updated devel/hoe to 3.21.0 [taca 2020-01-16]
+	Updated devel/ruby-gettext to 3.3.2 [taca 2020-01-16]
