@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3000 2020/01/16 13:59:30 taca Exp $
+# $NetBSD: Makefile,v 1.3001 2020/01/16 14:03:50 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -981,7 +981,6 @@ SUBDIR+=	ode
 SUBDIR+=	ogre
 SUBDIR+=	okteta
 SUBDIR+=	omake
-SUBDIR+=	opal
 SUBDIR+=	open-vcdiff
 SUBDIR+=	opencm
 SUBDIR+=	opengrok
@@ -2037,7 +2036,6 @@ SUBDIR+=	protobuf-c
 SUBDIR+=	pstreams
 SUBDIR+=	pth
 SUBDIR+=	pthread-sem
-SUBDIR+=	ptlib
 SUBDIR+=	pvs
 SUBDIR+=	pwlib
 SUBDIR+=	py-Deprecated
