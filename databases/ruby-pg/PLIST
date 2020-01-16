@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2018/09/23 13:56:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/01/16 15:16:19 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -31,6 +31,7 @@ ${GEM_LIBDIR}/ext/pg_coder.c
 ${GEM_LIBDIR}/ext/pg_connection.c
 ${GEM_LIBDIR}/ext/pg_copy_coder.c
 ${GEM_LIBDIR}/ext/pg_errors.c
+${GEM_LIBDIR}/ext/pg_record_coder.c
 ${GEM_LIBDIR}/ext/pg_result.c
 ${GEM_LIBDIR}/ext/pg_text_decoder.c
 ${GEM_LIBDIR}/ext/pg_text_encoder.c
@@ -42,8 +43,8 @@ ${GEM_LIBDIR}/ext/pg_type_map_by_column.c
 ${GEM_LIBDIR}/ext/pg_type_map_by_mri_type.c
 ${GEM_LIBDIR}/ext/pg_type_map_by_oid.c
 ${GEM_LIBDIR}/ext/pg_type_map_in_ruby.c
-${GEM_LIBDIR}/ext/util.c
-${GEM_LIBDIR}/ext/util.h
+${GEM_LIBDIR}/ext/pg_util.c
+${GEM_LIBDIR}/ext/pg_util.h
 ${GEM_LIBDIR}/ext/vc/pg.sln
 ${GEM_LIBDIR}/ext/vc/pg_18/pg.vcproj
 ${GEM_LIBDIR}/ext/vc/pg_19/pg_19.vcproj
