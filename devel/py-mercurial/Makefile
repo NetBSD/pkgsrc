@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2020/01/04 23:00:27 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2020/01/16 14:32:50 wiz Exp $
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://www.mercurial-scm.org/release/
 
@@ -28,8 +27,8 @@ INSTALLATION_DIRS+=	share/doc/mercurial
 .include "version.mk"
 
 # Known test failures:
-# none as of 5.2
-# Ran 817 tests, 79 skipped, 0 failed.
+# none as of 5.2.2
+# Ran 820 tests, 76 skipped, 0 failed.
 #
 # test-narrow-shallow (sometimes):
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6150
