@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2018/03/13 16:49:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2020/01/16 15:28:47 taca Exp $
 bin/rmsgcat${RUBY_SUFFIX}
 bin/rmsgfmt${RUBY_SUFFIX}
 bin/rmsginit${RUBY_SUFFIX}
@@ -37,7 +37,7 @@ ${GEM_LIBDIR}/lib/gettext/tools/msginit.rb
 ${GEM_LIBDIR}/lib/gettext/tools/msgmerge.rb
 ${GEM_LIBDIR}/lib/gettext/tools/parser/erb.rb
 ${GEM_LIBDIR}/lib/gettext/tools/parser/glade.rb
-${GEM_LIBDIR}/lib/gettext/tools/parser/haml.rb
+${GEM_LIBDIR}/lib/gettext/tools/parser/gtk_builder_ui_definitions.rb
 ${GEM_LIBDIR}/lib/gettext/tools/parser/ruby.rb
 ${GEM_LIBDIR}/lib/gettext/tools/task.rb
 ${GEM_LIBDIR}/lib/gettext/tools/xgettext.rb
@@ -1366,6 +1366,7 @@ ${GEM_LIBDIR}/samples/po/zh_TW/hello_tk.po
 ${GEM_LIBDIR}/samples/po/zh_TW/hello_tk.po.time_stamp
 ${GEM_LIBDIR}/src/po_parser.ry
 ${GEM_LIBDIR}/test/fixtures/_.rb
+${GEM_LIBDIR}/test/fixtures/_/backtick.rb
 ${GEM_LIBDIR}/test/fixtures/_/block_parameter.rb
 ${GEM_LIBDIR}/test/fixtures/_/double_quote_in_double_quote.rb
 ${GEM_LIBDIR}/test/fixtures/_/double_quote_in_single_quote.rb
@@ -1376,11 +1377,14 @@ ${GEM_LIBDIR}/test/fixtures/_/multiple_messages_in_same_line.rb
 ${GEM_LIBDIR}/test/fixtures/_/multiple_same_messages.rb
 ${GEM_LIBDIR}/test/fixtures/_/one_line.rb
 ${GEM_LIBDIR}/test/fixtures/_/one_new_line.rb
+${GEM_LIBDIR}/test/fixtures/_/percent_strings.rb
+${GEM_LIBDIR}/test/fixtures/_/quoted_symbol.rb
 ${GEM_LIBDIR}/test/fixtures/backslash.rb
 ${GEM_LIBDIR}/test/fixtures/erb/ascii.rhtml
 ${GEM_LIBDIR}/test/fixtures/erb/ascii.rxml
 ${GEM_LIBDIR}/test/fixtures/erb/non_ascii.rhtml
 ${GEM_LIBDIR}/test/fixtures/gladeparser.glade
+${GEM_LIBDIR}/test/fixtures/gtk_builder_ui_definitions.ui
 ${GEM_LIBDIR}/test/fixtures/hello.rb
 ${GEM_LIBDIR}/test/fixtures/lower_n_.rb
 ${GEM_LIBDIR}/test/fixtures/multi_text_domain.rb
@@ -1394,7 +1398,7 @@ ${GEM_LIBDIR}/test/fixtures/s_/custom.rb
 ${GEM_LIBDIR}/test/fixtures/simple.rb
 ${GEM_LIBDIR}/test/fixtures/untranslated.rb
 ${GEM_LIBDIR}/test/fixtures/upper_n_.rb
-${GEM_LIBDIR}/test/gettext-test-utils.rb
+${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/locale/cr/LC_MESSAGES/plural.mo
 ${GEM_LIBDIR}/test/locale/da/LC_MESSAGES/plural.mo
 ${GEM_LIBDIR}/test/locale/da/LC_MESSAGES/plural_error.mo
@@ -1505,6 +1509,7 @@ ${GEM_LIBDIR}/test/tools/files/simple_1.po
 ${GEM_LIBDIR}/test/tools/files/simple_2.po
 ${GEM_LIBDIR}/test/tools/files/simple_translation.rb
 ${GEM_LIBDIR}/test/tools/files/version.po
+${GEM_LIBDIR}/test/tools/parser/test_gtk_builder_ui_definitions.rb
 ${GEM_LIBDIR}/test/tools/parser/test_ruby.rb
 ${GEM_LIBDIR}/test/tools/test.pot
 ${GEM_LIBDIR}/test/tools/test_msgcat.rb
