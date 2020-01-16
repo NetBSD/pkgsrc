@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.507 2020/01/16 15:45:47 taca Exp $
+$NetBSD: CHANGES-2020,v 1.508 2020/01/16 15:46:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -596,3 +596,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-necromancer to 0.5.1 [taca 2020-01-16]
 	Updated devel/ruby-rspec-support to 3.9.2 [taca 2020-01-16]
 	Updated devel/ruby-rspec-core to 3.9.1 [taca 2020-01-16]
+	Removed sysutils/gnome-pkgview [nia 2020-01-16]
