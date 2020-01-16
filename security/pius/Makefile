@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2020/01/15 13:07:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/16 12:18:31 wiz Exp $
 
 DISTNAME=		pius-3.0.0
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=		1
 CATEGORIES=		security python
-MASTER_SITES=		${MASTER_SITE_GITHUB:=jaymzh/pius/releases/download/v3.0.0/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=jaymzh/}
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
