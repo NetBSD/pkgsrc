@@ -1,0 +1,4 @@
+# ruby2_keywords
+
+Provides empty `Module#ruby2_keywords` method, for the forward
+source-level compatibility against ruby2.7 and ruby3.
