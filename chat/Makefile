@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2020/01/08 14:45:51 nia Exp $
+# $NetBSD: Makefile,v 1.236 2020/01/16 13:44:19 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -36,7 +36,6 @@ SUBDIR+=	gajim-plugin-omemo
 SUBDIR+=	gg2
 SUBDIR+=	gloox
 SUBDIR+=	goofey
-SUBDIR+=	gossip
 SUBDIR+=	hexchat
 SUBDIR+=	i2cb
 SUBDIR+=	i2cbd
