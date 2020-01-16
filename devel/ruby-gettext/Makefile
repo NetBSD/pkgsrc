@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2018/03/13 16:49:03 taca Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/16 15:28:47 taca Exp $
 
-DISTNAME=	gettext-3.2.9
+DISTNAME=	gettext-3.3.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,6 +11,7 @@ LICENSE=	ruby-license OR gnu-lgpl-v3
 DEPENDS+=	${RUBY_PKGPREFIX}-locale>=2.0.5:../../devel/ruby-locale
 DEPENDS+=	${RUBY_PKGPREFIX}-text>=1.3.0:../../textproc/ruby-text
 
+USE_LANGUAGES=		# none
 RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
