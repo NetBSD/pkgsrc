@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/10/16 16:45:16 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/16 08:20:01 adam Exp $
 
-DISTNAME=	pypiserver-1.3.1
+DISTNAME=	pypiserver-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypiserver/}
