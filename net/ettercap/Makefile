@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2019/07/21 22:25:30 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2020/01/16 13:33:50 jperkin Exp $
 
 DISTNAME=		ettercap-0.6.b
 PKGREVISION=		39
@@ -22,7 +22,6 @@ CONFIGURE_ARGS+=	--enable-https
 
 # needs putwin()
 INCOMPAT_CURSES=	NetBSD-[0-4].*
-USE_OLD_DES_API=	yes
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
