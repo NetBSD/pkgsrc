@@ -1,8 +1,8 @@
-# $NetBSD: builtin.mk,v 1.44 2019/11/04 21:12:56 rillig Exp $
+# $NetBSD: builtin.mk,v 1.45 2020/01/16 13:30:29 jperkin Exp $
 
 BUILTIN_PKG:=	openssl
 
-BUILTIN_FIND_LIBS:=			crypto des ssl
+BUILTIN_FIND_LIBS:=			crypto ssl
 BUILTIN_FIND_HEADERS_VAR:=		H_OPENSSLCONF H_OPENSSLV
 BUILTIN_FIND_HEADERS.H_OPENSSLCONF=	openssl/opensslconf.h
 BUILTIN_FIND_HEADERS.H_OPENSSLV=	openssl/opensslv.h
@@ -48,7 +48,7 @@ BUILTIN_VERSION.openssl!=						\
 			} else if (i > 26) {				\
 				patchlevel = "a";			\
 			} else {					\
-				patchlevel = substr(alpha,i,1);			\
+				patchlevel = substr(alpha,i,1);		\
 			}						\
 			printf "%s%s%s%s\n",				\
 				major, minor, teeny, patchlevel;	\
@@ -132,76 +132,6 @@ BUILDLINK_PREFIX.openssl=	/boot/common
 .      endif
 .    endif
 .  endif
-
-# By default, we don't bother with the old DES API.
-USE_OLD_DES_API?=	no
-.  if !empty(USE_OLD_DES_API:M[yY][eE][sS])
-#
-# If we're using the old DES API, then check to see if the old DES
-# code was factored out into a separate library and header files and
-# no longer a part of libcrypto.
-#
-.    if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
-.      if exists(${BUILDLINK_PREFIX.openssl}/include/des.h) && \
-          !empty(BUILTIN_LIB_FOUND.des:M[yY][eE][sS])
-BUILDLINK_TRANSFORM+=	l:crypto:des:crypto
-WRAPPER_REORDER_CMDS+=	reorder:l:des:crypto
-.      endif
-.    endif
-
-# The idea is to avoid the need to patch source files for packages that
-# use OpenSSL for DES support by ensuring that including <openssl/des.h>
-# will always present the old DES API.
-#
-# (1) If des_old.h exists, then we're using OpenSSL>=0.9.7, and
-#     <openssl/des.h> already does the right thing.
-#
-# (2) If des_old.h doesn't exist, then one of two things is happening:
-#     (a) If <openssl/des.h> is old and (only) supports the old DES API,
-#         then <openssl/des.h> does the right thing.
-#     (b) If it's NetBSD's Special(TM) one that stripped out the old DES
-#         support into a separate library and header (-ldes, <des.h>),
-#         then we create a new header <openssl/des.h> that includes the
-#         system one and <des.h>, and we create an <openssl/des_old.h>
-#         that just includes <des.h>.
-#
-BUILDLINK_TARGETS+=	buildlink-openssl-des-h
-.    if !target(buildlink-openssl-des-h)
-.PHONY: buildlink-openssl-des-h
-buildlink-openssl-des-h:
-	${RUN}								\
-	bl_odes_h="${BUILDLINK_DIR}/include/openssl/des.h";		\
-	bl_odes_old_h="${BUILDLINK_DIR}/include/openssl/des_old.h";	\
-	odes_h="${BUILDLINK_PREFIX.openssl}/include/openssl/des.h";	\
-	odes_old_h="${BUILDLINK_PREFIX.openssl}/include/openssl/des_old.h"; \
-	des_h="${BUILDLINK_PREFIX.openssl}/include/des.h";		\
-	if ${TEST} -f "$$odes_old_h"; then				\
-		${ECHO_BUILDLINK_MSG} "<openssl/des.h> supports old DES API."; \
-		exit 0;							\
-	elif ${GREP} -q "des_cblock" "$$odes_h" 2>/dev/null; then	\
-		${ECHO_BUILDLINK_MSG} "<openssl/des.h> supports old DES API."; \
-		exit 0;							\
-	elif ${TEST} -f "$$des_h" -a -f "$$odes_h"; then		\
-		${ECHO_BUILDLINK_MSG} "Creating $$bl_odes_h";		\
-		${RM} -f $$bl_odes_h;					\
-		${MKDIR} `${DIRNAME} $$bl_odes_h`;			\
-		( ${ECHO} "/* Created by openssl/builtin.mk:${.TARGET} */"; \
-		  ${ECHO} "#include \"$$odes_h\"";			\
-		  ${ECHO} "#include \"$$des_h\"";			\
-		) > $$bl_odes_h;					\
-		${ECHO_BUILDLINK_MSG} "Creating $$bl_odes_old_h";	\
-		${RM} -f $$bl_odes_old_h;				\
-		${MKDIR} `${DIRNAME} $$bl_odes_old_h`;			\
-		( ${ECHO} "/* Created by openssl/builtin.mk:${.TARGET} */"; \
-		  ${ECHO} "#include \"$$des_h\"";			\
-		) > $$bl_odes_old_h;					\
-		exit 0;							\
-	else								\
-		${ECHO} "Unable to find headers for old DES API.";	\
-		exit 1;							\
-	fi
-.    endif
-.  endif  # USE_OLD_DES_API == yes
 
 .  if defined(PKG_SYSCONFDIR.openssl)
 SSLDIR=	${PKG_SYSCONFDIR.openssl}
