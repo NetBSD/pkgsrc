@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.479 2020/01/16 14:10:44 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.480 2020/01/16 14:11:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -568,3 +568,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed net/ekiga [nia 2020-01-16]
 	Updated devel/ocaml-ppx_typerep_conv to 0.13.0 [jaapb 2020-01-16]
 	Updated devel/ocaml-ppx_jane to 0.13.0 [jaapb 2020-01-16]
+	Removed misc/gnome-utils [nia 2020-01-16]
