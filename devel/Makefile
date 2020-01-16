@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2999 2020/01/16 13:53:51 pho Exp $
+# $NetBSD: Makefile,v 1.3000 2020/01/16 13:59:30 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2606,6 +2606,7 @@ SUBDIR+=	ruby-cucumber-tag_expressions
 SUBDIR+=	ruby-cucumber-wire
 SUBDIR+=	ruby-curses
 SUBDIR+=	ruby-daemon_controller
+SUBDIR+=	ruby-deep_merge
 SUBDIR+=	ruby-delayer
 SUBDIR+=	ruby-delayer-deferred
 SUBDIR+=	ruby-dep
