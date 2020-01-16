@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/12 18:34:12 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/16 12:58:31 jaapb Exp $
 ${OCAML_SITELIB}/ppx_here/META
 ${OCAML_SITELIB}/ppx_here/dune-package
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_here/expander/ppx_here_expander.a
@@ -23,6 +23,16 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_here/ppx_here.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_here/ppx_here.cmxs
 ${OCAML_SITELIB}/ppx_here/ppx_here.ml
 ${OCAML_SITELIB}/ppx_here/ppx_here.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_here/runtime-lib/ppx_here_lib.a
+${OCAML_SITELIB}/ppx_here/runtime-lib/ppx_here_lib.cma
+${OCAML_SITELIB}/ppx_here/runtime-lib/ppx_here_lib.cmi
+${OCAML_SITELIB}/ppx_here/runtime-lib/ppx_here_lib.cmt
+${OCAML_SITELIB}/ppx_here/runtime-lib/ppx_here_lib.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_here/runtime-lib/ppx_here_lib.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_here/runtime-lib/ppx_here_lib.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_here/runtime-lib/ppx_here_lib.cmxs
+${OCAML_SITELIB}/ppx_here/runtime-lib/ppx_here_lib.ml
+${OCAML_SITELIB}/ppx_here/runtime-lib/ppx_here_lib.mli
 share/doc/ppx_here/CHANGES.md
 share/doc/ppx_here/LICENSE.md
 share/doc/ppx_here/README.md
