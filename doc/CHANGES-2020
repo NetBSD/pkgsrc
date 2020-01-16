@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.442 2020/01/16 02:38:27 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.443 2020/01/16 08:25:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -526,3 +526,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/picard to 2.2.3 [nia 2020-01-16]
 	Updated archivers/engrampa to 1.22.3 [gutteridge 2020-01-16]
 	Updated devel/kdiff3 to 1.8.1nb2 [gutteridge 2020-01-16]
+	Updated archivers/py-zipp to 1.0.0 [adam 2020-01-16]
+	Updated net/py-pypiserver to 1.3.2 [adam 2020-01-16]
+	Updated lang/py-six to 1.14.0 [adam 2020-01-16]
+	Updated devel/py-typed-ast to 1.4.1 [adam 2020-01-16]
