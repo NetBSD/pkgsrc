@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.456 2020/01/16 13:04:03 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.457 2020/01/16 13:06:32 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -545,3 +545,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-ppx_fields_conv to 0.13.0 [jaapb 2020-01-16]
 	Updated devel/ocaml-ppx_here to 0.13.0 [jaapb 2020-01-16]
 	Updated devel/ocaml-ppx_sexp_message to 0.13.0 [jaapb 2020-01-16]
+	Added devel/hs-streaming-commons version 0.2.1.2 [pho 2020-01-16]
