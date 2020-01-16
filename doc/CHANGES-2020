@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.475 2020/01/16 14:04:13 nia Exp $
+$NetBSD: CHANGES-2020,v 1.476 2020/01/16 14:05:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -564,3 +564,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-ppx_optcomp to 0.13.0 [jaapb 2020-01-16]
 	Updated devel/ocaml-ppx_optional to 0.13.0 [jaapb 2020-01-16]
 	Removed devel/ptlib [nia 2020-01-16]
+	Removed devel/opal [nia 2020-01-16]
