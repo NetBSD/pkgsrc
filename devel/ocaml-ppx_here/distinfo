@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/12 18:34:12 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/01/16 12:58:31 jaapb Exp $
 
-SHA1 (ppx_here-0.12.0.tar.gz) = ac988a0d7641f05971b663f1ddf6e31bfa0708e4
-RMD160 (ppx_here-0.12.0.tar.gz) = 0f6ef89665668e292014858d991fa1a75a61a73f
-SHA512 (ppx_here-0.12.0.tar.gz) = 978a8af50a8b8848c7020c082e32c8e38841219320ec23c4adfec920cdd0ea0faa77ea90fd3470d24277d319ffb1a643557557a1755931c44201319370cfa5c6
-Size (ppx_here-0.12.0.tar.gz) = 4833 bytes
+SHA1 (ppx_here-0.13.0.tar.gz) = 2a51e9e403e5f8d89b92b57fe8c1328dd2753b8c
+RMD160 (ppx_here-0.13.0.tar.gz) = 28236e3d5242374d67ddeae76b009fbaa3787e61
+SHA512 (ppx_here-0.13.0.tar.gz) = 58db7457950768013da428bdb64675e6dadabb74b364e6e03759b5bed470b408ae154c3e695151d69d3269359358e4a2795d1510b55de33f63ae9cd8035ab002
+Size (ppx_here-0.13.0.tar.gz) = 4987 bytes
