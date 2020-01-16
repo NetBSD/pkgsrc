@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2019/11/02 14:35:46 taca Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/16 15:47:49 taca Exp $
 
-DISTNAME=	rspec-mocks-3.9.0
+DISTNAME=	rspec-mocks-3.9.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
