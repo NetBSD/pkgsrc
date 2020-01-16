@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/12 18:42:12 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/01/16 13:23:05 jaapb Exp $
 
-SHA1 (ppx_assert-0.12.0.tar.gz) = 8a8e4f9162a1e20f8e9363c6f0c0c7aaaec426fe
-RMD160 (ppx_assert-0.12.0.tar.gz) = a613e0e668e4c26f81135b35e2daf0a18d7d9aa9
-SHA512 (ppx_assert-0.12.0.tar.gz) = 2436fc0826d31968492dfd081e7f16f92c864551a4733ba1a5a9d19890774a73b2d8f903acaa45cb3c6ea938f769107290403b1ec157706009b4792bb04e9e16
-Size (ppx_assert-0.12.0.tar.gz) = 7194 bytes
+SHA1 (ppx_assert-0.13.0.tar.gz) = 7e31bac3249d6ac2540639f481361f9267ccdea3
+RMD160 (ppx_assert-0.13.0.tar.gz) = 1bbb6708a6614b1af5438fb94894a80490f53bd8
+SHA512 (ppx_assert-0.13.0.tar.gz) = 7822f08d76e1c2c99d7b40ad2f86db7bddb73e6789e715fe1f994a96e0ea9a89acae5027a4ce5eb8ba17260b7f20f20a51ac027a37c055d1a2e314a2701250c5
+Size (ppx_assert-0.13.0.tar.gz) = 7196 bytes
