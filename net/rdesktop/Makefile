@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2020/01/15 15:31:28 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2020/01/16 21:01:47 tnn Exp $
 
 DISTNAME=		rdesktop-1.9.0
 CATEGORIES=		net
@@ -41,5 +41,6 @@ CONFIGURE_ARGS+=	--with-sound=alsa
 .include "../../mk/oss.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
