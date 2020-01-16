@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2019/06/07 07:29:48 adam Exp $
+$NetBSD: distinfo,v 1.10 2020/01/16 08:25:25 adam Exp $
 
-SHA1 (typed_ast-1.4.0.tar.gz) = f290b4b8db56c37540008a2f8a9a1df7608a56f6
-RMD160 (typed_ast-1.4.0.tar.gz) = e67e4c2e532abe18b243ae7c8a6dcb28a4420107
-SHA512 (typed_ast-1.4.0.tar.gz) = b74e7fc51cde16439eae7cf41f0bdb95b5998362eccb73cf736f343cdab64daab63bc0f95f05a4911b229761749bdd31ac83423b58f2f3e1e1dadc7e6015bc1c
-Size (typed_ast-1.4.0.tar.gz) = 206620 bytes
+SHA1 (typed_ast-1.4.1.tar.gz) = 5d55c49ff49df31aa2429bd707f3ff13d6d1ea2d
+RMD160 (typed_ast-1.4.1.tar.gz) = 3632c480ea0ab4c17b198ca0a4c8a315d20f7766
+SHA512 (typed_ast-1.4.1.tar.gz) = a3154fe723aeadf998694aba0faf516e5b9abb876e4c7d91843b3694474ff6911b3e77a6cb7366cfa8e5a573b331906b6a0b134b25627aaba0dcbe92c4e25590
+Size (typed_ast-1.4.1.tar.gz) = 208587 bytes
 SHA1 (patch-setup.py) = 997fc582f7b9e9e068fa8d6d5760acfe792554f2
