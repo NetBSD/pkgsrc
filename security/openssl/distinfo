@@ -1,14 +1,7 @@
-$NetBSD: distinfo,v 1.136 2020/01/02 20:31:05 sevan Exp $
+$NetBSD: distinfo,v 1.137 2020/01/16 13:30:29 jperkin Exp $
 
-SHA1 (openssl-1.0.2u.tar.gz) = 740916d79ab0d209d2775277b1c6c3ec2f6502b2
-RMD160 (openssl-1.0.2u.tar.gz) = b8e7e5df9582e29fdd00bd03d47e980a39ba11ab
-SHA512 (openssl-1.0.2u.tar.gz) = c455bb309e20e2c2d47fdc5619c734d107d5c8c38c1409903ce979acc120b0d5fa0312917c0aa0d630e402d092a703d4249643f36078e8528a3cafc9dac6ab32
-Size (openssl-1.0.2u.tar.gz) = 5355412 bytes
-SHA1 (patch-Configure) = 2d963d781314276a0ee1bc531df6bc50f0f6b32b
-SHA1 (patch-Makefile.org) = d2a9295003a8b88718a328b01ff6bcbbc102ec0b
-SHA1 (patch-Makefile.shared) = 273154600c6cf0cf4de4ae16d56c5555bca5f9ad
-SHA1 (patch-apps_Makefile) = 60113291f2a25f5f1c1dba35e8173087bcd4cc30
-SHA1 (patch-config) = 345cadece3bdf0ef0a273a6c9ba6d0cbb1026a31
-SHA1 (patch-crypto_bn_bn__prime.pl) = a516f3709a862d85e659d466e895419b1e0a94c8
-SHA1 (patch-crypto_des_Makefile) = 7a23f9883ff6c93ec0e5d08e1332cc95de8cdba2
-SHA1 (patch-tools_Makefile) = 67f0b9b501969382fd89b678c277d32bf5d294bc
+SHA1 (openssl-1.1.1d.tar.gz) = 056057782325134b76d1931c48f2c7e6595d7ef4
+RMD160 (openssl-1.1.1d.tar.gz) = 86401a37e3e36c63d3619e3e699a3bfd9ea1e042
+SHA512 (openssl-1.1.1d.tar.gz) = 2bc9f528c27fe644308eb7603c992bac8740e9f0c3601a130af30c9ffebbf7e0f5c28b76a00bbb478bad40fbe89b4223a58d604001e1713da71ff4b7fe6a08a7
+Size (openssl-1.1.1d.tar.gz) = 8845861 bytes
+SHA1 (patch-Configurations_unix-Makefile.tmpl) = 160466226b58f391c5096e0ba38ee298002296dc
