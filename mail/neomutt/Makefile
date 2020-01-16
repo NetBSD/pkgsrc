@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2019/12/18 13:47:58 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2020/01/16 13:52:39 tm Exp $
 
 DISTNAME=		neomutt-20191129
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
@@ -15,11 +16,14 @@ USE_TOOLS+=		msgfmt gmake
 BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+BUILD_DEPENDS+=		w3m-[0-9]*:../../www/w3m
 
 HAS_CONFIGURE=		yes
 EXTRACT_USING=		bsdtar
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+
+CONFIGURE_ARGS.SunOS+=	--disable-inotify
 
 EGDIR=			${PREFIX}/share/examples/neomutt
 CONF_FILES=		${EGDIR}/neomuttrc ${PKG_SYSCONFDIR}/neomuttrc
