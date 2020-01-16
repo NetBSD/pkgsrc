@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.493 2020/01/16 15:17:55 taca Exp $
+$NetBSD: CHANGES-2020,v 1.494 2020/01/16 15:18:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -582,3 +582,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/ruby-mysql2 to 0.5.3 [taca 2020-01-16]
 	Updated databases/ruby-pg to 1.2.2 [taca 2020-01-16]
 	Updated databases/ruby-postgres_ext to 3.0.1 [taca 2020-01-16]
+	Removed sysutils/gnome-mount [nia 2020-01-16]
