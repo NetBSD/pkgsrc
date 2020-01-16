@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.472 2020/01/16 13:59:46 taca Exp $
+$NetBSD: CHANGES-2020,v 1.473 2020/01/16 14:01:18 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -561,3 +561,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-ipynb version 0.1 [pho 2020-01-16]
 	Updated graphics/ImageMagick to 7.0.9.14 [wiz 2020-01-16]
 	Added devel/ruby-deep_merge version 1.2.1 [taca 2020-01-16]
+	Updated devel/ocaml-ppx_optcomp to 0.13.0 [jaapb 2020-01-16]
