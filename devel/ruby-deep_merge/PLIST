@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/16 13:58:20 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/deep_merge.rb
+${GEM_LIBDIR}/lib/deep_merge/core.rb
+${GEM_LIBDIR}/lib/deep_merge/deep_merge_hash.rb
+${GEM_LIBDIR}/lib/deep_merge/rails_compat.rb
+${GEM_LIBDIR}/test/test_deep_merge.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
