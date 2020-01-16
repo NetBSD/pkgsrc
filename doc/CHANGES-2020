@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.491 2020/01/16 15:15:24 taca Exp $
+$NetBSD: CHANGES-2020,v 1.492 2020/01/16 15:16:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -580,3 +580,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed sysutils/gnome-volume-manager [nia 2020-01-16]
 	Updated databases/ruby-moneta to 1.2.1 [taca 2020-01-16]
 	Updated databases/ruby-mysql2 to 0.5.3 [taca 2020-01-16]
+	Updated databases/ruby-pg to 1.2.2 [taca 2020-01-16]
