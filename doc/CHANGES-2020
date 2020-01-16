@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.448 2020/01/16 10:19:39 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.449 2020/01/16 10:20:25 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -536,3 +536,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-iso3166 to 1.0.1 [adam 2020-01-16]
 	Updated devel/py-limits to 1.4.1 [adam 2020-01-16]
 	Updated devel/ocaml-ppx_hash to 0.13.0 [jaapb 2020-01-16]
+	Updated devel/ocaml-ppx_let to 0.13.0 [jaapb 2020-01-16]
