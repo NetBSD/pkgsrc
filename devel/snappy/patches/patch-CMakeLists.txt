@@ -1,12 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2019/01/10 09:38:18 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2020/01/16 10:44:25 adam Exp $
 
 Correcly link against googletest libraries.
 gtest-all.cc: needs -lpthread
 
---- CMakeLists.txt.orig	2017-08-24 23:54:23.000000000 +0000
+--- CMakeLists.txt.orig	2020-01-14 18:58:53.000000000 +0000
 +++ CMakeLists.txt
-@@ -118,7 +118,7 @@ if(SNAPPY_BUILD_TESTS)
-       "${PROJECT_SOURCE_DIR}/snappy-test.cc"
+@@ -212,7 +212,7 @@ if(SNAPPY_BUILD_TESTS)
+       "snappy-test.cc"
    )
    target_compile_definitions(snappy_unittest PRIVATE -DHAVE_CONFIG_H)
 -  target_link_libraries(snappy_unittest snappy ${GFLAGS_LIBRARIES})
