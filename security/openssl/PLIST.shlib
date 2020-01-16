@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.shlib,v 1.3 2013/02/06 21:40:33 jperkin Exp $
-lib/libcrypto.so
-lib/libcrypto.so.1.0.0
-lib/libssl.so
-lib/libssl.so.1.0.0
