@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2019/07/21 22:23:58 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2020/01/16 13:33:50 jperkin Exp $
 
 DISTNAME=		jpilot-1.8.2
 PKGREVISION=		9
@@ -13,7 +13,6 @@ CONFLICTS+=		jpilot-libplugin-[0-9]*
 
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_OLD_DES_API=	YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LANGUAGES+=		c
 
