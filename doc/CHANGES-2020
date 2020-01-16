@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.510 2020/01/16 15:49:53 nia Exp $
+$NetBSD: CHANGES-2020,v 1.511 2020/01/16 15:51:23 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -599,3 +599,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed sysutils/gnome-pkgview [nia 2020-01-16]
 	Updated devel/ruby-rspec-mocks to 3.9.1 [taca 2020-01-16]
 	Removed sysutils/gnome-device-manager [nia 2020-01-16]
+	Added graphics/hs-JuicyPixels version 3.3.4 [pho 2020-01-16]
