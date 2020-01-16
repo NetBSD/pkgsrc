@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.515 2020/01/16 16:04:37 taca Exp $
+$NetBSD: CHANGES-2020,v 1.516 2020/01/16 16:07:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -604,3 +604,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-ruby2_keywords to 0.0.2 [taca 2020-01-16]
 	Updated devel/ruby-stomp to 1.4.9 [taca 2020-01-16]
 	Updated devel/ruby-test-unit to 3.3.5 [taca 2020-01-16]
+	Updated fonts/ruby-ttfunk to 1.6.1 [taca 2020-01-16]
