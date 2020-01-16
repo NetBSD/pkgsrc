@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.516 2020/01/16 16:07:45 taca Exp $
+$NetBSD: CHANGES-2020,v 1.517 2020/01/16 16:28:28 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -605,3 +605,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-stomp to 1.4.9 [taca 2020-01-16]
 	Updated devel/ruby-test-unit to 3.3.5 [taca 2020-01-16]
 	Updated fonts/ruby-ttfunk to 1.6.1 [taca 2020-01-16]
+	Added devel/hs-cereal version 0.5.8.1 [pho 2020-01-16]
