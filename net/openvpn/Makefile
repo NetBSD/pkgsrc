@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2019/11/04 12:52:13 adam Exp $
+# $NetBSD: Makefile,v 1.72 2020/01/16 13:33:51 jperkin Exp $
 
 DISTNAME=	${OPENVPN_DISTNAME}
 CATEGORIES=	net
@@ -19,7 +19,6 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-dependency-tracking
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-USE_OLD_DES_API=	yes
 TEST_TARGET=		check
 
 PKG_SYSCONFSUBDIR=	openvpn
