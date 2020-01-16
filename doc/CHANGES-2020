@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.463 2020/01/16 13:30:17 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.464 2020/01/16 13:31:24 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -552,3 +552,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-ppx_bench to 0.13.0 [jaapb 2020-01-16]
 	Updated devel/ocaml-splittable_random to 0.13.0 [jaapb 2020-01-16]
 	Updated devel/ocaml-fieldslib to 0.13.0 [jaapb 2020-01-16]
+	Updated security/openssl to 1.1.1d [jperkin 2020-01-16]
