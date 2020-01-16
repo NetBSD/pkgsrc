@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2019/01/26 21:12:54 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/16 16:47:32 schmonz Exp $
 #
 
-PKGNAME=		rc.d-boot-20181228
+PKGNAME=		rc.d-boot-20200116
 CATEGORIES=		pkgtools
 
 MAINTAINER=		schmonz@NetBSD.org
@@ -30,7 +30,7 @@ SUBST_FILES.paths=	rc.d-boot
 SUBST_FILES.paths+=	org.pkgsrc.rc.d-boot.plist \
 			pkgsrc-rc.d-boot \
 			pkgsrc-rc.d-boot.service
-SUBST_VARS.paths=	GREP PKGNAME PREFIX RCD_SCRIPTS_DIR RCORDER
+SUBST_VARS.paths=	GREP PKGNAME PREFIX RCD_SCRIPTS_DIR RCORDER VARBASE
 
 FILES_SUBST+=		RCDBOOT_STYLE=${RCDBOOT_STYLE:Q}
 FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR:Q}
@@ -65,6 +65,7 @@ RCDBOOT_STYLE=		openbsd-rcd
 
 .if ${RCDBOOT_STYLE} == "unknown"
 # Help wanted! Some known boot schemes we'd like to support:
+# - https://wiki.alpinelinux.org/wiki/Alpine_Linux_Init_System
 # - https://wiki.gentoo.org/wiki/Project:OpenRC
 # - http://smarden.org/runit/
 # - https://jdebp.eu/Softwares/nosh/
@@ -72,7 +73,7 @@ RCDBOOT_STYLE=		openbsd-rcd
 BROKEN_ON_PLATFORM+=	${OPSYS}-*-*
 .endif
 
-BUILD_DEFS+=		RCDBOOT_STYLE RCD_SCRIPTS_DIR
+BUILD_DEFS+=		RCDBOOT_STYLE RCD_SCRIPTS_DIR VARBASE
 INSTALLATION_DIRS=	sbin ${EGDIR}
 
 do-extract:
