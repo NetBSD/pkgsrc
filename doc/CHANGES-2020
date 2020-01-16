@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.473 2020/01/16 14:01:18 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.474 2020/01/16 14:03:29 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -562,3 +562,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ImageMagick to 7.0.9.14 [wiz 2020-01-16]
 	Added devel/ruby-deep_merge version 1.2.1 [taca 2020-01-16]
 	Updated devel/ocaml-ppx_optcomp to 0.13.0 [jaapb 2020-01-16]
+	Updated devel/ocaml-ppx_optional to 0.13.0 [jaapb 2020-01-16]
