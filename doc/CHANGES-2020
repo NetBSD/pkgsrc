@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.505 2020/01/16 15:40:04 taca Exp $
+$NetBSD: CHANGES-2020,v 1.506 2020/01/16 15:44:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -594,3 +594,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-minitest to 5.14.0 [taca 2020-01-16]
 	Updated devel/ruby-mocha to 1.11.2 [taca 2020-01-16]
 	Updated devel/ruby-necromancer to 0.5.1 [taca 2020-01-16]
+	Updated devel/ruby-rspec-support to 3.9.2 [taca 2020-01-16]
