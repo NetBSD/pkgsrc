@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3001 2020/01/16 14:03:50 nia Exp $
+# $NetBSD: Makefile,v 1.3002 2020/01/16 14:36:51 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2619,6 +2619,7 @@ SUBDIR+=	ruby-extlib
 SUBDIR+=	ruby-facade
 SUBDIR+=	ruby-fast_gettext
 SUBDIR+=	ruby-ffi
+SUBDIR+=	ruby-ffi-compiler
 SUBDIR+=	ruby-ffi-yajl
 SUBDIR+=	ruby-fiddle
 SUBDIR+=	ruby-filesize
