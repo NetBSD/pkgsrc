@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-elf.awk,v 1.17 2018/03/23 04:31:53 triaxx Exp $
+# $NetBSD: check-shlibs-elf.awk,v 1.18 2020/01/16 22:53:11 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -41,8 +41,8 @@
 function shquote(IN, out) {
 	out = IN;
 	gsub("\\\\", "\\\\", out);
-	gsub("\\\n", "\\n", out);
-	gsub("\\\t", "\\t", out);
+	gsub("\n", "\\n", out);
+	gsub("\t", "\\t", out);
 	gsub(" ", "\\ ", out);
 	gsub("'", "\\'", out);
 	gsub("`", "\\`", out);
