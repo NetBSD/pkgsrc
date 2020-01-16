@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/16 23:53:58 pho Exp $
+
+SHA1 (asn1-types-0.3.3.tar.gz) = 89b788739ab9ebe73ff6b773832d4d4d0ac0ef23
+RMD160 (asn1-types-0.3.3.tar.gz) = a17402be3aa953e3d2fc16b71cd7385429606680
+SHA512 (asn1-types-0.3.3.tar.gz) = d83fca6d585103f7d112a314bfa4da98bf055cbc7541b55717db6260295fcb7dd96d1ac9a25e39ea31881f1a8454d19ed004d59f3c20118b26ef155a99ec5278
+Size (asn1-types-0.3.3.tar.gz) = 6478 bytes
