@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/26 16:25:55 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/16 15:17:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CODE_OF_CONDUCT.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/docs/querying.md
@@ -35,6 +37,7 @@ ${GEM_LIBDIR}/lib/postgres_ext/version.rb
 ${GEM_LIBDIR}/postgres_ext.gemspec
 ${GEM_LIBDIR}/test/arel/array_test.rb
 ${GEM_LIBDIR}/test/arel/inet_test.rb
+${GEM_LIBDIR}/test/queries/alias_test.rb
 ${GEM_LIBDIR}/test/queries/array_queries_test.rb
 ${GEM_LIBDIR}/test/queries/common_table_expression_test.rb
 ${GEM_LIBDIR}/test/queries/contains_test.rb
