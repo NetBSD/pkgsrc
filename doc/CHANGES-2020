@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.489 2020/01/16 15:09:11 nia Exp $
+$NetBSD: CHANGES-2020,v 1.490 2020/01/16 15:10:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -578,3 +578,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed sysutils/gnome-system-tools [nia 2020-01-16]
 	Updated audio/ruby-taglib to 1.0.0 [taca 2020-01-16]
 	Removed sysutils/gnome-volume-manager [nia 2020-01-16]
+	Updated databases/ruby-moneta to 1.2.1 [taca 2020-01-16]
