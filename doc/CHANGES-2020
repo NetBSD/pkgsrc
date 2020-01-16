@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.485 2020/01/16 14:32:59 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.486 2020/01/16 14:38:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -574,3 +574,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-ppx_module_timer to 0.13.0 [jaapb 2020-01-16]
 	Updated devel/ruby-curses to 1.3.2 [taca 2020-01-16]
 	Updated devel/py-mercurial to 5.2.2 [wiz 2020-01-16]
+	Added devel/ruby-ffi-compiler version 1.0.1 [taca 2020-01-16]
