@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/11/03 11:45:34 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/16 13:33:50 jperkin Exp $
 
 DISTNAME=	ettercap-NG-0.7.3
 PKGREVISION=	14
@@ -22,7 +22,6 @@ GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require
 USE_LIBTOOL=		YES
 USE_NCURSES=		YES # ncurses.h menu.h panel.h form.h
-USE_OLD_DES_API=	YES
 CPPFLAGS+=		-L${BUILDLINK_PREFIX.libnet11}/lib/libnet11
 CPPFLAGS+=		-L${PREFIX}/lib
 
