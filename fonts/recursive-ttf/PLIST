@@ -1,0 +1,66 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/17 16:17:21 ng0 Exp $
+share/fonts/X11/TTF/Recursive Mono Casual-Black Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-Black.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-Bold Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-Bold.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-ExtraBlack Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-ExtraBlack.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-ExtraBold Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-ExtraBold.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-Light Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-Light.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-Medium Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-Medium.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-Regular.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-SemiBold Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Casual-SemiBold.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-Black Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-Black.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-Bold Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-Bold.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-ExtraBlack Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-ExtraBlack.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-ExtraBold Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-ExtraBold.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-Light Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-Light.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-Medium Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-Medium.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-Regular.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-SemiBold Italic.ttf
+share/fonts/X11/TTF/Recursive Mono Linear-SemiBold.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-Black Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-Black.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-Bold Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-Bold.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-ExtraBlack Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-ExtraBlack.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-ExtraBold Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-ExtraBold.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-Light Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-Light.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-Medium Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-Medium.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-Regular.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-SemiBold Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Casual-SemiBold.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-Black Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-Black.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-Bold Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-Bold.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-ExtraBlack Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-ExtraBlack.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-ExtraBold Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-ExtraBold.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-Light Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-Light.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-Medium Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-Medium.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-Regular.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-SemiBold Italic.ttf
+share/fonts/X11/TTF/Recursive Sans Linear-SemiBold.ttf
+@pkgdir share/fonts/X11/OTF
