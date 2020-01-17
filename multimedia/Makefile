@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.291 2020/01/05 11:42:39 nia Exp $
+# $NetBSD: Makefile,v 1.292 2020/01/17 14:21:17 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -203,7 +203,6 @@ SUBDIR+=	ssr
 SUBDIR+=	streamlink
 SUBDIR+=	subtitleeditor
 SUBDIR+=	totem
-SUBDIR+=	totem-nautilus
 SUBDIR+=	totem-pl-parser
 SUBDIR+=	transcode
 SUBDIR+=	tstools
