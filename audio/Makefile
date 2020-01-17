@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.579 2019/12/07 19:00:06 nia Exp $
+# $NetBSD: Makefile,v 1.580 2020/01/17 05:43:17 gutteridge Exp $
 #
 
 COMMENT=	Audio tools
@@ -389,6 +389,7 @@ SUBDIR+=	py-libmtag
 SUBDIR+=	py-mad
 SUBDIR+=	py-mpd
 SUBDIR+=	py-mpd2
+SUBDIR+=	py-music21
 SUBDIR+=	py-musicbrainz
 SUBDIR+=	py-musicbrainz-ngs
 SUBDIR+=	py-musique
