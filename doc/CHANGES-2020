@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.556 2020/01/17 17:08:08 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.557 2020/01/17 17:09:16 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -645,3 +645,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added fonts/recursive-ttf version 1.030 [ng0 2020-01-17]
 	Added textproc/hs-hxt version 9.3.1.18 [pho 2020-01-17]
 	Updated geography/gpsd to 3.20 [gdt 2020-01-17]
+	Added textproc/hs-skylighting-core version 0.8.3 [pho 2020-01-17]
