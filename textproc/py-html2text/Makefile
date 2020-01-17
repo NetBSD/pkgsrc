@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2019/10/09 21:26:12 rhialto Exp $
+# $NetBSD: Makefile,v 1.56 2020/01/17 18:14:49 schmonz Exp $
 
-DISTNAME=	html2text-2019.9.26
+DISTNAME=	html2text-2020.1.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/html2text/}
