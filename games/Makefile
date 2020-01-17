@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.475 2020/01/14 13:28:42 nia Exp $
+# $NetBSD: Makefile,v 1.476 2020/01/17 15:12:00 nia Exp $
 #
 
 COMMENT=	Games
@@ -171,7 +171,6 @@ SUBDIR+=	golddig
 SUBDIR+=	granatier
 SUBDIR+=	greed
 SUBDIR+=	grhino
-SUBDIR+=	gtetrinet
 SUBDIR+=	gtkballs
 SUBDIR+=	gtklevel9
 SUBDIR+=	gtkmagnetic
