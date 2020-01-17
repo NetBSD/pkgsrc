@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.554 2020/01/17 16:18:11 ng0 Exp $
+$NetBSD: CHANGES-2020,v 1.555 2020/01/17 16:21:47 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -643,3 +643,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/hs-hxt-regex-xmlschema version 9.2.0.3 [pho 2020-01-17]
 	Added textproc/hs-hxt-unicode version 9.0.2.4 [pho 2020-01-17]
 	Added fonts/recursive-ttf version 1.030 [ng0 2020-01-17]
+	Added textproc/hs-hxt version 9.3.1.18 [pho 2020-01-17]
