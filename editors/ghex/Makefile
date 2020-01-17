@@ -1,29 +1,25 @@
-# $NetBSD: Makefile,v 1.53 2019/07/21 22:24:42 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.54 2020/01/17 14:44:43 nia Exp $
 
-DISTNAME=	ghex-2.24.0
-PKGREVISION=	46
+DISTNAME=	ghex-3.18.4
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ghex/2.24/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ghex/3.18/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnome.org/
+HOMEPAGE=	https://wiki.gnome.org/Apps/Ghex
 COMMENT=	Hex editor
+LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool msgfmt gmake
+USE_TOOLS+=	pkg-config
 
-PKGCONFIG_OVERRIDE+=	gtkhex.pc.in
-GCONF_SCHEMAS=		ghex2.schemas
+PYTHON_FOR_BUILD_ONLY=	tool
 
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../devel/atk/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../print/libgnomeprintui/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/data/gtkhex-3.pc
+
+.include "../../devel/meson/build.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
