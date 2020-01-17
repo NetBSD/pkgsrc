@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2019/07/02 13:44:05 gdt Exp $
+$NetBSD: distinfo,v 1.25 2020/01/17 17:08:01 gdt Exp $
 
-SHA1 (gpsd-3.19.tar.gz) = fd4a256189b4115b5668effcda555c04fa84a348
-RMD160 (gpsd-3.19.tar.gz) = b9f41521519f6887585eb4cafa85a058ad1385b0
-SHA512 (gpsd-3.19.tar.gz) = c9f9a9ff65759f852771ec4cf97ab15343c9176a149dd5ea6c2e2dc18b47aa7c7bf9ff1f2e8523121564d33a34ae6aa08169c5454847b4fe7848e616fd20a814
-Size (gpsd-3.19.tar.gz) = 10581777 bytes
+SHA1 (gpsd-3.20.tar.gz) = f5fa7cafd28bcebdaa99ffb365db9429530ebbec
+RMD160 (gpsd-3.20.tar.gz) = a87ed286b4a42092de54986889f0253990163d7e
+SHA512 (gpsd-3.20.tar.gz) = 557ef5e5f3b511da4fc441f4bb2e0cd2e23c2981e8b3ce2999973767a04fde070d3ec6f14af60d0e471320078e9f4d1144e5796e7927975ecfbd55fc97f470a9
+Size (gpsd-3.20.tar.gz) = 3600835 bytes
