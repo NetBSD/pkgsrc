@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.527 2020/01/17 00:53:40 pho Exp $
+$NetBSD: CHANGES-2020,v 1.528 2020/01/17 05:46:03 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -616,3 +616,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-asn1-parse version 0.9.5 [pho 2020-01-17]
 	Added security/hs-pem version 0.2.4 [pho 2020-01-17]
 	Added security/hs-x509 version 1.7.5 [pho 2020-01-17]
+	Added audio/py-music21 version 5.7.2 [gutteridge 2020-01-17]
