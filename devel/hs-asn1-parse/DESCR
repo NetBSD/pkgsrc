@@ -1,0 +1,2 @@
+Simple monadic parser for ASN1 stream types, when ASN1 pattern
+matching is not convenient.
