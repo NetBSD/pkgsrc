@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.542 2020/01/17 14:23:27 nia Exp $
+$NetBSD: CHANGES-2020,v 1.543 2020/01/17 14:25:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -631,3 +631,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/hs-tls version 1.5.3 [pho 2020-01-17]
 	Removed multimedia/totem-nautilus [nia 2020-01-17]
 	Removed sysutils/nautilus-sendto [nia 2020-01-17]
+	Removed sysutils/nautilus successor sysutils/caja [nia 2020-01-17]
