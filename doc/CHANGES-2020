@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.539 2020/01/17 13:06:46 pho Exp $
+$NetBSD: CHANGES-2020,v 1.540 2020/01/17 13:38:10 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -628,3 +628,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fasttracker2 to 1.06 [fox 2020-01-17]
 	Added security/hs-x509-store version 1.6.7 [pho 2020-01-17]
 	Added security/hs-x509-validation version 1.6.11 [pho 2020-01-17]
+	Added security/hs-tls version 1.5.3 [pho 2020-01-17]
