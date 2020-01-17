@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.534 2020/01/17 10:29:46 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.535 2020/01/17 10:31:55 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -623,3 +623,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-jane-street-headers to 0.13.0nb1 [jaapb 2020-01-17]
 	Updated devel/ocaml-ppx_derivers to 1.2.1 [jaapb 2020-01-17]
 	Updated devel/ocaml-dune to 2.1.3nb1 [jaapb 2020-01-17]
+	Updated devel/pcre-ocaml to 7.4.3 [jaapb 2020-01-17]
