@@ -1,0 +1,2 @@
+Immutable one-dimensional packed bit arrays. The main advantage should
+be compactness in memory.
