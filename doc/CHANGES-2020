@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.549 2020/01/17 15:25:51 pho Exp $
+$NetBSD: CHANGES-2020,v 1.550 2020/01/17 15:46:48 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -638,3 +638,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed games/gtetrinet [nia 2020-01-17]
 	Added www/hs-http-client-tls version 0.3.5.3 [pho 2020-01-17]
 	Added security/hs-SHA version 1.6.4.4 [pho 2020-01-17]
+	Added textproc/hs-hxt-charproperties version 9.4.0.0 [pho 2020-01-17]
