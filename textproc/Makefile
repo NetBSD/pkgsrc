@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1091 2020/01/17 15:47:26 pho Exp $
+# $NetBSD: Makefile,v 1.1092 2020/01/17 15:53:50 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -294,6 +294,7 @@ SUBDIR+=	hs-haddock-library
 SUBDIR+=	hs-hscolour
 SUBDIR+=	hs-hslua-module-text
 SUBDIR+=	hs-hxt-charproperties
+SUBDIR+=	hs-hxt-regex-xmlschema
 SUBDIR+=	hs-jira-wiki-markup
 SUBDIR+=	hs-libyaml
 SUBDIR+=	hs-pandoc-types
