@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/17 05:41:44 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/17 07:11:55 wiz Exp $
 
 VERSION=	5.7.2
 DISTNAME=	music21-noCorpus-${VERSION}
@@ -15,6 +15,8 @@ LICENSE=	modified-bsd OR gnu-lgpl-v3
 
 # 5.7.2 has partial support for Python 3.8.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+EGG_NAME=	music21-${VERSION}
 
 DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
