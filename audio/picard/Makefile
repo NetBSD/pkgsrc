@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/01/16 01:31:54 nia Exp $
+# $NetBSD: Makefile,v 1.42 2020/01/17 06:28:29 wiz Exp $
 
 DISTNAME=	picard-2.2.3
 CATEGORIES=	audio
@@ -24,7 +24,7 @@ CONFIGURE_SCRIPT=	setup.py
 CONFIGURE_ARGS+=	config
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
