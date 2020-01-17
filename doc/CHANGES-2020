@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.545 2020/01/17 14:44:54 nia Exp $
+$NetBSD: CHANGES-2020,v 1.546 2020/01/17 14:59:10 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -634,3 +634,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed sysutils/nautilus successor sysutils/caja [nia 2020-01-17]
 	Added security/hs-x509-system version 1.6.6 [pho 2020-01-17]
 	Updated editors/ghex to 3.18.4 [nia 2020-01-17]
+	Added net/hs-connection version 0.3.1 [pho 2020-01-17]
