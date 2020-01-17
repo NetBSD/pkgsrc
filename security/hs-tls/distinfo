@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/17 13:38:00 pho Exp $
+
+SHA1 (tls-1.5.3.tar.gz) = 140832762b66ffec56bbb4d22f9eeb4318f77c66
+RMD160 (tls-1.5.3.tar.gz) = bd803f0673d8ff147c8266c000427c8bcb8f0cca
+SHA512 (tls-1.5.3.tar.gz) = 0881f1716cd0289a051d5c5c7fafd3f5b57a44551f724c6023c73d04c86f69dc9973194fbcfaea983a63fe32d3032cbf89367a52c022f8329266376fca847737
+Size (tls-1.5.3.tar.gz) = 149838 bytes
