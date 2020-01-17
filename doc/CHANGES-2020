@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.560 2020/01/17 17:32:35 pho Exp $
+$NetBSD: CHANGES-2020,v 1.561 2020/01/17 18:14:54 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -649,3 +649,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-haskell-lexer version 1.0.2 [pho 2020-01-17]
 	Added devel/hs-pretty-show version 1.9.5 [pho 2020-01-17]
 	Added textproc/hs-skylighting version 0.8.3 [pho 2020-01-17]
+	Updated textproc/py-html2text to 2020.1.16 [schmonz 2020-01-17]
