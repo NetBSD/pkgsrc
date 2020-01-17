@@ -1,4 +1,7 @@
-GHex is a binary editor.
 GHex allows the user to load data from any file, view and edit it in either
-hex or ascii. A must for anyone playing games that use non-ascii format for
-saving.
+hex or ASCII.
+
+Useful for debugging problems with object code or encodings.
+
+Also used by kids who cheat at computer games, by adding score or lives to
+saved games.
