@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.334 2020/01/08 15:25:37 wiz Exp $
+# $NetBSD: Makefile,v 1.335 2020/01/17 16:17:21 ng0 Exp $
 #
 
 COMMENT=	Fonts
@@ -193,6 +193,7 @@ SUBDIR+=	ps2pkm
 SUBDIR+=	public-sans
 SUBDIR+=	py-fonttools
 SUBDIR+=	raleway-ttf
+SUBDIR+=	recursive-ttf
 SUBDIR+=	ricty-ttf
 SUBDIR+=	roboto-fonts
 SUBDIR+=	ruby-afm
