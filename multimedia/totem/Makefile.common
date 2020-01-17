@@ -1,7 +1,4 @@
-# $NetBSD: Makefile.common,v 1.71 2019/11/03 17:12:04 rillig Exp $
-#
-# used by multimedia/totem-browser-plugin/Makefile
-# used by multimedia/totem-nautilus/Makefile
+# $NetBSD: Makefile.common,v 1.72 2020/01/17 14:21:17 nia Exp $
 
 DISTNAME=	totem-2.32.0
 CATEGORIES=	multimedia gnome
