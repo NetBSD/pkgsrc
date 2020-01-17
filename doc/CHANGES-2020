@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.536 2020/01/17 10:35:28 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.537 2020/01/17 11:00:53 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -625,3 +625,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-dune to 2.1.3nb1 [jaapb 2020-01-17]
 	Updated devel/pcre-ocaml to 7.4.3 [jaapb 2020-01-17]
 	Updated net/ocamlnet to 4.1.6nb13 [jaapb 2020-01-17]
+	Updated audio/fasttracker2 to 1.06 [fox 2020-01-17]
