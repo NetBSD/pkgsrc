@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2020/01/16 01:31:54 nia Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/01/17 06:28:29 wiz Exp $
 bin/picard
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/requires.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/picard/__init__.py
 ${PYSITELIB}/picard/__init__.pyo
 ${PYSITELIB}/picard/__init__.pyc
