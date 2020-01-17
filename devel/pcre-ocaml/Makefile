@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2019/11/03 10:39:28 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2020/01/17 10:31:41 jaapb Exp $
 
-VERSION=	7.4.1
+VERSION=	7.4.3
 DISTNAME=	pcre-${VERSION}
 PKGNAME=	pcre-ocaml-${VERSION}
 CATEGORIES=	devel
@@ -28,7 +28,6 @@ post-install:
 	cd ${WRKSRC}/examples && pax -rw -pm . ${DESTDIR}${EGDIR}
 
 .include "../../devel/ocaml-base/buildlink3.mk"
-.include "../../devel/ocaml-configurator/buildlink3.mk"
 .include "../../devel/ocaml-stdio/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
