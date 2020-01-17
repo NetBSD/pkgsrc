@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/17 10:29:34 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/17 10:42:42 jaapb Exp $
 
 GITHUB_PROJECT=	dune
 DISTNAME=	${GITHUB_PROJECT}-2.1.3
@@ -24,7 +24,13 @@ MAKE_ENV+=		MAKE_JOBS=${MAKE_JOBS:U1}
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${OCAML_SITELIBDIR}/dune
 
 OCAML_USE_FINDLIB=	yes
-OCAML_FINDLIB_DIRS=	dune stublibs
+OCAML_FINDLIB_DIRS=	dune \
+			dune-action-plugin \
+			dune-build-info \
+			dune-configurator \
+			dune-glob \
+			dune-private-libs \
+			stublibs
 OCAML_USE_OPAM=		yes
 OPAM_INSTALL_FILES=	dune-glob \
 			dune-action-plugin \
