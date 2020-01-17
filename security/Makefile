@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.728 2020/01/17 13:07:15 pho Exp $
+# $NetBSD: Makefile,v 1.729 2020/01/17 13:38:35 pho Exp $
 #
 
 COMMENT=	Security tools
@@ -126,6 +126,7 @@ SUBDIR+=	honeyd-arpd
 SUBDIR+=	hs-cryptonite
 SUBDIR+=	hs-digest
 SUBDIR+=	hs-pem
+SUBDIR+=	hs-tls
 SUBDIR+=	hs-x509
 SUBDIR+=	hs-x509-store
 SUBDIR+=	hs-x509-validation
