@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.730 2020/01/17 14:41:38 pho Exp $
+# $NetBSD: Makefile,v 1.731 2020/01/17 15:26:16 pho Exp $
 #
 
 COMMENT=	Security tools
@@ -123,6 +123,7 @@ SUBDIR+=	heirloom-su
 SUBDIR+=	hitch
 SUBDIR+=	honeyd
 SUBDIR+=	honeyd-arpd
+SUBDIR+=	hs-SHA
 SUBDIR+=	hs-cryptonite
 SUBDIR+=	hs-digest
 SUBDIR+=	hs-pem
