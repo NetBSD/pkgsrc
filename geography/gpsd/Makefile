@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2019/07/02 13:44:05 gdt Exp $
+# $NetBSD: Makefile,v 1.46 2020/01/17 17:08:01 gdt Exp $
 
-DISTNAME=	gpsd-3.19
+DISTNAME=	gpsd-3.20
 CATEGORIES=	geography
 MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gpsd/
 # will probably switch to https://gitlab.com/gpsd/gpsd/releases
@@ -73,10 +73,12 @@ do-test:
 .include "../../devel/scons/buildlink3.mk"
 
 .include "../../devel/libusb1/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 # \todo Resolve mk/curses not invoking ncurses builtin processing.
+# For now, include the ncurses package directly.
+.include "../../devel/ncurses/buildlink3.mk"
 #.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
