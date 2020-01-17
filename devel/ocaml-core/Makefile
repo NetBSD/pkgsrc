@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/07/01 12:38:53 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/17 09:33:45 jaapb Exp $
 
 GITHUB_PROJECT=	core
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-0.12.3
+DISTNAME=	${GITHUB_PROJECT}-0.13.0
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
@@ -17,6 +17,20 @@ USE_TOOLS+=	bash
 OCAML_USE_DUNE=	yes
 OCAML_USE_OPAM=	no
 
+SUBST_CLASSES+=			fix-dune-flags
+SUBST_STAGE.fix-dune-flags=	post-extract
+SUBST_MESSAGE.fix-dune-flags=	Fixing unknown dune flags.
+SUBST_FILES.fix-dune-flags=	\
+	bench/bin/dune daemon/src/dune daemon/test-bin/dune \
+	error_checking_mutex/src/dune \
+	example/command/dune lock_file_blocking/src/dune \
+	lock_file_blocking/test/dune lock_file_blocking/test-bin/dune \
+	nano_mutex/bench/dune src/dune test/bin/manual/dune \
+	test/bin/dune test/src/dune time_stamp_counter/bench/dune \
+	time_stamp_counter/src/dune
+SUBST_SED.fix-dune-flags=	-e 's|-allow-unannotated-ignores||g'
+SUBST_SED.fix-dune-flags+=	-e 's|-check-doc-comments||g'
+
 # needs specific install command because it has shell scripts
 do-install:
 	${RUN} for i in ${OPAM_INSTALL_FILES}; do \
@@ -29,7 +43,7 @@ do-install:
 		-docdir ${OCAML_TOPKG_DOCDIR}/$$i \
 		-stublibsdir ${PREFIX}/${OCAML_SITELIBDIR}/stublibs \
 		-bindir ${PREFIX}/bin \
-    $$i.install; \
+    ${OPAM_INSTALL_DIR}/$$i.install; \
   done
 
 .include "../../mk/ocaml.mk"
