@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/17 17:18:15 pho Exp $
+
+SHA1 (haskell-lexer-1.0.2.tar.gz) = 68f201d52ef827cfed7d82b84fd4cea4c533d8b4
+RMD160 (haskell-lexer-1.0.2.tar.gz) = df18a70d4d148f3ce3a9882ca26f488babb5daa0
+SHA512 (haskell-lexer-1.0.2.tar.gz) = 7f5942bf159936488894649e4b5cd7b33b6cf018685299b9cfc2f807ba1b08061deae287e613c88345842183bfb6f177b8538d2dc01badb0c94fc259f110255f
+Size (haskell-lexer-1.0.2.tar.gz) = 12202 bytes
