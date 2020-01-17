@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.551 2020/01/17 15:51:57 nia Exp $
+$NetBSD: CHANGES-2020,v 1.552 2020/01/17 15:53:11 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -640,3 +640,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/hs-SHA version 1.6.4.4 [pho 2020-01-17]
 	Added textproc/hs-hxt-charproperties version 9.4.0.0 [pho 2020-01-17]
 	Removed net/twitux [nia 2020-01-17]
+	Added textproc/hs-hxt-regex-xmlschema version 9.2.0.3 [pho 2020-01-17]
