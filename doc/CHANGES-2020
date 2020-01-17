@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.525 2020/01/17 00:35:18 pho Exp $
+$NetBSD: CHANGES-2020,v 1.526 2020/01/17 00:44:30 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -614,3 +614,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-asn1-encoding version 0.9.6 [pho 2020-01-17]
 	Added security/hs-cryptonite version 0.26 [pho 2020-01-17]
 	Added devel/hs-asn1-parse version 0.9.5 [pho 2020-01-17]
+	Added security/hs-pem version 0.2.4 [pho 2020-01-17]
