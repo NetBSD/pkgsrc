@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.529 2020/01/17 06:48:07 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.530 2020/01/17 09:07:37 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -618,3 +618,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/hs-x509 version 1.7.5 [pho 2020-01-17]
 	Added audio/py-music21 version 5.7.2 [gutteridge 2020-01-17]
 	Updated print/deforaos-pdfviewer to 0.1.0 [khorben 2020-01-17]
+	Updated devel/ocaml-jane-street-headers to 0.13.0 [jaapb 2020-01-17]
