@@ -1,0 +1,3 @@
+Character properties defined by XML and Unicode standards. These
+modules contain predicates for Unicode blocks and char proprties and
+character predicates defined by XML.
