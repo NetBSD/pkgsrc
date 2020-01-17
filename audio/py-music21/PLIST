@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/17 05:41:44 gutteridge Exp $
-${PYSITELIB}/music21-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/music21-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/music21-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/music21-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2020/01/17 07:11:55 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/music21/.mypy_cache/${PYVERSSUFFIX}/__future__.data.json
 ${PYSITELIB}/music21/.mypy_cache/${PYVERSSUFFIX}/__future__.meta.json
 ${PYSITELIB}/music21/.mypy_cache/${PYVERSSUFFIX}/_compression.data.json
