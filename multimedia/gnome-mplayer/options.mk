@@ -1,24 +1,20 @@
-# $NetBSD: options.mk,v 1.6 2013/10/16 10:39:05 obache Exp $
+# $NetBSD: options.mk,v 1.7 2020/01/17 14:16:26 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-mplayer
-PKG_SUPPORTED_OPTIONS=	gnome musicbrainz libgpod
-PKG_SUGGESTED_OPTIONS=	gnome
+PKG_SUPPORTED_OPTIONS=	libnotify musicbrainz libgpod
+PKG_SUGGESTED_OPTIONS=	libnotify
+
+PKG_OPTIONS_LEGACY_OPTS+=	gnome:libnotify
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	nautilus
-
 #
-# Compile the nautilus plugin
+# Add support for libnotify
 #
-.if !empty(PKG_OPTIONS:Mgnome)
+.if !empty(PKG_OPTIONS:Mlibnotify)
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../sysutils/nautilus/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-nautilus
 CONFIGURE_ARGS+=	--with-libnotify
-PLIST.nautilus=		yes
 .else
-CONFIGURE_ARGS+=	--disable-nautilus
 CONFIGURE_ARGS+=	--with-libnotify=no
 .endif
 
