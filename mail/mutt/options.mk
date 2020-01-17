@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2019/11/02 16:25:23 rillig Exp $
+# $NetBSD: options.mk,v 1.33 2020/01/17 16:39:46 nia Exp $
 
 # Global and legacy options
 
@@ -12,7 +12,7 @@ PKG_SUPPORTED_OPTIONS=		debug gpgme idn smime sasl
 PKG_SUPPORTED_OPTIONS+=		mutt-hcache mutt-compressed-mbox tokyocabinet mutt-smtp
 PKG_SUPPORTED_OPTIONS+=		gssapi
 PKG_SUGGESTED_OPTIONS=		curses gpgme mutt-hcache mutt-smtp smime openssl
-PKG_SUGGESTED_OPTIONS+=		gssapi mutt-compressed-mbox
+PKG_SUGGESTED_OPTIONS+=		gssapi mutt-compressed-mbox sasl
 # remove after 2019Q1
 PKG_OPTIONS_LEGACY_OPTS+=	ncurses:curses ncursesw:wide-curses
 PKG_OPTIONS_LEGACY_OPTS+=	ssl:openssl
