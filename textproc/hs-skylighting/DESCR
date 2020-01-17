@@ -1,0 +1,8 @@
+Skylighting is a syntax highlighting library with support for over one
+hundred languages. It derives its tokenizers from XML syntax
+definitions used by KDE's KSyntaxHighlighting framework, so any syntax
+supported by that framework can be added. An optional command-line
+program is provided. Skylighting is intended to be the successor to
+highlighting-kate. This package provides generated syntax modules
+based on the KDE XML definitions provided by the skylighting-core
+package. As a result this package is licensed under the GPL.
