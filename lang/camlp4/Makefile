@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/11/03 19:03:56 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/17 09:44:32 jaapb Exp $
 
 GITHUB_PROJECT=	camlp4
 DISTNAME=	${GITHUB_PROJECT}-4.08+1
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2
 HAS_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/camlp4-4.08-1
 MAKE_JOBS_SAFE=	no
+
+BROKEN=		"Obsolete package, no longer supported by OCaml 4.09"
 
 .include "../../mk/ocaml.mk"
 
