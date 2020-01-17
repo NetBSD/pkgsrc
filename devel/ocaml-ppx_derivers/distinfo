@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/05/09 14:37:14 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2020/01/17 09:37:32 jaapb Exp $
 
-SHA1 (ppx_derivers-1.2.tar.gz) = 05a61a354861b689c80aabb9d21c138c2eb41885
-RMD160 (ppx_derivers-1.2.tar.gz) = cc1609809026cdbaf46d689e4e860187d2e7a1e2
-SHA512 (ppx_derivers-1.2.tar.gz) = 68e8773cec2ee3c0feb08b7cc8e1b6ce226add4ed6d2ced0e77fe485e48b04570f7049c5bde2ce917a4965d114bbc44400b409c2d76d928913ef4f76c6591a8e
-Size (ppx_derivers-1.2.tar.gz) = 2431 bytes
+SHA1 (ppx_derivers-1.2.1.tar.gz) = fbc78aafccb4bf7a39b3ee5562d1566fd9c648db
+RMD160 (ppx_derivers-1.2.1.tar.gz) = 003a796a0455f5125f306138bba2af8b55080b89
+SHA512 (ppx_derivers-1.2.1.tar.gz) = ef0796fe2592e653d34ba01d206d4b507429882a2aaadcb89c7f807c33a417f2871b0c94ade5c92aefd9487daa582e19d88ad5a5eaa631e8162ae12f4a0756c6
+Size (ppx_derivers-1.2.1.tar.gz) = 2530 bytes
