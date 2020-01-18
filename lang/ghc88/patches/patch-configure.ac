@@ -1,6 +1,7 @@
-$NetBSD: patch-configure.ac,v 1.1 2020/01/09 12:32:24 pho Exp $
+$NetBSD: patch-configure.ac,v 1.2 2020/01/18 11:27:55 pho Exp $
 
-Don't use non-portable operator ==.
+Don't use non-portable operator ==:
+https://gitlab.haskell.org/ghc/ghc/merge_requests/2497
 
 --- configure.ac.orig	2020-01-04 08:10:34.453377650 +0000
 +++ configure.ac
