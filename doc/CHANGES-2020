@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.592 2020/01/18 21:45:44 nia Exp $
+$NetBSD: CHANGES-2020,v 1.593 2020/01/18 21:48:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -681,3 +681,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/atari800 to 4.2.0 [nia 2020-01-18]
 	Updated wm/9wm to 1.4.1 [nia 2020-01-18]
 	Updated wm/bspwm to 0.9.9 [nia 2020-01-18]
+	Updated devel/cdk to 5.0.20191231 [nia 2020-01-18]
