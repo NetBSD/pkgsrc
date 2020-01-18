@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/11/04 21:13:02 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 20:18:16 jperkin Exp $
 
 PKGNAME=		rainbowcrack-1.2
 DISTNAME=		rainbowcrack-1.2-src
@@ -17,7 +17,6 @@ BUILD_DIRS=		src
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		patch
 MAKE_FILE=		${FILESDIR}/Makefile
-USE_OLD_DES_API=	yes
 INSTALLATION_DIRS=	bin share/doc/rainbowcrack share/rainbowcrack
 
 pre-patch:
