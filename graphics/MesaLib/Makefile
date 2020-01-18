@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2020/01/04 01:50:32 nia Exp $
+# $NetBSD: Makefile,v 1.181 2020/01/18 21:29:05 triaxx Exp $
 
 DISTNAME=	mesa-19.2.7
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -54,14 +54,6 @@ MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
 MESON_ARGS+=		-Dgallium-xa=true
 PLIST.kms=		yes
-.  include "../../multimedia/libva/available.mk"
-.  if ${VAAPI_AVAILABLE} == "yes"
-MESON_ARGS+=		-Dgallium-va=true
-PLIST.vaapi=		yes
-.    include "../../multimedia/libva/buildlink3.mk"
-.  else
-MESON_ARGS+=		-Dgallium-va=false
-.  endif
 .  if !empty(MACHINE_ARCH:M*arm*) || \
       ${MACHINE_ARCH} == "aarch64"
 # ARM Mali Utgard
@@ -108,6 +100,16 @@ GALLIUM_DRIVERS+=	r300
 PLIST.r100=		yes
 PLIST.r200=		yes
 PLIST.r300=		yes
+.  endif
+.  include "../../multimedia/libva/available.mk"
+.  if ${VAAPI_AVAILABLE} == "yes" && \
+      !(empty(GALLIUM_DRIVERS:Mr600) && empty(GALLIUM_DRIVERS:Mradeonsi) && \
+        empty(GALLIUM_DRIVERS:Mnouveau))
+MESON_ARGS+=		-Dgallium-va=true
+PLIST.vaapi=		yes
+.    include "../../multimedia/libva/buildlink3.mk"
+.  else
+MESON_ARGS+=		-Dgallium-va=false
 .  endif
 .else
 MESA_PLATFORMS+=	surfaceless

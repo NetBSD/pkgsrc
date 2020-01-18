@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.145 2019/12/08 13:07:20 nia Exp $
+$NetBSD: distinfo,v 1.146 2020/01/18 21:29:05 triaxx Exp $
 
 SHA1 (mesa-19.2.7.tar.xz) = 9b8ebf66770353a48bd710e12e2727fb33645f44
 RMD160 (mesa-19.2.7.tar.xz) = 5323b623ac22c168b86548cf6d842ce004e346a9
@@ -35,6 +35,7 @@ SHA1 (patch-src_mapi_u__current.c) = 4e3ec6e253af3737f77ecd43e56044ba2b81e699
 SHA1 (patch-src_mapi_u__current.h) = 9f4744681381a0959fda2926a436f296c89577f3
 SHA1 (patch-src_mesa_main_extensions.c) = 2f48bdb1176c2878bb33bcfab7556172b50a987e
 SHA1 (patch-src_mesa_main_macros.h) = c5dceaa8dc02a58e5b2273d82e3fe1cc12e327d3
+SHA1 (patch-src_mesa_main_marshal.h) = 4e4c08796a61aaa9f2463a9797e382e2e29860e9
 SHA1 (patch-src_mesa_main_shader__query.cpp) = 3f9c31645d87855759def11344dee16af23c7be3
 SHA1 (patch-src_mesa_x86_common__x86.c) = f8c4b93443ef66d017f6aa114b877565b30f2598
 SHA1 (patch-src_util_build__id.c) = 7a9547bbda9d2fb9f0018ccf27b70b59e497aa2c
