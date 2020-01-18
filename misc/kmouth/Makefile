@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2019/11/25 10:12:04 markd Exp $
+# $NetBSD: Makefile,v 1.42 2020/01/18 21:50:01 jperkin Exp $
 
 DISTNAME=	kmouth-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/utilities/kmouth/

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2019/07/04 10:31:18 nia Exp $
+# $NetBSD: Makefile,v 1.62 2020/01/18 21:48:48 jperkin Exp $
 
 DISTNAME=	bitchx-1.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bitchx/}
 

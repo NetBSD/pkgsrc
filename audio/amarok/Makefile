@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.192 2020/01/12 20:20:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.193 2020/01/18 21:48:41 jperkin Exp $
 
 DISTNAME=	amarok-${VERS}
 VERS=		2.8.0
-PKGREVISION=	49
+PKGREVISION=	50
 CATEGORIES=	audio multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=amarok/${VERS}/src/}
 EXTRACT_SUFX=	.tar.bz2

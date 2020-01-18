@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2019/07/21 22:25:39 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2020/01/18 21:50:36 jperkin Exp $
 #
 
 DISTNAME=	gnome-keyring-manager-2.20.0
-PKGREVISION=	44
+PKGREVISION=	45
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring-manager/2.20/}
 EXTRACT_SUFX=	.tar.bz2

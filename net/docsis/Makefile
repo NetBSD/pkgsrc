@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2016/03/05 11:29:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 21:50:11 jperkin Exp $
 #
 
 DISTNAME=		docsis-0.9.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=docsis/}
 

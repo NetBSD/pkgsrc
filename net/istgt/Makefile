@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2019/11/03 11:45:38 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 21:50:16 jperkin Exp $
 #
 
 DISTNAME=		istgt-20150713
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.peach.ne.jp/archives/istgt/
 

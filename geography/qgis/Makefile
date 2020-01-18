@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2020/01/12 20:20:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.82 2020/01/18 21:49:33 jperkin Exp $
 
 DISTNAME=	qgis-3.8.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
