@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/07/04 13:40:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/18 23:30:27 rillig Exp $
 #
 
 DISTNAME=	ctags-5.8
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ctags/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctags.sourceforge.net/
+HOMEPAGE=	https://ctags.sourceforge.net/
 COMMENT=	Exuberant (feature-filled) tagfile generator for vi, emacs and clones
 LICENSE=	gnu-gpl-v2
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2020/01/16 15:28:47 taca Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/18 23:30:40 rillig Exp $
 
 DISTNAME=	gettext-3.3.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ruby-gettext.github.com/
+HOMEPAGE=	https://ruby-gettext.github.com/
 COMMENT=	Ruby localization library like as GNU gettext
 LICENSE=	ruby-license OR gnu-lgpl-v3
 
