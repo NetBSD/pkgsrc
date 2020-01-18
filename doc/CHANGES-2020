@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.584 2020/01/18 16:23:48 taca Exp $
+$NetBSD: CHANGES-2020,v 1.585 2020/01/18 16:27:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -673,3 +673,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/ruby-protobuf-cucumber version 3.10.4 [taca 2020-01-18]
 	Updated textproc/ruby-json-pure to 2.2.0 [taca 2020-01-18]
 	Updated textproc/ruby-json to 2.3.0 [taca 2020-01-18]
+	Updated devel/ruby-cucumber-messages to 9.0.3nb1 [taca 2020-01-18]
