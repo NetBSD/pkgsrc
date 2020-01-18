@@ -1234,6 +1234,16 @@ func (s *Suite) Test_PackagePath_JoinNoClean(c *check.C) {
 		"../../category/package/patches/patch-aa")
 }
 
+func (s *Suite) Test_PackagePath_CleanPath(c *check.C) {
+	t := s.Init(c)
+
+	test := func(p PackagePath, cleaned PackagePath) {
+		t.CheckEquals(p.CleanPath(), cleaned)
+	}
+
+	test("a/b/../../c/d/../.././e/../f", "a/b/../../e/../f")
+}
+
 func (s *Suite) Test_PackagePath_IsEmpty(c *check.C) {
 	t := s.Init(c)
 
@@ -1243,6 +1253,55 @@ func (s *Suite) Test_PackagePath_IsEmpty(c *check.C) {
 
 	test("", true)
 	test(".", false)
+}
+
+func (s *Suite) Test_PackagePath_HasPrefixPath(c *check.C) {
+	t := s.Init(c)
+
+	test := func(p PackagePath, sub Path, hasPrefix bool) {
+		t.CheckEquals(p.HasPrefixPath(sub), hasPrefix)
+	}
+
+	test("/root/subdir", "subdir", false)
+	test("/root/subdir", "/root", true)
+	test("/root/subdir", "/r", false)
+}
+
+func (s *Suite) Test_PackagePath_ContainsPath(c *check.C) {
+	t := s.Init(c)
+
+	test := func(p PackagePath, sub Path, hasPrefix bool) {
+		t.CheckEquals(p.ContainsPath(sub), hasPrefix)
+	}
+
+	test("/root/subdir", "subdir", true)
+	test("/root/subdir", "/root", true)
+	test("/root/subdir", "/r", false)
+}
+
+func (s *Suite) Test_PackagePath_ContainsText(c *check.C) {
+	t := s.Init(c)
+
+	test := func(p PackagePath, sub string, hasPrefix bool) {
+		t.CheckEquals(p.ContainsText(sub), hasPrefix)
+	}
+
+	test("/root/subdir", "subdir", true)
+	test("/root/subdir", "/root", true)
+	test("/root/subdir", "/r", true)
+	test("/root/subdir", "t//sub", false)
+}
+
+func (s *Suite) Test_PackagePath_Replace(c *check.C) {
+	t := s.Init(c)
+
+	test := func(p PackagePath, from, to string, result PackagePath) {
+		t.CheckEquals(p.Replace(from, to), result)
+	}
+
+	test("dir/file", "dir", "other", "other/file")
+	test("dir/file", "r", "sk", "disk/file")
+	test("aaa/file", "a", "sub/", "sub/sub/sub//file")
 }
 
 func (s *Suite) Test_NewRelPath(c *check.C) {

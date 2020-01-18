@@ -754,7 +754,7 @@ func (s *Suite) Test_MkVarUseChecker_warnPermissions__not_directly_and_no_altern
 	t.CheckEquals(toolDependsType.AlternativeFiles(aclpUseLoadtime), "")
 
 	apiDependsType := G.Pkgsrc.VariableType(nil, "BUILDLINK_API_DEPENDS.*")
-	t.CheckEquals(apiDependsType.String(), "Dependency (list, package-settable)")
+	t.CheckEquals(apiDependsType.String(), "DependencyPattern (list, package-settable)")
 	t.CheckEquals(apiDependsType.AlternativeFiles(aclpUse), "")
 	t.CheckEquals(apiDependsType.AlternativeFiles(aclpUseLoadtime), "buildlink3.mk or builtin.mk only")
 

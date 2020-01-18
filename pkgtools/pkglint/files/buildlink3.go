@@ -202,7 +202,7 @@ func (ck *Buildlink3Checker) checkVarassign(mkline *MkLine, pkgbase string) {
 	if varname == "BUILDLINK_ABI_DEPENDS."+pkgbase {
 		ck.abiLine = mkline
 		parser := NewMkParser(nil, value)
-		if dp := parser.Dependency(); dp != nil && parser.EOF() {
+		if dp := parser.DependencyPattern(); dp != nil && parser.EOF() {
 			ck.abi = dp
 		}
 		doCheck = true
@@ -211,7 +211,7 @@ func (ck *Buildlink3Checker) checkVarassign(mkline *MkLine, pkgbase string) {
 	if varname == "BUILDLINK_API_DEPENDS."+pkgbase {
 		ck.apiLine = mkline
 		parser := NewMkParser(nil, value)
-		if dp := parser.Dependency(); dp != nil && parser.EOF() {
+		if dp := parser.DependencyPattern(); dp != nil && parser.EOF() {
 			ck.api = dp
 		}
 		doCheck = true
