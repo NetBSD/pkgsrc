@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2018/12/26 00:29:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/18 23:33:27 rillig Exp $
 #
 
 PKGNAME=		rc.subr-20181226
 CATEGORIES=		pkgtools
 
 MAINTAINER=		sbd@NetBSD.org
-HOMEPAGE=		http://www.NetBSD.org/
+HOMEPAGE=		https://www.NetBSD.org/
 COMMENT=		Portable NetBSD rc.subr implementation for pkgsrc
 LICENSE=		original-bsd
 

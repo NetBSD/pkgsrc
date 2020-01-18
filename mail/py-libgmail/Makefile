@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/02 16:25:26 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:32:49 rillig Exp $
 
 DISTNAME=	libgmail-0.1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libgmail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libgmail.sourceforge.net/
+HOMEPAGE=	https://libgmail.sourceforge.net/
 COMMENT=	Python bindings to access Gmail
 LICENSE=	gnu-gpl-v2
 

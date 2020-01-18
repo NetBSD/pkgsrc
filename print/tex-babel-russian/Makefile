@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 20:18:56 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:33:38 rillig Exp $
 
 DISTNAME=	babel-russian
 PKGNAME=	tex-${DISTNAME}-1.3j
 TEXLIVE_REV=	45007
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/babel-russian
+HOMEPAGE=	https://ctan.org/pkg/babel-russian
 COMMENT=	Russian language module for Babel
 LICENSE=	lppl-1.3c
 

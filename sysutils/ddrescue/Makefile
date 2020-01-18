@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/11/11 21:36:53 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:35:15 rillig Exp $
 
 DISTNAME=	ddrescue-1.19
 CATEGORIES=	sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=ddrescue/}
 EXTRACT_SUFX=	.tar.lz
 
 MAINTAINER=	ef@math.uni-bonn.de
-HOMEPAGE=	http://www.gnu.org/software/ddrescue/ddrescue.html
+HOMEPAGE=	https://www.gnu.org/software/ddrescue/ddrescue.html
 COMMENT=	GNU ddrescue is a data recovery tool
 LICENSE=	gnu-gpl-v2
 

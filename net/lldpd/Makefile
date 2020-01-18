@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/01/18 21:50:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/18 23:33:17 rillig Exp $
 
 DISTNAME=		lldpd-1.0.1
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://media.luffy.cx/files/lldpd/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://vincentbernat.github.com/lldpd/
+HOMEPAGE=		https://vincentbernat.github.com/lldpd/
 COMMENT=		802.1ab (LLDP) implementation
 LICENSE=		isc
 # `lldpcli` will be linked to GNU Readline (which is GPL licensed)

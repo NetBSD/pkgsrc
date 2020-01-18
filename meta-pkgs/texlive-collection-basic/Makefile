@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/07/29 11:32:12 markd Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:32:56 rillig Exp $
 
 DISTNAME=	collection-basic
 PKGNAME=	texlive-${DISTNAME}-2019.51558
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 TEXLIVE_REV=	51558
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.tug.org/texlive/
+HOMEPAGE=	https://www.tug.org/texlive/
 COMMENT=	Essential programs and files for TeX
 
 DEPENDS+=	tex-texlive.infra>=2013:../../print/tex-texlive.infra

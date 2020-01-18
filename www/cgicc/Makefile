@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2017/08/18 21:56:41 adam Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/18 23:35:43 rillig Exp $
 
 DISTNAME=	cgicc-3.2.19
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=cgicc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/cgicc/cgicc.html
+HOMEPAGE=	https://www.gnu.org/software/cgicc/cgicc.html
 COMMENT=	C++ compliant CGI applications libraries
 LICENSE=	gnu-lgpl-v3
 

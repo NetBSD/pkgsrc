@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2020/01/18 21:50:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.65 2020/01/18 23:33:24 rillig Exp $
 
 DISTNAME=	slrn-1.0.3a
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://jedsoft.org/releases/slrn/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://slrn.sourceforge.net/
+HOMEPAGE=	https://slrn.sourceforge.net/
 COMMENT=	Highly customizable threaded newsreader
 LICENSE=	gnu-gpl-v2
 

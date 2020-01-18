@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/02 16:28:41 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:35:37 rillig Exp $
 #
 
 DISTNAME=	mrbs-1.4.11
@@ -7,7 +7,7 @@ CATEGORIES=	www time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mrbs}/
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://mrbs.sourceforge.net/
+HOMEPAGE=	https://mrbs.sourceforge.net/
 COMMENT=	Meeting Room Booking System
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 20:23:28 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:34:55 rillig Exp $
 
 DISTNAME=	texmate
 PKGNAME=	tex-${DISTNAME}-2
@@ -6,7 +6,7 @@ PKGREVISION=	1
 TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/texmate
+HOMEPAGE=	https://ctan.org/pkg/texmate
 COMMENT=	Comprehensive chess annotation in LaTeX
 LICENSE=	lppl-1.3c
 

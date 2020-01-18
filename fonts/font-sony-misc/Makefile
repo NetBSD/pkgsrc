@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 18:28:22 asau Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:31:04 rillig Exp $
 #
 
 DISTNAME=		font-sony-misc-1.0.3
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Standard X11 "sony" PCF fonts
 
 GNU_CONFIGURE=		yes

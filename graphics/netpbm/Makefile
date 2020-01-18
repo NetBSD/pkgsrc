@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.221 2019/08/11 13:21:12 wiz Exp $
+# $NetBSD: Makefile,v 1.222 2020/01/18 23:32:16 rillig Exp $
 
 DISTNAME=	netpbm-10.79.04
 PKGREVISION=	3
@@ -15,7 +15,7 @@ MASTER_SITES=	#
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} netpbm-docs-r3052${EXTRACT_SUFX}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://netpbm.sourceforge.net/
+HOMEPAGE=	https://netpbm.sourceforge.net/
 COMMENT=	Toolkit for conversion of images between different formats
 LICENSE=	gnu-gpl-v2
 

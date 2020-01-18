@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2017/07/25 14:29:42 jmcneill Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:46 rillig Exp $
 
 DISTNAME=	termtter-2.2.8
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://termtter.github.com/
+HOMEPAGE=	https://termtter.github.com/
 COMMENT=	Terminal based Twitter client
 LICENSE=	mit
 

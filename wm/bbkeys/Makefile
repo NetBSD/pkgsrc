@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/08/11 13:24:14 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/18 23:35:40 rillig Exp $
 #
 
 DISTNAME=	bbkeys-0.8.6
@@ -7,7 +7,7 @@ CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbkeys/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bbkeys.sourceforge.net/
+HOMEPAGE=	https://bbkeys.sourceforge.net/
 COMMENT=	General X Window keygrabber
 
 CONFLICTS+=	bbkeys09-[0-9]*

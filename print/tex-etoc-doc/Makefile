@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:32 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:06 rillig Exp $
 
 DISTNAME=	etoc.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.09
 TEXLIVE_REV=	50317
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/etoc
+HOMEPAGE=	https://ctan.org/pkg/etoc
 COMMENT=	Documentation for tex-etoc
 LICENSE=	lppl-1.3c
 

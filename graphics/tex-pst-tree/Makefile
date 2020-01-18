@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 20:04:36 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:32:33 rillig Exp $
 
 DISTNAME=	pst-tree
 PKGNAME=	tex-${DISTNAME}-1.13
 TEXLIVE_REV=	43272
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/pst-tree
+HOMEPAGE=	https://ctan.org/pkg/pst-tree
 COMMENT=	Trees, using pstricks
 LICENSE=	lppl-1.3c
 

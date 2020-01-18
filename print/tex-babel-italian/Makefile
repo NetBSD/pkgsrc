@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:18:54 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:37 rillig Exp $
 
 DISTNAME=	babel-italian
 PKGNAME=	tex-${DISTNAME}-1.4.01
 TEXLIVE_REV=	49606
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/babel-italian
+HOMEPAGE=	https://ctan.org/pkg/babel-italian
 COMMENT=	Babel support for Italian text
 LICENSE=	lppl-1.3c
 

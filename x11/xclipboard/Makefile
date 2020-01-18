@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/06 08:16:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:35:58 rillig Exp $
 
 DISTNAME=		xclipboard-1.1.3
 CATEGORIES=		x11
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		lars.nordlund@hem.utfors.se
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Manage the X server clipboard
 LICENSE=		x11
 

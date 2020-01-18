@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/12/29 04:54:38 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:47 rillig Exp $
 #
 
 DISTNAME=		autocutsel-0.10.0
@@ -8,7 +8,7 @@ GITHUB_PROJECT=		autocutsel
 GITHUB_TAG=		${PKGVERSION_NOREV}
 
 MAINTAINER=		ryoon@NetBSD.org
-HOMEPAGE=		http://www.nongnu.org/autocutsel/
+HOMEPAGE=		https://www.nongnu.org/autocutsel/
 COMMENT=		Synchronizes the X11 cutbuffer and CLIPBOARD selection
 LICENSE=		gnu-gpl-v2
 

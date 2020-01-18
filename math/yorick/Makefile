@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/11/02 16:16:23 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/18 23:32:55 rillig Exp $
 
 DISTNAME=	yorick-1.6.02
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.stack.nl/pub/users/johans/yorick/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://yorick.sourceforge.net/
+HOMEPAGE=	https://yorick.sourceforge.net/
 COMMENT=	Numerical algebra system (similar to Matlab)
 
 MAKE_JOBS_SAFE=		no

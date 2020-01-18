@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/03/05 09:22:37 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/18 23:30:44 rillig Exp $
 
 DISTNAME=		util-macros-1.19.2
 PKGNAME=		xorg-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Xorg autotool macros
 LICENSE=		mit
 

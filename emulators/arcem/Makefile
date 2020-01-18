@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/11/28 11:58:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/18 23:30:47 rillig Exp $
 #
 
 DISTNAME=	arcem-1.50-src
@@ -20,7 +20,7 @@ SITES.${f}+=	\
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LINUX_FILES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://arcem.sourceforge.net/
+HOMEPAGE=	https://arcem.sourceforge.net/
 COMMENT=	Dave Gilbert's Acorn Archimedes emulator
 
 WRKSRC=		${WRKDIR}/arcem-src

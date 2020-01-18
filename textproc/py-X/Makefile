@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/11/04 21:43:45 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/18 23:35:31 rillig Exp $
 
 DISTNAME=	PyX-0.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyx/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pyx.sourceforge.net/
+HOMEPAGE=	https://pyx.sourceforge.net/
 COMMENT=	Package for the creation of PostScript and PDF files
 LICENSE=	gnu-gpl-v2 # or later
 

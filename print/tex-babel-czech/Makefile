@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:18:52 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:35 rillig Exp $
 
 DISTNAME=	babel-czech
 PKGNAME=	tex-${DISTNAME}-3.1a
 TEXLIVE_REV=	30261
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/babel-czech
+HOMEPAGE=	https://ctan.org/pkg/babel-czech
 COMMENT=	Babel support for Czech
 LICENSE=	lppl-1.3c
 

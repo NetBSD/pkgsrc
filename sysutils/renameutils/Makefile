@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2018/11/09 12:50:49 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:35:20 rillig Exp $
 
 DISTNAME=	renameutils-0.12.0
 CATEGORIES=	sysutils converters
 MASTER_SITES=	http://download.savannah.gnu.org/releases/renameutils/
 
 MAINTAINER=	mcy@lm7.fr
-HOMEPAGE=	http://www.nongnu.org/renameutils/
+HOMEPAGE=	https://www.nongnu.org/renameutils/
 COMMENT=	Rename files faster and more easily
 LICENSE=	gnu-gpl-v3
 

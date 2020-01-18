@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/04 21:43:37 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/18 23:35:28 rillig Exp $
 
 DISTNAME=	grep-2.4.2
 PKGNAME=	ja-grep-2.4.2
@@ -13,7 +13,7 @@ PATCH_DIST_STRIP=	-p1
 CONFLICTS+=	grep-[0-9]*
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/grep/grep.html
+HOMEPAGE=	https://www.gnu.org/software/grep/grep.html
 COMMENT=	GNU grep + multi-byte extension
 
 GNU_CONFIGURE=		yes

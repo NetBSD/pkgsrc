@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2020/01/18 21:48:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.64 2020/01/18 23:35:33 rillig Exp $
 
 DISTNAME=	soprano-2.9.4
 PKGREVISION=	21
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=soprano/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://soprano.sourceforge.net/
+HOMEPAGE=	https://soprano.sourceforge.net/
 COMMENT=	QT based RDF framework
 LICENSE=	gnu-lgpl-v2
 

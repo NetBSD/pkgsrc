@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/01/21 13:28:13 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:35:47 rillig Exp $
 #
 
 DISTNAME=		beforelight-1.0.5
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Simple screen saver
 
 GNU_CONFIGURE=		yes

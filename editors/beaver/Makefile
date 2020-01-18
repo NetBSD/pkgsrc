@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/07/21 22:24:41 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2020/01/18 23:30:44 rillig Exp $
 #
 
 DISTNAME=	beaver${BEAVER_VERSION:S/./_/g}
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 BEAVER_VERSION=	0.3.0.1
 
 MAINTAINER=	vincent.derrien@ahoup.net
-HOMEPAGE=	http://www.nongnu.org/beaver/
+HOMEPAGE=	https://www.nongnu.org/beaver/
 COMMENT=	Lightweight GTK+ text editor with syntax highlighting
 
 BUILD_DIRS=	src

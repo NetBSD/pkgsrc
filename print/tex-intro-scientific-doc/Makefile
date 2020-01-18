@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:45 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:18 rillig Exp $
 
 DISTNAME=	intro-scientific.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-5th_edition
 TEXLIVE_REV=	15878
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/intro-scientific
+HOMEPAGE=	https://ctan.org/pkg/intro-scientific
 COMMENT=	Introducing scientific/mathematical documents using LaTeX
 LICENSE=	lppl-1.3c
 

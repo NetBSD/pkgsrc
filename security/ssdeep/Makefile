@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/08/30 14:49:07 taca Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:35:12 rillig Exp $
 #
 
 DISTNAME=	ssdeep-2.13
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ssdeep/}
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://ssdeep.sourceforge.net/
+HOMEPAGE=	https://ssdeep.sourceforge.net/
 COMMENT=	Program computing context triggered piecewise hashes (CTPH)
 LICENSE=	gnu-gpl-v2
 

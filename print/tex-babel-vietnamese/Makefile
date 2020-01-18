@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:18:57 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:40 rillig Exp $
 
 DISTNAME=	babel-vietnamese
 PKGNAME=	tex-${DISTNAME}-1.4
 TEXLIVE_REV=	39246
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/babel-vietnamese
+HOMEPAGE=	https://ctan.org/pkg/babel-vietnamese
 COMMENT=	Babel support for typesetting Vietnamese
 LICENSE=	lppl-1.3c
 

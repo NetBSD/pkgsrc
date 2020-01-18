@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:50 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:22 rillig Exp $
 
 DISTNAME=	latex-doc-ptr.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-20090324
 TEXLIVE_REV=	15878
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/latex-doc-ptr
+HOMEPAGE=	https://ctan.org/pkg/latex-doc-ptr
 COMMENT=	Direction-finder for LaTeX documentation
 LICENSE=	public-domain
 

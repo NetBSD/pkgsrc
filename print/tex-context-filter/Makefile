@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 20:19:15 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:33:52 rillig Exp $
 
 DISTNAME=	context-filter
 PKGNAME=	tex-${DISTNAME}-2018.48390
 TEXLIVE_REV=	48390
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/context-filter
+HOMEPAGE=	https://ctan.org/pkg/context-filter
 COMMENT=	Run external programs on the contents of a start-stop environment
 LICENSE=	2-clause-bsd
 

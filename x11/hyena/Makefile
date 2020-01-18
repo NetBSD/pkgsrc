@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/04/03 00:33:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:35:49 rillig Exp $
 
 DISTNAME=	hyena-0.5
 PKGREVISION=	14
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/hyena/0.5/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	http://live.gnome.org/Hyena
+HOMEPAGE=	https://live.gnome.org/Hyena
 COMMENT=	Hyena is a C\# library used to make awesome applications
 LICENSE=	mit
 

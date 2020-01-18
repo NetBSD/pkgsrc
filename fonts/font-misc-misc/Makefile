@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/06/01 16:35:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:31:03 rillig Exp $
 #
 
 DISTNAME=		font-misc-misc-1.1.2
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Standard X11 "fixed" PCF font
 
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/09/02 13:20:03 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/18 23:35:44 rillig Exp $
 
 DISTNAME=	ClientForm-0.2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www textproc
 MASTER_SITES=	http://wwwsearch.sourceforge.net/ClientForm/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wwwsearch.sourceforge.net/ClientForm/
+HOMEPAGE=	https://wwwsearch.sourceforge.net/ClientForm/
 COMMENT=	Python module for handling HTML forms on the client side
 LICENSE=	modified-bsd OR zpl-2.0
 

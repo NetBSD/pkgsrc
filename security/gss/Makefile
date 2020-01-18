@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/11/04 21:12:53 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/18 23:35:07 rillig Exp $
 #
 
 DISTNAME=		gss-0.0.15
@@ -8,7 +8,7 @@ MASTER_SITES=		http://josefsson.org/gss/releases/
 MASTER_SITES+=		${MASTER_SITE_GNU:=gss/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/gss/
+HOMEPAGE=		https://www.gnu.org/software/gss/
 COMMENT=		GNU Generic Security Service Library
 
 CONFLICTS+=		heimdal-[0-9]*

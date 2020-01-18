@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/08/30 18:30:15 nia Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 23:32:14 rillig Exp $
 
 DISTNAME=	lib3ds-1.2.0
 PKGREVISION=	7
@@ -6,7 +6,7 @@ CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lib3ds/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lib3ds.sourceforge.net/
+HOMEPAGE=	https://lib3ds.sourceforge.net/
 COMMENT=	3D Studio File Format Library
 
 GNU_CONFIGURE=	YES

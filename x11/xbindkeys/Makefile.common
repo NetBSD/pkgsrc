@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2016/09/15 15:58:49 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2020/01/18 23:35:58 rillig Exp $
 #
 # used by x11/xbindkeys-tk/Makefile
 
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://www.nongnu.org/xbindkeys/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/xbindkeys/xbindkeys.html
+HOMEPAGE=	https://www.nongnu.org/xbindkeys/xbindkeys.html
 COMMENT=	Launches shell commands with your keyboard or your mouse
 
 DISTINFO_FILE=	${.CURDIR}/../../x11/xbindkeys/distinfo

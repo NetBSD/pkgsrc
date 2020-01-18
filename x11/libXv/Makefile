@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/03/07 11:57:37 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/18 23:35:53 rillig Exp $
 
 DISTNAME=		libXv-1.0.11
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Xv Extension library
 
 USE_LIBTOOL=		yes

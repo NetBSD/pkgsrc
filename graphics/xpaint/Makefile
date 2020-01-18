@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2019/11/02 22:38:06 rillig Exp $
+# $NetBSD: Makefile,v 1.79 2020/01/18 23:32:39 rillig Exp $
 
 DISTNAME=	xpaint-2.7.8.1
 PKGREVISION=	11
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://sf-xpaint.sourceforge.net/
+HOMEPAGE=	https://sf-xpaint.sourceforge.net/
 COMMENT=	Simple paint program
 
 USE_IMAKE=	yes

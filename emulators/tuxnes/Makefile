@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/07/04 13:40:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:30:51 rillig Exp $
 
 DISTNAME=		tuxnes-0.75
 PKGREVISION=		4
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tuxnes/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://tuxnes.sourceforge.net/
+HOMEPAGE=		https://tuxnes.sourceforge.net/
 COMMENT=		NES emulator
 LICENSE=		gnu-gpl-v2 # or later
 

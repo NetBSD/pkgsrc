@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 20:19:29 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:34:03 rillig Exp $
 
 DISTNAME=	endfloat
 PKGNAME=	tex-${DISTNAME}-2.7
 TEXLIVE_REV=	51003
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/endfloat
+HOMEPAGE=	https://ctan.org/pkg/endfloat
 COMMENT=	Move floats to the end with markers where they belong
 LICENSE=	gnu-gpl-v2
 

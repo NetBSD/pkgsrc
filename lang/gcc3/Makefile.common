@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2019/11/03 19:03:57 rillig Exp $
+# $NetBSD: Makefile.common,v 1.30 2020/01/18 23:32:42 rillig Exp $
 #
 # used by lang/gcc3/language.mk
 # used by lang/gcc3-c/Makefile
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
+HOMEPAGE=	https://www.gnu.org/software/gcc/gcc.html
 
 NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-* DragonFly-*-*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/01/12 20:19:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/18 23:35:29 rillig Exp $
 
 DISTNAME=	libodfgen-0.1.6
 PKGREVISION=	11
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpd/libodfgen/libodfgen-${PKGVERSION
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://libwpd.sourceforge.net/
+HOMEPAGE=	https://libwpd.sourceforge.net/
 COMMENT=	Library to generate ODF documents through libwpd and libwps
 LICENSE=	mpl-2.0 OR gnu-lgpl-v2
 

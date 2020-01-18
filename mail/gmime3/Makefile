@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/26 12:32:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/18 23:32:47 rillig Exp $
 
 DISTNAME=	gmime-3.2.5
 PKGNAME=	${DISTNAME:S/gmime/gmime3/}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/3.2/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://spruce.sourceforge.net/gmime/
+HOMEPAGE=	https://spruce.sourceforge.net/gmime/
 COMMENT=	Library for the creation and parsing of MIME messages (API v3)
 LICENSE=	gnu-lgpl-v2.1
 

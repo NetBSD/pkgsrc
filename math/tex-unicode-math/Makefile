@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2019/12/06 19:07:33 markd Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:32:54 rillig Exp $
 
 DISTNAME=	unicode-math
 PKGNAME=	tex-${DISTNAME}-0.8o
 TEXLIVE_REV=	50245
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/unicode-math
+HOMEPAGE=	https://ctan.org/pkg/unicode-math
 COMMENT=	Unicode mathematics support for XeTeX and LuaTeX
 LICENSE=	lppl-1.3c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/16 19:27:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:35:54 rillig Exp $
 #
 
 DISTNAME=	mkcomposecache-1.2.1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Used for creating global (system-wide) Compose cache files
 #LICENSE=	# XXX SUSE license ?
 

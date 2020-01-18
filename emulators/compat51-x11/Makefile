@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/02/17 17:24:09 spz Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:30:49 rillig Exp $
 
 COMPAT_PKG=		compat51	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		5.1
 
-HOMEPAGE=		http://www.NetBSD.org/releases/formal-5/index.html
+HOMEPAGE=		https://www.NetBSD.org/releases/formal-5/index.html
 COMMENT=		Shared X11 libraries for NetBSD 5.1 compatibility
 LICENSE=		mit
 

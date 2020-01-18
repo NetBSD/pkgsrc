@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/11/04 21:28:42 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2020/01/18 23:35:14 rillig Exp $
 #
 
 DISTNAME=	burn-0.4.1
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gsburn/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gsburn.sourceforge.net/
+HOMEPAGE=	https://gsburn.sourceforge.net/
 COMMENT=	GNUstep based CD burning program
 LICENSE=	gnu-gpl-v2
 

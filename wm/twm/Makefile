@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/03/07 12:18:21 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:35:41 rillig Exp $
 
 DISTNAME=	twm-1.0.10
 CATEGORIES=	x11 wm
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Tom's Window Manager
 
 GNU_CONFIGURE=		yes

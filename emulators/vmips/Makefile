@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2018/08/27 07:15:47 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:30:51 rillig Exp $
 
 DISTNAME=		vmips-1.5.1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vmips/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://vmips.sourceforge.net/
+HOMEPAGE=		https://vmips.sourceforge.net/
 COMMENT=		MIPS R3000 emulator
 LICENSE=		gnu-gpl-v2
 

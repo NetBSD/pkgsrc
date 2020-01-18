@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/01/18 21:48:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.54 2020/01/18 23:32:53 rillig Exp $
 
 DISTNAME=	libqalculate-3.5.0a
 PKGNAME=	qalculate-3.5.0
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	libqalculate
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://qalculate.github.io/
+HOMEPAGE=	https://qalculate.github.io/
 COMMENT=	Modern multi-purpose desktop calculator (console version)
 LICENSE=	gnu-gpl-v2
 

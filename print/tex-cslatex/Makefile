@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 20:19:20 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:33:57 rillig Exp $
 
 DISTNAME=	cslatex
 PKGNAME=	tex-${DISTNAME}-2014
@@ -6,7 +6,7 @@ PKGREVISION=	2
 TEXLIVE_REV=	28596
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/cslatex
+HOMEPAGE=	https://ctan.org/pkg/cslatex
 COMMENT=	LaTeX support for Czech/Slovak typesetting
 LICENSE=	gnu-gpl-v2
 

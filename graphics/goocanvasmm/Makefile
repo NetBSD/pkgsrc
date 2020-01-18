@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/08/11 13:21:11 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2020/01/18 23:32:12 rillig Exp $
 #
 
 DISTNAME=	goocanvasmm-0.15.4
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/goocanvasmm/0.15/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/GooCanvas
+HOMEPAGE=	https://live.gnome.org/GooCanvas
 COMMENT=	C++ wrappers for goocanvas
 LICENSE=	gnu-lgpl-v2.1
 

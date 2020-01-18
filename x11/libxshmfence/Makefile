@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/01/04 12:49:34 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:35:54 rillig Exp $
 
 DISTNAME=	libxshmfence-1.3
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Shared memory 'SyncFence' synchronization primitive
 LICENSE=	mit
 

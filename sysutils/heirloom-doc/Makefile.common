@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2019/11/04 21:28:46 rillig Exp $
+# $NetBSD: Makefile.common,v 1.7 2020/01/18 23:35:17 rillig Exp $
 # used by archivers/heirloom-tar/Makefile
 # used by devel/heirloom-common/Makefile
 # used by devel/heirloom-getopt/Makefile
@@ -113,7 +113,7 @@
 DISTNAME=	heirloom-${HEIRLOOM_VER}
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=heirloom/}
 EXTRACT_SUFX=	.tar.bz2
-HOMEPAGE=	http://heirloom.sourceforge.net/
+HOMEPAGE=	https://heirloom.sourceforge.net/
 MAINTAINER=	cheusov@NetBSD.org
 COMMENT?=	Collection of standard Unix utilities (${PKGBASE:S/heirloom-//})
 

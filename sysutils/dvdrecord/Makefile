@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/18 07:19:47 maya Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/18 23:35:16 rillig Exp $
 
 DISTNAME=	dvdrtools-${VERSION}
 PKGNAME=	${DISTNAME:S/dvdrtools/dvdrecord/}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://freesoftware.fsf.org/download/dvdrtools/dvdrtools.pkg/${VER
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/dvdrtools/
+HOMEPAGE=	https://www.nongnu.org/dvdrtools/
 COMMENT=	This program allows you to create DVDs on a DVD-Recorder
 
 VERSION=	0.1.5

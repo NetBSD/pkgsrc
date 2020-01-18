@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/25 06:55:53 asau Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:35:26 rillig Exp $
 #
 
 DISTNAME=	gutcheck
@@ -8,7 +8,7 @@ MASTER_SITES=	http://pglaf.org/~jtinsley/gutcheck/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gutcheck.sourceforge.net/
+HOMEPAGE=	https://gutcheck.sourceforge.net/
 COMMENT=	Text checker specialized in reporting problems spellcheckers overlook
 LICENSE=	gnu-gpl-v2
 

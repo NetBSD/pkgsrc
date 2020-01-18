@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/12/13 05:34:38 maya Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:33:16 rillig Exp $
 
 DISTNAME=	inetutils-1.9.4
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=inetutils/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/inetutils/
+HOMEPAGE=	https://www.gnu.org/software/inetutils/
 COMMENT=	GNU network utilities
 LICENSE=	gnu-gpl-v3
 

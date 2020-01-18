@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/11/04 21:28:44 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/18 23:35:16 rillig Exp $
 #
 
 DISTNAME=	dmidecode-3.2
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://download.savannah.gnu.org/releases/dmidecode/
 
 MAINTAINER=	msaitoh@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/dmidecode/
+HOMEPAGE=	https://www.nongnu.org/dmidecode/
 COMMENT=	Print out DMI (SMBIOS) table in human-readable format
 LICENSE=	gnu-gpl-v2
 

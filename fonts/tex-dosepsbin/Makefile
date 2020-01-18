@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 19:29:50 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:31:24 rillig Exp $
 
 DISTNAME=	dosepsbin
 PKGNAME=	tex-${DISTNAME}-1.2
@@ -6,7 +6,7 @@ PKGREVISION=	4
 TEXLIVE_REV=	29752
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/dosepsbin
+HOMEPAGE=	https://ctan.org/pkg/dosepsbin
 COMMENT=	Deal with DOS binary EPS files
 LICENSE=	artistic
 

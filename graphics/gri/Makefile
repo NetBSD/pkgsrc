@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2020/01/18 21:49:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.73 2020/01/18 23:32:13 rillig Exp $
 
 DISTNAME=	gri-2.12.23
 PKGREVISION=	25
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gri/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gri.sourceforge.net/
+HOMEPAGE=	https://gri.sourceforge.net/
 COMMENT=	Language for scientific graphics applications
 LICENSE=	gnu-gpl-v3
 

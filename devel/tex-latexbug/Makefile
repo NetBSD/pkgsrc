@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 19:18:34 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:30:43 rillig Exp $
 
 DISTNAME=	latexbug
 PKGNAME=	tex-${DISTNAME}-1.0e
 TEXLIVE_REV=	49573
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/latexbug
+HOMEPAGE=	https://ctan.org/pkg/latexbug
 COMMENT=	Bug-classification for LaTeX related bugs
 LICENSE=	lppl-1.3c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/11/04 21:43:34 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/18 23:35:24 rillig Exp $
 
 DISTNAME=	dblatex-0.3.10
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dblatex/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dblatex.sourceforge.net/
+HOMEPAGE=	https://dblatex.sourceforge.net/
 COMMENT=	DocBook to LaTeX Publishing
 LICENSE=	gnu-gpl-v2
 

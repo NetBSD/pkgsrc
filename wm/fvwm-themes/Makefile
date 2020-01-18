@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/11/04 21:50:16 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/18 23:35:40 rillig Exp $
 #
 
 DISTNAME=	fvwm-themes-${THEM_VER}
@@ -11,7 +11,7 @@ DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}	\
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	gendalia@NetBSD.org
-HOMEPAGE=	http://fvwm-themes.sourceforge.net/
+HOMEPAGE=	https://fvwm-themes.sourceforge.net/
 COMMENT=	Configuration framework for fvwm2 with samples
 
 DEPENDS+=	{fvwm,fvwm2}>=2.4.8:../../wm/fvwm

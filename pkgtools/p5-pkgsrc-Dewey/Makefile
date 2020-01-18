@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2019/08/11 13:22:35 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:33:26 rillig Exp $
 
 PKGNAME=	p5-pkgsrc-Dewey-1.1
 PKGREVISION=	10
 CATEGORIES=	pkgtools perl5
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
+HOMEPAGE=	https://www.NetBSD.org/docs/pkgsrc/
 COMMENT=	Perl module to compare pkgsrc Dewey numbers
 LICENSE=	${PERL5_LICENSE} OR 2-clause-bsd
 

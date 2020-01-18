@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/03/07 11:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:36:03 rillig Exp $
 
 DISTNAME=	xf86-video-dummy-0.3.8
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Virtual/offscreen frame buffer driver for the Xorg X server
 
 GNU_CONFIGURE=	yes

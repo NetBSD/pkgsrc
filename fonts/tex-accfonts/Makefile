@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 19:29:29 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:31:07 rillig Exp $
 
 DISTNAME=	accfonts
 PKGNAME=	tex-${DISTNAME}-0.25
@@ -6,7 +6,7 @@ PKGREVISION=	4
 TEXLIVE_REV=	18835
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/accfonts
+HOMEPAGE=	https://ctan.org/pkg/accfonts
 COMMENT=	Utilities to derive new fonts from existing ones
 LICENSE=	gnu-gpl-v2
 

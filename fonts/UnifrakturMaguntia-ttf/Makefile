@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/08 15:24:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:31:00 rillig Exp $
 
 DISTNAME=	UnifrakturMaguntia.2017-03-19
 PKGNAME=	${DISTNAME:S/-//g:S/./-ttf-0./}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unifraktur/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://unifraktur.sourceforge.net/maguntia.html
+HOMEPAGE=	https://unifraktur.sourceforge.net/maguntia.html
 COMMENT=	Unicode Fraktur Font
 LICENSE=	ofl-v1.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/10/10 19:55:25 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:35:50 rillig Exp $
 
 DISTNAME=		libSM-1.2.3
 CATEGORIES=		x11 devel
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X Session Management Library
 
 USE_LIBTOOL=		yes

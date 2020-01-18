@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2019/11/07 12:38:07 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2020/01/18 23:33:27 rillig Exp $
 
 DISTNAME=	electrix-0.2.0
 PKGREVISION=	66
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=electrix/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://electrix.sourceforge.net/
+HOMEPAGE=	https://electrix.sourceforge.net/
 COMMENT=	Application to view PDF files
 LICENSE=	gnu-gpl-v2
 

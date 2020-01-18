@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/02/20 10:18:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:35:29 rillig Exp $
 
 DISTNAME=	ebook-tools-0.2.2
 PKGNAME=	lit2epub-0.2.2
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ebook-tools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ebook-tools.sourceforge.net/
+HOMEPAGE=	https://ebook-tools.sourceforge.net/
 COMMENT=	Convert .lit files to valid epub
 LICENSE=	mit
 

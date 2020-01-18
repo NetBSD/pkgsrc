@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/07/04 13:40:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:33:13 rillig Exp $
 #
 
 APOLLOVERS=	1.4
@@ -9,7 +9,7 @@ CATEGORIES=	net java
 MASTER_SITES=	${MASTER_SITE_APACHE:=activemq/activemq-apollo/1.4/}
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://activemq.apache.org/apollo/
+HOMEPAGE=	https://activemq.apache.org/apollo/
 COMMENT=	Messaging broker built from the foundations of ActiveMQ
 LICENSE=	apache-2.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/11/03 19:28:48 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/18 23:32:01 rillig Exp $
 #
 
 DISTNAME=	gltron-0.70-source
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gltron/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gltron.sourceforge.net/
+HOMEPAGE=	https://gltron.sourceforge.net/
 COMMENT=	3D lightcycle game inspired by the movie Tron
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}

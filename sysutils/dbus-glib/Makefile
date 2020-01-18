@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2019/05/04 08:42:24 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2020/01/18 23:35:15 rillig Exp $
 
 DISTNAME=	dbus-glib-0.110
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-glib/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/Software/dbus
+HOMEPAGE=	https://www.freedesktop.org/Software/dbus
 COMMENT=	GLib bindings for the D-BUS message bus system
 LICENSE=	gnu-gpl-v2
 

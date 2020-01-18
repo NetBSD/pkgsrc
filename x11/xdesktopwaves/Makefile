@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/09/03 17:54:41 shattered Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:35:59 rillig Exp $
 #
 
 DISTNAME=	xdesktopwaves-1.3
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xdesktopwaves/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xdesktopwaves.sourceforge.net/
+HOMEPAGE=	https://xdesktopwaves.sourceforge.net/
 COMMENT=	Simulates water waves on the X Windows desktop
 
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:M*:Q}

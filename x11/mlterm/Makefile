@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.153 2019/11/22 18:06:47 tsutsui Exp $
+# $NetBSD: Makefile,v 1.154 2020/01/18 23:35:54 rillig Exp $
 
 DISTNAME=	mlterm-3.8.9
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
 MAINTAINER=	tsutsui@NetBSD.org
-HOMEPAGE=	http://mlterm.sourceforge.net/
+HOMEPAGE=	https://mlterm.sourceforge.net/
 COMMENT=	Multilingual terminal emulator
 LICENSE=	modified-bsd
 

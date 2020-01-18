@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/02/13 21:28:29 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:36:04 rillig Exp $
 
 DISTNAME=	xf86-video-nouveau-1.0.16
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	http://xorg.freedesktop.org/archive/individual/driver/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	New (or nouveau) NVidia driver for modular X.org
 
 GNU_CONFIGURE=	yes

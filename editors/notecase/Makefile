@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/01/18 21:49:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.54 2020/01/18 23:30:46 rillig Exp $
 #
 
 DISTNAME=	notecase-1.8.8_src
@@ -8,7 +8,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=notecase/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://notecase.sourceforge.net/
+HOMEPAGE=	https://notecase.sourceforge.net/
 COMMENT=	Hierarchical note manager
 
 WRKSRC=		${WRKDIR}/notecase-1.8.8

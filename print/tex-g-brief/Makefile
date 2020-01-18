@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:29 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:12 rillig Exp $
 
 DISTNAME=	g-brief
 PKGNAME=	tex-${DISTNAME}-4.0.3
 TEXLIVE_REV=	50415
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/g-brief
+HOMEPAGE=	https://ctan.org/pkg/g-brief
 COMMENT=	Letter document class
 LICENSE=	lppl-1.0
 

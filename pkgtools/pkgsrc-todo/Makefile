@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:22:36 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:33:26 rillig Exp $
 
 PKGNAME=	pkgsrc-todo-1.3
 PKGREVISION=	4
 CATEGORIES=	pkgtools
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
+HOMEPAGE=	https://www.NetBSD.org/docs/pkgsrc/
 COMMENT=	Tools for maintaing pkgsrc/doc/TODO
 
 DEPENDS+=	p5-pkgsrc-Dewey-[0-9]*:../../pkgtools/p5-pkgsrc-Dewey

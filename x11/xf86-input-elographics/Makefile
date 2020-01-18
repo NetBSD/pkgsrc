@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/11/14 11:09:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:36:01 rillig Exp $
 
 DISTNAME=	xf86-input-elographics-1.4.2
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Elographics input driver for the Xorg X server
 
 GNU_CONFIGURE=	yes

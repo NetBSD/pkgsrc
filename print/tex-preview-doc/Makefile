@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2019/12/06 20:23:07 markd Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:34:43 rillig Exp $
 
 DISTNAME=	preview.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-11.91
 TEXLIVE_REV=	44883
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/preview
+HOMEPAGE=	https://ctan.org/pkg/preview
 COMMENT=	Documentation for tex-preview
 LICENSE=	gnu-gpl-v3
 

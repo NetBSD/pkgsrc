@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/07/12 10:44:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:33:13 rillig Exp $
 #
 
 DISTNAME=	cntlm-0.35.1
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cntlm/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cntlm.sourceforge.net/
+HOMEPAGE=	https://cntlm.sourceforge.net/
 COMMENT=	NTLM/NTLMv2 authenticating HTTP proxy
 LICENSE=	gnu-gpl-v2
 

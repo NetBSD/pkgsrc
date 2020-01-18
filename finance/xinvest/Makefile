@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/12/14 01:32:04 mef Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/18 23:31:00 rillig Exp $
 
 DISTNAME=		xinvest-2.6.9
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		finance x11
 MASTER_SITES=		http://sourceforge.net/projects/xinvest/files/latest/download
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://xinvest.sourceforge.net/
+HOMEPAGE=		https://xinvest.sourceforge.net/
 COMMENT=		Personal finance tracking and performance tool
 
 USE_IMAKE=		YES

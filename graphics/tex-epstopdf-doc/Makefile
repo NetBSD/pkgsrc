@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2019/12/06 20:04:22 markd Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:32:23 rillig Exp $
 
 DISTNAME=	epstopdf.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.28
 TEXLIVE_REV=	48684
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/epstopdf
+HOMEPAGE=	https://ctan.org/pkg/epstopdf
 COMMENT=	Documentation for tex-epstopdf
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/09/21 10:57:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:32:01 rillig Exp $
 
 DISTNAME=		book_1.02.pgn
 PKGNAME=		gnuchess-book-1.02
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=chess/}
 EXTRACT_SUFX=		.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/chess/
+HOMEPAGE=		https://www.gnu.org/software/chess/
 COMMENT=		Chess opening book for GNU Chess (default)
 LICENSE=		public-domain
 

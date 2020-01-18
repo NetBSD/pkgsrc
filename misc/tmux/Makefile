@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/01/18 21:50:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.52 2020/01/18 23:33:09 rillig Exp $
 
 DISTNAME=	tmux-3.0a
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=tmux/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://tmux.github.io/
+HOMEPAGE=	https://tmux.github.io/
 COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 LICENSE=	modified-bsd
 

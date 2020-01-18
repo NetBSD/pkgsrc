@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/03/10 22:10:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:36:12 rillig Exp $
 
 DISTNAME=	xpr-1.0.5
 CATEGORIES=	print x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Formats xwd dump files as output for various types of printers
 
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/02/26 08:19:30 adam Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/18 23:33:12 rillig Exp $
 
 DISTNAME=	libquicktime-1.2.4
 PKGREVISION=	15
@@ -6,7 +6,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libquicktime/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libquicktime.sourceforge.net/
+HOMEPAGE=	https://libquicktime.sourceforge.net/
 COMMENT=	Library for quicktime/avi/mp4 files
 LICENSE=	gnu-lgpl-v2
 

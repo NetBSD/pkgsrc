@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2019/12/06 20:18:46 markd Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:33:32 rillig Exp $
 
 DISTNAME=	algorithm2e
 PKGNAME=	tex-${DISTNAME}-5.2
 TEXLIVE_REV=	44846
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/algorithm2e
+HOMEPAGE=	https://ctan.org/pkg/algorithm2e
 COMMENT=	Floating algorithm environment with algorithmic keywords
 LICENSE=	lppl-1.3c
 

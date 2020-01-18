@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/11/14 11:03:19 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 23:36:11 rillig Exp $
 
 DISTNAME=		xman-1.1.5
 CATEGORIES=		x11
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Manual page browser
 
 GNU_CONFIGURE=		yes

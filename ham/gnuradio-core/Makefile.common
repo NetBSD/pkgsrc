@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2019/11/03 19:32:07 rillig Exp $
+# $NetBSD: Makefile.common,v 1.23 2020/01/18 23:32:39 rillig Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -37,7 +37,7 @@ MASTER_SITES=	http://s3-dist.gnuradio.org/
 MASTER_SITES=	http://gnuradio.org/releases/gnuradio/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE?=	http://www.gnu.org/software/gnuradio/
+HOMEPAGE?=	https://www.gnu.org/software/gnuradio/
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c c++

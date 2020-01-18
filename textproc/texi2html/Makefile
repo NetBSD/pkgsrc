@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/08/11 13:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2020/01/18 23:35:34 rillig Exp $
 
 DISTNAME=	texi2html-5.0
 PKGREVISION=	8
@@ -7,7 +7,7 @@ MASTER_SITES=	http://savannah.nongnu.org/download/texi2html/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://savannah.nongnu.org/projects/texi2html/
+HOMEPAGE=	https://savannah.nongnu.org/projects/texi2html/
 COMMENT=	Texinfo-to-HTML direct translator
 LICENSE=	gnu-gpl-v2
 

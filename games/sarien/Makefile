@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/04/25 14:23:03 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/18 23:32:04 rillig Exp $
 #
 
 DISTNAME=	sarien-0.7.0
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sarien/}
 
 MAINTAINER=	mor@linex.com
-HOMEPAGE=	http://sarien.sourceforge.net/
+HOMEPAGE=	https://sarien.sourceforge.net/
 COMMENT=	Adventure Game Interpreter (AGI) for Sierra On-Line Titles
 
 MAKE_JOBS_SAFE=		no

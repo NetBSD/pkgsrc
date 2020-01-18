@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2007/10/07 12:59:11 kano Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/18 23:30:47 rillig Exp $
 
 COMPAT_PKG=		compat12	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		1.2
 PKGREVISION=		1
 
-HOMEPAGE=		http://www.NetBSD.org/releases/formal-1.2/index.html
+HOMEPAGE=		https://www.NetBSD.org/releases/formal-1.2/index.html
 COMMENT=		Shared libraries for NetBSD 1.2 compatibility
 
 EMUL_PLATFORMS=		netbsd-i386 netbsd-m68k netbsd-ns32k netbsd-sparc

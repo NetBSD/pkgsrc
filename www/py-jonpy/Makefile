@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/09/02 13:20:01 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:35:45 rillig Exp $
 
 DISTNAME=	jonpy-0.06
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jonpy/}
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://jonpy.sourceforge.net/
+HOMEPAGE=	https://jonpy.sourceforge.net/
 COMMENT=	Tools for FastCGI/CGI Python programs
 LICENSE=	mit
 

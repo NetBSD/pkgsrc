@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2020/01/18 21:50:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.152 2020/01/18 23:33:23 rillig Exp $
 
 DISTNAME=	wget-1.20.3
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 EXTRACT_SUFX=	.tar.lz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/wget/wget.html
+HOMEPAGE=	https://www.gnu.org/software/wget/wget.html
 COMMENT=	Retrieve files from the 'net via HTTP and FTP
 LICENSE=	gnu-gpl-v3
 

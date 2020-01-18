@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/01/18 21:50:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:10 rillig Exp $
 
 DISTNAME=	oath-toolkit-2.4.1
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://download.savannah.gnu.org/releases/oath-toolkit/
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/oath-toolkit/
+HOMEPAGE=	https://www.nongnu.org/oath-toolkit/
 COMMENT=	OATH (Open AuTHentication) Toolkit
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3
 

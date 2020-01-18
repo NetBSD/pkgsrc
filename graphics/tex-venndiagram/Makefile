@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:04:42 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:32:38 rillig Exp $
 
 DISTNAME=	venndiagram
 PKGNAME=	tex-${DISTNAME}-1.2
 TEXLIVE_REV=	47952
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/venndiagram
+HOMEPAGE=	https://ctan.org/pkg/venndiagram
 COMMENT=	Creating Venn diagrams with TikZ
 LICENSE=	lppl-1.3c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2020/01/18 21:50:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.56 2020/01/18 23:33:23 rillig Exp $
 
 DISTNAME=	vtun-3.0.3
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vtun/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://vtun.sourceforge.net/
+HOMEPAGE=	https://vtun.sourceforge.net/
 COMMENT=	Virtual Tunnels over TCP/IP networks with traffic shaping
 LICENSE=	gnu-gpl-v2
 

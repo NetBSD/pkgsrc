@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/06/13 07:58:31 alnsn Exp $
+# $NetBSD: Makefile,v 1.38 2020/01/18 23:35:21 rillig Exp $
 
 DISTNAME=		smartmontools-7.0
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=smartmontools/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://smartmontools.sourceforge.net/
+HOMEPAGE=		https://smartmontools.sourceforge.net/
 COMMENT=		Control and monitor storage systems using SMART
 LICENSE=		gnu-gpl-v2
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:22 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:24 rillig Exp $
 
 DISTNAME=	featpost.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.8.8
 TEXLIVE_REV=	35346
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/featpost
+HOMEPAGE=	https://ctan.org/pkg/featpost
 COMMENT=	Documentation for tex-featpost
 LICENSE=	gnu-gpl-v2
 

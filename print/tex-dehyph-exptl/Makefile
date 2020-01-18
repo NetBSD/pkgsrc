@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2019/12/06 20:19:24 markd Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:34:00 rillig Exp $
 
 DISTNAME=	dehyph-exptl
 PKGNAME=	tex-${DISTNAME}-0.6
 TEXLIVE_REV=	50772
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/dehyph-exptl
+HOMEPAGE=	https://ctan.org/pkg/dehyph-exptl
 COMMENT=	Experimental hyphenation patterns for the German language
 LICENSE=	mit AND lppl-1.3c
 

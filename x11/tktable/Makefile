@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2018/03/12 11:15:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:35:57 rillig Exp $
 #
 
 DISTNAME=	Tktable2.10
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tktable/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tktable.sourceforge.net/
+HOMEPAGE=	https://tktable.sourceforge.net/
 COMMENT=	Full-featured 2D table widget for Tk
 LICENSE=	2-clause-bsd
 

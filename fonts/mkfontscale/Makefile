@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/03/21 09:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2020/01/18 23:31:05 rillig Exp $
 
 DISTNAME=		mkfontscale-1.2.1
 CATEGORIES=		fonts x11
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X11 Scalable Font Index Generator
 
 GNU_CONFIGURE=		yes

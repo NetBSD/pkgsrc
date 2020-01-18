@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2019/12/19 22:18:17 joerg Exp $
+# $NetBSD: Makefile,v 1.84 2020/01/18 23:32:39 rillig Exp $
 #
 
 DISTNAME=	xlog-2.0.17
@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.savannah.gnu.org/releases/xlog/
 LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/xlog/
+HOMEPAGE=	https://www.nongnu.org/xlog/
 COMMENT=	Amateur Radio logging program
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils

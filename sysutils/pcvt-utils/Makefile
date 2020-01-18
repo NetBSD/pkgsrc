@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/08/18 07:31:18 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/18 23:35:20 rillig Exp $
 #
 
 DISTNAME=	netbsd-pcvt-20000611
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cvsweb.NetBSD.org/bsdweb.cgi/src/sys/arch/i386/isa/pcvt/
+HOMEPAGE=	https://cvsweb.NetBSD.org/bsdweb.cgi/src/sys/arch/i386/isa/pcvt/
 COMMENT=	Useful leftovers from pcvt: playvt and two font editors
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*

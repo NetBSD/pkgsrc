@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/03/17 08:18:43 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/18 23:35:52 rillig Exp $
 
 DISTNAME=		libXrandr-1.5.2
 CATEGORIES=		x11 devel
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X RandR Library from X.org
 
 CONFLICTS+=		Xrandr-[0-9]*

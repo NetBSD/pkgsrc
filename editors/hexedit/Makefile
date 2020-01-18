@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/08/18 07:31:06 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:30:45 rillig Exp $
 
 DISTNAME=	hexedit-1.2.13
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://rigaux.org/
 EXTRACT_SUFX=	.src.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://merd.sourceforge.net/pixel/hexedit.html
+HOMEPAGE=	https://merd.sourceforge.net/pixel/hexedit.html
 COMMENT=	To view and edit files in hexadecimal or ASCII
 
 WRKSRC=			${WRKDIR}/hexedit

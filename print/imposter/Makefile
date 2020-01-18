@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2019/07/21 22:25:38 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2020/01/18 23:33:29 rillig Exp $
 #
 
 DISTNAME=	imposter-0.3
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=imposter/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://imposter.sourceforge.net/
+HOMEPAGE=	https://imposter.sourceforge.net/
 COMMENT=	Standalone OpenOffice presentations viewer using GTK2
 
 GNU_CONFIGURE=		yes

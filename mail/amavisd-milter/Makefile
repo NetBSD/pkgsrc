@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/02 16:25:18 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:46 rillig Exp $
 #
 
 DISTNAME=	amavisd-milter-1.6.1
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=amavisd-milter/}
 
 MAINTAINER=	kivinen@iki.fi
-HOMEPAGE=	http://amavisd-milter.sourceforge.net/
+HOMEPAGE=	https://amavisd-milter.sourceforge.net/
 COMMENT=	Sendmail milter program for amavisd-new
 LICENSE=	modified-bsd
 

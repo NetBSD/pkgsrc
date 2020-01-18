@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2019/06/08 10:40:54 rillig Exp $
+# $NetBSD: Makefile.common,v 1.19 2020/01/18 23:30:45 rillig Exp $
 #
 # used by editors/emacs21/Makefile
 # used by editors/emacs21-nox11/Makefile
@@ -8,7 +8,7 @@ PKGNAME?=	emacs21-${EMACSVERSION}a
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+HOMEPAGE=	https://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 
 CONFLICTS=	mule-[0-9]*

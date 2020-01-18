@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/12/09 14:20:56 taca Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 23:35:43 rillig Exp $
 #
 
 DISTNAME=	gallery-1.5.10
@@ -7,7 +7,7 @@ CATEGORIES=	www graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gallery/}
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://gallery.sourceforge.net/
+HOMEPAGE=	https://gallery.sourceforge.net/
 COMMENT=	Web-based photo gallery written in PHP
 LICENSE=	gnu-gpl-v2
 

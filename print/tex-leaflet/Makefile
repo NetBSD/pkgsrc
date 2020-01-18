@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2019/12/06 20:21:52 markd Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/18 23:34:24 rillig Exp $
 
 DISTNAME=	leaflet
 PKGNAME=	tex-${DISTNAME}-1.1b
 TEXLIVE_REV=	43523
 
 MAINTAINER=	leot1990@users.sourceforge.net
-HOMEPAGE=	http://ctan.org/pkg/leaflet
+HOMEPAGE=	https://ctan.org/pkg/leaflet
 COMMENT=	Create small handouts (flyers)
 LICENSE=	lppl-1.3c
 

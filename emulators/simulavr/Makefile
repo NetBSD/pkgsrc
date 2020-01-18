@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/11/03 19:24:34 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/18 23:30:50 rillig Exp $
 #
 DISTNAME=		simulavr-1.0.0
 PKGREVISION=		5
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://download.savannah.gnu.org/releases/simulavr/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.nongnu.org/simulavr/
+HOMEPAGE=		https://www.nongnu.org/simulavr/
 COMMENT=		Simulator for Atmel AVR microcontrollers
 LICENSE=		gnu-gpl-v2
 

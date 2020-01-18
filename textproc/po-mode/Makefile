@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/02/17 19:18:09 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:35:30 rillig Exp $
 
 DISTNAME=		gettext-0.18.1.1
 PKGNAME=		po-mode-2.2
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=gettext/}
 EXTRACT_ELEMENTS=	${DISTNAME}/gettext-tools/misc
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/gettext/gettext.html
+HOMEPAGE=		https://www.gnu.org/software/gettext/gettext.html
 COMMENT=		PO(Portable Object) file editing mode for GNU emacs
 LICENSE=		gnu-gpl-v2
 

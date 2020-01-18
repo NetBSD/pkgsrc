@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/10/31 22:57:37 mef Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:33:25 rillig Exp $
 #
 
 DISTNAME=	parallel-20190922
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=parallel/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://savannah.gnu.org/projects/parallel/
+HOMEPAGE=	https://savannah.gnu.org/projects/parallel/
 COMMENT=	Build and execute shell commands in parallel
 LICENSE=	gnu-gpl-v3
 

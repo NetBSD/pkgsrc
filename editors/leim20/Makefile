@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/02/17 18:37:26 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 23:30:45 rillig Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGREVISION=	7
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 DISTFILES=	emacs-${VERSION}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+HOMEPAGE=	https://www.gnu.org/software/emacs/emacs.html
 COMMENT=	Libraries of Emacs Input Methods
 
 DEPENDS+=	emacs20-${VERSION}{,nb[0-9]*}:../../editors/emacs20

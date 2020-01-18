@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:21:24 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:34:09 rillig Exp $
 
 DISTNAME=	fixmetodonotes
 PKGNAME=	tex-${DISTNAME}-0.2.2
 TEXLIVE_REV=	30168
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/fixmetodonotes
+HOMEPAGE=	https://ctan.org/pkg/fixmetodonotes
 COMMENT=	Add notes on document development
 LICENSE=	public-domain
 

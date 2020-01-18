@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/07/18 00:06:16 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:32:00 rillig Exp $
 
 DISTNAME=	exult-1.4.9rc1
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=exult/exult-all-versions/}
 
 MAINTAINER=	nikkohigashi@gmail.com
-HOMEPAGE=	http://exult.sourceforge.net/
+HOMEPAGE=	https://exult.sourceforge.net/
 COMMENT=	Open-source Ultima 7 engine
 LICENSE=	gnu-gpl-v2
 

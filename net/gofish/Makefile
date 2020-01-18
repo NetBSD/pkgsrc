@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/12/18 16:36:18 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/18 23:33:15 rillig Exp $
 
 DISTNAME=		gofish-1.2
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gofish/}
 
 MAINTAINER=		esg@sdf.lonestar.org
-HOMEPAGE=		http://gofish.sourceforge.net/
+HOMEPAGE=		https://gofish.sourceforge.net/
 COMMENT=		Gopher server
 LICENSE=		gnu-gpl-v2
 

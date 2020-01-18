@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2007/10/09 19:19:09 martti Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:30:48 rillig Exp $
 
 COMPAT_PKG=		compat20	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		2.0
 
-HOMEPAGE=		http://www.NetBSD.org/releases/formal-2.0/index.html
+HOMEPAGE=		https://www.NetBSD.org/releases/formal-2.0/index.html
 COMMENT=		Shared libraries for NetBSD 2.0 compatibility
 
 .if defined(NETBSD_COMPAT32)

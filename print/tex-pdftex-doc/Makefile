@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/12/06 20:23:01 markd Exp $
+# $NetBSD: Makefile,v 1.23 2020/01/18 23:34:39 rillig Exp $
 
 DISTNAME=	pdftex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2018
@@ -6,7 +6,7 @@ PKGREVISION=	1
 TEXLIVE_REV=	48806
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/pdftex
+HOMEPAGE=	https://ctan.org/pkg/pdftex
 COMMENT=	Documentation for tex-pdftex
 LICENSE=	gnu-gpl-v2
 

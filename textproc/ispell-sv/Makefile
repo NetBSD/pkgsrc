@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:47 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:35:28 rillig Exp $
 #
 
 DISTNAME=	iswedish-1.2.1
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://sv.sslug.dk/locale/ispell/iswedish/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/ispell/ispell.html
+HOMEPAGE=	https://www.gnu.org/software/ispell/ispell.html
 COMMENT=	Swedish dictionary for interactive spelling checker
 
 CONFLICTS+=		ispell-svenska-[0-9]*

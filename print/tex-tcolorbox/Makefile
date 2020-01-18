@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2019/12/06 20:23:24 markd Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:34:53 rillig Exp $
 
 DISTNAME=	tcolorbox
 PKGNAME=	tex-${DISTNAME}-4.20
 TEXLIVE_REV=	50206
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/tcolorbox
+HOMEPAGE=	https://ctan.org/pkg/tcolorbox
 COMMENT=	Coloured boxes, for LaTeX examples and theorems, etc
 LICENSE=	lppl-1.3c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/03/07 11:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 23:36:02 rillig Exp $
 
 DISTNAME=	xf86-video-ark-0.7.5
 PKGREVISION=	5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg ARK Logic video driver
 
 USE_LIBTOOL=	yes

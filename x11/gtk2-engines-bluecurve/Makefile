@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/07/21 22:25:58 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2020/01/18 23:35:49 rillig Exp $
 #
 
 DISTNAME=	GTK2-Wonderland-Engine-1.0
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=teams/art.gnome.org/themes/gtk2/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://art.gnome.org/
+HOMEPAGE=	https://art.gnome.org/
 COMMENT=	Port of the famous Bluecurve theme for GTK2+
 
 GNU_CONFIGURE=		yes

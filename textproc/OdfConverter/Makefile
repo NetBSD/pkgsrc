@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2019/07/21 22:25:48 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2020/01/18 23:35:23 rillig Exp $
 #
 
 DISTNAME=	OdfAddinForOffice-src-3.0
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=odf-converter/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://odf-converter.sourceforge.net/
+HOMEPAGE=	https://odf-converter.sourceforge.net/
 COMMENT=	Converter between Microsoft Office 2007 and OpenOffice formats
 LICENSE=	modified-bsd
 

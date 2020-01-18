@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:30:05 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:35 rillig Exp $
 
 DISTNAME=	grotesq
 PKGNAME=	tex-${DISTNAME}-2014
 TEXLIVE_REV=	35859
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/urw-grotesq
+HOMEPAGE=	https://ctan.org/pkg/urw-grotesq
 COMMENT=	URW Grotesq font pack for LaTeX
 LICENSE=	gnu-gpl-v2
 

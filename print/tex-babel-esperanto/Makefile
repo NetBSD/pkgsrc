@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:18:52 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:35 rillig Exp $
 
 DISTNAME=	babel-esperanto
 PKGNAME=	tex-${DISTNAME}-1.4t
 TEXLIVE_REV=	30265
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/babel-esperanto
+HOMEPAGE=	https://ctan.org/pkg/babel-esperanto
 COMMENT=	Babel support for Esperanto
 LICENSE=	lppl-1.3c
 

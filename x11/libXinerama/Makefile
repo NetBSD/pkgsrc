@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/07/07 07:48:24 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:52 rillig Exp $
 
 DISTNAME=	libXinerama-1.1.4
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	X PanoramiX extension library
 
 USE_LIBTOOL=	yes

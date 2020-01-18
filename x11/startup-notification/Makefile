@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/10/09 14:07:15 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/18 23:35:56 rillig Exp $
 
 DISTNAME=		startup-notification-0.12
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		http://www.freedesktop.org/software/startup-notification/releases/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.freedesktop.org/wiki/Software/startup-notification
+HOMEPAGE=		https://www.freedesktop.org/wiki/Software/startup-notification
 COMMENT=		X11 application startup notification library
 LICENSE=		mit AND gnu-lgpl-v2.1
 

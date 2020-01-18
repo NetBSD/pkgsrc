@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/01/18 21:49:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2020/01/18 23:30:46 rillig Exp $
 
 DISTNAME=	texstudio-2.12.16
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=texstudio-org/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://texstudio.sourceforge.net/
+HOMEPAGE=	https://texstudio.sourceforge.net/
 COMMENT=	Integrated writing environment for creating LaTeX documents
 LICENSE=	gnu-gpl-v2
 

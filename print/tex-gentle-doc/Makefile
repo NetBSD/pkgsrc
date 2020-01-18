@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:29 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:12 rillig Exp $
 
 DISTNAME=	gentle.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
 TEXLIVE_REV=	15878
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/gentle
+HOMEPAGE=	https://ctan.org/pkg/gentle
 COMMENT=	Gentle Introduction to TeX
 #LICENSE=	other-free
 

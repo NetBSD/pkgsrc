@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2019/12/06 20:19:12 markd Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 23:33:49 rillig Exp $
 
 DISTNAME=	context
 PKGNAME=	tex-${DISTNAME}-2019
 TEXLIVE_REV=	50573
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/context
+HOMEPAGE=	https://ctan.org/pkg/context
 COMMENT=	The ConTeXt macro package
 
 DEPENDS+=	tex-lm>=2.004nb1:../../fonts/tex-lm

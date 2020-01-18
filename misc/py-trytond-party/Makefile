@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2017/09/16 19:27:01 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:33:04 rillig Exp $
 TRYTON_MODULE_NAME=	trytond_party
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	misc python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tryton.org/
+HOMEPAGE=	https://www.tryton.org/
 COMMENT=	Party module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 

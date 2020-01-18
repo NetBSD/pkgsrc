@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2014/03/03 03:39:10 obache Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:33:25 rillig Exp $
 #
 
 PKGNAME=	cdpack-1.9
 CATEGORIES=	pkgtools
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://www.NetBSD.org/
+HOMEPAGE=	https://www.NetBSD.org/
 COMMENT=	Utility to create multi-cd/dvd binary package collections
 LICENSE=	original-bsd
 

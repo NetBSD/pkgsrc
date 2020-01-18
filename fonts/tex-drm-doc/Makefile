@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 19:29:51 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:31:25 rillig Exp $
 
 DISTNAME=	drm.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-4.4
 TEXLIVE_REV=	38157
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/drm
+HOMEPAGE=	https://ctan.org/pkg/drm
 COMMENT=	Documentation for tex-drm
 LICENSE=	lppl-1.3c
 

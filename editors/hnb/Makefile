@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/10/19 14:10:45 fox Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/18 23:30:45 rillig Exp $
 
 DISTNAME=	hnb-1.9.18
 CATEGORIES=	editors
@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hnb.sourceforge.net/
+HOMEPAGE=	https://hnb.sourceforge.net/
 COMMENT=	Hierarchical data organizer
 LICENSE=	gnu-gpl-v2
 

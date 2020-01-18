@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2019/08/11 13:22:39 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2020/01/18 23:33:28 rillig Exp $
 
 DISTNAME=	gv-3.7.4
 PKGREVISION=	9
@@ -6,7 +6,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNU:=gv/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gv/
+HOMEPAGE=	https://www.gnu.org/software/gv/
 COMMENT=	PostScript and PDF previewer
 LICENSE=	gnu-gpl-v3
 

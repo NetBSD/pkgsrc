@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/06/04 22:16:27 tron Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/18 23:32:19 rillig Exp $
 
 DISTNAME=	silgraphite-2.3.1
 PKGNAME=	${DISTNAME:S/silgraphite/silgraphite-ft/}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=silgraphite/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://silgraphite.sourceforge.net/
+HOMEPAGE=	https://silgraphite.sourceforge.net/
 COMMENT=	FreeType wrapper for SIL Graphite
 
 GNU_CONFIGURE=	yes

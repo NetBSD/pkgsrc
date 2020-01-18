@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2019/12/06 20:21:39 markd Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:34:16 rillig Exp $
 
 DISTNAME=	hyphen-latin
 PKGNAME=	tex-${DISTNAME}-3.1.2019.51186
 TEXLIVE_REV=	51186
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/lahyph
+HOMEPAGE=	https://ctan.org/pkg/lahyph
 COMMENT=	Liturgical Latin hyphenation patterns
 LICENSE=	lppl-1.3c
 

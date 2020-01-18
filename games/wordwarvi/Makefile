@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/10/20 11:10:48 nia Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:32:06 rillig Exp $
 #
 
 DISTNAME=	wordwarvi-1.0.2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=smcameron/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://smcameron.github.io/wordwarvi/
+HOMEPAGE=	https://smcameron.github.io/wordwarvi/
 COMMENT=	Side-scrolling shoot 'em up '80s style arcade game
 LICENSE=	gnu-gpl-v2
 

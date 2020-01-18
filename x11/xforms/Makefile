@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2013/01/26 21:37:00 adam Exp $
+# $NetBSD: Makefile,v 1.71 2020/01/18 23:36:08 rillig Exp $
 #
 
 DISTNAME=	xforms-1.0
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/xforms/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://savannah.nongnu.org/projects/xforms
+HOMEPAGE=	https://savannah.nongnu.org/projects/xforms
 COMMENT=	Graphical user interface toolkit for X Window System
 
 USE_IMAKE=	YES

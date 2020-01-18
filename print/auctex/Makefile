@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/11/04 19:57:58 rillig Exp $
+# $NetBSD: Makefile,v 1.50 2020/01/18 23:33:27 rillig Exp $
 
 DISTNAME=		auctex-11.92
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -8,7 +8,7 @@ CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=auctex/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/auctex/
+HOMEPAGE=		https://www.gnu.org/software/auctex/
 COMMENT=		Enhanced LaTeX mode for Emacs
 LICENSE=		gnu-gpl-v3
 

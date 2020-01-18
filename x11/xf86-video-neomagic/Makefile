@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/12/29 13:11:09 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/18 23:36:04 rillig Exp $
 
 DISTNAME=	xf86-video-neomagic-1.3.0
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg Neomagic video driver
 
 USE_LIBTOOL=	yes

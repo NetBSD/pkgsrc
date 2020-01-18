@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:14 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:51 rillig Exp $
 
 DISTNAME=	context-cyrillicnumbers.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2015
 TEXLIVE_REV=	29905
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/context-cyrillicnumbers
+HOMEPAGE=	https://ctan.org/pkg/context-cyrillicnumbers
 COMMENT=	Documentation for tex-context-cyrillicnumbers
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/11/02 22:38:03 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/18 23:32:18 rillig Exp $
 
 DISTNAME=	piddle-1.0.15
 PKGREVISION=	3
@@ -7,7 +7,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=piddle/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://piddle.sourceforge.net/
+HOMEPAGE=	https://piddle.sourceforge.net/
 COMMENT=	Python Plug In Drawing, Does Little Else
 
 USE_LANGUAGES=	# empty

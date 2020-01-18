@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/03 09:14:08 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:35:48 rillig Exp $
 #
 # This package is for use with Xfixes only. Do not update to later versions.
 
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Fixes extension headers from X.org
 
 CONFLICTS+=		fixesext-[0-9]*
