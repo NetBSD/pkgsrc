@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2020/01/06 09:39:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.95 2020/01/18 21:50:31 jperkin Exp $
 
 DISTNAME=		pkgin-0.15.0
+PKGREVISION=		1
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NetBSDfr/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

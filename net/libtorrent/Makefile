@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2019/07/30 09:19:59 nia Exp $
+# $NetBSD: Makefile,v 1.62 2020/01/18 21:48:20 jperkin Exp $
 
 DISTNAME=	libtorrent-0.13.8
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://rtorrent.net/downloads/
 

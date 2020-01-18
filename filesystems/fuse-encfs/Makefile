@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2019/07/08 10:36:26 nia Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 21:49:20 jperkin Exp $
 #
 
 GITHUB_PROJECT=	encfs
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	encfs-1.9.4
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vgough/}
 

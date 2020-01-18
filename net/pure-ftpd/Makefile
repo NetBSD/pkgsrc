@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2017/09/03 08:53:13 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/18 21:50:24 jperkin Exp $
 
 DISTNAME=	pure-ftpd-1.0.35
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/
 MASTER_SITES+=	http://download.pureftpd.org/pub/pure-ftpd/releases/

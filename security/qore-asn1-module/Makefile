@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2018/06/08 20:49:42 nros Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/18 21:50:46 jperkin Exp $
 
 DISTNAME=	qore-asn1-module-0.0.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 

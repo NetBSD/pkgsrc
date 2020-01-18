@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2019/11/22 00:12:34 nia Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 21:49:12 jperkin Exp $
 
 DISTNAME=	libmowgli-2.1.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=atheme/}
 GITHUB_PROJECT=	libmowgli-2

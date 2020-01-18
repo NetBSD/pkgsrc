@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2019/11/21 06:21:42 markd Exp $
+# $NetBSD: Makefile,v 1.43 2020/01/18 21:50:01 jperkin Exp $
 
 DISTNAME=	klettres-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/klettres/

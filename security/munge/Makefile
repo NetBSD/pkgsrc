@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2019/08/11 13:22:48 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2020/01/18 21:50:41 jperkin Exp $
 
 DISTNAME=	munge-0.5.13
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dun/}
 GITHUB_RELEASE=	${DISTNAME}

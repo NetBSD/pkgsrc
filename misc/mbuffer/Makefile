@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2018/09/18 09:49:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 21:50:02 jperkin Exp $
 
 DISTNAME=	mbuffer-20180625
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.maier-komor.de/software/mbuffer/
 EXTRACT_SUFX=	.tgz

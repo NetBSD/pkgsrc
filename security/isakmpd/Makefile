@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2017/05/21 06:49:09 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2020/01/18 21:50:39 jperkin Exp $
 
 DISTNAME=		isakmpd-20030903
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		security net
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 

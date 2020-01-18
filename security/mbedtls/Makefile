@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/10/01 17:44:11 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 21:50:40 jperkin Exp $
 
 DISTNAME=	mbedtls-2.16.3-apache
 PKGNAME=	${DISTNAME:-apache=}
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	https://tls.mbed.org/download/
 EXTRACT_SUFX=	.tgz

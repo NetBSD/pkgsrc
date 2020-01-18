@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2018/09/21 14:27:37 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2020/01/18 21:50:30 jperkin Exp $
 
 DISTNAME=	slrn-1.0.3a
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	http://jedsoft.org/releases/slrn/
 EXTRACT_SUFX=	.tar.bz2

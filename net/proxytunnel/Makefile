@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/11/03 11:45:49 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 21:50:24 jperkin Exp $
 #
 
 DISTNAME=	proxytunnel-1.9.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=proxytunnel/}
 EXTRACT_SUFX=	.tgz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2019/12/24 20:22:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 21:51:10 jperkin Exp $
 
 DISTNAME=	Pound-2.8
 PKGNAME=	${DISTNAME:S/Pound/pound/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.apsis.ch/pound/
 EXTRACT_SUFX=	.tgz

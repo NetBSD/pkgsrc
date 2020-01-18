@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.314 2019/09/23 20:00:07 triaxx Exp $
+# $NetBSD: Makefile,v 1.315 2020/01/18 21:49:53 jperkin Exp $
 
+PKGREVISION= 1
 .include "../../mail/postfix/Makefile.common"
 
 COMMENT=	Fast, easy to administer, and secure mail transfer agent

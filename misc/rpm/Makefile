@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2019/08/11 13:22:00 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2020/01/18 21:50:03 jperkin Exp $
 
 DISTNAME=	rpm-4.13.0.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 MASTER_SITES=	http://ftp.rpm.org/releases/rpm-4.13.x/
 EXTRACT_SUFX=	.tar.bz2

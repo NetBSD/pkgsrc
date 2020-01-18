@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2019/11/02 16:25:29 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 21:49:55 jperkin Exp $
 
 DISTNAME=	up-imapproxy-1.2.5
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	mail
 MASTER_SITES=	http://www.imapproxy.org/downloads/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2019/08/27 08:12:01 adam Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 21:50:16 jperkin Exp $
 
 PKGNAME=	isc-dhcrelay-${DHVER}
+PKGREVISION=	1
 COMMENT=	ISC Dynamic Host Configuration Protocol (DHCP) Relay
 BUILD_SUBDIR=	bind includes tests common omapip relay
 SUBDIR=		relay

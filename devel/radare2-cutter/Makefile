@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/08/04 14:32:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/18 21:49:15 jperkin Exp $
 
 DISTNAME=	cutter-1.8.3
 PKGNAME=	radare2-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=radareorg/}
 GITHUB_PROJECT=	cutter

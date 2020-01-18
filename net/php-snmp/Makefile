@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2016/04/02 09:05:23 taca Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 21:50:23 jperkin Exp $
 
 MODNAME=		snmp
 CATEGORIES+=		net
 COMMENT=		PHP extension for SNMP
+PKGREVISION=		1
 
 CONFLICTS=	php-snmp-[0-9]*
 

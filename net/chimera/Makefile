@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/03/05 11:29:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 21:50:10 jperkin Exp $
 
 DISTNAME=	chimera-1.20
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.cs.ucsb.edu/~ravenben/chimera/download/
 

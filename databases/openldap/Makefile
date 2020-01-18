@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.149 2018/12/20 17:54:09 adam Exp $
+# $NetBSD: Makefile,v 1.150 2020/01/18 21:48:57 jperkin Exp $
 
+PKGREVISION= 1
 .include "../../databases/openldap/Makefile.version"
 
 DISTNAME=	openldap-${OPENLDAP_VERSION}

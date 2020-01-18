@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2020/01/12 20:20:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2020/01/18 21:48:31 jperkin Exp $
 
 DISTNAME=	kactivities-4.13.3
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	x11
 COMMENT=	KDE Activity Manager
 MASTER_SITES=	${MASTER_SITE_KDE:=4.13.3/src/}

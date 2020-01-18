@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2017/09/03 08:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 21:50:43 jperkin Exp $
 #
 
 DISTNAME=	pam_p11-0.1.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 # This has a bad name and doesn't have generated auto* files.
 #MASTER_SITES=	https://github.com/OpenSC/pam_p11/archive/

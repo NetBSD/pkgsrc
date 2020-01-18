@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2019/07/21 22:24:40 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2020/01/18 21:49:15 jperkin Exp $
 
 DISTNAME=		rapidsvn-0.12.1
-PKGREVISION=		38
+PKGREVISION=		39
 CATEGORIES=		devel x11 scm
 MASTER_SITES=		http://www.rapidsvn.org/download/release/0.12.1/
 

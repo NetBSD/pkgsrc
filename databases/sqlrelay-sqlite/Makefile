@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2020/01/12 20:20:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/18 21:49:06 jperkin Exp $
 
 PKGNAME=		${DISTNAME:S/sqlrelay/sqlrelay-sqlite/}
-PKGREVISION=		17
+PKGREVISION=		18
 COMMENT=		SQLite support for SQL Relay
 
 .include "../../databases/sqlrelay/Makefile.common"
