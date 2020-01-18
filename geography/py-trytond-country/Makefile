@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2017/09/16 19:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:32:08 rillig Exp $
 TRYTON_MODULE_NAME=	trytond_country
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	geography python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tryton.org/
+HOMEPAGE=	https://www.tryton.org/
 COMMENT=	Country module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 

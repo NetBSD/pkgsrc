@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2018/08/19 20:16:42 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/18 23:35:46 rillig Exp $
 
 DISTNAME=	xbae-4.51.01
 PKGNAME=	Xbae-4.51.01
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xbae/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xbae.sourceforge.net/
+HOMEPAGE=	https://xbae.sourceforge.net/
 COMMENT=	Motif-compatible widgets: XbaeMatrix, XbaeCaption, XbaeInput
 
 USE_LIBTOOL=		YES

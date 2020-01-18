@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/18 21:48:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2020/01/18 23:35:13 rillig Exp $
 
 DISTNAME=	xml-security-c-2.0.2
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=/santuario/c-library/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://santuario.apache.org/
+HOMEPAGE=	https://santuario.apache.org/
 COMMENT=	XML Digital Signature specification implementation
 LICENSE=	apache-2.0
 

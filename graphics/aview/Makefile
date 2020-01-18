@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/07/04 13:40:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:32:10 rillig Exp $
 
 DISTNAME=	aview-1.3.0rc1
 PKGNAME=	aview-1.3.0.1
@@ -7,7 +7,7 @@ CATEGORIES=	graphics converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aa-project/}
 
 MAINTAINER=	salo@Xtrmntr.org
-HOMEPAGE=	http://aa-project.sourceforge.net/aview/
+HOMEPAGE=	https://aa-project.sourceforge.net/aview/
 COMMENT=	ASCII Art image viewer
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/08/11 13:21:44 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2020/01/18 23:32:52 rillig Exp $
 
 DISTNAME=		maxima-5.41.0
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=maxima/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://maxima.sourceforge.net/
+HOMEPAGE=		https://maxima.sourceforge.net/
 COMMENT=		Computer algebra system
 LICENSE=		gnu-gpl-v2
 

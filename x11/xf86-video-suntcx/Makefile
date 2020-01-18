@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/03/07 11:57:45 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:36:06 rillig Exp $
 
 DISTNAME=	xf86-video-suntcx-1.1.2
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	TCX video driver for the Xorg X server
 
 GNU_CONFIGURE=	yes

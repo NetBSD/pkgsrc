@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/09/02 13:19:56 adam Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/18 23:32:46 rillig Exp $
 
 DISTNAME=		archivemail-0.9.0
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=archivemail/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://archivemail.sourceforge.net/
+HOMEPAGE=		https://archivemail.sourceforge.net/
 COMMENT=		Tool for archiving and compressing old email in mailboxes
 LICENSE=		gnu-gpl-v2
 

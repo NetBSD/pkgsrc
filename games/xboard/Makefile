@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2020/01/13 15:46:26 hauke Exp $
+# $NetBSD: Makefile,v 1.61 2020/01/18 23:32:06 rillig Exp $
 
 DISTNAME=	xboard-4.9.1
 #PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNU:=xboard/}
 
 MAINTAINER=	simonb@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/xboard/
+HOMEPAGE=	https://www.gnu.org/software/xboard/
 COMMENT=	Graphical frontend for chess engines and servers
 LICENSE=	gnu-gpl-v3
 

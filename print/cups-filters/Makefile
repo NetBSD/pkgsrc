@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2020/01/03 13:26:08 leot Exp $
+# $NetBSD: Makefile,v 1.129 2020/01/18 23:33:27 rillig Exp $
 
 DISTNAME=	cups-filters-1.26.1
 CATEGORIES=	print
@@ -6,7 +6,7 @@ MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.linuxfoundation.org/collaborate/workgroups/openprinting/cups-filters
+HOMEPAGE=	https://www.linuxfoundation.org/collaborate/workgroups/openprinting/cups-filters
 COMMENT=	Backends, filters, and other software for cups
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND mit
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2019/12/06 20:04:33 markd Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:32:31 rillig Exp $
 
 DISTNAME=	pst-node
 PKGNAME=	tex-${DISTNAME}-1.42
 TEXLIVE_REV=	50215
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/pst-node
+HOMEPAGE=	https://ctan.org/pkg/pst-node
 COMMENT=	Nodes and node connections in pstricks
 LICENSE=	lppl-1.3c
 

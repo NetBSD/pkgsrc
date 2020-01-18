@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2020/01/05 18:54:40 adam Exp $
+# $NetBSD: Makefile,v 1.69 2020/01/18 23:35:25 rillig Exp $
 
 DISTNAME=	docbook-xsl-1.79.1
 PKGREVISION=	5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://docbook.sourceforge.net/
+HOMEPAGE=	https://docbook.sourceforge.net/
 COMMENT=	Docbook XSL modular stylesheet
 
 DEPENDS+=	docbook-xml>=4.2:../../textproc/docbook-xml

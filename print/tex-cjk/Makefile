@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 20:19:09 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:33:46 rillig Exp $
 
 DISTNAME=	cjk
 PKGNAME=	tex-${DISTNAME}-4.8.4
 TEXLIVE_REV=	36951
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/cjk
+HOMEPAGE=	https://ctan.org/pkg/cjk
 COMMENT=	CJK language support
 LICENSE=	gnu-gpl-v2
 

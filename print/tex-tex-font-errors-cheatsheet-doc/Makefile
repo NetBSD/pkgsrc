@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:27 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:54 rillig Exp $
 
 DISTNAME=	tex-font-errors-cheatsheet.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.1
 TEXLIVE_REV=	18314
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/tex-font-errors-cheatsheet
+HOMEPAGE=	https://ctan.org/pkg/tex-font-errors-cheatsheet
 COMMENT=	Cheat sheet outlining the most common TeX font errors
 LICENSE=	lppl-1.3c
 

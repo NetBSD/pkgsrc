@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.10 2017/06/29 20:11:17 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.11 2020/01/18 23:32:45 rillig Exp $
 
 DISTNAME=	expect${EXPECT_FNAME}
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expect/}
-HOMEPAGE=	http://expect.sourceforge.net/
+HOMEPAGE=	https://expect.sourceforge.net/
 
 EXPECT_FNAME=	5.45
 EXPECT_VERSION=	5.45.0

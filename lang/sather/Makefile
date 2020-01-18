@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2019/11/03 19:04:07 rillig Exp $
+# $NetBSD: Makefile,v 1.69 2020/01/18 23:32:45 rillig Exp $
 
 DISTNAME=		sather-1.2.3
 PKGREVISION=		15
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=sather/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/sather/
+HOMEPAGE=		https://www.gnu.org/software/sather/
 COMMENT=		Compiler for the Sather object oriented programming language
 #LICENSE=		gnu-gpl-v3 gnu-lgpl-v3
 

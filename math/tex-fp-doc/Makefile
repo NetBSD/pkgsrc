@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 19:07:32 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:32:53 rillig Exp $
 
 DISTNAME=	fp.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.1d
 TEXLIVE_REV=	49719
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/fp
+HOMEPAGE=	https://ctan.org/pkg/fp
 COMMENT=	Documentation for tex-fp
 LICENSE=	lppl-1.3c
 

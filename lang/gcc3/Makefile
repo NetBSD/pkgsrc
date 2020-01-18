@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.66 2012/04/07 17:33:54 dholland Exp $
+# $NetBSD: Makefile,v 1.67 2020/01/18 23:32:42 rillig Exp $
 
 GCC_VERSION=	3.3.6
 DISTNAME=	gcc3-${GCC_VERSION}
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gcc.gnu.org/
+HOMEPAGE=	https://gcc.gnu.org/
 COMMENT=	GNU Compiler Collection, v3
 
 NOT_FOR_PLATFORM=	Darwin-*-*

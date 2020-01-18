@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:21:24 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/18 23:32:46 rillig Exp $
 #
 
 DISTNAME=		YoSucker-pr37
@@ -8,7 +8,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=yosucker/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://yosucker.sourceforge.net/
+HOMEPAGE=		https://yosucker.sourceforge.net/
 COMMENT=		Download mails from Yahoo webmail into mbox
 
 DEPENDS+=		p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey

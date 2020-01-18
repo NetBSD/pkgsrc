@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 20:19:22 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:33:59 rillig Exp $
 
 DISTNAME=	cweb
 PKGNAME=	tex-${DISTNAME}-3.70.49278
 TEXLIVE_REV=	49278
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/cweb
+HOMEPAGE=	https://ctan.org/pkg/cweb
 COMMENT=	Web system in C
 
 DEPENDS+=	web2c-[0-9]*:../../print/web2c

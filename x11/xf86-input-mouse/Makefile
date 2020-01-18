@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/06/19 07:12:45 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/18 23:36:01 rillig Exp $
 
 DISTNAME=	xf86-input-mouse-1.9.3
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg mouse driver
 LICENSE=	mit
 

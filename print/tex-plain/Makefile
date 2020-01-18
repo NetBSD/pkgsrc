@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/12/06 20:23:04 markd Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/18 23:34:40 rillig Exp $
 
 DISTNAME=	plain
 PKGNAME=	tex-${DISTNAME}-3.141592653.43076
@@ -6,7 +6,7 @@ PKGREVISION=	2
 TEXLIVE_REV=	43076
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/plain
+HOMEPAGE=	https://ctan.org/pkg/plain
 COMMENT=	The Plain TeX format
 #LICENSE=	knuth
 

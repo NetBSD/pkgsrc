@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2020/01/18 21:50:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.105 2020/01/18 23:33:14 rillig Exp $
 
 DISTNAME=	etherape-0.9.12
 PKGREVISION=	38
@@ -6,7 +6,7 @@ CATEGORIES=	gnome net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=etherape/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://etherape.sourceforge.net/
+HOMEPAGE=	https://etherape.sourceforge.net/
 COMMENT=	Graphical network monitor
 LICENSE=	gnu-gpl-v2 # or later
 

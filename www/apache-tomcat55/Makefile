@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/28 06:30:09 asau Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/18 23:35:42 rillig Exp $
 
 DISTNAME=	apache-tomcat-${TOMCAT_VERSION}
 CATEGORIES=	www java
@@ -6,7 +6,7 @@ CATEGORIES=	www java
 # The getsite.sh script parses the HTML and extracts the urls.
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tomcat.apache.org/
+HOMEPAGE=	https://tomcat.apache.org/
 COMMENT=	The Apache Project's Java Servlet 2.4 and JSP 2.0 server
 
 LICENSE=	apache-2.0

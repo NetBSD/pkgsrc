@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2017/11/28 09:07:23 adam Exp $
+# $NetBSD: Makefile,v 1.44 2020/01/18 23:32:53 rillig Exp $
 
 DISTNAME=	rpy2-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpy2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rpy.sourceforge.net/
+HOMEPAGE=	https://rpy.sourceforge.net/
 COMMENT=	R interface for Python
 LICENSE=	mpl-1.1 OR gnu-gpl-v2 OR gnu-lgpl-v2.1
 

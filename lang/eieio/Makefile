@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/02/06 16:36:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:32:41 rillig Exp $
 
 DISTNAME=	eieio-0.17
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	lang editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cedet.sourceforge.net/eieio.shtml
+HOMEPAGE=	https://cedet.sourceforge.net/eieio.shtml
 COMMENT=	Enhanced Integration of Emacs Interpreted Objects
 
 EMACS_MODULES+=	base

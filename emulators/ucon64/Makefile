@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/03 19:24:34 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/18 23:30:51 rillig Exp $
 
 DISTNAME=		ucon64-2.2.0-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ucon64/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ucon64.sourceforge.net/
+HOMEPAGE=		https://ucon64.sourceforge.net/
 COMMENT=		Emulator ROM and disk image converter and inspector
 LICENSE=		gnu-gpl-v2
 

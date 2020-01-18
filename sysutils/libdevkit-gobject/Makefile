@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/08/23 20:34:07 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:35:18 rillig Exp $
 
 DISTNAME=	DeviceKit-003
 PKGNAME=	${DISTNAME:S/DeviceKit/libdevkit-gobject/}
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software/DeviceKit
+HOMEPAGE=	https://www.freedesktop.org/wiki/Software/DeviceKit
 COMMENT=	Modular hardware abstraction layer
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
