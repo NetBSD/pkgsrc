@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2016/12/04 21:13:01 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:30:55 rillig Exp $
 TRYTON_MODULE_NAME=	trytond_account_payment_sepa_cfonb
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tryton.org/
+HOMEPAGE=	https://www.tryton.org/
 COMMENT=	Account payment SEPA CFONB module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 

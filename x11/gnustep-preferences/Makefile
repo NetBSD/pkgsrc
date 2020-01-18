@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2019/11/03 09:14:08 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2020/01/18 23:35:48 rillig Exp $
 
 DISTNAME=	Preferences-1.2.0
 PKGNAME=	gnustep-${DISTNAME:S/P/p/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prefsapp/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://prefsapp.sourceforge.net/
+HOMEPAGE=	https://prefsapp.sourceforge.net/
 COMMENT=	Application for setting preferences for the GNUstep system
 LICENSE=	gnu-gpl-v2
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2019/12/06 20:21:43 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:34:17 rillig Exp $
 
 DISTNAME=	ifmtarg
 PKGNAME=	tex-${DISTNAME}-1.2b
 TEXLIVE_REV=	47544
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/ifmtarg
+HOMEPAGE=	https://ctan.org/pkg/ifmtarg
 COMMENT=	If-then-else command for processing potentially empty arguments
 LICENSE=	lppl-1.3c
 

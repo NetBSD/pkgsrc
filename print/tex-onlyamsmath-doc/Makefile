@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:22:57 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:35 rillig Exp $
 
 DISTNAME=	onlyamsmath.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.20
 TEXLIVE_REV=	42927
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/onlyamsmath
+HOMEPAGE=	https://ctan.org/pkg/onlyamsmath
 COMMENT=	Documentation for tex-onlyamsmath
 LICENSE=	lppl-1.3c
 

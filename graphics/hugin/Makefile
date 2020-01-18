@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2020/01/12 20:20:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.98 2020/01/18 23:32:14 rillig Exp $
 
 DISTNAME=	hugin-2019.2.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hugin.sourceforge.net/
+HOMEPAGE=	https://hugin.sourceforge.net/
 COMMENT=	Panorama photo stitcher
 LICENSE=	gnu-gpl-v2
 

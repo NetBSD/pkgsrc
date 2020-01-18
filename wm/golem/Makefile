@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/05/23 19:23:19 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/18 23:35:40 rillig Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -7,7 +7,7 @@ CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=golem/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://golem.sourceforge.net/
+HOMEPAGE=	https://golem.sourceforge.net/
 COMMENT=	Fast and lightweight yet customizable window manager
 
 USE_TOOLS+=	gmake yacc lex

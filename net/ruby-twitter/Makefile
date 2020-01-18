@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2017/12/09 18:00:46 tsutsui Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/18 23:33:21 rillig Exp $
 
 DISTNAME=	twitter-6.2.0
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
-HOMEPAGE=	http://sferik.github.io/twitter/
+HOMEPAGE=	https://sferik.github.io/twitter/
 COMMENT=	Ruby interface to the Twitter API
 LICENSE=	mit
 

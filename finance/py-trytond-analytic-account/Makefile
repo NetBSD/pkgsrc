@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2017/02/20 17:00:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:30:56 rillig Exp $
 TRYTON_MODULE_NAME=	trytond_analytic_account
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tryton.org/
+HOMEPAGE=	https://www.tryton.org/
 COMMENT=	The analytic_account module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 

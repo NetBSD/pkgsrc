@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1 2015/09/24 23:05:31 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2020/01/18 23:32:10 rillig Exp $
 
 DISTNAME=		djvulibre-3.5.27
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=djvu/}
 
-HOMEPAGE=		http://djvu.sourceforge.net/
+HOMEPAGE=		https://djvu.sourceforge.net/
 COMMENT=		Compression library for scanned documents
 LICENSE=		gnu-gpl-v2
 

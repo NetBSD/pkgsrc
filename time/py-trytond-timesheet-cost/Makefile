@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:35:39 rillig Exp $
 TRYTON_MODULE_NAME=	trytond_timesheet_cost
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	python time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tryton.org/
+HOMEPAGE=	https://www.tryton.org/
 COMMENT=	Timesheet cost module of Tryton's application platform
 LICENSE=	gnu-gpl-v3
 

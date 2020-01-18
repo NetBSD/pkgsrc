@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:47 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:21 rillig Exp $
 
 DISTNAME=	cookingsymbols
 PKGNAME=	tex-${DISTNAME}-1.1
 TEXLIVE_REV=	35929
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/cookingsymbols
+HOMEPAGE=	https://ctan.org/pkg/cookingsymbols
 COMMENT=	Symbols for recipes
 LICENSE=	lppl-1.3c
 

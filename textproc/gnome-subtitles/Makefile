@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2020/01/18 21:51:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.73 2020/01/18 23:35:26 rillig Exp $
 
 DISTNAME=	gnome-subtitles-1.3
 PKGREVISION=	23
@@ -6,7 +6,7 @@ CATEGORIES=	multimedia textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnome-subtitles/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gnome-subtitles.sourceforge.net/
+HOMEPAGE=	https://gnome-subtitles.sourceforge.net/
 COMMENT=	Subtitle editor for the GNOME desktop
 LICENSE=	gnu-gpl-v2
 

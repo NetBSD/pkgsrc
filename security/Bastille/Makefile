@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/04 21:12:51 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:05 rillig Exp $
 #
 
 DISTNAME=	Bastille-3.0.9
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bastille-linux/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bastille-linux.sourceforge.net/
+HOMEPAGE=	https://bastille-linux.sourceforge.net/
 COMMENT=	System hardening tool focusing on educating the user
 
 WRKSRC=			${WRKDIR}/Bastille

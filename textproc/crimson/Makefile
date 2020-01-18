@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/25 06:55:45 asau Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/18 23:35:24 rillig Exp $
 #
 # We use the binary distribution of crimson because otherwise we
 # have a bootstrap-loop between apache-ant and crimson, each of which
@@ -11,7 +11,7 @@ CATEGORIES=	textproc www
 MASTER_SITES=	http://xml.apache.org/dist/crimson/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xml.apache.org/crimson/
+HOMEPAGE=	https://xml.apache.org/crimson/
 COMMENT=	Apache.org implementation of JAXP, SAX, and DOM
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:30:06 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:36 rillig Exp $
 
 DISTNAME=	hfbright
 PKGNAME=	tex-${DISTNAME}-2014
 TEXLIVE_REV=	29349
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/hfbright
+HOMEPAGE=	https://ctan.org/pkg/hfbright
 COMMENT=	Hfbright fonts
 LICENSE=	lppl-1.3c
 

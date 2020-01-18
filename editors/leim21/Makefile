@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/02/17 19:18:02 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:30:46 rillig Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 DISTFILES=	emacs-${VERSION}a${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+HOMEPAGE=	https://www.gnu.org/software/emacs/emacs.html
 COMMENT=	Libraries of Emacs Input Methods (for emacs21)
 
 WRKSRC=		${WRKDIR}/emacs-${VERSION}

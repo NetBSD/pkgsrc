@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/11/03 11:45:50 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2020/01/18 23:33:20 rillig Exp $
 
 DISTNAME=	pygoogle-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -7,7 +7,7 @@ CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pygoogle/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pygoogle.sourceforge.net/
+HOMEPAGE=	https://pygoogle.sourceforge.net/
 COMMENT=	Call the Google web API from Python
 
 DEPENDS+=	${PYPKGPREFIX}-SOAPpy-[0-9]*:../../net/py-soappy

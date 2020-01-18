@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.58 2017/12/19 10:34:47 markd Exp $
+# $NetBSD: Makefile,v 1.59 2020/01/18 23:33:12 rillig Exp $
 
 DISTNAME=	mjpegtools-2.1.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mjpeg.sourceforge.net/
+HOMEPAGE=	https://mjpeg.sourceforge.net/
 COMMENT=	Programs for compressing video streams
 LICENSE=	gnu-gpl-v2
 

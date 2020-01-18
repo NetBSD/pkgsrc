@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/07/12 10:49:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:33:42 rillig Exp $
 
 DISTNAME=	tex-bibtex8-3.71
 CATEGORIES=	print
@@ -6,7 +6,7 @@ MASTER_SITES=	http://mirrors.ctan.org/biblio/bibtex/8-bit/
 DISTFILES=	bt371src.zip bt371csf.zip
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://mirrors.ctan.org/biblio/bibtex/8-bit/
+HOMEPAGE=	https://mirrors.ctan.org/biblio/bibtex/8-bit/
 COMMENT=	8-bit Implementation of BibTeX 0.99 with multilanguage support
 LICENSE=	gnu-gpl-v2
 

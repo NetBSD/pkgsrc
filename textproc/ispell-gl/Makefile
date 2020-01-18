@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:35:27 rillig Exp $
 #
 
 DISTNAME=	ispell-gl-0.5
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ispell-gl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ispell-gl.sourceforge.net/
+HOMEPAGE=	https://ispell-gl.sourceforge.net/
 COMMENT=	Galician dictionary for interactive spelling checker
 LICENSE=	gnu-gpl-v2
 

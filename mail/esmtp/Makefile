@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/01/18 21:49:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:32:47 rillig Exp $
 #
 
 DISTNAME=	esmtp-1.2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=esmtp/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://esmtp.sourceforge.net/
+HOMEPAGE=	https://esmtp.sourceforge.net/
 COMMENT=	Relay-only Mail Transfer Agent with sendmail-compatible syntax
 LICENSE=	gnu-gpl-v2
 

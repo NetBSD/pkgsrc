@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/01/04 11:48:24 roy Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:30:47 rillig Exp $
 
 DISTNAME=	zile-2.4.5
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	http://ftp.gnu.org/gnu/zile/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/zile/
+HOMEPAGE=	https://www.gnu.org/software/zile/
 COMMENT=	Emacs-like text editor
 LICENSE=	gnu-gpl-v3
 

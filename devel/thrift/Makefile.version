@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.version,v 1.2 2019/11/10 18:05:33 adam Exp $
+# $NetBSD: Makefile.version,v 1.3 2020/01/18 23:30:43 rillig Exp $
 # used by devel/go-thrift/Makefile
 # used by devel/p5-thrift/Makefile
 # used by devel/py-thrift/Makefile
@@ -10,5 +10,5 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=thrift/${PKGVERSION_NOREV}/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://thrift.apache.org/
+HOMEPAGE=	https://thrift.apache.org/
 LICENSE=	apache-2.0

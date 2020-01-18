@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2020/01/18 21:50:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.82 2020/01/18 23:33:11 rillig Exp $
 #
 
 DISTNAME=	gmencoder-0.1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gmencoder/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gmencoder.sourceforge.net/
+HOMEPAGE=	https://gmencoder.sourceforge.net/
 COMMENT=	GNOME2 frontend to mencoder
 
 DEPENDS+=	mencoder>=0.90:../../multimedia/mencoder

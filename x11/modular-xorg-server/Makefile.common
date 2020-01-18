@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2020/01/15 14:24:03 wiz Exp $
+# $NetBSD: Makefile.common,v 1.34 2020/01/18 23:35:54 rillig Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 # used by x11/modular-xorg-xwayland/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
 
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 LICENSE=	mit AND modified-bsd AND x11 # with no-advertising clause
 
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/03/12 11:15:38 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/18 23:32:45 rillig Exp $
 
 DISTNAME=	otcl-src-1.14
 PKGNAME=	tcl-${DISTNAME:S/-src//}
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=otcl-tclcl/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://otcl-tclcl.sourceforge.net/otcl/
+HOMEPAGE=	https://otcl-tclcl.sourceforge.net/otcl/
 COMMENT=	MIT Object Tcl
 
 GNU_CONFIGURE=	yes

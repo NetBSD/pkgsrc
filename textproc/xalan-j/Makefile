@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/25 06:57:06 asau Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:35:35 rillig Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of Xalan-J,
 # because although Xalan runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -10,7 +10,7 @@ CATEGORIES=	textproc www
 MASTER_SITES=	http://xml.apache.org/dist/xalan-j/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xml.apache.org/xalan-j/
+HOMEPAGE=	https://xml.apache.org/xalan-j/
 COMMENT=	The Apache Project's XSLT implementation
 
 DEPENDS+=	xerces-j>=1.2.0:../../textproc/xerces-j

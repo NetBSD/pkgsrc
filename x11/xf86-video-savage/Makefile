@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/03/07 11:57:44 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/18 23:36:05 rillig Exp $
 
 DISTNAME=	xf86-video-savage-2.3.9
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg S3 Savage video driver
 
 CONFIGURE_ARGS+=	--enable-dri

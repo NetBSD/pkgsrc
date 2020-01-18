@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/02/06 19:30:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/18 23:33:12 rillig Exp $
 #
 
 DISTNAME=	labrea-2.5-stable-1
@@ -8,7 +8,7 @@ CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=labrea/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://labrea.sourceforge.net/labrea-info.html
+HOMEPAGE=	https://labrea.sourceforge.net/labrea-info.html
 COMMENT=	Builds tarpits/honeypots for scanners
 
 WRKSRC=		${WRKDIR}/${DISTNAME}

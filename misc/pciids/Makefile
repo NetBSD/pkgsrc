@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/10/05 12:23:21 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:33:03 rillig Exp $
 
 DISTNAME=	pci.ids
 PKGNAME=	pciids-20150907
@@ -7,7 +7,7 @@ MASTER_SITES=	# dynamically generated file http://pci-ids.ucw.cz/v2.2/
 EXTRACT_SUFX=	.bz2
 
 MAINTAINER=	mark@coris.org.uk
-HOMEPAGE=	http://pciids.sourceforge.net/
+HOMEPAGE=	https://pciids.sourceforge.net/
 COMMENT=	Repository of PCI IDs (pci.ids database)
 LICENSE=	modified-bsd OR gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/05/15 11:42:53 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:32:58 rillig Exp $
 
 DISTNAME=	collection-humanities
 PKGNAME=	texlive-${DISTNAME}-2019pre1
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 TEXLIVE_REV=	45363
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tug.org/texlive/
+HOMEPAGE=	https://www.tug.org/texlive/
 COMMENT=	Graphics, pictures, diagrams TeX packages
 
 DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-latex
