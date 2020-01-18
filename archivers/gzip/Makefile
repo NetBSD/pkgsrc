@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/01/10 06:47:42 gutteridge Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/18 23:29:55 rillig Exp $
 
 DISTNAME=	gzip-1.10
 CATEGORIES=	archivers
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
+HOMEPAGE=	https://www.gnu.org/software/gzip/gzip.html
 COMMENT=	Compress or expand files
 LICENSE=	gnu-gpl-v3
 
