@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/11/02 22:09:00 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:08 rillig Exp $
 
 DISTNAME=	bcftools-1.9
 PKGREVISION=	2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://samtools.github.io/bcftools/
+HOMEPAGE=	https://samtools.github.io/bcftools/
 COMMENT=	Calling and manipulating files VCF and BCF formats
 LICENSE=	mit
 

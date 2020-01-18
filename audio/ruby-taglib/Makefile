@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2020/01/16 15:07:40 taca Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/18 23:30:05 rillig Exp $
 
 DISTNAME=	taglib-ruby-1.0.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	audio
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://robinst.github.com/taglib-ruby/
+HOMEPAGE=	https://robinst.github.com/taglib-ruby/
 COMMENT=	Ruby library for reading and writing meta-data of many audio formats
 LICENSE=	mit
 

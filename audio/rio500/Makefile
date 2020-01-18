@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/07/10 09:44:56 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/18 23:30:05 rillig Exp $
 #
 
 DISTNAME=	rio500-0.7
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rio500/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rio500.sourceforge.net/
+HOMEPAGE=	https://rio500.sourceforge.net/
 COMMENT=	Utilities to manage your Diamond Rio 500 MP3 player
 LICENSE=	gnu-gpl-v2
 

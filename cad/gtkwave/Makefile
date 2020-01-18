@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2019/11/16 12:48:19 mef Exp $
+# $NetBSD: Makefile,v 1.103 2020/01/18 23:30:10 rillig Exp $
 #
 
 DISTNAME=		gtkwave-3.3.103
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtkwave/}
 #MASTER_SITES=		http://home.nc.rr.com/gtkwave/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://gtkwave.sourceforge.net/
+HOMEPAGE=		https://gtkwave.sourceforge.net/
 COMMENT=		Electronic waveform viewer
 LICENSE=		gnu-gpl-v3
 

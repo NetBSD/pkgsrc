@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/03/06 15:17:03 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/18 23:30:11 rillig Exp $
 
 DISTNAME=	libtlen-20041113
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libtlen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libtlen.sourceforge.net/
+HOMEPAGE=	https://libtlen.sourceforge.net/
 COMMENT=	Library to access tlen.pl IM system
 
 USE_LIBTOOL=		yes
