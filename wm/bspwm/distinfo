@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/05/31 05:22:09 maya Exp $
+$NetBSD: distinfo,v 1.5 2020/01/18 21:45:34 nia Exp $
 
-SHA1 (bspwm-0.9.2.tar.gz) = 9f6a7b16c95eb21a1ff6acb2102389c8c8c72226
-RMD160 (bspwm-0.9.2.tar.gz) = 66b2ae8ea46542732a44aa0ac9a58136f3cbf6cc
-SHA512 (bspwm-0.9.2.tar.gz) = fe46d74ecc1ab29caa038d8bb54e13cde8a40e28a014f8b313222db6e8a3323d3ec2103f4ff78008bb0252fa2d560424788ea3be66faaf38a2b8aa3b46b09e2c
-Size (bspwm-0.9.2.tar.gz) = 92558 bytes
+SHA1 (bspwm-0.9.9.tar.gz) = d16a705c294e92bf7fe32d2429171e118b420521
+RMD160 (bspwm-0.9.9.tar.gz) = 774176c23e9eb3fb7777f1da7c12cbacd4828e06
+SHA512 (bspwm-0.9.9.tar.gz) = 17f70e44667813fafcf0df144ed211df5a4479af6dfaf6e0a6bb7154a7380fa48d6135e8c440b6202d07012b76ac7372f73d4bf2f0c3a6716ed998d2ee4e59a2
+Size (bspwm-0.9.9.tar.gz) = 111119 bytes
 SHA1 (patch-Makefile) = 3880d785f02f60ba4291738070e6f9c8f7494f22
