@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/05/31 05:22:09 maya Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/01/18 21:45:34 nia Exp $
 bin/bspc
 bin/bspwm
 man/man1/bspc.1
@@ -10,23 +10,15 @@ share/doc/bspwm/INSTALL.md
 share/doc/bspwm/MISC.md
 share/doc/bspwm/README.md
 share/doc/bspwm/TODO.md
+share/examples/bspwm/README.md
 share/examples/bspwm/bspwmrc
-share/examples/bspwm/external_rules/bspwmrc
-share/examples/bspwm/external_rules/external_rules
-share/examples/bspwm/external_rules/pseudo_automatic_mode/README.md
-share/examples/bspwm/external_rules/pseudo_automatic_mode/external_rules
-share/examples/bspwm/loop/bspwmrc
-share/examples/bspwm/loop/profile
-share/examples/bspwm/loop/sxhkdrc
-share/examples/bspwm/loop/wm
-share/examples/bspwm/loop/xinitrc
-share/examples/bspwm/overlapping_borders/bspwmrc
-share/examples/bspwm/panel/bspwmrc
-share/examples/bspwm/panel/panel
-share/examples/bspwm/panel/panel_bar
-share/examples/bspwm/panel/panel_colors
-share/examples/bspwm/panel/profile
-share/examples/bspwm/panel/sxhkdrc
+share/examples/bspwm/external_rules
+share/examples/bspwm/extract_canvas
+share/examples/bspwm/induce_rules
+share/examples/bspwm/panel
+share/examples/bspwm/panel_bar
+share/examples/bspwm/panel_colors
+share/examples/bspwm/profile
 share/examples/bspwm/sxhkdrc
 share/fish/vendor_completions.d/bspc.fish
 share/xsessions/bspwm.desktop
