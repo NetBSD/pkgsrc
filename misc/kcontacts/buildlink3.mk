@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2019/11/11 09:36:53 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/01/18 21:48:16 jperkin Exp $
 
 BUILDLINK_TREE+=	kcontacts
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	kcontacts
 KCONTACTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kcontacts+=	kcontacts>=5.64.0
+BUILDLINK_ABI_DEPENDS.kcontacts?=		kcontacts>=5.64.0nb1
 BUILDLINK_PKGSRCDIR.kcontacts?=		../../misc/kcontacts
 
 .include "../../devel/kconfig/buildlink3.mk"

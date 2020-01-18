@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2020/01/12 20:19:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2020/01/18 21:48:15 jperkin Exp $
 
 DISTNAME=	libetpan-1.9.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dinhviethoa/}
 EXTRACT_USING=	bsdtar

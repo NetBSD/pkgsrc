@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.132 2019/11/17 08:59:53 markd Exp $
+# $NetBSD: Makefile,v 1.133 2020/01/18 21:48:12 jperkin Exp $
 
 DISTNAME=	kipi-plugins-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://userbase.kde.org/KIPI/
