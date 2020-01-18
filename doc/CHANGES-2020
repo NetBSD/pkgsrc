@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.593 2020/01/18 21:48:19 nia Exp $
+$NetBSD: CHANGES-2020,v 1.594 2020/01/18 21:54:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -682,3 +682,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/9wm to 1.4.1 [nia 2020-01-18]
 	Updated wm/bspwm to 0.9.9 [nia 2020-01-18]
 	Updated devel/cdk to 5.0.20191231 [nia 2020-01-18]
+	Updated editors/neatvi to 07 [nia 2020-01-18]
