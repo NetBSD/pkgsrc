@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2018/01/07 13:04:29 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2020/01/18 21:48:22 jperkin Exp $
 
 BUILDLINK_TREE+=	libglobalplatform
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libglobalplatform
 LIBGLOBALPLATFORM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libglobalplatform+=	libglobalplatform>=6.0.0
-BUILDLINK_ABI_DEPENDS.libglobalplatform?=	libglobalplatform>=6.0.0nb1
+BUILDLINK_ABI_DEPENDS.libglobalplatform?=	libglobalplatform>=6.0.0nb2
 BUILDLINK_PKGSRCDIR.libglobalplatform?=		../../security/libglobalplatform
 
 .include "../../security/pcsc-lite/buildlink3.mk"

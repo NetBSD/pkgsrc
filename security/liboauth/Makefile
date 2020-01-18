@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2020/01/12 20:19:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/18 21:48:22 jperkin Exp $
 
 DISTNAME=	liboauth-1.0.3
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=liboauth/}
 

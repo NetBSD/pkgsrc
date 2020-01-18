@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2019/11/21 06:09:54 markd Exp $
+# $NetBSD: Makefile,v 1.42 2020/01/18 21:50:02 jperkin Exp $
 
 DISTNAME=	kwordquiz-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/kwordquiz/

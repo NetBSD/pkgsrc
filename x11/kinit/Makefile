@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2019/11/11 09:21:39 markd Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/18 21:51:13 jperkin Exp $
 
 DISTNAME=	kinit-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks
