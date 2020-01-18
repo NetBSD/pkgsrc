@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2019/05/02 20:27:43 wiedi Exp $
+# $NetBSD: Makefile.common,v 1.7 2020/01/18 23:29:55 rillig Exp $
 #
 # used by archivers/gtar-base/Makefile
 # used by archivers/gtar-info/Makefile
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/tar/tar.html
+HOMEPAGE=	https://www.gnu.org/software/tar/tar.html
 COMMENT=	The GNU tape archiver with remote magnetic tape support
 LICENSE=	gnu-gpl-v3
 

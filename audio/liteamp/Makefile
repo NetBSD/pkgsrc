@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2020/01/18 21:48:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.88 2020/01/18 23:30:01 rillig Exp $
 
 DISTNAME=	liteamp-0.2.4.2
 PKGREVISION=	65
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://kldp.net/frs/download.php/1153/
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://kldp.net/projects/liteamp/
+HOMEPAGE=	https://kldp.net/projects/liteamp/
 COMMENT=	Light-weight Music Player for GNOME2
 LICENSE=	gnu-gpl-v2
 

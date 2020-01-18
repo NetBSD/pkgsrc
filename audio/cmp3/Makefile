@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/12/18 23:33:11 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/18 23:29:58 rillig Exp $
 #
 
 DISTNAME=	cmp3-2.0pre6
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cmp3/}
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://cmp3.sourceforge.net/
+HOMEPAGE=	https://cmp3.sourceforge.net/
 COMMENT=	Curses based frontend to mpg123
 LICENSE=	gnu-gpl-v2
 

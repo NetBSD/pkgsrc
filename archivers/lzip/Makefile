@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2019/01/18 10:03:40 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:29:56 rillig Exp $
 
 DISTNAME=	lzip-1.21
 CATEGORIES=	archivers
 MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/lzip/lzip.html
+HOMEPAGE=	https://www.nongnu.org/lzip/lzip.html
 COMMENT=	Lossless data compressor based on the LZMA algorithm
 LICENSE=	gnu-gpl-v2
 
