@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2017/06/12 16:34:13 taca Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/18 16:23:14 taca Exp $
 
-DISTNAME=	json-2.1.0
+DISTNAME=	json-2.3.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,6 +9,8 @@ COMMENT=	Native extension implementation of JSON for Ruby
 LICENSE=	ruby-license
 
 USE_GCC_RUNTIME=	yes
+
+RUBY_VERSIONS_ACCEPTED=	24 25 26
 
 post-extract:
 	cd ${WRKSRC}; ${FIND} . -xdev -type f -print | ${XARGS} ${CHMOD} g-w
