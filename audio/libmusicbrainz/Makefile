@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2018/02/02 17:55:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 21:47:57 jperkin Exp $
 
 DISTNAME=	libmusicbrainz-3.0.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/
 
