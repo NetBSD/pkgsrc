@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2019/11/24 03:47:22 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2020/01/18 21:48:17 jperkin Exp $
 
 BUILDLINK_TREE+=	libkgeomap
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libkgeomap
 LIBKGEOMAP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkgeomap+=	libkgeomap>=19.08.3
+BUILDLINK_ABI_DEPENDS.libkgeomap?=	libkgeomap>=19.08.3nb1
 BUILDLINK_PKGSRCDIR.libkgeomap?=	../../misc/libkgeomap
 
 .include "../../devel/kio/buildlink3.mk"
