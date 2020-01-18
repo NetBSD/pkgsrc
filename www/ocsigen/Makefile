@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2019/11/04 22:09:58 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2020/01/18 21:51:09 jperkin Exp $
 #
 
 VERSION=	2.15.0
 GITHUB_PROJECT=	ocsigenserver
 PKGNAME=	ocsigen-${VERSION}
+PKGREVISION=	1
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}

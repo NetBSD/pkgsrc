@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2017/01/03 13:23:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/18 21:50:56 jperkin Exp $
 
 DISTNAME=	Attic-0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/A/a/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/Attic/}
 
