@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/01/18 02:16:39 pho Exp $
+
+SHA1 (pandoc-2.9.1.1.tar.gz) = ce6512c197e606a538cd4da00ae8d500a1cbe8c2
+RMD160 (pandoc-2.9.1.1.tar.gz) = f0da516b5cb49b30015da3ffceb3f9c4b5160656
+SHA512 (pandoc-2.9.1.1.tar.gz) = de9afcaa1dfa3c253e5a108a3ea30771d90b820f9a033753fc1bce89293ec6c847073eb77ab6682a746d4719ba258ab36e299b6b330da50f49399fc5fcf54002
+Size (pandoc-2.9.1.1.tar.gz) = 12570248 bytes
+SHA1 (patch-pandoc.cabal) = e3d8f26db26609712ecb25dbb71c25953d0944e7
