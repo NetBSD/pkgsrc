@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2017/06/12 16:34:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2020/01/18 16:23:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/json/ext/generator.${RUBY_DLEXT}
@@ -7,13 +7,11 @@ ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README-json-jruby.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/VERSION
-${GEM_LIBDIR}/data/example.json
-${GEM_LIBDIR}/data/index.html
-${GEM_LIBDIR}/data/prototype.js
 ${GEM_LIBDIR}/diagrams/.keep
 ${GEM_LIBDIR}/ext/json/ext/fbuffer/fbuffer.h
 ${GEM_LIBDIR}/ext/json/ext/generator/depend
@@ -54,6 +52,7 @@ ${GEM_LIBDIR}/lib/json/add/ostruct.rb
 ${GEM_LIBDIR}/lib/json/add/range.rb
 ${GEM_LIBDIR}/lib/json/add/rational.rb
 ${GEM_LIBDIR}/lib/json/add/regexp.rb
+${GEM_LIBDIR}/lib/json/add/set.rb
 ${GEM_LIBDIR}/lib/json/add/struct.rb
 ${GEM_LIBDIR}/lib/json/add/symbol.rb
 ${GEM_LIBDIR}/lib/json/add/time.rb
