@@ -284,7 +284,7 @@ func (ck *MkAssignChecker) checkVarassignLeftRationale() {
 		return
 	}
 
-	if mkline.HasRationale() {
+	if mkline.Rationale() != "" {
 		return
 	}
 
