@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2019/11/02 22:38:06 rillig Exp $
+# $NetBSD: Makefile,v 1.75 2020/01/18 23:32:38 rillig Exp $
 
 DISTNAME=	xfig-3.2.6a
 PKGNAME=	${DISTNAME:S/-full//}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcj/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mcj.sourceforge.net/
+HOMEPAGE=	https://mcj.sourceforge.net/
 COMMENT=	CAD-like 2D drawing tool, good for colorful scale drawings & ISOs
 
 DEPENDS+=	fig2dev-[0-9]*:../../print/fig2dev

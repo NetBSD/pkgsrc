@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/11/26 22:31:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:52 rillig Exp $
 #
 
 DISTNAME=	mp3fs-0.13
@@ -8,7 +8,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3fs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mp3fs.sourceforge.net/
+HOMEPAGE=	https://mp3fs.sourceforge.net/
 COMMENT=	MP3 transcoding FUSE file system
 LICENSE=	gnu-gpl-v3
 

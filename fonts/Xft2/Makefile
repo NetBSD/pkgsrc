@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2019/11/02 22:24:38 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2020/01/18 23:31:00 rillig Exp $
 
 DISTNAME=	libXft-2.1.7
 PKGNAME=	Xft2-2.1.7
@@ -8,7 +8,7 @@ MASTER_SITES=	https://xlibs.freedesktop.org/release/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software/Xft/
+HOMEPAGE=	https://www.freedesktop.org/wiki/Software/Xft/
 COMMENT=	Library for configuring and customizing font access
 
 CONFLICTS+=	libXft-[0-9]*

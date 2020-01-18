@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2018/03/12 11:17:43 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2020/01/18 23:35:40 rillig Exp $
 
 DISTNAME=	fluxbox-1.3.7
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluxbox/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	sborrill@NetBSD.org
-HOMEPAGE=	http://fluxbox.sourceforge.net/
+HOMEPAGE=	https://fluxbox.sourceforge.net/
 COMMENT=	Window Manager for X based on Blackbox
 LICENSE=	mit
 

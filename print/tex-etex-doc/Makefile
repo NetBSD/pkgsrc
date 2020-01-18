@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2019/12/06 20:19:32 markd Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:34:05 rillig Exp $
 
 DISTNAME=	etex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.1.31600
 TEXLIVE_REV=	31600
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/etex
+HOMEPAGE=	https://ctan.org/pkg/etex
 COMMENT=	Documentation for tex-etex
 #LICENSE=	knuth
 

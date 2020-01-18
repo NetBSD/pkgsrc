@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 19:32:22 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:31:50 rillig Exp $
 
 DISTNAME=	raleway
 PKGNAME=	tex-${DISTNAME}-1.4
 TEXLIVE_REV=	42629
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/raleway
+HOMEPAGE=	https://ctan.org/pkg/raleway
 COMMENT=	Use Raleway with TeX(-alike) systems
 LICENSE=	ofl-v1.1
 

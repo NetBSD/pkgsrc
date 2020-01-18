@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/10/18 11:41:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:32:44 rillig Exp $
 #
 
 DISTNAME=		mit-scheme-7.7.1-ix86-gnu-linux
@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://ftp.gnu.org/gnu/mit-scheme/stable.pkg/7.7.1/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/mit-scheme/
+HOMEPAGE=		https://www.gnu.org/software/mit-scheme/
 COMMENT=		MIT/GNU Scheme (Linux binary)
 
 EMUL_PLATFORMS=		linux-i386

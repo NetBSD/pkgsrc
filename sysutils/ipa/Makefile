@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/23 19:51:08 asau Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:17 rillig Exp $
 #
 
 DISTNAME=	ipa-2.1.2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ipa-system/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	simon@comsys.ntu-kpi.kiev.ua
-HOMEPAGE=	http://ipa-system.sourceforge.net/
+HOMEPAGE=	https://ipa-system.sourceforge.net/
 COMMENT=	Pluggable accounting system
 LICENSE=	2-clause-bsd
 

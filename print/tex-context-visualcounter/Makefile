@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:19 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:56 rillig Exp $
 
 DISTNAME=	context-visualcounter
 PKGNAME=	tex-${DISTNAME}-2015
 TEXLIVE_REV=	36190
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/context-visualcounter
+HOMEPAGE=	https://ctan.org/pkg/context-visualcounter
 COMMENT=	ConTeXt visual counter
 LICENSE=	2-clause-bsd
 

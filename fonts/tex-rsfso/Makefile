@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 19:32:24 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:31:51 rillig Exp $
 
 DISTNAME=	rsfso
 PKGNAME=	tex-${DISTNAME}-1.02
 TEXLIVE_REV=	37965
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/rsfso
+HOMEPAGE=	https://ctan.org/pkg/rsfso
 COMMENT=	Mathematical calligraphic font based on rsfs
 LICENSE=	lppl-1.3c
 

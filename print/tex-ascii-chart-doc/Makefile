@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:18:50 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:34 rillig Exp $
 
 DISTNAME=	ascii-chart.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
 TEXLIVE_REV=	20536
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/ascii-chart
+HOMEPAGE=	https://ctan.org/pkg/ascii-chart
 COMMENT=	ASCII wall chart
 LICENSE=	lppl-1.3c
 

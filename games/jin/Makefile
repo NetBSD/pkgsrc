@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/11/08 00:10:34 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:32:02 rillig Exp $
 
 DISTNAME=	jin-2.14.1-unix
 PKGNAME=	${DISTNAME:S/-unix//}
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jin.sourceforge.net/
+HOMEPAGE=	https://jin.sourceforge.net/
 COMMENT=	Graphical client for chess servers
 LICENSE=	gnu-gpl-v2
 

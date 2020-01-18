@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:17:03 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:30 rillig Exp $
 
 DISTNAME=	FAQ-en.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-3.28
 TEXLIVE_REV=	34303
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/uk-tex-faq
+HOMEPAGE=	https://ctan.org/pkg/uk-tex-faq
 COMMENT=	Compilation of Frequently Asked Questions with answers
 LICENSE=	public-domain
 

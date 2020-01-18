@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/05/07 22:36:39 leot Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:35:59 rillig Exp $
 
 DISTNAME=	xcursor-themes-1.0.6
 CATEGORIES=	x11 graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=data/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular X.org xcursor themes
 
 BUILD_DEPENDS+=	xcursorgen>=1.0.5:../../x11/xcursorgen

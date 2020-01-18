@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/01/18 21:49:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:30:52 rillig Exp $
 
 DISTNAME=	libofx-0.9.10
 PKGREVISION=	15
@@ -6,7 +6,7 @@ CATEGORIES=	finance devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libofx/}
 
 MAINTAINER=	gary@duzan.org
-HOMEPAGE=	http://libofx.sourceforge.net/
+HOMEPAGE=	https://libofx.sourceforge.net/
 COMMENT=	OFX (Open Financial eXchange) Library
 LICENSE=	gnu-gpl-v2
 

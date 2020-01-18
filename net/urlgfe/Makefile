@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2020/01/18 21:50:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.55 2020/01/18 23:33:22 rillig Exp $
 #
 
 DISTNAME=		urlgfe-1.0.1
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=urlget/}
 
 MAINTAINER=		ccatrian@eml.cc
-HOMEPAGE=		http://urlget.sourceforge.net/
+HOMEPAGE=		https://urlget.sourceforge.net/
 COMMENT=		Download manager for X
 
 USE_PKGLOCALEDIR=	yes

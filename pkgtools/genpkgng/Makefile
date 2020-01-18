@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2014/04/27 00:10:34 agc Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:33:25 rillig Exp $
 
 DISTNAME=		genpkgng-20140425
 CATEGORIES=		pkgtools
@@ -6,7 +6,7 @@ MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		agc@NetBSD.org
-HOMEPAGE=		http://www.NetBSD.org/
+HOMEPAGE=		https://www.NetBSD.org/
 COMMENT=		Convert a pkgsrc binary package to a FreeBSD pkg
 LICENSE=		modified-bsd
 

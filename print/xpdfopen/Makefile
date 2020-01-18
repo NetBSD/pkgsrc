@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/05/09 09:47:36 adam Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:35:05 rillig Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=	xpdfopen-0.86
 PKGREVISION=	5
 CATEGORIES=	print
 
-HOMEPAGE=	http://www.tug.org/texlive/
+HOMEPAGE=	https://www.tug.org/texlive/
 COMMENT=	Commands to control Acrobat Reader, xpdf, and evince
 
 DEPENDS+=	web2c-[0-9]*:../../print/web2c

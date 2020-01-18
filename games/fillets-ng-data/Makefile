@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/09/07 14:49:58 nia Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:32:00 rillig Exp $
 #
 
 DISTNAME=	fillets-ng-data-1.0.1
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fillets/}
 
 MAINTAINER=	salo@NetBSD.org
-HOMEPAGE=	http://fillets.sourceforge.net/
+HOMEPAGE=	https://fillets.sourceforge.net/
 COMMENT=	Fish Fillets NG data files
 LICENSE=	gnu-gpl-v2
 

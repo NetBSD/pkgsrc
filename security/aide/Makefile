@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/03/05 22:47:55 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/18 23:35:06 rillig Exp $
 #
 
 DISTNAME=	aide-0.15.1
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aide/}
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://aide.sourceforge.net/
+HOMEPAGE=	https://aide.sourceforge.net/
 COMMENT=	Free intrusion detection system for checking file integrity
 LICENSE=	artistic
 

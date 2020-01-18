@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:29 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:30 rillig Exp $
 
 DISTNAME=	pictex
 PKGNAME=	tex-${DISTNAME}-1.1
 TEXLIVE_REV=	21943
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/pictex
+HOMEPAGE=	https://ctan.org/pkg/pictex
 COMMENT=	Picture drawing macros for TeX and LaTeX
 LICENSE=	lppl-1.3c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/03/07 11:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:36:09 rillig Exp $
 
 DISTNAME=		xkbutils-1.0.4
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Small utilities utilizing the X11 XKeyboard (XKB) extension
 
 GNU_CONFIGURE=		yes

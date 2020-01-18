@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2019/12/06 20:18:53 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:33:36 rillig Exp $
 
 DISTNAME=	babel-hungarian
 PKGNAME=	tex-${DISTNAME}-1.5c.49701
 TEXLIVE_REV=	49701
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/babel-hungarian
+HOMEPAGE=	https://ctan.org/pkg/babel-hungarian
 COMMENT=	Babel support for Hungarian (Magyar)
 LICENSE=	lppl-1.3c
 

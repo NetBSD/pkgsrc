@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2019/12/06 20:21:44 markd Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:34:18 rillig Exp $
 
 DISTNAME=	ifxetex
 PKGNAME=	tex-${DISTNAME}-0.6
 TEXLIVE_REV=	19685
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://ctan.org/pkg/ifxetex
+HOMEPAGE=	https://ctan.org/pkg/ifxetex
 COMMENT=	TeX package to determine if running under XeTeX
 LICENSE=	lppl-1.3c
 

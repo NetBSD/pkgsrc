@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/05/19 21:28:27 spz Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:35:42 rillig Exp $
 #
 
 DISTNAME=	roller-release-${ROLLER_VER}-standard
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=roller/roller-5.1/v${ROLLER_VER}/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://roller.apache.org/
+HOMEPAGE=	https://roller.apache.org/
 LICENSE=	apache-2.0
 COMMENT=	Full-featured, multi-user and group-blog server
 

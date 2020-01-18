@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2016/07/10 21:57:47 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:32:14 rillig Exp $
 
 DISTNAME=	libiptcdata-1.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libiptcdata/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libiptcdata.sourceforge.net/
+HOMEPAGE=	https://libiptcdata.sourceforge.net/
 COMMENT=	Library to parse IPTC metadata
 LICENSE=	gnu-lgpl-v2
 

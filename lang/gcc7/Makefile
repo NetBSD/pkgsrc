@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/27 06:42:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/18 23:32:43 rillig Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -15,7 +15,7 @@ EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gcc.gnu.org/
+HOMEPAGE=	https://gcc.gnu.org/
 COMMENT=	The GNU Compiler Collection (GCC) - 7.0 Release Series
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 

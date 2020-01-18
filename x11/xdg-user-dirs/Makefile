@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2018/04/29 09:43:54 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:36:00 rillig Exp $
 
 DISTNAME=	xdg-user-dirs-0.17
 CATEGORIES=	x11
 MASTER_SITES=	http://user-dirs.freedesktop.org/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software/xdg-user-dirs
+HOMEPAGE=	https://www.freedesktop.org/wiki/Software/xdg-user-dirs
 COMMENT=	Tool to manage "well known" user directories
 LICENSE=	gnu-gpl-v2
 

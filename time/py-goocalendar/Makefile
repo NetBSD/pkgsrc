@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/11/02 16:28:41 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:35:38 rillig Exp $
 
 DISTNAME=	GooCalendar-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	python time
 MASTER_SITES=	http://goocalendar.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://goocalendar.tryton.org/
+HOMEPAGE=	https://goocalendar.tryton.org/
 COMMENT=	Calendar widget using GooCanvas
 LICENSE=	gnu-gpl-v2
 

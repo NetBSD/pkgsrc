@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2019/12/06 20:23:23 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:34:52 rillig Exp $
 
 DISTNAME=	tabu
 PKGNAME=	tex-${DISTNAME}-2.9
 TEXLIVE_REV=	49707
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/tabu
+HOMEPAGE=	https://ctan.org/pkg/tabu
 COMMENT=	Flexible LaTeX tabulars
 LICENSE=	lppl-1.3c
 

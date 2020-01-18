@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:26 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:34:01 rillig Exp $
 
 DISTNAME=	dinbrief
 PKGNAME=	tex-${DISTNAME}-2014
 TEXLIVE_REV=	15878
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/dinbrief
+HOMEPAGE=	https://ctan.org/pkg/dinbrief
 COMMENT=	German letter DIN style
 LICENSE=	lppl-1.3c
 

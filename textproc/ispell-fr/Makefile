@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:45 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:35:27 rillig Exp $
 #
 
 DISTNAME=	francais-IREQ-1.4
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.robot.ireq.ca/pub/ispell/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/ispell/ispell.html
+HOMEPAGE=	https://www.gnu.org/software/ispell/ispell.html
 COMMENT=	French dictionary for interactive spelling checker
 
 CONFLICTS+=	ispell-francais-[0-9]*

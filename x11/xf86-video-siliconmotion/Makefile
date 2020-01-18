@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/03/07 11:57:44 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/18 23:36:05 rillig Exp $
 
 DISTNAME=	xf86-video-siliconmotion-1.7.9
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg Silicon Motion video driver
 
 USE_LIBTOOL=	yes

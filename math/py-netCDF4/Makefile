@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 21:49:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:32:52 rillig Exp $
 
 DISTNAME=	netCDF4-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/netCDF4/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://github.com/Unidata/netcdf4-python
+HOMEPAGE=	https://github.com/Unidata/netcdf4-python
 COMMENT=	Object-oriented python interface to netCDF version 4
 LICENSE=	mit
 

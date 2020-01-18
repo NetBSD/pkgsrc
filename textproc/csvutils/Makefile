@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/20 23:15:52 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:35:24 rillig Exp $
 
 DISTNAME=	csvutils-0.9.3
 CATEGORIES=	textproc
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=csvutils/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://csvutils.sourceforge.net/
+HOMEPAGE=	https://csvutils.sourceforge.net/
 COMMENT=	Command-line utilities for managing CSV data using libcsv
 LICENSE=	gnu-gpl-v2
 

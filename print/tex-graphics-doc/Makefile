@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2019/12/06 20:21:32 markd Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:34:15 rillig Exp $
 
 DISTNAME=	graphics.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.2c.47350
 TEXLIVE_REV=	47350
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/latex-graphics
+HOMEPAGE=	https://ctan.org/pkg/latex-graphics
 COMMENT=	Documentation for tex-graphics
 LICENSE=	lppl-1.3c
 

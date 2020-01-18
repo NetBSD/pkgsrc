@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/01/03 11:50:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:36:06 rillig Exp $
 
 DISTNAME=	xf86-video-vboxvideo-1.0.0
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg VirtualBox virtual video driver
 
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/08/11 13:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:30 rillig Exp $
 
 DISTNAME=	man2html3.0.1
 PKGNAME=	${DISTNAME:S/html/html-/}
@@ -10,7 +10,7 @@ MASTER_SITES+=	ftp://ftp.cpan.org/pub/CPAN/modules/by-authors/Earl_Hood/
 MASTER_SITES+=	http://people.freebsd.org/~demon/
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/man2html/
+HOMEPAGE=	https://www.nongnu.org/man2html/
 COMMENT=	Convert nroff(1) man pages to HTML
 LICENSE=	gnu-gpl-v2
 

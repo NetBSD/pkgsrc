@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/04 22:09:51 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:35:41 rillig Exp $
 
 DISTNAME=	tomcat-connectors-${JK_VERSION}-src
 PKGNAME=	${APACHE_PKG_PREFIX}-jk-${JK_VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	www java
 MASTER_SITES=	${MASTER_SITE_APACHE:=tomcat/tomcat-connectors/jk/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tomcat.apache.org/connectors-doc/
+HOMEPAGE=	https://tomcat.apache.org/connectors-doc/
 COMMENT=	Apache connector for accessing Jakarta Tomcat
 LICENSE=	apache-2.0
 

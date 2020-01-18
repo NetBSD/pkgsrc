@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2020/01/18 21:49:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.76 2020/01/18 23:30:46 rillig Exp $
 
 DISTNAME=	texworks-0.6.2
 PKGREVISION=	26
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	texworks
 GITHUB_TAG=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://www.tug.org/texworks/
+HOMEPAGE=	https://www.tug.org/texworks/
 COMMENT=	Simple TeX front-end program
 LICENSE=	gnu-gpl-v2
 

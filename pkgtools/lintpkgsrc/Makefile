@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2019/08/11 13:22:35 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/18 23:33:26 rillig Exp $
 
 PKGNAME=	lintpkgsrc-4.94
 PKGREVISION=	2
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.NetBSD.org/Documentation/pkgsrc/
+HOMEPAGE=	https://www.NetBSD.org/Documentation/pkgsrc/
 COMMENT=	Sanity checks on the complete pkgsrc tree
 
 DEPENDS+=	digest>=20010101:../../pkgtools/digest

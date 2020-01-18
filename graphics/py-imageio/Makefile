@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/06/17 14:52:30 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:18 rillig Exp $
 
 DISTNAME=	imageio-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/imageio/}
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	http://imageio.github.io/
+HOMEPAGE=	https://imageio.github.io/
 COMMENT=	Python library to read and write images
 LICENSE=	2-clause-bsd
 

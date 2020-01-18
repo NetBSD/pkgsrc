@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2019/12/06 20:21:48 markd Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 23:34:20 rillig Exp $
 
 DISTNAME=	kpathsea.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2019
 TEXLIVE_REV=	51016
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/kpathsea
+HOMEPAGE=	https://ctan.org/pkg/kpathsea
 COMMENT=	Documentation for tex-kpathsea
 LICENSE=	gnu-lgpl-v2
 

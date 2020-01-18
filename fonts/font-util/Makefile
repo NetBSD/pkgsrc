@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/13 15:13:37 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:31:04 rillig Exp $
 
 DISTNAME=		font-util-1.3.2
 CATEGORIES=		fonts
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Tools for truncating and subseting of ISO10646-1 BDF fonts
 
 GNU_CONFIGURE=		yes

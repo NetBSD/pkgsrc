@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:05 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:34:42 rillig Exp $
 
 DISTNAME=	polyglossia
 PKGNAME=	tex-${DISTNAME}-1.44
 TEXLIVE_REV=	50787
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/polyglossia
+HOMEPAGE=	https://ctan.org/pkg/polyglossia
 COMMENT=	An alternative to babel for XeLaTeX and LuaLaTeX
 LICENSE=	lppl-1.3c
 

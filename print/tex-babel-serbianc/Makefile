@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:18:56 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:39 rillig Exp $
 
 DISTNAME=	babel-serbianc
 PKGNAME=	tex-${DISTNAME}-3.0
 TEXLIVE_REV=	49693
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/babel-serbianc
+HOMEPAGE=	https://ctan.org/pkg/babel-serbianc
 COMMENT=	Babel module to support Serbian Cyrillic
 LICENSE=	lppl-1.3c
 

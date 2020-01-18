@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2020/01/12 20:20:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2020/01/18 23:32:05 rillig Exp $
 
 DISTNAME=	scummvm-tools-2.1.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	https://www.scummvm.org/frs/scummvm-tools/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://scummvm.sourceforge.net/
+HOMEPAGE=	https://scummvm.sourceforge.net/
 COMMENT=	Conversion and compression tools for ScummVM
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/11/02 22:38:02 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 23:32:18 rillig Exp $
 
 DISTNAME=	mcomix-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcomix/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	nonakap@gmail.com
-HOMEPAGE=	http://mcomix.sourceforge.net/
+HOMEPAGE=	https://mcomix.sourceforge.net/
 COMMENT=	GTK2 comic book viewer
 LICENSE=	gnu-gpl-v2
 

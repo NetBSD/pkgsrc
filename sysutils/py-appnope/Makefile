@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/10/28 15:34:22 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:35:20 rillig Exp $
 
 DISTNAME=	appnope-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/appnope/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/minrk/appnope
+HOMEPAGE=	https://github.com/minrk/appnope
 COMMENT=	Disable App Nap on macOS
 LICENSE=	modified-bsd
 

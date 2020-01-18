@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/07/21 22:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2020/01/18 23:35:49 rillig Exp $
 #
 
 DISTNAME=	gtk+extra-2.1.2
@@ -8,7 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkextra/}
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://gtkextra.sourceforge.net/
+HOMEPAGE=	https://gtkextra.sourceforge.net/
 COMMENT=	Useful set of GTK+ widgets for creating GUIs
 
 USE_TOOLS+=		gmake pkg-config

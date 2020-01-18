@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/06 11:54:59 asau Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/18 23:32:06 rillig Exp $
 #
 
 DISTNAME=		xblast-2.10.4
@@ -13,7 +13,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			sounds${EXTRACT_SUFX}
 
 MAINTAINER=		dsainty@NetBSD.org
-HOMEPAGE=		http://xblast.sourceforge.net/
+HOMEPAGE=		https://xblast.sourceforge.net/
 COMMENT=		2-6 player kill the other guy with bombs game. A real blast!
 LICENSE=		gnu-gpl-v2 # or later
 

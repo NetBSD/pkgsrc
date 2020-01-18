@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/09/02 13:20:19 adam Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/18 23:31:58 rillig Exp $
 
 DISTNAME=		4stAttack-2.1.4
 PKGREVISION=		19
@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=forcedattack/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://forcedattack.sourceforge.net/
+HOMEPAGE=		https://forcedattack.sourceforge.net/
 COMMENT=		Game in which you have to try to out-smart your opponent
 
 INSTALLATION_DIRS=	bin share/${PKGBASE}

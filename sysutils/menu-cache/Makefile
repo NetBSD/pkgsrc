@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/05/22 16:03:00 youri Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:35:18 rillig Exp $
 #
 
 DISTNAME=	menu-cache-1.1.0
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lxde.sourceforge.net/
+HOMEPAGE=	https://lxde.sourceforge.net/
 COMMENT=	Cache for freedesktop.org menu spec
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/06/15 06:37:54 obache Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/18 23:35:35 rillig Exp $
 #
 
 DISTNAME=	Xerces-J-bin.1.4.4
@@ -7,7 +7,7 @@ CATEGORIES=	textproc www
 MASTER_SITES=	http://archive.apache.org/dist/xml/xerces-j/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xerces.apache.org/xerces-j/
+HOMEPAGE=	https://xerces.apache.org/xerces-j/
 COMMENT=	The Apache Project's validating XML parser with DOM and SAX support
 LICENSE=	apache-1.1
 

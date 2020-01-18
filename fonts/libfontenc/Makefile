@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/02/21 09:49:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:31:05 rillig Exp $
 
 DISTNAME=		libfontenc-1.1.4
 CATEGORIES=		x11
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Library for handling fonts with different character set encodings
 
 USE_LIBTOOL=		yes

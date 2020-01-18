@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:28 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:28 rillig Exp $
 
 DISTNAME=	mpattern.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
 TEXLIVE_REV=	15878
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/mpattern
+HOMEPAGE=	https://ctan.org/pkg/mpattern
 COMMENT=	Documentation for tex-mpattern
 LICENSE=	public-domain
 

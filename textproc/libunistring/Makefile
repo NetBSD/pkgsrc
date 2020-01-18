@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2018/05/27 12:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:35:29 rillig Exp $
 
 DISTNAME=	libunistring-0.9.10
 CATEGORIES=	textproc
 MASTER_SITES=	http://ftp.gnu.org/gnu/libunistring/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/libunistring/
+HOMEPAGE=	https://www.gnu.org/software/libunistring/
 COMMENT=	Unicode string library
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2
 

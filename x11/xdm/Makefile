@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/03/27 12:30:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:36:00 rillig Exp $
 
 DISTNAME=	xdm-1.1.12
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	X Display Manager from modular X.org
 
 DEPENDS+=	sessreg-[0-9]*:../../x11/sessreg

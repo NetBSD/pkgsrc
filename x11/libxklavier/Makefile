@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/01/23 15:34:31 youri Exp $
+# $NetBSD: Makefile,v 1.46 2020/01/18 23:35:54 rillig Exp $
 
 DISTNAME=	libxklavier-5.4
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/libxklavier/libxklavier-5.
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://freedesktop.org/Software/LibXklavier
+HOMEPAGE=	https://freedesktop.org/Software/LibXklavier
 COMMENT=	High-level API for the X Keyboard Extension (XKB)
 LICENSE=	gnu-lgpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/02/02 18:40:25 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:35:59 rillig Exp $
 
 DISTNAME=	xconsole-1.0.7
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	X11 client to display console messages
 
 GNU_CONFIGURE=	yes

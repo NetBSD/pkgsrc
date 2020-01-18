@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/06/01 16:35:34 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:31:04 rillig Exp $
 #
 
 DISTNAME=		freefont-ttf-20120503
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=freefont/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://www.gnu.org/software/freefont/
+HOMEPAGE=		https://www.gnu.org/software/freefont/
 COMMENT=		Free UCS Outline Fonts: FreeMono, FreeSans, and FreeSerif
 LICENSE=		gnu-gpl-v3
 

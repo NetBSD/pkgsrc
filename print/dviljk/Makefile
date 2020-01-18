@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/05/09 09:47:35 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:33:27 rillig Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=	dviljk-2.6.5
 PKGREVISION=	10
 CATEGORIES=	print
 
-HOMEPAGE=	http://www.tug.org/texlive/
+HOMEPAGE=	https://www.tug.org/texlive/
 COMMENT=	DVI driver for the LaserJet printers using kpathsea
 
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/dviljk

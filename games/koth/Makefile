@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/01/14 17:33:59 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/18 23:32:02 rillig Exp $
 #
 
 DISTNAME=	koth-0.8.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.ibiblio.org/pub/Linux/games/multiplayer/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/koth/
+HOMEPAGE=	https://www.nongnu.org/koth/
 COMMENT=	The classic "shoot the other tank" artillery game, networked
 
 PTHREAD_AUTO_VARS=	yes

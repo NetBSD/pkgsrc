@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 19:30:03 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:31:34 rillig Exp $
 
 DISTNAME=	gfsdidot
 PKGNAME=	tex-${DISTNAME}-2018
 TEXLIVE_REV=	46310
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/gfsdidot
+HOMEPAGE=	https://ctan.org/pkg/gfsdidot
 COMMENT=	Greek font based on Didot's work
 #LICENSE=	other-free
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2013/10/06 08:25:37 obache Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/18 23:33:17 rillig Exp $
 #
 
 DISTNAME=	libnids-1.24
@@ -6,7 +6,7 @@ CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libnids/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libnids.sourceforge.net/
+HOMEPAGE=	https://libnids.sourceforge.net/
 COMMENT=	Network monitoring library with TCP/IP reassembly
 LICENSE=	gnu-gpl-v2
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2014/10/09 14:07:01 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:35:26 rillig Exp $
 
 DISTNAME=	ezxml-0.8.6
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ezxml/}
 
 MAINTAINER=	yazzy@yazzy.org
-HOMEPAGE=	http://ezxml.sourceforge.net/
+HOMEPAGE=	https://ezxml.sourceforge.net/
 COMMENT=	Easy to use C library for parsing XML documents
 
 WRKSRC=		${WRKDIR}/ezxml

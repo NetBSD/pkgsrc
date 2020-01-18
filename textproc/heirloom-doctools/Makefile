@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2016/03/10 12:49:32 leot Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:35:26 rillig Exp $
 
 DISTNAME=	heirloom-doctools-160308
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=n-t-roff/}
 
 MAINTAINER=	carsten.kunze@arcor.de
-HOMEPAGE=	http://n-t-roff.github.io/heirloom/doctools.html
+HOMEPAGE=	https://n-t-roff.github.io/heirloom/doctools.html
 COMMENT=	Modernized troff implementation
 LICENSE=	cddl-1.0
 

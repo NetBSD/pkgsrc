@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2020/01/18 21:50:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.125 2020/01/18 23:35:17 rillig Exp $
 
 DISTNAME=		gnome-commander-1.2.8.15
 PKGREVISION=		86
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-commander/1.2/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=	pkgsrc@blackmouse.biz
-HOMEPAGE=	http://www.nongnu.org/gcmd/
+HOMEPAGE=	https://www.nongnu.org/gcmd/
 COMMENT=	GNOME Commander is a fast and powerful graphical filemanager
 
 USE_LANGUAGES=		c c++

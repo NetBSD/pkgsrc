@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 19:32:16 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:31:46 rillig Exp $
 
 DISTNAME=	ocherokee
 PKGNAME=	tex-${DISTNAME}-2014
 TEXLIVE_REV=	25689
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/ocherokee
+HOMEPAGE=	https://ctan.org/pkg/ocherokee
 COMMENT=	LaTeX Support for the Cherokee language
 LICENSE=	lppl-1.3c
 

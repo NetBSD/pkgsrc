@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/11/04 21:28:44 rillig Exp $
+# $NetBSD: Makefile,v 1.50 2020/01/18 23:35:16 rillig Exp $
 
 DISTNAME=	duplicity-0.7.17
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils net
 MASTER_SITES=	http://code.launchpad.net/duplicity/0.7-series/${PKGVERSION_NOREV}/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/duplicity/
+HOMEPAGE=	https://www.nongnu.org/duplicity/
 COMMENT=	Remote encrypting incremental backup utility
 LICENSE=	gnu-gpl-v2
 

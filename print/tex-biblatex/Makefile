@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2019/12/06 20:18:59 markd Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:33:41 rillig Exp $
 
 DISTNAME=	biblatex
 PKGNAME=	tex-${DISTNAME}-3.12
 TEXLIVE_REV=	49069
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/biblatex
+HOMEPAGE=	https://ctan.org/pkg/biblatex
 COMMENT=	Sophisticated Bibliographies in LaTeX
 LICENSE=	lppl-1.3c
 

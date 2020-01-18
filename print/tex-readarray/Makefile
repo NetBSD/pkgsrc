@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:10 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:34:44 rillig Exp $
 
 DISTNAME=	readarray
 PKGNAME=	tex-${DISTNAME}-2.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 TEXLIVE_REV=	42467
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/readarray
+HOMEPAGE=	https://ctan.org/pkg/readarray
 COMMENT=	Read, store and recall array-formatted data
 LICENSE=	lppl-1.3c
 

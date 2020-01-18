@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/05/15 10:50:19 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2020/01/18 23:36:04 rillig Exp $
 
 DISTNAME=	xf86-video-intel-2.99.917
 PKGREVISION=	7
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg Intel video driver
 
 CONFLICTS+=	xf86-video-i810-[0-9]*

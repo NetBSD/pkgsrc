@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/11/02 22:38:00 rillig Exp $
+# $NetBSD: Makefile,v 1.55 2020/01/18 23:32:15 rillig Exp $
 
 DISTNAME=	libscigraphica-2.1.1
 PKGREVISION=	36
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scigraphica/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://scigraphica.sourceforge.net/
+HOMEPAGE=	https://scigraphica.sourceforge.net/
 COMMENT=	Scientific data visualization and analysis library
 LICENSE=	gnu-gpl-v2
 
