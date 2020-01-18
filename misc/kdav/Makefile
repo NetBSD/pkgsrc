@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/11/17 05:52:26 markd Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 21:48:16 jperkin Exp $
 
 DISTNAME=	kdav-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM

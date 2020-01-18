@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2018/03/12 11:15:34 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/18 21:48:12 jperkin Exp $
 
-PKGREVISION=	4
+PKGREVISION=	5
 
 COMMENT=	Enlightened Canvas Library
 
