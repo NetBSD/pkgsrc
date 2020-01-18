@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2020/01/12 20:20:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 21:48:30 jperkin Exp $
 
 DISTNAME=	elementary-1.7.7
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	x11
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2

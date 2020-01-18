@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2019/12/16 12:27:53 micha Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 21:50:29 jperkin Exp $
 
 FLNEWS_VERSION=	0.17
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/flnews/src/
 MASTER_SITES+=	http://www.ybtra.de/flnews-mirror/src/

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2019/11/12 18:39:46 nros Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/18 21:51:09 jperkin Exp $
 
 DISTNAME=	mini_httpd-1.30
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/mini_httpd/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.88 2019/12/01 14:53:56 adam Exp $
+# $NetBSD: Makefile,v 1.89 2020/01/18 21:51:13 jperkin Exp $
 
 DISTNAME=	PyQt4_gpl_${PYQT_SYS}-4.12.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt4_gpl_${PYQT_SYS}/qt4/}
+PKGREVISION=	1
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
 

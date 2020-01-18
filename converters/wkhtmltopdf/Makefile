@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2019/11/03 17:14:27 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 21:48:55 jperkin Exp $
 
 DISTNAME=	wkhtmltox-0.12.4
 PKGNAME=	wkhtmltopdf-0.12.4
-PKGREVISION=	4
+PKGREVISION=	5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wkhtmltopdf/}
 GITHUB_PROJECT=	wkhtmltopdf
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

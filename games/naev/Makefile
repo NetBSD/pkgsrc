@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/10/01 12:25:37 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 21:49:30 jperkin Exp $
 
 DISTNAME=	naev-0.7.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=naev/}
 GITHUB_TAG=	naev-${PKGVERSION_NOREV}

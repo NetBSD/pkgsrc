@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2017/09/06 09:03:04 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 21:50:50 jperkin Exp $
 
 DISTNAME=	yafic-1.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yafic/}
 

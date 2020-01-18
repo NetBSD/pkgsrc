@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2020/01/12 20:20:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/18 21:50:55 jperkin Exp $
 
 DISTNAME=	kuser-16.08.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	sysutils
 COMMENT=	KDE user manager
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.08.0/src/}

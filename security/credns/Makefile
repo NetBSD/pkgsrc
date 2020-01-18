@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/03/05 11:29:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 21:50:34 jperkin Exp $
 
 DISTNAME=	credns-0.2.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/credns/
 

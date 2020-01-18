@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2020/01/12 20:20:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/18 21:50:53 jperkin Exp $
 
 COLLECTD_PACKAGE=	curl
 COLLECTD_PLUGINS=	curl curl_json curl_xml apache bind nginx write_http
 
 COMMENT=		Statistics collection daemon - curl-based plugins
-PKGREVISION=		10
+PKGREVISION=		11
 
 .include "../../sysutils/collectd/Makefile.common"
 

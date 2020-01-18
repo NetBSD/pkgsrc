@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2019/11/04 21:13:01 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 21:50:46 jperkin Exp $
 
 DISTNAME=	qore-xmlsec-module-0.0.2
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 

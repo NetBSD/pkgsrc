@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2019/11/03 11:45:48 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2020/01/18 21:50:22 jperkin Exp $
 
 DISTNAME=		Net-Z3950-ZOOM-1.30
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 

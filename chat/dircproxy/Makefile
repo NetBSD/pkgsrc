@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2019/08/11 13:18:02 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/18 21:48:48 jperkin Exp $
 
 DISTNAME=	dircproxy-1.2.0-beta2
 PKGNAME=	${DISTNAME:S/-beta/beta/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	chat
 MASTER_SITES=	http://dircproxy.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz
