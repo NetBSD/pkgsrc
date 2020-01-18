@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/11/03 10:39:04 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/18 23:30:20 rillig Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
 PKGREVISION=	8
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://kldp.net/download.php/715/
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://exmanide.kldp.net/
+HOMEPAGE=	https://exmanide.kldp.net/
 COMMENT=	Integrated development environment for Python
 
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.6:../../x11/py-wxWidgets

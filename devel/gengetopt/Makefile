@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/10/23 17:41:57 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:30:28 rillig Exp $
 
 DISTNAME=	gengetopt-2.22.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gengetopt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gengetopt/
+HOMEPAGE=	https://www.gnu.org/software/gengetopt/
 COMMENT=	Command line parser generator
 LICENSE=	gnu-gpl-v3
 

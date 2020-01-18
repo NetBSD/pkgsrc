@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/03/24 09:18:53 sno Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:30:33 rillig Exp $
 #
 
 DISTNAME=	log4cplus-2.0.3
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=log4cplus/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://log4cplus.sourceforge.net/
+HOMEPAGE=	https://log4cplus.sourceforge.net/
 COMMENT=	Logging API for C++
 LICENSE=	apache-2.0 AND 2-clause-bsd
 

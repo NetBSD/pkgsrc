@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/11/06 20:46:01 asau Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:31 rillig Exp $
 #
 
 DISTNAME=	libfirm-1.21.0
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libfirm/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libfirm.sourceforge.net/
+HOMEPAGE=	https://libfirm.sourceforge.net/
 COMMENT=	Provides a graph-based SSA representation of programs
 
 GNU_CONFIGURE=	yes
