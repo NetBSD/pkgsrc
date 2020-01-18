@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2019/04/03 00:32:40 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2020/01/18 21:48:10 jperkin Exp $
 
 BUILDLINK_TREE+=	threadweaver
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	threadweaver
 THREADWEAVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.threadweaver+=	threadweaver>=5.21.0
-BUILDLINK_ABI_DEPENDS.threadweaver?=	threadweaver>=5.47.0nb4
+BUILDLINK_ABI_DEPENDS.threadweaver?=	threadweaver>=5.64.0nb1
 BUILDLINK_PKGSRCDIR.threadweaver?=	../../devel/threadweaver
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
