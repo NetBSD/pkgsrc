@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2019/11/04 21:28:46 rillig Exp $
+# $NetBSD: options.mk,v 1.9 2020/01/18 09:08:39 tnn Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-vfs
@@ -27,7 +27,6 @@ CONFIGURE_ENV+=		ac_cv_path_KRB5_CONFIG=none
 .endif
 
 .if !empty(PKG_OPTIONS:Mhal)
-MESSAGE_SRC+=	${.CURDIR}/MESSAGE.hal
 .include "../../sysutils/hal/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-hal
 .else
