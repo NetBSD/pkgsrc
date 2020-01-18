@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2019/11/12 19:58:41 nros Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/18 23:32:50 rillig Exp $
 
 DISTNAME=	tnef-1.4.18
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=verdammelt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tnef.sourceforge.net/
+HOMEPAGE=	https://tnef.sourceforge.net/
 COMMENT=	Decode MS-TNEF MIME attachments
 LICENSE=	gnu-gpl-v2
 

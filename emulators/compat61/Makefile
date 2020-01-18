@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/05/03 15:01:12 spz Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:30:49 rillig Exp $
 
 COMPAT_PKG=		compat61	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		6.1
 
-HOMEPAGE=		http://www.NetBSD.org/releases/formal-6/index.html
+HOMEPAGE=		https://www.NetBSD.org/releases/formal-6/index.html
 COMMENT=		Shared libraries for NetBSD 6.1 compatibility
 # This license list is a pre-emptive strike, the actual situation may be better
 LICENSE=		2-clause-bsd AND modified-bsd AND isc AND mit AND zlib \

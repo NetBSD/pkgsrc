@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:49 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:23 rillig Exp $
 
 DISTNAME=	dice
 PKGNAME=	tex-${DISTNAME}-2014
 TEXLIVE_REV=	28501
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/dice
+HOMEPAGE=	https://ctan.org/pkg/dice
 COMMENT=	Font for die faces
 LICENSE=	lppl-1.3c
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:24 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:53 rillig Exp $
 
 DISTNAME=	tap
 PKGNAME=	tex-${DISTNAME}-0.77
 TEXLIVE_REV=	31731
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/tap
+HOMEPAGE=	https://ctan.org/pkg/tap
 COMMENT=	TeX macros for typesetting complex tables
 LICENSE=	public-domain
 

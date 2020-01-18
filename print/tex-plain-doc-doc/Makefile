@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:04 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:40 rillig Exp $
 
 DISTNAME=	plain-doc.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
 TEXLIVE_REV=	28424
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/csname-doc
+HOMEPAGE=	https://ctan.org/pkg/csname-doc
 COMMENT=	List of plain.tex cs names
 LICENSE=	public-domain
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2020/01/18 21:50:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.81 2020/01/18 23:33:03 rillig Exp $
 #
 
 DISTNAME=	mousetweaks-2.32.1
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mousetweaks/2.32/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/Mousetweaks/Home
+HOMEPAGE=	https://live.gnome.org/Mousetweaks/Home
 COMMENT=	Mouse accessibility software
 LICENSE=	gnu-gpl-v3 AND gnu-fdl-v1.3
 

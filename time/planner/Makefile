@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2020/01/18 21:51:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.69 2020/01/18 23:35:38 rillig Exp $
 #
 
 DISTNAME=	planner-0.14.6
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/planner/0.14/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/Planner
+HOMEPAGE=	https://live.gnome.org/Planner
 COMMENT=	Project management tool for the GNOME desktop
 LICENSE=	gnu-gpl-v2 # OR any later version
 

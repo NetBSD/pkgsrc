@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 19:51:15 asau Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:19 rillig Exp $
 
 DISTNAME=	netbsd-kmod-tools-5.1
 CATEGORIES=	sysutils
 DISTFILES=	#
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.NetBSD.org/
+HOMEPAGE=	https://www.NetBSD.org/
 COMMENT=	NetBSD kmod tools
 
 ONLY_FOR_PLATFORM=	NetBSD-5.[0-8]*-*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 09:14:18 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:56 rillig Exp $
 
 DISTNAME=	sessreg-1.1.2
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Manage utmp/wtmp entries for xdm
 
 USE_TOOLS+=	pkg-config

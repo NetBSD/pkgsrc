@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2017/09/16 19:26:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:30:57 rillig Exp $
 TRYTON_MODULE_NAME=	trytond_purchase_request
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tryton.org/
+HOMEPAGE=	https://www.tryton.org/
 COMMENT=	Purchase request module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 

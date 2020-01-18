@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/11/04 21:43:37 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/18 23:35:28 rillig Exp $
 
 DISTNAME=	groff-1.10
 PKGNAME=	ja-groff-0.99
@@ -12,7 +12,7 @@ PATCHFILES=		jgroff-0.99.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/groff/groff.html
+HOMEPAGE=	https://www.gnu.org/software/groff/groff.html
 COMMENT=	Japanese enhancement of GNU groff
 
 MAKE_JOBS_SAFE=		no

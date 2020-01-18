@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2019/11/07 12:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2020/01/18 23:35:05 rillig Exp $
 
 PKGREVISION= 5
 .include "../../print/texlive/Makefile.common"
@@ -6,7 +6,7 @@ PKGREVISION= 5
 PKGNAME=	xetex-0.999991
 CATEGORIES=	print
 
-HOMEPAGE=	http://www.tug.org/xetex/
+HOMEPAGE=	https://www.tug.org/xetex/
 COMMENT=	TeX system with Unicode and modern font technologies
 LICENSE=	mit
 

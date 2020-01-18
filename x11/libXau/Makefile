@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/02/10 23:31:37 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:50 rillig Exp $
 
 DISTNAME=		libXau-1.0.9
 CATEGORIES=		x11 devel
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Authorization Protocol for X from X.org
 LICENSE=		mit
 

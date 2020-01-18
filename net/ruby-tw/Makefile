@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2019/06/16 17:07:02 tsutsui Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/18 23:33:21 rillig Exp $
 
 DISTNAME=	tw-1.3.1
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
-HOMEPAGE=	http://shokai.github.io/tw/
+HOMEPAGE=	https://shokai.github.io/tw/
 COMMENT=	CUI Twitter Client
 LICENSE=	mit
 

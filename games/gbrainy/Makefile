@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2019/07/21 22:24:50 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2020/01/18 23:32:01 rillig Exp $
 
 DISTNAME=	gbrainy-2.2.1
 PKGNAME=	gbrainy-2.21
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://gent.softcatala.org/jmas/gbrainy/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/gbrainy
+HOMEPAGE=	https://live.gnome.org/gbrainy
 COMMENT=	Brain teaser game and trainer
 LICENSE=	gnu-gpl-v2
 

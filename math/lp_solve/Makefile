@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/10/29 22:16:03 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:32:51 rillig Exp $
 #
 
 DISTNAME=	lp_solve_5.5.2.3_source
@@ -7,7 +7,7 @@ CATEGORIES=	math devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lpsolve/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lpsolve.sourceforge.net/
+HOMEPAGE=	https://lpsolve.sourceforge.net/
 COMMENT=	Mixed Integer Linear Programming (MILP) solver
 #LICENSE=	LGPL, unclear which version (see lp_lib.h)
 

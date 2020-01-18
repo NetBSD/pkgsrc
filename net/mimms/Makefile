@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/03 11:45:41 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:33:18 rillig Exp $
 
 DISTNAME=	mimms-3.2.1
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.savannah.gnu.org/releases/mimms/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://savannah.nongnu.org/projects/mimms/
+HOMEPAGE=	https://savannah.nongnu.org/projects/mimms/
 COMMENT=	MMS (e.g. mms://) stream downloader
 LICENSE=	gnu-gpl-v3
 

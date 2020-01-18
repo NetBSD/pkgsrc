@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2019/12/06 20:21:22 markd Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:34:07 rillig Exp $
 
 DISTNAME=	fancyhdr
 PKGNAME=	tex-${DISTNAME}-3.10
 TEXLIVE_REV=	49886
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/fancyhdr
+HOMEPAGE=	https://ctan.org/pkg/fancyhdr
 COMMENT=	Extensive control of page headers and footers in LaTeX2e
 LICENSE=	lppl-1.3c
 

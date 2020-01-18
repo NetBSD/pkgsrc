@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/11/04 21:43:48 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:35:34 rillig Exp $
 
 DISTNAME=	uncrustify-uncrustify-0.69.0
 PKGNAME=	${DISTNAME:S/uncrustify-//}
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	uncrustify
 GITHUB_TAG=	uncrustify-0.69.0
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://uncrustify.sourceforge.net/
+HOMEPAGE=	https://uncrustify.sourceforge.net/
 COMMENT=	Source Code Beautifier for C-like languages
 LICENSE=	gnu-gpl-v2
 

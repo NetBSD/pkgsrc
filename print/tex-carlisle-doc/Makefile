@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2019/12/06 20:19:05 markd Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:33:44 rillig Exp $
 
 DISTNAME=	carlisle.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2018
 TEXLIVE_REV=	47876
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/carlisle
+HOMEPAGE=	https://ctan.org/pkg/carlisle
 COMMENT=	Documentation for tex-carlisle
 LICENSE=	lppl-1.3c
 

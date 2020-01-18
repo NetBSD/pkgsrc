@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:36 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:00 rillig Exp $
 
 DISTNAME=	tufte-latex
 PKGNAME=	tex-${DISTNAME}-3.5.2
 TEXLIVE_REV=	37649
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/tufte-latex
+HOMEPAGE=	https://ctan.org/pkg/tufte-latex
 COMMENT=	Document classes inspired by the work of Edward Tufte
 LICENSE=	apache-2.0
 

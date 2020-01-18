@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2019/08/11 13:22:07 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2020/01/18 23:33:13 rillig Exp $
 
 DISTNAME=	clive-2.3.3
 PKGREVISION=	8
@@ -6,7 +6,7 @@ CATEGORIES=	net multimedia www
 MASTER_SITES=	http://clive.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://clive.sourceforge.net/
+HOMEPAGE=	https://clive.sourceforge.net/
 COMMENT=	Command line video extraction tool for user-uploaded video hosts
 LICENSE=	gnu-gpl-v3
 

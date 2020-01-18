@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/01/15 15:43:48 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:30:48 rillig Exp $
 
 COMPAT_PKG=		compat40	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		4.0
 
-HOMEPAGE=		http://www.NetBSD.org/releases/formal-4/index.html
+HOMEPAGE=		https://www.NetBSD.org/releases/formal-4/index.html
 COMMENT=		Shared libraries for NetBSD 4.0 compatibility
 
 # XXX Until NetBSD 5.0 is released, we fetch the distfiles into a date-specific

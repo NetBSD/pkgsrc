@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/03 11:45:53 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:21 rillig Exp $
 
 DISTNAME=	siproxd-0.8.2
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siproxd/}
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://siproxd.sourceforge.net/
+HOMEPAGE=	https://siproxd.sourceforge.net/
 COMMENT=	Session Initiation Protocol Application-Level Gateway (SIP ALG)
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/01/18 21:50:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/18 23:33:18 rillig Exp $
 
 DISTNAME=	netatalk-2.2.6
 PKGNAME=	${DISTNAME:C/-/22-/}
@@ -11,7 +11,7 @@ PATCH_SITES=	http://svn.macosforge.org/repository/macports/trunk/dports/net/neta
 		http://mirror.lug.udel.edu/pub/macports/trunk/dports/net/netatalk/files/
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://netatalk.sourceforge.net/
+HOMEPAGE=	https://netatalk.sourceforge.net/
 COMMENT=	Netatalk appletalk file and print services
 LICENSE=	gnu-gpl-v2
 

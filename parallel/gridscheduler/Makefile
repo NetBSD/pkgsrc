@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/01/18 21:50:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/18 23:33:25 rillig Exp $
 
 PKGNAME=	gridscheduler-2011.11.1
 PKGREVISION=	5
@@ -7,7 +7,7 @@ CATEGORIES=	parallel sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gridscheduler/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gridscheduler.sourceforge.net/
+HOMEPAGE=	https://gridscheduler.sourceforge.net/
 COMMENT=	Open Grid Scheduler/Grid Engine resource management system
 
 BUILD_DEPENDS+=	{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh

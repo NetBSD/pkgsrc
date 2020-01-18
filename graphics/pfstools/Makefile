@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/01/18 21:49:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.57 2020/01/18 23:32:17 rillig Exp $
 
 DISTNAME=	pfstools-2.1.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pfstools/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pfstools.sourceforge.net/
+HOMEPAGE=	https://pfstools.sourceforge.net/
 COMMENT=	Tools for manipulating HDR images and video frames
 LICENSE=	gnu-lgpl-v2.1
 

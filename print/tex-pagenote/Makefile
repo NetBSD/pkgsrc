@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:22:59 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:34:36 rillig Exp $
 
 DISTNAME=	pagenote
 PKGNAME=	tex-${DISTNAME}-1.1a
 TEXLIVE_REV=	15878
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/pagenote
+HOMEPAGE=	https://ctan.org/pkg/pagenote
 COMMENT=	Notes at end of document
 LICENSE=	lppl-1.3c
 

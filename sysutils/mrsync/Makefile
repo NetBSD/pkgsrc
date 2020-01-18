@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/10/09 14:06:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:19 rillig Exp $
 
 DISTNAME=	mrsync.20090219
 PKGNAME=	${DISTNAME:S/./-/}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mrsync/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://mrsync.sourceforge.net/
+HOMEPAGE=	https://mrsync.sourceforge.net/
 COMMENT=	Multicast data replication and synchronisation tool
 LICENSE=	gnu-gpl-v2
 

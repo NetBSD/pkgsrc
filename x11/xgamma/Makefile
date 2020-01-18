@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/03/07 11:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:36:08 rillig Exp $
 
 DISTNAME=		xgamma-1.0.6
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Alter gamma correction
 
 GNU_CONFIGURE=		yes

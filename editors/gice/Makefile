@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2019/07/21 22:24:42 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2020/01/18 23:30:45 rillig Exp $
 #
 
 DISTNAME=		gice-0.6.2
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gice/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://gice.sourceforge.net/
+HOMEPAGE=		https://gice.sourceforge.net/
 COMMENT=		Powerful C text editor with advanced features
 
 WRKSRC=			${WRKDIR}/gice

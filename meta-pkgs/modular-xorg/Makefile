@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/10/06 11:29:55 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:32:55 rillig Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-1.12.4
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=/}
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg meta-package
 LICENSE=	2-clause-bsd
 

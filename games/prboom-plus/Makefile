@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2018/09/01 19:02:53 leot Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:32:04 rillig Exp $
 
 DISTNAME=	prboom-plus-2.5.1.4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prboom-plus/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://prboom-plus.sourceforge.net/
+HOMEPAGE=	https://prboom-plus.sourceforge.net/
 COMMENT=	Multiplayer-capable and modified version of DOOM
 LICENSE=	gnu-gpl-v2
 

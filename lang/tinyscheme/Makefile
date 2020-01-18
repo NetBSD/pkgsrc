@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/05/23 19:23:04 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 23:32:45 rillig Exp $
 
 DISTNAME=	tinyscheme-1.40
 CATEGORIES=	lang
@@ -6,7 +6,7 @@ PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tinyscheme/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tinyscheme.sourceforge.net/home.html
+HOMEPAGE=	https://tinyscheme.sourceforge.net/home.html
 COMMENT=	R5RS small embeddable scheme implementation
 LICENSE=	modified-bsd
 
