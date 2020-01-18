@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/05/15 11:35:24 markd Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:33:00 rillig Exp $
 
 DISTNAME=	collection-langspanish
 PKGNAME=	texlive-${DISTNAME}-2019
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 TEXLIVE_REV=	40587
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tug.org/texlive/
+HOMEPAGE=	https://www.tug.org/texlive/
 COMMENT=	Spanish TeX packages
 
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic

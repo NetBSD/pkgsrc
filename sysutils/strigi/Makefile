@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2020/01/18 21:50:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.73 2020/01/18 23:35:21 rillig Exp $
 
 DISTNAME=	strigi-0.7.8
 PKGREVISION=	32
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.vandenoever.info/software/strigi/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://strigi.sourceforge.net/
+HOMEPAGE=	https://strigi.sourceforge.net/
 COMMENT=	Small fast desktop searching program
 LICENSE=	gnu-lgpl-v2
 

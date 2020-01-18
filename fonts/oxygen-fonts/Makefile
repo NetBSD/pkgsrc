@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/02 22:24:42 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:31:06 rillig Exp $
 
 DISTNAME=	oxygen-fonts-${PLASMAVER}
 CATEGORIES=	fonts kde
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=plasma/${PLASMAVER}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://projects.kde.org/projects/oxygen-fonts
+HOMEPAGE=	https://projects.kde.org/projects/oxygen-fonts
 COMMENT=	The Oxygen font family
 LICENSE=	gnu-gpl-v3 AND ofl-v1.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2019/07/21 22:24:55 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2020/01/18 23:32:10 rillig Exp $
 
 DISTNAME=	autotrace-0.31.1
 PKGREVISION=	46
@@ -6,7 +6,7 @@ CATEGORIES=	graphics cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=autotrace/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://autotrace.sourceforge.net/
+HOMEPAGE=	https://autotrace.sourceforge.net/
 COMMENT=	Convert bitmap to vector graphics
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

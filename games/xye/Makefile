@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/07/18 00:06:18 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:32:07 rillig Exp $
 #
 
 DISTNAME=	xye-0.12.1
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xye/0.12.1/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xye.sourceforge.net/
+HOMEPAGE=	https://xye.sourceforge.net/
 COMMENT=	Kye clone
 
 GNU_CONFIGURE=		yes

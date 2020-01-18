@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2012/10/06 14:11:08 asau Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:32:16 rillig Exp $
 
 DISTNAME=	ocrad-0.21
 CATEGORIES=	graphics
 MASTER_SITES=	http://ftp.gnu.org/gnu/ocrad/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/ocrad/ocrad.html
+HOMEPAGE=	https://www.gnu.org/software/ocrad/ocrad.html
 COMMENT=	GNU OCR (Optical Character Recognition) program
 
 LICENSE=	gnu-gpl-v3

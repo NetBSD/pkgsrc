@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2017/09/16 19:27:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:33:07 rillig Exp $
 TRYTON_MODULE_NAME=	trytond_stock_lot
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	misc python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tryton.org/
+HOMEPAGE=	https://www.tryton.org/
 COMMENT=	Stock lot module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/01/04 19:36:11 roy Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 23:33:15 rillig Exp $
 #
 
 DISTNAME=	giFTcurs-0.6.2
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://savannah.nongnu.org/download/giftcurs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/giftcurs/
+HOMEPAGE=	https://www.nongnu.org/giftcurs/
 COMMENT=	Curses frontend to the giFT daemon
 
 USE_TOOLS+=		msgfmt pkg-config

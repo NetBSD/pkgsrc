@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:19 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:47 rillig Exp $
 
 DISTNAME=	phaistos.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.0
 TEXLIVE_REV=	18651
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/phaistos
+HOMEPAGE=	https://ctan.org/pkg/phaistos
 COMMENT=	Documentation for tex-phaistos
 LICENSE=	lppl-1.3c
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.119 2019/11/04 21:28:43 rillig Exp $
+# $NetBSD: Makefile,v 1.120 2020/01/18 23:35:15 rillig Exp $
 
 DISTNAME=	dbus-1.12.16
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/Software/dbus
+HOMEPAGE=	https://www.freedesktop.org/Software/dbus
 COMMENT=	Message bus system
 LICENSE=	gnu-gpl-v2
 

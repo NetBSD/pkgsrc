@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:35 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:12 rillig Exp $
 
 DISTNAME=	baekmuk
 PKGNAME=	tex-${DISTNAME}-2.2
 TEXLIVE_REV=	42106
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/baekmuk
+HOMEPAGE=	https://ctan.org/pkg/baekmuk
 COMMENT=	Baekmuk Korean TrueType fonts
 #LICENSE=	other-free
 

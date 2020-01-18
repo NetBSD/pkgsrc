@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/08 12:27:41 asau Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:33:24 rillig Exp $
 #
 
 DISTNAME=		nget-0.27.1
@@ -7,7 +7,7 @@ CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nget/}
 
 MAINTAINER=		joel@carnat.net
-HOMEPAGE=		http://nget.sourceforge.net/
+HOMEPAGE=		https://nget.sourceforge.net/
 COMMENT=		Command line nntp file grabber
 
 USE_PKGLOCALEDIR=	yes

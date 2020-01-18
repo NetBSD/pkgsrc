@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/03/17 08:40:33 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:53 rillig Exp $
 
 DISTNAME=		libXxf86dga-1.1.5
 CATEGORIES=		x11
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Library for the XFree86-DGA X extension
 
 USE_LIBTOOL=		yes

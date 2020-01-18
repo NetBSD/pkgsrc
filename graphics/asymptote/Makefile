@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/11/02 22:37:53 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/18 23:32:09 rillig Exp $
 
 DISTNAME=	asymptote-2.41
 PKGREVISION=	4
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 DISTFILES=	${DISTNAME}.src${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://asymptote.sourceforge.net/
+HOMEPAGE=	https://asymptote.sourceforge.net/
 COMMENT=	Powerful descriptive vector graphics language for technical drawings
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 

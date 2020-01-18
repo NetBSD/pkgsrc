@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:08 rillig Exp $
 TRYTON_MODULE_NAME=	trytond_stock_package_shipping_ups
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	misc python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tryton.org/
+HOMEPAGE=	https://www.tryton.org/
 COMMENT=	Tryton's stock package shipping UPS module
 LICENSE=	gnu-gpl-v3
 

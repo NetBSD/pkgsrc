@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/12/06 19:30:15 markd Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:31:43 rillig Exp $
 
 DISTNAME=	metafont
 # should be this instead:
@@ -9,7 +9,7 @@ CATEGORIES=	fonts
 TEXLIVE_REV=	35821
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/metafont
+HOMEPAGE=	https://ctan.org/pkg/metafont
 COMMENT=	METAFONT system for specifying fonts
 #LICENSE=	knuth
 

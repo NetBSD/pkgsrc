@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/11/03 19:35:55 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 23:32:55 rillig Exp $
 
 META_PACKAGE=	yes
 
@@ -11,7 +11,7 @@ DISTFILES=	# empty
 LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gnuradio/
+HOMEPAGE=	https://www.gnu.org/software/gnuradio/
 COMMENT=	Collection of GNU Radio (meta package, easy to install whole thing)
 
 # 20 package for now

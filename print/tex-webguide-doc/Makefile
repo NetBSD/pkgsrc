@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:43 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:03 rillig Exp $
 
 DISTNAME=	webguide.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
 TEXLIVE_REV=	25813
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/webguide
+HOMEPAGE=	https://ctan.org/pkg/webguide
 COMMENT=	Brief Guide to LaTeX Tools for Web publishing
 #LICENSE=	other-free
 

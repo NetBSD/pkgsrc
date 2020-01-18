@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/04 21:28:49 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:19 rillig Exp $
 
 DISTNAME=		neb-wipe-src-1.0
 PKGNAME=		neb-wipe-1.0
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=neb-stoehr/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://neb-stoehr.sourceforge.net/
+HOMEPAGE=		https://neb-stoehr.sourceforge.net/
 COMMENT=		Secure disk partition eraser
 
 NO_CONFIGURE=		yes
