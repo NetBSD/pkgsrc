@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1097 2020/01/17 18:49:57 pho Exp $
+# $NetBSD: Makefile,v 1.1098 2020/01/18 23:14:17 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -290,6 +290,7 @@ SUBDIR+=	hs-cgrep
 SUBDIR+=	hs-cmark-gfm
 SUBDIR+=	hs-doclayout
 SUBDIR+=	hs-doctemplates
+SUBDIR+=	hs-edit-distance
 SUBDIR+=	hs-haddock-library
 SUBDIR+=	hs-hscolour
 SUBDIR+=	hs-hslua-module-text
