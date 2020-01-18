@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2016/02/15 09:38:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.56 2020/01/18 23:30:28 rillig Exp $
 #
 
 DISTNAME=	indent-2.2.10
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=indent/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/indent/indent.html
+HOMEPAGE=	https://www.gnu.org/software/indent/indent.html
 COMMENT=	GNU version of pretty-printer for C source code
 LICENSE=	gnu-gpl-v3
 

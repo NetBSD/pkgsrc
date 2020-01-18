@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2016/10/09 14:24:02 taca Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:30:40 rillig Exp $
 
 DISTNAME=	hashery-2.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rubyworks.github.com/hashery
+HOMEPAGE=	https://rubyworks.github.com/hashery
 COMMENT=	Facets-bread collection of Hash-like classes
 LICENSE=	mit
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2018/08/18 15:55:13 adam Exp $
+# $NetBSD: Makefile.common,v 1.43 2020/01/18 23:30:42 rillig Exp $
 # used by devel/java-subversion/Makefile
 # used by devel/p5-subversion/Makefile
 # used by devel/py-subversion/Makefile
@@ -11,7 +11,7 @@ DISTNAME=	subversion-${SVNVER}
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_APACHE:=subversion/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://subversion.apache.org/
+HOMEPAGE=	https://subversion.apache.org/
 LICENSE=	apache-1.1
 EXTRACT_SUFX=	.tar.bz2
 

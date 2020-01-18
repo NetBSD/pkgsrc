@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/11/03 10:39:28 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/18 23:30:36 rillig Exp $
 #
 
 DISTNAME=	pilrc-3.2
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pilrc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pilrc.sourceforge.net/
+HOMEPAGE=	https://pilrc.sourceforge.net/
 COMMENT=	Generate resources for PalmOS applications from textual description
 
 GNU_CONFIGURE=		YES
