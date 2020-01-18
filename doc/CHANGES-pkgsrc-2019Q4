@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.4 2020/01/10 15:25:55 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.5 2020/01/18 22:07:48 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q4 branch:
 
@@ -28,4 +28,7 @@ www/firefox68: security fix (zero-day)
 
 Pullup ticket #6115 - requested by nia
 net/libtorrent-rasterbar: NetBSD 8 build fix
+
+Pullup ticket #6106 - requested by gutteridge
+x11/mate-terminal: crash fix
 
