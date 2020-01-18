@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/18 16:14:51 taca Exp $
+
+SHA1 (protobuf-cucumber-3.10.4.gem) = 38034dba0e41076f3c4aa3e95ed7c045f63c0f60
+RMD160 (protobuf-cucumber-3.10.4.gem) = 1a9777adefdbdc2b3db1ca681a6255c5efbde1b4
+SHA512 (protobuf-cucumber-3.10.4.gem) = 839758f8765729b55359754a25c4926aeaecf5ae9c2af82b132a91adeef98675847efa39d11f19591d49c77257a83011c7ed03fc79a20f05a69a5e496a28dcac
+Size (protobuf-cucumber-3.10.4.gem) = 236544 bytes
