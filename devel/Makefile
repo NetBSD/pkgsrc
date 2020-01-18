@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3011 2020/01/18 16:12:01 taca Exp $
+# $NetBSD: Makefile,v 1.3012 2020/01/18 16:16:01 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2708,6 +2708,7 @@ SUBDIR+=	ruby-polyglot
 SUBDIR+=	ruby-posix-spawn
 SUBDIR+=	ruby-power_assert
 SUBDIR+=	ruby-priority-queue
+SUBDIR+=	ruby-protobuf-cucumber
 SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-railties42
 SUBDIR+=	ruby-railties51
