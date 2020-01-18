@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/03 10:18:28 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/18 23:30:38 rillig Exp $
 
 DISTNAME=	PyODE-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//:tl}
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyODE/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pyode.sourceforge.net/
+HOMEPAGE=	https://pyode.sourceforge.net/
 COMMENT=	Python wrapper for the Open Dynamics Engine
 LICENSE=	modified-bsd OR gnu-lgpl-v2.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2019/10/27 18:58:06 maya Exp $
+# $NetBSD: Makefile,v 1.72 2020/01/18 23:30:31 rillig Exp $
 
 DISTNAME=	libgphoto2-2.5.8
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gphoto.sourceforge.net/
+HOMEPAGE=	https://gphoto.sourceforge.net/
 COMMENT=	Digital camera access library
 LICENSE=	gnu-lgpl-v2
 

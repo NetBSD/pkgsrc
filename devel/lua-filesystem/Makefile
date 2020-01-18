@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/05/28 20:43:04 maya Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:30:33 rillig Exp $
 #
 
 DISTNAME=		luafilesystem-1.7.0
@@ -9,7 +9,7 @@ GITHUB_PROJECT=		luafilesystem
 GITHUB_TAG=		v${PKGVERSION_NOREV:S/./_/g}_2
 
 MAINTAINER=		fhajny@NetBSD.org
-HOMEPAGE=		http://keplerproject.github.com/luafilesystem/
+HOMEPAGE=		https://keplerproject.github.com/luafilesystem/
 COMMENT=		File system related library for Lua
 LICENSE=		mit
 

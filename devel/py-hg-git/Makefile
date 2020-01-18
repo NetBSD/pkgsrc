@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/03 10:18:28 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:30:37 rillig Exp $
 
 DISTNAME=	0.8.10
 PKGNAME=	${PYPKGPREFIX}-hg-git-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	https://bitbucket.org/durin42/hg-git/get/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://hg-git.github.io/
+HOMEPAGE=	https://hg-git.github.io/
 COMMENT=	Push to and pull from a Git server repository using Mercurial
 LICENSE=	gnu-gpl-v2
 

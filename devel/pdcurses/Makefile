@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/03/20 10:38:54 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:30:36 rillig Exp $
 
 DISTNAME=	PDCurses-3.4
 PKGNAME=	${DISTNAME:tl}
@@ -7,7 +7,7 @@ CATEGORIES=	devel x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pdcurses/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pdcurses.sourceforge.net/
+HOMEPAGE=	https://pdcurses.sourceforge.net/
 COMMENT=	Public domain implementation of the X/Open curses standard
 #LICENSE=	See README, Legal Stuff part, starting with:
 #  The core package is in the public domain, but small portions of PDCurses

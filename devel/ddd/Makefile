@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2019/11/03 10:39:09 rillig Exp $
+# $NetBSD: Makefile,v 1.81 2020/01/18 23:30:26 rillig Exp $
 #
 
 DISTNAME=	ddd-3.3.12
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ddd/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/ddd/
+HOMEPAGE=	https://www.gnu.org/software/ddd/
 COMMENT=	Data Display Debugger -- graphical front-end for GDB/DBX/XDB
 
 LICENSE=	gnu-gpl-v3

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2019/05/06 05:08:07 taca Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/18 23:30:20 rillig Exp $
 
 DISTNAME=	activeldap-5.2.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/activeldap-/activeldap${RUBY_RAILS}-/}
 CATEGORIES=	databases
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://activeldap.github.io/
+HOMEPAGE=	https://activeldap.github.io/
 COMMENT=	Object oriented interface to LDAP
 LICENSE=	ruby-license OR gnu-gpl-v2 OR gnu-gpl-v3
 

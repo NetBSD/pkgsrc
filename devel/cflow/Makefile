@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2019/11/23 06:28:14 mef Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:30:24 rillig Exp $
 
 DISTNAME=	cflow-1.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=cflow/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/cflow/
+HOMEPAGE=	https://www.gnu.org/software/cflow/
 COMMENT=	Code-path flow analyzer for C
 LICENSE=	gnu-gpl-v3
 

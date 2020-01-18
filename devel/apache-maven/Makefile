@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/08/21 15:22:01 prlw1 Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/18 23:30:22 rillig Exp $
 #
 
 DISTNAME=	apache-maven-3.5.4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=maven/maven-3/${PKGVERSION_NOREV}/binaries/}
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
 
 MAINTAINER=	yyamano@NetBSD.org
-HOMEPAGE=	http://maven.apache.org/
+HOMEPAGE=	https://maven.apache.org/
 COMMENT=	Apache Project's software project management and comprehension tool
 LICENSE=	apache-2.0
 

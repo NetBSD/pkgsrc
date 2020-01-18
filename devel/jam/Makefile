@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/01/07 21:24:11 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:30:30 rillig Exp $
 #
 
 DISTNAME=	ft${PKGNAME_NOREV}
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://freetype.sourceforge.net/jam/index.html
+HOMEPAGE=	https://freetype.sourceforge.net/jam/index.html
 #HOMEPAGE=	http://www.perforce.com/jam/jam.html
 COMMENT=	Program construction tool, like make(1)
 

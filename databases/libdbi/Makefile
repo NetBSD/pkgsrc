@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/08/21 21:29:08 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:18 rillig Exp $
 #
 
 DISTNAME=	libdbi-0.9.0
@@ -6,7 +6,7 @@ CATEGORIES=	databases devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdbi/}
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://libdbi.sourceforge.net/
+HOMEPAGE=	https://libdbi.sourceforge.net/
 COMMENT=	Database Independent Abstraction Layer for C
 LICENSE=	gnu-lgpl-v2.1
 

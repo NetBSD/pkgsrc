@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2013/04/06 20:27:19 rodent Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/18 23:30:41 rillig Exp $
 
 DISTNAME=	rx-1.5
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	#
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/rx/rx.html
+HOMEPAGE=	https://www.gnu.org/software/rx/rx.html
 COMMENT=	Fast replacement for the GNU regex library
 
 USE_LIBTOOL=	yes

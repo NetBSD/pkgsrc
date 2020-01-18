@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/31 11:16:34 asau Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:30:21 rillig Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -13,7 +13,7 @@ EXTRACT_SUFX=	.zip
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ant.apache.org/
+HOMEPAGE=	https://ant.apache.org/
 COMMENT=	"Apache Project's Java-Based make(1) replacement"
 
 DEPENDS+=	crimson>=1.1.3:../../textproc/crimson

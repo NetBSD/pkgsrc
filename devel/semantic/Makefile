@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/11/03 10:39:30 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:30:41 rillig Exp $
 
 DISTNAME=	semantic-1.4.4
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cedet.sourceforge.net/semantic.shtml
+HOMEPAGE=	https://cedet.sourceforge.net/semantic.shtml
 COMMENT=	Lexer, parser-generator, and parser written for Emacs
 
 PKGSRC_MAKE_ENV+=	EMACS=${EMACS_FLAVOR}

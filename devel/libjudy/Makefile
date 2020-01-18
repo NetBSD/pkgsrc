@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/31 11:17:17 asau Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/18 23:30:31 rillig Exp $
 
 DISTNAME=	Judy-1.0.5
 PKGNAME=	${DISTNAME:S/Judy/libjudy/}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=judy/}
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://judy.sourceforge.net/
+HOMEPAGE=	https://judy.sourceforge.net/
 COMMENT=	High-performance sparse dynamic array library
 LICENSE=	gnu-lgpl-v2
 

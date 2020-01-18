@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/03/30 15:54:03 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:30:17 rillig Exp $
 
 DISTNAME=	dbfsak-5.0.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dbfsak/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dbfsak.sourceforge.net/
+HOMEPAGE=	https://dbfsak.sourceforge.net/
 COMMENT=	Tool for converting to and from DBF files
 LICENSE=	artistic
 

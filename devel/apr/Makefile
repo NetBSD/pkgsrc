@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2019/04/12 13:02:44 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2020/01/18 23:30:22 rillig Exp $
 #
 # Take care, changelogs often include "PR 12345" strings
 # which cause GNATS indigestion.
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://apr.apache.org/
+HOMEPAGE=	https://apr.apache.org/
 COMMENT=	Apache Portable Runtime
 LICENSE=	apache-2.0
 

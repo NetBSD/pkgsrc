@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/07/18 00:06:13 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:30:34 rillig Exp $
 #
 
 DISTNAME=		nqc-2.3.r1
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://bricxcc.sourceforge.net/nqc/release/
 
 MAINTAINER=		nathanw@NetBSD.org
-HOMEPAGE=		http://bricxcc.sourceforge.net/nqc/
+HOMEPAGE=		https://bricxcc.sourceforge.net/nqc/
 COMMENT=		Development system for the Lego Mindstorms RCX embedded computer
 
 MAKE_JOBS_SAFE=		no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2018/03/12 11:15:30 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/18 23:30:33 rillig Exp $
 
 DISTNAME=	m17n-lib-1.8.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	devel converters editors inputmethod textproc time
 MASTER_SITES=	http://download.savannah.gnu.org/releases/m17n/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/m17n/
+HOMEPAGE=	https://www.nongnu.org/m17n/
 COMMENT=	Multilingualization library
 LICENSE=	gnu-lgpl-v2.1
 

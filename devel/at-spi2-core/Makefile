@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/11/03 10:39:06 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:30:23 rillig Exp $
 
 DISTNAME=	at-spi2-core-2.33.2
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-core/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	http://www.linuxfoundation.org/collaborate/workgroups/accessibility/atk/at-spi/at-spi_on_d-bus
+HOMEPAGE=	https://www.linuxfoundation.org/collaborate/workgroups/accessibility/atk/at-spi/at-spi_on_d-bus
 COMMENT=	Assistive Technology Service Provider Interface Core
 LICENSE=	gnu-lgpl-v2
 

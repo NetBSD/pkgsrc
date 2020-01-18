@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/01/06 16:56:09 adam Exp $
+# $NetBSD: Makefile,v 1.53 2020/01/18 23:30:14 rillig Exp $
 
 DISTNAME=	help2man-1.47.12
 CATEGORIES=	converters
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=help2man/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	arved@arved.at
-HOMEPAGE=	http://www.gnu.org/software/help2man/
+HOMEPAGE=	https://www.gnu.org/software/help2man/
 COMMENT=	Generate simple manual pages from program output
 LICENSE=	gnu-gpl-v3
 

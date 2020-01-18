@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2019/08/22 20:22:32 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:30:13 rillig Exp $
 
 DISTNAME=	qodem-1.0.0
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qodem/}
 
 MAINTAINER=	fcambus@NetBSD.org
-HOMEPAGE=	http://qodem.sourceforge.net/
+HOMEPAGE=	https://qodem.sourceforge.net/
 COMMENT=	Re-implementation of the DOS-era Qmodem serial communications package
 LICENSE=	cc0-1.0-universal
 

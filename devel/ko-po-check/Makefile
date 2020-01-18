@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/09/02 13:19:39 adam Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/18 23:30:30 rillig Exp $
 
 DISTNAME=	ko-po-check-0.8
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	devel korean textproc
 MASTER_SITES=	http://kldp.net/frs/download.php/3863/
 
 MAINTAINER=	junyoung@mogua.com
-HOMEPAGE=	http://ko-po-check.kldp.net/
+HOMEPAGE=	https://ko-po-check.kldp.net/
 COMMENT=	Korean .po file checker
 
 GNU_CONFIGURE=	yes

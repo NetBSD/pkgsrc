@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2018/03/18 14:21:20 taca Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:30:40 rillig Exp $
 
 DISTNAME=	rubigen-1.5.5
 PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://drnic.github.com/rubigen
+HOMEPAGE=	https://drnic.github.com/rubigen
 COMMENT=	Ruby stub generator
 LICENSE=	mit
 

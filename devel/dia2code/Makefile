@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/31 11:16:52 asau Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:26 rillig Exp $
 #
 
 DISTNAME=		dia2code-0.8.1
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dia2code/}
 
 MAINTAINER=		dprice@cs.nmsu.edu
-HOMEPAGE=		http://dia2code.sourceforge.net/
+HOMEPAGE=		https://dia2code.sourceforge.net/
 COMMENT=		Small utility used to generate code from a Dia diagram
 
 GNU_CONFIGURE=		yes

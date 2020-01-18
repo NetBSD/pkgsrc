@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/08/11 13:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:30:37 rillig Exp $
 #
 
 DISTNAME=	pstreams-0.8.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pstreams/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pstreams.sourceforge.net/
+HOMEPAGE=	https://pstreams.sourceforge.net/
 COMMENT=	POSIX Process Control in C++
 LICENSE=	gnu-lgpl-v3
 

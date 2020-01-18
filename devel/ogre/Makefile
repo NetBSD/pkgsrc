@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/07/18 00:06:13 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2020/01/18 23:30:34 rillig Exp $
 #
 
 DISTNAME=	ogre-v1-6-3
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ogre/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ogre.sourceforge.net/
+HOMEPAGE=	https://ogre.sourceforge.net/
 COMMENT=	Object-Oriented Graphics Rendering Engine
 LICENSE=	gnu-lgpl-v2.1
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2018/12/09 21:05:32 adam Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/18 23:30:29 rillig Exp $
 
 DISTNAME=	gputils-1.5.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gputils/}
 
 MAINTAINER=	dogcow@NetBSD.org
-HOMEPAGE=	http://gputils.sourceforge.net/
+HOMEPAGE=	https://gputils.sourceforge.net/
 COMMENT=	Collection of tools for Microchip's PIC micro-processors
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 21:49:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:30:29 rillig Exp $
 
 DISTNAME=		gsoap_2.7.17
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gsoap2/}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		chriswareham@chriswareham.demon.co.uk
-HOMEPAGE=		http://gsoap2.sourceforge.net/
+HOMEPAGE=		https://gsoap2.sourceforge.net/
 COMMENT=		Tools for coding SOAP XML Web Services in C and C++
 
 MAKE_JOBS_SAFE=		no
