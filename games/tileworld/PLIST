@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/01/18 23:21:03 nia Exp $
 bin/tworld
 man/man6/tworld.6
 share/doc/tworld/README
@@ -36,7 +36,6 @@ share/tworld/res/ting.wav
 share/tworld/res/traphit.wav
 share/tworld/res/unslist.txt
 share/tworld/res/whisk.wav
-share/tworld/sets/CCLP2.dac
 share/tworld/sets/cc-lynx.dac
 share/tworld/sets/cc-ms.dac
 share/tworld/sets/intro-lynx.dac
