@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/10/09 14:06:01 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:30:09 rillig Exp $
 #
 
 DISTNAME=		${PKGNAME:S/-//}
@@ -7,7 +7,7 @@ CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=lucy/}
 
 MAINTAINER=		dprice@cs.nmsu.edu
-HOMEPAGE=		http://lucy.sourceforge.net/
+HOMEPAGE=		https://lucy.sourceforge.net/
 COMMENT=		Sequence Cleanup Program
 #LICENSE=		LICENSE file say "artistic", but bit differ.
 
