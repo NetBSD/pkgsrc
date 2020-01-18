@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2019/11/03 10:39:24 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 21:48:09 jperkin Exp $
 
 GITHUB_PROJECT=	lwt_ssl
 GITHUB_TAG=	${PKGVERSION_NOREV}
 DISTNAME=	lwt_ssl-1.1.2
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
