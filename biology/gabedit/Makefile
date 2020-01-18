@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/07/21 22:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:30:09 rillig Exp $
 
 PKGNAME=	gabedit-2.4.8
 PKGREVISION=	8
@@ -7,7 +7,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gabedit/}
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://gabedit.sourceforge.net/
+HOMEPAGE=	https://gabedit.sourceforge.net/
 COMMENT=	Graphical User Interface to computational chemistry packages
 
 USE_TOOLS=	gmake pkg-config
