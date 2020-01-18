@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/07/18 09:36:37 nia Exp $
+# $NetBSD: Makefile,v 1.41 2020/01/18 23:30:06 rillig Exp $
 
 DISTNAME=	taglib-1.11.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://taglib.github.io/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://taglib.github.io/
+HOMEPAGE=	https://taglib.github.io/
 COMMENT=	Library for accessing id tags in various media files
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
 

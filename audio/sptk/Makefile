@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/07/10 12:06:21 mef Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/18 23:30:06 rillig Exp $
 #
 
 DISTNAME=	SPTK-3.9
@@ -10,7 +10,7 @@ DISTFILES+=	SPTKref-${PKGVERSION_NOREV}.pdf
 DISTFILES+=	SPTKexamples-${PKGVERSION_NOREV}.pdf
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sp-tk.sourceforge.net/
+HOMEPAGE=	https://sp-tk.sourceforge.net/
 COMMENT=	Suite of speech signal processing tools
 LICENSE=	modified-bsd
 

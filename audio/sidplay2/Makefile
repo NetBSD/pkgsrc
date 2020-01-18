@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/04/20 12:10:31 nros Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:30:05 rillig Exp $
 #
 
 DISTNAME=	sidplay-2.0.9
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sidplay2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sidplay2.sourceforge.net/
+HOMEPAGE=	https://sidplay2.sourceforge.net/
 COMMENT=	Tool for playing sidtunes
 LICENSE=	gnu-gpl-v2
 

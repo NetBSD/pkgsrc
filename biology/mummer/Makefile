@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/08/11 13:18:00 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:30:09 rillig Exp $
 #
 
 DISTNAME=		MUMmer3.20
@@ -8,7 +8,7 @@ CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mummer/}
 
 MAINTAINER=		hdp@cs.nmsu.edu
-HOMEPAGE=		http://mummer.sourceforge.net/
+HOMEPAGE=		https://mummer.sourceforge.net/
 COMMENT=		System for aligning whole genome sequences
 
 WRKSRC=			${WRKDIR}/${DISTNAME}

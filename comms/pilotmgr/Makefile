@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2019/08/11 13:18:09 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2020/01/18 23:30:12 rillig Exp $
 
 DISTNAME=	pilotmgr-1.109
 PKGREVISION=	8
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pilotmanager/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pilotmanager.sourceforge.net/
+HOMEPAGE=	https://pilotmanager.sourceforge.net/
 COMMENT=	Synchronize databases on any 3Com Palm device
 
 #DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5

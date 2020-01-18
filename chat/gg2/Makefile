@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2020/01/18 21:48:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.68 2020/01/18 23:30:11 rillig Exp $
 
 DISTNAME=	gg2-2.3.0
 PKGREVISION=	41
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ggadu/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://ggadu.sourceforge.net/
+HOMEPAGE=	https://ggadu.sourceforge.net/
 COMMENT=	Instant messenger software for Poland; Jabber plugin included
 
 USE_LIBTOOL=		yes

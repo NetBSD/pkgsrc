@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/12/29 04:54:37 dholland Exp $
+# $NetBSD: Makefile,v 1.41 2020/01/18 23:30:10 rillig Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=felt/}
 DISTFILES=		felt-3.05.src.tar.gz felt-3.05.ps.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://felt.sourceforge.net/
+HOMEPAGE=		https://felt.sourceforge.net/
 COMMENT=		Free system for introductory level finite element analysis
 
 EXTRACT_ONLY=		felt-3.05.src.tar.gz

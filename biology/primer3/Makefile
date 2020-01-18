@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/07/18 00:06:11 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:09 rillig Exp $
 #
 
 VERS=		2.3.6
@@ -9,7 +9,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=primer3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://primer3.sourceforge.net/
+HOMEPAGE=	https://primer3.sourceforge.net/
 COMMENT=	Design PCR primers
 LICENSE=	gnu-gpl-v2
 
