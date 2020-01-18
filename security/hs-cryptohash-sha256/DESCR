@@ -1,0 +1,3 @@
+A practical incremental and one-pass, pure API to the SHA-256
+cryptographic hash algorithm according to FIPS 180-4 with performance
+close to the fastest implementations available in other languages.
