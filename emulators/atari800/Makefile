@@ -1,22 +1,19 @@
-# $NetBSD: Makefile,v 1.55 2019/05/05 10:12:59 adam Exp $
+# $NetBSD: Makefile,v 1.56 2020/01/18 21:33:13 nia Exp $
 
-DISTNAME=	atari800-4.1.0-src
+DISTNAME=	atari800-4.2.0-src
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atari800/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=atari800/}
+MASTER_SITES+=	http://www.emulators.com/freefile/
 EXTRACT_SUFX=	.tgz
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xf25.zip
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} pcxf380.zip
+GITHUB_PROJECT=	atari800
+GITHUB_RELEASE=	ATARI800_${PKGVERSION_NOREV:S/./_/g}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://atari800.github.io/
 COMMENT=	Atari 800, 800XL, 130XE and 5200 emulator
 LICENSE=	gnu-gpl-v2
-
-RESTRICTED=		copyrighted ROM images
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=		gmake unzip
@@ -37,7 +34,7 @@ SUBST_FILES.cfg-path=	src/cfg.c
 SUBST_SED.cfg-path=	-e 's,"/etc,"${PREFIX}/share/atari800,g'
 
 post-extract:
-	cd ${WRKDIR} && unzip -Lqo ${DISTDIR}/xf25.zip
+	cd ${WRKDIR} && unzip -Lqo ${DISTDIR}/pcxf380.zip
 	sed -e 's,@PREFIX@,${PREFIX},g' ${FILESDIR}/atari800.cfg \
 		>${WRKSRC}/atari800.cfg
 
@@ -47,7 +44,6 @@ post-install:
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
