@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/10/11 09:08:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 23:30:41 rillig Exp $
 
 DISTNAME=	cvs-1.12.13
 PKGREVISION=	7
@@ -7,7 +7,7 @@ MASTER_SITES=	http://ftp.gnu.org/non-gnu/cvs/source/feature/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cvs.nongnu.org/
+HOMEPAGE=	https://cvs.nongnu.org/
 COMMENT=	Concurrent Versions System
 LICENSE=	gnu-gpl-v2
 

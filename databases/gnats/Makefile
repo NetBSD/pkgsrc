@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/12/21 23:31:23 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2020/01/18 23:30:17 rillig Exp $
 
 DISTNAME=	gnats-4.2.0
 CATEGORIES=	databases
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gnats/}
 PKGREVISION=	3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gnats/
+HOMEPAGE=	https://www.gnu.org/software/gnats/
 COMMENT=	GNATS bug tracking system
 LICENSE=	gnu-gpl-v3
 

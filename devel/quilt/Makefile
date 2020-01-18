@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/11/03 10:39:29 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/18 23:30:39 rillig Exp $
 #
 
 DISTNAME=	quilt-0.66
@@ -7,7 +7,7 @@ CATEGORIES=	devel scm
 MASTER_SITES=	http://download.savannah.gnu.org/releases/quilt/
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	http://savannah.nongnu.org/projects/quilt
+HOMEPAGE=	https://savannah.nongnu.org/projects/quilt
 COMMENT=	Tools to manage series of patches
 
 GNU_CONFIGURE=	yes

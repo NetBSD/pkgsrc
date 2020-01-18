@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/11/24 09:02:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/18 23:30:24 rillig Exp $
 #
 
 DISTNAME=	check-0.13.0
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libcheck/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://check.sourceforge.net/
+HOMEPAGE=	https://check.sourceforge.net/
 COMMENT=	Unit test framework for C
 LICENSE=	gnu-lgpl-v2.1
 

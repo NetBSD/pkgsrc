@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2019/05/27 13:21:41 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.16 2020/01/18 23:30:28 rillig Exp $
 #
 # used by devel/gettext/Makefile
 # used by devel/gettext-asprintf/Makefile
@@ -11,7 +11,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gettext/}
 
 MAINTAINER?=	joerg@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gettext/gettext.html
+HOMEPAGE=	https://www.gnu.org/software/gettext/gettext.html
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS=	gettext<=0.10.35

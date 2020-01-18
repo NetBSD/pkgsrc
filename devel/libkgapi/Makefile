@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/01/18 21:49:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 23:30:31 rillig Exp $
 
 DISTNAME=	libkgapi-2.2.0
 PKGREVISION=	17
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=libkgapi/2.2.0/src/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.kde.org/
+HOMEPAGE=	https://www.kde.org/
 COMMENT=	KDE-based library for accessing various Google services
 LICENSE=	gnu-gpl-v2
 
