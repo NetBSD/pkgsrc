@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2019/07/21 08:18:53 nia Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 21:48:23 jperkin Exp $
 
 DISTNAME=	libssh2-1.9.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.libssh2.org/download/
 

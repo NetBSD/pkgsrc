@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2019/05/23 19:23:21 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2020/01/18 21:51:12 jperkin Exp $
 
 DISTNAME=	tinyproxy-1.10.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tinyproxy/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

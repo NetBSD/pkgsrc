@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/01/12 20:20:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 21:49:30 jperkin Exp $
 
 DISTNAME=	openrct2-0.2.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenRCT2/}
 GITHUB_PROJECT=	OpenRCT2

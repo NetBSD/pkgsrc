@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2020/01/12 20:20:00 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2020/01/18 21:48:30 jperkin Exp $
 
 BUILDLINK_TREE+=	elementary
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	elementary
 ELEMENTARY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.elementary+=	elementary>=1.7.7
-BUILDLINK_ABI_DEPENDS.elementary?=	elementary>=1.7.7nb19
+BUILDLINK_ABI_DEPENDS.elementary?=	elementary>=1.7.7nb20
 BUILDLINK_PKGSRCDIR.elementary?=	../../x11/elementary
 
 .include "../../devel/ecore/buildlink3.mk"

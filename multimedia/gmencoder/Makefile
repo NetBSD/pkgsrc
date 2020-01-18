@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2019/07/21 22:25:25 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2020/01/18 21:50:05 jperkin Exp $
 #
 
 DISTNAME=	gmencoder-0.1.0
-PKGREVISION=	67
+PKGREVISION=	68
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gmencoder/}
 EXTRACT_SUFX=	.tgz

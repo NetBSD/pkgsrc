@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2019/11/03 11:45:53 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 21:50:26 jperkin Exp $
 
 DISTNAME=		sysmon-0.93
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://puck.nether.net/pub/jared/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2019/07/21 22:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2020/01/18 21:48:25 jperkin Exp $
 .include "Makefile.common"
 
-PKGREVISION=		38
+PKGREVISION=		39
 
 GKRELLM_PKGBASE=	gkrellm
 WRKSRC=			${GKRELLM_SRCDIR}

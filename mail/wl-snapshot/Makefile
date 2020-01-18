@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/11/02 16:25:29 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 21:49:55 jperkin Exp $
 
 DISTNAME=	wl-beta_2.15.9+0.20190919
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/beta_//:S/+0//}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/wl-beta/}
 EXTRACT_SUFX=	.orig.tar.gz

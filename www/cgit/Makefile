@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2017/08/01 14:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 21:51:05 jperkin Exp $
 
 DISTNAME=	cgit-1.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://git.zx2c4.com/cgit/snapshot/
 EXTRACT_SUFX=	.tar.xz

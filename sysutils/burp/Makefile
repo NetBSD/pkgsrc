@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2019/11/04 21:28:42 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 21:50:52 jperkin Exp $
 
 DISTNAME=	burp-1.4.40
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=burp/}
 EXTRACT_SUFX=	.tar.bz2

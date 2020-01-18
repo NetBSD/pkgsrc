@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2019/08/30 14:00:14 nia Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 21:50:56 jperkin Exp $
 
 DISTNAME=		monit-5.26.0
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		https://mmonit.com/monit/dist/
 

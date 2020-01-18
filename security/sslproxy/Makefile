@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2017/09/04 18:08:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 21:50:48 jperkin Exp $
 
 DISTNAME=	sslproxy-1.1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sslproxy/1.1.2/}
 

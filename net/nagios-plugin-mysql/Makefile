@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2017/07/04 19:46:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 21:50:19 jperkin Exp $
 #
 
 PKGNAME=	nagios-plugin-mysql-${PLUGINSVERSION}
+PKGREVISION=	1
 CATEGORIES=	net sysutils databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

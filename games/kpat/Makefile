@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2019/11/27 21:20:52 markd Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/18 21:49:28 jperkin Exp $
 
 DISTNAME=	kpat-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kpat/

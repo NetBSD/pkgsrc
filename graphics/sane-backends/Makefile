@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2019/08/07 15:52:13 maya Exp $
+# $NetBSD: Makefile,v 1.71 2020/01/18 21:49:39 jperkin Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2016/03/05 11:28:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/18 21:48:53 jperkin Exp $
 #
 
 DISTNAME=	xaric-0.13.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	http://xaric.org/software/xaric/releases/
 

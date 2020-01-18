@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2019/11/03 11:45:41 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/18 21:50:19 jperkin Exp $
 
 DISTNAME=	mosh-1.3.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://mosh.mit.edu/
 

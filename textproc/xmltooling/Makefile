@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2020/01/12 20:20:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/18 21:51:01 jperkin Exp $
 
 DISTNAME=	xmltooling-1.5.6
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.shibboleth.net/downloads/c++-opensaml/2.5.5/
 

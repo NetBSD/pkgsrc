@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2019/12/30 22:17:29 rhialto Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 21:50:48 jperkin Exp $
 
 DISTNAME=	sslsplit-0.5.5
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://mirror.roe.ch/rel/sslsplit/
 EXTRACT_SUFX=	.tar.bz2
