@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/01/05 23:05:38 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/01/18 21:23:16 cheusov Exp $
 bin/mkc_check_compiler
 bin/mkc_check_custom
 bin/mkc_check_decl
@@ -23,6 +23,7 @@ man/man1/mkc_check_sizeof.1
 man/man1/mkcmake.1
 man/man7/mk-configure.7
 share/doc/mk-configure/FAQ
+share/doc/mk-configure/INSTALL.md
 share/doc/mk-configure/LICENSE
 share/doc/mk-configure/NEWS
 share/doc/mk-configure/NOTES
@@ -430,6 +431,7 @@ share/mk-configure/builtins/prog_gmake
 share/mk-configure/features/_mkcfake.c
 share/mk-configure/features/err/err.c
 share/mk-configure/features/fgetln/fgetln.c
+share/mk-configure/features/getdelim/getdelim.c
 share/mk-configure/features/getline/getline.c
 share/mk-configure/features/mkc_CIRCLEQ.h
 share/mk-configure/features/mkc_LIST.h
@@ -441,18 +443,21 @@ share/mk-configure/features/mkc_STAILQ.h
 share/mk-configure/features/mkc_TAILQ.h
 share/mk-configure/features/mkc_err.h
 share/mk-configure/features/mkc_fgetln.h
+share/mk-configure/features/mkc_getdelim.h
 share/mk-configure/features/mkc_getline.h
 share/mk-configure/features/mkc_libdl.h
 share/mk-configure/features/mkc_libm.h
 share/mk-configure/features/mkc_progname.h
 share/mk-configure/features/mkc_strlcat.h
 share/mk-configure/features/mkc_strlcpy.h
+share/mk-configure/features/mkc_strndup.h
 share/mk-configure/features/mkc_warn.h
 share/mk-configure/features/netbsd_sys_queue.h
 share/mk-configure/features/netbsd_sys_tree.h
 share/mk-configure/features/progname/progname.c
 share/mk-configure/features/strlcat/strlcat.c
 share/mk-configure/features/strlcpy/strlcpy.c
+share/mk-configure/features/strndup/strndup.c
 share/mk-configure/features/warn/warn.c
 share/mkc-mk/mkc.conf.mk
 share/mkc-mk/mkc.configure.mk
@@ -483,12 +488,14 @@ share/mkc-mk/mkc_imp.f_STAILQ.mk
 share/mkc-mk/mkc_imp.f_TAILQ.mk
 share/mkc-mk/mkc_imp.f_err.mk
 share/mkc-mk/mkc_imp.f_fgetln.mk
+share/mkc-mk/mkc_imp.f_getdelim.mk
 share/mkc-mk/mkc_imp.f_getline.mk
 share/mkc-mk/mkc_imp.f_libdl.mk
 share/mkc-mk/mkc_imp.f_libm.mk
 share/mkc-mk/mkc_imp.f_progname.mk
 share/mkc-mk/mkc_imp.f_strlcat.mk
 share/mkc-mk/mkc_imp.f_strlcpy.mk
+share/mkc-mk/mkc_imp.f_strndup.mk
 share/mkc-mk/mkc_imp.f_warn.mk
 share/mkc-mk/mkc_imp.files.mk
 share/mkc-mk/mkc_imp.final.mk
