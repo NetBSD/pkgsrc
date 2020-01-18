@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/17 07:10:56 pho Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/18 12:35:45 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -105,6 +105,7 @@ CONFIGURE_ENV+= \
 # rts/sm/Storage.c so that it uses ffi_closure_alloc(3) on every
 # platform, not just Linux, and also drop support for static library
 # loading and switch to dynamic libraries entirely.
+# (Partially done: https://gitlab.haskell.org/ghc/ghc/merge_requests/2498)
 .for f in ghc ghc-iserv ghc-iserv-dyn ghc-iserv-prof ghc-pkg haddock hpc hsc2hs runghc
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGNAME_NOREV}/bin/${f}
 NOT_PAX_ASLR_SAFE+=	lib/${PKGNAME_NOREV}/bin/${f}
