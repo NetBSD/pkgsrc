@@ -1,0 +1,2 @@
+bin/protoc-gen-ruby @PREFIX@/bin/protoc-gen-ruby@RUBY_SUFFIX@
+bin/rpc_server @PREFIX@/bin/rpc_server@RUBY_SUFFIX@
