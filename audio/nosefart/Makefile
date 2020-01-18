@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/02/13 22:05:28 snj Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:30:03 rillig Exp $
 
 DISTNAME=		nosefart-2.9-mls
 PKGNAME=		${DISTNAME:S/-mls//}
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nosefart/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		dgriffi@cs.csubak.edu
-HOMEPAGE=		http://nosefart.sourceforge.net/
+HOMEPAGE=		https://nosefart.sourceforge.net/
 COMMENT=		Player for NES Sound Format (NSF) files
 LICENSE=		gnu-gpl-v2
 
