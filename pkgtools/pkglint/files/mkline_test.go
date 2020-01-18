@@ -535,7 +535,7 @@ func (s *Suite) Test_MkLine_ResolveVarsInRelativePath(c *check.C) {
 	mkline := mklines.mklines[0]
 	var pkg *Package = nil
 
-	test := func(before RelPath, after RelPath) {
+	test := func(before PackagePath, after PackagePath) {
 		t.CheckEquals(mkline.ResolveVarsInRelativePath(before, pkg), after)
 	}
 
@@ -1164,7 +1164,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__uncovered_cases(c *check.C) {
 		"",
 		"GO_SRCPATH=\t\t${HOMEPAGE:S,https://,,}",
 		"LINKER_RPATH_FLAG:=\t${LINKER_RPATH_FLAG:S/-rpath/& /}",
-		"HOMEPAGE=\t\thttp://godoc.org/${GO_SRCPATH}",
+		"HOMEPAGE=\t\thttps://godoc.org/${GO_SRCPATH}",
 		"PATH:=\t\t\t${PREFIX}/cross/bin:${PATH}",
 		"NO_SRC_ON_FTP=\t\t${RESTRICTED}")
 

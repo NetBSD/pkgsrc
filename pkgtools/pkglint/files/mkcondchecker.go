@@ -36,9 +36,10 @@ func (ck *MkCondChecker) Check() {
 	// Skip subconditions that have already been handled as part of the !(...).
 	done := make(map[interface{}]bool)
 
-	checkNotEmpty := func(not *MkCond) {
+	checkNot := func(not *MkCond) {
 		empty := not.Empty
 		if empty != nil {
+			ck.checkNotEmpty(not)
 			ck.checkEmpty(empty, true, true)
 			done[empty] = true
 		}
@@ -48,6 +49,8 @@ func (ck *MkCondChecker) Check() {
 			ck.checkEmpty(varUse, false, false)
 			done[varUse] = true
 		}
+
+		ck.checkNotCompare(not)
 	}
 
 	checkEmpty := func(empty *MkVarUse) {
@@ -63,11 +66,27 @@ func (ck *MkCondChecker) Check() {
 	}
 
 	cond.Walk(&MkCondCallback{
-		Not:     checkNotEmpty,
+		Not:     checkNot,
 		Empty:   checkEmpty,
 		Var:     checkVar,
 		Compare: ck.checkCompare,
 		VarUse:  checkVarUse})
+}
+
+func (ck *MkCondChecker) checkNotEmpty(not *MkCond) {
+	// Consider suggesting ${VAR} instead of !empty(VAR) since it is
+	// shorter and avoids unnecessary negation, which makes the
+	// expression less confusing.
+	//
+	// This applies especially to the ${VAR:Mpattern} form.
+	//
+	// See MkCondChecker.simplify.
+	if !G.Experimental {
+		return
+	}
+
+	ck.MkLine.Notef("!empty(%s%s) can be replaced with the simpler %s.",
+		not.Empty.varname, not.Empty.Mod(), not.Empty.String())
 }
 
 // checkEmpty checks a condition of the form empty(VAR),
@@ -90,6 +109,7 @@ func (ck *MkCondChecker) checkEmptyExpr(varuse *MkVarUse) {
 		"",
 		"\tempty(VARNAME:Mpattern)",
 		"\t${VARNAME:Mpattern} == \"\"",
+		"\t!${VARNAME:Mpattern}",
 		"",
 		"Instead of !empty(${VARNAME:Mpattern}), you should write either of the following:",
 		"",
@@ -129,7 +149,6 @@ var mkCondModifierPatternLiteral = textproc.NewByteSet("+---./0-9<=>@A-Z_a-z")
 // * fromEmpty is true for the form empty(VAR...), and false for ${VAR...}.
 //
 // * neg is true for the form !empty(VAR...), and false for empty(VAR...).
-// It also applies to the ${VAR} form.
 func (ck *MkCondChecker) simplify(varuse *MkVarUse, fromEmpty bool, neg bool) {
 	varname := varuse.varname
 	mods := varuse.modifiers
@@ -299,4 +318,12 @@ func (ck *MkCondChecker) checkCompareVarStrCompiler(op string, value string) {
 	fix.Replace("${PKGSRC_COMPILER} "+op+" "+value, "${PKGSRC_COMPILER:"+matchOp+value+"}")
 	fix.Replace("${PKGSRC_COMPILER} "+op+" \""+value+"\"", "${PKGSRC_COMPILER:"+matchOp+value+"}")
 	fix.Apply()
+}
+
+func (ck *MkCondChecker) checkNotCompare(not *MkCond) {
+	if not.Compare == nil {
+		return
+	}
+
+	ck.MkLine.Warnf("The ! should use parentheses or be merged into the comparison operator.")
 }

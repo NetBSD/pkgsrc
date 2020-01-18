@@ -423,7 +423,7 @@ func (s *Suite) Test_MkLines_collectRationale(c *check.C) {
 		mklines.collectRationale()
 		var actual []string
 		mklines.ForEach(func(mkline *MkLine) {
-			actual = append(actual, condStr(mkline.HasRationale(), "R   ", "-   ")+mkline.Text)
+			actual = append(actual, condStr(mkline.Rationale() != "", "R   ", "-   ")+mkline.Text)
 		})
 		t.CheckDeepEquals(actual, specs)
 	}

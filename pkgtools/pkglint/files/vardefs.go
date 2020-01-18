@@ -886,11 +886,11 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglistrat("BROKEN_ON_PLATFORM", BtMachinePlatformPattern)
 	reg.syslist("BSD_MAKE_ENV", BtShellWord)
 	// TODO: Align the permissions of the various BUILDLINK_*.* variables with each other.
-	reg.acllist("BUILDLINK_ABI_DEPENDS.*", BtDependency,
+	reg.acllist("BUILDLINK_ABI_DEPENDS.*", BtDependencyPattern,
 		PackageSettable,
 		"buildlink3.mk, builtin.mk: append, use-loadtime",
 		"*: append")
-	reg.acllist("BUILDLINK_API_DEPENDS.*", BtDependency,
+	reg.acllist("BUILDLINK_API_DEPENDS.*", BtDependencyPattern,
 		PackageSettable,
 		"buildlink3.mk, builtin.mk: append, use-loadtime",
 		"*: append")
@@ -1066,7 +1066,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglist("CONFIG_STATUS_OVERRIDE", BtPathPattern)
 	reg.pkg("CONFIG_SHELL", BtPathname)
 	reg.pkglist("CONFIG_SUB_OVERRIDE", BtPathPattern)
-	reg.pkglist("CONFLICTS", BtDependency)
+	reg.pkglist("CONFLICTS", BtDependencyPattern)
 	reg.pkgappend("CONF_FILES", BtConfFiles)
 	reg.pkg("CONF_FILES_MODE", enum("0644 0640 0600 0400"))
 	reg.pkglist("CONF_FILES_PERMS", BtPerms)
@@ -1145,7 +1145,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.usr("EMUL_PLATFORM", BtEmulPlatform)
 	reg.pkglist("EMUL_PLATFORMS", BtEmulPlatform)
 	reg.usrlist("EMUL_PREFER", BtEmulPlatform)
-	reg.pkglist("EMUL_REQD", BtDependency)
+	reg.pkglist("EMUL_REQD", BtDependencyPattern)
 	reg.usr("EMUL_TYPE.*", enum("native builtin suse suse-10.0 suse-12.1 suse-13.1"))
 	reg.sys("ERROR_CAT", BtShellCommand)
 	reg.sys("ERROR_MSG", BtShellCommand)
@@ -1673,7 +1673,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkgbl3("SUBST_STAGE.*", BtStage)
 	reg.pkglistbl3("SUBST_VARS.*", BtVariableName)
 
-	reg.pkglist("SUPERSEDES", BtDependency)
+	reg.pkglist("SUPERSEDES", BtDependencyPattern)
 	reg.pkglist("TEST_DEPENDS", BtDependencyWithPath)
 	reg.pkglist("TEST_DIRS", BtWrksrcSubdirectory)
 	reg.pkglist("TEST_ENV", BtShellWord)
