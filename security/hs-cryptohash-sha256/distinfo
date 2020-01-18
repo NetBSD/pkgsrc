@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/01/18 15:25:43 pho Exp $
+
+SHA1 (cryptohash-sha256-0.11.101.0.tar.gz) = cdb0ddd3f8e2deaf3a429ddcfa80f706b73f9a8d
+RMD160 (cryptohash-sha256-0.11.101.0.tar.gz) = 6fb799481497515388c4dd176969eecc7c4a7507
+SHA512 (cryptohash-sha256-0.11.101.0.tar.gz) = c755f1354fb5f1d6cfb54f73e39692392517954118d98b39ac4be7460e75a9ddc91ad641fed0f17e5fa33b62b7b0734af66526ea757e00716832572bb383c612
+Size (cryptohash-sha256-0.11.101.0.tar.gz) = 14996 bytes
+SHA1 (patch-cryptohash-sha256.cabal) = d1d85095d09c7109902216054b651bf7d365e9f6
