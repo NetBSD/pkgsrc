@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/01/18 22:57:04 pho Exp $
+
+SHA1 (echo-0.1.3.tar.gz) = 6dfee8f0636f20bdcaf651ce82827477f1622b73
+RMD160 (echo-0.1.3.tar.gz) = d7abc341c7a87f4a72f75733ab4bf0467d15d1e8
+SHA512 (echo-0.1.3.tar.gz) = 26a2398af231a8805b6b0a866348f848b8b8f21fe95a2fa3c781aaeae150df978335df573d46d5b07d7e4df19d6377d997f85c77049abaf0c5cb3e9998439c6f
+Size (echo-0.1.3.tar.gz) = 5373 bytes
+SHA1 (patch-echo.cabal) = 4afe1dd950374c8f1192326245776808bf4218fb
