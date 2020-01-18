@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2020/01/06 23:55:47 mef Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 21:50:40 jperkin Exp $
 
 VERSION=		0.9
 DISTNAME=		luasec-${VERSION}
 PKGNAME=		${DISTNAME:S/luasec/${LUA_PKGPREFIX}-sec/}
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=brunoos/}
 GITHUB_TAG=		v${VERSION}

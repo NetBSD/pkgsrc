@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2019/01/02 17:25:05 tnn Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/18 21:48:30 jperkin Exp $
 
 DISTNAME=	serf-1.3.9
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://www.apache.org/dist/serf/
 EXTRACT_SUFX=	.tar.bz2
