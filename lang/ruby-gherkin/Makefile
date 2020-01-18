@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/01/20 13:40:44 taca Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 16:30:45 taca Exp $
 
-DISTNAME=	gherkin-6.0.15
+DISTNAME=	gherkin-9.0.0
 CATEGORIES=	lang
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,8 +10,7 @@ LICENSE=	mit
 
 RUBYGEM_OPTIONS+=	--format-executable
 
-DEPENDS+=	${RUBY_PKGPREFIX}-c21e>=1.1.8<2:../../devel/ruby-c21e
-DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-messages>=2.0.0<2.1:../../devel/ruby-cucumber-messages
+DEPENDS+=	${RUBY_PKGPREFIX}-cucumber-messages>=7.0.0:../../devel/ruby-cucumber-messages
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
