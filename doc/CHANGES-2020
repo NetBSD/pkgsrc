@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.575 2020/01/18 15:23:38 taca Exp $
+$NetBSD: CHANGES-2020,v 1.576 2020/01/18 15:25:52 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -664,3 +664,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-cucumber-core to 5.0.2 [taca 2020-01-18]
 	Updated devel/ruby-cucumber-expressions to 8.3.0 [taca 2020-01-18]
 	Updated devel/ruby-cucumber-messages to 9.0.3 [taca 2020-01-18]
+	Added security/hs-cryptohash-sha256 version 0.11.101.0 [pho 2020-01-18]
