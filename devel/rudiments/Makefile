@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2020/01/18 21:48:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.58 2020/01/18 23:30:41 rillig Exp $
 #
 
 DISTNAME=		rudiments-1.0.2
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rudiments/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://rudiments.sourceforge.net/
+HOMEPAGE=		https://rudiments.sourceforge.net/
 COMMENT=		C++ class library for client/server/daemon applications
 LICENSE=		gnu-lgpl-v2
 

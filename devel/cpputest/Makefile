@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/06/22 15:56:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:25 rillig Exp $
 
 GITHUB_PROJECT=		cpputest
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cpputest/}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://cpputest.github.io/
+HOMEPAGE=		https://cpputest.github.io/
 COMMENT=		Unit testing and mocking framework for C/C++
 LICENSE=		modified-bsd
 

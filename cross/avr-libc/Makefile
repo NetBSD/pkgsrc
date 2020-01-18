@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/09/26 14:33:52 mef Exp $
+# $NetBSD: Makefile,v 1.52 2020/01/18 23:30:15 rillig Exp $
 
 DISTNAME=		avr-libc-2.0.0
 PKGREVISION=		2
@@ -7,7 +7,7 @@ MASTER_SITES=		http://savannah.nongnu.org/download/avr-libc/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		makoto@ki.nu
-HOMEPAGE=		http://savannah.nongnu.org/projects/avr-libc
+HOMEPAGE=		https://savannah.nongnu.org/projects/avr-libc
 COMMENT=		C and math library for Atmel AVR 8-bit microcontrollers
 LICENSE=		modified-bsd
 

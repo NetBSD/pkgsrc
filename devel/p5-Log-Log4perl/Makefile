@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/08/11 13:19:45 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/18 23:30:36 rillig Exp $
 
 DISTNAME=	Log-Log4perl-1.49
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://log4perl.sourceforge.net/
+HOMEPAGE=	https://log4perl.sourceforge.net/
 COMMENT=	Log4j implementation for Perl
 LICENSE=	${PERL5_LICENSE}
 

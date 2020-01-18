@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/11/03 10:39:05 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:30:22 rillig Exp $
 
 DISTNAME=	at-spi2-atk-2.33.2
 CATEGORIES=	devel gnome
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-atk/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	http://www.linuxfoundation.org/collaborate/workgroups/accessibility/atk/at-spi/at-spi_on_d-bus
+HOMEPAGE=	https://www.linuxfoundation.org/collaborate/workgroups/accessibility/atk/at-spi/at-spi_on_d-bus
 COMMENT=	Assistive Technology Service Provider Interface A11y Toolkit
 LICENSE=	gnu-lgpl-v2
 

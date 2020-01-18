@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/12/09 14:20:54 taca Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:30:19 rillig Exp $
 
 DISTNAME=	phpPgAdmin-5.1
 PKGNAME=	${DISTNAME:S/PgAdmin/pgadmin/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phppgadmin/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://phppgadmin.sourceforge.net/
+HOMEPAGE=	https://phppgadmin.sourceforge.net/
 COMMENT=	Set of PHP-scripts to administer PostgreSQL over the WWW
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.2.0:../../databases/php-pgsql

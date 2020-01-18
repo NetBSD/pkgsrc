@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/07/21 22:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/18 23:30:33 rillig Exp $
 #
 
 DISTNAME=	libview-0.6.4
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=view/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://view.sourceforge.net/
+HOMEPAGE=	https://view.sourceforge.net/
 COMMENT=	GTK+ widget collection
 LICENSE=	modified-bsd
 

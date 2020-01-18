@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/01/12 20:20:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/18 23:30:41 rillig Exp $
 
 DISTNAME=	sdcc-src-3.9.0
 PKGNAME=	${DISTNAME:S/-src//}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdcc/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://sdcc.sourceforge.net/
+HOMEPAGE=	https://sdcc.sourceforge.net/
 COMMENT=	Cross compile microcontroller code
 LICENSE=	gnu-gpl-v2
 

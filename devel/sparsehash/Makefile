@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/12/27 07:36:49 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:30:42 rillig Exp $
 #
 
 
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=sparsehash/}
 CATEGORIES=		devel
 
 MAINTAINER=		cheusov@NetBSD.org
-HOMEPAGE=		http://goog-sparsehash.sourceforge.net/
+HOMEPAGE=		https://goog-sparsehash.sourceforge.net/
 COMMENT=		Extremely memory-efficient hash_map implementation
 LICENSE=		modified-bsd
 

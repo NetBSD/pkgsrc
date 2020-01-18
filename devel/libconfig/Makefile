@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2018/10/08 20:58:12 triaxx Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:30:31 rillig Exp $
 
 DISTNAME=	libconfig-1.7.2
 CATEGORIES=	devel
 MASTER_SITES=	http://hyperrealm.github.io/libconfig/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hyperrealm.github.io/libconfig/
+HOMEPAGE=	https://hyperrealm.github.io/libconfig/
 COMMENT=	Simple library for manipulating structured configuration files
 LICENSE=	gnu-lgpl-v2.1
 

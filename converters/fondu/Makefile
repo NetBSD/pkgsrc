@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 00:20:10 asau Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:30:13 rillig Exp $
 #
 
 DISTNAME=	fondu_src-060102
@@ -8,7 +8,7 @@ MASTER_SITES=	http://fondu.sourceforge.net/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fondu.sourceforge.net/
+HOMEPAGE=	https://fondu.sourceforge.net/
 COMMENT=	Utility to convert between Mac fonts and UNIX fonts
 LICENSE=	original-bsd
 

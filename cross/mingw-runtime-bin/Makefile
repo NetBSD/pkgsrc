@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/06/19 16:23:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:16 rillig Exp $
 
 DISTNAME=	mingw-runtime-3.14
 PKGNAME=	mingw-runtime-bin-3.14
@@ -7,7 +7,7 @@ CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_MINGW}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mingw.sourceforge.net/
+HOMEPAGE=	https://mingw.sourceforge.net/
 COMMENT=	GCC runtime libraries for win32 cross-development
 
 NO_BUILD=	yes
