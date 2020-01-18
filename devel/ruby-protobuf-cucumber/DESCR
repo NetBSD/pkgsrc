@@ -1,0 +1,4 @@
+# protobuf
+
+Protobuf is an implementation of [Google's protocol buffers][google-pb] in
+ruby, version 2.5.0 is currently supported.
