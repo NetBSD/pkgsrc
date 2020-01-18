@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 12:35:45 pho Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 13:43:38 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -110,6 +110,16 @@ CONFIGURE_ENV+= \
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGNAME_NOREV}/bin/${f}
 NOT_PAX_ASLR_SAFE+=	lib/${PKGNAME_NOREV}/bin/${f}
 .endfor
+# Additional note: Now that DYNAMIC_GHC_PROGRAMS is enabled by
+# default, we no longer need to disable PaX ASLR because the RTS
+# linker is not used... except for ghc-iserv. The program is launched
+# when ghci is started with -fexternal-interpreter without
+# -dynamic. Its purpose is to run non-PIC code from a dynamically
+# linked ghci, and therefore still uses RTS linker. Also note that RTS
+# linker requires PaX mprotect to be disabled too. This means that
+# once the merge request mentioned above is merged to the upstream, we
+# can at least enable PaX mprotect and PaX ASLR for all the
+# executables except ghc-iserv and ghc-iserv-prof.
 
 
 # -----------------------------------------------------------------------------
