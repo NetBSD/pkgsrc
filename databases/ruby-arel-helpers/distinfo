@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/07/13 16:04:05 taca Exp $
+$NetBSD: distinfo,v 1.4 2020/01/18 15:09:14 taca Exp $
 
-SHA1 (arel-helpers-2.9.1.gem) = 8ac4e415bb65e06aaea7cb84e832f90e8777c55d
-RMD160 (arel-helpers-2.9.1.gem) = bbbc22d9c5e63a319d89986f11c30cc00e3d9c6e
-SHA512 (arel-helpers-2.9.1.gem) = 3bfbf0d2e2f76ea59cd0f6757449993304138378454e90537addc92c41fde8b281bb0897c66f8620f617ae91e9c1765fe6928bc44f38544421a4229fd5b44c02
-Size (arel-helpers-2.9.1.gem) = 12288 bytes
+SHA1 (arel-helpers-2.11.0.gem) = 1684ef12f99fd9113e12355b4ffbd6aca13bf363
+RMD160 (arel-helpers-2.11.0.gem) = eb2fb3d76c1fb37cd7b8c9348a5bc318cb7bb03f
+SHA512 (arel-helpers-2.11.0.gem) = 06426cfa8b77ce875af2daddfa6cfe96339fa462718ba1ab7a0f9f759c16ace03aff4c6f0cc6c3fc165df2f55ff024f67247e652cc3cf4c39d07468ae7080445
+Size (arel-helpers-2.11.0.gem) = 12800 bytes
