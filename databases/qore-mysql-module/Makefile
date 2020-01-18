@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2019/11/02 15:38:10 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 21:48:02 jperkin Exp $
 
 DISTNAME=	qore-mysql-module-2.0.2.1
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
