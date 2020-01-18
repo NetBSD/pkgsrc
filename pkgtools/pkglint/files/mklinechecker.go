@@ -236,7 +236,8 @@ func (ck MkLineChecker) checkInclude() {
 	if trace.Tracing {
 		trace.Stepf("includingFile=%s includedFile=%s", mkline.Filename, includedFile)
 	}
-	ck.CheckRelativePath(includedFile, mustExist)
+	// TODO: Not every path is relative to the package directory.
+	ck.CheckRelativePath(NewPackagePath(includedFile), includedFile, mustExist)
 
 	switch {
 	case includedFile.HasBase("Makefile"):
@@ -269,7 +270,7 @@ func (ck MkLineChecker) checkInclude() {
 		mkline.Warnf("Please write \"USE_TOOLS+= intltool\" instead of this line.")
 
 	case includedFile != "builtin.mk" && includedFile.HasSuffixPath("builtin.mk"):
-		if mkline.Basename != "hacks.mk" && !mkline.HasRationale() {
+		if mkline.Basename != "hacks.mk" && mkline.Rationale() == "" {
 			fix := mkline.Autofix()
 			fix.Errorf("%q must not be included directly. Include %q instead.",
 				includedFile, includedFile.DirNoClean().JoinNoClean("buildlink3.mk"))
@@ -294,26 +295,28 @@ func (ck MkLineChecker) checkDirectiveIndentation(expectedDepth int) {
 
 // CheckRelativePath checks a relative path that leads to the directory of another package
 // or to a subdirectory thereof or a file within there.
-func (ck MkLineChecker) CheckRelativePath(relativePath RelPath, mustExist bool) {
+func (ck MkLineChecker) CheckRelativePath(pp PackagePath, rel RelPath, mustExist bool) {
+	// TODO: Not every path is relative to the package directory.
 	if trace.Tracing {
-		defer trace.Call(relativePath, mustExist)()
+		defer trace.Call(rel, mustExist)()
 	}
 
 	mkline := ck.MkLine
-	if !G.Wip && relativePath.ContainsPath("wip") {
+	if !G.Wip && rel.ContainsPath("wip") {
 		mkline.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
 	}
 
-	resolvedPath := mkline.ResolveVarsInRelativePath(relativePath, ck.MkLines.pkg)
+	resolvedPath := mkline.ResolveVarsInRelativePath(pp, ck.MkLines.pkg)
 	if containsVarUse(resolvedPath.String()) {
 		return
 	}
 
-	abs := mkline.Filename.DirNoClean().JoinNoClean(resolvedPath)
+	resolvedRel := resolvedPath.AsRelPath()
+	abs := mkline.Filename.DirNoClean().JoinNoClean(resolvedRel)
 	if !abs.Exists() {
-		pkgsrcPath := G.Pkgsrc.Rel(ck.MkLine.File(resolvedPath))
+		pkgsrcPath := G.Pkgsrc.Rel(ck.MkLine.File(resolvedRel))
 		if mustExist && !ck.MkLines.indentation.HasExists(pkgsrcPath) {
-			mkline.Errorf("Relative path %q does not exist.", resolvedPath)
+			mkline.Errorf("Relative path %q does not exist.", rel)
 		}
 		return
 	}
@@ -353,17 +356,19 @@ func (ck MkLineChecker) CheckRelativePath(relativePath RelPath, mustExist bool) 
 //
 // When used in .include directives, the relative package directories must be written
 // with the leading ../.. anyway, so the benefit might not be too big at all.
-func (ck MkLineChecker) CheckRelativePkgdir(pkgdir RelPath) {
+func (ck MkLineChecker) CheckRelativePkgdir(rel RelPath, pkgdir PackagePath) {
+	// TODO: Not every path is relative to the package directory.
 	if trace.Tracing {
 		defer trace.Call(pkgdir)()
 	}
 
 	mkline := ck.MkLine
-	ck.CheckRelativePath(pkgdir.JoinNoClean("Makefile"), true)
+	makefile := pkgdir.JoinNoClean("Makefile")
+	ck.CheckRelativePath(makefile, makefile.AsRelPath(), true)
 	pkgdir = mkline.ResolveVarsInRelativePath(pkgdir, ck.MkLines.pkg)
 
 	if !matches(pkgdir.String(), `^\.\./\.\./([^./][^/]*/[^./][^/]*)$`) && !containsVarUse(pkgdir.String()) {
-		mkline.Warnf("%q is not a valid relative package directory.", pkgdir)
+		mkline.Warnf("%q is not a valid relative package directory.", rel)
 		mkline.Explain(
 			"A relative pathname always starts with \"../../\", followed",
 			"by a category, a slash and a the directory name of the package.",
