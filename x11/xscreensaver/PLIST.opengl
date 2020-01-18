@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opengl,v 1.5 2018/06/25 08:42:39 wiz Exp $
+@comment $NetBSD: PLIST.opengl,v 1.6 2020/01/18 20:00:26 gutteridge Exp $
 bin/xscreensaver-gl-helper
 libexec/xscreensaver/antinspect
 libexec/xscreensaver/antmaze
@@ -41,6 +41,7 @@ libexec/xscreensaver/config/cubestorm.xml
 libexec/xscreensaver/config/cubetwist.xml
 libexec/xscreensaver/config/cubicgrid.xml
 libexec/xscreensaver/config/dangerball.xml
+libexec/xscreensaver/config/deepstars.xml
 libexec/xscreensaver/config/discoball.xml
 libexec/xscreensaver/config/dymaxionmap.xml
 libexec/xscreensaver/config/endgame.xml
@@ -68,6 +69,8 @@ libexec/xscreensaver/config/glschool.xml
 libexec/xscreensaver/config/glslideshow.xml
 libexec/xscreensaver/config/glsnake.xml
 libexec/xscreensaver/config/gltext.xml
+libexec/xscreensaver/config/gravitywell.xml
+libexec/xscreensaver/config/handsy.xml
 libexec/xscreensaver/config/hexstrut.xml
 libexec/xscreensaver/config/hilbert.xml
 libexec/xscreensaver/config/hydrostat.xml
@@ -136,6 +139,7 @@ libexec/xscreensaver/cubestorm
 libexec/xscreensaver/cubetwist
 libexec/xscreensaver/cubicgrid
 libexec/xscreensaver/dangerball
+libexec/xscreensaver/deepstars
 libexec/xscreensaver/discoball
 libexec/xscreensaver/dymaxionmap
 libexec/xscreensaver/endgame
@@ -163,6 +167,8 @@ libexec/xscreensaver/glschool
 libexec/xscreensaver/glslideshow
 libexec/xscreensaver/glsnake
 libexec/xscreensaver/gltext
+libexec/xscreensaver/gravitywell
+libexec/xscreensaver/handsy
 libexec/xscreensaver/hexstrut
 libexec/xscreensaver/hilbert
 libexec/xscreensaver/hydrostat
@@ -247,6 +253,7 @@ man/man6/cubestorm.6
 man/man6/cubetwist.6
 man/man6/cubicgrid.6
 man/man6/dangerball.6
+man/man6/deepstars.6
 man/man6/discoball.6
 man/man6/dymaxionmap.6
 man/man6/endgame.6
@@ -274,6 +281,8 @@ man/man6/glschool.6
 man/man6/glslideshow.6
 man/man6/glsnake.6
 man/man6/gltext.6
+man/man6/gravitywell.6
+man/man6/handsy.6
 man/man6/hexstrut.6
 man/man6/hilbert.6
 man/man6/hydrostat.6
