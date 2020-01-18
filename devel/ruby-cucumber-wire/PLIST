@@ -1,27 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/20 13:44:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/01/18 15:27:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/cucumber-wire.gemspec
-${GEM_LIBDIR}/features/docstring.feature
-${GEM_LIBDIR}/features/erb_configuration.feature
-${GEM_LIBDIR}/features/handle_unexpected_response.feature
-${GEM_LIBDIR}/features/invoke_message.feature
-${GEM_LIBDIR}/features/readme.md
-${GEM_LIBDIR}/features/snippets_message.feature
-${GEM_LIBDIR}/features/step_definitions/aruba_steps.rb
-${GEM_LIBDIR}/features/step_definitions/wire_steps.rb
-${GEM_LIBDIR}/features/step_matches_message.feature
-${GEM_LIBDIR}/features/support/fake_wire_server.rb
-${GEM_LIBDIR}/features/table_diffing.feature
-${GEM_LIBDIR}/features/tags.feature
-${GEM_LIBDIR}/features/timeouts.feature
 ${GEM_LIBDIR}/lib/cucumber/wire.rb
 ${GEM_LIBDIR}/lib/cucumber/wire/add_hooks_filter.rb
 ${GEM_LIBDIR}/lib/cucumber/wire/configuration.rb
