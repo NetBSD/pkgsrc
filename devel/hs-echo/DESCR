@@ -1,0 +1,3 @@
+Exports functions that handle whether or not terminal input is echoed
+in a way that should be portable across different platforms and
+consoles.
