@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2019/07/10 01:31:21 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 21:48:07 jperkin Exp $
 
 DISTNAME=	librdkafka-1.0.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=edenhill/}
 
