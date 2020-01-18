@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/12/09 14:20:54 taca Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 23:30:17 rillig Exp $
 #
 
 DISTNAME=	adodb496a
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=adodb/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://adodb.sourceforge.net/
+HOMEPAGE=	https://adodb.sourceforge.net/
 COMMENT=	Active Data Objects Data Base for php
 
 WRKSRC=			${WRKDIR}/adodb

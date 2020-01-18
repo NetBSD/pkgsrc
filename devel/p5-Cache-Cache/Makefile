@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/08/11 13:18:56 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/18 23:30:35 rillig Exp $
 
 DISTNAME=	Cache-Cache-1.08
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Cache/}
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=perl-cache/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://perl-cache.sourceforge.net/
+HOMEPAGE=	https://perl-cache.sourceforge.net/
 COMMENT=	The Cache interface
 LICENSE=	${PERL5_LICENSE}
 

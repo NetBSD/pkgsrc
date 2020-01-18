@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/09/03 12:51:56 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:30:13 rillig Exp $
 #
 
 DISTNAME=		synce-rra-0.9.1
@@ -10,7 +10,7 @@ PATCHFILES=		rra-fixes-after-V0_9_1.diff
 PATCH_SITES=		http://synce.sourceforge.net/tmp/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://synce.sourceforge.net/
+HOMEPAGE=		https://synce.sourceforge.net/
 COMMENT=		Remote Replication Agent Connection protocol library
 
 USE_LANGUAGES=		c c++

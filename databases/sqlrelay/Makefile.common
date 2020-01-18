@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2018/12/15 21:12:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2020/01/18 23:30:20 rillig Exp $
 # used by databases/p5-sqlrelay/Makefile
 # used by databases/php-sqlrelay/Makefile
 # used by databases/py-sqlrelay/Makefile
@@ -16,7 +16,7 @@ CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlrelay/}
 
 MAINTAINER=		fhajny@NetBSD.org
-HOMEPAGE=		http://sqlrelay.sourceforge.net/
+HOMEPAGE=		https://sqlrelay.sourceforge.net/
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

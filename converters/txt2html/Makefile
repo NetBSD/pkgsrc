@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/08/11 13:18:16 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/18 23:30:15 rillig Exp $
 #
 
 DISTNAME=		txt2html-2.51
@@ -7,7 +7,7 @@ CATEGORIES=		converters www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=txt2html/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://txt2html.sourceforge.net/
+HOMEPAGE=		https://txt2html.sourceforge.net/
 COMMENT=		Plain text to HTML convertor
 LICENSE=		${PERL5_LICENSE}
 

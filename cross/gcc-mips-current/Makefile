@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:18:17 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:30:16 rillig Exp $
 
 GCC_DIST_VERSION=	4.9.2
 GCC_PKGNAME=		gcc-mips-${GCC_DIST_VERSION}
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.tar.bz2
 PLIST_SUBST+=	GCC_DIST_VERSION=${GCC_DIST_VERSION:Q}
 
 MAINTAINER=	martin@NetBSD.org
-HOMEPAGE=	http://gcc.gnu.org/
+HOMEPAGE=	https://gcc.gnu.org/
 COMMENT=	The GNU Compiler Collection (GCC) - 4.9 for mips (especially playstation2)
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 

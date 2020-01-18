@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.38 2019/11/03 10:39:28 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/18 23:30:36 rillig Exp $
 
 DISTNAME=	pkg-config-0.29.2
 CATEGORIES=	devel
 MASTER_SITES=	http://pkgconfig.freedesktop.org/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pkgconfig.freedesktop.org/
+HOMEPAGE=	https://pkgconfig.freedesktop.org/
 COMMENT=	System for managing library compile/link flags
 LICENSE=	gnu-gpl-v2
 

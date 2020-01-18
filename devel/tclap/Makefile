@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/01/03 20:41:58 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:30:42 rillig Exp $
 
 DISTNAME=	tclap-1.2.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tclap/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://tclap.sourceforge.net/
+HOMEPAGE=	https://tclap.sourceforge.net/
 COMMENT=	Templatized C++ Command Line Parser Library
 LICENSE=	mit
 

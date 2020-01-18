@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/01/26 13:35:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:32 rillig Exp $
 
 DISTNAME=	libsigc++-1.2.7
 PKGNAME=	libsigc++1-1.2.7
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsigc++/1.2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libsigc.sourceforge.net/
+HOMEPAGE=	https://libsigc.sourceforge.net/
 COMMENT=	Type-safe callback system for C++ programs
 
 GNU_CONFIGURE=		YES

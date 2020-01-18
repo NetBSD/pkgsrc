@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 21:49:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:30:40 rillig Exp $
 
 DISTNAME=	thrift_client-0.7.1
 PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://thrift.apache.org/
+HOMEPAGE=	https://thrift.apache.org/
 COMMENT=	Thrift client wrapper for Ruby
 LICENSE=	apache-2.0
 
