@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2018/01/07 13:04:26 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2020/01/18 21:48:19 jperkin Exp $
 
 BUILDLINK_TREE+=	libfetch
 
@@ -8,7 +8,7 @@ LIBFETCH_BUILDLINK3_MK:=
 BUILDLINK_DEPMETHOD.libfetch?=	build
 
 BUILDLINK_API_DEPENDS.libfetch+=	libfetch>=2.28
-BUILDLINK_ABI_DEPENDS.libfetch?=	libfetch>=2.36nb3
+BUILDLINK_ABI_DEPENDS.libfetch?=	libfetch>=2.39nb1
 BUILDLINK_PKGSRCDIR.libfetch?=		../../net/libfetch
 
 pkgbase := libfetch

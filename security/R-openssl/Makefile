@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 19:04:58 brook Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 21:50:33 jperkin Exp $
 
 R_PKGNAME=	openssl
 R_PKGVER=	1.4.1
+PKGREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2019/02/07 15:14:01 nia Exp $
+# $NetBSD: Makefile,v 1.40 2020/01/18 21:48:49 jperkin Exp $
 
 DISTNAME=	eggdrop-1.8.4
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://ftp.eggheads.org/pub/eggdrop/source/1.8/
 

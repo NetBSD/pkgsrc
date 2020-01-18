@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2019/11/18 09:19:49 markd Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/18 21:49:22 jperkin Exp $
 
 DISTNAME=	bomber-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/bomber/
