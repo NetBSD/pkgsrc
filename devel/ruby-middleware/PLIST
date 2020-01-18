@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/18 16:11:29 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/middleware.rb
+${GEM_LIBDIR}/lib/middleware/builder.rb
+${GEM_LIBDIR}/lib/middleware/runner.rb
+${GEM_LIBDIR}/lib/middleware/version.rb
+${GEM_LIBDIR}/middleware.gemspec
+${GEM_LIBDIR}/spec/middleware/builder_spec.rb
+${GEM_LIBDIR}/spec/middleware/runner_spec.rb
+${GEM_LIBDIR}/spec/setup.rb
+${GEM_LIBDIR}/user_guide.md
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
