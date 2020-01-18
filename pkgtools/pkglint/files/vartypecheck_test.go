@@ -362,9 +362,9 @@ func (s *Suite) Test_VartypeCheck_ConfFiles(c *check.C) {
 		"WARN: filename.mk:5: The destination file \"/etc/bootrc\" should start with a variable reference.")
 }
 
-// See Test_MkParser_Dependency.
-func (s *Suite) Test_VartypeCheck_Dependency(c *check.C) {
-	vt := NewVartypeCheckTester(s.Init(c), BtDependency)
+// See Test_MkParser_DependencyPattern.
+func (s *Suite) Test_VartypeCheck_DependencyPattern(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), BtDependencyPattern)
 
 	vt.Varname("CONFLICTS")
 	vt.Op(opAssignAppend)
@@ -919,6 +919,7 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 		"${MASTER_SITES}")
 
 	vt.Output(
+		"WARN: filename.mk:1: HOMEPAGE should use https instead of http.",
 		"WARN: filename.mk:3: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
 	pkg := NewPackage(t.File("category/package"))
@@ -970,6 +971,27 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 	// for using it in the HOMEPAGE.
 	vt.Output(
 		"WARN: filename.mk:41: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
+}
+
+func (s *Suite) Test_VartypeCheck_Homepage__http(c *check.C) {
+	t := s.Init(c)
+	vt := NewVartypeCheckTester(t, BtHomepage)
+
+	vt.Varname("HOMEPAGE")
+	vt.Values(
+		"http://www.gnustep.org/",
+		"http://www.pkgsrc.org/",
+		"http://project.sourceforge.net/",
+		"http://sf.net/p/project/",
+		"http://example.org/ # doesn't support https",
+		"http://example.org/ # only supports http",
+		"http://asf.net/")
+
+	vt.Output(
+		"WARN: filename.mk:2: HOMEPAGE should use https instead of http.",
+		"WARN: filename.mk:3: HOMEPAGE should use https instead of http.",
+		"WARN: filename.mk:4: HOMEPAGE should use https instead of http.",
+		"WARN: filename.mk:7: HOMEPAGE should use https instead of http.")
 }
 
 func (s *Suite) Test_VartypeCheck_IdentifierDirect(c *check.C) {
@@ -1651,6 +1673,20 @@ func (s *Suite) Test_VartypeCheck_RelativePkgPath(c *check.C) {
 		"ERROR: filename.mk:4: Relative path \"invalid\" does not exist.",
 		"ERROR: filename.mk:5: Relative path \"../../invalid/relative\" does not exist.",
 		"ERROR: filename.mk:6: The path \"/absolute\" must be relative.")
+
+	vt.File("../../mk/infra.mk")
+	vt.Values(
+		"../package",
+		"../../category/other-package",
+		"../../missing/package",
+		"../../category/missing")
+
+	vt.Output(
+		"ERROR: ../../mk/infra.mk:1: Relative path \"../package\" does not exist.",
+		// FIXME: This directory _does_ exist.
+		"ERROR: ../../mk/infra.mk:2: Relative path \"../../category/other-package\" does not exist.",
+		"ERROR: ../../mk/infra.mk:3: Relative path \"../../missing/package\" does not exist.",
+		"ERROR: ../../mk/infra.mk:4: Relative path \"../../category/missing\" does not exist.")
 }
 
 func (s *Suite) Test_VartypeCheck_Restricted(c *check.C) {
@@ -2322,6 +2358,7 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 
 		line := vt.tester.NewLine(vt.filename, vt.lineno, text)
 		mklines := NewMkLines(NewLines(vt.filename, []*Line{line}), vt.pkg, nil)
+		mklines.collectRationale()
 		vt.lineno++
 
 		mklines.ForEach(func(mkline *MkLine) { test(mklines, mkline, value) })

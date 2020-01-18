@@ -74,8 +74,11 @@ func (mkline *MkLine) String() string {
 
 func (mkline *MkLine) HasComment() bool { return mkline.splitResult.hasComment }
 
-func (mkline *MkLine) HasRationale() bool { return mkline.splitResult.rationale != "" }
-
+// Rationale returns the comments that are close enough to this line.
+//
+// These comments are used to suppress pkglint warnings,
+// such as for BROKEN, NOT_FOR_PLATFORMS, MAKE_JOBS_SAFE,
+// and HOMEPAGE using http instead of https.
 func (mkline *MkLine) Rationale() string { return mkline.splitResult.rationale }
 
 // Comment returns the comment after the first unescaped #.
@@ -564,7 +567,8 @@ func (*MkLine) WithoutMakeVariables(value string) string {
 	return valueNovar.String()
 }
 
-func (mkline *MkLine) ResolveVarsInRelativePath(relativePath RelPath, pkg *Package) RelPath {
+func (mkline *MkLine) ResolveVarsInRelativePath(relativePath PackagePath, pkg *Package) PackagePath {
+	// TODO: Not every path is relative to the package directory.
 	if !containsVarUse(relativePath.String()) {
 		return relativePath.CleanPath()
 	}
