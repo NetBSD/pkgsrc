@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/11/20 18:57:57 kamil Exp $
+# $NetBSD: Makefile,v 1.43 2020/01/18 23:30:09 rillig Exp $
 #
 
 DISTNAME=	gnome-chemistry-utils-0.12.13
@@ -8,7 +8,7 @@ MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gchemutils/0.12/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gchemutils.nongnu.org/
+HOMEPAGE=	https://gchemutils.nongnu.org/
 COMMENT=	GChemPaint, a 2D chemical editor and other programs
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1
 
