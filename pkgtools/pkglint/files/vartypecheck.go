@@ -289,11 +289,11 @@ func (cv *VartypeCheck) ConfFiles() {
 	}
 }
 
-func (cv *VartypeCheck) Dependency() {
+func (cv *VartypeCheck) DependencyPattern() {
 	value := cv.Value
 
 	parser := NewMkParser(nil, value)
-	deppat := parser.Dependency()
+	deppat := parser.DependencyPattern()
 	rest := parser.Rest()
 
 	if deppat != nil && deppat.Wildcard == "" && (rest == "{,nb*}" || rest == "{,nb[0-9]*}") {
@@ -384,8 +384,9 @@ func (cv *VartypeCheck) DependencyWithPath() {
 	parts := cv.MkLine.ValueSplit(value, ":")
 	if len(parts) == 2 {
 		pattern := parts[0]
-		relpath := NewRelPathString(parts[1])
-		pathParts := relpath.Parts()
+		packagePath := NewPackagePathString(parts[1])
+		relPath := packagePath.AsRelPath()
+		pathParts := relPath.Parts()
 		pkg := pathParts[len(pathParts)-1]
 
 		if len(pathParts) >= 2 && pathParts[0] == ".." && pathParts[1] != ".." {
@@ -393,8 +394,9 @@ func (cv *VartypeCheck) DependencyWithPath() {
 			cv.MkLine.ExplainRelativeDirs()
 		}
 
-		if !containsVarUse(relpath.String()) {
-			MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(relpath)
+		if !containsVarUse(packagePath.String()) {
+			ck := MkLineChecker{cv.MkLines, cv.MkLine}
+			ck.CheckRelativePkgdir(relPath, packagePath)
 		}
 
 		switch pkg {
@@ -406,7 +408,7 @@ func (cv *VartypeCheck) DependencyWithPath() {
 			cv.Warnf("Please use USE_TOOLS+=gmake instead of this dependency.")
 		}
 
-		cv.WithValue(pattern).Dependency()
+		cv.WithValue(pattern).DependencyPattern()
 
 		return
 	}
@@ -630,7 +632,11 @@ func (cv *VartypeCheck) GccReqd() {
 
 func (cv *VartypeCheck) Homepage() {
 	cv.URL()
+	cv.homepageBasedOnMasterSites()
+	cv.homepageHttp()
+}
 
+func (cv *VartypeCheck) homepageBasedOnMasterSites() {
 	m, wrong, sitename, subdir := match3(cv.Value, `^(\$\{(MASTER_SITE\w+)(?::=([\w\-/]+))?\})`)
 	if !m {
 		return
@@ -667,6 +673,70 @@ func (cv *VartypeCheck) Homepage() {
 	if baseURL != "" {
 		fix.Replace(wrong, fixedURL)
 	}
+	fix.Apply()
+}
+
+func (cv *VartypeCheck) homepageHttp() {
+	m, host := match1(cv.Value, `http://([A-Za-z0-9-.]+)`)
+	if !m {
+		return
+	}
+
+	rationale := cv.MkLine.Rationale()
+	if containsWord(rationale, "http") || containsWord(rationale, "https") {
+		return
+	}
+
+	hasAnySuffix := func(s string, suffixes ...string) bool {
+		for _, suffix := range suffixes {
+			if hasSuffix(s, suffix) {
+				dotIndex := len(s) - len(suffix)
+				if dotIndex == 0 || s[dotIndex-1] == '.' {
+					return true
+				}
+			}
+		}
+		return false
+	}
+
+	// Don't warn about sites that don't support https at all.
+	if hasAnySuffix(host,
+		"www.gnustep.org", // 2020-01-18
+		"aspell.net",      // 2020-01-18
+	) {
+		return
+	}
+
+	supportsHttps := hasAnySuffix(host,
+		"apache.org",
+		"archive.org",
+		"ctan.org",
+		"freedesktop.org",
+		"github.com",
+		"github.io",
+		"gnome.org",
+		"gnu.org",
+		"kde.org",
+		"kldp.net",
+		"linuxfoundation.org",
+		"NetBSD.org",
+		"nongnu.org",
+		"sf.net",
+		"sourceforge.net",
+		"tryton.org",
+		"tug.org")
+
+	fix := cv.Autofix()
+	fix.Warnf("HOMEPAGE should use https instead of http.")
+	if supportsHttps {
+		fix.Replace("http", "https")
+	}
+	fix.Explain(
+		"To provide secure communication by default,",
+		"the HOMEPAGE URL should use the https protocol if available.",
+		"",
+		"If the HOMEPAGE really does not support https,",
+		"add a comment near the HOMEPAGE variable stating this clearly.")
 	fix.Apply()
 }
 
@@ -1148,17 +1218,21 @@ func (cv *VartypeCheck) RPkgVer() {
 	}
 }
 
-// RelativePkgDir refers to a package directory, e.g. ../../category/pkgbase.
+// RelativePkgDir refers from one package directory to another package
+// directory, e.g. ../../category/pkgbase.
 func (cv *VartypeCheck) RelativePkgDir() {
 	if NewPath(cv.Value).IsAbs() {
 		cv.Errorf("The path %q must be relative.", cv.Value)
 		return
 	}
 
-	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePkgdir(NewRelPathString(cv.Value))
+	ck := MkLineChecker{cv.MkLines, cv.MkLine}
+	packagePath := NewPackagePathString(cv.Value)
+	ck.CheckRelativePkgdir(packagePath.AsRelPath(), packagePath)
 }
 
-// RelativePkgPath refers to a file or directory, e.g. ../../category/pkgbase,
+// RelativePkgPath refers from one package directory to another file
+// or directory, e.g. ../../category/pkgbase,
 // ../../category/pkgbase/Makefile.
 //
 // See RelativePkgDir, which requires a directory, not a file.
@@ -1168,7 +1242,9 @@ func (cv *VartypeCheck) RelativePkgPath() {
 		return
 	}
 
-	MkLineChecker{cv.MkLines, cv.MkLine}.CheckRelativePath(NewRelPathString(cv.Value), true)
+	packagePath := NewPackagePathString(cv.Value)
+	ck := MkLineChecker{cv.MkLines, cv.MkLine}
+	ck.CheckRelativePath(packagePath, packagePath.AsRelPath(), true)
 }
 
 func (cv *VartypeCheck) Restricted() {

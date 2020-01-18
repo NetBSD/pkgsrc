@@ -145,6 +145,9 @@ func Test__qa(t *testing.T) {
 	ck.Configure("vargroups.go", "*", "*", -intqa.EMissingTest) // TODO
 	ck.Configure("vartype.go", "*", "*", -intqa.EMissingTest)   // TODO
 
+	// Don't require tests for helper methods.
+	ck.Configure("*.go", "VartypeCheck", "[a-z]*", -intqa.EMissingTest)
+
 	// For now, don't require tests for all the test code.
 	// Having good coverage for the main code is more important.
 	ck.Configure("*_test.go", "*", "*", -intqa.EMissingTest)
