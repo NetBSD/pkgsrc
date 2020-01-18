@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/04/20 12:10:32 nros Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/18 23:30:07 rillig Exp $
 #
 
 DISTNAME=		tcd-2.2.0
@@ -8,7 +8,7 @@ MASTER_SITES=		http://download.savannah.gnu.org/releases/tcd/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.nongnu.org/tcd/
+HOMEPAGE=		https://www.nongnu.org/tcd/
 COMMENT=		Audio CD player using ncurses and SDL
 LICENSE=		gnu-gpl-v2
 

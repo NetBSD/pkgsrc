@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/01/01 09:22:23 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:30:08 rillig Exp $
 #
 
 DISTNAME=	randread-0.2
@@ -6,7 +6,7 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=randread/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://randread.sourceforge.net/
+HOMEPAGE=	https://randread.sourceforge.net/
 COMMENT=	Program to help benchmark random disk read performance
 LICENSE=	public-domain
 
