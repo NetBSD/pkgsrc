@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.115 2019/11/02 16:25:26 rillig Exp $
+# $NetBSD: Makefile,v 1.116 2020/01/18 21:49:53 jperkin Exp $
 #
 
 DISTNAME=		notqmail-1.07
 PKGNAME=		qmail-1.03
-PKGREVISION=		46
+PKGREVISION=		47
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=notqmail/}
 GITHUB_PROJECT=		notqmail

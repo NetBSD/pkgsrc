@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2019/08/11 13:23:04 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 21:50:52 jperkin Exp $
 
 COLLECTD_PACKAGE=	amqp
 
 COMMENT=		Statistics collection daemon - amqp plugin
-PKGREVISION=		2
+PKGREVISION=		3
 
 .include "../../sysutils/collectd/Makefile.common"
 

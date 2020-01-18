@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2019/11/21 03:41:39 markd Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 21:49:30 jperkin Exp $
 
 DISTNAME=	palapeli-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/palapeli/

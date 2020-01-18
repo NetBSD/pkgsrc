@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/08/21 20:20:27 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 21:50:59 jperkin Exp $
 
 SYSLOG_MOD=		afamqp
 SYSLOG_MOD_TARGET=	afamqp
 COMMENT=		Syslog-ng RabbitMQ module
+PKGREVISION=		1
 
 .include "../../sysutils/syslog-ng/Makefile.module"
 

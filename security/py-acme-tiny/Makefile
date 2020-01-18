@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/11/04 21:12:59 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 21:50:45 jperkin Exp $
 
 DISTNAME=	acme-tiny-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=diafygi/}
 

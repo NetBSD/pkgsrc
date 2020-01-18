@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.175 2020/01/01 01:47:29 kim Exp $
+# $NetBSD: Makefile,v 1.176 2020/01/18 21:50:49 jperkin Exp $
 
 DISTNAME=	sudo-1.8.30
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.sudo.ws/dist/
 MASTER_SITES+=	ftp://ftp.sudo.ws/pub/sudo/

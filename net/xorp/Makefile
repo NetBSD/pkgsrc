@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2018/09/29 13:39:31 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/18 21:50:29 jperkin Exp $
 #
 
 DISTNAME=		xorp-1.6
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		net
 MASTER_SITES=		http://www.xorp.org/releases/1.6/
 
