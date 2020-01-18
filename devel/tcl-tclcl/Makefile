@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/11/03 10:39:31 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/18 23:30:42 rillig Exp $
 
 DISTNAME=	tclcl-src-1.20
 PKGNAME=	tcl-${DISTNAME:S/-src//}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=otcl-tclcl/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://otcl-tclcl.sourceforge.net/tclcl/
+HOMEPAGE=	https://otcl-tclcl.sourceforge.net/tclcl/
 COMMENT=	Tcl/C++ interface used by ns and nam
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}

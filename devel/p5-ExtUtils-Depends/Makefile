@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/10/17 14:24:33 mef Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/18 23:30:35 rillig Exp $
 
 DISTNAME=	ExtUtils-Depends-0.8000
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gtk2-perl.sourceforge.net/
+HOMEPAGE=	https://gtk2-perl.sourceforge.net/
 #HOMEPAGE=	http://search.cpan.org/dist/ExtUtils-Depends/
 COMMENT=	Easily build XS extensions that depend on XS extensions
 LICENSE=	${PERL5_LICENSE}

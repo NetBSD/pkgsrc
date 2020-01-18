@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/12/30 04:26:56 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 23:30:27 rillig Exp $
 #
 
 DISTNAME=		fhist-1.16
@@ -7,7 +7,7 @@ CATEGORIES=		devel scm
 MASTER_SITES=		http://fhist.sourceforge.net/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://fhist.sourceforge.net/
+HOMEPAGE=		https://fhist.sourceforge.net/
 COMMENT=		File history and comparison tools
 
 USE_TOOLS+=		gsoelim msgfmt yacc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/03/17 11:15:21 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:30:30 rillig Exp $
 
 DISTNAME=		imake-1.0.8
 CATEGORIES=		x11 devel
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Imake and other utilities from modular X.org
 
 GNU_CONFIGURE=		yes
