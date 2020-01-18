@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/11/02 21:09:15 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/18 23:30:02 rillig Exp $
 
 DISTNAME=	moss-0.1.13
 PKGREVISION=	7
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://kldp.net/frs/download.php/1580/
 
 MAINTAINER=	myunggoni@users.kldp.net
-HOMEPAGE=	http://moss.kldp.net/
+HOMEPAGE=	https://moss.kldp.net/
 COMMENT=	MP3/OGG Streaming Server
 LICENSE=	gnu-gpl-v2
 

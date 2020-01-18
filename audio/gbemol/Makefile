@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/01/18 21:48:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.54 2020/01/18 23:29:59 rillig Exp $
 #
 
 DISTNAME=	gbemol-0.3.2
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gbemol/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gbemol.sourceforge.net/
+HOMEPAGE=	https://gbemol.sourceforge.net/
 COMMENT=	Graphical frontend for the Music Player Daemon (MPD)
 LICENSE=	gnu-gpl-v2
 

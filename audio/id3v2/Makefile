@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 14:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:29:59 rillig Exp $
 
 DISTNAME=	id3v2-0.1.12
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=id3v2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://id3v2.sourceforge.net/
+HOMEPAGE=	https://id3v2.sourceforge.net/
 COMMENT=	Command line editor for id3v2 tags
 
 LICENSE=	gnu-lgpl-v2.1

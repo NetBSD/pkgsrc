@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2016/04/20 12:10:25 nros Exp $
+# $NetBSD: Makefile.common,v 1.30 2020/01/18 23:29:58 rillig Exp $
 #
 # used by audio/bmp/Makefile
 # used by audio/bmp-esound/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beepmp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://beepmp.sourceforge.net/
+HOMEPAGE=	https://beepmp.sourceforge.net/
 COMMENT=	Beep Media Player (fork of XMMS to work with GTK+ 2.x)
 LICENSE=	gnu-gpl-v2
 
