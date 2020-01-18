@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/31 11:17:32 asau Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/18 23:30:34 rillig Exp $
 #
 
 DISTNAME=	newfile-1.0.14
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=newfile/}
 
 MAINTAINER=	flynn@energyhq.es.eu.org
-HOMEPAGE=	http://newfile.sourceforge.net/
+HOMEPAGE=	https://newfile.sourceforge.net/
 COMMENT=	Tool for creating starter files in various languages
 LICENSE=	modified-bsd
 

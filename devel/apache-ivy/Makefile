@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/07/24 16:27:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:30:22 rillig Exp $
 #
 
 DISTNAME=	apache-ivy-2.4.0-bin
@@ -8,7 +8,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=ant/ivy/${PKGNAME:S/apache-ivy-//}/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ant.apache.org/ivy/
+HOMEPAGE=	https://ant.apache.org/ivy/
 COMMENT=	"Apache Project's Java-Based agile dependency manager"
 LICENSE=	apache-2.0
 

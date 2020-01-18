@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2017/09/16 19:26:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:30:20 rillig Exp $
 TRYTON_MODULE_NAME=	trytond_ldap_authentication
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	databases python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tryton.org/
+HOMEPAGE=	https://www.tryton.org/
 COMMENT=	LDAP authentication module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 

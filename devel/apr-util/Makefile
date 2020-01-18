@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/01/18 21:48:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.57 2020/01/18 23:30:22 rillig Exp $
 
 DISTNAME=	apr-util-1.6.1
 PKGREVISION=	6
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://apr.apache.org/
+HOMEPAGE=	https://apr.apache.org/
 COMMENT=	Apache Portable Runtime utilities
 LICENSE=	apache-2.0
 

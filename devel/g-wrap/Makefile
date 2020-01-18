@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.68 2016/09/15 00:01:43 gdt Exp $
+# $NetBSD: Makefile,v 1.69 2020/01/18 23:30:27 rillig Exp $
 
 DISTNAME=	g-wrap-1.9.15
 CATEGORIES=	devel
 MASTER_SITES=	http://savannah.nongnu.org/download/g-wrap/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/g-wrap/
+HOMEPAGE=	https://www.nongnu.org/g-wrap/
 COMMENT=	Tool for generating guile wrappers for C code
 
 LICENSE=	gnu-lgpl-v2.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/03 10:39:15 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:30:30 rillig Exp $
 #
 
 DISTNAME=	lcov-1.13
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ltp/}
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://ltp.sourceforge.net/coverage/lcov.php
+HOMEPAGE=	https://ltp.sourceforge.net/coverage/lcov.php
 COMMENT=	Front-end for GCC's coverage testing tool gcov
 
 NO_BUILD=		yes

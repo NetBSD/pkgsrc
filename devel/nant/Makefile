@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/04/03 00:32:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:30:34 rillig Exp $
 #
 
 DISTNAME=	nant-0.86-beta1-src
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nant/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://nant.sourceforge.net/
+HOMEPAGE=	https://nant.sourceforge.net/
 COMMENT=	Free .NET build tool similar to Apache Ant
 
 MAKE_JOBS_SAFE=	no

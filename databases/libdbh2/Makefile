@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/01/19 02:07:41 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:30:18 rillig Exp $
 
 DISTNAME=	libdbh2-5.0.16
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dbh/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dbh.sourceforge.net/
+HOMEPAGE=	https://dbh.sourceforge.net/
 COMMENT=	Library to create disk based Hashtables
 LICENSE=	gnu-gpl-v3
 

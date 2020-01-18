@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2019/11/03 10:39:09 rillig Exp $
+# $NetBSD: Makefile,v 1.65 2020/01/18 23:30:25 rillig Exp $
 #
 
 DISTNAME=	cutter-1.2.4
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cutter/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cutter.sourceforge.net/
+HOMEPAGE=	https://cutter.sourceforge.net/
 COMMENT=	Unit Testing Framework for C and C++
 LICENSE=	gnu-lgpl-v3
 

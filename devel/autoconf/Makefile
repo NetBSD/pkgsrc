@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2019/08/11 13:18:38 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2020/01/18 23:30:23 rillig Exp $
 #
 # When updating this package, please update mk/gnu-config/config.guess,
 # mk/gnu-config/config.sub, and mk/gnu-config/missing as well.
@@ -9,7 +9,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
 
 MAINTAINER=		wiz@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/autoconf/autoconf.html
+HOMEPAGE=		https://www.gnu.org/software/autoconf/autoconf.html
 COMMENT=		Generates automatic source code configuration scripts
 LICENSE=		gnu-gpl-v3 AND gnu-fdl-v1.3
 

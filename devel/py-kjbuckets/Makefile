@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/09/02 13:19:41 adam Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/18 23:30:38 rillig Exp $
 
 DISTNAME=	gadfly-1.0.0
 PKGNAME=	${PYPKGPREFIX}-kjbuckets-2.2
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gadfly/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gadfly.sourceforge.net/kjbuckets.html
+HOMEPAGE=	https://gadfly.sourceforge.net/kjbuckets.html
 COMMENT=	Fast set, graph and mapping operations
 
 EXTRACT_ELEMENTS=	${DISTNAME}/kjbuckets

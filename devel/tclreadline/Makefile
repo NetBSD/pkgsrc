@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/01/22 14:08:47 he Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:30:42 rillig Exp $
 #
 
 DISTNAME=	tclreadline-2.1.0
@@ -7,7 +7,7 @@ CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tclreadline/}
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://tclreadline.sourceforge.net/
+HOMEPAGE=	https://tclreadline.sourceforge.net/
 COMMENT=	GNU Readline library for interactive tcl shells
 LICENSE=	modified-bsd
 
