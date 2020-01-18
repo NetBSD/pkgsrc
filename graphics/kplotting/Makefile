@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2019/11/11 08:19:36 markd Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 21:48:12 jperkin Exp $
 
 DISTNAME=	kplotting-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://community.kde.org/Frameworks
