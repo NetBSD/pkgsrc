@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.12 2020/01/11 07:47:18 pho Exp $
+# $NetBSD: haskell.mk,v 1.13 2020/01/18 01:39:01 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -45,6 +45,16 @@
 #            very version of package A which was available when
 #            package B was compiled. So the installed package B is
 #            completely broken at this time.
+#
+# Package-settable variables:
+#
+#   HASKELL_OPTIMIZATION_LEVEL
+#       Description:
+#           Optimization level for compilation.
+#       Possible values:
+#           0 1 2
+#       Default value:
+#           2
 #
 # User-settable variables:
 #
@@ -97,6 +107,7 @@ BUILD_DEFS+=	HASKELL_ENABLE_HADDOCK_DOCUMENTATION
 # Declarations for ../../mk/misc/show.mk
 _VARGROUPS+=		haskell
 _DEF_VARS.haskell= \
+	HASKELL_OPTIMIZATION_LEVEL \
 	_DISTBASE \
 	_DISTVERSION \
 	_GHC_BIN \
@@ -128,6 +139,9 @@ HOMEPAGE?=	http://hackage.haskell.org/package/${_DISTBASE}
 # Cabal packages may use pkg-config, but url2pkg can't detect
 # that. (PHO: I think that should be handled by url2pkg (2009-05-20))
 USE_TOOLS+=	pkg-config
+
+# Default value of HASKELL_OPTIMIZATION_LEVEL
+HASKELL_OPTIMIZATION_LEVEL?=		2
 
 # Default value of HASKELL_ENABLE_SHARED_LIBRARY
 HASKELL_ENABLE_SHARED_LIBRARY?=		yes
@@ -185,14 +199,24 @@ CONFIGURE_ARGS+=	--enable-library-profiling
 CONFIGURE_ARGS+=	--disable-library-profiling
 .endif
 
-
 # Haddock documentations
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
 CONFIGURE_ARGS+=	--with-haddock=${BUILDLINK_PREFIX.ghc:Q}/bin/haddock
 .endif
 
 # Optimization
-CONFIGURE_ARGS+=	-O2
+CONFIGURE_ARGS+=	-O${HASKELL_OPTIMIZATION_LEVEL}
+
+# Parallelization: the definition of this variable is exactly the same
+# as that of _MAKE_JOBS in mk/build/build.mk, but since it's an
+# internal variable we don't want to reuse it here.
+.if defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO])
+_HASKELL_BUILD_JOBS=	# nothing
+.elif defined(MAKE_JOBS.${PKGPATH})
+_HASKELL_BUILD_JOBS=	-j${MAKE_JOBS.${PKGPATH}}
+.elif defined(MAKE_JOBS)
+_HASKELL_BUILD_JOBS=	-j${MAKE_JOBS}
+.endif
 
 # Starting from GHC 7.10 (or 7.8?), packages are installed in
 # directories with a hashed name so we can no longer predict the
@@ -232,7 +256,7 @@ do-configure:
 # Define build target.
 do-build:
 	${RUN}cd ${WRKSRC:Q} && \
-		./Setup build ${PKG_VERBOSE:D-v}
+		./Setup build ${PKG_VERBOSE:D-v} ${_HASKELL_BUILD_JOBS}
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
 	${RUN}cd ${WRKSRC:Q} && \
 		./Setup haddock ${PKG_VERBOSE:D-v}
