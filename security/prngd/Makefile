@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2017/09/16 19:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:11 rillig Exp $
 
 DISTNAME=		prngd-0.9.29
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=prngd/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://prngd.sourceforge.net/
+HOMEPAGE=		https://prngd.sourceforge.net/
 COMMENT=		Pseudo Random Number Generator Daemon
 
 MAKE_ENV+=		DEFS='-DRANDSAVENAME="\"${VARBASE}/db/prngd-seed\"" -DCONFIGFILE="\"${PKG_SYSCONFDIR}/prngd.conf\""'

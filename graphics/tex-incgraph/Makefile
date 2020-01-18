@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:24 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:26 rillig Exp $
 
 DISTNAME=	incgraph
 PKGNAME=	tex-${DISTNAME}-1.12
 TEXLIVE_REV=	36500
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/incgraph
+HOMEPAGE=	https://ctan.org/pkg/incgraph
 COMMENT=	Sophisticated graphics inclusion in a PDF document
 LICENSE=	lppl-1.3c
 

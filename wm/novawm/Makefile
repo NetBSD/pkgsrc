@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 12:42:22 asau Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 23:35:41 rillig Exp $
 #
 
 DISTNAME=	NovaWM-0.8_alpha
@@ -8,7 +8,7 @@ CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=novawm/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://novawm.sourceforge.net/
+HOMEPAGE=	https://novawm.sourceforge.net/
 COMMENT=	Nova window manager
 
 GNU_CONFIGURE=	YES

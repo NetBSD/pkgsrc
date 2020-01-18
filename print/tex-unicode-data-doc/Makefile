@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:39 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:35:01 rillig Exp $
 
 DISTNAME=	unicode-data.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.8
 TEXLIVE_REV=	50303
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/unicode-data
+HOMEPAGE=	https://ctan.org/pkg/unicode-data
 COMMENT=	Documentation for tex-unicode-data
 LICENSE=	lppl-1.3c
 

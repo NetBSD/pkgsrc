@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:07 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:43 rillig Exp $
 
 DISTNAME=	program
 PKGNAME=	tex-${DISTNAME}-3.3.14
 TEXLIVE_REV=	44214
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/program
+HOMEPAGE=	https://ctan.org/pkg/program
 COMMENT=	Typesetting programs and algorithms
 LICENSE=	gnu-gpl-v3
 

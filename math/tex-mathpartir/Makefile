@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:07:33 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:53 rillig Exp $
 
 DISTNAME=	mathpartir
 PKGNAME=	tex-${DISTNAME}-1.3.2
 TEXLIVE_REV=	39864
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/mathpartir
+HOMEPAGE=	https://ctan.org/pkg/mathpartir
 COMMENT=	Typesetting sequences of math formulas, e.g. type inference rules
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2018/01/26 13:33:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2020/01/18 23:35:43 rillig Exp $
 
 DISTNAME=	htdig-3.2.0b6
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=htdig/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://htdig.sourceforge.net/
+HOMEPAGE=	https://htdig.sourceforge.net/
 COMMENT=	WWW indexing and searching system
 
 USE_LANGUAGES=		c c++03

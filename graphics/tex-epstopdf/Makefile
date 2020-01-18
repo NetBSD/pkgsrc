@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/12/06 20:04:22 markd Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/18 23:32:23 rillig Exp $
 
 DISTNAME=	epstopdf
 PKGNAME=	tex-${DISTNAME}-2.28
@@ -6,7 +6,7 @@ PKGREVISION=	1
 TEXLIVE_REV=	48684
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/epstopdf
+HOMEPAGE=	https://ctan.org/pkg/epstopdf
 COMMENT=	Convert EPS to 'encapsulated' PDF using Ghostscript
 LICENSE=	modified-bsd
 

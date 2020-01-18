@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/08/11 13:22:32 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:33:23 rillig Exp $
 
 DISTNAME=	wol-0.7.1
 PKGREVISION=	10
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ahh/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ahh.sourceforge.net/wol/
+HOMEPAGE=	https://ahh.sourceforge.net/wol/
 COMMENT=	Small Wake On Lan client
 
 GNU_CONFIGURE=		yes

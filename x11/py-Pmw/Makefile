@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/11/03 09:14:14 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/18 23:35:55 rillig Exp $
 
 DISTNAME=	Pmw.1.3.2
 EGG_NAME=	${DISTNAME:S/./-/}
@@ -7,7 +7,7 @@ CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmw/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pmw.sourceforge.net/
+HOMEPAGE=	https://pmw.sourceforge.net/
 COMMENT=	Python meta widgets (python-2.x version)
 LICENSE=	mit
 

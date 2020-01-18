@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2020/01/01 14:16:41 nia Exp $
+# $NetBSD: Makefile,v 1.71 2020/01/18 23:32:40 rillig Exp $
 #
 
 DISTNAME=	im-ja-1.5
@@ -7,7 +7,7 @@ CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://im-ja.sourceforge.net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://im-ja.sourceforge.net/
+HOMEPAGE=	https://im-ja.sourceforge.net/
 COMMENT=	Japanese input module for GTK2 and XIM server
 #LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 # AND bsd?
 

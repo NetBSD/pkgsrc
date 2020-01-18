@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 20:19:33 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:34:06 rillig Exp $
 
 DISTNAME=	europasscv
 PKGNAME=	tex-${DISTNAME}-2018.49703
 TEXLIVE_REV=	49703
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/europasscv
+HOMEPAGE=	https://ctan.org/pkg/europasscv
 COMMENT=	Unofficial class for the new version of the Europass curriculum vitae
 LICENSE=	lppl-1.3c
 

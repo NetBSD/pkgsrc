@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:18:52 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:36 rillig Exp $
 
 DISTNAME=	babel-estonian
 PKGNAME=	tex-${DISTNAME}-1.1a
 TEXLIVE_REV=	38064
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/babel-estonian
+HOMEPAGE=	https://ctan.org/pkg/babel-estonian
 COMMENT=	Babel support for Estonian
 LICENSE=	lppl-1.3c
 

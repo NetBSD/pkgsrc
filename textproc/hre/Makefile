@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/09 14:07:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:35:27 rillig Exp $
 #
 
 DISTNAME=	hre-0.9.8a
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://kldp.net/download.php/1489/
 
 MAINTAINER=	pyrasis@chol.com
-HOMEPAGE=	http://hre.kldp.net/
+HOMEPAGE=	https://hre.kldp.net/
 COMMENT=	Hangeul Regular Expression Library
 
 GNU_CONFIGURE=	yes

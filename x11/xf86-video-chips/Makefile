@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/02/16 18:17:12 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2020/01/18 23:36:03 rillig Exp $
 
 DISTNAME=	xf86-video-chips-1.4.0
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg Chips and Technologies video driver
 
 USE_LIBTOOL=	yes

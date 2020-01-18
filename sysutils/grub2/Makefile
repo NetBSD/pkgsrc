@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/11/04 21:28:46 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/18 23:35:17 rillig Exp $
 
 DISTNAME=		grub-2.02
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.gnu.org/gnu/grub/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/grub/
+HOMEPAGE=		https://www.gnu.org/software/grub/
 COMMENT=		GRand Unified Bootloader, version 2
 LICENSE=		gnu-gpl-v3
 

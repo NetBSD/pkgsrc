@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/02/22 14:10:06 wiedi Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:33:20 rillig Exp $
 #
 
 DISTNAME=		partysip-2.2.3
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://savannah.gnu.org/download/partysip/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.nongnu.org/partysip/partysip.html
+HOMEPAGE=		https://www.nongnu.org/partysip/partysip.html
 COMMENT=		SIP proxy server
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1
 

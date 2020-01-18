@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/01/18 21:49:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:30:50 rillig Exp $
 #
 
 DISTNAME=	ski-1.3.2
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ski/}
 
 MAINTAINER=	cherry@zyx.in
-HOMEPAGE=	http://ski.sourceforge.net/
+HOMEPAGE=	https://ski.sourceforge.net/
 COMMENT=	The ia64 instruction set simulator
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/11/19 12:03:07 mef Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/18 23:35:44 rillig Exp $
 
 VERSION=	2.30
 DISTNAME=	libhtmlobject-perl-${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=htmlobject/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://htmlobject.sourceforge.net/
+HOMEPAGE=		https://htmlobject.sourceforge.net/
 COMMENT=		Perl5 module to quickly and easily create Dynamic HTML pages
 LICENSE=		${PERL5_LICENSE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/08/11 13:21:16 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2020/01/18 23:32:16 rillig Exp $
 
 DISTNAME=	Cairo-1.106
 PKGNAME=	p5-${DISTNAME:tl}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gtk2-perl.sourceforge.net/
+HOMEPAGE=	https://gtk2-perl.sourceforge.net/
 COMMENT=	Perl bindings to the cairo graphics library
 LICENSE=	gnu-lgpl-v2.1
 

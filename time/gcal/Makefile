@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2013/07/21 09:11:43 shattered Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/18 23:35:36 rillig Exp $
 #
 
 DISTNAME=		gcal-3.6.3
@@ -6,7 +6,7 @@ CATEGORIES=		time
 MASTER_SITES=		${MASTER_SITE_GNU:=gcal/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/gcal/
+HOMEPAGE=		https://www.gnu.org/software/gcal/
 COMMENT=		GNU version of the standard calendar utility
 LICENSE=		gnu-gpl-v3
 

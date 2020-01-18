@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/02 22:38:06 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:32:39 rillig Exp $
 
 DISTNAME=	xmorph_20060817
 PKGNAME=	xmorph-20060817
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmorph/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xmorph.sourceforge.net/home/gourlay/public_html/Xmorph/
+HOMEPAGE=	https://xmorph.sourceforge.net/home/gourlay/public_html/Xmorph/
 COMMENT=	X program for image warping and dissolving
 
 GNU_CONFIGURE=		yes

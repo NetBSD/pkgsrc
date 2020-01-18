@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:18:57 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:40 rillig Exp $
 
 DISTNAME=	background
 PKGNAME=	tex-${DISTNAME}-2.1
 TEXLIVE_REV=	33100
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/background
+HOMEPAGE=	https://ctan.org/pkg/background
 COMMENT=	Placement of background material on pages of a document
 LICENSE=	lppl-1.3c
 

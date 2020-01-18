@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/11/03 17:04:26 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:33:04 rillig Exp $
 #
 
 DISTNAME=	ppower-0.1.5
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ppower/}
 
 MAINTAINER=	dsainty@NetBSD.org
-HOMEPAGE=	http://ppower.sourceforge.net/
+HOMEPAGE=	https://ppower.sourceforge.net/
 COMMENT=	X10 controller software for the CM11A interface
 #LICENSE=	GPL
 

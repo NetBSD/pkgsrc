@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/09/16 19:27:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:36:08 rillig Exp $
 #
 
 DISTNAME=	xf86dga-1.0.3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Simple test client for the XFree86-DGA extension
 #LICENSE=	# TODO: (see mk/license.mk)
 

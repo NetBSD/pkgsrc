@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:22 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:58 rillig Exp $
 
 DISTNAME=	custom-bib
 PKGNAME=	tex-${DISTNAME}-4.33
 TEXLIVE_REV=	24729
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/custom-bib
+HOMEPAGE=	https://ctan.org/pkg/custom-bib
 COMMENT=	Customised BibTeX styles
 LICENSE=	lppl-1.3c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/02/21 09:47:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:36:13 rillig Exp $
 
 DISTNAME=	xstdcmap-1.0.4
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Selectively defines standard colormap properties
 LICENSE=	x11
 

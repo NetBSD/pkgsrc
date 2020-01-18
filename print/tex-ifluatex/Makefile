@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2019/12/06 20:21:43 markd Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:34:17 rillig Exp $
 
 DISTNAME=	ifluatex
 PKGNAME=	tex-${DISTNAME}-1.4
 TEXLIVE_REV=	41247
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/ifluatex
+HOMEPAGE=	https://ctan.org/pkg/ifluatex
 COMMENT=	The \ifluatex switch for TeX
 LICENSE=	lppl-1.3c
 

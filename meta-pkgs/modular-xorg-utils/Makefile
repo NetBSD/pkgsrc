@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/21 21:09:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:56 rillig Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-utils-1.0
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Modular Xorg application meta-package for Xorg development utilities
 LICENSE=	2-clause-bsd
 
