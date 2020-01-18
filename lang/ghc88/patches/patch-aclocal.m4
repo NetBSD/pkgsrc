@@ -1,11 +1,12 @@
-$NetBSD: patch-aclocal.m4,v 1.2 2020/01/12 08:13:41 pho Exp $
+$NetBSD: patch-aclocal.m4,v 1.3 2020/01/18 10:40:55 pho Exp $
 
 Hunk #1:
   Don't require Alex to build. Fixed in upstream:
   https://gitlab.haskell.org/ghc/ghc/issues/16860
 
 Hunk #2:
-  Canonicalize OS name netbsd* to "netbsd".
+  Canonicalize OS name netbsd* to "netbsd":
+  https://gitlab.haskell.org/ghc/ghc/merge_requests/2496
 
 --- aclocal.m4.orig	2020-01-12 06:28:01.000000000 +0000
 +++ aclocal.m4
