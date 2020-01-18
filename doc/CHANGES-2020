@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.571 2020/01/18 15:09:37 taca Exp $
+$NetBSD: CHANGES-2020,v 1.572 2020/01/18 15:12:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -660,3 +660,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/ruby-mixlib-archive to 1.0.5 [taca 2020-01-18]
 	Updated converters/ruby-unf_ext to 0.0.7.6 [taca 2020-01-18]
 	Updated databases/ruby-arel-helpers to 2.11.0 [taca 2020-01-18]
+	Updated databases/ruby-awesome_nested_set to 3.2.0 [taca 2020-01-18]
