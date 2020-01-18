@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2020/01/05 23:05:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/18 21:23:16 cheusov Exp $
 #
 
-DISTNAME=	mk-configure-0.32.1
+DISTNAME=	mk-configure-0.33.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/}
 
@@ -31,8 +31,8 @@ EGDIR=			share/examples/mk-configure
 TEST_TARGET=		test
 
 post-install:
-	cp -Rp ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/${EGDIR}
-	cp ${WRKSRC}/presentation/*.pdf ${DESTDIR}${PREFIX}/share/doc/mk-configure
+	${CP} -Rp ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/presentation/*.pdf ${DESTDIR}${PREFIX}/share/doc/mk-configure
 
 .include "../../mk/bsd.prefs.mk"
 
