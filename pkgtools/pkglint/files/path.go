@@ -421,7 +421,27 @@ func (p PackagePath) JoinNoClean(other RelPath) PackagePath {
 	return NewPackagePathString(p.AsPath().JoinNoClean(other).String())
 }
 
+func (p PackagePath) CleanPath() PackagePath {
+	return NewPackagePathString(p.AsPath().CleanPath().String())
+}
+
 func (p PackagePath) IsEmpty() bool { return p.AsPath().IsEmpty() }
+
+func (p PackagePath) HasPrefixPath(sub Path) bool {
+	return p.AsPath().HasPrefixPath(sub)
+}
+
+func (p PackagePath) ContainsPath(sub Path) bool {
+	return p.AsPath().ContainsPath(sub)
+}
+
+func (p PackagePath) ContainsText(contained string) bool {
+	return p.AsPath().ContainsText(contained)
+}
+
+func (p PackagePath) Replace(from, to string) PackagePath {
+	return NewPackagePathString(strings.Replace(string(p), from, to, -1))
+}
 
 // RelPath is a path that is relative to some base directory that is not
 // further specified.

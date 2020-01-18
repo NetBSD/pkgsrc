@@ -703,13 +703,14 @@ func (s *Suite) Test_MkLineChecker_CheckRelativePkgdir(c *check.C) {
 
 	t.CreateFileLines("other/package/Makefile")
 
-	test := func(relativePkgdir RelPath, diagnostics ...string) {
+	test := func(relativePkgdir PackagePath, diagnostics ...string) {
 		// Must be in the filesystem because of directory references.
 		mklines := t.SetUpFileMkLines("category/package/Makefile",
 			"# dummy")
 
 		checkRelativePkgdir := func(mkline *MkLine) {
-			MkLineChecker{mklines, mkline}.CheckRelativePkgdir(relativePkgdir)
+			ck := MkLineChecker{mklines, mkline}
+			ck.CheckRelativePkgdir(relativePkgdir.AsRelPath(), relativePkgdir)
 		}
 
 		mklines.ForEach(checkRelativePkgdir)
