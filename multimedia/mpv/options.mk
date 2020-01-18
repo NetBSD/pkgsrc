@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.20 2019/10/25 14:35:56 leot Exp $
+# $NetBSD: options.mk,v 1.21 2020/01/18 15:55:28 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
 .include "../../multimedia/libva/available.mk"
 .include "../../multimedia/libvdpau/available.mk"
+.include "../../devel/wayland/platform.mk"
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	gl
 PKG_OPTIONS_GROUP.gl=		opengl rpi
@@ -24,6 +25,9 @@ PKG_SUGGESTED_OPTIONS+=		vaapi
 .if ${VDPAU_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+=		vdpau
 PKG_SUGGESTED_OPTIONS+=		vdpau
+.endif
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+PKG_SUGGESTED_OPTIONS+=		wayland
 .endif
 
 .include "../../mk/bsd.options.mk"
