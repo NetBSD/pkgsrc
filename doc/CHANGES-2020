@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.591 2020/01/18 21:40:33 nia Exp $
+$NetBSD: CHANGES-2020,v 1.592 2020/01/18 21:45:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -680,3 +680,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/MesaLib to 19.2.7nb2 [triaxx 2020-01-18]
 	Updated emulators/atari800 to 4.2.0 [nia 2020-01-18]
 	Updated wm/9wm to 1.4.1 [nia 2020-01-18]
+	Updated wm/bspwm to 0.9.9 [nia 2020-01-18]
