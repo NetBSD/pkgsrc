@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:18:54 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:37 rillig Exp $
 
 DISTNAME=	babel-irish
 PKGNAME=	tex-${DISTNAME}-1.0h
 TEXLIVE_REV=	30277
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/babel-irish
+HOMEPAGE=	https://ctan.org/pkg/babel-irish
 COMMENT=	Babel support for Irish
 LICENSE=	lppl-1.3c
 

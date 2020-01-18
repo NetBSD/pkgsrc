@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2019/12/06 20:04:34 markd Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:32:32 rillig Exp $
 
 DISTNAME=	pst-pdf
 PKGNAME=	tex-${DISTNAME}-1.2d
 TEXLIVE_REV=	44665
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/pst-pdf
+HOMEPAGE=	https://ctan.org/pkg/pst-pdf
 COMMENT=	Make PDF versions of graphics by processing between runs
 LICENSE=	lppl-1.2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 18:28:19 asau Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:31:01 rillig Exp $
 #
 
 DISTNAME=		font-adobe-utopia-type1-1.0.4
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Adobe Utopia Type1 fonts
 
 GNU_CONFIGURE=		yes

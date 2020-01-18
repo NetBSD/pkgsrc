@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:33 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:10 rillig Exp $
 
 DISTNAME=	arphic-ttf.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2017
 TEXLIVE_REV=	42675
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/arphic-ttf
+HOMEPAGE=	https://ctan.org/pkg/arphic-ttf
 COMMENT=	Documentation for tex-arphic-ttf
 LICENSE=	arphic-public
 

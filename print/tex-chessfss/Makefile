@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 20:19:08 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:33:46 rillig Exp $
 
 DISTNAME=	chessfss
 PKGNAME=	tex-${DISTNAME}-1.2a
@@ -6,7 +6,7 @@ PKGREVISION=	1
 TEXLIVE_REV=	19440
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/chessfss
+HOMEPAGE=	https://ctan.org/pkg/chessfss
 COMMENT=	LaTeX package to handle chess fonts
 LICENSE=	lppl-1.3c
 

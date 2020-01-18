@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/03/10 22:17:34 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:36:12 rillig Exp $
 
 DISTNAME=		xsetroot-1.1.2
 CATEGORIES=		x11
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X root window parameter setting program
 
 GNU_CONFIGURE=		yes

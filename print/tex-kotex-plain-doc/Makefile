@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 20:21:47 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:34:20 rillig Exp $
 
 DISTNAME=	kotex-plain.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.1.1a
 TEXLIVE_REV=	38630
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/kotex-plain
+HOMEPAGE=	https://ctan.org/pkg/kotex-plain
 COMMENT=	Documentation for tex-kotex-plain
 LICENSE=	lppl-1.3c
 

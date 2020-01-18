@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2019/12/06 20:19:31 markd Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:34:05 rillig Exp $
 
 DISTNAME=	etex
 PKGNAME=	tex-${DISTNAME}-2.1.31600
 TEXLIVE_REV=	31600
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/etex
+HOMEPAGE=	https://ctan.org/pkg/etex
 COMMENT=	TeX implementation filling the gap between TeX3 and NTS
 #LICENSE=	knuth
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/07/29 12:02:02 markd Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:33:00 rillig Exp $
 
 DISTNAME=	collection-luatex
 PKGNAME=	texlive-${DISTNAME}-2019pre1
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 TEXLIVE_REV=	51127
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tug.org/texlive/
+HOMEPAGE=	https://www.tug.org/texlive/
 COMMENT=	LuaTeX packages
 
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic

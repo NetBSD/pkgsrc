@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:39 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:15 rillig Exp $
 
 DISTNAME=	braille.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2014
 TEXLIVE_REV=	20655
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/braille
+HOMEPAGE=	https://ctan.org/pkg/braille
 COMMENT=	Documentation for tex-braille
 LICENSE=	lppl-1.3c
 

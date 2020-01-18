@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 21:48:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:33:17 rillig Exp $
 
 DISTNAME=	libeXosip2-4.1.0
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	devel net
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/exosip/
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://savannah.nongnu.org/projects/exosip
+HOMEPAGE=	https://savannah.nongnu.org/projects/exosip
 COMMENT=	The Extended Open SIP library
 LICENSE=	gnu-gpl-v2
 

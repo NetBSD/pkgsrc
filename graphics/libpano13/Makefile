@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/07/10 13:41:48 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:32:15 rillig Exp $
 
 DISTNAME=	libpano13-2.9.19
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=panotools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://panotools.sourceforge.net/
+HOMEPAGE=	https://panotools.sourceforge.net/
 COMMENT=	Cross-platform library behind Panorama Tools and other stitchers
 LICENSE=	gnu-gpl-v2
 

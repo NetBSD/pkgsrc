@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2019/08/20 14:31:03 gdt Exp $
+# $NetBSD: Makefile,v 1.115 2020/01/18 23:32:11 rillig Exp $
 
 # Note that upstream has replaced tarballs without changing the
 # version number (e.g., 0.19.2 had two different tarballs).
@@ -11,7 +11,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufraw/}
 
 MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		http://ufraw.sourceforge.net/
+HOMEPAGE=		https://ufraw.sourceforge.net/
 COMMENT=		GIMP plug-in for raw digicam import
 
 LICENSE=		gnu-gpl-v2

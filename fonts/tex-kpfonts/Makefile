@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 19:30:09 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:31:39 rillig Exp $
 
 DISTNAME=	kpfonts
 PKGNAME=	tex-${DISTNAME}-3.33
 TEXLIVE_REV=	48470
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/kpfonts
+HOMEPAGE=	https://ctan.org/pkg/kpfonts
 COMMENT=	Complete set of fonts for text and mathematics
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/03/12 11:17:58 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/18 23:35:57 rillig Exp $
 #
 
 DISTNAME=	Tix${TIX_VERSION}-src
@@ -9,7 +9,7 @@ CATEGORIES=	x11 tcl tk
 MASTER_SITES=	http://downloads.sourceforge.net/project/tix/tix/8.4.3/
 
 MAINTAINER=	he@NetBSD.org
-HOMEPAGE=	http://tix.sourceforge.net/
+HOMEPAGE=	https://tix.sourceforge.net/
 COMMENT=	Powerful widget library for Tcl/Tk
 LICENSE=	2-clause-bsd
 

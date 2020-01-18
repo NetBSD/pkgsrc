@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2013/12/23 11:57:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/18 23:32:06 rillig Exp $
 
 DISTNAME=	xbreaky-0.0.5
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://xbreaky.sourceforge.net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xbreaky.sourceforge.net/
+HOMEPAGE=	https://xbreaky.sourceforge.net/
 COMMENT=	Breakout game for X11
 LICENSE=	gnu-gpl-v2 # or later
 

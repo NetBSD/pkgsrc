@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/05/02 08:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:32:09 rillig Exp $
 
 DISTNAME=		PanoTools
 PKGNAME=		${DISTNAME}-2.6b1
@@ -7,7 +7,7 @@ CATEGORIES=		graphics java
 #MASTER_SITES=		http://www.path.unimelb.edu.au/~dersch/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://panotools.sourceforge.net/
+HOMEPAGE=		https://panotools.sourceforge.net/
 COMMENT=		View, create, edit, and remap panoramic images
 
 EMUL_PLATFORMS=		linux-i386

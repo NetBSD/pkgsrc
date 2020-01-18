@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2015/01/16 11:49:07 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:25 rillig Exp $
 
 DISTNAME=	diction-1.13
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.moria.de/~michael/diction/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/diction/diction.html
+HOMEPAGE=	https://www.gnu.org/software/diction/diction.html
 COMMENT=	GNU version of diction and style
 LICENSE=	gnu-gpl-v3
 

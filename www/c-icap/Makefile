@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/01/18 21:51:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:35:43 rillig Exp $
 
 DISTNAME=	c_icap-0.5.5
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=c-icap/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://c-icap.sourceforge.net/
+HOMEPAGE=	https://c-icap.sourceforge.net/
 COMMENT=	Implementation of an ICAP server
 LICENSE=	gnu-lgpl-v2.1
 

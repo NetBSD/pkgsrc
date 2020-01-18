@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2020/01/05 16:39:18 nia Exp $
+# $NetBSD: Makefile,v 1.48 2020/01/18 23:33:03 rillig Exp $
 
 DISTNAME=	orca-2.32.1
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/orca/2.32/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/Orca
+HOMEPAGE=	https://live.gnome.org/Orca
 COMMENT=	Screen reader
 LICENSE=	gnu-lgpl-v2
 

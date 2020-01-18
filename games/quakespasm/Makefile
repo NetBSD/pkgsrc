@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/08 13:10:49 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/18 23:32:04 rillig Exp $
 
 DISTNAME=	quakespasm-0.93.2
 CATEGORIES=	games
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quakespasm/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	snj@NetBSD.org
-HOMEPAGE=	http://quakespasm.sourceforge.net/
+HOMEPAGE=	https://quakespasm.sourceforge.net/
 COMMENT=	Enhanced Quake engine using SDL
 LICENSE=	gnu-gpl-v2
 

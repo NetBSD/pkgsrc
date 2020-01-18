@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:07 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:43 rillig Exp $
 
 DISTNAME=	probsoln
 PKGNAME=	tex-${DISTNAME}-3.05
 TEXLIVE_REV=	44783
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/probsoln
+HOMEPAGE=	https://ctan.org/pkg/probsoln
 COMMENT=	Generate problem sheets and their solution sheets
 LICENSE=	lppl-1.3c
 

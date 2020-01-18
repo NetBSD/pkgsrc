@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/12/06 20:19:00 markd Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:33:42 rillig Exp $
 
 DISTNAME=	bibtex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.99d
@@ -6,7 +6,7 @@ PKGREVISION=	1
 TEXLIVE_REV=	33736
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/bibtex
+HOMEPAGE=	https://ctan.org/pkg/bibtex
 COMMENT=	Documentation for tex-bibtex
 #LICENSE=	knuth
 

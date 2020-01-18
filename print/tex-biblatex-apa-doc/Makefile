@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:18:59 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:42 rillig Exp $
 
 DISTNAME=	biblatex-apa.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-7.7
 TEXLIVE_REV=	47268
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/biblatex-apa
+HOMEPAGE=	https://ctan.org/pkg/biblatex-apa
 COMMENT=	Documentation for tex-biblatex-apa
 LICENSE=	lppl-1.3c
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:17:04 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:31 rillig Exp $
 
 DISTNAME=	Type1fonts.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.14
 TEXLIVE_REV=	19603
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/fontinstallationguide
+HOMEPAGE=	https://ctan.org/pkg/fontinstallationguide
 COMMENT=	Font installation guide
 LICENSE=	gnu-fdl-v1.3
 

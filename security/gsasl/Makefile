@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2020/01/18 21:50:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2020/01/18 23:35:07 rillig Exp $
 
 DISTNAME=	gsasl-1.8.0
 PKGREVISION=	10
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNU:=gsasl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gsasl/
+HOMEPAGE=	https://www.gnu.org/software/gsasl/
 COMMENT=	GNU implementation of the Simple Authentication and Security Layer
 LICENSE=	gnu-gpl-v3
 

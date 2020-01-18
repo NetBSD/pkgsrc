@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/01/18 21:50:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/18 23:33:30 rillig Exp $
 
 DISTNAME=	podofo-0.9.6
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=podofo/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://podofo.sourceforge.net/
+HOMEPAGE=	https://podofo.sourceforge.net/
 COMMENT=	Library to work with the PDF file format
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 

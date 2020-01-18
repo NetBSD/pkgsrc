@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2018/01/10 00:06:26 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2020/01/18 23:32:15 rillig Exp $
 #
 
 DISTNAME=	mgl2-alpha-020
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://at.sakura.ne.jp/~suz/arc/
 
 MAINTAINER=	fk200329@fsinet.or.jp
-HOMEPAGE=	http://www.NetBSD.org/ports/hpcmips/mgl2.html
+HOMEPAGE=	https://www.NetBSD.org/ports/hpcmips/mgl2.html
 COMMENT=	Graphics library for NEC Mobilegear/PocketBSD, NetBSD/hpcmips
 
 DEPENDS+=	mglfonts>=0.1:../../fonts/mglfonts

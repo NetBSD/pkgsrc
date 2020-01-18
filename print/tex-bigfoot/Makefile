@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:01 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:43 rillig Exp $
 
 DISTNAME=	bigfoot
 PKGNAME=	tex-${DISTNAME}-2.1
 TEXLIVE_REV=	38248
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/bigfoot
+HOMEPAGE=	https://ctan.org/pkg/bigfoot
 COMMENT=	Footnotes for critical editions
 LICENSE=	gnu-gpl-v2
 

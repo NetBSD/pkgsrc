@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 21:48:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:33:13 rillig Exp $
 
 DISTNAME=	ccrtp-2.1.2
 PKGREVISION=	7
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=ccrtp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/ccrtp/
+HOMEPAGE=	https://www.gnu.org/software/ccrtp/
 COMMENT=	RTP and RTSP protocol implementation using GNU CommonCpp
 LICENSE=	gnu-gpl-v2
 

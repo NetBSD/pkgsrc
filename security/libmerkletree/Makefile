@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2014/03/05 05:25:18 agc Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:35:08 rillig Exp $
 
 DISTNAME=	libmerkletree-${VERSION}
 CATEGORIES=	security
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.NetBSD.org/
+HOMEPAGE=	https://www.NetBSD.org/
 COMMENT=	Calculate and verify Merkle tree digests
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/09/12 15:23:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/18 23:31:59 rillig Exp $
 
 DISTNAME=		chromium-bsu-0.9.16.1
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=chromium-bsu/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://chromium-bsu.sourceforge.net/
+HOMEPAGE=		https://chromium-bsu.sourceforge.net/
 COMMENT=		Fast paced, arcade-style, top-scrolling space shooter
 
 DEPENDS=		uralic-ttf-[0-9]*:../../fonts/uralic-ttf

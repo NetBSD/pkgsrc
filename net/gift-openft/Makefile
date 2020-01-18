@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/23 17:18:22 asau Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/18 23:33:15 rillig Exp $
 
 DISTNAME=	gift-openft-0.2.1.6
 PKGREVISION=	7
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gift/}
 
 MAINTAINER=	alex@catbull.com
-HOMEPAGE=	http://gift.sourceforge.net/
+HOMEPAGE=	https://gift.sourceforge.net/
 COMMENT=	OpenFT Plugin for the gift daemon
 
 BDB_ACCEPTED=		db4 db5

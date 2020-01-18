@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 17:18:22 asau Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:33:15 rillig Exp $
 #
 
 DISTNAME=		gift-gnutella-0.0.11
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gift/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://gift.sourceforge.net/
+HOMEPAGE=		https://gift.sourceforge.net/
 COMMENT=		Gnutella plugin for giFT
 
 USE_PKGLOCALEDIR=	yes

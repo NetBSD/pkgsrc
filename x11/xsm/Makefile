@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/03/10 22:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:36:13 rillig Exp $
 
 DISTNAME=		xsm-1.0.4
 CATEGORIES=		x11
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X Session Manager
 
 GNU_CONFIGURE=		yes

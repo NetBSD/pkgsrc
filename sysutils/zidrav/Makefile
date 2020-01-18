@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 19:51:39 asau Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:35:22 rillig Exp $
 #
 
 DISTNAME=	zidrav4unix-1.2.0
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zidrav/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/zidrav
+HOMEPAGE=	https://sourceforge.net/projects/zidrav
 COMMENT=	File corruption detection and repair program
 
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/09/18 12:17:53 maya Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:35:15 rillig Exp $
 #
 
 DISTNAME=		detox-1.2.0
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=detox/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		bartosz.kuzma@gmail.com
-HOMEPAGE=		http://detox.sourceforge.net/
+HOMEPAGE=		https://detox.sourceforge.net/
 COMMENT=		Removes non-standard characters from filenames
 
 GNU_CONFIGURE=		yes

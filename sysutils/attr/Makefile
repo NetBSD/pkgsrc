@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/11/04 21:28:41 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:35:14 rillig Exp $
 
 ATTR_VERS=	2.4.47
 PKGNAME=	attr-${ATTR_VERS}
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://download.savannah.gnu.org/releases/attr/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://savannah.nongnu.org/projects/attr
+HOMEPAGE=	https://savannah.nongnu.org/projects/attr
 COMMENT=	Commands for Manipulating Filesystem Extended Attributes
 LICENSE=	gnu-gpl-v2
 

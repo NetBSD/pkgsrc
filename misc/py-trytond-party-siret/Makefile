@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2016/12/04 21:13:06 rodent Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:33:05 rillig Exp $
 TRYTON_MODULE_NAME=	trytond_party_siret
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	misc python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tryton.org/
+HOMEPAGE=	https://www.tryton.org/
 COMMENT=	The party_siret module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 

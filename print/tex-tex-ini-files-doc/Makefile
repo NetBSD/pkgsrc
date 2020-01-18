@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:27 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:34:54 rillig Exp $
 
 DISTNAME=	tex-ini-files.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2016
 TEXLIVE_REV=	40533
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/tex-ini-files
+HOMEPAGE=	https://ctan.org/pkg/tex-ini-files
 COMMENT=	Documentation for tex-tex-ini-files
 LICENSE=	public-domain
 

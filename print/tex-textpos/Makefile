@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2019/12/06 20:23:30 markd Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/18 23:34:56 rillig Exp $
 
 DISTNAME=	textpos
 PKGNAME=	tex-${DISTNAME}-1.9.1
 TEXLIVE_REV=	50988
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/textpos
+HOMEPAGE=	https://ctan.org/pkg/textpos
 COMMENT=	Place boxes at arbitrary positions on the LaTeX page
 LICENSE=	lppl-1.3c
 

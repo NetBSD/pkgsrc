@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2019/07/21 22:24:58 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2020/01/18 23:32:11 rillig Exp $
 
 DISTNAME=		refocus-it-2.0.0
 PKGNAME=		gimp-refocus-it-2.0.0
@@ -7,7 +7,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=refocus-it/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://refocus-it.sourceforge.net/
+HOMEPAGE=		https://refocus-it.sourceforge.net/
 COMMENT=		Refocus images
 
 DEPENDS+=		refocus-it-[0-9]*:../../graphics/refocus-it

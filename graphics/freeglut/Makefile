@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/01/09 23:34:57 nia Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:32:11 rillig Exp $
 
 DISTNAME=	freeglut-3.2.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeglut/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://freeglut.sourceforge.net/
+HOMEPAGE=	https://freeglut.sourceforge.net/
 COMMENT=	Alternative to the OpenGL Utility Toolkit (GLUT) library
 LICENSE=	x11
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/02/16 17:15:48 agc Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:35:09 rillig Exp $
 
 DISTNAME=	libnetpgpverify-${VERSION}
 CATEGORIES=	security
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.NetBSD.org/
+HOMEPAGE=	https://www.NetBSD.org/
 COMMENT=	PGP and ssh signature verification library
 LICENSE=	modified-bsd
 

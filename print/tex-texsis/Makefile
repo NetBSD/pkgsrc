@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:23:29 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:55 rillig Exp $
 
 DISTNAME=	texsis
 PKGNAME=	tex-${DISTNAME}-2.18
@@ -6,7 +6,7 @@ PKGREVISION=	1
 TEXLIVE_REV=	31958
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/texsis
+HOMEPAGE=	https://ctan.org/pkg/texsis
 COMMENT=	Plain TeX macros for Physicists
 LICENSE=	lppl-1.3c
 

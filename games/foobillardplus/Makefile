@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/12/12 21:13:32 wiedi Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:00 rillig Exp $
 
 DISTNAME=	foobillardplus-3.42beta
 PKGNAME=	${DISTNAME:S/beta/b/}
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=foobillardplus/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://foobillardplus.sourceforge.net/
+HOMEPAGE=	https://foobillardplus.sourceforge.net/
 COMMENT=	Free OpenGL-billard game
 LICENSE=	gnu-gpl-v2
 

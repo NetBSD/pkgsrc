@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/10/24 15:49:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:35:14 rillig Exp $
 #
 
 DISTNAME=		checkpassword-pam-0.99
@@ -7,7 +7,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=checkpasswd-pam/}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://checkpasswd-pam.sourceforge.net/
+HOMEPAGE=		https://checkpasswd-pam.sourceforge.net/
 COMMENT=		PAM checkpassword-compatible authentication program
 LICENSE=		gnu-gpl-v2
 

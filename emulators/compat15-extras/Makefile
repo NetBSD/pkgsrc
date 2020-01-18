@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2019/09/26 09:43:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:48 rillig Exp $
 
 COMPAT_PKG=		compat15	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		1.5
 PKGREVISION=		1
 
-HOMEPAGE=		http://www.NetBSD.org/releases/formal-1.5/index.html
+HOMEPAGE=		https://www.NetBSD.org/releases/formal-1.5/index.html
 COMMENT=		Additional shared libraries for NetBSD 1.5 compatibility
 
 EMUL_PLATFORMS=		netbsd-i386 netbsd-sparc

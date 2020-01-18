@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:40 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:36 rillig Exp $
 
 DISTNAME=	tikzorbital
 PKGNAME=	tex-${DISTNAME}-2015
 TEXLIVE_REV=	36439
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/tikzorbital
+HOMEPAGE=	https://ctan.org/pkg/tikzorbital
 COMMENT=	Atomic and molecular orbitals using TiKZ
 LICENSE=	lppl-1.3c
 

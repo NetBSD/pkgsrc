@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/11/03 09:14:07 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/18 23:35:47 rillig Exp $
 
 DISTNAME=	BLT2.4z
 PKGNAME=	blt-2.4z
@@ -11,7 +11,7 @@ PATCH_SITES=		${MASTER_SITES}
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	brook@nmsu.edu
-HOMEPAGE=	http://blt.sourceforge.net/
+HOMEPAGE=	https://blt.sourceforge.net/
 COMMENT=	Extension to Tcl/Tk
 
 MAKE_JOBS_SAFE=	no

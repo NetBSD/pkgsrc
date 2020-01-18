@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/11/03 19:30:33 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2020/01/18 23:32:08 rillig Exp $
 #
 
 DISTNAME=	libchamplain-0.8.3
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libchamplain/0.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://projects.gnome.org/libchamplain/
+HOMEPAGE=	https://projects.gnome.org/libchamplain/
 COMMENT=	Map widget
 #LICENSE=	# TODO: (see mk/license.mk)
 

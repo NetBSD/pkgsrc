@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2018/10/13 10:17:30 leot Exp $
+# $NetBSD: Makefile,v 1.45 2020/01/18 23:32:14 rillig Exp $
 
 DISTNAME=	libexif-0.6.21
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libexif/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://libexif.sourceforge.net/
+HOMEPAGE=	https://libexif.sourceforge.net/
 COMMENT=	EXIF file library
 LICENSE=	gnu-lgpl-v2.1
 

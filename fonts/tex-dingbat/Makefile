@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:50 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:24 rillig Exp $
 
 DISTNAME=	dingbat
 PKGNAME=	tex-${DISTNAME}-1.0
 TEXLIVE_REV=	27918
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/dingbat
+HOMEPAGE=	https://ctan.org/pkg/dingbat
 COMMENT=	Two dingbat symbol fonts
 LICENSE=	lppl-1.3c
 

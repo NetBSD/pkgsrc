@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/09/29 12:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/18 23:35:46 rillig Exp $
 
 DISTNAME=	w3-4.0pre.47
 PKGNAME=	${EMACS_PKGNAME_PREFIX}w3-4.0b47
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_XEMACS:=emacs-w3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/w3/
+HOMEPAGE=	https://www.gnu.org/software/w3/
 COMMENT=	World Wide Web browser for Emacs
 
 # included in xemacs-packages

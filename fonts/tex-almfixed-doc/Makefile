@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:29:31 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:09 rillig Exp $
 
 DISTNAME=	almfixed.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.92
 TEXLIVE_REV=	35065
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/almfixed
+HOMEPAGE=	https://ctan.org/pkg/almfixed
 COMMENT=	Documentation for tex-almfixed
 LICENSE=	lppl-1.3c # gfl
 

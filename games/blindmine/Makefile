@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/09/02 13:20:20 adam Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/18 23:31:59 rillig Exp $
 
 DISTNAME=	blindmine-0.3-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://kldp.net/frs/download.php/3097/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	fox9@netb.co.kr
-HOMEPAGE=	http://blindmine.kldp.net/
+HOMEPAGE=	https://blindmine.kldp.net/
 COMMENT=	Minesweeper clone that you can play with your eyes closed
 
 WRKSRC=		${WRKDIR}/${PKGBASE}

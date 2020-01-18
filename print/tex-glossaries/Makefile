@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/12/06 20:21:31 markd Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/18 23:34:14 rillig Exp $
 
 DISTNAME=	glossaries
 PKGNAME=	tex-${DISTNAME}-4.42
@@ -6,7 +6,7 @@ PKGREVISION=	1
 TEXLIVE_REV=	49618
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/glossaries
+HOMEPAGE=	https://ctan.org/pkg/glossaries
 COMMENT=	Create glossaries and lists of acronyms
 LICENSE=	lppl-1.3c
 

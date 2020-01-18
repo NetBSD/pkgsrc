@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2019/11/14 11:05:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/18 23:36:09 rillig Exp $
 
 DISTNAME=	xinput-1.6.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Diagnostic utility for inputs in X
 LICENSE=	mit
 

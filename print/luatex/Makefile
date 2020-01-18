@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2019/11/07 12:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2020/01/18 23:33:29 rillig Exp $
 
 PKGREVISION= 4
 .include "../../print/texlive/Makefile.common"
@@ -6,7 +6,7 @@ PKGREVISION= 4
 PKGNAME=	luatex-1.10.0
 CATEGORIES=	print
 
-HOMEPAGE=	http://www.tug.org/web2c/
+HOMEPAGE=	https://www.tug.org/web2c/
 COMMENT=	Extended version of pdfTeX using Lua
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/03/04 10:58:16 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:36:11 rillig Exp $
 
 DISTNAME=		xmore-1.0.3
 CATEGORIES=		x11
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Plain text display program for X
 
 GNU_CONFIGURE=		yes

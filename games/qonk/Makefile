@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/12/31 10:01:11 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/18 23:32:04 rillig Exp $
 #
 
 DISTNAME=	qonk-0.3.1
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qonk/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://qonk.sourceforge.net/
+HOMEPAGE=	https://qonk.sourceforge.net/
 COMMENT=	Small space build-and-conquer strategy game
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde4,v 1.27 2019/11/03 19:35:55 rillig Exp $
+# $NetBSD: Makefile.kde4,v 1.28 2020/01/18 23:32:55 rillig Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE4-distributed packages (they all share common configure and build
@@ -12,7 +12,7 @@ EXTRACT_SUFX?=		.tar.xz
 EXTRACT_USING=		gtar
 
 MAINTAINER?=	markd@NetBSD.org
-HOMEPAGE?=	http://www.kde.org/
+HOMEPAGE?=	https://www.kde.org/
 LICENSE?=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 BUILD_DEPENDS+=		automoc4>=0.9.87:../../devel/automoc4

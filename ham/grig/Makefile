@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/07/21 22:25:08 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2020/01/18 23:32:39 rillig Exp $
 #
 
 DISTNAME=	grig-0.8.1
@@ -7,7 +7,7 @@ CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=groundstation/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://groundstation.sourceforge.net/
+HOMEPAGE=	https://groundstation.sourceforge.net/
 COMMENT=	Graphical user interface to the Hamlib libraries
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/03/10 08:07:52 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 23:36:08 rillig Exp $
 
 DISTNAME=	xfd-1.1.3
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Display all the characters in an X font
 
 BROKEN_GETTEXT_DETECTION=	yes

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2019/12/06 20:19:06 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:33:45 rillig Exp $
 
 DISTNAME=	changebar
 PKGNAME=	tex-${DISTNAME}-3.6c
 TEXLIVE_REV=	46919
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/changebar
+HOMEPAGE=	https://ctan.org/pkg/changebar
 COMMENT=	Generate changebars in LaTeX documents
 LICENSE=	lppl-1.3c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2019/11/04 21:28:46 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2020/01/18 23:35:17 rillig Exp $
 
 DISTNAME=	grub-0.97
 PKGREVISION=	10
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	ftp://alpha.gnu.org/gnu/grub/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/grub/
+HOMEPAGE=	https://www.gnu.org/software/grub/
 COMMENT=	GRand Unified Bootloader -- Boots *BSD, Linux, groks ffs, FAT, ext2
 LICENSE=	gnu-gpl-v2
 

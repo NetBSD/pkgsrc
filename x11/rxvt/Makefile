@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2017/08/05 07:00:20 nros Exp $
+# $NetBSD: Makefile,v 1.61 2020/01/18 23:35:56 rillig Exp $
 
 DISTNAME=		rxvt-2.7.10
 PKGREVISION=		7
@@ -8,7 +8,7 @@ MASTER_SITES+=		ftp://mason.primenet.com.au/pub/rxvt/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		gcw@rxvt.org
-HOMEPAGE=		http://sourceforge.net/projects/rxvt
+HOMEPAGE=		https://sourceforge.net/projects/rxvt
 COMMENT=		Low memory usage xterm replacement that supports color
 
 GNU_CONFIGURE=		YES

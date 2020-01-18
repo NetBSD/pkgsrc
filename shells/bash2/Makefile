@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2019/11/04 21:14:06 rillig Exp $
+# $NetBSD: Makefile,v 1.93 2020/01/18 23:35:13 rillig Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -14,7 +14,7 @@ PATCHFILES=	bash205b-001 bash205b-002 bash205b-003 bash205b-004 \
 		bash205b-013
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
+HOMEPAGE=	https://www.gnu.org/software/bash/bash.html
 COMMENT=	The GNU Bourne Again Shell (version 2)
 
 CONFLICTS=	static-bash-[0-9]*

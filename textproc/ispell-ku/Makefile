@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/16 19:27:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:27 rillig Exp $
 #
 
 DISTNAME=	ispell-ku-0.20
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=myspellkurdish/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://myspellkurdish.sourceforge.net/
+HOMEPAGE=	https://myspellkurdish.sourceforge.net/
 COMMENT=	Kurdish dictionary for interactive spelling checker
 LICENSE=	gnu-gpl-v2
 

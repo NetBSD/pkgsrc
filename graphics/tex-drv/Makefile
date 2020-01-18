@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:04:20 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:22 rillig Exp $
 
 DISTNAME=	drv
 PKGNAME=	tex-${DISTNAME}-0.97
 TEXLIVE_REV=	29349
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/drv
+HOMEPAGE=	https://ctan.org/pkg/drv
 COMMENT=	Derivation trees with MetaPost
 LICENSE=	lppl-1.3c
 

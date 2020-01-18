@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2018/05/05 12:33:00 minskim Exp $
+# $NetBSD: Makefile,v 1.79 2020/01/18 23:32:15 rillig Exp $
 
 DISTNAME=	libwmf-0.2.8.4
 PKGREVISION=	16
@@ -6,7 +6,7 @@ CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wvware/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wvware.sourceforge.net/libwmf.html
+HOMEPAGE=	https://wvware.sourceforge.net/libwmf.html
 COMMENT=	Library for reading and converting WMF (Windows Meta Files)
 LICENSE=	gnu-gpl-v2
 

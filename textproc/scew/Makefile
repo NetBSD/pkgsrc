@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/10/09 14:07:07 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:35:32 rillig Exp $
 #
 
 DISTNAME=	scew-0.3.1
@@ -7,7 +7,7 @@ CATEGORIES=	textproc devel
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/scew/
 
 MAINTAINER=	thorbjorn@jemander.net
-HOMEPAGE=	http://www.nongnu.org/scew/
+HOMEPAGE=	https://www.nongnu.org/scew/
 COMMENT=	Light-weight DOM-like object model API for Expat
 
 GNU_CONFIGURE=	YES

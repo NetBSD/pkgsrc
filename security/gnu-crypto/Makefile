@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/04/06 20:27:28 rodent Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/18 23:35:06 rillig Exp $
 #
 
 DISTNAME=		gnu-crypto-2.0.1-bin
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.gnupg.org/GnuPG/gnu-crypto/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/gnu-crypto/
+HOMEPAGE=		https://www.gnu.org/software/gnu-crypto/
 COMMENT=		GPL implementation of the Java Crypto Extensions
 
 USE_JAVA2=		yes

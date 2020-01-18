@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:21 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:58 rillig Exp $
 
 DISTNAME=	currvita
 PKGNAME=	tex-${DISTNAME}-2016
 TEXLIVE_REV=	15878
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/currvita
+HOMEPAGE=	https://ctan.org/pkg/currvita
 COMMENT=	Typeset a curriculum vitae
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/07/21 22:24:05 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/18 23:32:12 rillig Exp $
 #
 
 DISTNAME=	goocanvas-2.0.1
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/goocanvas/2.0/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/GooCanvas
+HOMEPAGE=	https://live.gnome.org/GooCanvas
 COMMENT=	Cairo-based canvas widget for GTK+3.0
 LICENSE=	gnu-lgpl-v2
 

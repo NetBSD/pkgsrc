@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2019/12/06 19:30:00 markd Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 23:31:32 rillig Exp $
 
 DISTNAME=	fontspec
 PKGNAME=	tex-${DISTNAME}-2.7c
 TEXLIVE_REV=	50387
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/fontspec
+HOMEPAGE=	https://ctan.org/pkg/fontspec
 COMMENT=	Advanced font selection in XeLaTeX and LuaLaTeX
 LICENSE=	lppl-1.3c
 

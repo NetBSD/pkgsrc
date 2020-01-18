@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2017/09/16 19:26:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:30:55 rillig Exp $
 TRYTON_MODULE_NAME=	trytond_account_stock_anglo_saxon
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tryton.org/
+HOMEPAGE=	https://www.tryton.org/
 COMMENT=	Tryton's account stock anglo saxon continental module
 LICENSE=	gnu-gpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2019/08/11 13:21:11 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2020/01/18 23:32:13 rillig Exp $
 
 DISTNAME=	gtkglext-1.2.0
 PKGREVISION=	40
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkglext/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gtkglext.sourceforge.net/
+HOMEPAGE=	https://gtkglext.sourceforge.net/
 COMMENT=	OpenGL extension to GTK
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

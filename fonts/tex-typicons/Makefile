@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 19:32:30 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:55 rillig Exp $
 
 DISTNAME=	typicons
 PKGNAME=	tex-${DISTNAME}-2.0.7
 TEXLIVE_REV=	37623
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/typicons
+HOMEPAGE=	https://ctan.org/pkg/typicons
 COMMENT=	Font containing a set of web-related icons
 LICENSE=	lppl-1.3c
 

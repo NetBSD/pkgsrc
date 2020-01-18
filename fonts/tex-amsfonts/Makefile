@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2019/12/06 19:29:31 markd Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:31:09 rillig Exp $
 
 DISTNAME=	amsfonts
 PKGNAME=	tex-${DISTNAME}-3.04
 TEXLIVE_REV=	29208
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/amsfonts
+HOMEPAGE=	https://ctan.org/pkg/amsfonts
 COMMENT=	TeX fonts from the American Mathematical Society
 LICENSE=	ofl-v1.1
 

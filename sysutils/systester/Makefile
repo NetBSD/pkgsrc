@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 21:50:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/18 23:35:21 rillig Exp $
 
 DISTNAME=	systester-1.5.1
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=systester/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://systester.sourceforge.net/
+HOMEPAGE=	https://systester.sourceforge.net/
 COMMENT=	Test system stability and performance by calculating Pi
 LICENSE=	gnu-gpl-v2
 

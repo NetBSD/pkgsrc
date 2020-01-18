@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:18:51 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:35 rillig Exp $
 
 DISTNAME=	babel-catalan
 PKGNAME=	tex-${DISTNAME}-2.2p
 TEXLIVE_REV=	30259
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/babel-catalan
+HOMEPAGE=	https://ctan.org/pkg/babel-catalan
 COMMENT=	Babel contributed support for Catalan
 LICENSE=	lppl-1.3c
 

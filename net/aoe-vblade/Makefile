@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/07/12 05:14:20 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/18 23:33:12 rillig Exp $
 
 DISTNAME=	vblade-14
 PKGNAME=	aoe-vblade-14
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aoetools/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://aoetools.sourceforge.net/
+HOMEPAGE=	https://aoetools.sourceforge.net/
 COMMENT=	ATA over Ethernet (AoE) server - thin, LAN-based storage protocol
 
 BROKEN_EXCEPT_ON_PLATFORM+=	NetBSD-*-* FreeBSD-*-* Linux-*-* DragonFly-*-*

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:19:32 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:34:06 rillig Exp $
 
 DISTNAME=	etoolbox-de.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1
 TEXLIVE_REV=	21906
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/etoolbox-de
+HOMEPAGE=	https://ctan.org/pkg/etoolbox-de
 COMMENT=	German translation of documentation of etoolbox
 LICENSE=	lppl-1.3c
 
