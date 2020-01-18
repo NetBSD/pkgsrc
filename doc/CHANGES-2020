@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.568 2020/01/18 13:16:35 taca Exp $
+$NetBSD: CHANGES-2020,v 1.569 2020/01/18 15:06:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -657,3 +657,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added converters/pandoc version 2.9.1.1 [pho 2020-01-18]
 	Removed editors/tomboy [nia 2020-01-18]
 	Updated archivers/ruby-ffi-libarchive to 1.0.0 [taca 2020-01-18]
+	Updated archivers/ruby-mixlib-archive to 1.0.5 [taca 2020-01-18]
