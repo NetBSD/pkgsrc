@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/11/17 05:38:04 markd Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 21:48:15 jperkin Exp $
 
 DISTNAME=	kmbox-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	mail
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM
