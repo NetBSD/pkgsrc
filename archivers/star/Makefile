@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/01/10 12:24:56 micha Exp $
+# $NetBSD: Makefile,v 1.44 2020/01/18 23:29:57 rillig Exp $
 
 DISTNAME=	schily-2019-12-05
 PKGNAME=	star-1.6.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://s-tar.sf.net/
+HOMEPAGE=	https://s-tar.sf.net/
 COMMENT=	Unique standard tape archiver
 LICENSE=	cddl-1.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/11/02 22:54:28 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/18 23:29:57 rillig Exp $
 
 DISTNAME=		upx-3.91-src
 PKGNAME=		${DISTNAME:S/-src//1}
@@ -11,7 +11,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} lzma443${EXTRACT_SUFX}
 SITES.lzma443.tar.bz2=	${MASTER_SITE_SOURCEFORGE:=sevenzip/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://upx.sourceforge.net/
+HOMEPAGE=	https://upx.sourceforge.net/
 COMMENT=	Ultimate packer for executables
 LICENSE=	gnu-gpl-v2
 

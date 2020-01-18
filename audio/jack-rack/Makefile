@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2020/01/18 21:48:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.68 2020/01/18 23:29:59 rillig Exp $
 #
 
 DISTNAME=	jack-rack-1.4.7
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jack-rack/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jack-rack.sourceforge.net/
+HOMEPAGE=	https://jack-rack.sourceforge.net/
 COMMENT=	Effects "rack" for JACK
 LICENSE=	gnu-gpl-v2
 

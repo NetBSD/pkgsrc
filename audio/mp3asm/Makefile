@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/02 21:09:15 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:30:02 rillig Exp $
 #
 
 DISTNAME=	mp3asm-0.1.3-1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3asm/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://mp3asm.sourceforge.net/
+HOMEPAGE=	https://mp3asm.sourceforge.net/
 COMMENT=	MPEG 1/2/2.5 audio layer 1,2,3 frame level editor
 LICENSE=	gnu-gpl-v2
 

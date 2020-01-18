@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/04/25 07:32:36 maya Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:30:04 rillig Exp $
 
 DISTNAME=	pocketsphinx-0.8
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cmusphinx/}
 
 MAINTAINER=	fhajny@NetBSD.org
-HOMEPAGE=	http://cmusphinx.sourceforge.net/
+HOMEPAGE=	https://cmusphinx.sourceforge.net/
 COMMENT=	CMUSphinx speech recognition C library
 LICENSE=	2-clause-bsd
 
