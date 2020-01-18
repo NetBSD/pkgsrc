@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2019/11/21 23:48:27 nia Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 23:30:01 rillig Exp $
 
 DISTNAME=	libxmp-4.4.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmp/}
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://xmp.sourceforge.net/
+HOMEPAGE=	https://xmp.sourceforge.net/
 COMMENT=	Player for many different Amiga and PC module formats
 LICENSE=	gnu-gpl-v2
 
