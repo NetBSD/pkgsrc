@@ -1,17 +1,22 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/01/18 21:33:13 nia Exp $
 bin/atari800
 man/man1/atari800.1
+share/atari800/advent1.atr
+share/atari800/analog51.xfd
+share/atari800/analog52.xfd
 share/atari800/atari800.cfg
 share/atari800/ataribas.rom
 share/atari800/atariosb.rom
 share/atari800/atarixl.rom
-share/atari800/demos1.xfd
-share/atari800/demos2.xfd
+share/atari800/comdem51.xfd
+share/atari800/demos.xfd
 share/atari800/dos25.xfd
-share/atari800/mydos45d.atr
+share/atari800/games5.atr
+share/atari800/mydos45d.xfd
+share/atari800/startrek.xfd
 share/doc/atari800/COPYING
 share/doc/atari800/INSTALL
 share/doc/atari800/NEWS
 share/doc/atari800/README
-share/doc/atari800/README.1ST
+share/doc/atari800/README.TXT
 share/doc/atari800/USAGE
