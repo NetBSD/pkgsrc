@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2019/09/18 11:27:52 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2020/01/18 21:48:07 jperkin Exp $
 
 BUILDLINK_TREE+=	libthrift
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libthrift
 LIBTHRIFT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libthrift+=	libthrift>=0.2.0
-BUILDLINK_ABI_DEPENDS.libthrift+=	libthrift>=0.12.0
+BUILDLINK_ABI_DEPENDS.libthrift+=	libthrift>=0.13.0nb2
 BUILDLINK_PKGSRCDIR.libthrift?=		../../devel/libthrift
 
 .include "../../devel/boost-headers/buildlink3.mk"
