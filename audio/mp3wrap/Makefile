@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/02 23:47:59 asau Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:30:03 rillig Exp $
 #
 
 DISTNAME=	mp3wrap-0.5-src
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3wrap/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mp3wrap.sourceforge.net/
+HOMEPAGE=	https://mp3wrap.sourceforge.net/
 COMMENT=	Tool to wrap mp3 files into a large one
 LICENSE=	gnu-gpl-v2
 

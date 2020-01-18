@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/11 23:59:26 asau Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:29:58 rillig Exp $
 #
 
 DISTNAME=	blop-0.2.8
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blop/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://blop.sourceforge.net/
+HOMEPAGE=	https://blop.sourceforge.net/
 COMMENT=	Bandlimited LADSPA Oscillator Plugins
 LICENSE=	gnu-gpl-v2
 

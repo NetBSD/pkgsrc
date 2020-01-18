@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/07/13 12:04:37 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/18 23:30:03 rillig Exp $
 
 DISTNAME=		ocp-0.1.21
 PKGREVISION=		7
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=opencubicplayer/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		shattered@NetBSD.org
-HOMEPAGE=		http://sourceforge.net/p/opencubicplayer/
+HOMEPAGE=		https://sourceforge.net/p/opencubicplayer/
 COMMENT=		Open Cubic Player
 LICENSE=		gnu-gpl-v2
 

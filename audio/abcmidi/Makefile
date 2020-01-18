@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/01/19 18:52:01 agc Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/18 23:29:57 rillig Exp $
 #
 
 DISTNAME=	abcMIDI-${ABCMIDIVER}
@@ -9,7 +9,7 @@ MASTER_SITES+=	http://ifdo.pugmarks.com/~seymour/backup/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://abc.sourceforge.net/abcMIDI/
+HOMEPAGE=	https://abc.sourceforge.net/abcMIDI/
 COMMENT=	Music utilities for abc
 LICENSE=	gnu-gpl-v2
 
