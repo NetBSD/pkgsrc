@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/06/29 17:46:55 gutteridge Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/18 17:38:41 gutteridge Exp $
 
 DISTNAME=	link-grammar-5.6.2
 CATEGORIES=	textproc
@@ -15,6 +15,7 @@ USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--disable-java-bindings
+CONFIGURE_ARGS+=	--disable-python-bindings
 
 PKGCONFIG_OVERRIDE+=	link-grammar.pc.in
 
