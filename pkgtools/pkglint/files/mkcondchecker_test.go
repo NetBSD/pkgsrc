@@ -90,6 +90,7 @@ func (s *Suite) Test_MkCondChecker_Check(c *check.C) {
 	// Doesn't occur in practice since it is surprising that the ! applies
 	// to the comparison operator, and not to one of its arguments.
 	test(".if !${VAR} == value",
+		"WARN: filename.mk:4: The ! should use parentheses or be merged into the comparison operator.",
 		"WARN: filename.mk:4: VAR is used but not defined.")
 
 	// Doesn't occur in practice since this string can never be empty.
@@ -213,6 +214,27 @@ func (s *Suite) Test_MkCondChecker_Check__comparing_PKGSRC_COMPILER_with_eqeq(c 
 	t.CheckOutputLines(
 		"ERROR: Makefile:5: Use ${PKGSRC_COMPILER:Mclang} instead of the == operator.",
 		"ERROR: Makefile:6: Use ${PKGSRC_COMPILER:Ngcc} instead of the != operator.")
+}
+
+func (s *Suite) Test_MkCondChecker_checkNotEmpty(c *check.C) {
+	t := s.Init(c)
+
+	G.Experimental = true
+
+	test := func(cond string, diagnostics ...string) {
+		mklines := t.NewMkLines("filename.mk",
+			".if "+cond)
+		mkline := mklines.mklines[0]
+		ck := NewMkCondChecker(mkline, mklines)
+
+		ck.checkNotEmpty(mkline.Cond().Not)
+
+		t.CheckOutput(diagnostics)
+	}
+
+	test("!empty(VAR)",
+		// FIXME: Add a :U modifier if VAR might be undefined.
+		"NOTE: filename.mk:1: !empty(VAR) can be replaced with the simpler ${VAR}.")
 }
 
 func (s *Suite) Test_MkCondChecker_checkEmpty(c *check.C) {
@@ -1148,5 +1170,34 @@ func (s *Suite) Test_MkCondChecker_checkCompareVarStrCompiler(c *check.C) {
 	test(
 		"${PKGSRC_COMPILER} == \"distcc gcc\"",
 
+		nil...)
+}
+
+func (s *Suite) Test_MkCondChecker_checkNotCompare(c *check.C) {
+	t := s.Init(c)
+
+	test := func(cond string, diagnostics ...string) {
+		mklines := t.NewMkLines("filename.mk",
+			".if "+cond)
+		mkline := mklines.mklines[0]
+		ck := NewMkCondChecker(mkline, mklines)
+
+		ck.checkNotCompare(mkline.Cond().Not)
+
+		t.CheckOutput(diagnostics)
+	}
+
+	test("!${VAR} == value",
+		"WARN: filename.mk:1: The ! should use parentheses "+
+			"or be merged into the comparison operator.")
+
+	test("!${VAR} != value",
+		"WARN: filename.mk:1: The ! should use parentheses "+
+			"or be merged into the comparison operator.")
+
+	test("!(${VAR} == value)",
+		nil...)
+
+	test("!${VAR}",
 		nil...)
 }
