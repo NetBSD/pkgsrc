@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/07/07 14:59:43 leot Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 21:53:58 nia Exp $
 
-DISTNAME=	neatvi-06
+DISTNAME=	neatvi-07
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aligrudi/}
 
