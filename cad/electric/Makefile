@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/06/08 11:04:27 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/18 23:30:10 rillig Exp $
 #
 
 DISTNAME=	electric-7.00
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GNU:=electric/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/electric/electric.html
+HOMEPAGE=	https://www.gnu.org/software/electric/electric.html
 COMMENT=	Electrical CAD system
 
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/11/02 21:09:17 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:30:07 rillig Exp $
 
 DISTNAME=	tunapie-2.1.18
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tunapie/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tunapie.sourceforge.net/
+HOMEPAGE=	https://tunapie.sourceforge.net/
 COMMENT=	Directory browser for Internet radio and TV streams
 LICENSE=	gnu-gpl-v2
 

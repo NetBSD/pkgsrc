@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2020/01/18 21:47:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.98 2020/01/18 23:30:06 rillig Exp $
 
 DISTNAME=	streamtuner-0.99.99
 PKGREVISION=	58
@@ -6,7 +6,7 @@ CATEGORIES=	audio www
 MASTER_SITES=	http://savannah.nongnu.org/download/streamtuner/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/streamtuner/
+HOMEPAGE=	https://www.nongnu.org/streamtuner/
 COMMENT=	Stream directory browser
 LICENSE=	modified-bsd
 
