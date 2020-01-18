@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2018/03/17 08:02:14 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/01/18 21:48:18 jperkin Exp $
 
 BUILDLINK_TREE+=	rhash
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	rhash
 RHASH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rhash+=	rhash>=1.3.1
+BUILDLINK_ABI_DEPENDS.rhash?=	rhash>=1.3.9nb1
 BUILDLINK_PKGSRCDIR.rhash?=	../../misc/rhash
 
 BUILDLINK_DEPMETHOD.rhash?=	build
