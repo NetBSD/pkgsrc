@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.587 2020/01/18 16:33:54 taca Exp $
+$NetBSD: CHANGES-2020,v 1.588 2020/01/18 21:23:34 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -676,3 +676,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-cucumber-messages to 9.0.3nb1 [taca 2020-01-18]
 	Updated lang/ruby-gherkin to 9.0.0 [taca 2020-01-18]
 	Updated devel/ruby-c21e to 2.0.0 [taca 2020-01-18]
+	Updated devel/mk-configure to 0.33.0 [cheusov 2020-01-18]
