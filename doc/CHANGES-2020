@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.588 2020/01/18 21:23:34 cheusov Exp $
+$NetBSD: CHANGES-2020,v 1.589 2020/01/18 21:30:26 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -677,3 +677,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/ruby-gherkin to 9.0.0 [taca 2020-01-18]
 	Updated devel/ruby-c21e to 2.0.0 [taca 2020-01-18]
 	Updated devel/mk-configure to 0.33.0 [cheusov 2020-01-18]
+	Updated graphics/MesaLib to 19.2.7nb2 [triaxx 2020-01-18]
