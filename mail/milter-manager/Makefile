@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/11/02 16:25:23 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2020/01/18 23:32:48 rillig Exp $
 #
 
 DISTNAME=	milter-manager-2.0.5
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=milter-manager/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://milter-manager.sourceforge.net/
+HOMEPAGE=	https://milter-manager.sourceforge.net/
 COMMENT=	Milter to use milters effectively
 
 GNU_CONFIGURE=	yes

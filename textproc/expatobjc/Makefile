@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/12/23 11:57:06 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/18 23:35:25 rillig Exp $
 
 DISTNAME=		expatobjc-1.0
 PKGREVISION=		5
@@ -6,7 +6,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=expatobjc/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://expatobjc.sourceforge.net/
+HOMEPAGE=		https://expatobjc.sourceforge.net/
 COMMENT=		Objective-C Wrapper for Expat
 LICENSE=		mit
 

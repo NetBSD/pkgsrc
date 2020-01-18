@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/07/21 22:25:27 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2020/01/18 23:33:12 rillig Exp $
 
 DISTNAME=	pspvc-install-0.3
 PSPVCVER=	pspvc-0.3
@@ -8,7 +8,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pspvc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pspvc.sf.net/
+HOMEPAGE=	https://pspvc.sf.net/
 COMMENT=	PSP video converter
 
 INSTALLATION_DIRS=	share/applications share/pspvc/bin

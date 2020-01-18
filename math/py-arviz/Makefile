@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/11/25 04:08:33 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/18 23:32:52 rillig Exp $
 
 DISTNAME=	arviz-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/arviz/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://github.com/arviz-devs/arviz
+HOMEPAGE=	https://github.com/arviz-devs/arviz
 COMMENT=	Exploratory analysis of Bayesian models
 LICENSE=	apache-2.0
 

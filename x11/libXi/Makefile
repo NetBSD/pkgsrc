@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/06/19 17:30:51 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/18 23:35:52 rillig Exp $
 
 DISTNAME=		libXi-1.7.10
 CATEGORIES=		x11 devel
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		X Input extension library
 LICENSE=		mit
 

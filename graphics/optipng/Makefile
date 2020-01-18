@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2018/06/27 11:52:17 adam Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/18 23:32:16 rillig Exp $
 
 DISTNAME=	optipng-0.7.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=optipng/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://optipng.sourceforge.net/
+HOMEPAGE=	https://optipng.sourceforge.net/
 COMMENT=	Advanced PNG Optimizer
 LICENSE=	zlib
 

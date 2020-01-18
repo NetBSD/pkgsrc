@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/07/04 13:40:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/18 23:32:41 rillig Exp $
 #
 
 DISTNAME=		ccsh-0.0.4
@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ccsh/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ccsh.sourceforge.net/
+HOMEPAGE=		https://ccsh.sourceforge.net/
 COMMENT=		C-like syntax scripting
 
 USE_TOOLS+=		gmake

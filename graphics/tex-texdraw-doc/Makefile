@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:04:38 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:32:34 rillig Exp $
 
 DISTNAME=	texdraw.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2.3
 TEXLIVE_REV=	51030
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/texdraw
+HOMEPAGE=	https://ctan.org/pkg/texdraw
 COMMENT=	Documentation for tex-texdraw
 LICENSE=	cc-by-v4.0
 

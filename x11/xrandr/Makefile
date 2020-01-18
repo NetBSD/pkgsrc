@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/11/14 10:30:43 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/18 23:36:12 rillig Exp $
 
 DISTNAME=	xrandr-1.5.1
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Primitive command line interface to RandR extension
 LICENSE=	mit
 

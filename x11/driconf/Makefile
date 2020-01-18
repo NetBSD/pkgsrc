@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/11/03 09:14:07 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/18 23:35:47 rillig Exp $
 
 DISTNAME=	driconf-0.9.1
 PKGREVISION=	11
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://dri.freedesktop.org/wiki/DriConf
+HOMEPAGE=	https://dri.freedesktop.org/wiki/DriConf
 COMMENT=	Configuration applet for DRI drivers
 LICENSE=	gnu-gpl-v2 # or later
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/29 05:07:13 asau Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:36:09 rillig Exp $
 #
 
 DISTNAME=		xkbdata-1.0.1
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=data/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Xorg keyboard maps and layouts
 
 CONFLICTS+=		xkeyboard-config-[0-9]*

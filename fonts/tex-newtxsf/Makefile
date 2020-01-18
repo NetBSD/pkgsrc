@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 19:32:15 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/18 23:31:45 rillig Exp $
 
 DISTNAME=	newtxsf
 PKGNAME=	tex-${DISTNAME}-1.051
 TEXLIVE_REV=	47958
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/newtxsf
+HOMEPAGE=	https://ctan.org/pkg/newtxsf
 COMMENT=	Sans-math fonts for use with newtx
 LICENSE=	ofl-v1.1
 

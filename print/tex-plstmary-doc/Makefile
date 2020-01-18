@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:05 markd Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/18 23:34:41 rillig Exp $
 
 DISTNAME=	plstmary.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-0.5c
 TEXLIVE_REV=	31088
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/plstmary
+HOMEPAGE=	https://ctan.org/pkg/plstmary
 COMMENT=	Documentation for tex-plstmary
 LICENSE=	public-domain
 

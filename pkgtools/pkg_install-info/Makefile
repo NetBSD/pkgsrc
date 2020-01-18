@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/10/09 14:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/18 23:33:26 rillig Exp $
 #
 
 PKGNAME=		pkg_install-info-${VERSION}
@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		pkgtools
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
+HOMEPAGE=		https://www.gnu.org/software/texinfo/texinfo.html
 COMMENT=		Standalone GNU info file installation utility
 LICENSE=		gnu-gpl-v2 # or later
 

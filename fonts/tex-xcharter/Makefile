@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2019/12/06 19:32:32 markd Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:31:57 rillig Exp $
 
 DISTNAME=	xcharter
 PKGNAME=	tex-${DISTNAME}-1.116
 TEXLIVE_REV=	48498
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/xcharter
+HOMEPAGE=	https://ctan.org/pkg/xcharter
 COMMENT=	Extension of Bitstream Charter fonts
 LICENSE=	lppl-1.3c
 

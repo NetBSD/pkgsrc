@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/10/12 20:00:30 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/18 23:32:00 rillig Exp $
 #
 
 DISTNAME=	fillets-ng-1.0.1
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fillets/}
 
 MAINTAINER=	salo@NetBSD.org
-HOMEPAGE=	http://fillets.sourceforge.net/
+HOMEPAGE=	https://fillets.sourceforge.net/
 COMMENT=	Puzzle game about witty fish saving the world sokoban style
 LICENSE=	gnu-gpl-v2
 

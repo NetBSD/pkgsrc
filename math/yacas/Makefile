@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/08/11 13:21:53 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/18 23:32:55 rillig Exp $
 #
 
 DISTNAME=	yacas-1.2.2
@@ -7,7 +7,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://yacas.sourceforge.net/backups/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://yacas.sourceforge.net/
+HOMEPAGE=	https://yacas.sourceforge.net/
 COMMENT=	Yet Another Computer Algebra System
 LICENSE=	gnu-gpl-v2
 

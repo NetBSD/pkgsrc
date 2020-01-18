@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/11/04 21:13:00 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/18 23:35:12 rillig Exp $
 
 DISTNAME=	GnuPGInterface-0.3.2
 PKGNAME=	${PYPKGPREFIX}-gnupg-0.3.2
@@ -7,7 +7,7 @@ CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=py-gnupg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://py-gnupg.sourceforge.net/
+HOMEPAGE=	https://py-gnupg.sourceforge.net/
 COMMENT=	Python module for GnuPG interface
 LICENSE=	gnu-lgpl-v2.1
 

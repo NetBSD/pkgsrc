@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/08 13:45:47 asau Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:34:18 rillig Exp $
 
 DISTNAME=	igo
 PKGNAME=	tex-${DISTNAME}-0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=fonts/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.ctan.org/tex-archive/fonts/igo/
+HOMEPAGE=	https://www.ctan.org/tex-archive/fonts/igo/
 COMMENT=	Fonts and macro to typeset Go diagrams
 
 BUILD_DEPENDS+=	kpathsea-[0-9]*:../../print/kpathsea

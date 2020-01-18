@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/02/21 09:41:42 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/18 23:36:09 rillig Exp $
 
 DISTNAME=	xhost-1.0.8
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Server access control program for X
 
 GNU_CONFIGURE=	yes

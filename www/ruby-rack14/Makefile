@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2015/06/22 13:57:59 taca Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:35:45 rillig Exp $
 
 DISTNAME=	rack-1.4.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rack/rack14/}
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rack.github.com/
+HOMEPAGE=	https://rack.github.com/
 COMMENT=	Modular Ruby webserver interface
 LICENSE=	mit
 

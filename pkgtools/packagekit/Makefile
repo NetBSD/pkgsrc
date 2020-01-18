@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2019/09/02 13:20:20 adam Exp $
+# $NetBSD: Makefile,v 1.77 2020/01/18 23:33:26 rillig Exp $
 
 DISTNAME=	PackageKit-0.4.0
 PKGREVISION=	54
@@ -7,7 +7,7 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	http://www.freedesktop.org/software/PackageKit/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/software/PackageKit/
+HOMEPAGE=	https://www.freedesktop.org/software/PackageKit/
 COMMENT=	System activated daemon for managing software updates
 LICENSE=	gnu-gpl-v2
 

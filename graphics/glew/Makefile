@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/09/25 13:22:09 nia Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/18 23:32:12 rillig Exp $
 
 DISTNAME=	glew-2.1.0
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=glew/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://glew.sourceforge.net/
+HOMEPAGE=	https://glew.sourceforge.net/
 COMMENT=	OpenGL Extension Wrangler Library
 LICENSE=	modified-bsd AND mit
 

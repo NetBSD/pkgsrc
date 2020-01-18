@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2019/12/06 20:23:01 markd Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/18 23:34:38 rillig Exp $
 
 DISTNAME=	pdftex
 PKGNAME=	tex-${DISTNAME}-2018
 TEXLIVE_REV=	48806
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/pdftex
+HOMEPAGE=	https://ctan.org/pkg/pdftex
 COMMENT=	TeX extension for direct creation of PDF
 LICENSE=	gnu-gpl-v2
 

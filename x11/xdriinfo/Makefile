@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/03/07 12:20:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:36:00 rillig Exp $
 
 DISTNAME=	xdriinfo-1.0.6
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/
+HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	X.org DRI information utility
 
 ###

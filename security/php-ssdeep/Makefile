@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/09/11 17:03:27 taca Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/18 23:35:11 rillig Exp $
 #
 
 MODNAME=		ssdeep
@@ -6,7 +6,7 @@ PECL_VERSION=		1.0.4
 CATEGORIES+=		security
 
 MAINTAINER=		khorben@defora.org
-HOMEPAGE=		http://treffynnon.github.io/php_ssdeep/
+HOMEPAGE=		https://treffynnon.github.io/php_ssdeep/
 COMMENT=		PHP extension for ssdeep
 LICENSE=		artistic
 

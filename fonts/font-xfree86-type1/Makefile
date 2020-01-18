@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 18:28:22 asau Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:31:04 rillig Exp $
 #
 
 DISTNAME=		font-xfree86-type1-1.0.4
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/
+HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		XFree86 cursor Type1 fonts
 
 GNU_CONFIGURE=		yes

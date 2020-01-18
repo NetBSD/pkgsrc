@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2020/01/18 21:48:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.96 2020/01/18 23:32:46 rillig Exp $
 
 DISTNAME=	akonadi-1.13.0
 PKGREVISION=	29
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://kde.mirror.anlx.net/stable/akonadi/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://pim.kde.org/akonadi/
+HOMEPAGE=	https://pim.kde.org/akonadi/
 COMMENT=	The KDE PIM Storage Service
 LICENSE=	gnu-lgpl-v2.1
 

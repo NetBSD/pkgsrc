@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2017/08/18 22:14:38 adam Exp $
+# $NetBSD: Makefile,v 1.44 2020/01/18 23:32:01 rillig Exp $
 
 DISTNAME=	gnuchess-6.2.5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNU:=chess/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/chess/chess.html
+HOMEPAGE=	https://www.gnu.org/software/chess/chess.html
 COMMENT=	GNU chess engine
 LICENSE=	gnu-gpl-v3
 

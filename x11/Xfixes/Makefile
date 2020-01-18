@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/11/03 09:14:06 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/18 23:35:46 rillig Exp $
 
 DISTNAME=		libXfixes-2.0.1
 PKGNAME=		${DISTNAME:S/libX/X/}
@@ -8,7 +8,7 @@ MASTER_SITES=		https://xlibs.freedesktop.org/release/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://freedesktop.org/
+HOMEPAGE=		https://freedesktop.org/
 COMMENT=		X Fixes extension of X RandR
 
 CONFLICTS+=		libXfixes-[0-9]*

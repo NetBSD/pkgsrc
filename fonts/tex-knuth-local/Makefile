@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 19:30:09 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/18 23:31:39 rillig Exp $
 
 DISTNAME=	knuth-local
 PKGNAME=	tex-${DISTNAME}-2016
 TEXLIVE_REV=	38627
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/knuth-local
+HOMEPAGE=	https://ctan.org/pkg/knuth-local
 COMMENT=	Knuth's local information
 #LICENSE=	knuth
 

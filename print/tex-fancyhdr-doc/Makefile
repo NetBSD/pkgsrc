@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2019/12/06 20:21:22 markd Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/18 23:34:07 rillig Exp $
 
 DISTNAME=	fancyhdr.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-3.10
 TEXLIVE_REV=	49886
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/fancyhdr
+HOMEPAGE=	https://ctan.org/pkg/fancyhdr
 COMMENT=	Documentation for tex-fancyhdr
 LICENSE=	lppl-1.3c
 

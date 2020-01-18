@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 19:29:46 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/18 23:31:21 rillig Exp $
 
 DISTNAME=	cns.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2018
 TEXLIVE_REV=	45677
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ctan.org/pkg/cjk-fonts
+HOMEPAGE=	https://ctan.org/pkg/cjk-fonts
 COMMENT=	Documentation for tex-cns
 LICENSE=	public-domain
 
