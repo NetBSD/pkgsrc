@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.582 2020/01/18 16:16:38 taca Exp $
+$NetBSD: CHANGES-2020,v 1.583 2020/01/18 16:22:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -671,3 +671,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/sxiv to 26 [leot 2020-01-18]
 	Added devel/ruby-middleware version 0.1.0 [taca 2020-01-18]
 	Added devel/ruby-protobuf-cucumber version 3.10.4 [taca 2020-01-18]
+	Updated textproc/ruby-json-pure to 2.2.0 [taca 2020-01-18]
