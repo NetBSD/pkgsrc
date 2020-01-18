@@ -1,8 +1,9 @@
-$NetBSD: patch-ghc_ghc.mk,v 1.1 2020/01/09 12:32:24 pho Exp $
+$NetBSD: patch-ghc_ghc.mk,v 1.2 2020/01/18 11:40:04 pho Exp $
 
 Fix building bootkits: the ghc-bin package is threaded by default, but
 the build system fails to opt out from it when threaded RTS is
-disabled.
+disabled:
+https://gitlab.haskell.org/ghc/ghc/issues/17692
 
 --- ghc/ghc.mk.orig	2019-08-25 12:03:36.000000000 +0000
 +++ ghc/ghc.mk
