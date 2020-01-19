@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.10 2019/12/03 16:29:39 minskim Exp $
+# $NetBSD: cargo.mk,v 1.11 2020/01/19 16:53:10 maya Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -33,6 +33,12 @@ DISTFILES+=			${_crate}.crate
 SITES.${_crate}.crate+=		-${MASTER_SITE_CRATESIO}${_crate:C/-[0-9]+\.[0-9.]+.*$//}/${_crate:C/^.*-([0-9]+\.[0-9.]+.*)$/\1/}/download
 EXTRACT_DIR.${_crate}.crate?=	${CARGO_VENDOR_DIR}
 .endfor
+
+.include "../../mk/bsd.prefs.mk"
+# Triggers NetBSD ld.so bug (PR toolchain/54192)
+.if ${OPSYS} == "NetBSD"
+MAKE_JOBS_SAFE=	no
+.endif
 
 post-extract: cargo-vendor-crates
 .PHONY: cargo-vendor-crates
