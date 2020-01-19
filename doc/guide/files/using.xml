@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.48 2019/12/06 14:30:12 leot Exp $ -->
+<!-- $NetBSD: using.xml,v 1.49 2020/01/19 13:38:42 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -67,7 +67,8 @@ and you can still use binary packages from someone else.</para>
 
 <screen>
 &rprompt; <userinput>PATH="/usr/pkg/sbin:$PATH"</userinput>
-&rprompt; <userinput>PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages/<replaceable>OPSYS</replaceable>/<replaceable>ARCH</replaceable>/<replaceable>VERSIONS</replaceable>/All/"</userinput>
+&rprompt; <userinput>PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages"</userinput>
+&rprompt; <userinput>PKG_PATH="$PKG_PATH/<replaceable>OPSYS</replaceable>/<replaceable>ARCH</replaceable>/<replaceable>VERSIONS</replaceable>/All/"</userinput>
 &rprompt; <userinput>export PATH PKG_PATH</userinput>
 </screen>
 
