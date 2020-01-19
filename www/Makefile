@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1431 2020/01/19 10:50:21 pho Exp $
+# $NetBSD: Makefile,v 1.1432 2020/01/19 12:52:02 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -89,7 +89,6 @@ SUBDIR+=	dansguardian
 SUBDIR+=	davical
 SUBDIR+=	deforaos-surfer
 SUBDIR+=	dillo
-SUBDIR+=	drivel
 SUBDIR+=	drraw
 SUBDIR+=	drupal7
 SUBDIR+=	drupal8
