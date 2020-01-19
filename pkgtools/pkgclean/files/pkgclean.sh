@@ -1,8 +1,8 @@
 #! @SH@
-# $NetBSD: pkgclean.sh,v 1.3 2008/04/29 05:46:08 martin Exp $
+# $NetBSD: pkgclean.sh,v 1.4 2020/01/19 03:31:30 gutteridge Exp $
 #
 
-# Copyright (c) 2005 The NetBSD Foundation, Inc.
+# Copyright (c) 2005, 2020 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -45,11 +45,17 @@ esac
 # Sanity checks
 #
 
+if [ ! -d "$pkgsrcdir" ]; then
+	echo "$0: error: PKGSRCDIR is not valid." 1>&2
+	exit 1
+fi
+
 case $pkgsrcdir in
 /*)	;;
 *)	echo "$0: error: PKGSRCDIR must be an absolute path." 1>&2
 	exit 1;;
 esac
+
 case $wrkdir_basename in
 */*)	echo "$0: error: wrkdir_basename must not contain slashes." 1>&2
 	exit 1;;
