@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.642 2020/01/19 14:47:23 taca Exp $
+$NetBSD: CHANGES-2020,v 1.643 2020/01/19 14:50:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -731,3 +731,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/ruby-tty-cursor version 0.7.0 [taca 2020-01-19]
 	Added devel/hs-parser-combinators version 1.2.1 [pho 2020-01-19]
 	Added devel/ruby-tty-box version 0.5.0 [taca 2020-01-19]
+	Added devel/ruby-tty-screen version 0.7.0 [taca 2020-01-19]
