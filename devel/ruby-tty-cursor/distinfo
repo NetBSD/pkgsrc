@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/19 14:40:27 taca Exp $
+
+SHA1 (tty-cursor-0.7.0.gem) = 4fcc5ccf12b138887dda3b39d105473b54fe4f04
+RMD160 (tty-cursor-0.7.0.gem) = 66115ee11743b21167debc60cf841fbca28d596b
+SHA512 (tty-cursor-0.7.0.gem) = 00de195ba183174ebd10da7f1fdbb436a17fe9befc6eacb2d4cf4b1505be2c7d0719c0dc32d75a82900b2252ffbed00219ce31836c442b63c267e26dad40da63
+Size (tty-cursor-0.7.0.gem) = 11776 bytes
