@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.630 2020/01/19 13:11:24 pho Exp $
+$NetBSD: CHANGES-2020,v 1.631 2020/01/19 13:36:13 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -719,3 +719,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-code-page version 0.2 [pho 2020-01-19]
 	Removed www/drivel [nia 2020-01-19]
 	Added devel/hs-fingertree version 0.1.4.2 [pho 2020-01-19]
+	Added devel/hs-fsnotify version 0.3.0.1 [pho 2020-01-19]
