@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.607 2020/01/19 00:47:38 nia Exp $
+$NetBSD: CHANGES-2020,v 1.608 2020/01/19 00:51:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -696,3 +696,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/freeciv-server to 2.6.1 [nia 2020-01-19]
 	Updated games/freeciv-client to 2.6.1 [nia 2020-01-19]
 	Removed games/gturing [nia 2020-01-19]
+	Removed editors/mlview [nia 2020-01-19]
