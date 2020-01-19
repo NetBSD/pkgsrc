@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1099 2020/01/19 09:11:24 taca Exp $
+# $NetBSD: Makefile,v 1.1100 2020/01/19 09:25:27 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -992,6 +992,7 @@ SUBDIR+=	ruby-mecab
 SUBDIR+=	ruby-multi_json
 SUBDIR+=	ruby-native-hyperestraier
 SUBDIR+=	ruby-nokogiri
+SUBDIR+=	ruby-nori
 SUBDIR+=	ruby-nqxml
 SUBDIR+=	ruby-oniguruma
 SUBDIR+=	ruby-plist
