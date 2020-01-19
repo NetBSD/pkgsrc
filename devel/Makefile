@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3025 2020/01/19 14:57:32 taca Exp $
+# $NetBSD: Makefile,v 1.3026 2020/01/19 15:02:36 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2790,6 +2790,7 @@ SUBDIR+=	ruby-turn
 SUBDIR+=	ruby-uglifier
 SUBDIR+=	ruby-uuidtools
 SUBDIR+=	ruby-validatable
+SUBDIR+=	ruby-wisper
 SUBDIR+=	ruby-wmi-lite
 SUBDIR+=	ruby-zookeeper
 SUBDIR+=	ruby2ruby
