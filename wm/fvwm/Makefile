@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/09/21 13:56:15 ng0 Exp $
+# $NetBSD: Makefile,v 1.42 2020/01/19 22:16:18 maya Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 CATEGORIES=	x11 wm
@@ -51,8 +51,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../devel/libstroke/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/librsvg/available.mk"
-.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
