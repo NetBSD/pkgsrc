@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/19 16:52:46 maya Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/19 18:20:45 maya Exp $
 
 DISTNAME=	exa-0.9.0
 CATEGORIES=	sysutils
@@ -85,7 +85,7 @@ INSTALLATION_DIRS=	bin \
 			share/zsh/site-functions
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release -j${EFFECTIVE_MAKE_JOBS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release -j${_MAKE_JOBS_N}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/exa ${DESTDIR}${PREFIX}/bin
