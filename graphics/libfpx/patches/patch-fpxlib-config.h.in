@@ -1,0 +1,36 @@
+$NetBSD: patch-fpxlib-config.h.in,v 1.1 2020/01/19 11:07:56 nros Exp $
+
+* search for endian headers to make this package build
+  on more platforms (illumos)
+
+--- fpxlib-config.h.in.orig	2020-01-19 10:29:13.655460121 +0000
++++ fpxlib-config.h.in
+@@ -6,12 +6,18 @@
+ /* Define to 1 if you have the <dlfcn.h> header file. */
+ #undef HAVE_DLFCN_H
+ 
++/* Define to 1 if you have the <endian.h> header file. */
++#undef HAVE_ENDIAN_H
++
+ /* Define to 1 if you have the <inttypes.h> header file. */
+ #undef HAVE_INTTYPES_H
+ 
+ /* Define to 1 if you have the <memory.h> header file. */
+ #undef HAVE_MEMORY_H
+ 
++/* Define to 1 if you have the <solaris.h> header file. */
++#undef HAVE_SOLARIS_H
++
+ /* Define to 1 if you have the <stdint.h> header file. */
+ #undef HAVE_STDINT_H
+ 
+@@ -24,6 +30,9 @@
+ /* Define to 1 if you have the <string.h> header file. */
+ #undef HAVE_STRING_H
+ 
++/* Define to 1 if you have the <sys/endian.h> header file. */
++#undef HAVE_SYS_ENDIAN_H
++
+ /* Define to 1 if you have the <sys/mount.h> header file. */
+ #undef HAVE_SYS_MOUNT_H
+ 
