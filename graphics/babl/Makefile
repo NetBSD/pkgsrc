@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/01/09 23:37:45 nia Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/19 23:19:50 nia Exp $
 
 DISTNAME=	babl-0.1.72
 CATEGORIES=	graphics
@@ -11,6 +11,7 @@ COMMENT=	Dynamic pixel conversion library
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c99
 
 MESON_ARGS+=	-Dwith-docs=false
 MESON_ARGS+=	-Denable-gir=false
