@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1300 2020/01/19 15:33:48 taca Exp $
+# $NetBSD: Makefile,v 1.1301 2020/01/19 15:36:31 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -798,6 +798,7 @@ SUBDIR+=	ruby-snmp
 SUBDIR+=	ruby-soap4r
 SUBDIR+=	ruby-stompserver
 SUBDIR+=	ruby-train-core
+SUBDIR+=	ruby-train-winrm
 SUBDIR+=	ruby-tw
 SUBDIR+=	ruby-twitter
 SUBDIR+=	ruby-twitter-stream
