@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/19 15:04:46 taca Exp $
+
+SHA1 (zeitwerk-2.2.2.gem) = 0c671da0e494281d575ce84c4a6c293462e938c8
+RMD160 (zeitwerk-2.2.2.gem) = 7ce982f94d53dbd65c82929629e93ab6cde93c45
+SHA512 (zeitwerk-2.2.2.gem) = 888928b47a1b07d89fbdba4d3d862182f01efe192b9a16f984cc2dea1a9d7c1ee84d4b00017299a2b9b6c96c15fb04f7f7493fb184d5a258202b469181486809
+Size (zeitwerk-2.2.2.gem) = 23552 bytes
