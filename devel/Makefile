@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3017 2020/01/19 13:36:41 pho Exp $
+# $NetBSD: Makefile,v 1.3018 2020/01/19 14:34:23 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2778,6 +2778,7 @@ SUBDIR+=	ruby-thrift
 SUBDIR+=	ruby-thrift_client
 SUBDIR+=	ruby-tins
 SUBDIR+=	ruby-tomlrb
+SUBDIR+=	ruby-tty-color
 SUBDIR+=	ruby-turn
 SUBDIR+=	ruby-uglifier
 SUBDIR+=	ruby-uuidtools
