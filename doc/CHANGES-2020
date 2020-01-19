@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.653 2020/01/19 15:39:44 taca Exp $
+$NetBSD: CHANGES-2020,v 1.654 2020/01/19 15:40:24 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -742,3 +742,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/ruby-winrm-fs version 1.3.4 [taca 2020-01-19]
 	Added net/ruby-train-winrm version 0.2.6 [taca 2020-01-19]
 	Added misc/ruby-license-acceptance version 1.0.13 [taca 2020-01-19]
+	Added devel/hs-optparse-applicative version 0.15.1.0 [pho 2020-01-19]
