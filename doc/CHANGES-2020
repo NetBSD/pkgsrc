@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.645 2020/01/19 14:57:46 taca Exp $
+$NetBSD: CHANGES-2020,v 1.646 2020/01/19 15:01:32 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -734,3 +734,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/ruby-tty-screen version 0.7.0 [taca 2020-01-19]
 	Added devel/ruby-tty-reader version 0.7.0 [taca 2020-01-19]
 	Added devel/ruby-tty-prompt version 0.20.0 [taca 2020-01-19]
+	Added textproc/hs-megaparsec version 8.0.0 [pho 2020-01-19]
