@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.632 2020/01/19 13:53:37 nia Exp $
+$NetBSD: CHANGES-2020,v 1.633 2020/01/19 14:01:23 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -721,3 +721,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-fingertree version 0.1.4.2 [pho 2020-01-19]
 	Added devel/hs-fsnotify version 0.3.0.1 [pho 2020-01-19]
 	Updated wm/velox to 0.0.3.20200119 [nia 2020-01-19]
+	Added math/hs-ieee754 version 0.8.0 [pho 2020-01-19]
