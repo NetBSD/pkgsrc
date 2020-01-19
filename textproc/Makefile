@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1107 2020/01/19 14:17:50 taca Exp $
+# $NetBSD: Makefile,v 1.1108 2020/01/19 15:02:01 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -304,6 +304,7 @@ SUBDIR+=	hs-hxt-regex-xmlschema
 SUBDIR+=	hs-hxt-unicode
 SUBDIR+=	hs-jira-wiki-markup
 SUBDIR+=	hs-libyaml
+SUBDIR+=	hs-megaparsec
 SUBDIR+=	hs-pandoc-types
 SUBDIR+=	hs-polyparse
 SUBDIR+=	hs-regex-base
