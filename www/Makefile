@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1429 2020/01/19 08:23:48 taca Exp $
+# $NetBSD: Makefile,v 1.1430 2020/01/19 08:50:01 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -864,6 +864,7 @@ SUBDIR+=	ruby-http
 SUBDIR+=	ruby-http-accept
 SUBDIR+=	ruby-http-cookie
 SUBDIR+=	ruby-http-form_data
+SUBDIR+=	ruby-http-parser
 SUBDIR+=	ruby-http_parser.rb
 SUBDIR+=	ruby-http_router
 SUBDIR+=	ruby-httpclient
