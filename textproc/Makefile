@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1108 2020/01/19 15:02:01 pho Exp $
+# $NetBSD: Makefile,v 1.1109 2020/01/19 23:47:26 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -310,6 +310,7 @@ SUBDIR+=	hs-polyparse
 SUBDIR+=	hs-regex-base
 SUBDIR+=	hs-regex-pcre
 SUBDIR+=	hs-regex-posix
+SUBDIR+=	hs-regex-tdfa
 SUBDIR+=	hs-skylighting
 SUBDIR+=	hs-skylighting-core
 SUBDIR+=	hs-stringsearch
