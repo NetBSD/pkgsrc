@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2020/01/18 21:49:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.138 2020/01/19 20:46:40 maya Exp $
 
 DISTNAME=	rustc-1.40.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -98,7 +98,7 @@ PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
 CONFIGURE_ARGS+=	--enable-vendor
 
 # cargo defaults to using the number of available CPUs
-MAKE_ENV+=		CARGO_BUILD_JOBS=${MAKE_JOBS:U1}
+MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
@@ -135,6 +135,10 @@ CONFIGURE_ARGS+=	--debuginfo-level-tests=0
 CONFIGURE_ARGS+=	--set llvm.targets="ARM;X86"
 .endif
 
+# toolchain/54192, induces rtld issues
+.if ${OPSYS} == "NetBSD"
+MAKE_JOBS_SAFE=	no
+.endif
 
 #
 # Under NetBSD, do not use DT_RUNPATH
@@ -351,12 +355,12 @@ pre-build: pre-build-fix
 do-build:
 	cd ${WRKSRC} \
 	&& ${SETENV} ${MAKE_ENV} \
-		${PYTHONBIN} ./x.py -v ${BUILD_TARGET} -j ${MAKE_JOBS:U1}
+		${PYTHONBIN} ./x.py -v ${BUILD_TARGET} -j ${_MAKE_JOBS_N}
 
 do-install:
 	cd ${WRKSRC} \
 	&& ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} \
-		${PYTHONBIN} ./x.py -v install -j ${MAKE_JOBS:U1}
+		${PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N}
 
 GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 			sed 's,${DESTDIR}${PREFIX}/,,' | ${SORT} ;
