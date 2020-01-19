@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/19 08:23:06 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/http-accept.gemspec
+${GEM_LIBDIR}/lib/http/accept.rb
+${GEM_LIBDIR}/lib/http/accept/charsets.rb
+${GEM_LIBDIR}/lib/http/accept/content_type.rb
+${GEM_LIBDIR}/lib/http/accept/encodings.rb
+${GEM_LIBDIR}/lib/http/accept/languages.rb
+${GEM_LIBDIR}/lib/http/accept/media_types.rb
+${GEM_LIBDIR}/lib/http/accept/media_types/map.rb
+${GEM_LIBDIR}/lib/http/accept/parse_error.rb
+${GEM_LIBDIR}/lib/http/accept/quoted_string.rb
+${GEM_LIBDIR}/lib/http/accept/sort.rb
+${GEM_LIBDIR}/lib/http/accept/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
