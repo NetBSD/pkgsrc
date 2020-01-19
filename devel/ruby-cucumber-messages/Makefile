@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 16:26:43 taca Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/19 00:48:43 taca Exp $
 
 DISTNAME=	cucumber-messages-9.0.3
 PKGREVISION=	1
@@ -9,8 +9,8 @@ HOMEPAGE=	https://github.com/cucumber/cucumber-messages-ruby
 COMMENT=	Cucumber Messages for Ruby (Protocol Buffers)
 LICENSE=	mit
 
-DEPENDS+=	json>=2.3.0<2.4:../../textproc/ruby-json
-DEPENDS+=	protobuf-cucumber>=3.10.4<3.11:../../devel/ruby-protobuf-cucumber
+DEPENDS+=	${RUBY_PKGPREFIX}-json>=2.3.0<2.4:../../textproc/ruby-json
+DEPENDS+=	${RUBY_PKGPREFIX}-protobuf-cucumber>=3.10.4<3.11:../../devel/ruby-protobuf-cucumber
 
 USE_LANGUAGES=	# none
 
