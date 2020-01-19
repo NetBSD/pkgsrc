@@ -1,0 +1,2 @@
+bin/wisper-console @PREFIX@/bin/wisper-console@RUBY_SUFFIX@
+bin/wisper-setup @PREFIX@/bin/wisper-setup@RUBY_SUFFIX@
