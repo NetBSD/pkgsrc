@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.533 2020/01/16 14:11:03 nia Exp $
+# $NetBSD: Makefile,v 1.534 2020/01/19 07:52:21 pho Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -28,6 +28,7 @@ SUBDIR+=	bsdiff
 SUBDIR+=	bsdstats
 SUBDIR+=	buffer
 SUBDIR+=	byobu
+SUBDIR+=	cabal-install
 SUBDIR+=	calibre
 SUBDIR+=	celestia
 SUBDIR+=	chipmunk
