@@ -1,0 +1,3 @@
+# http-parser
+
+Ruby FFI bindings to [http-parser](https://github.com/joyent/http-parser).
