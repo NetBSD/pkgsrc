@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2019/05/23 19:23:13 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2020/01/19 03:31:30 gutteridge Exp $
 
-PKGNAME=	pkgclean-20051116
+PKGNAME=	pkgclean-20200119
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
