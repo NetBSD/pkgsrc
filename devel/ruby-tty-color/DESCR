@@ -1,0 +1,6 @@
+TTY::Color
+
+> Terminal color capabilities detection.
+
+TTY::Color provides independent color support detection component for TTY
+(https://github.com/piotrmurach/tty) toolkit.
