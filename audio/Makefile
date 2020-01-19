@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.580 2020/01/17 05:43:17 gutteridge Exp $
+# $NetBSD: Makefile,v 1.581 2020/01/19 01:04:52 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -13,7 +13,6 @@ SUBDIR+=	adplug
 SUBDIR+=	aeneas
 SUBDIR+=	aiomixer
 SUBDIR+=	alacconvert
-SUBDIR+=	albumplayer
 SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-plugins-oss
 SUBDIR+=	alsa-plugins-pulse
