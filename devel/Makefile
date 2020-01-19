@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3013 2020/01/18 22:57:31 pho Exp $
+# $NetBSD: Makefile,v 1.3014 2020/01/19 01:12:09 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -530,6 +530,7 @@ SUBDIR+=	hs-hint
 SUBDIR+=	hs-hslua-module-system
 SUBDIR+=	hs-ipynb
 SUBDIR+=	hs-lifted-base
+SUBDIR+=	hs-lukko
 SUBDIR+=	hs-memory
 SUBDIR+=	hs-mmorph
 SUBDIR+=	hs-monad-control
