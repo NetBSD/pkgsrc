@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/19 08:49:21 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/ext/Rakefile
+${GEM_LIBDIR}/ext/http-parser/http_parser.c
+${GEM_LIBDIR}/ext/http-parser/http_parser.h
+${GEM_LIBDIR}/ext/${RUBY_ARCH}/libhttp-parser-ext.${RUBY_DLEXT}
+${GEM_LIBDIR}/http-parser.gemspec
+${GEM_LIBDIR}/lib/http-parser.rb
+${GEM_LIBDIR}/lib/http-parser/errors.rb
+${GEM_LIBDIR}/lib/http-parser/ext.rb
+${GEM_LIBDIR}/lib/http-parser/parser.rb
+${GEM_LIBDIR}/lib/http-parser/types.rb
+${GEM_LIBDIR}/lib/http-parser/version.rb
+${GEM_LIBDIR}/spec/error_spec.rb
+${GEM_LIBDIR}/spec/instance_spec.rb
+${GEM_LIBDIR}/spec/parser_spec.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
