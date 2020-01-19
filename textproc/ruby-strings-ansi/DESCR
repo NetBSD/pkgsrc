@@ -1,0 +1,6 @@
+Strings::ANSI
+
+> Handle ANSI escape codes in strings.
+
+Strings::ANSI provides ANSI handling for Strings
+(https://github.com/piotrmurach/strings) utilities.
