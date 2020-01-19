@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/07/22 23:48:31 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/19 16:52:47 maya Exp $
 
 DISTNAME=	geckodriver-0.24.0
 CATEGORIES=	www
@@ -170,7 +170,7 @@ post-extract:
 	cp ${FILESDIR}/Cargo.lock ${WRKSRC}/Cargo.lock
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release -j${EFFECTIVE_MAKE_JOBS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/geckodriver ${DESTDIR}${PREFIX}/bin

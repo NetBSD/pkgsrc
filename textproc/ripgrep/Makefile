@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/12/03 16:34:29 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/19 16:52:47 maya Exp $
 
 DISTNAME=	ripgrep-11.0.2
 CATEGORIES=	textproc
@@ -79,7 +79,7 @@ CARGO_CRATE_DEPENDS+=	wincolor-1.0.1
 INSTALLATION_DIRS=	bin
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release -j${EFFECTIVE_MAKE_JOBS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rg ${DESTDIR}${PREFIX}/bin
