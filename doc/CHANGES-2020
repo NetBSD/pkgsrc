@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.640 2020/01/19 14:41:32 taca Exp $
+$NetBSD: CHANGES-2020,v 1.641 2020/01/19 14:42:03 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -729,3 +729,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/ruby-tty-color version 0.5.0 [taca 2020-01-19]
 	Added devel/ruby-pastel version 0.7.3 [taca 2020-01-19]
 	Added devel/ruby-tty-cursor version 0.7.0 [taca 2020-01-19]
+	Added devel/hs-parser-combinators version 1.2.1 [pho 2020-01-19]
