@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3020 2020/01/19 14:41:11 taca Exp $
+# $NetBSD: Makefile,v 1.3021 2020/01/19 14:42:30 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -539,6 +539,7 @@ SUBDIR+=	hs-mmorph
 SUBDIR+=	hs-monad-control
 SUBDIR+=	hs-mono-traversable
 SUBDIR+=	hs-old-locale
+SUBDIR+=	hs-parser-combinators
 SUBDIR+=	hs-pretty-show
 SUBDIR+=	hs-primitive
 SUBDIR+=	hs-random
