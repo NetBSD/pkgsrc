@@ -1,0 +1,15 @@
+# TTY::Prompt
+
+> A beautiful and powerful interactive command line prompt.
+
+TTY::Prompt provides independent prompt component for TTY
+(https://github.com/piotrmurach/tty) toolkit.
+
+## Features
+
+* Number of prompt types for gathering user input
+* A robust API for validating complex inputs
+* User friendly error feedback
+* Intuitive DSL for creating complex menus
+* Ability to page long menus
+* Support for Linux, OS X, FreeBSD and Windows systems
