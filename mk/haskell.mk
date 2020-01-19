@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.13 2020/01/18 01:39:01 pho Exp $
+# $NetBSD: haskell.mk,v 1.14 2020/01/19 23:45:06 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -207,17 +207,6 @@ CONFIGURE_ARGS+=	--with-haddock=${BUILDLINK_PREFIX.ghc:Q}/bin/haddock
 # Optimization
 CONFIGURE_ARGS+=	-O${HASKELL_OPTIMIZATION_LEVEL}
 
-# Parallelization: the definition of this variable is exactly the same
-# as that of _MAKE_JOBS in mk/build/build.mk, but since it's an
-# internal variable we don't want to reuse it here.
-.if defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO])
-_HASKELL_BUILD_JOBS=	# nothing
-.elif defined(MAKE_JOBS.${PKGPATH})
-_HASKELL_BUILD_JOBS=	-j${MAKE_JOBS.${PKGPATH}}
-.elif defined(MAKE_JOBS)
-_HASKELL_BUILD_JOBS=	-j${MAKE_JOBS}
-.endif
-
 # Starting from GHC 7.10 (or 7.8?), packages are installed in
 # directories with a hashed name so we can no longer predict the
 # contents of PLIST.
@@ -253,10 +242,10 @@ do-configure:
 		${SETENV} ${CONFIGURE_ENV} \
 			./Setup configure ${PKG_VERBOSE:D-v} ${CONFIGURE_ARGS}
 
-# Define build target.
+# Define build target. _MAKE_JOBS_N is defined in build/build.mk
 do-build:
 	${RUN}cd ${WRKSRC:Q} && \
-		./Setup build ${PKG_VERBOSE:D-v} ${_HASKELL_BUILD_JOBS}
+		./Setup build ${PKG_VERBOSE:D-v} -j${_MAKE_JOBS_N}
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
 	${RUN}cd ${WRKSRC:Q} && \
 		./Setup haddock ${PKG_VERBOSE:D-v}
