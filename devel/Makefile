@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3023 2020/01/19 14:50:25 taca Exp $
+# $NetBSD: Makefile,v 1.3024 2020/01/19 14:54:24 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2783,6 +2783,7 @@ SUBDIR+=	ruby-tomlrb
 SUBDIR+=	ruby-tty-box
 SUBDIR+=	ruby-tty-color
 SUBDIR+=	ruby-tty-cursor
+SUBDIR+=	ruby-tty-reader
 SUBDIR+=	ruby-tty-screen
 SUBDIR+=	ruby-turn
 SUBDIR+=	ruby-uglifier
