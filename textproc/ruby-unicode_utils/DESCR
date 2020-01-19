@@ -1,0 +1,4 @@
+= Unicode Utils - Unicode algorithms for Ruby 1.9
+
+UnicodeUtils implements Unicode algorithms for case conversion,
+normalization, text segmentation and more in pure Ruby code.
