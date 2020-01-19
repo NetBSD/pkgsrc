@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2017/12/03 11:09:46 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/19 11:07:56 nros Exp $
 
 libfpx_ver=	1.3.1
-DISTNAME=	libfpx-${libfpx_ver}-9
+DISTNAME=	libfpx-${libfpx_ver}-10
 PKGNAME=	libfpx-${libfpx_ver}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.imagemagick.org/pub/ImageMagick/delegates/
 MASTER_SITES+=	http://www.imagemagick.org/download/delegates/
@@ -17,9 +17,14 @@ LICENSE=	flashpix-license
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
+USE_TOOLS+=	autoconf
 
 docdir=		 share/doc/${PKGBASE}
 INSTALLATION_DIRS+=${docdir}
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/flashpix.h \
 		${DESTDIR}${PREFIX}/${docdir}/copyright-notice
