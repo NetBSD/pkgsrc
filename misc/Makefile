@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.535 2020/01/19 12:10:56 nia Exp $
+# $NetBSD: Makefile,v 1.536 2020/01/19 15:39:25 taca Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -313,6 +313,7 @@ SUBDIR+=	ruby-equalizer
 SUBDIR+=	ruby-gem_plugin
 SUBDIR+=	ruby-hashie
 SUBDIR+=	ruby-launchy
+SUBDIR+=	ruby-license-acceptance
 SUBDIR+=	ruby-memoizable
 SUBDIR+=	ruby-method_source
 SUBDIR+=	ruby-mimemagic
