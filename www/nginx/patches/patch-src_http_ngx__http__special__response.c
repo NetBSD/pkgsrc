@@ -2,6 +2,8 @@ $NetBSD$
 
 Discard request body when redirecting to a URL via error_page.
 
+Fixes CVE-2019-20372.
+
 https://github.com/nginx/nginx/commit/c1be55f97211d38b69ac0c2027e6812ab8b1b94e.patch
 
 --- src/http/ngx_http_special_response.c
