@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/12/12 15:35:04 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/01/19 21:34:57 fcambus Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -56,8 +56,10 @@ ${GEM_LIBDIR}/lib/rouge/demos/erlang
 ${GEM_LIBDIR}/lib/rouge/demos/escape
 ${GEM_LIBDIR}/lib/rouge/demos/factor
 ${GEM_LIBDIR}/lib/rouge/demos/fortran
+${GEM_LIBDIR}/lib/rouge/demos/freefem
 ${GEM_LIBDIR}/lib/rouge/demos/fsharp
 ${GEM_LIBDIR}/lib/rouge/demos/gdscript
+${GEM_LIBDIR}/lib/rouge/demos/ghc-core
 ${GEM_LIBDIR}/lib/rouge/demos/gherkin
 ${GEM_LIBDIR}/lib/rouge/demos/glsl
 ${GEM_LIBDIR}/lib/rouge/demos/go
@@ -118,6 +120,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/nginx
 ${GEM_LIBDIR}/lib/rouge/demos/nim
 ${GEM_LIBDIR}/lib/rouge/demos/nix
 ${GEM_LIBDIR}/lib/rouge/demos/objective_c
+${GEM_LIBDIR}/lib/rouge/demos/objective_cpp
 ${GEM_LIBDIR}/lib/rouge/demos/ocaml
 ${GEM_LIBDIR}/lib/rouge/demos/openedge
 ${GEM_LIBDIR}/lib/rouge/demos/opentype_feature_file
@@ -255,8 +258,10 @@ ${GEM_LIBDIR}/lib/rouge/lexers/erlang.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/escape.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/factor.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/fortran.rb
+${GEM_LIBDIR}/lib/rouge/lexers/freefem.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/fsharp.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/gdscript.rb
+${GEM_LIBDIR}/lib/rouge/lexers/ghc_core.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/gherkin.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/gherkin/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/glsl.rb
@@ -321,6 +326,8 @@ ${GEM_LIBDIR}/lib/rouge/lexers/nginx.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/nim.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/nix.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/objective_c.rb
+${GEM_LIBDIR}/lib/rouge/lexers/objective_c/common.rb
+${GEM_LIBDIR}/lib/rouge/lexers/objective_cpp.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/ocaml.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/ocaml/common.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/openedge.rb
