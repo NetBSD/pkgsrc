@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.638 2020/01/19 14:34:40 taca Exp $
+$NetBSD: CHANGES-2020,v 1.639 2020/01/19 14:38:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -727,3 +727,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/ruby-ed25519 version 1.2.4 [taca 2020-01-19]
 	Added security/ruby-gssapi version 1.3.0 [taca 2020-01-19]
 	Added devel/ruby-tty-color version 0.5.0 [taca 2020-01-19]
+	Added devel/ruby-pastel version 0.7.3 [taca 2020-01-19]
