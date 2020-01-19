@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.149 2019/11/04 18:47:27 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.150 2020/01/19 14:12:27 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -167,22 +167,33 @@ ACCEPTABLE_LICENSES+=xv-license
     are required:</para>
     <orderedlist>
 
-    <listitem><para>Check whether the license qualifies as Free or Open
-    Source by referencing <ulink
-    url="http://www.gnu.org/licenses/license-list.en.html">Various Licenses
-    and Comments about Them</ulink> and <ulink
-    url="http://opensource.org/licenses/alphabetical">Licenses by Name |
+    <listitem>
+
+    <para>Check whether the license qualifies as Free or Open Source by
+    referencing <ulink
+    url="https://www.gnu.org/licenses/license-list.en.html">Various
+    Licenses and Comments about Them</ulink> and <ulink
+    url="https://opensource.org/licenses/alphabetical">Licenses by Name |
     Open Source Initiative</ulink>.  If this is the case, the filename in
     <filename>pkgsrc/licenses/</filename> does not need the
     <filename>-license</filename> suffix, and the license name should be
     added to:</para>
 
     <itemizedlist>
-    <listitem><para>DEFAULT_ACCEPTABLE_LICENSES in <filename>pkgsrc/mk/license.mk</filename></para></listitem>
-    <listitem><para>default_acceptable_licenses in <filename>pkgsrc/pkgtools/pkg_install/files/lib/license.c</filename></para></listitem>
+
+    <listitem><para>DEFAULT_ACCEPTABLE_LICENSES in
+    <filename>pkgsrc/mk/license.mk</filename></para></listitem>
+
+    <listitem><para>default_acceptable_licenses in
+    <filename>pkgsrc/pkgtools/pkg_install/files/lib/license.c</filename></para></listitem>
+
     </itemizedlist>
     </listitem>
-    <listitem><para>The license text should be added to <filename>pkgsrc/licenses</filename> for displaying.  A list of known licenses can be seen in this directory.</para></listitem>
+
+    <listitem><para>The license text should be added to
+    <filename>pkgsrc/licenses</filename> for displaying.  A list of known
+    licenses can be seen in this directory.</para></listitem>
+
     </orderedlist>
   </sect3>
 
@@ -600,22 +611,39 @@ DISTNAME=       foo-17.43
     changes that do not merit increasing
     <varname>PKGREVISION</varname> are:</para>
 
-    <itemizedlist><listitem>
-      <para>Changing <varname>HOMEPAGE</varname>,
-      <varname>MAINTAINER</varname>, <varname>OWNER</varname>,
-      or comments in Makefile.</para></listitem><listitem><para>
-      Changing build variables if the resulting binary package is the same.</para></listitem><listitem><para>
-      Changing <filename>DESCR</filename>.</para></listitem><listitem><para>
-      Adding <varname>PKG_OPTIONS</varname> if the default options don't change.</para></listitem>
+    <itemizedlist>
+
+      <listitem><para>Changing <varname>HOMEPAGE</varname>,
+      <varname>MAINTAINER</varname>, <varname>OWNER</varname>, or
+      comments in Makefile.</para></listitem>
+
+      <listitem><para>Changing build variables if the resulting binary
+      package is the same.</para></listitem>
+
+      <listitem><para>Changing
+      <filename>DESCR</filename>.</para></listitem>
+
+      <listitem><para>Adding <varname>PKG_OPTIONS</varname> if the
+      default options don't change.</para></listitem>
+
     </itemizedlist>
 
     <para>Examples of changes that do merit an increase to
     <varname>PKGREVISION</varname> include:</para>
-    <itemizedlist><listitem><para>
-      Security fixes</para></listitem><listitem><para>
-      Changes or additions to a patch file</para></listitem><listitem><para>
-      Changes to the <filename>PLIST</filename></para></listitem>
-      <listitem><para>A dependency is changed or renamed.</para></listitem>
+
+    <itemizedlist>
+
+      <listitem><para>Security fixes</para></listitem>
+
+      <listitem><para>Changes or additions to a patch
+      file</para></listitem>
+
+      <listitem><para>Changes to the
+      <filename>PLIST</filename></para></listitem>
+
+      <listitem><para>A dependency is changed or
+      renamed.</para></listitem>
+
     </itemizedlist>
 
     <para>PKGREVISION must also be incremented when dependencies have ABI
@@ -745,7 +773,15 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
     including the <filename>nbX</filename> suffix) or a date stamp can
     be appended, like
     <varname>${PKGNAME_NOREV}-YYYYMMDD</varname>.</para>
-    <para><varname>DIST_SUBDIR</varname> is also used when a distfile's name does not contain a version and the distfile is apt to change. In cases where the likelihood of this is very small, <varname>DIST_SUBDIR</varname> might not be required. Additionally, <varname>DIST_SUBDIR</varname> must not be removed unless the distfile name changes, even if a package is being moved or renamed.</para>
+
+    <para><varname>DIST_SUBDIR</varname> is also used when a distfile's
+    name does not contain a version and the distfile is apt to change. In
+    cases where the likelihood of this is very small,
+    <varname>DIST_SUBDIR</varname> might not be required. Additionally,
+    <varname>DIST_SUBDIR</varname> must not be removed unless the
+    distfile name changes, even if a package is being moved or
+    renamed.</para>
+
     <para>Do not forget regenerating the <filename>distinfo</filename> file
     after that, since it contains the <varname>DIST_SUBDIR</varname>
     path in the filenames.
@@ -754,15 +790,22 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
     telling them that changing distfiles after releases without
     changing the file names is not good practice.</para>
   </sect2>
+
   <sect2 id="build.fetch.github">
     <title>Packages hosted on github.com</title>
-    <para>Helper methods exist for packages hosted on github.com which will often have distfile names that clash with other packages, for example <filename>1.0.tar.gz</filename>. Use one of the three recipes from below:
-    </para>
+
+    <para>Helper methods exist for packages hosted on github.com which
+    will often have distfile names that clash with other packages, for
+    example <filename>1.0.tar.gz</filename>. Use one of the three recipes
+    from below:</para>
+
     <sect3 id="build.fetch.github.tag">
       <title>Fetch based on a tagged release</title>
-      <para>
-        If your distfile URL looks similar to <literal>http://github.com/username/exampleproject/archive/v1.0.zip</literal>, then you are packaging a tagged release.
-      </para>
+
+      <para>If your distfile URL looks similar to
+      <literal>http://github.com/username/exampleproject/archive/v1.0.zip</literal>,
+      then you are packaging a tagged release.</para>
+
 <programlisting>
 DISTNAME=       exampleproject-1.0
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
@@ -770,24 +813,33 @@ MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
 EXTRACT_SUFX=   .zip
 </programlisting>
+
     </sect3>
+
     <sect3 id="build.fetch.github.commit">
       <title>Fetch based on a specific commit</title>
-      <para>
-        If your distfile URL looks similar to <literal>http://github.com/example/example/archive/988881adc9fc3655077dc2d4d757d480b5ea0e11.tar.gz</literal>, then you are packaging a specific commit not tied to a release.
-      </para>
+
+      <para>If your distfile URL looks similar to
+      <literal>http://github.com&#x200B;/example&#x200B;/example&#x200B;/archive&#x200B;/988881adc9fc3655077dc2d4d757d480b5ea0e11.tar.gz</literal>,
+      then you are packaging a specific commit not tied to a
+      release.</para>
+
 <programlisting>
 DISTNAME=       example-1.0
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=example/}
 #GITHUB_PROJECT=        # can be omitted if same as DISTNAME
 GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
 </programlisting>
+
     </sect3>
+
     <sect3 id="build.fetch.github.release">
       <title>Fetch based on release</title>
-      <para>
-        If your distfile URL looks similar to <literal>http://github.com/username/exampleproject/releases/download/rel-1.6/offensive-1.6.zip</literal>, then you are packaging a release.
-      </para>
+
+      <para>If your distfile URL looks similar to
+      <literal>http://github.com&#x200B;/username/exampleproject&#x200B;/releases&#x200B;/download&#x200B;/rel-1.6&#x200B;/offensive-1.6.zip</literal>,
+      then you are packaging a release.</para>
+
 <programlisting>
 DISTNAME=       offensive-1.6
 PKGNAME=        ${DISTNAME:S/offensive/proper/}
