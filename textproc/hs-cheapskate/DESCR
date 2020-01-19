@@ -1,0 +1,8 @@
+This is an experimental Markdown processor in pure Haskell. It aims to
+process Markdown efficiently and in the most forgiving possible
+way. It is designed to deal with any input, including garbage, with
+linear performance. Output is sanitized by default for protection
+against XSS attacks.
+
+Several markdown extensions are implemented, including fenced code
+blocks, significant list start numbers, and autolinked URLs.
