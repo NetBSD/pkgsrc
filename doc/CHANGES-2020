@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.605 2020/01/19 00:32:04 nia Exp $
+$NetBSD: CHANGES-2020,v 1.606 2020/01/19 00:39:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -694,3 +694,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/snow to 20130616 [nia 2020-01-19]
 	Updated games/freeciv-share to 2.6.1 [nia 2020-01-19]
 	Updated games/freeciv-server to 2.6.1 [nia 2020-01-19]
+	Updated games/freeciv-client to 2.6.1 [nia 2020-01-19]
