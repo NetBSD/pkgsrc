@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/01/19 12:08:08 pho Exp $
+
+SHA1 (cheapskate-0.1.1.1.tar.gz) = 2bbe9c32b2099a6666a2631dc9874df2bb3e8b22
+RMD160 (cheapskate-0.1.1.1.tar.gz) = 335c13460d81489e153063915307223646322abc
+SHA512 (cheapskate-0.1.1.1.tar.gz) = 551fdf43f8ed8e15ed4a5ac1649f319477cc80762a34499eed58c7c77e1f3e2bc0c4f9887aac7632f341e825c202850617d0572fa6cb748104bbf2874dfba353
+Size (cheapskate-0.1.1.1.tar.gz) = 27077 bytes
+SHA1 (patch-Cheapskate_ParserCombinators.hs) = 7a9d984294af467960436de1f13481e476b9c4b0
