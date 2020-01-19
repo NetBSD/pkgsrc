@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/19 14:23:13 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/Changelog.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/examples/gss_client.rb
+${GEM_LIBDIR}/examples/gss_iov_client.rb
+${GEM_LIBDIR}/examples/gss_iov_helpers.rb
+${GEM_LIBDIR}/examples/gss_iov_server.rb
+${GEM_LIBDIR}/examples/gss_server.rb
+${GEM_LIBDIR}/gssapi.gemspec
+${GEM_LIBDIR}/lib/gssapi.rb
+${GEM_LIBDIR}/lib/gssapi/exceptions.rb
+${GEM_LIBDIR}/lib/gssapi/extensions.rb
+${GEM_LIBDIR}/lib/gssapi/heimdal.rb
+${GEM_LIBDIR}/lib/gssapi/lib_gssapi.rb
+${GEM_LIBDIR}/lib/gssapi/lib_gssapi_loader.rb
+${GEM_LIBDIR}/lib/gssapi/simple.rb
+${GEM_LIBDIR}/preamble
+${GEM_LIBDIR}/test/spec/gssapi_simple_spec.rb
+${GEM_LIBDIR}/test/spec/test_buffer_spec.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
