@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1105 2020/01/19 12:08:44 pho Exp $
+# $NetBSD: Makefile,v 1.1106 2020/01/19 14:14:18 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1016,6 +1016,7 @@ SUBDIR+=	ruby-simple-rss
 SUBDIR+=	ruby-stringex
 SUBDIR+=	ruby-stringex1
 SUBDIR+=	ruby-strings
+SUBDIR+=	ruby-strings-ansi
 SUBDIR+=	ruby-syntax
 SUBDIR+=	ruby-temple
 SUBDIR+=	ruby-terminal-table
