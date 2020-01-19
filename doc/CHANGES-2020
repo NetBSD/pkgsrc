@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.649 2020/01/19 15:09:55 taca Exp $
+$NetBSD: CHANGES-2020,v 1.650 2020/01/19 15:30:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -738,3 +738,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/ruby-wisper version 2.0.1 [taca 2020-01-19]
 	Added devel/ruby-zeitwerk version 2.2.2 [taca 2020-01-19]
 	Added net/ruby-train-core version 3.2.5 [taca 2020-01-19]
+	Added net/ruby-winrm version 2.3.4 [taca 2020-01-19]
