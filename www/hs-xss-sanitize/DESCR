@@ -1,0 +1,2 @@
+Run untrusted HTML through Text.HTML.SanitizeXSS.sanitizeXSS to
+prevent XSS attacks.
