@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/19 15:32:19 taca Exp $
+bin/rwinrmcp${RUBY_SUFFIX}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/bin/rwinrmcp
+${GEM_LIBDIR}/lib/winrm-fs.rb
+${GEM_LIBDIR}/lib/winrm-fs/core/file_transporter.rb
+${GEM_LIBDIR}/lib/winrm-fs/core/tmp_zip.rb
+${GEM_LIBDIR}/lib/winrm-fs/exceptions.rb
+${GEM_LIBDIR}/lib/winrm-fs/file_manager.rb
+${GEM_LIBDIR}/lib/winrm-fs/scripts/check_files.ps1.erb
+${GEM_LIBDIR}/lib/winrm-fs/scripts/checksum.ps1.erb
+${GEM_LIBDIR}/lib/winrm-fs/scripts/create_dir.ps1.erb
+${GEM_LIBDIR}/lib/winrm-fs/scripts/delete.ps1.erb
+${GEM_LIBDIR}/lib/winrm-fs/scripts/download.ps1.erb
+${GEM_LIBDIR}/lib/winrm-fs/scripts/exists.ps1.erb
+${GEM_LIBDIR}/lib/winrm-fs/scripts/extract_files.ps1.erb
+${GEM_LIBDIR}/lib/winrm-fs/scripts/scripts.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
