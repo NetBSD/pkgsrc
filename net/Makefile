@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1299 2020/01/19 15:30:05 taca Exp $
+# $NetBSD: Makefile,v 1.1300 2020/01/19 15:33:48 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -804,6 +804,7 @@ SUBDIR+=	ruby-twitter-stream
 SUBDIR+=	ruby-twitter-text
 SUBDIR+=	ruby-twitter-text-simpleidn
 SUBDIR+=	ruby-winrm
+SUBDIR+=	ruby-winrm-fs
 SUBDIR+=	ruby-xdr
 SUBDIR+=	sacc
 SUBDIR+=	samba
