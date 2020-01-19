@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/01/19 11:07:56 nros Exp $
+
+* search for endian headers to make tis package build 
+  on more platforms (illumos)
+ 
+--- configure.ac.orig	2020-01-19 10:26:49.799775110 +0000
++++ configure.ac
+@@ -71,6 +71,7 @@ AC_C_INLINE
+ AC_C_BIGENDIAN
+ 
+ AC_CHECK_HEADERS([wchar.h sys/statfs.h sys/statvfs.h sys/time.h])
++AC_CHECK_HEADERS([endian.h sys/endian.h solaris.h])
+ 
+ # <sys/mount.h> depends on <sys/param.h>
+ AC_CHECK_HEADERS([sys/param.h])
