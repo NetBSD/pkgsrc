@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/19 16:52:47 maya Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/19 18:20:46 maya Exp $
 
 DISTNAME=	bat-0.12.1
 PKGREVISION=	1
@@ -159,7 +159,7 @@ CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.3
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release -j${EFFECTIVE_MAKE_JOBS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo build --locked --frozen --release -j${_MAKE_JOBS_N}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/bat ${DESTDIR}${PREFIX}/bin
