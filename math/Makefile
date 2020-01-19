@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.451 2020/01/07 13:35:44 nros Exp $
+# $NetBSD: Makefile,v 1.452 2020/01/19 14:01:54 pho Exp $
 
 COMMENT=	Mathematics
 
@@ -189,6 +189,7 @@ SUBDIR+=	hs-bifunctors
 SUBDIR+=	hs-comonad
 SUBDIR+=	hs-contravariant
 SUBDIR+=	hs-distributive
+SUBDIR+=	hs-ieee754
 SUBDIR+=	hs-integer-logarithms
 SUBDIR+=	hs-math-functions
 SUBDIR+=	hs-mwc-random
