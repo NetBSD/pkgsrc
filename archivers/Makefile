@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2020/01/17 19:02:30 pho Exp $
+# $NetBSD: Makefile,v 1.169 2020/01/19 00:59:17 pho Exp $
 #
 
 COMMENT=	Archivers
@@ -36,6 +36,7 @@ SUBDIR+=	gzrecover
 SUBDIR+=	ha
 SUBDIR+=	heirloom-tar
 SUBDIR+=	hpack
+SUBDIR+=	hs-tar
 SUBDIR+=	hs-zip-archive
 SUBDIR+=	hs-zlib
 SUBDIR+=	innoextract
