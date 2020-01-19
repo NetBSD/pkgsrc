@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1098 2020/01/18 23:14:17 pho Exp $
+# $NetBSD: Makefile,v 1.1099 2020/01/19 09:11:24 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -971,6 +971,7 @@ SUBDIR+=	ruby-fastercsv
 SUBDIR+=	ruby-feed-normalizer
 SUBDIR+=	ruby-ferret
 SUBDIR+=	ruby-fuzzyurl
+SUBDIR+=	ruby-gyoku
 SUBDIR+=	ruby-haml
 SUBDIR+=	ruby-hikidoc
 SUBDIR+=	ruby-hpricot
