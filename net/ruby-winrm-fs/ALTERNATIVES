@@ -1,0 +1,1 @@
+bin/rwinrmcp @PREFIX@/bin/rwinrmcp@RUBY_SUFFIX@
