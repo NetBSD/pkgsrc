@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.634 2020/01/19 14:14:40 taca Exp $
+$NetBSD: CHANGES-2020,v 1.635 2020/01/19 14:18:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -723,3 +723,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/velox to 0.0.3.20200119 [nia 2020-01-19]
 	Added math/hs-ieee754 version 0.8.0 [pho 2020-01-19]
 	Added textproc/ruby-strings-ansi version 0.2.0 [taca 2020-01-19]
+	Added textproc/ruby-unicode_utils version 1.4.0 [taca 2020-01-19]
