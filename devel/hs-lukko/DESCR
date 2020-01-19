@@ -1,0 +1,12 @@
+This package provides access to platform dependent file locking APIs:
+
+* Open file descriptor locking on Linux (Lukko.OFD)
+
+* flock locking on unix platforms (Lukko.FLock)
+
+* Windows locking LockFileEx (Lukko.Windows)
+
+* No-op locking, which throws exceptions (Lukko.NoOp)
+
+Lukko module exports the best option for the target platform with
+uniform API.
