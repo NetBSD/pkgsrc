@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.635 2020/01/19 14:18:12 taca Exp $
+$NetBSD: CHANGES-2020,v 1.636 2020/01/19 14:21:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -724,3 +724,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added math/hs-ieee754 version 0.8.0 [pho 2020-01-19]
 	Added textproc/ruby-strings-ansi version 0.2.0 [taca 2020-01-19]
 	Added textproc/ruby-unicode_utils version 1.4.0 [taca 2020-01-19]
+	Added security/ruby-ed25519 version 1.2.4 [taca 2020-01-19]
