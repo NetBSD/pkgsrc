@@ -1,32 +1,22 @@
-# $NetBSD: Makefile,v 1.4 2019/08/11 13:23:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/19 00:22:44 nia Exp $
 
-DISTNAME=	MultiMarkdown-4-4.7.1
-PKGNAME=	${DISTNAME:S/MultiMarkdown-4-/multimarkdown-/}
-PKGREVISION=	3
+DISTNAME=	multimarkdown-6.5.1
+MASTER_SITES=	${MASTER_SITE_GITHUB:=fletcher/}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+GITHUB_PROJECT=	MultiMarkdown-6
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://fletcherpenney.net/multimarkdown/
-COMMENT=	MultiMarkdown (MMD) v4 written in C
+COMMENT=	MultiMarkdown (MMD) v6 written in C
 LICENSE=	gnu-gpl-v3 OR mit
 
-USE_TOOLS+=	gmake perl
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
-MAKE_FLAGS+=	prefix=${PREFIX}
-BUILD_TARGET=	ALL
-INSTALL_TARGET=	pkg-install pkg-install-scripts
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
 
-REPLACE_PERL=	enumsToPerl.pl
+CMAKE_ARGS+=	-Wno-dev
 
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Fixing /usr/local paths.
-SUBST_FILES.fix-paths=		scripts/m*
-SUBST_SED.fix-paths=		-e 's,"/usr/local,"${PREFIX},g'
-
-post-patch:
-	cd ${WRKSRC} && \
-	${RM} scripts/markdown.bat scripts/mmd2pdf.orig
-
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
