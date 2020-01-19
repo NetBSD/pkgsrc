@@ -1,0 +1,10 @@
+This library is for working with ".tar" archive files. It can read and
+write a range of common variations of archive format including V7,
+POSIX USTAR and GNU formats.
+
+It provides support for packing and unpacking portable archives. This
+makes it suitable for distribution but not backup because details like
+file ownership and exact permissions are not preserved.
+
+It also provides features for random access to archive content using
+an index.
