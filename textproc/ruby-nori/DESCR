@@ -1,0 +1,6 @@
+Nori
+====
+
+Really simple XML parsing ripped from Crack which ripped it from Merb.
+Nori was created to bypass the stale development of Crack, improve its XML
+parser and fix certain issues.
