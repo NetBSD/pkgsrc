@@ -1,0 +1,4 @@
+This package provides a pure Haskell "Tagged" DFA regex engine for
+regex-base. This implementation was inspired by the algorithm (and
+Master's thesis) behind the regular expression library known as TRE or
+libtre.
