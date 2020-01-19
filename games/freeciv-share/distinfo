@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2019/08/31 14:44:58 nia Exp $
+$NetBSD: distinfo,v 1.33 2020/01/19 00:31:13 nia Exp $
 
-SHA1 (freeciv-2.6.0.tar.bz2) = 19b5181e3e9e40b31332c79a2226fbcc3706a9c2
-RMD160 (freeciv-2.6.0.tar.bz2) = 9ffdc49773161cc1396e631db0e28d0ddc911bcc
-SHA512 (freeciv-2.6.0.tar.bz2) = 658f05ed32a2045eeeadd1e12f88df927378f8032292e709af78f24c2dbc6019ba45ce67e4fe24001a9e70756c68126a313607a81e7009270ad255d7c9fe75d8
-Size (freeciv-2.6.0.tar.bz2) = 51912466 bytes
+SHA1 (freeciv-2.6.1.tar.bz2) = 0a8994cf514b79897924195880f667ebfec815e9
+RMD160 (freeciv-2.6.1.tar.bz2) = fcf43a93ce1fa13326129f6ab1a35f209b91884e
+SHA512 (freeciv-2.6.1.tar.bz2) = 44145eaea96d5ab4f18e843102209d0f88a626af37365cf91b5e592bcac45f2692a7e21e9b3454a3ee4b9099212f5826a4687931bb37dabbb7dedad059df1cb4
+Size (freeciv-2.6.1.tar.bz2) = 51915573 bytes
