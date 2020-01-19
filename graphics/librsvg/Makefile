@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2019/12/31 11:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2020/01/19 16:52:46 maya Exp $
 
 DISTNAME=	librsvg-2.46.4
 CATEGORIES=	graphics gnome
@@ -11,6 +11,7 @@ COMMENT=	SVG library for GNOME
 LICENSE=	gnu-lgpl-v2
 
 MAKE_JOBS_SAFE=	NO
+MAKE_FLAGS+=	CARGO_MAKE_JOBS=-j${EFFECTIVE_MAKE_JOBS}
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake aclocal autoconf automake
