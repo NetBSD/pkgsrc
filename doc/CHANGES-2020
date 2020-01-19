@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.616 2020/01/19 08:24:10 taca Exp $
+$NetBSD: CHANGES-2020,v 1.617 2020/01/19 08:50:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -705,3 +705,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkgclean to 20200119 [gutteridge 2020-01-19]
 	Added misc/cabal-install version 3.0.0.0 [pho 2020-01-19]
 	Added www/ruby-http-accept version 2.1.1 [taca 2020-01-19]
+	Added www/ruby-http-parser version 1.2.1 [taca 2020-01-19]
