@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/19 15:35:47 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/lib/train-winrm.rb
+${GEM_LIBDIR}/lib/train-winrm/connection.rb
+${GEM_LIBDIR}/lib/train-winrm/transport.rb
+${GEM_LIBDIR}/lib/train-winrm/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
