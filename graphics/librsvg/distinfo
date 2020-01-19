@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2019/12/31 11:36:52 wiz Exp $
+$NetBSD: distinfo,v 1.44 2020/01/19 16:52:46 maya Exp $
 
 SHA1 (aho-corasick-0.7.6.crate) = 5844a153c8b9f67a91e2640e0aa66ee493b0f5ab
 RMD160 (aho-corasick-0.7.6.crate) = 78c8c7e93bbcf52f761f90b7096cc9331ad3bfc6
@@ -576,3 +576,4 @@ SHA1 (xml-rs-0.8.0.crate) = a86917e26b65cdceb31f0b6853d26fc373ad964c
 RMD160 (xml-rs-0.8.0.crate) = 8ed8d898ab2d1b1ef5c6d391da2c9bfe4bba95a7
 SHA512 (xml-rs-0.8.0.crate) = 94f0bc729d58564d63b4708518313e3dc7fe7c6ff9ac94019df1507d7ce7bd6428f2bc16fb116a9d676415a94812ce1e54e30b469a2a9b5fe29dc82486c536cd
 Size (xml-rs-0.8.0.crate) = 50974 bytes
+SHA1 (patch-Makefile.in) = d8cd4f26c6744a458d8f0735da29653c60ab66f4
