@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.611 2020/01/19 01:11:44 pho Exp $
+$NetBSD: CHANGES-2020,v 1.612 2020/01/19 01:54:54 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -700,3 +700,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added archivers/hs-tar version 0.5.1.1 [pho 2020-01-19]
 	Removed audio/albumplayer [nia 2020-01-19]
 	Added devel/hs-lukko version 0.1.1.1 [pho 2020-01-19]
+	Added security/hs-hackage-security version 0.6.0.0 [pho 2020-01-19]
