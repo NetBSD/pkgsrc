@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/19 15:01:24 pho Exp $
+
+SHA1 (megaparsec-8.0.0.tar.gz) = d4f94c665d3982535712172145241e153dd6cb18
+RMD160 (megaparsec-8.0.0.tar.gz) = 261302a0c7b6ce7a0f9c4324b82cb27fb5f6ab05
+SHA512 (megaparsec-8.0.0.tar.gz) = ab550a99548da2739a70cc4bdb3313085b3179c58d19a84d30744d89fe2d7556b9b552d4ad7b177b18f9f5821daa5417c2b9267eadd9eb537132666c151513c3
+Size (megaparsec-8.0.0.tar.gz) = 59692 bytes
