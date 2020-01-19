@@ -1,0 +1,3 @@
+train-core
+
+A minimal Train with a backends for ssh and winrm.
