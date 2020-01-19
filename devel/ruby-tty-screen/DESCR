@@ -1,0 +1,9 @@
+# TTY::Screen
+
+
+> Terminal screen size detection which works on Linux, OS X and
+  Windows/Cygwin platforms and supports MRI, JRuby and Rubinius
+  interpreters.
+
+TTY::Screen provides independent terminal screen size detection component
+for TTY (https://github.com/piotrmurach/tty) toolkit.
