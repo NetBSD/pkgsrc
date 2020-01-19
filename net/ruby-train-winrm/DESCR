@@ -1,0 +1,4 @@
+Train WinRM
+
+Allows applictaions using Train to speak to Windows using Remote Management;
+handles authentication, cacheing, and SDK dependency management.
