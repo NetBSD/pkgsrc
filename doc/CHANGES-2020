@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.627 2020/01/19 12:11:28 nia Exp $
+$NetBSD: CHANGES-2020,v 1.628 2020/01/19 12:37:30 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -716,3 +716,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/exaile to 4.0.2 [nia 2020-01-19]
 	Added textproc/hs-cheapskate version 0.1.1.1 [pho 2020-01-19]
 	Removed misc/gok [nia 2020-01-19]
+	Added devel/hs-code-page version 0.2 [pho 2020-01-19]
