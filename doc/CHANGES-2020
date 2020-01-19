@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.621 2020/01/19 09:42:10 pho Exp $
+$NetBSD: CHANGES-2020,v 1.622 2020/01/19 09:47:19 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -710,3 +710,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/ruby-nori version 2.6.0 [taca 2020-01-19]
 	Added textproc/ruby-strings version 0.1.8 [taca 2020-01-19]
 	Added textproc/hs-annotated-wl-pprint version 0.7.0 [pho 2020-01-19]
+	Added textproc/hs-ansi-wl-pprint version 0.6.9 [pho 2020-01-19]
