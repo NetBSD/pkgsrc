@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.28 2019/09/02 02:59:47 rillig Exp $
+# $NetBSD: build.mk,v 1.29 2020/01/19 16:51:47 maya Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -38,6 +38,7 @@
 # Keywords: build make
 
 _VARGROUPS+=		build
+_DEF_VARS.build=	EFFECTIVE_MAKE_JOBS
 _USER_VARS.build=	MAKE_JOBS BUILD_ENV_SHELL
 _PKG_VARS.build=	MAKE_ENV MAKE_FLAGS BUILD_MAKE_FLAGS BUILD_TARGET MAKE_JOBS_SAFE
 _SYS_VARS.build=	BUILD_MAKE_CMD
@@ -54,11 +55,14 @@ BUILD_MAKE_CMD= \
 			-f ${MAKE_FILE}
 
 .if defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO])
-_MAKE_JOBS=	# nothing
+_MAKE_JOBS=		# nothing
+EFFECTIVE_MAKE_JOBS=	1
 .elif defined(MAKE_JOBS.${PKGPATH})
-_MAKE_JOBS=	-j${MAKE_JOBS.${PKGPATH}}
+_MAKE_JOBS=		-j${MAKE_JOBS.${PKGPATH}}
+EFFECTIVE_MAKE_JOBS=	${MAKE_JOBS.${PKGPATH}}
 .elif defined(MAKE_JOBS)
-_MAKE_JOBS=	-j${MAKE_JOBS}
+_MAKE_JOBS=		-j${MAKE_JOBS}
+EFFECTIVE_MAKE_JOBS=	${MAKE_JOBS}
 .endif
 
 ######################################################################
