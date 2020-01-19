@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/19 09:10:24 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/gyoku.gemspec
+${GEM_LIBDIR}/lib/gyoku.rb
+${GEM_LIBDIR}/lib/gyoku/array.rb
+${GEM_LIBDIR}/lib/gyoku/hash.rb
+${GEM_LIBDIR}/lib/gyoku/version.rb
+${GEM_LIBDIR}/lib/gyoku/xml_key.rb
+${GEM_LIBDIR}/lib/gyoku/xml_value.rb
+${GEM_LIBDIR}/spec/gyoku/array_spec.rb
+${GEM_LIBDIR}/spec/gyoku/hash_spec.rb
+${GEM_LIBDIR}/spec/gyoku/xml_key_spec.rb
+${GEM_LIBDIR}/spec/gyoku/xml_value_spec.rb
+${GEM_LIBDIR}/spec/gyoku_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
