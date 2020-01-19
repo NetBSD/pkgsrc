@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.534 2020/01/19 07:52:21 pho Exp $
+# $NetBSD: Makefile,v 1.535 2020/01/19 12:10:56 nia Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -86,7 +86,6 @@ SUBDIR+=	go-genproto
 SUBDIR+=	go-genproto-googleapis-rpc
 SUBDIR+=	goffice0.10
 SUBDIR+=	goffice0.8
-SUBDIR+=	gok
 SUBDIR+=	gone
 SUBDIR+=	gperiodic
 SUBDIR+=	granulate
