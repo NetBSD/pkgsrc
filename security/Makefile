@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.735 2020/01/19 14:21:25 taca Exp $
+# $NetBSD: Makefile,v 1.736 2020/01/19 14:23:55 taca Exp $
 #
 
 COMMENT=	Security tools
@@ -520,6 +520,7 @@ SUBDIR+=	ruby-bcrypt
 SUBDIR+=	ruby-bcrypt_pbkdf
 SUBDIR+=	ruby-ed25519
 SUBDIR+=	ruby-ezcrypto
+SUBDIR+=	ruby-gssapi
 SUBDIR+=	ruby-hmac
 SUBDIR+=	ruby-jsobfu
 SUBDIR+=	ruby-metasploit-concern
