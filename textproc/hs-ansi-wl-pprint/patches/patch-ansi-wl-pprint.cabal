@@ -1,0 +1,15 @@
+$NetBSD: patch-ansi-wl-pprint.cabal,v 1.1 2020/01/19 09:47:10 pho Exp $
+
+Relax the upper bound on ansi-terminal.
+
+--- ansi-wl-pprint.cabal.orig	2001-09-09 01:46:40.000000000 +0000
++++ ansi-wl-pprint.cabal
+@@ -44,7 +44,7 @@ library
+     -- see also notes in Text.PrettyPrint.ANSI.Leijen
+     build-depends: semigroups >= 0.18.5 && < 0.20
+ 
+-  build-depends: ansi-terminal >= 0.9.1 && < 0.10
++  build-depends: ansi-terminal >= 0.9.1 && < 0.11
+   build-depends: base >= 4.3 && < 5
+ 
+   if impl(ghc >= 7.4)
