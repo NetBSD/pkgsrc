@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2016/11/12 07:34:01 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2020/01/20 21:26:52 nia Exp $
 
 BUILDLINK_TREE+=	libmikmod
 
@@ -11,13 +11,6 @@ BUILDLINK_PKGSRCDIR.libmikmod?=		../../audio/libmikmod
 
 pkgbase := libmikmod
 .include "../../mk/pkg-build-options.mk"
-
-# On some platforms, libmikmod dynamically loads esound,
-# so there is no library dependency
-.if !empty(PKG_BUILD_OPTIONS.libmikmod:Mesound) && \
-  empty(OPSYS:MNetBSD) && empty(OPSYS:MLinux)
-.  include "../../audio/esound/buildlink3.mk"
-.endif
 .endif # LIBMIKMOD_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libmikmod
