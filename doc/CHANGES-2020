@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.680 2020/01/20 15:40:07 taca Exp $
+$NetBSD: CHANGES-2020,v 1.681 2020/01/20 16:11:16 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -771,3 +771,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-byebug to 11.1.0 [taca 2020-01-20]
 	Updated devel/ruby-ffi-yajl to 2.3.3 [taca 2020-01-20]
 	Updated devel/ruby-google-protobuf to 3.8.0 [taca 2020-01-20]
+	Updated graphics/libansilove to 1.1.9 [fcambus 2020-01-20]
