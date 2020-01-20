@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.665 2020/01/20 01:32:31 nia Exp $
+$NetBSD: CHANGES-2020,v 1.666 2020/01/20 01:32:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -754,3 +754,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-vector-binary-instances version 0.2.5.1 [pho 2020-01-20]
 	Added devel/hs-libffi version 0.1 [pho 2020-01-20]
 	Updated net/grilo to 0.3.11 [nia 2020-01-20]
+	Updated net/grilo-plugins to 0.3.10 [nia 2020-01-20]
