@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.55 2019/03/10 11:22:43 spz Exp $
+# $NetBSD: Makefile,v 1.56 2020/01/20 14:59:48 ryoon Exp $
 
-DISTNAME=	jpegsrc.v9c
+DISTNAME=	jpegsrc.v9d
 PKGNAME=	${DISTNAME:S/src.v/-/}
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ijg.org/files/
-DIST_SUBDIR=	jpeg-9c-v2
-PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ijg.org/

@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.4 2016/02/01 09:22:53 wiz Exp $
+$NetBSD: patch-ag,v 1.5 2020/01/20 14:59:48 ryoon Exp $
 
 Build and install jpegexiforient.
 
---- Makefile.in.orig	2015-09-10 08:04:54.000000000 +0000
+--- Makefile.in.orig	2019-04-29 14:05:54.000000000 +0000
 +++ Makefile.in
-@@ -99,7 +99,7 @@ host_triplet = @host@
+@@ -100,7 +100,7 @@ host_triplet = @host@
  target_triplet = @target@
  @HAVE_LD_VERSION_SCRIPT_TRUE@am__append_1 = -Wl,--version-script=$(srcdir)/libjpeg.map
  bin_PROGRAMS = cjpeg$(EXEEXT) djpeg$(EXEEXT) jpegtran$(EXEEXT) \
@@ -13,7 +13,7 @@ Build and install jpegexiforient.
  subdir = .
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  am__aclocal_m4_deps = $(top_srcdir)/configure.ac
-@@ -184,6 +184,9 @@ rdjpgcom_LDADD = $(LDADD)
+@@ -186,6 +186,9 @@ rdjpgcom_LDADD = $(LDADD)
  am_wrjpgcom_OBJECTS = wrjpgcom.$(OBJEXT)
  wrjpgcom_OBJECTS = $(am_wrjpgcom_OBJECTS)
  wrjpgcom_LDADD = $(LDADD)
@@ -23,7 +23,15 @@ Build and install jpegexiforient.
  AM_V_P = $(am__v_P_@AM_V@)
  am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
  am__v_P_0 = false
-@@ -219,7 +222,8 @@ am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V
+@@ -226,6 +229,7 @@ am__depfiles_remade = ./$(DEPDIR)/@MEMOR
+ 	./$(DEPDIR)/jidctfst.Plo ./$(DEPDIR)/jidctint.Plo \
+ 	./$(DEPDIR)/jmemmgr.Plo ./$(DEPDIR)/jpegtran.Po \
+ 	./$(DEPDIR)/jquant1.Plo ./$(DEPDIR)/jquant2.Plo \
++	./$(DEPDIR)/jpegexiforient.Plo ./$(DEPDIR)/jpegexiforient.Po \
+ 	./$(DEPDIR)/jutils.Plo ./$(DEPDIR)/rdbmp.Po \
+ 	./$(DEPDIR)/rdcolmap.Po ./$(DEPDIR)/rdgif.Po \
+ 	./$(DEPDIR)/rdjpgcom.Po ./$(DEPDIR)/rdppm.Po \
+@@ -254,7 +258,8 @@ am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V
  am__v_CCLD_0 = @echo "  CCLD    " $@;
  am__v_CCLD_1 = 
  SOURCES = $(libjpeg_la_SOURCES) $(cjpeg_SOURCES) $(djpeg_SOURCES) \
@@ -33,7 +41,7 @@ Build and install jpegexiforient.
  am__can_run_installinfo = \
    case $$AM_UPDATE_INFO_DIR in \
      n|no|NO) false;; \
-@@ -461,6 +465,8 @@ jpegtran_SOURCES = jpegtran.c rdswitch.c
+@@ -499,6 +504,8 @@ jpegtran_SOURCES = jpegtran.c rdswitch.c
  jpegtran_LDADD = libjpeg.la
  rdjpgcom_SOURCES = rdjpgcom.c
  wrjpgcom_SOURCES = wrjpgcom.c
@@ -42,7 +50,7 @@ Build and install jpegexiforient.
  
  # Manual pages to install
  man_MANS = $(DISTMANS)
-@@ -640,6 +646,9 @@ rdjpgcom$(EXEEXT): $(rdjpgcom_OBJECTS) $
+@@ -684,6 +691,9 @@ rdjpgcom$(EXEEXT): $(rdjpgcom_OBJECTS) $
  wrjpgcom$(EXEEXT): $(wrjpgcom_OBJECTS) $(wrjpgcom_DEPENDENCIES) $(EXTRA_wrjpgcom_DEPENDENCIES) 
  	@rm -f wrjpgcom$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(wrjpgcom_OBJECTS) $(wrjpgcom_LDADD) $(LIBS)
@@ -52,11 +60,3 @@ Build and install jpegexiforient.
  
  mostlyclean-compile:
  	-rm -f *.$(OBJEXT)
-@@ -693,6 +702,7 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jidctfst.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jidctint.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jmemmgr.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jpegexiforient.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jpegtran.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jquant1.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jquant2.Plo@am__quote@
