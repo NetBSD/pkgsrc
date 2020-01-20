@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/08/20 13:00:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/01/20 20:07:40 adam Exp $
 man/man1/git-add.1
 man/man1/git-am.1
 man/man1/git-annotate.1
@@ -126,6 +126,7 @@ man/man1/git-show-branch.1
 man/man1/git-show-index.1
 man/man1/git-show-ref.1
 man/man1/git-show.1
+man/man1/git-sparse-checkout.1
 man/man1/git-stage.1
 man/man1/git-stash.1
 man/man1/git-status.1
