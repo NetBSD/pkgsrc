@@ -1,0 +1,2 @@
+A binding to libffi, allowing C functions of types only known at
+runtime to be called from Haskell.
