@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2009/01/20 17:51:12 sketch Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/01/20 21:25:24 adam Exp $
 include/gmp.h
 ${PLIST.cxx}include/gmpxx.h
 info/gmp.info
 lib/libgmp.la
 ${PLIST.cxx}lib/libgmpxx.la
+lib/pkgconfig/gmp.pc
+lib/pkgconfig/gmpxx.pc
