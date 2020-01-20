@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1301 2020/01/19 15:36:31 taca Exp $
+# $NetBSD: Makefile,v 1.1302 2020/01/20 01:32:17 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -202,7 +202,6 @@ SUBDIR+=	gofish
 SUBDIR+=	gopher
 SUBDIR+=	grilo
 SUBDIR+=	grilo-plugins
-SUBDIR+=	grilo-testui
 SUBDIR+=	grive
 SUBDIR+=	grive2
 SUBDIR+=	grpc
