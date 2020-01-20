@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/01/20 02:47:43 nia Exp $
+
+--- Makefile.in.orig	2018-06-03 18:41:08.000000000 +0000
++++ Makefile.in
+@@ -395,7 +395,7 @@ SUBDIRS = src doc glade m4 po
+ DATADIR = .
+ DISTCHECK_CONFIGURE_FLAGS = 
+ man_MANS = etherape.1
+-confdir = $(sysconfdir)/etherape
++confdir = $(sysconfdir)
+ conf_DATA = 
+ Developmentdir = $(datadir)/applications
+ Development_DATA = etherape.desktop
