@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2019/09/18 14:17:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.136 2020/01/20 21:13:16 nia Exp $
 
 DISTNAME=	SDL-1.2.15
 PKGREVISION=	29
@@ -31,6 +31,7 @@ NASMFLAGS_a.out=	-f aoutb
 CONFIGURE_ARGS+=	--disable-nasm
 .endif
 
+CONFIGURE_ARGS+=	--disable-esd
 CONFIGURE_ARGS+=	--disable-video-ps2gs
 CONFIGURE_ARGS+=	--disable-video-ps3
 

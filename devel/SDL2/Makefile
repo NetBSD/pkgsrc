@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/01/04 01:52:23 nia Exp $
+# $NetBSD: Makefile,v 1.42 2020/01/20 21:13:16 nia Exp $
 
 DISTNAME=	SDL2-2.0.10
 PKGREVISION=	2
@@ -19,6 +19,7 @@ PKGCONFIG_OVERRIDE+=	sdl2.pc.in
 CONFIGURE_ENV+=	SDL_RLD_FLAGS="${COMPILER_RPATH_FLAG}${PREFIX}/lib \
 		${COMPILER_RPATH_FLAG}${X11BASE}/lib"
 
+CONFIGURE_ARGS+=	--disable-esd
 CONFIGURE_ARGS+=	--disable-x11-shared
 
 CHECK_PORTABILITY_SKIP+=	build-scripts/androidbuildlibs.sh
