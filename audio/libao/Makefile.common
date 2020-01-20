@@ -1,8 +1,7 @@
-# $NetBSD: Makefile.common,v 1.41 2019/12/24 05:07:45 dbj Exp $
+# $NetBSD: Makefile.common,v 1.42 2020/01/20 21:54:01 nia Exp $
 #
 # used by audio/libao-alsa/Makefile
 # used by audio/libao-arts/Makefile
-# used by audio/libao-esound/Makefile
 # used by audio/libao-macosx/Makefile
 # used by audio/libao-nas/Makefile
 # used by audio/libao-oss/Makefile
