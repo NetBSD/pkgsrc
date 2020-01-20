@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.88 2019/11/03 17:12:04 rillig Exp $
+# $NetBSD: Makefile.common,v 1.89 2020/01/20 21:54:03 nia Exp $
 #
 # used by audio/xine-alsa/Makefile
-# used by audio/xine-esound/Makefile
 # used by audio/xine-pulse/Makefile
 # used by multimedia/xine-v4l/Makefile
 # used by multimedia/xine-v4l2/Makefile

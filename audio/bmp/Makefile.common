@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.30 2020/01/18 23:29:58 rillig Exp $
+# $NetBSD: Makefile.common,v 1.31 2020/01/20 21:54:00 nia Exp $
 #
 # used by audio/bmp/Makefile
-# used by audio/bmp-esound/Makefile
 
 DISTNAME=	bmp-0.9.7.1
 CATEGORIES=	audio
