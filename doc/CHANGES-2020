@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.683 2020/01/20 17:45:24 adam Exp $
+$NetBSD: CHANGES-2020,v 1.684 2020/01/20 18:01:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -775,3 +775,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added chat/libgadu version 1.12.2 [adam 2020-01-20]
 	Updated chat/ekg to 20200116 [adam 2020-01-20]
 	Removed chat/gg2 [adam 2020-01-20]
+	Updated www/php-nextcloud to 18.0.0 [ryoon 2020-01-20]
