@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2020/01/18 23:35:40 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/20 21:17:51 nia Exp $
 #
 
 DISTNAME=	golem-0.0.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=golem/}
 
@@ -14,24 +14,13 @@ USE_TOOLS+=	gmake yacc lex
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--enable-i18n
+CONFIGURE_ARGS+=	--disable-sound
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} != "native" || exists(${X11BASE}/include/X11/extensions/Xinerama.h)
 CONFIGURE_ARGS+=	--enable-xinerama
 .include "../../x11/libXinerama/buildlink3.mk"
-.endif
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.golem
-PKG_SUPPORTED_OPTIONS=	esound
-
-.include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=		esound
-.if !empty(PKG_OPTIONS:Mesound)
-CONFIGURE_ARGS+=	--enable-sound
-PLIST.esound=		yes
-.include "../../audio/esound/buildlink3.mk"
 .endif
 
 CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
