@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.687 2020/01/20 21:25:42 adam Exp $
+$NetBSD: CHANGES-2020,v 1.688 2020/01/20 21:58:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -780,3 +780,12 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-autopep8 to 1.5 [adam 2020-01-20]
 	Updated devel/git to 2.25.0 [adam 2020-01-20]
 	Updated devel/gmp to 6.2.0 [adam 2020-01-20]
+	Removed audio/bmp-esound [nia 2020-01-20]
+	Removed audio/gst-plugins0.10-esound [nia 2020-01-20]
+	Removed audio/libao-esound [nia 2020-01-20]
+	Removed audio/mpg123-esound [nia 2020-01-20]
+	Removed audio/xine-esound [nia 2020-01-20]
+	Removed audio/xmms-esound [nia 2020-01-20]
+	Removed lang/kaffe-esound [nia 2020-01-20]
+	Removed emulators/cygwin_esound [nia 2020-01-20]
+	Removed audio/esound [nia 2020-01-20]
