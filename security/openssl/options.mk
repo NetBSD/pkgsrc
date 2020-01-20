@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2020/01/16 22:45:45 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2020/01/20 17:42:53 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssl
 PKG_SUPPORTED_OPTIONS=	idea md2 mdc2 rc5 zlib threads
@@ -19,6 +19,11 @@ PLIST.${alg}=		yes
 CONFIGURE_ARGS+=	no-${alg}
 .  endif
 .endfor
+#
+# Only supported in certain Linux configurations, needs proper handling if
+# it is to be supported as an option.
+#
+CONFIGURE_ARGS+=	no-afalgeng
 
 .if !empty(PKG_OPTIONS:Mzlib)
 CONFIGURE_ARGS+=	zlib
