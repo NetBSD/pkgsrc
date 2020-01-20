@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.66 2019/11/03 17:12:03 rillig Exp $
+# $NetBSD: options.mk,v 1.67 2020/01/20 21:34:01 nia Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -33,7 +33,7 @@ PKG_SUPPORTED_OPTIONS+=		faad
 
 # Set options based on the specific package being built.
 .  if !empty(PKGNAME:M*mplayer*)
-PKG_SUPPORTED_OPTIONS+=	aalib alsa caca esound ggi mplayer-menu nas pulseaudio sdl
+PKG_SUPPORTED_OPTIONS+=	aalib alsa caca ggi mplayer-menu nas pulseaudio sdl
 
 .    if ${VDPAU_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+=	vdpau
@@ -167,13 +167,6 @@ CONFIGURE_ARGS+=	--enable-dvdnav
 #CFLAGS+=		-I${BUILDLINK_PREFIX.libdvdnav}/include/dvdnav
 .  else
 CONFIGURE_ARGS+=	--disable-dvdnav
-.  endif
-
-.  if !empty(PKG_OPTIONS:Mesound)
-CONFIGURE_ARGS+=	--enable-esd
-.    include "../../audio/esound/buildlink3.mk"
-.  else
-CONFIGURE_ARGS+=	--disable-esd
 .  endif
 
 .  if !empty(PKG_OPTIONS:Mfaac)
