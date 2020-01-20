@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2020/01/20 02:22:59 nia Exp $
+# $NetBSD: Makefile,v 1.86 2020/01/20 12:44:11 nia Exp $
 
 DISTNAME=	cheese-3.34.0
 CATEGORIES=	graphics gnome
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Apps/Cheese
 COMMENT=	Use your webcam to take photos and videos
 LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	gst-plugins1-v4l2-[0-9]*:../../multimedia/gst-plugins1-v4l2
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
