@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2019/05/21 08:20:47 adam Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/20 11:49:35 adam Exp $
 
-DISTNAME=	setuptools_scm-3.3.3
+DISTNAME=	setuptools_scm-3.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_scm/}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/pypa/setuptools_scm
 COMMENT=	Manage your versions by scm tags
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
+TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-# Mercurial only supports Python 2.7 and we only need 'hg' command
-TEST_DEPENDS+=	py27-mercurial-[0-9]*:../../devel/py-mercurial
+TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 
 USE_LANGUAGES=	# none
 
