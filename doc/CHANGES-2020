@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.669 2020/01/20 01:42:25 nia Exp $
+$NetBSD: CHANGES-2020,v 1.670 2020/01/20 02:20:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -758,3 +758,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed net/grilo-testui [nia 2020-01-20]
 	Updated multimedia/totem to 3.34.1 [nia 2020-01-20]
 	Updated multimedia/totem-pl-parser to 3.26.4 [nia 2020-01-20]
+	Added multimedia/gnome-video-effects version 0.5.0 [nia 2020-01-20]
