@@ -1,16 +1,12 @@
-# $NetBSD: options.mk,v 1.3 2007/02/22 19:26:06 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2020/01/20 21:29:07 nia Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.madplay
-PKG_SUPPORTED_OPTIONS=	esound oss
+PKG_OPTIONS_VAR=		PKG_OPTIONS.madplay
+PKG_SUPPORTED_OPTIONS=		alsa
+PKG_SUGGESTED_OPTIONS.Linux=	alsa
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mesound)
-.include "../../audio/esound/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-esd
-.endif
-
-.if !empty(PKG_OPTIONS:Moss)
-.include "../../mk/oss.buildlink3.mk"
+.if !empty(PKG_OPTIONS:Malsa)
+CONFIGURE_ARGS+=	--with-alsa
+.include "../../audio/alsa-lib/buildlink3.mk"
 .endif
