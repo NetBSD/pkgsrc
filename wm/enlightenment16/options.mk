@@ -1,12 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2019/12/30 03:50:06 gutteridge Exp $
+# $NetBSD: options.mk,v 1.2 2020/01/20 21:54:03 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.enlightenment16
 
-PKG_OPTIONS_OPTIONAL_GROUPS=	sound
-PKG_OPTIONS_GROUP.sound=	pulseaudio esound
-
-PKG_SUPPORTED_OPTIONS=		pango vera-ttf
-PKG_SUGGESTED_OPTIONS=		pango esound vera-ttf
+PKG_SUPPORTED_OPTIONS=		pango pulseaudio vera-ttf
+PKG_SUGGESTED_OPTIONS=		pango pulseaudio vera-ttf
 
 .include "../../mk/bsd.options.mk"
 
@@ -22,11 +19,6 @@ CONFIGURE_ARGS+=	--enable-sound=pulseaudio
 CONFIGURE_ARGS+=	--with-sndldr=sndfile
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Mesound)
-CONFIGURE_ARGS+=	--enable-sound=esound
-CONFIGURE_ARGS+=	--with-sndldr=audiofile
-.include "../../audio/libaudiofile/buildlink3.mk"
-.include "../../audio/esound/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--enable-sound=no
 CONFIGURE_ARGS+=	--with-sndldr=none
