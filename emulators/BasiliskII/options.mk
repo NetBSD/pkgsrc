@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2019/07/30 08:08:22 nia Exp $
+# $NetBSD: options.mk,v 1.8 2020/01/20 21:14:49 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.BasiliskII
-PKG_SUPPORTED_OPTIONS=		esound gtk2 sdl
-PKG_OPTIONS_LEGACY_OPTS+=	esd:esound
+PKG_SUPPORTED_OPTIONS=		gtk2 sdl
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -11,13 +10,6 @@ PKG_SUGGESTED_OPTIONS+=		gtk2 sdl
 .endif
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mesound)
-CONFIGURE_ARGS+=	--with-esd
-.include "../../audio/esound/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-esd
-.endif
 
 .if !empty(PKG_OPTIONS:Mgtk2)
 CONFIGURE_ARGS+=	--with-gtk
