@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19624 2020/01/20 01:42:25 nia Exp $
+$NetBSD: TODO,v 1.19625 2020/01/20 02:23:28 nia Exp $
 
 Suggested new packages
 ======================
@@ -478,8 +478,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cgen-20160301
 	o cgic-207
 	o checkbot-1.80
-	o cheese-2.32.0
-	o cheese-3.16.1
 	o cherokee-1.2.103 [pkg/48268]
 	o chimera-1.30a
 	o cim-5.1
