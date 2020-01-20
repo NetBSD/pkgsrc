@@ -1,0 +1,6 @@
+Idris is a general purpose language with full dependent types. It is
+compiled, with eager evaluation. Dependent types allow types to be
+predicated on values, meaning that some aspects of a program's
+behaviour can be specified precisely in the type. The language is
+closely related to Epigram and Agda. There is a tutorial at
+http://www.idris-lang.org/documentation
