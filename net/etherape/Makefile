@@ -1,35 +1,28 @@
-# $NetBSD: Makefile,v 1.105 2020/01/18 23:33:14 rillig Exp $
+# $NetBSD: Makefile,v 1.106 2020/01/20 02:47:43 nia Exp $
 
-DISTNAME=	etherape-0.9.12
-PKGREVISION=	38
-CATEGORIES=	gnome net
+DISTNAME=	etherape-0.9.18
+CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=etherape/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://etherape.sourceforge.net/
+HOMEPAGE=	https://etherape.sourceforge.io/
 COMMENT=	Graphical network monitor
 LICENSE=	gnu-gpl-v2 # or later
 
-USE_TOOLS+=		gmake pkg-config
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
+
+USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	msgfmt msgmerge xgettext
+GNU_CONFIGURE=	yes
 
 PKG_SYSCONFSUBDIR=	etherape
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-EGDIR=		${PREFIX}/share/examples/etherape
-
-CONF_FILES=	${EGDIR}/services ${PKG_SYSCONFDIR}/services
-
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/services ${DESTDIR}${EGDIR}
-
-.include "../../net/libpcap/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../graphics/goocanvas2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
