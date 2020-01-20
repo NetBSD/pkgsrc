@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.14 2020/01/19 23:45:06 pho Exp $
+# $NetBSD: haskell.mk,v 1.15 2020/01/20 14:14:33 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -226,18 +226,14 @@ _check-ignored-plist: error-check
 	fi
 .endif
 
-# We might not have any working Haskell interpreter so compile
-# Setup.?hs to a binary. Since dynamic linkage is much faster, we try
-# it and then fall back to static linkage if that didn't work.
-pre-configure: ${WRKSRC}/Setup
-
-${WRKSRC}/Setup:
+# Define configure target. We might not have any working Haskell
+# interpreter so compile Setup.?hs to a binary. Since dynamic linkage
+# is much faster, we try it and then fall back to static linkage if
+# that didn't work.
+do-configure:
 	${RUN}cd ${WRKSRC} && \
 		( ${_HASKELL_BIN:Q} --make Setup -dynamic || \
 			${_HASKELL_BIN:Q} --make Setup -static )
-
-# Define configure target.
-do-configure:
 	${RUN}cd ${WRKSRC:Q} && \
 		${SETENV} ${CONFIGURE_ENV} \
 			./Setup configure ${PKG_VERBOSE:D-v} ${CONFIGURE_ARGS}
