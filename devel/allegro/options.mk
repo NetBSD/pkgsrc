@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2020/01/20 21:32:59 nia Exp $
+# $NetBSD: options.mk,v 1.4 2020/01/20 22:12:21 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.allegro
 PKG_SUPPORTED_OPTIONS=		alsa jack
@@ -17,8 +17,8 @@ CMAKE_ARGS+=	-DWANT_ALSA=1
 CMAKE_ARGS+=	-DWANT_ALSA=0
 .endif
 
-PLIST_SRC+=	PLIST.jack
 .if !empty(PKG_OPTIONS:Mjack)
+PLIST_SRC+=	PLIST.jack
 CMAKE_ARGS+=	-DWANT_JACK=1
 .include "../../audio/jack/buildlink3.mk"
 .else
