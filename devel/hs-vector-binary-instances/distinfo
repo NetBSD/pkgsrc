@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/01/20 01:04:20 pho Exp $
+
+SHA1 (vector-binary-instances-0.2.5.1.tar.gz) = 7efc9dc0ac4bbfd051d2900e61e9369a25a9bb11
+RMD160 (vector-binary-instances-0.2.5.1.tar.gz) = e7c80919e910f878eb5ef555dbb20fc248f6949c
+SHA512 (vector-binary-instances-0.2.5.1.tar.gz) = a16202b8ca3f88df82c27b37511087008579296363c73fe09ab19b00dee0fbaf98699b79b08d7e7410fcd062c03f2c5d1560f6b1c9ebf1ab8290596a35758be0
+Size (vector-binary-instances-0.2.5.1.tar.gz) = 4067 bytes
+SHA1 (patch-vector-binary-instances.cabal) = 00deae174b78dbfc8684843d90205ff8ab80260a
