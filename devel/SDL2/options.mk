@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.14 2020/01/04 01:52:23 nia Exp $
+# $NetBSD: options.mk,v 1.15 2020/01/20 21:13:16 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL2
 PKG_OPTIONS_REQUIRED_GROUPS=	gl
-PKG_SUPPORTED_OPTIONS=		alsa dbus esound nas jack pulseaudio wayland x11
+PKG_SUPPORTED_OPTIONS=		alsa dbus nas jack pulseaudio wayland x11
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
 PKG_OPTIONS_GROUP.gl=		opengl
 
@@ -37,12 +37,6 @@ CONFIGURE_ARGS+=	--disable-alsa
 .include "../../sysutils/dbus/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-dbus
-.endif
-
-.if !empty(PKG_OPTIONS:Mesound)
-.include "../../audio/esound/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-esd
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
