@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/01/19 23:07:29 fcambus Exp $
+$NetBSD: distinfo,v 1.7 2020/01/20 16:11:05 fcambus Exp $
 
-SHA1 (libansilove-1.1.8.tar.gz) = 0704d280f900a8a04100bfd3827e276b0333cb8c
-RMD160 (libansilove-1.1.8.tar.gz) = 8a00b7cd32c43d92596e5881bfa62eb810fbc127
-SHA512 (libansilove-1.1.8.tar.gz) = f266355dba937a7e432f1cdedc4af4bb7b43be00c90c89cc7705e0ace072716cbcbd6c65af5d4afa38bee513cd62ff3f54500d5223f8a712de8b734541d9616a
-Size (libansilove-1.1.8.tar.gz) = 55613 bytes
+SHA1 (libansilove-1.1.9.tar.gz) = 2d557e245a86edb52464b2ab3a6ef90cfd0924d8
+RMD160 (libansilove-1.1.9.tar.gz) = 85fcc1d448f4b59169053f88827bc115317173ae
+SHA512 (libansilove-1.1.9.tar.gz) = 778a3821a67f83d51af83f1c2608ff83a981bc5deef5c06ea5d65ba469ce1996bdcce9e801132218766550d1dc06c2b06b23a197cf0275fb6190c83ed93d1a08
+Size (libansilove-1.1.9.tar.gz) = 55668 bytes
