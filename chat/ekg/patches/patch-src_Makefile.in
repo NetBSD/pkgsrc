@@ -1,0 +1,26 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2020/01/20 17:32:49 adam Exp $
+
+Use LIBTOOL.
+
+--- src/Makefile.in.orig	2020-01-16 21:00:12.000000000 +0000
++++ src/Makefile.in
+@@ -34,6 +34,7 @@ all:	dep ekg @ioctld@
+ 
+ ekg:	$(OBJS) $(srcdir)/comptime.c
+ 	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o comptime.o $(srcdir)/comptime.c
++	${LIBTOOL} --mode=link \
+ 	$(CC) $(CFLAGS) -o ekg $(OBJS) comptime.o $(LDFLAGS) $(LIBS)
+ 
+ ioctld:	$(srcdir)/ioctld.c
+@@ -48,9 +49,9 @@ dep:	.depend
+ 
+ install: all install-ekg @install_ioctld@
+ 
+-install-ekg:	@strip_ekg@
++install-ekg:
+ 	$(INSTALL) -d $(DESTDIR)$(bindir)
+-	$(INSTALL) -m 755 ekg $(DESTDIR)$(bindir)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} ekg $(DESTDIR)$(bindir)
+ 
+ install-ioctld:	@strip_ioctld@
+ 	$(INSTALL) -d $(DESTDIR)$(libexecdir)
