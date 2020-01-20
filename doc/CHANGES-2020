@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.677 2020/01/20 15:01:12 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.678 2020/01/20 15:32:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -768,3 +768,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-test5 to 5.3.3 [adam 2020-01-20]
 	Updated emulators/haxm to 7.5.6 [kamil 2020-01-20]
 	Updated graphics/jpeg to 9d [ryoon 2020-01-20]
+	Updated devel/ruby-byebug to 11.1.0 [taca 2020-01-20]
