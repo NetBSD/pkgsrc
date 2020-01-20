@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.667 2020/01/20 01:33:03 nia Exp $
+$NetBSD: CHANGES-2020,v 1.668 2020/01/20 01:42:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -756,3 +756,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/grilo to 0.3.11 [nia 2020-01-20]
 	Updated net/grilo-plugins to 0.3.10 [nia 2020-01-20]
 	Removed net/grilo-testui [nia 2020-01-20]
+	Updated multimedia/totem to 3.34.1 [nia 2020-01-20]
