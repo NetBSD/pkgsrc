@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19621 2020/01/20 01:32:31 nia Exp $
+$NetBSD: TODO,v 1.19622 2020/01/20 01:32:43 nia Exp $
 
 Suggested new packages
 ======================
@@ -682,7 +682,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramps-5.1.2
 	o grantlee-5.0.0
 	o greed-4.1
-	o grilo-plugins-0.2.14
 	o gromacs-5.1.2
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
