@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.673 2020/01/20 02:48:45 nia Exp $
+$NetBSD: CHANGES-2020,v 1.674 2020/01/20 10:33:14 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -761,3 +761,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added multimedia/gnome-video-effects version 0.5.0 [nia 2020-01-20]
 	Updated graphics/cheese to 3.34.0 [nia 2020-01-20]
 	Updated net/etherape to 0.9.18 [nia 2020-01-20]
+	Updated net/gallery-dl to 1.12.3 [leot 2020-01-20]
