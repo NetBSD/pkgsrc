@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/06/03 13:45:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/01/20 15:33:37 taca Exp $
 bin/ffi-yajl-bench${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_yajl/ext/dlopen.${RUBY_DLEXT}
@@ -7,7 +7,6 @@ ${GEM_EXTSDIR}/ffi_yajl/ext/parser.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/ffi-yajl-bench
 ${GEM_LIBDIR}/ext/ffi_yajl/ext/dlopen/dlopen.c
 ${GEM_LIBDIR}/ext/ffi_yajl/ext/dlopen/extconf.rb
@@ -49,8 +48,4 @@ ${GEM_LIBDIR}/lib/ffi_yajl/map_library_name.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/parser.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/platform.rb
 ${GEM_LIBDIR}/lib/ffi_yajl/version.rb
-${GEM_LIBDIR}/spec/ffi_yajl/encoder_spec.rb
-${GEM_LIBDIR}/spec/ffi_yajl/map_library_name_spec.rb
-${GEM_LIBDIR}/spec/ffi_yajl/parser_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
