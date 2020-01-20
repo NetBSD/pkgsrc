@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:35 joerg Exp $
-java/kaffe/jre/lib/${MACHINE_ARCH}/libtritonusesd.la
