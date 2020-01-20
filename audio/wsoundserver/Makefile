@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2018/07/04 13:40:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.62 2020/01/20 21:54:01 nia Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -44,15 +44,6 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC:Q}/WMSound ${DESTDIR}${EGDIR}
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Interix"
-.  include "../../audio/esound/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-esound
-.else
-.  include "../../mk/oss.buildlink3.mk"
-.endif
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.539 2020/01/15 12:41:28 pho Exp $
+# $NetBSD: Makefile,v 1.540 2020/01/20 21:54:02 nia Exp $
 #
 
 COMMENT=	Programming languages
@@ -125,7 +125,6 @@ SUBDIR+=	jimtcl
 SUBDIR+=	joos
 SUBDIR+=	js
 SUBDIR+=	kaffe
-SUBDIR+=	kaffe-esound
 SUBDIR+=	kaffe-x11
 SUBDIR+=	kali
 SUBDIR+=	konoha

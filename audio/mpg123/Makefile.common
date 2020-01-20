@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.51 2019/10/31 14:06:17 nia Exp $
+# $NetBSD: Makefile.common,v 1.52 2020/01/20 21:54:01 nia Exp $
 #
 # used by audio/mpg123-arts/Makefile
-# used by audio/mpg123-esound/Makefile
 # used by audio/mpg123-nas/Makefile
 # used by audio/mpg123-oss/Makefile
 # used by audio/mpg123-pulse/Makefile
