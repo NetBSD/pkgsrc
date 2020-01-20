@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.681 2020/01/20 16:11:16 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.682 2020/01/20 17:34:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -772,3 +772,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-ffi-yajl to 2.3.3 [taca 2020-01-20]
 	Updated devel/ruby-google-protobuf to 3.8.0 [taca 2020-01-20]
 	Updated graphics/libansilove to 1.1.9 [fcambus 2020-01-20]
+	Added chat/libgadu version 1.12.2 [adam 2020-01-20]
+	Updated chat/ekg to 20200116 [adam 2020-01-20]
