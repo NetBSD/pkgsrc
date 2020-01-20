@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2019/08/30 17:01:32 nia Exp $
+# $NetBSD: options.mk,v 1.13 2020/01/20 21:16:43 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wine
 PKG_SUPPORTED_OPTIONS=	cups dbus esound hal ldap opengl sane ssl x11 pulseaudio
@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=	opengl ssl x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		esd opengl x11 pulseaudio
+PLIST_VARS+=		opengl x11 pulseaudio
 
 .if !empty(PKG_OPTIONS:Mcups)
 .include "../../print/cups-base/buildlink3.mk"
@@ -18,11 +18,6 @@ CONFIGURE_ARGS+=	--without-cups
 .include "../../sysutils/dbus/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-dbus
-.endif
-
-.if !empty(PKG_OPTIONS:Mesound)
-PLIST.esd=		yes
-.include "../../audio/esound/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mhal)
