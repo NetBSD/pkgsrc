@@ -1,23 +1,41 @@
-# $NetBSD: Makefile,v 1.101 2019/07/21 22:24:09 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2020/01/20 01:41:52 nia Exp $
 
-.include "Makefile.common"
+DISTNAME=	totem-3.34.1
+CATEGORIES=	multimedia
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/3.34/}
+EXTRACT_SUFX=	.tar.xz
 
-PKGREVISION=	53
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://wiki.gnome.org/Apps/Videos
+COMMENT=	Movie player designed for GNOME
+LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	gst-plugins0.10-soup-[0-9]*:../../net/gst-plugins0.10-soup
+USE_TOOLS+=	pkg-config msgfmt xgettext
 
-COMMENT+=	(using GStreamer)
+MESON_ARGS+=	-Denable-python=no
 
-CONFLICTS+=	totem-xine-[0-9]*
+PYTHON_FOR_BUILD_ONLY=	tool
 
-CONFIGURE_ARGS+=	--disable-browser-plugins
+PKGCONFIG_OVERRIDE+=	data/totem.pc.in
 
-BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.7
+# workaround for build failure
+# https://gitlab.gnome.org/GNOME/json-glib/issues/35
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src
 
-.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-.include "../../multimedia/gst-plugins0.10-good/buildlink3.mk"
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../x11/libunique/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../net/libgdata0.6/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../devel/glib2/schemas.mk"
+.include "../../devel/libpeas/buildlink3.mk"
+.include "../../graphics/clutter-gtk/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/tool.mk"
+.include "../../net/grilo/buildlink3.mk"
+.include "../../multimedia/clutter-gst/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-good/buildlink3.mk"
+.include "../../multimedia/totem-pl-parser/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../x11/gnome-desktop3/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
