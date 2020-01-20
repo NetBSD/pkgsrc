@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.30 2019/04/03 00:32:57 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.31 2020/01/20 01:32:17 nia Exp $
 
-DISTNAME=	grilo-plugins-0.2.9
-PKGREVISION=	16
-CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/grilo-plugins/0.2/
+DISTNAME=	grilo-plugins-0.3.10
+CATEGORIES=	net gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/grilo-plugins/0.3/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnome.org/
+HOMEPAGE=	https://wiki.gnome.org/Projects/Grilo
 COMMENT=	Plugins for grilo media browser
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool xgettext
+USE_TOOLS+=	pkg-config xgettext
 
-CONFIGURE_ARGS+=	--disable-bliptv
+PYTHON_FOR_BUILD_ONLY=	tool
 
-.include "../../devel/glib2/buildlink3.mk"
+PKGCONFIG_OVERRIDE+=	grilo-plugins-0.3.pc.in
+
+.include "../../devel/meson/build.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../lang/lua53/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../net/grilo/buildlink3.mk"
-.include "../../net/gupnp/buildlink3.mk"
-.include "../../net/gupnp-av/buildlink3.mk"
-.include "../../multimedia/totem-pl-parser/buildlink3.mk"
+.include "../../net/libgdata/buildlink3.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
