@@ -1,27 +1,33 @@
-# $NetBSD: Makefile,v 1.29 2019/04/03 00:32:57 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.30 2020/01/20 01:32:17 nia Exp $
 
-DISTNAME=	grilo-0.2.7
-PKGREVISION=	15
-CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/grilo/0.2/
+DISTNAME=	grilo-0.3.11
+CATEGORIES=	net gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/grilo/0.3/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnome.org/
+HOMEPAGE=	https://wiki.gnome.org/Projects/Grilo
 COMMENT=	Media browser framework
 LICENSE=	gnu-lgpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool msgfmt
-USE_LANGUAGES=	c99
-SET_LIBDIR=	yes
+USE_TOOLS+=	pkg-config xgettext
 
-PKGCONFIG_OVERRIDE+=	grilo-0.2.pc.in
-PKGCONFIG_OVERRIDE+=	grilo-net-0.2.pc.in
+MESON_ARGS+=	-Denable-gtk-doc=false
+MESON_ARGS+=	-Denable-test-ui=false
 
+PYTHON_FOR_BUILD_ONLY=	tool
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/grilo-0.3.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/grilo-net-0.3.pc
+PKGCONFIG_OVERRIDE+=		output/meson-private/grilo-pls-0.3.pc
+
+.include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../lang/python/tool.mk"
+.include "../../lang/vala/buildlink3.mk"
+.include "../../multimedia/totem-pl-parser/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
+.include "../../security/liboauth/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
