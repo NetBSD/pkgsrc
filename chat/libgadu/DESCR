@@ -1,0 +1,5 @@
+libgadu is library for handling Gadu-Gadu instant messenger protocol. For a
+long time it was an intergral part of ekg application but due to packaging
+issues and use in other appliactions it became a project on its own.
+Proprietary protocol was reverse engineered which may make libgadu less than
+100% compatible with the original.
