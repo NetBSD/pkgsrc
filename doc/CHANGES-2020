@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.685 2020/01/20 19:50:53 adam Exp $
+$NetBSD: CHANGES-2020,v 1.686 2020/01/20 20:40:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -778,3 +778,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/php-nextcloud to 18.0.0 [ryoon 2020-01-20]
 	Updated graphics/py-imagesize to 1.2.0 [adam 2020-01-20]
 	Updated devel/py-autopep8 to 1.5 [adam 2020-01-20]
+	Updated devel/git to 2.25.0 [adam 2020-01-20]
