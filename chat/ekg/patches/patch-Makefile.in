@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/01/20 17:32:49 adam Exp $
+
+Do not run 'configure' when building.
+
+--- Makefile.in.orig	2020-01-16 21:00:11.000000000 +0000
++++ Makefile.in
+@@ -16,7 +16,7 @@ INSTALL = @INSTALL@
+ 
+ #
+ 
+-all:	configure compat @ekg@ @make_ekgwap@
++all:	compat @ekg@ @make_ekgwap@
+ 
+ ekg:	
+ 	cd src && $(MAKE) all
