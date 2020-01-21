@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.146 2020/01/18 21:29:05 triaxx Exp $
+$NetBSD: distinfo,v 1.147 2020/01/21 14:41:26 nia Exp $
 
 SHA1 (mesa-19.2.7.tar.xz) = 9b8ebf66770353a48bd710e12e2727fb33645f44
 RMD160 (mesa-19.2.7.tar.xz) = 5323b623ac22c168b86548cf6d842ce004e346a9
@@ -8,6 +8,7 @@ SHA1 (patch-include_c11_threads__posix.h) = e1dca04b5c514d20123ef99338c6dabedbc1
 SHA1 (patch-src_amd_common_ac__debug.c) = 8233367c3b5bc344442ea8d19488fdd1e3791ae9
 SHA1 (patch-src_compiler_builtin__type__macros.h) = e4868011711fb89a293580a12eb603b8e7162336
 SHA1 (patch-src_compiler_glsl_glsl__parser__extras.cpp) = ef114d6e288e6d212fce9d1c0606f7d454a171c4
+SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = 9230fbae2c04246ebca8437ecad694bbae857fbe
 SHA1 (patch-src_egl_drivers_dri2_platform__x11.c) = 49e48c31eacb79d1da357fe70eaffd2926b5280e
 SHA1 (patch-src_egl_main_eglglobals.c) = 0d52014f52e62fc5fa6650336ddb0011ecf331e6
 SHA1 (patch-src_gallium_auxiliary_pipe-loader_pipe__loader__drm.c) = f913b779404e6bd8ae707a4fd66eb7c1dca9b311
