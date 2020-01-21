@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2020/01/21 23:26:29 nia Exp $
+# $NetBSD: Makefile,v 1.86 2020/01/21 23:33:40 nia Exp $
 
 DISTNAME=	brasero-3.12.2
 CATEGORIES=	sysutils gnome
@@ -20,14 +20,13 @@ TOOL_DEPENDS+=	p5-XML-LibXML>=1.58:../../textproc/p5-XML-LibXML
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 CONFIGURE_ARGS+=	--disable-nautilus
+CONFIGURE_ARGS+=	--enable-compile-warnings=minimum # Disable Werror
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
 CONFIGURE_ARGS+=	--disable-inotify
 .endif
-
-BUILDLINK_TRANSFORM+=	rm:-Werror=format=2
 
 PKGCONFIG_OVERRIDE+=	libbrasero-burn3.pc.in
 PKGCONFIG_OVERRIDE+=	libbrasero-media3.pc.in
