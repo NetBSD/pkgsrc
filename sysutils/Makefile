@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.857 2020/01/17 14:21:17 nia Exp $
+# $NetBSD: Makefile,v 1.858 2020/01/21 21:55:02 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -112,6 +112,7 @@ SUBDIR+=	cuisine
 SUBDIR+=	cvsreport
 SUBDIR+=	daemond
 SUBDIR+=	daemontools
+SUBDIR+=	daemontools-encore
 SUBDIR+=	daemontools-run
 SUBDIR+=	dbus
 SUBDIR+=	dbus-glib
