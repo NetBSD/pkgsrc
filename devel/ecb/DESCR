@@ -1,0 +1,5 @@
+ECB stands for "Emacs Code Browser". While Emacs already has good
+/editing/ support for many modes, its /browsing/ support is somewhat
+lacking. That's where ECB comes in: it displays a number of
+informational windows that allow for easy source code navigation and
+overview.
