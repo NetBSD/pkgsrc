@@ -1,53 +1,38 @@
-# $NetBSD: Makefile,v 1.104 2019/11/06 14:34:31 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2020/01/21 16:15:05 nia Exp $
 
-DISTNAME=		shotwell-0.22.0
-PKGREVISION=		33
-CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/shotwell/0.22/}
-EXTRACT_SUFX=		.tar.xz
+DISTNAME=	shotwell-0.30.8
+CATEGORIES=	graphics gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/shotwell/0.30/}
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=		pkgrsc-users@NetBSD.org
-HOMEPAGE=		https://wiki.gnome.org/Apps/Shotwell
-COMMENT=		Shotwell is a photo organizer for the GNOME desktop
-LICENSE=		gnu-lgpl-v2.1
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://wiki.gnome.org/Apps/Shotwell
+COMMENT=	Photo organizer for the GNOME desktop
+LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=		gnome-doc-utils-[0-9]*:../../textproc/gnome-doc-utils
+USE_TOOLS+=	pkg-config msgfmt xgettext
 
-HAS_CONFIGURE=		yes
-USE_TOOLS+=		gmake bash pkg-config m4 msgfmt
+MESON_ARGS+=	-Dudev=false
 
-CONFIG_SHELL=		bash
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--assume-pkgs
-CONFIGURE_ENV+=		--define=NO_CAMERA
-MAKE_ENV+=		VALAC=${VALAC}
+# uses python3
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-REPLACE_SH+=		configure
+# XXX msgfmt: unknown option -- desktop
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
-.include "../../multimedia/gstreamer1/buildlink3.mk"
-.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/libgee/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/gexiv2/buildlink3.mk"
-# 0.13.2 added shared libs
-BUILDLINK_ABI_DEPENDS.libraw+= libraw>=0.13.2
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
-# Required for dealing with .svg icons. Spotted on a clean box
-.include "../../graphics/librsvg/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala= build
+.include "../../lang/python/tool.mk"
 .include "../../lang/vala/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
+.include "../../net/libgdata/buildlink3.mk"
+.include "../../security/gcr/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
-.include "../../www/webkit24-gtk3/buildlink3.mk"
-.include "../../www/librest07/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.12.2
+.include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../x11/libunique3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
