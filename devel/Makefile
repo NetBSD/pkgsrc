@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3033 2020/01/21 14:56:41 nia Exp $
+# $NetBSD: Makefile,v 1.3034 2020/01/21 14:58:09 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -709,6 +709,7 @@ SUBDIR+=	libgnomeuimm
 SUBDIR+=	libgphoto2
 SUBDIR+=	libgsf
 SUBDIR+=	libgweather
+SUBDIR+=	libhandy
 SUBDIR+=	libhfs
 SUBDIR+=	libhid
 SUBDIR+=	libiberty
