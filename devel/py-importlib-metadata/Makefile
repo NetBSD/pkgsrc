@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/01/15 17:58:37 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/21 15:23:48 adam Exp $
 
 DISTNAME=	importlib_metadata-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -20,6 +20,9 @@ DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
 .endif
 
 USE_LANGUAGES=	# none
+
+post-extract:
+	${FIND} ${WRKSRC} -type f -exec ${CHMOD} go-w {} +
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
