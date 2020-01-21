@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3032 2020/01/21 11:57:38 pho Exp $
+# $NetBSD: Makefile,v 1.3033 2020/01/21 14:56:41 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -665,6 +665,7 @@ SUBDIR+=	libconfig
 SUBDIR+=	libctl
 SUBDIR+=	libdaemon
 SUBDIR+=	libdatrie
+SUBDIR+=	libdazzle
 SUBDIR+=	libdbusmenu-glib
 SUBDIR+=	libdbusmenu-gtk
 SUBDIR+=	libdbusmenu-gtk-doc
