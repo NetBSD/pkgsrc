@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.690 2020/01/21 09:40:17 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.691 2020/01/21 09:52:22 tm Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -791,3 +791,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed audio/esound [nia 2020-01-20]
 	Added lang/idris version 1.3.2 [pho 2020-01-20]
 	Updated meta-pkgs/gstreamer0.10-plugins to 1.0nb3 [jperkin 2020-01-21]
+	Updated databases/phpmyadmin to 4.9.4 [tm 2020-01-21]
