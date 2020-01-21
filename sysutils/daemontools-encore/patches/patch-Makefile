@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile,v 1.1 2020/01/21 21:54:25 schmonz Exp $
+
+Use a pkgsrc-capable shell on all platforms.
+Support DESTDIR.
+
+--- Makefile.orig	2018-10-14 00:48:50.000000000 +0000
++++ Makefile
+@@ -227,8 +227,8 @@ choose compile haswaitp.h1 haswaitp.h2 l
+ 
+ install: \
+ installer BIN conf-bin MAN conf-man
+-	./installer `head -n 1 conf-bin` <BIN
+-	./installer `head -n 1 conf-man` <MAN
++	./installer ${DESTDIR}`head -n 1 conf-bin` <BIN
++	./installer ${DESTDIR}`head -n 1 conf-man` <MAN
+ 
+ installer: \
+ load installer.o getln.a unix.a byte.a
+@@ -357,7 +357,7 @@ compile readproctitle.c error.h
+ 
+ rts: \
+ programs rts.sh rts.exp
+-	env - /bin/sh rts.sh 2>&1 | cat -v > rts
++	env - ${PKGSRC_SHELL} rts.sh 2>&1 | cat -v > rts
+ 	diff -u rts.exp rts
+ 
+ rts.exp: \
