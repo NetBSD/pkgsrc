@@ -1,17 +1,17 @@
-$NetBSD: patch-qmake_generators_unix_unixmake2.cpp,v 1.4 2018/12/18 09:57:18 adam Exp $
+$NetBSD: patch-qmake_generators_unix_unixmake2.cpp,v 1.5 2020/01/21 20:25:37 adam Exp $
 
 Append external variables.
 
---- qmake/generators/unix/unixmake2.cpp.orig	2018-12-03 11:15:26.000000000 +0000
+--- qmake/generators/unix/unixmake2.cpp.orig	2019-12-07 06:27:07.000000000 +0000
 +++ qmake/generators/unix/unixmake2.cpp
-@@ -183,12 +183,12 @@ UnixMakefileGenerator::writeMakeParts(QT
+@@ -191,12 +191,12 @@ UnixMakefileGenerator::writeMakeParts(QT
      t << "####### Compiler, tools and options\n\n";
-     t << "CC            = " << var("QMAKE_CC") << endl;
-     t << "CXX           = " << var("QMAKE_CXX") << endl;
+     t << "CC            = " << var("QMAKE_CC") << Qt::endl;
+     t << "CXX           = " << var("QMAKE_CXX") << Qt::endl;
 -    t << "DEFINES       = "
 +    t << "DEFINES      += "
        << varGlue("PRL_EXPORT_DEFINES","-D"," -D"," ")
-       << varGlue("DEFINES","-D"," -D","") << endl;
+       << varGlue("DEFINES","-D"," -D","") << Qt::endl;
 -    t << "CFLAGS        = " << var("QMAKE_CFLAGS") << " $(DEFINES)\n";
 -    t << "CXXFLAGS      = " << var("QMAKE_CXXFLAGS") << " $(DEFINES)\n";
 -    t << "INCPATH       =";
@@ -21,14 +21,14 @@ Append external variables.
      {
          QString isystem = var("QMAKE_CFLAGS_ISYSTEM");
          const ProStringList &incs = project->values("INCLUDEPATH");
-@@ -212,8 +212,8 @@ UnixMakefileGenerator::writeMakeParts(QT
+@@ -220,8 +220,8 @@ UnixMakefileGenerator::writeMakeParts(QT
  
      if(!project->isActiveConfig("staticlib")) {
-         t << "LINK          = " << var("QMAKE_LINK") << endl;
--        t << "LFLAGS        = " << var("QMAKE_LFLAGS") << endl;
+         t << "LINK          = " << var("QMAKE_LINK") << Qt::endl;
+-        t << "LFLAGS        = " << var("QMAKE_LFLAGS") << Qt::endl;
 -        t << "LIBS          = $(SUBLIBS) " << fixLibFlags("LIBS").join(' ') << ' '
-+        t << "LFLAGS       += " << var("QMAKE_LFLAGS") << endl;
++        t << "LFLAGS       += " << var("QMAKE_LFLAGS") << Qt::endl;
 +        t << "LIBS         += $(SUBLIBS) " << fixLibFlags("LIBS").join(' ') << ' '
                                             << fixLibFlags("LIBS_PRIVATE").join(' ') << ' '
                                             << fixLibFlags("QMAKE_LIBS").join(' ') << ' '
-                                            << fixLibFlags("QMAKE_LIBS_PRIVATE").join(' ') << endl;
+                                            << fixLibFlags("QMAKE_LIBS_PRIVATE").join(' ') << Qt::endl;
