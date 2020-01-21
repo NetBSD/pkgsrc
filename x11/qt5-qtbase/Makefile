@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2020/01/18 21:48:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.88 2020/01/21 20:25:37 adam Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt5-qtbase/Makefile.common"
@@ -93,10 +92,10 @@ LDFLAGS+=			-lexecinfo
 .elif ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=		-platform macx-clang
 CONFIGURE_ARGS+=		-no-framework
-   # pkgsrc has a patch to avoid using SDK, but the configure
-   # logic gets confused if it can't find the header files
-   # so give it a direct path to them if they aren't installed
-   # in /usr/include
+# pkgsrc has a patch to avoid using SDK, but the configure
+# logic gets confused if it can't find the header files
+# so give it a direct path to them if they aren't installed
+# in /usr/include
 .  if !exists(/usr/include)
 CONFIGURE_ARGS+=	-I "$$(xcrun --show-sdk-path)"/usr/include
 .  endif
@@ -192,7 +191,7 @@ pre-configure:
 		-e 's:@PTHREAD_LDFLAGS@:${PTHREAD_LDFLAGS:Q}:g' \
 		-e 's:@PTHREAD_LIBS@:${PTHREAD_LIBS:Q}:g' \
 		-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g' \
-		-e 's:@QMAKE_RANLIB@:${QMAKE_RANLIB:Q}:g' \
+		-e 's:@QMAKE_RANLIB@:${RANLIB}:g' \
 		-e 's:@QMAKE_EXTRA@:${QMAKE_EXTRA:Q}:g' \
 		${FILESDIR}/${QMAKE_CONF} > ${WRKSRC}/qmake.conf
 	for dir in ${WRKSRC}/mkspecs/*; do \
@@ -221,6 +220,7 @@ post-install:
 	${MV} -f ${DESTDIR}${PREFIX}/${BROKEN_FILES1}.1 \
 		${DESTDIR}${PREFIX}/${BROKEN_FILES1}
 
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

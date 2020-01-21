@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/09/16 19:24:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/01/21 20:25:38 adam Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qabstractvideobuffer_p.h
@@ -7,8 +7,6 @@ qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiodevicefactory_
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiohelpers_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiosystempluginext_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcamera_p.h
-qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdeclarativevideooutput_backend_p.h
-qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdeclarativevideooutput_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qimagevideobuffer_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediacontrol_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmedianetworkplaylistprovider_p.h
@@ -32,12 +30,10 @@ qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmemoryvideobuffer_p
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmultimediautils_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplaylistfileparser_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qsamplecache_p.h
-qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qsgvideonode_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qsoundeffect_pulse_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qsoundeffect_qaudio_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimedia-config_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimediaglobal_p.h
-qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimediaquickdefs_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframe_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframeconversionhelper_p.h
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideooutputorientationhandler_p.h
@@ -228,7 +224,6 @@ qt5/include/QtMultimedia/qvideoprobe.h
 qt5/include/QtMultimedia/qvideorenderercontrol.h
 qt5/include/QtMultimedia/qvideosurfaceformat.h
 qt5/include/QtMultimedia/qvideowindowcontrol.h
-${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/gstvideoconnector_p.h
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstappsrc_p.h
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstbufferpoolinterface_p.h
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstcodecsinfo_p.h
@@ -237,7 +232,6 @@ ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstreamerbufferprobe_p.h
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstreamerbushelper_p.h
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstreamermessage_p.h
-${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstreamermirtexturerenderer_p.h
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstreamerplayercontrol_p.h
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstreamerplayersession_p.h
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstreamervideoinputdevicecontrol_p.h
@@ -257,11 +251,15 @@ ${PLIST.unix}qt5/include/QtMultimediaGstTools/QtMultimediaGstTools
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/QtMultimediaGstToolsDepends
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/QtMultimediaGstToolsVersion
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/qtmultimediagsttoolsversion.h
+qt5/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qdeclarativevideooutput_backend_p.h
+qt5/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qdeclarativevideooutput_p.h
 qt5/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qdeclarativevideooutput_render_p.h
 qt5/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qdeclarativevideooutput_window_p.h
+qt5/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qsgvideonode_p.h
 qt5/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qsgvideonode_rgb_p.h
 qt5/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qsgvideonode_texture_p.h
 qt5/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qsgvideonode_yuv_p.h
+qt5/include/QtMultimediaQuick/${PKGVERSION}/QtMultimediaQuick/private/qtmultimediaquickdefs_p.h
 qt5/include/QtMultimediaQuick/QtMultimediaQuick
 qt5/include/QtMultimediaQuick/QtMultimediaQuickDepends
 qt5/include/QtMultimediaQuick/QtMultimediaQuickVersion
@@ -283,11 +281,7 @@ qt5/include/QtMultimediaWidgets/qvideowidget.h
 qt5/include/QtMultimediaWidgets/qvideowidgetcontrol.h
 qt5/lib/cmake/Qt5Multimedia/Qt5MultimediaConfig.cmake
 qt5/lib/cmake/Qt5Multimedia/Qt5MultimediaConfigVersion.cmake
-${PLIST.mac}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_AVFMediaPlayerServicePlugin.cmake
-${PLIST.mac}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_AVFServicePlugin.cmake
-${PLIST.mac}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_AudioCaptureServicePlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_CameraBinServicePlugin.cmake
-${PLIST.mac}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_CoreAudioPlugin.cmake
 ${PLIST.alsa}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QAlsaPlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerAudioDecoderServicePlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerCaptureServicePlugin.cmake
@@ -304,22 +298,22 @@ qt5/lib/libQt5Multimedia.prl
 qt5/lib/libQt5Multimedia.so
 qt5/lib/libQt5Multimedia.so.${PKGVERSION}
 qt5/lib/libQt5Multimedia.so.5
-qt5/lib/libQt5Multimedia.so.5.13
+qt5/lib/libQt5Multimedia.so.5.14
 ${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.prl
 ${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so
 ${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so.${PKGVERSION}
 ${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so.5
-${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so.5.13
+${PLIST.unix}qt5/lib/libQt5MultimediaGstTools.so.5.14
 qt5/lib/libQt5MultimediaQuick.prl
 qt5/lib/libQt5MultimediaQuick.so
 qt5/lib/libQt5MultimediaQuick.so.${PKGVERSION}
 qt5/lib/libQt5MultimediaQuick.so.5
-qt5/lib/libQt5MultimediaQuick.so.5.13
+qt5/lib/libQt5MultimediaQuick.so.5.14
 qt5/lib/libQt5MultimediaWidgets.prl
 qt5/lib/libQt5MultimediaWidgets.so
 qt5/lib/libQt5MultimediaWidgets.so.${PKGVERSION}
 qt5/lib/libQt5MultimediaWidgets.so.5
-qt5/lib/libQt5MultimediaWidgets.so.5.13
+qt5/lib/libQt5MultimediaWidgets.so.5.14
 qt5/lib/pkgconfig/Qt5Multimedia.pc
 qt5/lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/mkspecs/modules/qt_lib_multimedia.pri

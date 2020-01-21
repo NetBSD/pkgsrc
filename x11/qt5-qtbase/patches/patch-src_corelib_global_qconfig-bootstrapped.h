@@ -1,12 +1,12 @@
-$NetBSD: patch-src_corelib_global_qconfig-bootstrapped.h,v 1.3 2018/12/18 09:57:18 adam Exp $
+$NetBSD: patch-src_corelib_global_qconfig-bootstrapped.h,v 1.4 2020/01/21 20:25:37 adam Exp $
 
 SunOS does not have getauxval.
 
---- src/corelib/global/qconfig-bootstrapped.h.orig	2018-12-03 11:15:26.000000000 +0000
+--- src/corelib/global/qconfig-bootstrapped.h.orig	2019-12-07 06:27:07.000000000 +0000
 +++ src/corelib/global/qconfig-bootstrapped.h
-@@ -80,7 +80,11 @@
- #define QT_FEATURE_datestring 1
+@@ -81,7 +81,11 @@
  #define QT_FEATURE_datetimeparser -1
+ #define QT_FEATURE_easingcurve -1
  #define QT_FEATURE_etw -1
 +#ifdef __sun
 +# define QT_FEATURE_getauxval -1
@@ -15,4 +15,4 @@ SunOS does not have getauxval.
 +#endif
  #define QT_FEATURE_getentropy -1
  #define QT_NO_GEOM_VARIANT
- #define QT_FEATURE_iconv -1
+ #define QT_FEATURE_hijricalendar -1

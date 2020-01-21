@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.19 2019/11/05 14:58:44 adam Exp $
+$NetBSD: distinfo,v 1.20 2020/01/21 20:25:37 adam Exp $
 
-SHA1 (qtdeclarative-everywhere-src-5.13.2.tar.xz) = 68d476c48193a81e7947cccd4e97efa07db2397b
-RMD160 (qtdeclarative-everywhere-src-5.13.2.tar.xz) = 0ffe0f6c54cfb6ae8d05b9d1023a2b29bcf62c25
-SHA512 (qtdeclarative-everywhere-src-5.13.2.tar.xz) = a3fcc65eccdd598c03991978db6462293781abc80affd9a489253d4a812073832554892d503fa0de32a9ef97ddc74b9ad71e2bd7cfa2f21ce1fc64d1358ab730
-Size (qtdeclarative-everywhere-src-5.13.2.tar.xz) = 20940748 bytes
+SHA1 (qtdeclarative-everywhere-src-5.14.0.tar.xz) = 2ea4a2ffe698987423f6ee63d58fbba433fe0910
+RMD160 (qtdeclarative-everywhere-src-5.14.0.tar.xz) = 914655dc852e01a4711a85946b76bdc634c5dff2
+SHA512 (qtdeclarative-everywhere-src-5.14.0.tar.xz) = e9f065ff0fcf6aa2a145062c861fb23b93fb21b6e2ca8820aa7c8fe4ec2cba15e55df7ac803637188110784810476b68548d138987b3524ff002d35cafd50d8d
+Size (qtdeclarative-everywhere-src-5.14.0.tar.xz) = 21250100 bytes
 SHA1 (patch-examples_quick_customitems_painteditem_painteditem.pro) = a3881ee92daae30130fa665c8686f2e1572ecc1a
 SHA1 (patch-src_3rdparty_masm_assembler_ARMv7Assembler.h) = 505b2a585a7ed98e63403a3cc44d839a4f80c01d
 SHA1 (patch-src_3rdparty_masm_wtf_Compiler.h) = 8d7e318e0148eea0f262ec13463bc15bd03478dc
 SHA1 (patch-src_3rdparty_masm_yarr_YarrCanonicalize.h) = 3cb31384f5287a5449d1a6bdd03d42870ac9385f
-SHA1 (patch-src_qml_jsruntime_qv4alloca__p.h) = 1035da974789f897bb7071284fae21c979844f62
+SHA1 (patch-src_qml_common_qv4alloca__p.h) = 15a300585e4f5acf956badf0d94e388934883041
+SHA1 (patch-src_qml_jit_qv4assemblercommon__p.h) = e8d08938fe9440d96862bc92ccce048b36779374
 SHA1 (patch-tools_qmltestrunner_qmltestrunner.pro) = 471d399d57696652be5a4264657aed467852c5f3

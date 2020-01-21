@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2018/06/19 07:21:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/01/21 20:25:38 adam Exp $
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QJp2Plugin.cmake
-${PLIST.mac}qt5/lib/cmake/Qt5Gui/Qt5Gui_QMacHeifPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QMngPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake
@@ -9,7 +8,6 @@ qt5/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake
 qt5/plugins/imageformats/libqicns.so
 qt5/plugins/imageformats/libqjp2.so
-${PLIST.mac}qt5/plugins/imageformats/libqmacheif.so
 qt5/plugins/imageformats/libqmng.so
 qt5/plugins/imageformats/libqtga.so
 qt5/plugins/imageformats/libqtiff.so
