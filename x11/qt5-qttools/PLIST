@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2019/09/16 19:24:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/01/21 20:25:39 adam Exp $
 lib/pkgconfig/Qt5Designer.pc
 lib/pkgconfig/Qt5Help.pc
 lib/pkgconfig/Qt5UiTools.pc
-${PLIST.mac}qt5/bin/Assistant
-${PLIST.mac}qt5/bin/Designer
-${PLIST.mac}qt5/bin/Linguist
+qt5/bin/Assistant
+qt5/bin/Designer
+qt5/bin/Linguist
 ${PLIST.unix}qt5/bin/assistant
 ${PLIST.unix}qt5/bin/designer
 qt5/bin/lconvert
@@ -14,8 +14,8 @@ qt5/bin/lrelease
 qt5/bin/lrelease-pro
 qt5/bin/lupdate
 qt5/bin/lupdate-pro
-${PLIST.mac}qt5/bin/macchangeqt
-${PLIST.mac}qt5/bin/macdeployqt
+qt5/bin/macchangeqt
+qt5/bin/macdeployqt
 qt5/bin/pixeltool
 qt5/bin/qcollectiongenerator
 qt5/bin/qdbus
@@ -257,11 +257,15 @@ qt5/include/QtUiTools/QtUiToolsDepends
 qt5/include/QtUiTools/QtUiToolsVersion
 qt5/include/QtUiTools/qtuitoolsversion.h
 qt5/include/QtUiTools/quiloader.h
+qt5/lib/cmake/Qt5AttributionsScannerTools/Qt5AttributionsScannerToolsConfig.cmake
+qt5/lib/cmake/Qt5AttributionsScannerTools/Qt5AttributionsScannerToolsConfigVersion.cmake
 qt5/lib/cmake/Qt5Designer/Qt5DesignerConfig.cmake
 qt5/lib/cmake/Qt5Designer/Qt5DesignerConfigVersion.cmake
 qt5/lib/cmake/Qt5Designer/Qt5Designer_QQuickWidgetPlugin.cmake
 qt5/lib/cmake/Qt5DesignerComponents/Qt5DesignerComponentsConfig.cmake
 qt5/lib/cmake/Qt5DesignerComponents/Qt5DesignerComponentsConfigVersion.cmake
+qt5/lib/cmake/Qt5DocTools/Qt5DocToolsConfig.cmake
+qt5/lib/cmake/Qt5DocTools/Qt5DocToolsConfigVersion.cmake
 qt5/lib/cmake/Qt5Help/Qt5HelpConfig.cmake
 qt5/lib/cmake/Qt5Help/Qt5HelpConfigExtras.cmake
 qt5/lib/cmake/Qt5Help/Qt5HelpConfigVersion.cmake
@@ -276,17 +280,17 @@ qt5/lib/libQt5Designer.prl
 qt5/lib/libQt5Designer.so
 qt5/lib/libQt5Designer.so.${PKGVERSION}
 qt5/lib/libQt5Designer.so.5
-qt5/lib/libQt5Designer.so.5.13
+qt5/lib/libQt5Designer.so.5.14
 qt5/lib/libQt5DesignerComponents.prl
 qt5/lib/libQt5DesignerComponents.so
 qt5/lib/libQt5DesignerComponents.so.${PKGVERSION}
 qt5/lib/libQt5DesignerComponents.so.5
-qt5/lib/libQt5DesignerComponents.so.5.13
+qt5/lib/libQt5DesignerComponents.so.5.14
 qt5/lib/libQt5Help.prl
 qt5/lib/libQt5Help.so
 qt5/lib/libQt5Help.so.${PKGVERSION}
 qt5/lib/libQt5Help.so.5
-qt5/lib/libQt5Help.so.5.13
+qt5/lib/libQt5Help.so.5.14
 qt5/lib/libQt5UiPlugin.prl
 qt5/lib/libQt5UiTools.a
 qt5/lib/libQt5UiTools.prl
