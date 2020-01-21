@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.706 2020/01/21 20:29:28 adam Exp $
+$NetBSD: CHANGES-2020,v 1.707 2020/01/21 21:55:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -836,3 +836,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/qt5-qtx11extras to 5.14.0 [adam 2020-01-21]
 	Updated x11/qt5-qtxmlpatterns to 5.14.0 [adam 2020-01-21]
 	Updated net/wireshark to 3.2.1 [adam 2020-01-21]
+	Added sysutils/daemontools-encore version 1.11 [schmonz 2020-01-21]
