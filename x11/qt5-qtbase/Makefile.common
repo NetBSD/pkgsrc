@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2019/11/05 14:58:43 adam Exp $
+# $NetBSD: Makefile.common,v 1.35 2020/01/21 20:25:37 adam Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -53,10 +53,8 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/qt5/lib
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${WRKSRC}/lib
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
-PLIST_VARS+=		mac unix
-.if ${OPSYS} == "Darwin"
-PLIST.mac=		yes
-.else
+PLIST_VARS+=		unix
+.if ${OPSYS} != "Darwin"
 PLIST.unix=		yes
 .endif
 
