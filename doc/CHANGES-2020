@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.700 2020/01/21 15:02:23 nia Exp $
+$NetBSD: CHANGES-2020,v 1.701 2020/01/21 15:03:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -801,3 +801,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/libdazzle version 3.35.3 [nia 2020-01-21]
 	Added devel/libhandy version 0.0.13 [nia 2020-01-21]
 	Updated www/epiphany to 3.35.2 [nia 2020-01-21]
+	Removed www/epiphany-extensions [nia 2020-01-21]
