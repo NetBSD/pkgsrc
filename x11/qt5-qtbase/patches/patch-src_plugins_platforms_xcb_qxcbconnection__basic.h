@@ -1,15 +1,14 @@
-$NetBSD: patch-src_plugins_platforms_xcb_qxcbconnection__basic.h,v 1.1 2018/12/18 09:57:18 adam Exp $
+$NetBSD: patch-src_plugins_platforms_xcb_qxcbconnection__basic.h,v 1.2 2020/01/21 20:25:37 adam Exp $
 
-Fix building.
+Include <cstdlib> for std::free().
 
---- src/plugins/platforms/xcb/qxcbconnection_basic.h.orig	2018-12-13 14:45:57.605333077 +0000
+--- src/plugins/platforms/xcb/qxcbconnection_basic.h.orig	2020-01-21 16:01:11.717518124 +0000
 +++ src/plugins/platforms/xcb/qxcbconnection_basic.h
-@@ -157,7 +157,7 @@ private:
- #define Q_XCB_REPLY_CONNECTION_ARG(connection, ...) connection
+@@ -50,6 +50,7 @@
  
- struct QStdFreeDeleter {
--    void operator()(void *p) const Q_DECL_NOTHROW { return std::free(p); }
-+    void operator()(void *p) const Q_DECL_NOTHROW { return free(p); }
- };
+ #include <xcb/xcb.h>
  
- #define Q_XCB_REPLY(call, ...) \
++#include <cstdlib>
+ #include <memory>
+ 
+ QT_BEGIN_NAMESPACE

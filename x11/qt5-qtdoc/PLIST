@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/11/05 14:58:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/01/21 20:25:37 adam Exp $
 qt5/doc/qtcmake.qch
 qt5/doc/qtcmake/cmake-command-reference.html
 qt5/doc/qtcmake/cmake-get-started.html
@@ -333,6 +333,7 @@ qt5/doc/qtdoc/images/wayland-single-process-develop.png
 qt5/doc/qtdoc/images/wayland-single-process-eglfs.png
 qt5/doc/qtdoc/images/xml-examples.png
 qt5/doc/qtdoc/index.html
+qt5/doc/qtdoc/inputs-linux-device.html
 qt5/doc/qtdoc/integrity-building-monolith.html
 qt5/doc/qtdoc/integrity-building-qt-for-imx6quad-board.html
 qt5/doc/qtdoc/integrity-building-u-boot-image.html
@@ -372,6 +373,7 @@ qt5/doc/qtdoc/newclasses510.html
 qt5/doc/qtdoc/newclasses511.html
 qt5/doc/qtdoc/newclasses512.html
 qt5/doc/qtdoc/newclasses513.html
+qt5/doc/qtdoc/newclasses514.html
 qt5/doc/qtdoc/newclasses52.html
 qt5/doc/qtdoc/newclasses53.html
 qt5/doc/qtdoc/newclasses54.html
@@ -645,6 +647,7 @@ qt5/doc/qtdoc/whatsnew510.html
 qt5/doc/qtdoc/whatsnew511.html
 qt5/doc/qtdoc/whatsnew512.html
 qt5/doc/qtdoc/whatsnew513.html
+qt5/doc/qtdoc/whatsnew514.html
 qt5/doc/qtdoc/whatsnew52.html
 qt5/doc/qtdoc/whatsnew53.html
 qt5/doc/qtdoc/whatsnew54.html
