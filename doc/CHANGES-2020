@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.693 2020/01/21 11:57:01 pho Exp $
+$NetBSD: CHANGES-2020,v 1.694 2020/01/21 14:04:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -794,3 +794,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/phpmyadmin to 4.9.4 [tm 2020-01-21]
 	Updated textproc/p5-Text-Markdown-Discount to 0.12 [schmonz 2020-01-21]
 	Added devel/ecb version 2.50 [pho 2020-01-21]
+	Updated security/libsecret to 0.20.0 [nia 2020-01-21]
