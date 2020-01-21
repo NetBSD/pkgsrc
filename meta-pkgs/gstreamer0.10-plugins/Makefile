@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/10/17 10:50:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/21 09:40:06 jperkin Exp $
 
 DISTNAME=	# empty
 PKGNAME=	gstreamer0.10-plugins-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs multimedia
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,7 +16,6 @@ META_PACKAGE=	yes
 DEPENDS+=	gst-plugins0.10-a52-[0-9]*:../../audio/gst-plugins0.10-a52
 DEPENDS+=	gst-plugins0.10-cdparanoia-[0-9]*:../../audio/gst-plugins0.10-cdparanoia
 DEPENDS+=	gst-plugins0.10-dts-[0-9]*:../../audio/gst-plugins0.10-dts
-DEPENDS+=	gst-plugins0.10-esound-[0-9]*:../../audio/gst-plugins0.10-esound
 DEPENDS+=	gst-plugins0.10-faad-[0-9]*:../../audio/gst-plugins0.10-faad
 DEPENDS+=	gst-ffmpeg-[0-9]*:../../multimedia/gst-plugins0.10-ffmpeg
 DEPENDS+=	gst-fluendo-mp3-[0-9]*:../../audio/gst-plugins0.10-fluendo-mp3
