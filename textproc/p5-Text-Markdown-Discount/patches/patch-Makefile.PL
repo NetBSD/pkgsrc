@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.PL,v 1.3 2018/03/10 05:45:02 schmonz Exp $
+$NetBSD: patch-Makefile.PL,v 1.4 2020/01/21 10:28:51 schmonz Exp $
 
 Remove build instructions for the local copy of libdiscount.
 
---- Makefile.PL.orig	2013-08-09 20:06:59.000000000 +0000
+--- Makefile.PL.orig	2020-01-21 00:16:59.000000000 +0000
 +++ Makefile.PL
 @@ -4,66 +4,6 @@ use warnings;
  use ExtUtils::MakeMaker;
@@ -71,7 +71,7 @@ Remove build instructions for the local copy of libdiscount.
  WriteMakefile(
      NAME              => 'Text::Markdown::Discount',
      VERSION_FROM      => 'lib/Text/Markdown/Discount.pm',
-@@ -71,8 +11,5 @@ WriteMakefile(
+@@ -71,10 +11,7 @@ WriteMakefile(
      ($] >= 5.005 ?
        (ABSTRACT_FROM  => 'lib/Text/Markdown/Discount.pm',
         AUTHOR         => 'Masayoshi Sekimura <sekimura@cpan.org>') : ()),
@@ -79,5 +79,7 @@ Remove build instructions for the local copy of libdiscount.
 -    INC               => '-I. -I' . $extdir,
 -    MYEXTLIB          => $myextlib,
 -    clean             => { FILES => $clean_files },
-+    LIBS              => '-L@PREFIX@/lib -lmarkdown',
- );
++    LIBS               => '-L@PREFIX@/lib -lmarkdown',
+     META_MERGE => {
+         'meta-spec' => { version => 2 },
+         resources => {
