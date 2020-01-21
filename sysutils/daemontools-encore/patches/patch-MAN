@@ -1,0 +1,14 @@
+$NetBSD: patch-MAN,v 1.1 2020/01/21 21:54:25 schmonz Exp $
+
+Don't try to install missing file.
+
+--- MAN.orig	2018-10-14 00:48:50.000000000 +0000
++++ MAN
+@@ -8,7 +8,6 @@ c:::644:/man8/:pgrphack.8:
+ c:::644:/man8/:readproctitle.8:
+ c:::644:/man8/:setlock.8:
+ c:::644:/man8/:setuidgid.8:
+-c:::644:/man8/:setuser.8:
+ c:::644:/man8/:softlimit.8:
+ c:::644:/man8/:supervise.8:
+ c:::644:/man8/:svc.8:
