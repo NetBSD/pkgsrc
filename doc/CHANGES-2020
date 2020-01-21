@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.694 2020/01/21 14:04:30 nia Exp $
+$NetBSD: CHANGES-2020,v 1.695 2020/01/21 14:13:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -795,3 +795,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-Text-Markdown-Discount to 0.12 [schmonz 2020-01-21]
 	Added devel/ecb version 2.50 [pho 2020-01-21]
 	Updated security/libsecret to 0.20.0 [nia 2020-01-21]
+	Updated net/samba4 to 4.11.5 [taca 2020-01-21]
