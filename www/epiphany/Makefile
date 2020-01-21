@@ -1,63 +1,38 @@
-# $NetBSD: Makefile,v 1.189 2019/11/04 22:09:54 rillig Exp $
+# $NetBSD: Makefile,v 1.190 2020/01/21 15:02:08 nia Exp $
 
-DISTNAME=	epiphany-2.30.6
-PKGREVISION=	69
+DISTNAME=	epiphany-3.35.2
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.30/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/3.35/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.gnome.org/projects/epiphany/
-COMMENT=	The web browser for the GNOME Desktop
+HOMEPAGE=	https://wiki.gnome.org/Apps/Web
+COMMENT=	Web browser for the GNOME desktop
+LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
-USE_LANGUAGES=		c c++
+USE_TOOLS+=	pkg-config msgfmt xgettext
 
-# see pkgsrc/security/mozilla-rootcerts
-CONFIGURE_ARGS+=	--with-ca-file=/etc/ssl/certs/ca-certificates.crt
+MESON_ARGS+=	-Dunit_tests=disabled
 
-.include "../../mk/bsd.prefs.mk"
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/epiphany
 
-# for backtrace
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
-LIBS+=	-lexecinfo
-.endif
+PYTHON_FOR_BUILD_ONLY=	tool
 
-PKGCONFIG_OVERRIDE=	data/epiphany.pc.in
+# XXX msgfmt: unknown option -- desktop
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
-.include "options.mk"
-
-GCONF_SCHEMAS=	epiphany.schemas
-GCONF_SCHEMAS+=	epiphany-lockdown.schemas
-
-.include "../../audio/libcanberra/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.18.0
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/nss/buildlink3.mk"
-.include "../../www/webkit24-gtk/buildlink3.mk"
-.include "../../graphics/gnome-icon-theme/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../devel/glib2/schemas.mk"
+.include "../../devel/libdazzle/buildlink3.mk"
+.include "../../devel/libhandy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../net/ORBit2/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
-.include "../../security/libgnome-keyring/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../security/gcr/buildlink3.mk"
+.include "../../security/nettle/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.6.12
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
-.include "../../x11/gnome-desktop/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.14.0
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/startup-notification/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
+.include "../../textproc/json-glib/buildlink3.mk"
+.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
