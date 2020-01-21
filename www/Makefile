@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1432 2020/01/19 12:52:02 nia Exp $
+# $NetBSD: Makefile,v 1.1433 2020/01/21 15:02:07 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -98,7 +98,6 @@ SUBDIR+=	eliom
 SUBDIR+=	emacs-w3m
 SUBDIR+=	emacs-w3m-snapshot
 SUBDIR+=	epiphany
-SUBDIR+=	epiphany-extensions
 SUBDIR+=	fcgi
 SUBDIR+=	fcgiwrap
 SUBDIR+=	fengoffice
