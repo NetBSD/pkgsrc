@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2033 2019/11/04 17:47:30 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2034 2020/01/21 10:56:54 kamil Exp $
 #
 # This file is in the public domain.
 #
@@ -477,7 +477,7 @@ PKG_SKIP_REASON+= "${PKGNAME} may not be placed in source form on a CDROM:" \
 PKG_SKIP_REASON+= "${PKGNAME} is restricted:" \
 	 "    "${RESTRICTED:Q}
 .  endif
-.  if defined(USE_X11) && (${X11_TYPE} == "native") && !exists(${X11BASE})
+.  if defined(USE_X11) && (${USE_X11} != "weak") && (${X11_TYPE} == "native") && !exists(${X11BASE})
 PKG_FAIL_REASON+= "${PKGNAME} uses X11, but ${X11BASE} not found"
 .  endif
 .  if ${BROKEN:U:M*}
