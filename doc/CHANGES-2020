@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.692 2020/01/21 10:28:59 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.693 2020/01/21 11:57:01 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -793,3 +793,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/gstreamer0.10-plugins to 1.0nb3 [jperkin 2020-01-21]
 	Updated databases/phpmyadmin to 4.9.4 [tm 2020-01-21]
 	Updated textproc/p5-Text-Markdown-Discount to 0.12 [schmonz 2020-01-21]
+	Added devel/ecb version 2.50 [pho 2020-01-21]
