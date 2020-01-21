@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2020/01/21 15:09:03 nia Exp $
+# $NetBSD: Makefile,v 1.85 2020/01/21 23:26:29 nia Exp $
 
 DISTNAME=	brasero-3.12.2
 CATEGORIES=	sysutils gnome
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--disable-nautilus
 .if ${OPSYS} != "Linux"
 CONFIGURE_ARGS+=	--disable-inotify
 .endif
+
+BUILDLINK_TRANSFORM+=	rm:-Werror=format=2
 
 PKGCONFIG_OVERRIDE+=	libbrasero-burn3.pc.in
 PKGCONFIG_OVERRIDE+=	libbrasero-media3.pc.in
