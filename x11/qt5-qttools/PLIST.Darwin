@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2020/01/21 20:25:39 adam Exp $
+qt5/bin/Assistant
+qt5/bin/Designer
+qt5/bin/Linguist
+qt5/bin/macchangeqt
+qt5/bin/macdeployqt

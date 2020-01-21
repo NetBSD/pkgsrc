@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/11/05 14:58:43 adam Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/21 20:25:36 adam Exp $
 
 DISTNAME=	qt5-${QTVERSION}
 
@@ -35,6 +35,7 @@ DEPENDS+=	qt5-qtxmlpatterns-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtxmlpatterns
 .if ${OPSYS} == "Darwin"
 DEPENDS+=	qt5-qtmacextras-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtmacextras
 .else
+DEPENDS+=	qt5-qtwayland-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtwayland
 DEPENDS+=	qt5-qtx11extras-${QTVERSION}{,nb[0-9]*}:../../x11/qt5-qtx11extras
 .endif
 
