@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3031 2020/01/20 01:12:47 pho Exp $
+# $NetBSD: Makefile,v 1.3032 2020/01/21 11:57:38 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -271,6 +271,7 @@ SUBDIR+=	doxygen
 SUBDIR+=	doxymacs
 SUBDIR+=	dumpet
 SUBDIR+=	easygit
+SUBDIR+=	ecb
 SUBDIR+=	eclipse
 SUBDIR+=	ecore
 SUBDIR+=	edcommon
