@@ -1,44 +1,40 @@
-# $NetBSD: Makefile,v 1.48 2020/01/18 23:33:03 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2020/01/22 19:45:33 nia Exp $
 
-DISTNAME=	orca-2.32.1
-PKGREVISION=	2
-CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/orca/2.32/}
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=	orca-3.34.1
+CATEGORIES=	misc gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/orca/3.34/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://live.gnome.org/Orca
+HOMEPAGE=	https://wiki.gnome.org/Projects/Orca
 COMMENT=	Screen reader
-LICENSE=	gnu-lgpl-v2
+LICENSE=	gnu-lgpl-v2.1
 
-# dependency versions are for Gnome 2.32.
-DEPENDS+=	${PYPKGPREFIX}-at-spi>=1.32:../../devel/py-at-spi
-DEPENDS+=	${PYPKGPREFIX}-gobject>=2.26:../../devel/py-gobject
-DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
-DEPENDS+=	${PYPKGPREFIX}-ORBit>=2.24:../../net/py-ORBit
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-at-spi2-[0-9]*:../../devel/py-at-spi2
 DEPENDS+=	${PYPKGPREFIX}-dbus-[0-9]*:../../sysutils/py-dbus
-DEPENDS+=	${PYPKGPREFIX}-gnome2>=2.28:../../x11/py-gnome2
-DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.22:../../x11/py-gtk2
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
-DEPENDS+=	gnome-speech>=0.4.25:../../audio/gnome-speech
+DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-USE_TOOLS+=		intltool pkg-config gmake msgfmt
-USE_PKGLOCALEDIR=	yes
-
-CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+GNU_CONFIGURE=	yes
 PY_PATCHPLIST=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	27 # py-ORBit, py-gnome2, py-gtk2
+USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	msgfmt msgmerge xgettext
 
-.include "../../mk/bsd.prefs.mk"
-.if ${X11_TYPE} == "modular" || !exists(${X11BASE}/bin/xmodmap)
-DEPENDS+=	xmodmap-[0-9]*:../../x11/xmodmap
-.endif
+# XXX msgfmt: unknown option -- desktop
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
+# Python 3 only
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../devel/glib2/schemas.mk"
+.include "../../audio/speech-dispatcher/buildlink3.mk"
+.include "../../devel/libwnck3/buildlink3.mk"
+.include "../../devel/py-gobject3-common/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../lang/python/extension.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
