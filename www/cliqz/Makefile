@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2020/01/18 21:51:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/22 10:36:24 fox Exp $
 
-DISTNAME=	cliqz-1.30.1
-PKGREVISION=	1
+DISTNAME=	cliqz-1.32.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliqz-oss/}
 GITHUB_PROJECT=	browser-f
@@ -15,7 +14,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 CLIQZ_CHANNEL=		release
 # If the PKGVERSION_NOREV is updated, make sure to update the last build id from
 # ftp -Vo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
-CLIQZ_LAST_BUILD_ID=	20191128141357
+CLIQZ_LAST_BUILD_ID=	20200114172916
 CLIQZ_PLUGIN_SUFX=	@cliqz.com.xpi
 
 SITES.adult-domains.bin= \
@@ -93,6 +92,7 @@ post-extract:
 	      ${WRKSRC}/mozilla-release/third_party/rust/libc/.cargo-checksum.json.orig
 	${SED}	-e 's/4d9f7091af8e166943ac6f42ce85558909e5b6e61325039bff7adfbcf4b90212/7f3da734d5e2e9426051da4f406e46d9e9bed43ed2d7d048e8afc8af7ed44795/' \
 		-e 's/1cd66ed5967c788562d4ad626cfbeb1544f4b9267111de5f6790379b8327f28e/6ae549dd21581748b2f1d82880eaca3445c11e3354965e5b49b20342075a3e52/' \
+		-e 's/a3540eab4dbc52e006e84e288bad17e1dae3865fea49020e0ed8b5a7724a9532/5e58a2109f5eff0f497dfac150c161c1d517a2227b49e086da96c3d66522ac3a/' \
 		< ${WRKSRC}/mozilla-release/third_party/rust/libc/.cargo-checksum.json.orig \
 		> ${WRKSRC}/mozilla-release/third_party/rust/libc/.cargo-checksum.json
 	${CP} ${WRKSRC}/mozilla-release/third_party/rust/bindgen/.cargo-checksum.json \
