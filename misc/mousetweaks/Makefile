@@ -1,35 +1,27 @@
-# $NetBSD: Makefile,v 1.81 2020/01/18 23:33:03 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.82 2020/01/22 18:39:53 nia Exp $
 
-DISTNAME=	mousetweaks-2.32.1
-PKGREVISION=	28
-CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mousetweaks/2.32/}
+DISTNAME=	mousetweaks-3.32.0
+CATEGORIES=	misc gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mousetweaks/3.32/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://live.gnome.org/Mousetweaks/Home
+HOMEPAGE=	https://wiki.gnome.org/Projects/Mousetweaks
 COMMENT=	Mouse accessibility software
-LICENSE=	gnu-gpl-v3 AND gnu-fdl-v1.3
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 
-GCONF_SCHEMAS+=	mousetweaks.schemas
-GCONF_SCHEMAS+=	pointer-capture-applet.schemas
+USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	msgfmt msgmerge xgettext
 
-USE_TOOLS+=	gmake intltool msgfmt pkg-config
-
-BUILDLINK_API_DEPENDS.GConf+=	GConf>=2.16.0
-.include "../../devel/GConf/schemas.mk"
-.include "../../devel/at-spi/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.4.0
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
+.include "../../devel/glib2/schemas.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/gnome-panel/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.13.1
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
