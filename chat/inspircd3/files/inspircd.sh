@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: inspircd.sh,v 1.1 2019/05/03 17:14:27 nia Exp $
+# $NetBSD: inspircd.sh,v 1.2 2020/01/22 10:27:58 nia Exp $
 #
 # PROVIDE: inspircd
 # REQUIRE: DAEMON
@@ -10,7 +10,7 @@
 name="inspircd"
 rcvar=${name}
 command="@PREFIX@/bin/inspircd"
-required_files="@PKG_SYSCONFDIR@/inspircd/inspircd.conf"
+required_files="@PKG_SYSCONFDIR@/inspircd.conf"
 pidfile="@PREFIX@/inspircd/${name}.pid"
 extra_commands="rehash sslrehash"
 rehash_cmd="inspircd_rehash"
