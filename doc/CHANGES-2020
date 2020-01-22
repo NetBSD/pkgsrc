@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.711 2020/01/22 13:35:00 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.712 2020/01/22 13:35:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -842,3 +842,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-urllib3 to 1.25.8 [adam 2020-01-22]
 	Updated www/cliqz to 1.32.0 [fox 2020-01-22]
 	Updated www/firefox to 72.0.2 [ryoon 2020-01-22]
+	Updated www/firefox-l10n to 72.0.2 [ryoon 2020-01-22]
