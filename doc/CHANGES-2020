@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.724 2020/01/22 20:04:42 leot Exp $
+$NetBSD: CHANGES-2020,v 1.725 2020/01/22 21:25:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -859,3 +859,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-httplib2 to 0.16.0 [adam 2020-01-22]
 	Updated misc/orca to 3.34.1 [nia 2020-01-22]
 	Updated www/webkit-gtk to 2.26.3 [leot 2020-01-22]
+	Updated devel/py-babel to 2.8.0 [adam 2020-01-22]
+	Updated finance/py-braintree to 3.58.0 [adam 2020-01-22]
+	Updated www/py-django-extensions to 2.2.6 [adam 2020-01-22]
+	Updated devel/py-pexpect to 4.8.0 [adam 2020-01-22]
