@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2020/01/18 15:55:28 nia Exp $
+# $NetBSD: options.mk,v 1.22 2020/01/22 19:08:28 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -14,7 +14,7 @@ PKG_SUPPORTED_OPTIONS+=		sdl2 wayland x11
 
 .include "../../mk/bsd.fast.prefs.mk"
 PKG_SUGGESTED_OPTIONS=		ass bluray lua sdl2
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio
 .if ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=		opengl libdrm x11
 .endif
