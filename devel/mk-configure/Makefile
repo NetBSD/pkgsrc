@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2020/01/18 21:23:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/22 10:53:58 cheusov Exp $
 #
 
 DISTNAME=	mk-configure-0.33.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/}
 
@@ -21,8 +22,8 @@ MAKE_PROGRAM=		${PREFIX}/bin/bmake
 
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} \
 			SYSCONFDIR=${PKG_SYSCONFDIR} \
-			BMAKE=${PREFIX}/bin/bmake
-MAKE_FLAGS=		PROG.awk=${AWK:Q}
+			BMAKE=${PREFIX}/bin/bmake \
+			MKC_AWK=${AWK:Q}
 
 AUTO_MKDIRS=		yes
 
@@ -37,13 +38,6 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 CHECK_PERMS_SKIP=	*/foobar.in */hello_world3.in */prog1.awk.in
-
-.if ${OPSYS} == SunOS && exists(/usr/xpg4/bin/awk)
-REPLACE_INTERPRETER+=	awk
-REPLACE.awk.old=	/usr/bin/awk
-REPLACE.awk.new=	/usr/xpg4/bin/awk
-REPLACE_FILES.awk=	mkc_check_version
-.endif
 
 .if ${OPSYS} != NetBSD && ${OPSYS} != FreeBSD && ${OPSYS} != OpenBSD && ${OPSYS} != DragonFly && ${OPSYS} != MirBSD
 DEPENDS+=	bmkdep-[0-9]*:../../devel/bmkdep
