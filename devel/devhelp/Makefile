@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2020/01/22 18:11:53 nia Exp $
+# $NetBSD: Makefile,v 1.131 2020/01/22 18:13:19 nia Exp $
 
 DISTNAME=	devhelp-3.34.0
 CATEGORIES=	devel gnome
@@ -25,7 +25,7 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/libdevhelp-3.0.pc
 
 .include "../../devel/meson/build.mk"
-.include "../../mywip/amtk/buildlink3.mk"
+.include "../../devel/amtk/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
