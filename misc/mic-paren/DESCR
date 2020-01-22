@@ -1,0 +1,7 @@
+mic-paren is an extension and replacement to the packages paren and
+stig-paren for Emacs. When mic-paren is active Emacs normal
+parenthesis matching is deactivated. Instead parenthesis matching will
+be performed as soon as the cursor is positioned at a parenthesis. The
+matching parenthesis (or the entire expression between the
+parentheses) is highlighted until the cursor is moved away from the
+parenthesis.
