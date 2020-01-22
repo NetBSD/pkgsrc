@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.715 2020/01/22 18:09:59 nia Exp $
+$NetBSD: CHANGES-2020,v 1.716 2020/01/22 18:12:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -846,3 +846,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox68 to 68.4.2 [ryoon 2020-01-22]
 	Updated www/firefox68-l10n to 68.4.2 [ryoon 2020-01-22]
 	Added devel/amtk version 5.0.1 [nia 2020-01-22]
+	Updated devel/devhelp to 3.34.0 [nia 2020-01-22]
