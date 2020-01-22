@@ -1,43 +1,35 @@
-# $NetBSD: Makefile,v 1.129 2019/08/11 13:18:41 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2020/01/22 18:11:53 nia Exp $
 
-DISTNAME=		devhelp-2.32.0
-PKGREVISION=		62
-CATEGORIES=		devel x11
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/2.32/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	devhelp-3.34.0
+CATEGORIES=	devel gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/devhelp/3.34/}
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=		http://developer.imendio.com/projects/devhelp
-COMMENT=		Documentation viewer based on GNOME2
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://wiki.gnome.org/Apps/Devhelp
+COMMENT=	Tool for browsing and searching API documentation from GNOME
+LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
+USE_TOOLS+=	pkg-config msgfmt xgettext
 
-GNU_CONFIGURE=		yes
+# workaround for build failure
+# https://gitlab.gnome.org/GNOME/json-glib/issues/35
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/devhelp
 
-PKGCONFIG_OVERRIDE+=	data/libdevhelp-2.0.pc.in
-GCONF_SCHEMAS=		devhelp.schemas
+PYTHON_FOR_BUILD_ONLY=	tool
 
-.include "../../devel/GConf/schemas.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libwnck/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
+# XXX msgfmt: unknown option -- xml
+_TOOLS_USE_PKGSRC.msgfmt=	yes
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/libdevhelp-3.0.pc
+
+.include "../../devel/meson/build.mk"
+.include "../../mywip/amtk/buildlink3.mk"
+.include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../www/webkit24-gtk/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libunique/buildlink3.mk"
-
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/devhelp
-	${INSTALL_DATA} ${WRKSRC}/misc/devhelp.el ${WRKSRC}/misc/devhelp.vim \
-		${DESTDIR}${PREFIX}/share/examples/devhelp
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/devhelp
-	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS COPYING ChangeLog README TODO \
-		${DESTDIR}${PREFIX}/share/doc/devhelp
-
+.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
