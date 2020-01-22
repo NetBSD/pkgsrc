@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/05/29 21:02:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/01/22 21:16:36 adam Exp $
 bin/pybabel-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -379,6 +379,7 @@ ${PYSITELIB}/babel/locale-data/fur_IT.dat
 ${PYSITELIB}/babel/locale-data/fy.dat
 ${PYSITELIB}/babel/locale-data/fy_NL.dat
 ${PYSITELIB}/babel/locale-data/ga.dat
+${PYSITELIB}/babel/locale-data/ga_GB.dat
 ${PYSITELIB}/babel/locale-data/ga_IE.dat
 ${PYSITELIB}/babel/locale-data/gd.dat
 ${PYSITELIB}/babel/locale-data/gd_GB.dat
