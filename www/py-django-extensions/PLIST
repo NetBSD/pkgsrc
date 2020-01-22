@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/07/21 08:00:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/01/22 21:20:28 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,6 +16,12 @@ ${PYSITELIB}/django_extensions/admin/filter.pyo
 ${PYSITELIB}/django_extensions/admin/widgets.py
 ${PYSITELIB}/django_extensions/admin/widgets.pyc
 ${PYSITELIB}/django_extensions/admin/widgets.pyo
+${PYSITELIB}/django_extensions/auth/__init__.py
+${PYSITELIB}/django_extensions/auth/__init__.pyc
+${PYSITELIB}/django_extensions/auth/__init__.pyo
+${PYSITELIB}/django_extensions/auth/mixins.py
+${PYSITELIB}/django_extensions/auth/mixins.pyc
+${PYSITELIB}/django_extensions/auth/mixins.pyo
 ${PYSITELIB}/django_extensions/collision_resolvers.py
 ${PYSITELIB}/django_extensions/collision_resolvers.pyc
 ${PYSITELIB}/django_extensions/collision_resolvers.pyo
@@ -276,6 +282,9 @@ ${PYSITELIB}/django_extensions/management/commands/update_permissions.pyo
 ${PYSITELIB}/django_extensions/management/commands/validate_templates.py
 ${PYSITELIB}/django_extensions/management/commands/validate_templates.pyc
 ${PYSITELIB}/django_extensions/management/commands/validate_templates.pyo
+${PYSITELIB}/django_extensions/management/debug_cursor.py
+${PYSITELIB}/django_extensions/management/debug_cursor.pyc
+${PYSITELIB}/django_extensions/management/debug_cursor.pyo
 ${PYSITELIB}/django_extensions/management/email_notifications.py
 ${PYSITELIB}/django_extensions/management/email_notifications.pyc
 ${PYSITELIB}/django_extensions/management/email_notifications.pyo
