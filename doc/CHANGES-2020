@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.719 2020/01/22 18:56:23 adam Exp $
+$NetBSD: CHANGES-2020,v 1.720 2020/01/22 19:15:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -851,3 +851,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/mousetweaks to 3.32.0 [nia 2020-01-22]
 	Updated devel/memcached to 1.5.21 [adam 2020-01-22]
 	Updated devel/py-test5 to 5.3.4 [adam 2020-01-22]
+	Updated www/py-uvicorn to 0.11.2 [adam 2020-01-22]
+	Updated devel/py-pyrsistent to 0.15.7 [adam 2020-01-22]
