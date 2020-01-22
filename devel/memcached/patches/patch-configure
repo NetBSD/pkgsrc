@@ -1,16 +1,16 @@
-$NetBSD: patch-configure,v 1.5 2019/11/11 17:29:50 adam Exp $
+$NetBSD: patch-configure,v 1.6 2020/01/22 18:53:13 adam Exp $
 
 Remove -Werror from default flags since different compilers
 have very different warnings.
 
---- configure.orig	2019-11-11 09:22:25.000000000 +0000
+--- configure.orig	2020-01-21 22:09:10.000000000 +0000
 +++ configure
-@@ -7221,7 +7221,7 @@ $as_echo "#define _GNU_SOURCE 1" >>confd
+@@ -7245,7 +7245,7 @@ $as_echo "#define _GNU_SOURCE 1" >>confd
  elif test "$GCC" = "yes"
  then
    GCC_VERSION=`$CC -dumpversion`
 -  CFLAGS="$CFLAGS -Wall -Werror -pedantic -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls"
 +  CFLAGS="$CFLAGS -Wall -pedantic -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls"
-   case $GCC_VERSION in
-     4.4.*)
-     CFLAGS="$CFLAGS -fno-strict-aliasing"
+   if test "x$enable_asan" = "xyes"; then
+     CFLAGS="$CFLAGS -fsanitize=address"
+   fi
