@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/28 16:51:49 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/01/22 19:25:54 nia Exp $
+bin/spd-conf
 bin/spd-say
 bin/spdsend
 bin/speech-dispatcher
@@ -13,6 +14,27 @@ info/speech-dispatcher.info
 info/ssip.info
 lib/libspeechd.la
 lib/pkgconfig/speech-dispatcher.pc
+${PYSITELIB}/speechd/__init__.py
+${PYSITELIB}/speechd/__init__.pyo
+${PYSITELIB}/speechd/__init__.pyc
+${PYSITELIB}/speechd/_test.pyo
+${PYSITELIB}/speechd/_test.pyc
+${PYSITELIB}/speechd/client.pyo
+${PYSITELIB}/speechd/client.pyc
+${PYSITELIB}/speechd/paths.pyo
+${PYSITELIB}/speechd/paths.pyc
+${PYSITELIB}/speechd/_test.py
+${PYSITELIB}/speechd/client.py
+${PYSITELIB}/speechd/paths.py
+${PYSITELIB}/speechd_config/__init__.py
+${PYSITELIB}/speechd_config/__init__.pyo
+${PYSITELIB}/speechd_config/__init__.pyc
+${PYSITELIB}/speechd_config/config.pyo
+${PYSITELIB}/speechd_config/config.pyc
+${PYSITELIB}/speechd_config/paths.pyo
+${PYSITELIB}/speechd_config/paths.pyc
+${PYSITELIB}/speechd_config/config.py
+${PYSITELIB}/speechd_config/paths.py
 lib/speech-dispatcher-modules/sd_baratinoo
 lib/speech-dispatcher-modules/sd_cicero
 lib/speech-dispatcher-modules/sd_dummy
@@ -23,6 +45,7 @@ lib/speech-dispatcher-modules/sd_generic
 lib/speech-dispatcher-modules/sd_ibmtts
 lib/speech-dispatcher-modules/sd_kali
 lib/speech-dispatcher/spd_libao.la
+man/man1/spd-conf.1
 man/man1/spd-say.1
 man/man1/speech-dispatcher.1
 share/examples/speech-dispatcher/clients/emacs.conf
@@ -49,7 +72,9 @@ share/locale/cs/LC_MESSAGES/speech-dispatcher.mo
 share/locale/de/LC_MESSAGES/speech-dispatcher.mo
 share/locale/hu/LC_MESSAGES/speech-dispatcher.mo
 share/sounds/speech-dispatcher/dummy-message.wav
+share/sounds/speech-dispatcher/test.wav
 share/speech-dispatcher/conf/clients/emacs.conf
+share/speech-dispatcher/conf/desktop/speechd.desktop
 share/speech-dispatcher/conf/modules/baratinoo.conf
 share/speech-dispatcher/conf/modules/cicero.conf
 share/speech-dispatcher/conf/modules/espeak-ng.conf
