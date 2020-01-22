@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.708 2020/01/22 00:11:21 pho Exp $
+$NetBSD: CHANGES-2020,v 1.709 2020/01/22 08:54:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -838,3 +838,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/wireshark to 3.2.1 [adam 2020-01-21]
 	Added sysutils/daemontools-encore version 1.11 [schmonz 2020-01-21]
 	Added misc/mic-paren version 3.13 [pho 2020-01-22]
+	Updated devel/cmake to 3.16.3 [adam 2020-01-22]
+	Updated www/py-urllib3 to 1.25.8 [adam 2020-01-22]
