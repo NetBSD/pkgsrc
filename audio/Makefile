@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.583 2020/01/20 21:54:00 nia Exp $
+# $NetBSD: Makefile,v 1.584 2020/01/22 18:17:55 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -135,7 +135,6 @@ SUBDIR+=	gmpc-lyrics
 SUBDIR+=	gmpc-lyricwiki
 SUBDIR+=	gmpc-magnatune
 SUBDIR+=	gmpc-tagedit
-SUBDIR+=	gmpc-wikipedia
 SUBDIR+=	gnome-audio
 SUBDIR+=	gnome-speech
 SUBDIR+=	gnome-speech-espeak
