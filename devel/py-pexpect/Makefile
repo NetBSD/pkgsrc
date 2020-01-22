@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2019/04/09 08:17:55 adam Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/22 21:24:57 adam Exp $
 
-DISTNAME=	pexpect-4.7.0
+DISTNAME=	pexpect-4.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pexpect/}
