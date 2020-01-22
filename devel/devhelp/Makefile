@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2020/01/22 18:13:19 nia Exp $
+# $NetBSD: Makefile,v 1.132 2020/01/22 18:27:38 nia Exp $
 
 DISTNAME=	devhelp-3.34.0
 CATEGORIES=	devel gnome
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Apps/Devhelp
 COMMENT=	Tool for browsing and searching API documentation from GNOME
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
