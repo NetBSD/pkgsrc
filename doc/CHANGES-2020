@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.722 2020/01/22 19:35:11 adam Exp $
+$NetBSD: CHANGES-2020,v 1.723 2020/01/22 19:45:45 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -857,3 +857,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-virtualenv to 16.7.9 [adam 2020-01-22]
 	Updated security/py-google-auth to 1.10.2 [adam 2020-01-22]
 	Updated www/py-httplib2 to 0.16.0 [adam 2020-01-22]
+	Updated misc/orca to 3.34.1 [nia 2020-01-22]
