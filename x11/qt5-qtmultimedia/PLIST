@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/01/21 20:25:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/01/22 13:28:53 ryoon Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qabstractvideobuffer_p.h
@@ -224,6 +224,7 @@ qt5/include/QtMultimedia/qvideoprobe.h
 qt5/include/QtMultimedia/qvideorenderercontrol.h
 qt5/include/QtMultimedia/qvideosurfaceformat.h
 qt5/include/QtMultimedia/qvideowindowcontrol.h
+${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/gstvideoconnector_p.h
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstappsrc_p.h
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstbufferpoolinterface_p.h
 ${PLIST.unix}qt5/include/QtMultimediaGstTools/${PKGVERSION}/QtMultimediaGstTools/private/qgstcodecsinfo_p.h
