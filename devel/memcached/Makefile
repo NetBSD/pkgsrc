@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.69 2020/01/18 21:49:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.70 2020/01/22 18:53:13 adam Exp $
 
-DISTNAME=	memcached-1.5.20
-PKGREVISION=	1
+DISTNAME=	memcached-1.5.21
 CATEGORIES=	devel
 MASTER_SITES=	http://www.memcached.org/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.memcached.org/
+HOMEPAGE=	https://memcached.org/
 COMMENT=	High-performance distributed memory object caching system
 LICENSE=	2-clause-bsd
 
