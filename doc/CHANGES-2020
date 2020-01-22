@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.717 2020/01/22 18:18:35 nia Exp $
+$NetBSD: CHANGES-2020,v 1.718 2020/01/22 18:40:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -848,3 +848,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/amtk version 5.0.1 [nia 2020-01-22]
 	Updated devel/devhelp to 3.34.0 [nia 2020-01-22]
 	Removed audio/gmpc-wikipedia [nia 2020-01-22]
+	Updated misc/mousetweaks to 3.32.0 [nia 2020-01-22]
