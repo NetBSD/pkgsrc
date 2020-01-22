@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2019/11/13 06:59:32 adam Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/22 08:54:30 adam Exp $
 
-DISTNAME=	urllib3-1.25.7
+DISTNAME=	urllib3-1.25.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
@@ -24,8 +24,11 @@ DEPENDS+=	${PYPKGPREFIX}-ipaddress-[0-9]*:../../net/py-ipaddress
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
+TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 
 USE_LANGUAGES=	# none
+
+PYSETUPTESTTARGET=	pytest
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
