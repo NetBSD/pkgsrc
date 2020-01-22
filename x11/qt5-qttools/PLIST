@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2020/01/21 20:25:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/01/22 13:30:31 ryoon Exp $
 lib/pkgconfig/Qt5Designer.pc
 lib/pkgconfig/Qt5Help.pc
 lib/pkgconfig/Qt5UiTools.pc
-qt5/bin/Assistant
-qt5/bin/Designer
-qt5/bin/Linguist
+${PLIST.nonunix}qt5/bin/Assistant
+${PLIST.nonunix}qt5/bin/Designer
+${PLIST.nonunix}qt5/bin/Linguist
 ${PLIST.unix}qt5/bin/assistant
 ${PLIST.unix}qt5/bin/designer
 qt5/bin/lconvert
@@ -14,8 +14,8 @@ qt5/bin/lrelease
 qt5/bin/lrelease-pro
 qt5/bin/lupdate
 qt5/bin/lupdate-pro
-qt5/bin/macchangeqt
-qt5/bin/macdeployqt
+${PLIST.nonunix}qt5/bin/macchangeqt
+${PLIST.nonunix}qt5/bin/macdeployqt
 qt5/bin/pixeltool
 qt5/bin/qcollectiongenerator
 qt5/bin/qdbus
