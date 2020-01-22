@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.536 2020/01/19 15:39:25 taca Exp $
+# $NetBSD: Makefile,v 1.537 2020/01/22 00:11:53 pho Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -188,6 +188,7 @@ SUBDIR+=	mate-calc
 SUBDIR+=	mate-utils
 SUBDIR+=	mbuffer
 SUBDIR+=	mdp
+SUBDIR+=	mic-paren
 SUBDIR+=	mirmon
 SUBDIR+=	mkcue
 SUBDIR+=	mmv
