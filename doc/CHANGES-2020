@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.720 2020/01/22 19:15:02 adam Exp $
+$NetBSD: CHANGES-2020,v 1.721 2020/01/22 19:27:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -853,3 +853,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-test5 to 5.3.4 [adam 2020-01-22]
 	Updated www/py-uvicorn to 0.11.2 [adam 2020-01-22]
 	Updated devel/py-pyrsistent to 0.15.7 [adam 2020-01-22]
+	Updated security/py-trustme to 0.6.0 [adam 2020-01-22]
+	Updated devel/py-virtualenv to 16.7.9 [adam 2020-01-22]
