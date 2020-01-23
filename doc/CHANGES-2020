@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.733 2020/01/23 13:11:24 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.734 2020/01/23 14:33:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -876,3 +876,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-setuptools_scm to 3.4.3 [adam 2020-01-23]
 	Updated devel/py-automat to 0.8.0 [adam 2020-01-23]
 	Updated devel/ocaml-cppo to 1.6.6 [jaapb 2020-01-23]
+	Updated devel/py-txaio to 20.1.1 [adam 2020-01-23]
+	Updated www/py-autobahn to 20.1.2 [adam 2020-01-23]
