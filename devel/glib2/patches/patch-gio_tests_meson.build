@@ -1,6 +1,9 @@
-$NetBSD: patch-gio_tests_meson.build,v 1.1 2020/01/22 17:09:44 minskim Exp $
+$NetBSD: patch-gio_tests_meson.build,v 1.2 2020/01/23 23:54:22 sevan Exp $
 
 Darwin: Set LD_LIBRARY_PATH to run uninstalled executable with @rpath.
+Check objcopy(1) supports --add-symbol which may not be available on
+legacy systems.
+https://gitlab.gnome.org/GNOME/glib/commit/dac4a48d14461a118d8ad7825a39e224bf128807
 
 --- gio/tests/meson.build.orig	2019-12-19 16:33:15.000000000 +0000
 +++ gio/tests/meson.build
@@ -81,3 +84,18 @@ Darwin: Set LD_LIBRARY_PATH to run uninstalled executable with @rpath.
                 '--target=@OUTPUT@',
                 '--sourcedir=' + meson.current_source_dir(),
                 '--generate',
+@@ -577,9 +591,13 @@ if not meson.is_cross_build() or meson.h
+   # Support for --add-symbol was added to LLVM objcopy in 2019
+   # (https://reviews.llvm.org/D58234). FIXME: This test could be enabled for
+   # LLVM once that support is in a stable release.
++  objcopy_valid = false
+   objcopy = find_program('objcopy', required : false)
++  if objcopy.found()
++      objcopy_valid = run_command(objcopy, '--help').stdout().contains('--add-symbol')
++  endif
+ 
+-  if build_machine.system() == 'linux' and cc.get_id() == 'gcc' and objcopy.found()
++  if build_machine.system() == 'linux' and cc.get_id() == 'gcc' and objcopy.found() and objcopy_valid
+     test_gresource_binary = custom_target('test5.gresource',
+       input : 'test5.gresource.xml',
+       output : 'test5.gresource',
