@@ -746,6 +746,40 @@ func (s *Suite) Test_Autofix_ReplaceAt(c *check.C) {
 		0, 20, "?", "+=")
 }
 
+func (s *Suite) Test_Autofix_ReplaceAt__only(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpCommandLine("--only", "specific", "--autofix")
+	mklines := t.SetUpFileMkLines("filename.mk",
+		"# comment")
+
+	mklines.ForEach(func(mkline *MkLine) {
+		// FIXME
+		// The modifications from this replacement are not supposed
+		// to be saved to the file.
+		// They should only be applied to the in-memory copy.
+		fix := mkline.Autofix()
+		fix.Warnf("Warning.")
+		fix.ReplaceAt(0, 0, "# ", "COMMENT=\t")
+		fix.Apply()
+
+		// This autofix marks the file's lines as changed.
+		// Without it, SaveAutofixChanges would not have any effect.
+		fix = mkline.Autofix()
+		fix.Warnf("A specific warning.")
+		fix.Replace("comment", "remark")
+		fix.Apply()
+	})
+	mklines.SaveAutofixChanges()
+
+	t.CheckOutputLines(
+		"AUTOFIX: ~/filename.mk:1: Replacing \"comment\" with \"remark\".")
+	t.CheckFileLines("filename.mk",
+		// FIXME: The "COMMENT=" must not appear here since it
+		//  was supposed to be ignored by the --only option.
+		"COMMENT=\tremark")
+}
+
 func (s *Suite) Test_Autofix_InsertBefore(c *check.C) {
 	t := s.Init(c)
 
