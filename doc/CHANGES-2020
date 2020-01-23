@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.727 2020/01/23 07:58:47 taca Exp $
+$NetBSD: CHANGES-2020,v 1.728 2020/01/23 08:01:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -865,3 +865,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pexpect to 4.8.0 [adam 2020-01-22]
 	Updated sysutils/pciutils to 3.6.3 [msaitoh 2020-01-23]
 	Updated net/bind911 to 9.11.15 [taca 2020-01-23]
+	Updated net/bind914 to 9.14.10 [taca 2020-01-23]
