@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.4 2017/11/23 22:06:15 fhajny Exp $
+$NetBSD: patch-util-src_signal.c,v 1.1 2020/01/23 18:26:15 gdt Exp $
 
 Include <sys/param.h> when on UNIX
 
---- util-src/signal.c.orig	2017-11-17 20:50:20.874396000 +0000
+--- util-src/signal.c.orig	2019-08-31 14:08:45.000000000 +0000
 +++ util-src/signal.c
-@@ -31,6 +31,10 @@
+@@ -33,6 +33,10 @@
  #include <signal.h>
  #include <stdlib.h>
  
