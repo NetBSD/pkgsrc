@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.730 2020/01/23 09:09:24 fox Exp $
+$NetBSD: CHANGES-2020,v 1.731 2020/01/23 09:11:43 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -871,3 +871,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/isc-dhcpd4 to 4.4.2 [taca 2020-01-23]
 	Updated net/isc-dhcrelay4 to 4.4.2 [taca 2020-01-23]
 	Updated www/cliqz to 1.32.1 [fox 2020-01-23]
+	Updated chat/ircd-hybrid to 8.2.27 [fox 2020-01-23]
