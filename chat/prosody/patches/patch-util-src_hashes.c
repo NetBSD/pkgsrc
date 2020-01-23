@@ -1,10 +1,10 @@
-$NetBSD: patch-util-src_hashes.c,v 1.2 2017/11/23 22:06:15 fhajny Exp $
+$NetBSD: patch-util-src_hashes.c,v 1.3 2020/01/23 18:26:15 gdt Exp $
 
 Avoid conflict with NetBSD's hmac.
 
---- util-src/hashes.c.orig	2017-09-28 13:07:47.000000000 +0000
+--- util-src/hashes.c.orig	2019-08-31 14:08:45.000000000 +0000
 +++ util-src/hashes.c
-@@ -74,7 +74,7 @@ struct hash_desc {
+@@ -75,7 +75,7 @@ struct hash_desc {
  	void *ctx, *ctxo;
  };
  
@@ -13,16 +13,7 @@ Avoid conflict with NetBSD's hmac.
                   const char *msg, size_t msg_len, unsigned char *result) {
  	union xory {
  		unsigned char bytes[64];
-@@ -127,7 +127,7 @@ static int myFunc(lua_State *L) { \
- 	desc.digestLength = size; \
- 	desc.ctx = &ctx; \
- 	desc.ctxo = &ctxo; \
--	hmac(&desc, key, key_len, msg, msg_len, hash); \
-+	myhmac(&desc, key, key_len, msg, msg_len, hash); \
- 	if (hex_out) { \
- 		toHex(hash, size, result); \
- 		lua_pushlstring(L, (char*)result, size*2); \
-@@ -174,14 +174,14 @@ static int LscramHi(lua_State *L) {
+@@ -168,14 +168,14 @@ static int LscramHi(lua_State *L) {
  
  	memcpy(salt2, salt, salt_len);
  	memcpy(salt2 + salt_len, "\0\0\0\1", 4);
