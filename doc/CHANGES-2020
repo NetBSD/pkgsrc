@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.743 2020/01/23 16:50:03 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.744 2020/01/23 18:26:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -885,3 +885,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/p5-XXX version 0.35 [schmonz 2020-01-23]
 	Updated devel/p5-Pegex to 0.74 [schmonz 2020-01-23]
 	Updated sysutils/daemontools-encore to 1.11nb1 [schmonz 2020-01-23]
+	Updated chat/prosody to 0.11.4 [gdt 2020-01-23]
