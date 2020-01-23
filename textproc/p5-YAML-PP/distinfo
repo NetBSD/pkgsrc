@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/23 16:14:47 schmonz Exp $
+
+SHA1 (YAML-PP-0.018.tar.gz) = c6c1adbefac43853d590b8d32627868d2574db0a
+RMD160 (YAML-PP-0.018.tar.gz) = 0495148afc31c5d4db666ad2fe4753b4e707e90e
+SHA512 (YAML-PP-0.018.tar.gz) = 08f31f5de1f8846ba16908932cc83362047a53eef175ea3d197e49c0af0b2972ab8166dc28ccb1bf94a3da7ff00f6cf3bf2dfd164d59cbf1aa42f66f9a1db103
+Size (YAML-PP-0.018.tar.gz) = 160231 bytes

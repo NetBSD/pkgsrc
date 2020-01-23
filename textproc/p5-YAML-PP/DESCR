@@ -1,0 +1,8 @@
+YAML::PP is a modern, modular YAML processor. It aims to support YAML
+1.2 and YAML 1.1.
+
+The YAML::PP frontend will currently load all documents, and return only
+the last if called with scalar context.
+
+The YAML backend is implemented in a modular way that allows to add
+custom handling of YAML tags, perl objects and data types.
