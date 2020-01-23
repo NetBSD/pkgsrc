@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2020/01/20 12:44:11 nia Exp $
+# $NetBSD: Makefile,v 1.87 2020/01/23 16:06:36 nia Exp $
 
 DISTNAME=	cheese-3.34.0
 CATEGORIES=	graphics gnome
@@ -36,6 +36,7 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/cheese-gtk.pc
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../multimedia/clutter-gst/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
