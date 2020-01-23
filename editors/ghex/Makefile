@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2020/01/21 15:09:03 nia Exp $
+# $NetBSD: Makefile,v 1.56 2020/01/23 16:06:01 nia Exp $
 
 DISTNAME=	ghex-3.18.4
 CATEGORIES=	editors gnome
@@ -16,6 +16,9 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/data/gtkhex-3.pc
+
+# XXX msgfmt: unknown option -- xml
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
