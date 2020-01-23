@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2020/01/04 10:57:18 taca Exp $
+# $NetBSD: options.mk,v 1.2 2020/01/23 14:47:56 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid4
 PKG_SUPPORTED_OPTIONS=	ecap gnutls inet6 snmp openssl squid-backend-aufs \
@@ -58,8 +58,8 @@ PKG_SUPPORTED_OPTIONS+=	squid-arp-acl
 .include "../../mk/bsd.options.mk"
 
 # Note: NIS helper cannot be build; it requires crypt.h header file.
-SQUID_BASIC_AUTH_HELPERS?=	DB LDAP NCSA PAM fake getpwnam
-SQUID_DIGEST_AUTH_HELPERS?=	LDAP file
+SQUID_BASIC_AUTH_HELPERS?=	DB NCSA PAM fake getpwnam
+SQUID_DIGEST_AUTH_HELPERS?=	file
 SQUID_NTLM_AUTH_HELPERS?=	SMB_LM fake
 SQUID_EXTERNAL_ACL_HELPERS?=	file_userip unix_group
 
