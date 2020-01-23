@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.28 2018/03/21 15:05:05 taca Exp $
+$NetBSD: distinfo,v 1.29 2020/01/23 08:11:27 taca Exp $
 
-SHA1 (dhcp-4.4.1.tar.gz) = 7be2c4911107f613c2d4b0a943261603c6b8507a
-RMD160 (dhcp-4.4.1.tar.gz) = e3fd6af7b95ba2734f1c987fb485a18565147017
-SHA512 (dhcp-4.4.1.tar.gz) = 684ae349f224918c9f8cec7bd6c55cd0b83ad2b5827375b2876ca088eb05b7ff1364e50f6dc24f2485c610d9be94d4ba3020f60a0fa0ef63962349d191b887e7
-Size (dhcp-4.4.1.tar.gz) = 11164378 bytes
+SHA1 (dhcp-4.4.2.tar.gz) = cb4ba6617e1bc2e3cbf770be5c0443b1ad276db5
+RMD160 (dhcp-4.4.2.tar.gz) = 4313051060f14c0d742ea70475d6cd506cbd45f1
+SHA512 (dhcp-4.4.2.tar.gz) = c3dee2cf6e4b43d519d4bc89e9b8b12a6e3747d8c4edc0f83d4a88355a483b91a5f7d2353a3c0a2f37f88704fd2f64478ac5161ca72b10c42cebcb92907afa40
+Size (dhcp-4.4.2.tar.gz) = 9906235 bytes
 SHA1 (patch-aa) = da090b3b824f5d437f8d05ce00e2ac4dfc65d6af
 SHA1 (patch-ab) = 0683dd2259e48184713559aa0356ee352aa52c39
 SHA1 (patch-ac) = a7e6808a6e1e93c520eb085f31259f6c142750f4
+SHA1 (patch-bind_bind-9.11.14_bin_tests_system_metadata_tests.sh) = d6d0baf70de0b5349ac164a4affb55dea9fcca51
 SHA1 (patch-common_dlpi.c) = 14cb1c1aed610b1d6952b26a7775caa06b6a8792
