@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.740 2020/01/23 16:16:06 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.741 2020/01/23 16:24:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -882,3 +882,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/ski to 1.3.2nb17 [scole 2020-01-23]
 	Updated graphics/freeimageplus to 3.18.0 [nia 2020-01-23]
 	Added textproc/p5-YAML-PP version 0.018 [schmonz 2020-01-23]
+	Added devel/p5-XXX version 0.35 [schmonz 2020-01-23]
