@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.734 2020/01/23 14:33:40 adam Exp $
+$NetBSD: CHANGES-2020,v 1.735 2020/01/23 15:55:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -878,3 +878,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-cppo to 1.6.6 [jaapb 2020-01-23]
 	Updated devel/py-txaio to 20.1.1 [adam 2020-01-23]
 	Updated www/py-autobahn to 20.1.2 [adam 2020-01-23]
+	Updated mail/qmqtool to 1.15nb3 [schmonz 2020-01-23]
