@@ -1,4 +1,4 @@
-#	$NetBSD: u-boot-rockchip.mk,v 1.1 2020/01/14 08:44:03 mrg Exp $
+#	$NetBSD: u-boot-rockchip.mk,v 1.2 2020/01/23 18:26:35 jakllsch Exp $
 #
 # should be used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
@@ -42,5 +42,5 @@ REPLACE.python3.old=	python3
 REPLACE.python3.new=	${PYTHON3BIN}
 REPLACE_FILES.python2=	arch/arm/mach-rockchip/make_fit_atf.py
 
-.include "../../sysutils/u-boot/u-boot-arm64.mk"
 .include "../../sysutils/arm-trusted-firmware-${U_BOOT_IMAGE_TYPE}/buildlink3.mk"
+.include "../../sysutils/u-boot/u-boot-arm64.mk"
