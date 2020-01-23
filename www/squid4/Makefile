@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 21:51:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/23 14:49:09 jperkin Exp $
 
 DISTNAME=	squid-4.9
 PKGREVISION=	1
@@ -33,6 +33,8 @@ CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/squid.pid
 
 # Let 'purge' find correct config file by default.
 CPPFLAGS+=		-DDEFAULT_SQUID_CONF=\"${PKG_SYSCONFDIR}/squid.conf\"
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 BUILD_DEFS+=		VARBASE
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
