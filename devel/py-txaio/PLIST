@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/04/08 21:40:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/01/23 14:20:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,6 +17,9 @@ ${PYSITELIB}/txaio/_iotype.pyo
 ${PYSITELIB}/txaio/_unframework.py
 ${PYSITELIB}/txaio/_unframework.pyc
 ${PYSITELIB}/txaio/_unframework.pyo
+${PYSITELIB}/txaio/_util.py
+${PYSITELIB}/txaio/_util.pyc
+${PYSITELIB}/txaio/_util.pyo
 ${PYSITELIB}/txaio/_version.py
 ${PYSITELIB}/txaio/_version.pyc
 ${PYSITELIB}/txaio/_version.pyo
