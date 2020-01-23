@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.3 2019/11/17 23:05:19 scole Exp $
+$NetBSD: patch-an,v 1.4 2020/01/23 15:59:36 scole Exp $
 
 --- src/netbsd/ssc-netbsd.c.orig	2010-11-04 05:01:51.000000000 +0000
-+++ src/netbsd/ssc-netbsd.c	2016-05-06 14:44:42.000000000 -0400
-@@ -0,0 +1,464 @@
++++ src/netbsd/ssc-netbsd.c	2020-01-23 08:47:10.550291867 -0800
+@@ -0,0 +1,545 @@
 +/*
 + * Copyright (C) 1995-2007, Hewlett-Packard Development Company, L.P.
 + *
@@ -78,6 +78,9 @@ $NetBSD: patch-an,v 1.3 2019/11/17 23:05:19 scole Exp $
 +static pid_t console;
 +static int fdin, fdout;
 +static struct termios saved_tios;
++
++static void byteReverse(BYTE *, size_t);
++static void washBytes(BYTE *, size_t);
 +
 +static void sigchld_handler(int sig, siginfo_t *si, void *ctx)
 +{
@@ -222,6 +225,45 @@ $NetBSD: patch-an,v 1.3 2019/11/17 23:05:19 scole Exp $
 +		intrsim = extint = YES;
 +}
 +
++static void byteReverse(BYTE *b, size_t len) {
++        BYTE tmpByte;
++        size_t start = 0;
++        size_t end = len - 1;
++
++        if ( len < 2 )
++                return;
++
++        while( start < end ) {
++                tmpByte = b[end];
++                b[end] = b[start];
++                b[start] = tmpByte;
++
++                start++;
++                end--;
++        }
++}
++
++/*
++ * reverse bytes when transfering between host & target if
++ * endianness differs.
++ * There are macros available such as FIX_BYTEORDER_* for
++ * HWORD 2 (H),  WORD 4 (W), ADDR/DWORD 8 (D),  QWORD 16 (Q)
++ * that could be used instead, but IMHO this function is more
++ * convenient for some cases
++ *
++ */
++static void washBytes(BYTE *b, size_t len) {
++#if BYTE_ORDER == BIG_ENDIAN
++	/* target little <=> host big */
++	if (!PSR_BE)
++		byteReverse(b, len);
++#else
++	/* target big <=> host little */
++	if (PSR_BE)
++		byteReverse(b, len);
++#endif
++}
++
 +void doSSC(HWORD num, REG arg0, REG arg1, REG arg2, REG arg3, REG *ret)
 +{
 +	BOOL olddt = PSR_DT;
@@ -252,6 +294,7 @@ $NetBSD: patch-an,v 1.3 2019/11/17 23:05:19 scole Exp $
 +
 +	case SSC_GET_ARGS:
 +		memBBWrt(arg0, commandline, commandline_len);
++
 +		*ret = commandline_len;
 +		break;
 +
@@ -271,6 +314,16 @@ $NetBSD: patch-an,v 1.3 2019/11/17 23:05:19 scole Exp $
 +		sscTime.sec  = tm->tm_sec;
 +		sscTime.msec = tp.tv_usec/1000;
 +		sscTime.wday = tm->tm_wday;
++
++		sscTime.year = FIX_BYTEORDER_W(PSR_BE, sscTime.year);
++		sscTime.mon  = FIX_BYTEORDER_W(PSR_BE, sscTime.mon);
++		sscTime.mday = FIX_BYTEORDER_W(PSR_BE, sscTime.mday);
++		sscTime.hour = FIX_BYTEORDER_W(PSR_BE, sscTime.hour);
++		sscTime.min  = FIX_BYTEORDER_W(PSR_BE, sscTime.min);
++		sscTime.sec  = FIX_BYTEORDER_W(PSR_BE, sscTime.sec);
++		sscTime.msec = FIX_BYTEORDER_W(PSR_BE, sscTime.msec);
++		sscTime.wday = FIX_BYTEORDER_W(PSR_BE, sscTime.wday);
++
 +		memBBWrtP(arg0, (BYTE *)&sscTime, sizeof(SscTime));
 +		/* no return value */
 +		break;
@@ -287,9 +340,16 @@ $NetBSD: patch-an,v 1.3 2019/11/17 23:05:19 scole Exp $
 +		tv.ssc_Usec = tp.tv_usec;
 +		tz.ssc_Minuteswest = tzp.tz_minuteswest;
 +		tz.ssc_Dsttime = tzp.tz_dsttime;
++
++ 		tv.ssc_Sec = FIX_BYTEORDER_W(PSR_BE, tv.ssc_Sec);
++		tv.ssc_Usec = FIX_BYTEORDER_W(PSR_BE, tv.ssc_Usec);
 +		memBBWrtP(arg0, (BYTE *)&tv, sizeof(tv));
-+		if (arg1 != 0)
++
++		if (arg1 != 0) {
++			tz.ssc_Minuteswest = FIX_BYTEORDER_W(PSR_BE, tz.ssc_Minuteswest);
++			tz.ssc_Dsttime = FIX_BYTEORDER_W(PSR_BE, tz.ssc_Dsttime);
 +			memBBWrtP(arg1, (BYTE *)&tz, sizeof(tz));
++		}
 +		break;
 +	}
 +
@@ -343,6 +403,8 @@ $NetBSD: patch-an,v 1.3 2019/11/17 23:05:19 scole Exp $
 +		char *map;
 +		int i;
 +
++		*ret = 0;
++		
 +		filesize = lseek(arg0, 0LL, SEEK_END);
 +		if (filesize == -1 || arg3 > filesize) {
 +			*ret = -1;
@@ -353,6 +415,9 @@ $NetBSD: patch-an,v 1.3 2019/11/17 23:05:19 scole Exp $
 +		adr = arg2;
 +		for (i = 0; i < arg1; i++) {
 +			memBBRd(adr, (BYTE *)&iov, sizeof(iov));
++			washBytes((BYTE *)&iov.addr, sizeof(iov.addr));
++			washBytes((BYTE *)&iov.len, sizeof(iov.len));
++
 +			size += iov.len;
 +			adr += sizeof(iov);
 +		}
@@ -370,9 +435,13 @@ $NetBSD: patch-an,v 1.3 2019/11/17 23:05:19 scole Exp $
 +		ofs = 0;
 +		for (i = 0; i < arg1; i++) {
 +			memBBRd(adr, (BYTE *)&iov, sizeof(iov));
++			washBytes((BYTE *)&iov.addr, sizeof(iov.addr));
++			washBytes((BYTE *)&iov.len, sizeof(iov.len));
++			
 +			if (ofs + iov.len >= size)
 +				iov.len = size - ofs;
-+			memBBWrt_opt(iov.addr, map + ofs, iov.len);
++			memBBWrt(iov.addr, map + ofs, iov.len);
++
 +			ofs += iov.len;
 +			adr += sizeof(iov);
 +		}
@@ -389,11 +458,16 @@ $NetBSD: patch-an,v 1.3 2019/11/17 23:05:19 scole Exp $
 +		SscReqNode *p;
 +
 +		memBBRd(arg0, (BYTE *)&stat, sizeof(stat));
++		washBytes((BYTE *)&stat.fd, sizeof(stat.fd));
++		washBytes((BYTE *)&stat.count, sizeof(stat.count));
++		
 +		*ret = -1;
 +		for (p = sscPend; p; p = p->next) {
 +			if (p->fd == stat.fd) {
 +				stat.count = p->count;
 +				delSscReq(p);
++				washBytes((BYTE *)&stat.fd, sizeof(stat.fd));
++				washBytes((BYTE *)&stat.count, sizeof(stat.count));
 +				memBBWrt(arg0, (BYTE *)&stat, sizeof(stat));
 +				*ret = 0;
 +				break;
@@ -420,6 +494,9 @@ $NetBSD: patch-an,v 1.3 2019/11/17 23:05:19 scole Exp $
 +		adr = arg2;
 +		for (i = 0; i < arg1; i++) {
 +			memBBRd(adr, (BYTE *)&iov, sizeof(iov));
++			washBytes((BYTE *)&iov.addr, sizeof(iov.addr));
++			washBytes((BYTE *)&iov.len, sizeof(iov.len));
++
 +			size += iov.len;
 +			adr += sizeof(iov);
 +		}
@@ -437,9 +514,13 @@ $NetBSD: patch-an,v 1.3 2019/11/17 23:05:19 scole Exp $
 +		ofs = 0;
 +		for (i = 0; i < arg1; i++) {
 +			memBBRd(adr, (BYTE *)&iov, sizeof(iov));
++			washBytes((BYTE *)&iov.addr, sizeof(iov.addr));
++			washBytes((BYTE *)&iov.len, sizeof(iov.len));
++
 +			if (ofs + iov.len >= size)
 +				iov.len = size - ofs;
 +			memBBRd(iov.addr, map, iov.len);
++			
 +			ofs += iov.len;
 +			adr += sizeof(iov);
 +		}
