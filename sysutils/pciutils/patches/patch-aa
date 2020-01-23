@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.23 2018/08/17 04:03:28 msaitoh Exp $
+$NetBSD: patch-aa,v 1.24 2020/01/23 04:26:41 msaitoh Exp $
 
---- Makefile.orig	2018-08-12 19:59:03.000000000 +0900
-+++ Makefile	2018-08-17 12:29:53.033605064 +0900
+--- Makefile.orig	2020-01-22 19:42:16.000000000 +0900
++++ Makefile	2020-01-23 13:20:37.038889169 +0900
 @@ -1,8 +1,7 @@
  # Makefile for The PCI Utilities
- # (c) 1998--2018 Martin Mares <mj@ucw.cz>
+ # (c) 1998--2020 Martin Mares <mj@ucw.cz>
  
 -OPT=-O2
 -CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
 +CFLAGS=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
  
- VERSION=3.6.2
- DATE=2018-08-12
+ VERSION=3.6.3
+ DATE=2020-01-20
 @@ -13,7 +12,7 @@ RELEASE=
  CROSS_COMPILE=
  
@@ -54,20 +54,22 @@ $NetBSD: patch-aa,v 1.23 2018/08/17 04:03:28 msaitoh Exp $
  AR=$(CROSS_COMPILE)ar
  RANLIB=$(CROSS_COMPILE)ranlib
  
-@@ -118,12 +117,18 @@ distclean: clean
+@@ -118,13 +117,20 @@ distclean: clean
  
  install: all
  # -c is ignored on Linux, but required on FreeBSD
--	$(DIRINSTALL) -m 755 $(DESTDIR)$(SBINDIR) $(DESTDIR)$(IDSDIR) $(DESTDIR)$(MANDIR)/man8 $(DESTDIR)$(MANDIR)/man7
+-	$(DIRINSTALL) -m 755 $(DESTDIR)$(SBINDIR) $(DESTDIR)$(IDSDIR) $(DESTDIR)$(MANDIR)/man8 $(DESTDIR)$(MANDIR)/man7 $(DESTDIR)/$(MANDIR)/man5
 -	$(INSTALL) -c -m 755 $(STRIP) lspci setpci $(DESTDIR)$(SBINDIR)
 -	$(INSTALL) -c -m 755 update-pciids $(DESTDIR)$(SBINDIR)
 -	$(INSTALL) -c -m 644 $(PCI_IDS) $(DESTDIR)$(IDSDIR)
 -	$(INSTALL) -c -m 644 lspci.8 setpci.8 update-pciids.8 $(DESTDIR)$(MANDIR)/man8
 -	$(INSTALL) -c -m 644 pcilib.7 $(DESTDIR)$(MANDIR)/man7
+-	$(INSTALL) -c -m 644 pci.ids.5 $(DESTDIR)$(MANDIR)/man5
 +	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(SBINDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(IDSDIR)
 +	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man8
 +	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man7
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)/$(MANDIR)/man5
 +	$(BSD_INSTALL_PROGRAM) lspci $(DESTDIR)$(SBINDIR)
 +	$(BSD_INSTALL_PROGRAM) setpci $(DESTDIR)$(SBINDIR)
 +	$(BSD_INSTALL_SCRIPT) update-pciids $(DESTDIR)$(SBINDIR)
@@ -76,10 +78,11 @@ $NetBSD: patch-aa,v 1.23 2018/08/17 04:03:28 msaitoh Exp $
 +		$(BSD_INSTALL_MAN) $$fn $(DESTDIR)$(MANDIR)/man8;	\
 +	done
 +	$(BSD_INSTALL_MAN) pcilib.7 $(DESTDIR)$(MANDIR)/man7
++	$(BSD_INSTALL_MAN) pci.ids.5 $(DESTDIR)$(MANDIR)/man5
  ifeq ($(SHARED),yes)
  ifeq ($(LIBEXT),dylib)
  	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME)$(ABI_VERSION).$(LIBEXT)
-@@ -137,13 +142,14 @@ install: install-pcilib
+@@ -138,13 +144,14 @@ install: install-pcilib
  endif
  
  install-pcilib: lib/$(PCILIB)
