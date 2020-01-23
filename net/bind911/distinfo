@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14 2020/01/04 10:08:41 taca Exp $
+$NetBSD: distinfo,v 1.15 2020/01/23 07:58:22 taca Exp $
 
-SHA1 (bind-9.11.14.tar.gz) = f66623c8b2f92eee8a3e365e9d2698cd10f15637
-RMD160 (bind-9.11.14.tar.gz) = ee16b6eeb0722d8ff5ff248c142dfff227a75a44
-SHA512 (bind-9.11.14.tar.gz) = fc7729e780e44c3c4e50059032fdae2af3d0e07b492b5088b2fefc15354829d3c9a83fab4f2ecaa9323cd7a37b1f7eb94890c149ba1df5c4fbea7a145095cbe9
-Size (bind-9.11.14.tar.gz) = 8191308 bytes
+SHA1 (bind-9.11.15.tar.gz) = 242da268d693e7a06b8e24e7544c9445d2896410
+RMD160 (bind-9.11.15.tar.gz) = a86dd58ec2073962185c35c4bc7773a29c8df171
+SHA512 (bind-9.11.15.tar.gz) = 2b743c39d3619a78159941d93e553385ce934784a0352fd35b7a72b46f8dc6b13a4d255537166ee768c6fdb397ba944d52274c3d9ca2025f8f0038cd1dee81ed
+Size (bind-9.11.15.tar.gz) = 8201830 bytes
 SHA1 (patch-bin_named_server.c) = 0294d74eb3039049c4672a3de6eb371407bb382d
 SHA1 (patch-bin_pkcs11_pkcs11-keygen.c) = ca2671a5e3216a08a212cf893e070b01705ef9ee
 SHA1 (patch-bin_tests_system_metadata_tests.sh) = d01a492d0b7738760bdbff714248e279a78fef28
