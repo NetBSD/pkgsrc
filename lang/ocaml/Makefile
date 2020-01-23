@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2020/01/14 19:53:35 jaapb Exp $
+# $NetBSD: Makefile,v 1.133 2020/01/23 07:17:13 dbj Exp $
 
 .include "Makefile.common"
 
@@ -98,6 +98,16 @@ REPLACE_AWK+=		tools/ocaml-instr-report
 
 do-test:
 	cd ${WRKSRC}/testsuite && ${MAKE_PROGRAM} all
+
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	for f in ${DESTDIR}${PREFIX}/lib/ocaml/*.so \
+	       ${DESTDIR}${PREFIX}/lib/ocaml/stublibs/*.so; do \
+	       install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
+	done
+.endif
 
 #post-install:
 #	set -e ; cd ${DESTDIR}${PREFIX}/lib/ocaml/${PKGMANDIR}/man1;	\
