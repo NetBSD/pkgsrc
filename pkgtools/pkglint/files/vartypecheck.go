@@ -729,7 +729,12 @@ func (cv *VartypeCheck) homepageHttp() {
 	fix := cv.Autofix()
 	fix.Warnf("HOMEPAGE should use https instead of http.")
 	if supportsHttps {
-		fix.Replace("http", "https")
+		if hasAnySuffix(host, "sourceforge.net") {
+			// See https://sourceforge.net/p/forge/documentation/Custom%20VHOSTs/
+			fix.Replace("http://"+host, "https://"+replaceAll(host, `\.net`, ".io"))
+		} else {
+			fix.Replace("http", "https")
+		}
 	}
 	fix.Explain(
 		"To provide secure communication by default,",
