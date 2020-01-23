@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2020/01/20 17:44:46 adam Exp $
+# $NetBSD: Makefile,v 1.239 2020/01/23 18:36:15 jnemeth Exp $
 #
 
 COMMENT=	Communication programs
@@ -66,8 +66,8 @@ SUBDIR+=	ktp-filetransfer-handler
 SUBDIR+=	ktp-kded-integration-module
 SUBDIR+=	ktp-send-file
 SUBDIR+=	ktp-text-ui
-SUBDIR+=	libgadu
 SUBDIR+=	libfolks
+SUBDIR+=	libgadu
 SUBDIR+=	libirc
 SUBDIR+=	libmsn
 SUBDIR+=	libotr
