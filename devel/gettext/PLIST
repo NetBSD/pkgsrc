@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/05/27 13:21:41 ryoon Exp $
-${PLIST.glibc}lib/preloadable_libintl.so
+@comment $NetBSD: PLIST,v 1.21 2020/01/23 11:42:16 nia Exp $
 share/gettext/ABOUT-NLS
 share/gettext/config.rpath
 share/gettext/projects/GNOME/team-address
