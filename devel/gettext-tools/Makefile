@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/11/03 10:39:12 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2020/01/23 11:42:16 nia Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -41,7 +41,7 @@ PLIST_VARS+=	glibc
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Linux"
+.if !empty(GLIBC_VERSION)
 PLIST.glibc=	yes
 .endif
 
