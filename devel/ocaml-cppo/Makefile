@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.24 2019/11/03 10:39:22 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/23 13:11:14 jaapb Exp $
 
-DISTNAME=	cppo-1.6.5
+DISTNAME=	cppo-1.6.6
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=mjambon/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-community/}
 GITHUB_PROJECT=	cppo
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
-#HOMEPAGE=	http://mjambon.com/cppo.html
+HOMEPAGE=	https://github.com/ocaml-community/cppo/
 COMMENT=	C-style preprocessor for OCaml
 LICENSE=	modified-bsd
 
@@ -27,5 +26,5 @@ OPAM_INSTALL_FILES=	cppo cppo_ocamlbuild
 .include "../../mk/ocaml.mk"
 
 .include "../../devel/ocamlbuild/buildlink3.mk"
-BUILDLINK_DEPMETHOD.ocamlbuild?=        full
+BUILDLINK_DEPMETHOD.ocamlbuild=        full
 .include "../../mk/bsd.pkg.mk"
