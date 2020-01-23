@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/07/17 06:21:58 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/23 10:20:22 adam Exp $
 
-DISTNAME=	Automat-0.7.0
+DISTNAME=	Automat-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/Automat/}
@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} automat-visualize automat-visualize${PYVERSSUFFIX} || ${TRUE}
+	${MV} automat-visualize automat-visualize${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
