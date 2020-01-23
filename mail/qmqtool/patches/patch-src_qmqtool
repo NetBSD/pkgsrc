@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2020/01/23 15:55:05 schmonz Exp $
+$NetBSD: patch-src_qmqtool,v 1.1 2020/01/23 16:45:48 schmonz Exp $
 
 Use pkgsrc-preferred tools, users, and paths.
 Avoid 5.28-fatal "Cannot open %s as a filehandle: it is already open as
