@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/09/26 10:30:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/01/23 14:33:18 adam Exp $
 bin/wamp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -471,6 +471,9 @@ ${PYSITELIB}/autobahn/xbr/_buyer.pyo
 ${PYSITELIB}/autobahn/xbr/_interfaces.py
 ${PYSITELIB}/autobahn/xbr/_interfaces.pyc
 ${PYSITELIB}/autobahn/xbr/_interfaces.pyo
+${PYSITELIB}/autobahn/xbr/_mnemonic.py
+${PYSITELIB}/autobahn/xbr/_mnemonic.pyc
+${PYSITELIB}/autobahn/xbr/_mnemonic.pyo
 ${PYSITELIB}/autobahn/xbr/_seller.py
 ${PYSITELIB}/autobahn/xbr/_seller.pyc
 ${PYSITELIB}/autobahn/xbr/_seller.pyo

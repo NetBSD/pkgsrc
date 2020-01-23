@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2019/10/31 10:10:37 adam Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/23 14:33:18 adam Exp $
 
-DISTNAME=	autobahn-19.10.1
+DISTNAME=	autobahn-20.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autobahn/}
@@ -18,9 +18,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.3.0:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.6:../../devel/py-test
 TEST_ENV+=	USE_ASYNCIO=1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # not all parts are supported
-
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
