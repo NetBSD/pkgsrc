@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.19 2019/06/03 12:19:18 fox Exp $
+$NetBSD: distinfo,v 1.20 2020/01/23 09:11:21 fox Exp $
 
-SHA1 (ircd-hybrid-8.2.26.tgz) = 9bd6acf396e87e5fc3bc9d13cd61610258c4c99f
-RMD160 (ircd-hybrid-8.2.26.tgz) = 1d28c0ee2d2b161252eca241fa8c63b499d43635
-SHA512 (ircd-hybrid-8.2.26.tgz) = 3a2b545e5052c8437e877bfc50d6aaec4debf9f3e0a4682be497e0a6bda7316df399f12501da86bcdacc77524efc99a1cf09a01723eef96aa9eedd51f03db7ac
-Size (ircd-hybrid-8.2.26.tgz) = 1226486 bytes
+SHA1 (ircd-hybrid-8.2.27.tgz) = 4d1f3dbfd791d65ef8336ece40e288407fee28a9
+RMD160 (ircd-hybrid-8.2.27.tgz) = cb766699911b2438acead1a00de9cc1ca577266e
+SHA512 (ircd-hybrid-8.2.27.tgz) = 52aaec0b37b3902e8219f4add8a9907eca743e2f8b6ac2cd207c282349427ff0e4c489b879d39593f06faa749bdd7030e50f74283bb1d9347b516d52b1aea6eb
+Size (ircd-hybrid-8.2.27.tgz) = 1231965 bytes
 SHA1 (patch-doc_Makefile.in) = 787cb151da51cd947a384e33ae35c58df1d17e19
 SHA1 (patch-src_ircd.c) = bed5e5d1663dc64f78be905eeb4f2d9a2cdb1c64
