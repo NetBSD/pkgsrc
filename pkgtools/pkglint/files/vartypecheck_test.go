@@ -992,6 +992,23 @@ func (s *Suite) Test_VartypeCheck_Homepage__http(c *check.C) {
 		"WARN: filename.mk:3: HOMEPAGE should use https instead of http.",
 		"WARN: filename.mk:4: HOMEPAGE should use https instead of http.",
 		"WARN: filename.mk:7: HOMEPAGE should use https instead of http.")
+
+	t.SetUpCommandLine("--autofix")
+	vt.Values(
+		"http://www.gnustep.org/",
+		"http://www.pkgsrc.org/",
+		"http://project.sourceforge.net/",
+		"http://sf.net/p/project/",
+		"http://example.org/ # doesn't support https",
+		"http://example.org/ # only supports http",
+		"http://asf.net/")
+
+	// www.gnustep.org does not support https at all.
+	// www.pkgsrc.org is not in the (short) list of known https domains,
+	// therefore pkglint does not dare to change it automatically.
+	vt.Output(
+		"AUTOFIX: filename.mk:13: Replacing \"http://project.sourceforge.net\" with \"https://project.sourceforge.io\".",
+		"AUTOFIX: filename.mk:14: Replacing \"http\" with \"https\".")
 }
 
 func (s *Suite) Test_VartypeCheck_IdentifierDirect(c *check.C) {
