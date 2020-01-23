@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.736 2020/01/23 15:57:50 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.737 2020/01/23 16:02:31 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -880,3 +880,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-autobahn to 20.1.2 [adam 2020-01-23]
 	Updated mail/qmqtool to 1.15nb3 [schmonz 2020-01-23]
 	Updated mail/qmqtool to 1.15nb3 [schmonz 2020-01-23]
+	Updated emulators/ski to 1.3.2nb17 [scole 2020-01-23]
