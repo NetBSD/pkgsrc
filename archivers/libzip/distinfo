@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2019/03/12 13:20:51 wiz Exp $
+$NetBSD: distinfo,v 1.32 2020/01/24 12:09:23 wiz Exp $
 
-SHA1 (libzip-1.5.2.tar.xz) = f1137ff29cc3a0633ad5edecb3b3ab655f34c700
-RMD160 (libzip-1.5.2.tar.xz) = 5db464fb8c1fe4e7e197d6a373f4cb4d169f961f
-SHA512 (libzip-1.5.2.tar.xz) = 1e6d48ddbac4d270f70b314f6ada3c93a3196a8cc3b8d17c6cf5ea8409ff29f36ac351206675f9d81351fcf633b0c15d7b0b5530c30c4140e4fe55e64c602643
-Size (libzip-1.5.2.tar.xz) = 725724 bytes
+SHA1 (libzip-1.6.0.tar.xz) = 794bb5a5d7656fccd1adaffa19ab1190c8471c1c
+RMD160 (libzip-1.6.0.tar.xz) = 6ca337891a48fc54ff350b4fba2d0a82aa65c5d4
+SHA512 (libzip-1.6.0.tar.xz) = a173bebc0a199d65d9e2d5e5adf65eb10e9d3a1c409006b3f78e3453aa6166d825fea20e818e725f5d3c6b63137023a2cccb7fb2a1da50a88c4f5f057cf879f8
+Size (libzip-1.6.0.tar.xz) = 732812 bytes
