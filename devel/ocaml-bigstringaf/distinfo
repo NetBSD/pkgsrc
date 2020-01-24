@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/12 18:09:29 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/01/24 16:25:41 jaapb Exp $
 
-SHA1 (bigstringaf-0.4.0.tar.gz) = ae02b953c510f54f7a3f73296e8ccd66da005d83
-RMD160 (bigstringaf-0.4.0.tar.gz) = c7c5fba54789209174533e9191e0302d387e9ebc
-SHA512 (bigstringaf-0.4.0.tar.gz) = a7300eb45af2a0a8b2efd5a6069d928ab9e8fee256da91c6fb5c4de21d42ecbb23cdabf5b88d9d2e984ed59619523a05f40406c6202f723a4eec61f20663d000
-Size (bigstringaf-0.4.0.tar.gz) = 11329 bytes
+SHA1 (bigstringaf-0.6.0.tar.gz) = de3746c82876a6eae12f63635b8dafe8927322de
+RMD160 (bigstringaf-0.6.0.tar.gz) = fe2b7b7c8fa65b5ae27872b36e2628820859b062
+SHA512 (bigstringaf-0.6.0.tar.gz) = f9dc0a5d1601d65ad3d0f8f0eea6235d39d38913158209b2f76af2e6589c1e241011dddbdcbcdbce52dd82bb6070475a65813324231df769532853fdf4683193
+Size (bigstringaf-0.6.0.tar.gz) = 11859 bytes
