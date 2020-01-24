@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.753 2020/01/24 13:33:45 pho Exp $
+$NetBSD: CHANGES-2020,v 1.754 2020/01/24 14:07:17 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -896,3 +896,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/libzip to 1.6.0 [wiz 2020-01-24]
 	Added graphics/ocaml-cairo version 0.6.1 [jaapb 2020-01-24]
 	Added games/hengband version 1.6.2 [pho 2020-01-24]
+	Added x11/ocaml-lablgtk3 version 3.0beta8 [jaapb 2020-01-24]
