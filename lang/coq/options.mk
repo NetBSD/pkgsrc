@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2019/11/03 19:03:57 rillig Exp $
+# $NetBSD: options.mk,v 1.9 2020/01/24 15:54:48 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.coq
 PKG_SUPPORTED_OPTIONS=	doc coqide
@@ -51,8 +51,9 @@ CONFIGURE_ARGS+=		-with-doc no
 .endif
 
 .if !empty(PKG_OPTIONS:Mcoqide)
-.include "../../x11/ocaml-lablgtk/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/ocaml-lablgtk3/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+CONFIGURE_ARGS+=	-coqide ${COQIDE_TYPE}
 PLIST.coqide=		yes
 .else
 CONFIGURE_ARGS+= -coqide no
