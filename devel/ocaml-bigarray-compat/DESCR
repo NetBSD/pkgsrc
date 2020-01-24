@@ -1,0 +1,2 @@
+A library that exposes Stdlib.Bigarray when possible (in OCaml >= 4.07)
+but can fallback to Bigarray.
