@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile.common,v 1.5 2019/03/06 09:28:23 jaapb Exp $
+$NetBSD: patch-Makefile.common,v 1.6 2020/01/24 15:54:48 jaapb Exp $
 
 Use BSD_INSTALL_*
+
 --- Makefile.common.orig	2018-10-31 12:53:51.000000000 +0000
 +++ Makefile.common
 @@ -83,8 +83,8 @@ DYNOBJ:=.cmo
