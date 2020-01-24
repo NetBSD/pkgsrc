@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.874 2020/01/04 13:53:29 nia Exp $
+# $NetBSD: Makefile,v 1.875 2020/01/24 14:07:59 jaapb Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -292,6 +292,7 @@ SUBDIR+=	neXtaw
 SUBDIR+=	numlockx
 SUBDIR+=	ocaml-graphics
 SUBDIR+=	ocaml-lablgtk
+SUBDIR+=	ocaml-lablgtk3
 SUBDIR+=	oneko
 SUBDIR+=	p5-Alien-wxWidgets
 SUBDIR+=	p5-Clipboard
