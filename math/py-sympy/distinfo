@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2020/01/15 19:13:06 minskim Exp $
+$NetBSD: distinfo,v 1.15 2020/01/24 16:20:24 minskim Exp $
 
-SHA1 (sympy-1.4.tar.gz) = 9485daf9e29f4ffa20e04111bea940a917eb3a69
-RMD160 (sympy-1.4.tar.gz) = 4f67bb1afa1895cc7c991f9ba23c23fa699e22e3
-SHA512 (sympy-1.4.tar.gz) = 6ae09be7260b1624b4f92d39c68d5cdf54e6e33010d9215f46d62d989c04cdbee6f9f9c8b11ebeda53257d154954fb926b3ab7335b738e33ad248764875b6ddb
-Size (sympy-1.4.tar.gz) = 6017715 bytes
+SHA1 (sympy-1.5.tar.gz) = be2e740860f7900f0ee2a8102d2943fded44125c
+RMD160 (sympy-1.5.tar.gz) = 3d1b3efed8553d5d2aa84fbc40be4a895c3c617a
+SHA512 (sympy-1.5.tar.gz) = 882ed99cbc7333cbed85d247d04a764a92855e3d26cee96163d18ece566115b9d38999bbe022225521834037dbdfc4c567548112dfddd5ece65af8f672a06091
+Size (sympy-1.5.tar.gz) = 6294079 bytes
