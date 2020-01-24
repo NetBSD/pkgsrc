@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.876 2020/01/16 15:52:06 pho Exp $
+# $NetBSD: Makefile,v 1.877 2020/01/24 12:57:52 jaapb Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -368,6 +368,7 @@ SUBDIR+=	numix-icon-theme
 SUBDIR+=	numix-icon-theme-circle
 SUBDIR+=	nvidia-texture-tools
 SUBDIR+=	nvtv
+SUBDIR+=	ocaml-cairo
 SUBDIR+=	ocrad
 SUBDIR+=	opencolorio
 SUBDIR+=	opencsg
