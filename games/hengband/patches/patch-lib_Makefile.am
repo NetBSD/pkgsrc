@@ -1,0 +1,13 @@
+$NetBSD: patch-lib_Makefile.am,v 1.1 2020/01/24 13:33:33 pho Exp $
+
+Don't create directories that need special handling. This is
+pkgsrc-specific.
+
+--- lib/Makefile.am.orig	2020-01-23 15:28:26.780752530 +0000
++++ lib/Makefile.am
+@@ -2,4 +2,4 @@
+ 
+ AUTOMAKE_OPTIONS = foreign
+ 
+-SUBDIRS = apex bone data edit file help info pref save script user xtra
++SUBDIRS = edit file help info pref script xtra
