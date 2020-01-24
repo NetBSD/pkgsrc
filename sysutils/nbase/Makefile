@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/05/01 13:36:28 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/24 19:23:51 cheusov Exp $
 #
 
-DISTNAME=	nbase-7.0.0.4
+DISTNAME=	nbase-7.0.0.6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cheusov/}
 
