@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/03/12 18:09:29 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/24 16:25:41 jaapb Exp $
 
 GITHUB_PROJECT=	bigstringaf
-DISTNAME=	${GITHUB_PROJECT}-0.4.0
+DISTNAME=	${GITHUB_PROJECT}-0.6.0
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=inhabitedtype/}
@@ -16,4 +16,5 @@ OCAML_USE_DUNE=	yes
 
 .include "../../mk/ocaml.mk"
 .include "../../devel/ocaml-base/buildlink3.mk"
+.include "../../devel/ocaml-bigarray-compat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
