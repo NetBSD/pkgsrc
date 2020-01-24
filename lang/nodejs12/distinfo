@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2020/01/08 22:29:02 adam Exp $
+$NetBSD: distinfo,v 1.4 2020/01/24 18:55:49 adam Exp $
 
 SHA1 (node-v12.14.1.tar.gz) = ebf6b7769a53a135381e53bac756808f0d6db993
 RMD160 (node-v12.14.1.tar.gz) = 916e3a53c9c60bffd1549b2c0607dba0d9864e02
@@ -6,20 +6,7 @@ SHA512 (node-v12.14.1.tar.gz) = ded6f0d9600c77b87537227e0a803f1ead462ab8dc729364
 Size (node-v12.14.1.tar.gz) = 51838191 bytes
 SHA1 (patch-common.gypi) = de37949f38d9bd39a18b59d59ec74e528bd323ac
 SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
-SHA1 (patch-deps_openssl_config_archs_linux-elf_asm_openssl-cl.gypi) = 12c91ca27ced24cabd714902fad9c9eb0ba40f9b
-SHA1 (patch-deps_openssl_config_bn__conf__asm.h) = a4cf4f0771c96fb09a00b76b25d35000d65ef92f
-SHA1 (patch-deps_openssl_config_bn__conf__no-asm.h) = c13b305c7a93b7adf61186d50ac637a6d180fa18
-SHA1 (patch-deps_openssl_config_dso__conf__asm.h) = ae8285306fd165dc881fd8c6783cf0977d73371a
-SHA1 (patch-deps_openssl_config_dso__conf__no-asm.h) = 78fe6bf2251940ad27913a624abdfb892e69f438
-SHA1 (patch-deps_openssl_config_opensslconf__asm.h) = e9bb26b66431595d13d4173d3ed5f3e583bd009f
-SHA1 (patch-deps_openssl_config_opensslconf__no-asm.h) = 63c493a4e2b98fb630a094908aa5c4b629181d15
-SHA1 (patch-deps_openssl_openssl-cl__asm.gypi) = 044ef35989d9ad2d55fe7ac965f2ec6e39e246ba
-SHA1 (patch-deps_openssl_openssl-cl__no__asm.gypi) = e40ae90fdc34c53e3761d5486ca58fb8e248a412
-SHA1 (patch-deps_openssl_openssl__asm.gypi) = 7c2b9a876792c66cf29c887d36e406996c61982f
-SHA1 (patch-deps_openssl_openssl__no__asm.gypi) = 3b1bc963308d8b8d4d03aa2921605d0fab61e1b8
-SHA1 (patch-deps_openssl_openssl_crypto_rand_rand__unix.c) = ba8d4602c3386801ad8d3c33c757c69ad3d25a34
 SHA1 (patch-deps_uv_common.gypi) = d38a9c8d9e3522f15812aec2f5b1e1e636d4bab3
-SHA1 (patch-deps_uv_src_unix_netbsd.c) = 76b27ae86aa80582554ee824146ee7c42c33883b
 SHA1 (patch-deps_v8_src_base_atomicops.h) = d1ef20a3fee1d188687bd76836ada6f2c8e0787f
 SHA1 (patch-deps_v8_src_base_platform_platform-freebsd.cc) = 427c7712fc1c2872fc48e593f7ab491c69ee44e3
 SHA1 (patch-deps_v8_src_base_platform_platform-openbsd.cc) = 5e593879dbab095f99e82593272a0de91043f9a8
