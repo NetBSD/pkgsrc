@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.751 2020/01/24 12:09:31 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.752 2020/01/24 12:57:23 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -894,3 +894,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-result to 1.4 [jaapb 2020-01-24]
 	Updated math/ltm to 1.2.0 [wiz 2020-01-24]
 	Updated archivers/libzip to 1.6.0 [wiz 2020-01-24]
+	Added graphics/ocaml-cairo version 0.6.1 [jaapb 2020-01-24]
