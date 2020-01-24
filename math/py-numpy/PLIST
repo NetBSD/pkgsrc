@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2019/03/04 09:09:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/01/24 16:18:22 minskim Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PLIST.py2x}bin/f2py2
 ${PLIST.py3x}bin/f2py3
@@ -428,6 +428,9 @@ ${PYSITELIB}/numpy/doc/constants.pyo
 ${PYSITELIB}/numpy/doc/creation.py
 ${PYSITELIB}/numpy/doc/creation.pyc
 ${PYSITELIB}/numpy/doc/creation.pyo
+${PYSITELIB}/numpy/doc/dispatch.py
+${PYSITELIB}/numpy/doc/dispatch.pyc
+${PYSITELIB}/numpy/doc/dispatch.pyo
 ${PYSITELIB}/numpy/doc/glossary.py
 ${PYSITELIB}/numpy/doc/glossary.pyc
 ${PYSITELIB}/numpy/doc/glossary.pyo
