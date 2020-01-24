@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.747 2020/01/24 08:17:28 adam Exp $
+$NetBSD: CHANGES-2020,v 1.748 2020/01/24 09:14:19 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -890,3 +890,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/omxplayer to 20170112nb14 [ryoon 2020-01-24]
 	Updated net/youtube-dl to 20200124 [adam 2020-01-24]
 	Updated textproc/py-xmlschema to 1.1.0 [adam 2020-01-24]
+	Updated devel/ocaml-re to 1.9.0 [jaapb 2020-01-24]
