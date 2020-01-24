@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2019/12/13 06:26:07 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/01/24 18:55:49 adam Exp $
 
 BUILDLINK_TREE+=	nodejs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nodejs
 NODEJS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nodejs+=	nodejs>=10
-BUILDLINK_ABI_DEPENDS.nodejs?=	nodejs>=10.15.3nb2
+BUILDLINK_ABI_DEPENDS.nodejs+=	nodejs>=10.15.3nb2
 BUILDLINK_PKGSRCDIR.nodejs?=	../../lang/nodejs
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -20,17 +20,15 @@ BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.23
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-# Uncomment when we switch to openssl>=1.1
-# .include "../../www/nghttp2/buildlink3.mk"
+.include "../../www/nghttp2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 pkgbase := nodejs
 .include "../../mk/pkg-build-options.mk"
 
-# Enable when we start using pkgsrc openssl-1.1.x
-#.if !empty(PKG_BUILD_OPTIONS.nodejs:Mopenssl)
-#.  include "../../security/openssl/buildlink3.mk"
-#.endif
+.if !empty(PKG_BUILD_OPTIONS.nodejs:Mopenssl)
+.  include "../../security/openssl/buildlink3.mk"
+.endif
 
 .endif # NODEJS_BUILDLINK3_MK
 
