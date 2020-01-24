@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/07/01 15:53:30 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/24 16:29:14 jaapb Exp $
 
 GITHUB_PROJECT=	ocaml-magic-mime
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-1.1.1
+DISTNAME=	${GITHUB_PROJECT}-1.1.2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 
