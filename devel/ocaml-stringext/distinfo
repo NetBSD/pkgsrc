@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 14:24:26 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/01/24 16:27:41 jaapb Exp $
 
-SHA1 (stringext-1.5.0.tar.gz) = 063eae3dc5b38e54911924cd1bcdbda162a484e7
-RMD160 (stringext-1.5.0.tar.gz) = 008319b905e91a5647cea1874e197cd1befa2990
-SHA512 (stringext-1.5.0.tar.gz) = 69c744ecf86f890fb8eeba245d3b5bbf1e2cadcf4274f3525faef6be242940dae77639639e202101b19e0772214af405edd67b7d33a3e9224798ec3e53167fc9
-Size (stringext-1.5.0.tar.gz) = 8007 bytes
+SHA1 (stringext-1.6.0.tar.gz) = c3d0baa5dccb348ca12419597125ab5842cefd30
+RMD160 (stringext-1.6.0.tar.gz) = f10afe736d6fd2afb1197c9e9eaeacfea8c64e3c
+SHA512 (stringext-1.6.0.tar.gz) = 77af121d915be73b6a6262c8cc62ba712e59b9aef4825d06ed7fdd960c99d9fcbc7681dca526ddf7e4210127966826e913cf1bd4e71bd75584a0b5caf9ac9625
+Size (stringext-1.6.0.tar.gz) = 7842 bytes
