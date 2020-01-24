@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2020/01/24 14:07:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/24 14:50:42 jaapb Exp $
 
 GITHUB_PROJECT=	lablgtk
 GITHUB_TAG=	${VERSION}
 VERSION=	3.0.beta8
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${GITHUB_PROJECT}3-3.0beta8
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=garrigue/}
 
@@ -16,6 +17,10 @@ LICENSE=	gnu-lgpl-v2
 USE_TOOLS+=	pkg-config
 
 OCAML_USE_DUNE=		yes
+OCAML_FINDLIB_DIRS=	lablgtk3
+OPAM_INSTALL_FILES=	lablgtk3
+DUNE_BUILD_PACKAGES=	lablgtk3
+
 
 .include "../../mk/ocaml.mk"
 
