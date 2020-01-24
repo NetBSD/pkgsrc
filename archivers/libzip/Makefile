@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2020/01/18 21:47:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.43 2020/01/24 12:09:23 wiz Exp $
 
-DISTNAME=		libzip-1.5.2
-PKGREVISION=		3
+DISTNAME=		libzip-1.6.0
 CATEGORIES=		archivers devel
 MASTER_SITES=		https://libzip.org/download/
 EXTRACT_SUFX=		.tar.xz
@@ -22,4 +21,5 @@ MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
