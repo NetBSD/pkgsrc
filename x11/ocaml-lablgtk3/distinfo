@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/24 14:07:02 jaapb Exp $
+
+SHA1 (lablgtk-3.0.beta8.tar.gz) = 7f256f61e032173dff341dd809df17c761838810
+RMD160 (lablgtk-3.0.beta8.tar.gz) = 8cde83b96fad98e26af0f07867897babbc827ca6
+SHA512 (lablgtk-3.0.beta8.tar.gz) = ec3ec8bec5569d0210757a3968cc5b7c08506d7842da11c978b98eed7dece108f2a121bef8ef4398ed896af3ec573a16a2ac81a562fde16fcbf0b2ae026a697f
+Size (lablgtk-3.0.beta8.tar.gz) = 1031045 bytes
