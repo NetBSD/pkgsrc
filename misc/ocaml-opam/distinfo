@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/03/05 18:36:24 jaapb Exp $
+$NetBSD: distinfo,v 1.11 2020/01/24 16:07:38 jaapb Exp $
 
-SHA1 (opam-2.0.3.tar.gz) = 4e4940df84690c8e110f30f1214055e10ac2fb16
-RMD160 (opam-2.0.3.tar.gz) = f3ff966f84c11fb2cf05f4755306cccc4c5408ff
-SHA512 (opam-2.0.3.tar.gz) = a0db42f67a41d9ee5f4015a153fa9133ca6a33201f7db6b8b5562bccdda45f8af5032dc9c863bd3eaeef74ba4a3e4a099556faa3d01e66b6e5cf8ebdd52244fe
-Size (opam-2.0.3.tar.gz) = 626720 bytes
+SHA1 (opam-2.0.6.tar.gz) = f150085e5d8c48dd4c109e71040a39c1775df229
+RMD160 (opam-2.0.6.tar.gz) = d034ec0a029d48d4f1dbd7c6310cabcfb24ed6d0
+SHA512 (opam-2.0.6.tar.gz) = c3dbd315550817d15e3d5dd4b5b030b725e5d65e36450f8ac064555e4710bda90df6fab457c386c7a334689e50d240de19992565ce325bc8a18163f145f09dfd
+Size (opam-2.0.6.tar.gz) = 636147 bytes
