@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_xtra_graf_Makefile.am,v 1.1 2020/01/24 13:33:33 pho Exp $
+
+Install 16x16 tile set too.
+
+--- lib/xtra/graf/Makefile.am.orig	2020-01-23 17:09:20.857756573 +0000
++++ lib/xtra/graf/Makefile.am
+@@ -1,7 +1,7 @@
+ ## Makefile.am -- Process this file with automake to process Makefile.in
+ 
+ angband_files = \
+-	8x8.bmp
++	8x8.bmp 16x16.bmp mask.bmp
+ 
+ EXTRA_DIST = \
+   $(angband_files)
