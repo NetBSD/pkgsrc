@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2019/12/29 15:40:32 adam Exp $
+$NetBSD: distinfo,v 1.20 2020/01/24 18:58:12 adam Exp $
 
 SHA1 (node-v8.17.0.tar.gz) = 66b39f093c14e1243d1de15c4af6a9b4cfbc09f5
 RMD160 (node-v8.17.0.tar.gz) = 55eb1b26f3e9730ffb49fc061b763fb26817124d
@@ -7,7 +7,6 @@ Size (node-v8.17.0.tar.gz) = 32263914 bytes
 SHA1 (patch-common.gypi) = c7fee438a564003fb3624679ce94108ab397fec0
 SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
 SHA1 (patch-deps_uv_common.gypi) = 6a94a89866b272dcab60a01fd571057acd0ccd3b
-SHA1 (patch-deps_uv_src_unix_netbsd.c) = e1b5a3c611dbd08d0918d69dcf3331630158a1bc
 SHA1 (patch-deps_v8_src_arm_cpu-arm.cc) = d0d11ac474ab109a6f40b26fa457b12d742eb48d
 SHA1 (patch-deps_v8_src_base_atomicops.h) = 552d2b7781b39b93392fd00043b1cf4cb10802da
 SHA1 (patch-deps_v8_src_base_platform_platform-freebsd.cc) = 686c2054838a25cfeed7fb9870a959e48dc4de35
