@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.754 2020/01/24 14:07:17 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.755 2020/01/24 14:22:04 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -897,3 +897,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/ocaml-cairo version 0.6.1 [jaapb 2020-01-24]
 	Added games/hengband version 1.6.2 [pho 2020-01-24]
 	Added x11/ocaml-lablgtk3 version 3.0beta8 [jaapb 2020-01-24]
+	Updated graphics/deforaos-camera to 0.3.0 [khorben 2020-01-24]
