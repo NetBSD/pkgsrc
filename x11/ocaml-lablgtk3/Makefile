@@ -1,0 +1,27 @@
+# $NetBSD: Makefile,v 1.1 2020/01/24 14:07:02 jaapb Exp $
+
+GITHUB_PROJECT=	lablgtk
+GITHUB_TAG=	${VERSION}
+VERSION=	3.0.beta8
+DISTNAME=	${GITHUB_PROJECT}-${VERSION}
+PKGNAME=	ocaml-${GITHUB_PROJECT}3-3.0beta8
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_GITHUB:=garrigue/}
+
+MAINTAINER=	jaapb@NetBSD.org
+HOMEPAGE=	https://github.com/garrigue/lablgtk/
+COMMENT=	GTK+ 3.x bindings for OCaml
+LICENSE=	gnu-lgpl-v2
+
+USE_TOOLS+=	pkg-config
+
+OCAML_USE_DUNE=		yes
+
+.include "../../mk/ocaml.mk"
+
+.include "options.mk"
+
+.include "../../graphics/ocaml-cairo/buildlink3.mk"
+.include "../../lang/camlp5/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
