@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.757 2020/01/24 16:07:48 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.758 2020/01/24 16:15:40 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -900,3 +900,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/deforaos-camera to 0.3.0 [khorben 2020-01-24]
 	Updated lang/coq to 8.10.2 [jaapb 2020-01-24]
 	Updated misc/ocaml-opam to 2.0.6 [jaapb 2020-01-24]
+	Updated devel/ocaml-sexplib0 to 0.13.0 [jaapb 2020-01-24]
