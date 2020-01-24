@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2019/12/09 20:05:40 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/01/24 18:57:09 adam Exp $
 
 BUILDLINK_TREE+=	nodejs
 
@@ -23,17 +23,15 @@ BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.23
 # Requires http_parser_set_max_header_size
 BUILDLINK_API_DEPENDS.http-parser+=	http-parser>=2.9.0
 .include "../../www/http-parser/buildlink3.mk"
-# Uncomment when we switch to openssl>=1.1
-# .include "../../www/nghttp2/buildlink3.mk"
+.include "../../www/nghttp2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 pkgbase := nodejs
 .include "../../mk/pkg-build-options.mk"
 
-# Enable when we start using pkgsrc openssl-1.1.x
-#.if !empty(PKG_BUILD_OPTIONS.nodejs:Mopenssl)
-#.  include "../../security/openssl/buildlink3.mk"
-#.endif
+.if !empty(PKG_BUILD_OPTIONS.nodejs:Mopenssl)
+.  include "../../security/openssl/buildlink3.mk"
+.endif
 
 .endif # NODEJS_BUILDLINK3_MK
 
