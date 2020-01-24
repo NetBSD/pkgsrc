@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.477 2020/01/19 00:46:34 nia Exp $
+# $NetBSD: Makefile,v 1.478 2020/01/24 13:35:20 pho Exp $
 #
 
 COMMENT=	Games
@@ -174,6 +174,7 @@ SUBDIR+=	grhino
 SUBDIR+=	gtkballs
 SUBDIR+=	gtklevel9
 SUBDIR+=	gtkmagnetic
+SUBDIR+=	hengband
 SUBDIR+=	heretic2-demo
 SUBDIR+=	hex-a-hop
 SUBDIR+=	hitori
