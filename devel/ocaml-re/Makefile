@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2019/11/03 10:39:25 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/24 09:14:10 jaapb Exp $
 
-VERSION=	1.8.0
+VERSION=	1.9.0
 GITHUB_PROJECT=	ocaml-re
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
@@ -13,7 +12,7 @@ COMMENT=	Pure OCaml regular expression library
 LICENSE=	gnu-lgpl-v2.1
 
 INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}/re/emacs ${OCAML_SITELIBDIR}/re/glob \
-		       	${OCAML_SITELIBDIR}/re/pcre ${OCAML_SITELIBDIR}/re/perl \
+			${OCAML_SITELIBDIR}/re/pcre ${OCAML_SITELIBDIR}/re/perl \
 			${OCAML_SITELIBDIR}/re/posix ${OCAML_SITELIBDIR}/re/str \
 			share/doc/re
 OCAML_USE_DUNE=		yes

@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2019/03/05 16:50:45 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/01/24 09:14:10 jaapb Exp $
 ${OCAML_SITELIB}/re/META
 ${OCAML_SITELIB}/re/automata.ml
 ${OCAML_SITELIB}/re/automata.mli
 ${OCAML_SITELIB}/re/category.ml
 ${OCAML_SITELIB}/re/category.mli
+${OCAML_SITELIB}/re/color_map.ml
+${OCAML_SITELIB}/re/color_map.mli
 ${OCAML_SITELIB}/re/core.ml
 ${OCAML_SITELIB}/re/core.mli
 ${OCAML_SITELIB}/re/cset.ml
@@ -30,6 +32,8 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/glob/re_glob.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/glob/re_glob.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/glob/re_glob.cmxs
 ${OCAML_SITELIB}/re/glob/re_glob.ml
+${OCAML_SITELIB}/re/group.ml
+${OCAML_SITELIB}/re/group.mli
 ${OCAML_SITELIB}/re/opam
 ${OCAML_SITELIB}/re/pcre.ml
 ${OCAML_SITELIB}/re/pcre.mli
@@ -67,7 +71,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re.a
 ${OCAML_SITELIB}/re/re.cma
 ${OCAML_SITELIB}/re/re.cmi
 ${OCAML_SITELIB}/re/re.cmt
-${PLIST.ocaml-opt}${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re.cmxs
 ${OCAML_SITELIB}/re/re.ml
@@ -83,6 +87,10 @@ ${OCAML_SITELIB}/re/re__Category.cmi
 ${OCAML_SITELIB}/re/re__Category.cmt
 ${OCAML_SITELIB}/re/re__Category.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re__Category.cmx
+${OCAML_SITELIB}/re/re__Color_map.cmi
+${OCAML_SITELIB}/re/re__Color_map.cmt
+${OCAML_SITELIB}/re/re__Color_map.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re__Color_map.cmx
 ${OCAML_SITELIB}/re/re__Core.cmi
 ${OCAML_SITELIB}/re/re__Core.cmt
 ${OCAML_SITELIB}/re/re__Core.cmti
@@ -102,6 +110,10 @@ ${OCAML_SITELIB}/re/re__Glob.cmi
 ${OCAML_SITELIB}/re/re__Glob.cmt
 ${OCAML_SITELIB}/re/re__Glob.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re__Glob.cmx
+${OCAML_SITELIB}/re/re__Group.cmi
+${OCAML_SITELIB}/re/re__Group.cmt
+${OCAML_SITELIB}/re/re__Group.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/re/re__Group.cmx
 ${OCAML_SITELIB}/re/re__Pcre.cmi
 ${OCAML_SITELIB}/re/re__Pcre.cmt
 ${OCAML_SITELIB}/re/re__Pcre.cmti
