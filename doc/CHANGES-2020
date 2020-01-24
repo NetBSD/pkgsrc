@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.766 2020/01/24 18:58:46 adam Exp $
+$NetBSD: CHANGES-2020,v 1.767 2020/01/24 19:24:13 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -912,3 +912,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs to 13.7.0 [adam 2020-01-24]
 	Updated lang/nodejs12 to 12.14.1nb1 [adam 2020-01-24]
 	Updated lang/nodejs10 to 10.18.1 [adam 2020-01-24]
+	Updated sysutils/nbase to 7.0.0.6 [cheusov 2020-01-24]
