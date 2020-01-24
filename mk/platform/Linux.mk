@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.80 2019/01/24 18:40:56 tnn Exp $
+# $NetBSD: Linux.mk,v 1.81 2020/01/24 12:32:21 nia Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -167,12 +167,17 @@ _WRAP_EXTRA_ARGS.LD+=	-m elf_i386
 CWRAPPERS_APPEND.ld+=	-m elf_i386
 .endif
 
+_GLIBC_PATHS+=	/lib${LIBABISUFFIX}/libc.so.6
+_GLIBC_PATHS+=	/lib/${MACHINE_ARCH}-linux-gnu/libc.so.6
+
+.for _glibc_path in ${_GLIBC_PATHS}
+.  if exists(${_glibc_path})
 ## Use _CMD so the command only gets run when needed!
-.if exists(/lib${LIBABISUFFIX}/libc.so.6)
-_GLIBC_VERSION_CMD=	/lib${LIBABISUFFIX}/libc.so.6 --version | \
+_GLIBC_VERSION_CMD=	${_glibc_path} --version | \
 				sed -ne's/^GNU C.*version \(.*\),.*$$/\1/p'
 GLIBC_VERSION=		${_GLIBC_VERSION_CMD:sh}
-.endif
+.  endif
+.endfor
 
 # If this is defined pass it to the make process. 
 .if defined(NOGCCERROR)
