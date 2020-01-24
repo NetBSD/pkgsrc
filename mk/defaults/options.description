@@ -299,6 +299,7 @@ gtk3			Enable support for GTK3.
 gtk3-atk-bridge		Enable ATK support.
 gtksourceview		Enable gtksourceview support.
 gtksourceview2		Enable gtksourceview2 support.
+gtksourceview3		Enable gtksourceview3 support.
 gtkspell		Enable gtkspell support.
 gtkwave-tcl		Enable tcl for gtkwave.
 guile			Enable support for GUILE.
