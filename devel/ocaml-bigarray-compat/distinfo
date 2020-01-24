@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/24 16:20:47 jaapb Exp $
+
+SHA1 (ocaml-bigarray-compat-1.0.0.tar.gz) = 707a41889ee659dd1dfa2c64d820b71513a48a52
+RMD160 (ocaml-bigarray-compat-1.0.0.tar.gz) = a2ce35b2596c19244868484fc3835e0001cc5cd3
+SHA512 (ocaml-bigarray-compat-1.0.0.tar.gz) = c365fee15582aca35d7b05268cde29e54774ad7df7be56762b4aad78ca1409d4326ad3b34af0f1cc2c7b872837290a9cd9ff43b47987c03bba7bba32fe8a030f
+Size (ocaml-bigarray-compat-1.0.0.tar.gz) = 1385 bytes
