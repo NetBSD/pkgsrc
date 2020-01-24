@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/07/01 15:53:30 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/01/24 16:29:14 jaapb Exp $
 
-SHA1 (ocaml-magic-mime-1.1.1.tar.gz) = 8ff1bd5995aaf7564738f9f7e46aaa167fbca3e8
-RMD160 (ocaml-magic-mime-1.1.1.tar.gz) = df87aca1d7ab9474668e792d244670c5107a76a1
-SHA512 (ocaml-magic-mime-1.1.1.tar.gz) = cb1476d84cd8fdf95b772644df2c91c642bcab466dae0b79f6f320d34efe5da09129837b628c5393160a46907d020637b7d0d0a956f0055b381afe0f507ffa28
-Size (ocaml-magic-mime-1.1.1.tar.gz) = 13175 bytes
+SHA1 (ocaml-magic-mime-1.1.2.tar.gz) = 8637d47b47c1599f2da88258b8768f631c71d631
+RMD160 (ocaml-magic-mime-1.1.2.tar.gz) = c96a086919b9ee87755d2784c8c601c129175211
+SHA512 (ocaml-magic-mime-1.1.2.tar.gz) = 5464d14ad4013f8bf0b4da9b79331ba99aba7877141779f5bc4d13a0b3a36ac8dd6e693f020365e4c645b2a3df7d7a97dd0bd07e5c4263585f745d4ead4e8423
+Size (ocaml-magic-mime-1.1.2.tar.gz) = 13215 bytes
