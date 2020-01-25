@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.771 2020/01/25 14:58:23 nia Exp $
+$NetBSD: CHANGES-2020,v 1.772 2020/01/25 15:00:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -918,3 +918,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-google-auth to 1.11.0 [adam 2020-01-25]
 	Updated audio/libmpdclient to 2.18 [nia 2020-01-25]
 	Updated audio/openal-soft to 1.20.1 [nia 2020-01-25]
+	Updated sysutils/mc to 4.8.24 [nia 2020-01-25]
