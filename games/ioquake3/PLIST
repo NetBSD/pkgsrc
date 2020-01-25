@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/04/18 20:44:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/01/25 20:13:49 jmcneill Exp $
 lib/ioquake3/baseq3/cgame${QUAKE_ARCH}.so
 lib/ioquake3/baseq3/qagame${QUAKE_ARCH}.so
 lib/ioquake3/baseq3/ui${QUAKE_ARCH}.so
@@ -7,3 +7,5 @@ lib/ioquake3/ioquake3.${QUAKE_ARCH}
 lib/ioquake3/missionpack/cgame${QUAKE_ARCH}.so
 lib/ioquake3/missionpack/qagame${QUAKE_ARCH}.so
 lib/ioquake3/missionpack/ui${QUAKE_ARCH}.so
+lib/ioquake3/renderer_opengl1_${QUAKE_ARCH}.so
+lib/ioquake3/renderer_opengl2_${QUAKE_ARCH}.so
