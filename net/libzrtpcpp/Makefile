@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/01/18 21:48:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/25 10:45:10 jperkin Exp $
 
 GITHUB_TAG=	V4.4.0
 DISTNAME=	${GITHUB_TAG}
@@ -27,8 +27,6 @@ CMAKE_ARGS+=		-DLIBDIRNAME=lib
 
 .include "options.mk"
 
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.8
-#BUILDLINK_DEPMETHOD.openssl=	build
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

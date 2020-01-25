@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 21:48:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/25 10:45:11 jperkin Exp $
 #
 
 VERSION=		0.2.8
@@ -13,8 +13,6 @@ COMMENT=		Convenience library for easy PKCS\#11 implementation
 LICENSE=		gnu-lgpl-v2.1
 
 WRKSRC=			${WRKDIR}/libp11-libp11-${VERSION}
-
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
 USE_TOOLS+=		autoconf automake gmake pkg-config
 GNU_CONFIGURE=		yes

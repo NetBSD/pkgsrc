@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 21:50:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/25 10:45:12 jperkin Exp $
 
 FLNEWS_VERSION=	0.17
 
@@ -74,14 +74,7 @@ BUILD_DEPENDS+=			makedepend-[0-9]*:../../devel/makedepend
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
-# OpenSSL 1.1 API is required for signature algorithm negotiation
-# OpenSSL 1.1 API is required for TLSv1.2 FFDHE group check
-# At least OpenSSL 1.1.1 is required for TLSv1.3
-# OpenSSL 3 API is required for FFDHE group negotiation
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.0
 .include "../../security/openssl/buildlink3.mk"
-# FLTK must be compiled with multithreading support
-# FLTK version 1.4 is supported (should be compiled with pango support)
 .include "../../x11/fltk13/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

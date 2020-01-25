@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 21:50:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/25 10:45:11 jperkin Exp $
 #
 
 VERSION=		0.1.8
@@ -14,8 +14,6 @@ COMMENT=		PKCS\#11 engine for OpenSSL
 LICENSE=		original-bsd
 
 WRKSRC=			${WRKDIR}/engine_pkcs11-engine_pkcs11-${VERSION}
-
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
 USE_TOOLS+=		autoconf automake gmake pkg-config
 GNU_CONFIGURE=		yes

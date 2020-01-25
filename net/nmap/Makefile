@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2020/01/18 21:50:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.143 2020/01/25 10:45:10 jperkin Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -7,7 +7,6 @@ COMMENT=	Network/port scanner with OS detection
 
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=1.0.0
 BUILDLINK_API_DEPENDS.libpcre+=	libpcre>=7.6
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.8
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

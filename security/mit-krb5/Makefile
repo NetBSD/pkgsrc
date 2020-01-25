@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2020/01/18 21:50:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.104 2020/01/25 10:45:11 jperkin Exp $
 
 DISTNAME=	krb5-1.16.2
 PKGNAME=	mit-${DISTNAME}
@@ -81,6 +81,5 @@ post-install:
 		${INSTALL_MAN} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};	\
 	done
 
-BUILDLINK_API_DEPENDS.openssl+= openssl>=1.0.1
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

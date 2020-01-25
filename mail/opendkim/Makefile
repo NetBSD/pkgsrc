@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/01/18 21:49:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/25 10:45:12 jperkin Exp $
 
 DISTNAME=	opendkim-2.10.3
 PKGREVISION=	5
@@ -47,7 +47,6 @@ pre-configure:
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
-BUILDLINK_API_DEPENDS.openssl+=		openssl>=0.9.8
 .include "../../security/openssl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 .include "../../mail/libmilter/buildlink3.mk"

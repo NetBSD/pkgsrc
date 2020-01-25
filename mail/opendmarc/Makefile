@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/18 21:48:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/25 10:45:11 jperkin Exp $
 
 DISTNAME=	opendmarc-1.3.1
 PKGREVISION=	6
@@ -37,7 +37,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/opendmarc/opendmarc.conf.sample \
 		${DESTDIR}${EGDIR}/
 
-BUILDLINK_API_DEPENDS.openssl+=		openssl>=0.9.8
 .include "../../security/openssl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 .include "../../mail/libmilter/buildlink3.mk"
