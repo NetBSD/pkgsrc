@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.768 2020/01/25 11:17:39 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.769 2020/01/25 12:49:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -914,3 +914,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs10 to 10.18.1 [adam 2020-01-24]
 	Updated sysutils/nbase to 7.0.0.6 [cheusov 2020-01-24]
 	Updated sysutils/daemontools-encore to 1.11nb2 [schmonz 2020-01-25]
+	Updated www/py-httplib2 to 0.17.0 [adam 2020-01-25]
+	Updated security/py-google-auth to 1.11.0 [adam 2020-01-25]
