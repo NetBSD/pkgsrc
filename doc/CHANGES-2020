@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.772 2020/01/25 15:00:52 nia Exp $
+$NetBSD: CHANGES-2020,v 1.773 2020/01/25 17:25:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -919,3 +919,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/libmpdclient to 2.18 [nia 2020-01-25]
 	Updated audio/openal-soft to 1.20.1 [nia 2020-01-25]
 	Updated sysutils/mc to 4.8.24 [nia 2020-01-25]
+	Updated lang/php73 to 7.3.14 [taca 2020-01-25]
+	Updated lang/php74 to 7.4.2 [taca 2020-01-25]
+	Updated lang/php72 to 7.2.27 [taca 2020-01-25]
