@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2018/05/03 21:12:23 fhajny Exp $
+# $NetBSD: options.mk,v 1.3 2020/01/25 10:45:12 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.node
 PKG_SUPPORTED_OPTIONS=	openssl dtrace
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--without-dtrace
 PRINT_PLIST_AWK+=	{if ($$0 ~ /lib\/dtrace/) {$$0 = "$${PLIST.dtrace}" $$0;}}
 
 .if !empty(PKG_OPTIONS:Mopenssl)
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.2
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--shared-openssl
 _WRAP_EXTRA_ARGS.CXX+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib

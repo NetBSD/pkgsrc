@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2020/01/18 21:50:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.55 2020/01/25 10:45:10 jperkin Exp $
 
 DISTNAME=	freeradius-server-2.2.10
 PKGNAME=	${DISTNAME:S/-server//}
@@ -44,8 +44,6 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
 EGDIR=			${PREFIX}/share/examples/freeradius
-
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
