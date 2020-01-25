@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/25 20:20:45 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/25 20:29:11 rillig Exp $
 
 GCC9_VERSION=	9.2.0
 
@@ -59,6 +59,18 @@ CHECK_PORTABILITY_SKIP=	contrib/download_prerequisites
 # compute_powtab.c:142:3: error: 'for' loop initial declarations are only allowed in C99 mode
 #    for (long pi = start_idx; pi >= 0; pi--)
 NOT_FOR_PLATFORM+=	Linux-*-x86_64
+
+# The build and target host is x86_64-sun-solaris2.11.
+# It still fails to compile some seemingly linux-specific code.
+#
+# libtool: compile:  /home/pbulk/build/lang/gcc9/work/build/./gcc/xgcc [...]
+#   -c ../../../../gcc-9.2.0/libsanitizer/sanitizer_common/sanitizer_linux.cc
+# ...
+# ../../../../gcc-9.2.0/libsanitizer/sanitizer_common/sanitizer_linux.cc: In constructor '__sanitizer::ThreadLister::ThreadLister(__sanitizer::pid_t)':
+# ../../../../gcc-9.2.0/libsanitizer/sanitizer_common/sanitizer_linux.cc:932:63: error: 'O_DIRECTORY' was not declared in this scope
+#  932 |   descriptor_ = internal_open(task_directory_path, O_RDONLY | O_DIRECTORY);
+#      |                                                               ^~~~~~~~~~~
+NOT_FOR_PLATFORM+=	SunOS-*-x86_64
 
 LANGS=			c
 
