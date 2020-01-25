@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/30 13:40:29 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/01/25 14:58:13 nia Exp $
 bin/altonegen
 bin/makemhr
 bin/openal-info
@@ -15,8 +15,7 @@ lib/libopenal.so.1
 lib/libopenal.so.${PKGVERSION}
 lib/pkgconfig/openal.pc
 share/openal/alsoftrc.sample
-share/openal/hrtf/default-44100.mhr
-share/openal/hrtf/default-48000.mhr
+share/openal/hrtf/Default HRTF.mhr
 share/openal/presets/3D7.1.ambdec
 share/openal/presets/hexagon.ambdec
 share/openal/presets/itu5.1-nocenter.ambdec
