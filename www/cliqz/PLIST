@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/01/22 10:36:24 fox Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/01/25 17:12:17 fox Exp $
 bin/cliqz
 lib/cliqz/actors/AudioPlaybackChild.jsm
 lib/cliqz/actors/AudioPlaybackParent.jsm
@@ -4683,6 +4683,7 @@ lib/cliqz/libmozavcodec.so
 lib/cliqz/libmozavutil.so
 lib/cliqz/libmozgtk.so
 lib/cliqz/libmozsqlite3.so
+${PLIST.wayland}lib/cliqz/libmozwayland.so
 lib/cliqz/libxul.so
 lib/cliqz/localization/en-US/crashreporter/aboutcrashes.ftl
 lib/cliqz/localization/en-US/security/certificates/certManager.ftl
