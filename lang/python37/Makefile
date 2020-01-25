@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 21:49:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/25 10:45:12 jperkin Exp $
 
 PKGREVISION= 1
 .include "dist.mk"
@@ -180,7 +180,6 @@ BUILDLINK_DEPMETHOD.readline=		build
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.2
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2019/07/03 05:51:54 triaxx Exp $
+# $NetBSD: options.mk,v 1.13 2020/01/25 10:45:11 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	kqueue pam ssl tcpwrappers
@@ -18,7 +18,6 @@ PLIST_VARS+=		ssl tcpwrappers
 CONFIGURE_ARGS+=	--with-ssl=openssl
 CONFIGURE_ENV+=		SSL_CFLAGS="-I${BUILDLINK_PREFIX.openssl}/include"
 CONFIGURE_ENV+=		SSL_LIBS="-lssl -lcrypto"
-BUILDLINK_API_DEPENDS.openssl+=openssl>=0.9.8a
 .  include "../../security/openssl/buildlink3.mk"
 PLIST.ssl=		yes
 .endif

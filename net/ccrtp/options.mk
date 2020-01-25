@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2015/04/18 03:11:47 rodent Exp $
+# $NetBSD: options.mk,v 1.3 2020/01/25 10:45:10 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ccrtp
 PKG_OPTIONS_GROUP.tls=		libgcrypt openssl
@@ -12,6 +12,5 @@ PKG_SUGGESTED_OPTIONS+=		openssl
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenssl)
-BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.8
 .include "../../security/openssl/buildlink3.mk"
 .endif
