@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.775 2020/01/25 19:26:42 nia Exp $
+$NetBSD: CHANGES-2020,v 1.776 2020/01/25 20:14:43 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -924,3 +924,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/php72 to 7.2.27 [taca 2020-01-25]
 	Updated emulators/mgba to 0.8.0 [nia 2020-01-25]
 	Updated emulators/libretro-mgba to 0.8.0 [nia 2020-01-25]
+	Updated games/ioquake3 to 1.36.20200125 [jmcneill 2020-01-25]
