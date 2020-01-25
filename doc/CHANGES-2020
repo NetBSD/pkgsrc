@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.769 2020/01/25 12:49:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.770 2020/01/25 14:40:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -916,3 +916,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/daemontools-encore to 1.11nb2 [schmonz 2020-01-25]
 	Updated www/py-httplib2 to 0.17.0 [adam 2020-01-25]
 	Updated security/py-google-auth to 1.11.0 [adam 2020-01-25]
+	Updated audio/libmpdclient to 2.18 [nia 2020-01-25]
