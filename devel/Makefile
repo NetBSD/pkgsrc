@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3036 2020/01/23 16:24:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.3037 2020/01/25 23:13:49 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -899,6 +899,7 @@ SUBDIR+=	ocaml-base64
 SUBDIR+=	ocaml-base_bigstring
 SUBDIR+=	ocaml-base_quickcheck
 SUBDIR+=	ocaml-batteries
+SUBDIR+=	ocaml-bigarray-compat
 SUBDIR+=	ocaml-bigstringaf
 SUBDIR+=	ocaml-bin_prot
 SUBDIR+=	ocaml-biniou
