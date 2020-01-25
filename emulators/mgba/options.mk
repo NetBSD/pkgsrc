@@ -1,11 +1,12 @@
-# $NetBSD: options.mk,v 1.2 2019/12/23 23:03:24 nia Exp $
+# $NetBSD: options.mk,v 1.3 2020/01/25 19:26:18 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mgba
 
 PKG_SUPPORTED_OPTIONS+=	ffmpeg imagemagick qt5 opengl
 PKG_SUGGESTED_OPTIONS+=	ffmpeg imagemagick qt5 opengl
 
-PLIST_VARS+=	qt shaders
+PLIST_SRC+=	PLIST
+PLIST_VARS+=	qt
 
 .include "../../mk/bsd.options.mk"
 
@@ -45,5 +46,5 @@ CMAKE_ARGS+=	-DUSE_EPOXY=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl) && !empty(PKG_OPTIONS:Mqt5)
-PLIST.shaders=	yes
+PLIST_SRC+=	PLIST.shaders
 .endif
