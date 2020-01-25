@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/04/12 18:39:34 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/25 16:07:15 jmcneill Exp $
 #
 
 DISTNAME=	ioquake3-1.36
@@ -21,7 +21,7 @@ do-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
+.if ${OPSYS} == "NetBSD" && ${MACHINE:U} == "evbarm"
 QUAKE_ARCH!=	uname -m
 .else
 QUAKE_ARCH=	${MACHINE_ARCH}
