@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/01/23 16:49:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/25 11:17:31 schmonz Exp $
 
 DISTNAME=		daemontools-encore-1.11
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${HOMEPAGE}
 
