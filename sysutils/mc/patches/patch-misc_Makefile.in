@@ -1,12 +1,13 @@
-$NetBSD: patch-ac,v 1.11 2015/08/28 07:47:08 wiz Exp $
+$NetBSD: patch-misc_Makefile.in,v 1.1 2020/01/25 15:00:42 nia Exp $
 
 for installing configs to share/examples/mc
---- misc/Makefile.in.orig	2015-03-20 18:08:54.000000000 +0000
+
+--- misc/Makefile.in.orig	2020-01-18 21:43:04.000000000 +0000
 +++ misc/Makefile.in
 @@ -492,7 +492,7 @@ LIBFILES_SCRIPT = \
  	edit.indent.rc
  
- CLEANFILES = $(SCRIPTS_OUT)
+ CLEANFILES = $(SCRIPTS_OUT) $(PKGDATA_OUT)
 -cfgdir = $(sysconfdir)/@PACKAGE@
 +cfgdir = @datadir@/examples/@PACKAGE@
  cfg_DATA = \
