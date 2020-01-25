@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.7 2020/01/25 16:07:15 jmcneill Exp $
+$NetBSD: distinfo,v 1.8 2020/01/25 20:13:49 jmcneill Exp $
 
-SHA1 (ioquake3-1.36.tar.bz2) = 0f92891e2b174253d02f666fd22e147c886089b4
-RMD160 (ioquake3-1.36.tar.bz2) = af9f65bbde2fe5531fa371ec6d2023126a523293
-SHA512 (ioquake3-1.36.tar.bz2) = fdd8e0ab56966cdc614eff45ab478b87255cfb1b50ba10b3141bcfcc569fc620d281de93333d39119b2d7b43aac3900ecf826a0459fc89bb2f57e30ae2425645
-Size (ioquake3-1.36.tar.bz2) = 3503058 bytes
-SHA1 (patch-aa) = c259a5261704d3b71824de60667cdc4287fe7ae7
-SHA1 (patch-ab) = 7808f9c26160ae1931c96fe1bc5e898b69afbde2
-SHA1 (patch-ac) = 4631bdda582aa105b661f45e09e0d5eb68713978
-SHA1 (patch-ad) = 577ca1c8fab64289d6f91e9e02542094cf7f2800
-SHA1 (patch-code_tools_lcc_cpp_unix.c) = 7d9e4bf34dd0c6df0c0267449d3365604d972fdd
+SHA1 (ioquake3-1.36.20200125-daae32ddfdab2172a628072ed3ff7dd1fc1563fe.tar.gz) = 791bc69ea853ced457134ed4759a76b40cd0e008
+RMD160 (ioquake3-1.36.20200125-daae32ddfdab2172a628072ed3ff7dd1fc1563fe.tar.gz) = 10c18309b358b0b091073f96c3ddaeb7c1535aa5
+SHA512 (ioquake3-1.36.20200125-daae32ddfdab2172a628072ed3ff7dd1fc1563fe.tar.gz) = 689a0efa6eaf88fcf98616c100df625b77617c55e351455cc25727fea525748855c58e2288f04d86372d392a556f2ef4926e2c808f75e104ac328baa9458c4d1
+Size (ioquake3-1.36.20200125-daae32ddfdab2172a628072ed3ff7dd1fc1563fe.tar.gz) = 7691640 bytes
+SHA1 (patch-aa) = b146df4f36fc7f9e0bfece50bd154c24e507dc2f
+SHA1 (patch-ac) = dc32068082c3493eb503811c2577b8fadb2745d3
+SHA1 (patch-code_tools_lcc_cpp_unix.c) = e80699461d92b9a659c88c0f5d66580ecf237f5f
