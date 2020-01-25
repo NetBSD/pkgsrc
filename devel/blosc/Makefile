@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/12/15 14:22:58 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/25 16:54:23 minskim Exp $
 
 DISTNAME=	blosc-1.17.1
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ GITHUB_PROJECT=	c-blosc
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://blosc.org/
+HOMEPAGE=	https://blosc.org/
 COMMENT=	Blocking, shuffling, and lossless compression library
 LICENSE=	modified-bsd
 
