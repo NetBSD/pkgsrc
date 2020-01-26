@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/03/25 22:45:21 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 07:27:40 minskim Exp $
 
 DISTNAME=	TECkit-2.5.9
 CATEGORIES=	converters
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1 OR cpl-1.0
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	aclocal autoconf automake gmake
 
 PKGCONFIG_OVERRIDE=	teckit.pc.in
