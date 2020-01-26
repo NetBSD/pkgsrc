@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.88 2019/10/11 15:37:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.89 2020/01/26 09:05:19 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -6,6 +6,7 @@ share/doc/sqlite3/aff_short.html
 share/doc/sqlite3/affcase1.html
 share/doc/sqlite3/amalgamation.html
 share/doc/sqlite3/appfileformat.html
+share/doc/sqlite3/appfunc.html
 share/doc/sqlite3/arch.html
 share/doc/sqlite3/assert.html
 share/doc/sqlite3/asyncvfs.html
@@ -111,12 +112,14 @@ share/doc/sqlite3/c3ref/experimental.html
 share/doc/sqlite3/c3ref/extended_result_codes.html
 share/doc/sqlite3/c3ref/file.html
 share/doc/sqlite3/c3ref/file_control.html
+share/doc/sqlite3/c3ref/filename_database.html
 share/doc/sqlite3/c3ref/finalize.html
 share/doc/sqlite3/c3ref/free.html
 share/doc/sqlite3/c3ref/free_table.html
 share/doc/sqlite3/c3ref/funclist.html
 share/doc/sqlite3/c3ref/get_autocommit.html
 share/doc/sqlite3/c3ref/get_auxdata.html
+share/doc/sqlite3/c3ref/hard_heap_limit64.html
 share/doc/sqlite3/c3ref/index_info.html
 share/doc/sqlite3/c3ref/initialize.html
 share/doc/sqlite3/c3ref/int64.html
@@ -165,7 +168,6 @@ share/doc/sqlite3/c3ref/snapshot_get.html
 share/doc/sqlite3/c3ref/snapshot_open.html
 share/doc/sqlite3/c3ref/snapshot_recover.html
 share/doc/sqlite3/c3ref/soft_heap_limit.html
-share/doc/sqlite3/c3ref/soft_heap_limit64.html
 share/doc/sqlite3/c3ref/sqlite3.html
 share/doc/sqlite3/c3ref/status.html
 share/doc/sqlite3/c3ref/step.html
@@ -268,6 +270,7 @@ share/doc/sqlite3/formatchng.html
 share/doc/sqlite3/fts3.html
 share/doc/sqlite3/fts5.html
 share/doc/sqlite3/fullsql.html
+share/doc/sqlite3/gencol.html
 share/doc/sqlite3/geopoly.html
 share/doc/sqlite3/getthecode.html
 share/doc/sqlite3/hirely.html
@@ -673,6 +676,7 @@ share/doc/sqlite3/releaselog/3_2_7.html
 share/doc/sqlite3/releaselog/3_2_8.html
 share/doc/sqlite3/releaselog/3_30_0.html
 share/doc/sqlite3/releaselog/3_30_1.html
+share/doc/sqlite3/releaselog/3_31_0.html
 share/doc/sqlite3/releaselog/3_3_0.html
 share/doc/sqlite3/releaselog/3_3_1.html
 share/doc/sqlite3/releaselog/3_3_10.html
