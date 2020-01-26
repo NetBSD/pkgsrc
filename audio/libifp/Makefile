@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 23:30:00 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/26 05:26:11 rillig Exp $
 #
 
 DISTNAME=	libifp-1.0.0.2
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ifp-driver/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ifp-driver.sourceforge.net/
+HOMEPAGE=	http://ifp-driver.sourceforge.net/
 COMMENT=	General-purpose library-driver for iRiver's iFP portable players
 LICENSE=	gnu-gpl-v2
 

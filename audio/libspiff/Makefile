@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:30:01 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/26 05:26:11 rillig Exp $
 #
 
 DISTNAME=	libspiff-1.0.0
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libspiff/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://libspiff.sourceforge.net/
+HOMEPAGE=	http://libspiff.sourceforge.net/
 COMMENT=	XML Shareable Playlist Format (XSPF) library
 LICENSE=	modified-bsd
 
