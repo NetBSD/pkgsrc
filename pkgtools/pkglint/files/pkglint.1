@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.63 2019/12/13 01:39:23 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.64 2020/01/26 17:18:25 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -6,9 +6,9 @@
 .\"
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
 .\" Thomas Klausner <wiz@NetBSD.org>, 2012.
-.\" Roland Illig <rillig@NetBSD.org>, 2015-2019.
+.\" Roland Illig <rillig@NetBSD.org>, 2015-2020.
 .\"
-.Dd November 30, 2019
+.Dd January 26, 2020
 .Dt PKGLINT 1
 .Os
 .Sh NAME
@@ -51,6 +51,9 @@ This flag is mainly for debugging.
 .It Fl i Ns | Ns Fl -import
 Check if a package is ready to be imported into pkgsrc.
 This is especially useful for packages from the pkgsrc-wip project.
+.It Fl n Ns | Ns Fl -network
+Enable checks that require network access,
+for example to check whether the package homepage is reachable.
 .It Fl o Ns | Ns Fl -only Ar substring
 Only handle those diagnostics that have
 .Ar substring
@@ -61,7 +64,7 @@ and
 .Fl -recursive,
 to fix only a single kind of warning in a large number of files.
 .It Fl q Ns | Ns Fl -quiet
-Don't print the errors and warnings summary before terminating.
+Don't print the errors and warnings summary at the end.
 .It Fl r Ns | Ns Fl -recursive
 Check subdirectories, too.
 The subdirectories are those that are mentioned in a
