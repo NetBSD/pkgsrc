@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/25 13:53:36 mef Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 14:02:18 mef Exp $
 
 R_PKGNAME=	cliapp
 R_PKGVER=	0.1.0
@@ -23,6 +23,14 @@ TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-rstudioapi-[0-9]*:../../math/R-rstudioapi
 
 USE_LANGUAGES=	# none
+
+REPLACE_INTERPRETER+=   r
+REPLACE.r.old=          .*R
+REPLACE.r.new=          ${PREFIX}/bin/R
+REPLACE_FILES.r=        inst/scripts/news.R \
+			inst/scripts/outdated.R \
+			inst/scripts/search.R \
+			inst/scripts/up.R
 
 .include "../../math/R/Makefile.extension"
 .include "../../sysutils/R-progress/buildlink3.mk"
