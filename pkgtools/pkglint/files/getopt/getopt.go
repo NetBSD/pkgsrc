@@ -106,7 +106,7 @@ func (o *Options) Parse(args []string) (remainingArgs []string, err error) {
 			skip, err = o.parseLongOption(args, i, arg[2:])
 			i += skip
 
-		case strings.HasPrefix(arg, "-"):
+		case strings.HasPrefix(arg, "-") && len(arg) > 1:
 			skip, err = o.parseShortOptions(args, i, arg[1:])
 			i += skip
 
@@ -282,13 +282,19 @@ func (o *Options) Help(out io.Writer, generalUsage string) {
 	finishTable()
 
 	for _, opt := range o.options {
-		if opt.argsName == "" {
-			rowf("  -%c, --%s\t %s",
-				opt.shortName, opt.longName, opt.description)
-		} else {
-			rowf("  -%c, --%s=%s\t %s",
-				opt.shortName, opt.longName, opt.argsName, opt.description)
+		name := ""
+		sep := ""
+		if opt.shortName != 0 {
+			name = "-" + string(opt.shortName)
+			sep = ", "
 		}
+		if opt.longName != "" {
+			name += sep + "--" + opt.longName
+			if opt.argsName != "" {
+				name += "=" + opt.argsName
+			}
+		}
+		rowf("  %s\t %s", name, opt.description)
 	}
 	finishTable()
 

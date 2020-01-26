@@ -433,25 +433,8 @@ func (s *Suite) Test_MkLineChecker_checkInclude__hacks(c *check.C) {
 			"Relative path \"../../category/package/nonexistent.mk\" does not exist.")
 }
 
-func (s *Suite) Test_MkLineChecker_checkInclude__builtin_mk(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpPackage("category/package",
-		".include \"../../category/package/builtin.mk\"",
-		".include \"../../category/package/builtin.mk\" # ok")
-	t.CreateFileLines("category/package/builtin.mk",
-		MkCvsID)
-	t.FinishSetUp()
-
-	G.checkdirPackage(t.File("category/package"))
-
-	t.CheckOutputLines(
-		"ERROR: ~/category/package/Makefile:20: " +
-			"\"../../category/package/builtin.mk\" must not be included directly. " +
-			"Include \"../../category/package/buildlink3.mk\" instead.")
-}
-
-func (s *Suite) Test_MkLineChecker_checkInclude__buildlink3_mk_includes_builtin_mk(c *check.C) {
+// A buildlink3.mk file may include its corresponding builtin.mk file directly.
+func (s *Suite) Test_MkLineChecker_checkIncludeBuiltin__buildlink3_mk(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
@@ -467,14 +450,15 @@ func (s *Suite) Test_MkLineChecker_checkInclude__buildlink3_mk_includes_builtin_
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_MkLineChecker_checkInclude__builtin_mk_rationale(c *check.C) {
+func (s *Suite) Test_MkLineChecker_checkIncludeBuiltin__rationale(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpPackage("category/package",
 		"# I have good reasons for including this file directly.",
 		".include \"../../category/package/builtin.mk\"",
 		"",
-		".include \"../../category/package/builtin.mk\"")
+		".include \"../../category/package/builtin.mk\"",
+		".include \"../../category/package/builtin.mk\" # intentionally included directly")
 	t.CreateFileLines("category/package/builtin.mk",
 		MkCvsID)
 	t.FinishSetUp()
