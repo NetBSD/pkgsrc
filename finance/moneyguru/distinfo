@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.10 2017/09/04 14:45:43 wiz Exp $
+$NetBSD: distinfo,v 1.11 2020/01/26 12:55:00 rhialto Exp $
 
 SHA1 (moneyguru-src-2.11.0.tar.gz) = f3c787c45f5057d8f348a0c37b2da010f4444057
 RMD160 (moneyguru-src-2.11.0.tar.gz) = 8e04b57bd3100ce28fb003c528000463f9d0eb87
 SHA512 (moneyguru-src-2.11.0.tar.gz) = fae1c8140ed36f3bd33a7533938ba59bffeda898932c005c5a5e115d6108dc43a6f53cc65608340fd5501945b13604d136b8ac083d2daa3876bdc070d619c022
 Size (moneyguru-src-2.11.0.tar.gz) = 2658749 bytes
+SHA1 (patch-Makefile) = 1dced1ca961e74e5adcb2f7013dee04efd78d44e
+SHA1 (patch-build.py) = e7084efd4ba8543c4fd5f93cddde7a840bf19d27

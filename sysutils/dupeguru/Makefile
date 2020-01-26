@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/11/04 21:28:44 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/26 12:55:00 rhialto Exp $
 
 DISTNAME=	dupeguru-src-4.0.3
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.hardcoded.net/
 
@@ -29,10 +29,12 @@ USE_TOOLS=		gmake pax
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON+=		qt/run_template.py
 
+MAKE_ENV+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
 INSTALLATION_DIRS=	bin share/applications share/dupeguru
 
 do-build:
-	cd ${WRKSRC} && ${PYTHONBIN} build.py
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${PYTHONBIN} build.py
 	${CHMOD} +x ${WRKSRC}/run.py
 
 do-install:
