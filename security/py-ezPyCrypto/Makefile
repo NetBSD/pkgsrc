@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/04/07 12:36:38 obache Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:32:07 rillig Exp $
 #
 
 DISTNAME=	ezPyCrypto-0.1.1
@@ -7,7 +7,7 @@ CATEGORIES=	security python
 MASTER_SITES=	http://freenet.mcnabhosting.com/ezPyCrypto/
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://freenet.mcnabhosting.com/ezPyCrypto/
+HOMEPAGE=	https://freenet.mcnabhosting.com/ezPyCrypto/
 COMMENT=	Easy Python API for strong encryption
 #LICENSE=	gnu-gpl-v?
 

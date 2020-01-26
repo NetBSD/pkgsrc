@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.65 2019/10/14 20:10:19 triaxx Exp $
+# $NetBSD: Makefile,v 1.66 2020/01/26 17:31:50 rillig Exp $
 
 DISTNAME=	libpcap-1.9.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.tcpdump.org/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tcpdump.org/
+HOMEPAGE=	https://www.tcpdump.org/
 COMMENT=	System-independent interface for user-level packet capture
 LICENSE=	modified-bsd
 

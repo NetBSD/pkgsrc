@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/12/09 14:20:57 taca Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:32:26 rillig Exp $
 #
 
 DISTNAME=	z-push-${ZPUSH_VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://download.z-push.org/final/2.2/
 
 MAINTAINER=	jym@NetBSD.org
-HOMEPAGE=	http://z-push.org/
+HOMEPAGE=	https://z-push.org/
 COMMENT=	Open-source ActiveSync server
 
 LICENSE=	gnu-agpl-v3
@@ -45,10 +45,10 @@ MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q}
 
 OWN_DIRS_PERMS+=	${ZPUSHSTATEDIR}	\
 			${APACHE_USER} ${APACHE_GROUP} 0750
-OWN_DIRS_PERMS+=	${ZPUSHLOGDIR}		\
+OWN_DIRS_PERMS+=	${ZPUSHLOGDIR} \
 			${APACHE_USER} ${APACHE_GROUP} 0750
 
-CONF_FILES_PERMS+=	${EGDIR}/config.php ${PKG_SYSCONFDIR}/config.php   \
+CONF_FILES_PERMS+=	${EGDIR}/config.php ${PKG_SYSCONFDIR}/config.php \
 			${REAL_ROOT_USER} ${APACHE_GROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/z-push.conf ${PKG_SYSCONFDIR}/z-push.conf \
 			${REAL_ROOT_USER} ${APACHE_GROUP} 0640

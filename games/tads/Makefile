@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/01/07 22:21:04 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/26 17:31:17 rillig Exp $
 #
 
 DISTNAME=	tads23-unix
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.tads.org/t3dl/
 DIST_SUBDIR=	${PKGNAME_NOREV}-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tads.org/
+HOMEPAGE=	https://www.tads.org/
 COMMENT=	TADS compiler and interpreter
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

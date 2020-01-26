@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2020/01/18 21:50:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.263 2020/01/26 17:32:05 rillig Exp $
 
 DISTNAME=		openssh-8.0p1
 PKGNAME=		${DISTNAME:S/p1/.1/}
@@ -7,7 +7,7 @@ CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenSSH/portable/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.openssh.com/
+HOMEPAGE=		https://www.openssh.com/
 COMMENT=		Open Source Secure shell client and server (remote login program)
 LICENSE=		modified-bsd
 

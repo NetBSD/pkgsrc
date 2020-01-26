@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/03 19:04:07 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:31 rillig Exp $
 #
 
 DISTNAME=	# empty
@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.ruby-lang.org/en/
+HOMEPAGE=	https://www.ruby-lang.org/en/
 COMMENT=	Ruby programming language ${RUBY_VERSION} meta package
 
 META_PACKAGE=		yes

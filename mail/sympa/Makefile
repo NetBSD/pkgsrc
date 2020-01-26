@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2020/01/18 21:49:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.74 2020/01/26 17:31:37 rillig Exp $
 
 DISTNAME=	sympa-6.2.16
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.sympa.org/distribution/
 MASTER_SITES+=	http://www.sympa.org/distribution/old/
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://www.sympa.org/
+HOMEPAGE=	https://www.sympa.org/
 COMMENT=	Mailing list manager
 LICENSE=	gnu-gpl-v2
 

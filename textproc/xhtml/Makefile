@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/25 06:57:07 asau Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/26 17:32:18 rillig Exp $
 #
 
 DISTNAME=	xhtml1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.w3.org/TR/xhtml1/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.w3.org/MarkUp/
+HOMEPAGE=	https://www.w3.org/MarkUp/
 COMMENT=	DTDs for the Extensible Hypertext Markup Language
 
 NO_BUILD=	yes

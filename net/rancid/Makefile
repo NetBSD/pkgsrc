@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:22:29 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/26 17:31:54 rillig Exp $
 #
 
 DISTNAME=		rancid-3.6.2
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.shrubbery.net/pub/rancid/
 
 MAINTAINER=		pettai@NetBSD.org
-HOMEPAGE=		http://www.shrubbery.net/rancid/
+HOMEPAGE=		https://www.shrubbery.net/rancid/
 COMMENT=		Really Awesome New Cisco confIg Differ
 LICENSE=		original-bsd
 

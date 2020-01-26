@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2017/04/19 18:32:47 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:04 rillig Exp $
 
 DISTNAME=	ragel-6.10
 CATEGORIES=	devel
 MASTER_SITES=	http://www.colm.net/files/ragel/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.colm.net/open-source/ragel/
+HOMEPAGE=	https://www.colm.net/open-source/ragel/
 COMMENT=	State machine compiler
 LICENSE=	gnu-gpl-v2
 

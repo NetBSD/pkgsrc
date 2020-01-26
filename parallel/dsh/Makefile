@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/04/23 13:51:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:59 rillig Exp $
 #
 
 DISTNAME=	dsh-0.25.10
@@ -7,7 +7,7 @@ CATEGORIES=	parallel
 MASTER_SITES=	http://www.netfort.gr.jp/~dancer/software/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.netfort.gr.jp/~dancer/software/downloads/
+HOMEPAGE=	https://www.netfort.gr.jp/~dancer/software/downloads/
 COMMENT=	Runs command through rsh or ssh on a cluster of machines
 LICENSE=	gnu-gpl-v2
 

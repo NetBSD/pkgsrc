@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 11:55:03 asau Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:18 rillig Exp $
 #
 
 DISTNAME=	xsokoban-3.3c
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.cs.cornell.edu/andru/release/
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://www.cs.cornell.edu/andru/release/
+HOMEPAGE=	https://www.cs.cornell.edu/andru/release/
 COMMENT=	Classic logical game
 
 WRKSRC=		${WRKDIR}/xsokoban

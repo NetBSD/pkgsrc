@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2018/01/14 15:26:46 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/26 17:31:14 rillig Exp $
 
 DISTNAME=		EXchess_v7.31beta
 PKGNAME=		exchess-7.31beta
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://personal.denison.edu/~homand/EXchess.htm
+HOMEPAGE=		https://personal.denison.edu/~homand/EXchess.htm
 COMMENT=		Experimental chess engine
 LICENSE=		gnu-gpl-v3
 

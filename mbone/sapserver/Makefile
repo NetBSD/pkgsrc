@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/09/25 14:32:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:41 rillig Exp $
 #
 
 DISTNAME=	miniSAPserver-0.2.4
@@ -6,7 +6,7 @@ CATEGORIES=	mbone
 MASTER_SITES=	http://download.videolan.org/pub/videolan/miniSAPserver/0.2.4/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.videolan.org/
+HOMEPAGE=	https://www.videolan.org/
 COMMENT=	Mini SAP server from the VideoLan project
 
 GNU_CONFIGURE=	YES

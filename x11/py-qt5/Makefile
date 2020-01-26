@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/01/26 12:53:34 rhialto Exp $
+# $NetBSD: Makefile,v 1.52 2020/01/26 17:32:26 rillig Exp $
 
 DISTNAME=	PyQt5-5.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
@@ -8,7 +8,7 @@ MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/PyQt5/${PKGVER
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python binding for Qt5
-HOMEPAGE=	http://www.riverbankcomputing.com/software/pyqt/intro
+HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqt/intro
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27

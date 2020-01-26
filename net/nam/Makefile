@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/12/19 21:14:02 markd Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/26 17:31:52 rillig Exp $
 
 DISTNAME=	nam-src-1.15
 PKGNAME=	nam-1.15
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsnam/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.isi.edu/nsnam/nam/
+HOMEPAGE=	https://www.isi.edu/nsnam/nam/
 COMMENT=	The UCB/LBNL Network Animator
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

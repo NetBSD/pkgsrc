@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/12/29 15:31:22 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/26 17:31:29 rillig Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -7,7 +7,7 @@ PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libcxxabi.llvm.org/
+HOMEPAGE=	https://libcxxabi.llvm.org/
 COMMENT=	C++ Standard Library
 LICENSE=	apache-2.0
 

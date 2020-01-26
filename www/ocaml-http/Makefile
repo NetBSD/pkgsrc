@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/11/12 16:10:28 jaapb Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:32:22 rillig Exp $
 #
 
 DISTNAME=	ocaml-http-0.1.5
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/545/
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://forge.ocamlcore.org/frs/download.php/545/
+HOMEPAGE=	https://forge.ocamlcore.org/frs/download.php/545/
 COMMENT=	Simple OCaml HTTP daemon library
 LICENSE=	gnu-gpl-v2
 

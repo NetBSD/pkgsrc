@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/11/26 18:51:18 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:30:56 rillig Exp $
 
 DISTNAME=	flatzebra-0.1.7
 CATEGORIES=	devel
 MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://perso.b2b2c.ca/~sarrazip/dev/burgerspace.html
+HOMEPAGE=	https://perso.b2b2c.ca/~sarrazip/dev/burgerspace.html
 COMMENT=	Generic game engine for 2D double-buffering animation
 LICENSE=	gnu-gpl-v2
 

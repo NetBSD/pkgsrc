@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2019/09/02 16:10:47 nia Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/26 17:32:11 rillig Exp $
 
 DISTNAME=	tits-1.3.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.mctavish.co.uk/tits/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mctavish.co.uk/tits/
+HOMEPAGE=	https://www.mctavish.co.uk/tits/
 COMMENT=	Server which provides telnet(1) access to one or more tty ports
 LICENSE=	original-bsd
 

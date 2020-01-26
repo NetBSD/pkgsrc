@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:32:09 rillig Exp $
 
 DISTNAME=	hddtemp-0.3-beta15
 PKGNAME=	hddtemp-0.3b15
@@ -8,7 +8,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} hddtemp.db
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	christos@NetBSD.org
-HOMEPAGE=	http://www.guzu.net/linux/hddtemp.php
+HOMEPAGE=	https://www.guzu.net/linux/hddtemp.php
 COMMENT=	Gather temperature stats for disk drives
 
 SITES.hddtemp.db=	http://www.guzu.net/linux/

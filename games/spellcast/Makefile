@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/07/04 16:18:34 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/26 17:31:17 rillig Exp $
 #
 
 DISTNAME=		spellcast
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.eblong.com/zarf/ftp/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.eblong.com/zarf/spellcast.html
+HOMEPAGE=		https://www.eblong.com/zarf/spellcast.html
 COMMENT=		Game of dueling wizards for two players
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6

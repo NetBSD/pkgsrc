@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/11/03 19:28:49 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/26 17:31:18 rillig Exp $
 
 DISTNAME=	xfrisk-1.2
 PKGREVISION=	9
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.tuxick.net/xfrisk/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tuxick.net/xfrisk/
+HOMEPAGE=	https://www.tuxick.net/xfrisk/
 COMMENT=	X11 version of the classic Risk board game
 # LICENSE pending investigation; absence of LICENSE violates
 # "RESTRICTED implies LICENSE" pkgsrc rule.
