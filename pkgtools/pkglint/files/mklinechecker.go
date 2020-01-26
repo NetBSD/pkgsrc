@@ -268,16 +268,30 @@ func (ck MkLineChecker) checkInclude() {
 
 	case includedFile.HasSuffixPath("intltool/buildlink3.mk"):
 		mkline.Warnf("Please write \"USE_TOOLS+= intltool\" instead of this line.")
-
-	case includedFile != "builtin.mk" && includedFile.HasSuffixPath("builtin.mk"):
-		if mkline.Basename != "hacks.mk" && mkline.Rationale() == "" {
-			fix := mkline.Autofix()
-			fix.Errorf("%q must not be included directly. Include %q instead.",
-				includedFile, includedFile.DirNoClean().JoinNoClean("buildlink3.mk"))
-			fix.Replace("builtin.mk", "buildlink3.mk")
-			fix.Apply()
-		}
 	}
+
+	ck.checkIncludeBuiltin()
+}
+
+func (ck MkLineChecker) checkIncludeBuiltin() {
+	mkline := ck.MkLine
+
+	includedFile := mkline.IncludedFile()
+	switch {
+	case includedFile == "builtin.mk",
+		!includedFile.HasSuffixPath("builtin.mk"),
+		mkline.Basename == "hacks.mk",
+		mkline.HasRationale("builtin", "include", "included", "including"):
+		return
+	}
+
+	includeInstead := includedFile.DirNoClean().JoinNoClean("buildlink3.mk")
+
+	fix := mkline.Autofix()
+	fix.Errorf("%q must not be included directly. Include %q instead.",
+		includedFile, includeInstead)
+	fix.Replace("builtin.mk", "buildlink3.mk")
+	fix.Apply()
 }
 
 func (ck MkLineChecker) checkDirectiveIndentation(expectedDepth int) {
