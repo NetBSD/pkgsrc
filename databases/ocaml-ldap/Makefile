@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 23:30:18 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 05:26:20 rillig Exp $
 
 VERSION=	2.3.0
 GITHUB_PROJECT=	ocamldap
@@ -10,7 +10,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jpdeplaix/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	https://ocamldap.sourceforge.net/
+HOMEPAGE=	http://ocamldap.sourceforge.net/
 COMMENT=	OCamL implementation of the LDAP protocol
 LICENSE=	gnu-lgpl-v2.1
 

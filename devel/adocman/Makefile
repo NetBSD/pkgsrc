@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/01/18 23:30:21 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/26 05:26:21 rillig Exp $
 #
 
 DISTNAME=	adocman-0.10
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sitedocs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sitedocs.sourceforge.net/
+HOMEPAGE=	http://sitedocs.sourceforge.net/
 COMMENT=	DocManager operation automation tool
 
 DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey

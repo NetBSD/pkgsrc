@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2020/01/18 23:35:31 rillig Exp $
+# $NetBSD: Makefile,v 1.50 2020/01/26 05:26:26 rillig Exp $
 
 DISTNAME=	docutils-0.15.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/docutils/}
 
 MAINTAINER=	darcy@NetBSD.org
-HOMEPAGE=	https://docutils.sourceforge.net/
+HOMEPAGE=	https://docutils.sourceforge.io/
 COMMENT=	Python tool to generate documents
 LICENSE=	public-domain AND 2-clause-bsd
 

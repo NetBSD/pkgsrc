@@ -1,4 +1,4 @@
-# $NetBSD: driver.mk,v 1.2 2020/01/18 23:30:18 rillig Exp $
+# $NetBSD: driver.mk,v 1.3 2020/01/26 05:26:20 rillig Exp $
 #
 # Common definitions for the individual DBI drivers (not only SQLite3).
 
@@ -8,7 +8,7 @@ CATEGORIES=	databases devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdbi-drivers/}
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	https://libdbi-drivers.sourceforge.net/
+HOMEPAGE=	http://libdbi-drivers.sourceforge.net/
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
