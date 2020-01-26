@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.64 2020/01/26 17:18:25 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.65 2020/01/26 19:35:22 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -29,16 +29,16 @@ to be bugs, or that are simply deprecated.
 .It Fl C{[no-]check,...}
 Enable or disable specific checks.
 For a list of checks, see below.
-.It Fl d Ns | Ns Fl -debug
+.It Fl d Ns | Ns Fl Fl debug
 Enable or disable verbose log for debugging pkglint.
-.It Fl e Ns | Ns Fl -explain
+.It Fl e Ns | Ns Fl Fl explain
 Print verbose explanations for diagnostics.
-.It Fl F Ns | Ns Fl -autofix
+.It Fl F Ns | Ns Fl Fl autofix
 Repair some of the warnings automatically.
-.It Fl g Ns | Ns Fl -gcc-output-format
+.It Fl g Ns | Ns Fl Fl gcc-output-format
 Use a format for the diagnostics that is understood by most programs,
 especially editors, so they can provide a point-and-goto interface.
-.It Fl h Ns | Ns Fl -help
+.It Fl h Ns | Ns Fl Fl help
 Show the summary of command line options, then exit.
 .It Fl I
 Show the
@@ -48,35 +48,35 @@ are slurped in via
 .Ql .include
 directives.
 This flag is mainly for debugging.
-.It Fl i Ns | Ns Fl -import
+.It Fl i Ns | Ns Fl Fl import
 Check if a package is ready to be imported into pkgsrc.
 This is especially useful for packages from the pkgsrc-wip project.
-.It Fl n Ns | Ns Fl -network
+.It Fl n Ns | Ns Fl Fl network
 Enable checks that require network access,
 for example to check whether the package homepage is reachable.
-.It Fl o Ns | Ns Fl -only Ar substring
+.It Fl o Ns | Ns Fl Fl only Ar substring
 Only handle those diagnostics that have
 .Ar substring
 in their text.
 This is useful in combination with
-.Fl -autofix
+.Fl Fl autofix
 and
-.Fl -recursive,
+.Fl Fl recursive,
 to fix only a single kind of warning in a large number of files.
-.It Fl q Ns | Ns Fl -quiet
+.It Fl q Ns | Ns Fl Fl quiet
 Don't print the errors and warnings summary at the end.
-.It Fl r Ns | Ns Fl -recursive
+.It Fl r Ns | Ns Fl Fl recursive
 Check subdirectories, too.
 The subdirectories are those that are mentioned in a
 .Ql SUBDIR+=
 line.
-.It Fl s Ns | Ns Fl -source
+.It Fl s Ns | Ns Fl Fl source
 For all diagnostics having file and line number information, show the
 source code along with the diagnostics.
 This is especially useful together with the
-.Fl f Ns | Ns Fl -show-autofix
+.Fl f Ns | Ns Fl Fl show-autofix
 option.
-.It Fl V Ns | Ns Fl -version
+.It Fl V Ns | Ns Fl Fl version
 Print the current
 .Nm
 version number and exit.
@@ -111,7 +111,7 @@ and shell variables themselves.
 .El
 .\" =======================================================================
 .Ss Other arguments
-.Bl -tag -width 18n -offset indent
+.Bl -tag -width 18n
 .It Ar dir ...
 The pkgsrc directories to be checked.
 If omitted, the current directory is checked.
