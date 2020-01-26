@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/01/18 23:30:00 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/26 05:26:11 rillig Exp $
 
 DISTNAME=	libcdaudio-0.99.12
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcdaudio/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://libcdaudio.sourceforge.net/
+HOMEPAGE=	http://libcdaudio.sourceforge.net/
 COMMENT=	Multi-platform CD player development library
 LICENSE=	gnu-gpl-v2
 

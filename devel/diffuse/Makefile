@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/01/18 23:30:26 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2020/01/26 05:26:23 rillig Exp $
 
 DISTNAME=	diffuse-0.4.8
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=diffuse/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://diffuse.sourceforge.net/
+HOMEPAGE=	http://diffuse.sourceforge.net/
 COMMENT=	Graphical tool for merging and comparing text files
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/01/18 23:30:00 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/26 05:26:10 rillig Exp $
 #
 
 DISTNAME=	a52dec-0.7.4
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://liba52.sourceforge.net/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://liba52.sourceforge.net/
+HOMEPAGE=	http://liba52.sourceforge.net/
 COMMENT=	Free ATSC A/52 stream decoder library
 LICENSE=	gnu-gpl-v2
 

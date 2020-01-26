@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/01/18 23:32:45 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/26 05:26:25 rillig Exp $
 #
 
 DISTNAME=	regina301
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=regina-rexx/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://regina-rexx.sourceforge.net/
+HOMEPAGE=	https://regina-rexx.sourceforge.io/
 COMMENT=	Implementation of the REXX language
 
 MAKE_JOBS_SAFE=	no

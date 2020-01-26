@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:01 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 05:26:11 rillig Exp $
 
 DISTNAME=	libsbsms-2.0.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sbsms/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sbsms.sourceforge.net/
+HOMEPAGE=	http://sbsms.sourceforge.net/
 COMMENT=	Subband Sinusoidal Modeling Synthesis
 LICENSE=	gnu-gpl-v2
 

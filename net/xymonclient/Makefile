@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/01/18 23:33:24 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/26 05:26:26 rillig Exp $
 #
 
 DISTNAME=		xymon-4.3.29
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xymon/}
 
 MAINTAINER=		spz@NetBSD.org
-HOMEPAGE=		https://xymon.sourceforge.net/
+HOMEPAGE=		https://xymon.sourceforge.io/
 COMMENT=		Network services monitor a la Big Brother
 
 LICENSE=		gnu-gpl-v2

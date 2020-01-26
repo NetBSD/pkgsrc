@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/18 23:29:59 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2020/01/26 05:26:10 rillig Exp $
 
 DISTNAME=	gqmpeg-skins-20030712
 PKGREVISION=	6
@@ -75,7 +75,7 @@ DISTFILES+=	\
 		zoom-information.tar.gz
 
 MAINTAINER=	hubertf@NetBSD.org
-HOMEPAGE=	https://gqmpeg.sourceforge.net/
+HOMEPAGE=	http://gqmpeg.sourceforge.net/
 COMMENT=	Skins for gqmpeg
 
 DEPENDS+=	gqmpeg-[0-9]*:../../audio/gqmpeg-devel

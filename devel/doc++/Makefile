@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/01/18 23:30:26 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/26 05:26:23 rillig Exp $
 
 DISTNAME=	doc++-3.4.10
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docpp/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://docpp.sourceforge.net/
+HOMEPAGE=		http://docpp.sourceforge.net/
 COMMENT=		Documentation system for C, C++ and Java
 
 USE_TOOLS+=		flex gmake msgfmt
