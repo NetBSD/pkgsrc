@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/06/01 12:19:30 shattered Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/26 17:32:02 rillig Exp $
 
 DISTNAME=	avcheck-0.91
 PKGNAME=	avcheck-0.9.1
@@ -6,7 +6,7 @@ CATEGORIES=	security mail
 MASTER_SITES=	http://www.corpit.ru/ftp/avcheck/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.corpit.ru/avcheck/
+HOMEPAGE=	https://www.corpit.ru/avcheck/
 COMMENT=	Mail content filter for SMTP servers
 
 .include "../../mk/bsd.prefs.mk"

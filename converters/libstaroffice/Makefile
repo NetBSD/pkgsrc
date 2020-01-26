@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/12 20:20:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/26 17:30:51 rillig Exp $
 
 DISTNAME=	libstaroffice-0.0.2
 PKGREVISION=	9
@@ -7,7 +7,7 @@ MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://dev-www.libreoffice.org/src/
+HOMEPAGE=	https://dev-www.libreoffice.org/src/
 COMMENT=	Library to import StarOffice documents
 LICENSE=	mpl-2.0 OR gnu-lgpl-v2.1
 

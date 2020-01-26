@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/07/20 22:01:57 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2020/01/26 17:32:05 rillig Exp $
 
 DISTNAME=	nettle-3.5.1
 CATEGORIES=	devel security
@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.lysator.liu.se/~nisse/archive/
 MASTER_SITES+=	ftp://ftp.lysator.liu.se/pub/security/lsh/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lysator.liu.se/~nisse/nettle/
+HOMEPAGE=	https://www.lysator.liu.se/~nisse/nettle/
 COMMENT=	Cryptographic library
 LICENSE=	gnu-lgpl-v2.1
 

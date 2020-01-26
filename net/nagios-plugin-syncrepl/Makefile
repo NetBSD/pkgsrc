@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/11/03 11:45:43 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:52 rillig Exp $
 #
 
 PKGNAME=	nagios-plugin-syncrepl-${DISTNAME:C/.*-//}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ftp.espci.fr/pub/nagios-local/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	manu@NetBSD.org
-HOMEPAGE=	http://ftp.espci.fr/pub/nagios-local/
+HOMEPAGE=	https://ftp.espci.fr/pub/nagios-local/
 COMMENT=	LDAP replication monitoring plugin for Nagios
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/03 19:32:06 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:24 rillig Exp $
 #
 
 DISTNAME=	codec2-0.5.1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://files.freedv.org/codec2/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	dbj@NetBSD.org
-HOMEPAGE=	http://rowetel.com/codec2.html
+HOMEPAGE=	https://rowetel.com/codec2.html
 COMMENT=	Speech codec for 2400 bit/s and below
 
 LICENSE=	gnu-lgpl-v2.1

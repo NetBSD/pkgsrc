@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2020/01/04 20:41:29 leot Exp $
+# $NetBSD: Makefile,v 1.170 2020/01/26 17:32:21 rillig Exp $
 
 DISTNAME=		liferea-1.12.7
 CATEGORIES=		www
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=lwindolf/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://lzone.de/liferea/
+HOMEPAGE=		https://lzone.de/liferea/
 COMMENT=		Simple FeedReader clone for reading RSS/RDF feeds
 LICENSE=		gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/03 10:39:15 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:30:58 rillig Exp $
 
 DISTNAME=	LDPC-2006-02-08
 PKGNAME=	ldpc-20060208
@@ -7,7 +7,7 @@ PKGREVISION=	1
 MASTER_SITES=	http://www.cs.utoronto.ca/~radford/ftp/LDPC-2006-02-08/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.cs.utoronto.ca/~radford/ftp/LDPC-2006-02-08/index.html
+HOMEPAGE=	https://www.cs.utoronto.ca/~radford/ftp/LDPC-2006-02-08/index.html
 COMMENT=	Low Density Parity Check Codes
 LICENSE=	ldpc-license
 

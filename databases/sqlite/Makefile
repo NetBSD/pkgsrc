@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2017/01/19 18:52:05 agc Exp $
+# $NetBSD: Makefile,v 1.47 2020/01/26 17:30:54 rillig Exp $
 
 DISTNAME=		sqlite-2.8.17
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.hwaci.com/sw/sqlite/
 MASTER_SITES+=		http://www.sqlite.org/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.hwaci.com/sw/sqlite/
+HOMEPAGE=		https://www.hwaci.com/sw/sqlite/
 COMMENT=		SQL Database Engine in a C Library
 
 USE_TOOLS+=		gmake

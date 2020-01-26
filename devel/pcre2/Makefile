@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/11/26 10:17:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/26 17:31:02 rillig Exp $
 
 DISTNAME=	pcre2-10.34
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=pcre/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pcre.org/
+HOMEPAGE=	https://www.pcre.org/
 COMMENT=	Perl Compatible Regular Expressions library (major version 2)
 LICENSE=	modified-bsd
 

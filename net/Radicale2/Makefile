@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/11/03 11:45:29 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/26 17:31:47 rillig Exp $
 
 DISTNAME=	Radicale-2.1.5
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net time www
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/Radicale/}
 
 MAINTAINER=	darcy@NetBSD.org
-HOMEPAGE=	http://radicale.org/
+HOMEPAGE=	https://radicale.org/
 COMMENT=	CalDAV (calendar) and CardDAV (contact) server
 LICENSE=	gnu-gpl-v3
 

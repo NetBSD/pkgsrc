@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/01/19 18:52:10 agc Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/26 17:31:15 rillig Exp $
 #
 
 DISTNAME=	heretic2-demo-x86
@@ -11,7 +11,7 @@ MASTER_SITES+=	ftp://ftp.linux.tucows.com/pub/Loki/demos/heretic2/
 EXTRACT_SUFX=	.run
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.lokigames.com/products/heretic2/
+HOMEPAGE=	https://www.lokigames.com/products/heretic2/
 COMMENT=	Heretic2 - first person Quake 3D engine based (linux demo)
 
 NO_CONFIGURE=	yes

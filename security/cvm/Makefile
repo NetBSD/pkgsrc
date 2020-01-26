@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/11/04 21:12:52 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/26 17:32:02 rillig Exp $
 #
 
 DISTNAME=		cvm-0.97
@@ -7,7 +7,7 @@ CATEGORIES=		security
 MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://untroubled.org/cvm/
+HOMEPAGE=		https://untroubled.org/cvm/
 COMMENT=		Credential Validation Modules
 LICENSE=		gnu-gpl-v2
 

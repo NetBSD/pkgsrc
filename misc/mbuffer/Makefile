@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 21:50:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:31:44 rillig Exp $
 
 DISTNAME=	mbuffer-20180625
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.maier-komor.de/software/mbuffer/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.maier-komor.de/mbuffer.html
+HOMEPAGE=	https://www.maier-komor.de/mbuffer.html
 COMMENT=	Tool for buffering data streams
 LICENSE=	gnu-gpl-v3
 

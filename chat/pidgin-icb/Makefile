@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/07/21 22:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2020/01/26 17:30:49 rillig Exp $
 
 DISTNAME=	pidgin-icb-20070505
 PKGREVISION=	43
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://nic.com.pl/~alek/pidgin-icb/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://nic.com.pl/~alek/
+HOMEPAGE=	https://nic.com.pl/~alek/
 COMMENT=	ICB protocol plugin for the Pidgin instant messenger
 
 USE_TOOLS+=	pkg-config

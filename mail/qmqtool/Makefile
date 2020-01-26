@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/23 15:55:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:31:36 rillig Exp $
 #
 
 DISTNAME=		qmqtool-1.15
@@ -8,7 +8,7 @@ MASTER_SITES=		${HOMEPAGE}/files/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://jeremy.kister.net/code/qmqtool/
+HOMEPAGE=		https://jeremy.kister.net/code/qmqtool/
 COMMENT=		View and safely modify qmail queue
 LICENSE=		artistic
 

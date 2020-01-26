@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/01/18 21:50:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.54 2020/01/26 17:31:45 rillig Exp $
 #
 
 DISTNAME=	zyGrib-8.0.1
@@ -8,7 +8,7 @@ MASTER_SITES=	https://www.zygrib.org/getfile.php?file=
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	plunky@NetBSD.org
-HOMEPAGE=	http://www.zygrib.org/
+HOMEPAGE=	https://www.zygrib.org/
 COMMENT=	GRIB file viewer for weather data
 LICENSE=	gnu-gpl-v3
 

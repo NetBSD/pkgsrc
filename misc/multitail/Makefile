@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/01/05 16:08:18 roy Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/26 17:31:44 rillig Exp $
 #
 
 DISTNAME=	multitail-4.0.6
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.vanheusden.com/multitail/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.vanheusden.com/multitail/
+HOMEPAGE=	https://www.vanheusden.com/multitail/
 COMMENT=	View one or multiple files
 
 INCOMPAT_CURSES+=	NetBSD-[0-6].*-* NetBSD-7.[0-9].* # needs libpanel

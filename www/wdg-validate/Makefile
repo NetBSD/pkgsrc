@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/08/11 13:25:09 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/26 17:32:25 rillig Exp $
 #
 
 DISTNAME=	validate-1.2.2
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.htmlhelp.com/tools/validator/offline/
 DISTFILES=	${DISTNAME} wdg-sgml-lib-1.1.4.tar.gz README
 
 MAINTAINER=	norm@sandbox.org.uk
-HOMEPAGE=	http://www.htmlhelp.com/tools/validator/offline/
+HOMEPAGE=	https://www.htmlhelp.com/tools/validator/offline/
 COMMENT=	HTML validator from the Web Design Group
 
 DEPENDS+=	lq-sp>=1.3.4.5:../../textproc/lq-sp

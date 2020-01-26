@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2019/07/21 22:25:04 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2020/01/26 17:31:23 rillig Exp $
 
 DISTNAME=	qiv-2.3.1
 PKGREVISION=	9
@@ -7,7 +7,7 @@ MASTER_SITES=	http://spiegl.de/qiv/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	snj@NetBSD.org
-HOMEPAGE=	http://spiegl.de/qiv/
+HOMEPAGE=	https://spiegl.de/qiv/
 COMMENT=	Quick Image Viewer
 LICENSE=	gnu-gpl-v2
 

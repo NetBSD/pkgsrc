@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2018/07/29 23:46:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/26 17:31:54 rillig Exp $
 #
 
 DISTNAME=		publicfile-0.52
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://cr.yp.to/publicfile/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://cr.yp.to/publicfile.html
+HOMEPAGE=		https://cr.yp.to/publicfile.html
 COMMENT=		Secure read-only HTTP and FTP servers
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools

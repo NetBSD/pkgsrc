@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/29 15:36:40 bouyer Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:30:47 rillig Exp $
 #
 
 V=		5.1.4
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	https://kicad-downloads.s3.cern.ch/docs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kicad-pcb.org/
+HOMEPAGE=	https://kicad-pcb.org/
 COMMENT=	Documentation for the PCB CAD software
 LICENSE=	gnu-gpl-v3
 

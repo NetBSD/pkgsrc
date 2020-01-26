@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2014/06/26 18:54:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:50 rillig Exp $
 
 DISTNAME=		iodine-0.7.0
 CATEGORIES=		net
 MASTER_SITES=		http://code.kryo.se/iodine/
 
 MAINTAINER=		mwilhelmy@users.sourceforge.net
-HOMEPAGE=		http://code.kryo.se/iodine/
+HOMEPAGE=		https://code.kryo.se/iodine/
 COMMENT=		Tool to tunnel IPv4 over DNS
 LICENSE=		mit
 

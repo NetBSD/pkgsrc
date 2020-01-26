@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/01/14 08:48:44 hauke Exp $
+# $NetBSD: Makefile,v 1.53 2020/01/26 17:31:14 rillig Exp $
 #
 
 DISTNAME=		eboard-1.1.1
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=eboard/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.bergo.eng.br/eboard/
+HOMEPAGE=		https://www.bergo.eng.br/eboard/
 COMMENT=		Graphical user interface for playing chess
 LICENSE=		gnu-gpl-v2
 

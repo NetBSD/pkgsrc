@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/07/20 22:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:55 rillig Exp $
 
 DISTNAME=	rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0
 PKGNAME=	${DISTNAME:S/-git-/.0.0./}
@@ -7,7 +7,7 @@ CATEGORIES=	net multimedia
 #MASTER_SITES=
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://rtmpdump.mplayerhq.hu/
+HOMEPAGE=	https://rtmpdump.mplayerhq.hu/
 COMMENT=	Tools for handling RTMP stream
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

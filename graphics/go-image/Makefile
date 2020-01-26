@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/01/10 13:32:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:21 rillig Exp $
 
 DISTNAME=		go-image-20170405
 PKGREVISION=		15
@@ -8,7 +8,7 @@ GITHUB_PROJECT=		image
 GITHUB_TAG=		10ed294
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://golang.org/
+HOMEPAGE=		https://golang.org/
 COMMENT=		Package image implements a basic 2-D image library
 LICENSE=		modified-bsd
 

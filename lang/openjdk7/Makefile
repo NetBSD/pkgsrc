@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2019/11/03 19:04:04 rillig Exp $
+# $NetBSD: Makefile,v 1.140 2020/01/26 17:31:30 rillig Exp $
 
 JDK_MICRO=	141
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20170813
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://openjdk.java.net/
+HOMEPAGE=	https://openjdk.java.net/
 COMMENT=	Open-source implementation of the Java Platform, Standard Edition
 LICENSE=	gnu-gpl-v2
 

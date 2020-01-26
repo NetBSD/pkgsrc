@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/08/11 13:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/26 17:31:19 rillig Exp $
 #
 
 DISTNAME=		openrm-devel-1.5.2
@@ -8,7 +8,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openrm/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.openrm.org/
+HOMEPAGE=		https://www.openrm.org/
 COMMENT=		The OpenRM Scene Graph API
 
 WRKSRC=			${WRKDIR}/rm152
