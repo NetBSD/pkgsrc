@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.780 2020/01/26 12:56:43 rhialto Exp $
+$NetBSD: CHANGES-2020,v 1.781 2020/01/26 12:57:12 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -933,3 +933,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/py-fonttools to 4.2.4 [adam 2020-01-26]
 	Updated databases/csharp-mysql to 8.0.19 [nia 2020-01-26]
 	Updated x11/py-qt5 to 5.13.2nb2 [rhialto 2020-01-26]
+	Updated x11/py-qt5-qscintilla to 2.11.2nb3 [rhialto 2020-01-26]
