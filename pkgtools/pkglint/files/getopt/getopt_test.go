@@ -248,6 +248,33 @@ func (s *Suite) Test_Options_Parse__long_string_unfinished(c *check.C) {
 	c.Check(unfinished, check.Equals, "")
 }
 
+// From an implementation standpoint, it would be a likely bug to interpret
+// the "--" as the long name of the option, and that would set the flag
+// to true.
+func (s *Suite) Test_Options_Parse__only_short(c *check.C) {
+	var onlyShort bool
+	opts := NewOptions()
+	opts.AddFlagVar('s', "", &onlyShort, false, "only short")
+
+	args, err := opts.Parse([]string{"program", "--", "arg"})
+
+	c.Check(err, check.IsNil)
+	c.Check(args, check.DeepEquals, []string{"arg"})
+	c.Check(onlyShort, check.Equals, false)
+}
+
+func (s *Suite) Test_Options_Parse__only_long(c *check.C) {
+	var onlyLong bool
+	opts := NewOptions()
+	opts.AddFlagVar(0, "long", &onlyLong, false, "only long")
+
+	args, err := opts.Parse([]string{"program", "-", "arg"})
+
+	c.Check(err, check.IsNil)
+	c.Check(args, check.DeepEquals, []string{"-", "arg"})
+	c.Check(onlyLong, check.Equals, false)
+}
+
 func (s *Suite) Test_Options_handleLongOption__string(c *check.C) {
 	var extra bool
 
@@ -407,6 +434,23 @@ func (s *Suite) Test_Options_Help__with_flag_group(c *check.C) {
 		"    extra   Print extra warnings (disabled)\n"+
 		"\n"+
 		"  (Prefix a flag with \"no-\" to disable it.)\n")
+}
+
+func (s *Suite) Test_Options_Help__partial(c *check.C) {
+	var onlyShort, onlyLong bool
+
+	opts := NewOptions()
+	opts.AddFlagVar('s', "", &onlyShort, false, "Only short option")
+	opts.AddFlagVar(0, "long", &onlyLong, false, "Only long option")
+
+	var out strings.Builder
+	opts.Help(&out, "progname [options] args")
+
+	c.Check(out.String(), check.Equals, ""+
+		"usage: progname [options] args\n"+
+		"\n"+
+		"  -s       Only short option\n"+
+		"  --long   Only long option\n")
 }
 
 func (s *Suite) Test__qa(c *check.C) {
