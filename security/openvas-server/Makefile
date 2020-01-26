@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/07/20 22:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:32:05 rillig Exp $
 #
 
 DISTNAME=	openvas-server-2.0.0
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/550/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openvas.org/
+HOMEPAGE=	https://www.openvas.org/
 COMMENT=	Server for the Open Vulnerability Assessment System
 
 .include "options.mk"

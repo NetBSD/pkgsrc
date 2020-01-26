@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/02 17:53:54 nros Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:31:12 rillig Exp $
 
 stixver=	1.1.0
 DISTNAME=	STIXv${stixver}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stixfonts/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.stixfonts.org/
+HOMEPAGE=	https://www.stixfonts.org/
 COMMENT=	OpenType Unicode maths fonts
 LICENSE=	ofl-v1.1
 

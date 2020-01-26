@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/11 13:18:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:30:46 rillig Exp $
 
 DISTNAME=	samtools-1.9
 PKGREVISION=	2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.htslib.org/
+HOMEPAGE=	https://www.htslib.org/
 COMMENT=	Tools for manipulating next-generation sequencing data
 LICENSE=	mit
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2020/01/18 21:49:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.209 2020/01/26 17:31:10 rillig Exp $
 
 DISTNAME=	wine-1.6.2
 PKGREVISION=	25
@@ -8,7 +8,7 @@ MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=wine/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.winehq.org/
+HOMEPAGE=	https://www.winehq.org/
 COMMENT=	Free implementation of Windows on Unix
 LICENSE=	gnu-lgpl-v2.1
 

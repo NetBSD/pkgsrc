@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2020/01/18 21:48:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.67 2020/01/26 17:30:53 rillig Exp $
 
 MAJOR=		2.5
 DISTNAME=	postgis-${MAJOR}.3
@@ -8,7 +8,7 @@ CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://postgis.net/
+HOMEPAGE=	https://postgis.net/
 COMMENT=	Spatial database capabilities for PostgreSQL
 
 LICENSE=	gnu-gpl-v2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/02 20:11:36 asau Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/26 17:31:26 rillig Exp $
 #
 
 DISTNAME=		cl74unix
@@ -8,7 +8,7 @@ CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.inria.fr/lang/caml-light/
 
 MAINTAINER=		bouyer@NetBSD.org
-HOMEPAGE=		http://caml.inria.fr/caml-light/index.en.html
+HOMEPAGE=		https://caml.inria.fr/caml-light/index.en.html
 COMMENT=		Another implementation of Caml
 
 MAKE_JOBS_SAFE=		no

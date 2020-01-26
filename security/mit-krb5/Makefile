@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2020/01/25 10:45:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.105 2020/01/26 17:32:04 rillig Exp $
 
 DISTNAME=	krb5-1.16.2
 PKGNAME=	mit-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${PKGVERSION_NOREV:R}/
 
 MAINTAINER=	tez@NetBSD.org
-HOMEPAGE=	http://web.mit.edu/kerberos/
+HOMEPAGE=	https://web.mit.edu/kerberos/
 COMMENT=	MIT Kerberos 5 authentication system
 
 MAKE_JOBS_SAFE=		no

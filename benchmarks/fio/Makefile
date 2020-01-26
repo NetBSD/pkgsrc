@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2019/10/08 18:13:32 maya Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:30:46 rillig Exp $
 
 DISTNAME=	fio-3.16
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://brick.kernel.dk/snaps/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://git.kernel.dk/?p=fio.git;a=summary
+HOMEPAGE=	https://git.kernel.dk/?p=fio.git;a=summary
 COMMENT=	Flexible IO Tester
 LICENSE=	gnu-gpl-v2
 

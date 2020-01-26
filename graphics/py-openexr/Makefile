@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/11/02 22:38:02 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:31:23 rillig Exp $
 
 DISTNAME=	OpenEXR-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OpenEXR/}
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://www.excamera.com/sphinx/articles-openexr.html
+HOMEPAGE=	https://www.excamera.com/sphinx/articles-openexr.html
 COMMENT=	Python module for ILM's OpenEXR image format and library
 #LICENSE=	unknown
 

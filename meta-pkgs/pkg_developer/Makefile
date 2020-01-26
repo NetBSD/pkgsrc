@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/01/13 18:14:14 tron Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:42 rillig Exp $
 #
 
 DISTNAME=	pkg_developer-1.2.1
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pkgsrc.org/
+HOMEPAGE=	https://www.pkgsrc.org/
 COMMENT=	Meta-package for pkgsrc package development
 
 META_PACKAGE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/20 09:00:07 tpaul Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/26 17:31:09 rillig Exp $
 
 DISTNAME=	softvms
 PKGNAME=	softvms-1.10
@@ -7,7 +7,7 @@ MASTER_SITES=	http://mc.pp.se/dc/files/
 MASTER_SITES+=	https://travispaul.me/distfiles/
 
 MAINTAINER=	tpaul@NetBSD.org
-HOMEPAGE=	http://mc.pp.se/dc/sw.html
+HOMEPAGE=	https://mc.pp.se/dc/sw.html
 COMMENT=	Emulator capable of running some Sega VMS games
 LICENSE=	mit
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/04/10 13:23:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:12 rillig Exp $
 
 DISTNAME=	Noto-hinted
 PKGNAME=	noto-ttf-20170410
@@ -7,7 +7,7 @@ MASTER_SITES=	https://noto-website.storage.googleapis.com/pkgs/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.google.com/get/noto/
+HOMEPAGE=	https://www.google.com/get/noto/
 COMMENT=	Noto fonts for all languages
 LICENSE=	ofl-v1.1
 

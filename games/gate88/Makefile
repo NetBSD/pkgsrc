@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/01/14 17:33:59 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:15 rillig Exp $
 #
 
 DISTNAME=	Gate88_Mar19_05
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.queasygames.com/gate88/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.queasygames.com/gate88/
+HOMEPAGE=	https://www.queasygames.com/gate88/
 COMMENT=	Deep space intergalactic battle
 LICENSE=	gate88-license
 

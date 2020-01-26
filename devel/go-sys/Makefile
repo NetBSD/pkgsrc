@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/01/10 13:32:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/26 17:30:57 rillig Exp $
 #
 
 DISTNAME=		go-sys-0.0.20190308
@@ -9,7 +9,7 @@ GITHUB_PROJECT=		sys
 GITHUB_TAG=		584f3b12f4
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://golang.org/
+HOMEPAGE=		https://golang.org/
 COMMENT=		Go packages for low-level interaction with the OS
 LICENSE=		modified-bsd
 

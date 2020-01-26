@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/11/02 16:28:38 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:19 rillig Exp $
 
 DISTNAME=	dateutils-0.4.3
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES+=	https://bitbucket.org/hroptatyr/dateutils/downloads/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fresse.org/dateutils/
+HOMEPAGE=	https://www.fresse.org/dateutils/
 COMMENT=	Command line tools for working with dates
 LICENSE=	modified-bsd
 

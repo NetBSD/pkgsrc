@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/08/11 13:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/26 17:32:15 rillig Exp $
 #
 
 DISTNAME=	igerman98-20160407
@@ -9,7 +9,7 @@ MASTER_SITES=	http://j3e.de/ispell/igerman98/dict/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://j3e.de/ispell/igerman98/
+HOMEPAGE=	https://j3e.de/ispell/igerman98/
 COMMENT=	German dictionary for interactive spelling checker
 LICENSE=	gnu-gpl-v3 OR gnu-gpl-v2
 

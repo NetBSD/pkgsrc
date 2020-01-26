@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/07/21 22:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2020/01/26 17:31:25 rillig Exp $
 #
 
 DISTNAME=		scim-tomoe-0.6.0
@@ -7,7 +7,7 @@ CATEGORIES=		inputmethod
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tomoe/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://tomoe.osdn.jp/
+HOMEPAGE=		https://tomoe.osdn.jp/
 COMMENT=		SCIM IMEngine module for Tomoe
 LICENSE=		gnu-gpl-v2
 

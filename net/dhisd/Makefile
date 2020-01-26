@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/11/03 11:45:33 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/26 17:31:49 rillig Exp $
 #
 
 DISTNAME=	dhisd-5.5
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.dhis.org/pub/dhis/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dhis.org/
+HOMEPAGE=	https://www.dhis.org/
 COMMENT=	DynDNS server
 LICENSE=	2-clause-bsd
 

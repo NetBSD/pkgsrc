@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2019/10/15 12:01:55 he Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/26 17:31:08 rillig Exp $
 
 COMPAT_PKG=		compat80	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		8.0
 
-HOMEPAGE=		http://www.NetBSD.org/releases/formal-8/index.html
+HOMEPAGE=		https://www.NetBSD.org/releases/formal-8/index.html
 COMMENT=		Shared libraries for NetBSD 8.0 compatibility
 # This license list is a pre-emptive strike, the actual situation may be better
 LICENSE=		2-clause-bsd AND modified-bsd AND isc AND mit AND zlib \
@@ -22,7 +22,7 @@ EMUL_PLATFORMS=		netbsd-alpha \
 			netbsd-sh3eb netbsd-sh3el \
 			netbsd-sparc netbsd-sparc64 \
 			netbsd-vax \
-			netbsd-x86_64 
+			netbsd-x86_64
 
 
 # select ONLY_FOR_PLATFORM start by the osversion we diffed against

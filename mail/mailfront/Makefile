@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/07/20 22:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/26 17:31:34 rillig Exp $
 #
 
 DISTNAME=		mailfront-2.22
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}archive/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://untroubled.org/mailfront/
+HOMEPAGE=		https://untroubled.org/mailfront/
 COMMENT=		Mail server network protocol front-ends
 LICENSE=		gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2019/11/02 16:25:23 rillig Exp $
+# $NetBSD: Makefile,v 1.99 2020/01/26 17:31:35 rillig Exp $
 
 DISTNAME=	mew-6.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	http://www.mew.org/Release/
 
 MAINTAINER=	uebayasi@NetBSD.org
-HOMEPAGE=	http://www.mew.org/
+HOMEPAGE=	https://www.mew.org/
 COMMENT=	Messaging in the Emacs World
 LICENSE=	modified-bsd
 

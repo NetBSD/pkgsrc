@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/07/21 22:24:45 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2020/01/26 17:31:09 rillig Exp $
 
 DISTNAME=	e-uae-0.8.29-WIP4
 PKGNAME=	e-uae-0.8.28.99.4
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.rcdrummond.net/uae/${DISTNAME}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.rcdrummond.net/uae/
+HOMEPAGE=	https://www.rcdrummond.net/uae/
 COMMENT=	Enhanced Ubiquitous Amiga Emulator
 
 MAKE_JOBS_SAFE=		no

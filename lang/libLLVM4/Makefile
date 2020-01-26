@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/03 19:04:02 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:29 rillig Exp $
 
 DISTNAME=	llvm-4.0.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM4/:S/.src//}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://llvm.org/
+HOMEPAGE=	https://llvm.org/
 COMMENT=	Low Level Virtual Machine shared library
 LICENSE=	modified-bsd
 
