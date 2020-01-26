@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.782 2020/01/26 12:57:33 rhialto Exp $
+$NetBSD: CHANGES-2020,v 1.783 2020/01/26 14:08:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -935,3 +935,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/py-qt5 to 5.13.2nb2 [rhialto 2020-01-26]
 	Updated x11/py-qt5-qscintilla to 2.11.2nb3 [rhialto 2020-01-26]
 	Updated x11/qt5-qscintilla to 2.11.2nb2 [rhialto 2020-01-26]
+	Updated devel/R-callr to 3.4.1 [mef 2020-01-26]
