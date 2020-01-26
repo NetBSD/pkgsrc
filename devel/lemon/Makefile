@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/09/17 16:14:07 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:30:58 rillig Exp $
 
 .include "../../databases/sqlite3/Makefile.common"
 
@@ -17,7 +17,7 @@ CATEGORIES=	devel
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	airhead@users.sf.net
-HOMEPAGE=	http://www.hwaci.com/sw/lemon/
+HOMEPAGE=	https://www.hwaci.com/sw/lemon/
 COMMENT=	Simple LALR(1) parser generator
 
 CHECK_PORTABILITY_SKIP=	configure

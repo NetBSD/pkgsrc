@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/01/10 13:32:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/26 17:32:03 rillig Exp $
 #
 
 DISTNAME=		oauth2
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_TAG=		2baa8a1b93
 
 MAINTAINER=		bsiegert@NetBSD.org
-HOMEPAGE=		http://golang.org/
+HOMEPAGE=		https://golang.org/
 COMMENT=		OAuth 2 library for Go
 LICENSE=		modified-bsd
 

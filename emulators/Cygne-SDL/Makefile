@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/04/25 14:20:44 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:08 rillig Exp $
 #
 
 DISTNAME=		Cygne-SDL-0.1-src
@@ -8,7 +8,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://sdlemu.ngemu.com/OpenProjects/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://icculus.org/Cygne-SDL/
+HOMEPAGE=		https://icculus.org/Cygne-SDL/
 COMMENT=		Bandai Wonderswan Color handheld emulator
 
 # The makefile mentions nasm but does not actually use it.

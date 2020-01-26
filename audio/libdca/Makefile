@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/05/23 17:45:23 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:30:42 rillig Exp $
 
 DISTNAME=	libdca-0.0.6
 CATEGORIES=	audio
@@ -6,7 +6,7 @@ MASTER_SITES=	http://download.videolan.org/pub/videolan/libdca/${PKGVERSION_NORE
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	shattered@NetBSD.org
-HOMEPAGE=	http://www.videolan.org/developers/libdca.html
+HOMEPAGE=	https://www.videolan.org/developers/libdca.html
 COMMENT=	DTS Coherent Acoustics decoder
 LICENSE=	gnu-gpl-v2
 

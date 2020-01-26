@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/01/06 16:20:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/26 17:31:47 rillig Exp $
 
 DISTNAME=	smpeg-0.4.5
 CATEGORIES=	devel multimedia
@@ -6,7 +6,7 @@ MASTER_SITES=	#
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://icculus.org/smpeg/
+HOMEPAGE=	https://icculus.org/smpeg/
 COMMENT=	SDL MPEG Player Library
 LICENSE=	gnu-lgpl-v2
 

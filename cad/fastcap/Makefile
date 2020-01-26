@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/06/08 11:04:28 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/26 17:30:47 rillig Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.rle.mit.edu/cpg/codes/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://www.rle.mit.edu/cpg/research_codes.htm
+HOMEPAGE=	https://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Fast 3-D capacitance solver
 
 BUILD_DEPENDS+=	dvipsk>=5.99:../../print/dvipsk

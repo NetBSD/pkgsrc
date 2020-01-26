@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/04/25 07:33:19 maya Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:10 rillig Exp $
 
 DISTNAME=	lnav-0.7.3
 PKGREVISION=	11
@@ -8,7 +8,7 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lnav.org/
+HOMEPAGE=	https://lnav.org/
 COMMENT=	Log file navigator, an enhanced log viewer
 LICENSE=	2-clause-bsd
 

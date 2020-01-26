@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/12/02 09:50:02 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:19 rillig Exp $
 #
 
 DISTNAME=	${PKGNAME:S/./-/}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.micans.org/zoem/src/
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://www.micans.org/zoem/
+HOMEPAGE=	https://www.micans.org/zoem/
 COMMENT=	Interpretive macro/programming language
 LICENSE=	gnu-gpl-v3
 

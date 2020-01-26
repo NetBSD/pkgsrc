@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2013/12/23 11:57:06 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/26 17:32:22 rillig Exp $
 
 DISTNAME=		plugger-4.0-linux-x86-glibc
 PKGNAME=		ns-${PLUGGERNAME}-${BINNAME}-${PLUGGERVERS}
@@ -7,7 +7,7 @@ CATEGORIES=		www
 MASTER_SITES=		http://fredrik.hubbe.net/plugger/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://fredrik.hubbe.net/plugger.html
+HOMEPAGE=		https://fredrik.hubbe.net/plugger.html
 COMMENT=		Streaming multimedia plugin for Netscape
 
 CONFLICTS+=		plugger-[0-9]*	# obsolete all-in-one plugger package

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2019/11/03 11:45:30 rillig Exp $
+# $NetBSD: Makefile.common,v 1.10 2020/01/26 17:31:48 rillig Exp $
 # used by net/bird/Makefile
 # used by net/bird6/Makefile
 
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://bird.network.cz/pub/bird/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bird.network.cz/
+HOMEPAGE=	https://bird.network.cz/
 COMMENT=	The BIRD Internet Routing Daemon
 LICENSE=	gnu-gpl-v2
 

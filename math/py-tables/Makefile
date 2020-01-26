@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/13 20:56:08 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:40 rillig Exp $
 
 DISTNAME=	tables-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tables/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pytables.org/
+HOMEPAGE=	https://www.pytables.org/
 COMMENT=	Database package for large amounts of data
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/07/18 00:06:17 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/26 17:31:16 rillig Exp $
 
 DISTNAME=	Maelstrom-3.0.6
 PKGNAME=	maelstrom-sdl-3.0.6
@@ -7,7 +7,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	http://www.libsdl.org/projects/Maelstrom/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libsdl.org/projects/Maelstrom/
+HOMEPAGE=	https://www.libsdl.org/projects/Maelstrom/
 COMMENT=	High resolution version of Asteroids (SDL version)
 
 LICENSE=	gnu-gpl-v2

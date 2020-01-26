@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/06/16 14:11:49 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:03 rillig Exp $
 
 DISTNAME=	h5py-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/h5py/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.h5py.org/
+HOMEPAGE=	https://www.h5py.org/
 COMMENT=	Python interface to the HDF5 library
 LICENSE=	modified-bsd
 

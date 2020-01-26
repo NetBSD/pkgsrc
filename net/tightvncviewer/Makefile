@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/05/26 17:11:36 leot Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/26 17:31:56 rillig Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGNAME=		${DISTNAME:S/tightvnc/tightvncviewer/}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/}
 DISTFILES=		${DISTNAME}_unixsrc.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.tightvnc.com/
+HOMEPAGE=		https://www.tightvnc.com/
 COMMENT=		Viewer for remote X and Win32 VNC servers
 LICENSE=		gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.226 2020/01/18 21:50:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.227 2020/01/26 17:32:00 rillig Exp $
 
 # Notes to package maintainers:
 #
@@ -11,7 +11,7 @@ PKGREVISION=		1
 CATEGORIES=		pkgtools
 
 MAINTAINER=		agc@NetBSD.org
-HOMEPAGE=		http://www.pkgsrc.org/
+HOMEPAGE=		https://www.pkgsrc.org/
 COMMENT=		Package management and administration tools for pkgsrc
 LICENSE=		modified-bsd
 
@@ -92,7 +92,7 @@ INSTALL_SRC=		${PKGDIR}/INSTALL
 FILES_SUBST+=		PKG_DBDIR=${PKG_DBDIR}			\
 			PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}	\
 			MKDIR=${MKDIR:Q}
-MESSAGE_SUBST+=		PKGVULNDIR=${PKG_DBDIR}			\
+MESSAGE_SUBST+=		PKGVULNDIR=${PKG_DBDIR} \
 			EGDIR=${EGDIR}
 
 .include "../../mk/compiler.mk"
@@ -146,7 +146,7 @@ LIBARCHIVE_CONFIGURE_ARGS+=	--without-lzma
 .  endif
 
 LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs.private://p' \
-	${WRKDIR}/libarchive/build/pkgconfig/libarchive.pc 2>/dev/null || echo
+			${WRKDIR}/libarchive/build/pkgconfig/libarchive.pc 2>/dev/null || echo
 LIBS+=			${LIBARCHIVE_LIBS:sh}
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.guess \

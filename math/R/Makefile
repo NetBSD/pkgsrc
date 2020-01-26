@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2020/01/18 21:49:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.209 2020/01/26 17:31:37 rillig Exp $
 
 DISTNAME=	R-3.6.1
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.R-project.org/
+HOMEPAGE=	https://www.R-project.org/
 COMMENT=	Statistical language for data analysis and graphics
 LICENSE=	gnu-gpl-v2
 

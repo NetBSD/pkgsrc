@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/16 19:27:04 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:31:47 rillig Exp $
 
 DISTNAME=	smpeg2-2.0.0
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://www.libsdl.org/projects/smpeg/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libsdl.org/projects/smpeg/
+HOMEPAGE=	https://www.libsdl.org/projects/smpeg/
 COMMENT=	Free MPEG1 video player library with sound support
 LICENSE=	gnu-lgpl-v2.1
 

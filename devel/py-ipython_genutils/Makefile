@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/10/16 12:16:34 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:03 rillig Exp $
 
 DISTNAME=	ipython_genutils-0.2.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython_genutils/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://ipython.org/
+HOMEPAGE=	https://ipython.org/
 COMMENT=	Vestigial utilities from IPython
 LICENSE=	modified-bsd
 

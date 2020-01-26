@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/07/04 16:18:41 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/26 17:32:20 rillig Exp $
 
 DISTNAME=	wm2-4
 PKGNAME=	wm2-4.0
@@ -7,7 +7,7 @@ CATEGORIES=	x11 wm
 MASTER_SITES=	http://www.all-day-breakfast.com/wm2/
 
 MAINTAINER=	kuebart@mathematik.uni-ulm.de
-HOMEPAGE=	http://www.all-day-breakfast.com/wm2/
+HOMEPAGE=	https://www.all-day-breakfast.com/wm2/
 COMMENT=	Minimalist window manager for X
 
 BUILD_TARGET=	depend wm2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/11/03 19:04:06 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:31:31 rillig Exp $
 
 DISTNAME=	rakudo-star-2013.08
 PKGREVISION=	14
@@ -6,7 +6,7 @@ CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/star/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rakudo.org/
+HOMEPAGE=	https://rakudo.org/
 COMMENT=	Perl 6 reference implementation
 LICENSE=	artistic-2.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/06/17 20:56:58 adam Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:32:23 rillig Exp $
 
 DISTNAME=	Flask-API-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-API/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.flaskapi.org/
+HOMEPAGE=	https://www.flaskapi.org/
 COMMENT=	Browsable web APIs for Flask
 LICENSE=	modified-bsd
 

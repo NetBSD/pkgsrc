@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/10/02 14:53:41 kamil Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:32 rillig Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tcl.tk/
+HOMEPAGE=	https://www.tcl.tk/
 COMMENT=	Tool Command Language, a dynamic language
 LICENSE=	2-clause-bsd
 

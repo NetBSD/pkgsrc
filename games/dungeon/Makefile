@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/08/18 07:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:31:13 rillig Exp $
 #
 
 DISTNAME=	dungeon-3.2b
@@ -9,7 +9,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://eblong.com/zarf/glk/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://eblong.com/zarf/glk/
+HOMEPAGE=	https://eblong.com/zarf/glk/
 COMMENT=	Classic game of Dungeon
 
 # There really isn't any license in any of the source code or in the

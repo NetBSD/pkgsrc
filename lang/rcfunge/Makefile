@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/03 19:04:06 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:31 rillig Exp $
 #
 
 DISTNAME=	rcfunge2
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.rcfunge98.com/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rcfunge98.com/
+HOMEPAGE=	https://www.rcfunge98.com/
 COMMENT=	Funge interpreter
 #LICENSE=	# TODO: (see mk/license.mk)
 

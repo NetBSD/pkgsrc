@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2019/11/03 17:12:00 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2020/01/26 17:31:45 rillig Exp $
 #
 
 DISTNAME=		gopchop-1.1.8
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gopchop/}
 MASTER_SITES+=		http://outflux.net/unix/software/GOPchop/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://outflux.net/unix/software/GOPchop/
+HOMEPAGE=		https://outflux.net/unix/software/GOPchop/
 COMMENT=		MPEG2 GOP-accurate editor
 
 GNU_CONFIGURE=			yes

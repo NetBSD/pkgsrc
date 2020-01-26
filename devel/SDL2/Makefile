@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/01/20 21:13:16 nia Exp $
+# $NetBSD: Makefile,v 1.43 2020/01/26 17:30:55 rillig Exp $
 
 DISTNAME=	SDL2-2.0.10
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/release/
 
 MAINTAINER=	nia@NetBSD.org
-HOMEPAGE=	http://www.libsdl.org/
+HOMEPAGE=	https://www.libsdl.org/
 COMMENT=	Simple DirectMedia Layer - cross-platform multimedia library
 LICENSE=	zlib
 

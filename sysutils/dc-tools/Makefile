@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/08/01 15:50:16 tpaul Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 17:32:09 rillig Exp $
 
 DISTNAME=	dc-tools-1.6
 PKGREVISION=	1
@@ -10,23 +10,23 @@ DISTFILES=	makeip.tar.gz scramble.c ip_slave.tar.gz serial_slave.tar.gz \
 		${DCBURN_DISTFILE}
 
 MAINTAINER=	abs@absd.org
-HOMEPAGE=	http://mc.pp.se/dc/sw.html
+HOMEPAGE=	https://mc.pp.se/dc/sw.html
 COMMENT=	Dreamcast bootable CDs tools (mainly from Marcus Comstedt)
 #LICENSE=	# TODO: (see mk/license.mk)
 
-DCBURN_TAG=	1.6
-DCBURN_DISTFILE=${DCBURN_TAG}.tar.gz
+DCBURN_TAG=		1.6
+DCBURN_DISTFILE=	${DCBURN_TAG}.tar.gz
 
 DEPENDS+=	cdrtools>=2.01:../../sysutils/cdrtools
 
 # The filenames in the _slave.tar.gz files overlap
 EXTRACT_CMD=	${CP} ${DISTDIR}/${DIST_SUBDIR}/scramble.c ${WRKSRC} && \
-	${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/makeip.tar.gz && \
-	${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/${DCBURN_DISTFILE} && \
-	mkdir ip && \
-	${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/ip_slave.tar.gz -C ip && \
-	mkdir serial && \
-	${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/serial_slave.tar.gz -C serial
+		${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/makeip.tar.gz && \
+		${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/${DCBURN_DISTFILE} && \
+		mkdir ip && \
+		${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/ip_slave.tar.gz -C ip && \
+		mkdir serial && \
+		${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/serial_slave.tar.gz -C serial
 
 SUBST_CLASSES+=		IP_TMPL
 SUBST_STAGE.IP_TMPL=	pre-configure

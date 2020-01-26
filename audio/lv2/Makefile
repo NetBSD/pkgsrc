@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/13 16:53:01 nia Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:30:43 rillig Exp $
 
 DISTNAME=	lv2-1.16.0
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://lv2plug.in/spec/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lv2plug.in/
+HOMEPAGE=	https://lv2plug.in/
 COMMENT=	Open standard for audio plugins, used by hundreds of plugins
 LICENSE=	isc
 

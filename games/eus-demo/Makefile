@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/01/19 18:52:09 agc Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:14 rillig Exp $
 
 DISTNAME=	eus-demo
 PKGNAME=	eus-demo-1.0
@@ -9,7 +9,7 @@ MASTER_SITES+=	ftp://download.linuxlords.com/pub/demos/eus/
 MASTER_SITES+=	ftp://ftp.linux.tucows.com/pub/Loki/demos/eus/
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.lokigames.com/products/eus/
+HOMEPAGE=	https://www.lokigames.com/products/eus/
 COMMENT=	Eric's Ultimate Solitaire (linux demo)
 
 # Someone needs to look at alpha, powerpc and sparc compat_linux

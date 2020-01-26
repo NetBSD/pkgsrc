@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/12/29 15:31:21 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:31:00 rillig Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -7,7 +7,7 @@ PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lld.llvm.org/
+HOMEPAGE=	https://lld.llvm.org/
 COMMENT=	The LLVM Linker
 LICENSE=	apache-2.0
 

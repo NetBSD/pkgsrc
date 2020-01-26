@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/05/29 19:52:49 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:13 rillig Exp $
 
 DISTNAME=	arx-libertatis-1.1.2
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=project/arx/arx-libertatis-1.1.2/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://arx-libertatis.org/
+HOMEPAGE=	https://arx-libertatis.org/
 COMMENT=	Cross-platform, open source port of the Arx Fatalis RPG
 LICENSE=	gnu-gpl-v3
 

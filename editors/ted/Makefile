@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2018/03/12 11:16:24 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2020/01/26 17:31:06 rillig Exp $
 
 DISTNAME=	ted-2.21.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -7,7 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nllgg.nl/Ted/
+HOMEPAGE=	https://www.nllgg.nl/Ted/
 COMMENT=	X11 based WordPad-like word processor
 LICENSE=	gnu-gpl-v2
 

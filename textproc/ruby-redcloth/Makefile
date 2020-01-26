@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2016/10/18 14:43:14 taca Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:32:18 rillig Exp $
 
 DISTNAME=	RedCloth-4.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://redcloth.org/
+HOMEPAGE=	https://redcloth.org/
 COMMENT=	Textile library for Ruby
 LICENSE=	mit
 

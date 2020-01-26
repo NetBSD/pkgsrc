@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/11/04 21:43:33 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:12 rillig Exp $
 #
 
 DISTNAME=	GutenMark-words-20030107
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.sandroid.org/GutenMark/Wordlists/
 DISTFILES=	${WORDLISTS} GutenMark.cfg
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.sandroid.org/GutenMark/
+HOMEPAGE=	https://www.sandroid.org/GutenMark/
 COMMENT=	Word lists for GutenMark
 
 WORDLISTS=		special.words.gz english.names.gz US.places.gz \

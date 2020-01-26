@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/07/16 00:15:31 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:30:41 rillig Exp $
 #
 
 DISTNAME=	freealut-1.1.0
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.openal.org/openal_webstf/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openal.org/
+HOMEPAGE=	https://www.openal.org/
 COMMENT=	OpenAL Utility Toolkit
 
 GNU_CONFIGURE=	yes

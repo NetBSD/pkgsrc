@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2018/11/15 13:46:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.45 2020/01/26 17:31:57 rillig Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		6
@@ -7,7 +7,7 @@ MASTER_SITES=		http://cr.yp.to/ucspi-tcp/ ftp://cr.yp.to/ucspi-tcp/
 DISTFILES=		${DISTNAME}.tar.gz ${MANPAGES}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://cr.yp.to/ucspi-tcp.html
+HOMEPAGE=		https://cr.yp.to/ucspi-tcp.html
 COMMENT=		Command-line tools for building TCP client-server applications
 LICENSE=		public-domain
 

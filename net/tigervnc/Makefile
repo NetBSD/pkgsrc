@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/11/03 11:45:54 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/26 17:31:56 rillig Exp $
 
 DISTNAME=		tigervnc-1.9.0
 PKGREVISION=		3
@@ -10,7 +10,7 @@ SITES.${XORG_SERVER_FILE}.tar.bz2=	${MASTER_SITE_XORG:=xserver/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tigervnc.org/
+HOMEPAGE=	https://tigervnc.org/
 COMMENT=	High-performance, platform-neutral VNC client/server
 LICENSE=	gnu-gpl-v2
 

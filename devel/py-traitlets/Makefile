@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/10/19 17:01:54 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:03 rillig Exp $
 
 DISTNAME=	traitlets-4.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/traitlets/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://ipython.org/
+HOMEPAGE=	https://ipython.org/
 COMMENT=	Traitlets Python config system
 LICENSE=	modified-bsd
 

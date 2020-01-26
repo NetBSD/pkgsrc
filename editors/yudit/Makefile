@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/07/18 00:06:14 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/26 17:31:08 rillig Exp $
 
 DISTNAME=	yudit-2.9.2
 CATEGORIES=	editors
@@ -6,7 +6,7 @@ MASTER_SITES=	http://yudit.org/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://yudit.org/
+HOMEPAGE=	https://yudit.org/
 COMMENT=	Unicode Text Editor
 LICENSE=	gnu-gpl-v2
 

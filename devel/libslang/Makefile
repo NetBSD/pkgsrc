@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2019/11/03 10:39:18 rillig Exp $
+# $NetBSD: Makefile,v 1.74 2020/01/26 17:30:59 rillig Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -10,7 +10,7 @@ MASTER_SITES+=	ftp://ftp.ntua.gr/pub/lang/slang/slang/v1.4/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.s-lang.org/
+HOMEPAGE=	https://www.s-lang.org/
 COMMENT=	Routines for rapid alpha-numeric terminal applications development
 
 MAKE_JOBS_SAFE=		no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/01/10 13:32:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/26 17:31:50 rillig Exp $
 
 DISTNAME=		go-net-20170308
 PKGREVISION=		16
@@ -8,7 +8,7 @@ GITHUB_PROJECT=		net
 GITHUB_TAG=		a6577fa
 
 MAINTAINER=		bsiegert@NetBSD.org
-HOMEPAGE=		http://golang.org/
+HOMEPAGE=		https://golang.org/
 COMMENT=		Supplementary network libraries for Go
 LICENSE=		modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/01/01 11:27:37 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:32:19 rillig Exp $
 #
 
 DISTNAME=		saytime_11nov1995
@@ -7,7 +7,7 @@ CATEGORIES=		time audio
 MASTER_SITES=		http://www.acme.com/software/saytime/
 
 MAINTAINER=		is@NetBSD.org
-HOMEPAGE=		http://www.acme.com/software/saytime/
+HOMEPAGE=		https://www.acme.com/software/saytime/
 COMMENT=		Talking clock
 
 USE_TOOLS+=	pax

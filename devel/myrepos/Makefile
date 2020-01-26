@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/03 10:39:20 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:00 rillig Exp $
 #
 
 DISTNAME=		myrepos_1.20180726
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/m/myrepos/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://myrepos.branchable.com/
+HOMEPAGE=		https://myrepos.branchable.com/
 COMMENT=		Treat multiple repositories as one combined repository
 LICENSE=		gnu-gpl-v2
 

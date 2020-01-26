@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/09/19 09:36:32 leot Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:27 rillig Exp $
 
 DISTNAME=	xdotool-3.20160805.1
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=jordansissel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	rga@sdf.lonestar.org
-HOMEPAGE=	http://www.semicomplete.com/projects/xdotool/
+HOMEPAGE=	https://www.semicomplete.com/projects/xdotool/
 COMMENT=	Simulate keyboard input and mouse activity using X11 xtest extension
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/12/19 22:22:12 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/26 17:32:01 rillig Exp $
 
 DISTNAME=	WeasyPrint-50
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WeasyPrint/}
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	http://weasyprint.org/
+HOMEPAGE=	https://weasyprint.org/
 COMMENT=	Converts HTML/CSS documents to PDF
 LICENSE=	modified-bsd
 

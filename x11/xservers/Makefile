@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2011/04/03 13:43:18 obache Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/26 17:32:28 rillig Exp $
 
 DISTNAME=	xservers-3.3.6.5
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.xfree86.org/
+HOMEPAGE=	https://www.xfree86.org/
 COMMENT=	Old X11 servers for use under XFree86 4.x
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386

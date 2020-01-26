@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/04/25 14:22:54 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:13 rillig Exp $
 #
 
 DISTNAME=		digger-20020314
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://www.digger.org/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.digger.org/
+HOMEPAGE=		https://www.digger.org/
 COMMENT=		Digger Remastered
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/18 21:50:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:31:50 rillig Exp $
 
 DISTNAME=	inadyn-2.5
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=troglobit/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://troglobit.com/inadyn.html
+HOMEPAGE=	https://troglobit.com/inadyn.html
 COMMENT=	Dynamic DNS client
 LICENSE=	gnu-gpl-v2
 

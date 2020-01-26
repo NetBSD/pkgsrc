@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/05/01 07:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:11 rillig Exp $
 
 DISTNAME=	spice-protocol-0.14.0
 CATEGORIES=	sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=	http://spice-space.org/download/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://spice-space.org/
+HOMEPAGE=	https://spice-space.org/
 COMMENT=	Headers defining protocols for SPICE server code
 LICENSE=	modified-bsd AND mit
 

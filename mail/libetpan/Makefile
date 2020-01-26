@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2020/01/18 21:48:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.60 2020/01/26 17:31:34 rillig Exp $
 
 DISTNAME=	libetpan-1.9.1
 PKGREVISION=	6
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=dinhviethoa/}
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://etpan.org/libetpan.html
+HOMEPAGE=	https://etpan.org/libetpan.html
 COMMENT=	Really nice mail library
 LICENSE=	modified-bsd
 

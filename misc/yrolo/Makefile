@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/06/29 05:45:57 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/26 17:31:45 rillig Exp $
 #
 
 DISTNAME=	yrolo-1.1
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://www.muquit.com/muquit/software/yrolo/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.muquit.com/muquit/software/yrolo/yrolo.html
+HOMEPAGE=	https://www.muquit.com/muquit/software/yrolo/yrolo.html
 COMMENT=	Contact management software
 
 WRKSRC=		${WRKDIR}/yrolo1.1

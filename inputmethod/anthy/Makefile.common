@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2015/06/29 11:06:47 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.10 2020/01/26 17:31:25 rillig Exp $
 # used by inputmethod/anthy/Makefile
 # used by inputmethod/anthy-elisp/Makefile
 
@@ -11,4 +11,4 @@ DISTFILES=	${DISTNAME}.tar.gz
 DISTINFO_FILE=	${.CURDIR}/../../inputmethod/anthy/distinfo
 PATCHDIR=	${.CURDIR}/../../inputmethod/anthy/patches
 
-HOMEPAGE=	http://anthy.osdn.jp/
+HOMEPAGE=	https://anthy.osdn.jp/

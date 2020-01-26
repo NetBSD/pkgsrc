@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/05/08 16:09:38 khorben Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/26 17:30:56 rillig Exp $
 #
 
 VER=		0.16.21
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=lkundrak/}
 GITHUB_TAG=	v${VER}
 
 MAINTAINER=	pierrick@bs-network.net
-HOMEPAGE=	http://www.debath.co.uk/
+HOMEPAGE=	https://www.debath.co.uk/
 COMMENT=	Linux 8086 development environment
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 

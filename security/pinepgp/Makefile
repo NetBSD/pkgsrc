@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/09/09 11:43:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/26 17:32:06 rillig Exp $
 #
 
 DISTNAME=		pinepgp-0.18.0
@@ -8,7 +8,7 @@ MASTER_SITES=		http://hany.sk/~hany/_data/pinepgp/
 MASTER_SITES+=		http://terminus.sk/~hany/_data/pinepgp/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://hany.sk/~hany/software/pinepgp/stable.html
+HOMEPAGE=		https://hany.sk/~hany/software/pinepgp/stable.html
 COMMENT=		PGP display and sending filters for pine
 LICENSE=		gnu-lgpl-v2.1
 

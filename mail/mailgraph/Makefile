@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/10/02 14:30:31 triaxx Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/26 17:31:35 rillig Exp $
 
 DISTNAME=	mailgraph-1.14
 PKGREVISION=	6
@@ -7,7 +7,7 @@ MASTER_SITES=	https://mailgraph.schweikert.ch/pub/
 MASTER_SITES+=	https://mailgraph.schweikert.ch/pub/old/
 
 MAINTAINER=	triaxx@NetBSD.org
-HOMEPAGE=	http://mailgraph.schweikert.ch/
+HOMEPAGE=	https://mailgraph.schweikert.ch/
 COMMENT=	RRDtool frontend for mail statistics
 LICENSE=	gnu-gpl-v2
 

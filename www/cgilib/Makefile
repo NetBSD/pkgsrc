@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/11/04 22:09:52 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:32:20 rillig Exp $
 #
 
 DISTNAME=	cgilib-0.7
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.infodrom.org/projects/cgilib/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.infodrom.org/projects/cgilib/
+HOMEPAGE=	https://www.infodrom.org/projects/cgilib/
 COMMENT=	Common gateway interface library
 LICENSE=	gnu-gpl-v2
 

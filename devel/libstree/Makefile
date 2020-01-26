@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/07/24 21:29:05 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:00 rillig Exp $
 #
 
 DISTNAME=	libstree-0.4.0
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.icir.org/christian/downloads/
 
 MAINTAINER=	gson@NetBSD.org
-HOMEPAGE=	http://www.icir.org/christian/libstree/
+HOMEPAGE=	https://www.icir.org/christian/libstree/
 COMMENT=	Suffix tree library
 
 GNU_CONFIGURE=		yes

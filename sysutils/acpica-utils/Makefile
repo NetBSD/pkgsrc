@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/10/29 14:42:08 abs Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:08 rillig Exp $
 #
 
 DISTNAME=	acpica-unix2-20160930
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils devel
 MASTER_SITES=	https://acpica.org/sites/acpica/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.acpica.org/
+HOMEPAGE=	https://www.acpica.org/
 COMMENT=	Intel ACPI CA Unix utilities
 LICENSE=	modified-bsd OR gnu-gpl-v2
 

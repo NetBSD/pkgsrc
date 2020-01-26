@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/25 06:55:38 asau Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:32:12 rillig Exp $
 #
 
 DISTNAME=	GutenMark_source_dev-${GVER}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.sandroid.org/GutenMark/wasftp.GutenMark/SoftwareSnapshots/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.sandroid.org/GutenMark/
+HOMEPAGE=	https://www.sandroid.org/GutenMark/
 COMMENT=	Automatic, high-quality Gutenberg text formatter to LaTeX or HTML
 
 DEPENDS+=	GutenMark-words-[0-9]*:../../textproc/GutenMark-words

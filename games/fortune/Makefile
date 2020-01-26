@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/08/07 11:10:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:31:14 rillig Exp $
 
 DISTNAME=	fortune-mod-9708
 PKGNAME=	fortune-19970829
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.ibiblio.org/pub/linux/games/amusements/fortune/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ibiblio.org/pub/linux/games/amusements/fortune/
+HOMEPAGE=	https://www.ibiblio.org/pub/linux/games/amusements/fortune/
 COMMENT=	Fortune cookie generator
 LICENSE=	original-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/05/23 19:23:05 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/26 17:31:34 rillig Exp $
 #
 
 DISTNAME=		fastforward-0.51
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		http://cr.yp.to/software/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://cr.yp.to/fastforward.html
+HOMEPAGE=		https://cr.yp.to/fastforward.html
 COMMENT=		Sendmail-style /etc/aliases support for qmail
 LICENSE=		public-domain
 

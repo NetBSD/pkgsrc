@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/11/03 19:26:21 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:10 rillig Exp $
 
 DISTNAME=	openafs-1.7.11-src
 PKGNAME=	${DISTNAME:C/-src//}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.openafs.org/dl/openafs/1.7.11/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gendalia@NetBSD.org
-HOMEPAGE=	http://www.openafs.org/
+HOMEPAGE=	https://www.openafs.org/
 COMMENT=	File system for sharing, scalability and transparent data migration
 LICENSE=	ipl-1.0 AND mit AND modified-bsd # AND sun-rpc?
 

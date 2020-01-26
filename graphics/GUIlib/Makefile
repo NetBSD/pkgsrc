@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/04/25 14:23:06 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:19 rillig Exp $
 #
 
 DISTNAME=	GUIlib-1.2.1
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.libsdl.org/projects/GUIlib/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libsdl.org/projects/GUIlib/
+HOMEPAGE=	https://www.libsdl.org/projects/GUIlib/
 COMMENT=	Very simple GUI framework library
 LICENSE=	public-domain
 

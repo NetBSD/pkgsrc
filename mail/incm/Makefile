@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/08 12:19:14 asau Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:34 rillig Exp $
 #
 
 DISTNAME=	incm-0.5
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.mew.org/pub/Mew/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mew.org/
+HOMEPAGE=	https://www.mew.org/
 COMMENT=	Tool to get mail from mbox file or maildir
 
 CONFLICTS=	mew-[0-9]*

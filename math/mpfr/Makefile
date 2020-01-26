@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/12/22 02:12:00 mef Exp $
+# $NetBSD: Makefile,v 1.43 2020/01/26 17:31:38 rillig Exp $
 
 DISTNAME=		mpfr-4.0.2
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.mpfr.org/${DISTNAME}/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.mpfr.org/
+HOMEPAGE=		https://www.mpfr.org/
 COMMENT=		GMP-based library for multiple-precision floating-point computations
 LICENSE=		gnu-lgpl-v3
 

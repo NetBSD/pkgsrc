@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.70 2019/11/30 23:31:30 rin Exp $
+# $NetBSD: Makefile,v 1.71 2020/01/26 17:32:00 rillig Exp $
 
 PKGNAME=	rpm2pkg-3.3.0
 CATEGORIES=	pkgtools
 NO_CHECKSUM=	yes
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pkgsrc.org/
+HOMEPAGE=	https://www.pkgsrc.org/
 COMMENT=	Convert RPM archives to NetBSD packages
 LICENSE=	modified-bsd
 

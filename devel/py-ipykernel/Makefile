@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/10/21 19:16:56 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:31:03 rillig Exp $
 
 DISTNAME=	ipykernel-5.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ipython.org/
+HOMEPAGE=	https://ipython.org/
 COMMENT=	IPython Kernel for Jupyter
 LICENSE=	modified-bsd
 

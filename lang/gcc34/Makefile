@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2019/11/03 19:03:58 rillig Exp $
+# $NetBSD: Makefile,v 1.59 2020/01/26 17:31:27 rillig Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
+HOMEPAGE=	https://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the gcc 3.4 compiler
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
@@ -34,11 +34,11 @@ AS_PATH:=		${_dir_}/${AS}
 .    if !empty(AS_PATH:M${LOCALBASE}/*)
 USE_BINUTILS=		YES
 .    else
-AS_VERSION!=		${AS_PATH} --version | ${AWK} '{			\
-		    split($$3, v, /[.]/);				\
-		    printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
-		    exit;						\
-		}'
+AS_VERSION!=		${AS_PATH} --version | ${AWK} '{		\
+			split($$3, v, /[.]/);				\
+			printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4]; \
+			exit;						\
+			}'
 USE_BINUTILS!=		${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
 .    endif
 MAKEFLAGS+=		USE_BINUTILS=${USE_BINUTILS:Q}
@@ -143,7 +143,7 @@ do-install:
 .endif
 
 GENERATE_PLIST+=							\
-	${FIND} ${DESTDIR}${GCC_PREFIX} \( -type f -o -type l \) -print		\
+	${FIND} ${DESTDIR}${GCC_PREFIX} \( -type f -o -type l \) -print \
 		| ${SORT} | ${SED} -e "s,${DESTDIR}${PREFIX}/,,g";
 
 .include "../../mk/bsd.prefs.mk"

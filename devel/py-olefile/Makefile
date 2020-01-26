@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/09/24 09:54:46 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:03 rillig Exp $
 
 DISTNAME=	olefile-0.46
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=o/olefile/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.decalage.info/python/olefileio
+HOMEPAGE=	https://www.decalage.info/python/olefileio
 COMMENT=	Python module to read/write MS OLE2 files
 LICENSE=	2-clause-bsd AND hpnd
 

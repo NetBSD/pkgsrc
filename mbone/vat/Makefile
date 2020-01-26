@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2018/07/18 00:06:21 joerg Exp $
+# $NetBSD: Makefile,v 1.68 2020/01/26 17:31:41 rillig Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -8,7 +8,7 @@ CATEGORIES=		mbone
 MASTER_SITES=		ftp://ftp.ee.lbl.gov/conferencing/vat/alpha-test/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ee.lbl.gov/vat/
+HOMEPAGE=		https://ee.lbl.gov/vat/
 COMMENT=		The Visual Audio Tool - multicast audioconferencing
 
 MAKE_JOBS_SAFE=		no

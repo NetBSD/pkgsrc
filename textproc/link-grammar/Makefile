@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 17:38:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:15 rillig Exp $
 
 DISTNAME=	link-grammar-5.6.2
 CATEGORIES=	textproc
 MASTER_SITES=	https://www.abisource.com/downloads/link-grammar/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.abisource.com/projects/link-grammar/
+HOMEPAGE=	https://www.abisource.com/projects/link-grammar/
 COMMENT=	Syntactic parsing library
 LICENSE=	modified-bsd AND gnu-lgpl-v2.1
 

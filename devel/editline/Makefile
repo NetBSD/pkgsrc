@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/05/07 14:07:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:30:56 rillig Exp $
 #
 
 DISTNAME=		libedit-20150325-3.1
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://thrysoee.dk/editline/
 
 MAINTAINER=		ryoon@NetBSD.org
-HOMEPAGE=		http://www.thrysoee.dk/editline/
+HOMEPAGE=		https://www.thrysoee.dk/editline/
 COMMENT=		NetBSD Editline library (libedit) for generic line editing
 LICENSE=		modified-bsd
 

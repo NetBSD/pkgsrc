@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2019/09/09 11:19:33 maya Exp $
+# $NetBSD: Makefile,v 1.96 2020/01/26 17:32:03 rillig Exp $
 
 DISTNAME=	gpgme-1.13.1
 CATEGORIES=	security
@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnupg.org/related_software/gpgme/
+HOMEPAGE=	https://www.gnupg.org/related_software/gpgme/
 COMMENT=	GnuPG Made Easy
 LICENSE=	gnu-gpl-v2
 

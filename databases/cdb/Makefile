@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2017/04/04 07:29:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/26 17:30:52 rillig Exp $
 
 DISTNAME=		cdb-0.75
 CATEGORIES=		databases
 MASTER_SITES=		http://cr.yp.to/cdb/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://cr.yp.to/cdb.html
+HOMEPAGE=		https://cr.yp.to/cdb.html
 COMMENT=		Creates and reads constant databases
 LICENSE=		public-domain
 

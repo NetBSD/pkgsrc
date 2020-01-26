@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/01/18 21:49:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/26 17:31:18 rillig Exp $
 #
 
 DISTNAME=	warzone2100-3.2.3
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=warzone2100/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wz2100.net/
+HOMEPAGE=	https://wz2100.net/
 COMMENT=	Real-time strategy and real-time tactics hybrid computer game
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/09/11 17:03:28 taca Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:32:21 rillig Exp $
 #
 
 DISTNAME=	matcha-sns-1.3.7
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://oss.icz.co.jp/sns/
+HOMEPAGE=	https://oss.icz.co.jp/sns/
 COMMENT=	Social Networking Service software that supports Timeline
 LICENSE=	gnu-gpl-v2 AND mit
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/24 08:38:28 hauke Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:33 rillig Exp $
 
 DISTNAME=	courier-unicode-2.1
 CATEGORIES=	mail
@@ -6,7 +6,7 @@ MASTER_SITES=	https://sourceforge.net/projects/courier/files/courier-unicode/${P
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.courier-mta.org/unicode/
+HOMEPAGE=	https://www.courier-mta.org/unicode/
 COMMENT=	Implements several algorithms related to the Unicode Standard
 LICENSE=	gnu-gpl-v3
 

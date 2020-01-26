@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2019/11/03 17:04:19 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2020/01/26 17:31:42 rillig Exp $
 
 DISTNAME=	ast54unx
 PKGNAME=	astrolog-5.40
@@ -9,7 +9,7 @@ MASTER_SITES+=	http://www.astrolog.org/ftp/
 DISTFILES=	${DISTNAME}.shr ${EPHEM}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.astrolog.org/
+HOMEPAGE=	https://www.astrolog.org/
 COMMENT=	Astrology program for X11 and alpha-numeric terminals
 LICENSE=	astrolog-license
 

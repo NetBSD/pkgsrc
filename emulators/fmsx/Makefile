@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/09/18 14:17:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/26 17:31:09 rillig Exp $
 
 DISTNAME=	fMSX53
 PKGNAME=	fmsx-5.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://fms.komkon.org/fMSX/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fms.komkon.org/fMSX/
+HOMEPAGE=	https://fms.komkon.org/fMSX/
 COMMENT=	MSX (Z80-based computer) emulator
 
 RESTRICTED=		The binary based on modified source code is not redistributable

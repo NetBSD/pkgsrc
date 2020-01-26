@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/05/23 19:23:05 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/26 17:31:33 rillig Exp $
 #
 
 DISTNAME=		dot-forward-0.71
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		http://cr.yp.to/software/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://cr.yp.to/dot-forward.html
+HOMEPAGE=		https://cr.yp.to/dot-forward.html
 COMMENT=		Reads sendmail's .forward files under qmail
 LICENSE=		public-domain
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/11/04 21:50:15 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/26 17:32:20 rillig Exp $
 #
 
 DISTNAME=	amiwm0.20pl48
@@ -8,7 +8,7 @@ CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.lysator.liu.se/pub/X11/wm/amiwm/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lysator.liu.se/~marcus/amiwm.html
+HOMEPAGE=	https://www.lysator.liu.se/~marcus/amiwm.html
 COMMENT=	X window manager with Amiga look and feel
 LICENSE=	amiwm-license
 

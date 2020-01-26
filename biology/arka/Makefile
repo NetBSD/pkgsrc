@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/11 20:32:10 asau Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:30:46 rillig Exp $
 #
 
 DISTNAME=	arka-0.11
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.bioinformatics.org/genpak/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hdp@cs.nmsu.edu
-HOMEPAGE=	http://www.bioinformatics.org/genpak/
+HOMEPAGE=	https://www.bioinformatics.org/genpak/
 COMMENT=	Graphic interface for the programs from the GP package
 
 DEPENDS+=	gp-[0-9]*:../../biology/gp

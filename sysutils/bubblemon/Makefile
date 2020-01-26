@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/07/21 22:25:41 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/26 17:32:08 rillig Exp $
 #
 
 DISTNAME=		bubblemon-dockapp-1.46
@@ -8,7 +8,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://www.ne.jp/asahi/linux/timecop/software/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ne.jp/asahi/linux/timecop/
+HOMEPAGE=		https://www.ne.jp/asahi/linux/timecop/
 COMMENT=		Small windowmaker dockapp with bubbles and a duck
 LICENSE=		gnu-gpl-v2
 

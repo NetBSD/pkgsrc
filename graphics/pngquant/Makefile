@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/08/09 12:59:02 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:22 rillig Exp $
 
 DISTNAME=	pngquant-2.12.5-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://pngquant.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pngquant.org/
+HOMEPAGE=	https://pngquant.org/
 COMMENT=	Command-line utility for lossy compression of PNG images
 LICENSE=	gnu-gpl-v3
 

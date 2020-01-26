@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2019/11/04 21:28:52 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/26 17:32:11 rillig Exp $
 
 DISTNAME=	same-1.8
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.bitwizard.nl/same/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bitwizard.nl/
+HOMEPAGE=	https://www.bitwizard.nl/
 COMMENT=	Find identical files and link(2) them to save disk space
 
 AUTO_MKDIRS=		yes
