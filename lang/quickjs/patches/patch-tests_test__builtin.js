@@ -1,4 +1,4 @@
-$NetBSD: patch-tests_test__builtin.js,v 1.2 2019/11/15 20:51:24 rillig Exp $
+$NetBSD: patch-tests_test__builtin.js,v 1.3 2020/01/26 18:37:49 he Exp $
 
 Disable tests that fail on NetBSD.
 
@@ -9,11 +9,11 @@ rillig contacted Fabrice via mail. Fabrice replied:
 > big issue. The fix will be not to depend on printf to convert floating
 > point numbers to string.
 
---- tests/test_builtin.js.orig	2019-10-27 10:55:35.000000000 +0000
+--- tests/test_builtin.js.orig	2020-01-19 10:12:01.000000000 +0000
 +++ tests/test_builtin.js
-@@ -304,12 +304,12 @@ function test_number()
-     assert(parseFloat("123.2"), 123.2);
-     assert(parseFloat("123.2e3"), 123200);
+@@ -307,12 +307,12 @@ function test_number()
+     assert(Number.isNaN(Number("-")));
+     assert(Number.isNaN(Number("\x00a")));
  
 -    assert((25).toExponential(0), "3e+1");
 -    assert((-25).toExponential(0), "-3e+1");

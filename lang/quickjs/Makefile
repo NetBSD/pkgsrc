@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/11/14 21:20:04 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 18:37:49 he Exp $
 
-DISTNAME=	quickjs-2019-10-27
+DISTNAME=	quickjs-2020-01-19
 CATEGORIES=	lang
 MASTER_SITES=	https://bellard.org/quickjs/
 EXTRACT_SUFX=	.tar.xz
