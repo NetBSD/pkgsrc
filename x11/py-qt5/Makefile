@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2020/01/18 21:51:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2020/01/26 12:53:34 rhialto Exp $
 
 DISTNAME=	PyQt5-5.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 python
 MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/PyQt5/${PKGVERSION_NOREV}/
 
@@ -22,9 +22,12 @@ USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	-b ${PREFIX}/bin
 CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
 CONFIGURE_ARGS+=	--sipdir ${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5
+CONFIGURE_ARGS+=	--qml-plugindir ${PREFIX}/qt5/plugins/PyQt5-${PYVERSSUFFIX}/
+CONFIGURE_ARGS+=	--designer-plugindir ${PREFIX}/qt5/plugins/designer${PYVERSSUFFIX}/
 CONFIGURE_ARGS+=	-q ${QTDIR}/bin/qmake
 CONFIGURE_ARGS+=	--confirm-license
 CONFIGURE_ARGS+=	--qsci-api
+CONFIGURE_ARGS+=	--qsci-api-destdir ${PREFIX}/qt5/qsci${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	--sip ${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	--verbose
 
@@ -61,6 +64,13 @@ fix-darwin-install-name:
 .else
 PLIST.x11=	yes
 .endif
+post-install: fix-alternatives
+
+fix-alternatives:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} pylupdate5 pylupdate5-${PYVERSSUFFIX} && \
+	${MV} pyrcc5 pyrcc5-${PYVERSSUFFIX} && \
+	${MV} pyuic5 pyuic5-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/dbus-python-common/buildlink3.mk"
