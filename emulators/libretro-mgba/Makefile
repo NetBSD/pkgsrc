@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/09/22 15:19:15 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/26 12:59:20 nia Exp $
 
-DISTNAME=	libretro-mgba-0.7.3
-PKGREVISION=	1
+DISTNAME=	mgba-0.8.0
+PKGNAME=	libretro-${DISTNAME}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
 GITHUB_PROJECT=	mgba
@@ -12,8 +12,10 @@ COMMENT=	Libretro core based on the mGBA emulator
 LICENSE=	mpl-2.0
 
 EXTRACT_USING=	bsdtar
-USE_TOOLS+=	pkg-config
+
 USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
 
 WRKSRC=		${WRKDIR}/mgba-${PKGVERSION_NOREV}
 
@@ -34,6 +36,8 @@ CMAKE_ARGS+=	-DUSE_EPOXY=OFF
 CMAKE_ARGS+=	-DBUILD_QT=OFF
 CMAKE_ARGS+=	-DBUILD_SDL=OFF
 CMAKE_ARGS+=	-DBUILD_GL=OFF
+CMAKE_ARGS+=	-DBUILD_GLES2=OFF
+CMAKE_ARGS+=	-DBUILD_GLES3=OFF
 
 CMAKE_ARGS+=	-DBUILD_LIBRETRO=ON
 CMAKE_ARGS+=	-DSKIP_LIBRARY=ON
@@ -44,8 +48,10 @@ INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 # Avoid conflicting with emulators/mgba.
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/include/mgba
+	${RM} -rf ${DESTDIR}${PREFIX}/include/mgba-util
 	${RM} -rf ${DESTDIR}${PREFIX}/share/doc/mGBA
 
 .include "../../devel/libelf/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
