@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/26 19:04:43 he Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 19:08:41 he Exp $
 
 NAME=		quickjs
 DATE=		2020-01-19
@@ -24,10 +24,10 @@ PLIST_VARS+=	bignum
 .if ${OPSYS} == "NetBSD"
 HAS_ATOMIC_64!=	${CC} -E files/netbsd-has-atomic64.c | tail -1
 .if (${HAS_ATOMIC_64} == "YES")
-PLIST.bignum	= yes
+PLIST.bignum=yes
 .endif
 .else # Not NetBSD
-PLIST.bignum	= yes
+PLIST.bignum=yes
 .endif
 
 .include "../../mk/bsd.pkg.mk"
