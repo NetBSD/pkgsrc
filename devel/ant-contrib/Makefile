@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 23:30:21 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/26 05:26:22 rillig Exp $
 
 DISTNAME=	ant-contrib-0.6-bin
 PKGNAME=	${DISTNAME:S/-bin//}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ant-contrib/ant-contrib/${PKGNAME_NOREV
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ant-contrib.sourceforge.net/
+HOMEPAGE=	http://ant-contrib.sourceforge.net/
 COMMENT=	Collection of tasks and tools for apache-ant
 LICENSE=	apache-2.0
 

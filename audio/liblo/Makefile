@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:30:00 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 05:26:11 rillig Exp $
 
 DISTNAME=	liblo-0.30
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=liblo/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://liblo.sourceforge.net/
+HOMEPAGE=	http://liblo.sourceforge.net/
 COMMENT=	Lightweight Open Sound Control implementation
 LICENSE=	gnu-lgpl-v2.1
 

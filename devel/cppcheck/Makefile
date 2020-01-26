@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/01/18 23:30:25 rillig Exp $
+# $NetBSD: Makefile,v 1.63 2020/01/26 05:26:22 rillig Exp $
 
 DISTNAME=	cppcheck-1.76.1
 PKGREVISION=	21
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcheck/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	https://cppcheck.sourceforge.net/
+HOMEPAGE=	http://cppcheck.sourceforge.net/
 COMMENT=	Tool for static C/C++ code analysis
 LICENSE=	gnu-gpl-v3
 

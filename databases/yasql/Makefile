@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/01/18 23:30:20 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/26 05:26:21 rillig Exp $
 
 DISTNAME=	yasql-1.81
 PKGREVISION=	9
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yasql/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://yasql.sourceforge.net/
+HOMEPAGE=	http://yasql.sourceforge.net/
 COMMENT=	Yet another SQLPlus replacement for Oracle
 
 DEPENDS+=	p5-DBD-Oracle-[0-9]*:../../databases/p5-DBD-Oracle

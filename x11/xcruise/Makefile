@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/01/18 23:35:59 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/26 05:26:28 rillig Exp $
 #
 
 DISTNAME=	xcruise-0.24
@@ -7,7 +7,7 @@ CATEGORIES=	x11 graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xcruiser/}
 
 MAINTAINER=	minoura@NetBSD.org
-HOMEPAGE=	https://xcruiser.sourceforge.net/
+HOMEPAGE=	http://xcruiser.sourceforge.net/
 COMMENT=	Navigate through a three-dimensional view of a file system
 #LICENSE=	GPL
 

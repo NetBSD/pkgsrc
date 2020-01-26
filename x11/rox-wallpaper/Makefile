@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 23:35:56 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 05:26:28 rillig Exp $
 #
 
 DISTNAME=	wallpaper-2.0
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	https://rox.sourceforge.net/desktop/node/54
+HOMEPAGE=	http://rox.sourceforge.net/desktop/node/54
 COMMENT=	For setting the backdrop
 
 DEPENDS+=	rox-lib>=2.0.2nb2:../../devel/rox-lib

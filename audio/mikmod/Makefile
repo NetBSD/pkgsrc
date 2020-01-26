@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.56 2020/01/18 23:30:02 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2020/01/26 05:26:12 rillig Exp $
 
 DISTNAME=	mikmod-3.2.8
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mikmod/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://mikmod.sourceforge.net/
+HOMEPAGE=	http://mikmod.sourceforge.net/
 COMMENT=	MOD player for UNI IT XM S3M MOD MTM STM DSM MED FAR ULT 669 files
 LICENSE=	gnu-gpl-v2
 

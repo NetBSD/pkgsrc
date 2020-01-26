@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/01/18 23:30:04 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/26 05:26:13 rillig Exp $
 
 DISTNAME=		audiotools-3.1.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=audiotools/}
 #GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://audiotools.sourceforge.net/
+HOMEPAGE=	http://audiotools.sourceforge.net/
 COMMENT=	Collection of command line audio handling programs
 LICENSE=	gnu-gpl-v2
 
