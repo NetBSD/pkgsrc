@@ -71,11 +71,6 @@ func replaceAllFunc(s string, re regex.Pattern, repl func(string) string) string
 	return G.res.Compile(re).ReplaceAllStringFunc(s, repl)
 }
 
-func containsWord(s, word string) bool {
-	return strings.Contains(s, word) &&
-		matches(s, regex.Pattern(`\b`+regexp.QuoteMeta(word)+`\b`))
-}
-
 func containsStr(slice []string, s string) bool {
 	for _, str := range slice {
 		if s == str {
@@ -91,6 +86,15 @@ func mapStr(slice []string, fn func(s string) string) []string {
 		result[i] = fn(str)
 	}
 	return result
+}
+
+func anyStr(slice []string, fn func(s string) bool) bool {
+	for _, str := range slice {
+		if fn(str) {
+			return true
+		}
+	}
+	return false
 }
 
 func filterStr(slice []string, fn func(s string) bool) []string {

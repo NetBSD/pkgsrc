@@ -58,6 +58,7 @@ func (s *Suite) Test_Pkglint_Main__help(c *check.C) {
 		"  -h, --help                  show a detailed usage message",
 		"  -I, --dumpmakefile          dump the Makefile after parsing",
 		"  -i, --import                prepare the import of a wip package",
+		"  -n, --network               enable checks that need network access",
 		"  -o, --only                  only log diagnostics containing the given text",
 		"  -p, --profiling             profile the executing program",
 		"  -q, --quiet                 don't show a summary line when finishing",
@@ -356,7 +357,7 @@ func (s *Suite) Test_Pkglint_ParseCommandLine__only(c *check.C) {
 	if exitcode != -1 {
 		t.CheckEquals(exitcode, 0)
 	}
-	t.CheckDeepEquals(G.Opts.LogOnly, []string{":Q"})
+	t.CheckDeepEquals(G.Logger.Opts.Only, []string{":Q"})
 	t.CheckOutputLines(
 		confVersion)
 }

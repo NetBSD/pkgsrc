@@ -1,8 +1,6 @@
 package pkglint
 
-import (
-	"gopkg.in/check.v1"
-)
+import "gopkg.in/check.v1"
 
 func (s *Suite) Test_VartypeCheck_Errorf(c *check.C) {
 	t := s.Init(c)
@@ -144,7 +142,7 @@ func (s *Suite) Test_VartypeCheck_AwkCommand(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:1: $0 is ambiguous. "+
 			"Use ${0} if you mean a Make variable or $$0 if you mean a shell variable.",
-		"WARN: filename.mk:3: $0 is ambiguous. "+
+		"WARN: filename.mk:11: $0 is ambiguous. "+
 			"Use ${0} if you mean a Make variable or $$0 if you mean a shell variable.")
 }
 
@@ -919,96 +917,10 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 		"${MASTER_SITES}")
 
 	vt.Output(
-		"WARN: filename.mk:1: HOMEPAGE should use https instead of http.",
+		"WARN: filename.mk:1: HOMEPAGE should migrate from http to https.",
 		"WARN: filename.mk:3: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
-	pkg := NewPackage(t.File("category/package"))
-	vt.Package(pkg)
-
-	vt.Values(
-		"${MASTER_SITES}")
-
-	// When this assignment occurs while checking a package, but the package
-	// doesn't define MASTER_SITES, that variable cannot be expanded, which means
-	// the warning cannot refer to its value.
-	vt.Output(
-		"WARN: filename.mk:11: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
-
-	delete(pkg.vars.firstDef, "MASTER_SITES")
-	delete(pkg.vars.lastDef, "MASTER_SITES")
-	pkg.vars.Define("MASTER_SITES", t.NewMkLine(pkg.File("Makefile"), 5,
-		"MASTER_SITES=\thttps://cdn.NetBSD.org/pub/pkgsrc/distfiles/"))
-
-	vt.Values(
-		"${MASTER_SITES}")
-
-	vt.Output(
-		"WARN: filename.mk:21: HOMEPAGE should not be defined in terms of MASTER_SITEs. " +
-			"Use https://cdn.NetBSD.org/pub/pkgsrc/distfiles/ directly.")
-
-	delete(pkg.vars.firstDef, "MASTER_SITES")
-	delete(pkg.vars.lastDef, "MASTER_SITES")
-	pkg.vars.Define("MASTER_SITES", t.NewMkLine(pkg.File("Makefile"), 5,
-		"MASTER_SITES=\t${MASTER_SITE_GITHUB}"))
-
-	vt.Values(
-		"${MASTER_SITES}")
-
-	// When MASTER_SITES itself makes use of another variable, pkglint doesn't
-	// resolve that variable and just outputs the simple variant of this warning.
-	vt.Output(
-		"WARN: filename.mk:31: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
-
-	delete(pkg.vars.firstDef, "MASTER_SITES")
-	delete(pkg.vars.lastDef, "MASTER_SITES")
-	pkg.vars.Define("MASTER_SITES", t.NewMkLine(pkg.File("Makefile"), 5,
-		"MASTER_SITES=\t# none"))
-
-	vt.Values(
-		"${MASTER_SITES}")
-
-	// When MASTER_SITES is empty, pkglint cannot extract the first of the URLs
-	// for using it in the HOMEPAGE.
-	vt.Output(
-		"WARN: filename.mk:41: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
-}
-
-func (s *Suite) Test_VartypeCheck_Homepage__http(c *check.C) {
-	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, BtHomepage)
-
-	vt.Varname("HOMEPAGE")
-	vt.Values(
-		"http://www.gnustep.org/",
-		"http://www.pkgsrc.org/",
-		"http://project.sourceforge.net/",
-		"http://sf.net/p/project/",
-		"http://example.org/ # doesn't support https",
-		"http://example.org/ # only supports http",
-		"http://asf.net/")
-
-	vt.Output(
-		"WARN: filename.mk:2: HOMEPAGE should use https instead of http.",
-		"WARN: filename.mk:3: HOMEPAGE should use https instead of http.",
-		"WARN: filename.mk:4: HOMEPAGE should use https instead of http.",
-		"WARN: filename.mk:7: HOMEPAGE should use https instead of http.")
-
-	t.SetUpCommandLine("--autofix")
-	vt.Values(
-		"http://www.gnustep.org/",
-		"http://www.pkgsrc.org/",
-		"http://project.sourceforge.net/",
-		"http://sf.net/p/project/",
-		"http://example.org/ # doesn't support https",
-		"http://example.org/ # only supports http",
-		"http://asf.net/")
-
-	// www.gnustep.org does not support https at all.
-	// www.pkgsrc.org is not in the (short) list of known https domains,
-	// therefore pkglint does not dare to change it automatically.
-	vt.Output(
-		"AUTOFIX: filename.mk:13: Replacing \"http://project.sourceforge.net\" with \"https://project.sourceforge.io\".",
-		"AUTOFIX: filename.mk:14: Replacing \"http\" with \"https\".")
+	// For more tests, see HomepageChecker.
 }
 
 func (s *Suite) Test_VartypeCheck_IdentifierDirect(c *check.C) {
@@ -2380,6 +2292,8 @@ func (vt *VartypeCheckTester) Values(values ...string) {
 
 		mklines.ForEach(func(mkline *MkLine) { test(mklines, mkline, value) })
 	}
+
+	vt.nextSection()
 }
 
 // Output checks that the output from all previous steps is

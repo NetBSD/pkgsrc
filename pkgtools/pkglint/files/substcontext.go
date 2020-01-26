@@ -197,7 +197,7 @@ func (ctx *SubstContext) activate(mkline *MkLine, deactivate bool) bool {
 		return true
 	}
 
-	if ctx.once.FirstTime(id) && !containsWord(mkline.Rationale(), id) {
+	if ctx.once.FirstTime(id) && !mkline.HasRationale(id) {
 		mkline.Warnf("Before defining %s, the SUBST class "+
 			"should be declared using \"SUBST_CLASSES+= %s\".",
 			mkline.Varname(), id)
