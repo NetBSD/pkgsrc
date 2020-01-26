@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/11/02 22:37:57 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/26 17:31:21 rillig Exp $
 #
 
 DISTNAME=	gle-3.1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gle/}
 MASTER_SITES+=	http://www.linas.org/gle/pub/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.linas.org/gle/
+HOMEPAGE=	https://www.linas.org/gle/
 COMMENT=	GL subroutines for drawing tubing and extrusions
 
 GNU_CONFIGURE=		YES

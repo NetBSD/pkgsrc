@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/04/20 12:10:27 nros Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:30:43 rillig Exp $
 
 DISTNAME=	libmpcdec-1.2.6
 CATEGORIES=	audio
@@ -6,7 +6,7 @@ MASTER_SITES=	http://files.musepack.net/source/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.musepack.net/
+HOMEPAGE=	https://www.musepack.net/
 COMMENT=	Portable Musepack decoder library (V7)
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2019/11/04 21:45:55 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2020/01/26 17:32:14 rillig Exp $
 
 DISTNAME=		docbook-4.5
 CATEGORIES=		textproc
@@ -15,7 +15,7 @@ DISTFILES=		docbk241.zip docbk30.zip docbk31.zip docbk40.zip docbk41.zip \
 			docbook-4.2.zip docbook-4.3.zip docbook-4.4.zip docbook-4.5.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.oasis-open.org/docbook/
+HOMEPAGE=	https://www.oasis-open.org/docbook/
 COMMENT=	SGML DTD designed for computer documentation
 
 DEPENDS+=	iso8879>=1986:../../textproc/iso8879

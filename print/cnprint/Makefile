@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/01/19 18:52:22 agc Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:32:00 rillig Exp $
 
 DISTNAME=		#
 PKGNAME=		cnprint-3.30b
@@ -14,7 +14,7 @@ DISTFILES+=		cnprint330b.c \
 			ttfb330b.c \
 			cnprint330b.hlp \
 			cnprint33.cmd \
-			helvet.dat  \
+			helvet.dat \
 			mssong.ttf.gz mssong.htf \
 			mshei.ttf.gz mshei.htf \
 			cc48s.hbf cc48.sym.gz \
@@ -23,7 +23,7 @@ DISTFILES+=		cnprint330b.c \
 			hbf.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ywpw.com/cai/software/
+HOMEPAGE=		https://www.ywpw.com/cai/software/
 COMMENT=		Print & convert CJK style text to PostScript
 
 DIST_SUBDIR=		${PKGNAME_NOREV}

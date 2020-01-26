@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2019/07/21 22:24:10 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2020/01/26 17:32:00 rillig Exp $
 #
 
 DISTNAME=	libgnomeprint-2.18.8
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprint/2.18/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.levien.com/gnome/print-arch.html
+HOMEPAGE=	https://www.levien.com/gnome/print-arch.html
 COMMENT=	Library for the GNOME2 Printing Architecture
 
 USE_TOOLS+=		bison flex gmake intltool msgfmt pkg-config

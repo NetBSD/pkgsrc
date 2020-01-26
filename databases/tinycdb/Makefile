@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/02/27 12:38:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/26 17:30:54 rillig Exp $
 #
 
 DISTNAME=		tinycdb-0.78
@@ -6,7 +6,7 @@ CATEGORIES=		databases
 MASTER_SITES=		http://www.corpit.ru/mjt/tinycdb/
 
 MAINTAINER=		ryoon@NetBSD.org
-HOMEPAGE=		http://www.corpit.ru/mjt/tinycdb.html
+HOMEPAGE=		https://www.corpit.ru/mjt/tinycdb.html
 COMMENT=		Create and read constant databases
 LICENSE=		public-domain
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/09/30 19:28:03 maya Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:31:17 rillig Exp $
 
 DISTNAME=	sienna-${GITHUB_RELEASE:S/v//}
 CATEGORIES=	games
@@ -8,7 +8,7 @@ GITHUB_RELEASE=	v1.0c
 EXTRACT_SUFX=	.love
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tangramgames.dk/games/sienna/
+HOMEPAGE=	https://tangramgames.dk/games/sienna/
 COMMENT=	One button platformer
 LICENSE=	zlib AND cc-by-nc-nd-v3.0-license
 

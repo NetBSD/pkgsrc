@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/21 12:41:24 adam Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:32:23 rillig Exp $
 
 DISTNAME=	ipywidgets-7.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipywidgets/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ipython.org/
+HOMEPAGE=	https://ipython.org/
 COMMENT=	IPython HTML widgets for Jupyter
 LICENSE=	modified-bsd
 

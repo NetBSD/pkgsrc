@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/01/18 21:50:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/26 17:32:07 rillig Exp $
 
 DISTNAME=	spiped-1.5.0
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.tarsnap.com/spiped/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tarsnap.com/spiped/
+HOMEPAGE=	https://www.tarsnap.com/spiped/
 COMMENT=	Tool for creating symmetrically encrypted and authenticated pipes
 LICENSE=	2-clause-bsd
 USE_LANGUAGES=	c99

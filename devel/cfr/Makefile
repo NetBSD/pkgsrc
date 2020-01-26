@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/04/04 16:07:21 pho Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:30:56 rillig Exp $
 
 DISTNAME=	cfr_0_125
 PKGNAME=	${DISTNAME:S/_/-/:S/_/./g}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.benf.org/other/cfr/
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.benf.org/other/cfr/
+HOMEPAGE=	https://www.benf.org/other/cfr/
 COMMENT=	Another java decompiler
 LICENSE=	mit
 

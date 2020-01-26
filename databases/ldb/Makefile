@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 21:48:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/26 17:30:52 rillig Exp $
 
 # Before updating, make sure net/samba4 supports the newer version.
 DISTNAME=	ldb-2.0.8
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://www.samba.org/ftp/ldb/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ldb.samba.org/
+HOMEPAGE=	https://ldb.samba.org/
 COMMENT=	LDAP-like embedded database
 LICENSE=	gnu-gpl-v3
 

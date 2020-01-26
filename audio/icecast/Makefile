@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2020/01/18 21:48:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.77 2020/01/26 17:30:42 rillig Exp $
 
 DISTNAME=	icecast-2.4.4
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/icecast/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.icecast.org/
+HOMEPAGE=	https://www.icecast.org/
 COMMENT=	Live streaming audio server
 LICENSE=	gnu-gpl-v2
 

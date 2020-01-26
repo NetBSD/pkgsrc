@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/05/02 15:49:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:11 rillig Exp $
 #
 
 IPAEXVER=	00401
@@ -9,7 +9,7 @@ MASTER_SITES+=	https://oscdl.ipa.go.jp/IPAexfont/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://ipafont.ipa.go.jp/
+HOMEPAGE=	https://ipafont.ipa.go.jp/
 COMMENT=	IPAex fonts (fixed JIS X0213 Kanji, and proportional ASCII)
 LICENSE=	ipafont
 

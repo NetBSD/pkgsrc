@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/07/03 19:52:53 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/26 17:32:23 rillig Exp $
 
 DISTNAME=	bottle-0.12.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bottle/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bottlepy.org/docs/stable/
+HOMEPAGE=	https://bottlepy.org/docs/stable/
 COMMENT=	Fast, simple and lightweight WSGI micro web-framework for Python
 LICENSE=	mit
 

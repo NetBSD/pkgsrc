@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2020/01/04 22:55:58 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2020/01/26 17:31:09 rillig Exp $
 
 DISTNAME=	mame-0.217
 CATEGORIES=	emulators
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://www.mamedev.org/
+HOMEPAGE=	https://www.mamedev.org/
 COMMENT=	Multiple Arcade Machine Emulator
 LICENSE=	modified-bsd AND gnu-gpl-v2
 

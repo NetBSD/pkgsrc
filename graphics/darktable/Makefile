@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2020/01/18 21:49:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.108 2020/01/26 17:31:20 rillig Exp $
 
 DISTNAME=	darktable-3.0.0
 PKGREVISION=	2
@@ -9,7 +9,7 @@ GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.darktable.org/
+HOMEPAGE=	https://www.darktable.org/
 COMMENT=	Photography workflow application
 LICENSE=	gnu-gpl-v3
 

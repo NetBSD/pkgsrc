@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/12/09 14:20:57 taca Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/26 17:32:22 rillig Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
 GLPI_VERSION=	9.4.4
@@ -9,7 +9,7 @@ MASTER_SITES=	https://github.com/glpi-project/glpi/releases/download/${GLPI_VERS
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	http://glpi-project.org/
+HOMEPAGE=	https://glpi-project.org/
 COMMENT=	IT inventory management software
 LICENSE=	gnu-gpl-v2
 

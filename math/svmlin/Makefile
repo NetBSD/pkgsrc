@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/30 15:13:57 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:31:41 rillig Exp $
 
 DISTNAME=	svmlin-v1.0
 PKGNAME=	${DISTNAME:S/-v/-/}
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://vikas.sindhwani.org/
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://vikas.sindhwani.org/
+HOMEPAGE=	https://vikas.sindhwani.org/
 COMMENT=	Fast Linear SVM Solvers for Supervised and Semi-supervised Learning
 LICENSE=	gnu-gpl-v2
 

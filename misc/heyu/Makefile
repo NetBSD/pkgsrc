@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 17:04:22 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:43 rillig Exp $
 #
 
 DISTNAME=	heyu-1.35
@@ -8,7 +8,7 @@ MASTER_SITES=	http://heyu.tanj.com/
 DISTFILES=	x10_heyu.tgz
 
 MAINTAINER=	damon@brodiefamily.org
-HOMEPAGE=	http://www.heyu.org/
+HOMEPAGE=	https://www.heyu.org/
 COMMENT=	Home Automation Software for the X10 CM11A
 
 PKG_DESTDIR_SUPPORT=	destdir

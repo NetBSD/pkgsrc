@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2019/08/11 13:21:25 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2020/01/26 17:31:33 rillig Exp $
 
 DISTNAME=	courier-imap-4.10.0
 PKGREVISION=	8
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	IMAP server for access to maildir-style mailboxes
-HOMEPAGE=	http://www.courier-mta.org/imap/
+HOMEPAGE=	https://www.courier-mta.org/imap/
 
 DEPENDS+=	courier-maildir>=0.65.0:../../mail/courier-maildir
 DEPENDS+=	couriertcpd>=0.65.0:../../net/couriertcpd

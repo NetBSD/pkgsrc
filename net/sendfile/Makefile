@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/11/03 11:45:53 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2020/01/26 17:31:55 rillig Exp $
 #
 
 DISTNAME=	sendfile-2.1b
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://fex.rus.uni-stuttgart.de/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://fex.rus.uni-stuttgart.de/saft/sendfile.html
+HOMEPAGE=	https://fex.rus.uni-stuttgart.de/saft/sendfile.html
 COMMENT=	Implementation of the Simple asynchronous file transfer protocol
 LICENSE=	gnu-gpl-v2
 

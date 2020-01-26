@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2014/09/25 19:12:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:04 rillig Exp $
 
 DISTNAME=		pbc-0.5.14
 CATEGORIES=		security
 MASTER_SITES=		http://crypto.stanford.edu/pbc/files/
 
 MAINTAINER=		agc@NetBSD.org
-HOMEPAGE=		http://crypto.stanford.edu/pbc/
+HOMEPAGE=		https://crypto.stanford.edu/pbc/
 COMMENT=		Pair-based cryptographic library based on Gap Diffie Helman groups
 LICENSE=		gnu-lgpl-v2
 

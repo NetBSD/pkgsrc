@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/08/11 13:24:18 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/26 17:32:21 rillig Exp $
 #
 
 DISTNAME=		drraw-2.2b2
@@ -7,7 +7,7 @@ CATEGORIES=		databases graphics www
 MASTER_SITES=		http://web.taranis.org/drraw/dist/
 
 MAINTAINER=		kleink@NetBSD.org
-HOMEPAGE=		http://web.taranis.org/drraw/
+HOMEPAGE=		https://web.taranis.org/drraw/
 COMMENT=		Simple web based presentation front-end for RRDtool
 
 NO_BUILD=		yes

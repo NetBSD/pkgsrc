@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/11/03 11:45:55 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/26 17:31:57 rillig Exp $
 #
 
 DISTNAME=	scotty-2.1.11
@@ -8,7 +8,7 @@ CATEGORIES=	net tcl tk
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ibr.cs.tu-bs.de/projects/nm/tkined/welcome.html.orig
+HOMEPAGE=	https://www.ibr.cs.tu-bs.de/projects/nm/tkined/welcome.html.orig
 COMMENT=	Graphical network discovery and monitoring tool based on scotty
 
 GNU_CONFIGURE=		yes

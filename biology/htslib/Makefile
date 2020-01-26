@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 21:48:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/26 17:30:46 rillig Exp $
 
 DISTNAME=	htslib-1.9
 PKGREVISION=	7
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.htslib.org/
+HOMEPAGE=	https://www.htslib.org/
 COMMENT=	C library for high-throughput sequencing data formats
 LICENSE=	mit
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2019/11/02 22:56:54 rillig Exp $
+# $NetBSD: Makefile.common,v 1.24 2020/01/26 17:31:25 rillig Exp $
 # used by inputmethod/ja-freewnn-server/Makefile
 # used by inputmethod/ja-freewnn-lib/Makefile
 
@@ -8,7 +8,7 @@ MASTER_SITES+=	ftp://ftp.st.ryukoku.ac.jp/pub/japanese-im/FreeWnn/
 CATEGORIES=	inputmethod
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://freewnn.osdn.jp/
+HOMEPAGE=	https://freewnn.osdn.jp/
 COMMENT=	Japanese/Chinese/Korean input method
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/01/14 20:56:09 jaapb Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/26 17:30:58 rillig Exp $
 #
 
 GITHUB_PROJECT=	js_of_ocaml
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://ocsigen.org/js_of_ocaml/
+HOMEPAGE=	https://ocsigen.org/js_of_ocaml/
 COMMENT=	Compiler of OCaml bytecode to Javascript
 LICENSE=	gnu-lgpl-v2
 

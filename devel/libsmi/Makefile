@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2015/11/06 17:07:23 adam Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/26 17:30:59 rillig Exp $
 
 DISTNAME=	libsmi-0.5.0
 CATEGORIES=	devel net
 MASTER_SITES=	http://www.ibr.cs.tu-bs.de/projects/libsmi/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ibr.cs.tu-bs.de/projects/libsmi/
+HOMEPAGE=	https://www.ibr.cs.tu-bs.de/projects/libsmi/
 COMMENT=	Library to access SMI MIB information
 LICENSE=	esdl-license
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:54 rillig Exp $
 #
 
 PTTVERS=	1.9.0
@@ -9,7 +9,7 @@ CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twitter/}
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	http://mike.verdone.ca/twitter/
+HOMEPAGE=	https://mike.verdone.ca/twitter/
 COMMENT=	Twitter API, command-line tool, and IRC bot
 LICENSE=	gnu-gpl-v2
 

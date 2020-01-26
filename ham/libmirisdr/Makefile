@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/02/14 07:25:57 dbj Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:24 rillig Exp $
 
 PKGNAME=	libmirisdr-0.1
 PKGREVISION=	2
@@ -8,7 +8,7 @@ CATEGORIES=	ham
 MASTER_SITES=	-http://cgit.osmocom.org/libmirisdr/snapshot/libmirisdr-${VERSION}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cgit.osmocom.org/libmirisdr/
+HOMEPAGE=	https://cgit.osmocom.org/libmirisdr/
 COMMENT=	Osmocom Mirics MSi2500 + MSi001 SDR library
 LICENSE=	gnu-gpl-v2
 

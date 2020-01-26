@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/11/04 21:43:33 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/26 17:32:13 rillig Exp $
 #
 
 DISTNAME=	btparse-0.35
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AM/AMBS/btparse/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gerg.ca/software/btOOL/
+HOMEPAGE=	https://www.gerg.ca/software/btOOL/
 COMMENT=	BibTeX parsing library
 
 USE_TOOLS+=	perl pod2man

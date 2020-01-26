@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/06/08 10:53:29 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:30:52 rillig Exp $
 #
 # The upstream distfile is unversioned and replaced every time a new version
 # is released, so we must put a copy of it up in LOCAL_PORTS with DIST_SUBDIR
@@ -13,7 +13,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.agner.org/optimize/
+HOMEPAGE=	https://www.agner.org/optimize/
 COMMENT=	Object file converter and disassembler
 LICENSE=	gnu-gpl-v3
 

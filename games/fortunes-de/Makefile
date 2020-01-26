@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 11:54:38 asau Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:15 rillig Exp $
 #
 
 DISTNAME=	fortunes-de-0.20
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/f/fortunes-de/}
 DISTFILES=	fortunes-de_0.20.orig.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://packages.debian.org/unstable/games/fortunes-de.html
+HOMEPAGE=	https://packages.debian.org/unstable/games/fortunes-de.html
 COMMENT=	German data files for fortune
 
 BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile

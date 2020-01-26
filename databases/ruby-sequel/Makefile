@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.77 2020/01/16 15:18:45 taca Exp $
+# $NetBSD: Makefile,v 1.78 2020/01/26 17:30:54 rillig Exp $
 
 DISTNAME=	sequel-5.28.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sequel.jeremyevans.net/
+HOMEPAGE=	https://sequel.jeremyevans.net/
 COMMENT=	Model classes for the Sequel Database Toolkit
 LICENSE=	mit
 

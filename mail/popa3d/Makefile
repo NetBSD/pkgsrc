@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2017/01/19 18:52:16 agc Exp $
+# $NetBSD: Makefile,v 1.56 2020/01/26 17:31:35 rillig Exp $
 #
 
 DISTNAME=	popa3d-1.0.3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.openwall.com/popa3d/
 MASTER_SITES+=	ftp://ftp.openwall.com/pub/projects/popa3d/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openwall.com/popa3d/
+HOMEPAGE=	https://www.openwall.com/popa3d/
 COMMENT=	Secure, reliable, performant, and small pop3 server
 
 POPA3D_USER?=	popa3d

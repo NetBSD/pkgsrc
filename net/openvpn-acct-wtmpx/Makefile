@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/05/24 20:35:12 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:53 rillig Exp $
 
 .include "../../net/openvpn/Makefile.common"
 
@@ -9,7 +9,7 @@ MASTER_SITES=	http://ftp.espci.fr/pub/openvpn-acct-wtmpx/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	manu@NetBSD.org
-HOMEPAGE=	http://ftp.espci.fr/pub/openvpn-acct-wtmpx/
+HOMEPAGE=	https://ftp.espci.fr/pub/openvpn-acct-wtmpx/
 COMMENT=	Log OpenVPN logins and logouts to wtmpx
 LICENSE=	2-clause-bsd
 

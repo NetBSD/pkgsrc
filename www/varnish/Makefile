@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/12/19 22:26:02 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/26 17:32:25 rillig Exp $
 #
 
 DISTNAME=	varnish-3.0.6
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://repo.varnish-cache.org/source/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://varnish-cache.org/
+HOMEPAGE=	https://varnish-cache.org/
 COMMENT=	High-performace HTTP accelerator
 LICENSE=	modified-bsd
 

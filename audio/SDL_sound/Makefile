@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/04/20 12:10:24 nros Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/26 17:30:41 rillig Exp $
 #
 
 DISTNAME=		SDL_sound-1.0.3
@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://icculus.org/SDL_sound/downloads/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://icculus.org/SDL_sound/
+HOMEPAGE=		https://icculus.org/SDL_sound/
 COMMENT=		SDL library to handle the decoding of different file formats
 LICENSE=		gnu-lgpl-v2.1
 

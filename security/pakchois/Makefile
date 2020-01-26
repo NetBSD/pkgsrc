@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/11/04 21:12:57 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:32:06 rillig Exp $
 #
 
 DISTNAME=	pakchois-0.4
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.manyfish.co.uk/pakchois/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.manyfish.co.uk/pakchois/
+HOMEPAGE=	https://www.manyfish.co.uk/pakchois/
 COMMENT=	PKCS\#11 wrapper library
 
 GNU_CONFIGURE=	yes

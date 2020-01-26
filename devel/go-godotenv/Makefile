@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/10 13:32:20 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:30:57 rillig Exp $
 
 DISTNAME=	godotenv-1.2.0
 PKGNAME=	go-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	${PKGBASE:S/^go-//}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://godoc.org/github.com/joho/godotenv
+HOMEPAGE=	https://godoc.org/github.com/joho/godotenv
 COMMENT=	Go port of the Ruby dotenv library
 LICENSE=	mit
 

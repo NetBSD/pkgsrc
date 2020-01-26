@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2019/06/28 19:11:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.70 2020/01/26 17:31:49 rillig Exp $
 
 DISTNAME=		djbdns-1.05
 PKGREVISION=		14
@@ -7,7 +7,7 @@ MASTER_SITES=		http://cr.yp.to/djbdns/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://cr.yp.to/djbdns.html
+HOMEPAGE=		https://cr.yp.to/djbdns.html
 COMMENT=		Collection of secure and reliable DNS tools
 LICENSE=		public-domain
 

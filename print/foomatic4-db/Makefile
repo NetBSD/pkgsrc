@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/07/21 16:39:05 leot Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:32:00 rillig Exp $
 #
 
 DISTNAME=	foomatic-db-4.0-20180721
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.openprinting.org/download/foomatic/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openprinting.org/download/foomatic/
+HOMEPAGE=	https://www.openprinting.org/download/foomatic/
 COMMENT=	Printer database
 LICENSE=	2-clause-bsd AND gnu-gpl-v2 AND mit
 

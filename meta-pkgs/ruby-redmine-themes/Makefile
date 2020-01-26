@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/03 19:35:55 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:42 rillig Exp $
 
 DISTNAME=	redmine-themes-1.3.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	# blank
 DISTFILES=	# blank
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.redmine.org/
+HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Redmine themes meta package
 
 DEPENDS+=	${RUBY_PKGPREFIX}-redmine-flatly-light-theme-[0-9]*:../../devel/ruby-redmine-flatly-light-theme

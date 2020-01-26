@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/07/02 11:12:01 wiedi Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:41 rillig Exp $
 
 DISTNAME=	teapot-2.3.0
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.syntax-k.de/projekte/teapot/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.syntax-k.de/projekte/teapot/
+HOMEPAGE=	https://www.syntax-k.de/projekte/teapot/
 COMMENT=	Curses based spread sheet program
 LICENSE=	gnu-gpl-v3
 

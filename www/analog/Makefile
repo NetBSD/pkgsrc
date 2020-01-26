@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2017/01/19 18:52:28 agc Exp $
+# $NetBSD: Makefile,v 1.64 2020/01/26 17:32:20 rillig Exp $
 
 DISTNAME=	analog-6.0
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${HOMEPAGE}
 MASTER_SITES+=	http://www.web42.com/analog/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.analog.cx/
+HOMEPAGE=	https://www.analog.cx/
 COMMENT=	Extremely fast program for analysing WWW logfiles
 
 WRKSRC=		${WRKDISTDIR}/src

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/10/31 00:32:16 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/26 17:31:54 rillig Exp $
 
 DISTNAME=	paho-mqtt-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	https://files.pythonhosted.org/packages/59/11/1dd5c70f0f27a88a3a05772cd95f6087ac479fac66d9c7752ee5e16ddbbc/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.eclipse.org/paho/
+HOMEPAGE=	https://www.eclipse.org/paho/
 COMMENT=	MQTT version 3.1.1 client class
 LICENSE=	epl-v1.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/10/28 15:56:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/26 17:31:36 rillig Exp $
 #
 
 DISTNAME=		qmail-qfilter-2.1
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://untroubled.org/qmail-qfilter/
+HOMEPAGE=		https://untroubled.org/qmail-qfilter/
 COMMENT=		Multi-filter front end for qmail-queue
 LICENSE=		gnu-gpl-v2
 

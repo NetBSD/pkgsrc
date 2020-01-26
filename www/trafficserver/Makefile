@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/01/18 21:51:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/26 17:32:25 rillig Exp $
 
 DISTNAME=	trafficserver-7.1.2
 PKGREVISION=	11
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=trafficserver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	fhajny@NetBSD.org
-HOMEPAGE=	http://trafficserver.apache.org/
+HOMEPAGE=	https://trafficserver.apache.org/
 COMMENT=	Fast, scalable and extensible caching proxy server
 LICENSE=	apache-2.0
 
@@ -26,41 +26,41 @@ BUILD_DEPENDS+=			${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx1
 
 .include "options.mk"
 
-BODY_FILES+=	access__denied access__proxy_auth_required			\
-		access__ssl_forbidden cache__not_in_cache cache__read_error	\
-		congestion__retryAfter connect__dns_failed			\
-		connect__failed_connect connect__hangup default			\
-		interception__no_host redirect__moved_permanently		\
-		redirect__moved_temporarily request__cycle_detected		\
-		request__invalid_content_length request__no_content_length	\
-		request__no_host request__scheme_unsupported			\
-		request__syntax_error response__bad_response			\
-		response__bad_version timeout__activity	timeout__inactivity	\
+BODY_FILES+=	access__denied access__proxy_auth_required		\
+		access__ssl_forbidden cache__not_in_cache cache__read_error \
+		congestion__retryAfter connect__dns_failed		\
+		connect__failed_connect connect__hangup default		\
+		interception__no_host redirect__moved_permanently	\
+		redirect__moved_temporarily request__cycle_detected	\
+		request__invalid_content_length request__no_content_length \
+		request__no_host request__scheme_unsupported		\
+		request__syntax_error response__bad_response		\
+		response__bad_version timeout__activity	timeout__inactivity \
 		transcoding__unsupported urlrouting__no_mapping
 
-CONFIG_FILES+=	cache cluster congestion hosting ip_allow log_hosts logging	\
-		metrics parent plugin records remap socks splitdns		\
+CONFIG_FILES+=	cache cluster congestion hosting ip_allow log_hosts logging \
+		metrics parent plugin records remap socks splitdns	\
 		ssl_multicert storage vaddrs volume
 
 EGDIR=			share/examples/${PKGBASE}
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 PKG_SYSCONFDIR_PERMS+=	${TS_USER} ${TS_GROUP} 0755
-MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/body_factory/default			\
+MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/body_factory/default \
 			${TS_USER} ${TS_GROUP} 0755
-MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/snapshots				\
+MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/snapshots \
 			${TS_USER} ${TS_GROUP} 0755
 OWN_DIRS_PERMS+=	${TS_DIR} ${TS_USER} ${TS_GROUP} 0755
 OWN_DIRS_PERMS+=	${TS_LOGDIR} ${TS_USER} ${TS_GROUP} 0755
 
 .for file in ${BODY_FILES}
-CONF_FILES_PERMS+=	${EGDIR}/body_factory/default/${file:S/__/\#/}		\
-			${PKG_SYSCONFDIR}/body_factory/default/${file:S/__/\#/}	\
+CONF_FILES_PERMS+=	${EGDIR}/body_factory/default/${file:S/__/\#/}	\
+			${PKG_SYSCONFDIR}/body_factory/default/${file:S/__/\#/} \
 			${TS_USER} ${TS_GROUP} 0644
 .endfor
 .for file in ${CONFIG_FILES}
-CONF_FILES_PERMS+=	${EGDIR}/${file}.config.default				\
-			${PKG_SYSCONFDIR}/${file}.config 			\
+CONF_FILES_PERMS+=	${EGDIR}/${file}.config.default			\
+			${PKG_SYSCONFDIR}/${file}.config		\
 			${TS_USER} ${TS_GROUP} 0644
 .endfor
 

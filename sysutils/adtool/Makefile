@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 21:50:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:32:08 rillig Exp $
 #
 
 DISTNAME=	adtool-1.3.3
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://gp2x.org/adtool/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gp2x.org/adtool/
+HOMEPAGE=	https://gp2x.org/adtool/
 COMMENT=	Active Directory administration utility for Unix
 LICENSE=	gnu-gpl-v2
 

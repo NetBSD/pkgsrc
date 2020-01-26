@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/06/01 14:29:23 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:32:06 rillig Exp $
 
 DISTNAME=	paperkey-1.3
 CATEGORIES=	security
 MASTER_SITES=	http://www.jabberwocky.com/software/paperkey/
 
 MAINTAINER=	shattered@NetBSD.org
-HOMEPAGE=	http://www.jabberwocky.com/software/paperkey/
+HOMEPAGE=	https://www.jabberwocky.com/software/paperkey/
 COMMENT=	Extract essence of OpenPGP secret key for printing
 LICENSE=	gnu-gpl-v2
 

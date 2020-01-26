@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/07/10 17:53:38 sevan Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:30 rillig Exp $
 
 DISTNAME=	opensource-cobol-1.5.1J-utf8
 PKGNAME=	${DISTNAME:S/-utf8//}
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	-https://www.osscons.jp/osscobol/files/?action=cabinet_action_main_download&block_id=414&room_id=21&cabinet_id=11&file_id=382&upload_id=761
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.osscons.jp/osscobol/
+HOMEPAGE=	https://www.osscons.jp/osscobol/
 COMMENT=	UTF-8 version of opensource COBOL, OpenCOBOL with Japanese extensions
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/08/11 13:23:42 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2020/01/26 17:32:16 rillig Exp $
 
 DISTNAME=		Text-CSV-Hash-0.18
 PKGNAME=		p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.mono.org/abs/tools/Text-CSV-Hash/
 EXTRACT_SUFX=		.tbz
 
 MAINTAINER=		abs@NetBSD.org
-HOMEPAGE=		http://www.mono.org/abs/tools/Text-CSV-Hash/
+HOMEPAGE=		https://www.mono.org/abs/tools/Text-CSV-Hash/
 COMMENT=		Perl5 module for hash based CSV usage
 
 PERL5_PACKLIST=		auto/Text/CSV/Hash/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/01/18 21:48:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/26 17:31:45 rillig Exp $
 #
 
 DISTNAME=	sword-1.8.1
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://www.crosswire.org/ftpmirror/pub/sword/source/v1.8/
 
 MAINTAINER=	elentirmo.gilgalad@gmail.com
-HOMEPAGE=	http://www.crosswire.org/sword/index.jsp
+HOMEPAGE=	https://www.crosswire.org/sword/index.jsp
 COMMENT=	SWORD Bible study software libraries and tools
 LICENSE=	gnu-gpl-v2
 

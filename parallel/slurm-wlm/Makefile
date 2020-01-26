@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/01/18 21:50:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/26 17:31:59 rillig Exp $
 
 DISTNAME=	slurm-17.11.5
 PKGNAME=	slurm-wlm-17.11.5
@@ -10,7 +10,7 @@ MASTER_SITES+=	http://www.schedmd.com/download/development/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.schedmd.com/
+HOMEPAGE=	https://www.schedmd.com/
 COMMENT=	Simple Linux Utility for Resource Management
 
 LICENSE=	gnu-gpl-v2

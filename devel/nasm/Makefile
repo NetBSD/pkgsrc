@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2019/08/11 13:18:47 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2020/01/26 17:31:00 rillig Exp $
 
 DISTNAME=	nasm-2.14.02
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.nasm.us/pub/nasm/releasebuilds/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nasm.us/
+HOMEPAGE=	https://www.nasm.us/
 COMMENT=	General-purpose x86 assembler
 LICENSE=	2-clause-bsd
 

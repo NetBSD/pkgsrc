@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/11/03 11:45:50 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/26 17:31:54 rillig Exp $
 
 DISTNAME=	foolscap-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/foolscap/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://foolscap.lothar.com/trac
+HOMEPAGE=	https://foolscap.lothar.com/trac
 COMMENT=	RPC protocol for Twisted
 LICENSE=	mit
 

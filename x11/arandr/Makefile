@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/04/25 07:33:29 maya Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/26 17:32:26 rillig Exp $
 
 DISTNAME=	arandr-0.1.10
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://christian.amsuess.com/tools/arandr/files/
 
 MAINTAINER=	rga@sdf.lonestar.org
-HOMEPAGE=	http://christian.amsuess.com/tools/arandr/
+HOMEPAGE=	https://christian.amsuess.com/tools/arandr/
 COMMENT=	Designed to provide a simple visual front end for XRandR
 LICENSE=	gnu-gpl-v3
 

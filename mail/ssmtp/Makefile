@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/01/18 21:49:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/26 17:31:37 rillig Exp $
 #
 # TLS functionality needs testing. Please let me know the result,
 # and preferably info about your system.
@@ -13,7 +13,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/ssmtp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://packages.debian.org/stable/mail/ssmtp
+HOMEPAGE=	https://packages.debian.org/stable/mail/ssmtp
 COMMENT=	Extremely simple MTA to forward mail to a mail hub
 LICENSE=	gnu-gpl-v2
 

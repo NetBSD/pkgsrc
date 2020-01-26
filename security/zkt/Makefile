@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/10/16 09:37:27 maya Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:08 rillig Exp $
 
 DISTNAME=	zkt-1.1.2
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.hznet.de/dns/zkt/
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://www.hznet.de/dns/zkt/
+HOMEPAGE=	https://www.hznet.de/dns/zkt/
 COMMENT=	DNSSEC Zone Key Tool
 LICENSE=	original-bsd
 

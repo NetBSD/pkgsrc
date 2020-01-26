@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2018/07/04 13:40:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:30:45 rillig Exp $
 
 DISTNAME=	wavesurfer-1.8.5
 CATEGORIES=	audio
 MASTER_SITES=	http://www.speech.kth.se/wavesurfer/
 
 MAINTAINER=	gson@NetBSD.org
-HOMEPAGE=	http://www.speech.kth.se/wavesurfer/
+HOMEPAGE=	https://www.speech.kth.se/wavesurfer/
 COMMENT=	Tool for sound visualization and manipulation
 LICENSE=	esdl-license
 

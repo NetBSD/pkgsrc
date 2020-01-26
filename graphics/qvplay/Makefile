@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/11/02 22:38:03 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:31:23 rillig Exp $
 #
 
 DISTNAME=	qvplay-0.95
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.asahi-net.or.jp/~xg2k-hys/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.asahi-net.or.jp/~xg2k-hys/index-e.html
+HOMEPAGE=	https://www.asahi-net.or.jp/~xg2k-hys/index-e.html
 COMMENT=	Software for use with CASIO QV digital cameras
 LICENSE=	generic-nonlicense
 

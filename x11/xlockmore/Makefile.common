@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.80 2019/11/03 09:14:20 rillig Exp $
+# $NetBSD: Makefile.common,v 1.81 2020/01/26 17:32:28 rillig Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
@@ -9,7 +9,7 @@ MASTER_SITES=	http://sillycycle.com/xlock/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sillycycle.com/xlockmore.html
+HOMEPAGE=	https://sillycycle.com/xlockmore.html
 
 DISTINFO_FILE?=		${.CURDIR}/../xlockmore/distinfo
 PATCHDIR?=		${.CURDIR}/../xlockmore/patches

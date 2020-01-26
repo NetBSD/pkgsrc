@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2019/06/25 14:39:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.52 2020/01/26 17:31:34 rillig Exp $
 #
 
 DISTNAME=		ezmlm-idx-${IDXVERSION}
@@ -8,7 +8,7 @@ IDXVERSION=		7.2.2
 MASTER_SITES=		http://untroubled.org/ezmlm/archive/${IDXVERSION}/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://untroubled.org/ezmlm/
+HOMEPAGE=		https://untroubled.org/ezmlm/
 COMMENT=		Version of ezmlm with enhancements by third parties
 LICENSE=		gnu-gpl-v2
 
@@ -58,11 +58,11 @@ post-extract:
 .include "../../mk/bsd.prefs.mk"
 
 post-build:
-.	if ${OPSYS} == Darwin
+.if ${OPSYS} == Darwin
 	cd ${WRKSRC} && for lib in *.so; do \
 	  install_name_tool -id ${PREFIX}/lib/ezmlm/$${lib} $${lib}; \
 	done
-.	endif
+.endif
 
 do-test:
 	cd ${WRKSRC} && ./ezmlm-test
@@ -72,13 +72,13 @@ pre-install:
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-.	for file in BLURB CHANGES FAQ INSTALL README README.mysql README.pgsql README.std THANKS TODO UPGRADE DOWNGRADE
+.for file in BLURB CHANGES FAQ INSTALL README README.mysql README.pgsql README.std THANKS TODO UPGRADE DOWNGRADE
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${DOCDIR}/${file}
-.	endfor
+.endfor
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-.	for file in ezcgi.css ezcgirc ezmlmglrc ezmlmrc ezmlmsubrc
+.for file in ezcgi.css ezcgirc ezmlmglrc ezmlmrc ezmlmsubrc
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${EGDIR}/${file}
-.	endfor
+.endfor
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

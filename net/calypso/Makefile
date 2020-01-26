@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/11/03 11:45:31 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:48 rillig Exp $
 
 DISTNAME=	calypso-1.3
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	net time
 MASTER_SITES=	http://keithp.com/calypso/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://keithp.com/blogs/calypso/
+HOMEPAGE=	https://keithp.com/blogs/calypso/
 COMMENT=	CardDAV/CalDAV server
 LICENSE=	gnu-gpl-v3
 

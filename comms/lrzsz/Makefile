@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/10/09 14:06:03 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/26 17:30:50 rillig Exp $
 
 DISTNAME=	lrzsz-0.12.20
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	comms
 MASTER_SITES=	http://www.ohse.de/uwe/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ohse.de/uwe/software/lrzsz.html
+HOMEPAGE=	https://www.ohse.de/uwe/software/lrzsz.html
 COMMENT=	Receive/Send files via X/Y/ZMODEM protocol.  (unrestrictive)
 
 USE_PKGLOCALEDIR=	yes

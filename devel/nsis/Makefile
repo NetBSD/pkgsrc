@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.23 2019/11/03 10:39:21 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/26 17:31:01 rillig Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsis/}
 EXTRACT_SUFX=	.zip .tar.bz2
-DISTFILES=	${DISTNAME}.zip		\
+DISTFILES=	${DISTNAME}.zip \
 		${NSIS_SRC}.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://nsis.sourceforge.net/Main_Page
+HOMEPAGE=	https://nsis.sourceforge.io/Main_Page
 COMMENT=	Scriptable system to build Windows installers
 
 USE_LANGUAGES=	c c++

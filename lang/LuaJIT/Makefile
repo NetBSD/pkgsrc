@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/02/25 08:27:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:26 rillig Exp $
 #
 
 DISTNAME=	LuaJIT-1.1.5
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://luajit.org/download/
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://luajit.org/
+HOMEPAGE=	https://luajit.org/
 COMMENT=	Just-In-Time Compiler for the Lua programming language
 
 # Only supports 32-bit x86. Try lang/LuaJIT2 instead...

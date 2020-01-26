@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 14:06:04 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/26 17:30:52 rillig Exp $
 
 DISTNAME=	qkcc100
 PKGNAME=	qkc-1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://hp.vector.co.jp/authors/VA000501/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
-HOMEPAGE=	http://hp.vector.co.jp/authors/VA000501/
+HOMEPAGE=	https://hp.vector.co.jp/authors/VA000501/
 COMMENT=	Quick Kanji code Converter
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/ja_JP.EUC/man1

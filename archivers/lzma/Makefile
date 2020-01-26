@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/11 19:46:57 asau Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/26 17:30:40 rillig Exp $
 #
 
 DISTNAME=		lzma465
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sevenzip/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.7-zip.org/sdk.html
+HOMEPAGE=		https://www.7-zip.org/sdk.html
 COMMENT=		LZMA compression utility from 7zip
 LICENSE=		public-domain
 

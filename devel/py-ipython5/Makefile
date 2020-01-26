@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/08/04 09:29:59 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:03 rillig Exp $
 
 DISTNAME=	ipython-5.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ipython.org/
+HOMEPAGE=	https://ipython.org/
 COMMENT=	Interactive computing environment for Python
 LICENSE=	modified-bsd
 

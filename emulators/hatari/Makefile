@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/10/20 11:10:48 nia Exp $
+# $NetBSD: Makefile,v 1.54 2020/01/26 17:31:09 rillig Exp $
 
 DISTNAME=	hatari-2.0.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.tuxfamily.org/hatari/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hatari.tuxfamily.org/
+HOMEPAGE=	https://hatari.tuxfamily.org/
 COMMENT=	Atari ST emulator
 LICENSE=	gnu-gpl-v2
 

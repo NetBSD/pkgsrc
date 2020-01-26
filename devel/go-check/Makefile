@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/10 13:32:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.23 2020/01/26 17:30:57 rillig Exp $
 #
 
 DISTNAME=		go-check-1
@@ -9,7 +9,7 @@ GITHUB_PROJECT=		check
 GITHUB_TAG=		4f90aea
 
 MAINTAINER=		rillig@NetBSD.org
-HOMEPAGE=		http://labix.org/gocheck
+HOMEPAGE=		https://labix.org/gocheck
 COMMENT=		Rich testing for the Go language
 LICENSE=		2-clause-bsd
 

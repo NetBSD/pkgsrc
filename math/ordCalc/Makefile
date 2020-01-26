@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/11/02 16:16:20 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:39 rillig Exp $
 #
 
 ORDCALCVER=	0.2
@@ -10,7 +10,7 @@ MASTER_SITES=	http://mtnmath.com/ord/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	is@NetBSD.org
-HOMEPAGE=	http://mtnmath.com/ord/
+HOMEPAGE=	https://mtnmath.com/ord/
 COMMENT=	Ordinal arithmetic calculator and research tool
 LICENSE=	gnu-gpl-v2
 

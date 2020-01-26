@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/06/02 19:11:01 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:31:28 rillig Exp $
 
 VERS=		6.0.0
 DISTNAME=	compiler-rt-${VERS}.src
@@ -7,7 +7,7 @@ CATEGORIES=	lang devel
 MASTER_SITES=	https://releases.llvm.org/${VERS}/
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://compiler-rt.llvm.org/
+HOMEPAGE=	https://compiler-rt.llvm.org/
 COMMENT=	Runtime support for Apple Blocks
 LICENSE=	mit
 

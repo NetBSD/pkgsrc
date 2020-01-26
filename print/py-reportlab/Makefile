@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2019/06/10 15:39:06 adam Exp $
+# $NetBSD: Makefile,v 1.73 2020/01/26 17:32:01 rillig Exp $
 
 DISTNAME=	reportlab-3.5.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/reportlab/}
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://www.reportlab.com/
+HOMEPAGE=	https://www.reportlab.com/
 COMMENT=	Powerful PDF-generating toolkit for Python
 LICENSE=	modified-bsd
 
