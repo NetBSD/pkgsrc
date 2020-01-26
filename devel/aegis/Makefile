@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/01/18 23:30:21 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2020/01/26 05:26:21 rillig Exp $
 #
 
 DISTNAME=	aegis-4.24.2
@@ -7,7 +7,7 @@ CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aegis/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://aegis.sourceforge.net/
+HOMEPAGE=	http://aegis.sourceforge.net/
 COMMENT=	Aegis is a transaction base software configuration management system
 LICENSE=	gnu-gpl-v3
 
