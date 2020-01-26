@@ -35,14 +35,18 @@ DDEESSCCRRIIPPTTIIOONN
                          pkgsrc.  This is especially useful for packages from
                          the pkgsrc‐wip project.
 
+     −−nn|−−‐‐nneettwwoorrkk        Enable checks that require network access, for exam‐
+                         ple to check whether the package homepage is reach‐
+                         able.
+
      −−oo|−−‐‐oonnllyy _s_u_b_s_t_r_i_n_g
                          Only handle those diagnostics that have _s_u_b_s_t_r_i_n_g in
                          their text.  This is useful in combination with
                          −−‐‐aauuttooffiixx and −−‐‐rreeccuurrssiivvee,, to fix only a single kind
                          of warning in a large number of files.
 
-     −−qq|−−‐‐qquuiieett          Don’t print the errors and warnings summary before
-                         terminating.
+     −−qq|−−‐‐qquuiieett          Don’t print the errors and warnings summary at the
+                         end.
 
      −−rr|−−‐‐rreeccuurrssiivvee      Check subdirectories, too.  The subdirectories are
                          those that are mentioned in a ‘SUBDIR+=’ line.
@@ -109,4 +113,4 @@ BBUUGGSS
      If you don’t understand the messages, feel free to ask the author or on
      the ⟨pkgsrc‐users@pkgsrc.org⟩ mailing list.
 
-NetBSD 8.0                     November 30, 2019                    NetBSD 8.0
+NetBSD 8.0                     January 26, 2020                     NetBSD 8.0
