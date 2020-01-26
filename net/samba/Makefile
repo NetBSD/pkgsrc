@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.278 2020/01/18 21:50:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.279 2020/01/26 17:31:55 rillig Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	${SAMBA_MIRRORS:=stable/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.samba.org/
+HOMEPAGE=	https://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 

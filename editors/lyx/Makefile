@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2020/01/18 21:49:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.86 2020/01/26 17:31:06 rillig Exp $
 
 DISTNAME=		lyx-2.3.2
 PKGREVISION=		8
@@ -10,7 +10,7 @@ MASTER_SITES+=		ftp://ftp.ntua.gr/pub/X11/LyX/stable/2.3.x/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://www.lyx.org/
+HOMEPAGE=		https://www.lyx.org/
 COMMENT=		Document processor and graphical frontend for LaTeX
 LICENSE=		gnu-gpl-v2
 

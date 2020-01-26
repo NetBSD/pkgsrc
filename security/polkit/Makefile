@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:23:00 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/26 17:32:06 rillig Exp $
 
 DISTNAME=	polkit-0.115
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.freedesktop.org/software/polkit/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software/polkit
+HOMEPAGE=	https://www.freedesktop.org/wiki/Software/polkit
 COMMENT=	Authorization Manager
 LICENSE=	gnu-lgpl-v2
 
@@ -55,7 +55,7 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
 SPECIAL_PERMS+=		lib/polkit-1/polkit-agent-helper-1 ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=		bin/pkexec ${SETUID_ROOT_PERMS}
 
-CONF_FILES+=	${PREFIX}/share/examples/polkit/dbus-1/system.d/org.freedesktop.PolicyKit1.conf	\
+CONF_FILES+=	${PREFIX}/share/examples/polkit/dbus-1/system.d/org.freedesktop.PolicyKit1.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
 CONF_FILES+=	${PREFIX}/share/examples/polkit/polkit-1/rules.d/50-default.rules \
 		${PKG_SYSCONFDIR}/polkit-1/rules.d/50-default.rules

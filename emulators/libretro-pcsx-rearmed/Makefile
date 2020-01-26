@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/07/05 08:38:36 nia Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/26 17:31:09 rillig Exp $
 
 DISTNAME=	libretro-pcsx-rearmed-0.22
 CATEGORIES=	emulators
@@ -7,7 +7,7 @@ GITHUB_PROJECT=	pcsx_rearmed
 GITHUB_TAG=	r22
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://notaz.gp2x.de/pcsx_rearmed.php
+HOMEPAGE=	https://notaz.gp2x.de/pcsx_rearmed.php
 COMMENT=	Libretro core based on the PCSX ReARMed emulator
 LICENSE=	gnu-gpl-v2
 

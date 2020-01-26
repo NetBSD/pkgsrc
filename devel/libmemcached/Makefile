@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/11/03 10:39:17 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:30:59 rillig Exp $
 #
 
 DISTNAME=	libmemcached-1.0.18
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/libmemcached/1.0/${PKGVERSION_NOREV}/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libmemcached.org/
+HOMEPAGE=	https://libmemcached.org/
 COMMENT=	C/C++ client library and tools for the memcached server
 LICENSE=	modified-bsd
 

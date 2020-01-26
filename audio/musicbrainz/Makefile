@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2018/02/01 10:04:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/26 17:30:44 rillig Exp $
 
 DISTNAME=	libmusicbrainz-2.1.5
 PKGNAME=	${DISTNAME:S/lib//}
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	http://musicbrainz.org/doc/libmusicbrainz
+HOMEPAGE=	https://musicbrainz.org/doc/libmusicbrainz
 COMMENT=	Second generation incarnation of the CD Index (2.x series)
 LICENSE=	gnu-lgpl-v2.1
 

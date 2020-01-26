@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2018/01/14 15:26:46 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/26 17:31:13 rillig Exp $
 #
 
 DISTNAME=	d2x-0.2.5
@@ -7,7 +7,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	http://icculus.org/d2x/src/
 
 MAINTAINER=	airhead@users.sourceforge.net
-HOMEPAGE=	http://icculus.org/d2x/
+HOMEPAGE=	https://icculus.org/d2x/
 COMMENT=	Descent II port
 
 GNU_CONFIGURE=	yes

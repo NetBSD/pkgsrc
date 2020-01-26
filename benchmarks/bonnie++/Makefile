@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/08/11 13:17:58 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/26 17:30:46 rillig Exp $
 #
 
 DISTNAME=	bonnie++-1.97.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.coker.com.au/bonnie++/experimental/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.coker.com.au/bonnie++/
+HOMEPAGE=	https://www.coker.com.au/bonnie++/
 COMMENT=	Enhanced performance Test of Filesystem I/O
 
 USE_LANGUAGES=		c c++

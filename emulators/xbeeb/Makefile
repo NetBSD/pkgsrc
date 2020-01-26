@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2018/07/04 13:40:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2020/01/26 17:31:10 rillig Exp $
 
 DISTNAME=	xbeeb-0.4.1
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://bbc.nvg.org/emul/Xbeeb/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dsainty@NetBSD.org
-HOMEPAGE=	http://www.cloud9.co.uk/james/BBCMicro/Xbeeb/
+HOMEPAGE=	https://www.cloud9.co.uk/james/BBCMicro/Xbeeb/
 COMMENT=	Acorn BBC Micro emulator with an X based interface
 
 USE_IMAKE=	yes

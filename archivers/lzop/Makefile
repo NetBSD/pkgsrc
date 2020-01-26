@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2018/01/29 14:47:53 mef Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/26 17:30:40 rillig Exp $
 
 DISTNAME=	lzop-1.04
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.lzop.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lzop.org/
+HOMEPAGE=	https://www.lzop.org/
 COMMENT=	Fast file compressor similar to gzip, using the LZO library
 LICENSE=	gnu-gpl-v2
 

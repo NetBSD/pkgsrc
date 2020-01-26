@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2018/07/18 00:06:10 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/26 17:30:40 rillig Exp $
 
 DISTNAME=	ppmdi1
 PKGNAME=	ppmd-9.1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://compression.ru/ds/
 EXTRACT_SUFX=	.rar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://compression.ru/ds/
+HOMEPAGE=	https://compression.ru/ds/
 COMMENT=	PPM file compressor
 LICENSE=	public-domain
 

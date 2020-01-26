@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/12/15 11:55:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/26 17:30:40 rillig Exp $
 #
 
 DISTNAME=		gzrt-0.8
@@ -7,7 +7,7 @@ CATEGORIES=		archivers
 MASTER_SITES=		http://www.urbanophile.com/arenn/hacking/gzrt/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.urbanophile.com/arenn/hacking/gzrt/
+HOMEPAGE=		https://www.urbanophile.com/arenn/hacking/gzrt/
 COMMENT=		GZip Recovery Toolkit
 LICENSE=		gnu-gpl-v2
 

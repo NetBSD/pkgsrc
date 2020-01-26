@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/10 21:12:58 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:04 rillig Exp $
 
 DISTNAME=	rttr-0.9.6-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://www.rttr.org/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rttr.org/
+HOMEPAGE=	https://www.rttr.org/
 COMMENT=	C++ Reflection Library
 LICENSE=	mit
 

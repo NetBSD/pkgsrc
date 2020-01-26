@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/03 19:03:56 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:27 rillig Exp $
 
 DISTNAME=	chicken-5.1.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.call-cc.org/
+HOMEPAGE=	https://www.call-cc.org/
 COMMENT=	Scheme to C compiler, handling R5RS
 LICENSE=	modified-bsd
 

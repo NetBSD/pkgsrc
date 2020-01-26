@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2019/11/04 22:09:57 rillig Exp $
+# $NetBSD: Makefile.common,v 1.17 2020/01/26 17:32:22 rillig Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -10,7 +10,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}
 
-HOMEPAGE=	http://nginx.org/
+HOMEPAGE=	https://nginx.org/
 COMMENT=	Lightweight HTTP server and mail proxy server
 LICENSE=	2-clause-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/08/03 12:28:49 adam Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/26 17:32:17 rillig Exp $
 
 DISTNAME=	Pygments-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pygments/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pygments.org/
+HOMEPAGE=	https://pygments.org/
 COMMENT=	Python syntax highlighter
 LICENSE=	2-clause-bsd
 

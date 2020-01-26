@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/11/03 19:04:01 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:28 rillig Exp $
 
 .include "../../lang/go/version.mk"
 
@@ -10,7 +10,7 @@ MASTER_SITES=	https://storage.googleapis.com/golang/
 PATCH_SITES=	https://codereview.appspot.com/download/
 
 MAINTAINER=	bsiegert@NetBSD.org
-HOMEPAGE=	http://golang.org/
+HOMEPAGE=	https://golang.org/
 COMMENT=	The Go programming language
 LICENSE=	modified-bsd
 

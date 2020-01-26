@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/05/10 22:55:23 mef Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:31:39 rillig Exp $
 
 DISTNAME=		galdata
 PKGNAME=		pari-galdata-2.2
@@ -7,7 +7,7 @@ MASTER_SITES=		https://pari.math.u-bordeaux.fr/pub/pari/packages/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pari.math.u-bordeaux.fr/
+HOMEPAGE=		https://pari.math.u-bordeaux.fr/
 COMMENT=		Galois group data for pari
 
 DEPENDS+=		pari>=2.2.7:../../math/pari

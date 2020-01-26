@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/08/22 22:33:15 ast Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:30 rillig Exp $
 
 DISTNAME=	nqp-2019.07.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	lang perl6
 MASTER_SITES=	http://rakudo.org/downloads/nqp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rakudo.org/
+HOMEPAGE=	https://rakudo.org/
 COMMENT=	Not Quite Perl -- lightweight Perl 6-like environment for VM
 LICENSE=	artistic-2.0
 

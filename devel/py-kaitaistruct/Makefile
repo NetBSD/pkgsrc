@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/02/26 16:09:55 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/26 17:31:03 rillig Exp $
 
 DISTNAME=	kaitaistruct-0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kaitaistruct/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kaitai.io/
+HOMEPAGE=	https://kaitai.io/
 COMMENT=	Kaitai Struct declarative parser generator for binary data
 LICENSE=	mit
 

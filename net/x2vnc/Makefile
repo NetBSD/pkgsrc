@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2018/03/07 11:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/26 17:31:58 rillig Exp $
 
 DISTNAME=		x2vnc-1.7.2
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		net x11
 MASTER_SITES=		http://fredrik.hubbe.net/x2vnc/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://fredrik.hubbe.net/x2vnc.html
+HOMEPAGE=		https://fredrik.hubbe.net/x2vnc.html
 COMMENT=		Multi-console display using X and VNC
 LICENSE=		gnu-gpl-v2
 

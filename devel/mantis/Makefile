@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/12/09 14:20:55 taca Exp $
+# $NetBSD: Makefile,v 1.54 2020/01/26 17:31:00 rillig Exp $
 
 DISTNAME=	mantisbt-2.4.1
 PKGNAME=	${DISTNAME:S/mantisbt/mantis/}
@@ -7,7 +7,7 @@ CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mantisbt.org/
+HOMEPAGE=	https://www.mantisbt.org/
 COMMENT=	PHP/MySQL/web based bugtracking system
 LICENSE=	gnu-gpl-v2
 

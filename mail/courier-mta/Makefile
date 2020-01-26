@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2020/01/18 21:49:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.56 2020/01/26 17:31:33 rillig Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
@@ -11,7 +11,7 @@ CONFLICTS+=	esmtp>=1.2 postfix-[0-9]* qmail-[0-9]* sendmail-[0-9]*
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Courier mail transport agent
-HOMEPAGE=	http://www.courier-mta.org/
+HOMEPAGE=	https://www.courier-mta.org/
 
 DEPENDS+=	courier-maildir>=${COURIER_VERSION}:../../mail/courier-maildir
 DEPENDS+=	couriertcpd>=${COURIER_VERSION}:../../net/couriertcpd

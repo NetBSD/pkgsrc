@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/12/05 21:20:32 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:31:55 rillig Exp $
 
 DISTNAME=	sslh-1.20
 CATEGORIES=	net
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=yrutschle/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nils@NetBSD.org
-HOMEPAGE=	http://www.rutschle.net/tech/sslh.shtml
+HOMEPAGE=	https://www.rutschle.net/tech/sslh.shtml
 COMMENT=	Multiplex ssl, ssh, and other connections on the same port
 LICENSE=	gnu-gpl-v2
 

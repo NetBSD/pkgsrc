@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/10/17 11:47:12 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:20 rillig Exp $
 
 GITHUB_PROJECT=	adaptagrams
 GITHUB_TAG=	0503f7524f5b2aa96b356dfdd817f9f9869d2b20
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mjwybrow/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.adaptagrams.org/
+HOMEPAGE=	https://www.adaptagrams.org/
 COMMENT=	Tools for adaptive diagrams
 LICENSE=	gnu-lgpl-v2.1
 

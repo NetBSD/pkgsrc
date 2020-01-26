@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/02/25 16:20:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/26 17:31:57 rillig Exp $
 #
 
 DISTNAME=	upclient-4.2.1.23
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://uptimes.atomicvoid.net/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://uptimes.hostingwired.com/
+HOMEPAGE=	https://uptimes.hostingwired.com/
 COMMENT=	Keeps track of your server uptime, and compares it to other hosts
 
 BUILD_TARGET.DragonFly=	dragonfly

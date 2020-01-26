@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/02/14 01:27:15 mef Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:02 rillig Exp $
 #
 
 DISTNAME=		pcre++-0.9.5
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://www.daemon.de/idisk/Apps/pcre++/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.daemon.de/PCRE
+HOMEPAGE=		https://www.daemon.de/PCRE
 COMMENT=		Wrapper class around the pcre library
 
 USE_LANGUAGES=		c c++

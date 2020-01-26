@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/29 15:36:40 bouyer Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:30:47 rillig Exp $
 #
 
 V=		5.1.4
@@ -9,7 +9,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kicad-pcb.org/
+HOMEPAGE=	https://kicad-pcb.org/
 COMMENT=	user interface translations for the PCB CAD software
 LICENSE=	gnu-gpl-v3
 CMAKE_ARGS+=	-DKICAD_REPO_NAME=stable -DKICAD_BUILD_VERSION=${V}

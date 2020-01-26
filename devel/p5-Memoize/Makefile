@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/08/11 13:19:47 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2020/01/26 17:31:01 rillig Exp $
 #
 
 DISTNAME=	Memoize-1.03
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Memoize/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://perl.plover.com/Memoize/
+HOMEPAGE=	https://perl.plover.com/Memoize/
 COMMENT=	Transparently speed up functions by caching return values
 LICENSE=	${PERL5_LICENSE}
 

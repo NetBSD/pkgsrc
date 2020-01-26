@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2017/08/08 05:47:25 jlam Exp $
+# $NetBSD: Makefile.common,v 1.25 2020/01/26 17:31:25 rillig Exp $
 #
 # Canna common makefile.
 #
@@ -17,7 +17,7 @@ MASTER_SITES=	${MASTER_SITE_OSDN:=canna/9565/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tsutsui@NetBSD.org
-HOMEPAGE=	http://canna.osdn.jp/
+HOMEPAGE=	https://canna.osdn.jp/
 COMMENT=	Kana-Kanji conversion system (${CANNA_MODULE})
 
 FILESDIR=	${.CURDIR}/../../inputmethod/canna/files
