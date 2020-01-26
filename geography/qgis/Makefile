@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2020/01/18 21:49:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.83 2020/01/26 12:55:01 rhialto Exp $
 
 DISTNAME=	qgis-3.8.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -36,10 +36,17 @@ SUBST_CLASSES+=			xapple
 SUBST_STAGE.xapple=		pre-configure
 SUBST_MESSAGE.xapple=		Disabling APPLE App in cmake scripts
 xapple_FIND_CMD=		cd ${WRKSRC} && \
-	find . -name '*.cmake' -o -name CMakeLists.txt
+				find . -name '*.cmake' -o -name CMakeLists.txt
 SUBST_FILES.xapple=		${xapple_FIND_CMD:sh}
 SUBST_SED.xapple+=		-e 's,APPLE,XAPPLE,'
 SUBST_SED.xapple+=		-e 's,MACOSX_BUNDLE ,,'
+
+SUBST_CLASSES+=			pyqt
+SUBST_STAGE.pyqt=		pre-configure
+SUBST_MESSAGE.pyqt=		Use correct python version for PyQt5 programs
+SUBST_FILES.pyqt=		cmake/PyQtMacros.cmake
+SUBST_SED.pyqt+=		-e '/^SET/s,pyuic5,&-${PYVERSSUFFIX},'
+SUBST_SED.pyqt+=		-e '/^SET/s,pyrcc5,&-${PYVERSSUFFIX},'
 
 CMAKE_ARGS+=	-DWITH_QTWEBKIT=FALSE
 CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}

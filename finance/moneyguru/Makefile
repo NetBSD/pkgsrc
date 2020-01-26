@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2019/11/02 16:08:47 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/26 12:55:00 rhialto Exp $
 
 DISTNAME=	moneyguru-src-2.11.0
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	finance
 MASTER_SITES=	https://download.hardcoded.net/
 
@@ -40,8 +40,10 @@ BASE_ARCH=	${MACHINE_ARCH}
 
 PLIST_SUBST+=	BASE_ARCH=${BASE_ARCH:Q}
 
+MAKE_ENV+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
 do-build:
-	cd ${WRKSRC} && ${PYTHONBIN} build.py
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${PYTHONBIN} build.py
 	${CHMOD} +x ${WRKSRC}/run.py
 
 do-install:
