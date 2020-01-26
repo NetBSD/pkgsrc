@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2019/08/11 13:20:57 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2020/01/26 17:31:08 rillig Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.18
@@ -145,7 +145,7 @@ DISTFILES+=	leim-1.31-pkg.tar.gz
 SITES.leim-1.31-pkg.tar.gz= ${MASTER_SITE_XEMACS:=packages/}
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	http://www.xemacs.org/
+HOMEPAGE=	https://www.xemacs.org/
 COMMENT=	Common elisp packages for xemacs 21
 
 DEPENDS+=	xemacs{,-nox11}>=21.1.14:../../editors/xemacs

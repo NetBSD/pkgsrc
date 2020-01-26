@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/11/03 10:39:11 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:30:57 rillig Exp $
 
 DISTNAME=	frink-2.2.2p4
 CATEGORIES=	devel
 MASTER_SITES=	ftp://catless.ncl.ac.uk/pub/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://catless.ncl.ac.uk/Programs/Frink/
+HOMEPAGE=	https://catless.ncl.ac.uk/Programs/Frink/
 COMMENT=	Tcl formatting and static syntax check program
 LICENSE=	frink-license
 

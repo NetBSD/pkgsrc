@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2018/12/03 21:21:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:31:05 rillig Exp $
 #
 
 DISTNAME=		syncdir-1.0
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://untroubled.org/syncdir/
+HOMEPAGE=		https://untroubled.org/syncdir/
 COMMENT=		Synchronous open, link, rename, and unlink
 LICENSE=		gnu-gpl-v2
 

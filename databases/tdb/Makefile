@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2019/12/30 09:42:47 adam Exp $
+# $NetBSD: Makefile,v 1.43 2020/01/26 17:30:54 rillig Exp $
 
 DISTNAME=	tdb-1.4.3
 CATEGORIES=	databases
 MASTER_SITES=	http://www.samba.org/ftp/tdb/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tdb.samba.org/
+HOMEPAGE=	https://tdb.samba.org/
 COMMENT=	Small database system which uses files to store data
 LICENSE=	gnu-gpl-v3
 

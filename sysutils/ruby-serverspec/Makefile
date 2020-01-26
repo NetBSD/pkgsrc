@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2018/03/21 12:53:54 taca Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:32:11 rillig Exp $
 
 DISTNAME=	serverspec-2.41.3
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://serverspec.org/
+HOMEPAGE=	https://serverspec.org/
 COMMENT=	RSpec tests for your servers configured by Puppet and more
 LICENSE=	mit
 

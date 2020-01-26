@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2020/01/18 21:51:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.203 2020/01/26 17:32:24 rillig Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.seamonkey-project.org/
+HOMEPAGE=	https://www.seamonkey-project.org/
 COMMENT=	Full-featured gecko-based browser
 LICENSE=	mpl-2.0
 

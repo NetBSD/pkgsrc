@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/11/03 10:39:31 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/01/26 17:31:05 rillig Exp $
 #
 
 DISTNAME=	ucl-1.03
@@ -7,7 +7,7 @@ CATEGORIES=	devel archivers
 MASTER_SITES=	http://www.oberhumer.com/opensource/ucl/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.oberhumer.com/opensource/ucl/
+HOMEPAGE=	https://www.oberhumer.com/opensource/ucl/
 COMMENT=	Portable lossless data compression library
 LICENSE=	gnu-gpl-v2
 

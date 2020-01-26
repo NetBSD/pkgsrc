@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/01/01 22:33:34 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2020/01/26 17:31:10 rillig Exp $
 
 DISTNAME=		gnucash-docs-3.4-1
 # only for 3.4-1
@@ -7,7 +7,7 @@ CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnucash.org/
+HOMEPAGE=		https://www.gnucash.org/
 COMMENT=		Documentation for GnuCash - personal double-entry accounting program
 LICENSE=		gnu-gpl-v3 AND gnu-fdl-v1.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/11/03 19:04:05 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/26 17:31:30 rillig Exp $
 
 DISTNAME=	pict-4.1
 PKGREVISION=	16
@@ -10,7 +10,7 @@ PATCHFILES=		pict-jumbo-patch-20180316.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	dholland@NetBSD.org
-HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/papers/pict/Html/Pict.html
+HOMEPAGE=	https://www.cis.upenn.edu/~bcpierce/papers/pict/Html/Pict.html
 COMMENT=	Concurrent language based on Milner's pi calculus
 LICENSE=	gnu-gpl-v2
 

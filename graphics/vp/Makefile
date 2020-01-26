@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/04/25 14:23:20 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/26 17:31:24 rillig Exp $
 #
 
 DISTNAME=		vp-1.8
@@ -7,7 +7,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		http://elfga.com/~erik/files/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://elfga.com/~erik/
+HOMEPAGE=		https://elfga.com/~erik/
 COMMENT=		Image viewer
 
 USE_LIBTOOL=		yes

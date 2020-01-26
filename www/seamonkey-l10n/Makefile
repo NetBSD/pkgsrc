@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/11/09 12:44:07 nia Exp $
+# $NetBSD: Makefile,v 1.47 2020/01/26 17:32:24 rillig Exp $
 #
 
 SM_VER=		2.49.5
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/langpacks/linux-i686/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.seamonkey-project.org/
+HOMEPAGE=	https://www.seamonkey-project.org/
 COMMENT=	Language packs for www/seamonkey
 
 DIST_SUBDIR=	${PKGNAME_NOREV}

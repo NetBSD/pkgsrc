@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/08/16 13:34:52 mef Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/26 17:31:48 rillig Exp $
 #
 
 DISTNAME=	adns-1.5.1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.chiark.greenend.org.uk/~ian/adns/ftp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.chiark.greenend.org.uk/~ian/adns/
+HOMEPAGE=	https://www.chiark.greenend.org.uk/~ian/adns/
 COMMENT=	Asynchronous-capable DNS client library and utilities
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/07/25 08:37:20 manu Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/26 17:32:22 rillig Exp $
 #
 
 PWVER=		2.9.1
@@ -9,7 +9,7 @@ MASTER_SITES=	-http://piwigo.org/download/dlcounter.php?code=${PWVER}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://piwigo.org/
+HOMEPAGE=	https://piwigo.org/
 COMMENT=	Piwigo is photo gallery software for the web
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2018/04/10 03:39:17 maya Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/26 17:31:18 rillig Exp $
 #
 
 DISTNAME=	xmahjongg-3.7
@@ -7,7 +7,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	http://www.lcdf.org/~eddietwo/xmahjongg/
 
 MAINTAINER=	salo@NetBSD.org
-HOMEPAGE=	http://www.lcdf.org/~eddietwo/xmahjongg/
+HOMEPAGE=	https://www.lcdf.org/~eddietwo/xmahjongg/
 COMMENT=	The Chinese game of Mah Jongg for X11
 
 GNU_CONFIGURE=	YES

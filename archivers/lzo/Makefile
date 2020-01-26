@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2017/03/05 12:27:32 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/26 17:30:40 rillig Exp $
 
 DISTNAME=	lzo-2.10
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.oberhumer.com/opensource/lzo/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.oberhumer.com/opensource/lzo/
+HOMEPAGE=	https://www.oberhumer.com/opensource/lzo/
 COMMENT=	Portable lossless data compression library
 LICENSE=	gnu-gpl-v2
 

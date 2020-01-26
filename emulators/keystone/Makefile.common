@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2018/02/19 00:52:28 kamil Exp $
+# $NetBSD: Makefile.common,v 1.4 2020/01/26 17:31:09 rillig Exp $
 #
 # used by emulators/py-keystone/Makefile
 
@@ -6,6 +6,6 @@ DISTNAME=	keystone-0.9.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keystone-engine/}
 
-HOMEPAGE=	http://www.keystone-engine.org/
+HOMEPAGE=	https://www.keystone-engine.org/
 
 DISTINFO_FILE=	${.CURDIR}/../../emulators/keystone/distinfo

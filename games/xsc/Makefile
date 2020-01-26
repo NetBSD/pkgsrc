@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/07/18 00:06:18 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:18 rillig Exp $
 #
 
 DISTNAME=		xsc-1.5
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://www.panix.com/~mbh/xsc/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.panix.com/~mbh/xsc/
+HOMEPAGE=		https://www.panix.com/~mbh/xsc/
 COMMENT=		Star Castle clone
 
 GNU_CONFIGURE=		yes

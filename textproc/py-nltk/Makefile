@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/05/28 14:10:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:32:17 rillig Exp $
 
 DISTNAME=	nltk-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=nltk/}
 GITHUB_PROJECT=	nltk
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nltk.org/
+HOMEPAGE=	https://www.nltk.org/
 COMMENT=	Natural Language Toolkit (NLTK)
 LICENSE=	apache-2.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/11/03 11:45:59 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/26 17:31:58 rillig Exp $
 
 DISTNAME=	ytalk-3.3.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ourproject.org/pub/ytalk/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ytalk.ourproject.org/
+HOMEPAGE=	https://ytalk.ourproject.org/
 COMMENT=	Multi-user replacement for UNIX talk
 
 CONFLICTS+=	ytalk-x11-[0-9]*

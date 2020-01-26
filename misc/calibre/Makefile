@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.229 2020/01/18 21:49:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.230 2020/01/26 17:31:43 rillig Exp $
 
 DISTNAME=	calibre-3.40.1
 PKGREVISION=	9
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.calibre-ebook.com/
+HOMEPAGE=	https://www.calibre-ebook.com/
 COMMENT=	E-book library management application
 LICENSE=	gnu-gpl-v3
 

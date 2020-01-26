@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2019/11/04 21:12:54 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:32:04 rillig Exp $
 
 DISTNAME=	libressl-2.7.4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_OPENBSD:=LibreSSL/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libressl.org/
+HOMEPAGE=	https://www.libressl.org/
 COMMENT=	Secure Sockets Layer and cryptography libraries and tools
 LICENSE=	openssl
 

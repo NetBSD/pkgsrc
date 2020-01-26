@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/19 00:22:44 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:32:16 rillig Exp $
 
 DISTNAME=	multimarkdown-6.5.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fletcher/}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 GITHUB_PROJECT=	MultiMarkdown-6
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://fletcherpenney.net/multimarkdown/
+HOMEPAGE=	https://fletcherpenney.net/multimarkdown/
 COMMENT=	MultiMarkdown (MMD) v6 written in C
 LICENSE=	gnu-gpl-v3 OR mit
 

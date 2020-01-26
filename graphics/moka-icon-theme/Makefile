@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/10/20 15:27:12 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:31:22 rillig Exp $
 
 DISTNAME=	moka-icon-theme-5.4.0
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=snwh/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://snwh.org/moka
+HOMEPAGE=	https://snwh.org/moka
 COMMENT=	Simple and bright icon theme
 LICENSE=	cc-by-sa-v4.0
 
