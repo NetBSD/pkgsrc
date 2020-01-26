@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.875 2020/01/24 14:07:59 jaapb Exp $
+# $NetBSD: Makefile,v 1.876 2020/01/26 13:45:11 nia Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -82,6 +82,7 @@ SUBDIR+=	gtk
 SUBDIR+=	gtk+extra
 SUBDIR+=	gtk-mac-integration
 SUBDIR+=	gtk-sharp
+SUBDIR+=	gtk-sharp3
 SUBDIR+=	gtk2
 SUBDIR+=	gtk2+extra
 SUBDIR+=	gtk2-chtheme
