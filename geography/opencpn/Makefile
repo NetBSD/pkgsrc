@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/01/18 21:49:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2020/01/26 17:31:19 rillig Exp $
 
 DISTNAME=	OpenCPN-5.0.0
 PKGNAME=	${DISTNAME:S/OpenCPN/opencpn/}
@@ -11,7 +11,7 @@ GITHUB_TAG=	v5.0.0
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://www.opencpn.org/
+HOMEPAGE=	https://www.opencpn.org/
 COMMENT=	Concise ChartPlotter/Navigator
 LICENSE=	gnu-gpl-v2
 

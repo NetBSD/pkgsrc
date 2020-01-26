@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2019/11/26 12:36:20 adam Exp $
+# $NetBSD: Makefile,v 1.66 2020/01/26 17:32:17 rillig Exp $
 
 DISTNAME=	lxml-4.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lxml/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://lxml.de/
+HOMEPAGE=	https://lxml.de/
 COMMENT=	Python binding for libxml2 and libxslt
 LICENSE=	modified-bsd
 

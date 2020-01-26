@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/01/13 22:06:42 bacon Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:31:37 rillig Exp $
 
 DISTNAME=	arpack96
 PKGNAME=	arpack-96
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.caam.rice.edu/software/ARPACK/SRC/
 DISTFILES=	arpack96.tar.gz patch.tar.gz
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://www.caam.rice.edu/software/ARPACK/SRC/
+HOMEPAGE=	https://www.caam.rice.edu/software/ARPACK/SRC/
 COMMENT=	Library of subroutines to solve eigenvalue problems
 LICENSE=	original-bsd
 

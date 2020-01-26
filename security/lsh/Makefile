@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/05/10 10:45:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/26 17:32:04 rillig Exp $
 #
 
 DISTNAME=		lsh-2.0.4
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.lysator.liu.se/~nisse/archive/
 MASTER_SITES+=		ftp://ftp.lysator.liu.se/pub/security/lsh/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.lysator.liu.se/~nisse/lsh/
+HOMEPAGE=		https://www.lysator.liu.se/~nisse/lsh/
 COMMENT=		SSH2 client/server
 LICENSE=		gnu-gpl-v2
 

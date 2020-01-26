@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 19:03:57 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:27 rillig Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.iro.umontreal.ca/~gambit/download/gambit/v4.6/source/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.iro.umontreal.ca/~gambit/
+HOMEPAGE=	https://www.iro.umontreal.ca/~gambit/
 COMMENT=	GambitC Scheme System
 
 # bin/scheme-r5rs

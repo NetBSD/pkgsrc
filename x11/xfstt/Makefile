@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2018/07/04 13:40:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2020/01/26 17:32:28 rillig Exp $
 
 DISTNAME=		xfstt-1.9.3
 PKGREVISION=		1
@@ -7,7 +7,7 @@ MASTER_SITES=		http://archive.hadrons.org/software/xfstt/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.hadrons.org/software/xfstt/
+HOMEPAGE=		https://www.hadrons.org/software/xfstt/
 COMMENT=		TrueType font server for X11
 LICENSE=		gnu-gpl-v2
 

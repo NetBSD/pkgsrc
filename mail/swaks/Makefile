@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2019/12/02 16:42:14 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:37 rillig Exp $
 
 DISTNAME=		swaks-20190914.0
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}files/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://www.jetmore.org/john/code/swaks/
+HOMEPAGE=		https://www.jetmore.org/john/code/swaks/
 COMMENT=		Featureful, flexible, scriptable SMTP test tool
 LICENSE=		gnu-gpl-v2
 

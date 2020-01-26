@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/11/03 17:04:20 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/26 17:31:43 rillig Exp $
 #
 
 DISTNAME=	cksfv-1.3.14
@@ -7,7 +7,7 @@ MASTER_SITES=	http://zakalwe.fi/~shd/foss/cksfv/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://zakalwe.fi/~shd/foss/cksfv/
+HOMEPAGE=	https://zakalwe.fi/~shd/foss/cksfv/
 COMMENT=	Check and create simple file verification (SFV) listings
 LICENSE=	gnu-gpl-v2
 

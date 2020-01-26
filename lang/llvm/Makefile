@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2019/12/29 15:31:21 adam Exp $
+# $NetBSD: Makefile,v 1.50 2020/01/26 17:31:29 rillig Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -29,7 +29,7 @@ PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://llvm.org/
+HOMEPAGE=	https://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	apache-2.0
 

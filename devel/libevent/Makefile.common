@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2019/09/20 11:36:27 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/01/26 17:30:59 rillig Exp $
 #
 # used by devel/libevent/Makefile
 # used by devel/py-libevent-rpcgen/Makefile
@@ -10,7 +10,7 @@ GITHUB_PROJECT=	libevent
 GITHUB_RELEASE=	release-${PKGVERSION_NOREV}-stable
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libevent.org/
+HOMEPAGE=	https://libevent.org/
 LICENSE=	modified-bsd
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/libevent/distinfo

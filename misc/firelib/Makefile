@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/10/09 14:06:42 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:31:43 rillig Exp $
 #
 
 DISTNAME=		firelib-1.0.1
@@ -6,7 +6,7 @@ CATEGORIES=		misc
 MASTER_SITES=		http://fire.org/downloads/fireLib/1.0.1/
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://fire.org/
+HOMEPAGE=		https://fire.org/
 COMMENT=		Library for predicting fire spread rate, intensity, and more
 
 WRKSRC=			${WRKDIR}

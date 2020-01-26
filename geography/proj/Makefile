@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2019/02/27 14:29:58 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:31:19 rillig Exp $
 
 # I have an update to 6 ready, but it is on hold pending an assessment
 # of projects.h removal fallout - gdt.
 VERSION_BASE=	5.2.0
-VERSION_RC=	
+VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
 PKGREVISION=	3
 # proj RCs have names like 5.1.0RC1 but unpack to 5.1.0
@@ -19,7 +19,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		proj-datumgrid-oceania-1.0${EXTRACT_SUFX}
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://proj4.org/
+HOMEPAGE=	https://proj4.org/
 COMMENT=	Cartographic projection software
 
 # Grid files also have the following "cc-by ish" licenses:

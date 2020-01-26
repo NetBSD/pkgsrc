@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/01/16 21:01:47 tnn Exp $
+# $NetBSD: Makefile,v 1.52 2020/01/26 17:31:54 rillig Exp $
 
 DISTNAME=		rdesktop-1.9.0
 CATEGORIES=		net
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=rdesktop/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.rdesktop.org/
+HOMEPAGE=		https://www.rdesktop.org/
 COMMENT=		Open-source Remote Desktop Protocol client
 LICENSE=		gnu-gpl-v3
 

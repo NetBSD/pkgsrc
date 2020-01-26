@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/01/18 21:49:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2020/01/26 17:31:18 rillig Exp $
 #
 
 DISTNAME=	gpsbabel-1.6.0
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 # MASTER_SITES+=	http://archlinux-stuff.googlecode.com/files/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.gpsbabel.org/
+HOMEPAGE=	https://www.gpsbabel.org/
 #HOMEPAGE=	https://github.com/gpsbabel/gpsbabel
 COMMENT=	Utility to convert and fetch GPS related data
 LICENSE=	gnu-gpl-v2

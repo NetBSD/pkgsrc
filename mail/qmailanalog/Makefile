@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/09/01 03:50:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:36 rillig Exp $
 #
 
 DISTNAME=		qmailanalog-0.70
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		http://cr.yp.to/software/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://cr.yp.to/qmailanalog.html
+HOMEPAGE=		https://cr.yp.to/qmailanalog.html
 COMMENT=		Collection of tools to help analyze qmail's activity
 
 DJB_RESTRICTED=		YES

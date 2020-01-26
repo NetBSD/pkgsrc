@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/06/16 19:28:47 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:23 rillig Exp $
 
 DISTNAME=	seaborn-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/seaborn/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://seaborn.pydata.org/
+HOMEPAGE=	https://seaborn.pydata.org/
 COMMENT=	Statistical data visualization
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/11/04 21:43:41 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2020/01/26 17:32:16 rillig Exp $
 
 DISTNAME=	Text-BibTeX-0.87
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gerg.ca/software/btOOL/
+HOMEPAGE=	https://www.gerg.ca/software/btOOL/
 #HOMEPAGE=	http://search.cpan.org/dist/Text-BibTeX/
 COMMENT=	Perl library for reading, parsing, and processing BibTeX files
 LICENSE=	${PERL5_LICENSE}

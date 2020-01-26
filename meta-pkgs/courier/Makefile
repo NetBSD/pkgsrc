@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/06/15 23:01:23 pettai Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:41 rillig Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 CATEGORIES=	meta-pkgs mail
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.courier-mta.org/
+HOMEPAGE=	https://www.courier-mta.org/
 COMMENT=	Meta-package for the Courier mail server suite
 
 META_PACKAGE=	yes

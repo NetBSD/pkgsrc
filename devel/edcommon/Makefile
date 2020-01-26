@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/04/03 00:32:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/26 17:30:56 rillig Exp $
 #
 
 DISTNAME=	edcommon-32-s
@@ -8,7 +8,7 @@ CATEGORIES=	devel gnustep
 MASTER_SITES=	http://www.mulle-kybernetik.com/software/EDFrameworks/Downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mulle-kybernetik.com/software/EDFrameworks/
+HOMEPAGE=	https://www.mulle-kybernetik.com/software/EDFrameworks/
 COMMENT=	Foundation and AppKit extensions
 LICENSE=	edcommon-license
 

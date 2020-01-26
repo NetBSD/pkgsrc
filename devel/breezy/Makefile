@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/11/30 13:50:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:30:56 rillig Exp $
 
 DISTNAME=	breezy-3.0.1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/brz/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
 
 MAINTAINER=	rhialto@NetBSD.org
-HOMEPAGE=	http://breezy-vcs.org/
+HOMEPAGE=	https://breezy-vcs.org/
 COMMENT=	Friendly distributed version control system
 LICENSE=	gnu-gpl-v2
 

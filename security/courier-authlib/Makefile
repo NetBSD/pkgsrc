@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2020/01/18 21:50:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.56 2020/01/26 17:32:02 rillig Exp $
 
 .include "Makefile.common"
 
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Courier Authentication Library
-HOMEPAGE=	http://www.courier-mta.org/authlib/
+HOMEPAGE=	https://www.courier-mta.org/authlib/
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	courier-auth-[0-9]*

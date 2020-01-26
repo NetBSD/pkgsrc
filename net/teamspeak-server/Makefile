@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/11/03 11:45:54 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/26 17:31:56 rillig Exp $
 
 PKGNAME=		teamspeak-server-2.0.24.01
 DISTNAME=		ts2_server_rc2_202319
@@ -10,7 +10,7 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} server_linux
 
 MAINTAINER=		abs@NetBSD.org
-HOMEPAGE=		http://www.goteamspeak.com/
+HOMEPAGE=		https://www.goteamspeak.com/
 COMMENT=		Teamspeak group VoIP server
 LICENSE=		teamspeak-license-200700213
 

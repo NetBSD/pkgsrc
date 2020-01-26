@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/23 19:51:15 asau Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:10 rillig Exp $
 #
 
 DISTNAME=		news-0.2
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://www.netmeister.org/apps/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.netmeister.org/
+HOMEPAGE=		https://www.netmeister.org/
 COMMENT=		System V news(1)
 
 USE_FEATURES=		utimes fts_open

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/04/25 07:33:15 maya Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/26 17:32:03 rillig Exp $
 #
 
 DISTNAME=	fsh-1.2
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.lysator.liu.se/pub/unix/fsh/
 MASTER_SITES+=	http://www.lysator.liu.se/fsh/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.lysator.liu.se/fsh/
+HOMEPAGE=	https://www.lysator.liu.se/fsh/
 COMMENT=	Fast remote command execution
 
 GNU_CONFIGURE=	YES

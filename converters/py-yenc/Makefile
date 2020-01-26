@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/11/03 17:14:25 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/26 17:30:52 rillig Exp $
 
 DISTNAME=	yenc-${DISTVERSION}
 DISTVERSION=	0.4.0
@@ -11,7 +11,7 @@ MASTER_SITES=	http://www.golug.it/pub/yenc/
 PYDISTUTILSPKG=	yes
 
 MAINTAINER=	pkgsrc128@fastmail.us
-HOMEPAGE=	http://www.golug.it/yenc.html
+HOMEPAGE=	https://www.golug.it/yenc.html
 COMMENT=	Python module for yenc decoding module in C
 LICENSE=	gnu-lgpl-v2.1
 

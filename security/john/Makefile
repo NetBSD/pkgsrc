@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2019/11/04 21:12:54 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/26 17:32:03 rillig Exp $
 #
 
 DISTNAME=	john-1.8.0
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.openwall.com/john/j/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openwall.com/john/
+HOMEPAGE=	https://www.openwall.com/john/
 COMMENT=	Unix Password Cracker
 LICENSE=	gnu-gpl-v2
 

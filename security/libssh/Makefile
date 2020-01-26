@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/01/18 21:48:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/26 17:32:04 rillig Exp $
 #
 # history: upstream renamed 0.11 to 0.1.1;
 # we have to use the old-style convention so that version compares work.
@@ -12,7 +12,7 @@ MASTER_SITES=	https://www.libssh.org/files/${VER:R}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	is@NetBSD.org
-HOMEPAGE=	http://www.libssh.org/
+HOMEPAGE=	https://www.libssh.org/
 COMMENT=	SSHv2+v1 protocol library
 LICENSE=	2-clause-bsd
 

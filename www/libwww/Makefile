@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2020/01/18 21:48:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.98 2020/01/26 17:32:21 rillig Exp $
 
 DISTNAME=	w3c-libwww-5.4.2
 PKGNAME=	${DISTNAME:S/^w3c-//}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.w3.org/Library/Distribution/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.w3.org/Library/
+HOMEPAGE=	https://www.w3.org/Library/
 COMMENT=	The W3C Reference Library
 LICENSE=	w3c
 

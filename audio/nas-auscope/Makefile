@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/08/11 13:17:54 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 17:30:44 rillig Exp $
 
 DISTNAME=	nas-1.9.1.src
 PKGNAME=	nas-auscope-1.9.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://nas.codebrilliance.com/nas/
 LICENSE=	frink-license
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://radscan.com/nas.html
+HOMEPAGE=	https://radscan.com/nas.html
 COMMENT=	Network Audio System Protocol Filter
 
 DEPENDS+=	p5-perl-headers-${OS_VERSION}{,nb*}:../../devel/p5-perl-headers

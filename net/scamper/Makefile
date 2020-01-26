@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/01/16 16:13:15 leot Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/26 17:31:55 rillig Exp $
 #
 
 DISTNAME=	scamper-cvs-20141211d
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.caida.org/tools/measurement/scamper/code/
 
 MAINTAINER=	mjl@luckie.org.nz
-HOMEPAGE=	http://www.caida.org/tools/measurement/scamper/
+HOMEPAGE=	https://www.caida.org/tools/measurement/scamper/
 COMMENT=	Tool for parallelised IPv4 and IPv6 measurement
 LICENSE=	gnu-gpl-v2
 
