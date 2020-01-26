@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/01/18 23:30:12 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/26 05:26:17 rillig Exp $
 
 DISTNAME=	xmpppy-0.5.0rc1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmpppy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://xmpppy.sourceforge.net/
+HOMEPAGE=	http://xmpppy.sourceforge.net/
 COMMENT=	XMPP (Jabber) library for Python
 LICENSE=	gnu-gpl-v2
 

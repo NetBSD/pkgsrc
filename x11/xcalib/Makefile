@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 23:35:58 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/26 05:26:28 rillig Exp $
 
 DISTNAME=	xcalib-source-0.8
 PKGREVISION=	3
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xcalib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://xcalib.sourceforge.net/
+HOMEPAGE=	http://xcalib.sourceforge.net/
 COMMENT=	Loads VCGT tag of monitor ICC profile into X server LUT
 LICENSE=	gnu-gpl-v2
 

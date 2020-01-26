@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 23:35:55 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/26 05:26:28 rillig Exp $
 #
 
 DISTNAME=	qwtplot3d-0.2.7
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qwtplot3d/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://qwtplot3d.sourceforge.net/
+HOMEPAGE=	http://qwtplot3d.sourceforge.net/
 COMMENT=	3D-widgets for qt4
 #LICENSE=	# TODO: (see mk/license.mk)
 
