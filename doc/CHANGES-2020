@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.779 2020/01/26 12:44:11 nia Exp $
+$NetBSD: CHANGES-2020,v 1.780 2020/01/26 12:56:43 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -932,3 +932,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-coverage to 5.0.3 [adam 2020-01-26]
 	Updated fonts/py-fonttools to 4.2.4 [adam 2020-01-26]
 	Updated databases/csharp-mysql to 8.0.19 [nia 2020-01-26]
+	Updated x11/py-qt5 to 5.13.2nb2 [rhialto 2020-01-26]
