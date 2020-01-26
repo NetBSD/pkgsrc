@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 21:49:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 00:21:16 jmcneill Exp $
 
 DISTNAME=	dhewm3-1.5.0-src
 PKGNAME=	${DISTNAME:S/-src//1}
@@ -17,7 +17,7 @@ LICENSE=	gnu-gpl-v3
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c gnu++11
 
 # C++11
 GCC_REQD+=	4.7
