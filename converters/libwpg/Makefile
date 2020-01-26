@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/01/18 23:30:14 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2020/01/26 05:26:18 rillig Exp $
 
 DISTNAME=	libwpg-0.3.1
 PKGREVISION=	14
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpg/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://libwpg.sourceforge.net/
+HOMEPAGE=	http://libwpg.sourceforge.net/
 COMMENT=	Library for importing and converting Corel WordPerfect Graphics images
 LICENSE=	gnu-lgpl-v2 OR mpl-2.0
 

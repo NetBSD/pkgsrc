@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:47 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 05:26:26 rillig Exp $
 
 DISTNAME=	c++-gtk-utils-2.2.18
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cxx-gtk-utils/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://cxx-gtk-utils.sourceforge.net/
+HOMEPAGE=	http://cxx-gtk-utils.sourceforge.net/
 COMMENT=	Lightweight library for programming GTK+ programs using C++
 LICENSE=	gnu-lgpl-v2.1
 

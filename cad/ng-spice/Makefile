@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2020/01/18 23:30:10 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2020/01/26 05:26:16 rillig Exp $
 
 DISTNAME=	ngspice-31
 PKGNAME=	ng-spice-31
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngspice/}
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	https://ngspice.sourceforge.net/
+HOMEPAGE=	http://ngspice.sourceforge.net/
 COMMENT=	Next generation circuit simulation program
 
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/01/18 23:30:09 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 05:26:15 rillig Exp $
 #
 
 DISTNAME=	atlc-4.6.0
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atlc/}
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	https://atlc.sourceforge.net/
+HOMEPAGE=	http://atlc.sourceforge.net/
 COMMENT=	Calculates the impedance of arbitrary cross section transmission lines
 
 MAKE_JOBS_SAFE=		no
