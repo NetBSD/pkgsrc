@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.776 2020/01/25 20:14:43 jmcneill Exp $
+$NetBSD: CHANGES-2020,v 1.777 2020/01/26 09:05:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -925,3 +925,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/mgba to 0.8.0 [nia 2020-01-25]
 	Updated emulators/libretro-mgba to 0.8.0 [nia 2020-01-25]
 	Updated games/ioquake3 to 1.36.20200125 [jmcneill 2020-01-25]
+	Updated databases/sqlite3 to 3.31.0 [adam 2020-01-26]
+	Updated databases/sqlite3-docs to 3.31.0 [adam 2020-01-26]
+	Updated databases/sqlite3-tcl to 3.31.0 [adam 2020-01-26]
+	Updated devel/lemon to 1.0.3.31.0 [adam 2020-01-26]
