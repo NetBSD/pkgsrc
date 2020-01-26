@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/11/04 21:28:48 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/26 17:32:10 rillig Exp $
 #
 
 # Note -- version number also in the do-install rule
@@ -12,7 +12,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://www.memtest.org/download/${MAJVER}.${MINVER}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.memtest.org/
+HOMEPAGE=		https://www.memtest.org/
 COMMENT=		Thorough, stand alone memory test for x86 arch
 LICENSE=		gnu-gpl-v2
 

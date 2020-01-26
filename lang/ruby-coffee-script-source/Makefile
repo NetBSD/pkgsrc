@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2017/03/20 13:22:21 taca Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:31:31 rillig Exp $
 
 DISTNAME=	coffee-script-source-1.12.2
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://coffeescript.org/
+HOMEPAGE=	https://coffeescript.org/
 COMMENT=	Little language that compiles into JavaScript
 LICENSE=	mit
 

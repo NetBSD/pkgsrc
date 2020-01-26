@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2015/03/14 17:50:25 tnn Exp $
+# $NetBSD: Makefile,v 1.49 2020/01/26 17:31:02 rillig Exp $
 #
 
 # This package is very outdated and should be built from sources
@@ -26,7 +26,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pvs.csl.sri.com/
+HOMEPAGE=		https://pvs.csl.sri.com/
 COMMENT=		The PVS Specification and Verification System
 
 DEPENDS+=		tex-amsmath>=2.13nb2:../../print/tex-amsmath

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2019/11/02 22:37:59 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:22 rillig Exp $
 
 DISTNAME=	libjpeg-turbo-1.5.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libjpeg-turbo/}
 
 MAINTAINER=	dsainty@NetBSD.org
-HOMEPAGE=	http://libjpeg-turbo.virtualgl.org/
+HOMEPAGE=	https://libjpeg-turbo.virtualgl.org/
 COMMENT=	Accelerated libjpeg with SIMD instructions
 LICENSE=	gnu-lgpl-v2 # OR wxWindows Library Licence, Version 3.1
 

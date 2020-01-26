@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/06/02 20:01:21 he Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:26 rillig Exp $
 #
 
 DISTNAME=	LuaJIT-2.0.5
@@ -8,7 +8,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://luajit.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://luajit.org/
+HOMEPAGE=	https://luajit.org/
 COMMENT=	Just-In-Time Compiler for the Lua programming language
 LICENSE=	mit
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/01/13 23:18:27 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:30:49 rillig Exp $
 #
 
 DISTNAME=	zircon-1.18.256
@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	ftp://catless.ncl.ac.uk/pub/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://catless.ncl.ac.uk/Programs/Zircon/
+HOMEPAGE=	https://catless.ncl.ac.uk/Programs/Zircon/
 COMMENT=	X11 interface to Internet Relay Chat
 LICENSE=	original-bsd
 

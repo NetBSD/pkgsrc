@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/09/09 14:07:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:05 rillig Exp $
 
 DISTNAME=	topgit_0.7.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/t/topgit/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://repo.or.cz/w/topgit.git
+HOMEPAGE=	https://repo.or.cz/w/topgit.git
 COMMENT=	Different patch queue manager
 
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base

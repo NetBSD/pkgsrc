@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/01/18 21:50:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/26 17:31:57 rillig Exp $
 
 # Currently, 2.51.x is the standard approach, and thus this package
 # produces a "unison-2.51.x" package which installs a "unison" binary.
@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
+HOMEPAGE=	https://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	File-synchronization tool
 LICENSE=	gnu-gpl-v3
 

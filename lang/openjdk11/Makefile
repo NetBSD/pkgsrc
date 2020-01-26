@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/05 13:01:55 rhialto Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/26 17:31:30 rillig Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	openjdk-jdk11u
 GITHUB_TAG=	jdk-11.0.5+10-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://openjdk.java.net/
+HOMEPAGE=	https://openjdk.java.net/
 COMMENT=	Open-source implementation of the Java Platform, Standard Edition
 LICENSE=	gnu-gpl-v2
 

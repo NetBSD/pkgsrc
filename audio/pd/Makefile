@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/05/29 11:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:30:44 rillig Exp $
 #
 
 DISTNAME=	pd-0.43-0.src
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pure-data/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://puredata.info/
+HOMEPAGE=	https://puredata.info/
 COMMENT=	Real-time graphical programming environment for audio+video
 LICENSE=	modified-bsd
 

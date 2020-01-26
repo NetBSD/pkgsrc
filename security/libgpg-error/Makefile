@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2019/11/04 21:12:54 rillig Exp $
+# $NetBSD: Makefile,v 1.75 2020/01/26 17:32:04 rillig Exp $
 
 DISTNAME=	libgpg-error-1.36
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES+=	ftp://ftp.ring.gr.jp/pub/net/gnupg/libgpg-error/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.gnupg.org/
+HOMEPAGE=	https://www.gnupg.org/
 COMMENT=	Definitions of common error values for all GnuPG components
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

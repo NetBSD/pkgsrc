@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/06 11:54:38 asau Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:14 rillig Exp $
 #
 
 DISTNAME=	fortunes-calvin-0.2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.netmeister.org/apps/
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.netmeister.org/misc.html
+HOMEPAGE=	https://www.netmeister.org/misc.html
 COMMENT=	Fortunes from the famous Calvin & Hobbes comic strips
 
 BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/04/04 23:54:08 kamil Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:32:15 rillig Exp $
 
 DIST_SUBDIR=	yaml # Remove for next version
 
@@ -10,7 +10,7 @@ MASTER_SITES=	http://pyyaml.org/download/libyaml/
 PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pyyaml.org/wiki/LibYAML
+HOMEPAGE=	https://pyyaml.org/wiki/LibYAML
 COMMENT=	YAML 1.1 parser and emitter written in C
 LICENSE=	mit
 

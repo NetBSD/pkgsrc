@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2019/11/02 15:37:59 rillig Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/01/26 17:30:52 rillig Exp $
 # used by databases/apache-cassandra/Makefile
 # used by databases/apache-cassandra2/Makefile
 #
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=cassandra/${CASSANDRA_VER:C/-.*//}/}
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cassandra.apache.org/
+HOMEPAGE=	https://cassandra.apache.org/
 COMMENT=	Highly scalable, distributed structured key-value store
 
 LICENSE=	apache-2.0
@@ -63,7 +63,7 @@ CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
 			${CASSANDRA_USER} ${CASSANDRA_GROUP} 0644
 .endfor
 
-REPLACE_BASH+=		bin/cassandra bin/cqlsh bin/cqlsh.py bin/debug-cql	\
+REPLACE_BASH+=		bin/cassandra bin/cqlsh bin/cqlsh.py bin/debug-cql \
 			bin/nodetool bin/sstable*
 
 INSTALLATION_DIRS+=	${CASSANDRA_HOME} ${EGDIR} ${DOCDIR}
@@ -79,17 +79,17 @@ CHECK_SHLIBS_SKIP+=	share/cassandra/lib/sigar-bin/*
 
 do-install:
 .for d in ${WORK_DIRS}
-		${RM} -rf ${WRKSRC}/${d}
+	${RM} -rf ${WRKSRC}/${d}
 .endfor
 .for f in ${BINFILES}
-		${INSTALL_SCRIPT} ${WRKSRC}/bin/${f} ${DESTDIR}${CASSANDRA_HOME}/bin/${f}
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/${f} ${DESTDIR}${CASSANDRA_HOME}/bin/${f}
 .endfor
 .for f in ${DOCFILES}
-		${INSTALL_DATA} ${WRKSRC}/${f}.txt ${DESTDIR}${DOCDIR}/${f}
-		${RM} -f ${WRKSRC}/${f}.txt
+	${INSTALL_DATA} ${WRKSRC}/${f}.txt ${DESTDIR}${DOCDIR}/${f}
+	${RM} -f ${WRKSRC}/${f}.txt
 .endfor
 .for f in ${EGFILES}
-		${INSTALL_DATA} ${WRKSRC}/conf/${f} ${DESTDIR}${EGDIR}/${f}
+	${INSTALL_DATA} ${WRKSRC}/conf/${f} ${DESTDIR}${EGDIR}/${f}
 .endfor
 	${FIND} ${WRKSRC} -name \*.exe -type f -print | ${XARGS} ${RM} -f
 	${FIND} ${WRKSRC} -name \*.bat -type f -print | ${XARGS} ${RM} -f

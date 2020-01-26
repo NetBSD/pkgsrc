@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/11/03 17:12:01 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2020/01/26 17:31:46 rillig Exp $
 #
 
 DISTNAME=	HandBrake-1.2.2-source
@@ -9,7 +9,7 @@ MASTER_SITES=	https://download.handbrake.fr/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://handbrake.fr/
+HOMEPAGE=	https://handbrake.fr/
 COMMENT=	Multiplatform, multithreaded video transcoder
 LICENSE=	gnu-gpl-v2
 

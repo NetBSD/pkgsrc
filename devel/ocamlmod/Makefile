@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/11/12 16:10:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:31:01 rillig Exp $
 
 DISTNAME=	ocamlmod-0.0.8
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1544/
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://forge.ocamlcore.org/projects/ocamlmod/
+HOMEPAGE=	https://forge.ocamlcore.org/projects/ocamlmod/
 COMMENT=	Generate OCaml modules from source files
 LICENSE=	gnu-lgpl-v2.1
 

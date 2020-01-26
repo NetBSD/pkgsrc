@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2013/04/06 13:01:28 rodent Exp $
+# $NetBSD: Makefile.common,v 1.3 2020/01/26 17:32:22 rillig Exp $
 #
 
 # used by www/phraseanet/Makefile
@@ -11,6 +11,6 @@ CATEGORIES=	www multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phraseanet/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.phraseanet.com/
+HOMEPAGE=	https://www.phraseanet.com/
 COMMENT=	Digital asset management
 LICENSE=	gnu-gpl-v3

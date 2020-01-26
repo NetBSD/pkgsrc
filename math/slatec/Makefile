@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/09/11 23:04:34 asau Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/26 17:31:40 rillig Exp $
 #
 
 DISTNAME=	slatec_src
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_NETLIB:=slatec/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.netlib.org/slatec/
+HOMEPAGE=	https://www.netlib.org/slatec/
 COMMENT=	Library of mathematical and statistical Fortran 77 subroutines
 
 WRKSRC=			${WRKDIR}/src

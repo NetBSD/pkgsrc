@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/09/30 19:27:19 maya Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:31:16 rillig Exp $
 
 PKGNAME=	mrrescue-${GITHUB_RELEASE}
 DISTNAME=	mrrescue${GITHUB_RELEASE}
@@ -9,7 +9,7 @@ GITHUB_RELEASE=	1.02e
 EXTRACT_SUFX=	.love
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tangramgames.dk/games/mrrescue/
+HOMEPAGE=	https://tangramgames.dk/games/mrrescue/
 COMMENT=	Arcade-style fire fighting game
 LICENSE=	zlib AND cc-by-sa-v3.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2020/01/18 21:49:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.64 2020/01/26 17:31:33 rillig Exp $
 
 DISTNAME=	dbmail-3.2.3
 PKGREVISION=	15
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=pjstevns/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.dbmail.org/
+HOMEPAGE=	https://www.dbmail.org/
 COMMENT=	Store and retrieve mail messages in a database
 LICENSE=	gnu-gpl-v2
 

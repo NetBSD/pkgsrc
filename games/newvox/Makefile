@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2018/01/14 17:34:00 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/01/26 17:31:16 rillig Exp $
 #
 
 DISTNAME=	newvox-1.0
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.libsdl.org/projects/newvox/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libsdl.org/projects/newvox/index.html
+HOMEPAGE=	https://www.libsdl.org/projects/newvox/index.html
 COMMENT=	Voxel-style landscape rendering fly-by
 
 GNU_CONFIGURE=	YES

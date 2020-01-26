@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/04 21:12:56 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/26 17:32:05 rillig Exp $
 #
 
 DISTNAME=	openvas-plugins-1.0.5
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/539/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openvas.org/
+HOMEPAGE=	https://www.openvas.org/
 COMMENT=	Plugins for the Open Vulnerability Assessment System
 
 GNU_CONFIGURE=	yes

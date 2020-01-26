@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2020/01/18 21:49:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.174 2020/01/26 17:31:33 rillig Exp $
 
 DISTNAME=	exim-4.93
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES+=	https://ftp.exim.org/pub/exim/exim4/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.exim.org/
+HOMEPAGE=	https://www.exim.org/
 COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 LICENSE=	gnu-gpl-v2
 

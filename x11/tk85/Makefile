@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/03/12 11:15:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:27 rillig Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	x11 lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.tcl.tk/
+HOMEPAGE=	https://www.tcl.tk/
 COMMENT=	Graphical toolkit for TCL
 LICENSE=	2-clause-bsd
 

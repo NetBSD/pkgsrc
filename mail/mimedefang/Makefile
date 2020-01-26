@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2019/08/11 13:21:30 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2020/01/26 17:31:35 rillig Exp $
 
 DISTNAME=		mimedefang-2.78
 PKGREVISION=		5
@@ -6,7 +6,7 @@ CATEGORIES=		mail
 MASTER_SITES=		http://www.mimedefang.org/static/
 
 MAINTAINER=		pettai@NetBSD.org
-HOMEPAGE=		http://www.mimedefang.org/
+HOMEPAGE=		https://www.mimedefang.org/
 COMMENT=		To inspect/modify e-mail as it passes through your mail relay
 LICENSE=		gnu-gpl-v2
 

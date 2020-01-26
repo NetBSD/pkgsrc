@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2019/11/07 12:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2020/01/26 17:32:01 rillig Exp $
 
 DISTNAME=	pdf2djvu-0.9.13
 PKGREVISION=	2
@@ -8,7 +8,7 @@ GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://jwilk.net/software/pdf2djvu
+HOMEPAGE=	https://jwilk.net/software/pdf2djvu
 COMMENT=	Creates DjVu files from PDF files
 LICENSE=	gnu-gpl-v2
 

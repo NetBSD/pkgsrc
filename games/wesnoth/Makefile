@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2020/01/18 21:49:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.153 2020/01/26 17:31:18 rillig Exp $
 
 DISTNAME=	wesnoth-1.14.9
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.wesnoth.org/
+HOMEPAGE=	https://www.wesnoth.org/
 COMMENT=	Fantasy turn-based strategy game
 LICENSE=	gnu-gpl-v2
 

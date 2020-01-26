@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2019/12/03 12:55:16 taca Exp $
+# $NetBSD: Makefile.common,v 1.14 2020/01/26 17:32:02 rillig Exp $
 #
 # used by security/clamav/Makefile
 # used by security/clamav-doc/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.clamav.net/downloads/production/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.clamav.net/
+HOMEPAGE=	https://www.clamav.net/
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../security/clamav/distinfo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2019/08/11 13:25:13 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2020/01/26 17:32:26 rillig Exp $
 
 PKGREVISION= 12
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -13,7 +13,7 @@ COMMENT=	Xfce widget library
 
 PKGCONFIG_OVERRIDE=	libxfcegui4/libxfcegui4-1.0.pc.in
 
-HOMEPAGE=	http://archive.xfce.org/src/archive/libxfcegui4/4.10/
+HOMEPAGE=	https://archive.xfce.org/src/archive/libxfcegui4/4.10/
 COMMENT=	Xfce widget library
 
 .include "../../devel/libglade/buildlink3.mk"

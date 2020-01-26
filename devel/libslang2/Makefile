@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/11/03 10:39:18 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/26 17:30:59 rillig Exp $
 #
 
 DISTNAME=	slang-2.2.4
@@ -10,7 +10,7 @@ MASTER_SITES+=	ftp://ftp.ntua.gr/pub/lang/slang/slang/v2.2/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.jedsoft.org/slang/
+HOMEPAGE=	https://www.jedsoft.org/slang/
 COMMENT=	Routines for rapid alpha-numeric terminal applications development
 LICENSE=	gnu-gpl-v2
 

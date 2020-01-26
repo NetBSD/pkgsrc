@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2018/07/18 00:06:24 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 17:32:15 rillig Exp $
 #
 
 DISTNAME=	lq-sp-1.3.4.12
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.htmlhelp.com/tools/validator/offline/
 
 MAINTAINER=	norm@sandbox.org.uk
-HOMEPAGE=	http://www.htmlhelp.com/tools/validator/offline/
+HOMEPAGE=	https://www.htmlhelp.com/tools/validator/offline/
 COMMENT=	Modified SP package
 
 USE_LANGUAGES=	c c++03

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/06/29 11:06:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:32:14 rillig Exp $
 #
 
 DISTNAME=	ipadic-2.7.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://chasen.aist-nara.ac.jp/stable/ipadic/
 MASTER_SITES=	${MASTER_SITE_OSDN:=ipadic/24435/}
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://chasen-legacy.osdn.jp/
+HOMEPAGE=	https://chasen-legacy.osdn.jp/
 COMMENT=	Japanese Morphological Dictionary including parameter for ChaSen
 
 GNU_CONFIGURE=	yes

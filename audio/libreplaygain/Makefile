@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/12/15 16:00:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/26 17:30:43 rillig Exp $
 
 DISTNAME=		libreplaygain_r475
 PKGNAME=		libreplaygain-0rc475
@@ -6,7 +6,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://files.musepack.net/source/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.musepack.net/
+HOMEPAGE=		https://www.musepack.net/
 COMMENT=		ReplayGain library for the musepack decoder
 LICENSE=		gnu-lgpl-v2.1
 

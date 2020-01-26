@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2019/11/02 22:38:05 rillig Exp $
+# $NetBSD: Makefile,v 1.65 2020/01/26 17:31:24 rillig Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -12,7 +12,7 @@ PATCHFILES=		urt-3.1b-3.1b1.patch
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cs.utah.edu/gdc/projects/urt/
+HOMEPAGE=	https://www.cs.utah.edu/gdc/projects/urt/
 COMMENT=	Toolkit and library for raster image processing
 
 EXTRACT_ONLY=	urt-3.1b.tar.Z

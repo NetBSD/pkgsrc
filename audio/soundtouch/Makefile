@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/05/29 21:28:03 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:30:45 rillig Exp $
 
 DISTNAME=	soundtouch-2.1.2
 CATEGORIES=	audio
@@ -6,7 +6,7 @@ MASTER_SITES=	https://gitlab.com/soundtouch/soundtouch/-/archive/${PKGVERSION_NO
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.surina.net/soundtouch/
+HOMEPAGE=	https://www.surina.net/soundtouch/
 COMMENT=	Library for changing the tempo, pitch, and playback rates of audio
 LICENSE=	gnu-lgpl-v2.1
 

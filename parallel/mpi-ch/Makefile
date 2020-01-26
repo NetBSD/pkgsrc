@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2019/08/11 13:22:34 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2020/01/26 17:31:59 rillig Exp $
 
 DISTNAME=	mpich-3.2.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	parallel
 MASTER_SITES=	http://www.mpich.org/static/tarballs/${PKGVERSION_NOREV}/
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://www.mpich.org/
+HOMEPAGE=	https://www.mpich.org/
 COMMENT=	Open source MPI, MPI-2, and MPI-3 implementation from Univ. of Chicago
 
 CONFLICTS+=	openmpi-[0-9]*

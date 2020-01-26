@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/08/11 13:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2020/01/26 17:31:20 rillig Exp $
 
 DISTNAME=	cairomm-1.12.2
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://cairographics.org/cairomm/
+HOMEPAGE=	https://cairographics.org/cairomm/
 COMMENT=	C++ API for cairo
 LICENSE=	gnu-lgpl-v2
 

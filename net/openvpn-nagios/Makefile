@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 21:50:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:53 rillig Exp $
 
 PKGREVISION= 1
 .include "../../net/openvpn/Makefile.common"
@@ -10,7 +10,7 @@ MASTER_SITES=	http://ftp.espci.fr/pub/openvpn-nagios/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	manu@NetBSD.org
-HOMEPAGE=	http://ftp.espci.fr/pub/openvpn-nagios/
+HOMEPAGE=	https://ftp.espci.fr/pub/openvpn-nagios/
 COMMENT=	OpenVPN certificate checks for Nagios
 LICENSE=	2-clause-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/09/11 17:03:27 taca Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/26 17:32:06 rillig Exp $
 #
 
 MODNAME=		suhosin
@@ -11,7 +11,7 @@ MASTER_SITES=		https://download.suhosin.org/
 EXTRACT_SUFX=		.tar.gz
 
 MAINTAINER=		cg@cgall.de
-HOMEPAGE=		http://www.suhosin.org/
+HOMEPAGE=		https://www.suhosin.org/
 COMMENT=		Advanced protection system for PHP installations
 LICENSE=		php
 

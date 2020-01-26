@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2019/11/03 10:00:24 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2020/01/26 17:31:04 rillig Exp $
 
 DISTNAME=	redmine-3.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.redmine.org/releases/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.redmine.org/
+HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 

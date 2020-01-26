@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2019/07/21 22:25:40 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2020/01/26 17:32:03 rillig Exp $
 
 DISTNAME=	gpa-0.10.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpa/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pr@alles.prima.de
-HOMEPAGE=	http://www.gnupg.org/related_software/gpa/
+HOMEPAGE=	https://www.gnupg.org/related_software/gpa/
 COMMENT=	GUI frontend to gnupg
 LICENSE=	gnu-gpl-v3
 

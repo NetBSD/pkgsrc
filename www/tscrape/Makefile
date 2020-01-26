@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/08/18 16:00:12 leot Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:32:25 rillig Exp $
 
 DISTNAME=	tscrape-0.3
 CATEGORIES=	www
 MASTER_SITES=	http://codemadness.org/releases/tscrape/
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	http://codemadness.org/git/tscrape/file/README.html
+HOMEPAGE=	https://codemadness.org/git/tscrape/file/README.html
 COMMENT=	Twitter scraper
 LICENSE=	isc
 

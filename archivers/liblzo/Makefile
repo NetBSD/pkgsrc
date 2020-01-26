@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2014/10/09 14:05:52 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/26 17:30:40 rillig Exp $
 
 DISTNAME=	lzo-1.08
 PKGNAME=	lib${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	http://www.oberhumer.com/opensource/lzo/download/LZO-v1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.oberhumer.com/opensource/lzo/
+HOMEPAGE=	https://www.oberhumer.com/opensource/lzo/
 COMMENT=	Portable lossless data compression library (v1)
 
 GNU_CONFIGURE=	YES

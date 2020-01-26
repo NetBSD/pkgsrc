@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/11/03 17:04:25 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:44 rillig Exp $
 
 VERSION=	2.0.0
 GITHUB_PROJECT=	opam-file-format
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 MAKE_JOBS_SAFE=	no
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://opam.ocaml.org/
+HOMEPAGE=	https://opam.ocaml.org/
 COMMENT=	Parser and printer for the opam file syntax
 LICENSE=	gnu-lgpl-v3
 

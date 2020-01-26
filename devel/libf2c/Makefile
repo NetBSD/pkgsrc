@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/11/03 10:39:16 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/26 17:30:59 rillig Exp $
 
 DISTNAME=	libf2c-20090201
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}	# see notes below
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.netlib.org/f2c/index.html
+HOMEPAGE=	https://www.netlib.org/f2c/index.html
 COMMENT=	f2c Fortran support library
 
 CONFLICTS=	egcs-current-19980608 \

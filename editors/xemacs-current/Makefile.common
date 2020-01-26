@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2019/10/08 12:40:55 hauke Exp $
+# $NetBSD: Makefile.common,v 1.15 2020/01/26 17:31:08 rillig Exp $
 #
 # used by editors/xemacs-current/Makefile
 # used by editors/xemacs-current-nox11/Makefile
@@ -10,7 +10,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${DISTNAME:C/[.][^.]*$//}/}
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	http://www.xemacs.org/
+HOMEPAGE=	https://www.xemacs.org/
 LICENSE=	gnu-gpl-v3
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/07/10 17:53:38 sevan Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/26 17:32:09 rillig Exp $
 
 DISTNAME=	fluent-bit-0.13.2
 CATEGORIES=	sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=fluent/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://fluentbit.io/
+HOMEPAGE=	https://fluentbit.io/
 COMMENT=	Fast and lightweight log processor and forwarder
 LICENSE=	apache-2.0
 

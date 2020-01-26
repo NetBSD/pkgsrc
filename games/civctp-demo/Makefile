@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/01/19 18:52:09 agc Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/26 17:31:13 rillig Exp $
 
 DISTNAME=	civctp-demo-10251999
 PKGNAME=	civctp-demo-19991025
@@ -9,7 +9,7 @@ MASTER_SITES+=	ftp://download.linuxlords.com/pub/demos/civctp/
 MASTER_SITES+=	ftp://ftp.linux.tucows.com/pub/Loki/demos/civctp/
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.lokigames.com/products/civctp/
+HOMEPAGE=	https://www.lokigames.com/products/civctp/
 COMMENT=	Civilization: Call to Power - graphical strategy (linux demo)
 
 # Someone needs to look at alpha, powerpc and sparc compat_linux

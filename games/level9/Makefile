@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/09/08 11:57:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:15 rillig Exp $
 
 DISTNAME=		Level9_5.1_Source
 PKGNAME=		level9-5.1
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.ifarchive.org/if-archive/level9/interpreters/level9/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ifarchive.org/if-archive/level9/interpreters/level9/
+HOMEPAGE=		https://www.ifarchive.org/if-archive/level9/interpreters/level9/
 COMMENT=		Curses port of the Level 9 text adventure interpreter
 LICENSE=		gnu-gpl-v2
 

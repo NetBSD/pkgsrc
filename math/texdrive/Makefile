@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/05/02 05:39:14 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:41 rillig Exp $
 #
 
 DISTNAME=	texdrive
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.djcbsoftware.nl/code/texdrive/
 EXTRACT_SUFX=	.el
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.djcbsoftware.nl/code/texdrive/
+HOMEPAGE=	https://www.djcbsoftware.nl/code/texdrive/
 COMMENT=	Emacs mode for creating inline formulae for HTML
 
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts

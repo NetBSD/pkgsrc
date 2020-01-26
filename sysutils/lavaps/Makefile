@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2019/11/04 21:28:47 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2020/01/26 17:32:10 rillig Exp $
 #
 
 DISTNAME=	lavaps-2.7
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
+HOMEPAGE=	https://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 COMMENT=	Lava lamp of currently running processes
 
 MAKE_JOBS_SAFE=		no

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:59 rillig Exp $
 
 PKGNAME=	genrpm-1.2
 CATEGORIES=	pkgtools
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.pkgsrc.org/
+HOMEPAGE=	https://www.pkgsrc.org/
 COMMENT=	Generate an RPM package from an installed pkgsrc package
 LICENSE=	modified-bsd
 

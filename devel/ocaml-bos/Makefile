@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/03/19 11:29:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:31:01 rillig Exp $
 
 DISTNAME=	bos-0.2.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://erratique.ch/software/bos/releases/
 EXTRACT_SUFX=	.tbz
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://erratique.ch/software/bos
+HOMEPAGE=	https://erratique.ch/software/bos
 COMMENT=	Basic OS interaction for OCaml
 LICENSE=	isc
 

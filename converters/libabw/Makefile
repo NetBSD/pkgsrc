@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/01/12 20:19:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/26 17:30:51 rillig Exp $
 
 DISTNAME=	libabw-0.1.1
 PKGREVISION=	17
@@ -7,7 +7,7 @@ MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://dev-www.libreoffice.org/src/
+HOMEPAGE=	https://dev-www.libreoffice.org/src/
 COMMENT=	Library for AbiWord documents
 LICENSE=	mpl-2.0
 

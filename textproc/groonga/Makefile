@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2020/01/18 21:51:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.66 2020/01/26 17:32:14 rillig Exp $
 #
 
 DISTNAME=	groonga-7.0.6
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://packages.groonga.org/source/groonga/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://groonga.org/
+HOMEPAGE=	https://groonga.org/
 COMMENT=	Fulltext search engine and column store
 LICENSE=	gnu-lgpl-v2.1
 

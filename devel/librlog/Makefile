@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:20 asau Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:30:59 rillig Exp $
 #
 
 DISTNAME=	rlog-1.3.7
@@ -8,7 +8,7 @@ MASTER_SITES=	http://arg0.net/vgough/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.arg0.net/rlog
+HOMEPAGE=	https://www.arg0.net/rlog
 COMMENT=	C++ logging library
 
 GNU_CONFIGURE=	yes

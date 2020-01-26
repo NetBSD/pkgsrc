@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/02/22 11:14:19 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:02 rillig Exp $
 
 DISTNAME=	falcon-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/falcon/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://falconframework.org/
+HOMEPAGE=	https://falconframework.org/
 COMMENT=	Unladen web framework for building APIs and app backends
 LICENSE=	apache-2.0
 

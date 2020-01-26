@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/07/26 02:02:23 schmonz Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/26 17:31:34 rillig Exp $
 #
 
 DISTNAME=		ezmlm-0.53
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		http://cr.yp.to/software/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://cr.yp.to/ezmlm.html
+HOMEPAGE=		https://cr.yp.to/ezmlm.html
 COMMENT=		Easy-to-use, high-speed mailing list manager for qmail
 LICENSE=		public-domain
 

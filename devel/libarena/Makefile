@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:10 asau Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:30:58 rillig Exp $
 #
 
 DISTNAME=	libarena-${SNAPSHOT_DATE}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 SNAPSHOT_DATE=	20080221
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.25thandclement.com/~william/projects/libarena.html
+HOMEPAGE=	https://www.25thandclement.com/~william/projects/libarena.html
 COMMENT=	Memory allocator API and implementation
 
 BUILD_TARGET=	pic

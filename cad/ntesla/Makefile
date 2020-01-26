@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/08 13:25:14 asau Exp $
+# $NetBSD: Makefile,v 1.10 2020/01/26 17:30:48 rillig Exp $
 #
 
 DISTNAME=		ntesla-1.7
@@ -6,7 +6,7 @@ CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=apps/circuits/}
 
 MAINTAINER=		dmcmahill@NetBSD.org
-HOMEPAGE=		http://www.nic.funet.fi/pub/sci/electrical/tesla/
+HOMEPAGE=		https://www.nic.funet.fi/pub/sci/electrical/tesla/
 COMMENT=		Tesla coil design program
 
 INSTALLATION_DIRS=	bin

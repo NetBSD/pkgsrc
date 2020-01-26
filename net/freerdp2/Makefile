@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 21:50:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:49 rillig Exp $
 
 DISTNAME=	freerdp-2.0.0rc4
 PKGNAME=	${DISTNAME:S/freerdp-/freerdp2-/1}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	FreeRDP
 GITHUB_TAG=	2.0.0-rc4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freerdp.com/
+HOMEPAGE=	https://www.freerdp.com/
 COMMENT=	Free implementation of the Remote Desktop Protocol (major version 2)
 LICENSE=	apache-2.0
 

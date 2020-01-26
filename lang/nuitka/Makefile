@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/12/28 11:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:30 rillig Exp $
 
 DISTNAME=	Nuitka-0.5.0.1
 PKGNAME=	${DISTNAME:C/N/n/}
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://nuitka.net/releases/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.nuitka.net/pages/overview.html
+HOMEPAGE=	https://www.nuitka.net/pages/overview.html
 COMMENT=	Python to C++ compiler
 LICENSE=	apache-2.0
 

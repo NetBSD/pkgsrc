@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2019/11/02 22:38:02 rillig Exp $
+# $NetBSD: Makefile,v 1.58 2020/01/26 17:31:22 rillig Exp $
 
 DISTNAME=	povray-3.6.1
 PKGREVISION=	15
@@ -8,7 +8,7 @@ MASTER_SITES+=	ftp://ftp.povray.org/pub/povray/Official/Unix/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.povray.org/
+HOMEPAGE=	https://www.povray.org/
 COMMENT=	Persistence of Vision Ray Tracer
 LICENSE=	povray-license
 

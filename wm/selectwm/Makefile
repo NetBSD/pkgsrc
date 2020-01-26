@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/07/21 22:25:52 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2020/01/26 17:32:20 rillig Exp $
 #
 
 DISTNAME=	selectwm-0.4.1
@@ -7,7 +7,7 @@ CATEGORIES=	wm
 MASTER_SITES=	http://ordiluc.net/selectwm/
 
 MAINTAINER=	tonio@NetBSD.org
-HOMEPAGE=	http://ordiluc.net/selectwm/
+HOMEPAGE=	https://ordiluc.net/selectwm/
 COMMENT=	Simple GTK2 application to select window manager
 
 USE_TOOLS+=		pkg-config

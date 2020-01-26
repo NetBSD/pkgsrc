@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 11:43:33 asau Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:06 rillig Exp $
 #
 
 DISTNAME=		gate-2.06
@@ -7,7 +7,7 @@ CATEGORIES=		editors
 MASTER_SITES=		http://www.unixpapa.com/software/
 
 MAINTAINER=		hugor@users.sourceforge.net
-HOMEPAGE=		http://www.unixpapa.com/gate.html
+HOMEPAGE=		https://www.unixpapa.com/gate.html
 COMMENT=		Lightweight text editor
 
 GNU_CONFIGURE=		yes

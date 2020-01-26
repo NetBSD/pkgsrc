@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2019/11/03 19:04:06 rillig Exp $
+# $NetBSD: Makefile,v 1.65 2020/01/26 17:31:31 rillig Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ruby-${RUBY_VERSION}
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.ruby-lang.org/en/
+HOMEPAGE=	https://www.ruby-lang.org/en/
 COMMENT=	Wrapper package for Ruby programming language
 
 CONFLICTS=	pkg_alternatives-[0-9]*

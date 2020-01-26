@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2012/10/29 05:06:48 asau Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:27 rillig Exp $
 
 DISTNAME=	ratmen-2.2.2
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://www.update.uu.se/~zrajm/programs/ratmen/
 
 MAINTAINER=	lkundrak@skosi.org
-HOMEPAGE=	http://www.update.uu.se/~zrajm/programs/
+HOMEPAGE=	https://www.update.uu.se/~zrajm/programs/
 COMMENT=	Allows you to create X menus from the shell
 
 BUILD_TARGET=	ratmen

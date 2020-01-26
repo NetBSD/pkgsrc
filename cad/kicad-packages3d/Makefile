@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/08/29 15:36:40 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/26 17:30:47 rillig Exp $
 #
 
 V=		5.1.4
@@ -9,7 +9,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://kicad-pcb.org/
+HOMEPAGE=	https://kicad-pcb.org/
 COMMENT=	3D models for rendering and the MCAD software
 LICENSE=	cc-by-sa-v4.0
 WRKSRC=		${WRKDIR}/kicad-packages3D-${V}

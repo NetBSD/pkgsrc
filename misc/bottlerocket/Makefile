@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 17:04:20 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:42 rillig Exp $
 
 DISTNAME=	bottlerocket-0.04c
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://mlug.missouri.edu/~tymm/
 MASTER_SITES=	http://www.linuxha.com/bottlerocket/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.linuxha.com/bottlerocket/
+HOMEPAGE=	https://www.linuxha.com/bottlerocket/
 COMMENT=	Home Automation Software for the X10 FireCracker kit
 
 USE_TOOLS+=	gmake

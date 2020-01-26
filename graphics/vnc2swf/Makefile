@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/03/15 17:41:59 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:24 rillig Exp $
 #
 
 DISTNAME=		vnc2swf-0.5.0
@@ -7,7 +7,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		http://www.unixuser.org/~euske/vnc2swf/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.unixuser.org/~euske/vnc2swf/
+HOMEPAGE=		https://www.unixuser.org/~euske/vnc2swf/
 COMMENT=		Record vnc session as flash movie
 LICENSE=		gnu-gpl-v2
 

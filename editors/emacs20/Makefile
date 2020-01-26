@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2019/06/08 10:40:54 rillig Exp $
+# $NetBSD: Makefile,v 1.61 2020/01/26 17:31:06 rillig Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
@@ -21,13 +21,13 @@ PATCHFILES+=		emacs20-xim-20000713.diff
 
 # dholland's jumbo patch
 PATCHFILES+=		emacs20-jumbo-patch-20170723.gz
-SITES.emacs20-jumbo-patch-20170723.gz=\
+SITES.emacs20-jumbo-patch-20170723.gz= \
 			http://www.NetBSD.org/~dholland/patchkits/emacs20/
 
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	dholland@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+HOMEPAGE=	https://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 
 BROKEN_ON_PLATFORM=	Darwin-*-* DragonFly-*-*

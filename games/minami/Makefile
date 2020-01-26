@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/08/11 13:21:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/26 17:31:16 rillig Exp $
 #
 
 DISTNAME=	minami-1.0.2
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.guru.gr.jp/pub/minami/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.guru.gr.jp/~issei/minami/
+HOMEPAGE=	https://www.guru.gr.jp/~issei/minami/
 COMMENT=	Text adventure
 
 USE_TOOLS+=	perl:run

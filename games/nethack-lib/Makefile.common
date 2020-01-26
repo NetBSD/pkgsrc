@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2019/12/19 14:41:59 rhialto Exp $
+# $NetBSD: Makefile.common,v 1.41 2020/01/26 17:31:16 rillig Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -26,7 +26,7 @@ MASTER_SITES=		https://www.nethack.org/download/${NETHACK_BASEVER}/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.nethack.org/
+HOMEPAGE=		https://www.nethack.org/
 LICENSE=		nethack-license
 
 MAKE_JOBS_SAFE=		no

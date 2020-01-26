@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/07/31 07:26:20 nros Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/26 17:31:42 rillig Exp $
 #
 
 DISTNAME=		bsdiff-4.3
@@ -7,7 +7,7 @@ CATEGORIES=		misc
 MASTER_SITES=		http://www.daemonology.net/bsdiff/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.daemonology.net/bsdiff/
+HOMEPAGE=		https://www.daemonology.net/bsdiff/
 COMMENT=		Size efficient binary diff and patch tools
 LICENSE=		2-clause-bsd
 

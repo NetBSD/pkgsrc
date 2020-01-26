@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/11 13:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:31:39 rillig Exp $
 
 DISTNAME=	pari-2.3.5
 PKGREVISION=	23
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://pari.math.u-bordeaux.fr/pub/pari/unix/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pari.math.u-bordeaux.fr/
+HOMEPAGE=	https://pari.math.u-bordeaux.fr/
 COMMENT=	Software package for computer-aided number theory (2.3 version)
 LICENSE=	gnu-gpl-v2
 

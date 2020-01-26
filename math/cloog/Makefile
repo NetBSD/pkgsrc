@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2016/10/09 19:46:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/26 17:31:38 rillig Exp $
 
 DISTNAME=	cloog-0.18.4
 CATEGORIES=	math
 MASTER_SITES=	http://www.bastoul.net/cloog/pages/download/
 
 MAINTAINER=	kuehro@gmx.de
-HOMEPAGE=	http://www.cloog.org/
+HOMEPAGE=	https://www.cloog.org/
 COMMENT=	Code generator for loop optimization (used by gcc)
 LICENSE=	gnu-lgpl-v2.1
 

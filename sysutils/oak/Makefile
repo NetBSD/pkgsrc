@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/23 19:51:15 asau Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:10 rillig Exp $
 #
 
 DISTNAME=		oak-1.5.0
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://www.ktools.org/dist/oak/
 
 MAINTAINER=		jdw-pkgsrc@menelos.com
-HOMEPAGE=		http://www.ktools.org/dist/oak/
+HOMEPAGE=		https://www.ktools.org/dist/oak/
 COMMENT=		System log reporting tool
 
 USE_PKGLOCALEDIR=	yes

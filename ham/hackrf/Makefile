@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/03 19:32:07 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:24 rillig Exp $
 
 DISTNAME=		hackrf-2018.01.1
 PKGREVISION=		1
@@ -8,7 +8,7 @@ GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://greatscottgadgets.com/hackrf/
+HOMEPAGE=		https://greatscottgadgets.com/hackrf/
 #OMEPAGE=		https://www.kickstarter.com/projects/mossmann/hackrf-an-open-source-sdr-platform
 COMMENT=		HackRF, an open source SDR hardware platform
 LICENSE=		gnu-gpl-v2

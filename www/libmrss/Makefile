@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/01/18 21:48:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2020/01/26 17:32:21 rillig Exp $
 #
 
 DISTNAME=	libmrss-0.19.2
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.autistici.org/bakunin/libmrss/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.autistici.org/bakunin/libmrss/
+HOMEPAGE=	https://www.autistici.org/bakunin/libmrss/
 COMMENT=	C library for parsing, writing and creating RSS files or streams
 LICENSE=	gnu-lgpl-v2.1
 

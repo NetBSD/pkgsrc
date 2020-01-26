@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/09/05 15:24:00 abs Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/26 17:31:56 rillig Exp $
 
 PKGNAME=		teamspeak-client-2.0.32.60
 DISTNAME=		ts2_client_rc2_2032
@@ -7,7 +7,7 @@ MASTER_SITES=		#
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.goteamspeak.com/
+HOMEPAGE=		https://www.goteamspeak.com/
 COMMENT=		Teamspeak group VoIP client
 LICENSE=		teamspeak-license-200700213
 

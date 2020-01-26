@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 21:50:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/26 17:32:04 rillig Exp $
 
 DISTNAME=	krb5-appl-1.0.3
 PKGNAME=	mit-${DISTNAME}
@@ -12,7 +12,7 @@ DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
 #PATCHFILES=	2011-005-patch.txt
 
 MAINTAINER=	tez@NetBSD.org
-HOMEPAGE=	http://web.mit.edu/kerberos/
+HOMEPAGE=	https://web.mit.edu/kerberos/
 COMMENT=	MIT Kerberos 5 authentication system applications
 
 MAKE_JOBS_SAFE=		no

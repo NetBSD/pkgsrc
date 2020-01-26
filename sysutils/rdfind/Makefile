@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/11/17 12:38:52 mef Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:11 rillig Exp $
 
 DISTNAME=	rdfind-1.4.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://rdfind.pauldreik.se/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rdfind.pauldreik.se/
+HOMEPAGE=	https://rdfind.pauldreik.se/
 COMMENT=	Redundant data find
 LICENSE=	gnu-gpl-v2
 

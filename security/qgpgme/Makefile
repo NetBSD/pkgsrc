@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 21:48:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/26 17:32:07 rillig Exp $
 
 DISTNAME=	gpgme-1.10.0
 PKGNAME=	qgpgme-1.10.0
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnupg.org/related_software/gpgme/
+HOMEPAGE=	https://www.gnupg.org/related_software/gpgme/
 COMMENT=	Qt bindings for GPGme
 LICENSE=	gnu-lgpl-v2.1
 

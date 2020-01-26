@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/13 18:04:28 seb Exp $
+# $NetBSD: Makefile,v 1.6 2020/01/26 17:30:58 rillig Exp $
 
 DISTNAME=	jsonnet-0.13.0
 CATEGORIES=	devel
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jsonnet.org/
+HOMEPAGE=	https://jsonnet.org/
 COMMENT=	Domain specific configuration language
 LICENSE=	apache-2.0
 

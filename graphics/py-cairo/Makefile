@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2019/11/06 12:53:10 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2020/01/26 17:31:23 rillig Exp $
 
 DISTNAME=		pycairo-1.18.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -8,7 +8,7 @@ GITHUB_PROJECT=		pycairo
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		leuzi@trash.net
-HOMEPAGE=		http://cairographics.org/pycairo/
+HOMEPAGE=		https://cairographics.org/pycairo/
 COMMENT=		Python bindings for cairo
 LICENSE=		gnu-lgpl-v2.1 OR mpl-1.1
 

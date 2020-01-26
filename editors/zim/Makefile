@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/09/02 13:19:57 adam Exp $
+# $NetBSD: Makefile,v 1.37 2020/01/26 17:31:08 rillig Exp $
 
 DISTNAME=	zim-0.59
 PKGREVISION=	17
@@ -7,7 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	http://zim-wiki.org/downloads/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://zim-wiki.org/
+HOMEPAGE=	https://zim-wiki.org/
 COMMENT=	Zim brings the concept of a wiki to your desktop
 LICENSE=	gnu-gpl-v2
 
@@ -19,7 +19,7 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	${WRKSRC}/zim.py
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
+PYTHON_VERSIONS_ACCEPTED= 27 # py-gtk2
 
 SUBST_CLASSES+=		data-path
 SUBST_STAGE.data-path=	pre-configure

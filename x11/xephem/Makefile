@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2019/11/03 09:14:20 rillig Exp $
+# $NetBSD: Makefile,v 1.69 2020/01/26 17:32:27 rillig Exp $
 
 DISTNAME=	xephem-3.7.7
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://97.74.56.125/free/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://www.clearskyinstitute.com/xephem/
+HOMEPAGE=	https://www.clearskyinstitute.com/xephem/
 COMMENT=	Interactive astronomical ephemeris program
 LICENSE=	xephem-license
 

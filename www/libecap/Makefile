@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/05/03 08:38:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:32:21 rillig Exp $
 
 DISTNAME=	libecap-1.0.1
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.measurement-factory.com/tmp/ecap/
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	http://www.e-cap.org/
+HOMEPAGE=	https://www.e-cap.org/
 COMMENT=	C++ implementation of eCAP API
 LICENSE=	2-clause-bsd
 

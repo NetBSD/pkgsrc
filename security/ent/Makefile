@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2013/04/25 16:24:54 agc Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/26 17:32:02 rillig Exp $
 #
 
 DISTNAME=		random
@@ -8,7 +8,7 @@ MASTER_SITES=		http://fourmilab.ch/random/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		evaldo@gardenali.biz
-HOMEPAGE=		http://fourmilab.ch/random/
+HOMEPAGE=		https://fourmilab.ch/random/
 COMMENT=		Entropy calculation and analysis of putative random sequences
 LICENSE=		public-domain
 

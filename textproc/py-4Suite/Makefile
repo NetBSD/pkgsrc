@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/11/04 21:43:45 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:32:16 rillig Exp $
 
 VER=		1.0.2
 DISTNAME=	4Suite-XML-${VER}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=foursuite/}
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	http://4suite.org/
+HOMEPAGE=	https://4suite.org/
 COMMENT=	Open-source platform for XML and RDF processing
 LICENSE=	apache-1.1
 

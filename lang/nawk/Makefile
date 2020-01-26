@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/10/09 14:06:38 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2020/01/26 17:31:30 rillig Exp $
 
 DISTNAME=	nawk-20121220
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cs.princeton.edu/~bwk/btl.mirror/
+HOMEPAGE=	https://www.cs.princeton.edu/~bwk/btl.mirror/
 COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
 
 BOOTSTRAP_PKG=	yes

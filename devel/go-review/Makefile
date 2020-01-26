@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/10 13:32:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.23 2020/01/26 17:30:57 rillig Exp $
 #
 
 DISTNAME=		review
@@ -10,7 +10,7 @@ GITHUB_PROJECT=		${DISTNAME}
 GITHUB_TAG=		36fe892ba0
 
 MAINTAINER=		bsiegert@NetBSD.org
-HOMEPAGE=		http://golang.org/
+HOMEPAGE=		https://golang.org/
 COMMENT=		Git Codereview plugin used by the Go project
 LICENSE=		modified-bsd
 

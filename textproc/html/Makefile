@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/03/15 01:04:27 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/26 17:32:14 rillig Exp $
 #
 
 DISTNAME=	html-4.01
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.FreeBSD.org/pub/FreeBSD/ports/distfiles/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.w3.org/TR/REC-html40/
+HOMEPAGE=	https://www.w3.org/TR/REC-html40/
 COMMENT=	SGML DTDs for the Hypertext Markup Language
 
 DEPENDS+=	iso8879>=1986:../../textproc/iso8879

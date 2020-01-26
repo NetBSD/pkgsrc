@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/12 20:19:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:25 rillig Exp $
 
 DISTNAME=	librime-1.0
 PKGREVISION=	15
@@ -7,7 +7,7 @@ MASTER_SITES=	http://rimeime.googlecode.com/files/
 #MASTER_SITES=	http://dl.bintray.com/lotem/rime/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rime.im/
+HOMEPAGE=	https://rime.im/
 COMMENT=	Rime input method engine
 LICENSE=	gnu-gpl-v3
 

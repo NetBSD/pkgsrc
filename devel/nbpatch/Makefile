@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/11/07 18:29:50 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/26 17:31:00 rillig Exp $
 #
 
 DISTNAME=	nbpatch-20151107
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://www.pkgsrc.org/
+HOMEPAGE=	https://www.pkgsrc.org/
 COMMENT=	Patch files using diff output
 
 # Allow checkperms and other core dependencies to use patches

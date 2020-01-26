@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/01/19 18:52:19 agc Exp $
+# $NetBSD: Makefile,v 1.19 2020/01/26 17:31:49 rillig Exp $
 #
 
 DISTNAME=	ftpproxy-${VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES+=	http://www.ftpproxy.org/download/older_releases/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ftpproxy.org/
+HOMEPAGE=	https://www.ftpproxy.org/
 COMMENT=	Application level gateway for FTP
 
 BUILD_DIRS=	src

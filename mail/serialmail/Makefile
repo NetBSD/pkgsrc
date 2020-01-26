@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/05/23 19:23:08 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/26 17:31:36 rillig Exp $
 #
 
 DISTNAME=		serialmail-0.75
@@ -7,7 +7,7 @@ CATEGORIES=		mail
 MASTER_SITES=		http://cr.yp.to/software/
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://cr.yp.to/serialmail.html
+HOMEPAGE=		https://cr.yp.to/serialmail.html
 COMMENT=		Tools for passing mail across serial links
 
 DEPENDS+=		qmail>=1.03nb7:../../mail/qmail

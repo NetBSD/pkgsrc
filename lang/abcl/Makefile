@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2018/01/01 01:21:59 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:31:26 rillig Exp $
 
 DISTNAME=	abcl-src-1.5.0
 PKGNAME=	${DISTNAME:C/-src//}
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://abcl.org/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://abcl.org/
+HOMEPAGE=	https://abcl.org/
 COMMENT=	Armed Bear Common Lisp
 
 BUILD_DEPENDS=	apache-ant>=1.7.1:../../devel/apache-ant

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2018/03/07 11:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2020/01/26 17:32:26 rillig Exp $
 
 DISTNAME=	dxpc-3.9.2
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.vigor.nu/dxpc/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.vigor.nu/dxpc/
+HOMEPAGE=	https://www.vigor.nu/dxpc/
 COMMENT=	Differential X Protocol Compressor
 LICENSE=	2-clause-bsd
 

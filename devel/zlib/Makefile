@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2017/04/04 08:57:33 adam Exp $
+# $NetBSD: Makefile,v 1.56 2020/01/26 17:31:05 rillig Exp $
 
 DISTNAME=	zlib-1.2.11
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ MASTER_SITES+=	http://zlib.net/
 DISTFILES=	# empty
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://www.zlib.net/
+HOMEPAGE=	https://www.zlib.net/
 COMMENT=	General purpose data compression library
 LICENSE=	zlib
 

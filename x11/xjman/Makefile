@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/07/04 16:18:43 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/26 17:32:28 rillig Exp $
 
 DISTNAME=	xjman-0.5
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://xjman.dsl.gr.jp/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xjman.dsl.gr.jp/
+HOMEPAGE=	https://xjman.dsl.gr.jp/
 COMMENT=	Japanized X manual from "The X Japanese Documentation Project"
 
 DEPENDS+=	ja-man-[0-9]*:../../misc/ja-man

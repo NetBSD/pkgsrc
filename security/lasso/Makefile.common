@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2019/11/04 21:12:54 rillig Exp $
+# $NetBSD: Makefile.common,v 1.15 2020/01/26 17:32:03 rillig Exp $
 #
 # used by security/lasso/Makefile
 # used by security/py-lasso/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	security
 MASTER_SITES=	https://dev.entrouvert.org/lasso/
 
 MAINTAINER=	manu@NetBSD.org
-HOMEPAGE=	http://lasso.entrouvert.org/
+HOMEPAGE=	https://lasso.entrouvert.org/
 COMMENT=	Liberty Alliance Single Sign On implementation
 LICENSE=	gnu-gpl-v2
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2019/11/03 09:14:13 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/26 17:32:26 rillig Exp $
 
 DISTNAME=		motif-2.3.8
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=motif/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://motif.ics.com/
+HOMEPAGE=		https://motif.ics.com/
 COMMENT=		LGPLed Motif toolkit for the X Window System
 LICENSE=		gnu-lgpl-v2.1
 

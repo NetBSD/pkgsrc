@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/11/04 17:47:30 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2020/01/26 17:32:05 rillig Exp $
 
 DISTNAME=	openvas-libraries-2.0.0
 PKGREVISION=	13
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/548/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openvas.org/
+HOMEPAGE=	https://www.openvas.org/
 COMMENT=	Libraries for the Open Vulnerability Assessment System
 
 GNU_CONFIGURE=	YES

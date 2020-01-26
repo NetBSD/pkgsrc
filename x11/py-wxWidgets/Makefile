@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2019/11/03 09:14:15 rillig Exp $
+# $NetBSD: Makefile,v 1.80 2020/01/26 17:32:26 rillig Exp $
 
 VERSION=	2.8.12.0
 DISTNAME=	wxPython-src-${VERSION}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://wxpython.org/
+HOMEPAGE=	https://wxpython.org/
 COMMENT=	Python bindings for wxWidgets
 
 WRKSRC=		${WRKDIR}/wxPython-src-${VERSION}/wxPython

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/28 13:47:00 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/26 17:32:06 rillig Exp $
 
 DISTNAME=	backports.ssl_match_hostname-3.7.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	python security www
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backports.ssl_match_hostname/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://bitbucket.org/brandon/backports.ssl_match_hostname
+HOMEPAGE=	https://bitbucket.org/brandon/backports.ssl_match_hostname
 COMMENT=	Python SSL support module for Python 2
 LICENSE=	python-software-foundation
 

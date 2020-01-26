@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/11/03 19:35:55 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 17:31:42 rillig Exp $
 
 DISTNAME=	redmine-plugins-1.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	# blank
 DISTFILES=	# blank
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.redmine.org/
+HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Redmine plugins meta package
 
 DEPENDS+=	${RUBY_PKGPREFIX}-redmine_code_review-[0-9]*:../../devel/ruby-redmine_code_review

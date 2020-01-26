@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2019/08/16 16:20:46 otis Exp $
+# $NetBSD: Makefile.common,v 1.52 2020/01/26 17:30:48 rillig Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
@@ -13,7 +13,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pidgin.im/
+HOMEPAGE=	https://www.pidgin.im/
 LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes

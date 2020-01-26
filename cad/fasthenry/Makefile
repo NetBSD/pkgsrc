@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2019/06/08 11:04:28 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/26 17:30:47 rillig Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.rle.mit.edu/cpg/codes/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://www.rle.mit.edu/cpg/research_codes.htm
+HOMEPAGE=	https://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Three-dimensional inductance extraction program
 
 DIST_SUBDIR=	${PKGNAME_NOREV}

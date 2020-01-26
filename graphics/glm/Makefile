@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/08/09 11:17:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:21 rillig Exp $
 
 DISTNAME=	glm-0.9.7.0
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=g-truc/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://glm.g-truc.net/
+HOMEPAGE=	https://glm.g-truc.net/
 COMMENT=	C++ mathematics library for graphics programming
 LICENSE=	mit
 # in "Happy Bunny" variation, adding:

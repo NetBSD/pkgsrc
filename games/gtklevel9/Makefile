@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2019/07/21 22:24:51 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2020/01/26 17:31:15 rillig Exp $
 
 DISTNAME=		Level9_4.0_Source
 PKGNAME=		gtklevel9-4.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.zip
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ifarchive.org/if-archive/level9/interpreters/level9/
+HOMEPAGE=		https://www.ifarchive.org/if-archive/level9/interpreters/level9/
 COMMENT=		GTK+ port of the Level 9 text adventure interpreter
 
 WRKSRC=			${WRKDIR}/Gtk

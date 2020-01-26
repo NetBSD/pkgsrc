@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2019/10/12 12:14:37 maya Exp $
+# $NetBSD: Makefile.common,v 1.20 2020/01/26 17:32:08 rillig Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -23,7 +23,7 @@ CATEGORIES=	sysutils
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	fhajny@NetBSD.org
-HOMEPAGE=	http://collectd.org/
+HOMEPAGE=	https://collectd.org/
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes

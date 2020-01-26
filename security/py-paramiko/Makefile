@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/12/11 10:43:53 adam Exp $
+# $NetBSD: Makefile,v 1.38 2020/01/26 17:32:07 rillig Exp $
 
 DISTNAME=	paramiko-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/paramiko/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.paramiko.org/
+HOMEPAGE=	https://www.paramiko.org/
 COMMENT=	SSH2 protocol library
 LICENSE=	gnu-lgpl-v2.1
 

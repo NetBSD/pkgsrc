@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/01/08 19:25:57 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/26 17:31:11 rillig Exp $
 #
 
 DISTNAME=	croscorefonts-1.31.0
@@ -7,7 +7,7 @@ MASTER_SITES=	http://gsdview.appspot.com/chromeos-localmirror/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://fedoraproject.org/wiki/Google_Croscore_fonts
+HOMEPAGE=	https://fedoraproject.org/wiki/Google_Croscore_fonts
 COMMENT=	Google Croscore fonts
 LICENSE=	ofl-v1.1
 

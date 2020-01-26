@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/11/03 17:04:19 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:42 rillig Exp $
 #
 
 DISTNAME=	JBidwatcher-2.1.5
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.jbidwatcher.com/download/
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.jbidwatcher.com/
+HOMEPAGE=	https://www.jbidwatcher.com/
 COMMENT=	Software for eBay sniping, bidding and monitoring
 #LICENSE=	Creative Commons BY-NC-SA Amended
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2019/10/12 20:43:11 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2020/01/26 17:32:05 rillig Exp $
 
 DISTNAME=	opencdk-0.6.6
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/attic/opencdk/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnutls.org/
+HOMEPAGE=	https://www.gnutls.org/
 COMMENT=	Open Crypto Development Kit
 LICENSE=	gnu-gpl-v2
 

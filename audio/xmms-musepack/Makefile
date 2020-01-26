@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2018/07/18 00:06:11 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/26 17:30:45 rillig Exp $
 #
 
 DISTNAME=	xmms-musepack-1.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://musepack.imosnet.de/linux/plugins/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.musepack.net/
+HOMEPAGE=	https://www.musepack.net/
 COMMENT=	XMMS plugin for musepack (mpc) files
 LICENSE=	modified-bsd
 

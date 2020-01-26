@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/08/11 13:21:44 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2020/01/26 17:31:39 rillig Exp $
 
 DISTNAME=		ntl-6.0.0
 PKGREVISION=		6
@@ -6,7 +6,7 @@ CATEGORIES=		math devel
 MASTER_SITES=		http://www.shoup.net/ntl/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.shoup.net/ntl/
+HOMEPAGE=		https://www.shoup.net/ntl/
 COMMENT=		C++ library for doing number theory
 
 MAKE_JOBS_SAFE=		no

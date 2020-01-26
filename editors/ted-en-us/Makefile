@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/07/04 16:18:29 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:07 rillig Exp $
 
 DISTNAME=	ted-2.16.src
 PKGNAME=	ted-en-us-2.16
@@ -7,7 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nllgg.nl/Ted/
+HOMEPAGE=	https://www.nllgg.nl/Ted/
 COMMENT=	US English spelling dictionary for the Ted word processor
 
 DEPENDS+=	ted>=2.6:../../editors/ted

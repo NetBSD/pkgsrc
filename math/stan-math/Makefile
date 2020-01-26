@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/03/10 02:33:05 wen Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/26 17:31:41 rillig Exp $
 
 DISTNAME=	stan-math-2.18.1
 CATEGORIES=	math
@@ -7,7 +7,7 @@ GITHUB_PROJECT=	math
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://mc-stan.org/
+HOMEPAGE=	https://mc-stan.org/
 COMMENT=	Stan Math library
 LICENSE=	modified-bsd
 

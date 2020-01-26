@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2019/08/11 13:22:29 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2020/01/26 17:31:55 rillig Exp $
 
 DISTNAME=	rsync-3.1.3
 PKGREVISION=	2
@@ -8,7 +8,7 @@ MASTER_SITES+=	http://rsync.samba.org/ftp/rsync/old-versions/
 MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/network/rsync/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rsync.samba.org/
+HOMEPAGE=	https://rsync.samba.org/
 COMMENT=	Network file distribution/synchronisation utility
 LICENSE=	gnu-gpl-v3
 

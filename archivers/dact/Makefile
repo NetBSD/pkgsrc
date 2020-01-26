@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2017/04/05 15:58:31 adam Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/26 17:30:40 rillig Exp $
 
 DISTNAME=	dact-0.8.42
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.rkeene.org/devel/dact/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rkeene.org/oss/dact/
+HOMEPAGE=	https://www.rkeene.org/oss/dact/
 COMMENT=	Dynamic adaptive compression tool
 LICENSE=	gnu-gpl-v2
 

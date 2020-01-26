@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2019/11/02 22:54:27 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:30:41 rillig Exp $
 
 DISTNAME=	rzip-2.1
 CATEGORIES=	archivers
 MASTER_SITES=	https://rzip.samba.org/ftp/rzip/
 
 MAINTAINER=	carton@Ivy.NET
-HOMEPAGE=	http://rzip.samba.org/
+HOMEPAGE=	https://rzip.samba.org/
 COMMENT=	Create or extract .rz files, like gzip but smaller
 
 GNU_CONFIGURE=		yes

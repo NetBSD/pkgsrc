@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/01/18 21:48:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.63 2020/01/26 17:30:48 rillig Exp $
 
 VERSION=	2019.05
 DISTNAME=	openscad-${VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=openscad/}
 GITHUB_TAG=	openscad-${VERSION}
 
 MAINTAINER=	reinoud@NetBSD.org
-HOMEPAGE=	http://www.openscad.org/
+HOMEPAGE=	https://www.openscad.org/
 COMMENT=	OpenSCAD - The Programmers Solid 3D CAD Modeller
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/04/25 07:33:23 maya Exp $
+# $NetBSD: Makefile,v 1.16 2020/01/26 17:32:13 rillig Exp $
 
 DISTNAME=	coccigrep-1.16
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=regit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://home.regit.org/software/coccigrep/
+HOMEPAGE=	https://home.regit.org/software/coccigrep/
 COMMENT=	Semantic grep for the C language
 LICENSE=	gnu-gpl-v3
 

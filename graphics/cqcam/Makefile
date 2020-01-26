@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2018/03/12 11:16:40 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2020/01/26 17:31:20 rillig Exp $
 #
 
 DISTNAME=		cqcam-0.91
@@ -7,7 +7,7 @@ CATEGORIES=		graphics x11
 MASTER_SITES=		http://piki.org/patrick/cqcam/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://piki.org/patrick/cqcam/
+HOMEPAGE=		https://piki.org/patrick/cqcam/
 COMMENT=		Free Color QuickCam control program
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2019/08/11 13:18:30 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/01/26 17:30:53 rillig Exp $
 
 DISTNAME=	Fsdb-2.65
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/FSDB/
 
 MAINTAINER=	bad@NetBSD.org
-HOMEPAGE=	http://www.isi.edu/~johnh/SOFTWARE/FSDB/index.html
+HOMEPAGE=	https://www.isi.edu/~johnh/SOFTWARE/FSDB/index.html
 COMMENT=	Commands for manipulating flat-ASCII databases
 LICENSE=	gnu-gpl-v2
 

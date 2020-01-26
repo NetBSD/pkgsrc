@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/01/18 21:49:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2020/01/26 17:31:14 rillig Exp $
 
 DISTNAME=	enigma-1.21
 PKGNAME=	${DISTNAME:S/-r/./}
@@ -7,11 +7,11 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enigma-game/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.nongnu.org/enigma/
+HOMEPAGE=	https://www.nongnu.org/enigma/
 COMMENT=	Puzzle game similar to Oxyd/Rock'n'Roll/Marble Madness
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
+DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
 TOOL_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-r1914//}

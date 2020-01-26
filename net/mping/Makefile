@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2013/12/10 13:59:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:51 rillig Exp $
 
 DISTNAME=	mping-2.01
 CATEGORIES=	net
 MASTER_SITES=	http://mping.uninett.no/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://mping.uninett.no/
+HOMEPAGE=	https://mping.uninett.no/
 COMMENT=	Mping network statistics collector
 
 GNU_CONFIGURE=		yes

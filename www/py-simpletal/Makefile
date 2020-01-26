@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/04 22:10:13 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:32:23 rillig Exp $
 
 DISTNAME=	SimpleTAL-4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.owlfish.com/software/simpleTAL/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.owlfish.com/software/simpleTAL/
+HOMEPAGE=	https://www.owlfish.com/software/simpleTAL/
 COMMENT=	Stand alone implementation of the Zope TAL
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/07/03 08:25:47 nia Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/26 17:31:13 rillig Exp $
 
 DISTNAME=		cmatrix-1.2a
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://www.asty.org/cmatrix/dist/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.asty.org/cmatrix/
+HOMEPAGE=		https://www.asty.org/cmatrix/
 COMMENT=		Simulates the display from "The Matrix" in your console
 
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2019/12/16 16:30:15 taca Exp $
+# $NetBSD: Makefile,v 1.22 2020/01/26 17:32:22 rillig Exp $
 #
 
 DISTNAME=	concrete5.7.5.13
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.concrete5.org/download_file/-/view/93075/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.concrete5.org/
+HOMEPAGE=	https://www.concrete5.org/
 COMMENT=	Open sourece Content Management System
 LICENSE=	mit
 

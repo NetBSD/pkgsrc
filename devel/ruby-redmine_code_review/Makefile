@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/09/16 19:26:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:04 rillig Exp $
 
 PLUGIN_NAME=	redmine_code_review
 DISTNAME=	0.8.0
@@ -7,7 +7,7 @@ MASTER_SITES=	https://bitbucket.org/haru_iida/${PLUGIN_NAME}/get/
 DIST_SUBDIR=	ruby-${PLUGIN_NAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.r-labs.org/projects/codereview
+HOMEPAGE=	https://www.r-labs.org/projects/codereview
 COMMENT=	Redmine plugin to annotate source code within the repo browser
 LICENSE=	gnu-gpl-v2 AND mit
 

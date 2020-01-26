@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/12/15 21:12:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/26 17:30:54 rillig Exp $
 
 DISTNAME=	wiredtiger-2.7.0
 CATEGORIES=	databases
@@ -6,7 +6,7 @@ MASTER_SITES=	http://source.wiredtiger.com/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	fhajny@NetBSD.org
-HOMEPAGE=	http://source.wiredtiger.com/
+HOMEPAGE=	https://source.wiredtiger.com/
 COMMENT=	Open Source extensible platform for data management
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 

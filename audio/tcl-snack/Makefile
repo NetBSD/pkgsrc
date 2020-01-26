@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/03/12 11:16:06 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/26 17:30:45 rillig Exp $
 
 DISTNAME=	snack2.2.10
 PKGNAME=	tcl-snack-2.2.10
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.speech.kth.se/snack/dist/
 
 MAINTAINER=	gson@NetBSD.org
-HOMEPAGE=	http://www.speech.kth.se/snack/
+HOMEPAGE=	https://www.speech.kth.se/snack/
 COMMENT=	The Snack Sound Toolkit
 LICENSE=	esdl-license AND gnu-gpl-v2
 

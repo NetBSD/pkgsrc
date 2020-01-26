@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/09/02 13:20:05 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/01/26 17:30:41 rillig Exp $
 
 DISTNAME=	eyeD3-0.7.11
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eyeD3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://eyed3.nicfit.net/
+HOMEPAGE=	https://eyed3.nicfit.net/
 COMMENT=	Python tool for working with audio files (in particular, mp3)
 LICENSE=	gnu-gpl-v2
 

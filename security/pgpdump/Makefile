@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/06/03 20:20:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/26 17:32:06 rillig Exp $
 #
 
 DISTNAME=	pgpdump-0.31
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://www.mew.org/~kazu/proj/pgpdump/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://www.mew.org/~kazu/proj/pgpdump/en/
+HOMEPAGE=	https://www.mew.org/~kazu/proj/pgpdump/en/
 COMMENT=	PGP packet visualizer
 
 LICENSE=	modified-bsd

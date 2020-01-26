@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/11/02 15:38:09 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/26 17:30:53 rillig Exp $
 
 DISTNAME=	pysqlite-1.0.1
 PKGNAME=	${PYPKGPREFIX}-sqlite-1.0.1
@@ -7,7 +7,7 @@ CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysqlite/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pysqlite.org/
+HOMEPAGE=	https://www.pysqlite.org/
 COMMENT=	SQLite database adapter for Python
 
 WRKSRC=		${WRKDIR}/pysqlite

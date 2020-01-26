@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/06/16 19:14:52 adam Exp $
+# $NetBSD: Makefile,v 1.29 2020/01/26 17:31:40 rillig Exp $
 
 DISTNAME=	pandas-0.24.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas/}
 
 MAINTAINER=	bad@NetBSD.org
-HOMEPAGE=	http://pandas.pydata.org/
+HOMEPAGE=	https://pandas.pydata.org/
 COMMENT=	Python Data Analysis Library
 LICENSE=	modified-bsd
 
