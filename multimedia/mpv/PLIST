@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2019/10/25 14:35:56 leot Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/01/26 21:28:11 leot Exp $
 bin/mpv
 man/man1/mpv.1
 share/applications/mpv.desktop
+share/bash-completion/completions/mpv
 share/doc/mpv/input.conf
 share/doc/mpv/mplayer-input.conf
 share/doc/mpv/mpv.conf
