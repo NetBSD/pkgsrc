@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 23:30:09 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/26 05:26:15 rillig Exp $
 
 DISTNAME=	nut-15.8
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nut/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://nut.sourceforge.net/
+HOMEPAGE=	http://nut.sourceforge.net/
 COMMENT=	Record what you eat and analyze your meals
 LICENSE=	gnu-gpl-v2
 

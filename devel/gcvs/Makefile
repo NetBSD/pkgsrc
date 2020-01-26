@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/01/18 23:30:27 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2020/01/26 05:26:23 rillig Exp $
 
 DISTNAME=		gcvs-1.0
 PKGREVISION=		14
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cvsgui/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gcvs-1.0-configure.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://cvsgui.sourceforge.net/
+HOMEPAGE=		http://cvsgui.sourceforge.net/
 COMMENT=		GTK interface for CVS
 
 CONFLICTS=		cvs-[0-9]*

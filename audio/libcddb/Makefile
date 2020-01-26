@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/01/18 23:30:00 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2020/01/26 05:26:11 rillig Exp $
 
 DISTNAME=	libcddb-1.3.2
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcddb/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://libcddb.sourceforge.net/
+HOMEPAGE=	http://libcddb.sourceforge.net/
 COMMENT=	Library to access data on a CDDB server
 LICENSE=	gnu-gpl-v2
 

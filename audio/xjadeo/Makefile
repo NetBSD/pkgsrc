@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:30:08 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/26 05:26:14 rillig Exp $
 
 DISTNAME=	xjadeo-0.8.9
 CATEGORIES=	audio
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=x42/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://xjadeo.sourceforge.net/
+HOMEPAGE=	http://xjadeo.sourceforge.net/
 COMMENT=	X JAck viDEo mOnitor
 LICENSE=	gnu-gpl-v2
 

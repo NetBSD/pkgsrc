@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/01/18 23:30:12 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2020/01/26 05:26:17 rillig Exp $
 #
 
 DISTNAME=	pidgin-libnotify-0.14
@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim-libnotify/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gaim-libnotify.sourceforge.net/
+HOMEPAGE=	http://gaim-libnotify.sourceforge.net/
 COMMENT=	Pidgin plugin that adds popup support
 LICENSE=	gnu-gpl-v3
 

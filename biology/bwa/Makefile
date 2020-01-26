@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:30:09 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/26 05:26:15 rillig Exp $
 
 DISTNAME=	bwa-0.7.17
 CATEGORIES=	biology
@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lh3/}
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	https://bio-bwa.sourceforge.net/
+HOMEPAGE=	http://bio-bwa.sourceforge.net/
 COMMENT=	Map low-divergent sequences against a large reference genome
 LICENSE=	gnu-gpl-v3
 

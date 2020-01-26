@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2020/01/18 23:30:25 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2020/01/26 05:26:22 rillig Exp $
 
 DISTNAME=	cscope-15.8a
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cscope/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cscope.sourceforge.net/
+HOMEPAGE=	http://cscope.sourceforge.net/
 COMMENT=	Interactive C program browser
 LICENSE=	original-bsd
 

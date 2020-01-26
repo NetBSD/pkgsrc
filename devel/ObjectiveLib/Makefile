@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 23:30:20 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/01/26 05:26:21 rillig Exp $
 #
 
 PKGNAME=	ObjectiveLib-1.0.0
@@ -8,7 +8,7 @@ CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=objectivelib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://objectivelib.sourceforge.net/
+HOMEPAGE=	http://objectivelib.sourceforge.net/
 COMMENT=	Object containers and generic algorithms for Objective-C
 LICENSE=	gnu-lgpl-v2.1
 

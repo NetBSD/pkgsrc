@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:25 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/01/26 05:26:23 rillig Exp $
 
 DISTNAME=		CUnit-2.1-0-src
 PKGNAME=		CUnit-2.1
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cunit/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://cunit.sourceforge.net/
+HOMEPAGE=		http://cunit.sourceforge.net/
 COMMENT=		C Unit checking test software
 
 USE_LIBTOOL=		yes
