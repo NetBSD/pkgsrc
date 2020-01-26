@@ -48,6 +48,8 @@ type LoggerOpts struct {
 	ShowSource,
 	GccOutput,
 	Quiet bool
+
+	Only []string
 }
 
 type LogLevel struct {
@@ -107,7 +109,10 @@ func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interf
 	if G.Testing {
 		for _, arg := range args {
 			switch arg.(type) {
-			case int, string, error:
+			case int, string:
+			case error:
+				// TODO: errors do not belong in diagnostics,
+				//  they belong in normal error messages.
 			default:
 				// All paths in diagnostics must be relative to the line.
 				// To achieve that, call line.Rel(currPath).
@@ -174,11 +179,11 @@ func (l *Logger) Relevant(format string) bool {
 //
 // It only inspects the --only arguments; duplicates are handled in Logger.Logf.
 func (l *Logger) shallBeLogged(format string) bool {
-	if len(G.Opts.LogOnly) == 0 {
+	if len(l.Opts.Only) == 0 {
 		return true
 	}
 
-	for _, substr := range G.Opts.LogOnly {
+	for _, substr := range l.Opts.Only {
 		if contains(format, substr) {
 			return true
 		}
