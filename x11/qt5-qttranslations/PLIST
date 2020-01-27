@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/08/09 17:41:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/01/27 18:36:34 adam Exp $
 qt5/translations/assistant_ar.qm
 qt5/translations/assistant_bg.qm
 qt5/translations/assistant_cs.qm
@@ -51,6 +51,7 @@ qt5/translations/linguist_pl.qm
 qt5/translations/linguist_ru.qm
 qt5/translations/linguist_sk.qm
 qt5/translations/linguist_sl.qm
+qt5/translations/linguist_sv.qm
 qt5/translations/linguist_uk.qm
 qt5/translations/linguist_zh_CN.qm
 qt5/translations/linguist_zh_TW.qm
@@ -70,6 +71,7 @@ qt5/translations/qt_gl.qm
 qt5/translations/qt_he.qm
 qt5/translations/qt_help_ar.qm
 qt5/translations/qt_help_bg.qm
+qt5/translations/qt_help_ca.qm
 qt5/translations/qt_help_cs.qm
 qt5/translations/qt_help_da.qm
 qt5/translations/qt_help_de.qm
@@ -126,6 +128,7 @@ qt5/translations/qtbase_sk.qm
 qt5/translations/qtbase_uk.qm
 qt5/translations/qtbase_zh_TW.qm
 qt5/translations/qtconnectivity_bg.qm
+qt5/translations/qtconnectivity_ca.qm
 qt5/translations/qtconnectivity_da.qm
 qt5/translations/qtconnectivity_de.qm
 qt5/translations/qtconnectivity_en.qm
@@ -151,6 +154,7 @@ qt5/translations/qtdeclarative_ru.qm
 qt5/translations/qtdeclarative_sk.qm
 qt5/translations/qtdeclarative_uk.qm
 qt5/translations/qtlocation_bg.qm
+qt5/translations/qtlocation_ca.qm
 qt5/translations/qtlocation_da.qm
 qt5/translations/qtlocation_de.qm
 qt5/translations/qtlocation_en.qm
@@ -229,6 +233,7 @@ qt5/translations/qtserialport_ko.qm
 qt5/translations/qtserialport_pl.qm
 qt5/translations/qtserialport_ru.qm
 qt5/translations/qtserialport_uk.qm
+qt5/translations/qtwebengine_ca.qm
 qt5/translations/qtwebengine_de.qm
 qt5/translations/qtwebengine_en.qm
 qt5/translations/qtwebengine_es.qm
@@ -236,6 +241,7 @@ qt5/translations/qtwebengine_ko.qm
 qt5/translations/qtwebengine_pl.qm
 qt5/translations/qtwebengine_ru.qm
 qt5/translations/qtwebengine_uk.qm
+qt5/translations/qtwebsockets_ca.qm
 qt5/translations/qtwebsockets_de.qm
 qt5/translations/qtwebsockets_en.qm
 qt5/translations/qtwebsockets_es.qm
