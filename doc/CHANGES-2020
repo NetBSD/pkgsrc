@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.796 2020/01/27 11:01:44 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.797 2020/01/27 11:03:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -952,3 +952,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/gspell to 1.8.3 [wiz 2020-01-27]
 	Updated x11/libxkbcommon to 0.10.0 [wiz 2020-01-27]
 	Updated archivers/py-zipp to 1.1.0 [wiz 2020-01-27]
+	Updated devel/ruby-mercenary to 0.4.0 [wiz 2020-01-27]
