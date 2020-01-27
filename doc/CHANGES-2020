@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.788 2020/01/27 08:02:29 thorpej Exp $
+$NetBSD: CHANGES-2020,v 1.789 2020/01/27 10:37:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -944,3 +944,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/u-boot-pinebook-pro to 2020.01.rc5nb3 [thorpej 2020-01-27]
 	Updated sysutils/u-boot-rock64 to 2017.09nb6 [thorpej 2020-01-27]
 	Updated sysutils/u-boot-rockpro64 to 2017.09nb7 [thorpej 2020-01-27]
+	Updated textproc/gsed to 4.8 [wiz 2020-01-27]
