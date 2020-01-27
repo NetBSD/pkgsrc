@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/12/14 17:27:01 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/01/27 19:35:54 triaxx Exp $
 bin/warzone2100
 man/man6/warzone2100.6
 share/applications/warzone2100.desktop
@@ -8,6 +8,7 @@ share/doc/warzone2100/COPYING.NONGPL
 share/doc/warzone2100/COPYING.README
 share/doc/warzone2100/ChangeLog
 share/doc/warzone2100/README.md
+share/doc/warzone2100/Scripting.md
 share/doc/warzone2100/ScriptingManual.htm
 share/doc/warzone2100/docbook-xsl.css
 share/doc/warzone2100/images/artillery-far-away.jpg
@@ -55,7 +56,16 @@ share/doc/warzone2100/images/transport.jpg
 share/doc/warzone2100/images/unitordersmenu.jpg
 share/doc/warzone2100/images/wss.png
 share/doc/warzone2100/images/www.png
+share/doc/warzone2100/js-campaign.md
+share/doc/warzone2100/js-events.md
+share/doc/warzone2100/js-functions.md
+share/doc/warzone2100/js-globals.md
+share/doc/warzone2100/js-objects.md
 share/doc/warzone2100/quickstartguide.html
+share/doc/warzone2100/warzone2100.6.html
+share/fonts/DejaVu.LICENSE.txt
+share/fonts/DejaVuSans-Bold.ttf
+share/fonts/DejaVuSans.ttf
 share/icons/warzone2100.png
 share/locale/ca_ES/LC_MESSAGES/warzone2100.mo
 share/locale/cs/LC_MESSAGES/warzone2100.mo
@@ -72,6 +82,7 @@ share/locale/fy/LC_MESSAGES/warzone2100.mo
 share/locale/ga/LC_MESSAGES/warzone2100.mo
 share/locale/hr/LC_MESSAGES/warzone2100.mo
 share/locale/hu/LC_MESSAGES/warzone2100.mo
+share/locale/id/LC_MESSAGES/warzone2100.mo
 share/locale/it/LC_MESSAGES/warzone2100.mo
 share/locale/ko/LC_MESSAGES/warzone2100.mo
 share/locale/la/LC_MESSAGES/warzone2100.mo
