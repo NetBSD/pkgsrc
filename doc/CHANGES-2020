@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.802 2020/01/27 13:16:47 taca Exp $
+$NetBSD: CHANGES-2020,v 1.803 2020/01/27 14:04:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -957,3 +957,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-configargparse to 1.0 [adam 2020-01-27]
 	Updated devel/py-test-mock to 2.0.0 [adam 2020-01-27]
 	Updated mail/pear-Mail_Mime to 1.10.5 [taca 2020-01-27]
+	Updated net/samba4 to 4.11.5nb1 [taca 2020-01-27]
