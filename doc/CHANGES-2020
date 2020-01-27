@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.795 2020/01/27 10:53:37 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.796 2020/01/27 11:01:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -951,3 +951,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-dbus to 1.2.16 [wiz 2020-01-27]
 	Updated textproc/gspell to 1.8.3 [wiz 2020-01-27]
 	Updated x11/libxkbcommon to 0.10.0 [wiz 2020-01-27]
+	Updated archivers/py-zipp to 1.1.0 [wiz 2020-01-27]
