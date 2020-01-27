@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.805 2020/01/27 19:33:38 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.806 2020/01/27 21:19:04 roy Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -991,3 +991,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/qt5-qtxmlpatterns to 5.14.1 [adam 2020-01-27]
 	Updated multimedia/mkvtoolnix to 43.0.0 [adam 2020-01-27]
 	Updated games/warzone2100 to 3.3.0 [triaxx 2020-01-27]
+	Updated net/dhcpcd to 8.1.6 [roy 2020-01-27]
