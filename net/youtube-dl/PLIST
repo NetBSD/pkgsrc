@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.97 2019/12/26 22:12:27 leot Exp $
+@comment $NetBSD: PLIST,v 1.97.4.1 2020/01/27 11:04:38 bsiegert Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1358,9 +1358,6 @@ ${PYSITELIB}/youtube_dl/extractor/outsidetv.pyo
 ${PYSITELIB}/youtube_dl/extractor/packtpub.py
 ${PYSITELIB}/youtube_dl/extractor/packtpub.pyc
 ${PYSITELIB}/youtube_dl/extractor/packtpub.pyo
-${PYSITELIB}/youtube_dl/extractor/pandatv.py
-${PYSITELIB}/youtube_dl/extractor/pandatv.pyc
-${PYSITELIB}/youtube_dl/extractor/pandatv.pyo
 ${PYSITELIB}/youtube_dl/extractor/pandoratv.py
 ${PYSITELIB}/youtube_dl/extractor/pandoratv.pyc
 ${PYSITELIB}/youtube_dl/extractor/pandoratv.pyo
