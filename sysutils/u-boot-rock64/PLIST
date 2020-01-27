@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2019/08/13 21:28:46 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/01/27 08:02:30 thorpej Exp $
 share/u-boot/rock64/idbloader.img
+share/u-boot/rock64/installboot.plist
 share/u-boot/rock64/rksd_loader.img
 share/u-boot/rock64/rkspi_loader.img
 share/u-boot/rock64/u-boot.itb
