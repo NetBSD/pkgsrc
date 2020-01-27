@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2020/01/18 23:35:20 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/01/27 10:42:12 wiz Exp $
 
-DISTNAME=	dbus-python-1.2.14
+DISTNAME=	dbus-python-1.2.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-html-docs --disable-api-docs
 
 PY_PATCHPLIST=			YES
 
