@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/27 06:24:36 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/OpenGL_accelerate/__init__.py
+${PYSITELIB}/OpenGL_accelerate/__init__.pyc
+${PYSITELIB}/OpenGL_accelerate/__init__.pyo
+${PYSITELIB}/OpenGL_accelerate/arraydatatype.so
+${PYSITELIB}/OpenGL_accelerate/buffers_formathandler.so
+${PYSITELIB}/OpenGL_accelerate/errorchecker.so
+${PYSITELIB}/OpenGL_accelerate/formathandler.so
+${PYSITELIB}/OpenGL_accelerate/latebind.so
+${PYSITELIB}/OpenGL_accelerate/nones_formathandler.so
+${PYSITELIB}/OpenGL_accelerate/numpy_formathandler.so
+${PYSITELIB}/OpenGL_accelerate/vbo.so
+${PYSITELIB}/OpenGL_accelerate/wrapper.so
