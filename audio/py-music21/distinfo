@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.1 2020/01/17 05:41:44 gutteridge Exp $
+$NetBSD: distinfo,v 1.2 2020/01/27 22:36:45 gutteridge Exp $
 
 SHA1 (music21-noCorpus-5.7.2.tar.gz) = 28821cc2dceee15c9549dd03604278787f762ded
 RMD160 (music21-noCorpus-5.7.2.tar.gz) = 067348b631de3ce3a524a7d13c1b3ab1b9adc459
 SHA512 (music21-noCorpus-5.7.2.tar.gz) = 8ab8f35c1f9e7290bd908ec8439f07d16ef02beac5a702d6405653b45d46f48ab7c6eb7bebd25017008ed7858a6b2531c7d60e8aa7747f13b7864fae5e1a52c1
 Size (music21-noCorpus-5.7.2.tar.gz) = 5745931 bytes
+SHA1 (patch-MANIFEST.in) = 97d838af2fdc5c5f9c5a227f5b5fc06867c9e59d
 SHA1 (patch-music21_analysis_reduceChords.py) = 7d002f7cc6a13d4a7d1eb13ad921259f15cc0ed7
 SHA1 (patch-music21_humdrum_spineParser.py) = 245e82efa433daece552f588a82802371b0e6a8e
 SHA1 (patch-music21_meter.py) = d3ebdec41b142cc3e42059c96a6b5069d690cedb
