@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2019/11/06 12:51:55 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/27 10:53:28 wiz Exp $
 
-DISTNAME=	libxkbcommon-0.9.1
+DISTNAME=	libxkbcommon-0.10.0
 CATEGORIES=	x11
 MASTER_SITES=	https://xkbcommon.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -16,7 +16,7 @@ MESON_ARGS+=	-Denable-wayland=false
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/xkbcommon.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/xkbcommon-x11.pc
-PKGCONFIG_OVERRIDE_STAGE=       post-configure
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 .include "options.mk"
 
