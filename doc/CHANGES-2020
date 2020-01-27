@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.801 2020/01/27 13:05:24 adam Exp $
+$NetBSD: CHANGES-2020,v 1.802 2020/01/27 13:16:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -956,3 +956,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ImageMagick to 7.0.9.17 [wiz 2020-01-27]
 	Updated devel/py-configargparse to 1.0 [adam 2020-01-27]
 	Updated devel/py-test-mock to 2.0.0 [adam 2020-01-27]
+	Updated mail/pear-Mail_Mime to 1.10.5 [taca 2020-01-27]
