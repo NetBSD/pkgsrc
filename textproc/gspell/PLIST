@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/11/13 15:37:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/01/27 10:49:18 wiz Exp $
 bin/gspell-app1
 include/gspell-1/gspell/gspell-checker-dialog.h
 include/gspell-1/gspell/gspell-checker.h
@@ -35,6 +35,9 @@ share/gtk-doc/html/gspell-1.0/GtkEntry-support.html
 share/gtk-doc/html/gspell-1.0/GtkTextView-support.html
 share/gtk-doc/html/gspell-1.0/annexes.html
 share/gtk-doc/html/gspell-1.0/annotation-glossary.html
+share/gtk-doc/html/gspell-1.0/api-index-1-2.html
+share/gtk-doc/html/gspell-1.0/api-index-1-4.html
+share/gtk-doc/html/gspell-1.0/api-index-1-6.html
 share/gtk-doc/html/gspell-1.0/api-index-full.html
 share/gtk-doc/html/gspell-1.0/api-reference.html
 share/gtk-doc/html/gspell-1.0/core-classes.html
@@ -80,6 +83,7 @@ share/locale/lt/LC_MESSAGES/gspell-1.mo
 share/locale/lv/LC_MESSAGES/gspell-1.mo
 share/locale/mjw/LC_MESSAGES/gspell-1.mo
 share/locale/ml/LC_MESSAGES/gspell-1.mo
+share/locale/ms/LC_MESSAGES/gspell-1.mo
 share/locale/nb/LC_MESSAGES/gspell-1.mo
 share/locale/ne/LC_MESSAGES/gspell-1.mo
 share/locale/nl/LC_MESSAGES/gspell-1.mo
