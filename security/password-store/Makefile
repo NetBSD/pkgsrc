@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2018/09/23 12:39:19 leot Exp $
+# $NetBSD: Makefile,v 1.12 2020/01/27 12:56:38 pho Exp $
 
 DISTNAME=	password-store-1.7.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://git.zx2c4.com/password-store/snapshot/
 EXTRACT_SUFX=	.tar.xz
@@ -15,6 +15,7 @@ USE_LANGUAGES=	# none
 NO_BUILD=	yes
 USE_TOOLS+=	gmake pax bash:run
 
+DEPENDS+=	base64>=1.5:../../converters/base64
 DEPENDS+=	getopt>=1.1.6:../../misc/getopt
 DEPENDS+=	gnupg2>=2.0.26:../../security/gnupg2
 DEPENDS+=	tree>=1.7.0:../../sysutils/tree
