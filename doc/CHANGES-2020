@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.787 2020/01/27 06:27:49 adam Exp $
+$NetBSD: CHANGES-2020,v 1.788 2020/01/27 08:02:29 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -941,3 +941,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/mpv to 0.32.0 [leot 2020-01-26]
 	Added graphics/py-OpenGL-accelerate version 3.1.5 [adam 2020-01-27]
 	Updated graphics/py-OpenGL to 3.1.5 [adam 2020-01-27]
+	Updated sysutils/u-boot-pinebook-pro to 2020.01.rc5nb3 [thorpej 2020-01-27]
+	Updated sysutils/u-boot-rock64 to 2017.09nb6 [thorpej 2020-01-27]
+	Updated sysutils/u-boot-rockpro64 to 2017.09nb7 [thorpej 2020-01-27]
