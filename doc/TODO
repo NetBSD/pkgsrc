@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19641 2020/01/27 10:42:26 wiz Exp $
+$NetBSD: TODO,v 1.19642 2020/01/27 10:42:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1004,7 +1004,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-cairo-1.19.0
 	o py-cassa-1.11.0
-	o py-dbus-1.2.16
 	o py-ephem3-3.7.6.0
 	o py-gds-1.4.2
 	o py-gnome-menus-3.8.0
