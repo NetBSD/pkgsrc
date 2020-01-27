@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/03/25 22:59:27 wiz Exp $
+$NetBSD: distinfo,v 1.4 2020/01/27 10:39:19 wiz Exp $
 
-SHA1 (mblaze-0.5.1.tar.gz) = a87aa20683a6738031519c67518531b484f3dd68
-RMD160 (mblaze-0.5.1.tar.gz) = 9d52ec57acf4ee469c1e827a716992ae0e33d626
-SHA512 (mblaze-0.5.1.tar.gz) = ae810e30092d24ee89f33e28769268513217813bf1aacc9a970bc84e0c1a9ee7c986572ab5ecac314330de20a45879fcec9738119c08a9945932be55f8f649f7
-Size (mblaze-0.5.1.tar.gz) = 91134 bytes
+SHA1 (mblaze-0.6.tar.gz) = 1482f6d29bf33cc0f39ba5b4d89c4600994c979a
+RMD160 (mblaze-0.6.tar.gz) = 1a14d0008018e654ef6f86628c90890cd7a81a52
+SHA512 (mblaze-0.6.tar.gz) = 3d3c50d6ea82271f2c1c4139111826df5457fed671ea22d36f168857cfb41861278af6aba687704f4bd5f7ff997abaf7b809c5d6c6767e39954aab0bfff0564d
+Size (mblaze-0.6.tar.gz) = 91623 bytes
