@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/01/15 16:24:18 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/27 10:38:13 wiz Exp $
 
-DISTNAME=	lr-1.5
+DISTNAME=	lr-1.5.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
 GITHUB_PROJECT=	lr
