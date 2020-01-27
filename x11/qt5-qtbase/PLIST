@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/01/21 20:25:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2020/01/27 18:36:30 adam Exp $
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
 lib/pkgconfig/Qt5DBus.pc
@@ -3209,6 +3209,8 @@ qt5/mkspecs/features/use_c_linker.prf
 qt5/mkspecs/features/vxworks.prf
 qt5/mkspecs/features/warn_off.prf
 qt5/mkspecs/features/warn_on.prf
+qt5/mkspecs/features/wasm/default_pre.prf
+qt5/mkspecs/features/wasm/emcc_ver.prf
 qt5/mkspecs/features/wasm/wasm.prf
 qt5/mkspecs/features/wayland-scanner.prf
 qt5/mkspecs/features/win32/console.prf

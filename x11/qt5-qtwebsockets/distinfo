@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2020/01/21 20:25:40 adam Exp $
+$NetBSD: distinfo,v 1.16 2020/01/27 18:36:34 adam Exp $
 
-SHA1 (qtwebsockets-everywhere-src-5.14.0.tar.xz) = 755559ead6481cea9bb3a5e32b0f2c57eb621806
-RMD160 (qtwebsockets-everywhere-src-5.14.0.tar.xz) = 25d4184f68b12a6e7d7cb75081e23927ea1f13a0
-SHA512 (qtwebsockets-everywhere-src-5.14.0.tar.xz) = 4951fa4d757ec908fbd759ad48d531ca4d006950ed0318a2d478cc807b0bd3601465407d6a0b53c217946a2b8fa8bd5bb8f0b46435e3a7aea95f2496fe45bcd0
-Size (qtwebsockets-everywhere-src-5.14.0.tar.xz) = 246892 bytes
+SHA1 (qtwebsockets-everywhere-src-5.14.1.tar.xz) = 7b24385c93b75fcac9ffd7f1d1e43ae12c11c6b1
+RMD160 (qtwebsockets-everywhere-src-5.14.1.tar.xz) = 0840e8758e74faac28f1f0bc31975cef3123af11
+SHA512 (qtwebsockets-everywhere-src-5.14.1.tar.xz) = ce8926f0c8022182504184141c64897c5c71e430d6366b1d0802247e81445934db419ff61625b046b624de7b459c74f9634ae2a13e2d646a1b1811c4dbe177eb
+Size (qtwebsockets-everywhere-src-5.14.1.tar.xz) = 252616 bytes
