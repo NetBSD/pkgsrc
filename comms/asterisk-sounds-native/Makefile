@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2019/11/03 12:04:12 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.6 2020/01/27 22:21:57 wiz Exp $
 
-PKGNAME=	asterisk-sounds-native-20060209
 DISTNAME=	asterisk-native-sounds-20060209-01-ulaw
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=	asterisk-native-sounds-20060209-01-alaw.tar.bz2
+PKGNAME=	asterisk-sounds-native-20060209
 CATEGORIES=	comms
 MASTER_SITES=	http://mirror.astlinux.org/sounds/
 EXTRACT_SUFX=	.tar.bz2
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=	asterisk-native-sounds-20060209-01-alaw.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.astlinux.org/index.php
