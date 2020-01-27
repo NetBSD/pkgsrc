@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/27 06:24:36 adam Exp $
+
+SHA1 (PyOpenGL-accelerate-3.1.5.tar.gz) = 5d8275c2437c90dfbf126f8c2637016406c74f48
+RMD160 (PyOpenGL-accelerate-3.1.5.tar.gz) = 125440ae018e9666121664c2328d8d0a3dab6a98
+SHA512 (PyOpenGL-accelerate-3.1.5.tar.gz) = 60a0305bd517f761ef4a01a590162037bf84fa01315c505c3e7d8bd6091d10929281315a467cc4a8ee837c881f498c6d77ed161bc047eb87968606047e0b8be0
+Size (PyOpenGL-accelerate-3.1.5.tar.gz) = 538350 bytes

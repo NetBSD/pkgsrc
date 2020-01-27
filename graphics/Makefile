@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.877 2020/01/24 12:57:52 jaapb Exp $
+# $NetBSD: Makefile,v 1.878 2020/01/27 06:24:36 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -447,6 +447,7 @@ SUBDIR+=	ps2eps
 SUBDIR+=	pstoedit
 SUBDIR+=	ptex
 SUBDIR+=	py-OpenGL
+SUBDIR+=	py-OpenGL-accelerate
 SUBDIR+=	py-Pillow
 SUBDIR+=	py-aafigure
 SUBDIR+=	py-actdiag
