@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2020/01/21 14:12:36 taca Exp $
+# $NetBSD: Makefile,v 1.89 2020/01/27 14:04:13 taca Exp $
 
 DISTNAME=	samba-4.11.5
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -205,13 +206,14 @@ REPLACE_PYTHON+=	source4/scripting/bin/*
 .endif
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+BUILDLINK_API_DEPENDS.ldb+=	ldb>=2.0.8
 .include "../../databases/ldb/buildlink3.mk"
 .include "../../databases/lmdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.1.9
+BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.2.0
 .include "../../devel/talloc/buildlink3.mk"
 .include "../../devel/tevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
