@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.800 2020/01/27 12:04:43 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.801 2020/01/27 13:05:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -954,3 +954,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/py-zipp to 1.1.0 [wiz 2020-01-27]
 	Updated devel/go-golang-lru to 0.5.4 [wiz 2020-01-27]
 	Updated graphics/ImageMagick to 7.0.9.17 [wiz 2020-01-27]
+	Updated devel/py-configargparse to 1.0 [adam 2020-01-27]
+	Updated devel/py-test-mock to 2.0.0 [adam 2020-01-27]
