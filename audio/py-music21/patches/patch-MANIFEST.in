@@ -1,0 +1,16 @@
+$NetBSD: patch-MANIFEST.in,v 1.1 2020/01/27 22:36:45 gutteridge Exp $
+
+Specify the correct path to prune unnecessary files from the
+installation target.
+https://github.com/cuthbertLab/music21/pull/511
+
+--- MANIFEST.in.orig	2019-07-19 16:41:27.000000000 +0000
++++ MANIFEST.in
+@@ -1,6 +1,6 @@
+ global-include *.p.gz *.py *.txt *.xml *.krn *.mxl *.musicxml *.pdf *.html *.ipynb *.css *.js *.png *.tiff *.jpg *.xls *.mid *.abc *.json *.md *.rst *.zip *.rntxt *.command *.scl *nwc *.nwctxt *.wav *.mei LICENSE
+ global-exclude *ipynb_checkpoints* *-checkpoint.ipynb
+ prune dist
+-prune .mypy_cache
++prune music21/.mypy_cache
+ prune obsolete
+ prune documentation
