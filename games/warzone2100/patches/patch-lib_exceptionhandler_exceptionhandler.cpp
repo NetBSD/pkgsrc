@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_exceptionhandler_exceptionhandler.cpp,v 1.2 2019/12/19 22:16:05 joerg Exp $
+$NetBSD: patch-lib_exceptionhandler_exceptionhandler.cpp,v 1.3 2020/01/27 19:35:54 triaxx Exp $
 
 Disable unsupported sigcodes for DragonFlyBSD.
 
---- lib/exceptionhandler/exceptionhandler.cpp.orig	2017-04-23 13:12:16.000000000 +0000
+--- lib/exceptionhandler/exceptionhandler.cpp.orig	2019-08-31 18:17:21.000000000 +0000
 +++ lib/exceptionhandler/exceptionhandler.cpp
-@@ -21,6 +21,7 @@
+@@ -23,6 +23,7 @@
  #include "lib/framework/string_ext.h"
  #include "exceptionhandler.h"
  #include "dumpinfo.h"
@@ -12,7 +12,7 @@ Disable unsupported sigcodes for DragonFlyBSD.
  
  #if defined(WZ_OS_WIN)
  #include <tchar.h>
-@@ -192,18 +193,21 @@ static const char *wz_strsignal(int sign
+@@ -122,18 +123,21 @@ static const char *wz_strsignal(int sign
  	case SIGBUS:
  		switch (sigcode)
  		{
@@ -34,7 +34,7 @@ Disable unsupported sigcodes for DragonFlyBSD.
  		case FPE_INTDIV:
  			return "SIGFPE: Erroneous arithmetic operation: Integer divide by zero";
  		case FPE_INTOVF:
-@@ -220,6 +224,7 @@ static const char *wz_strsignal(int sign
+@@ -150,6 +154,7 @@ static const char *wz_strsignal(int sign
  			return "SIGFPE: Erroneous arithmetic operation: Invalid floating-point operation";
  		case FPE_FLTSUB:
  			return "SIGFPE: Erroneous arithmetic operation: Subscript out of range";
@@ -42,7 +42,7 @@ Disable unsupported sigcodes for DragonFlyBSD.
  		default:
  			return "SIGFPE: Erroneous arithmetic operation";
  		};
-@@ -228,6 +233,7 @@ static const char *wz_strsignal(int sign
+@@ -158,6 +163,7 @@ static const char *wz_strsignal(int sign
  	case SIGILL:
  		switch (sigcode)
  		{
@@ -50,7 +50,7 @@ Disable unsupported sigcodes for DragonFlyBSD.
  		case ILL_ILLOPC:
  			return "SIGILL: Illegal instruction: Illegal opcode";
  		case ILL_ILLOPN:
-@@ -244,6 +250,7 @@ static const char *wz_strsignal(int sign
+@@ -174,6 +180,7 @@ static const char *wz_strsignal(int sign
  			return "SIGILL: Illegal instruction: Coprocessor error";
  		case ILL_BADSTK:
  			return "SIGILL: Illegal instruction: Internal stack error";
@@ -58,7 +58,7 @@ Disable unsupported sigcodes for DragonFlyBSD.
  		default:
  			return "SIGILL: Illegal instruction";
  		}
-@@ -258,10 +265,12 @@ static const char *wz_strsignal(int sign
+@@ -188,10 +195,12 @@ static const char *wz_strsignal(int sign
  	case SIGSEGV:
  		switch (sigcode)
  		{
@@ -71,7 +71,7 @@ Disable unsupported sigcodes for DragonFlyBSD.
  		default:
  			return "SIGSEGV: Invalid memory reference";
  		}
-@@ -279,10 +288,12 @@ static const char *wz_strsignal(int sign
+@@ -209,10 +218,12 @@ static const char *wz_strsignal(int sign
  	case SIGTRAP:
  		switch (sigcode)
  		{
