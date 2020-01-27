@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.222 2019/12/15 18:35:25 adam Exp $
+# $NetBSD: Makefile,v 1.222.4.1 2020/01/27 10:59:04 bsiegert Exp $
 
 DISTNAME=	qemu-4.2.0
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -124,14 +125,13 @@ PLIST.bridge-helper=		yes
 PLIST.nbd=			yes
 PLIST.ivshmem=			yes
 PLIST.pr-helper=		yes
-PLIST.virtfs-proxy-helper=	yes
 .elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
 PLIST.ivshmem=			yes
 PLIST.nbd=			yes
 CONFIGURE_ARGS+=		--disable-coroutine-pool
 .endif
 
-PLIST_VARS+=		${UE_ARCHS} bridge-helper ivshmem nbd pr-helper virtfs-proxy-helper
+PLIST_VARS+=		${UE_ARCHS} bridge-helper ivshmem keymap nbd pr-helper
 .for pvar in ${USER_EMUL}
 PLIST.${pvar}=		yes
 .endfor
@@ -157,6 +157,8 @@ post-install:
 
 # On Darwin, qemu uses Cocoa and CoreAudio
 .if ${OPSYS} != "Darwin"
+PLIST.keymap=	yes
+.include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .endif
 .include "../../archivers/lzo/buildlink3.mk"
