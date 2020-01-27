@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19647 2020/01/27 11:20:00 wiz Exp $
+$NetBSD: TODO,v 1.19648 2020/01/27 11:21:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -624,7 +624,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o geoclue-2.1.10
 	o gfract-0.33
 	o ghdl-0.33
-	o gjs-1.58.4
+	o gjs-1.58.4 [needs mozjs-60]
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -1006,7 +1006,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
-	o py-more-itertools2-8.1.0
 	o py-musicbrainz-0.7.4
 	o py-newt-0.52.20
 	o py-omniORBpy-3.7
@@ -1053,11 +1052,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rt4-4.4.0
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.4
-	o ruby-mercenary-0.4.0
 	o ruby-redmine-4.0.5
 	o rump-20131213
 	o sabayon-2.30.1
 	o sablecc-3.7
+	o sarg-2.4.0
 	o scew-1.1.7
 	o scilab-5.5.2
 	o scm-5f2
