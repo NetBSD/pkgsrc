@@ -9044,7 +9044,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm79547920"></a><dl>
+<a name="idm81678864"></a><dl>
 <dt>24.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9089,7 +9089,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm79547536"></a><p><b>24.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm81678480"></a><p><b>24.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9105,7 +9105,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm79543568"></a><p><b>24.2.</b></p>
+<a name="devfaq.make"></a><a name="idm81674512"></a><p><b>24.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9123,7 +9123,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm79539088"></a><p><b>24.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm81670032"></a><p><b>24.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9141,7 +9141,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm79534992"></a><p><b>24.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm81665936"></a><p><b>24.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9154,7 +9154,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm79532816"></a><p><b>24.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm81663632"></a><p><b>24.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9170,7 +9170,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm79521424"></a><p><b>24.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm81660560"></a><p><b>24.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9194,7 +9194,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm79514512"></a><p><b>24.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm81653648"></a><p><b>24.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9219,7 +9219,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm79510800"></a><p><b>24.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm81649936"></a><p><b>24.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9267,7 +9267,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm79504272"></a><p><b>24.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm81635216"></a><p><b>24.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -10159,7 +10159,7 @@ share/bison.hairy
 <pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>pkglint</code></strong>
 looks fine.</pre>
 <p>Depending on the supplied command line arguments (see pkglint(1)),
-	more checks will be performed. Use e.g. <span class="command"><strong>pkglint -Call
+	more checks will be performed. Use e.g. <span class="command"><strong>pkglint
 	-Wall</strong></span> for a very thorough check.</p>
 </div>
 </div>
@@ -12888,411 +12888,415 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>do-clean</td>
+<td>do-configure</td>
+</tr>
+<tr>
 <td>do-configure-post-hook</td>
-</tr>
-<tr>
 <td>do-extract</td>
+</tr>
+<tr>
 <td>do-fetch</td>
-</tr>
-<tr>
 <td>do-install</td>
+</tr>
+<tr>
 <td>emul</td>
-</tr>
-<tr>
 <td>emulation</td>
+</tr>
+<tr>
 <td>emulator</td>
-</tr>
-<tr>
 <td>enable</td>
+</tr>
+<tr>
 <td>endian</td>
-</tr>
-<tr>
 <td>enomem</td>
+</tr>
+<tr>
 <td>err</td>
-</tr>
-<tr>
 <td>errx</td>
+</tr>
+<tr>
 <td>etc</td>
-</tr>
-<tr>
 <td>feature</td>
+</tr>
+<tr>
 <td>features</td>
-</tr>
-<tr>
 <td>fetch</td>
+</tr>
+<tr>
 <td>fetch-list</td>
-</tr>
-<tr>
 <td>follows</td>
+</tr>
+<tr>
 <td>forbids</td>
-</tr>
-<tr>
 <td>form</td>
+</tr>
+<tr>
 <td>format</td>
-</tr>
-<tr>
 <td>fortify</td>
+</tr>
+<tr>
 <td>fortify_source</td>
-</tr>
-<tr>
 <td>fossil</td>
+</tr>
+<tr>
 <td>friend</td>
-</tr>
-<tr>
 <td>from</td>
+</tr>
+<tr>
 <td>fts</td>
-</tr>
-<tr>
 <td>fts_close</td>
+</tr>
+<tr>
 <td>fts_open</td>
-</tr>
-<tr>
 <td>fts_read</td>
+</tr>
+<tr>
 <td>fts_set</td>
-</tr>
-<tr>
 <td>full</td>
+</tr>
+<tr>
 <td>gcc</td>
-</tr>
-<tr>
 <td>getopt_long</td>
+</tr>
+<tr>
 <td>getprogname</td>
-</tr>
-<tr>
 <td>gettext</td>
+</tr>
+<tr>
 <td>git</td>
-</tr>
-<tr>
 <td>github</td>
+</tr>
+<tr>
 <td>glob</td>
-</tr>
-<tr>
 <td>gnu</td>
+</tr>
+<tr>
 <td>gnu_configure_strict</td>
-</tr>
-<tr>
 <td>go</td>
+</tr>
+<tr>
 <td>go-deps</td>
-</tr>
-<tr>
 <td>golang</td>
+</tr>
+<tr>
 <td>guess-license</td>
-</tr>
-<tr>
 <td>hashbang</td>
+</tr>
+<tr>
 <td>heimdal</td>
-</tr>
-<tr>
 <td>help</td>
+</tr>
+<tr>
 <td>hg</td>
-</tr>
-<tr>
 <td>imake</td>
+</tr>
+<tr>
 <td>increment</td>
-</tr>
-<tr>
 <td>interp</td>
+</tr>
+<tr>
 <td>interpreter</td>
-</tr>
-<tr>
 <td>intl</td>
+</tr>
+<tr>
 <td>iso</td>
-</tr>
-<tr>
 <td>kerberos</td>
+</tr>
+<tr>
 <td>krb</td>
-</tr>
-<tr>
 <td>krb5</td>
+</tr>
+<tr>
 <td>ksh</td>
-</tr>
-<tr>
 <td>lapack</td>
+</tr>
+<tr>
 <td>latex</td>
-</tr>
-<tr>
 <td>libnbcompat</td>
+</tr>
+<tr>
 <td>libs</td>
-</tr>
-<tr>
 <td>libtool</td>
+</tr>
+<tr>
 <td>licence</td>
-</tr>
-<tr>
 <td>license</td>
+</tr>
+<tr>
 <td>lintl</td>
-</tr>
-<tr>
 <td>little-endian</td>
+</tr>
+<tr>
 <td>lock</td>
-</tr>
-<tr>
 <td>locking</td>
+</tr>
+<tr>
 <td>lvalue</td>
-</tr>
-<tr>
 <td>make</td>
+</tr>
+<tr>
 <td>makesum</td>
-</tr>
-<tr>
 <td>memory</td>
+</tr>
+<tr>
 <td>mercurial</td>
-</tr>
-<tr>
 <td>meta</td>
+</tr>
+<tr>
 <td>meta-package</td>
-</tr>
-<tr>
 <td>meta_package</td>
+</tr>
+<tr>
 <td>mit-krb5</td>
-</tr>
-<tr>
 <td>mk.conf</td>
+</tr>
+<tr>
 <td>mkl</td>
-</tr>
-<tr>
 <td>mount</td>
+</tr>
+<tr>
 <td>mprotect</td>
-</tr>
-<tr>
 <td>mremap</td>
+</tr>
+<tr>
 <td>nb</td>
-</tr>
-<tr>
 <td>nbcompat</td>
+</tr>
+<tr>
 <td>no</td>
-</tr>
-<tr>
 <td>obstack</td>
+</tr>
+<tr>
 <td>obstack_ptr_grow</td>
-</tr>
-<tr>
 <td>occurs</td>
+</tr>
+<tr>
 <td>only</td>
-</tr>
-<tr>
 <td>openblas</td>
+</tr>
+<tr>
 <td>options</td>
-</tr>
-<tr>
 <td>options.mk</td>
+</tr>
+<tr>
 <td>order</td>
-</tr>
-<tr>
 <td>override</td>
+</tr>
+<tr>
 <td>override-intltool</td>
-</tr>
-<tr>
 <td>override-message-intltool</td>
+</tr>
+<tr>
 <td>package</td>
-</tr>
-<tr>
 <td>parallel</td>
+</tr>
+<tr>
 <td>partial</td>
-</tr>
-<tr>
 <td>path</td>
+</tr>
+<tr>
 <td>pax</td>
-</tr>
-<tr>
 <td>paxctl</td>
+</tr>
+<tr>
 <td>pbulk-index</td>
-</tr>
-<tr>
 <td>pc</td>
+</tr>
+<tr>
 <td>perl</td>
-</tr>
-<tr>
 <td>perl5</td>
+</tr>
+<tr>
 <td>perms</td>
-</tr>
-<tr>
 <td>php</td>
+</tr>
+<tr>
 <td>pkg-build-options</td>
-</tr>
-<tr>
 <td>pkg-config</td>
+</tr>
+<tr>
 <td>pkg_build_options</td>
-</tr>
-<tr>
 <td>platform</td>
+</tr>
+<tr>
 <td>plist</td>
-</tr>
-<tr>
 <td>post-extract</td>
+</tr>
+<tr>
 <td>post-fetch</td>
-</tr>
-<tr>
 <td>post-wrapper</td>
+</tr>
+<tr>
 <td>pre-configure</td>
-</tr>
-<tr>
 <td>pre-extract</td>
+</tr>
+<tr>
 <td>pre-fetch</td>
-</tr>
-<tr>
 <td>print-go-deps</td>
+</tr>
+<tr>
 <td>print-plist</td>
-</tr>
-<tr>
 <td>print-summary-data</td>
+</tr>
+<tr>
 <td>privileged-install-hook</td>
-</tr>
-<tr>
 <td>pypi</td>
+</tr>
+<tr>
 <td>python</td>
-</tr>
-<tr>
 <td>readme-all</td>
+</tr>
+<tr>
 <td>regcomp</td>
-</tr>
-<tr>
 <td>relro</td>
+</tr>
+<tr>
 <td>rename</td>
-</tr>
-<tr>
 <td>reorder</td>
+</tr>
+<tr>
 <td>replace</td>
-</tr>
-<tr>
 <td>replace_interpreter</td>
+</tr>
+<tr>
 <td>reproducible</td>
-</tr>
-<tr>
 <td>resolv</td>
+</tr>
+<tr>
 <td>root</td>
-</tr>
-<tr>
 <td>ruby</td>
+</tr>
+<tr>
 <td>setenv</td>
-</tr>
-<tr>
 <td>setgid</td>
+</tr>
+<tr>
 <td>setprogname</td>
-</tr>
-<tr>
 <td>setuid</td>
+</tr>
+<tr>
 <td>sh</td>
-</tr>
-<tr>
 <td>show</td>
+</tr>
+<tr>
 <td>show-all</td>
-</tr>
-<tr>
 <td>show-build-defs</td>
+</tr>
+<tr>
 <td>show-depends</td>
-</tr>
-<tr>
 <td>show-deps</td>
+</tr>
+<tr>
 <td>show-distfiles</td>
-</tr>
-<tr>
 <td>show-downlevel</td>
+</tr>
+<tr>
 <td>show-subdir-var</td>
-</tr>
-<tr>
 <td>show-tools</td>
+</tr>
+<tr>
 <td>show-var</td>
-</tr>
-<tr>
 <td>show-vars</td>
+</tr>
+<tr>
 <td>snprintf</td>
-</tr>
-<tr>
 <td>ssp</td>
+</tr>
+<tr>
 <td>st_mode</td>
-</tr>
-<tr>
 <td>stage-install</td>
+</tr>
+<tr>
 <td>strict</td>
-</tr>
-<tr>
 <td>strip</td>
+</tr>
+<tr>
 <td>strnlen</td>
-</tr>
-<tr>
 <td>strong</td>
+</tr>
+<tr>
 <td>subst</td>
-</tr>
-<tr>
 <td>subversion</td>
+</tr>
+<tr>
 <td>sun</td>
-</tr>
-<tr>
 <td>sunpro</td>
+</tr>
+<tr>
 <td>sunwspro</td>
-</tr>
-<tr>
 <td>svn</td>
+</tr>
+<tr>
 <td>symlink</td>
-</tr>
-<tr>
 <td>test</td>
+</tr>
+<tr>
 <td>tex</td>
-</tr>
-<tr>
 <td>texlive</td>
+</tr>
+<tr>
 <td>tmp</td>
-</tr>
-<tr>
 <td>tool</td>
+</tr>
+<tr>
 <td>tools</td>
-</tr>
-<tr>
 <td>tools-libtool-m4-override</td>
+</tr>
+<tr>
 <td>type</td>
-</tr>
-<tr>
 <td>ulimit</td>
+</tr>
+<tr>
 <td>undefined</td>
-</tr>
-<tr>
 <td>undo-replace</td>
+</tr>
+<tr>
 <td>unlimit</td>
-</tr>
-<tr>
 <td>unprivileged</td>
+</tr>
+<tr>
 <td>unprivileged-install-hook</td>
-</tr>
-<tr>
 <td>unstripped</td>
+</tr>
+<tr>
 <td>update</td>
-</tr>
-<tr>
 <td>upload</td>
+</tr>
+<tr>
 <td>upload-distfiles</td>
-</tr>
-<tr>
 <td>usage</td>
+</tr>
+<tr>
 <td>use_tools</td>
-</tr>
-<tr>
 <td>user</td>
+</tr>
+<tr>
 <td>utimes</td>
-</tr>
-<tr>
 <td>vasprintf</td>
+</tr>
+<tr>
 <td>verbose</td>
-</tr>
-<tr>
 <td>vsnprintf</td>
+</tr>
+<tr>
 <td>warn</td>
-</tr>
-<tr>
 <td>warning</td>
+</tr>
+<tr>
 <td>warnings</td>
-</tr>
-<tr>
 <td>warnx</td>
+</tr>
+<tr>
 <td>weak</td>
-</tr>
-<tr>
 <td>work</td>
-<td>wrapper</td>
 </tr>
 <tr>
+<td>wrapper</td>
 <td>wrkdir</td>
+</tr>
+<tr>
 <td>yes</td>
+<td> </td>
 </tr>
 </table>
 </div>
