@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2016/04/01 11:38:57 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2020/01/28 13:23:32 fcambus Exp $
 
-SHA1 (tweak-3.01.tar.gz) = 23e731d14837f9bd7c80c3a03c1c82a39928f0fc
-RMD160 (tweak-3.01.tar.gz) = 09e904523f6d38b46609e64df5d9ae7276691d23
-SHA512 (tweak-3.01.tar.gz) = e126d1df437b2eccb6baa647b4c2b36e9ad8f528de9028e7d215891f0b55110f8a8ed80119f4f2ce73225c42fd1f02f98800c3bc70f4b79c592c909714379699
-Size (tweak-3.01.tar.gz) = 71681 bytes
-SHA1 (patch-Makefile) = 69dc5059a34202b6d6606e04260712b3ce37c8ce
+SHA1 (tweak-3.02.tar.gz) = 619c2dcb54dfbbff89576d6b34d5483a8642e635
+RMD160 (tweak-3.02.tar.gz) = b1479bae6b416f95d1f89a7498144bd0f8fea5ab
+SHA512 (tweak-3.02.tar.gz) = 4cf16eae1c48073ca77b0577585473288d7ecbc2d261a359db2cff372c1850cd809becb46bc745ac7d07e982d5eae9a0e0332402267ebab6b12cc952a02cff4e
+Size (tweak-3.02.tar.gz) = 71939 bytes
+SHA1 (patch-Makefile) = 21346275e0915e47a602e4e79a078310ec4bf27a
 SHA1 (patch-rcfile.c) = 82bf8d167537de068650d3feaf5552ff7bb2be1b
