@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3037 2020/01/25 23:13:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3038 2020/01/28 13:27:18 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -865,7 +865,6 @@ SUBDIR+=	msgpack
 SUBDIR+=	mustach
 SUBDIR+=	myrepos
 SUBDIR+=	nana
-SUBDIR+=	nant
 SUBDIR+=	nasm
 SUBDIR+=	nbpatch
 SUBDIR+=	ncc
