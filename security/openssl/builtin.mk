@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.45 2020/01/16 13:30:29 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.46 2020/01/28 07:34:57 triaxx Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -87,7 +87,7 @@ USE_BUILTIN.openssl=		yes
 ### take care builtin check case, BUILDLINK_API_DEPENDS may not be defined yet.
 CHECK_BUILTIN.openssl?=		no
 .      if !empty(CHECK_BUILTIN.openssl:M[yY][eE][sS])
-BUILDLINK_API_DEPENDS.openssl?=	openssl>=1.0.1c
+BUILDLINK_API_DEPENDS.openssl?=	openssl>=1.1.1
 .      endif
 .      for dep_ in ${BUILDLINK_API_DEPENDS.openssl}
 .        if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
