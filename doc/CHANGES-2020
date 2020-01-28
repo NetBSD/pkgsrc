@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.819 2020/01/28 19:20:29 adam Exp $
+$NetBSD: CHANGES-2020,v 1.820 2020/01/28 21:12:00 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1007,3 +1007,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/sc-im to 0.7.0nb11 [sjmulder 2020-01-28]
 	Updated games/wesnoth to 1.14.10 [adam 2020-01-28]
 	Updated multimedia/libvpx to 1.8.2 [adam 2020-01-28]
+	Updated games/nethack to 3.6.5 [rhialto 2020-01-28]
