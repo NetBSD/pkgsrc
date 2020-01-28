@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.150 2020/01/19 14:12:27 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.151 2020/01/28 05:07:58 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -657,7 +657,23 @@ DISTNAME=       foo-17.43
     or when the replacement text varies, patches alone cannot help.
     This is where the SUBST framework comes in. It provides an
     easy-to-use interface for replacing text in files.
-    Example:</para>
+    It just needs the following information:</para>
+
+<itemizedlist>
+
+<listitem><para><emphasis>When</emphasis> should the replacement
+happen?</para></listitem>
+
+<listitem><para><emphasis>Where</emphasis> should the replacement happen,
+i.e. in which files?</para></listitem>
+
+<listitem><para><emphasis>Which</emphasis> text should be
+replaced with what?</para></listitem>
+
+</itemizedlist>
+
+<para>This information is encoded in a block of <varname>SUBST</varname>
+variables, like in this example:</para>
 
 <programlisting>
 SUBST_CLASSES+=                 fix-paths
@@ -673,8 +689,7 @@ SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
     that are used to identify the different SUBST blocks that are
     defined. The SUBST framework is heavily used by pkgsrc, so it is
     important to always use the <literal>+=</literal> operator with
-    this variable. Otherwise some substitutions may be
-    skipped.</para>
+    this variable. Otherwise some substitutions may be skipped.</para>
 
     <para>The remaining variables of each SUBST block are
     parameterized with the identifier from the first line
@@ -712,6 +727,11 @@ SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
     &man.sed.1; that specify the actual substitution. Every sed
     command should be prefixed with <literal>-e</literal>, so that
     all SUBST blocks look uniform.</para>
+
+    <para><varname>SUBST_VARS.*</varname> is a list of variable names.
+    For each of these variables, the text <literal>@VAR@</literal> is
+    replaced with the value of the variable
+    <varname>VAR</varname>.</para>
 
     <para>There are some more variables, but they are so seldomly
     used that they are only documented in the
