@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.815 2020/01/28 13:27:40 nia Exp $
+$NetBSD: CHANGES-2020,v 1.816 2020/01/28 14:31:46 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1002,3 +1002,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/unrealircd to 5.0.2 [nia 2020-01-28]
 	Updated editors/tweak to 3.02 [fcambus 2020-01-28]
 	Removed devel/nant [nia 2020-01-28]
+	Updated sysutils/nnn to 2.9 [sjmulder 2020-01-28]
