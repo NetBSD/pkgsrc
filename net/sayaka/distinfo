@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2020/01/12 13:47:17 tsutsui Exp $
+$NetBSD: distinfo,v 1.10 2020/01/28 15:00:45 tsutsui Exp $
 
 SHA1 (sayaka-3.4.1.tar.gz) = 03e7ed7251d79cef957a0c976185c659a24c9779
 RMD160 (sayaka-3.4.1.tar.gz) = 350ee7f192d757e1d0f2e5e6ce40ca159995bc76
 SHA512 (sayaka-3.4.1.tar.gz) = cb2709b7a7dd4285b2c615235da692bf31c6390df40689e1da3c1b5bae46eb25c1c1c29667e9cfbb1ee0d09cc28da95a09d5b155949cfbb206f78e21438164b0
 Size (sayaka-3.4.1.tar.gz) = 1967534 bytes
+SHA1 (patch-vala_sayaka.vala) = 6cccbdbaaf1f79cfc09317a8e80c634e1eb99df9
