@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2019/10/16 16:12:42 sjmulder Exp $
+# $NetBSD: options.mk,v 1.3 2020/01/28 14:31:19 sjmulder Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nnn
-PKG_SUPPORTED_OPTIONS+=	readline
+PKG_SUPPORTED_OPTIONS+=	readline debug
 PKG_SUGGESTED_OPTIONS+=	readline
 
 .include "../../mk/bsd.options.mk"
@@ -9,5 +9,9 @@ PKG_SUGGESTED_OPTIONS+=	readline
 .if !empty(PKG_OPTIONS:Mreadline)
 .include "../../mk/readline.buildlink3.mk"
 .else
-MAKE_ENV+=		O_NORL=1
+MAKE_FLAGS+=		O_NORL=1
+.endif
+
+.if !empty(PKG_OPTIONS:Mdebug)
+MAKE_FLAGS+=		O_DEBUG=1
 .endif
