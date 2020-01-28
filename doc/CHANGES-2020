@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.813 2020/01/28 13:03:46 nia Exp $
+$NetBSD: CHANGES-2020,v 1.814 2020/01/28 13:23:44 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1000,3 +1000,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-prompt_toolkit2 to 3.0.3 [adam 2020-01-28]
 	Updated devel/py-ipykernel to 5.1.4 [adam 2020-01-28]
 	Updated chat/unrealircd to 5.0.2 [nia 2020-01-28]
+	Updated editors/tweak to 3.02 [fcambus 2020-01-28]
