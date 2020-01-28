@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.818 2020/01/28 14:35:47 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.819 2020/01/28 19:20:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1005,3 +1005,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/nnn to 2.9 [sjmulder 2020-01-28]
 	Updated textproc/libxlsxwriter to 0.9.4 [sjmulder 2020-01-28]
 	Updated math/sc-im to 0.7.0nb11 [sjmulder 2020-01-28]
+	Updated games/wesnoth to 1.14.10 [adam 2020-01-28]
+	Updated multimedia/libvpx to 1.8.2 [adam 2020-01-28]
