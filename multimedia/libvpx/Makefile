@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2019/11/23 19:37:20 gdt Exp $
+# $NetBSD: Makefile,v 1.81 2020/01/28 19:20:09 adam Exp $
 
-DISTNAME=	libvpx-1.8.1
-PKGREVISION=	1
+DISTNAME=	libvpx-1.8.2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=webmproject/}
 GITHUB_PROJECT=	libvpx
@@ -45,36 +44,22 @@ REPLACE_PERL=		build/make/ads2gas.pl
 .if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-Wl,-Bsymbolic
 .  if ${MACHINE_ARCH} == "i386"
-.    if !empty(OS_VERSION:M1[3-9].*)
-CONFIGURE_ARGS+=	--target=x86-darwin13-gcc
-.    elif !empty(OS_VERSION:M12.*)
-CONFIGURE_ARGS+=	--target=x86-darwin12-gcc
-.    elif !empty(OS_VERSION:M11.*)
-CONFIGURE_ARGS+=	--target=x86-darwin11-gcc
-.    elif !empty(OS_VERSION:M10.*)
-CONFIGURE_ARGS+=	--target=x86-darwin10-gcc
+.    if !empty(OS_VERSION:M1[8-9].*)
+CONFIGURE_ARGS+=	--target=x86-darwin17-gcc
+.    elif !empty(OS_VERSION:M1[0-7].*)
+CONFIGURE_ARGS+=	--target=x86-darwin${OS_VERSION:C/\.[0-9]*//g}-gcc
 .    elif !empty(OS_VERSION:M9.*)
 CONFIGURE_ARGS+=	--target=x86-darwin9-gcc
 .    else
 CONFIGURE_ARGS+=	--target=x86-darwin8-gcc
 .    endif
 .  elif ${MACHINE_ARCH} == "x86_64"
-.    if !empty(OS_VERSION:M1[3-9].*)
-CONFIGURE_ARGS+=	--target=x86_64-darwin13-gcc
-.    elif !empty(OS_VERSION:M12.*)
-CONFIGURE_ARGS+=	--target=x86_64-darwin12-gcc
-.    elif !empty(OS_VERSION:M11.*)
-CONFIGURE_ARGS+=	--target=x86_64-darwin11-gcc
-.    elif !empty(OS_VERSION:M10.*)
-CONFIGURE_ARGS+=	--target=x86_64-darwin10-gcc
+.    if !empty(OS_VERSION:M1[8-9].*)
+CONFIGURE_ARGS+=	--target=x86_64-darwin17-gcc
+.    elif !empty(OS_VERSION:M1[0-7].*)
+CONFIGURE_ARGS+=	--target=x86_64-darwin${OS_VERSION:C/\.[0-9]*//g}-gcc
 .    else
 CONFIGURE_ARGS+=	--target=x86_64-darwin9-gcc
-.    endif
-.  elif ${MACHINE_ARCH} == "powerpc"
-.    if !empty(OS_VERSION:M9.*)
-CONFIGURE_ARGS+=	--target=ppc32-darwin9-gcc
-.    else
-CONFIGURE_ARGS+=	--target=ppc32-darwin8-gcc
 .    endif
 .  endif
 .elif ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc*)
