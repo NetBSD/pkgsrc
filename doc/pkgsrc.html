@@ -9044,7 +9044,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm81678864"></a><dl>
+<a name="idm79478288"></a><dl>
 <dt>24.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9089,7 +9089,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm81678480"></a><p><b>24.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm79477904"></a><p><b>24.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9105,7 +9105,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm81674512"></a><p><b>24.2.</b></p>
+<a name="devfaq.make"></a><a name="idm79473936"></a><p><b>24.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9123,7 +9123,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm81670032"></a><p><b>24.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm79469456"></a><p><b>24.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9141,7 +9141,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm81665936"></a><p><b>24.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm79465360"></a><p><b>24.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9154,7 +9154,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm81663632"></a><p><b>24.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm79463184"></a><p><b>24.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9170,7 +9170,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm81660560"></a><p><b>24.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm79451792"></a><p><b>24.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9194,7 +9194,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm81653648"></a><p><b>24.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm79444880"></a><p><b>24.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9219,7 +9219,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm81649936"></a><p><b>24.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm79441168"></a><p><b>24.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9267,7 +9267,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm81635216"></a><p><b>24.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm79434640"></a><p><b>24.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -10114,7 +10114,7 @@ output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
 
 DISTNAME=       bison-1.25
 CATEGORIES=     devel
-MASTER_SITES=   ${MASTER_SITE_GNU}
+MASTER_SITES=   ${MASTER_SITE_GNU:=bison/}
 
 MAINTAINER=     pkgsrc-users@NetBSD.org
 HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
@@ -10154,10 +10154,17 @@ share/bison.hairy
         <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>
 	which helps to check the contents of these
 	files. After installation it is quite easy to use, just change to the
-	directory of the package you wish to examine and execute
+	directory of the package you wish to examine and run
 	<span class="command"><strong>pkglint</strong></span>:</p>
 <pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>pkglint</code></strong>
-looks fine.</pre>
+ERROR: Makefile: Each package must define its LICENSE.
+WARN: Makefile:9: HOMEPAGE should migrate from http to https.
+NOTE: PLIST:3: The .gz extension is unnecessary for manual pages.
+WARN: PLIST:5: "share/bison.hairy" should be sorted before "share/bison.simple".
+1 error, 2 warnings and 1 note found.
+(Run "pkglint -e" to show explanations.)
+(Run "pkglint -fs" to show what can be fixed automatically.)
+(Run "pkglint.exe -F" to automatically fix some issues.)</pre>
 <p>Depending on the supplied command line arguments (see pkglint(1)),
 	more checks will be performed. Use e.g. <span class="command"><strong>pkglint
 	-Wall</strong></span> for a very thorough check.</p>
