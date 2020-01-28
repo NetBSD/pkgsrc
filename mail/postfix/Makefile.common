@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2019/12/09 08:45:14 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.23 2020/01/28 08:16:51 triaxx Exp $
 # used by mail/postfix/Makefile
 # used by mail/postfix/Makefile.module
 
@@ -30,6 +30,8 @@ MAILDROP_GROUP?=	maildrop
 #
 POSTFIX_DATA_DIR?=	${VARBASE}/db/postfix
 POSTFIX_QUEUE_DIR?=	${VARBASE}/spool/postfix
+POSTFIX_QUEUE_SUBDIR=	active bounce corrupt defer deferred flush hold \
+			incoming maildrop pid private public saved trace
 BUILD_DEFS+=		VARBASE POSTFIX_DATA_DIR POSTFIX_QUEUE_DIR
 
 # CCARGS is a list of options to pass to the preprocessor/compiler.
