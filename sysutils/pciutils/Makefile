@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2020/01/23 04:26:40 msaitoh Exp $
+# $NetBSD: Makefile,v 1.44 2020/01/28 01:46:58 msaitoh Exp $
 
-DISTNAME=	pciutils-3.6.3
+DISTNAME=	pciutils-3.6.4
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/
 MASTER_SITES+=	https://www.kernel.org/pub/software/utils/pciutils/
