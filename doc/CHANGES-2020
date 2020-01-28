@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.811 2020/01/28 01:50:36 msaitoh Exp $
+$NetBSD: CHANGES-2020,v 1.812 2020/01/28 08:04:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -997,3 +997,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/ircd-hybrid to 8.2.28 [fox 2020-01-27]
 	Removed wm/fluxconf [gutteridge 2020-01-27]
 	Updated sysutils/pciutils to 3.6.4 [msaitoh 2020-01-28]
+	Updated devel/py-prompt_toolkit2 to 3.0.3 [adam 2020-01-28]
+	Updated devel/py-ipykernel to 5.1.4 [adam 2020-01-28]
