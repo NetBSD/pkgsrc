@@ -8192,7 +8192,7 @@ A.1.1. Makefile
 
 DISTNAME=       bison-1.25
 CATEGORIES=     devel
-MASTER_SITES=   ${MASTER_SITE_GNU}
+MASTER_SITES=   ${MASTER_SITE_GNU:=bison/}
 
 MAINTAINER=     pkgsrc-users@NetBSD.org
 HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
@@ -8221,10 +8221,17 @@ A.1.4. Checking a package with pkglint
 
 The NetBSD package system comes with pkgtools/pkglint which helps to check the
 contents of these files. After installation it is quite easy to use, just
-change to the directory of the package you wish to examine and execute pkglint:
+change to the directory of the package you wish to examine and run pkglint:
 
 $ pkglint
-looks fine.
+ERROR: Makefile: Each package must define its LICENSE.
+WARN: Makefile:9: HOMEPAGE should migrate from http to https.
+NOTE: PLIST:3: The .gz extension is unnecessary for manual pages.
+WARN: PLIST:5: "share/bison.hairy" should be sorted before "share/bison.simple".
+1 error, 2 warnings and 1 note found.
+(Run "pkglint -e" to show explanations.)
+(Run "pkglint -fs" to show what can be fixed automatically.)
+(Run "pkglint.exe -F" to automatically fix some issues.)
 
 Depending on the supplied command line arguments (see pkglint(1)), more checks
 will be performed. Use e.g. pkglint -Wall for a very thorough check.
