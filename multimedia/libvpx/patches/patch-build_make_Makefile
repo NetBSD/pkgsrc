@@ -1,4 +1,4 @@
-$NetBSD: patch-build_make_Makefile,v 1.1 2019/02/12 20:47:14 adam Exp $
+$NetBSD: patch-build_make_Makefile,v 1.2 2020/01/28 19:20:09 adam Exp $
 
 --- build/make/Makefile.orig	2017-01-12 20:27:27.000000000 +0000
 +++ build/make/Makefile
@@ -89,7 +89,7 @@ $NetBSD: patch-build_make_Makefile,v 1.1 2019/02/12 20:47:14 adam Exp $
 -	$(qexec)$$(AR) $$(ARFLAGS) $$@ $$^
 +	$(qexec)${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -Wl,-Bsymbolic -o $$(patsubst %.a,%.la,$$@) \
 +		$$(patsubst %.o,%.lo,$$?) -rpath $(PREFIX)/lib $$(extralibs) \
-+		-version-info $(VERSION_MAJOR):$(VERSION_MINOR):$(VERSION_PATCH)
++		-version-info $(VERSION_MAJOR):$(VERSION_MINOR)
  endef
  
  define so_template

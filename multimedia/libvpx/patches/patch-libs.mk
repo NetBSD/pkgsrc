@@ -1,8 +1,8 @@
-$NetBSD: patch-libs.mk,v 1.2 2019/07/18 10:28:45 adam Exp $
+$NetBSD: patch-libs.mk,v 1.3 2020/01/28 19:20:09 adam Exp $
 
 Do not install debug library.
 
---- libs.mk.orig	2019-07-15 21:55:33.000000000 +0000
+--- libs.mk.orig	2019-12-09 23:09:20.000000000 +0000
 +++ libs.mk
 @@ -162,7 +162,6 @@ INSTALL-LIBS-$(CONFIG_SHARED) += $(forea
  endif
@@ -22,4 +22,4 @@ Do not install debug library.
 +$(BUILD_PFX)libvpx.a: $(LIBVPX_OBJS)
  
  SO_VERSION_MAJOR := 6
- SO_VERSION_MINOR := 1
+ SO_VERSION_MINOR := 2
