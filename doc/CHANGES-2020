@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.817 2020/01/28 14:33:01 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.818 2020/01/28 14:35:47 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1004,3 +1004,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/nant [nia 2020-01-28]
 	Updated sysutils/nnn to 2.9 [sjmulder 2020-01-28]
 	Updated textproc/libxlsxwriter to 0.9.4 [sjmulder 2020-01-28]
+	Updated math/sc-im to 0.7.0nb11 [sjmulder 2020-01-28]
