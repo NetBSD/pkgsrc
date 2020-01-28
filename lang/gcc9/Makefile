@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/28 04:02:34 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/01/28 04:39:55 rillig Exp $
 
 GCC9_VERSION=	9.2.0
 
@@ -60,6 +60,9 @@ CHECK_PORTABILITY_SKIP=	contrib/download_prerequisites
 #    for (long pi = start_idx; pi >= 0; pi--)
 #BROKEN_ON_PLATFORM+=	Linux-*-x86_64
 CFLAGS.Linux+=		-std=gnu99
+# I know that -std is not a preprocessor flag, but gcc9 ignores the CFLAGS,
+# for whatever reason.
+CPPFLAGS.Linux+=	-std=gnu99
 
 # Even though the build and target host is x86_64-sun-solaris2.11,
 # it fails to compile some seemingly linux-specific code.
