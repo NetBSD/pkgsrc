@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.810 2020/01/27 23:00:44 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.811 2020/01/28 01:50:36 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -996,3 +996,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/py-music21 to 5.7.2nb1 [gutteridge 2020-01-27]
 	Updated chat/ircd-hybrid to 8.2.28 [fox 2020-01-27]
 	Removed wm/fluxconf [gutteridge 2020-01-27]
+	Updated sysutils/pciutils to 3.6.4 [msaitoh 2020-01-28]
