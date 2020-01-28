@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2019/02/09 15:23:16 nia Exp $
+$NetBSD: patch-include_h.h,v 1.1 2020/01/28 13:03:36 nia Exp $
 
-Don't declare own errno.
+Do not declare own errno.
 
---- include/h.h.orig	2019-01-03 08:00:11.000000000 +0000
+--- include/h.h.orig	2020-01-22 06:30:42.000000000 +0000
 +++ include/h.h
-@@ -218,7 +218,7 @@ extern int vsnprintf (char *str, size_t 
+@@ -209,7 +209,7 @@ extern int dgets(int, char *, int);
  #ifdef _WIN32
  extern MODVAR int debuglevel;
  #else
