@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2017/07/13 11:53:16 jaapb Exp $
+$NetBSD: patch-configure,v 1.2 2020/01/29 07:58:36 jaapb Exp $
 
 The ocamlfind wrapper now includes DESTDIR, so do not use it
+
 --- configure.orig	2016-08-10 03:33:56.000000000 +0000
 +++ configure
 @@ -2679,7 +2679,7 @@ if test "$OCAMLFIND" = no; then
