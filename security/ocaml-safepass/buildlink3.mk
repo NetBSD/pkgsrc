@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2019/03/05 19:38:49 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2020/01/29 16:33:18 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-safepass
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-safepass
 OCAML_SAFEPASS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-safepass+=	ocaml-safepass>=2.0
-BUILDLINK_ABI_DEPENDS.ocaml-safepass+=	ocaml-safepass>=3.0nb3
+BUILDLINK_ABI_DEPENDS.ocaml-safepass+=	ocaml-safepass>=3.0nb4
 BUILDLINK_PKGSRCDIR.ocaml-safepass?=	../../security/ocaml-safepass
 .endif	# OCAML_SAFEPASS_BUILDLINK3_MK
 
