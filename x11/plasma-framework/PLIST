@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/11/11 09:21:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/01/29 11:49:31 markd Exp $
 bin/plasmapkg2
 include/KF5/Plasma/Applet
 include/KF5/Plasma/Containment
@@ -337,6 +337,7 @@ share/locale/ko/LC_MESSAGES/libplasma5.mo
 share/locale/lt/LC_MESSAGES/libplasma5.mo
 share/locale/lt/LC_SCRIPTS/libplasma5/libplasma5.js
 share/locale/lt/LC_SCRIPTS/libplasma5/plasmoids.js
+share/locale/lv/LC_MESSAGES/libplasma5.mo
 share/locale/ml/LC_MESSAGES/libplasma5.mo
 share/locale/mr/LC_MESSAGES/libplasma5.mo
 share/locale/nb/LC_MESSAGES/libplasma5.mo

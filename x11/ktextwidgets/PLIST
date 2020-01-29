@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/11 09:21:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/01/29 11:49:30 markd Exp $
 include/KF5/KTextWidgets/KFind
 include/KF5/KTextWidgets/KFindDialog
 include/KF5/KTextWidgets/KPluralHandlingSpinBox
@@ -28,7 +28,6 @@ lib/libKF5TextWidgets.so.5
 lib/libKF5TextWidgets.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KTextWidgets.pri
 qt5/plugins/designer/ktextwidgets5widgets.so
-share/kservicetypes5/kregexpeditor.desktop
 share/locale/af/LC_MESSAGES/ktextwidgets5.mo
 share/locale/ar/LC_MESSAGES/ktextwidgets5.mo
 share/locale/as/LC_MESSAGES/ktextwidgets5.mo

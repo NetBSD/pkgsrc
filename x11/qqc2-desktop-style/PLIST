@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2019/08/27 21:27:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/01/29 11:49:31 markd Exp $
 lib/cmake/KF5QQC2DeskopStyle/KF5QQC2DeskopStyleConfig.cmake
 lib/cmake/KF5QQC2DeskopStyle/KF5QQC2DeskopStyleConfigVersion.cmake
+lib/cmake/KF5QQC2DesktopStyle/KF5QQC2DesktopStyleConfig.cmake
+lib/cmake/KF5QQC2DesktopStyle/KF5QQC2DesktopStyleConfigVersion.cmake
 qt5/plugins/kf5/kirigami/org.kde.desktop.so
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/BusyIndicator.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Button.qml

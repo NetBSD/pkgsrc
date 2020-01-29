@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/11/11 09:21:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/01/29 11:49:30 markd Exp $
 include/KF5/Kirigami2/KirigamiPluginFactory
 include/KF5/Kirigami2/PlatformTheme
 include/KF5/Kirigami2/TabletModeWatcher
@@ -62,12 +62,14 @@ qt5/qml/org/kde/kirigami.2/plugins.qmltypes
 qt5/qml/org/kde/kirigami.2/private/ActionButton.qml
 qt5/qml/org/kde/kirigami.2/private/ActionIconGroup.qml
 qt5/qml/org/kde/kirigami.2/private/ActionMenuItem.qml
+qt5/qml/org/kde/kirigami.2/private/ActionToolBarLayoutDetails.qml
 qt5/qml/org/kde/kirigami.2/private/ActionsMenu.qml
 qt5/qml/org/kde/kirigami.2/private/BannerImage.qml
 qt5/qml/org/kde/kirigami.2/private/CardsGridViewPrivate.qml
 qt5/qml/org/kde/kirigami.2/private/CardsListViewPrivate.qml
 qt5/qml/org/kde/kirigami.2/private/ContextDrawerActionItem.qml
 qt5/qml/org/kde/kirigami.2/private/CornerShadow.qml
+qt5/qml/org/kde/kirigami.2/private/DefaultCardBackground.qml
 qt5/qml/org/kde/kirigami.2/private/DefaultListItemBackground.qml
 qt5/qml/org/kde/kirigami.2/private/EdgeShadow.qml
 qt5/qml/org/kde/kirigami.2/private/GlobalDrawerActionItem.qml
@@ -121,6 +123,7 @@ share/locale/de/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/el/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/en_GB/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/es/LC_MESSAGES/libkirigami2plugin_qt.qm
+share/locale/et/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/eu/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/fi/LC_MESSAGES/libkirigami2plugin_qt.qm
 share/locale/fr/LC_MESSAGES/libkirigami2plugin_qt.qm
