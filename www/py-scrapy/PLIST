@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/08/22 08:21:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/01/29 22:06:30 adam Exp $
 bin/scrapy-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -327,6 +327,9 @@ ${PYSITELIB}/scrapy/resolver.pyo
 ${PYSITELIB}/scrapy/responsetypes.py
 ${PYSITELIB}/scrapy/responsetypes.pyc
 ${PYSITELIB}/scrapy/responsetypes.pyo
+${PYSITELIB}/scrapy/robotstxt.py
+${PYSITELIB}/scrapy/robotstxt.pyc
+${PYSITELIB}/scrapy/robotstxt.pyo
 ${PYSITELIB}/scrapy/selector/__init__.py
 ${PYSITELIB}/scrapy/selector/__init__.pyc
 ${PYSITELIB}/scrapy/selector/__init__.pyo
@@ -423,6 +426,9 @@ ${PYSITELIB}/scrapy/utils/conf.pyo
 ${PYSITELIB}/scrapy/utils/console.py
 ${PYSITELIB}/scrapy/utils/console.pyc
 ${PYSITELIB}/scrapy/utils/console.pyo
+${PYSITELIB}/scrapy/utils/curl.py
+${PYSITELIB}/scrapy/utils/curl.pyc
+${PYSITELIB}/scrapy/utils/curl.pyo
 ${PYSITELIB}/scrapy/utils/datatypes.py
 ${PYSITELIB}/scrapy/utils/datatypes.pyc
 ${PYSITELIB}/scrapy/utils/datatypes.pyo
@@ -504,6 +510,9 @@ ${PYSITELIB}/scrapy/utils/sitemap.pyo
 ${PYSITELIB}/scrapy/utils/spider.py
 ${PYSITELIB}/scrapy/utils/spider.pyc
 ${PYSITELIB}/scrapy/utils/spider.pyo
+${PYSITELIB}/scrapy/utils/ssl.py
+${PYSITELIB}/scrapy/utils/ssl.pyc
+${PYSITELIB}/scrapy/utils/ssl.pyo
 ${PYSITELIB}/scrapy/utils/template.py
 ${PYSITELIB}/scrapy/utils/template.pyc
 ${PYSITELIB}/scrapy/utils/template.pyo
@@ -525,12 +534,3 @@ ${PYSITELIB}/scrapy/utils/url.pyo
 ${PYSITELIB}/scrapy/utils/versions.py
 ${PYSITELIB}/scrapy/utils/versions.pyc
 ${PYSITELIB}/scrapy/utils/versions.pyo
-${PYSITELIB}/scrapy/xlib/__init__.py
-${PYSITELIB}/scrapy/xlib/__init__.pyc
-${PYSITELIB}/scrapy/xlib/__init__.pyo
-${PYSITELIB}/scrapy/xlib/pydispatch.py
-${PYSITELIB}/scrapy/xlib/pydispatch.pyc
-${PYSITELIB}/scrapy/xlib/pydispatch.pyo
-${PYSITELIB}/scrapy/xlib/tx.py
-${PYSITELIB}/scrapy/xlib/tx.pyc
-${PYSITELIB}/scrapy/xlib/tx.pyo
