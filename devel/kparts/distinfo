@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/11/11 07:57:10 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/01/29 11:49:25 markd Exp $
 
-SHA1 (kparts-5.64.0.tar.xz) = e74320cae9e4d8c413f9f667eae85782079c9f78
-RMD160 (kparts-5.64.0.tar.xz) = a3284110b2588b96e90dd2faf93b9906a1e38b50
-SHA512 (kparts-5.64.0.tar.xz) = 2c0fa16a369e4bee1732f481ed9b9b37fb8019f31c868720c8ebc42279464d179eec87904c1dbd188e223015d0f5b112377965c9d58887fba74ab6455a0d1e6c
-Size (kparts-5.64.0.tar.xz) = 176652 bytes
+SHA1 (kparts-5.66.0.tar.xz) = 0e57d3ee5c76b1f7aa4ce1e742dcd5dc2c737ad5
+RMD160 (kparts-5.66.0.tar.xz) = 9c006d0183c13aafc372b67972adbe69101e2d32
+SHA512 (kparts-5.66.0.tar.xz) = 44882ca93e641958d690db6ae685f142f95c3192b599c911909464b492374d75e950feeca1121b124e59b55b7690873014534f78905ce6a03c6188621c48c0c8
+Size (kparts-5.66.0.tar.xz) = 176384 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2019/11/11 08:40:01 markd Exp $
+$NetBSD: distinfo,v 1.12 2020/01/29 11:49:27 markd Exp $
 
-SHA1 (kdnssd-5.64.0.tar.xz) = 62e9d1eb20af831b0e6b652e282ddeb2415cfc48
-RMD160 (kdnssd-5.64.0.tar.xz) = 4756e2463d3f86e29feed0446d84f9223f9018b6
-SHA512 (kdnssd-5.64.0.tar.xz) = 6967ab601a80edf82dd4b6450bac7583151a7ac0787bd66d32e0cb0052dad9bb69ad98cd6f11a77190c63871d9f92612c34bbf05e157fe62f19c9190f7e35968
-Size (kdnssd-5.64.0.tar.xz) = 58768 bytes
+SHA1 (kdnssd-5.66.0.tar.xz) = 6db2be56784a71be4b7d3254d3f4cfab7e8fe47d
+RMD160 (kdnssd-5.66.0.tar.xz) = d1be18618cd1461c3c9bfd33c710e7773ad53e3f
+SHA512 (kdnssd-5.66.0.tar.xz) = 5465dc85a60790488c21e1e3fc63ea461ec74c371a487e32466ca3263fc1a0449961360d3d5e3ea09bbe1149fc013a9e23555bbac2d406b7d31ebb38290f3bf9
+Size (kdnssd-5.66.0.tar.xz) = 58632 bytes

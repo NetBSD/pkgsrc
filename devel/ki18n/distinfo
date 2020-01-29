@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/11/11 07:57:09 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/01/29 11:49:24 markd Exp $
 
-SHA1 (ki18n-5.64.0.tar.xz) = f901f4ea9d15803efae05fc24cad1328fd89e892
-RMD160 (ki18n-5.64.0.tar.xz) = 87c2534c7fa7082fde72ce9c2457979863548fa2
-SHA512 (ki18n-5.64.0.tar.xz) = 68e65934a19621850a189b9aeb24b48a3bb8ea493ed5af1e490030154f759b653aaf0e1a27b5579ad36ca3cb249c7ef72b7429dbc70aa27be827a608b68577c3
-Size (ki18n-5.64.0.tar.xz) = 586948 bytes
+SHA1 (ki18n-5.66.0.tar.xz) = 06686221adc749a3b151e90e0f5a708e63f464ba
+RMD160 (ki18n-5.66.0.tar.xz) = 9039ed01a49a3569735911090dfd42ac34bd69f5
+SHA512 (ki18n-5.66.0.tar.xz) = 00d310f84af139946864cb17cd85e80bc3ef07d9ede2c92ca56a66b4f31ad79071acf60caad7e8ed758954d396984e1e3f12b5dbf336bb8be2be3349fbfa9245
+Size (ki18n-5.66.0.tar.xz) = 587996 bytes

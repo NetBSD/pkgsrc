@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/11/11 09:05:38 markd Exp $
+$NetBSD: distinfo,v 1.5 2020/01/29 11:49:28 markd Exp $
 
-SHA1 (kholidays-5.64.0.tar.xz) = dad24d96cf1b6989f7b80ceaf2b0a08921606dea
-RMD160 (kholidays-5.64.0.tar.xz) = f03a1cb06ce453bc20672a45bd02eb4a5adb25a4
-SHA512 (kholidays-5.64.0.tar.xz) = a2e06c4c2a5c8afd87a2e9504428dad0ea2de5ef0e35ad29a0600091978abdb0d85285fd82a05ffec3c2a1296f760fe34a33efc08971d0957fb81fb17fffe87b
-Size (kholidays-5.64.0.tar.xz) = 206244 bytes
+SHA1 (kholidays-5.66.0.tar.xz) = b88e310ca5ce33eafd66798efa3decd8b57a5603
+RMD160 (kholidays-5.66.0.tar.xz) = 38765735e632969667c1aa1e1efd891425497f3d
+SHA512 (kholidays-5.66.0.tar.xz) = 67599e550da9391cab48925e5d12f8c526e9fc6d9739dc6e4e6db8a5aba91b1c48f2b5a391a4d3b3194abd0c64f7caf27414e8795430cc147a07904a7beb7e31
+Size (kholidays-5.66.0.tar.xz) = 206244 bytes
