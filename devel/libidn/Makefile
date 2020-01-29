@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.102 2020/01/18 23:30:31 rillig Exp $
+# $NetBSD: Makefile,v 1.103 2020/01/29 11:02:18 nia Exp $
 
-DISTNAME=	libidn-1.34
-PKGREVISION=	1
+DISTNAME=	libidn-1.35
 CATEGORIES=	devel
-MASTER_SITES=	ftp://alpha.gnu.org/pub/gnu/libidn/
-MASTER_SITES+=	${MASTER_SITE_GNU:=libidn/}
+MASTER_SITES=	${MASTER_SITE_GNU:=libidn/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/libidn/
@@ -14,6 +12,7 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		makeinfo pkg-config perl:build gsed
+USE_TOOLS+=		msgfmt msgmerge xgettext
 TEXINFO_REQD=		4.7
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
