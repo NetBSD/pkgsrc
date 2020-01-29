@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2019/08/21 12:46:05 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/29 22:42:37 adam Exp $
 
-DISTNAME=	wheel-0.33.6
+DISTNAME=	wheel-0.34.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wheel/}
@@ -10,7 +10,12 @@ HOMEPAGE=	https://github.com/pypa/wheel
 COMMENT=	Built-package format for Python
 LICENSE=	mit
 
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+
 USE_LANGUAGES=	# none
+
+PYSETUPTESTTARGET=	pytest
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
