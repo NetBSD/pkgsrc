@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3038 2020/01/28 13:27:18 nia Exp $
+# $NetBSD: Makefile,v 1.3039 2020/01/29 21:43:02 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2482,6 +2482,7 @@ SUBDIR+=	py-test-localserver
 SUBDIR+=	py-test-mock
 SUBDIR+=	py-test-pylint
 SUBDIR+=	py-test-pythonpath
+SUBDIR+=	py-test-random-order
 SUBDIR+=	py-test-randomly
 SUBDIR+=	py-test-relaxed
 SUBDIR+=	py-test-rerunfailures
