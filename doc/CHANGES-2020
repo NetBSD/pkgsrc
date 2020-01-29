@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.848 2020/01/29 22:08:14 adam Exp $
+$NetBSD: CHANGES-2020,v 1.849 2020/01/29 22:47:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1123,3 +1123,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/py-last to 3.2.0 [adam 2020-01-29]
 	Added www/py-protego version 0.1.16 [adam 2020-01-29]
 	Updated www/py-scrapy to 1.8.0 [adam 2020-01-29]
+	Updated devel/py-wheel to 0.34.1 [adam 2020-01-29]
+	Updated www/py-WebOb to 1.8.6 [adam 2020-01-29]
