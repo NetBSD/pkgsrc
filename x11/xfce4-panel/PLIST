@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2019/07/13 00:15:56 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.31 2020/01/29 04:55:21 gutteridge Exp $
 bin/xfce4-panel
 bin/xfce4-popup-applicationsmenu
 bin/xfce4-popup-directorymenu
@@ -107,6 +107,7 @@ share/locale/eo/LC_MESSAGES/xfce4-panel.mo
 share/locale/es/LC_MESSAGES/xfce4-panel.mo
 share/locale/et/LC_MESSAGES/xfce4-panel.mo
 share/locale/eu/LC_MESSAGES/xfce4-panel.mo
+share/locale/fa_IR/LC_MESSAGES/xfce4-panel.mo
 share/locale/fi/LC_MESSAGES/xfce4-panel.mo
 share/locale/fr/LC_MESSAGES/xfce4-panel.mo
 share/locale/gl/LC_MESSAGES/xfce4-panel.mo
@@ -119,6 +120,7 @@ share/locale/ie/LC_MESSAGES/xfce4-panel.mo
 share/locale/is/LC_MESSAGES/xfce4-panel.mo
 share/locale/it/LC_MESSAGES/xfce4-panel.mo
 share/locale/ja/LC_MESSAGES/xfce4-panel.mo
+share/locale/ka/LC_MESSAGES/xfce4-panel.mo
 share/locale/kk/LC_MESSAGES/xfce4-panel.mo
 share/locale/ko/LC_MESSAGES/xfce4-panel.mo
 share/locale/lt/LC_MESSAGES/xfce4-panel.mo
