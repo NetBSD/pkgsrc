@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.5 2019/09/07 15:02:27 tsutsui Exp $
+$NetBSD: distinfo,v 1.6 2020/01/29 15:56:08 tsutsui Exp $
 
-SHA1 (LibreOffice_6.2.7_Linux_x86_rpm.tar.gz) = 3179d0246651f241603f70f50b2b499adbbef0ea
-RMD160 (LibreOffice_6.2.7_Linux_x86_rpm.tar.gz) = ee118694cefd04fb6dd8c0904449abdbdc781252
-SHA512 (LibreOffice_6.2.7_Linux_x86_rpm.tar.gz) = 200e2c03837be8cfd06f5522d2a2ef9150edd06ddac77ffa8262b709f619bd81dae1172669927161b128f437a70fe6a585cbe6bd9806142b4e731b09ac18f62c
-Size (LibreOffice_6.2.7_Linux_x86_rpm.tar.gz) = 224271680 bytes
-SHA1 (LibreOffice_6.2.7_Linux_x86-64_rpm.tar.gz) = e7ad15839408d9be3d7094aac0025f2baaa44ef7
-RMD160 (LibreOffice_6.2.7_Linux_x86-64_rpm.tar.gz) = 247fcb5373de267dc239d58ad3589f4b02eb6ffc
-SHA512 (LibreOffice_6.2.7_Linux_x86-64_rpm.tar.gz) = f5c116abeb0922c10decb2d451f41b3829a116a8b1e68a4357e45016d34b057eb6b143902b8fa95261ca9aa2a55d377dbb97c0a4c91d7c56ec5c44ad1d946b33
-Size (LibreOffice_6.2.7_Linux_x86-64_rpm.tar.gz) = 243554189 bytes
+SHA1 (LibreOffice_6.2.8_Linux_x86_rpm.tar.gz) = 2a4da5c9f6bdffe41f640cf6a5d949c5d6f121a5
+RMD160 (LibreOffice_6.2.8_Linux_x86_rpm.tar.gz) = d86e23b42cd3de692187a82b5a00ceff2804217d
+SHA512 (LibreOffice_6.2.8_Linux_x86_rpm.tar.gz) = cc361501bac1c21f5a68335ed6e7e40f950a4709b495593336fe6501dbe8a3efabb8be57acc3c199ec5f657c8eda7ba268972dd323177f159a5b5ef12583d5e8
+Size (LibreOffice_6.2.8_Linux_x86_rpm.tar.gz) = 224259548 bytes
+SHA1 (LibreOffice_6.2.8_Linux_x86-64_rpm.tar.gz) = 5c6068163d34bee00fe0c22e19034b33302b769b
+RMD160 (LibreOffice_6.2.8_Linux_x86-64_rpm.tar.gz) = bbd7cedb1b3b13651134890b24e67cb26f659a60
+SHA512 (LibreOffice_6.2.8_Linux_x86-64_rpm.tar.gz) = 4ed7e17a9046b8e16e4719274783a04392206ba987fa0bab8f8e5bf3e689daeac0a55f68268c0d76b3cacd76a9d129766b6703c8ab8e9ac427b4ed8e98622938
+Size (LibreOffice_6.2.8_Linux_x86-64_rpm.tar.gz) = 243535202 bytes
