@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.845 2020/01/29 16:49:29 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.846 2020/01/29 19:01:59 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1115,3 +1115,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/libreoffice6-bin to 6.2.8 [tsutsui 2020-01-29]
 	Updated security/ocaml-safepass to 3.0nb4 [jaapb 2020-01-29]
 	Added mail/feed2exec version 0.14.0 [schmonz 2020-01-29]
+	Removed audio/rio [maya 2020-01-29]
+	Removed audio/rio500 [maya 2020-01-29]
+	Removed audio/rioutil [maya 2020-01-29]
