@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.832 2020/01/29 10:34:39 nia Exp $
+$NetBSD: CHANGES-2020,v 1.833 2020/01/29 10:45:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1023,3 +1023,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/sqlite3-tcl to 3.31.1 [adam 2020-01-29]
 	Updated devel/lemon to 1.0.3.31.1 [adam 2020-01-29]
 	Removed emulators/gcube successor emulators/dolphin-emu [nia 2020-01-29]
+	Removed time/cairo-clock [nia 2020-01-29]
