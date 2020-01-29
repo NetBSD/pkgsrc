@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.824 2020/01/29 05:01:17 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.825 2020/01/29 05:05:41 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1012,3 +1012,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xfce4-panel to 4.14.3 [gutteridge 2020-01-29]
 	Updated x11/xfce4-settings to 4.14.2 [gutteridge 2020-01-29]
 	Updated x11/xfce4-desktop to 4.14.2 [gutteridge 2020-01-29]
+	Updated x11/xfce4-whiskermenu-plugin to 2.3.5 [gutteridge 2020-01-29]
