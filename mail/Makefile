@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.537 2020/01/07 08:16:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.538 2020/01/29 16:49:07 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -95,6 +95,7 @@ SUBDIR+=	ezmlm-idx
 SUBDIR+=	faces
 SUBDIR+=	fastforward
 SUBDIR+=	fdm
+SUBDIR+=	feed2exec
 SUBDIR+=	fetchmail
 SUBDIR+=	fetchmailconf
 SUBDIR+=	fetchyahoo
