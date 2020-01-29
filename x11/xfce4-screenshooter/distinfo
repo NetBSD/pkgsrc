@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/08/30 00:34:31 gutteridge Exp $
+$NetBSD: distinfo,v 1.9 2020/01/29 05:07:49 gutteridge Exp $
 
-SHA1 (xfce4-screenshooter-1.9.6.tar.bz2) = e7a0b34fadd82d84d4197706d5b8fd383f312747
-RMD160 (xfce4-screenshooter-1.9.6.tar.bz2) = 8f2a6b47c63bcf5a3b27964f501bfe19ad74d1ab
-SHA512 (xfce4-screenshooter-1.9.6.tar.bz2) = 17d4afb346f09f97225c0fe65ed2389733e98d58729f15f7ec2b601682d7e15a6d9c67b85840593c17298fc32c250d8eb2e8d349ccd355507f4c18b5e312ae35
-Size (xfce4-screenshooter-1.9.6.tar.bz2) = 529233 bytes
+SHA1 (xfce4-screenshooter-1.9.7.tar.bz2) = 27d3da35265957148fc06f0605246d72d3b8d59d
+RMD160 (xfce4-screenshooter-1.9.7.tar.bz2) = ef58b3f9b542d2e3ae624c3953e0c4044a004b49
+SHA512 (xfce4-screenshooter-1.9.7.tar.bz2) = 364594bd00172f0becb85f8643e4106b4a7b71ac5dad765850f54de011a77175801bd9e7eaab6a8bbb3b1353299fdfa25cc0a4a52d49017f9b51330377eb9add
+Size (xfce4-screenshooter-1.9.7.tar.bz2) = 536583 bytes
