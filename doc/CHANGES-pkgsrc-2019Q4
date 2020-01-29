@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.5 2020/01/18 22:07:48 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.6 2020/01/29 13:40:18 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q4 branch:
 
@@ -31,4 +31,37 @@ net/libtorrent-rasterbar: NetBSD 8 build fix
 
 Pullup ticket #6106 - requested by gutteridge
 x11/mate-terminal: crash fix
+
+Pullup ticket #6120 - requested by kim
+www/nginx: security fix
+
+Pullup ticket #6121 - requested by tm
+databases/phpmyadmin: security fix (CVE-2020-5504)
+
+Pullup ticket #6122 - requested by kim
+textproc/libxml2: security fix
+
+Pullup ticket #6123 - requested by gutteridge
+emulators/qemu: build fix
+
+Pullup ticket #6124 - requested by leot
+net/youtube-dl: update
+
+Pullup ticket #6126 - requested by taca
+www/awstats: security fix
+
+Pullup ticket #6127 - requested by taca
+lang/php73: security fix
+
+Pullup ticket #6130 - requested by taca
+databases/ldb: dependent update (for samba4)
+
+Pullup ticket #6125 - requested by taca
+net/samba4: security fix
+
+Pullup ticket #6128 - requested by taca
+lang/php74: security fix
+
+Pullup ticket #6129 - requested by taca
+lang/php72: security fix
 
