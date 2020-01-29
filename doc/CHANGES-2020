@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.834 2020/01/29 10:52:14 nia Exp $
+$NetBSD: CHANGES-2020,v 1.835 2020/01/29 11:02:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1025,3 +1025,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed emulators/gcube successor emulators/dolphin-emu [nia 2020-01-29]
 	Removed time/cairo-clock [nia 2020-01-29]
 	Removed chat/dircproxy [nia 2020-01-29]
+	Updated devel/libidn to 1.35 [nia 2020-01-29]
