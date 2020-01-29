@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.839 2020/01/29 11:55:53 markd Exp $
+$NetBSD: CHANGES-2020,v 1.840 2020/01/29 12:49:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1106,3 +1106,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/kxmlgui to 5.66.0 [markd 2020-01-29]
 	Updated x11/plasma-framework to 5.66.0 [markd 2020-01-29]
 	Updated x11/qqc2-desktop-style to 5.66.0 [markd 2020-01-29]
+	Updated net/samba4 to 4.11.6 [adam 2020-01-29]
+	Updated lang/npm to 6.13.7 [adam 2020-01-29]
