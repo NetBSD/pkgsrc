@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/11 09:36:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/29 11:49:26 markd Exp $
 include/KF5/KContacts/KContacts/Address
 include/KF5/KContacts/KContacts/Addressee
 include/KF5/KContacts/KContacts/AddresseeList
@@ -101,6 +101,7 @@ share/locale/ko/LC_MESSAGES/kcontacts5.mo
 share/locale/lt/LC_MESSAGES/kcontacts5.mo
 share/locale/lv/LC_MESSAGES/kcontacts5.mo
 share/locale/mai/LC_MESSAGES/kcontacts5.mo
+share/locale/ml/LC_MESSAGES/kcontacts5.mo
 share/locale/mr/LC_MESSAGES/kcontacts5.mo
 share/locale/nb/LC_MESSAGES/kcontacts5.mo
 share/locale/nds/LC_MESSAGES/kcontacts5.mo
