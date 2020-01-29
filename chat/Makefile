@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2020/01/23 18:36:15 jnemeth Exp $
+# $NetBSD: Makefile,v 1.240 2020/01/29 10:51:56 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -20,7 +20,6 @@ SUBDIR+=	cgiirc
 SUBDIR+=	coyim
 SUBDIR+=	ctrlproxy
 SUBDIR+=	dccserver
-SUBDIR+=	dircproxy
 SUBDIR+=	eggdrop
 SUBDIR+=	ejabberd
 SUBDIR+=	ekg
