@@ -1,0 +1,5 @@
+feed2exec is a simple program that runs custom actions on new RSS feed
+items (or whatever feedparser can read). It currently has support for
+writing into mailboxes (Maildir folders) or executing commands, but more
+actions can be easily implemented through plugins. Email are saved as
+multipart plain/HTML and can be sent to arbitrary folders.
