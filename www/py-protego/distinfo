@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/01/29 21:52:27 adam Exp $
+
+SHA1 (Protego-0.1.16.tar.gz) = 715a6c71bd97d7d2956ee50860a3aba6bfe2e9a2
+RMD160 (Protego-0.1.16.tar.gz) = c5d678d360ff8a556a8bda1ad3997192a98aff1c
+SHA512 (Protego-0.1.16.tar.gz) = 437a52eb05d77db0d084a572a528e92ff71702ea46df794b081f8ca0338d92a89035bd4f02891ae636b8662ecd4c4e129c4e54d4267b1ea36d40df6dd616b9a0
+Size (Protego-0.1.16.tar.gz) = 3211311 bytes
