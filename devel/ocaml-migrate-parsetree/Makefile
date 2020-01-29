@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 10:39:24 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/01/29 08:28:44 jaapb Exp $
 
 GITHUB_PROJECT=	ocaml-migrate-parsetree
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-1.4.0
+DISTNAME=	${GITHUB_PROJECT}-1.5.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=let-def/}
 
