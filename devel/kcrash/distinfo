@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/11/11 07:36:12 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/01/29 11:49:23 markd Exp $
 
-SHA1 (kcrash-5.64.0.tar.xz) = 943f5a32067cadf56db4d290a814669012e391c8
-RMD160 (kcrash-5.64.0.tar.xz) = fd8cf07c1dbeea1bcb3ec2c90bace20eb0a57109
-SHA512 (kcrash-5.64.0.tar.xz) = bfd4de4839a7464f7fc66e667a0262c3119bf51b35b017a9f76446f7db1a3dd0d3418651bf79b4fff580910dcffe7b8c65bdac56ed7ec0bb6a9bdf6e5474e0ed
-Size (kcrash-5.64.0.tar.xz) = 23336 bytes
+SHA1 (kcrash-5.66.0.tar.xz) = f2d2cc6ab38fb1f076e3d5ac83e0945440cf18f5
+RMD160 (kcrash-5.66.0.tar.xz) = 66a218c7af78231c65b93f027e5d61c557a849e0
+SHA512 (kcrash-5.66.0.tar.xz) = 0bfb2b7211522608c4e2bdf0677074daff4ca4802c02949eb720df87d5c5ba2b4882c69fd908abd34440ef5fa97e1109535aea94071b646b15d1e7819203cf8f
+Size (kcrash-5.66.0.tar.xz) = 23312 bytes
