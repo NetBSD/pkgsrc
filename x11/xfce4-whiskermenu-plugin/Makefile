@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2019/08/19 05:03:00 gutteridge Exp $
+# $NetBSD: Makefile,v 1.27 2020/01/29 05:05:32 gutteridge Exp $
 
-VERSION=	2.3.3
+VERSION=	2.3.5
 DISTNAME=	xfce4-whiskermenu-plugin-${VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/${VERSION:R}/
+MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/${VERSION:R}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	youri@NetBSD.org
