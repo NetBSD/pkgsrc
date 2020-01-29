@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2019/08/27 20:29:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/01/29 11:49:29 markd Exp $
 bin/kded5
 lib/cmake/KDED/KDEDConfig.cmake
 lib/cmake/KDED/KDEDConfigVersion.cmake
-lib/cmake/KDED/KDEDTargets-noconfig.cmake
-lib/cmake/KDED/KDEDTargets.cmake
-lib/libkdeinit5_kded5.so
 man/ca/man8/kded5.8
 man/de/man8/kded5.8
 man/es/man8/kded5.8
