@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.841 2020/01/29 13:10:55 adam Exp $
+$NetBSD: CHANGES-2020,v 1.842 2020/01/29 14:04:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1110,3 +1110,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/npm to 6.13.7 [adam 2020-01-29]
 	Updated databases/py-mongo to 3.10.1 [adam 2020-01-29]
 	Updated www/py-selenium to 3.141.0 [adam 2020-01-29]
+	Updated misc/py-tqdm to 4.42.0 [adam 2020-01-29]
+	Updated lang/py-parso to 0.6.0 [adam 2020-01-29]
