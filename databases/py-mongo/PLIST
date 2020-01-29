@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/10/07 07:33:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/01/29 13:08:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -72,6 +72,9 @@ ${PYSITELIB}/pymongo/__init__.py
 ${PYSITELIB}/pymongo/__init__.pyc
 ${PYSITELIB}/pymongo/__init__.pyo
 ${PYSITELIB}/pymongo/_cmessage.so
+${PYSITELIB}/pymongo/aggregation.py
+${PYSITELIB}/pymongo/aggregation.pyc
+${PYSITELIB}/pymongo/aggregation.pyo
 ${PYSITELIB}/pymongo/auth.py
 ${PYSITELIB}/pymongo/auth.pyc
 ${PYSITELIB}/pymongo/auth.pyo
@@ -108,12 +111,21 @@ ${PYSITELIB}/pymongo/cursor.pyo
 ${PYSITELIB}/pymongo/cursor_manager.py
 ${PYSITELIB}/pymongo/cursor_manager.pyc
 ${PYSITELIB}/pymongo/cursor_manager.pyo
+${PYSITELIB}/pymongo/daemon.py
+${PYSITELIB}/pymongo/daemon.pyc
+${PYSITELIB}/pymongo/daemon.pyo
 ${PYSITELIB}/pymongo/database.py
 ${PYSITELIB}/pymongo/database.pyc
 ${PYSITELIB}/pymongo/database.pyo
 ${PYSITELIB}/pymongo/driver_info.py
 ${PYSITELIB}/pymongo/driver_info.pyc
 ${PYSITELIB}/pymongo/driver_info.pyo
+${PYSITELIB}/pymongo/encryption.py
+${PYSITELIB}/pymongo/encryption.pyc
+${PYSITELIB}/pymongo/encryption.pyo
+${PYSITELIB}/pymongo/encryption_options.py
+${PYSITELIB}/pymongo/encryption_options.pyc
+${PYSITELIB}/pymongo/encryption_options.pyo
 ${PYSITELIB}/pymongo/errors.py
 ${PYSITELIB}/pymongo/errors.pyc
 ${PYSITELIB}/pymongo/errors.pyo
@@ -189,6 +201,9 @@ ${PYSITELIB}/pymongo/settings.pyo
 ${PYSITELIB}/pymongo/son_manipulator.py
 ${PYSITELIB}/pymongo/son_manipulator.pyc
 ${PYSITELIB}/pymongo/son_manipulator.pyo
+${PYSITELIB}/pymongo/srv_resolver.py
+${PYSITELIB}/pymongo/srv_resolver.pyc
+${PYSITELIB}/pymongo/srv_resolver.pyo
 ${PYSITELIB}/pymongo/ssl_context.py
 ${PYSITELIB}/pymongo/ssl_context.pyc
 ${PYSITELIB}/pymongo/ssl_context.pyo
