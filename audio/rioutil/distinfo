@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.14 2019/12/31 12:10:20 schmonz Exp $
-
-SHA1 (rioutil-v1.5.4.tar.gz) = b7da8b205f691894a3b551a4c79c90d17c6bf47f
-RMD160 (rioutil-v1.5.4.tar.gz) = 22d8898fdcec2fa13c5f82d902b5e4a3a15764e9
-SHA512 (rioutil-v1.5.4.tar.gz) = b64027089a7c0a3b712486e3b2549dae5a8ceff9687a183fd411f6b9d197a97ea22bd7294242b3f9e8522da9ebe7e87dc5bc980633632ce3d4884341ee085a62
-Size (rioutil-v1.5.4.tar.gz) = 84592 bytes
-SHA1 (patch-librioutil_driver__file.c) = 60b189031c95bb285d1eb5cb96049175d00bcbf3
-SHA1 (patch-linux__driver_rio__usb.h) = 26e0b64384e0c71eb589281ffe58737af29d51ca
-SHA1 (patch-src_main.c) = d3e3eb1893f4ffe29e87d489064e4912e0b24d09

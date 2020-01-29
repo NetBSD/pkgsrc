@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.584 2020/01/22 18:17:55 nia Exp $
+# $NetBSD: Makefile,v 1.585 2020/01/29 19:00:33 maya Exp $
 #
 
 COMMENT=	Audio tools
@@ -395,9 +395,6 @@ SUBDIR+=	qtplay
 SUBDIR+=	quodlibet
 SUBDIR+=	rexima
 SUBDIR+=	rhythmbox
-SUBDIR+=	rio
-SUBDIR+=	rio500
-SUBDIR+=	rioutil
 SUBDIR+=	rip
 SUBDIR+=	rosegarden
 SUBDIR+=	rplay
