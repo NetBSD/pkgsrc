@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.79 2020/01/29 04:45:19 gutteridge Exp $
+# $NetBSD: Makefile,v 1.80 2020/01/29 04:56:19 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=		xfce4-session-4.14.1
 CATEGORIES=		x11
-MASTER_SITES+=		http://archive.xfce.org/src/xfce/xfce4-session/4.14/
+MASTER_SITES+=		https://archive.xfce.org/src/xfce/xfce4-session/4.14/
 
 HOMEPAGE=		https://docs.xfce.org/xfce/xfce4-session/start
 COMMENT=		Xfce session manager
