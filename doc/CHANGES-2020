@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.828 2020/01/29 07:58:48 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.829 2020/01/29 08:13:55 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1016,3 +1016,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xfce4-screenshooter to 1.9.7 [gutteridge 2020-01-29]
 	Updated misc/xfce4-time-out-plugin to 1.1.0 [gutteridge 2020-01-29]
 	Updated x11/ocaml-lablgtk to 2.18.10 [jaapb 2020-01-29]
+	Updated x11/ocaml-lablgtk3 to 3.1.0 [jaapb 2020-01-29]
