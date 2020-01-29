@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2020/01/29 21:43:02 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/random_order/__init__.py
+${PYSITELIB}/random_order/__init__.pyc
+${PYSITELIB}/random_order/__init__.pyo
+${PYSITELIB}/random_order/bucket_types.py
+${PYSITELIB}/random_order/bucket_types.pyc
+${PYSITELIB}/random_order/bucket_types.pyo
+${PYSITELIB}/random_order/cache.py
+${PYSITELIB}/random_order/cache.pyc
+${PYSITELIB}/random_order/cache.pyo
+${PYSITELIB}/random_order/config.py
+${PYSITELIB}/random_order/config.pyc
+${PYSITELIB}/random_order/config.pyo
+${PYSITELIB}/random_order/plugin.py
+${PYSITELIB}/random_order/plugin.pyc
+${PYSITELIB}/random_order/plugin.pyo
+${PYSITELIB}/random_order/shuffler.py
+${PYSITELIB}/random_order/shuffler.pyc
+${PYSITELIB}/random_order/shuffler.pyo
