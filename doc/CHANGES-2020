@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.846 2020/01/29 19:01:59 maya Exp $
+$NetBSD: CHANGES-2020,v 1.847 2020/01/29 21:54:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1118,3 +1118,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed audio/rio [maya 2020-01-29]
 	Removed audio/rio500 [maya 2020-01-29]
 	Removed audio/rioutil [maya 2020-01-29]
+	Updated archivers/libzip to 1.6.0nb1 [wiz 2020-01-29]
