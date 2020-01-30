@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/01/29 16:48:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2020/01/30 18:02:41 schmonz Exp $
 
 DISTNAME=		feed2exec-0.14.0
+PKGNAME=		${DISTNAME:S/14/15/}
 CATEGORIES=		mail python
 MASTER_SITES=		https://gitlab.com/anarcat/feed2exec/-/archive/${PKGVERSION_NOREV}/
 
@@ -33,6 +34,12 @@ SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
 SUBST_FILES.version=	feed2exec/__init__.py
 SUBST_VARS.version=	PKGVERSION_NOREV
+
+pre-patch:
+	cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-0.15.0
+
+pre-install:
+	find ${WRKSRC} -type f -name '*.orig' -print | xargs rm -f
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
