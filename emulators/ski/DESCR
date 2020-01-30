@@ -1,14 +1,11 @@
 The Hewlett-Packard IA-64 instruction set simulator
 
-To get the ski to run on NetBSD, you need the following:
-
-procfs support in the kernel:
-	http://www.netbsd.org/docs/guide/en/chap-linux.html#chap-linux-emulating-procfs
-mount /dev/pts:
-	http://mail-index.netbsd.org/tech-kern/2004/11/08/0016.html
-
-Run the ski binary from within an xterm window.
+ski is an itanium or ia64 instruction set simulator.  It can be used
+for user or operating system development.  It can be run in batch,
+curses, gtk, or graphical (motif) modes, where you can inspect code,
+set breakpoints, and so on.
 
 BUGS: manual pages out of date, rpm build target broken, ctrl-c breaks
       curses ski program not emulator, doesn't decode source code yet,
-      "cstack" and "pm" commands not implemented, probably others.
+      "cstack" and "pm" commands not implemented for NetBSD,
+      probably others.
