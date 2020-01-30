@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/01/18 21:49:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2020/01/30 10:37:14 leot Exp $
 
 VERSION=	5.7.3p2
 DISTNAME=	opensmtpd-${VERSION}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
 
-MAINTAINER=	ftigeot@wolfpond.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.opensmtpd.org/
 COMMENT=	The OpenSMTPD mail transfer agent, a replacement for sendmail
 LICENSE=	isc AND modified-bsd AND 2-clause-bsd
