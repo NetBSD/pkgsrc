@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2015/08/31 00:18:32 khorben Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/01/30 23:31:58 khorben Exp $
 bin/todo
 lib/Mailer/plugins/todo.so
 man/html1/todo.html
 man/man1/todo.1
 share/applications/deforaos-todo.desktop
+share/doc/Todo/COPYING
 share/icons/hicolor/16x16/apps/todo.png
 share/icons/hicolor/24x24/apps/todo.png
 share/icons/hicolor/48x48/apps/todo.png
