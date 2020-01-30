@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/23 01:42:34 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/30 23:32:23 wiz Exp $
 bin/tor-prompt
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/stem/__init__.py
@@ -24,15 +24,24 @@ ${PYSITELIB}/stem/control.pyo
 ${PYSITELIB}/stem/descriptor/__init__.py
 ${PYSITELIB}/stem/descriptor/__init__.pyc
 ${PYSITELIB}/stem/descriptor/__init__.pyo
+${PYSITELIB}/stem/descriptor/bandwidth_file.py
+${PYSITELIB}/stem/descriptor/bandwidth_file.pyc
+${PYSITELIB}/stem/descriptor/bandwidth_file.pyo
 ${PYSITELIB}/stem/descriptor/certificate.py
 ${PYSITELIB}/stem/descriptor/certificate.pyc
 ${PYSITELIB}/stem/descriptor/certificate.pyo
+${PYSITELIB}/stem/descriptor/collector.py
+${PYSITELIB}/stem/descriptor/collector.pyc
+${PYSITELIB}/stem/descriptor/collector.pyo
 ${PYSITELIB}/stem/descriptor/export.py
 ${PYSITELIB}/stem/descriptor/export.pyc
 ${PYSITELIB}/stem/descriptor/export.pyo
 ${PYSITELIB}/stem/descriptor/extrainfo_descriptor.py
 ${PYSITELIB}/stem/descriptor/extrainfo_descriptor.pyc
 ${PYSITELIB}/stem/descriptor/extrainfo_descriptor.pyo
+${PYSITELIB}/stem/descriptor/hidden_service.py
+${PYSITELIB}/stem/descriptor/hidden_service.pyc
+${PYSITELIB}/stem/descriptor/hidden_service.pyo
 ${PYSITELIB}/stem/descriptor/hidden_service_descriptor.py
 ${PYSITELIB}/stem/descriptor/hidden_service_descriptor.pyc
 ${PYSITELIB}/stem/descriptor/hidden_service_descriptor.pyo
@@ -125,6 +134,9 @@ ${PYSITELIB}/stem/util/conf.pyo
 ${PYSITELIB}/stem/util/connection.py
 ${PYSITELIB}/stem/util/connection.pyc
 ${PYSITELIB}/stem/util/connection.pyo
+${PYSITELIB}/stem/util/ed25519.py
+${PYSITELIB}/stem/util/ed25519.pyc
+${PYSITELIB}/stem/util/ed25519.pyo
 ${PYSITELIB}/stem/util/enum.py
 ${PYSITELIB}/stem/util/enum.pyc
 ${PYSITELIB}/stem/util/enum.pyo
