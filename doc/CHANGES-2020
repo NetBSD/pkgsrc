@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.861 2020/01/30 23:32:08 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.862 2020/01/30 23:32:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1138,3 +1138,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/tor to 0.4.2.6 [leot 2020-01-30]
 	Updated x11/deforaos-notes to 0.2.0 [khorben 2020-01-30]
 	Updated time/deforaos-todo to 0.3.0 [khorben 2020-01-30]
+	Updated devel/py-stem to 1.8.0 [wiz 2020-01-30]
