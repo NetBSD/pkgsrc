@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.857 2020/01/30 19:44:29 adam Exp $
+$NetBSD: CHANGES-2020,v 1.858 2020/01/30 20:25:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1134,3 +1134,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/feed2exec to 0.15.0 [schmonz 2020-01-30]
 	Updated textproc/py-lxml to 4.5.0 [adam 2020-01-30]
 	Updated devel/py-test5 to 5.3.5 [adam 2020-01-30]
+	Updated math/py-pandas-datareader to 0.8.1nb1 [minskim 2020-01-30]
