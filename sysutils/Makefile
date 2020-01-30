@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.858 2020/01/21 21:55:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.859 2020/01/30 10:21:24 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -29,6 +29,7 @@ SUBDIR+=	amtterm
 SUBDIR+=	ansible
 SUBDIR+=	apcupsd
 SUBDIR+=	arm-trusted-firmware-fiptool
+SUBDIR+=	arm-trusted-firmware-rk3399
 SUBDIR+=	arm-trusted-firmware-sun50i-h6
 SUBDIR+=	arm-trusted-firmware-sun50i_a64
 SUBDIR+=	asapm
@@ -661,6 +662,7 @@ SUBDIR+=	u-boot-orangepi-zero-plus
 SUBDIR+=	u-boot-pine-h64
 SUBDIR+=	u-boot-pine64
 SUBDIR+=	u-boot-pinebook
+SUBDIR+=	u-boot-pinebook-pro
 SUBDIR+=	u-boot-pocketchip
 SUBDIR+=	u-boot-rock64
 SUBDIR+=	u-boot-rockpro64
