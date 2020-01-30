@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/01 00:28:03 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/01/30 23:05:36 khorben Exp $
 bin/notes
 lib/Mailer/plugins/notes.so
 man/html1/notes.html
 man/man1/notes.1
 share/applications/deforaos-notes.desktop
+share/doc/Notes/COPYING
 share/locale/es/LC_MESSAGES/Notes.mo
 share/locale/fr/LC_MESSAGES/Notes.mo
