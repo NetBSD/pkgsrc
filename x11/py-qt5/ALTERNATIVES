@@ -1,3 +1,3 @@
-bin/pylupdate5 @PREFIX@/bin/pylupdate5-${PYVERSSUFFIX}
-bin/pyrcc5 @PREFIX@/bin/pyrcc5-${PYVERSSUFFIX}
-bin/pyuic5 @PREFIX@/bin/pyuic5-${PYVERSSUFFIX}
+bin/pylupdate5 @PREFIX@/bin/pylupdate5-@PYVERSSUFFIX@
+bin/pyrcc5 @PREFIX@/bin/pyrcc5-@PYVERSSUFFIX@
+bin/pyuic5 @PREFIX@/bin/pyuic5-@PYVERSSUFFIX@
