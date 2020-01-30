@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:40 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/01/30 18:45:28 minskim Exp $
 
 DISTNAME=	pandas-datareader-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas-datareader/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://pandas.pydata.org/
+HOMEPAGE=	https://github.com/pydata/pandas-datareader
 COMMENT=	Remote data access for pandas
 LICENSE=	modified-bsd
 
