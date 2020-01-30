@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/11/03 10:18:29 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/30 23:32:23 wiz Exp $
 
-DISTNAME=	stem-1.7.1
+DISTNAME=	stem-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	net python
+CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stem/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,6 +17,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
 
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
