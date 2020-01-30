@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2019/12/30 19:44:33 triaxx Exp $
+$NetBSD: distinfo,v 1.15 2020/01/30 11:17:05 triaxx Exp $
 
 SHA1 (openpam-20190224.tar.gz) = da815b1977b9fc5c237c23743804c096fb582b82
 RMD160 (openpam-20190224.tar.gz) = 56f65b2a806dba8e8a2af3f16d7ed7b8183d5440
@@ -8,3 +8,4 @@ SHA1 (patch-doc_man_pam.conf.5) = 0c9ad45f67333ecbcd5085a536a25b5ed2b01b93
 SHA1 (patch-lib_libpam_openpam__configure.c) = 5f4271121d03eb6b9ea7e3e1b85f9b27c9f4eaae
 SHA1 (patch-lib_libpam_openpam__constants.c) = 14b11cda3dbbfafd5a45865a868295e801bd1733
 SHA1 (patch-lib_libpam_openpam__dynamic.c) = 0bed21f16b74dbdb312ce4f09c17055a0891bdd5
+SHA1 (patch-modules_pam__unix_Makefile.in) = a8648e5384050f4d8b48ba426e74fee1a5555acb
