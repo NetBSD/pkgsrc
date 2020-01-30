@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.850 2020/01/29 22:57:09 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.851 2020/01/30 09:45:45 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1126,3 +1126,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-wheel to 0.34.1 [adam 2020-01-29]
 	Updated www/py-WebOb to 1.8.6 [adam 2020-01-29]
 	Updated print/cups-base to 2.3.1nb1 [prlw1 2020-01-29]
+	Updated converters/p5-Sereal-Decoder to 4.008 [fcambus 2020-01-30]
