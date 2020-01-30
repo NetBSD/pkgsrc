@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.860 2020/01/30 23:05:48 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.861 2020/01/30 23:32:08 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1137,3 +1137,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-pandas-datareader to 0.8.1nb1 [minskim 2020-01-30]
 	Updated net/tor to 0.4.2.6 [leot 2020-01-30]
 	Updated x11/deforaos-notes to 0.2.0 [khorben 2020-01-30]
+	Updated time/deforaos-todo to 0.3.0 [khorben 2020-01-30]
