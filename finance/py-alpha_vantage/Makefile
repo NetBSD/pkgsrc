@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/06/17 19:54:07 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/01/31 18:29:09 minskim Exp $
 
-DISTNAME=	alpha_vantage-2.1.0
+DISTNAME=	alpha_vantage-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/alpha_vantage/}
