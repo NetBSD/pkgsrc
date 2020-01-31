@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/01/30 18:02:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/31 20:44:02 schmonz Exp $
 
 DISTNAME=		feed2exec-0.14.0
 PKGNAME=		${DISTNAME:S/14/15/}
+PKGREVISION=		1
 CATEGORIES=		mail python
 MASTER_SITES=		https://gitlab.com/anarcat/feed2exec/-/archive/${PKGVERSION_NOREV}/
 
@@ -23,6 +24,7 @@ DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 DEPENDS+=		${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=		${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=		${PYPKGPREFIX}-requests-file-[0-9]*:../../devel/py-requests-file
+DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 TEST_DEPENDS+=		${PYPKGPREFIX}-betamax-[0-9]*:../../www/py-betamax
 TEST_DEPENDS+=		${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=		${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-runner
