@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.863 2020/01/30 23:34:32 minskim Exp $
+$NetBSD: CHANGES-2020,v 1.864 2020/01/31 01:27:17 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1140,3 +1140,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/deforaos-todo to 0.3.0 [khorben 2020-01-30]
 	Updated devel/py-stem to 1.8.0 [wiz 2020-01-30]
 	Updated math/py-numpy to 1.16.6 [minskim 2020-01-30]
+	Updated sysutils/deforaos-terminal to 0.2.0 [khorben 2020-01-31]
