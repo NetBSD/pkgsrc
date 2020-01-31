@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.877 2020/01/31 20:44:13 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.878 2020/01/31 21:11:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1154,3 +1154,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/softhsm2 to 2.5.0nb1 [he 2020-01-31]
 	Updated chat/inspircd3 to 3.5.0 [nia 2020-01-31]
 	Updated mail/feed2exec to 0.15.0nb1 [schmonz 2020-01-31]
+	Updated net/dnscrypt-proxy2 to 2.0.39 [nia 2020-01-31]
