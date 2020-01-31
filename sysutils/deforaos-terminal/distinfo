@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/03/28 19:28:42 khorben Exp $
+$NetBSD: distinfo,v 1.4 2020/01/31 01:27:07 khorben Exp $
 
-SHA1 (Terminal-0.1.0.tar.gz) = 594436aa376861d74f4ead5314ebb976916107ae
-RMD160 (Terminal-0.1.0.tar.gz) = 2b93860ebd470ecbe3ccd15fd452fd6a7b525596
-SHA512 (Terminal-0.1.0.tar.gz) = a82c1c8636bbe91ff5c2ebc17a92876d2def73e8eebc57056531d3c7fb5bd234e71b9a44304c1a93c4e20c841bb2dd12636afdc12e1043efb3a9f36b9518ab82
-Size (Terminal-0.1.0.tar.gz) = 13311 bytes
+SHA1 (Terminal-0.2.0.tar.gz) = 708f610b57a331a0c750523c71c4bb14b4cfed51
+RMD160 (Terminal-0.2.0.tar.gz) = baddd8200630896de81baf57d3e1dc480b16e513
+SHA512 (Terminal-0.2.0.tar.gz) = a8d6a7eab85133d41c0e7a8c8e363a10598c4422d566f24801a3a153b4cfb14c33777e349643c29bb1df012f3a8ae9599f10046a59ca4937e761c04e00f76478
+Size (Terminal-0.2.0.tar.gz) = 15776 bytes
