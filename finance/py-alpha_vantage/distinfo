@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/06/17 19:54:07 adam Exp $
+$NetBSD: distinfo,v 1.4 2020/01/31 18:29:09 minskim Exp $
 
-SHA1 (alpha_vantage-2.1.0.tar.gz) = 8b769c7fb18879e808d15d167e6635de4d23e341
-RMD160 (alpha_vantage-2.1.0.tar.gz) = a8b714a56be4897f7a80eaa9552c2a573ad50bbf
-SHA512 (alpha_vantage-2.1.0.tar.gz) = 96893d31dd48844c9572029373ca706a29ca5eccfda5c909c2561011545d430255e08be234202f1e905b3ecf91b7c7b9c866594df09e04e585ec6bdc0b6d6c44
-Size (alpha_vantage-2.1.0.tar.gz) = 14087 bytes
+SHA1 (alpha_vantage-2.1.3.tar.gz) = 7cb3f7bbbd09c9670cd220943f2233cab0af6050
+RMD160 (alpha_vantage-2.1.3.tar.gz) = e98c76b051da786a10c938cfe95043c7f5f7c3b1
+SHA512 (alpha_vantage-2.1.3.tar.gz) = 5ec790561663feeb8893be273edbdaf8e428f374f39e0851dca576e44fba5689b191fa279be59219b2af78579d61bd1e30a35e47dd73f7c36947605d04b79a2c
+Size (alpha_vantage-2.1.3.tar.gz) = 14942 bytes
