@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.876 2020/01/26 13:45:11 nia Exp $
+# $NetBSD: Makefile,v 1.877 2020/01/31 17:28:16 pho Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -448,6 +448,7 @@ SUBDIR+=	xaniroc
 SUBDIR+=	xauth
 SUBDIR+=	xautolock
 SUBDIR+=	xbacklight
+SUBDIR+=	xbanish
 SUBDIR+=	xbanner
 SUBDIR+=	xbindkeys
 SUBDIR+=	xbindkeys-tk
