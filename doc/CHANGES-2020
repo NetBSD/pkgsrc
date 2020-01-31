@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.868 2020/01/31 11:17:41 fox Exp $
+$NetBSD: CHANGES-2020,v 1.869 2020/01/31 11:32:44 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1145,3 +1145,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/deforaos-desktop to 2020.1.0 [khorben 2020-01-31]
 	Updated math/py-sympy to 1.5.1 [minskim 2020-01-31]
 	Updated audio/fasttracker2 to 1.07 [fox 2020-01-31]
+	Updated devel/ocaml-biniou to 1.2.1 [jaapb 2020-01-31]
