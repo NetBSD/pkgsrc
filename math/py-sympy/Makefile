@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2020/01/26 17:31:40 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/01/31 04:51:40 minskim Exp $
 
-DISTNAME=	sympy-1.5
+DISTNAME=	sympy-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sympy/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://www.sympy.org/
 COMMENT=	Python library for symbolic mathematics
 LICENSE=	modified-bsd
