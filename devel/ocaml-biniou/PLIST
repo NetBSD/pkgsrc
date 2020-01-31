@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/03/05 17:37:10 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/01/31 11:32:30 jaapb Exp $
 bin/bdump
 ${OCAML_SITELIB}/biniou/META
 ${OCAML_SITELIB}/biniou/bi_dump.cmi
@@ -53,5 +53,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/biniou/biniou.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/biniou/biniou.cmxs
 ${OCAML_SITELIB}/biniou/dune-package
 ${OCAML_SITELIB}/biniou/opam
+share/doc/biniou/CHANGES.md
 share/doc/biniou/LICENSE
 share/doc/biniou/README.md

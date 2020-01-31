@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2019/11/03 10:39:22 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/01/31 11:32:30 jaapb Exp $
 
 GITHUB_PROJECT=	biniou
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-1.2.0
+DISTNAME=	${GITHUB_PROJECT}-1.2.1
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=mjambon/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-community/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	https://github.com/mjambon/biniou/
+HOMEPAGE=	https://github.com/ocaml-community/biniou/
 COMMENT=	Extensible binary data format, like JSON but faster
 LICENSE=	modified-bsd
 
