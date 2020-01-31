@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/01/18 21:50:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2020/01/31 11:45:03 wiz Exp $
 
 DISTNAME=	src-firefox-tor-browser-60.8.0esr-8.5-1-build2
 PKGNAME=	tor-browser-8.5.4
@@ -11,6 +11,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.torproject.org/projects/torbrowser.html.en
 COMMENT=	Tor Browser based on Firefox
 LICENSE=	mpl-1.1
+
+BROKEN=		"Needs fixes for rust changes, or update."
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/src-//}
 
