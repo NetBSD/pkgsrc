@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/10/25 11:01:55 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/01/31 20:03:14 nia Exp $
 bin/inspircd
 bin/inspircd-genssl
 lib/inspircd/modules/core_channel.so
@@ -54,6 +54,7 @@ lib/inspircd/modules/m_classban.so
 lib/inspircd/modules/m_clearchan.so
 lib/inspircd/modules/m_cloaking.so
 lib/inspircd/modules/m_clones.so
+lib/inspircd/modules/m_codepage.so
 lib/inspircd/modules/m_commonchans.so
 lib/inspircd/modules/m_conn_join.so
 lib/inspircd/modules/m_conn_umodes.so
@@ -101,6 +102,7 @@ lib/inspircd/modules/m_ircv3_chghost.so
 lib/inspircd/modules/m_ircv3_ctctags.so
 lib/inspircd/modules/m_ircv3_echomessage.so
 lib/inspircd/modules/m_ircv3_invitenotify.so
+lib/inspircd/modules/m_ircv3_labeledresponse.so
 lib/inspircd/modules/m_ircv3_msgid.so
 lib/inspircd/modules/m_ircv3_servertime.so
 lib/inspircd/modules/m_ircv3_sts.so
@@ -203,6 +205,10 @@ lib/inspircd/modules/m_websocket.so
 lib/inspircd/modules/m_xline_db.so
 man/man1/inspircd-genssl.1
 man/man1/inspircd.1
+share/examples/inspircd/codepages/ascii.conf.example
+share/examples/inspircd/codepages/latin1.conf.example
+share/examples/inspircd/codepages/rfc1459.conf.example
+share/examples/inspircd/codepages/strict-rfc1459.conf.example
 share/examples/inspircd/filter.conf.example
 share/examples/inspircd/helpop.conf.example
 share/examples/inspircd/inspircd.conf.example
