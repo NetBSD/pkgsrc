@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/01/26 17:32:07 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/31 19:13:07 he Exp $
 #
 
 VERSION=	2.5.0
+PKGREVISION=	1
 DISTNAME=	softhsm-${VERSION}
 PKGNAME=	softhsm2-${VERSION}
 CATEGORIES=	security
@@ -22,6 +23,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-botan=${PREFIX}
 CONFIGURE_ARGS+=	--with-objectstore-backend-db
 CONFIGURE_ARGS+=	--with-migrate
+CONFIGURE_ARGS+=	--disable-gost
 
 EGDIR=			${PREFIX}/share/examples/softhsm
 
@@ -43,6 +45,7 @@ OWN_DIRS=		${VARBASE}/softhsm
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/src/lib/common/softhsm2.conf ${DESTDIR}${EGDIR}
 
+USE_BUILTIN.sqlite3=NO
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/botan/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
