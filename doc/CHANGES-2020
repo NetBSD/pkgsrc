@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.866 2020/01/31 02:14:02 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.867 2020/01/31 04:51:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1143,3 +1143,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/deforaos-terminal to 0.2.0 [khorben 2020-01-31]
 	Updated x11/deforaos-integration to 0.1.0 [khorben 2020-01-31]
 	Updated meta-pkgs/deforaos-desktop to 2020.1.0 [khorben 2020-01-31]
+	Updated math/py-sympy to 1.5.1 [minskim 2020-01-31]
