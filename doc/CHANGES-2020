@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.869 2020/01/31 11:32:44 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.870 2020/01/31 11:57:13 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1146,3 +1146,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-sympy to 1.5.1 [minskim 2020-01-31]
 	Updated audio/fasttracker2 to 1.07 [fox 2020-01-31]
 	Updated devel/ocaml-biniou to 1.2.1 [jaapb 2020-01-31]
+	Updated databases/ocaml-sqlite3 to 5.0.1 [jaapb 2020-01-31]
