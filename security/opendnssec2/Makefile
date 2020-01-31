@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 21:50:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2020/01/31 16:08:48 he Exp $
 #
 
 DISTNAME=	opendnssec-2.1.5
 PKGNAME=	${DISTNAME:S/opendnssec/opendnssec2/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security net
 MASTER_SITES=	https://www.opendnssec.org/files/source/
 
@@ -105,6 +105,7 @@ post-install:
 	${INSTALL} ${WRKSRC}/enforcer/src/db/schema.sqlite \
 		${DESTDIR}/${MIGRATEDIR}
 
+USE_BUILTIN.sqlite3=NO
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../net/ldns/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
