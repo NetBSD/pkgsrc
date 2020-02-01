@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/13 09:57:53 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/02/01 02:24:03 mef Exp $
 
 R_PKGNAME=	rmarkdown
 R_PKGVER=	2.0
@@ -17,11 +17,11 @@ DEPENDS+=	R-htmltools>=0.3.5:../../textproc/R-htmltools
 DEPENDS+=	R-jsonlite>=1.6:../../textproc/R-jsonlite
 DEPENDS+=	R-stringr>=1.2.0:../../textproc/R-stringr
 DEPENDS+=	R-yaml>=2.1.19:../../textproc/R-yaml
+DEPENDS+=	R-tinytex-[0-9]*:../../print/R-tinytex
 
 # Packages suggested but not available: 'tufte', 'dygraphs', 'pkgdown'
 TEST_DEPENDS+=	R-base64enc-[0-9]*:../../converters/R-base64enc
 TEST_DEPENDS+=	R-fs-[0-9]*:../../devel/R-fs
-TEST_DEPENDS+=	R-tinytex-[0-9]*:../../print/R-tinytex
 
 USE_LANGUAGES=	# none
 
