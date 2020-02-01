@@ -1,0 +1,3 @@
+bin/cheetah @PREFIX@/bin/cheetah-@PYVERSSUFFIX@
+bin/cheetah-analyze @PREFIX@/bin/cheetah-analyze-@PYVERSSUFFIX@
+bin/cheetah-compile @PREFIX@/bin/cheetah-compile-@PYVERSSUFFIX@
