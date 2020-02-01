@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 21:48:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2020/02/01 20:49:43 adam Exp $
 
-DISTNAME=	librdkafka-1.0.1
-PKGREVISION=	1
+DISTNAME=	librdkafka-1.3.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=edenhill/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	fhajny@NetBSD.org
-HOMEPAGE=	https://github.com/edenhill/librdkafka/
+HOMEPAGE=	https://github.com/edenhill/librdkafka
 COMMENT=	Apache Kafka C/C++ library
 LICENSE=	2-clause-bsd
-
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c99 c++
@@ -19,9 +17,11 @@ USE_TOOLS+=	bash gmake pkg-config
 CONFIG_SHELL=	bash
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--disable-gssapi
+CONFIGURE_ARGS+=	--disable-optimization
 CONFIGURE_ARGS+=	--enable-lz4
 CONFIGURE_ARGS+=	--enable-ssl
-CONFIGURE_ARGS+=	--disable-sasl
+CONFIGURE_ARGS+=	--enable-zstd
 
 TEST_TARGET=	check
 
@@ -33,6 +33,7 @@ PKGCONFIG_OVERRIDE+=	src/rdkafka.pc
 PYTHON_FOR_BUILD_ONLY=	yes
 
 .include "../../archivers/lz4/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../security/openssl/buildlink3.mk"
