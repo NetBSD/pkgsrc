@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/01/08 11:19:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/02/01 20:21:25 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -101,6 +101,9 @@ ${PYSITELIB}/stripe/api_resources/coupon.pyo
 ${PYSITELIB}/stripe/api_resources/credit_note.py
 ${PYSITELIB}/stripe/api_resources/credit_note.pyc
 ${PYSITELIB}/stripe/api_resources/credit_note.pyo
+${PYSITELIB}/stripe/api_resources/credit_note_line_item.py
+${PYSITELIB}/stripe/api_resources/credit_note_line_item.pyc
+${PYSITELIB}/stripe/api_resources/credit_note_line_item.pyo
 ${PYSITELIB}/stripe/api_resources/customer.py
 ${PYSITELIB}/stripe/api_resources/customer.pyc
 ${PYSITELIB}/stripe/api_resources/customer.pyo
