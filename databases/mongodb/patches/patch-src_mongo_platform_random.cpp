@@ -1,15 +1,15 @@
-$NetBSD: patch-src_mongo_platform_random.cpp,v 1.4 2019/03/05 19:35:58 adam Exp $
+$NetBSD: patch-src_mongo_platform_random.cpp,v 1.5 2020/02/01 20:00:08 adam Exp $
 
-Add NetBSD support.
+Add NetBSD and DragonFly support.
 
---- src/mongo/platform/random.cpp.orig	2019-01-30 14:26:33.000000000 +0000
+--- src/mongo/platform/random.cpp.orig	2019-12-04 23:29:59.000000000 +0000
 +++ src/mongo/platform/random.cpp
-@@ -150,7 +150,7 @@ std::unique_ptr<SecureRandom> SecureRand
-     return stdx::make_unique<WinSecureRandom>();
+@@ -148,7 +148,7 @@ std::unique_ptr<SecureRandom> SecureRand
  }
  
--#elif defined(__linux__) || defined(__sun) || defined(__APPLE__) || defined(__FreeBSD__)
-+#elif defined(__linux__) || defined(__sun) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
+ #elif defined(__linux__) || defined(__sun) || defined(__APPLE__) || defined(__FreeBSD__) || \
+-    defined(__EMSCRIPTEN__)
++    defined(__EMSCRIPTEN__) || defined(__DragonFly__) || defined(__NetBSD__)
  
  class InputStreamSecureRandom : public SecureRandom {
  public:
