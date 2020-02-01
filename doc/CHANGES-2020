@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.880 2020/02/01 12:27:52 adam Exp $
+$NetBSD: CHANGES-2020,v 1.881 2020/02/01 19:56:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1158,3 +1158,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated parallel/slurm-wlm to 19.05.5 [bacon 2020-02-01]
 	Updated devel/py-ipython to 7.12.0 [adam 2020-02-01]
 	Updated databases/py-redis to 3.4.0 [adam 2020-02-01]
+	Updated devel/py-cheetah to 2.4.4nb2 [adam 2020-02-01]
+	Added devel/py-cheetah3 version 3.2.4 [adam 2020-02-01]
