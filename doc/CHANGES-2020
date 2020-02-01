@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.884 2020/02/01 20:45:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.885 2020/02/01 20:56:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1170,3 +1170,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-daphne to 2.4.1 [adam 2020-02-01]
 	Updated www/py-channels to 2.4.0 [adam 2020-02-01]
 	Updated devel/py-dulwich to 0.19.15 [adam 2020-02-01]
+	Updated devel/librdkafka to 1.3.0 [adam 2020-02-01]
+	Updated games/scummvm to 2.1.1 [adam 2020-02-01]
