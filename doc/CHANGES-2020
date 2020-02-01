@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.883 2020/02/01 20:31:53 adam Exp $
+$NetBSD: CHANGES-2020,v 1.884 2020/02/01 20:45:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1166,3 +1166,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-wheel to 0.34.2 [adam 2020-02-01]
 	Updated finance/py-stripe to 2.42.0 [adam 2020-02-01]
 	Updated textproc/py-jinja2 to 2.11.1 [adam 2020-02-01]
+	Updated databases/py-asyncpg to 0.20.1 [adam 2020-02-01]
+	Updated www/py-daphne to 2.4.1 [adam 2020-02-01]
+	Updated www/py-channels to 2.4.0 [adam 2020-02-01]
+	Updated devel/py-dulwich to 0.19.15 [adam 2020-02-01]
