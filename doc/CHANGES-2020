@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.882 2020/02/01 20:06:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.883 2020/02/01 20:31:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1162,3 +1162,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-cheetah3 version 3.2.4 [adam 2020-02-01]
 	Updated databases/mongodb to 4.2.3 [adam 2020-02-01]
 	Updated databases/mongodb3 to 3.4.24 [adam 2020-02-01]
+	Updated net/py-zeroconf to 0.24.4 [adam 2020-02-01]
+	Updated devel/py-wheel to 0.34.2 [adam 2020-02-01]
+	Updated finance/py-stripe to 2.42.0 [adam 2020-02-01]
+	Updated textproc/py-jinja2 to 2.11.1 [adam 2020-02-01]
