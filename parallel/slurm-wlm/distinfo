@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.1 2018/04/22 21:31:09 bacon Exp $
+$NetBSD: distinfo,v 1.2 2020/02/01 00:15:01 bacon Exp $
 
-SHA1 (slurm-17.11.5.tar.bz2) = fe29758ca8d81492e18d59b84968cedf17a6161b
-RMD160 (slurm-17.11.5.tar.bz2) = 8d393e7ddf545ac1e8c81e8ddd9160a5e76d9311
-SHA512 (slurm-17.11.5.tar.bz2) = cb82e192bf0ab57fbc810fc3c9b32e90d4c28926b4a959514e3df51b63556b13d01057938d73da5bc0bea157bbd7712b1aad0712a913ad912bd7e6089fc0bd21
-Size (slurm-17.11.5.tar.bz2) = 6248551 bytes
+SHA1 (slurm-19.05.5.tar.bz2) = 055adca91e555cc124b1ecac5f3c45e66c17a8ba
+RMD160 (slurm-19.05.5.tar.bz2) = 3f94274277a714e7b4bc4f89aa7b246316c4a732
+SHA512 (slurm-19.05.5.tar.bz2) = 4a0055a268b3765dbb2fa7510b27d694516e77716d857acea4509702e88b4739c9fff7590b80e33b7a62a5ebd38a748fd4ddf625f7c431b2beccb002d05df6c1
+Size (slurm-19.05.5.tar.bz2) = 6232295 bytes
 SHA1 (patch-etc_init.d.slurm.in) = beaedd5385b4aad04583d2bc5a23557519f74ec5
-SHA1 (patch-src_plugins_task_cgroup_task__cgroup__memory.c) = 1accc4ebb9456699db477557ddc783e136fdff00
-SHA1 (patch-src_slurmd_common_task__plugin.c) = 0d6680b10b45648703fe7a57411e605992fd9040
+SHA1 (patch-src_plugins_task_affinity_affinity.h) = a8fbc6182f1d7160addadadfcb174afa30c8ba80
+SHA1 (patch-src_slurmd_common_task__plugin.c) = 6049977521da86db4a437f1e76e26b3731eeef55
 SHA1 (patch-src_slurmd_common_task__plugin.h) = d4ad9f350efe1e873809adfe9dc4f559634e9ba2
-SHA1 (patch-src_slurmd_slurmd_slurmd.c) = 67cac6d8b4545c9053b655a4da77db63f5de7e63
+SHA1 (patch-src_slurmd_slurmd_slurmd.c) = 93f2da51d2a766a5817cc51e7de40e4ab2306649
 SHA1 (patch-src_slurmd_slurmd_slurmd.h) = a610b0bbe5b6b04be70eb2f8eac2a231139e6d1a
 SHA1 (patch-src_slurmd_slurmstepd_io.c) = b56782887621edb539be70d53dff8029a89e90ed
-SHA1 (patch-src_slurmd_slurmstepd_task.c) = 7948c76ce65b0e5211486d2e7b1901664c1f7016
+SHA1 (patch-src_slurmd_slurmstepd_task.c) = 756dd8eb7201d003a6a7f01aa84b699f9a3ce11b
