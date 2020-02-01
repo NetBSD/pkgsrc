@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2011/04/08 12:54:20 adam Exp $
-bin/cheetah
-bin/cheetah-analyze
-bin/cheetah-compile
+@comment $NetBSD: PLIST,v 1.6 2020/02/01 19:56:21 adam Exp $
+bin/cheetah-${PYVERSSUFFIX}
+bin/cheetah-analyze-${PYVERSSUFFIX}
+bin/cheetah-compile-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
