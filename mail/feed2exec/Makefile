@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/31 20:44:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2020/02/01 03:07:49 schmonz Exp $
 
 DISTNAME=		feed2exec-0.14.0
 PKGNAME=		${DISTNAME:S/14/15/}
@@ -16,6 +16,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 BUILD_DEPENDS+=		${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 BUILD_DEPENDS+=		${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+BUILD_DEPENDS+=		${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=		${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=		${PYPKGPREFIX}-dateparser-[0-9]*:../../time/py-dateparser
