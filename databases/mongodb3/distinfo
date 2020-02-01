@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.4 2019/09/17 08:20:27 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/02/01 20:05:54 adam Exp $
 
-SHA1 (mongodb-src-r3.4.23.tar.gz) = a73c8706f45865fc79c57911dac414a7f379e592
-RMD160 (mongodb-src-r3.4.23.tar.gz) = 7348ef75a0b120967166747edceaf2da725752f6
-SHA512 (mongodb-src-r3.4.23.tar.gz) = 01931d3701a9ed3109132cf3106a6f959f3a393e71284537959095f853cdad5c8b17eebddd4dc1d6a8cb4f5af8393b0bda62034318aa78fd5f656589449f7eb4
-Size (mongodb-src-r3.4.23.tar.gz) = 40176687 bytes
+SHA1 (mongodb-src-r3.4.24.tar.gz) = 86909b211998f0cbc8104df774aecb3d00a01763
+RMD160 (mongodb-src-r3.4.24.tar.gz) = f7e4bfe1e2bd046f1a6c0f2695762076ffee5ae5
+SHA512 (mongodb-src-r3.4.24.tar.gz) = c19d5215f514ad0c1bd33f17f9d79198e07657260c0a8399c9a84bbf274ec4f6e61a94b36bb132e93a46e96ee8b4d994a1bed70b2d26f906ffe8e78343394226
+Size (mongodb-src-r3.4.24.tar.gz) = 40232175 bytes
 SHA1 (patch-SConstruct) = b6c2893d82d9b954c889d867ec909a05728af83d
 SHA1 (patch-src_mongo_base_initializer.h) = f82d58895251f7be08a09012ed7db64e3863a1fe
 SHA1 (patch-src_mongo_db_matcher_expression__leaf.cpp) = 52064034fabb5de63eccf87ddd140303c54f0312
+SHA1 (patch-src_mongo_db_query_collation_collator__interface__icu.h) = 43c94a970fb91d45441a206b5d774e9e7ea55ad5
 SHA1 (patch-src_mongo_db_repl_isself.c) = 82321c918b91ce1a68ce79c14589126aca6baf96
 SHA1 (patch-src_mongo_db_repl_master__slave.cpp) = 2f37f0819a2b2743df01f6b6ab0b3013b3b7d726
 SHA1 (patch-src_mongo_db_repl_oplog__fetcher.cpp) = e12dbfbd4e70ee210cdd4eb0582661666e8eb06a
@@ -20,9 +21,9 @@ SHA1 (patch-src_mongo_util_processinfo__netbsd.cpp) = 6c01ad839ff31e7500d76af662
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_dpml__exception.c) = ef3b260e8a49227cbbabf427500b7c70bce15083
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h) = 39f6fba82e2870ee4a5d99785033621225a72a16
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_src_bid__functions.h) = d3a85d3a3b33691466c65cdf51c56f221429aea9
+SHA1 (patch-src_third__party_asio-master_asio_include_asio_detail_impl_kqueue__reactor.ipp) = 49a74ef12f20c4b243d328a2cd8317aa1a668b18
 SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_build_js-confdefs.h) = c2ad1041b5c1ff9fac9085d2a8963781f51873a8
 SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_include_js-config.h) = 7ddbb4e3bf4126a1be2195acc82ff859e8130a01
 SHA1 (patch-src_third__party_s2_base_port.h) = 892ce91b5aaa432f34e1e7c169b7fd6eea2a3e94
 SHA1 (patch-src_third__party_wiredtiger_SConscript) = 71fd2326a4e95fec674326225bce5ccf5793aa5a
-SHA1 (patch-src_third__party_wiredtiger_build__dragonfly_wiredtiger__config.h) = 0b00da401f832d985107dfa5dcc6447db4beec6d
-SHA1 (patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h) = edd3c4e5784e52ad0078bcb7ef1e0902bc354285
+SHA1 (patch-src_third__party_wiredtiger_src_os__posix_os__fs.c) = aefd45bcbb854fd9877fcd0e96f1351d2ee6c3c2

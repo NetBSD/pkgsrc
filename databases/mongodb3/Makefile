@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 21:48:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2020/02/01 20:05:54 adam Exp $
 
 # This package is intentionally old to avoid:
 #   Server Side Public License
 #   c++17 (and c++14 if 3.4.4 does not already need it)
-DISTNAME=	mongodb-src-r3.4.23
+DISTNAME=	mongodb-src-r3.4.24
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -24,19 +23,19 @@ USE_LANGUAGES=	c c++
 GCC_REQD+=	5.3.0
 
 SCONS_ARGS=	${_MAKE_JOBS}
+SCONS_ARGS+=	--dbg=off # on: argument parsing problem
 SCONS_ARGS+=	--disable-warnings-as-errors
 SCONS_ARGS+=	--release
-SCONS_ARGS+=	--runtime-hardening=off # does not produce executables
+SCONS_ARGS+=	--runtime-hardening=off # on: does not produce executables
 SCONS_ARGS+=	--use-system-boost
-#SCONS_ARGS+=	--use-system-icu
+SCONS_ARGS+=	--use-system-icu
 SCONS_ARGS+=	--use-system-pcre
 SCONS_ARGS+=	--use-system-snappy
 SCONS_ARGS+=	--use-system-tcmalloc
 SCONS_ARGS+=	--use-system-yaml
 SCONS_ARGS+=	--use-system-zlib
-SCONS_ARGS+=	--js-engine=mozjs
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet supported as of 3.4.21
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet supported as of 3.4.23
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -145,13 +144,12 @@ post-install:
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/py-boost/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/scons/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
-#.include "../../textproc/icu/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
