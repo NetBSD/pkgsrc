@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/01/30 23:31:58 khorben Exp $
+$NetBSD: distinfo,v 1.6 2020/02/01 04:55:09 mef Exp $
 
-SHA1 (Todo-0.2.1.tar.gz) = 6473931f1e93d0c3e3aec59379950b3f8f36353b
-RMD160 (Todo-0.2.1.tar.gz) = 575ca2a436f0f1e00dd78d52c854854ce111bfb5
-SHA512 (Todo-0.2.1.tar.gz) = 2e3af228360c051dc40056e31c86d944d390aa65a36f5aa1290ce55e15236f555c3ecd1ecdc008f7ee00928c83ebf7ab5ce4a58e11d07fa98734eb44a0269ce4
-Size (Todo-0.2.1.tar.gz) = 29369 bytes
+SHA1 (Todo-0.3.0.tar.gz) = b3f11cd16642c339a4138f7609aa353706c169d3
+RMD160 (Todo-0.3.0.tar.gz) = 1615bb81499718a1b90759a81b98c6622c364096
+SHA512 (Todo-0.3.0.tar.gz) = 8b519cd2d322e75bfe7b7dfed3b28e6c725b2efed5c31b6a5e6b0de32f33f46778a093e44e3b8053234f76fa4b71b5c31d95fdd79888825bfbd809c44716f508
+Size (Todo-0.3.0.tar.gz) = 31736 bytes
