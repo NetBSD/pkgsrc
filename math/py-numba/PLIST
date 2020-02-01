@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/01/14 16:25:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/02/01 21:03:58 adam Exp $
 bin/numba-${PYVERSSUFFIX}
 bin/pycc-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -1129,9 +1129,6 @@ ${PYSITELIB}/numba/testing/__init__.pyo
 ${PYSITELIB}/numba/testing/__main__.py
 ${PYSITELIB}/numba/testing/__main__.pyc
 ${PYSITELIB}/numba/testing/__main__.pyo
-${PYSITELIB}/numba/testing/ddt.py
-${PYSITELIB}/numba/testing/ddt.pyc
-${PYSITELIB}/numba/testing/ddt.pyo
 ${PYSITELIB}/numba/testing/loader.py
 ${PYSITELIB}/numba/testing/loader.pyc
 ${PYSITELIB}/numba/testing/loader.pyo
@@ -1303,6 +1300,9 @@ ${PYSITELIB}/numba/tests/test_buffer_protocol.pyo
 ${PYSITELIB}/numba/tests/test_builtins.py
 ${PYSITELIB}/numba/tests/test_builtins.pyc
 ${PYSITELIB}/numba/tests/test_builtins.pyo
+${PYSITELIB}/numba/tests/test_byteflow.py
+${PYSITELIB}/numba/tests/test_byteflow.pyc
+${PYSITELIB}/numba/tests/test_byteflow.pyo
 ${PYSITELIB}/numba/tests/test_caching.py
 ${PYSITELIB}/numba/tests/test_caching.pyc
 ${PYSITELIB}/numba/tests/test_caching.pyo
@@ -1735,9 +1735,6 @@ ${PYSITELIB}/numba/tests/test_unsafe_intrinsics.pyo
 ${PYSITELIB}/numba/tests/test_usecases.py
 ${PYSITELIB}/numba/tests/test_usecases.pyc
 ${PYSITELIB}/numba/tests/test_usecases.pyo
-${PYSITELIB}/numba/tests/test_utils.py
-${PYSITELIB}/numba/tests/test_utils.pyc
-${PYSITELIB}/numba/tests/test_utils.pyo
 ${PYSITELIB}/numba/tests/test_vectorization_type_inference.py
 ${PYSITELIB}/numba/tests/test_vectorization_type_inference.pyc
 ${PYSITELIB}/numba/tests/test_vectorization_type_inference.pyo
