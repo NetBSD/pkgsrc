@@ -1,28 +1,18 @@
-# $NetBSD: Makefile,v 1.25 2019/09/02 13:19:38 adam Exp $
+# $NetBSD: Makefile,v 1.26 2020/02/01 19:56:21 adam Exp $
 
 DISTNAME=	Cheetah-2.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
-CATEGORIES=	devel
+PKGREVISION=	2
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cheetah/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cheetahtemplate.org/
+HOMEPAGE=	https://www.cheetahtemplate.org/
 COMMENT=	Python-powered template engine and code-generator
 
 CONFLICTS=	Cheetah-[0-9]*
 DEPENDS+=	${PYPKGPREFIX}-markdown>=2.0.1:../../textproc/py-markdown
 
-USE_LANGUAGES=		c
-
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.4.4
-
-REPLACE_PYTHON+=	SetupTools.py
-REPLACE_PYTHON+=	bin/cheetah
-REPLACE_PYTHON+=	bin/cheetah-analyze
-REPLACE_PYTHON+=	bin/cheetah-compile
-REPLACE_PYTHON+=	cheetah/CheetahWrapper.py
-REPLACE_PYTHON+=	cheetah/Compiler.py
 REPLACE_PYTHON+=	cheetah/DirectiveAnalyzer.py
 REPLACE_PYTHON+=	cheetah/ImportHooks.py
 REPLACE_PYTHON+=	cheetah/NameMapper.py
@@ -42,7 +32,14 @@ REPLACE_PYTHON+=	cheetah/Tests/Template.py
 REPLACE_PYTHON+=	cheetah/Tests/Test.py
 REPLACE_PYTHON+=	cheetah/Tests/Unicode.py
 REPLACE_PYTHON+=	cheetah/Utils/Misc.py
-REPLACE_PYTHON+=	setup.py
+
+PYTHON_VERSIONS_ACCEPTED=	27 # for 3.x, use py-cheetah3
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} cheetah cheetah-${PYVERSSUFFIX} && \
+	${MV} cheetah-analyze cheetah-analyze-${PYVERSSUFFIX} && \
+	${MV} cheetah-compile cheetah-compile-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
