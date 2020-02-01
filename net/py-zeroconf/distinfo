@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/12/29 04:39:49 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2020/02/01 20:18:18 adam Exp $
 
-SHA1 (zeroconf-0.24.3.tar.gz) = 410447b03d15fa45c27f2f983b2e1c1ba98095c8
-RMD160 (zeroconf-0.24.3.tar.gz) = 723b17570ca4fd2e32151268de89156fe8b2d6f4
-SHA512 (zeroconf-0.24.3.tar.gz) = 75168de9325436a730ab2c9a426c0a0c73d8c380f53770154a2f2a235d90d6228f4a8c33de43701f9f8fb26ffa24d00ed35e9807e5afec01d936a22e08f60d2a
-Size (zeroconf-0.24.3.tar.gz) = 51582 bytes
+SHA1 (zeroconf-0.24.4.tar.gz) = 88d9266355c6f6c40445f5c47bbcd92263720003
+RMD160 (zeroconf-0.24.4.tar.gz) = c75f729206a0100f239eda8cde6e5a84c36a4fab
+SHA512 (zeroconf-0.24.4.tar.gz) = 71678521b05016a7404005a06c8109f861cc8bfe2b3375ac6f1da8f63771271a3d9a095a8db6ccea2e062c5cc28b750a50fbe69218de72646b13a5f03359ea17
+Size (zeroconf-0.24.4.tar.gz) = 51866 bytes
