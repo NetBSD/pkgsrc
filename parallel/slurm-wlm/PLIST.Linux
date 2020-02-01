@@ -1,2 +1,6 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2018/04/22 21:31:09 bacon Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2020/02/01 00:15:01 bacon Exp $
+lib/slurm/jobacct_gather_cgroup.la
+lib/slurm/proctrack_cgroup.la
+lib/slurm/switch_cray_aries.la
 lib/slurm/task_affinity.la
+lib/slurm/task_cgroup.la
