@@ -1,122 +1,132 @@
-$NetBSD: patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h,v 1.2 2019/03/05 19:35:58 adam Exp $
+$NetBSD: patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h,v 1.3 2020/02/01 20:00:08 adam Exp $
 
 Support NetBSD.
 
---- src/third_party/IntelRDFPMathLib20U1/LIBRARY/float128/op_system.h.orig	2017-04-20 21:43:42.000000000 +0000
+--- src/third_party/IntelRDFPMathLib20U1/LIBRARY/float128/op_system.h.orig	2019-12-04 23:29:59.000000000 +0000
 +++ src/third_party/IntelRDFPMathLib20U1/LIBRARY/float128/op_system.h
-@@ -44,6 +44,7 @@
- #       undef  win64 
+@@ -45,6 +45,7 @@
  #       undef  darwin 
- #       undef  interix 
-+#       undef  netbsd
+ #       undef  interix
+ #       undef  emscripten
++#	undef  netbsd
  
  #	define dos 1
  #	define OP_SYSTEM dos
-@@ -62,6 +63,7 @@
- #       undef   win64
+@@ -64,6 +65,7 @@
  #       undef  darwin 
  #       undef  interix 
-+#       undef  netbsd
+ #       undef  emscripten
++#	undef  netbsd
  
  #	define vms 2
  #	define OP_SYSTEM vms
-@@ -80,6 +82,7 @@
- #       undef  win64
+@@ -83,6 +85,7 @@
  #       undef  darwin 
  #       undef  interix 
-+#       undef  netbsd
+ #       undef  emscripten
++#	undef  netbsd
  
  #	define wnt 3
  #	define OP_SYSTEM wnt
-@@ -98,6 +101,7 @@
- #       undef  win64
+@@ -102,6 +105,7 @@
  #       undef  darwin 
  #       undef  interix 
-+#       undef  netbsd
+ #       undef  emscripten
++#	undef  netbsd
  
  #	define linux 8
  #	define OP_SYSTEM linux
-@@ -117,6 +121,7 @@
- #       undef  win64
+@@ -122,6 +126,7 @@
  #       undef  darwin 
  #       undef  interix 
-+#       undef  netbsd
+ #       undef  emscripten
++#	undef  netbsd
  
  #	define osf 4
  #	define OP_SYSTEM osf
-@@ -135,6 +140,7 @@
- #       undef  win64
+@@ -141,6 +146,7 @@
  #       undef  darwin 
  #       undef  interix 
-+#       undef  netbsd
+ #       undef  emscripten
++#	undef  netbsd
  
  #	define hp_ux 5
  #	define OP_SYSTEM hp_ux
-@@ -153,6 +159,7 @@
- #       undef  win64
+@@ -160,6 +166,7 @@
  #       undef  darwin 
  #       undef  interix 
-+#       undef  netbsd
+ #       undef  emscripten
++#	undef  netbsd
  
  #	define unicos 6
  #	define OP_SYSTEM unicos
-@@ -171,6 +178,7 @@
- #       undef  win64
+@@ -179,6 +186,7 @@
  #       undef  darwin 
  #       undef  interix 
-+#       undef  netbsd
+ #       undef  emscripten
++#	undef  netbsd
  
  #	define ultrix 7
  #	define OP_SYSTEM ultrix
-@@ -188,6 +196,7 @@
- #       undef  win64
+@@ -197,6 +205,7 @@
  #       undef  darwin 
  #       undef  interix 
-+#       undef  netbsd
+ #       undef  emscripten
++#	undef  netbsd
  
  #       define win64 9
  #       define OP_SYSTEM win64
-@@ -205,6 +214,7 @@
- #       undef  win64
+@@ -215,6 +224,7 @@
  #       undef  darwin 
  #       undef  interix 
-+#       undef  netbsd
+ #       undef  emscripten
++#	undef  netbsd
  
  #       define darwin 10
  #       define OP_SYSTEM darwin
-@@ -221,9 +231,27 @@
- #       undef  win64
+@@ -232,6 +242,7 @@
  #       undef  darwin 
  #       undef  interix 
-+#       undef  netbsd
+ #       undef  emscripten
++#	undef  netbsd
  
  #       define interix 11
  #       define OP_SYSTEM interix
-+
+@@ -250,10 +261,29 @@
+ #       undef  darwin 
+ #       undef  interix 
+ #       undef  emscripten
++#	undef  netbsd
+ 
+ #	define emscripten 12
+ #	define OP_SYSTEM emscripten
+ 
 +#elif defined(__NetBSD__)
-+#       undef  dos
-+#       undef  vms
-+#       undef  wnt
-+#       undef  osf
-+#       undef  hp_ux
-+#       undef  linux
-+#       undef  unicos
-+#       undef  ultrix
-+#       undef  win64
-+#       undef  darwin 
-+#       undef  interix 
-+#       undef  netbsd
++#	undef  dos
++#	undef  vms
++#	undef  wnt
++#	undef  osf
++#	undef  hp_ux
++#	undef  linux
++#	undef  unicos
++#	undef  ultrix
++#	undef  win64
++#	undef  darwin 
++#	undef  interix 
++#	undef  emscripten
++#	undef  netbsd
 +
-+#       define netbsd 12
-+#       define OP_SYSTEM netbsd
++#	define netbsd 12
++#	define OP_SYSTEM netbsd
++
  #else
  
  #	error Operating system must be specified.
-@@ -235,6 +263,7 @@
- 	OP_SYSTEM == linux || \
+@@ -266,6 +296,7 @@
  	OP_SYSTEM == osf || \
  	OP_SYSTEM == ultrix || \
+ 	OP_SYSTEM == unicos || \
 +	OP_SYSTEM == netbsd || \
- 	OP_SYSTEM == unicos \
+ 	OP_SYSTEM == emscripten \
  )
  

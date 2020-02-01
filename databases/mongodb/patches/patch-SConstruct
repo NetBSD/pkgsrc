@@ -1,4 +1,4 @@
-$NetBSD: patch-SConstruct,v 1.8 2019/03/05 19:35:58 adam Exp $
+$NetBSD: patch-SConstruct,v 1.9 2020/02/01 20:00:08 adam Exp $
 
 Add support for NetBSD and Dragonfly.
 Fix locations.
@@ -6,17 +6,17 @@ Don't compile with debug info.
 Don't mess with the linker.
 Respect LDFLAGS and CXXFLAGS.
 
---- SConstruct.orig	2019-01-30 14:26:33.000000000 +0000
+--- SConstruct.orig	2019-12-04 23:29:59.000000000 +0000
 +++ SConstruct
-@@ -974,6 +974,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+@@ -1015,6 +1015,7 @@ envDict = dict(BUILD_ROOT=buildDir,
                 INSTALL_DIR=installDir,
                 CONFIG_HEADER_DEFINES={},
                 LIBDEPS_TAG_EXPANSIONS=[],
-+               ENV = os.environ,
++               ENV=os.environ,
                 )
  
  env = Environment(variables=env_vars, **envDict)
-@@ -1110,7 +1111,9 @@ def CheckForProcessor(context, which_arc
+@@ -1169,7 +1170,9 @@ def CheckForProcessor(context, which_arc
  os_macros = {
      "windows": "defined(_WIN32)",
      "solaris": "defined(__sun)",
@@ -26,7 +26,7 @@ Respect LDFLAGS and CXXFLAGS.
      "openbsd": "defined(__OpenBSD__)",
      "iOS": "defined(__APPLE__) && TARGET_OS_IOS && !TARGET_OS_SIMULATOR",
      "iOS-sim": "defined(__APPLE__) && TARGET_OS_IOS && TARGET_OS_SIMULATOR",
-@@ -1514,7 +1517,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
+@@ -1557,7 +1560,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
      if not env.TargetOSIs('solaris', 'darwin', 'windows', 'openbsd'):
          env.Tool('thin_archive')
  
@@ -35,31 +35,32 @@ Respect LDFLAGS and CXXFLAGS.
      env['LINK_LIBGROUP_START'] = '-Wl,--start-group'
      env['LINK_LIBGROUP_END'] = '-Wl,--end-group'
      # NOTE: The leading and trailing spaces here are important. Do not remove them.
-@@ -1554,9 +1557,15 @@ elif env.TargetOSIs('freebsd'):
+@@ -1593,14 +1596,14 @@ if env.TargetOSIs('linux'):
+ elif env.TargetOSIs('solaris'):
+      env.Append( LIBS=["socket","resolv","lgrp"] )
+ 
+-elif env.TargetOSIs('freebsd'):
++elif env.TargetOSIs('freebsd', 'dragonfly'):
      env.Append( LIBS=[ "kvm" ] )
      env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
  
-+elif env.TargetOSIs('dragonfly'):
-+    env.Append( LIBS=["m", "kvm"] )
-+
  elif env.TargetOSIs('darwin'):
-      env.Append( LIBS=["resolv"] )
+     env.Append( LIBS=["resolv"] )
  
-+elif env.TargetOSIs('netbsd'):
-+    env.Append( LIBS=["m", "kvm"] )
-+
- elif env.TargetOSIs('openbsd'):
+-elif env.TargetOSIs('openbsd'):
++elif env.TargetOSIs('netbsd', 'openbsd'):
      env.Append( LIBS=[ "kvm" ] )
  
-@@ -1777,7 +1786,6 @@ if env.TargetOSIs('posix'):
+ elif env.TargetOSIs('windows'):
+@@ -1858,7 +1861,6 @@ if env.TargetOSIs('posix'):
      # -Winvalid-pch Warn if a precompiled header (see Precompiled Headers) is found in the search path but can't be used.
      env.Append( CCFLAGS=["-fno-omit-frame-pointer",
                           "-fno-strict-aliasing",
--                         "-ggdb",
+-                         "-ggdb" if not env.TargetOSIs('emscripten') else "-g",
                           "-pthread",
                           "-Wall",
                           "-Wsign-compare",
-@@ -2413,9 +2421,9 @@ def doConfigure(myenv):
+@@ -2500,9 +2502,9 @@ def doConfigure(myenv):
      if usingLibStdCxx:
          def CheckModernLibStdCxx(context):
              test_body = """
@@ -72,7 +73,7 @@ Respect LDFLAGS and CXXFLAGS.
              """
  
              context.Message('Checking for libstdc++ 5.3.0 or better... ')
-@@ -2649,7 +2657,7 @@ def doConfigure(myenv):
+@@ -2746,7 +2748,7 @@ def doConfigure(myenv):
          #
          myenv.Append( CCFLAGS=["/Zc:inline"])
  
@@ -81,7 +82,7 @@ Respect LDFLAGS and CXXFLAGS.
          # This tells clang/gcc to use the gold linker if it is available - we prefer the gold linker
          # because it is much faster. Don't use it if the user has already configured another linker
          # selection manually.
-@@ -3202,7 +3210,7 @@ def doConfigure(myenv):
+@@ -3332,7 +3334,7 @@ def doConfigure(myenv):
          myenv.ConfError("Couldn't find SASL header/libraries")
  
      # requires ports devel/libexecinfo to be installed
@@ -89,13 +90,4 @@ Respect LDFLAGS and CXXFLAGS.
 +    if env.TargetOSIs('dragonfly', 'freebsd', 'netbsd', 'openbsd'):
          if not conf.CheckLib("execinfo"):
              myenv.ConfError("Cannot find libexecinfo, please install devel/libexecinfo.")
- 
-@@ -3427,7 +3435,7 @@ def doConfigure(myenv):
- 
-         outputIndex = next((idx for idx in [0,1] if conf.CheckAltivecVbpermqOutput(idx)), None)
-         if outputIndex is not None:
--	    conf.env.SetConfigHeaderDefine("MONGO_CONFIG_ALTIVEC_VEC_VBPERMQ_OUTPUT_INDEX", outputIndex)
-+            conf.env.SetConfigHeaderDefine("MONGO_CONFIG_ALTIVEC_VEC_VBPERMQ_OUTPUT_INDEX", outputIndex)
-         else:
-             myenv.ConfError("Running on ppc64le, but can't find a correct vec_vbpermq output index.  Compiler or platform not supported")
  
