@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/11/25 09:59:25 markd Exp $
+$NetBSD: distinfo,v 1.6 2020/02/02 02:37:35 markd Exp $
 
-SHA1 (kompare-19.08.3.tar.xz) = 35b829ae3826efc2599553ec91ae1656d8ceefe9
-RMD160 (kompare-19.08.3.tar.xz) = 57df5c3c5a063e3ba522be21a0c60935a5907ed3
-SHA512 (kompare-19.08.3.tar.xz) = 9a4f78792f300bd20207c1743c07e4a4fa62d05549caf34388b02232395bfbb98eaf31099bdc9326a527d926550ef973426934aba1e1816b3ba78ce1ebb11f25
-Size (kompare-19.08.3.tar.xz) = 801168 bytes
+SHA1 (kompare-19.12.1.tar.xz) = ac5945624077f25da678f77bcd95ebef529b68de
+RMD160 (kompare-19.12.1.tar.xz) = db45ddb2491152a2b712db0cf28c16131561bf17
+SHA512 (kompare-19.12.1.tar.xz) = 61fe2c076cf73b0f0c7fb98defd93a6ae4f281741ae7984db9a907813771c73c0554c729e5ca14db4be19ec0f259a720fd2108502a2a3a2bd092693a7242dbe6
+Size (kompare-19.12.1.tar.xz) = 801892 bytes
