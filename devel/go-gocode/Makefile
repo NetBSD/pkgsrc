@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/01/10 13:32:24 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2020/02/02 14:19:00 bsiegert Exp $
 
 DISTNAME=	gocode-20170907
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	13
+PKGREVISION=	14
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nsf/}
 CATEGORIES=	devel
 GITHUB_PROJECT=	gocode

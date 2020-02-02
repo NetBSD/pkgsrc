@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/10 13:32:16 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2020/02/02 14:18:56 bsiegert Exp $
 
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 DISTNAME=		go-sqlite3-1.11.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mattn/}
 GITHUB_PROJECT=		go-sqlite3
