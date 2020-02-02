@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.149 2020/01/18 21:49:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.150 2020/02/02 03:11:08 markd Exp $
 
 DISTNAME=	digikam-6.4.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/6.4.0/}
 
@@ -37,6 +37,7 @@ CXXFLAGS.NetBSD+=	-D_KERNTYPES
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../misc/libkvkontakte/buildlink3.mk"
+.include "../../misc/marble/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
