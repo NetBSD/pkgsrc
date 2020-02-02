@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2020/01/29 11:49:29 markd Exp $
+# $NetBSD: Makefile,v 1.39 2020/02/02 11:17:54 markd Exp $
 
 DISTNAME=	kdelibs4support-${KF5VER}
 CATEGORIES=	devel
@@ -47,10 +47,10 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/colors/Web.colors \
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/src/solid-networkstatus/kded/CMakeFiles/kded_networkstatus_autogen.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/src/kssl/kcm/CMakeFiles/kcm_ssl_autogen.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/autotests/CMakeFiles/klibloadertestmodule5_autogen.dir/AutogenInfo.cmake
-SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
+SUBST_FILES.fix-moc=	_KDE_build/src/solid-networkstatus/kded/CMakeFiles/kded_networkstatus_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc+=	_KDE_build/src/kssl/kcm/CMakeFiles/kcm_ssl_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc+=	_KDE_build/autotests/CMakeFiles/klibloadertestmodule5_autogen.dir/AutogenInfo.json
+SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../misc/kemoticons/buildlink3.mk"
 .include "../../devel/kitemmodels/buildlink3.mk"
