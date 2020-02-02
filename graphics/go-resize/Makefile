@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/01/10 13:32:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2020/02/02 14:19:07 bsiegert Exp $
 
 DISTNAME=	resize-0.0.20180221
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nfnt/}
 CATEGORIES=	graphics
 GITHUB_PROJECT=	${PKGBASE:S/^go-//}
