@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/10 13:32:30 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2020/02/02 14:18:59 bsiegert Exp $
 
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 DISTNAME=		go-compress-1.9.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=klauspost/}
 GITHUB_PROJECT=		compress
