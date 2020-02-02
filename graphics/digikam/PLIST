@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2019/11/17 09:11:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.32 2020/02/02 03:11:08 markd Exp $
 bin/cleanup_digikamdb
 bin/digikam
 bin/digitaglinktree
@@ -201,6 +201,7 @@ qt5/plugins/digikam/generic/Generic_FileCopy_Plugin.so
 qt5/plugins/digikam/generic/Generic_FileTransfer_Plugin.so
 qt5/plugins/digikam/generic/Generic_Flickr_Plugin.so
 qt5/plugins/digikam/generic/Generic_GLViewer_Plugin.so
+qt5/plugins/digikam/generic/Generic_GeolocationEdit_Plugin.so
 qt5/plugins/digikam/generic/Generic_Google_Plugin.so
 qt5/plugins/digikam/generic/Generic_HtmlGallery_Plugin.so
 qt5/plugins/digikam/generic/Generic_ImageShack_Plugin.so
