@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/11/21 06:07:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/02/02 02:44:50 markd Exp $
 bin/khangman
 man/ca/man6/khangman.6
 man/de/man6/khangman.6
@@ -58,6 +58,8 @@ share/doc/HTML/es/khangman/settings-languages.png
 share/doc/HTML/es/khangman/settings-timers.png
 share/doc/HTML/et/khangman/index.cache.bz2
 share/doc/HTML/et/khangman/index.docbook
+share/doc/HTML/id/khangman/index.cache.bz2
+share/doc/HTML/id/khangman/index.docbook
 share/doc/HTML/it/khangman/index.cache.bz2
 share/doc/HTML/it/khangman/index.docbook
 share/doc/HTML/nl/khangman/index.cache.bz2
