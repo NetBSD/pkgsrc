@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/11/25 10:01:43 markd Exp $
+$NetBSD: distinfo,v 1.11 2020/02/02 02:37:35 markd Exp $
 
-SHA1 (cervisia-19.08.3.tar.xz) = fab10e905f37918fb2261fc12634aca79fc86091
-RMD160 (cervisia-19.08.3.tar.xz) = 4166612f290f3448a441707d12d1ca1fd7b4205d
-SHA512 (cervisia-19.08.3.tar.xz) = 82253694b67dfdc87f2887d5a2b1866929440439a66b0145b546207786e2509477a5b3766be378e760f3f6f2a224f8c084e8f4280f980e3738ddcdd571dfb0f3
-Size (cervisia-19.08.3.tar.xz) = 1894440 bytes
+SHA1 (cervisia-19.12.1.tar.xz) = 14a3487b0de8363a4649ce0dcd4625c2ea0a5abb
+RMD160 (cervisia-19.12.1.tar.xz) = 94788ff1e3c04abe2314ddbee29347b8669b4641
+SHA512 (cervisia-19.12.1.tar.xz) = c3225f97eefbac329a1111093ca4a6aa600c0559c29081b52ba87f8470c1c4762e059670f82278a63749eeedcb2e6cdd7f7d9d03b23f68dff1767818c0e23a67
+Size (cervisia-19.12.1.tar.xz) = 1896352 bytes
