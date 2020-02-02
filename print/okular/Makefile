@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2020/01/18 21:50:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.90 2020/02/02 03:02:05 markd Exp $
 
 DISTNAME=	okular-${KAPPSVER}
-PKGREVISION=	2
 CATEGORIES=	print
 
 HOMEPAGE=	https://kde.org/applications/graphics/okular/
@@ -18,9 +17,9 @@ USE_TOOLS+=	msgmerge pkg-config
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/generators/*/CMakeFiles/okularGenerator_*_autogen.dir/AutogenInfo.cmake
-SUBST_FILES.fix-moc+=	_KDE_build/CMakeFiles/okularpart_autogen.dir/AutogenInfo.cmake
-SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
+SUBST_FILES.fix-moc=	_KDE_build/generators/*/CMakeFiles/okularGenerator_*_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc+=	_KDE_build/CMakeFiles/okularpart_autogen.dir/AutogenInfo.json
+SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 .include "../../devel/chmlib/buildlink3.mk"
 .include "../../devel/kparts/buildlink3.mk"
