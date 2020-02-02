@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/17 03:35:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/02/02 02:50:42 markd Exp $
 bin/kruler
 share/applications/org.kde.kruler.desktop
 share/doc/HTML/ca/kruler/index.cache.bz2
@@ -13,6 +13,8 @@ share/doc/HTML/en/kruler/kruler-settings.png
 share/doc/HTML/en/kruler/kruler.png
 share/doc/HTML/es/kruler/index.cache.bz2
 share/doc/HTML/es/kruler/index.docbook
+share/doc/HTML/id/kruler/index.cache.bz2
+share/doc/HTML/id/kruler/index.docbook
 share/doc/HTML/it/kruler/index.cache.bz2
 share/doc/HTML/it/kruler/index.docbook
 share/doc/HTML/nl/kruler/index.cache.bz2
