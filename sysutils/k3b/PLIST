@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/12/02 09:38:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/02/02 03:05:22 markd Exp $
 bin/k3b
 include/k3b_export.h
 include/k3bactivepipe.h
@@ -205,7 +205,6 @@ share/doc/HTML/uk/k3b/K3bsetup.png
 share/doc/HTML/uk/k3b/index.cache.bz2
 share/doc/HTML/uk/k3b/index.docbook
 share/examples/k3b/org.kde.k3b.conf
-share/examples/kde-xdg/k3btheme.knsrc
 share/icons/hicolor/128x128/apps/k3b.png
 share/icons/hicolor/128x128/mimetypes/application-x-k3b.png
 share/icons/hicolor/16x16/apps/k3b.png
@@ -362,6 +361,7 @@ share/k3b/pics/quant/project_right.png
 share/k3b/pics/quant/splash.png
 share/k3b/pics/quant/welcome_bg.png
 share/knotifications5/k3b.notifyrc
+share/knsrcfiles/k3btheme.knsrc
 share/konqsidebartng/virtual_folders/services/videodvd.desktop
 share/kservices5/ServiceMenus/k3b_create_audio_cd.desktop
 share/kservices5/ServiceMenus/k3b_create_data_project.desktop
