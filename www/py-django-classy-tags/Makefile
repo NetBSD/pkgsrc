@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.15 2017/07/30 22:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/02/02 06:33:09 adam Exp $
 
-DISTNAME=	django-classy-tags-0.8.0
+DISTNAME=	django-classy-tags-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-classy-tags/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	https://github.com/ojii/django-classy-tags/
+HOMEPAGE=	https://github.com/ojii/django-classy-tags
 COMMENT=	Class based template tags for Django
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		# empty
+DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
