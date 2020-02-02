@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/09/07 13:56:24 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/02/02 06:47:17 adam Exp $
 
-SHA1 (django-sekizai-0.10.0.tar.gz) = d3d741d6208246d9fe30d4067acef31834ab6b67
-RMD160 (django-sekizai-0.10.0.tar.gz) = 1cff7a00ad3529a7ade33d6aa38405b0d761205a
-SHA512 (django-sekizai-0.10.0.tar.gz) = f7e336fce652094394aa3d3f94f53dae0eb80bb3cc7715013f1c8d227b9f36b97746f572a8c5bfe278e41d73783b7a978f86967ec23a7a423f1c014d658347c2
-Size (django-sekizai-0.10.0.tar.gz) = 18731 bytes
+SHA1 (django-sekizai-1.1.0.tar.gz) = c477754dd4967d2cade2b35cb3f503f2355aa32b
+RMD160 (django-sekizai-1.1.0.tar.gz) = ab52e910eeadc667c0d728b654f21afc167a4c16
+SHA512 (django-sekizai-1.1.0.tar.gz) = 37358b259e3db1d197affa7f672832fa574bc7b88d06f0e60f492225299da93762931e39c1406bee6d04a7b11cbf2af0b2c36c9c9e3d8129da515278a648521b
+Size (django-sekizai-1.1.0.tar.gz) = 7007 bytes
