@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2019/11/24 04:01:14 markd Exp $
+$NetBSD: distinfo,v 1.12 2020/02/02 02:37:36 markd Exp $
 
-SHA1 (umbrello-19.08.3.tar.xz) = d8a6d75f58b593862cf1575251470098f4eff2b6
-RMD160 (umbrello-19.08.3.tar.xz) = 7341fd7b5a3fbf3697c9888a400d0004ea3b0709
-SHA512 (umbrello-19.08.3.tar.xz) = 1db25788a60e2a639c649a4d01809751b85a122426bdaedbebf6e6cce539b2b0f37893a8a61675df81517d7fe3e57a59377e49fd11e7ceebea5980372e284c9a
-Size (umbrello-19.08.3.tar.xz) = 3703784 bytes
+SHA1 (umbrello-19.12.1.tar.xz) = a9d8abaeea5e587320d8bbb20b27864c81d8fb49
+RMD160 (umbrello-19.12.1.tar.xz) = bcab9635fcc03a296c4e3b4e4edde8b83cdf9c6d
+SHA512 (umbrello-19.12.1.tar.xz) = 230552328e4f9f2ee05c76e1995781a436ed7637d8a9c397080e6b51694524d7396a565d620ea79c8387c857a18d5817a8bd2b6ff0be3a7004d69710096e2c23
+Size (umbrello-19.12.1.tar.xz) = 3798332 bytes

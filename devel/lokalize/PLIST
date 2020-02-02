@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/11/24 04:04:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/02/02 02:37:36 markd Exp $
 bin/lokalize
 share/applications/org.kde.lokalize.desktop
 share/config.kcfg/lokalize.kcfg
@@ -20,6 +20,8 @@ share/doc/HTML/es/lokalize/index.cache.bz2
 share/doc/HTML/es/lokalize/index.docbook
 share/doc/HTML/et/lokalize/index.cache.bz2
 share/doc/HTML/et/lokalize/index.docbook
+share/doc/HTML/id/lokalize/index.cache.bz2
+share/doc/HTML/id/lokalize/index.docbook
 share/doc/HTML/it/lokalize/index.cache.bz2
 share/doc/HTML/it/lokalize/index.docbook
 share/doc/HTML/nl/lokalize/index.cache.bz2
