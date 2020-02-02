@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/18 10:15:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/02/02 02:44:51 markd Exp $
 bin/knetwalk
 share/applications/org.kde.knetwalk.desktop
 share/doc/HTML/cs/knetwalk/index.cache.bz2
@@ -14,6 +14,8 @@ share/doc/HTML/et/knetwalk/index.cache.bz2
 share/doc/HTML/et/knetwalk/index.docbook
 share/doc/HTML/fr/knetwalk/index.cache.bz2
 share/doc/HTML/fr/knetwalk/index.docbook
+share/doc/HTML/id/knetwalk/index.cache.bz2
+share/doc/HTML/id/knetwalk/index.docbook
 share/doc/HTML/it/knetwalk/index.cache.bz2
 share/doc/HTML/it/knetwalk/index.docbook
 share/doc/HTML/ja/knetwalk/index.cache.bz2
@@ -76,6 +78,7 @@ share/locale/he/LC_MESSAGES/knetwalk.mo
 share/locale/hi/LC_MESSAGES/knetwalk.mo
 share/locale/hr/LC_MESSAGES/knetwalk.mo
 share/locale/hu/LC_MESSAGES/knetwalk.mo
+share/locale/id/LC_MESSAGES/knetwalk.mo
 share/locale/is/LC_MESSAGES/knetwalk.mo
 share/locale/it/LC_MESSAGES/knetwalk.mo
 share/locale/ja/LC_MESSAGES/knetwalk.mo

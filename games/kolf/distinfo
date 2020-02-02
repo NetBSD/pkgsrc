@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/11/18 10:16:59 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/02/02 02:44:51 markd Exp $
 
-SHA1 (kolf-19.08.3.tar.xz) = 8e1397cde6dd3e3923efa931ae9d084b6f595e61
-RMD160 (kolf-19.08.3.tar.xz) = 572f684e455d41ad3cc93f4abc4700f794c80113
-SHA512 (kolf-19.08.3.tar.xz) = 0edc586c8232f0e02906f12331e2021aba2e7cf468a071394175350036b77cfd8d6cd54e2071860d25e796befec4f3a53b94fefb1fd66dcdf0a51d991f32c8bf
-Size (kolf-19.08.3.tar.xz) = 1029800 bytes
+SHA1 (kolf-19.12.1.tar.xz) = a8a52c60ff25dcf1933fe56914c159853217ae8f
+RMD160 (kolf-19.12.1.tar.xz) = 193270c5f3b1f1c1ea19eebbfb04e912fd4970b6
+SHA512 (kolf-19.12.1.tar.xz) = 66fa239b1fe49f881eb8dc54f48412ae0709393de45a551b1d46568ea1d721f07cf456583c603e8f7301e2195f2ae99a85afe1279028ce21c6458da9a6f61f62
+Size (kolf-19.12.1.tar.xz) = 1023372 bytes

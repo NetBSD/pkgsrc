@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/11/18 09:29:32 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/02/02 02:44:48 markd Exp $
 
-SHA1 (kapman-19.08.3.tar.xz) = 86278eb1d92c4623319f47e7e522b7d517ca3a6c
-RMD160 (kapman-19.08.3.tar.xz) = 7d2251935a28ea5c01443c7e6cfdbb7f0240a256
-SHA512 (kapman-19.08.3.tar.xz) = 8f9054e264017af87d37f11750d803225c498de5e7507bc17be1304e171128bd514e07019ebd8c43bc7604e963bd1596a39ac991ebde0441fa98d22629c1ffce
-Size (kapman-19.08.3.tar.xz) = 2525336 bytes
+SHA1 (kapman-19.12.1.tar.xz) = 5425d4a021c29feeba1bfbde030d77515fe3fa00
+RMD160 (kapman-19.12.1.tar.xz) = c6c4de5e39ba4438c70521c9ac2f0db8255ffd37
+SHA512 (kapman-19.12.1.tar.xz) = c7d57746f9990751ad3fa52aa20619deea20cc2324f458a45313cc1ad82f0ad229a860e11ab19a21d86e038b72d442deded2eb7427430d07177f9084165756e9
+Size (kapman-19.12.1.tar.xz) = 2527020 bytes
