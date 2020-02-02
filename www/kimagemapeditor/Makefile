@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 21:51:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2020/02/02 03:09:00 markd Exp $
 
 DISTNAME=	kimagemapeditor-${KAPPSVER}
 PKGREVISION=	1
@@ -8,6 +8,9 @@ HOMEPAGE=	https://www.kde.org/
 COMMENT=	HTML Image Map Editor
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.1
 
+# newer versions require qt5-qtwebengine
+KAPPSVER=	19.08.3
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/${KAPPSVER}/src/}
 .include "../../meta-pkgs/kde/applications.mk"
 
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
