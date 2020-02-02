@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2019/11/17 08:59:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/02/02 02:50:42 markd Exp $
 lib/libKF5kipiplugins.so
 lib/libKF5kipiplugins.so.5.9.1
 qt5/plugins/kipiplugin_dropbox.so
@@ -278,6 +278,7 @@ share/locale/el/LC_MESSAGES/kipiplugin_flickr.mo
 share/locale/el/LC_MESSAGES/kipiplugin_googleservices.mo
 share/locale/el/LC_MESSAGES/kipiplugin_imageshack.mo
 share/locale/el/LC_MESSAGES/kipiplugin_imgur.mo
+share/locale/el/LC_MESSAGES/kipiplugin_jalbum.mo
 share/locale/el/LC_MESSAGES/kipiplugin_kmlexport.mo
 share/locale/el/LC_MESSAGES/kipiplugin_mediawiki.mo
 share/locale/el/LC_MESSAGES/kipiplugin_piwigo.mo
@@ -337,11 +338,14 @@ share/locale/es/LC_MESSAGES/kipiplugin_smug.mo
 share/locale/es/LC_MESSAGES/kipiplugin_vkontakte.mo
 share/locale/es/LC_MESSAGES/kipiplugin_yandexfotki.mo
 share/locale/es/LC_MESSAGES/kipiplugins.mo
+share/locale/et/LC_MESSAGES/kipiplugin_dropbox.mo
 share/locale/et/LC_MESSAGES/kipiplugin_facebook.mo
 share/locale/et/LC_MESSAGES/kipiplugin_flashexport.mo
 share/locale/et/LC_MESSAGES/kipiplugin_flickr.mo
 share/locale/et/LC_MESSAGES/kipiplugin_googleservices.mo
 share/locale/et/LC_MESSAGES/kipiplugin_imageshack.mo
+share/locale/et/LC_MESSAGES/kipiplugin_imgur.mo
+share/locale/et/LC_MESSAGES/kipiplugin_jalbum.mo
 share/locale/et/LC_MESSAGES/kipiplugin_kmlexport.mo
 share/locale/et/LC_MESSAGES/kipiplugin_mediawiki.mo
 share/locale/et/LC_MESSAGES/kipiplugin_piwigo.mo
@@ -599,25 +603,6 @@ share/locale/lt/LC_MESSAGES/kipiplugin_yandexfotki.mo
 share/locale/lt/LC_MESSAGES/kipiplugins.mo
 share/locale/lv/LC_MESSAGES/kipiplugin_sendimages.mo
 share/locale/lv/LC_MESSAGES/kipiplugins.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_dropbox.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_facebook.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_flashexport.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_flickr.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_googleservices.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_imageshack.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_imgur.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_jalbum.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_kmlexport.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_mediawiki.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_piwigo.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_printimages.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_rajce.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_remotestorage.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_sendimages.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_smug.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_vkontakte.mo
-share/locale/ml/LC_MESSAGES/kipiplugin_yandexfotki.mo
-share/locale/ml/LC_MESSAGES/kipiplugins.mo
 share/locale/mr/LC_MESSAGES/kipiplugin_facebook.mo
 share/locale/mr/LC_MESSAGES/kipiplugin_flashexport.mo
 share/locale/mr/LC_MESSAGES/kipiplugin_flickr.mo
