@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/11/30 19:22:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/02/02 02:57:44 markd Exp $
 bin/kalzium
 include/libkdeedu/chemicaldataobject.h
 include/libkdeedu/element.h
@@ -386,17 +386,14 @@ share/kalzium/data/hazardsymbols/hazard_X.png
 share/kalzium/data/htmlview/abundance.png
 share/kalzium/data/htmlview/boilingpoint.png
 share/kalzium/data/htmlview/book.png
-share/kalzium/data/htmlview/characteristics.png
 share/kalzium/data/htmlview/discovery.png
 share/kalzium/data/htmlview/electronaffinity.png
-share/kalzium/data/htmlview/header.png
 share/kalzium/data/htmlview/icons.svg
 share/kalzium/data/htmlview/ionization.png
 share/kalzium/data/htmlview/mass.png
 share/kalzium/data/htmlview/meltingpoint.png
 share/kalzium/data/htmlview/radius.png
 share/kalzium/data/htmlview/structure.png
-share/kalzium/data/htmlview/style.css
 share/kalzium/data/iconsets/school/1.svg
 share/kalzium/data/iconsets/school/10.svg
 share/kalzium/data/iconsets/school/100.svg
