@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2020/01/18 23:32:51 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2020/02/02 02:53:53 markd Exp $
 
 DISTNAME=	kcalc-${KAPPSVER}
-PKGREVISION=	1
 CATEGORIES=	math
 
 HOMEPAGE=	https://kde.org/applications/utilities/kcalc/
