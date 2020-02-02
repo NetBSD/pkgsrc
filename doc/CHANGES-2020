@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.888 2020/02/02 06:47:38 adam Exp $
+$NetBSD: CHANGES-2020,v 1.889 2020/02/02 09:26:56 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1179,3 +1179,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-django-classy-tags to 1.0.0 [adam 2020-02-02]
 	Updated www/py-django-formtools to 2.2 [adam 2020-02-02]
 	Updated www/py-django-sekizai to 1.1.0 [adam 2020-02-02]
+	Updated lang/go112 to 1.12.16 [bsiegert 2020-02-02]
