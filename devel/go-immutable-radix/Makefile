@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2020/01/10 13:32:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2020/02/02 14:19:02 bsiegert Exp $
 
 DISTNAME=	go-immutable-radix-0.0.20170725
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	devel
 GITHUB_TAG=	8aac2701530899b64bdea735a1de8da899815220
 
