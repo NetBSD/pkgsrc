@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/11/18 10:20:59 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/02/02 02:44:51 markd Exp $
 
-SHA1 (konquest-19.08.3.tar.xz) = 3973050b7c83762ad28ebbfc0fc82c8edb243638
-RMD160 (konquest-19.08.3.tar.xz) = 55b93401781a392b84f40216b8fd2cdd0b82e20f
-SHA512 (konquest-19.08.3.tar.xz) = d3537ca9395425bcc342884db76fe4db4208b4201dceee67c2203a9dbf3ea45c11826e5bbdb86533292b8c2c1aed8877bfec1a26cc0790be144a7399280cf837
-Size (konquest-19.08.3.tar.xz) = 659172 bytes
+SHA1 (konquest-19.12.1.tar.xz) = dc8cc7b11d57d5c4d720c1592b7b3f187c984450
+RMD160 (konquest-19.12.1.tar.xz) = f2cbf3fb0d924c70a433473062589981fe5face4
+SHA512 (konquest-19.12.1.tar.xz) = 0df54754c210256ac8729cf937f7981bc83af3bfeff6cb6095c51a3e9fcbe4797467e2fe6c95a687a2ec75e52adb31140f4751c1903ca94793073fe0328e7367
+Size (konquest-19.12.1.tar.xz) = 658620 bytes
