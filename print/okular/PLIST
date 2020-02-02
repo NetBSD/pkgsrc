@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/12/02 07:18:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/02/02 03:02:05 markd Exp $
 bin/okular
 bin/okularkirigami
 include/okular/core/action.h
@@ -515,6 +515,7 @@ share/locale/et/LC_MESSAGES/okular_fax.mo
 share/locale/et/LC_MESSAGES/okular_fictionbook.mo
 share/locale/et/LC_MESSAGES/okular_ghostview.mo
 share/locale/et/LC_MESSAGES/okular_kimgio.mo
+share/locale/et/LC_MESSAGES/okular_markdown.mo
 share/locale/et/LC_MESSAGES/okular_mobi.mo
 share/locale/et/LC_MESSAGES/okular_ooo.mo
 share/locale/et/LC_MESSAGES/okular_plucker.mo
