@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/01/10 13:32:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2020/02/02 14:18:56 bsiegert Exp $
 
 DISTNAME=	ldap-3.0.3
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-ldap/}
 CATEGORIES=	databases
 GITHUB_PROJECT=	ldap
