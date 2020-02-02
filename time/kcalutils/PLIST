@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/17 06:22:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/02/02 03:07:03 markd Exp $
 include/KF5/KCalUtils/KCalUtils/DndFactory
 include/KF5/KCalUtils/KCalUtils/HtmlExport
 include/KF5/KCalUtils/KCalUtils/ICalDrag
@@ -24,7 +24,7 @@ lib/cmake/KF5CalendarUtils/KF5CalendarUtilsTargets.cmake
 lib/grantlee/5.1/kcalendar_grantlee_plugin.so
 lib/libKF5CalendarUtils.so
 lib/libKF5CalendarUtils.so.5
-lib/libKF5CalendarUtils.so.5.12.3
+lib/libKF5CalendarUtils.so.5.13.1
 qt5/mkspecs/modules/qt_KCalUtils.pri
 share/locale/ar/LC_MESSAGES/libkcalutils5.mo
 share/locale/bs/LC_MESSAGES/libkcalutils5.mo
