@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/03/06 14:18:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/02/02 06:33:09 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,9 +14,6 @@ ${PYSITELIB}/classytags/arguments.pyo
 ${PYSITELIB}/classytags/blocks.py
 ${PYSITELIB}/classytags/blocks.pyc
 ${PYSITELIB}/classytags/blocks.pyo
-${PYSITELIB}/classytags/compat.py
-${PYSITELIB}/classytags/compat.pyc
-${PYSITELIB}/classytags/compat.pyo
 ${PYSITELIB}/classytags/core.py
 ${PYSITELIB}/classytags/core.pyc
 ${PYSITELIB}/classytags/core.pyo
@@ -26,27 +23,9 @@ ${PYSITELIB}/classytags/exceptions.pyo
 ${PYSITELIB}/classytags/helpers.py
 ${PYSITELIB}/classytags/helpers.pyc
 ${PYSITELIB}/classytags/helpers.pyo
-${PYSITELIB}/classytags/models.py
-${PYSITELIB}/classytags/models.pyc
-${PYSITELIB}/classytags/models.pyo
 ${PYSITELIB}/classytags/parser.py
 ${PYSITELIB}/classytags/parser.pyc
 ${PYSITELIB}/classytags/parser.pyo
-${PYSITELIB}/classytags/test/__init__.py
-${PYSITELIB}/classytags/test/__init__.pyc
-${PYSITELIB}/classytags/test/__init__.pyo
-${PYSITELIB}/classytags/test/context_managers.py
-${PYSITELIB}/classytags/test/context_managers.pyc
-${PYSITELIB}/classytags/test/context_managers.pyo
-${PYSITELIB}/classytags/test/project/__init__.py
-${PYSITELIB}/classytags/test/project/__init__.pyc
-${PYSITELIB}/classytags/test/project/__init__.pyo
-${PYSITELIB}/classytags/test/project/models.py
-${PYSITELIB}/classytags/test/project/models.pyc
-${PYSITELIB}/classytags/test/project/models.pyo
-${PYSITELIB}/classytags/tests.py
-${PYSITELIB}/classytags/tests.pyc
-${PYSITELIB}/classytags/tests.pyo
 ${PYSITELIB}/classytags/utils.py
 ${PYSITELIB}/classytags/utils.pyc
 ${PYSITELIB}/classytags/utils.pyo
