@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2020/01/18 21:50:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2020/02/02 02:57:47 markd Exp $
 
 DISTNAME=	step-${KAPPSVER}
-PKGREVISION=	2
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/step/
@@ -10,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
