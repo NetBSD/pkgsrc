@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2020/01/10 13:32:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.23 2020/02/02 14:19:04 bsiegert Exp $
 
 DISTNAME=	go-ratelimit-0.0.20151125
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=juju/}
 GITHUB_PROJECT=	ratelimit

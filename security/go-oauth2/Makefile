@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2020/01/26 17:32:03 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/02/02 14:19:10 bsiegert Exp $
 #
 
 DISTNAME=		oauth2
 PKGNAME=		go-${DISTNAME}-20151204
-PKGREVISION=		22
+PKGREVISION=		23
 GITHUB_PROJECT=		${DISTNAME}
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
