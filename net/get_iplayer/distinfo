@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2020/01/04 11:57:19 nia Exp $
+$NetBSD: distinfo,v 1.16 2020/02/02 20:03:04 nia Exp $
 
-SHA1 (get_iplayer-3.24.tar.gz) = cba044cfd1446a8b0f08f020ec4ddeb18c49c4ba
-RMD160 (get_iplayer-3.24.tar.gz) = 693ba5359ee3e6cbd67352919f6acceed6c645f1
-SHA512 (get_iplayer-3.24.tar.gz) = 16acee440cb10c1845394cb9a03efcc57f59d499e9438a8c6cebafb95bdc22de99fca2537a99a69b2bb98e750c0450121c8f2ad22a6ed2a347d3fe4aa5b51e88
-Size (get_iplayer-3.24.tar.gz) = 146520 bytes
+SHA1 (get_iplayer-3.25.tar.gz) = 324332cdf3504c1edd92425727e63d14f62cd58d
+RMD160 (get_iplayer-3.25.tar.gz) = 1d5b149abd3209a67b2dd870d473609e91caf5d6
+SHA512 (get_iplayer-3.25.tar.gz) = a66b97aa6ba9e22769b2d634ce5a1feabc33304a54fc79eeca9aa2aa7a56ec82923023f2fb1a844e32fbcba23f47f9dfb9cfdf0a63f9fc8b037e4e3c5371e314
+Size (get_iplayer-3.25.tar.gz) = 146625 bytes
