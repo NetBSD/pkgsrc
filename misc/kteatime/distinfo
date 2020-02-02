@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/11/24 03:54:19 markd Exp $
+$NetBSD: distinfo,v 1.6 2020/02/02 02:57:46 markd Exp $
 
-SHA1 (kteatime-19.08.3.tar.xz) = 22c36e95027c64f370ed7f92d99549bf75f2b6a5
-RMD160 (kteatime-19.08.3.tar.xz) = b5bf02fcafdca36fe0d7d63df6cc61b04c76573d
-SHA512 (kteatime-19.08.3.tar.xz) = ad5349955fbff6fefd7fe97e5ff76ef848ecba2c217399ccc5c101b4cc27c7db6ef9d7c93ede6670dbe8482e4707d619f29d640e440cb20f02f70cc955a674b4
-Size (kteatime-19.08.3.tar.xz) = 286792 bytes
+SHA1 (kteatime-19.12.1.tar.xz) = cc0e7382337d243b23f43a58213a47057bbcb37f
+RMD160 (kteatime-19.12.1.tar.xz) = beedd026489b11fb3a40eeeeb0e376ef69c131e6
+SHA512 (kteatime-19.12.1.tar.xz) = dde03a9f99013f6a5fbf58eeee4600d994f5a442a6332b4327270926eb2650d74e4da6c8bfad9a29f37126da6528cf3a308040ed27251b7663154231859725a5
+Size (kteatime-19.12.1.tar.xz) = 286916 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/11/24 03:41:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/02/02 02:57:46 markd Exp $
 bin/marble
 bin/marble-qt
 include/astro/astr2lib.h
@@ -95,6 +95,7 @@ include/marble/MapWizard.h
 include/marble/MarbleAboutDialog.h
 include/marble/MarbleColors.h
 include/marble/MarbleDebug.h
+include/marble/MarbleDeclarativePlugin.h
 include/marble/MarbleDirs.h
 include/marble/MarbleGlobal.h
 include/marble/MarbleGraphicsGridLayout.h
@@ -162,6 +163,7 @@ include/marble/ViewportParams.h
 include/marble/WaitEditWidget.h
 include/marble/WidgetGraphicsItem.h
 include/marble/geodata_export.h
+include/marble/marble_declarative_export.h
 include/marble/marble_export.h
 lib/cmake/Astro/AstroConfig.cmake
 lib/cmake/Astro/AstroConfigVersion.cmake
@@ -1661,6 +1663,7 @@ share/marble/data/svg/application-x-marble.png
 share/marble/data/svg/application-x-marble.svg
 share/marble/data/svg/bookmark.svg
 share/marble/data/svg/coordinate.svg
+share/marble/data/svg/dot-circle-regular.svg
 share/marble/data/svg/glow.png
 share/marble/data/svg/lunarmap.svg
 share/marble/data/svg/marble-logo-32dpi.png
