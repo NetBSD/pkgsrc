@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/17 05:47:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/02/02 02:34:40 markd Exp $
 include/KF5/KLDAP/KLDAP/Ber
 include/KF5/KLDAP/KLDAP/LdapAttributeProxyModel
 include/KF5/KLDAP/KLDAP/LdapConfigWidget
@@ -37,7 +37,7 @@ lib/cmake/KF5Ldap/KF5LdapTargets-noconfig.cmake
 lib/cmake/KF5Ldap/KF5LdapTargets.cmake
 lib/libKF5Ldap.so
 lib/libKF5Ldap.so.5
-lib/libKF5Ldap.so.5.12.3
+lib/libKF5Ldap.so.5.13.1
 qt5/mkspecs/modules/qt_Ldap.pri
 qt5/plugins/kf5/kio/ldap.so
 share/doc/HTML/ca/kioslave5/ldap/index.cache.bz2
