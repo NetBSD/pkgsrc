@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/11/18 10:48:29 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/02/02 02:44:53 markd Exp $
 
-SHA1 (palapeli-19.08.3.tar.xz) = 2594154282e892ce7e4d57dfb5d9a29f8fec228d
-RMD160 (palapeli-19.08.3.tar.xz) = c0b59b6492814cb60d8bf4bd666a8b25d2aa13fd
-SHA512 (palapeli-19.08.3.tar.xz) = 1e263e10a3d6d1dfbc2a0951297cbcc381cd789d5c806ec4ad57db4feef9a9e6a525e61991d03d554a02154652cbfe485a135da72822d03d35579de171c91ee0
-Size (palapeli-19.08.3.tar.xz) = 2069352 bytes
+SHA1 (palapeli-19.12.1.tar.xz) = db21f9ce745c68238f1bc9531648a7a3eb87c562
+RMD160 (palapeli-19.12.1.tar.xz) = 7775e47cab1779259b3c545f1b8ac8220a319fc5
+SHA512 (palapeli-19.12.1.tar.xz) = 9c5c035c6e8c86f78289b4196cacdb84717bc282e01d5bf44a96e5c5c307a9f0fa1478c97ecd28aeed96db770681c1ba3f234bd17bdce676d76ae58928385d74
+Size (palapeli-19.12.1.tar.xz) = 2070948 bytes
