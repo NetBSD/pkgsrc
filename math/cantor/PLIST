@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/11/21 02:39:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/02/02 02:53:52 markd Exp $
 bin/cantor
 bin/cantor_python3server
 bin/cantor_scripteditor
@@ -14,8 +14,12 @@ include/cantor/epsresult.h
 include/cantor/expression.h
 include/cantor/extension.h
 include/cantor/helpresult.h
+include/cantor/htmlresult.h
 include/cantor/imageresult.h
+include/cantor/jupyterutils.h
 include/cantor/latexresult.h
+include/cantor/mimeresult.h
+include/cantor/renderer.h
 include/cantor/result.h
 include/cantor/session.h
 include/cantor/syntaxhelpobject.h
@@ -29,7 +33,7 @@ lib/libcantor_config.so
 lib/libcantor_pythonbackend.so
 lib/libcantorlibs.so
 lib/libcantorlibs.so.${PKGVERSION}
-lib/libcantorlibs.so.23
+lib/libcantorlibs.so.24
 qt5/plugins/cantor/assistants/cantor_advancedplotassistant.so
 qt5/plugins/cantor/assistants/cantor_creatematrixassistant.so
 qt5/plugins/cantor/assistants/cantor_differentiateassistant.so
@@ -45,7 +49,6 @@ qt5/plugins/cantor/assistants/cantor_runscriptassistant.so
 qt5/plugins/cantor/assistants/cantor_solveassistant.so
 qt5/plugins/cantor/backends/cantor_kalgebrabackend.so
 qt5/plugins/cantor/backends/cantor_maximabackend.so
-qt5/plugins/cantor/backends/cantor_nullbackend.so
 qt5/plugins/cantor/backends/cantor_octavebackend.so
 qt5/plugins/cantor/backends/cantor_python3backend.so
 qt5/plugins/cantor/backends/cantor_qalculatebackend.so
@@ -55,6 +58,7 @@ qt5/plugins/cantor/panels/cantor_helppanelplugin.so
 qt5/plugins/cantor/panels/cantor_variablemanagerplugin.so
 qt5/plugins/libcantorpart.so
 share/applications/org.kde.cantor.desktop
+share/cantor/latex/preview.sty
 share/cantor/maximabackend/cantor-initmaxima.lisp
 share/cantor/octavebackend/cantor_eigenvectors.m
 share/cantor/octavebackend/cantor_plot2d.m
