@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/11/18 09:11:49 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/02/02 02:44:52 markd Exp $
 
-SHA1 (libkdegames-19.08.3.tar.xz) = 16d95f2a1b70a47a966a5b7984d44567dc4eeaa8
-RMD160 (libkdegames-19.08.3.tar.xz) = 20a400ab2abaf8018bb9f66f36ff74088e49b988
-SHA512 (libkdegames-19.08.3.tar.xz) = 15dfc1818d829071acf7c3190a0efd3b81abe21dc570ad2670846fee874262068f3a493337fb472e6014182aa9f57d9d969d4957166513dd02f61c71e7e40c3b
-Size (libkdegames-19.08.3.tar.xz) = 6387676 bytes
+SHA1 (libkdegames-19.12.1.tar.xz) = 16c5abbf6826c36144a1e4e331535baa6a92bf25
+RMD160 (libkdegames-19.12.1.tar.xz) = ae31bef6e3a438debf323781f27923d75581a44d
+SHA512 (libkdegames-19.12.1.tar.xz) = e26ef9b1612ee5ba409d36f93c73debff39a8d13f99eeb417d7a5263f55ce9da172772320001f78d0dd0f65278480ad28d8b9b98a04879be64a08570b207342c
+Size (libkdegames-19.12.1.tar.xz) = 6374340 bytes
