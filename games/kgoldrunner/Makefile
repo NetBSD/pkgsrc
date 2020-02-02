@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2020/01/18 21:49:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2020/02/02 02:44:49 markd Exp $
 
 DISTNAME=	kgoldrunner-${KAPPSVER}
-PKGREVISION=	2
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kgoldrunner/
@@ -10,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 

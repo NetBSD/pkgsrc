@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/11/18 10:01:55 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/02/02 02:44:50 markd Exp $
 
-SHA1 (kiriki-19.08.3.tar.xz) = 4addf09c4a546d4b4d96c56ab8e94c222b170fc2
-RMD160 (kiriki-19.08.3.tar.xz) = 0a40fafc75d9c0c1e54053a79819de056972cef2
-SHA512 (kiriki-19.08.3.tar.xz) = 4d1d706a46648c01827887bd07b25cc2ec5d12baef70ed1983befcdc36d801a3dfbacfc21a62657b8e3d5d5d5a5410b51cc97c10d4921776776d77247ca40d7e
-Size (kiriki-19.08.3.tar.xz) = 373104 bytes
+SHA1 (kiriki-19.12.1.tar.xz) = 82b6ca58e05a5aa5d1d204cc246af81c3d8a249f
+RMD160 (kiriki-19.12.1.tar.xz) = 6a23ab198e2f115753f246ca36e4fe81713ecfe9
+SHA512 (kiriki-19.12.1.tar.xz) = 4bf2745be4a704a8eae62733add39606abf4e7502360511e5e307daf3c2c193e52beee3b8f6751f6b1f9f9cd83efa423a6b73c29cad0ca1ea4ee10e2f3337b1f
+Size (kiriki-19.12.1.tar.xz) = 373564 bytes

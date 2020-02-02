@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/11/18 10:35:57 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/02/02 02:44:52 markd Exp $
 
-SHA1 (kspaceduel-19.08.3.tar.xz) = eb4b685b7c91173e0ff5c03d28e78ed099cec836
-RMD160 (kspaceduel-19.08.3.tar.xz) = 2cd672a077cba1a2753ce7cb4e26703f0db707ea
-SHA512 (kspaceduel-19.08.3.tar.xz) = 3a3307beab90e87f0a143e57d81fe6e6ac620e79d2417a416b4ca6cbce4dc94be036a7a499359c908df075d1a480d1fe6a00ef15fd74bbe8b36e9fcd6d4d0196
-Size (kspaceduel-19.08.3.tar.xz) = 611304 bytes
+SHA1 (kspaceduel-19.12.1.tar.xz) = e448f657a5ce498a4c06d6b55f97fcf03c8ff1d7
+RMD160 (kspaceduel-19.12.1.tar.xz) = bb43e682061f2ad72fd298313c5be2bd6090d5dc
+SHA512 (kspaceduel-19.12.1.tar.xz) = bf0fa2409d176af7648e950fbadde70ccfbe08d52d73415d024dda7d41e77f87ed02f806c8c23bffe770719140fcb1af79b6e839a3ec5b9a8b3883a2b8520348
+Size (kspaceduel-19.12.1.tar.xz) = 611600 bytes
