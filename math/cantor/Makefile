@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2020/01/18 21:49:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.59 2020/02/02 02:53:52 markd Exp $
 
 DISTNAME=	cantor-${KAPPSVER}
-PKGREVISION=	3
 CATEGORIES=	math
 
 HOMEPAGE=	https://kde.org/applications/education/cantor/
@@ -10,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
 
@@ -53,14 +52,23 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_sage.knsrc \
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/cantor_scilab.knsrc \
 		${PKG_SYSCONFDIR}/xdg/cantor_scilab.knsrc
 
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/src/backends/*/CMakeFiles/cantor_*backend_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc+=	_KDE_build/src/panelplugins/variablemgr/CMakeFiles/cantor_variablemanagerplugin_autogen.dir/AutogenInfo.json
+SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
+
 .include "../../devel/kpty/buildlink3.mk"
 .include "../../devel/ktexteditor/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../math/analitza/buildlink3.mk"
 .include "../../math/qalculate/buildlink3.mk"
 .include "../../net/knewstuff/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
+.include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/discount/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
