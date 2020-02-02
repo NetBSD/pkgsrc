@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.891 2020/02/02 10:02:43 markd Exp $
+$NetBSD: CHANGES-2020,v 1.892 2020/02/02 20:03:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1300,3 +1300,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/kpimtextedit to 19.12.1 [markd 2020-02-02]
 	Updated time/kcalutils to 19.12.1 [markd 2020-02-02]
 	Updated time/ktimer to 19.12.1 [markd 2020-02-02]
+	Updated net/get_iplayer to 3.25 [nia 2020-02-02]
