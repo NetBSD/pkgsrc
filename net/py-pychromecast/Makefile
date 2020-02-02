@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/12/29 04:44:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/02/02 00:17:23 gutteridge Exp $
 
 DISTNAME=	PyChromecast-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-zeroconf>=0.17.7:../../net/py-zeroconf
 #DEPENDS+=	# TODO: casttube
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
