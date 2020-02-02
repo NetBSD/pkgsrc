@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/11/25 09:56:34 markd Exp $
+$NetBSD: distinfo,v 1.4 2020/02/02 02:37:35 markd Exp $
 
-SHA1 (libkomparediff2-19.08.3.tar.xz) = ebdd8b1ff687642348c93ba37fdb173e46f5d669
-RMD160 (libkomparediff2-19.08.3.tar.xz) = c4ecc47aa1ffb201c397b72e19f398fbfe5d2c6a
-SHA512 (libkomparediff2-19.08.3.tar.xz) = e9b8c06c36dec40475571692b18f3cb67a379c315d90d7c807945248940783c51aaa293776644b3a73ef4f0e2d38dfdd5a4d6dd16fbe7e9aeee3f7cc381cf1e9
-Size (libkomparediff2-19.08.3.tar.xz) = 173512 bytes
+SHA1 (libkomparediff2-19.12.1.tar.xz) = 444a01dd87fec9613f96bc615d8d2991b8abb7c6
+RMD160 (libkomparediff2-19.12.1.tar.xz) = 99a78b312c0b6d63f8d9ff303ed1c937dd1d4253
+SHA512 (libkomparediff2-19.12.1.tar.xz) = 1f8292bb89b0ebcd568e1874277aac0e4c2c4db46a111f4e7dbbb16e1a6ef1c04164fbabe403ebae04b386aaae4327806a88dae1bae9c9dfed700e7d0fbee1d6
+Size (libkomparediff2-19.12.1.tar.xz) = 173484 bytes
