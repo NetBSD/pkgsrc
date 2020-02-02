@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/11/17 03:55:09 markd Exp $
+$NetBSD: distinfo,v 1.11 2020/02/02 02:33:23 markd Exp $
 
-SHA1 (ark-19.08.3.tar.xz) = ee015b72585a757e643b18739b937bd6f188165a
-RMD160 (ark-19.08.3.tar.xz) = 263c5aae016addc356a5c0bf13a48ea1af4b6bd9
-SHA512 (ark-19.08.3.tar.xz) = 2bbbce37e5f892840517688eb4ce78770514eb5c780d34ae3c33c4b4e60cd153ebc190e4613411d5e01f01a78b6a74bad86c79b9efe8a156250c18033a3271cf
-Size (ark-19.08.3.tar.xz) = 2585196 bytes
+SHA1 (ark-19.12.1.tar.xz) = 67f9401040ef704bbaf3e99bc2a05b83fa850004
+RMD160 (ark-19.12.1.tar.xz) = 6d0145b5a11c2cfdd8260bb7719370ef740b2ef8
+SHA512 (ark-19.12.1.tar.xz) = 6d0b5ea84f5b6b947bf040ed9b6b1c2f0a1f58f75957603481b47d90b4f5d911aa2331e46bd92b4b3a89307664bbf9726273a96bdd165b5bd108645127df1e8e
+Size (ark-19.12.1.tar.xz) = 2586724 bytes
