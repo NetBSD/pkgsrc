@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2019/11/25 10:07:31 markd Exp $
+$NetBSD: distinfo,v 1.6 2020/02/02 02:37:35 markd Exp $
 
-SHA1 (kde-dev-scripts-19.08.3.tar.xz) = 5342900f815e01c43aa05b36d6c73c644aecd9a0
-RMD160 (kde-dev-scripts-19.08.3.tar.xz) = 1eb577da1e877b8555725e5e169ecc3755067e18
-SHA512 (kde-dev-scripts-19.08.3.tar.xz) = 3e041422830d1a6a9ed70e86875e9a1b10fbdff3a2189d0a8554899a007e9700e1791f88e0701426f7a8d49da89341283db7f72686acced5fc5b26e7301d191d
-Size (kde-dev-scripts-19.08.3.tar.xz) = 378160 bytes
+SHA1 (kde-dev-scripts-19.12.1.tar.xz) = 4bbf7fd6e44b79a386be8c87ff389a1d0da80491
+RMD160 (kde-dev-scripts-19.12.1.tar.xz) = 6d0c0464c552188628fb0d74099d0fed2ecbbd9d
+SHA512 (kde-dev-scripts-19.12.1.tar.xz) = 472c3dbbe781bb3df2deb5a6e24f2ff4f9bac8385ce1f6119ba32b1a17a08defb440dc4a4addd1ed5d4815d54fb8e34dc72c62e23ec2ed0f2d5e6aaa446d14a4
+Size (kde-dev-scripts-19.12.1.tar.xz) = 378876 bytes
 SHA1 (patch-cvsaddcurrentdir) = d86b706c848e845bb54364af7d619a6637265d97
 SHA1 (patch-uncrustify-kf5) = 5b8e246c84da3a83662858b5a976c3d052018d87
