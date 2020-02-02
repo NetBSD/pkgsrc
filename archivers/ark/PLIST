@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2019/11/17 03:55:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/02/02 02:33:23 markd Exp $
 bin/ark
 lib/libkerfuffle.so.19
-lib/libkerfuffle.so.19.8.3
+lib/libkerfuffle.so.19.12.1
 man/ca/man1/ark.1
 man/de/man1/ark.1
 man/es/man1/ark.1
