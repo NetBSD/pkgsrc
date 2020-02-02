@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2020/01/18 21:50:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.106 2020/02/02 03:05:22 markd Exp $
 
 DISTNAME=	k3b-${KAPPSVER}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://userbase.kde.org/K3b
@@ -32,8 +31,8 @@ SUBST_SED.pathfix=	-e 's:"/usr/bin/":"${LOCALBASE}/bin", "/usr/bin/":g'
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/plugins/*/*/CMakeFiles/*_autogen.dir/AutogenInfo.cmake
-SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
+SUBST_FILES.fix-moc=	_KDE_build/plugins/*/*/CMakeFiles/*_autogen.dir/AutogenInfo.json
+SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
@@ -42,8 +41,6 @@ SUBST_FILES.xdg=	src/CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg
-CONF_FILES+=		${PREFIX}/share/examples/kde-xdg/k3btheme.knsrc \
-			${PKG_SYSCONFDIR}/xdg/k3btheme.knsrc
 CONF_FILES+=		${PREFIX}/share/examples/k3b/org.kde.k3b.conf \
 			${PKG_SYSCONFBASE}/dbus-1/system.d/org.kde.k3b.conf
 

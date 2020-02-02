@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2020/01/18 21:50:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.43 2020/02/02 03:05:22 markd Exp $
 
 DISTNAME=	kfloppy-${KAPPSVER}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://kde.org/applications/utilities/kfloppy/
@@ -10,7 +9,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
+BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
