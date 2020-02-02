@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.886 2020/02/01 21:05:18 adam Exp $
+$NetBSD: CHANGES-2020,v 1.887 2020/02/02 06:07:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1174,3 +1174,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/scummvm to 2.1.1 [adam 2020-02-01]
 	Updated devel/py-more-itertools to 8.2.0 [adam 2020-02-01]
 	Updated math/py-numba to 0.48.0 [adam 2020-02-01]
+	Updated devel/py-nose2 to 0.9.2 [adam 2020-02-02]
+	Updated devel/py-radon to 4.1.0 [adam 2020-02-02]
