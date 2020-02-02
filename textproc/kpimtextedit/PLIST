@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/17 06:01:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/02/02 03:06:07 markd Exp $
 include/KF5/KPIMTextEdit/KPIMTextEdit/AbstractTextToSpeechInterface
 include/KF5/KPIMTextEdit/KPIMTextEdit/EditorUtil
 include/KF5/KPIMTextEdit/KPIMTextEdit/EmoticonUnicodeTab
@@ -59,7 +59,7 @@ lib/cmake/KF5PimTextEdit/KF5PimTextEditTargets-noconfig.cmake
 lib/cmake/KF5PimTextEdit/KF5PimTextEditTargets.cmake
 lib/libKF5PimTextEdit.so
 lib/libKF5PimTextEdit.so.5
-lib/libKF5PimTextEdit.so.5.12.3
+lib/libKF5PimTextEdit.so.5.13.1
 qt5/mkspecs/modules/qt_KPIMTextEdit.pri
 qt5/plugins/designer/kpimtexteditwidgets.so
 share/locale/ar/LC_MESSAGES/libkpimtextedit.mo
