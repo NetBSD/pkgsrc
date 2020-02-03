@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.895 2020/02/03 01:16:44 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.896 2020/02/03 01:39:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1304,3 +1304,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/fehqlibs to 0.9.13d [schmonz 2020-02-03]
 	Updated net/djbdnscurve6 to 36b [schmonz 2020-02-03]
 	Updated mail/feed2exec to 0.15.0nb2 [schmonz 2020-02-03]
+	Updated textproc/p5-ack to 2.28 [schmonz 2020-02-03]
