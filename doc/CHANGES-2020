@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.913 2020/02/03 20:36:35 adam Exp $
+$NetBSD: CHANGES-2020,v 1.914 2020/02/03 23:06:09 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1324,3 +1324,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ucspi-ssl to 0.999.11.1nb2 [schmonz 2020-02-03]
 	Updated www/py-djangocms-admin-style to 1.5.0 [adam 2020-02-03]
 	Updated www/py-django-cms to 3.7.1 [adam 2020-02-03]
+	Added security/wolfssl version 4.3.0 [fox 2020-02-03]
