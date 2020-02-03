@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2019/08/20 02:38:04 schmonz Exp $
+$NetBSD: distinfo,v 1.46 2020/02/03 04:51:27 schmonz Exp $
 
 SHA1 (netqmail-1.05-TAI-leapsecs.patch) = 2c21cd7e20b241c1a82b79379f2c7ee3da5519f7
 RMD160 (netqmail-1.05-TAI-leapsecs.patch) = 9fd59001be5a07d914c66127236ebe8c33f64675
@@ -8,10 +8,6 @@ SHA1 (netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181
 RMD160 (netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch) = 1ad6791996f8741917e2b2980c7e5f6a9449e00f
 SHA512 (netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch) = a02cad7ef0f57a9eee8a12444a30df4d112ba256fa581124d7f0fb78acee4da53d0211d98de5822f058518d6a872e01e737f28e437b8ed5f8fa392ae8808468b
 Size (netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch) = 6962 bytes
-SHA1 (notqmail-1.07-tls-20190517-onlyremote-20190819.patch) = 9392e0833458c933db2668c3f19f26c0b05bdec4
-RMD160 (notqmail-1.07-tls-20190517-onlyremote-20190819.patch) = 49f3f36fb03a89e8afab450597f697c1f9210477
-SHA512 (notqmail-1.07-tls-20190517-onlyremote-20190819.patch) = f3064c3f6ce40da0e99624ee59df99c8211016ae161a8cf5170d19a7fe3300d1a3d7c675d67ec1989c5421b9c10a131266c12d3eb8af02329eb677d3f46709f9
-Size (notqmail-1.07-tls-20190517-onlyremote-20190819.patch) = 26547 bytes
 SHA1 (notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch) = 8aaabb5ab8e7737055dae47c1a83ec8ff7741c20
 RMD160 (notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch) = a3682ab33bb0e746ae214dbac91e0c8f92c780e2
 SHA512 (notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch) = 8b9894d743f6ea7ceb72d34fedaa8afeb61afdfb5b6d929b5c76eb31da27232cb6f952a26b3733c244bfd430750d250bdc0fa92464c6a64f017abd97c84e8c77
@@ -20,6 +16,10 @@ SHA1 (notqmail-1.07-tls-20190517-qmailremote-20190819.patch) = 2aa984625c439069a
 RMD160 (notqmail-1.07-tls-20190517-qmailremote-20190819.patch) = 95622f1895c2909bc3a3c5f609bd1f116437f65a
 SHA512 (notqmail-1.07-tls-20190517-qmailremote-20190819.patch) = cf4f7dda23f90ffff26b3cb0ff4c5d7037ca70a43370e4bd9edd703a67ae0aa125bd5fe54aa97aea6b82054ac6819cc469a091e4cc7b39a48f61409420cfd516
 Size (notqmail-1.07-tls-20190517-qmailremote-20190819.patch) = 1643 bytes
+SHA1 (notqmail-1.07-tls-20200107-onlyremote-20200202.patch) = f08685e0b9784d5ac0e795f1bc806fde8de326e7
+RMD160 (notqmail-1.07-tls-20200107-onlyremote-20200202.patch) = a6aa94fe9eb306a2ee0a99011110eedce695c75b
+SHA512 (notqmail-1.07-tls-20200107-onlyremote-20200202.patch) = 786698a79c7e81349f1ecd12fd14fef03b0c873a0d98482dc506bb0c130214eda3a2f4f3a2c45f03c4ecc4721c6e7de3cf66f7e75f1b40a2f66ea22f53e30b28
+Size (notqmail-1.07-tls-20200107-onlyremote-20200202.patch) = 26972 bytes
 SHA1 (notqmail-1.07.tar.gz) = 7aebb1e4cebcdb248bd907f1a7949c5f0030665b
 RMD160 (notqmail-1.07.tar.gz) = 2f8b610a8ffb0829af071a91515626c83f58126c
 SHA512 (notqmail-1.07.tar.gz) = 586d1ebeba881ebbd5234c957e1bf599d0854eea9dea13f387790b3de3188d49ec1654590862c613894c588b7b0a140345e0d9849da2f4cd974963a485124f49
