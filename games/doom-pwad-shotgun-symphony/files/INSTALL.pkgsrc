@@ -1,0 +1,6 @@
+The PWAD file Sgnsym.wad and the description Sgnsym.txt have been installed to:
+
+   DOOMWADDIR
+
+This is the pkgsrc standard Doom WAD directory location (shared with other Doom
+packages).
