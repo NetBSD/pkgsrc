@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2020/02/02 14:19:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.37 2020/02/03 14:46:07 bsiegert Exp $
 
-DISTNAME=		go-net-20170308
-PKGREVISION=		17
+DISTNAME=		go-net-20200130
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		net
-GITHUB_TAG=		a6577fa
+GITHUB_TAG=		1617124
 
 MAINTAINER=		bsiegert@NetBSD.org
 HOMEPAGE=		https://golang.org/
@@ -31,6 +30,9 @@ PLIST.h2i=	yes
 PLIST.h2i=	yes
 PLIST.route=	yes
 .endif
+
+pre-patch:
+	${RM} -rf ${WRKSRC}/http2/h2demo
 
 .include "../../textproc/go-text/buildlink3.mk"
 .include "../../security/go-crypto/buildlink3.mk"
