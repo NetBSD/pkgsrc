@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.904 2020/02/03 11:35:02 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.905 2020/02/03 12:05:01 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1313,3 +1313,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/p5-Sereal-Decoder to 4.009 [fcambus 2020-02-03]
 	Updated converters/p5-Sereal-Encoder to 4.009 [fcambus 2020-02-03]
 	Updated converters/p5-Sereal to 4.009 [fcambus 2020-02-03]
+	Updated www/py-werkzeug to 0.16.1 [kleink 2020-02-03]
+	Updated www/py-werkzeug-docs to 0.16.1 [kleink 2020-02-03]
