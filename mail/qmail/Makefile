@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.116 2020/01/18 21:49:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.117 2020/02/03 04:51:27 schmonz Exp $
 #
 
 DISTNAME=		notqmail-1.07
 PKGNAME=		qmail-1.03
-PKGREVISION=		47
+PKGREVISION=		48
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=notqmail/}
 GITHUB_PROJECT=		notqmail
@@ -133,7 +133,7 @@ READMES=		README.pkgsrc
 QMAILPATCHES=			notqmail:${DEFAULT_DISTFILES}
 
 QMAILPATCHES+=			tls:${TLSREMOTE_PATCH}
-TLSREMOTE_PATCH=		notqmail-1.07-tls-20190517-onlyremote-20190819.patch
+TLSREMOTE_PATCH=		notqmail-1.07-tls-20200107-onlyremote-20200202.patch
 PATCHFILES+=			${TLSREMOTE_PATCH}
 SITES.${TLSREMOTE_PATCH}=	https://schmonz.com/qmail/tlsonlyremote/
 
