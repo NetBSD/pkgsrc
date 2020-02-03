@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2020/02/03 23:04:09 fox Exp $
+
+Make the scripts portable.
+
+--- configure.orig	2019-12-20 19:59:37.000000000 +0000
++++ configure
+@@ -19214,7 +19214,7 @@ then
+     ENABLED_ENCRYPT_THEN_MAC=yes
+ fi
+ 
+-if test "x$ENABLED_SNIFFER" == "xyes"; then :
++if test "x$ENABLED_SNIFFER" = "xyes"; then :
+   ENABLED_ENCRYPT_THEN_MAC="no"
+ fi
+ 
+@@ -19951,7 +19951,7 @@ fi
+      { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 
+-     if test "x$BUILD_INTEL_QAT_VERSION" == "x1"; then :
++     if test "x$BUILD_INTEL_QAT_VERSION" = "x1"; then :
+   LIB_ADD="-ladf_proxy -losal -lrt $LIB_ADD"
+ else
+   LIB_ADD="-losal -lrt $LIB_ADD"
