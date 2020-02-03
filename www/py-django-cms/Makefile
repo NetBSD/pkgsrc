@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2018/11/20 17:13:32 adam Exp $
+# $NetBSD: Makefile,v 1.50 2020/02/03 08:21:38 wiz Exp $
 
 DISTNAME=	django-cms-3.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-django-treebeard>=4.0.1:../../www/py-django-treebeard
 DEPENDS+=	${PYPKGPREFIX}-djangocms-admin-style>=1.0:../../www/py-djangocms-admin-style
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
