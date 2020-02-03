@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.911 2020/02/03 15:00:42 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.912 2020/02/03 19:56:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1321,3 +1321,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/go-net to 20200130 [bsiegert 2020-02-03]
 	Added security/go-crypto-acme version 0.0.20200122 [bsiegert 2020-02-03]
 	Updated devel/go-sys to 0.0.20200202 [bsiegert 2020-02-03]
+	Updated net/ucspi-ssl to 0.999.11.1nb2 [schmonz 2020-02-03]
