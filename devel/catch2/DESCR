@@ -1,0 +1,3 @@
+Catch2 is a multi-paradigm test framework for C++. It also supports
+Objective-C (and maybe C). It is primarily distributed as a single header file,
+although certain extensions may require additional headers.
