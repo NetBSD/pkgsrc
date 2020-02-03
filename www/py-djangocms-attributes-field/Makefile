@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/12/13 21:20:38 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/02/03 08:26:17 wiz Exp $
 
 DISTNAME=	djangocms-attributes-field-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.4.5:../../www/py-django-cms
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
