@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.5 2020/02/03 14:51:55 bsiegert Exp $
+#
+# used by security/go-crypto
+# used by security/go-crypto-acme
+
+DISTNAME=	go-crypto-0.0.20200122
+CATEGORIES=	security
+MASTER_SITES=	${MASTER_SITE_GITHUB:=golang/}
+GITHUB_PROJECT=	crypto
+GITHUB_TAG=	69ecbb4d6d
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/golang/crypto/
+LICENSE=	modified-bsd
+
+DISTINFO_FILE=	${.CURDIR}/../../security/go-crypto/distinfo
+
+.include "../../lang/go/go-package.mk"
+.include "../../devel/go-sys/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
