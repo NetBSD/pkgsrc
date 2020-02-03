@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.908 2020/02/03 13:14:36 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.909 2020/02/03 14:48:18 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1318,3 +1318,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added games/doom-pwad-shotgun-symphony version 1.0 [micha 2020-02-03]
 	Added devel/catch2 version 2.11.1 [bsiegert 2020-02-03]
 	Updated security/go-crypto to 0.0.20200122 [bsiegert 2020-02-03]
+	Updated net/go-net to 20200130 [bsiegert 2020-02-03]
