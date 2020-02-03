@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.902 2020/02/03 11:32:06 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.903 2020/02/03 11:33:38 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1311,3 +1311,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/sudo to 1.8.31 [kim 2020-02-03]
 	Updated sysutils/collectd-dns to 5.8.0nb3 [triaxx 2020-02-03]
 	Updated converters/p5-Sereal-Decoder to 4.009 [fcambus 2020-02-03]
+	Updated converters/p5-Sereal-Encoder to 4.009 [fcambus 2020-02-03]
