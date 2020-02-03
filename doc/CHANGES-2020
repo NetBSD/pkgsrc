@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.893 2020/02/03 01:11:07 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.894 2020/02/03 01:13:40 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1302,3 +1302,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/ktimer to 19.12.1 [markd 2020-02-02]
 	Updated net/get_iplayer to 3.25 [nia 2020-02-02]
 	Updated net/fehqlibs to 0.9.13d [schmonz 2020-02-03]
+	Updated net/djbdnscurve6 to 36b [schmonz 2020-02-03]
