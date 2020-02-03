@@ -1,0 +1,4 @@
+Supplementary Go cryptography libraries.
+
+This package contains the ACME library to interface with automated certificate
+issuers, such as Let's Encrypt.
