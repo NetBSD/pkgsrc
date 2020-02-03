@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2018/12/13 21:34:34 adam Exp $
+# $NetBSD: Makefile,v 1.11 2020/02/03 08:26:18 wiz Exp $
 
 DISTNAME=	djangocms-text-ckeditor-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.3.0:../../www/py-django-cms
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.999999999:../../textproc/py-html5lib
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
