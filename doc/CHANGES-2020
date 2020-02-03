@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.907 2020/02/03 12:35:38 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.908 2020/02/03 13:14:36 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1317,3 +1317,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-werkzeug-docs to 0.16.1 [kleink 2020-02-03]
 	Added games/doom-pwad-shotgun-symphony version 1.0 [micha 2020-02-03]
 	Added devel/catch2 version 2.11.1 [bsiegert 2020-02-03]
+	Updated security/go-crypto to 0.0.20200122 [bsiegert 2020-02-03]
