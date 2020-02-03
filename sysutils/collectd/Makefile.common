@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2020/02/03 07:57:11 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.22 2020/02/03 08:00:17 triaxx Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -21,7 +21,7 @@ DISTNAME=	collectd-5.8.0
 MASTER_SITES=	http://collectd.org/files/
 CATEGORIES=	sysutils
 EXTRACT_SUFX=	.tar.bz2
-EXTRACT_USING=	gtar
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	https://collectd.org/
@@ -29,7 +29,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf automake gtar pkg-config
+USE_TOOLS+=		autoconf automake pkg-config
 USE_LANGUAGES=		c c99 c++
 
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/collectd/distinfo
