@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2018/11/20 17:13:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2020/02/03 20:36:17 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -155,7 +155,9 @@ ${PYSITELIB}/cms/locale/en/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/en/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/en/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/cms/locale/en/LC_MESSAGES/djangojs.po
+${PYSITELIB}/cms/locale/en_GB/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/en_GB/LC_MESSAGES/django.po
+${PYSITELIB}/cms/locale/en_GB/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/cms/locale/en_GB/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/cms/locale/eo/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/eo/LC_MESSAGES/django.po
@@ -257,6 +259,10 @@ ${PYSITELIB}/cms/locale/km/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/km/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/km/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/cms/locale/km/LC_MESSAGES/djangojs.po
+${PYSITELIB}/cms/locale/ko/LC_MESSAGES/django.mo
+${PYSITELIB}/cms/locale/ko/LC_MESSAGES/django.po
+${PYSITELIB}/cms/locale/ko/LC_MESSAGES/djangojs.mo
+${PYSITELIB}/cms/locale/ko/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/cms/locale/ko_KR/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/ko_KR/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/ko_KR/LC_MESSAGES/djangojs.mo
@@ -329,7 +335,9 @@ ${PYSITELIB}/cms/locale/sl_SI/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/sl_SI/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/sl_SI/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/cms/locale/sl_SI/LC_MESSAGES/djangojs.po
+${PYSITELIB}/cms/locale/sq/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/sq/LC_MESSAGES/django.po
+${PYSITELIB}/cms/locale/sq/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/cms/locale/sq/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/cms/locale/sr@latin/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/sr@latin/LC_MESSAGES/django.po
@@ -402,9 +410,6 @@ ${PYSITELIB}/cms/management/commands/subcommands/delete_orphaned_plugins.pyo
 ${PYSITELIB}/cms/management/commands/subcommands/list.py
 ${PYSITELIB}/cms/management/commands/subcommands/list.pyc
 ${PYSITELIB}/cms/management/commands/subcommands/list.pyo
-${PYSITELIB}/cms/management/commands/subcommands/moderator.py
-${PYSITELIB}/cms/management/commands/subcommands/moderator.pyc
-${PYSITELIB}/cms/management/commands/subcommands/moderator.pyo
 ${PYSITELIB}/cms/management/commands/subcommands/publisher_publish.py
 ${PYSITELIB}/cms/management/commands/subcommands/publisher_publish.pyc
 ${PYSITELIB}/cms/management/commands/subcommands/publisher_publish.pyo
@@ -498,12 +503,15 @@ ${PYSITELIB}/cms/migrations/0019_set_pagenode.pyo
 ${PYSITELIB}/cms/migrations/0020_old_tree_cleanup.py
 ${PYSITELIB}/cms/migrations/0020_old_tree_cleanup.pyc
 ${PYSITELIB}/cms/migrations/0020_old_tree_cleanup.pyo
+${PYSITELIB}/cms/migrations/0021_auto_20180507_1432.py
+${PYSITELIB}/cms/migrations/0021_auto_20180507_1432.pyc
+${PYSITELIB}/cms/migrations/0021_auto_20180507_1432.pyo
+${PYSITELIB}/cms/migrations/0022_auto_20180620_1551.py
+${PYSITELIB}/cms/migrations/0022_auto_20180620_1551.pyc
+${PYSITELIB}/cms/migrations/0022_auto_20180620_1551.pyo
 ${PYSITELIB}/cms/migrations/__init__.py
 ${PYSITELIB}/cms/migrations/__init__.pyc
 ${PYSITELIB}/cms/migrations/__init__.pyo
-${PYSITELIB}/cms/migrations/_base.py
-${PYSITELIB}/cms/migrations/_base.pyc
-${PYSITELIB}/cms/migrations/_base.pyo
 ${PYSITELIB}/cms/models/__init__.py
 ${PYSITELIB}/cms/models/__init__.pyc
 ${PYSITELIB}/cms/models/__init__.pyo
@@ -588,24 +596,9 @@ ${PYSITELIB}/cms/signals/__init__.pyo
 ${PYSITELIB}/cms/signals/apphook.py
 ${PYSITELIB}/cms/signals/apphook.pyc
 ${PYSITELIB}/cms/signals/apphook.pyo
-${PYSITELIB}/cms/signals/page.py
-${PYSITELIB}/cms/signals/page.pyc
-${PYSITELIB}/cms/signals/page.pyo
 ${PYSITELIB}/cms/signals/permissions.py
 ${PYSITELIB}/cms/signals/permissions.pyc
 ${PYSITELIB}/cms/signals/permissions.pyo
-${PYSITELIB}/cms/signals/placeholder.py
-${PYSITELIB}/cms/signals/placeholder.pyc
-${PYSITELIB}/cms/signals/placeholder.pyo
-${PYSITELIB}/cms/signals/plugins.py
-${PYSITELIB}/cms/signals/plugins.pyc
-${PYSITELIB}/cms/signals/plugins.pyo
-${PYSITELIB}/cms/signals/title.py
-${PYSITELIB}/cms/signals/title.pyc
-${PYSITELIB}/cms/signals/title.pyo
-${PYSITELIB}/cms/signals/utils.py
-${PYSITELIB}/cms/signals/utils.pyc
-${PYSITELIB}/cms/signals/utils.pyo
 ${PYSITELIB}/cms/sitemaps/__init__.py
 ${PYSITELIB}/cms/sitemaps/__init__.pyc
 ${PYSITELIB}/cms/sitemaps/__init__.pyo
@@ -895,7 +888,6 @@ ${PYSITELIB}/cms/templates/cms/toolbar/items/login.html
 ${PYSITELIB}/cms/templates/cms/toolbar/items/logo.html
 ${PYSITELIB}/cms/templates/cms/toolbar/items/menu.html
 ${PYSITELIB}/cms/templates/cms/toolbar/plugin.html
-${PYSITELIB}/cms/templates/cms/toolbar/render_plugin_block.html
 ${PYSITELIB}/cms/templates/cms/toolbar/structure.html
 ${PYSITELIB}/cms/templates/cms/toolbar/toolbar.html
 ${PYSITELIB}/cms/templates/cms/toolbar/toolbar_javascript.html
@@ -1069,9 +1061,6 @@ ${PYSITELIB}/cms/test_utils/project/placeholderapp/models.pyo
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/urls.py
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/urls.pyc
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/urls.pyo
-${PYSITELIB}/cms/test_utils/project/placeholderapp/urls_multi.py
-${PYSITELIB}/cms/test_utils/project/placeholderapp/urls_multi.pyc
-${PYSITELIB}/cms/test_utils/project/placeholderapp/urls_multi.pyo
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/views.py
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/views.pyc
 ${PYSITELIB}/cms/test_utils/project/placeholderapp/views.pyo
