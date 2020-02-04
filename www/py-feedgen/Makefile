@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2016/08/28 15:48:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/02/04 00:18:02 minskim Exp $
 
-DISTNAME=	v0.3.2
-PKGNAME=	${PYPKGPREFIX}-${GITHUB_PROJECT:S/python-//}-${DISTNAME:S/v//}
-CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_GITHUB:=lkiesow/}
-GITHUB_PROJECT=	python-feedgen
-GITHUB_TAG=	${DISTNAME}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+DISTNAME=	feedgen-0.9.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	www python
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/feedgen/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=lkiesow/python-feedgen/}
-COMMENT=	Python module to generate ATOM feeds, RSS feeds, and Podcasts
+HOMEPAGE=	https://lkiesow.github.io/python-feedgen
+COMMENT=	Feed Generator (ATOM, RSS, Podcasts)
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
-.include "../../lang/python/distutils.mk"
+USE_LANGUAGES=	# none
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
