@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/04 10:57:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/02/04 03:03:48 taca Exp $
 bin/purge
 bin/squidclient
 libexec/basic_db_auth
@@ -23,7 +23,7 @@ libexec/ntlm_fake_auth
 libexec/ntlm_smb_lm_auth
 libexec/pinger
 libexec/security_fake_certverify
-libexec/security_file_certgen
+${PLIST.openssl}libexec/security_file_certgen
 libexec/storeid_file_rewrite
 ${PLIST.unlinkd}libexec/unlinkd
 libexec/url_fake_rewrite
@@ -45,7 +45,7 @@ man/man8/helper-mux.8
 man/man8/log_db_daemon.8
 ${PLIST.ta_kerberos}man/man8/negotiate_kerberos_auth.8
 man/man8/security_fake_certverify.8
-man/man8/security_file_certgen.8
+${PLIST.openssl}man/man8/security_file_certgen.8
 man/man8/squid.8
 man/man8/storeid_file_rewrite.8
 man/man8/url_lfs_rewrite.8
