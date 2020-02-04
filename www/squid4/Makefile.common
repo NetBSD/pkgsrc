@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2020/01/04 10:57:18 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2020/02/04 03:03:48 taca Exp $
 #
 # used by www/squid4/Makefile
 
@@ -15,3 +15,5 @@ PKG_USERS_VARS+=		SQUID_USER
 PKG_GROUPS=			${SQUID_GROUP}
 PKG_USERS=			${SQUID_USER}:${SQUID_GROUP}
 PKG_GECOS.${SQUID_USER}=	Squid Web-Cache pseudo-user
+
+BUILD_DEFS+=			VARBASE
