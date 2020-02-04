@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2019/07/22 23:53:44 tnn Exp $
+$NetBSD: distinfo,v 1.5 2020/02/04 13:14:48 tnn Exp $
 
-SHA1 (git-lfs-2.7.2.tar.gz) = cf05c6decf9f7cb2a7057bd3d951ee6d0c9ac419
-RMD160 (git-lfs-2.7.2.tar.gz) = d7d7983e2de49bd24a3df4c6f11b12d1250eff36
-SHA512 (git-lfs-2.7.2.tar.gz) = cd71815eb418b7acaf077de4873ff49d332f71151c1212ca4fe3a2d0e079bad873894bb416488f272777153cc3422deecf17a849cd67f150b44eb094a09ae8be
-Size (git-lfs-2.7.2.tar.gz) = 1672700 bytes
+SHA1 (git-lfs-2.10.0.tar.gz) = 2e86a75ef00a02d054681cd0666f0a642cd66ae6
+RMD160 (git-lfs-2.10.0.tar.gz) = 10aab52b292604a519f350df38cb430c49043775
+SHA512 (git-lfs-2.10.0.tar.gz) = a4bfb3f674ef93e903e815ab0721f25ac78f772df416c865a7c57f7d19790b9efa8d4662723f2e3d87f294346d7924942d05cbfcdd8a010316e8b0420bd71e8a
+Size (git-lfs-2.10.0.tar.gz) = 2771571 bytes
 SHA1 (patch-lfshttp_certs__solaris.go) = d1bc60350e75d769585e311c543688e2e0eb5d72
