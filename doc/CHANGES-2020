@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.917 2020/02/04 03:04:21 taca Exp $
+$NetBSD: CHANGES-2020,v 1.918 2020/02/04 09:40:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1328,3 +1328,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-feedgen to 0.9.0 [minskim 2020-02-04]
 	Updated devel/geany to 1.36 [gutteridge 2020-02-04]
 	Updated www/squid4 to 4.10 [taca 2020-02-04]
+	Updated security/py-cryptodome to 3.9.6 [adam 2020-02-04]
+	Updated lang/py-parso to 0.6.1 [adam 2020-02-04]
