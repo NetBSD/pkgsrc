@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19657 2020/02/04 01:54:04 gutteridge Exp $
+$NetBSD: TODO,v 1.19658 2020/02/04 01:58:26 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -765,7 +765,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o klavaro-3.0
 	o knot-resolver-1.1.1
 	o kodi-16.1
-	o koffice-l10n-de-2.0.2
 	o konversation-1.6
 	o krita-4.2
 	o kronolith-4.2.14
