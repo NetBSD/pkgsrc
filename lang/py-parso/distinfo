@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/01/29 14:03:52 adam Exp $
+$NetBSD: distinfo,v 1.9 2020/02/04 09:40:01 adam Exp $
 
-SHA1 (parso-0.6.0.tar.gz) = 0e3f543af9bda84c4204b8df905b6ab468943cdc
-RMD160 (parso-0.6.0.tar.gz) = 80ab889031b53cbc06cbfa0a171bb7e0ad7b1a02
-SHA512 (parso-0.6.0.tar.gz) = b708818cc3739066b353fa403d83afc5fa7f4c404b84d71807d07a22beed5a45a28d1e5c8bee640595b8b0a90e3ab7f92bec310550cc4f950848e31ee2bcf433
-Size (parso-0.6.0.tar.gz) = 394506 bytes
+SHA1 (parso-0.6.1.tar.gz) = f9916804bc1554812e460ee11a6ee10d8d026bb1
+RMD160 (parso-0.6.1.tar.gz) = aa233bdbad6ea49b8b5d3e50797816717c8216f7
+SHA512 (parso-0.6.1.tar.gz) = 6c7043f1fc8a05e176794e0e7b114b22b333d9d7eb8121d34e9767124c153f663cd8a8be4b02799eac31c2d502971167d1df6dd465b306131c4cc63d05626f96
+Size (parso-0.6.1.tar.gz) = 394642 bytes
