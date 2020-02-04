@@ -1,26 +1,27 @@
-# $NetBSD: options.mk,v 1.2 2020/01/23 14:47:56 jperkin Exp $
+# $NetBSD: options.mk,v 1.3 2020/02/04 03:03:48 taca Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.squid4
-PKG_SUPPORTED_OPTIONS=	ecap gnutls inet6 snmp openssl squid-backend-aufs \
-			squid-backend-diskd squid-backend-rock \
-			squid-backend-ufs squid-unlinkd squid-kerberos-helper \
-			squid-ldap-helper squid-pam-helper
-PKG_OPTIONS_LEGACY_OPTS+= \
-	diskd:squid-backend-diskd \
-	null:squid-backend-null ufs:squid-backend-ufs \
-	linux-netfilter:squid-netfilter ipf-transparent:squid-ipf \
-	pf-transparent:squid-pf unlinkd:squid-unlinkd \
-	arp-acl:squid-arp-acl pam-helper:squid-pam-helper
+PKG_OPTIONS_VAR=		PKG_OPTIONS.squid4
+PKG_SUPPORTED_OPTIONS=		ecap esi inet6 snmp squid-backend-aufs \
+				squid-backend-diskd squid-backend-rock \
+				squid-backend-ufs squid-unlinkd \
+				squid-kerberos-helper squid-ldap-helper \
+				squid-pam-helper
+PKG_OPTIONS_REQUIRED_GROUPS=	ssl
+PKG_OPTIONS_GROUP.ssl=		openssl gnutls
+PKG_OPTIONS_LEGACY_OPTS+=	diskd:squid-backend-diskd \
+				null:squid-backend-null ufs:squid-backend-ufs \
+				linux-netfilter:squid-netfilter \
+				ipf-transparent:squid-ipf \
+				pf-transparent:squid-pf unlinkd:squid-unlinkd \
+				arp-acl:squid-arp-acl \
+				pam-helper:squid-pam-helper
 
-PLIST_VARS+=	diskd snmp unlinkd
 PLIST_VARS+=	ba_LDAP ba_NCSA ba_PAM ba_getpwnam
-PLIST_VARS+=	da_file da_LDAP
-PLIST_VARS+=	na_sml_lm
-PLIST_VARS+=	ta_kerberos
-PLIST_VARS+=	eacl_file_userip eacl_LDAP_group eacl_unix_group
-PLIST_VARS+=	openssl
+PLIST_VARS+=	da_LDAP da_file diskd
+PLIST_VARS+=	eacl_LDAP_group eacl_file_userip eacl_unix_group
+PLIST_VARS+=	openssl ta_kerberos unlinkd
 
-PKG_SUGGESTED_OPTIONS=	inet6 snmp openssl squid-backend-aufs \
+PKG_SUGGESTED_OPTIONS=	inet6 esi openssl snmp squid-backend-aufs \
 			squid-backend-diskd squid-backend-ufs \
 			squid-pam-helper squid-unlinkd
 
@@ -94,6 +95,13 @@ USE_LANGUAGES+=		c++11
 CONFIGURE_ARGS+=	--disable-ecap
 .endif
 
+.if !empty(PKG_OPTIONS:Mesi)
+CONFIGURE_ARGS+=	--enable-esi
+.include "../../textproc/expat/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-esi
+.endif
+
 .if !empty(PKG_SUPPORTED_OPTIONS:Minet6) && empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
@@ -122,7 +130,6 @@ SQUID_BASIC_AUTH_HELPERS+=	PAM
 
 .if !empty(PKG_OPTIONS:Msnmp)
 CONFIGURE_ARGS+=	--enable-snmp
-PLIST.snmp=		yes
 .else
 CONFIGURE_ARGS+=	--disable-snmp
 .endif
@@ -136,9 +143,8 @@ PLIST.openssl=		yes
 
 .if !empty(PKG_OPTIONS:Mgnutls)
 CONFIGURE_ARGS+=	--with-gnutls=${PREFIX:Q}
-CONFIGURE_ARGS+=	--enable-ssl-crtd --without-openssl
+CONFIGURE_ARGS+=	--without-openssl
 .  include "../../security/gnutls/buildlink3.mk"
-PLIST.openssl=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msquid-backend-aufs)
