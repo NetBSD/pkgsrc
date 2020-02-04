@@ -1,13 +1,38 @@
-$NetBSD: patch-configure,v 1.1 2020/01/04 10:57:18 taca Exp $
+$NetBSD: patch-configure,v 1.2 2020/02/04 03:03:49 taca Exp $
 
 * More support for OpenSSL 1.1; not only check SSL_Library_init() but
   also check OPENSSL_init_ssl().
 * Fix syntax error by accidental new line.
 * Utilisze <stdlib.h> on BSD.
+* Do not override CFLAGS/CXXFLAGS except linux.
 
---- configure.orig	2019-07-09 19:16:52.000000000 +0000
+--- configure.orig	2020-01-20 02:51:59.000000000 +0000
 +++ configure
-@@ -24032,7 +24032,51 @@ if test "x$ac_cv_lib_ssl_SSL_library_ini
+@@ -23201,10 +23201,12 @@ do
+ done
+ 
+   # GLIBC 2.30 deprecates sysctl.h. Test with the same flags that (may) break includes later.
+-  CFLAGS=$SQUID_CFLAGS
+-  CXXFLAGS=$SQUID_CXXFLAGS
+   case "$squid_host_os" in
+-    linux|solaris|freebsd|openbsd|netbsd|cygwin)
++    linux)
++      CFLAGS=$SQUID_CFLAGS
++      CXXFLAGS=$SQUID_CXXFLAGS
++      ;;
++    solaris|freebsd|openbsd|netbsd|cygwin)
+       ${TRUE}
+       ;;
+     mingw)
+@@ -23244,6 +23246,7 @@ done
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_cxx_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
++#include <stdio.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ 
+@@ -24080,7 +24083,51 @@ if test "x$ac_cv_lib_ssl_SSL_CTX_new" = 
    LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
  else
  
@@ -60,7 +85,7 @@ $NetBSD: patch-configure,v 1.1 2020/01/04 10:57:18 taca Exp $
  
  fi
  
-@@ -24135,7 +24179,51 @@ if test "x$ac_cv_lib_ssl_SSL_library_ini
+@@ -24183,7 +24230,51 @@ if test "x$ac_cv_lib_ssl_SSL_CTX_new" = 
    LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
  else
  
@@ -113,7 +138,7 @@ $NetBSD: patch-configure,v 1.1 2020/01/04 10:57:18 taca Exp $
  
  fi
  
-@@ -39186,6 +39274,8 @@ else
+@@ -39234,6 +39325,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -122,7 +147,7 @@ $NetBSD: patch-configure,v 1.1 2020/01/04 10:57:18 taca Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -42012,7 +42102,7 @@ _ACEOF
+@@ -42057,7 +42150,7 @@ _ACEOF
  
  
  fi
