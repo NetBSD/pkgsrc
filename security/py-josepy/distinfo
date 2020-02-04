@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/08/22 11:45:03 adam Exp $
+$NetBSD: distinfo,v 1.4 2020/02/04 16:36:53 adam Exp $
 
-SHA1 (josepy-1.2.0.tar.gz) = 3a81cc7a5710ad60210b984560fe7125ad732cf7
-RMD160 (josepy-1.2.0.tar.gz) = c885992530c78ea86fbaca1d064a8a69a4f44786
-SHA512 (josepy-1.2.0.tar.gz) = 1e746cf8e02c86a728d1a502000bba3c7db829f29dcb49ed40c7398d2ec904e830d267c60b444d57c3cf44d6ae829d3f3f4fd4288dcb3d5f47ab96d06a2d6bc5
-Size (josepy-1.2.0.tar.gz) = 53130 bytes
+SHA1 (josepy-1.3.0.tar.gz) = 22f4ad476c315b0a62a1a8184771c6fb06dfc8b6
+RMD160 (josepy-1.3.0.tar.gz) = 3de2125a1dd5e508c0d261dce9b58ae96448ab7e
+SHA512 (josepy-1.3.0.tar.gz) = 176eea34bb7fb75e192d6792c15581a42a1d2b986bc79ab49f72b16ebf8879e9b11db0d22fbd49ff5a9b85ab7cc45a0a935d06393273233a272537a861282f30
+Size (josepy-1.3.0.tar.gz) = 53279 bytes
