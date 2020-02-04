@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/08/17 01:01:22 minskim Exp $
+$NetBSD: distinfo,v 1.2 2020/02/04 00:18:02 minskim Exp $
 
-SHA1 (python-feedgen/v0.3.2.tar.gz) = 4fdf62276134438cf4bc5802fef0ab07a017ad4d
-RMD160 (python-feedgen/v0.3.2.tar.gz) = 96ee1a2b146a50c53743e29192cd11aae091f363
-SHA512 (python-feedgen/v0.3.2.tar.gz) = 2bcaf707daf2ea24b0534a0fd8707d9d12ca709f84a554d05e83f7eebb3d595989535aa44c8ae93531cb358b3774402d80b9d5897428eed44ef5f5c54984bde7
-Size (python-feedgen/v0.3.2.tar.gz) = 42953 bytes
+SHA1 (feedgen-0.9.0.tar.gz) = 9da79674d8d1b0a830066f0e8d7dcd9f23db98f1
+RMD160 (feedgen-0.9.0.tar.gz) = ebcc5aa289c6f2d17d7d77b03d9ea3e739bd967e
+SHA512 (feedgen-0.9.0.tar.gz) = fca43ad43656b6a63c7489a8c8d4e9dd46182e2ecaead988d978014a29bec87e1cfbaae962907fae6373a759e8ab68ea2dfed8fa538d2deba7eaa5298c07af1d
+Size (feedgen-0.9.0.tar.gz) = 217925 bytes
