@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2016/08/17 01:01:22 minskim Exp $
-${PYSITELIB}/feedgen-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info
+@comment $NetBSD: PLIST,v 1.2 2020/02/04 00:18:02 minskim Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/feedgen/__init__.py
 ${PYSITELIB}/feedgen/__init__.pyc
 ${PYSITELIB}/feedgen/__init__.pyo
@@ -21,6 +25,15 @@ ${PYSITELIB}/feedgen/ext/base.pyo
 ${PYSITELIB}/feedgen/ext/dc.py
 ${PYSITELIB}/feedgen/ext/dc.pyc
 ${PYSITELIB}/feedgen/ext/dc.pyo
+${PYSITELIB}/feedgen/ext/geo.py
+${PYSITELIB}/feedgen/ext/geo.pyc
+${PYSITELIB}/feedgen/ext/geo.pyo
+${PYSITELIB}/feedgen/ext/geo_entry.py
+${PYSITELIB}/feedgen/ext/geo_entry.pyc
+${PYSITELIB}/feedgen/ext/geo_entry.pyo
+${PYSITELIB}/feedgen/ext/media.py
+${PYSITELIB}/feedgen/ext/media.pyc
+${PYSITELIB}/feedgen/ext/media.pyo
 ${PYSITELIB}/feedgen/ext/podcast.py
 ${PYSITELIB}/feedgen/ext/podcast.pyc
 ${PYSITELIB}/feedgen/ext/podcast.pyo
@@ -30,6 +43,9 @@ ${PYSITELIB}/feedgen/ext/podcast_entry.pyo
 ${PYSITELIB}/feedgen/ext/syndication.py
 ${PYSITELIB}/feedgen/ext/syndication.pyc
 ${PYSITELIB}/feedgen/ext/syndication.pyo
+${PYSITELIB}/feedgen/ext/torrent.py
+${PYSITELIB}/feedgen/ext/torrent.pyc
+${PYSITELIB}/feedgen/ext/torrent.pyo
 ${PYSITELIB}/feedgen/feed.py
 ${PYSITELIB}/feedgen/feed.pyc
 ${PYSITELIB}/feedgen/feed.pyo
