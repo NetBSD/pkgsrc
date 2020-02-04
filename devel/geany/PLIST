@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/02/06 01:49:32 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/02/04 01:53:20 gutteridge Exp $
 bin/geany
 include/geany/app.h
 include/geany/build.h
@@ -88,8 +88,13 @@ share/geany/filedefs/filetypes.Clojure.conf
 share/geany/filedefs/filetypes.Cython.conf
 share/geany/filedefs/filetypes.Genie.conf
 share/geany/filedefs/filetypes.Graphviz.conf
+share/geany/filedefs/filetypes.Groovy.conf
 share/geany/filedefs/filetypes.JSON.conf
+share/geany/filedefs/filetypes.Kotlin.conf
+share/geany/filedefs/filetypes.Nim.conf
 share/geany/filedefs/filetypes.Scala.conf
+share/geany/filedefs/filetypes.Swift.conf
+share/geany/filedefs/filetypes.TypeScript.conf
 share/geany/filedefs/filetypes.abaqus
 share/geany/filedefs/filetypes.abc
 share/geany/filedefs/filetypes.actionscript
@@ -239,6 +244,7 @@ share/locale/it/LC_MESSAGES/geany.mo
 share/locale/ja/LC_MESSAGES/geany.mo
 share/locale/kk/LC_MESSAGES/geany.mo
 share/locale/ko/LC_MESSAGES/geany.mo
+share/locale/ku/LC_MESSAGES/geany.mo
 share/locale/lb/LC_MESSAGES/geany.mo
 share/locale/lt/LC_MESSAGES/geany.mo
 share/locale/lv/LC_MESSAGES/geany.mo
