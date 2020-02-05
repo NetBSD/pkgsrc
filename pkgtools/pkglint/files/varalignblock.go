@@ -655,6 +655,9 @@ func (info *varalignLine) alignContinuation(valueColumn, rightMarginColumn int) 
 		fix.Notef("The continuation backslash should be preceded by a single space.")
 	} else {
 		newSpace = alignmentToWidths(info.uptoValueWidth(), rightMarginColumn)
+		if newSpace == "" {
+			newSpace = " "
+		}
 		fix.Notef(
 			"The continuation backslash should be in column %d, not %d.",
 			rightMarginColumn+1, column+1)
@@ -852,6 +855,9 @@ func (p *varalignParts) isCanonicalFollow() bool {
 }
 
 func (p *varalignParts) isTooLongFor(valueColumn int) bool {
+	// FIXME: As of 2020-01-27, this method is called from
+	//  Test_VaralignBlock__right_margin with valueColumn == 0,
+	//  which doesn't make sense. It should at least be 8.
 	column := tabWidthAppend(valueColumn, p.value)
 	if p.isContinuation() {
 		column += 2

@@ -144,6 +144,9 @@ func (line *Line) IsCvsID(prefixRe regex.Pattern) (found bool, expanded bool) {
 	return m, exp != ""
 }
 
+// FIXME: By definition there cannot be fatal diagnostics.
+//  Having these was a misconception from the beginning,
+//  and they must be re-classified as fatal technical errors.
 func (line *Line) Fatalf(format string, args ...interface{}) {
 	if trace.Tracing {
 		trace.Stepf("Fatalf: %q, %v", format, args)

@@ -1445,10 +1445,7 @@ func (s *Suite) Test_RedundantScope__is_relevant_for_infrastructure(c *check.C) 
 		scope := NewRedundantScope()
 		scope.IsRelevant = func(mkline *MkLine) bool {
 			// See checkfilePackageMakefile.
-			if !G.Infrastructure && !G.Opts.CheckGlobal {
-				return !G.Pkgsrc.IsInfra(mkline.Filename)
-			}
-			return true
+			return G.Opts.CheckGlobal || !G.Pkgsrc.IsInfra(mkline.Filename)
 		}
 
 		scope.Check(mklines)
