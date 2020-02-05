@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.934 2020/02/05 13:57:52 nia Exp $
+$NetBSD: CHANGES-2020,v 1.935 2020/02/05 14:11:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1352,3 +1352,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-libixion to 0.15.0 [ryoon 2020-02-05]
 	Updated converters/orcus to 0.15.3 [ryoon 2020-02-05]
 	Updated emulators/dosbox-x to 0.82.26 [nia 2020-02-05]
+	Updated misc/libreoffice to 6.4.0.3 [ryoon 2020-02-05]
