@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2020/01/27 13:16:13 taca Exp $
+$NetBSD: distinfo,v 1.26 2020/02/05 14:29:51 taca Exp $
 
-SHA1 (pear/Mail_Mime-1.10.5.tgz) = 72357b92e5c4193e2386fb41dc96a6112e2898e9
-RMD160 (pear/Mail_Mime-1.10.5.tgz) = 2ed8f5b2450d5c1ee0bfa71035025befbf1e6e88
-SHA512 (pear/Mail_Mime-1.10.5.tgz) = c1546de1de0c52866eef6c0ffb06066b958eb6795a8a3440790155214829fc7b54f193e6ed64c61c0908456bb5b2cbbed42abe106cc5af1618b588772f2ba49f
-Size (pear/Mail_Mime-1.10.5.tgz) = 38547 bytes
+SHA1 (pear/Mail_Mime-1.10.6.tgz) = fbe231f8e9efcb781b1cf44e38868fe1822afa8b
+RMD160 (pear/Mail_Mime-1.10.6.tgz) = f5f1a392da2057f16ae765b4d438894cf8743e14
+SHA512 (pear/Mail_Mime-1.10.6.tgz) = 223e4a3a3ab52497d7cee551108642aa8c90328cd5d28ec0f215e16e0f2066fbaa3e4d51e62080d322846f8410c2e4641cd7c743e736062b6f8215e637877518
+Size (pear/Mail_Mime-1.10.6.tgz) = 38355 bytes
