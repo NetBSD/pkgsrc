@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.34 2020/01/18 23:30:45 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/02/05 15:30:25 fcambus Exp $
 
-DISTNAME=	hexedit-1.2.13
-PKGREVISION=	2
+DISTNAME=	hexedit-1.4.2
 CATEGORIES=	editors
-MASTER_SITES=	http://rigaux.org/
-EXTRACT_SUFX=	.src.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=pixel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://merd.sourceforge.net/pixel/hexedit.html
+HOMEPAGE=	http://rigaux.org/hexedit.html
 COMMENT=	To view and edit files in hexadecimal or ASCII
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/hexedit
-GNU_CONFIGURE=		yes
+USE_TOOLS+=	aclocal autoconf automake autoheader
 
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+GNU_CONFIGURE=	yes
+
+pre-configure:
+	cd ${WRKSRC} && ${SH} autogen.sh
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
