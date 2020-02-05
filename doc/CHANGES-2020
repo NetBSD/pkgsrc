@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.940 2020/02/05 14:31:50 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.941 2020/02/05 14:40:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1358,3 +1358,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/pear-Mail_Mime to 1.10.6 [taca 2020-02-05]
 	Updated mail/thunderbird to 68.4.2 [ryoon 2020-02-05]
 	Updated mail/thunderbird-l10n to 68.4.2 [ryoon 2020-02-05]
+	Updated databases/ruby-sequel to 5.29.0 [taca 2020-02-05]
