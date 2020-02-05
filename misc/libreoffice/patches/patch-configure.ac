@@ -1,69 +1,46 @@
-$NetBSD: patch-configure.ac,v 1.14 2019/08/10 11:41:29 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.15 2020/02/05 14:10:35 ryoon Exp $
 
-add arm64 support.
+* Add NetBSD/aarch64 support.
+* Disable freetype2 and fontconfig from pkgsrc explicitly.
+  to fix X11_TYPE=native build and internal pdfium's internal freetype build.
+* Exclude c++2a to avoid some C++ errors. And c++17 causes alloca(3) problem.
+  Use gnu++17 dialect instead.
+* Fix some static links.
+* Include header files from gpgme correctly.
+* Find pkgsrc/devel/apache-ant.
 
-fix __cxa_exception check.
-
-fix wrong default paths.
-
-Remove c++2a checks.
-
-NetBSD has no math_errhandling support yet.
-
---- configure.ac.orig	2019-08-06 17:26:35.000000000 +0000
+--- configure.ac.orig	2020-01-22 23:14:16.000000000 +0000
 +++ configure.ac
-@@ -4293,6 +4293,11 @@ haiku*)
-     P_SEP=:
- 
-     case "$host_cpu" in
+@@ -4526,6 +4526,11 @@ linux-android*)
+         RTL_ARCH=X86_64
+         PLATFORMID=netbsd_x86_64
+         ;;
 +    aarch64)
 +        CPUNAME=AARCH64
 +        RTL_ARCH=AARCH64
 +        PLATFORMID=netbsd_aarch64
 +        ;;
-     i*86)
-         CPUNAME=INTEL
-         RTL_ARCH=x86
-@@ -6236,14 +6241,14 @@ if test "$GCC" = "yes" -o "$COM_IS_CLANG
-         ], [AC_MSG_RESULT([no])])
-     AC_LANG_POP([C++])
+     *)
+         AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
+         ;;
+@@ -4923,6 +4928,7 @@ fi
+ AC_SUBST(ENABLE_CUPS)
  
--    AC_MSG_CHECKING([whether $CXX defines __cxa_exceptions in cxxabi.h])
-+    AC_MSG_CHECKING([whether $CXX defines __cxa_exception in cxxabi.h])
-     AC_LANG_PUSH([C++])
-     AC_COMPILE_IFELSE([AC_LANG_SOURCE([
-             #include <cstddef>
-             #include <cxxabi.h>
--            std::size_t f() { return sizeof(__cxxabiv1::__cxa_exceptions); }
-+            std::size_t f() { return sizeof(__cxxabiv1::__cxa_exception); }
-         ])], [
--            AC_DEFINE([HAVE_CXXABI_H_CXA_EXCEPTIONS],[1])
-+            AC_DEFINE([HAVE_CXXABI_H_CXA_EXCEPTION],[1])
-             AC_MSG_RESULT([yes])
-         ], [AC_MSG_RESULT([no])])
-     AC_LANG_POP([C++])
-@@ -6405,7 +6410,7 @@ CXXFLAGS_CXX11=
+ # fontconfig checks
++#test_fontconfig=no
+ if test "$test_fontconfig" = "yes"; then
+     PKG_CHECK_MODULES([FONTCONFIG], [fontconfig >= 2.4.1])
+     SYSTEM_FONTCONFIG=TRUE
+@@ -6446,7 +6452,7 @@ CXXFLAGS_CXX11=
  if test "$COM" = MSC -a "$COM_IS_CLANG" != TRUE; then
      CXXFLAGS_CXX11='-std:c++17 -Zc:__cplusplus'
  elif test "$GCC" = "yes" -o "$COM_IS_CLANG" = TRUE; then
--    my_flags='-std=gnu++2a -std=c++2a -std=gnu++17 -std=gnu++1z -std=c++17 -std=c++1z'
-+    my_flags='-std=gnu++17 -std=gnu++1z -std=c++17 -std=c++1z'
+-    my_flags='-std=c++2a -std=c++17 -std=c++1z'
++    my_flags='-std=gnu++17 -std=gnu++1z'
      for flag in $my_flags; do
          if test "$COM" = MSC; then
              flag="-Xclang $flag"
-@@ -6474,7 +6479,11 @@ elif test "$GCC" = "yes" -o "$COM_IS_CLA
-             // solenv/gbuild/platform/LINUX_INTEL_GCC.mk), std=gnu* would cause math_errhandling to
-             // get undef'ed in /usr/include/bits/mathinline.h, while std=c* keeps it defined (as
-             // needed by sc/source/core/tool/math.cxx):
-+#if defined(__NetBSD__)
-+            int g() { return 1; }
-+#else
-             int g() { return math_errhandling; }
-+#endif
-             ]])],[CXXFLAGS_CXX11=$flag $my_float128hack])
-         AC_LANG_POP([C++])
-         CXXFLAGS=$save_CXXFLAGS
-@@ -8017,7 +8026,7 @@ else
+@@ -8097,7 +8103,7 @@ else
      if test "$COM" = "MSC"; then
          LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/libjpeg-turbo/.libs/libjpeg.lib"
      else
@@ -72,7 +49,24 @@ NetBSD has no math_errhandling support yet.
      fi
  
      case "$host_cpu" in
-@@ -9586,11 +9595,11 @@ dnl HarfBuzz
+@@ -8409,6 +8415,7 @@ fi
+ dnl ===================================================================
+ dnl Check whether freetype is available
+ dnl ===================================================================
++#test_freetype=no
+ if test  "$test_freetype" = "yes"; then
+     AC_MSG_CHECKING([whether freetype is available])
+     # FreeType has 3 different kinds of versions
+@@ -8425,7 +8432,7 @@ if test  "$test_freetype" = "yes"; then
+     SYSTEM_FREETYPE=TRUE
+ else
+     FREETYPE_CFLAGS="${ISYSTEM}${WORKDIR}/UnpackedTarball/freetype/include"
+-    FREETYPE_LIBS="-L${WORKDIR}/UnpackedTarball/freetype/instdir/lib -lfreetype"
++    FREETYPE_LIBS="${WORKDIR}/UnpackedTarball/freetype/instdir/lib/libfreetype.a"
+ fi
+ AC_SUBST(FREETYPE_CFLAGS)
+ AC_SUBST(FREETYPE_LIBS)
+@@ -9685,11 +9692,11 @@ dnl HarfBuzz
  dnl ===================================================================
  libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3],
                           ["-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"],
@@ -86,16 +80,7 @@ NetBSD has no math_errhandling support yet.
  
  if test "$COM" = "MSC"; then # override the above
      GRAPHITE_LIBS="${WORKDIR}/LinkTarget/StaticLibrary/graphite.lib"
-@@ -10825,7 +10834,7 @@ elif test "$enable_mpl_subset" = "yes"; 
- elif test "$enable_fuzzers" = "yes"; then
-     AC_MSG_CHECKING([whether gpgmepp should be disabled due to oss-fuzz])
-     AC_MSG_RESULT([yes])
--elif test "$_os" = "Linux" -o "$_os" = "Darwin" -o "$_os" = "WINNT" ; then
-+elif test "$_os" = "Linux" -o "$_os" = "Darwin" -o "$_os" = "WINNT" -o "$_os" = "NetBSD" ; then
-     dnl ===================================================================
-     dnl Check for system gpgme
-     dnl ===================================================================
-@@ -10835,7 +10844,7 @@ elif test "$_os" = "Linux" -o "$_os" = "
+@@ -10898,7 +10905,7 @@ elif test "$_os" = "Linux" -o "$_os" = "
          SYSTEM_GPGMEPP=TRUE
  
          # C++ library doesn't come with fancy gpgmepp-config, check for headers the old-fashioned way
@@ -104,14 +89,14 @@ NetBSD has no math_errhandling support yet.
              [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp development package])], [])
          # progress_callback is the only func with plain C linkage
          # checking for it also filters out older, KDE-dependent libgpgmepp versions
-@@ -11885,8 +11894,8 @@ EOF
-     dnl Checking for ant.jar
-     if test "$ANT_HOME" != "NO_ANT_HOME"; then
-         AC_MSG_CHECKING([Ant lib directory])
--        if test -f $ANT_HOME/lib/ant.jar; then
--            ANT_LIB="$ANT_HOME/lib"
-+        if test -f $ANT_HOME/lib/java/ant/ant.jar; then
-+            ANT_LIB="$ANT_HOME/lib/java/ant"
-         else
-             if test -f $ANT_HOME/ant.jar; then
-                 ANT_LIB="$ANT_HOME"
+@@ -11965,8 +11972,8 @@ EOF
+                     if test -f /usr/share/ant-core/lib/ant.jar; then
+                         ANT_LIB=/usr/share/ant-core/lib
+                     else
+-                        if test -f $ANT_HOME/lib/ant/ant.jar; then
+-                            ANT_LIB="$ANT_HOME/lib/ant"
++                        if test -f $ANT_HOME/lib/java/ant/ant.jar; then
++                            ANT_LIB="$ANT_HOME/lib/java/ant"
+                         else
+                             if test -f /usr/share/lib/ant/ant.jar; then
+                                 ANT_LIB=/usr/share/lib/ant

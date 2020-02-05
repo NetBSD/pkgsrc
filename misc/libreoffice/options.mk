@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2019/11/03 17:04:23 rillig Exp $
+# $NetBSD: options.mk,v 1.9 2020/02/05 14:10:35 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 PKG_SUPPORTED_OPTIONS=	java debug gtk3 cups
@@ -18,10 +18,10 @@ PLIST_VARS+=	java gtk3 cups
 USE_JAVA=		yes
 USE_JAVA2=		yes
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
-CONFIGURE_ARGS+=	--with-ant-home=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-ant-home=${PREFIX}
 
 DEPENDS+=		hsqldb18-[0-9]*:../../databases/hsqldb18
-CONFIGURE_ARGS+=	--with-hsqldb-jar=${LOCALBASE}/lib/java/hsqldb18/hsqldb.jar
+CONFIGURE_ARGS+=	--with-hsqldb-jar=${PREFIX}/lib/java/hsqldb18/hsqldb.jar
 CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--with-java \
 			--with-jdk-home=${PKG_JAVA_HOME} \
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--enable-scripting-beanshell \
 			--with-system-hsqldb \
 			--without-system-jfreereport
-PLIST_SRC+=		${PLIST_SRC_DFLT:Q} ${PKGDIR}/PLIST.java
+PLIST_SRC=		${PLIST_SRC_DFLT:Q} ${PKGDIR}/PLIST.java
 PLIST.java=		yes
 .else
 CONFIGURE_ARGS+=	--without-java
@@ -37,7 +37,6 @@ CONFIGURE_ARGS+=	--without-java
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
-CONFIGURE_ARGS+=	--enable-selective-debuginfo="all"
 PLIST_SRC=		${PLIST_SRC_DFLT:Q} ${PKGDIR}/PLIST.debug
 .else
 CONFIGURE_ARGS+=	--enable-release-build
