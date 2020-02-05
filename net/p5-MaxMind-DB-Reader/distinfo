@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/21 10:29:23 he Exp $
+$NetBSD: distinfo,v 1.2 2020/02/05 09:29:11 fcambus Exp $
 
-SHA1 (MaxMind-DB-Reader-1.000013.tar.gz) = 42869045bc27aecc2e0b0040ddb40fc3d8824796
-RMD160 (MaxMind-DB-Reader-1.000013.tar.gz) = 1233b04e239d32ff6f973d7c3ebf8aa97d5b4f18
-SHA512 (MaxMind-DB-Reader-1.000013.tar.gz) = 845bfe3535afe177c21b7b52012be4dc1044bf13fe9baaa48e0c73a7c8fde23b5ee50ba7a41c690d81d4a2bef579cfccaadfef2286cc98f18c38a587fc8e3aa0
-Size (MaxMind-DB-Reader-1.000013.tar.gz) = 276879 bytes
+SHA1 (MaxMind-DB-Reader-1.000014.tar.gz) = 3f29d41723db707f769a548e77eaddf6d275dcad
+RMD160 (MaxMind-DB-Reader-1.000014.tar.gz) = aff0c9489bc7ba4e7f498418dc1ae86e5171e8bb
+SHA512 (MaxMind-DB-Reader-1.000014.tar.gz) = 3cafa359668497b046d2ead814df03350f323fa67dc3f14b7d9d9297f406d0a0b6fcd7f05b36b05a8e087b112c32579d591fe20a368f4ea760e142ccd0802d86
+Size (MaxMind-DB-Reader-1.000014.tar.gz) = 230327 bytes
