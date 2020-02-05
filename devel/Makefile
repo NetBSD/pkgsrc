@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3041 2020/02/03 12:36:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3042 2020/02/05 13:33:44 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2837,6 +2837,7 @@ SUBDIR+=	snappy-java10
 SUBDIR+=	sofia-sip
 SUBDIR+=	sparse
 SUBDIR+=	sparsehash
+SUBDIR+=	spdlog
 SUBDIR+=	spiff
 SUBDIR+=	spin
 SUBDIR+=	splint
