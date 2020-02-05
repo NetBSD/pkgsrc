@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.218 2020/01/18 21:50:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.219 2020/02/05 14:10:35 ryoon Exp $
 
-VERREL=		6.3.4
-VERRC=		2
+VERREL=		6.4.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -14,7 +13,7 @@ HOMEPAGE=	https://www.libreoffice.org/
 COMMENT=	Office productivity suite from The Document Foundation
 LICENSE=	gnu-lgpl-v3
 
-USE_LANGUAGES=	c gnu++11
+USE_LANGUAGES=	c gnu++17
 
 SUBST_CLASSES+=			use-bash
 SUBST_STAGE.use-bash=		pre-configure
@@ -33,23 +32,12 @@ SUBST_VARS.font-path+=		X11BASE
 GCC_REQD+=	7
 
 .include "../../mk/bsd.prefs.mk"
-
-CHECK_BUILTIN.freetype2:=	yes
-.include "../../graphics/freetype2/builtin.mk"
-CHECK_BUILTIN.freetype2:=	no
-.if !empty(USE_BUILTIN.freetype2:M[Yy][Ee][Ss]) && \
-	!empty(BUILTIN_VERSION.freetype2:M2.10.0)
-CFLAGS+=			-D_FT_CONST=
-.else
-CFLAGS+=			-D_FT_CONST=const
-.endif
-
 .if !empty(MACHINE_PLATFORM:MNetBSD*)
 pre-build:
 	cd ${WRKSRC} && ${BUILD_MAKE_CMD} Executable_gengal && ${TOOLS_PLATFORM.paxctl} +m instdir/program/gengal.bin
 .endif
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 CHECK_SHLIBS_SUPPORTED=	no
 # configure will be regenerated.
@@ -118,7 +106,7 @@ MORE_DISTFILES= \
 	lxml-4.1.1.tgz \
 	Amiri-0.111.zip \
 	ReemKufi-0.7.zip \
-	pdfium-3794.tar.bz2
+	pdfium-3963.tar.bz2
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
@@ -193,9 +181,9 @@ CONFIGURE_ARGS+=	--disable-sdremote-bluetooth
 CONFIGURE_ARGS+=	--disable-gio
 # Use PDFium instead of poppler for PDF import since 6.3.2.2nb1
 CONFIGURE_ARGS+=	--enable-pdfium --disable-poppler
+#CONFIGURE_ARGS+=	--disable-pdfium --disable-poppler --disable-pdfimport
 CONFIGURE_ARGS+=	--enable-gstreamer-1-0
 CONFIGURE_ARGS+=	--enable-python=system
-#CONFIGURE_ARGS+=	--enable-release-build
 CONFIGURE_ARGS+=	--enable-ext-wiki-publisher
 CONFIGURE_ARGS+=	--enable-ext-nlpsolver
 CONFIGURE_ARGS+=	--with-system-gpgmepp
@@ -362,6 +350,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/qr-code-generator/buildlink3.mk"
 #.include "../../graphics/sane-backends/buildlink3.mk"
 #.include "../../graphics/vigra/buildlink3.mk"
 .include "../../lang/python/application.mk"
@@ -401,7 +390,7 @@ BUILDLINK_API_DEPENDS.libodfgen+=       libodfgen>=0.1.4
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
 .include "../../www/serf/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
