@@ -1,21 +1,20 @@
-$NetBSD: distinfo,v 1.30 2016/08/15 19:29:13 ryoon Exp $
+$NetBSD: distinfo,v 1.31 2020/02/05 06:18:34 rillig Exp $
 
-SHA1 (binutils-2.26.1.tar.bz2) = 624cd377e3a8eef3db83a56ce289a60f556b3ec2
-RMD160 (binutils-2.26.1.tar.bz2) = a4933fbd12056edc1933d3a5379cd7a2cffef185
-SHA512 (binutils-2.26.1.tar.bz2) = 9d9165609fd3b0f20d616f9891fc8e2b466eb13e2bfce40125e12427f8f201d20e2b8322bb6cb2b45e8df812f0e8ac059149f8a1f69ba3ed9d86a35c6a540b67
-Size (binutils-2.26.1.tar.bz2) = 25595243 bytes
-SHA1 (patch-aa) = e748bbffa21146cf5c0c50c912f1d84c411fd55c
+SHA1 (binutils-2.34.tar.bz2) = 361566c9ab5e90bd847d06f46fb9f18ec6c3ecf0
+RMD160 (binutils-2.34.tar.bz2) = e99f517407503cec1042a2e824b7c1f8f0fca4b8
+SHA512 (binutils-2.34.tar.bz2) = f47e7304e102c7bbc97958a08093e27796b9051d1567ce4fbb723d39ef3e29efa325ee14a1bdcc462a925a7f9bbbc9aee28294c6dc23850f371030f3835a8067
+Size (binutils-2.34.tar.bz2) = 32430470 bytes
 SHA1 (patch-bfd_cache.c) = 20988e84ff2a1d7ff83b5adb04e4f117953205b8
-SHA1 (patch-bfd_config.bfd) = 2ca06a7755dffd88344df72206917befff12ae91
+SHA1 (patch-bfd_config.bfd) = 4525214f9e7debd5cccaf1af55d04c1a5ff7a42d
 SHA1 (patch-bfd_configure) = 37777852c63bb5b13c76f4085f1e43d50ce88920
 SHA1 (patch-bfd_configure.ac) = 742e4c118f6a00b646799862172ffa70a867cf0f
-SHA1 (patch-bfd_elf32-arm.c) = 8d90dd77cb4925db71def94d2d32cbe3e1cfb69e
-SHA1 (patch-configure.ac) = 1524f06882f41012ef2bbf960739a4f1f03659c4
-SHA1 (patch-gas_configure.tgt) = 056713626741047d7aba48fe29c471e294a0446d
-SHA1 (patch-gold_Makefile.in) = aef43853a28450c496cc39a70d18f4cb1911ee3d
-SHA1 (patch-gold_options.h) = 71b28e8090df0a431354cc47b2897979773b8bd6
+SHA1 (patch-configure) = 0adf4ebf23385ca67b32655d23dd21204d2a4618
+SHA1 (patch-configure.ac) = b2cb10dafcabf0b743ae0c241fed2f226bc759ab
+SHA1 (patch-gas_configure.tgt) = 3a3a6fde98a457c76b70e74842ce952b0046eeda
+SHA1 (patch-gold_Makefile.in) = be0ec82e1d16c6eae50153d339c8eb29aaca42d0
+SHA1 (patch-gold_options.h) = ea98204c747b2d568e0f5ab7f64cc77c4341a744
 SHA1 (patch-gold_resolve.cc) = d93ce96cf97289f8947707f4ff3f5a837d8cb4de
 SHA1 (patch-gold_system.h) = 9151878fe25dfee33f839cd63e465d30481dda7a
 SHA1 (patch-include_safe-ctype.h) = d0fcfb2830f0c90816f63906f618a1d6df010a9f
-SHA1 (patch-ld_configure.tgt) = 06ac3cbb3c397123a6a4a3fdb19828f074282c60
+SHA1 (patch-ld_configure.tgt) = 3b07ceb304c65f26b02af7385c68f8bd518b6647
 SHA1 (patch-libiberty_Makefile.in) = 59c479e6fe491e17837d421f5b4b25a81dc5e7c9

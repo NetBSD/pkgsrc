@@ -1,25 +1,25 @@
-$NetBSD: patch-bfd_config.bfd,v 1.2 2016/01/30 22:15:11 ryoon Exp $
+$NetBSD: patch-bfd_config.bfd,v 1.3 2020/02/05 06:18:34 rillig Exp $
 
 Add Bitrig/amd64 support
 https://sourceware.org/bugzilla/show_bug.cgi?id=18920
 
---- bfd/config.bfd.orig	2015-11-13 08:27:40.000000000 +0000
+--- bfd/config.bfd.orig
 +++ bfd/config.bfd
-@@ -635,7 +635,7 @@ case "${targ}" in
-     targ_selvecs="i386_elf32_vec iamcu_elf32_vec i386_aout_bsd_vec"
-     targ_underscore=yes
+@@ -628,7 +628,7 @@
+     targ_defvec=i386_pe_vec
+     targ_selvecs="i386_pe_vec i386_pei_vec i386_elf32_vec iamcu_elf32_vec"
      ;;
 -  i[3-7]86-*-openbsd*)
 +  i[3-7]86-*-openbsd* | i[3-7]86-*-bitrig*)
      targ_defvec=i386_elf32_vec
-     targ_selvecs="iamcu_elf32_vec i386_aout_nbsd_vec"
+     targ_selvecs="iamcu_elf32_vec"
      ;;
-@@ -690,7 +690,7 @@ case "${targ}" in
+@@ -683,7 +683,7 @@
      targ_selvecs="i386_elf32_fbsd_vec iamcu_elf32_vec i386_coff_vec i386_pei_vec x86_64_pei_vec i386_elf32_vec x86_64_elf64_vec l1om_elf64_vec l1om_elf64_fbsd_vec k1om_elf64_vec k1om_elf64_fbsd_vec"
      want64=true
      ;;
 -  x86_64-*-netbsd* | x86_64-*-openbsd*)
 +  x86_64-*-netbsd* | x86_64-*-openbsd* | x86_64-*-bitrig*)
      targ_defvec=x86_64_elf64_vec
-     targ_selvecs="i386_elf32_vec iamcu_elf32_vec i386_aout_nbsd_vec i386_coff_vec i386_pei_vec x86_64_pei_vec l1om_elf64_vec k1om_elf64_vec"
+     targ_selvecs="i386_elf32_vec iamcu_elf32_vec i386_coff_vec i386_pei_vec x86_64_pei_vec l1om_elf64_vec k1om_elf64_vec"
      want64=true

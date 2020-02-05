@@ -1,26 +1,14 @@
-$NetBSD: patch-gold_Makefile.in,v 1.3 2016/02/03 19:56:34 jperkin Exp $
+$NetBSD: patch-gold_Makefile.in,v 1.4 2020/02/05 06:18:34 rillig Exp $
 
  Don't bail out on the deprecation warnings for <ext/hash_map>
 
  Don't use hard-coded -ldl.
 
---- gold/Makefile.in.orig	2015-11-13 08:27:42.000000000 +0000
-+++ gold/Makefile.in
-@@ -345,7 +345,7 @@ TARGETOBJS = @TARGETOBJS@
- USE_NLS = @USE_NLS@
- VERSION = @VERSION@
- WARN_CFLAGS = @WARN_CFLAGS@
+--- gold/Makefile.in.orig	2020-01-18 14:04:33.000000000 +0000
++++ gold/Makefile.in	2020-02-05 05:05:43.822117256 +0000
+@@ -593,1 +593,1 @@
 -WARN_CXXFLAGS = @WARN_CXXFLAGS@
 +WARN_CXXFLAGS = @WARN_CXXFLAGS@ -Wno-deprecated
- XGETTEXT = @XGETTEXT@
- YACC = @YACC@
- YFLAGS = @YFLAGS@
-@@ -427,7 +427,7 @@ AM_CPPFLAGS = \
- 	-DTOOLLIBDIR="\"$(tooldir)/lib\"" @INCINTL@
- 
- LIBIBERTY = ../libiberty/libiberty.a
+@@ -680,1 +680,1 @@
 -@PLUGINS_TRUE@LIBDL = @DLOPEN_LIBS@
 +@PLUGINS_TRUE@LIBDL = ${DL_LDFLAGS}
- @THREADS_TRUE@THREADSLIB = -lpthread
- AM_YFLAGS = -d
- 
