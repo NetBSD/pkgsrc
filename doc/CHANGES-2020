@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.928 2020/02/05 09:29:22 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.929 2020/02/05 13:17:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1345,3 +1345,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/binutils to 2.34 [rillig 2020-02-05]
 	Updated devel/xa65 to 2.3.10 [fcambus 2020-02-05]
 	Updated net/p5-MaxMind-DB-Reader to 1.000014 [fcambus 2020-02-05]
+	Added graphics/qr-code-generator version 1.4.0 [ryoon 2020-02-05]
