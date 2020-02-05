@@ -58,6 +58,9 @@ type LogLevel struct {
 }
 
 var (
+	// FIXME: By definition there cannot be fatal diagnostics.
+	//  Having these was a misconception from the beginning,
+	//  and they must be re-classified as fatal technical errors.
 	Fatal           = &LogLevel{"FATAL", "fatal"}
 	Error           = &LogLevel{"ERROR", "error"}
 	Warn            = &LogLevel{"WARN", "warning"}
