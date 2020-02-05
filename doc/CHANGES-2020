@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.943 2020/02/05 14:44:26 taca Exp $
+$NetBSD: CHANGES-2020,v 1.944 2020/02/05 14:54:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1361,3 +1361,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/ruby-sequel to 5.29.0 [taca 2020-02-05]
 	Updated devel/ruby-byebug to 11.1.1 [taca 2020-02-05]
 	Updated devel/ruby-ffi to 1.12.2 [taca 2020-02-05]
+	Updated devel/ruby-gettext to 3.3.3 [taca 2020-02-05]
