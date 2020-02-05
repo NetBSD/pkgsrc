@@ -1,15 +1,9 @@
-$NetBSD: patch-configure.ac,v 1.2 2016/01/30 22:15:11 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.3 2020/02/05 06:18:34 rillig Exp $
 
 Remove etc
 
 --- configure.ac.orig	2016-01-25 08:57:16.000000000 +0000
 +++ configure.ac
-@@ -140,7 +140,7 @@ host_libs="intl libiberty opcodes bfd re
- # binutils, gas and ld appear in that order because it makes sense to run
- # "make check" in that particular order.
- # If --enable-gold is used, "gold" may replace "ld".
+@@ -143,1 +140,1 @@
 -host_tools="flex bison binutils gas ld fixincludes gcc cgen sid sim gdb gprof etc expect dejagnu m4 utils guile fastjar gnattools libcc1 gotools"
 +host_tools="flex bison binutils gas ld fixincludes gcc cgen sid sim gdb gprof expect dejagnu m4 utils guile fastjar gnattools libcc1 gotools"
- 
- # libgcj represents the runtime libraries only used by gcj.
- libgcj="target-libffi \
