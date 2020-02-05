@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2020/01/16 15:18:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.75 2020/02/05 14:40:29 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -99,6 +99,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.25.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.26.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.27.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.28.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.29.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.5.0.txt
@@ -311,6 +312,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/delay_add_association.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/dirty.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/eager_each.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/eager_graph_eager.rb
+${GEM_LIBDIR}/lib/sequel/plugins/empty_failure_backtraces.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/error_splitter.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/finder.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/force_encoding.rb
@@ -437,6 +439,7 @@ ${GEM_LIBDIR}/spec/extensions/duplicate_columns_handler_spec.rb
 ${GEM_LIBDIR}/spec/extensions/eager_each_spec.rb
 ${GEM_LIBDIR}/spec/extensions/eager_graph_eager_spec.rb
 ${GEM_LIBDIR}/spec/extensions/empty_array_consider_nulls_spec.rb
+${GEM_LIBDIR}/spec/extensions/empty_failure_backtraces_spec.rb
 ${GEM_LIBDIR}/spec/extensions/error_splitter_spec.rb
 ${GEM_LIBDIR}/spec/extensions/error_sql_spec.rb
 ${GEM_LIBDIR}/spec/extensions/escaped_like_spec.rb
