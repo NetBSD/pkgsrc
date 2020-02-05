@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.922 2020/02/04 17:25:21 adam Exp $
+$NetBSD: CHANGES-2020,v 1.923 2020/02/05 03:27:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1339,3 +1339,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-dialog2 to 3.5.1 [adam 2020-02-04]
 	Updated www/py-django to 1.11.28 [adam 2020-02-04]
 	Updated www/py-django2 to 2.2.10 [adam 2020-02-04]
+	Updated devel/nspr to 4.25 [ryoon 2020-02-05]
