@@ -1,19 +1,19 @@
-$NetBSD: patch-ld_configure.tgt,v 1.4 2016/01/30 22:15:11 ryoon Exp $
+$NetBSD: patch-ld_configure.tgt,v 1.5 2020/02/05 06:18:34 rillig Exp $
 
 Add Bitrig/amd64 support
 https://sourceware.org/bugzilla/show_bug.cgi?id=18920
 
---- ld/configure.tgt.orig	2015-11-13 08:27:42.000000000 +0000
+--- ld/configure.tgt.orig
 +++ ld/configure.tgt
-@@ -309,6 +309,11 @@ x86_64-*-netbsd*)	targ_emul=elf_x86_64
- 			*)		tdir_elf_i386=`echo ${tdir_elf_i386} | \
- 				        sed -e 's/netbsd/netbsdelf/'`;;
- 			esac ;;
+@@ -354,6 +354,11 @@
+ i[3-7]86-*-netbsdpe*)	targ_emul=i386pe
+ 			targ_extra_ofiles="deffilep.o pe-dll.o"
+ 			;;
 +i[3-7]86-*-bitrig*)	targ_emul=i386nbsd
 +			targ_extra_emuls=elf_i386 ;;
 +x86_64-*-bitrig*)	targ_emul=elf_x86_64
 +			targ_extra_emuls="elf_i386 i386nbsd elf_l1om elf_k1om"
 +			;;
- i[3-7]86-*-netware)	targ_emul=i386nw ;;
  i[3-7]86-*-elfiamcu)	targ_emul=elf_iamcu
- 			targ_extra_emuls=elf_i386 ;;
+ 			targ_extra_emuls=elf_i386
+ 			;;
