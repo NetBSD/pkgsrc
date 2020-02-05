@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19659 2020/02/05 06:18:45 rillig Exp $
+$NetBSD: TODO,v 1.19660 2020/02/05 09:12:32 fcambus Exp $
 
 Suggested new packages
 ======================
@@ -1205,7 +1205,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wxRemind-101
 	o x264-devel-20191217
 	o x2vnc-1.31
-	o xa65-2.3.7
 	o xaric-0.13.7
 	o xcoral-3.14
 	o xerces-j-2.4.0 [pkg/21725]
