@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/02/05 08:04:17 he Exp $
+
+Don't use non-portable test operator ==.
+
+--- Makefile.in.orig	2018-06-28 10:02:41.000000000 +0000
++++ Makefile.in
+@@ -1238,7 +1238,7 @@ check-translations:
+ 			RET=1;										\
+ 		fi;											\
+ 	done;												\
+-	if [ $$RET == 1 ] ; then exit 1; fi
++	if [ $$RET = 1 ] ; then exit 1; fi
+ 
+ update-translations: create-pot
+ 	@tx pull --all --force --skip
