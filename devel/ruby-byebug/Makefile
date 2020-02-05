@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/01/20 15:31:33 taca Exp $
+# $NetBSD: Makefile,v 1.10 2020/02/05 14:42:16 taca Exp $
 
-DISTNAME=	byebug-11.1.0
+DISTNAME=	byebug-11.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
