@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2017/06/05 14:15:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/02/05 15:21:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
+${GEM_LIBDIR}/.tool-versions
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -52,6 +54,7 @@ ${GEM_LIBDIR}/public/smoothness/images/ui-icons_cd0a0a_256x240.png
 ${GEM_LIBDIR}/simplecov-html.gemspec
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_simple_cov-html.rb
+${GEM_LIBDIR}/views/covered_percent.erb
 ${GEM_LIBDIR}/views/file_list.erb
 ${GEM_LIBDIR}/views/layout.erb
 ${GEM_LIBDIR}/views/source_file.erb
