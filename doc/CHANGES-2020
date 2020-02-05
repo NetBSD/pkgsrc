@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.924 2020/02/05 03:32:26 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.925 2020/02/05 04:09:11 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1341,3 +1341,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-django2 to 2.2.10 [adam 2020-02-04]
 	Updated devel/nspr to 4.25 [ryoon 2020-02-05]
 	Updated devel/nss to 3.49.2 [ryoon 2020-02-05]
+	Updated pkgtools/pkglint to 19.4.7 [rillig 2020-02-05]
