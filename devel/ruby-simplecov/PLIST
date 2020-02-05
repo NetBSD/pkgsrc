@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.13 2019/11/02 14:51:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/02/05 15:22:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CODE_OF_CONDUCT.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/ISSUE_TEMPLATE.md
 ${GEM_LIBDIR}/LICENSE
@@ -9,8 +10,14 @@ ${GEM_LIBDIR}/doc/alternate-formatters.md
 ${GEM_LIBDIR}/doc/commercial-services.md
 ${GEM_LIBDIR}/doc/editor-integration.md
 ${GEM_LIBDIR}/lib/simplecov.rb
+${GEM_LIBDIR}/lib/simplecov/combine.rb
+${GEM_LIBDIR}/lib/simplecov/combine/branches_combiner.rb
+${GEM_LIBDIR}/lib/simplecov/combine/files_combiner.rb
+${GEM_LIBDIR}/lib/simplecov/combine/lines_combiner.rb
+${GEM_LIBDIR}/lib/simplecov/combine/results_combiner.rb
 ${GEM_LIBDIR}/lib/simplecov/command_guesser.rb
 ${GEM_LIBDIR}/lib/simplecov/configuration.rb
+${GEM_LIBDIR}/lib/simplecov/coverage_statistics.rb
 ${GEM_LIBDIR}/lib/simplecov/defaults.rb
 ${GEM_LIBDIR}/lib/simplecov/exit_codes.rb
 ${GEM_LIBDIR}/lib/simplecov/file_list.rb
@@ -18,7 +25,6 @@ ${GEM_LIBDIR}/lib/simplecov/filter.rb
 ${GEM_LIBDIR}/lib/simplecov/formatter.rb
 ${GEM_LIBDIR}/lib/simplecov/formatter/multi_formatter.rb
 ${GEM_LIBDIR}/lib/simplecov/formatter/simple_formatter.rb
-${GEM_LIBDIR}/lib/simplecov/jruby_fix.rb
 ${GEM_LIBDIR}/lib/simplecov/last_run.rb
 ${GEM_LIBDIR}/lib/simplecov/lines_classifier.rb
 ${GEM_LIBDIR}/lib/simplecov/load_global_config.rb
@@ -29,11 +35,13 @@ ${GEM_LIBDIR}/lib/simplecov/profiles/hidden_filter.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles/rails.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles/root_filter.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles/test_frameworks.rb
-${GEM_LIBDIR}/lib/simplecov/railtie.rb
-${GEM_LIBDIR}/lib/simplecov/railties/tasks.rake
-${GEM_LIBDIR}/lib/simplecov/raw_coverage.rb
 ${GEM_LIBDIR}/lib/simplecov/result.rb
+${GEM_LIBDIR}/lib/simplecov/result_adapter.rb
 ${GEM_LIBDIR}/lib/simplecov/result_merger.rb
+${GEM_LIBDIR}/lib/simplecov/simulate_coverage.rb
 ${GEM_LIBDIR}/lib/simplecov/source_file.rb
+${GEM_LIBDIR}/lib/simplecov/source_file/branch.rb
+${GEM_LIBDIR}/lib/simplecov/source_file/line.rb
+${GEM_LIBDIR}/lib/simplecov/useless_results_remover.rb
 ${GEM_LIBDIR}/lib/simplecov/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
