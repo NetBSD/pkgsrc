@@ -132,14 +132,8 @@ func (s *Suite) Test_HomepageChecker_checkHttp(c *check.C) {
 		"http://asf.net/")
 
 	vt.Output(
-		"WARN: filename.mk:2: HOMEPAGE should migrate from http to https.",
-		"WARN: filename.mk:3: HOMEPAGE should migrate "+
-			"from http://project.sourceforge.net "+
-			"to https://project.sourceforge.io.",
-		"WARN: filename.mk:4: HOMEPAGE should migrate "+
-			"from http://sf.net to https://sourceforge.net.",
-		"WARN: filename.mk:5: HOMEPAGE should migrate from http to https.",
-		"WARN: filename.mk:8: HOMEPAGE should migrate from http to https.")
+		"WARN: filename.mk:4: HOMEPAGE should migrate " +
+			"from http://sf.net to https://sourceforge.net.")
 
 	t.SetUpCommandLine("--autofix")
 	vt.Values(
@@ -162,38 +156,119 @@ func (s *Suite) Test_HomepageChecker_checkHttp(c *check.C) {
 		"AUTOFIX: filename.mk:18: Replacing \"http\" with \"https\".")
 }
 
-func (s *Suite) Test_HomepageChecker_toHttps(c *check.C) {
+func (s *Suite) Test_HomepageChecker_migrate(c *check.C) {
 	t := s.Init(c)
 
-	test := func(url string, shouldAutofix bool, from, to string) {
-		toHttps := (*HomepageChecker).toHttps
-		actualShouldAutofix, actualFrom, actualTo := toHttps(nil, url)
-		t.CheckDeepEquals(
-			[]interface{}{actualShouldAutofix, actualFrom, actualTo},
-			[]interface{}{shouldAutofix, from, to})
+	reachable := map[string]YesNoUnknown{}
+	used := map[string]bool{}
+
+	isReachable := func(url string) YesNoUnknown {
+		if r, ok := reachable[url]; ok {
+			used[url] = true
+			return r
+		}
+		panic(url)
 	}
 
-	test("http://localhost/", false, "http", "https")
+	test := func(url string, migrate bool, from, to string) {
+		ck := NewHomepageChecker(url, url, nil, nil)
+		ck.isReachable = isReachable
 
+		actualMigrate, actualFrom, actualTo := ck.migrate(url)
+
+		t.CheckDeepEquals(
+			[]interface{}{actualMigrate, actualFrom, actualTo},
+			[]interface{}{migrate, from, to})
+
+		for key, _ := range reachable {
+			assertf(used[key], "Reachability of %q was not used.", key)
+			delete(reachable, key)
+		}
+	}
+
+	reachable["https://localhost/"] = unknown
+	test(
+		"http://localhost/",
+		false,
+		"",
+		"")
+
+	reachable["https://localhost/"] = yes
+	test(
+		"http://localhost/",
+		true,
+		"http",
+		"https")
+
+	reachable["https://project.sourceforge.io/"] = unknown
 	test(
 		"http://project.sourceforge.net/",
 		false,
+		"",
+		"")
+
+	reachable["https://project.sourceforge.io/"] = yes
+	test(
+		"http://project.sourceforge.net/",
+		true,
 		"http://project.sourceforge.net",
 		"https://project.sourceforge.io")
 
 	// To clean up the wrong autofix from 2020-01-18:
 	// https://mail-index.netbsd.org/pkgsrc-changes/2020/01/18/msg205146.html
+	reachable["https://project.sourceforge.io/"] = yes
 	test(
 		"https://project.sourceforge.net/",
-		false,
+		true,
 		"sourceforge.net",
 		"sourceforge.io")
 
+	// To clean up the wrong autofix from 2020-01-18:
+	// https://mail-index.netbsd.org/pkgsrc-changes/2020/01/18/msg205146.html
+	//
+	// If neither of the https URLs is reachable, the homepage
+	// is rolled back to the http URL.
+	reachable["https://project.sourceforge.io/"] = no
+	reachable["http://project.sourceforge.net/"] = yes
+	reachable["https://project.sourceforge.net/"] = no
+	test(
+		"https://project.sourceforge.net/",
+		true,
+		"https",
+		"http")
+
+	// To clean up the wrong autofix from 2020-01-18:
+	// https://mail-index.netbsd.org/pkgsrc-changes/2020/01/18/msg205146.html
+	//
+	// If the https URL of sourceforge.net is reachable,
+	// it is preferred over the http URL,
+	// even though it is not mentioned in the SourceForge documentation.
+	reachable["https://project.sourceforge.io/"] = no
+	reachable["http://project.sourceforge.net/"] = yes
+	reachable["https://project.sourceforge.net/"] = yes
+	test(
+		"https://project.sourceforge.net/",
+		false,
+		"",
+		"")
+
+	// To clean up the wrong autofix from 2020-01-18:
+	// https://mail-index.netbsd.org/pkgsrc-changes/2020/01/18/msg205146.html
+	reachable["https://project.sourceforge.io/"] = no
+	reachable["http://project.sourceforge.net/"] = no
+	test(
+		"https://project.sourceforge.net/",
+		false,
+		"",
+		"")
+
+	// Since the URL contains a variable, it cannot be resolved.
+	// Therefore it is skipped without any HTTP request being sent.
 	test(
 		"http://godoc.org/${GO_SRCPATH}",
 		false,
-		"http",
-		"https")
+		"",
+		"")
 }
 
 func (s *Suite) Test_HomepageChecker_checkBadUrls(c *check.C) {
@@ -259,23 +334,17 @@ func (s *Suite) Test_HomepageChecker_checkReachable(c *check.C) {
 		"http://localhost:28780/status/500")
 
 	vt.Output(
-		"WARN: filename.mk:1: HOMEPAGE should migrate from http to https.",
-		"WARN: filename.mk:2: HOMEPAGE should migrate from http to https.",
 		"WARN: filename.mk:2: Homepage "+
 			"\"http://localhost:28780/status/301?location=/redirect301\" "+
 			"redirects to \"http://localhost:28780/redirect301\".",
-		"WARN: filename.mk:3: HOMEPAGE should migrate from http to https.",
 		"WARN: filename.mk:3: Homepage "+
 			"\"http://localhost:28780/status/302?location=/redirect302\" "+
 			"redirects to \"http://localhost:28780/redirect302\".",
-		"WARN: filename.mk:4: HOMEPAGE should migrate from http to https.",
 		"WARN: filename.mk:4: Homepage "+
 			"\"http://localhost:28780/status/307?location=/redirect307\" "+
 			"redirects to \"http://localhost:28780/redirect307\".",
-		"WARN: filename.mk:5: HOMEPAGE should migrate from http to https.",
 		"WARN: filename.mk:5: Homepage \"http://localhost:28780/status/404\" "+
 			"returns HTTP status \"404 Not Found\".",
-		"WARN: filename.mk:6: HOMEPAGE should migrate from http to https.",
 		"WARN: filename.mk:6: Homepage \"http://localhost:28780/status/500\" "+
 			"returns HTTP status \"500 Internal Server Error\".")
 
@@ -283,15 +352,13 @@ func (s *Suite) Test_HomepageChecker_checkReachable(c *check.C) {
 		"http://localhost:28780/timeout")
 
 	vt.Output(
-		"WARN: filename.mk:11: HOMEPAGE should migrate from http to https.",
-		"WARN: filename.mk:11: Homepage \"http://localhost:28780/timeout\" "+
+		"WARN: filename.mk:11: Homepage \"http://localhost:28780/timeout\" " +
 			"cannot be checked: timeout")
 
 	vt.Values(
 		"http://localhost:28780/%invalid")
 
 	vt.Output(
-		"WARN: filename.mk:21: HOMEPAGE should migrate from http to https.",
 		"ERROR: filename.mk:21: Invalid URL \"http://localhost:28780/%invalid\".")
 
 	vt.Values(
@@ -299,8 +366,7 @@ func (s *Suite) Test_HomepageChecker_checkReachable(c *check.C) {
 
 	// The "unknown network error" is for compatibility with Go < 1.13.
 	t.CheckOutputMatches(
-		"WARN: filename.mk:31: HOMEPAGE should migrate from http to https.",
-		`^WARN: filename\.mk:31: Homepage "http://localhost:28781/" `+
+		`^WARN: filename\.mk:31: Homepage "http://localhost:28781/" ` +
 			`cannot be checked: (connection refused|unknown network error:.*)$`)
 
 	vt.Values(
@@ -310,9 +376,15 @@ func (s *Suite) Test_HomepageChecker_checkReachable(c *check.C) {
 	t.CheckOutputMatches(
 		`^WARN: filename\.mk:41: Homepage "https://no-such-name.example.org/" ` +
 			`cannot be checked: (name not found|unknown network error:.*)$`)
+
+	vt.Values(
+		"https://!!!invalid/")
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:51: \"https://!!!invalid/\" is not a valid URL.")
 }
 
-func (s *Suite) Test_HomepageChecker_isReachable(c *check.C) {
+func (s *Suite) Test_HomepageChecker_isReachableOnline(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--network")
@@ -352,7 +424,8 @@ func (s *Suite) Test_HomepageChecker_isReachable(c *check.C) {
 	}()
 
 	test := func(url string, reachable YesNoUnknown) {
-		actual := (*HomepageChecker).isReachable(nil, url)
+		ck := NewHomepageChecker(url, url, nil, nil)
+		actual := ck.isReachableOnline(url)
 
 		t.CheckEquals(actual, reachable)
 	}
