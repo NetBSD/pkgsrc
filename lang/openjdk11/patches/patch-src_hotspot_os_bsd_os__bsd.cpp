@@ -1,10 +1,8 @@
-$NetBSD: patch-src_hotspot_os_bsd_os__bsd.cpp,v 1.1 2019/10/01 12:36:34 tnn Exp $
+$NetBSD: patch-src_hotspot_os_bsd_os__bsd.cpp,v 1.2 2020/02/05 14:22:42 ryoon Exp $
 
-On NetBSD, __sigaction14 should be used as sigaction.
-
---- src/hotspot/os/bsd/os_bsd.cpp.orig	2019-09-19 12:22:38.000000000 +0000
+--- src/hotspot/os/bsd/os_bsd.cpp.orig	2020-01-15 18:29:57.000000000 +0000
 +++ src/hotspot/os/bsd/os_bsd.cpp
-@@ -383,7 +383,7 @@ void os::init_system_properties_values()
+@@ -379,7 +379,7 @@ void os::init_system_properties_values()
  #ifdef __APPLE__
    #define DEFAULT_LIBPATH "/lib:/usr/lib"
  #elif defined(__NetBSD__)
@@ -13,7 +11,7 @@ On NetBSD, __sigaction14 should be used as sigaction.
  #else
    #define DEFAULT_LIBPATH "/usr/lib:/usr/local/lib"
  #endif
-@@ -3357,7 +3357,11 @@ void os::Bsd::check_signal_handler(int s
+@@ -3377,7 +3377,11 @@ void os::Bsd::check_signal_handler(int s
    struct sigaction act;
    if (os_sigaction == NULL) {
      // only trust the default sigaction, in case it has been interposed
@@ -25,3 +23,12 @@ On NetBSD, __sigaction14 should be used as sigaction.
      if (os_sigaction == NULL) return;
    }
  
+@@ -3632,7 +3636,7 @@ void os::set_native_thread_name(const ch
+ #elif defined(__FreeBSD__) || defined(__OpenBSD__)
+     pthread_set_name_np(pthread_self(), name);
+ #elif defined(__NetBSD__)
+-    pthread_setname_np(pthread_self(), "%s", name);
++    pthread_setname_np(pthread_self(), "%s", const_cast<char *>(name));
+ #endif
+   }
+ }

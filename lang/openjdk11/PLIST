@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/01 12:36:34 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/02/05 14:22:42 ryoon Exp $
 bin/openjdk11-jar
 bin/openjdk11-java
 bin/openjdk11-javac
@@ -28,6 +28,7 @@ java/openjdk11/bin/jconsole
 java/openjdk11/bin/jdb
 java/openjdk11/bin/jdeprscan
 java/openjdk11/bin/jdeps
+java/openjdk11/bin/jfr
 java/openjdk11/bin/jimage
 java/openjdk11/bin/jinfo
 java/openjdk11/bin/jjs
@@ -283,7 +284,7 @@ java/openjdk11/legal/java.desktop/lcms.md
 java/openjdk11/legal/java.desktop/libpng.md
 java/openjdk11/legal/java.desktop/mesa3d.md
 java/openjdk11/legal/java.desktop/opengl.md
-java/openjdk11/legal/java.desktop/xwindows.md
+java/openjdk11/legal/java.desktop/xwd.md
 java/openjdk11/legal/java.instrument/ADDITIONAL_LICENSE_INFO
 java/openjdk11/legal/java.instrument/ASSEMBLY_EXCEPTION
 java/openjdk11/legal/java.instrument/LICENSE
