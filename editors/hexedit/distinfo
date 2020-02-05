@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 03:32:17 agc Exp $
+$NetBSD: distinfo,v 1.14 2020/02/05 15:30:25 fcambus Exp $
 
-SHA1 (hexedit-1.2.13.src.tgz) = 1acb7ca37063d9f4b4d118ef223548fde3b753f1
-RMD160 (hexedit-1.2.13.src.tgz) = cb4fe716cf8f3bfb614ea890aec20d7865e2c271
-SHA512 (hexedit-1.2.13.src.tgz) = df9afb0b9b965e20ea8c427c1986b0200216601b157862199c35bae9e201ccc478ab0bfecd39d0dfaa85bf582f1cf372b0134fadcfeacf4734805a6e6dcaa2bb
-Size (hexedit-1.2.13.src.tgz) = 68778 bytes
+SHA1 (hexedit-1.4.2.tar.gz) = 4389a1866e7a5cac213131431e5ce757568ef693
+RMD160 (hexedit-1.4.2.tar.gz) = 5b4fd5caa7423ddf0e2341c213cce1abc3fa9a05
+SHA512 (hexedit-1.4.2.tar.gz) = fb3c05a1783cf4147c5148ef2087f53fd7468da4dfbf2e2e4ee2b3e42eeb8a11492e5533d88c0ccf3d851f4bc34822b15da3eb9ae3509fea2573c88536f548e6
+Size (hexedit-1.4.2.tar.gz) = 30179 bytes
 SHA1 (patch-ae) = 49627dd5704fb9cd7b6ac08d01d3324ff2d2babd
-SHA1 (patch-configure) = 847d7fbf644bc3af97c7deebf5b8c24675f4c4bd
