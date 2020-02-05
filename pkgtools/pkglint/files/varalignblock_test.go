@@ -218,7 +218,7 @@ func (vt *VaralignTester) checkTestName() {
 	}
 
 	vt.tester.CheckDeepEquals(descriptorsString(actual), descriptorsString(expected))
-	vt.tester.CheckDeepEquals(actual, expected)
+	vt.tester.CheckDeepEquals(expected, actual)
 }
 
 func (s *Suite) Test_VaralignBlock__var_none_value(c *check.C) {
@@ -2060,6 +2060,29 @@ func (s *Suite) Test_VaralignBlock__var_tab_value63_space_cont_tab8_value71_spac
 		"PROGFILES=      67890 234567890 234567890 234567890 234567890 2 \\",
 		"                890 234567890 234567890 234567890 234567890 234567890 234567890 \\",
 		"                value")
+	vt.Run()
+}
+
+// Up to 2020-01-27, pkglint removed all spaces before the backslash,
+// which was against the rule of having at least one space.
+func (s *Suite) Test_VaralignBlock__right_margin(c *check.C) {
+	vt := NewVaralignTester(s, c)
+	vt.Input(
+		"CONFIGURE_ARGS+=\t\\",
+		"\t.....................................................................79\t\\",
+		"\t............................................................70 \t\t\\",
+		"\t........................................................66")
+	vt.Diagnostics(
+		"NOTE: Makefile:2: The continuation backslash should be in column 73, not 81.",
+		"NOTE: Makefile:3: The continuation backslash should be in column 73, not 81.")
+	vt.Autofixes(
+		"AUTOFIX: Makefile:2: Replacing \"\\t\" with \" \".",
+		"AUTOFIX: Makefile:3: Replacing \" \\t\\t\" with \"\\t\".")
+	vt.Fixed(
+		"CONFIGURE_ARGS+=        \\",
+		"        .....................................................................79 \\",
+		"        ............................................................70  \\",
+		"        ........................................................66")
 	vt.Run()
 }
 

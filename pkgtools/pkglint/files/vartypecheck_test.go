@@ -917,7 +917,6 @@ func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 		"${MASTER_SITES}")
 
 	vt.Output(
-		"WARN: filename.mk:1: HOMEPAGE should migrate from http to https.",
 		"WARN: filename.mk:3: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
 	// For more tests, see HomepageChecker.
