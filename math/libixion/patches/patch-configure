@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/02/05 13:46:13 ryoon Exp $
+
+* Improve POSIX shell portability
+
+--- configure.orig	2019-08-08 20:57:52.000000000 +0000
++++ configure
+@@ -19424,7 +19424,7 @@ else
+ 
+ fi
+ 
+-if test x"$enable_werror" == "xyes"; then :
++if test x"$enable_werror" = "xyes"; then :
+ 
+ 	CXXFLAGS="$CXXFLAGS -Werror"
+ 

@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2020/01/12 20:20:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2020/02/05 13:46:14 ryoon Exp $
 
-PKGREVISION= 1
 .include "../../math/libixion/Makefile.common"
 
 PKGNAME= 	${PYPKGPREFIX}-${DISTNAME}

@@ -1,8 +1,12 @@
-$NetBSD: patch-configure.ac,v 1.1 2019/12/04 13:31:43 nros Exp $
+$NetBSD: patch-configure.ac,v 1.2 2020/02/05 13:46:13 ryoon Exp $
+
 * check for pkgsrc libixion, used by math/py-libixion
---- configure.ac.orig	2018-09-14 19:32:48.000000000 +0000
+
+* Improve POSIX shell portability
+
+--- configure.ac.orig	2019-08-08 20:56:25.000000000 +0000
 +++ configure.ac
-@@ -123,6 +123,7 @@ PKG_CHECK_MODULES([MDDS],[mdds-1.4 >= 1.
+@@ -142,6 +142,7 @@ AS_IF([test "x$enable_log_trace" != "xno
  AS_IF([test "x$enable_python" != "xno"], [
      AM_PATH_PYTHON(3)
      PKG_CHECK_MODULES([PYTHON], [python3 >= 3.4])
@@ -10,3 +14,12 @@ $NetBSD: patch-configure.ac,v 1.1 2019/12/04 13:31:43 nros Exp $
  ])
  
  AS_IF([test "x$enable_threads" != "xno"], [
+@@ -169,7 +170,7 @@ AC_ARG_ENABLE([werror],
+ 	[enable_werror="$enableval"],
+ 	[enable_werror=no]
+ )
+-AS_IF([test x"$enable_werror" == "xyes"], [
++AS_IF([test x"$enable_werror" = "xyes"], [
+ 	CXXFLAGS="$CXXFLAGS -Werror"
+ ])
+ 
