@@ -1,0 +1,14 @@
+$NetBSD: patch-target_i386_Makefile.objs,v 1.3 2020/02/06 16:46:17 kamil Exp $
+
+Add NVMM support.
+
+--- target/i386/Makefile.objs.orig	2019-12-12 18:20:48.000000000 +0000
++++ target/i386/Makefile.objs
+@@ -17,6 +17,7 @@ obj-$(CONFIG_HAX) += hax-all.o hax-mem.o
+ endif
+ obj-$(CONFIG_HVF) += hvf/
+ obj-$(CONFIG_WHPX) += whpx-all.o
++obj-$(CONFIG_NVMM) += nvmm-all.o
+ endif
+ obj-$(CONFIG_SEV) += sev.o
+ obj-$(call lnot,$(CONFIG_SEV)) += sev-stub.o
