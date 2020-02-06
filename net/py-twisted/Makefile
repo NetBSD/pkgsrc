@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2019/08/11 13:22:28 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2020/02/06 15:44:57 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 COMMENT=	Framework for writing networked applications
 .include "../../net/py-twisted/Makefile.common"
 
@@ -14,20 +13,19 @@ DEPENDS+=	${PYPKGPREFIX}-incremental>=16.10.1:../../devel/py-incremental
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=4.4.2:../../devel/py-ZopeInterface
 # TLS
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=16.0.0:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
+DEPENDS+=	${PYPKGPREFIX}-service_identity>=18.1.0:../../security/py-service_identity
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.4:../../www/py-idna
 
 REPLACE_PYTHON+=	src/twisted/mail/test/pop3testserver.py
 REPLACE_PYTHON+=	src/twisted/trial/test/scripttest.py
-REPLACE_PYTHON+=	src/twisted/python/test/pullpipe.py
 
-USE_LANGUAGES=		c99
+USE_LANGUAGES=	c99
 
 post-install:
+.for bin in cftp ckeygen conch mailmail pyhtmlizer tkconch trial twist twistd
 	cd ${DESTDIR}${PREFIX}/bin && \
-	for i in cftp ckeygen conch mailmail pyhtmlizer tkconch trial twist twistd; do \
-		${MV} $$i $$i-${PYVERSSUFFIX} || ${TRUE}; \
-	done
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
