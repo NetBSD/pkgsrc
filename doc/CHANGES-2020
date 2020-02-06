@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.965 2020/02/06 22:01:47 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.966 2020/02/06 23:23:33 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1388,3 +1388,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/qemu to 4.2.0nb6 [kamil 2020-02-06]
 	Added sysutils/spice-server version 0.14.2 [kamil 2020-02-06]
 	Updated emulators/qemu to 4.2.0nb7 [kamil 2020-02-06]
+	Updated emulators/qemu to 4.2.0nb8 [kamil 2020-02-06]
