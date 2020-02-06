@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/03/05 14:24:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/02/06 20:20:42 adam Exp $
 ${PLIST.unix}bin/mongoc-stat
 include/libbson-1.0/bson.h
 include/libbson-1.0/bson/bcon.h
@@ -33,6 +33,7 @@ include/libmongoc-1.0/mongoc/mongoc-bulk-operation.h
 include/libmongoc-1.0/mongoc/mongoc-change-stream.h
 include/libmongoc-1.0/mongoc/mongoc-client-pool.h
 include/libmongoc-1.0/mongoc/mongoc-client-session.h
+include/libmongoc-1.0/mongoc/mongoc-client-side-encryption.h
 include/libmongoc-1.0/mongoc/mongoc-client.h
 include/libmongoc-1.0/mongoc/mongoc-collection.h
 include/libmongoc-1.0/mongoc/mongoc-config.h
@@ -76,6 +77,10 @@ include/libmongoc-1.0/mongoc/mongoc-version-functions.h
 include/libmongoc-1.0/mongoc/mongoc-version.h
 include/libmongoc-1.0/mongoc/mongoc-write-concern.h
 include/libmongoc-1.0/mongoc/mongoc.h
+lib/cmake/bson-1.0/bson-1.0-config-version.cmake
+lib/cmake/bson-1.0/bson-1.0-config.cmake
+lib/cmake/bson-1.0/bson-targets-relwithdebinfo.cmake
+lib/cmake/bson-1.0/bson-targets.cmake
 lib/cmake/libbson-1.0/libbson-1.0-config-version.cmake
 lib/cmake/libbson-1.0/libbson-1.0-config.cmake
 lib/cmake/libbson-static-1.0/libbson-static-1.0-config-version.cmake
@@ -84,6 +89,10 @@ lib/cmake/libmongoc-1.0/libmongoc-1.0-config-version.cmake
 lib/cmake/libmongoc-1.0/libmongoc-1.0-config.cmake
 lib/cmake/libmongoc-static-1.0/libmongoc-static-1.0-config-version.cmake
 lib/cmake/libmongoc-static-1.0/libmongoc-static-1.0-config.cmake
+lib/cmake/mongoc-1.0/mongoc-1.0-config-version.cmake
+lib/cmake/mongoc-1.0/mongoc-1.0-config.cmake
+lib/cmake/mongoc-1.0/mongoc-targets-relwithdebinfo.cmake
+lib/cmake/mongoc-1.0/mongoc-targets.cmake
 lib/libbson-1.0.so
 lib/libbson-1.0.so.0
 lib/libbson-1.0.so.0.0.0
@@ -172,6 +181,7 @@ man/man3/bson_include_and_link.3
 man/man3/bson_init.3
 man/man3/bson_init_from_json.3
 man/man3/bson_init_static.3
+man/man3/bson_isspace.3
 man/man3/bson_iter_array.3
 man/man3/bson_iter_as_bool.3
 man/man3/bson_iter_as_double.3
@@ -414,6 +424,16 @@ man/man3/mongoc_apm_topology_opening_get_topology_id.3
 man/man3/mongoc_apm_topology_opening_t.3
 man/man3/mongoc_application_performance_monitoring.3
 man/man3/mongoc_authentication.3
+man/man3/mongoc_auto_encryption_opts_destroy.3
+man/man3/mongoc_auto_encryption_opts_new.3
+man/man3/mongoc_auto_encryption_opts_set_bypass_auto_encryption.3
+man/man3/mongoc_auto_encryption_opts_set_extra.3
+man/man3/mongoc_auto_encryption_opts_set_key_vault_client.3
+man/man3/mongoc_auto_encryption_opts_set_key_vault_client_pool.3
+man/man3/mongoc_auto_encryption_opts_set_key_vault_namespace.3
+man/man3/mongoc_auto_encryption_opts_set_kms_providers.3
+man/man3/mongoc_auto_encryption_opts_set_schema_map.3
+man/man3/mongoc_auto_encryption_opts_t.3
 man/man3/mongoc_basic_troubleshooting.3
 man/man3/mongoc_bulk.3
 man/man3/mongoc_bulk_operation_delete.3
@@ -431,6 +451,7 @@ man/man3/mongoc_bulk_operation_remove_one_with_opts.3
 man/man3/mongoc_bulk_operation_replace_one.3
 man/man3/mongoc_bulk_operation_replace_one_with_opts.3
 man/man3/mongoc_bulk_operation_set_bypass_document_validation.3
+man/man3/mongoc_bulk_operation_set_client_session.3
 man/man3/mongoc_bulk_operation_set_hint.3
 man/man3/mongoc_bulk_operation_t.3
 man/man3/mongoc_bulk_operation_update.3
@@ -439,6 +460,7 @@ man/man3/mongoc_bulk_operation_update_one.3
 man/man3/mongoc_bulk_operation_update_one_with_opts.3
 man/man3/mongoc_change_stream_destroy.3
 man/man3/mongoc_change_stream_error_document.3
+man/man3/mongoc_change_stream_get_resume_token.3
 man/man3/mongoc_change_stream_next.3
 man/man3/mongoc_change_stream_t.3
 man/man3/mongoc_check_version.3
@@ -447,7 +469,31 @@ man/man3/mongoc_client_command.3
 man/man3/mongoc_client_command_simple.3
 man/man3/mongoc_client_command_simple_with_server_id.3
 man/man3/mongoc_client_command_with_opts.3
+man/man3/mongoc_client_decryption_decrypt.3
 man/man3/mongoc_client_destroy.3
+man/man3/mongoc_client_enable_auto_encryption.3
+man/man3/mongoc_client_encryption_create_datakey.3
+man/man3/mongoc_client_encryption_datakey_opts_destroy.3
+man/man3/mongoc_client_encryption_datakey_opts_new.3
+man/man3/mongoc_client_encryption_datakey_opts_set_keyaltnames.3
+man/man3/mongoc_client_encryption_datakey_opts_set_masterkey.3
+man/man3/mongoc_client_encryption_datakey_opts_t.3
+man/man3/mongoc_client_encryption_destroy.3
+man/man3/mongoc_client_encryption_encrypt.3
+man/man3/mongoc_client_encryption_encrypt_opts_destroy.3
+man/man3/mongoc_client_encryption_encrypt_opts_new.3
+man/man3/mongoc_client_encryption_encrypt_opts_set_algorithm.3
+man/man3/mongoc_client_encryption_encrypt_opts_set_keyaltname.3
+man/man3/mongoc_client_encryption_encrypt_opts_set_keyid.3
+man/man3/mongoc_client_encryption_encrypt_opts_t.3
+man/man3/mongoc_client_encryption_new.3
+man/man3/mongoc_client_encryption_opts_destroy.3
+man/man3/mongoc_client_encryption_opts_new.3
+man/man3/mongoc_client_encryption_opts_set_key_vault_namespace.3
+man/man3/mongoc_client_encryption_opts_set_keyvault_client.3
+man/man3/mongoc_client_encryption_opts_set_kms_providers.3
+man/man3/mongoc_client_encryption_opts_t.3
+man/man3/mongoc_client_encryption_t.3
 man/man3/mongoc_client_find_databases_with_opts.3
 man/man3/mongoc_client_get_collection.3
 man/man3/mongoc_client_get_database.3
@@ -467,6 +513,7 @@ man/man3/mongoc_client_get_write_concern.3
 man/man3/mongoc_client_new.3
 man/man3/mongoc_client_new_from_uri.3
 man/man3/mongoc_client_pool_destroy.3
+man/man3/mongoc_client_pool_enable_auto_encryption.3
 man/man3/mongoc_client_pool_max_size.3
 man/man3/mongoc_client_pool_min_size.3
 man/man3/mongoc_client_pool_new.3
@@ -493,9 +540,13 @@ man/man3/mongoc_client_session_get_cluster_time.3
 man/man3/mongoc_client_session_get_lsid.3
 man/man3/mongoc_client_session_get_operation_time.3
 man/man3/mongoc_client_session_get_opts.3
+man/man3/mongoc_client_session_get_server_id.3
+man/man3/mongoc_client_session_get_transaction_state.3
 man/man3/mongoc_client_session_in_transaction.3
 man/man3/mongoc_client_session_start_transaction.3
 man/man3/mongoc_client_session_t.3
+man/man3/mongoc_client_session_with_transaction.3
+man/man3/mongoc_client_session_with_transaction_cb_t.3
 man/man3/mongoc_client_set_apm_callbacks.3
 man/man3/mongoc_client_set_appname.3
 man/man3/mongoc_client_set_error_api.3
@@ -590,6 +641,7 @@ man/man3/mongoc_cursor_set_max_await_time_ms.3
 man/man3/mongoc_cursor_t.3
 man/man3/mongoc_cursors.3
 man/man3/mongoc_database_add_user.3
+man/man3/mongoc_database_aggregate.3
 man/man3/mongoc_database_command.3
 man/man3/mongoc_database_command_simple.3
 man/man3/mongoc_database_command_with_opts.3
@@ -764,6 +816,7 @@ man/man3/mongoc_session_opts_clone.3
 man/man3/mongoc_session_opts_destroy.3
 man/man3/mongoc_session_opts_get_causal_consistency.3
 man/man3/mongoc_session_opts_get_default_transaction_opts.3
+man/man3/mongoc_session_opts_get_transaction_opts.3
 man/man3/mongoc_session_opts_new.3
 man/man3/mongoc_session_opts_set_causal_consistency.3
 man/man3/mongoc_session_opts_set_default_transaction_opts.3
@@ -817,13 +870,16 @@ man/man3/mongoc_topology_description_type.3
 man/man3/mongoc_transaction_opt_t.3
 man/man3/mongoc_transaction_opts_clone.3
 man/man3/mongoc_transaction_opts_destroy.3
+man/man3/mongoc_transaction_opts_get_max_commit_time_ms.3
 man/man3/mongoc_transaction_opts_get_read_concern.3
 man/man3/mongoc_transaction_opts_get_read_prefs.3
 man/man3/mongoc_transaction_opts_get_write_concern.3
 man/man3/mongoc_transaction_opts_new.3
+man/man3/mongoc_transaction_opts_set_max_commit_time_ms.3
 man/man3/mongoc_transaction_opts_set_read_concern.3
 man/man3/mongoc_transaction_opts_set_read_prefs.3
 man/man3/mongoc_transaction_opts_set_write_concern.3
+man/man3/mongoc_transaction_state_t.3
 man/man3/mongoc_tutorial.3
 man/man3/mongoc_update_flags_t.3
 man/man3/mongoc_uri_copy.3
@@ -836,6 +892,7 @@ man/man3/mongoc_uri_get_hosts.3
 man/man3/mongoc_uri_get_mechanism_properties.3
 man/man3/mongoc_uri_get_option_as_bool.3
 man/man3/mongoc_uri_get_option_as_int32.3
+man/man3/mongoc_uri_get_option_as_int64.3
 man/man3/mongoc_uri_get_option_as_utf8.3
 man/man3/mongoc_uri_get_options.3
 man/man3/mongoc_uri_get_password.3
@@ -846,6 +903,7 @@ man/man3/mongoc_uri_get_replica_set.3
 man/man3/mongoc_uri_get_service.3
 man/man3/mongoc_uri_get_ssl.3
 man/man3/mongoc_uri_get_string.3
+man/man3/mongoc_uri_get_tls.3
 man/man3/mongoc_uri_get_username.3
 man/man3/mongoc_uri_get_write_concern.3
 man/man3/mongoc_uri_new.3
@@ -853,6 +911,7 @@ man/man3/mongoc_uri_new_for_host_port.3
 man/man3/mongoc_uri_new_with_error.3
 man/man3/mongoc_uri_option_is_bool.3
 man/man3/mongoc_uri_option_is_int32.3
+man/man3/mongoc_uri_option_is_int64.3
 man/man3/mongoc_uri_option_is_utf8.3
 man/man3/mongoc_uri_set_auth_mechanism.3
 man/man3/mongoc_uri_set_auth_source.3
@@ -861,6 +920,7 @@ man/man3/mongoc_uri_set_database.3
 man/man3/mongoc_uri_set_mechanism_properties.3
 man/man3/mongoc_uri_set_option_as_bool.3
 man/man3/mongoc_uri_set_option_as_int32.3
+man/man3/mongoc_uri_set_option_as_int64.3
 man/man3/mongoc_uri_set_option_as_utf8.3
 man/man3/mongoc_uri_set_password.3
 man/man3/mongoc_uri_set_read_concern.3
@@ -879,6 +939,7 @@ man/man3/mongoc_write_concern_get_w.3
 man/man3/mongoc_write_concern_get_wmajority.3
 man/man3/mongoc_write_concern_get_wtag.3
 man/man3/mongoc_write_concern_get_wtimeout.3
+man/man3/mongoc_write_concern_get_wtimeout_int64.3
 man/man3/mongoc_write_concern_is_acknowledged.3
 man/man3/mongoc_write_concern_is_default.3
 man/man3/mongoc_write_concern_is_valid.3
@@ -890,6 +951,7 @@ man/man3/mongoc_write_concern_set_w.3
 man/man3/mongoc_write_concern_set_wmajority.3
 man/man3/mongoc_write_concern_set_wtag.3
 man/man3/mongoc_write_concern_set_wtimeout.3
+man/man3/mongoc_write_concern_set_wtimeout_int64.3
 man/man3/mongoc_write_concern_t.3
 share/mongo-c-driver/COPYING
 share/mongo-c-driver/NEWS
