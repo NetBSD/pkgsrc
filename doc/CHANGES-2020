@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.964 2020/02/06 21:57:59 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.965 2020/02/06 22:01:47 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1387,3 +1387,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-watchdog to 0.10.1 [adam 2020-02-06]
 	Updated emulators/qemu to 4.2.0nb6 [kamil 2020-02-06]
 	Added sysutils/spice-server version 0.14.2 [kamil 2020-02-06]
+	Updated emulators/qemu to 4.2.0nb7 [kamil 2020-02-06]
