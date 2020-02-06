@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.957 2020/02/06 09:14:45 nia Exp $
+$NetBSD: CHANGES-2020,v 1.958 2020/02/06 15:47:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1373,3 +1373,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed chat/libirc [nia 2020-02-06]
 	Removed chat/p5-Net-AIM [nia 2020-02-06]
 	Removed chat/p5-Net-AOLIM [nia 2020-02-06]
+	Updated net/py-twisted to 19.10.0 [adam 2020-02-06]
+	Updated net/py-twisted-docs to 19.10.0 [adam 2020-02-06]
+	Updated www/py-notebook to 6.0.3 [adam 2020-02-06]
