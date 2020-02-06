@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.154 2020/02/06 16:46:17 kamil Exp $
+$NetBSD: distinfo,v 1.155 2020/02/06 21:42:29 kamil Exp $
 
 SHA1 (qemu-4.2.0.tar.xz) = b27aa828a8457bd8551ae3c81b80cc365e1f6bfe
 RMD160 (qemu-4.2.0.tar.xz) = cab8f6d85c0c6e9c01059087ed27d1243a7004a4
@@ -29,5 +29,5 @@ SHA1 (patch-roms_u-boot_tools_imx8m__image.sh) = e4c452062f40569e33aa93eec4a65bd
 SHA1 (patch-target_i386_Makefile.objs) = be8ab2e72521ccd0a71db6b37feb9957b27ac970
 SHA1 (patch-target_i386_helper.c) = 54363fe53688ea4030665b3bbb3ee7aba7ba5348
 SHA1 (patch-target_i386_kvm-stub.c) = 4cd2b7a8d8d8a317829f982b5acff7fdf2479d9f
-SHA1 (patch-target_i386_nvmm-all.c) = 4b6d29456d3ad6409ce0cd83ef95d2226a7aab33
+SHA1 (patch-target_i386_nvmm-all.c) = adf857c12e746604ca2aa49caf5dde17e5207325
 SHA1 (patch-util_drm.c) = b30a46d623d9431c5af2f3cd101adb89be3f0c2b
