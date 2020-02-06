@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/05/23 07:43:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/02/06 20:56:54 adam Exp $
 bin/watchmedo-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -58,9 +58,6 @@ ${PYSITELIB}/watchdog/utils/bricks.pyo
 ${PYSITELIB}/watchdog/utils/compat.py
 ${PYSITELIB}/watchdog/utils/compat.pyc
 ${PYSITELIB}/watchdog/utils/compat.pyo
-${PYSITELIB}/watchdog/utils/decorators.py
-${PYSITELIB}/watchdog/utils/decorators.pyc
-${PYSITELIB}/watchdog/utils/decorators.pyo
 ${PYSITELIB}/watchdog/utils/delayed_queue.py
 ${PYSITELIB}/watchdog/utils/delayed_queue.pyc
 ${PYSITELIB}/watchdog/utils/delayed_queue.pyo
@@ -70,12 +67,6 @@ ${PYSITELIB}/watchdog/utils/dirsnapshot.pyo
 ${PYSITELIB}/watchdog/utils/echo.py
 ${PYSITELIB}/watchdog/utils/echo.pyc
 ${PYSITELIB}/watchdog/utils/echo.pyo
-${PYSITELIB}/watchdog/utils/event_backport.py
-${PYSITELIB}/watchdog/utils/event_backport.pyc
-${PYSITELIB}/watchdog/utils/event_backport.pyo
-${PYSITELIB}/watchdog/utils/importlib2.py
-${PYSITELIB}/watchdog/utils/importlib2.pyc
-${PYSITELIB}/watchdog/utils/importlib2.pyo
 ${PYSITELIB}/watchdog/utils/platform.py
 ${PYSITELIB}/watchdog/utils/platform.pyc
 ${PYSITELIB}/watchdog/utils/platform.pyo
