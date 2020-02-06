@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.164 2019/08/27 09:26:02 maya Exp $
+# $NetBSD: Makefile.common,v 1.165 2020/02/06 21:52:58 nia Exp $
 # used by editors/vim/Makefile
 # used by editors/vim-gtk2/Makefile
 # used by editors/vim-gtk3/Makefile
@@ -21,7 +21,7 @@ FORTIFY_SUPPORTED=	no
 
 MAINTAINER=		morr@NetBSD.org
 HOMEPAGE=		https://www.vim.org/
-LICENSE=		vim-license
+LICENSE=		vim-license OR gnu-gpl-v2
 
 CONFLICTS+=		vim-kde-[0-9]*
 
