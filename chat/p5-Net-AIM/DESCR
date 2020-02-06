@@ -1,4 +1,0 @@
-This module is an implementation of the AOL Instant Messenger TOC
-protocol.  I've written and rewritten almost all the code.  It
-works fairly and is pretty reliable. The intent for this version
-was to make an easily usable module for creating AIM bots.
