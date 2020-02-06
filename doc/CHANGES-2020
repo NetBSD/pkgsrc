@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.955 2020/02/06 09:12:24 nia Exp $
+$NetBSD: CHANGES-2020,v 1.956 2020/02/06 09:13:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1371,3 +1371,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-simplecov to 0.18.1 [taca 2020-02-05]
 	Updated editors/hexedit to 1.4.2 [fcambus 2020-02-05]
 	Removed chat/libirc [nia 2020-02-06]
+	Removed chat/p5-Net-AIM [nia 2020-02-06]
