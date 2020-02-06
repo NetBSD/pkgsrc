@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2018/10/16 09:44:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2020/02/06 15:44:57 adam Exp $
 bin/cftp-${PYVERSSUFFIX}
 bin/ckeygen-${PYVERSSUFFIX}
 bin/conch-${PYVERSSUFFIX}
@@ -168,12 +168,6 @@ ${PYSITELIB}/twisted/conch/error.pyo
 ${PYSITELIB}/twisted/conch/insults/__init__.py
 ${PYSITELIB}/twisted/conch/insults/__init__.pyc
 ${PYSITELIB}/twisted/conch/insults/__init__.pyo
-${PYSITELIB}/twisted/conch/insults/client.py
-${PYSITELIB}/twisted/conch/insults/client.pyc
-${PYSITELIB}/twisted/conch/insults/client.pyo
-${PYSITELIB}/twisted/conch/insults/colors.py
-${PYSITELIB}/twisted/conch/insults/colors.pyc
-${PYSITELIB}/twisted/conch/insults/colors.pyo
 ${PYSITELIB}/twisted/conch/insults/helper.py
 ${PYSITELIB}/twisted/conch/insults/helper.pyc
 ${PYSITELIB}/twisted/conch/insults/helper.pyo
@@ -689,6 +683,9 @@ ${PYSITELIB}/twisted/internet/test/test_endpoints.pyo
 ${PYSITELIB}/twisted/internet/test/test_epollreactor.py
 ${PYSITELIB}/twisted/internet/test/test_epollreactor.pyc
 ${PYSITELIB}/twisted/internet/test/test_epollreactor.pyo
+${PYSITELIB}/twisted/internet/test/test_error.py
+${PYSITELIB}/twisted/internet/test/test_error.pyc
+${PYSITELIB}/twisted/internet/test/test_error.pyo
 ${PYSITELIB}/twisted/internet/test/test_fdset.py
 ${PYSITELIB}/twisted/internet/test/test_fdset.pyc
 ${PYSITELIB}/twisted/internet/test/test_fdset.pyo
@@ -752,6 +749,9 @@ ${PYSITELIB}/twisted/internet/test/test_stdio.pyo
 ${PYSITELIB}/twisted/internet/test/test_tcp.py
 ${PYSITELIB}/twisted/internet/test/test_tcp.pyc
 ${PYSITELIB}/twisted/internet/test/test_tcp.pyo
+${PYSITELIB}/twisted/internet/test/test_testing.py
+${PYSITELIB}/twisted/internet/test/test_testing.pyc
+${PYSITELIB}/twisted/internet/test/test_testing.pyo
 ${PYSITELIB}/twisted/internet/test/test_threads.py
 ${PYSITELIB}/twisted/internet/test/test_threads.pyc
 ${PYSITELIB}/twisted/internet/test/test_threads.pyo
@@ -776,6 +776,9 @@ ${PYSITELIB}/twisted/internet/test/test_win32events.pyo
 ${PYSITELIB}/twisted/internet/test/test_win32serialport.py
 ${PYSITELIB}/twisted/internet/test/test_win32serialport.pyc
 ${PYSITELIB}/twisted/internet/test/test_win32serialport.pyo
+${PYSITELIB}/twisted/internet/testing.py
+${PYSITELIB}/twisted/internet/testing.pyc
+${PYSITELIB}/twisted/internet/testing.pyo
 ${PYSITELIB}/twisted/internet/threads.py
 ${PYSITELIB}/twisted/internet/threads.pyc
 ${PYSITELIB}/twisted/internet/threads.pyo
@@ -806,6 +809,9 @@ ${PYSITELIB}/twisted/logger/__init__.pyo
 ${PYSITELIB}/twisted/logger/_buffer.py
 ${PYSITELIB}/twisted/logger/_buffer.pyc
 ${PYSITELIB}/twisted/logger/_buffer.pyo
+${PYSITELIB}/twisted/logger/_capture.py
+${PYSITELIB}/twisted/logger/_capture.pyc
+${PYSITELIB}/twisted/logger/_capture.pyo
 ${PYSITELIB}/twisted/logger/_file.py
 ${PYSITELIB}/twisted/logger/_file.pyc
 ${PYSITELIB}/twisted/logger/_file.pyo
@@ -851,6 +857,9 @@ ${PYSITELIB}/twisted/logger/test/__init__.pyo
 ${PYSITELIB}/twisted/logger/test/test_buffer.py
 ${PYSITELIB}/twisted/logger/test/test_buffer.pyc
 ${PYSITELIB}/twisted/logger/test/test_buffer.pyo
+${PYSITELIB}/twisted/logger/test/test_capture.py
+${PYSITELIB}/twisted/logger/test/test_capture.pyc
+${PYSITELIB}/twisted/logger/test/test_capture.pyo
 ${PYSITELIB}/twisted/logger/test/test_file.py
 ${PYSITELIB}/twisted/logger/test/test_file.pyc
 ${PYSITELIB}/twisted/logger/test/test_file.pyo
@@ -1320,12 +1329,6 @@ ${PYSITELIB}/twisted/protocols/loopback.pyo
 ${PYSITELIB}/twisted/protocols/memcache.py
 ${PYSITELIB}/twisted/protocols/memcache.pyc
 ${PYSITELIB}/twisted/protocols/memcache.pyo
-${PLIST.py2x}${PYSITELIB}/twisted/protocols/mice/__init__.py
-${PLIST.py2x}${PYSITELIB}/twisted/protocols/mice/__init__.pyc
-${PLIST.py2x}${PYSITELIB}/twisted/protocols/mice/__init__.pyo
-${PLIST.py2x}${PYSITELIB}/twisted/protocols/mice/mouseman.py
-${PLIST.py2x}${PYSITELIB}/twisted/protocols/mice/mouseman.pyc
-${PLIST.py2x}${PYSITELIB}/twisted/protocols/mice/mouseman.pyo
 ${PYSITELIB}/twisted/protocols/pcp.py
 ${PYSITELIB}/twisted/protocols/pcp.pyc
 ${PYSITELIB}/twisted/protocols/pcp.pyo
@@ -1844,6 +1847,7 @@ ${PYSITELIB}/twisted/test/test_cooperator.py
 ${PYSITELIB}/twisted/test/test_cooperator.pyc
 ${PYSITELIB}/twisted/test/test_cooperator.pyo
 ${PYSITELIB}/twisted/test/test_defer.py
+${PYSITELIB}/twisted/test/test_defer.py.3only
 ${PYSITELIB}/twisted/test/test_defer.pyc
 ${PYSITELIB}/twisted/test/test_defer.pyo
 ${PYSITELIB}/twisted/test/test_defgen.py
@@ -1987,9 +1991,6 @@ ${PYSITELIB}/twisted/test/test_stdio.pyo
 ${PYSITELIB}/twisted/test/test_strerror.py
 ${PYSITELIB}/twisted/test/test_strerror.pyc
 ${PYSITELIB}/twisted/test/test_strerror.pyo
-${PYSITELIB}/twisted/test/test_stringtransport.py
-${PYSITELIB}/twisted/test/test_stringtransport.pyc
-${PYSITELIB}/twisted/test/test_stringtransport.pyo
 ${PYSITELIB}/twisted/test/test_strports.py
 ${PYSITELIB}/twisted/test/test_strports.pyc
 ${PYSITELIB}/twisted/test/test_strports.pyo
@@ -2110,6 +2111,7 @@ ${PYSITELIB}/twisted/trial/runner.pyo
 ${PYSITELIB}/twisted/trial/test/__init__.py
 ${PYSITELIB}/twisted/trial/test/__init__.pyc
 ${PYSITELIB}/twisted/trial/test/__init__.pyo
+${PYSITELIB}/twisted/trial/test/_assertiontests.py.3only
 ${PYSITELIB}/twisted/trial/test/detests.py
 ${PYSITELIB}/twisted/trial/test/detests.pyc
 ${PYSITELIB}/twisted/trial/test/detests.pyo
@@ -2320,6 +2322,9 @@ ${PYSITELIB}/twisted/web/test/__init__.pyo
 ${PYSITELIB}/twisted/web/test/_util.py
 ${PYSITELIB}/twisted/web/test/_util.pyc
 ${PYSITELIB}/twisted/web/test/_util.pyo
+${PYSITELIB}/twisted/web/test/injectionhelpers.py
+${PYSITELIB}/twisted/web/test/injectionhelpers.pyc
+${PYSITELIB}/twisted/web/test/injectionhelpers.pyo
 ${PYSITELIB}/twisted/web/test/requesthelper.py
 ${PYSITELIB}/twisted/web/test/requesthelper.pyc
 ${PYSITELIB}/twisted/web/test/requesthelper.pyo
