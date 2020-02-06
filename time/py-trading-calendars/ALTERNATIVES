@@ -1,0 +1,1 @@
+bin/tcal @PREFIX@/bin/tcal-@PYVERSSUFFIX@
