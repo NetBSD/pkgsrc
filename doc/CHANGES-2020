@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.962 2020/02/06 20:57:11 adam Exp $
+$NetBSD: CHANGES-2020,v 1.963 2020/02/06 21:42:40 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1385,3 +1385,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/mongo-c-driver to 1.16.1 [adam 2020-02-06]
 	Updated www/py-wsproto to 0.15.0 [adam 2020-02-06]
 	Updated sysutils/py-watchdog to 0.10.1 [adam 2020-02-06]
+	Updated emulators/qemu to 4.2.0nb6 [kamil 2020-02-06]
