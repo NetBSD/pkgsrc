@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 23:35:23 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/02/06 03:49:32 gutteridge Exp $
 #
 
 DISTNAME=	aiksaurus-1.2.1
@@ -12,6 +12,7 @@ COMMENT=	English-language thesaurus
 LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		YES
+USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	base/aiksaurus-1.0.pc.in
