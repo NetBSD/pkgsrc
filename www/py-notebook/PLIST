@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/11/08 13:15:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2020/02/06 15:47:32 adam Exp $
 bin/jupyter-bundlerextension-${PYVERSSUFFIX}
 bin/jupyter-nbextension-${PYVERSSUFFIX}
 bin/jupyter-notebook-${PYVERSSUFFIX}
@@ -1550,11 +1550,8 @@ ${PYSITELIB}/notebook/tests/notebook/attachments.js
 ${PYSITELIB}/notebook/tests/notebook/display_id.js
 ${PYSITELIB}/notebook/tests/notebook/dualmode.js
 ${PYSITELIB}/notebook/tests/notebook/dualmode_merge.js
-${PYSITELIB}/notebook/tests/notebook/execute_code.js
 ${PYSITELIB}/notebook/tests/notebook/execute_selected_cells.js
 ${PYSITELIB}/notebook/tests/notebook/inject_js.js
-${PYSITELIB}/notebook/tests/notebook/interrupt.js
-${PYSITELIB}/notebook/tests/notebook/kernel_menu.js
 ${PYSITELIB}/notebook/tests/notebook/markdown.js
 ${PYSITELIB}/notebook/tests/notebook/move_multiselection.js
 ${PYSITELIB}/notebook/tests/notebook/notifications.js
@@ -1607,9 +1604,18 @@ ${PYSITELIB}/notebook/tests/selenium/test_dualmode_insertcell.pyo
 ${PYSITELIB}/notebook/tests/selenium/test_dualmode_markdown.py
 ${PYSITELIB}/notebook/tests/selenium/test_dualmode_markdown.pyc
 ${PYSITELIB}/notebook/tests/selenium/test_dualmode_markdown.pyo
+${PYSITELIB}/notebook/tests/selenium/test_execute_code.py
+${PYSITELIB}/notebook/tests/selenium/test_execute_code.pyc
+${PYSITELIB}/notebook/tests/selenium/test_execute_code.pyo
 ${PYSITELIB}/notebook/tests/selenium/test_find_and_replace.py
 ${PYSITELIB}/notebook/tests/selenium/test_find_and_replace.pyc
 ${PYSITELIB}/notebook/tests/selenium/test_find_and_replace.pyo
+${PYSITELIB}/notebook/tests/selenium/test_interrupt.py
+${PYSITELIB}/notebook/tests/selenium/test_interrupt.pyc
+${PYSITELIB}/notebook/tests/selenium/test_interrupt.pyo
+${PYSITELIB}/notebook/tests/selenium/test_kernel_menu.py
+${PYSITELIB}/notebook/tests/selenium/test_kernel_menu.pyc
+${PYSITELIB}/notebook/tests/selenium/test_kernel_menu.pyo
 ${PYSITELIB}/notebook/tests/selenium/test_markdown.py
 ${PYSITELIB}/notebook/tests/selenium/test_markdown.pyc
 ${PYSITELIB}/notebook/tests/selenium/test_markdown.pyo
