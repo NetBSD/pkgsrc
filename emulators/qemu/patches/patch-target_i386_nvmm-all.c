@@ -1,8 +1,8 @@
-$NetBSD: patch-target_i386_nvmm-all.c,v 1.2 2020/02/06 21:42:29 kamil Exp $
+$NetBSD: patch-target_i386_nvmm-all.c,v 1.3 2020/02/06 23:23:21 kamil Exp $
 
 Add NVMM support.
 
---- target/i386/nvmm-all.c.orig	2020-02-06 21:37:53.532213438 +0000
+--- target/i386/nvmm-all.c.orig	2020-02-06 23:03:06.140694264 +0000
 +++ target/i386/nvmm-all.c
 @@ -0,0 +1,1226 @@
 +/*
@@ -170,7 +170,7 @@ Add NVMM support.
 +    state->fpu.fx_mxcsr_mask = 0x0000FFFF;
 +    assert(sizeof(state->fpu.fx_87_ac) == sizeof(env->fpregs));
 +    memcpy(state->fpu.fx_87_ac, env->fpregs, sizeof(env->fpregs));
-+    for (i = 0; i < 16; i++) {
++    for (i = 0; i < CPU_NB_REGS; i++) {
 +        memcpy(&state->fpu.fx_xmm[i].xmm_bytes[0],
 +            &env->xmm_regs[i].ZMM_Q(0), 8);
 +        memcpy(&state->fpu.fx_xmm[i].xmm_bytes[8],
@@ -325,7 +325,7 @@ Add NVMM support.
 +    env->mxcsr = state->fpu.fx_mxcsr;
 +    assert(sizeof(state->fpu.fx_87_ac) == sizeof(env->fpregs));
 +    memcpy(env->fpregs, state->fpu.fx_87_ac, sizeof(env->fpregs));
-+    for (i = 0; i < 16; i++) {
++    for (i = 0; i < CPU_NB_REGS; i++) {
 +        memcpy(&env->xmm_regs[i].ZMM_Q(0),
 +            &state->fpu.fx_xmm[i].xmm_bytes[0], 8);
 +        memcpy(&env->xmm_regs[i].ZMM_Q(1),
