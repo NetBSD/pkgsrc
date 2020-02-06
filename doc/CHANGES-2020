@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.959 2020/02/06 15:58:09 adam Exp $
+$NetBSD: CHANGES-2020,v 1.960 2020/02/06 16:46:54 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1379,3 +1379,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cmake to 3.16.4 [adam 2020-02-06]
 	Updated devel/protobuf to 3.11.3 [adam 2020-02-06]
 	Updated devel/py-protobuf to 3.11.3 [adam 2020-02-06]
+	Updated emulators/qemu to 4.2.0nb5 [kamil 2020-02-06]
