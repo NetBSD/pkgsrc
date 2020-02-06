@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:20 rillig Exp $
-include/btypes.h
-include/cmd.h
-include/ctcp.h
-include/irc_core.h
-include/macros.h
-lib/libirc.la
