@@ -1,24 +1,33 @@
-$NetBSD: distinfo,v 1.153 2019/12/15 18:35:25 adam Exp $
+$NetBSD: distinfo,v 1.154 2020/02/06 16:46:17 kamil Exp $
 
 SHA1 (qemu-4.2.0.tar.xz) = b27aa828a8457bd8551ae3c81b80cc365e1f6bfe
 RMD160 (qemu-4.2.0.tar.xz) = cab8f6d85c0c6e9c01059087ed27d1243a7004a4
 SHA512 (qemu-4.2.0.tar.xz) = 2a79973c2b07c53e8c57a808ea8add7b6b2cbca96488ed5d4b669ead8c9318907dec2b6109f180fc8ca8f04c0f73a56e82b3a527b5626b799d7e849f2474ec56
 Size (qemu-4.2.0.tar.xz) = 62222068 bytes
 SHA1 (patch-Makefile) = 85d24d842ad2f7e1e2ec6f0e0e3268c21ef9bf0d
+SHA1 (patch-accel_stubs_Makefile.objs) = 92266dc400ac1e97013f7f19ee4b7a63b42c7fc0
+SHA1 (patch-accel_stubs_nvmm-stub.c) = d66d47eabb8bb6728e777da7589b43d491adbcc8
 SHA1 (patch-accel_tcg_user-exec.c) = 86ee62f6e5c8cd7942cf0aa9c9f64e4b0879ff33
 SHA1 (patch-capstone_Makefile) = f59870031de8c4385a591362749ec82f57fd4c27
-SHA1 (patch-configure) = 14c09363622bcee113b7fda5bd3f031bd9ff6b90
+SHA1 (patch-configure) = c2d68edf08e94ea12c9e57da3dacb0c1326c1213
 SHA1 (patch-contrib_ivshmem-client_ivshmem-client.c) = 40c8751607cbf66a37e4c4e08f2664b864e2e984
 SHA1 (patch-contrib_ivshmem-server_ivshmem-server.c) = d8f53432b5752f4263dc4ef96108a976a05147a3
+SHA1 (patch-cpus.c) = a319b7533daf3036c44411c4b26270b1fbb96009
 SHA1 (patch-hw_core_uboot__image.h) = 17eef02349343c5fcfb7a4069cb6f8fd11efcb59
 SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
 SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_tpm_tpm__ioctl.h) = a350c1708e1f9d85e07c4c354068703a45174baf
 SHA1 (patch-hw_usb_dev-mtp.c) = 0f9034fb3904e5d5e3b98d24b94e054181687d95
+SHA1 (patch-include_sysemu_hw__accel.h) = e5f581fa0539e55a6a1d559b94e94d47aedb88d7
 SHA1 (patch-include_sysemu_kvm.h) = 9847abe3be70bd708a521310f5d5515e45a1a5a0
+SHA1 (patch-include_sysemu_nvmm.h) = 3bd3da9b42ace0f806fabeb580f90ae19c273869
 SHA1 (patch-net_tap-solaris.c) = cc953c9a624dd55ace4e130d0b31bbfb956c17d5
 SHA1 (patch-qemu-doc.texi) = 78f926a16494c07248b9a81f39dca5b78ae542bb
+SHA1 (patch-qemu-options.hx) = 17fb92e03e32402ea2c04217991a2cd01a335e02
 SHA1 (patch-roms_u-boot_tools_imx8m__image.sh) = e4c452062f40569e33aa93eec4a65bd3af2e74fc
+SHA1 (patch-target_i386_Makefile.objs) = be8ab2e72521ccd0a71db6b37feb9957b27ac970
+SHA1 (patch-target_i386_helper.c) = 54363fe53688ea4030665b3bbb3ee7aba7ba5348
 SHA1 (patch-target_i386_kvm-stub.c) = 4cd2b7a8d8d8a317829f982b5acff7fdf2479d9f
+SHA1 (patch-target_i386_nvmm-all.c) = 4b6d29456d3ad6409ce0cd83ef95d2226a7aab33
 SHA1 (patch-util_drm.c) = b30a46d623d9431c5af2f3cd101adb89be3f0c2b

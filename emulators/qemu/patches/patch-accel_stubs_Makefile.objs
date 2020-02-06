@@ -1,0 +1,13 @@
+$NetBSD: patch-accel_stubs_Makefile.objs,v 1.1 2020/02/06 16:46:17 kamil Exp $
+
+Add NVMM support.
+
+--- accel/stubs/Makefile.objs.orig	2019-12-12 18:20:47.000000000 +0000
++++ accel/stubs/Makefile.objs
+@@ -1,5 +1,6 @@
+ obj-$(call lnot,$(CONFIG_HAX))  += hax-stub.o
+ obj-$(call lnot,$(CONFIG_HVF))  += hvf-stub.o
+ obj-$(call lnot,$(CONFIG_WHPX)) += whpx-stub.o
++obj-$(call lnot,$(CONFIG_NVMM)) += nvmm-stub.o
+ obj-$(call lnot,$(CONFIG_KVM))  += kvm-stub.o
+ obj-$(call lnot,$(CONFIG_TCG))  += tcg-stub.o
