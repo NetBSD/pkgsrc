@@ -1,0 +1,14 @@
+$NetBSD: patch-opal_asm_asm-data.txt,v 1.1 2020/02/06 11:28:49 jperkin Exp $
+
+Add support for SunOS/x86_64.
+
+--- opal/asm/asm-data.txt.orig	2016-08-24 14:54:58.000000000 +0000
++++ opal/asm/asm-data.txt
+@@ -44,6 +44,7 @@ ALPHA	default-.text-.globl-:--$-@-1-1-1-
+ ######################################################################
+ 
+ AMD64	default-.text-.globl-:--.L-@-1-0-1-1-1	amd64-linux
++AMD64	default-.text-.globl-:--.L-#-1-0-1-1-0	amd64-linux
+ AMD64	default-.text-.globl-:--.L-@-1-0-1-1-0	amd64-linux-nongas
+ 
+ 
