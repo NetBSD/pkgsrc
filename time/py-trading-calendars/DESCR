@@ -1,0 +1,2 @@
+trading_calendars is a Python library with securities exchange
+calendars used by Quantopian's Zipline.
