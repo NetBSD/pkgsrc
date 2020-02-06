@@ -725,6 +725,7 @@ spamassassin-test-bayes-sql	Enable tests of the SQL module for Bayes data.
 spamassassin-test-prefork	Enable spamd prefork test (kills processes containing "spam child").
 spandsp			Enable spandsp support.
 speex			Enable speex support.
+spice			Enable Spice-Space support.
 spf			Enable Sender Policy Framework support.
 sphinx			Enable Sphinx full-text search.
 sqlite			Enable SQLite support.
