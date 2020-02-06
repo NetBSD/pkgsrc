@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2020/01/13 02:50:25 gutteridge Exp $
+# $NetBSD: options.mk,v 1.7 2020/02/06 22:01:37 kamil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
-PKG_SUPPORTED_OPTIONS=	gtk3 sdl
+PKG_SUPPORTED_OPTIONS=	gtk3 sdl spice
+PKG_SUGGESTED_OPTIONS+=	spice
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -39,4 +40,12 @@ PLIST.virtfs-proxy-helper=	yes
 CONFIGURE_ARGS+=		--enable-virtfs
 .else
 CONFIGURE_ARGS+=		--disable-virtfs
+.endif
+
+.if !empty(PKG_OPTIONS:Mspice)
+CONFIGURE_ARGS+=	--enable-spice
+.include "../../sysutils/spice-protocol/buildlink3.mk"
+.include "../../sysutils/spice-server/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-spice
 .endif
