@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.859 2020/01/30 10:21:24 wiz Exp $
+# $NetBSD: Makefile,v 1.860 2020/02/06 21:58:15 kamil Exp $
 #
 
 COMMENT=	System utilities
@@ -572,6 +572,7 @@ SUBDIR+=	smbldap-tools
 SUBDIR+=	socket
 SUBDIR+=	solid
 SUBDIR+=	spice-protocol
+SUBDIR+=	spice-server
 SUBDIR+=	sredird
 SUBDIR+=	sshsh
 SUBDIR+=	stow
