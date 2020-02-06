@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.240 2020/01/29 10:51:56 nia Exp $
+# $NetBSD: Makefile,v 1.241 2020/02/06 09:12:04 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -67,7 +67,6 @@ SUBDIR+=	ktp-send-file
 SUBDIR+=	ktp-text-ui
 SUBDIR+=	libfolks
 SUBDIR+=	libgadu
-SUBDIR+=	libirc
 SUBDIR+=	libmsn
 SUBDIR+=	libotr
 SUBDIR+=	libpurple
