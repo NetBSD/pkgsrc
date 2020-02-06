@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2020/01/18 21:50:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2020/02/06 20:13:08 adam Exp $
 
-DISTNAME=	grpc-1.26.0
-PKGREVISION=	1
+DISTNAME=	grpc-1.27.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,6 +16,7 @@ USE_TOOLS+=	pkg-config
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 # use cmake's find_package() to locate a pre-installed dependency
+CMAKE_ARGS+=	-DgRPC_ABSL_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_BENCHMARK_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_CARES_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_GFLAGS_PROVIDER=package
@@ -25,6 +25,7 @@ CMAKE_ARGS+=	-DgRPC_SSL_PROVIDER=package
 CMAKE_ARGS+=	-DgRPC_ZLIB_PROVIDER=package
 
 .include "../../benchmarks/google-benchmark/buildlink3.mk"
+.include "../../devel/abseil/buildlink3.mk"
 .include "../../devel/gflags/buildlink3.mk"
 BUILDLINK_API_DEPENDS.protobuf+=	protobuf>=3.5
 .include "../../devel/protobuf/buildlink3.mk"
