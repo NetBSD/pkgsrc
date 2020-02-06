@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2020/02/06 21:57:42 kamil Exp $
+include/spice-server/spice-audio.h
+include/spice-server/spice-char.h
+include/spice-server/spice-core.h
+include/spice-server/spice-experimental.h
+include/spice-server/spice-input.h
+include/spice-server/spice-migration.h
+include/spice-server/spice-qxl.h
+include/spice-server/spice-replay.h
+include/spice-server/spice-server.h
+include/spice-server/spice-version.h
+include/spice-server/spice.h
+lib/libspice-server.la
+lib/pkgconfig/spice-server.pc
