@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.197 2020/01/29 10:45:34 nia Exp $
+# $NetBSD: Makefile,v 1.198 2020/02/06 23:33:05 minskim Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -158,6 +158,7 @@ SUBDIR+=	py-pytz
 SUBDIR+=	py-relativetimebuilder
 SUBDIR+=	py-rfc3339
 SUBDIR+=	py-tempora
+SUBDIR+=	py-trading-calendars
 SUBDIR+=	py-trytond-calendar
 SUBDIR+=	py-trytond-calendar-classification
 SUBDIR+=	py-trytond-calendar-scheduling
