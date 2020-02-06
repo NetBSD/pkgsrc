@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.960 2020/02/06 16:46:54 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.961 2020/02/06 20:21:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1380,3 +1380,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/protobuf to 3.11.3 [adam 2020-02-06]
 	Updated devel/py-protobuf to 3.11.3 [adam 2020-02-06]
 	Updated emulators/qemu to 4.2.0nb5 [kamil 2020-02-06]
+	Added devel/abseil version 20190808 [adam 2020-02-06]
+	Updated net/grpc to 1.27.0 [adam 2020-02-06]
+	Updated databases/mongo-c-driver to 1.16.1 [adam 2020-02-06]
