@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/04/07 15:58:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/02/06 20:41:42 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,9 +7,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/wsproto/__init__.py
 ${PYSITELIB}/wsproto/__init__.pyc
 ${PYSITELIB}/wsproto/__init__.pyo
-${PYSITELIB}/wsproto/compat.py
-${PYSITELIB}/wsproto/compat.pyc
-${PYSITELIB}/wsproto/compat.pyo
 ${PYSITELIB}/wsproto/connection.py
 ${PYSITELIB}/wsproto/connection.pyc
 ${PYSITELIB}/wsproto/connection.pyo
@@ -25,9 +22,10 @@ ${PYSITELIB}/wsproto/frame_protocol.pyo
 ${PYSITELIB}/wsproto/handshake.py
 ${PYSITELIB}/wsproto/handshake.pyc
 ${PYSITELIB}/wsproto/handshake.pyo
-${PYSITELIB}/wsproto/utf8validator.py
-${PYSITELIB}/wsproto/utf8validator.pyc
-${PYSITELIB}/wsproto/utf8validator.pyo
+${PYSITELIB}/wsproto/py.typed
+${PYSITELIB}/wsproto/typing.py
+${PYSITELIB}/wsproto/typing.pyc
+${PYSITELIB}/wsproto/typing.pyo
 ${PYSITELIB}/wsproto/utilities.py
 ${PYSITELIB}/wsproto/utilities.pyc
 ${PYSITELIB}/wsproto/utilities.pyo
