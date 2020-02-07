@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/02/07 12:25:49 ryoon Exp $
+
+SHA1 (spice-gtk-0.37.tar.bz2) = 044a5266a613f2605f4f3f7359d7251b2141d203
+RMD160 (spice-gtk-0.37.tar.bz2) = d984cabeb1cf4b4ae055cc7a8480574a7cbbf753
+SHA512 (spice-gtk-0.37.tar.bz2) = a0a20bc6f25337d86e57fe1fc9586c4cc84457fc8c38cdcc5a728990a69018da0fca3ab5aa63349786b5a7508c82b716c94803eefb3495cffb7df4526db2d029
+Size (spice-gtk-0.37.tar.bz2) = 1303111 bytes
+SHA1 (patch-configure) = 2f34b59a9efd9573a0d451ea8e20b728f6ea1e95
