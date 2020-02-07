@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.968 2020/02/07 08:39:32 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.969 2020/02/07 09:54:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1391,3 +1391,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/qemu to 4.2.0nb8 [kamil 2020-02-06]
 	Added time/py-trading-calendars version 1.11.2 [minskim 2020-02-06]
 	Updated emulators/qemu to 4.2.0nb9 [kamil 2020-02-07]
+	Updated lang/nodejs10 to 10.19.0 [adam 2020-02-07]
+	Updated lang/nodejs12 to 12.15.0 [adam 2020-02-07]
+	Updated lang/nodejs to 13.8.0 [adam 2020-02-07]
+	Updated devel/yarn to 1.22.0 [adam 2020-02-07]
