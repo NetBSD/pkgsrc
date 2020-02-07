@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.972 2020/02/07 12:31:13 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.973 2020/02/07 12:39:21 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1398,3 +1398,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/screen to 4.8.0 [ryoon 2020-02-07]
 	Added sysutils/spice-gtk version 0.37 [ryoon 2020-02-07]
 	Added sysutils/virt-viewer version 8.0 [ryoon 2020-02-07]
+	Updated net/sayaka to 3.4.2 [tsutsui 2020-02-07]
