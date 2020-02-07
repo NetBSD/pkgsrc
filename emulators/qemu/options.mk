@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.7 2020/02/06 22:01:37 kamil Exp $
+# $NetBSD: options.mk,v 1.8 2020/02/07 08:39:19 kamil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	gtk3 sdl spice
-PKG_SUGGESTED_OPTIONS+=	spice
+PKG_SUGGESTED_OPTIONS+=
 
 .include "../../mk/bsd.fast.prefs.mk"
 
