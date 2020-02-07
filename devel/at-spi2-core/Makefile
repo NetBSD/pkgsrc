@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2020/01/18 23:30:23 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/02/07 17:07:46 prlw1 Exp $
 
-DISTNAME=	at-spi2-core-2.33.2
-PKGREVISION=	1
+DISTNAME=	at-spi2-core-2.35.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-core/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -9,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://www.linuxfoundation.org/collaborate/workgroups/accessibility/atk/at-spi/at-spi_on_d-bus
 COMMENT=	Assistive Technology Service Provider Interface Core
-LICENSE=	gnu-lgpl-v2
+LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=		msgfmt pkg-config
 
@@ -17,7 +16,7 @@ PKGCONFIG_OVERRIDE=		output/meson-private/atspi-2.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/atspi
 
-BUILDDEFS+=		PKG_SYSCONFBASE
+BUILD_DEFS+=		PKG_SYSCONFBASE
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 busconfigdir=		${PKG_SYSCONFDIR}/at-spi2
