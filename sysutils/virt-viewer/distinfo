@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/02/07 12:30:46 ryoon Exp $
+
+SHA1 (virt-viewer-8.0.tar.gz) = ef97878c6657edb86cba2f8aceb9a68c8565031c
+RMD160 (virt-viewer-8.0.tar.gz) = f0996d276d522b256220fcb7f2850cbb13eef2f1
+SHA512 (virt-viewer-8.0.tar.gz) = 73317048949b6c49c28aab4685e3fb6533945b12c47078b522429b3e178423fcec5758c970d5048c8f65fee2b92a629b7e067cffa79c968292c73fd36133b918
+Size (virt-viewer-8.0.tar.gz) = 937457 bytes
