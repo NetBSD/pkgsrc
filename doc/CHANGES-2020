@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.973 2020/02/07 12:39:21 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.974 2020/02/07 13:44:26 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1399,3 +1399,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/spice-gtk version 0.37 [ryoon 2020-02-07]
 	Added sysutils/virt-viewer version 8.0 [ryoon 2020-02-07]
 	Updated net/sayaka to 3.4.2 [tsutsui 2020-02-07]
+	Updated lang/camlp5 to 7.11 [jaapb 2020-02-07]
