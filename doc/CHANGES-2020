@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.969 2020/02/07 09:54:39 adam Exp $
+$NetBSD: CHANGES-2020,v 1.970 2020/02/07 12:19:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1395,3 +1395,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs12 to 12.15.0 [adam 2020-02-07]
 	Updated lang/nodejs to 13.8.0 [adam 2020-02-07]
 	Updated devel/yarn to 1.22.0 [adam 2020-02-07]
+	Updated misc/screen to 4.8.0 [ryoon 2020-02-07]
