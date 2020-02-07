@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.861 2020/02/07 12:26:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.862 2020/02/07 12:32:22 ryoon Exp $
 #
 
 COMMENT=	System utilities
@@ -690,6 +690,7 @@ SUBDIR+=	vidc-tools
 SUBDIR+=	vifm
 SUBDIR+=	vip
 SUBDIR+=	virt-manager
+SUBDIR+=	virt-viewer
 SUBDIR+=	virt-what
 SUBDIR+=	virtinst
 SUBDIR+=	vobcopy
