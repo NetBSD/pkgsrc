@@ -1,0 +1,18 @@
+$NetBSD: patch-external_pdfium_pkgsrc2.patch.1,v 1.1 2020/02/07 03:52:28 tnn Exp $
+
+fix posix_memalign(3) ifdef
+
+--- external/pdfium/pkgsrc2.patch.1.orig	2020-02-06 19:27:36.602757438 +0000
++++ external/pdfium/pkgsrc2.patch.1
+@@ -0,0 +1,11 @@
++--- pdfium/third_party/libopenjpeg20/opj_malloc.h.orig	2019-11-07 01:11:27.000000000 +0000
+++++ pdfium/third_party/libopenjpeg20/opj_malloc.h
++@@ -98,7 +98,7 @@ Allocate memory aligned to a 16 byte bou
++ #else /* Not _WIN32 */
++   #if defined(__sun)
++     #define HAVE_MEMALIGN
++-  #elif defined(__FreeBSD__)
+++  #elif defined(__FreeBSD__) || defined(__NetBSD__)
++     #define HAVE_POSIX_MEMALIGN
++   /* Linux x86_64 and OSX always align allocations to 16 bytes */
++   #elif !defined(__amd64__) && !defined(__APPLE__) && !defined(_AIX)
