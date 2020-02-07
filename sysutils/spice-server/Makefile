@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/02/06 21:57:42 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2020/02/07 12:13:42 ryoon Exp $
 
 DISTNAME=	spice-0.14.2
 PKGNAME=	${DISTNAME:S/spice/spice-server/}
@@ -7,7 +7,7 @@ MASTER_SITES=	https://www.spice-space.org/download/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.spice-space.org/download/releases/
+HOMEPAGE=	https://www.spice-space.org/
 COMMENT=	Simple Protocol for Independent Computing Environments
 LICENSE=	gnu-lgpl-v2.1
 
