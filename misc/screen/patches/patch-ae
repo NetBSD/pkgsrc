@@ -1,27 +1,18 @@
-$NetBSD: patch-ae,v 1.7 2017/07/18 23:02:18 kim Exp $
+$NetBSD: patch-ae,v 1.8 2020/02/07 12:19:00 ryoon Exp $
 
 Don't pollute G1 to allow 8-bit encondings.
 
 The original code made the TERMCAP env var longer than 1023 bytes,
 which causes problems.  This is a quick hack but works with our termcap.
 
---- termcap.c.orig	2017-07-10 19:26:25.000000000 +0000
-+++ termcap.c	2017-07-18 22:44:38.000000000 +0000
-@@ -79,7 +79,7 @@
- \t:DO=\\E[%dB:LE=\\E[%dD:RI=\\E[%dC:UP=\\E[%dA:bs:bt=\\E[Z:\\\n\
- \t:cd=\\E[J:ce=\\E[K:cl=\\E[H\\E[J:cm=\\E[%i%d;%dH:ct=\\E[3g:\\\n\
- \t:do=^J:nd=\\E[C:pt:rc=\\E8:rs=\\Ec:sc=\\E7:st=\\EH:up=\\EM:\\\n\
--\t:le=^H:bl=^G:cr=^M:it#8:ho=\\E[H:nw=\\EE:ta=^I:is=\\E)0:";
-+\t:le=^H:bl=^G:cr=^M:it#8:ho=\\E[H:nw=\\EE:ta=^I:is=\\E(B:";
+--- termcap.c.orig	2020-02-05 20:09:38.000000000 +0000
++++ termcap.c
+@@ -78,7 +78,7 @@ char *extra_incap, *extra_outcap;
+ static const char TermcapConst[] = "DO=\\E[%dB:LE=\\E[%dD:RI=\\E[%dC:\
+ UP=\\E[%dA:bs:bt=\\E[Z:cd=\\E[J:ce=\\E[K:cl=\\E[H\\E[J:cm=\\E[%i%d;%dH:\
+ ct=\\E[3g:do=^J:nd=\\E[C:pt:rc=\\E8:rs=\\Ec:sc=\\E7:st=\\EH:up=\\EM:\
+-le=^H:bl=^G:cr=^M:it#8:ho=\\E[H:nw=\\EE:ta=^I:is=\\E)0:";
++le=^H:bl=^G:cr=^M:it#8:ho=\\E[H:nw=\\EE:ta=^I:is=\\E(B:";
  
  char *
  gettermcapstring(s)
-@@ -825,7 +825,7 @@
- {
-   register int n;
- 
--  if (tcLineLen + (n = strlen(s)) > 55 && Termcaplen < TERMCAP_BUFSIZE - 4 - 1)
-+  if (tcLineLen + (n = strlen(s)) > 69 && Termcaplen < TERMCAP_BUFSIZE - 4 - 1)
-     {
-       strcpy(Termcap + Termcaplen, "\\\n\t:");
-       Termcaplen += 4;
