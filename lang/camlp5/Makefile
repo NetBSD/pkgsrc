@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2019/09/01 00:46:54 markd Exp $
+# $NetBSD: Makefile,v 1.36 2020/02/07 13:44:12 jaapb Exp $
 #
 
 GITHUB_PROJECT=	camlp5
-DISTNAME=	${GITHUB_PROJECT}-7.08
+DISTNAME=	${GITHUB_PROJECT}-7.11
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=camlp5/}
-GITHUB_TAG=	rel708
+GITHUB_TAG=	rel${PKGVERSION_NOREV:S/.//}
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	https://camlp5.github.io/
