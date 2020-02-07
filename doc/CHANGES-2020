@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.975 2020/02/07 17:05:37 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.976 2020/02/07 17:08:39 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1401,3 +1401,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/sayaka to 3.4.2 [tsutsui 2020-02-07]
 	Updated lang/camlp5 to 7.11 [jaapb 2020-02-07]
 	Updated devel/glib2 to 2.62.4nb1 [prlw1 2020-02-07]
+	Updated devel/at-spi2-core to 2.35.1 [prlw1 2020-02-07]
