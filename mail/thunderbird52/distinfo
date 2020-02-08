@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2018/12/16 08:29:48 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2020/02/08 22:20:26 kamil Exp $
 
 SHA1 (thunderbird-52.9.1.source.tar.xz) = 9970d78084fe979f568ea00bf06b8e81a738e630
 RMD160 (thunderbird-52.9.1.source.tar.xz) = b3169a0154fa85648a98ba0d74f264abd224b323
@@ -93,6 +93,7 @@ SHA1 (patch-mozilla_modules_libjar_nsZipArchive.cpp) = b306f3e037aced574e6e245d2
 SHA1 (patch-mozilla_mozglue_build_arm.cpp) = fcaf79cb25eef5d36e793d54ce5c1fff188bf951
 SHA1 (patch-mozilla_mozglue_build_arm.h) = 40d8d2039c68fc825857a3c970eec2f296275cc5
 SHA1 (patch-mozilla_netwerk_dns_moz.build) = 4ee9fa2a3b33a0fb9ad4c0f883b084f6417b993f
+SHA1 (patch-mozilla_nsprpub_pr_src_pthreads_ptsynch.c) = 389f94db5adf882d43c5cb601ec00659b460584b
 SHA1 (patch-mozilla_old-configure.in) = 651bc7aed6cea83ae21a1ac8febf13374ae8c854
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__back.jsm) = ba8e6e427374dbf9f5de695ead6014f560fb305e
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__front.jsm) = 005ad5608501fdcdeb042715a69ea3073d62fc75
