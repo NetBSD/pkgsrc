@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2020/01/23 11:50:55 nia Exp $
+# $NetBSD: Makefile,v 1.72 2020/02/08 15:42:36 nia Exp $
 
 DISTNAME=	totem-pl-parser-3.26.4
 CATEGORIES=	multimedia gnome
@@ -13,6 +13,10 @@ LICENSE=	gnu-lgpl-v2
 USE_TOOLS+=	pkg-config xgettext
 
 MESON_ARGS+=	-Denable-quvi=no
+
+# workaround for build failure
+# https://gitlab.gnome.org/GNOME/json-glib/issues/35
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/plparse
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
