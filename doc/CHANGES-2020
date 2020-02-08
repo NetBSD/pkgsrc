@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.977 2020/02/07 17:09:51 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.978 2020/02/08 00:56:01 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1403,3 +1403,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/glib2 to 2.62.4nb1 [prlw1 2020-02-07]
 	Updated devel/at-spi2-core to 2.35.1 [prlw1 2020-02-07]
 	Updated devel/at-spi2-atk to 2.34.1 [prlw1 2020-02-07]
+	Added net/nanotodon version 0.1.0 [tsutsui 2020-02-08]
