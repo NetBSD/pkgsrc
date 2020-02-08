@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.994 2020/02/08 22:36:37 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.995 2020/02/08 23:00:44 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1420,3 +1420,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/thunderbird52 to 52.9.1nb7 [kamil 2020-02-08]
 	Updated mail/thunderbird60 to 60.9.1nb2 [kamil 2020-02-08]
 	Updated mail/thunderbird to 68.4.2nb1 [kamil 2020-02-08]
+	Updated www/seamonkey to 2.49.5nb3 [kamil 2020-02-08]
