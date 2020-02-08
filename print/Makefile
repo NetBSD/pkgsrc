@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.755 2020/01/13 10:09:20 mef Exp $
+# $NetBSD: Makefile,v 1.756 2020/02/08 15:45:16 nia Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -79,7 +79,6 @@ SUBDIR+=	lacheck
 SUBDIR+=	latex-mk
 SUBDIR+=	latexmk
 SUBDIR+=	lgrind
-SUBDIR+=	libgnomecups
 SUBDIR+=	libgnomeprint
 SUBDIR+=	libgnomeprintui
 SUBDIR+=	libgxps
