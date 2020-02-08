@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2020/01/22 19:45:33 nia Exp $
+# $NetBSD: Makefile,v 1.50 2020/02/08 15:39:21 nia Exp $
 
 DISTNAME=	orca-3.34.1
 CATEGORIES=	misc gnome
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/Orca
 COMMENT=	Screen reader
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-at-spi2-[0-9]*:../../devel/py-at-spi2
