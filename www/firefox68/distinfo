@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2020/01/22 13:36:27 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2020/02/08 22:06:38 kamil Exp $
 
 SHA1 (firefox-68.4.2esr.source.tar.xz) = 005701cf6dda606500dfd1bdc5158c0dff8329aa
 RMD160 (firefox-68.4.2esr.source.tar.xz) = 177b128696b1d55e19ffb57029c325c8de3d59b5
@@ -30,6 +30,7 @@ SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = 103f751d5a7bc14a81a6ed43e1afc722b
 SHA1 (patch-media_libcubeb_src_moz.build) = dcca90cb5132442877712cd7b1f4e832c93d2655
 SHA1 (patch-media_libcubeb_update.sh) = 4508319d8534a0cc983e4767c2142169af9e5033
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
+SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = c39a222c5ab16c26cb214e5e53a0b61291a00512
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e5700d95302ef9672b404ab19e13ef7ba3ede5cf
 SHA1 (patch-toolkit_library_moz.build) = 102e3713552c26f76e8b4e473846bb8fbc44b278
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 22a39e54e042ab2270a3cb54e4e307c8900cad12
