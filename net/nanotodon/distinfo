@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/02/08 00:53:01 tsutsui Exp $
+
+SHA1 (nanotodon-0.1.0.tar.gz) = 36b48bc74b3687bc24cea9b0f21612204c8037b8
+RMD160 (nanotodon-0.1.0.tar.gz) = f5a39ddd0d21a41032053913d49972bf1d7f8e98
+SHA512 (nanotodon-0.1.0.tar.gz) = c1867b819781f69cfc7405b3e39c9751ca99f6f39ed9c380e42850065f0b88aa05c2c85d503d5473375865dc2e633beb3d7f78c0dbd021aaf0f21987fec2e58d
+Size (nanotodon-0.1.0.tar.gz) = 23522 bytes
+SHA1 (patch-Makefile) = 9e5eedce422aeb7e36322dbec5b223e632d3e544
