@@ -1,13 +1,13 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2019/11/30 13:35:42 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2020/02/08 16:34:55 nia Exp $
 
 Don't need a C++ compiler.
 
---- CMakeLists.txt.orig	2019-11-24 16:27:35.000000000 +0000
+--- CMakeLists.txt.orig	2020-02-05 17:22:43.000000000 +0000
 +++ CMakeLists.txt
 @@ -1,5 +1,5 @@
- cmake_minimum_required (VERSION 2.8)
--project (libmysofa)
-+project (libmysofa C)
+ cmake_minimum_required(VERSION 2.8)
+-project(libmysofa)
++project(libmysofa C)
  
- INCLUDE(CheckCCompilerFlag)
+ include(CheckCCompilerFlag)
  include(GenerateExportHeader)
