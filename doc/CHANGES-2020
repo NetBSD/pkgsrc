@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.984 2020/02/08 16:35:04 nia Exp $
+$NetBSD: CHANGES-2020,v 1.985 2020/02/08 17:12:37 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1410,3 +1410,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/transifex-client to 0.13.7 [taca 2020-02-08]
 	Removed graphics/adapta-gtk-theme [nia 2020-02-08]
 	Updated audio/libmysofa to 1.0 [nia 2020-02-08]
+	Updated lang/yabasic to 2.86.4 [fcambus 2020-02-08]
