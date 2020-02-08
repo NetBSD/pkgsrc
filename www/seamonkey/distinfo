@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.159 2019/09/04 20:07:53 nia Exp $
+$NetBSD: distinfo,v 1.160 2020/02/08 22:59:55 kamil Exp $
 
 SHA1 (seamonkey-2.49.5.source.tar.xz) = 366953dee336185102d9a17028d49834cdb897d2
 RMD160 (seamonkey-2.49.5.source.tar.xz) = 6423a548286a166e88695060713afefd7365f389
@@ -86,6 +86,7 @@ SHA1 (patch-mozilla_modules_libjar_nsZipArchive.cpp) = a399e0bd0e83c47938bbee077
 SHA1 (patch-mozilla_mozglue_build_arm.cpp) = 592ae5ce1a404227cc2ab6a06418cc813c5743c9
 SHA1 (patch-mozilla_mozglue_build_arm.h) = 94e2b1a1a9ebf20bfa8a542066aa0dad475db320
 SHA1 (patch-mozilla_netwerk_dns_moz.build) = d87c07ebfa01d32ca826932af733b37ce586e9f7
+SHA1 (patch-mozilla_nsprpub_pr_src_pthreads_ptsynch.c) = 05e410e27538083cde5f4c50089ea73d0ce16e9e
 SHA1 (patch-mozilla_old-configure.in) = e98e393a90c8283259d7c6fe2a2fff03f2747e4d
 SHA1 (patch-mozilla_security_manager_ssl_moz.build) = 70b36809c96e586c93af4ea54a383a74835b2192
 SHA1 (patch-mozilla_toolkit_components_osfile_modules_osfile__unix__back.jsm) = db4084f6a7dba2fc5d35cd256c6f149fabbf7bc7
