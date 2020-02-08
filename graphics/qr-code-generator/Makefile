@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/02/05 13:17:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/02/08 17:47:26 wiz Exp $
 
 DISTNAME=	QR-Code-generator-1.4.0
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://dev-www.libreoffice.org/src/
 
