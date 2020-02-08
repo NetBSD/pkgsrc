@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2019/11/03 19:28:47 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/02/08 17:30:22 fcambus Exp $
 #
 
 DISTNAME=	asciiquarium_1.1
 PKGNAME=	asciiquarium-1.1
 PKGREVISION=	4
 CATEGORIES=	games
-MASTER_SITES=	http://robobunny.com/projects/asciiquarium/
+MASTER_SITES=	https://robobunny.com/projects/asciiquarium/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://robobunny.com/projects/asciiquarium/html/
+MAINTAINER=	fcambus@NetBSD.org
+HOMEPAGE=	https://robobunny.com/projects/asciiquarium/html/
 COMMENT=	ASCII art aquarium
 LICENSE=	gnu-gpl-v2
 
