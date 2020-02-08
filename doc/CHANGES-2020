@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.987 2020/02/08 20:19:49 wiedi Exp $
+$NetBSD: CHANGES-2020,v 1.988 2020/02/08 21:45:33 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1413,3 +1413,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/yabasic to 2.86.4 [fcambus 2020-02-08]
 	Updated graphics/qr-code-generator to 1.4.0nb1 [wiz 2020-02-08]
 	Updated editors/nano to 4.8 [wiedi 2020-02-08]
+	Updated www/firefox52 to 52.9.0nb21 [kamil 2020-02-08]
