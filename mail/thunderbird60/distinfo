@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2020/01/05 02:20:08 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2020/02/08 22:30:17 kamil Exp $
 
 SHA1 (thunderbird-60.9.1.source.tar.xz) = ce6b4e411e8f5da3e217122e9bf61553ce76b1a7
 RMD160 (thunderbird-60.9.1.source.tar.xz) = 9e771f2540e34d222cfb85f3ae9e108364881209
@@ -39,6 +39,7 @@ SHA1 (patch-media_webrtc_trunk_webrtc_modules_audio__device_linux_audio__device_
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = 1e0e83fa9df5cd5c4ae83bc2fbfd08ebaba05d6b
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc) = b950dc99c51af7aa51f485457a0653aa9d17f5a4
 SHA1 (patch-modules_pdfium_update.sh) = 2aecc41e917781da55edfeb1c3a540548d2244aa
+SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 7e88040c16bc24b120ba69c74e91a80a727ce451
 SHA1 (patch-old-configure.in) = 8e90c04b1eefaff1822a89f5940a0e335c2c0b5e
 SHA1 (patch-servo_components_style__traits_lib.rs) = b07dfc91bae3f94b7da0c5dab523a6901b9b1bf7
 SHA1 (patch-servo_components_style_build__gecko.rs) = 3fd66ec7c6af23a3e2b3299b68c48777ab62b48b
