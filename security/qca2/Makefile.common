@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2019/04/25 23:35:28 markd Exp $
+# $NetBSD: Makefile.common,v 1.4 2020/02/08 16:58:08 nia Exp $
 
 DISTNAME=	qca-2.2.1
 CATEGORIES=	security
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=qca/2.2.1/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://delta.affinix.com/qca/
+HOMEPAGE=	https://userbase.kde.org/QCA
 LICENSE=	gnu-lgpl-v2.1
 
 PATCHDIR=	${.CURDIR}/../../security/qca2/patches
