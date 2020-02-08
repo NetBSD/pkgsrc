@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1302 2020/01/20 01:32:17 nia Exp $
+# $NetBSD: Makefile,v 1.1303 2020/02/08 00:54:47 tsutsui Exp $
 #
 
 COMMENT=	Networking tools
@@ -398,6 +398,7 @@ SUBDIR+=	nagstamon
 SUBDIR+=	nam
 SUBDIR+=	nanomsg
 SUBDIR+=	nanomsgxx
+SUBDIR+=	nanotodon
 SUBDIR+=	nap
 SUBDIR+=	napshare
 SUBDIR+=	nasd
