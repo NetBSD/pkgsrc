@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.221 2020/02/05 14:29:56 ryoon Exp $
+$NetBSD: distinfo,v 1.222 2020/02/08 22:36:24 kamil Exp $
 
 SHA1 (thunderbird-68.4.2.source.tar.xz) = 699b9b7d9d02542e4a7eca2a145e300ad316223d
 RMD160 (thunderbird-68.4.2.source.tar.xz) = c26a9f61932dc8d596944b4aacb65e10782c7d00
@@ -30,6 +30,7 @@ SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = 202a10b264f7582c9e9b16a4b97447fad
 SHA1 (patch-media_libcubeb_src_moz.build) = fd3b036b3ba4105949c6b0f46bf72c89184e777d
 SHA1 (patch-media_libcubeb_update.sh) = f8d0f674987519a1a1738be158e8cd4296f6def0
 SHA1 (patch-media_libpng_pngpriv.h) = dfd4d345e10f6f74d3a3546732a868481c1d5818
+SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = cd0639f97f2135980bc3036cc858ac061107bc75
 SHA1 (patch-old-configure.in) = 24c2f64250160c9e4c4cdc3b5ff2e6d33a5d6aad
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = cd4d65d6e6358b5b77b6b63441a8550f2d1e97c7
 SHA1 (patch-toolkit_library_moz.build) = 429745ec028ce71d8ba2457679b715ac14b6e2d3
