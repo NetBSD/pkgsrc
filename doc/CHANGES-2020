@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.981 2020/02/08 15:45:57 nia Exp $
+$NetBSD: CHANGES-2020,v 1.982 2020/02/08 16:01:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1407,3 +1407,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed net/monsoon [nia 2020-02-08]
 	Removed inputmethod/qt5-uim [nia 2020-02-08]
 	Removed print/libgnomecups [nia 2020-02-08]
+	Updated devel/transifex-client to 0.13.7 [taca 2020-02-08]
