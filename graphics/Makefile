@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.879 2020/02/05 13:18:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.880 2020/02/08 16:14:52 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -37,7 +37,6 @@ SUBDIR+=	R-viridisLite
 SUBDIR+=	SDL2_image
 SUBDIR+=	SDL_image
 SUBDIR+=	aalib
-SUBDIR+=	adapta-gtk-theme
 SUBDIR+=	adaptagrams
 SUBDIR+=	adwaita-icon-theme
 SUBDIR+=	agg
