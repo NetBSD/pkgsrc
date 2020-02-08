@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/02/06 11:24:20 kamil Exp $
+# $NetBSD: Makefile,v 1.20 2020/02/08 09:16:56 kamil Exp $
 
 DISTNAME=		xkbcomp-1.4.2
 CATEGORIES=		x11
@@ -16,7 +16,10 @@ PKGCONFIG_OVERRIDE=	xkbcomp.pc.in
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=		-Wno-error=string-compare
+.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
