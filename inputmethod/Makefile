@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2018/08/18 01:22:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2020/02/08 15:37:56 nia Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -70,7 +70,6 @@ SUBDIR+=	novel-pinyin
 SUBDIR+=	p5-zinnia
 SUBDIR+=	py-input-pad
 SUBDIR+=	py-zinnia
-SUBDIR+=	qt5-uim
 SUBDIR+=	ruby-zinnia
 SUBDIR+=	scim
 SUBDIR+=	scim-anthy
