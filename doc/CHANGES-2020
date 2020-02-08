@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.990 2020/02/08 22:06:48 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.991 2020/02/08 22:12:02 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1416,3 +1416,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox52 to 52.9.0nb21 [kamil 2020-02-08]
 	Updated www/firefox60 to 60.9.0nb3 [kamil 2020-02-08]
 	Updated www/firefox68 to 68.4.2nb1 [kamil 2020-02-08]
+	Updated www/firefox to 72.0.2nb1 [kamil 2020-02-08]
