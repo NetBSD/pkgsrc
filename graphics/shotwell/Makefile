@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2020/01/21 16:15:05 nia Exp $
+# $NetBSD: Makefile,v 1.106 2020/02/08 15:35:27 nia Exp $
 
 DISTNAME=	shotwell-0.30.8
 CATEGORIES=	graphics gnome
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Apps/Shotwell
 COMMENT=	Photo organizer for the GNOME desktop
 LICENSE=	gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
