@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2019/08/28 04:30:53 taca Exp $
+# $NetBSD: Makefile,v 1.18 2020/02/08 16:00:27 taca Exp $
 
-DISTNAME=	transifex-client-0.13.6
+DISTNAME=	transifex-client-0.13.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=transifex/}
 GITHUB_PROJECT=	transifex-client
@@ -12,12 +11,12 @@ HOMEPAGE=	https://github.com/transifex/${GITHUB_PROJECT}
 COMMENT=	Transifex Command-line Client
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.14:../../www/py-urllib3
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.14.2:../../www/py-urllib3
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.19.1:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-python-slugify>=1.2.6:../../devel/py-python-slugify
 
-EXTRACT_USING=	gtar
+EXTRACT_USING=	bsdtar
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} tx tx-${PYVERSSUFFIX} || ${TRUE}
