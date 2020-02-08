@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.985 2020/02/08 17:12:37 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.986 2020/02/08 17:47:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1411,3 +1411,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed graphics/adapta-gtk-theme [nia 2020-02-08]
 	Updated audio/libmysofa to 1.0 [nia 2020-02-08]
 	Updated lang/yabasic to 2.86.4 [fcambus 2020-02-08]
+	Updated graphics/qr-code-generator to 1.4.0nb1 [wiz 2020-02-08]
