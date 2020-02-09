@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 19:13:05 brook Exp $
+# $NetBSD: Makefile,v 1.2 2020/02/09 12:08:55 mef Exp $
 
 R_PKGNAME=	devtools
-R_PKGVER=	2.1.0
+R_PKGVER=	2.2.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,9 +22,24 @@ DEPENDS+=	R-testthat>=2.1.1:../../devel/R-testthat
 DEPENDS+=	R-usethis>=1.5.0:../../devel/R-usethis
 DEPENDS+=	R-withr>=2.1.2:../../devel/R-withr
 DEPENDS+=	R-rstudioapi>=0.7:../../math/R-rstudioapi
+DEPENDS+=	R-ellipsis>=0.3.0:../../math/R-ellipsis
 DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
 DEPENDS+=	R-jsonlite>=1.6:../../textproc/R-jsonlite
+DEPENDS+=	R-DT-[0-9]*:../../textproc/R-DT
 DEPENDS+=	R-httr>=0.4:../../www/R-httr
+DEPENDS+=	R-rversions-[0-9]*:../../devel/R-rversions
+
+# Packages suggested but not available:
+#   'BiocManager', 'foghorn', 'gmailr', 'lintr', 'pingr', 'pkgdown',
+#  'rhub', 'spelling'
+#
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
+TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
+TEST_DEPENDS+=	R-bitops-[0-9]*:../../math/R-bitops
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-rversions-[0-9]*:../../devel/R-rversions
+
 
 USE_LANGUAGES=	# none
 
