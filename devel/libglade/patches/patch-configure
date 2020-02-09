@@ -1,7 +1,72 @@
-$NetBSD: patch-configure,v 1.1 2020/02/09 11:28:13 jdolecek Exp $
+$NetBSD: patch-configure,v 1.2 2020/02/09 11:34:15 jdolecek Exp $
 
---- configure.orig	2009-03-17 15:25:36.000000000 +0100
+Disable Python test to avoid the dependency, disables the libglade-convert
+tool.
+
+Add gmodule-2.0 (part of glib2) to the list of required and linked libraries,
+so the link succeeds on Darwin.
+
+--- configure.orig	2009-03-17 14:25:36.000000000 +0000
 +++ configure
+@@ -11083,12 +11083,12 @@ if test -n "$LIBGLADE_CFLAGS"; then
+     pkg_cv_LIBGLADE_CFLAGS="$LIBGLADE_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0") 2>&5
++    { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0 gmodule-2.0 >= 2.10.0\"") >&5
++  ($PKG_CONFIG --exists --print-errors "  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0 gmodule-2.0 >= 2.10.0") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_LIBGLADE_CFLAGS=`$PKG_CONFIG --cflags "  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0" 2>/dev/null`
++  pkg_cv_LIBGLADE_CFLAGS=`$PKG_CONFIG --cflags "  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0 gmodule-2.0 >= 2.10.0" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -11099,12 +11099,12 @@ if test -n "$LIBGLADE_LIBS"; then
+     pkg_cv_LIBGLADE_LIBS="$LIBGLADE_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0") 2>&5
++    { ($as_echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0 gmodule-2.0 >= 2.10.0\"") >&5
++  ($PKG_CONFIG --exists --print-errors "  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0 gmodule-2.0 >= 2.10.0") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_LIBGLADE_LIBS=`$PKG_CONFIG --libs "  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0" 2>/dev/null`
++  pkg_cv_LIBGLADE_LIBS=`$PKG_CONFIG --libs "  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0 gmodule-2.0 >= 2.10.0" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -11122,14 +11122,14 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        LIBGLADE_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0" 2>&1`
++	        LIBGLADE_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0 gmodule-2.0 >= 2.10.0" 2>&1`
+         else
+-	        LIBGLADE_PKG_ERRORS=`$PKG_CONFIG --print-errors "  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0" 2>&1`
++	        LIBGLADE_PKG_ERRORS=`$PKG_CONFIG --print-errors "  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0 gmodule-2.0 >= 2.10.0" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$LIBGLADE_PKG_ERRORS" >&5
+ 
+-	{ { $as_echo "$as_me:$LINENO: error: Package requirements (  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0) were not met:
++	{ { $as_echo "$as_me:$LINENO: error: Package requirements (  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0 gmodule-2.0 >= 2.10.0) were not met:
+ 
+ $LIBGLADE_PKG_ERRORS
+ 
+@@ -11140,7 +11140,7 @@ Alternatively, you may set the environme
+ and LIBGLADE_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ " >&5
+-$as_echo "$as_me: error: Package requirements (  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0) were not met:
++$as_echo "$as_me: error: Package requirements (  libxml-2.0 >= 2.4.10   atk >= 1.9.0   gtk+-2.0 >= 2.5.0   glib-2.0 >= 2.10.0 gmodule-2.0 >= 2.10.0) were not met:
+ 
+ $LIBGLADE_PKG_ERRORS
+ 
 @@ -13054,6 +13054,7 @@ $as_echo "$LINGUAS" >&6; }
  
  
