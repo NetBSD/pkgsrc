@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.29 2019/05/07 19:36:44 rillig Exp $
+# $NetBSD: configure.mk,v 1.30 2020/02/09 20:33:39 rillig Exp $
 #
 # = Package-settable variables =
 #
@@ -288,3 +288,30 @@ configure-help:
 .for d in ${CONFIGURE_DIRS}
 	${RUN} cd ${WRKSRC} && cd ${d} && ${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV} ${CONFIG_SHELL} ${CONFIGURE_SCRIPT} --help
 .endfor
+
+# configure-env:
+#	Runs an interactive shell in the same environment that is
+#	also used for the configure scripts.
+#
+#	This is only used during development and testing of a package
+#	to work in the same environment as the actual build.
+#
+# User-settable variables:
+#
+# CONFIGURE_ENV_SHELL
+#	The shell to start.
+#
+#	Default: ${CONFIG_SHELL}
+#
+# Keywords: debug configure
+
+configure-env: .PHONY ${_PKGSRC_BARRIER:Ubarrier:D_configure-env}
+_configure-env: .PHONY wrapper
+	@${STEP_MSG} "Entering the configure environment for ${PKGNAME}"
+.if ${CONFIGURE_DIRS:[#]} > 1 || ${CONFIGURE_DIRS} != ${WRKSRC}
+	@${ECHO_MSG} "The CONFIGURE_DIRS are:" \
+		${CONFIGURE_DIRS:S,^${WRKSRC}$,.,:S,^${WRKSRC}/,,:Q}
+.endif
+	${RUN} cd ${WRKSRC} && cd ${d} \
+	&& ${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV} \
+		${CONFIGURE_ENV_SHELL:U${CONFIG_SHELL}}
