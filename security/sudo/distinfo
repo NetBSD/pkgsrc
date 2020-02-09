@@ -1,18 +1,10 @@
-$NetBSD: distinfo,v 1.106 2019/12/19 16:59:44 kim Exp $
+$NetBSD: distinfo,v 1.106.4.1 2020/02/09 19:21:38 bsiegert Exp $
 
-SHA1 (sudo-1.8.29.tar.gz) = fdce342856f1803478eb549479190370001dca95
-RMD160 (sudo-1.8.29.tar.gz) = 706c7c8ec2a90b2e464e138384335b7de91d1c25
-SHA512 (sudo-1.8.29.tar.gz) = ea780922b2afb47df4df4b533fb355fd916cb18a6bfd13c7ca36a25b03ef585d805648c6fa85692bea363b1f83664ac3bc622f99bcd149b3a86f70522eb4d340
-Size (sudo-1.8.29.tar.gz) = 3338260 bytes
-SHA1 (patch-Makefile.in) = 279c7ad0f7f85ea7bc2d4beb5aa21abdf6237a7c
-SHA1 (patch-configure) = 460b9575346c263b944535aa8e2408e959840c77
-SHA1 (patch-include_sudo__compat.h) = 4f9b021ebdd507949f13e289deabdb6090ab334c
-SHA1 (patch-include_sudo__event.h) = 4d0787a45c2c7d4a7d3ae3111ccb3a4a4b84d083
-SHA1 (patch-lib_util_sig2str.c) = e5636d9e414fc9354cd238751fa4a00026320dd3
-SHA1 (patch-lib_util_str2sig.c) = e04aa67cab901e1be10d59bd1b0ee740aa1295b8
-SHA1 (patch-plugins_sudoers_Makefile.in) = 46bbee9c51664357099dc6d6871341de3e3fcc6f
-SHA1 (patch-plugins_sudoers_logging.c) = 700ac9540a82bea4f3106cea941b785e5bd31203
-SHA1 (patch-plugins_sudoers_starttime.c) = acec2f8a96041381582acff4928233568411f2c6
-SHA1 (patch-plugins_sudoers_sudoers.c) = b5aa8a91da50d4b12ea47cd92e29d25ea325b52c
-SHA1 (patch-src_Makefile.in) = cc6398a810dc394d8e4b50f2b2412cda839c0ca9
-SHA1 (patch-src_limits.c) = 790c64fed4a4f406ce07b3d0e806866095c0a5ca
+SHA1 (sudo-1.8.31.tar.gz) = 24222b6fb644354c944bc024a0f77548b289410d
+RMD160 (sudo-1.8.31.tar.gz) = 8f67e551df2f528983f675cda6c9c908f9f1950b
+SHA512 (sudo-1.8.31.tar.gz) = b9e408a322938c7a712458e9012d8a5f648fba5b23a5057cf5d8372c7f931262595f1575c32c32b9cb1a04af670ff4611e7df48d197e5c4cc038d6b65439a28a
+Size (sudo-1.8.31.tar.gz) = 3350674 bytes
+SHA1 (patch-Makefile.in) = e8813e1aa208d9ef6304038328504a5402341560
+SHA1 (patch-configure) = 906a90a8e8f5397693d9f410b7715439cf029508
+SHA1 (patch-plugins_sudoers_Makefile.in) = 730193c6437197a7114dd31886050cecdcba6772
+SHA1 (patch-src_Makefile.in) = 8959049bc428f592f84de1cad1a898c07c6e6b39

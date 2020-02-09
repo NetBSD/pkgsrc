@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.1 2018/08/14 13:18:38 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.1.14.1 2020/02/09 19:21:38 bsiegert Exp $
 
 Don't setuid here.
 
---- Makefile.in.orig	2015-10-31 23:35:07.000000000 +0000
-+++ Makefile.in
-@@ -63,7 +63,8 @@ SHELL = @SHELL@
+--- Makefile.in.orig	2019-10-28 15:51:30.000000000 +0200
++++ Makefile.in	2019-12-28 21:41:28.028886752 +0200
+@@ -64,7 +64,8 @@
  SED = @SED@
  
  INSTALL = $(SHELL) $(top_srcdir)/install-sh -c
@@ -14,7 +14,7 @@ Don't setuid here.
  
  ECHO_N = @ECHO_N@
  ECHO_C = @ECHO_C@
-@@ -129,7 +130,7 @@ install-doc: config.status ChangeLog
+@@ -165,7 +166,7 @@
  	    exit $$?; \
  	done
  
