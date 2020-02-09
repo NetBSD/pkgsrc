@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/11/06 18:49:17 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/02/09 17:39:44 jdolecek Exp $
 bin/gramps
 man/cs/man1/gramps.1
 man/fr/man1/gramps.1
@@ -37,6 +37,9 @@ share/gramps/DateHandler/_DateParser.pyo
 share/gramps/DateHandler/_DateUtils.py
 share/gramps/DateHandler/_DateUtils.pyc
 share/gramps/DateHandler/_DateUtils.pyo
+share/gramps/DateHandler/_Date_ar.py
+share/gramps/DateHandler/_Date_ar.pyc
+share/gramps/DateHandler/_Date_ar.pyo
 share/gramps/DateHandler/_Date_bg.py
 share/gramps/DateHandler/_Date_bg.pyc
 share/gramps/DateHandler/_Date_bg.pyo
@@ -52,6 +55,9 @@ share/gramps/DateHandler/_Date_da.pyo
 share/gramps/DateHandler/_Date_de.py
 share/gramps/DateHandler/_Date_de.pyc
 share/gramps/DateHandler/_Date_de.pyo
+share/gramps/DateHandler/_Date_el.py
+share/gramps/DateHandler/_Date_el.pyc
+share/gramps/DateHandler/_Date_el.pyo
 share/gramps/DateHandler/_Date_es.py
 share/gramps/DateHandler/_Date_es.pyc
 share/gramps/DateHandler/_Date_es.pyo
@@ -97,6 +103,9 @@ share/gramps/DateHandler/_Date_sr.pyo
 share/gramps/DateHandler/_Date_sv.py
 share/gramps/DateHandler/_Date_sv.pyc
 share/gramps/DateHandler/_Date_sv.pyo
+share/gramps/DateHandler/_Date_uk.py
+share/gramps/DateHandler/_Date_uk.pyc
+share/gramps/DateHandler/_Date_uk.pyo
 share/gramps/DateHandler/__init__.py
 share/gramps/DateHandler/__init__.pyc
 share/gramps/DateHandler/__init__.pyo
@@ -151,6 +160,12 @@ share/gramps/Filters/Rules/Citation/_HasReferenceCountOf.pyo
 share/gramps/Filters/Rules/Citation/_HasSource.py
 share/gramps/Filters/Rules/Citation/_HasSource.pyc
 share/gramps/Filters/Rules/Citation/_HasSource.pyo
+share/gramps/Filters/Rules/Citation/_HasSourceIdOf.py
+share/gramps/Filters/Rules/Citation/_HasSourceIdOf.pyc
+share/gramps/Filters/Rules/Citation/_HasSourceIdOf.pyo
+share/gramps/Filters/Rules/Citation/_HasSourceNoteRegexp.py
+share/gramps/Filters/Rules/Citation/_HasSourceNoteRegexp.pyc
+share/gramps/Filters/Rules/Citation/_HasSourceNoteRegexp.pyo
 share/gramps/Filters/Rules/Citation/_MatchesFilter.py
 share/gramps/Filters/Rules/Citation/_MatchesFilter.pyc
 share/gramps/Filters/Rules/Citation/_MatchesFilter.pyo
@@ -166,6 +181,9 @@ share/gramps/Filters/Rules/Citation/_MatchesSourceFilter.pyo
 share/gramps/Filters/Rules/Citation/_RegExpIdOf.py
 share/gramps/Filters/Rules/Citation/_RegExpIdOf.pyc
 share/gramps/Filters/Rules/Citation/_RegExpIdOf.pyo
+share/gramps/Filters/Rules/Citation/_RegExpSourceIdOf.py
+share/gramps/Filters/Rules/Citation/_RegExpSourceIdOf.pyc
+share/gramps/Filters/Rules/Citation/_RegExpSourceIdOf.pyo
 share/gramps/Filters/Rules/Citation/__init__.py
 share/gramps/Filters/Rules/Citation/__init__.pyc
 share/gramps/Filters/Rules/Citation/__init__.pyo
@@ -187,6 +205,9 @@ share/gramps/Filters/Rules/Event/_HasCitation.pyo
 share/gramps/Filters/Rules/Event/_HasData.py
 share/gramps/Filters/Rules/Event/_HasData.pyc
 share/gramps/Filters/Rules/Event/_HasData.pyo
+share/gramps/Filters/Rules/Event/_HasDayOfWeek.py
+share/gramps/Filters/Rules/Event/_HasDayOfWeek.pyc
+share/gramps/Filters/Rules/Event/_HasDayOfWeek.pyo
 share/gramps/Filters/Rules/Event/_HasGallery.py
 share/gramps/Filters/Rules/Event/_HasGallery.pyc
 share/gramps/Filters/Rules/Event/_HasGallery.pyo
@@ -217,6 +238,9 @@ share/gramps/Filters/Rules/Event/_MatchesFilter.pyo
 share/gramps/Filters/Rules/Event/_MatchesPersonFilter.py
 share/gramps/Filters/Rules/Event/_MatchesPersonFilter.pyc
 share/gramps/Filters/Rules/Event/_MatchesPersonFilter.pyo
+share/gramps/Filters/Rules/Event/_MatchesPlaceFilter.py
+share/gramps/Filters/Rules/Event/_MatchesPlaceFilter.pyc
+share/gramps/Filters/Rules/Event/_MatchesPlaceFilter.pyo
 share/gramps/Filters/Rules/Event/_MatchesSourceConfidence.py
 share/gramps/Filters/Rules/Event/_MatchesSourceConfidence.pyc
 share/gramps/Filters/Rules/Event/_MatchesSourceConfidence.pyo
@@ -1750,6 +1774,9 @@ share/gramps/gui/editors/displaytabs/locationembedlist.pyo
 share/gramps/gui/editors/displaytabs/locationmodel.py
 share/gramps/gui/editors/displaytabs/locationmodel.pyc
 share/gramps/gui/editors/displaytabs/locationmodel.pyo
+share/gramps/gui/editors/displaytabs/mediaattrembedlist.py
+share/gramps/gui/editors/displaytabs/mediaattrembedlist.pyc
+share/gramps/gui/editors/displaytabs/mediaattrembedlist.pyo
 share/gramps/gui/editors/displaytabs/mediabackreflist.py
 share/gramps/gui/editors/displaytabs/mediabackreflist.pyc
 share/gramps/gui/editors/displaytabs/mediabackreflist.pyo
@@ -2059,6 +2086,9 @@ share/gramps/gui/widgets/basicentry.pyo
 share/gramps/gui/widgets/buttons.py
 share/gramps/gui/widgets/buttons.pyc
 share/gramps/gui/widgets/buttons.pyo
+share/gramps/gui/widgets/dateentry.py
+share/gramps/gui/widgets/dateentry.pyc
+share/gramps/gui/widgets/dateentry.pyo
 share/gramps/gui/widgets/expandcollapsearrow.py
 share/gramps/gui/widgets/expandcollapsearrow.pyc
 share/gramps/gui/widgets/expandcollapsearrow.pyo
@@ -2402,18 +2432,15 @@ share/gramps/plugins/docgen/LaTeXDoc.pyo
 share/gramps/plugins/docgen/ODFDoc.py
 share/gramps/plugins/docgen/ODFDoc.pyc
 share/gramps/plugins/docgen/ODFDoc.pyo
-share/gramps/plugins/docgen/PSDrawDoc.py
-share/gramps/plugins/docgen/PSDrawDoc.pyc
-share/gramps/plugins/docgen/PSDrawDoc.pyo
-share/gramps/plugins/docgen/PdfDoc.py
-share/gramps/plugins/docgen/PdfDoc.pyc
-share/gramps/plugins/docgen/PdfDoc.pyo
 share/gramps/plugins/docgen/RTFDoc.py
 share/gramps/plugins/docgen/RTFDoc.pyc
 share/gramps/plugins/docgen/RTFDoc.pyo
 share/gramps/plugins/docgen/SvgDrawDoc.py
 share/gramps/plugins/docgen/SvgDrawDoc.pyc
 share/gramps/plugins/docgen/SvgDrawDoc.pyo
+share/gramps/plugins/docgen/cairodoc.py
+share/gramps/plugins/docgen/cairodoc.pyc
+share/gramps/plugins/docgen/cairodoc.pyo
 share/gramps/plugins/docgen/docgen.gpr.py
 share/gramps/plugins/docgen/docgen.gpr.pyc
 share/gramps/plugins/docgen/docgen.gpr.pyo
@@ -2475,9 +2502,6 @@ share/gramps/plugins/gramplet/AgeStats.pyo
 share/gramps/plugins/gramplet/Attributes.py
 share/gramps/plugins/gramplet/Attributes.pyc
 share/gramps/plugins/gramplet/Attributes.pyo
-share/gramps/plugins/gramplet/AttributesGramplet.py
-share/gramps/plugins/gramplet/AttributesGramplet.pyc
-share/gramps/plugins/gramplet/AttributesGramplet.pyo
 share/gramps/plugins/gramplet/Backlinks.py
 share/gramps/plugins/gramplet/Backlinks.pyc
 share/gramps/plugins/gramplet/Backlinks.pyo
@@ -2792,6 +2816,9 @@ share/gramps/plugins/rel/rel_sl.pyo
 share/gramps/plugins/rel/rel_sv.py
 share/gramps/plugins/rel/rel_sv.pyc
 share/gramps/plugins/rel/rel_sv.pyo
+share/gramps/plugins/rel/rel_uk.py
+share/gramps/plugins/rel/rel_uk.pyc
+share/gramps/plugins/rel/rel_uk.pyo
 share/gramps/plugins/rel/relplugins.gpr.py
 share/gramps/plugins/rel/relplugins.gpr.pyc
 share/gramps/plugins/rel/relplugins.gpr.pyo
