@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/10/13 12:22:27 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/02/09 11:53:47 mef Exp $
 
 R_PKGNAME=	ellipsis
-R_PKGVER=	0.2.0.1
+R_PKGVER=	0.3.0
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
