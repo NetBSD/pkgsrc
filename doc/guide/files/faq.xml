@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.55 2017/01/09 04:03:34 sevan Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.56 2020/02/09 00:44:25 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -557,6 +557,26 @@ perform a security check before building any package.</para>
 	programmers write so bad code that it only works for the
 	specific combination of <varname>CFLAGS</varname> they have
 	chosen.</para>
+
+<para>To find out where the CFLAGS are ignored, add the following lines to &mk.conf;:</para>
+
+<programlisting>
+CPPFLAGS+=              -Dpkgsrc___CPPFLAGS
+CFLAGS+=                -Dpkgsrc___CFLAGS
+CXXFLAGS+=              -Dpkgsrc___CXXFLAGS
+</programlisting>
+
+<para>Then run <command>bmake show-all-configure show-all-build</command>
+to see whether the above flags are passed to the actual build
+commands in general.</para>
+
+<para>To find out whether the flags are passed to individual compiler
+commands, have a look at the file <filename>work/.work.log</filename>. In
+most cases, the flags from the original command lines (the lines starting
+with <literal>[*]</literal>) are passed unmodified to the actual compiler
+(the lines starting with <literal>&lt;.&gt;</literal>). If the flag is
+missing from the actual compiler command, it must have been removed by
+the <link linkend="build.wrapper">pkgsrc compiler wrappers</link>.</para>
 
 </sect1>
 
