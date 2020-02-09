@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3044 2020/02/09 11:58:49 mef Exp $
+# $NetBSD: Makefile,v 1.3045 2020/02/09 23:42:31 jdolecek Exp $
 #
 
 COMMENT=	Development utilities
@@ -2258,7 +2258,6 @@ SUBDIR+=	py-jupyter_core
 SUBDIR+=	py-kafka-python
 SUBDIR+=	py-kaitaistruct
 SUBDIR+=	py-kjbuckets
-SUBDIR+=	py-kqueue
 SUBDIR+=	py-lama
 SUBDIR+=	py-lazr.config
 SUBDIR+=	py-lazr.delegates
