@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.6 2018/02/09 16:46:42 triaxx Exp $
+$NetBSD: patch-ad,v 1.7 2020/02/09 20:56:47 rillig Exp $
 
-Use PKG_SYSCONFDIR instead of hardcoding /etc
+Use PKG_SYSCONFDIR and VARBASE instead of hardcoding the paths.
 
 --- tunables.c.orig	2015-07-23 04:13:07.000000000 +0000
 +++ tunables.c
