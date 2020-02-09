@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.3 2019/12/16 15:58:19 taca Exp $
+# $NetBSD: Makefile.php,v 1.4 2020/02/09 22:01:10 rillig Exp $
 # used by lang/php73/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -51,6 +51,7 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 .include "../../textproc/libxml2/buildlink3.mk"
 
 CONFIGURE_ARGS+=	--with-pcre-regex=${BUILDLINK_PREFIX.pcre2}
+GNU_CONFIGURE_STRICT=	no
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2
