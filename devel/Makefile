@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3043 2020/02/06 20:11:34 adam Exp $
+# $NetBSD: Makefile,v 1.3044 2020/02/09 11:58:49 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -59,6 +59,7 @@ SUBDIR+=	R-rio
 SUBDIR+=	R-rlang
 SUBDIR+=	R-roxygen2
 SUBDIR+=	R-rprojroot
+SUBDIR+=	R-rversions
 SUBDIR+=	R-sessioninfo
 SUBDIR+=	R-tcltk2
 SUBDIR+=	R-testthat
