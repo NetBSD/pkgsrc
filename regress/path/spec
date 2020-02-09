@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: spec,v 1.1 2020/02/09 22:28:58 rillig Exp $
+# $NetBSD: spec,v 1.2 2020/02/09 22:39:21 rillig Exp $
 #
 # Ensures that the PATH variable can contain spaces, and that commands in
 # such directories can be found and executed.
@@ -19,8 +19,6 @@ do_test() {
 check_result() {
 	exit_status 0
 
-	# FIXME: the spaces must be preserved.
-	output_require ":/Path:with:spaces:"
-	# FIXME: the spaces must be preserved.
-	output_require "/Path:with:spaces$"
+	output_require ":/Path with spaces:"
+	output_require "/Path with spaces$"
 }
