@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.50 2020/02/09 20:56:47 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2020/02/09 20:58:37 rillig Exp $
 
 DISTNAME=	vsftpd-3.0.3
 PKGREVISION=	3
 CATEGORIES=	net
-MASTER_SITES=	http://security.appspot.com/downloads/
+MASTER_SITES=	https://security.appspot.com/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://vsftpd.beasts.org/
+HOMEPAGE=	https://security.appspot.com/vsftpd.html
 COMMENT=	FTP server that aims to be very secure
 LICENSE=	gnu-gpl-v2
 
