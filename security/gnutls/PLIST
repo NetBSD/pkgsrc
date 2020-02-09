@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2019/10/04 17:25:53 nia Exp $
+@comment $NetBSD: PLIST,v 1.69 2020/02/09 13:56:28 wiz Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -162,6 +162,8 @@ man/man3/gnutls_certificate_type_get2.3
 man/man3/gnutls_certificate_type_get_id.3
 man/man3/gnutls_certificate_type_get_name.3
 man/man3/gnutls_certificate_type_list.3
+man/man3/gnutls_certificate_verification_profile_get_id.3
+man/man3/gnutls_certificate_verification_profile_get_name.3
 man/man3/gnutls_certificate_verification_status_print.3
 man/man3/gnutls_certificate_verify_peers.3
 man/man3/gnutls_certificate_verify_peers2.3
@@ -312,6 +314,7 @@ man/man3/gnutls_hmac.3
 man/man3/gnutls_hmac_copy.3
 man/man3/gnutls_hmac_deinit.3
 man/man3/gnutls_hmac_fast.3
+man/man3/gnutls_hmac_get_key_size.3
 man/man3/gnutls_hmac_get_len.3
 man/man3/gnutls_hmac_init.3
 man/man3/gnutls_hmac_output.3
