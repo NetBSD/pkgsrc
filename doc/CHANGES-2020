@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.998 2020/02/09 11:58:49 mef Exp $
+$NetBSD: CHANGES-2020,v 1.999 2020/02/09 12:09:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1424,3 +1424,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/vlc to 3.0.8nb4 [ryoon 2020-02-09]
 	Updated math/R-ellipsis to 0.3.0 [mef 2020-02-09]
 	Added devel/R-rversions version  2.0.1 [mef 2020-02-09]
+	Updated devel/R-devtools to 2.2.1 [mef 2020-02-09]
