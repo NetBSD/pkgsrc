@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/12/09 14:20:55 taca Exp $
+# $NetBSD: Makefile,v 1.13 2020/02/09 21:10:32 rillig Exp $
 
 DISTNAME=		arcanist-20170609
 PKGREVISION=		2
@@ -22,7 +22,7 @@ DEPENDS+=		${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS+=		${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=		libphutil-[0-9]*:../../devel/libphutil
 
-CONFLICTS+=		arc-[0-9]*:../../archivers/arc
+CONFLICTS+=		arc-[0-9]*
 
 SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing PHP path
@@ -42,9 +42,8 @@ ARCANISTDIR=		share/arcanist
 INSTALLATION_DIRS+=	${ARCANISTDIR} bin
 
 do-install:
-	cd ${WRKSRC} && \
-		${PAX} -rw * -s',.*\.orig$$,,' \
-		${DESTDIR}${PREFIX}/${ARCANISTDIR}
+	cd ${WRKSRC} \
+	&& ${PAX} -rw -s',.*\.orig$$,,' * ${DESTDIR}${PREFIX}/${ARCANISTDIR}
 	ln -s ${PREFIX}/${ARCANISTDIR}/scripts/arcanist.php \
 		${DESTDIR}${PREFIX}/bin/arc
 
