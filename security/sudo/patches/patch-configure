@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2018/08/14 13:18:38 adam Exp $
+$NetBSD: patch-configure,v 1.1.14.1 2020/02/09 19:21:38 bsiegert Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * Link with util(3) in the case of DragonFly, too.
@@ -7,9 +7,9 @@ $NetBSD: patch-configure,v 1.1 2018/08/14 13:18:38 adam Exp $
   functions (HAVE_KRB5_*).
 * Remove setting sysconfdir to "/etc".
 
---- configure.orig	2017-05-29 20:33:06.000000000 +0000
-+++ configure
-@@ -865,6 +865,7 @@ with_libpath
+--- configure.orig	2019-12-26 06:24:43.000000000 +0200
++++ configure	2019-12-28 21:41:28.049372280 +0200
+@@ -869,6 +869,7 @@
  with_libraries
  with_efence
  with_csops
@@ -17,7 +17,7 @@ $NetBSD: patch-configure,v 1.1 2018/08/14 13:18:38 adam Exp $
  with_passwd
  with_skey
  with_opie
-@@ -1571,7 +1572,7 @@ Fine tuning of the installation director
+@@ -1581,7 +1582,7 @@
    --bindir=DIR            user executables [EPREFIX/bin]
    --sbindir=DIR           system admin executables [EPREFIX/sbin]
    --libexecdir=DIR        program executables [EPREFIX/libexec]
@@ -26,7 +26,7 @@ $NetBSD: patch-configure,v 1.1 2018/08/14 13:18:38 adam Exp $
    --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
    --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
    --libdir=DIR            object code libraries [EPREFIX/lib]
-@@ -1674,6 +1675,7 @@ Optional Packages:
+@@ -1694,6 +1695,7 @@
    --with-libraries        additional libraries to link with
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
@@ -34,7 +34,7 @@ $NetBSD: patch-configure,v 1.1 2018/08/14 13:18:38 adam Exp $
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey[=DIR]       enable S/Key support
    --with-opie[=DIR]       enable OPIE support
-@@ -4746,6 +4748,23 @@ fi
+@@ -4797,6 +4799,23 @@
  
  
  
@@ -58,7 +58,7 @@ $NetBSD: patch-configure,v 1.1 2018/08/14 13:18:38 adam Exp $
  # Check whether --with-passwd was given.
  if test "${with_passwd+set}" = set; then :
    withval=$with_passwd; case $with_passwd in
-@@ -15770,7 +15789,7 @@ fi
+@@ -15925,7 +15944,7 @@
  		: ${mansectsu='1m'}
  		: ${mansectform='4'}
  		;;
@@ -67,7 +67,7 @@ $NetBSD: patch-configure,v 1.1 2018/08/14 13:18:38 adam Exp $
  		shadow_funcs="getspnam"
  		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
  		# Check for SECCOMP_SET_MODE_FILTER in linux/seccomp.h
-@@ -17995,7 +18014,7 @@ if test "x$ac_cv_header_login_cap_h" = x
+@@ -18163,7 +18182,7 @@
  _ACEOF
   LOGINCAP_USAGE='[-c class] '; LCMAN=1
  	case "$OS" in
@@ -76,7 +76,7 @@ $NetBSD: patch-configure,v 1.1 2018/08/14 13:18:38 adam Exp $
  		SUDO_LIBS="${SUDO_LIBS} -lutil"
  		SUDOERS_LIBS="${SUDOERS_LIBS} -lutil"
  		;;
-@@ -22483,10 +22502,9 @@ if test ${with_pam-"no"} != "no"; then
+@@ -22993,10 +23012,9 @@
      # Check for pam_start() in libpam first, then for pam_appl.h.
      #
      found_pam_lib=no
@@ -89,7 +89,7 @@ $NetBSD: patch-configure,v 1.1 2018/08/14 13:18:38 adam Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -22510,18 +22528,17 @@ return pam_start ();
+@@ -23020,18 +23038,17 @@
  }
  _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
@@ -113,7 +113,7 @@ $NetBSD: patch-configure,v 1.1 2018/08/14 13:18:38 adam Exp $
    found_pam_lib=yes
  fi
  
-@@ -23256,6 +23273,8 @@ fi
+@@ -23766,6 +23783,8 @@
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  	AUTH_OBJS="$AUTH_OBJS kerb5.lo"
      fi
@@ -122,7 +122,7 @@ $NetBSD: patch-configure,v 1.1 2018/08/14 13:18:38 adam Exp $
      _LIBS="$LIBS"
      LIBS="${LIBS} ${SUDOERS_LIBS}"
      for ac_func in krb5_verify_user krb5_init_secure_context
-@@ -26426,7 +26445,6 @@ test "$datarootdir" = '${prefix}/share' 
+@@ -27026,7 +27045,6 @@
  test "$docdir" = '${datarootdir}/doc/${PACKAGE_TARNAME}' && docdir='$(datarootdir)/doc/$(PACKAGE_TARNAME)'
  test "$localedir" = '${datarootdir}/locale' && localedir='$(datarootdir)/locale'
  test "$localstatedir" = '${prefix}/var' && localstatedir='$(prefix)/var'
