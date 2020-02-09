@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2034 2020/01/21 10:56:54 kamil Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2035 2020/02/09 22:39:20 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -442,8 +442,10 @@ _PATH_ORIG:=		${PATH}
 MAKEFLAGS+=		_PATH_ORIG=${_PATH_ORIG:Q}
 .endif
 
-_PATH_COMPONENTS=	${PREPEND_PATH:[-1..1]} ${_PATH_ORIG:C,:, ,}
-PATH=	${_PATH_COMPONENTS:ts:}
+_PATH_COMPONENTS= \
+	${PREPEND_PATH:[-1..1]} \
+	${_PATH_ORIG:S, ,__space_in_path__,gW:S,:, ,g}
+PATH=	${_PATH_COMPONENTS:ts::S,__space_in_path__, ,g}
 
 ################################################################
 # Many ways to disable a package.
