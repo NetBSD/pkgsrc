@@ -1,0 +1,6 @@
+PyICU is a Python extension wrapping the ICU C++ libraries.
+
+ICU stands for "International Components for Unicode". These are
+the i18n libraries of the Unicode Consortium. They implement much
+of the Unicode Standard, many of its companion Unicode Technical
+Standards, and much of Unicode CLDR.
