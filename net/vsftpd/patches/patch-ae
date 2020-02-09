@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.6 2018/02/09 16:46:42 triaxx Exp $
+$NetBSD: patch-ae,v 1.7 2020/02/09 20:56:47 rillig Exp $
 
 Use PKG_SYSCONFDIR instead of hardcoding /etc
 
@@ -9,7 +9,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  .Pa listen=YES
  in
 -.Pa /etc/vsftpd.conf .
-+.Pa @PKG_SYSCONFDIR@/vsftpd/vsftpd.conf .
++.Pa @PKG_SYSCONFDIR@/vsftpd.conf .
  Direct execution of the
  .Nm vsftpd
  binary will then launch the FTP service ready for immediate client connections.
@@ -18,7 +18,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  strict order that they are encountered on the command line.
  If no config files are specified, the default configuration file of
 -.Pa /etc/vsftpd.conf
-+.Pa @PKG_SYSCONFDIR@/vsftpd/vsftpd.conf
++.Pa @PKG_SYSCONFDIR@/vsftpd.conf
  will be loaded, after all other command line options are processed.
  .Pp
  Supported options are:
@@ -27,16 +27,16 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  .El
  .Sh EXAMPLES
 -vsftpd -olisten=NO /etc/vsftpd.conf -oftpd_banner=blah
-+vsftpd -olisten=NO @PKG_SYSCONFDIR@/vsftpd/vsftpd.conf -oftpd_banner=blah
++vsftpd -olisten=NO @PKG_SYSCONFDIR@/vsftpd.conf -oftpd_banner=blah
  .Pp
  That example overrides vsftpd's built-in default for the "listen" option to be
 -NO, but then loads /etc/vsftpd.conf which may override that setting. Finally,
-+NO, but then loads @PKG_SYSCONFDIR@/vsftpd/vsftpd.conf which may override that setting. Finally,
++NO, but then loads @PKG_SYSCONFDIR@/vsftpd.conf which may override that setting. Finally,
  the "ftpd_banner" setting is set to "blah", which overrides any default vsftpd
  setting and any identical setting that was in the config file.
  .Sh FILES
 -.Pa /etc/vsftpd.conf
-+.Pa @PKG_SYSCONFDIR@/vsftpd/vsftpd.conf
++.Pa @PKG_SYSCONFDIR@/vsftpd.conf
  .Sh SEE ALSO
  .Xr vsftpd.conf 5
  .end
