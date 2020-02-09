@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1008 2020/02/09 17:44:18 jdolecek Exp $
+$NetBSD: CHANGES-2020,v 1.1009 2020/02/09 21:12:16 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1433,3 +1433,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-mercurial to 5.3 [wiz 2020-02-09]
 	Updated archivers/par2 to 0.8.1 [rhialto 2020-02-09]
 	Updated databases/gramps3 to 3.4.9 [jdolecek 2020-02-09]
+	Added textproc/py-ICU version 2.4.2 [jdolecek 2020-02-09]
