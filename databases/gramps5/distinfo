@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/02/09 21:43:07 jdolecek Exp $
+
+SHA1 (gramps-5.1.2.tar.gz) = 6df76850862e8bcde0b61852e984473990c11508
+RMD160 (gramps-5.1.2.tar.gz) = 2abc701a4a03922d462de249bab9ddaf877a1bd9
+SHA512 (gramps-5.1.2.tar.gz) = 12e88645d14717823457308cba55e1f6899e2a6aebcf281875261765f163529fd75512fca034db59816473c6542319166375bec6d5502e8e6a7c452bfc10c0ad
+Size (gramps-5.1.2.tar.gz) = 17304294 bytes
