@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19665 2020/02/09 14:10:23 wiz Exp $
+$NetBSD: TODO,v 1.19666 2020/02/09 14:12:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -806,7 +806,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libwnck3-3.32.0
 	o libxdg-basedir-1.2.0
 	o libykneomgr-0.1.8
-	o libzip-1.6.1
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
