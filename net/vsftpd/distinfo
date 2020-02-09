@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2018/10/18 07:51:40 maya Exp $
+$NetBSD: distinfo,v 1.18 2020/02/09 20:56:47 rillig Exp $
 
 SHA1 (vsftpd-3.0.3.tar.gz) = d5f5a180dbecd0fbcdc92bf0ba2fc001c962b55a
 RMD160 (vsftpd-3.0.3.tar.gz) = 0f0fd063661950bd466a818daae51cba3073e3cd
@@ -6,8 +6,8 @@ SHA512 (vsftpd-3.0.3.tar.gz) = 5a4410a88e72ecf6f60a60a89771bcec300c9f63c2ea83b21
 Size (vsftpd-3.0.3.tar.gz) = 196649 bytes
 SHA1 (patch-aa) = 57fdc476df4b7ada021c7fd6e8bad6db2b2e0c48
 SHA1 (patch-ab) = df9252f99d06a4742713c36ce6bff8908da171f7
-SHA1 (patch-ac) = fc1d148ea7b83df06f4fb44e20491032a159cfce
-SHA1 (patch-ad) = 738c302cd40387216d65ab1abc9ba0eb364320ff
-SHA1 (patch-ae) = 2b49d0566d69f9e30ea151c0c52ad139c4517dc8
+SHA1 (patch-ac) = dacaeae7daac73ceb014653bd8c0553aceb62516
+SHA1 (patch-ad) = 6d1143426eb6d2d0de5139160b76ebe451debd2d
+SHA1 (patch-ae) = ba770387570d202b440593d6c7cbd8d53d411a41
 SHA1 (patch-af) = 9ceb520f3137c157c7215f47db3eef62011f387e
 SHA1 (patch-sysdeputil.c) = 3efe030f66c50a31f6cb5e8565920f5b0eb4e78d

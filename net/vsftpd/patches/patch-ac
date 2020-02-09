@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2018/02/09 16:46:42 triaxx Exp $
+$NetBSD: patch-ac,v 1.6 2020/02/09 20:56:47 rillig Exp $
 
 Use PKG_SYSCONFDIR instead of hardcoding /etc
 
@@ -6,7 +6,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
 +++ vsftpd.conf
 @@ -1,4 +1,4 @@
 -# Example config file /etc/vsftpd.conf
-+# Example config file @PKG_SYSCONFDIR/vsftpd/vsftpd.conf
++# Example config file @PKG_SYSCONFDIR@/vsftpd.conf
  #
  # The default compiled in settings are fairly paranoid. This sample file
  # loosens things up a bit, to make the ftp daemon more usable.
@@ -15,7 +15,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  #deny_email_enable=YES
  # (default follows)
 -#banned_email_file=/etc/vsftpd.banned_emails
-+#banned_email_file=@PKG_SYSCONFDIR/vsftpd/vsftpd.banned_emails
++#banned_email_file=@PKG_SYSCONFDIR@/vsftpd.banned_emails
  #
  # You may specify an explicit list of local users to chroot() to their home
  # directory. If chroot_local_user is YES, then this list becomes a list of
@@ -24,7 +24,7 @@ Use PKG_SYSCONFDIR instead of hardcoding /etc
  #chroot_list_enable=YES
  # (default follows)
 -#chroot_list_file=/etc/vsftpd.chroot_list
-+#chroot_list_file=@PKG_SYSCONFDIR/vsftpd/vsftpd.chroot_list
++#chroot_list_file=@PKG_SYSCONFDIR@/vsftpd.chroot_list
  #
  # You may activate the "-R" option to the builtin ls. This is disabled by
  # default to avoid remote users being able to cause excessive I/O on large
