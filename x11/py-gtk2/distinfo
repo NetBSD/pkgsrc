@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2019/09/07 04:32:14 gutteridge Exp $
+$NetBSD: distinfo,v 1.33 2020/02/09 17:21:49 wiz Exp $
 
 SHA1 (pygtk-2.24.0.tar.bz2) = 344e6a32a5e8c7e0aaeb807e0636a163095231c2
 RMD160 (pygtk-2.24.0.tar.bz2) = 33f597def646261483cbbf5491aeb27bf0d22ea6
@@ -11,6 +11,5 @@ SHA1 (patch-gtk_Makefile.am) = 50556ac7074c9156db574e4a60863ff00e638981
 SHA1 (patch-gtk_Makefile.in) = 4fed9e802bd0e306e5070cf2ac7e44c86715a3e7
 SHA1 (patch-gtk_gtk-2.10.defs) = f944ab3f2304d11503dee628547ffd677531530f
 SHA1 (patch-pango-types.defs) = 386bd3b60595a6741dcae15b35977f5a3e6b3342
-SHA1 (patch-pango.defs) = e8ec316ddd635291ba958001b7cc729b14e9ec37
 SHA1 (patch-pango.override) = d7e5919d3e7c753900a15c63e9e8354c9d03a8c2
 SHA1 (patch-pangocairo.override) = 53eeba8c1c66e07d64c109ab0fd304e5f03d0eb3
