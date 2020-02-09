@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1005 2020/02/09 14:59:17 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1006 2020/02/09 15:37:12 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1431,3 +1431,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ImageMagick to 7.0.9.22 [wiz 2020-02-09]
 	Updated archivers/libzip to 1.6.1 [wiz 2020-02-09]
 	Updated devel/py-mercurial to 5.3 [wiz 2020-02-09]
+	Updated archivers/par2 to 0.8.1 [rhialto 2020-02-09]
