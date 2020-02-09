@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/01/24 12:09:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/02/09 14:12:49 wiz Exp $
 bin/zipcmp
 bin/zipmerge
 bin/ziptool
@@ -51,6 +51,7 @@ man/man3/zip_file_get_external_attributes.3
 man/man3/zip_file_rename.3
 man/man3/zip_file_replace.3
 man/man3/zip_file_set_comment.3
+man/man3/zip_file_set_dostime.3
 man/man3/zip_file_set_encryption.3
 man/man3/zip_file_set_external_attributes.3
 man/man3/zip_file_set_mtime.3
