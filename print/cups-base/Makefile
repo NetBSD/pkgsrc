@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/01/29 22:56:50 prlw1 Exp $
+# $NetBSD: Makefile,v 1.28 2020/02/09 00:06:53 rillig Exp $
 
 .include "../../print/cups/Makefile.common"
 
@@ -40,10 +40,6 @@ CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--without-bundledir
 CONFIGURE_ARGS+=	--without-icondir
 CONFIGURE_ARGS+=	--without-menudir
-CONFIGURE_ARGS+=	--without-perl
-CONFIGURE_ARGS+=	--without-php
-CONFIGURE_ARGS+=	--without-python
-CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--disable-gssapi
 
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
