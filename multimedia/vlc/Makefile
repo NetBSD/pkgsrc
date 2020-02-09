@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.227 2020/01/18 21:50:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.228 2020/02/09 11:31:35 ryoon Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		multimedia
 MASTER_SITES=		https://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.xz
@@ -34,6 +34,7 @@ BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
 BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 
 LUA_VERSIONS_ACCEPTED=	51 52
+CONFIGURE_ENV=		LUAC=${LUA_COMPILER}
 
 CONFIGURE_ARGS+=	--disable-archive
 CONFIGURE_ARGS+=	--disable-aribsub
