@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1000 2020/02/09 13:56:37 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1001 2020/02/09 13:59:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1426,3 +1426,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/R-rversions version  2.0.1 [mef 2020-02-09]
 	Updated devel/R-devtools to 2.2.1 [mef 2020-02-09]
 	Updated security/gnutls to 3.6.12 [wiz 2020-02-09]
+	Updated security/libsecret to 0.20.1 [wiz 2020-02-09]
