@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/02/09 21:43:07 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2020/02/09 21:54:48 jdolecek Exp $
 
 DISTNAME=		gramps-5.1.2
-PKGREVISION=		# empty
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gramps/}
 
@@ -11,10 +10,8 @@ COMMENT=		Genealogical Research and Analysis Management Programming System V5
 LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		msgfmt pkg-config intltool msgconv
-USE_PKGLOCALEDIR=	yes
-PYDISTUTILSPKG=		yes
 
-PYTHON_VERSIONS_ACCEPTED=	37 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 REPLACE_PYTHON+=	gramps/gen/utils/place.py
 REPLACE_PYTHON+=	gramps/gen/datehandler/_date_fr.py
@@ -34,6 +31,6 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../mk/bsd.pkg.mk"
