@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1110 2020/01/23 16:15:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.1111 2020/02/09 21:11:29 jdolecek Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -791,6 +791,7 @@ SUBDIR+=	pxp
 SUBDIR+=	py-4Suite
 SUBDIR+=	py-Excelerator
 SUBDIR+=	py-HappyDoc
+SUBDIR+=	py-ICU
 SUBDIR+=	py-JWT
 SUBDIR+=	py-Levenshtein
 SUBDIR+=	py-Tempita
