@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2019/07/18 12:15:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/02/10 13:08:10 ryoon Exp $
 
-SHA1 (grafX2-v2.6.tgz) = 0aa6501a6ab6815917826603f7d4ef4e2cf01b4e
-RMD160 (grafX2-v2.6.tgz) = ae0eb91a69be72e343241221a1c28261416aea51
-SHA512 (grafX2-v2.6.tgz) = 45daf4c32d7523f6b5c54b4b8d1fe9e35aff663a650ee86bd9898d91510340ae8e1fb61ea35d83efc944af28568258f827cdebb79362648361688c306781d8c6
-Size (grafX2-v2.6.tgz) = 1228632 bytes
-SHA1 (patch-help.c) = b4df9282f64760f00f380f19e52a48839f3d9025
-SHA1 (patch-main.c) = 32ab12bd3a3b39cc89004afde815dbd4fddc0802
-SHA1 (patch-misc.c) = e4913bbf2b309ff0c2858158b6b53d6768ebff85
+SHA1 (grafx2-2.7.2950-src.tgz) = 126fa87c1bcd18af0215b24451828c37d6c45f31
+RMD160 (grafx2-2.7.2950-src.tgz) = c9a2ca8c59d0229b296bb2eeac3293a7a2fbd679
+SHA512 (grafx2-2.7.2950-src.tgz) = 1f13d17327b55d040cca63bf804f81ff2cc8a57ef6c3418d5da2e84c090b3c2b62ed348abfb95b50f11ceea80637477e8cfd3d277dfd5c8949fbdb7620098cec
+Size (grafx2-2.7.2950-src.tgz) = 1104406 bytes
+SHA1 (patch-help.c) = 769082d899ee7e3e88fa789f59d26db723d7c8ee
+SHA1 (patch-main.c) = 3116bf8990994265132ce95fec1ca13a0b735912
+SHA1 (patch-misc.c) = 19d9c3225babd1f62c14def892b77a8691edb0a6
