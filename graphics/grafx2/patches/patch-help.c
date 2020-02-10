@@ -1,10 +1,10 @@
-$NetBSD: patch-help.c,v 1.1 2019/07/18 12:15:04 nia Exp $
+$NetBSD: patch-help.c,v 1.2 2020/02/10 13:08:10 ryoon Exp $
 
 Use statvfs on NetBSD.
 
---- help.c.orig	2019-01-10 08:40:57.000000000 +0000
+--- help.c.orig	2020-02-06 21:01:27.000000000 +0000
 +++ help.c
-@@ -30,9 +30,11 @@
+@@ -31,9 +31,11 @@
  #if defined(_MSC_VER) && _MSC_VER < 1900
  	#define snprintf _snprintf
  #endif
@@ -17,9 +17,9 @@ Use statvfs on NetBSD.
  #elif defined (__linux__) || defined(__SYLLABLE__)
      #include <sys/vfs.h>
  #elif defined (__HAIKU__)
-@@ -966,12 +968,18 @@ void Button_Stats(int btn)
-       GetDiskFreeSpaceExA(Main.selector.Directory,&tailleU,NULL,NULL);
-       mem_size = tailleU.QuadPart;
+@@ -976,12 +978,18 @@ void Button_Stats(int btn)
+         GFX2_Log(GFX2_ERROR, "GetDiskFreeSpaceExA() failed\n");
+       }
      }
 -#elif defined(__linux__) || defined(__macosx__) || defined(__FreeBSD__) || defined(__SYLLABLE__) || defined(__AROS__) || defined(__OpenBSD__) || defined(__NetBSD__)
 +#elif defined(__linux__) || defined(__macosx__) || defined(__FreeBSD__) || defined(__SYLLABLE__) || defined(__AROS__) || defined(__OpenBSD__)
