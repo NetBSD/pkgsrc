@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3045 2020/02/09 23:42:31 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3046 2020/02/10 14:30:29 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -29,6 +29,7 @@ SUBDIR+=	R-cliapp
 SUBDIR+=	R-clipr
 SUBDIR+=	R-covr
 SUBDIR+=	R-crayon
+SUBDIR+=	R-cyclocomp
 SUBDIR+=	R-desc
 SUBDIR+=	R-devtools
 SUBDIR+=	R-evaluate
@@ -40,6 +41,7 @@ SUBDIR+=	R-ini
 SUBDIR+=	R-inline
 SUBDIR+=	R-iterators
 SUBDIR+=	R-lazyeval
+SUBDIR+=	R-lintr
 SUBDIR+=	R-magrittr
 SUBDIR+=	R-memoise
 SUBDIR+=	R-mockery
