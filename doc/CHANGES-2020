@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1018 2020/02/10 13:13:32 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1019 2020/02/10 14:06:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1444,3 +1444,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/quickjs to 20200119nb1 [he 2020-02-10]
 	Updated graphics/grafx2 to 2.7.2950 [ryoon 2020-02-10]
 	Updated devel/ninja-build to 1.10.0 [ryoon 2020-02-10]
+	Added security/snallygaster version 0.0.4 [leot 2020-02-10]
