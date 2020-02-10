@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3046 2020/02/10 14:30:29 mef Exp $
+# $NetBSD: Makefile,v 1.3047 2020/02/10 18:28:25 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2239,6 +2239,7 @@ SUBDIR+=	py-hyperscan
 SUBDIR+=	py-hypothesis
 SUBDIR+=	py-idle
 SUBDIR+=	py-importlib-metadata
+SUBDIR+=	py-importlib-resources
 SUBDIR+=	py-incremental
 SUBDIR+=	py-intervaltree
 SUBDIR+=	py-iowait
