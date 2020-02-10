@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1022 2020/02/10 15:37:08 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1023 2020/02/10 17:58:54 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1454,3 +1454,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-grpcio to 1.27.1 [adam 2020-02-10]
 	Updated net/py-grpcio-testing to 1.27.1 [adam 2020-02-10]
 	Updated net/py-grpcio-tools to 1.27.1 [adam 2020-02-10]
+	Updated audio/fasttracker2 to 1.08 [fox 2020-02-10]
