@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/02/10 14:16:31 mef Exp $
+
+SHA1 (R/lintr_2.0.0.tar.gz) = cf21c26a30521f77b97b0b38338fc90123e94ffc
+RMD160 (R/lintr_2.0.0.tar.gz) = 72680552e3449c481f94c7bc80dc9eefdeed2b48
+SHA512 (R/lintr_2.0.0.tar.gz) = d21875f9e1027c07d8e0a2f677f67d86fea169b686fb56b8fa4810b3e952a25a161864e1589a34e481fe852de6fff139d041905bedc33f1971591e31b1520694
+Size (R/lintr_2.0.0.tar.gz) = 206624 bytes
