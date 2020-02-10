@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1020 2020/02/10 14:30:29 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1021 2020/02/10 15:24:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1449,3 +1449,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/R-cyclocomp version 1.1.0 [mef 2020-02-10]
 	Added textproc/R-xmlparsedata version 1.0.3 [mef 2020-02-10]
 	Added math/R-stringdist version 0.9.5.5 [mef 2020-02-10]
+	Updated databases/openldap to 2.4.49 [adam 2020-02-10]
