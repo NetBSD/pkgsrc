@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/02/10 14:19:35 mef Exp $
+
+SHA1 (R/xmlparsedata_1.0.3.tar.gz) = 43146896cc23e57f20b4bc2b690a2568a4bf3351
+RMD160 (R/xmlparsedata_1.0.3.tar.gz) = f8e15361090d435f389edfb23ea291023480b9ca
+SHA512 (R/xmlparsedata_1.0.3.tar.gz) = 01491f053de8f62da89af6560d206cf38d563ae7ed5270f7104815e0f9c160d9a9bfc7d3dd78441e495fe50929b558fba70cf3604c5b7021eb28e0457a397002
+Size (R/xmlparsedata_1.0.3.tar.gz) = 8188 bytes
