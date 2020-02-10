@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.738 2020/02/03 23:05:10 fox Exp $
+# $NetBSD: Makefile,v 1.739 2020/02/10 14:06:03 leot Exp $
 #
 
 COMMENT=	Security tools
@@ -583,6 +583,7 @@ SUBDIR+=	sks
 SUBDIR+=	sleuthkit
 SUBDIR+=	smaSHeM
 SUBDIR+=	smtpd
+SUBDIR+=	snallygaster
 SUBDIR+=	sniff
 SUBDIR+=	snoopy
 SUBDIR+=	snortsnarf
