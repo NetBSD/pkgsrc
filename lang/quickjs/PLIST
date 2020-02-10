@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2020/01/26 19:04:43 he Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/02/10 13:06:08 he Exp $
 bin/qjs
-${PLIST.bignum}bin/qjsbn
-${PLIST.bignum}bin/qjsbnc
 bin/qjsc
 bin/qjscalc
 include/quickjs/quickjs-libc.h
 include/quickjs/quickjs.h
 lib/quickjs/libquickjs.a
-${PLIST.bignum}lib/quickjs/libquickjs.bn.a
+${PLIST.lto}lib/quickjs/libquickjs.lto.a
