@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/02/10 14:05:36 leot Exp $
+
+SHA1 (snallygaster-0.0.4.tar.gz) = b1b5fa4205b5f2c2c03d6aa55bb94b62966b0041
+RMD160 (snallygaster-0.0.4.tar.gz) = 044e050eeb9bdb47730abc4388007622b6185c31
+SHA512 (snallygaster-0.0.4.tar.gz) = 86709304b99543f274b13232979d47ee33caf9849596564b8486d4fb1683f1fd869cfd9e7d8fa199d7898fefd53d38548fa32f1ae0f6ea4c929d5d5bd674c633
+Size (snallygaster-0.0.4.tar.gz) = 20392 bytes
