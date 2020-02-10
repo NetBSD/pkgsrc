@@ -1,16 +1,16 @@
-$NetBSD: patch-misc.c,v 1.2 2019/07/18 12:15:04 nia Exp $
+$NetBSD: patch-misc.c,v 1.3 2020/02/10 13:08:10 ryoon Exp $
 
 * Fix sysctl build failure
 
---- misc.c.orig	2019-01-10 08:40:57.000000000 +0000
+--- misc.c.orig	2020-02-06 21:01:27.000000000 +0000
 +++ misc.c
-@@ -25,6 +25,9 @@
- #if defined(WIN32)
- #define _WIN32_WINNT 0x0500
+@@ -29,6 +29,9 @@
+ #ifndef _MSC_VER
+ #include <strings.h>
  #endif
 +#if defined(__NetBSD__)
 +#define _NETBSD_SOURCE
 +#endif
- #include <string.h>
- #ifndef _MSC_VER
- #include <strings.h>
+ #include <stdlib.h>
+ #include <math.h>
+ #if !defined(USE_SDL) && !defined(USE_SDL2)

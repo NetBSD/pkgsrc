@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.5 2019/07/28 19:50:55 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/02/10 13:08:10 ryoon Exp $
 
-DISTNAME=	grafX2-v2.6
-PKGNAME=	${DISTNAME:S/X2-v/x2-/}
+DISTNAME=	grafx2-2.7.2950-src
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	graphics
-MASTER_SITES=	https://gitlab.com/GrafX2/grafX2/-/archive/v${PKGVERSION_NOREV}/
+MASTER_SITES=	https://gitlab.com/GrafX2/grafX2/-/jobs/428763304/artifacts/raw/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://grafx2.chez.com/
+HOMEPAGE=	https://grafx2.gitlab.io/grafX2/
 COMMENT=	Ultimate 256-color bitmap paint program
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	curl gmake pkg-config
 USE_LANGUAGES=	c c++
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
+WRKSRC=		${WRKDIR}/grafx2/src
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
