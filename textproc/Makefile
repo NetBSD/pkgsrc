@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1111 2020/02/09 21:11:29 jdolecek Exp $
+# $NetBSD: Makefile,v 1.1112 2020/02/10 14:30:29 mef Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -36,6 +36,7 @@ SUBDIR+=	R-stringi
 SUBDIR+=	R-stringr
 SUBDIR+=	R-utf8
 SUBDIR+=	R-xml2
+SUBDIR+=	R-xmlparsedata
 SUBDIR+=	R-yaml
 SUBDIR+=	WordNet
 SUBDIR+=	aha

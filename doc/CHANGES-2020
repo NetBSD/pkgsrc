@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1019 2020/02/10 14:06:22 leot Exp $
+$NetBSD: CHANGES-2020,v 1.1020 2020/02/10 14:30:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1445,3 +1445,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/grafx2 to 2.7.2950 [ryoon 2020-02-10]
 	Updated devel/ninja-build to 1.10.0 [ryoon 2020-02-10]
 	Added security/snallygaster version 0.0.4 [leot 2020-02-10]
+	Added devel/R-lintr version 2.0.0 [mef 2020-02-10]
+	Added devel/R-cyclocomp version 1.1.0 [mef 2020-02-10]
+	Added textproc/R-xmlparsedata version 1.0.3 [mef 2020-02-10]
+	Added math/R-stringdist version 0.9.5.5 [mef 2020-02-10]
