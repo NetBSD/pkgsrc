@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/01/03 08:21:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/02/10 15:36:32 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -69,15 +69,27 @@ ${PYSITELIB}/grpc/experimental/__init__.pyo
 ${PYSITELIB}/grpc/experimental/aio/__init__.py
 ${PYSITELIB}/grpc/experimental/aio/__init__.pyc
 ${PYSITELIB}/grpc/experimental/aio/__init__.pyo
+${PYSITELIB}/grpc/experimental/aio/_base_call.py
+${PYSITELIB}/grpc/experimental/aio/_base_call.pyc
+${PYSITELIB}/grpc/experimental/aio/_base_call.pyo
 ${PYSITELIB}/grpc/experimental/aio/_call.py
 ${PYSITELIB}/grpc/experimental/aio/_call.pyc
 ${PYSITELIB}/grpc/experimental/aio/_call.pyo
 ${PYSITELIB}/grpc/experimental/aio/_channel.py
 ${PLIST.py3x}${PYSITELIB}/grpc/experimental/aio/_channel.pyc
 ${PLIST.py3x}${PYSITELIB}/grpc/experimental/aio/_channel.pyo
+${PYSITELIB}/grpc/experimental/aio/_interceptor.py
+${PYSITELIB}/grpc/experimental/aio/_interceptor.pyc
+${PYSITELIB}/grpc/experimental/aio/_interceptor.pyo
 ${PYSITELIB}/grpc/experimental/aio/_server.py
 ${PLIST.py3x}${PYSITELIB}/grpc/experimental/aio/_server.pyc
 ${PLIST.py3x}${PYSITELIB}/grpc/experimental/aio/_server.pyo
+${PYSITELIB}/grpc/experimental/aio/_typing.py
+${PYSITELIB}/grpc/experimental/aio/_typing.pyc
+${PYSITELIB}/grpc/experimental/aio/_typing.pyo
+${PYSITELIB}/grpc/experimental/aio/_utils.py
+${PYSITELIB}/grpc/experimental/aio/_utils.pyc
+${PYSITELIB}/grpc/experimental/aio/_utils.pyo
 ${PYSITELIB}/grpc/experimental/gevent.py
 ${PYSITELIB}/grpc/experimental/gevent.pyc
 ${PYSITELIB}/grpc/experimental/gevent.pyo
