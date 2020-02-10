@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1011 2020/02/09 23:43:17 jdolecek Exp $
+$NetBSD: CHANGES-2020,v 1.1012 2020/02/10 08:37:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1436,3 +1436,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/py-ICU version 2.4.2 [jdolecek 2020-02-09]
 	Added databases/gramps5 version 5.1.2 [jdolecek 2020-02-09]
 	Removed devel/py-kqueue [jdolecek 2020-02-09]
+	Updated security/libgpg-error to 1.37 [adam 2020-02-10]
+	Updated www/py-django-extensions to 2.2.7 [adam 2020-02-10]
