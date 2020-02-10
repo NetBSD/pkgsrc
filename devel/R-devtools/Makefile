@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/02/09 12:08:55 mef Exp $
+# $NetBSD: Makefile,v 1.3 2020/02/10 14:25:53 mef Exp $
 
 R_PKGNAME=	devtools
 R_PKGVER=	2.2.1
@@ -30,8 +30,8 @@ DEPENDS+=	R-httr>=0.4:../../www/R-httr
 DEPENDS+=	R-rversions-[0-9]*:../../devel/R-rversions
 
 # Packages suggested but not available:
-#   'BiocManager', 'foghorn', 'gmailr', 'lintr', 'pingr', 'pkgdown',
-#  'rhub', 'spelling'
+#  'BiocManager', 'foghorn', 'gmailr', 'pingr', 'pkgdown', 'rhub',
+#  'spelling'
 #
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
@@ -39,6 +39,7 @@ TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-bitops-[0-9]*:../../math/R-bitops
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-rversions-[0-9]*:../../devel/R-rversions
+TEST_DEPENDS+=	R-lintr-[0-9]*:../../devel/R-lintr
 
 
 USE_LANGUAGES=	# none
