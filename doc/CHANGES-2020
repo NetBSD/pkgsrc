@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1037 2020/02/11 20:40:09 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.1038 2020/02/11 20:40:51 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1471,3 +1471,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-bottle to 0.12.18 [adam 2020-02-11]
 	Added mail/roundcube-plugin-carddav version 3.0.3 [triaxx 2020-02-11]
 	Updated mail/rspamd to 2.3 [triaxx 2020-02-11]
+	Updated mail/postfix to 3.4.9 [triaxx 2020-02-11]
