@@ -1,6 +1,7 @@
-$NetBSD: patch-help.c,v 1.2 2020/02/10 13:08:10 ryoon Exp $
+$NetBSD: patch-help.c,v 1.3 2020/02/11 02:38:37 ryoon Exp $
 
 Use statvfs on NetBSD.
+https://gitlab.com/GrafX2/grafX2/-/merge_requests/274
 
 --- help.c.orig	2020-02-06 21:01:27.000000000 +0000
 +++ help.c
