@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/11/20 08:32:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/02/11 17:21:26 adam Exp $
 bin/activate-global-python-argcomplete
 bin/python-argcomplete-check-easy-install-script
 bin/python-argcomplete-tcsh
@@ -18,7 +18,7 @@ ${PYSITELIB}/argcomplete/_check_console_script.pyo
 ${PYSITELIB}/argcomplete/_check_module.py
 ${PYSITELIB}/argcomplete/_check_module.pyc
 ${PYSITELIB}/argcomplete/_check_module.pyo
-${PYSITELIB}/argcomplete/bash_completion.d/python-argcomplete.sh
+${PYSITELIB}/argcomplete/bash_completion.d/python-argcomplete
 ${PYSITELIB}/argcomplete/compat.py
 ${PYSITELIB}/argcomplete/compat.pyc
 ${PYSITELIB}/argcomplete/compat.pyo
@@ -31,6 +31,6 @@ ${PYSITELIB}/argcomplete/my_argparse.pyo
 ${PYSITELIB}/argcomplete/my_shlex.py
 ${PYSITELIB}/argcomplete/my_shlex.pyc
 ${PYSITELIB}/argcomplete/my_shlex.pyo
-${PYSITELIB}/argcomplete/shellintegration.py
-${PYSITELIB}/argcomplete/shellintegration.pyc
-${PYSITELIB}/argcomplete/shellintegration.pyo
+${PYSITELIB}/argcomplete/shell_integration.py
+${PYSITELIB}/argcomplete/shell_integration.pyc
+${PYSITELIB}/argcomplete/shell_integration.pyo
