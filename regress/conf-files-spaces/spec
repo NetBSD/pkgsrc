@@ -1,0 +1,30 @@
+# $NetBSD: spec,v 1.1 2020/02/11 01:59:30 rillig Exp $
+#
+# Up to February 2020, pkgsrc could not handle configuration files with
+# spaces in their names.
+
+do_setup() {
+	$TEST_MAKE deinstall clean
+}
+
+do_test() {
+	PKG_CONFIG=yes $TEST_MAKE install >> "$TEST_OUTFILE"
+
+	sysconfdir=`$TEST_MAKE show-var VARNAME=PKG_SYSCONFDIR`
+	for file in "back slash.conf" "d quot.conf" "s quot.conf"; do
+		test -f "$sysconfdir/$file" || regress_fail "'$file' not found"
+	done
+
+	PKG_CONFIG=yes $TEST_MAKE deinstall >> "$TEST_OUTFILE"
+}
+
+check_result() {
+	exit_status "0"
+	output_require ": copying .*/back slash.conf to .*/back slash.conf"
+	output_require ": copying .*/d quot.conf to .*/d quot.conf"
+	output_require ": copying .*/s quot.conf to .*/s quot.conf"
+}
+
+do_cleanup() {
+	$TEST_MAKE deinstall clean
+}
