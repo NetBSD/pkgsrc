@@ -1,0 +1,13 @@
+This is a native Ruby package for reading and writing INI files.
+
+
+Description
+-----------
+
+Although made popular by Windows, INI files can be used on any system thanks
+to their flexibility. They allow a program to store configuration data, which
+can then be easily parsed and changed. Two notable systems that use the INI
+format are Samba and Trac.
+
+More information about INI files can be found on the
+[Wikipedia Page](http://en.wikipedia.org/wiki/INI_file).
