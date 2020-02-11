@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2020/01/04 22:55:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2020/02/11 06:36:16 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -73,6 +73,7 @@ share/mame/hash/a5200.hsi
 share/mame/hash/a5200.xml
 share/mame/hash/a7800.xml
 share/mame/hash/a800.xml
+share/mame/hash/a800_cass.xml
 share/mame/hash/a800_flop.xml
 share/mame/hash/abc1600.xml
 share/mame/hash/abc800.xml
@@ -147,7 +148,10 @@ share/mame/hash/bbcm_cart.xml
 share/mame/hash/bbcm_cass.xml
 share/mame/hash/bbcm_flop.xml
 share/mame/hash/bbcmc_flop.xml
+share/mame/hash/bdesignm_design_cart.xml
+share/mame/hash/bdesignm_game_cart.xml
 share/mame/hash/bk0010.xml
+share/mame/hash/bkrankp_cart.xml
 share/mame/hash/bml3_flop.xml
 share/mame/hash/bw12.xml
 share/mame/hash/bw14.xml
@@ -303,6 +307,7 @@ share/mame/hash/intvecs.xml
 share/mame/hash/iq128.xml
 share/mame/hash/iq151_cart.xml
 share/mame/hash/iq151_flop.xml
+share/mame/hash/iqunlim_cart.xml
 share/mame/hash/jaguar.xml
 share/mame/hash/jakks_gamekey_dp.xml
 share/mame/hash/jakks_gamekey_dy.xml
@@ -315,6 +320,7 @@ share/mame/hash/jpopira_jp.xml
 share/mame/hash/juicebox.xml
 share/mame/hash/juku.xml
 share/mame/hash/jupace_cass.xml
+share/mame/hash/jupace_snap.xml
 share/mame/hash/k28m2.xml
 share/mame/hash/kayproii.xml
 share/mame/hash/kc_cart.xml
@@ -355,6 +361,7 @@ share/mame/hash/mephisto_mm1.xml
 share/mame/hash/mephisto_mm2.xml
 share/mame/hash/mephisto_mm4.xml
 share/mame/hash/mephisto_mm5.xml
+share/mame/hash/mephisto_smondial2.xml
 share/mame/hash/microvision.xml
 share/mame/hash/midi_flop.xml
 share/mame/hash/mikro80.xml
@@ -455,6 +462,8 @@ share/mame/hash/pet_hdd.xml
 share/mame/hash/pet_quik.xml
 share/mame/hash/pet_rom.xml
 share/mame/hash/phc25_cass.xml
+share/mame/hash/pi_storyreader_cart.xml
+share/mame/hash/pi_storyreader_v2_cart.xml
 share/mame/hash/picno.xml
 share/mame/hash/pico.xml
 share/mame/hash/pippin.xml
@@ -516,7 +525,6 @@ share/mame/hash/sg1000.xml
 share/mame/hash/sgx.xml
 share/mame/hash/sitcom.xml
 share/mame/hash/smc777.xml
-share/mame/hash/smondial2.xml
 share/mame/hash/sms.xml
 share/mame/hash/snes.xml
 share/mame/hash/snes_bspack.xml
@@ -567,6 +575,7 @@ share/mame/hash/tandy6k.xml
 share/mame/hash/tc4.xml
 share/mame/hash/tdv2324.xml
 share/mame/hash/tek4052_cart.xml
+share/mame/hash/telestory_cart.xml
 share/mame/hash/tg16.xml
 share/mame/hash/ti74_cart.xml
 share/mame/hash/ti95_cart.xml
@@ -594,6 +603,7 @@ share/mame/hash/ut88.xml
 share/mame/hash/uzebox.xml
 share/mame/hash/v1050_flop.xml
 share/mame/hash/v1050_hdd.xml
+share/mame/hash/vbaby_cart.xml
 share/mame/hash/vboy.xml
 share/mame/hash/vc4000.xml
 share/mame/hash/vector06_cart.xml
