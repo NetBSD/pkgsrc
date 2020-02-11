@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.34 2017/03/23 17:06:51 joerg Exp $
+$NetBSD: distinfo,v 1.35 2020/02/11 15:46:46 nia Exp $
 
-SHA1 (gbrainy-2.2.1.tar.gz) = 0265c929c659d10968d57b206443793b79277690
-RMD160 (gbrainy-2.2.1.tar.gz) = 293585f7384389e69f7e64c2dafe41ff97a46cab
-SHA512 (gbrainy-2.2.1.tar.gz) = 730acb38443a2abd672c5ac3c13c863bd11c8e6931de97ddbfc3e7650a7d20fe98707cdce50f41e8a3031fdba33edb459f8f57ee4cdeb30c4adf222547c79a54
-Size (gbrainy-2.2.1.tar.gz) = 2825403 bytes
+SHA1 (gbrainy-2.4.1.tar.gz) = 95d2585bcc2e46e280742b2837328e2f2e2b1328
+RMD160 (gbrainy-2.4.1.tar.gz) = 2f5b937b0da3a95f4c079226cac2c5b118ab360a
+SHA512 (gbrainy-2.4.1.tar.gz) = 3f862a9fb4452d78fb4f799ba063867a992c7ee6ab2980ad22bfbc0334f7a86ebf442d14959d42fca46d51d930cc64afb6ca7373cd57f251fb5cf1d72a292c64
+Size (gbrainy-2.4.1.tar.gz) = 2974992 bytes
