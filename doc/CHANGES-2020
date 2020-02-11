@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1034 2020/02/11 17:15:51 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1035 2020/02/11 17:26:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1467,3 +1467,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-scikit-learn to 0.22.1 [minskim 2020-02-11]
 	Updated graphics/py-wand to 0.5.9 [adam 2020-02-11]
 	Updated www/py-django-extensions to 2.2.8 [adam 2020-02-11]
+	Updated devel/py-argcomplete to 1.11.1 [adam 2020-02-11]
+	Updated www/py-bottle to 0.12.18 [adam 2020-02-11]
