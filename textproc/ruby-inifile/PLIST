@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2020/02/11 14:59:24 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/inifile.gemspec
+${GEM_LIBDIR}/lib/inifile.rb
+${GEM_LIBDIR}/test/data/bad_1.ini
+${GEM_LIBDIR}/test/data/bad_2.ini
+${GEM_LIBDIR}/test/data/browscap.ini
+${GEM_LIBDIR}/test/data/comment.ini
+${GEM_LIBDIR}/test/data/continuation.ini
+${GEM_LIBDIR}/test/data/escape.ini
+${GEM_LIBDIR}/test/data/global.ini
+${GEM_LIBDIR}/test/data/good.ini
+${GEM_LIBDIR}/test/data/merge.ini
+${GEM_LIBDIR}/test/data/mixed_comment.ini
+${GEM_LIBDIR}/test/data/multiline.ini
+${GEM_LIBDIR}/test/data/param.ini
+${GEM_LIBDIR}/test/data/section.ini
+${GEM_LIBDIR}/test/test_inifile.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
