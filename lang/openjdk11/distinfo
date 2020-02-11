@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2020/02/05 14:22:42 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2020/02/11 02:30:42 ryoon Exp $
 
 SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = d76599619b8bea879b8202b3efc38a82335d2e8c
 RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = a1b998e4e7edfb73ec35b0cc94895d9af16a8cd8
@@ -22,7 +22,7 @@ SHA1 (patch-src_hotspot_cpu_aarch64_vm__version__aarch64.hpp) = 042ae280b0988c94
 SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_bytes__bsd__aarch64.inline.hpp) = 4153d3a12ffc24de868b2fd97498dbdf7645e499
 SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_os__bsd__aarch64.cpp) = 190f56e8c725884712d850e096955d6d694e902d
 SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_vm__version__bsd__aarch64.cpp) = abbfd0f9bd79e6363ffb050b48d081b7d1c3a8e1
-SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 049ffbb5ffbd85ffced2f4a36c4e8d5290d8e3a3
+SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 86d9772592524f4119b4cf99671ac4d1224a28da
 SHA1 (patch-src_hotspot_os_bsd_os__perf__bsd.cpp) = 7bb57f82f3a93adc1970ed4215148fc02ecbcd5a
 SHA1 (patch-src_hotspot_os_posix_os__posix.cpp) = e70e8c1e59f0be184a7a1d6e9d11ac7b934ce4b2
 SHA1 (patch-src_java.base_bsd_native_libjava_ProcessHandleImpl__bsd.c) = fbc0aa6656292535fb38344fee7178b6f625f58a
