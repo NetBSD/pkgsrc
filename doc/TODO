@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19668 2020/02/09 21:43:38 jdolecek Exp $
+$NetBSD: TODO,v 1.19669 2020/02/11 06:36:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -829,7 +829,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o mame-0.218
 	o manedit-1.2.1
 	o mantis-2.22.1
 	o mapserver-7.0.1
