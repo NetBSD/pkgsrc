@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/02/02 02:57:47 markd Exp $
+# $NetBSD: Makefile,v 1.46 2020/02/11 20:52:54 markd Exp $
 
 DISTNAME=	step-${KAPPSVER}
 CATEGORIES=	misc
@@ -22,6 +22,10 @@ SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/step.knsrc \
 		${PKG_SYSCONFDIR}/xdg/step.knsrc
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_FOR_BUILD_ONLY=		yes
+.include "../../lang/python/tool.mk"
 
 .include "../../graphics/kplotting/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
