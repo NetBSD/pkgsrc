@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2020/02/11 09:58:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.252 2020/02/11 17:23:11 rillig Exp $
 
 DISTNAME=	openssl-1.1.1d
 PKGREVISION=	2
@@ -60,6 +60,14 @@ SOEXT.*=		so
 PLIST_SUBST+=		SOEXT=${SOEXT}
 
 PRINT_PLIST_AWK+=	/^lib\/engines/ { gsub(/\.${SOEXT}$$/, ".$${SOEXT}"); }
+
+# Remove CC from the environment, to fix GCC version handling on HP-UX,
+# SunOS and Linux/sparc.
+#
+# See https://github.com/openssl/openssl/issues/11060.
+do-configure:
+	${RUN} cd ${WRKSRC} && ${SETENV} ${_CONFIGURE_SCRIPT_ENV:NCC=}	\
+		${CONFIG_SHELL} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 
 #
 # Get rid of ridiculous namespace collisions like passwd.1 and just leave the
