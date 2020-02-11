@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1029 2020/02/11 15:00:50 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1030 2020/02/11 15:46:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1462,3 +1462,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/opendnssec2 to 2.1.6 [he 2020-02-11]
 	Updated shells/bash to 5.0.16 [kre 2020-02-11]
 	Added textproc/ruby-inifile version 3.0.0 [taca 2020-02-11]
+	Updated games/gbrainy to 2.41 [nia 2020-02-11]
