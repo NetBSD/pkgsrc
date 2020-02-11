@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/02/11 01:59:30 rillig Exp $
+share/conf-files-spaces/back slash.conf
+share/conf-files-spaces/d quot.conf
+share/conf-files-spaces/s quot.conf
