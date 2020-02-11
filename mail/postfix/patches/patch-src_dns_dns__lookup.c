@@ -1,8 +1,8 @@
-$NetBSD: patch-src_dns_dns__lookup.c,v 1.5 2018/02/25 12:27:50 taca Exp $
+$NetBSD: patch-src_dns_dns__lookup.c,v 1.6 2020/02/11 20:40:27 triaxx Exp $
 
 Fix runtime problem when mysql PKG_OPTIONS is enabled.
 
---- src/dns/dns_lookup.c.orig	2017-12-21 01:53:15.000000000 +0000
+--- src/dns/dns_lookup.c.orig	2019-12-15 16:13:04.000000000 +0000
 +++ src/dns/dns_lookup.c
 @@ -245,6 +245,8 @@
  
@@ -52,8 +52,8 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
      if (keep_notfound)
  	/* Prepare for returning a null-padded server reply. */
  	memset(answer, 0, anslen);
--    len = res_query(name, class, type, answer, anslen);
-+    len = res_nquery(statp, name, class, type, answer, anslen);
+-    len = res_search(name, class, type, answer, anslen);
++    len = res_nsearch(statp, name, class, type, answer, anslen);
      /* Begin API creep workaround. */
      if (len < 0 && h_errno == 0) {
  	SET_H_ERRNO(TRY_AGAIN);
