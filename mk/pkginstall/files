@@ -1,4 +1,4 @@
-# $NetBSD: files,v 1.9 2014/12/30 15:13:20 wiz Exp $
+# $NetBSD: files,v 1.10 2020/02/11 01:21:25 rillig Exp $
 #
 # Generate a +FILES script that reference counts config files that are
 # required for the proper functioning of the package.
@@ -69,7 +69,7 @@ TRUE="@TRUE@"
 SELF=$0
 ACTION=$1
 
-: ${PKG_PREFIX=@PREFIX@}
+: "${PKG_PREFIX=@PREFIX@}"
 
 case "${PKG_CONFIG:-@PKG_CONFIG@}" in
 [Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
@@ -98,15 +98,15 @@ esac
 
 CURDIR=`${PWD_CMD}`
 PKG_METADATA_DIR="${2-${CURDIR}}"
-: ${PKGNAME=${PKG_METADATA_DIR##*/}}
-: ${PKG_DBDIR=${PKG_METADATA_DIR%/*}}
-: ${PKG_REFCOUNT_DBDIR=${PKG_DBDIR}.refcount}
+: "${PKGNAME=${PKG_METADATA_DIR##*/}}"
+: "${PKG_DBDIR=${PKG_METADATA_DIR%/*}}"
+: "${PKG_REFCOUNT_DBDIR=${PKG_DBDIR}.refcount}"
 PKG_REFCOUNT_FILES_DBDIR="${PKG_REFCOUNT_DBDIR}/files"
 
 exitcode=0
 case $ACTION in
 ADD)
-	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -u |
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" "${SELF}" | ${SORT} -u |
 	while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
 		"")	continue ;;
@@ -126,20 +126,20 @@ ADD)
 		preexist="$shadow_dir/+PREEXISTING"
 		token="$shadow_dir/${PKGNAME}"
 		if ${TEST} ! -d "$shadow_dir"; then
-			${MKDIR} $shadow_dir
+			${MKDIR} "$shadow_dir"
 			${TEST} ! -f "$file" ||
-				${ECHO} "${PKGNAME}" > $preexist
+				${ECHO} "${PKGNAME}" > "$preexist"
 		fi
 		if ${TEST} -f "$token" && \
-		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
+		   ${GREP} "^${PKG_METADATA_DIR}$" "$token" >/dev/null; then
 			:
 		else
-			${ECHO} "${PKG_METADATA_DIR}" >> $token
+			${ECHO} "${PKG_METADATA_DIR}" >> "$token"
 		fi
 
 		case $f_mode$f_user$f_group in
 		"")	;;
-	 	*)	${ECHO} "$f_mode $f_user $f_group" > $perms ;;
+	 	*)	${ECHO} "$f_mode $f_user $f_group" > "$perms" ;;
 		esac
 		if ${TEST} ! -f "$file" -a ! -f "$f_eg" -a ! -c "$f_eg"; then
 			:
@@ -150,18 +150,18 @@ ADD)
 					${ECHO} "${PKGNAME}: $file already exists"
 				elif ${TEST} -f "$f_eg" -o -c "$f_eg"; then
 					${ECHO} "${PKGNAME}: copying $f_eg to $file"
-					${CP} $f_eg $file
+					${CP} "$f_eg" "$file"
 					case $f_user in
 					"")	;;
-					*)	${CHOWN} $f_user $file ;;
+					*)	${CHOWN} "$f_user" "$file" ;;
 					esac
 					case $f_group in
 					"")	;;
-					*)	${CHGRP} $f_group $file ;;
+					*)	${CHGRP} "$f_group" "$file" ;;
 					esac
 					case $f_mode in
 					"")	;;
-					*)	${CHMOD} $f_mode $file ;;
+					*)	${CHMOD} "$f_mode" "$file" ;;
 					esac
 				fi
 				;;
@@ -171,7 +171,7 @@ ADD)
 	;;
 
 REMOVE)
-	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" "${SELF}" | ${SORT} -ru |
 	while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
 		"")	continue ;;
@@ -192,9 +192,9 @@ REMOVE)
 		token="$shadow_dir/${PKGNAME}"
 		tokentmp="$token.tmp.$$"
 		if ${TEST} -f "$token" && \
-		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
-			${CAT} "$token" | ${GREP} -v "^${PKG_METADATA_DIR}$" > $tokentmp
-			case `${CAT} $tokentmp | ${SED} -n "$="` in
+		   ${GREP} "^${PKG_METADATA_DIR}$" "$token" >/dev/null; then
+			${CAT} "$token" | ${GREP} -v "^${PKG_METADATA_DIR}$" > "$tokentmp"
+			case `${CAT} "$tokentmp" | ${SED} -n "$="` in
 			"")
 				if ${TEST} -f "$preexist"; then
 					:
@@ -206,11 +206,11 @@ REMOVE)
 						;;
 					esac
 				fi
-				${RM} -f $perms $preexist $token $token.tmp.*
-				${RMDIR} -p $shadow_dir 2>/dev/null || ${TRUE}
+				${RM} -f "$perms" "$preexist" "$token" "$token.tmp".*
+				${RMDIR} -p "$shadow_dir" 2>/dev/null || ${TRUE}
 				;;
 			*)
-				${MV} -f $tokentmp $token
+				${MV} -f "$tokentmp" "$token"
 				;;
 			esac
 		fi
@@ -218,7 +218,7 @@ REMOVE)
 	;;
 
 PERMS)
-	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" "${SELF}" | ${SORT} -ru |
 	while read file f_flags f_eg f_mode f_user f_group; do
 		case $_PKG_CONFIG:$_PKG_CONFIG_PERMS in
 		yes:yes)	;;
@@ -230,21 +230,21 @@ PERMS)
 		esac
 		case $f_user in
 		"")	;;
-		*)	${CHOWN} $f_user $file ;;
+		*)	${CHOWN} "$f_user" "$file" ;;
 		esac
 		case $f_group in
 		"")	;;
-		*)	${CHGRP} $f_group $file ;;
+		*)	${CHGRP} "$f_group" "$file" ;;
 		esac
 		case $f_mode in
 		"")	;;
-		*)	${CHMOD} $f_mode $file ;;
+		*)	${CHMOD} "$f_mode" "$file" ;;
 		esac
 	done
 	;;
 
 CHECK-ADD)
-	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" "${SELF}" | ${SORT} -ru |
 	{ while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
 		"")	continue ;;
@@ -294,7 +294,7 @@ CHECK-ADD)
 	;;
 
 CHECK-REMOVE)
-	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" "${SELF}" | ${SORT} -ru |
 	{ while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
 		"")	continue ;;
@@ -325,9 +325,9 @@ CHECK-REMOVE)
 
 CHECK-PERMS)
 	tmpdir="./.pkginstall.$$"
-	${MKDIR} -p $tmpdir 2>/dev/null || exit 1
-	${CHMOD} 0700 $tmpdir
-	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
+	${MKDIR} -p "$tmpdir" 2>/dev/null || exit 1
+	${CHMOD} 0700 "$tmpdir"
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" "${SELF}" | ${SORT} -ru |
 	{ while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
 		"")	continue ;;
@@ -338,35 +338,35 @@ CHECK-PERMS)
 		::)	continue ;;
 		esac
 
-		perms=`${LS} -l $file | ${AWK} '{ print $1":"$3":"$4 }'`
+		perms=`${LS} -l "$file" | ${AWK} '{ print $1":"$3":"$4 }'`
 		testpath="$tmpdir/file_perms"
-		${ECHO} > $testpath
-		${CHMOD} $f_mode $testpath 2>/dev/null
-		longmode=`${LS} -l $testpath | ${AWK} '{ print $1 }'`
+		${ECHO} > "$testpath"
+		${CHMOD} "$f_mode" "$testpath" 2>/dev/null
+		longmode=`${LS} -l "$testpath" | ${AWK} '{ print $1 }'`
 		case $f_mode:$f_user:$f_group in
 		:[!:]*:)
 			case "$perms" in
-			*:$f_user:*)	continue ;;
+			*:"$f_user":*)	continue ;;
 			esac
 			;;
 		:[!:]*:[!:]*)
 			case "$perms" in
-			*:$f_user:$f_group)	continue ;;
+			*:"$f_user":"$f_group")	continue ;;
 			esac
 			;;
 		[!:]*::)
 			case "$perms" in
-			$longmode:*:*)	continue ;;
+			"$longmode":*:*)	continue ;;
 			esac
 			;;
 		[!:]*:[!:]*:)
 			case "$perms" in
-			$longmode:$f_user:*)	continue ;;
+			"$longmode":"$f_user":*)	continue ;;
 			esac
 			;;
 		[!:]*:[!:]*:[!:]*)
 			case "$perms" in
-			$longmode:$f_user:$f_group)	continue ;;
+			"$longmode":"$f_user":"$f_group")	continue ;;
 			esac
 			;;
 		esac
@@ -399,7 +399,7 @@ CHECK-PERMS)
 		;;
 	esac; }
 	${TEST} $? -eq 0 || exitcode=1
-	${RM} -fr $tmpdir
+	${RM} -fr "$tmpdir"
 	;;
 
 *)
@@ -410,8 +410,7 @@ esac
 exit $exitcode
 
 EOF
-	${SED} -n "/^\# FILE: /p" ${SELF} >> ./+FILES
+	${SED} -n "/^\# FILE: /p" "${SELF}" >> ./+FILES
 	${CHMOD} +x ./+FILES
 	;;
 esac
-
