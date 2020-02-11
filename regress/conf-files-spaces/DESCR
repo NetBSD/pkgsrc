@@ -1,0 +1,2 @@
+Demonstrates that the names of CONF_FILES can contain spaces and that
+these can be quoted using backslashes, double quotes or single quotes.
