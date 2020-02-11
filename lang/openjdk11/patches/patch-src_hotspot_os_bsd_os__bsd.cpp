@@ -1,4 +1,7 @@
-$NetBSD: patch-src_hotspot_os_bsd_os__bsd.cpp,v 1.2 2020/02/05 14:22:42 ryoon Exp $
+$NetBSD: patch-src_hotspot_os_bsd_os__bsd.cpp,v 1.3 2020/02/11 02:30:42 ryoon Exp $
+
+sigaction part: https://github.com/battleblow/openjdk-jdk11u/pull/97
+Last chunk: https://github.com/battleblow/openjdk-jdk11u/pull/96
 
 --- src/hotspot/os/bsd/os_bsd.cpp.orig	2020-01-15 18:29:57.000000000 +0000
 +++ src/hotspot/os/bsd/os_bsd.cpp
