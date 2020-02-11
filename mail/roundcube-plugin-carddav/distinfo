@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/02/11 20:36:49 triaxx Exp $
+
+SHA1 (carddav-3.0.3.tar.bz2) = 3e5174a179e8b2315474c16ba8917cc8c8eb2b9d
+RMD160 (carddav-3.0.3.tar.bz2) = c7ac76272cab475c34f15bf5182e6d22d363429d
+SHA512 (carddav-3.0.3.tar.bz2) = 718ff5c01c03f47c75262a407df1a1a7b73463f19ed89a32762bd16cceccd39247bb9ca03667fc38ab8c514d904550d2ce978f82d541c71b3ef6ffdf07390710
+Size (carddav-3.0.3.tar.bz2) = 710891 bytes
+SHA1 (patch-carddav__common.php) = 43566dabbcf53e59e62d43356b7a8b63eecf423c
