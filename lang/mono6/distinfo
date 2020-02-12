@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2020/01/09 15:26:36 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2020/02/12 13:43:31 kamil Exp $
 
 SHA1 (mono-6.6.0.161.tar.xz) = e67eb01dc72db45bcc40169c65b54f17f64ddadb
 RMD160 (mono-6.6.0.161.tar.xz) = 36f11f69fe7530ccf2c745fee787e48c6e737f32
@@ -13,6 +13,7 @@ SHA1 (patch-data_net__4__0_Makefile.am) = 7c0fa175047f01a556f61503b2fcfabdedd2c6
 SHA1 (patch-data_net__4__5_Browsers_Makefile.am) = 80bd57a2ac3fc95adef18acd9cfd7744ca112b01
 SHA1 (patch-data_net__4__5_Makefile.am) = d7591e835bfdd27fa0fba4b669b778924c811be4
 SHA1 (patch-mcs_class_corlib_Test_Mono_MonoNativePlatformType.cs) = 226b2638ba0106539e8ab5d9698803c6421147f0
+SHA1 (patch-mono_eglib_giconv.c) = 04d2559d3868605194efd6267da010870f53d961
 SHA1 (patch-mono_metadata_icall.c) = b326c16e9aa8f9ee154d937128e5e09fd31b235a
 SHA1 (patch-mono_metadata_mono-config.c) = 510fc7a2dde144f593ebccb0258c3753dfe5ce52
 SHA1 (patch-mono_metadata_threads.c) = e1432cced0dafce1a2712869ce79e12a2ab35973
