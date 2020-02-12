@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1042 2020/02/12 12:13:54 fox Exp $
+$NetBSD: CHANGES-2020,v 1.1043 2020/02/12 13:30:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1477,3 +1477,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-stevedore to 1.32.0 [adam 2020-02-12]
 	Removed devel/halfempty [wiz 2020-02-12]
 	Updated audio/din to 44.0.2 [fox 2020-02-12]
+	Updated sysutils/py-watchdog to 0.10.2 [adam 2020-02-12]
+	Updated finance/py-braintree to 3.59.0 [adam 2020-02-12]
