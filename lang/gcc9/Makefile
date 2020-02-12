@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/02/12 04:26:12 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/02/12 04:28:35 rillig Exp $
 
 GCC9_VERSION=	9.2.0
 
@@ -70,6 +70,11 @@ CPPFLAGS.Linux+=	-std=gnu99
 #  932 |   descriptor_ = internal_open(task_directory_path, O_RDONLY | O_DIRECTORY);
 #      |                                                               ^~~~~~~~~~~
 BROKEN_ON_PLATFORM+=	SunOS-*-x86_64
+
+# Configuring stage 1 in ./gcc
+# ...
+# *** Configuration aarch64--netbsd not supported
+NOT_FOR_PLATFORM+=	NetBSD-*-aarch64
 
 LANGS=			c
 
