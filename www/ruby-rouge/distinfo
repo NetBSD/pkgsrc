@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/01/19 21:34:57 fcambus Exp $
+$NetBSD: distinfo,v 1.7 2020/02/12 14:04:02 fcambus Exp $
 
-SHA1 (rouge-3.15.0.gem) = 6c3c1e5281ad86d8ede7aeb6e05d2fba0662f685
-RMD160 (rouge-3.15.0.gem) = 031c59240193857393bde723932ad1d094be843c
-SHA512 (rouge-3.15.0.gem) = 6c8eb4cc4699ddd5e7b252548c6446610693842686a8646ebb666efd91002b0b0d9e37b5786a5d68cbc6b17db092a249fe2887ba698d0091a0122035e804f893
-Size (rouge-3.15.0.gem) = 407040 bytes
+SHA1 (rouge-3.16.0.gem) = 4f4f820dd8667557a96d6d3950ecf8fd9d452fa1
+RMD160 (rouge-3.16.0.gem) = 1b165c3a8a1a8af9c2150602e7aaa6df02759c58
+SHA512 (rouge-3.16.0.gem) = 8e06e9757979d4b8e4313eaf825d4858850d8effbd072fc661a1e06a423a4fbed0ca49e9e10e5f5dd91d8808a8ae6bca14969848bec37ad8ab06ff0389901b7b
+Size (rouge-3.16.0.gem) = 410112 bytes
