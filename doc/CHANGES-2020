@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1040 2020/02/12 07:57:23 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1041 2020/02/12 11:21:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1475,3 +1475,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/libhighlight to 3.55 [schmonz 2020-02-12]
 	Updated devel/py-pbr to 5.4.4 [adam 2020-02-12]
 	Updated devel/py-stevedore to 1.32.0 [adam 2020-02-12]
+	Removed devel/halfempty [wiz 2020-02-12]
