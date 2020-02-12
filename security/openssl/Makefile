@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2020/02/11 17:23:11 rillig Exp $
+# $NetBSD: Makefile,v 1.253 2020/02/12 15:14:57 rillig Exp $
 
 DISTNAME=	openssl-1.1.1d
 PKGREVISION=	2
@@ -66,7 +66,7 @@ PRINT_PLIST_AWK+=	/^lib\/engines/ { gsub(/\.${SOEXT}$$/, ".$${SOEXT}"); }
 #
 # See https://github.com/openssl/openssl/issues/11060.
 do-configure:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${_CONFIGURE_SCRIPT_ENV:NCC=}	\
+	${RUN} cd ${WRKSRC} && ${SETENV} ${_CONFIGURE_SCRIPT_ENV:NCC=*}	\
 		${CONFIG_SHELL} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 
 #
