@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1045 2020/02/12 14:04:04 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1046 2020/02/12 14:04:31 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1486,3 +1486,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/dovecot2-mysql to 2.3.9.3 [taca 2020-02-12]
 	Updated mail/dovecot2-pgsql to 2.3.9.3 [taca 2020-02-12]
 	Updated mail/dovecot2-sqlite to 2.3.9.3 [taca 2020-02-12]
+	Updated www/ruby-rouge to 3.16.0 [fcambus 2020-02-12]
