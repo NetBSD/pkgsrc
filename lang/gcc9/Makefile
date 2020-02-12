@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/01/28 21:33:39 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/02/12 04:26:12 rillig Exp $
 
 GCC9_VERSION=	9.2.0
 
@@ -48,19 +48,12 @@ CHECK_PORTABILITY_SKIP=	contrib/download_prerequisites
 
 .include "../../mk/bsd.prefs.mk"
 
-# Linux/el7/trunk/x86_64/20200123.2242/gcc9-9.2.0nb1/build.log
-# ...
-# cc -c -DHAVE_CONFIG_H -g -I/usr/include -I/usr/pkg/include \
-#   -I/usr/pkg/include/python3.7 -I. \
-#   -I../../gcc-9.2.0/libiberty/../include  -W -Wall -Wwrite-strings \
-#   -Wc++-compat -Wstrict-prototypes -pedantic \
-#   -D_GNU_SOURCE ../../gcc-9.2.0/libiberty/argv.c -o argv.o
-# ...
+# Prevent compilation error on RedHat EL 7:
+#
 # compute_powtab.c: In function 'mpn_compute_powtab_mul':
 # compute_powtab.c:142:3: error: 'for' loop initial declarations are only allowed in C99 mode
 #    for (long pi = start_idx; pi >= 0; pi--)
-#BROKEN_ON_PLATFORM+=	Linux-*-x86_64
-CFLAGS.Linux+=		-std=gnu99
+#
 # I know that -std is not a preprocessor flag, but gcc9 ignores the CFLAGS,
 # for whatever reason.
 CPPFLAGS.Linux+=	-std=gnu99
