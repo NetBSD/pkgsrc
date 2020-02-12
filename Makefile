@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2020/01/11 11:09:35 rillig Exp $
+# $NetBSD: Makefile,v 1.88 2020/02/12 15:04:51 rillig Exp $
 #
-# This is the top-level Makefile of pkgsrc. It contains a list of the
-# categories of packages, as well as some targets that operate on the
-# whole pkgsrc system.
+# This is the top-level Makefile of pkgsrc.
+# See README.md for a more detailed introduction.
 #
 # User-settable variables:
 #
