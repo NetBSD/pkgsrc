@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.380 2020/02/08 22:11:53 kamil Exp $
+$NetBSD: distinfo,v 1.381 2020/02/12 16:36:50 ryoon Exp $
 
-SHA1 (firefox-72.0.2.source.tar.xz) = 35015162789defa55b5c71cf0d5a08a799a76f54
-RMD160 (firefox-72.0.2.source.tar.xz) = 89d359fd483f5d3abe0e040a2d1b55a29226e156
-SHA512 (firefox-72.0.2.source.tar.xz) = 4d8c832709b8831234b571b2f809d1601490db47982ff1d71913062c42c17a7f3340c72b6162b74a248a9cfe7b5d1646fb9a0463dcbcfaed32e1346ee20e4147
-Size (firefox-72.0.2.source.tar.xz) = 315848856 bytes
+SHA1 (firefox-73.0.source.tar.xz) = aaf89b605e3d310c4ca90a17ce012d025dbe46a0
+RMD160 (firefox-73.0.source.tar.xz) = 045b96e00bd9f7639f2668703e324858cdf5b358
+SHA512 (firefox-73.0.source.tar.xz) = e10a8b48ae532d855ff50761cbdf2a6d94b2bad58a5e18d040db43d3424cbb068772f4d91c0aadd6c40b13e3d020e0e712955a1a12b41fda6333197fc34aa19a
+Size (firefox-73.0.source.tar.xz) = 319387000 bytes
 SHA1 (patch-aa) = 11060461fdaca5661e89651b8ded4a59d2abc4d7
 SHA1 (patch-browser_app_profile_firefox.js) = 076cc2892547bac07fe907533f4e821f13f5738e
 SHA1 (patch-build_moz.configure_rust.configure) = ee9e207e67709f3c9455b4d22f5f254890e99ca8
@@ -26,12 +26,11 @@ SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 31536f36cb33f16da309527b50eda9b7
 SHA1 (patch-media_libcubeb_src_moz.build) = 303cf902d8feb8efc3930d0df19b4713bf0ed795
 SHA1 (patch-media_libcubeb_update.sh) = 07cc41e24d2a004978c4cbf4ab0901544009d530
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
-SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 13e512c7ee9fa1e14ba415d62fa853e5fbfc91c0
 SHA1 (patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 3755f32fea84900cc0f00af3d9f53ed5fcfb0b4b
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e5700d95302ef9672b404ab19e13ef7ba3ede5cf
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 22a39e54e042ab2270a3cb54e4e307c8900cad12
 SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
-SHA1 (patch-toolkit_mozapps_installer_packager.mk) = b2343fbad2556504dfd13601c02e6e2357c7d2bc
+SHA1 (patch-toolkit_mozapps_installer_packager.mk) = 706635b76a7b525794aba95e95544f09e18bb662
 SHA1 (patch-xpcom_base_nscore.h) = 1ac4d34d3c9e80bc1ac966c6c84cb320bc0fa1ec
 SHA1 (patch-xpcom_build_BinaryPath.h) = 92461769d2fee8f015b91a5326247f271afeedea
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 6956c90d4c74c71e7e9a5882e4840ba2673160fa
