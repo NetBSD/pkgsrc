@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1041 2020/02/12 11:21:17 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1042 2020/02/12 12:13:54 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1476,3 +1476,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pbr to 5.4.4 [adam 2020-02-12]
 	Updated devel/py-stevedore to 1.32.0 [adam 2020-02-12]
 	Removed devel/halfempty [wiz 2020-02-12]
+	Updated audio/din to 44.0.2 [fox 2020-02-12]
