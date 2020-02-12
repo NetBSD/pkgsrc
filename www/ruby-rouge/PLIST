@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/01/19 21:34:57 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/02/12 14:04:02 fcambus Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -176,6 +176,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/turtle
 ${GEM_LIBDIR}/lib/rouge/demos/twig
 ${GEM_LIBDIR}/lib/rouge/demos/typescript
 ${GEM_LIBDIR}/lib/rouge/demos/vala
+${GEM_LIBDIR}/lib/rouge/demos/varnish
 ${GEM_LIBDIR}/lib/rouge/demos/vb
 ${GEM_LIBDIR}/lib/rouge/demos/verilog
 ${GEM_LIBDIR}/lib/rouge/demos/vhdl
@@ -197,6 +198,7 @@ ${GEM_LIBDIR}/lib/rouge/formatters/html_pygments.rb
 ${GEM_LIBDIR}/lib/rouge/formatters/html_table.rb
 ${GEM_LIBDIR}/lib/rouge/formatters/null.rb
 ${GEM_LIBDIR}/lib/rouge/formatters/terminal256.rb
+${GEM_LIBDIR}/lib/rouge/formatters/terminal_truecolor.rb
 ${GEM_LIBDIR}/lib/rouge/formatters/tex.rb
 ${GEM_LIBDIR}/lib/rouge/guesser.rb
 ${GEM_LIBDIR}/lib/rouge/guessers/disambiguation.rb
@@ -388,6 +390,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/twig.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/typescript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/typescript/common.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/vala.rb
+${GEM_LIBDIR}/lib/rouge/lexers/varnish.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/vb.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/verilog.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/vhdl.rb
