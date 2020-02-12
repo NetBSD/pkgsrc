@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/01/19 21:34:57 fcambus Exp $
+# $NetBSD: Makefile,v 1.8 2020/02/12 14:04:02 fcambus Exp $
 
-DISTNAME=	rouge-3.15.0
+DISTNAME=	rouge-3.16.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
