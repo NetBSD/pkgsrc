@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1050 2020/02/12 16:32:28 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1051 2020/02/12 16:37:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1491,3 +1491,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/mono6 to 6.8.0.105 [ryoon 2020-02-12]
 	Updated multimedia/libbluray to 1.1.2nb1 [ryoon 2020-02-12]
 	Updated geography/py-google-maps-services-python to 4.1.0 [ryoon 2020-02-12]
+	Updated www/firefox to 73.0 [ryoon 2020-02-12]
