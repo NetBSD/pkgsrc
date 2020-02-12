@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1038 2020/02/11 20:40:51 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.1039 2020/02/12 03:10:54 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1472,3 +1472,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added mail/roundcube-plugin-carddav version 3.0.3 [triaxx 2020-02-11]
 	Updated mail/rspamd to 2.3 [triaxx 2020-02-11]
 	Updated mail/postfix to 3.4.9 [triaxx 2020-02-11]
+	Updated textproc/libhighlight to 3.55 [schmonz 2020-02-12]
