@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/02/12 13:29:15 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/02/12 22:26:30 jperkin Exp $
 
 DISTNAME=	watchdog-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +20,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0.3:../../devel/py-test-timeout
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-FSEvents>=4.2.2:../../devel/py-pyobjc-framework-FSEvents
 .endif
 
