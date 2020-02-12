@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/02/06 20:56:54 adam Exp $
+$NetBSD: distinfo,v 1.4 2020/02/12 13:29:15 adam Exp $
 
-SHA1 (watchdog-0.10.1.tar.gz) = 74626926346e99615ad4de5ad63fa51937354ec3
-RMD160 (watchdog-0.10.1.tar.gz) = 79d694b53127f3fe3d64ededc250679f56e71a90
-SHA512 (watchdog-0.10.1.tar.gz) = 2bca00bfa59c904400126b7ffda915c9c9a7f2d2790993ebcb2987c3b1890bd417e8f3a19b148acd0dde43e3af12a94a3a97d7c3a03d4f967d37b3caf3295f3c
-Size (watchdog-0.10.1.tar.gz) = 94879 bytes
+SHA1 (watchdog-0.10.2.tar.gz) = 1affaac51e090090d17fdf030360e54643bf8721
+RMD160 (watchdog-0.10.2.tar.gz) = 8bc3be3df4fcdedfd2e290c2f0f99f4b189efc18
+SHA512 (watchdog-0.10.2.tar.gz) = 0c811a1c6afdad10c4f0d5613a61807660ce401d504209c1a69bc613c4ba6aed7525a2e2134e69e63a9681d99d69a7b532de582e01b5513e491b7c4478fd8e5f
+Size (watchdog-0.10.2.tar.gz) = 95505 bytes
