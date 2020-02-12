@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/05/11 13:18:48 fox Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/02/12 12:13:19 fox Exp $
 bin/din
 share/applications/din.desktop
 share/din/factory/2600
@@ -392,6 +392,8 @@ share/din/factory/morph_source.crv
 share/din/factory/morph_target.crv
 share/din/factory/morse-code.ed
 share/din/factory/morse-code.help.tcl
+share/din/factory/noiser.crv
+share/din/factory/noiser.ed
 share/din/factory/notation.help.tcl
 share/din/factory/note-distance.help.tcl
 share/din/factory/num-octaves.help.tcl
@@ -468,7 +470,6 @@ share/din/factory/spiraler_sin.crv
 share/din/factory/spiraler_sin.ed
 share/din/factory/start-end.help.tcl
 share/din/factory/start-end.patch.tcl
-share/din/factory/swav.crv
 share/din/factory/tuning.help.tcl
 share/din/factory/velocity.crv
 share/din/factory/velocity.ed
