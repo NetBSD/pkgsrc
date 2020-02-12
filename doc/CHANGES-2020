@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1039 2020/02/12 03:10:54 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.1040 2020/02/12 07:57:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1473,3 +1473,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/rspamd to 2.3 [triaxx 2020-02-11]
 	Updated mail/postfix to 3.4.9 [triaxx 2020-02-11]
 	Updated textproc/libhighlight to 3.55 [schmonz 2020-02-12]
+	Updated devel/py-pbr to 5.4.4 [adam 2020-02-12]
+	Updated devel/py-stevedore to 1.32.0 [adam 2020-02-12]
