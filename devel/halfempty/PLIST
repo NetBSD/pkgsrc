@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2020/01/12 13:22:29 wiz Exp $
-bin/halfempty
-share/doc/halfempty/README.md
