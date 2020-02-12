@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1052 2020/02/12 16:38:34 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1053 2020/02/12 19:10:45 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1493,3 +1493,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated geography/py-google-maps-services-python to 4.1.0 [ryoon 2020-02-12]
 	Updated www/firefox to 73.0 [ryoon 2020-02-12]
 	Updated www/firefox-l10n to 73.0 [ryoon 2020-02-12]
+	Updated multimedia/adobe-flash-player to 32.0.0.330 [tsutsui 2020-02-12]
