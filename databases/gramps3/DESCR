@@ -11,4 +11,4 @@ Gramps can also include extra media types (like JPEG images and audio
 files), record sources of information, and keep track of locations
 (place names).
 
-This version is the currently maintained version using Python 3.x and GTK3.
+This version is the legacy version using Python 2.7 and GTK2.
