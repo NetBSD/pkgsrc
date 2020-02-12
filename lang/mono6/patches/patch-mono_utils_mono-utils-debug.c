@@ -1,23 +1,19 @@
-$NetBSD: patch-mono_utils_mono-utils-debug.c,v 1.1 2019/08/25 16:37:01 maya Exp $
+$NetBSD: patch-mono_utils_mono-utils-debug.c,v 1.2 2020/02/12 15:25:16 ryoon Exp $
 
 Learn to use kinfo_proc2 on netbsd
 
---- mono/utils/mono-utils-debug.c.orig	2019-07-18 07:46:08.000000000 +0000
+--- mono/utils/mono-utils-debug.c.orig	2020-02-04 17:00:34.000000000 +0000
 +++ mono/utils/mono-utils-debug.c
-@@ -27,10 +27,11 @@ mono_is_usermode_native_debugger_present
- #include <errno.h>
- #include <mono/utils/mono-errno.h>
- #include <fcntl.h>
--#if defined (__APPLE__)
-+#if defined (__APPLE__) || defined (__NetBSD__)
- #include <sys/sysctl.h>
+@@ -32,6 +32,8 @@ mono_is_usermode_native_debugger_present
  #endif
  #if defined (__NetBSD__)
-+#include <sys/proc.h>
  #include <kvm.h>
++#include <sys/param.h>
++#include <sys/sysctl.h>
  #endif
  #if defined (_AIX)
-@@ -78,8 +79,9 @@ mono_is_usermode_native_debugger_present
+ #include <procinfo.h>
+@@ -78,8 +80,9 @@ mono_is_usermode_native_debugger_present
  	if (!kd)
  		return FALSE;
  	int count = 0;
