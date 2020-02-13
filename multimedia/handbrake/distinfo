@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2020/02/12 13:54:56 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2020/02/13 23:12:37 ryoon Exp $
 
 SHA1 (handbrake/HandBrake-1.3.1-source.tar.bz2) = 213da9cebb19215d6e7ea49ac390ecc9cb6c749f
 RMD160 (handbrake/HandBrake-1.3.1-source.tar.bz2) = 2e586c8dae9d4a8b7c2fcb036fcdbff62f5c26d6
@@ -28,5 +28,5 @@ SHA1 (handbrake/x265_3.2.1.tar.gz) = 0bd4889ff3ad596372ce2338f2d896947a2eec53
 RMD160 (handbrake/x265_3.2.1.tar.gz) = 7386c00a49a2fc143cd3c8cea657872235a8ba77
 SHA512 (handbrake/x265_3.2.1.tar.gz) = 5cb29b9d4475c1f686f6e31e47ccddde3db1639d5dcf9c058513389a9fdeb35a83b14e30e59498a76dec74bb0b410b6d8f5b1b45d18927be9811bb6a40d8d568
 Size (handbrake/x265_3.2.1.tar.gz) = 1426255 bytes
-SHA1 (patch-contrib_libbluray_P04-netbsd-pthread__equal-check.patch) = c3ecbaa85bfc23021fd8474774a710f1e9068a18
+SHA1 (patch-contrib_libbluray_P04-netbsd-pthread__equal-check.patch) = 8538213d147d2bb9bec455408147bd7bd40df8c2
 SHA1 (patch-libhb_fifo.c) = 46c5ec1f2c665da297830c326e703160e3e911d2
