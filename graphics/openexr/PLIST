@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/09/21 21:34:44 nia Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/02/13 21:13:16 nia Exp $
 bin/exr2aces
 bin/exrenvmap
 bin/exrheader
@@ -57,7 +57,6 @@ include/OpenEXR/ImfLineOrder.h
 include/OpenEXR/ImfLineOrderAttribute.h
 include/OpenEXR/ImfLut.h
 include/OpenEXR/ImfMatrixAttribute.h
-include/OpenEXR/ImfMisc.h
 include/OpenEXR/ImfMultiPartInputFile.h
 include/OpenEXR/ImfMultiPartOutputFile.h
 include/OpenEXR/ImfMultiView.h
