@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1067 2020/02/13 19:04:06 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.1068 2020/02/13 19:07:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1516,3 +1516,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/py-aiormq version 3.2.0 [adam 2020-02-13]
 	Added net/py-aio-pika version 6.4.1 [adam 2020-02-13]
 	Updated www/ikiwiki to 3.20200202.3 [schmonz 2020-02-13]
+	Updated net/lftp to 4.9.1 [adam 2020-02-13]
+	Updated www/py-curl to 7.43.0.5 [adam 2020-02-13]
