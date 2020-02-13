@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.65 2019/11/21 21:11:22 tnn Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.66 2020/02/13 00:40:35 kamil Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -104,6 +104,9 @@ TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
 TOOLS_PLATFORM.readelf?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-readelf
 .endif
 TOOLS_PLATFORM.readlink?=	/usr/bin/readlink
+.if exists(/usr/bin/realpath)
+TOOLS_PLATFORM.realpath?=	/usr/bin/realpath
+.endif
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
