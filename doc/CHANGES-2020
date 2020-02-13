@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1060 2020/02/13 10:11:47 fox Exp $
+$NetBSD: CHANGES-2020,v 1.1061 2020/02/13 12:22:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1504,3 +1504,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/opencv to 3.4.9 [adam 2020-02-13]
 	Updated graphics/opencv-contrib-face to 3.4.9 [adam 2020-02-13]
 	Updated audio/fasttracker2 to 1.09 [fox 2020-02-13]
+	Updated net/rabbitmq-c to 0.10.0 [adam 2020-02-13]
