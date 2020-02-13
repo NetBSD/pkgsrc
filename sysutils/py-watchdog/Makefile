@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/02/12 22:26:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2020/02/13 13:48:38 jperkin Exp $
 
 DISTNAME=	watchdog-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,11 +18,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0.3:../../devel/py-test-timeout
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-FSEvents>=4.2.2:../../devel/py-pyobjc-framework-FSEvents
-.endif
+# This creates huge issues as every recursive dependency of this package would
+# also need a conditional exclusion of python27 on macOS.
+#.include "../../mk/bsd.prefs.mk"
+#.if ${OPSYS} == "Darwin"
+#PYTHON_VERSIONS_INCOMPATIBLE=	27
+#DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-FSEvents>=4.2.2:../../devel/py-pyobjc-framework-FSEvents
+#.endif
 
 PYSETUPTESTTARGET=	pytest
 
