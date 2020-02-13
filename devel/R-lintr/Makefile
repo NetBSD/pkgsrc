@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/02/10 14:16:31 mef Exp $
+# $NetBSD: Makefile,v 1.2 2020/02/13 13:25:05 mef Exp $
 
 R_PKGNAME=	lintr
 R_PKGVER=	2.0.0
@@ -17,12 +17,9 @@ DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
 DEPENDS+=	R-jsonlite>=1.6:../../textproc/R-jsonlite
 DEPENDS+=	R-xml2>=1.0.0:../../textproc/R-xml2
 DEPENDS+=	R-httr>=1.2.1:../../www/R-httr
-
-# Packages required but not available:
-#   'cyclocomp', 'stringdist', 'xmlparsedata'
-TEST_DEPENDS+=	R-cyclocomp-[0-9]*:../../devel/R-cyclocomp
-TEST_DEPENDS+=	R-stringdist-[0-9]*:../../math/R-stringdist
-TEST_DEPENDS+=	R-xmlparsedata-[0-9]*:../../textproc/R-xmlparsedata
+DEPENDS+=	R-cyclocomp-[0-9]*:../../devel/R-cyclocomp
+DEPENDS+=	R-stringdist-[0-9]*:../../math/R-stringdist
+DEPENDS+=	R-xmlparsedata-[0-9]*:../../textproc/R-xmlparsedata
 
 
 USE_LANGUAGES=	# none
