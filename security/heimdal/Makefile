@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2020/02/13 21:04:25 rillig Exp $
+# $NetBSD: Makefile,v 1.137 2020/02/13 21:12:21 rillig Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	22
@@ -15,8 +15,6 @@ CONFLICTS+=	mit-krb5-[0-9]*
 CONFLICTS+=	openafs-[0-9]*
 CONFLICTS+=	gss-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
-
-MAKE_JOBS_SAFE=	no
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex:run
