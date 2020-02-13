@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2020/01/19 00:59:17 pho Exp $
+# $NetBSD: Makefile,v 1.170 2020/02/13 03:00:16 gutteridge Exp $
 #
 
 COMMENT=	Archivers
@@ -11,6 +11,7 @@ SUBDIR+=	arc
 SUBDIR+=	archangel
 SUBDIR+=	arj
 SUBDIR+=	ark
+SUBDIR+=	arqiver
 SUBDIR+=	atool
 SUBDIR+=	bicom
 SUBDIR+=	bmap-tools
