@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1064 2020/02/13 16:55:09 kamil Exp $
+$NetBSD: CHANGES-2020,v 1.1065 2020/02/13 18:32:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1509,3 +1509,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/R-spelling version 2.1 [mef 2020-02-13]
 	Added textproc/R-hunspell version 3.0 [mef 2020-02-13]
 	Updated multimedia/libbluray to 1.1.2nb2 [kamil 2020-02-13]
+	Updated lang/elixir to 1.10.1 [adam 2020-02-13]
+	Updated net/rabbitmq to 3.8.2 [adam 2020-02-13]
