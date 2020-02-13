@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1066 2020/02/13 18:40:32 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1067 2020/02/13 19:04:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1515,3 +1515,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/py-pamqp version 2.3.0 [adam 2020-02-13]
 	Added net/py-aiormq version 3.2.0 [adam 2020-02-13]
 	Added net/py-aio-pika version 6.4.1 [adam 2020-02-13]
+	Updated www/ikiwiki to 3.20200202.3 [schmonz 2020-02-13]
