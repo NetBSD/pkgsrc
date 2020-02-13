@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2020/01/26 17:31:02 rillig Exp $
+# $NetBSD: Makefile,v 1.91 2020/02/13 07:55:34 adam Exp $
 
-DISTNAME=	pcre-8.43
+DISTNAME=	pcre-8.44
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.pcre.org/pub/pcre/
 MASTER_SITES+=	https://ftp.pcre.org/pub/pcre/
