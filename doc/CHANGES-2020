@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1061 2020/02/13 12:22:41 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1062 2020/02/13 13:46:33 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1505,3 +1505,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/opencv-contrib-face to 3.4.9 [adam 2020-02-13]
 	Updated audio/fasttracker2 to 1.09 [fox 2020-02-13]
 	Updated net/rabbitmq-c to 0.10.0 [adam 2020-02-13]
+	Updated fonts/spleen to 1.7.0 [fcambus 2020-02-13]
