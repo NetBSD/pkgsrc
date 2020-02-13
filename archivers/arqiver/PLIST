@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/02/13 03:00:16 gutteridge Exp $
+bin/arqiver
+share/applications/arqiver.desktop
+share/arqiver/translations/arqiver_eo.qm
+share/arqiver/translations/arqiver_nl.qm
+share/arqiver/translations/arqiver_pl.qm
+share/arqiver/translations/arqiver_pt_BR.qm
