@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1055 2020/02/13 03:14:08 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.1056 2020/02/13 03:23:30 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1496,3 +1496,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/adobe-flash-player to 32.0.0.330 [tsutsui 2020-02-12]
 	Added archivers/arqiver version 0.3.2 [gutteridge 2020-02-13]
 	Added editors/featherpad version 0.12.0 [gutteridge 2020-02-13]
+	Added editors/feathernotes version 0.5.1 [gutteridge 2020-02-13]
+
