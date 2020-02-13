@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/02/13 18:38:42 adam Exp $
+
+SHA1 (aiormq-3.2.0.tar.gz) = 54ed397963f24ab92dad10226d89ece2151156e4
+RMD160 (aiormq-3.2.0.tar.gz) = e952089ce9fa91217ce54443f0fab579e79197a4
+SHA512 (aiormq-3.2.0.tar.gz) = b5305a851ca8a0ab6eacd7763779395fcfca06cf1f9b3d6f2610807a3867346026895dfc16a37a59bba95a3f1784a13ef7416c4bc7497e0d399360b00862a955
+Size (aiormq-3.2.0.tar.gz) = 21021 bytes
