@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1053 2020/02/12 19:10:45 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.1054 2020/02/13 03:02:31 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 73.0 [ryoon 2020-02-12]
 	Updated www/firefox-l10n to 73.0 [ryoon 2020-02-12]
 	Updated multimedia/adobe-flash-player to 32.0.0.330 [tsutsui 2020-02-12]
+	Added archivers/arqiver version 0.3.2 [gutteridge 2020-02-13]
