@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/02/13 15:19:44 mef Exp $
+
+SHA1 (R/spelling_2.1.tar.gz) = eab05de1dd205af7c3409662c4ddc5f0fdf75d16
+RMD160 (R/spelling_2.1.tar.gz) = 1334a1f90750cc35fd5ba48386d1e02f1745b89f
+SHA512 (R/spelling_2.1.tar.gz) = cbca4f40328ad9279a7dfef6780c2756777c18a9add231df8b3c52eed504784dd26027ba00214ba87f7c9b8a96b2ea426c6cc92ca07c5fd8e92d70dd15cba50a
+Size (R/spelling_2.1.tar.gz) = 10447 bytes
