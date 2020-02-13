@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2020/02/13 03:12:18 gutteridge Exp $
+
+SHA1 (FeatherPad-V0.12.0.tar.gz) = b0bd8ba27ae7a8111b0a848c782f3d5c1d875d3e
+RMD160 (FeatherPad-V0.12.0.tar.gz) = 80c8454a0766f502b8fb4778b452dc9ab8304c9a
+SHA512 (FeatherPad-V0.12.0.tar.gz) = ce02a75e62723bb7d8bec345c352fae18b917bcce39c667b870f70f025740c428e8b34387c00710cb4979238930575f87809d54d70ef30ce131801526fcb998d
+Size (FeatherPad-V0.12.0.tar.gz) = 774318 bytes
+SHA1 (patch-featherpad_singleton.cpp) = 2a975b01d35af58f48942f6dc29bb94aeb41ab13
+SHA1 (patch-featherpad_x11.cpp) = 9c7605159a914b67166e1e253bd0f843cf2a92d6
+SHA1 (patch-featherpad_x11.h) = d1c16d999a5eca0332c13b4240d72f2680706c66
