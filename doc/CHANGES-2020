@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1069 2020/02/13 19:29:51 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1070 2020/02/13 21:13:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1520,3 +1520,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-curl to 7.43.0.5 [adam 2020-02-13]
 	Updated lang/py-uncompyle6 to 3.6.4 [adam 2020-02-13]
 	Updated misc/py-tqdm to 4.42.1 [adam 2020-02-13]
+	Updated graphics/openexr to 2.4.1 [nia 2020-02-13]
