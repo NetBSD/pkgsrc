@@ -1,0 +1,1 @@
+pamqp is a low level AMQP 0-9-1 frame encoding and decoding library for Python.
