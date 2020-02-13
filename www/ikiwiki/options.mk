@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.20 2019/11/04 22:09:56 rillig Exp $
+# $NetBSD: options.mk,v 1.21 2020/02/13 19:03:57 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		cgi imagemagick l10n python w3m
 PKG_SUPPORTED_OPTIONS+=		cvs git svn	# not mutually exclusive
 PKG_SUPPORTED_OPTIONS+=		ikiwiki-amazon-s3 ikiwiki-highlight ikiwiki-search
-PKG_SUGGESTED_OPTIONS=		cgi
+PKG_SUPPORTED_OPTIONS+=		ikiwiki-sudo
+PKG_SUGGESTED_OPTIONS=		cgi ikiwiki-sudo
 
 .include "../../mk/bsd.options.mk"
 
@@ -41,6 +42,12 @@ DEPENDS+=	p5-highlight-[0-9]*:../../textproc/p5-highlight
 .if !empty(PKG_OPTIONS:Mikiwiki-search)
 DEPENDS+=	p5-Search-Xapian-[0-9]*:../../textproc/p5-Search-Xapian
 DEPENDS+=	xapian-omega-[0-9]*:../../textproc/xapian-omega
+.endif
+
+.if !empty(PKG_OPTIONS:Mikiwiki-sudo)
+.  if !exists(/usr/bin/sudo)
+DEPENDS+=	sudo-[0-9]*:../../security/sudo
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mimagemagick)
