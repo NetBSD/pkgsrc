@@ -323,6 +323,7 @@ idn			Internationalized Domain Names (IDN) support.
 ikiwiki-amazon-s3	Enable publishing rendered pages to Amazon S3 servers.
 ikiwiki-highlight	Enable syntax highlighting in code blocks.
 ikiwiki-search		Enable full-text search using xapian.
+ikiwiki-sudo		Enable portable ikiwiki-mass-rebuild using sudo.
 ilbc			Enable the use of iLBC (Internet Low Bit Rate Codec).
 imagemagick		Use ImageMagick as imaging library.
 imap			Enable imap support.
