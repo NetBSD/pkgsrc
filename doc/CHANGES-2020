@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1062 2020/02/13 13:46:33 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.1063 2020/02/13 15:28:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1506,3 +1506,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fasttracker2 to 1.09 [fox 2020-02-13]
 	Updated net/rabbitmq-c to 0.10.0 [adam 2020-02-13]
 	Updated fonts/spleen to 1.7.0 [fcambus 2020-02-13]
+	Added textproc/R-spelling version 2.1 [mef 2020-02-13]
+	Added textproc/R-hunspell version 3.0 [mef 2020-02-13]
