@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1065 2020/02/13 18:32:22 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1066 2020/02/13 18:40:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1511,3 +1511,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/libbluray to 1.1.2nb2 [kamil 2020-02-13]
 	Updated lang/elixir to 1.10.1 [adam 2020-02-13]
 	Updated net/rabbitmq to 3.8.2 [adam 2020-02-13]
+	Added net/py-pika version 1.1.0 [adam 2020-02-13]
+	Added net/py-pamqp version 2.3.0 [adam 2020-02-13]
+	Added net/py-aiormq version 3.2.0 [adam 2020-02-13]
+	Added net/py-aio-pika version 6.4.1 [adam 2020-02-13]
