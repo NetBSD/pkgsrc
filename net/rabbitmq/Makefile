@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.44 2019/07/23 16:12:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2020/02/13 18:31:07 adam Exp $
 
-DISTNAME=		rabbitmq-server-3.7.16
-PKGNAME=		${DISTNAME:S/-server//}
-CATEGORIES=		net
-MASTER_SITES=		${MASTER_SITE_GITHUB:=rabbitmq/}
-EXTRACT_SUFX=		.tar.xz
-GITHUB_PROJECT=		rabbitmq-server
-GITHUB_RELEASE=		v${PKGVERSION_NOREV}
+DISTNAME=	rabbitmq-server-3.8.2
+PKGNAME=	${DISTNAME:S/-server//}
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rabbitmq/}
+EXTRACT_SUFX=	.tar.xz
+GITHUB_PROJECT=	rabbitmq-server
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.rabbitmq.com/server.html
-COMMENT=		Implementation of AMQP that provides robust messaging for applications
-LICENSE=		mpl-1.1
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.rabbitmq.com/
+COMMENT=	Implementation of AMQP that provides robust messaging for applications
+LICENSE=	mpl-1.1
 
 USE_TOOLS+=		bash:run gmake unzip zip
 
@@ -28,7 +28,7 @@ BUILD_DEFS+=		VARBASE
 TOOLS_CREATE+=		mix
 TOOLS_SCRIPT.mix=	${PREFIX}/bin/elixir -r ${PREFIX}/bin/mix -- "$$@"
 
-.include		"../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
 RMQ_USER?=		rabbitmq
 RMQ_GROUP?=		${RMQ_USER}
@@ -48,8 +48,8 @@ PKG_SHELL.${RMQ_USER}=	${RMQ_SHELL}
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 CONF_FILES+=		share/examples/rabbitmq/rabbitmq-env.conf \
 			${PKG_SYSCONFDIR}/rabbitmq-env.conf
-CONF_FILES+=		share/examples/rabbitmq/rabbitmq.config.example \
-			${PKG_SYSCONFDIR}/rabbitmq.config
+CONF_FILES+=		share/examples/rabbitmq/rabbitmq.conf.example \
+			${PKG_SYSCONFDIR}/rabbitmq.conf
 
 FILES_SUBST+=		RMQ_USER=${RMQ_USER}
 FILES_SUBST+=		RMQ_GROUP=${RMQ_GROUP}
@@ -64,8 +64,8 @@ SCRIPTS_DIR=		${WRKSRC}/deps/rabbit/scripts
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting standard paths
 SUBST_STAGE.paths=	pre-build
-SUBST_FILES.paths=	${SCRIPTS_DIR}/rabbitmqctl ${SCRIPTS_DIR}/rabbitmq-env
-SUBST_FILES.paths+=	${SCRIPTS_DIR}/rabbitmq-plugins ${SCRIPTS_DIR}/rabbitmq-server
+SUBST_FILES.paths=	${SCRIPTS_DIR}/rabbitmq-env
+SUBST_FILES.paths+=	${SCRIPTS_DIR}/rabbitmq-server
 SUBST_FILES.paths+=	${SCRIPTS_DIR}/rabbitmq-defaults
 SUBST_SED.paths=	-e 's|/etc/rabbitmq|${PKG_SYSCONFDIR}|g'
 SUBST_SED.paths+=	-e 's|/var/lib|${VARBASE}/db|g'
@@ -77,11 +77,15 @@ REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmqctl
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-defaults
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-env
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-plugins
+REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-queues
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-server
+REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-upgrade
 
 # Too much effort to replace the shebang on generated files
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-diagnostics
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-plugins
+CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-queues
+CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmq-upgrade
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/escript/rabbitmqctl
 CHECK_INTERPRETER_SKIP+=	${RABBITMQ_HOME}/sbin/cuttlefish
 
@@ -95,7 +99,7 @@ INSTALL_TARGET=		install-erlapp install-scripts install-bin install-man
 TEST_TARGET=		check
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/deps/rabbit/docs/rabbitmq.config.example \
+	${INSTALL_DATA} ${WRKSRC}/deps/rabbit/docs/rabbitmq.conf.example \
 		${DESTDIR}${PREFIX}/share/examples/rabbitmq
 	${INSTALL_DATA} ${FILESDIR}/rabbitmq-env.conf \
 		${DESTDIR}${PREFIX}/share/examples/rabbitmq
