@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2020/01/18 21:48:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.136 2020/02/13 21:04:25 rillig Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	22
@@ -29,6 +29,7 @@ MAKE_ENV+=		INSTALL_CATPAGES=no
 HEIMDAL_HDB_DIR=	${VARBASE}/heimdal
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has multiple configure scripts
 CONFIGURE_ARGS+=	--enable-kcm
 CONFIGURE_ARGS+=	--enable-pthread-support
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/krb5
