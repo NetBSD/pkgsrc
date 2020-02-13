@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1304 2020/02/08 15:22:32 nia Exp $
+# $NetBSD: Makefile,v 1.1305 2020/02/13 18:40:04 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -646,6 +646,8 @@ SUBDIR+=	py-IP
 SUBDIR+=	py-ORBit
 SUBDIR+=	py-Socks
 SUBDIR+=	py-adns
+SUBDIR+=	py-aio-pika
+SUBDIR+=	py-aiormq
 SUBDIR+=	py-amqp
 SUBDIR+=	py-apache-libcloud
 SUBDIR+=	py-asyncio-nats-client
@@ -700,7 +702,9 @@ SUBDIR+=	py-nyx
 SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-onionbalance
 SUBDIR+=	py-paho-mqtt
+SUBDIR+=	py-pamqp
 SUBDIR+=	py-pcap
+SUBDIR+=	py-pika
 SUBDIR+=	py-portend
 SUBDIR+=	py-prometheus_client
 SUBDIR+=	py-ptt
