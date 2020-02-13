@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1071 2020/02/13 21:13:38 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1072 2020/02/13 22:23:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1522,3 +1522,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/py-tqdm to 4.42.1 [adam 2020-02-13]
 	Updated graphics/openexr to 2.4.1 [nia 2020-02-13]
 	Updated graphics/ilmbase to 2.4.1 [nia 2020-02-13]
+	Updated www/gitea to 1.11.0 [nia 2020-02-13]
