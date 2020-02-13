@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.44 2019/12/29 10:00:08 markd Exp $
+$NetBSD: distinfo,v 1.45 2020/02/13 09:23:46 adam Exp $
 
-SHA1 (opencv-3.4.8.tar.gz) = ae032936ddbfecca7fbe6cd307d942604f26d403
-RMD160 (opencv-3.4.8.tar.gz) = 40652271f410d9d48904a7df428465296f71d874
-SHA512 (opencv-3.4.8.tar.gz) = 6c2dfa88e9a93747397f80e6a3dd7eed126bc14efe6c0ec5b064d10bc49f24fc6fb187029f3ac6f5d9f5c16465b96ba55e5d5cacc3584dce69e10567df423ccb
-Size (opencv-3.4.8.tar.gz) = 87343996 bytes
+SHA1 (opencv-3.4.9.tar.gz) = bcd0fafc9f1a240d92af9007c9f8098da601d7a5
+RMD160 (opencv-3.4.9.tar.gz) = 2ab36f669a70c876e739736e6b9daacabc5933fe
+SHA512 (opencv-3.4.9.tar.gz) = f445970ca39794fc5fbcaed8b506c6b332cbce911ed8487f490bca9a565c8ed3071816261a1803a8f4b43f58d66ca5eaab30be478c4b7ee973a6b6fc2b370869
+Size (opencv-3.4.9.tar.gz) = 87342965 bytes
 SHA1 (patch-3rdparty_ippicv_ippicv.cmake) = 14ce5de382084793ace32f43c6dfaf01f7ffb390
 SHA1 (patch-3rdparty_protobuf_src_google_protobuf_message__lite.cc) = f1b77384ea8110d2bf3a30ff3fe9f2fa39608caf
 SHA1 (patch-CMakeLists.txt) = 029368ab14163640d1651f572810eb8eb0c043d9
-SHA1 (patch-cmake_OpenCVDetectCXXCompiler.cmake) = 221b0551d0f29d7e79afe3da8a33b1b3a4f7bf20
+SHA1 (patch-cmake_OpenCVDetectCXXCompiler.cmake) = ac7deccedcc5071d3785c7827a06419713ba0529
 SHA1 (patch-cmake_OpenCVDetectPython.cmake) = 4f3bfe574edf083ebc7e78d347355c58461b2c6b
 SHA1 (patch-modules_core_include_opencv2_core_types_c.h) = 75444e65677be99af8167f9060419d7970a7adaa
 SHA1 (patch-modules_core_src_downhill__simplex.cpp) = 1ad7c2fa126d15050b87785e8eec20dbe796b471
