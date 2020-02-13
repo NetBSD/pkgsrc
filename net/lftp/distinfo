@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.72 2020/01/08 12:38:08 nia Exp $
+$NetBSD: distinfo,v 1.73 2020/02/13 18:57:21 adam Exp $
 
-SHA1 (lftp-4.9.0.tar.xz) = f869e4fd681926017d44f2e89ac00db66ee0abf4
-RMD160 (lftp-4.9.0.tar.xz) = a36c259377ba7cbddb2957c108d7e91b34958502
-SHA512 (lftp-4.9.0.tar.xz) = 8d83ea76390d38cb1f84f02eb7bf45780758afb9fe61f5b7278a48c9a5d216d03bc8b699c0f449a0036bdb441b4225af074da1b5e92a77ddb61aca704758211e
-Size (lftp-4.9.0.tar.xz) = 1642596 bytes
+SHA1 (lftp-4.9.1.tar.xz) = bc6eda14a03b264066119cce96f638fee61568b7
+RMD160 (lftp-4.9.1.tar.xz) = 91082f82d7c2563445139418dd72a54c556778a4
+SHA512 (lftp-4.9.1.tar.xz) = 303e2354bd61a850403a02ac5b71e54719c12b026c7e36194a6382e9044f1fee93ea581ba0a55fea19981e07b896216e92c7d961c719350762eb0cfb51a2c506
+Size (lftp-4.9.1.tar.xz) = 1648564 bytes
 SHA1 (patch-aa) = 988f4f2f5b9469d3c645ffa984d5449a219229bb
 SHA1 (patch-ab) = cbf428fb51c64431eb32d25160303333ce695b5a
 SHA1 (patch-ac) = 8aa2ddc582bbc87cd0a5e8662f328dd2ac8dea90
