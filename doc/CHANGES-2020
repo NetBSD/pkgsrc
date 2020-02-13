@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1063 2020/02/13 15:28:58 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1064 2020/02/13 16:55:09 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1508,3 +1508,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/spleen to 1.7.0 [fcambus 2020-02-13]
 	Added textproc/R-spelling version 2.1 [mef 2020-02-13]
 	Added textproc/R-hunspell version 3.0 [mef 2020-02-13]
+	Updated multimedia/libbluray to 1.1.2nb2 [kamil 2020-02-13]
