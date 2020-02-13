@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1059 2020/02/13 09:24:15 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1060 2020/02/13 10:11:47 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1503,3 +1503,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-lexicon to 3.3.17 [adam 2020-02-13]
 	Updated graphics/opencv to 3.4.9 [adam 2020-02-13]
 	Updated graphics/opencv-contrib-face to 3.4.9 [adam 2020-02-13]
+	Updated audio/fasttracker2 to 1.09 [fox 2020-02-13]
