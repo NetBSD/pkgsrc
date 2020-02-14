@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2020/02/12 15:25:15 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2020/02/14 00:50:51 kamil Exp $
 
 SHA1 (mono-6.8.0.105.tar.xz) = e39aa0ac15b3b73ecf0767462798a5acde0aed79
 RMD160 (mono-6.8.0.105.tar.xz) = 5a84c75f941d5a2a645999e13da8458fc87d3bac
@@ -21,6 +21,6 @@ SHA1 (patch-mono_metadata_w32mutex-unix.c) = c3d424fe4ae1079c9c664c876a087fb0134
 SHA1 (patch-mono_utils_mono-os-semaphore.h) = b850911945c95be804e9462263d558ef702831ca
 SHA1 (patch-mono_utils_mono-sigcontext.h) = b8a6f886661622e9b0d382443536bd3dc998f95f
 SHA1 (patch-mono_utils_mono-threads-posix.c) = 3111d6a47fa104d964b34fdb5f7eca8643559ea3
-SHA1 (patch-mono_utils_mono-utils-debug.c) = b813d7a3c652f120c658c3c3eeacd9c1f8b60be4
+SHA1 (patch-mono_utils_mono-utils-debug.c) = 39f099969040b3a52101b611be723b25674ea68b
 SHA1 (patch-runtime_mono-wrapper.in) = ea40d2f2e8b67de0ae42c6e608e3c085dc2b040e
 SHA1 (patch-support_minizip_ioapi.c) = 605c86916c957c31a8b3048d7703482f8f545463
