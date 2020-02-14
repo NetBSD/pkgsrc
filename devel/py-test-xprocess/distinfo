@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/02/25 08:47:03 adam Exp $
+$NetBSD: distinfo,v 1.2 2020/02/14 09:53:32 adam Exp $
 
-SHA1 (pytest-xprocess-0.12.1.tar.gz) = 2b0903545880d036784efad0c8af0797aede62ef
-RMD160 (pytest-xprocess-0.12.1.tar.gz) = 1fe16c4d331deb45e4b8c3f93f1c0ae183eab011
-SHA512 (pytest-xprocess-0.12.1.tar.gz) = fda868a12a056070afd5838c4bc466b4906a7138f685d4a0e6e0adbd975e5a1a2b9b37b8de36a45fb700e02ca14ae219cfe29c467f8d03e55d2a375a7efc9927
-Size (pytest-xprocess-0.12.1.tar.gz) = 12078 bytes
+SHA1 (pytest-xprocess-0.13.1.tar.gz) = ef1e9365fa10a0b27f1ff3c956b7cdec4235380a
+RMD160 (pytest-xprocess-0.13.1.tar.gz) = 677b152a6696421514113ef3289545e901db1bfb
+SHA512 (pytest-xprocess-0.13.1.tar.gz) = e0ab9e13d7f90ffca1bb3646e5789582806519ff5e665e13ed0db00896d799a7828b39e7657e947783d15ec1a961b33c1c981e39069dd298bf352826dbdc496f
+Size (pytest-xprocess-0.13.1.tar.gz) = 10273 bytes
