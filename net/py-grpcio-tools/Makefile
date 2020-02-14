@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/02/10 15:36:32 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/02/14 10:35:56 adam Exp $
 
-DISTNAME=	grpcio-tools-1.27.1
+DISTNAME=	grpcio-tools-1.27.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio-tools/}
@@ -10,14 +10,13 @@ HOMEPAGE=	https://grpc.io/
 COMMENT=	Protobuf code generator for gRPC
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-DEPENDS+=	${PYPKGPREFIX}-grpcio>=1.24.3:../../net/py-grpcio
+DEPENDS+=	${PYPKGPREFIX}-grpcio>=${PKGVERSION_NOREV}:../../net/py-grpcio
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.5.1:../../devel/py-protobuf
 
 USE_LANGUAGES=	c c++11
-
 MAKE_ENV+=	GRPC_PYTHON_LDFLAGS="-lprotoc ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.protobuf}/lib"
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../lang/python/egg.mk"
