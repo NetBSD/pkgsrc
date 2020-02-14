@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.178 2020/02/05 03:31:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.179 2020/02/14 13:02:41 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.49.2
+NSS_RELEASE=		3.50.0
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
 
@@ -134,7 +134,7 @@ do-install:
 # For consistency of libxul.so link in www/firefox.
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.4.2
 .include "../../databases/sqlite3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.24
+BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.25
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
