@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/02/14 23:36:54 jperkin Exp $
+
+ld: fatal: symbol '__dtrace_HaskellEvent___task-create' is multiply-defined
+
+--- configure.orig	2015-11-30 23:39:05.000000000 +0000
++++ configure
+@@ -9125,7 +9125,7 @@ fi
+ 
+ 
+ if test -n "$DtraceCmd"; then
+-  if test "x$TargetOS_CPP-$TargetVendor_CPP" = "xdarwin-apple" -o "x$TargetOS_CPP-$TargetVendor_CPP" = "xsolaris2-unknown"; then
++  if test "x$TargetOS_CPP-$TargetVendor_CPP" = "xdarwin-apple"; then
+     HaveDtrace=YES
+   fi
+ fi
