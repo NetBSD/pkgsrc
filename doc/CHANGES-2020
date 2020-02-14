@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1082 2020/02/14 16:21:58 minskim Exp $
+$NetBSD: CHANGES-2020,v 1.1083 2020/02/14 17:08:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1537,3 +1537,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/nss to 3.50 [ryoon 2020-02-14]
 	Updated sysutils/qdirstat to 1.6.1 [rillig 2020-02-14]
 	Updated math/py-pandas to 0.25.3 [minskim 2020-02-14]
+	Updated databases/postgresql94 to 9.4.26 [adam 2020-02-14]
+	Updated databases/postgresql95 to 9.5.21 [adam 2020-02-14]
+	Updated databases/postgresql96 to 9.6.17 [adam 2020-02-14]
+	Updated databases/postgresql10 to 10.12 [adam 2020-02-14]
+	Updated databases/postgresql11 to 11.7 [adam 2020-02-14]
+	Updated databases/postgresql12 to 12.2 [adam 2020-02-14]
