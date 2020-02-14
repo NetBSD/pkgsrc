@@ -1,7 +1,6 @@
-#$ $NetBSD: Makefile,v 1.2 2020/01/18 21:49:00 jperkin Exp $
+#$ $NetBSD: Makefile,v 1.3 2020/02/14 17:06:42 adam Exp $
 
-PKGNAME=	${DISTNAME:C/-/11-plperl-/}
-PKGREVISION=	1
+PKGNAME=	${DISTNAME:S/-/11-plperl-/}
 COMMENT=	PL/Perl procedural language for the PostgreSQL backend
 
 DEPENDS+=	postgresql11-server>=${PKGVERSION_NOREV}:../../databases/postgresql11-server
