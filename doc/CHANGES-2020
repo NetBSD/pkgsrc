@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1077 2020/02/14 10:12:21 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1078 2020/02/14 10:16:37 nros Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1325,6 +1325,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-djangocms-admin-style to 1.5.0 [adam 2020-02-03]
 	Updated www/py-django-cms to 3.7.1 [adam 2020-02-03]
 	Added security/wolfssl version 4.3.0 [fox 2020-02-03]
+	Updated www/lighttpd to 1.4.55 [nros 2020-02-03]
 	Updated www/py-feedgen to 0.9.0 [minskim 2020-02-04]
 	Updated devel/geany to 1.36 [gutteridge 2020-02-04]
 	Updated www/squid4 to 4.10 [taca 2020-02-04]
