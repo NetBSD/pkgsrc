@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/11/09 18:12:27 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/02/14 17:06:45 adam Exp $
 
-PKGNAME=	${DISTNAME:C/-/95-docs-/}
+PKGNAME=	${DISTNAME:S/-/95-docs-/}
 COMMENT=	PostgreSQL database documentation
 
 .include "../../databases/postgresql95/Makefile.common"
