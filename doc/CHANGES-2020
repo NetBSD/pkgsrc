@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1084 2020/02/14 18:51:55 leot Exp $
+$NetBSD: CHANGES-2020,v 1.1085 2020/02/14 19:16:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1544,3 +1544,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/postgresql11 to 11.7 [adam 2020-02-14]
 	Updated databases/postgresql12 to 12.2 [adam 2020-02-14]
 	Updated sysutils/entr to 4.4 [leot 2020-02-14]
+	Updated www/webkit-gtk to 2.26.4 [leot 2020-02-14]
