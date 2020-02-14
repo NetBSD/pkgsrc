@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1076 2020/02/14 05:59:05 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.1077 2020/02/14 10:12:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1527,3 +1527,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/arqiver to 0.3.2nb1 [gutteridge 2020-02-14]
 	Updated textproc/p5-YAML-PP to 0.019 [schmonz 2020-02-14]
 	Updated devel/p5-Pegex to 0.75 [schmonz 2020-02-14]
+	Updated devel/py-test-xprocess to 0.13.1 [adam 2020-02-14]
+	Updated devel/py-setuptools_scm to 3.5.0 [adam 2020-02-14]
