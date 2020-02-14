@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/01/13 01:06:52 pho Exp $
+# $NetBSD: Makefile,v 1.41 2020/02/14 23:36:54 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -68,6 +68,7 @@ CONFIGURE_ARGS+=	${CONFIGURE_ARGS.common}
 
 CONFIGURE_ENV+= \
 	ac_cv_path_fp_prog_ar=${AR:Q} \
+	ac_cv_path_READELF=readelf \
 	PerlCmd=${PERL5:Q}
 
 # LDFLAGS is currently not honored by "./configure". Since LDFLAGS
