@@ -60,7 +60,7 @@ func (scc *SimpleCommandChecker) checkCommandStart() {
 	case matches(shellword, `\$\{(PKGSRCDIR|PREFIX)(:Q)?\}`):
 		break
 	default:
-		if G.Opts.WarnExtra && !scc.mklines.indentation.DependsOn("OPSYS") {
+		if G.WarnExtra && !scc.mklines.indentation.DependsOn("OPSYS") {
 			scc.mkline.Warnf("Unknown shell command %q.", shellword)
 			scc.mkline.Explain(
 				"To make the package portable to all platforms that pkgsrc supports,",
@@ -577,7 +577,7 @@ func (ck *ShellLineChecker) checkPipeExitcode(pipeline *MkShPipeline) {
 		return false, ""
 	}
 
-	if G.Opts.WarnExtra && len(pipeline.Cmds) > 1 {
+	if G.WarnExtra && len(pipeline.Cmds) > 1 {
 		if canFail, cmd := canFail(); canFail {
 			if cmd != "" {
 				ck.Warnf("The exitcode of %q at the left of the | operator is ignored.", cmd)
@@ -744,7 +744,7 @@ func (ck *ShellLineChecker) CheckShellCommand(shellcmd string, pSetE *bool, time
 		}
 	}
 	walker.Callback.AndOr = func(andor *MkShAndOr) {
-		if G.Opts.WarnExtra && !*pSetE && walker.Current().Index != 0 {
+		if G.WarnExtra && !*pSetE && walker.Current().Index != 0 {
 			ck.checkSetE(walker.Parent(1).(*MkShList), walker.Current().Index)
 		}
 	}
@@ -922,7 +922,7 @@ func (ck *ShellLineChecker) checkShVarUsePlain(atom *ShAtom, checkQuoting bool) 
 	if shVarname == "@" {
 		ck.Warnf("The $@ shell variable should only be used in double quotes.")
 
-	} else if G.Opts.WarnQuoting && checkQuoting && ck.variableNeedsQuoting(shVarname) {
+	} else if G.WarnQuoting && checkQuoting && ck.variableNeedsQuoting(shVarname) {
 		ck.Warnf("Unquoted shell variable %q.", shVarname)
 		ck.Explain(
 			"When a shell variable contains whitespace, it is expanded (split into multiple words)",
@@ -1022,8 +1022,8 @@ func (ck *ShellLineChecker) checkMultiLineComment() {
 		return
 	}
 
-	for _, line := range mkline.raw[:len(mkline.raw)-1] {
-		text := strings.TrimSuffix(line.Text(), "\\")
+	for rawIndex, rawLine := range mkline.raw[:len(mkline.raw)-1] {
+		text := strings.TrimSuffix(mkline.RawText(rawIndex), "\\")
 		tokens, rest := splitIntoShellTokens(nil, text)
 		if rest != "" {
 			return
@@ -1031,18 +1031,23 @@ func (ck *ShellLineChecker) checkMultiLineComment() {
 
 		for _, token := range tokens {
 			if hasPrefix(token, "#") {
-				ck.warnMultiLineComment(line)
+				ck.warnMultiLineComment(rawIndex, rawLine)
 				return
 			}
 		}
 	}
 }
 
-func (ck *ShellLineChecker) warnMultiLineComment(raw *RawLine) {
-	line := NewLine(ck.mkline.Filename, raw.Lineno, raw.Text(), raw)
+func (ck *ShellLineChecker) warnMultiLineComment(rawIndex int, raw *RawLine) {
+	line := ck.mkline.Line
+	singleLine := NewLine(
+		line.Filename(),
+		line.Location.Lineno(rawIndex),
+		line.RawText(rawIndex),
+		raw)
 
-	line.Warnf("The shell comment does not stop at the end of this line.")
-	line.Explain(
+	singleLine.Warnf("The shell comment does not stop at the end of this line.")
+	singleLine.Explain(
 		"When a shell command is spread out on multiple lines that are",
 		"continued with a backslash, they will nevertheless be converted to",
 		"a single line before the shell sees them.",

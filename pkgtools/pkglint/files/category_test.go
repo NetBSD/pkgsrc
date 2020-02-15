@@ -24,14 +24,14 @@ func (s *Suite) Test_CheckdirCategory__totally_broken(c *check.C) {
 		"NOTE: ~/archivers/Makefile:3: This variable value should be aligned with tabs, not spaces, to column 17 instead of 10.",
 		"NOTE: ~/archivers/Makefile:4: This variable value should be aligned to column 17 instead of 9.",
 		"ERROR: ~/archivers/Makefile:6: Relative path \"../mk/category.mk\" does not exist.",
-		"NOTE: ~/archivers/Makefile:2: Empty line expected before this line.",
+		"NOTE: ~/archivers/Makefile:2: Empty line expected above this line.",
 		"ERROR: ~/archivers/Makefile:2: COMMENT= line expected.",
-		"NOTE: ~/archivers/Makefile:2: Empty line expected before this line.",
+		"NOTE: ~/archivers/Makefile:2: Empty line expected above this line.",
 		"WARN: ~/archivers/Makefile:3: \"aaaaa\" should come before \"pkg1\".",
 		"ERROR: ~/archivers/Makefile:4: SUBDIR+= line or empty line expected.",
 		"ERROR: ~/archivers/Makefile:2: \"pkg1\" exists in the Makefile but not in the file system.",
 		"ERROR: ~/archivers/Makefile:3: \"aaaaa\" exists in the Makefile but not in the file system.",
-		"NOTE: ~/archivers/Makefile:4: Empty line expected before this line.",
+		"NOTE: ~/archivers/Makefile:4: Empty line expected above this line.",
 		"WARN: ~/archivers/Makefile:4: This line should contain the following text: .include \"../mk/misc/category.mk\"",
 		"ERROR: ~/archivers/Makefile:4: The file must end here.")
 }
@@ -246,7 +246,7 @@ func (s *Suite) Test_CheckdirCategory__subdirs_file_system_at_the_bottom(c *chec
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/Makefile:6: \"zzz-fs-only\" exists in the file system but not in the Makefile.",
-		"AUTOFIX: ~/category/Makefile:6: Inserting a line \"SUBDIR+=\\tzzz-fs-only\" before this line.")
+		"AUTOFIX: ~/category/Makefile:6: Inserting a line \"SUBDIR+=\\tzzz-fs-only\" above this line.")
 }
 
 func (s *Suite) Test_CheckdirCategory__indentation(c *check.C) {
@@ -301,10 +301,10 @@ func (s *Suite) Test_CheckdirCategory__comment_at_the_top(c *check.C) {
 	// is rather exotic anyway.
 	t.CheckOutputLines(
 		"ERROR: ~/category/Makefile:3: COMMENT= line expected.",
-		"NOTE: ~/category/Makefile:3: Empty line expected before this line.",
+		"NOTE: ~/category/Makefile:3: Empty line expected above this line.",
 		"ERROR: ~/category/Makefile:3: SUBDIR+= line or empty line expected.",
 		"ERROR: ~/category/Makefile:3: \"package\" exists in the file system but not in the Makefile.",
-		"NOTE: ~/category/Makefile:3: Empty line expected before this line.",
+		"NOTE: ~/category/Makefile:3: Empty line expected above this line.",
 		"WARN: ~/category/Makefile:3: This line should contain the following text: .include \"../mk/misc/category.mk\"",
 		"ERROR: ~/category/Makefile:3: The file must end here.")
 }
@@ -327,7 +327,7 @@ func (s *Suite) Test_CheckdirCategory__unexpected_EOF_while_reading_SUBDIR(c *ch
 
 	// Doesn't happen in practice since categories are created very seldom.
 	t.CheckOutputLines(
-		"NOTE: ~/category/Makefile:5: Empty line expected after this line.",
+		"NOTE: ~/category/Makefile:5: Empty line expected below this line.",
 		"WARN: ~/category/Makefile:EOF: This line should contain the following text: "+
 			".include \"../mk/misc/category.mk\"")
 }
