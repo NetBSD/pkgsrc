@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.151 2020/02/13 04:36:02 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.152 2020/02/15 13:39:32 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -20,7 +20,7 @@ ALL_ENV+=			PYTHON3=${LOCALBASE}/bin/python3.7
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
-USE_LANGUAGES+=		c99 gnu++14
+USE_LANGUAGES+=		c99 gnu++17
 UNLIMIT_RESOURCES+=	datasize
 
 TOOL_DEPENDS+=		cbindgen>=0.12.0:../../devel/cbindgen
