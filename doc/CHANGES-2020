@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1092 2020/02/15 05:50:47 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1093 2020/02/15 05:54:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1550,3 +1550,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/emacs-snapshot to 28.0.50 [makoto 2020-02-15]
 	Updated devel/lua-gi to 0.9.2 [mef 2020-02-15]
 	Updated devel/lua-penlight to 1.7.0 [mef 2020-02-15]
+	Updated devel/lua-std-_debug to 1.0.1 [mef 2020-02-15]
