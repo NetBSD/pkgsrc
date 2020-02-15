@@ -218,17 +218,17 @@ func (s *Suite) Test_Logger_Diag__show_source(c *check.C) {
 
 	fix := line.Autofix()
 	fix.Notef("Diagnostics can show the differences in autofix mode.")
-	fix.InsertBefore("new line before")
-	fix.InsertAfter("new line after")
+	fix.InsertAbove("new line above")
+	fix.InsertBelow("new line below")
 	fix.Apply()
 
 	t.CheckOutputLines(
 		"NOTE: filename:123: Diagnostics can show the differences in autofix mode.",
-		"AUTOFIX: filename:123: Inserting a line \"new line before\" before this line.",
-		"AUTOFIX: filename:123: Inserting a line \"new line after\" after this line.",
-		"+\tnew line before",
+		"AUTOFIX: filename:123: Inserting a line \"new line above\" above this line.",
+		"AUTOFIX: filename:123: Inserting a line \"new line below\" below this line.",
+		"+\tnew line above",
 		">\ttext",
-		"+\tnew line after")
+		"+\tnew line below")
 }
 
 func (s *Suite) Test_Logger_Diag__show_source_with_whole_file(c *check.C) {
@@ -538,25 +538,17 @@ func (s *Suite) Test_Logger_writeSource__separator_show_autofix_with_explanation
 		"")
 }
 
+// Fatal errors are not specific to a single line, therefore they only
+// take a filename as argument.
+// The --show-autofix and --source options have no effect on fatal errors.
 func (s *Suite) Test_Logger_writeSource__fatal_with_show_autofix(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpCommandLine("--source", "--show-autofix")
-	lines := t.SetUpFileLines("DESCR",
-		"The first line")
 
-	// In the unusual constellation where a fatal error occurs with both
-	// --source and --show-autofix, and the line has not had any autofix,
-	// the cited source code is shown above the diagnostic. This is
-	// different from the usual order in --show-autofix mode, which is to
-	// show the diagnostic first and then its effects.
-	//
-	// This inconsistency does not matter though since it is extremely
-	// rare.
 	t.ExpectFatal(
-		func() { lines.Lines[0].Fatalf("Fatal.") },
-		">\tThe first line",
-		"FATAL: ~/DESCR:1: Fatal.")
+		func() { G.Logger.TechFatalf("DESCR", "Fatal.") },
+		"FATAL: DESCR: Fatal.")
 }
 
 // See Test__show_source_separator_show_autofix for the ordering of the
@@ -596,6 +588,58 @@ func (s *Suite) Test_Logger_writeSource__separator_autofix(c *check.C) {
 		"AUTOFIX: ~/DESCR:3: Replacing \"third\" with \"bronze medal\".",
 		"-\tThe third line",
 		"+\tThe bronze medal line")
+}
+
+func (s *Suite) Test_Logger_writeSource__first_warn_then_autofix(c *check.C) {
+	t := s.Init(c)
+
+	test := func(diagnostics ...string) {
+		lines := t.SetUpFileLines("DESCR",
+			"The first line",
+			"The second line")
+		line := lines.Lines[0]
+
+		line.Warnf("Warning.")
+		fix := line.Autofix()
+		fix.Warnf("Autofix.")
+		fix.Replace("first", "upper")
+		fix.Apply()
+
+		fix = lines.Lines[1].Autofix()
+		fix.Warnf("Autofix.")
+		fix.Replace("second", "last")
+		fix.Apply()
+
+		t.CheckOutput(diagnostics)
+	}
+
+	t.SetUpCommandLine("--source")
+
+	// The warning reports the unmodified source text of the affected line.
+	// Later, the autofix modifies that same line, but the modification is
+	// not reported.
+	// Luckily, this behavior is consistent with the one in line 2, which
+	// also only reports the original source text.
+	test(
+		">\tThe first line",
+		"WARN: ~/DESCR:1: Warning.",
+		"WARN: ~/DESCR:1: Autofix.",
+		"",
+		">\tThe second line",
+		"WARN: ~/DESCR:2: Autofix.")
+
+	t.SetUpCommandLine("--source", "--show-autofix")
+
+	test(
+		"WARN: ~/DESCR:1: Autofix.",
+		"AUTOFIX: ~/DESCR:1: Replacing \"first\" with \"upper\".",
+		"-\tThe first line",
+		"+\tThe upper line",
+		"",
+		"WARN: ~/DESCR:2: Autofix.",
+		"AUTOFIX: ~/DESCR:2: Replacing \"second\" with \"last\".",
+		"-\tThe second line",
+		"+\tThe last line")
 }
 
 // Calling Logf without further preparation just logs the message.
@@ -670,7 +714,7 @@ func (s *Suite) Test_Logger_Logf__profiling(c *check.C) {
 
 	line := t.NewLine("filename", 123, "text")
 
-	G.Opts.Profiling = true
+	G.Profiling = true
 	G.Logger.histo = histogram.New()
 	line.Warnf("Warning.")
 
@@ -687,7 +731,7 @@ func (s *Suite) Test_Logger_Logf__profiling_autofix(c *check.C) {
 	t.SetUpCommandLine("--show-autofix", "--source", "--explain")
 	line := t.NewLine("filename", 123, "text")
 
-	G.Opts.Profiling = true
+	G.Profiling = true
 	G.Logger.histo = histogram.New()
 
 	fix := line.Autofix()
@@ -859,6 +903,36 @@ func (s *Suite) Test_Logger_Logf__wording(c *check.C) {
 		"NOTE: filename:13: This should.")
 }
 
+// In case of a fatal error, pkglint quits in a controlled manner,
+// and the trace log shows where the fatal error happened.
+func (s *Suite) Test_Logger_TechFatalf__trace(c *check.C) {
+	t := s.Init(c)
+
+	t.EnableTracingToLog()
+
+	inner := func() {
+		defer trace.Call0()()
+		G.Logger.TechFatalf(
+			"filename",
+			"Cannot continue because of %q and %q.", "reason 1", "reason 2")
+	}
+	outer := func() {
+		defer trace.Call0()()
+		inner()
+	}
+
+	t.ExpectFatal(
+		outer,
+		"TRACE: + (*Suite).Test_Logger_TechFatalf__trace.func2()",
+		"TRACE: 1 + (*Suite).Test_Logger_TechFatalf__trace.func1()",
+		"TRACE: 1 2   TechFatalf: filename: Cannot continue because of \"reason 1\" and \"reason 2\".",
+		"TRACE: 1 - (*Suite).Test_Logger_TechFatalf__trace.func1()",
+		"TRACE: - (*Suite).Test_Logger_TechFatalf__trace.func2()",
+		"FATAL: filename: Cannot continue because of \"reason 1\" and \"reason 2\".")
+}
+
+// Technical errors are not diagnostics.
+// Therefore --gcc-output-format has no effect on them.
 func (s *Suite) Test_Logger_TechErrorf__gcc_format(c *check.C) {
 	t := s.Init(c)
 
@@ -867,7 +941,7 @@ func (s *Suite) Test_Logger_TechErrorf__gcc_format(c *check.C) {
 	G.Logger.TechErrorf("filename", "Cannot be opened for %s.", "reading")
 
 	t.CheckOutputLines(
-		"filename: error: Cannot be opened for reading.")
+		"ERROR: filename: Cannot be opened for reading.")
 }
 
 func (s *Suite) Test_Logger_ShowSummary__explanations_with_only(c *check.C) {

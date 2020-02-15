@@ -27,7 +27,7 @@ func (s *Suite) Test_CheckLinesDistinfo__parse_errors(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: distinfo:1: Expected \"$"+"NetBSD$\".",
-		"NOTE: distinfo:1: Empty line expected before this line.",
+		"NOTE: distinfo:1: Empty line expected above this line.",
 		"ERROR: distinfo:1: Invalid line: should be the CVS ID",
 		"ERROR: distinfo:2: Invalid line: should be empty",
 		"ERROR: distinfo:8: Invalid line: Another invalid line",
@@ -58,7 +58,7 @@ func (s *Suite) Test_distinfoLinesChecker_parse__empty_file(c *check.C) {
 	CheckLinesDistinfo(nil, lines)
 
 	t.CheckOutputLines(
-		"NOTE: ~/distinfo:1: Empty line expected after this line.")
+		"NOTE: ~/distinfo:1: Empty line expected below this line.")
 }
 
 func (s *Suite) Test_distinfoLinesChecker_parse__commented_first_line(c *check.C) {
@@ -73,7 +73,7 @@ func (s *Suite) Test_distinfoLinesChecker_parse__commented_first_line(c *check.C
 
 	t.CheckOutputLines(
 		"ERROR: ~/distinfo:1: Expected \""+CvsID+"\".",
-		"NOTE: ~/distinfo:1: Empty line expected before this line.",
+		"NOTE: ~/distinfo:1: Empty line expected above this line.",
 		"ERROR: ~/distinfo:1: Invalid line: "+PlistCvsID)
 }
 
@@ -86,7 +86,7 @@ func (s *Suite) Test_distinfoLinesChecker_parse__completely_empty_file(c *check.
 	CheckLinesDistinfo(nil, lines)
 
 	t.CheckOutputLines(
-		"NOTE: ~/distinfo:EOF: Empty line expected before this line.")
+		"NOTE: ~/distinfo:EOF: Empty line expected above this line.")
 }
 
 // When the distinfo file and the patches are placed in the same package,
@@ -400,7 +400,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__add_missing_h
 		"AUTOFIX: ~/category/package/distinfo:3: "+
 			"Inserting a line \"SHA1 (package-1.0.txt) "+
 			"= cd50d19784897085a8d0e3e413f8612b097c03f1\" "+
-			"before this line.",
+			"above this line.",
 		"+\tSHA1 (package-1.0.txt) = cd50d19784897085a8d0e3e413f8612b097c03f1",
 		">\tRMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a",
 		"",
@@ -408,7 +408,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__add_missing_h
 		"AUTOFIX: ~/category/package/distinfo:3: "+
 			"Inserting a line \"SHA512 (package-1.0.txt) "+
 			"= f65f341b35981fda842b09b2c8af9bcdb7602a4c2e6fa1f7d41f0974d3e3122f"+
-			"268fc79d5a4af66358f5133885cd1c165c916f80ab25e5d8d95db46f803c782c\" after this line.",
+			"268fc79d5a4af66358f5133885cd1c165c916f80ab25e5d8d95db46f803c782c\" below this line.",
 		"+\tSHA1 (package-1.0.txt) = cd50d19784897085a8d0e3e413f8612b097c03f1",
 		">\tRMD160 (package-1.0.txt) = 1a88147a0344137404c63f3b695366eab869a98a",
 		"+\tSHA512 (package-1.0.txt) = f65f341b35981fda842b09b2c8af9bcdb7602a4c2e6fa1f7d41f0974d3e3122f"+
@@ -572,9 +572,9 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__bottom_algori
 		"AUTOFIX: ~/category/package/distinfo:4: "+
 			"Inserting a line \"SHA512 (package-1.0.txt) = f65f341b35981fda842b"+
 			"09b2c8af9bcdb7602a4c2e6fa1f7d41f0974d3e3122f268fc79d5a4af66358f513"+
-			"3885cd1c165c916f80ab25e5d8d95db46f803c782c\" after this line.",
+			"3885cd1c165c916f80ab25e5d8d95db46f803c782c\" below this line.",
 		"AUTOFIX: ~/category/package/distinfo:4: "+
-			"Inserting a line \"Size (package-1.0.txt) = 13 bytes\" after this line.")
+			"Inserting a line \"Size (package-1.0.txt) = 13 bytes\" below this line.")
 }
 
 func (s *Suite) Test_distinfoLinesChecker_checkAlgorithmsDistfile__algorithms_in_wrong_order(c *check.C) {

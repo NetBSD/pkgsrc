@@ -168,7 +168,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile Path) {
 			line.Explain(
 				"This line is not part of the patch anymore, although it may look so.",
 				"To make this situation clear, there should be an",
-				"empty line before this line.",
+				"empty line above this line.",
 				"If the line doesn't contain useful information, it should be removed.")
 		}
 	}
@@ -200,7 +200,7 @@ func (ck *PatchChecker) checkBeginDiff(line *Line, patchedFiles int) {
 	if !ck.previousLineEmpty {
 		fix := line.Autofix()
 		fix.Notef("Empty line expected.")
-		fix.InsertBefore("")
+		fix.InsertAbove("")
 		fix.Apply()
 	}
 }

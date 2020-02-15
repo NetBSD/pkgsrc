@@ -567,7 +567,7 @@ func (mklines *MkLines) CheckUsedBy(relativeName PkgsrcPath) {
 		if paras[0].to > 1 {
 			fix := prevLine.Autofix()
 			fix.Notef(SilentAutofixFormat)
-			fix.InsertAfter("")
+			fix.InsertBelow("")
 			fix.Apply()
 		}
 	}
@@ -589,7 +589,7 @@ func (mklines *MkLines) CheckUsedBy(relativeName PkgsrcPath) {
 			"that file should have a clearly defined and documented purpose,",
 			"and the filename should reflect that purpose.",
 			"Typical names are module.mk, plugin.mk or version.mk.")
-		fix.InsertAfter(expected)
+		fix.InsertBelow(expected)
 		fix.Apply()
 	}
 

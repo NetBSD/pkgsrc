@@ -17,9 +17,10 @@ type Autofixer interface {
 // The modifications are kept in memory only,
 // until they are written to disk by SaveAutofixChanges.
 type Autofix struct {
-	line        *Line
-	linesBefore []string // Newly inserted lines, including \n
-	linesAfter  []string // Newly inserted lines, including \n
+	line  *Line
+	above []string // Newly inserted lines, including \n
+	texts []string // Modified lines, including \n
+	below []string // Newly inserted lines, including \n
 	// Whether an actual fix has been applied to the text of the raw lines
 	modified bool
 
@@ -61,7 +62,11 @@ const SilentAutofixFormat = "SilentAutofixFormat"
 const autofixFormat = "AutofixFormat"
 
 func NewAutofix(line *Line) *Autofix {
-	return &Autofix{line: line}
+	texts := make([]string, len(line.raw))
+	for i, rawLine := range line.raw {
+		texts[i] = rawLine.orignl
+	}
+	return &Autofix{line, nil, texts, nil, false, autofixShortTerm{}}
 }
 
 // Errorf remembers the error for logging it later when Apply is called.
@@ -108,31 +113,33 @@ func (fix *Autofix) ReplaceAfter(prefix, from string, to string) {
 	prefixTo := prefix + to
 
 	n := 0
-	for _, rawLine := range fix.line.raw {
-		n += strings.Count(rawLine.textnl, prefixFrom)
+	for _, text := range fix.texts {
+		n += strings.Count(text, prefixFrom)
 	}
 	if n != 1 {
 		return
 	}
 
-	for _, rawLine := range fix.line.raw {
-		ok, replaced := replaceOnce(rawLine.textnl, prefixFrom, prefixTo)
-		if ok {
-			if G.Logger.IsAutofix() {
-				rawLine.textnl = replaced
-
-				// Fix the parsed text as well.
-				// This is only approximate and won't work in some edge cases
-				// that involve escaped comments or replacements across line breaks.
-				//
-				// TODO: Do this properly by parsing the whole line again,
-				//  and ideally everything that depends on the parsed line.
-				//  This probably requires a generic notification mechanism.
-				_, fix.line.Text = replaceOnce(fix.line.Text, prefixFrom, prefixTo)
-			}
-			fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
-			return
+	for rawIndex, text := range fix.texts {
+		ok, replaced := replaceOnce(text, prefixFrom, prefixTo)
+		if !ok {
+			continue
 		}
+
+		if G.Logger.IsAutofix() {
+			fix.texts[rawIndex] = replaced
+
+			// Fix the parsed text as well.
+			// This is only approximate and won't work in some edge cases
+			// that involve escaped comments or replacements across line breaks.
+			//
+			// TODO: Do this properly by parsing the whole line again,
+			//  and ideally everything that depends on the parsed line.
+			//  This probably requires a generic notification mechanism.
+			_, fix.line.Text = replaceOnce(fix.line.Text, prefixFrom, prefixTo)
+		}
+		fix.Describef(rawIndex, "Replacing %q with %q.", from, to)
+		return
 	}
 }
 
@@ -142,13 +149,17 @@ func (fix *Autofix) ReplaceAt(rawIndex int, textIndex int, from string, to strin
 	assert(from != to)
 	fix.assertRealLine()
 
-	rawLine := fix.line.raw[rawIndex]
-	assert(textIndex < len(rawLine.textnl))
-	assert(hasPrefix(rawLine.textnl[textIndex:], from))
+	if fix.skip() {
+		return
+	}
 
-	replaced := rawLine.textnl[:textIndex] + to + rawLine.textnl[textIndex+len(from):]
+	text := fix.texts[rawIndex]
+	assert(textIndex < len(text))
+	assert(hasPrefix(text[textIndex:], from))
 
-	rawLine.textnl = replaced
+	replaced := text[:textIndex] + to + text[textIndex+len(from):]
+
+	fix.texts[rawIndex] = replaced
 
 	// Fix the parsed text as well.
 	// This is only approximate and won't work in some edge cases
@@ -159,38 +170,35 @@ func (fix *Autofix) ReplaceAt(rawIndex int, textIndex int, from string, to strin
 	//  This probably requires a generic notification mechanism.
 	_, fix.line.Text = replaceOnce(fix.line.Text, from, to)
 
-	if fix.skip() {
-		return
-	}
-	fix.Describef(rawLine.Lineno, "Replacing %q with %q.", from, to)
+	fix.Describef(rawIndex, "Replacing %q with %q.", from, to)
 }
 
-// InsertBefore prepends a line before the current line.
+// InsertAbove prepends a line above the current line.
 // The newline is added internally.
-func (fix *Autofix) InsertBefore(text string) {
+func (fix *Autofix) InsertAbove(text string) {
 	fix.assertRealLine()
 	if fix.skip() {
 		return
 	}
 
-	fix.linesBefore = append(fix.linesBefore, text+"\n")
-	fix.Describef(fix.line.raw[0].Lineno, "Inserting a line %q before this line.", text)
+	fix.above = append(fix.above, text+"\n")
+	fix.Describef(0, "Inserting a line %q above this line.", text)
 }
 
-// InsertAfter appends a line after the current line.
+// InsertBelow appends a line below the current line.
 // The newline is added internally.
-func (fix *Autofix) InsertAfter(text string) {
+func (fix *Autofix) InsertBelow(text string) {
 	fix.assertRealLine()
 	if fix.skip() {
 		return
 	}
 
-	fix.linesAfter = append(fix.linesAfter, text+"\n")
-	fix.Describef(fix.line.raw[len(fix.line.raw)-1].Lineno, "Inserting a line %q after this line.", text)
+	fix.below = append(fix.below, text+"\n")
+	fix.Describef(len(fix.line.raw)-1, "Inserting a line %q below this line.", text)
 }
 
 // Delete removes the current line completely.
-// It can be combined with InsertAfter or InsertBefore to
+// It can be combined with InsertBelow or InsertAbove to
 // replace the complete line with some different text.
 func (fix *Autofix) Delete() {
 	fix.assertRealLine()
@@ -198,9 +206,9 @@ func (fix *Autofix) Delete() {
 		return
 	}
 
-	for _, line := range fix.line.raw {
-		line.textnl = ""
-		fix.Describef(line.Lineno, "Deleting this line.")
+	for rawIndex := range fix.texts {
+		fix.texts[rawIndex] = ""
+		fix.Describef(rawIndex, "Deleting this line.")
 	}
 }
 
@@ -210,7 +218,7 @@ func (fix *Autofix) Delete() {
 // The fixer function must check whether it can actually fix something,
 // and if so, call Describef to describe the actual fix.
 //
-// If autofix is false, the the fix should be applied, as far as only
+// If autofix is false, the fix should be applied, as far as only
 // in-memory data structures are effected, and these are not written
 // back to disk. No externally observable modification must be done.
 // For example, changing the text of Line.raw is appropriate,
@@ -237,8 +245,10 @@ func (fix *Autofix) Custom(fixer func(showAutofix, autofix bool)) {
 // Describef can be called from within an Autofix.Custom call to remember a
 // description of the actual fix for logging it later when Apply is called.
 // Describef may be called multiple times before calling Apply.
-func (fix *Autofix) Describef(lineno int, format string, args ...interface{}) {
-	fix.actions = append(fix.actions, autofixAction{sprintf(format, args...), lineno})
+func (fix *Autofix) Describef(rawIndex int, format string, args ...interface{}) {
+	msg := sprintf(format, args...)
+	lineno := fix.line.Location.Lineno(rawIndex)
+	fix.actions = append(fix.actions, autofixAction{msg, lineno})
 }
 
 // Apply does the actual work that has been prepared by previous calls to
@@ -297,10 +307,10 @@ func (fix *Autofix) Apply() {
 	if logDiagnostic {
 		linenos := fix.affectedLinenos()
 		msg := sprintf(fix.diagFormat, fix.diagArgs...)
-		if !logFix && G.Logger.FirstTime(line.Filename, linenos, msg) {
+		if !logFix && G.Logger.FirstTime(line.Filename(), linenos, msg) {
 			G.Logger.writeSource(line)
 		}
-		G.Logger.Logf(fix.level, line.Filename, linenos, fix.diagFormat, msg)
+		G.Logger.Logf(fix.level, line.Filename(), linenos, fix.diagFormat, msg)
 	}
 
 	if logFix {
@@ -309,7 +319,7 @@ func (fix *Autofix) Apply() {
 			if action.lineno != 0 {
 				lineno = strconv.Itoa(action.lineno)
 			}
-			G.Logger.Logf(AutofixLogLevel, line.Filename, lineno, autofixFormat, action.description)
+			G.Logger.Logf(AutofixLogLevel, line.Filename(), lineno, autofixFormat, action.description)
 		}
 		G.Logger.writeSource(line)
 	}
@@ -375,7 +385,7 @@ func (fix *Autofix) skip() bool {
 func (fix *Autofix) assertRealLine() {
 	// Some Line objects do not correspond to real lines of a file.
 	// These cannot be fixed since they are neither part of Lines nor of MkLines.
-	assert(fix.line.firstLine >= 1)
+	assert(fix.line.Location.lineno >= 1)
 }
 
 // SaveAutofixChanges writes the given lines back into their files,
@@ -392,11 +402,11 @@ func SaveAutofixChanges(lines *Lines) (autofixed bool) {
 	// Fast lane for the case that nothing is written back to disk.
 	if !G.Logger.Opts.Autofix {
 		for _, line := range lines.Lines {
-			if line.autofix != nil && line.autofix.modified {
+			if line.fix != nil && line.fix.modified {
 				G.Logger.autofixAvailable = true
 				if G.Logger.Opts.ShowAutofix {
 					// Only in this case can the loaded lines be modified.
-					G.fileCache.Evict(line.Filename)
+					G.fileCache.Evict(line.Filename())
 				}
 			}
 		}
@@ -420,22 +430,21 @@ func SaveAutofixChanges(lines *Lines) (autofixed bool) {
 	changes := make(map[CurrPath][]string)
 	changed := make(map[CurrPath]bool)
 	for _, line := range lines.Lines {
-		chlines := changes[line.Filename]
-		if fix := line.autofix; fix != nil {
+		filename := line.Filename()
+		chlines := changes[filename]
+		if fix := line.fix; fix != nil {
 			if fix.modified {
-				changed[line.Filename] = true
+				changed[filename] = true
 			}
-			chlines = append(chlines, fix.linesBefore...)
-			for _, raw := range line.raw {
-				chlines = append(chlines, raw.textnl)
-			}
-			chlines = append(chlines, fix.linesAfter...)
+			chlines = append(chlines, fix.above...)
+			chlines = append(chlines, fix.texts...)
+			chlines = append(chlines, fix.below...)
 		} else {
 			for _, raw := range line.raw {
-				chlines = append(chlines, raw.textnl)
+				chlines = append(chlines, raw.orignl)
 			}
 		}
-		changes[line.Filename] = chlines
+		changes[filename] = chlines
 	}
 
 	for filename := range changed {

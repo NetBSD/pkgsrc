@@ -126,7 +126,7 @@ func (ck *PlistChecker) collectPath(rel RelPath, pline *PlistLine) {
 	if prev := ck.allFiles[rel]; prev == nil || stringSliceLess(pline.conditions, prev.conditions) {
 		ck.allFiles[rel] = pline
 	}
-	for dir := rel.DirNoClean(); dir != "."; dir = dir.DirNoClean() {
+	for dir := rel.Dir(); dir != "."; dir = dir.Dir() {
 		ck.allDirs[dir] = pline
 	}
 }
@@ -136,7 +136,7 @@ func (ck *PlistChecker) collectDirective(pline *PlistLine) {
 	if !m || NewPath(dirname).IsAbs() {
 		return
 	}
-	for dir := NewRelPathString(dirname); dir != "."; dir = dir.DirNoClean() {
+	for dir := NewRelPathString(dirname); dir != "."; dir = dir.Dir() {
 		ck.allDirs[dir] = pline
 	}
 }
@@ -155,7 +155,7 @@ func (ck *PlistChecker) checkLine(pline *PlistLine) {
 
 	} else if m, cmd, arg := match2(text, `^@([a-z-]+)[\t ]*(.*)`); m {
 		pline.CheckDirective(cmd, arg)
-		if cmd == "comment" && pline.firstLine > 1 {
+		if cmd == "comment" && pline.Location.lineno > 1 {
 			ck.nonAsciiAllowed = true
 		}
 
@@ -647,7 +647,7 @@ func (s *plistLineSorter) Sort() {
 
 	fix := firstLine.Autofix()
 	fix.Notef(SilentAutofixFormat)
-	fix.Describef(int(firstLine.firstLine), "Sorting the whole file.")
+	fix.Describef(0, "Sorting the whole file.")
 	fix.Apply()
 
 	var lines []*Line
@@ -661,5 +661,5 @@ func (s *plistLineSorter) Sort() {
 		lines = append(lines, pline.Line)
 	}
 
-	s.autofixed = SaveAutofixChanges(NewLines(lines[0].Filename, lines))
+	s.autofixed = SaveAutofixChanges(NewLines(lines[0].Filename(), lines))
 }

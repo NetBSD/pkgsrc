@@ -59,7 +59,8 @@ func (s *Suite) Test_CheckdirToplevel__recursive(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/Makefile:20: UNKNOWN is defined but not used.",
-		"1 warning found.",
+		"WARN: ~/licenses/gnu-gpl-v2: This license seems to be unused.",
+		"2 warnings found.",
 		t.Shquote("(Run \"pkglint -e -Wall -r %s\" to show explanations.)", "."))
 }
 
