@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/11/20 17:28:10 maya Exp $
+$NetBSD: distinfo,v 1.2 2020/02/15 05:54:35 mef Exp $
 
-SHA1 (std._debug-1.0.tar.gz) = e65fa9fadd5a5315119bf578ca2941c0d6df8a78
-RMD160 (std._debug-1.0.tar.gz) = c2cff6bd6184c3078cf37b78d404b8909ed08e08
-SHA512 (std._debug-1.0.tar.gz) = ed9b5135489b35805f8d4f658d0b707d3e722ee4c1b6c7dea90d029b23923fb32640ffb20c4a7914cd6e6351edb26df9749256176757c7f031b1327d4bf42ec0
-Size (std._debug-1.0.tar.gz) = 11420 bytes
+SHA1 (std._debug-1.0.1.tar.gz) = 6b050a84d63d1a2f33686b5a519494ebb9e07f0d
+RMD160 (std._debug-1.0.1.tar.gz) = d15655bf7d3e801ca720ff5a3a6b1fbf5c94575c
+SHA512 (std._debug-1.0.1.tar.gz) = 784236ff161c36718a965af6b616b582158a6b919b5258511d1fc8a05cea4b4bd30a7abdda6dae602cfd5f2b47df198c2194e342ed09b80890d69e323df26ca4
+Size (std._debug-1.0.1.tar.gz) = 11992 bytes
