@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2020/01/14 19:53:35 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.59 2020/02/15 14:48:08 rillig Exp $
 
 # used by x11/labltk/Makefile
 DISTNAME=	ocaml-4.09.0
@@ -21,7 +21,6 @@ GNU_CONFIGURE=		yes
 #CONFIGURE_ARGS+=	-with-pthread
 #CONFIGURE_ARGS+=	-host ${MACHINE_GNU_PLATFORM:Q}
 #CONFIGURE_ARGS+=	-mandir ${PREFIX}/lib/ocaml/${PKGMANDIR}
-CONFIGURE_ARGS+=	--without-x
 #CPPFLAGS+=		-DDB_DBM_HSEARCH
 
 #DISTINFO_FILE=	${.CURDIR}/../../lang/ocaml/distinfo
