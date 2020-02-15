@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/02/15 02:26:58 manu Exp $
+
+SHA1 (remserial-1.4.tar.gz) = 2a5208cbe0099cc67f45dffaa680a1a291ae8092
+RMD160 (remserial-1.4.tar.gz) = b8d9e27e428255a4fe520cdaf8227fd89d16f2a6
+SHA512 (remserial-1.4.tar.gz) = 62f38a6c3940bf577a8cf84a487ab0c46167fc8ddaf6eb793c47c2baac7d2e035d7cb0f5ee33ebaba0e28f9816f3365257a8196a8f497689886ed8a5f8f58c0f
+Size (remserial-1.4.tar.gz) = 7497 bytes
+SHA1 (patch-stty.c) = bd532f0b68bfbe70828f76dcb6428b9aee789211
