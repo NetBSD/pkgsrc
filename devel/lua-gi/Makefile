@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2017/08/12 15:46:56 triaxx Exp $
+# $NetBSD: Makefile,v 1.10 2020/02/15 05:43:48 mef Exp $
 
 DISTNAME=	lgi-${VERSION}
 PKGNAME=	${LUA_PKGPREFIX}-gi-${VERSION}
-VERSION=	0.9.1
+VERSION=	0.9.2
 CATEGORIES=	devel
-MASTER_SITES=	-https://codeload.github.com/pavouk/lgi/tar.gz/${VERSION}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=pavouk/}
+GITHUB_PROJECT=	lgi
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pavouk/lgi

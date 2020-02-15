@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/08/12 15:46:56 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/02/15 05:43:48 mef Exp $
 ${LUA_CDIR}/lgi/corelgilua51.so
 ${LUA_LDIR}/lgi.lua
 ${LUA_LDIR}/lgi/class.lua
@@ -24,6 +24,7 @@ ${LUA_LDIR}/lgi/override/GObject-Value.lua
 ${LUA_LDIR}/lgi/override/Gdk.lua
 ${LUA_LDIR}/lgi/override/Gio-DBus.lua
 ${LUA_LDIR}/lgi/override/Gio.lua
+${LUA_LDIR}/lgi/override/GooCanvas.lua
 ${LUA_LDIR}/lgi/override/Gst.lua
 ${LUA_LDIR}/lgi/override/Gtk.lua
 ${LUA_LDIR}/lgi/override/Pango.lua
