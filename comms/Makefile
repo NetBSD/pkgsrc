@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2020/01/04 13:24:21 nia Exp $
+# $NetBSD: Makefile,v 1.116 2020/02/15 02:26:58 manu Exp $
 #
 
 COMMENT=	Communication utilities
@@ -74,6 +74,7 @@ SUBDIR+=	py-serial
 SUBDIR+=	py-termstyle
 SUBDIR+=	qodem
 SUBDIR+=	qpage
+SUBDIR+=	remserial
 SUBDIR+=	ruby-termios
 SUBDIR+=	scmxx
 SUBDIR+=	snooper
