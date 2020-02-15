@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: pkg_regress.sh,v 1.8 2019/12/17 15:38:43 rillig Exp $
+# $NetBSD: pkg_regress.sh,v 1.9 2020/02/15 14:40:45 rillig Exp $
 #
 set -e
 
@@ -76,7 +76,7 @@ do_runtest() {
 	cd "$1"
 	TEST_RESULT=0
 	TEST_EXITSTATUS=0
-	TEST_OUTFILE=`mktemp -t pkg_regress` || exit 1
+	TEST_OUTFILE=`mktemp` || exit 1
 	. ./spec
 
 	do_setup
