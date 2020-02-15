@@ -115,7 +115,7 @@ func CheckdirCategory(dir CurrPath) {
 
 				fix := line.Autofix()
 				fix.Errorf("%q exists in the file system but not in the Makefile.", fCurrent)
-				fix.InsertBefore("SUBDIR+=\t" + fCurrent.String())
+				fix.InsertAbove("SUBDIR+=\t" + fCurrent.String())
 				fix.Apply()
 			}
 			fRest = fRest[1:]
@@ -147,7 +147,7 @@ func CheckdirCategory(dir CurrPath) {
 
 	mklines.SaveAutofixChanges()
 
-	if G.Opts.Recursive {
+	if G.Recursive {
 		var recurseInto []CurrPath
 		for _, msub := range mSubdirs {
 			if !msub.line.IsCommentedVarassign() {

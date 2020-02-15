@@ -30,7 +30,7 @@ func (s *Suite) Test_LinesLexer_SkipEmptyOrNote__beginning_of_file(c *check.C) {
 	llex.SkipEmptyOrNote()
 
 	t.CheckOutputLines(
-		"NOTE: file.txt:1: Empty line expected before this line.")
+		"NOTE: file.txt:1: Empty line expected above this line.")
 }
 
 func (s *Suite) Test_LinesLexer_SkipEmptyOrNote__end_of_file(c *check.C) {
@@ -47,7 +47,7 @@ func (s *Suite) Test_LinesLexer_SkipEmptyOrNote__end_of_file(c *check.C) {
 	llex.SkipEmptyOrNote()
 
 	t.CheckOutputLines(
-		"NOTE: file.txt:2: Empty line expected after this line.")
+		"NOTE: file.txt:2: Empty line expected below this line.")
 }
 
 func (s *Suite) Test_MkLinesLexer_SkipIf(c *check.C) {

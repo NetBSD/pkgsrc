@@ -3127,12 +3127,10 @@ func (s *Suite) Test_Package_checkLinesBuildlink3Inclusion__ocaml(c *check.C) {
 	G.Check("mk/ocaml.mk")
 	G.checkdirPackage("x11/ocaml-graphics")
 
-	t.CheckOutputLines(
-		// This error is only reported if the file is checked on its own.
-		// If it is checked as part of a package, both bmake and pkglint
-		// use the package path as the fallback search path.
-		"ERROR: mk/ocaml.mk:2: Relative path " +
-			"\"../../lang/ocaml/buildlink3.mk\" does not exist.")
+	// Up to 2020-02-15, pkglint reported a missing relative path in
+	// mk/ocaml.mk:2 since resolving relative paths had not used the
+	// correct base directory.
+	t.CheckOutputEmpty()
 }
 
 // Just for code coverage.
@@ -3538,5 +3536,5 @@ func (s *Suite) Test_Package_Includes(c *check.C) {
 	// See Package.collectConditionalIncludes and Indentation.IsConditional.
 	t.CheckEquals(
 		pkg.conditionalIncludes["never.mk"].Location,
-		NewLocation(t.File("category/package/Makefile"), 22, 22))
+		NewLocation(t.File("category/package/Makefile"), 22))
 }

@@ -59,9 +59,9 @@ func (s *Suite) Test_Lines_CheckCvsID__wip(c *check.C) {
 
 	t.CheckOutputLines(
 		"AUTOFIX: ~/wip/package/file1.mk:1: Replacing \"# $"+"NetBSD: dummy $\" with \"# $"+"NetBSD$\".",
-		"AUTOFIX: ~/wip/package/file3.mk:1: Inserting a line \"# $"+"NetBSD$\" before this line.",
-		"AUTOFIX: ~/wip/package/file4.mk:1: Inserting a line \"# $"+"NetBSD$\" before this line.",
-		"AUTOFIX: ~/wip/package/file5.mk:1: Inserting a line \"# $"+"NetBSD$\" before this line.")
+		"AUTOFIX: ~/wip/package/file3.mk:1: Inserting a line \"# $"+"NetBSD$\" above this line.",
+		"AUTOFIX: ~/wip/package/file4.mk:1: Inserting a line \"# $"+"NetBSD$\" above this line.",
+		"AUTOFIX: ~/wip/package/file5.mk:1: Inserting a line \"# $"+"NetBSD$\" above this line.")
 
 	// In production mode, this error is disabled since it doesn't provide
 	// enough benefit compared to the work it would produce.

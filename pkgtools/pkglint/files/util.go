@@ -325,7 +325,7 @@ func isEmptyDir(filename CurrPath) bool {
 func getSubdirs(filename CurrPath) []RelPath {
 	dirents, err := filename.ReadDir()
 	if err != nil {
-		NewLineWhole(filename).Fatalf("Cannot be read: %s", err)
+		G.Logger.TechFatalf(filename, "Cannot be read: %s", err)
 	}
 
 	var subdirs []RelPath
@@ -658,7 +658,7 @@ func (s *Scope) def(name string, mkline *MkLine) {
 
 	// In most cases the defining lines are indeed variable assignments.
 	// Exceptions are comments from documentation sections, which still mark
-	// it as defined so that it doesn't produce the "used but not defined" warning;
+	// the variable as defined so that it doesn't produce the "used but not defined" warning;
 	// see MkLines.collectDocumentedVariables.
 	if !mkline.IsVarassign() {
 		return
@@ -669,12 +669,13 @@ func (s *Scope) def(name string, mkline *MkLine) {
 		value := mkline.Value()
 		if trace.Tracing {
 			trace.Stepf("Scope.Define.append %s: %s = %q + %q",
-				&mkline.Location, name, s.value[name], value)
+				mkline.String(), name, s.value[name], value)
 		}
 		s.value[name] += " " + value
 	case opAssignDefault:
-		// No change to the value.
-		// FIXME: If there is no value yet, set it.
+		if _, set := s.value[name]; !set {
+			s.value[name] = mkline.Value()
+		}
 	case opAssignShell:
 		delete(s.value, name)
 	default:
@@ -831,7 +832,7 @@ func (s *Scope) FirstUse(varname string) *MkLine {
 
 // LastValue returns the value from the last variable definition.
 //
-// If an empty string is returned this can mean either that the
+// If an empty string is returned, this can mean either that the
 // variable value is indeed the empty string or that the variable
 // was not found, or that the variable value cannot be determined
 // reliably. To distinguish these cases, call LastValueFound instead.
@@ -842,18 +843,10 @@ func (s *Scope) LastValue(varname string) string {
 
 func (s *Scope) LastValueFound(varname string) (value string, found bool) {
 	value, found = s.value[varname]
-	if found {
-		return
+	if !found {
+		value, found = s.fallback[varname]
 	}
-
-	mkline := s.LastDefinition(varname)
-	if mkline != nil && mkline.Op() != opAssignShell {
-		return mkline.Value(), true
-	}
-	if fallback, ok := s.fallback[varname]; ok {
-		return fallback, true
-	}
-	return "", false
+	return
 }
 
 func (s *Scope) DefineAll(other Scope) {
@@ -932,7 +925,7 @@ func naturalLess(str1, str2 string) bool {
 			if nr1, nr2 := str1[nonZero1:idx1], str2[nonZero2:idx2]; nr1 != nr2 {
 				return nr1 < nr2
 			}
-			// Otherwise, the one with less zeros is less.
+			// Otherwise, the one with fewer zeros is less.
 			// Because everything up to the number is equal, comparing the index
 			// after the zeros is sufficient.
 			if nonZero1 != nonZero2 {
@@ -1060,7 +1053,7 @@ func (c *FileCache) Get(filename CurrPath, options LoadOptions) *Lines {
 
 		lines := make([]*Line, entry.lines.Len())
 		for i, line := range entry.lines.Lines {
-			lines[i] = NewLineMulti(filename, int(line.firstLine), int(line.lastLine), line.Text, line.raw)
+			lines[i] = NewLineMulti(filename, line.Location.lineno, line.Text, line.raw)
 		}
 		return NewLines(filename, lines)
 	}
@@ -1466,33 +1459,34 @@ func (i *optInt) set(value int) {
 }
 
 type bag struct {
-	slice []struct {
-		key   interface{}
-		value int
-	}
+	// Wrapping the slice in an extra struct avoids 'receiver might be nil'
+	// warnings.
+
+	entries []bagEntry
 }
 
-func (mi *bag) sortDesc() {
-	less := func(i, j int) bool { return mi.slice[j].value < mi.slice[i].value }
-	sort.SliceStable(mi.slice, less)
+func (b *bag) sortDesc() {
+	es := b.entries
+	less := func(i, j int) bool { return es[j].count < es[i].count }
+	sort.SliceStable(es, less)
 }
 
-func (mi *bag) opt(index int) int {
-	if uint(index) < uint(len(mi.slice)) {
-		return mi.slice[index].value
+func (b *bag) opt(index int) int {
+	if uint(index) < uint(len(b.entries)) {
+		return b.entries[index].count
 	}
 	return 0
 }
 
-func (mi *bag) key(index int) interface{} {
-	return mi.slice[index].key
+func (b *bag) key(index int) interface{} { return b.entries[index].key }
+
+func (b *bag) add(key interface{}, count int) {
+	b.entries = append(b.entries, bagEntry{key, count})
 }
 
-func (mi *bag) add(key interface{}, value int) {
-	mi.slice = append(mi.slice, struct {
-		key   interface{}
-		value int
-	}{key, value})
-}
+func (b *bag) len() int { return len(b.entries) }
 
-func (mi *bag) len() int { return len(mi.slice) }
+type bagEntry struct {
+	key   interface{}
+	count int
+}

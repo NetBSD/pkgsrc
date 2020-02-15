@@ -358,6 +358,20 @@ func (s *Suite) Test_VartypeCheck_ConfFiles(c *check.C) {
 		"WARN: filename.mk:1: Values for CONF_FILES should always be pairs of paths.",
 		"WARN: filename.mk:3: Values for CONF_FILES should always be pairs of paths.",
 		"WARN: filename.mk:5: The destination file \"/etc/bootrc\" should start with a variable reference.")
+
+	// See pkgsrc/regress/conf-files-spaces.
+	vt.Values(
+		"back\\ slash.conf ${PKG_SYSCONFDIR}/back\\ slash.conf",
+		"\"d quot.conf\" \"${PKG_SYSCONFDIR}/d quot.conf\"",
+		"'s quot.conf' '${PKG_SYSCONFDIR}/''s quot.conf'")
+	vt.OutputEmpty()
+
+	vt.Values(
+		"\\*.conf ${PKG_SYSCONFDIR}/\\*.conf")
+	vt.Output(
+		"WARN: filename.mk:21: The pathname \"\\\\*.conf\" contains the invalid character \"*\".",
+		"WARN: filename.mk:21: The pathname \"${PKG_SYSCONFDIR}/\\\\*.conf\" contains the invalid character \"*\".")
+
 }
 
 // See Test_MkParser_DependencyPattern.
@@ -1302,13 +1316,53 @@ func (s *Suite) Test_VartypeCheck_Pathname(c *check.C) {
 		"${PREFIX}/*",
 		"${PREFIX}/share/locale",
 		"share/locale",
-		"/bin")
+		"/bin",
+		"/path with spaces")
+	vt.Output(
+		"WARN: filename.mk:1: The pathname \"${PREFIX}/*\" "+
+			"contains the invalid character \"*\".",
+		"WARN: filename.mk:5: The pathname \"/path with spaces\" "+
+			"contains the invalid characters \"  \".")
+
 	vt.Op(opUseMatch)
 	vt.Values(
-		"anything")
-
+		"anything",
+		"/path with *spaces")
 	vt.Output(
-		"WARN: filename.mk:1: The pathname \"${PREFIX}/*\" contains the invalid character \"*\".")
+		"WARN: filename.mk:12: The pathname pattern \"/path with *spaces\" " +
+			"contains the invalid characters \"  \".")
+}
+
+func (s *Suite) Test_VartypeCheck_PathnameSpace(c *check.C) {
+	// Invent a variable name since this data type is only used as part
+	// of CONF_FILES.
+	G.Pkgsrc.vartypes.DefineParse("CONFIG_FILE", BtPathnameSpace,
+		NoVartypeOptions, "*.mk: set, use")
+	vt := NewVartypeCheckTester(s.Init(c), BtPathnameSpace)
+
+	vt.Varname("CONFIG_FILE")
+	vt.Values(
+		"${PREFIX}/*",
+		"${PREFIX}/share/locale",
+		"share/locale",
+		"/bin",
+		"/path with spaces")
+	vt.Output(
+		"WARN: filename.mk:1: The pathname \"${PREFIX}/*\" " +
+			"contains the invalid character \"*\".")
+
+	vt.Op(opUseMatch)
+	vt.Values(
+		"anything",
+		"/path with *spaces&",
+		"/path with spaces and ;several, other &characters.",
+	)
+	vt.Output(
+		"WARN: filename.mk:12: The pathname pattern \"/path with *spaces&\" "+
+			"contains the invalid character \"&\".",
+		"WARN: filename.mk:13: The pathname pattern "+
+			"\"/path with spaces and ;several, other &characters.\" "+
+			"contains the invalid characters \";&\".")
 }
 
 func (s *Suite) Test_VartypeCheck_Perl5Packlist(c *check.C) {
@@ -1611,8 +1665,6 @@ func (s *Suite) Test_VartypeCheck_RelativePkgPath(c *check.C) {
 
 	vt.Output(
 		"ERROR: ../../mk/infra.mk:1: Relative path \"../package\" does not exist.",
-		// FIXME: This directory _does_ exist.
-		"ERROR: ../../mk/infra.mk:2: Relative path \"../../category/other-package\" does not exist.",
 		"ERROR: ../../mk/infra.mk:3: Relative path \"../../missing/package\" does not exist.",
 		"ERROR: ../../mk/infra.mk:4: Relative path \"../../category/missing\" does not exist.")
 }
