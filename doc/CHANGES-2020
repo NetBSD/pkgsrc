@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1102 2020/02/15 22:55:03 tron Exp $
+$NetBSD: CHANGES-2020,v 1.1103 2020/02/15 23:53:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1560,3 +1560,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 19.4.8 [rillig 2020-02-15]
 	Updated pkgtools/pkg_regress to 0.6 [rillig 2020-02-15]
 	Updated mail/mutt to 1.13.4 [tron 2020-02-15]
+	Updated finance/R-bayesm to 3.1.4 [mef 2020-02-15]
