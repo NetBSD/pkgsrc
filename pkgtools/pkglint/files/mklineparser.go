@@ -170,7 +170,7 @@ func (p MkLineParser) fixSpaceAfterVarname(line *Line, a *mkLineAssign) {
 		break
 
 	default:
-		parts := NewVaralignSplitter().split(line.raw[0].Text(), true)
+		parts := NewVaralignSplitter().split(line.RawText(0), true)
 		before := parts.leadingComment + parts.varnameOp + parts.spaceBeforeValue
 		after := alignWith(varname+op.String(), before)
 

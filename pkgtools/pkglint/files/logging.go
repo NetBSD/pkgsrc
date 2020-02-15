@@ -58,10 +58,6 @@ type LogLevel struct {
 }
 
 var (
-	// FIXME: By definition there cannot be fatal diagnostics.
-	//  Having these was a misconception from the beginning,
-	//  and they must be re-classified as fatal technical errors.
-	Fatal           = &LogLevel{"FATAL", "fatal"}
 	Error           = &LogLevel{"ERROR", "error"}
 	Warn            = &LogLevel{"WARN", "warning"}
 	Note            = &LogLevel{"NOTE", "note"}
@@ -124,7 +120,7 @@ func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interf
 		}
 	}
 
-	if l.IsAutofix() && level != Fatal {
+	if l.IsAutofix() {
 		// In these two cases, the only interesting diagnostics are those that can
 		// be fixed automatically. These are logged by Autofix.Apply.
 		l.suppressExpl = true
@@ -135,7 +131,7 @@ func (l *Logger) Diag(line *Line, level *LogLevel, format string, args ...interf
 		return
 	}
 
-	filename := line.Filename
+	filename := line.Filename()
 	linenos := line.Linenos()
 	msg := sprintf(format, args...)
 	if !l.FirstTime(filename, linenos, msg) {
@@ -209,13 +205,13 @@ func (l *Logger) writeSource(line *Line) {
 	if !l.IsAutofix() {
 		l.out.Separate()
 	}
-	if l.IsAutofix() && line.autofix != nil {
-		for _, before := range line.autofix.linesBefore {
-			l.writeLine("+\t", before)
+	if l.IsAutofix() {
+		for _, above := range line.fix.above {
+			l.writeLine("+\t", above)
 		}
 		l.writeDiff(line)
-		for _, after := range line.autofix.linesAfter {
-			l.writeLine("+\t", after)
+		for _, below := range line.fix.below {
+			l.writeLine("+\t", below)
 		}
 	} else {
 		l.writeDiff(line)
@@ -226,24 +222,25 @@ func (l *Logger) writeSource(line *Line) {
 }
 
 func (l *Logger) writeDiff(line *Line) {
-	showAsChanged := func(rawLine *RawLine) bool {
-		return l.IsAutofix() && rawLine.textnl != rawLine.orignl
+	showAsChanged := func(rawIndex int, rawLine *RawLine) bool {
+		return l.IsAutofix() &&
+			line.fix.texts[rawIndex] != rawLine.orignl
 	}
 
 	rawLines := line.raw
 
 	prefix := ">\t"
-	for _, rawLine := range rawLines {
-		if showAsChanged(rawLine) {
+	for rawIndex, rawLine := range rawLines {
+		if showAsChanged(rawIndex, rawLine) {
 			prefix = "\t" // Make it look like an actual diff
 		}
 	}
 
-	for _, rawLine := range rawLines {
-		if showAsChanged(rawLine) {
+	for rawIndex, rawLine := range rawLines {
+		if showAsChanged(rawIndex, rawLine) {
 			l.writeLine("-\t", rawLine.orignl)
-			if rawLine.textnl != "" {
-				l.writeLine("+\t", rawLine.textnl)
+			if line.fix.texts[rawIndex] != "" {
+				l.writeLine("+\t", line.fix.texts[rawIndex])
 			}
 		} else {
 			l.writeLine(prefix, rawLine.orignl)
@@ -298,13 +295,8 @@ func (l *Logger) Logf(level *LogLevel, filename CurrPath, lineno, format, msg st
 	if !filename.IsEmpty() {
 		filename = filename.CleanPath()
 	}
-	if G.Opts.Profiling && format != autofixFormat && level != Fatal {
+	if G.Profiling && format != autofixFormat {
 		l.histo.Add(format, 1)
-	}
-
-	out := l.out
-	if level == Fatal {
-		out = l.err
 	}
 
 	filenameSep := condStr(!filename.IsEmpty(), ": ", "")
@@ -316,11 +308,9 @@ func (l *Logger) Logf(level *LogLevel, filename CurrPath, lineno, format, msg st
 	} else {
 		diag = sprintf("%s%s%s%s%s: %s\n", level.TraditionalName, filenameSep, filename, linenoSep, effLineno, msg)
 	}
-	out.Write(escapePrintable(diag))
+	l.out.Write(escapePrintable(diag))
 
 	switch level {
-	case Fatal:
-		panic(pkglintFatal{})
 	case Error:
 		l.errors++
 	case Warn:
@@ -330,24 +320,31 @@ func (l *Logger) Logf(level *LogLevel, filename CurrPath, lineno, format, msg st
 	}
 }
 
+// TechFatalf logs a technical error on the error output and quits pkglint.
+//
+// For diagnostics, use Logf instead.
+func (l *Logger) TechFatalf(location CurrPath, format string, args ...interface{}) {
+	loc := location.String() + condStr(location.IsEmpty(), "", ": ")
+	msg := sprintf(format, args...)
+	all := sprintf("FATAL: %s%s\n", loc, msg)
+	esc := escapePrintable(all)
+	l.err.Write(esc)
+
+	if trace.Tracing {
+		trace.Stepf("TechFatalf: %s%s", loc, msg)
+	}
+	panic(pkglintFatal{})
+}
+
 // TechErrorf logs a technical error on the error output.
 //
 // For diagnostics, use Logf instead.
 func (l *Logger) TechErrorf(location CurrPath, format string, args ...interface{}) {
+	loc := location.String() + condStr(location.IsEmpty(), "", ": ")
 	msg := sprintf(format, args...)
-
-	locationStr := ""
-	if !location.IsEmpty() {
-		locationStr = location.String() + ": "
-	}
-
-	var diag string
-	if l.Opts.GccOutput {
-		diag = sprintf("%s%s: %s\n", locationStr, Error.GccName, msg)
-	} else {
-		diag = sprintf("%s: %s%s\n", Error.TraditionalName, locationStr, msg)
-	}
-	l.err.Write(escapePrintable(diag))
+	all := sprintf("ERROR: %s%s\n", loc, msg)
+	esc := escapePrintable(all)
+	l.err.Write(esc)
 }
 
 func (l *Logger) ShowSummary(args []string) {

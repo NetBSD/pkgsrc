@@ -31,7 +31,7 @@ func Load(filename CurrPath, options LoadOptions) *Lines {
 	if err != nil {
 		switch {
 		case options&MustSucceed != 0:
-			NewLineWhole(filename).Fatalf("Cannot be read.")
+			G.Logger.TechFatalf(filename, "Cannot be read.")
 		case options&LogErrors != 0:
 			NewLineWhole(filename).Errorf("Cannot be read.")
 		}
@@ -41,14 +41,14 @@ func Load(filename CurrPath, options LoadOptions) *Lines {
 	if rawText == "" && options&NotEmpty != 0 {
 		switch {
 		case options&MustSucceed != 0:
-			NewLineWhole(filename).Fatalf("Must not be empty.")
+			G.Logger.TechFatalf(filename, "Must not be empty.")
 		case options&LogErrors != 0:
 			NewLineWhole(filename).Errorf("Must not be empty.")
 		}
 		return nil
 	}
 
-	if G.Opts.Profiling {
+	if G.Profiling {
 		G.loaded.Add(filename.Clean().String(), 1)
 	}
 
@@ -61,9 +61,9 @@ func Load(filename CurrPath, options LoadOptions) *Lines {
 
 func convertToLogicalLines(filename CurrPath, rawText string, joinBackslashLines bool) *Lines {
 	var rawLines []*RawLine
-	for lineno, rawLine := range strings.SplitAfter(rawText, "\n") {
+	for _, rawLine := range strings.SplitAfter(rawText, "\n") {
 		if rawLine != "" {
-			rawLines = append(rawLines, &RawLine{1 + lineno, rawLine, rawLine})
+			rawLines = append(rawLines, &RawLine{rawLine})
 		}
 	}
 
@@ -75,9 +75,9 @@ func convertToLogicalLines(filename CurrPath, rawText string, joinBackslashLines
 			lineno = nextLineno
 		}
 	} else {
-		for _, rawLine := range rawLines {
-			text := rawLine.Text()
-			logline := NewLine(filename, rawLine.Lineno, text, rawLine)
+		for rawIndex, rawLine := range rawLines {
+			text := rawLine.Orig()
+			logline := NewLine(filename, rawIndex+1, text, rawLine)
 			loglines = append(loglines, logline)
 		}
 	}
@@ -92,20 +92,20 @@ func convertToLogicalLines(filename CurrPath, rawText string, joinBackslashLines
 func nextLogicalLine(filename CurrPath, rawLines []*RawLine, index int) (*Line, int) {
 	{ // Handle the common case efficiently
 		rawLine := rawLines[index]
-		text := rawLine.Text()
+		text := rawLine.Orig()
 		if !hasSuffix(text, "\\") {
-			return NewLine(filename, rawLine.Lineno, text, rawLines[index]), index + 1
+			return NewLine(filename, index+1, text, rawLines[index]), index + 1
 		}
 	}
 
 	var text strings.Builder
-	firstlineno := rawLines[index].Lineno
+	firstLineno := index + 1
 	var lineRawLines []*RawLine
 	interestingRawLines := rawLines[index:]
 	trim := ""
 
 	for i, rawLine := range interestingRawLines {
-		indent, rawText, outdent, cont := matchContinuationLine(rawLine.Text())
+		indent, rawText, outdent, cont := matchContinuationLine(rawLine.Orig())
 
 		if text.Len() == 0 {
 			text.WriteString(indent)
@@ -125,9 +125,7 @@ func nextLogicalLine(filename CurrPath, rawLines []*RawLine, index int) (*Line, 
 		}
 	}
 
-	lastlineno := rawLines[index].Lineno
-
-	return NewLineMulti(filename, firstlineno, lastlineno, text.String(), lineRawLines), index + 1
+	return NewLineMulti(filename, firstLineno, text.String(), lineRawLines), index + 1
 }
 
 func matchContinuationLine(text string) (leadingWhitespace, result, trailingWhitespace, cont string) {

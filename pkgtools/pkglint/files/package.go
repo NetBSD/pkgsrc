@@ -143,7 +143,7 @@ func (pkg *Package) load() ([]CurrPath, *MkLines, *MkLines) {
 		if !hasPrefix(basename, "Makefile.") && !filename.HasSuffixText(".mk") {
 			return false
 		}
-		if filename.DirNoClean().Base() == "patches" {
+		if filename.Dir().Base() == "patches" {
 			return false
 		}
 		if pkg.Pkgdir == "." {
@@ -197,7 +197,7 @@ func (pkg *Package) loadPackageMakefile() (*MkLines, *MkLines) {
 	//  when pkglint loaded the package Makefile including all included files into
 	//  a single string. Maybe it makes sense to print the file inclusion hierarchy
 	//  to quickly see files that cannot be included because of unresolved variables.
-	if G.Opts.DumpMakefile {
+	if G.DumpMakefile {
 		G.Logger.out.WriteLine("Whole Makefile (with all included files) follows:")
 		for _, line := range allLines.lines.Lines {
 			G.Logger.out.WriteLine(line.String())
@@ -260,7 +260,7 @@ func (pkg *Package) parse(mklines *MkLines, allLines *MkLines, includingFileForU
 	// automatically since the pkgsrc infrastructure does the same.
 	filename := mklines.lines.Filename
 	if filename.Base() == "buildlink3.mk" {
-		builtin := filename.DirNoClean().JoinNoClean("builtin.mk").CleanPath()
+		builtin := filename.Dir().JoinNoClean("builtin.mk").CleanPath()
 		builtinRel := G.Pkgsrc.Relpath(pkg.dir, builtin)
 		if pkg.included.FirstTime(builtinRel.String()) && builtin.IsFile() {
 			builtinMkLines := LoadMk(builtin, pkg, MustSucceed|LogErrors)
@@ -276,7 +276,7 @@ func (pkg *Package) parseLine(mklines *MkLines, mkline *MkLine, allLines *MkLine
 	allLines.lines.Lines = append(allLines.lines.Lines, mkline.Line)
 
 	if mkline.IsInclude() {
-		includingFile := mkline.Filename
+		includingFile := mkline.Filename()
 		includedFile := mkline.IncludedFile()
 		includedMkLines, skip := pkg.loadIncluded(mkline, includingFile)
 
@@ -402,7 +402,7 @@ func (pkg *Package) resolveIncludedFile(mkline *MkLine, includingFilename CurrPa
 	if containsVarUse(includedText) {
 		if trace.Tracing && !includingFilename.ContainsPath("mk") {
 			trace.Stepf("%s:%s: Skipping unresolvable include file %q.",
-				mkline.Filename, mkline.Linenos(), includedFile)
+				mkline.Filename(), mkline.Linenos(), includedFile)
 		}
 		return ""
 	}
@@ -604,7 +604,7 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 		//
 		// If the RedundantScope is applied also to individual files,
 		// it would have to be added here.
-		return G.Opts.CheckGlobal || !G.Pkgsrc.IsInfra(mkline.Filename)
+		return G.CheckGlobal || !G.Pkgsrc.IsInfra(mkline.Filename())
 	}
 	pkg.redundant.Check(allLines) // Updates the variables in the scope
 	pkg.checkCategories()
@@ -620,7 +620,7 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 
 	if imake := vars.FirstDefinition("USE_IMAKE"); imake != nil {
 		if x11 := vars.FirstDefinition("USE_X11"); x11 != nil {
-			if !x11.Filename.HasSuffixPath("mk/x11.buildlink3.mk") {
+			if !x11.Filename().HasSuffixPath("mk/x11.buildlink3.mk") {
 				imake.Notef("USE_IMAKE makes USE_X11 in %s redundant.", imake.RelMkLine(x11))
 			}
 		}
@@ -991,7 +991,7 @@ func (pkg *Package) checkGnuConfigureUseLanguages() {
 	var wrongLines []*MkLine
 	for _, mkline := range useLanguages.vari.WriteLocations() {
 
-		if G.Pkgsrc.IsInfra(mkline.Line.Filename) {
+		if G.Pkgsrc.IsInfra(mkline.Filename()) {
 			continue
 		}
 
@@ -1035,7 +1035,7 @@ func (pkg *Package) checkUseLanguagesCompilerMk(mklines *MkLines) {
 		}
 
 		if mkline.Basename == "compiler.mk" {
-			if G.Pkgsrc.Relpath(pkg.dir, mkline.Filename) == "../../mk/compiler.mk" {
+			if G.Pkgsrc.Relpath(pkg.dir, mkline.Filename()) == "../../mk/compiler.mk" {
 				return
 			}
 		}
@@ -1205,7 +1205,7 @@ func (pkg *Package) checkPossibleDowngrade() {
 				"This is unusual, since packages are typically upgraded instead of",
 				"downgraded.")
 
-		case cmp > 0 && !isLocallyModified(mkline.Filename):
+		case cmp > 0 && !isLocallyModified(mkline.Filename()):
 			mkline.Notef("Package version %q is greater than the latest %q from %s.",
 				pkgversion, change.Version(), mkline.Line.RelLocation(change.Location))
 			mkline.Explain(
@@ -1276,7 +1276,7 @@ func (pkg *Package) checkDirent(dirent CurrPath, mode os.FileMode) {
 		G.checkReg(dirent, basename, G.Pkgsrc.Rel(dirent).Count(), pkg)
 
 	case hasPrefix(basename, "work"):
-		if G.Opts.Import {
+		if G.Import {
 			NewLineWhole(dirent).Errorf("Must be cleaned up before committing the package.")
 		}
 		return
@@ -1285,7 +1285,7 @@ func (pkg *Package) checkDirent(dirent CurrPath, mode os.FileMode) {
 		switch {
 		case basename == "files",
 			basename == "patches",
-			dirent.DirNoClean().Base() == "files",
+			dirent.Dir().Base() == "files",
 			isEmptyDir(dirent):
 			break
 
@@ -1453,7 +1453,7 @@ func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Inden
 
 	if indentation.IsConditional() {
 		if other := pkg.unconditionalIncludes[key]; other != nil {
-			if !pkg.Once.FirstTimeSlice("checkIncludeConditionally", mkline.Location.String(), other.Location.String()) {
+			if !pkg.Once.FirstTimeSlice("checkIncludeConditionally", mkline.String(), other.String()) {
 				return
 			}
 
@@ -1469,7 +1469,7 @@ func (pkg *Package) checkIncludeConditionally(mkline *MkLine, indentation *Inden
 
 	} else {
 		if other := pkg.conditionalIncludes[key]; other != nil {
-			if !pkg.Once.FirstTimeSlice("checkIncludeConditionally", other.Location.String(), mkline.Location.String()) {
+			if !pkg.Once.FirstTimeSlice("checkIncludeConditionally", other.String(), mkline.String()) {
 				return
 			}
 

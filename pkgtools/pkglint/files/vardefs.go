@@ -418,7 +418,8 @@ func (reg *VarTypeRegistry) enumFrom(
 	}
 
 	if !G.Testing {
-		mklines.Whole().Fatalf(
+		G.Logger.TechFatalf(
+			mklines.lines.Filename,
 			"Must contain at least 1 variable definition for %s.",
 			joinSkipEmptyCambridge("or", varcanons...))
 	}
@@ -442,7 +443,8 @@ func (reg *VarTypeRegistry) enumFromDirs(
 	versions := src.ListVersions(category, re, repl, false)
 	if len(versions) == 0 {
 		if !G.Testing {
-			NewLineWhole(src.File(category)).Fatalf(
+			G.Logger.TechFatalf(
+				src.File(category),
 				"Must contain at least 1 subdirectory matching %q.", re)
 		}
 		return enum(defval)
@@ -469,7 +471,8 @@ func (reg *VarTypeRegistry) enumFromFiles(
 	}
 	if len(relevant) == 0 {
 		if !G.Testing {
-			NewLineWhole(src.File(basedir)).Fatalf(
+			G.Logger.TechFatalf(
+				src.File(basedir),
 				"Must contain at least 1 file matching %q.", re)
 		}
 		return enum(defval)

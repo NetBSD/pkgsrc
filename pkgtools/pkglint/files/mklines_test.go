@@ -1222,7 +1222,7 @@ func (s *Suite) Test_MkLines_CheckUsedBy__show_autofix(c *check.C) {
 			"VARNAME=\tvalue"),
 		diagnostics(
 			"WARN: Makefile.common:1: Please add a line \"# used by category/package\" here.",
-			"AUTOFIX: Makefile.common:1: Inserting a line \"# used by category/package\" after this line."))
+			"AUTOFIX: Makefile.common:1: Inserting a line \"# used by category/package\" below this line."))
 
 	// The "used by" comments may either start in line 2 or in line 3.
 	test(
@@ -1233,7 +1233,7 @@ func (s *Suite) Test_MkLines_CheckUsedBy__show_autofix(c *check.C) {
 			"#"),
 		diagnostics(
 			"WARN: Makefile.common:1: Please add a line \"# used by category/package\" here.",
-			"AUTOFIX: Makefile.common:1: Inserting a line \"# used by category/package\" after this line."))
+			"AUTOFIX: Makefile.common:1: Inserting a line \"# used by category/package\" below this line."))
 
 	// TODO: What if there is an introductory comment first? That should stay at the top of the file.
 	// TODO: What if the "used by" comments appear in the second paragraph, preceded by only comments and empty lines?
@@ -1248,9 +1248,9 @@ func (s *Suite) Test_MkLines_CheckUsedBy__show_autofix(c *check.C) {
 			"# that spans",
 			"# several lines"),
 		diagnostics(
-			"AUTOFIX: Makefile.common:4: Inserting a line \"\" after this line.",
+			"AUTOFIX: Makefile.common:4: Inserting a line \"\" below this line.",
 			"WARN: Makefile.common:4: Please add a line \"# used by category/package\" here.",
-			"AUTOFIX: Makefile.common:4: Inserting a line \"# used by category/package\" after this line."))
+			"AUTOFIX: Makefile.common:4: Inserting a line \"# used by category/package\" below this line."))
 
 	t.CheckEquals(G.Logger.autofixAvailable, true)
 }

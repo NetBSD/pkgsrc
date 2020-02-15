@@ -46,10 +46,10 @@ func (s *RedundantScope) checkLine(mklines *MkLines, mkline *MkLine) {
 }
 
 func (s *RedundantScope) updateIncludePath(mkline *MkLine) {
-	if mkline.firstLine == 1 {
-		s.includePath.push(mkline.Location.Filename)
+	if mkline.Location.lineno == 1 {
+		s.includePath.push(mkline.Filename())
 	} else {
-		s.includePath.popUntil(mkline.Location.Filename)
+		s.includePath.popUntil(mkline.Filename())
 	}
 }
 

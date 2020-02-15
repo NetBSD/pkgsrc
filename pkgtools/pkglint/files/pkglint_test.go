@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func (pkglint *Pkglint) isUsable() bool { return pkglint.fileCache != nil }
+func (p *Pkglint) isUsable() bool { return p.fileCache != nil }
 
 func (s *Suite) Test_Pkglint_Main(c *check.C) {
 	t := s.Init(c)
@@ -259,7 +259,7 @@ func (s *Suite) Test_Pkglint_Main__autofix_exitcode(c *check.C) {
 	exitcode := t.Main("-Wall", "--autofix", "filename.mk")
 
 	t.CheckOutputLines(
-		"AUTOFIX: ~/filename.mk:1: Inserting a line \"" + MkCvsID + "\" before this line.")
+		"AUTOFIX: ~/filename.mk:1: Inserting a line \"" + MkCvsID + "\" above this line.")
 	t.CheckEquals(exitcode, 0)
 }
 
@@ -872,10 +872,10 @@ func (s *Suite) Test_CheckLinesMessage__autofix(c *check.C) {
 
 	t.CheckOutputLines(
 		"AUTOFIX: ~/MESSAGE:1: Inserting a line \"=============================="+
-			"=============================================\" before this line.",
-		"AUTOFIX: ~/MESSAGE:1: Inserting a line \"$"+"NetBSD$\" before this line.",
+			"=============================================\" above this line.",
+		"AUTOFIX: ~/MESSAGE:1: Inserting a line \"$"+"NetBSD$\" above this line.",
 		"AUTOFIX: ~/MESSAGE:5: Inserting a line \"=============================="+
-			"=============================================\" after this line.")
+			"=============================================\" below this line.")
 	t.CheckFileLines("MESSAGE",
 		"===========================================================================",
 		CvsID,

@@ -281,12 +281,12 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 			if insertion == nil {
 				fix := line.Autofix()
 				fix.Errorf("Missing %s hash for %s.", alg, info.filename())
-				fix.InsertBefore(sprintf("%s (%s) = %s", alg, info.filename(), computed))
+				fix.InsertAbove(sprintf("%s (%s) = %s", alg, info.filename(), computed))
 				fix.Apply()
 			} else {
 				fix := insertion.Autofix()
 				fix.Errorf("Missing %s hash for %s.", alg, info.filename())
-				fix.InsertAfter(sprintf("%s (%s) = %s", alg, info.filename(), computed))
+				fix.InsertBelow(sprintf("%s (%s) = %s", alg, info.filename(), computed))
 				fix.Apply()
 			}
 

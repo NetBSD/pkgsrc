@@ -233,7 +233,7 @@ func (s *Suite) Test_MkCondChecker_checkNotEmpty(c *check.C) {
 	}
 
 	test("!empty(VAR)",
-		// FIXME: Add a :U modifier if VAR might be undefined.
+		// TODO: Add a :U modifier if VAR might be undefined.
 		"NOTE: filename.mk:1: !empty(VAR) can be replaced with the simpler ${VAR}.")
 }
 

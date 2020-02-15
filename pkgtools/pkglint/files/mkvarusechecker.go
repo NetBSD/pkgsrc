@@ -42,7 +42,7 @@ func (ck *MkVarUseChecker) checkUndefined() {
 	varname := varuse.varname
 
 	switch {
-	case !G.Opts.WarnExtra,
+	case !G.WarnExtra,
 		// Well-known variables are probably defined by the infrastructure.
 		vartype != nil && !vartype.IsGuessed(),
 		// TODO: At load time, check ck.MkLines.loadVars instead of allVars.
@@ -153,7 +153,7 @@ func (ck *MkVarUseChecker) checkVarname(time VucTime) {
 //
 // See checkVarassignLeftPermissions.
 func (ck *MkVarUseChecker) checkPermissions(vuc *VarUseContext) {
-	if !G.Opts.WarnPerm {
+	if !G.WarnPerm {
 		return
 	}
 	if G.Infrastructure {
@@ -448,7 +448,7 @@ func (ck *MkVarUseChecker) warnToolLoadTime(varname string, tool *Tool) {
 // checkVarUseWords checks whether a variable use of the form ${VAR}
 // or ${VAR:modifiers} is allowed in a certain context.
 func (ck *MkVarUseChecker) checkQuoting(vuc *VarUseContext) {
-	if !G.Opts.WarnQuoting || vuc.quoting == VucQuotUnknown {
+	if !G.WarnQuoting || vuc.quoting == VucQuotUnknown {
 		return
 	}
 

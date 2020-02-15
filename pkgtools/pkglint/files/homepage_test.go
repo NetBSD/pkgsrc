@@ -6,6 +6,7 @@ import (
 	"gopkg.in/check.v1"
 	"net"
 	"net/http"
+	"netbsd.org/pkglint/regex"
 	"strconv"
 	"syscall"
 	"time"
@@ -37,7 +38,7 @@ func (s *Suite) Test_HomepageChecker_Check(c *check.C) {
 	ck.Check()
 
 	t.CheckOutputLines(
-		"WARN: filename.mk:1: An FTP URL does not represent a user-friendly homepage.")
+		"WARN: filename.mk:1: An FTP URL is not a user-friendly homepage.")
 }
 
 func (s *Suite) Test_HomepageChecker_checkBasedOnMasterSites(c *check.C) {
@@ -113,7 +114,7 @@ func (s *Suite) Test_HomepageChecker_checkFtp(c *check.C) {
 
 	vt.Output(
 		"WARN: filename.mk:1: " +
-			"An FTP URL does not represent a user-friendly homepage.")
+			"An FTP URL is not a user-friendly homepage.")
 }
 
 func (s *Suite) Test_HomepageChecker_checkHttp(c *check.C) {
@@ -263,7 +264,7 @@ func (s *Suite) Test_HomepageChecker_migrate(c *check.C) {
 		"")
 
 	// Since the URL contains a variable, it cannot be resolved.
-	// Therefore it is skipped without any HTTP request being sent.
+	// Therefore it is skipped without sending any HTTP request.
 	test(
 		"http://godoc.org/${GO_SRCPATH}",
 		false,
@@ -287,7 +288,6 @@ func (s *Suite) Test_HomepageChecker_checkBadUrls(c *check.C) {
 
 func (s *Suite) Test_HomepageChecker_checkReachable(c *check.C) {
 	t := s.Init(c)
-	vt := NewVartypeCheckTester(t, BtHomepage)
 
 	t.SetUpCommandLine("--network")
 
@@ -303,7 +303,7 @@ func (s *Suite) Test_HomepageChecker_checkReachable(c *check.C) {
 		writer.WriteHeader(status)
 	})
 	mux.HandleFunc("/timeout", func(http.ResponseWriter, *http.Request) {
-		time.Sleep(5 * time.Second)
+		time.Sleep(2 * time.Second)
 	})
 
 	// 28780 = 256 * 'p' + 'l'
@@ -324,64 +324,87 @@ func (s *Suite) Test_HomepageChecker_checkReachable(c *check.C) {
 		<-shutdown
 	}()
 
-	vt.Varname("HOMEPAGE")
-	vt.Values(
-		"http://localhost:28780/status/200",
-		"http://localhost:28780/status/301?location=/redirect301",
-		"http://localhost:28780/status/302?location=/redirect302",
-		"http://localhost:28780/status/307?location=/redirect307",
-		"http://localhost:28780/status/404",
-		"http://localhost:28780/status/500")
+	test := func(url string, diagnostics ...string) {
+		mklines := t.NewMkLines("filename.mk",
+			"HOMEPAGE=\t"+url)
+		mkline := mklines.mklines[0]
+		ck := NewHomepageChecker(url, mkline.WithoutMakeVariables(url), mkline, mklines)
+		ck.Timeout = 1 * time.Second
+		ck.checkReachable()
+		t.CheckOutput(diagnostics)
+	}
+	testMatches := func(url string, diagnostics ...regex.Pattern) {
+		mklines := t.NewMkLines("filename.mk",
+			"HOMEPAGE=\t"+url)
+		ck := NewHomepageChecker(url, url, mklines.mklines[0], mklines)
+		ck.Timeout = 1 * time.Second
+		ck.checkReachable()
+		t.CheckOutputMatches(diagnostics...)
+	}
 
-	vt.Output(
-		"WARN: filename.mk:2: Homepage "+
+	test(
+		"http://localhost:28780/status/200",
+		nil...)
+
+	test(
+		"http://localhost:28780/status/301?location=/redirect301",
+		"WARN: filename.mk:1: Homepage "+
 			"\"http://localhost:28780/status/301?location=/redirect301\" "+
-			"redirects to \"http://localhost:28780/redirect301\".",
-		"WARN: filename.mk:3: Homepage "+
+			"redirects to \"http://localhost:28780/redirect301\".")
+
+	test(
+		"http://localhost:28780/status/302?location=/redirect302",
+		"WARN: filename.mk:1: Homepage "+
 			"\"http://localhost:28780/status/302?location=/redirect302\" "+
-			"redirects to \"http://localhost:28780/redirect302\".",
-		"WARN: filename.mk:4: Homepage "+
+			"redirects to \"http://localhost:28780/redirect302\".")
+
+	test(
+		"http://localhost:28780/status/307?location=/redirect307",
+		"WARN: filename.mk:1: Homepage "+
 			"\"http://localhost:28780/status/307?location=/redirect307\" "+
-			"redirects to \"http://localhost:28780/redirect307\".",
-		"WARN: filename.mk:5: Homepage \"http://localhost:28780/status/404\" "+
-			"returns HTTP status \"404 Not Found\".",
-		"WARN: filename.mk:6: Homepage \"http://localhost:28780/status/500\" "+
+			"redirects to \"http://localhost:28780/redirect307\".")
+
+	test(
+		"http://localhost:28780/status/404",
+		"WARN: filename.mk:1: Homepage \"http://localhost:28780/status/404\" "+
+			"returns HTTP status \"404 Not Found\".")
+
+	test(
+		"http://localhost:28780/status/500",
+		"WARN: filename.mk:1: Homepage \"http://localhost:28780/status/500\" "+
 			"returns HTTP status \"500 Internal Server Error\".")
 
-	vt.Values(
-		"http://localhost:28780/timeout")
-
-	vt.Output(
-		"WARN: filename.mk:11: Homepage \"http://localhost:28780/timeout\" " +
+	test(
+		"http://localhost:28780/timeout",
+		"WARN: filename.mk:1: Homepage \"http://localhost:28780/timeout\" "+
 			"cannot be checked: timeout")
 
-	vt.Values(
-		"http://localhost:28780/%invalid")
+	test(
+		"http://localhost:28780/%invalid",
+		"ERROR: filename.mk:1: Invalid URL \"http://localhost:28780/%invalid\".")
 
-	vt.Output(
-		"ERROR: filename.mk:21: Invalid URL \"http://localhost:28780/%invalid\".")
+	testMatches(
+		"http://localhost:28781/",
+		// The "unknown network error" is for compatibility with Go < 1.13.
+		`^WARN: filename\.mk:1: Homepage "http://localhost:28781/" `+
+			`cannot be checked: (connection refused|timeout|unknown network error:.*)$`)
 
-	vt.Values(
-		"http://localhost:28781/")
-
-	// The "unknown network error" is for compatibility with Go < 1.13.
-	t.CheckOutputMatches(
-		`^WARN: filename\.mk:31: Homepage "http://localhost:28781/" ` +
-			`cannot be checked: (connection refused|unknown network error:.*)$`)
-
-	vt.Values(
-		"https://no-such-name.example.org/")
-
-	// The "unknown network error" is for compatibility with Go < 1.13.
-	t.CheckOutputMatches(
-		`^WARN: filename\.mk:41: Homepage "https://no-such-name.example.org/" ` +
+	testMatches(
+		"https://no-such-name.example.org/",
+		// The "unknown network error" is for compatibility with Go < 1.13.
+		`^WARN: filename\.mk:1: Homepage "https://no-such-name.example.org/" `+
 			`cannot be checked: (name not found|unknown network error:.*)$`)
 
-	vt.Values(
-		"https://!!!invalid/")
+	// Syntactically invalid URLs are silently skipped since VartypeCheck.URL
+	// already warns about them.
+	test(
+		"https://!!!invalid/",
+		nil...)
 
-	t.CheckOutputLines(
-		"WARN: filename.mk:51: \"https://!!!invalid/\" is not a valid URL.")
+	// URLs with variables are skipped since they cannot be resolved in this form.
+	test(
+		"https://${SERVER}/",
+		nil...)
 }
 
 func (s *Suite) Test_HomepageChecker_isReachableOnline(c *check.C) {
@@ -401,7 +424,7 @@ func (s *Suite) Test_HomepageChecker_isReachableOnline(c *check.C) {
 		writer.WriteHeader(status)
 	})
 	mux.HandleFunc("/timeout", func(http.ResponseWriter, *http.Request) {
-		time.Sleep(5 * time.Second)
+		time.Sleep(1 * time.Second)
 	})
 	mux.HandleFunc("/ok/", func(http.ResponseWriter, *http.Request) {})
 
@@ -425,6 +448,7 @@ func (s *Suite) Test_HomepageChecker_isReachableOnline(c *check.C) {
 
 	test := func(url string, reachable YesNoUnknown) {
 		ck := NewHomepageChecker(url, url, nil, nil)
+		ck.Timeout = 500 * time.Millisecond
 		actual := ck.isReachableOnline(url)
 
 		t.CheckEquals(actual, reachable)
@@ -444,8 +468,8 @@ func (s *Suite) Test_HomepageChecker_isReachableOnline(c *check.C) {
 func (s *Suite) Test_HomepageChecker_hasAnySuffix(c *check.C) {
 	t := s.Init(c)
 
-	test := func(s string, hasAnySuffix bool, suffixes ...string) {
-		actual := (*HomepageChecker).hasAnySuffix(nil, s, suffixes...)
+	test := func(s string, hasAnySuffix bool, suffix string) {
+		actual := (*HomepageChecker).hasAnySuffix(nil, s, suffix)
 
 		t.CheckEquals(actual, hasAnySuffix)
 	}
@@ -455,6 +479,7 @@ func (s *Suite) Test_HomepageChecker_hasAnySuffix(c *check.C) {
 	test("example.org", true, "example.org")
 	test("example.org", false, ".example.org")
 	test("example.org", true, ".org")
+	test("borg", false, "org")
 }
 
 func (s *Suite) Test_HomepageChecker_classifyNetworkError(c *check.C) {
@@ -468,5 +493,8 @@ func (s *Suite) Test_HomepageChecker_classifyNetworkError(c *check.C) {
 
 	test(syscall.Errno(10061), "connection refused")
 	test(syscall.ECONNREFUSED, "connection refused")
+	test(syscall.ECONNRESET, "unknown network error: connection reset by peer")
 	test(errors.New("unknown"), "unknown network error: unknown")
+	test(&net.AddrError{"msg", "addr"}, "unknown network error: address addr: msg")
+	test(&net.DNSError{Err: "msg", Name: "name"}, "unknown network error: lookup name: msg")
 }
