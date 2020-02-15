@@ -151,7 +151,7 @@ func (src *Pkgsrc) loadDocChanges() {
 	docDir := src.File("doc")
 	files := src.ReadDir("doc")
 	if len(files) == 0 {
-		NewLineWhole(docDir).Fatalf("Cannot be read for loading the package changes.")
+		G.Logger.TechFatalf(docDir, "Cannot be read for loading the package changes.")
 	}
 
 	var filenames []RelPath
@@ -179,7 +179,7 @@ func (src *Pkgsrc) loadDocChanges() {
 
 func (src *Pkgsrc) loadDocChangesFromFile(filename CurrPath) []*Change {
 
-	warn := G.Opts.CheckGlobal && !G.Wip
+	warn := G.CheckGlobal && !G.Wip
 
 	// Each date in the file should be from the same year as the filename says.
 	// This check has been added in 2018.
@@ -330,7 +330,7 @@ func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {
 }
 
 func (src *Pkgsrc) checkRemovedAfterLastFreeze() {
-	if src.LastFreezeStart == "" || G.Wip || !G.Opts.CheckGlobal {
+	if src.LastFreezeStart == "" || G.Wip || !G.CheckGlobal {
 		return
 	}
 
@@ -347,10 +347,10 @@ func (src *Pkgsrc) checkRemovedAfterLastFreeze() {
 	sort.Slice(wrong, func(i, j int) bool { return wrong[i].IsAbove(wrong[j]) })
 
 	for _, change := range wrong {
-		// It's a bit cheated to construct a Line from only a Location,
-		// without the wrong text. That's only because I'm too lazy loading
-		// the file again, and the original text is not lying around anywhere.
-		line := NewLineMulti(change.Location.Filename, int(change.Location.firstLine), int(change.Location.lastLine), "", nil)
+		// The original line of the change is not available anymore.
+		// Therefore it is necessary to load the whole file again.
+		lines := Load(change.Location.Filename, MustSucceed)
+		line := lines.Lines[change.Location.lineno-1]
 		line.Errorf("Package %s must either exist or be marked as removed.", change.Pkgpath.String())
 	}
 }
@@ -425,7 +425,7 @@ func (src *Pkgsrc) loadTools() {
 			}
 		}
 		if len(toolFiles) <= 1 {
-			NewLineWhole(toc).Fatalf("Too few tool files.")
+			G.Logger.TechFatalf(toc, "Too few tool files.")
 		}
 	}
 
@@ -1120,6 +1120,16 @@ func (src *Pkgsrc) File(relativeName PkgsrcPath) CurrPath {
 	return src.topdir.JoinNoClean(cleaned).CleanDot()
 }
 
+// FilePkg resolves a package-relative path to the real file that it represents.
+// If the given path does not start with "../../", the result is empty.
+func (src *Pkgsrc) FilePkg(rel PackagePath) CurrPath {
+	parts := rel.AsPath().Parts()
+	if len(parts) >= 4 && parts[0] == ".." && parts[1] == ".." && parts[2] != ".." {
+		return src.File(NewPkgsrcPath(NewPath(strings.Join(parts[2:], "/"))))
+	}
+	return ""
+}
+
 // Rel returns the path of `filename`, relative to the pkgsrc top directory.
 //
 // Example:
@@ -1177,7 +1187,7 @@ func (ch *Change) IsAbove(other *Change) bool {
 	if ch.Date != other.Date {
 		return ch.Date < other.Date
 	}
-	return ch.Location.firstLine < other.Location.firstLine
+	return ch.Location.lineno < other.Location.lineno
 }
 
 type ChangeAction uint8

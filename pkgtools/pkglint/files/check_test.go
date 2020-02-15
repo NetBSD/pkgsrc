@@ -456,7 +456,7 @@ func (t *Tester) SetUpPackage(pkgpath RelPath, makefileLines ...string) CurrPath
 		"pkgpath %q must have the form \"category/package\"", pkgpath)
 
 	distname := pkgpath.Base()
-	category := pkgpath.DirNoClean()
+	category := pkgpath.Dir()
 	if category == "wip" {
 		// To avoid boilerplate CATEGORIES definitions for wip packages.
 		category = "local"
@@ -551,7 +551,7 @@ func (t *Tester) CreateFileLines(filename RelPath, lines ...string) CurrPath {
 	}
 
 	abs := t.File(filename)
-	err := os.MkdirAll(abs.DirNoClean().String(), 0777)
+	err := os.MkdirAll(abs.Dir().String(), 0777)
 	t.c.Assert(err, check.IsNil)
 
 	err = abs.WriteString(content.String())
@@ -584,7 +584,7 @@ func (t *Tester) CreateFileBuildlink3(filename RelPath, customLines ...string) {
 	// Buildlink3.mk files only make sense in category/package directories.
 	assert(G.Pkgsrc.Rel(t.File(filename)).Count() == 3)
 
-	dir := filename.DirClean()
+	dir := filename.Dir().Clean()
 	lower := dir.Base()
 	// see pkgtools/createbuildlink/files/createbuildlink, "package specific variables"
 	upper := strings.Replace(strings.ToUpper(lower), "-", "_", -1)
@@ -642,7 +642,7 @@ func (t *Tester) Copy(source, target RelPath) {
 
 	data, err := absSource.ReadString()
 	assertNil(err, "Copy.Read")
-	err = os.MkdirAll(absTarget.DirClean().String(), 0777)
+	err = os.MkdirAll(absTarget.Dir().Clean().String(), 0777)
 	assertNil(err, "Copy.MkdirAll")
 	err = absTarget.WriteString(data)
 	assertNil(err, "Copy.Write")
@@ -724,9 +724,9 @@ func (t *Tester) SetUpHierarchy() (
 	//
 	// This is the same mechanism that is used in Pkgsrc.Relpath.
 	includePath := func(including, included RelPath) RelPath {
-		fromDir := including.DirClean()
+		fromDir := including.Dir().Clean()
 		to := basedir.Rel(included.AsPath())
-		if fromDir == to.DirNoClean() {
+		if fromDir == to.Dir() {
 			return NewRelPathString(to.Base())
 		} else {
 			return fromDir.Rel(basedir).JoinNoClean(to).CleanDot()
@@ -979,37 +979,10 @@ func (t *Tester) ExpectDiagnosticsAutofix(action func(autofix bool), diagnostics
 	t.CheckOutput(diagnostics)
 }
 
-// NewRawLines creates lines from line numbers and raw text, including newlines.
-//
-// Arguments are sequences of either (lineno, orignl) or (lineno, orignl, textnl).
-//
-// Specifying textnl is only useful when simulating a line that has already been
-// modified by Autofix.
-func (t *Tester) NewRawLines(args ...interface{}) []*RawLine {
-	rawlines := make([]*RawLine, len(args)/2)
-	j := 0
-	for i := 0; i < len(args); i += 2 {
-		lineno := args[i].(int)
-		orignl := args[i+1].(string)
-		textnl := orignl
-		if i+2 < len(args) {
-			if s, ok := args[i+2].(string); ok {
-				textnl = s
-				i++
-			}
-		}
-		rawlines[j] = &RawLine{lineno, orignl, textnl}
-		j++
-	}
-	return rawlines[:j]
-}
-
 // NewLine creates an in-memory line with the given text.
 // This line does not correspond to any line in a file.
 func (t *Tester) NewLine(filename CurrPath, lineno int, text string) *Line {
-	textnl := text + "\n"
-	rawLine := RawLine{lineno, textnl, textnl}
-	return NewLine(filename, lineno, text, &rawLine)
+	return NewLine(filename, lineno, text, &RawLine{text + "\n"})
 }
 
 // NewMkLine creates an in-memory line in the Makefile format with the given text.
