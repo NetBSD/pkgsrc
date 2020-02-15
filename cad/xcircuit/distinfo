@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.21 2019/11/10 14:23:59 mef Exp $
+$NetBSD: distinfo,v 1.22 2020/02/15 07:30:06 mef Exp $
 
-SHA1 (xcircuit-3.10.13.tgz) = 6e25a99a8dc618930cf9585369da1d7feb4f918c
-RMD160 (xcircuit-3.10.13.tgz) = 191847a2f734a0e90bafa1b89ffb4b211b10a475
-SHA512 (xcircuit-3.10.13.tgz) = 41770f35ea245760c4af98441c4a3779d9c8512d16cb8d063d1d806cb45f7649676c7f86702d8d418fc8433e508386c088a681399ed32946d8c298879424fc9a
-Size (xcircuit-3.10.13.tgz) = 1615156 bytes
+SHA1 (xcircuit-3.10.17.tgz) = a11c4ac14fecfaeb092e3e5e683100ff98f701aa
+RMD160 (xcircuit-3.10.17.tgz) = f9d94890ed9760e7ab62bd6bc44822b2b3651239
+SHA512 (xcircuit-3.10.17.tgz) = 0df4730adfd54baf8be480a94ecfa087c7885beb638e69ff29335320f73e284458f7762ddaf13f8521e1dcac01d7e5beec48f545da8868fd90b6f79f803ae165
+Size (xcircuit-3.10.17.tgz) = 1616440 bytes
 SHA1 (patch-aa) = 40e5caea7f6e6294eebff214f47aa9dc01498133
 SHA1 (patch-ab) = 8c4d87dbd67b302f530b4f09201c82fcbec22dd5
 SHA1 (patch-lib_tcl_xcircuit.sh.in) = 0c9882162bdd1cbd7f43d2e4aa2f329f3f91f958
