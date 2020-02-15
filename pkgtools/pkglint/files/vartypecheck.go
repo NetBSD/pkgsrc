@@ -46,8 +46,8 @@ func (cv *VartypeCheck) Explain(explanation ...string)             { cv.MkLine.E
 //
 //  fix.Replace("from", "to")
 //  fix.ReplaceAfter("prefix", "from", "to")
-//  fix.InsertBefore("new line")
-//  fix.InsertAfter("new line")
+//  fix.InsertAbove("new line")
+//  fix.InsertBelow("new line")
 //  fix.Delete()
 //  fix.Custom(func(showAutofix, autofix bool) {})
 //
@@ -276,9 +276,9 @@ func (cv *VartypeCheck) ConfFiles() {
 	}
 
 	for i, word := range words {
-		cv.WithValue(word).Pathname()
+		cv.WithValue(word).PathnameSpace()
 
-		if i%2 == 1 && !hasPrefix(word, "${") {
+		if i%2 == 1 && !matches(word, `["']*\$\{`) {
 			cv.Warnf("The destination file %q should start with a variable reference.", word)
 			cv.Explain(
 				"Since pkgsrc can be installed in different locations, the",
@@ -917,6 +917,27 @@ func (cv *VartypeCheck) Pathname() {
 		cv.Op == opUseMatch,
 		`[%*+,\-./0-9?@A-Z\[\]_a-z~]`,
 		`[%+,\-./0-9@A-Z_a-z~]`))
+	invalid := replaceAll(cv.ValueNoVar, valid, "")
+	if invalid == "" {
+		return
+	}
+
+	cv.Warnf(
+		condStr(cv.Op == opUseMatch,
+			"The pathname pattern %q contains the invalid character%s %q.",
+			"The pathname %q contains the invalid character%s %q."),
+		cv.Value,
+		condStr(len(invalid) > 1, "s", ""),
+		invalid)
+}
+
+// Like Pathname, but may contain spaces as well.
+// Because the spaces must be quoted, backslashes and quotes are allowed as well.
+func (cv *VartypeCheck) PathnameSpace() {
+	valid := regex.Pattern(condStr(
+		cv.Op == opUseMatch,
+		`[ "%'*+,\-./0-9?@A-Z\[\\\]_a-z~]`,
+		`[ "%'+,\-./0-9@A-Z\\_a-z~]`))
 	invalid := replaceAll(cv.ValueNoVar, valid, "")
 	if invalid == "" {
 		return

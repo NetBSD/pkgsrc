@@ -783,6 +783,25 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__wrong_in_packa
 		"WARN: Makefile:5: The primary category should be \"obscure\", not \"perl5\".")
 }
 
+// Allow any primary category in "packages" from regress/*.
+// These packages won't be installed in a regular pkgsrc installation anyway.
+func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__regress(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("regress/regress-package",
+		"CATEGORIES=\tregress")
+	t.SetUpPackage("regress/misc-package",
+		"CATEGORIES=\tmisc")
+	t.SetUpCategory("misc")
+	t.FinishSetUp()
+	t.Chdir(".")
+
+	G.Check("regress/regress-package")
+	G.Check("regress/misc-package")
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_MkAssignChecker_checkVarassignRightCategory__append(c *check.C) {
 	t := s.Init(c)
 
