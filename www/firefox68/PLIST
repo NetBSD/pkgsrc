@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/12/08 20:09:41 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/02/15 12:48:22 nia Exp $
 bin/firefox68
 lib/firefox68/actors/AudioPlaybackChild.jsm
 lib/firefox68/actors/AutoplayChild.jsm
@@ -4240,16 +4240,19 @@ lib/firefox68/browser/features/webcompat@mozilla.org/about-compat/aboutPage.js
 lib/firefox68/browser/features/webcompat@mozilla.org/about-compat/aboutPage.json
 lib/firefox68/browser/features/webcompat@mozilla.org/about-compat/aboutPageProcessScript.js
 lib/firefox68/browser/features/webcompat@mozilla.org/data/injections.js
+lib/firefox68/browser/features/webcompat@mozilla.org/data/picture_in_picture_overrides.js
 lib/firefox68/browser/features/webcompat@mozilla.org/data/ua_overrides.js
 lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/aboutConfigPrefs.js
 lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/aboutConfigPrefs.json
 lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/experiments.js
 lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/experiments.json
+lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/pictureInPicture.js
+lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/pictureInPicture.json
 lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/sharedPreferences.js
 lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/sharedPreferences.json
+lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/systemManufacturer.js
+lib/firefox68/browser/features/webcompat@mozilla.org/experiment-apis/systemManufacturer.json
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug0000000-testbed-css-injection.css
-lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1305028-gaming.youtube.com-webkit-scrollbar.css
-lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1432935-breitbart.com-webkit-scrollbar.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1432935-discordapp.com-webkit-scorllbar-white-line.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1518781-twitch.tv-webkit-scrollbar.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1526977-sreedharscce.in-login-fix.css
@@ -4265,20 +4268,24 @@ lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1575011-h
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1575017-dunkindonuts.com-flex-basis.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1577270-binance.com-calc-height-fix.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1577297-kitkat.com.au-slider-width-fix.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1605611-maps.google.com-directions-time.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1609991-cracked.com-flex-basis-fix.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1610016-gaana.com-input-position-fix.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug0000000-testbed-js-injection.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1452707-window.controllers-shim-ib.absa.co.za.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1457335-histography.io-ua-change.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1472075-bankofamerica.com-ua-change.js
-lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1472081-election.gov.np-window.sidebar-shim.js
-lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1482066-portalminasnet.com-window.sidebar-shim.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1570856-medium.com-menu-isTier1.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1577245-salesforce-communities-hide-unsupported.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1579159-m.tailieu.vn-pdfjs-worker-disable.js
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1605611-maps.google.com-directions-time.js
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1610358-pcloud.com-appVersion-change.js
 lib/firefox68/browser/features/webcompat@mozilla.org/lib/about_compat_broker.js
 lib/firefox68/browser/features/webcompat@mozilla.org/lib/custom_functions.js
 lib/firefox68/browser/features/webcompat@mozilla.org/lib/google.js
 lib/firefox68/browser/features/webcompat@mozilla.org/lib/injections.js
 lib/firefox68/browser/features/webcompat@mozilla.org/lib/module_shim.js
+lib/firefox68/browser/features/webcompat@mozilla.org/lib/picture_in_picture_overrides.js
 lib/firefox68/browser/features/webcompat@mozilla.org/lib/ua_overrides.js
 lib/firefox68/browser/features/webcompat@mozilla.org/manifest.json
 lib/firefox68/browser/features/webcompat@mozilla.org/run.js
@@ -5425,10 +5432,10 @@ lib/firefox68/modules/GMPExtractorWorker.js
 lib/firefox68/modules/GMPInstallManager.jsm
 lib/firefox68/modules/GMPUtils.jsm
 lib/firefox68/modules/Geometry.jsm
-lib/firefox68/modules/HiddenFrame.jsm
 lib/firefox68/modules/HTMLMenuBuilder.jsm
 lib/firefox68/modules/HealthPing.jsm
 lib/firefox68/modules/HelperAppDlg.jsm
+lib/firefox68/modules/HiddenFrame.jsm
 lib/firefox68/modules/History.jsm
 lib/firefox68/modules/Http.jsm
 lib/firefox68/modules/HybridContentTelemetry.jsm
