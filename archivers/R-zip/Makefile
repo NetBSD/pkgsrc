@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/08/08 19:53:36 brook Exp $
+# $NetBSD: Makefile,v 1.3 2020/02/15 23:56:34 mef Exp $
 
 R_PKGNAME=	zip
-R_PKGVER=	2.0.3
+R_PKGVER=	2.0.4
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
