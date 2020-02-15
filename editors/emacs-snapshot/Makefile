@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.94 2020/01/11 11:43:04 mef Exp $
+# $NetBSD: Makefile,v 1.95 2020/02/15 03:26:26 mef Exp $
 
-DISTNAME=	emacs-27.0.60_2019-12-29
-PKGVERSION=	27.0.60
-PKGNAME=	emacs27-${PKGVERSION}
-PKGREVISION=	1
-MASTER_SITES=	https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/
+DISTNAME=	emacs-28.0.50_2020-02-10
+PKGVERSION=	28.0.50
+PKGNAME=	emacs28-${PKGVERSION}
+MASTER_SITES=	https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-28/
 CATEGORIES=	editors
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +11,7 @@ HOMEPAGE=	https://www.gnu.org/software/emacs/
 COMMENT=	GNU editing macros (development version)
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/emacs-27.0.60
+WRKSRC=		${WRKDIR}/emacs-28.0.50
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
