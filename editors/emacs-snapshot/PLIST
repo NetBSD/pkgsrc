@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2019/12/31 17:32:41 mef Exp $
+@comment $NetBSD: PLIST,v 1.41 2020/02/15 03:26:26 mef Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -104,6 +104,7 @@ share/emacs/${PKGVERSION}/etc/NEWS.23
 share/emacs/${PKGVERSION}/etc/NEWS.24
 share/emacs/${PKGVERSION}/etc/NEWS.25
 share/emacs/${PKGVERSION}/etc/NEWS.26
+share/emacs/${PKGVERSION}/etc/NEWS.27
 share/emacs/${PKGVERSION}/etc/NEXTSTEP
 share/emacs/${PKGVERSION}/etc/NXML-NEWS
 share/emacs/${PKGVERSION}/etc/ORG-NEWS
@@ -2814,6 +2815,8 @@ share/emacs/${PKGVERSION}/lisp/net/sasl-ntlm.el.gz
 share/emacs/${PKGVERSION}/lisp/net/sasl-ntlm.elc
 share/emacs/${PKGVERSION}/lisp/net/sasl-scram-rfc.el.gz
 share/emacs/${PKGVERSION}/lisp/net/sasl-scram-rfc.elc
+share/emacs/${PKGVERSION}/lisp/net/sasl-scram-sha256.el.gz
+share/emacs/${PKGVERSION}/lisp/net/sasl-scram-sha256.elc
 share/emacs/${PKGVERSION}/lisp/net/sasl.el.gz
 share/emacs/${PKGVERSION}/lisp/net/sasl.elc
 share/emacs/${PKGVERSION}/lisp/net/secrets.el.gz
@@ -3010,6 +3013,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/rcompile.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/rcompile.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/s-region.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/s-region.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/sb-image.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/sb-image.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/sregex.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/sregex.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/starttls.el.gz
@@ -3574,8 +3579,6 @@ share/emacs/${PKGVERSION}/lisp/savehist.el.gz
 share/emacs/${PKGVERSION}/lisp/savehist.elc
 share/emacs/${PKGVERSION}/lisp/saveplace.el.gz
 share/emacs/${PKGVERSION}/lisp/saveplace.elc
-share/emacs/${PKGVERSION}/lisp/sb-image.el.gz
-share/emacs/${PKGVERSION}/lisp/sb-image.elc
 share/emacs/${PKGVERSION}/lisp/scroll-all.el.gz
 share/emacs/${PKGVERSION}/lisp/scroll-all.elc
 share/emacs/${PKGVERSION}/lisp/scroll-bar.el.gz
