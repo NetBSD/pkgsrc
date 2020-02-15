@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/09/10 15:25:14 alnsn Exp $
+$NetBSD: distinfo,v 1.11 2020/02/15 05:50:37 mef Exp $
 
-SHA1 (lua-penlight/penlight-1.5.4.tar.gz) = 39f825c5e98b10f60a2722eb20b1de68125fa898
-RMD160 (lua-penlight/penlight-1.5.4.tar.gz) = aa2240706c7b4d80ff842d7dcc55bf9ae50af3a8
-SHA512 (lua-penlight/penlight-1.5.4.tar.gz) = c46e7875410a90390bfbf010a53f1d536475e2094668722618d03951caad0fcb0674c9bc7119a0753e4ed3df9e4d70fef828ba4c6c24e8ada4036948d2432519
-Size (lua-penlight/penlight-1.5.4.tar.gz) = 213938 bytes
+SHA1 (lua-penlight/penlight-1.7.0.tar.gz) = c9b1d1cdba4911438657dbc2a94c0bf08751bdd7
+RMD160 (lua-penlight/penlight-1.7.0.tar.gz) = 5950e563a47a91ed81ccfe9224f1b09ec207e1d5
+SHA512 (lua-penlight/penlight-1.7.0.tar.gz) = edeb09307c9feb5da6bccd82216a6ad71db988c433245d72d28abb6c555004f77eebba556928b0912937b29ef93e065ad491368041e17730610813de8e595d7d
+Size (lua-penlight/penlight-1.7.0.tar.gz) = 384917 bytes
