@@ -443,7 +443,7 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__missing_endif(c *check.C) {
 
 	t.CheckOutputLines(
 		"ERROR: buildlink3.mk:EOF: .if from line 5 must be closed.",
-		"NOTE: buildlink3.mk:6: Empty line expected after this line.")
+		"NOTE: buildlink3.mk:6: Empty line expected below this line.")
 }
 
 func (s *Suite) Test_CheckLinesBuildlink3Mk__invalid_dependency_patterns(c *check.C) {

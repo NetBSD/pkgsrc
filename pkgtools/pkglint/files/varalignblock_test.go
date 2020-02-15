@@ -3308,7 +3308,7 @@ func (s *Suite) Test_VaralignSplitter_split(c *check.C) {
 	// as usual.
 	//
 	// 2. It is a continuation of the value, and therefore the value ends
-	// here; everything after this line is part of the trailing comment.
+	// here; everything below this line is part of the trailing comment.
 	//
 	// The character that follows the comment character decides which
 	// interpretation is used. A space makes the comment a trailing
@@ -3566,7 +3566,7 @@ func (s *Suite) Test_varalignLine_alignValueSingle(c *check.C) {
 			info.alignValueSingle(column)
 
 			t.CheckEqualsf(
-				mkline.raw[0].Text(), after,
+				mkline.RawText(0), after,
 				"Line.raw.text, autofix=%v", autofix)
 
 			// As of 2019-12-11, the info fields are not updated
@@ -3724,14 +3724,14 @@ func (s *Suite) Test_varalignLine_alignValueInitial(c *check.C) {
 			assert(len(mklines.mklines) == 1)
 			mkline := mklines.mklines[0]
 
-			text := mkline.raw[0].Text()
+			text := mkline.RawText(0)
 			parts := NewVaralignSplitter().split(text, true)
 			info := &varalignLine{mkline, 0, false, parts}
 
 			info.alignValueInitial(column)
 
 			t.CheckEqualsf(
-				mkline.raw[0].Text(), after,
+				mkline.RawText(0), after,
 				"Line.raw.text, autofix=%v", autofix)
 
 			t.CheckEqualsf(info.String(), after,
@@ -3831,7 +3831,7 @@ func (s *Suite) Test_varalignLine_alignValueMultiFollow(c *check.C) {
 
 	// newLine creates a line consisting of either 2 or 3 physical lines.
 	// The given text ends up in the raw line with index 1.
-	newLine := func(text string, column, indentDiff int) (*varalignLine, *RawLine) {
+	newLine := func(text string, column, indentDiff int) (*varalignLine, *MkLine) {
 		t.CheckDotColumns("", text)
 
 		leading := alignWith("VAR=", indent(column)) + "value \\"
@@ -3845,18 +3845,18 @@ func (s *Suite) Test_varalignLine_alignValueMultiFollow(c *check.C) {
 		mkline := mklines.mklines[0]
 
 		parts := NewVaralignSplitter().split(text, false)
-		return &varalignLine{mkline, 1, false, parts}, mkline.raw[1]
+		return &varalignLine{mkline, 1, false, parts}, mkline
 	}
 
 	test := func(before string, column, indentDiff int, after string, diagnostics ...string) {
 
 		doTest := func(autofix bool) {
-			info, raw := newLine(before, column, indentDiff)
+			info, mkline := newLine(before, column, indentDiff)
 			width := imax(column, info.valueColumn()+indentDiff)
 
 			info.alignValueMultiFollow(width)
 
-			t.CheckEquals(raw.Text(), after)
+			t.CheckEquals(mkline.RawText(1), after)
 		}
 
 		t.ExpectDiagnosticsAutofix(
@@ -4110,14 +4110,14 @@ func (s *Suite) Test_varalignLine_alignValue(c *check.C) {
 			assert(len(mklines.mklines) == 1)
 			mkline := mklines.mklines[0]
 
-			text := mkline.raw[0].Text()
+			text := mkline.RawText(0)
 			parts := NewVaralignSplitter().split(text, true)
 			info := &varalignLine{mkline, 0, false, parts}
 
 			info.alignValue(column)
 
 			t.CheckEqualsf(
-				mkline.raw[0].Text(), after,
+				mkline.RawText(0), after,
 				"Line.raw.text, autofix=%v", autofix)
 
 			t.CheckEqualsf(info.String(), after,
@@ -4137,7 +4137,7 @@ func (s *Suite) Test_varalignLine_alignValue(c *check.C) {
 			assert(len(mklines.mklines) == 1)
 			mkline := mklines.mklines[0]
 
-			text := mkline.raw[0].Text()
+			text := mkline.RawText(0)
 			parts := NewVaralignSplitter().split(text, true)
 			info := &varalignLine{mkline, 0, false, parts}
 
@@ -4145,7 +4145,7 @@ func (s *Suite) Test_varalignLine_alignValue(c *check.C) {
 				func() { info.alignValue(column) })
 
 			t.CheckEqualsf(
-				mkline.raw[0].Text(), before,
+				mkline.RawText(0), before,
 				"Line.raw.text, autofix=%v", autofix)
 
 			t.CheckEqualsf(info.String(), before,
@@ -4224,14 +4224,14 @@ func (s *Suite) Test_varalignLine_alignContinuation(c *check.C) {
 			assert(len(mklines.mklines) == 1)
 			mkline := mklines.mklines[0]
 
-			text := mkline.raw[rawIndex].Text()
+			text := mkline.RawText(rawIndex)
 			parts := NewVaralignSplitter().split(text, rawIndex == 0)
 			info := &varalignLine{mkline, rawIndex, false, parts}
 
 			info.alignContinuation(valueColumn, rightMarginColumn)
 
 			t.CheckEqualsf(
-				mkline.raw[rawIndex].Text(), after,
+				mkline.RawText(rawIndex), after,
 				"Line.raw.text, autofix=%v", autofix)
 
 			t.CheckEqualsf(info.String(), after,
