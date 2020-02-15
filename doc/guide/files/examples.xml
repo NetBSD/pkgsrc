@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.17 2020/02/15 10:28:06 rillig Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.18 2020/02/15 10:29:49 rillig Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -74,7 +74,7 @@ WARN: PLIST:5: "share/bison.hairy" should be sorted before "share/bison.simple".
 1 error, 2 warnings and 1 note found.
 (Run "pkglint -e" to show explanations.)
 (Run "pkglint -fs" to show what can be fixed automatically.)
-(Run "pkglint.exe -F" to automatically fix some issues.)</screen>
+(Run "pkglint -F" to automatically fix some issues.)</screen>
 
       <para>Depending on the supplied command line arguments (see pkglint(1)),
 	more checks will be performed. Use e.g. <command>pkglint
