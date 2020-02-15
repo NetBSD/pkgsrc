@@ -43,8 +43,9 @@ func (ck MkLineChecker) checkEmptyContinuation() {
 	}
 
 	line := ck.MkLine.Line
-	if line.raw[len(line.raw)-1].Orig() == "" {
-		lastLine := NewLine(line.Filename, int(line.lastLine), "", line.raw[len(line.raw)-1])
+	lastRawIndex := len(line.raw) - 1
+	if line.raw[lastRawIndex].Orig() == "" {
+		lastLine := NewLine(line.Filename(), line.Location.Lineno(lastRawIndex), "", line.raw[lastRawIndex])
 		lastLine.Warnf("This line looks empty but continues the previous line.")
 		lastLine.Explain(
 			"This line should be indented like other continuation lines,",
@@ -190,7 +191,7 @@ func (ck MkLineChecker) checkShellCommand() {
 
 	shellCommand := mkline.ShellCommand()
 	if hasPrefix(mkline.Text, "\t\t") {
-		lexer := textproc.NewLexer(mkline.raw[0].Text())
+		lexer := textproc.NewLexer(mkline.RawText(0))
 		tabs := lexer.NextBytesFunc(func(b byte) bool { return b == '\t' })
 
 		fix := mkline.Autofix()
@@ -201,8 +202,8 @@ func (ck MkLineChecker) checkShellCommand() {
 			"there is no need to indent some of the commands,",
 			"or to use more horizontal space than necessary.")
 
-		for i, raw := range mkline.Line.raw {
-			if hasPrefix(raw.Text(), tabs) {
+		for i := range mkline.raw {
+			if hasPrefix(mkline.RawText(i), tabs) {
 				fix.ReplaceAt(i, 0, tabs, "\t")
 			}
 		}
@@ -234,7 +235,7 @@ func (ck MkLineChecker) checkInclude() {
 	includedFile := mkline.IncludedFile()
 	mustExist := mkline.MustExist()
 	if trace.Tracing {
-		trace.Stepf("includingFile=%s includedFile=%s", mkline.Filename, includedFile)
+		trace.Stepf("includingFile=%s includedFile=%s", mkline.Filename(), includedFile)
 	}
 	// TODO: Not every path is relative to the package directory.
 	ck.CheckRelativePath(NewPackagePath(includedFile), includedFile, mustExist)
@@ -285,7 +286,7 @@ func (ck MkLineChecker) checkIncludeBuiltin() {
 		return
 	}
 
-	includeInstead := includedFile.DirNoClean().JoinNoClean("buildlink3.mk")
+	includeInstead := includedFile.Dir().JoinNoClean("buildlink3.mk")
 
 	fix := mkline.Autofix()
 	fix.Errorf("%q must not be included directly. Include %q instead.",
@@ -298,9 +299,9 @@ func (ck MkLineChecker) checkDirectiveIndentation(expectedDepth int) {
 	mkline := ck.MkLine
 	indent := mkline.Indent()
 	if expected := strings.Repeat(" ", expectedDepth); indent != expected {
-		fix := mkline.Line.Autofix()
+		fix := mkline.Autofix()
 		fix.Notef("This directive should be indented by %d spaces.", expectedDepth)
-		if hasPrefix(mkline.Line.raw[0].Text(), "."+indent) {
+		if hasPrefix(mkline.RawText(0), "."+indent) {
 			fix.ReplaceAt(0, 0, "."+indent, "."+expected)
 		}
 		fix.Apply()
@@ -325,10 +326,12 @@ func (ck MkLineChecker) CheckRelativePath(pp PackagePath, rel RelPath, mustExist
 		return
 	}
 
-	resolvedRel := resolvedPath.AsRelPath()
-	abs := mkline.Filename.DirNoClean().JoinNoClean(resolvedRel)
+	abs := G.Pkgsrc.FilePkg(resolvedPath)
+	if abs.IsEmpty() {
+		abs = mkline.File(resolvedPath.AsRelPath())
+	}
 	if !abs.Exists() {
-		pkgsrcPath := G.Pkgsrc.Rel(ck.MkLine.File(resolvedRel))
+		pkgsrcPath := G.Pkgsrc.Rel(ck.MkLine.File(resolvedPath.AsRelPath()))
 		if mustExist && !ck.MkLines.indentation.HasExists(pkgsrcPath) {
 			mkline.Errorf("Relative path %q does not exist.", rel)
 		}
@@ -345,7 +348,7 @@ func (ck MkLineChecker) CheckRelativePath(pp PackagePath, rel RelPath, mustExist
 	case matches(resolvedPath.String(), `^\.\./\.\./[^./][^/]*/[^/]`):
 		// From a package to another package.
 
-	case resolvedPath.HasPrefixPath("../mk") && G.Pkgsrc.Rel(mkline.Filename).Count() == 2:
+	case resolvedPath.HasPrefixPath("../mk") && G.Pkgsrc.Rel(mkline.Filename()).Count() == 2:
 		// For category Makefiles.
 		// TODO: Or from a pkgsrc wip package to wip/mk.
 

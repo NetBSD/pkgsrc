@@ -111,7 +111,7 @@ func (ck *MkAssignChecker) checkVarassignLeftBsdPrefs() {
 		return
 	}
 
-	if !G.Opts.WarnExtra ||
+	if !G.WarnExtra ||
 		G.Infrastructure ||
 		mkline.Op() != opAssignDefault ||
 		ck.MkLines.Tools.SeenPrefs {
@@ -203,7 +203,7 @@ func (ck *MkAssignChecker) checkVarassignLeftUserSettable() bool {
 //
 // See checkPermissions.
 func (ck *MkAssignChecker) checkVarassignLeftPermissions() {
-	if !G.Opts.WarnPerm {
+	if !G.WarnPerm {
 		return
 	}
 	if G.Infrastructure {
@@ -274,7 +274,7 @@ func (ck *MkAssignChecker) checkVarassignLeftPermissions() {
 }
 
 func (ck *MkAssignChecker) checkVarassignLeftRationale() {
-	if !G.Opts.WarnExtra {
+	if !G.WarnExtra {
 		return
 	}
 
@@ -384,21 +384,21 @@ func (ck *MkAssignChecker) checkVarassignRightCategory() {
 	}
 
 	categories := mkline.ValueFields(mkline.Value())
-	actual := categories[0]
-	expected := G.Pkgsrc.Rel(mkline.Filename).DirNoClean().DirNoClean().Base()
+	primary := categories[0]
+	dir := G.Pkgsrc.Rel(mkline.Filename()).Dir().Dir().Base()
 
-	if expected == "wip" || actual == expected {
+	if primary == dir || dir == "wip" || dir == "regress" {
 		return
 	}
 
 	fix := mkline.Autofix()
-	fix.Warnf("The primary category should be %q, not %q.", expected, actual)
+	fix.Warnf("The primary category should be %q, not %q.", dir, primary)
 	fix.Explain(
 		"The primary category of a package should be its location in the",
 		"pkgsrc directory tree, to make it easy to find the package.",
 		"All other categories may be added after this primary category.")
-	if len(categories) > 1 && categories[1] == expected {
-		fix.Replace(categories[0]+" "+categories[1], categories[1]+" "+categories[0])
+	if len(categories) > 1 && categories[1] == dir {
+		fix.Replace(primary+" "+categories[1], categories[1]+" "+primary)
 	}
 	fix.Apply()
 }
