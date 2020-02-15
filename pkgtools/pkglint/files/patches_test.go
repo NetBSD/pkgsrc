@@ -56,8 +56,8 @@ func (s *Suite) Test_CheckLinesPatch__without_empty_line__autofix(c *check.C) {
 	CheckLinesPatch(patchLines, pkg)
 
 	t.CheckOutputLines(
-		"AUTOFIX: patch-WithoutEmptyLines:2: Inserting a line \"\" before this line.",
-		"AUTOFIX: patch-WithoutEmptyLines:3: Inserting a line \"\" before this line.",
+		"AUTOFIX: patch-WithoutEmptyLines:2: Inserting a line \"\" above this line.",
+		"AUTOFIX: patch-WithoutEmptyLines:3: Inserting a line \"\" above this line.",
 		"AUTOFIX: distinfo:3: Replacing \"49abd735b7e706ea9ed6671628bb54e91f7f5ffb\" "+
 			"with \"4938fc8c0b483dc2e33e741b0da883d199e78164\".")
 
@@ -98,7 +98,7 @@ func (s *Suite) Test_CheckLinesPatch__no_comment_and_no_empty_lines(c *check.C) 
 	// the same. Outside of the testing environment, this duplicate
 	// diagnostic is suppressed; see LogVerbose.
 	t.CheckOutputLines(
-		"NOTE: ~/patch-WithoutEmptyLines:2: Empty line expected before this line.",
+		"NOTE: ~/patch-WithoutEmptyLines:2: Empty line expected above this line.",
 		"ERROR: ~/patch-WithoutEmptyLines:2: Each patch must be documented.",
 		"NOTE: ~/patch-WithoutEmptyLines:2: Empty line expected.")
 }
@@ -534,7 +534,7 @@ func (s *Suite) Test_PatchChecker_Check__missing_CVS_Id(c *check.C) {
 
 	t.CheckOutputLines(
 		sprintf("ERROR: ~/patch-aa:1: Expected %q.", CvsID),
-		"NOTE: ~/patch-aa:1: Empty line expected before this line.",
+		"NOTE: ~/patch-aa:1: Empty line expected above this line.",
 		"ERROR: ~/patch-aa: Contains no patch.")
 }
 
