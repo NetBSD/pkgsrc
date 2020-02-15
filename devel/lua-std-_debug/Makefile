@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/11/20 17:28:10 maya Exp $
+# $NetBSD: Makefile,v 1.2 2020/02/15 05:54:35 mef Exp $
 
-DISTNAME=		std._debug-1.0
+DISTNAME=		std._debug-1.0.1
 PKGNAME=		${DISTNAME:S/std._debug/${LUA_PKGPREFIX}-std-_debug/}
 GITHUB_PROJECT=		_debug
 GITHUB_TAG=		v${PKGVERSION_NOREV}
