@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1096 2020/02/15 07:24:29 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1097 2020/02/15 07:30:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1554,3 +1554,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/R-rlang to 0.4.4 [mef 2020-02-15]
 	Updated devel/R-testthat to 2.3.1 [mef 2020-02-15]
 	Updated cad/gtkwave to 3.3.104 [mef 2020-02-15]
+	Updated cad/xcircuit to 3.10.17 [mef 2020-02-15]
