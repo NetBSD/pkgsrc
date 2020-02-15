@@ -1,0 +1,24 @@
+$NetBSD: DESCR,v 1.1 2020/02/15 02:26:58 manu Exp $
+
+The remserial program acts as a communications bridge between a
+TCP/IP network port and a Linux device such as a serial port. Any
+character-oriented Linux /dev device will work.
+
+The program can also use pseudo-ttys as the device. A pseudo-tty
+is like a serial port in that it has a /dev entry that can be opened
+by a program that expects a serial port device, except that instead
+of belonging to a physical serial device, the data can be intercepted
+by another program. The remserial program uses this to connect a
+network port to the "master" (programming) side of the pseudo-tty
+allowing the device driver (slave) side to be used by some program
+expecting a serial port. See example 3 below for details.
+
+The program can operate as a server accepting network connections
+from other machines, or as a client, connecting to remote machine
+that is running the remserial program or some other program that
+accepts a raw network connection. The network connection passes
+data as-is, there is no control protocol over the network socket.
+
+Multiple copies of the program can run on the same computer at the
+same time assuming each is using a different network port and
+device.
