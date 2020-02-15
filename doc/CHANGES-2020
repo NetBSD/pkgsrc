@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1099 2020/02/15 12:55:23 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1100 2020/02/15 13:48:55 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1557,3 +1557,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated cad/xcircuit to 3.10.17 [mef 2020-02-15]
 	Updated www/firefox68 to 68.5.0 [nia 2020-02-15]
 	Updated www/firefox68-l10n to 68.5.0 [nia 2020-02-15]
+	Updated pkgtools/pkglint to 19.4.8 [rillig 2020-02-15]
