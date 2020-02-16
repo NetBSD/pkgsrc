@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1118 2020/02/16 14:36:09 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1119 2020/02/16 19:28:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1578,3 +1578,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-aio-pika to 6.4.3 [adam 2020-02-16]
 	Updated security/py-google-auth to 1.11.2 [adam 2020-02-16]
 	Updated devel/py-jupyter_core to 4.6.2 [adam 2020-02-16]
+	Updated net/youtube-dl to 20200216 [leot 2020-02-16]
