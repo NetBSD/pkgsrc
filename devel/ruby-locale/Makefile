@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2015/10/04 12:19:00 taca Exp $
+# $NetBSD: Makefile,v 1.8 2020/02/16 04:21:50 tsutsui Exp $
 
-DISTNAME=	locale-2.1.2
+DISTNAME=	locale-2.1.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
