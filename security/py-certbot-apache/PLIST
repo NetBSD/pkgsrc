@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/12/15 09:48:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/02/16 20:23:26 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -15,7 +15,6 @@ ${PYSITELIB}/certbot_apache/_internal/apache_util.py
 ${PYSITELIB}/certbot_apache/_internal/apache_util.pyc
 ${PYSITELIB}/certbot_apache/_internal/apache_util.pyo
 ${PYSITELIB}/certbot_apache/_internal/augeas_lens/httpd.aug
-${PYSITELIB}/certbot_apache/_internal/centos-options-ssl-apache.conf
 ${PYSITELIB}/certbot_apache/_internal/configurator.py
 ${PYSITELIB}/certbot_apache/_internal/configurator.pyc
 ${PYSITELIB}/certbot_apache/_internal/configurator.pyo
