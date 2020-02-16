@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1121 2020/02/16 19:59:26 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1122 2020/02/16 20:01:23 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1581,3 +1581,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/youtube-dl to 20200216 [leot 2020-02-16]
 	Updated devel/guile-slib to 3.2.6 [gdt 2020-02-16]
 	Updated devel/guile22-slib to 3.2.6 [wiz 2020-02-16]
+	Updated audio/musescore to 3.4.2 [gutteridge 2020-02-16]
