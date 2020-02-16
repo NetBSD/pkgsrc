@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1116 2020/02/16 10:56:33 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1117 2020/02/16 14:15:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1574,3 +1574,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ruby-cairo to 1.16.5 [tsutsui 2020-02-16]
 	Updated mail/gmime3 to 3.2.6 [wiz 2020-02-16]
 	Updated devel/slib to 3.2.6 [wiz 2020-02-16]
+	Updated www/py-hstspreload to 2020.2.15 [adam 2020-02-16]
+	Updated net/py-aio-pika to 6.4.3 [adam 2020-02-16]
