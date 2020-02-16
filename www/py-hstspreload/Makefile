@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/08 20:53:28 adam Exp $
+# $NetBSD: Makefile,v 1.2 2020/02/16 14:13:33 adam Exp $
 
-DISTNAME=	hstspreload-2020.1.7
+DISTNAME=	hstspreload-2020.2.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hstspreload/}
