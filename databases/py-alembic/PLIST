@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/10/10 18:26:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/02/16 21:11:41 adam Exp $
 bin/alembic-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -127,12 +127,33 @@ ${PYSITELIB}/alembic/testing/assertions.pyo
 ${PYSITELIB}/alembic/testing/env.py
 ${PYSITELIB}/alembic/testing/env.pyc
 ${PYSITELIB}/alembic/testing/env.pyo
+${PYSITELIB}/alembic/testing/exclusions.py
+${PYSITELIB}/alembic/testing/exclusions.pyc
+${PYSITELIB}/alembic/testing/exclusions.pyo
+${PYSITELIB}/alembic/testing/fixture_functions.py
+${PYSITELIB}/alembic/testing/fixture_functions.pyc
+${PYSITELIB}/alembic/testing/fixture_functions.pyo
 ${PYSITELIB}/alembic/testing/fixtures.py
 ${PYSITELIB}/alembic/testing/fixtures.pyc
 ${PYSITELIB}/alembic/testing/fixtures.pyo
+${PYSITELIB}/alembic/testing/plugin/__init__.py
+${PYSITELIB}/alembic/testing/plugin/__init__.pyc
+${PYSITELIB}/alembic/testing/plugin/__init__.pyo
+${PYSITELIB}/alembic/testing/plugin/bootstrap.py
+${PYSITELIB}/alembic/testing/plugin/bootstrap.pyc
+${PYSITELIB}/alembic/testing/plugin/bootstrap.pyo
+${PYSITELIB}/alembic/testing/plugin/plugin_base.py
+${PYSITELIB}/alembic/testing/plugin/plugin_base.pyc
+${PYSITELIB}/alembic/testing/plugin/plugin_base.pyo
+${PYSITELIB}/alembic/testing/plugin/pytestplugin.py
+${PYSITELIB}/alembic/testing/plugin/pytestplugin.pyc
+${PYSITELIB}/alembic/testing/plugin/pytestplugin.pyo
 ${PYSITELIB}/alembic/testing/requirements.py
 ${PYSITELIB}/alembic/testing/requirements.pyc
 ${PYSITELIB}/alembic/testing/requirements.pyo
+${PYSITELIB}/alembic/testing/util.py
+${PYSITELIB}/alembic/testing/util.pyc
+${PYSITELIB}/alembic/testing/util.pyo
 ${PYSITELIB}/alembic/util/__init__.py
 ${PYSITELIB}/alembic/util/__init__.pyc
 ${PYSITELIB}/alembic/util/__init__.pyo
