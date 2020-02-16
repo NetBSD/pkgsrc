@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 23:32:47 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/02/16 10:54:55 wiz Exp $
 
-DISTNAME=	gmime-3.2.5
+DISTNAME=	gmime-3.2.6
 PKGNAME=	${DISTNAME:S/gmime/gmime3/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/3.2/}
@@ -18,6 +18,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--disable-mono
 PKGCONFIG_OVERRIDE+=	gmime.pc.in
+# one test failure as of 3.2.6
+# test-filters:
+# https://github.com/jstedfast/gmime/issues/81
 TEST_TARGET=		check
 
 BUILDLINK_DEPMETHOD.libgpg-error=	build
