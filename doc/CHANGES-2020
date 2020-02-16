@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1104 2020/02/15 23:56:49 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1105 2020/02/16 00:35:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1562,3 +1562,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/mutt to 1.13.4 [tron 2020-02-15]
 	Updated finance/R-bayesm to 3.1.4 [mef 2020-02-15]
 	Updated archivers/R-zip to 2.0.4 [mef 2020-02-15]
+	Updated archivers/gcpio to 2.13 [mef 2020-02-16]
