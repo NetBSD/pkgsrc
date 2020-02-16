@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1120 2020/02/16 19:54:00 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.1121 2020/02/16 19:59:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1580,3 +1580,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-jupyter_core to 4.6.2 [adam 2020-02-16]
 	Updated net/youtube-dl to 20200216 [leot 2020-02-16]
 	Updated devel/guile-slib to 3.2.6 [gdt 2020-02-16]
+	Updated devel/guile22-slib to 3.2.6 [wiz 2020-02-16]
