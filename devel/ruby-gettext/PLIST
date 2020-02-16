@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2020/01/16 15:28:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/02/16 04:05:30 tsutsui Exp $
 bin/rmsgcat${RUBY_SUFFIX}
 bin/rmsgfmt${RUBY_SUFFIX}
 bin/rmsginit${RUBY_SUFFIX}
@@ -1378,6 +1378,7 @@ ${GEM_LIBDIR}/test/fixtures/_/multiple_same_messages.rb
 ${GEM_LIBDIR}/test/fixtures/_/one_line.rb
 ${GEM_LIBDIR}/test/fixtures/_/one_new_line.rb
 ${GEM_LIBDIR}/test/fixtures/_/percent_strings.rb
+${GEM_LIBDIR}/test/fixtures/_/pipe.rb
 ${GEM_LIBDIR}/test/fixtures/_/quoted_symbol.rb
 ${GEM_LIBDIR}/test/fixtures/backslash.rb
 ${GEM_LIBDIR}/test/fixtures/erb/ascii.rhtml
@@ -1393,6 +1394,10 @@ ${GEM_LIBDIR}/test/fixtures/np_.rb
 ${GEM_LIBDIR}/test/fixtures/ns_.rb
 ${GEM_LIBDIR}/test/fixtures/ns_/custom.rb
 ${GEM_LIBDIR}/test/fixtures/p_.rb
+${GEM_LIBDIR}/test/fixtures/ruby/percent_I.rb
+${GEM_LIBDIR}/test/fixtures/ruby/percent_W.rb
+${GEM_LIBDIR}/test/fixtures/ruby/percent_i.rb
+${GEM_LIBDIR}/test/fixtures/ruby/percent_w.rb
 ${GEM_LIBDIR}/test/fixtures/s_.rb
 ${GEM_LIBDIR}/test/fixtures/s_/custom.rb
 ${GEM_LIBDIR}/test/fixtures/simple.rb
