@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2019/12/11 14:52:21 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.31 2020/02/16 04:11:05 tsutsui Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -146,4 +146,5 @@ ${GEM_LIBDIR}/patches/libxml2/0001-Revert-Do-not-URI-escape-in-server-side-inclu
 ${GEM_LIBDIR}/patches/libxml2/0002-Remove-script-macro-support.patch
 ${GEM_LIBDIR}/patches/libxml2/0003-Update-entities-to-remove-handling-of-ssi.patch
 ${GEM_LIBDIR}/patches/libxml2/0004-libxml2.la-is-in-top_builddir.patch
+${GEM_LIBDIR}/patches/libxml2/0005-Fix-infinite-loop-in-xmlStringLenDecodeEntities.patch
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
