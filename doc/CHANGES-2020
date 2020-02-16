@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1125 2020/02/16 20:40:31 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1126 2020/02/16 21:11:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1602,3 +1602,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/lxqt-build-tools 0.6.0 [gutteridge 2020-02-16]
 	Updated devel/py-pebble to 4.5.0 [adam 2020-02-16]
 	Updated textproc/py-odfpy to 1.4.1 [adam 2020-02-16]
+	Updated net/py-gsutil to 4.47 [adam 2020-02-16]
+	Updated databases/py-alembic to 1.4.0 [adam 2020-02-16]
