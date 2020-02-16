@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 21:48:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2020/02/16 20:00:47 gutteridge Exp $
 
-DISTNAME=	musescore-3.2.3
-PKGREVISION=	1
+DISTNAME=	musescore-3.4.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=musescore/}
 GITHUB_PROJECT=	MuseScore
@@ -28,6 +27,7 @@ CMAKE_ARGS+=	-DUSE_SYSTEM_FREETYPE=ON
 CMAKE_ARGS+=	-DDOWNLOAD_SOUNDFONT=OFF
 CMAKE_ARGS+=	-DBUILD_PCH=OFF
 CMAKE_ARGS+=	-DBUILD_PORTMIDI=OFF
+CMAKE_ARGS+=	-DBUILD_TELEMETRY_MODULE=OFF
 CMAKE_ARGS+=	-DBUILD_WEBENGINE=OFF
 
 pre-configure:
@@ -41,6 +41,7 @@ pre-configure:
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
+.include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
