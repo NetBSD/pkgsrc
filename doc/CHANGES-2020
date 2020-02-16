@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1119 2020/02/16 19:28:59 leot Exp $
+$NetBSD: CHANGES-2020,v 1.1120 2020/02/16 19:54:00 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1579,3 +1579,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-google-auth to 1.11.2 [adam 2020-02-16]
 	Updated devel/py-jupyter_core to 4.6.2 [adam 2020-02-16]
 	Updated net/youtube-dl to 20200216 [leot 2020-02-16]
+	Updated devel/guile-slib to 3.2.6 [gdt 2020-02-16]
