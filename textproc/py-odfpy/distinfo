@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/12/04 13:25:59 adam Exp $
+$NetBSD: distinfo,v 1.4 2020/02/16 20:40:14 adam Exp $
 
-SHA1 (odfpy-1.4.0.tar.gz) = 26dc7ff7b3bc32ca73f78d188c4389df89c39cd6
-RMD160 (odfpy-1.4.0.tar.gz) = 5eb505de76b2547372c2b7e1df6b96fcade599f7
-SHA512 (odfpy-1.4.0.tar.gz) = 10b001588ad4ae9779740f6a3ff77073f6abf500eb2db7975d50f8026b2ab12d9df89d4ca87434a6f73dc13dfe4661bff7007dfa265783ecc410816e73f482d2
-Size (odfpy-1.4.0.tar.gz) = 715096 bytes
+SHA1 (odfpy-1.4.1.tar.gz) = f0e8870e88957b9a9d541077fb9a8d703e0766f6
+RMD160 (odfpy-1.4.1.tar.gz) = 70d9b9e69cd91c790002c331eb25f8dc88611846
+SHA512 (odfpy-1.4.1.tar.gz) = 576b0eba9bba15d3682b1d0c33c585d02abb0cf9a11b783bc17d5e870ff779749d78d60b3b71d274e3195eed23ba687358d5df39e3fedec4b265b46a270f2fe1
+Size (odfpy-1.4.1.tar.gz) = 717045 bytes
