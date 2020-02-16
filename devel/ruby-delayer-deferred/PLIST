@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/10 07:55:56 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/02/16 03:58:28 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.circleci/config.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
