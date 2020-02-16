@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2019/12/03 18:21:15 adam Exp $
+# $NetBSD: Makefile,v 1.21 2020/02/16 21:11:41 adam Exp $
 
-DISTNAME=	alembic-1.3.1
+DISTNAME=	alembic-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/alembic/}
