@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1123 2020/02/16 20:27:09 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1124 2020/02/16 20:31:50 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1599,3 +1599,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-certbot-dns-route53 to 1.2.0 [adam 2020-02-16]
 	Updated security/py-certbot-dns-sakuracloud to 1.2.0 [adam 2020-02-16]
 	Updated security/py-certbot-nginx to 1.2.0 [adam 2020-02-16]
+	Added devel/lxqt-build-tools 0.6.0 [gutteridge 2020-02-16]
