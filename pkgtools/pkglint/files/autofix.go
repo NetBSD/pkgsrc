@@ -219,7 +219,7 @@ func (fix *Autofix) Delete() {
 // and if so, call Describef to describe the actual fix.
 //
 // If autofix is false, the fix should be applied, as far as only
-// in-memory data structures are effected, and these are not written
+// in-memory data structures are affected, and these are not written
 // back to disk. No externally observable modification must be done.
 // For example, changing the text of Line.raw is appropriate,
 // but changing files in the file system is not.
