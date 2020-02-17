@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/15 02:05:46 pho Exp $
+# $NetBSD: Makefile,v 1.6 2020/02/17 17:24:06 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -26,7 +26,7 @@ BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-i386
 BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-x86_64
 BROKEN_EXCEPT_ON_PLATFORM+=	NetBSD-*-x86_64
 #BROKEN_EXCEPT_ON_PLATFORM+=	SunOS-*-i386     # Not available yet
-#BROKEN_EXCEPT_ON_PLATFORM+=	SunOS-*-x86_64   # Not available yet
+BROKEN_EXCEPT_ON_PLATFORM+=	SunOS-*-x86_64   # Not available yet
 
 
 # -----------------------------------------------------------------------------
@@ -138,6 +138,11 @@ post-configure:
 
 # Don't even think of PDF.
 	${RUN} ${ECHO} "BUILD_SPHINX_PDF  = NO" >> ${WRKSRC}/mk/build.mk
+
+# https://gitlab.haskell.org/ghc/ghc/issues/13542
+.if ${OPSYS} == "SunOS"
+	${RUN} ${ECHO} "SplitSections     = YES" >> ${WRKSRC}/mk/build.mk
+.endif
 
 
 # -----------------------------------------------------------------------------
