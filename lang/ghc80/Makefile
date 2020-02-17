@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/14 08:46:17 pho Exp $
+# $NetBSD: Makefile,v 1.4 2020/02/17 17:22:43 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -26,8 +26,7 @@ CONFLICTS+=	ghc-[0-9]*
 BROKEN_EXCEPT_ON_PLATFORM+= FreeBSD-*-i386
 BROKEN_EXCEPT_ON_PLATFORM+= FreeBSD-*-x86_64
 BROKEN_EXCEPT_ON_PLATFORM+= NetBSD-*-x86_64
-#BROKEN_EXCEPT_ON_PLATFORM+= SunOS-*-i386     # Not available yet
-#BROKEN_EXCEPT_ON_PLATFORM+= SunOS-*-x86_64   # Not available yet
+BROKEN_EXCEPT_ON_PLATFORM+= SunOS-*-x86_64
 
 
 # -----------------------------------------------------------------------------

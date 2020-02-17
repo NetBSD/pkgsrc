@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.3 2020/01/14 08:46:17 pho Exp $
+$NetBSD: distinfo,v 1.4 2020/02/17 17:22:43 jperkin Exp $
 
+SHA1 (ghc-7.10.3-boot-x86_64-unknown-solaris2.tar.xz) = 8ad1116768112bd6f2cf9a9ad2ed6b5052bedd4b
+RMD160 (ghc-7.10.3-boot-x86_64-unknown-solaris2.tar.xz) = c9ef4fa2f83b77b964a08b3f3b6d9916a490506f
+SHA512 (ghc-7.10.3-boot-x86_64-unknown-solaris2.tar.xz) = ba0bbfb1cc91fa9741bc3bec5e40a9bfb2c0a6a962674fcbc4e78dfb3c0ed5c267a6789a085f6a6bdeda5bb8ae0f1c995c21697b361427cb37ac860248a6cb9b
+Size (ghc-7.10.3-boot-x86_64-unknown-solaris2.tar.xz) = 55482280 bytes
 SHA1 (ghc-8.0.2-boot-i386-unknown-freebsd.tar.xz) = 0d6ffbb87f76aa4bfa243ba590978b993b359bd0
 RMD160 (ghc-8.0.2-boot-i386-unknown-freebsd.tar.xz) = cdcea446b5ae76ca90cac6fb3ae85c13fed04094
 SHA512 (ghc-8.0.2-boot-i386-unknown-freebsd.tar.xz) = 078290c325c8e5b8d861816750d58b4289ad51ac4f39b803b670d7ece5fb46e9fd39c1859ec54770ad9cfc7e423790d0f5a0c58e5881f96b4078763a6b48c0a0
@@ -17,15 +21,16 @@ RMD160 (ghc-8.0.2-src.tar.xz) = 56b74f65e17bcab2ff9d5b8dbced3f9694d531cc
 SHA512 (ghc-8.0.2-src.tar.xz) = 58ea3853cd93b556ecdc4abd0be079b2621171b8491f59004ea4e036a4cba4470aaafe6591b942e0a50a64bdc47540e01fe6900212a1ef7087850112d9bfc5ef
 Size (ghc-8.0.2-src.tar.xz) = 10687760 bytes
 SHA1 (patch-compiler_main_DynFlags.hs) = c9671ca255b06dfbb732f3c56e3cbe9bfed1c075
-SHA1 (patch-configure.ac) = 49ee5bb2e1fdb8bd1cb355f2a499d056801964d2
+SHA1 (patch-configure.ac) = 2323f76a41f1dd65054f4d408629d7b1840b89a4
 SHA1 (patch-iserv_ghc.mk) = 6d1d79100b4a7b5d8b0c6f25318eaa8b4e20e43d
 SHA1 (patch-libraries_base_GHC_Event_KQueue.hsc) = 8ee5da667a241a05fde3c580d3dc9bdc05aa5f00
 SHA1 (patch-libraries_base_System_Environment.hs) = ec3dfd916593f600a397e5b594672e6d3564f042
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_CTimespec.hsc) = 758502590ac746990ffcc7fd08dda441ca003532
 SHA1 (patch-libraries_time_lib_Data_Time_Clock_CTimeval.hs) = 8961cbf704b29c5e06ec6a95b9a9c9d0db69760a
-SHA1 (patch-libraries_unix_include_execvpe.h) = 67dd9720a71a6a55bbe2b50e61621ca60187ef00
-SHA1 (patch-libraries_unix_System_Posix_Env_ByteString.hsc) = 3f675fc5d6bf5cc59a2d5ccffeb9ccd51521645a
 SHA1 (patch-libraries_unix_System_Posix_Env.hsc) = e94936c139ca15d45cac4a7feb74a601567913ab
+SHA1 (patch-libraries_unix_System_Posix_Env_ByteString.hsc) = 3f675fc5d6bf5cc59a2d5ccffeb9ccd51521645a
 SHA1 (patch-libraries_unix_System_Posix_Files_Common.hsc) = 6efef280832d376915a8987e4e8aac283408f607
 SHA1 (patch-libraries_unix_System_Posix_Signals.hsc) = 49215dce493a6bbc440f91a3959e592f86fc779b
+SHA1 (patch-libraries_unix_include_execvpe.h) = 67dd9720a71a6a55bbe2b50e61621ca60187ef00
 SHA1 (patch-rts_PosixSource.h) = 604608791f33245d9305dcbd6d9d5979fe162f21
+SHA1 (patch-rules_distdir-way-opts.mk) = 58d9d209762b27da60da98eb942b284b70c88fc5
