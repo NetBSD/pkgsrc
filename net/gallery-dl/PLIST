@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2020/01/20 10:33:04 leot Exp $
+@comment $NetBSD: PLIST,v 1.37 2020/02/17 11:00:51 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -57,6 +57,9 @@ ${PYSITELIB}/gallery_dl/extractor/4chan.pyo
 ${PYSITELIB}/gallery_dl/extractor/500px.py
 ${PYSITELIB}/gallery_dl/extractor/500px.pyc
 ${PYSITELIB}/gallery_dl/extractor/500px.pyo
+${PYSITELIB}/gallery_dl/extractor/8kun.py
+${PYSITELIB}/gallery_dl/extractor/8kun.pyc
+${PYSITELIB}/gallery_dl/extractor/8kun.pyo
 ${PYSITELIB}/gallery_dl/extractor/8muses.py
 ${PYSITELIB}/gallery_dl/extractor/8muses.pyc
 ${PYSITELIB}/gallery_dl/extractor/8muses.pyo
@@ -69,6 +72,9 @@ ${PYSITELIB}/gallery_dl/extractor/adultempire.pyo
 ${PYSITELIB}/gallery_dl/extractor/artstation.py
 ${PYSITELIB}/gallery_dl/extractor/artstation.pyc
 ${PYSITELIB}/gallery_dl/extractor/artstation.pyo
+${PYSITELIB}/gallery_dl/extractor/bcy.py
+${PYSITELIB}/gallery_dl/extractor/bcy.pyc
+${PYSITELIB}/gallery_dl/extractor/bcy.pyo
 ${PYSITELIB}/gallery_dl/extractor/behance.py
 ${PYSITELIB}/gallery_dl/extractor/behance.pyc
 ${PYSITELIB}/gallery_dl/extractor/behance.pyo
@@ -114,6 +120,9 @@ ${PYSITELIB}/gallery_dl/extractor/foolfuuka.pyo
 ${PYSITELIB}/gallery_dl/extractor/foolslide.py
 ${PYSITELIB}/gallery_dl/extractor/foolslide.pyc
 ${PYSITELIB}/gallery_dl/extractor/foolslide.pyo
+${PYSITELIB}/gallery_dl/extractor/furaffinity.py
+${PYSITELIB}/gallery_dl/extractor/furaffinity.pyc
+${PYSITELIB}/gallery_dl/extractor/furaffinity.pyo
 ${PYSITELIB}/gallery_dl/extractor/fuskator.py
 ${PYSITELIB}/gallery_dl/extractor/fuskator.pyc
 ${PYSITELIB}/gallery_dl/extractor/fuskator.pyo
@@ -381,9 +390,6 @@ ${PYSITELIB}/gallery_dl/extractor/xvideos.pyo
 ${PYSITELIB}/gallery_dl/extractor/yandere.py
 ${PYSITELIB}/gallery_dl/extractor/yandere.pyc
 ${PYSITELIB}/gallery_dl/extractor/yandere.pyo
-${PYSITELIB}/gallery_dl/extractor/yaplog.py
-${PYSITELIB}/gallery_dl/extractor/yaplog.pyc
-${PYSITELIB}/gallery_dl/extractor/yaplog.pyo
 ${PYSITELIB}/gallery_dl/extractor/yuki.py
 ${PYSITELIB}/gallery_dl/extractor/yuki.pyc
 ${PYSITELIB}/gallery_dl/extractor/yuki.pyo
