@@ -1,12 +1,12 @@
-$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.3 2018/11/27 15:45:23 adam Exp $
+$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.4 2020/02/17 20:24:18 jperkin Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
 Do not use debuginfo; optimize 'bootstrap' instead.
 Handle earmv7hf for NetBSD.
 
---- src/bootstrap/bootstrap.py.orig	2018-11-07 03:22:38.000000000 +0000
+--- src/bootstrap/bootstrap.py.orig	2020-01-27 15:34:02.000000000 +0000
 +++ src/bootstrap/bootstrap.py
-@@ -196,6 +196,11 @@ def default_build_triple():
+@@ -185,6 +185,11 @@ def default_build_triple():
          'OpenBSD': 'unknown-openbsd'
      }
  
@@ -18,7 +18,7 @@ Handle earmv7hf for NetBSD.
      # Consider the direct transformation first and then the special cases
      if ostype in ostype_mapper:
          ostype = ostype_mapper[ostype]
-@@ -275,10 +280,12 @@ def default_build_triple():
+@@ -271,10 +276,12 @@ def default_build_triple():
              ostype = 'linux-androideabi'
          else:
              ostype += 'eabihf'
@@ -32,12 +32,12 @@ Handle earmv7hf for NetBSD.
          else:
              ostype += 'eabihf'
      elif cputype == 'mips':
-@@ -622,7 +629,7 @@ class RustBuild(object):
-         env["LIBRARY_PATH"] = os.path.join(self.bin_root(), "lib") + \
-             (os.pathsep + env["LIBRARY_PATH"]) \
+@@ -645,7 +652,7 @@ class RustBuild(object):
              if "LIBRARY_PATH" in env else ""
--        env["RUSTFLAGS"] = "-Cdebuginfo=2 "
-+        env["RUSTFLAGS"] = "-Copt-level=2 "
+         # preserve existing RUSTFLAGS
+         env.setdefault("RUSTFLAGS", "")
+-        env["RUSTFLAGS"] += " -Cdebuginfo=2"
++        env["RUSTFLAGS"] += " -Copt-level=2"
  
          build_section = "target.{}".format(self.build_triple())
          target_features = []
