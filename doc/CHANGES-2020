@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1128 2020/02/17 10:44:06 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1129 2020/02/17 11:01:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1607,3 +1607,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/libimagequant to 2.12.6 [adam 2020-02-16]
 	Updated databases/prometheus to 2.16.0 [adam 2020-02-16]
 	Added games/dMagnetic version 0.22 [wiz 2020-02-17]
+	Updated net/gallery-dl to 1.13.0 [leot 2020-02-17]
