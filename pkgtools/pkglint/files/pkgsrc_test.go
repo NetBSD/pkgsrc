@@ -1407,6 +1407,24 @@ func (s *Suite) Test_Pkgsrc_File(c *check.C) {
 	test("filename", "filename")
 }
 
+func (s *Suite) Test_Pkgsrc_FilePkg(c *check.C) {
+	t := s.Init(c)
+
+	t.Chdir(".")
+
+	test := func(rel PackagePath, abs CurrPath) {
+		actual := G.Pkgsrc.FilePkg(rel)
+		t.CheckEquals(actual, abs)
+	}
+
+	test("", "")
+	test("category/package", "")
+	test("../package", "")
+	test("../../category", "")
+	test("../../category/package", "category/package")
+	test("../../../something", "")
+}
+
 func (s *Suite) Test_Change_Version(c *check.C) {
 	t := s.Init(c)
 

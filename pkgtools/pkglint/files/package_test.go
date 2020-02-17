@@ -3525,9 +3525,9 @@ func (s *Suite) Test_Package_Includes(c *check.C) {
 
 	pkg.load()
 
-	t.CheckEquals(pkg.Includes("unconditionally.mk"), true)
-	t.CheckEquals(pkg.Includes("conditionally.mk"), true)
-	t.CheckEquals(pkg.Includes("other.mk"), false)
+	t.CheckEquals(pkg.Includes("unconditionally.mk") != nil, true)
+	t.CheckEquals(pkg.Includes("conditionally.mk") != nil, true)
+	t.CheckEquals(pkg.Includes("other.mk") != nil, false)
 
 	// The file never.mk is in conditionalIncludes since pkglint only
 	// analyzes on the syntactical level. It doesn't evaluate the
