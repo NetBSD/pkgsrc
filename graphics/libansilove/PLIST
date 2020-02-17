@@ -1,6 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2019/06/30 21:58:17 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/02/17 14:42:02 fcambus Exp $
 include/ansilove.h
 lib/libansilove.so
 lib/libansilove.so.1
 lib/libansilove.so.${PKGVERSION}
+man/man3/ansilove_ansi.3
+man/man3/ansilove_artworx.3
+man/man3/ansilove_binary.3
+man/man3/ansilove_clean.3
+man/man3/ansilove_error.3
+man/man3/ansilove_icedraw.3
+man/man3/ansilove_init.3
+man/man3/ansilove_loadfile.3
+man/man3/ansilove_pcboard.3
+man/man3/ansilove_savefile.3
+man/man3/ansilove_tundra.3
+man/man3/ansilove_xbin.3
 man/man3/libansilove.3
