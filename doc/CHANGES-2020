@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1133 2020/02/17 14:45:08 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.1134 2020/02/17 15:23:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1614,3 +1614,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-h2 to 3.2.0 [adam 2020-02-17]
 	Updated graphics/libansilove to 1.2.0 [fcambus 2020-02-17]
 	Updated graphics/ansilove to 4.1.0 [fcambus 2020-02-17]
+	Updated textproc/gtk-doc to 1.32nb1 [wiz 2020-02-17]
