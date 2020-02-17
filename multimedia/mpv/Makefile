@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2020/01/26 21:28:11 leot Exp $
+# $NetBSD: Makefile,v 1.93 2020/02/17 09:47:47 jperkin Exp $
 
 DISTNAME=	mpv-0.32.0
 CATEGORIES=	multimedia
@@ -23,7 +23,6 @@ WAF_REPLACE_EXECUTABLE=	yes
 WAF_CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 WAF_CONFIGURE_ARGS+=	--enable-dvdnav
 WAF_CONFIGURE_ARGS+=	--disable-egl-x11
-WAF_CONFIGURE_ARGS+=	--disable-swift
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
