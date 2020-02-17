@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.480 2020/02/13 03:33:58 gutteridge Exp $
+# $NetBSD: Makefile,v 1.481 2020/02/17 10:43:57 wiz Exp $
 #
 
 COMMENT=	Games
@@ -82,6 +82,7 @@ SUBDIR+=	criticalmass
 SUBDIR+=	crossfire-client
 SUBDIR+=	crossfire-server
 SUBDIR+=	d2x
+SUBDIR+=	dMagnetic
 SUBDIR+=	dd2
 SUBDIR+=	defendguin
 SUBDIR+=	devilutionx
