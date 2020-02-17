@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2019/12/31 10:38:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2020/02/17 20:25:43 adam Exp $
 bin/sphinx-apidoc-${PYVERSSUFFIX}
 bin/sphinx-autogen-${PYVERSSUFFIX}
 bin/sphinx-build-${PYVERSSUFFIX}
@@ -58,6 +58,9 @@ ${PYSITELIB}/sphinx/builders/htmlhelp.pyo
 ${PYSITELIB}/sphinx/builders/latex/__init__.py
 ${PYSITELIB}/sphinx/builders/latex/__init__.pyc
 ${PYSITELIB}/sphinx/builders/latex/__init__.pyo
+${PYSITELIB}/sphinx/builders/latex/constants.py
+${PYSITELIB}/sphinx/builders/latex/constants.pyc
+${PYSITELIB}/sphinx/builders/latex/constants.pyo
 ${PYSITELIB}/sphinx/builders/latex/nodes.py
 ${PYSITELIB}/sphinx/builders/latex/nodes.pyc
 ${PYSITELIB}/sphinx/builders/latex/nodes.pyo
@@ -136,6 +139,9 @@ ${PYSITELIB}/sphinx/domains/citation.pyo
 ${PYSITELIB}/sphinx/domains/cpp.py
 ${PYSITELIB}/sphinx/domains/cpp.pyc
 ${PYSITELIB}/sphinx/domains/cpp.pyo
+${PYSITELIB}/sphinx/domains/index.py
+${PYSITELIB}/sphinx/domains/index.pyc
+${PYSITELIB}/sphinx/domains/index.pyo
 ${PYSITELIB}/sphinx/domains/javascript.py
 ${PYSITELIB}/sphinx/domains/javascript.pyc
 ${PYSITELIB}/sphinx/domains/javascript.pyo
@@ -211,6 +217,12 @@ ${PYSITELIB}/sphinx/ext/autodoc/importer.pyo
 ${PYSITELIB}/sphinx/ext/autodoc/mock.py
 ${PYSITELIB}/sphinx/ext/autodoc/mock.pyc
 ${PYSITELIB}/sphinx/ext/autodoc/mock.pyo
+${PYSITELIB}/sphinx/ext/autodoc/type_comment.py
+${PYSITELIB}/sphinx/ext/autodoc/type_comment.pyc
+${PYSITELIB}/sphinx/ext/autodoc/type_comment.pyo
+${PYSITELIB}/sphinx/ext/autodoc/typehints.py
+${PYSITELIB}/sphinx/ext/autodoc/typehints.pyc
+${PYSITELIB}/sphinx/ext/autodoc/typehints.pyo
 ${PYSITELIB}/sphinx/ext/autosectionlabel.py
 ${PYSITELIB}/sphinx/ext/autosectionlabel.pyc
 ${PYSITELIB}/sphinx/ext/autosectionlabel.pyo
@@ -229,6 +241,9 @@ ${PYSITELIB}/sphinx/ext/coverage.pyo
 ${PYSITELIB}/sphinx/ext/doctest.py
 ${PYSITELIB}/sphinx/ext/doctest.pyc
 ${PYSITELIB}/sphinx/ext/doctest.pyo
+${PYSITELIB}/sphinx/ext/duration.py
+${PYSITELIB}/sphinx/ext/duration.pyc
+${PYSITELIB}/sphinx/ext/duration.pyo
 ${PYSITELIB}/sphinx/ext/extlinks.py
 ${PYSITELIB}/sphinx/ext/extlinks.pyc
 ${PYSITELIB}/sphinx/ext/extlinks.pyo
@@ -464,6 +479,9 @@ ${PYSITELIB}/sphinx/project.pyo
 ${PYSITELIB}/sphinx/pycode/__init__.py
 ${PYSITELIB}/sphinx/pycode/__init__.pyc
 ${PYSITELIB}/sphinx/pycode/__init__.pyo
+${PYSITELIB}/sphinx/pycode/ast.py
+${PYSITELIB}/sphinx/pycode/ast.pyc
+${PYSITELIB}/sphinx/pycode/ast.pyo
 ${PYSITELIB}/sphinx/pycode/parser.py
 ${PYSITELIB}/sphinx/pycode/parser.pyc
 ${PYSITELIB}/sphinx/pycode/parser.pyo
