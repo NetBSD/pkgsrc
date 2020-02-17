@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.87 2020/01/12 20:20:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.88 2020/02/17 13:54:48 mef Exp $
 
-DISTNAME=	poedit-2.2.3
+VERSION=	2.2.3
+DISTNAME=	poedit-${VERSION}
 PKGREVISION=	4
 CATEGORIES=	editors
-MASTER_SITES=	https://github.com/vslavik/poedit/releases/download/v${PKGVERSION_NOREV}-oss/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=vslavik/}
+GITHUB_TAG=	v${VERSION}-oss
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.poedit.net/
 COMMENT=	Cross-platform gettext catalogs (.po files) editor
 LICENSE=	mit
 
+WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config zip:run
