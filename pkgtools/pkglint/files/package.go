@@ -651,7 +651,7 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 	// This check is experimental because it's not yet clear how to
 	// classify the various Python packages and whether all Python
 	// packages really need the prefix.
-	if G.Experimental && pkg.EffectivePkgname != "" && pkg.Includes("../../lang/python/extension.mk") {
+	if G.Experimental && pkg.EffectivePkgname != "" && pkg.Includes("../../lang/python/extension.mk") != nil {
 		pkg.EffectivePkgnameLine.Warnf("The PKGNAME of Python extensions should start with ${PYPKGPREFIX}.")
 	}
 
@@ -1529,9 +1529,12 @@ func (pkg *Package) Rel(filename CurrPath) PackagePath {
 
 // Returns whether the given file (relative to the package directory)
 // is included somewhere in the package, either directly or indirectly.
-func (pkg *Package) Includes(filename PackagePath) bool {
-	return pkg.unconditionalIncludes[filename] != nil ||
-		pkg.conditionalIncludes[filename] != nil
+func (pkg *Package) Includes(filename PackagePath) *MkLine {
+	mkline := pkg.unconditionalIncludes[filename]
+	if mkline == nil {
+		mkline = pkg.conditionalIncludes[filename]
+	}
+	return mkline
 }
 
 // PlistContent lists the directories and files that appear in the
