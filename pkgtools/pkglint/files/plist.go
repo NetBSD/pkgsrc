@@ -72,6 +72,7 @@ func (ck *PlistChecker) Check(plainLines *Lines) {
 		ck.checkLine(pline)
 		pline.CheckTrailingWhitespace()
 	}
+	ck.checkOmf(plines)
 	CheckLinesTrailingEmptyLines(plainLines)
 
 	sorter := NewPlistLineSorter(plines)
@@ -496,6 +497,29 @@ func (ck *PlistChecker) checkCond(pline *PlistLine, cond string) {
 	pline.Warnf(
 		"Condition %q should be added to PLIST_VARS in the package Makefile.",
 		cond)
+}
+
+func (ck *PlistChecker) checkOmf(plines []*PlistLine) {
+	if ck.pkg == nil {
+		return
+	}
+	mkline := ck.pkg.Includes("../../mk/omf-scrollkeeper.mk")
+	if mkline == nil {
+		return
+	}
+
+	for _, pline := range plines {
+		if hasSuffix(pline.text, ".omf") {
+			return
+		}
+	}
+
+	fix := mkline.Autofix()
+	fix.Errorf("Only packages that have .omf files in their PLIST may include omf-scrollkeeper.mk.")
+	if !mkline.HasRationale() {
+		fix.Delete()
+	}
+	fix.Apply()
 }
 
 type PlistLine struct {
