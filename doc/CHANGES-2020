@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1127 2020/02/16 21:18:05 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1128 2020/02/17 10:44:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1606,3 +1606,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-alembic to 1.4.0 [adam 2020-02-16]
 	Updated graphics/libimagequant to 2.12.6 [adam 2020-02-16]
 	Updated databases/prometheus to 2.16.0 [adam 2020-02-16]
+	Added games/dMagnetic version 0.22 [wiz 2020-02-17]
