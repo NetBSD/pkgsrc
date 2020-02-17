@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.69 2019/12/31 10:38:46 adam Exp $
+# $NetBSD: Makefile,v 1.70 2020/02/17 20:25:43 adam Exp $
 
-DISTNAME=	Sphinx-2.3.1
+DISTNAME=	Sphinx-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://www.sphinx-doc.org/
+HOMEPAGE=	https://www.sphinx-doc.org/
 COMMENT=	Python documentation generator
 LICENSE=	modified-bsd
 
@@ -27,8 +27,6 @@ DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jsmath-[0-9]*:../../textproc/py-sphinxcon
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-htmlhelp-[0-9]*:../../textproc/py-sphinxcontrib-htmlhelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-serializinghtml-[0-9]*:../../textproc/py-sphinxcontrib-serializinghtml
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-qthelp-[0-9]*:../../textproc/py-sphinxcontrib-qthelp
-DEPENDS+=	${PYPKGPREFIX}-six>=1.5:../../lang/py-six
-
 TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
