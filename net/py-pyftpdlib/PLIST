@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/16 08:31:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/02/17 11:41:48 adam Exp $
 bin/ftpbench-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -29,6 +29,9 @@ ${PYSITELIB}/pyftpdlib/ioloop.pyo
 ${PYSITELIB}/pyftpdlib/log.py
 ${PYSITELIB}/pyftpdlib/log.pyc
 ${PYSITELIB}/pyftpdlib/log.pyo
+${PYSITELIB}/pyftpdlib/prefork.py
+${PYSITELIB}/pyftpdlib/prefork.pyc
+${PYSITELIB}/pyftpdlib/prefork.pyo
 ${PYSITELIB}/pyftpdlib/servers.py
 ${PYSITELIB}/pyftpdlib/servers.pyc
 ${PYSITELIB}/pyftpdlib/servers.pyo
