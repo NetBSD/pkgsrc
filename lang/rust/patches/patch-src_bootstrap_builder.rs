@@ -1,10 +1,10 @@
-$NetBSD: patch-src_bootstrap_builder.rs,v 1.5 2020/01/03 19:26:33 jperkin Exp $
+$NetBSD: patch-src_bootstrap_builder.rs,v 1.6 2020/02/17 20:24:18 jperkin Exp $
 
 Do not install 'src'.
 
---- src/bootstrap/builder.rs.orig	2019-12-16 15:38:05.000000000 +0000
+--- src/bootstrap/builder.rs.orig	2020-01-27 15:34:02.000000000 +0000
 +++ src/bootstrap/builder.rs
-@@ -466,7 +466,6 @@ impl<'a> Builder<'a> {
+@@ -465,7 +465,6 @@ impl<'a> Builder<'a> {
                  install::Clippy,
                  install::Miri,
                  install::Analysis,
@@ -12,10 +12,10 @@ Do not install 'src'.
                  install::Rustc
              ),
          }
-@@ -994,7 +993,7 @@ impl<'a> Builder<'a> {
-                       !target.contains("wasm32") &&
-                       !target.contains("emscripten") &&
-                       !target.contains("fuchsia") {
+@@ -970,7 +969,7 @@ impl<'a> Builder<'a> {
+                 rustflags.arg("-Zosx-rpath-install-name");
+                 Some("-Wl,-rpath,@loader_path/../lib")
+             } else if !target.contains("windows") {
 -                Some("-Wl,-rpath,$ORIGIN/../lib")
 +                Some("-Wl,-rpath,@PREFIX@/lib")
              } else {
