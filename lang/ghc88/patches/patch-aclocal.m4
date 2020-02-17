@@ -1,4 +1,4 @@
-$NetBSD: patch-aclocal.m4,v 1.3 2020/01/18 10:40:55 pho Exp $
+$NetBSD: patch-aclocal.m4,v 1.4 2020/02/17 17:26:53 jperkin Exp $
 
 Hunk #1:
   Don't require Alex to build. Fixed in upstream:
@@ -8,8 +8,17 @@ Hunk #2:
   Canonicalize OS name netbsd* to "netbsd":
   https://gitlab.haskell.org/ghc/ghc/merge_requests/2496
 
---- aclocal.m4.orig	2020-01-12 06:28:01.000000000 +0000
+--- aclocal.m4.orig	2019-08-25 12:03:36.000000000 +0000
 +++ aclocal.m4
+@@ -661,7 +661,7 @@ AC_DEFUN([FPTOOLS_SET_C_LD_FLAGS],
+     x86_64-unknown-solaris2)
+         $2="$$2 -m64"
+         $3="$$3 -m64"
+-        $4="$$4 -m64"
++        $4="$$4 -64"
+         $5="$$5 -m64"
+         ;;
+     alpha-*)
 @@ -985,8 +985,11 @@ else
  fi;
  changequote([, ])dnl
