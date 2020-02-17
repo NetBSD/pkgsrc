@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.2 2020/01/14 14:44:50 pho Exp $
+$NetBSD: patch-configure.ac,v 1.3 2020/02/17 17:24:06 jperkin Exp $
 
 Hunk #0:
   Don't use non-portable operator ==.
@@ -9,6 +9,15 @@ Hunk #1:
 
 --- configure.ac.orig	2018-10-13 19:49:38.000000000 +0000
 +++ configure.ac
+@@ -811,7 +811,7 @@ if test "x$EnableDtrace" = "xyes"; then
+   if test -n "$DtraceCmd"; then
+     if test "x$TargetOS_CPP-$TargetVendor_CPP" = "xdarwin-apple" \
+       -o "x$TargetOS_CPP-$TargetVendor_CPP" = "xfreebsd-portbld" \
+-      -o "x$TargetOS_CPP-$TargetVendor_CPP" = "xsolaris2-unknown"; then
++      ; then
+       HaveDtrace=YES
+     fi
+   fi
 @@ -914,7 +914,7 @@ FP_CHECK_SIZEOF_AND_ALIGNMENT(uint64_t)
  
  dnl for use in settings.in
@@ -18,15 +27,15 @@ Hunk #1:
    AC_SUBST([Cabal64bit],[True])
  else
    AC_SUBST([Cabal64bit],[False])
-@@ -1172,6 +1172,11 @@ if test "$ac_cv_sizeof_void_p" -eq 8 ; then
- 	    # as of OpenBSD 5.8 (2015), OpenBSD does not support mmap with MAP_NORESERVE.
+@@ -1173,6 +1173,11 @@ if test "$ac_cv_sizeof_void_p" -eq 8 ; t
  	    # The flag MAP_NORESERVE is supported for source compatibility reasons,
  	    # but is completely ignored by OS mmap
-+            use_large_address_space=no
+             use_large_address_space=no
 +        elif test "$ghc_host_os" = "freebsd" ; then
 +            # FreeBSD doesn't support MAP_NORESERVE. The flag
 +            # MAP_NORESERVE is supported for source compatibility
 +            # reasons, but is completely ignored by OS mmap
-             use_large_address_space=no
++            use_large_address_space=no
          else
              AC_CHECK_DECLS([MAP_NORESERVE, MADV_FREE, MADV_DONTNEED],[],[],
+                 [
