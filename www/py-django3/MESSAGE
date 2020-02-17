@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2020/02/17 20:23:21 adam Exp $
+
+Django also requires a database backend.
+
+For PostgreSQL, install databases/py-psycopg2 package.
+For MySQL/MariaDB, install databases/py-mysqldb or databases/py-mysql-connector package.
+For SQLite, install databases/py-sqlite3 package.
+For Oracle, install databases/py-cx_Oracle package.
+===========================================================================
