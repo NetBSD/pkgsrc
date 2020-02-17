@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1132 2020/02/17 14:42:13 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.1133 2020/02/17 14:45:08 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1613,3 +1613,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-idna to 2.9 [adam 2020-02-17]
 	Updated www/py-h2 to 3.2.0 [adam 2020-02-17]
 	Updated graphics/libansilove to 1.2.0 [fcambus 2020-02-17]
+	Updated graphics/ansilove to 4.1.0 [fcambus 2020-02-17]
