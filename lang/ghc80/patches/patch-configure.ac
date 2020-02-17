@@ -1,10 +1,19 @@
-$NetBSD: patch-configure.ac,v 1.1 2020/01/14 08:46:17 pho Exp $
+$NetBSD: patch-configure.ac,v 1.2 2020/02/17 17:22:43 jperkin Exp $
 
 Fix build on FreeBSD/amd64.
 
 --- configure.ac.orig	2017-01-04 14:17:17.000000000 +0000
 +++ configure.ac
-@@ -1060,6 +1060,11 @@ if test "$ac_cv_sizeof_void_p" -eq 8 ; then
+@@ -732,7 +732,7 @@ dnl ** check for dtrace (currently only
+ HaveDtrace=NO
+ AC_PATH_PROG(DtraceCmd,dtrace)
+ if test -n "$DtraceCmd"; then
+-  if test "x$TargetOS_CPP-$TargetVendor_CPP" = "xdarwin-apple" -o "x$TargetOS_CPP-$TargetVendor_CPP" = "xsolaris2-unknown"; then
++  if test "x$TargetOS_CPP-$TargetVendor_CPP" = "xdarwin-apple"; then
+     HaveDtrace=YES
+   fi
+ fi
+@@ -1060,6 +1060,11 @@ if test "$ac_cv_sizeof_void_p" -eq 8 ; t
  	    # The flag MAP_NORESERVE is supported for source compatibility reasons,
  	    # but is completely ignored by OS mmap
              use_large_address_space=no

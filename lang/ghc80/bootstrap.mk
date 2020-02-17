@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.3 2020/01/14 08:46:17 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.4 2020/02/17 17:22:43 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -42,16 +42,11 @@ BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-netbsd.tar.xz
 DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
 .endif
 
-.if !empty(MACHINE_PLATFORM:MSunOS-*-i386) || make(distinfo) || make (makesum) || make(mdi)
-#BOOT_VERSION:=	7.10.3
-#BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-i386-unknown-solaris2.tar.xz
-#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
-.endif
-
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
-#BOOT_VERSION:=	7.10.3
-#BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-x86_64-unknown-solaris2.tar.xz
-#DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} # Available in LOCAL_PORTS
+BOOT_VERSION:=		7.10.3
+BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-x86_64-unknown-solaris2.tar.xz
+SITES.${BOOT_ARCHIVE}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
+DISTFILES:=		${DISTFILES} ${BOOT_ARCHIVE}
 .endif
 
 .if empty(BOOT_ARCHIVE)
@@ -101,7 +96,7 @@ pre-configure:
 # configured, otherwise it will produce executables with no rpath and
 # fail at the configure phase.
 	@${PHASE_MSG} "Preparing bootstrapping compiler for ${PKGNAME}"
-	${RUN}cd ${WRKDIR:Q}/build-extract/${PKGNAME_NOREV}-boot && \
+	${RUN}cd ${WRKDIR:Q}/build-extract/ghc-${BOOT_VERSION}-boot && \
 		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure \
 			--prefix=${TOOLS_DIR:Q} && \
 		${MAKE_PROGRAM} install
