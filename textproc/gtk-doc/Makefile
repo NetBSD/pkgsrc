@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2019/11/13 21:17:47 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2020/02/17 15:23:22 wiz Exp $
 
 DISTNAME=	gtk-doc-1.32
+PKGREVISION=	1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	gtk-doc.pc.in
@@ -32,8 +34,6 @@ SUBST_SED.fix-pc=	-e 's,@PKG_CONFIG@,pkg-config,g'
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# 5 tests fail in 1.29 because of missing file 'sanity.sh'
-# https://gitlab.gnome.org/GNOME/gtk-doc/issues/55
 TEST_TARGET=	check
 
 .include "../../lang/python/application.mk"
@@ -41,7 +41,6 @@ TEST_TARGET=	check
 # needed together with pkg-config by gtkdoc-depscan at runtime
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
 TEST_ENV+=	LC_ALL=en_US.UTF-8
