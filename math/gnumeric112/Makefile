@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2019/11/13 11:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2020/02/17 15:40:31 wiz Exp $
 
 DISTNAME=	gnumeric-1.12.46
+PKGREVISION=	1
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/1.12/}
 EXTRACT_SUFX=	.tar.xz
@@ -22,6 +23,7 @@ PKGCONFIG_OVERRIDE=	libspreadsheet.pc.in
 REPLACE_PERL+=		plugins/perl-func/perl_func.pl
 REPLACE_PERL+=		test/*.pl
 
+# needs a DISPLAY
 TEST_TARGET=		check
 
 .include "options.mk"
@@ -49,7 +51,6 @@ BUILDLINK_API_DEPENDS.goffice0.10+= goffice0.10>=0.10.46
 .include "../../misc/goffice0.10/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.4.12
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.8.7
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
