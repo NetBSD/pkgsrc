@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2019/10/28 12:54:25 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/02/18 16:46:51 joerg Exp $
 
 SHA1 (minetest-5.1.0/minetest-game.tar.gz) = 4376ed746279de2659d9ac3e42cec4ce596aa248
 RMD160 (minetest-5.1.0/minetest-game.tar.gz) = c6fd1ae580dc71ccb8b25f86e5229cf579d92b77
@@ -11,4 +11,4 @@ Size (minetest-5.1.0/minetest.tar.gz) = 8939376 bytes
 SHA1 (patch-CMakeLists.txt) = 50ceef7b158a92900c8d5b6b178d1ab0570e16b1
 SHA1 (patch-src_noise.h) = 54e72bf65fb642542985b1eb5dcd45fb3da4a57f
 SHA1 (patch-src_threading_thread.cpp) = c5334a9fd1e5a65cfa0828b47ebd8e50ba1ed7d7
-SHA1 (patch-src_util_string.cpp) = 152488b322764a788b1fa8858cc7034887741534
+SHA1 (patch-src_util_string.cpp) = 2004c4a9792586d477e8ee9c44c08b5a184a6cd3
