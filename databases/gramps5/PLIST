@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/09 21:43:07 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/02/18 08:27:48 wiz Exp $
+bin/gramps
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/gramps/__init__.py
 ${PYSITELIB}/gramps/__init__.pyc
 ${PYSITELIB}/gramps/__init__.pyo
@@ -3250,7 +3252,6 @@ ${PYSITELIB}/gramps/test/test_util.pyo
 ${PYSITELIB}/gramps/version.py
 ${PYSITELIB}/gramps/version.pyc
 ${PYSITELIB}/gramps/version.pyo
-bin/gramps
 man/cs/man1/gramps.1
 man/fr/man1/gramps.1
 man/man1/gramps.1
