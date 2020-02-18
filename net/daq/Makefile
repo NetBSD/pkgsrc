@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/08/01 14:59:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/02/18 22:56:43 sevan Exp $
 
 DISTNAME=	daq-2.0.6
 CATEGORIES=	net security
@@ -15,5 +15,6 @@ BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
+.include "../../devel/flex/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
