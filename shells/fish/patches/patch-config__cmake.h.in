@@ -1,0 +1,14 @@
+$NetBSD: patch-config__cmake.h.in,v 1.1 2020/02/18 22:00:49 maya Exp $
+
+--- config_cmake.h.in.orig	2020-02-12 14:04:07.000000000 +0000
++++ config_cmake.h.in
+@@ -144,6 +144,9 @@
+ 
+ /* Define to the full name of this package. */
+ #define PACKAGE_NAME "fish"
++#
++/* Define to 1 if tparm accepts a fixed amount of parameters. */
++#cmakedefine TPARM_VARARGS 1
+ 
+ /* Define to 1 if tparm accepts a fixed amount of parameters. */
+ #cmakedefine TPARM_SOLARIS_KLUDGE 1
