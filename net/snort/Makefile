@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2019/07/20 22:46:41 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2020/02/18 23:00:26 sevan Exp $
 #
 
-DISTNAME=		snort-2.9.9.0
-PKGREVISION=		2
+DISTNAME=		snort-2.9.15.1
 CATEGORIES=		net security
 MASTER_SITES=		https://www.snort.org/downloads/archive/snort/
 
@@ -21,6 +20,7 @@ CONFLICTS+=		snort-prelude-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+USE_TOOLS+= 		pkg-config
 PKG_SYSCONFSUBDIR=	snort
 RCD_SCRIPTS=		snort
 SNORT_USER?=		snort
@@ -90,6 +90,8 @@ CONFIGURE_ARGS+=	--with-libpcap-includes=${BUILDLINK_PREFIX.libpcap}/include
 CONFIGURE_ARGS+=	--with-libpcap-libraries=${BUILDLINK_PREFIX.libpcap}/lib
 CONFIGURE_ARGS+=	--disable-so_with_static_lib
 
+BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
+
 pre-build:
 	${CP} ${WRKSRC}/etc/snort.conf ${WRKSRC}/etc/snort.conf.default
 
@@ -115,6 +117,11 @@ post-install:
 			${FILESDIR}/white_list.rules ${DESTDIR}${EGDIR}/rules/
 	${INSTALL_MAN} ${WRKSRC}/snort.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
+.include "../../www/nghttp2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../lang/LuaJIT2/buildlink3.mk"
+.include "../../devel/flex/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../net/daq/buildlink3.mk"
 .include "../../net/libdnet/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
