@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2020/02/16 10:56:24 wiz Exp $
+$NetBSD: distinfo,v 1.19 2020/02/18 17:16:04 tnn Exp $
 
-SHA1 (slib-3b6.tar.gz) = fd475dd6841ee0d4df52228dee890500b3f754d7
-RMD160 (slib-3b6.tar.gz) = 4b2481b57674ee4dd5f79dba9aed5a44a357b535
-SHA512 (slib-3b6.tar.gz) = 206384ccad081b964a1ba0c7baf8cc119c8c10245d156560e340484086d4896792511839470c7c716373d69069b46b5d937dbef37b9e83c84db9bb7585d51a6a
-Size (slib-3b6.tar.gz) = 984776 bytes
+SHA1 (slib-3b6.tar.gz) = 3346cf1a297ca25adcecbb0ca50c420902fec15c
+RMD160 (slib-3b6.tar.gz) = 3686a1d9f10bc79baadeff8c97943e27007bbce6
+SHA512 (slib-3b6.tar.gz) = e21090065c2d15f97bfd57600c9ea2e8af51e12f7fb1fedcaab4398a5639a102d359efe8dc2220885fa5392314c4fbb0c15f72e16032551eaa33843782528e85
+Size (slib-3b6.tar.gz) = 984759 bytes
 SHA1 (patch-aa) = 15d2eecb09101b0605f21455e7ba318e76308aa8
