@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2019/12/19 23:59:56 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2020/02/18 13:11:50 nia Exp $
 
-DISTNAME=	fluidsynth-2.1.0
-PKGREVISION=	1
+DISTNAME=	fluidsynth-2.1.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FluidSynth/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,9 +19,6 @@ CMAKE_ARGS+=	-Denable-framework=OFF
 
 PKGCONFIG_OVERRIDE=	fluidsynth.pc.in
 
-CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t
-CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t -Du_int64_t=uint64_t
-CPPFLAGS.SunOS+=	-DSOUND_PCM_WRITE_CHANNELS=SNDCTL_DSP_CHANNELS
 LDFLAGS.SunOS+=		-lsocket
 
 .include "../../mk/bsd.prefs.mk"
