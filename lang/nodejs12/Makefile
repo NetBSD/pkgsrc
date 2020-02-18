@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/02/07 09:51:09 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/02/18 23:06:05 jperkin Exp $
 
 DISTNAME=	node-v12.15.0
 
@@ -13,8 +13,6 @@ CONFIGURE_ARGS+=	--shared-nghttp2
 CONFIGURE_ARGS+=	--with-intl=system-icu
 
 CHECK_PORTABILITY_SKIP+=	deps/openssl/openssl/.travis-create-release.sh
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 .if ${MACHINE_ARCH} == "i386"
 # 64 bit atomic ops are required
