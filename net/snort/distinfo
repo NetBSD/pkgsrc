@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.50 2017/06/15 18:27:50 nils Exp $
+$NetBSD: distinfo,v 1.51 2020/02/18 23:00:26 sevan Exp $
 
-SHA1 (snort-2.9.9.0.tar.gz) = c522b6130655e0d12299af6fd1a613b20259b4e3
-RMD160 (snort-2.9.9.0.tar.gz) = cfe3f7bb4203411e40376607c6bd1ee1fe7c4f84
-SHA512 (snort-2.9.9.0.tar.gz) = 2c17539c80484c90198a2e5d5efd1e70f26afb79ce7c28e745ded356b6f1a1f97763ff21fde986652af1768fa3bcdafbbcc3c82ee8ad6d2ef0471f360cfcab83
-Size (snort-2.9.9.0.tar.gz) = 6364482 bytes
-SHA1 (patch-src_target-based_sftarget__reader.c) = c0f4bde7a1a0fa00e4efecf26eb579cc2b1cb2ee
+SHA1 (snort-2.9.15.1.tar.gz) = dc8c89125c27153ffd69f27fbd60b95b9d1cbfe0
+RMD160 (snort-2.9.15.1.tar.gz) = 10ed066819c6021367245f59598509aeaeaef197
+SHA512 (snort-2.9.15.1.tar.gz) = 9940f5bcdcf04823f9cb5c3f8efda72f98f6a47bce9f40399dec9ec41d23a386c7f7e44861d82368de31546123b920f9fc617197bbf9c5e750724bf8b9e19590
+Size (snort-2.9.15.1.tar.gz) = 6618999 bytes
+SHA1 (patch-src_target-based_sftarget__reader.c) = 60f053d990af6329e48a1a26c89d9c4a59a0ffce
