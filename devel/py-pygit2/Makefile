@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/01/11 16:20:56 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/02/18 11:32:43 adam Exp $
 
-DISTNAME=	pygit2-1.0.2
+DISTNAME=	pygit2-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
@@ -14,8 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-
-USE_LANGUAGES=	c
 
 PYSETUPTESTTARGET=	pytest
 
