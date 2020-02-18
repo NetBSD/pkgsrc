@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1141 2020/02/18 08:27:57 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1142 2020/02/18 10:13:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1624,3 +1624,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-aiormq to 3.2.1 [adam 2020-02-18]
 	Updated net/py-aio-pika to 6.5.2 [adam 2020-02-18]
 	Updated databases/gramps5 to 5.1.2nb1 [wiz 2020-02-18]
+	Updated www/py-httptools to 0.1.1 [adam 2020-02-18]
+	Updated www/py-uvicorn to 0.11.3 [adam 2020-02-18]
