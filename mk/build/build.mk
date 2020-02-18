@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.30 2020/01/19 18:20:46 maya Exp $
+# $NetBSD: build.mk,v 1.31 2020/02/18 16:10:37 maya Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -63,6 +63,8 @@ _MAKE_JOBS_N=	${MAKE_JOBS.${PKGPATH}}
 .elif defined(MAKE_JOBS)
 _MAKE_JOBS=	-j${MAKE_JOBS}
 _MAKE_JOBS_N=	${MAKE_JOBS}
+.else
+_MAKE_JOBS_N=	1
 .endif
 
 ######################################################################
