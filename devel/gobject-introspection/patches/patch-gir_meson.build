@@ -1,0 +1,16 @@
+$NetBSD: patch-gir_meson.build,v 1.1 2020/02/18 16:00:22 jperkin Exp $
+
+gircompiler requires libraries from the build area.
+
+--- gir/meson.build.orig	2019-09-09 19:22:10.000000000 +0000
++++ gir/meson.build
+@@ -433,7 +433,8 @@ foreach gir : gir_files
+     input: gir,
+     output: '@BASENAME@.typelib',
+     depends: [gobject_gir, ],
+-    command: [gircompiler, '-o', '@OUTPUT@', '@INPUT@',
++    command: ['env', 'LD_LIBRARY_PATH=' + meson.current_build_dir() + '/../girepository',
++              gircompiler, '-o', '@OUTPUT@', '@INPUT@',
+               '--includedir', meson.current_build_dir(),
+               '--includedir', meson.current_source_dir(),
+     ],
