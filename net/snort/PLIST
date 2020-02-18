@@ -1,9 +1,14 @@
-@comment $NetBSD: PLIST,v 1.33 2017/06/15 18:27:50 nils Exp $
+@comment $NetBSD: PLIST,v 1.34 2020/02/18 23:00:26 sevan Exp $
+bin/appid_detector_builder.sh
 bin/snort
 bin/u2boat
+bin/u2openappid
 bin/u2spewfoo
+bin/u2streamer
+lib/libsf_sorules.la
 lib/pkgconfig/snort.pc
 lib/snort_dynamicengine/libsf_engine.la
+lib/snort_dynamicpreprocessor/libsf_appid_preproc.la
 lib/snort_dynamicpreprocessor/libsf_dce2_preproc.la
 lib/snort_dynamicpreprocessor/libsf_dnp3_preproc.la
 lib/snort_dynamicpreprocessor/libsf_dns_preproc.la
@@ -95,11 +100,18 @@ share/examples/snort/snort.conf.default
 share/examples/snort/threshold.conf
 share/examples/snort/unicode.map
 share/snort/src/snort_dynamicsrc/Unified2_common.h
+share/snort/src/snort_dynamicsrc/appId.h
+share/snort/src/snort_dynamicsrc/appIdApi.h
+share/snort/src/snort_dynamicsrc/appdata_adjuster.c
+share/snort/src/snort_dynamicsrc/appdata_adjuster.h
 share/snort/src/snort_dynamicsrc/bitop.h
+share/snort/src/snort_dynamicsrc/cip_common.h
+share/snort/src/snort_dynamicsrc/dns_defs.h
 share/snort/src/snort_dynamicsrc/event.h
 share/snort/src/snort_dynamicsrc/file_api.h
 share/snort/src/snort_dynamicsrc/file_mail_common.h
 share/snort/src/snort_dynamicsrc/idle_processing.h
+share/snort/src/snort_dynamicsrc/md5.h
 share/snort/src/snort_dynamicsrc/mpse_methods.h
 share/snort/src/snort_dynamicsrc/obfuscation.h
 share/snort/src/snort_dynamicsrc/pcap_pkthdr32.h
@@ -107,6 +119,9 @@ share/snort/src/snort_dynamicsrc/perf_indicators.h
 share/snort/src/snort_dynamicsrc/plugin_enum.h
 share/snort/src/snort_dynamicsrc/preprocids.h
 share/snort/src/snort_dynamicsrc/profiler.h
+share/snort/src/snort_dynamicsrc/reg_test.c
+share/snort/src/snort_dynamicsrc/reg_test.h
+share/snort/src/snort_dynamicsrc/reload_api.h
 share/snort/src/snort_dynamicsrc/rule_option_types.h
 share/snort/src/snort_dynamicsrc/session_api.h
 share/snort/src/snort_dynamicsrc/sfPolicyUserData.c
@@ -114,6 +129,7 @@ share/snort/src/snort_dynamicsrc/sfPolicyUserData.h
 share/snort/src/snort_dynamicsrc/sf_base64decode.c
 share/snort/src/snort_dynamicsrc/sf_base64decode.h
 share/snort/src/snort_dynamicsrc/sf_decompression.h
+share/snort/src/snort_dynamicsrc/sf_decompression_define.h
 share/snort/src/snort_dynamicsrc/sf_dynamic_common.h
 share/snort/src/snort_dynamicsrc/sf_dynamic_define.h
 share/snort/src/snort_dynamicsrc/sf_dynamic_engine.h
@@ -132,10 +148,17 @@ share/snort/src/snort_dynamicsrc/sf_types.h
 share/snort/src/snort_dynamicsrc/sfcontrol.h
 share/snort/src/snort_dynamicsrc/sfdebug.h
 share/snort/src/snort_dynamicsrc/sfghash.h
+share/snort/src/snort_dynamicsrc/sfhashfcn.c
 share/snort/src/snort_dynamicsrc/sfhashfcn.h
+share/snort/src/snort_dynamicsrc/sfmemcap.c
+share/snort/src/snort_dynamicsrc/sfmemcap.h
 share/snort/src/snort_dynamicsrc/sfparser.c
+share/snort/src/snort_dynamicsrc/sfprimetable.c
+share/snort/src/snort_dynamicsrc/sfprimetable.h
 share/snort/src/snort_dynamicsrc/sfsnort_dynamic_detection_lib.c
 share/snort/src/snort_dynamicsrc/sfsnort_dynamic_detection_lib.h
+share/snort/src/snort_dynamicsrc/sfxhash.c
+share/snort/src/snort_dynamicsrc/sfxhash.h
 share/snort/src/snort_dynamicsrc/sidechannel_define.h
 share/snort/src/snort_dynamicsrc/signature.h
 share/snort/src/snort_dynamicsrc/sip_common.h
@@ -152,6 +175,8 @@ share/snort/src/snort_dynamicsrc/ssl_inspect.h
 share/snort/src/snort_dynamicsrc/ssl_session.h
 share/snort/src/snort_dynamicsrc/str_search.h
 share/snort/src/snort_dynamicsrc/stream_api.h
+share/snort/src/snort_dynamicsrc/thirdparty_appid_api.h
+share/snort/src/snort_dynamicsrc/thirdparty_appid_types.h
 share/snort/src/snort_dynamicsrc/treenodes.h
 share/snort/src/snort_dynamicsrc/util_unfold.c
 share/snort/src/snort_dynamicsrc/util_unfold.h
