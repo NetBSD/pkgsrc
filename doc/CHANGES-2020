@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1143 2020/02/18 11:33:01 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1144 2020/02/18 13:11:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1628,3 +1628,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-uvicorn to 0.11.3 [adam 2020-02-18]
 	Updated www/py-django-tastypie to 0.14.3 [adam 2020-02-18]
 	Updated devel/py-pygit2 to 1.0.3 [adam 2020-02-18]
+	Updated audio/fluidsynth to 2.1.1 [nia 2020-02-18]
