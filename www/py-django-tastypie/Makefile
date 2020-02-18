@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2018/09/11 07:51:47 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/02/18 11:26:52 adam Exp $
 
-DISTNAME=	django-tastypie-0.14.2
+DISTNAME=	django-tastypie-0.14.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	python www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-tastypie/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-biplist-[0-9]*:../../textproc/py-biplist
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-django>=1.8:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-lxml>3:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-python-mimeparse>=0.1.4:../../www/py-python-mimeparse
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
