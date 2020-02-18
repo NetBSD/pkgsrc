@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/03/25 08:56:23 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/02/18 10:12:20 adam Exp $
 
-SHA1 (httptools-0.0.13.tar.gz) = fe2162098213f01398a2d1ba450df5aa577d790d
-RMD160 (httptools-0.0.13.tar.gz) = 2de7fd63d0810f47633e7dbd02b34b18f0181fe3
-SHA512 (httptools-0.0.13.tar.gz) = 119e078a4bf95000ef81349ba2e8b2d2672092182bf394088c123b3169b21bea0bd229a9ced106f13bfcb986f4973a69f559a901b6352d944895d9cbd8673f3e
-Size (httptools-0.0.13.tar.gz) = 104152 bytes
+SHA1 (httptools-0.1.1.tar.gz) = b8393431cdc9bb503a88bf9f054dfab1a7af83b4
+RMD160 (httptools-0.1.1.tar.gz) = 97702c407642ee03bfd3c96e0139039e47cdaa04
+SHA512 (httptools-0.1.1.tar.gz) = 6351c6d9a384a81759b17cb0f0aa7cde410ff8131037186d79a16803e6fe4ba8f7cedc4bb592a519559a59a3bbaa7dfc478e620357d878444c42582741080190
+Size (httptools-0.1.1.tar.gz) = 106162 bytes
