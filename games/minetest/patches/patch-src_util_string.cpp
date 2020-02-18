@@ -1,10 +1,25 @@
-$NetBSD: patch-src_util_string.cpp,v 1.1 2019/06/30 22:27:22 nia Exp $
+$NetBSD: patch-src_util_string.cpp,v 1.2 2020/02/18 16:46:51 joerg Exp $
 
 Work around iconv("UTF-8", "WCHAR_T") failing on NetBSD.
 
---- src/util/string.cpp.orig	2019-03-31 20:57:45.000000000 +0000
+--- src/util/string.cpp.orig	2019-10-12 13:48:58.000000000 +0000
 +++ src/util/string.cpp
-@@ -79,6 +79,12 @@ bool convert(const char *to, const char 
+@@ -38,9 +38,11 @@ with this program; if not, write to the 
+ 	#include <windows.h>
+ #endif
+ 
+-#if defined(_ICONV_H_) && (defined(__FreeBSD__) || defined(__NetBSD__) || \
+-	defined(__OpenBSD__) || defined(__DragonFly__))
+-	#define BSD_ICONV_USED
++#ifdef __NetBSD__
++#  include <sys/param.h>
++#  if __NetBSD_Version__ <= 999001500
++#  define BSD_ICONV_USED
++#  endif
+ #endif
+ 
+ static bool parseHexColorString(const std::string &value, video::SColor &color,
+@@ -79,6 +81,12 @@ bool convert(const char *to, const char 
  	return true;
  }
  
@@ -17,7 +32,7 @@ Work around iconv("UTF-8", "WCHAR_T") failing on NetBSD.
  std::wstring utf8_to_wide(const std::string &input)
  {
  	size_t inbuf_size = input.length() + 1;
-@@ -104,8 +110,9 @@ std::wstring utf8_to_wide(const std::str
+@@ -104,8 +112,9 @@ std::wstring utf8_to_wide(const std::str
  
  	return out;
  }
