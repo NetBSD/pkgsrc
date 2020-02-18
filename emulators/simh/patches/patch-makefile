@@ -1,11 +1,12 @@
-$NetBSD: patch-makefile,v 1.2 2018/09/24 14:12:28 gson Exp $
+$NetBSD: patch-makefile,v 1.3 2020/02/18 16:49:50 joerg Exp $
 
 Exclude -flto for gcc 4.1.3 (used in NetBSD/vax 6)
+Exclude -flto for clang on NetBSD
 Exclude -flto for gcc 4.4.7 (Used in DragonFly 2.13 - 3.1)
 Make -O2 conditional so can be overridden by environment
 Fix SDL2 detection
 
---- makefile.orig	2018-09-20 05:36:48.000000000 +0000
+--- makefile.orig	2018-09-20 05:36:48.-00145232 +0000
 +++ makefile
 @@ -217,7 +217,7 @@ ifeq ($(WIN32),)  #*nix Environments (&&
        $(shell git log -1 --pretty="SIM_GIT_COMMIT_ID %H%nSIM_GIT_COMMIT_TIME $(isodate)" >.git-commit-id)
@@ -16,7 +17,7 @@ Fix SDL2 detection
    PCAPLIB = pcap
    ifeq (agcc,$(findstring agcc,$(GCC))) # Android target build?
      OS_CCDEFS = -D_GNU_SOURCE
-@@ -1039,11 +1039,11 @@ ifneq (,$(UNSUPPORTED_BUILD))
+@@ -1039,20 +1039,23 @@ ifneq (,$(UNSUPPORTED_BUILD))
  endif
  ifneq ($(DEBUG),)
    CFLAGS_G = -g -ggdb -g3
@@ -29,8 +30,12 @@ Fix SDL2 detection
 +    CFLAGS_O ?= -O0
      ifeq (Darwin,$(OSTYPE))
        NO_LTO = 1
++    endif
++    ifeq (NetBSD,$(OSTYPE))
++      NO_LTO = 1
      endif
-@@ -1052,7 +1052,7 @@ else
+   else
+     NO_LTO = 1
      ifeq (Darwin,$(OSTYPE))
        CFLAGS_O += -O4 -fno-strict-overflow -flto -fwhole-program
      else
