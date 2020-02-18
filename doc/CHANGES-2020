@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1139 2020/02/17 20:26:29 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1140 2020/02/18 06:33:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1621,3 +1621,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rust to 1.41.0 [jperkin 2020-02-17]
 	Added www/py-django3 version 3.0.3 [adam 2020-02-17]
 	Updated textproc/py-sphinx to 2.4.1 [adam 2020-02-17]
+	Updated net/py-aiormq to 3.2.1 [adam 2020-02-18]
+	Updated net/py-aio-pika to 6.5.2 [adam 2020-02-18]
