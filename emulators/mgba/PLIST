@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/01/25 19:26:18 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/02/18 13:29:48 nia Exp $
 bin/mgba
 ${PLIST.qt}bin/mgba-qt
 include/mgba-util/arm-algo.h
@@ -143,6 +143,7 @@ include/mgba/internal/sm83/decoder.h
 include/mgba/internal/sm83/emitter-sm83.h
 include/mgba/internal/sm83/isa-sm83.h
 include/mgba/internal/sm83/sm83.h
+lib/libmgba.so
 lib/libmgba.so.0.8
 lib/libmgba.so.${PKGVERSION}
 ${PLIST.qt}man/man6/mgba-qt.6
