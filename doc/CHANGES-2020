@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1140 2020/02/18 06:33:20 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1141 2020/02/18 08:27:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1623,3 +1623,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-sphinx to 2.4.1 [adam 2020-02-17]
 	Updated net/py-aiormq to 3.2.1 [adam 2020-02-18]
 	Updated net/py-aio-pika to 6.5.2 [adam 2020-02-18]
+	Updated databases/gramps5 to 5.1.2nb1 [wiz 2020-02-18]
