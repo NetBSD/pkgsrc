@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 2020/02/18 16:40:18 joerg Exp $
+$NetBSD: patch-ad,v 1.3 2020/02/18 17:44:26 joerg Exp $
 
 make sure no one sneaks a -O* in on us via one of these variables
 set in the environment
@@ -15,7 +15,7 @@ set in the environment
 +CPPFLAGS_NOOPT=$(CPPFLAGS:-O%=)
 +CXXFLAGS_NOOPT=$(CXXFLAGS:-O%=)
 +
-+parse.o: parse.h
++parse.o: parse.cc
 +	@[ -d dep ] || mkdir dep
 +	$(CXX_NOOPT) $(CPPFLAGS_NOOPT) $(CXXFLAGS_NOOPT) -MD -c $< -o $*.o
 +	mv $*.d dep/$*.d
