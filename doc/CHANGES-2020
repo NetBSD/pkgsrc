@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1146 2020/02/18 13:29:58 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1147 2020/02/18 13:30:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1631,3 +1631,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fluidsynth to 2.1.1 [nia 2020-02-18]
 	Updated audio/musicpd to 0.21.20 [nia 2020-02-18]
 	Updated emulators/mgba to 0.8.1 [nia 2020-02-18]
+	Updated emulators/libretro-mgba to 0.8.1 [nia 2020-02-18]
