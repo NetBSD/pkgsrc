@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1149 2020/02/18 16:52:35 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1150 2020/02/18 22:01:20 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1635,3 +1635,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/gitea to 1.11.1 [nia 2020-02-18]
 	Updated devel/py-cython to 0.29.15 [adam 2020-02-18]
 	Updated graphics/py-matplotlib to 3.1.3 [adam 2020-02-18]
+	Updated shells/fish to 3.1.0 [maya 2020-02-18]
