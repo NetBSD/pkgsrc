@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/02/03 08:26:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/02/19 11:30:17 adam Exp $
 
 DISTNAME=	djangocms-column-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/divio/djangocms-column
 COMMENT=	Multi Column Plugin for django CMS
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django-cms>-3.4.5:../../www/py-django-cms
+DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.4.5:../../www/py-django-cms
 
 USE_LANGUAGES=	# none
 
