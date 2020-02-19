@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/11/15 14:14:14 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/02/19 19:07:19 adam Exp $
 
-SHA1 (buildbot-worker-1.5.0.tar.gz) = d6f289ca167cb8860fa57a1c23ada8bf22db967a
-RMD160 (buildbot-worker-1.5.0.tar.gz) = 1d63e584b1723479edd47e2d5f84a640374f0298
-SHA512 (buildbot-worker-1.5.0.tar.gz) = 37345c24c4f010db7ada4b4d30378e5fb6589991f5d2d4c9565c773c8d9b005c1982dc19674c45dc3189f18c19fb96468f3df87cdbd361be666cc326aa90912a
-Size (buildbot-worker-1.5.0.tar.gz) = 105814 bytes
+SHA1 (buildbot-worker-2.6.0.tar.gz) = 9b013f4e9e700929290b19d492052acba223d5ee
+RMD160 (buildbot-worker-2.6.0.tar.gz) = 3644a5714176ec7c175673db557bb04b4d2f8098
+SHA512 (buildbot-worker-2.6.0.tar.gz) = 21070d6e8e54fb34e2d75c67c10e8ee36a4730de4f4a54605ffb689ef37bc1642e327c3935b7db25bb972f6ec0649c419e9eed61a17c6b4ca9db082940f2ee1b
+Size (buildbot-worker-2.6.0.tar.gz) = 115284 bytes
