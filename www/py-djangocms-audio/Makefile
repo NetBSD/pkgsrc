@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/05/15 11:40:26 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/02/19 11:19:15 adam Exp $
 
-DISTNAME=	djangocms-audio-1.1.0
+DISTNAME=	djangocms-audio-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-audio/}
