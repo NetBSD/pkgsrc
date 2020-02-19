@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/05/15 11:40:26 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/02/19 11:23:08 adam Exp $
 
-DISTNAME=	djangocms-googlemap-1.2.0
+DISTNAME=	djangocms-googlemap-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-googlemap/}
@@ -11,7 +11,7 @@ COMMENT=	Google Maps plugin for django CMS
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.4.5:../../www/py-django-cms
-DEPENDS+=	${PYPKGPREFIX}-django-filer-[0-9]*:../../www/py-django-filer
+DEPENDS+=	${PYPKGPREFIX}-django-filer>=1.3.0:../../www/py-django-filer
 
 USE_LANGUAGES=	# none
 
