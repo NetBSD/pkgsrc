@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/08/07 06:31:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/02/19 09:56:48 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -53,6 +53,8 @@ ${PYSITELIB}/mptt/locale/ru/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/ru/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/uk/LC_MESSAGES/django.po
+${PYSITELIB}/mptt/locale/zh_Hans/LC_MESSAGES/django.mo
+${PYSITELIB}/mptt/locale/zh_Hans/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/locale/zh_Hant/LC_MESSAGES/django.mo
 ${PYSITELIB}/mptt/locale/zh_Hant/LC_MESSAGES/django.po
 ${PYSITELIB}/mptt/managers.py
