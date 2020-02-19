@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/11/20 18:44:03 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/02/19 11:23:08 adam Exp $
 
-SHA1 (djangocms-googlemap-1.2.0.tar.gz) = e8ebafff382e15f67593227e455701af27e64ce8
-RMD160 (djangocms-googlemap-1.2.0.tar.gz) = 5b1bff27135a6b40262c46d6c89dffeaeac5c64b
-SHA512 (djangocms-googlemap-1.2.0.tar.gz) = 97d1470596c4576faf45695f27e34326355d9e22de286b7c7829f6bec2754152ca535d686007a4eb92900a88a66b57a10f3256be59083de92795d7ae693ba27f
-Size (djangocms-googlemap-1.2.0.tar.gz) = 38368 bytes
-SHA1 (patch-setup.py) = b2d1a85c164df18fe9d57c2dc6b2adfa6e913819
+SHA1 (djangocms-googlemap-1.4.0.tar.gz) = 2ba9a0c71091fa393589672fe4696a044447b4d2
+RMD160 (djangocms-googlemap-1.4.0.tar.gz) = f7a3cb48c51be996396510cfec552f81ff036008
+SHA512 (djangocms-googlemap-1.4.0.tar.gz) = 91b84c8a694c4c44e41a4b55dd4b83e0f37f0fff44e9df08b5c96ae038fb9f4cb989856f0d6ee1b33cbda0afa6dab3c2e087481fb711981077d63333548a96bb
+Size (djangocms-googlemap-1.4.0.tar.gz) = 38590 bytes
