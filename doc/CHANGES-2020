@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1160 2020/02/19 14:27:20 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1161 2020/02/19 17:52:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1662,3 +1662,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-djangocms-video to 2.3.0 [adam 2020-02-19]
 	Updated net/knot to 2.9.2 [ryoon 2020-02-19]
 	Updated wm/swc to 0.0.0.20200219 [nia 2020-02-19]
+	Updated print/py-reportlab to 3.5.34 [adam 2020-02-19]
+	Updated www/py-webcolors to 1.11.1 [adam 2020-02-19]
+	Updated graphics/py-blockdiag to 2.0.1 [adam 2020-02-19]
+	Updated graphics/py-actdiag to 2.0.0 [adam 2020-02-19]
+	Updated graphics/py-seqdiag to 2.0.0 [adam 2020-02-19]
