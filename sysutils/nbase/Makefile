@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/01/24 19:23:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2020/02/19 22:37:38 cheusov Exp $
 #
 
-DISTNAME=	nbase-7.0.0.6
+DISTNAME=	nbase-7.0.0.7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cheusov/}
 
@@ -11,11 +11,11 @@ COMMENT=	NetBSD userlevel portable to other UNIX-like systems
 LICENSE=	modified-bsd
 
 GITHUB_PROJECT=	nbase
-BUILD_DEPENDS+=	mk-configure>=0.31.0:../../devel/mk-configure \
+BUILD_DEPENDS+=	mk-configure>=0.34.0:../../devel/mk-configure \
 		byacc-[0-9]*:../../devel/byacc
 
 USE_LANGUAGES=		c
-USE_TOOLS+=		lex # native yacc on OpenBSD is not good
+USE_TOOLS+=		lex
 
 TEST_TARGET=		test
 
