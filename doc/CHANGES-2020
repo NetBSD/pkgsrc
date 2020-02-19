@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1153 2020/02/19 07:40:43 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.1154 2020/02/19 09:35:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1639,3 +1639,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/snort to 2.9.15.1 [sevan 2020-02-18]
 	Updated audio/musescore to 3.4.2nb1 [gutteridge 2020-02-19]
 	Updated multimedia/mpv to 0.32.0nb1 [jperkin 2020-02-19]
+	Updated net/py-botocore to 1.15.2 [adam 2020-02-19]
+	Updated net/py-s3transfer to 0.3.3 [adam 2020-02-19]
+	Updated net/py-boto3 to 1.12.2 [adam 2020-02-19]
+	Updated net/py-awscli to 1.18.2 [adam 2020-02-19]
