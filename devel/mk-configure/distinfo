@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2020/01/18 21:23:16 cheusov Exp $
+$NetBSD: distinfo,v 1.24 2020/02/19 22:03:17 cheusov Exp $
 
-SHA1 (mk-configure-0.33.0.tar.gz) = 810ccb330fb66803a14e4ca607001bed3d964313
-RMD160 (mk-configure-0.33.0.tar.gz) = 2c5868f5ba14b39c058b5ba93f600fbe8572a694
-SHA512 (mk-configure-0.33.0.tar.gz) = 0d76c07f1d0faa4698dfd3e62fe41abbfa5e1e8a4bb687766c370065db35ebdc807de774d21f4c189bbeb77a8c3e2acec7022c25f4877d685c695ee4524bea3c
-Size (mk-configure-0.33.0.tar.gz) = 313164 bytes
+SHA1 (mk-configure-0.34.0.tar.gz) = 90479abd74ac632ea17178ecd75037e4b20855c8
+RMD160 (mk-configure-0.34.0.tar.gz) = c1d933e42e24da58c1b1007bef14c69afc9021b7
+SHA512 (mk-configure-0.34.0.tar.gz) = f29aa2455dcaa5b152121279ca6d4bc326ac4f5cf31a6de622c13ddde277ef243ba1399327abc67634ea7cb81f8064b9c61d20fe698166b179b96ad6dfa0c920
+Size (mk-configure-0.34.0.tar.gz) = 325518 bytes
