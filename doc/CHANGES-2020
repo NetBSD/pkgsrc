@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1151 2020/02/18 23:02:09 sevan Exp $
+$NetBSD: CHANGES-2020,v 1.1152 2020/02/19 03:01:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1637,3 +1637,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/py-matplotlib to 3.1.3 [adam 2020-02-18]
 	Updated shells/fish to 3.1.0 [maya 2020-02-18]
 	Updated net/snort to 2.9.15.1 [sevan 2020-02-18]
+	Updated audio/musescore to 3.4.2nb1 [gutteridge 2020-02-19]
