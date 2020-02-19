@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2018/01/11 13:50:39 adam Exp $
-
-SHA1 (easy-thumbnails-2.5.tar.gz) = d300cea56e8bc3ef2e36cbef29e382fe050473c5
-RMD160 (easy-thumbnails-2.5.tar.gz) = a873b84a46abda993803cd2fc3726802517da76d
-SHA512 (easy-thumbnails-2.5.tar.gz) = c1cd61708cfd2dbc96069066255b6b8468f150001113aa3c635b45e1a27d4223db0913ee50fd30778a1b3f991c24610ecdbe5a3702602506eac8e3900efa9fdc
-Size (easy-thumbnails-2.5.tar.gz) = 67369 bytes
