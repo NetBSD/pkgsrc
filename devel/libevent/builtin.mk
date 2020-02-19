@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.19 2019/11/03 10:39:16 rillig Exp $
+# $NetBSD: builtin.mk,v 1.20 2020/02/19 15:21:34 triaxx Exp $
 
 BUILTIN_PKG:=	libevent
 
@@ -153,6 +153,7 @@ override-message-libevent-pkgconfig:
 override-libevent-pkgconfig:
 	${RUN}						\
 	${MKDIR} ${BLKDIR_PKGCFG};			\
+	${RM} -f ${BLKDIR_PKGCFG}/${LIBEVENT_PKGCFGF};	\
 	{						\
 	${ECHO} "prefix=${LIBEVENT_PREFIX}";		\
 	${ECHO} "exec_prefix=\$${prefix}";		\
@@ -164,8 +165,9 @@ override-libevent-pkgconfig:
 	${ECHO} "Version: ${BUILTIN_VERSION.libevent}";	\
 	${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -levent";	\
 	${ECHO} "Cflags: -I\$${includedir}";		\
-	} >> ${BLKDIR_PKGCFG}/${LIBEVENT_PKGCFGF};
+	} > ${BLKDIR_PKGCFG}/${LIBEVENT_PKGCFGF};
 	${RUN}						\
+	${RM} -f ${BLKDIR_PKGCFG}/${LIBEVENT_OPENSSL_PKGCFGF};	\
 	{						\
 	${ECHO} "prefix=${LIBEVENT_PREFIX}";		\
 	${ECHO} "exec_prefix=\$${prefix}";		\
@@ -178,8 +180,9 @@ override-libevent-pkgconfig:
 	${ECHO} "Requires: libevent";	\
 	${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -levent_openssl";	\
 	${ECHO} "Cflags: -I\$${includedir}";		\
-	} >> ${BLKDIR_PKGCFG}/${LIBEVENT_OPENSSL_PKGCFGF};
+	} > ${BLKDIR_PKGCFG}/${LIBEVENT_OPENSSL_PKGCFGF};
 	${RUN}						\
+	${RM} -f ${BLKDIR_PKGCFG}/${LIBEVENT_PTHREADS_PKGCFGF};	\
 	{						\
 	${ECHO} "prefix=${LIBEVENT_PREFIX}";		\
 	${ECHO} "exec_prefix=\$${prefix}";		\
@@ -192,6 +195,6 @@ override-libevent-pkgconfig:
 	${ECHO} "Requires: libevent";	\
 	${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -levent_pthreads";	\
 	${ECHO} "Cflags: -I\$${includedir} -pthread";		\
-	} >> ${BLKDIR_PKGCFG}/${LIBEVENT_PTHREADS_PKGCFGF};
+	} > ${BLKDIR_PKGCFG}/${LIBEVENT_PTHREADS_PKGCFGF};
 .  endif
 .endif
