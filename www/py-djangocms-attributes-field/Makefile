@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/02/03 08:26:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/02/19 09:52:38 adam Exp $
 
-DISTNAME=	djangocms-attributes-field-1.0.0
+DISTNAME=	djangocms-attributes-field-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-attributes-field/}
