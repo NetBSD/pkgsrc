@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/16 14:05:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/02/19 11:25:05 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -30,6 +30,9 @@ ${PYSITELIB}/djangocms_icon/locale/it/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_icon/migrations/0001_initial.py
 ${PYSITELIB}/djangocms_icon/migrations/0001_initial.pyc
 ${PYSITELIB}/djangocms_icon/migrations/0001_initial.pyo
+${PYSITELIB}/djangocms_icon/migrations/0002_auto_20190218_2017.py
+${PYSITELIB}/djangocms_icon/migrations/0002_auto_20190218_2017.pyc
+${PYSITELIB}/djangocms_icon/migrations/0002_auto_20190218_2017.pyo
 ${PYSITELIB}/djangocms_icon/migrations/__init__.py
 ${PYSITELIB}/djangocms_icon/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_icon/migrations/__init__.pyo
@@ -45,8 +48,10 @@ ${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/bootstrap-iconpicker.j
 ${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/iconset/iconset-elusiveicon-all.js
 ${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/iconset/iconset-flagicon-all.js
 ${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/iconset/iconset-fontawesome-4-all.js
-${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/iconset/iconset-fontawesome-5-all.js
-${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/iconset/iconset-fontawesome-all.js
+${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/iconset/iconset-fontawesome-5-brands.js
+${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/iconset/iconset-fontawesome-5-light.js
+${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/iconset/iconset-fontawesome-5-regular.js
+${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/iconset/iconset-fontawesome-5-solid.js
 ${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/iconset/iconset-glyphicon-all.js
 ${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/iconset/iconset-ionicon-all.js
 ${PYSITELIB}/djangocms_icon/static/djangocms_icon/js/libs/iconset/iconset-mapicon-all.js
@@ -61,9 +66,3 @@ ${PYSITELIB}/djangocms_icon/templates/admin/djangocms_icon/includes/assets.html
 ${PYSITELIB}/djangocms_icon/templates/admin/djangocms_icon/widgets/icon.html
 ${PYSITELIB}/djangocms_icon/templates/djangocms_icon/default/icon.html
 ${PYSITELIB}/djangocms_icon/templates/djangocms_icon/includes/icon.html
-${PYSITELIB}/djangocms_icon/templatetags/__init__.py
-${PYSITELIB}/djangocms_icon/templatetags/__init__.pyc
-${PYSITELIB}/djangocms_icon/templatetags/__init__.pyo
-${PYSITELIB}/djangocms_icon/templatetags/djangocms_icon_tags.py
-${PYSITELIB}/djangocms_icon/templatetags/djangocms_icon_tags.pyc
-${PYSITELIB}/djangocms_icon/templatetags/djangocms_icon_tags.pyo
