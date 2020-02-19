@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 21:34:15 agc Exp $
+$NetBSD: distinfo,v 1.12 2020/02/19 17:51:24 adam Exp $
 
-SHA1 (actdiag-0.5.4.tar.gz) = 9beaa26802741f0474f0d33ea61bb55db01ad187
-RMD160 (actdiag-0.5.4.tar.gz) = f9137bae326346a1e86b02212075b687942cd082
-SHA512 (actdiag-0.5.4.tar.gz) = cb294112752cd3e501a731f7775d73c6a435d37998a89d5eec22ba1b1d882ce252291ee6785336d2be7894aba4be968ada28a450ae48c6b6d247cdb035f5936a
-Size (actdiag-0.5.4.tar.gz) = 2577258 bytes
+SHA1 (actdiag-2.0.0.tar.gz) = 48c6e945d975e9ff000520e1e0d8aec2f31a0319
+RMD160 (actdiag-2.0.0.tar.gz) = c0cbf0a186e88ed0666ba0fc301818096a1322ed
+SHA512 (actdiag-2.0.0.tar.gz) = e955b9b919e137f10ff128d5d8817b2da660b121937cab3386a866a0bff08218b6e777e302a9130616228af6c357c463ceeb12cb95b8734928001d8ad6a90250
+Size (actdiag-2.0.0.tar.gz) = 2575076 bytes
