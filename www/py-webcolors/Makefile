@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/11/18 04:47:09 gutteridge Exp $
+# $NetBSD: Makefile,v 1.10 2020/02/19 17:49:24 adam Exp $
 
-DISTNAME=	webcolors-1.10
+DISTNAME=	webcolors-1.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/webcolors/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
