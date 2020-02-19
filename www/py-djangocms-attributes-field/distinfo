@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/12/13 21:20:38 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/02/19 09:52:38 adam Exp $
 
-SHA1 (djangocms-attributes-field-1.0.0.tar.gz) = 1aeb3093d20b18a69a928513c49858d326547c18
-RMD160 (djangocms-attributes-field-1.0.0.tar.gz) = ec15e9a6f39e658689319914316f5096694e972d
-SHA512 (djangocms-attributes-field-1.0.0.tar.gz) = 89b9ee498a9d68918564a9f886375e8cefabf1c178e98749c726b3207e5ab0e2d8648202f0058dadd0b19312a6e5f998b3879968fe9d38b8eaa298f89b418992
-Size (djangocms-attributes-field-1.0.0.tar.gz) = 8609 bytes
+SHA1 (djangocms-attributes-field-1.2.0.tar.gz) = 0c552d212e78be548786482f73981d8368af3a82
+RMD160 (djangocms-attributes-field-1.2.0.tar.gz) = 6613335cf20220de84364ec8eb44f0645192f449
+SHA512 (djangocms-attributes-field-1.2.0.tar.gz) = ad455fa8c32e6e3ef213e390222afac49defb59f671d21bc92d06d1d36dfb12bf8dda42b090ec4c01672c4d660d38571446ccadc0223db648af0e3c453bb9214
+Size (djangocms-attributes-field-1.2.0.tar.gz) = 10731 bytes
