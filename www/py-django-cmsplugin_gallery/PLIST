@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/03/13 10:04:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/02/19 11:09:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -34,6 +34,15 @@ ${PYSITELIB}/cmsplugin_gallery/migrations/0003_auto_20170104_1122.pyo
 ${PYSITELIB}/cmsplugin_gallery/migrations/0004_auto_20170118_0753.py
 ${PYSITELIB}/cmsplugin_gallery/migrations/0004_auto_20170118_0753.pyc
 ${PYSITELIB}/cmsplugin_gallery/migrations/0004_auto_20170118_0753.pyo
+${PYSITELIB}/cmsplugin_gallery/migrations/0005_auto_20180411_1046.py
+${PYSITELIB}/cmsplugin_gallery/migrations/0005_auto_20180411_1046.pyc
+${PYSITELIB}/cmsplugin_gallery/migrations/0005_auto_20180411_1046.pyo
+${PYSITELIB}/cmsplugin_gallery/migrations/0006_auto_20180411_1046.py
+${PYSITELIB}/cmsplugin_gallery/migrations/0006_auto_20180411_1046.pyc
+${PYSITELIB}/cmsplugin_gallery/migrations/0006_auto_20180411_1046.pyo
+${PYSITELIB}/cmsplugin_gallery/migrations/0007_remove_image_src.py
+${PYSITELIB}/cmsplugin_gallery/migrations/0007_remove_image_src.pyc
+${PYSITELIB}/cmsplugin_gallery/migrations/0007_remove_image_src.pyo
 ${PYSITELIB}/cmsplugin_gallery/migrations/__init__.py
 ${PYSITELIB}/cmsplugin_gallery/migrations/__init__.pyc
 ${PYSITELIB}/cmsplugin_gallery/migrations/__init__.pyo
