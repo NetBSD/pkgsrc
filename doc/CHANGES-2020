@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1156 2020/02/19 09:57:04 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1157 2020/02/19 11:13:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1647,3 +1647,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-ruamel-yaml to 0.16.10 [adam 2020-02-19]
 	Updated www/py-djangocms-attributes-field to 1.2.0 [adam 2020-02-19]
 	Updated www/py-django-mptt to 0.11.0 [adam 2020-02-19]
+	Moved www/py-django-easy-thumbnails to www/py-easy-thumbnails [adam 2020-02-19]
+	Updated www/py-easy-thumbnails to 2.7 [adam 2020-02-19]
+	Updated www/py-django-filer to 1.4.0nb1 [adam 2020-02-19]
+	Updated www/py-django-cmsplugin_gallery to 1.1.7 [adam 2020-02-19]
+	Updated www/py-djangocms-picture to 2.4.0 [adam 2020-02-19]
