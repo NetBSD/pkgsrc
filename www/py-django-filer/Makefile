@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/05/14 06:21:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/02/19 11:03:03 adam Exp $
 
 DISTNAME=	django-filer-1.4.0
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-filer/}
@@ -13,9 +14,9 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=0.04:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-django>=1.8:../../www/py-django
-DEPENDS+=	${PYPKGPREFIX}-django-easy-thumbnails>=2.0:../../www/py-django-easy-thumbnails
 DEPENDS+=	${PYPKGPREFIX}-django-mptt>=0.6:../../www/py-django-mptt
 DEPENDS+=	${PYPKGPREFIX}-django-polymorphic>=0.7:../../www/py-django-polymorphic
+DEPENDS+=	${PYPKGPREFIX}-easy-thumbnails>=2.0:../../www/py-easy-thumbnails
 
 USE_LANGUAGES=	# none
 
