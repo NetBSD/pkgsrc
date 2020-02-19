@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1162 2020/02/19 19:08:46 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1163 2020/02/19 22:03:30 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1674,3 +1674,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-buildbot-waterfall-view to 2.6.0 [adam 2020-02-19]
 	Updated devel/py-buildbot-worker to 2.6.0 [adam 2020-02-19]
 	Updated devel/py-buildbot-www to 2.6.0 [adam 2020-02-19]
+	Updated devel/mk-configure to 0.34.0 [cheusov 2020-02-19]
