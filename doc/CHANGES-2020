@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1159 2020/02/19 13:18:32 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1160 2020/02/19 14:27:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1661,3 +1661,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-djangocms-text-ckeditor to 3.8.0 [adam 2020-02-19]
 	Updated www/py-djangocms-video to 2.3.0 [adam 2020-02-19]
 	Updated net/knot to 2.9.2 [ryoon 2020-02-19]
+	Updated wm/swc to 0.0.0.20200219 [nia 2020-02-19]
