@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/01 23:44:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/02/19 19:07:18 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,7 +8,7 @@ ${PYSITELIB}/buildbot_console_view/VERSION
 ${PYSITELIB}/buildbot_console_view/__init__.py
 ${PYSITELIB}/buildbot_console_view/__init__.pyc
 ${PYSITELIB}/buildbot_console_view/__init__.pyo
-${PYSITELIB}/buildbot_console_view/static/fixtures.js
 ${PYSITELIB}/buildbot_console_view/static/scripts.js
+${PYSITELIB}/buildbot_console_view/static/scripts.js.map
 ${PYSITELIB}/buildbot_console_view/static/styles.css
-${PYSITELIB}/buildbot_console_view/static/tests.js
+${PYSITELIB}/buildbot_console_view/static/styles.css.map
