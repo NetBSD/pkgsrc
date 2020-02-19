@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2019/09/27 06:57:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/02/19 19:07:19 adam Exp $
 
-DISTNAME=	buildbot-www-1.5.0
+DISTNAME=	buildbot-www-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-www/}
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-autobahn via py-buildbot
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

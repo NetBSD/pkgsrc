@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2018/11/15 14:14:14 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/02/19 19:07:19 adam Exp $
 
-DISTNAME=	buildbot-worker-1.5.0
+DISTNAME=	buildbot-worker-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-worker/}
