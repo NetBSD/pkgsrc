@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/12/16 14:05:36 adam Exp $
+$NetBSD: distinfo,v 1.2 2020/02/19 11:25:05 adam Exp $
 
-SHA1 (djangocms-icon-1.2.0.tar.gz) = 43dfac616b60563fcdb2168478f495e700b54ec0
-RMD160 (djangocms-icon-1.2.0.tar.gz) = c74d3c29b3f83be1bc4e4b7adcdf538ad82581f4
-SHA512 (djangocms-icon-1.2.0.tar.gz) = c3d00ad6d68cddbd45b8fd462960baa492a2bd74df57df61e92a6676092546b1443b28df0e507865208158c0a466f66027f2c579d26a530c50c2ac27236f96e0
-Size (djangocms-icon-1.2.0.tar.gz) = 167051 bytes
+SHA1 (djangocms-icon-1.5.0.tar.gz) = cc7b7442050e50395dd29c66fa5380edb96bb0bc
+RMD160 (djangocms-icon-1.5.0.tar.gz) = f43dd49f434b7301c93134234c039c2422ef0bde
+SHA512 (djangocms-icon-1.5.0.tar.gz) = 46f22fdaa999ec5ac03c9f16facfcb0864e318e104c964f56dae3db466b4cc46f25e169b6fc81b119aa3eaa4d6457234bcf0d983e08db75c5fd3e0e5327f5891
+Size (djangocms-icon-1.5.0.tar.gz) = 141292 bytes
