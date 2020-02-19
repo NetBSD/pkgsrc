@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/12/13 21:34:34 adam Exp $
+$NetBSD: distinfo,v 1.10 2020/02/19 12:00:03 adam Exp $
 
-SHA1 (djangocms-text-ckeditor-3.7.0.tar.gz) = af73448c9a5161c55797d47e95e8f4895073d3f0
-RMD160 (djangocms-text-ckeditor-3.7.0.tar.gz) = b879c7e5a7510e5b720cc5aa9453b114a57f8242
-SHA512 (djangocms-text-ckeditor-3.7.0.tar.gz) = 09cb0ae1a3d75293804a6796f56f9e915f1c849aacadb769552fbbf4b39bebc0ac611773bc6c8996e6a901c9d6d397ac0fb51677aa93ac31bdbfe8c5fded4dad
-Size (djangocms-text-ckeditor-3.7.0.tar.gz) = 1586676 bytes
+SHA1 (djangocms-text-ckeditor-3.8.0.tar.gz) = 7e547c0d4493892e446fd4bdbd0861201c9e54c4
+RMD160 (djangocms-text-ckeditor-3.8.0.tar.gz) = 5cfb2902df2dde4bfbd2b79be459175c8ce916b2
+SHA512 (djangocms-text-ckeditor-3.8.0.tar.gz) = 0fd464d9b9b1c6d84484cf64156ace0bf4352c800665cc5d083892f146700ec1036f64d49198580a910639f329cf37559ce48ee27a92928999599f78d6b1e0dd
+Size (djangocms-text-ckeditor-3.8.0.tar.gz) = 1535643 bytes
