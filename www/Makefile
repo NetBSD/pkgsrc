@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1435 2020/02/17 20:23:21 adam Exp $
+# $NetBSD: Makefile,v 1.1436 2020/02/19 11:00:55 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -655,7 +655,6 @@ SUBDIR+=	py-django-cmsplugin_gallery
 SUBDIR+=	py-django-contrib-comments
 SUBDIR+=	py-django-cors-headers
 SUBDIR+=	py-django-countries
-SUBDIR+=	py-django-easy-thumbnails
 SUBDIR+=	py-django-extensions
 SUBDIR+=	py-django-filer
 SUBDIR+=	py-django-filter
@@ -698,6 +697,7 @@ SUBDIR+=	py-djangocms-text-ckeditor
 SUBDIR+=	py-djangocms-video
 SUBDIR+=	py-djangorestframework
 SUBDIR+=	py-drf-nested-routers
+SUBDIR+=	py-easy-thumbnails
 SUBDIR+=	py-feedgen
 SUBDIR+=	py-feedgenerator
 SUBDIR+=	py-filebrowser_safe
