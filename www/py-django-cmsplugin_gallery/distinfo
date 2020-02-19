@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2018/04/07 20:09:37 adam Exp $
+$NetBSD: distinfo,v 1.7 2020/02/19 11:09:52 adam Exp $
 
-SHA1 (cmsplugin_gallery-1.0.1.tar.gz) = 1d5663ca212505ed958742d940e605ab11894a7a
-RMD160 (cmsplugin_gallery-1.0.1.tar.gz) = a01a7ef242b1813d941dec95482e4671d8ac47c7
-SHA512 (cmsplugin_gallery-1.0.1.tar.gz) = dddb25d05b97e8fa3d7294c22aa8376cb722b648d41705d092c56348045327b75fb01bdbd9c0a217c37dd35d6323dfc55b28a471c92f5fae7a88076d71f5a39a
-Size (cmsplugin_gallery-1.0.1.tar.gz) = 7985 bytes
-SHA1 (patch-setup.py) = af1bcbe1d84ca2fa8bc5b42605bdbec88f655aa6
+SHA1 (cmsplugin_gallery-1.1.7.tar.gz) = 736b989560e38f95e3cfbeaef389ab4ccaa923a0
+RMD160 (cmsplugin_gallery-1.1.7.tar.gz) = 9fc57b87d0026000548b09dbae76d083ba55afa4
+SHA512 (cmsplugin_gallery-1.1.7.tar.gz) = a047a9c879009c0e858629224f94bd5ee2d97671eef8f9f93a50bd5fb1d6827b78761586a72a00a8019e865f5396d45752823421b2589feaeda068ebb24ede7d
+Size (cmsplugin_gallery-1.1.7.tar.gz) = 8964 bytes
+SHA1 (patch-setup.py) = 9b299be124965241032c896b0ef24b2af56b6f02
