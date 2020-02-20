@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1171 2020/02/20 06:29:17 rin Exp $
+$NetBSD: CHANGES-2020,v 1.1172 2020/02/20 06:30:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1683,3 +1683,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/pcmanfm-qt version 0.14.1 [gutteridge 2020-02-20]
 	Added graphics/lximage-qt version 0.14.1 [gutteridge 2020-02-20]
 	Updated devel/apr to 1.7.0nb1 [rin 2020-02-19]
+	Updated www/py-django-filer to 1.6.0 [adam 2020-02-20]
+	Updated graphics/py-nwdiag to 2.0.0 [adam 2020-02-20]
