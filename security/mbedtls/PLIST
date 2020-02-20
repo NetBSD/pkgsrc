@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/10/01 17:44:11 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/02/20 15:27:31 nia Exp $
 ${PLIST.tools}bin/aescrypt2
 ${PLIST.tools}bin/benchmark
 ${PLIST.tools}bin/cert_app
@@ -121,13 +121,13 @@ include/mbedtls/x509_csr.h
 include/mbedtls/xtea.h
 lib/libmbedcrypto.a
 lib/libmbedcrypto.so
-lib/libmbedcrypto.so.${PKGVERSION}
+lib/libmbedcrypto.so.2.16.3
 lib/libmbedcrypto.so.3
 lib/libmbedtls.a
 lib/libmbedtls.so
 lib/libmbedtls.so.12
-lib/libmbedtls.so.${PKGVERSION}
+lib/libmbedtls.so.2.16.3
 lib/libmbedx509.a
 lib/libmbedx509.so
 lib/libmbedx509.so.0
-lib/libmbedx509.so.${PKGVERSION}
+lib/libmbedx509.so.2.16.3
