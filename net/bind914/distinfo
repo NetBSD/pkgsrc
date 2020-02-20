@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.13 2020/01/23 08:00:55 taca Exp $
+$NetBSD: distinfo,v 1.14 2020/02/20 16:37:06 taca Exp $
 
-SHA1 (bind-9.14.10.tar.gz) = 29893968321daca84785829b4a461d3f2d17630e
-RMD160 (bind-9.14.10.tar.gz) = abdf35825abe82601310bec9530c0082d1335f47
-SHA512 (bind-9.14.10.tar.gz) = 81d453c4e90fea3a21b2485bea2f5321ca8a7ef58eb9a9bc1eaa1463989aefa439e4e45c9a43b1ec6a62c52f0e73d82ebd91cd084ad6ef2a67b705736e9e8d00
-Size (bind-9.14.10.tar.gz) = 6303811 bytes
+SHA1 (bind-9.14.11.tar.gz) = f65a3eb9183cb235ba313101d8f7db648cce6d07
+RMD160 (bind-9.14.11.tar.gz) = 9d7f376f63d5b39a1ce76414291160254321c20b
+SHA512 (bind-9.14.11.tar.gz) = ec34254d6fe5d72c704ba743d1af5582f2ea6b79363f132013ea9ebebed72c74a3ea9ae8a7978ca2b28f908ef848b9c2961cec85254b7d88680c269233b40524
+Size (bind-9.14.11.tar.gz) = 6310200 bytes
 SHA1 (patch-bin_named_Makefile.in) = 741e3708c670baaec45446f6bb364ada448ae330
 SHA1 (patch-bin_named_main.c) = 51c8ab464a009575b6513c7ed4b79f89446eb7d0
 SHA1 (patch-bin_named_pfilter.c) = b54f872c883c8fbc2d9c04df65c185dc057cc36b
