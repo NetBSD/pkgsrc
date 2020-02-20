@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1183 2020/02/20 15:15:11 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1184 2020/02/20 15:27:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1696,3 +1696,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/flashrom to 1.2 [nia 2020-02-20]
 	Updated devel/bullet to 2.89 [nia 2020-02-20]
 	Updated graphics/imlib2 to 1.6.1 [nia 2020-02-20]
+	Updated security/mbedtls to 2.16.4 [nia 2020-02-20]
