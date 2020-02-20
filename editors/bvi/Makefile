@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 23:30:44 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/02/20 14:31:48 nia Exp $
 #
 
-DISTNAME=	bvi-1.4.0.src
-PKGNAME=	bvi-1.4.0
+DISTNAME=	bvi-1.4.1.src
+PKGNAME=	bvi-1.4.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bvi/}
 
