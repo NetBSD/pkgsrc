@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.862 2020/02/07 12:32:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.863 2020/02/20 06:15:34 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -450,6 +450,7 @@ SUBDIR+=	p5-Unix-Syslog
 SUBDIR+=	p5-collectd
 SUBDIR+=	pciutils
 SUBDIR+=	pcmanfm
+SUBDIR+=	pcmanfm-qt
 SUBDIR+=	pcvt-utils
 SUBDIR+=	pdumpfs
 SUBDIR+=	pear-Log
