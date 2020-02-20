@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2017/09/04 18:00:55 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.14 2020/02/20 06:29:49 adam Exp $
 
-DISTNAME=	nwdiag-1.0.4
+DISTNAME=	nwdiag-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	graphics
+CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nwdiag/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://blockdiag.com/nwdiag/build/html/
+#HOMEPAGE=	http://blockdiag.com/
 COMMENT=	Simple network-diagram image generator
 LICENSE=	apache-2.0
 
@@ -18,10 +17,12 @@ USE_LANGUAGES=	# none
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/nwdiag.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/rackdiag.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.for bin in nwdiag packetdiag rackdiag
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+	${INSTALL_MAN} ${WRKSRC}/${bin}.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${bin}-${PYVERSSUFFIX}.1
+.endfor
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

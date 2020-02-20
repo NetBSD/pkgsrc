@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2015/01/20 10:50:03 obache Exp $
-bin/nwdiag
-bin/packetdiag
-bin/rackdiag
+@comment $NetBSD: PLIST,v 1.10 2020/02/20 06:29:49 adam Exp $
+bin/nwdiag-${PYVERSSUFFIX}
+bin/packetdiag-${PYVERSSUFFIX}
+bin/rackdiag-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -68,9 +68,6 @@ ${PYSITELIB}/nwdiag/tests/test_builder.pyo
 ${PYSITELIB}/nwdiag/tests/test_generate_diagram.py
 ${PYSITELIB}/nwdiag/tests/test_generate_diagram.pyc
 ${PYSITELIB}/nwdiag/tests/test_generate_diagram.pyo
-${PYSITELIB}/nwdiag/tests/test_pep8.py
-${PYSITELIB}/nwdiag/tests/test_pep8.pyc
-${PYSITELIB}/nwdiag/tests/test_pep8.pyo
 ${PYSITELIB}/nwdiag/tests/test_rst_directives.py
 ${PYSITELIB}/nwdiag/tests/test_rst_directives.pyc
 ${PYSITELIB}/nwdiag/tests/test_rst_directives.pyo
@@ -127,9 +124,6 @@ ${PYSITELIB}/packetdiag/tests/diagrams/tcp_2.diag
 ${PYSITELIB}/packetdiag/tests/test_generate_diagram.py
 ${PYSITELIB}/packetdiag/tests/test_generate_diagram.pyc
 ${PYSITELIB}/packetdiag/tests/test_generate_diagram.pyo
-${PYSITELIB}/packetdiag/tests/test_pep8.py
-${PYSITELIB}/packetdiag/tests/test_pep8.pyc
-${PYSITELIB}/packetdiag/tests/test_pep8.pyo
 ${PYSITELIB}/packetdiag/tests/test_rst_directives.py
 ${PYSITELIB}/packetdiag/tests/test_rst_directives.pyc
 ${PYSITELIB}/packetdiag/tests/test_rst_directives.pyo
@@ -170,7 +164,6 @@ ${PYSITELIB}/rackdiag/parser.py
 ${PYSITELIB}/rackdiag/parser.pyc
 ${PYSITELIB}/rackdiag/parser.pyo
 ${PYSITELIB}/rackdiag/tests/VLGothic/VL-Gothic-Regular.ttf
-${PYSITELIB}/rackdiag/tests/diagrams/ascending.diag
 ${PYSITELIB}/rackdiag/tests/diagrams/autonumber.diag
 ${PYSITELIB}/rackdiag/tests/diagrams/multi_rackitem.diag
 ${PYSITELIB}/rackdiag/tests/diagrams/multi_racks.diag
@@ -186,9 +179,6 @@ ${PYSITELIB}/rackdiag/tests/test_builder.pyo
 ${PYSITELIB}/rackdiag/tests/test_generate_diagram.py
 ${PYSITELIB}/rackdiag/tests/test_generate_diagram.pyc
 ${PYSITELIB}/rackdiag/tests/test_generate_diagram.pyo
-${PYSITELIB}/rackdiag/tests/test_pep8.py
-${PYSITELIB}/rackdiag/tests/test_pep8.pyc
-${PYSITELIB}/rackdiag/tests/test_pep8.pyo
 ${PYSITELIB}/rackdiag/tests/test_rst_directives.py
 ${PYSITELIB}/rackdiag/tests/test_rst_directives.pyc
 ${PYSITELIB}/rackdiag/tests/test_rst_directives.pyo
@@ -210,5 +200,6 @@ ${PYSITELIB}/rackdiag/utils/rst/nodes.pyo
 ${PYSITELIB}/rackdiag_sphinxhelper.py
 ${PYSITELIB}/rackdiag_sphinxhelper.pyc
 ${PYSITELIB}/rackdiag_sphinxhelper.pyo
-man/man1/nwdiag.1
-man/man1/rackdiag.1
+man/man1/nwdiag-${PYVERSSUFFIX}.1
+man/man1/packetdiag-${PYVERSSUFFIX}.1
+man/man1/rackdiag-${PYVERSSUFFIX}.1
