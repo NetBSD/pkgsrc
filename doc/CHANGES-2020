@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1185 2020/02/20 15:59:14 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1186 2020/02/20 16:12:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1698,3 +1698,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/imlib2 to 1.6.1 [nia 2020-02-20]
 	Updated security/mbedtls to 2.16.4 [nia 2020-02-20]
 	Updated textproc/uncrustify to 0.70.1 [nia 2020-02-20]
+	Updated chat/unrealircd to 5.0.3.1 [nia 2020-02-20]
