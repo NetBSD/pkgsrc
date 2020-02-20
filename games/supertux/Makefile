@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2020/01/18 21:49:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2020/02/20 16:23:27 nia Exp $
 
-PKGNAME=		supertux-0.6.0
-PKGREVISION=		4
+PKGNAME=		supertux-0.6.1.1
 DISTNAME=		SuperTux-v${PKGVERSION_NOREV}-Source
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GITHUB:=SuperTux/}
@@ -15,7 +14,7 @@ LICENSE=		gnu-gpl-v2
 USE_CMAKE=		yes
 CMAKE_ARGS+=		-DINSTALL_SUBDIR_BIN=bin
 CMAKE_ARGS+=		-DBUILD_SHARED_LIBS=off
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++14
 
 # C++14
