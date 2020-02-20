@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1175 2020/02/20 12:36:34 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1176 2020/02/20 14:32:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1688,3 +1688,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/ircd-hybrid to 8.2.29 [fox 2020-02-20]
 	Updated www/php-nextcloud to 18.0.1 [ryoon 2020-02-20]
 	Updated net/nsd to 4.2.4 [ryoon 2020-02-20]
+	Updated editors/bvi to 1.4.1 [nia 2020-02-20]
