@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 21:34:17 agc Exp $
+$NetBSD: distinfo,v 1.11 2020/02/20 06:29:49 adam Exp $
 
-SHA1 (nwdiag-1.0.4.tar.gz) = 501c4a07f559cfd78b8f49b6949d79c2464b8818
-RMD160 (nwdiag-1.0.4.tar.gz) = 151f22c058337febc8ef93996b7abbed823ef83e
-SHA512 (nwdiag-1.0.4.tar.gz) = 755493fb8425243117e11d06e7657c9cae44a8c72bc1fbf515a7f38670307fca43bf46c3017b32aa66eece4f389379abb12fcb4914c33fd58e3bb6eff3361f2f
-Size (nwdiag-1.0.4.tar.gz) = 2652472 bytes
+SHA1 (nwdiag-2.0.0.tar.gz) = 472a3c6a845f81c31c331068de6884d6a78be600
+RMD160 (nwdiag-2.0.0.tar.gz) = 769b1298ca1a9043e77b034476cb1657cf209f74
+SHA512 (nwdiag-2.0.0.tar.gz) = b9064c56955c68074e6c9e262f90fadde5b0c9412d86e6fe3c7f76745638fb02a62ab720b515d3b81d1b896cac18df55622893d73380dfe003a4004b0b8b50e5
+Size (nwdiag-2.0.0.tar.gz) = 7751634 bytes
