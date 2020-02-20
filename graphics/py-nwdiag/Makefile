@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/02/20 06:29:49 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/02/20 06:35:50 gutteridge Exp $
 
 DISTNAME=	nwdiag-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-blockdiag>=1.5.0:../../graphics/py-blockdiag
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for bin in nwdiag packetdiag rackdiag
