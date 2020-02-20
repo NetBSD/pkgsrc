@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1170 2020/02/20 06:23:22 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.1171 2020/02/20 06:29:17 rin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1682,3 +1682,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added x11/libfm-qt version 0.14.1 [gutteridge 2020-02-20]
 	Added sysutils/pcmanfm-qt version 0.14.1 [gutteridge 2020-02-20]
 	Added graphics/lximage-qt version 0.14.1 [gutteridge 2020-02-20]
+	Updated devel/apr to 1.7.0nb1 [rin 2020-02-19]
