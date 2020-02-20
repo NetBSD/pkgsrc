@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1188 2020/02/20 16:24:27 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1189 2020/02/20 16:37:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1701,3 +1701,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/unrealircd to 5.0.3.1 [nia 2020-02-20]
 	Updated audio/vamp-plugin-sdk to 2.9.0 [nia 2020-02-20]
 	Updated games/supertux to 0.6.1.1 [nia 2020-02-20]
+	Updated net/bind914 to 9.14.11 [taca 2020-02-20]
