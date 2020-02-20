@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2016/05/01 20:58:41 leot Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/02/20 15:14:56 nia Exp $
 bin/imlib2-config
 ${PLIST.x11}bin/imlib2_bumpmap
 ${PLIST.x11}bin/imlib2_colorspace
 bin/imlib2_conv
 ${PLIST.x11}bin/imlib2_grab
+bin/imlib2_load
 ${PLIST.x11}bin/imlib2_poly
 ${PLIST.x11}bin/imlib2_show
 ${PLIST.x11}bin/imlib2_test
@@ -17,6 +18,7 @@ lib/imlib2/loaders/bmp.la
 lib/imlib2/loaders/bz2.la
 lib/imlib2/loaders/ff.la
 lib/imlib2/loaders/gif.la
+lib/imlib2/loaders/ico.la
 lib/imlib2/loaders/jpeg.la
 lib/imlib2/loaders/lbm.la
 lib/imlib2/loaders/png.la
