@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2020/02/13 21:12:21 rillig Exp $
+# $NetBSD: Makefile,v 1.138 2020/02/20 21:01:09 rillig Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	22
@@ -21,7 +21,14 @@ USE_TOOLS+=		bison flex:run
 PKGCONFIG_OVERRIDE+=	tools/heimdal-gssapi.pc.in
 MAKE_ENV+=		INSTALL_CATPAGES=no
 
-.include "../../mk/bsd.prefs.mk"
+# heimdal-1.5.3 on NetBSD 8.1 fails with:
+# cc [...] -c hxtool.c
+# In file included from hxtool.c:34:0:
+# hx_locl.h:66:23: fatal error: ocsp_asn1.h: No such file or directory 
+#
+# https://mail-index.netbsd.org/pkgsrc-users/2020/02/20/msg030473.html
+MAKE_JOBS_SAFE=		no
+
 .include "options.mk"
 
 HEIMDAL_HDB_DIR=	${VARBASE}/heimdal
