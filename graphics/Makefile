@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.880 2020/02/08 16:14:52 nia Exp $
+# $NetBSD: Makefile,v 1.881 2020/02/20 06:21:02 gutteridge Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -342,6 +342,7 @@ SUBDIR+=	ljpeg
 SUBDIR+=	luminance-hdr
 SUBDIR+=	luv-icon-theme
 SUBDIR+=	lxde-icon-theme
+SUBDIR+=	lximage-qt
 SUBDIR+=	magicpoint
 SUBDIR+=	mandelbulber
 SUBDIR+=	mate-backgrounds
