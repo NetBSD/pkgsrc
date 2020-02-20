@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1174 2020/02/20 11:54:32 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1175 2020/02/20 12:36:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1687,3 +1687,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/py-nwdiag to 2.0.0 [adam 2020-02-20]
 	Updated chat/ircd-hybrid to 8.2.29 [fox 2020-02-20]
 	Updated www/php-nextcloud to 18.0.1 [ryoon 2020-02-20]
+	Updated net/nsd to 4.2.4 [ryoon 2020-02-20]
