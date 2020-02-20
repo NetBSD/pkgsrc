@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1165 2020/02/20 05:35:34 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.1166 2020/02/20 05:49:14 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1677,3 +1677,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/mk-configure to 0.34.0 [cheusov 2020-02-19]
 	Updated sysutils/nbase to 7.0.0.7 [cheusov 2020-02-19]
 	Added x11/liblxqt version 0.14.1 [gutteridge 2020-02-20]
+	Added x11/qtermwidget version 0.14.1 [gutteridge 2020-02-20]
