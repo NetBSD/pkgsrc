@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.45 2019/04/12 13:02:44 wiz Exp $
+$NetBSD: distinfo,v 1.46 2020/02/20 06:25:28 rin Exp $
 
 SHA1 (apr-1.7.0.tar.bz2) = 58ebc7b35efaebb211c0b9df594ab16c4d874234
 RMD160 (apr-1.7.0.tar.bz2) = 4b282845f4ba1c4949b7b386c438e5ef98deaf4b
 SHA512 (apr-1.7.0.tar.bz2) = 3dc42d5caf17aab16f5c154080f020d5aed761e22db4c5f6506917f6bfd2bf8becfb40af919042bd4ce1077d5de74aa666f5edfba7f275efba78e8893c115148
 Size (apr-1.7.0.tar.bz2) = 872238 bytes
+SHA1 (patch-atomic_unix_builtins.c) = e90d0232013650c3d227fa3a8be952c51b7148e8
+SHA1 (patch-atomic_unix_builtins64.c) = e24316e93dae12efc1cbfc3f444e8622df5e5833
 SHA1 (patch-include_apr__general.h) = bff357eee11218a6c53769278fc3f9094b062fdf
+SHA1 (patch-include_arch_unix_apr__arch__atomic.h) = 6f226add54f5966a50985441f6903853a0728c88
