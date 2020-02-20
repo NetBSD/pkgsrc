@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1181 2020/02/20 14:50:18 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1182 2020/02/20 14:59:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1694,3 +1694,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/php74 to 7.4.3 [taca 2020-02-20]
 	Updated lang/php72 to 7.2.28 [taca 2020-02-20]
 	Updated sysutils/flashrom to 1.2 [nia 2020-02-20]
+	Updated devel/bullet to 2.89 [nia 2020-02-20]
