@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.15 2020/01/28 13:03:36 nia Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/02/20 16:12:28 nia Exp $
 bin/unrealircd
+lib/unrealircd/modules/account-notify.so
 lib/unrealircd/modules/account-tag.so
 lib/unrealircd/modules/addmotd.so
 lib/unrealircd/modules/addomotd.so
@@ -61,6 +62,7 @@ lib/unrealircd/modules/extbans/timedban.so
 lib/unrealircd/modules/globops.so
 lib/unrealircd/modules/help.so
 lib/unrealircd/modules/hideserver.so
+lib/unrealircd/modules/history.so
 lib/unrealircd/modules/history_backend_mem.so
 lib/unrealircd/modules/history_backend_null.so
 lib/unrealircd/modules/ident_lookup.so
@@ -151,7 +153,9 @@ lib/unrealircd/modules/tsctl.so
 lib/unrealircd/modules/umode2.so
 lib/unrealircd/modules/unsqline.so
 lib/unrealircd/modules/user.so
+lib/unrealircd/modules/userhost-tag.so
 lib/unrealircd/modules/userhost.so
+lib/unrealircd/modules/userip-tag.so
 lib/unrealircd/modules/userip.so
 lib/unrealircd/modules/usermodes/bot.so
 lib/unrealircd/modules/usermodes/censor.so
