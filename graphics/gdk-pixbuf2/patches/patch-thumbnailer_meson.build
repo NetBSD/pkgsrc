@@ -1,0 +1,14 @@
+$NetBSD: patch-thumbnailer_meson.build,v 1.1 2020/02/20 03:35:35 brook Exp $
+
+Add LD_LIBRARY_PATH so uninstalled programs find newly built shared libraries.
+
+--- thumbnailer/meson.build.orig	2019-10-08 10:44:10.000000000 +0000
++++ thumbnailer/meson.build
+@@ -16,6 +16,7 @@ custom_target('thumbnailer',
+               input: 'gdk-pixbuf-thumbnailer.thumbnailer.in',
+               output: 'gdk-pixbuf-thumbnailer.thumbnailer',
+               command: [
++	        'env', 'LD_LIBRARY_PATH=' + meson.current_build_dir() + '/../gdk-pixbuf',
+                 gen_thumbnailer,
+                 '--printer=@0@'.format(gdk_pixbuf_print_mime_types.full_path()),
+                 '--pixdata=@0@'.format(gdk_pixbuf_pixdata.full_path()),
