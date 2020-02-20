@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2020/02/19 07:40:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.95 2020/02/20 09:10:30 jperkin Exp $
 
 DISTNAME=	mpv-0.32.0
 PKGREVISION=	1
@@ -45,6 +45,23 @@ SUBST_SED.python+=	-e "s,rst2man,rst2man-${PYVERSSUFFIX},"
 SUBST_FILES.python+=	wscript
 SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fix Python command names.
+
+.include "../../mk/bsd.prefs.mk"
+
+#
+# At some point this should be consolidated into mk/platform/Darwin.mk, it is
+# here temporarily while any issues are ironed out and it can be made generic
+# for Swift handling.
+# 
+# On newer macOS releases there are a couple of swift compat static libraries
+# that need to be added to the search path.
+#
+.if ${OPSYS} == "Darwin"
+XCODE_DIR!=	xcode-select -p 2>/dev/null || ${TRUE}
+.  if exists(${XCODE_DIR}/usr/lib/swift/macosx)
+BUILDLINK_PASSTHRU_DIRS+=	${XCODE_DIR}/usr/lib/swift/macosx
+.  endif
+.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && ${MV} etc/mpv/encoding-profiles.conf share/examples/mpv
