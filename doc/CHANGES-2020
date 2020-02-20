@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1190 2020/02/20 16:38:41 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1191 2020/02/20 17:09:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1703,3 +1703,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/supertux to 0.6.1.1 [nia 2020-02-20]
 	Updated net/bind914 to 9.14.11 [taca 2020-02-20]
 	Updated net/bind911 to 9.11.16 [taca 2020-02-20]
+	Updated editors/xournalpp to 1.0.17 [nia 2020-02-20]
