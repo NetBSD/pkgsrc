@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2019/07/01 15:13:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/02/20 16:23:27 nia Exp $
 
-SHA1 (SuperTux-v0.6.0-Source.tar.gz) = 5f575e2a12c057b90eb5f45d49605bd921a0c422
-RMD160 (SuperTux-v0.6.0-Source.tar.gz) = 282775e0c4cfbd6cad31ff1579e22232f6a6b4a6
-SHA512 (SuperTux-v0.6.0-Source.tar.gz) = 7e313f1af1131e83ec658fee12803542d59075fa94a0a79a9182382335dc1b10a9f75092562555acf875dd03b15b336b40772fb8cdd81a82fa5802deb51b610b
-Size (SuperTux-v0.6.0-Source.tar.gz) = 131203604 bytes
+SHA1 (SuperTux-v0.6.1.1-Source.tar.gz) = d00a25afe9db90985596ce67a4555529df411c54
+RMD160 (SuperTux-v0.6.1.1-Source.tar.gz) = 681d102f6009fc99b5e152526163e10271d01fc1
+SHA512 (SuperTux-v0.6.1.1-Source.tar.gz) = 9c4b535d5c55b3a582b05dab4ffb9658fd3d500165d428eb9e69c91b03e90dcf7517cadfa99554485950085764e6589e6a0a83304abebf7911e4c5a240270c10
+Size (SuperTux-v0.6.1.1-Source.tar.gz) = 163363780 bytes
 SHA1 (patch-external_SDL__ttf_configure) = da5e257847458e0a4410be3b03299062d167d441
 SHA1 (patch-external_physfs_src_physfs__platform__unix.c) = 2c8c6d7be1e02098065f5b177038ef71bac35dc5
 SHA1 (patch-external_squirrel_CMakeLists.txt) = 4376efef866ca4d03365724409ffbaf635707d01
