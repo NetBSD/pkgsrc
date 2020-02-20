@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2020/01/20 17:54:48 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/02/20 11:53:28 ryoon Exp $
 share/nextcloud/.htaccess
 share/nextcloud/.user.ini
 share/nextcloud/3rdparty/LICENSE INFO
@@ -4234,6 +4234,8 @@ share/nextcloud/apps/accessibility/l10n/sq.js
 share/nextcloud/apps/accessibility/l10n/sq.json
 share/nextcloud/apps/accessibility/l10n/sr.js
 share/nextcloud/apps/accessibility/l10n/sr.json
+share/nextcloud/apps/accessibility/l10n/sr@latin.js
+share/nextcloud/apps/accessibility/l10n/sr@latin.json
 share/nextcloud/apps/accessibility/l10n/sv.js
 share/nextcloud/apps/accessibility/l10n/sv.json
 share/nextcloud/apps/accessibility/l10n/tr.js
@@ -4955,6 +4957,8 @@ share/nextcloud/apps/dav/l10n/sv.js
 share/nextcloud/apps/dav/l10n/sv.json
 share/nextcloud/apps/dav/l10n/tr.js
 share/nextcloud/apps/dav/l10n/tr.json
+share/nextcloud/apps/dav/l10n/uk.js
+share/nextcloud/apps/dav/l10n/uk.json
 share/nextcloud/apps/dav/l10n/zh_CN.js
 share/nextcloud/apps/dav/l10n/zh_CN.json
 share/nextcloud/apps/dav/l10n/zh_TW.js
@@ -8531,6 +8535,7 @@ share/nextcloud/apps/notifications/appinfo/app.php
 share/nextcloud/apps/notifications/appinfo/info.xml
 share/nextcloud/apps/notifications/appinfo/routes.php
 share/nextcloud/apps/notifications/appinfo/signature.json
+share/nextcloud/apps/notifications/composer.json
 share/nextcloud/apps/notifications/css/styles.scss
 share/nextcloud/apps/notifications/docs/admin-notifications.md
 share/nextcloud/apps/notifications/docs/notification-workflow.md
@@ -8807,6 +8812,8 @@ share/nextcloud/apps/oauth2/l10n/et_EE.js
 share/nextcloud/apps/oauth2/l10n/et_EE.json
 share/nextcloud/apps/oauth2/l10n/eu.js
 share/nextcloud/apps/oauth2/l10n/eu.json
+share/nextcloud/apps/oauth2/l10n/fa.js
+share/nextcloud/apps/oauth2/l10n/fa.json
 share/nextcloud/apps/oauth2/l10n/fi.js
 share/nextcloud/apps/oauth2/l10n/fi.json
 share/nextcloud/apps/oauth2/l10n/fr.js
@@ -9080,6 +9087,7 @@ share/nextcloud/apps/photos/appinfo/info.xml
 share/nextcloud/apps/photos/appinfo/routes.php
 share/nextcloud/apps/photos/appinfo/signature.json
 share/nextcloud/apps/photos/babel.config.js
+share/nextcloud/apps/photos/composer.json
 share/nextcloud/apps/photos/css/icons.scss
 share/nextcloud/apps/photos/img/app.svg
 share/nextcloud/apps/photos/img/photos.svg
@@ -9769,12 +9777,6 @@ share/nextcloud/apps/settings/js/templates/federationscopemenu.handlebars
 share/nextcloud/apps/settings/js/usersettings.js
 share/nextcloud/apps/settings/js/vue-0.js
 share/nextcloud/apps/settings/js/vue-0.js.map
-share/nextcloud/apps/settings/js/vue-1.js
-share/nextcloud/apps/settings/js/vue-1.js.map
-share/nextcloud/apps/settings/js/vue-2.js
-share/nextcloud/apps/settings/js/vue-2.js.map
-share/nextcloud/apps/settings/js/vue-3.js
-share/nextcloud/apps/settings/js/vue-3.js.map
 share/nextcloud/apps/settings/js/vue-4.js
 share/nextcloud/apps/settings/js/vue-4.js.map
 share/nextcloud/apps/settings/js/vue-5.js
@@ -10038,6 +10040,8 @@ share/nextcloud/apps/sharebymail/l10n/es_UY.js
 share/nextcloud/apps/sharebymail/l10n/es_UY.json
 share/nextcloud/apps/sharebymail/l10n/et_EE.js
 share/nextcloud/apps/sharebymail/l10n/et_EE.json
+share/nextcloud/apps/sharebymail/l10n/fa.js
+share/nextcloud/apps/sharebymail/l10n/fa.json
 share/nextcloud/apps/sharebymail/l10n/fi.js
 share/nextcloud/apps/sharebymail/l10n/fi.json
 share/nextcloud/apps/sharebymail/l10n/fr.js
@@ -11131,6 +11135,7 @@ share/nextcloud/apps/text/l10n/zh_CN.json
 share/nextcloud/apps/text/l10n/zh_TW.js
 share/nextcloud/apps/text/l10n/zh_TW.json
 share/nextcloud/apps/text/lib/AppInfo/Application.php
+share/nextcloud/apps/text/lib/Command/ResetDocument.php
 share/nextcloud/apps/text/lib/Controller/DirectSessionController.php
 share/nextcloud/apps/text/lib/Controller/NavigationController.php
 share/nextcloud/apps/text/lib/Controller/PublicSessionController.php
@@ -11403,6 +11408,8 @@ share/nextcloud/apps/twofactor_backupcodes/l10n/ka_GE.js
 share/nextcloud/apps/twofactor_backupcodes/l10n/ka_GE.json
 share/nextcloud/apps/twofactor_backupcodes/l10n/ko.js
 share/nextcloud/apps/twofactor_backupcodes/l10n/ko.json
+share/nextcloud/apps/twofactor_backupcodes/l10n/lt_LT.js
+share/nextcloud/apps/twofactor_backupcodes/l10n/lt_LT.json
 share/nextcloud/apps/twofactor_backupcodes/l10n/lv.js
 share/nextcloud/apps/twofactor_backupcodes/l10n/lv.json
 share/nextcloud/apps/twofactor_backupcodes/l10n/mk.js
@@ -12038,6 +12045,7 @@ share/nextcloud/apps/viewer/appinfo/app.php
 share/nextcloud/apps/viewer/appinfo/info.xml
 share/nextcloud/apps/viewer/appinfo/signature.json
 share/nextcloud/apps/viewer/babel.config.js
+share/nextcloud/apps/viewer/composer.json
 share/nextcloud/apps/viewer/img/app.svg
 share/nextcloud/apps/viewer/js/viewer.js
 share/nextcloud/apps/viewer/js/viewer.js.map
@@ -12296,6 +12304,7 @@ share/nextcloud/apps/workflowengine/l10n/zh_CN.json
 share/nextcloud/apps/workflowengine/l10n/zh_TW.js
 share/nextcloud/apps/workflowengine/l10n/zh_TW.json
 share/nextcloud/apps/workflowengine/lib/AppInfo/Application.php
+share/nextcloud/apps/workflowengine/lib/BackgroundJobs/Rotate.php
 share/nextcloud/apps/workflowengine/lib/Check/AbstractStringCheck.php
 share/nextcloud/apps/workflowengine/lib/Check/FileMimeType.php
 share/nextcloud/apps/workflowengine/lib/Check/FileName.php
@@ -12313,10 +12322,12 @@ share/nextcloud/apps/workflowengine/lib/Controller/GlobalWorkflowsController.php
 share/nextcloud/apps/workflowengine/lib/Controller/RequestTime.php
 share/nextcloud/apps/workflowengine/lib/Controller/UserWorkflowsController.php
 share/nextcloud/apps/workflowengine/lib/Entity/File.php
+share/nextcloud/apps/workflowengine/lib/Helper/LogContext.php
 share/nextcloud/apps/workflowengine/lib/Helper/ScopeContext.php
 share/nextcloud/apps/workflowengine/lib/Manager.php
 share/nextcloud/apps/workflowengine/lib/Migration/PopulateNewlyIntroducedDatabaseFields.php
 share/nextcloud/apps/workflowengine/lib/Migration/Version2000Date20190808074233.php
+share/nextcloud/apps/workflowengine/lib/Service/Logger.php
 share/nextcloud/apps/workflowengine/lib/Service/RuleMatcher.php
 share/nextcloud/apps/workflowengine/lib/Settings/ASettings.php
 share/nextcloud/apps/workflowengine/lib/Settings/Admin.php
@@ -13766,6 +13777,7 @@ share/nextcloud/lib/private/App/AppStore/Bundles/CoreBundle.php
 share/nextcloud/lib/private/App/AppStore/Bundles/EducationBundle.php
 share/nextcloud/lib/private/App/AppStore/Bundles/EnterpriseBundle.php
 share/nextcloud/lib/private/App/AppStore/Bundles/GroupwareBundle.php
+share/nextcloud/lib/private/App/AppStore/Bundles/HubBundle.php
 share/nextcloud/lib/private/App/AppStore/Bundles/SocialSharingBundle.php
 share/nextcloud/lib/private/App/AppStore/Fetcher/AppFetcher.php
 share/nextcloud/lib/private/App/AppStore/Fetcher/CategoryFetcher.php
@@ -14747,6 +14759,7 @@ share/nextcloud/lib/public/Lock/ILockingProvider.php
 share/nextcloud/lib/public/Lock/LockedException.php
 share/nextcloud/lib/public/Lock/ManuallyLockedException.php
 share/nextcloud/lib/public/Lockdown/ILockdownManager.php
+share/nextcloud/lib/public/Log/IDataLogger.php
 share/nextcloud/lib/public/Log/IFileBased.php
 share/nextcloud/lib/public/Log/ILogFactory.php
 share/nextcloud/lib/public/Log/IWriter.php
