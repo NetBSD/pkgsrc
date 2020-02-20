@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/02/20 05:52:38 gutteridge Exp $
+
+SHA1 (qterminal-0.14.1.tar.xz) = 5ca08bc1267c65a813926d330036811e6965505b
+RMD160 (qterminal-0.14.1.tar.xz) = 9723b7e941a7b8caed9e6271afa66bc62a8f2e31
+SHA512 (qterminal-0.14.1.tar.xz) = bb9ac6519236bb834892c1be50bc27f86631b2c7ed60c1ddd4300fedd48f3ea8a08aa453fa03199693486159f667f9391af9491dea5402b4f807ee91e8a6e5cf
+Size (qterminal-0.14.1.tar.xz) = 167520 bytes
