@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/02/20 06:15:34 gutteridge Exp $
+
+SHA1 (pcmanfm-qt-0.14.1.tar.xz) = 4672228bd0cace0f7c91ce1330cb618576a6e48d
+RMD160 (pcmanfm-qt-0.14.1.tar.xz) = a09e756db9ce641bbdbbcf10b33d36069e87f9db
+SHA512 (pcmanfm-qt-0.14.1.tar.xz) = f3d170ab8344332f740a3245cc549ea0c3bddc97a45472dcd46208d59413dd42d3571821f309184417a34a627d2cb093fcaa335f782cf6e526eef3fcad212b3e
+Size (pcmanfm-qt-0.14.1.tar.xz) = 227360 bytes
