@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2020/02/20 09:10:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.96 2020/02/20 22:39:19 jperkin Exp $
 
 DISTNAME=	mpv-0.32.0
 PKGREVISION=	1
@@ -60,6 +60,8 @@ SUBST_MESSAGE.python=	Fix Python command names.
 XCODE_DIR!=	xcode-select -p 2>/dev/null || ${TRUE}
 .  if exists(${XCODE_DIR}/usr/lib/swift/macosx)
 BUILDLINK_PASSTHRU_DIRS+=	${XCODE_DIR}/usr/lib/swift/macosx
+.  elif exists(${XCODE_DIR}/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx)
+BUILDLINK_PASSTHRU_DIRS+=	${XCODE_DIR}/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx
 .  endif
 .endif
 
