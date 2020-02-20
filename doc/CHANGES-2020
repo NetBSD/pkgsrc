@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1164 2020/02/19 22:37:51 cheusov Exp $
+$NetBSD: CHANGES-2020,v 1.1165 2020/02/20 05:35:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1599,7 +1599,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-certbot-dns-route53 to 1.2.0 [adam 2020-02-16]
 	Updated security/py-certbot-dns-sakuracloud to 1.2.0 [adam 2020-02-16]
 	Updated security/py-certbot-nginx to 1.2.0 [adam 2020-02-16]
-	Added devel/lxqt-build-tools 0.6.0 [gutteridge 2020-02-16]
+	Added devel/lxqt-build-tools version 0.6.0 [gutteridge 2020-02-16]
 	Updated devel/py-pebble to 4.5.0 [adam 2020-02-16]
 	Updated textproc/py-odfpy to 1.4.1 [adam 2020-02-16]
 	Updated net/py-gsutil to 4.47 [adam 2020-02-16]
@@ -1616,7 +1616,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ansilove to 4.1.0 [fcambus 2020-02-17]
 	Updated textproc/gtk-doc to 1.32nb1 [wiz 2020-02-17]
 	Updated math/gnumeric112 to 1.12.46nb1 [wiz 2020-02-17]
-	Added x11/libqtxdg 3.4.0 [gutteridge 2020-02-17]
+	Added x11/libqtxdg version 3.4.0 [gutteridge 2020-02-17]
 	Updated pkgtools/pkglint to 19.4.9 [rillig 2020-02-17]
 	Updated lang/rust to 1.41.0 [jperkin 2020-02-17]
 	Added www/py-django3 version 3.0.3 [adam 2020-02-17]
@@ -1676,3 +1676,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-buildbot-www to 2.6.0 [adam 2020-02-19]
 	Updated devel/mk-configure to 0.34.0 [cheusov 2020-02-19]
 	Updated sysutils/nbase to 7.0.0.7 [cheusov 2020-02-19]
+	Added x11/liblxqt version 0.14.1 [gutteridge 2020-02-20]
