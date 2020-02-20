@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2016/06/19 16:55:28 tsutsui Exp $
+$NetBSD: distinfo,v 1.9 2020/02/20 14:31:48 nia Exp $
 
-SHA1 (bvi-1.4.0.src.tar.gz) = 7b3c0760f0779dba920e08eafcf2fe23a09d70da
-RMD160 (bvi-1.4.0.src.tar.gz) = f1b3822cbaef7dfc078629819a0eefda6e82e15f
-SHA512 (bvi-1.4.0.src.tar.gz) = 119cfc7350f81c324e77243f948cfb91cd9a3122fef307616e4756a99732f69131aed2a26ebe48048698b9c211a0214255f3e6605ad2cbf479a14a4a0f88923c
-Size (bvi-1.4.0.src.tar.gz) = 139202 bytes
+SHA1 (bvi-1.4.1.src.tar.gz) = dfae18513d4c06a91f6e732728b9920326770a1d
+RMD160 (bvi-1.4.1.src.tar.gz) = d2b58000887b924ed04528da93dc29e77e8f1396
+SHA512 (bvi-1.4.1.src.tar.gz) = f7a3f07e6bcefe566a101c4db85192f0d2e3580be0ab10bc297e6c0192e79d29061a7c9f1a57cf5a628f03962deb8c2ed52e33effc1d5198d458627d70d882e6
+Size (bvi-1.4.1.src.tar.gz) = 143181 bytes
 SHA1 (patch-bm__unix.c) = 87720c17e7369f123c86c840f8111b7d9ba5ed73
 SHA1 (patch-comm.c) = d86849d41e2387514ea0c222b06400ed14a4ca36
