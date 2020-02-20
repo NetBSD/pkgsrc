@@ -1,0 +1,14 @@
+$NetBSD: patch-gdk-pixbuf_meson.build,v 1.1 2020/02/20 03:35:35 brook Exp $
+
+Add LD_LIBRARY_PATH so uninstalled programs find newly built shared libraries.
+
+--- gdk-pixbuf/meson.build.orig	2019-10-08 10:44:10.000000000 +0000
++++ gdk-pixbuf/meson.build
+@@ -316,6 +316,7 @@ if not meson.is_cross_build()
+                                 output: 'loaders.cache',
+                                 capture: true,
+                                 command: [
++				  'env', 'LD_LIBRARY_PATH=' + meson.current_build_dir() + '/../gdk-pixbuf',
+                                   gdk_pixbuf_query_loaders,
+                                   dynamic_loaders,
+                                 ],
