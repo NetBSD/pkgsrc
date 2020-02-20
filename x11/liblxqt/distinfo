@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/02/20 05:31:20 gutteridge Exp $
+
+SHA1 (liblxqt-0.14.1.tar.xz) = 7f6f777bae5fb09cd7b4de9de9ac94c18c3348af
+RMD160 (liblxqt-0.14.1.tar.xz) = 00c02fcfbd211fbaac060d862b4c9cab6e6c4a9a
+SHA512 (liblxqt-0.14.1.tar.xz) = 28ce5e924d136f9907f84e40d4823c412df071009a9d5da4e061ce969d7575b21210d5178103f9bfc73baa87ccafc87dcb6e29a737467ca1a459c1fd3c1071ba
+Size (liblxqt-0.14.1.tar.xz) = 81704 bytes
+SHA1 (patch-lxqtpowermanager.cpp) = 953b450872c6d641e4da55b5135174191c050a8e
