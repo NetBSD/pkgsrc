@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2019/08/30 17:24:35 nia Exp $
+# $NetBSD: Makefile,v 1.14 2020/02/20 14:58:54 nia Exp $
 
-DISTNAME=	bullet-2.88
-PKGREVISION=	1
+DISTNAME=	bullet-2.89
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bulletphysics/}
 GITHUB_PROJECT=	bullet3
