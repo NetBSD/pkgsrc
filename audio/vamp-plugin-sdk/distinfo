@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/07/26 15:31:08 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/02/20 16:18:03 nia Exp $
 
-SHA1 (vamp-plugin-sdk-2.8.0.tar.gz) = 6a1400a47eb067ea6a8f459bb9fc9270e6efba14
-RMD160 (vamp-plugin-sdk-2.8.0.tar.gz) = 834d2ce234ce09dac1740df32afb955f98a7a2ba
-SHA512 (vamp-plugin-sdk-2.8.0.tar.gz) = abc009dab8d1ae4549640aba4a1341942b5a868479b4a9b2a435556a1bf1ce350d8aec94ee5b403fe8fff4175f40778a8fc12ceaf602dd0f176f9215e4a3f8f8
-Size (vamp-plugin-sdk-2.8.0.tar.gz) = 308972 bytes
+SHA1 (vamp-plugin-sdk-2.9.0.tar.gz) = e5bc230ba77c7641dd144acf34094ec769585ee9
+RMD160 (vamp-plugin-sdk-2.9.0.tar.gz) = a62c0af87b282e8616df76395f074c6f2b38d80f
+SHA512 (vamp-plugin-sdk-2.9.0.tar.gz) = 7ef7f837d19a08048b059e0da408373a7964ced452b290fae40b85d6d70ca9000bcfb3302cd0b4dc76cf2a848528456f78c1ce1ee0c402228d812bd347b6983b
+Size (vamp-plugin-sdk-2.9.0.tar.gz) = 312726 bytes
