@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1178 2020/02/20 14:43:52 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1179 2020/02/20 14:45:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1691,3 +1691,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/bvi to 1.4.1 [nia 2020-02-20]
 	Updated net/unbound to 1.10.0 [he 2020-02-20]
 	Updated lang/php73 to 7.3.15 [taca 2020-02-20]
+	Updated lang/php74 to 7.4.3 [taca 2020-02-20]
