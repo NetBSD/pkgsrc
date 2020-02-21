@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2019/09/09 16:19:49 adam Exp $
+# $NetBSD: options.mk,v 1.6 2020/02/21 16:04:50 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS=	# empty
@@ -29,4 +29,6 @@ BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
+# XXX: fix for Rust 1.41.0 https://github.com/rust-lang/rust/issues/68714
+MAKE_ENV+=	LIBRARY_PATH=${BUILDLINK_PREFIX.llvm}/lib
 .endif
