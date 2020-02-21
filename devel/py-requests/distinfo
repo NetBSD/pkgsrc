@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.35 2019/05/17 08:34:38 adam Exp $
+$NetBSD: distinfo,v 1.36 2020/02/21 06:42:59 adam Exp $
 
-SHA1 (requests-2.22.0.tar.gz) = c22ed0a553f8dc37e5c2a965048d81a5ccfaff95
-RMD160 (requests-2.22.0.tar.gz) = 8039fb2854217e3da83a52c12b0d449ca5ca79e0
-SHA512 (requests-2.22.0.tar.gz) = 8b8e9da8a0c816fb4ff39be89ac7e1a9d5a99503ed93e44a0d78b28818f1c0eb253b151972a144151a616ba1b4bc5595245458a8268c5161391db54f740ac9a5
-Size (requests-2.22.0.tar.gz) = 113406 bytes
+SHA1 (requests-2.23.0.tar.gz) = ab724cae3ce1f5175d34598c14e010f770eeac4c
+RMD160 (requests-2.23.0.tar.gz) = 676d94a3b4ee6b20af19bf09481aded34a89b046
+SHA512 (requests-2.23.0.tar.gz) = a0f7db5cc9ce67af9f6f81b72e41491735a102f2a1da2fbde98e279846e2140cd26b6370aa5ec79c148c397885a7ae2bbce45c4587215f510dd02b8ac57cb46e
+Size (requests-2.23.0.tar.gz) = 114327 bytes
 SHA1 (patch-requests_____init____.py) = 39ce838223ca91c36a7a5310b76b70aa7a154c99
-SHA1 (patch-setup.py) = 55be105d4a7b47c17e7daea42177e0053567a4eb
+SHA1 (patch-setup.py) = 1b6ba462a0c3d6079f7d0fc738ba8000b6e892b4
