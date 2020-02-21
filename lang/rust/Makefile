@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.140 2020/02/20 14:00:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.141 2020/02/21 16:04:50 adam Exp $
 
 DISTNAME=	rustc-1.41.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
-#PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
@@ -24,7 +23,6 @@ CHECK_PORTABILITY_SKIP+=	vendor/openssl-src/openssl/.travis-create-release.sh
 
 HAS_CONFIGURE=			yes
 PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_ACCEPTED=	27
 CONFIG_SHELL=			${PYTHONBIN}
 CONFIGURE_SCRIPT=		src/bootstrap/configure.py
 CONFIGURE_ARGS+=		--prefix=${PREFIX}
