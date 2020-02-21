@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.100 2020/02/17 20:24:18 jperkin Exp $
+$NetBSD: distinfo,v 1.101 2020/02/21 18:31:02 ryoon Exp $
 
 SHA1 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 91517fa95f954427c627cf63eb7c518abd068f3e
 RMD160 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 06a3d922b27aac2deb570301542897a131b47cd0
@@ -105,7 +105,7 @@ RMD160 (rustc-1.41.0-src.tar.gz) = 47d5cd072f667cc52fd6c7a4096eb425e55a982a
 SHA512 (rustc-1.41.0-src.tar.gz) = fb794b8d8527170add7229b136c9d96b94d0c8bae195b9db55e7e0fec41661f0e22a6e62cdcf581f4576f6969f8850a4b8b263fdc874cd5dc61e0c1ddb2833d9
 Size (rustc-1.41.0-src.tar.gz) = 135348467 bytes
 SHA1 (patch-src_bootstrap_bootstrap.py) = 53e0409527f3e52dd00b5c86e6c38047626e2379
-SHA1 (patch-src_bootstrap_builder.rs) = 2634b02232c169fb6700c4f12d7a9595bc78f925
+SHA1 (patch-src_bootstrap_builder.rs) = c3dcfed38271219898e8870f9a59ededd0ded650
 SHA1 (patch-src_bootstrap_lib.rs) = 59fc8949d98692550daba6f3e8119f71eed13fb2
 SHA1 (patch-src_build__helper_lib.rs) = ef0b522e303f0490b86e64f40733c2ecb498da5b
 SHA1 (patch-src_librustc__codegen__ssa_back_linker.rs) = e7c592f78b9ee317521cf0258686173a31f1d2e0
