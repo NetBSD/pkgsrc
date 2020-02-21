@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.54 2019/11/23 23:47:14 nia Exp $
+$NetBSD: distinfo,v 1.55 2020/02/21 16:36:53 nia Exp $
 
-SHA1 (blender-2.81.tar.xz) = 59bab56b5c3cd8ff64be60f385adcc7e1dfcea61
-RMD160 (blender-2.81.tar.xz) = 1a85b4be065c2fa13d7ec75f77edcb779be72dfc
-SHA512 (blender-2.81.tar.xz) = b7eed47afc4bdb87e9e8a579565935ae8489459197fb9b5978285cfe255ea4fc4151a1178526857921f3b2d54cf63b68dda66586565340f7bfd4274b82e7e9ff
-Size (blender-2.81.tar.xz) = 39241924 bytes
+SHA1 (blender-2.82.tar.xz) = 06bc1304e2ba71f06be3effd1fa099e57c7893cb
+RMD160 (blender-2.82.tar.xz) = 00126f9e15c0088ccbfdfef4adafc6ef68c0a7e6
+SHA512 (blender-2.82.tar.xz) = 4c96d3982ede3965212d6e67f1367d8eb15c835e922eb3c31fd961c306bb7b86079dc256bed69a197f1f316eda7ed40843721554a73c38d154b7d24a2e5112bc
+Size (blender-2.82.tar.xz) = 39895660 bytes
 SHA1 (patch-extern_glog_src_base_mutex.h) = 5fceceefe83400967a59080eeb930d0f3a4b8e88
 SHA1 (patch-extern_glog_src_config.h) = e445c911d4ebb1f7e378c3c46911b55f77ba5608
 SHA1 (patch-extern_glog_src_config__netbsd.h) = f96dd9d6afed38466e5765c604efebcd78537a54
+SHA1 (patch-extern_wcwidth_wcwidth.h) = c6ebe1ec27cd9096621b26bd6b83560ea2c1770a
 SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = 81fb0fd1b34d550168a4bdf63f28b4e199717921
+SHA1 (patch-source_blender_blenlib_BLI__sys__types.h) = c01af4c1c21e8cd0565205cfd58839b898ad83e8
