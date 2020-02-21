@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/02/21 03:36:18 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2020/02/21 06:44:35 tsutsui Exp $
 
-PKGNAME=	mikutter-plugins-twitter-4.0
+PKGNAME=	${RUBY_PKGPREFIX}-mikutter-plugins-twitter-4.0
 DIST_SUBDIR=	mikutter-plugins
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mikutter/}
