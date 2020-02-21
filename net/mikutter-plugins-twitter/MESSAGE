@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2020/02/21 03:36:18 tsutsui Exp $
+
+The Twitter API keys (CK/CS) for mikutter has been suspended since
+May 4th 2018, so currently mikutter cannot connect to Twitter APIs
+and you cannot use mikutter as a Twitter client with the default settings.
+
+To use Twitter via mikutter you also need to get your own Twitter CK/CS
+and install the "twitter_api_keys" plugin with your CK/CS.
+
+See @Akkiesoft's document "How to make mikutter work again" for details:
+ https://github.com/Akkiesoft/how-to-make-mikutter-work-again
+===========================================================================
