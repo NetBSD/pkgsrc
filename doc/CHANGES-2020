@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1197 2020/02/21 09:11:10 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1198 2020/02/21 15:14:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1712,3 +1712,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-requests to 2.23.0 [adam 2020-02-21]
 	Updated textproc/py-sphinx to 2.4.2 [adam 2020-02-21]
 	Updated misc/py-tqdm to 4.43.0 [adam 2020-02-21]
+	Updated www/firefox to 73.0.1 [ryoon 2020-02-21]
