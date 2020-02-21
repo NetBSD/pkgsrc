@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.184 2020/02/19 21:03:41 tnn Exp $
+# $NetBSD: Makefile,v 1.185 2020/02/21 21:52:24 tnn Exp $
 
 DISTNAME=	mesa-19.2.7
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 EXTRACT_SUFX=	.tar.xz
@@ -124,6 +124,8 @@ MESON_ARGS+=	-Dplatforms=${MESA_PLATFORMS:ts,}
 
 .if ${MACHINE_ARCH} == "i386"
 MESON_ARGS+=	-Dglx-read-only-text=true
+CFLAGS+=	-march=i586
+CXXFLAGS+=	-march=i586
 .endif
 
 MESON_ARGS+=	-Dgles1=true
