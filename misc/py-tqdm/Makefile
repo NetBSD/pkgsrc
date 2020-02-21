@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/02/13 19:29:32 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/02/21 09:10:51 adam Exp $
 
-DISTNAME=	tqdm-4.42.1
+DISTNAME=	tqdm-4.43.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tqdm/}
