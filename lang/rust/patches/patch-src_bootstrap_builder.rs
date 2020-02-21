@@ -1,6 +1,8 @@
-$NetBSD: patch-src_bootstrap_builder.rs,v 1.6 2020/02/17 20:24:18 jperkin Exp $
+$NetBSD: patch-src_bootstrap_builder.rs,v 1.7 2020/02/21 18:31:02 ryoon Exp $
 
 Do not install 'src'.
+
+Fix RPATH for pkgsrc.
 
 --- src/bootstrap/builder.rs.orig	2020-01-27 15:34:02.000000000 +0000
 +++ src/bootstrap/builder.rs
