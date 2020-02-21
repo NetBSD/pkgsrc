@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1200 2020/02/21 16:37:22 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1201 2020/02/21 17:56:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1715,3 +1715,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 73.0.1 [ryoon 2020-02-21]
 	Updated www/firefox-l10n to 73.0.1 [ryoon 2020-02-21]
 	Updated graphics/blender to 2.82 [nia 2020-02-21]
+	Updated archivers/unrar to 5.9.1 [adam 2020-02-21]
