@@ -1,15 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2018/05/27 05:17:40 tsutsui Exp $
+$NetBSD: MESSAGE,v 1.2 2020/02/21 02:53:19 tsutsui Exp $
 
-The Twitter API keys (CK/CS) for mikutter has been suspended since
-May 4th 2018, so currently mikutter cannot connect to Twitter APIs
-and you cannot use mikutter as a Twitter client with the default settings.
+After mikutter 4.0.0, twitter plugins are no longer included and
+only Mastodon plugins are included by default.
 
-While mikutter is not only a Twitter client but can also be used as
-a client for misc SNS services like Mastodon etc., you can still use
-Twitter via mikutter by getting your own Twitter CK/CS and using the
-"twitter_api_keys" plugin.
-
-See @Akkiesoft's document "How to make mikutter work again" for details:
- https://github.com/Akkiesoft/how-to-make-mikutter-work-again
+To use mikutter as a Twitter client as before, you have to install
+Twitter plugins for mikutter using pkgsrc/net/mikutter-plugins-twitter
+package.
 ===========================================================================
