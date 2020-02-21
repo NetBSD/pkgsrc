@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.154 2020/01/18 21:49:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.155 2020/02/21 16:36:53 nia Exp $
 
-DISTNAME=	blender-2.81
-PKGREVISION=	2
+DISTNAME=	blender-2.82
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz
@@ -11,9 +10,8 @@ HOMEPAGE=	https://www.blender.org/
 COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake sed
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
 
 # C++11
 GCC_REQD+=	4.7
@@ -35,7 +33,6 @@ CMAKE_ARGS+=	-DWITH_SDL_DYNLOAD=OFF
 CMAKE_ARGS+=	-DWITH_CODEC_FFMPEG=ON
 CMAKE_ARGS+=	-DWITH_CODEC_SNDFILE=ON
 CMAKE_ARGS+=	-DWITH_SYSTEM_GLEW=ON
-CMAKE_ARGS+=	-DWITH_TBB=OFF
 
 CMAKE_ARGS+=	-DWITH_PYTHON_INSTALL_NUMPY=OFF
 CMAKE_ARGS+=	-DWITH_PYTHON_INSTALL_REQUESTS=OFF
@@ -79,6 +76,7 @@ pre-configure:
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
