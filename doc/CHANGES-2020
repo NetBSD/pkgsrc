@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1192 2020/02/20 22:38:12 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1193 2020/02/21 02:53:37 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1705,3 +1705,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/bind911 to 9.11.16 [taca 2020-02-20]
 	Updated editors/xournalpp to 1.0.17 [nia 2020-02-20]
 	Updated x11/xkbcomp to 1.4.3 [wiz 2020-02-20]
+	Updated net/mikutter to 4.0.4 [tsutsui 2020-02-21]
