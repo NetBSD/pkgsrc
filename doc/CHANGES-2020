@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1198 2020/02/21 15:14:10 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1199 2020/02/21 15:14:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1713,3 +1713,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-sphinx to 2.4.2 [adam 2020-02-21]
 	Updated misc/py-tqdm to 4.43.0 [adam 2020-02-21]
 	Updated www/firefox to 73.0.1 [ryoon 2020-02-21]
+	Updated www/firefox-l10n to 73.0.1 [ryoon 2020-02-21]
