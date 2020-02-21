@@ -1,6 +1,7 @@
 #! /bin/sh
 #
-# $NetBSD: mikutter.sh.in,v 1.2 2011/11/06 07:49:38 obache Exp $
+# $NetBSD: mikutter.sh.in,v 1.3 2020/02/21 02:53:19 tsutsui Exp $
 #
 
+export DISABLE_BUNDLER_SETUP=1
 exec @PREFIX@/share/mikutter/mikutter.rb "$@"
