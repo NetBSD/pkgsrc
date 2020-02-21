@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1194 2020/02/21 03:39:44 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.1195 2020/02/21 06:00:41 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1707,3 +1707,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xkbcomp to 1.4.3 [wiz 2020-02-20]
 	Updated net/mikutter to 4.0.4 [tsutsui 2020-02-21]
 	Added net/mikutter-plugins-twitter version 4.0 [tsutsui 2020-02-21]
+	Updated net/nanotodon to 0.1.1 [tsutsui 2020-02-21]
