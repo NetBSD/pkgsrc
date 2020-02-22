@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2020/01/01 02:41:17 mef Exp $
+$NetBSD: distinfo,v 1.17 2020/02/22 12:41:28 mef Exp $
 
-SHA1 (Alien-Build-1.94.tar.gz) = 002d46e94ce0d8b1aa51a7a32efb01031614e7f5
-RMD160 (Alien-Build-1.94.tar.gz) = b354cafafef97a509efbc07322a4fdbd8bd47075
-SHA512 (Alien-Build-1.94.tar.gz) = 175691dd76aaaef93618a0b14bb7b025a664902d436208cf621277d76b4baea3f1227db1e9522cf64259257d0f955cacad7b237a30a046cca7aff1e448633393
-Size (Alien-Build-1.94.tar.gz) = 248631 bytes
+SHA1 (Alien-Build-2.08.tar.gz) = c0349b54d52d94c8ec6916ebd2678661f6099bad
+RMD160 (Alien-Build-2.08.tar.gz) = f3411f769ffafd49a5320e7f0f471a1726937b10
+SHA512 (Alien-Build-2.08.tar.gz) = 20fc8b78561ce66f493825ecbf5edb5c53b671b88ed092857c28ebac27ef57974884f7653abd959ca6bc29fe272d14e2f4d79c1db7825e277a53b9fd795f3ad1
+Size (Alien-Build-2.08.tar.gz) = 277433 bytes
