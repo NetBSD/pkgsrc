@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.7 2020/02/22 19:03:40 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.8 2020/02/22 19:45:30 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q4 branch:
 
@@ -76,4 +76,10 @@ lang/php74: security fix
 
 Pullup ticket #6129 - requested by taca
 lang/php72: security fix
+
+Pullup ticket #6136 - requested by taca
+mail/dovecot2: security fix
+
+Pullup ticket #6137 - requested by taca
+security/clamav: security fix + partial fix for PR pkg/54951
 
