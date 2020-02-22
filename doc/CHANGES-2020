@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1205 2020/02/22 14:17:15 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1206 2020/02/22 19:53:33 sevan Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1730,3 +1730,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Data-Perl to 0.002011 [mef 2020-02-22]
 	Updated devel/p5-Devel-CheckOS to 1.83 [mef 2020-02-22]
 	Updated devel/p5-Devel-Hide to 0.0013 [mef 2020-02-22]
+	Updated misc/pciids to 20200222 [sevan 2020-02-22]
