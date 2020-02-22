@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2020/01/14 08:44:03 mrg Exp $
+$NetBSD: MESSAGE,v 1.4 2020/02/22 11:55:36 mrg Exp $
 
 Examples command to install U-Boot to an empty SD card:
 
@@ -7,7 +7,7 @@ Examples command to install U-Boot to an empty SD card:
 
 Alternatively, to install to SPI flash:
 
-dd if=${LOCALBASE}/share/u-boot/rockpro64/rkspi_loader.img bs=64k of=/dev/spiflash0
+dd if=${LOCALBASE}/share/u-boot/pinebook-pro/rkspi_loader.img bs=64k of=/dev/spiflash0
 
 You should make sure that the space is otherwise cleared of data, as old
 images may fool the boot loader paths.
