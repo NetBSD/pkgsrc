@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:19:11 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/02/22 13:34:16 mef Exp $
 
-DISTNAME=	Data-Perl-0.002009
+DISTNAME=	Data-Perl-0.002011
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
@@ -16,13 +15,13 @@ DEPENDS+=	p5-Role-Tiny-[0-9]*:../../devel/p5-Role-Tiny
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
 
-BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
+TEST_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TEST_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TEST_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
 
 PERL5_PACKLIST=	auto/Data/Perl/.packlist
 
-#USE_LANGUAGES=	c
+USE_LANGUAGES=	#
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
