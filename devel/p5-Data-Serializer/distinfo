@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:28:07 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/02/22 13:47:12 mef Exp $
 
-SHA1 (Data-Serializer-0.60.tar.gz) = 468dcae8b0203f36139c9aa42df50f83c7ab0002
-RMD160 (Data-Serializer-0.60.tar.gz) = 8ebd054f5eeac1c1d61b4b33ebbb9f1b78a5c7f8
-SHA512 (Data-Serializer-0.60.tar.gz) = 85211d2ca5db19219f89da5300b93835866baa5e12237efa61ea82d2b841f6b5a05bca889d98878151d1f7517b2af5d9a1535e7bbcd64245936b270a82be21bb
-Size (Data-Serializer-0.60.tar.gz) = 43291 bytes
+SHA1 (Data-Serializer-0.65.tar.gz) = de4a9765d808f357f34cc742369a95e86dcf1501
+RMD160 (Data-Serializer-0.65.tar.gz) = aeba77f2d3a33d359faab94bfee590c6d62fa3c1
+SHA512 (Data-Serializer-0.65.tar.gz) = cc6cd25779f08598bebac38301b3bac667098f8582be8b4cd63cac7723ebc9d58e081b205e9326fd762eba5e378160545c718d50a8a1ead945be6da188c4de0d
+Size (Data-Serializer-0.65.tar.gz) = 43582 bytes
