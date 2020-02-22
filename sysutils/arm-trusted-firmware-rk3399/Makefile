@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/01/06 08:37:01 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2020/02/22 11:55:36 mrg Exp $
 
 VERSION=	2.2
+PKGREVISION=	1
 GITHUB_PROJECT=	arm-trusted-firmware
 GITHUB_TAG=	v2.2
 #GITHUB_TAG=	ab3d22473df279c61ed4d4873d26b072dcf887e8
