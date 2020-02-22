@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2019/08/11 13:19:12 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2020/02/22 13:47:12 mef Exp $
 
-DISTNAME=	Data-Serializer-0.60
+DISTNAME=	Data-Serializer-0.65
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
@@ -36,6 +35,8 @@ PERL5_PACKLIST=		auto/Data/Serializer/.packlist
 #DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 #DEPENDS+=	p5-YAML-Syck-[0-9]*:../../textproc/p5-YAML-Syck
 #DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
+
+TEST_DEPENDS+=	p5-XML-Dumper-[0-9]*:../../textproc/p5-XML-Dumper
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
