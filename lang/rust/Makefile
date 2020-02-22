@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2020/02/22 21:47:06 he Exp $
+# $NetBSD: Makefile,v 1.143 2020/02/22 22:06:45 wiz Exp $
 
 DISTNAME=	rustc-1.41.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -461,7 +461,7 @@ stage0-bootstrap: install
 #.include "../../www/http-parser/buildlink3.mk"
 #.include "../../devel/jemalloc/buildlink3.mk"
 
-# Bootstrap built on 8.0, built on later versoin
+# Bootstrap built on 8.0, build on later version
 # requires compat80 package
 # (I wish this worked on powerpc, but it doesn't since
 # I can't build with the internal LLVM, ref.
