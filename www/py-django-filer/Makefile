@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/02/20 06:23:20 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/02/22 06:55:01 adam Exp $
 
-DISTNAME=	django-filer-1.6.0
+DISTNAME=	django-filer-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-filer/}
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-django>=1.11:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-mptt>=0.6:../../www/py-django-mptt
 DEPENDS+=	${PYPKGPREFIX}-django-polymorphic>=0.7:../../www/py-django-polymorphic
 DEPENDS+=	${PYPKGPREFIX}-easy-thumbnails>=2.0:../../www/py-easy-thumbnails
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
