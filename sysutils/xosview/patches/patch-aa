@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.19 2007/12/17 22:08:12 veego Exp $
+$NetBSD: patch-aa,v 1.20 2020/02/22 13:10:22 pgoyette Exp $
 
---- bsd/kernel.cc.orig	2006-02-18 08:36:06.000000000 +0100
-+++ bsd/kernel.cc	2007-12-17 21:23:26.000000000 +0100
+--- bsd/kernel.cc.orig	2006-02-17 23:36:06.000000000 -0800
++++ bsd/kernel.cc	2020-02-21 13:26:06.554690464 -0800
 @@ -115,8 +115,16 @@
  // in __NetBSD_Version__ for us if needed.
  #if defined(XOSVIEW_NETBSD) && defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 106010000)
@@ -92,30 +92,37 @@ $NetBSD: patch-aa,v 1.19 2007/12/17 22:08:12 veego Exp $
      char ifname[256];
  #ifdef NETBSD_OLD_IFACE
      //  In pre-1.2A, getting the interface name was more complicated.
-@@ -476,15 +488,21 @@
+@@ -476,15 +488,29 @@
      safe_kvm_read ((u_long) (((char*)ifnetp) + (&ifnet.if_xname[0] - (char*)&ifnet)), ifname, 256);
      snprintf (ifname, 256, "%s", ifname);
  #endif
 +#ifdef NET_DEBUG
      printf ("Interface name is %s\n", ifname);
++#if defined(XOSVIEW_NETBSD) && (__NetBSD_Version__ >= 999004500)
++/* Need to create new way to access interface stats */
++#else
      printf ("Ibytes: %8llu Obytes %8llu\n",
  	(unsigned long long) ifnet.if_ibytes,
  	(unsigned long long) ifnet.if_obytes);
      printf ("Ipackets:  %8llu\n", (unsigned long long) ifnet.if_ipackets);
--#endif
+ #endif
 +#endif /* NET_DEBUG */
 +      if (ifname != netIface_)
 +       goto skipif;
 +    }
 +#endif /* XOSVIEW_NETBSD */
++#if defined(XOSVIEW_NETBSD) && (__NetBSD_Version__ >= 999004500)
++/* Need to create new way to access interface stats */
++#else
      *inbytes  += ifnet.if_ibytes;
      *outbytes += ifnet.if_obytes;
++#endif
  
 +    skipif:
      //  Linked-list step taken from if.c in netstat source, line 120.
  #ifdef XOSVIEW_FREEBSD
  #if (__FreeBSD_version >= 300000) 
-@@ -773,13 +791,12 @@
+@@ -773,13 +799,12 @@
  #ifdef NETBSD_1_6A
    // Do a sysctl with a NULL data pointer to get the size that would
    // have been returned, and use that to figure out # drives.
@@ -131,7 +138,7 @@ $NetBSD: patch-aa,v 1.19 2007/12/17 22:08:12 veego Exp $
    return 1;
  #endif
    return ValidSymbol(DISKLIST_SYM_INDEX);
-@@ -816,19 +833,29 @@
+@@ -816,19 +841,29 @@
  #else
  #if defined(NETBSD_1_6A)
    // Use the new sysctl to do this for us.
@@ -164,7 +171,7 @@ $NetBSD: patch-aa,v 1.19 2007/12/17 22:08:12 veego Exp $
    }
    *bytesXferred = xferred;
  #else
-@@ -1016,7 +1043,7 @@
+@@ -1016,7 +1051,7 @@
  
      while (evptr && i < NUM_INTR) {
  
@@ -173,7 +180,7 @@ $NetBSD: patch-aa,v 1.19 2007/12/17 22:08:12 veego Exp $
  
        evptr = evcnt.ev_list.tqe_next;
  
-@@ -1024,7 +1051,7 @@
+@@ -1024,7 +1059,7 @@
        if (evcnt.ev_type != EVCNT_TYPE_INTR)
  	continue;
  
