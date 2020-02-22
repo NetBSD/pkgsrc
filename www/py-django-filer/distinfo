@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/02/20 06:23:20 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/02/22 06:55:01 adam Exp $
 
-SHA1 (django-filer-1.6.0.tar.gz) = 82df5d3fb0c579ce04d840a9e3b9c2e5bccc15c2
-RMD160 (django-filer-1.6.0.tar.gz) = 9230e3fcf6219be80bd269e99e4bec024edd9f1e
-SHA512 (django-filer-1.6.0.tar.gz) = 320ad8cca60b5bd280e03702a905468098b552967de5d91a515e82cb340d56aa184e4f6cfbea8271c05fe74712d8dca7aeb81967d5de59f943d4357193423062
-Size (django-filer-1.6.0.tar.gz) = 1252203 bytes
+SHA1 (django-filer-1.7.0.tar.gz) = a076d610ecb603d0bc30cf07af018a7e42a120d6
+RMD160 (django-filer-1.7.0.tar.gz) = e073d2d1fca5986d480f696fdb222aca5cb661d0
+SHA512 (django-filer-1.7.0.tar.gz) = fcf4a0927541402adb621dae3b9ac51b4148513e7420360609a4216889d95bed751d647e1febbae6d91e25c66bab10fd466a0a2d2481e815b8ea7f819d9210c2
+Size (django-filer-1.7.0.tar.gz) = 1252215 bytes
