@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.6 2020/01/29 13:40:18 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.7 2020/02/22 19:03:40 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q4 branch:
 
@@ -31,6 +31,18 @@ net/libtorrent-rasterbar: NetBSD 8 build fix
 
 Pullup ticket #6106 - requested by gutteridge
 x11/mate-terminal: crash fix
+
+Pullup ticket #6116 - requested by ryoon
+www/firefox68-l10n: dependent update
+
+Pullup ticket #6117 - requested by nia
+devel/nss: dependent update (for Firefox)
+
+Pullup ticket #6132 - requested by minskim
+www/py-feedgen: security fix
+
+Pullup ticket #6133 - requested by taca
+security/sudo: security fix
 
 Pullup ticket #6120 - requested by kim
 www/nginx: security fix
