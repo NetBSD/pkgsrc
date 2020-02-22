@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.141 2020/02/21 16:04:50 adam Exp $
+# $NetBSD: Makefile,v 1.142 2020/02/22 21:47:06 he Exp $
 
 DISTNAME=	rustc-1.41.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
@@ -458,8 +459,21 @@ stage0-bootstrap: install
 #.include "../../devel/libgit2/buildlink3.mk"
 #.include "../../security/libssh2/buildlink3.mk"
 #.include "../../www/http-parser/buildlink3.mk"
-
 #.include "../../devel/jemalloc/buildlink3.mk"
+
+# Bootstrap built on 8.0, built on later versoin
+# requires compat80 package
+# (I wish this worked on powerpc, but it doesn't since
+# I can't build with the internal LLVM, ref.
+# https://github.com/rust-lang/rust/issues/65862)
+.if (${OPSYS} == "NetBSD") && \
+		((${MACHINE_ARCH} == "i386") || \
+		 (${MACHINE_ARCH} == "powerpc")) \
+	&& (empty(OS_VERSION:M[012345678].*) || \
+	    !empty(OS_VERSION:M8.99.*))
+DEPENDS+=	compat80>=0:../../emulators/compat80/
+.endif
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../security/openssl/buildlink3.mk"

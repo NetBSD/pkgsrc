@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.101 2020/02/21 18:31:02 ryoon Exp $
+$NetBSD: distinfo,v 1.102 2020/02/22 21:47:06 he Exp $
 
 SHA1 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 91517fa95f954427c627cf63eb7c518abd068f3e
 RMD160 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 06a3d922b27aac2deb570301542897a131b47cd0
 SHA512 (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 27f7fb0e4a4522b24f04c7f6b578c8717908978ab485c525adbc95716860a958f2c42d4148d81fd41ab0e593d3baae6a1ffc6767ed24879df7c2aa6d8bf14683
 Size (rust-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 243045630 bytes
-SHA1 (rust-1.40.0-aarch64-unknown-netbsd.tar.gz) = 08469894161afb6fb1ae6e8a0110e894201f1ca2
-RMD160 (rust-1.40.0-aarch64-unknown-netbsd.tar.gz) = f5aa5bf764fe139a5a1c991c796305cc95375c21
-SHA512 (rust-1.40.0-aarch64-unknown-netbsd.tar.gz) = da7c3fdb3ed9b3fdb8afec94eac16234a060ec7a1e43c07285d98fac57fd6e5455d89b89fa332ffd353ef358d1b78f4317816b70394e12afba41e5f59aeec76f
-Size (rust-1.40.0-aarch64-unknown-netbsd.tar.gz) = 148191855 bytes
+SHA1 (rust-1.40.0-aarch64-unknown-netbsd.tar.gz) = 317d5beffd5006827c16123ee7dea8e1f50ab0ef
+RMD160 (rust-1.40.0-aarch64-unknown-netbsd.tar.gz) = b78992279d865d64bd2d8f46ac93d39950ed39c5
+SHA512 (rust-1.40.0-aarch64-unknown-netbsd.tar.gz) = c0989ed411746ba25e6eda044f0e069034d24e1e0b247aac4142a165908e0376321152345ca1f3ee65cde1938df0bfea2ef33c1627f65ed6f0e29ecde3146d33
+Size (rust-1.40.0-aarch64-unknown-netbsd.tar.gz) = 148190882 bytes
 SHA1 (rust-1.40.0-i686-apple-darwin.tar.gz) = 285dd91ca37407f8f0eeace62d88942172a35ddf
 RMD160 (rust-1.40.0-i686-apple-darwin.tar.gz) = 1c7ba18e2e196e4b65dad4d1a6fe8c70ff9594c1
 SHA512 (rust-1.40.0-i686-apple-darwin.tar.gz) = ccf2fde8fb8e298f8bf1bf80ef4a50186d6492560eac017be12a48840ef0223f7df0b0644a88f75661e1e550ebc86b5e64ca5b9124b8a105adf76ea08f93fb09
@@ -56,10 +56,10 @@ SHA1 (rust-std-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = b8a8913c95d9d7f8894c
 RMD160 (rust-std-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 34753f2c4efe6bbec7044a1d417ef9f4586b50a0
 SHA512 (rust-std-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = ea834d454c8d23101d654de3611f07782a676a08f581c501152da13c617be1b08d09a3b1c0b4af34ea79d11b5c15b5a1ece7da8395f4def950b2add245e38f2e
 Size (rust-std-1.35.0-armv7-unknown-netbsd-eabihf.tar.gz) = 86878840 bytes
-SHA1 (rust-std-1.40.0-aarch64-unknown-netbsd.tar.gz) = e593c04a9862c2eb374c3cb11a335320f780bcb2
-RMD160 (rust-std-1.40.0-aarch64-unknown-netbsd.tar.gz) = d1bb119ae2a6b6b391c3123603fbc203dc279d46
-SHA512 (rust-std-1.40.0-aarch64-unknown-netbsd.tar.gz) = 16e7c84a9cb2d7c3ec6c12f5826e5c572a1d42261f071f7aa9b749446b83b1a26dcb95819306e4259679f00f924781f7886af2d15a6672ab4b09eb7b8761f651
-Size (rust-std-1.40.0-aarch64-unknown-netbsd.tar.gz) = 17692782 bytes
+SHA1 (rust-std-1.40.0-aarch64-unknown-netbsd.tar.gz) = f207669dd6fe2f0f2652eac9c938b72b094dc35a
+RMD160 (rust-std-1.40.0-aarch64-unknown-netbsd.tar.gz) = 0aa627cb92c85028115909960a717ee8738e31cf
+SHA512 (rust-std-1.40.0-aarch64-unknown-netbsd.tar.gz) = 1683f659652536bb3d96839b386199cfdedfa1db93782c58623ac6b971645ea35eb6b02fce26821fb90e07c00a39a007502e77199cdb7e8fb00c8cac9b0a7e6f
+Size (rust-std-1.40.0-aarch64-unknown-netbsd.tar.gz) = 17692826 bytes
 SHA1 (rust-std-1.40.0-i686-apple-darwin.tar.gz) = 8ebbe508b9cddc2fccd09e50039503d08732b7b5
 RMD160 (rust-std-1.40.0-i686-apple-darwin.tar.gz) = b0d33fbff6d6a396570c817304eea2d35dde0751
 SHA512 (rust-std-1.40.0-i686-apple-darwin.tar.gz) = 3d456d22700346bd125e6259850525733d58f58492b1ead2b3d7fa788d461a6caa2eed2f8cd61b411f45ed5cfadc383b3a79f96d67a0522fda2b7b12f35d2451
@@ -105,7 +105,7 @@ RMD160 (rustc-1.41.0-src.tar.gz) = 47d5cd072f667cc52fd6c7a4096eb425e55a982a
 SHA512 (rustc-1.41.0-src.tar.gz) = fb794b8d8527170add7229b136c9d96b94d0c8bae195b9db55e7e0fec41661f0e22a6e62cdcf581f4576f6969f8850a4b8b263fdc874cd5dc61e0c1ddb2833d9
 Size (rustc-1.41.0-src.tar.gz) = 135348467 bytes
 SHA1 (patch-src_bootstrap_bootstrap.py) = 53e0409527f3e52dd00b5c86e6c38047626e2379
-SHA1 (patch-src_bootstrap_builder.rs) = c3dcfed38271219898e8870f9a59ededd0ded650
+SHA1 (patch-src_bootstrap_builder.rs) = ea0699c873ecc7c61b5b6a044c37191db8fab6dc
 SHA1 (patch-src_bootstrap_lib.rs) = 59fc8949d98692550daba6f3e8119f71eed13fb2
 SHA1 (patch-src_build__helper_lib.rs) = ef0b522e303f0490b86e64f40733c2ecb498da5b
 SHA1 (patch-src_librustc__codegen__ssa_back_linker.rs) = e7c592f78b9ee317521cf0258686173a31f1d2e0
