@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.149 2020/02/21 21:52:24 tnn Exp $
+$NetBSD: distinfo,v 1.150 2020/02/22 07:52:01 tnn Exp $
 
 SHA1 (mesa-19.2.7.tar.xz) = 9b8ebf66770353a48bd710e12e2727fb33645f44
 RMD160 (mesa-19.2.7.tar.xz) = 5323b623ac22c168b86548cf6d842ce004e346a9
@@ -31,7 +31,7 @@ SHA1 (patch-src_intel_perf_gen__perf.c) = 526f36d96bd9d72893764da2b9e78cb9b70de9
 SHA1 (patch-src_intel_tools_aubinator__error__decode.c) = d8f636e3c3e76763a505a1dce23de0b198ad62fa
 SHA1 (patch-src_loader_loader.c) = 303e941f9b8afa6ee8053107af01e2c26e6ff118
 SHA1 (patch-src_mapi_entry__x86-64__tls.h) = cbbb95b96414609a9cd05af75c9544f8e6938280
-SHA1 (patch-src_mapi_entry__x86__tls.h) = 11c0f5302d305a77f3a1780d44a2c61f48a66273
+SHA1 (patch-src_mapi_entry__x86__tls.h) = c8ad1cb3854efeba8d709a66bdddb818854820ea
 SHA1 (patch-src_mapi_u__current.c) = 4e3ec6e253af3737f77ecd43e56044ba2b81e699
 SHA1 (patch-src_mapi_u__current.h) = 9f4744681381a0959fda2926a436f296c89577f3
 SHA1 (patch-src_mesa_main_extensions.c) = 2f48bdb1176c2878bb33bcfab7556172b50a987e
