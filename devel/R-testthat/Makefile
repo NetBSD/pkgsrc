@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/02/15 07:11:02 mef Exp $
+# $NetBSD: Makefile,v 1.5 2020/02/22 08:12:08 mef Exp $
 
 R_PKGNAME=	testthat
 R_PKGVER=	2.3.1
@@ -17,6 +17,8 @@ DEPENDS+=	R-rlang>=0.4.1:../../devel/R-rlang
 DEPENDS+=	R-withr>=2.0.0:../../devel/R-withr
 DEPENDS+=	R-praise>=1.0.0:../../misc/R-praise
 DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
+DEPENDS+=	R-ellipsis-[0-9]*:../../math/R-ellipsis
+DEPENDS+=	R-pkgload-[0-9]*:../../devel/R-pkgload
 
 TEST_DEPENDS+=	R-devtools-[0-9]*:../../devel/R-devtools
 
