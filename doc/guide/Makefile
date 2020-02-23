@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2020/01/06 21:34:31 leot Exp $
+# $NetBSD: Makefile,v 1.60 2020/02/23 17:43:20 rillig Exp $
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
@@ -80,6 +80,9 @@ do-build:
 
 post-build:
 	@${RM} -f ${WRKSRC}/pkgsrc.tmp.html
+	${RUN} cd ${WRKSRC};						\
+	${GREP} 'idm[0-9][0-9][0-9][0-9][0-9]' ./*.html || exit 0;	\
+	${FAIL_MSG} "[post-build] HTML files contain generated IDs."
 
 do-install:
 .if !empty(OUTPUTS:Mhtml) || !empty(OUTPUTS:Mhtml-split)
