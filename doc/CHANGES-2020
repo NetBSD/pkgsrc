@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1210 2020/02/23 10:40:50 morr Exp $
+$NetBSD: CHANGES-2020,v 1.1211 2020/02/23 10:41:32 morr Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1735,3 +1735,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/cliqz to 1.33.0 [fox 2020-02-23]
 	Updated lang/rust to 1.41.0nb2 [he 2020-02-23]
 	Updated editors/vim-share to 8.2.0303 [morr 2020-02-23]
+	Updated editors/vim-lang to 8.2.0303 [morr 2020-02-23]
