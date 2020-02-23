@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/02/22 11:55:36 mrg Exp $
+# $NetBSD: Makefile,v 1.3 2020/02/23 01:01:11 mrg Exp $
 
 VERSION=	2.2
-PKGREVISION=	1
+PKGREVISION=	2
 GITHUB_PROJECT=	arm-trusted-firmware
 GITHUB_TAG=	v2.2
 #GITHUB_TAG=	ab3d22473df279c61ed4d4873d26b072dcf887e8
@@ -24,7 +24,8 @@ MAKE_FLAGS+=	CROSS_COMPILE=${PREFIX}/cross-aarch64-none-elf/bin/aarch64-none-elf
 MAKE_FLAGS+=	M0_CROSS_COMPILE=${PREFIX}/cross-arm-none-eabi/bin/arm-none-eabi-
 MAKE_FLAGS+=	PLAT=${PLATFORM}
 MAKE_FLAGS+=	CFLAGS='-gdwarf-2'
-MAKE_FLAGS+=	DEBUG=1
+#MAKE_FLAGS+=	DEBUG=1
+#MAKE_FLAGS+=	LOG_LEVEL=50
 #MAKE_FLAGS+=	V=1
 MAKE_FLAGS+=	BUILD_STRING=${GITHUB_TAG}
 BUILD_TARGET=	bl31
@@ -33,9 +34,15 @@ BUILD_TARGET=	bl31
 BUILD_DEPENDS+=	cross-aarch64-none-elf-gcc-[0-9]*:../../cross/aarch64-none-elf-gcc
 BUILD_DEPENDS+=	cross-arm-none-eabi-gcc-[0-9]*:../../cross/arm-none-eabi-gcc
 
+.if empty(MAKE_FLAGS:MDEBUG=1)
+BL31_DIR=release
+.else
+BL31_DIR=debug
+.endif
+
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/arm-trusted-firmware/${PLATFORM}
-	${INSTALL_DATA} ${WRKSRC}/build/${PLATFORM}/debug/bl31/bl31.elf \
+	${INSTALL_DATA} ${WRKSRC}/build/${PLATFORM}/${BL31_DIR}/bl31/bl31.elf \
 	    ${DESTDIR}${PREFIX}/share/arm-trusted-firmware/${PLATFORM}/
 
 # XXX kludge. pkgsrc passes down run path flags in LDFLAGS assuming
