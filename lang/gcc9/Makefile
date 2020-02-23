@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/02/12 04:28:35 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/02/23 19:10:08 rillig Exp $
 
 GCC9_VERSION=	9.2.0
 
@@ -36,12 +36,6 @@ CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS.Linux+=	--without-system-zlib # to prevent "-lz not found"
 
 UNLIMIT_RESOURCES=	datasize stacksize
-
-SUBST_CLASSES+=		vars
-SUBST_MESSAGE.vars=	Setting target machine name path
-SUBST_STAGE.vars=	pre-configure
-SUBST_FILES.vars=	gcc/Makefile.in
-SUBST_VARS.vars=	GCC_TARGET_MACHINE
 
 # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90142
 CHECK_PORTABILITY_SKIP=	contrib/download_prerequisites
