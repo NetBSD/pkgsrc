@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1223 2020/02/23 22:29:47 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1224 2020/02/23 22:32:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1748,3 +1748,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/stagit-gopher to 0.9.3 [leot 2020-02-23]
 	Updated www/stagit to 0.9.3 [fcambus 2020-02-23]
 	Updated x11/xcb-proto to 1.14 [wiz 2020-02-23]
+	Updated x11/py-xcbgen to 1.14 [wiz 2020-02-23]
