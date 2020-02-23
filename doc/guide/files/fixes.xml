@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.152 2020/02/23 16:52:02 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.153 2020/02/23 17:27:29 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1456,6 +1456,65 @@ report</ulink> against the pkgsrc package, including the exact error
 message and the contents of your &mk.conf; file.</para>
 
 </sect3>
+
+<sect3 id="fixes.build.header.symlink">
+<title>Symlinks</title>
+
+<para>Pkgsrc does not work reliably if any of
+<varname>LOCALBASE</varname>, <varname>VARBASE</varname> or
+<varname>WRKDIR</varname> contains a symlink. Since 2019Q2, the pkgsrc
+bootstrap program prevents installing pkgsrc in symlink-based
+directories. Existing pkgsrc installations are not checked for symlinks
+though.</para>
+
+<para>The "No such file or directory" error messages are a typical
+symptom of symlinks, and it's quite difficult to find out that this is
+the actual cause.</para>
+
+</sect3>
+
+<sect3 id="fixes.build.header.stale">
+<title>Stale working directories</title>
+
+<para>When building a hierarchy of packages, it may happen that one
+package is built and then pkgsrc is updated. This situation can provoke
+various hard to diagnose build errors. To clean up the situation:</para>
+
+<programlisting>
+&uprompt; (cd ../../ && test -f mk/bsd.pkg.mk && rm -rf */*/work)
+</programlisting>
+
+<para>(The test for <filename>bsd.pkg.mk</filename> just prevents running
+this command in the wrong directory.)</para>
+
+<para>If you have set <varname>WRKOBJDIR</varname> in &mk.conf;, remove
+that directory as well.</para>
+
+</sect3>
+
+<sect3 id="fixes.build.header.misc">
+<title>Other possible reasons</title>
+
+<para>On platforms other than BSD, third-party packages are installed in
+<filename>/usr/include</filename>, together with the base system. This
+means that pkgsrc cannot distinguish between headers provided by the base
+system (which it needs) and headers from third-party packages (which are
+often included in pkgsrc as well). This can lead to subtle version
+mismatches.</para>
+
+<para>In pkgsrc installations that have been active for several years, it
+may happen that some files are manually deleted. To exclude this unlikely
+reason, run <command>pkg_admin check</command>.</para>
+
+<para>It may help to run <command>pkg_admin rebuild-tree</command> to
+check/fix dependencies.</para>
+
+<para>If all of the above doesn't help, see <xref linkend="help-user"/>
+for contact information. Be prepared to describe what you have tried so
+far and what any error messages were.</para>
+
+</sect3>
+
 </sect2>
 
 <sect2 id="undefined-reference">
