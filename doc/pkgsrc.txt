@@ -6701,6 +6701,47 @@ MAKE_JOBS_SAFE=no bmake clean build
 If that succeeds, file a bug report against the pkgsrc package, including the
 exact error message and the contents of your mk.conf file.
 
+21.5.3.3. Symlinks
+
+Pkgsrc does not work reliably if any of LOCALBASE, VARBASE or WRKDIR contains a
+symlink. Since 2019Q2, the pkgsrc bootstrap program prevents installing pkgsrc
+in symlink-based directories. Existing pkgsrc installations are not checked for
+symlinks though.
+
+The "No such file or directory" error messages are a typical symptom of
+symlinks, and it's quite difficult to find out that this is the actual cause.
+
+21.5.3.4. Stale working directories
+
+When building a hierarchy of packages, it may happen that one package is built
+and then pkgsrc is updated. This situation can provoke various hard to diagnose
+build errors. To clean up the situation:
+
+$ (cd ../../ && test -f mk/bsd.pkg.mk && rm -rf */*/work)
+
+(The test for bsd.pkg.mk just prevents running this command in the wrong
+directory.)
+
+If you have set WRKOBJDIR in mk.conf, remove that directory as well.
+
+21.5.3.5. Other possible reasons
+
+On platforms other than BSD, third-party packages are installed in /usr/
+include, together with the base system. This means that pkgsrc cannot
+distinguish between headers provided by the base system (which it needs) and
+headers from third-party packages (which are often included in pkgsrc as well).
+This can lead to subtle version mismatches.
+
+In pkgsrc installations that have been active for several years, it may happen
+that some files are manually deleted. To exclude this unlikely reason, run 
+pkg_admin check.
+
+It may help to run pkg_admin rebuild-tree to check/fix dependencies.
+
+If all of the above doesn't help, see Chapter 2, Getting help for contact
+information. Be prepared to describe what you have tried so far and what any
+error messages were.
+
 21.5.4. Undefined reference to "..."
 
 This error message often means that a package did not link to a shared library
