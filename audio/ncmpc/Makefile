@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2019/11/09 11:22:20 nia Exp $
+# $NetBSD: Makefile,v 1.38 2020/02/23 11:44:52 nia Exp $
 
-DISTNAME=	ncmpc-0.36
+DISTNAME=	ncmpc-0.37
 CATEGORIES=	audio
 MASTER_SITES=	https://musicpd.org/download/ncmpc/0/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +11,7 @@ COMMENT=	Fully featured musicpd client using curses
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config xgettext
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c c++17
 FAKE_NCURSES=	yes
 
 PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
@@ -19,8 +19,8 @@ PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
 MESON_ARGS+=	-Dlirc=disabled
 MESON_ARGS+=	-Dhtml_manual=false
 
-# C++14
-GCC_REQD+=	4.9
+# C++17
+GCC_REQD+=	7
 
 # make stderr readable
 CXXFLAGS+=	-Wno-undef
