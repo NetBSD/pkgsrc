@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/06/17 22:28:20 morr Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/02/23 10:40:07 morr Exp $
 man/da.ISO8859-1/man1/ex.1
 man/da.ISO8859-1/man1/rview.1
 man/da.ISO8859-1/man1/rvim.1
@@ -349,6 +349,12 @@ share/vim/${VIM_SUBDIR}/lang/menu_sv.latin1.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sv.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sv_se.latin1.vim
 share/vim/${VIM_SUBDIR}/lang/menu_sv_se.utf-8.vim
+share/vim/${VIM_SUBDIR}/lang/menu_tr.cp1254.vim
+share/vim/${VIM_SUBDIR}/lang/menu_tr.iso_8859-9.vim
+share/vim/${VIM_SUBDIR}/lang/menu_tr.utf-8.vim
+share/vim/${VIM_SUBDIR}/lang/menu_tr_tr.cp1254.vim
+share/vim/${VIM_SUBDIR}/lang/menu_tr_tr.iso_8859-9.vim
+share/vim/${VIM_SUBDIR}/lang/menu_tr_tr.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_uk_ua.cp1251.vim
 share/vim/${VIM_SUBDIR}/lang/menu_uk_ua.koi8-u.vim
 share/vim/${VIM_SUBDIR}/lang/menu_vi_vn.vim
@@ -377,6 +383,7 @@ share/vim/${VIM_SUBDIR}/lang/sk.cp1250/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/sk/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/sr/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/sv/LC_MESSAGES/vim.mo
+share/vim/${VIM_SUBDIR}/lang/tr/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/uk.cp1251/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/uk/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/vi/LC_MESSAGES/vim.mo
