@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.3 2016/05/19 07:08:14 wiz Exp $
+$NetBSD: patch-ae,v 1.4 2020/02/23 22:32:03 wiz Exp $
 
 Only build xcbgen parts in this package, other stuff is in xcbproto.
 
---- Makefile.in.orig	2012-03-23 15:24:26.000000000 +0000
+--- Makefile.in.orig	2020-02-22 20:16:56.000000000 +0000
 +++ Makefile.in
-@@ -215,7 +215,7 @@ top_build_prefix = @top_build_prefix@
+@@ -311,7 +311,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  xcbincludedir = @xcbincludedir@
@@ -12,8 +12,8 @@ Only build xcbgen parts in this package, other stuff is in xcbproto.
 +SUBDIRS = xcbgen
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = xcb-proto.pc
- EXTRA_DIST = doc xcb-proto.pc.in autogen.sh
-@@ -661,7 +661,7 @@ info: info-recursive
+ EXTRA_DIST = doc xcb-proto.pc.in autogen.sh README.md
+@@ -730,7 +730,7 @@ info: info-recursive
  
  info-am:
  
