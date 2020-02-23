@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1213 2020/02/23 11:45:02 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1214 2020/02/23 13:10:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1738,3 +1738,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/vim-lang to 8.2.0303 [morr 2020-02-23]
 	Updated www/wordpress to 5.3.2 [morr 2020-02-23]
 	Updated audio/ncmpc to 0.37 [nia 2020-02-23]
+	Updated chat/weechat to 2.7.1 [nia 2020-02-23]
