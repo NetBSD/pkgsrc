@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1215 2020/02/23 14:09:32 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1216 2020/02/23 19:21:46 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1740,3 +1740,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/ncmpc to 0.37 [nia 2020-02-23]
 	Updated chat/weechat to 2.7.1 [nia 2020-02-23]
 	Updated chat/irssi to 1.2.2nb2 [nia 2020-02-23]
+	Updated lang/go112 to 1.12.17 [bsiegert 2020-02-23]
