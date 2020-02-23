@@ -35,10 +35,10 @@
 
 static sem_t *mksemtemp(char *, size_t, const char *);
 
-#define LOCK() do {} while (sem_wait(f->lock) != 0)
-#define UNLOCK() do { sem_post(f->lock); } while (0)
-#define COND_WAIT() do {} while (sem_wait(f->cond) != 0)
-#define COND_SIGNAL() do { sem_post(f->cond); } while (0)
+#define COND_WAIT_W() do {} while (sem_wait(f->cond_w) != 0)
+#define COND_SIGNAL_W() do { sem_post(f->cond_w); } while (0)
+#define COND_WAIT_T() do {} while (sem_wait(f->cond_t) != 0)
+#define COND_SIGNAL_T() do { sem_post(f->cond_t); } while (0)
 
 /**
  * xshmfence_trigger:
@@ -52,30 +52,23 @@ static sem_t *mksemtemp(char *, size_t, const char *);
 int
 xshmfence_trigger(struct xshmfence *f) {
 	int v, waiting;
-	LOCK();
 	v = __sync_bool_compare_and_swap(&f->triggered, 0, 1);
 	if (v == 0) {
 		/* already triggered */
-		UNLOCK();
 		return 0;
 	}
-	
-	waiting = __sync_fetch_and_add(&f->waiting, 0);
 
-	while (waiting > 0) {
-		COND_SIGNAL();
-		waiting--;
+	while ((waiting = __sync_fetch_and_add(&f->waiting, 0)) > 0) {
+		if (__sync_bool_compare_and_swap(&f->waiting, waiting, 0)) {
+			__sync_fetch_and_add(&f->wakeups, waiting);
+			while (waiting--) {
+				COND_SIGNAL_W();
+			}
+			COND_WAIT_T();
+			return 0;
+		}
 	}
 
-	while (__sync_fetch_and_add(&f->waiting, 0) > 0) {
-		/*
-		 * Busy wait until they all woke up.
-		 * No new sleepers should arrive since
-		 * the lock is still held.
-		 */
-		/* yield(); */
-	}
-	UNLOCK();
 	return 0;
 }
 
@@ -92,24 +85,18 @@ xshmfence_trigger(struct xshmfence *f) {
 int
 xshmfence_await(struct xshmfence *f) {
 
-	LOCK();
 	if (__sync_fetch_and_add(&f->triggered, 0) == 1) {
-		UNLOCK();
 		return 0;
 	}
 	do {
 		__sync_fetch_and_add(&f->waiting, 1);
-		/*
-		 * These next operations are not atomic.
-		 * But we busy-wait in xshmfence_trigger, so that's ok.
-		 */
-		UNLOCK();
-		COND_WAIT();
-		__sync_fetch_and_sub(&f->waiting, 1);
-		LOCK();
+		COND_WAIT_W();
+	} while (__sync_fetch_and_add(&f->triggered, 0) == 0);
+
+	if (__sync_sub_and_fetch(&f->wakeups, 1) == 0) {
+		COND_SIGNAL_T();
 	}
-	while (__sync_fetch_and_add(&f->triggered, 0) == 0);
-	UNLOCK();
+
 	return 0;
 }
 
@@ -121,11 +108,7 @@ xshmfence_await(struct xshmfence *f) {
  **/
 int
 xshmfence_query(struct xshmfence *f) {
-	int ret;
-	LOCK();
-	ret = __sync_fetch_and_add(&f->triggered, 0);
-	UNLOCK();
-	return ret;
+	return __sync_fetch_and_add(&f->triggered, 0);
 }
 
 /**
@@ -137,9 +120,7 @@ xshmfence_query(struct xshmfence *f) {
  **/
 void
 xshmfence_reset(struct xshmfence *f) {
-	LOCK();
 	__sync_bool_compare_and_swap(&f->triggered, 1, 0);
-	UNLOCK();
 }
 
 /**
@@ -151,27 +132,26 @@ xshmfence_reset(struct xshmfence *f) {
 void
 xshmfence_init(int fd)
 {
-	sem_t *lock;
-	sem_t *cond;
+	sem_t *cond_w, *cond_t;
 	struct xshmfence f;
 
 	__sync_fetch_and_and(&f.refcnt, 0);
 	__sync_fetch_and_and(&f.triggered, 0);
 	__sync_fetch_and_and(&f.waiting, 0);
-	
-	lock = mksemtemp(f.lockname, sizeof(f.lockname), "l");
-	if (lock == SEM_FAILED) {
+	__sync_fetch_and_and(&f.wakeups, 0);
+
+	cond_w = mksemtemp(f.condname_w, sizeof(f.condname_w), "w");
+	if (cond_w == SEM_FAILED) {
+		err(EXIT_FAILURE, "xshmfence_init: sem_open");
+	}
+	cond_t = mksemtemp(f.condname_t, sizeof(f.condname_t), "t");
+	if (cond_t == SEM_FAILED) {
 		err(EXIT_FAILURE, "xshmfence_init: sem_open");
 	}
 
-	cond = mksemtemp(f.condname, sizeof(f.condname), "c");
-	if (cond == SEM_FAILED) {
-		err(EXIT_FAILURE, "xshmfence_init: sem_open");
-	}
-	
-	sem_close(lock);
-	sem_close(cond);
-	
+	sem_close(cond_w);
+	sem_close(cond_t);
+
 	pwrite(fd, &f, sizeof(f), 0);
 }
 
@@ -187,7 +167,7 @@ xshmfence_open_semaphore(struct xshmfence *f)
 	/*
 	 * map process local memory to page 2
 	 */
-	if (mmap ((void*)&f->lock,
+	if (mmap ((void*)&f->cond_w,
 		  LIBXSHM_PAGESIZE,
 		  PROT_READ|PROT_WRITE,
 		  MAP_FIXED|MAP_ANON,
@@ -195,11 +175,11 @@ xshmfence_open_semaphore(struct xshmfence *f)
 		errx(EXIT_FAILURE, "xshmfence_open_semaphore: mmap failed");
 	}
 
-	if ((f->lock = sem_open(f->lockname, 0 , 0)) == SEM_FAILED) {
+	if ((f->cond_w = sem_open(f->condname_w, 0)) == SEM_FAILED) {
 		errx(EXIT_FAILURE, "xshmfence_open_semaphore: sem_open failed");
 	}
 
-	if ((f->cond = sem_open(f->condname, 0 , 0)) == SEM_FAILED) {
+	if ((f->cond_t = sem_open(f->condname_t, 0)) == SEM_FAILED) {
 		errx(EXIT_FAILURE, "xshmfence_open_semaphore: sem_open failed");
 	}
 	__sync_fetch_and_add(&f->refcnt, 1);
@@ -214,11 +194,11 @@ xshmfence_open_semaphore(struct xshmfence *f)
 void
 xshmfence_close_semaphore(struct xshmfence *f)
 {
-	sem_close(f->lock);
-	sem_close(f->cond);
+	sem_close(f->cond_w);
+	sem_close(f->cond_t);
 	if (__sync_sub_and_fetch(&f->refcnt, 1) == 0) {
-		sem_unlink(f->lockname);
-		sem_unlink(f->condname);
+		sem_unlink(f->condname_w);
+		sem_unlink(f->condname_t);
 	}
 }
 
@@ -231,7 +211,7 @@ mksemtemp(char *name, size_t namelen, const char *suffix)
 	for(;;) {
 		if (snprintf(name, namelen, "/xshmf%s-%d", suffix, p) >= namelen)
 			return SEM_FAILED;
-		ret = sem_open(name, O_CREAT|O_EXCL, 0600, 1);
+		ret = sem_open(name, O_CREAT|O_EXCL, 0600, 0);
 		if (ret == SEM_FAILED) {
 			if (errno == EEXIST) {
 				p++;
