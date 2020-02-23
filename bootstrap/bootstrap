@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.273 2019/12/05 22:19:56 sevan Exp $
+# $NetBSD: bootstrap,v 1.274 2020/02/23 18:32:46 rillig Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -123,13 +123,13 @@ mkbinarykit_tgz()
 
 die()
 {
-	echo >&2 "$@"
+	echo >&2 "$*"
 	exit 1
 }
 
 echo_msg()
 {
-	echo "===> $@"
+	echo "===> $*"
 }
 
 # see if we're using gcc.  If so, set $compiler_is_gnu to '1'.
@@ -293,7 +293,7 @@ is_root()
 # run a command, abort if it fails
 run_cmd()
 {
-	echo_msg "running: $@"
+	echo_msg "running: $*"
 	eval "$@"
 	ret=$?
         if [ $ret -ne 0 ]; then
@@ -306,7 +306,7 @@ run_cmd()
 # install-sh wrapper instead.
 mkdir_p()
 {
-	for dir in $@; do
+	for dir in "$@"; do
 		run_cmd "$install_sh -d -o $user -g $group $dir"
 	done
 }
@@ -424,7 +424,7 @@ if [ -n "$PKG_PATH" ]; then
 fi
 
 build_start=`date`
-echo_msg "bootstrap command: $0 $@"
+echo_msg "bootstrap command: $0 $*"
 echo_msg "bootstrap started: $build_start"
 
 # ensure system locations are empty; we will set them later when we know
