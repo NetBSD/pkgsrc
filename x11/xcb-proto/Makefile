@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2019/04/25 07:33:32 maya Exp $
+# $NetBSD: Makefile,v 1.19 2020/02/23 22:29:38 wiz Exp $
 
-DISTNAME=	xcb-proto-1.13
-PKGREVISION=	1
+DISTNAME=	xcb-proto-1.14
 CATEGORIES=	x11
-MASTER_SITES=	https://xcb.freedesktop.org/dist/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/proto/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://xcb.freedesktop.org/
