@@ -1,10 +1,18 @@
-# $NetBSD: options.mk,v 1.21 2019/02/12 04:43:52 maya Exp $
+# $NetBSD: options.mk,v 1.22 2020/02/23 14:09:13 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.irssi
-PKG_SUPPORTED_OPTIONS=		perl truecolor
-PKG_SUGGESTED_OPTIONS=		perl truecolor
+PKG_SUPPORTED_OPTIONS=		otr perl truecolor
+PKG_SUGGESTED_OPTIONS=		otr perl truecolor
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Motr)
+# Build it into the main irssi executable instead of a module.
+CONFIGURE_ARGS+=	--with-otr=static
+.include "../../chat/libotr/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--with-otr=no
+.endif
 
 PLIST_VARS+=		perl
 .if !empty(PKG_OPTIONS:Mperl)
