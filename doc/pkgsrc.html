@@ -8139,6 +8139,51 @@ MAKE_JOBS_SAFE=no bmake clean build
 report</a> against the pkgsrc package, including the exact error
 message and the contents of your <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> file.</p>
 </div>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="fixes.build.header.symlink"></a>21.5.3.3. Symlinks</h4></div></div></div>
+<p>Pkgsrc does not work reliably if any of
+<code class="varname">LOCALBASE</code>, <code class="varname">VARBASE</code> or
+<code class="varname">WRKDIR</code> contains a symlink. Since 2019Q2, the pkgsrc
+bootstrap program prevents installing pkgsrc in symlink-based
+directories. Existing pkgsrc installations are not checked for symlinks
+though.</p>
+<p>The "No such file or directory" error messages are a typical
+symptom of symlinks, and it's quite difficult to find out that this is
+the actual cause.</p>
+</div>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="fixes.build.header.stale"></a>21.5.3.4. Stale working directories</h4></div></div></div>
+<p>When building a hierarchy of packages, it may happen that one
+package is built and then pkgsrc is updated. This situation can provoke
+various hard to diagnose build errors. To clean up the situation:</p>
+<pre class="programlisting">
+<code class="prompt">$</code> (cd ../../ &amp;&amp; test -f mk/bsd.pkg.mk &amp;&amp; rm -rf */*/work)
+</pre>
+<p>(The test for <code class="filename">bsd.pkg.mk</code> just prevents running
+this command in the wrong directory.)</p>
+<p>If you have set <code class="varname">WRKOBJDIR</code> in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>, remove
+that directory as well.</p>
+</div>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="fixes.build.header.misc"></a>21.5.3.5. Other possible reasons</h4></div></div></div>
+<p>On platforms other than BSD, third-party packages are installed in
+<code class="filename">/usr/include</code>, together with the base system. This
+means that pkgsrc cannot distinguish between headers provided by the base
+system (which it needs) and headers from third-party packages (which are
+often included in pkgsrc as well). This can lead to subtle version
+mismatches.</p>
+<p>In pkgsrc installations that have been active for several years, it
+may happen that some files are manually deleted. To exclude this unlikely
+reason, run <span class="command"><strong>pkg_admin check</strong></span>.</p>
+<p>It may help to run <span class="command"><strong>pkg_admin rebuild-tree</strong></span> to
+check/fix dependencies.</p>
+<p>If all of the above doesn't help, see <a class="xref" href="#help-user" title="Chapter 2. Getting help">Chapter 2, <i>Getting help</i></a>
+for contact information. Be prepared to describe what you have tried so
+far and what any error messages were.</p>
+</div>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
@@ -9159,7 +9204,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm79431952"></a><dl>
+<a name="idm79483792"></a><dl>
 <dt>24.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9204,7 +9249,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm79431568"></a><p><b>24.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm79483408"></a><p><b>24.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9220,7 +9265,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm79427600"></a><p><b>24.2.</b></p>
+<a name="devfaq.make"></a><a name="idm79479440"></a><p><b>24.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9238,7 +9283,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm79423120"></a><p><b>24.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm79474960"></a><p><b>24.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9256,7 +9301,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm79419024"></a><p><b>24.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm79470864"></a><p><b>24.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9269,7 +9314,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm79416720"></a><p><b>24.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm79468560"></a><p><b>24.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9285,7 +9330,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm79413648"></a><p><b>24.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm79465488"></a><p><b>24.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9309,7 +9354,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm79406736"></a><p><b>24.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm79458576"></a><p><b>24.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9334,7 +9379,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm79403024"></a><p><b>24.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm79454864"></a><p><b>24.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9382,7 +9427,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm79396496"></a><p><b>24.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm79448336"></a><p><b>24.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
