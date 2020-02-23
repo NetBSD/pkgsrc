@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2019/11/02 22:18:23 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/02/23 18:07:10 nia Exp $
 
 VERSION=	4.1.1
 DISTNAME=	libotr-${VERSION}
 PKGNAME=	libotr-${VERSION}
 CATEGORIES=	chat security
-MASTER_SITES=	http://www.cypherpunks.ca/otr/
+MASTER_SITES=	https://otr.cypherpunks.ca/
 
 MAINTAINER=	nathanw@NetBSD.org
 # also gdt@NetBSD.org
-HOMEPAGE=	http://www.cypherpunks.ca/otr/
+HOMEPAGE=	https://otr.cypherpunks.ca/
 COMMENT=	Library for Off-The-Record encrypted messaging
 LICENSE=	gnu-gpl-v2
 
