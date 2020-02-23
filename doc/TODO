@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19681 2020/02/23 10:17:03 wiz Exp $
+$NetBSD: TODO,v 1.19682 2020/02/23 22:29:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -798,6 +798,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmcs-0.7.2
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
+	o libmypaint-1.5.0
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
@@ -885,6 +886,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-2.0.52
 	o muse-0.9.2
 	o myodbc-5.3.4
+	o mypaint-2.0
+	o mypaint-brushes-2.0.2
 	o mysql-connector-c++-8.0.17
 	o mysql-server-8.0.18
 	o mysql-workbench-6.3
