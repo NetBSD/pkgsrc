@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2019/12/04 08:06:04 morr Exp $
+@comment $NetBSD: PLIST,v 1.42 2020/02/23 09:59:42 morr Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -1453,6 +1453,7 @@ share/wordpress/wp-includes/js/heartbeat.js
 share/wordpress/wp-includes/js/heartbeat.min.js
 share/wordpress/wp-includes/js/hoverIntent.js
 share/wordpress/wp-includes/js/hoverIntent.min.js
+share/wordpress/wp-includes/js/hoverintent-js.min.js
 share/wordpress/wp-includes/js/imagesloaded.min.js
 share/wordpress/wp-includes/js/imgareaselect/border-anim-h.gif
 share/wordpress/wp-includes/js/imgareaselect/border-anim-v.gif
@@ -1792,6 +1793,7 @@ share/wordpress/wp-includes/sodium_compat/composer.json
 share/wordpress/wp-includes/sodium_compat/lib/constants.php
 share/wordpress/wp-includes/sodium_compat/lib/namespaced.php
 share/wordpress/wp-includes/sodium_compat/lib/php72compat.php
+share/wordpress/wp-includes/sodium_compat/lib/php72compat_const.php
 share/wordpress/wp-includes/sodium_compat/lib/sodium_compat.php
 share/wordpress/wp-includes/sodium_compat/namespaced/Compat.php
 share/wordpress/wp-includes/sodium_compat/namespaced/Core/BLAKE2b.php
@@ -1821,6 +1823,9 @@ share/wordpress/wp-includes/sodium_compat/namespaced/Crypto.php
 share/wordpress/wp-includes/sodium_compat/namespaced/File.php
 share/wordpress/wp-includes/sodium_compat/src/Compat.php
 share/wordpress/wp-includes/sodium_compat/src/Core/BLAKE2b.php
+share/wordpress/wp-includes/sodium_compat/src/Core/Base64/Common.php
+share/wordpress/wp-includes/sodium_compat/src/Core/Base64/Original.php
+share/wordpress/wp-includes/sodium_compat/src/Core/Base64/UrlSafe.php
 share/wordpress/wp-includes/sodium_compat/src/Core/ChaCha20.php
 share/wordpress/wp-includes/sodium_compat/src/Core/ChaCha20/Ctx.php
 share/wordpress/wp-includes/sodium_compat/src/Core/ChaCha20/IetfCtx.php
@@ -1839,6 +1844,7 @@ share/wordpress/wp-includes/sodium_compat/src/Core/HSalsa20.php
 share/wordpress/wp-includes/sodium_compat/src/Core/Poly1305.php
 share/wordpress/wp-includes/sodium_compat/src/Core/Poly1305/State.php
 share/wordpress/wp-includes/sodium_compat/src/Core/Salsa20.php
+share/wordpress/wp-includes/sodium_compat/src/Core/SecretStream/State.php
 share/wordpress/wp-includes/sodium_compat/src/Core/SipHash.php
 share/wordpress/wp-includes/sodium_compat/src/Core/Util.php
 share/wordpress/wp-includes/sodium_compat/src/Core/X25519.php
@@ -1865,6 +1871,7 @@ share/wordpress/wp-includes/sodium_compat/src/Core32/Int64.php
 share/wordpress/wp-includes/sodium_compat/src/Core32/Poly1305.php
 share/wordpress/wp-includes/sodium_compat/src/Core32/Poly1305/State.php
 share/wordpress/wp-includes/sodium_compat/src/Core32/Salsa20.php
+share/wordpress/wp-includes/sodium_compat/src/Core32/SecretStream/State.php
 share/wordpress/wp-includes/sodium_compat/src/Core32/SipHash.php
 share/wordpress/wp-includes/sodium_compat/src/Core32/Util.php
 share/wordpress/wp-includes/sodium_compat/src/Core32/X25519.php
@@ -1873,6 +1880,7 @@ share/wordpress/wp-includes/sodium_compat/src/Core32/XSalsa20.php
 share/wordpress/wp-includes/sodium_compat/src/Crypto.php
 share/wordpress/wp-includes/sodium_compat/src/Crypto32.php
 share/wordpress/wp-includes/sodium_compat/src/File.php
+share/wordpress/wp-includes/sodium_compat/src/PHP52/SplFixedArray.php
 share/wordpress/wp-includes/sodium_compat/src/SodiumException.php
 share/wordpress/wp-includes/spl-autoload-compat.php
 share/wordpress/wp-includes/taxonomy.php
