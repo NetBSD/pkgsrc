@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2019/11/03 09:14:16 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/02/23 22:32:03 wiz Exp $
 
-DISTNAME=	xcb-proto-1.13
-PKGNAME=	${PYPKGPREFIX}-xcbgen-1.13
+DISTNAME=	xcb-proto-1.14
+PKGNAME=	${PYPKGPREFIX}-xcbgen-1.14
 CATEGORIES=	x11
-MASTER_SITES=	https://xcb.freedesktop.org/dist/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/proto/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://xcb.freedesktop.org/
