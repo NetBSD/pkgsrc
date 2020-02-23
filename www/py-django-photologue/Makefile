@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2018/09/25 20:22:54 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2020/02/23 23:59:04 joerg Exp $
 
 DISTNAME=	django-photologue-3.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-photologue/}
 
