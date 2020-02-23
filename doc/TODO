@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19680 2020/02/20 16:39:12 taca Exp $
+$NetBSD: TODO,v 1.19681 2020/02/23 10:17:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -375,10 +375,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.9.23
+	o ImageMagick-7.0.9.25
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-19.3.3
+	o MesaLib-20.0
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
@@ -470,7 +470,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-4.10.1
+	o calibre-4.11.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -623,6 +623,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o geoclue-2.1.10
 	o gfract-0.33
 	o ghdl-0.33
+	o gimp-2.10.16
+	o git-base-2.25.1
 	o gjs-1.58.4 [needs mozjs-60]
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
@@ -630,12 +632,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-share-2.3.5
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
+	o glib2-2.62.5
 	o gliv-1.9.7
 	o glom-1.14.2
 	o gmake-4.3 [cannot build firefox/openjdk11 etc.]
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.34.3
+	o gnome-3.34.4
 	o gnome-applets-3.14.0
 	o gnome-bluetooth-2.30.0
 	o gnome-chemistry-utils-0.14.11
@@ -683,6 +686,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gthumb-3.4.0
+	o gtk3-3.24.14
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
 	o gtkmagnetic-23
@@ -713,6 +717,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o http-parser-2.9.3
 	o http_load-20140814
 	o hugo-0.57.1 [needs gocloud.dev]
+	o i3-4.18
 	o icbirc-2.0
 	o icdprog-0.5
 	o icedtea-web-1.6.2
@@ -902,6 +907,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nxtvepg-2.8.1
 	o oath-toolkit-2.6.1
 	o objc-3.3.1
+	o ocaml-4.10.0
 	o ocrad-0.25
 	o odbc-postgresql-09.03.0400
 	o olvwm-4.5
@@ -964,6 +970,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o phppgadmin-7.12.0
 	o phraseanet-3.8.6
 	o phraseanet-indexer-3.8.6
+	o picard-2.3
 	o picocom-3.0
 	o picp-0.6.8
 	o picprg-3.01
@@ -978,6 +985,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ploticus-examples-230
 	o poco-1.7.5
 	o podcastdl-0.3.3
+	o poedit-2.3
 	o policyd-weight-0.1.15.2
 	o polkit-0.116 [needs mozjs-60]
 	o poppass-4.0.14
@@ -1020,7 +1028,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-sybase-0.37
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
-	o py-zipp-2.2.0 [drops python-2.x support]
+	o py-zipp-3.0.0 [drops python-2.x support]
 	o pythontidy-1.23
 	o qbzr-0.23.2
 	o qlandkartegt-1.8.1 [pkg/53376]
