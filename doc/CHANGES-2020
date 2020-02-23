@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1208 2020/02/23 00:13:14 fox Exp $
+$NetBSD: CHANGES-2020,v 1.1209 2020/02/23 09:18:30 he Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1733,3 +1733,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/pciids to 20200222 [sevan 2020-02-22]
 	Updated lang/rust to 1.41.0nb1 [he 2020-02-22]
 	Updated www/cliqz to 1.33.0 [fox 2020-02-23]
+	Updated lang/rust to 1.41.0nb2 [he 2020-02-23]
