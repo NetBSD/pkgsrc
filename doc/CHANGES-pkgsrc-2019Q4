@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.9 2020/02/23 12:00:15 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.10 2020/02/23 18:33:03 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q4 branch:
 
@@ -88,4 +88,10 @@ www/firefox68: security fix
 
 Pullup ticket #6135 - requested by nia
 www/firefox68-l10n: dependent update
+
+Pullup ticket #6138 - requested by nia
+chat/weechat: security fix
+
+Pullup ticket #6139 - requested by morr
+www/wordpress: security fix
 
