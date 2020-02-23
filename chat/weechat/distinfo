@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.58 2019/12/10 13:04:05 nia Exp $
+$NetBSD: distinfo,v 1.58.4.1 2020/02/23 15:16:34 bsiegert Exp $
 
-SHA1 (weechat-2.7.tar.xz) = aea165c2332196fa55b408545f6bfd800174d45b
-RMD160 (weechat-2.7.tar.xz) = dbc2285d85a5b3b777d7e6987bcaab55b466a91b
-SHA512 (weechat-2.7.tar.xz) = 5377cf9c37520cb2b7d1ba43251df3f33d814783ea4bd20d28cb08a2106c8db0e44a392a61929987b807a7d5e69a3c0ed1f3fec122a014b7ea7068e159341075
-Size (weechat-2.7.tar.xz) = 2226876 bytes
+SHA1 (weechat-2.7.1.tar.xz) = 9c2f0de80d613c511e499ea40c8e9609b7f82347
+RMD160 (weechat-2.7.1.tar.xz) = 8f636f54ebe84a86f99dc79813ca856c663ed5ca
+SHA512 (weechat-2.7.1.tar.xz) = eb0cc4c7e0f2cf18d522b49429fe2d77b1cee3225686d0bc09f80a69b17362af0923df4cd5f4859207d84acb762d4042cd5b57799705d0b7e4759eade6c660e0
+Size (weechat-2.7.1.tar.xz) = 2226768 bytes
 SHA1 (patch-CMakeLists.txt) = 493e49c0c698ff7b2685ba489d693fc1d388318d
 SHA1 (patch-cmake_FindNcurses.cmake) = 93969b86538f1b707903dce4691af99a67ede6ce
 SHA1 (patch-po_CMakeLists.txt) = 014b42ff303a4e4213de95339ab97f029f38a068
