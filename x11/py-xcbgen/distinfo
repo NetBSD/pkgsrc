@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2018/03/05 10:20:24 wiz Exp $
+$NetBSD: distinfo,v 1.14 2020/02/23 22:32:03 wiz Exp $
 
-SHA1 (xcb-proto-1.13.tar.bz2) = f7fa35ab59af18cecadbe83fe705281dcfd82ffd
-RMD160 (xcb-proto-1.13.tar.bz2) = d085d1be1844009f08442113a83b7fdffeae8325
-SHA512 (xcb-proto-1.13.tar.bz2) = 002aa2aa0ad503977e03419c6f136f1e3aa8c787916830ce6d6be8f81ca99edc1d8fc5f71ce8c592b490cc767bf6567695f0bafe55fe3f743076bcddbaac07f7
-Size (xcb-proto-1.13.tar.bz2) = 151981 bytes
-SHA1 (patch-ae) = ae3eae2c5ebf88bfc33a04f688f5c243c1475605
+SHA1 (xcb-proto-1.14.tar.xz) = 170307b3748cf6c9953db2017615821428fca8be
+RMD160 (xcb-proto-1.14.tar.xz) = 0f915a33a8938de24ce9a7c6e13b6959f4c60388
+SHA512 (xcb-proto-1.14.tar.xz) = de66d568163b6da2be9d6c59984f3afa3acd119a781378638045fd68018665ef5c9af98f024e9962ba3eb7c7a4d85c27ba70ffafceb2324ccc6940f34de16690
+Size (xcb-proto-1.14.tar.xz) = 143384 bytes
+SHA1 (patch-ae) = e5bff371fc8d87b9e3eaaea80734f8fcf544b4b1
