@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1217 2020/02/23 20:17:40 leot Exp $
+$NetBSD: CHANGES-2020,v 1.1218 2020/02/23 20:32:57 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1742,3 +1742,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/irssi to 1.2.2nb2 [nia 2020-02-23]
 	Updated lang/go112 to 1.12.17 [bsiegert 2020-02-23]
 	Updated net/sacc to 1.01 [leot 2020-02-23]
+	Updated news/sfeed to 0.9.16 [leot 2020-02-23]
