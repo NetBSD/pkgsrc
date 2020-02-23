@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2019/04/28 10:50:15 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/02/23 22:37:45 wiz Exp $
 
-DISTNAME=	libxcb-1.13.1
-PKGREVISION=	1
+DISTNAME=	libxcb-1.14
 CATEGORIES=	x11
-MASTER_SITES=	https://xcb.freedesktop.org/dist/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/lib/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://xcb.freedesktop.org/
@@ -12,7 +11,7 @@ COMMENT=	X protocol C-language Binding
 LICENSE=	mit # with no-advertising clause
 
 TOOL_DEPENDS+=	libxslt>=1.1.0:../../textproc/libxslt
-TOOL_DEPENDS+=	${PYPKGPREFIX}-xcbgen>=1.13:../../x11/py-xcbgen
+TOOL_DEPENDS+=	${PYPKGPREFIX}-xcbgen>=1.14:../../x11/py-xcbgen
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -90,7 +89,7 @@ post-extract:
 #.include "../../devel/gperf/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/application.mk"
-BUILDLINK_API_DEPENDS.xcb-proto?=	xcb-proto>=1.13
+BUILDLINK_API_DEPENDS.xcb-proto?=	xcb-proto>=1.14
 .include "../../x11/xcb-proto/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
