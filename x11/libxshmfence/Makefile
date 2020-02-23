@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 23:35:54 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/02/23 22:47:47 tnn Exp $
 
 DISTNAME=	libxshmfence-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
