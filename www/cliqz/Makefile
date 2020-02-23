@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.32 2020/01/23 08:47:26 fox Exp $
+# $NetBSD: Makefile,v 1.33 2020/02/23 00:10:40 fox Exp $
 
-DISTNAME=	cliqz-1.32.1
+DISTNAME=	cliqz-1.33.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliqz-oss/}
 GITHUB_PROJECT=	browser-f
 DISTFILES=	adult-domains.bin \
 		cliqz@cliqz.com.xpi \
+		dat@cliqz.com.xpi \
 		https-everywhere@cliqz.com.xpi \
 		gdprtool@cliqz.com.xpi \
 		${DISTNAME}${EXTRACT_SUFX}
@@ -14,12 +15,14 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 CLIQZ_CHANNEL=		release
 # If the PKGVERSION_NOREV is updated, make sure to update the last build id from
 # ftp -Vo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
-CLIQZ_LAST_BUILD_ID=	20200121101408
+CLIQZ_LAST_BUILD_ID=	20200219152122
 CLIQZ_PLUGIN_SUFX=	@cliqz.com.xpi
 
 SITES.adult-domains.bin= \
 	https://s3.amazonaws.com/cdn.cliqz.com/browser-f/APT/
 SITES.cliqz${CLIQZ_PLUGIN_SUFX}= \
+	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/${CLIQZ_LAST_BUILD_ID}/
+SITES.dat${CLIQZ_PLUGIN_SUFX}= \
 	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/${CLIQZ_LAST_BUILD_ID}/
 SITES.https-everywhere${CLIQZ_PLUGIN_SUFX}= \
 	https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/${CLIQZ_LAST_BUILD_ID}/
@@ -41,12 +44,12 @@ USE_LANGUAGES+=	c99 gnu++14
 # https://firefox-source-docs.mozilla.org/build/buildsystem/python.html
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
-TOOL_DEPENDS+=			cbindgen>=0.8.2:../../devel/cbindgen
+TOOL_DEPENDS+=			cbindgen>=0.12.0:../../devel/cbindgen
 TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
 TOOL_DEPENDS+=			${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 BUILD_DEPENDS+=			yasm>=1.1:../../devel/yasm
-BUILD_DEPENDS+=			nasm-[0-9]*:../../devel/nasm
+BUILD_DEPENDS+=			nasm>=1.1:../../devel/nasm
 
 WRKSRC=			${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
@@ -78,6 +81,7 @@ post-extract:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/adult-domains.bin ${WRKSRC}
 	${MKDIR} ${WRKSRC}/obj/dist/bin/browser/features
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/cliqz${CLIQZ_PLUGIN_SUFX} \
+		${DISTDIR}/${DIST_SUBDIR}/dat${CLIQZ_PLUGIN_SUFX} \
 		${DISTDIR}/${DIST_SUBDIR}/https-everywhere${CLIQZ_PLUGIN_SUFX} \
 		${DISTDIR}/${DIST_SUBDIR}/gdprtool${CLIQZ_PLUGIN_SUFX} \
 		${WRKSRC}/obj/dist/bin/browser/features
@@ -147,7 +151,7 @@ BUILDLINK_DEPMETHOD.clang=     build
 BUILDLINK_API_DEPENDS.clang+=  clang>=6.0.1nb1
 .include "../../lang/clang/buildlink3.mk"
 BUILDLINK_DEPMETHOD.rust=      build
-BUILDLINK_API_DEPENDS.rust+=   rust>=1.38.0
+BUILDLINK_API_DEPENDS.rust+=   rust>=1.39.0
 .include "../../lang/rust/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
