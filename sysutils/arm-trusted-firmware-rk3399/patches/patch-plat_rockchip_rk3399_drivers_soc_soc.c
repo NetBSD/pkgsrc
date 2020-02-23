@@ -1,4 +1,4 @@
-$NetBSD: patch-plat_rockchip_rk3399_drivers_soc_soc.c,v 1.1 2020/02/22 11:55:36 mrg Exp $
+$NetBSD: patch-plat_rockchip_rk3399_drivers_soc_soc.c,v 1.2 2020/02/23 01:01:11 mrg Exp $
 
 pull in https://github.com/ARM-software/arm-trusted-firmware/commit/b4899041e5f0b8e8b388c6511b5233516b8785ec
 
@@ -8,9 +8,6 @@ pull in https://github.com/ARM-software/arm-trusted-firmware/commit/b4899041e5f0
 
  Signed-off-by: Piotr Szczepanik <piter75@gmail.com>
  Change-Id: If41b12ba1dfcb2ba937361b58eafd50bf5c483d4
-
-with one additional change to force using the soft reset path,
-as the gpio one does not seem to work.
 
 
 --- plat/rockchip/rk3399/drivers/soc/soc.c.orig	2020-02-22 02:30:58.094221102 -0800
