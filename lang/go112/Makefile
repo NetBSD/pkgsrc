@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/26 17:31:28 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/02/23 19:21:27 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
 
@@ -45,7 +45,6 @@ REPLACE_BASH+=	src/bootstrap.bash
 REPLACE_BASH+=	src/buildall.bash
 REPLACE_BASH+=	src/clean.bash
 REPLACE_BASH+=	src/cmd/go/mkalldocs.sh
-REPLACE_BASH+=	src/cmd/vendor/github.com/google/pprof/internal/binutils/testdata/build_mac.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkall.sh
 REPLACE_BASH+=	src/cmd/vendor/golang.org/x/sys/unix/mkerrors.sh
 REPLACE_BASH+=	src/internal/trace/mkcanned.bash
