@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1219 2020/02/23 20:40:03 leot Exp $
+$NetBSD: CHANGES-2020,v 1.1220 2020/02/23 20:44:37 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1744,3 +1744,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/sacc to 1.01 [leot 2020-02-23]
 	Updated news/sfeed to 0.9.16 [leot 2020-02-23]
 	Updated www/tscrape to 0.4 [leot 2020-02-23]
+	Updated textproc/json2tsv to 0.5 [leot 2020-02-23]
