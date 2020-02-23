@@ -1,4 +1,4 @@
-<!-- $NetBSD: devfaq.xml,v 1.14 2016/06/11 18:14:42 rillig Exp $ -->
+<!-- $NetBSD: devfaq.xml,v 1.15 2020/02/23 17:43:20 rillig Exp $ -->
 
 <chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
 <title>Frequently Asked Questions</title>
@@ -9,10 +9,10 @@
 	and if you still don't have the answer, ask on the
 	<literal>pkgsrc-users</literal> mailing list.</para>
 
-<qandaset>
+<qandaset id="devfaq.qandaset">
 <qandaentry id="devfaq.makeflags">
 
-	<question><para>What is the difference between
+	<question id="devfaq.makeflags.q"><para>What is the difference between
 	<varname>MAKEFLAGS</varname>, <varname>.MAKEFLAGS</varname> and
 	<varname>MAKE_FLAGS</varname>?</para></question>
 
@@ -25,7 +25,7 @@
 </qandaentry>
 <qandaentry id="devfaq.make">
 
-	<question><para>What is the difference between
+	<question id="devfaq.make.q"><para>What is the difference between
 	<varname>MAKE</varname>, <varname>GMAKE</varname> and
 	<varname>MAKE_PROGRAM</varname>?</para></question>
 
@@ -40,7 +40,7 @@
 </qandaentry>
 <qandaentry id="devfaq.cc">
 
-	<question><para>What is the difference between
+	<question id="devfaq.cc.q"><para>What is the difference between
 	<varname>CC</varname>, <varname>PKG_CC</varname> and
 	<varname>PKGSRC_COMPILER</varname>?</para></question>
 
@@ -55,7 +55,7 @@
 </qandaentry>
 <qandaentry id="devfaq.bl3flags">
 
-	<question><para>What is the difference between
+	<question id="devfaq.bl3flags.q"><para>What is the difference between
 	<varname>BUILDLINK_LDFLAGS</varname>,
 	<varname>BUILDLINK_LDADD</varname> and
 	<varname>BUILDLINK_LIBS</varname>?</para></question>
@@ -65,7 +65,7 @@
 </qandaentry>
 <qandaentry id="devfaq.bl3prefix">
 
-	<question><para>Why does <command>make show-var
+	<question id="devfaq.bl3prefix.q"><para>Why does <command>make show-var
 	VARNAME=BUILDLINK_PREFIX.<replaceable>foo</replaceable></command>
 	say it's empty?</para></question>
 
@@ -78,7 +78,7 @@
 </qandaentry>
 <qandaentry id="devfaq.master_sites">
 
-	<question><para>What does
+	<question id="devfaq.master_sites.q"><para>What does
 	<code>${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
 	don't understand the <code>:=</code> inside
 	it.</para></question>
@@ -99,7 +99,7 @@
 </qandaentry>
 <qandaentry id="devfaq.mailinglists">
 
-	<question><para>Which mailing lists are there for package
+	<question id="devfaq.mailinglists.q"><para>Which mailing lists are there for package
 	developers?</para></question>
 
 	<answer><variablelist>
@@ -128,7 +128,7 @@
 </qandaentry>
 <qandaentry id="devfaq.documentation">
 
-	<question><para>Where is the pkgsrc
+	<question id="devfaq.documentation.q"><para>Where is the pkgsrc
 	documentation?</para></question>
 
 	<answer><para>There are many places where you can find
@@ -181,8 +181,8 @@
 </qandaentry>
 
 <qandaentry id="devfaq.too-much-time">
-<question><para>I have a little time to kill.  What shall I
-do?</para></question>
+<question id="devfaq.too-much-time.q"><para>I have a little time to kill. 
+What shall I do?</para></question>
 
 <answer><para>This is not really an FAQ yet, but here's the answer
 anyway.</para>
