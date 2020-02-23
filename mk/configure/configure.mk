@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.30 2020/02/09 20:33:39 rillig Exp $
+# $NetBSD: configure.mk,v 1.31 2020/02/23 20:24:46 rillig Exp $
 #
 # = Package-settable variables =
 #
@@ -312,6 +312,6 @@ _configure-env: .PHONY wrapper
 	@${ECHO_MSG} "The CONFIGURE_DIRS are:" \
 		${CONFIGURE_DIRS:S,^${WRKSRC}$,.,:S,^${WRKSRC}/,,:Q}
 .endif
-	${RUN} cd ${WRKSRC} && cd ${d} \
+	${RUN} cd ${WRKSRC} \
 	&& ${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV} \
 		${CONFIGURE_ENV_SHELL:U${CONFIG_SHELL}}
