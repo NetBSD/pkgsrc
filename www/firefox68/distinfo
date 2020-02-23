@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5.4.1 2020/01/10 13:56:19 bsiegert Exp $
+$NetBSD: distinfo,v 1.5.4.2 2020/02/23 11:50:10 bsiegert Exp $
 
-SHA1 (firefox-68.4.1esr.source.tar.xz) = f11c0ecc0f17435149a2bce83f490bbd329e276d
-RMD160 (firefox-68.4.1esr.source.tar.xz) = 78098317b75b079a475a0bcb8a5f012178c1a643
-SHA512 (firefox-68.4.1esr.source.tar.xz) = 8dd85096f1223b2ab396cc3b89a9f1b113f01ce8919af08a278d077cc4380c108a66b6379c75d85311aa3c54a7804f4d51f718b309fe107ff7c44aca7e4386ed
-Size (firefox-68.4.1esr.source.tar.xz) = 318559576 bytes
+SHA1 (firefox-68.5.0esr.source.tar.xz) = 5e74dc0335b09819b24285d23e7746ca70af1dae
+RMD160 (firefox-68.5.0esr.source.tar.xz) = 34b2446b42e98de3e9f5798466bd4f49375dd44a
+SHA512 (firefox-68.5.0esr.source.tar.xz) = 0acf4ecd47bccf062ab330231e36355f5d84e66ab411f653ae3160583613840925bb473c0f7dfa4b15311a543940293c4633516851c9466c4b0133c9271710d3
+Size (firefox-68.5.0esr.source.tar.xz) = 314176068 bytes
 SHA1 (patch-aa) = 1f292aae7d37bd480ba834324b737bfebee52503
 SHA1 (patch-browser_app_profile_firefox.js) = 076cc2892547bac07fe907533f4e821f13f5738e
 SHA1 (patch-build_moz.configure_old.configure) = 05963b12fd908d90e3378b30cff7e48291b8a447
