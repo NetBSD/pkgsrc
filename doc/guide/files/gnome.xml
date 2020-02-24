@@ -1,9 +1,9 @@
-<!-- $NetBSD: gnome.xml,v 1.10 2016/07/09 16:07:35 rillig Exp $ -->
+<!-- $NetBSD: gnome.xml,v 1.11 2020/02/24 21:13:56 rillig Exp $ -->
 
 <chapter id="gnome"> <?dbhtml filename="gnome.html"?>
 <title>GNOME packaging and porting</title>
 
-<para>Quoting <ulink url="http://www.gnome.org/">GNOME's web
+<para>Quoting <ulink url="https://www.gnome.org/">GNOME's web
 site</ulink>:</para>
 
 <blockquote>
@@ -23,10 +23,10 @@ achieving a completely clean deinstallation of installed software
 components.</para>
 
 <para>Given that pkgsrc is <ulink
-url="http://www.NetBSD.org/">NetBSD</ulink>'s official packaging system,
+url="https://www.NetBSD.org/">NetBSD</ulink>'s official packaging system,
 the above also means that great efforts are put into making GNOME work
 under this operating system.  Recently, <ulink
-url="http://www.dragonflybsd.org/">DragonFly BSD</ulink> also adopted
+url="https://www.dragonflybsd.org/">DragonFly BSD</ulink> also adopted
 pkgsrc as its preferred packaging system, contributing lots of
 portability fixes to make GNOME build and install under it.</para>
 
@@ -41,7 +41,7 @@ important information regarding their internals.</para>
   <para>Should you have some spare cycles to devote to NetBSD, pkgsrc
   and GNOME and are willing to learn new exciting stuff, please jump
   straight to the <ulink
-  url="http://www.NetBSD.org/contrib/projects.html#gnome">pending
+  url="https://www.NetBSD.org/contrib/projects.html#gnome">pending
   work</ulink> list!  There is still a long way to go to get a
   fully-functional GNOME desktop under NetBSD and we need your help to
   achieve it!</para>
@@ -355,8 +355,8 @@ pkgsrc, the easier further updates are.  Those developers in charge of
 issuing major GNOME updates will be grateful if you do that.</para>
 
 <para>The most common places to report bugs are the <ulink
-url="http://bugzilla.gnome.org/">GNOME's Bugzilla</ulink> and the <ulink
-url="http://bugzilla.freedesktop.org/">freedesktop.org's
+url="https://bugzilla.gnome.org/">GNOME's Bugzilla</ulink> and the <ulink
+url="https://bugzilla.freedesktop.org/">freedesktop.org's
 Bugzilla</ulink>.  Not all components use these to track bugs, but most
 of them do.  Do not be short on your reports: always provide detailed
 explanations of the current failure, how it can be improved to achieve

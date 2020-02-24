@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.79 2019/05/05 18:36:05 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.80 2020/02/24 21:13:56 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -210,8 +210,8 @@ DISTFILES=      ${DEFAULT_DISTFILES} additional-files.tar.gz
 DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=     foo-file.tar.gz
 SITES.foo-file.tar.gz= \
-http://www.somewhere.com/somehow/ \
-http://www.somewhereelse.com/mirror/somehow/
+https://www.somewhere.com/somehow/ \
+https://www.somewhereelse.com/mirror/somehow/
 </programlisting>
 
       <para>When actually fetching the distfiles, each item from
@@ -225,7 +225,7 @@ http://www.somewhereelse.com/mirror/somehow/
       case, the definition would look like:</para>
 
 <programlisting>
-MASTER_SITES=   http://www.example.com/download.cgi?file=
+MASTER_SITES=   https://www.example.com/download.cgi?file=
 </programlisting>
 
       <para> The exception to this rule are URLs starting with a dash.
@@ -241,7 +241,7 @@ MASTER_SITES=   http://www.example.com/download.cgi?file=
 
 <programlisting>
 DISTNAME=       foo-1.0.0
-MASTER_SITES=   -http://www.example.com/archive/v1.0.0.tar.gz
+MASTER_SITES=   -https://www.example.com/archive/v1.0.0.tar.gz
 </programlisting>
 
       <para>There are some predefined values for

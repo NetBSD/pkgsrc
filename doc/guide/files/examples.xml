@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.18 2020/02/15 10:29:49 rillig Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.19 2020/02/24 21:13:56 rillig Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -24,7 +24,7 @@ CATEGORIES=     devel
 MASTER_SITES=   ${MASTER_SITE_GNU:=bison/}
 
 MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
+HOMEPAGE=       https://www.gnu.org/software/bison/bison.html
 COMMENT=        GNU yacc clone
 
 GNU_CONFIGURE=  yes

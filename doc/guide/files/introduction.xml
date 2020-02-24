@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.43 2019/04/03 23:49:07 sevan Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.44 2020/02/24 21:13:56 rillig Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -128,7 +128,7 @@ minutes!</para>
     </thead>
     <tbody>
       <row>
-        <entry><ulink url="http://www.NetBSD.org/">NetBSD</ulink></entry>
+        <entry><ulink url="https://www.NetBSD.org/">NetBSD</ulink></entry>
         <entry align="center">Aug 1997</entry>
       </row>
       <row>
@@ -137,7 +137,7 @@ minutes!</para>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.Solaris">README.Solaris</ulink></entry>
       </row>
       <row>
-        <entry><ulink url="http://www.kernel.org/">Linux</ulink></entry>
+        <entry><ulink url="https://www.kernel.org/">Linux</ulink></entry>
         <entry align="center">Jun 1999</entry>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.Linux">README.Linux</ulink></entry>
       </row>
@@ -149,17 +149,17 @@ minutes!</para>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.MacOSX">README.MacOSX</ulink></entry>
       </row>
       <row>
-        <entry><ulink url="http://www.freebsd.org/">FreeBSD</ulink></entry>
+        <entry><ulink url="https://www.freebsd.org/">FreeBSD</ulink></entry>
         <entry align="center">Nov 2002</entry>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.FreeBSD">README.FreeBSD</ulink></entry>
       </row>
       <row>
-        <entry><ulink url="http://www.openbsd.org/">OpenBSD</ulink></entry>
+        <entry><ulink url="https://www.openbsd.org/">OpenBSD</ulink></entry>
         <entry align="center">Nov 2002</entry>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.OpenBSD">README.OpenBSD</ulink></entry>
       </row>
       <row>
-        <entry><ulink url="http://www.sgi.com/software/irix/">IRIX</ulink></entry>
+        <entry><ulink url="https://www.sgi.com/software/irix/">IRIX</ulink></entry>
         <entry align="center">Dec 2002</entry>
 	<entry>
 	<ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.IRIX">README.IRIX</ulink>
@@ -171,20 +171,20 @@ minutes!</para>
         <entry align="center">Dec 2003</entry>
       </row>
       <row>
-        <entry><ulink url="http://www-1.ibm.com/servers/aix/">AIX</ulink></entry>
+        <entry><ulink url="https://www-1.ibm.com/servers/aix/">AIX</ulink></entry>
         <entry align="center">Dec 2003</entry>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.AIX">README.AIX</ulink></entry>
       </row>
       <row>
         <entry>
-          <ulink url="http://www.microsoft.com/windows/sfu/">Interix</ulink>
+          <ulink url="https://www.microsoft.com/windows/sfu/">Interix</ulink>
           (Microsoft Windows Services for Unix)
         </entry>
         <entry align="center">Mar 2004</entry>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.Interix">README.Interix</ulink></entry>
       </row>
       <row>
-        <entry><ulink url="http://www.dragonflybsd.org/">DragonFlyBSD</ulink></entry>
+        <entry><ulink url="https://www.dragonflybsd.org/">DragonFlyBSD</ulink></entry>
         <entry align="center">Oct 2004</entry>
       </row>
       <row>
@@ -193,36 +193,36 @@ minutes!</para>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.OSF1">README.OSF1</ulink></entry>
       </row>
       <row>
-        <entry><ulink url="http://www.hp.com/products1/unix/">HP-UX</ulink></entry>
+        <entry><ulink url="https://www.hp.com/products1/unix/">HP-UX</ulink></entry>
         <entry align="center">Apr 2007</entry>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.HPUX">README.HPUX</ulink></entry>
       </row>
       <row>
-        <entry><ulink url="http://www.haiku-os.org/">Haiku</ulink></entry>
+        <entry><ulink url="https://www.haiku-os.org/">Haiku</ulink></entry>
         <entry align="center">Sep 2010</entry>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.Haiku">README.Haiku</ulink></entry>
       </row>
       <row>
-        <entry><ulink url="http://www.mirbsd.org/">MirBSD</ulink></entry>
+        <entry><ulink url="https://www.mirbsd.org/">MirBSD</ulink></entry>
         <entry align="center">Jan 2011</entry>
       </row>
       <row>
-        <entry><ulink url="http://www.minix3.org/">Minix3</ulink></entry>
+        <entry><ulink url="https://www.minix3.org/">Minix3</ulink></entry>
         <entry align="center">Nov 2011</entry>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.Minix3">README.Minix3</ulink></entry>
       </row>
       <row>
-        <entry><ulink url="http://cygwin.com/">Cygwin</ulink></entry>
+        <entry><ulink url="https://cygwin.com/">Cygwin</ulink></entry>
         <entry align="center">Mar 2013</entry>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.Cygwin">README.Cygwin</ulink></entry>
       </row>
       <row>
-        <entry><ulink url="http://www.debian.org/ports/kfreebsd-gnu/">GNU/kFreeBSD</ulink></entry>
+        <entry><ulink url="https://www.debian.org/ports/kfreebsd-gnu/">GNU/kFreeBSD</ulink></entry>
         <entry align="center">Jul 2013</entry>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.GNUkFreeBSD">README.GNUkFreeBSD</ulink></entry>
       </row>
       <row>
-	<entry><ulink url="http://www.bitrig.org/">Bitrig</ulink></entry>
+	<entry><ulink url="https://www.bitrig.org/">Bitrig</ulink></entry>
 	<entry align="center">Jun 2014</entry>
 	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.Bitrig">README.Bitrig</ulink></entry>
       </row>

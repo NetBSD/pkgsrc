@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.49 2020/01/19 13:38:42 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.50 2020/02/24 21:13:56 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -67,7 +67,7 @@ and you can still use binary packages from someone else.</para>
 
 <screen>
 &rprompt; <userinput>PATH="/usr/pkg/sbin:$PATH"</userinput>
-&rprompt; <userinput>PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages"</userinput>
+&rprompt; <userinput>PKG_PATH="https://cdn.NetBSD.org/pub/pkgsrc/packages"</userinput>
 &rprompt; <userinput>PKG_PATH="$PKG_PATH/<replaceable>OPSYS</replaceable>/<replaceable>ARCH</replaceable>/<replaceable>VERSIONS</replaceable>/All/"</userinput>
 &rprompt; <userinput>export PATH PKG_PATH</userinput>
 </screen>
@@ -143,7 +143,7 @@ and you can still use binary packages from someone else.</para>
       The pkgsrc Security Team and Packages Groups maintain a list of
       known security vulnerabilities to packages which are (or have been)
       included in pkgsrc.  The list is available from the NetBSD
-      FTP site at <ulink url="http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities"/>.
+      FTP site at <ulink url="https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/pkg-vulnerabilities"/>.
     </para>
 
     <para>
@@ -164,11 +164,11 @@ and you can still use binary packages from someone else.</para>
     </para>
 
     <screen>Package samba-2.0.9 has a local-root-shell vulnerability, see
-    http://www.samba.org/samba/whatsnew/macroexploit.html</screen>
+    https://www.samba.org/samba/whatsnew/macroexploit.html</screen>
 
     <para>
       You may wish to have the
-      <ulink url="http://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities">vulnerabilities</ulink>
+      <ulink url="https://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities">vulnerabilities</ulink>
       file downloaded daily so that
       it remains current.  This may be done by adding an appropriate entry
       to the root users &man.crontab.5; entry.  For example the entry
