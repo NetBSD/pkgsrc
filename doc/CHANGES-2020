@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1225 2020/02/23 22:37:54 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1226 2020/02/24 11:25:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1750,3 +1750,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xcb-proto to 1.14 [wiz 2020-02-23]
 	Updated x11/py-xcbgen to 1.14 [wiz 2020-02-23]
 	Updated x11/libxcb to 1.14 [wiz 2020-02-23]
+	Updated graphics/wld to 0.0.0.20200220 [nia 2020-02-24]
