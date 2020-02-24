@@ -1,0 +1,17 @@
+$NetBSD: patch-utils_meson.build,v 1.1 2020/02/24 17:08:31 brook Exp $
+
+Make help2man execute a wrapper script so that LD_LIBRARY_PATH can be defined.
+
+--- utils/meson.build.orig	2019-10-25 03:45:11.000000000 +0000
++++ utils/meson.build
+@@ -52,8 +52,9 @@ if help2man.found() and not meson.is_cro
+ 
+   custom_target('pango-view.1',
+                 output: 'pango-view.1',
++		depends: pango_view,
+                 command: [
+-                  help2man, help2man_opts, '--output=@OUTPUT@', pango_view
++                  help2man, help2man_opts, '--output=@OUTPUT@', '--no-discard-stderr', meson.current_build_dir() + '/pango-view.sh'
+                 ],
+                 install: true,
+                 install_dir: join_paths(pango_datadir, 'man/man1'))
