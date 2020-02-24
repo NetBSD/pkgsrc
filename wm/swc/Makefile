@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2020/02/19 14:27:09 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/02/24 11:58:57 nia Exp $
 
-DISTNAME=	swc-0.0.0.20200219
+DISTNAME=	swc-0.0.0.20200222
 CATEGORIES=	wm
-MASTER_SITES=	${MASTER_SITE_GITHUB:=niacat/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=michaelforney/}
 GITHUB_PROJECT=	swc
-GITHUB_TAG=	b780f9d599a9659271f9da2a379eb597018394da
+GITHUB_TAG=	b5b7214bed4d30ff52afa5e9668c9f4162caf30a
 
 MAINTAINER=	nia@NetBSD.org
-HOMEPAGE=	https://github.com/niacat/swc
+HOMEPAGE=	https://github.com/michaelforney/swc
 COMMENT=	Small Wayland compositor implemented as a library
 LICENSE=	mit
 
