@@ -1,4 +1,4 @@
-<!-- $NetBSD: regression.xml,v 1.8 2020/01/11 11:50:51 rillig Exp $ -->
+<!-- $NetBSD: regression.xml,v 1.9 2020/02/24 21:13:56 rillig Exp $ -->
 
 <chapter id="regression"> <?dbhtml filename="regression.html"?>
 <title>Regression tests</title>
@@ -39,7 +39,7 @@
 	<para>These functions do not take any parameters. Although they
 	are called in <quote>set -e</quote> mode, they don't stop at the
 	first failing command. See <ulink
-	url="http://stackoverflow.com/q/4072984">this Stack Overflow
+	url="https://stackoverflow.com/q/4072984">this Stack Overflow
 	question</ulink> for details.</para>
 
 	<variablelist>

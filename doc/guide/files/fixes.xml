@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.153 2020/02/23 17:27:29 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.154 2020/02/24 21:13:56 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -823,7 +823,7 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
       <title>Fetch based on a tagged release</title>
 
       <para>If your distfile URL looks similar to
-      <literal>http://github.com/username/exampleproject/archive/v1.0.zip</literal>,
+      <literal>https://github.com/username/exampleproject/archive/v1.0.zip</literal>,
       then you are packaging a tagged release.</para>
 
 <programlisting>
@@ -840,7 +840,7 @@ EXTRACT_SUFX=   .zip
       <title>Fetch based on a specific commit</title>
 
       <para>If your distfile URL looks similar to
-      <literal>http://github.com&#x200B;/example&#x200B;/example&#x200B;/archive&#x200B;/988881adc9fc3655077dc2d4d757d480b5ea0e11.tar.gz</literal>,
+      <literal>https://github.com&#x200B;/example&#x200B;/example&#x200B;/archive&#x200B;/988881adc9fc3655077dc2d4d757d480b5ea0e11.tar.gz</literal>,
       then you are packaging a specific commit not tied to a
       release.</para>
 
@@ -857,7 +857,7 @@ GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
       <title>Fetch based on release</title>
 
       <para>If your distfile URL looks similar to
-      <literal>http://github.com&#x200B;/username/exampleproject&#x200B;/releases&#x200B;/download&#x200B;/rel-1.6&#x200B;/offensive-1.6.zip</literal>,
+      <literal>https://github.com&#x200B;/username/exampleproject&#x200B;/releases&#x200B;/download&#x200B;/rel-1.6&#x200B;/offensive-1.6.zip</literal>,
       then you are packaging a release.</para>
 
 <programlisting>
