@@ -54,9 +54,9 @@ UTIL=	cmout.lo cvout.lo dmout.lo dvout.lo icnteq.lo icopy.lo iset.lo \
 .PATH: BLAS LAPACK SRC UTIL
 
 .f.lo:
-	libtool --mode=compile ${FC} -o $@ -c ${FFLAGS} $<
+	libtool --mode=compile --tag=FC ${FC} -o $@ -c ${FFLAGS} $<
 
 all: libarpack.la
 
 libarpack.la: ${BLAS} ${LAPACK} ${ARPACK} ${UTIL}
-	libtool --mode=link ${FC} -o libarpack.la ${BLAS} ${LAPACK} ${ARPACK} ${UTIL} -version-info 1 -rpath ${PREFIX}/lib
+	libtool --mode=link --tag=FC ${FC} -o libarpack.la ${BLAS} ${LAPACK} ${ARPACK} ${UTIL} -version-info 1 -rpath ${PREFIX}/lib
