@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/12/01 12:47:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/02/24 19:36:49 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-connection
@@ -236,6 +236,9 @@ ${PYSITELIB}/ansible/galaxy/role.pyo
 ${PYSITELIB}/ansible/galaxy/token.py
 ${PYSITELIB}/ansible/galaxy/token.pyc
 ${PYSITELIB}/ansible/galaxy/token.pyo
+${PYSITELIB}/ansible/galaxy/user_agent.py
+${PYSITELIB}/ansible/galaxy/user_agent.pyc
+${PYSITELIB}/ansible/galaxy/user_agent.pyo
 ${PYSITELIB}/ansible/inventory/__init__.py
 ${PYSITELIB}/ansible/inventory/__init__.pyc
 ${PYSITELIB}/ansible/inventory/__init__.pyo
