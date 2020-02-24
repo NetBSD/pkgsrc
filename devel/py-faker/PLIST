@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2020/01/15 18:05:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2020/02/24 16:20:14 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -263,6 +263,9 @@ ${PYSITELIB}/faker/providers/bank/no_NO/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/pl_PL/__init__.py
 ${PYSITELIB}/faker/providers/bank/pl_PL/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/pl_PL/__init__.pyo
+${PYSITELIB}/faker/providers/bank/ru_RU/__init__.py
+${PYSITELIB}/faker/providers/bank/ru_RU/__init__.pyc
+${PYSITELIB}/faker/providers/bank/ru_RU/__init__.pyo
 ${PYSITELIB}/faker/providers/barcode/__init__.py
 ${PYSITELIB}/faker/providers/barcode/__init__.pyc
 ${PYSITELIB}/faker/providers/barcode/__init__.pyo
@@ -407,12 +410,18 @@ ${PYSITELIB}/faker/providers/credit_card/en_US/__init__.pyo
 ${PYSITELIB}/faker/providers/credit_card/fa_IR/__init__.py
 ${PYSITELIB}/faker/providers/credit_card/fa_IR/__init__.pyc
 ${PYSITELIB}/faker/providers/credit_card/fa_IR/__init__.pyo
+${PYSITELIB}/faker/providers/credit_card/ru_RU/__init__.py
+${PYSITELIB}/faker/providers/credit_card/ru_RU/__init__.pyc
+${PYSITELIB}/faker/providers/credit_card/ru_RU/__init__.pyo
 ${PYSITELIB}/faker/providers/currency/__init__.py
 ${PYSITELIB}/faker/providers/currency/__init__.pyc
 ${PYSITELIB}/faker/providers/currency/__init__.pyo
 ${PYSITELIB}/faker/providers/currency/en_US/__init__.py
 ${PYSITELIB}/faker/providers/currency/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/currency/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/currency/ru_RU/__init__.py
+${PYSITELIB}/faker/providers/currency/ru_RU/__init__.pyc
+${PYSITELIB}/faker/providers/currency/ru_RU/__init__.pyo
 ${PYSITELIB}/faker/providers/date_time/__init__.py
 ${PYSITELIB}/faker/providers/date_time/__init__.pyc
 ${PYSITELIB}/faker/providers/date_time/__init__.pyo
@@ -812,6 +821,9 @@ ${PYSITELIB}/faker/providers/person/fr_CH/__init__.pyo
 ${PYSITELIB}/faker/providers/person/fr_FR/__init__.py
 ${PYSITELIB}/faker/providers/person/fr_FR/__init__.pyc
 ${PYSITELIB}/faker/providers/person/fr_FR/__init__.pyo
+${PYSITELIB}/faker/providers/person/fr_QC/__init__.py
+${PYSITELIB}/faker/providers/person/fr_QC/__init__.pyc
+${PYSITELIB}/faker/providers/person/fr_QC/__init__.pyo
 ${PYSITELIB}/faker/providers/person/he_IL/__init__.py
 ${PYSITELIB}/faker/providers/person/he_IL/__init__.pyc
 ${PYSITELIB}/faker/providers/person/he_IL/__init__.pyo
