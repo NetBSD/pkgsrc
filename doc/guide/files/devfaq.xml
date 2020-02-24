@@ -1,4 +1,4 @@
-<!-- $NetBSD: devfaq.xml,v 1.15 2020/02/23 17:43:20 rillig Exp $ -->
+<!-- $NetBSD: devfaq.xml,v 1.16 2020/02/24 21:13:56 rillig Exp $ -->
 
 <chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
 <title>Frequently Asked Questions</title>
@@ -105,7 +105,7 @@
 	<answer><variablelist>
 
 	<varlistentry><term><ulink
-	url="http://www.NetBSD.org/mailinglists/index.html#tech-pkg">tech-pkg</ulink></term>
+	url="https://www.NetBSD.org/mailinglists/index.html#tech-pkg">tech-pkg</ulink></term>
 
 	<listitem><para>This is a list for technical discussions related
 	to pkgsrc development, e.g. soliciting feedback for changes to
@@ -116,7 +116,7 @@
 	etc.</para></listitem></varlistentry>
 
 	<varlistentry><term><ulink
-	url="http://www.NetBSD.org/mailinglists/index.html#pkgsrc-bugs">pkgsrc-bugs</ulink></term>
+	url="https://www.NetBSD.org/mailinglists/index.html#pkgsrc-bugs">pkgsrc-bugs</ulink></term>
 
 	<listitem><para>All bug reports in category "pkg" sent with
 	&man.send-pr.1; appear here. Please do not report your bugs here
@@ -142,7 +142,7 @@
 	say.</para></listitem>
 
 	<listitem><para>On the mailing list archives (see <ulink
-	url="http://mail-index.NetBSD.org/"/>), you can find discussions
+	url="https://mail-index.NetBSD.org/"/>), you can find discussions
 	about certain features, announcements of new parts of the pkgsrc
 	infrastructure and sometimes even announcements that a certain
 	feature has been marked as obsolete. The benefit here is that
@@ -199,7 +199,7 @@ anyway.</para>
     have.</para></listitem>
 
     <listitem><para>Review packages for which review was requested on
-    the <ulink url="http://www.NetBSD.org/mailinglists/index.html#tech-pkg">tech-pkg</ulink>
+    the <ulink url="https://www.NetBSD.org/mailinglists/index.html#tech-pkg">tech-pkg</ulink>
     mailing list.</para></listitem>
   </itemizedlist>
 </answer></qandaentry>

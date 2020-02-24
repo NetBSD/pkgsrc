@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.34 2020/01/05 21:35:33 rillig Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.35 2020/02/24 21:13:56 rillig Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -26,7 +26,7 @@
 	Finally, send this package to the pkgsrc bug tracking system,
 	either with the &man.send-pr.1; command, or if you don't have
 	that, go to the web page
-	<ulink url="http://www.NetBSD.org/support/send-pr.html"/>,
+	<ulink url="https://www.NetBSD.org/support/send-pr.html"/>,
 	which contains some instructions and a link to a form where you
 	can submit packages.  The
 	<filename role="pkg">sysutils/gtk-send-pr</filename> package is
@@ -46,7 +46,7 @@
 
 	<para>Alternatively, you can also import new packages into
 	pkgsrc-wip (<quote>pkgsrc work-in-progress</quote>); see the
-	homepage at <ulink url="http://pkgsrc.org/wip/"/>
+	homepage at <ulink url="https://pkgsrc.org/wip/"/>
 	for details.</para>
 
 </sect1>
@@ -59,7 +59,7 @@
 	important to keep this file up to date and conforming to the
 	existing format, because it will be used by scripts to
 	automatically update pages on <ulink
-	url="http://www.NetBSD.org/">www.NetBSD.org</ulink> and other
+	url="https://www.NetBSD.org/">www.NetBSD.org</ulink> and other
 	sites. Additionally, check the
 	<filename>pkgsrc/doc/TODO</filename> file and remove the entry
 	for the package you updated or removed, in case it was mentioned
