@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2020/02/24 13:38:38 leot Exp $
+$NetBSD: distinfo,v 1.6 2020/02/24 14:38:25 leot Exp $
 
-SHA1 (py-rt/rt-1.0.13.tar.gz) = d5ce11772ee2db795eb4b7e3637c5b54161301eb
-RMD160 (py-rt/rt-1.0.13.tar.gz) = dacbf92f7d244b46f6d604f234d50b8fdb20ceb1
-SHA512 (py-rt/rt-1.0.13.tar.gz) = 670b5e9cc582dfeefe706022251b66a4f4ea0e42507ed7ce6c4bc000140fd514c8559ac578e642c7b4c6aa6a8809463ace111f3d97e00b1f95e17586e1b174f7
-Size (py-rt/rt-1.0.13.tar.gz) = 36848 bytes
-SHA1 (patch-rt.py) = 181b7e8f694efa1a76592496a5cc48df8fd9c055
+SHA1 (py-rt/rt-2.0.0.tar.gz) = 83095414750acef5f9a331249b26c9270d011f9e
+RMD160 (py-rt/rt-2.0.0.tar.gz) = 2f4fb8586c6050dfec35d90a9d7edd187c398edc
+SHA512 (py-rt/rt-2.0.0.tar.gz) = a70cef437f66b97f6d19a62f1d1a7d12633d2092da727599419aeabdd6f41e26cf97a531b745eac7bcd77ca7a39805c71a66dc5f610cbc352f8aa28a2f682967
+Size (py-rt/rt-2.0.0.tar.gz) = 38703 bytes
+SHA1 (patch-rt.py) = 33668fc6ef0ea138acc8075a2d0fda2fca179de4

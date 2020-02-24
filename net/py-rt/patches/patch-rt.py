@@ -1,10 +1,10 @@
-$NetBSD: patch-rt.py,v 1.3 2020/01/02 15:46:11 leot Exp $
+$NetBSD: patch-rt.py,v 1.4 2020/02/24 14:38:25 leot Exp $
 
 In RT 4 when a ticket is not modified an empty response is returned.
 Treat it as a successfull operation.
 
---- rt.py.orig	2019-10-25 12:58:58.000000000 +0000
-+++ rt.py
+--- rt/rt.py.orig	2019-10-25 12:58:58.000000000 +0000
++++ rt/rt.py
 @@ -736,6 +736,8 @@ class Rt:
          """
          post_data = self.__ticket_post_data(kwargs)
