@@ -1,30 +1,31 @@
-$NetBSD: patch-deps_v8_src_base_platform_platform-freebsd.cc,v 1.1 2019/12/09 20:05:40 adam Exp $
+$NetBSD: patch-deps_v8_src_base_platform_platform-freebsd.cc,v 1.2 2020/02/24 16:02:40 adam Exp $
 
 Overlapping variables, taken from https://github.com/joyent/node/issues/9175
 
---- deps/v8/src/base/platform/platform-freebsd.cc.orig	2018-04-24 14:41:24.000000000 +0000
+--- deps/v8/src/base/platform/platform-freebsd.cc.orig	2020-02-18 05:08:33.000000000 +0000
 +++ deps/v8/src/base/platform/platform-freebsd.cc
-@@ -45,10 +45,10 @@ static unsigned StringToLong(char* buffe
+@@ -47,7 +47,7 @@ static unsigned StringToLong(char* buffe
  }
  
  std::vector<OS::SharedLibraryAddress> OS::GetSharedLibraryAddresses() {
 -  std::vector<SharedLibraryAddress> result;
 +  std::vector<SharedLibraryAddress> address_result;
-   static const int MAP_LENGTH = 1024;
-   int fd = open("/proc/self/maps", O_RDONLY);
--  if (fd < 0) return result;
-+  if (fd < 0) return address_result;
-   while (true) {
-     char addr_buffer[11];
-     addr_buffer[0] = '0';
-@@ -78,10 +78,10 @@ std::vector<OS::SharedLibraryAddress> OS
-     // There may be no filename in this line.  Skip to next.
-     if (start_of_path == nullptr) continue;
-     buffer[bytes_read] = 0;
--    result.push_back(SharedLibraryAddress(start_of_path, start, end));
-+    address_result.push_back(SharedLibraryAddress(start_of_path, start, end));
+   int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_VMMAP, getpid()};
+   size_t miblen = sizeof(mib) / sizeof(mib[0]);
+   size_t buffer_size;
+@@ -80,7 +80,7 @@ std::vector<OS::SharedLibraryAddress> OS
+           } else {
+             lib_name = std::string(path);
+           }
+-          result.push_back(SharedLibraryAddress(
++          address_result.push_back(SharedLibraryAddress(
+               lib_name, reinterpret_cast<uintptr_t>(map->kve_start),
+               reinterpret_cast<uintptr_t>(map->kve_end)));
+         }
+@@ -89,7 +89,7 @@ std::vector<OS::SharedLibraryAddress> OS
+       }
+     }
    }
-   close(fd);
 -  return result;
 +  return address_result;
  }
