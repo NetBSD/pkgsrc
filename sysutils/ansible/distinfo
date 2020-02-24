@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2019/12/10 22:26:34 adam Exp $
+$NetBSD: distinfo,v 1.16 2020/02/24 19:36:49 adam Exp $
 
-SHA1 (ansible-2.9.2.tar.gz) = 667d4a0cbb013a9770fc43dbcae4664cbe545f6e
-RMD160 (ansible-2.9.2.tar.gz) = b906eb46a19d61abeff8a841e6f8721040e890ef
-SHA512 (ansible-2.9.2.tar.gz) = 522dd84af9493ceafd95ff0fc806a671f3d1f10d0ca074ef41875eb966d39e64b834e0b98a35d81d9d9d96efef8069db604c8080ce8cbb1ce2e8b13bf5c30a6a
-Size (ansible-2.9.2.tar.gz) = 14157188 bytes
+SHA1 (ansible-2.9.5.tar.gz) = 77101f386a08b585500370a254ff987b1aa5ed67
+RMD160 (ansible-2.9.5.tar.gz) = 8945e1235d2e843decf4433594d1519fba568618
+SHA512 (ansible-2.9.5.tar.gz) = cd2ce807b3136e2c02856339ea910b0a5cae8ca946da804ed7d3ec5725d3eff0fe5b4bd8527b2a17d6f3109e16859d52045b50f2ffd21169b30768e65b813407
+Size (ansible-2.9.5.tar.gz) = 14186885 bytes
