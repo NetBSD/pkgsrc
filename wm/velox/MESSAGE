@@ -1,17 +1,15 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2019/12/16 21:01:41 nia Exp $
+$NetBSD: MESSAGE,v 1.3 2020/02/24 14:07:28 nia Exp $
 
 To edit the configuration file, copy it into place:
 
 $ cp ${PREFIX}/share/examples/velox/velox.conf ~/.velox.conf
 
-Most packages in pkgsrc will need wayland support enabled explicitly,
-velox currently does not support X11 applications.
-
 To launch velox, use swc-launch:
 
 $ mkdir /tmp/$(whoami)-runtime
 $ export XDG_RUNTIME_DIR=/tmp/$(whoami)-runtime
+$ chmod 7700 $XDG_RUNTIME_DIR
 $ swc-launch velox
 
 You may find information in this repository useful:
