@@ -1,8 +1,20 @@
-$NetBSD: patch-src_TextField.c,v 1.1 2015/10/14 20:17:28 wiz Exp $
+$NetBSD: patch-src_TextField.c,v 1.2 2020/02/24 21:45:24 bouyer Exp $
 
---- src/TextField.c.orig	2000-04-04 15:05:36.000000000 +0000
-+++ src/TextField.c
-@@ -705,11 +705,6 @@ TextFieldClassRec textFieldClassRec = {
+--- src/TextField.c.orig	2020-02-24 17:23:51.228109581 +0100
++++ src/TextField.c	2020-02-24 17:24:38.970387116 +0100
+@@ -662,11 +662,7 @@
+ 
+ TextFieldClassRec textFieldClassRec = {
+   { /* core fields */
+-#ifdef XAW3D
+-    /* superclass		*/	(WidgetClass) &threeDClassRec,
+-#else
+     /* superclass		*/	(WidgetClass) &simpleClassRec,
+-#endif
+     /* class_name		*/	"TextField",
+     /* widget_size		*/	sizeof(TextFieldRec),
+     /* class_initialize		*/	ClassInitialize,
+@@ -702,11 +698,6 @@
    { /* simple    fields */
      /* change_sensitive */		XtInheritChangeSensitive
    },
@@ -14,7 +26,7 @@ $NetBSD: patch-src_TextField.c,v 1.1 2015/10/14 20:17:28 wiz Exp $
    { /* textField fields */
      /* empty			*/	0
    }
-@@ -2315,11 +2310,6 @@ ReDisplay(tfw,False);
+@@ -2312,11 +2303,6 @@
  if (TF.label)
  	DrawLabel(tfw,False);
  
