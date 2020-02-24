@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1227 2020/02/24 11:59:06 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1228 2020/02/24 13:38:50 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1752,3 +1752,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/libxcb to 1.14 [wiz 2020-02-23]
 	Updated graphics/wld to 0.0.0.20200220 [nia 2020-02-24]
 	Updated wm/swc to 0.0.0.20200222 [nia 2020-02-24]
+	Updated net/py-rt to 1.0.13 [leot 2020-02-24]
