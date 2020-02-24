@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2019/12/12 14:48:43 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/02/24 11:25:44 nia Exp $
 
-DISTNAME=	wld-0.0.0.20191211
+DISTNAME=	wld-0.0.0.20200220
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=niacat/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=michaelforney/}
 GITHUB_PROJECT=	wld
-GITHUB_TAG=	cf05d2bdcb418a686258bf02538136077dc1ace7
+GITHUB_TAG=	ea4eccb64cfcfc508b029a530fc434d6e6695af5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/niacat/wld
+HOMEPAGE=	https://github.com/michaelforney/wld
 COMMENT=	Primitive drawing library targeted at Wayland
 LICENSE=	mit
 
@@ -15,6 +15,16 @@ USE_TOOLS+=	gmake pkg-config
 
 MAKE_FLAGS+=	CC=${CC:Q}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+WLD_DRIVERS+=	intel
+.endif
+
+WLD_DRIVERS+=	nouveau
+
+MAKE_FLAGS+=	DRM_DRIVERS=${WLD_DRIVERS:Q}
 
 PKGCONFIG_OVERRIDE+=	wld.pc.in
 
