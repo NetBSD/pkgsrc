@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2020/01/10 13:24:19 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2020/02/24 17:29:25 brook Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -9,6 +9,13 @@ COMMENT=	PDF rendering library (GLib wrapper)
 CONFLICTS+=	poppler<0.4.5nb1
 
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-glib.pc.cmake
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+# MacOS Xcode does not provide /usr/include, so be explicit
+CMAKE_ARGS+=	-DGLIB2_INCLUDE_DIRS=${PREFIX}/include
+.endif
 
 # Don't build the splash graphics backend.
 CMAKE_ARGS+=	-DENABLE_SPLASH=OFF
