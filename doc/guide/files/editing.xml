@@ -1,4 +1,4 @@
-<!-- $NetBSD: editing.xml,v 1.15 2013/03/26 20:21:38 wiz Exp $ -->
+<!-- $NetBSD: editing.xml,v 1.16 2020/02/24 21:13:56 rillig Exp $ -->
 
 <appendix id="editing">
 <title>Editing guidelines for the pkgsrc guide</title>
@@ -20,14 +20,14 @@
 	<listitem><para><filename>pkgsrc/doc/pkgsrc.html</filename></para></listitem>
 
 	<listitem><para><ulink
-	url="http://www.NetBSD.org/docs/pkgsrc/"/></para></listitem>
+	url="https://www.NetBSD.org/docs/pkgsrc/"/></para></listitem>
 
 	<listitem><para><ulink
-	url="http://www.NetBSD.org/docs/pkgsrc/pkgsrc.pdf"/>:
+	url="https://www.NetBSD.org/docs/pkgsrc/pkgsrc.pdf"/>:
 	The PDF version of the pkgsrc guide.</para></listitem>
 
 	<listitem><para><ulink
-	url="http://www.NetBSD.org/docs/pkgsrc/pkgsrc.ps"/>:
+	url="https://www.NetBSD.org/docs/pkgsrc/pkgsrc.ps"/>:
 	PostScript version of the pkgsrc guide.</para></listitem>
 
 	</itemizedlist>
