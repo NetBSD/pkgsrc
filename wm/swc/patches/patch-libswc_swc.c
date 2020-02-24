@@ -1,8 +1,10 @@
-$NetBSD: patch-libswc_swc.c,v 1.1 2020/02/24 14:11:17 nia Exp $
+$NetBSD: patch-libswc_swc.c,v 1.2 2020/02/24 14:23:53 nia Exp $
 
 Disable decoration managers until this is stable.
 
 Currently this causes problems quitting applications.
+
+https://github.com/michaelforney/swc/issues/58
 
 --- libswc/swc.c.orig	2020-02-22 10:04:33.000000000 +0000
 +++ libswc/swc.c

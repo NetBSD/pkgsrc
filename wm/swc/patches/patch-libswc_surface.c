@@ -1,6 +1,8 @@
-$NetBSD: patch-libswc_surface.c,v 1.1 2020/02/24 12:31:20 nia Exp $
+$NetBSD: patch-libswc_surface.c,v 1.2 2020/02/24 14:23:53 nia Exp $
 
 Don't error if the transformation type is "normal".
+
+https://github.com/michaelforney/swc/pull/57
 
 --- libswc/surface.c.orig	2020-02-22 10:04:33.000000000 +0000
 +++ libswc/surface.c
