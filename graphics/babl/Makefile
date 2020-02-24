@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/01/19 23:19:50 nia Exp $
+# $NetBSD: Makefile,v 1.30 2020/02/24 17:37:27 brook Exp $
 
 DISTNAME=	babl-0.1.72
 CATEGORIES=	graphics
@@ -20,7 +20,20 @@ PKGCONFIG_OVERRIDE+=	babl.pc.in
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=		Darwin not_Darwin
+.if ${OPSYS} == "Darwin"
+PLIST.Darwin=		yes
+PLIST_SUBST+=  		SOEXT="dylib"
+.else
+PLIST.not_Darwin=	yes
+PLIST_SUBST+=  		SOEXT="so"
+.endif
+
 # Apply removals to post-wrapper transformed arguments.
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--version-script
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,babl.map
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,babl.map
 
