@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1229 2020/02/24 14:38:36 leot Exp $
+$NetBSD: CHANGES-2020,v 1.1230 2020/02/24 16:11:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1754,3 +1754,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/swc to 0.0.0.20200222 [nia 2020-02-24]
 	Updated net/py-rt to 1.0.13 [leot 2020-02-24]
 	Updated net/py-rt to 2.0.0 [leot 2020-02-24]
+	Updated lang/nodejs12 to 12.16.1 [adam 2020-02-24]
+	Updated lang/nodejs to 13.9.0 [adam 2020-02-24]
+	Updated devel/git to 2.25.1 [adam 2020-02-24]
+	Updated devel/subversion to 1.13.0 [adam 2020-02-24]
