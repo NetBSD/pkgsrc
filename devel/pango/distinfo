@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.123 2019/11/06 13:26:21 wiz Exp $
+$NetBSD: distinfo,v 1.124 2020/02/24 17:08:31 brook Exp $
 
 SHA1 (pango-1.44.7.tar.xz) = 2ca86089b657a2ccfede7d1b7598fdaa34c24859
 RMD160 (pango-1.44.7.tar.xz) = 8311253bf24ba3cb250938cd80f74b00d0ef8fdf
@@ -11,3 +11,4 @@ SHA1 (patch-pango_pangocoretext-private.h) = 554d80a4f9b63cda37745a6fbb3dcc348f9
 SHA1 (patch-pango_pangocoretext.c) = 44b65b64da1d2ae819a5e984b5c672ad9d333622
 SHA1 (patch-pango_pangocoretext.h) = d6817eb02f0020c102ab95d63202f9508a70e647
 SHA1 (patch-pangocairo-coretext.h) = 2f7c8efad48b58398070f48e71c16d99d3d59f57
+SHA1 (patch-utils_meson.build) = 4c2564d54209b4bed286db3d85963c78897ceb49
