@@ -1,4 +1,4 @@
-<!-- $NetBSD: debug.xml,v 1.7 2007/08/15 06:33:44 rillig Exp $ -->
+<!-- $NetBSD: debug.xml,v 1.8 2020/02/24 21:13:56 rillig Exp $ -->
 
 <chapter id="debug">
   <title>Debugging</title>
@@ -20,7 +20,7 @@
 
       <screen>&cprompt; <userinput>mkdir /usr/pkgsrc/<replaceable>category</replaceable>/<replaceable>examplepkg</replaceable></userinput>
 &cprompt; <userinput>cd /usr/pkgsrc/<replaceable>category</replaceable>/<replaceable>examplepkg</replaceable></userinput>
-&cprompt; <userinput>url2pkg http://www.example.com/path/to/distfile.tar.gz</userinput></screen>
+&cprompt; <userinput>url2pkg https://www.example.com/path/to/distfile.tar.gz</userinput></screen>
     </listitem>
 
     <listitem>
