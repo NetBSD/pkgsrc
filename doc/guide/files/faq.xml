@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.56 2020/02/09 00:44:25 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.57 2020/02/24 21:13:56 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -31,14 +31,14 @@ it contains items for both pkgsrc users and developers.</para>
 
       <listitem>
 	<para><ulink
-	    url="http://www.NetBSD.org/mailinglists/index.html#pkgsrc-bulk">pkgsrc-bulk</ulink>:
+	    url="https://www.NetBSD.org/mailinglists/index.html#pkgsrc-bulk">pkgsrc-bulk</ulink>:
 	  A list where the results of pkgsrc bulk builds are sent and
 	  discussed.</para>
       </listitem>
 
       <listitem>
 	<para><ulink
-	    url="http://www.NetBSD.org/mailinglists/index.html#pkgsrc-changes">pkgsrc-changes</ulink>:
+	    url="https://www.NetBSD.org/mailinglists/index.html#pkgsrc-changes">pkgsrc-changes</ulink>:
 	  This list is for those who are interested in getting a
 	  commit message for every change committed to pkgsrc. It is
 	  also available in digest form, meaning one daily message
@@ -55,7 +55,7 @@ it contains items for both pkgsrc users and developers.</para>
 </programlisting>
 
 <para>Archives for all these mailing lists are available from
-<ulink url="http://mail-index.NetBSD.org/"/>.</para>
+<ulink url="https://mail-index.NetBSD.org/"/>.</para>
 
 </sect1>
 
