@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1230 2020/02/24 16:11:06 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1231 2020/02/24 16:20:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1758,3 +1758,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs to 13.9.0 [adam 2020-02-24]
 	Updated devel/git to 2.25.1 [adam 2020-02-24]
 	Updated devel/subversion to 1.13.0 [adam 2020-02-24]
+	Updated www/py-django-admin-rangefilter to 0.5.4 [adam 2020-02-24]
+	Updated www/py-django-admin-sortable2 to 0.7.5 [adam 2020-02-24]
+	Updated textproc/py-xlsxwriter to 1.2.8 [adam 2020-02-24]
+	Updated devel/py-faker to 4.0.1 [adam 2020-02-24]
