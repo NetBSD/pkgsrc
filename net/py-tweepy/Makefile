@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2018/01/07 21:01:28 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2020/02/24 00:02:59 joerg Exp $
 
 DISTNAME=	tweepy-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tweepy/}
 
