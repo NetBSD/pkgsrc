@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/12/30 17:51:49 adam Exp $
+# $NetBSD: Makefile,v 1.11 2020/02/25 09:06:23 adam Exp $
 
-DISTNAME=	responses-0.10.9
+DISTNAME=	responses-0.10.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/responses/}
