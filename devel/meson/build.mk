@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.4 2020/01/01 21:15:06 adam Exp $
+# $NetBSD: build.mk,v 1.5 2020/02/25 04:54:35 rillig Exp $
 
 BUILD_DEPENDS+=	meson-[0-9]*:../../devel/meson
 
@@ -48,3 +48,16 @@ meson-test:
 .endfor
 
 .include "../../lang/python/application.mk"
+
+_VARGROUPS+=		meson
+_PKG_VARS.meson=	CONFIGURE_DIRS
+_PKG_VARS.meson+=	BUILD_DIRS MAKE_ENV
+_PKG_VARS.meson+=	TEST_DIRS TEST_ENV
+_PKG_VARS.meson+=	INSTALL_DIRS INSTALL_ENV
+_PKG_VARS.meson+=	LLVM_CONFIG_PATH
+_PKG_VARS.meson+=	USE_CMAKE MESON_ARGS
+_USER_VARS.meson=	MAKE_JOBS PKG_SYSCONFDIR
+_USE_VARS.meson=	TOOLS_PATH.false WRKSRC PREFIX PKGMANDIR
+_DEF_VARS.meson=	BUILD_DEPENDS
+_LISTED_VARS.meson=	*_ARGS *_DEPENDS
+_SORTED_VARS.meson=	*_ENV
