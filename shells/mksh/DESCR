@@ -1,10 +1,10 @@
 mksh is the MirBSD enhanced version of the Public Domain Korn shell (pdksh),
-a Bourne-compatible shell which is largely si. milar to the original AT&T
+a Bourne-compatible shell which is largely similar to the original AT&T
 Korn shell; mksh is the only pdksh derivate currently being actively developed.
 It includes bug fixes and feature improvements, in order to produce a modern,
 robust shell good for interactive and especially script use.
 
-The code has throughoutly been cleaned up and simplified, bugs fixed, standards
+The code has been thoroughly cleaned up and simplified, bugs fixed, standards
 compliance added, and several enhancements (for extended compatibility to other
 modern shells, as well as a couple of its own) have been placed. mksh has UTF-8
 support (e.g. in the emacs editing mode).
