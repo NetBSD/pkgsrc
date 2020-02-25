@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/02/16 14:13:33 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/02/25 09:32:28 adam Exp $
 
-SHA1 (hstspreload-2020.2.15.tar.gz) = 79391f7f3bf7ea5050aa2c33ca57b4dc47a3af5c
-RMD160 (hstspreload-2020.2.15.tar.gz) = d903a1e4ee790818c32fae10307c87735c9f171f
-SHA512 (hstspreload-2020.2.15.tar.gz) = c6bbea96ba68711a3cc9e2c924ecf77011e066a3d25b68e96f5fc409f69035542da60e5266fffbfd9dbfcda73d6910443063fd5860bc38710d6b76d360545f38
-Size (hstspreload-2020.2.15.tar.gz) = 742617 bytes
+SHA1 (hstspreload-2020.2.25.tar.gz) = 0fbe233e3bd76ba2436ed7691ae6a7259907ff4a
+RMD160 (hstspreload-2020.2.25.tar.gz) = 6f597db440c2e73e66f330d97c1ef69e26ff78d7
+SHA512 (hstspreload-2020.2.25.tar.gz) = e7a2fdaa7fc2f36426e23ae70ac7bed1829b8bb812aa9b126cfdfbb29b0b308555bfc839c26d513a94da200cd1bf6b1eb0421fb383043cf7f7f4f6adee61014b
+Size (hstspreload-2020.2.25.tar.gz) = 765137 bytes
