@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1233 2020/02/25 08:56:58 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1234 2020/02/25 09:32:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1766,3 +1766,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/libpsl to 0.21.0 [adam 2020-02-24]
 	Updated textproc/py-jmespath to 0.9.5 [adam 2020-02-25]
 	Updated devel/py-enum34 to 1.1.9 [adam 2020-02-25]
+	Updated net/py-responses to 0.10.11 [adam 2020-02-25]
+	Updated www/py-hstspreload to 2020.2.25 [adam 2020-02-25]
