@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1235 2020/02/25 10:08:09 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1236 2020/02/25 11:07:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1769,3 +1769,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-responses to 0.10.11 [adam 2020-02-25]
 	Updated www/py-hstspreload to 2020.2.25 [adam 2020-02-25]
 	Updated net/tcpdump to 4.9.3 [adam 2020-02-25]
+	Updated audio/quodlibet to 4.3.0 [nia 2020-02-25]
