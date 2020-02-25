@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/02/24 17:37:27 brook Exp $
+# $NetBSD: Makefile,v 1.31 2020/02/25 04:13:46 brook Exp $
 
 DISTNAME=	babl-0.1.72
 CATEGORIES=	graphics
@@ -36,6 +36,23 @@ BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--version-script
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,babl.map
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,babl.map
+
+# .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+#
+# Meson uses .dylib for Darwin shared libraries, but G_MODULE_SUFFIX
+# is always .so on Unix, including Darwin.  This is under discussion
+# at https://gitlab.gnome.org/GNOME/glib/issues/1413 but for now
+# rename the plugins and reset their internal ID to match the new
+# name.
+#
+post-install:
+	cd ${DESTDIR}/${PREFIX}/lib/babl-0.1 && for i in *.dylib; do \
+		install_name_tool -id ${PREFIX}/lib/babl-0.1/$${i%.dylib}.so $${i}; \
+		mv "$${i}" "$${i%.dylib}.so" \
+	; done
+.endif
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
