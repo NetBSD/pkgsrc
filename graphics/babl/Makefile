@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/02/25 04:13:46 brook Exp $
+# $NetBSD: Makefile,v 1.32 2020/02/25 14:55:36 brook Exp $
 
 DISTNAME=	babl-0.1.72
 CATEGORIES=	graphics
@@ -36,8 +36,6 @@ BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--version-script
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,babl.map
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,babl.map
-
-# .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
 #
