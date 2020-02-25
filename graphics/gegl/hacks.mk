@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2015/02/11 18:05:23 pho Exp $
+# $NetBSD: hacks.mk,v 1.2 2020/02/25 04:29:36 brook Exp $
 
 .if !defined(GEGL_HACKS_MK)
 GEGL_HACKS_MK=	# defined
@@ -17,13 +17,14 @@ PKG_HACKS+=			darwin-opencl
 SUBST_CLASSES+=			non-darwin
 SUBST_STAGE.non-darwin=		pre-build
 SUBST_MESSAGE.non-darwin=	Pretending as if we were not on Darwin.
-SUBST_FILES.non-darwin=		gegl/opencl/*.h
-SUBST_SED.non-darwin=		-e 's,\#ifdef __APPLE__,\#if 0,g'
+SUBST_FILES.non-darwin=		gegl/opencl/*.h gegl/opencl/*.c
+SUBST_SED.non-darwin+=		-e 's,\#ifdef __APPLE__,\#if 0,g'
+SUBST_SED.non-darwin+=		-e 's,\#if defined(__APPLE__),\#if 0,g'
 
 SUBST_CLASSES+=			no-altivec
 SUBST_STAGE.no-altivec=		pre-build
 SUBST_MESSAGE.no-altivec=	Pretending as if we did not have altivec.
-SUBST_FILES.no-altivec=		gegl/opencl/*.h
+SUBST_FILES.no-altivec=		gegl/opencl/*.h gegl/opencl/*.c
 SUBST_SED.no-altivec=		-e 's,\#if defined( __VEC__ ),\#if 0,g'
 .endif
 
