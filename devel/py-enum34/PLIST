@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/04/17 09:47:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/02/25 08:56:41 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,7 +8,6 @@ ${PYSITELIB}/enum/README
 ${PYSITELIB}/enum/__init__.py
 ${PYSITELIB}/enum/__init__.pyc
 ${PYSITELIB}/enum/__init__.pyo
-${PYSITELIB}/enum/doc/enum.pdf
 ${PYSITELIB}/enum/doc/enum.rst
 ${PYSITELIB}/enum/test.py
 ${PYSITELIB}/enum/test.pyc
