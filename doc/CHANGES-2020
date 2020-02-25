@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1232 2020/02/24 19:46:40 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1233 2020/02/25 08:56:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1764,3 +1764,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-faker to 4.0.1 [adam 2020-02-24]
 	Updated sysutils/ansible to 2.9.5 [adam 2020-02-24]
 	Updated www/libpsl to 0.21.0 [adam 2020-02-24]
+	Updated textproc/py-jmespath to 0.9.5 [adam 2020-02-25]
+	Updated devel/py-enum34 to 1.1.9 [adam 2020-02-25]
