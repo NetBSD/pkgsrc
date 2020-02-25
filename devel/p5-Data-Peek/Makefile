@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/02/25 01:15:19 gutteridge Exp $
+# $NetBSD: Makefile,v 1.30 2020/02/25 01:16:55 gutteridge Exp $
 
 DISTNAME=	Data-Peek-0.49
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,8 @@ COMMENT=	Perl 5 collection of low-level debug functions
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	c
-PERL5_PACKLIST=		auto/Data/Peek/.packlist
-MAKE_ENV+=		AUTOMATED_TESTING=1
+PERL5_PACKLIST=	auto/Data/Peek/.packlist
+MAKE_ENV+=	AUTOMATED_TESTING=1
 
 # For test target
 TEST_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
