@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/02/25 09:04:55 adam Exp $
+$NetBSD: distinfo,v 1.3 2020/02/25 08:54:02 adam Exp $
 
-SHA1 (jmespath-0.9.4.tar.gz) = e69576ffb34660ac546ddfe9ec1a905e795cb856
-RMD160 (jmespath-0.9.4.tar.gz) = c8b8be52870b1c485ba0354d450031380762784a
-SHA512 (jmespath-0.9.4.tar.gz) = 173ec36708f93f72fece049b71846a226010c00498ab51e58bee26a09cc73cf96a062df215d3737eb266e689c2ecf7a2be95b009ed74ad122f6739d4379466c6
-Size (jmespath-0.9.4.tar.gz) = 22940 bytes
+SHA1 (jmespath-0.9.5.tar.gz) = dbe5ca21a83ad0d3575dc53e7da7b12d775bdea1
+RMD160 (jmespath-0.9.5.tar.gz) = 63588595770b70980a67a6338938a49a0608424f
+SHA512 (jmespath-0.9.5.tar.gz) = 538bd32f9ac69b3ee9d5e98279c5ab91e4c7fc35c7529b62b4ba605e951a098c203751433a66b45dc931dce34b18558d049802ee26032ed094ac25da2613ac5a
+Size (jmespath-0.9.5.tar.gz) = 27084 bytes
