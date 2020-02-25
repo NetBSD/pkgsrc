@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/01/18 21:50:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2020/02/25 14:10:44 leot Exp $
 
 DISTNAME=	pure-ftpd-1.0.35
 PKGREVISION=	7
@@ -14,7 +14,7 @@ MASTER_SITES+=	ftp://ftp.cn.pureftpd.org/pub/pureftpd/pure-ftpd/releases/
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=pureftpd/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	dawszy@arhea.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.pureftpd.org/project/pure-ftpd
 COMMENT=	Secure FTP daemon with optional SQL support
 LICENSE=	modified-bsd
