@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.31 2020/02/18 16:10:37 maya Exp $
+# $NetBSD: build.mk,v 1.32 2020/02/25 05:30:14 rillig Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -194,7 +194,8 @@ post-build:
 #	Starts an interactive shell in WRKSRC.
 #
 #	This is only used during development and testing of a package
-#	to work in the same environment as the actual build.
+#	to work in the environment (MAKE_ENV) that is used by default
+#	for building the packages.
 #
 # User-settable variables:
 #
