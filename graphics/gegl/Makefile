@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2019/11/02 14:05:46 nia Exp $
+# $NetBSD: Makefile,v 1.78 2020/02/25 04:29:36 brook Exp $
 
 DISTNAME=	gegl-0.4.18
 CATEGORIES=	graphics
@@ -22,12 +22,38 @@ PKGCONFIG_OVERRIDE+=	gegl.pc.in
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=		Darwin not_Darwin
+.if ${OPSYS} == "Darwin"
+PLIST.Darwin=		yes
+PLIST_SUBST+=   	SOEXT="dylib"
+.else
+PLIST.not_Darwin=	yes
+PLIST_SUBST+=   	SOEXT="so"
+.endif
+
 # ../gegl/opencl/gegl-cl-color.c:32:10: fatal error: opencl/colors.cl.h: No such file or directory
 # race condition in meson?
 pre-build:
 	cd ${WRKSRC}/opencl && for file in $$(ls -1 | grep '\.cl$$'); do \
 		${PYTHONBIN} cltostring.py "$$file" "$$file".h \
 	; done
+
+.if ${OPSYS} == "Darwin"
+#
+# Meson uses .dylib for Darwin shared libraries, but G_MODULE_SUFFIX
+# is always .so on Unix, including Darwin.  This is under discussion
+# at https://gitlab.gnome.org/GNOME/glib/issues/1413 but for now
+# rename the plugins and reset their internal ID to match the new
+# name.
+#
+post-install:
+	cd ${DESTDIR}/${PREFIX}/lib/gegl-0.4 && for i in *.dylib; do \
+		install_name_tool -id ${PREFIX}/lib/gegl-0.4/$${i%.dylib}.so $${i}; \
+		mv "$${i}" "$${i%.dylib}.so" \
+	; done
+.endif
 
 .include "options.mk"
 .include "../../devel/meson/build.mk"
