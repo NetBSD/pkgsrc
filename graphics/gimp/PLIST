@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2019/11/02 14:06:44 nia Exp $
+@comment $NetBSD: PLIST,v 1.69 2020/02/25 15:03:28 brook Exp $
 bin/gimp
 bin/gimp-2.10
 bin/gimp-console
@@ -379,7 +379,7 @@ lib/libgimpwidgets-2.0.la
 lib/pkgconfig/gimp-2.0.pc
 lib/pkgconfig/gimpthumb-2.0.pc
 lib/pkgconfig/gimpui-2.0.pc
-libexec/gimp-debug-tool-2.0
+${GIMP_DEBUG_TOOL_DIR}/gimp-debug-tool-2.0
 man/man1/gimp-2.10.1
 man/man1/gimp-console-2.10.1
 man/man1/gimp-console.1
