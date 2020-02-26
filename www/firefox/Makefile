@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.411 2020/02/21 15:13:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.412 2020/02/26 20:55:43 maya Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		73.0
@@ -65,6 +65,11 @@ MOZILLA_ICON=	${WRKSRC}/${OBJDIR}/dist/${MOZILLA}/browser/chrome/icons/default/d
 MOZILLA_NAME=	Firefox
 .else
 MOZILLA_NAME=	Browser
+.endif
+
+PLIST_VARS+=	notlinux
+.if ${OPSYS} != "Linux"
+PLIST.notlinux=	yes
 .endif
 
 post-extract:

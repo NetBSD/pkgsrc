@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2020/02/26 20:55:43 maya Exp $
+lib/firefox/browser/features/formautofill@mozilla.org/chrome/res/autocomplete-item.css
+lib/firefox/browser/features/formautofill@mozilla.org/chrome/res/editDialog.css
+lib/firefox/fonts/TwemojiMozilla.ttf
+lib/firefox/libmozsandbox.so
