@@ -1,18 +1,9 @@
-$NetBSD: patch-ae,v 1.8 2016/11/03 11:40:28 maya Exp $
+$NetBSD: patch-src_mips_ffitarget.h,v 1.1 2020/02/26 19:15:44 adam Exp $
 
 Make a minimal adjustment to support the various NetBSD mips ports.
 
---- src/mips/ffitarget.h.orig	2014-11-08 12:47:24.000000000 +0000
+--- src/mips/ffitarget.h.orig	2019-10-31 14:49:54.000000000 +0000
 +++ src/mips/ffitarget.h
-@@ -32,7 +32,7 @@
- #error "Please do not include ffitarget.h directly into your source.  Use ffi.h instead."
- #endif
- 
--#ifdef linux
-+#if defined(linux)
- # include <asm/sgidefs.h>
- #elif defined(__rtems__)
- /*
 @@ -41,8 +41,10 @@
  #define _MIPS_SIM_ABI32		1
  #define _MIPS_SIM_NABI32	2
