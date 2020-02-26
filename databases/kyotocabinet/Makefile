@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2019/11/02 15:38:01 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/02/26 15:59:05 nia Exp $
 #
 
-DISTNAME=	kyotocabinet-1.2.76
-PKGREVISION=	1
+DISTNAME=	kyotocabinet-1.2.77
 CATEGORIES=	databases
-MASTER_SITES=	http://fallabs.com/kyotocabinet/pkg/
+MASTER_SITES=	https://fallabs.com/kyotocabinet/pkg/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://fallabs.com/kyotocabinet/
