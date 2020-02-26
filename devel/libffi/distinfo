@@ -1,18 +1,12 @@
-$NetBSD: distinfo,v 1.45 2017/09/05 15:08:42 joerg Exp $
+$NetBSD: distinfo,v 1.46 2020/02/26 19:15:44 adam Exp $
 
-SHA1 (libffi-3.2.1.tar.gz) = 280c265b789e041c02e5c97815793dfc283fb1e6
-RMD160 (libffi-3.2.1.tar.gz) = 9b546a3d002380bec3f00d86fc47d730abf51dfd
-SHA512 (libffi-3.2.1.tar.gz) = 980ca30a8d76f963fca722432b1fe5af77d7a4e4d2eac5144fbc5374d4c596609a293440573f4294207e1bdd9fda80ad1e1cafb2ffb543df5a275bc3bd546483
-Size (libffi-3.2.1.tar.gz) = 940837 bytes
-SHA1 (patch-aa) = 5218c8d895f97c812b7ca8d07c55b82ebcdc87d4
-SHA1 (patch-ac) = 63fba2e9486b73485a4f633927f5041110c43239
-SHA1 (patch-ad) = db57395ff721d7b56edec8a3a64b4b529258341c
-SHA1 (patch-ae) = fdb84a49c15041826396e4d3a6dda2de719801c0
-SHA1 (patch-af) = bf64b4082f24947cd47aba0758c347e5ddac3d7e
-SHA1 (patch-ag) = ae6a89f6b2be00c52139be6dcd14d0ebfe85d8f7
-SHA1 (patch-aj) = 5179cfd150bc7de15eb1c5ee0a327016c2c32b3e
-SHA1 (patch-src_alpha_osf.S) = 50d564a1d88284f04f6896719fa3613e9b0be70b
-SHA1 (patch-src_arm_sysv.S) = 2c97e0d069a4df2e1f5b6604e54b2d02c92691e2
-SHA1 (patch-src_closures.c) = 72760ccd973c5f9b157f5db8da180861d748beb2
+SHA1 (libffi-3.3.tar.gz) = 8df6cb570c8d6596a67d1c0773bf00650154f7aa
+RMD160 (libffi-3.3.tar.gz) = 2cd43b66d792f1bad76df2e19a8411beacfcb8e0
+SHA512 (libffi-3.3.tar.gz) = 61513801a156f11420f541d325de697131846487122d6bdcf5491b18b4da788589f5c0bb07e88e396495d3be5830d74e9135595e2b8ddbfe95c448d8597fbd6f
+Size (libffi-3.3.tar.gz) = 1305466 bytes
+SHA1 (patch-configure) = 81f1f2bee39a40f2a34b3a6cea0b210d13037482
+SHA1 (patch-src_m68k_ffi.c) = 5179cfd150bc7de15eb1c5ee0a327016c2c32b3e
 SHA1 (patch-src_m88k_elfbsd.S) = 6572c7fa39c00096cb4a80bb88993ff1b4aaa8cc
-SHA1 (patch-src_x86_win32.S) = 8a41cbc7237d6a171605a66e91d8d92a57181569
+SHA1 (patch-src_mips_ffi.c) = 7353f68f73917af6bff0b90393ac3404ea54fb99
+SHA1 (patch-src_mips_ffitarget.h) = 7fe62634803ccb5a168e76d597409c9af809c448
+SHA1 (patch-testsuite_libffi.call_float2.c) = 2a42a428b0cc55065968c7f0748026da12b70b9d
