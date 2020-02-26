@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1242 2020/02/26 14:57:31 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1243 2020/02/26 14:57:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1776,3 +1776,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/babl to 0.1.74 [nia 2020-02-26]
 	Updated games/armagetronad to 0.2.8.3.5 [nia 2020-02-26]
 	Updated graphics/gegl to 0.4.22 [nia 2020-02-26]
+	Updated games/armagetronad-server to 0.2.8.3.5 [nia 2020-02-26]
