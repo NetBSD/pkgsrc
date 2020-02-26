@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1257 2020/02/26 17:23:52 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1258 2020/02/26 17:56:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1791,3 +1791,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/snd to 20.1 [nia 2020-02-26]
 	Updated lang/vala to 0.46.6 [nia 2020-02-26]
 	Updated wm/vtwm to 5.5.0 [nia 2020-02-26]
+	Updated games/srb2 to 2.2.2 [nia 2020-02-26]
