@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/02/25 04:13:46 brook Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/02/26 14:45:13 nia Exp $
 include/babl-0.1/babl/babl-introspect.h
 include/babl-0.1/babl/babl-macros.h
 include/babl-0.1/babl/babl-types.h
@@ -35,5 +35,5 @@ lib/babl-0.1/ycbcr.so
 lib/libbabl-0.1.${SOEXT}
 ${PLIST.Darwin}lib/libbabl-0.1.0.${SOEXT}
 ${PLIST.not_Darwin}lib/libbabl-0.1.${SOEXT}.0
-${PLIST.not_Darwin}lib/libbabl-0.1.${SOEXT}.0.171.1
+${PLIST.not_Darwin}lib/libbabl-0.1.${SOEXT}.0.173.1
 lib/pkgconfig/babl.pc
