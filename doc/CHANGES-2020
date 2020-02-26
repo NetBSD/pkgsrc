@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1254 2020/02/26 16:30:04 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1255 2020/02/26 16:40:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1788,3 +1788,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/re2 to 20200101 [nia 2020-02-26]
 	Updated games/REminiscence to 0.4.6 [nia 2020-02-26]
 	Updated math/superlu to 5.2.1 [wiz 2020-02-26]
+	Updated audio/snd to 20.1 [nia 2020-02-26]
