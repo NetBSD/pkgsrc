@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/09/11 11:36:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2020/02/26 15:26:05 nia Exp $
 
-SHA1 (KeePass-2.43.zip) = 3808fce7ec21c5fa9ee11c9f573c7865d1b83228
-RMD160 (KeePass-2.43.zip) = ed0eff06697a2822f97d3e4eb02aa19b5b9e4f7c
-SHA512 (KeePass-2.43.zip) = b0430b8f26b7eea2bf55e564a7e205f75049be87025dda03bf60eb25acdd840c0d19c2231d4ea13b997e91dffff0b294b2196c7ad831d31964501d713ff7d2b2
-Size (KeePass-2.43.zip) = 3210221 bytes
+SHA1 (KeePass-2.44.zip) = b7a493b104a44e89a5962083709c0a0f325bd66a
+RMD160 (KeePass-2.44.zip) = 1e31fef1eb0f38e524c377fba3b71ebad7d21741
+SHA512 (KeePass-2.44.zip) = ec9cbdcf2e548ac781a80e14f15b213002d2e9affe3deb4740e404d6e17363bb55d9a2d27e0a9d2e8770e93cdcaa811ca751308de68670b8694b8f2fc061c496
+Size (KeePass-2.44.zip) = 3214311 bytes
