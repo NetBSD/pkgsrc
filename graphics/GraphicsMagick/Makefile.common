@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.25 2020/01/08 12:11:36 nia Exp $
+# $NetBSD: Makefile.common,v 1.26 2020/02/26 15:19:20 nia Exp $
 #
 # used by graphics/GraphicsMagick/Makefile
 # used by graphics/p5-GraphicsMagick/Makefile
 
 GM_MAJOR_VER=	1.3
-GM_MINOR_VER=	34
+GM_MINOR_VER=	35
 DISTVERSION=	${GM_MAJOR_VER}.${GM_MINOR_VER}
 DISTNAME=	GraphicsMagick-${DISTVERSION}
 CATEGORIES=	graphics
