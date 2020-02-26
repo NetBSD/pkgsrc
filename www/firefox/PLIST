@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.154 2020/02/12 16:36:50 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.155 2020/02/26 20:55:43 maya Exp $
 bin/firefox
 lib/firefox/actors/AudioPlaybackChild.jsm
 lib/firefox/actors/AudioPlaybackParent.jsm
@@ -1133,7 +1133,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/history.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/home.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/identity-icon.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/illustrations/error-session-restore.svg
-lib/firefox/browser/chrome/browser/skin/classic/browser/import-export.svg
+${PLIST.notlinux}lib/firefox/browser/chrome/browser/skin/classic/browser/import-export.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/info.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/library-bookmark-animation.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/library-pocket-animation.svg
@@ -1267,7 +1267,7 @@ lib/firefox/browser/chrome/browser/skin/classic/browser/sidebars-right.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/sidebars.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/sign-out.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/slowStartup-16.png
-lib/firefox/browser/chrome/browser/skin/classic/browser/sort.svg
+${PLIST.notlinux}lib/firefox/browser/chrome/browser/skin/classic/browser/sort.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/stop-to-reload.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/stop.svg
 lib/firefox/browser/chrome/browser/skin/classic/browser/sync.svg
