@@ -1,8 +1,0 @@
-$NetBSD: patch-as,v 1.2 2018/02/20 08:35:52 dholland Exp $
-
-Use standard headers.
-
---- include/malloc.h.orig	Thu May  6 21:37:16 2004
-+++ include/malloc.h
-@@ -0,0 +1 @@
-+#include <stdlib.h>
