@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2020/02/25 19:29:59 tnn Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/02/26 14:57:16 nia Exp $
 bin/gegl
 bin/gegl-imgcmp
 include/gegl-0.4/gegl-apply.h
@@ -119,7 +119,7 @@ lib/gegl-0.4/webp-save.so
 lib/libgegl-0.4.${SOEXT}
 ${PLIST.Darwin}lib/libgegl-0.4.0.${SOEXT}
 ${PLIST.not_Darwin}lib/libgegl-0.4.${SOEXT}.0
-${PLIST.not_Darwin}lib/libgegl-0.4.${SOEXT}.0.417.1
+${PLIST.not_Darwin}lib/libgegl-0.4.${SOEXT}.0.421.1
 lib/libgegl-npd-0.4.${SOEXT}
 lib/libgegl-sc-0.4.${SOEXT}
 lib/pkgconfig/gegl-0.4.pc
