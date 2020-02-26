@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2019/11/24 14:42:10 gdt Exp $
+# $NetBSD: Makefile,v 1.73 2020/02/26 15:25:50 wiz Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -16,7 +16,6 @@ SUBDIR+=	garmintools
 SUBDIR+=	gdal-lib
 SUBDIR+=	geoclue
 SUBDIR+=	geolite2-city
-SUBDIR+=	geolite2-country
 SUBDIR+=	geos
 SUBDIR+=	gipfel
 SUBDIR+=	gpsbabel
