@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3049 2020/02/16 20:29:06 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3050 2020/02/26 18:14:25 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -2814,7 +2814,6 @@ SUBDIR+=	ruby2ruby
 SUBDIR+=	rubymine-bin
 SUBDIR+=	rudiments
 SUBDIR+=	rvm
-SUBDIR+=	rx
 SUBDIR+=	sablecc
 SUBDIR+=	samurai
 SUBDIR+=	scintilla
