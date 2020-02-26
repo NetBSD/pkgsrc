@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/01/19 22:16:18 maya Exp $
+# $NetBSD: Makefile,v 1.43 2020/02/26 18:09:40 nia Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 CATEGORIES=	x11 wm
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/lib/X11/fvwm2
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib/X11
 CONFIGURE_ARGS+=	--with-xpm-includes=${BUILDLINK_PREFIX.libXpm}/include
 CONFIGURE_ARGS+=	--with-imagepath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11BASE}/include/X11/bitmaps:${X11BASE}/include/X11/pixmaps
+CONFIGURE_ARGS+=	--without-rplay-library
 
 # We don't want to have CPP from the buildlink directory
 CONFIGURE_ENV+=		ac_cv_path_FVWM_CPP=${CPP:Q}

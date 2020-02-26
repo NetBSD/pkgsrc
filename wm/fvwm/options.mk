@@ -1,10 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2020/01/19 22:16:18 maya Exp $
+# $NetBSD: options.mk,v 1.5 2020/02/26 18:09:40 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fvwm
-PKG_SUPPORTED_OPTIONS=		gtk rplay xrender xcursor xft2 fribidi debug svg
+PKG_SUPPORTED_OPTIONS=		gtk xrender xcursor xft2 fribidi debug svg
 PKG_SUGGESTED_OPTIONS+=		svg
 PKG_OPTIONS_LEGACY_VARS+=	FVWM2_USE_GTK:gtk
-PKG_OPTIONS_LEGACY_VARS+=	FVWM2_USE_RPLAY:rplay
 
 .include "../../mk/bsd.options.mk"
 
@@ -15,12 +14,6 @@ PLIST_VARS+=		gtk fribidi
 PLIST.gtk=		yes
 .else
 CONFIGURE_ARGS+=	--without-gtk-prefix
-.endif
-
-.if !empty(PKG_OPTIONS:Mrplay)
-.  include "../../audio/rplay/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-rplay-library
 .endif
 
 .if !empty(PKG_OPTIONS:Mxcursor)
