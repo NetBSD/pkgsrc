@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2017/12/11 18:01:51 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2020/02/26 16:20:43 nia Exp $
 
-DISTNAME=	re2-20170301
-PKGREVISION=	1
+DISTNAME=	re2-20200101
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
-GITHUB_TAG=	2017-01-01
+GITHUB_TAG=	2020-01-01
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/google/re2
