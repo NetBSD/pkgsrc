@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2019/07/02 12:58:54 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/02/26 14:56:28 nia Exp $
 #
 # used by games/armagetronad/Makefile
 # used by games/armagetronad-server/Makefile
 
-DISTNAME=	armagetronad-0.2.8.3.4.src
+DISTNAME=	armagetronad-0.2.8.3.5.src
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=armagetronad/}
 
