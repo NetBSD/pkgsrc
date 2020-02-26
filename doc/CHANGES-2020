@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1261 2020/02/26 19:22:07 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1262 2020/02/26 22:55:36 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1545,7 +1545,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/postgresql12 to 12.2 [adam 2020-02-14]
 	Updated sysutils/entr to 4.4 [leot 2020-02-14]
 	Updated www/webkit-gtk to 2.26.4 [leot 2020-02-14]
-	Added comms/remserial 1.4 [manu 2020-02-14]
+	Added comms/remserial version 1.4 [manu 2020-02-14]
 	Updated security/clamav to 0.102.2 [taca 2020-02-15]
 	Updated editors/emacs-snapshot to 28.0.50 [makoto 2020-02-15]
 	Updated devel/lua-gi to 0.9.2 [mef 2020-02-15]
@@ -1682,7 +1682,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Added x11/libfm-qt version 0.14.1 [gutteridge 2020-02-20]
 	Added sysutils/pcmanfm-qt version 0.14.1 [gutteridge 2020-02-20]
 	Added graphics/lximage-qt version 0.14.1 [gutteridge 2020-02-20]
-	Updated devel/apr to 1.7.0nb1 [rin 2020-02-19]
+	Updated devel/apr to 1.7.0nb1 [rin 2020-02-20]
 	Updated www/py-django-filer to 1.6.0 [adam 2020-02-20]
 	Updated graphics/py-nwdiag to 2.0.0 [adam 2020-02-20]
 	Updated chat/ircd-hybrid to 8.2.29 [fox 2020-02-20]
