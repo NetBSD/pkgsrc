@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/01/08 12:31:45 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/02/26 15:47:13 nia Exp $
 bin/kitty
 lib/kitty/__main__.py
 lib/kitty/kittens/__init__.py
@@ -72,6 +72,7 @@ lib/kitty/kitty/fonts/core_text.py
 lib/kitty/kitty/fonts/fontconfig.py
 lib/kitty/kitty/fonts/list.py
 lib/kitty/kitty/fonts/render.py
+${PLIST.wayland}lib/kitty/kitty/glfw-wayland.so
 lib/kitty/kitty/glfw-x11.so
 lib/kitty/kitty/graphics_fragment.glsl
 lib/kitty/kitty/graphics_vertex.glsl
@@ -82,6 +83,7 @@ lib/kitty/kitty/launch.py
 lib/kitty/kitty/launcher/kitty
 lib/kitty/kitty/layout.py
 lib/kitty/kitty/main.py
+lib/kitty/kitty/marks.py
 lib/kitty/kitty/notify.py
 lib/kitty/kitty/remote_control.py
 lib/kitty/kitty/rgb.py
@@ -128,6 +130,7 @@ share/doc/kitty/html/_sources/kittens/icat.rst.txt
 share/doc/kitty/html/_sources/kittens/panel.rst.txt
 share/doc/kitty/html/_sources/kittens/unicode-input.rst.txt
 share/doc/kitty/html/_sources/launch.rst.txt
+share/doc/kitty/html/_sources/marks.rst.txt
 share/doc/kitty/html/_sources/performance.rst.txt
 share/doc/kitty/html/_sources/pipe.rst.txt
 share/doc/kitty/html/_sources/protocol-extensions.rst.txt
@@ -170,6 +173,7 @@ share/doc/kitty/html/kittens/icat.html
 share/doc/kitty/html/kittens/panel.html
 share/doc/kitty/html/kittens/unicode-input.html
 share/doc/kitty/html/launch.html
+share/doc/kitty/html/marks.html
 share/doc/kitty/html/objects.inv
 share/doc/kitty/html/performance.html
 share/doc/kitty/html/pipe.html
