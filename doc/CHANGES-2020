@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1240 2020/02/26 14:45:22 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1241 2020/02/26 14:56:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1774,3 +1774,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/xapian-omega to 1.4.15 [schmonz 2020-02-25]
 	Updated games/eureka to 1.27.1 [micha 2020-02-26]
 	Updated graphics/babl to 0.1.74 [nia 2020-02-26]
+	Updated games/armagetronad to 0.2.8.3.5 [nia 2020-02-26]
