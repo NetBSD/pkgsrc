@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2020/02/26 14:57:16 nia Exp $
+# $NetBSD: Makefile,v 1.80 2020/02/26 15:09:26 wiz Exp $
 
 DISTNAME=	gegl-0.4.22
 CATEGORIES=	graphics
@@ -27,10 +27,10 @@ PYTHON_FOR_BUILD_ONLY=	tool
 PLIST_VARS+=		Darwin not_Darwin
 .if ${OPSYS} == "Darwin"
 PLIST.Darwin=		yes
-PLIST_SUBST+=   	SOEXT="dylib"
+PLIST_SUBST+=		SOEXT="dylib"
 .else
 PLIST.not_Darwin=	yes
-PLIST_SUBST+=   	SOEXT="so"
+PLIST_SUBST+=		SOEXT="so"
 .endif
 
 # ../gegl/opencl/gegl-cl-color.c:32:10: fatal error: opencl/colors.cl.h: No such file or directory
