@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1250 2020/02/26 15:59:14 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1251 2020/02/26 16:07:48 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1784,3 +1784,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/KeePass to 2.44 [nia 2020-02-26]
 	Removed geography/geolite2-city [wiz 2020-02-26]
 	Updated databases/kyotocabinet to 1.2.77 [nia 2020-02-26]
+	Updated security/keepassxc to 2.5.3 [nia 2020-02-26]
