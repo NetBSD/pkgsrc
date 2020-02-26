@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/09/11 19:02:14 nia Exp $
+$NetBSD: distinfo,v 1.5 2020/02/26 16:23:26 nia Exp $
 
-SHA1 (REminiscence-0.3.7.tar.bz2) = 13b1eb89b632982d71de6cc9540958cac349a91d
-RMD160 (REminiscence-0.3.7.tar.bz2) = ac11bd2ca6fb291de4981e780cc24099bfb007fd
-SHA512 (REminiscence-0.3.7.tar.bz2) = 6afa3460cb7f0d28f093e78af8681ca564e02ec65432b7531da078a4bf317bde56f9cf671f1c170250d93e690807873d26d0bdc68d7c181561c7d1bc2425fd07
-Size (REminiscence-0.3.7.tar.bz2) = 128780 bytes
+SHA1 (REminiscence-0.4.6.tar.bz2) = 4e3571bd826fae39e0f93c194fb232cbc72e535c
+RMD160 (REminiscence-0.4.6.tar.bz2) = 8a512620cf6fe5308237091fe87f1e68cdb35f7c
+SHA512 (REminiscence-0.4.6.tar.bz2) = b41cfa5c5a28cdd11fcc587ef4ef8100593fa32d9bee52869ec44aad1e6644a5fe372b934d949d3fe743cf63737df1a9c849e16ee22ae1f22a4431c2d6908ddb
+Size (REminiscence-0.4.6.tar.bz2) = 156377 bytes

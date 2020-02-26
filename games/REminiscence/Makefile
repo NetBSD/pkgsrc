@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.16 2019/09/11 19:02:14 nia Exp $
-
-DISTNAME=		REminiscence-0.3.7
+# $NetBSD: Makefile,v 1.17 2020/02/26 16:23:26 nia Exp $ 
+DISTNAME=		REminiscence-0.4.6
 CATEGORIES=		games
 MASTER_SITES=		http://cyxdown.free.fr/reminiscence/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,7 +13,9 @@ USE_LANGUAGES=		c++
 
 BUILD_TARGET=		rs
 
-INSTALLATION_DIRS=	bin share/applications share/doc/REminiscence
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/doc/REminiscence
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rs ${DESTDIR}${PREFIX}/bin
