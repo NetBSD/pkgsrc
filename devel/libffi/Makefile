@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2020/01/12 10:48:50 pho Exp $
+# $NetBSD: Makefile,v 1.35 2020/02/26 19:15:44 adam Exp $
 
-DISTNAME=	libffi-3.2.1
-PKGREVISION=	4
+DISTNAME=	libffi-3.3
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sourceware.org/pub/libffi/
 
@@ -12,11 +11,14 @@ LICENSE=	mit
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--includedir=${PREFIX}/include
+CONFIGURE_ARGS+=	--disable-multi-os-directory
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
 PKGCONFIG_OVERRIDE+=	libffi.pc.in
 INFO_FILES=		yes
+TEST_DEPENDS+=		dejagnu-[0-9]*:../../devel/dejagnu
+TEST_TARGET=		check
 
 .include "../../mk/compiler.mk"
 # The Compaq C frontend groks .s, but not .S. Assemble osf.S directly w/ as(1).
@@ -25,14 +27,7 @@ pre-build:
 	cd ${WRKSRC} && ./libtool --mode=compile --tag=CC as -I. -Iinclude -o src/alpha/osf.lo -c src/alpha/osf.S
 .endif
 
-# Since we don't have "TEST_DEPENDS", we implement it as a hack:
 .include "../../mk/bsd.prefs.mk"
-
-.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
-TEST_TARGET=	check
-TEST_ENV=	# empty?
-BUILD_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
-.endif
 
 # patch-aj uses m68k_sync_icache(2)
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-m68k)
@@ -45,8 +40,8 @@ CPPFLAGS+=	-D__PIC__
 .endif
 
 # irix fixes from PR 48587
-.if !empty(OPSYS:MIRIX)
-USE_TOOLS+=		bash gmake
+.if ${OPSYS} == IRIX
+USE_TOOLS+=		bash
 MAKE_FLAGS+=		SHELL=${TOOLS_DIR}/bin/bash
 .endif
 
