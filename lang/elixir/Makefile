@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2020/02/13 18:27:23 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/02/26 19:21:50 adam Exp $
 
-DISTNAME=	elixir-1.10.1
+DISTNAME=	elixir-1.10.2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elixir-lang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
