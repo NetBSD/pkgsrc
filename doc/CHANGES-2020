@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1238 2020/02/25 17:55:55 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.1239 2020/02/26 12:30:23 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1772,3 +1772,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/quodlibet to 4.3.0 [nia 2020-02-25]
 	Updated textproc/xapian to 1.4.15 [schmonz 2020-02-25]
 	Updated textproc/xapian-omega to 1.4.15 [schmonz 2020-02-25]
+	Updated games/eureka to 1.27.1 [micha 2020-02-26]
