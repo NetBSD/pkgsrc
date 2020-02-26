@@ -1,15 +1,19 @@
-$NetBSD: distinfo,v 1.1 2019/10/01 12:30:31 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/02/26 17:55:51 nia Exp $
 
-SHA1 (srb2-2.1.25/srb2-assets-opt.7z) = f09f5efee621fe1bc1a7068896b510b694ab8a9b
-RMD160 (srb2-2.1.25/srb2-assets-opt.7z) = 1cbe9232e14160c3e12b385aea4532b4f76469cc
-SHA512 (srb2-2.1.25/srb2-assets-opt.7z) = 3731da769a0c252978491bb870dbc9543cb128436a1378deaf8998ae4df49d1e4f2ecb15460f0c84589b41642e78d5f40b9397aa81c404ad92409b986632924f
-Size (srb2-2.1.25/srb2-assets-opt.7z) = 62331891 bytes
-SHA1 (srb2-2.1.25/srb2-assets.7z) = 2bf6accbcb5c3da98ed3cb9941206cb6c443de11
-RMD160 (srb2-2.1.25/srb2-assets.7z) = 222b720ef90c48cbf1986e5369ca7937bb7e9723
-SHA512 (srb2-2.1.25/srb2-assets.7z) = 35d4a9c37471a0bae02ee02b5fa219c58267dd302abf9db192bdb7caa04480827dabcff563ded1cc5d2a835d5d5b2f565471d433bd223701885e96d4267b5e74
-Size (srb2-2.1.25/srb2-assets.7z) = 30548941 bytes
-SHA1 (srb2-2.1.25/srb2.tar.gz) = 95b2b6dee5e12a461186aa77bef59fa06f045cbc
-RMD160 (srb2-2.1.25/srb2.tar.gz) = 9ad85067c1fe60afa6fa94ac21dfd96cf3b65419
-SHA512 (srb2-2.1.25/srb2.tar.gz) = 4f31bd3423aac00950b3ef148f9c27e6065b67630743d8ffcba452f4f75e5c62cc01955d621317ce765b9347545a96e3b087680d9b75577e94d86440c49636d8
-Size (srb2-2.1.25/srb2.tar.gz) = 50635514 bytes
-SHA1 (patch-src_sdl_i__system.c) = 6b57a1b61acff2db54869b610f1bca5d5b2d7126
+SHA1 (srb2-2.2.2/srb2-assets-opt.7z) = 45bd9069f6558782aa122b775a52a66581bcf423
+RMD160 (srb2-2.2.2/srb2-assets-opt.7z) = f0c203f478ca4d690f171137de2d28430688fb6b
+SHA512 (srb2-2.2.2/srb2-assets-opt.7z) = d6adcde90920df1aa531c8f5412678d18d46330f46e068942a54ead41b980ba1b61ca78b8f2815e4bc04f7af833276d3776e0c251977d25ce4a7e0d3169d4cfb
+Size (srb2-2.2.2/srb2-assets-opt.7z) = 104289314 bytes
+SHA1 (srb2-2.2.2/srb2-assets.7z) = 19c0ae01f7b5e9ba8c018cd80d3af0f50fb88fe2
+RMD160 (srb2-2.2.2/srb2-assets.7z) = 48872818903e0cecb960a6f55599c70cb1728806
+SHA512 (srb2-2.2.2/srb2-assets.7z) = 463003106081475be4aa1dba1ed190c72f5db1337abe4e71863617313a2ede2d46e1d2ba29e55eb710e151ecc02d8daabcc026600178c52b7d68ec133ab989f2
+Size (srb2-2.2.2/srb2-assets.7z) = 58929031 bytes
+SHA1 (srb2-2.2.2/srb2-patch.zip) = 849531f37664dd0978054f22625cd51d1fc80452
+RMD160 (srb2-2.2.2/srb2-patch.zip) = c8fe31c82cb30f338517f0b851bc70bab8719544
+SHA512 (srb2-2.2.2/srb2-patch.zip) = 5f827e0e1da44ec7ce63b2a94282a6c1fb5351884feb9d9f3d88a66e0c94a999ba9b2ae230433bea0b9ef920dcbb8c7d1c88ae6d5b5b86ae06604efe34921680
+Size (srb2-2.2.2/srb2-patch.zip) = 2202817 bytes
+SHA1 (srb2-2.2.2/srb2.tar.gz) = e6d32f0c44fb096e5f371b4c090aa9582a3d0fe9
+RMD160 (srb2-2.2.2/srb2.tar.gz) = c03f0adfbac6fd8f3dcf87e43e7ed416c32ddb6c
+SHA512 (srb2-2.2.2/srb2.tar.gz) = 10c5e3a8aa43dc5dff171ea41e18bc326f011dad7775d2e7685f6f72548426edb4eef0b9151477555333ae52ac9ff2d5f098db89cb78f22d8c8761af5da283af
+Size (srb2-2.2.2/srb2.tar.gz) = 58132786 bytes
+SHA1 (patch-src_sdl_i__system.c) = 0946206df321c3c53663d20067369bd0b876fbf7
