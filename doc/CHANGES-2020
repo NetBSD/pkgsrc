@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1249 2020/02/26 15:28:34 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1250 2020/02/26 15:59:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1783,3 +1783,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed geography/geolite2-country [wiz 2020-02-26]
 	Updated security/KeePass to 2.44 [nia 2020-02-26]
 	Removed geography/geolite2-city [wiz 2020-02-26]
+	Updated databases/kyotocabinet to 1.2.77 [nia 2020-02-26]
