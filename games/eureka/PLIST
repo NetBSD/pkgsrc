@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/11 16:26:17 micha Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/02/26 12:28:02 micha Exp $
 bin/eureka
 share/eureka/about_logo.png
 share/eureka/bindings.cfg
@@ -12,9 +12,12 @@ share/eureka/common/gen_types.ugh
 share/eureka/common/hexen_groups.ugh
 share/eureka/common/hexen_lines.ugh
 share/eureka/common/hexen_sectors.ugh
+share/eureka/common/plutonia_tex.ugh
+share/eureka/common/tnt_tex.ugh
 share/eureka/defaults.cfg
 share/eureka/games/doom.ugh
 share/eureka/games/doom2.ugh
+share/eureka/games/freedm.ugh
 share/eureka/games/freedoom1.ugh
 share/eureka/games/freedoom2.ugh
 share/eureka/games/hacx.ugh
