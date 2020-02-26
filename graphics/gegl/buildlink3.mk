@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2019/07/21 22:24:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2020/02/26 15:09:49 wiz Exp $
 
 BUILDLINK_TREE+=	gegl
 
@@ -18,7 +18,6 @@ pkgbase := gegl
 
 .include "../../graphics/babl/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .endif # GEGL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gegl
