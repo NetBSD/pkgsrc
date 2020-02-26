@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.5 2016/01/25 17:56:39 jperkin Exp $
+$NetBSD: patch-src_m68k_ffi.c,v 1.1 2020/02/26 19:15:44 adam Exp $
 
 NetBSD/m68k support.
 

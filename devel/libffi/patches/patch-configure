@@ -1,0 +1,35 @@
+$NetBSD: patch-configure,v 1.1 2020/02/26 19:15:44 adam Exp $
+
+Add NetBSD support.
+
+--- configure.orig	2019-11-23 13:59:04.000000000 +0000
++++ configure
+@@ -18483,7 +18483,7 @@ case "$target" in
+ $as_echo "#define FFI_EXEC_TRAMPOLINE_TABLE 1" >>confdefs.h
+ 
+      ;;
+-     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-openbsd* | *-pc-solaris* | *-linux-android*)
++     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-netbsd* |  *-*-openbsd* | *-pc-solaris* | *-linux-android*)
+ 
+ $as_echo "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
+ 
+@@ -20978,13 +20978,13 @@ s/ [a-zA-Z0-9-]*-all [a-zA-Z0-9-]*-all-a
+ /-all-all/d
+ a\\
+ 	@ HOST="\$(HOST)\" \\\\\\
+-	; test ".\$\$HOST" = "." && HOST=$x sh $ax_enable_builddir_auxdir/config.guess $x \\\\\\
+-	; BUILD=$x grep "^#### \$\$HOST " Makefile | sed -e 's/.*|//' $x \\\\\\
+-	; use=$x basename "\$\@" -all $x; n=$x echo \$\$BUILD | wc -w $x \\\\\\
+-	; echo "MAKE \$\$HOST : \$\$n * \$\@"; if test "\$\$n" -eq "0" ; then : \\\\\\
+-	; BUILD=$x grep "^####.*|" Makefile |tail -1| sed -e 's/.*|//' $x ; fi \\\\\\
++	; test ".\$\$HOST" = "." && HOST="$x sh $ax_enable_builddir_auxdir/config.guess $x" \\\\\\
++	; BUILD="$x grep "^#### \$\$HOST " Makefile | sed -e 's/.*|//' $x" \\\\\\
++	; use="$x basename "\$\@" -all $x"; n="$x echo \$\$BUILD | wc -w $x" \\\\\\
++	; echo "MAKE \$\$HOST : \$\$n * \$\@"; if test \$\$n = "0" ; then : \\\\\\
++	; BUILD="$x grep "^####.*|" Makefile |tail -1| sed -e 's/.*|//' $x" ; fi \\\\\\
+ 	; test ".\$\$BUILD" = "." && BUILD="." \\\\\\
+-	; test "\$\$use" = "\$\@" && BUILD=$x echo "\$\$BUILD" | tail -1 $x \\\\\\
++	; test "\$\$use" = "\$\@" && BUILD="$x echo "\$\$BUILD" | tail -1 $x" \\\\\\
+ 	; for i in \$\$BUILD ; do test ".\$\$i" = "." && continue \\\\\\
+ 	; (cd "\$\$i" && test ! -f configure && \$(MAKE) \$\$use) || exit; done
+ /dist-all *:/a\\
