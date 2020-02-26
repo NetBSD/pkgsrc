@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1260 2020/02/26 18:14:48 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1261 2020/02/26 19:22:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1794,3 +1794,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/srb2 to 2.2.2 [nia 2020-02-26]
 	Removed audio/rplay [nia 2020-02-26]
 	Removed devel/rx [nia 2020-02-26]
+	Updated devel/libffi to 3.3 [adam 2020-02-26]
+	Updated lang/elixir to 1.10.2 [adam 2020-02-26]
