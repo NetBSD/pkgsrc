@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.53 2020/01/05 17:57:58 nia Exp $
+# $NetBSD: options.mk,v 1.54 2020/02/27 15:53:33 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
 PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio dbus wayland
-PLIST_VARS+=		gnome jemalloc debug
+PLIST_VARS+=		jemalloc debug
 
 .include "../../devel/wayland/platform.mk"
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
