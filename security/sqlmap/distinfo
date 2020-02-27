@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/01/01 15:50:30 leot Exp $
+$NetBSD: distinfo,v 1.11 2020/02/27 16:46:21 leot Exp $
 
-SHA1 (sqlmap-1.4.tar.gz) = 71a6f10301a404a60f66716d7dea0b9d67564292
-RMD160 (sqlmap-1.4.tar.gz) = b99d9e7b8536fee078b3e6092e18ebc4bd8ba2bf
-SHA512 (sqlmap-1.4.tar.gz) = 45d3c89adf91e26dbdd5c16efc92de5e841da3c5e6738c62571eecf4d147887b0cdd863591afe7f75575cef15dd1d68cbcc888e0ef52623695b11ae1c40bceef
-Size (sqlmap-1.4.tar.gz) = 6690754 bytes
+SHA1 (sqlmap-1.4.2.tar.gz) = 182dcd53f25d84f6e5671628f95f7ed5551d71be
+RMD160 (sqlmap-1.4.2.tar.gz) = 71b8c51e24e0243cdc5196560484bfac9ad2aa7b
+SHA512 (sqlmap-1.4.2.tar.gz) = 046792e5be10fa81cb7d3528f412319292f67afddd941c667f34f357f81641e5d2c4d8a9e55852586224d4e547c13ee294d80a2d1c7fbef67964211bb475d050
+Size (sqlmap-1.4.2.tar.gz) = 6696899 bytes
