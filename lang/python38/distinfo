@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2020/01/06 22:54:51 leot Exp $
+$NetBSD: distinfo,v 1.5 2020/02/27 14:33:02 adam Exp $
 
-SHA1 (Python-3.8.1.tar.xz) = a48fd28a037c0bcd7b7fc4d914c023f584e910ed
-RMD160 (Python-3.8.1.tar.xz) = 057623eae4d7b82eb037176f8e80c87a30bd3586
-SHA512 (Python-3.8.1.tar.xz) = d41381848cc1ec8009643b71875f395a9ac2c8e12a5b1efef33caf8a9e99a337c790d4354695c85352d11b62092ae372b5af62f78724363fcbf3504ff9a6ddca
-Size (Python-3.8.1.tar.xz) = 17828408 bytes
+SHA1 (Python-3.8.2.tar.xz) = 5ae54baf26628a7ed74206650a31192e6d5c6f93
+RMD160 (Python-3.8.2.tar.xz) = 8a03650894857d2b7be679613646ad1fff22d98e
+SHA512 (Python-3.8.2.tar.xz) = ca37ad0e7c5845f5f228566aa8ff654a8f428c7d4a5aaabff29baebb0ca3219b31ba8bb2607f89e37cf3fc564f023b8407e53a4f2c47bd99122c1cc222613e37
+Size (Python-3.8.2.tar.xz) = 17869888 bytes
 SHA1 (patch-Lib_ctypes_util.py) = 032cc99ebad93ddddfd89073c60424a952e3faa3
 SHA1 (patch-Lib_distutils_command_install.py) = 6fc6f5d918b7581fc62cd0fe55857ee932c3a341
 SHA1 (patch-Lib_distutils_sysconfig.py) = 6822eafb4dfded86d7f7353831816aeb8119e6cf
