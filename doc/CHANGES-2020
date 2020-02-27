@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1264 2020/02/27 13:19:24 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1265 2020/02/27 13:46:57 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1798,3 +1798,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/elixir to 1.10.2 [adam 2020-02-26]
 	Updated shells/zsh to 5.8 [ryoon 2020-02-27]
 	Updated net/wireshark to 3.2.2 [adam 2020-02-27]
+	Updated lang/erlang to 22.2.7 [jperkin 2020-02-27]
