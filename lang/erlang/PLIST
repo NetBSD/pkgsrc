@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2019/11/18 20:46:01 nia Exp $
+@comment $NetBSD: PLIST,v 1.40 2020/02/27 13:46:39 jperkin Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -2601,6 +2601,7 @@ lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_listener_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_packet_demux.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_record.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_socket.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_v1.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/inet6_tls_dist.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/inet_tls_dist.beam
@@ -2637,6 +2638,8 @@ lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_session_cache_api.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_srp_primes.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_v3.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_bloom_filter.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_client_ticket_store.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_connection.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_connection_1_3.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_connection_sup.beam
@@ -2645,7 +2648,11 @@ lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_handshake_1_3.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_record.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_record_1_3.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_sender.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_server_session_ticket.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_server_session_ticket_sup.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_server_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_socket.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/tls_v1.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/client/cacerts.pem
 lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/client/cert.pem
@@ -2668,6 +2675,7 @@ lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_packet_demux.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_record.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_record.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_socket.erl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_sup.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_v1.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/inet6_tls_dist.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/inet_tls_dist.erl
@@ -2710,6 +2718,8 @@ lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_srp.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_srp_primes.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_sup.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_v3.erl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_bloom_filter.erl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_client_ticket_store.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_connection.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_connection.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_connection_1_3.erl
@@ -2723,7 +2733,11 @@ lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_record.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_record_1_3.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_record_1_3.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_sender.erl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_server_session_ticket.erl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_server_session_ticket_sup.erl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_server_sup.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_socket.erl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_sup.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/tls_v1.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/array.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/base64.beam
@@ -3700,6 +3714,7 @@ lib/erlang/usr/lib/liberl_interface_st.a
 lib/erlang/usr/lib/liberts.a
 lib/erlang/usr/lib/liberts_r.a
 @pkgdir lib/erlang/lib/ssh-${VERSION.ssh}/include
+${PLIST.odbc}@pkgdir lib/erlang/lib/odbc-${VERSION.odbc}/priv/obj
 @pkgdir lib/erlang/lib/mnesia-${VERSION.mnesia}/include
 @pkgdir lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/priv
 @pkgdir lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/ebin
