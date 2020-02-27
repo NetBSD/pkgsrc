@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1265 2020/02/27 13:46:57 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.1266 2020/02/27 13:47:19 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1799,3 +1799,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/zsh to 5.8 [ryoon 2020-02-27]
 	Updated net/wireshark to 3.2.2 [adam 2020-02-27]
 	Updated lang/erlang to 22.2.7 [jperkin 2020-02-27]
+	Updated lang/erlang-doc to 22.2 [jperkin 2020-02-27]
