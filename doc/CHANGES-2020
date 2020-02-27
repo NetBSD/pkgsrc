@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1269 2020/02/27 14:34:31 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1270 2020/02/27 16:36:22 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1804,3 +1804,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added lang/go114 version 1.14 [bsiegert 2020-02-27]
 	Updated lang/python38 to 3.8.2 [adam 2020-02-27]
 	Updated lang/py38-html-docs to 3.8.2 [adam 2020-02-27]
+	Updated lang/go113 to 1.13.8 [bsiegert 2020-02-27]
