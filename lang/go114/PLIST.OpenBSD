@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.OpenBSD,v 1.1 2020/02/27 14:32:57 bsiegert Exp $
+go114/pkg/${GO_PLATFORM}/internal/syscall/unix.a
