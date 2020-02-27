@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1267 2020/02/27 13:47:37 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.1268 2020/02/27 14:33:36 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1801,3 +1801,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/erlang to 22.2.7 [jperkin 2020-02-27]
 	Updated lang/erlang-doc to 22.2 [jperkin 2020-02-27]
 	Updated lang/erlang-man to 22.2 [jperkin 2020-02-27]
+	Added lang/go114 version 1.14 [bsiegert 2020-02-27]
