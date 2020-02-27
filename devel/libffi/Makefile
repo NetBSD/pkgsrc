@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/02/27 09:30:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2020/02/27 14:55:02 adam Exp $
 
 DISTNAME=	libffi-3.3
 CATEGORIES=	devel
@@ -29,7 +29,7 @@ pre-build:
 
 .include "../../mk/bsd.prefs.mk"
 
-# patch-aj uses m68k_sync_icache(2)
+# patch-src_m68k_ffi.c uses m68k_sync_icache(2)
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-m68k)
 LIBS+=		-lm68k
 .endif
