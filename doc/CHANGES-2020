@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1275 2020/02/28 11:20:02 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1276 2020/02/28 11:36:26 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1810,3 +1810,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-ecdsa to 0.15 [bsiegert 2020-02-27]
 	Updated lang/rust to 1.41.1 [adam 2020-02-28]
 	Updated security/scrypt to 1.3.0nb2 [wiz 2020-02-28]
+	Added games/doom2-pwad-eviternity version 1.0 [micha 2020-02-28]
