@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.456 2020/02/28 22:12:05 plunky Exp $
+# $NetBSD: Makefile,v 1.457 2020/02/28 22:16:46 plunky Exp $
 
 COMMENT=	Mathematics
 
@@ -184,6 +184,7 @@ SUBDIR+=	graphopt
 SUBDIR+=	grpn
 SUBDIR+=	gsl
 SUBDIR+=	gtklife
+SUBDIR+=	harmbase2
 SUBDIR+=	harmgen
 SUBDIR+=	harminv
 SUBDIR+=	heirloom-factor
