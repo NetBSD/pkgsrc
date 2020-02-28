@@ -1,0 +1,5 @@
+Harmbase is a database application for managing harmonic constants.
+
+It is not "plug and play" software. It's not designed to be useful
+to someone who does not know how to hack Ruby code or write
+interactive SQL queries.
