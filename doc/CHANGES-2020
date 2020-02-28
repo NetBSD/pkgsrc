@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1273 2020/02/27 16:55:23 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.1274 2020/02/28 11:10:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1808,3 +1808,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-moin to 1.9.10 [bsiegert 2020-02-27]
 	Updated security/sqlmap to 1.4.2 [leot 2020-02-27]
 	Updated security/py-ecdsa to 0.15 [bsiegert 2020-02-27]
+	Updated lang/rust to 1.41.1 [adam 2020-02-28]
