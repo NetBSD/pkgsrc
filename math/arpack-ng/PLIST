@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2020/02/28 21:51:40 plunky Exp $
+include/arpack/arpackdef.h
+include/arpack/debug.h
+include/arpack/stat.h
+lib/cmake/arpack-ng-config-version.cmake
+lib/cmake/arpack-ng-config.cmake
+lib/libarpack.so
+lib/libarpack.so.2
+lib/libarpack.so.2.1.0
