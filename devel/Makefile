@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3050 2020/02/26 18:14:25 nia Exp $
+# $NetBSD: Makefile,v 1.3051 2020/02/28 22:04:52 plunky Exp $
 #
 
 COMMENT=	Development utilities
@@ -683,6 +683,7 @@ SUBDIR+=	libdevq
 SUBDIR+=	libdnsres
 SUBDIR+=	libdockapp
 SUBDIR+=	libdshconfig
+SUBDIR+=	libdstr
 SUBDIR+=	libdwarf
 SUBDIR+=	libebml
 SUBDIR+=	libelf
