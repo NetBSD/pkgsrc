@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/02/28 22:11:33 plunky Exp $
+
+SHA1 (harmgen-3.1.3.tar.xz) = 5fc2ce64f79a91b5dee384bd51439aa037e8cd0f
+RMD160 (harmgen-3.1.3.tar.xz) = a13e51f44123ccae31e0a2a3b3860e036f5abb36
+SHA512 (harmgen-3.1.3.tar.xz) = b72bf51f6f2dd27a34fef40eb1ea75d174f0752b6d5efb661a9ce6e1d9146c0313ff5554984ade3ad599c697103621b2a8cc5d54d51350e7a25ac44505e2efc9
+Size (harmgen-3.1.3.tar.xz) = 103840 bytes
