@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/02/28 22:08:05 plunky Exp $
+
+SHA1 (congen-1.7.tar.xz) = 1a404921ce07cd07887c5cc0fda5d0aedea45eb8
+RMD160 (congen-1.7.tar.xz) = 400373940570f90d0fd124e0381fe6df14c25c5e
+SHA512 (congen-1.7.tar.xz) = 5d0dcc405eae0e90ea21ace1a6beb9497b13d4c633d5029df35a262cb89d206842dee7743a784426b8aac9ba70baa00a91e246bfafc9b0c2a13e8e963d562173
+Size (congen-1.7.tar.xz) = 263368 bytes
+SHA1 (patch-configure) = 8080eca2a394d2549463087240aa4a155aef6984
