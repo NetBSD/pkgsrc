@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1277 2020/02/28 11:41:00 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.1278 2020/02/28 12:17:08 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1812,3 +1812,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/scrypt to 1.3.0nb2 [wiz 2020-02-28]
 	Added games/doom2-pwad-eviternity version 1.0 [micha 2020-02-28]
 	Updated textproc/enchant2 to 2.2.8 [bsiegert 2020-02-28]
+	Updated multimedia/mediainfo to 19.09 [bsiegert 2020-02-28]
