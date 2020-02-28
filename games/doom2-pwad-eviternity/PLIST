@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/02/28 11:33:43 micha Exp $
+share/doc/doom2-pwad-eviternity/INSTALL.pkgsrc
+share/doom/Eviternity.txt
+share/doom/Eviternity.wad
