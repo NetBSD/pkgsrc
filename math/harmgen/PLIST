@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/02/28 22:11:33 plunky Exp $
+bin/harmgen
+libexec/harmgen.sh
+share/harmgen/README
+share/harmgen/congen_1yr.txt
+share/harmgen/congen_5yrs.txt
+share/harmgen/congen_9yrs.txt
