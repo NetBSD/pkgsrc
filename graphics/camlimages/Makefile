@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2020/02/27 15:46:56 mef Exp $
+# $NetBSD: Makefile,v 1.123 2020/02/28 04:24:53 mef Exp $
 
 VERSION=		4.0.1
 PKGNAME=		camlimages-${VERSION}
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=		ocaml-findlib>=1.2.6:../../devel/ocaml-findlib
 
 MAKE_JOBS_SAFE=		no
 
-WRKSRC=			${WRKDIR}/camlspotter-camlimages-v${VERSION}
+WRKSRC=			${WRKDIR}/camlspotter-camlimages-c803efa9d5d3
 
 SUBST_CLASSES+=		omf
 SUBST_STAGE.omf=	pre-configure
