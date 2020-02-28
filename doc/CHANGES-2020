@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1284 2020/02/28 22:13:05 plunky Exp $
+$NetBSD: CHANGES-2020,v 1.1285 2020/02/28 22:17:35 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1819,3 +1819,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/libdstr 1.0 [plunky 2020-02-28]
 	Added math/congen 1.7 [plunky 2020-02-28]
 	Added math/harmgen 3.1.3 [plunky 2020-02-28]
+	Added math/harmbase2 20191229 [plunky 2020-02-28]
