@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1280 2020/02/28 21:53:06 plunky Exp $
+$NetBSD: CHANGES-2020,v 1.1281 2020/02/28 22:05:11 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1816,3 +1816,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/lapack to 3.9.0 [plunky 2020-02-28]
 	Updated math/blas to 3.9.0 [plunky 2020-02-28]
 	Added math/arpack-ng 3.7.0 [plunky 2020-02-28]
+	Updated devel/libdstr to 1.0 [plunky 2020-02-28]
