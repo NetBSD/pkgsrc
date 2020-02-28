@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/02/28 22:04:30 plunky Exp $
+
+SHA1 (libdstr-1.0.tar.bz2) = 5f0db9f1710e5680c09870b06aec10c6982375d9
+RMD160 (libdstr-1.0.tar.bz2) = 0d752704a4b94677e777d3bb7f0e5bf4085fe085
+SHA512 (libdstr-1.0.tar.bz2) = 694b4de93a1e69565ac8ae7d48e23a3f14bd463756897a6a24ab7cde46f067cc14a6bf97c0ce03b9041cbfc675d614c11b21b1c6e8d8e0b105870cd7d3b5dc8c
+Size (libdstr-1.0.tar.bz2) = 254672 bytes
