@@ -1,0 +1,7 @@
+The PWAD file Eviternity.wad and the description Eviternity.txt have been
+installed to:
+
+   DOOMWADDIR
+
+This is the pkgsrc standard Doom WAD directory location (shared with other Doom
+packages).
