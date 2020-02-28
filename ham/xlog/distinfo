@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2019/02/23 07:31:26 mef Exp $
+$NetBSD: distinfo,v 1.22 2020/02/28 17:52:13 gdt Exp $
 
 SHA1 (xlog-2.0.17.tar.gz) = 1b82370b2a5c769efa424d116ae4d812e5fb26e9
 RMD160 (xlog-2.0.17.tar.gz) = cfce01ae8b53431b8d7feb251a00cf16dc9da9c2
@@ -6,6 +6,7 @@ SHA512 (xlog-2.0.17.tar.gz) = 0110c7b70794aaeded939040e9baf3093d06122ec35e7bec25
 Size (xlog-2.0.17.tar.gz) = 11461214 bytes
 SHA1 (patch-src_callbacks_mainwindow_qsoframe_c) = 354d979f0f591039df0377e640bdc76b6d4831a4
 SHA1 (patch-src_dxcc_c) = 2fea7448ecd452064ff86ab228ec7490a0c187f3
+SHA1 (patch-src_log.c) = a7f33aebece54b97ac635883eeeddad49bdb8801
 SHA1 (patch-src_logfile_edittest_c) = 803cec0af65e359eecfea6fc9e079899999a7529
 SHA1 (patch-src_logfile_logfile_c) = 92ccae2d101297365ef1cd69464edd182b142338
 SHA1 (patch-src_strptime_c) = 5471f5acc7adc16ca08d479473b424c6798bf30c
