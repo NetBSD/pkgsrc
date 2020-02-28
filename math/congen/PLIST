@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2020/02/28 22:08:05 plunky Exp $
+bin/Compound2Basic.rb
+bin/XDO2Basic.rb
+bin/congen
+bin/diff_congen_output
+include/Congen
+lib/libcongen.la
+share/congen/README
+share/congen/congen_input.txt
