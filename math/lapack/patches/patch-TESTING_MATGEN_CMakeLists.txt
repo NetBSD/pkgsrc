@@ -1,0 +1,12 @@
+$NetBSD: patch-TESTING_MATGEN_CMakeLists.txt,v 1.1 2020/02/28 21:48:54 plunky Exp $
+
+we don't actually want to install the testing matrix generator lib
+
+--- TESTING/MATGEN/CMakeLists.txt.orig 2020-02-20 13:46:28.024672825 +0000
++++ TESTING/MATGEN/CMakeLists.txt
+@@ -49,4 +49,4 @@ list(REMOVE_DUPLICATES SOURCES)
+ 
+ add_library(tmglib ${SOURCES})
+ target_link_libraries(tmglib ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES})
+-lapack_install_library(tmglib)
++#lapack_install_library(tmglib)
