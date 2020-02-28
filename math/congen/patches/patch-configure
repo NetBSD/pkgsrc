@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/02/28 22:08:05 plunky Exp $
+
+fix non-portable test
+
+--- configure.orig	2020-01-08 20:26:58.772161471 +0000
++++ configure
+@@ -16080,7 +16080,7 @@ fi
+ fi
+ 
+ 
+- if test "$ac_cv_lib_tcd_get_tide_db_header" == "yes"; then
++ if test "$ac_cv_lib_tcd_get_tide_db_header" = "yes"; then
+   TCD_SWITCH_TRUE=
+   TCD_SWITCH_FALSE='#'
+ else
