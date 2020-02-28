@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/02/27 14:55:02 adam Exp $
+# $NetBSD: Makefile,v 1.38 2020/02/28 13:20:10 jperkin Exp $
 
 DISTNAME=	libffi-3.3
 CATEGORIES=	devel
@@ -11,7 +11,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake pkg-config
+USE_TOOLS.SunOS+=	perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-multi-os-directory
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
