@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/02/28 21:51:40 plunky Exp $
+
+SHA1 (arpack-ng-3.7.0.tar.gz) = cb5a6e1f3c5ab231440bbe30f4a0808d76215e93
+RMD160 (arpack-ng-3.7.0.tar.gz) = 3723107ce8e082d2e4d78c237be9dd62d51303b6
+SHA512 (arpack-ng-3.7.0.tar.gz) = cc07cdd1fba4881907b507ff6b6c9bce9e3dadd8ef744194f08ee718a6210c039ac0c51c12edd720503f8e59bcd11c178fc323e1a59696be8c3b8262cf47a452
+Size (arpack-ng-3.7.0.tar.gz) = 989570 bytes
