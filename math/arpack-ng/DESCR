@@ -1,0 +1,20 @@
+ARPACK-NG is a collection of Fortran77 subroutines designed to solve large
+scale eigenvalue problems.
+
+Important Features:
+
+    o  Reverse Communication Interface.
+    o  Single and Double Precision Real Arithmetic Versions for Symmetric,
+       Non-symmetric, Standard or Generalized Problems.
+    o  Single and Double Precision Complex Arithmetic Versions for Standard
+       or Generalized Problems.
+    o  Routines for Banded Matrices - Standard or Generalized Problems.
+    o  Routines for The Singular Value Decomposition.
+    o  Example driver routines that may be used as templates to implement
+       numerous Shift-Invert strategies for all problem types, data types
+       and precision.
+    o  ILP64 support
+
+No arpack release has been published by Rice University for many years, and
+arpack-ng aims to provide a common repository of community fixes with a
+testsuite.
