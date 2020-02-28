@@ -1,0 +1,19 @@
+congen is a C++ library for generating the speeds, equilibrium arguments,
+and node factors of Darwin-style tidal constituents more or less as defined
+in SP 98:
+
+  Manual of Harmonic Analysis and Prediction of Tides.  Special Publication
+  No. 98, Revised (1940) Edition (reprinted 1958 with corrections;
+  reprinted again 1994).  United States Government Printing Office, 1994.
+
+Additionally, libcongen provides limited support for approximating
+Doodson-style tidal constituents within the infrastructure of the former.
+The Doodson approach is discussed in the following publication:
+
+  Foreman, M.G.G., 1977.  Manual for Tidal Heights Analysis and Prediction.
+  Pacific Marine Science Report 77-10, Institute of Ocean Sciences,
+  Patricia Bay, Sidney, B.C. (2004 revision).
+
+The Congen header file is intended to be self-documenting with regards to use
+of the interface, assuming that one has access to SP 98 and a general
+understanding of the subject matter.
