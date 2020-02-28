@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.10 2020/01/26 17:31:38 rillig Exp $
+# $NetBSD: Makefile.common,v 1.11 2020/02/28 21:48:53 plunky Exp $
 # used by math/blas/Makefile
 # used by math/lapack/Makefile
 
-DISTNAME=	lapack-3.7.1
-PKGREVISION=	1
+DISTNAME=	lapack-3.9.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_NETLIB:=lapack/}
 EXTRACT_SUFX=	.tgz
@@ -12,13 +11,31 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://www.netlib.org/lapack/
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		c fortran
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
-
-MAKE_ENV+=	BUILD_DEPRECATED=yes
 DISTINFO_FILE=	${.CURDIR}/../../math/lapack/distinfo
 PATCHDIR=	${.CURDIR}/../../math/lapack/patches
+
+USE_LANGUAGES=	c fortran
+USE_CMAKE=	yes
+
+OBJDIR=		obj
+
+CONFIGURE_DIRS=	${OBJDIR}
+CMAKE_ARG_PATH=	..
+CMAKE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=ON
+CMAKE_ARGS+=	-DBUILD_DEPRECATED:BOOL=ON
+CMAKE_ARGS+=	-DBUILD_TESTING:BOOL=ON
+
+TEST_TARGET=	all test
+TEST_ENV=	LD_LIBRARY_PATH=${WRKSRC}/${OBJDIR}/lib
+
+pre-configure:
+	cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
+
+do-install:
+	cd ${WRKSRC}/${OBJDIR} &&					\
+	    ${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV}			\
+	    ${CMAKE} -DCMAKE_INSTALL_COMPONENT=RuntimeLibraries		\
+		-P cmake_install.cmake
 
 INSTALLATION_DIRS=	lib
 

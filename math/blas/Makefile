@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/12/03 15:37:34 marino Exp $
+# $NetBSD: Makefile,v 1.37 2020/02/28 21:48:53 plunky Exp $
 
 .include "../../math/lapack/Makefile.common"
 
@@ -6,12 +6,11 @@ PKGNAME=	${DISTNAME:S/lapack/blas/}
 
 COMMENT=	Basic Linear Algebra Subprograms (Fortran)
 
-PATCHDIR=	${.CURDIR}/../../math/lapack/patches
+# not actually true but pretend as we package it separately
+CMAKE_ARGS+=	-DLATESTLAPACK_FOUND:BOOL=TRUE
 
-BUILD_TARGET=	blaslib
+BUILD_TARGET=	blas
 
-do-install:
-	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/BLAS/SRC/libblas.la \
-		${DESTDIR}${PREFIX}/lib
+TEST_DIRS=	${WRKSRC}/${OBJDIR}/BLAS
 
 .include "../../mk/bsd.pkg.mk"

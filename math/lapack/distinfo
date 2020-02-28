@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.21 2017/09/11 20:56:28 wiz Exp $
+$NetBSD: distinfo,v 1.22 2020/02/28 21:48:53 plunky Exp $
 
-SHA1 (lapack-3.7.1.tgz) = 84c4f7163b52b1bf1f6ca2193f6f48ed3dec0fab
-RMD160 (lapack-3.7.1.tgz) = db7d1e3cd904d01459db3c40bc613cb8738ad114
-SHA512 (lapack-3.7.1.tgz) = b16063146626d2f67ae1456a660dbb93f42d8387cfebef1bc2681a35b5d21d53120fb74b52932373d2423cd7df39a7ae4bbfc992a71addd936bbdd051d4e2eb7
-Size (lapack-3.7.1.tgz) = 9137261 bytes
-SHA1 (patch-BLAS_SRC_Makefile) = cf78648a8a1fe0320ad876a8d29e8f60defc07d7
-SHA1 (patch-aa) = 1b6bfd3737f8ee12334dcf0234ed75cc6253314d
-SHA1 (patch-ac) = 14945f2d5d18a6e310a2237ca413967dc5bdf4ff
-SHA1 (patch-ad) = 90e88c4e48c9effdfaf415691e2d3878effc3064
+SHA1 (lapack-3.9.0.tgz) = 9da5f17521260e9f0cfefd9dfc5616d9ef10efb0
+RMD160 (lapack-3.9.0.tgz) = 136c181f31fd056956a96cec723ceb5a4fdf3feb
+SHA512 (lapack-3.9.0.tgz) = 90c2c8372c2567b15c25653ed64e7c86a2cb0f1dda116f33716c6877490415210217af5badb67cb50e9d428f56ff83d33a3dad60b6ed7d31919164f6e7e98e0f
+Size (lapack-3.9.0.tgz) = 9347104 bytes
+SHA1 (patch-TESTING_MATGEN_CMakeLists.txt) = 695655299ccc48eec4c38c75d50144b3a13ee8db
+SHA1 (patch-TESTING_dbal.in) = 3a6a726b6504a07fb1c0908a3893ea46aca670ea
