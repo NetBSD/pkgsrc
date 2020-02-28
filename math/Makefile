@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.454 2020/02/28 21:52:05 plunky Exp $
+# $NetBSD: Makefile,v 1.455 2020/02/28 22:08:59 plunky Exp $
 
 COMMENT=	Mathematics
 
@@ -139,6 +139,7 @@ SUBDIR+=	clisp-pari
 SUBDIR+=	cln
 SUBDIR+=	cloog
 SUBDIR+=	coinmp
+SUBDIR+=	congen
 SUBDIR+=	crfsuite
 SUBDIR+=	dcdflib.c
 SUBDIR+=	dcdflib.f
