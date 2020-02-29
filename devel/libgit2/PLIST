@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/02/24 10:15:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/02/29 11:39:53 nia Exp $
 include/git2.h
 include/git2/annotated_commit.h
 include/git2/apply.h
@@ -7,6 +7,7 @@ include/git2/blame.h
 include/git2/blob.h
 include/git2/branch.h
 include/git2/buffer.h
+include/git2/cert.h
 include/git2/checkout.h
 include/git2/cherrypick.h
 include/git2/clone.h
@@ -14,6 +15,8 @@ include/git2/commit.h
 include/git2/common.h
 include/git2/config.h
 include/git2/cred_helpers.h
+include/git2/credential.h
+include/git2/credential_helpers.h
 include/git2/deprecated.h
 include/git2/describe.h
 include/git2/diff.h
@@ -24,7 +27,6 @@ include/git2/graph.h
 include/git2/ignore.h
 include/git2/index.h
 include/git2/indexer.h
-include/git2/inttypes.h
 include/git2/mailmap.h
 include/git2/merge.h
 include/git2/message.h
@@ -59,6 +61,8 @@ include/git2/submodule.h
 include/git2/sys/alloc.h
 include/git2/sys/commit.h
 include/git2/sys/config.h
+include/git2/sys/cred.h
+include/git2/sys/credential.h
 include/git2/sys/diff.h
 include/git2/sys/filter.h
 include/git2/sys/hashsig.h
@@ -73,7 +77,6 @@ include/git2/sys/reflog.h
 include/git2/sys/refs.h
 include/git2/sys/repository.h
 include/git2/sys/stream.h
-include/git2/sys/time.h
 include/git2/sys/transport.h
 include/git2/tag.h
 include/git2/trace.h
@@ -84,6 +87,6 @@ include/git2/types.h
 include/git2/version.h
 include/git2/worktree.h
 lib/libgit2.so
+lib/libgit2.so.0.99
 lib/libgit2.so.${PKGVERSION}
-lib/libgit2.so.28
 lib/pkgconfig/libgit2.pc
