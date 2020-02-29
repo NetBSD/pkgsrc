@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1290 2020/02/29 13:52:27 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1291 2020/02/29 15:32:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1824,3 +1824,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libgit2 to 0.99.0 [nia 2020-02-29]
 	Updated security/mbedtls to 2.16.5 [nia 2020-02-29]
 	Removed audio/rtunes [nia 2020-02-29]
+	Updated textproc/py-sphinxcontrib-applehelp to 1.0.2 [adam 2020-02-29]
+	Updated textproc/py-sphinxcontrib-devhelp to 1.0.2 [adam 2020-02-29]
+	Updated textproc/py-sphinxcontrib-htmlhelp to 1.0.3 [adam 2020-02-29]
+	Updated textproc/py-sphinxcontrib-serializinghtml to 1.1.4 [adam 2020-02-29]
