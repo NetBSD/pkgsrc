@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:29:57 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/02/29 16:19:50 mef Exp $
 #
 
-DISTNAME=	zutils-1.6
+DISTNAME=	zutils-1.8
 CATEGORIES=	archivers
 MASTER_SITES=	http://download.savannah.gnu.org/releases/zutils/
 EXTRACT_SUFX=	.tar.lz
