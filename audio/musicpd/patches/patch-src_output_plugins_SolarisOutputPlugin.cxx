@@ -1,6 +1,7 @@
-$NetBSD: patch-src_output_plugins_SolarisOutputPlugin.cxx,v 1.1 2019/12/04 11:00:23 nia Exp $
+$NetBSD: patch-src_output_plugins_SolarisOutputPlugin.cxx,v 1.2 2020/02/29 08:58:33 wiz Exp $
 
 Allow this plugin to be also used on NetBSD.
+https://github.com/MusicPlayerDaemon/MPD/pull/775
 
 --- src/output/plugins/SolarisOutputPlugin.cxx.orig	2019-10-16 09:58:36.000000000 +0000
 +++ src/output/plugins/SolarisOutputPlugin.cxx
