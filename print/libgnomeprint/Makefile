@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2020/01/26 17:32:00 rillig Exp $
+# $NetBSD: Makefile,v 1.112 2020/02/29 18:06:40 gdt Exp $
 #
 
 DISTNAME=	libgnomeprint-2.18.8
@@ -28,7 +28,8 @@ PKG_SUPPORTED_OPTIONS=	cups
 
 PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/libgnomecups/buildlink3.mk"
+BROKEN=			"libgnomecups with cups depends on libgnomecups which is gone"
+#.include "../../print/libgnomecups/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-cups
 PLIST.cups=		yes
 .else
