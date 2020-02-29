@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/02/23 20:55:45 leot Exp $
+# $NetBSD: Makefile,v 1.3 2020/02/29 11:47:09 nia Exp $
 
 DISTNAME=	stagit-gopher-0.9.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://codemadness.org/releases/stagit-gopher/
 
