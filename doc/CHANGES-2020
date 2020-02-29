@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1294 2020/02/29 16:20:08 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1295 2020/02/29 18:29:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1832,3 +1832,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-sphinx to 2.4.3 [adam 2020-02-29]
 	Updated archivers/zopfli to 1.0.3 [mef 2020-02-29]
 	Updated archivers/zutils to 1.8 [mef 2020-02-29]
+	Updated net/mosquitto to 1.6.9 [gdt 2020-02-29]
