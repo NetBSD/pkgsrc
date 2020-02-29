@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1292 2020/02/29 15:48:32 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1293 2020/02/29 15:57:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1830,3 +1830,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-sphinxcontrib-serializinghtml to 1.1.4 [adam 2020-02-29]
 	Updated textproc/py-sphinxcontrib-qthelp to 1.0.3 [adam 2020-02-29]
 	Updated textproc/py-sphinx to 2.4.3 [adam 2020-02-29]
+	Updated archivers/zopfli to 1.0.3 [mef 2020-02-29]
