@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1295 2020/02/29 18:29:07 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.1296 2020/02/29 19:49:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1833,3 +1833,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/zopfli to 1.0.3 [mef 2020-02-29]
 	Updated archivers/zutils to 1.8 [mef 2020-02-29]
 	Updated net/mosquitto to 1.6.9 [gdt 2020-02-29]
+	Updated www/py-MechanicalSoup to 0.12.0 [adam 2020-02-29]
+	Updated www/py-flask-admin to 1.5.5 [adam 2020-02-29]
