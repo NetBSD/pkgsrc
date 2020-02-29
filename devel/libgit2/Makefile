@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2020/01/18 21:49:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2020/02/29 11:39:53 nia Exp $
 
-DISTNAME=	libgit2-0.28.4
-PKGREVISION=	2
+DISTNAME=	libgit2-0.99.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgit2/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,12 +15,15 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c99
 USE_TOOLS+=	pkg-config
 
+CMAKE_ARGS+=	-DREGEX_BACKEND="pcre2"
+
 PKGCONFIG_OVERRIDE+=	libgit2.pc.in
 
 do-test:
 	cd ${WRKSRC} && ctest
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../security/libssh2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 # for tests
