@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/03/27 04:05:24 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/02/29 22:51:13 gutteridge Exp $
 bin/xfce4-popup-whiskermenu
 lib/xfce4/panel/plugins/libwhiskermenu.so
 man/man1/xfce4-popup-whiskermenu.1
@@ -36,6 +36,7 @@ share/locale/he/LC_MESSAGES/xfce4-whiskermenu-plugin.mo
 share/locale/hr/LC_MESSAGES/xfce4-whiskermenu-plugin.mo
 share/locale/hu/LC_MESSAGES/xfce4-whiskermenu-plugin.mo
 share/locale/id/LC_MESSAGES/xfce4-whiskermenu-plugin.mo
+share/locale/ie/LC_MESSAGES/xfce4-whiskermenu-plugin.mo
 share/locale/is/LC_MESSAGES/xfce4-whiskermenu-plugin.mo
 share/locale/it/LC_MESSAGES/xfce4-whiskermenu-plugin.mo
 share/locale/ja/LC_MESSAGES/xfce4-whiskermenu-plugin.mo
