@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/11/13 16:20:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/02/29 15:56:39 mef Exp $
 
-DISTNAME=	zopfli-1.0.1
+DISTNAME=	zopfli-1.0.3
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	${DISTNAME}
