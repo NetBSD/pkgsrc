@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin-x86_64,v 1.2 2020/02/23 19:24:01 rillig Exp $
+@comment $NetBSD: PLIST.Darwin-x86_64,v 1.3 2020/02/29 19:30:19 adam Exp $
 gcc9/bin/c++
 gcc9/bin/cc
 gcc9/bin/cpp
@@ -845,17 +845,16 @@ gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/os/trace.h
 gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/stdint.h
 gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/stdio.h
 gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/syslimits.h
-gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-fixed/sys/ucred.h
-gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/NXConstStr.h
-gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/Object.h
-gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/Protocol.h
-gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/message.h
-gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/objc-decls.h
-gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/objc-exception.h
-gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/objc-sync.h
-gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/objc.h
-gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/runtime.h
-gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/thr.h
+${PLIST.objc}gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/NXConstStr.h
+${PLIST.objc}gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/Object.h
+${PLIST.objc}gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/Protocol.h
+${PLIST.objc}gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/message.h
+${PLIST.objc}gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/objc-decls.h
+${PLIST.objc}gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/objc-exception.h
+${PLIST.objc}gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/objc-sync.h
+${PLIST.objc}gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/objc.h
+${PLIST.objc}gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/runtime.h
+${PLIST.objc}gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include-gnu-runtime/objc/thr.h
 gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/ISO_Fortran_binding.h
 gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/adxintrin.h
 gcc9/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/ammintrin.h
