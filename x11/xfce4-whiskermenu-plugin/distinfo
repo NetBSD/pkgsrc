@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2020/01/29 05:05:32 gutteridge Exp $
+$NetBSD: distinfo,v 1.12 2020/02/29 22:51:13 gutteridge Exp $
 
-SHA1 (xfce4-whiskermenu-plugin-2.3.5.tar.bz2) = 98c62169d8f18124e03c9c5e12992aa020f86562
-RMD160 (xfce4-whiskermenu-plugin-2.3.5.tar.bz2) = a954782342a985e89df45f1372f30b7508cec062
-SHA512 (xfce4-whiskermenu-plugin-2.3.5.tar.bz2) = 7697a5d41599df8150d4e7ad1c5898b651d196fb1bd1a657efee33206312455f24056edf679592e0a6a78b17b324fd5d93e202ae7cc461ca70df7cd41794bd58
-Size (xfce4-whiskermenu-plugin-2.3.5.tar.bz2) = 160984 bytes
+SHA1 (xfce4-whiskermenu-plugin-2.4.2.tar.bz2) = 45db486bef609b5a9ca3324bb8cb7dbb657c1b13
+RMD160 (xfce4-whiskermenu-plugin-2.4.2.tar.bz2) = 1e0bf719230687fe27a6f1da7909bfcdf7c07568
+SHA512 (xfce4-whiskermenu-plugin-2.4.2.tar.bz2) = 00bec0bee2c0311090ad06839ed2ea49c4d63bd4bd2869670cad7f4be3c7693f589cd4167ca7c27c39bcba486a34944449441b45e743b8d542e7003016c8dce7
+Size (xfce4-whiskermenu-plugin-2.4.2.tar.bz2) = 171280 bytes
