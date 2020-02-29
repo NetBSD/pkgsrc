@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/07/06 14:48:12 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/02/29 11:54:37 nia Exp $
 
 DISTNAME=	powder-toy-94.1
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ThePowderToy/}
 GITHUB_PROJECT=	The-Powder-Toy
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://powdertoy.co.uk/
 COMMENT=	Desktop version of the 'falling sand' physics sandbox
 LICENSE=	gnu-gpl-v3
