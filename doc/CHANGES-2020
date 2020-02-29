@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1297 2020/02/29 22:13:40 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.1298 2020/02/29 22:45:48 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1836,3 +1836,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-MechanicalSoup to 0.12.0 [adam 2020-02-29]
 	Updated www/py-flask-admin to 1.5.5 [adam 2020-02-29]
 	Updated sysutils/xfce4-thunar to 1.8.12 [gutteridge 2020-02-29]
+	Updated misc/xfce4-weather-plugin to 0.10.1 [gutteridge 2020-02-29]
