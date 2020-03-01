@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.46 2020/01/18 23:30:46 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2020/03/01 12:48:13 markd Exp $
 
-DISTNAME=	texstudio-2.12.16
-PKGREVISION=	2
+DISTNAME=	texstudio-2.12.22
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=texstudio-org/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://texstudio.sourceforge.net/
+HOMEPAGE=	https://texstudio.org/
 COMMENT=	Integrated writing environment for creating LaTeX documents
 LICENSE=	gnu-gpl-v2
 
@@ -26,10 +25,11 @@ _CRASH_HANDLER=
 
 do-configure:
 	cd ${WRKSRC} && env ${CONFIGURE_ENV} \
-	${QTDIR}/bin/qmake PREFIX=${PREFIX} texstudio.pro DESKTOPDIR=${PREFIX}/share/applications NO_APPDATA=yes ${_CRASH_HANDLER}
+	${QTDIR}/bin/qmake PREFIX=${PREFIX} texstudio.pro USE_SYSTEM_HUNSPELL=1 DESKTOPDIR=${PREFIX}/share/applications NO_APPDATA=yes ${_CRASH_HANDLER}
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/hunspell/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
