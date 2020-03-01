@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1307 2020/03/01 11:50:33 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1308 2020/03/01 11:53:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1846,3 +1846,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pygit2 to 1.1.0 [nia 2020-03-01]
 	Removed devel/libdmapsharing successor net/libdmapsharing3 [nia 2020-03-01]
 	Updated sysutils/mencvcd to 1.4 [wiz 2020-03-01]
+	Removed games/sirius [nia 2020-03-01]
