@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2008/09/08 08:59:22 adam Exp $
+$NetBSD: patch-aa,v 1.3 2020/03/01 01:20:45 mef Exp $
 
---- examples/Makefile.in.orig	2007-05-14 22:51:22.000000000 +0200
-+++ examples/Makefile.in
-@@ -175,7 +175,7 @@ top_builddir = @top_builddir@
+On DragonFly at least, -lm is needed for brust_szip. It doesn't hurt on
+other platforms, so just add it.
+
+--- test/Makefile.in.orig	2017-01-14 05:40:26.000000000 +0900
++++ test/Makefile.in	2020-03-01 10:15:25.756240983 +0900
+@@ -499,7 +499,7 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
- AM_CPPFLAGS = -I$(top_srcdir)/src  -I$(top_srcdir)/test
- burst_szip_SOURCES = burst_szip.c
--burst_szip_LDADD = ../test/libmcgill.la ../src/libsz.la
-+burst_szip_LDADD = ../test/libmcgill.la ../src/libsz.la -lm
- burst_szip_DEPENDENCIES = ../test/libmcgill.la ../src/libsz.la
+ AM_CPPFLAGS = -I$(top_srcdir)/src -I$(top_srcdir)/test
+ burst_szip_SOURCES = burst_szip.c mcgill.c
+-burst_szip_LDADD = ../src/libsz.la
++burst_szip_LDADD = ../src/libsz.la -lm
+ burst_szip_DEPENDENCIES = ../src/libsz.la
  example_SOURCES = example.c
  example_LDADD = ../src/libsz.la
