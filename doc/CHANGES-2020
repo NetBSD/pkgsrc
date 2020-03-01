@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1303 2020/03/01 02:56:53 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.1304 2020/03/01 05:25:47 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1842,3 +1842,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/p5-Archive-Tar to 2.36 [mef 2020-03-01]
 	Updated www/ruby-puma to 4.3.3 [taca 2020-03-01]
 	Updated textproc/py-X to 0.15 [gutteridge 2020-03-01]
+	Updated lang/coq to 8.10.2nb1 [dholland 2020-03-01]
