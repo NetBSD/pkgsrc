@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1301 2020/03/01 01:42:03 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1302 2020/03/01 02:52:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1840,3 +1840,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xfce4-whiskermenu-plugin to 2.4.2 [gutteridge 2020-02-29]
 	Updated archivers/szip to 2.1.1 [mef 2020-03-01]
 	Updated archivers/p5-Archive-Tar to 2.36 [mef 2020-03-01]
+	Updated www/ruby-puma to 4.3.3 [taca 2020-03-01]
