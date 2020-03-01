@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1312 2020/03/01 13:08:24 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1313 2020/03/01 13:24:11 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1851,3 +1851,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/texworks to 0.6.3 [markd 2020-03-01]
 	Updated editors/texstudio to 2.12.22 [markd 2020-03-01]
 	Removed audio/gimmix [nia 2020-03-01]
+	Updated net/youtube-dl to 20200301 [leot 2020-03-01]
