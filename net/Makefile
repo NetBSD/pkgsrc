@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1306 2020/02/21 03:38:20 tsutsui Exp $
+# $NetBSD: Makefile,v 1.1307 2020/03/01 11:42:52 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -303,7 +303,6 @@ SUBDIR+=	libbind
 SUBDIR+=	libcares
 SUBDIR+=	libcmis
 SUBDIR+=	libdlna
-SUBDIR+=	libdmapsharing
 SUBDIR+=	libdmapsharing3
 SUBDIR+=	libdnet
 SUBDIR+=	libexosip
