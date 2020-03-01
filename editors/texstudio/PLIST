@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/10/20 03:16:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/03/01 12:48:13 markd Exp $
 bin/texstudio
 share/applications/texstudio.desktop
 share/icons/hicolor/scalable/apps/texstudio.svg
@@ -8,6 +8,7 @@ share/texstudio/COPYING
 share/texstudio/block_selection.png
 share/texstudio/compile_toolbar.png
 share/texstudio/configure_build.png
+share/texstudio/configure_commands.png
 share/texstudio/configure_completion.png
 share/texstudio/configure_customToolbar.png
 share/texstudio/configure_customizeMenu.png
@@ -48,11 +49,14 @@ share/texstudio/en_US.dic
 share/texstudio/en_US.stopWords
 share/texstudio/es_ES.aff
 share/texstudio/es_ES.dic
+share/texstudio/format_example.png
 share/texstudio/fr_FR.aff
 share/texstudio/fr_FR.dic
 share/texstudio/fr_FR.stopWords
 share/texstudio/hu_HU.aff
 share/texstudio/hu_HU.dic
+share/texstudio/it_IT.aff
+share/texstudio/it_IT.dic
 share/texstudio/latex2e.css
 share/texstudio/latex2e.html
 share/texstudio/pt_BR.aff
@@ -65,6 +69,7 @@ share/texstudio/qt_ja.qm
 share/texstudio/qt_pl.qm
 share/texstudio/qt_zh.qm
 share/texstudio/spellcheck_menu.png
+share/texstudio/spellcheck_options.png
 share/texstudio/tabletemplate_fullyframed_firstBold.js
 share/texstudio/tabletemplate_fullyframed_firstBold.png
 share/texstudio/tabletemplate_fullyframed_longtable.js
@@ -134,8 +139,10 @@ share/texstudio/texstudio_ko.qm
 share/texstudio/texstudio_ko_KR.qm
 share/texstudio/texstudio_nl.qm
 share/texstudio/texstudio_pl.qm
+share/texstudio/texstudio_pt.qm
 share/texstudio/texstudio_pt_BR.qm
 share/texstudio/texstudio_ru_RU.qm
+share/texstudio/texstudio_sk.qm
 share/texstudio/texstudio_sv.qm
 share/texstudio/texstudio_tr_TR.qm
 share/texstudio/texstudio_uk.qm
@@ -144,6 +151,7 @@ share/texstudio/texstudio_zh_CN.qm
 share/texstudio/th_de_DE_v2.dat
 share/texstudio/th_en_US_v2.dat
 share/texstudio/th_fr_FR_v2.dat
+share/texstudio/th_it_IT_v2.dat
 share/texstudio/thesaurus.png
 share/texstudio/usermanual.css
 share/texstudio/usermanual_en.html
