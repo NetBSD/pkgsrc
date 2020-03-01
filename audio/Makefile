@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.587 2020/02/29 13:51:33 nia Exp $
+# $NetBSD: Makefile,v 1.588 2020/03/01 13:07:39 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -121,7 +121,6 @@ SUBDIR+=	freeswitch-sounds-ru
 SUBDIR+=	freezetag
 SUBDIR+=	game-music-emu
 SUBDIR+=	gbemol
-SUBDIR+=	gimmix
 SUBDIR+=	gkrellm-volume
 SUBDIR+=	glurp
 SUBDIR+=	glyr
