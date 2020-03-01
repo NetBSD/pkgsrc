@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.756 2020/02/08 15:45:16 nia Exp $
+# $NetBSD: Makefile,v 1.757 2020/03/01 17:15:49 nia Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -107,7 +107,6 @@ SUBDIR+=	pdf2djvu
 SUBDIR+=	pdfjam
 SUBDIR+=	pdflib
 SUBDIR+=	pdflib-lite
-SUBDIR+=	pdfmod
 SUBDIR+=	pdvipsk
 SUBDIR+=	php-pdflib
 SUBDIR+=	pmw
