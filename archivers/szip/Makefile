@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2019/11/02 22:54:27 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/03/01 01:20:44 mef Exp $
 
-DISTNAME=	szip-2.1
-PKGREVISION=	3
+DISTNAME=	szip-2.1.1
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.hdfgroup.org/lib-external/szip/2.1/src/
+#ASTER_SITES=	ftp://ftp.hdfgroup.org/lib-external/szip/2.1/src/
+MASTER_SITES=	https://support.hdfgroup.org/ftp/lib-external/szip/2.1.1/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.hdfgroup.org/doc_resource/SZIP/
