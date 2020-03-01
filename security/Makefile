@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.744 2020/03/01 17:40:05 nia Exp $
+# $NetBSD: Makefile,v 1.745 2020/03/01 17:59:32 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -109,7 +109,6 @@ SUBDIR+=	go-sftp
 SUBDIR+=	go-xxhash
 SUBDIR+=	google-authenticator
 SUBDIR+=	gpa
-SUBDIR+=	gpass
 SUBDIR+=	gpg2dot
 SUBDIR+=	gpgme
 SUBDIR+=	gpgmepp
