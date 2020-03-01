@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2020/03/01 12:22:27 nia Exp $
+# $NetBSD: Makefile,v 1.110 2020/03/01 12:33:45 nia Exp $
 
 DISTNAME=	glabels-3.4.1
 CATEGORIES=	print
@@ -22,6 +22,7 @@ TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 PKGCONFIG_OVERRIDE+=	libglabels/libglabels-3.0.pc.in
 PKGCONFIG_OVERRIDE+=	libglbarcode/libglbarcode-3.0.pc.in
 
+.include "../../devel/glib2/schemas.mk"
 .include "../../converters/qrencode/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
