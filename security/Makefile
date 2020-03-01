@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.741 2020/03/01 17:25:25 nia Exp $
+# $NetBSD: Makefile,v 1.742 2020/03/01 17:29:15 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -606,7 +606,6 @@ SUBDIR+=	ssss
 SUBDIR+=	starttls
 SUBDIR+=	steghide
 SUBDIR+=	stegtunnel
-SUBDIR+=	stud
 SUBDIR+=	stunnel
 SUBDIR+=	sudo
 SUBDIR+=	tacshell
