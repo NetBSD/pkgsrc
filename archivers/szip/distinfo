@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2017/03/23 17:06:45 joerg Exp $
+$NetBSD: distinfo,v 1.12 2020/03/01 01:20:44 mef Exp $
 
-SHA1 (szip-2.1nb3/szip-2.1.tar.gz) = d241c9acc26426a831765d660b683b853b83c131
-RMD160 (szip-2.1nb3/szip-2.1.tar.gz) = 058d85cbbc9893bdda64e4c4ee967a773ae85e3a
-SHA512 (szip-2.1nb3/szip-2.1.tar.gz) = ea91b877bb061fe6c96988a3c4b705e101a6950e34e9be53d6a57455c6a625be0afa60f4a3cfdd09649205b9f8586cc25ea60fe07a8131579acf3826b35fb749
-Size (szip-2.1nb3/szip-2.1.tar.gz) = 383968 bytes
-SHA1 (patch-aa) = 5ce7e2507ca8731fe06145c1334f031ee24277dc
-SHA1 (patch-config_gnu-flags) = 07058864b2ad18b10b250d5462d9c7b5cc187491
+SHA1 (szip-2.1.1nb3/szip-2.1.1.tar.gz) = 434931cfe47e9b0730ea85fa5e25477bafd9704a
+RMD160 (szip-2.1.1nb3/szip-2.1.1.tar.gz) = 3e6baaab7bf96fbc538154de59bba3902193ebab
+SHA512 (szip-2.1.1nb3/szip-2.1.1.tar.gz) = ada6406efb096cd8a2daf8f9217fe9111a96dcae87e29d1c31f58ddd2ad2aa7bac03f23c7205dc9360f3b62d259461759330c7189ef0c2fe559704b1ea9d40dd
+Size (szip-2.1.1nb3/szip-2.1.1.tar.gz) = 415774 bytes
+SHA1 (patch-aa) = 8238b142d96f51526aee8513911425ad524810e8
+SHA1 (patch-config_gnu-flags) = cb9c40e294ef8d2f419595f3365b04ed7d7fecd7

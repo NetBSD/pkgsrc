@@ -1,4 +1,6 @@
-$NetBSD: patch-config_gnu-flags,v 1.1 2012/01/11 14:20:21 hans Exp $
+$NetBSD: patch-config_gnu-flags,v 1.2 2020/03/01 01:20:45 mef Exp $
+
+Fix build with gcc46.
 
 --- config/gnu-flags.orig	2005-03-04 22:37:52.000000000 +0100
 +++ config/gnu-flags	2011-12-28 13:09:28.722283206 +0100
