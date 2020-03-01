@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/27 23:07:40 tron Exp $
-bin/mencvcd
+@comment $NetBSD: PLIST,v 1.2 2020/03/01 11:50:24 wiz Exp $
+bin/mencvcd.sh
