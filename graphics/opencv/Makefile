@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.88 2020/02/13 09:23:46 adam Exp $
+# $NetBSD: Makefile,v 1.89 2020/03/01 15:36:01 nia Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	opencv-${OPENCV_VERSION}
+PKGREVISION=	1
 
 MAINTAINER=	anthony.mallet@laas.fr
 COMMENT=	Library for computer vision problems
@@ -32,7 +33,6 @@ post-install:
 
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
