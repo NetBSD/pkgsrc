@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1322 2020/03/01 19:48:17 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.1323 2020/03/01 21:17:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1861,3 +1861,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed mail/freepops [nia 2020-03-01]
 	Removed security/gpass [nia 2020-03-01]
 	Updated x11/xfce4-session to 4.14.1nb1 [gutteridge 2020-03-01]
+	Updated net/gallery-dl to 1.13.1 [leot 2020-03-01]
