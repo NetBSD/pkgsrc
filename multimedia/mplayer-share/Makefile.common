@@ -1,7 +1,10 @@
-# $NetBSD: Makefile.common,v 1.63 2020/01/09 15:57:58 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.64 2020/03/01 11:51:39 wiz Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
+#
+# sysutils/mencvcd uses one file from the tarball, please update
+# it when updating this package.
 
 MPLAYER_VERSION=	1.4
 
