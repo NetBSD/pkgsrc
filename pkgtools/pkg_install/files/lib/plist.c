@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.29 2009/08/02 17:56:45 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.30 2020/03/01 11:02:04 rillig Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: plist.c,v 1.29 2009/08/02 17:56:45 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.30 2020/03/01 11:02:04 rillig Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -697,7 +697,7 @@ delete_with_parents(const char *fname, Boolean ign_err, Boolean ign_nonempty)
 
 	if (remove(fname)) {
 		if (!ign_err && (!ign_nonempty || errno != ENOTEMPTY))
-			warnx("Couldn't remove %s", fname);
+			warn("Couldn't remove %s", fname);
 		return 0;
 	}
 	cp = xstrdup(fname);
