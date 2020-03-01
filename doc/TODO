@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19688 2020/02/28 11:20:02 wiz Exp $
+$NetBSD: TODO,v 1.19689 2020/03/01 10:44:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -375,7 +375,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
-	o ImageMagick-7.0.9.25
+	o ImageMagick-7.0.9.27
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-20.0
@@ -623,7 +623,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o geoclue-2.1.10
 	o gfract-0.33
 	o ghdl-0.33
-	o gimp-2.10.16
+	o gimp-2.10.18
 	o gjs-1.58.4 [needs mozjs-60]
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
@@ -631,7 +631,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-share-2.3.5
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
-	o glib2-2.62.5
+	o glib2-2.64.0
 	o gliv-1.9.7
 	o glom-1.14.2
 	o gmake-4.3 [cannot build firefox/openjdk11 etc.]
@@ -796,6 +796,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
 	o libmypaint-1.5.0
+	o libnotify-0.7.9
 	o liboobs-2.32.0
 	o liboop-1.0.1
 	o libpgm-5.2.122
@@ -803,6 +804,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libsigc++3-3.0.2
+	o libsoup-2.68.4
 	o libstree-0.4.2
 	o libtecla-1.6.3
 	o libv4l-0.8.5
@@ -893,6 +895,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nap-1.5.3
 	o nas-auscope-1.9.4
 	o ncurses-6.2
+	o ncursesw-6.2
 	o ncview-2.1.6
 	o netbt-hcidump-5.37
 	o netio-1.32
@@ -970,7 +973,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o phppgadmin-7.12.0
 	o phraseanet-3.8.6
 	o phraseanet-indexer-3.8.6
-	o picard-2.3
+	o picard-2.3.1
 	o picocom-3.0
 	o picp-0.6.8
 	o picprg-3.01
@@ -989,7 +992,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o policyd-weight-0.1.15.2
 	o polkit-0.116 [needs mozjs-60]
 	o poppass-4.0.14
-	o poppler-0.85.0
+	o poppler-0.86.0
 	o postal-0.72
 	o pound-2.8a
 	o povray-3.7.0.0
