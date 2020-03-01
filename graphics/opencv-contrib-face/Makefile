@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/12/16 08:24:39 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/01 15:49:09 leot Exp $
 
 .include "../../graphics/opencv/Makefile.common"
 
@@ -26,6 +26,7 @@ WRKSRC=		${WRKDIR}/opencv-${PKGVERSION_NOREV}
 
 CMAKE_ARGS+=	-DBUILD_DOCS=OFF
 CMAKE_ARGS+=	-DWITH_FFMPEG=OFF
+CMAKE_ARGS+=	-DWITH_JASPER=OFF
 
 CMAKE_ARGS+=		-DOPENCV_EXTRA_MODULES_PATH=${WRKDIR}/${DISTNAME}/modules
 CMAKE_ARGS+=		-DBUILD_opencv_adas=OFF
