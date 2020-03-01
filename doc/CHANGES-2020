@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1299 2020/02/29 22:51:22 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.1300 2020/03/01 01:20:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1838,3 +1838,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/xfce4-thunar to 1.8.12 [gutteridge 2020-02-29]
 	Updated misc/xfce4-weather-plugin to 0.10.1 [gutteridge 2020-02-29]
 	Updated x11/xfce4-whiskermenu-plugin to 2.4.2 [gutteridge 2020-02-29]
+	Updated archivers/szip to 2.1.1 [mef 2020-03-01]
