@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1306 2020/03/01 11:45:17 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1307 2020/03/01 11:50:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1845,3 +1845,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/coq to 8.10.2nb1 [dholland 2020-03-01]
 	Updated devel/py-pygit2 to 1.1.0 [nia 2020-03-01]
 	Removed devel/libdmapsharing successor net/libdmapsharing3 [nia 2020-03-01]
+	Updated sysutils/mencvcd to 1.4 [wiz 2020-03-01]
