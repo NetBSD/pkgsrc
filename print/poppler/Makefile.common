@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.114 2020/01/10 13:24:18 wiz Exp $
+# $NetBSD: Makefile.common,v 1.115 2020/03/01 11:18:58 markd Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -25,12 +25,10 @@ USE_LANGUAGES=		c c++14
 USE_TOOLS+=		pkg-config
 GCC_REQD+=		5
 
-# Don't accidentally find libtiff
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_TIFF=TRUE
-
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=   rm:-fno-check-new
 .endif
 
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"

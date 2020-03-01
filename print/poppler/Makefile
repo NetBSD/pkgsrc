@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2019/10/19 12:37:04 nia Exp $
+# $NetBSD: Makefile,v 1.76 2020/03/01 11:18:58 markd Exp $
 
+PKGREVISION=	1
 .include "../../print/poppler/Makefile.common"
 
 COMMENT=	PDF rendering library
@@ -9,8 +10,6 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler.pc.cmake
 
 INSTALLATION_DIRS+=	include/poppler share/doc/poppler
 
-# Don't build the splash graphics backend.
-CMAKE_ARGS+=	-DENABLE_SPLASH=OFF
 # Don't compile GTK+ test program.
 CMAKE_ARGS+=	-DBUILD_GTK_TESTS=OFF
 # Don't compile GLib wrapper which also needs gtk2
@@ -36,10 +35,12 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/README-XPDF ${DESTDIR}${PREFIX}/share/doc/poppler/
 	${RMDIR} ${DESTDIR}${PREFIX}/include/poppler || ${TRUE}
 
+.include "../../devel/nss/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
