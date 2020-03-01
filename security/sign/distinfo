@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2018/04/18 19:56:42 kamil Exp $
-
-SHA1 (sign-1.0.7.tar.gz) = 72694313d2d22a5f6f8c3094d817d7004b92221d
-RMD160 (sign-1.0.7.tar.gz) = 22aadfdaac2a06cab1fb51832d5ac53ec99feffc
-SHA512 (sign-1.0.7.tar.gz) = bfcc389d06be2747fc9bdd0084c16d92fc7960b8ca10bbb90b4b5480461c306613244d7449af68eaa7f766e66fd01aad3e4f2d36230f3d4efb78402e5cb1abfc
-Size (sign-1.0.7.tar.gz) = 28922 bytes
