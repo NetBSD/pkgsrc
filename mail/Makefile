@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.539 2020/02/11 20:38:47 triaxx Exp $
+# $NetBSD: Makefile,v 1.540 2020/03/01 17:47:36 nia Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -102,7 +102,6 @@ SUBDIR+=	fetchyahoo
 SUBDIR+=	fix-mime-charset
 SUBDIR+=	fml
 SUBDIR+=	fml4
-SUBDIR+=	freepops
 SUBDIR+=	fromto
 SUBDIR+=	getmail
 SUBDIR+=	gld
