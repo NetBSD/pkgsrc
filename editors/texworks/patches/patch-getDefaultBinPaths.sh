@@ -1,11 +1,14 @@
-$NetBSD: patch-getDefaultBinPaths.sh,v 1.5 2018/01/11 09:32:01 markd Exp $
+$NetBSD: patch-getDefaultBinPaths.sh,v 1.6 2020/03/01 12:38:04 markd Exp $
 
---- getDefaultBinPaths.sh.orig	2017-04-29 16:23:51.000000000 +0000
+--- getDefaultBinPaths.sh.orig	2019-03-16 17:06:14.000000000 +0000
 +++ getDefaultBinPaths.sh
-@@ -74,15 +74,15 @@ case $PLATFORM in
- 	*)			OS=`echo $PLATFORM | sed 's/.*-//'`
+@@ -74,18 +74,18 @@ case $PLATFORM in
+ 	*)			OS=$(echo $PLATFORM | sed 's/.*-//')
  esac
  
+-appendPath "/usr/local/texlive/2021/bin/$ARCH-$OS"
+-appendPath "/usr/local/texlive/2020/bin/$ARCH-$OS"
+-appendPath "/usr/local/texlive/2019/bin/$ARCH-$OS"
 -appendPath "/usr/local/texlive/2018/bin/$ARCH-$OS"
 -appendPath "/usr/local/texlive/2017/bin/$ARCH-$OS"
 -appendPath "/usr/local/texlive/2016/bin/$ARCH-$OS"
@@ -15,6 +18,9 @@ $NetBSD: patch-getDefaultBinPaths.sh,v 1.5 2018/01/11 09:32:01 markd Exp $
 -appendPath "/usr/local/texlive/2012/bin/$ARCH-$OS"
 -appendPath "/usr/local/texlive/2011/bin/$ARCH-$OS"
 -appendPath "/usr/local/texlive/2010/bin/$ARCH-$OS"
++#appendPath "/usr/local/texlive/2021/bin/$ARCH-$OS"
++#appendPath "/usr/local/texlive/2020/bin/$ARCH-$OS"
++#appendPath "/usr/local/texlive/2019/bin/$ARCH-$OS"
 +#appendPath "/usr/local/texlive/2018/bin/$ARCH-$OS"
 +#appendPath "/usr/local/texlive/2017/bin/$ARCH-$OS"
 +#appendPath "/usr/local/texlive/2016/bin/$ARCH-$OS"
