@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2017/02/14 09:19:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/03/01 12:38:04 markd Exp $
 bin/texworks
 man/man1/texworks.1
-share/appdata/texworks.appdata.xml
 share/applications/texworks.desktop
 share/doc/texworks/COPYING
 share/doc/texworks/NEWS
 share/doc/texworks/README.md
+share/metainfo/texworks.appdata.xml
 share/pixmaps/TeXworks.png
