@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.742 2020/03/01 17:29:15 nia Exp $
+# $NetBSD: Makefile,v 1.743 2020/03/01 17:35:29 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -576,7 +576,6 @@ SUBDIR+=	seahorse
 SUBDIR+=	seccure
 SUBDIR+=	secpanel
 SUBDIR+=	sfs
-SUBDIR+=	sign
 SUBDIR+=	skey
 SUBDIR+=	sks
 SUBDIR+=	sleuthkit
