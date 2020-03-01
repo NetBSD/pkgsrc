@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 00:35:29 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/03/01 18:20:33 nia Exp $
 
 SHA1 (proxytunnel-1.9.0.tgz) = 51d816125bb9e9bca267d35f861000eb0fa9d80b
 RMD160 (proxytunnel-1.9.0.tgz) = 5444861031fa256a5e0d2d83be297afc70137e8b
@@ -7,3 +7,4 @@ Size (proxytunnel-1.9.0.tgz) = 46556 bytes
 SHA1 (patch-Makefile) = 21c7112f5b856916369038a91f597d30af6b5ff5
 SHA1 (patch-cmdline.c) = 6d56e2d307a2225cdd4ddb732dd64c6d9a7f48cc
 SHA1 (patch-proxytunnel.1) = 0556f23e769f2e52ef50cf952bacb9318b420228
+SHA1 (patch-ptstream.c) = e8cbc6265798afded7442d2d3f4e094b0fb03252
