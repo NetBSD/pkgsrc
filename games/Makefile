@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.481 2020/02/17 10:43:57 wiz Exp $
+# $NetBSD: Makefile,v 1.482 2020/03/01 11:52:23 nia Exp $
 #
 
 COMMENT=	Games
@@ -358,7 +358,6 @@ SUBDIR+=	simgear
 SUBDIR+=	simutrans
 SUBDIR+=	simutrans-pak128
 SUBDIR+=	singularity
-SUBDIR+=	sirius
 SUBDIR+=	sjeng
 SUBDIR+=	sl
 SUBDIR+=	solarus
