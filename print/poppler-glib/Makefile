@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2020/02/24 17:29:25 brook Exp $
+# $NetBSD: Makefile,v 1.83 2020/03/01 11:18:59 markd Exp $
 
+PKGREVISION=	1
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=	poppler-glib-${POPPLER_VERS}
@@ -17,8 +18,6 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-glib.pc.cmake
 CMAKE_ARGS+=	-DGLIB2_INCLUDE_DIRS=${PREFIX}/include
 .endif
 
-# Don't build the splash graphics backend.
-CMAKE_ARGS+=	-DENABLE_SPLASH=OFF
 # Don't compile GTK+ test program.
 CMAKE_ARGS+=	-DBUILD_GTK_TESTS=OFF
 # Compile GLib wrapper which also needs gtk2

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2020/01/18 21:50:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2020/03/01 11:18:59 markd Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=	poppler-qt5-${POPPLER_VERS}
@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 
 CMAKE_ARGS+=	-DBUILD_GTK_TESTS=OFF
 CMAKE_ARGS+=	-DENABLE_GLIB=OFF
-CMAKE_ARGS+=	-DENABLE_SPLASH=OFF
 CMAKE_ARGS+=	-DENABLE_UTILS=OFF
 CMAKE_ARGS+=	-DENABLE_CPP=OFF
 CMAKE_ARGS+=	-DENABLE_QT5=ON
