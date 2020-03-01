@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/01/20 12:37:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/03/01 02:56:41 gutteridge Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pyx/__init__.py
 ${PYSITELIB}/pyx/__init__.pyc
@@ -196,6 +196,12 @@ ${PYSITELIB}/pyx/reader.pyo
 ${PYSITELIB}/pyx/style.py
 ${PYSITELIB}/pyx/style.pyc
 ${PYSITELIB}/pyx/style.pyo
+${PYSITELIB}/pyx/svgfile.py
+${PYSITELIB}/pyx/svgfile.pyc
+${PYSITELIB}/pyx/svgfile.pyo
+${PYSITELIB}/pyx/svgwriter.py
+${PYSITELIB}/pyx/svgwriter.pyc
+${PYSITELIB}/pyx/svgwriter.pyo
 ${PYSITELIB}/pyx/text.py
 ${PYSITELIB}/pyx/text.pyc
 ${PYSITELIB}/pyx/text.pyo
@@ -205,6 +211,9 @@ ${PYSITELIB}/pyx/trafo.pyo
 ${PYSITELIB}/pyx/unit.py
 ${PYSITELIB}/pyx/unit.pyc
 ${PYSITELIB}/pyx/unit.pyo
+${PYSITELIB}/pyx/utils.py
+${PYSITELIB}/pyx/utils.pyc
+${PYSITELIB}/pyx/utils.pyo
 ${PYSITELIB}/pyx/version.py
 ${PYSITELIB}/pyx/version.pyc
 ${PYSITELIB}/pyx/version.pyo
