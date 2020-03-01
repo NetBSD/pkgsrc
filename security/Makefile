@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.740 2020/03/01 17:22:55 nia Exp $
+# $NetBSD: Makefile,v 1.741 2020/03/01 17:25:25 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -602,7 +602,6 @@ SUBDIR+=	sshpass
 SUBDIR+=	ssldump
 SUBDIR+=	sslproxy
 SUBDIR+=	sslsplit
-SUBDIR+=	sslwrap
 SUBDIR+=	ssss
 SUBDIR+=	starttls
 SUBDIR+=	steghide
