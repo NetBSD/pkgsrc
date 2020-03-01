@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 01:32:21 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/03/01 11:50:24 wiz Exp $
 
-SHA1 (mencvcd-0.3/mencvcd) = a3ace9d50e0722946286b8704b800ccbce86233b
-RMD160 (mencvcd-0.3/mencvcd) = 3785524bf26a9c7630a08a29b246d209c0b19d3c
-SHA512 (mencvcd-0.3/mencvcd) = b9a705b279301e173dd9358a7d45a97608d2fe5f0896fa3ae021609e5402f6351daf39ece53bb538fb083ce84e07f5e8e13c3f506c62099aa7eda0b26d59e388
-Size (mencvcd-0.3/mencvcd) = 13038 bytes
-SHA1 (patch-aa) = 3bc66db72486cc08766aa3b54ff44fe6a8b958b4
+SHA1 (mplayer/MPlayer-1.4.tar.xz) = 0954a7141de7c945d90db234e39a78c27cf73f78
+RMD160 (mplayer/MPlayer-1.4.tar.xz) = 7f94e3e3f127491f70a93a8699a1192c0771e20b
+SHA512 (mplayer/MPlayer-1.4.tar.xz) = 8ef71cad187d8c8f81c837279bd3a421b440c892d3347a667670b21c954007e35cf0d15828f0901f347b9c1b053e8da4bc7f0fb6de34382d1e463074923d7b34
+Size (mplayer/MPlayer-1.4.tar.xz) = 15054920 bytes
+SHA1 (patch-TOOLS_mencvcd.sh) = 61ee925b9fcc5790158e1ea45b01380b837a0f2a
