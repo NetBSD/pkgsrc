@@ -1,37 +1,32 @@
-# $NetBSD: Makefile,v 1.108 2020/01/18 23:33:28 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.109 2020/03/01 12:22:27 nia Exp $
 
-DISTNAME=		glabels-2.2.8
-PKGREVISION=		67
-CATEGORIES=		print
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=glabels/}
+DISTNAME=	glabels-3.4.1
+CATEGORIES=	print
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glabels/3.4/}
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://glabels.sourceforge.net/
-COMMENT=		Program for creating labels and business cards for GNOME
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://glabels.org/
+COMMENT=	Program for creating labels and business cards
+LICENSE=	gnu-gpl-v3
 
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 
-# This (a SUBST) is hefty enough to be in its own file.
-.include "glib2-fixes.mk"
+USE_TOOLS+=	intltool pkg-config perl gmake
+USE_TOOLS+=	msgfmt msgmerge xgettext
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.glabels
-PKG_SUPPORTED_OPTIONS=  evolution
-PKG_SUGGESTED_OPTIONS=  evolution
-.include "../../mk/bsd.options.mk"
-.if !empty(PKG_OPTIONS:Mevolution)
-.include "../../mail/evolution-data-server/buildlink3.mk"
-.endif
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 
-.include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
+PKGCONFIG_OVERRIDE+=	libglabels/libglabels-3.0.pc.in
+PKGCONFIG_OVERRIDE+=	libglbarcode/libglbarcode-3.0.pc.in
+
+.include "../../converters/qrencode/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
