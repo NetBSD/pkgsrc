@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2020/02/17 11:00:51 leot Exp $
+@comment $NetBSD: PLIST,v 1.38 2020/03/01 21:16:59 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -147,12 +147,18 @@ ${PYSITELIB}/gallery_dl/extractor/hentaifoundry.pyo
 ${PYSITELIB}/gallery_dl/extractor/hentaifox.py
 ${PYSITELIB}/gallery_dl/extractor/hentaifox.pyc
 ${PYSITELIB}/gallery_dl/extractor/hentaifox.pyo
+${PYSITELIB}/gallery_dl/extractor/hentaihand.py
+${PYSITELIB}/gallery_dl/extractor/hentaihand.pyc
+${PYSITELIB}/gallery_dl/extractor/hentaihand.pyo
 ${PYSITELIB}/gallery_dl/extractor/hentaihere.py
 ${PYSITELIB}/gallery_dl/extractor/hentaihere.pyc
 ${PYSITELIB}/gallery_dl/extractor/hentaihere.pyo
 ${PYSITELIB}/gallery_dl/extractor/hentainexus.py
 ${PYSITELIB}/gallery_dl/extractor/hentainexus.pyc
 ${PYSITELIB}/gallery_dl/extractor/hentainexus.pyo
+${PYSITELIB}/gallery_dl/extractor/hiperdex.py
+${PYSITELIB}/gallery_dl/extractor/hiperdex.pyc
+${PYSITELIB}/gallery_dl/extractor/hiperdex.pyo
 ${PYSITELIB}/gallery_dl/extractor/hitomi.py
 ${PYSITELIB}/gallery_dl/extractor/hitomi.pyc
 ${PYSITELIB}/gallery_dl/extractor/hitomi.pyo
