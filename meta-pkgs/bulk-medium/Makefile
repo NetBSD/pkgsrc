@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2019/12/16 16:00:15 taca Exp $
+# $NetBSD: Makefile,v 1.63 2020/03/01 11:38:12 nia Exp $
 
-DISTNAME=	bulk-medium-20191216
+DISTNAME=	bulk-medium-20200301
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -51,7 +51,6 @@ BUILD_DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 BUILD_DEPENDS+=	mpg321-[0-9]*:../../audio/mpg321
 BUILD_DEPENDS+=	sox-[0-9]*:../../audio/sox
 BUILD_DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
-BUILD_DEPENDS+=	jabberd>=1<2:../../chat/jabberd
 BUILD_DEPENDS+=	jabberd>=2:../../chat/jabberd2
 BUILD_DEPENDS+=	sirc-[0-9]*:../../chat/sirc
 BUILD_DEPENDS+=	hexchat-[0-9]*:../../chat/hexchat
