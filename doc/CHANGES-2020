@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1310 2020/03/01 12:26:28 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1311 2020/03/01 13:02:37 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1848,3 +1848,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/mencvcd to 1.4 [wiz 2020-03-01]
 	Removed games/sirius [nia 2020-03-01]
 	Updated print/glabels to 3.4.1 [nia 2020-03-01]
+	Updated editors/texworks to 0.6.3 [markd 2020-03-01]
+	Updated editors/texstudio to 2.12.22 [markd 2020-03-01]
