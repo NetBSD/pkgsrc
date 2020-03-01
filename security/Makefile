@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.743 2020/03/01 17:35:29 nia Exp $
+# $NetBSD: Makefile,v 1.744 2020/03/01 17:40:05 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -219,7 +219,6 @@ SUBDIR+=	minisign
 SUBDIR+=	mirrordir
 SUBDIR+=	mit-krb5
 SUBDIR+=	mit-krb5-appl
-SUBDIR+=	mixminion
 SUBDIR+=	monocypher
 SUBDIR+=	mozilla-rootcerts
 SUBDIR+=	mozilla-rootcerts-openssl
