@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2019/01/08 09:42:26 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/03/02 20:33:30 adam Exp $
 
-DISTNAME=	supervisor-3.3.5
+DISTNAME=	supervisor-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/supervisor/}
@@ -10,19 +10,25 @@ HOMEPAGE=	http://supervisord.org/
 COMMENT=	System for controlling process state under UNIX
 LICENSE=	original-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-meld3>=0.6.5:../../www/py-meld3
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} == 27
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-
-# as of 3.3.1, explicitly only supports 2.x
-PYTHON_VERSIONS_ACCEPTED=	27
+.endif
 
 REPLACE_PYTHON+=	supervisor/scripts/*.py
 
 SUBST_CLASSES+=		python
-SUBST_SED.python+=	-e "s,<<PYTHON>>,${PYTHONBIN},"
-SUBST_FILES.python+=	supervisor/tests/fixtures/*.py
-SUBST_MESSAGE.python=	Fixing path to python.
 SUBST_STAGE.python=	pre-build
+SUBST_MESSAGE.python=	Fixing Python path.
+SUBST_FILES.python+=	supervisor/tests/fixtures/unkillable_spew.py
+SUBST_FILES.python+=	supervisor/tests/fixtures/spew.py
+SUBST_SED.python+=	-e "s,<<PYTHON>>,${PYTHONBIN},"
+
+post-install:
+.for bin in echo_supervisord_conf pidproxy supervisorctl supervisord
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
