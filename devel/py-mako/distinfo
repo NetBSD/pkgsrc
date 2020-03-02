@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2019/08/03 11:27:27 adam Exp $
+$NetBSD: distinfo,v 1.15 2020/03/02 10:34:12 adam Exp $
 
-SHA1 (Mako-1.1.0.tar.gz) = 2b1158ba4e086257f23aa25f82f052644f316b7c
-RMD160 (Mako-1.1.0.tar.gz) = 8cfac09fc9ca66cfff9954bf85d22ca24bc9406b
-SHA512 (Mako-1.1.0.tar.gz) = acb0f53a22ae152c359c38391f508eca706efcc52916a6e87f2702517dd48b5ffd26eef0f2f9172046f1abd0aea1f47328354ff622938886aa00f950a261e8d4
-Size (Mako-1.1.0.tar.gz) = 463945 bytes
+SHA1 (Mako-1.1.2.tar.gz) = 4f9dd6e28a4a63691e1c03c1e078ae17dba49fe9
+RMD160 (Mako-1.1.2.tar.gz) = 441736b7c39f3487c08a71166b8194a0a86a4577
+SHA512 (Mako-1.1.2.tar.gz) = 73b7a32ceb6e39dc2491734546c83a752bf0c8bc7546bb236801c02a5bccc5b59f2440333a328ff747eee936612dd12279f08d27d76f065fd589081d232692a8
+Size (Mako-1.1.2.tar.gz) = 469385 bytes

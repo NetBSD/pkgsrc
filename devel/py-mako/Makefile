@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2020/01/26 17:31:03 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/03/02 10:34:12 adam Exp $
 
-DISTNAME=	Mako-1.1.0
+DISTNAME=	Mako-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Mako/}
@@ -10,16 +10,15 @@ HOMEPAGE=	https://www.makotemplates.org/
 COMMENT=	Hyperfast and lightweight templating for the Python platform
 LICENSE=	mit
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.1.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
+
+PYSETUPTESTTARGET=	pytest
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} mako-render mako-render-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} test
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
