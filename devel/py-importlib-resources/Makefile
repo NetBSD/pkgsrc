@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2020/02/10 18:28:25 adam Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/02 10:41:22 adam Exp $
 
-DISTNAME=	importlib_resources-1.0.2
+DISTNAME=	importlib_resources-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib_resources/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://importlib-resources.readthedocs.io/
+HOMEPAGE=	https://importlib-resources.readthedocs.io/
 COMMENT=	Read resources from Python packages
 LICENSE=	apache-2.0
 
@@ -15,7 +15,11 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
+DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
+.endif
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-zipp>=0.4:../../archivers/py-zipp
 .endif
 
 USE_LANGUAGES=	# none
