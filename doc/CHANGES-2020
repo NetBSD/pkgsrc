@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1323 2020/03/01 21:17:16 leot Exp $
+$NetBSD: CHANGES-2020,v 1.1324 2020/03/02 10:41:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1862,3 +1862,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed security/gpass [nia 2020-03-01]
 	Updated x11/xfce4-session to 4.14.1nb1 [gutteridge 2020-03-01]
 	Updated net/gallery-dl to 1.13.1 [leot 2020-03-01]
+	Updated databases/py-sqlparse to 0.3.1 [adam 2020-03-02]
+	Updated textproc/py-parse to 1.15.0 [adam 2020-03-02]
+	Updated devel/py-mako to 1.1.2 [adam 2020-03-02]
+	Updated devel/py-importlib-resources to 1.1.0 [adam 2020-03-02]
