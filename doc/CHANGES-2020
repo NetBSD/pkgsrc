@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1324 2020/03/02 10:41:43 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1325 2020/03/02 20:36:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1866,3 +1866,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-parse to 1.15.0 [adam 2020-03-02]
 	Updated devel/py-mako to 1.1.2 [adam 2020-03-02]
 	Updated devel/py-importlib-resources to 1.1.0 [adam 2020-03-02]
+	Updated sysutils/py-supervisor to 4.1.0 [adam 2020-03-02]
+	Removed www/py-meld3 [adam 2020-03-02]
