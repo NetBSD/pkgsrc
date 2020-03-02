@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.17 2019/08/06 06:16:15 maya Exp $
+$NetBSD: distinfo,v 1.18 2020/03/02 23:33:04 khorben Exp $
 
+SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
+RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
+SHA512 (ecj-4.5.jar) = d4e1bf7538ace56e3d69fa91da5bbd16c272923b4de0a9d8dee23ea2b75f9f38c603de72fc4061df49285c450b63f3df211cee5270e9fffc5447445d1a9c9e4e
+Size (ecj-4.5.jar) = 1470676 bytes
 SHA1 (gcc-6.5.0.tar.xz) = 368b3f5d294b1a8727b372ac0a77703d8b41968a
 RMD160 (gcc-6.5.0.tar.xz) = 66782b17cff89f22e5e8869fa96bd9a8985f5067
 SHA512 (gcc-6.5.0.tar.xz) = ce046f9a50050fd54b870aab764f7db187fe7ea92eb4aaffb7c3689ca623755604e231f2af97ef795f41c406bb80c797dd69957cfdd51dfa2ba60813f72b7eac
