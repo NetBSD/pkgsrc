@@ -1,0 +1,4 @@
+bin/echo_supervisord_conf @PREFIX@/bin/echo_supervisord_conf-@PYVERSSUFFIX@
+bin/pidproxy @PREFIX@/bin/pidproxy-@PYVERSSUFFIX@
+bin/supervisorctl @PREFIX@/bin/supervisorctl-@PYVERSSUFFIX@
+bin/supervisord @PREFIX@/bin/supervisord-@PYVERSSUFFIX@
