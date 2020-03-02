@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2020/02/28 11:10:36 adam Exp $
+# $NetBSD: Makefile,v 1.146 2020/03/02 21:21:10 jperkin Exp $
 
 DISTNAME=	rustc-1.41.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -424,8 +424,8 @@ stage0-bootstrap: install
 		    ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done
 	# direct dependencies
-	for lib in libLLVM-9.so libcrypto.so.1.0.0 libcurl.so.4 \
-		   libssl.so.1.0.0 libz.so.1; do \
+	for lib in libLLVM-9.so libcrypto.so.1.1 libcurl.so.4 \
+		   libssl.so.1.1 libz.so.1; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done
 	# libcurl dependencies
