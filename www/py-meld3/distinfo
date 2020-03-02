@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2019/12/11 13:43:31 adam Exp $
-
-SHA1 (meld3-2.0.0.tar.gz) = 0619297b811c287f36d4fb5fd40c32f3c910c6cc
-RMD160 (meld3-2.0.0.tar.gz) = 087c67816bc0cdcc8dabccec0b1bb9dd384e267a
-SHA512 (meld3-2.0.0.tar.gz) = 97f1a892835b8f01dd82de681e684547f1e0b54b74ce63b92eb77fbd2fe436217b84a3c03400256ffca97add3d41e50ca563ec6f15f4f4b0fcda4e849a2d0bbf
-Size (meld3-2.0.0.tar.gz) = 36464 bytes
