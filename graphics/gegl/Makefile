@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2020/02/26 15:09:26 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2020/03/03 04:15:20 brook Exp $
 
 DISTNAME=	gegl-0.4.22
 CATEGORIES=	graphics
@@ -39,21 +39,6 @@ pre-build:
 	cd ${WRKSRC}/opencl && for file in $$(ls -1 | grep '\.cl$$'); do \
 		${PYTHONBIN} cltostring.py "$$file" "$$file".h \
 	; done
-
-.if ${OPSYS} == "Darwin"
-#
-# Meson uses .dylib for Darwin shared libraries, but G_MODULE_SUFFIX
-# is always .so on Unix, including Darwin.  This is under discussion
-# at https://gitlab.gnome.org/GNOME/glib/issues/1413 but for now
-# rename the plugins and reset their internal ID to match the new
-# name.
-#
-post-install:
-	cd ${DESTDIR}/${PREFIX}/lib/gegl-0.4 && for i in *.dylib; do \
-		install_name_tool -id ${PREFIX}/lib/gegl-0.4/$${i%.dylib}.so $${i}; \
-		mv "$${i}" "$${i%.dylib}.so" \
-	; done
-.endif
 
 .include "options.mk"
 .include "../../devel/meson/build.mk"
