@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/02 10:41:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/03 06:01:00 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -80,4 +80,3 @@ ${PYSITELIB}/importlib_resources/tests/zipdata02/ziptestdata.zip
 ${PYSITELIB}/importlib_resources/trees.py
 ${PYSITELIB}/importlib_resources/trees.pyc
 ${PYSITELIB}/importlib_resources/trees.pyo
-${PYSITELIB}/importlib_resources/version.txt
