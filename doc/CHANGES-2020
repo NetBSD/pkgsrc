@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1329 2020/03/03 13:04:51 leot Exp $
+$NetBSD: CHANGES-2020,v 1.1330 2020/03/03 19:06:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1876,3 +1876,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/gcc7 to 7.5.0 [adam 2020-03-03]
 	Updated lang/gcc7-libs to 7.5.0nb1 [adam 2020-03-03]
 	Updated graphics/librsvg-c to 2.40.21 [leot 2020-03-03]
+	Updated finance/py-stripe to 2.43.0 [adam 2020-03-03]
+	Updated lang/py-parso to 0.6.2 [adam 2020-03-03]
