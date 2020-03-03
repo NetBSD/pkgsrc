@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1327 2020/03/03 09:44:16 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1328 2020/03/03 12:59:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1873,3 +1873,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-responses to 0.10.12 [adam 2020-03-03]
 	Updated devel/py-importlib-resources to 1.2.0 [adam 2020-03-03]
 	Added lang/janet version 1.7.0 [nia 2020-03-03]
+	Updated lang/gcc7 to 7.5.0 [adam 2020-03-03]
+	Updated lang/gcc7-libs to 7.5.0nb1 [adam 2020-03-03]
