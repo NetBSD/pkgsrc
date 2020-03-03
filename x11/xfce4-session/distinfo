@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2020/03/01 19:47:22 gutteridge Exp $
+$NetBSD: distinfo,v 1.29 2020/03/03 05:06:20 gutteridge Exp $
 
 SHA1 (xfce4-session-4.14.1.tar.bz2) = 1e44eb63a87fa797dbd80fc0a956ebc7a585c3cc
 RMD160 (xfce4-session-4.14.1.tar.bz2) = 896b9cc17947a1fa21b05c85c710266dc4e722fe
@@ -10,5 +10,5 @@ SHA1 (patch-configure) = ef67202879c09f5c02700eac8dd451580c612db6
 SHA1 (patch-libxfsm_xfsm-shutdown-common.h) = da51714e0924a0ab28f7da1b161659763dff81d2
 SHA1 (patch-scripts_Makefile.in) = 042c3d9c632a57f9acfc8dab43aa6bca8ec69097
 SHA1 (patch-settings_xfce4-session.xml) = 7e990e73d8dab022f3ebd2d4daa24ebc8dcf95a1
-SHA1 (patch-xfce4-session_xfsm-shutdown-fallback.c) = b57375c63b282624b9196b18ea59d98c63fdc326
+SHA1 (patch-xfce4-session_xfsm-shutdown-fallback.c) = 6f37dbba8dfb1c4f31b16f395c3e4244466eb0aa
 SHA1 (patch-xfsm-shutdown-helper_main.c) = db2dc4a7ce729b72092fa2777fd178cb3b7be258
