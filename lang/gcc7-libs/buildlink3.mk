@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2019/01/05 00:39:13 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/03/03 12:58:42 adam Exp $
 
 BUILDLINK_TREE+=	gcc7-libs
 
@@ -6,9 +6,9 @@ BUILDLINK_TREE+=	gcc7-libs
 GCC7_LIBS_BUILDLINK3_MK:=
 
 .if !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
-BUILDLINK_API_DEPENDS.gcc7-libs+=	gcc7-libs>=7.4.0
+BUILDLINK_API_DEPENDS.gcc7-libs+=	gcc7-libs>=7.5.0
 .else
-BUILDLINK_API_DEPENDS.gcc7-libs+=	{gcc7,gcc7-libs}>=7.4.0
+BUILDLINK_API_DEPENDS.gcc7-libs+=	{gcc7,gcc7-libs}>=7.5.0
 .endif
 BUILDLINK_PKGSRCDIR.gcc7-libs=		../../lang/gcc7-libs
 BUILDLINK_DEPMETHOD.gcc7-libs?=		full
