@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.16 2019/08/06 06:16:15 maya Exp $
+$NetBSD: distinfo,v 1.17 2020/03/03 12:58:42 adam Exp $
 
-SHA1 (gcc-7.4.0.tar.xz) = bf09553cfa08ae6e29dfbbd541e5c69c3cbc6c66
-RMD160 (gcc-7.4.0.tar.xz) = 77d3cdafe7df748fa484a300e9513acb3ee2c2e1
-SHA512 (gcc-7.4.0.tar.xz) = 8864d8e4b97c2e1a4f17422f6e68120172ebefeab97b1757734f7185ca68a6b9a89011c6833c03fa454c17b0ac35b15e1d284881e6971035948ac6100f3aa45e
-Size (gcc-7.4.0.tar.xz) = 62601888 bytes
+SHA1 (gcc-7.5.0.tar.xz) = 9153345fa05adfa58b4759ccb9f37d09662dd101
+RMD160 (gcc-7.5.0.tar.xz) = 91d46ec088badec75f41a2ad2a0ba228a6715107
+SHA512 (gcc-7.5.0.tar.xz) = fe716cc19f2e3255d3a8b1b8290777bf769c6d98e6e0b07b81a3d6ad43f8af74cb170dfa18b1555dbfcd3f55ae582b91a286ccef496b9b65c1579902f96a1f60
+Size (gcc-7.5.0.tar.xz) = 62783088 bytes
 SHA1 (isl-0.18.tar.bz2) = bbffc5a2b05e4f0c97e882f96c448504491dc4ed
 RMD160 (isl-0.18.tar.bz2) = e876f1049893de5be4a82a63f272f62547d455ca
 SHA512 (isl-0.18.tar.bz2) = 85d0b40f4dbf14cb99d17aa07048cdcab2dc3eb527d2fbb1e84c41b2de5f351025370e57448b63b2b8a8cf8a0843a089c3263f9baee1542d5c2e1cb37ed39d94
@@ -21,7 +21,7 @@ SHA1 (patch-gcc_config_alpha_linux.h) = fce1256bce232143ff6c1c1b8b9c855737adb23f
 SHA1 (patch-gcc_config_arm_arm.h) = 92c8bff1063e153fec4454e6dea5334a42b0dad6
 SHA1 (patch-gcc_config_arm_netbsd-eabi.h) = 9c1d2148e306024e8de3bdc9802fb63b976e0e7a
 SHA1 (patch-gcc_config_arm_netbsd-elf.h) = 80a07645fab197969b4a6f518fdc81bda7376375
-SHA1 (patch-gcc_config_darwin-driver.c) = 5479026e691fb28585b5a41e5a571be9bc2a2bcb
+SHA1 (patch-gcc_config_darwin-driver.c) = d6e59feef5f6611aabd56028ca29db5919797f88
 SHA1 (patch-gcc_config_netbsd-elf.h) = 5a9b5ef26c03bec3cd58e2f446224aa6e94a30d5
 SHA1 (patch-gcc_config_netbsd-protos.h) = 6d28864b4ccc8c1a63fe28e43601b84b63a00633
 SHA1 (patch-gcc_config_netbsd.h) = 662226f4491f94b641f78b1273a9047434d75aed

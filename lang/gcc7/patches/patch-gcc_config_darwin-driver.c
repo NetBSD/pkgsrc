@@ -1,11 +1,11 @@
-$NetBSD: patch-gcc_config_darwin-driver.c,v 1.1 2019/06/14 09:42:36 adam Exp $
+$NetBSD: patch-gcc_config_darwin-driver.c,v 1.2 2020/03/03 12:58:42 adam Exp $
 
 Fix building on Darwin.
 
---- gcc/config/darwin-driver.c.orig	2019-05-21 21:45:22.000000000 +0000
+--- gcc/config/darwin-driver.c.orig	2020-03-03 07:12:59.000000000 +0000
 +++ gcc/config/darwin-driver.c
-@@ -27,6 +27,9 @@ along with GCC; see the file COPYING3.  
- #include "diagnostic-core.h"
+@@ -112,6 +112,9 @@ validate_macosx_version_min (const char 
+ }
  
  #ifndef CROSS_DIRECTORY_STRUCTURE
 +#ifndef _Atomic
