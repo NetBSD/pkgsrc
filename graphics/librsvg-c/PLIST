@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/05/29 12:34:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/03 13:04:34 leot Exp $
 bin/rsvg-convert
 include/librsvg-2.0/librsvg/librsvg-enum-types.h
 include/librsvg-2.0/librsvg/librsvg-features.h
@@ -12,14 +12,6 @@ man/man1/rsvg-convert.1
 ${PLIST.introspection}share/gir-1.0/Rsvg-2.0.gir
 share/gtk-doc/html/rsvg-2.0/RsvgHandle.html
 share/gtk-doc/html/rsvg-2.0/annotation-glossary.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-14.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-22.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-32.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-36.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-4.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-8.html
-share/gtk-doc/html/rsvg-2.0/api-index-2-9.html
-share/gtk-doc/html/rsvg-2.0/api-index-deprecated.html
 share/gtk-doc/html/rsvg-2.0/api-index-full.html
 share/gtk-doc/html/rsvg-2.0/home.png
 share/gtk-doc/html/rsvg-2.0/index.html
