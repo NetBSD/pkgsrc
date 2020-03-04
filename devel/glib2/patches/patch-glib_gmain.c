@@ -1,4 +1,4 @@
-$NetBSD: patch-glib_gmain.c,v 1.4 2019/12/29 19:40:56 triaxx Exp $
+$NetBSD: patch-glib_gmain.c,v 1.5 2020/03/04 15:11:48 wiz Exp $
 
 Imported patch from the upstream Bugzilla:
 
@@ -7,9 +7,9 @@ Imported patch from the upstream Bugzilla:
 
 Tested on powerpc-apple-darwin9.
 
---- glib/gmain.c.orig	2019-12-19 16:33:15.000000000 +0000
+--- glib/gmain.c.orig	2020-02-27 16:12:52.000000000 +0000
 +++ glib/gmain.c
-@@ -2758,47 +2758,31 @@ g_get_monotonic_time (void)
+@@ -2886,47 +2886,31 @@ g_get_monotonic_time (void)
  gint64
  g_get_monotonic_time (void)
  {
@@ -18,12 +18,7 @@ Tested on powerpc-apple-darwin9.
 +  guint64 val;
  
 -  if (timebase_info.denom == 0)
-+  /* we get nanoseconds from mach_absolute_time() using timebase_info */
-+  mach_timebase_info (&timebase_info);
-+  val = mach_absolute_time();
-+
-+  if (timebase_info.numer != timebase_info.denom)
-     {
+-    {
 -      /* This is a fraction that we must use to scale
 -       * mach_absolute_time() by in order to reach nanoseconds.
 -       *
@@ -32,9 +27,7 @@ Tested on powerpc-apple-darwin9.
 -       * picoseconds.  Try to deal nicely with that.
 -       */
 -      mach_timebase_info (&timebase_info);
-+      guint64 t_high, t_low;
-+      guint64 result_high, result_low;
- 
+-
 -      /* We actually want microseconds... */
 -      if (timebase_info.numer % 1000 == 0)
 -        timebase_info.numer /= 1000;
@@ -60,6 +53,15 @@ Tested on powerpc-apple-darwin9.
 -          g_error ("Got weird mach timebase info of %d/%d.  Please file a bug against GLib.",
 -                   timebase_info.numer, timebase_info.denom);
 -        }
++  /* we get nanoseconds from mach_absolute_time() using timebase_info */
++  mach_timebase_info (&timebase_info);
++  val = mach_absolute_time();
++
++  if (timebase_info.numer != timebase_info.denom)
++    {
++      guint64 t_high, t_low;
++      guint64 result_high, result_low;
++
 +      /* 64 bit x 32 bit / 32 bit with 96-bit intermediate 
 +       * algorithm lifted from qemu */
 +      t_low = (val & 0xffffffffLL) * (guint64)timebase_info.numer;
