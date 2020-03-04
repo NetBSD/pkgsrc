@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/03/04 20:50:11 nia Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/04 20:56:01 nia Exp $
 
 DISTNAME=	abduco-0.6
 CATEGORIES=	misc
@@ -14,5 +14,6 @@ USE_LANGUAGES=	c99
 MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+CFLAGS.Darwin+=	-D_DARWIN_C_SOURCE
 
 .include "../../mk/bsd.pkg.mk"
