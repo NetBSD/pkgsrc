@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1331 2020/03/04 07:53:31 rin Exp $
+$NetBSD: CHANGES-2020,v 1.1332 2020/03/04 09:44:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1879,3 +1879,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/py-stripe to 2.43.0 [adam 2020-03-03]
 	Updated lang/py-parso to 0.6.2 [adam 2020-03-03]
 	Updated emulators/tme to 0.8nb40 [rin 2020-03-04]
+	Updated net/libsoup to 2.68.4 [wiz 2020-03-04]
