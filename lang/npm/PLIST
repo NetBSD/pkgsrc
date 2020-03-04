@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/01/29 12:48:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/03/04 19:05:21 adam Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/.licensee.json
@@ -3284,6 +3284,8 @@ lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/async_ite
 lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/buffer_list.js
 lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/destroy.js
 lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/end-of-stream.js
+lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/from-browser.js
+lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/from.js
 lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/pipeline.js
 lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/state.js
 lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/stream-browser.js
@@ -3669,6 +3671,11 @@ lib/node_modules/npm/node_modules/string-width/readme.md
 lib/node_modules/npm/node_modules/string_decoder/LICENSE
 lib/node_modules/npm/node_modules/string_decoder/README.md
 lib/node_modules/npm/node_modules/string_decoder/lib/string_decoder.js
+lib/node_modules/npm/node_modules/string_decoder/node_modules/safe-buffer/LICENSE
+lib/node_modules/npm/node_modules/string_decoder/node_modules/safe-buffer/README.md
+lib/node_modules/npm/node_modules/string_decoder/node_modules/safe-buffer/index.d.ts
+lib/node_modules/npm/node_modules/string_decoder/node_modules/safe-buffer/index.js
+lib/node_modules/npm/node_modules/string_decoder/node_modules/safe-buffer/package.json
 lib/node_modules/npm/node_modules/string_decoder/package.json
 lib/node_modules/npm/node_modules/stringify-package/CHANGELOG.md
 lib/node_modules/npm/node_modules/stringify-package/LICENSE
@@ -4099,6 +4106,7 @@ lib/node_modules/npm/scripts/publish-tag.js
 lib/node_modules/npm/scripts/release.sh
 lib/node_modules/npm/scripts/relocate.sh
 lib/node_modules/npm/scripts/update-authors.sh
+lib/node_modules/npm/scripts/update-dist-tags.js
 man/man1/npm-README.1
 man/man1/npm-access.1
 man/man1/npm-adduser.1
