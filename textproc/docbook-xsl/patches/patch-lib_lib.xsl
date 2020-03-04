@@ -1,23 +1,23 @@
-$NetBSD: patch-lib_lib.xsl,v 1.1 2020/01/05 18:54:40 adam Exp $
+$NetBSD: patch-lib_lib.xsl,v 1.2 2020/03/04 10:11:40 wiz Exp $
 
 Use EXSLT "replace" function when available.
 https://bugs.debian.org/750593
 
---- lib/lib.xsl.orig	2013-09-04 18:09:43.000000000 +0000
+--- lib/lib.xsl.orig	2016-12-09 22:41:39.000000000 +0000
 +++ lib/lib.xsl
-@@ -10,7 +10,10 @@
+@@ -6,7 +6,10 @@
+ 
       This module implements DTD-independent functions
  
-      ******************************************************************** -->
--<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+-     ******************************************************************** --><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
++     ******************************************************************** --><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 +                xmlns:str="http://exslt.org/strings"
 +                exclude-result-prefixes="str"
 +                version="1.0">
  
  <xsl:template name="dot.count">
    <!-- Returns the number of "." characters in a string -->
-@@ -56,6 +59,9 @@
+@@ -52,6 +55,9 @@
    <xsl:param name="replacement"/>
  
    <xsl:choose>

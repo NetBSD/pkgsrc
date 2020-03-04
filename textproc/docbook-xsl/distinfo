@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.31 2020/01/05 18:54:40 adam Exp $
+$NetBSD: distinfo,v 1.32 2020/03/04 10:11:40 wiz Exp $
 
-SHA1 (docbook-xsl-1.79.1.tar.bz2) = 7487b2acc7106253bb77fcddc7e1a9788601ad23
-RMD160 (docbook-xsl-1.79.1.tar.bz2) = 3859fa52e38e4719037a213034c6f19cb6331968
-SHA512 (docbook-xsl-1.79.1.tar.bz2) = 83325cbaf1545da6b9b8b77f5f0e6fdece26e3c455164b300a1aa3d19e3bd29ae71fd563553a714a5394968d1a65684c6c7987c77524469358d18b8c227025c7
-Size (docbook-xsl-1.79.1.tar.bz2) = 21967928 bytes
-SHA1 (patch-lib_lib.xsl) = e6e329a8df9f47992909f03f2fabc6a73bcccf8c
+SHA1 (docbook-xsl-1.79.2.tar.bz2) = 42c66d90d5febfccc192b0726bcf1554af6eb792
+RMD160 (docbook-xsl-1.79.2.tar.bz2) = 425ca8723443bcd45c23d33df26e13b930b2ce42
+SHA512 (docbook-xsl-1.79.2.tar.bz2) = dc5a2f08a804d0b2badb167b11fe22d53d7861e6238690e09507d09a696e7dce6b0da6e0dbfe84275db23d71006a4b89e3348eb271052341091a26395ec5862c
+Size (docbook-xsl-1.79.2.tar.bz2) = 23404486 bytes
+SHA1 (patch-lib_lib.xsl) = 0787b83d01871f2a22a1e4257e4dfad89221041b
