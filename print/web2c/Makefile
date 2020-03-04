@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.93 2020/03/01 12:28:31 markd Exp $
+# $NetBSD: Makefile,v 1.94 2020/03/04 22:07:28 wiz Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	web2c-2019

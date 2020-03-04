@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 21:49:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/04 22:07:25 wiz Exp $
 
 DISTNAME=	openmw-0.45.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenMW/}
 GITHUB_TAG=	openmw-${PKGVERSION_NOREV}
