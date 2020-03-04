@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.47 2018/01/07 13:04:07 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.48 2020/03/04 14:04:22 wiz Exp $
 
 BUILDLINK_TREE+=	ncurses
 
@@ -27,7 +27,7 @@ BUILDLINK_INCDIRS.ncurses+=	include/ncurses
 # don't allow ncursesw to be used by causing linkage failure.
 #
 .include "../../mk/bsd.fast.prefs.mk"
-.if !empty(PKGPATH:Mdevel/ncursesw)
+.if ${PKGPATH} == "devel/ncursesw"
 BUILDLINK_TRANSFORM+=		l:curses:${BUILDLINK_LIBNAME.ncurses}
 .elif empty(BUILDLINK_TREE:Mncursesw)
 BUILDLINK_TRANSFORM+=		l:ncursesw:__nonexistent__
