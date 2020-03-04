@@ -1,6 +1,8 @@
-$NetBSD: patch-wscript,v 1.2 2019/12/02 13:34:33 nia Exp $
+$NetBSD: patch-wscript,v 1.3 2020/03/04 10:56:35 nia Exp $
 
 Support NetBSD.
+
+https://github.com/Ardour/ardour/pull/469
 
 --- wscript.orig	2017-09-15 20:56:23.000000000 +0000
 +++ wscript
