@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:35:13 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/04 11:42:23 micha Exp $
 
-DISTNAME=	schily-2019-12-05
-PKGNAME=	bosh-20191205
+DISTNAME=	schily-2020-02-11
+PKGNAME=	bosh-20200211
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -53,6 +53,6 @@ do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/sh/OBJ/*/sh		\
 			${DESTDIR}${PREFIX}/bin/bosh;			\
 		${INSTALL_MAN} ${WRKSRC}/sh/bosh.1 			\
-			${DESTDIR}${PREFIX}/${PKGMANDIR}/man1;		\
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
