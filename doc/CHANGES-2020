@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1350 2020/03/04 14:05:00 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1351 2020/03/04 14:36:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1898,3 +1898,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/mypaint to 2.0.0 [wiz 2020-03-04]
 	Updated devel/ncurses to 6.2 [wiz 2020-03-04]
 	Updated devel/ncursesw to 6.2 [wiz 2020-03-04]
+	Updated x11/gtk3 to 3.24.14 [wiz 2020-03-04]
