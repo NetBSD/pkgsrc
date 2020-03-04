@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1360 2020/03/04 19:05:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1361 2020/03/04 20:31:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1911,3 +1911,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-cffi to 1.14.0 [adam 2020-03-04]
 	Updated lang/nodejs to 13.10.0 [adam 2020-03-04]
 	Updated lang/npm to 6.14.2 [adam 2020-03-04]
+	Added misc/abduco version 0.6 [nia 2020-03-04]
