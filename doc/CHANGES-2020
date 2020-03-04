@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1351 2020/03/04 14:36:38 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1352 2020/03/04 15:12:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1899,3 +1899,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ncurses to 6.2 [wiz 2020-03-04]
 	Updated devel/ncursesw to 6.2 [wiz 2020-03-04]
 	Updated x11/gtk3 to 3.24.14 [wiz 2020-03-04]
+	Updated devel/glib2 to 2.64.0 [wiz 2020-03-04]
