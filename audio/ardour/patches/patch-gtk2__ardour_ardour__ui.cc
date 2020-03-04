@@ -1,6 +1,8 @@
-$NetBSD: patch-gtk2__ardour_ardour__ui.cc,v 1.1 2019/12/02 13:34:33 nia Exp $
+$NetBSD: patch-gtk2__ardour_ardour__ui.cc,v 1.2 2020/03/04 10:56:35 nia Exp $
 
 Support NetBSD.
+
+https://github.com/Ardour/ardour/pull/469
 
 --- gtk2_ardour/ardour_ui.cc.orig	2017-09-15 20:56:22.000000000 +0000
 +++ gtk2_ardour/ardour_ui.cc

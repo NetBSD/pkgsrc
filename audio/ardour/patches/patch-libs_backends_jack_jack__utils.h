@@ -1,6 +1,8 @@
-$NetBSD: patch-libs_backends_jack_jack__utils.h,v 1.1 2019/12/02 13:34:33 nia Exp $
+$NetBSD: patch-libs_backends_jack_jack__utils.h,v 1.2 2020/03/04 10:56:35 nia Exp $
 
 Support Sun backend.
+
+https://github.com/Ardour/ardour/pull/468
 
 --- libs/backends/jack/jack_utils.h.orig	2017-09-15 20:56:23.000000000 +0000
 +++ libs/backends/jack/jack_utils.h

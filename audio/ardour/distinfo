@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.5 2019/12/21 23:27:04 joerg Exp $
+$NetBSD: distinfo,v 1.6 2020/03/04 10:56:35 nia Exp $
 
 SHA1 (Ardour-5.12.0.tar.bz2) = 8bf06a17638e89531cab14af67cfd59d7185518f
 RMD160 (Ardour-5.12.0.tar.bz2) = 71c25f13445f4036ff7127d071d8c1e0851d5eb8
 SHA512 (Ardour-5.12.0.tar.bz2) = c4b4332bddb2406924119c181622801725f4a7dd7741c1a66ddbc2236542764b786337da2f0a751f3bbe6e0389b5da765eb19b14a6a90c8f8a7fd68231e5067d
 Size (Ardour-5.12.0.tar.bz2) = 8852834 bytes
 SHA1 (patch-.waf-1.6.11-06ee4b7efbeab1252ed3b11499834d2a_waflib_Tools_c__config.py) = 6b6c776485def8e57ab1ec7fb4b8207ac6d3094a
-SHA1 (patch-gtk2__ardour_ardour__ui.cc) = c8bbd019ecab91081520bdfa999f13f96c9dc39d
+SHA1 (patch-gtk2__ardour_ardour__ui.cc) = 83d5fe364d068fc619781ae76fb37f8ed4cda41b
 SHA1 (patch-gtk2__ardour_wscript) = f78f4028e20d9d917fd1251618136c51ce3fa28a
 SHA1 (patch-libs_backends_jack_jack__audiobackend.cc) = 9fc4201948a6e88711d18d9218e1dacc1dd2700b
 SHA1 (patch-libs_backends_jack_jack__audiobackend.h) = e7cd23f39e31d3a4af3ed513b7e41503c4a6b16c
-SHA1 (patch-libs_backends_jack_jack__utils.cc) = 193f9df5a0b9a092bbfcd131741abfff00b674ee
-SHA1 (patch-libs_backends_jack_jack__utils.h) = 82f929f73a24238b28e2eca129975925c2b8ddc0
-SHA1 (patch-wscript) = 6d3cec0a6d9f81376f439768a38348ba77a5759d
+SHA1 (patch-libs_backends_jack_jack__utils.cc) = 61ce895e998e359fa3801bcdd3ce6e83926f6ec0
+SHA1 (patch-libs_backends_jack_jack__utils.h) = d2bdfca276271c67f49a06ea63077c52cac803d7
+SHA1 (patch-wscript) = 9cfa56ac1ccbb9706f009ce4001dc0b55146338b
