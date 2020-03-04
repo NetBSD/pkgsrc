@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1354 2020/03/04 15:49:21 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.1355 2020/03/04 15:51:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1902,3 +1902,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/glib2 to 2.64.0 [wiz 2020-03-04]
 	Updated net/fehqlibs to 0.9.14 [schmonz 2020-03-04]
 	Updated net/ucspi-tcp6 to 1.11.3 [schmonz 2020-03-04]
+	Updated print/poppler to 0.86.0 [wiz 2020-03-04]
