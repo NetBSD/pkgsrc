@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1358 2020/03/04 18:21:22 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1359 2020/03/04 18:36:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1907,3 +1907,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ucspi-ssl to 0.999.11.3 [schmonz 2020-03-04]
 	Updated www/curl to 7.69.0 [adam 2020-03-04]
 	Updated devel/cmake to 3.16.5 [adam 2020-03-04]
+	Updated devel/py-cparser to 2.20 [adam 2020-03-04]
+	Updated devel/py-cffi to 1.14.0 [adam 2020-03-04]
