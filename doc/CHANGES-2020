@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1359 2020/03/04 18:36:14 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1360 2020/03/04 19:05:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1909,3 +1909,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cmake to 3.16.5 [adam 2020-03-04]
 	Updated devel/py-cparser to 2.20 [adam 2020-03-04]
 	Updated devel/py-cffi to 1.14.0 [adam 2020-03-04]
+	Updated lang/nodejs to 13.10.0 [adam 2020-03-04]
+	Updated lang/npm to 6.14.2 [adam 2020-03-04]
