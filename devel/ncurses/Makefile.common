@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.43 2019/11/03 10:39:20 rillig Exp $
+# $NetBSD: Makefile.common,v 1.44 2020/03/04 14:04:22 wiz Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
 
 DISTNAME=	ncurses-${NC_VERS}
-NC_VERS=	6.1
+NC_VERS=	6.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/}
 MASTER_SITES+=	ftp://dickey.his.com/ncurses/

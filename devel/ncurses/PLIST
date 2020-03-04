@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2018/09/15 22:47:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/03/04 14:04:22 wiz Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -35,11 +35,8 @@ lib/libgnumenu.la
 lib/libgnupanel.la
 lib/libncurses++.la
 lib/libncurses.la
-lib/pkgconfig/form.pc
-lib/pkgconfig/menu.pc
 lib/pkgconfig/ncurses++.pc
 lib/pkgconfig/ncurses.pc
-lib/pkgconfig/panel.pc
 man/man1/captoinfo.1
 man/man1/clear.1
 man/man1/infocmp.1
@@ -203,6 +200,7 @@ man/man3/curs_util.3
 man/man3/curs_variables.3
 man/man3/curs_window.3
 man/man3/curscr.3
+man/man3/curses_trace.3
 man/man3/curses_version.3
 man/man3/data_ahead.3
 man/man3/data_behind.3
@@ -238,6 +236,8 @@ man/man3/erase.3
 man/man3/erasechar.3
 man/man3/erasechar_sp.3
 man/man3/erasewchar.3
+man/man3/exit_curses.3
+man/man3/exit_terminfo.3
 man/man3/extended_color_content.3
 man/man3/extended_color_content_sp.3
 man/man3/extended_pair_content.3
@@ -824,6 +824,7 @@ man/man3/use_legacy_coding.3
 man/man3/use_legacy_coding_sp.3
 man/man3/use_screen.3
 man/man3/use_tioctl.3
+man/man3/use_tioctl_sp.3
 man/man3/use_window.3
 man/man3/vid_attr.3
 man/man3/vid_attr_sp.3
