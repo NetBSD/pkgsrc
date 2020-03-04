@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/01/10 12:38:22 micha Exp $
+$NetBSD: distinfo,v 1.7 2020/03/04 11:42:23 micha Exp $
 
-SHA1 (schily-2019-12-05.tar.bz2) = cb7ea1133284955cba7023e2f0a296c53567743e
-RMD160 (schily-2019-12-05.tar.bz2) = 112011d7fa6f912802fc4458095dbf37d402dcb4
-SHA512 (schily-2019-12-05.tar.bz2) = af16031fcc6345135d29d2dad2d30b85621e9959886843f393bf1ee51387bdbce9319e305bd58173c040995e1ce1c3325d34f9630712ccb618daa69470c249ef
-Size (schily-2019-12-05.tar.bz2) = 4360719 bytes
+SHA1 (schily-2020-02-11.tar.bz2) = da1dfe59c6b2a937b8dba2d4476db2ca8525a646
+RMD160 (schily-2020-02-11.tar.bz2) = fe18d25ecdab9e2d7b587cce52cd745bd388ff6a
+SHA512 (schily-2020-02-11.tar.bz2) = 655a67cdc9387d79a077d44f11dacf2d5479da8b7bf4c59fb8a5fbf58ef23988f2a7aff23b3aec5ab7ac99541ea3439ddd55b53fc0e1d88efe601390161832c7
+Size (schily-2020-02-11.tar.bz2) = 4360092 bytes
