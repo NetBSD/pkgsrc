@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1330 2020/03/03 19:06:42 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1331 2020/03/04 07:53:31 rin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1878,3 +1878,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/librsvg-c to 2.40.21 [leot 2020-03-03]
 	Updated finance/py-stripe to 2.43.0 [adam 2020-03-03]
 	Updated lang/py-parso to 0.6.2 [adam 2020-03-03]
+	Updated emulators/tme to 0.8nb40 [rin 2020-03-04]
