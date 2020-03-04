@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2020/01/08 14:57:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/03/04 14:36:29 wiz Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -1213,6 +1213,8 @@ share/locale/ca/LC_MESSAGES/gtk30-properties.mo
 share/locale/ca/LC_MESSAGES/gtk30.mo
 share/locale/ca@valencia/LC_MESSAGES/gtk30-properties.mo
 share/locale/ca@valencia/LC_MESSAGES/gtk30.mo
+share/locale/ckb/LC_MESSAGES/gtk30-properties.mo
+share/locale/ckb/LC_MESSAGES/gtk30.mo
 share/locale/crh/LC_MESSAGES/gtk30-properties.mo
 share/locale/crh/LC_MESSAGES/gtk30.mo
 share/locale/cs/LC_MESSAGES/gtk30-properties.mo

@@ -1,16 +1,14 @@
-$NetBSD: distinfo,v 1.73 2020/01/08 14:57:29 adam Exp $
+$NetBSD: distinfo,v 1.74 2020/03/04 14:36:29 wiz Exp $
 
-SHA1 (gtk+-3.24.13.tar.xz) = 5f014189e117207580bf7bc16aea4e09e009c75a
-RMD160 (gtk+-3.24.13.tar.xz) = cdf6b911d59e13b412efe0666d5d58de5095abe2
-SHA512 (gtk+-3.24.13.tar.xz) = 9129d4574cca258b4a517d8d65dad246a746fc3dc574b78e098db9aa9743956ce227efbf963f63e1e0f1a1a09810716150526b2bfe8015a5960bad38b0c88406
-Size (gtk+-3.24.13.tar.xz) = 23206464 bytes
+SHA1 (gtk+-3.24.14.tar.xz) = b38ff5d778b539851a4d9839b4a66f815e51a653
+RMD160 (gtk+-3.24.14.tar.xz) = 186d65b346caf0bbabb1b29b51b3f42adc934476
+SHA512 (gtk+-3.24.14.tar.xz) = a5ce659508933f6a3825aaafe9b30f51bd1357a62a6c66526ebd716627c829aa24543b4f8bd6f701dceda1d9fff94ad105f89f02a14d53749744e868bdff26bf
+Size (gtk+-3.24.14.tar.xz) = 20420928 bytes
 SHA1 (patch-aj) = cbfab43f27352f7c6bc57a7c562c2d84c69da07a
 SHA1 (patch-config.h.in) = dc5f8741eed554f88c0b6834cadad95083e4dc8f
 SHA1 (patch-configure) = d531b33e52facf960058f1223b70db680da35300
 SHA1 (patch-configure.ac) = 68793f40752f25ccaecc958c72c23a504670bea5
-SHA1 (patch-gdk_quartz_Makefile.in) = 610bf837b2ed2d3524174979cab7bf54cf53bb79
 SHA1 (patch-gdk_quartz_gdkquartz-gtk-only.h) = 24aefa2631c2546ef726eba0aee0f9460c1664ed
-SHA1 (patch-gdk_quartz_gdkselection-quartz.c) = 723c97746ec93129434ca989a9ad5b026b5c8035
 SHA1 (patch-gdk_wayland_gdkdevice-wayland.c) = e283bd6533ea1307b971c524bc05f0d3ee90453d
 SHA1 (patch-gdk_x11_gdkscreen-x11.h) = 455d6c3de8421984ba3c99baf51cd31982a3df78
 SHA1 (patch-gdk_x11_gdkwindow-x11.h) = c80f7c9d5a570817e54fd74fa903a53400dc6f64
