@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2019/11/06 17:24:50 adam Exp $
+# $NetBSD: Makefile,v 1.42 2020/03/04 18:27:28 adam Exp $
 
-DISTNAME=	cffi-1.13.2
+DISTNAME=	cffi-1.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cffi/}
