@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.9 2020/02/07 17:05:14 prlw1 Exp $
+$NetBSD: patch-meson.build,v 1.10 2020/03/04 15:11:48 wiz Exp $
 
 - On Darwin, optionally use Cocoa (needed for X11 users).
 
@@ -17,17 +17,9 @@ $NetBSD: patch-meson.build,v 1.9 2020/02/07 17:05:14 prlw1 Exp $
   glib bug #1777
   c.f., PR pkg/54909 and PR pkg/54298
 
---- meson.build.orig	2020-02-07 11:23:09.221446856 +0000
+--- meson.build.orig	2020-02-27 16:12:52.000000000 +0000
 +++ meson.build
-@@ -5,7 +5,6 @@ project('glib', 'c', 'cpp',
-   default_options : [
-     'buildtype=debugoptimized',
-     'warning_level=1',
--    'c_std=gnu89'
-   ]
- )
- 
-@@ -671,6 +670,7 @@ if host_system == 'darwin'
+@@ -677,6 +677,7 @@ if host_system == 'darwin'
                                        #error "Detected GNUstep, not Cocoa"
                                        #endif''',
                                     name : 'Mac OS X Cocoa support')
@@ -35,98 +27,7 @@ $NetBSD: patch-meson.build,v 1.9 2020/02/07 17:05:14 prlw1 Exp $
  
    if glib_have_cocoa
      glib_conf.set('HAVE_COCOA', true)
-@@ -1314,28 +1314,86 @@ else
-   glibconfig_conf.set('g_searchpath_separator', ':')
- endif
- 
--if sizet_size == short_size
-+g_sizet_compatibility = {
-+  'short': sizet_size == short_size,
-+  'int': sizet_size == int_size,
-+  'long': sizet_size == long_size,
-+  'long long': sizet_size == long_long_size,
-+}
-+
-+# Do separate checks for gcc/clang (and ignore other compilers for now), since
-+# we need to explicitly pass -Werror to the compilers.
-+# FIXME: https://github.com/mesonbuild/meson/issues/5399
-+# We can’t simplify these checks using a foreach loop because dictionary keys
-+# have to be string literals.
-+# FIXME: https://github.com/mesonbuild/meson/issues/5231
-+if cc.get_id() == 'gcc' or cc.get_id() == 'clang'
-+  g_sizet_compatibility += {
-+    'short': g_sizet_compatibility['short'] and cc.compiles(
-+        '''#include <stddef.h>
-+        size_t f (size_t *i) { return *i + 1; }
-+        int main (void) {
-+          unsigned short i = 0;
-+          f (&i);
-+          return 0;
-+        }''',
-+        args: ['-Werror'],
-+        name : 'GCC size_t typedef is short'),
-+    'int': g_sizet_compatibility['int'] and cc.compiles(
-+        '''#include <stddef.h>
-+        size_t f (size_t *i) { return *i + 1; }
-+        int main (void) {
-+          unsigned int i = 0;
-+          f (&i);
-+          return 0;
-+        }''',
-+        args: ['-Werror'],
-+        name : 'GCC size_t typedef is int'),
-+    'long': g_sizet_compatibility['long'] and cc.compiles(
-+        '''#include <stddef.h>
-+        size_t f (size_t *i) { return *i + 1; }
-+        int main (void) {
-+          unsigned long i = 0;
-+          f (&i);
-+          return 0;
-+        }''',
-+        args: ['-Werror'],
-+        name : 'GCC size_t typedef is long'),
-+    'long long': g_sizet_compatibility['long long'] and cc.compiles(
-+        '''#include <stddef.h>
-+        size_t f (size_t *i) { return *i + 1; }
-+        int main (void) {
-+          unsigned long long i = 0;
-+          f (&i);
-+          return 0;
-+        }''',
-+        args: ['-Werror'],
-+        name : 'GCC size_t typedef is long long'),
-+  }
-+endif
-+
-+if g_sizet_compatibility['short']
-   glibconfig_conf.set('glib_size_type_define', 'short')
-   glibconfig_conf.set_quoted('gsize_modifier', 'h')
-   glibconfig_conf.set_quoted('gssize_modifier', 'h')
-   glibconfig_conf.set_quoted('gsize_format', 'hu')
-   glibconfig_conf.set_quoted('gssize_format', 'hi')
-   glibconfig_conf.set('glib_msize_type', 'SHRT')
--elif sizet_size == int_size
-+elif g_sizet_compatibility['int']
-   glibconfig_conf.set('glib_size_type_define', 'int')
-   glibconfig_conf.set_quoted('gsize_modifier', '')
-   glibconfig_conf.set_quoted('gssize_modifier', '')
-   glibconfig_conf.set_quoted('gsize_format', 'u')
-   glibconfig_conf.set_quoted('gssize_format', 'i')
-   glibconfig_conf.set('glib_msize_type', 'INT')
--elif sizet_size == long_size
-+elif g_sizet_compatibility['long']
-   glibconfig_conf.set('glib_size_type_define', 'long')
-   glibconfig_conf.set_quoted('gsize_modifier', 'l')
-   glibconfig_conf.set_quoted('gssize_modifier', 'l')
-   glibconfig_conf.set_quoted('gsize_format', 'lu')
-   glibconfig_conf.set_quoted('gssize_format', 'li')
-   glibconfig_conf.set('glib_msize_type', 'LONG')
--elif sizet_size == long_long_size
-+elif g_sizet_compatibility['long long']
-   glibconfig_conf.set('glib_size_type_define', 'long long')
-   glibconfig_conf.set_quoted('gsize_modifier', int64_m)
-   glibconfig_conf.set_quoted('gssize_modifier', int64_m)
-@@ -1832,7 +1890,7 @@ endif
+@@ -1904,7 +1905,7 @@ endif
  # proxy-libintl subproject.
  # FIXME: glib-gettext.m4 has much more checks to detect broken/uncompatible
  # implementations. This could be extended if issues are found in some platforms.
@@ -135,7 +36,7 @@ $NetBSD: patch-meson.build,v 1.9 2020/02/07 17:05:14 prlw1 Exp $
    libintl = []
    have_bind_textdomain_codeset = cc.has_function('bind_textdomain_codeset')
  else
-@@ -1883,16 +1941,15 @@ if host_system != 'windows' and get_opti
+@@ -1955,16 +1956,15 @@ if host_system != 'windows' and get_opti
    if cc.has_function('getxattr') and cc.has_header('sys/xattr.h')
      glib_conf.set('HAVE_SYS_XATTR_H', 1)
      glib_conf_prefix = glib_conf_prefix + '#define @0@ 1\n'.format('HAVE_SYS_XATTR_H')
@@ -154,7 +55,7 @@ $NetBSD: patch-meson.build,v 1.9 2020/02/07 17:05:14 prlw1 Exp $
    if cc.compiles(glib_conf_prefix + '''
                   #include <stdio.h>
                   #ifdef HAVE_SYS_TYPES_H
-@@ -1986,9 +2043,11 @@ endif
+@@ -2058,9 +2058,11 @@ endif
  
  glib_conf.set('HAVE_PROC_SELF_CMDLINE', have_proc_self_cmdline)
  
@@ -168,8 +69,8 @@ $NetBSD: patch-meson.build,v 1.9 2020/02/07 17:05:14 prlw1 Exp $
 +python_name = python.path()
  
  python_version = python.language_version()
- python_version_req = '>=3.4'
-@@ -1997,7 +2056,7 @@ if not python_version.version_compare(py
+ python_version_req = '>=3.5'
+@@ -2069,7 +2071,7 @@ if not python_version.version_compare(py
  endif
  
  # Determine which user environment-dependent files that we want to install
@@ -178,7 +79,7 @@ $NetBSD: patch-meson.build,v 1.9 2020/02/07 17:05:14 prlw1 Exp $
  have_sh = find_program('sh', required : false).found() # For glib-gettextize
  
  # Some installed tests require a custom environment
-@@ -2005,8 +2064,7 @@ env_program = find_program('env', requir
+@@ -2077,8 +2079,7 @@ env_program = find_program('env', requir
  
  # FIXME: How to detect Solaris? https://github.com/mesonbuild/meson/issues/1578
  if host_system == 'sunos'
