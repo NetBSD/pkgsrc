@@ -1,6 +1,8 @@
-$NetBSD: patch-src_libical_icaltimezone.c,v 1.1 2019/11/10 11:12:53 nia Exp $
+$NetBSD: patch-src_libical_icaltimezone.c,v 1.2 2020/03/04 10:54:25 nia Exp $
 
 Need limits.h for INT_MAX
+
+https://github.com/libical/libical/pull/420
 
 --- src/libical/icaltimezone.c.orig	2019-09-14 16:43:47.000000000 +0000
 +++ src/libical/icaltimezone.c
