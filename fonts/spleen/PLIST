@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/10 14:55:58 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/04 09:09:59 fcambus Exp $
 share/fonts/X11/spleen/fonts.alias
+share/fonts/X11/spleen/spleen-12x24.otf
 share/fonts/X11/spleen/spleen-12x24.pcf.gz
+share/fonts/X11/spleen/spleen-16x32.otf
 share/fonts/X11/spleen/spleen-16x32.pcf.gz
+share/fonts/X11/spleen/spleen-32x64.otf
 share/fonts/X11/spleen/spleen-32x64.pcf.gz
 share/fonts/X11/spleen/spleen-5x8.pcf.gz
+share/fonts/X11/spleen/spleen-8x16.otf
 share/fonts/X11/spleen/spleen-8x16.pcf.gz
