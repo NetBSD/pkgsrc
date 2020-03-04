@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2019/01/02 17:23:03 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/04 13:05:09 wiz Exp $
 
-DISTNAME=	mypaint-brushes-1.3.0
+DISTNAME=	mypaint-brushes-1.3.1
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=Jehan/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mypaint/}
 GITHUB_PROJECT=	mypaint-brushes
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://github.com/Jehan/mypaint-brushes/
+HOMEPAGE=	https://github.com/mypaint/mypaint-brushes/
 COMMENT=	Default MyPaint brushes
 LICENSE=	cc0-1.0-universal
 
