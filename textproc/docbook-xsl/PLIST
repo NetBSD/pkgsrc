@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.35 2020/03/04 10:11:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2020/03/04 10:31:11 wiz Exp $
 share/examples/docbook-xsl/titlepage.xml
 share/examples/docbook-xsl/titlepage.xsl
 share/xsl/docbook/VERSION
 share/xsl/docbook/VERSION.xsl
+share/xsl/docbook/assembly/README
+share/xsl/docbook/assembly/assemble.xsl
+share/xsl/docbook/assembly/schema/assembly51b7.rnc
+share/xsl/docbook/assembly/schema/docbook51b7.rnc
+share/xsl/docbook/assembly/topic-maker-chunk.xsl
+share/xsl/docbook/assembly/topic-maker.xsl
 share/xsl/docbook/catalog.xml
 share/xsl/docbook/common/addns.xsl
 share/xsl/docbook/common/af.xml
