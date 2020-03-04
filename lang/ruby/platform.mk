@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.6 2019/11/03 19:04:06 rillig Exp $
+# $NetBSD: platform.mk,v 1.7 2020/03/04 10:30:46 nia Exp $
 #
 
 #
@@ -90,7 +90,7 @@ CONFIGURE_ARGS+=	--disable-dtrace
 #
 # dtrace support can cause problems with miniruby on arm.
 #
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) || !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*)
 CONFIGURE_ARGS+=	--disable-dtrace
 .endif
 
