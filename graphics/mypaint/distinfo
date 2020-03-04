@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.9 2018/07/17 12:34:52 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2020/03/04 13:51:51 wiz Exp $
 
-SHA1 (mypaint-1.2.1.tar.xz) = 89456062e477cff1acb357d0407827f08a479d33
-RMD160 (mypaint-1.2.1.tar.xz) = fd57a9df4ad1900c52c0b4979231a0074a2f57be
-SHA512 (mypaint-1.2.1.tar.xz) = 1783765e495b9535669a83a29d27ba684e6201fdfe0875bdd2c167b1dab8af05993b19025767fe0b2770ed9e578e4709f75d8a4820ac945812cba85609f9eb9b
-Size (mypaint-1.2.1.tar.xz) = 37897196 bytes
-SHA1 (patch-SConscript) = b640d6084797c12c5418387c821f4786bcc426e1
-SHA1 (patch-SConstruct) = f903a23506e35ad18202996ade4ad8afdd70af0f
-SHA1 (patch-lib_colorchanger__crossed__bowl.hpp) = b64b8695fe8b787df94ddc588a714b991954084b
+SHA1 (mypaint-2.0.0.tar.xz) = 334fa13893d20c80805092de665dbbcf03b92ece
+RMD160 (mypaint-2.0.0.tar.xz) = 894b276a4f6139a717d8fdfcf8618ecef00222dd
+SHA512 (mypaint-2.0.0.tar.xz) = 118d905f4d7ce6adb9779b59d6b3f51b94a9937778b8fe3ed1b31c9b5b77d63110134bdc74849a91d8095e905664227ff43ffe183ad9c7c7ba18fa954ade8a84
+Size (mypaint-2.0.0.tar.xz) = 7316680 bytes
+SHA1 (patch-lib_meta.py) = 1c8832ff06154255d7ea14037dc728d1fa0ba50e
