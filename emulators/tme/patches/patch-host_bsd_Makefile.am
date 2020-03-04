@@ -1,0 +1,19 @@
+$NetBSD: patch-host_bsd_Makefile.am,v 1.1 2020/03/04 07:52:11 rin Exp $
+
+Add tap(4) support for *BSD by kiyohara@:
+https://mail-index.netbsd.org/port-sparc64/2013/01/29/msg001951.html
+
+XXX
+not used for build. in case of regen
+
+--- host/bsd/Makefile.am.orig	2012-12-20 20:45:08.000000000 +0900
++++ host/bsd/Makefile.am	2012-12-20 20:45:35.000000000 +0900
+@@ -6,7 +6,7 @@
+ INCLUDES = -I$(top_srcdir) -I$(srcdir) -I. -D_TME_IMPL
+ 
+ pkglib_LTLIBRARIES = tme_host_bsd.la
+-tme_host_bsd_la_SOURCES = bsd-if.c bsd-bpf.c bsd-impl.h
++tme_host_bsd_la_SOURCES = bsd-if.c bsd-bpf.c bsd-tap.c bsd-impl.h
+ tme_host_bsd_la_LDFLAGS = -module -version-info 0:0:0
+ tme_host_bsd_la_LIBADD = $(top_builddir)/libtme/libtme.la \
+ 	$(top_builddir)/generic/libtme-generic.la
