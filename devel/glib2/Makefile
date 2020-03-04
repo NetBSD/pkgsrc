@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.267 2020/02/07 17:05:14 prlw1 Exp $
+# $NetBSD: Makefile,v 1.268 2020/03/04 15:11:48 wiz Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	1
 CATEGORIES=	devel gnome
 COMMENT=	Some useful routines for C programming (glib2)
 
@@ -10,7 +9,7 @@ COMMENT=	Some useful routines for C programming (glib2)
 
 MESON_ARGS+=	-Dinstalled_tests=false
 # Avoid linux dependency on libmount-dev
-MESON_ARGS+=	-Dlibmount=false
+MESON_ARGS+=	-Dlibmount=disabled
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC}/output/gobject:${WRKSRC}/output/gmodule
 
@@ -20,6 +19,8 @@ LDFLAGS.FreeBSD+=	-liconv
 
 REPLACE_PYTHON+=	gio/gio-querymodules-wrapper.py
 REPLACE_PYTHON+=	gio/tests/gengiotypefuncs.py
+REPLACE_PYTHON+=	gio/tests/memory-monitor-dbus.py.in
+REPLACE_PYTHON+=	gio/tests/memory-monitor-portal.py.in
 REPLACE_PYTHON+=	gio/tests/static-link.py
 REPLACE_PYTHON+=	glib/update-gtranslit.py
 REPLACE_PYTHON+=	gobject/tests/mkenums.py
