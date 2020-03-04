@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2019/12/06 05:38:02 mrg Exp $
+# $NetBSD: Makefile,v 1.73 2020/03/04 07:52:11 rin Exp $
 #
 
 DISTNAME=		tme-0.8
-PKGREVISION=		39
+PKGREVISION=		40
 CATEGORIES=		emulators
 MASTER_SITES=		http://csail.mit.edu/~fredette/tme/
 
@@ -39,6 +39,9 @@ PLIST_VARS+=	bsd
     ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly"
 PLIST.bsd=	yes
 .endif
+
+post-extract:
+	${CP} ${FILESDIR}/bsd-tap.c ${WRKSRC}/host/bsd
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
