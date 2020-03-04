@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2020/02/11 06:36:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.42 2020/03/04 12:04:47 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -95,6 +95,7 @@ share/mame/hash/alice90.xml
 share/mame/hash/alphatro_cart.xml
 share/mame/hash/alphatro_flop.xml
 share/mame/hash/altos5.xml
+share/mame/hash/altos8600.xml
 share/mame/hash/amiga_a1000.xml
 share/mame/hash/amiga_a3000.xml
 share/mame/hash/amiga_apps.xml
@@ -117,6 +118,7 @@ share/mame/hash/apple2_flop_misc.xml
 share/mame/hash/apple2_flop_orig.xml
 share/mame/hash/apple2gs.xml
 share/mame/hash/apple3.xml
+share/mame/hash/applix_flop.xml
 share/mame/hash/apricot_flop.xml
 share/mame/hash/aquarius.xml
 share/mame/hash/arb.xml
@@ -127,6 +129,7 @@ share/mame/hash/atom_cass.xml
 share/mame/hash/atom_flop.xml
 share/mame/hash/atom_rom.xml
 share/mame/hash/attache.xml
+share/mame/hash/aussiebyte.xml
 share/mame/hash/b2m.xml
 share/mame/hash/bbc_flop_32016.xml
 share/mame/hash/bbc_flop_6502.xml
@@ -153,6 +156,7 @@ share/mame/hash/bdesignm_game_cart.xml
 share/mame/hash/bk0010.xml
 share/mame/hash/bkrankp_cart.xml
 share/mame/hash/bml3_flop.xml
+share/mame/hash/buzztime_cart.xml
 share/mame/hash/bw12.xml
 share/mame/hash/bw14.xml
 share/mame/hash/bw2.xml
@@ -169,6 +173,7 @@ share/mame/hash/c64_flop_orig.xml
 share/mame/hash/c65_flop.xml
 share/mame/hash/camplynx_cass.xml
 share/mame/hash/camplynx_flop.xml
+share/mame/hash/casio_rompack.xml
 share/mame/hash/casloopy.xml
 share/mame/hash/cbm2_cart.xml
 share/mame/hash/cbm2_flop.xml
@@ -278,6 +283,7 @@ share/mame/hash/gx4000.xml
 share/mame/hash/h21.xml
 share/mame/hash/horizon.xml
 share/mame/hash/hp85_rom.xml
+share/mame/hash/hp86_rom.xml
 share/mame/hash/hp9825b_rom.xml
 share/mame/hash/hp9835a_rom.xml
 share/mame/hash/hp9845a_rom.xml
@@ -307,6 +313,7 @@ share/mame/hash/intvecs.xml
 share/mame/hash/iq128.xml
 share/mame/hash/iq151_cart.xml
 share/mame/hash/iq151_flop.xml
+share/mame/hash/ique.xml
 share/mame/hash/iqunlim_cart.xml
 share/mame/hash/jaguar.xml
 share/mame/hash/jakks_gamekey_dp.xml
@@ -315,6 +322,7 @@ share/mame/hash/jakks_gamekey_mv.xml
 share/mame/hash/jakks_gamekey_nk.xml
 share/mame/hash/jakks_gamekey_nm.xml
 share/mame/hash/jakks_gamekey_sw.xml
+share/mame/hash/jazz.xml
 share/mame/hash/jb3000_flop.xml
 share/mame/hash/jpopira_jp.xml
 share/mame/hash/juicebox.xml
@@ -376,6 +384,7 @@ share/mame/hash/mo5_flop.xml
 share/mame/hash/mo5_qd.xml
 share/mame/hash/mo6_cass.xml
 share/mame/hash/mo6_flop.xml
+share/mame/hash/mobigo_cart.xml
 share/mame/hash/monon_color.xml
 share/mame/hash/mpu1000.xml
 share/mame/hash/mpz80.xml
@@ -515,15 +524,18 @@ share/mame/hash/sat_cart.xml
 share/mame/hash/sat_vccart.xml
 share/mame/hash/saturn.xml
 share/mame/hash/sawatte.xml
+share/mame/hash/sbrain.xml
 share/mame/hash/sc3000_cart.xml
 share/mame/hash/sc3000_cass.xml
 share/mame/hash/scv.xml
+share/mame/hash/sdk85.xml
 share/mame/hash/sega_beena_cart.xml
 share/mame/hash/segacd.xml
 share/mame/hash/sf7000.xml
 share/mame/hash/sg1000.xml
 share/mame/hash/sgx.xml
 share/mame/hash/sitcom.xml
+share/mame/hash/smarttv_cart.xml
 share/mame/hash/smc777.xml
 share/mame/hash/sms.xml
 share/mame/hash/snes.xml

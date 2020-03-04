@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2020/02/11 06:36:16 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2020/03/04 12:04:47 wiz Exp $
 
-DISTNAME=	mame-0.218
+DISTNAME=	mame-0.219
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -20,7 +20,7 @@ DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
 BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c99 c++
-GCC_REQD+=		7.2
+GCC_REQD+=		7
 USE_TOOLS+=		bsdtar gmake pkg-config
 UNLIMIT_RESOURCES+=	datasize
 MAKE_FILE=		makefile
