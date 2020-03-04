@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2020/03/04 13:05:09 wiz Exp $
+$NetBSD: distinfo,v 1.4 2020/03/04 13:11:14 wiz Exp $
 
-SHA1 (mypaint-brushes-1.3.1.tar.gz) = 770025a75c3f2553af8ecfae98d6a3bd27029a3d
-RMD160 (mypaint-brushes-1.3.1.tar.gz) = f99856e3654d8575f2f641cb69875fd53dd3a813
-SHA512 (mypaint-brushes-1.3.1.tar.gz) = 3e65619ae9a042cd6314396a826a2b63a72066e761244dc8763910555715b1dff6aa4395b5322510b114d61bb486f909fe505a564c89a2a5e1e5087ed298d08b
-Size (mypaint-brushes-1.3.1.tar.gz) = 1382033 bytes
+SHA1 (mypaint-brushes-2.0.2.tar.gz) = 01722b336fb14ffe83502352a645e3e9d3b61983
+RMD160 (mypaint-brushes-2.0.2.tar.gz) = 4edf7a6280fac8c082f9b75389f45d190dc42254
+SHA512 (mypaint-brushes-2.0.2.tar.gz) = 89cecd9d78f4de84ada97a3e33fd67b86dfd259880da15c0ecbfad0fceb8c3b0e93790f3c0bff0cc375959bdf6921b01d1f3646e27c3f961715219a349017556
+Size (mypaint-brushes-2.0.2.tar.gz) = 1564926 bytes
 SHA1 (patch-SConstruct) = ca04983b2c6829f3cca0a7e60bb59499f4f63e5c
