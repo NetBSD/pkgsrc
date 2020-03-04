@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1343 2020/03/04 12:46:11 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1344 2020/03/04 12:58:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1891,3 +1891,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/pbosh to 20200211 [micha 2020-03-04]
 	Updated emulators/mame to 0.219 [wiz 2020-03-04]
 	Updated graphics/gimp to 2.10.18 [wiz 2020-03-04]
+	Updated graphics/ImageMagick to 7.0.9.27 [wiz 2020-03-04]
