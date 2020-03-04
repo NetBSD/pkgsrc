@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/10/10 12:43:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/03/04 09:44:41 wiz Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
@@ -110,6 +110,7 @@ share/locale/lt/LC_MESSAGES/libsoup.mo
 share/locale/lv/LC_MESSAGES/libsoup.mo
 share/locale/ml/LC_MESSAGES/libsoup.mo
 share/locale/mr/LC_MESSAGES/libsoup.mo
+share/locale/ms/LC_MESSAGES/libsoup.mo
 share/locale/nb/LC_MESSAGES/libsoup.mo
 share/locale/ne/LC_MESSAGES/libsoup.mo
 share/locale/nl/LC_MESSAGES/libsoup.mo

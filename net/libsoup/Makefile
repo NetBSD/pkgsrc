@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2019/12/31 11:39:27 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2020/03/04 09:44:41 wiz Exp $
 
-DISTNAME=	libsoup-2.68.3
+DISTNAME=	libsoup-2.68.4
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -33,7 +33,7 @@ CWRAPPERS_APPEND.cc+=	-Wno-error=format-nonliteral
 
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.58.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
