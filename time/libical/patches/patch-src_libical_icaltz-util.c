@@ -1,7 +1,9 @@
-$NetBSD: patch-src_libical_icaltz-util.c,v 1.2 2018/05/14 08:34:56 jperkin Exp $
+$NetBSD: patch-src_libical_icaltz-util.c,v 1.3 2020/03/04 10:54:25 nia Exp $
 
 Define bswap_32 on NetBSD
 Need limits.h for CHAR_BIT
+
+https://github.com/libical/libical/pull/420
 
 --- src/libical/icaltz-util.c.orig	2018-02-27 15:34:25.000000000 +0000
 +++ src/libical/icaltz-util.c
