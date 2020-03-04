@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19700 2020/03/04 14:05:00 wiz Exp $
+$NetBSD: TODO,v 1.19701 2020/03/04 15:12:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -629,7 +629,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-share-2.3.5
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
-	o glib2-2.64.0
 	o gliv-1.9.7
 	o glom-1.14.2
 	o gmake-4.3 [cannot build firefox/openjdk11 etc.]
@@ -683,7 +682,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gthumb-3.4.0
-	o gtk3-3.24.14
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
 	o gtkmagnetic-23
