@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/04 20:30:50 nia Exp $
+
+SHA1 (abduco-0.6.tar.gz) = 5dc3eaaa8d6ea54e22378468652dc9b4bb759641
+RMD160 (abduco-0.6.tar.gz) = 71d1ad650bd96e784fc8fbed4e93547b0e313738
+SHA512 (abduco-0.6.tar.gz) = 3b70a5cc10f0a2743dcbdf6eebdcfcee0e4f4ff8c6ce0bf0aa9f55c3fa85ab43aa659997735e063eab36aba69f91be7bb5519f3f632bff1b9098f5179165c1f2
+Size (abduco-0.6.tar.gz) = 15829 bytes
