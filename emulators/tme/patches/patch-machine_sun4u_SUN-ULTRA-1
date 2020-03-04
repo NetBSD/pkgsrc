@@ -1,9 +1,12 @@
-$NetBSD: patch-machine_sun4u_SUN-ULTRA-1,v 1.1 2013/11/02 22:43:29 christos Exp $
+$NetBSD: patch-machine_sun4u_SUN-ULTRA-1,v 1.2 2020/03/04 07:52:11 rin Exp $
+
+Add tap(4) support for *BSD by kiyohara@:
+https://mail-index.netbsd.org/port-sparc64/2013/01/29/msg001951.html
 
 Make it use auto-allocated ptys
 
---- machine/sun4u/SUN-ULTRA-1	2010-06-05 15:30:55.000000000 -0400
-+++ machine/sun4u/SUN-ULTRA-1	2013-11-02 18:30:24.000000000 -0400
+--- machine/sun4u/SUN-ULTRA-1.orig	2020-03-04 16:33:49.000549753 +0900
++++ machine/sun4u/SUN-ULTRA-1	2020-03-04 16:34:00.445732638 +0900
 @@ -47,14 +47,14 @@
  
  ## ttya:
@@ -24,4 +27,12 @@ Make it use auto-allocated ptys
 +#console0 at zs0 channel A: tme/host/posix/serial device pty
  
  ## the SBus esp SCSI:
+ ##
+@@ -72,6 +72,7 @@
+ ledma0 at sbus0 slot 14 offset 0x8c00000
+ le0 at ledma0 master: tme/ic/am7990
+ #bpf0 at le0: tme/host/bsd/bpf
++#tap0 at le0: tme/host/bsd/tap
+ 
+ ## the SBus parallel port:
  ##

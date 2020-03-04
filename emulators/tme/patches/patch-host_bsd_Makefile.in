@@ -1,0 +1,33 @@
+$NetBSD: patch-host_bsd_Makefile.in,v 1.1 2020/03/04 07:52:11 rin Exp $
+
+Add tap(4) support for *BSD by kiyohara@:
+https://mail-index.netbsd.org/port-sparc64/2013/01/29/msg001951.html
+
+--- host/bsd/Makefile.in.orig	2012-12-20 20:45:21.000000000 +0900
++++ host/bsd/Makefile.in	2012-12-20 20:47:42.000000000 +0900
+@@ -88,7 +88,7 @@
+ LTLIBRARIES = $(pkglib_LTLIBRARIES)
+ tme_host_bsd_la_DEPENDENCIES = $(top_builddir)/libtme/libtme.la \
+ 	$(top_builddir)/generic/libtme-generic.la
+-am_tme_host_bsd_la_OBJECTS = bsd-if.lo bsd-bpf.lo
++am_tme_host_bsd_la_OBJECTS = bsd-if.lo bsd-bpf.lo bsd-tap.lo
+ tme_host_bsd_la_OBJECTS = $(am_tme_host_bsd_la_OBJECTS)
+ tme_host_bsd_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+@@ -248,7 +248,7 @@
+ AUTOMAKE_OPTIONS = 1.4 gnu
+ INCLUDES = -I$(top_srcdir) -I$(srcdir) -I. -D_TME_IMPL
+ pkglib_LTLIBRARIES = tme_host_bsd.la
+-tme_host_bsd_la_SOURCES = bsd-if.c bsd-bpf.c bsd-impl.h
++tme_host_bsd_la_SOURCES = bsd-if.c bsd-bpf.c bsd-tap.c bsd-impl.h
+ tme_host_bsd_la_LDFLAGS = -module -version-info 0:0:0
+ tme_host_bsd_la_LIBADD = $(top_builddir)/libtme/libtme.la \
+ 	$(top_builddir)/generic/libtme-generic.la
+@@ -324,6 +324,7 @@
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bsd-bpf.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bsd-if.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bsd-tap.Plo@am__quote@
+ 
+ .c.o:
+ @am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
