@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2020/01/26 17:31:47 rillig Exp $
+# $NetBSD: Makefile,v 1.74 2020/03/04 15:53:24 wiz Exp $
 
-DISTNAME=	x264-snapshot-20190312-2245
+DISTNAME=	x264-snapshot-20191217-2245
 PKGNAME=	${DISTNAME:S/-snapshot-/-devel-/:S/-2245$//}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.videolan.org/pub/videolan/x264/snapshots/
 EXTRACT_SUFX=	.tar.bz2
