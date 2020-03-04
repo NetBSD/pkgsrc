@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19702 2020/03/04 15:51:34 wiz Exp $
+$NetBSD: TODO,v 1.19703 2020/03/04 15:53:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1201,7 +1201,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wmx-gnome-8
 	o worker-3.12.0
 	o wxRemind-101
-	o x264-devel-20191217
 	o x2vnc-1.31
 	o xaric-0.13.7
 	o xcoral-3.14
