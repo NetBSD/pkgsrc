@@ -1,11 +1,11 @@
-$NetBSD: patch-glib_tests_hash.c,v 1.2 2019/12/29 19:40:56 triaxx Exp $
+$NetBSD: patch-glib_tests_hash.c,v 1.3 2020/03/04 15:11:48 wiz Exp $
 
 Revert GHashTable improvements
 https://gitlab.gnome.org/GNOME/glib/merge_requests/208
 
 to fix PR pkg/54310
 
---- glib/tests/hash.c.orig	2019-12-19 16:33:15.000000000 +0000
+--- glib/tests/hash.c.orig	2020-02-27 16:12:52.000000000 +0000
 +++ glib/tests/hash.c
 @@ -1353,9 +1353,6 @@ struct _GHashTable
    gint             nnodes;
@@ -17,7 +17,7 @@ to fix PR pkg/54310
    gpointer        *keys;
    guint           *hashes;
    gpointer        *values;
-@@ -1390,23 +1387,6 @@ count_keys (GHashTable *h, gint *unused, gint *occupie
+@@ -1390,23 +1387,6 @@ count_keys (GHashTable *h, gint *unused,
      }
  }
  
@@ -47,13 +47,13 @@ to fix PR pkg/54310
      {
 -      if (h->hashes[i] >= 2)
 +      if (h->hashes[i] < 2)
-         {
--          g_assert_cmpint (h->hashes[i], ==, h->hash_func (fetch_key_or_value (h->keys, i, h->have_big_keys)));
++        {
 +          g_assert (h->keys[i] == NULL);
 +          g_assert (h->values[i] == NULL);
 +        }
 +      else
-+        {
+         {
+-          g_assert_cmpint (h->hashes[i], ==, h->hash_func (fetch_key_or_value (h->keys, i, h->have_big_keys)));
 +          g_assert_cmpint (h->hashes[i], ==, h->hash_func (h->keys[i]));
          }
      }
