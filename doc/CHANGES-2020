@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1333 2020/03/04 09:47:32 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1334 2020/03/04 10:11:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1881,3 +1881,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/tme to 0.8nb40 [rin 2020-03-04]
 	Updated net/libsoup to 2.68.4 [wiz 2020-03-04]
 	Updated devel/meld to 3.20.2 [wiz 2020-03-04]
+	Updated textproc/docbook-xsl to 1.79.2 [wiz 2020-03-04]
