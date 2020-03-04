@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.27 2020/03/04 15:51:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2020/03/04 22:01:41 wiz Exp $
 lib/libpoppler.so
-lib/libpoppler.so.96
-lib/libpoppler.so.96.0.0
+lib/libpoppler.so.97
+lib/libpoppler.so.97.0.0
 lib/pkgconfig/poppler-cairo.pc
 lib/pkgconfig/poppler-splash.pc
 lib/pkgconfig/poppler.pc
