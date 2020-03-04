@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1356 2020/03/04 15:53:33 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1357 2020/03/04 15:57:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1904,3 +1904,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ucspi-tcp6 to 1.11.3 [schmonz 2020-03-04]
 	Updated print/poppler to 0.86.0 [wiz 2020-03-04]
 	Updated multimedia/x264-devel to 20191217 [wiz 2020-03-04]
+	Updated net/ucspi-ssl to 0.999.11.3 [schmonz 2020-03-04]
