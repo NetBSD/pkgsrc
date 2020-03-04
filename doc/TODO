@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19697 2020/03/04 13:05:20 wiz Exp $
+$NetBSD: TODO,v 1.19698 2020/03/04 13:52:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -880,7 +880,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-2.0.52
 	o muse-0.9.2
 	o myodbc-5.3.4
-	o mypaint-2.0
 	o mysql-connector-c++-8.0.17
 	o mysql-server-8.0.18
 	o mysql-workbench-6.3
