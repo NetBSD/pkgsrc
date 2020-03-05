@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2020/03/05 14:14:27 nia Exp $
+share/fonts/X11/OTF/ComicNeue-Angular-Regular.otf
+share/fonts/X11/OTF/ComicNeue-Angular_Bold.otf
+share/fonts/X11/OTF/ComicNeue-Angular_Bold_Oblique.otf
+share/fonts/X11/OTF/ComicNeue-Angular_Light.otf
+share/fonts/X11/OTF/ComicNeue-Angular_Light_Oblique.otf
+share/fonts/X11/OTF/ComicNeue-Angular_Oblique.otf
+share/fonts/X11/OTF/ComicNeue-Regular.otf
+share/fonts/X11/OTF/ComicNeue_Bold.otf
+share/fonts/X11/OTF/ComicNeue_Bold_Oblique.otf
+share/fonts/X11/OTF/ComicNeue_Light.otf
+share/fonts/X11/OTF/ComicNeue_Light_Oblique.otf
+share/fonts/X11/OTF/ComicNeue_Oblique.otf
+share/fonts/X11/TTF/ComicNeue-Angular-Bold-Oblique.ttf
+share/fonts/X11/TTF/ComicNeue-Angular-Bold.ttf
+share/fonts/X11/TTF/ComicNeue-Angular-Light-Oblique.ttf
+share/fonts/X11/TTF/ComicNeue-Angular-Light.ttf
+share/fonts/X11/TTF/ComicNeue-Angular-Regular-Oblique.ttf
+share/fonts/X11/TTF/ComicNeue-Angular-Regular.ttf
+share/fonts/X11/TTF/ComicNeue-Bold-Oblique.ttf
+share/fonts/X11/TTF/ComicNeue-Bold.ttf
+share/fonts/X11/TTF/ComicNeue-Light-Oblique.ttf
+share/fonts/X11/TTF/ComicNeue-Light.ttf
+share/fonts/X11/TTF/ComicNeue-Regular-Oblique.ttf
+share/fonts/X11/TTF/ComicNeue-Regular.ttf
