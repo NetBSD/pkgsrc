@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/07/28 16:13:26 nia Exp $
+$NetBSD: distinfo,v 1.8 2020/03/05 20:24:28 nia Exp $
 
-SHA1 (tootstream-0.3.7.tar.gz) = 7182f68df86758a8718b9be4fd2706d18c5d27d1
-RMD160 (tootstream-0.3.7.tar.gz) = 67e8d5b0f195c5f9f493d0eb0c7389d57a5b8d94
-SHA512 (tootstream-0.3.7.tar.gz) = d4915418c0fcbeb15b72233dc95ec1f38cbe498fa93195d73a13733116af45a72e8560e8991c597884c5932824ebd2de62c91c17508b7bfffb360e98ee70b321
-Size (tootstream-0.3.7.tar.gz) = 25376 bytes
-SHA1 (patch-requirements.txt) = fca1c17f6610dc536fc9fb81bf237cd2df3aeefa
+SHA1 (tootstream-0.3.8.1.tar.gz) = e004ed08b113149da8b7a3187774b2d33aac1657
+RMD160 (tootstream-0.3.8.1.tar.gz) = 4f589166e88addaff764fa004063ad5832b61c23
+SHA512 (tootstream-0.3.8.1.tar.gz) = 7082e911d07cfd003a3a9ee25f63972ab0a4441ba00f5ec3f965ba30090e149c7551a97d50cc50832c8288336b23bf2b62216b8aa3bfc6695ed9bf9fad3e4d76
+Size (tootstream-0.3.8.1.tar.gz) = 25509 bytes
