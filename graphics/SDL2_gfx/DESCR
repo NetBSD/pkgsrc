@@ -1,0 +1,3 @@
+Graphics drawing primitives and other support functions wrapped up in an
+add-on, C-based library for the Simple Direct Media (SDL) cross-platform
+API layer.
