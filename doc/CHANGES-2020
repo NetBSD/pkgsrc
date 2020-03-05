@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1368 2020/03/05 14:00:17 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1369 2020/03/05 14:14:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1920,3 +1920,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/SDL2_gfx version 1.0.4 [nia 2020-03-05]
 	Added sysutils/neofetch version 6.1.0 [nia 2020-03-05]
 	Added games/corsix-th version 0.63 [nia 2020-03-05]
+	Added fonts/comic-neue version 2.3 [nia 2020-03-05]
