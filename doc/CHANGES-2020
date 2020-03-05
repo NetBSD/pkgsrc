@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1372 2020/03/05 18:20:41 leot Exp $
+$NetBSD: CHANGES-2020,v 1.1373 2020/03/05 19:50:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1924,3 +1924,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/tme to 0.8nb41 [thorpej 2020-03-05]
 	Added cross/asm6809 version 2.12 [jperkin 2020-03-05]
 	Updated net/youtube-dl to 20200306 [leot 2020-03-05]
+	Updated net/hub to 2.14.2 [leot 2020-03-05]
