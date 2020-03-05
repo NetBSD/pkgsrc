@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/07/28 16:09:58 nia Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/05 20:18:37 nia Exp $
 
-PKGNAME=	${PYPKGPREFIX}-mastodon-1.4.6
+PKGNAME=	${PYPKGPREFIX}-mastodon-1.5.0
 DISTNAME=	Mastodon.py-${PKGVERSION_NOREV}
 CATEGORIES=	chat www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Mastodon.py/}
