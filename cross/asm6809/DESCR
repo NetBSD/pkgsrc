@@ -1,0 +1,7 @@
+asm6809 is a portable cross assembler targeting the Motorola 6809
+and Hitachi 6309.
+
+Features arbitrarily complex expressions (with most C-style
+operators available), forward references, macro expansion and
+conditional assembly.  Output formats are: Raw binary, DragonDOS
+binary, CoCo RS-DOS (or "DECB") binary, Motorola SREC, Intel HEX.
