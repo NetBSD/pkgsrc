@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2020/01/11 21:39:18 nia Exp $
+# $NetBSD: options.mk,v 1.19 2020/03/05 09:37:30 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	gtk3-atk-bridge cups debug
@@ -37,11 +37,6 @@ CONFIGURE_ARGS+=	--disable-quartz-backend
 
 PLIST_VARS+=		wayland
 .if !empty(PKG_OPTIONS:Mwayland)
-.  if ${OPSYS} != "NetBSD"
-# Needs sed -i.
-# https://gitlab.gnome.org/GNOME/gtk/merge_requests/1295
-USE_TOOLS+=		gsed
-.  endif
 PLIST.wayland=		yes
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
