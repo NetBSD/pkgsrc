@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.9 2017/06/22 20:48:04 tnn Exp $
+$NetBSD: patch-ag,v 1.10 2020/03/05 20:49:22 tnn Exp $
 
---- Configure.orig	2015-07-07 20:17:04.000000000 +0000
+--- Configure.orig	2018-02-14 14:18:55.000000000 +0000
 +++ Configure
-@@ -3013,32 +3013,66 @@ return(0); }
+@@ -3077,32 +3077,66 @@ return(0); }
  	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
  	echo "!!!WARNING!!!  Configuring for NetBSD 3.0"
  	;;
@@ -87,7 +87,7 @@ $NetBSD: patch-ag,v 1.9 2017/06/22 20:48:04 tnn Exp $
      then
        grep -q getbootfile ${LSOF_INCLUDE}/util.h
        if test $? -eq 0	# {
-@@ -3437,6 +3471,7 @@ return(0); }
+@@ -3501,6 +3535,7 @@ return(0); }
      fi	# }
      LSOF_TMP2="sys/vnode.h"
      LSOF_NBSD_PTYFS=0
@@ -95,11 +95,10 @@ $NetBSD: patch-ag,v 1.9 2017/06/22 20:48:04 tnn Exp $
      if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
      then
        LSOF_TMP3="${LSOF_INCLUDE}/$LSOF_TMP2"
-@@ -3514,7 +3549,25 @@ return(0); }
+@@ -3578,16 +3613,29 @@ return(0); }
  	  fi	# }
  	fi	# }
        fi	# }
--      if test "X$NETBSD_UVM" = "X"	# {
 +      grep -q VT_TMPFS $LSOF_TMP3
 +      if test $? -eq 0   # {
 +      then
@@ -118,11 +117,22 @@ $NetBSD: patch-ag,v 1.9 2017/06/22 20:48:04 tnn Exp $
 +         fi    # }
 +       fi      # }
 +      fi       # }
-+     if test "X$NETBSD_UVM" = "X"	# {
+       if test "X$NETBSD_UVM" = "X"	# {
        then
- 	grep -q UVM $LSOF_TMP3
- 	if test $? -ne 0	# {
-@@ -3799,6 +3852,28 @@ return(0); }
+-	grep -q UVM $LSOF_TMP3
+-	if test $? -ne 0	# {
++	if test -r ${LSOF_INCLUDE}/uvm	# {
+ 	then
+-	  egrep -q "v_uvm;|v_uobj;" $LSOF_TMP3
+-	  if test $? -eq 0	# {
+-	  then
+-	    NETBSD_UVM="Y"
+-	  fi	# }
++	  NETBSD_UVM="Y"
+ 	fi	# }
+       fi	# }
+     fi	# }
+@@ -3863,6 +3911,28 @@ return(0); }
  	LSOF_CFGF="$LSOF_CFGF -I`pwd`/dialects/n+obsd/include"
        fi	# }
      fi	# }
@@ -151,7 +161,7 @@ $NetBSD: patch-ag,v 1.9 2017/06/22 20:48:04 tnn Exp $
      LSOF_CFGL="$LSOF_CFGL -lkvm"
      LSOF_DIALECT_DIR=n+obsd
      ;;
-@@ -5535,7 +5610,7 @@ fi	# }
+@@ -5607,7 +5677,7 @@ fi	# }
  echo "" >> $LSOF_MKFC
  if test "X$LSOF_DEBUG" = "X"	# {
  then

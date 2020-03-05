@@ -1,8 +1,16 @@
-$NetBSD: patch-af,v 1.16 2019/01/06 16:36:00 tnn Exp $
+$NetBSD: patch-af,v 1.17 2020/03/05 20:49:22 tnn Exp $
 
 --- dialects/n+obsd/dlsof.h.orig	2006-03-28 21:54:15.000000000 +0000
 +++ dialects/n+obsd/dlsof.h
-@@ -95,6 +95,10 @@ struct uio;	/* dummy for function protot
+@@ -46,6 +46,7 @@
+ #include <signal.h>
+ #include <string.h>
+ #include <unistd.h>
++#include <sys/ptrace.h> /* pulled in by procfs.h, but needs to be pulled in before _KERNEL is defined */
+ 
+ # if	defined(HASGETBOOTFILE)
+ #include <util.h>
+@@ -95,6 +96,10 @@ struct uio;	/* dummy for function protot
  # endif	/* (defined(OPENBSDV) && OPENBSDV<3030)
  	   || (defined(NETBSDV) && __NetBSD_Version__>=106060000) */
  
@@ -13,7 +21,7 @@ $NetBSD: patch-af,v 1.16 2019/01/06 16:36:00 tnn Exp $
  #include <sys/mount.h>
  
  # if	(defined(OPENBSDV) && OPENBSDV>=3030) \
-@@ -106,10 +110,6 @@ struct uio;	/* dummy for function protot
+@@ -106,10 +111,6 @@ struct uio;	/* dummy for function protot
  #include <rpc/types.h>
  #include <sys/protosw.h>
  
@@ -24,7 +32,7 @@ $NetBSD: patch-af,v 1.16 2019/01/06 16:36:00 tnn Exp $
  #include <sys/socket.h>
  
  # if	defined(HASMSDOSFS)
-@@ -147,6 +147,9 @@ struct uio;	/* dummy for function protot
+@@ -147,6 +148,9 @@ struct uio;	/* dummy for function protot
  		   || (defined(NETBSDV) && __NetBSD_Version__<106060000) */
  
  #define	_KERNEL
@@ -34,7 +42,7 @@ $NetBSD: patch-af,v 1.16 2019/01/06 16:36:00 tnn Exp $
  struct nameidata;	/* to satisfy a function prototype in msdosfsmount.h */
  #include <msdosfs/msdosfsmount.h>
  #undef	_KERNEL
-@@ -161,6 +164,7 @@ struct nameidata;	/* to satisfy a functi
+@@ -161,6 +165,7 @@ struct nameidata;	/* to satisfy a functi
  #include <sys/socketvar.h>
  #include <sys/un.h>
  #include <sys/unpcb.h>
@@ -42,7 +50,7 @@ $NetBSD: patch-af,v 1.16 2019/01/06 16:36:00 tnn Exp $
  #include <netinet/in.h>
  #include <netinet/in_systm.h>
  #include <netinet/ip.h>
-@@ -170,7 +174,6 @@ struct nameidata;	/* to satisfy a functi
+@@ -170,7 +175,6 @@ struct nameidata;	/* to satisfy a functi
  #include <netinet6/in6_pcb.h>
  # endif	/* defined(HASIPv6) && defined(NETBSDV) && !defined(HASINRIAIPv6) */
  
@@ -50,7 +58,7 @@ $NetBSD: patch-af,v 1.16 2019/01/06 16:36:00 tnn Exp $
  #include <netinet/in_pcb.h>
  #include <netinet/ip_var.h>
  #include <netinet/tcp.h>
-@@ -264,6 +267,9 @@ struct sockproto {
+@@ -264,6 +268,9 @@ struct sockproto {
  
  #undef KERNEL
  #include <ufs/mfs/mfsnode.h>
@@ -60,7 +68,7 @@ $NetBSD: patch-af,v 1.16 2019/01/06 16:36:00 tnn Exp $
  
  # if	defined(HASNFSPROTO)
  #include <nfs/rpcv2.h>
-@@ -370,7 +376,6 @@ struct sockproto {
+@@ -370,7 +377,6 @@ struct sockproto {
  #define	Pregs		PFSregs
  #define	Pfile		PFSfile
  #define	Pfpregs		PFSfpregs
@@ -68,7 +76,7 @@ $NetBSD: patch-af,v 1.16 2019/01/06 16:36:00 tnn Exp $
  #define	Pstatus		PFSstatus
  #define	Pnote		PFSnote
  #define	Pnotepg		PFSnotepg
-@@ -382,6 +387,9 @@ struct sockproto {
+@@ -382,6 +388,9 @@ struct sockproto {
  #define	Pmap		PFSmap
  #define	Pmaps		PFSmaps
  #    endif	/* NETBSDV>=1006000 */
@@ -78,7 +86,7 @@ $NetBSD: patch-af,v 1.16 2019/01/06 16:36:00 tnn Exp $
  #   endif	/* defined(NetBSDV) */
  #  endif	/* defined(HASPROCFS_PFSROOT) */
  #include <machine/reg.h>
-@@ -489,7 +497,12 @@ extern KA_T Kpa;
+@@ -489,7 +498,12 @@ extern KA_T Kpa;
  struct l_vfs {
  	KA_T addr;			/* kernel address */
  	fsid_t	fsid;			/* file system ID */
@@ -91,7 +99,7 @@ $NetBSD: patch-af,v 1.16 2019/01/06 16:36:00 tnn Exp $
  	char *dir;			/* mounted directory */
  	char *fsname;			/* file system name */
  	struct l_vfs *next;		/* forward link */
-@@ -581,4 +594,12 @@ struct sfile {
+@@ -581,4 +595,12 @@ struct sfile {
  #  endif	/* defined(HASNCVPID) */
  # endif  /* defined(HASNCACHE) */
  
