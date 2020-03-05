@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.482 2020/03/01 11:52:23 nia Exp $
+# $NetBSD: Makefile,v 1.483 2020/03/05 09:15:39 micha Exp $
 #
 
 COMMENT=	Games
@@ -92,6 +92,7 @@ SUBDIR+=	dipmap
 SUBDIR+=	doom-pwad-shotgun-symphony
 SUBDIR+=	doom-pwad-sigil
 SUBDIR+=	doom1
+SUBDIR+=	doom2-pwad-eviternity
 SUBDIR+=	doom2-pwad-preacher
 SUBDIR+=	doom2-pwad-struggle
 SUBDIR+=	doomlegacy
