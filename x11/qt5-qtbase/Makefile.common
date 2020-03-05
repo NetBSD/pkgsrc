@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2020/01/22 14:06:08 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.38 2020/03/05 11:58:07 nia Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -31,7 +31,6 @@
 # used by x11/qt5-qtxmlpatterns/Makefile
 
 .include "../../x11/qt5/Makefile.common"
-.include "options.mk"
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
