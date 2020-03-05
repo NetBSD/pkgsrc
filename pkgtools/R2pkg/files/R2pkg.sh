@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: R2pkg.sh,v 1.14 2020/01/13 18:06:47 rillig Exp $
+# $NetBSD: R2pkg.sh,v 1.15 2020/03/05 17:07:54 brook Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -63,18 +63,18 @@ while getopts cDehqruVvE:M:L:P: arg
 do
     case $arg in
 	# options without arguments
-	c) args="$args $arg"; update=false;;
-	D) args="$args $arg"; keep_description=yes;;
-	e) args="$args $arg"; use_editor=no;;
+	c) args="$args -$arg"; update=false;;
+	D) args="$args -$arg"; keep_description=yes;;
+	e) args="$args -$arg"; use_editor=no;;
 	h) echo "$usage"; exit 0;;
-	q) args="$args $arg"; quiet=true;;
-	r) args="$args $arg"; recursive=true;;
-	u) args="$args $arg"; update=true;;
+	q) args="$args -$arg"; quiet=true;;
+	r) args="$args -$arg"; recursive=true;;
+	u) args="$args -$arg"; update=true;;
 	V) echo "$name v$vers"; exit 0;;
-	v) args="$args $arg"; verbose=$((verbose + 1));;
+	v) args="$args -$arg"; verbose=$((verbose + 1));;
 	# options taking arguments
-	E) args="$args $arg $OPTARG"; PKGEDITOR=$OPTARG;;
-	M) args="$args $arg $OPTARG"; maintainer_email=$OPTARG;;
+	E) args="$args -$arg $OPTARG"; PKGEDITOR=$OPTARG;;
+	M) args="$args -$arg $OPTARG"; maintainer_email=$OPTARG;;
 	# options for recursion; only for internal use
 	L) level=$((OPTARG + 0));;
 	P) pid=$((OPTARG + 0));;
