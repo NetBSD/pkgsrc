@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/11/13 21:23:23 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2020/03/05 13:19:32 schmonz Exp $
 
 DISTNAME=	po4a-0.57
 CATEGORIES=	textproc
@@ -37,6 +37,11 @@ SUBST_FILES.path=	po4a
 SUBST_MESSAGE.path=	Fix msgmerge command path (not found)
 SUBST_STAGE.path=	pre-configure
 SUBST_SED.path=		-e 's|\"msgmerge\"|\"${PREFIX}/bin/msgmerge\"|;'
+
+SUBST_CLASSES+=		prefix
+SUBST_FILES.prefix=	Po4aBuilder.pm
+SUBST_STAGE.prefix=	pre-configure
+SUBST_VARS.prefix=	PREFIX
 
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
