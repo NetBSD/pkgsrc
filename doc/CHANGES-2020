@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1364 2020/03/05 10:19:18 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1365 2020/03/05 10:46:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1916,3 +1916,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/rvault version 0.1 [wiz 2020-03-05]
 	Updated lang/nodejs to 13.10.1 [adam 2020-03-05]
 	Updated sysutils/ansible to 2.9.6 [adam 2020-03-05]
+	Updated textproc/docbook-xsl to 1.79.2nb2 [wiz 2020-03-05]
