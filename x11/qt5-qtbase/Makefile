@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2020/01/21 20:25:37 adam Exp $
+# $NetBSD: Makefile,v 1.89 2020/03/05 11:58:07 nia Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -220,6 +220,7 @@ post-install:
 	${MV} -f ${DESTDIR}${PREFIX}/${BROKEN_FILES1}.1 \
 		${DESTDIR}${PREFIX}/${BROKEN_FILES1}
 
+.include "options.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
