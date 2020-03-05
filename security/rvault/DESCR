@@ -1,0 +1,5 @@
+rvault is a secure and authenticated store for secrets (passwords,
+keys, certificates) and small documents.  It uses envelope encryption
+with one-time password (OTP) authentication.  The vault can be operated
+as a file system in userspace.  It is written in C11 and distributed
+under the 2-clause BSD license.
