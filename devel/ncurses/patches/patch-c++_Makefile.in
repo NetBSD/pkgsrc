@@ -1,17 +1,10 @@
-$NetBSD: patch-c++_Makefile.in,v 1.2 2018/04/02 16:26:03 spz Exp $
+$NetBSD: patch-c++_Makefile.in,v 1.3 2020/03/05 12:52:33 wiz Exp $
 
---- ./c++/Makefile.in.orig	2016-05-21 23:26:12.000000000 +0000
-+++ ./c++/Makefile.in
-@@ -84,7 +84,7 @@ RANLIB		= @LIB_PREP@
- CXX		= @CXX@
- CPP		= @CXXCPP@
- CXXFLAGS	= @CXXFLAGS@ @EXTRA_CXXFLAGS@
--CXXLIBS		= @CXXLIBS@
-+CXXLIBS		=
- 
- INCDIR		= ../include
- CPPFLAGS	= -DHAVE_CONFIG_H -I../c++ @CPPFLAGS@
-@@ -112,7 +112,7 @@ LOCAL_LIBDIR	= @top_builddir@/lib
+Rename form/menu/panel to gnu*.
+
+--- c++/Makefile.in.orig	2020-02-02 23:34:34.000000000 +0000
++++ c++/Makefile.in
+@@ -114,7 +114,7 @@ LOCAL_LIBDIR	= @top_builddir@/lib
  
  LINK		= @LINK_PROGS@ $(LIBTOOL_LINK) @CXXLDFLAGS@
  SHLIB_DIRS	= -L../lib
