@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2020/03/05 20:36:44 nia Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/blurhash/__init__.py
+${PYSITELIB}/blurhash/__init__.pyo
+${PYSITELIB}/blurhash/__init__.pyc
+${PYSITELIB}/blurhash/blurhash.pyo
+${PYSITELIB}/blurhash/blurhash.pyc
+${PYSITELIB}/blurhash/blurhash.py
