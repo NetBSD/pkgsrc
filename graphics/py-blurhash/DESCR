@@ -1,0 +1,2 @@
+Pure-Python implementation of the blurhash algorithm. BlurHash is a compact
+representation of a placeholder for an image.
