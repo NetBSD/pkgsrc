@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.745 2020/03/01 17:59:32 nia Exp $
+# $NetBSD: Makefile,v 1.746 2020/03/05 09:49:24 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -566,6 +566,7 @@ SUBDIR+=	ruby-sshkey
 SUBDIR+=	ruby-sshkit
 SUBDIR+=	ruby-tcpwrap
 SUBDIR+=	ruby-twitter_oauth
+SUBDIR+=	rvault
 SUBDIR+=	sbd
 SUBDIR+=	scanssh
 SUBDIR+=	scm-blackbox
