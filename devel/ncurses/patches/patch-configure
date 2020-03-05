@@ -1,8 +1,12 @@
-$NetBSD: patch-ac,v 1.26 2018/04/02 16:26:03 spz Exp $
+$NetBSD: patch-configure,v 1.1 2020/03/05 12:52:33 wiz Exp $
 
---- ./configure.orig	2018-01-20 00:27:18.000000000 +0000
-+++ ./configure
-@@ -11770,11 +11770,7 @@ case ".$MANPAGE_RENAMES" in
+Make Debian behave like all other operating systems.
+
+Rename form/menu/panel to gnu*.
+
+--- configure.orig	2020-02-08 21:06:19.000000000 +0000
++++ configure
+@@ -13816,11 +13816,7 @@ case ".$MANPAGE_RENAMES" in
  	;;
  (.|.yes)
  	# Debian 'man' program?
@@ -15,7 +19,7 @@ $NetBSD: patch-ac,v 1.26 2018/04/02 16:26:03 spz Exp $
  	;;
  esac
  
-@@ -23263,8 +23259,17 @@ EOF
+@@ -25656,8 +25652,17 @@ EOF
  #define HAVE_LIB${cf_have_include} 1
  EOF
  
@@ -35,7 +39,7 @@ $NetBSD: patch-ac,v 1.26 2018/04/02 16:26:03 spz Exp $
  			if test "$DFT_LWR_MODEL" = "libtool"; then
  				TEST_ARGS="${TEST_DEPS}"
  				TEST_ARG2="${TEST_DEP2}"
-@@ -23567,9 +23572,9 @@ fi
+@@ -25914,9 +25919,9 @@ fi
  ADAHTML_DIR=../../doc/html/ada
  
  # these could be configurable, but are not currently
@@ -48,7 +52,7 @@ $NetBSD: patch-ac,v 1.26 2018/04/02 16:26:03 spz Exp $
  CXX_NAME=ncurses++
  
  # workaround for OS/2 (20151017)
-@@ -25011,7 +25016,15 @@ CF_EOF
+@@ -27440,7 +27445,15 @@ CF_EOF
  		cf_depsuf="${LIB_SUFFIX}${EXTRA_SUFFIX}${cf_depsuf}"
  	fi
  
