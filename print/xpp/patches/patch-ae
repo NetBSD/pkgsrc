@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2010/05/09 04:21:40 sbd Exp $
+$NetBSD: patch-ae,v 1.2 2020/03/05 14:57:59 bouyer Exp $
 
---- xpp.cxx.orig	2004-12-07 08:00:04.000000000 +1300
-+++ xpp.cxx
-@@ -168,7 +168,7 @@ printFiles::printFiles(int  argc, /* I -
+--- xpp.cxx.orig	2004-12-06 20:00:04.000000000 +0100
++++ xpp.cxx	2020-03-04 15:20:53.406423152 +0100
+@@ -168,7 +168,7 @@
  	    {	  
  	      char *tmp;
  
@@ -11,3 +11,160 @@ $NetBSD: patch-ae,v 1.1 2010/05/09 04:21:40 sbd Exp $
  		tmp[0] = '\0';
  		instance = tmp + 1;
  	      }	
+@@ -287,13 +287,14 @@
+     // Get printer information to show in the menu entry
+ 
+     ipp_t *request = CupsHelper::newIppRequest();
+-    char buf[1024], *state, *type, *location, *comment;
++    char buf[1024];
++    const char *state, *type, *location, *comment;
+     sprintf(buf,"ipp://%s:%d/printers/%s",CupsHelper::host(),
+             CupsHelper::port(),dests[i].name);
+     ippAddString(request,IPP_TAG_OPERATION,IPP_TAG_URI,"printer-uri",NULL,buf);
+-    request->request.op.operation_id = IPP_GET_PRINTER_ATTRIBUTES;
++    ippSetOperation(request, IPP_GET_PRINTER_ATTRIBUTES);
+     request = CupsHelper::processRequest(request,"/printers/");
+-    if (!request || request->curtag != IPP_TAG_PRINTER) {
++    if (!request) {
+       state = "Unknown";
+       type = "No Information Available";
+       location = "Location Unknown";
+@@ -302,7 +303,7 @@
+       ipp_attribute_t *attr = ippFindAttribute(request,"printer-state",
+                                                IPP_TAG_ENUM);
+       if (attr)
+-        switch (attr->values[0].integer) {
++        switch (ippGetInteger(attr, 0)) {
+           case IPP_PRINTER_IDLE:
+             state = "Printer idle";
+             break;
+@@ -316,19 +317,19 @@
+       else state = "Unknown";
+       attr = ippFindAttribute(request,"printer-info",IPP_TAG_TEXT);
+       if (attr)
+-        type = attr->values[0].string.text;
++        type = ippGetString(attr, 0, NULL);
+       else
+         type = "No Information Available";
+       if (strlen(type) == 0) type = "No Information Available";
+       attr = ippFindAttribute(request,"printer-location",IPP_TAG_TEXT);
+       if (attr)
+-        location = attr->values[0].string.text;
++        location = ippGetString(attr, 0, NULL);
+       else
+         location = "Location Unknown";
+       if (strlen(location) == 0) location = "Location Unknown";
+       attr = ippFindAttribute(request,"printer-make-and-model",IPP_TAG_TEXT);
+       if (attr)
+-        comment = attr->values[0].string.text;
++        comment = ippGetString(attr, 0, NULL);
+       else
+         comment = "";
+     }
+@@ -714,15 +715,15 @@
+   // return when the request fails.
+ 
+   ipp_t *request = CupsHelper::newIppRequest();
+-  char buffer[1024], *t;
+-  const char *s, *u;
++  char buffer[1024], *t2;
++  const char *s, *t, *u;
+   sprintf(buffer,"ipp://%s:%d/printers/%s",CupsHelper::host(),
+           CupsHelper::port(),dests[dest_pos].name);
+   ippAddString(request,IPP_TAG_OPERATION,IPP_TAG_URI,
+                "printer-uri",NULL,buffer);
+-  request->request.op.operation_id = IPP_GET_PRINTER_ATTRIBUTES;
++  ippSetOperation(request, IPP_GET_PRINTER_ATTRIBUTES);
+   request = CupsHelper::processRequest(request,"/printers/");
+-  if (!request || request->curtag != IPP_TAG_PRINTER) return;
++  if (!request) return;
+ 
+   // Check whether the printer supports banner pages and continue only
+   // if it does so
+@@ -732,13 +733,13 @@
+     // Enable the menus and insert all available banners
+     before->activate();
+     after->activate();
+-    for (i = 0; i < attr->num_values; i ++) {
++    for (i = 0; i < ippGetCount(attr); i ++) {
+       // Use the replacement method to avoid weird banner file names
+       // messing up the menues
+       before->add("x",0,0,0,0);
+-      before->replace(i,attr->values[i].string.text);
++      before->replace(i,ippGetString(attr, i, NULL));
+       after->add("x",0,0,0,0);
+-      after->replace(i,attr->values[i].string.text);
++      after->replace(i,ippGetString(attr, i, NULL));
+     }
+     // Determine which banners are currently set
+     u = before->menu()->label();
+@@ -746,18 +747,19 @@
+                                        changed_options)) {
+       strcpy(buffer,s);
+       s = buffer;
+-      t = strchr(buffer,',');
+-      if (t) {
+-        *t = '\0';
+-        t ++;
++      t2 = strchr(buffer,',');
++      if (t2) {
++        *t2 = '\0';
++        t2 ++;
+       } else {
+-        t = (char *)u;
++        t2 = (char *)u;
+       }
++      t = t2;
+     } else if ((attr = ippFindAttribute(request, "job-sheets-default",
+                                         IPP_TAG_NAME)) != NULL) {
+-      if (attr->num_values > 0) s = attr->values[0].string.text;
++      if (ippGetCount(attr) > 0) s = ippGetString(attr, 0, NULL);
+       else s = u;
+-      if (attr->num_values > 1) t = attr->values[1].string.text;
++      if (ippGetCount(attr) > 1) t = ippGetString(attr, 1, NULL);
+       else t = (char *)u;
+     } else {
+       s = u;
+@@ -795,20 +797,20 @@
+           CupsHelper::port(),dests[dest_pos].name);
+   ippAddString(request,IPP_TAG_OPERATION,IPP_TAG_URI,
+                "printer-uri",NULL,buffer);
+-  request->request.op.operation_id = IPP_GET_PRINTER_ATTRIBUTES;
++  ippSetOperation(request, IPP_GET_PRINTER_ATTRIBUTES);
+   request = CupsHelper::processRequest(request,"/printers/");
+ 
+   // Get the default settings
+ 
+   ipp_attribute_t *attr;
+-  if ((request) && (request->curtag == IPP_TAG_PRINTER))
++  if (request)
+     attr = ippFindAttribute(request,"job-sheets-default", IPP_TAG_NAME);
+   else attr = NULL;
+   u = before->menu()->label();
+   if (attr) {
+-    if (attr->num_values > 0) s = attr->values[0].string.text;
++    if (ippGetCount(attr) > 0) s = ippGetString(attr, 0, NULL);
+     else s = u;
+-    if (attr->num_values > 1) t = attr->values[1].string.text;
++    if (ippGetCount(attr) > 1) t = ippGetString(attr, 1, NULL);
+     else t = u;
+   } else {
+     s = u;
+@@ -2500,7 +2502,7 @@
+     // Redraw the destination menu in the main window
+ 
+     printerPack->parent()->redraw();
+-    printerPack->draw();
++    printerPack->redraw();
+   
+   }
+ 
+@@ -2674,7 +2676,7 @@
+   // Redraw the destination menu in the main window
+ 
+   printerPack->parent()->redraw();
+-  printerPack->draw();
++  printerPack->redraw();
+   
+   return(dest_index);
+ }
