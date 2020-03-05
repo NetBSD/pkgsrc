@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1370 2020/03/05 14:56:52 thorpej Exp $
+$NetBSD: CHANGES-2020,v 1.1371 2020/03/05 16:12:05 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1922,3 +1922,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added games/corsix-th version 0.63 [nia 2020-03-05]
 	Added fonts/comic-neue version 2.3 [nia 2020-03-05]
 	Updated emulators/tme to 0.8nb41 [thorpej 2020-03-05]
+	Added cross/asm6809 version 2.12 [jperkin 2020-03-05]
