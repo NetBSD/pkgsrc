@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2019/09/18 18:27:11 nia Exp $
+# $NetBSD: Makefile,v 1.83 2020/03/05 12:57:41 nia Exp $
 
 DISTNAME=	openttd-1.9.3-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c gnu++11
 USE_TOOLS+=	gmake pkg-config
 BUILD_DEFS+=	VARBASE
 BUILD_TARGET=	bundle
