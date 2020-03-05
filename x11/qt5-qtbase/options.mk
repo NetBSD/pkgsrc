@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.13 2019/07/24 19:44:55 nia Exp $
+# $NetBSD: options.mk,v 1.14 2020/03/05 11:56:19 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt5
-PKG_SUPPORTED_OPTIONS+=	cups eglfs gtk3
+PKG_SUPPORTED_OPTIONS+=	cups gtk3
 
 .include "../../mk/bsd.options.mk"
 
@@ -13,12 +13,6 @@ PLIST.cups=		yes
 .else
 CONFIGURE_ARGS+=	-no-cups
 .endif
-
-#.if !empty(PKG_OPTIONS:Megl)
-#CONFIGURE_ARGS+=	-no-eglfs
-#.else
-#CONFIGURE_ARGS+=	-no-eglfs
-#.endif
 
 PLIST_VARS+=		gtk3
 .if !empty(PKG_OPTIONS:Mgtk3)
