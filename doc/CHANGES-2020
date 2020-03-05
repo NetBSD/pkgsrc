@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1375 2020/03/05 20:19:06 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1376 2020/03/05 20:24:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1927,3 +1927,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/hub to 2.14.2 [leot 2020-03-05]
 	Updated audio/fasttracker2 to 1.10 [fox 2020-03-05]
 	Updated chat/py-mastodon to 1.5.0 [nia 2020-03-05]
+	Updated chat/tootstream to 0.3.8.1 [nia 2020-03-05]
