@@ -1,4 +1,6 @@
-$NetBSD: patch-pdftexdir_pdftoepdf-poppler0.75.0.cc,v 1.2 2020/01/11 00:31:05 ryoon Exp $
+$NetBSD: patch-pdftexdir_pdftoepdf-poppler0.75.0.cc,v 1.3 2020/03/05 06:21:42 wiz Exp $
+
+Fix build with poppler 0.86.1.
 
 --- pdftexdir/pdftoepdf-poppler0.75.0.cc.orig	2019-03-21 06:38:16.000000000 +0000
 +++ pdftexdir/pdftoepdf-poppler0.75.0.cc
@@ -59,7 +61,12 @@ $NetBSD: patch-pdftexdir_pdftoepdf-poppler0.75.0.cc,v 1.2 2020/01/11 00:31:05 ry
          }
      }
  #else
-@@ -761,7 +761,7 @@ read_pdf_info(char *image_name, char *pa
+@@ -757,15 +757,14 @@ read_pdf_info(char *image_name, char *pa
+     if (page_name) {
+         // get page by name
+         GString name(page_name);
+-        LinkDest *link = pdf_doc->doc->findDest(&name);
++        std::unique_ptr<LinkDest> link = pdf_doc->doc->findDest(&name);
          if (link == 0 || !link->isOk())
              pdftex_fail("PDF inclusion: invalid destination <%s>", page_name);
          Ref ref = link->getPageRef();
@@ -68,7 +75,11 @@ $NetBSD: patch-pdftexdir_pdftoepdf-poppler0.75.0.cc,v 1.2 2020/01/11 00:31:05 ry
          if (page_num == 0)
              pdftex_fail("PDF inclusion: destination is not a page <%s>",
                          page_name);
-@@ -1107,7 +1107,5 @@ void epdf_check_mem()
+-        delete link;
+     } else {
+         // get page by number
+         if (page_num <= 0 || page_num > epdf_num_pages)
+@@ -1107,7 +1106,5 @@ void epdf_check_mem()
              n = p->next;
              delete_document(p);
          }
