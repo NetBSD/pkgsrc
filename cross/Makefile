@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2019/10/17 20:56:39 maya Exp $
+# $NetBSD: Makefile,v 1.93 2020/03/05 16:12:50 jperkin Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -9,6 +9,7 @@ SUBDIR+=	aarch64-none-elf-gcc
 SUBDIR+=	arm-none-eabi-binutils
 SUBDIR+=	arm-none-eabi-gcc
 SUBDIR+=	arm-none-eabi-gdb
+SUBDIR+=	asm6809
 SUBDIR+=	atasm
 SUBDIR+=	avr-binutils
 SUBDIR+=	avr-gcc
