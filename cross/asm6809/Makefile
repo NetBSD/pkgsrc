@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2020/03/05 16:11:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/05 16:17:55 jperkin Exp $
 
 DISTNAME=	asm6809-2.12
 CATEGORIES=	cross
 MASTER_SITES=	https://www.6809.org.uk/asm6809/dl/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.6809.org.uk/asm6809/dl/
+HOMEPAGE=	https://www.6809.org.uk/asm6809/
 COMMENT=	Portable assembler targeting Motorola 6809 and Hitachi 6309
 LICENSE=	gnu-gpl-v3
 
