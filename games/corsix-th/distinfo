@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/05 13:59:55 nia Exp $
+
+SHA1 (corsix-th-0.63.tar.gz) = 9217c18b1dfb426077e6c2dea486593debc82ac4
+RMD160 (corsix-th-0.63.tar.gz) = 13eed22e75a34761ecf238dc7aee2e86d6c7c386
+SHA512 (corsix-th-0.63.tar.gz) = 73a170bbf3da0e11ffe30fcbafb80f9e3852ce992dd6ecae2a2da332b9d4927a98efb0208e2056918a4100db54d1bdc564454cadae370cfab87625ca3f9889fd
+Size (corsix-th-0.63.tar.gz) = 4040119 bytes
