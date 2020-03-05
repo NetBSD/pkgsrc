@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.483 2020/03/05 09:15:39 micha Exp $
+# $NetBSD: Makefile,v 1.484 2020/03/05 13:59:55 nia Exp $
 #
 
 COMMENT=	Games
@@ -69,6 +69,7 @@ SUBDIR+=	colchess
 SUBDIR+=	colchess-book-colchess
 SUBDIR+=	colchess-book-large
 SUBDIR+=	corewars
+SUBDIR+=	corsix-th
 SUBDIR+=	cosmosmash
 SUBDIR+=	crack-attack
 SUBDIR+=	crack-attack-sounds
