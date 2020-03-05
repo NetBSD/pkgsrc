@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: R2pkg.sh,v 1.15 2020/03/05 17:07:54 brook Exp $
+# $NetBSD: R2pkg.sh,v 1.16 2020/03/05 17:15:31 brook Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -153,7 +153,7 @@ preserve_original_content ()
 
 make_package ()
 {
-    env LEVEL="$level" rpkg="$rpkg" PACKAGES_LIST="$packages_list" \
+    env LEVEL="$level" RPKG="$rpkg" PACKAGES_LIST="$packages_list" \
 	R2PKG="$r2pkg" ARGS="$args" RECURSIVE="$recursive" \
 	UPDATE="$update" DEPENDENCY_LIST="$dependency_list" \
 	MAINTAINER_EMAIL="$maintainer_email" \
