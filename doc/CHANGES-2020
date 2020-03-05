@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1363 2020/03/05 09:49:35 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1364 2020/03/05 10:19:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1914,3 +1914,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added misc/abduco version 0.6 [nia 2020-03-04]
 	Updated print/poppler to 0.86.1 [wiz 2020-03-04]
 	Added security/rvault version 0.1 [wiz 2020-03-05]
+	Updated lang/nodejs to 13.10.1 [adam 2020-03-05]
+	Updated sysutils/ansible to 2.9.6 [adam 2020-03-05]
