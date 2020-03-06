@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1382 2020/03/06 12:04:22 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1383 2020/03/06 12:23:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1934,3 +1934,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed comms/libopensync-plugin-evolution2 [nia 2020-03-06]
 	Removed devel/mico [nia 2020-03-06]
 	Removed devel/sfio [nia 2020-03-06]
+	Added emulators/caprice32 version 4.5.0 [nia 2020-03-06]
