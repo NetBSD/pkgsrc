@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2020/02/15 02:26:58 manu Exp $
+# $NetBSD: Makefile,v 1.117 2020/03/06 11:16:28 nia Exp $
 #
 
 COMMENT=	Communication utilities
@@ -33,7 +33,6 @@ SUBDIR+=	kyopon
 SUBDIR+=	libhidapi
 SUBDIR+=	libmal
 SUBDIR+=	libopensync
-SUBDIR+=	libopensync-plugin-evolution2
 SUBDIR+=	libopensync-plugin-file
 SUBDIR+=	libopensync-plugin-syncml
 SUBDIR+=	libsyncml
