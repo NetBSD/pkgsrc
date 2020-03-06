@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/08/11 13:22:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/06 13:39:26 nia Exp $
 
 DISTNAME=	libquic-0.0.3
 PKGREVISION=	4
@@ -21,6 +21,8 @@ SUBST_SED.link=		-e 's|@PREFIX@|'${PREFIX}'|'
 SUBST_STAGE.go=		pre-configure
 SUBST_FILES.go=		boringssl/CMakeLists.txt
 SUBST_SED.go=		-e '/find_program.GO_EXECUTABLE/s,go,${GO},'
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	cmake gmake perl
