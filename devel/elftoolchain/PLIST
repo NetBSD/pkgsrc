@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/10/01 12:36:35 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/03/06 11:40:00 nia Exp $
 bin/addr2line
 bin/ar
 bin/brandelf
@@ -27,24 +27,20 @@ lib/libdwarf.so
 lib/libdwarf.so.3
 lib/libdwarf.so.3.0
 lib/libdwarf_p.a
-lib/libdwarf_pic.a
 lib/libelf.a
 lib/libelf.so
 lib/libelf.so.1
 lib/libelf.so.1.0
 lib/libelf_p.a
-lib/libelf_pic.a
 lib/libelftc.a
 lib/libelftc.so
 lib/libelftc.so.1
 lib/libelftc.so.1.0
 lib/libelftc_p.a
-lib/libelftc_pic.a
 lib/libpe.a
 lib/libpe.so
 lib/libpe.so.1
 lib/libpe_p.a
-lib/libpe_pic.a
 man/man1/addr2line.1
 man/man1/ar.1
 man/man1/brandelf.1
