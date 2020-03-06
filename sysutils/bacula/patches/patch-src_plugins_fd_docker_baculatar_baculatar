@@ -1,0 +1,22 @@
+$NetBSD: patch-src_plugins_fd_docker_baculatar_baculatar,v 1.1 2020/03/06 19:48:48 jnemeth Exp $
+
+--- src/plugins/fd/docker/baculatar/baculatar.orig	2020-02-26 14:11:43.000000000 +0000
++++ src/plugins/fd/docker/baculatar/baculatar
+@@ -23,7 +23,7 @@
+ #echo "EXEC:" $0
+ #echo "ARGV:" $*
+ 
+-if [ "x$0" == "x$1" ]
++if [ "x$0" = "x$1" ]
+ then
+    shift 1
+ fi
+@@ -33,7 +33,7 @@ then
+    ARGV=$1
+ fi
+ #echo "params:" $ARGV
+-if [ $ARGV == "gimmetheshell" ]
++if [ $ARGV = "gimmetheshell" ]
+ then
+    exec /bin/sh
+ fi
