@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2020/02/05 14:10:35 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.38 2020/03/06 14:32:11 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -4905,6 +4905,7 @@ ${PKGNAME}/lib/libreoffice/share/classification/example_pt-BR.xml
 ${PKGNAME}/lib/libreoffice/share/classification/example_sl-SI.xml
 ${PKGNAME}/lib/libreoffice/share/config/images_breeze.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_breeze_dark.zip
+${PKGNAME}/lib/libreoffice/share/config/images_breeze_dark_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_breeze_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_colibre.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_colibre_svg.zip
@@ -4914,6 +4915,7 @@ ${PKGNAME}/lib/libreoffice/share/config/images_karasa_jaga.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_karasa_jaga_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_sifr.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_sifr_dark.zip
+${PKGNAME}/lib/libreoffice/share/config/images_sifr_dark_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_sifr_svg.zip
 ${PKGNAME}/lib/libreoffice/share/config/images_tango.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/aboutconfigdialog.ui
