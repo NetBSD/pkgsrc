@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2018/10/01 12:36:35 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2020/03/06 11:40:00 nia Exp $
 
 SHA1 (elftoolchain-0.7.1.tar.bz2) = fdab1804543e47887bd73f1177b723af21ab47ae
 RMD160 (elftoolchain-0.7.1.tar.bz2) = 9e341f86573d80dd2b390d79cf82f239ecd279ff
@@ -9,3 +9,4 @@ SHA1 (patch-libdwarf_Makefile) = bea37cf65de237146dc51a71aed04581bc6c1d95
 SHA1 (patch-libelf_Makefile) = 29fdcead0e1d01ba2cf1d9e16e9d50bc041c9eec
 SHA1 (patch-libelftc_Makefile) = 64990e254ca3c55615cc3746fa948d7e0ca1fcb4
 SHA1 (patch-libelftc___libelftc.h) = db63ca28c25ccf92b9b15ffcaf016bf2bd3d291d
+SHA1 (patch-libelftc_make-toolchain-version) = a1c82a9bcfbf819f5712fbec4f4a3ad07f4abd11
