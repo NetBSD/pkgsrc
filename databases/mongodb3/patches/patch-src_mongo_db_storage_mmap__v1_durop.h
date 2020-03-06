@@ -1,6 +1,6 @@
-$NetBSD: patch-src_mongo_db_storage_mmap__v1_durop.h,v 1.1 2020/03/05 01:41:52 gdt Exp $
+$NetBSD: patch-src_mongo_db_storage_mmap__v1_durop.h,v 1.2 2020/03/06 14:22:46 gdt Exp $
 
-\todo Explain this patch.
+This file uses std::shared_ptr, but did not include the memory header as required.
 
 \todo File upstream and add upstream bugtracker URL.
 
