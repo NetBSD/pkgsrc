@@ -1,7 +1,16 @@
-$NetBSD: patch-src_third__party_wiredtiger_src_os__posix_os__fs.c,v 1.2 2020/03/05 01:41:52 gdt Exp $
+$NetBSD: patch-src_third__party_wiredtiger_src_os__posix_os__fs.c,v 1.3 2020/03/06 14:22:46 gdt Exp $
 
-On NetBSD, fdatasync() fails with "Bad file descriptor".
-\todo Explain if this is only for fdatasync on directories vs files.
+Without this patch, the WT_PANIC_RET message happens, with errno EBADF.
+The fdatasync() function is specified to fail if fd is not a valid file
+descriptor that is open for writing.  We believe that it is being called
+on a directory, which is therefore invalid.  On Linux, one can use
+fdatasync() on non-writable file descriptors, but the Linux man page
+acknowledges that this is non-standard behavior.
+
+To work around this upstream bug, silently ignore fdatasync errno values
+of EBADF.  A better fix is likely to use fsync on directories instead.
+
+\todo Explore the fsync instead approach.
 
 \todo File upstream and add upstream bugtracker URL.
 
