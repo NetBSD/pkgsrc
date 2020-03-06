@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2020/03/06 12:23:01 nia Exp $
+
+For copyright reasons ROM files cannot be redistributed with the package.
+
+Caprice32 searches ${PREFIX}/share/caprice32/rom for BASIC and AMSDOS ROM
+images in MAME/MESS format (only not compressed), e.g. cpc6128.rom and
+amsdos.rom.
+
+Note that Caprice32's executable name is "cap32" rather than "caprice32".
+
+The F1 key opens Caprice32's menu.
+
+===========================================================================
