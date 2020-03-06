@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/01/20 21:54:01 nia Exp $
+# $NetBSD: Makefile,v 1.63 2020/03/06 11:12:11 nia Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -15,6 +15,10 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		pkg-config
+
+.include "../../mk/oss.buildlink3.mk"
+
+LIBS+=			${LIBOSSAUDIO}
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}	# not really needed
 CONFIGURE_ENV+=		ac_cv_path_AUDIOFILE_CONFIG="pkg-config audiofile"
