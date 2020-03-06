@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/22 09:44:41 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/06 11:39:02 nia Exp $
 
 DISTNAME=	libdazzle-3.34.1
 CATEGORIES=	devel gnome
@@ -22,5 +22,6 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/libdazzle-1.0.pc
 
 .include "../../devel/meson/build.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
