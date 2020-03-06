@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2020/01/18 23:30:36 rillig Exp $
+# $NetBSD: Makefile,v 1.59 2020/03/06 11:48:57 nia Exp $
 
 DISTNAME=		prcs-1.3.3
 PKGREVISION=		14
@@ -13,7 +13,7 @@ LICENSE=		gnu-gpl-v2
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		lispdir=${PREFIX}/share/examples/prcs
 INFO_FILES=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 BUILD_DEFS+=		VARBASE
 CONFIGURE_ENV+=		EMACS=no
 CONFIGURE_ENV+=		PRCS_REPOSITORY=${VARBASE:Q}/PRCS
