@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2013/07/16 02:12:26 rodent Exp $
+$NetBSD: patch-tools_sip__reg.c,v 1.1 2020/03/06 13:01:47 nia Exp $
 
 Pull in NetBSD compatibility headers for use with other headers.
 
---- tools/sip_reg.c.orig	2012-11-15 17:51:44.000000000 +0000
+--- tools/sip_reg.c.orig	2020-01-16 21:29:27.000000000 +0000
 +++ tools/sip_reg.c
-@@ -56,8 +56,14 @@
+@@ -60,8 +60,14 @@
  
  #if !defined(WIN32) && !defined(_WIN32_WCE) && !defined(__arc__)
  #define _GNU_SOURCE
