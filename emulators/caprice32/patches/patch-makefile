@@ -1,0 +1,53 @@
+$NetBSD: patch-makefile,v 1.1 2020/03/06 12:23:01 nia Exp $
+
+We pass our own flags.
+
+--- makefile.orig	2019-01-04 19:01:29.000000000 +0000
++++ makefile
+@@ -50,7 +50,6 @@ COMMON_CFLAGS += -DWITH_IPF
+ LIBS += $(MINGW_PATH)/bin/$(CAPSIPFDLL)
+ endif
+ else
+-prefix = /usr/local
+ TARGET = cap32
+ TEST_TARGET = test_runner
+ IPATHS = -Isrc/ -Isrc/gui/includes `pkg-config --cflags freetype2` `sdl-config --cflags` `pkg-config --cflags libpng`
+@@ -97,7 +96,7 @@ TEST_OBJECTS:=$(TEST_DEPENDS:.d=.o)
+ WARNINGS = -Wall -Wextra -Wzero-as-null-pointer-constant -Wformat=2 -Wold-style-cast -Wmissing-include-dirs -Wlogical-op -Woverloaded-virtual -Wpointer-arith -Wredundant-decls
+ COMMON_CFLAGS += $(CFLAGS) -std=c++11 $(IPATHS)
+ DEBUG_FLAGS = -Werror -g -O0 -DDEBUG
+-RELEASE_FLAGS = -O2 -funroll-loops -ffast-math -fomit-frame-pointer -fno-strength-reduce -finline-functions -s
++RELEASE_FLAGS = -ffast-math -fno-strength-reduce -finline-functions
+ BUILD_FLAGS = $(RELEASE_FLAGS)
+ 
+ debug: BUILD_FLAGS:=$(DEBUG_FLAGS)
+@@ -117,7 +116,7 @@ ifdef DEBUG
+ BUILD_FLAGS = $(DEBUG_FLAGS)
+ all: check_deps debug
+ else
+-all: check_deps distrib
++all: check_deps $(TARGET)
+ endif
+ 
+ # gtest doesn't build with warnings flags, hence the COMMON_CFLAGS
+@@ -204,11 +203,15 @@ distrib: $(TARGET)
+ 	ln -s caprice32-$(VERSION).tar.bz2 $(ARCHIVE)/caprice32_$(VERSION).orig.tar.bz2 || true
+ 
+ install: $(TARGET)
+-	install -D $(TARGET) $(DESTDIR)$(prefix)/bin/$(TARGET)
+-	install -D $(GROFF_DOC) $(DESTDIR)$(prefix)/share/man/man6/cap32.6
+-	install -D -m664 cap32.cfg $(DESTDIR)/etc/cap32.cfg
+-	mkdir -p $(DESTDIR)$(prefix)/share/caprice32
+-	cp -r resources rom $(DESTDIR)$(prefix)/share/caprice32
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(prefix)/bin
++	$(BSD_INSTALL_PROGRAM) $(TARGET) $(DESTDIR)$(prefix)/bin/$(TARGET)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(prefix)/$(PKGMANDIR)/man6
++	$(BSD_INSTALL_MAN) $(GROFF_DOC) $(DESTDIR)$(prefix)/$(PKGMANDIR)/man6/cap32.6
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(prefix)/share/examples/caprice32
++	$(BSD_INSTALL_DATA) cap32.cfg $(DESTDIR)$(prefix)/share/examples/caprice32/cap32.cfg
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(prefix)/share/caprice32/resources
++	$(BSD_INSTALL_DATA) resources/* $(DESTDIR)$(prefix)/share/caprice32/resources
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(prefix)/share/caprice32/rom
+ endif
+ 
+ ####################################
