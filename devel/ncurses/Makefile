@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2020/03/05 12:52:32 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2020/03/06 08:30:19 wiz Exp $
 
 .include "Makefile.common"
 
@@ -22,6 +22,6 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/ncurses++demo.cc
 	${FIND} ${DESTDIR}${PREFIX}/${TERMINFODIR} -type f -print | ${SORT} | \
 	${SED} -e "s,^${DESTDIR}${PREFIX}/,," >${WRKDIR}/PLIST.terminfo
-	${RM} ${DESTDIR}${PREFIX}/lib/terminfo
+	${RM} -f ${DESTDIR}${PREFIX}/lib/terminfo
 
 .include "../../mk/bsd.pkg.mk"
