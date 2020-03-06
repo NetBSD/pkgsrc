@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1386 2020/03/06 13:02:00 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1387 2020/03/06 14:22:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1938,3 +1938,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed emulators/arnold [nia 2020-03-06]
 	Updated devel/libosip to 5.1.1 [nia 2020-03-06]
 	Updated net/libexosip to 5.1.1 [nia 2020-03-06]
+	Updated devel/cbindgen to 0.13.1 [ryoon 2020-03-06]
