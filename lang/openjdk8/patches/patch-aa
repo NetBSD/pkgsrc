@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.8 2019/07/25 12:00:08 tnn Exp $
+$NetBSD: patch-aa,v 1.9 2020/03/06 10:50:08 tnn Exp $
 
 -DragonFly support.
 -Add workaround for missing  sem_timedwait() in NetBSD < 6.99.4
 
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2019-07-18 21:55:16.000000000 +0000
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2020-01-16 18:18:12.000000000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
-@@ -114,7 +114,7 @@
+@@ -110,7 +110,7 @@
  # include <vm/vm_param.h>
  #endif
  
@@ -140,3 +140,12 @@ $NetBSD: patch-aa,v 1.8 2019/07/25 12:00:08 tnn Exp $
      if (os_sigaction == NULL) return;
    }
  
+@@ -4028,7 +4064,7 @@ void os::set_native_thread_name(const ch
+ #elif defined(__FreeBSD__) || defined(__OpenBSD__)
+     pthread_set_name_np(pthread_self(), name);
+ #elif defined(__NetBSD__)
+-    pthread_setname_np(pthread_self(), "%s", name);
++    pthread_setname_np(pthread_self(), "%s", (void*)name);
+ #endif
+   }
+ }
