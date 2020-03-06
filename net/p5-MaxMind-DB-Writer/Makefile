@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/08/11 13:22:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/06 08:46:16 fcambus Exp $
 
 DISTNAME=	MaxMind-DB-Writer-0.300003
 PKGNAME=	p5-${DISTNAME}
@@ -30,10 +30,10 @@ TEST_DEPENDS+=	p5-JSON>=0:../../converters/p5-JSON
 TEST_DEPENDS+=	p5-Data-Printer>=0:../../devel/p5-Data-Printer
 TEST_DEPENDS+=	p5-Devel-Refcount>=0:../../devel/p5-Devel-Refcount
 TEST_DEPENDS+=	p5-List-AllUtils>=0:../../devel/p5-List-AllUtils
-#TEST_DEPENDS+=	p5-Test-Bits>=0:../../devel/p5-Test-Bits # XXX: import from wip
+TEST_DEPENDS+=	p5-Test-Bits>=0:../../devel/p5-Test-Bits
 TEST_DEPENDS+=	p5-Test-Fatal>=0:../../devel/p5-Test-Fatal
 TEST_DEPENDS+=	p5-Test-Requires>=0:../../devel/p5-Test-Requires
-#TEST_DEPENDS+=	p5-Test-HexDifferences>=0:../../devel/p5-Test-HexDifferences # XXX: import from wip
+TEST_DEPENDS+=	p5-Test-HexDifferences>=0:../../devel/p5-Test-HexDifferences
 TEST_DEPENDS+=	p5-Test-Warnings>=0:../../devel/p5-Test-Warnings
 
 PERL5_MODULE_TYPE=	Module::Build
