@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.89 2020/02/08 22:26:42 jdolecek Exp $
+# $NetBSD: Makefile,v 1.90 2020/03/06 10:50:08 tnn Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
-PKGREVISION= 	1
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 MASTER_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}	# for bootstrap kits
 GITHUB_PROJECT=	openjdk-jdk8u
-GITHUB_TAG=	jdk8u232-b09.1
+GITHUB_TAG=	jdk8u242-b07.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://openjdk.java.net/
@@ -250,7 +249,7 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/cacerts.out				\
 	  ${DESTDIR}${JAVA_HOME}/jre/lib/security/cacerts
 	rm -f ${DESTDIR}${JAVA_HOME}/include/jni_md.h
-	ln -s ${LOWER_OPSYS:S/sunos/solaris/}/jni_md.h					\
+	ln -s ${LOWER_OPSYS:S/sunos/solaris/}/jni_md.h			\
 	  ${DESTDIR}${JAVA_HOME}/include/jni_md.h
 
 .if ${OPSYS} == "NetBSD"
