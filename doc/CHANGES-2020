@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1381 2020/03/06 11:46:21 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1382 2020/03/06 12:04:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1933,3 +1933,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/openjdk8 to 1.8.242 [tnn 2020-03-06]
 	Removed comms/libopensync-plugin-evolution2 [nia 2020-03-06]
 	Removed devel/mico [nia 2020-03-06]
+	Removed devel/sfio [nia 2020-03-06]
