@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/01/22 14:03:53 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/03/06 13:56:27 wiz Exp $
 lib/pkgconfig/Qt5Designer.pc
 lib/pkgconfig/Qt5Help.pc
 lib/pkgconfig/Qt5UiTools.pc
@@ -259,8 +259,8 @@ qt5/lib/cmake/Qt5Designer/Qt5DesignerConfigVersion.cmake
 qt5/lib/cmake/Qt5Designer/Qt5Designer_QQuickWidgetPlugin.cmake
 qt5/lib/cmake/Qt5DesignerComponents/Qt5DesignerComponentsConfig.cmake
 qt5/lib/cmake/Qt5DesignerComponents/Qt5DesignerComponentsConfigVersion.cmake
-qt5/lib/cmake/Qt5DocTools/Qt5DocToolsConfig.cmake
-qt5/lib/cmake/Qt5DocTools/Qt5DocToolsConfigVersion.cmake
+${PLIST.llvm}qt5/lib/cmake/Qt5DocTools/Qt5DocToolsConfig.cmake
+${PLIST.llvm}qt5/lib/cmake/Qt5DocTools/Qt5DocToolsConfigVersion.cmake
 qt5/lib/cmake/Qt5Help/Qt5HelpConfig.cmake
 qt5/lib/cmake/Qt5Help/Qt5HelpConfigExtras.cmake
 qt5/lib/cmake/Qt5Help/Qt5HelpConfigVersion.cmake
