@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3052 2020/03/06 11:45:46 nia Exp $
+# $NetBSD: Makefile,v 1.3053 2020/03/06 12:04:01 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -2823,7 +2823,6 @@ SUBDIR+=	sdcc
 SUBDIR+=	sdcc3
 SUBDIR+=	semantic
 SUBDIR+=	semi
-SUBDIR+=	sfio
 SUBDIR+=	sfslite
 SUBDIR+=	sgb
 SUBDIR+=	shtk
