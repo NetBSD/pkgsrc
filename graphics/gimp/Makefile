@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.321 2020/03/04 22:07:26 wiz Exp $
+# $NetBSD: Makefile,v 1.322 2020/03/06 13:35:15 tnn Exp $
 
 DISTNAME=	gimp-2.10.18
 PKGREVISION=	1
@@ -59,13 +59,16 @@ PLIST_SUBST+=	GIMP_DEBUG_TOOL_DIR="bin"
 PLIST_SUBST+=	GIMP_DEBUG_TOOL_DIR="libexec"
 .endif
 
+pre-configure:
+	ln -s mypaint-brushes-2.0.pc	\
+	  ${BUILDLINK_DIR}/share/pkgconfig/mypaint-brushes-1.0.pc
+	
 .include "options.mk"
 .include "../../archivers/xz/buildlink3.mk"
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.8.1
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 .include "../../fonts/fontconfig/buildlink3.mk"
