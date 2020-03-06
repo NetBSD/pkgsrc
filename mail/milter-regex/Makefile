@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2018/02/06 13:38:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2020/03/06 12:33:03 nia Exp $
 
 DISTNAME=	milter-regex-1.7
 PKGREVISION=	2
@@ -30,13 +30,7 @@ SUBST_SED.var=		-e 's|/var/spool|${VARBASE}|g'
 
 LDFLAGS.SunOS+=		-lnsl -lsocket
 
-.include "../../mk/bsd.prefs.mk"
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-_WRAP_EXTRA_ARGS.CC+=	-Wno-unused-const-variable
-CWRAPPERS_APPEND.cc+=	-Wno-unused-const-variable
-.endif
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/milter-regex ${DESTDIR}${PREFIX}/sbin
