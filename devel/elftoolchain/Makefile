@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:30:27 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/06 11:33:34 nia Exp $
 
 DISTNAME=	elftoolchain-0.7.1
 CATEGORIES=	devel
@@ -21,24 +21,13 @@ USE_TOOLS+=		m4 lex
 MAKE_ENV+=		${BSD_MAKE_ENV}
 MAKE_FLAGS+=		MKPROFILE=yes
 MAKE_FLAGS+=		INCSDIR=${PREFIX}/include
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mgcc)
-CWARNFLAGS+=		-Wno-error=sign-conversion \
-			-Wno-error=conversion \
-			-Wno-error=unused-but-set-variable \
-			-Wno-error=old-style-definition \
-			-Wno-error=shift-negative-value
-.elif !empty(PKGSRC_COMPILER:Mclang)
-CWARNFLAGS+=		-Wno-error=missing-noreturn \
-			-Wno-error=constant-logical-operand \
-			-Wno-error=conversion -Wno-error=cast-qual
-.endif
 MAKE_FLAGS+=		CWARNFLAGS=${CWARNFLAGS:Q}
 
 INSTALLATION_DIRS=	bin include lib
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/cat1 ${PKGMANDIR}/html1
 INSTALLATION_DIRS+=	${PKGMANDIR}/man3 ${PKGMANDIR}/cat3 ${PKGMANDIR}/html3
 INSTALLATION_DIRS+=	${PKGMANDIR}/man5 ${PKGMANDIR}/cat5 ${PKGMANDIR}/html5
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/bsd.pkg.mk"
