@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.313 2020/03/06 12:23:01 nia Exp $
+# $NetBSD: Makefile,v 1.314 2020/03/06 12:24:26 nia Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -17,7 +17,6 @@ SUBDIR+=	aliados
 SUBDIR+=	applyppf
 SUBDIR+=	aranym
 SUBDIR+=	arcem
-SUBDIR+=	arnold
 SUBDIR+=	atari800
 SUBDIR+=	b-em
 SUBDIR+=	blastem
