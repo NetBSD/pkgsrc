@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3051 2020/02/28 22:04:52 plunky Exp $
+# $NetBSD: Makefile,v 1.3052 2020/03/06 11:45:46 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -855,7 +855,6 @@ SUBDIR+=	memcached
 SUBDIR+=	menhir
 SUBDIR+=	mercurial
 SUBDIR+=	meson
-SUBDIR+=	mico
 SUBDIR+=	mk-configure
 SUBDIR+=	mkcmd
 SUBDIR+=	mm-common
