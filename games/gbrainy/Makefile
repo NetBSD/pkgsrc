@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2020/02/11 15:46:46 nia Exp $
+# $NetBSD: Makefile,v 1.98 2020/03/06 12:21:02 nia Exp $
 
 DISTNAME=	gbrainy-2.4.1
 PKGNAME=	gbrainy-2.41
@@ -17,6 +17,8 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake intltool pkg-config bash:run
 USE_TOOLS+=	msgfmt msgmerge xgettext
+
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
 
