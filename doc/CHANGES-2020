@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1379 2020/03/06 10:50:55 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.1380 2020/03/06 11:17:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1931,3 +1931,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/py-blurhash version 1.1.4 [nia 2020-03-05]
 	Updated textproc/miller to 5.6.2 [fcambus 2020-03-05]
 	Updated lang/openjdk8 to 1.8.242 [tnn 2020-03-06]
+	Removed comms/libopensync-plugin-evolution2 [nia 2020-03-06]
