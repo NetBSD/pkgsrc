@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19703 2020/03/04 15:53:33 wiz Exp $
+$NetBSD: TODO,v 1.19704 2020/03/06 08:18:44 fcambus Exp $
 
 Suggested new packages
 ======================
@@ -849,7 +849,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mftrace-1.2.18
 	o mg-20160118
 	o mgetty+sendfax-1.1.35
-	o miller-5.3.0
 	o milter-greylist-4.6
 	o milter-manager-2.1.1
 	o milter-regex-2.0
