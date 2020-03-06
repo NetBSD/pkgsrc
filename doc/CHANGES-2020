@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1384 2020/03/06 12:25:16 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1385 2020/03/06 12:52:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1936,3 +1936,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/sfio [nia 2020-03-06]
 	Added emulators/caprice32 version 4.5.0 [nia 2020-03-06]
 	Removed emulators/arnold [nia 2020-03-06]
+	Updated devel/libosip to 5.1.1 [nia 2020-03-06]
