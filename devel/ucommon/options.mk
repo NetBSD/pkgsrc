@@ -1,21 +1,16 @@
-# $NetBSD: options.mk,v 1.4 2020/01/25 10:45:10 jperkin Exp $
+# $NetBSD: options.mk,v 1.5 2020/03/06 12:12:58 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ucommon
-PKG_SUPPORTED_OPTIONS=	gnutls openssl tests
-PKG_SUGGESTED_OPTIONS+=	openssl
+PKG_SUPPORTED_OPTIONS=	gnutls tests
+PKG_SUGGESTED_OPTIONS+=	gnutls
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgnutls)
+CMAKE_ARGS+=	-DCRYPTO_GNUTLS=ON
 BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.0.0
 .include "../../security/gnutls/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mopenssl)
-.include "../../security/openssl/buildlink3.mk"
-CMAKE_ARGS+=	-DCRYPTO_OPENSSL=ON
-.else
-CMAKE_ARGS+=	-DCRYPTO_OPENSSL=OFF
+CMAKE_ARGS+=	-DCRYPTO_GNUTLS=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)
