@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2020/01/21 20:25:40 adam Exp $
+# $NetBSD: Makefile,v 1.71 2020/03/06 13:40:44 wiz Exp $
 
 DISTNAME=	qtwebkit-${QTWKVERSION}
 PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
@@ -13,6 +13,8 @@ HOMEPAGE=	https://github.com/qtwebkit/qtwebkit/wiki
 COMMENT=	Qt5 WebView module
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3
 EXTRACT_SUFX=	.tar.xz
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 QTWKVERSION=	5.212.0-alpha3
 
