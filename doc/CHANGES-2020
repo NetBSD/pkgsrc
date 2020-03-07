@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1395 2020/03/07 15:11:52 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1396 2020/03/07 18:31:13 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1956,3 +1956,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-ldap3 to 2.7 [adam 2020-03-07]
 	Updated time/py-dateparser to 0.7.4 [adam 2020-03-07]
 	Updated sysutils/libnotify to 0.7.9 [wiz 2020-03-07]
+	Updated misc/ascii to 3.18 [fcambus 2020-03-07]
