@@ -494,7 +494,8 @@ func (s *Suite) Test_MkLines_collectUsedVariables__simple(c *check.C) {
 
 	mklines.collectUsedVariables()
 
-	t.CheckDeepEquals(mklines.allVars.used, map[string]*MkLine{"VAR": mkline})
+	t.Check(mklines.allVars.vs, check.HasLen, 1)
+	t.CheckEquals(mklines.allVars.v("VAR").used, mkline)
 	t.CheckEquals(mklines.allVars.FirstUse("VAR"), mkline)
 }
 
@@ -513,7 +514,7 @@ func (s *Suite) Test_MkLines_collectUsedVariables__nested(c *check.C) {
 
 	mklines.collectUsedVariables()
 
-	t.CheckEquals(len(mklines.allVars.used), 5)
+	t.CheckEquals(len(mklines.allVars.vs), 5)
 	t.CheckEquals(mklines.allVars.FirstUse("lparam"), assignMkline)
 	t.CheckEquals(mklines.allVars.FirstUse("rparam"), assignMkline)
 	t.CheckEquals(mklines.allVars.FirstUse("inner"), shellMkline)
@@ -570,9 +571,11 @@ func (s *Suite) Test_MkLines_collectDocumentedVariables(c *check.C) {
 	mklines.collectDocumentedVariables()
 
 	var varnames []string
-	for varname, mkline := range mklines.allVars.used {
-		varnames = append(varnames, sprintf("%s (line %s)", varname, mkline.Linenos()))
-	}
+	mklines.allVars.forEach(func(varname string, data *scopeVar) {
+		if data.used != nil {
+			varnames = append(varnames, sprintf("%s (line %s)", varname, data.used.Linenos()))
+		}
+	})
 	sort.Strings(varnames)
 
 	expected := []string{
@@ -694,7 +697,7 @@ func (s *Suite) Test_MkLines_collectVariables__find_files_and_headers(c *check.C
 	mklines.Check()
 
 	t.CheckDeepEquals(
-		keys(mklines.allVars.firstDef),
+		keys(mklines.allVars.vs),
 		[]string{
 			"BUILTIN_FIND_FILES_VAR",
 			"BUILTIN_FIND_HEADERS_VAR",

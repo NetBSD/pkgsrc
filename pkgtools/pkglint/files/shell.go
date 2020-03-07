@@ -168,7 +168,8 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 
 	varname := varuse.varname
 
-	if vartype := G.Pkgsrc.VariableType(scc.mklines, varname); vartype != nil && vartype.basicType.name == "ShellCommand" {
+	vartype := G.Pkgsrc.VariableType(scc.mklines, varname)
+	if vartype != nil && (vartype.basicType == BtShellCommand || vartype.basicType == BtPathname) {
 		scc.checkInstallCommand(shellword)
 		return true
 	}

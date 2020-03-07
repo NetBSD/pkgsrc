@@ -64,8 +64,8 @@ func (s *Suite) Test_HomepageChecker_checkBasedOnMasterSites(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:11: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
-	delete(pkg.vars.firstDef, "MASTER_SITES")
-	delete(pkg.vars.lastDef, "MASTER_SITES")
+	pkg.vars.v("MASTER_SITES").firstDef = nil
+	pkg.vars.v("MASTER_SITES").lastDef = nil
 	pkg.vars.Define("MASTER_SITES", t.NewMkLine(pkg.File("Makefile"), 5,
 		"MASTER_SITES=\thttps://cdn.NetBSD.org/pub/pkgsrc/distfiles/"))
 
@@ -76,8 +76,8 @@ func (s *Suite) Test_HomepageChecker_checkBasedOnMasterSites(c *check.C) {
 		"WARN: filename.mk:21: HOMEPAGE should not be defined in terms of MASTER_SITEs. " +
 			"Use https://cdn.NetBSD.org/pub/pkgsrc/distfiles/ directly.")
 
-	delete(pkg.vars.firstDef, "MASTER_SITES")
-	delete(pkg.vars.lastDef, "MASTER_SITES")
+	pkg.vars.v("MASTER_SITES").firstDef = nil
+	pkg.vars.v("MASTER_SITES").lastDef = nil
 	pkg.vars.Define("MASTER_SITES", t.NewMkLine(pkg.File("Makefile"), 5,
 		"MASTER_SITES=\t${MASTER_SITE_GITHUB}"))
 
@@ -89,8 +89,8 @@ func (s *Suite) Test_HomepageChecker_checkBasedOnMasterSites(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:31: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 
-	delete(pkg.vars.firstDef, "MASTER_SITES")
-	delete(pkg.vars.lastDef, "MASTER_SITES")
+	pkg.vars.v("MASTER_SITES").firstDef = nil
+	pkg.vars.v("MASTER_SITES").lastDef = nil
 	pkg.vars.Define("MASTER_SITES", t.NewMkLine(pkg.File("Makefile"), 5,
 		"MASTER_SITES=\t# none"))
 
@@ -393,7 +393,7 @@ func (s *Suite) Test_HomepageChecker_checkReachable(c *check.C) {
 		"https://no-such-name.example.org/",
 		// The "unknown network error" is for compatibility with Go < 1.13.
 		`^WARN: filename\.mk:1: Homepage "https://no-such-name.example.org/" `+
-			`cannot be checked: (name not found|unknown network error:.*)$`)
+			`cannot be checked: (name not found|timeout|unknown network error:.*)$`)
 
 	// Syntactically invalid URLs are silently skipped since VartypeCheck.URL
 	// already warns about them.

@@ -465,8 +465,81 @@ func (src *Pkgsrc) loadTools() {
 		})
 	}
 
+	src.loadToolsPlatform()
+
 	if trace.Tracing {
 		tools.Trace()
+	}
+}
+
+func (src *Pkgsrc) loadToolsPlatform() {
+	var systems []string
+	scopes := make(map[string]*RedundantScope)
+	for _, mkFile := range src.File("mk/tools").ReadPaths() {
+		m, opsys := match1(mkFile.Base(), `^tools\.(.+)\.mk$`)
+		if !m {
+			continue
+		}
+		systems = append(systems, opsys)
+
+		mklines := LoadMk(mkFile, nil, MustSucceed)
+		scope := NewRedundantScope()
+		// Suppress any warnings, just compute the variable state.
+		scope.IsRelevant = func(*MkLine) bool { return false }
+		scope.Check(mklines)
+		scopes[opsys] = scope
+	}
+
+	// 0 = undefined, 1 = conditional, 2 = definitely assigned
+	type status int
+	statusByNameAndOpsys := make(map[string]map[string]status)
+
+	for opsys, scope := range scopes {
+		for varname, varinfo := range scope.vars {
+			if varnameCanon(varname) == "TOOLS_PLATFORM.*" {
+				var s status
+				if varinfo.vari.IsConditional() {
+					if len(varinfo.vari.WriteLocations()) == 1 {
+						s = 1
+					} else {
+						// TODO: Don't just count the number of assignments,
+						//  check whether they definitely assign the variable.
+						//  See substScope.
+						s = 2
+					}
+				} else if varinfo.vari.IsConstant() {
+					s = 2
+				} else {
+					continue
+				}
+
+				name := varnameParam(varname)
+				if statusByNameAndOpsys[name] == nil {
+					statusByNameAndOpsys[name] = make(map[string]status)
+				}
+				statusByNameAndOpsys[name][opsys] = s
+			}
+		}
+	}
+
+	for name, tool := range src.Tools.byName {
+		undefined := make(map[string]bool)
+		conditional := make(map[string]bool)
+		for _, opsys := range systems {
+			undefined[opsys] = true
+			conditional[opsys] = true
+		}
+		for opsys, status := range statusByNameAndOpsys[name] {
+			switch status {
+			case 1:
+				delete(undefined, opsys)
+			case 2:
+				delete(undefined, opsys)
+				delete(conditional, opsys)
+			}
+		}
+		tool.undefinedOn = keysSorted(undefined)
+		tool.conditionalOn = keysSorted(conditional)
 	}
 }
 
@@ -680,11 +753,16 @@ func (src *Pkgsrc) loadUntypedVars() {
 		mklines := LoadMk(path, nil, MustSucceed)
 		mklines.collectVariables()
 		mklines.collectUsedVariables()
-		def := func(varname string, mkline *MkLine) {
-			define(varnameCanon(varname), mkline)
-		}
-		forEachStringMkLine(mklines.allVars.firstDef, def)
-		forEachStringMkLine(mklines.allVars.used, def)
+		mklines.allVars.forEach(func(varname string, data *scopeVar) {
+			if data.firstDef != nil {
+				define(varnameCanon(varname), data.firstDef)
+			}
+		})
+		mklines.allVars.forEach(func(varname string, data *scopeVar) {
+			if data.used != nil {
+				define(varnameCanon(varname), data.used)
+			}
+		})
 	}
 
 	handleFile := func(pathName string, info os.FileInfo, err error) error {

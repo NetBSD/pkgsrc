@@ -384,13 +384,13 @@ func resolveVariableRefs(text string, mklines *MkLines, pkg *Package) string {
 
 			if mklines != nil {
 				// TODO: At load time, use mklines.loadVars instead.
-				if value, ok := mklines.allVars.LastValueFound(varname); ok {
+				if value, found, indeterminate := mklines.allVars.LastValueFound(varname); found && !indeterminate {
 					return value
 				}
 			}
 
 			if pkg != nil {
-				if value, ok := pkg.vars.LastValueFound(varname); ok {
+				if value, found, indeterminate := pkg.vars.LastValueFound(varname); found && !indeterminate {
 					return value
 				}
 			}
