@@ -29,6 +29,7 @@ func (ck *MkCondChecker) Check() {
 
 	checkVarUse := func(varuse *MkVarUse) {
 		var vartype *Vartype // TODO: Insert a better type guess here.
+		// See Test_MkVarUseChecker_checkAssignable__shell_command_in_exists.
 		vuc := VarUseContext{vartype, VucLoadTime, VucQuotPlain, false}
 		NewMkVarUseChecker(varuse, ck.MkLines, mkline).Check(&vuc)
 	}
