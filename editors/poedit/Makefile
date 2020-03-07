@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2020/03/07 11:05:28 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2020/03/07 11:09:44 wiz Exp $
 
 VERSION=	2.3
 DISTNAME=	poedit-${VERSION}
@@ -26,6 +26,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wextra
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
 
+# https://github.com/vslavik/poedit/issues/622
 post-build:
 	cd ${WRKSRC}/locales && ${SETENV} ${MAKE_ENV} ${GMAKE} allmo
 
