@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/07/24 11:15:41 maya Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/07 21:14:45 cheusov Exp $
 
 DISTNAME=	oksh-6.5
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ibara/}
 GITHUB_TAG=	${DISTNAME}
@@ -13,5 +14,6 @@ LICENSE=	original-bsd
 WRKSRC=		${WRKDIR}/oksh-${PKGNAME_NOREV}
 
 GNU_CONFIGURE=		yes
+PKG_SHELL=		${PREFIX}/bin/oksh
 
 .include "../../mk/bsd.pkg.mk"
