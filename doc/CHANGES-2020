@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1391 2020/03/07 09:14:44 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.1392 2020/03/07 09:18:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1949,3 +1949,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/http-parser to 2.9.3 [wiz 2020-03-07]
 	Updated lang/libLLVM to 9.0.1 [tnn 2020-03-07]
 	Updated net/synergy to 1.11.0 [tnn 2020-03-07]
+	Updated audio/picard to 2.3.1 [wiz 2020-03-07]
