@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1393 2020/03/07 11:23:35 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1394 2020/03/07 12:23:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1951,3 +1951,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/synergy to 1.11.0 [tnn 2020-03-07]
 	Updated audio/picard to 2.3.1 [wiz 2020-03-07]
 	Updated editors/poedit to 2.3 [wiz 2020-03-07]
+	Updated security/py-gssapi to 1.6.2 [adam 2020-03-07]
+	Updated devel/py-prompt_toolkit2 to 3.0.4 [adam 2020-03-07]
+	Updated databases/py-ldap3 to 2.7 [adam 2020-03-07]
+	Updated time/py-dateparser to 0.7.4 [adam 2020-03-07]
