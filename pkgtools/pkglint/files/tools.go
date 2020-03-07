@@ -33,6 +33,15 @@ type Tool struct {
 	MustUseVarForm bool
 	Validity       Validity
 	Aliases        []string
+
+	// The operating systems on which the tool is defined conditionally,
+	// usually by enclosing the tool definition in an ".if exists".
+	// See mk/tools/tools.*.mk.
+	conditionalOn []string
+
+	// The operating systems on which the tool is not defined at all.
+	// See mk/tools/tools.*.mk.
+	undefinedOn []string
 }
 
 func (tool *Tool) String() string {
@@ -152,7 +161,7 @@ func (tr *Tools) Define(name, varname string, mkline *MkLine) *Tool {
 func (tr *Tools) def(name, varname string, mustUseVarForm bool, validity Validity, aliases []string) *Tool {
 	assert(tr.IsValidToolName(name))
 
-	fresh := Tool{name, varname, mustUseVarForm, validity, aliases}
+	fresh := Tool{name, varname, mustUseVarForm, validity, aliases, nil, nil}
 
 	tool := tr.byName[name]
 	if tool == nil {

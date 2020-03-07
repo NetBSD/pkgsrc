@@ -5,15 +5,15 @@ import "gopkg.in/check.v1"
 func (s *Suite) Test_Tool_UsableAtLoadTime(c *check.C) {
 	t := s.Init(c)
 
-	nowhere := Tool{"nowhere", "", false, Nowhere, nil}
+	nowhere := Tool{"nowhere", "", false, Nowhere, nil, nil, nil}
 	t.CheckEquals(nowhere.UsableAtLoadTime(false), false)
 	t.CheckEquals(nowhere.UsableAtLoadTime(true), false)
 
-	load := Tool{"load", "", false, AfterPrefsMk, nil}
+	load := Tool{"load", "", false, AfterPrefsMk, nil, nil, nil}
 	t.CheckEquals(load.UsableAtLoadTime(false), false)
 	t.CheckEquals(load.UsableAtLoadTime(true), true)
 
-	run := Tool{"run", "", false, AtRunTime, nil}
+	run := Tool{"run", "", false, AtRunTime, nil, nil, nil}
 	t.CheckEquals(run.UsableAtLoadTime(false), false)
 	t.CheckEquals(run.UsableAtLoadTime(true), false)
 }
@@ -52,13 +52,13 @@ func (s *Suite) Test_Tool_UsableAtLoadTime__pkgconfig_builtin_mk(c *check.C) {
 func (s *Suite) Test_Tool_UsableAtRunTime(c *check.C) {
 	t := s.Init(c)
 
-	nowhere := Tool{"nowhere", "", false, Nowhere, nil}
+	nowhere := Tool{"nowhere", "", false, Nowhere, nil, nil, nil}
 	t.CheckEquals(nowhere.UsableAtRunTime(), false)
 
-	load := Tool{"load", "", false, AfterPrefsMk, nil}
+	load := Tool{"load", "", false, AfterPrefsMk, nil, nil, nil}
 	t.CheckEquals(load.UsableAtRunTime(), true)
 
-	run := Tool{"run", "", false, AtRunTime, nil}
+	run := Tool{"run", "", false, AtRunTime, nil, nil, nil}
 	t.CheckEquals(run.UsableAtRunTime(), true)
 }
 

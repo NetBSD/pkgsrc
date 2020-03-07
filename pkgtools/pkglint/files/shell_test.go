@@ -45,6 +45,20 @@ func (s *Suite) Test_SimpleCommandChecker_checkCommandStart__unknown_default(c *
 		"WARN: Makefile:8: UNKNOWN_TOOL is used but not defined.")
 }
 
+// Despite its name, the TOOLS_PATH.* name the whole shell command,
+// not just the path of its executable.
+func (s *Suite) Test_SimpleCommandChecker_checkCommandStart__TOOLS_PATH(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"CONFIG_SHELL=\t${TOOLS_PATH.bash}")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+	G.checkdirPackage(".")
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_SimpleCommandChecker_checkInstallCommand(c *check.C) {
 	t := s.Init(c)
 
@@ -841,6 +855,7 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine(c *check.C) {
 	t := s.Init(c)
 
 	t.SetUpVartypes()
+	t.SetUpTool("[", "TEST", AtRunTime)
 	t.SetUpTool("awk", "AWK", AtRunTime)
 	t.SetUpTool("cp", "CP", AtRunTime)
 	t.SetUpTool("echo", "", AtRunTime)
@@ -927,16 +942,13 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine(c *check.C) {
 		"WARN: filename.mk:1: The exitcode of \"${UNZIP_CMD}\" at the left of the | operator is ignored.")
 
 	// From x11/wxGTK28/Makefile
-	// TODO: Why is TOOLS_PATH.msgfmt not recognized?
-	//  At least, the warning should be more specific, mentioning USE_TOOLS.
 	test(""+
 		"set -e; cd ${WRKSRC}/locale; "+
 		"for lang in *.po; do "+
 		"  [ \"$${lang}\" = \"wxstd.po\" ] && continue; "+
 		"  ${TOOLS_PATH.msgfmt} -c -o \"$${lang%.po}.mo\" \"$${lang}\"; "+
 		"done",
-		"WARN: filename.mk:1: Unknown shell command \"[\".",
-		"WARN: filename.mk:1: Unknown shell command \"${TOOLS_PATH.msgfmt}\".")
+		nil...)
 
 	test("@cp from to",
 		"WARN: filename.mk:1: The shell command \"cp\" should not be hidden.")

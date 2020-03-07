@@ -562,6 +562,7 @@ func (info *varalignLine) alignValueSingle(newWidth int) {
 	}
 	fix.ReplaceAt(info.rawIndex, info.spaceBeforeValueIndex(), oldSpace, newSpace)
 	fix.Apply()
+	info.spaceBeforeValue = newSpace
 }
 
 func (info *varalignLine) alignValueInitial(newWidth int) {
@@ -855,10 +856,7 @@ func (p *varalignParts) isCanonicalFollow() bool {
 }
 
 func (p *varalignParts) isTooLongFor(valueColumn int) bool {
-	// FIXME: As of 2020-01-27, this method is called from
-	//  Test_VaralignBlock__right_margin with valueColumn == 0,
-	//  which doesn't make sense. It should at least be 8.
-	column := tabWidthAppend(valueColumn, p.value)
+	column := tabWidthAppend(imax(valueColumn, 8), p.value)
 	if p.isContinuation() {
 		column += 2
 	}

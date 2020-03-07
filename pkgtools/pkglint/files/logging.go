@@ -368,7 +368,7 @@ func (l *Logger) ShowSummary(args []string) {
 		}
 
 		l.out.Write(sprintf("%s found.\n",
-			joinSkipEmptyCambridge("and",
+			joinCambridge("and",
 				num(l.errors, "error", "errors"),
 				num(l.warnings, "warning", "warnings"),
 				num(l.notes, "note", "notes"))))

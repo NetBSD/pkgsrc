@@ -543,9 +543,10 @@ func (s *Suite) Test_Scope__commented_varassign(c *check.C) {
 	t.CheckEquals(scope.Mentioned("VAR"), mkline)
 	t.CheckEquals(scope.Commented("VAR"), mkline)
 
-	value, found := scope.LastValueFound("VAR")
+	value, found, indeterminate := scope.LastValueFound("VAR")
 	t.CheckEquals(value, "")
 	t.CheckEquals(found, false)
+	t.CheckEquals(indeterminate, false)
 }
 
 func (s *Suite) Test_Scope_Define(c *check.C) {
@@ -553,39 +554,40 @@ func (s *Suite) Test_Scope_Define(c *check.C) {
 
 	scope := NewScope()
 
-	test := func(line string, ok bool, value string) {
+	test := func(line string, found, indeterminate bool, value string) {
 		mkline := t.NewMkLine("file.mk", 123, line)
 		scope.Define("BUILD_DIRS", mkline)
 
-		actualValue, actualFound := scope.LastValueFound("BUILD_DIRS")
+		actualValue, actualFound, actualIndeterminate := scope.LastValueFound("BUILD_DIRS")
 
-		t.CheckEquals(actualValue, value)
-		t.CheckEquals(actualFound, ok)
-		t.CheckEquals(scope.value["BUILD_DIRS"], value)
+		t.CheckDeepEquals(
+			[]interface{}{actualFound, actualIndeterminate, actualValue},
+			[]interface{}{found, indeterminate, value})
+		t.CheckEquals(scope.vs["BUILD_DIRS"].value, value)
 	}
 
 	test("BUILD_DIRS?=\tdefault",
-		true, "default")
+		true, false, "default")
 
 	test(
 		"BUILD_DIRS=\tone two three",
-		true, "one two three")
+		true, false, "one two three")
 
 	test(
 		"BUILD_DIRS+=\tfour",
-		true, "one two three four")
+		true, false, "one two three four")
 
 	// Later default assignments do not have an effect.
 	test("BUILD_DIRS?=\tdefault",
-		true, "one two three four")
+		true, false, "one two three four")
 
 	test("BUILD_DIRS!=\techo dynamic",
-		false, "")
+		true, true, "")
 
-	// FIXME: This is not correct. The shell assignment sets the variable,
-	//  after which all further default assignments are ignored.
+	// The shell assignment above sets the variable to an indeterminate
+	// value, after which all further default assignments are ignored.
 	test("BUILD_DIRS?=\tdefault after shell assignment",
-		true, "default after shell assignment")
+		true, true, "")
 }
 
 func (s *Suite) Test_Scope_Mentioned(c *check.C) {
@@ -727,9 +729,7 @@ func (s *Suite) Test_Scope_DefineAll(c *check.C) {
 	dst := NewScope()
 	dst.DefineAll(src)
 
-	c.Check(dst.firstDef, check.HasLen, 0)
-	c.Check(dst.lastDef, check.HasLen, 0)
-	c.Check(dst.used, check.HasLen, 0)
+	c.Check(dst.vs, check.HasLen, 0)
 
 	src.Define("VAR", t.NewMkLine("file.mk", 1, "VAR=value"))
 	dst.DefineAll(src)
@@ -1020,23 +1020,23 @@ func (s *Suite) Test_joinSkipEmpty(c *check.C) {
 		"one, two, three")
 }
 
-func (s *Suite) Test_joinSkipEmptyCambridge(c *check.C) {
+func (s *Suite) Test_joinCambridge(c *check.C) {
 	t := s.Init(c)
 
 	t.CheckDeepEquals(
-		joinSkipEmptyCambridge("and", "", "one", "", "", "two", "", "three"),
+		joinCambridge("and", "", "one", "", "", "two", "", "three"),
 		"one, two and three")
 
 	t.CheckDeepEquals(
-		joinSkipEmptyCambridge("and", "", "one", "", ""),
+		joinCambridge("and", "", "one", "", ""),
 		"one")
 }
 
-func (s *Suite) Test_joinSkipEmptyOxford(c *check.C) {
+func (s *Suite) Test_joinOxford(c *check.C) {
 	t := s.Init(c)
 
 	t.CheckDeepEquals(
-		joinSkipEmptyOxford("and", "", "one", "", "", "two", "", "three"),
+		joinOxford("and", "", "one", "", "", "two", "", "three"),
 		"one, two, and three")
 }
 
