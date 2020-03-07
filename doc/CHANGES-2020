@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1397 2020/03/07 22:21:42 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.1398 2020/03/07 22:51:51 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1958,3 +1958,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/libnotify to 0.7.9 [wiz 2020-03-07]
 	Updated misc/ascii to 3.18 [fcambus 2020-03-07]
 	Updated textproc/lowdown to 0.6.1 [fcambus 2020-03-07]
+	Updated fonts/pcf2bdf to 1.06 [fcambus 2020-03-07]
