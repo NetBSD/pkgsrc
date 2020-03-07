@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2019/11/03 17:04:19 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/03/07 18:31:03 fcambus Exp $
 #
 
-DISTNAME=	ascii-3.15
+DISTNAME=	ascii-3.18
 CATEGORIES=	misc
 MASTER_SITES=	${HOMEPAGE}
 

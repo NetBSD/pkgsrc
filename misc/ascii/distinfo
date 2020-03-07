@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2016/03/07 19:59:32 nros Exp $
+$NetBSD: distinfo,v 1.8 2020/03/07 18:31:03 fcambus Exp $
 
-SHA1 (ascii-3.15.tar.gz) = 94ac41d8ef89daf148ebfd30333c07f6e64d4dec
-RMD160 (ascii-3.15.tar.gz) = 75c667eadaa22bb0c8d87c00a8101420b5700f8b
-SHA512 (ascii-3.15.tar.gz) = f03edc2a75421948974a67db607c59e988d116bd6b205b2458296348e00e4ed890a80df64e378ca48c26d9b889eec2276c9e08af1a31c4bdfa05e782926b5356
-Size (ascii-3.15.tar.gz) = 13075 bytes
-SHA1 (patch-aa) = c34e7341b4047a8cb57d8a4e4ff3d9113aca15aa
+SHA1 (ascii-3.18.tar.gz) = 8acca82e6efc7c848c798547ca111378d4d1da2e
+RMD160 (ascii-3.18.tar.gz) = 80b0bcfa5a89c04ce3ab4cf2bb0c08ee368c28e1
+SHA512 (ascii-3.18.tar.gz) = f3a4354971ccbdb01a6eea4ee46818bccfef0fec8d640f0eeafa984a9116fcb829fe7979488bfe62744374e8783678b99710e09fcc2ddfc6c4068ba08ab73d5d
+Size (ascii-3.18.tar.gz) = 14661 bytes
+SHA1 (patch-aa) = de19e2ef34215f0e62bc4a15710e0cbe14ee003e
