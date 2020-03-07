@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/09/06 06:02:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/03/07 12:16:20 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -310,6 +310,9 @@ ${PYSITELIB}/ldap3/utils/ntlm.pyo
 ${PYSITELIB}/ldap3/utils/ordDict.py
 ${PYSITELIB}/ldap3/utils/ordDict.pyc
 ${PYSITELIB}/ldap3/utils/ordDict.pyo
+${PYSITELIB}/ldap3/utils/port_validators.py
+${PYSITELIB}/ldap3/utils/port_validators.pyc
+${PYSITELIB}/ldap3/utils/port_validators.pyo
 ${PYSITELIB}/ldap3/utils/repr.py
 ${PYSITELIB}/ldap3/utils/repr.pyc
 ${PYSITELIB}/ldap3/utils/repr.pyo
