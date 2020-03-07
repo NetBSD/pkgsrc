@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2019/05/21 17:44:46 wiz Exp $
+$NetBSD: distinfo,v 1.12 2020/03/07 11:05:28 wiz Exp $
 
-SHA1 (poedit-2.2.3.tar.gz) = 4675bb29b7b1f7e2eada68355273ee0d36bb19a6
-RMD160 (poedit-2.2.3.tar.gz) = 682c7ef9bde1c75e3cb5088a79066ce29febc73c
-SHA512 (poedit-2.2.3.tar.gz) = 566f397add593d0b05b995cbd1cff1b063b6eb49b02058511f13c27ed5887685816f8dd9280e1a6be2dd594049c6eecd73efc5cf7835475d3cb5a94fe38f280f
-Size (poedit-2.2.3.tar.gz) = 2834106 bytes
-SHA1 (patch-aa) = ec8d4d55bbfdd890c126e2f742fd83e3612170f2
-SHA1 (patch-src_welcomescreen.cpp) = bd8ef11e4b6bae515a3bbb241bacef1f779a410d
+SHA1 (poedit-2.3.tar.gz) = 971cd53ff0032cf636da02522b69647f59cedbd4
+RMD160 (poedit-2.3.tar.gz) = e8113cd16595816a6701789bc909fe5bbaea713f
+SHA512 (poedit-2.3.tar.gz) = 7c06c30f5b4e73b1e285ee31c4e48f212d2d6a33bb715bc249fb2546e832bb9658111b0546b9eff54ed4ad2942cbb48957b1c0bbbfea5a8b45d3c290e9ea2be5
+Size (poedit-2.3.tar.gz) = 132733031 bytes
+SHA1 (patch-deps_icu4c_source_configure) = bbff019d47c8113b48c0f377e19cf07277bc750f
+SHA1 (patch-deps_icu4c_source_configure.ac) = 94564cdf420f8ca12197f77c8b9fdd5ff0b27e66
