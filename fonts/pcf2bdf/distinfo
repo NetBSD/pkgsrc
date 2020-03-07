@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 20:44:38 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/03/07 22:51:40 fcambus Exp $
 
-SHA1 (pcf2bdf-1.04.tgz) = 6fdcc10132e27d3c26ff7e4be541332ee5d4e927
-RMD160 (pcf2bdf-1.04.tgz) = 6ded73f6610673b136a751c67ec8b8423ad0d87a
-SHA512 (pcf2bdf-1.04.tgz) = dc8329047ec8529410fdb4e15cbf409293b31ed7d50a2f6771a17c0abef3c393f2566590eca133856abefd03b09247859c4e055368e9c19e20972ab2e30991b5
-Size (pcf2bdf-1.04.tgz) = 9686 bytes
-SHA1 (patch-aa) = d750333e3ac74db0666a40a6902af02d85d02ba0
-SHA1 (patch-ab) = 570763e32397296c67a88a485171b898b70247ff
+SHA1 (pcf2bdf-1.06.tar.gz) = f0c65f9300388a3c115aa7e36016ea68cfe5a313
+RMD160 (pcf2bdf-1.06.tar.gz) = 35706bf155d2db66fda2ca5ef1ae54f1d939f77e
+SHA512 (pcf2bdf-1.06.tar.gz) = a8e9f0a6ff6458d0dac63019ffd712504c226ba216c5454bddd7164907e4a53004e4c5d2686fdba24d5ecf802c4a7aa682770beec205224e057d605cae2cb6f4
+Size (pcf2bdf-1.06.tar.gz) = 10781 bytes
+SHA1 (patch-aa) = 57faca2a593b407045798f5cf3d57f0788e62f1c
