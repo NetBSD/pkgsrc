@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.90 2020/03/07 11:09:44 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2020/03/07 11:23:16 wiz Exp $
 
 VERSION=	2.3
 DISTNAME=	poedit-${VERSION}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vslavik/}
-GITHUB_TAG=	v${VERSION}-oss
+GITHUB_RELEASE=	v${VERSION}-oss
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.poedit.net/
 COMMENT=	Cross-platform gettext catalogs (.po files) editor
 LICENSE=	mit
 
-WRKSRC=			${WRKDIR}/${DISTNAME}-oss
+WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		autoconf automake autoreconf gmake msgfmt pkg-config zip:run
+USE_TOOLS+=		gmake pkg-config zip:run
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
@@ -22,13 +22,6 @@ CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 CXXFLAGS+=		-fpermissive
 BUILDLINK_TRANSFORM+=	rm:-Wall
 BUILDLINK_TRANSFORM+=	rm:-Wextra
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -fiv
-
-# https://github.com/vslavik/poedit/issues/622
-post-build:
-	cd ${WRKSRC}/locales && ${SETENV} ${MAKE_ENV} ${GMAKE} allmo
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../textproc/gtkspell3/buildlink3.mk"
