@@ -135,7 +135,7 @@ func (pkg *Package) load() ([]CurrPath, *MkLines, *MkLines) {
 		files = append(files, pkg.File(pkg.Pkgdir).ReadPaths()...)
 	}
 	files = append(files, pkg.File(pkg.Patchdir).ReadPaths()...)
-	if pkg.DistinfoFile != NewPackagePathString(pkg.vars.fallback["DISTINFO_FILE"]) {
+	if pkg.DistinfoFile != NewPackagePathString(pkg.vars.v("DISTINFO_FILE").fallback) {
 		files = append(files, pkg.File(pkg.DistinfoFile))
 	}
 
