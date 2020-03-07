@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/02/29 15:29:51 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/07 23:30:22 ryoon Exp $
 
 DISTNAME=	sphinxcontrib-htmlhelp-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sphinx-doc.org/
 COMMENT=	Sphinx API for HTML help
 LICENSE=	2-clause-bsd
+
+EXTRACT_USING=	bsdtar
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.0.0:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
