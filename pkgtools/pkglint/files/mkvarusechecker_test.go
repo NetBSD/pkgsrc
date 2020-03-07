@@ -957,6 +957,77 @@ func (s *Suite) Test_MkVarUseChecker_warnToolLoadTime__local_tool(c *check.C) {
 		"WARN: ~/category/package/Makefile:7: The tool ${MK_TOOL} cannot be used at load time.")
 }
 
+func (s *Suite) Test_MkVarUseChecker_checkAssignable(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	mklines := t.NewMkLines("filename.mk",
+		"BUILTIN_FIND_FILES_VAR:=\tBIN_FILE",
+		"BUILTIN_FIND_FILES.BIN_FILE=\t${TOOLS_PLATFORM.file} /bin/file /usr/bin/file")
+
+	mklines.ForEach(func(mkline *MkLine) {
+		ck := NewMkAssignChecker(mkline, mklines)
+		ck.checkVarassignRight()
+	})
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:2: Incompatible types: " +
+			"TOOLS_PLATFORM.file (type \"ShellCommand\") " +
+			"cannot be assigned to type \"Pathname\".")
+}
+
+// NetBSD's chsh program only allows a simple pathname for the shell, without
+// any command line arguments. This makes sense since the shell is started
+// using execve, not system (which would require shell-like argument parsing).
+//
+// Under the assumption that TOOLS_PLATFORM.sh does not contain any command
+// line arguments, it's ok in that special case. This covers most of the
+// real-life situations where this type mismatch (Pathname := ShellCommand)
+// occurs.
+func (s *Suite) Test_MkVarUseChecker_checkAssignable__shell_command_to_pathname(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	t.SetUpTool("sh", "SH", AtRunTime)
+	t.SetUpTool("bash", "BASH", AtRunTime)
+	mklines := t.NewMkLines("filename.mk",
+		"PKG_SHELL.user=\t${TOOLS_PLATFORM.sh}",
+		"PKG_SHELL.user=\t${SH}",
+		"PKG_SHELL.user=\t${BASH}")
+
+	mklines.ForEach(func(mkline *MkLine) {
+		ck := NewMkAssignChecker(mkline, mklines)
+		ck.checkVarassignRight()
+	})
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:1: Please use ${TOOLS_PLATFORM.sh:Q} " +
+			"instead of ${TOOLS_PLATFORM.sh}.")
+}
+
+func (s *Suite) Test_MkVarUseChecker_checkAssignable__shell_command_in_exists(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpTool("sh", "SH", AfterPrefsMk)
+	t.SetUpTool("bash", "BASH", AfterPrefsMk)
+	t.SetUpPkgsrc()
+	t.Chdir(".")
+	t.FinishSetUp()
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		".include \"mk/bsd.prefs.mk\"",
+		".if exists(${TOOLS_PLATFORM.sh})",
+		".elif exists(${SH})",
+		".elif exists(${BASH})",
+		".endif")
+
+	mklines.Check()
+
+	// TODO: Call MkVarUseChecker.checkAssignable with a VarUseContext of type
+	//  BtPathname here.
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_MkVarUseChecker_checkQuoting(c *check.C) {
 	t := s.Init(c)
 
@@ -1151,6 +1222,65 @@ func (s *Suite) Test_MkVarUseChecker_fixQuotingModifiers(c *check.C) {
 		"WARN: ~/filename.mk:5: Please use ${CFLAGS:N*:M*:Q} instead of ${CFLAGS:N*:Q}.",
 		"AUTOFIX: ~/filename.mk:3: Replacing \"${CFLAGS:Q}\" with \"${CFLAGS:M*:Q}\".",
 		"AUTOFIX: ~/filename.mk:5: Replacing \"${CFLAGS:N*:Q}\" with \"${CFLAGS:N*:M*:Q}\".")
+}
+
+func (s *Suite) Test_MkVarUseChecker_checkToolsPlatform(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.SetUpTool("available", "", AfterPrefsMk)
+	t.SetUpTool("cond1", "", AfterPrefsMk)
+	t.SetUpTool("cond2", "", AfterPrefsMk)
+	t.SetUpTool("undefined", "", AfterPrefsMk)
+	t.CreateFileLines("mk/tools/tools.NetBSD.mk",
+		"TOOLS_PLATFORM.available?=\t/bin/available",
+		"TOOLS_PLATFORM.cond1?=\t/usr/cond1",
+		"TOOLS_PLATFORM.cond2?=\t/usr/cond2",
+		"TOOLS_PLATFORM.undefined?=\t/usr/undefined")
+	t.CreateFileLines("mk/tools/tools.SunOS.mk",
+		"TOOLS_PLATFORM.available?=\t/bin/available",
+		"",
+		".if exists(/usr/gnu/bin/cond1)",
+		"TOOLS_PLATFORM.cond1?=\t/usr/gnu/bin/cond1",
+		".endif",
+		"",
+		".if exists(/usr/gnu/bin/cond2)",
+		"TOOLS_PLATFORM.cond2?=\t/usr/gnu/bin/cond2",
+		".else",
+		"TOOLS_PLATFORM.cond2?=\t/usr/sfw/bin/cond2",
+		".endif",
+		"",
+		"# No definition for undefined.")
+	t.Chdir(".")
+	t.FinishSetUp()
+	mklines := t.NewMkLines("filename.mk",
+		MkCvsID,
+		"",
+		".include \"mk/bsd.prefs.mk\"",
+		"",
+		".if ${OPSYS} == SunOS",
+		"post-build:",
+		"\t${TOOLS_PLATFORM.available}",
+		"\t${TOOLS_PLATFORM.cond1}",
+		"\t${TOOLS_PLATFORM.cond2}",
+		"\t${TOOLS_PLATFORM.undefined}",
+		".endif",
+		"",
+		"do-build:",
+		"\t${TOOLS_PLATFORM.available}",
+		"\t${TOOLS_PLATFORM.cond1}",
+		"\t${TOOLS_PLATFORM.cond2}",
+		"\t${TOOLS_PLATFORM.undefined}",
+		"",
+		".if defined(TOOLS_PLATFORM.undefined)",
+		"\t${TOOLS_PLATFORM.undefined}",
+		".endif")
+
+	mklines.Check()
+
+	t.CheckOutputLines(
+		"WARN: filename.mk:15: TOOLS_PLATFORM.cond1 may be undefined on SunOS.",
+		"WARN: filename.mk:17: TOOLS_PLATFORM.undefined is undefined on SunOS.")
 }
 
 func (s *Suite) Test_MkVarUseChecker_checkBuildDefs(c *check.C) {
