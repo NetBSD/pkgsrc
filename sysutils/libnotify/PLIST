@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/08/25 11:54:34 leot Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/03/07 15:11:42 wiz Exp $
 bin/notify-send
 include/libnotify/notification.h
 include/libnotify/notify-enum-types.h
@@ -9,6 +9,7 @@ lib/libnotify.so
 lib/libnotify.so.4
 lib/libnotify.so.4.0.0
 lib/pkgconfig/libnotify.pc
+man/man1/notify-send.1
 ${PLIST.doc}share/doc/libnotify/spec/notification-spec.html
 ${PLIST.introspection}share/gir-1.0/Notify-0.7.gir
 ${PLIST.doc}share/gtk-doc/html/libnotify/NotifyNotification.html

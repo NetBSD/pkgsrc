@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2020/03/07 15:11:42 wiz Exp $
+
+Accept pkgsrc version of stylesheets.
+
+--- meson.build.orig	2020-02-26 19:07:28.392563800 +0000
++++ meson.build
+@@ -54,7 +54,7 @@ configure_file(input: 'config.h.meson',
+ 
+ if get_option('man')
+   xsltproc = find_program('xsltproc', required: true)
+-  stylesheet = 'http://docbook.sourceforge.net/release/xsl-ns/current/manpages/docbook.xsl'
++  stylesheet = 'http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl'
+   xsltproc_command = [
+     xsltproc,
+     '--nonet',
