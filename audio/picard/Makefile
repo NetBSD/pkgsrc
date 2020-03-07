@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2020/01/17 06:28:29 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2020/03/07 09:18:43 wiz Exp $
 
-DISTNAME=	picard-2.2.3
+DISTNAME=	picard-2.3.1
 CATEGORIES=	audio
 MASTER_SITES=	https://musicbrainz.osuosl.org/pub/musicbrainz/picard/
 MASTER_SITES+=	ftp://ftp.eu.metabrainz.org/pub/musicbrainz/picard/
