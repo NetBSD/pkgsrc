@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.12 2020/03/07 15:18:19 maya Exp $
+# $NetBSD: gfortran.mk,v 1.13 2020/03/07 15:19:20 maya Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -42,7 +42,7 @@ POSSIBLE_GFORTRAN_VERSION?=	${CC_VERSION:C/.[0-9].[0-9]//:S/gcc-//}
     exists(${PKGSRCDIR}/lang/gcc${POSSIBLE_GFORTRAN_VERSION}/buildlink3.mk)
 GFORTRAN_VERSION?=		${POSSIBLE_GFORTRAN_VERSION}
 .else
-GFORTRAN_VERSION?=	7
+GFORTRAN_VERSION?=		7
 .endif
 
 .if !empty(PKGPATH:Mlang/gcc${GFORTRAN_VERSION}) || !empty(PKGPATH:Mdevel/patch) || \
