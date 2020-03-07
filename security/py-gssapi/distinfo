@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/08/11 12:06:15 adam Exp $
+$NetBSD: distinfo,v 1.10 2020/03/07 12:13:41 adam Exp $
 
-SHA1 (gssapi-1.6.1.tar.gz) = 8aadc242274731ad4fb9b48bbf25f2ef632c4f3c
-RMD160 (gssapi-1.6.1.tar.gz) = 995e68994680e92b51345403b282adfff84d0200
-SHA512 (gssapi-1.6.1.tar.gz) = ca77053ceb9b8097501df45492c0806f0b6aae8ebd7fd02b86e9e120eb18cec7ead75ff9a25f61e3de49b68d370adfe2d607f261dcf44b9a27b66ba649ca8193
-Size (gssapi-1.6.1.tar.gz) = 1042941 bytes
+SHA1 (gssapi-1.6.2.tar.gz) = 071facb98558ec2d9f314bb17fc08f6dc4d7c193
+RMD160 (gssapi-1.6.2.tar.gz) = 8801d273f6392ed4ec44f4ba44595b2d9509d650
+SHA512 (gssapi-1.6.2.tar.gz) = 2f9f1522d61382101808103422f1a7cf629b7a389f1dffac61fa9654ed6274bf01bc05c460484b2fe22322cb02a9f98b2985eb1e1cd1cdfaee9a59eed54303e6
+Size (gssapi-1.6.2.tar.gz) = 1043317 bytes
