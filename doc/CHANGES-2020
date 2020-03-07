@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1389 2020/03/06 19:58:39 jnemeth Exp $
+$NetBSD: CHANGES-2020,v 1.1390 2020/03/07 09:11:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1946,3 +1946,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/bacula-qt5-console to 9.6.2 [jnemeth 2020-03-06]
 	Updated sysutils/bacula-tray-monitor to 9.6.2 [jnemeth 2020-03-06]
 	Updated sysutils/bacula-tray-monitor-qt5 to 9.6.2 [jnemeth 2020-03-06]
+	Updated www/http-parser to 2.9.3 [wiz 2020-03-07]
