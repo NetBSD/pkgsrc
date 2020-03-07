@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2019/09/06 06:02:53 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/03/07 12:16:20 adam Exp $
 
-DISTNAME=	ldap3-2.6.1
+DISTNAME=	ldap3-2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/ldap3/}
