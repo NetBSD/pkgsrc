@@ -1034,6 +1034,10 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__shellword_part(c *check.C) {
 }
 
 // Tools, when used in a shell command, must not be quoted.
+// Shell commands may have command line arguments, pathnames must not.
+// The original intention of having both CONFIG_SHELL and CONFIG_SHELL_FLAGS
+// was to separate the command from its arguments.
+// It doesn't hurt though if the command includes some of the arguments as well.
 func (s *Suite) Test_MkLine_VariableNeedsQuoting__tool_in_shell_command(c *check.C) {
 	t := s.Init(c)
 
@@ -1043,11 +1047,14 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__tool_in_shell_command(c *check
 	mklines := t.SetUpFileMkLines("Makefile",
 		MkCvsID,
 		"",
-		"CONFIG_SHELL=\t${BASH}")
+		"CONFIG_SHELL=\t${BASH}",
+		"DIST_SUBDIR=\t${BASH}")
 
 	mklines.Check()
 
-	t.CheckOutputEmpty()
+	t.CheckOutputLines(
+		"WARN: ~/Makefile:4: Incompatible types: " +
+			"BASH (type \"ShellCommand\") cannot be assigned to type \"Pathname\".")
 }
 
 // This test provides code coverage for the "switch vuc.quoting" in the case
