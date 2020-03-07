@@ -194,9 +194,9 @@ func (mklines *MkLines) collectDocumentedVariables() {
 		// The commentLines include the the line containing the variable name,
 		// leaving 2 of these 3 lines for the actual documentation.
 		if commentLines >= 3 && relevant {
-			forEachStringMkLine(scope.used, func(varname string, mkline *MkLine) {
-				mklines.allVars.Define(varname, mkline)
-				mklines.allVars.Use(varname, mkline, VucRunTime)
+			scope.forEach(func(varname string, data *scopeVar) {
+				mklines.allVars.Define(varname, data.used)
+				mklines.allVars.Use(varname, data.used, VucRunTime)
 			})
 		}
 

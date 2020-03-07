@@ -182,7 +182,7 @@ func (perms ACLPermissions) String() string {
 }
 
 func (perms ACLPermissions) HumanString() string {
-	return joinSkipEmptyOxford("or",
+	return joinOxford("or",
 		condStr(perms.Contains(aclpSet), "set", ""),
 		condStr(perms.Contains(aclpSetDefault), "given a default value", ""),
 		condStr(perms.Contains(aclpAppend), "appended to", ""),
@@ -265,12 +265,12 @@ func (vt *Vartype) AlternativeFiles(perms ACLPermissions) string {
 		neg = merge(neg)
 	}
 
-	positive := joinSkipEmptyCambridge("or", pos...)
+	positive := joinCambridge("or", pos...)
 	if positive == "" {
 		return ""
 	}
 
-	negative := joinSkipEmptyCambridge("or", neg...)
+	negative := joinCambridge("or", neg...)
 	if negative == "" {
 		return positive
 	}

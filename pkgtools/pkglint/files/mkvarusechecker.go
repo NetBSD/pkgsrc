@@ -27,8 +27,10 @@ func (ck *MkVarUseChecker) Check(vuc *VarUseContext) {
 
 	ck.checkVarname(vuc.time)
 	ck.checkModifiers()
+	ck.checkAssignable(vuc)
 	ck.checkQuoting(vuc)
 
+	ck.checkToolsPlatform()
 	ck.checkBuildDefs()
 	ck.checkDeprecated()
 
@@ -445,6 +447,35 @@ func (ck *MkVarUseChecker) warnToolLoadTime(varname string, tool *Tool) {
 		"except in the package Makefile itself.")
 }
 
+func (ck *MkVarUseChecker) checkAssignable(vuc *VarUseContext) {
+	leftType := vuc.vartype
+	if leftType == nil || leftType.basicType != BtPathname {
+		return
+	}
+	rightType := G.Pkgsrc.VariableType(ck.MkLines, ck.use.varname)
+	if rightType == nil || rightType.basicType != BtShellCommand {
+		return
+	}
+
+	mkline := ck.MkLine
+	if mkline.Varcanon() == "PKG_SHELL.*" {
+		switch ck.use.varname {
+		case "SH", "BASH", "TOOLS_PLATFORM.sh":
+			return
+		}
+	}
+
+	mkline.Warnf(
+		"Incompatible types: %s (type %q) cannot be assigned to type %q.",
+		ck.use.varname, rightType.basicType.name, leftType.basicType.name)
+	mkline.Explain(
+		"Shell commands often start with a pathname.",
+		"They could also start with a list of environment variable",
+		"definitions, since that is accepted by the shell.",
+		"They can also contain addition command line arguments",
+		"that are not filenames at all.")
+}
+
 // checkVarUseWords checks whether a variable use of the form ${VAR}
 // or ${VAR:modifiers} is allowed in a certain context.
 func (ck *MkVarUseChecker) checkQuoting(vuc *VarUseContext) {
@@ -636,6 +667,40 @@ func (ck *MkVarUseChecker) warnRedundantModifierQ(mod string) {
 		"\t* package names (but not dependency patterns like pkg>=1.2)")
 	fix.Replace(bad, good)
 	fix.Apply()
+}
+
+func (ck *MkVarUseChecker) checkToolsPlatform() {
+	if ck.MkLine.IsDirective() {
+		return
+	}
+
+	varname := ck.use.varname
+	if varnameCanon(varname) != "TOOLS_PLATFORM.*" {
+		return
+	}
+
+	indentation := ck.MkLines.indentation
+	switch {
+	case indentation.DependsOn("OPSYS"),
+		indentation.DependsOn("MACHINE_PLATFORM"),
+		indentation.DependsOn(varname):
+		// TODO: Only return if the conditional is on the correct OPSYS.
+		return
+	}
+
+	toolName := varnameParam(varname)
+	tool := G.Pkgsrc.Tools.ByName(toolName)
+	if tool == nil {
+		return
+	}
+
+	if len(tool.undefinedOn) > 0 {
+		ck.MkLine.Warnf("%s is undefined on %s.",
+			varname, joinCambridge("and", tool.undefinedOn...))
+	} else if len(tool.conditionalOn) > 0 {
+		ck.MkLine.Warnf("%s may be undefined on %s.",
+			varname, joinCambridge("and", tool.conditionalOn...))
+	}
 }
 
 func (ck *MkVarUseChecker) checkBuildDefs() {
