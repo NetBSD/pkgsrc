@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.10 2020/02/23 18:33:03 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.11 2020/03/08 10:33:21 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q4 branch:
 
@@ -94,4 +94,19 @@ chat/weechat: security fix
 
 Pullup ticket #6139 - requested by morr
 www/wordpress: security fix
+
+Pullup ticket #6140 - requested by nia
+security/mbedtls: security fix
+
+Pullup ticket #6141 - requested by taca
+lang/php73: security fix
+
+Pullup ticket #6142 - requested by taca
+lang/php74: security fix
+
+Pullup ticket #6143 - requested by taca
+lang/php72: security fix
+
+Pullup ticket #6144 - requested by taca
+www/ruby-puma: security fix
 
