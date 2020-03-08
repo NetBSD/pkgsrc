@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/19 14:33:19 taca Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/08 15:29:52 taca Exp $
 
-DISTNAME=	tty-color-0.5.0
+DISTNAME=	tty-color-0.5.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
