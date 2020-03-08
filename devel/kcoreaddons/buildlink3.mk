@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2020/01/18 21:48:04 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2020/03/08 16:47:33 wiz Exp $
 
 BUILDLINK_TREE+=	kcoreaddons
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kcoreaddons
 KCOREADDONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kcoreaddons+=	kcoreaddons>=5.18.0
-BUILDLINK_ABI_DEPENDS.kcoreaddons?=	kcoreaddons>=5.64.0nb1
+BUILDLINK_ABI_DEPENDS.kcoreaddons?=	kcoreaddons>=5.66.0nb1
 BUILDLINK_PKGSRCDIR.kcoreaddons?=	../../devel/kcoreaddons
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

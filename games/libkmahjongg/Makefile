@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/02/02 02:44:53 markd Exp $
+# $NetBSD: Makefile,v 1.35 2020/03/08 16:47:44 wiz Exp $
 
 DISTNAME=	libkmahjongg-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	games
 
 HOMEPAGE=	https://www.kde.org/applications/games/

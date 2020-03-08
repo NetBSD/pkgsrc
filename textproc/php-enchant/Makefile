@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2012/10/25 06:56:45 asau Exp $
+# $NetBSD: Makefile,v 1.12 2020/03/08 16:51:29 wiz Exp $
 
 MODNAME=		enchant
 CATEGORIES+=		textproc
 COMMENT=		PHP extension for ENCHANT (spelling) support
+PKGREVISION=		1
 
 CONFIGURE_ARGS+=	--with-enchant=shared,${BUILDLINK_PREFIX.enchant}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 23:32:14 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/08 16:50:03 wiz Exp $
 
 DISTNAME=	libiptcdata-1.0.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libiptcdata/}
 
