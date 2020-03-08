@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/08/08 21:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/08 16:47:58 wiz Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT+=		Good plugins

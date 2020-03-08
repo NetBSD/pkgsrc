@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2018/11/14 22:21:15 kleink Exp $
+# $NetBSD: Makefile,v 1.34 2020/03/08 16:49:12 wiz Exp $
 #
 
 GST_PLUGINS0.10_NAME=	pango
 GST_PLUGINS0.10_DIRS=	ext/pango
 GST_PLUGINS0.10_FLAGS=	pango
-PKGREVISION=		18
+PKGREVISION=		19
 
 .include "../../multimedia/gst-plugins0.10-base/Makefile.common"
 

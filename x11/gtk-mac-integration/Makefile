@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2019/07/21 22:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/08 16:48:21 wiz Exp $
 
 DISTNAME=	gtk-mac-integration-2.0.8
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-mac-integration/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
