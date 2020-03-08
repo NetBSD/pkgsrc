@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/02/23 19:10:08 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/08 23:52:54 rillig Exp $
 
 GCC9_VERSION=	9.2.0
 
@@ -9,7 +9,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC9_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
 COMMENT=	The GNU Compiler Collection (GCC) - Release 9 Series
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
