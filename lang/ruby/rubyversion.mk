@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.214 2019/12/15 15:37:26 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.215 2020/03/08 06:35:28 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -36,6 +36,12 @@
 #
 #		Possible values: 22 24 25 26
 #		Default: 24 25 26
+#
+# RUBY_VERSIONS_INCOMPATIBLE
+#	The Ruby versions that are incompatible for the package.
+#
+#		Possible values: 22 24 25 26
+#		Default: empty
 #
 # RUBY_NOVERSION
 #	If "Yes", the package dosen't depend on any version of Ruby, such
