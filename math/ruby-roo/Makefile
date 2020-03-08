@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2019/02/06 15:30:56 taca Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/08 16:06:05 taca Exp $
 
-DISTNAME=	roo-2.8.2
+DISTNAME=	roo-2.8.3
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +9,7 @@ COMMENT=	Ruby library to read and write Spreadsheet Documents
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
-DEPENDS+=	${RUBY_PKGPREFIX}-zip-[0-9]*:../../archivers/ruby-zip
+DEPENDS+=	${RUBY_PKGPREFIX}-zip>=1.3.0:../../archivers/ruby-zip
 
 USE_LANGUAGES=	# none
 

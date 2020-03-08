@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/02/06 15:30:56 taca Exp $
+$NetBSD: distinfo,v 1.7 2020/03/08 16:06:05 taca Exp $
 
-SHA1 (roo-2.8.2.gem) = 407ac86a6e5c3fc620ac0cfa6bd3f29a7485bcc4
-RMD160 (roo-2.8.2.gem) = 992b808df6cb19e7a1e79b2c6ef65d710d8e3932
-SHA512 (roo-2.8.2.gem) = c8299c7a53fef6c7e1333281a2b186f454a4e493bd5893721cad4e975f9b8afbe71bdf6eb3741ff6c0168beb8c0e57b6717f3812d4e53299be8fe1bf44192429
-Size (roo-2.8.2.gem) = 89088 bytes
+SHA1 (roo-2.8.3.gem) = 6746ca8d14f451d2a7bfd10c5e53bc55232e7015
+RMD160 (roo-2.8.3.gem) = d237507a65a5450cd33f90a332eea61816dcdb0c
+SHA512 (roo-2.8.3.gem) = 5e60ac2ab3283d7a8c43ea63dbb5cb474595fa5578381425af55d803243d35922855bc6b8850046eecad47908f80f35fba4dd17342a40d8f65ddde43d5ef2e12
+Size (roo-2.8.3.gem) = 89088 bytes
