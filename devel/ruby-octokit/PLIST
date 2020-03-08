@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/02/05 14:59:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/03/08 14:26:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -13,6 +13,7 @@ ${GEM_LIBDIR}/lib/octokit/client.rb
 ${GEM_LIBDIR}/lib/octokit/client/apps.rb
 ${GEM_LIBDIR}/lib/octokit/client/authorizations.rb
 ${GEM_LIBDIR}/lib/octokit/client/checks.rb
+${GEM_LIBDIR}/lib/octokit/client/commit_branches.rb
 ${GEM_LIBDIR}/lib/octokit/client/commit_comments.rb
 ${GEM_LIBDIR}/lib/octokit/client/commit_pulls.rb
 ${GEM_LIBDIR}/lib/octokit/client/commits.rb
