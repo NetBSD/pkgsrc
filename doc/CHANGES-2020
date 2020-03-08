@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1426 2020/03/08 15:32:48 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1427 2020/03/08 15:38:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1988,3 +1988,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-tty-color to 0.5.1 [taca 2020-03-08]
 	Updated devel/ruby-tty-cursor to 0.7.1 [taca 2020-03-08]
 	Updated devel/ruby-tty-screen to 0.7.1 [taca 2020-03-08]
+	Updated devel/ruby-tins to 1.24.1 [taca 2020-03-08]
