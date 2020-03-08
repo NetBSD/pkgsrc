@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/03/13 17:26:39 taca Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/08 14:51:11 taca Exp $
 
-DISTNAME=	pathutil-0.16.1
+DISTNAME=	pathutil-0.16.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,6 +9,8 @@ COMMENT=	Almost like Pathname but just a little less insane
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-forwardable-extended>=2.6<3:../../devel/ruby-forwardable-extended
+
+USE_LANGUAGES=	# none
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
