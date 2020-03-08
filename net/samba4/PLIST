@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2020/01/29 12:44:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/03/08 12:39:27 tnn Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -760,7 +760,7 @@ lib/samba/vfs/recycle.${SOEXT}
 lib/samba/vfs/shadow_copy.${SOEXT}
 lib/samba/vfs/shadow_copy2.${SOEXT}
 lib/samba/vfs/shell_snap.${SOEXT}
-lib/samba/vfs/snapper.${SOEXT}
+${PLIST.dbus}lib/samba/vfs/snapper.${SOEXT}
 lib/samba/vfs/streams_depot.${SOEXT}
 lib/samba/vfs/streams_xattr.${SOEXT}
 lib/samba/vfs/syncops.${SOEXT}
@@ -858,7 +858,7 @@ man/man8/vfs_recycle.8
 man/man8/vfs_shadow_copy.8
 man/man8/vfs_shadow_copy2.8
 man/man8/vfs_shell_snap.8
-man/man8/vfs_snapper.8
+${PLIST.dbus}man/man8/vfs_snapper.8
 man/man8/vfs_streams_depot.8
 man/man8/vfs_streams_xattr.8
 man/man8/vfs_syncops.8
