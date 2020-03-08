@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.38 2019/11/14 10:24:36 wiz Exp $
+$NetBSD: distinfo,v 1.39 2020/03/08 18:30:53 maya Exp $
 
 SHA1 (xf86-video-ati-19.1.0.tar.bz2) = aea1d11c05531b03f2eb67c6785cddf6d7f30e5f
 RMD160 (xf86-video-ati-19.1.0.tar.bz2) = 86f87301b75de14f8db2e2c0bce13b5e3dd67f50
 SHA512 (xf86-video-ati-19.1.0.tar.bz2) = 73a81f6c492daf2e89067fb52b3033dc0fe6841f109627ddca1aee54a45a738c8c134443753a2a2aaa2c131e1d560057ebc76351ff2304c16407df3ff568fcd6
 Size (xf86-video-ati-19.1.0.tar.bz2) = 904558 bytes
 SHA1 (patch-configure) = bdd1014b215af69c2bb837d36829e12e86eb5764
+SHA1 (patch-src_radeon.h) = f51b077af01a111269ecb2d86b9eac45e0ba6853
