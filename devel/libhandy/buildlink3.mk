@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/01/21 14:58:09 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/03/08 16:47:38 wiz Exp $
 
 BUILDLINK_TREE+=	libhandy
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libhandy
 LIBHANDY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libhandy+=	libhandy>=0.0.13
+BUILDLINK_ABI_DEPENDS.libhandy?=		libhandy>=0.0.13nb1
 BUILDLINK_PKGSRCDIR.libhandy?=		../../devel/libhandy
 BUILDLINK_INCDIRS.libhandy+=		include/libhandy-0.0
 

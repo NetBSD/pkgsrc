@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/08/29 12:54:47 fhajny Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/03/08 16:48:14 wiz Exp $
 
 BUILDLINK_TREE+=	groonga
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	groonga
 GROONGA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.groonga+=	groonga>=7.0.4
+BUILDLINK_ABI_DEPENDS.groonga?=	groonga>=7.0.6nb3
 BUILDLINK_PKGSRCDIR.groonga?=	../../textproc/groonga
 BUILDLINK_INCDIRS.groonga+=	include/groonga
 

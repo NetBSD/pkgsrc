@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2019/12/20 00:03:11 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2020/03/08 16:51:50 wiz Exp $
 #
 
 DISTNAME=	ssystem-1.6
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11 graphics
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 

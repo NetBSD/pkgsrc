@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2019/07/21 22:23:58 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2020/03/08 16:47:27 wiz Exp $
 
 BUILDLINK_TREE+=	telepathy-mission-control
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	telepathy-mission-control
 TELEPATHY_MISSION_CONTROL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.telepathy-mission-control+=	telepathy-mission-control>=4.67
-BUILDLINK_ABI_DEPENDS.telepathy-mission-control+=	telepathy-mission-control>=4.67nb37
+BUILDLINK_ABI_DEPENDS.telepathy-mission-control+=	telepathy-mission-control>=4.67nb38
 BUILDLINK_PKGSRCDIR.telepathy-mission-control?=		../../chat/telepathy-mission-control
 
 .include "../../chat/libtelepathy/buildlink3.mk"

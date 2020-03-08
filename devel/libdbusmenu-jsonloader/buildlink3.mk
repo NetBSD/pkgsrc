@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2016/05/20 22:03:46 youri Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/03/08 16:47:36 wiz Exp $
 
 BUILDLINK_TREE+=	libdbusmenu-jsonloader
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libdbusmenu-jsonloader
 LIBDBUSMENU_JSONLOADER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdbusmenu-jsonloader+=	libdbusmenu-jsonloader>=12.10.2
+BUILDLINK_ABI_DEPENDS.libdbusmenu-jsonloader?=	libdbusmenu-jsonloader>=12.10.2nb8
 BUILDLINK_PKGSRCDIR.libdbusmenu-jsonloader?=	../../devel/libdbusmenu-jsonloader
 
 .include "../../devel/libdbusmenu-glib/buildlink3.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/01/11 15:18:46 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/08 16:50:01 wiz Exp $
 
 DISTNAME=	imv-4.1.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eXeC64/}
 GITHUB_PROJECT=	imv

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2019/11/04 21:43:37 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2020/03/08 16:48:14 wiz Exp $
 
 BUILDLINK_TREE+=	gtkspell3
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtkspell3
 GTKSPELL3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtkspell3+=	gtkspell3>=3.0
-BUILDLINK_ABI_DEPENDS.gtkspell3?=	gtkspell3>=3.0.10nb2
+BUILDLINK_ABI_DEPENDS.gtkspell3?=	gtkspell3>=3.0.10nb3
 BUILDLINK_PKGSRCDIR.gtkspell3?=		../../textproc/gtkspell3
 
 .include "../../textproc/enchant2/buildlink3.mk"

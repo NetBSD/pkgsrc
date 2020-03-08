@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2020/01/18 23:32:01 rillig Exp $
+# $NetBSD: Makefile,v 1.85 2020/03/08 16:49:38 wiz Exp $
 #
 
 DISTNAME=		grhino-0.16.1
-PKGREVISION=		23
+PKGREVISION=		24
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rhino/}
 

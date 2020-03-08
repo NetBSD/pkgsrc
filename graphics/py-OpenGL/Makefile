@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2020/01/27 06:27:24 adam Exp $
+# $NetBSD: Makefile,v 1.29 2020/03/08 16:50:06 wiz Exp $
 
 DISTNAME=	PyOpenGL-3.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyOpenGL/}
 

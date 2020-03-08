@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2020/01/19 18:20:46 maya Exp $
+# $NetBSD: Makefile,v 1.116 2020/03/08 16:47:49 wiz Exp $
 
 DISTNAME=	librsvg-2.46.4
+PKGREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
