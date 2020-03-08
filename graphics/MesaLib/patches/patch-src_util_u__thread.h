@@ -1,4 +1,4 @@
-$NetBSD: patch-src_util_u__thread.h,v 1.3 2019/10/29 09:21:54 nia Exp $
+$NetBSD: patch-src_util_u__thread.h,v 1.4 2020/03/08 10:35:03 tnn Exp $
 
 Oracle Solaris has pthread_setname_np. illumos does not.
 
@@ -6,9 +6,9 @@ Don't hard error when there's no pthread_setname_np.
 
 handle NetBSD-style pthread_setaffinity_np(3)
 
---- src/util/u_thread.h.orig	2019-10-24 16:13:04.000000000 +0000
+--- src/util/u_thread.h.orig	2020-03-05 21:34:32.000000000 +0000
 +++ src/util/u_thread.h
-@@ -69,7 +69,7 @@ static inline thrd_t u_thread_create(int
+@@ -73,7 +73,7 @@ static inline thrd_t u_thread_create(int
  static inline void u_thread_setname( const char *name )
  {
  #if defined(HAVE_PTHREAD)
@@ -17,15 +17,7 @@ handle NetBSD-style pthread_setaffinity_np(3)
     pthread_setname_np(pthread_self(), name);
  #elif DETECT_OS_FREEBSD || DETECT_OS_OPENBSD
     pthread_set_name_np(pthread_self(), name);
-@@ -78,7 +78,6 @@ static inline void u_thread_setname( con
- #elif DETECT_OS_APPLE
-    pthread_setname_np(name);
- #else
--#error Not sure how to call pthread_setname_np
- #endif
- #endif
-    (void)name;
-@@ -98,6 +97,17 @@ static inline void
+@@ -104,6 +104,17 @@ static inline void
  util_pin_thread_to_L3(thrd_t thread, unsigned L3_index, unsigned cores_per_L3)
  {
  #if defined(HAVE_PTHREAD_SETAFFINITY)
@@ -43,7 +35,7 @@ handle NetBSD-style pthread_setaffinity_np(3)
     cpu_set_t cpuset;
  
     CPU_ZERO(&cpuset);
-@@ -105,6 +115,7 @@ util_pin_thread_to_L3(thrd_t thread, uns
+@@ -111,6 +122,7 @@ util_pin_thread_to_L3(thrd_t thread, uns
        CPU_SET(L3_index * cores_per_L3 + i, &cpuset);
     pthread_setaffinity_np(thread, sizeof(cpuset), &cpuset);
  #endif
@@ -51,7 +43,7 @@ handle NetBSD-style pthread_setaffinity_np(3)
  }
  
  /**
-@@ -118,6 +129,35 @@ static inline int
+@@ -124,6 +136,35 @@ static inline int
  util_get_L3_for_pinned_thread(thrd_t thread, unsigned cores_per_L3)
  {
  #if defined(HAVE_PTHREAD_SETAFFINITY)
@@ -87,11 +79,20 @@ handle NetBSD-style pthread_setaffinity_np(3)
     cpu_set_t cpuset;
  
     if (pthread_getaffinity_np(thread, sizeof(cpuset), &cpuset) == 0) {
-@@ -138,6 +178,7 @@ util_get_L3_for_pinned_thread(thrd_t thr
+@@ -144,6 +185,7 @@ util_get_L3_for_pinned_thread(thrd_t thr
        return L3_index;
     }
  #endif
 +#endif
     return -1;
  }
+ 
+@@ -155,7 +197,7 @@ util_get_L3_for_pinned_thread(thrd_t thr
+ static inline int64_t
+ u_thread_get_time_nano(thrd_t thread)
+ {
+-#if defined(HAVE_PTHREAD) && !defined(__APPLE__) && !defined(__HAIKU__)
++#if defined(HAVE_PTHREAD) && !defined(__APPLE__) && !defined(__HAIKU__) && !defined(__sun)
+    struct timespec ts;
+    clockid_t cid;
  
