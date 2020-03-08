@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.186 2020/02/22 07:52:01 tnn Exp $
+# $NetBSD: Makefile,v 1.187 2020/03/08 10:35:03 tnn Exp $
 
-DISTNAME=	mesa-19.2.7
+DISTNAME=	mesa-20.0.1
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
-PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 EXTRACT_SUFX=	.tar.xz
@@ -176,9 +175,6 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/egl.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/osmesa.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/xatracker.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/gl.pc
-
-pre-configure:
-	${TOUCH} ${WRKSRC}/src/glx/apple_dummy.cpp
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/drirc.d/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
