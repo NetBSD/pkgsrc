@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/02/17 19:50:34 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/08 16:48:26 wiz Exp $
 
 DISTNAME=	libqtxdg-3.4.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/libqtxdg/3.4.0/
 EXTRACT_SUFX=	.tar.xz

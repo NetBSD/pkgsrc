@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2019/11/02 10:20:42 rillig Exp $
+# $NetBSD: Makefile,v 1.116 2020/03/08 16:50:19 wiz Exp $
 
 DISTNAME=		clisp-2.49
-PKGREVISION=		26
+PKGREVISION=		27
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 #EXTRACT_SUFX=		.tar.bz2

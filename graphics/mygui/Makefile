@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 16:03:00 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/08 16:47:50 wiz Exp $
 
 DISTNAME=	mygui-3.2.3.20190707
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MyGUI/}
 GITHUB_PROJECT=	mygui
