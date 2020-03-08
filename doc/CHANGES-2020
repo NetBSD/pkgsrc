@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1413 2020/03/08 14:43:08 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1414 2020/03/08 14:45:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1975,3 +1975,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-io-like to 0.3.1 [taca 2020-03-08]
 	Updated devel/ruby-octokit to 4.16.0 [taca 2020-03-08]
 	Updated devel/ruby-parser to 3.14.2 [taca 2020-03-08]
+	Updated devel/ruby-parslet to 2.0.0 [taca 2020-03-08]
