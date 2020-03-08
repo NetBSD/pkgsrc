@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1437 2020/03/08 17:06:24 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1438 2020/03/08 18:23:00 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1999,3 +1999,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/ruby-roo to 2.8.3 [taca 2020-03-08]
 	Updated math/ruby-spreadsheet to 1.2.6 [taca 2020-03-08]
 	Updated pkgtools/revbump to 2.15 [wiz 2020-03-08]
+	Updated lang/nqp to 2020.02.1 [bsiegert 2020-03-08]
