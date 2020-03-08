@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2018/01/07 13:04:00 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2020/03/08 16:47:31 wiz Exp $
 
 BUILDLINK_TREE+=	atk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	atk
 ATK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.atk+=	atk>=1.11.4
-BUILDLINK_ABI_DEPENDS.atk+=	atk>=2.6.0
+BUILDLINK_ABI_DEPENDS.atk+=	atk>=2.33.3nb1
 BUILDLINK_PKGSRCDIR.atk?=	../../devel/atk
 
 .include "../../devel/gettext-lib/buildlink3.mk"

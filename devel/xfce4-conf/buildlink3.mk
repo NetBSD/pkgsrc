@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2018/05/15 22:41:36 youri Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2020/03/08 16:47:42 wiz Exp $
 
 BUILDLINK_TREE+=	xfce4-conf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-conf
 XFCE4_CONF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-conf+=	xfce4-conf>=4.13.4
-BUILDLINK_ABI_DEPENDS.xfce4-conf?=	xfce4-conf>=4.13.4
+BUILDLINK_ABI_DEPENDS.xfce4-conf?=	xfce4-conf>=4.14.1nb1
 BUILDLINK_PKGSRCDIR.xfce4-conf?=	../../devel/xfce4-conf
 
 .include "../../sysutils/dbus/buildlink3.mk"

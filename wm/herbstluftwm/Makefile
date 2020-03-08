@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/01/05 12:16:59 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/08 16:51:32 wiz Exp $
 
 DISTNAME=	herbstluftwm-0.7.2
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	https://herbstluftwm.org/tarballs/
 

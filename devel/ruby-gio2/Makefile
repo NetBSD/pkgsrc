@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2019/09/14 18:11:37 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/08 16:47:41 wiz Exp $
 #
 
 DISTNAME=		gio2-${VERSION}
 COMMENT=		Ruby binding of gio-2.0.x
+PKGREVISION=		1
 CATEGORIES=		devel
 
 MAINTAINER=		tsutsui@NetBSD.org

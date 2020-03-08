@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2016/05/20 18:46:10 youri Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/03/08 16:48:08 wiz Exp $
 #
 
 BUILDLINK_TREE+=	polkit
@@ -7,6 +7,7 @@ BUILDLINK_TREE+=	polkit
 POLKIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.polkit+=	polkit>=0.103
+BUILDLINK_ABI_DEPENDS.polkit?=	polkit>=0.115nb4
 BUILDLINK_PKGSRCDIR.polkit?=	../../security/polkit
 
 #.include "../../devel/gettext-lib/buildlink3.mk"

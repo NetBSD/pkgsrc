@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2018/02/10 13:53:46 khorben Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2020/03/08 16:47:28 wiz Exp $
 
 BUILDLINK_TREE+=	libticables2
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libticables2
 LIBTICABLES2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libticables2+=	libticables2>=1.3.3
+BUILDLINK_ABI_DEPENDS.libticables2?=	libticables2>=1.3.3nb1
 BUILDLINK_PKGSRCDIR.libticables2?=	../../comms/libticables2
 
 pkgbase := libticables2

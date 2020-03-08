@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2019/10/01 19:37:50 nia Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/08 16:48:46 wiz Exp $
 
 DISTNAME=	milkytracker-1.02.00
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=milkytracker/}
 GITHUB_PROJECT=	MilkyTracker

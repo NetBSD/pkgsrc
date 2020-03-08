@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.145 2019/08/11 13:25:11 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2020/03/08 16:48:21 wiz Exp $
 #
 
 DISTNAME=		gnome-desktop-2.32.1
-PKGREVISION=		37
+PKGREVISION=		38
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.32/}
 EXTRACT_SUFX=		.tar.bz2

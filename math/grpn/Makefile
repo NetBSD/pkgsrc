@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2019/07/21 22:25:19 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2020/03/08 16:50:28 wiz Exp $
 #
 
 DISTNAME=	grpn_1.3.3-1
 PKGNAME=	grpn-1.3.3
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	math
 #MASTER_SITES=	http://lashwhip.com/grpn/
 MASTER_SITES=	http://www.getreu.net/public/downloads/software/grpn/grpn-1.3.3/

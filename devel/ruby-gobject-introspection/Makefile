@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2019/09/14 18:11:37 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/08 16:47:41 wiz Exp $
 #
 
 DISTNAME=		gobject-introspection-${VERSION}
 COMMENT=		Ruby binding of Gobject Introspection
+PKGREVISION=		1
 CATEGORIES=		devel
 
 MAINTAINER=		tsutsui@NetBSD.org

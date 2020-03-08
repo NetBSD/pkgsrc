@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2012/09/15 10:06:29 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2020/03/08 16:48:12 wiz Exp $
 
 BUILDLINK_TREE+=	libgtop
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgtop
 LIBGTOP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgtop+=	libgtop>=2.14.0
-BUILDLINK_ABI_DEPENDS.libgtop+=	libgtop>=2.28.4nb3
+BUILDLINK_ABI_DEPENDS.libgtop+=	libgtop>=2.28.4nb17
 BUILDLINK_PKGSRCDIR.libgtop?=	../../sysutils/libgtop
 
 .include "../../devel/gettext-lib/buildlink3.mk"
