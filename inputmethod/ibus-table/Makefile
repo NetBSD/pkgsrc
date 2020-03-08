@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2019/11/02 22:56:53 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/03/08 16:50:15 wiz Exp $
 
 DISTNAME=	ibus-table-1.9.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://github.com/kaio/ibus-table/releases/download/${PKGVERSION_NOREV}/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2020/01/18 21:49:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.43 2020/03/08 16:50:30 wiz Exp $
 
 DISTNAME=		bibletime-2.11.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bibletime/}
 EXTRACT_SUFX=		.tar.xz

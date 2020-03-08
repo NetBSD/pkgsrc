@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2016/03/03 12:56:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2020/03/08 16:49:12 wiz Exp $
 
 DISTNAME=	gob2-2.0.20
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://ftp.5z.com/pub/gob/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/01/25 14:58:13 nia Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/08 16:48:48 wiz Exp $
 
 DISTNAME=	openal-soft-1.20.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://kcat.strangesoft.net/openal-releases/
 EXTRACT_SUFX=	.tar.bz2

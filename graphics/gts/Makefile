@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:13 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/08 16:47:47 wiz Exp $
 
 DISTNAME=	gts-0.7.6
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gts/}
 

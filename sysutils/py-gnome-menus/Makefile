@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2019/11/04 21:28:51 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2020/03/08 16:51:22 wiz Exp $
 
 DISTNAME=	gnome-menus-2.30.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-menus/2.30/}
 EXTRACT_SUFX=	.tar.bz2

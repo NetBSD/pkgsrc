@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2020/02/08 22:59:32 nia Exp $
+# $NetBSD: Makefile,v 1.34 2020/03/08 16:49:49 wiz Exp $
 
 DISTNAME=	warzone2100-3.3.0_src
 PKGNAME=	${DISTNAME:S/_src//}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=warzone2100/}
 EXTRACT_SUFX=	.tar.xz
