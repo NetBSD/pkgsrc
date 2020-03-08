@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1439 2020/03/08 18:31:23 maya Exp $
+$NetBSD: CHANGES-2020,v 1.1440 2020/03/08 19:48:05 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2001,3 +2001,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/revbump to 2.15 [wiz 2020-03-08]
 	Updated lang/nqp to 2020.02.1 [bsiegert 2020-03-08]
 	Updated x11/xf86-video-ati to 19.1.0nb1 [maya 2020-03-08]
+	Updated lang/rakudo to 2020.02.1 [bsiegert 2020-03-08]
