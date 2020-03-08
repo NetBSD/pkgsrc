@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2020/01/15 14:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2020/03/08 16:12:31 tnn Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
 PKGNAME=	modular-${DISTNAME}
@@ -16,7 +16,6 @@ CONFIGURE_ARGS+=	--enable-xorg
 CONFIGURE_ARGS+=	--disable-xephyr
 CONFIGURE_ARGS+=	--disable-xwayland
 CONFIGURE_ARGS+=	--disable-kdrive
-CONFIGURE_ARGS.SunOS+=	--disable-input-thread
 
 .include "options.mk"
 
