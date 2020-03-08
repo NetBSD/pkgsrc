@@ -1,17 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/19 14:49:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/08 15:32:22 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/tty-screen.rb
 ${GEM_LIBDIR}/lib/tty/screen.rb
 ${GEM_LIBDIR}/lib/tty/screen/version.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/unit/height_width_spec.rb
-${GEM_LIBDIR}/spec/unit/size_spec.rb
-${GEM_LIBDIR}/tasks/console.rake
-${GEM_LIBDIR}/tasks/coverage.rake
-${GEM_LIBDIR}/tasks/spec.rake
-${GEM_LIBDIR}/tty-screen.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
