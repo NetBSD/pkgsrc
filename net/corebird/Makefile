@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2019/11/06 14:34:31 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2020/03/08 16:50:49 wiz Exp $
 
 DISTNAME=	corebird-1.7.3
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=baedert/}
 GITHUB_PROJECT=	corebird

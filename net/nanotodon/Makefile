@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/02/21 06:00:26 tsutsui Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/08 16:50:56 wiz Exp $
 
 GITHUB_TAG=	v0.1.1
 DISTNAME=	nanotodon-${GITHUB_TAG:S/v//}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=taka-tuos/}
 

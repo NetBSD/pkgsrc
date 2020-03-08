@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2019/11/04 22:09:56 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/03/08 16:48:19 wiz Exp $
 
 DISTNAME=	librest-0.6
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/librest/archive/}
 

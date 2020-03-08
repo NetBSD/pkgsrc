@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2020/01/18 21:49:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.62 2020/03/08 16:49:14 wiz Exp $
 
 VERSION=	1.8.1
-PKGREVISION=	3
+PKGREVISION=	4
 DISTNAME=	kdiff3-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=kdiff3/}
