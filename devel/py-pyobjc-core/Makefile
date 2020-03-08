@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/02/08 19:54:19 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/08 16:42:26 bsiegert Exp $
 
+PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-core-${PYOBJC_VERS}

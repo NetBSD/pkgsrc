@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/09 14:02:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/08 16:42:26 bsiegert Exp $
 
 DISTNAME=	pyvex-8.20.1.7
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=angr/}
 GITHUB_PROJECT=	pyvex

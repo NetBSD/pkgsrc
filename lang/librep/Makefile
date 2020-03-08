@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.65 2019/01/04 02:06:05 tnn Exp $
+# $NetBSD: Makefile,v 1.66 2020/03/08 16:42:28 bsiegert Exp $
 #
 
 DISTNAME=		librep_0.92.7
 PKGNAME=		${DISTNAME:S/_/-/}
+PKGREVISION=		1
 CATEGORIES=		lang devel
 MASTER_SITES=		http://download.tuxfamily.org/librep/
 EXTRACT_SUFX=		.tar.xz
