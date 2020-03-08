@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/02/05 15:22:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/03/08 15:25:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/doc/alternate-formatters.md
 ${GEM_LIBDIR}/doc/commercial-services.md
 ${GEM_LIBDIR}/doc/editor-integration.md
+${GEM_LIBDIR}/lib/minitest/simplecov_plugin.rb
 ${GEM_LIBDIR}/lib/simplecov.rb
 ${GEM_LIBDIR}/lib/simplecov/combine.rb
 ${GEM_LIBDIR}/lib/simplecov/combine/branches_combiner.rb
