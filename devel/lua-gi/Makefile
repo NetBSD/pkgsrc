@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/02/15 05:43:48 mef Exp $
+# $NetBSD: Makefile,v 1.11 2020/03/08 16:42:25 bsiegert Exp $
 
 DISTNAME=	lgi-${VERSION}
 PKGNAME=	${LUA_PKGPREFIX}-gi-${VERSION}
+PKGREVISION=	1
 VERSION=	0.9.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pavouk/}
