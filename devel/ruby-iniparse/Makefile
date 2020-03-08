@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/07/13 15:34:08 taca Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/08 14:17:56 taca Exp $
 
-DISTNAME=	iniparse-1.4.4
+DISTNAME=	iniparse-1.5.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
