@@ -2,7 +2,7 @@
 # -*- perl -*-
 #
 # read output of (cd /usr/pkgsrc; cvs diff -u ) and check if
-# py{27,34} and ruby200 string are left in buildlink3.mk.
+# py* and ruby* strings are left in buildlink3.mk.
 # They are then modified to Variable representation.
 #"
 use strict;
@@ -15,7 +15,7 @@ $my_name =~ s#(.*)/##;
 
 sub usage(){
     print <<HELP;
-$my_name: 
+$my_name:
     Read cvs diff -u output (of named file) and substitute
     if the string py27, py34 or ruby200 is found in the corresponding
     changes in diff.
@@ -26,12 +26,12 @@ Where:
     -p  pkgsrc directory other than /usr/pkgsrc
     -v  verbose (not actually implemented yet)
     cvs-diff-u_output_file:
-        The name of input. Usually the file including 'cvs diff -u' 
-        output (default cvs-diff) 
+        The name of input. Usually the file including 'cvs diff -u'
+        output (default cvs-diff)
 See Also:
     revbump(1) for how to use it.
 HELP
-}    
+}
 
 sub main() {
     my ($PKGSRCDIR);
@@ -50,9 +50,9 @@ sub main() {
     if ($opts{'p'}) { $PKGSRCDIR = $opts{'p'}; }
     if ($opts{'h'}) { usage() ; exit ;}
 
-   # for using rename, unlink 
+   # for using rename, unlink
     chdir $PKGSRCDIR;
-    
+
     open(CVS_DIFF, $CVS_DIFF) || die "Problem opening file $CVS_DIFF: $!\n";
     while(<CVS_DIFF>){
 	# Looking for the +++ filename line in cvs diff (supposed to use 'cvs diff -u')
@@ -69,15 +69,15 @@ sub main() {
 		open(EDIT, $file_to_edit ) || print STDERR "Problem opening file $file_to_edit: $! \n";
 		while(<EDIT>) {
 		    if ( /^BUILDLINK.*py27/ )    {  $_=~    s/py27/\${PYPKGPREFIX}/   ; $edit++;}
-    		    if ( /^BUILDLINK.*py34/ )    {  $_=~    s/py34/\${PYPKGPREFIX}/   ;
-						    print STDERR "   py34 found at $file_to_edit\n";
+    		    if ( /^BUILDLINK.*py3[0-9]/ )    {  $_=~    s/py3[0-9]/\${PYPKGPREFIX}/   ;
+						    print STDERR "   py3[0-9] found at $file_to_edit\n";
 						    ; $edit++;}
-		    if ( /^BUILDLINK.*ruby200/ ) {  $_=~ s/ruby200/\${RUBY_PKGPREFIX}/ ; $edit++;}
+		    if ( /^BUILDLINK.*ruby[0-9][0-9]*/ ) {  $_=~ s/ruby[0-9][0-9]*/\${RUBY_PKGPREFIX}/ ; $edit++;}
 		    print NEW $_;
 		}
 		close(EDIT);
 		close(NEW);
-		if ($edit) { unlink $file_to_edit; 
+		if ($edit) { unlink $file_to_edit;
 			     rename $new_file, $file_to_edit;
 			     $mod++;}
 		else {
