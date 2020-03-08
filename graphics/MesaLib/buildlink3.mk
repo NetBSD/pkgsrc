@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.66 2020/01/06 10:01:30 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.67 2020/03/08 16:49:52 wiz Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	MesaLib
 MESALIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=3.4.2
-BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=7.11.2
+BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=20.0.1nb1
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 
 .include "../../graphics/MesaLib/features.mk"

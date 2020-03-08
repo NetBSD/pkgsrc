@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/09/10 13:49:14 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/08 16:48:35 wiz Exp $
 
 DISTNAME=	adplay-1.8
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adplug/}
 GITHUB_PROJECT=	adplay-unix

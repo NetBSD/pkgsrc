@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2019/11/04 23:21:57 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/03/08 16:50:05 wiz Exp $
 
 DISTNAME=	paper-icon-theme-1.5.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=snwh/}
 GITHUB_TAG=	v.${PKGVERSION_NOREV}

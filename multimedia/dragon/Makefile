@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2020/02/02 03:00:22 markd Exp $
+# $NetBSD: Makefile,v 1.34 2020/03/08 16:50:38 wiz Exp $
 
 DISTNAME=	dragon-${KAPPSVER}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://kde.org/applications/multimedia/dragon/

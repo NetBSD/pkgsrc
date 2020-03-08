@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2020/01/18 21:48:27 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2020/03/08 16:48:15 wiz Exp $
 
 BUILDLINK_TREE+=	libnxml
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libnxml
 LIBNXML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libnxml+=	libnxml>=0.18.3
-BUILDLINK_ABI_DEPENDS.libnxml+=	libnxml>=0.18.3nb19
+BUILDLINK_ABI_DEPENDS.libnxml+=	libnxml>=0.18.3nb20
 BUILDLINK_PKGSRCDIR.libnxml?=	../../textproc/libnxml
 
 

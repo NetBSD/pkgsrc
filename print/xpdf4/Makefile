@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 21:50:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/08 16:51:05 wiz Exp $
 
 DISTNAME=	xpdf-4.02
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	https://xpdfreader-dl.s3.amazonaws.com/
 

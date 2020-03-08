@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2018/07/13 17:28:46 adam Exp $
+# $NetBSD: Makefile,v 1.33 2020/03/08 16:49:45 wiz Exp $
 
 DISTNAME=	mirrormagic-3.0.0
 
 COMMENT=	Nice little puzzle game with color graphics and sound
+PKGREVISION=	1
 
 CONFLICTS=	mirrormagic-sdl-[1-9]*
 

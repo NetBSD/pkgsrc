@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2020/01/18 21:48:26 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2020/03/08 16:48:11 wiz Exp $
 
 BUILDLINK_TREE+=	kdbusaddons
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdbusaddons
 KDBUSADDONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdbusaddons+=	kdbusaddons>=5.18.0
-BUILDLINK_ABI_DEPENDS.kdbusaddons?=	kdbusaddons>=5.64.0nb1
+BUILDLINK_ABI_DEPENDS.kdbusaddons?=	kdbusaddons>=5.66.0nb1
 BUILDLINK_PKGSRCDIR.kdbusaddons?=	../../sysutils/kdbusaddons
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

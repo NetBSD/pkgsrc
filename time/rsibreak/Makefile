@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2020/01/18 21:51:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.69 2020/03/08 16:51:31 wiz Exp $
 
 DISTNAME=	rsibreak-0.12.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_KDE:=rsibreak/0.12/}
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2019/11/02 21:09:13 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/08 16:48:40 wiz Exp $
 #
 
 .include "../../audio/gnome-speech/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/speech/speech-espeak/}
-PKGREVISION=	6
+PKGREVISION=	7
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GNOME 2 text-to-speech API
 

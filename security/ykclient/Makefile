@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 21:48:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2020/03/08 16:48:09 wiz Exp $
 
 DISTNAME=	ykclient-2.15
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Yubico/}
 GITHUB_PROJECT=	yubico-c-client

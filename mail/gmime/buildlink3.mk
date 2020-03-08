@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2017/03/31 10:32:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2020/03/08 16:47:53 wiz Exp $
 
 BUILDLINK_TREE+=	gmime
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gmime
 GMIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gmime+=	gmime>=2.6.15
-BUILDLINK_ABI_DEPENDS.gmime?=	gmime>=2.6.23nb2
+BUILDLINK_ABI_DEPENDS.gmime?=	gmime>=2.6.23nb3
 BUILDLINK_PKGSRCDIR.gmime?=	../../mail/gmime
 
 .include "../../devel/glib2/buildlink3.mk"

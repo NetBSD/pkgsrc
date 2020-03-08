@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2020/02/02 10:26:00 markd Exp $
+# $NetBSD: Makefile,v 1.38 2020/03/08 16:47:34 wiz Exp $
 
 DISTNAME=	kio-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

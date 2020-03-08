@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/04/28 07:13:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/08 16:47:28 wiz Exp $
 
 DISTNAME=	libkkc-0.3.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters textproc japanese inputmethod
 MASTER_SITES=	https://github.com/ueno/libkkc/releases/download/v${PKGVERSION_NOREV}/
 

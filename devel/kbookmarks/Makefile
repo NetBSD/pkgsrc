@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2020/01/29 11:49:23 markd Exp $
+# $NetBSD: Makefile,v 1.33 2020/03/08 16:47:33 wiz Exp $
 
 DISTNAME=	kbookmarks-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

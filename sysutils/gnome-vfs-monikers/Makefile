@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2020/01/18 21:50:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2020/03/08 16:51:17 wiz Exp $
 #
 
 DISTNAME=	gnome-vfs-monikers-2.15.3
-PKGREVISION=	42
+PKGREVISION=	43
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-vfs-monikers/2.15/}
 EXTRACT_SUFX=	.tar.bz2

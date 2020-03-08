@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/02/25 01:01:20 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/08 16:48:26 wiz Exp $
 
 DISTNAME=	libfm-qt-0.14.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/libfm-qt/0.14.1/
 EXTRACT_SUFX=	.tar.xz

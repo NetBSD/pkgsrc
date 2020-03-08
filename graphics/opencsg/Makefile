@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/08/30 17:01:34 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/08 16:50:05 wiz Exp $
 
 DISTNAME=	OpenCSG-1.3.2
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.opencsg.org/
 

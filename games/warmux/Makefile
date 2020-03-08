@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/01/18 21:49:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2020/03/08 16:49:48 wiz Exp $
 
 DISTNAME=	warmux-11.01
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	games
 MASTER_SITES=	http://download.gna.org/warmux/
 EXTRACT_SUFX=	.tar.bz2

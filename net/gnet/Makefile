@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2017/08/01 17:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2020/03/08 16:48:01 wiz Exp $
 #
 
 DISTNAME=		gnet-2.0.8
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnet/2.0/}
 

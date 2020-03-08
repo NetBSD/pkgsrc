@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2019/07/21 22:24:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2020/03/08 16:47:46 wiz Exp $
 #
 
 BUILDLINK_TREE+=	clutter
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	clutter
 CLUTTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clutter+=	clutter>=1.0.0
-BUILDLINK_ABI_DEPENDS.clutter+=	clutter>=1.26.2nb3
+BUILDLINK_ABI_DEPENDS.clutter+=	clutter>=1.26.2nb4
 BUILDLINK_PKGSRCDIR.clutter?=	../../graphics/clutter
 
 pkgbase := clutter

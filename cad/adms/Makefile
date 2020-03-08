@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 05:26:15 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/03/08 16:48:52 wiz Exp $
 #
 
 DISTNAME=	adms-2.2.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mot-adms/}
 

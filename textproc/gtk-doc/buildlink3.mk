@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2015/01/10 15:21:41 prlw1 Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2020/03/08 16:48:14 wiz Exp $
 #
 # provided mostly for pkg-config
 
@@ -8,6 +8,7 @@ BUILDLINK_TREE+=	gtk-doc
 GTK_DOC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.18
+BUILDLINK_ABI_DEPENDS.gtk-doc?=	gtk-doc>=1.32nb2
 BUILDLINK_PKGSRCDIR.gtk-doc?=	../../textproc/gtk-doc
 # needed together with pkg-config by gtkdoc-depscan at runtime
 .include "../../devel/glib2/buildlink3.mk"

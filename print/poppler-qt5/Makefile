@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2020/03/04 15:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2020/03/08 16:51:05 wiz Exp $
 
+PKGREVISION= 1
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=	poppler-qt5-${POPPLER_VERS}

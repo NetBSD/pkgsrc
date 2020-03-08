@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/08/24 16:15:10 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/03/08 16:47:38 wiz Exp $
 
 BUILDLINK_TREE+=	liblangtag
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	liblangtag
 LIBLANGTAG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.liblangtag+=	liblangtag>=0.4.0
+BUILDLINK_ABI_DEPENDS.liblangtag?=	liblangtag>=0.6.3nb1
 BUILDLINK_PKGSRCDIR.liblangtag?=	../../devel/liblangtag
 
 .include "../../devel/glib2/buildlink3.mk"

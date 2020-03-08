@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2020/01/18 21:48:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2020/03/08 16:48:37 wiz Exp $
 
 DISTNAME=	xmms-scrobbler-0.4.0
 PKGNAME=	${DISTNAME:S/xmms/bmp/}
-PKGREVISION=	48
+PKGREVISION=	49
 CATEGORIES=	audio
 MASTER_SITES=	http://armish.linux-sevenler.org/downloads/pub/
 EXTRACT_SUFX=	.tar.bz2

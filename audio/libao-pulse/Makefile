@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2019/11/24 00:35:57 nia Exp $
+# $NetBSD: Makefile,v 1.23 2020/03/08 16:48:45 wiz Exp $
 
+PKGREVISION= 1
 .include "../../audio/libao/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/libao/libao-pulse/}

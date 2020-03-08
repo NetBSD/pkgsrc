@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2019/09/14 18:11:38 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/08 16:50:08 wiz Exp $
 #
 
 DISTNAME=		rsvg2-${VERSION}
 COMMENT=		Ruby binding of librsvg
+PKGREVISION=		1
 CATEGORIES=		graphics
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

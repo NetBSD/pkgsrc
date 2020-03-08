@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 21:49:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2020/03/08 16:50:01 wiz Exp $
 
 DISTNAME=	ipe-7.2.7-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	https://dl.bintray.com/otfried/generic/ipe/7.2/
 

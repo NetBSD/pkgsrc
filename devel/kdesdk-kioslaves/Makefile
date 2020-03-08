@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2020/01/18 21:49:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2020/03/08 16:49:13 wiz Exp $
 
 DISTNAME=	kdesdk-kioslaves-${_KDE_VERSION}
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	devel
 COMMENT=	KIO-Slaves for subversion and perldoc
 

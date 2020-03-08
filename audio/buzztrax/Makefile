@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/01/10 11:05:04 nia Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/08 16:48:37 wiz Exp $
 
 DISTNAME=	buzztrax-0.10.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://files.buzztrax.org/releases/
 

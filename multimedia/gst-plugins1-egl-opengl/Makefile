@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/30 11:10:20 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/08 16:50:41 wiz Exp $
 
 GST_PLUGINS1_NAME=	opengl
 GST_PLUGINS1_FLAGS=	egl
@@ -11,6 +11,7 @@ CFLAGS+=		-I${PREFIX}/include/interface/vcos/pthreads
 CFLAGS+=		-I${PREFIX}/include/interface/vmcs_host/linux
 LDFLAGS+=		-Wl,-R${PREFIX}/lib -L${PREFIX}/lib
 
+PKGREVISION= 1
 .include "../../multimedia/gst-plugins1-bad/Makefile.common"
 
 .include "../../multimedia/gst-plugins1-egl-gl/buildlink3.mk"
