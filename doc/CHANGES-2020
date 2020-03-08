@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1430 2020/03/08 15:48:10 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.1431 2020/03/08 15:48:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1992,3 +1992,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-wmi-lite to 1.0.5 [taca 2020-03-08]
 	Updated fonts/ruby-ttfunk to 1.6.2.1 [taca 2020-03-08]
 	Updated devel/MoarVM to 2020.02.1 [bsiegert 2020-03-08]
+	Updated graphics/ruby-RMagick to 4.0.0 [taca 2020-03-08]
