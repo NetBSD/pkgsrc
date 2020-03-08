@@ -1,4 +1,4 @@
-$NetBSD: patch-src_gallium_state__trackers_clover_llvm_invocation.cpp,v 1.1 2019/08/21 13:35:28 nia Exp $
+$NetBSD: patch-src_gallium_state__trackers_clover_llvm_invocation.cpp,v 1.2 2020/03/08 10:35:03 tnn Exp $
 
 Patch from FreeBSD ports graphics/mesa-dri 17.1.0
 
@@ -11,9 +11,9 @@ ic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv' can not be used when 
 # /usr/bin/ld: final link failed: Bad value
 #
 
---- src/gallium/state_trackers/clover/llvm/invocation.cpp.orig	2018-09-07 21:18:07.000000000 +0000
+--- src/gallium/state_trackers/clover/llvm/invocation.cpp.orig	2020-03-05 21:34:31.000000000 +0000
 +++ src/gallium/state_trackers/clover/llvm/invocation.cpp
-@@ -181,6 +181,10 @@ namespace {
+@@ -188,6 +188,10 @@ namespace {
        return get_lang_standard_from_version_str(device_version);
     }
  
@@ -22,9 +22,9 @@ ic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv' can not be used when 
 +#endif
 +
     std::unique_ptr<clang::CompilerInstance>
-    create_compiler_instance(const device &dev,
+    create_compiler_instance(const device &dev, const std::string& ir_target,
                              const std::vector<std::string> &opts,
-@@ -193,8 +197,13 @@ namespace {
+@@ -200,9 +204,13 @@ namespace {
        // Parse the compiler options.  A file name should be present at the end
        // and must have the .cl extension in order for the CompilerInvocation
        // class to recognize it as an OpenCL source file.
@@ -34,7 +34,8 @@ ic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv' can not be used when 
 +#else
        const std::vector<const char *> copts =
           map(std::mem_fn(&std::string::c_str), opts);
+-
 +#endif
- 
-       const target &target = dev.ir_target();
+       const target &target = ir_target;
        const std::string &device_clc_version = dev.device_clc_version();
+ 
