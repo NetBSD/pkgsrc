@@ -1,20 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/19 14:33:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/08 15:29:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/tty-color.rb
 ${GEM_LIBDIR}/lib/tty/color.rb
 ${GEM_LIBDIR}/lib/tty/color/mode.rb
 ${GEM_LIBDIR}/lib/tty/color/support.rb
 ${GEM_LIBDIR}/lib/tty/color/version.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/unit/color_spec.rb
-${GEM_LIBDIR}/spec/unit/mode_spec.rb
-${GEM_LIBDIR}/spec/unit/support_spec.rb
-${GEM_LIBDIR}/tasks/console.rake
-${GEM_LIBDIR}/tasks/coverage.rake
-${GEM_LIBDIR}/tasks/spec.rake
-${GEM_LIBDIR}/tty-color.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
