@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/16 14:03:13 taca Exp $
+$NetBSD: distinfo,v 1.2 2020/03/08 15:08:37 taca Exp $
 
-SHA1 (rb-inotify-0.10.0.gem) = 1d6d5102fb6c5c8d688e7d3bff9bc96cb6861908
-RMD160 (rb-inotify-0.10.0.gem) = 7219334d8dea50edc2c9e07fdc970cf5e7800228
-SHA512 (rb-inotify-0.10.0.gem) = 16aa7fb21e5ed713335e583299cfc72676e3ef66de3d349f74a14885b88020b79e031839b193dc140036a0b6539a45ef3a0c3c6027a7211508d388137d22a13b
-Size (rb-inotify-0.10.0.gem) = 15872 bytes
+SHA1 (rb-inotify-0.10.1.gem) = e00e566a717550767d95901ff6f2c34c6e3dd136
+RMD160 (rb-inotify-0.10.1.gem) = dd541acfbb2cd99a8c4e4ec02d2bd78fdf62d0c7
+SHA512 (rb-inotify-0.10.1.gem) = 7831a6228f2d6363e634b8d6b4a12206f19b96098e5dfba1d27b1e994a7284a5cb58cd0299d861a6ff275fc8248c0e68faaaf786d6222ad68f3e6b43ccea29ec
+Size (rb-inotify-0.10.1.gem) = 15872 bytes
