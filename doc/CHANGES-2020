@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1417 2020/03/08 15:03:26 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1418 2020/03/08 15:09:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1979,3 +1979,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-pathutil to 0.16.2 [taca 2020-03-08]
 	Updated devel/ruby-pkg-config to 1.4.1 [taca 2020-03-08]
 	Updated devel/ruby-power_assert to 1.1.6 [taca 2020-03-08]
+	Updated devel/ruby-rb-inotify to 0.10.1 [taca 2020-03-08]
