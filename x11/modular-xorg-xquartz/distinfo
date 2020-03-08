@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 03:28:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/03/08 01:28:14 tnn Exp $
 
 SHA1 (xorg-server-1.17.2.tar.bz2) = 56ac29a82b99bcf4c7ba2fca41a44cfa18748262
 RMD160 (xorg-server-1.17.2.tar.bz2) = bf575a269f1e7b729992a20989be84e09fcc88a2
@@ -11,6 +11,7 @@ SHA1 (patch-fb_fbscreen.c) = 6bc92e7002f215430e8647337d596bfe99d3d63a
 SHA1 (patch-fb_fbtrap.c) = 60e74d8d6f86dfb24491b17170e02a6040ad9abb
 SHA1 (patch-hw_xfree86_Makefile.am) = 0388fa2a2cb08194def579c014848eaf66f02b24
 SHA1 (patch-hw_xquartz_GL_indirect.c) = f915ce2f6043c21cbaf6a656b7339776156b609e
+SHA1 (patch-hw_xquartz_X11Application.m) = b97759b8e81b582dcf3600a1c3a0b387d2ae24f8
 SHA1 (patch-hw_xquartz_X11Controller.m) = d25fb8915d6ee9b1214a346d3042b47a43ee46f8
 SHA1 (patch-hw_xquartz_pbproxy_Makefile.in) = a877cf56033544b46169757c1ceda5f17fe7a224
 SHA1 (patch-mi_miexpose.c) = e53cbee2330300ef016aae5a5ee9fe8a65efc46b
