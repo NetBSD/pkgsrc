@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2020/03/08 16:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2020/03/08 18:22:44 bsiegert Exp $
 
-DISTNAME=	nqp-2019.07.1
-PKGREVISION=	2
+DISTNAME=	nqp-2020.02.1
 CATEGORIES=	lang perl6
-MASTER_SITES=	http://rakudo.org/downloads/nqp/
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=perl6/}
+MASTER_SITES=	https://github.com/perl6/nqp/releases/download/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rakudo.org/
@@ -23,6 +23,5 @@ CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 			--backends=moar
 
-BUILDLINK_API_DEPENDS.MoarVM+=  MoarVM>=2017.07
 .include "../../devel/MoarVM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
