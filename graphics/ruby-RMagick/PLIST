@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2019/11/02 15:00:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.31 2020/03/08 15:48:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -357,7 +357,6 @@ ${GEM_LIBDIR}/ext/RMagick/rmpixel.c
 ${GEM_LIBDIR}/ext/RMagick/rmstruct.c
 ${GEM_LIBDIR}/ext/RMagick/rmutil.c
 ${GEM_LIBDIR}/lib/RMagick2.${RUBY_DLEXT}
-${GEM_LIBDIR}/lib/obsolete.rb
 ${GEM_LIBDIR}/lib/rmagick.rb
 ${GEM_LIBDIR}/lib/rmagick/version.rb
 ${GEM_LIBDIR}/lib/rmagick_internal.rb
@@ -410,7 +409,6 @@ ${GEM_LIBDIR}/test/appearance/Montage.rb
 ${GEM_LIBDIR}/test/appearance/appearance_assertion.rb
 ${GEM_LIBDIR}/test/appearance/expected/montage_border_color.jpg
 ${GEM_LIBDIR}/test/cmyk.icm
-${GEM_LIBDIR}/test/lib/Obsolete.rb
 ${GEM_LIBDIR}/test/lib/internal/Draw.rb
 ${GEM_LIBDIR}/test/lib/internal/Geometry.rb
 ${GEM_LIBDIR}/test/lib/internal/Magick.rb
