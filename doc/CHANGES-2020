@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1428 2020/03/08 15:40:06 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1429 2020/03/08 15:41:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1990,3 +1990,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-tty-screen to 0.7.1 [taca 2020-03-08]
 	Updated devel/ruby-tins to 1.24.1 [taca 2020-03-08]
 	Updated devel/ruby-wmi-lite to 1.0.5 [taca 2020-03-08]
+	Updated fonts/ruby-ttfunk to 1.6.2.1 [taca 2020-03-08]
