@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1400 2020/03/07 23:35:44 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.1401 2020/03/08 10:36:15 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1961,3 +1961,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/pcf2bdf to 1.06 [fcambus 2020-03-07]
 	Updated www/htmldoc to 1.9.8 [fcambus 2020-03-07]
 	Updated pkgtools/pkglint to 19.4.10 [rillig 2020-03-07]
+	Updated graphics/MesaLib to 20.0.1 [tnn 2020-03-08]
