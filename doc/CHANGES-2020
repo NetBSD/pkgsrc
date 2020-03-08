@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1435 2020/03/08 16:06:31 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1436 2020/03/08 16:08:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1997,3 +1997,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ruby-mini-magick to 4.10.1 [taca 2020-03-08]
 	Updated mail/ruby-mime-types to 3.3.1 [taca 2020-03-08]
 	Updated math/ruby-roo to 2.8.3 [taca 2020-03-08]
+	Updated math/ruby-spreadsheet to 1.2.6 [taca 2020-03-08]
