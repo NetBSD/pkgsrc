@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/19 14:40:27 taca Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/08 15:31:16 taca Exp $
 
-DISTNAME=	tty-cursor-0.7.0
+DISTNAME=	tty-cursor-0.7.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
