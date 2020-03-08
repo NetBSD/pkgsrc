@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1419 2020/03/08 15:13:19 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1420 2020/03/08 15:19:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1981,3 +1981,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-power_assert to 1.1.6 [taca 2020-03-08]
 	Updated devel/ruby-rb-inotify to 0.10.1 [taca 2020-03-08]
 	Updated devel/ruby-regexp_parser to 1.7.0 [taca 2020-03-08]
+	Updated devel/ruby-sexp-processor to 4.14.1 [taca 2020-03-08]
