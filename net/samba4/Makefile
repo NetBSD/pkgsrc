@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2020/01/29 12:44:14 adam Exp $
+# $NetBSD: Makefile,v 1.91 2020/03/08 12:39:27 tnn Exp $
 
 DISTNAME=	samba-4.11.6
 CATEGORIES=	net
@@ -218,7 +218,6 @@ BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.2.0
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../net/avahi/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
