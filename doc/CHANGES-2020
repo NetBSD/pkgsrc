@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1408 2020/03/08 13:49:06 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1409 2020/03/08 14:16:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1970,3 +1970,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-concurrent-ruby to 1.1.6 [taca 2020-03-08]
 	Updated devel/ruby-fast_gettext to 2.0.2 [taca 2020-03-08]
 	Updated devel/ruby-gettext_i18n_rails to 1.8.1 [taca 2020-03-08]
+	Updated devel/ruby-google-protobuf to 3.11.4 [taca 2020-03-08]
