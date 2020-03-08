@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/03/13 17:26:39 taca Exp $
+$NetBSD: distinfo,v 1.3 2020/03/08 14:51:11 taca Exp $
 
-SHA1 (pathutil-0.16.1.gem) = 27cc092e58147b5d0ec62e99b2ed8086822b800b
-RMD160 (pathutil-0.16.1.gem) = bac759b55bafba118cfcc12871dd1c11a786067f
-SHA512 (pathutil-0.16.1.gem) = 9192a1edd65b070d997ed19808247850fb93c5aa9aace31fed05c2a4e9af4563db4d308d36aefedc970b2b646b7175002f939de9d930cb338c9aa4e6258d63bd
-Size (pathutil-0.16.1.gem) = 11776 bytes
+SHA1 (pathutil-0.16.2.gem) = 4eb637ad07d262bcabf81aa83a861b4b249feccc
+RMD160 (pathutil-0.16.2.gem) = d3931a19cdc9afbfdc8fc81121b35a40309c3415
+SHA512 (pathutil-0.16.2.gem) = 76c63bc75d9c1128e921efe0a9b830ee166618d3ca61ff839429efeefa249d30c50c5062c3d430bb7f321e56da15549c85cc36bd0a758998e2c743cf781d68fa
+Size (pathutil-0.16.2.gem) = 11776 bytes
