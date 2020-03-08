@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1424 2020/03/08 15:30:19 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1425 2020/03/08 15:31:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1986,3 +1986,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-simplecov to 0.18.5 [taca 2020-03-08]
 	Updated devel/ruby-tomlrb to 1.2.9 [taca 2020-03-08]
 	Updated devel/ruby-tty-color to 0.5.1 [taca 2020-03-08]
+	Updated devel/ruby-tty-cursor to 0.7.1 [taca 2020-03-08]
