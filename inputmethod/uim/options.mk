@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.36 2019/11/01 16:21:11 nia Exp $
+# $NetBSD: options.mk,v 1.37 2020/03/08 08:59:08 nros Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=	gtk2 gtk3 qt5 xim
@@ -39,7 +39,7 @@ PLIST_SRC+=		PLIST.qt5
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-qt5-immodule
 .else
-CONFIGURE_ARGS+=	--without-gtk3
+CONFIGURE_ARGS+=	--without-qt5-immodule
 .endif
 
 .if !empty(PKG_OPTIONS:Mxim)
