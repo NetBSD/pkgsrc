@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/01/16 16:07:19 taca Exp $
+# $NetBSD: Makefile,v 1.11 2020/03/08 15:41:16 taca Exp $
 
-DISTNAME=	ttfunk-1.6.1
+DISTNAME=	ttfunk-1.6.2.1
 CATEGORIES=	fonts
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
