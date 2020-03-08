@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2012/10/08 09:21:02 asau Exp $
+# $NetBSD: Makefile,v 1.11 2020/03/08 16:50:40 wiz Exp $
 #
 
 GST_PLUGINS0.10_NAME=	dvdread
 GST_PLUGINS0.10_DIRS=	ext/dvdread
-PKGREVISION=		2
+PKGREVISION=		3
 
 .include "../../multimedia/gst-plugins0.10-ugly/Makefile.common"
 

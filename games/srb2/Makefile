@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/02/26 17:55:51 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/08 16:49:47 wiz Exp $
 
 PKGNAME=	srb2-2.2.2
+PKGREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

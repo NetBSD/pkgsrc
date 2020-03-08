@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2020/01/10 21:12:09 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2020/03/08 16:47:41 wiz Exp $
 
 DISTNAME=	qof-0.7.5
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qof/}
 

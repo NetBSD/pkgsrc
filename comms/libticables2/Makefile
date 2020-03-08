@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/09/16 19:26:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/08 16:47:28 wiz Exp $
 #
 
 DISTNAME=	libticables2-1.3.3
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tilp/}
 EXTRACT_SUFX=	.tar.bz2
