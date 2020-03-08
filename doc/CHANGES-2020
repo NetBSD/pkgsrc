@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1422 2020/03/08 15:25:41 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1423 2020/03/08 15:28:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1984,3 +1984,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-sexp-processor to 4.14.1 [taca 2020-03-08]
 	Updated devel/ruby-simplecov-html to 0.12.2 [taca 2020-03-08]
 	Updated devel/ruby-simplecov to 0.18.5 [taca 2020-03-08]
+	Updated devel/ruby-tomlrb to 1.2.9 [taca 2020-03-08]
