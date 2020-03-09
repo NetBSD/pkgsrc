@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/08/03 12:28:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/03/09 18:34:23 adam Exp $
 bin/pygmentize-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,6 +9,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pygments/__init__.py
 ${PYSITELIB}/pygments/__init__.pyc
 ${PYSITELIB}/pygments/__init__.pyo
+${PYSITELIB}/pygments/__main__.py
+${PYSITELIB}/pygments/__main__.pyc
+${PYSITELIB}/pygments/__main__.pyo
 ${PYSITELIB}/pygments/cmdline.py
 ${PYSITELIB}/pygments/cmdline.pyc
 ${PYSITELIB}/pygments/cmdline.pyo
@@ -222,6 +225,9 @@ ${PYSITELIB}/pygments/lexers/eiffel.pyo
 ${PYSITELIB}/pygments/lexers/elm.py
 ${PYSITELIB}/pygments/lexers/elm.pyc
 ${PYSITELIB}/pygments/lexers/elm.pyo
+${PYSITELIB}/pygments/lexers/email.py
+${PYSITELIB}/pygments/lexers/email.pyc
+${PYSITELIB}/pygments/lexers/email.pyo
 ${PYSITELIB}/pygments/lexers/erlang.py
 ${PYSITELIB}/pygments/lexers/erlang.pyc
 ${PYSITELIB}/pygments/lexers/erlang.pyo
@@ -330,6 +336,9 @@ ${PYSITELIB}/pygments/lexers/math.pyo
 ${PYSITELIB}/pygments/lexers/matlab.py
 ${PYSITELIB}/pygments/lexers/matlab.pyc
 ${PYSITELIB}/pygments/lexers/matlab.pyo
+${PYSITELIB}/pygments/lexers/mime.py
+${PYSITELIB}/pygments/lexers/mime.pyc
+${PYSITELIB}/pygments/lexers/mime.pyo
 ${PYSITELIB}/pygments/lexers/ml.py
 ${PYSITELIB}/pygments/lexers/ml.pyc
 ${PYSITELIB}/pygments/lexers/ml.pyo
@@ -429,6 +438,9 @@ ${PYSITELIB}/pygments/lexers/rust.pyo
 ${PYSITELIB}/pygments/lexers/sas.py
 ${PYSITELIB}/pygments/lexers/sas.pyc
 ${PYSITELIB}/pygments/lexers/sas.pyo
+${PYSITELIB}/pygments/lexers/scdoc.py
+${PYSITELIB}/pygments/lexers/scdoc.pyc
+${PYSITELIB}/pygments/lexers/scdoc.pyo
 ${PYSITELIB}/pygments/lexers/scripting.py
 ${PYSITELIB}/pygments/lexers/scripting.pyc
 ${PYSITELIB}/pygments/lexers/scripting.pyo
@@ -450,6 +462,9 @@ ${PYSITELIB}/pygments/lexers/smv.pyo
 ${PYSITELIB}/pygments/lexers/snobol.py
 ${PYSITELIB}/pygments/lexers/snobol.pyc
 ${PYSITELIB}/pygments/lexers/snobol.pyo
+${PYSITELIB}/pygments/lexers/solidity.py
+${PYSITELIB}/pygments/lexers/solidity.pyc
+${PYSITELIB}/pygments/lexers/solidity.pyo
 ${PYSITELIB}/pygments/lexers/special.py
 ${PYSITELIB}/pygments/lexers/special.pyc
 ${PYSITELIB}/pygments/lexers/special.pyo
@@ -519,6 +534,9 @@ ${PYSITELIB}/pygments/lexers/x10.pyo
 ${PYSITELIB}/pygments/lexers/xorg.py
 ${PYSITELIB}/pygments/lexers/xorg.pyc
 ${PYSITELIB}/pygments/lexers/xorg.pyo
+${PYSITELIB}/pygments/lexers/zig.py
+${PYSITELIB}/pygments/lexers/zig.pyc
+${PYSITELIB}/pygments/lexers/zig.pyo
 ${PYSITELIB}/pygments/modeline.py
 ${PYSITELIB}/pygments/modeline.pyc
 ${PYSITELIB}/pygments/modeline.pyo
@@ -579,6 +597,9 @@ ${PYSITELIB}/pygments/styles/fruity.pyo
 ${PYSITELIB}/pygments/styles/igor.py
 ${PYSITELIB}/pygments/styles/igor.pyc
 ${PYSITELIB}/pygments/styles/igor.pyo
+${PYSITELIB}/pygments/styles/inkpot.py
+${PYSITELIB}/pygments/styles/inkpot.pyc
+${PYSITELIB}/pygments/styles/inkpot.pyo
 ${PYSITELIB}/pygments/styles/lovelace.py
 ${PYSITELIB}/pygments/styles/lovelace.pyc
 ${PYSITELIB}/pygments/styles/lovelace.pyo
