@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1309 2020/03/09 12:26:31 fcambus Exp $
+# $NetBSD: Makefile,v 1.1310 2020/03/09 21:48:20 fcambus Exp $
 #
 
 COMMENT=	Networking tools
@@ -477,6 +477,7 @@ SUBDIR+=	p5-File-RsyncP
 SUBDIR+=	p5-FusionInventory-Agent
 SUBDIR+=	p5-Geo-IP
 SUBDIR+=	p5-Geo-IPfree
+SUBDIR+=	p5-GeoIP2
 SUBDIR+=	p5-IO-Interface
 SUBDIR+=	p5-IO-SessionData
 SUBDIR+=	p5-IO-Socket-INET6
