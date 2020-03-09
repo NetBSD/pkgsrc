@@ -1,6 +1,7 @@
-$NetBSD: patch-mk-1st.awk,v 1.1 2020/03/05 12:52:33 wiz Exp $
+$NetBSD: patch-mk-1st.awk,v 1.2 2020/03/09 06:16:13 wiz Exp $
 
 Rename form/menu/panel to gnu*.
+TODO: use --with-xxx-libname=libnxxx in ncurses 6.3+ instead
 
 --- mk-1st.awk.orig	2020-02-02 23:34:34.000000000 +0000
 +++ mk-1st.awk
