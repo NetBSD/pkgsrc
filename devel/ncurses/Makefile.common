@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2020/03/04 14:04:22 wiz Exp $
+# $NetBSD: Makefile.common,v 1.45 2020/03/09 06:11:55 wiz Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--without-ada
 CONFIGURE_ARGS+=	--without-gpm
 CONFIGURE_ARGS+=	--with-manpage-format=normal
 CONFIGURE_ARGS+=	--with-manpage-tbl
+CONFIGURE_ARGS+=	--without-manpage-renames
 CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ncurses
