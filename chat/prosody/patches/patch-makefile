@@ -1,9 +1,9 @@
-$NetBSD: patch-GNUmakefile,v 1.2 2020/03/09 19:00:12 khorben Exp $
+$NetBSD: patch-makefile,v 1.1 2020/03/09 19:37:20 khorben Exp $
 
 Fix installation directories and scripts
 
---- GNUmakefile.orig	2019-08-31 14:08:45.000000000 +0000
-+++ GNUmakefile
+--- makefile.orig	2020-01-02 09:49:37.000000000 +0000
++++ makefile
 @@ -3,10 +3,11 @@ include config.unix
  
  BIN = $(DESTDIR)$(PREFIX)/bin
@@ -17,8 +17,8 @@ Fix installation directories and scripts
  
  INSTALLEDSOURCE = $(LIBDIR)/prosody
  INSTALLEDCONFIG = $(SYSCONFDIR)
-@@ -31,34 +32,42 @@ ifeq ($(EXCERTS),yes)
- endif
+@@ -28,37 +29,52 @@ all: prosody.install prosodyctl.install 
+ .endif
  
  install: prosody.install prosodyctl.install prosody.cfg.lua.install util/encodings.so util/encodings.so util/pposix.so util/signal.so
 -	$(MKDIR) $(BIN) $(CONFIG) $(MODULES) $(SOURCE)
@@ -45,22 +45,17 @@ Fix installation directories and scripts
 -	$(INSTALL_DATA) plugins/adhoc/*.lua $(MODULES)/adhoc
 -	$(INSTALL_DATA) plugins/muc/*.lua $(MODULES)/muc
 -	$(INSTALL_DATA) plugins/mod_mam/*.lua $(MODULES)/mod_mam
--	$(INSTALL_DATA) certs/* $(CONFIG)/certs
--	$(INSTALL_DATA) man/prosodyctl.man $(MAN)/man1/prosodyctl.1
--	test -f $(CONFIG)/prosody.cfg.lua || $(INSTALL_DATA) prosody.cfg.lua.install $(CONFIG)/prosody.cfg.lua
--	-test -f prosody.version && $(INSTALL_DATA) prosody.version $(SOURCE)/prosody.version
 +	$(BSD_INSTALL_SCRIPT_DIR) $(BIN)
 +	$(BSD_INSTALL_DATA_DIR) $(EGDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(MODULES)
 +	$(BSD_INSTALL_DATA_DIR) $(SOURCE)
 +	$(BSD_INSTALL_DATA_DIR) -m 750 $(DATA)
 +	$(BSD_INSTALL_MAN_DIR) $(MAN)/man1
-+	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/core
-+	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/net
-+	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/util
 +	$(BSD_INSTALL_SCRIPT) ./prosody.install $(BIN)/prosody
 +	$(BSD_INSTALL_SCRIPT) ./prosodyctl.install $(BIN)/prosodyctl
++	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/core
 +	$(BSD_INSTALL_DATA) core/*.lua $(SOURCE)/core
++	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/net
 +	$(BSD_INSTALL_DATA) net/*.lua $(SOURCE)/net
 +	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/net/http
 +	$(BSD_INSTALL_DATA) net/http/*.lua $(SOURCE)/net/http
@@ -68,23 +63,39 @@ Fix installation directories and scripts
 +	$(BSD_INSTALL_DATA) net/resolvers/*.lua $(SOURCE)/net/resolvers
 +	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/net/websocket
 +	$(BSD_INSTALL_DATA) net/websocket/*.lua $(SOURCE)/net/websocket
++	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/util
 +	$(BSD_INSTALL_DATA) util/*.lua $(SOURCE)/util
 +	$(BSD_INSTALL_LIB) util/*.so $(SOURCE)/util
 +	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/util/sasl
-+	$(BSD_INSTALL_DATA) util/sasl/* $(SOURCE)/util/sasl
++	$(BSD_INSTALL_DATA) util/sasl/*.lua $(SOURCE)/util/sasl
++	$(BSD_INSTALL_LIB_DIR) $(MODULES)
 +	$(BSD_INSTALL_DATA) plugins/*.lua $(MODULES)
++	$(BSD_INSTALL_LIB_DIR) $(MODULES)/mod_s2s
++	$(BSD_INSTALL_DATA) plugins/mod_s2s/*.lua $(MODULES)/mod_s2s
++	$(BSD_INSTALL_LIB_DIR) $(MODULES)/mod_pubsub
++	$(BSD_INSTALL_DATA) plugins/mod_pubsub/*.lua $(MODULES)/mod_pubsub
 +	$(BSD_INSTALL_DATA_DIR) $(EGDIR)/certs
-+	$(BSD_INSTALL_DATA) certs/* $(EGDIR)/certs
++	$(BSD_INSTALL_DATA) certs/*.cnf $(EGDIR)/certs
++	$(BSD_INSTALL_DATA) certs/*makefile $(EGDIR)/certs
 +	$(BSD_INSTALL_LIB_DIR) $(MODULES)/adhoc
 +	$(BSD_INSTALL_DATA) plugins/adhoc/*.lua $(MODULES)/adhoc
-+	$(BSD_INSTALL_LIB_DIR) $(MODULES)/mod_s2s
-+	$(BSD_INSTALL_DATA) plugins/mod_s2s/* $(MODULES)/mod_s2s
 +	$(BSD_INSTALL_LIB_DIR) $(MODULES)/muc
-+	$(BSD_INSTALL_DATA) plugins/muc/* $(MODULES)/muc
-+	$(BSD_INSTALL_LIB_DIR) $(MODULES)/storage
++	$(BSD_INSTALL_DATA) plugins/muc/*.lua $(MODULES)/muc
++	$(BSD_INSTALL_LIB_DIR) $(MODULES)/mod_mam
++	$(BSD_INSTALL_DATA) plugins/mod_mam/*.lua $(MODULES)/mod_mam
+ .if $(EXCERTS) == "yes"
+-	$(INSTALL_DATA) certs/localhost.crt certs/localhost.key $(CONFIG)/certs
+-	$(INSTALL_DATA) certs/example.com.crt certs/example.com.key $(CONFIG)/certs
++	$(BSD_INSTALL_DATA_DIR) $(EGDIR)/certs
++	$(BSD_INSTALL_DATA) certs/localhost.crt certs/localhost.key $(EGDIR)/certs
++	$(BSD_INSTALL_DATA) certs/example.com.crt certs/example.com.key $(EGDIR)/certs
+ .endif
+-	$(INSTALL_DATA) man/prosodyctl.man $(MAN)/man1/prosodyctl.1
+-	test -f $(CONFIG)/prosody.cfg.lua || $(INSTALL_DATA) prosody.cfg.lua.install $(CONFIG)/prosody.cfg.lua
+-	-test -f prosody.version && $(INSTALL_DATA) prosody.version $(SOURCE)/prosody.version
 +	$(BSD_INSTALL_MAN) man/prosodyctl.man $(MAN)/man1/prosodyctl.1
-+	$(BSD_INSTALL_DATA) prosody.cfg.lua.install $(EGDIR)/prosody.cfg.lua
-+	$(BSD_INSTALL_DATA) prosody.version $(SOURCE)/prosody.version
++	test -f $(CONFIG)/prosody.cfg.lua || $(BSD_INSTALL_DATA) prosody.cfg.lua.install $(EGDIR)/prosody.cfg.lua
++	-test -f prosody.version && $(BSD_INSTALL_DATA) prosody.version $(SOURCE)/prosody.version
  	$(MAKE) install -C util-src
  
  clean:
