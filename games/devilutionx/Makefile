@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/03/08 16:49:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/03/09 10:53:22 nia Exp $
 
-DISTNAME=	devilutionx-1.0.0
-PKGREVISION=	1
+DISTNAME=	devilutionx-1.0.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=diasurgical/}
 GITHUB_PROJECT=	devilutionX
@@ -15,10 +14,13 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c99 c++14
+USE_LANGUAGES=	c c++14
 
 # std::make_unique, etc
 GCC_REQD+=	5
+
+CONFIGURE_DIRS=	build
+CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 CMAKE_ARGS+=	-DASAN=OFF
@@ -31,8 +33,6 @@ CMAKE_ARGS+=	-DFASTER=OFF
 CXXFLAGS+=	-DO_LARGEFILE=0 -Dstat64=stat -Dlstat64=lstat -Dlseek64=lseek -Doff64_t=off_t -Dfstat64=fstat -Dftruncate64=ftruncate
 .endif
 
-CXXFLAGS+=	-DASIO_DISABLE_STD_EXPERIMENTAL_STRING_VIEW=1
-
 # /usr/include/g++/cstdio:176:11: error: '::vfscanf' has not been declared
 # No idea.
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
@@ -43,8 +43,11 @@ INSTALLATION_DIRS+=	share/icons/hicolor/16x16/apps
 INSTALLATION_DIRS+=	share/icons/hicolor/32x32/apps
 INSTALLATION_DIRS+=	share/icons/hicolor/48x48/apps
 
+pre-configure:
+	${MKDIR} -p ${WRKSRC}/build
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/devilutionx ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/build/devilutionx ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${FILESDIR}/devilutionx.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/Packaging/resources/16.png \
