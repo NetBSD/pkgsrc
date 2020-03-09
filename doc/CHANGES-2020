@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1445 2020/03/09 12:26:49 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.1446 2020/03/09 17:36:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2007,3 +2007,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/gitea to 1.11.2 [nia 2020-03-09]
 	Added net/dbip-country-lite version 2020.03 [fcambus 2020-03-09]
 	Added net/dbip-city-lite version 2020.03 [fcambus 2020-03-09]
+	Updated multimedia/mkvtoolnix to 44.0.0 [adam 2020-03-09]
