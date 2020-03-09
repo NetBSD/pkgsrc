@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2020/02/29 15:48:04 adam Exp $
+# $NetBSD: Makefile,v 1.73 2020/03/09 18:38:59 adam Exp $
 
-DISTNAME=	Sphinx-2.4.3
+DISTNAME=	Sphinx-2.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
