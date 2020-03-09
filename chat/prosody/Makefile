@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2020/01/23 18:26:15 gdt Exp $
+# $NetBSD: Makefile,v 1.32 2020/03/09 19:37:20 khorben Exp $
 #
 
 DISTNAME=		prosody-0.11.4
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		https://prosody.im/downloads/source/
 
@@ -17,7 +18,6 @@ DEPENDS+=		${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
 
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c99
-USE_TOOLS+=		gmake
 BUILD_DEFS+=		VARBASE
 
 LUA_VERSIONS_ACCEPTED=	52 51
@@ -53,7 +53,7 @@ REPLACE_LUA+=		prosody prosodyctl
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing default paths
 SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	GNUmakefile man/prosodyctl.man prosody.cfg.lua.dist
+SUBST_FILES.path=	makefile man/prosodyctl.man prosody.cfg.lua.dist
 SUBST_SED.path=		-e 's,/etc/prosody,${PKG_SYSCONFDIR},g'
 SUBST_VARS.path=	EGDIR PROSODY_DATA PROSODY_LOG PROSODY_RUN
 
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=	--with-lua-include=${PREFIX}/${LUA_INCDIR}
 
 CFLAGS+=		-fPIC -Wall -DLUA_COMPAT_MODULE
 MAKE_ENV.SunOS+=	SOCKET_LIB=-lsocket
-MAKE_FILE=		GNUmakefile
+MAKE_FILE=		makefile
 
 RCD_SCRIPTS=		prosody
 
