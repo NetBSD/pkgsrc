@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1442 2020/03/09 10:54:35 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1443 2020/03/09 11:07:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2004,3 +2004,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rakudo to 2020.02.1 [bsiegert 2020-03-08]
 	Updated archivers/ruby-zip to 1.3.0 [taca 2020-03-09]
 	Updated games/devilutionx to 1.0.1 [nia 2020-03-09]
+	Updated www/gitea to 1.11.2 [nia 2020-03-09]
