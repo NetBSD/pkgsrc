@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1453 2020/03/10 12:22:43 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.1454 2020/03/10 14:13:45 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2018,3 +2018,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-click to 7.1.1 [adam 2020-03-10]
 	Updated devel/yarn to 1.22.4 [adam 2020-03-10]
 	Updated archivers/upx to 3.96 [tnn 2020-03-10]
+	Updated inputmethod/ibus to 1.5.22 [tsutsui 2020-03-10]
