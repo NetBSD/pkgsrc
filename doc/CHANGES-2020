@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1462 2020/03/10 20:18:31 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1463 2020/03/10 22:30:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2027,3 +2027,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/webkit-gtk to 2.28.0 [leot 2020-03-10]
 	Updated devel/binutils to 2.34nb1 [bacon 2020-03-10]
 	Updated graphics/librsvg to 2.48.0 [wiz 2020-03-10]
+	Updated devel/libpeas to 1.26.0 [wiz 2020-03-10]
