@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2019/08/17 19:44:37 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.67 2020/03/10 22:11:26 wiz Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by audio/xfce4-mixer/Makefile
@@ -50,7 +50,6 @@
 # used by x11/xfce4-eyes-plugin/Makefile
 # used by x11/xfce4-garcon/Makefile
 # used by x11/xfce4-kbdleds-plugin/Makefile
-# used by x11/xfce4-gtk2-engine/Makefile
 # used by x11/xfce4-indicator-plugin/Makefile
 # used by x11/xfce4-notes-plugin/Makefile
 # used by x11/xfce4-notifyd/Makefile
