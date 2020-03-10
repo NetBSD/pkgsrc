@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/05 14:33:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/10 14:42:54 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.concourse.yml
 ${GEM_LIBDIR}/.gitignore
@@ -9,7 +9,13 @@ ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/appveyor.yml
+${GEM_LIBDIR}/concourse/common_prelude.rb
+${GEM_LIBDIR}/concourse/common_resources.yml
+${GEM_LIBDIR}/concourse/docker-compose.yml
+${GEM_LIBDIR}/concourse/mini_portile-pr.yml
+${GEM_LIBDIR}/concourse/mini_portile-pr.yml.generated
 ${GEM_LIBDIR}/concourse/mini_portile.yml
+${GEM_LIBDIR}/concourse/mini_portile.yml.generated
 ${GEM_LIBDIR}/concourse/tasks/rake-test/task.ps1
 ${GEM_LIBDIR}/concourse/tasks/rake-test/task.sh
 ${GEM_LIBDIR}/lib/mini_portile2.rb
