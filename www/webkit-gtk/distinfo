@@ -1,24 +1,27 @@
-$NetBSD: distinfo,v 1.132 2020/02/14 19:15:54 leot Exp $
+$NetBSD: distinfo,v 1.133 2020/03/10 18:14:04 leot Exp $
 
-SHA1 (webkitgtk-2.26.4.tar.xz) = 72f209c08ecc8ad4f0f6b767d4fa1be7a652df33
-RMD160 (webkitgtk-2.26.4.tar.xz) = b1dc653c9d675914f296a4bc0e63ea2b4fec7041
-SHA512 (webkitgtk-2.26.4.tar.xz) = b4d96672d0a41fb7591dd312254fc1b7a85e632923bf2d954d79d395306db96d5a6b4f85e24ea4ba0a447e45e29a41882249c26f6b2d6d572225abefcf28a474
-Size (webkitgtk-2.26.4.tar.xz) = 19329636 bytes
+SHA1 (webkitgtk-2.28.0.tar.xz) = 927d0922b986fd06567015ce4425ed05d9fca209
+RMD160 (webkitgtk-2.28.0.tar.xz) = 672920e0fbd4dc18427bec7bce5276970b5e7b66
+SHA512 (webkitgtk-2.28.0.tar.xz) = ce6b770e99741be6d353716d1e7bccba1372ed4667baeec41428d73c3502b0baa1cb8932f6bcede9c87d9b7f54b57a5a85a056c9882d4c5b34f9c70e6a2124dd
+Size (webkitgtk-2.28.0.tar.xz) = 21425084 bytes
 SHA1 (patch-CMakeLists.txt) = 08f647f6928bf3fce0dabb02586e1447d16da297
 SHA1 (patch-Source_JavaScriptCore_Scripts_check-xcfilelists.sh) = f4f117e6c1cd8eb8e4905f74946e0367156ed528
 SHA1 (patch-Source_JavaScriptCore_Scripts_generate-unified-sources.sh) = 308a7c8f687253b4fc75de0c66016dd18666e697
-SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 2a8f28316ffd1acc0e8c746ad8c9cee9aaf8c611
+SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 79c282ca90d0ba2ef4769da40d4648f5f709951b
 SHA1 (patch-Source_JavaScriptCore_assembler_ARMv7Assembler.h) = 70975aac175ec4131a4ed26a54dfe51e16ffb7cd
-SHA1 (patch-Source_JavaScriptCore_heap_MarkedSpace.cpp) = e6a23d5ef22bddd0a9606fb0e472960e4cf5673e
-SHA1 (patch-Source_JavaScriptCore_jit_ExecutableAllocator.cpp) = d600887955128cecece21ba401f6f53ba5cfbeb6
+SHA1 (patch-Source_JavaScriptCore_heap_MarkedSpace.cpp) = d49d91b9ff637ac4583d0c78c93efea12b07cd02
+SHA1 (patch-Source_JavaScriptCore_jit_ExecutableAllocator.cpp) = d04f2f59094d9b8af663fb68090e440887830d74
 SHA1 (patch-Source_JavaScriptCore_offlineasm_arm64.rb) = 8c05dafa317667bbf55504d05eeb8ae06fba4e93
 SHA1 (patch-Source_JavaScriptCore_runtime_MachineContext.h) = 23bc86a389f8009ec829c3ee0fe3effe3f20b012
-SHA1 (patch-Source_ThirdParty_ANGLE_adjust-angle-include-paths.sh) = b536bcbe0ac4ff158b5bc35dfa363d00120ed2f0
-SHA1 (patch-Source_ThirdParty_ANGLE_src_compiler_translator_SymbolTable.h) = 00ee667591627b104135862658f8182895b51003
+SHA1 (patch-Source_ThirdParty_ANGLE_adjust-angle-include-paths.sh) = 0c0d5ef4e3bad794388fa406c35b34aa4d816f05
+SHA1 (patch-Source_ThirdParty_ANGLE_src_compiler_translator_SymbolTable.h) = 10debffda84bc752ed434657a337a466aad19a3a
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = a5454eb891ad1f9d8285c28af2e9efb4ff439e6b
 SHA1 (patch-Source_WTF_wtf_FileSystem.cpp) = 53a8e65970f15202b3cdf1f4149d35b431c32a46
-SHA1 (patch-Source_WTF_wtf_Platform.h) = 584720f4e248ff7e51166c267d08954786c28ab7
-SHA1 (patch-Source_WTF_wtf_RAMSize.cpp) = b440e7041f72e76ab840977fc4d48d6dd32ed2ed
+SHA1 (patch-Source_WTF_wtf_PlatformEnable.h) = eb5598c20c8453314daba7897066f15827bbede7
+SHA1 (patch-Source_WTF_wtf_PlatformHave.h) = 3787817a0e288d00aa747c417aecd9abf52866d1
+SHA1 (patch-Source_WTF_wtf_PlatformOS.h) = 80aa6ff20f10407d447fdb41606d4bb4989351aa
+SHA1 (patch-Source_WTF_wtf_PlatformUse.h) = 595486b48e7d89378208c0a209a121ef136415e6
+SHA1 (patch-Source_WTF_wtf_RAMSize.cpp) = 81f8f63b4f974601cd50b1d49fcb89f326a43437
 SHA1 (patch-Source_WTF_wtf_StackBounds.cpp) = 22a71daac8443f079ad8bcc7285cfd7319c972b3
 SHA1 (patch-Source_WebCore_Scripts_check-xcfilelists.sh) = b292baf2494bcd459d9af91386263123046c6615
 SHA1 (patch-Source_WebCore_Scripts_generate-unified-sources.sh) = 740eb33931b6f9cb8008748323235f23466328dc

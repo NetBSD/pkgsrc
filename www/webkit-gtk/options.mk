@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2020/01/05 17:55:21 nia Exp $
+# $NetBSD: options.mk,v 1.21 2020/03/10 18:14:04 leot Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
@@ -18,7 +18,7 @@ PLIST_VARS=	introspection
 #
 # Please see:
 #  Source/cmake/WebKitFeatures.cmake
-#  Source/WTF/wtf/Platform.h
+#  Source/WTF/wtf/PlatformEnable.h
 #
 WEBKIT_JIT_MACHINE_PLATFORMS+=	Darwin-*-*
 WEBKIT_JIT_MACHINE_PLATFORMS+=	DragonFly-*-*

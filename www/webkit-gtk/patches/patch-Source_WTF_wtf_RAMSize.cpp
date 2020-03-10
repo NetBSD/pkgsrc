@@ -1,8 +1,8 @@
-$NetBSD: patch-Source_WTF_wtf_RAMSize.cpp,v 1.3 2019/03/27 10:50:30 jperkin Exp $
+$NetBSD: patch-Source_WTF_wtf_RAMSize.cpp,v 1.4 2020/03/10 18:14:04 leot Exp $
 
 Add support for NetBSD and SunOS.
 
---- Source/WTF/wtf/RAMSize.cpp.orig	2019-02-12 11:21:17.000000000 +0000
+--- Source/WTF/wtf/RAMSize.cpp.orig	2020-02-04 10:24:07.000000000 +0000
 +++ Source/WTF/wtf/RAMSize.cpp
 @@ -35,13 +35,19 @@
  #if OS(LINUX)
@@ -22,7 +22,7 @@ Add support for NetBSD and SunOS.
  
 -#if OS(WINDOWS)
 +#if OS(WINDOWS) || (OS(NETBSD) && defined(USE_SYSTEM_MALLOC) && USE_SYSTEM_MALLOC)
- static const size_t ramSizeGuess = 512 * MB;
+ static constexpr size_t ramSizeGuess = 512 * MB;
  #endif
  
 @@ -59,9 +65,20 @@ static size_t computeRAMSize()
