@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/03/10 14:19:35 tsutsui Exp $
+# $NetBSD: Makefile,v 1.52 2020/03/10 14:28:19 tsutsui Exp $
 
 DISTNAME=	nokogiri-1.10.9
 CATEGORIES=	textproc
@@ -8,7 +8,7 @@ HOMEPAGE=	https://nokogiri.org/
 COMMENT=	HTML, XML, SAX, and Reader parser with XPath and CSS selector support
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-mini_portile2>=2.4.0<2.5.0:../../misc/ruby-mini_portile2
+DEPENDS+=	${RUBY_PKGPREFIX}-mini_portile2>=2.4.0:../../misc/ruby-mini_portile2
 
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		pkg-config
