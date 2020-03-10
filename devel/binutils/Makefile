@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2020/02/05 06:18:34 rillig Exp $
+# $NetBSD: Makefile,v 1.80 2020/03/10 19:01:31 bacon Exp $
 
 DISTNAME=	binutils-2.34
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.bz2
@@ -50,7 +51,7 @@ INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
 # gprof (XXX: and others?) cannot be built on all platforms
 #
-PLIST_VARS+=	gprof ld gold SunOS
+PLIST_VARS+=	gprof ld gold SunOS CTF
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -64,6 +65,11 @@ PLIST.ld=	yes
 
 .if ${OPSYS} == SunOS
 PLIST.SunOS=	yes
+.endif
+
+# Temporary: libctf should be mature on Linux in the near future
+.if ${OPSYS} != Linux
+PLIST.CTF=	yes
 .endif
 
 .if ${OPSYS} == DragonFly \

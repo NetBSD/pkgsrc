@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.29 2020/02/05 06:18:34 rillig Exp $
+@comment $NetBSD: PLIST.common,v 1.30 2020/03/10 19:01:31 bacon Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -68,8 +68,8 @@ include/ansidecl.h
 include/bfd.h
 include/bfd_stdint.h
 include/bfdlink.h
-include/ctf-api.h
-include/ctf.h
+${PLIST.CTF}include/ctf-api.h
+${PLIST.CTF}include/ctf.h
 include/diagnostics.h
 include/dis-asm.h
 include/plugin-api.h
@@ -80,8 +80,8 @@ info/binutils.info
 ${PLIST.gprof}info/gprof.info
 info/ld.info
 lib/libbfd.la
-lib/libctf-nobfd.la
-lib/libctf.la
+${PLIST.CTF}lib/libctf-nobfd.la
+${PLIST.CTF}lib/libctf.la
 lib/libopcodes.la
 man/man1/gaddr2line.1
 man/man1/gar.1
