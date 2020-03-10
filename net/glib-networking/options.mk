@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2019/06/12 22:04:40 leot Exp $
+# $NetBSD: options.mk,v 1.2 2020/03/10 22:53:35 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.glib-networking
 
@@ -16,7 +16,7 @@ PLIST_VARS+=	gnutls openssl
 ###
 .if !empty(PKG_OPTIONS:Mgnutls)
 PLIST.gnutls=	yes
-BUILDLINK_API_DEPENDS.gnutls+= gnutls>=3.6.0nb1
+BUILDLINK_API_DEPENDS.gnutls+= gnutls>=3.6.5
 .  include "../../security/gnutls/buildlink3.mk"
 MESON_ARGS+=	-Dgnutls=enabled
 MESON_ARGS+=	-Dopenssl=disabled
