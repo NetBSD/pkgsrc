@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1459 2020/03/10 16:17:44 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.1460 2020/03/10 18:14:17 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2024,3 +2024,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/termtosvg version 1.1.0 [fcambus 2020-03-10]
 	Updated net/libfilezilla to 0.20.2 [wiz 2020-03-10]
 	Updated geography/proj to 6.3.1 [gdt 2020-03-10]
+	Updated www/webkit-gtk to 2.28.0 [leot 2020-03-10]
