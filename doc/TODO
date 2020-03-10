@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19714 2020/03/10 18:14:17 leot Exp $
+$NetBSD: TODO,v 1.19715 2020/03/10 20:18:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -802,7 +802,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o librsvg-2.48.0
 	o libsigc++3-3.0.2
 	o libsoup-2.70.0
 	o libstree-0.4.2
