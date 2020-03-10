@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/03/08 16:51:53 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/10 22:11:23 wiz Exp $
 #
-PKGREVISION= 12
+PKGREVISION= 13
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-wmdock-plugin-0.6.0

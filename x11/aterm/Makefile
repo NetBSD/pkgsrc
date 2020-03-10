@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2020/03/08 16:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2020/03/10 22:11:11 wiz Exp $
 #
 
 DISTNAME=	aterm-1.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aterm/}
 EXTRACT_SUFX=	.tar.bz2

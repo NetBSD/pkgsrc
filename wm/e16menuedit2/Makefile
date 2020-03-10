@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2020/03/08 16:51:32 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2020/03/10 22:11:07 wiz Exp $
 
 DISTNAME=		e16menuedit2-0.0.3
-PKGREVISION=		34
+PKGREVISION=		35
 CATEGORIES=		wm x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
