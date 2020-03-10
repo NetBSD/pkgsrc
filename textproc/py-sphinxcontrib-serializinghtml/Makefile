@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/03/07 23:30:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/10 14:51:12 gdt Exp $
 
 DISTNAME=	sphinxcontrib-serializinghtml-1.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,12 @@ HOMEPAGE=	http://sphinx-doc.org/
 COMMENT=	Sphinx API for "serialized" HTML files
 LICENSE=	2-clause-bsd
 
+# On NetBSD, pax-as-tar fails on this distfile <= 8.  (Accomodate 5-7
+# even though they are unsupported.)
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == NetBSD && !empty(OS_VERSION:M[5678].*)
 EXTRACT_USING=	bsdtar
+.endif
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.0.0:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
