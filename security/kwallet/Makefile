@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2020/03/08 16:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2020/03/10 22:08:59 wiz Exp $
 
 DISTNAME=	kwallet-${KF5VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 
 HOMEPAGE=	https://community.kde.org/Frameworks

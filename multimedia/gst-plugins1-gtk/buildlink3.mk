@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2020/03/08 16:47:58 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2020/03/10 22:08:56 wiz Exp $
 
 BUILDLINK_TREE+=	gst-plugins1-gtk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gst-plugins1-gtk
 GST_PLUGINS1_GTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gst-plugins1-gtk+=	gst-plugins1-gtk>=1.16.0
-BUILDLINK_ABI_DEPENDS.gst-plugins1-gtk?=		gst-plugins1-gtk>=1.16.2nb1
+BUILDLINK_ABI_DEPENDS.gst-plugins1-gtk?=		gst-plugins1-gtk>=1.16.2nb2
 BUILDLINK_PKGSRCDIR.gst-plugins1-gtk?=		../../multimedia/gst-plugins1-gtk
 
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
