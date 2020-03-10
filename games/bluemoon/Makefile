@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2020/03/08 16:49:33 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2020/03/10 22:09:50 wiz Exp $
 #
 
 DISTNAME=	bluemoon-1.3.2
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	games
 MASTER_SITES=	http://keldon.net/bluemoon/
 

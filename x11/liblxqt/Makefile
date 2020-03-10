@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/03/08 16:48:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/10 22:09:10 wiz Exp $
 
 DISTNAME=	liblxqt-0.14.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/liblxqt/0.14.1/
 EXTRACT_SUFX=	.tar.xz

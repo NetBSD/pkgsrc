@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2020/03/10 04:20:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.57 2020/03/10 22:11:21 wiz Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-clipman-plugin-1.4.4
