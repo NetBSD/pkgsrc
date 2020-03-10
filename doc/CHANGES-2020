@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1448 2020/03/09 21:48:48 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.1449 2020/03/10 04:20:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2011,3 +2011,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-pygments to 2.5.2 [adam 2020-03-09]
 	Updated textproc/py-sphinx to 2.4.4 [adam 2020-03-09]
 	Added net/p5-GeoIP2 version 2.006002 [fcambus 2020-03-09]
+	Updated x11/xfce4-clipman-plugin to 1.4.4 [gutteridge 2020-03-10]
