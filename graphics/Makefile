@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.883 2020/03/05 20:36:44 nia Exp $
+# $NetBSD: Makefile,v 1.884 2020/03/10 15:21:00 fcambus Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -546,6 +546,7 @@ SUBDIR+=	spectacle
 SUBDIR+=	svgpart
 SUBDIR+=	sxiv
 SUBDIR+=	tango-icon-theme
+SUBDIR+=	termtosvg
 SUBDIR+=	tesseract
 SUBDIR+=	tex-a2ping
 SUBDIR+=	tex-a2ping-doc
