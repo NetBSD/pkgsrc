@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.107 2020/01/27 11:19:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.108 2020/03/10 23:04:48 wiz Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -152,7 +152,7 @@ include/ImageMagick-7/MagickWand/pixel-wand.h
 include/ImageMagick-7/MagickWand/stream.h
 include/ImageMagick-7/MagickWand/wand-view.h
 include/ImageMagick-7/MagickWand/wandcli.h
-lib/ImageMagick-7.0.9/config-Q16HDRI/configure.xml
+lib/ImageMagick-7.0.10/config-Q16HDRI/configure.xml
 lib/libMagick++-7.Q16HDRI.la
 lib/libMagickCore-7.Q16HDRI.la
 lib/libMagickWand-7.Q16HDRI.la
@@ -199,6 +199,12 @@ share/doc/ImageMagick-7/images/bluebells_darker.jpg
 share/doc/ImageMagick-7/images/bluebells_lin.jpg
 share/doc/ImageMagick-7/images/bluebells_log.jpg
 share/doc/ImageMagick-7/images/button.gif
+share/doc/ImageMagick-7/images/color-thresholding-gray.gif
+share/doc/ImageMagick-7/images/color-thresholding-hsv-rgb.gif
+share/doc/ImageMagick-7/images/color-thresholding-hsv.gif
+share/doc/ImageMagick-7/images/color-thresholding-rgb.gif
+share/doc/ImageMagick-7/images/color-thresholding.gif
+share/doc/ImageMagick-7/images/color-thresholding.jpg
 share/doc/ImageMagick-7/images/configure.jpg
 share/doc/ImageMagick-7/images/cylinder_shaded.png
 share/doc/ImageMagick-7/images/difference.png
@@ -1125,6 +1131,7 @@ share/doc/ImageMagick-7/www/changelog.html
 share/doc/ImageMagick-7/www/cipher.html
 share/doc/ImageMagick-7/www/clahe.html
 share/doc/ImageMagick-7/www/color-management.html
+share/doc/ImageMagick-7/www/color-thresholding.html
 share/doc/ImageMagick-7/www/color.html
 share/doc/ImageMagick-7/www/command-line-options.html
 share/doc/ImageMagick-7/www/command-line-processing.html
