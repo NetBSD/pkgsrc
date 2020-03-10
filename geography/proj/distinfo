@@ -1,22 +1,27 @@
-$NetBSD: distinfo,v 1.13 2019/02/21 00:55:04 gdt Exp $
+$NetBSD: distinfo,v 1.14 2020/03/10 16:17:38 gdt Exp $
 
-SHA1 (proj-5.2.0.tar.gz) = 09cb68377e9901c0e1b817b58e820118ccb741e6
-RMD160 (proj-5.2.0.tar.gz) = d99eccff181bb002dd0e398a69fb26cbf57fc4d6
-SHA512 (proj-5.2.0.tar.gz) = f773117d22309d4ee8dbedc2a7b6ba27e8cd032e1bd0af3c98f270bf7b7ab3353be0b04d91202a1f137fc45164c8e8a52712bb06281948008160d08f9f9074ba
-Size (proj-5.2.0.tar.gz) = 1398188 bytes
+SHA1 (proj-6.3.1.tar.gz) = bc6baa7c494bc30992aaa5e3bd4dc4f443ece635
+RMD160 (proj-6.3.1.tar.gz) = 67394c6fc3382449de61fc7a4dba29e3508deb84
+SHA512 (proj-6.3.1.tar.gz) = 669b752f491bd99e320b0750c7129251a562a303e008e3d89c8e71baefd7f6d4ccb08234b3039c03694e2cc93b8dde81771cd7ffd981ff8045d855240a480a5e
+Size (proj-6.3.1.tar.gz) = 2823891 bytes
 SHA1 (proj-datumgrid-1.8.tar.gz) = ede1c255adebb903f9ec33c5760ecb0df7b3b03c
 RMD160 (proj-datumgrid-1.8.tar.gz) = 074fcfba2e41cbe81e5be45eddc0e38683d891ef
 SHA512 (proj-datumgrid-1.8.tar.gz) = 23153f5b57d210e37cd6e9e0fced23bdabb1c67476e9fb50eb83a68ae066a5c3675822472f5d558d10ddf36ac1d73d538b75304d112a1bfcd8d0bbd26c6481a5
 Size (proj-datumgrid-1.8.tar.gz) = 6604329 bytes
-SHA1 (proj-datumgrid-europe-1.1.tar.gz) = 51ef06d68cae5055f060d03e7c3deeda5bf81b46
-RMD160 (proj-datumgrid-europe-1.1.tar.gz) = 508676e5e059ed7a0315ab30ff961ee918d39bce
-SHA512 (proj-datumgrid-europe-1.1.tar.gz) = 954672b13ae9311721e40826e9a64225cc362a41dc7871f3fe8e62b70ce9ca1110368f99fd7d52bc2f5a5f426b7bb4cac5cb9e44183100ff4a32b61d1f65fcce
-Size (proj-datumgrid-europe-1.1.tar.gz) = 9237058 bytes
-SHA1 (proj-datumgrid-north-america-1.1.tar.gz) = 721bf278aa2b012dfdabcb05cb5c25433f5b1a66
-RMD160 (proj-datumgrid-north-america-1.1.tar.gz) = eb4c5fe0c10bd27864d8336eeea02ed4dc4ce6dd
-SHA512 (proj-datumgrid-north-america-1.1.tar.gz) = c532f3c54e2e8dc465ff0777d53a8bc39bdba10d2517b1621156727acf0adee5f726b0d245d757993169613d30b82d4efd59c0e4ed558e53cf99429b698bef89
-Size (proj-datumgrid-north-america-1.1.tar.gz) = 19143459 bytes
-SHA1 (proj-datumgrid-oceania-1.0.tar.gz) = 42970835b4932e5e96a630759c28b75502f4b382
-RMD160 (proj-datumgrid-oceania-1.0.tar.gz) = fcafe24982a1cd40c97137d42f2438fc48938c27
-SHA512 (proj-datumgrid-oceania-1.0.tar.gz) = a079fdb0ab22e591e55efa003ecd0ca1d65ce84ac0eb1b74456c1d3d62e601e3639b551aab1a0c2e77ca580d0c96cf69284e6591b80cffd18efdaada47d13e64
-Size (proj-datumgrid-oceania-1.0.tar.gz) = 96908713 bytes
+SHA1 (proj-datumgrid-europe-1.5.tar.gz) = 96556de773628a1fd312d49211a687b5f2299e39
+RMD160 (proj-datumgrid-europe-1.5.tar.gz) = d48f3599ae8881022203316d9ad4ae43921282f0
+SHA512 (proj-datumgrid-europe-1.5.tar.gz) = 456a8c27dad7ef8fc1790ef822e7e8dcbc69b79e0a28df8c6b58d24b0ef4a3221cebd8e911a0d84b7f00694247b0fb8f4361a38d7369f921da000c838812f389
+Size (proj-datumgrid-europe-1.5.tar.gz) = 187195036 bytes
+SHA1 (proj-datumgrid-north-america-1.3.tar.gz) = 386a7043a1ed786d0b766b9766daaa7d1c18d658
+RMD160 (proj-datumgrid-north-america-1.3.tar.gz) = 5db05ceebed69f732119a6c047c036c742308fc5
+SHA512 (proj-datumgrid-north-america-1.3.tar.gz) = d79b44b2a20aef4ef41ba4d2f91146b54fa94978ef9b7512931ee78bdd373bbbe2c89a6748cef77c3b0e912a5b937ddecb31fd7a9e9fe04e36b9907184830a19
+Size (proj-datumgrid-north-america-1.3.tar.gz) = 452401850 bytes
+SHA1 (proj-datumgrid-oceania-1.1.tar.gz) = a45190c74e7e89828582c304a9d7bc7c63882f29
+RMD160 (proj-datumgrid-oceania-1.1.tar.gz) = 73c802e8438b8a79cf1667b40f6b1baf44bdea58
+SHA512 (proj-datumgrid-oceania-1.1.tar.gz) = 8ecd31470305c1433b3ce5e26f44e0a1e2131c6d8a76b2318c1a1cf9241a4f70ca6e8638ff64315d1061e2aa3046a4ca8c4f4336ad682ce18362ee2c956aed6b
+Size (proj-datumgrid-oceania-1.1.tar.gz) = 144248108 bytes
+SHA1 (proj-datumgrid-world-1.0.tar.gz) = b66863826b2387f28c860abf2c6ee2366b967088
+RMD160 (proj-datumgrid-world-1.0.tar.gz) = a21a6320eb7da3bbf72b7ad685a08255b8f9663d
+SHA512 (proj-datumgrid-world-1.0.tar.gz) = 9f79f4c24f1a4a472f2747e4bb147c7140a92f3043b283f2a0326775393ebb39f634f2715a4d085dc33eabbbed4c3fb1871753ecf6c238c179ac0bbe83b9ca3e
+Size (proj-datumgrid-world-1.0.tar.gz) = 134373680 bytes
+SHA1 (patch-data_Makefile.in) = 41d5e2a9abbe1fef5036a427c45c4b838c4c373a
