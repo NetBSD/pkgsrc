@@ -638,6 +638,7 @@ postgrey-targrey	Enable the Postgrey taRgrey tarpitting patch.
 ppx	Enable PPX support.
 prime			Use Prime for Kana-to-Kanji conversion.
 proftpd-readme		Enable mod_readme.
+proj-grids		Enable optional grids for datum transformations in proj.
 psiconv			Enable psiconv support (for PSION 5 file formats).
 psl			Enable support for Public Suffix List.
 pstack			Enable pstack backtrace library.
