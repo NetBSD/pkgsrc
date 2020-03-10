@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/11/13 14:28:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/03/10 22:30:30 wiz Exp $
 bin/peas-demo
 include/libpeas-1.0/libpeas-gtk/peas-gtk-autocleanups.h
 include/libpeas-1.0/libpeas-gtk/peas-gtk-configurable.h
@@ -20,10 +20,10 @@ lib/girepository-1.0/Peas-1.0.typelib
 lib/girepository-1.0/PeasGtk-1.0.typelib
 lib/libpeas-1.0.so
 lib/libpeas-1.0.so.0
-lib/libpeas-1.0.so.0.2400.1
+lib/libpeas-1.0.so.0.2600.0
 lib/libpeas-gtk-1.0.so
 lib/libpeas-gtk-1.0.so.0
-lib/libpeas-gtk-1.0.so.0.2400.1
+lib/libpeas-gtk-1.0.so.0.2600.0
 lib/peas-demo/plugins/helloworld/helloworld.plugin
 lib/peas-demo/plugins/helloworld/libhelloworld.so
 lib/peas-demo/plugins/secondtime/libsecondtime.so
@@ -76,6 +76,7 @@ share/locale/lt/LC_MESSAGES/libpeas-1.0.mo
 share/locale/lv/LC_MESSAGES/libpeas-1.0.mo
 share/locale/ml/LC_MESSAGES/libpeas-1.0.mo
 share/locale/mr/LC_MESSAGES/libpeas-1.0.mo
+share/locale/ms/LC_MESSAGES/libpeas-1.0.mo
 share/locale/nb/LC_MESSAGES/libpeas-1.0.mo
 share/locale/nds/LC_MESSAGES/libpeas-1.0.mo
 share/locale/ne/LC_MESSAGES/libpeas-1.0.mo

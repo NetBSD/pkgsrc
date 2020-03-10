@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2019/11/13 14:28:05 wiz Exp $
+$NetBSD: distinfo,v 1.11 2020/03/10 22:30:30 wiz Exp $
 
-SHA1 (libpeas-1.24.1.tar.xz) = 96ef3f416398fda91f210c80de6befe8ecc59ba9
-RMD160 (libpeas-1.24.1.tar.xz) = 0c26593db1d0f44931470abef6c3cff32ce10766
-SHA512 (libpeas-1.24.1.tar.xz) = 9e2f2f3e7208baa7e72f6b963ad2bca7bf2789ffb2656151bd913be10d45f3e0d40379d69513d2ecf597cc6d211d157c273cc841dfd445829d0cb57d24275e1b
-Size (libpeas-1.24.1.tar.xz) = 186840 bytes
+SHA1 (libpeas-1.26.0.tar.xz) = 076daf5334f344a81b4c6e98751cbb61195eabc3
+RMD160 (libpeas-1.26.0.tar.xz) = 09c901a2c52ddd64c3b7b5a3d98470e737c8c91e
+SHA512 (libpeas-1.26.0.tar.xz) = 86157da14d17c16df2ef3f44ab48822ea1a8be8aec8f5419bc421bd475113f686cd16f9616ac53cbf3dc6f31f521384ac63eb8e9f1a46ea21b5cda8ba21e855f
+Size (libpeas-1.26.0.tar.xz) = 191708 bytes
+SHA1 (patch-peas-demo_peas-demo.c) = c9411235c3aa6a7ff20934f64361abf89b9dfc41
