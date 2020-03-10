@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.60 2020/03/08 16:50:56 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2020/03/10 22:10:47 wiz Exp $
 
 VERSION=	1.0.1
 DISTNAME=	Nagstamon-${VERSION}
 PKGNAME=	${DISTNAME:S/N/n/}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	net python
 MASTER_SITES=	https://nagstamon.ifw-dresden.de/files-nagstamon/stable/
 
