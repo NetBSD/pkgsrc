@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2020/03/08 16:49:11 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2020/03/10 22:09:34 wiz Exp $
 
 DISTNAME=	Coder-0.3.0
 PKGNAME=	deforaos-coder-0.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Coder/
 
