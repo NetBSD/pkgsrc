@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.77 2020/03/08 16:49:14 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2020/03/10 22:09:36 wiz Exp $
 #
 
 PKGVER=		0.8.8
 DISTNAME=	libcompizconfig-${PKGVER}
-PKGREVISION=	46
+PKGREVISION=	47
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 

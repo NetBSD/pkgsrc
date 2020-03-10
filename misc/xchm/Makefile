@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2020/03/08 16:50:37 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2020/03/10 22:10:36 wiz Exp $
 
 DISTNAME=	xchm-1.23
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xchm/}
 

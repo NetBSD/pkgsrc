@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2020/03/08 16:48:46 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2020/03/10 22:09:22 wiz Exp $
 
 DISTNAME=	liteamp-0.2.4.2
-PKGREVISION=	66
+PKGREVISION=	67
 CATEGORIES=	audio
 MASTER_SITES=	http://kldp.net/frs/download.php/1153/
 
