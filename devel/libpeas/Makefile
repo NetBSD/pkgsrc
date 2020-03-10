@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2020/03/10 22:08:45 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2020/03/10 22:30:30 wiz Exp $
 
-DISTNAME=	libpeas-1.24.1
-PKGREVISION=	2
+DISTNAME=	libpeas-1.26.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libpeas/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
