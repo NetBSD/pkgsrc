@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/10 15:20:06 fcambus Exp $
+
+SHA1 (termtosvg-1.1.0.tar.gz) = 1cc4ca1be9e5dc062f69581964614100743be5d2
+RMD160 (termtosvg-1.1.0.tar.gz) = 21e79e49d48f70194f774cee403445a5a99cedf1
+SHA512 (termtosvg-1.1.0.tar.gz) = 4e5000d885b2ac4fc281d9f45c3be3d6b4c93ed604d2d929471843edc7e0ee78a8cc5ee28f92b51050d3f46d3302a2dcbbba3c9a2a3775eebe87d8171c1c6e8d
+Size (termtosvg-1.1.0.tar.gz) = 385300 bytes
