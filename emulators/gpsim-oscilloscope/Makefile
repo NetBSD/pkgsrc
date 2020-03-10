@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2020/03/08 16:49:27 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2020/03/10 22:09:46 wiz Exp $
 #
 
 DISTNAME=	oscilloscope-0.1.2
 PKGNAME=	gpsim-${DISTNAME}
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	emulators
 MASTER_SITES=	http://www-asim.lip6.fr/~bouyer/pic/
 

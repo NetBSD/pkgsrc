@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.52 2020/03/08 16:47:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.53 2020/03/10 22:08:46 wiz Exp $
 
 BUILDLINK_TREE+=	pango
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pango
 PANGO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.6.0
-BUILDLINK_ABI_DEPENDS.pango+=	pango>=1.44.7nb1
+BUILDLINK_ABI_DEPENDS.pango+=	pango>=1.44.7nb2
 BUILDLINK_PKGSRCDIR.pango?=	../../devel/pango
 
 .include "../../mk/bsd.fast.prefs.mk"

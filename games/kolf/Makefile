@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2020/03/08 16:49:42 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2020/03/10 22:09:56 wiz Exp $
 
 DISTNAME=	kolf-${KAPPSVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kolf/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.100 2020/03/08 16:48:05 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2020/03/10 22:08:58 wiz Exp $
 #
 
 DISTNAME=	libgnomeprintui-2.18.6
-PKGREVISION=	36
+PKGREVISION=	37
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprintui/2.18/}
 EXTRACT_SUFX=	.tar.bz2

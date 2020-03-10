@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.11 2020/03/08 16:47:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2020/03/10 22:08:38 wiz Exp $
 
 BUILDLINK_TREE+=	suil
 
 .if !defined(SUIL_BUILDLINK3_MK)
 SUIL_BUILDLINK3_MK:=
 
-BUILDLINK_ABI_DEPENDS.suil+=	suil>=0.10.6nb1
+BUILDLINK_ABI_DEPENDS.suil+=	suil>=0.10.6nb2
 BUILDLINK_API_DEPENDS.suil+=	suil>=0.8.2
 BUILDLINK_PKGSRCDIR.suil?=	../../audio/suil
 

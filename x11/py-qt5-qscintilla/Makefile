@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2020/03/08 16:48:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/03/10 22:09:12 wiz Exp $
 
 .include "../../x11/qt5-qscintilla/Makefile.common"
 
 
 PKGNAME=	${PYPKGPREFIX}-qt5-${DISTNAME:tl:S/_gpl-/-/}
 COMMENT=	QScintilla -- Python bindings
-PKGREVISION=	4
+PKGREVISION=	5
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Python
 

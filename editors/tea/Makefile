@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2020/03/08 16:49:23 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2020/03/10 22:09:44 wiz Exp $
 
 DISTNAME=	tea-48.0.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=psemiletov/}
 GITHUB_PROJECT=	tea-qt

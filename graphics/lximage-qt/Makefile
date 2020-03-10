@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/03/08 16:50:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/10 22:10:10 wiz Exp $
 
 DISTNAME=	lximage-qt-0.14.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lximage-qt/0.14.1/
 EXTRACT_SUFX=	.tar.xz
