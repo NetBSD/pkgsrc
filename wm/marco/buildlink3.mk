@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2020/03/08 16:48:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2020/03/10 22:09:03 wiz Exp $
 #
 
 BUILDLINK_TREE+=	marco
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	marco
 MARCO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.marco+=	marco>=1.8.2
-BUILDLINK_ABI_DEPENDS.marco+=	marco>=1.22.4nb1
+BUILDLINK_ABI_DEPENDS.marco+=	marco>=1.22.4nb2
 BUILDLINK_PKGSRCDIR.marco?=	../../wm/marco
 
 .include "../../audio/libcanberra/buildlink3.mk"
