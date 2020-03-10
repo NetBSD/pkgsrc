@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1458 2020/03/10 15:29:18 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1459 2020/03/10 16:17:44 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2023,3 +2023,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/ruby-mini_portile2 to 2.5.0 [tsutsui 2020-03-10]
 	Added graphics/termtosvg version 1.1.0 [fcambus 2020-03-10]
 	Updated net/libfilezilla to 0.20.2 [wiz 2020-03-10]
+	Updated geography/proj to 6.3.1 [gdt 2020-03-10]
