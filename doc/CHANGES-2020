@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1457 2020/03/10 15:21:18 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.1458 2020/03/10 15:29:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2022,3 +2022,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-nokogiri to 1.10.9 [tsutsui 2020-03-10]
 	Updated misc/ruby-mini_portile2 to 2.5.0 [tsutsui 2020-03-10]
 	Added graphics/termtosvg version 1.1.0 [fcambus 2020-03-10]
+	Updated net/libfilezilla to 0.20.2 [wiz 2020-03-10]
