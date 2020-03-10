@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2020/03/08 16:50:55 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2020/03/10 15:29:10 wiz Exp $
 
-DISTNAME=	libfilezilla-0.19.3
-PKGREVISION=	1
-CATEGORIES=	devel
+DISTNAME=	libfilezilla-0.20.2
+CATEGORIES=	net
 # some kind of direct-download disabling
 #MASTER_SITES=	https://dl3.cdn.filezilla-project.org/libfilezilla/
 EXTRACT_SUFX=	.tar.bz2
