@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19713 2020/03/10 16:05:08 leot Exp $
+$NetBSD: TODO,v 1.19714 2020/03/10 18:14:17 leot Exp $
 
 Suggested new packages
 ======================
@@ -1196,7 +1196,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wayland-1.18
 	o wcalc-2.4
 	o webalizer-2.23.05
-	o webkit-gtk-2.28.0 [leot]
 	o websvn-2.3.3
 	o weewm-0.01
 	o whowatch-1.8.5
