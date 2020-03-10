@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.1 2019/11/12 12:41:19 ng0 Exp $
+# $NetBSD: module.mk,v 1.2 2020/03/10 22:43:27 wiz Exp $
 #
 # Common build logic for Guile 2.2 modules using gnu configure.
 #
@@ -14,11 +14,11 @@
 GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/2.2
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/guile/2.2/lib
 
-.if defined(GUILE_NEED_BOOTSTRAP)
+.  if defined(GUILE_NEED_BOOTSTRAP)
 USE_TOOLS+=		automake autoconf autoreconf
 pre-configure:
 	(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoreconf -I${PREFIX}/guile/2.2/share/aclocal -vif)
-.endif
+.  endif
 
 .include "../../lang/guile22/buildlink3.mk"
 .endif

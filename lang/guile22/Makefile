@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2020/03/08 16:42:27 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2020/03/10 22:43:27 wiz Exp $
 
-DISTNAME=	guile-2.2.6
+DISTNAME=	guile-2.2.7
 PKGNAME=	${DISTNAME:S/guile/guile22/}
-PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
 
@@ -60,7 +59,7 @@ SUBST_MESSAGE.tools=	Fixing path to pkg-config in installed file.
 
 OPSYSVARS+=		GUILE_LIBNAME
 GUILE_LIBNAME.Darwin=	a
-GUILE_LIBNAME.*=	so.1.4.1
+GUILE_LIBNAME.*=	so.1.4.2
 
 PLIST_SUBST+=		GUILE_LIBNAME=${GUILE_LIBNAME}
 PRINT_PLIST_AWK+=	{gsub(/${GUILE_LIBNAME}/, "$${GUILE_LIBNAME}");}
