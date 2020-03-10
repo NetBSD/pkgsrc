@@ -1,0 +1,20 @@
+$NetBSD: patch-data_Makefile.in,v 1.1 2020/03/10 16:17:38 gdt Exp $
+
+Remediate bashism.
+
+Posted about on mailing list 20200310.
+\todo File bug and pull request to fix.
+\todo File pull request to adjust upstream standards.
+\todo File bug that CI doesn't detect bashisms.
+
+--- data/Makefile.in.orig	2020-02-10 10:16:34.000000000 +0000
++++ data/Makefile.in
+@@ -594,7 +594,7 @@ proj.db: $(DATAPATH)/sql/*.sql
+ 	echo "" | head -c1; \
+         if [ $$? -eq 0 ] ; then \
+          echo "Running foreign_key_check"; \
+-	 if [[ $$(echo "pragma foreign_key_check;" | sqlite3 proj.db | head -c1 | wc -c) -ne 0 ]]; then \
++	 if [ $$(echo "pragma foreign_key_check;" | sqlite3 proj.db | head -c1 | wc -c) -ne 0 ]; then \
+ 		echo "Foreign key check failed"; \
+ 		$(RM) proj.db; \
+ 		exit 1; \
