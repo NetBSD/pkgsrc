@@ -1,15 +1,15 @@
-$NetBSD: patch-Makefile.in,v 1.1 2020/01/19 16:52:46 maya Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2020/03/10 20:18:20 wiz Exp $
 
 Make it possible to respect MAKE_JOBS.
 
---- Makefile.in.orig	2019-11-21 16:59:53.000000000 +0000
+--- Makefile.in.orig	2020-03-06 21:48:49.000000000 +0000
 +++ Makefile.in
-@@ -1761,7 +1761,7 @@ librsvg_c_api.la: $(librsvg_c_api_la_OBJ
+@@ -1759,7 +1759,7 @@ librsvg_c_api.la: $(librsvg_c_api_la_OBJ
  	PKG_CONFIG_ALLOW_CROSS=1						\
  	PKG_CONFIG='$(PKG_CONFIG)'						\
  	CARGO_TARGET_DIR=$(CARGO_TARGET_DIR)					\
 -	$(CARGO) --locked build $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS) \
 +	$(CARGO) --locked build $(CARGO_MAKE_JOBS) $(CARGO_VERBOSE) $(CARGO_TARGET_ARGS) $(CARGO_RELEASE_ARGS) \
- 	&& if [[ $$($(NM) -g $(RUST_LIB) | grep "T __*clzsi2" -c) -gt 1 ]] ; then \
- 		$(AR) d $(RUST_LIB) clzsi2.o;					\
- 	fi \
+ 	&& cd $(LIBRSVG_BUILD_DIR) && $(LINK) $< && mv $(RUST_LIB) .libs/librsvg_c_api.a
+ 
+ @HAVE_INTROSPECTION_TRUE@-include $(INTROSPECTION_MAKEFILE)
