@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1500 2020/03/11 19:50:13 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1501 2020/03/11 19:56:02 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2066,3 +2066,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed graphics/goocanvasmm [wiz 2020-03-11]
 	Updated time/py-goocalendar to 0.7.0 [wiz 2020-03-11]
 	Removed net/openwbem [nia 2020-03-11]
+	Removed net/chimera [nia 2020-03-11]
