@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3053 2020/03/06 12:04:01 nia Exp $
+# $NetBSD: Makefile,v 1.3054 2020/03/11 10:26:05 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -302,7 +302,6 @@ SUBDIR+=	erlang-cache_tab
 SUBDIR+=	erlang-ezlib
 SUBDIR+=	erlang-fs
 SUBDIR+=	error
-SUBDIR+=	ethos
 SUBDIR+=	etrace
 SUBDIR+=	exctags
 SUBDIR+=	exempi
