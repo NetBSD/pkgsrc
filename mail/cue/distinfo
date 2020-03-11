@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.37 2016/05/01 04:54:01 mef Exp $
+$NetBSD: distinfo,v 1.38 2020/03/11 19:20:36 nia Exp $
 
-SHA1 (cue-snap-20151214.tar.gz) = a176eeda20f4f8ee41182d6ad3e45f8bd0c3ebe8
-RMD160 (cue-snap-20151214.tar.gz) = 16657cac021f398d51359f096b738327ac848ad1
-SHA512 (cue-snap-20151214.tar.gz) = 74d7050755d34cd4092298f481df6d9288f262be7d6c403511798f147e18b63a3e2792b98dabbe4412396ca6d8de80b7219a1096d99853f4471be33c8ecca0e0
-Size (cue-snap-20151214.tar.gz) = 259848 bytes
+SHA1 (cue-snap-20180813.tar.gz) = 927e03d9162f0c9bf2e5fda2bd53bb934262efc3
+RMD160 (cue-snap-20180813.tar.gz) = 0b6ab0346b36e1c12a87e3932e20ef948e41ddf0
+SHA512 (cue-snap-20180813.tar.gz) = 2d923d61e1b4f199d681d28115f9f00f32e1d6f5fb61a9d3d6d54b43533fba89342246a3004732f3dbabb20e322f1002700c5b3cc26d8e5687d3d11ad9454b81
+Size (cue-snap-20180813.tar.gz) = 260627 bytes
 SHA1 (patch-aa) = c83665ce01f9a56652a3ad650910f9b810cae4b4
 SHA1 (patch-configure.in) = 3f7c2fe9ce3ab851d06cc6d4e31e8c3bdde6d709
 SHA1 (patch-pgp.c) = b6142c2bf9d2a1341663ac0902d1014bc66ec323
