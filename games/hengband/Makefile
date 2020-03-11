@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2020/01/30 13:56:12 pho Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/11 15:01:53 pho Exp $
 
-DISTNAME=	hengband-1.6.2
-PKGREVISION=	1
+DISTNAME=	hengband-2.2.1r
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_OSDN:=hengband/10331/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_OSDN:=hengband/72520/}
+EXTRACT_SUFX=	.tar.gz
+
+EXTRACT_DIR=	${WRKSRC}
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://hengband.sourceforge.jp/en/index.html
