@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/07/30 13:03:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/03/11 11:08:42 wiz Exp $
 bin/geeqie
 lib/geeqie/geeqie-camera-import
 lib/geeqie/geeqie-camera-import-hook-script
@@ -15,6 +15,8 @@ man/man1/geeqie.1
 share/applications/geeqie.desktop
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/ChangeLog
+share/doc/${PKGNAME}/ChangeLog.html
 share/doc/${PKGNAME}/README.lirc
 share/doc/${PKGNAME}/README.md
 share/doc/${PKGNAME}/TODO
