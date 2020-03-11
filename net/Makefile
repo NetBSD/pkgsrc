@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1310 2020/03/09 21:48:20 fcambus Exp $
+# $NetBSD: Makefile,v 1.1311 2020/03/11 19:49:38 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -463,7 +463,6 @@ SUBDIR+=	openvmps
 SUBDIR+=	openvpn
 SUBDIR+=	openvpn-acct-wtmpx
 SUBDIR+=	openvpn-nagios
-SUBDIR+=	openwbem
 SUBDIR+=	ortp
 SUBDIR+=	overnet
 SUBDIR+=	owncloudclient
