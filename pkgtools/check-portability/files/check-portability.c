@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.2 2020/03/11 22:41:17 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.3 2020/03/11 23:36:32 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -28,6 +28,7 @@
  */
 
 #include <assert.h>
+#include <ctype.h>
 #include <stdarg.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -51,6 +52,12 @@ typedef struct {
 } str;
 
 #define STR_EMPTY { nullptr, 0, 0 }
+
+static bool
+is_alnum(char c)
+{
+	return isalnum((unsigned char) c) != 0;
+}
 
 static const char *
 cstr_charptr(cstr s)
@@ -174,6 +181,12 @@ cstr_index(cstr haystack, cstr needle)
 	return npos;
 }
 
+static bool
+cstr_contains(cstr haystack, cstr needle)
+{
+	return cstr_index(haystack, needle) != npos;
+}
+
 static size_t
 cstr_rindex(cstr haystack, cstr needle)
 {
@@ -197,6 +210,7 @@ cstr_eq(cstr s1, cstr s2)
 }
 
 typedef enum {
+	W_dollar_random,
 	W_test_eqeq,
 	W_double_bracket
 } warning_kind;
@@ -249,10 +263,16 @@ index_closing_bracket(cstr s)
 
 static size_t nerrors = 0;
 
+static bool
+is_shell_comment(cstr line)
+{
+	return line.len > 0 && line.data[0] == '#';
+}
+
 static void
 checkline_sh_brackets(cstr filename, size_t lineno, cstr line)
 {
-	if (line.len > 0 && line.data[0] == '#')
+	if (is_shell_comment(line))
 		return;
 
 	size_t opening_index = index_opening_bracket(line);
@@ -277,6 +297,115 @@ checkline_sh_brackets(cstr filename, size_t lineno, cstr line)
 	    "An error message of the form \"[[: command not found\"",
 	    "is logged, but that is easy to overlook in the large",
 	    "output of the build process.",
+	    nullptr);
+}
+
+// Check for $RANDOM, which is specific to ksh and bash.
+static void
+checkline_dollar_random(cstr filename, size_t lineno, cstr line)
+{
+	// Note: This code does not find _all_ instances of
+	// unportable code. If a single line contains an unsafe and
+	// a safe usage of $RANDOM, it will pass the test.
+	if (is_shell_comment(line))
+		return;
+
+	// $RANDOM together with the PID is often found in GNU-style
+	// configure scripts and is considered acceptable.
+	if (cstr_contains(line, CSTR("$$-$RANDOM")))
+		return;
+	if (cstr_contains(line, CSTR("$RANDOM-$$")))
+		return;
+
+	// Variable names that only start with RANDOM are not special.
+	size_t idx = cstr_index(line, CSTR("$RANDOM"));
+	if (idx != npos && idx + 7 < line.len && is_alnum(line.data[idx + 7]))
+		return;
+
+	if (!cstr_contains(line, CSTR("$RANDOM")))
+		return;
+
+	printf("%s:%zu:%zu: $RANDOM: %s\n",
+	    cstr_charptr(filename), lineno, idx + 1,
+	    cstr_charptr(line));
+	explain(
+	    W_dollar_random,
+	    "The variable $RANDOM is not required for a POSIX-conforming shell, and",
+	    "many implementations of /bin/sh do not support it. It should therefore",
+	    "not be used in shell programs that are meant to be portable across a",
+	    "large number of POSIX-like systems.",
+	    nullptr);
+}
+
+static cstr
+cstr_next_field(cstr line, size_t *pidx)
+{
+	size_t idx = *pidx;
+	while (idx < line.len && is_hspace(line.data[idx]))
+		idx++;
+	size_t start = idx;
+	while (idx < line.len && !is_hspace(line.data[idx]))
+		idx++;
+	*pidx = idx;
+	return cstr_substr(line, start, idx);
+}
+
+static void
+foreach_3_fields_in_line(cstr line, void (*action)(cstr f1, cstr f2, cstr f3, void *), void *data)
+{
+	size_t idx = 0;
+	cstr f1 = cstr_next_field(line, &idx);
+	cstr f2 = cstr_next_field(line, &idx);
+	cstr f3 = cstr_next_field(line, &idx);
+
+	while (f3.len > 0) {
+		action(f1, f2, f3, data);
+		f1 = f2;
+		f2 = f3;
+		f3 = cstr_next_field(line, &idx);
+	}
+}
+
+static void
+checkline_test_eqeq_callback(cstr f1, cstr f2, cstr f3, void *data)
+{
+	if (!cstr_eq(f3, CSTR("==")))
+		return;
+	if (!cstr_eq(f1, CSTR("test")) && !cstr_eq(f1, CSTR("[")))
+		return;
+	*((cstr *) data) = f3;
+}
+
+static void
+checkline_test_eqeq(cstr filename, size_t lineno, cstr line)
+{
+	if (is_shell_comment(line))
+		return;
+
+	cstr found = CSTR("");
+	foreach_3_fields_in_line(line, checkline_test_eqeq_callback, &found);
+	if (found.len == 0)
+		return;
+
+	printf(
+	    "%s:%zu:%zu: found test ... == ...: %s\n",
+	    cstr_charptr(filename), lineno, (size_t) (found.data - line.data),
+	    cstr_charptr(line));
+	explain(
+	    W_test_eqeq,
+	    "The \"test\" command, as well as the \"[\" command, are not required to know",
+	    "the \"==\" operator. Only a few implementations like bash and some",
+	    "versions of ksh support it.",
+	    "",
+	    "When you run \"test foo == foo\" on a platform that does not support the",
+	    "\"==\" operator, the result will be \"false\" instead of \"true\". This can",
+	    "lead to unexpected behavior.",
+	    "",
+	    "There are two ways to fix this error message. If the file that contains",
+	    "the \"test ==\" is needed for building the package, you should create a",
+	    "patch for it, replacing the \"==\" operator with \"=\". If the file is not",
+	    "needed, add its name to the CHECK_PORTABILITY_SKIP variable in the",
+	    "package Makefile.",
 	    nullptr);
 }
 
@@ -349,7 +478,10 @@ check_file(cstr filename)
 		while (str_read_line(&line, f)) {
 			lineno++;
 			str_charptr(&line);
-			checkline_sh_brackets(filename, lineno, str_c(&line));
+			cstr cline = str_c(&line);
+			checkline_sh_brackets(filename, lineno, cline);
+			checkline_dollar_random(filename, lineno, cline);
+			checkline_test_eqeq(filename, lineno, cline);
 		}
 	}
 
