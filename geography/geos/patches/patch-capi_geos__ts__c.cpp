@@ -1,7 +1,10 @@
-$NetBSD: patch-capi_geos__ts__c.cpp,v 1.4 2020/03/11 22:15:16 gdt Exp $
+$NetBSD: patch-capi_geos__ts__c.cpp,v 1.5 2020/03/11 22:55:48 gdt Exp $
 
 The geos code passes an object of type std::string to variadic functions
-NOTICE_MESSAGE and ERROR_MESSAGE.  Passing non-POD types is UB.
+
+NOTICE_MESSAGE and ERROR_MESSAGE, which then pass them to va_start.
+Use of non-POD types with varargs is "conditionally supported", which
+without a fixed compiler becomes UB.
 
 To avoid this, change the functions to take const char * rather than
 std::string (and adjust the use of the variables in the functions).
