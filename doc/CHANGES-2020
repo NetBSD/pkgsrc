@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1477 2020/03/11 10:11:20 fox Exp $
+$NetBSD: CHANGES-2020,v 1.1478 2020/03/11 10:16:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2044,3 +2044,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed geography/emerillon [wiz 2020-03-11]
 	Updated devel/gobject-introspection to 1.64.0 [wiz 2020-03-11]
 	Updated audio/fasttracker2 to 1.11 [fox 2020-03-11]
+	Updated net/filezilla to 3.47.2 [wiz 2020-03-11]
