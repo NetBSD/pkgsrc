@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/01/18 23:30:17 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2020/03/11 18:51:31 nia Exp $
 
 DISTNAME=	gnats-4.2.0
 CATEGORIES=	databases
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--enable-gnatsd-host-access-file=${GNATS_HOST_FILE:Q}
 CONFIGURE_ARGS+=	--enable-gnats-dblist-file=${GNATS_DB_FILE:Q}
 CONFIGURE_ARGS+=	--enable-gnats-default-db=${GNATS_DBHOME:Q}
 CONFIGURE_ARGS+=	--with-lispdir=${PREFIX}/share/gnats
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 INFO_FILES=		yes
 
