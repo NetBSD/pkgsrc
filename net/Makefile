@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1311 2020/03/11 19:49:38 nia Exp $
+# $NetBSD: Makefile,v 1.1312 2020/03/11 19:55:38 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -61,7 +61,6 @@ SUBDIR+=	calypso
 SUBDIR+=	cclive
 SUBDIR+=	ccrtp
 SUBDIR+=	cdpd
-SUBDIR+=	chimera
 SUBDIR+=	chksniff
 SUBDIR+=	choparp
 SUBDIR+=	choqok
