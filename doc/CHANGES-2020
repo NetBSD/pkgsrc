@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1506 2020/03/11 20:17:21 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1507 2020/03/11 20:27:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2072,3 +2072,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed graphics/goocanvas successor graphics/goocanvas2 [wiz 2020-03-11]
 	Updated sysutils/pfetch to 0.5.0 [fox 2020-03-11]
 	Updated graphics/py-pycha to 0.8.1 [wiz 2020-03-11]
+	Removed games/gnome-games-extra-data [wiz 2020-03-11]
+	Removed games/gnome-games [wiz 2020-03-11]
