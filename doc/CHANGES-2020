@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1472 2020/03/11 08:32:24 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1473 2020/03/11 09:29:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2039,3 +2039,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/curl to 7.69.1 [adam 2020-03-11]
 	Updated lang/python37 to 3.7.7 [adam 2020-03-11]
 	Updated lang/py37-html-docs to 3.7.7 [adam 2020-03-11]
+	Updated devel/py-mercurial to 5.3.1 [wiz 2020-03-11]
