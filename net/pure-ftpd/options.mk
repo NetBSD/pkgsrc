@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.9 2010/02/04 12:03:51 obache Exp $
+# $NetBSD: options.mk,v 1.10 2020/03/11 11:47:19 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pureftpd
 PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql ssl virtualchroot utf8
+PKG_SUGGESTED_OPTIONS=	ssl virtualchroot
 
 PKG_OPTIONS_LEGACY_VARS+=	PURE_FTPD_USE_MYSQL:mysql
 PKG_OPTIONS_LEGACY_VARS+=	PURE_FTPD_USE_PGSQL:pgsql

@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/03/11 11:47:19 nia Exp $
+
+Install configuration file to examples.
+
+--- Makefile.in.orig	2019-04-03 10:51:06.000000000 +0000
++++ Makefile.in
+@@ -881,7 +881,7 @@ uninstall-am: uninstall-docDATA uninstal
+ 
+ 
+ install-data-local:
+-	@$(mkinstalldirs) $(DESTDIR)$(sysconfdir); \
++	@$(mkinstalldirs) $(DESTDIR)$(datadir)/examples/pure-ftpd; \
+ 	if [ -f $(DESTDIR)$(sysconfdir)/pure-ftpd.conf ]; then \
+ 		if cmp -s $(srcdir)/pure-ftpd.conf $(docdir)/pure-ftpd.conf; then \
+ 			echo "Configuration file unchanged"; \
+@@ -890,7 +890,7 @@ install-data-local:
+ 			echo "You may want to compare it with the one at [$(DESTDIR)$(sysconfdir)/pure-ftpd.conf]."; \
+ 		fi; \
+ 	else \
+-		$(INSTALL_DATA) $(srcdir)/pure-ftpd.conf $(DESTDIR)$(sysconfdir)/pure-ftpd.conf; \
++		$(INSTALL_DATA) $(srcdir)/pure-ftpd.conf $(DESTDIR)$(datadir)/examples/pure-ftpd/pure-ftpd.conf; \
+ 	fi
+ 
+ uninstall-local:

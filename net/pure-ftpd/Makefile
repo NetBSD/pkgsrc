@@ -1,17 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2020/02/25 14:10:44 leot Exp $
+# $NetBSD: Makefile,v 1.41 2020/03/11 11:47:19 nia Exp $
 
-DISTNAME=	pure-ftpd-1.0.35
-PKGREVISION=	7
+DISTNAME=	pure-ftpd-1.0.49
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/
-MASTER_SITES+=	http://download.pureftpd.org/pub/pure-ftpd/releases/
-MASTER_SITES+=	ftp://ftp2.fr.pureftpd.org/pub/mirrors/ftp.fr.pureftpd.org/pub/pure-ftpd/releases/
-MASTER_SITES+=	ftp://ftp3.fr.pureftpd.org/pure-ftpd/releases/
-MASTER_SITES+=	ftp://ftp.dk.pureftpd.org/mirrors/pure-ftpd/releases/
-MASTER_SITES+=	ftp://ftp.nl.pureftpd.org/pub/pure-ftpd/releases/
-MASTER_SITES+=	ftp://ftp.fr.pureftpd.org/pub/pure-ftpd/releases/
-MASTER_SITES+=	ftp://ftp.cn.pureftpd.org/pub/pureftpd/pure-ftpd/releases/
-MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=pureftpd/}
+MASTER_SITES=	https://download.pureftpd.org/pub/pure-ftpd/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -28,17 +19,11 @@ BUILD_DEFS+=		VARBASE
 
 CONFIGURE_ARGS.Interix+=	--without-privsep
 
-.include "options.mk"
-
 RCD_SCRIPTS=		pure_ftpd pure_uploadscript
-INSTALLATION_DIRS=	share/doc/pure-ftpd
 
-post-install:
-	cd ${WRKSRC} &&	\
-		${INSTALL_DATA} README README.Authentication-Modules	 \
-				README.Configuration-File README.Contrib \
-				README.TLS README.Virtual-Users		 \
-				README.MySQL README.PGSQL README.LDAP	 \
-			${DESTDIR}${PREFIX}/share/doc/pure-ftpd
+EGDIR=			${PREFIX}/share/examples/pure-ftpd
 
+CONF_FILES+=		${EGDIR}/pure-ftpd.conf \
+			${PKG_SYSCONFDIR}/pure-ftpd.conf
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
