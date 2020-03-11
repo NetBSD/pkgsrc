@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/02 23:57:23 agc Exp $
+$NetBSD: distinfo,v 1.8 2020/03/11 19:55:56 wiz Exp $
 
-SHA1 (gpredict-1.3.tar.gz) = a02a979fb68f9be8b9294a7c4ca248aaecd73b34
-RMD160 (gpredict-1.3.tar.gz) = ad9104a332f91bf877ac2cb5328c168233c6fc5b
-SHA512 (gpredict-1.3.tar.gz) = e465e5162d46375e6d8c1ca6b98ec5860f974eec0cbcf8219b65c919ab74ce342e6296886e3fadcb64882c9059da26707e8b10670dac7b1f8146641ed0992f09
-Size (gpredict-1.3.tar.gz) = 4750388 bytes
+SHA1 (gpredict-2.2.1.tar.bz2) = ea0cacad8bd5da8f2fb339caaabd340b20abcb99
+RMD160 (gpredict-2.2.1.tar.bz2) = a9f99c6284a8f9facd16b53a98f12949020c7512
+SHA512 (gpredict-2.2.1.tar.bz2) = 590a218bc95a465ca9772f892b77763b92a6c41c7d9f3b48279f28916cef8a5bfe616e6cdda1002e7dda082f37f37a98af8c8180895c572fec9c96aa76888f5d
+Size (gpredict-2.2.1.tar.bz2) = 4647342 bytes
