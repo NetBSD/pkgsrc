@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2020/03/10 22:08:56 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2020/03/11 19:34:11 nia Exp $
 
 DISTNAME=	totem-3.34.1
 PKGREVISION=	2
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Apps/Videos
 COMMENT=	Movie player designed for GNOME
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
