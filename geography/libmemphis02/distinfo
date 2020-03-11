@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:53 joerg Exp $
+$NetBSD: distinfo,v 1.3 2020/03/11 10:34:23 wiz Exp $
 
 SHA1 (memphis-0.2.3.tar.gz) = dbc2f61e49b996dc9ca91df0de9a08eb7adbfa9b
 RMD160 (memphis-0.2.3.tar.gz) = e00f510a97b4b0adb738dcb0949f65d8a7fe21fb
 SHA512 (memphis-0.2.3.tar.gz) = 5b7d14075e372905fecc602a52893f2bee1d0d40a7fc9ae8c91d1342bc4a979a63d4660f63c95a834dac310ab8702f1f7a09b261fed0a3e0e4579d814925c990
 Size (memphis-0.2.3.tar.gz) = 3417472 bytes
-SHA1 (patch-demos_Makefile.am) = 72337c9220d63f00ef462612ff6b2e5062dc5c8d
-SHA1 (patch-docs_reference_Makefile.am) = 695e940e4f180968dce4caa868204369fb4e000d
+SHA1 (patch-demos_Makefile.am) = af8cf460b74cd19f8810de4203c048a31c556950
+SHA1 (patch-docs_reference_Makefile.am) = c27326a5bdcccf5b486595666340786215958d54
