@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2020/03/10 22:11:11 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2020/03/11 09:53:54 wiz Exp $
 
 DISTNAME=	avant-window-navigator-0.4.0
-PKGREVISION=	38
+PKGREVISION=	39
 CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/awn/0.4/0.4.0/+download/
 
