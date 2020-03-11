@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1503 2020/03/11 19:59:05 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1504 2020/03/11 20:00:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2069,3 +2069,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed net/chimera [nia 2020-03-11]
 	Updated ham/gpredict to 2.2.1 [wiz 2020-03-11]
 	Removed graphics/py-goocanvas [wiz 2020-03-11]
+	Removed graphics/goocanvas successor graphics/goocanvas2 [wiz 2020-03-11]

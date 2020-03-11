@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.886 2020/03/11 19:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.887 2020/03/11 20:00:37 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -205,7 +205,6 @@ SUBDIR+=	go-imaging
 SUBDIR+=	go-resize
 SUBDIR+=	go-smartcrop
 SUBDIR+=	gocr
-SUBDIR+=	goocanvas
 SUBDIR+=	goocanvas2
 SUBDIR+=	gource
 SUBDIR+=	gphoto2
