@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1489 2020/03/11 14:24:55 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1490 2020/03/11 15:02:05 pho Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2056,3 +2056,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/gnome-doc-utils to 0.20.10nb4 [wiz 2020-03-11]
 	Updated geography/geos to 3.8.1 [gdt 2020-03-11]
 	Updated benchmarks/httperf to 0.9.0.20190829 [nia 2020-03-11]
+	Updated games/hengband to 2.2.1r [pho 2020-03-11]
