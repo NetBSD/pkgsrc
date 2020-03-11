@@ -1,13 +1,13 @@
-$NetBSD: patch-src_Makefile.am,v 1.1 2020/01/24 13:33:33 pho Exp $
+$NetBSD: patch-src_Makefile.am,v 1.2 2020/03/11 15:01:54 pho Exp $
 
 Support user-destdir build
 
---- src/Makefile.am.orig	2003-11-03 02:56:44.000000000 +0000
+--- src/Makefile.am.orig	2020-03-11 14:25:21.422460504 +0000
 +++ src/Makefile.am
-@@ -29,9 +29,3 @@ EXTRA_hengband_SOURCES = \
- 	main-dos.c main-ibm.c \
- 	makefile.bcc makefile.std makefile.dos makefile.ibm \
- 	readdib.c wall.bmp
+@@ -33,9 +33,3 @@ EXTRA_hengband_SOURCES = \
+ 
+ COMPILE = ./gcc-wrap $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 -
 -install-exec-hook:
 -if SET_GID
