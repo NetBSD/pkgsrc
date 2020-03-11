@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2019/11/02 22:38:03 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/03/11 20:17:12 wiz Exp $
 
-DISTNAME=	pycha-0.7.0
+DISTNAME=	pycha-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycha/}
@@ -10,13 +10,13 @@ HOMEPAGE=	https://bitbucket.org/lgs/pycha/
 COMMENT=	Library for making charts with Python
 LICENSE=	gnu-lgpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
+DEPENDS+=	${PYPKGPREFIX}-cairocffi-[0-9]*:../../graphics/py-cairocffi
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	#none
 
-PYTHON_SELF_CONFLICT=		yes
-PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/chavier ${DESTDIR}${PREFIX}/bin/chavier-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
