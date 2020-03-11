@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_edit_Makefile.am,v 1.1 2020/03/11 15:40:36 pho Exp $
+
+Add a quest file missing from Makefile.am
+
+--- lib/edit/Makefile.am.orig	2020-03-11 15:31:31.020086436 +0000
++++ lib/edit/Makefile.am
+@@ -16,7 +16,7 @@ angband_files = \
+ 	t0000002.txt t0000003.txt t0000004.txt t0000005.txt \
+ 	t0000006.txt t_basic.txt t_info.txt t_lite.txt \
+ 	t_pref.txt v_info.txt w_info.txt \
+-	m_info.txt s_info.txt
++	m_info.txt s_info.txt q0dumpwitness.txt
+ 
+ EXTRA_DIST = \
+   $(angband_files)
