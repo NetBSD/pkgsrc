@@ -1,8 +1,0 @@
-# $NetBSD: INSTALL,v 1.4 2009/07/28 18:52:07 drochner Exp $
-
-case ${STAGE} in
-POST-INSTALL)
-	(cd ${PREFIX}/share/gnome-games/scorefile-templates && \
-	 pax -rw -k -pop . /var/games)
-	;;
-esac
