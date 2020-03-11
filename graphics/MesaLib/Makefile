@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2020/03/08 16:49:52 wiz Exp $
+# $NetBSD: Makefile,v 1.189 2020/03/11 14:19:55 nia Exp $
 
 DISTNAME=	mesa-20.0.1
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -47,7 +47,7 @@ PLIST_VARS+=		r300 svga nouveau vc4 lima panfrost
 PLIST_VARS+=		kms vaapi
 
 .if ${MESALIB_SUPPORTS_DRI} == "yes"
-BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.81
+BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.100
 .include "../../x11/libdrm/buildlink3.mk"
 MESA_PLATFORMS+=	drm surfaceless
 MESON_ARGS+=		-Degl=true
