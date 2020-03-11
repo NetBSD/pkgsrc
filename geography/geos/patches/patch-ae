@@ -1,17 +1,17 @@
-$NetBSD: patch-ae,v 1.6 2018/09/11 16:13:29 gdt Exp $
+$NetBSD: patch-ae,v 1.7 2020/03/11 12:52:07 gdt Exp $
 
 TODO: explain what's in LDFLAGS.
 TODO: explain why --libs has -L in the first place (vs --ldflags).
 TODO: report upstream.
 
---- tools/geos-config.in.orig	2018-08-19 10:49:14.000000000 +0000
+--- tools/geos-config.in.orig	2019-10-03 17:32:04.000000000 +0000
 +++ tools/geos-config.in
 @@ -58,7 +58,7 @@ case $1 in
-       echo -L${libdir} -lgeos -lm
+       echo -L@libdir@ -lgeos -lm
        ;;
      --ldflags)
--      echo -L${libdir}
-+      echo -L${libdir} @LDFLAGS@
+-      echo -L@libdir@
++      echo -L@libdir@ @LDFLAGS@
        ;;
      --includes)
-       echo ${prefix}/include
+       echo @prefix@/include
