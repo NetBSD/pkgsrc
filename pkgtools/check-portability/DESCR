@@ -1,0 +1,4 @@
+Checks whether the given files use features of programming languages that
+are not portable to a wide range of platforms.
+
+See mk/check/check-portability.mk.
