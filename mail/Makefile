@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.540 2020/03/01 17:47:36 nia Exp $
+# $NetBSD: Makefile,v 1.541 2020/03/11 19:28:35 nia Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -67,7 +67,6 @@ SUBDIR+=	dk-milter
 SUBDIR+=	dkim-milter
 SUBDIR+=	dnsbl-milter
 SUBDIR+=	dot-forward
-SUBDIR+=	dovecot
 SUBDIR+=	dovecot2
 SUBDIR+=	dovecot2-gssapi
 SUBDIR+=	dovecot2-ldap
