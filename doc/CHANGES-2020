@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1491 2020/03/11 15:31:37 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1492 2020/03/11 18:46:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2058,3 +2058,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated benchmarks/httperf to 0.9.0.20190829 [nia 2020-03-11]
 	Updated games/hengband to 2.2.1r [pho 2020-03-11]
 	Removed www/librest successor www/librest07 [wiz 2020-03-11]
+	Removed databases/gq [nia 2020-03-11]
