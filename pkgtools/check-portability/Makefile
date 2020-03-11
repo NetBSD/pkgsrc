@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/11 19:15:03 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/11 23:50:05 rillig Exp $
 
 PKGNAME=	check-portability-19.4.0
 CATEGORIES=	pkgtools
@@ -14,7 +14,7 @@ USE_LANGUAGES=	c99
 MAKE_ENV+=	BINDIR=${PREFIX}/bin
 AUTO_MKDIRS=	yes
 
-CHECK_PORTABILITY_SKIP=	demo
+CHECK_PORTABILITY_SKIP=	test-*.sh
 
 do-extract:
 	mkdir ${WRKSRC}
