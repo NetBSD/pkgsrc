@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.4 2020/03/11 22:46:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2020/03/11 23:28:21 nia Exp $
 
 SHA1 (i3status-2.13.tar.bz2) = b09fd2f322046daaca22f60cf6bfc7dbebea1b11
 RMD160 (i3status-2.13.tar.bz2) = 8432809add78a0086ce8181160528f5e34b7c0d3
 SHA512 (i3status-2.13.tar.bz2) = 6dadff19e53499d169ba4f491e1f821014b4f92fc3c93d7947c85cbbbdeaba538d02bd8ab98fe266a8f80756a287fd5803ec77a8cd874d50082b5cad309875c2
 Size (i3status-2.13.tar.bz2) = 201409 bytes
 SHA1 (patch-Makefile.in) = e50ed614d41a1bcef33feb6414322affa5e20a92
-SHA1 (patch-src_print__volume.c) = 68dd7489b9e7748edf2e326ffb8d320788960c42
+SHA1 (patch-src_print__volume.c) = b855472d429f17491c7441924e0aca9ce4ee6190
 SHA1 (patch-src_print__wireless__info.c) = 7039b7fbd2f43b798763793cd4296035610eeee0
 SHA1 (patch-src_pulse.c) = bfc5265c5c11f3a56e9b88c936b9856245b998f4
