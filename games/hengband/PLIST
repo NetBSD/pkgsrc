@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/24 13:33:32 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/11 15:01:53 pho Exp $
 bin/hengband
 libdata/hengband/edit/a_info.txt
 libdata/hengband/edit/d_info.txt
@@ -117,6 +117,7 @@ libdata/hengband/help/defend.hlp
 libdata/hengband/help/defend.txt
 libdata/hengband/help/dungeon.hlp
 libdata/hengband/help/dungeon.txt
+libdata/hengband/help/editor.txt
 libdata/hengband/help/gambling.txt
 libdata/hengband/help/general.hlp
 libdata/hengband/help/general.txt
@@ -139,6 +140,7 @@ libdata/hengband/help/jdefend.hlp
 libdata/hengband/help/jdefend.txt
 libdata/hengband/help/jdungeon.hlp
 libdata/hengband/help/jdungeon.txt
+libdata/hengband/help/jeditor.txt
 libdata/hengband/help/jgambling.txt
 libdata/hengband/help/jgeneral.hlp
 libdata/hengband/help/jgeneral.txt
