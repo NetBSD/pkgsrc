@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/09 13:25:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/11 19:30:53 wiz Exp $
 include/goocanvas-2.0/goocanvas.h
 include/goocanvas-2.0/goocanvasellipse.h
 include/goocanvas-2.0/goocanvasenumtypes.h
@@ -46,11 +46,15 @@ share/gtk-doc/html/goocanvas2/GooCanvasTableModel.html
 share/gtk-doc/html/goocanvas2/GooCanvasText.html
 share/gtk-doc/html/goocanvas2/GooCanvasTextModel.html
 share/gtk-doc/html/goocanvas2/GooCanvasWidget.html
+share/gtk-doc/html/goocanvas2/api-index-2.0.1.html
+share/gtk-doc/html/goocanvas2/api-index-2.0.2.html
+share/gtk-doc/html/goocanvas2/api-index-full.html
 share/gtk-doc/html/goocanvas2/ch01.html
 share/gtk-doc/html/goocanvas2/ch02.html
 share/gtk-doc/html/goocanvas2/ch03.html
 share/gtk-doc/html/goocanvas2/ch04.html
 share/gtk-doc/html/goocanvas2/ch05.html
+share/gtk-doc/html/goocanvas2/deprecated-api-index.html
 share/gtk-doc/html/goocanvas2/goocanvas-architecture.html
 share/gtk-doc/html/goocanvas2/goocanvas-coordinates.html
 share/gtk-doc/html/goocanvas2/goocanvas-creating-items.html
@@ -62,12 +66,20 @@ share/gtk-doc/html/goocanvas2/goocanvas2-GooCanvas-Types.html
 share/gtk-doc/html/goocanvas2/goocanvas2.devhelp2
 share/gtk-doc/html/goocanvas2/home.png
 share/gtk-doc/html/goocanvas2/index.html
-share/gtk-doc/html/goocanvas2/index.sgml
+share/gtk-doc/html/goocanvas2/left-insensitive.png
 share/gtk-doc/html/goocanvas2/left.png
+share/gtk-doc/html/goocanvas2/right-insensitive.png
 share/gtk-doc/html/goocanvas2/right.png
 share/gtk-doc/html/goocanvas2/style.css
+share/gtk-doc/html/goocanvas2/up-insensitive.png
 share/gtk-doc/html/goocanvas2/up.png
+share/locale/cs/LC_MESSAGES/goocanvas2.mo
+share/locale/de/LC_MESSAGES/goocanvas2.mo
 share/locale/en_GB/LC_MESSAGES/goocanvas2.mo
 share/locale/es/LC_MESSAGES/goocanvas2.mo
+share/locale/id/LC_MESSAGES/goocanvas2.mo
 share/locale/ja/LC_MESSAGES/goocanvas2.mo
+share/locale/pl/LC_MESSAGES/goocanvas2.mo
+share/locale/pt_BR/LC_MESSAGES/goocanvas2.mo
+share/locale/sr/LC_MESSAGES/goocanvas2.mo
 share/locale/sv/LC_MESSAGES/goocanvas2.mo
