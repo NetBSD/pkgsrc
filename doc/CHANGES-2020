@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1501 2020/03/11 19:56:02 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1502 2020/03/11 19:56:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2067,3 +2067,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/py-goocalendar to 0.7.0 [wiz 2020-03-11]
 	Removed net/openwbem [nia 2020-03-11]
 	Removed net/chimera [nia 2020-03-11]
+	Updated ham/gpredict to 2.2.1 [wiz 2020-03-11]
