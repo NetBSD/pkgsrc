@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2012/08/29 19:11:12 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2020/03/11 12:38:06 wiz Exp $
 
 make sure pkgsrc getopt is used, native might be insufficient
 
@@ -9,7 +9,7 @@ make sure pkgsrc getopt is used, native might be insufficient
        -lhelp
      ';
 -    options=`getopt -qn$progname $longopts -- o:vVh "$@"`
-+    options=`@GETOPT@ -qn$progname $longopts -- o:vVh "$@"`
++    options=`@GETOPT@ -qn$progname $longopts -o o:vVh -- "$@"`
      if [ "$?" != "0" ]; then print_help_css 1>&2; exit 1; fi
      eval set -- "$options";
      while [ "$1" != "--" ]; do
@@ -18,7 +18,7 @@ make sure pkgsrc getopt is used, native might be insufficient
        -lhelp
      ';
 -    options=`getopt -qn$progname $longopts -- c:d:e:o:x:nvVh "$@"`
-+    options=`@GETOPT@ -qn$progname $longopts -- c:d:e:o:x:nvVh "$@"`
++    options=`@GETOPT@ -qn$progname $longopts -o c:d:e:o:x:nvVh -- "$@"`
      if [ "$?" != "0" ]; then print_help_html $doc_format 1>&2; exit 1; fi
      eval set -- "$options";
      while [ "$1" != "--" ]; do
