@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.11 2020/03/11 19:21:00 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.12 2020/03/11 22:30:59 rillig Exp $
 #
 # This program checks all files in the current directory and any
 # subdirectories for portability issues that are likely to result in
@@ -42,6 +42,16 @@ find * -type f -print 2>/dev/null \
 		skip=no
 		eval "case \"\$fname\" in $SKIP_FILTER *.orig) skip=yes;; esac"
 		[ $skip = no ] || continue
+
+		ext="${fname##*.}"
+		case "$ext" in
+		# echo */*/PLIST | xargs cat | sed s,'.*\.',, | sort | uniq -c | sort -nr | sed 40q
+		(png|html|svg|py|h|mo|php|js|xml|rb|go|txt|3|hpp)	continue ;;
+		(tfm|gif|dtd|properties|json|ogg|gz|test|result|xpm|po)	continue ;;
+		(page|1|kicad_mod|hxx|jpg|css|el|htm|a|docbook|vf|inc)	continue ;;
+		# other source files:
+		(c|C|cc|cxx|f|go|pl|py|in|ac|m4)			continue ;;
+		esac
 
 		case "$opsys" in
 		SunOS-5.9)
