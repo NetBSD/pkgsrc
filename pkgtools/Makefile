@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2018/12/05 19:23:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.120 2020/03/11 19:15:03 rillig Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -9,6 +9,7 @@ SUBDIR+=	binpatch
 SUBDIR+=	bootstrap-extras
 SUBDIR+=	bootstrap-mk-files
 SUBDIR+=	cdpack
+SUBDIR+=	check-portability
 SUBDIR+=	compat_headers
 SUBDIR+=	createbuildlink
 SUBDIR+=	cwrappers
