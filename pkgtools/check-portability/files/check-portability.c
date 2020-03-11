@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.1 2020/03/11 19:15:03 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.2 2020/03/11 22:41:17 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -281,7 +281,7 @@ checkline_sh_brackets(cstr filename, size_t lineno, cstr line)
 }
 
 static bool
-is_relevant(cstr line)
+is_relevant_first_line(cstr line)
 {
 	if (!cstr_starts_with(line, CSTR("#!")))
 		return false;
@@ -308,13 +308,12 @@ is_relevant(cstr line)
 	return true;
 }
 
-static void
-check_sh_brackets(cstr filename)
+static bool
+is_relevant_filename(cstr filename)
 {
-
 #define SKIP_EXT(ext) \
 	if (cstr_ends_with(filename, CSTR(ext))) \
-		return;
+		return false;
 
 	SKIP_EXT(".bz2");
 	SKIP_EXT(".c");
@@ -327,6 +326,14 @@ check_sh_brackets(cstr filename)
 	SKIP_EXT(".xz");
 	SKIP_EXT(".zip");
 #undef SKIP_EXT
+	return true;
+}
+
+static void
+check_file(cstr filename)
+{
+	if (!is_relevant_filename(filename))
+		return;
 
 	FILE *f = fopen(cstr_charptr(filename), "rb");
 	if (f == nullptr) {
@@ -337,7 +344,7 @@ check_sh_brackets(cstr filename)
 
 	str line = STR_EMPTY;
 
-	if (str_read_line(&line, f) && is_relevant(str_c(&line))) {
+	if (str_read_line(&line, f) && is_relevant_first_line(str_c(&line))) {
 		size_t lineno = 1;
 		while (str_read_line(&line, f)) {
 			lineno++;
@@ -358,7 +365,7 @@ check_files_from_stdin(void)
 
 	while (str_read_text_line(&line, stdin)) {
 		str_charptr(&line);
-		check_sh_brackets(str_c(&line));
+		check_file(str_c(&line));
 	}
 }
 
@@ -380,6 +387,6 @@ main(int argc, char **argv)
 	if (argc == 1)
 		check_files_from_stdin();
 	for (int i = 1; i < argc; i++)
-		check_sh_brackets(CSTR(argv[i]));
+		check_file(CSTR(argv[i]));
 	return nerrors > 0 ? EXIT_FAILURE : EXIT_SUCCESS;
 }
