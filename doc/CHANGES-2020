@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1493 2020/03/11 18:56:20 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1494 2020/03/11 19:20:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2060,3 +2060,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed www/librest successor www/librest07 [wiz 2020-03-11]
 	Removed databases/gq [nia 2020-03-11]
 	Removed devel/opencm [nia 2020-03-11]
+	Updated mail/cue to 20180813 [nia 2020-03-11]
