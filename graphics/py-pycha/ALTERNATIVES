@@ -1,0 +1,1 @@
+bin/chavier @PREFIX@/bin/chavier-@PYVERSSUFFIX@
