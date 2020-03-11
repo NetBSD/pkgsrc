@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1483 2020/03/11 10:49:02 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1484 2020/03/11 10:55:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2050,3 +2050,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed geography/libchamplain08 successor geography/libchamplain012 [wiz 2020-03-11]
 	Updated geography/libmemphis02 to 0.2.3nb5 [wiz 2020-03-11]
 	Updated geography/libchamplain012 to 0.12.20 [wiz 2020-03-11]
+	Removed geography/libchamplain04 [wiz 2020-03-11]
