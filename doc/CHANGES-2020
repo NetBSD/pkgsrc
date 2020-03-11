@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1498 2020/03/11 19:33:36 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1499 2020/03/11 19:45:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2064,3 +2064,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed mail/dovecot successor mail/dovecot2 [nia 2020-03-11]
 	Updated graphics/goocanvas2 to 2.0.4 [wiz 2020-03-11]
 	Removed graphics/goocanvasmm [wiz 2020-03-11]
+	Updated time/py-goocalendar to 0.7.0 [wiz 2020-03-11]
