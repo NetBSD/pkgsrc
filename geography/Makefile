@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2020/03/11 10:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2020/03/11 10:55:28 wiz Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -23,7 +23,6 @@ SUBDIR+=	gpsutils
 SUBDIR+=	gpxsee
 SUBDIR+=	kplex
 SUBDIR+=	libchamplain012
-SUBDIR+=	libchamplain04
 SUBDIR+=	libdrg
 SUBDIR+=	libgeotiff
 SUBDIR+=	libmaxminddb
