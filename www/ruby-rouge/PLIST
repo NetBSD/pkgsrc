@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/02/12 14:04:02 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/03/11 08:27:25 fcambus Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -46,6 +46,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/diff
 ${GEM_LIBDIR}/lib/rouge/demos/digdag
 ${GEM_LIBDIR}/lib/rouge/demos/docker
 ${GEM_LIBDIR}/lib/rouge/demos/dot
+${GEM_LIBDIR}/lib/rouge/demos/ecl
 ${GEM_LIBDIR}/lib/rouge/demos/eex
 ${GEM_LIBDIR}/lib/rouge/demos/eiffel
 ${GEM_LIBDIR}/lib/rouge/demos/elixir
@@ -176,8 +177,8 @@ ${GEM_LIBDIR}/lib/rouge/demos/turtle
 ${GEM_LIBDIR}/lib/rouge/demos/twig
 ${GEM_LIBDIR}/lib/rouge/demos/typescript
 ${GEM_LIBDIR}/lib/rouge/demos/vala
-${GEM_LIBDIR}/lib/rouge/demos/varnish
 ${GEM_LIBDIR}/lib/rouge/demos/vb
+${GEM_LIBDIR}/lib/rouge/demos/vcl
 ${GEM_LIBDIR}/lib/rouge/demos/verilog
 ${GEM_LIBDIR}/lib/rouge/demos/vhdl
 ${GEM_LIBDIR}/lib/rouge/demos/viml
@@ -250,6 +251,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/diff.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/digdag.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/docker.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/dot.rb
+${GEM_LIBDIR}/lib/rouge/lexers/ecl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/eex.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/eiffel.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/elixir.rb
