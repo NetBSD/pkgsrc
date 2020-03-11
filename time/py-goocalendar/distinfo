@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/02 23:31:43 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/03/11 19:45:46 wiz Exp $
 
-SHA1 (GooCalendar-0.1.tar.gz) = 02303dca170300a9d5c4e59212bc6c09e8f3a42b
-RMD160 (GooCalendar-0.1.tar.gz) = e71b38532cfaa4512a59cb6d26036bcf5ef1e5db
-SHA512 (GooCalendar-0.1.tar.gz) = 6cf429bcd092f4c62de4b043dcab25063becbcdd576e99b596a2682bff32c21d1c532272fff90a6d25a71adee6b02984e5be4f8925d9a3e6f64da2251b8da4f0
-Size (GooCalendar-0.1.tar.gz) = 28076 bytes
+SHA1 (GooCalendar-0.7.0.tar.gz) = c86583cabaae3d1b02850dabc4684b05d869207e
+RMD160 (GooCalendar-0.7.0.tar.gz) = 16a962ad1dfcc3398c03900ec8dbc2456d4c47c3
+SHA512 (GooCalendar-0.7.0.tar.gz) = be05a41a5fab46e20dfe9eaf1808cfe63d9323a69d15059331183a0b419947f7f155927f474cd7acd1f82dd175448ee7b1650c4a80c55b6590b8e3e2913db551
+Size (GooCalendar-0.7.0.tar.gz) = 30850 bytes
