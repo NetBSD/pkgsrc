@@ -1,5 +1,7 @@
-$NetBSD: patch-demos_Makefile.am,v 1.1 2015/08/22 17:42:53 nros Exp $
+$NetBSD: patch-demos_Makefile.am,v 1.2 2020/03/11 10:34:23 wiz Exp $
+
 * install in versioned directory
+
 --- demos/Makefile.am.orig	2010-06-20 13:23:27.000000000 +0000
 +++ demos/Makefile.am
 @@ -6,7 +6,7 @@ AM_LDFLAGS = $(DEPS_LIBS) ../memphis/lib
