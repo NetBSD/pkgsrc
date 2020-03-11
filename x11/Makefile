@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.882 2020/02/20 06:07:54 gutteridge Exp $
+# $NetBSD: Makefile,v 1.883 2020/03/11 20:38:14 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -314,7 +314,6 @@ SUBDIR+=	py-Pmw2
 SUBDIR+=	py-Tk
 SUBDIR+=	py-Xlib
 SUBDIR+=	py-gnome2
-SUBDIR+=	py-gnome2-desktop
 SUBDIR+=	py-gnome2-extras
 SUBDIR+=	py-gtk2
 SUBDIR+=	py-gtksourceview
