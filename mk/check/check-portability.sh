@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.10 2019/01/17 00:11:44 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.11 2020/03/11 19:21:00 rillig Exp $
 #
 # This program checks all files in the current directory and any
 # subdirectories for portability issues that are likely to result in
@@ -27,6 +27,11 @@ check_shell() {
 			-f "$checkdir/check-portability.awk" \
 		< "$1" 1>&2 \
 	|| cs_exitcode=1
+
+	if test -f "${PREFIX}/bin/check-portability"; then
+		${PREFIX}/bin/check-portability "$1" 1>&2 \
+		|| cs_exitcode=1
+	fi
 }
 
 find * -type f -print 2>/dev/null \
