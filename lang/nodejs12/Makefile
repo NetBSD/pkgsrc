@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/03/04 18:59:39 adam Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/11 09:22:49 jperkin Exp $
 
 DISTNAME=	node-v12.16.1
 
@@ -11,8 +11,6 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${PREFIX}/lib
 
 CONFIGURE_ARGS+=	--shared-nghttp2
 CONFIGURE_ARGS+=	--with-intl=system-icu
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 CHECK_PORTABILITY_SKIP+=	deps/openssl/openssl/.travis-create-release.sh
 
