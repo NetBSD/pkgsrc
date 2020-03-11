@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2020/03/11 15:01:53 pho Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/11 15:40:36 pho Exp $
 
 DISTNAME=	hengband-2.2.1r
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_OSDN:=hengband/72520/}
-EXTRACT_SUFX=	.tar.gz
 
+# The tarball for this version is generated without a top-level
+# directory.
 EXTRACT_DIR=	${WRKSRC}
 
 MAINTAINER=	pho@cielonegro.org
