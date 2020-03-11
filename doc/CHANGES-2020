@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1486 2020/03/11 11:59:36 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.1487 2020/03/11 12:38:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2053,3 +2053,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed geography/libchamplain04 [wiz 2020-03-11]
 	Updated net/pure-ftpd to 1.0.49 [nia 2020-03-11]
 	Updated multimedia/adobe-flash-player to 32.0.0.344 [tsutsui 2020-03-11]
+	Updated textproc/gnome-doc-utils to 0.20.10nb4 [wiz 2020-03-11]
