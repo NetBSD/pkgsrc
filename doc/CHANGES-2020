@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1495 2020/03/11 19:29:00 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1496 2020/03/11 19:30:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2061,4 +2061,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed databases/gq [nia 2020-03-11]
 	Removed devel/opencm [nia 2020-03-11]
 	Updated mail/cue to 20180813 [nia 2020-03-11]
-	Removed mail/dovecot [nia 2020-03-11]
+	Removed mail/dovecot successor mail/dovecot2 [nia 2020-03-11]
