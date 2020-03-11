@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.10 2020/03/11 19:21:00 rillig Exp $
+# $NetBSD: check-portability.mk,v 1.11 2020/03/11 19:58:45 rillig Exp $
 #
 # This file contains some checks that are applied to the configure
 # scripts to check for certain constructs that are known to cause
@@ -30,9 +30,6 @@ _PKG_VARS.check-portability=	CHECK_PORTABILITY_SKIP
 CHECK_PORTABILITY?=		yes
 .endif
 CHECK_PORTABILITY?=		no
-.if defined(SKIP_PORTABILITY_CHECK)
-PKG_FAIL_REASON+=		"[check-portability.mk] SKIP_PORTABILITY_CHECK is obsolete."
-.endif
 CHECK_PORTABILITY_SKIP?=	# none
 
 .if ${CHECK_PORTABILITY:M[Yy][Ee][Ss]} != ""
