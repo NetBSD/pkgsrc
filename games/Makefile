@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.484 2020/03/05 13:59:55 nia Exp $
+# $NetBSD: Makefile,v 1.485 2020/03/11 20:27:37 wiz Exp $
 #
 
 COMMENT=	Games
@@ -161,8 +161,6 @@ SUBDIR+=	ggz-client-libs
 SUBDIR+=	glaxium
 SUBDIR+=	glickomania
 SUBDIR+=	gltron
-SUBDIR+=	gnome-games
-SUBDIR+=	gnome-games-extra-data
 SUBDIR+=	gnome-mastermind
 SUBDIR+=	gnome-sudoku
 SUBDIR+=	gnuchess
