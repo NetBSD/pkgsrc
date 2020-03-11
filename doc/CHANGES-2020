@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1469 2020/03/10 23:04:59 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1470 2020/03/11 01:16:04 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2034,3 +2034,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/glib-networking to 2.64.0 [wiz 2020-03-10]
 	Updated net/libsoup to 2.70.0 [wiz 2020-03-10]
 	Updated graphics/ImageMagick to 7.0.10.0 [wiz 2020-03-10]
+	Updated editors/featherpad to 0.13.0 [gutteridge 2020-03-11]
