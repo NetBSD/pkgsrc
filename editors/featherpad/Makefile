@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2020/03/10 22:09:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/11 01:15:54 gutteridge Exp $
 
-DISTNAME=		FeatherPad-V0.12.0
-PKGNAME=		featherpad-0.12.0
-PKGREVISION=		2
-CATEGORIES=		editors
-MASTER_SITES=		${MASTER_SITE_GITHUB:=tsujan/}
-GITHUB_TAG=		V${PKGVERSION_NOREV}
+VERSION=	0.13.0
+DISTNAME=	FeatherPad-V${VERSION}
+PKGNAME=	featherpad-${VERSION}
+CATEGORIES=	editors
+MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
+GITHUB_TAG=	V${PKGVERSION_NOREV}
 
 MAINTAINER=	voidpin@protonmail.com
 HOMEPAGE=	https://github.com/tsujan/FeatherPad/
 COMMENT=	Lightweight Qt5 plain-text editor
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/FeatherPad-0.12.0
+WRKSRC=		${WRKDIR}/FeatherPad-${VERSION}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
