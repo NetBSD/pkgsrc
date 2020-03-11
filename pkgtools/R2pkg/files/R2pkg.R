@@ -1,4 +1,4 @@
-# $NetBSD: R2pkg.R,v 1.29 2020/01/13 18:09:20 rillig Exp $
+# $NetBSD: R2pkg.R,v 1.30 2020/03/11 16:13:35 brook Exp $
 #
 # Copyright (c) 2014,2015,2016,2017,2018,2019
 #	Brook Milligan.  All rights reserved.
@@ -712,6 +712,8 @@ make.df.depends <- function(df, DEPENDS) {
     df.depends$key <- NULL
     df.depends <- df.depends[!duplicated(df.depends),]
     df.depends$order <- find.order(df, 'depends', 'order')
+    fields <- c('new_line', 'order', 'category', 'depends', 'buildlink3.mk')
+    df.depends <- df.depends[,fields]
   }
   # message('===> df.depends:')
   # str(df.depends)
