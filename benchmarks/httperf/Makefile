@@ -1,23 +1,30 @@
-# $NetBSD: Makefile,v 1.23 2016/02/25 11:09:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2020/03/11 14:24:44 nia Exp $
 
-DISTNAME=	httperf-0.9.0
-PKGREVISION=	1
+DISTNAME=	httperf-0.9.0.20190829
 CATEGORIES=	benchmarks www
-MASTER_SITES=	ftp://ftp.hpl.hp.com/pub/httperf/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=httperf/}
+GITHUB_TAG=	568322e493046df1e61bf8507c6253ef2831215f
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.hpl.hp.com/research/linux/httperf/
+HOMEPAGE=	https://github.com/httperf/httperf
 COMMENT=	Popular web server benchmarking program
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=		yes
-MAKE_JOBS_SAFE=		no
-USE_TOOLS+=		gmake
-CFLAGS+=		-DFD_SETSIZE=16424
+GNU_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	no
+USE_TOOLS+=	autoconf autoreconf automake
+CFLAGS+=	-DFD_SETSIZE=16424
+
+LDFLAGS.SunOS+=	-lsocket -lnsl -lresolv
+
+CONFIGURE_ARGS+=	--enable-idleconn
+CONFIGURE_ARGS.SunOS+=	--with-epoll=no
 
 INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR} \
 			bindir=${PREFIX}/bin
 
-LDFLAGS.SunOS+=	-lsocket -lnsl -lresolv
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi
 
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
