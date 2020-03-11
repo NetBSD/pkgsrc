@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 00:08:41 agc Exp $
-
-SHA1 (emerillon-0.1.2.tar.bz2) = 0032f99af0a5ddf802e610114b78d7714b4e22a8
-RMD160 (emerillon-0.1.2.tar.bz2) = 46aa884e0267eaae7f601e2c049ca1c8a5701450
-SHA512 (emerillon-0.1.2.tar.bz2) = 1ea90469bdc2bd3f422ea0636571c6f97ba8580fe58694673ffa9a2dad832fe9b211c1b7c1323ddd9ab77b7e1ea58ce16bac4a189f8c223fe0b576b767b23bc8
-Size (emerillon-0.1.2.tar.bz2) = 379193 bytes
-SHA1 (patch-aa) = 31ee77d0990df9d9520de9077dd9c8c298994a66
