@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1479 2020/03/11 10:26:05 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1480 2020/03/11 10:28:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2046,3 +2046,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fasttracker2 to 1.11 [fox 2020-03-11]
 	Updated net/filezilla to 3.47.2 [wiz 2020-03-11]
 	Removed devel/ethos [wiz 2020-03-11]
+	Removed geography/libchamplain06 successor geography/libchamplain012 [wiz 2020-03-11]
