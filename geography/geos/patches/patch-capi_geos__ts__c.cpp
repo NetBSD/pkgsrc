@@ -1,10 +1,12 @@
-$NetBSD: patch-capi_geos__ts__c.cpp,v 1.3 2020/03/11 12:52:07 gdt Exp $
+$NetBSD: patch-capi_geos__ts__c.cpp,v 1.4 2020/03/11 22:15:16 gdt Exp $
 
-Passing non-POD types like std::string to variadic functions is UB.
-To avoid this, change functions to take const char * rather than
-std::string.
+The geos code passes an object of type std::string to variadic functions
+NOTICE_MESSAGE and ERROR_MESSAGE.  Passing non-POD types is UB.
+
+To avoid this, change the functions to take const char * rather than
+std::string (and adjust the use of the variables in the functions).
   
-\todo File a bug upstream
+\TODO File a bug upstream
 
 --- capi/geos_ts_c.cpp.orig	2020-03-10 17:19:40.000000000 +0000
 +++ capi/geos_ts_c.cpp
