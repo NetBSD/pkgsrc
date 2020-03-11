@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/10/14 03:28:01 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/03/11 10:09:36 wiz Exp $
 bin/g-ir-annotation-tool
 bin/g-ir-compiler
 bin/g-ir-generate
@@ -166,3 +166,20 @@ share/gir-1.0/xlib-2.0.gir
 share/gir-1.0/xrandr-1.3.gir
 share/gobject-introspection-1.0/Makefile.introspection
 share/gobject-introspection-1.0/gdump.c
+share/gobject-introspection-1.0/tests/annotation.c
+share/gobject-introspection-1.0/tests/annotation.h
+share/gobject-introspection-1.0/tests/drawable.c
+share/gobject-introspection-1.0/tests/drawable.h
+share/gobject-introspection-1.0/tests/everything.c
+share/gobject-introspection-1.0/tests/everything.h
+share/gobject-introspection-1.0/tests/foo.c
+share/gobject-introspection-1.0/tests/foo.h
+share/gobject-introspection-1.0/tests/gimarshallingtests.c
+share/gobject-introspection-1.0/tests/gimarshallingtests.h
+share/gobject-introspection-1.0/tests/gitestmacros.h
+share/gobject-introspection-1.0/tests/regress.c
+share/gobject-introspection-1.0/tests/regress.h
+share/gobject-introspection-1.0/tests/utility.c
+share/gobject-introspection-1.0/tests/utility.h
+share/gobject-introspection-1.0/tests/warnlib.c
+share/gobject-introspection-1.0/tests/warnlib.h
