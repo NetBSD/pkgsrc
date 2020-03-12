@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/12 07:14:23 wiz Exp $
+
+SHA1 (jaraco.itertools-5.0.0.tar.gz) = 4d9f07572fad12c4d46a116c952ffc3aac9196ac
+RMD160 (jaraco.itertools-5.0.0.tar.gz) = 520d04d4f85936226d0deca3e1622259c5181614
+SHA512 (jaraco.itertools-5.0.0.tar.gz) = 38ae2cbdd436b277e3d3c252fadeb5239e2d32b2291686b2a3dbaca69328392eb1db4318b2144954b17302e5b15b94ad89f1ea8a1b2e354deec7d4516bd7ec85
+Size (jaraco.itertools-5.0.0.tar.gz) = 19517 bytes
