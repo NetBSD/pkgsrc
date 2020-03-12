@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1525 2020/03/12 16:12:57 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1526 2020/03/12 16:24:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2092,3 +2092,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed multimedia/gnome-media [nia 2020-03-12]
 	Updated sysutils/py-Glances to 3.1.4 [fox 2020-03-12]
 	Removed audio/py-musicbrainz [nia 2020-03-12]
+	Updated devel/libuv to 1.35.0 [adam 2020-03-12]
+	Updated www/py-asgiref to 3.2.5 [adam 2020-03-12]
+	Updated www/py-django3 to 3.0.4 [adam 2020-03-12]
+	Updated www/py-django2 to 2.2.11 [adam 2020-03-12]
+	Updated www/py-django to 1.11.29 [adam 2020-03-12]
+	Updated www/py-google-api-python-client to 1.7.12 [adam 2020-03-12]
