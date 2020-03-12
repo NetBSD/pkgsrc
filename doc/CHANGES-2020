@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1510 2020/03/12 00:23:38 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.1511 2020/03/12 02:34:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2035,7 +2035,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/libsoup to 2.70.0 [wiz 2020-03-10]
 	Updated graphics/ImageMagick to 7.0.10.0 [wiz 2020-03-10]
 	Updated editors/featherpad to 0.13.0 [gutteridge 2020-03-11]
-	Updated www/ruby-rouge to 3.17.0 [fcambus 2020-03-10]
+	Updated www/ruby-rouge to 3.17.0 [fcambus 2020-03-11]
 	Updated www/curl to 7.69.1 [adam 2020-03-11]
 	Updated lang/python37 to 3.7.7 [adam 2020-03-11]
 	Updated lang/py37-html-docs to 3.7.7 [adam 2020-03-11]
