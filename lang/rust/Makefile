@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2020/03/08 16:50:20 wiz Exp $
+# $NetBSD: Makefile,v 1.148 2020/03/12 12:13:51 tnn Exp $
 
 DISTNAME=	rustc-1.41.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -19,8 +19,6 @@ USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 # The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
 # build on 7).  Mark earlier versions as broken.
 BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
-
-CHECK_PORTABILITY_SKIP+=	vendor/openssl-src/openssl/.travis-create-release.sh
 
 HAS_CONFIGURE=			yes
 PYTHON_FOR_BUILD_ONLY=		yes
@@ -108,8 +106,6 @@ TEST_TARGET=	check
 # bin/* lib/*, but names vary
 CHECK_RELRO_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
-
-CHECK_PORTABILITY_SKIP+=	src/vendor/openssl-src/openssl/.travis-create-release.sh
 
 .include "../../mk/bsd.prefs.mk"
 
