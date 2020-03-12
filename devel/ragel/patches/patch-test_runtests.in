@@ -1,0 +1,15 @@
+$NetBSD: patch-test_runtests.in,v 1.1 2020/03/12 17:36:35 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- test/runtests.in.orig	2017-03-24 03:29:28.000000000 +0000
++++ test/runtests.in
+@@ -104,7 +104,7 @@ function run_test()
+ 
+ 	out_args=""
+ 	[ $lang != java ] && out_args="-o ${binary}";
+-    [ $lang == csharp ] && out_args="-out:${binary}";
++    [ $lang = csharp ] && out_args="-out:${binary}";
+ 
+ 	# Ruby doesn't need to be compiled.
+ 	if [ $lang != ruby ]; then
