@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2017/04/19 18:32:47 wiz Exp $
+$NetBSD: distinfo,v 1.11 2020/03/12 17:36:35 wiz Exp $
 
 SHA1 (ragel-6.10.tar.gz) = 946162090fb58b794ed53173fac13398d565b794
 RMD160 (ragel-6.10.tar.gz) = e37a0f83d3acbb77c7d7ea115f2faf0f2478724b
@@ -6,3 +6,4 @@ SHA512 (ragel-6.10.tar.gz) = 6c1fe4f6fa8546ae28b92ccfbae94355ff0d3cea346b9ae8ce4
 Size (ragel-6.10.tar.gz) = 1232993 bytes
 SHA1 (patch-aapl_bstcommon.h) = 540e74d2ff3ace21d3fb0cd817027cf18837bc98
 SHA1 (patch-ragel_javacodegen.cpp) = 3fc6b892b18993a769c7eb80bb89bbef63d71c7d
+SHA1 (patch-test_runtests.in) = 53605647f71655b05db3721fec44046d960f8e78
