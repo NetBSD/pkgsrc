@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.am,v 1.1 2020/03/12 10:11:34 ryoon Exp $
+
+--- Makefile.am.orig	2018-06-04 07:57:02.784445952 +0000
++++ Makefile.am
+@@ -206,7 +206,7 @@ BUILT_SOURCES = .version
+ CHANGELOG_FILE = v$(VERSION)-ChangeLog
+ 
+ $(CHANGELOG_FILE):
+-	@ if test "x$$PREVIOUS_VERSION" == "x"; then \
++	@ if test "x$$PREVIOUS_VERSION" = "x"; then \
+ 		echo "Usage make changelog PREVIOUS_VERSION=<version>"; \
+ 		exit 1; \
+ 	fi

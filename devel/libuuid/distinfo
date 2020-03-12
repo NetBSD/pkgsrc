@@ -1,13 +1,18 @@
-$NetBSD: distinfo,v 1.20 2018/08/29 12:25:52 adam Exp $
+$NetBSD: distinfo,v 1.21 2020/03/12 10:11:34 ryoon Exp $
 
 SHA1 (util-linux-2.32.1.tar.xz) = de9271fb93fb651d21c027e2efb0cf0ac80f2e9a
 RMD160 (util-linux-2.32.1.tar.xz) = bf61cb460eabcfdb90909dbcfd8e64bb9097ce65
 SHA512 (util-linux-2.32.1.tar.xz) = 267fedae24a874ee4dc558081f6b8d07b33b955b0635f3348f021c111c17f2e95c01b2cbf909fe13c6ca448cbcf23c658c75f72f25749aa65e99f68fabb94698
 Size (util-linux-2.32.1.tar.xz) = 4561088 bytes
-SHA1 (patch-Makefile.in) = ace0b141c2fbda821c0f14c385fed698bb5f5423
+SHA1 (patch-Makefile.am) = a3470f6d286ca7c7ddebf27f9a205507b67f836d
+SHA1 (patch-Makefile.in) = a415bb922d7154387f71882b1f1fa06c9e49c174
 SHA1 (patch-configure) = 400904ae2e58b717e990ba26c111b90bc8f240d1
 SHA1 (patch-include_c.h) = 4596369e4b742329be513952c66d1fa3705de017
 SHA1 (patch-include_ttyutils.h) = fa2b253d568e5aface99727c397d3c4c892b2c93
 SHA1 (patch-lib_ismounted.c) = 11f5148020dba2a22e1fbe4882fe423dfb11ad73
 SHA1 (patch-lib_randutils.c) = 422e94d9bdaf6a77894b79d67285fd8a0cb1d05a
+SHA1 (patch-libblkid_docs_Makefile.in) = 97a1559dad77e32d78bd504d8d3523b9cc403c36
+SHA1 (patch-libfdisk_docs_Makefile.in) = def97b85e8760cd18af736ab331e2f476f0c9c67
+SHA1 (patch-libmount_docs_Makefile.in) = a55063e89161221cecda661039d0a62174592669
+SHA1 (patch-libsmartcols_docs_Makefile.in) = aa44d1a9ffd9bf4422ed8892d91b4e0e72e50407
 SHA1 (patch-libuuid_src_gen__uuid.c) = d15aa418ab497e2e3634c62633d2f3212f1b42be
