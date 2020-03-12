@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.5 2020/03/12 08:55:07 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.6 2020/03/12 19:26:17 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -320,9 +320,9 @@ checkline_sh_double_brackets(cstr filename, size_t lineno, cstr line)
 	nerrors++;
 	explain(
 	    W_double_bracket,
-	    "The command [[ is not available on all platforms.",
-	    "Since it is typically used inside an if statement,",
-	    "the missing command is interpreted as a \"no\".",
+	    "The keyword [[ is only available in bash, not in other shells.",
+	    "Since it is typically used inside an if statement, if that",
+	    "command is missing, it is interpreted as a \"no\".",
 	    "",
 	    "An error message of the form \"[[: command not found\"",
 	    "is logged, but that is easy to overlook in the large",
