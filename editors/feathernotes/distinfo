@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/02/13 03:21:54 gutteridge Exp $
+$NetBSD: distinfo,v 1.2 2020/03/12 00:23:27 gutteridge Exp $
 
-SHA1 (FeatherNotes-V0.5.1.tar.gz) = 37994687bce772b46d9f363f7aa38dcd3e6583aa
-RMD160 (FeatherNotes-V0.5.1.tar.gz) = 3091679de78c76d3f61db00ff92cbc331d92a153
-SHA512 (FeatherNotes-V0.5.1.tar.gz) = ee52b2069e000cdf1b1971c9b6e94c4b2fabf93505081f485c2f777d6f002cb0621ca49be58c66a520db801c389bfad9502651eebc42d38d0ece2bec4f6c9e9a
-Size (FeatherNotes-V0.5.1.tar.gz) = 335890 bytes
-SHA1 (patch-feathernotes_fn.cpp) = e9e74350d542b75a5bffc46a35f09a0b591fab6a
-SHA1 (patch-feathernotes_x11.cpp) = e1d131d1b85fbe1dc23dde4426fb83415c1fb906
-SHA1 (patch-feathernotes_x11.h) = 748c3a71e596a1d53412bc2d8b4b94cb3d14b159
+SHA1 (FeatherNotes-V0.6.0.tar.gz) = 500a7e3cd0657f70da39357c4cceaec2fcc9b53b
+RMD160 (FeatherNotes-V0.6.0.tar.gz) = 5aa562ce8dfd7f38d26b2221d2fedc8f9f544baf
+SHA512 (FeatherNotes-V0.6.0.tar.gz) = cd4f911fcc7240733a6b931d8f972e3f2745b621ee9324740712818b20a8dc1761975708cc31d459242b261b18d8ae1d075e16f1fd5b4c9746365255c1803ba4
+Size (FeatherNotes-V0.6.0.tar.gz) = 357762 bytes
