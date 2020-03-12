@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/03/03 06:01:00 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/12 07:35:23 wiz Exp $
 
 DISTNAME=	importlib_resources-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -19,7 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 .endif
 .if ${_PYTHON_VERSION} < 38
-DEPENDS+=	${PYPKGPREFIX}-zipp>=0.4:../../archivers/py-zipp
+PYTHON_VERSIONED_DEPENDENCIES+=	zipp
+.include "../../lang/python/versioned_dependencies.mk"
 .endif
 
 USE_LANGUAGES=	# none
