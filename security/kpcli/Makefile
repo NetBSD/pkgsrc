@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/01/18 23:35:07 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/03/12 09:25:44 wiz Exp $
 
 DISTNAME=	kpcli-3.3
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kpcli/}
 EXTRACT_SUFX=	.pl
@@ -17,8 +18,7 @@ DEPENDS+=	p5-Term-ShellUI-[0-9]*:../../devel/p5-Term-ShellUI
 DEPENDS+=	p5-Crypt-Rijndael-[0-9]*:../../security/p5-Crypt-Rijndael
 DEPENDS+=	p5-File-KeePass-[0-9]*:../../security/p5-File-KeePass
 DEPENDS+=	p5-Crypt-PWSafe3-[0-9]*:../../security/p5-Crypt-PWSafe3
-#DEPENDS+=	{perl>=5.002,p5-Term-ReadLine-[0-9]*}:../../devel/p5-Term-ReadLine
-DEPENDS+=	p5-Term-ReadLine-Perl-[0-9]*:../../devel/p5-Term-ReadLine-Perl
+DEPENDS+=	p5-Term-ReadLine-[0-9]*:../../devel/p5-Term-ReadLine
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
