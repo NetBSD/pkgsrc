@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2020/01/18 21:49:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.94 2020/03/12 23:52:37 gdt Exp $
 
 DISTNAME=	glusterfs-3.12.8
 PKGREVISION=	5
@@ -63,13 +63,15 @@ REPLACE_BASH+=		extras/geo-rep/get-gfid.sh
 REPLACE_BASH+=		extras/geo-rep/gsync-upgrade.sh
 REPLACE_BASH+=		extras/geo-rep/slave-upgrade.sh
 REPLACE_BASH+=		extras/peer_add_secret_pub.in
-REPLACE_BASH+=		extras/peer_add_secret_pub.in
 REPLACE_BASH+=		extras/post-upgrade-script-for-quota.sh
 REPLACE_BASH+=		extras/pre-upgrade-script-for-quota.sh
 REPLACE_BASH+=		extras/stop-all-gluster-processes.sh
 REPLACE_BASH+=		geo-replication/src/gverify.sh
 REPLACE_BASH+=		geo-replication/src/peer_gsec_create.in
 REPLACE_BASH+=		geo-replication/src/set_geo_rep_pem_keys.sh
+
+# Explicit substitution of bash
+CHECK_PORTABILITY_SKIP+=	extras/peer_add_secret_pub.in
 
 
 SUBST_CLASSES+=		mtab
