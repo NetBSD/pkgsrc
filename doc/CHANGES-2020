@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1509 2020/03/12 00:17:26 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.1510 2020/03/12 00:23:38 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2076,3 +2076,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed games/gnome-games [wiz 2020-03-11]
 	Removed x11/py-gnome2-desktop [wiz 2020-03-11]
 	Updated geography/libgeotiff to 1.5.1 [gdt 2020-03-12]
+	Updated editors/feathernotes to 0.6.0 [gutteridge 2020-03-12]
