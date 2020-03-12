@@ -1,0 +1,13 @@
+$NetBSD: patch-libfdisk_docs_Makefile.in,v 1.1 2020/03/12 10:11:34 ryoon Exp $
+
+--- libfdisk/docs/Makefile.in.orig	2018-07-16 10:34:43.952171193 +0000
++++ libfdisk/docs/Makefile.in
+@@ -803,7 +803,7 @@ distclean-local:
+ 	rm -rf xml html $(REPORT_FILES) *.stamp \
+ 	       $(DOC_MODULE)-overrides.txt \
+ 	       $(DOC_MODULE)-decl-list.txt $(DOC_MODULE)-decl.txt
+-	test $(abs_builddir) ==  $(abs_srcdir) || \
++	test $(abs_builddir) =  $(abs_srcdir) || \
+ 	       rm -f $(DOC_MODULE)-*.txt $(DOC_MODULE)-*.xml *.xml.in
+ 
+ install-data-local:
