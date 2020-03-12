@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/12 07:32:28 wiz Exp $
+
+SHA1 (func_timeout-4.3.5.tar.gz) = ca33423c382a5352ec3c42c9e9acc58fad6f95ff
+RMD160 (func_timeout-4.3.5.tar.gz) = 33ebfc047c273d60b477c7d9a92074973ff56b90
+SHA512 (func_timeout-4.3.5.tar.gz) = 4ef942b89aa0585d6daea69d66a217916bcdfc0f1070a871f13975f7ad2c375f0137df4248251754b26e3f0f64ef239f5ee110a3641ed3ff8368bbb6fc59f6f9
+Size (func_timeout-4.3.5.tar.gz) = 44264 bytes
