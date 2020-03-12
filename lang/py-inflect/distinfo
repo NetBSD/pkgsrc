@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/12 07:12:05 wiz Exp $
+
+SHA1 (inflect-4.1.0.tar.gz) = 68cdf232803aa97251a28703d1a653265969f2bf
+RMD160 (inflect-4.1.0.tar.gz) = 36bd9c440d318648ef7eaf2037ad349064979e52
+SHA512 (inflect-4.1.0.tar.gz) = 9a2ba4777f01475390976f3ac28f046d39d1f86cfdafd161cc7c8d33526aca35d44e6598ccf2a0b68d3511a64b67ed0991b51c78bda8f279cd706fd29a3fa514
+Size (inflect-4.1.0.tar.gz) = 72200 bytes
