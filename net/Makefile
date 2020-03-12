@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1312 2020/03/11 19:55:38 nia Exp $
+# $NetBSD: Makefile,v 1.1313 2020/03/12 18:52:57 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -10,7 +10,6 @@ SUBDIR+=	GeoIP
 SUBDIR+=	Geomyidae
 SUBDIR+=	IglooFTP
 SUBDIR+=	LaBrea
-SUBDIR+=	ORBit
 SUBDIR+=	ORBit2
 SUBDIR+=	R-pbdZMQ
 SUBDIR+=	Radicale
