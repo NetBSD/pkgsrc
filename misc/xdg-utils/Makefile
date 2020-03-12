@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2018/10/17 08:39:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/12 17:23:12 wiz Exp $
 
 DISTNAME=	xdg-utils-1.1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	https://portland.freedesktop.org/download/
 
