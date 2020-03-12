@@ -1,0 +1,15 @@
+$NetBSD: patch-src_test-secondary.sh.in,v 1.1 2020/03/12 17:39:28 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- src/test-secondary.sh.in.orig	2017-09-20 11:10:50.000000000 +0000
++++ src/test-secondary.sh.in
+@@ -6,7 +6,7 @@ fi
+ testtextcat="$testtextcat @top_builddir@/src/testtextcat"
+ #take second guess
+ res=`cat @top_srcdir@/langclass/ShortTexts/$1.txt | $testtextcat @top_srcdir@/langclass/fpdb.conf @top_srcdir@/langclass/LM/ | sed -e "s/^.[^]]*]//" | sed -e "s/].*/]/" | sed -e "s/zh-CN/zh-Hans/" | sed -e "s/zh-TW/zh-Hant/" | sed -e "s/--utf8//" | sed -e "s/-utf8//" | sed -e "s/^\[sh\]$/\[sr-Latn\]/" | sed -e "s/^\[sr\]$/\[sr-Cyrl\]/" | sed -e "s/cyrillic/Cyrl/"`
+-if [ $res == "[$1]" ]; then
++if [ $res = "[$1]" ]; then
+     exit 0
+ else
+     exit 1
