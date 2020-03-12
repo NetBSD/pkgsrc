@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2020/03/04 22:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2020/03/12 17:18:30 wiz Exp $
 
 PKGREVISION= 6
 .include "../../print/texlive/Makefile.common"
@@ -64,6 +64,9 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-configure
 SUBST_FILES.prefix=	libs/lua53/lua53-src/src/luaconf.h
 SUBST_VARS.prefix=	PREFIX
+
+# patched in Makefile.in
+CHECK_PORTABILITY_SKIP+=	libs/luajit/Makefile.am
 
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE_EXTENDED=0
 
