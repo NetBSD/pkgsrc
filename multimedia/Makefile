@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.293 2020/01/20 02:20:19 nia Exp $
+# $NetBSD: Makefile,v 1.294 2020/03/12 13:40:53 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -48,7 +48,6 @@ SUBDIR+=	gmediaserver
 SUBDIR+=	gmencoder
 SUBDIR+=	gmp-api
 SUBDIR+=	gmplayer
-SUBDIR+=	gnome-media
 SUBDIR+=	gnome-mplayer
 SUBDIR+=	gnome-video-effects
 SUBDIR+=	goggles
