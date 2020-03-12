@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/03/12 07:50:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/12 07:52:00 wiz Exp $
 
 DISTNAME=	zipp-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
 TEST_DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
 TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 # not available for python 2.x
+# https://github.com/jaraco/zipp/issues/49
 #TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.itertools-[0-9]*:../../devel/py-jaraco.itertools
 TEST_DEPENDS+=	${PYPKGPREFIX}-func_timeout-[0-9]*:../../devel/py-func_timeout
 
