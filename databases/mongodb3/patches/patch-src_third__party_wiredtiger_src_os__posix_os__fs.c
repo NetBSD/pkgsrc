@@ -1,18 +1,13 @@
-$NetBSD: patch-src_third__party_wiredtiger_src_os__posix_os__fs.c,v 1.3 2020/03/06 14:22:46 gdt Exp $
+$NetBSD: patch-src_third__party_wiredtiger_src_os__posix_os__fs.c,v 1.4 2020/03/12 16:36:53 gdt Exp $
 
-Without this patch, the WT_PANIC_RET message happens, with errno EBADF.
-The fdatasync() function is specified to fail if fd is not a valid file
-descriptor that is open for writing.  We believe that it is being called
-on a directory, which is therefore invalid.  On Linux, one can use
-fdatasync() on non-writable file descriptors, but the Linux man page
-acknowledges that this is non-standard behavior.
+The fdatasync call is specified by POSIX, and the definition has changed:
+  https://pubs.opengroup.org/onlinepubs/009695399/functions/fdatasync.html
+  https://pubs.opengroup.org/onlinepubs/9699919799/functions/fdatasync.html  
 
-To work around this upstream bug, silently ignore fdatasync errno values
-of EBADF.  A better fix is likely to use fsync on directories instead.
+NetBSD's fdatasync follows the earlier specification.  For now, simply avoid
+crashing on EBADF, at the possible expense of sync safety.
 
-\todo Explore the fsync instead approach.
-
-\todo File upstream and add upstream bugtracker URL.
+\todo Change NetBSD to follow the current standard.
 
 --- src/third_party/wiredtiger/src/os_posix/os_fs.c.orig	2020-01-08 16:30:41.000000000 +0000
 +++ src/third_party/wiredtiger/src/os_posix/os_fs.c
