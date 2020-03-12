@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 21:48:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2020/03/12 17:28:10 wiz Exp $
 
 DISTNAME=	libssh2-1.9.0
 PKGREVISION=	1
@@ -20,6 +20,9 @@ CONFIGURE_ARGS+=	--disable-examples-build
 
 PKGCONFIG_OVERRIDE+=	libssh2.pc.in
 TEST_TARGET=		check
+
+# patched in Makefile.in
+CHECK_PORTABILITY_SKIP+=	Makefile.am
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
