@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.4 2020/03/12 08:42:34 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.5 2020/03/12 08:55:07 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -35,7 +35,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define nullptr ((void *)0)
+#define nullptr ((void *) 0)
 static const size_t npos = -1;
 
 static bool
@@ -208,7 +208,7 @@ str_charptr(str *s)
 {
 	str_reserve(s, 1);
 	s->data[s->len] = '\0';
-	assert(memchr(s->data, 0, s->len) == nullptr);
+	assert(memchr(s->data, '\0', s->len) == nullptr);
 	return s->data;
 }
 
@@ -339,6 +339,8 @@ checkline_sh_dollar_random(cstr filename, size_t lineno, cstr line)
 	// a safe usage of $RANDOM, it will pass the test.
 	if (is_shell_comment(line))
 		return;
+	if (!cstr_contains(line, CSTR("$RANDOM")))
+		return;
 
 	// $RANDOM together with the PID is often found in GNU-style
 	// configure scripts and is considered acceptable.
@@ -350,9 +352,6 @@ checkline_sh_dollar_random(cstr filename, size_t lineno, cstr line)
 	// Variable names that only start with RANDOM are not special.
 	size_t idx = cstr_index(line, CSTR("$RANDOM"));
 	if (idx != npos && idx + 7 < line.len && is_alnum(line.data[idx + 7]))
-		return;
-
-	if (!cstr_contains(line, CSTR("$RANDOM")))
 		return;
 
 	printf("%s:%zu:%zu: $RANDOM: %s\n",
