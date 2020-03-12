@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2020/03/12 22:16:44 tnn Exp $
+# $NetBSD: Makefile,v 1.154 2020/03/12 23:10:23 tnn Exp $
 
 DISTNAME=	rustc-1.41.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -131,7 +131,7 @@ CONFIGURE_ARGS+=	--set llvm.targets="ARM;X86"
 .endif
 
 # toolchain/54192, induces rtld issues
-.if ${OPSYS} == "NetBSD" && defined(BATCH)
+.if ${OPSYS} == "NetBSD" && (defined(BATCH) || ${PKG_DEVELOPER:Uno} == "no")
 MAKE_JOBS_SAFE=	no
 .endif
 
