@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2020/03/12 12:59:01 tnn Exp $
+# $NetBSD: Makefile,v 1.152 2020/03/12 20:33:53 tnn Exp $
 
 DISTNAME=	rustc-1.41.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -303,8 +303,10 @@ post-extract:
 		${TOOLS_BASH} ./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
 	fi
 # patch(1) in NetBSD does not handle .cargo-checksum.json like long width file.
-	set -e;									\
-	${ECHO}									\
+	set -e; ${ECHO}								\
+	  vendor/libssh2-sys							\
+	  b43846de064d454b0c2e524dc28d8b45ed09ac4c0a9546ee3be25e5690a8abd1	\
+	  65beb73b709c8a5f768740a938c0f95e89930a042726a1638f746b37f373599b	\
 	  vendor/rand								\
 	  1e732c2e3b4bd1561f11e0979bf9d20669a96eae7afe0deff9dfbb980ee47bf1	\
 	  bc03f2345d7cfa7000f9da817120b6afa073359789c21a9a790ebd8676c50cca	\
