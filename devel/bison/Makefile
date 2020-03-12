@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2020/01/18 23:30:24 rillig Exp $
+# $NetBSD: Makefile,v 1.112 2020/03/12 20:47:12 tnn Exp $
 
 DISTNAME=	bison-3.4.2
 CATEGORIES=	devel
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/bison/bison.html
 COMMENT=	GNU yacc(1) replacement
 LICENSE=	gnu-gpl-v3
+
+CHECK_PORTABILITY_SKIP+=	tests/local.mk
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		grep gm4:run flex perl:build
