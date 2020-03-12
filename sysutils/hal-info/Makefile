@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/08/11 13:23:08 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/03/12 17:34:33 wiz Exp $
 
 DISTNAME=		hal-info-20091130
 PKGREVISION=		7
@@ -19,5 +19,8 @@ USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		YES
 
 TEST_TARGET=		check
+
+# patched in configure
+CHECK_PORTABILITY_SKIP+=	configure.in
 
 .include "../../mk/bsd.pkg.mk"
