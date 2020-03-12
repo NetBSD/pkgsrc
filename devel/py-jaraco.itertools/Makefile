@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/12 07:14:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/12 07:45:44 wiz Exp $
 
 DISTNAME=	jaraco.itertools-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-inflect-[0-9]*:../../lang/py-inflect
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools
 
 .include "../../lang/python/versioned_dependencies.mk"
