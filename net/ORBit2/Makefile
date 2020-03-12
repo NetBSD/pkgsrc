@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2020/03/08 16:48:00 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2020/03/12 17:26:21 wiz Exp $
 
 DISTNAME=		ORBit2-2.14.19
 PKGREVISION=		5
@@ -21,6 +21,9 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 # needs interaction
 #TEST_TARGET=		check
+
+# patched in configure
+CHECK_PORTABILITY_SKIP+=	configure.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
