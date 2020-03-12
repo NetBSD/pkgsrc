@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.38 2019/05/07 19:36:44 rillig Exp $
+# $NetBSD: extract.mk,v 1.39 2020/03/12 16:55:31 gdt Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -31,7 +31,9 @@
 #    EXTRACT_USING specifies the tool used to extract tar/ustar-format
 #	archives when using EXTRACT_CMD_DEFAULT.  The possible values are
 #	"bsdtar", "gtar", "nbtar", and "pax".
-#	By default, we use the "nbtar" tool (pkgsrc's pax-as-tar).
+#	By default, we use the "nbtar", which means the value of
+#	${TOOL_PLATFORM.tar}, which is typically an arbitrary
+#	implementation already found on the platform.
 #
 #    EXTRACT_ELEMENTS is a list of files within the distfile to extract
 #	when using EXTRACT_CMD_DEFAULT.  By default, this is empty, which
