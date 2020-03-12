@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2020/03/06 14:22:46 gdt Exp $
+$NetBSD: distinfo,v 1.8 2020/03/12 16:36:53 gdt Exp $
 
 SHA1 (mongodb-src-r3.4.24.tar.gz) = 86909b211998f0cbc8104df774aecb3d00a01763
 RMD160 (mongodb-src-r3.4.24.tar.gz) = f7e4bfe1e2bd046f1a6c0f2695762076ffee5ae5
@@ -27,4 +27,4 @@ SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_build_js-confdefs.
 SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_include_js-config.h) = 7ddbb4e3bf4126a1be2195acc82ff859e8130a01
 SHA1 (patch-src_third__party_s2_base_port.h) = 892ce91b5aaa432f34e1e7c169b7fd6eea2a3e94
 SHA1 (patch-src_third__party_wiredtiger_SConscript) = 71fd2326a4e95fec674326225bce5ccf5793aa5a
-SHA1 (patch-src_third__party_wiredtiger_src_os__posix_os__fs.c) = a9a8655421e99f9f189b299643b55ad44c5469d7
+SHA1 (patch-src_third__party_wiredtiger_src_os__posix_os__fs.c) = c1f227a2e026c0c90f438384b71873fecf27cde5
