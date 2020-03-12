@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2020/03/08 16:49:07 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2020/03/12 17:19:53 wiz Exp $
 
 DISTNAME=	shared-mime-info-1.10
 PKGREVISION=	1
@@ -19,6 +19,9 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config xgettext
 MAKE_JOBS_SAFE=		no
 
 CONFIGURE_ARGS+=	--disable-update-mimedb
+
+# patched in Makefile.in
+CHECK_PORTABILITY_SKIP+=	Makefile.am
 
 .include "../../mk/bsd.prefs.mk"
 
