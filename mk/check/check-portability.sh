@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.14 2020/03/12 08:44:15 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.15 2020/03/12 18:40:06 rillig Exp $
 #
 # This program checks all files in the current directory and any
 # subdirectories for portability issues that are likely to result in
@@ -34,10 +34,13 @@ check_shell() {
 	fi
 }
 
-find * -type f -print 2>/dev/null \
+find ./* -type f -print 2>/dev/null \
+| sed 's,$,_,' \
 | {
 	opsys=`uname -s`-`uname -r`
 	while read fname; do
+		fname="${fname#./}"
+		fname="${fname%_}"
 
 		skip=no
 		eval "case \"\$fname\" in $SKIP_FILTER *.orig) skip=yes;; esac"
