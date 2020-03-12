@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1528 2020/03/12 16:43:36 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1529 2020/03/12 17:23:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2101,3 +2101,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed security/gnome-keyring-sharp [nia 2020-03-12]
 	Updated textproc/py-ujson to 2.0.1 [adam 2020-03-12]
 	Updated security/py-asyncssh to 2.2.0 [adam 2020-03-12]
+	Updated misc/xdg-utils to 1.1.3nb2 [wiz 2020-03-12]
