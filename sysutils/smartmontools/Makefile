@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2020/01/18 23:35:21 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/03/12 15:04:54 tnn Exp $
 
 DISTNAME=		smartmontools-7.0
 PKGREVISION=		3
@@ -12,6 +12,8 @@ LICENSE=		gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-*
 ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
+
+CHECK_PORTABILITY_SKIP+=	os_darwin/pkg/root/usr/local/sbin/smart-pkg-uninstall
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
