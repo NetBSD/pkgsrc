@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/01/10 14:44:52 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/03/12 11:12:45 jaapb Exp $
 ${OCAML_SITELIB}/batteries/META
 ${OCAML_SITELIB}/batteries/batArray.cmi
 ${OCAML_SITELIB}/batteries/batArray.cmt
@@ -111,6 +111,11 @@ ${OCAML_SITELIB}/batteries/batFile.cmt
 ${OCAML_SITELIB}/batteries/batFile.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batFile.cmx
 ${OCAML_SITELIB}/batteries/batFile.mli
+${OCAML_SITELIB}/batteries/batFilename.cmi
+${OCAML_SITELIB}/batteries/batFilename.cmt
+${OCAML_SITELIB}/batteries/batFilename.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batFilename.cmx
+${OCAML_SITELIB}/batteries/batFilename.mli
 ${OCAML_SITELIB}/batteries/batFingerTree.cmi
 ${OCAML_SITELIB}/batteries/batFingerTree.cmt
 ${OCAML_SITELIB}/batteries/batFingerTree.cmti
@@ -272,11 +277,6 @@ ${OCAML_SITELIB}/batteries/batNumber.cmt
 ${OCAML_SITELIB}/batteries/batNumber.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batNumber.cmx
 ${OCAML_SITELIB}/batteries/batNumber.mli
-${OCAML_SITELIB}/batteries/batOo.cmi
-${OCAML_SITELIB}/batteries/batOo.cmt
-${OCAML_SITELIB}/batteries/batOo.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batOo.cmx
-${OCAML_SITELIB}/batteries/batOo.mli
 ${OCAML_SITELIB}/batteries/batOpaqueInnerSys.cmi
 ${OCAML_SITELIB}/batteries/batOpaqueInnerSys.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batOpaqueInnerSys.cmx
