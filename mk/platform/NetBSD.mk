@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.58 2019/01/09 13:19:03 wiz Exp $
+# $NetBSD: NetBSD.mk,v 1.59 2020/03/12 17:01:39 gdt Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -12,6 +12,9 @@ PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
+
+# pax-as-tar, found on <=8, and optionally later, fails on many archives.
+EXTRACT_USING?=	bsdtar
 
 USERADD?=	/usr/sbin/useradd
 GROUPADD?=	/usr/sbin/groupadd
