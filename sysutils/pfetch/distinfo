@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/03/11 20:13:20 fox Exp $
+$NetBSD: distinfo,v 1.3 2020/03/12 12:03:39 fox Exp $
 
-SHA1 (pfetch-0.5.0.tar.gz) = 9e090d33641ba5ccd6351062fcdbce7f9c187bba
-RMD160 (pfetch-0.5.0.tar.gz) = faa48743510af5c9f3c849d28b697103cd661d70
-SHA512 (pfetch-0.5.0.tar.gz) = 88d9dc0eccb01622f35c8fbd4892dd65e005296425aa4f0c533d109a83e59a5211d0b6415d7e58e59fe0d3ef848770ae644a335958e7b12df93435e76f68e8e2
-Size (pfetch-0.5.0.tar.gz) = 16236 bytes
+SHA1 (pfetch-0.6.0.tar.gz) = 9440d085e9ef93a94127ed634edbbfb2048186c7
+RMD160 (pfetch-0.6.0.tar.gz) = 22c28104e9ce9536e474e5b0b019c15d20642003
+SHA512 (pfetch-0.6.0.tar.gz) = 868901bec6ae8999ad40fcb94bdf804969a3dfd724dc554d62f59982daf48d359094764b2e45d4816983d4f46e38de30f0bcb646ecd95bf3263ba128b87a1ddf
+Size (pfetch-0.6.0.tar.gz) = 17431 bytes
