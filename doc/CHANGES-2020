@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1527 2020/03/12 16:35:10 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1528 2020/03/12 16:43:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2099,3 +2099,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-django to 1.11.29 [adam 2020-03-12]
 	Updated www/py-google-api-python-client to 1.7.12 [adam 2020-03-12]
 	Removed security/gnome-keyring-sharp [nia 2020-03-12]
+	Updated textproc/py-ujson to 2.0.1 [adam 2020-03-12]
+	Updated security/py-asyncssh to 2.2.0 [adam 2020-03-12]
