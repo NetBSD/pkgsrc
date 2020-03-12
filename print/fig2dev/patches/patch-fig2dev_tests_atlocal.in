@@ -1,0 +1,14 @@
+$NetBSD: patch-fig2dev_tests_atlocal.in,v 1.1 2020/03/12 17:40:44 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- fig2dev/tests/atlocal.in.orig	2016-02-14 20:54:26.000000000 +0000
++++ fig2dev/tests/atlocal.in
+@@ -1,6 +1,6 @@
+ # @configure_input@
+ 
+-if test x"@abs_top_builddir@" == x"@abs_top_srcdir@"; then
++if test x"@abs_top_builddir@" = x"@abs_top_srcdir@"; then
+   PATH=@abs_top_builddir@/fig2dev:$PATH
+ else
+   PATH=@abs_top_builddir@/fig2dev:@abs_top_srcdir@/fig2dev:$PATH
