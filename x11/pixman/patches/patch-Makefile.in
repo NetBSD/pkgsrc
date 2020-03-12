@@ -1,0 +1,25 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/03/12 19:19:52 tnn Exp $
+
+Skip building demos and test SUBDIRS
+Shell portability
+
+--- Makefile.in.orig	2019-04-10 17:19:26.000000000 +0000
++++ Makefile.in
+@@ -381,7 +381,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = pixman demos test
++SUBDIRS = pixman
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = pixman-1.pc
+ GPGKEY = 3892336E
+@@ -964,7 +964,7 @@ release-remove-old:
+ 	$(RM) $(tar_gz) $(tar_bz2) $(HASHFILES) $(gpg_file)
+ 
+ ensure-prev:
+-	@if [[ "$(PREV)" == "" ]]; then							\
++	@if [ "$(PREV)" = "" ]; then							\
+ 		echo ""							          &&	\
+ 		echo "You must set the PREV variable on the make command line to" &&	\
+ 		echo "the last version."				  	  &&	\
