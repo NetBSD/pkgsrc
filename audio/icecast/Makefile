@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2020/03/08 16:48:45 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2020/03/12 17:42:10 wiz Exp $
 
 DISTNAME=	icecast-2.4.4
 PKGREVISION=	6
@@ -35,6 +35,9 @@ CONF_FILES=		${EGDIR}/icecast.xml ${PKG_SYSCONFDIR}/icecast.xml
 
 OWN_DIRS_PERMS=		${ICECAST_CHROOTDIR} ${ICECAST_USER} ${ICECAST_GROUP} 770
 OWN_DIRS_PERMS+=	${ICECAST_LOGDIR} ${ICECAST_USER} ${ICECAST_GROUP} 770
+
+# patched in configure
+CHECK_PORTABILITY_SKIP+=	configure.in
 
 pre-configure:
 	${MV} ${WRKSRC}/conf/icecast.xml.in ${WRKSRC}/conf/icecast.fixme
