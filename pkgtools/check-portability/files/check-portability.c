@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.6 2020/03/12 19:26:17 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.7 2020/03/12 19:45:06 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -238,6 +238,7 @@ str_read_text_line(str *s, FILE *f)
 }
 
 typedef enum {
+	W_how_to_fix,
 	W_dollar_random,
 	W_test_eqeq,
 	W_double_bracket
@@ -261,6 +262,23 @@ explain(warning_kind warning, ...)
 		printf("%s%s\n", line[0] == '\0' ? "" : "\t", line);
 	printf("\n");
 	va_end(args);
+}
+
+static void
+explain_how_to_fix(void)
+{
+	explain(
+	    W_how_to_fix,
+	    "To fix this message, decide whether this file is necessary",
+	    "for the package to build. Then choose any of these variants:",
+	    "",
+	    "1.  Add a patch for the file",
+	    "    (see https://www.netbsd.org/docs/pkgsrc/pkgsrc.html#components.patches)",
+	    "2.  Add a SUBST block for the file to the package Makefile",
+	    "    (see mk/subst.mk)",
+	    "3.  Add CHECK_PORTABILITY_SKIP+= shell/glob to the package Makefile",
+	    "    (see mk/check/check-portability.mk)",
+	    nullptr);
 }
 
 static size_t
@@ -328,6 +346,7 @@ checkline_sh_double_brackets(cstr filename, size_t lineno, cstr line)
 	    "is logged, but that is easy to overlook in the large",
 	    "output of the build process.",
 	    nullptr);
+	explain_how_to_fix();
 }
 
 // Check for $RANDOM, which is specific to ksh and bash.
@@ -364,6 +383,7 @@ checkline_sh_dollar_random(cstr filename, size_t lineno, cstr line)
 	    "not be used in shell programs that are meant to be portable across a",
 	    "large number of POSIX-like systems.",
 	    nullptr);
+	explain_how_to_fix();
 }
 
 typedef void (*foreach_3_fields_cb)(cstr f1, cstr f2, cstr f3, void *actiondata);
@@ -413,13 +433,8 @@ checkline_sh_test_eqeq_action(cstr f1, cstr f2, cstr f3, void *actiondata)
 	    "When you run \"test foo == foo\" on a platform that does not support the",
 	    "\"==\" operator, the result will be \"false\" instead of \"true\". This can",
 	    "lead to unexpected behavior.",
-	    "",
-	    "There are two ways to fix this error message. If the file that contains",
-	    "the \"test ==\" is needed for building the package, you should create a",
-	    "patch for it, replacing the \"==\" operator with \"=\". If the file is not",
-	    "needed, add its name to the CHECK_PORTABILITY_SKIP variable in the",
-	    "package Makefile.",
 	    nullptr);
+	explain_how_to_fix();
 }
 
 static void
