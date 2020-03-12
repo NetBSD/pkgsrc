@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/11/02 22:54:25 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/03/12 20:50:30 rillig Exp $
 
 .include "../../archivers/libarchive/Makefile.common"
 .include "../../mk/bsd.prefs.mk"
@@ -45,6 +45,9 @@ FILESDIR.libarchive?=	${.CURDIR}/../../archivers/libarchive/files
 FILESDIR.zlib?=		${.CURDIR}/../../devel/zlib/files
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+CHECK_PERMS=		no # avoid circular dependency
+CHECK_PORTABILITY=	no # avoid circular dependency
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OS_VARIANT} == "SCOOSR5"
