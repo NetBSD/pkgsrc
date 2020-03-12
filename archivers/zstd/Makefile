@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/01/18 23:29:57 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/03/12 17:34:26 tnn Exp $
 
 DISTNAME=	zstd-1.4.4
 CATEGORIES=	archivers
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://facebook.github.io/zstd/
 COMMENT=	Fast real-time compression algorithm
 LICENSE=	modified-bsd OR gnu-gpl-v2
+
+CHECK_PORTABILITY_SKIP+=	tests/playTests.sh
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		ggrep gmake pkg-config
