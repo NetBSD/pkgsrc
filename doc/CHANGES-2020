@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1518 2020/03/12 08:42:44 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.1519 2020/03/12 09:25:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2085,3 +2085,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/py-zipp1 to 1.2.0 [wiz 2020-03-12]
 	Updated archivers/py-zipp to 3.1.0nb1 [wiz 2020-03-12]
 	Updated pkgtools/check-portability to 19.4.1 [rillig 2020-03-12]
+	Updated security/kpcli to 3.3nb1 [wiz 2020-03-12]
