@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1524 2020/03/12 15:06:48 fox Exp $
+$NetBSD: CHANGES-2020,v 1.1525 2020/03/12 16:12:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2091,3 +2091,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/pfetch to 0.6.0 [fox 2020-03-12]
 	Removed multimedia/gnome-media [nia 2020-03-12]
 	Updated sysutils/py-Glances to 3.1.4 [fox 2020-03-12]
+	Removed audio/py-musicbrainz [nia 2020-03-12]
