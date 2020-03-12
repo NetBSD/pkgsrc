@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.544 2020/03/03 09:44:02 nia Exp $
+# $NetBSD: Makefile,v 1.545 2020/03/12 07:12:18 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -209,6 +209,7 @@ SUBDIR+=	py-byterun
 SUBDIR+=	py-cxfreeze
 SUBDIR+=	py-execjs
 SUBDIR+=	py-hy
+SUBDIR+=	py-inflect
 SUBDIR+=	py-js2py
 SUBDIR+=	py-jsparser
 SUBDIR+=	py-mypy

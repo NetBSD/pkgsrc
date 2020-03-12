@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.35 2019/11/15 14:05:54 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.36 2020/03/12 07:12:18 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -23,9 +23,10 @@ _SUPPORTED_PACKAGES+=	cherrypy www/py-cherrypy17 www/py-cherrypy
 _SUPPORTED_PACKAGES+=	dialog devel/py-dialog2 devel/py-dialog
 _SUPPORTED_PACKAGES+=	ipython devel/py-ipython5 devel/py-ipython
 _SUPPORTED_PACKAGES+=	jsonlib textproc/py-jsonlib textproc/py-jsonlib3
+_SUPPORTED_PACKAGES+=	more-itertools devel/py-more-itertools2 devel/py-more-itertools
 _SUPPORTED_PACKAGES+=	python-digest www/py-python-digest www/py-python3-digest
 _SUPPORTED_PACKAGES+=	sphinx textproc/py-sphinx1 textproc/py-sphinx
-_SUPPORTED_PACKAGES+=	more-itertools devel/py-more-itertools2 devel/py-more-itertools
+_SUPPORTED_PACKAGES+=	zipp archivers/py-zipp archivers/py-zipp
 
 .for pattern in ${PYTHON_VERSIONED_DEPENDENCIES}
 _PKG_MATCHED=	no
