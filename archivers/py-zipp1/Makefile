@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/03/12 07:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/12 15:20:36 adam Exp $
 
 DISTNAME=	zipp-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,8 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 TEST_DEPENDS+=	${PYPKGPREFIX}-func_timeout-[0-9]*:../../devel/py-func_timeout
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
