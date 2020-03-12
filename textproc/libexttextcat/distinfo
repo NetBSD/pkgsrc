@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.9 2017/10/02 15:20:38 wiz Exp $
+$NetBSD: distinfo,v 1.10 2020/03/12 17:39:28 wiz Exp $
 
 SHA1 (libexttextcat-3.4.5.tar.xz) = dd6b4163c752a44384f309f8dabb830161f5f85f
 RMD160 (libexttextcat-3.4.5.tar.xz) = da7b61766ac962abb4e0b2bcb2de6555b49cefc5
 SHA512 (libexttextcat-3.4.5.tar.xz) = f05a9f08c2f2f335d0e483c024321b96fee7424bc1398d4c6acbd9c501f92e22f881bc3d6ec2c0434f9bf4604f3c4b0e880e37d3d0de410eac1a20ea6669baa6
 Size (libexttextcat-3.4.5.tar.xz) = 1041268 bytes
 SHA1 (patch-src_Makefile.in) = a023cb31a7140e59b49cf022a4a47b59b6cb96b8
+SHA1 (patch-src_test-primary.sh.in) = b8e8016e6c718f43cbad29d6b277b9c5223f180e
+SHA1 (patch-src_test-secondary.sh.in) = d74977c99a6bc9ec06973ff83badcda7a5bc3bd3
