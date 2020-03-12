@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1515 2020/03/12 07:36:30 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1516 2020/03/12 07:50:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2081,3 +2081,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-jaraco.itertools version 5.0.0 [wiz 2020-03-12]
 	Added devel/py-func_timeout version 4.3.5 [wiz 2020-03-12]
 	Updated archivers/py-zipp to 3.1.0 [wiz 2020-03-12]
+	Updated archivers/py-zipp1 to 1.2.0 [wiz 2020-03-12]
