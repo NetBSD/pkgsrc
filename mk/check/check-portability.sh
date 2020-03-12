@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.16 2020/03/12 18:54:59 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.17 2020/03/12 19:09:41 rillig Exp $
 #
 # This program checks all files in the current directory and any
 # subdirectories for portability issues that are likely to result in
@@ -53,7 +53,7 @@ find ./* -type f -print 2>/dev/null \
 		# A few file extensions cannot be skipped since the Makefiles
 		# will be generated from these, in the configure stage, which
 		# is run later.
-		(in) skip_shebang_test=yes;;
+		(in|mk|Makefile|makefile|GNUmakefile) skip_shebang_test=yes;;
 
 		# echo */*/PLIST | xargs cat | sed s,'.*\.',, | sort | uniq -c | sort -nr | sed 40q
 		(png|html|svg|py|h|mo|php|js|xml|rb|go|txt|3|hpp)	continue ;;
