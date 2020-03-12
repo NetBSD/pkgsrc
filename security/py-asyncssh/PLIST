@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/08/25 12:24:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/03/12 16:36:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -163,6 +163,15 @@ ${PYSITELIB}/asyncssh/session.pyo
 ${PYSITELIB}/asyncssh/sftp.py
 ${PYSITELIB}/asyncssh/sftp.pyc
 ${PYSITELIB}/asyncssh/sftp.pyo
+${PYSITELIB}/asyncssh/sk.py
+${PYSITELIB}/asyncssh/sk.pyc
+${PYSITELIB}/asyncssh/sk.pyo
+${PYSITELIB}/asyncssh/sk_ecdsa.py
+${PYSITELIB}/asyncssh/sk_ecdsa.pyc
+${PYSITELIB}/asyncssh/sk_ecdsa.pyo
+${PYSITELIB}/asyncssh/sk_eddsa.py
+${PYSITELIB}/asyncssh/sk_eddsa.pyc
+${PYSITELIB}/asyncssh/sk_eddsa.pyo
 ${PYSITELIB}/asyncssh/socks.py
 ${PYSITELIB}/asyncssh/socks.pyc
 ${PYSITELIB}/asyncssh/socks.pyo
