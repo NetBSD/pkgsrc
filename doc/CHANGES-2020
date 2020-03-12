@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1513 2020/03/12 07:15:10 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1514 2020/03/12 07:33:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2079,3 +2079,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/feathernotes to 0.6.0 [gutteridge 2020-03-12]
 	Added lang/py-inflect version 4.1.0 [wiz 2020-03-12]
 	Added devel/py-jaraco.itertools version 5.0.0 [wiz 2020-03-12]
+	Added devel/py-func_timeout version 4.3.5 [wiz 2020-03-12]
