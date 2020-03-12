@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.in,v 1.6 2020/03/12 10:28:14 ryoon Exp $
+
+--- Makefile.in.orig	2019-09-12 15:41:48.000000000 +0000
++++ Makefile.in
+@@ -10936,7 +10936,7 @@ maintainer-check-posix: $(RUN_TESTSUITE_
+ 
+ .PHONY: maintainer-check-valgrind
+ maintainer-check-valgrind: $(RUN_TESTSUITE_deps)
+-	test 'x$(VALGRIND)' == x ||					\
++	test 'x$(VALGRIND)' = x ||					\
+ 	  $(RUN_TESTSUITE)						\
+ 	    PREBISON='$(VALGRIND) -q' PREPARSER='$(VALGRIND) -q'	\
+ 	    VALGRIND_OPTS="$(VALGRIND_OPTS)"
