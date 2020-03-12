@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2019/10/14 20:19:29 adam Exp $
+# $NetBSD: Makefile.common,v 1.22 2020/03/12 17:31:17 wiz Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
@@ -128,6 +128,8 @@ CMAKE_ARGS+=		-DWITH_READLINE="system"
 .else
 CMAKE_ARGS+=		-DWITH_EDITLINE="system"
 .endif
+
+CHECK_PORTABILITY_SKIP+=	packaging/deb-in/mysql-packagesource-server.config.in
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
