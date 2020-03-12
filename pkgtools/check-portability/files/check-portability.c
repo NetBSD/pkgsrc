@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.3 2020/03/11 23:36:32 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.4 2020/03/12 08:42:34 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -38,26 +38,25 @@
 #define nullptr ((void *)0)
 static const size_t npos = -1;
 
+static bool
+is_alnum(char c)
+{
+	return isalnum((unsigned char) c) != 0;
+}
+
+static bool
+is_hspace(char c)
+{
+	return c == ' ' || c == '\t';
+}
+
+// cstr is a constant string view.
 typedef struct {
 	const char *data; // never nullptr
 	size_t len;
 } cstr;
 
 #define CSTR(str) ((cstr) { str, strlen(str) })
-
-typedef struct {
-	char *data;
-	size_t len;
-	size_t cap;
-} str;
-
-#define STR_EMPTY { nullptr, 0, 0 }
-
-static bool
-is_alnum(char c)
-{
-	return isalnum((unsigned char) c) != 0;
-}
 
 static const char *
 cstr_charptr(cstr s)
@@ -67,6 +66,7 @@ cstr_charptr(cstr s)
 	return s.data;
 }
 
+#if 0 /* unused */
 static bool
 cstr_ends_with(cstr s, cstr suffix)
 {
@@ -74,6 +74,98 @@ cstr_ends_with(cstr s, cstr suffix)
 		return false;
 	const char *start = s.data + s.len - suffix.len;
 	return memcmp(start, suffix.data, suffix.len) == 0;
+}
+#endif
+
+static bool
+cstr_starts_with(cstr s, cstr prefix)
+{
+	if (prefix.len > s.len)
+		return false;
+	return memcmp(s.data, prefix.data, prefix.len) == 0;
+}
+
+static cstr
+cstr_substr(cstr s, size_t start, size_t end)
+{
+	assert(start <= s.len);
+	assert(end <= s.len);
+	assert(end - start <= s.len);
+	return (cstr) { s.data + start, end - start };
+}
+
+static size_t
+cstr_index(cstr haystack, cstr needle)
+{
+	if (needle.len > haystack.len)
+		return npos;
+	size_t limit = haystack.len - needle.len;
+	for (size_t i = 0; i <= limit; i++)
+		if (memcmp(haystack.data + i, needle.data, needle.len) == 0)
+			return i;
+	return npos;
+}
+
+static bool
+cstr_contains(cstr haystack, cstr needle)
+{
+	return cstr_index(haystack, needle) != npos;
+}
+
+static size_t
+cstr_rindex(cstr haystack, cstr needle)
+{
+	if (needle.len > haystack.len)
+		return npos;
+	size_t limit = haystack.len - needle.len;
+	for (size_t i = limit + 1; i-- > 0; )
+		if (memcmp(haystack.data + i, needle.data, needle.len) == 0)
+			return i;
+	return npos;
+}
+
+static bool
+cstr_eq(cstr s1, cstr s2)
+{
+	return s1.len == s2.len
+	    && memcmp(s1.data, s2.data, s1.len) == 0;
+}
+
+static cstr
+cstr_next_field(cstr line, size_t *pidx)
+{
+	size_t idx = *pidx;
+	while (idx < line.len && is_hspace(line.data[idx]))
+		idx++;
+	size_t start = idx;
+	while (idx < line.len && !is_hspace(line.data[idx]))
+		idx++;
+	*pidx = idx;
+	return cstr_substr(line, start, idx);
+}
+
+static cstr
+cstr_right_of_last(cstr s, cstr delimiter)
+{
+	size_t i = cstr_rindex(s, delimiter);
+	if (i == npos)
+		return s;
+	return cstr_substr(s, i + delimiter.len, s.len);
+}
+
+// str is a modifiable string buffer.
+typedef struct {
+	char *data;
+	size_t len;
+	size_t cap;
+} str;
+
+#define STR_EMPTY { nullptr, 0, 0 }
+
+static cstr
+str_c(str *s)
+{
+	return (cstr) { s->data, s->len };
 }
 
 static void
@@ -83,7 +175,7 @@ str_free(str *s)
 }
 
 static void
-str_prepare_append(str *s, size_t n)
+str_reserve(str *s, size_t n)
 {
 	size_t req_len = s->len + n;
 	assert(req_len >= s->len);
@@ -104,26 +196,20 @@ str_prepare_append(str *s, size_t n)
 	s->cap = new_cap;
 }
 
-static const char *
-str_charptr(str *s)
-{
-	str_prepare_append(s, 1);
-	s->data[s->len] = '\0';
-	assert(memchr(s->data, 0, s->len) == nullptr);
-	return s->data;
-}
-
-static bool
-cstr_starts_with(cstr s, cstr prefix)
-{
-	return prefix.len <= s.len && memcmp(s.data, prefix.data, prefix.len) == 0;
-}
-
 static void
 str_append_char(str *s, char c)
 {
-	str_prepare_append(s, 1);
+	str_reserve(s, 1);
 	s->data[s->len++] = c;
+}
+
+static const char *
+str_charptr(str *s)
+{
+	str_reserve(s, 1);
+	s->data[s->len] = '\0';
+	assert(memchr(s->data, 0, s->len) == nullptr);
+	return s->data;
 }
 
 static bool
@@ -149,64 +235,6 @@ str_read_text_line(str *s, FILE *f)
 	}
 	assert(c != '\0');
 	return c != EOF;
-}
-
-static cstr
-str_c(str *s)
-{
-	return (cstr) { s->data, s->len };
-}
-
-static cstr
-cstr_substr(cstr s, size_t start, size_t end)
-{
-	return (cstr) { s.data + start, end - start };
-}
-
-static bool
-is_hspace(char c)
-{
-	return c == ' ' || c == '\t';
-}
-
-static size_t
-cstr_index(cstr haystack, cstr needle)
-{
-	if (needle.len > haystack.len)
-		return npos;
-	size_t limit = haystack.len - needle.len;
-	for (size_t i = 0; i <= limit; i++)
-		if (memcmp(haystack.data + i, needle.data, needle.len) == 0)
-			return i;
-	return npos;
-}
-
-static bool
-cstr_contains(cstr haystack, cstr needle)
-{
-	return cstr_index(haystack, needle) != npos;
-}
-
-static size_t
-cstr_rindex(cstr haystack, cstr needle)
-{
-	size_t i = cstr_index(haystack, needle);
-	if (i == npos)
-		return npos;
-
-	while (true) {
-		cstr rest = cstr_substr(haystack, i + 1, haystack.len);
-		size_t next = cstr_index(rest, needle);
-		if (next == npos)
-			return i;
-		i = i + 1 + next;
-	}
-}
-
-static bool
-cstr_eq(cstr s1, cstr s2)
-{
-	return s1.len == s2.len && memcmp(s1.data, s2.data, s1.len) == 0;
 }
 
 typedef enum {
@@ -266,11 +294,13 @@ static size_t nerrors = 0;
 static bool
 is_shell_comment(cstr line)
 {
-	return line.len > 0 && line.data[0] == '#';
+	size_t i = 0;
+	cstr f1 = cstr_next_field(line, &i);
+	return cstr_starts_with(f1, CSTR("#"));
 }
 
 static void
-checkline_sh_brackets(cstr filename, size_t lineno, cstr line)
+checkline_sh_double_brackets(cstr filename, size_t lineno, cstr line)
 {
 	if (is_shell_comment(line))
 		return;
@@ -302,7 +332,7 @@ checkline_sh_brackets(cstr filename, size_t lineno, cstr line)
 
 // Check for $RANDOM, which is specific to ksh and bash.
 static void
-checkline_dollar_random(cstr filename, size_t lineno, cstr line)
+checkline_sh_dollar_random(cstr filename, size_t lineno, cstr line)
 {
 	// Note: This code does not find _all_ instances of
 	// unportable code. If a single line contains an unsafe and
@@ -337,21 +367,10 @@ checkline_dollar_random(cstr filename, size_t lineno, cstr line)
 	    nullptr);
 }
 
-static cstr
-cstr_next_field(cstr line, size_t *pidx)
-{
-	size_t idx = *pidx;
-	while (idx < line.len && is_hspace(line.data[idx]))
-		idx++;
-	size_t start = idx;
-	while (idx < line.len && !is_hspace(line.data[idx]))
-		idx++;
-	*pidx = idx;
-	return cstr_substr(line, start, idx);
-}
+typedef void (*foreach_3_fields_cb)(cstr f1, cstr f2, cstr f3, void *actiondata);
 
 static void
-foreach_3_fields_in_line(cstr line, void (*action)(cstr f1, cstr f2, cstr f3, void *), void *data)
+foreach_3_fields_in_line(cstr line, foreach_3_fields_cb action, void *actiondata)
 {
 	size_t idx = 0;
 	cstr f1 = cstr_next_field(line, &idx);
@@ -359,38 +378,33 @@ foreach_3_fields_in_line(cstr line, void (*action)(cstr f1, cstr f2, cstr f3, vo
 	cstr f3 = cstr_next_field(line, &idx);
 
 	while (f3.len > 0) {
-		action(f1, f2, f3, data);
+		action(f1, f2, f3, actiondata);
 		f1 = f2;
 		f2 = f3;
 		f3 = cstr_next_field(line, &idx);
 	}
 }
 
+struct checkline_sh_test_eqeq_actiondata {
+	cstr filename;
+	size_t lineno;
+	cstr line;
+};
+
 static void
-checkline_test_eqeq_callback(cstr f1, cstr f2, cstr f3, void *data)
+checkline_sh_test_eqeq_action(cstr f1, cstr f2, cstr f3, void *actiondata)
 {
 	if (!cstr_eq(f3, CSTR("==")))
 		return;
 	if (!cstr_eq(f1, CSTR("test")) && !cstr_eq(f1, CSTR("[")))
 		return;
-	*((cstr *) data) = f3;
-}
 
-static void
-checkline_test_eqeq(cstr filename, size_t lineno, cstr line)
-{
-	if (is_shell_comment(line))
-		return;
-
-	cstr found = CSTR("");
-	foreach_3_fields_in_line(line, checkline_test_eqeq_callback, &found);
-	if (found.len == 0)
-		return;
-
+	struct checkline_sh_test_eqeq_actiondata *ad = actiondata;
 	printf(
 	    "%s:%zu:%zu: found test ... == ...: %s\n",
-	    cstr_charptr(filename), lineno, (size_t) (found.data - line.data),
-	    cstr_charptr(line));
+	    cstr_charptr(ad->filename), ad->lineno,
+	    (size_t) (f3.data - ad->line.data),
+	    cstr_charptr(ad->line));
 	explain(
 	    W_test_eqeq,
 	    "The \"test\" command, as well as the \"[\" command, are not required to know",
@@ -409,59 +423,66 @@ checkline_test_eqeq(cstr filename, size_t lineno, cstr line)
 	    nullptr);
 }
 
+static void
+checkline_sh_test_eqeq(cstr filename, size_t lineno, cstr line)
+{
+	if (is_shell_comment(line))
+		return;
+
+	struct checkline_sh_test_eqeq_actiondata ad = { filename, lineno, line };
+	foreach_3_fields_in_line(line, checkline_sh_test_eqeq_action, &ad);
+}
+
 static bool
-is_relevant_first_line(cstr line)
+is_shell_shebang(cstr line)
 {
 	if (!cstr_starts_with(line, CSTR("#!")))
 		return false;
 
-	size_t last_slash = cstr_rindex(line, CSTR("/"));
-	if (last_slash == npos)
-		return false;
+	size_t i = 2;
+	cstr full_interp = cstr_next_field(line, &i);
+	cstr arg = cstr_next_field(line, &i);
 
-	cstr basename = cstr_substr(line, last_slash + 1, line.len);
-	if (cstr_starts_with(basename, CSTR("env")) && basename.len > 3 && is_hspace(basename.data[3])) {
-		basename = cstr_substr(basename, 3, basename.len);
-		while (basename.len > 0 && is_hspace(basename.data[0]))
-			basename = cstr_substr(basename, 1, basename.len);
+	cstr interp = cstr_right_of_last(full_interp, CSTR("/"));
+	if (cstr_eq(interp, CSTR("env")) && arg.len > 0) {
+		interp = arg;
 	}
 
-	if (cstr_starts_with(basename, CSTR("bash")))
-		return false;
-	if (cstr_eq(basename, CSTR("false")))
-		return false;
-	if (cstr_starts_with(basename, CSTR("perl")))
-		return false;
-	if (cstr_starts_with(basename, CSTR("python")))
-		return false;
-	return true;
+	return cstr_eq(interp, CSTR("sh"))
+	    || cstr_eq(interp, CSTR("ksh"))
+	    || cstr_eq(interp, CSTR("@SH@"))
+	    || cstr_eq(interp, CSTR("@SHELL@"));
 }
 
 static bool
-is_relevant_filename(cstr filename)
+is_irrelevant_extension(cstr ext)
 {
-#define SKIP_EXT(ext) \
-	if (cstr_ends_with(filename, CSTR(ext))) \
-		return false;
+	return cstr_eq(ext, CSTR("bz2"))
+	    || cstr_eq(ext, CSTR("c"))
+	    || cstr_eq(ext, CSTR("cc"))
+	    || cstr_eq(ext, CSTR("cpp"))
+	    || cstr_eq(ext, CSTR("gz"))
+	    || cstr_eq(ext, CSTR("m4"))
+	    || cstr_eq(ext, CSTR("pdf"))
+	    || cstr_eq(ext, CSTR("ps"))
+	    || cstr_eq(ext, CSTR("xz"))
+	    || cstr_eq(ext, CSTR("zip"));
+}
 
-	SKIP_EXT(".bz2");
-	SKIP_EXT(".c");
-	SKIP_EXT(".cc");
-	SKIP_EXT(".cpp");
-	SKIP_EXT(".gz");
-	SKIP_EXT(".m4");
-	SKIP_EXT(".pdf");
-	SKIP_EXT(".ps");
-	SKIP_EXT(".xz");
-	SKIP_EXT(".zip");
-#undef SKIP_EXT
-	return true;
+static bool
+skip_shebang(cstr basename)
+{
+	return cstr_eq(basename, CSTR("Makefile.am"))
+	    || cstr_eq(basename, CSTR("Makefile.in"))
+	    || cstr_eq(basename, CSTR("Makefile"));
 }
 
 static void
 check_file(cstr filename)
 {
-	if (!is_relevant_filename(filename))
+	cstr basename = cstr_right_of_last(filename, CSTR("/"));
+	cstr ext = cstr_right_of_last(basename, CSTR("."));
+	if (is_irrelevant_extension(ext))
 		return;
 
 	FILE *f = fopen(cstr_charptr(filename), "rb");
@@ -473,18 +494,26 @@ check_file(cstr filename)
 
 	str line = STR_EMPTY;
 
-	if (str_read_line(&line, f) && is_relevant_first_line(str_c(&line))) {
-		size_t lineno = 1;
-		while (str_read_line(&line, f)) {
-			lineno++;
-			str_charptr(&line);
-			cstr cline = str_c(&line);
-			checkline_sh_brackets(filename, lineno, cline);
-			checkline_dollar_random(filename, lineno, cline);
-			checkline_test_eqeq(filename, lineno, cline);
-		}
+	size_t lineno = 0;
+	if (!skip_shebang(basename)) {
+		if (!str_read_line(&line, f))
+			goto cleanup;
+		lineno++;
+		if (!is_shell_shebang(str_c(&line)))
+			goto cleanup;
 	}
 
+	while (str_read_line(&line, f)) {
+		lineno++;
+		str_charptr(&line);
+		cstr cline = str_c(&line);
+
+		checkline_sh_double_brackets(filename, lineno, cline);
+		checkline_sh_dollar_random(filename, lineno, cline);
+		checkline_sh_test_eqeq(filename, lineno, cline);
+	}
+
+cleanup:
 	str_free(&line);
 
 	(void) fclose(f);
