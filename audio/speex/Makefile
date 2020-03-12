@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2017/09/04 18:08:18 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2020/03/12 23:01:43 rillig Exp $
 
 DISTNAME=	speex-1.2.0
 CATEGORIES=	audio
@@ -16,8 +16,6 @@ USE_TOOLS+=		pkg-config
 
 # previous versions of the package were called Speex
 CONFLICTS=	Speex-[0-9]*
-
-CONFIGURE_ARGS+=	--with-ogg-dir=${BUILDLINK_PREFIX.libogg:Q}
 
 BUILDLINK_TRANSFORM+=	l:gnugetopt:getopt
 
