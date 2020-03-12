@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2020/02/13 03:00:16 gutteridge Exp $
+# $NetBSD: Makefile,v 1.171 2020/03/12 07:36:51 wiz Exp $
 #
 
 COMMENT=	Archivers
@@ -102,6 +102,7 @@ SUBDIR+=	py-lz4
 SUBDIR+=	py-rarfile
 SUBDIR+=	py-yuicompressor
 SUBDIR+=	py-zipp
+SUBDIR+=	py-zipp1
 SUBDIR+=	py-zipstream
 SUBDIR+=	py-zstandard
 SUBDIR+=	rar
