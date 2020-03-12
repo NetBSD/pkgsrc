@@ -1,0 +1,8 @@
+#! /usr/bin/env @SH@
+
+# The interpreter above is a shell. Before this program is run, it will
+# be replaced with the proper path to the shell. This env-indirection
+# is typically done for Perl or Python, nevertheless it's possible for
+# the shell as well.
+
+[ a == b ]

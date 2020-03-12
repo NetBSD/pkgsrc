@@ -1,0 +1,7 @@
+#! /bin/bash
+
+# There is no need to check for bashisms in programs that are clearly
+# labeled as bash programs.
+
+[[ cond ]]
+test a == b
