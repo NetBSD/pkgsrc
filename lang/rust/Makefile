@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2020/03/12 12:13:51 tnn Exp $
+# $NetBSD: Makefile,v 1.149 2020/03/12 12:48:17 tnn Exp $
 
 DISTNAME=	rustc-1.41.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -303,21 +303,31 @@ post-extract:
 		${TOOLS_BASH} ./install.sh --prefix=${RUST_BOOTSTRAP_PATH};	\
 	fi
 # patch(1) in NetBSD does not handle .cargo-checksum.json like long width file.
-	${CP} ${WRKSRC}/vendor/rand/.cargo-checksum.json \
-	      ${WRKSRC}/vendor/rand/.cargo-checksum.json.orig
-	${SED} -e 's/1e732c2e3b4bd1561f11e0979bf9d20669a96eae7afe0deff9dfbb980ee47bf1/bc03f2345d7cfa7000f9da817120b6afa073359789c21a9a790ebd8676c50cca/' ${WRKSRC}/vendor/rand/.cargo-checksum.json.orig > ${WRKSRC}/vendor/rand/.cargo-checksum.json
-	${CP} ${WRKSRC}/vendor/rand-0.6.1/.cargo-checksum.json \
-	      ${WRKSRC}/vendor/rand-0.6.1/.cargo-checksum.json.orig
-	${SED} -e 's/1e732c2e3b4bd1561f11e0979bf9d20669a96eae7afe0deff9dfbb980ee47bf1/bc03f2345d7cfa7000f9da817120b6afa073359789c21a9a790ebd8676c50cca/' ${WRKSRC}/vendor/rand-0.6.1/.cargo-checksum.json.orig > ${WRKSRC}/vendor/rand-0.6.1/.cargo-checksum.json
-	${CP} ${WRKSRC}/vendor/libc/.cargo-checksum.json \
-		${WRKSRC}/vendor/libc/.cargo-checksum.json.orig
-	${SED} -e 's/8e5369ed1e86c5be92831d290b9eeb77c537a2de728950a5086e77438a4f0f3a/dac34dab563a2ca03c1d43f0224736f30662c3bbf0c2f1c44e220a7172345f4f/' ${WRKSRC}/vendor/libc/.cargo-checksum.json.orig > ${WRKSRC}/vendor/libc/.cargo-checksum.json
-	${CP} ${WRKSRC}/vendor/backtrace-sys/.cargo-checksum.json \
-	      ${WRKSRC}/vendor/backtrace-sys/.cargo-checksum.json.orig
-	${SED} -e 's/59763fc255248b54fba5d0761d61093a73d51fa4cb400b0df1b5f339b9c2f48a/ba66d192421fd536ceddb50616c4c4aea06f4e39450eb0bc2bbbaed0b1e684c1/' ${WRKSRC}/vendor/backtrace-sys/.cargo-checksum.json.orig > ${WRKSRC}/vendor/backtrace-sys/.cargo-checksum.json
-	${CP} ${WRKSRC}/vendor/lzma-sys/.cargo-checksum.json \
-		${WRKSRC}/vendor/lzma-sys/.cargo-checksum.json.orig
-	${SED} -e 's/51a9ca7a4576822dc4fa01b31bc4bbed21817777abb304f605ef5951f68c3ed2/807c3aa4b5a62a70ba790df151e9ecf19f4bb562f2858575d690908751262db3/' ${WRKSRC}/vendor/lzma-sys/.cargo-checksum.json.orig > ${WRKSRC}/vendor/lzma-sys/.cargo-checksum.json
+	set -e;									\
+	${ECHO}									\
+	  vendor/rand								\
+	  1e732c2e3b4bd1561f11e0979bf9d20669a96eae7afe0deff9dfbb980ee47bf1	\
+	  bc03f2345d7cfa7000f9da817120b6afa073359789c21a9a790ebd8676c50cca	\
+	  vendor/rand-0.6.1							\
+	  1e732c2e3b4bd1561f11e0979bf9d20669a96eae7afe0deff9dfbb980ee47bf1	\
+	  bc03f2345d7cfa7000f9da817120b6afa073359789c21a9a790ebd8676c50cca	\
+	  vendor/libc								\
+	  8e5369ed1e86c5be92831d290b9eeb77c537a2de728950a5086e77438a4f0f3a	\
+	  dac34dab563a2ca03c1d43f0224736f30662c3bbf0c2f1c44e220a7172345f4f	\
+	  vendor/backtrace-sys							\
+	  59763fc255248b54fba5d0761d61093a73d51fa4cb400b0df1b5f339b9c2f48a	\
+	  ba66d192421fd536ceddb50616c4c4aea06f4e39450eb0bc2bbbaed0b1e684c1	\
+	  vendor/lzma-sys							\
+	  51a9ca7a4576822dc4fa01b31bc4bbed21817777abb304f605ef5951f68c3ed2	\
+	  807c3aa4b5a62a70ba790df151e9ecf19f4bb562f2858575d690908751262db3	\
+	| ${XARGS} -n 1 ${ECHO} | while read crate; do				\
+		read orig_cksum;						\
+		read cksum;							\
+		f="${WRKSRC}/$$crate/.cargo-checksum.json";			\
+		of="$$f.orig";							\
+		${CP} "$$f" "$$of";						\
+		${SED} -e "s/$$orig_cksum/$$cksum/g" < "$$of" > "$$f";		\
+	done
 .if ${OPSYS} == "NetBSD"
 	SDIR=${WRKDIR}/scripts; \
 	${MKDIR} $${SDIR}; \
