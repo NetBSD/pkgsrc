@@ -1,0 +1,24 @@
+$NetBSD: patch-scripts_xdg-settings.in,v 1.1 2020/03/12 17:23:12 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- scripts/xdg-settings.in.orig	2020-03-12 17:21:36.235049897 +0000
++++ scripts/xdg-settings.in
+@@ -228,7 +228,7 @@ check_browser_kde()
+     binary="`resolve_kde_browser`"
+ 
+     # The browser may contain a relative entry to the binary starting with !
+-    if [ x"!" == x"${browser:0:1}" ]; then
++    if [ x"!" = x"${browser:0:1}" ]; then
+         # get the full path
+         browser="`binary_to_desktop_file ${browser:1}`"
+         binary="`desktop_file_to_binary $browser`"
+@@ -584,7 +584,7 @@ check_url_scheme_handler_kde()
+     if [ x"$1" = "mailto" ]; then
+         binary="`read_kde_config emaildefaults PROFILE_Default EmailClient`"
+         # The field may contain a relative entry to the binary starting with !
+-        if [ x"!" == x"${binary:0:1}" ]; then
++        if [ x"!" = x"${binary:0:1}" ]; then
+             # get the full path
+             desktop_file="`binary_to_desktop_file ${binary:1}`"
+             binary="`desktop_file_to_binary $desktop_file`"
