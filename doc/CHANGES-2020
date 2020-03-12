@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1533 2020/03/12 19:40:12 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1534 2020/03/12 19:55:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2106,3 +2106,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/w3m-img to 0.5.3.0.20190105 [wiz 2020-03-12]
 	Removed net/ORBit successor netbsd/ORBit2 [wiz 2020-03-12]
 	Updated www/firefox68 to 68.6.0 [nia 2020-03-12]
+	Updated www/firefox68-l10n to 68.6.0 [nia 2020-03-12]
