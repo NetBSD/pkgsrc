@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2020/03/12 12:56:01 tnn Exp $
+# $NetBSD: Makefile,v 1.151 2020/03/12 12:59:01 tnn Exp $
 
 DISTNAME=	rustc-1.41.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -19,8 +19,6 @@ USE_TOOLS+=		bash ggrep gmake perl:build pkg-config
 # The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
 # build on 7).  Mark earlier versions as broken.
 BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
-
-CHECK_PORTABILITY_SKIP+=	vendor/libssh2-sys/libssh2/Makefile.am
 
 HAS_CONFIGURE=			yes
 PYTHON_FOR_BUILD_ONLY=		yes
