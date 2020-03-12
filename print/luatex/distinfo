@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2019/05/09 09:47:35 adam Exp $
+$NetBSD: distinfo,v 1.36 2020/03/12 17:18:30 wiz Exp $
 
 SHA1 (texlive-20190410-source.tar.xz) = d700878d3e19b6ad1313791dd5cef4bf0acfd675
 RMD160 (texlive-20190410-source.tar.xz) = a0cbe56b19b1f3d064315c37f8b5a4b04f82678b
@@ -7,3 +7,4 @@ Size (texlive-20190410-source.tar.xz) = 53783408 bytes
 SHA1 (patch-libs_lua53_lua53-src_src_luaconf.h) = 824ee4ba2c324e1e01967b82a54621b6b6f3edd3
 SHA1 (patch-libs_luajit_LuaJIT-src_src_host_buildvm__asm.c) = 34fa742ed696f97df637c5086bf1faf3d718cb69
 SHA1 (patch-libs_luajit_LuaJIT-src_src_vm__x86.dasc) = 491d33adbbaab8b2b81a65a8d7ba30aee775b75f
+SHA1 (patch-libs_luajit_Makefile.in) = 810cac28910bf1887828ea29140759747e5a043e
