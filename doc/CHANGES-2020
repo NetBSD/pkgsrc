@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1521 2020/03/12 11:35:45 leot Exp $
+$NetBSD: CHANGES-2020,v 1.1522 2020/03/12 12:04:29 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2088,3 +2088,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/kpcli to 3.3nb1 [wiz 2020-03-12]
 	Updated devel/ocaml-batteries to 2.11.0 [jaapb 2020-03-12]
 	Updated misc/tmux to 3.0anb2 [leot 2020-03-12]
+	Updated sysutils/pfetch to 0.6.0 [fox 2020-03-12]
