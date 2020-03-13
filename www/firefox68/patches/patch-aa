@@ -1,79 +1,25 @@
-$NetBSD: patch-aa,v 1.1 2019/09/21 07:31:44 ryoon Exp $
+$NetBSD: patch-aa,v 1.1.6.1 2020/03/13 20:02:45 bsiegert Exp $
 
-* Add OSS audio support
 * Add Sun audio support
-* Disable libav-fft on SunOS (relocation errors)
 
---- old-configure.in.orig	2019-05-29 15:39:16.000000000 +0000
+--- old-configure.in.orig	2020-03-05 20:57:20.000000000 +0000
 +++ old-configure.in
-@@ -2043,6 +2043,71 @@ MOZ_WEBM_ENCODER=1
+@@ -1987,6 +1987,19 @@ MOZ_WEBM_ENCODER=1
  AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  
 +dnl ==================================
-+dnl = Check OSS/sunaudio availability
++dnl = Check sunaudio availability
 +dnl ==================================
 +
-+dnl If using Linux, Solaris or BSDs, ensure that OSS/sunaudio is available
++dnl If using Solaris or NetBSD, ensure that sunaudio is available
 +case "$OS_TARGET" in
-+Linux|DragonFly|FreeBSD|GNU/kFreeBSD)
-+    MOZ_OSS=1
-+    ;;
 +SunOS|NetBSD)
 +    MOZ_SUNAUDIO=1
 +    ;;
 +esac
 +
-+MOZ_ARG_WITH_STRING(oss,
-+[  --with-oss[=PFX]        Enable OpenSoundSystem support [installed at prefix PFX]],
-+   OSSPREFIX=$withval)
-+
-+if test -n "$OSSPREFIX"; then
-+    if test "$OSSPREFIX" != "no"; then
-+        MOZ_OSS=1
-+    else
-+        MOZ_OSS=
-+    fi
-+fi
-+
-+_SAVE_CFLAGS=$CFLAGS
-+_SAVE_LIBS=$LIBS
-+if test -n "$MOZ_OSS"; then
-+    dnl Prefer 4Front implementation
-+    AC_MSG_CHECKING([MOZ_OSS_CFLAGS])
-+    if test "$OSSPREFIX" != "yes"; then
-+        oss_conf=${OSSPREFIX%/usr}/etc/oss.conf
-+        if test -f "$oss_conf"; then
-+            . "$oss_conf"
-+        else
-+            OSSLIBDIR=$OSSPREFIX/lib/oss
-+        fi
-+        if test -d "$OSSLIBDIR"; then
-+            MOZ_OSS_CFLAGS="$MOZ_OSS_CFLAGS -I$OSSLIBDIR/include"
-+        fi
-+    fi
-+    AC_MSG_RESULT([$MOZ_OSS_CFLAGS])
-+
-+    CFLAGS="$CFLAGS $MOZ_OSS_CFLAGS"
-+    MOZ_CHECK_HEADERS(sys/soundcard.h soundcard.h)
-+
-+    if test "$ac_cv_header_sys_soundcard_h" != "yes" -a \
-+            "$ac_cv_header_soundcard_h" != "yes"; then
-+        AC_MSG_ERROR([Need OSS for Ogg, Wave or WebM decoding on $OS_TARGET.  Disable with --without-oss.])
-+    fi
-+
-+    dnl Assume NetBSD implementation over SunAudio
-+    AC_CHECK_LIB(ossaudio, _oss_ioctl,
-+        [AC_DEFINE_UNQUOTED(CUBEB_OSS_DEFAULT_OUTPUT, "/dev/audio")
-+         MOZ_OSS_LIBS="$MOZ_OSS_LIBS -lossaudio"])
-+fi
-+CFLAGS=$_SAVE_CFLAGS
-+LIBS=$_SAVE_LIBS
-+
 +AC_SUBST(MOZ_SUNAUDIO)
-+AC_SUBST(MOZ_OSS)
-+AC_SUBST_LIST(MOZ_OSS_CFLAGS)
-+AC_SUBST_LIST(MOZ_OSS_LIBS)
 +
  dnl ========================================================
  dnl NegotiateAuth

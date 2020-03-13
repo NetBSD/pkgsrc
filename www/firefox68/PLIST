@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3.4.1 2020/02/23 11:50:10 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3.4.2 2020/03/13 20:02:44 bsiegert Exp $
 bin/firefox68
 lib/firefox68/actors/AudioPlaybackChild.jsm
 lib/firefox68/actors/AutoplayChild.jsm
@@ -2887,13 +2887,13 @@ lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/loda
 ${PLIST.debug}lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dev.js
 ${PLIST.debug}lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-dev.js
 lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-factories.js
-lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server.js
 ${PLIST.debug}lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server-dev.js
-lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils.js
+lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server.js
 ${PLIST.debug}lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils-dev.js
+lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils.js
 lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom.js
-lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types.js
 ${PLIST.debug}lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types-dev.js
+lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types.js
 lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-redux.js
 lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-router-dom.js
 lib/firefox68/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-test-renderer-shallow.js
@@ -4271,6 +4271,7 @@ lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1577297-k
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1605611-maps.google.com-directions-time.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1609991-cracked.com-flex-basis-fix.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1610016-gaana.com-input-position-fix.css
+lib/firefox68/browser/features/webcompat@mozilla.org/injections/css/bug1610344-directv.com.co-hide-unsupported-message.css
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug0000000-testbed-js-injection.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1452707-window.controllers-shim-ib.absa.co.za.js
 lib/firefox68/browser/features/webcompat@mozilla.org/injections/js/bug1457335-histography.io-ua-change.js
