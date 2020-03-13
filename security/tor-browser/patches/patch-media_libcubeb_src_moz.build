@@ -1,22 +1,14 @@
-$NetBSD: patch-media_libcubeb_src_moz.build,v 1.4 2019/06/14 17:22:21 nia Exp $
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.5 2020/03/13 17:59:27 wiz Exp $
 
-* Add OSS audio support
 * Add Sun audio support
-* Support system library
 
---- media/libcubeb/src/moz.build.orig	2019-05-15 06:47:08.000000000 +0000
+--- media/libcubeb/src/moz.build.orig	2020-03-05 20:57:11.000000000 +0000
 +++ media/libcubeb/src/moz.build
-@@ -22,6 +22,18 @@ if CONFIG['MOZ_ALSA']:
+@@ -23,6 +23,12 @@ if CONFIG['MOZ_ALSA']:
      ]
      DEFINES['USE_ALSA'] = True
  
-+if CONFIG['MOZ_OSS']:
-+    SOURCES += [
-+        'cubeb_oss.c',
-+    ]
-+    DEFINES['USE_OSS'] = True
-+
-+if CONFIG['MOZ_SUN']:
++if CONFIG['MOZ_SUNAUDIO']:
 +    SOURCES += [
 +        'cubeb_sun.c',
 +    ]
@@ -25,11 +17,3 @@ $NetBSD: patch-media_libcubeb_src_moz.build,v 1.4 2019/06/14 17:22:21 nia Exp $
  if CONFIG['MOZ_PULSEAUDIO'] or CONFIG['MOZ_JACK']:
      SOURCES += [
          'cubeb_resampler.cpp',
-@@ -87,6 +99,7 @@ if CONFIG['OS_TARGET'] == 'Android':
- FINAL_LIBRARY = 'gkmedias'
- 
- CFLAGS += CONFIG['MOZ_ALSA_CFLAGS']
-+CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
- CFLAGS += CONFIG['MOZ_PULSEAUDIO_CFLAGS']
- 
- # We allow warnings for third-party code that can be updated from upstream.
