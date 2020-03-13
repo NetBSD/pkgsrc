@@ -1,0 +1,32 @@
+$NetBSD: patch-roms_u-boot-sam460ex_Makefile,v 1.1 2020/03/13 13:57:04 tnn Exp $
+
+Shell compatibility
+
+--- roms/u-boot-sam460ex/Makefile.orig	2019-12-12 18:22:51.000000000 +0000
++++ roms/u-boot-sam460ex/Makefile
+@@ -2189,10 +2189,10 @@ M5475GFE_config :	unconfig
+ 	if [ "$${CODE}" != "0" ] ; then \
+ 		echo "#define CONFIG_SYS_NOR1SZ	$${CODE}" >> $(obj)include/config.h ; \
+ 	fi; \
+-	if [ "$${VID}" == "1" ] ; then \
++	if [ "$${VID}" = "1" ] ; then \
+ 		echo "#define CONFIG_SYS_VIDEO" >> $(obj)include/config.h ; \
+ 	fi; \
+-	if [ "$${USB}" == "1" ] ; then \
++	if [ "$${USB}" = "1" ] ; then \
+ 		echo "#define CONFIG_SYS_USBCTRL" >> $(obj)include/config.h ; \
+ 	fi
+ 	@$(MKCONFIG) -a M5475EVB m68k mcf547x_8x m547xevb freescale
+@@ -2224,10 +2224,10 @@ M5485HFE_config :	unconfig
+ 	if [ "$${CODE}" != "0" ] ; then \
+ 		echo "#define CONFIG_SYS_NOR1SZ	$${CODE}" >> $(obj)include/config.h ; \
+ 	fi; \
+-	if [ "$${VID}" == "1" ] ; then \
++	if [ "$${VID}" = "1" ] ; then \
+ 		echo "#define CONFIG_SYS_VIDEO" >> $(obj)include/config.h ; \
+ 	fi; \
+-	if [ "$${USB}" == "1" ] ; then \
++	if [ "$${USB}" = "1" ] ; then \
+ 		echo "#define CONFIG_SYS_USBCTRL" >> $(obj)include/config.h ; \
+ 	fi
+ 	@$(MKCONFIG) -a M5485EVB m68k mcf547x_8x m548xevb freescale
