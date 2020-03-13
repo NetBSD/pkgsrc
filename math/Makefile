@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.457 2020/02/28 22:16:46 plunky Exp $
+# $NetBSD: Makefile,v 1.458 2020/03/13 07:47:52 plunky Exp $
 
 COMMENT=	Mathematics
 
@@ -121,7 +121,6 @@ SUBDIR+=	amath
 SUBDIR+=	analitza
 SUBDIR+=	antixls
 SUBDIR+=	aribas
-SUBDIR+=	arpack
 SUBDIR+=	arpack-ng
 SUBDIR+=	bc
 SUBDIR+=	bc-gh
