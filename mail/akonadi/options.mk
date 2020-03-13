@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2020/03/13 10:05:42 nia Exp $
+# $NetBSD: options.mk,v 1.5 2020/03/13 10:13:04 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.akonadi
 
@@ -22,7 +22,7 @@ CMAKE_ARGS+=	-DAKONADI_BUILD_QSQLITE=off
 .  elif ${_MYSQL_VERSION} == "55"
 .    include "../../databases/mysql55-server/buildlink3.mk"
 .  else
-PKG_FAIL_RESASON+=	"Unknown MySQL version: ${_MYSQL_VERSION}"
+PKG_FAIL_REASON+=	"Unknown MySQL version: ${_MYSQL_VERSION}"
 .  endif
 SUBST_CLASSES+=		mysql
 SUBST_STAGE.mysql=	pre-configure
