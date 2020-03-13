@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.11 2020/03/08 10:33:21 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2019Q4,v 1.1.2.12 2020/03/13 20:07:20 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2019Q4 branch:
 
@@ -109,4 +109,10 @@ lang/php72: security fix
 
 Pullup ticket #6144 - requested by taca
 www/ruby-puma: security fix
+
+Pullup ticket #6145 - requested by nia
+www/firefox68: security fix
+
+Pullup ticket #6146 - requested by nia
+www/firefox68-l10n: dependent update
 
