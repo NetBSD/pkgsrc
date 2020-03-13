@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2020/03/10 22:09:18 wiz Exp $
+# $NetBSD: Makefile,v 1.196 2020/03/13 10:05:41 nia Exp $
 
 DISTNAME=	amarok-${VERS}
 VERS=		2.8.0
@@ -39,6 +39,8 @@ SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-server}:
 
 .include "options.mk"
 
+MYSQL_VERSIONS_ACCEPTED=	56 55
+
 .include "../../mk/mysql.buildlink3.mk"
 .if ${_MYSQL_VERSION} == "56"
 .include "../../databases/mysql56-server/buildlink3.mk"
@@ -46,9 +48,6 @@ SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-se
 .elif ${_MYSQL_VERSION} == "55"
 .include "../../databases/mysql55-server/buildlink3.mk"
 SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-server}/lib:
-.elif ${_MYSQL_VERSION} == "51"
-.include "../../databases/mysql51-server/buildlink3.mk"
-SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-server}/lib/mysql:
 .else
 PKG_FAIL_REASON+=	"Unknown mysql version: ${_MYSQL_VERSION}"
 .endif
