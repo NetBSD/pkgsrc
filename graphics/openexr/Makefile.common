@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2020/02/13 21:13:16 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/03/13 19:14:39 tnn Exp $
 # used by graphics/ilmbase/Makefile
 # used by graphics/opencv/Makefile
 
@@ -12,6 +12,8 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://www.openexr.com/
 COMMENT=	High dynamic-range (HDR) image file format library and tools
 LICENSE=	modified-bsd
+
+CHECK_PORTABILITY_SKIP+=	util/reformat.sh	# unused file
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	autoconf automake aclocal
