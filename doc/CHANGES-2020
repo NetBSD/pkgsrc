@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1550 2020/03/13 16:26:06 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1551 2020/03/13 17:59:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2124,3 +2124,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/gcc7-libs to 7.5.0nb2 [bacon 2020-03-13]
 	Updated pkgtools/check-portability to 19.4.2 [rillig 2020-03-13]
 	Updated net/filezilla to 3.47.2.1 [mef 2020-03-13]
+	Updated security/tor-browser to 9.0.6 [wiz 2020-03-13]
