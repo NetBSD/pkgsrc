@@ -1,17 +1,17 @@
-$NetBSD: patch-.mozconfig,v 1.1 2019/02/25 15:32:24 wiz Exp $
+$NetBSD: patch-.mozconfig,v 1.2 2020/03/13 17:59:27 wiz Exp $
 
-Disable update outside of pkgsrc infrastructure, and allow config in $HOME.
+mozbuild.configure.options.InvalidOptionError: --disable-eme is not available in this configuration
+disable tor-launcher - assume tor is started as system process
 
---- .mozconfig.orig	2019-02-24 20:07:18.325907978 +0000
+--- .mozconfig.orig	2019-11-15 18:55:41.526147002 +0000
 +++ .mozconfig
-@@ -13,7 +13,9 @@ ac_add_options --enable-official-brandin
- # Let's support GTK3 for ESR60
- ac_add_options --enable-default-toolkit=cairo-gtk3
+@@ -20,8 +20,7 @@ ac_add_options --disable-tests
+ ac_add_options --disable-debug
+ ac_add_options --disable-crashreporter
+ ac_add_options --disable-webrtc
+-# Let's make sure no preference is enabling either Adobe's or Google's CDM.
+-ac_add_options --disable-eme
++ac_add_options --disable-tor-launcher
+ ac_add_options --enable-proxy-bypass-protection
  
--ac_add_options --enable-tor-browser-update
-+ac_add_options --enable-tor-browser-data-outside-app-dir
-+
-+ac_add_options --disable-tor-browser-update
- ac_add_options --enable-signmar
- ac_add_options --enable-verify-mar
- 
+ # Disable telemetry
