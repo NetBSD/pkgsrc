@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2020/03/10 22:10:27 wiz Exp $
+# $NetBSD: Makefile,v 1.179 2020/03/13 16:10:11 tnn Exp $
 
 DISTNAME=	sylpheed-3.7.0
 PKGREVISION=	7
@@ -12,6 +12,7 @@ COMMENT=	Gtk based e-mail and netnews client
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 CONFLICTS=		sylpheed-claws-[0-9]*
+CHECK_PORTABILITY_SKIP+=sylpheed.spec.in
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
