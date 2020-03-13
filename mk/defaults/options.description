@@ -350,6 +350,7 @@ ipa-without-rules	Disable static rules support.
 ipa-without-sublimits	Disable sublimits support.
 ipa-without-thresholds	Disable thresholds support.
 irssi-perl		Enable Perl support in irssi.
+iscsi			Enable iscsi support.
 iso			Build a .iso file.
 ispell			Add spell checking support using ispell.
 jabber			Enable support for jabber/gtalk.
