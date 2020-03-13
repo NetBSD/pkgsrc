@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/12/04 21:12:59 rodent Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/03/13 20:20:48 wiz Exp $
 bin/trytond-admin${PYVERSSUFFIX}
 bin/trytond-cron${PYVERSSUFFIX}
 bin/trytond${PYVERSSUFFIX}
@@ -674,6 +674,6 @@ ${PYSITELIB}/trytond/wizard/wizard.pyo
 ${PYSITELIB}/trytond/wsgi.py
 ${PYSITELIB}/trytond/wsgi.pyc
 ${PYSITELIB}/trytond/wsgi.pyo
-share/examples/py27-trytond/logging.conf.example
-share/examples/py27-trytond/trytond.conf.example
-@pkgdir share/py27-trytond
+share/examples/${PYPKGPREFIX}-trytond/logging.conf.example
+share/examples/${PYPKGPREFIX}-trytond/trytond.conf.example
+@pkgdir share/${PYPKGPREFIX}-trytond
