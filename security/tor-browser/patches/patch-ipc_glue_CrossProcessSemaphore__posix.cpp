@@ -1,9 +1,6 @@
-$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2019/03/15 11:51:26 wiz Exp $
+$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.3 2020/03/13 17:59:27 wiz Exp $
 
-- avoid use of sem_t on NetBSD
-  http://mail-index.netbsd.org/pkgsrc-bugs/2017/06/23/msg062225.html
-
---- ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2019-02-23 20:00:48.000000000 +0000
+--- ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2019-01-18 00:20:30.000000000 +0000
 +++ ipc/glue/CrossProcessSemaphore_posix.cpp
 @@ -9,6 +9,11 @@
  #include "nsDebug.h"
@@ -95,9 +92,9 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.2 2019/03/15 11:51:
  CrossProcessSemaphore::CrossProcessSemaphore()
 -    : mSemaphore(nullptr), mRefCount(nullptr) {
 +#if defined(__NetBSD__)
-+    : mMutex (nullptr)
-+    , mNotZero (nullptr)
-+    , mValue (nullptr)
++  : mMutex (nullptr)
++  , mNotZero (nullptr)
++  , mValue (nullptr)
 +#else
 +    : mSemaphore(nullptr)
 +#endif

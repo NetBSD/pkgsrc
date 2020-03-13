@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.55 2020/03/10 22:10:55 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2020/03/13 17:59:27 wiz Exp $
 
-DISTNAME=	src-firefox-tor-browser-60.8.0esr-8.5-1-build2
-PKGNAME=	tor-browser-8.5.4
-PKGREVISION=	5
-CATEGORIES=	www
-MASTER_SITES=	https://dist.torproject.org/torbrowser/8.5.4/
+DISTNAME=	src-firefox-tor-browser-68.6.0esr-9.0-1-build1
+PKGNAME=	tor-browser-9.0.6
+CATEGORIES=	security www
+MASTER_SITES=	https://dist.torproject.org/torbrowser/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
+#DISTFILES=	${DISTNAME}${EXTRACT_SUFX} src-tor-launcher-0.2.20.5${EXTRACT_SUFX}
 
-MAINTAINER=	ryoon@NetBSD.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	https://www.torproject.org/projects/torbrowser.html.en
 COMMENT=	Tor Browser based on Firefox
 LICENSE=	mpl-1.1
-
-BROKEN=		"Needs fixes for rust changes, or update."
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/src-//}
 
@@ -23,7 +21,7 @@ EXTRACT_USING=	bsdtar
 # How to update this package:
 #
 # replace all patches with the one from the correspoding www/firefox${ESR_RELEASE}
-# BUT keep patch-xpcom_io_TorFileUtils.cpp!
+# BUT keep patch-xpcom_io_TorFileUtils.cpp! (and if necessary patch-.mozconfig)
 # make the patches apply
 #
 # when packaged up, read MESSAGE and test by visiting https://check.torproject.org
@@ -39,6 +37,7 @@ MOZILLA_DIR=	# empty
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--enable-tor-browser-data-outside-app-dir
+CONFIGURE_ARGS+=	--with-tor-browser-version=${PKGVERSION_NOREV}
 CFLAGS+=		-DTOR_BROWSER_DATA_IN_HOME_DIR=1
 CFLAGS+=		-DTOR_BROWSER_DATA_OUTSIDE_APP_DIR=1
 CFLAGS+=		-fPIC
@@ -60,7 +59,7 @@ NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/tor-browser-bin
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
 BUILDLINK_TRANSFORM.SunOS+=	rm:-ffunction-sections
 
-.include "../../www/firefox60/mozilla-common.mk"
+.include "../../www/firefox68/mozilla-common.mk"
 .include "options.mk"
 
 CHECK_INTERPRETER_SKIP+=	lib/firefox-sdk/sdk/bin/header.py
@@ -77,6 +76,7 @@ MOZILLA_NAME=	TorBrowser
 post-extract:
 	mv ${WRKSRC}/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/gfx/ycbcr/yuv_row_arm.S
 	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
+#	mv ${WRKDIR}/tor-launcher* ${WRKSRC}/browser/extensions/tor-launcher
 
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
