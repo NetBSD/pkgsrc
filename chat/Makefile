@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.243 2020/02/06 09:14:25 nia Exp $
+# $NetBSD: Makefile,v 1.244 2020/03/13 11:57:37 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -50,7 +50,6 @@ SUBDIR+=	iroffer
 SUBDIR+=	irssi
 SUBDIR+=	irssi-icb
 SUBDIR+=	irssi-xmpp
-SUBDIR+=	jabberd
 SUBDIR+=	jabberd2
 SUBDIR+=	kgb-bot
 SUBDIR+=	konversation
