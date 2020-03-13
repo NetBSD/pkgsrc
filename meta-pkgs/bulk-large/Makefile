@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2019/09/24 12:22:46 sevan Exp $
+# $NetBSD: Makefile,v 1.45 2020/03/13 10:41:12 nia Exp $
 
-DISTNAME=	bulk-large-20190924
+DISTNAME=	bulk-large-20200313
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -32,7 +32,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 # 1. Packages used by a lot of other packages
 #
 BUILD_DEPENDS+=	taglib-[0-9]*:../../audio/taglib
-BUILD_DEPENDS+=	GConf-[0-9]*:../../devel/GConf
 BUILD_DEPENDS+=	gmp-[0-9]*:../../devel/gmp
 BUILD_DEPENDS+=	heirloom-libcommon-[0-9]*:../../devel/heirloom-libcommon
 BUILD_DEPENDS+=	libgetopt-[0-9]*:../../devel/libgetopt
@@ -50,16 +49,16 @@ BUILD_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 #
 # 2. Applications
 #
-BUILD_DEPENDS+=	konversation>=1.4:../../chat/konversation
+BUILD_DEPENDS+=	quassel-[0-9]*:../../chat/quassel
 BUILD_DEPENDS+=	asterisk>=16:../../comms/asterisk16
 BUILD_DEPENDS+=	avr-gcc-[0-9]*:../../cross/avr-gcc
 BUILD_DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
 BUILD_DEPENDS+=	avr-gdb-[0-9]*:../../cross/avr-gdb
-BUILD_DEPENDS+=	mysql-client>=5.5<5.6:../../databases/mysql55-client
-BUILD_DEPENDS+=	mysql-server>=5.5<5.6:../../databases/mysql55-server
-BUILD_DEPENDS+=	mysql-client>=5.6:../../databases/mysql56-client
-BUILD_DEPENDS+=	mysql-server>=5.6:../../databases/mysql56-server
-BUILD_DEPENDS+=	postgresql94-[0-9]*:../../databases/postgresql94
+BUILD_DEPENDS+=	mysql-client>=5.6<5.7:../../databases/mysql56-client
+BUILD_DEPENDS+=	mysql-server>=5.6<5.7:../../databases/mysql56-server
+BUILD_DEPENDS+=	mysql-client>=5.7:../../databases/mysql57-client
+BUILD_DEPENDS+=	mysql-server>=5.7:../../databases/mysql57-server
+BUILD_DEPENDS+=	postgresql95-[0-9]*:../../databases/postgresql95
 BUILD_DEPENDS+=	valgrind-[0-9]*:../../devel/valgrind
 BUILD_DEPENDS+=	abiword-[0-9]*:../../editors/abiword
 BUILD_DEPENDS+=	emacs25>=25<26:../../editors/emacs25
@@ -80,9 +79,8 @@ BUILD_DEPENDS+=	thunderbird-l10n-[0-9]*:../../mail/thunderbird-l10n
 BUILD_DEPENDS+=	R-[0-9]*:../../math/R
 BUILD_DEPENDS+=	octave-[0-9]*:../../math/octave
 BUILD_DEPENDS+=	zyGrib-[0-9]*:../../misc/zyGrib
-BUILD_DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
-BUILD_DEPENDS+=	xine-ui-[0-9]*:../../multimedia/xine-ui
-BUILD_DEPENDS+=	cups>=1.5<2.0:../../print/cups15
+BUILD_DEPENDS+=	mpv-[0-9]*:../../multimedia/mpv
+BUILD_DEPENDS+=	cups-[0-9]*:../../print/cups
 BUILD_DEPENDS+=	atril-[0-9]*:../../print/atril
 BUILD_DEPENDS+=	lilypond-[0-9]*:../../print/lilypond
 BUILD_DEPENDS+=	mit-krb5-appl-[0-9]*:../../security/mit-krb5-appl
@@ -116,8 +114,7 @@ BUILD_DEPENDS+=	texlive-collection-latex-doc-[0-9]*:../../meta-pkgs/texlive-coll
 #
 BUILD_DEPENDS+=	deforaos-desktop-[0-9]*:../../meta-pkgs/deforaos-desktop
 BUILD_DEPENDS+=	gnustep-[0-9]*:../../meta-pkgs/gnustep
-BUILD_DEPENDS+=	kde4-[0-9]*:../../meta-pkgs/kde4
-BUILD_DEPENDS+=	matchbox-[0-9]*:../../meta-pkgs/matchbox
+BUILD_DEPENDS+=	mate-[0-9]*:../../meta-pkgs/mate
 BUILD_DEPENDS+=	windowmaker-desktop-[0-9]*:../../meta-pkgs/windowmaker-desktop
 BUILD_DEPENDS+=	xfce4-[0-9]*:../../meta-pkgs/xfce4
 BUILD_DEPENDS+=	xfce4-extras-[0-9]*:../../meta-pkgs/xfce4-extras
