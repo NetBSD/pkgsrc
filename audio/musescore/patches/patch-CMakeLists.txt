@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2020/02/19 03:00:21 gutteridge Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2020/03/13 07:46:11 wiz Exp $
 
 Never compress man pages.
 
@@ -9,6 +9,15 @@ https://github.com/musescore/MuseScore/pull/5732
 
 --- CMakeLists.txt.orig	2020-02-06 21:10:58.000000000 +0000
 +++ CMakeLists.txt
+@@ -83,7 +83,7 @@ else (SCRIPT_INTERFACE)
+ SET(QT_MIN_VERSION    "5.7.0")
+ endif (SCRIPT_INTERFACE)
+ # Include modules
+-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/build" ${CMAKE_MODULE_PATH})
++set (CMAKE_MODULE_PATH "/scratch/audio/musescore/work/.buildlink/cmake-Modules" "${CMAKE_CURRENT_SOURCE_DIR}/build" ${CMAKE_MODULE_PATH})
+ include (FindQt5)
+ include (UsePkgConfig1) # Defines MACRO(PKGCONFIG1 _package _minVersion _include_DIR _link_DIR _link_FLAGS _cflags)
+ include (FindPulseAudio)
 @@ -385,7 +385,7 @@ endif(BUILD_FOR_WINSTORE)
  
  if (USE_SYSTEM_FREETYPE)
