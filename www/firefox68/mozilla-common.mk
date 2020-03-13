@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.6 2019/12/22 14:33:58 gdt Exp $
+# $NetBSD: mozilla-common.mk,v 1.6.4.1 2020/03/13 20:02:44 bsiegert Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -38,8 +38,8 @@ BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
 
 # For rustc/cargo detection
-CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM:Q}
-CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM}
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 
 CONFIGURE_ENV+=		BINDGEN_CFLAGS="-isystem${PREFIX}/include/nspr \
 			-isystem${X11BASE}/include/pixman-1"
@@ -126,7 +126,7 @@ CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}nsprpub/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
 
-CONFIGURE_ENV+=		CPP=${CPP}
+CONFIGURE_ENV+=		CPP=${CPP:Q}
 
 # Build outside ${WRKSRC}
 # Try to avoid conflict with config/makefiles/xpidl/Makefile.in
