@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.100 2020/03/04 12:46:01 wiz Exp $
+$NetBSD: distinfo,v 1.101 2020/03/13 16:51:00 tnn Exp $
 
 SHA1 (gimp-2.10.18.tar.bz2) = 9dd171ca05c60816d641ca2edf4806639eda99a4
 RMD160 (gimp-2.10.18.tar.bz2) = 52045f0f163a74ef154ac936f637be4a999bbbcf
@@ -8,4 +8,5 @@ SHA1 (patch-aa) = 403c46d7070de208769e99e512922ba3a5b7129b
 SHA1 (patch-ab) = 37820b9e03702248294f0030ffbd09e7f14f3dcb
 SHA1 (patch-app_core_gimpbrush-transform.cc) = 3bd3f69401ee7dabb53f7ebf533870ee9add856c
 SHA1 (patch-plug-ins_common_file-mng.c) = 8ed244997cdef7125e1aa5da4d0fac5068ad5159
+SHA1 (patch-plug-ins_pygimp_py-compile) = 59dcdd00073b737f8f52e6a56832722033ee5703
 SHA1 (patch-plug-ins_script-fu_script-fu-server.c) = c424b1a8e345ec3d0763ac2cf1f8535da9e10797
