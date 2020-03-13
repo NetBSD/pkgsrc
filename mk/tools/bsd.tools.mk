@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.59 2019/05/07 19:36:44 rillig Exp $
+# $NetBSD: bsd.tools.mk,v 1.60 2020/03/13 17:33:02 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -167,15 +167,15 @@ _PKG_VARS.tools=	USE_TOOLS TOOLS_BROKEN TOOLS_CREATE \
 	TOOLS_FAIL TOOLS_GNU_MISSING TOOLS_NOOP
 .for t in ${USE_TOOLS:C/:.*//:O:u}
 .  for pv in \
-	TOOLS_ALIASES \
-	TOOLS_ARGS \
-	TOOLS_CMD \
-	TOOLS_DEPENDS \
-	TOOLS_IGNORE \
-	TOOLS_PATH \
 	TOOLS_PLATFORM \
+	TOOLS_PATH \
+	TOOLS_CMD \
+	TOOLS_ARGS \
 	TOOLS_SCRIPT \
 	TOOLS_SCRIPT_DFLT \
+	TOOLS_ALIASES \
+	TOOLS_DEPENDS \
+	TOOLS_IGNORE \
 	TOOLS_VALUE_GNU \
 	# nil
 _SYS_VARS.tools+=	${pv}.${t}
