@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:38 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/13 20:20:50 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_calendar_scheduling
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	python time
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-webdav>=${TRYTON_BASEVER}:../../www/py-trytond-
 DEPENDS+=	${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_ACCEPTED=	27 # py-pywebdav
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

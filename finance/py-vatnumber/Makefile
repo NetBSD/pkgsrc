@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/02 16:08:48 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/13 20:20:49 wiz Exp $
 
 DISTNAME=		vatnumber-1.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,6 @@ COMMENT=		Python module to validate VAT numbers
 LICENSE=		gnu-gpl-v3
 
 DEPENDS+=		${PYPKGPREFIX}-stdnum-[0-9]*:../../misc/py-stdnum
-
-PYTHON_VERSIONS_ACCEPTED=	27 # py-simplesoap via py-stdnum
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
