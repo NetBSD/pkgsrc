@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/03/12 19:54:45 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/13 15:46:21 nia Exp $
 
 FIREFOX_VER=	68.6.0esr
 PKGNAME=	firefox68-l10n-${FIREFOX_VER:S/esr//}
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
 COMMENT=	Language packs for www/firefox (version ${PKGVERSION_NOREV:C/\..*//})
+
+DEPENDS+=	firefox68>=${PKGVERSION_NOREV}:../../www/firefox68
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${XPI_FILES}
