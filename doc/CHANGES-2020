@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1546 2020/03/13 13:23:58 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.1547 2020/03/13 15:00:57 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2120,3 +2120,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed chat/jabberd successor chat/jabberd2 [nia 2020-03-13]
 	Updated geography/osm2pgsql to 1.2.1 [gdt 2020-03-13]
 	Added net/libiscsi version 1.19.0 [tnn 2020-03-13]
+	Updated lang/gcc7 to 7.5.0nb1 [bacon 2020-03-13]
