@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1551 2020/03/13 17:59:39 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1552 2020/03/13 18:35:03 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2125,3 +2125,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/check-portability to 19.4.2 [rillig 2020-03-13]
 	Updated net/filezilla to 3.47.2.1 [mef 2020-03-13]
 	Updated security/tor-browser to 9.0.6 [wiz 2020-03-13]
+	Updated lang/rust to 1.42.0 [jperkin 2020-03-13]
