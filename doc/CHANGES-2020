@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1548 2020/03/13 15:01:08 bacon Exp $
+$NetBSD: CHANGES-2020,v 1.1549 2020/03/13 16:20:43 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2122,3 +2122,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/libiscsi version 1.19.0 [tnn 2020-03-13]
 	Updated lang/gcc7 to 7.5.0nb1 [bacon 2020-03-13]
 	Updated lang/gcc7-libs to 7.5.0nb2 [bacon 2020-03-13]
+	Updated pkgtools/check-portability to 19.4.2 [rillig 2020-03-13]
