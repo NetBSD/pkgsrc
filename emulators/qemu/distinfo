@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.156 2020/02/06 23:23:21 kamil Exp $
+$NetBSD: distinfo,v 1.157 2020/03/13 13:57:04 tnn Exp $
 
 SHA1 (qemu-4.2.0.tar.xz) = b27aa828a8457bd8551ae3c81b80cc365e1f6bfe
 RMD160 (qemu-4.2.0.tar.xz) = cab8f6d85c0c6e9c01059087ed27d1243a7004a4
@@ -25,6 +25,7 @@ SHA1 (patch-include_sysemu_nvmm.h) = 3bd3da9b42ace0f806fabeb580f90ae19c273869
 SHA1 (patch-net_tap-solaris.c) = cc953c9a624dd55ace4e130d0b31bbfb956c17d5
 SHA1 (patch-qemu-doc.texi) = 78f926a16494c07248b9a81f39dca5b78ae542bb
 SHA1 (patch-qemu-options.hx) = 17fb92e03e32402ea2c04217991a2cd01a335e02
+SHA1 (patch-roms_u-boot-sam460ex_Makefile) = e43111db0c56625bc8df5e3688c242c341f3fa6a
 SHA1 (patch-roms_u-boot_tools_imx8m__image.sh) = e4c452062f40569e33aa93eec4a65bd3af2e74fc
 SHA1 (patch-target_i386_Makefile.objs) = be8ab2e72521ccd0a71db6b37feb9957b27ac970
 SHA1 (patch-target_i386_helper.c) = 54363fe53688ea4030665b3bbb3ee7aba7ba5348

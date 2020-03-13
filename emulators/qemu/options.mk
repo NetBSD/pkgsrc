@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2020/02/07 08:39:19 kamil Exp $
+# $NetBSD: options.mk,v 1.9 2020/03/13 13:57:04 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
-PKG_SUPPORTED_OPTIONS=	gtk3 sdl spice
-PKG_SUGGESTED_OPTIONS+=
+PKG_SUPPORTED_OPTIONS=	gtk3 iscsi sdl spice
+PKG_SUGGESTED_OPTIONS+=	iscsi
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -48,4 +48,11 @@ CONFIGURE_ARGS+=	--enable-spice
 .include "../../sysutils/spice-server/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-spice
+.endif
+
+.if !empty(PKG_OPTIONS:Miscsi)
+CONFIGURE_ARGS+=	--enable-libiscsi
+.include "../../net/libiscsi/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libiscsi
 .endif
