@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/03/13 09:28:19 nia Exp $
+# $NetBSD: Makefile,v 1.18 2020/03/13 12:12:01 nia Exp $
 
 DISTNAME=	dolphin-emu-5.0
 PKGREVISION=	12
@@ -34,7 +34,7 @@ ONLY_FOR_PLATFORM=	${LITTLEENDIANPLATFORMS}
 # No support in the code.
 BROKEN_ON_PLATFORM+=	SunOS-*-*
 
-.if ${MACHINE_ARCH} != "x86_64" && ${MACHINE_ARCH} != "aarch64"
+.if ${MACHINE_ARCH} != "x86_64"
 CMAKE_ARGS+=		-DENABLE_GENERIC=1
 .endif
 
