@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/03/13 11:10:17 tnn Exp $
+
+silence double brackets warning
+
+--- Makefile.in.orig	2020-03-13 10:53:38.791153946 +0000
++++ Makefile.in
+@@ -857,8 +857,8 @@ sign-release: iso-codes-$(VERSION).tar.x
+ 
+ .PHONY: upload
+ upload:
+-	@if [[ -f "iso-codes-$(VERSION).tar.xz" ]] \
+-	&& [[ -f "iso-codes-$(VERSION).tar.xz.sig" ]]; then \
++	@if [ -f "iso-codes-$(VERSION).tar.xz" ] \
++	&& [ -f "iso-codes-$(VERSION).tar.xz.sig" ]; then \
+ 		scp iso-codes-$(VERSION).tar.* \
+ 		alioth.debian.org:/srv/home/groups/pkg-isocodes/htdocs/downloads; \
+ 	fi
