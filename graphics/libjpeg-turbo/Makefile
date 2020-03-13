@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:22 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/03/13 17:55:33 tnn Exp $
 
 DISTNAME=	libjpeg-turbo-1.5.3
 CATEGORIES=	graphics
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--with-jpeg8
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 
+CHECK_PORTABILITY_SKIP+=	release/makemacpkg.in
 PKGCONFIG_OVERRIDE=	release/libturbojpeg.pc.in release/libjpeg.pc.in
 
 TEST_TARGET=	test
