@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/03/10 22:09:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/13 09:28:19 nia Exp $
 
 DISTNAME=	dolphin-emu-5.0
 PKGREVISION=	12
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	msgfmt msgmerge pkg-config
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c gnu++14
 
 # std::make_unique
 GCC_REQD+=	4.9
