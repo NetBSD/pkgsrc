@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2020/02/19 03:00:20 gutteridge Exp $
+$NetBSD: distinfo,v 1.4 2020/03/13 07:46:10 wiz Exp $
 
 SHA1 (musescore-3.4.2.tar.gz) = 95d8d0d0bef7327e793b6374feb22d9522225b30
 RMD160 (musescore-3.4.2.tar.gz) = d476367b02d5efc1527426451379b1918b24b8a9
 SHA512 (musescore-3.4.2.tar.gz) = d53024a04793dd418bce910e47b1d6f785b6e5ffbd97117a910f144ee37d20c20ce555a45fcf30532019aa8d7e429fc2dfedfef33a6078ab73889fe7995fe9f4
 Size (musescore-3.4.2.tar.gz) = 62960426 bytes
-SHA1 (patch-CMakeLists.txt) = 82b2b3591f0241bdd7be173b3534615bd15a1a9c
+SHA1 (patch-CMakeLists.txt) = b2483dee26c03a66f3195f6db87dd122f34a7fd5
+SHA1 (patch-build_Linux+BSD_portable_portable-utils.in) = a2af39d397a0be4ceb8f97fa7742a67d35d43f4c
