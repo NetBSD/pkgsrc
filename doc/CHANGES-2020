@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1538 2020/03/13 10:08:10 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1539 2020/03/13 10:11:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2112,3 +2112,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/libcares to 1.16.0 [adam 2020-03-13]
 	Removed databases/mysql51-client successor databases/mysql57-client [nia 2020-03-13]
 	Removed databases/mysql51-server successor databases/mysql57-server [nia 2020-03-13]
+	Updated misc/khard to 0.15.1nb1 [wiz 2020-03-13]
