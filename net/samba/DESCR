@@ -4,3 +4,6 @@ Samba project includes not only an impressive feature set in file and
 print serving capabilities, but has been extended to include client
 functionality, utilities to ease migration to Samba, tools to aid
 interoperability with Microsoft Windows, and administration tools.
+
+This package provides samba3, which was declared obsolete in March,
+2015.
