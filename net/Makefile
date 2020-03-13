@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1313 2020/03/12 18:52:57 wiz Exp $
+# $NetBSD: Makefile,v 1.1314 2020/03/13 13:23:59 tnn Exp $
 #
 
 COMMENT=	Networking tools
@@ -310,6 +310,7 @@ SUBDIR+=	libfetch
 SUBDIR+=	libfilezilla
 SUBDIR+=	libgdata
 SUBDIR+=	libgdata0.6
+SUBDIR+=	libiscsi
 SUBDIR+=	libktorrent
 SUBDIR+=	liblive
 SUBDIR+=	libmms
