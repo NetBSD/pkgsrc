@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2020/03/13 13:21:39 tnn Exp $
+bin/iscsi-inq
+bin/iscsi-ls
+bin/iscsi-perf
+bin/iscsi-readcapacity16
+bin/iscsi-swp
+include/iscsi/iscsi.h
+include/iscsi/scsi-lowlevel.h
+lib/libiscsi.la
+lib/pkgconfig/libiscsi.pc
+man/man1/iscsi-inq.1
+man/man1/iscsi-ls.1
+man/man1/iscsi-swp.1
+man/man1/iscsi-test-cu.1
