@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:05 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/13 20:20:49 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_party_vcarddav
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	misc python
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-python-sql-[0-9]*:../../databases/py-python-sql
 DEPENDS+=	${PYPKGPREFIX}-trytond-party>=${TRYTON_BASEVER}:../../misc/py-trytond-party
 DEPENDS+=	${PYPKGPREFIX}-trytond-webdav>=${TRYTON_BASEVER}:../../www/py-trytond-webdav
 DEPENDS+=	${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
+
+PYTHON_VERSIONS_ACCEPTED=	27 # py-pywebdav
 
 USE_LANGUAGES=	# none
 
