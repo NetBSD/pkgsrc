@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2020/02/05 14:31:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.88 2020/03/13 15:48:52 nia Exp $
 #
 
 TB_VER=		68.4.2
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/linux-i686/x
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Language packs for mail/thunderbird
+
+DEPENDS+=	thunderbird>=${PKGVERSION_NOREV}:../../mail/thunderbird
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${XPI_FILES}
