@@ -1,4 +1,4 @@
-# $NetBSD: check-perms.mk,v 1.21 2019/10/01 21:56:11 rillig Exp $
+# $NetBSD: check-perms.mk,v 1.22 2020/03/13 08:04:08 rillig Exp $
 #
 # This file checks that after installation of a package, all files and
 # directories of that package have sensible permissions set.
@@ -53,7 +53,7 @@ _CHECK_PERMS_FLAGS=	-cff
 _CHECK_PERMS_FLAGS=	-c
 .endif
 
-.if !empty(CHECK_PERMS:M[Yy][Ee][Ss])
+.if ${CHECK_PERMS:tl} == yes && ${CHECK_PERMS_SKIP} != "*"
 TOOL_DEPENDS+=	checkperms>=1.1:../../sysutils/checkperms
 
 privileged-install-hook: _check-perms
