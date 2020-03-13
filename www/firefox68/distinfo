@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.5.4.2 2020/02/23 11:50:10 bsiegert Exp $
+$NetBSD: distinfo,v 1.5.4.3 2020/03/13 20:02:44 bsiegert Exp $
 
-SHA1 (firefox-68.5.0esr.source.tar.xz) = 5e74dc0335b09819b24285d23e7746ca70af1dae
-RMD160 (firefox-68.5.0esr.source.tar.xz) = 34b2446b42e98de3e9f5798466bd4f49375dd44a
-SHA512 (firefox-68.5.0esr.source.tar.xz) = 0acf4ecd47bccf062ab330231e36355f5d84e66ab411f653ae3160583613840925bb473c0f7dfa4b15311a543940293c4633516851c9466c4b0133c9271710d3
-Size (firefox-68.5.0esr.source.tar.xz) = 314176068 bytes
-SHA1 (patch-aa) = 1f292aae7d37bd480ba834324b737bfebee52503
+SHA1 (firefox-68.6.0esr.source.tar.xz) = 85d35d0a0190d56585f93c9f117d5c0f52bcbc44
+RMD160 (firefox-68.6.0esr.source.tar.xz) = d11d44f5400ca1f5c3b721dd974a77fbf7cf7e7a
+SHA512 (firefox-68.6.0esr.source.tar.xz) = 84565d654ed8bd2d036d08de4d16e41ae8881f0b20b34424ab347d50a37384acf50c04f74269720e79db28028569dff79f2b910848939ff87c078f36684a75a3
+Size (firefox-68.6.0esr.source.tar.xz) = 313814396 bytes
+SHA1 (patch-aa) = 9f7200c411cd2217a80ec10a276c8877bc6b845c
 SHA1 (patch-browser_app_profile_firefox.js) = 076cc2892547bac07fe907533f4e821f13f5738e
-SHA1 (patch-build_moz.configure_old.configure) = 05963b12fd908d90e3378b30cff7e48291b8a447
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
-SHA1 (patch-dom_media_CubebUtils.cpp) = b1b4f981c4bede877e3bd092d2648d4b8cbc73a5
+SHA1 (patch-dom_media_CubebUtils.cpp) = 3cd2c65ab281d802c56216565970450767a3fb24
 SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp) = e458c9c8dc66edc69c1874734af28a77fc5e3993
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = 2f73c76c48852613e0c55c1680fcc2a9eb3cf4ef
 SHA1 (patch-gfx_gl_GLContextProviderGLX.cpp) = 2c909a10a341e600392417240ad0c556f495d6ba
@@ -24,14 +23,13 @@ SHA1 (patch-js_src_threading_posix_Thread.cpp) = 47e612a676e614fd6dd43b8a3140218
 SHA1 (patch-js_src_util_NativeStack.cpp) = 2c6f844d38343f40ebbc8fd665279256e4ae6d35
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9ea5862558a
 SHA1 (patch-media_libcubeb_gtest_moz.build) = ea6dcc7ceeb76ce1fb9d508cf43080a2eef3a9e4
-SHA1 (patch-media_libcubeb_src_cubeb.c) = e3446562ed16ec9643df42ee0b9c46ee91f22913
+SHA1 (patch-media_libcubeb_src_cubeb.c) = dcc173f0bef8b7b12c45739bf04577f3292a517e
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = f359a66a22f11142d05746e15894d998d3e3bf5a
-SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = 103f751d5a7bc14a81a6ed43e1afc722bc092f7e
-SHA1 (patch-media_libcubeb_src_moz.build) = dcca90cb5132442877712cd7b1f4e832c93d2655
-SHA1 (patch-media_libcubeb_update.sh) = 4508319d8534a0cc983e4767c2142169af9e5033
+SHA1 (patch-media_libcubeb_src_moz.build) = 7d66d9e0d7129b2106885201f88355262ee1a22a
+SHA1 (patch-media_libcubeb_update.sh) = 8dcc4ca8e2812b4063f28e5d6308abbee0b1c9d9
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e5700d95302ef9672b404ab19e13ef7ba3ede5cf
-SHA1 (patch-toolkit_library_moz.build) = 102e3713552c26f76e8b4e473846bb8fbc44b278
+SHA1 (patch-toolkit_library_moz.build) = 57516a1cc888fdbaf39ba90f73e5de488ad1f01e
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 22a39e54e042ab2270a3cb54e4e307c8900cad12
 SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = b2343fbad2556504dfd13601c02e6e2357c7d2bc
