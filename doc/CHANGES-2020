@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1543 2020/03/13 10:41:54 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1544 2020/03/13 11:58:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2117,3 +2117,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/tigervnc to 1.10.1nb1 [wiz 2020-03-13]
 	Updated meta-pkgs/bulk-medium to 20200313 [nia 2020-03-13]
 	Updated meta-pkgs/bulk-large to 20200313 [nia 2020-03-13]
+	Removed chat/jabberd successor chat/jabberd2 [nia 2020-03-13]
