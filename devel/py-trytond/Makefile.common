@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.17 2019/11/03 10:18:30 rillig Exp $
+# $NetBSD: Makefile.common,v 1.18 2020/03/13 20:20:48 wiz Exp $
 
-# used by databases/py-ldap-authentication/Makefile
+# used by databases/py-trytond-ldap-authentication
 # used by devel/py-proteus/Makefile
 # used by devel/py-tryton/Makefile
 # used by devel/py-trytond/Makefile
@@ -255,7 +255,6 @@ MASTER_SITES=	${TRYTON_SITES}
 
 DIST_SUBDIR=	tryton-${TRYTON_BASEVER}
 
-PYTHON_VERSIONS_ACCEPTED= 27 # py-gtk2 via py-pycha via py-relatorio
 # predefine these so modules don't have to.
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
