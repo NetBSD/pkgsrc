@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/03/08 16:57:20 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/13 15:46:21 nia Exp $
 
 FIREFOX_VER=	60.9.0esr
 PKGNAME=	firefox60-l10n-${FIREFOX_VER:S/esr//}
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
 COMMENT=	Language packs for www/firefox60 (version ${PKGVERSION_NOREV:C/\..*//})
+
+DEPENDS+=	firefox60>=${PKGVERSION_NOREV}:../../www/firefox60
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${XPI_FILES}

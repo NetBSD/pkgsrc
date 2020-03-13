@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2020/03/08 16:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2020/03/13 15:46:21 nia Exp $
 
 FIREFOX_VER=	73.0.1
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/esr//}
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
 COMMENT=	Language packs for www/firefox
 LICENSE=	mpl-2.0 AND mpl-1.1 AND gnu-lgpl-v3 # as of 70.0.1
+
+DEPENDS+=	firefox>=${PKGVERSION_NOREV}:../../www/firefox
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${FIREFOX_LOCALES:=.xpi}
