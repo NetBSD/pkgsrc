@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2020/03/13 21:03:41 tnn Exp $
+
+don't use subdir for single config file
+
+--- src/Makefile.in.orig	2018-09-01 02:12:08.000000000 +0000
++++ src/Makefile.in
+@@ -290,7 +290,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-pkgsysconfdir = $(sysconfdir)/$(PACKAGE)
++pkgsysconfdir = $(sysconfdir)
+ AM_CPPFLAGS = \
+ 	-DSYSCONFDIR=\"${pkgsysconfdir}\" \
+ 	-DLOCALSTATEDIR=\"${localstatedir}\"
