@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.8 2020/03/13 16:20:34 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.9 2020/03/13 16:43:05 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -526,7 +526,7 @@ check_file(cstr filename)
 
 	while (str_read_line(&line, f)) {
 		cstr cline = str_c(&line);
-		if (cstr_contains_char(str_c(&line), '\0'))
+		if (cstr_contains_char(cline, '\0'))
 			break;
 		lineno++;
 		str_charptr(&line);
