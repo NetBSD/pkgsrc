@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2020/03/05 10:13:18 adam Exp $
+# $NetBSD: Makefile,v 1.174 2020/03/13 00:45:06 tnn Exp $
 
 DISTNAME=	node-v13.10.1
 
@@ -13,7 +13,7 @@ CONFIGURE_ARGS+=	--shared-nghttp2
 CONFIGURE_ARGS+=	--shared-openssl
 CONFIGURE_ARGS+=	--with-intl=system-icu
 
-CHECK_PORTABILITY_SKIP+=	deps/openssl/openssl/.travis-create-release.sh
+CHECK_PORTABILITY_SKIP+=	tools/macos-installer/pkgbuild/npm/scripts/preinstall
 
 .if ${MACHINE_ARCH} == "i386"
 # 64 bit atomic ops are required
