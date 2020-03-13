@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2020/03/03 12:58:42 adam Exp $
+# $NetBSD: Makefile,v 1.28 2020/03/13 15:00:36 bacon Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC7_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC7_DIST_VERSION}
+PKGREVISION=	1
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc7-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
@@ -22,7 +23,7 @@ DISTFILES=		${DEFAULT_DISTFILES}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		gmake makeinfo perl sed:run tar:build
 USE_TOOLS.NetBSD+=	gsed
 
