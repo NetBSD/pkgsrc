@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2019/11/07 12:41:00 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2020/03/13 10:10:54 wiz Exp $
 
 DISTNAME=		khard-0.15.1
+PKGREVISION=		1
 CATEGORIES=		misc net
 MASTER_SITES=		${MASTER_SITE_PYPI:=k/khard/}
 #MASTER_SITES=		${MASTER_SITE_GITHUB:=scheibler/}
@@ -29,7 +30,6 @@ pre-build:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/misc/khard/khard.conf.example ${DESTDIR}${PREFIX}/share/examples/khard
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} khard khard-${PYVERSSUFFIX}
 	${INSTALL_DATA} ${WRKSRC}/doc/build/man/khard.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/application.mk"
