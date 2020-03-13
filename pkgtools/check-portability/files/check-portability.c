@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.7 2020/03/12 19:45:06 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.8 2020/03/13 16:20:34 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -107,6 +107,12 @@ cstr_index(cstr haystack, cstr needle)
 }
 
 static bool
+cstr_contains_char(cstr haystack, char needle)
+{
+	return memchr(haystack.data, needle, haystack.len);
+}
+
+static bool
 cstr_contains(cstr haystack, cstr needle)
 {
 	return cstr_index(haystack, needle) != npos;
@@ -165,6 +171,7 @@ typedef struct {
 static cstr
 str_c(str *s)
 {
+	assert(s->data != nullptr);
 	return (cstr) { s->data, s->len };
 }
 
@@ -518,9 +525,11 @@ check_file(cstr filename)
 	}
 
 	while (str_read_line(&line, f)) {
+		cstr cline = str_c(&line);
+		if (cstr_contains_char(str_c(&line), '\0'))
+			break;
 		lineno++;
 		str_charptr(&line);
-		cstr cline = str_c(&line);
 
 		checkline_sh_double_brackets(filename, lineno, cline);
 		checkline_sh_dollar_random(filename, lineno, cline);
