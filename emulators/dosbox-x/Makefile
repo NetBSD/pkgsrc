@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2020/03/08 16:49:25 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2020/03/13 09:37:45 nia Exp $
 
 DISTNAME=	dosbox-x-0.83.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joncampbell123/}
 GITHUB_TAG=	dosbox-x-v${PKGVERSION_NOREV}
@@ -37,8 +37,8 @@ CONFIGURE_ARGS+=	--enable-sdl2
 
 .if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
 CONFIGURE_ARGS+=	--disable-dynrec
-CONFIGURE_ARGS+=	--disable-fpu-x86
-CONFIGURE_ARGS+=	--disable-fpu-x64
+CONFIGURE_ARGS+=	--disable-fpu
+CONFIGURE_ARGS+=	--disable-unaligned-memory
 .else
 # LOG: Setting execute permission on the code cache has failed
 NOT_PAX_MPROTECT_SAFE+=	bin/dosbox-x
