@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.am,v 1.1 2020/03/13 15:12:41 ryoon Exp $
+
+--- Makefile.am.orig	2018-04-24 13:09:03.000000000 +0000
++++ Makefile.am
+@@ -147,7 +147,7 @@ check-translations:
+ 			RET=1;										\
+ 		fi;											\
+ 	done;												\
+-	if [ $$RET == 1 ] ; then exit 1; fi
++	if [ $$RET = 1 ] ; then exit 1; fi
+ 
+ update-translations: create-pot
+ 	@tx pull --all --force --skip
