@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2018/01/01 17:43:06 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/03/13 08:19:25 rillig Exp $
 #
 
+GITHUB_PROJECT=	checkperms
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	checkperms-1.12
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rillig/}
@@ -10,8 +12,6 @@ HOMEPAGE=	https://github.com/rillig/checkperms/
 COMMENT=	Check and correct file permissions
 LICENSE=	modified-bsd
 
-GITHUB_PROJECT=		checkperms
-GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 AUTO_MKDIRS=		yes
 
@@ -26,7 +26,7 @@ MAKE_FLAGS+=		CWARNFLAGS.clang=-Wno-error=missing-noreturn
 .include "../../mk/bsd.prefs.mk"
 
 # Avoid self-referential and circular dependencies.
-CHECK_PERMS=		no
+CHECK_PERMS_SKIP=	*
 IGNORE_CCACHE=		yes
 IGNORE_DISTCC=		yes
 
