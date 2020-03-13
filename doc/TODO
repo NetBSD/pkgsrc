@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19730 2020/03/13 10:18:52 wiz Exp $
+$NetBSD: TODO,v 1.19731 2020/03/13 17:59:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1139,7 +1139,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-browser-9.0.5
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.6
 	o ts-0.7.5
