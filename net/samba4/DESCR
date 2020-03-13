@@ -12,4 +12,7 @@ Samba is an important component to seamlessly integrate Linux/Unix
 Servers and Desktops into Active Directory environments. It can
 function both as a domain controller or as a regular domain member.
 
-This package tracks 4.x branch release.
+This package intends to provide the current stable version of samba
+within the 4.x series.  (As will all packages, it may of course
+sometimes contain an older stable release due to not being updated
+yet.)
