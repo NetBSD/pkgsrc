@@ -1,0 +1,78 @@
+$NetBSD: patch-build_Linux+BSD_portable_portable-utils.in,v 1.1 2020/03/13 07:46:11 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- build/Linux+BSD/portable/portable-utils.in.orig	2020-02-06 21:10:58.000000000 +0000
++++ build/Linux+BSD/portable/portable-utils.in
+@@ -51,7 +51,7 @@ EOF
+ function printVersion() {
+   local pretty=$(sed -rn "s|^Name=([^#]*)|\1|p" "${APPDIR}/mscore@MSCORE_INSTALL_SUFFIX@.desktop")
+   local long=$("${APPDIR}/bin/mscore@MSCORE_INSTALL_SUFFIX@" --long-version 2>&1 | tail -n 1)
+-  if [ "$1" == "centered" ]; then
++  if [ "$1" = "centered" ]; then
+     printf "%*s\n" "$(((${#pretty}+80)/2))" "$pretty"
+     printf "%*s\n" "$(((${#long}+80)/2))" "$long"
+     return
+@@ -62,7 +62,7 @@ function printVersion() {
+ 
+ function readYes() {
+   read -s -n 1 answer
+-  if [ "$answer" == "n" ] || [ "$answer" == "N" ] ; then
++  if [ "$answer" = "n" ] || [ "$answer" = "N" ] ; then
+     echo " N"
+     return 1
+   fi
+@@ -72,9 +72,9 @@ function readYes() {
+ 
+ function installResources() {
+   local interactive=""
+-  if [ "$2" == "-i" ]; then
++  if [ "$2" = "-i" ]; then
+     interactive=true
+-  elif [ "$1" == "-i" ]; then
++  elif [ "$1" = "-i" ]; then
+     interactive=true
+     shift
+   fi
+@@ -85,7 +85,7 @@ function installResources() {
+     local bin_str="PREFIX/bin"
+     local question="The default location might be better. Proceed anyway [Y/n]?"
+     local cancelled="Cancelled: rerun without a PREFIX to use the default."
+-  elif [ "${EUID}" == "0" ]; then
++  elif [ "${EUID}" = "0" ]; then
+     # Running as root (sudo)
+     local prefix="/usr/local"
+     local bin="$prefix/bin"
+@@ -198,12 +198,12 @@ EOF
+ }
+ 
+ function removeResources() {
+-  [ "$1" == "-i" ] && shift # ignore option. Remove is always interactive
++  [ "$1" = "-i" ] && shift # ignore option. Remove is always interactive
+   if [ "$1" != "" ]; then
+     # User specified a directory
+     prefix="$1"
+     echo -n "Remove resources from ${prefix} [Y/n]?"
+-  elif [ "${EUID}" == "0" ]; then
++  elif [ "${EUID}" = "0" ]; then
+     prefix=/usr/local
+     echo -n "Running as root. Remove MuseScore resources from '$prefix' for all users [Y/n]?"
+   else
+@@ -235,7 +235,7 @@ function checkDependencies() {
+ 
+   echo "AppImage contains ${num_exes} executables and ${num_libs} libraries." >&2
+ 
+-  if [ "$1" == "exes-only" ]; then
++  if [ "$1" = "exes-only" ]; then
+     echo "Checking dependencies for executables..." >&2
+     include_libs=""
+     num_includes="${num_exes}"
+@@ -317,7 +317,7 @@ $1. Things to check:
+   - do the files and/or directories exist?
+   - do you have the right privileges?
+ EOF
+-[ "$2" == "fatal" ] && echo "Error: $1. Terminating." && exit 1
++[ "$2" = "fatal" ] && echo "Error: $1. Terminating." && exit 1
+ }
+ 
+ main "$@" || exit 1
