@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/06/30 21:56:28 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/13 15:57:20 nia Exp $
 
 DISTNAME=	7kaa-music-2.15
 CATEGORIES=	games
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.7kfans.com/
 COMMENT=	Music files for use with 7KAA
 LICENSE=	7kaa-music-license
+
+DEPENDS+=	7kaa-[0-9]*:../../games/7kaa
 
 WRKSRC=		${WRKDIR}/7kaa-music
 
