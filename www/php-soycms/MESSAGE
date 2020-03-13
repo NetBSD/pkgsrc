@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2012/12/13 16:07:55 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2020/03/13 10:05:41 nia Exp $
 
 To use SOY CMS with Apache 2.4 and PHP 5.4, you will need to perform
 the following steps.
@@ -14,7 +14,7 @@ the following steps.
 
 3. Install MySQL database server.
 
-	# cd databases/mysql51-server
+	# cd databases/mysql57-server
 	# make install
 
 4. Start MySQL server, and setup MySQL server
