@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.211 2020/03/10 22:10:08 wiz Exp $
+# $NetBSD: Makefile,v 1.212 2020/03/13 15:16:00 tnn Exp $
 
 DISTNAME=	graphviz-2.40.1
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/stable/SOURCES/
 
@@ -11,6 +11,7 @@ COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
 LICENSE=	epl-v1.0
 
 CHECK_FILES_SKIP+=	${PREFIX}/lib/graphviz/config6
+CHECK_PORTABILITY_SKIP+=windows/*
 
 PRIVILEGED_STAGES+=	clean
 
