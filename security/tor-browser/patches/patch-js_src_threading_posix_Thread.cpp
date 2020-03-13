@@ -1,4 +1,4 @@
-$NetBSD: patch-js_src_threading_posix_Thread.cpp,v 1.1 2019/02/25 15:32:24 wiz Exp $
+$NetBSD: patch-js_src_threading_posix_Thread.cpp,v 1.2 2020/03/13 17:59:27 wiz Exp $
 
 Support SunOS.
 
