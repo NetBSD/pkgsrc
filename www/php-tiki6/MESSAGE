@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2018/01/01 10:23:09 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2020/03/13 10:05:42 nia Exp $
 
 To use tiki with Apache, you will need to perform the following steps.
 
@@ -13,7 +13,7 @@ To use tiki with Apache, you will need to perform the following steps.
 
 3. Install MySQL database server.
 
-	# cd databases/mysql51-server
+	# cd databases/mysql57-server
 	# make install
 
 4. Start MySQL server, and setup MySQL server
