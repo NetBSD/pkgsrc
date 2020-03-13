@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1537 2020/03/13 09:50:15 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1538 2020/03/13 10:08:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2110,3 +2110,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed math/arpack successor math/arpack-ng [plunky 2020-03-13]
 	Updated databases/redis to 5.0.8 [adam 2020-03-13]
 	Updated net/libcares to 1.16.0 [adam 2020-03-13]
+	Removed databases/mysql51-client successor databases/mysql57-client [nia 2020-03-13]
+	Removed databases/mysql51-server successor databases/mysql57-server [nia 2020-03-13]
