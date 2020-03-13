@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1544 2020/03/13 11:58:40 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1545 2020/03/13 13:08:57 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2118,3 +2118,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/bulk-medium to 20200313 [nia 2020-03-13]
 	Updated meta-pkgs/bulk-large to 20200313 [nia 2020-03-13]
 	Removed chat/jabberd successor chat/jabberd2 [nia 2020-03-13]
+	Updated geography/osm2pgsql to 1.2.1 [gdt 2020-03-13]
