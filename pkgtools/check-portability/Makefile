@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/03/12 08:42:34 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/13 08:17:18 rillig Exp $
 
 PKGNAME=	check-portability-19.4.1
 CATEGORIES=	pkgtools
@@ -9,14 +9,14 @@ HOMEPAGE=	# none
 COMMENT=	Check extracted files for typical portability issues
 LICENSE=	2-clause-bsd
 
-USE_TOOLS+=		pax
-CHECK_PORTABILITY_SKIP=	testdata/*
+USE_TOOLS+=		cp
+CHECK_PORTABILITY_SKIP=	* # avoid circular dependency
+CHECK_PERMS_SKIP=	* # avoid circular dependency
 USE_LANGUAGES=		c99
 USE_BSD_MAKEFILE=	yes
 AUTO_MKDIRS=		yes
 
 do-extract:
-	mkdir ${WRKSRC}
-	cd ${FILESDIR} && ${PAX} -rw . ${WRKSRC}
+	cd ${FILESDIR} && ${CP} -R . ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
