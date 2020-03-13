@@ -1,0 +1,15 @@
+$NetBSD: patch-plug-ins_pygimp_py-compile,v 1.1 2020/03/13 16:51:00 tnn Exp $
+
+shell portability
+
+--- plug-ins/pygimp/py-compile.orig	2018-07-04 11:00:26.000000000 +0000
++++ plug-ins/pygimp/py-compile
+@@ -2,7 +2,7 @@
+ # called as "py-compile [--basedir DIR] PY_FILES ...
+ 
+ if [ -z "$PYTHON" ]; then
+-    if [[ -x "$(command -v python2)" ]]; then
++    if [ -x "$(command -v python2)" ]; then
+         PYTHON=python2
+     else
+         # Let's hope it's Python2
