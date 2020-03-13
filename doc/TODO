@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19729 2020/03/12 07:36:30 wiz Exp $
+$NetBSD: TODO,v 1.19730 2020/03/13 10:18:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1129,7 +1129,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tetrinetx-1.40c
 	o tfmxplay-1.1.6
 	o tig-2.2
-	o tigervnc-1.10.1
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tinc-1.0.33
