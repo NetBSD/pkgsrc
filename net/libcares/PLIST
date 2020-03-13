@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/05/31 08:09:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2020/03/13 09:49:41 adam Exp $
 bin/acountry
 bin/adig
 bin/ahost
@@ -7,14 +7,18 @@ include/ares_build.h
 include/ares_dns.h
 include/ares_rules.h
 include/ares_version.h
+lib/cmake/c-ares/c-ares-config-version.cmake
 lib/cmake/c-ares/c-ares-config.cmake
 lib/cmake/c-ares/c-ares-targets-noconfig.cmake
 lib/cmake/c-ares/c-ares-targets.cmake
 lib/libcares.so
 lib/libcares.so.2
-lib/libcares.so.2.3.0
+lib/libcares.so.2.4.0
 lib/libcares_static.a
 lib/pkgconfig/libcares.pc
+man/man1/acountry.1
+man/man1/adig.1
+man/man1/ahost.1
 man/man3/ares_cancel.3
 man/man3/ares_create_query.3
 man/man3/ares_destroy.3
@@ -26,8 +30,10 @@ man/man3/ares_fds.3
 man/man3/ares_free_data.3
 man/man3/ares_free_hostent.3
 man/man3/ares_free_string.3
+man/man3/ares_freeaddrinfo.3
 man/man3/ares_get_servers.3
 man/man3/ares_get_servers_ports.3
+man/man3/ares_getaddrinfo.3
 man/man3/ares_gethostbyaddr.3
 man/man3/ares_gethostbyname.3
 man/man3/ares_gethostbyname_file.3
