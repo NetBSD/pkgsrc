@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.18 2020/03/13 08:04:08 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.19 2020/03/13 08:11:36 rillig Exp $
 #
 # This program checks all files in the current directory and any
 # subdirectories for portability issues that are likely to result in
@@ -20,8 +20,18 @@ cs_setprogname "$0"
 
 # usage: check_shell <fname>
 check_shell() {
-	${PREFIX}/bin/check-portability "$1" 1>&2 \
+	env \
+		CK_FNAME="$1" \
+		CK_PROGNAME="check-portability.awk" \
+		awk	-f "$checkdir/check-subr.awk" \
+			-f "$checkdir/check-portability.awk" \
+		< "$1" 1>&2 \
 	|| cs_exitcode=1
+
+	if test -f "${PREFIX}/bin/check-portability"; then
+		${PREFIX}/bin/check-portability "$1" 1>&2 \
+		|| cs_exitcode=1
+	fi
 }
 
 find ./* -type f -print 2>/dev/null \
