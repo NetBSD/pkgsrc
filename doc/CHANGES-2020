@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1540 2020/03/13 10:18:52 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1541 2020/03/13 10:30:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2114,3 +2114,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed databases/mysql51-server successor databases/mysql57-server [nia 2020-03-13]
 	Updated misc/khard to 0.15.1nb1 [wiz 2020-03-13]
 	Updated net/tigervnc to 1.10.1 [wiz 2020-03-13]
+	Updated net/tigervnc to 1.10.1nb1 [wiz 2020-03-13]
