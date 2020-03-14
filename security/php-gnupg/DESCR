@@ -1,0 +1,5 @@
+PHP module for interacting with gnupg.
+https://www.php.net/manual/en/book.gnupg
+
+The extension supports only gnupg version 1 and the version 2 is not
+currently supported.
