@@ -1,0 +1,7 @@
+This PHP extension supports only gnupg version 1.
+
+This can be achieved by setting:
+
+	PKG_OPTIONS.gpgme+=gnupg1
+
+inside /etc/mk.conf, and then reinstall gpgme package.

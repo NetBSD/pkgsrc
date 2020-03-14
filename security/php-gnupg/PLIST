@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/03/14 04:40:47 tpaul Exp $
+lib/php/20191128/gnupg.so
+share/examples/php/gnupg.ini
+@pkgdir include/php/ext/gnupg
