@@ -1,4 +1,4 @@
-# $NetBSD: pkg-build-options.mk,v 1.13 2020/03/14 10:32:30 rillig Exp $
+# $NetBSD: pkg-build-options.mk,v 1.14 2020/03/14 11:56:29 rillig Exp $
 #
 # This procedure determines the PKG_OPTIONS that have been in effect
 # when the package ${pkgbase} has been built. When the package is not
@@ -14,7 +14,7 @@
 #		The build options of the package.
 #
 # Example:
-#	.include "../../emulators/wine/buildlink3.mk"
+#	# in emulators/wine/options.mk
 #	pkgbase := wine
 #	.include "../../mk/pkg-build-options.mk"
 #
