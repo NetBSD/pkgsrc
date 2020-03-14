@@ -1,0 +1,7 @@
+#!/bin/sh
+
+PREFIX="@PREFIX@"
+BINDIR="$PREFIX/bin"
+DATADIR="$PREFIX/share"
+
+"$BINDIR/php" "$DATADIR/php/composer.phar" $@
