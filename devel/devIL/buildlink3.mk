@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2020/03/14 00:22:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2020/03/14 00:27:03 wiz Exp $
 
 BUILDLINK_TREE+=	devIL
 
@@ -12,7 +12,6 @@ BUILDLINK_PKGSRCDIR.devIL?=	../../devel/devIL
 pkgbase := devIL
 .include "../../mk/pkg-build-options.mk"
 
-.include "../../mk/pkg-build-options.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.devIL:Mjasper)
