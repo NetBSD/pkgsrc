@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.593 2020/03/11 18:45:51 nia Exp $
+# $NetBSD: Makefile,v 1.594 2020/03/14 08:01:32 jperkin Exp $
 
 COMMENT=	Databases
 
@@ -104,8 +104,6 @@ SUBDIR+=	myodbc
 SUBDIR+=	mysql-cluster
 SUBDIR+=	mysql-connector-c++
 SUBDIR+=	mysql-workbench
-SUBDIR+=	mysql51-client
-SUBDIR+=	mysql51-server
 SUBDIR+=	mysql55-client
 SUBDIR+=	mysql55-server
 SUBDIR+=	mysql56-client
