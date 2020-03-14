@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.414 2020/03/10 22:11:09 wiz Exp $
+# $NetBSD: Makefile,v 1.415 2020/03/14 04:49:16 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		73.0
-MOZ_BRANCH_MINOR=	.1
+MOZ_BRANCH=		74.0
+MOZ_BRANCH_MINOR=	
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
-PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
+HOMEPAGE=	https://www.mozilla.org/en-US/firefox/
 COMMENT=	Web browser with support for extensions (version ${FIREFOX_VER:C/\..*//})
 LICENSE=	mpl-1.1
 
