@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.10 2020/03/14 09:18:49 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.11 2020/03/14 09:47:09 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -288,7 +288,7 @@ explain_how_to_fix(void)
 }
 
 static size_t
-index_opening_bracket(cstr s)
+index_opening_brackets(cstr s)
 {
 	size_t index = cstr_index(s, CSTR("[["));
 	if (index == npos)
@@ -301,7 +301,7 @@ index_opening_bracket(cstr s)
 }
 
 static size_t
-index_closing_bracket(cstr s)
+index_closing_brackets(cstr s)
 {
 	size_t index = cstr_index(s, CSTR("]]"));
 	if (index == npos)
@@ -329,12 +329,12 @@ checkline_sh_double_brackets(cstr filename, size_t lineno, cstr line)
 	if (is_shell_comment(line))
 		return;
 
-	size_t opening_index = index_opening_bracket(line);
+	size_t opening_index = index_opening_brackets(line);
 	if (opening_index == npos)
 		return;
 
 	cstr suffix = cstr_substr(line, opening_index, line.len);
-	size_t closing_index = index_closing_bracket(suffix);
+	size_t closing_index = index_closing_brackets(suffix);
 	if (closing_index == npos)
 		return;
 
