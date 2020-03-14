@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1560 2020/03/14 09:19:03 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.1561 2020/03/14 11:28:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2133,3 +2133,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 74.0 [ryoon 2020-03-14]
 	Updated www/firefox-l10n to 74.0 [ryoon 2020-03-14]
 	Updated pkgtools/check-portability to 19.4.3 [rillig 2020-03-14]
+	Updated cross/cc65 to 2.18 [mef 2020-03-14]
