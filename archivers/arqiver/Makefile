@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/03/10 22:09:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/14 22:26:26 gutteridge Exp $
 
-DISTNAME=	Arqiver-V0.3.2
-PKGNAME=	arqiver-0.3.2
-PKGREVISION=	3
+VERSION=	0.4.0
+DISTNAME=	Arqiver-V${VERSION}
+PKGNAME=	arqiver-${VERSION}
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/tsujan/Arqiver/
 COMMENT=	Simple Qt5 archive manager
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/Arqiver-0.3.2
+WRKSRC=		${WRKDIR}/Arqiver-${VERSION}
 USE_LANGUAGES=	c++
 USE_TOOLS+=	pkg-config bsdtar:run gzip:run 7za:run
 
