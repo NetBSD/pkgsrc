@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2019/08/11 13:18:17 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/14 11:13:20 mef Exp $
 #
 
-DISTNAME=	cc65-2.17
+DISTNAME=	cc65-2.18
 PKGNAME=	${DISTNAME:S/-sources//}
-PKGREVISION=	1
 CATEGORIES=	cross lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cc65/}
 GITHUB_PROJECT=	cc65
