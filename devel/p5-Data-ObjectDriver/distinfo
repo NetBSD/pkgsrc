@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/10/15 13:53:58 mef Exp $
+$NetBSD: distinfo,v 1.5 2020/03/14 12:45:41 mef Exp $
 
-SHA1 (Data-ObjectDriver-0.18.tar.gz) = 3d143c970b75e878a43a3bec585d2d2e92e22151
-RMD160 (Data-ObjectDriver-0.18.tar.gz) = ec47916a07340e213b79994909f68692013509a5
-SHA512 (Data-ObjectDriver-0.18.tar.gz) = 336277af2b26bc126023043c11300452c5bcfa14e71ea3d1f08b0faa34b78fe3f580384158e88088a8f5afb5bc6c3dad0f5113139f778fcfcbf9630821ea9944
-Size (Data-ObjectDriver-0.18.tar.gz) = 85362 bytes
+SHA1 (Data-ObjectDriver-0.19.tar.gz) = 008f5b1865e16738a307ae606e091a41abc176f8
+RMD160 (Data-ObjectDriver-0.19.tar.gz) = 28705d687b219cbe19beacf7e0e14b7f8f38a52c
+SHA512 (Data-ObjectDriver-0.19.tar.gz) = 317118c946da9e6e0b4ebbfc35af2ed82c3d083bbede06042ac988fcb29d2b3b7abba6834c7b42ea54a45c75340b2314e3bbacad1c047cc3512e74757c8d9ad1
+Size (Data-ObjectDriver-0.19.tar.gz) = 86523 bytes
