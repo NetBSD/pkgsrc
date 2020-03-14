@@ -1,18 +1,20 @@
-# $NetBSD: pkg-build-options.mk,v 1.12 2017/03/08 16:16:40 jperkin Exp $
+# $NetBSD: pkg-build-options.mk,v 1.13 2020/03/14 10:32:30 rillig Exp $
 #
 # This procedure determines the PKG_OPTIONS that have been in effect
 # when the package ${pkgbase} has been built. When the package is not
-# yet installed, the current PKG_OPTIONS are queried.
+# yet installed, its current PKG_OPTIONS are queried.
 #
 # Parameters:
 #	pkgbase
-#		The basename of the package.
+#		The package identifier, as in the package's buildlink3.mk
+#		file.
 #
 # Returns:
 #	PKG_BUILD_OPTIONS.${pkgbase}
 #		The build options of the package.
 #
 # Example:
+#	.include "../../emulators/wine/buildlink3.mk"
 #	pkgbase := wine
 #	.include "../../mk/pkg-build-options.mk"
 #
