@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1554 2020/03/14 03:23:18 fox Exp $
+$NetBSD: CHANGES-2020,v 1.1555 2020/03/14 04:30:10 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2128,3 +2128,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rust to 1.42.0 [jperkin 2020-03-13]
 	Updated chat/ircd-hybrid to 8.2.30 [fox 2020-03-14]
 	Updated audio/fasttracker2 to 1.12 [fox 2020-03-14]
+	Updated devel/php-composer to 1.10.1 [tpaul 2020-03-14]
