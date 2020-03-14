@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2020/03/10 22:09:17 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2020/03/14 00:03:19 gdt Exp $
 #
 
 .include "../../x11/wxGTK28/Makefile.common"
@@ -14,6 +14,9 @@ INSTALLATION_DIRS+=	${DOCDIR}
 INSTALLATION_DIRS+=	bin
 
 REPLACE_SH=		wx-config.in wx-config-inplace.in
+
+# We patch configure
+CHECK_PORTABILITY_SKIP+=	configure.in
 
 post-configure:
 	echo 'install_qadll: install_xmldll' >> ${WRKSRC}/build-unicode/Makefile
