@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1558 2020/03/14 04:50:30 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1559 2020/03/14 04:51:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2131,3 +2131,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/php-composer to 1.10.1 [tpaul 2020-03-14]
 	Added security/php-gnupg version 1.4.0 [tpaul 2020-03-14]
 	Updated www/firefox to 74.0 [ryoon 2020-03-14]
+	Updated www/firefox-l10n to 74.0 [ryoon 2020-03-14]
