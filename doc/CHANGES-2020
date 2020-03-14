@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1552 2020/03/13 18:35:03 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.1553 2020/03/14 02:52:56 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2126,3 +2126,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/filezilla to 3.47.2.1 [mef 2020-03-13]
 	Updated security/tor-browser to 9.0.6 [wiz 2020-03-13]
 	Updated lang/rust to 1.42.0 [jperkin 2020-03-13]
+	Updated chat/ircd-hybrid to 8.2.30 [fox 2020-03-14]
