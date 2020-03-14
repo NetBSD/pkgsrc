@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/02/08 13:09:35 fox Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/03/14 02:52:35 fox Exp $
 bin/ircd
 bin/ircd-hybrid-mkpasswd
 lib/ircd-hybrid/modules/autoload/m_accept.la
@@ -109,6 +109,7 @@ share/ircd-hybrid/help/connect
 share/ircd-hybrid/help/die
 share/ircd-hybrid/help/dline
 share/ircd-hybrid/help/etrace
+share/ircd-hybrid/help/extban
 share/ircd-hybrid/help/hash
 share/ircd-hybrid/help/help
 share/ircd-hybrid/help/index
