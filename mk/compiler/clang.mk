@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.21 2019/07/15 16:06:19 ryoon Exp $
+# $NetBSD: clang.mk,v 1.22 2020/03/14 10:00:37 nia Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -84,7 +84,11 @@ _LANGUAGES.clang=	# empty
 _LANGUAGES.clang+=	${LANGUAGES.clang:M${_lang_}}
 .endfor
 
+.if !empty(MACHINE_ARCH:Maarch64*)
+PKGSRC_FORTRAN?=gfortran
+.else
 PKGSRC_FORTRAN?=g95
+.endif
 
 .if !empty(PKGSRC_FORTRAN) && (!empty(USE_LANGUAGES:Mfortran) || !empty(USE_LANGUAGES:Mfortran77))
 .  include "../../mk/compiler/${PKGSRC_FORTRAN}.mk"
