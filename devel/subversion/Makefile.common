@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2020/01/18 23:30:42 rillig Exp $
+# $NetBSD: Makefile.common,v 1.44 2020/03/14 14:13:02 tnn Exp $
 # used by devel/java-subversion/Makefile
 # used by devel/p5-subversion/Makefile
 # used by devel/py-subversion/Makefile
@@ -34,6 +34,9 @@ PATCHDIR=		${.CURDIR}/../../devel/subversion/patches
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+CHECK_PORTABILITY_SKIP+=	subversion/tests/*		# test suite
+CHECK_PORTABILITY_SKIP+=	tools/dev/iz/ff2csv.command	# unused
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/subversion-base/options.mk"
