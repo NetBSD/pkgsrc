@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/05/19 03:41:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/03/14 11:15:03 mef Exp $
 bin/ar65
 bin/ca65
 bin/cc65
@@ -13,6 +13,7 @@ bin/sim65
 bin/sp65
 share/cc65/asminc/_file.inc
 share/cc65/asminc/_heap.inc
+share/cc65/asminc/accelerator.inc
 share/cc65/asminc/apple2.inc
 share/cc65/asminc/apple2.mac
 share/cc65/asminc/atari.inc
@@ -32,6 +33,7 @@ share/cc65/asminc/cbm.mac
 share/cc65/asminc/cbm510.inc
 share/cc65/asminc/cbm610.inc
 share/cc65/asminc/cbm_filetype.inc
+share/cc65/asminc/cbm_kernal.inc
 share/cc65/asminc/cpu.mac
 share/cc65/asminc/creativision.inc
 share/cc65/asminc/ctype.inc
@@ -79,15 +81,18 @@ share/cc65/cfg/apple2enh-hgr.cfg
 share/cc65/cfg/apple2enh-overlay.cfg
 share/cc65/cfg/apple2enh-system.cfg
 share/cc65/cfg/apple2enh.cfg
+share/cc65/cfg/atari-asm-xex.cfg
 share/cc65/cfg/atari-asm.cfg
 share/cc65/cfg/atari-cart.cfg
 share/cc65/cfg/atari-cassette.cfg
 share/cc65/cfg/atari-overlay.cfg
+share/cc65/cfg/atari-xex.cfg
 share/cc65/cfg/atari.cfg
 share/cc65/cfg/atari2600.cfg
 share/cc65/cfg/atari5200.cfg
 share/cc65/cfg/atarixl-largehimem.cfg
 share/cc65/cfg/atarixl-overlay.cfg
+share/cc65/cfg/atarixl-xex.cfg
 share/cc65/cfg/atarixl.cfg
 share/cc65/cfg/atmos.cfg
 share/cc65/cfg/bbc.cfg
@@ -133,6 +138,7 @@ share/cc65/include/_6526.h
 share/cc65/include/_6545.h
 share/cc65/include/_6551.h
 share/cc65/include/_antic.h
+share/cc65/include/_atarios.h
 share/cc65/include/_gtia.h
 share/cc65/include/_heap.h
 share/cc65/include/_mikey.h
@@ -147,6 +153,7 @@ share/cc65/include/_tia.h
 share/cc65/include/_vdc.h
 share/cc65/include/_vic.h
 share/cc65/include/_vic2.h
+share/cc65/include/accelerator.h
 share/cc65/include/apple2.h
 share/cc65/include/apple2_filetype.h
 share/cc65/include/apple2enh.h
@@ -165,6 +172,8 @@ share/cc65/include/cbm264.h
 share/cc65/include/cbm510.h
 share/cc65/include/cbm610.h
 share/cc65/include/cbm_filetype.h
+share/cc65/include/cbm_petscii_charmap.h
+share/cc65/include/cbm_screen_charmap.h
 share/cc65/include/cc65.h
 share/cc65/include/conio.h
 share/cc65/include/creativision.h
@@ -221,6 +230,7 @@ share/cc65/include/stdio.h
 share/cc65/include/stdlib.h
 share/cc65/include/string.h
 share/cc65/include/supervision.h
+share/cc65/include/sys/stat.h
 share/cc65/include/sys/types.h
 share/cc65/include/sys/utsname.h
 share/cc65/include/target.h
@@ -239,6 +249,7 @@ share/cc65/lib/apple2enh-iobuf-0800.o
 share/cc65/lib/apple2enh.lib
 share/cc65/lib/atari.lib
 share/cc65/lib/atari2600.lib
+share/cc65/lib/atari5200-conioscreen-20x12.o
 share/cc65/lib/atari5200.lib
 share/cc65/lib/atarixl.lib
 share/cc65/lib/atmos.lib
@@ -397,6 +408,7 @@ share/cc65/target/c128/drv/mou/c128-inkwell.mou
 share/cc65/target/c128/drv/mou/c128-joy.mou
 share/cc65/target/c128/drv/mou/c128-pot.mou
 share/cc65/target/c128/drv/ser/c128-swlink.ser
+share/cc65/target/c128/drv/tgi/c128-hi.tgi
 share/cc65/target/c128/drv/tgi/c128-vdc.tgi
 share/cc65/target/c128/drv/tgi/c128-vdc2.tgi
 share/cc65/target/c16/drv/emd/c16-ram.emd
@@ -447,5 +459,7 @@ share/cc65/target/plus4/drv/ser/plus4-stdser.ser
 share/cc65/target/supervision/drv/joy/supervision-stdjoy.joy
 share/cc65/target/telestrat/drv/tgi/telestrat-228-200-3.tgi
 share/cc65/target/telestrat/drv/tgi/telestrat-240-200-2.tgi
+share/cc65/target/vic20/drv/emd/vic20-georam.emd
+share/cc65/target/vic20/drv/emd/vic20-rama.emd
 share/cc65/target/vic20/drv/joy/vic20-ptvjoy.joy
 share/cc65/target/vic20/drv/joy/vic20-stdjoy.joy
