@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/03/08 16:47:30 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/14 13:00:03 rillig Exp $
 
 DISTNAME=	MoarVM-2020.02.1
 PKGREVISION=	1
@@ -24,6 +24,9 @@ CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 			--has-libffi \
 			--has-libuv \
 			--has-libtommath
+
+# The [[ is only used for producing a release.
+CHECK_PORTABILITY_SKIP+=	build/Makefile.in
 
 .include "../../mk/bsd.prefs.mk"
 
