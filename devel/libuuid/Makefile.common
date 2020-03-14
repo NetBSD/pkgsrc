@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2019/11/03 10:39:19 rillig Exp $
+# $NetBSD: Makefile.common,v 1.7 2020/03/14 09:59:01 roy Exp $
 # used by devel/libblkid/Makefile
 # used by devel/libuuid/Makefile
 # used by x11/mcookie/Makefile
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--disable-all-programs
 CONFIGURE_ARGS+=	--disable-bash-completion
 CONFIGURE_ARGS+=	--without-ncurses
 CONFIGURE_ARGS+=	--without-ncursesw
+CONFIGURE_ARGS+=	--without-python
 
 # netbsd libintl lacks _nl_expand_alias, resulting in NLS being
 # disabled. for consistency, disable for all
