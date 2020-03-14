@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.747 2020/03/12 16:34:05 nia Exp $
+# $NetBSD: Makefile,v 1.748 2020/03/14 04:42:12 tpaul Exp $
 #
 
 COMMENT=	Security tools
@@ -369,6 +369,7 @@ SUBDIR+=	pgp2
 SUBDIR+=	pgp5
 SUBDIR+=	pgpdump
 SUBDIR+=	pgpenvelope
+SUBDIR+=	php-gnupg
 SUBDIR+=	php-mcrypt
 SUBDIR+=	php-oauth
 SUBDIR+=	php-oauth1
