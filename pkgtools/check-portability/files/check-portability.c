@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.9 2020/03/13 16:43:05 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.10 2020/03/14 09:18:49 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -171,8 +171,7 @@ typedef struct {
 static cstr
 str_c(str *s)
 {
-	assert(s->data != nullptr);
-	return (cstr) { s->data, s->len };
+	return (cstr) { s->data == nullptr ? "" : s->data, s->len };
 }
 
 static void
