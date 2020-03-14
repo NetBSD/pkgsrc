@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1562 2020/03/14 12:49:06 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1563 2020/03/14 13:43:45 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2136,3 +2136,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated cross/cc65 to 2.18 [mef 2020-03-14]
 	Updated devel/p5-Alien-Build to 2.12 [mef 2020-03-14]
 	Updated devel/p5-Data-ObjectDriver to 0.19 [mef 2020-03-14]
+	Updated net/unifi to 5.12.35 [gdt 2020-03-14]
