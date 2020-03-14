@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2020/03/14 10:21:53 nia Exp $
+qt5/plugins/kf5/sonnet/sonnet_nsspellchecker.so
