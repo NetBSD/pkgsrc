@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1563 2020/03/14 13:43:45 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.1564 2020/03/14 22:18:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2137,3 +2137,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Alien-Build to 2.12 [mef 2020-03-14]
 	Updated devel/p5-Data-ObjectDriver to 0.19 [mef 2020-03-14]
 	Updated net/unifi to 5.12.35 [gdt 2020-03-14]
+	Updated editors/featherpad to 0.13.1 [gutteridge 2020-03-14]
