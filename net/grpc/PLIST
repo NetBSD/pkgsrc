@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/02/06 20:13:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/03/15 22:27:52 adam Exp $
 bin/grpc_cpp_plugin
 bin/grpc_csharp_plugin
 bin/grpc_node_plugin
@@ -288,11 +288,11 @@ lib/cmake/grpc/gRPCTargets-noconfig.cmake
 lib/cmake/grpc/gRPCTargets.cmake
 lib/cmake/grpc/modules/Findc-ares.cmake
 lib/libaddress_sorting.so
-lib/libaddress_sorting.so.${PKGVERSION}
-lib/libaddress_sorting.so.1
+lib/libaddress_sorting.so.9
+lib/libaddress_sorting.so.9.0.0
 lib/libgpr.so
-lib/libgpr.so.${PKGVERSION}
-lib/libgpr.so.1
+lib/libgpr.so.9
+lib/libgpr.so.9.0.0
 lib/libgrpc++.so
 lib/libgrpc++.so.${PKGVERSION}
 lib/libgrpc++.so.1
@@ -309,26 +309,23 @@ lib/libgrpc++_unsecure.so
 lib/libgrpc++_unsecure.so.${PKGVERSION}
 lib/libgrpc++_unsecure.so.1
 lib/libgrpc.so
-lib/libgrpc.so.${PKGVERSION}
-lib/libgrpc.so.1
+lib/libgrpc.so.9
+lib/libgrpc.so.9.0.0
 lib/libgrpc_cronet.so
-lib/libgrpc_cronet.so.${PKGVERSION}
-lib/libgrpc_cronet.so.1
-lib/libgrpc_csharp_ext.so
-lib/libgrpc_csharp_ext.so.${PKGVERSION}
-lib/libgrpc_csharp_ext.so.1
+lib/libgrpc_cronet.so.9
+lib/libgrpc_cronet.so.9.0.0
 lib/libgrpc_plugin_support.so
 lib/libgrpc_plugin_support.so.${PKGVERSION}
 lib/libgrpc_plugin_support.so.1
 lib/libgrpc_unsecure.so
-lib/libgrpc_unsecure.so.${PKGVERSION}
-lib/libgrpc_unsecure.so.1
+lib/libgrpc_unsecure.so.9
+lib/libgrpc_unsecure.so.9.0.0
 lib/libgrpcpp_channelz.so
 lib/libgrpcpp_channelz.so.${PKGVERSION}
 lib/libgrpcpp_channelz.so.1
 lib/libupb.so
-lib/libupb.so.${PKGVERSION}
-lib/libupb.so.1
+lib/libupb.so.9
+lib/libupb.so.9.0.0
 lib/pkgconfig/gpr.pc
 lib/pkgconfig/grpc++.pc
 lib/pkgconfig/grpc++_unsecure.pc
