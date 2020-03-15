@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19733 2020/03/15 10:14:41 wiz Exp $
+$NetBSD: TODO,v 1.19734 2020/03/15 16:03:44 nia Exp $
 
 Suggested new packages
 ======================
@@ -1187,7 +1187,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o warmux-11.04.1
-	o wayland-1.18
 	o wcalc-2.4
 	o webalizer-2.23.05
 	o websvn-2.3.3
