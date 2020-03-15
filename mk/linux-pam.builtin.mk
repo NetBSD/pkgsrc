@@ -1,4 +1,4 @@
-# $NetBSD: linux-pam.builtin.mk,v 1.1 2014/06/10 13:52:57 joerg Exp $
+# $NetBSD: linux-pam.builtin.mk,v 1.2 2020/03/15 23:03:03 rillig Exp $
 
 BUILTIN_PKG:=	linux-pam
 
@@ -62,9 +62,9 @@ BUILDLINK_TARGETS+=	buildlink-pam-security
 .  if !target(buildlink-pam-security)
 .PHONY: buildlink-pam-security
 buildlink-pam-security:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	src=${BUILDLINK_PREFIX.linux-pam:Q}"/include/pam";		\
-	dest=${BUILDLINK_DIR:Q}"/include/security";			\
+	${RUN}								\
+	src=${BUILDLINK_PREFIX.linux-pam}"/include/pam";		\
+	dest=${BUILDLINK_DIR}"/include/security";			\
 	if ${TEST} -d "$$src"; then					\
 		${RM} -fr "$$dest";					\
 		${LN} -fs "$$src" "$$dest";				\
