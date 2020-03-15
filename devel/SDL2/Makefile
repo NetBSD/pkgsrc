@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2020/03/08 16:47:30 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2020/03/15 21:09:47 nia Exp $
 
 DISTNAME=	SDL2-2.0.10
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -21,6 +21,9 @@ CONFIGURE_ENV+=	SDL_RLD_FLAGS="${COMPILER_RPATH_FLAG}${PREFIX}/lib \
 
 CONFIGURE_ARGS+=	--disable-esd
 CONFIGURE_ARGS+=	--disable-x11-shared
+
+# Use audio(4) over ossaudio(4) on NetBSD.
+CONFIGURE_ARGS.NetBSD+=	--disable-oss
 
 CHECK_PORTABILITY_SKIP+=	build-scripts/androidbuildlibs.sh
 CHECK_PORTABILITY_SKIP+=	build-scripts/iosbuild.sh
