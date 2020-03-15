@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2020/02/13 14:15:26 mef Exp $
+$NetBSD: distinfo,v 1.9 2020/03/15 21:01:47 tnn Exp $
 
 SHA1 (openldap-2.4.49.tgz) = f0caeca122e6f90e6ac5cc8ba36fe9cec13826da
 RMD160 (openldap-2.4.49.tgz) = c09ca490e1f815e2aea799b1edd340e904233ea0
 SHA512 (openldap-2.4.49.tgz) = 99d1943d126b06e62865e31e5825fcff2cb15415f7f85ae4962fa0e7425bc3b58db5b9639150d7b09e3642c80257724c745e47c25ab4fcb1bba0ba771011dd49
 Size (openldap-2.4.49.tgz) = 5704723 bytes
-SHA1 (patch-libraries_liblmdb_Makefile) = 6b2f0bb477b17b073095d499ff4496f3b30dc08f
+SHA1 (patch-libraries_liblmdb_Makefile) = 4dd8ed43169e5615b416e7e0696dd3b16e784282
