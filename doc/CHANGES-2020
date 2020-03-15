@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1589 2020/03/15 16:24:30 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1590 2020/03/15 16:29:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2161,3 +2161,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/wayland-protocols to 1.20 [nia 2020-03-15]
 	Updated wm/swc to 0.0.0.20200228 [nia 2020-03-15]
 	Updated devel/ruby-redmine-flatly-light-theme to 0.2.4 [taca 2020-03-15]
+	Updated devel/ruby-redmine-gitmike-theme to 1.2.0 [taca 2020-03-15]
