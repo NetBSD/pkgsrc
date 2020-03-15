@@ -673,6 +673,7 @@ rtree			Enable R-tree support.
 ruby			Enable Ruby support.
 ruby-build-ri-db	Build and install database for Ruby's ri utility.
 rust			Enable Rust support.
+rust-llvm		Use Rust internal LLVM in builds.
 samba			Enable Samba file and print services support.
 samplerate		Enable libsamplerate support.
 sane			Enable support for SANE scanners.
