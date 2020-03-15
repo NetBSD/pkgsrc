@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.15 2020/03/13 10:30:47 wiz Exp $
+$NetBSD: distinfo,v 1.16 2020/03/15 11:54:12 wiz Exp $
 
 SHA1 (tigervnc-1.10.1.tar.gz) = 34efc6e2e67be672dca38c10ce064bcb08adee9f
 RMD160 (tigervnc-1.10.1.tar.gz) = 42e17e14d2780e1d6bc2c7a4f89145e50f630706
 SHA512 (tigervnc-1.10.1.tar.gz) = 3486ff772d39217feb8c075860cae58e1021bdb8095443d8b5c383929cc6c622b57ea61c31d06ff0bd48c7e6889db4b6a99d0742bdd60edf323fb2a3ad328705
 Size (tigervnc-1.10.1.tar.gz) = 1408105 bytes
-SHA1 (xorg-server-1.19.6.tar.bz2) = 2dd560ac49bdbda7f67166546af43541fabf517f
-RMD160 (xorg-server-1.19.6.tar.bz2) = c2b6f9fe3957c99cddd44bc3ae38343a1c4f314e
-SHA512 (xorg-server-1.19.6.tar.bz2) = 38519a8d0af9dd034045fc346959496dd718fa59b6188307974797a1cd9c349deb54987f6232ea8396baf810dcc710c0ff191f76ed2186cae4d44921b3680412
-Size (xorg-server-1.19.6.tar.bz2) = 5984528 bytes
+SHA1 (xorg-server-1.17.2.tar.bz2) = 56ac29a82b99bcf4c7ba2fca41a44cfa18748262
+RMD160 (xorg-server-1.17.2.tar.bz2) = bf575a269f1e7b729992a20989be84e09fcc88a2
+SHA512 (xorg-server-1.17.2.tar.bz2) = 7e7b7620890cc8db696695758fa22fa879f9d3c33946663611ec0b37f02116e9c6f08779f9eece59907b430d3df93f0c0548939683ea156b3c4cbe02571b7551
+Size (xorg-server-1.17.2.tar.bz2) = 5767983 bytes
 SHA1 (patch-CMakeLists.txt) = 42a364f898784a9c4da46bea8ef6bc37838815b9
 SHA1 (patch-media_CMakeLists.txt) = cd50f9b7a9405aa523412ef823a32437a3c19ffa
 SHA1 (patch-unix_vncserver) = 9c71ad02c6657f537bcb2abaa116a831b555d7c0
