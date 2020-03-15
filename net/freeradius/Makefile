@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2020/01/18 21:50:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.105 2020/03/15 22:45:36 tnn Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -214,4 +214,5 @@ TEST_MAKE_FLAGS+=	EAPOL_TEST=""
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/*.a ${DESTDIR}${PREFIX}/lib/*.la
 
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
