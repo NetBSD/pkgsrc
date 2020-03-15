@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1566 2020/03/15 05:35:54 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.1567 2020/03/15 10:30:51 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2140,3 +2140,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/featherpad to 0.13.1 [gutteridge 2020-03-14]
 	Updated archivers/arqiver to 0.4.0 [gutteridge 2020-03-14]
 	Updated x11/xfce4-whiskermenu-plugin to 2.4.3 [gutteridge 2020-03-15]
+	Updated sysutils/py-borgbackup to 1.1.11 [bsiegert 2020-03-15]
