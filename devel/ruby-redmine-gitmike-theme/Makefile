@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/09/16 19:26:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/03/15 16:28:26 taca Exp $
 
-GITHUB_TAG=	v1.1.0
+GITHUB_TAG=	v1.2.0
 DISTNAME=	${GITHUB_TAG}
 GITHUB_PROJECT=	redmine-theme-gitmike
 PKGNAME=	${RUBY_PKGPREFIX}-redmine-gitmike-theme-${DISTNAME:S/v//1}
