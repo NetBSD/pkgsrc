@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1591 2020/03/15 16:57:11 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1592 2020/03/15 16:59:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2164,3 +2164,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-redmine-gitmike-theme to 1.2.0 [taca 2020-03-15]
 	Removed lang/ruby22 [taca 2020-03-15]
 	Removed lang/ruby22-base [taca 2020-03-15]
+	Removed x11/ruby-tk-gem [taca 2020-03-15]
