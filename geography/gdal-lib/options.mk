@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2019/11/03 19:30:33 rillig Exp $
+# $NetBSD: options.mk,v 1.5 2020/03/15 21:47:43 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdal-lib
 
 # Note that these are not a mutually-exclusive group.
-PKG_SUPPORTED_OPTIONS=	pgsql mysql sqlite
+PKG_SUPPORTED_OPTIONS=	pgsql mysql
 # By default, omit database support, because there isn't an
 # articulated use case and dependency management becomes very painful.
 # For example, depending on pgsql fixes a version, but doesn't put it
@@ -25,11 +25,4 @@ CONFIGURE_ARGS+=	--without-pg
 CONFIGURE_ARGS+=	--with-mysql
 .else
 CONFIGURE_ARGS+=	--without-mysql
-.endif
-
-.if !empty(PKG_OPTIONS:Msqlite)
-.  include "../../databases/sqlite3/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
-.else
-CONFIGURE_ARGS+=	--without-sqlite3
 .endif
