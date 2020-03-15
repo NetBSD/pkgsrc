@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.865 2020/03/15 00:26:10 uwe Exp $
+# $NetBSD: Makefile,v 1.866 2020/03/15 15:38:34 taca Exp $
 #
 
 COMMENT=	System utilities
@@ -536,6 +536,7 @@ SUBDIR+=	ruby-capistrano-harrow
 SUBDIR+=	ruby-capistrano-stats
 SUBDIR+=	ruby-chef
 SUBDIR+=	ruby-chef-config
+SUBDIR+=	ruby-chef-utils
 SUBDIR+=	ruby-chef-zero
 SUBDIR+=	ruby-childprocess
 SUBDIR+=	ruby-directory-watcher
