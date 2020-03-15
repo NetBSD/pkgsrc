@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1607 2020/03/15 19:56:51 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1608 2020/03/15 20:00:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2180,3 +2180,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/glib2 to 2.64.1 [wiz 2020-03-15]
 	Updated security/libsecret to 0.20.2 [wiz 2020-03-15]
 	Updated security/py-google-auth to 1.11.3 [wiz 2020-03-15]
+	Updated lang/vala to 0.48.1 [wiz 2020-03-15]
