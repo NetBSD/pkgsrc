@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2020/02/12 14:01:59 taca Exp $
+# $NetBSD: Makefile,v 1.104 2020/03/15 22:52:04 adam Exp $
 
 .include "../../mail/dovecot2/Makefile.common"
 
@@ -32,7 +32,8 @@ INSTALLATION_DIRS+=	share/examples/dovecot share/examples/dovecot/conf.d
 OWN_DIRS=		${PKG_SYSCONFDIR}/dovecot/
 OWN_DIRS+=		${PKG_SYSCONFDIR}/dovecot/conf.d
 
-REPLACE_BASH=		src/util/health-check.sh
+REPLACE_BASH+=		src/util/dovecot-sysreport
+REPLACE_BASH+=		src/util/health-check.sh
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-openssl.cnf ${DESTDIR}${EGDIR}
