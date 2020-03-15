@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/18 16:14:51 taca Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/15 17:21:21 taca Exp $
 
-DISTNAME=	protobuf-cucumber-3.10.4
+DISTNAME=	protobuf-cucumber-3.10.8
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
