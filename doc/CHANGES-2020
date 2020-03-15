@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1592 2020/03/15 16:59:28 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1593 2020/03/15 17:02:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2165,3 +2165,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed lang/ruby22 [taca 2020-03-15]
 	Removed lang/ruby22-base [taca 2020-03-15]
 	Removed x11/ruby-tk-gem [taca 2020-03-15]
+	Updated devel/ruby-rspec-expectations to 3.9.1 [taca 2020-03-15]
