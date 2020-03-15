@@ -320,6 +320,46 @@ func (s *Suite) Test_Package__case_insensitive(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+// This package has several identifiers that all differ:
+//  - it lives in the directory "package"
+//  - the package name is "pkgname"
+//  - it downloads "distname-1.0.tar.gz"
+//    (in some places the distname is used as the package name)
+//  - in options.mk its name is "optid"
+//  - in buildlink3.mk its name is "bl3id"
+// All these identifiers should ideally be the same.
+// For historic reasons, the package directory and the package name
+// may differ.
+func (s *Suite) Test_Package__different_package_identifiers(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"DISTNAME=\tdistname-1.0",
+		"PKGNAME=\tpkgname-1.0")
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.optid",
+		"PKG_SUPPORTED_OPTIONS=\t# none",
+		"",
+		".include \"../../mk/bsd.options.mk\"",
+		"",
+		"# Nothing to do here")
+	t.CreateFileBuildlink3Id("category/package/buildlink3.mk", "bl3id")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.checkdirPackage(".")
+
+	t.CheckOutputLines(
+		"ERROR: buildlink3.mk:3: Package name mismatch "+
+			"between \"bl3id\" in this file and \"pkgname\" from Makefile:4.",
+		"WARN: options.mk:3: The buildlink3 identifier \"bl3id\" "+
+			"should be the same as the options identifier \"optid\".")
+
+}
+
 func (s *Suite) Test_NewPackage(c *check.C) {
 	t := s.Init(c)
 

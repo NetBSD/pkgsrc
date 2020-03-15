@@ -219,7 +219,7 @@ func (s *Suite) Test_MkCondChecker_Check__comparing_PKGSRC_COMPILER_with_eqeq(c 
 func (s *Suite) Test_MkCondChecker_checkNotEmpty(c *check.C) {
 	t := s.Init(c)
 
-	G.Experimental = true
+	t.SetUpVartypes()
 
 	test := func(cond string, diagnostics ...string) {
 		mklines := t.NewMkLines("filename.mk",
@@ -233,8 +233,17 @@ func (s *Suite) Test_MkCondChecker_checkNotEmpty(c *check.C) {
 	}
 
 	test("!empty(VAR)",
-		// TODO: Add a :U modifier if VAR might be undefined.
-		"NOTE: filename.mk:1: !empty(VAR) can be replaced with the simpler ${VAR}.")
+
+		// Only a few variables are suggested to use the simpler form,
+		// because of the side-effect when the variable is undefined.
+		// VAR is not one of these variables.
+		nil...)
+
+	test(
+		"!empty(PKG_BUILD_OPTIONS.package:Moption)",
+
+		"NOTE: filename.mk:1: !empty(PKG_BUILD_OPTIONS.package:Moption) "+
+			"can be replaced with ${PKG_BUILD_OPTIONS.package:Moption}.")
 }
 
 func (s *Suite) Test_MkCondChecker_checkEmpty(c *check.C) {
@@ -395,13 +404,14 @@ func (s *Suite) Test_MkCondChecker_simplify(c *check.C) {
 	t.Chdir("category/package")
 
 	// The Anything type suppresses the warnings from type checking.
-	// BtUnknown would not work, see Pkgsrc.VariableType.
+	// BtUnknown would not work here, see Pkgsrc.VariableType.
 	btAnything := &BasicType{"Anything", func(cv *VartypeCheck) {}}
 
 	// For simplifying the expressions, it is necessary to know whether
 	// a variable can be undefined. Undefined variables need the
-	// :U modifier, otherwise bmake will complain about "malformed
-	// conditions", which is not entirely precise since the expression
+	// :U modifier or must be enclosed in double quotes, otherwise
+	// bmake will complain about a "Malformed conditional". That error
+	// message is not entirely precise since the expression
 	// is syntactically valid, it's just the evaluation that fails.
 	//
 	// Some variables such as MACHINE_ARCH are in scope from the very
@@ -474,6 +484,7 @@ func (s *Suite) Test_MkCondChecker_simplify(c *check.C) {
 		doTest(true, before, after, diagnostics...)
 	}
 	testBeforeAndAfterPrefs := func(before, after string, diagnostics ...string) {
+		doTest(false, before, after, diagnostics...)
 		doTest(true, before, after, diagnostics...)
 	}
 
@@ -919,13 +930,24 @@ func (s *Suite) Test_MkCondChecker_simplify(c *check.C) {
 	// replaced automatically, see mkCondLiteralChars.
 	// TODO: Add tests for all characters that are special in string literals or patterns.
 	// TODO: Then, extend the set of characters for which the expressions are simplified.
-	testBeforeAndAfterPrefs(
+	testBeforePrefs(
+		".if ${PREFS_DEFINED:M&&}",
+		".if ${PREFS_DEFINED:M&&}",
+
+		"WARN: filename.mk:3: To use PREFS_DEFINED at load time, .include \"../../mk/bsd.prefs.mk\" first.")
+	testAfterPrefs(
 		".if ${PREFS_DEFINED:M&&}",
 		".if ${PREFS_DEFINED:M&&}",
 
 		nil...)
 
-	testBeforeAndAfterPrefs(
+	testBeforePrefs(
+		".if ${PREFS:M&&}",
+		".if ${PREFS:M&&}",
+
+		// TODO: Warn that the :U is missing.
+		"WARN: filename.mk:3: To use PREFS at load time, .include \"../../mk/bsd.prefs.mk\" first.")
+	testAfterPrefs(
 		".if ${PREFS:M&&}",
 		".if ${PREFS:M&&}",
 
@@ -947,7 +969,19 @@ func (s *Suite) Test_MkCondChecker_simplify(c *check.C) {
 
 	// The characters <=> may be used unescaped in :M and :N patterns
 	// but not in .if conditions. There they must be enclosed in quotes.
-	testBeforeAndAfterPrefs(
+	testBeforePrefs(
+		".if ${PREFS_DEFINED:M<=>}",
+		".if ${PREFS_DEFINED:U} == \"<=>\"",
+
+		"NOTE: filename.mk:3: PREFS_DEFINED can be "+
+			"compared using the simpler \"${PREFS_DEFINED:U} == \"<=>\"\" "+
+			"instead of matching against \":M<=>\".",
+		"WARN: filename.mk:3: To use PREFS_DEFINED at load time, "+
+			".include \"../../mk/bsd.prefs.mk\" first.",
+		"AUTOFIX: filename.mk:3: "+
+			"Replacing \"${PREFS_DEFINED:M<=>}\" "+
+			"with \"${PREFS_DEFINED:U} == \\\"<=>\\\"\".")
+	testAfterPrefs(
 		".if ${PREFS_DEFINED:M<=>}",
 		".if ${PREFS_DEFINED} == \"<=>\"",
 

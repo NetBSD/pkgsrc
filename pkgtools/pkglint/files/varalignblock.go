@@ -656,9 +656,6 @@ func (info *varalignLine) alignContinuation(valueColumn, rightMarginColumn int) 
 		fix.Notef("The continuation backslash should be preceded by a single space.")
 	} else {
 		newSpace = alignmentToWidths(info.uptoValueWidth(), rightMarginColumn)
-		if newSpace == "" {
-			newSpace = " "
-		}
 		fix.Notef(
 			"The continuation backslash should be in column %d, not %d.",
 			rightMarginColumn+1, column+1)
@@ -824,7 +821,7 @@ func (p *varalignParts) uptoValueWidth() int {
 	if p.value != "" {
 		return p.spaceAfterValueColumn()
 	} else {
-		return p.varnameOpColumn()
+		return p.spaceBeforeValueColumn()
 	}
 }
 
