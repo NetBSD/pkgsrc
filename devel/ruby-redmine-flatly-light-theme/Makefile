@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/09/16 19:26:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/15 16:23:57 taca Exp $
 #
 
-GITHUB_TAG=	v0.1.1
+GITHUB_TAG=	v0.2.4
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	${RUBY_PKGPREFIX}-redmine-flatly-light-theme-${DISTNAME:S/v//1}
 GITHUB_PROJECT=	flatly_light_redmine
