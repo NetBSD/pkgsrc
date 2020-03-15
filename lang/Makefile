@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.549 2020/03/15 16:44:10 taca Exp $
+# $NetBSD: Makefile,v 1.550 2020/03/15 17:17:13 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -243,6 +243,7 @@ SUBDIR+=	rexx-regina
 SUBDIR+=	ruby
 SUBDIR+=	ruby-coffee-script
 SUBDIR+=	ruby-coffee-script-source
+SUBDIR+=	ruby-cucumber-gherkin
 SUBDIR+=	ruby-doc-stdlib
 SUBDIR+=	ruby-execjs
 SUBDIR+=	ruby-gherkin
