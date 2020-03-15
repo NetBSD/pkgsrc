@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1569 2020/03/15 11:31:36 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.1570 2020/03/15 11:37:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2143,3 +2143,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-borgbackup to 1.1.11 [bsiegert 2020-03-15]
 	Updated chat/matterircd to 0.19.4 [mef 2020-03-15]
 	Updated pkgtools/pkglint to 19.4.11 [rillig 2020-03-15]
+	Updated net/gallery-dl to 1.13.2 [leot 2020-03-15]
