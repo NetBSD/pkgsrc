@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2020/03/01 21:16:59 leot Exp $
+@comment $NetBSD: PLIST,v 1.39 2020/03/15 11:37:17 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -195,6 +195,9 @@ ${PYSITELIB}/gallery_dl/extractor/instagram.pyo
 ${PYSITELIB}/gallery_dl/extractor/issuu.py
 ${PYSITELIB}/gallery_dl/extractor/issuu.pyc
 ${PYSITELIB}/gallery_dl/extractor/issuu.pyo
+${PYSITELIB}/gallery_dl/extractor/kabeuchi.py
+${PYSITELIB}/gallery_dl/extractor/kabeuchi.pyc
+${PYSITELIB}/gallery_dl/extractor/kabeuchi.pyo
 ${PYSITELIB}/gallery_dl/extractor/keenspot.py
 ${PYSITELIB}/gallery_dl/extractor/keenspot.pyc
 ${PYSITELIB}/gallery_dl/extractor/keenspot.pyo
