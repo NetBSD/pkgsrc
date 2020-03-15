@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1603 2020/03/15 19:46:08 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1604 2020/03/15 19:48:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2176,3 +2176,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/neomutt to 20200313 [wiz 2020-03-15]
 	Updated devel/p5-EV to 4.32 [tnn 2020-03-15]
 	Updated devel/dconf to 0.36.0 [wiz 2020-03-15]
+	Updated chat/farstream to 0.2.9 [wiz 2020-03-15]
