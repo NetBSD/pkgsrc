@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.68 2019/12/05 09:34:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.69 2020/03/15 22:52:04 adam Exp $
 bin/doveadm
 bin/doveconf
+bin/dovecot-sysreport
 bin/dsync
 include/dovecot/access-lookup.h
 include/dovecot/acl-api-private.h
@@ -404,6 +405,7 @@ include/dovecot/mdbox-storage.h
 include/dovecot/mdbox-sync.h
 include/dovecot/mech-otp-skey-common.h
 include/dovecot/mech-plain-common.h
+include/dovecot/mech-scram.h
 include/dovecot/mech.h
 include/dovecot/memarea.h
 include/dovecot/mempool.h
@@ -722,6 +724,7 @@ man/man1/doveadm-who.1
 man/man1/doveadm.1
 man/man1/doveconf.1
 man/man1/dovecot-lda.1
+man/man1/dovecot-sysreport.1
 man/man1/dovecot.1
 man/man1/dsync.1
 man/man7/doveadm-search-query.7
