@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2018/03/17 16:12:13 taca Exp $
-
-SHA1 (tk-0.2.0.gem) = f5af1d554eb3f3ff123053caf6245ea48d587508
-RMD160 (tk-0.2.0.gem) = d4b6064e0bc5dbb6698ced7d6e02b560b230cf26
-SHA512 (tk-0.2.0.gem) = 351ac29c5368dff2db2fb9a2adaf8aed4eef4aa84b99421a36b8e36d236d551d4486a89753e928e33ced18b5f52b13cfe81c256972abb7ce60c7029951a7f695
-Size (tk-0.2.0.gem) = 1742848 bytes
