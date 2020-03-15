@@ -1,0 +1,2 @@
+bin/gherkin-ruby @PREFIX@/bin/gherkin-ruby@RUBY_SUFFIX@
+bin/gherkin @PREFIX@/bin/gherkin@RUBY_SUFFIX@
