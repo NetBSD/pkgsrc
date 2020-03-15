@@ -1,8 +1,8 @@
-$NetBSD: patch-libraries_liblmdb_Makefile,v 1.4 2018/12/20 17:55:24 adam Exp $
+$NetBSD: patch-libraries_liblmdb_Makefile,v 1.5 2020/03/15 21:01:47 tnn Exp $
 
 Use proper install commands.
 
---- libraries/liblmdb/Makefile.orig	2018-12-19 15:57:06.000000000 +0000
+--- libraries/liblmdb/Makefile.orig	2020-01-30 17:58:35.000000000 +0000
 +++ libraries/liblmdb/Makefile
 @@ -49,10 +49,10 @@ install: $(ILIBS) $(IPROGS) $(IHDRS)
  	mkdir -p $(DESTDIR)$(libdir)
@@ -28,13 +28,13 @@ Use proper install commands.
 -mdb_dump: mdb_dump.o liblmdb.a
 -mdb_load: mdb_load.o liblmdb.a
 +mdb_stat: mdb_stat.o liblmdb${SOEXT}
-+	$(CC) $(LDFLAGS) -L. -Wl,-R. -llmdb -o $@ $<
++	$(CC) $(LDFLAGS) $< -L. -llmdb -o $@
 +mdb_copy: mdb_copy.o liblmdb${SOEXT}
-+	$(CC) $(LDFLAGS) -L. -Wl,-R.  -llmdb -o $@ $<
++	$(CC) $(LDFLAGS) $< -L. -llmdb -o $@
 +mdb_dump: mdb_dump.o liblmdb${SOEXT}
-+	$(CC) $(LDFLAGS) -L. -Wl,-R. -llmdb -o $@ $<
++	$(CC) $(LDFLAGS) $< -L. -llmdb -o $@
 +mdb_load: mdb_load.o liblmdb${SOEXT}
-+	$(CC) $(LDFLAGS) -L. -Wl,-R. -llmdb -o $@ $<
++	$(CC) $(LDFLAGS) $< -L. -llmdb -o $@
  mtest:    mtest.o    liblmdb.a
  mtest2:	mtest2.o liblmdb.a
  mtest3:	mtest3.o liblmdb.a
