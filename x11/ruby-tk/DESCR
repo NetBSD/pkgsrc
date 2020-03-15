@@ -1,2 +1,3 @@
-This is Ruby/Tk, a Ruby interface to the Tk widget set including interface
-to Tcl/Tk library.  It's a part of the official Ruby distribution.
+# Ruby/Tk
+
+Tk interface module using tcltklib.
