@@ -1,10 +1,10 @@
-$NetBSD: patch-src_wayland-server.c,v 1.2 2020/01/05 19:30:48 nia Exp $
+$NetBSD: patch-src_wayland-server.c,v 1.3 2020/03/15 16:03:26 nia Exp $
 
 NetBSD support
 
---- src/wayland-server.c.orig	2019-03-21 00:55:25.000000000 +0000
+--- src/wayland-server.c.orig	2020-02-11 23:46:03.000000000 +0000
 +++ src/wayland-server.c
-@@ -43,6 +43,13 @@
+@@ -44,6 +44,13 @@
  #include <sys/file.h>
  #include <sys/stat.h>
  
@@ -17,8 +17,8 @@ NetBSD support
 +
  #include "wayland-util.h"
  #include "wayland-private.h"
- #include "wayland-server.h"
-@@ -77,7 +84,17 @@ struct wl_client {
+ #include "wayland-server-private.h"
+@@ -79,7 +86,17 @@ struct wl_client {
  	struct wl_list link;
  	struct wl_map objects;
  	struct wl_priv_signal destroy_signal;
@@ -36,7 +36,7 @@ NetBSD support
  	int error;
  	struct wl_priv_signal resource_created_signal;
  };
-@@ -312,7 +329,11 @@ wl_resource_post_error(struct wl_resourc
+@@ -315,7 +332,11 @@ wl_resource_post_error(struct wl_resourc
  static void
  destroy_client_with_error(struct wl_client *client, const char *reason)
  {
@@ -48,7 +48,7 @@ NetBSD support
  	wl_client_destroy(client);
  }
  
-@@ -527,9 +548,11 @@ wl_client_create(struct wl_display *disp
+@@ -530,9 +551,11 @@ wl_client_create(struct wl_display *disp
  		goto err_client;
  
  	len = sizeof client->ucred;
@@ -60,7 +60,7 @@ NetBSD support
  
  	client->connection = wl_connection_create(fd);
  	if (client->connection == NULL)
-@@ -583,12 +606,23 @@ WL_EXPORT void
+@@ -586,12 +609,23 @@ WL_EXPORT void
  wl_client_get_credentials(struct wl_client *client,
  			  pid_t *pid, uid_t *uid, gid_t *gid)
  {
