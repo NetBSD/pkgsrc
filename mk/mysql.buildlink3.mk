@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.25 2020/03/13 10:05:41 nia Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.26 2020/03/15 17:50:28 rillig Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -135,6 +135,8 @@ PKG_FAIL_REASON+=	"${PKGBASE} requires mysql-${_MYSQL_VERSION}, but mysql-${_MYS
 .  endif
 .endif
 
+.if defined(MYSQL_PKGSRCDIR)
 .include "${MYSQL_PKGSRCDIR}/buildlink3.mk"
+.endif
 
 .endif	# MYSQL_VERSION_MK
