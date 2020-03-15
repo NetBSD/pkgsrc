@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19732 2020/03/15 08:31:34 wiz Exp $
+$NetBSD: TODO,v 1.19733 2020/03/15 10:14:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -383,6 +383,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-akima-11
 	o R-mapproj-3
 	o R-ncdf-1.6.8
+	o SDL2-2.0.12
 	o Sigil-1.1.0 [needs QtWebEngine]
 	o SOGo-4.3.0
 	o SOPE-4.3.0
@@ -394,6 +395,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adms-2.3.6
 	o adocman-0.13
 	o adodb-5.20.15 [security]
+	o adwaita-icon-theme-3.36.0
 	o aegis-4.25
 	o aewm++-1.1.5
 	o afbinit-1.0.1
@@ -509,6 +511,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dar-2.4.14
 	o darcs-2.12.0
 	o dasher-4.11
+	o dconf-0.36.0
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o ddrescue-1.21
@@ -581,6 +584,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
+	o farstream-0.2.9
 	o felt-3.07 [wip]
 	o fet-5.28.6
 	o fetchyahoo-2.14.0
@@ -621,13 +625,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o geoclue-2.1.10
 	o gfract-0.33
 	o ghdl-0.33
-	o gjs-1.58.5 [needs mozjs-60]
+	o gjs-1.64.0
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
 	o gkrellm-share-2.3.5
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
+	o glib2-2.64.1
 	o gliv-1.9.7
 	o glom-1.14.2
 	o gmake-4.3 [cannot build firefox/openjdk11 etc.]
@@ -686,6 +691,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtl-3.6
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
+	o guile-3.0.1
 	o guile-gtk-2.1
 	o gvfs-1.22.0
 	o gworkspace-0.9.4
@@ -793,6 +799,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
+	o libsecret-0.20.2
 	o libsigc++3-3.0.2
 	o libstree-0.4.2
 	o libtecla-1.6.3
@@ -928,6 +935,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pcc-1.1.0
 	o pcc-current-20160305
 	o pdmenu-1.2.87
+	o perl5-5.30.2
 	o pessulus-2.30.3
 	o pgadmin4-1.0
 	o pgbuildfarm-4.17
@@ -992,11 +1000,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
-	o py-cairo-1.19.0 [drops python-2.x support]
+	o py-cairo-1.19.1 [drops python-2.x support]
 	o py-cassa-1.11.0
 	o py-ephem3-3.7.6.0
 	o py-gds-1.4.2
 	o py-gnome-menus-3.8.0
+	o py-google-api-python-client-1.8.0
+	o py-google-auth-1.11.3
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
@@ -1005,7 +1015,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-omniORBpy-3.7
 	o py-pandas-1.0.0
 	o py-ptt-1.10.2
-	o py-setuptools-45.3.0 [drops python-2.x support]
+	o py-setuptools-46.0.0 [drops python-2.x support]
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
@@ -1157,6 +1167,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o userppp-030706
 	o userspace-rcu-0.9.1
 	o utilisp-1.14
+	o vala-0.48.1
 	o varnish-5.1.3
 	o varnish-6.0
 	o vbetool-1.1
