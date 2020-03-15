@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/01/04 23:05:12 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/15 16:23:57 taca Exp $
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/fonts/FontAwesome.otf
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/fonts/fontawesome-webfont.eot
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/fonts/fontawesome-webfont.svg
@@ -13,6 +13,7 @@ share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/styleshee
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/color_tasks.css
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/font-awesome.css
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/forum.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/lists.css
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/news.css
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/pagination.css
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/projects.css
