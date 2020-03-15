@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.58 2020/03/08 16:47:44 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.59 2020/03/15 21:47:43 tnn Exp $
 
 BUILDLINK_TREE+=	gdal-lib
 
@@ -20,6 +20,7 @@ pkgbase := gdal-lib
 .include "../../mk/mysql.buildlink3.mk"
 .endif
 
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
