@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1586 2020/03/15 16:06:14 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1587 2020/03/15 16:09:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2158,5 +2158,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-octokit to 4.17.0 [taca 2020-03-15]
 	Updated devel/ruby-redmine to 4.0.6 [taca 2020-03-15]
 	Updated devel/wayland to 1.18.0 [nia 2020-03-15]
-	Updated devel/wayland-protocols to 1.20 [nia 2020-03-15]
 	Updated devel/wayland-protocols to 1.20 [nia 2020-03-15]
