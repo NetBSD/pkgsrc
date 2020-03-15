@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/01/18 15:27:37 taca Exp $
+$NetBSD: distinfo,v 1.4 2020/03/15 17:34:44 taca Exp $
 
-SHA1 (cucumber-wire-1.1.0.gem) = c033c7ac1621b32246abdce940a16028e39de493
-RMD160 (cucumber-wire-1.1.0.gem) = 73b01dd966325b2703c12f0d8b005b02f38fb0f2
-SHA512 (cucumber-wire-1.1.0.gem) = 7b2f99ddfc7dbbd69e211e593b35e0cba8fc024770318ba346e38fe402f5201a1d7d62d61cc3a48068510e7df4e06b4524d4ff60e3797089737b5ef20e9127f9
-Size (cucumber-wire-1.1.0.gem) = 11776 bytes
+SHA1 (cucumber-wire-2.0.0.gem) = a35dcea6a1031fd394678c2341d057d6d0353ddb
+RMD160 (cucumber-wire-2.0.0.gem) = be2af12703c0dda52413d1f24d259b19b71f60fb
+SHA512 (cucumber-wire-2.0.0.gem) = 8df8cc466cc5c319485550f385f22e9eddaf1ba2641ecac0e133706d81a8a15ab28dfcf6548f8b29c3e3075a821c029b0349b23f96aba080cba364db79f47d98
+Size (cucumber-wire-2.0.0.gem) = 12288 bytes
