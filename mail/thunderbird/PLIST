@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2020/01/07 15:41:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.76 2020/03/15 13:28:51 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/actors/AudioPlaybackChild.jsm
 lib/thunderbird/actors/AutoplayChild.jsm
@@ -261,6 +261,7 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/icons/image.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/increase.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/indent.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/info.svg
+lib/thunderbird/chrome/classic/skin/classic/messenger/icons/information.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/insecure.png
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/italics.svg
 lib/thunderbird/chrome/classic/skin/classic/messenger/icons/join.svg
@@ -409,6 +410,8 @@ lib/thunderbird/chrome/classic/skin/classic/messenger/shared/mailWindow1.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/messageHeader.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/messenger.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/messengercompose.css
+lib/thunderbird/chrome/classic/skin/classic/messenger/shared/newInstall.css
+lib/thunderbird/chrome/classic/skin/classic/messenger/shared/newInstallPage.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/newmailalert.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/searchBox.css
 lib/thunderbird/chrome/classic/skin/classic/messenger/shared/smime/smime-compose.css
@@ -3173,6 +3176,9 @@ lib/thunderbird/chrome/messenger/content/messenger/multimessageview.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/multimessageview_print.css
 lib/thunderbird/chrome/messenger/content/messenger/newFolderDialog.js
 lib/thunderbird/chrome/messenger/content/messenger/newFolderDialog.xul
+lib/thunderbird/chrome/messenger/content/messenger/newInstall.js
+lib/thunderbird/chrome/messenger/content/messenger/newInstall.xul
+lib/thunderbird/chrome/messenger/content/messenger/newInstallPage.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/newTagDialog.js
 lib/thunderbird/chrome/messenger/content/messenger/newTagDialog.xul
 lib/thunderbird/chrome/messenger/content/messenger/newmailaccount/accountProvisioner.js
