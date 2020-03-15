@@ -581,15 +581,19 @@ func (t *Tester) CreateFileDummyPatch(filename RelPath) {
 }
 
 func (t *Tester) CreateFileBuildlink3(filename RelPath, customLines ...string) {
+	lower := filename.Dir().Base()
+	t.CreateFileBuildlink3Id(filename, lower, customLines...)
+}
+
+func (t *Tester) CreateFileBuildlink3Id(filename RelPath, id string, customLines ...string) {
 	// Buildlink3.mk files only make sense in category/package directories.
 	assert(G.Pkgsrc.Rel(t.File(filename)).Count() == 3)
 
 	dir := filename.Dir().Clean()
-	lower := dir.Base()
 	// see pkgtools/createbuildlink/files/createbuildlink, "package specific variables"
-	upper := strings.Replace(strings.ToUpper(lower), "-", "_", -1)
+	upperID := strings.Replace(strings.ToUpper(id), "-", "_", -1)
 
-	width := tabWidthSlice("BUILDLINK_API_DEPENDS.", lower, "+=\t")
+	width := tabWidthSlice("BUILDLINK_API_DEPENDS.", id, "+=\t")
 
 	aligned := func(format string, args ...interface{}) string {
 		msg := sprintf(format, args...)
@@ -603,21 +607,21 @@ func (t *Tester) CreateFileBuildlink3(filename RelPath, customLines ...string) {
 	lines = append(lines,
 		MkCvsID,
 		"",
-		sprintf("BUILDLINK_TREE+=\t%s", lower),
+		sprintf("BUILDLINK_TREE+=\t%s", id),
 		"",
-		sprintf(".if !defined(%s_BUILDLINK3_MK)", upper),
-		sprintf("%s_BUILDLINK3_MK:=", upper),
+		sprintf(".if !defined(%s_BUILDLINK3_MK)", upperID),
+		sprintf("%s_BUILDLINK3_MK:=", upperID),
 		"",
-		aligned("BUILDLINK_API_DEPENDS.%s+=", lower)+sprintf("%s>=0", lower),
-		aligned("BUILDLINK_PKGSRCDIR.%s?=", lower)+sprintf("../../%s", dir),
-		aligned("BUILDLINK_DEPMETHOD.%s?=", lower)+"build",
+		aligned("BUILDLINK_API_DEPENDS.%s+=", id)+sprintf("%s>=0", id),
+		aligned("BUILDLINK_PKGSRCDIR.%s?=", id)+sprintf("../../%s", dir),
+		aligned("BUILDLINK_DEPMETHOD.%s?=", id)+"build",
 		"")
 	lines = append(lines, customLines...)
 	lines = append(lines,
 		"",
-		sprintf(".endif # %s_BUILDLINK3_MK", upper),
+		sprintf(".endif # %s_BUILDLINK3_MK", upperID),
 		"",
-		sprintf("BUILDLINK_TREE+=\t-%s", lower))
+		sprintf("BUILDLINK_TREE+=\t-%s", id))
 
 	t.CreateFileLines(filename, lines...)
 }

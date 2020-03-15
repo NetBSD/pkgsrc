@@ -13,8 +13,8 @@ type Buildlink3Checker struct {
 	abi, api         *DependencyPattern
 }
 
-func CheckLinesBuildlink3Mk(mklines *MkLines) {
-	(&Buildlink3Checker{mklines: mklines}).Check()
+func NewBuildlink3Checker(mklines *MkLines) *Buildlink3Checker {
+	return &Buildlink3Checker{mklines: mklines}
 }
 
 func (ck *Buildlink3Checker) Check() {
@@ -182,6 +182,10 @@ func (ck *Buildlink3Checker) checkMainPart(mlex *MkLinesLexer) bool {
 		case mkline.IsDirective() && mkline.Directive() == "endif":
 			indentLevel--
 		}
+
+		mkline.ForEachUsed(func(varUse *MkVarUse, time VucTime) {
+			ck.checkVarUse(varUse, mkline)
+		})
 	}
 
 	if indentLevel > 0 {
@@ -193,6 +197,32 @@ func (ck *Buildlink3Checker) checkMainPart(mlex *MkLinesLexer) bool {
 	}
 	mlex.SkipEmptyOrNote()
 	return true
+}
+
+func (ck *Buildlink3Checker) checkVarUse(varUse *MkVarUse, mkline *MkLine) {
+	varname := varUse.varname
+	if varname == "PKG_OPTIONS" {
+		mkline.Errorf("PKG_OPTIONS is not available in buildlink3.mk files.")
+		mkline.Explain(
+			"The buildlink3.mk file of a package is only ever included",
+			"by other packages, never by the package itself.",
+			"Therefore it does not make sense to use the variable PKG_OPTIONS",
+			"in this place since it contains the package options of a random",
+			"package that happens to include this file.",
+			"",
+			"To access the options of this package, see mk/pkg-build-options.mk.")
+	}
+
+	if varnameBase(varname) == "PKG_BUILD_OPTIONS" {
+		param := varnameParam(varname)
+		if param != "" && param != ck.pkgbase {
+			mkline.Warnf("Wrong PKG_BUILD_OPTIONS, expected %q instead of %q.",
+				ck.pkgbase, param)
+			mkline.Explain(
+				"The variable parameter for PKG_BUILD_OPTIONS must correspond",
+				"to the value of \"pkgbase\" above.")
+		}
+	}
 }
 
 func (ck *Buildlink3Checker) checkVarassign(mkline *MkLine, pkgbase string) {
