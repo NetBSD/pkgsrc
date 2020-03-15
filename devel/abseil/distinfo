@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.1 2020/02/06 20:11:35 adam Exp $
+$NetBSD: distinfo,v 1.2 2020/03/15 22:25:56 adam Exp $
 
-SHA1 (abseil-20190808-20190808.tar.gz) = edb48b61b6074c9af5e8fed85b5c178d126ff76b
-RMD160 (abseil-20190808-20190808.tar.gz) = 4fd4e2f9576a094a91bf20188450e242a9f3d33a
-SHA512 (abseil-20190808-20190808.tar.gz) = 5f1fd89f19ee54dac50213ac962e3131c77b1d0c5dbf82b3b4a194ca2830783614f632fe83cc639ffd2eb260ced1aaa08aa81a7d7dc5bf7222d2d62bb5c91e76
-Size (abseil-20190808-20190808.tar.gz) = 1480217 bytes
+SHA1 (abseil-20200225.1-20200225.1.tar.gz) = b947dc040e66153475974a6e887d538736ac11af
+RMD160 (abseil-20200225.1-20200225.1.tar.gz) = 9c9035fe601c058bbb978b5e34f25d8b19fd708d
+SHA512 (abseil-20200225.1-20200225.1.tar.gz) = ed4f560d02903ac2d07b2365a6865320d749f994b7dc3231b20b6d7ac1393a5970a43468edcb8369782c03bd20902cb84c43424170ecefb39ab3e8af26fd4e44
+Size (abseil-20200225.1-20200225.1.tar.gz) = 1679633 bytes
+SHA1 (patch-absl_base_config.h) = 142c09f4d34b1e9fe87d10469e42f4ccb3be7eb0
+SHA1 (patch-absl_strings_CMakeLists.txt) = 5c61667c43e50783f42c5311a77febbb33669dec
+SHA1 (patch-absl_time_internal_cctz_src_time__zone__format.cc) = 501736490edc62afb8b82e16f9a88e7fab6f5552
