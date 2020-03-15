@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/11/06 15:46:51 adam Exp $
+# $NetBSD: Makefile,v 1.29 2020/03/15 22:50:51 adam Exp $
 
 DISTNAME=	apsw-${GITHUB_RELEASE}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-r1//}
@@ -6,7 +6,7 @@ CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rogerbinns/}
 EXTRACT_SUFX=	.zip
 GITHUB_PROJECT=	apsw
-GITHUB_RELEASE=	3.30.1-r1
+GITHUB_RELEASE=	3.31.1-r1
 
 MAINTAINER=	rhialto@falu.nl
 HOMEPAGE=	https://github.com/rogerbinns/apsw
