@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1574 2020/03/15 13:29:30 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1575 2020/03/15 13:30:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2148,3 +2148,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/skypeweb-purple to 1.5 [mef 2020-03-15]
 	Updated lang/openjdk-bin to 13.0.2 [ryoon 2020-03-15]
 	Updated mail/thunderbird to 68.6.0 [ryoon 2020-03-15]
+	Updated mail/thunderbird-l10n to 68.6.0 [ryoon 2020-03-15]
