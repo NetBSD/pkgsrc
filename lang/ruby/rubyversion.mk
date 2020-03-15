@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.216 2020/03/15 15:19:55 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.217 2020/03/15 16:48:54 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferered Ruby version to use.
 #
-#		Possible values: 22 24 25 26
+#		Possible values: 24 25 26 27
 #		Default: 26
 #
 # RUBY_BUILD_DOCUMENT
@@ -34,13 +34,13 @@
 # RUBY_VERSIONS_ACCEPTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 22 24 25 26
-#		Default: 24 25 26
+#		Possible values: 24 25 26 27
+#		Default: 24 25 26 27
 #
 # RUBY_VERSIONS_INCOMPATIBLE
 #	The Ruby versions that are incompatible for the package.
 #
-#		Possible values: 22 24 25 26
+#		Possible values: 24 25 26 27
 #		Default: empty
 #
 # RUBY_NOVERSION
@@ -68,7 +68,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 22 24 25 26
+#		Possible values: 24 25 26 27
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -77,7 +77,7 @@
 #	use RUBY_PKGPREFIX with ruby related packages since you can supply
 #	different binary packages as each version of Ruby.
 #
-#		Example values: ruby22 ruby24 ruby25 ruby26
+#		Possible values: ruby24 ruby25 ruby26 ruby27
 #
 # RUBY_ABI_VERSION
 #	Ruby's ABI version.
@@ -106,7 +106,7 @@
 # RUBY_SUFFIX
 #	Extra string for each ruby commands; ruby, irb and so on.
 #
-#		Possible values: 22 24 25 26
+#		Possible values: 24 25 26 27
 #
 # RUBY_VERSION
 #	Version of Ruby's version.
@@ -213,14 +213,12 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 .endif
 
 # current supported Ruby's version
-RUBY22_VERSION=		2.2.10
 RUBY24_VERSION=		2.4.9
 RUBY25_VERSION=		2.5.7
 RUBY26_VERSION=		2.6.5
 RUBY27_VERSION=		2.7.0
 
 # current API compatible version; used for version of shared library
-RUBY22_API_VERSION=	2.2.0
 RUBY24_API_VERSION=	2.4.0
 RUBY25_API_VERSION=	2.5.0
 RUBY26_API_VERSION=	2.6.0
@@ -230,7 +228,7 @@ RUBY27_API_VERSION=	2.7.0
 RUBY_VERSION_DEFAULT?=	26
 
 # supported Ruby's version
-RUBY_VERSIONS_SUPPORTED=	24 25 26 22 27
+RUBY_VERSIONS_SUPPORTED=	24 25 26 27
 
 RUBY_VERSIONS_ACCEPTED?=	24 25 26 27
 RUBY_VERSIONS_INCOMPATIBLE?=
@@ -271,24 +269,7 @@ RUBY_VER:=	${RUBY_VER_MAP.${RUBY_VER}:U${RUBY_VER}}
 
 RUBY_SUFFIX?=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}${_RUBY_VER_TEENY}
 
-.if ${RUBY_VER} == "22"
-RUBY_VERSION=		${RUBY22_VERSION}
-RUBY_ABI_VERSION=	${RUBY_VERSION}
-
-RUBY_RDOC_VERSION=	4.2.0
-RUBY_RAKE_VERSION=	10.4.2
-RUBY_JSON_VERSION=	1.8.1.1
-
-RUBY_BIGDECIMAL_VERSION=	1.2.6
-RUBY_IO_CONSOLE_VERSION=	0.4.3
-RUBY_PSYCH_VERSION=		2.0.8.1
-RUBY_MINITEST_VERSION=		5.4.3
-RUBY_POWER_ASSERT_VERSION=	0.2.2
-RUBY_TEST_UNIT_VERSION=		3.0.8
-
-RUBY_SUFFIX=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
-
-.elif ${RUBY_VER} == "24"
+.if ${RUBY_VER} == "24"
 RUBY_VERSION=		${RUBY24_VERSION}
 RUBY_ABI_VERSION=	${RUBY_VERSION}
 
@@ -493,11 +474,7 @@ RUBY_MAJOR_MINOR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 #
 # Ruby shared and static library version handling.
 #
-.if ${RUBY_VER} == "22"
-RUBY_SHLIBVER?=		${RUBY_API_VERSION}
-.else
 RUBY_SHLIBVER?=		${RUBY_VERSION}
-.endif
 
 _RUBY_SHLIB_MAJOR:=	${RUBY_SHLIBVER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1\2/}
 _RUBY_SHLIB_MINOR:=	${RUBY_SHLIBVER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
