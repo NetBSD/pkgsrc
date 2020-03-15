@@ -1,4 +1,4 @@
-# $NetBSD: pkg-build-options.mk,v 1.15 2020/03/14 13:28:38 wiz Exp $
+# $NetBSD: pkg-build-options.mk,v 1.16 2020/03/15 10:33:42 rillig Exp $
 #
 # This procedure determines the PKG_OPTIONS that have been in effect
 # when the package ${pkgbase} has been built. When the package is not
@@ -20,6 +20,12 @@
 #
 # Keywords: options pkg-build-options PKG_BUILD_OPTIONS
 #
+
+.if !defined(pkgbase)
+.  for including in ${.INCLUDEDFROMDIR}/${.INCLUDEDFROMFILE}
+PKG_FAIL_REASON+=	"[pkg-build-options.mk] ${including}: pkgbase must be set"
+.  endfor
+.endif
 
 .include "bsd.fast.prefs.mk"
 
@@ -63,3 +69,5 @@ MAKEFLAGS+=	PKG_BUILD_OPTIONS.${b}=${PKG_BUILD_OPTIONS.${b}:Q}
 MAKEVARS+=	PKG_BUILD_OPTIONS.${b}
 .  endfor
 .endif
+
+.undef pkgbase	# prepare for the next invocation
