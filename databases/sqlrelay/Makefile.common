@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2020/01/26 05:26:21 rillig Exp $
+# $NetBSD: Makefile.common,v 1.20 2020/03/15 20:37:08 tnn Exp $
 # used by databases/p5-sqlrelay/Makefile
 # used by databases/php-sqlrelay/Makefile
 # used by databases/py-sqlrelay/Makefile
@@ -44,6 +44,7 @@ EGDIR=			${PREFIX}/share/examples/sqlrelay
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-error=overloaded-virtual
 CWRAPPERS_APPEND.cxx+=	-Wno-error=overloaded-virtual
 .endif
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 CHECK_SSP_SKIP+=	libexec/sqlrelay/*.a
 
