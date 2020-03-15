@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19731 2020/03/13 17:59:39 wiz Exp $
+$NetBSD: TODO,v 1.19732 2020/03/15 08:31:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -616,7 +616,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdm-2.32.2
 	o gdm-3.0.3
 	o geeklog-2.2.0
-	o genius-1.0.21
+	o genius-1.0.25
 	o gens-2.15.5
 	o geoclue-2.1.10
 	o gfract-0.33
@@ -633,7 +633,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gmake-4.3 [cannot build firefox/openjdk11 etc.]
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.34.4
+	o gnome-3.36
 	o gnome-applets-3.14.0
 	o gnome-bluetooth-2.30.0
 	o gnome-chemistry-utils-0.14.11
@@ -837,6 +837,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mecab-ipadic-2.7.0.20070801
 	o mediawiki-1.34
 	o memached-1.5.6
+	o memcached-1.6
 	o merkaator-0.18.3
 	o mesure-0.7.2
 	o metacity-3.14.2
@@ -893,7 +894,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nxtvepg-2.8.1
 	o oath-toolkit-2.6.1
 	o objc-3.3.1
-	o ocaml-4.10.0
+	o ocaml-4.10.0 [wip]
 	o ocrad-0.25
 	o odbc-postgresql-09.03.0400
 	o olvwm-4.5
@@ -903,7 +904,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opencsg-1.4.0
 	o openh323-1.19.1
 	o openmortal-0.7.1
-	o openoffice-4.1
+	o openoffice-4.1.7
 	o opensc-0.19.0
 	o openslp-2.0.0
 	o opensmtpd-6.0.0
