@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2020/03/08 16:49:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/15 11:53:22 mef Exp $
 
 DISTNAME=	skype4pidgin-1.3
 PKGNAME=	skypeweb-purple-1.3
 PKGREVISION=	2
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=EionRobb/skype4pidgin/archive/${DISTNAME:C:skype4pidgin-::}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=EionRobb/}
+# default picks from PKGNAME
+GITHUB_PROJECT=	skype4pidgin
 
 HOMEPAGE=	https://github.com/EionRobb/skype4pidgin/tree/master/skypeweb
 COMMENT=	Skype (HTTP) plugin for libpurple messengers
