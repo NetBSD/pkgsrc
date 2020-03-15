@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1577 2020/03/15 14:14:16 uwe Exp $
+$NetBSD: CHANGES-2020,v 1.1578 2020/03/15 15:27:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2151,3 +2151,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/thunderbird-l10n to 68.6.0 [ryoon 2020-03-15]
 	Updated chat/toxcore to 0.2.10 [mef 2020-03-15]
 	Added sysutils/u-boot-a20-olinuxino-micro-emmc version 2018.11 [uwe 2020-03-15]
+	Added lang/ruby27-base version 2.7.0 [taca 2020-03-15]
