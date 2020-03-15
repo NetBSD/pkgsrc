@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19735 2020/03/15 19:46:08 wiz Exp $
+$NetBSD: TODO,v 1.19736 2020/03/15 19:48:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -583,7 +583,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
-	o farstream-0.2.9
 	o felt-3.07 [wip]
 	o fet-5.28.6
 	o fetchyahoo-2.14.0
