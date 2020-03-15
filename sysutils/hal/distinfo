@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2017/04/26 12:10:43 maya Exp $
+$NetBSD: distinfo,v 1.29 2020/03/15 20:28:41 tnn Exp $
 
 SHA1 (hal-0.5.14.tar.bz2) = a6ec098d78112e18e2773afa5f9ed642b00c4c59
 RMD160 (hal-0.5.14.tar.bz2) = 0314dace9512bf49a62bd1556963fc60a6c9caf9
@@ -45,6 +45,7 @@ SHA1 (patch-hald_linux_addons_addon-omap-backlight.c) = 72ba398a1d661fb726778bf7
 SHA1 (patch-hald_linux_addons_addon-rfkill-killswitch.c) = 800fac10408b65b12cd644b93b8612c8b2970da0
 SHA1 (patch-hald_linux_addons_addon-storage.c) = 27c07d3a499aa9fa37938ff3f918dc01c625b5fd
 SHA1 (patch-hald_linux_addons_addon-usb-csr.c) = 34b5be5ff308f9aafcf505b303d36cbc2483d015
+SHA1 (patch-hald_linux_blockdev.c) = 5eeb8bff0461e9dd492764975d66764a3fafb14b
 SHA1 (patch-hald_netbsd_devinfo__mass.c) = be1c7bf311e21e9891199d67c0ebf87978bd735f
 SHA1 (patch-na) = 2786db8149a55dbd5ea11419d789f420bac1993c
 SHA1 (patch-nb) = 1693b7a2faa5bee20a594f0b60b8ff6caea0efdc
