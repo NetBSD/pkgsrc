@@ -1,0 +1,137 @@
+$NetBSD: patch-configure,v 1.1 2020/03/15 15:26:22 taca Exp $
+
+* Adding Interix support.
+* Ignore doxygen.
+* Ignore VCS.
+* Handle SSP in pkgsrc.
+* Put -std= in CFLAGS not CPPFLAGS.
+* Fix argument for pthread_self() on NetBSD.
+
+--- configure.orig	2019-12-17 15:08:45.000000000 +0000
++++ configure
+@@ -6469,7 +6469,7 @@ else
+     if test x"$target_alias" = x; then :
+ 
+ 	case "$target_os" in #(
+-  darwin*) :
++  nodarwin*) :
+ 
+ 	    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for real target cpu" >&5
+ $as_echo_n "checking for real target cpu... " >&6; }
+@@ -8831,6 +8831,7 @@ fi
+ 	stack_protector=no
+      ;; #(
+   *) :
++	stack_protector=no
+      ;;
+ esac
+     if test -z "${stack_protector+set}"; then :
+@@ -10695,6 +10696,10 @@ esac
+ 
+ 			ac_cv_func___builtin_setjmp=no
+ 		 ;; #(
++  interix*) :
++	LIBS="-lm $LIBS"
++	ac_cv_func_getpgrp_void=yes
++		 ;; #(
+   *) :
+      ;;
+ esac
+@@ -22269,6 +22274,8 @@ else
+ # ifdef _MSC_VER
+ #  include <malloc.h>
+ #  define alloca _alloca
++# elif defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
++#   include <stdlib.h>
+ # else
+ #  ifdef HAVE_ALLOCA_H
+ #   include <alloca.h>
+@@ -26817,11 +26824,11 @@ if ${rb_cv_func_pthread_setname_np_argum
+ else
+   rb_cv_func_pthread_setname_np_arguments=
+ 	    # Linux,AIX,  (pthread_self(), name)
+-	    # NetBSD (pthread_self(), name, \"%s\")
++	    # NetBSD (pthread_self(), \"%s\", name)
+ 	    # Darwin (name)
+ 	    for mac in \
+ 		"(pthread_self(), name)" \
+-		"(pthread_self(), name, \"%s\")" \
++		"(pthread_self(), \"%s\", name)" \
+ 		"(name)" \
+ 		; do
+ 		cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -27415,7 +27422,9 @@ fi
+   interix*) :
+     	: ${LDSHARED='$(CC) -shared'}
+ 			XLDFLAGS="$XLDFLAGS -Wl,-E"
++			DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(.TARGET) -Wl,--image-base,$$(($$RANDOM %4096/2*262144+1342177280))'
+ 			LIBPATHFLAG=" -L%1\$-s"
++			RPATHFLAG=' -Wl,-R%1$-s'
+ 			rb_cv_dlopen=yes ;; #(
+   freebsd*|dragonfly*) :
+ 
+@@ -28676,7 +28685,7 @@ fi
+ 	 ;; #(
+   freebsd*|dragonfly*) :
+ 
+-	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT).$(MAJOR)$(MINOR)'
++	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT).$(MAJOR)$(MINOR)$(TEENY)'
+ 	LIBRUBY_SONAME='$(LIBRUBY_SO)'
+ 	if test "$rb_cv_binary_elf" != "yes" ; then :
+ 
+@@ -28755,9 +28764,10 @@ esac
+ 	 ;; #(
+   darwin*) :
+ 
++	RUBY_SO_NAME="${RUBY_SO_NAME}"'.$(RUBY_PROGRAM_VERSION)'
+ 	LIBRUBY_SO='lib$(RUBY_SO_NAME).$(SOEXT)'
+-	LIBRUBY_SONAME='$(LIBRUBY_SO)'
+-	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).$(SOEXT)'
++	LIBRUBY_SONAME='lib$(RUBY_BASE_NAME).$(RUBY_API_VERSION).$(SOEXT)'
++	LIBRUBY_ALIASES='$(LIBRUBY_SONAME) lib$(RUBY_INSTALL_NAME).$(SOEXT)'
+ 	if test "$load_relative" = yes; then :
+ 
+ 	    libprefix="@executable_path/../${libdir_basename}"
+@@ -28778,7 +28788,12 @@ fi
+ 	 ;; #(
+   interix*) :
+ 
+-	LIBRUBYARG_SHARED='-L. -L${libdir} -l$(RUBY_SO_NAME)'
++	SOLIBS='$(LIBS)'
++	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
++	# link explicitly to 0x48000000
++	LIBRUBY_DLDFLAGS='-Wl,-h,lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) -Wl,--image-base,1207959552'
++	LIBRUBYARG_SHARED='-Wl,-R -Wl,${PREFIX}/lib} -L${libdir} -L. -l$(RUBY_SO_NAME)'
++	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_SO_NAME).so'
+ 	 ;; #(
+   mingw*|cygwin*|mswin*) :
+ 
+@@ -28960,7 +28975,7 @@ if test "$enable_rpath" = yes; then :
+ esac
+     rpathflag=`IFS="$PATH_SEPARATOR"
+         echo x "$rpathflag" |
+-        sed "s/^x *//;s${IFS}"'%1\\$-s'"${IFS}${libprefix}${IFS}g;s${IFS}%s${IFS}${libprefix}${IFS}g"
++        sed "s/^x *//;s${IFS}"'%1\\$-s'"${IFS}${libprefix}${IFS}g;s${IFS}%s${IFS}${PREFIX}/lib${IFS}g"
+     `
+     LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
+     LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
+@@ -31684,19 +31699,7 @@ which seems to be undefined.  Please mak
+     "Makefile":F)
+     tmpmk=confmk$$.tmp
+     {
+-	if test ${VCS+set}; then :
+-
+-	    :
+-
+-elif git_dir=`$GIT --work-tree="$srcdir" --git-dir="$srcdir/.git" rev-parse --git-dir 2>/dev/null`; then :
+-
+-	    VCS='$(GIT)'
+-
+-else
+-
+ 	    VCS='echo cannot'
+-
+-fi
+ 	case "$VCS" in #(
+   '$(GIT)'|git) :
+     VCSUP='$(VCS) pull $(GITPULLOPTIONS)' ;; #(
