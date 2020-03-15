@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1570 2020/03/15 11:37:34 leot Exp $
+$NetBSD: CHANGES-2020,v 1.1571 2020/03/15 11:54:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2144,3 +2144,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/matterircd to 0.19.4 [mef 2020-03-15]
 	Updated pkgtools/pkglint to 19.4.11 [rillig 2020-03-15]
 	Updated net/gallery-dl to 1.13.2 [leot 2020-03-15]
+	Updated net/tigervnc to 1.10.1nb2 [wiz 2020-03-15]
