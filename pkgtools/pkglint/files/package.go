@@ -16,17 +16,21 @@ const rePkgname = `^([\w\-.+]+)-(\d[.0-9A-Z_a-z]*)$`
 // This is necessary because variables in Makefiles may be used before they are defined,
 // and such dependencies often span multiple files that are included indirectly.
 type Package struct {
-	dir                  CurrPath     // The directory of the package, for resolving files
-	Pkgpath              PkgsrcPath   // e.g. "category/pkgdir"
-	Pkgdir               PackagePath  // PKGDIR from the package Makefile
-	Filesdir             PackagePath  // FILESDIR from the package Makefile
-	Patchdir             PackagePath  // PATCHDIR from the package Makefile
-	DistinfoFile         PackagePath  // DISTINFO_FILE from the package Makefile
-	EffectivePkgname     string       // PKGNAME or DISTNAME from the package Makefile, including nb13, can be empty
-	EffectivePkgbase     string       // EffectivePkgname without the version
-	EffectivePkgversion  string       // The version part of the effective PKGNAME, excluding nb13
-	EffectivePkgnameLine *MkLine      // The origin of the three Effective* values
-	Plist                PlistContent // Files and directories mentioned in the PLIST files
+	dir     CurrPath   // The directory of the package, for resolving files
+	Pkgpath PkgsrcPath // e.g. "category/pkgdir"
+
+	EffectivePkgname     string  // PKGNAME or DISTNAME from the package Makefile, including nb13, can be empty
+	EffectivePkgbase     string  // EffectivePkgname without the version
+	EffectivePkgversion  string  // The version part of the effective PKGNAME, excluding nb13
+	EffectivePkgnameLine *MkLine // The origin of the three Effective* values
+	buildlinkID          string
+	optionsID            string
+
+	Pkgdir       PackagePath  // PKGDIR from the package Makefile
+	Filesdir     PackagePath  // FILESDIR from the package Makefile
+	Patchdir     PackagePath  // PATCHDIR from the package Makefile
+	DistinfoFile PackagePath  // DISTINFO_FILE from the package Makefile
+	Plist        PlistContent // Files and directories mentioned in the PLIST files
 
 	vars      Scope
 	redundant *RedundantScope
@@ -54,6 +58,9 @@ type Package struct {
 	//
 	// TODO: Be more precise about the purpose of this field.
 	seenInclude bool
+
+	// The identifiers for which PKG_BUILD_OPTIONS is defined.
+	seenPkgbase Once
 
 	// During both load() and check(), tells whether bsd.prefs.mk has
 	// already been loaded directly or indirectly.
@@ -160,6 +167,11 @@ func (pkg *Package) load() ([]CurrPath, *MkLines, *MkLines) {
 		if isRelevantMk(filename, basename) {
 			fragmentMklines := LoadMk(filename, pkg, MustSucceed)
 			pkg.collectConditionalIncludes(fragmentMklines)
+			fragmentMklines.ForEach(func(mkline *MkLine) {
+				if mkline.IsVarassign() && mkline.Varname() == "pkgbase" {
+					pkg.seenPkgbase.FirstTime(mkline.Value())
+				}
+			})
 		}
 		if hasPrefix(basename, "PLIST") {
 			pkg.loadPlistDirs(filename)
@@ -310,6 +322,10 @@ func (pkg *Package) parseLine(mklines *MkLines, mkline *MkLine, allLines *MkLine
 				trace.Stepf("varassign(%q, %q, %q)", varname, op, value)
 			}
 			pkg.vars.Define(varname, mkline)
+		}
+
+		if varname == "pkgbase" {
+			pkg.seenPkgbase.FirstTime(mkline.Value())
 		}
 	}
 	return true

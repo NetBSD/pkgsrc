@@ -304,6 +304,12 @@ func (s *Suite) Test_alignWith(c *check.C) {
 	test("1234567890=", "V=", "1234567890=")
 }
 
+func (s *Suite) Test_alignmentToWidths(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(alignmentToWidths(8, 72), "\t\t\t\t\t\t\t\t")
+}
+
 func (s *Suite) Test_indent(c *check.C) {
 	t := s.Init(c)
 

@@ -2,6 +2,10 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
+func CheckLinesBuildlink3Mk(mklines *MkLines) {
+	NewBuildlink3Checker(mklines).Check()
+}
+
 // This test ensures that CheckLinesBuildlink3Mk really checks for
 // buildlink3.mk files that are included by the buildlink3.mk file
 // but not by the package.
@@ -473,6 +477,25 @@ func (s *Suite) Test_CheckLinesBuildlink3Mk__invalid_dependency_patterns(c *chec
 		"WARN: buildlink3.mk:10: Invalid dependency pattern \"hs-X11!=1.6.1.2nb2\".")
 }
 
+func (s *Suite) Test_CheckLinesBuildlink3Mk__PKG_OPTIONS(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("option", "")
+	t.SetUpPkgsrc()
+	t.SetUpPackage("category/package")
+	t.CreateFileBuildlink3("category/package/buildlink3.mk",
+		".include \"../../mk/bsd.fast.prefs.mk\"",
+		".if ${PKG_OPTIONS:Moption}",
+		".endif")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package/buildlink3.mk"))
+
+	t.CheckOutputLines(
+		"ERROR: ~/category/package/buildlink3.mk:13: " +
+			"PKG_OPTIONS is not available in buildlink3.mk files.")
+}
+
 // Just for branch coverage.
 func (s *Suite) Test_Buildlink3Checker_Check__no_tracing(c *check.C) {
 	t := s.Init(c)
@@ -659,6 +682,37 @@ func (s *Suite) Test_Buildlink3Checker_checkMainPart__comment_at_end_of_file(c *
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/buildlink3.mk:14: The file should end here.")
+}
+
+func (s *Suite) Test_Buildlink3Checker_checkVarUse__PKG_BUILD_OPTIONS(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("option", "")
+	t.SetUpPkgsrc()
+	t.CreateFileLines("mk/pkg-build-options.mk")
+	t.SetUpPackage("category/package")
+	t.CreateFileBuildlink3("category/package/buildlink3.mk",
+		"pkgbase := unrelated",
+		".include \"../../mk/pkg-build-options.mk\"",
+		"",
+		".if ${PKG_BUILD_OPTIONS:Moption}", // missing variable parameter
+		".endif",
+		"",
+		".if ${PKG_BUILD_OPTIONS.package:Moption}", // wrong variable parameter
+		".endif",
+		"",
+		".if ${PKG_BUILD_OPTIONS.unrelated:Moption}", // corresponds to pkgbase above
+		".endif")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package/buildlink3.mk"))
+
+	// TODO: Warn about PKG_BUILD_OPTIONS.package since that variable is not defined.
+	t.CheckOutputLines(
+		"WARN: ~/category/package/buildlink3.mk:15: "+
+			"PKG_BUILD_OPTIONS is used but not defined.",
+		"WARN: ~/category/package/buildlink3.mk:21: "+
+			"Wrong PKG_BUILD_OPTIONS, expected \"package\" instead of \"unrelated\".")
 }
 
 // As of October 2018, pkglint parses package dependencies a little
