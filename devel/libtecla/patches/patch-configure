@@ -1,0 +1,59 @@
+$NetBSD: patch-configure,v 1.1 2020/03/15 23:41:54 tnn Exp $
+
+Always link shared. Honour LDFLAGS.
+
+--- configure.orig	2004-11-04 01:16:58.000000000 +0000
++++ configure
+@@ -4152,7 +4152,7 @@ _ACEOF
+ 
+   SHARED_EXT=".so.${MAJOR_VER}"
+   SHARED_ALT=".so"
+-  LINK_SHARED="$LD"' -G -M $$(srcdir)/libtecla.map -o $$@ -h $$(@F) -z defs -i $$(LIB_OBJECTS) $$(LIBS) -lc'
++  LINK_SHARED="$LD"' $$(LDFLAGS) -G -M $$(srcdir)/libtecla.map -o $$@ -h $$(@F) -z defs -i $$(LIB_OBJECTS) $$(LIBS) -lc'
+   SHARED_CFLAGS="-Kpic"
+   case $CC in
+   */cc|cc) SHARED_CFLAGS="$SHARED_CFLAGS -xstrconst" ;;
+@@ -4172,7 +4172,7 @@ _ACEOF
+   FILE_MANDIR="man4"
+   FILE_MANEXT="4"
+   ;;
+-*linux*)
++*linux*|*netbsd*)
+   SHARED_EXT=".so.${MAJOR_VER}.${MINOR_VER}.${MICRO_VER}"
+   SHARED_ALT=".so .so.${MAJOR_VER}"
+ 
+@@ -4200,7 +4200,7 @@ echo "${ECHO_T}$tecla_cv_gnu_ld_script" 
+     VERSION_OPT=''
+   fi
+ 
+-  LINK_SHARED="$LD"' -o $$@ -soname libtecla$$(SUFFIX).so.'${MAJOR_VER}' -shared '$VERSION_OPT' $$(LIB_OBJECTS) $$(LIBS) -lc'
++  LINK_SHARED="$LD"' $$(LDFLAGS) -o $$@ -soname libtecla$$(SUFFIX).so.'${MAJOR_VER}' -shared '$VERSION_OPT' $$(LIB_OBJECTS) $$(LIBS) -lc'
+   SHARED_CFLAGS="-fpic"
+ 
+ 
+@@ -4219,7 +4219,7 @@ echo "${ECHO_T}$tecla_cv_gnu_ld_script" 
+ *darwin*)
+   SHARED_EXT=".${MAJOR_VER}.${MINOR_VER}.${MICRO_VER}.dylib"
+   SHARED_ALT=".dylib .${MAJOR_VER}.dylib"
+-  LINK_SHARED='$(CC) -o $$@ -dynamiclib -flat_namespace -undefined suppress -compatibility_version '${MAJOR_VER}.${MINOR_VER}' -current_version '${MAJOR_VER}.${MINOR_VER}.${MICRO_VER}' -install_name '${libdir}'/$$@ $$(LIB_OBJECTS)'
++  LINK_SHARED='$(CC) $$(LDFLAGS) -o $$@ -dynamiclib -flat_namespace -undefined suppress -compatibility_version '${MAJOR_VER}.${MINOR_VER}' -current_version '${MAJOR_VER}.${MINOR_VER}.${MICRO_VER}' -install_name '${libdir}'/$$@ $$(LIB_OBJECTS)'
+   SHARED_CFLAGS=""
+   ;;
+ *dec-osf*)
+@@ -4232,7 +4232,7 @@ _ACEOF
+   SHARED_EXT=".so.${MAJOR_VER}"
+   SHARED_ALT=".so"
+   VERSION_OPT='--version-script=$$(srcdir)/libtecla.map'
+-  LINK_SHARED='ld -o $$@ -soname libtecla$$(SUFFIX).so.'${MAJOR_VER}' -shared '$VERSION_OPT' $$(LIB_OBJECTS) $$(LIBS) -lc'
++  LINK_SHARED='ld $$(LDFLAGS) -o $$@ -soname libtecla$$(SUFFIX).so.'${MAJOR_VER}' -shared '$VERSION_OPT' $$(LIB_OBJECTS) $$(LIBS) -lc'
+   SHARED_CFLAGS="-fpic"
+   ;;
+ mips-sgi-irix*)
+@@ -4254,7 +4254,6 @@ if test "$GCC"_ = "yes"_ && test "$LINK_
+     SHARED_CFLAGS=""
+     ;;
+   esac
+-  LINK_SHARED="$LINK_SHARED `gcc -print-libgcc-file-name`"
+ fi
+ 
+ 
