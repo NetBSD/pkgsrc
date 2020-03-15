@@ -25,6 +25,12 @@
 
 #include "config.h"
 
+#ifndef container_of
+#define container_of(ptr, type, member) ({ \
+    const typeof(((type *)0)->member) * __mptr = (ptr); \
+    (type *)((char *)__mptr - offsetof(type, member)); })
+#endif
+
 #ifdef HAVE_SYS_EVENT_H
 #include <stddef.h>
 #include <stdio.h>
@@ -160,7 +166,7 @@ wl_event_loop_add_fd(struct wl_event_loop *loop,
 	add_source(loop, &source->base, mask, data);
 
 	if (source->base.fd < 0) {
-		fprintf(stderr, "could not add source\n: %m");
+		fprintf(stderr, "could not add source\n: %s", strerror(errno));
 		free(source);
 		return NULL;
 	}
@@ -245,9 +251,6 @@ wl_event_source_timer_dispatch(struct wl_event_source *source,
 {
 	struct wl_event_source_timer *timer_source =
 		(struct wl_event_source_timer *) source;
-	uint64_t expires;
-
-	expires = ev->data;    /* XXX unused?! */
 	return timer_source->func(timer_source->base.data);
 }
 
