@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/11/03 09:14:08 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2020/03/15 22:41:05 rillig Exp $
 
 DISTNAME=	fltk-1.3.5-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -24,7 +24,6 @@ PKG_SUGGESTED_OPTIONS=	opengl # cairo
 #PLIST_VARS+=		cairo
 PLIST_VARS+=		opengl
 
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
 PTHREAD_OPTS+=		require
