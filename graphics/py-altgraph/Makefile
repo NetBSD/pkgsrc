@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2018/08/07 06:18:53 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/15 22:55:54 adam Exp $
 
-DISTNAME=	altgraph-0.16.1
+DISTNAME=	altgraph-0.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	graphics net python
+CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/altgraph/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://packages.python.org/altgraph
+HOMEPAGE=	https://altgraph.readthedocs.io/
 COMMENT=	Graph (network) package for constructing graphs
 LICENSE=	mit
 
