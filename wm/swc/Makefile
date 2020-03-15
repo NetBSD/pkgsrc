@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2020/03/08 16:48:18 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/15 16:15:23 nia Exp $
 
-DISTNAME=	swc-0.0.0.20200222
-PKGREVISION=	3
+DISTNAME=	swc-0.0.0.20200228
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=michaelforney/}
 GITHUB_PROJECT=	swc
-GITHUB_TAG=	b5b7214bed4d30ff52afa5e9668c9f4162caf30a
+GITHUB_TAG=	86b45d5701e509660650facdad4f7bef8f4f5362
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://github.com/michaelforney/swc
