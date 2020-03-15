@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1595 2020/03/15 17:06:22 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1596 2020/03/15 17:10:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2168,3 +2168,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-rspec-expectations to 3.9.1 [taca 2020-03-15]
 	Updated devel/ruby-rspec-rails to 3.9.1 [taca 2020-03-15]
 	Updated devel/ruby-rugged to 0.99.0 [taca 2020-03-15]
+	Updated devel/ruby-necromancer to 0.6.0 [taca 2020-03-15]
