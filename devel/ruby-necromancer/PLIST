@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/12 15:24:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/15 17:09:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/necromancer.rb
 ${GEM_LIBDIR}/lib/necromancer/configuration.rb
 ${GEM_LIBDIR}/lib/necromancer/context.rb
@@ -17,34 +16,4 @@ ${GEM_LIBDIR}/lib/necromancer/converters/numeric.rb
 ${GEM_LIBDIR}/lib/necromancer/converters/range.rb
 ${GEM_LIBDIR}/lib/necromancer/null_converter.rb
 ${GEM_LIBDIR}/lib/necromancer/version.rb
-${GEM_LIBDIR}/necromancer.gemspec
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/unit/can_spec.rb
-${GEM_LIBDIR}/spec/unit/config_spec.rb
-${GEM_LIBDIR}/spec/unit/configuration/new_spec.rb
-${GEM_LIBDIR}/spec/unit/conversions/fetch_spec.rb
-${GEM_LIBDIR}/spec/unit/conversions/register_spec.rb
-${GEM_LIBDIR}/spec/unit/conversions/to_hash_spec.rb
-${GEM_LIBDIR}/spec/unit/convert_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/array/array_to_boolean_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/array/array_to_numeric_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/array/array_to_set_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/array/object_to_array_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/array/string_to_array_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/boolean/boolean_to_integer_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/boolean/integer_to_boolean_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/boolean/string_to_boolean_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/date_time/string_to_date_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/date_time/string_to_datetime_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/date_time/string_to_time_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/numeric/string_to_float_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/numeric/string_to_integer_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/numeric/string_to_numeric_spec.rb
-${GEM_LIBDIR}/spec/unit/converters/range/string_to_range_spec.rb
-${GEM_LIBDIR}/spec/unit/inspect_spec.rb
-${GEM_LIBDIR}/spec/unit/new_spec.rb
-${GEM_LIBDIR}/spec/unit/register_spec.rb
-${GEM_LIBDIR}/tasks/console.rake
-${GEM_LIBDIR}/tasks/coverage.rake
-${GEM_LIBDIR}/tasks/spec.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
