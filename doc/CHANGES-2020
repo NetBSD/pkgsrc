@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1579 2020/03/15 15:31:01 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1580 2020/03/15 15:39:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2153,3 +2153,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/u-boot-a20-olinuxino-micro-emmc version 2018.11 [uwe 2020-03-15]
 	Added lang/ruby27-base version 2.7.0 [taca 2020-03-15]
 	Added lang/ruby27 version 2.7.0 [taca 2020-03-15]
+	Added sysutils/ruby-chef-utils version 15.8.23 [taca 2020-03-15]
