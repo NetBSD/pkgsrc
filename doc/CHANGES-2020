@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1572 2020/03/15 11:59:05 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1573 2020/03/15 12:52:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2146,3 +2146,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/gallery-dl to 1.13.2 [leot 2020-03-15]
 	Updated net/tigervnc to 1.10.1nb2 [wiz 2020-03-15]
 	Updated chat/skypeweb-purple to 1.5 [mef 2020-03-15]
+	Updated lang/openjdk-bin to 13.0.2 [ryoon 2020-03-15]
