@@ -1,6 +1,0 @@
-This a meta package including Ruby 2.2 full release.
-
-It includes ruby22-base, ruby22-gdbm, ruby22-fiddle, ruby22-readline and
-ruby22-tk package.
-
-No package should depend on this package directly.
