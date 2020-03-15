@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1601 2020/03/15 18:46:45 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1602 2020/03/15 19:31:38 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2174,3 +2174,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-protobuf-cucumber to 3.10.8 [taca 2020-03-15]
 	Updated devel/ruby-cucumber-messages to 10.0.3 [taca 2020-03-15]
 	Updated mail/neomutt to 20200313 [wiz 2020-03-15]
+	Updated devel/p5-EV to 4.32 [tnn 2020-03-15]
