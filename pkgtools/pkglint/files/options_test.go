@@ -88,7 +88,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__literal(c *check.C) {
 	t.Chdir("category/package")
 	t.FinishSetUp()
 
-	CheckLinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines, "")
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:4: "+
@@ -124,7 +124,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__literal_in_for_loop(c *check.C) {
 	t.Chdir("category/package")
 	t.FinishSetUp()
 
-	CheckLinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines, "")
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:5: "+
@@ -158,7 +158,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__prefs(c *check.C) {
 	t.Chdir("category/package")
 	t.FinishSetUp()
 
-	CheckLinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines, "")
 
 	t.CheckOutputEmpty()
 }
@@ -184,7 +184,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__variable_order(c *check.C) {
 	t.Chdir("category/package")
 	t.FinishSetUp()
 
-	CheckLinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines, "")
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:3: " +
@@ -201,7 +201,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__empty(c *check.C) {
 	t.Chdir("category/package")
 	t.FinishSetUp()
 
-	CheckLinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines, "")
 
 	t.CheckOutputLines(
 		"ERROR: ~/category/package/options.mk: "+
@@ -240,7 +240,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__conditionals(c *check.C) {
 		".endif")
 	t.FinishSetUp()
 
-	CheckLinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines, "")
 
 	t.CheckOutputLines(
 		// This warning comes from VarTypeCheck.PkgOption
@@ -300,7 +300,7 @@ func (s *Suite) Test_CheckLinesOptionsMk(c *check.C) {
 		".elif !empty(PKG_OPTIONS:Msqlite)",
 		".endif")
 
-	CheckLinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines, "")
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:6: l is used but not defined.",
@@ -335,7 +335,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__unexpected_line(c *check.C) {
 		"pre-configure:",
 		"\techo \"In the pre-configure stage.\"")
 
-	CheckLinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines, "")
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:6: "+
@@ -375,7 +375,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__malformed_condition(c *check.C) {
 		".if ${OPSYS} == 'Darwin'",
 		".endif")
 
-	CheckLinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines, "")
 
 	t.CheckOutputLines(
 		"WARN: category/package/options.mk:15: Invalid condition, unrecognized part: \"${OPSYS} == 'Darwin'\".")
@@ -618,7 +618,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__indirect_supported_options_parentheses
 		".  endif",
 		".endfor")
 
-	CheckLinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines, "")
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:5: "+
@@ -645,7 +645,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__handled_but_not_supported(c *check.C) 
 		".if ${PKG_OPTIONS:Moption}",
 		".endif")
 
-	CheckLinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines, "")
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/options.mk:8: " +
@@ -670,7 +670,7 @@ func (s *Suite) Test_CheckLinesOptionsMk__supported_but_not_checked(c *check.C) 
 		".if ${PKG_OPTIONS:Mopt${:Uion}}",
 		".endif")
 
-	CheckLinesOptionsMk(mklines)
+	CheckLinesOptionsMk(mklines, "")
 
 	// Pkglint does not expand the ${:Uion}, therefore it doesn't know that
 	// the option is indeed handled. Because of this uncertainty, pkglint
