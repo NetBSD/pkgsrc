@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/03/03 06:01:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/03/15 23:14:40 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/importlib_resources/__init__.py
 ${PYSITELIB}/importlib_resources/__init__.pyc
 ${PYSITELIB}/importlib_resources/__init__.pyo
+${PYSITELIB}/importlib_resources/_common.py
+${PYSITELIB}/importlib_resources/_common.pyc
+${PYSITELIB}/importlib_resources/_common.pyo
 ${PYSITELIB}/importlib_resources/_compat.py
 ${PYSITELIB}/importlib_resources/_compat.pyc
 ${PYSITELIB}/importlib_resources/_compat.pyo
