@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1613 2020/03/15 22:51:08 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1614 2020/03/15 22:53:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2188,3 +2188,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/grpc to 1.27.3 [adam 2020-03-15]
 	Updated textproc/py-ujson to 2.0.2 [adam 2020-03-15]
 	Updated databases/py-apsw to 3.31.1 [adam 2020-03-15]
+	Updated mail/dovecot2 to 2.3.10 [adam 2020-03-15]
+	Updated mail/dovecot2-pigeonhole to 0.5.10 [adam 2020-03-15]
