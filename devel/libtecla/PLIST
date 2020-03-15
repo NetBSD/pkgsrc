@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/21 14:56:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/15 23:41:54 tnn Exp $
 bin/enhance
 include/libtecla.h
 lib/libtecla.a
+lib/libtecla.so
+lib/libtecla.so.1
+lib/libtecla.so.${PKGVERSION}
 man/man1/enhance.1
 man/man3/cfc_file_start.3
 man/man3/cfc_literal_escapes.3
