@@ -1,6 +1,6 @@
 #!/bin/sh
 
-/etc/rc.d/redmine_unicorn status > /dev/null 2>&1
+/etc/rc.d/redmine_unicorn@RUBY_SUFFIX@ status > /dev/null 2>&1
 
 if [ $? -eq 0 ]; then
 	echo 'Please, stop Redmine unicorn before running this script.'
