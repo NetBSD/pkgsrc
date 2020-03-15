@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/05/01 05:39:30 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2020/03/15 12:47:31 ryoon Exp $
 
-SHA1 (openjdk-12.0.1_linux-x64_bin.tar.gz) = 05951ea0e11e0d7ed21936b2e5cfb892463e16ee
-RMD160 (openjdk-12.0.1_linux-x64_bin.tar.gz) = 9034a95e59b0669960199e05b4bffb3fc0be5551
-SHA512 (openjdk-12.0.1_linux-x64_bin.tar.gz) = 606f2c7bb5ff704a467bbad30de87cf41da652af72014f49fa1b4c4c11fccbbc09710dc7aed90aef27c4967c723d12b0ef538697f5481174fa1a811219830e16
-Size (openjdk-12.0.1_linux-x64_bin.tar.gz) = 197649562 bytes
+SHA1 (openjdk-13.0.2_linux-x64_bin.tar.gz) = b9b52bd5e38d7cbba0219cdc15d4a4f45e73cb19
+RMD160 (openjdk-13.0.2_linux-x64_bin.tar.gz) = 7af9f11b8fa96917b6c716ccbeb2a8d85cb0bfda
+SHA512 (openjdk-13.0.2_linux-x64_bin.tar.gz) = 48cd8579afbd17b5eae75a02311a11405810c9fdf9936ade331c50b0694f639623d742575f29c3c983c45ee4cd9dbd303f8dd3f45342da6d666d2882afb4c930
+Size (openjdk-13.0.2_linux-x64_bin.tar.gz) = 195812001 bytes
