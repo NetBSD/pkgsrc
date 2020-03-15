@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/11/05 08:58:17 adam Exp $
+# $NetBSD: Makefile,v 1.30 2020/03/15 13:45:07 rillig Exp $
 
 DISTNAME=	flake8-3.7.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-pylint-[0-9]*:../../devel/py-pylint
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test<5:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
