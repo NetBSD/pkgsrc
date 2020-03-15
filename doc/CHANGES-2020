@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1600 2020/03/15 17:25:49 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1601 2020/03/15 18:46:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2173,3 +2173,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added lang/ruby-cucumber-gherkin version 11.0.0 [taca 2020-03-15]
 	Updated devel/ruby-protobuf-cucumber to 3.10.8 [taca 2020-03-15]
 	Updated devel/ruby-cucumber-messages to 10.0.3 [taca 2020-03-15]
+	Updated mail/neomutt to 20200313 [wiz 2020-03-15]
