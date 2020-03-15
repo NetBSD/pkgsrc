@@ -571,7 +571,11 @@ func (p *Pkglint) checkReg(filename CurrPath, basename string, depth int, pkg *P
 
 	case basename == "buildlink3.mk":
 		if mklines := LoadMk(filename, pkg, NotEmpty|LogErrors); mklines != nil {
-			CheckLinesBuildlink3Mk(mklines)
+			ck := NewBuildlink3Checker(mklines)
+			ck.Check()
+			if pkg != nil {
+				pkg.buildlinkID = ck.pkgbase
+			}
 		}
 
 	case hasPrefix(basename, "DESCR"):
@@ -594,7 +598,11 @@ func (p *Pkglint) checkReg(filename CurrPath, basename string, depth int, pkg *P
 
 	case basename == "options.mk":
 		if mklines := LoadMk(filename, pkg, NotEmpty|LogErrors); mklines != nil {
-			CheckLinesOptionsMk(mklines)
+			buildlinkID := ""
+			if pkg != nil {
+				buildlinkID = pkg.buildlinkID
+			}
+			CheckLinesOptionsMk(mklines, buildlinkID)
 		}
 
 	case matches(basename, `^patch-[-\w.~+]*\w$`):

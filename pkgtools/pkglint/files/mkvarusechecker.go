@@ -33,6 +33,7 @@ func (ck *MkVarUseChecker) Check(vuc *VarUseContext) {
 	ck.checkToolsPlatform()
 	ck.checkBuildDefs()
 	ck.checkDeprecated()
+	ck.checkPkgBuildOptions()
 
 	NewMkLineChecker(ck.MkLines, ck.MkLine).
 		checkTextVarUse(ck.use.varname, ck.vartype, vuc.time)
@@ -737,4 +738,27 @@ func (ck *MkVarUseChecker) checkDeprecated() {
 	}
 
 	ck.MkLine.Warnf("Use of %q is deprecated. %s", varname, instead)
+}
+
+func (ck *MkVarUseChecker) checkPkgBuildOptions() {
+	pkg := ck.MkLines.pkg
+	if pkg == nil {
+		return
+	}
+	varname := ck.use.varname
+	if !hasPrefix(varname, "PKG_BUILD_OPTIONS.") {
+		return
+	}
+	param := varnameParam(varname)
+	if pkg.seenPkgbase.Seen(param) {
+		return
+	}
+
+	ck.MkLine.Warnf("The PKG_BUILD_OPTIONS for %q are not available to this package.",
+		param)
+	ck.MkLine.Explain(
+		"The variable parameter for PKG_BUILD_OPTIONS must correspond",
+		"to the value of \"pkgbase\" above.",
+		"",
+		"For more information, see mk/pkg-build-options.mk.")
 }

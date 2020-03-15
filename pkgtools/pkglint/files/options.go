@@ -1,8 +1,9 @@
 package pkglint
 
-func CheckLinesOptionsMk(mklines *MkLines) {
+func CheckLinesOptionsMk(mklines *MkLines, buildlinkID string) {
 	ck := OptionsLinesChecker{
 		mklines,
+		buildlinkID,
 		false,
 		make(map[string]*MkLine),
 		false,
@@ -16,7 +17,8 @@ func CheckLinesOptionsMk(mklines *MkLines) {
 //
 // See mk/bsd.options.mk for a detailed description.
 type OptionsLinesChecker struct {
-	mklines *MkLines
+	mklines     *MkLines
+	buildlinkID string
 
 	declaredArbitrary         bool
 	declaredOptions           map[string]*MkLine
@@ -49,6 +51,18 @@ func (ck *OptionsLinesChecker) collect() {
 		if !seenInclude {
 			if !seenPkgOptionsVar && mkline.IsVarassign() && mkline.Varname() == "PKG_OPTIONS_VAR" {
 				seenPkgOptionsVar = true
+				buildlinkID := ck.buildlinkID
+				optionsID := varnameParam(mkline.Value())
+				if buildlinkID != "" && optionsID != "" && buildlinkID != optionsID {
+					mkline.Warnf("The buildlink3 identifier %q should be the same as the options identifier %q.",
+						buildlinkID, optionsID)
+					mkline.Explain(
+						"Having different identifiers refer to the same package",
+						"is confusing for the pkgsrc user.",
+						"The pkgsrc infrastructure doesn't care though",
+						"if the identifiers in PKG_OPTIONS.* and PKG_BUILD_OPTIONS.*",
+						"are the same or not.")
+				}
 			}
 			seenInclude = mkline.IsInclude() && mkline.IncludedFile() == "../../mk/bsd.options.mk"
 		}
