@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1568 2020/03/15 11:16:04 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1569 2020/03/15 11:31:36 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2142,3 +2142,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xfce4-whiskermenu-plugin to 2.4.3 [gutteridge 2020-03-15]
 	Updated sysutils/py-borgbackup to 1.1.11 [bsiegert 2020-03-15]
 	Updated chat/matterircd to 0.19.4 [mef 2020-03-15]
+	Updated pkgtools/pkglint to 19.4.11 [rillig 2020-03-15]
