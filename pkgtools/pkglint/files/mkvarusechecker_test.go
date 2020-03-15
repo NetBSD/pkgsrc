@@ -1325,3 +1325,42 @@ func (s *Suite) Test_MkVarUseChecker_checkDeprecated(c *check.C) {
 		"WARN: filename.mk:3: Use of \"USE_CROSSBASE\" is deprecated. "+
 			"Has been removed.")
 }
+
+// This test demonstrates some typos that an inexperienced pkgsrc developer
+// might make. This scenario is not intended to be realistic.
+func (s *Suite) Test_MkVarUseChecker_checkPkgBuildOptions(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpOption("option", "")
+	t.SetUpPackage("category/package",
+		".include \"../../category/lib/buildlink3.mk\"")
+	t.SetUpPackage("category/lib")
+	t.CreateFileLines("mk/pkg-build-options.mk")
+	t.CreateFileBuildlink3("category/package/buildlink3.mk",
+		".include \"../../mk/bsd.fast.prefs.mk\"",
+		"",
+		".if ${PKG_BUILD_OPTIONS.lib:Moption}", // Too early
+		".endif",
+		"",
+		".if ${PKG_BUILD_OPTIONS.unrelated:Moption}",
+		".include \"../../category/lib/buildlink3.mk\"",
+		".endif",
+		"",
+		".if ${PKG_BUILD_OPTIONS.lib:Moption}", // Only defined conditionally
+		".endif")
+	t.CreateFileBuildlink3("category/lib/buildlink3.mk",
+		"pkgbase := lib",
+		".include \"../../mk/pkg-build-options.mk\"")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:20: \"../../category/lib/buildlink3.mk\" is included unconditionally here "+
+			"and conditionally in buildlink3.mk:18 (depending on PKG_BUILD_OPTIONS.unrelated).",
+		"WARN: buildlink3.mk:17: The PKG_BUILD_OPTIONS for \"unrelated\" are not available to this package.",
+		"WARN: buildlink3.mk:14: Wrong PKG_BUILD_OPTIONS, expected \"package\" instead of \"lib\".",
+		"WARN: buildlink3.mk:17: Wrong PKG_BUILD_OPTIONS, expected \"package\" instead of \"unrelated\".",
+		"WARN: buildlink3.mk:21: Wrong PKG_BUILD_OPTIONS, expected \"package\" instead of \"lib\".")
+}
