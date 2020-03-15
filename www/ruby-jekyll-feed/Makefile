@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/10/05 04:52:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/15 21:13:35 wiz Exp $
 
 DISTNAME=	jekyll-feed-0.12.1
 CATEGORIES=	www
@@ -11,8 +11,6 @@ LICENSE=	mit
 #
 # gemspec says dependency, but this package is really part of jekyll.
 #DEPENDS+=	${RUBY_PKGPREFIX}-jekyll>=3.3<4:../../www/ruby-jekyll
-
-RUBY_VERSIONS_ACCEPTED=	24 25 26
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
