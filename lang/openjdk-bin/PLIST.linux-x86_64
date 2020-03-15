@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.1 2019/03/26 20:49:17 ryoon Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.2 2020/03/15 12:47:31 ryoon Exp $
 bin/openjdk-bin-jar
 bin/openjdk-bin-java
 bin/openjdk-bin-javac
@@ -297,11 +297,9 @@ java/openjdk-bin/legal/jdk.jartool/LICENSE
 java/openjdk-bin/legal/jdk.javadoc/ADDITIONAL_LICENSE_INFO
 java/openjdk-bin/legal/jdk.javadoc/ASSEMBLY_EXCEPTION
 java/openjdk-bin/legal/jdk.javadoc/LICENSE
-java/openjdk-bin/legal/jdk.javadoc/jquery-migrate.md
 java/openjdk-bin/legal/jdk.javadoc/jquery.md
 java/openjdk-bin/legal/jdk.javadoc/jqueryUI.md
 java/openjdk-bin/legal/jdk.javadoc/jszip.md
-java/openjdk-bin/legal/jdk.javadoc/pako.md
 java/openjdk-bin/legal/jdk.jcmd/ADDITIONAL_LICENSE_INFO
 java/openjdk-bin/legal/jdk.jcmd/ASSEMBLY_EXCEPTION
 java/openjdk-bin/legal/jdk.jcmd/LICENSE
@@ -441,7 +439,6 @@ java/openjdk-bin/lib/security/blacklisted.certs
 java/openjdk-bin/lib/security/cacerts
 java/openjdk-bin/lib/security/default.policy
 java/openjdk-bin/lib/security/public_suffix_list.dat
-java/openjdk-bin/lib/server/Xusage.txt
 java/openjdk-bin/lib/server/classes.jsa
 java/openjdk-bin/lib/server/libjsig.so
 java/openjdk-bin/lib/server/libjvm.so
