@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/12/19 22:11:51 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2020/03/15 19:55:42 tnn Exp $
 #
 
 DISTNAME=	libSystem-0.4.2
@@ -14,6 +14,7 @@ LICENSE=	2-clause-bsd
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
+LDFLAGS+=	${BUILDLINK_LDADD.dl}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
