@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2020/01/08 21:45:57 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/15 22:58:14 adam Exp $
 
-DISTNAME=	macholib-1.13
+DISTNAME=	macholib-1.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/macholib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/ronaldoussoren/macholib
+HOMEPAGE=	https://github.com/ronaldoussoren/macholib
 COMMENT=	Mach-O header analysis and editing
 LICENSE=	mit
 
