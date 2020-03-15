@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2012/10/31 11:17:22 asau Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/15 23:41:54 tnn Exp $
 
 DISTNAME=	libtecla-1.6.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.astro.caltech.edu/~mcs/tecla/
 
