@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1609 2020/03/15 20:04:20 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1610 2020/03/15 20:05:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2182,3 +2182,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-google-auth to 1.11.3 [wiz 2020-03-15]
 	Updated lang/vala to 0.48.1 [wiz 2020-03-15]
 	Updated graphics/adwaita-icon-theme to 3.36.0 [wiz 2020-03-15]
+	Updated www/py-google-api-python-client to 1.8.0 [wiz 2020-03-15]
