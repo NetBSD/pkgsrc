@@ -1,0 +1,15 @@
+$NetBSD: patch-configure_host,v 1.1 2020/03/16 09:35:47 rin Exp $
+
+Readd support for NetBSD/mips.
+
+--- configure.host.orig	2020-03-16 11:26:51.595184454 +0900
++++ configure.host	2020-03-16 11:27:22.533304200 +0900
+@@ -167,7 +167,7 @@
+   mips-sgi-irix5.* | mips-sgi-irix6.* | mips*-*-rtems*)
+ 	TARGET=MIPS; TARGETDIR=mips
+ 	;;
+-  mips*-*linux* | mips*-*-openbsd*)
++  mips*-*linux* | mips*-*-openbsd* | mips*-*-netbsd*)
+ 	# Support 128-bit long double for NewABI.
+ 	HAVE_LONG_DOUBLE='defined(__mips64)'
+ 	TARGET=MIPS; TARGETDIR=mips
