@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2020/03/10 22:09:41 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2020/03/16 14:17:05 tnn Exp $
 
 DISTNAME=	emacs-28.0.50_2020-02-10
 PKGVERSION=	28.0.50
@@ -61,4 +61,5 @@ pre-configure:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libimagequant/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
