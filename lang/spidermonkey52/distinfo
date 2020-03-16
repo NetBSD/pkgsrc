@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2019/10/08 21:34:15 jklos Exp $
+$NetBSD: distinfo,v 1.9 2020/03/16 13:30:57 tnn Exp $
 
 SHA1 (mozjs-52.7.4.tar.bz2) = ff009853040bb46017204fda4ed69a79484fd321
 RMD160 (mozjs-52.7.4.tar.bz2) = 71ee71c2444d8b6a1b2b3c744c9f52a2b7129879
@@ -10,6 +10,8 @@ SHA1 (patch-config_gcc__hidden.h) = c2042035288e01601b6c240fb08c8a1f598b9dfd
 SHA1 (patch-intl_icu_source_configure) = 1ff1be8ca68566e153219e15b8db696afd08b746
 SHA1 (patch-js_src_gc_Memory.cpp) = b1bb0c3045163d586c0b4d731d0ed7c23f339f3c
 SHA1 (patch-js_src_jit_IonBuilder.cpp) = b8be1d71d01c5f0e1b1016500be862b73e68df1b
+SHA1 (patch-js_src_jit_x86-shared_Constants-x86-shared.h) = d09ae908a64c8707014694f94134ab7600a52727
+SHA1 (patch-js_src_jsapi-tests_testPrintf.cpp) = e9dcb1be3d7eae8da97ff5368b29cc11b3e04f56
 SHA1 (patch-js_src_jsnativestack.cpp) = 3d0b06ccc3e24b408b97d01faa7758353f2edc85
 SHA1 (patch-js_src_old-configure_in) = 4fd3df4abde94758429d943641e1bd7bad3ca926
 SHA1 (patch-js_src_tests_update-test262.sh) = 10d73d95f4b849090bccb8fe656df79cbcea89f3
