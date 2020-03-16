@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 01:12:52 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/03/16 14:08:46 tnn Exp $
 
 SHA1 (tcd-2.2.0.tar.bz2) = 8ad1b9201d94554fe4d96b60da1cab577eae77cf
 RMD160 (tcd-2.2.0.tar.bz2) = f00702cfe496f85248534e155dc1d58ae88213b5
 SHA512 (tcd-2.2.0.tar.bz2) = d32f940afd6f53ae8c8754298fd872c0577c9caf8ffba46938e4019f5672fc112d5a48686e836269a08f2aec801dcac435a1da3fc1557a1af66d584337df011b
 Size (tcd-2.2.0.tar.bz2) = 90157 bytes
+SHA1 (patch-configure) = 00b65d1bf18e9399afe1da2484daa1435a898fd6
