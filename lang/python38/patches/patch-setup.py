@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.1 2019/10/15 16:50:11 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2020/03/16 10:19:15 tnn Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Do not look for ncursesw.
@@ -6,7 +6,7 @@ Assume panel_library is correct; this is a fix for ncurses' gnupanel
   which will get transformed to panel in buildlink.
 Also look for uuid/uuid.h.
 
---- setup.py.orig	2019-10-14 13:34:47.000000000 +0000
+--- setup.py.orig	2020-02-24 21:36:25.000000000 +0000
 +++ setup.py
 @@ -10,7 +10,7 @@ import sys
  import sysconfig
@@ -116,7 +116,7 @@ Also look for uuid/uuid.h.
          # Build the _uuid module if possible
          uuid_incs = find_file("uuid.h", self.inc_dirs, ["/usr/include/uuid"])
 +        if uuid_incs is None:
-+            uuid_incs = find_file("uuid/uuid.h", inc_dirs, [])
++            uuid_incs = find_file("uuid/uuid.h", self.inc_dirs, [])
          if uuid_incs is not None:
              if self.compiler.find_library_file(self.lib_dirs, 'uuid'):
                  uuid_libs = ['uuid']
