@@ -1,9 +1,7 @@
-$NetBSD: patch-options_options.c,v 1.2 2019/12/28 17:20:33 leot Exp $
+$NetBSD: patch-options_options.c,v 1.3 2020/03/16 20:31:44 nia Exp $
 
-autosync=0 requires "a perfect audio delay measurement".
-
-NetBSD does not provide this. Setting it to 30 (as recommended in
-mpv's man page) fixes frame drops in NetBSD.
+Workaround for frame drops with a high default blocksize.
+Can be removed when we are blk_ms=4 everywhere.
 
 PR kern/54230
 
