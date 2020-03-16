@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/03/01 15:36:01 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2020/03/16 14:52:05 ryoon Exp $
 
 BUILDLINK_TREE+=	opencv
 
@@ -8,7 +8,9 @@ OPENCV_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.opencv+=	opencv>=3.0.0
 BUILDLINK_PKGSRCDIR.opencv?=	../../graphics/opencv
 
+pkgbase := opencv
 .include "../../mk/pkg-build-options.mk"
+
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.opencv:Mjasper)
