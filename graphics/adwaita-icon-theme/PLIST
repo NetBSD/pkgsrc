@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/03/15 20:04:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/03/16 08:46:09 tnn Exp $
 share/icons/Adwaita/16x16/devices/audio-headphones.png
 share/icons/Adwaita/16x16/devices/audio-headset.png
 share/icons/Adwaita/16x16/devices/computer.png
@@ -1252,7 +1252,7 @@ share/icons/Adwaita/256x256/mimetypes/application-x-firmware.png
 share/icons/Adwaita/256x256/mimetypes/x-package-repository.png
 share/icons/Adwaita/256x256/places/network-server.png
 share/icons/Adwaita/256x256/places/network-workgroup.png
-share/icons/Adwaita/256x256/places/start-here.png
+@comment this is in PLIST.NetBSD, do not add here: share/icons/Adwaita/256x256/places/start-here.png
 share/icons/Adwaita/256x256/places/user-trash.png
 share/icons/Adwaita/256x256/status/user-trash-full.png
 share/icons/Adwaita/32x32/devices/audio-headphones.png
@@ -2080,7 +2080,7 @@ share/icons/Adwaita/8x8/emblems/emblem-unreadable.png
 share/icons/Adwaita/8x8/legacy/emblem-default.png
 share/icons/Adwaita/8x8/legacy/emblem-new.png
 share/icons/Adwaita/8x8/legacy/emblem-synchronizing.png
-share/icons/Adwaita/96x96/places/start-here.png
+@comment this is in PLIST.NetBSD, do not add here: share/icons/Adwaita/96x96/places/start-here.png
 share/icons/Adwaita/cursors/00008160000006810000408080010102
 share/icons/Adwaita/cursors/028006030e0e7ebffc7f7070c0600140
 share/icons/Adwaita/cursors/03b6e0fcb3499374a867c041f52298f0
