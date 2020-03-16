@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2020/03/16 20:58:18 nia Exp $
+# $NetBSD: Makefile,v 1.101 2020/03/16 21:20:43 wiz Exp $
 
 DISTNAME=	mpv-0.32.0
 PKGREVISION=	5
@@ -52,12 +52,12 @@ SUBST_MESSAGE.python=	Fix Python command names.
 # At some point this should be consolidated into mk/platform/Darwin.mk, it is
 # here temporarily while any issues are ironed out and it can be made generic
 # for Swift handling.
-# 
+#
 # On newer macOS releases there are a couple of swift compat static libraries
 # that need to be added to the search path.
 #
 .if ${OPSYS} == "Darwin"
-XCODE_DIR!=	xcode-select -p 2>/dev/null || ${TRUE}
+XCODE_DIR!=			xcode-select -p 2>/dev/null || ${TRUE}
 .  if exists(${XCODE_DIR}/usr/lib/swift/macosx)
 BUILDLINK_PASSTHRU_DIRS+=	${XCODE_DIR}/usr/lib/swift/macosx
 .  elif exists(${XCODE_DIR}/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx)
