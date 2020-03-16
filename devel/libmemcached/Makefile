@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/26 17:30:59 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.14 2020/03/16 10:38:09 nia Exp $
 
 DISTNAME=	libmemcached-1.0.18
 CATEGORIES=	devel
@@ -12,7 +11,7 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c gnu++0x
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	support/libmemcached.pc.in
@@ -25,6 +24,8 @@ CONFIGURE_ENV+=	ax_cv_check_cxxflags__Werror__pie=no
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+
+BUILDLINK_TRANSFORM+=	rm:-std=c++0x
 
 CONFIGURE_ARGS+=	--enable-jobserver=no
 
