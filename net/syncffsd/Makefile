@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/26 17:31:55 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/16 13:42:15 tnn Exp $
 
 DISTNAME=	syncffsd-0.8
 CATEGORIES=	net
@@ -10,8 +10,10 @@ HOMEPAGE=	https://ftp.espci.fr/pub/syncffsd/
 COMMENT=	FFS file system mirroring using rsync
 LICENSE=	modified-bsd
 
-RCD_SCRIPTS=	syncffsd
+ONLY_FOR_PLATFORM+=	NetBSD-*-*
+RCD_SCRIPTS=		syncffsd
 
+BUILD_DEFS+=	VARBASE
 MAKE_ENV+=	VARBASE=${VARBASE}
 MAKE_ENV+=	PREFIX=${PREFIX}
 
