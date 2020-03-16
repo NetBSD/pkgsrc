@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:49 joerg Exp $
+$NetBSD: distinfo,v 1.3 2020/03/16 00:21:07 tnn Exp $
 
 SHA1 (free42-1.4.78/free42.tgz) = 4b5caada89dbe8adac31b0ef67fddb572663a514
 RMD160 (free42-1.4.78/free42.tgz) = 3f4cc40dc42d0cdee7ec89201566e196f3ce2431
 SHA512 (free42-1.4.78/free42.tgz) = 14281538cf5228b6c0c84b529e692b04b606cd8a2733c0cc69bd58d9c1a259c92ca2df41d001947c22438e009eb99b924fcf09179f96bf2befebbc9a9d4e4265
 Size (free42-1.4.78/free42.tgz) = 10707178 bytes
 SHA1 (patch-README) = 4e1311b272c1334a1ddbb6d7043d90805516b681
-SHA1 (patch-gtk_Makefile) = 472361dc7e7b7d5b6869eb83198b6924b98ca7aa
+SHA1 (patch-gtk_Makefile) = 63bb16da78d778b09d40fd7034531afe8087c742
 SHA1 (patch-gtk_README) = 83ab97efb8f9046cba6056798344b76128562d5d
