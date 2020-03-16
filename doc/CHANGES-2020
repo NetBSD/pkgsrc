@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1620 2020/03/16 14:35:38 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1621 2020/03/16 14:48:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2128,7 +2128,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rust to 1.42.0 [jperkin 2020-03-13]
 	Updated chat/ircd-hybrid to 8.2.30 [fox 2020-03-14]
 	Updated audio/fasttracker2 to 1.12 [fox 2020-03-14]
-	Added devel/php-composer to 1.10.1 [tpaul 2020-03-14]
+	Added devel/php-composer version 1.10.1 [tpaul 2020-03-14]
 	Added security/php-gnupg version 1.4.0 [tpaul 2020-03-14]
 	Updated www/firefox to 74.0 [ryoon 2020-03-14]
 	Updated www/firefox-l10n to 74.0 [ryoon 2020-03-14]
