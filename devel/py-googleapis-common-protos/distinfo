@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/16 14:16:43 wiz Exp $
+
+SHA1 (googleapis-common-protos-1.51.0.tar.gz) = f374b609126c62d584b2f6f7034cddd2918f29c0
+RMD160 (googleapis-common-protos-1.51.0.tar.gz) = 6448b134106446bbea2e808c2fed1b0a67ba1a74
+SHA512 (googleapis-common-protos-1.51.0.tar.gz) = 31b6754d5541de4a6ce13e1e54dc54ee29c8153b57de3d0faf40bb236b6af9bee0516957f4b1f64f4404d713e3185126ef782a7825747fede827a8a8e604e303
+Size (googleapis-common-protos-1.51.0.tar.gz) = 35176 bytes
