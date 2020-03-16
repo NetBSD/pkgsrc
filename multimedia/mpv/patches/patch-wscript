@@ -1,4 +1,4 @@
-$NetBSD: patch-wscript,v 1.4 2020/03/16 20:31:44 nia Exp $
+$NetBSD: patch-wscript,v 1.5 2020/03/16 21:20:03 wiz Exp $
 
 Enable support for DRM on NetBSD.
 
@@ -6,12 +6,6 @@ NetBSD audio support.
 
 --- wscript.orig	2020-01-26 20:31:54.000000000 +0000
 +++ wscript
-@@ -1,4 +1,4 @@
--# vi: ft=python
-+# vi: ft=python3.7
- 
- import sys, os, re
- sys.path.insert(0, os.path.join(os.getcwd(), 'waftools'))
 @@ -291,6 +291,11 @@ iconv support use --disable-iconv.",
          'func': check_statement(['sys/vt.h', 'sys/ioctl.h'],
                                  'int m; ioctl(0, VT_GETMODE, &m)'),
