@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:49:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/16 10:10:59 nia Exp $
 
 DISTNAME=	fallingtime-1.0.2
 PKGREVISION=	1
@@ -15,7 +15,7 @@ EXTRACT_USING=	bsdtar
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c99 c++
 
 CMAKE_ARGS+=	-DINSTALL_PREFIX=${PREFIX}/libexec
 CMAKE_ARGS+=	-DINSTALL_DATA_PREFIX=${PREFIX}/share/fallingtime
