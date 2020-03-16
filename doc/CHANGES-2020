@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1623 2020/03/16 15:34:29 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1624 2020/03/16 16:27:40 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2200,3 +2200,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-google-api-core version 1.16.0 [wiz 2020-03-16]
 	Updated www/py-google-api-python-client to 1.8.0nb1 [wiz 2020-03-16]
 	Updated www/ruby-selenium-webdriver to 3.142.7 [taca 2020-03-16]
+	Updated sysutils/nnn to 3.0 [sjmulder 2020-03-16]
