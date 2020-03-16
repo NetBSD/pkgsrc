@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1624 2020/03/16 16:27:40 sjmulder Exp $
+$NetBSD: CHANGES-2020,v 1.1625 2020/03/16 16:43:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2201,3 +2201,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-google-api-python-client to 1.8.0nb1 [wiz 2020-03-16]
 	Updated www/ruby-selenium-webdriver to 3.142.7 [taca 2020-03-16]
 	Updated sysutils/nnn to 3.0 [sjmulder 2020-03-16]
+	Updated ham/trustedQSL to 2.5.1 [gdt 2020-03-16]
