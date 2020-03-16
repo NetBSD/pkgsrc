@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.61 2020/03/16 20:58:18 nia Exp $
+$NetBSD: distinfo,v 1.62 2020/03/16 21:20:02 wiz Exp $
 
 SHA1 (mpv-0.32.0.tar.gz) = 5b69ea34dd5f8d209acd5266415c7bc00ab83341
 RMD160 (mpv-0.32.0.tar.gz) = d1e399fce8985a0399fe627248b87d8537cfefd7
@@ -12,5 +12,5 @@ SHA1 (patch-options_options.c) = c75fb27140ad21e0a11c6ded976116c544661f56
 SHA1 (patch-player_main.c) = 7d1d62091c327fca698844004ddb9a7871e15fce
 SHA1 (patch-video_out_drm__common.c) = a545a8aec29f1b3c44d26aacbc59b86d3333a0b9
 SHA1 (patch-video_out_wayland__common.c) = d3e72c4ff5426bd8349c15679a47d446c35666b1
-SHA1 (patch-wscript) = 33c81597c1eb25911b13c64a1ba8e47d268bd517
+SHA1 (patch-wscript) = cc3f24fcd10a23fef81bad149bfb88bf7d2a117c
 SHA1 (patch-wscript__build.py) = bbb391be46f6e5c02d1946a07bb5d8bbb442fd5a
