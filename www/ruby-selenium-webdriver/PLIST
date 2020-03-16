@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/01/20 14:59:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/03/16 15:32:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -54,6 +54,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/keys.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/logger.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/logs.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/manager.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/mouse.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/navigation.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/options.rb
@@ -70,7 +71,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/timeouts.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/touch_action_builder.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/touch_screen.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/w3c_action_builder.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/common/w3c_options.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/w3c_manager.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/wait.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/window.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/zipper.rb

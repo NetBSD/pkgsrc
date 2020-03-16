@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/01/20 14:59:32 taca Exp $
+$NetBSD: distinfo,v 1.8 2020/03/16 15:32:14 taca Exp $
 
-SHA1 (selenium-webdriver-3.141.0.gem) = 9ab8577079b07d12a1d6a0aa2e316d96e8a70374
-RMD160 (selenium-webdriver-3.141.0.gem) = ae3eac0406a4df813bf2de54e5d4d38f853427ee
-SHA512 (selenium-webdriver-3.141.0.gem) = 08dec20408be5ca7c3807b803ecac505ae7487332b6e1c4d9b8e0f82a99bc502873752c0e10e8bfe3770ad70e7fe30b929b165bd3b0012478e60a7a5a603b32d
-Size (selenium-webdriver-3.141.0.gem) = 862208 bytes
+SHA1 (selenium-webdriver-3.142.7.gem) = a863b9f6e2f89e50178e0e840c5b2684166aaebe
+RMD160 (selenium-webdriver-3.142.7.gem) = 16a3cb25f30e146edfe857e1555e025a46376df4
+SHA512 (selenium-webdriver-3.142.7.gem) = 0e7891c19b8a0b20441d85bc17032ecf03cba7ca435846e03abc50b62b0c53c075dc70456796c9bfcd1ecd28ecc517f907a3d6868346a07617fd1d0c1b9437c0
+Size (selenium-webdriver-3.142.7.gem) = 865280 bytes
