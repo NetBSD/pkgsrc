@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/09 18:20:56 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2020/03/16 00:00:45 tnn Exp $
 
 DISTNAME=	sfslite-1.2.7
 PKGREVISION=	1
@@ -15,6 +15,7 @@ CONFIGURE_ARGS+=	--enable-sfsmisc
 USE_TOOLS+=		gmake bison
 USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 AUTO_MKDIRS=	yes
 
