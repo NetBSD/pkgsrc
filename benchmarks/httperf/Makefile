@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/03/11 14:24:44 nia Exp $
+# $NetBSD: Makefile,v 1.25 2020/03/16 13:47:27 tnn Exp $
 
 DISTNAME=	httperf-0.9.0.20190829
 CATEGORIES=	benchmarks www
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	no
+USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf autoreconf automake
 CFLAGS+=	-DFD_SETSIZE=16424
 
