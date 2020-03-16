@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:42 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/16 02:32:09 tnn Exp $
 
 DISTNAME=	redmine-themes-1.3.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-redmine-minimalflat-theme-[0-9]*:../../devel/ruby-re
 DEPENDS+=	${RUBY_PKGPREFIX}-redmine-red-andy-theme-[0-9]*:../../devel/ruby-redmine-red-andy-theme
 
 META_PACKAGE=		yes
-RUBY_VERSIONS_ACCEPTED=	22
+RUBY_VERSIONS_ACCEPTED=	25 26
 
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../mk/bsd.pkg.mk"
