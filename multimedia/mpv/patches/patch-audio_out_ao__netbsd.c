@@ -1,10 +1,10 @@
-$NetBSD: patch-audio_out_ao__netbsd.c,v 1.1 2020/03/16 20:31:44 nia Exp $
+$NetBSD: patch-audio_out_ao__netbsd.c,v 1.2 2020/03/16 20:58:18 nia Exp $
 
 NetBSD audio support.
 
---- audio/out/ao_netbsd.c.orig	2020-03-16 20:20:16.030655720 +0000
+--- audio/out/ao_netbsd.c.orig	2020-03-16 20:38:28.287433271 +0000
 +++ audio/out/ao_netbsd.c
-@@ -0,0 +1,276 @@
+@@ -0,0 +1,263 @@
 +/*
 + * Copyright (c) 2020 Nia Alarie <nia@NetBSD.org>
 + * All rights reserved.
@@ -46,8 +46,16 @@ NetBSD audio support.
 +#include "ao.h"
 +#include "internal.h"
 +
-+#ifndef NETBSD_MAXDEVS
-+#define NETBSD_MAXDEVS (8)
++#ifndef NETBSD_MAX_DEVS
++#define NETBSD_MAX_DEVS (8)
++#endif
++
++#ifndef NETBSD_MAX_CHANNELS
++#define NETBSD_MAX_CHANNELS (12)
++#endif
++
++#ifndef NETBSD_BUF_FRAMES
++#define NETBSD_BUF_FRAMES (32)
 +#endif
 +
 +struct priv {
@@ -81,7 +89,7 @@ NetBSD audio support.
 +
 +    info.mode = AUMODE_PLAY;
 +
-+    for (int n = 1; n <= 12; n++) {
++    for (int n = 1; n <= NETBSD_MAX_CHANNELS; n++) {
 +        struct mp_chmap map;
 +
 +        mp_chmap_from_channels(&map, n);
@@ -108,6 +116,7 @@ NetBSD audio support.
 +    default:
 +        pinfo->precision = 32;
 +        pinfo->encoding = AUDIO_ENCODING_SLINEAR;
++        ao->format = AF_FORMAT_S32;
 +        break;
 +    }
 +
@@ -122,21 +131,6 @@ NetBSD audio support.
 +    }
 +
 +    ao->samplerate = pinfo->sample_rate;
-+
-+    switch (pinfo->precision) {
-+    case 8:
-+        ao->format = AF_FORMAT_U8;
-+        break;
-+    case 16:
-+        ao->format = AF_FORMAT_S16;
-+        break;
-+    case 32:
-+        ao->format = AF_FORMAT_S32;
-+        break;
-+    default:
-+        MP_ERR(ao, "Unsupported precision %d\n", pinfo->precision);
-+        goto fail;
-+    }
 +
 +    return 0;
 +
@@ -174,14 +168,7 @@ NetBSD audio support.
 +
 +static int get_space(struct ao *ao)
 +{
-+    struct priv *p = ao->priv;
-+    struct audio_info info;
-+
-+    if (ioctl(p->fd, AUDIO_GETINFO, &info) == -1) {
-+        MP_ERR(ao, "AUDIO_GETINFO failed: %s\n", mp_strerror(errno));
-+        return 0;
-+    }
-+    return (info.blocksize - info.play.seek) / ao->sstride;
++    return NETBSD_BUF_FRAMES * ao->sstride;
 +}
 +
 +static void audio_pause(struct ao *ao)
@@ -255,7 +242,7 @@ NetBSD audio support.
 +    struct audio_device dev;
 +    int fd;
 +
-+    for (int i = 0; 0 < NETBSD_MAXDEVS; ++i) {
++    for (int i = 0; 0 < NETBSD_MAX_DEVS; ++i) {
 +        (void)snprintf(name, sizeof(name), "/dev/audio%d", i);
 +        fd = open(name, O_WRONLY);
 +        if (fd == -1 || ioctl(fd, AUDIO_GETDEV, &dev) == -1) {
