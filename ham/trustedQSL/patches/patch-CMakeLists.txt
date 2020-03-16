@@ -1,0 +1,21 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/03/16 16:43:23 gdt Exp $
+
+Force off LMDB, because while we don't include the bl3, cmake finds it
+anyway.
+
+The general issue was mentioned to upstream, but as a change to lmdb
+is likely, pkgsrc doesn't need this fixed.
+
+--- CMakeLists.txt.orig	2019-11-14 02:17:06.000000000 +0000
++++ CMakeLists.txt
+@@ -55,7 +55,9 @@ else()
+ endif()
+ 
+ # Prefer LMDB, fall back to BDB if that's not available
+-find_package(LMDB)
++# pkgsrc: stay with BDB until upgrade issues are resolved.
++# (cmake finds lmdb even when not bl3'd)
++# find_package(LMDB)
+ if(NOT LMDB_FOUND)
+ 	set (LMDB_LIBRARIES "")
+ 	find_package(BDB REQUIRED)
