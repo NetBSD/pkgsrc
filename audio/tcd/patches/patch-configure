@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2020/03/16 14:08:46 tnn Exp $
+
+make -lSDL go in $LIBS instead of $LDFLAGS.
+Fixes build on Linux due $LIBS appearing later on the command
+line, appeasing link editor search order.
+
+--- configure.orig	2004-06-15 23:09:04.000000000 +0000
++++ configure
+@@ -3000,7 +3000,7 @@ echo "$as_me: error: sdl is too old (ver
+ 
+ 
+ CPPFLAGS="$CPPFLAGS $SDL_CPPFLAGS"
+-LDFLAGS="$LDFLAGS $SDL_LDFLAGS"
++LIBS="$LIBS $SDL_LDFLAGS"
+ 
+ 
+ 
