@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1619 2020/03/16 14:28:21 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1620 2020/03/16 14:35:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2197,3 +2197,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added games/nudoku version 2.0.0 [fcambus 2020-03-16]
 	Added devel/py-googleapis-common-protos version 1.51.0 [wiz 2020-03-16]
 	Added devel/py-google-api-core version 1.16.0 [wiz 2020-03-16]
+	Updated www/py-google-api-python-client to 1.8.0nb1 [wiz 2020-03-16]
