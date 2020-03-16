@@ -1,18 +1,25 @@
-$NetBSD: patch-gtk_Makefile,v 1.1 2014/03/10 08:38:25 he Exp $
+$NetBSD: patch-gtk_Makefile,v 1.2 2020/03/16 00:21:07 tnn Exp $
 
 Remove references to X11 headers and libs, allow them to
 be controlled by pkgsrc.  Also allow CXXFLAGS to be added to.
 
 --- gtk/Makefile.orig	2013-12-09 00:49:20.000000000 +0000
 +++ gtk/Makefile
-@@ -15,8 +15,8 @@
+@@ -15,11 +15,14 @@
  # along with this program; if not, see http://www.gnu.org/licenses/.
  ###############################################################################
  
 -CXXFLAGS := -MMD -Wall -Wno-parentheses -Wno-write-strings -g -I/usr/X11R6/include -fno-exceptions -fno-rtti $(shell pkg-config --cflags gtk+-2.0) -DVERSION="\"$(shell cat ../VERSION)\""
 -LDFLAGS = -L/usr/X11R6/lib
+-LIBS := -lXmu $(shell pkg-config --libs gtk+-2.0)
 +CXXFLAGS_PRE := -MMD -Wall -Wno-parentheses -Wno-write-strings -g -fno-exceptions -fno-rtti $(shell pkg-config --cflags gtk+-2.0) -DVERSION="\"$(shell cat ../VERSION)\""
 +CXXFLAGS += ${CXXFLAGS_PRE}
- LIBS := -lXmu $(shell pkg-config --libs gtk+-2.0)
++LIBS := -lX11 -lXmu $(shell pkg-config --libs gtk+-2.0)
  
  ifeq "$(shell uname -s)" "Linux"
++ifdef AUDIO_ALSA
++LIBS += -ldl -pthread
++endif
+ LDFLAGS += -Wl,--hash-style=both
+ endif
+ 
