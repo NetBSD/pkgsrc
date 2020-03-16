@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/07/10 09:14:27 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/03/16 13:17:19 wiz Exp $
 include/Database.h
 include/Database/database.h
 include/Database/engine.h
@@ -20,7 +20,6 @@ share/gtk-doc/html/libDatabase/index.html
 share/gtk-doc/html/libDatabase/left-insensitive.png
 share/gtk-doc/html/libDatabase/left.png
 share/gtk-doc/html/libDatabase/libDatabase-database.html
-share/gtk-doc/html/libDatabase/libDatabase.devhelp2
 share/gtk-doc/html/libDatabase/right-insensitive.png
 share/gtk-doc/html/libDatabase/right.png
 share/gtk-doc/html/libDatabase/style.css
