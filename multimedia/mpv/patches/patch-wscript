@@ -1,10 +1,18 @@
-$NetBSD: patch-wscript,v 1.3 2019/10/25 14:35:56 leot Exp $
+$NetBSD: patch-wscript,v 1.4 2020/03/16 20:31:44 nia Exp $
 
 Enable support for DRM on NetBSD.
 
---- wscript.orig	2019-10-25 13:08:15.000000000 +0000
+NetBSD audio support.
+
+--- wscript.orig	2020-01-26 20:31:54.000000000 +0000
 +++ wscript
-@@ -289,6 +289,11 @@ iconv support use --disable-iconv.",
+@@ -1,4 +1,4 @@
+-# vi: ft=python
++# vi: ft=python3.7
+ 
+ import sys, os, re
+ sys.path.insert(0, os.path.join(os.getcwd(), 'waftools'))
+@@ -291,6 +291,11 @@ iconv support use --disable-iconv.",
          'func': check_statement(['sys/vt.h', 'sys/ioctl.h'],
                                  'int m; ioctl(0, VT_GETMODE, &m)'),
      }, {
@@ -16,7 +24,19 @@ Enable support for DRM on NetBSD.
          'name': 'gbm.h',
          'desc': 'gbm.h',
          'func': check_cc(header_name=['stdio.h', 'gbm.h']),
-@@ -584,7 +589,7 @@ video_output_features = [
+@@ -521,6 +526,11 @@ audio_output_features = [
+         'func': check_cc(header_name='sys/soundcard.h'),
+         'deps': 'posix && gpl',
+     }, {
++        'name': '--netbsd-audio',
++        'desc': 'NetBSD audio output',
++        'func': check_statement(['sys/audioio.h', 'sys/ioctl.h'],
++                                'struct audio_device d; ioctl(0, AUDIO_GETDEV, &d)'),
++    }, {
+         'name': '--rsound',
+         'desc': 'RSound audio output',
+         'func': check_statement('rsound.h', 'rsd_init(NULL)', lib='rsound')
+@@ -587,7 +597,7 @@ video_output_features = [
      }, {
          'name': '--drm',
          'desc': 'DRM',
