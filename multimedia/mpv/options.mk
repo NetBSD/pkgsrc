@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2020/01/22 19:08:28 maya Exp $
+# $NetBSD: options.mk,v 1.23 2020/03/16 21:28:23 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -9,12 +9,19 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 PKG_OPTIONS_OPTIONAL_GROUPS=	gl
 PKG_OPTIONS_GROUP.gl=		opengl rpi
 
-PKG_SUPPORTED_OPTIONS+=		alsa ass bluray caca libdrm lua pulseaudio
-PKG_SUPPORTED_OPTIONS+=		sdl2 wayland x11
+# audio outputs
+PKG_SUPPORTED_OPTIONS+=		alsa jack pulseaudio
+# video outputs
+PKG_SUPPORTED_OPTIONS+=		caca sdl2 libdrm wayland x11
+# misc
+PKG_SUPPORTED_OPTIONS+=		ass bluray lua
 
 .include "../../mk/bsd.fast.prefs.mk"
+
 PKG_SUGGESTED_OPTIONS=		ass bluray lua sdl2
+
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio
+
 .if ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=		opengl libdrm x11
 .endif
@@ -33,7 +40,7 @@ PKG_SUGGESTED_OPTIONS+=		wayland
 .include "../../mk/bsd.options.mk"
 
 ###
-### alsa support
+### alsa support (audio output)
 ###
 .if !empty(PKG_OPTIONS:Malsa)
 WAF_CONFIGURE_ARGS+=	--enable-alsa
@@ -74,7 +81,17 @@ WAF_CONFIGURE_ARGS+=	--disable-lua
 .endif
 
 ###
-### Pulseaudio support (audio output)
+### JACK support (audio output)
+###
+.if !empty(PKG_OPTIONS:Mjack)
+WAF_CONFIGURE_ARGS+=	--enable-jack
+.include "../../audio/jack/buildlink3.mk"
+.else
+WAF_CONFIGURE_ARGS+=	--disable-jack
+.endif
+
+###
+### PulseAudio support (audio output)
 ###
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 WAF_CONFIGURE_ARGS+=	--enable-pulse
