@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/03/16 12:59:02 fcambus Exp $
+bin/nudoku
+man/man6/nudoku.6
+share/locale/de/LC_MESSAGES/nudoku.mo
+share/locale/es/LC_MESSAGES/nudoku.mo
+share/locale/fr/LC_MESSAGES/nudoku.mo
+share/locale/ru/LC_MESSAGES/nudoku.mo
