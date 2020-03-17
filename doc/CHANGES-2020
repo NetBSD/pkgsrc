@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1625 2020/03/16 16:43:29 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.1626 2020/03/17 10:28:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2202,3 +2202,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-selenium-webdriver to 3.142.7 [taca 2020-03-16]
 	Updated sysutils/nnn to 3.0 [sjmulder 2020-03-16]
 	Updated ham/trustedQSL to 2.5.1 [gdt 2020-03-16]
+	Updated devel/meson to 0.53.2 [adam 2020-03-17]
+	Updated devel/py-xdis to 4.2.3 [adam 2020-03-17]
