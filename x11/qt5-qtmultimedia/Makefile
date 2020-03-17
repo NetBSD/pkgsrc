@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2020/03/10 22:09:14 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2020/03/17 15:42:06 nia Exp $
 
 DISTNAME=	qtmultimedia-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtmultimedia-${QTVERSION}
@@ -11,6 +11,9 @@ INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
 
 .include "../../x11/qt5-qtbase/Makefile.common"
+
+# Needs gnu+11 for alloca.
+BUILDLINK_TRANSFORM+=	rm:-std=c++1z
 
 post-install:
 .for i in Qt5Multimedia.pc Qt5MultimediaWidgets.pc
