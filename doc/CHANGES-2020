@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1636 2020/03/17 15:37:29 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1637 2020/03/17 18:33:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2216,3 +2216,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/rocksndiamonds to 4.1.4.1 [adam 2020-03-17]
 	Updated devel/ccache to 3.7.8 [adam 2020-03-17]
 	Updated mail/pear-Mail_Mime to 1.10.7 [taca 2020-03-17]
+	Updated databases/mysql57-client to 5.7.29 [adam 2020-03-17]
+	Updated databases/mysql57-server to 5.7.29 [adam 2020-03-17]
