@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2020/03/08 16:47:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2020/03/17 12:56:36 nia Exp $
 
 BUILDLINK_TREE+=	SDL2
 
@@ -17,18 +17,12 @@ pkgbase := SDL2
 .include "../../audio/nas/buildlink3.mk"
 .endif
 
-.include "../../converters/libiconv/buildlink3.mk"
-
 .if !empty(PKG_BUILD_OPTIONS.SDL2:Mopengl) && ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.SDL2:Mrpi)
 .include "../../misc/raspberrypi-userland/buildlink3.mk"
-.endif
-
-.if !empty(PKG_BUILD_OPTIONS.SDL2:Moss)
-.include "../../mk/oss.buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.SDL2:Mwayland)
@@ -45,6 +39,8 @@ pkgbase := SDL2
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .endif
 
+.include "../../audio/libsamplerate/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
