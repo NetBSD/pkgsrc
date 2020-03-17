@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.157 2020/03/10 22:10:02 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2020/03/17 14:23:04 ryoon Exp $
 
-DISTNAME=	blender-2.82
-PKGREVISION=	2
+DISTNAME=	blender-2.82a
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +11,7 @@ COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c gnu++11
 
 # C++11
 GCC_REQD+=	4.7
@@ -35,6 +34,7 @@ CMAKE_ARGS+=	-DWITH_CODEC_FFMPEG=ON
 CMAKE_ARGS+=	-DWITH_CODEC_SNDFILE=ON
 CMAKE_ARGS+=	-DWITH_SYSTEM_GLEW=ON
 
+CMAKE_ARGS+=	-DPYTHON_VERSION=${PYVERSSUFFIX}
 CMAKE_ARGS+=	-DWITH_PYTHON_INSTALL_NUMPY=OFF
 CMAKE_ARGS+=	-DWITH_PYTHON_INSTALL_REQUESTS=OFF
 
@@ -51,7 +51,7 @@ INSTALLATION_DIRS=	bin share/blender
 
 CHECK_PORTABILITY_SKIP+=	doc/python_api/sphinx_doc_gen.sh
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
