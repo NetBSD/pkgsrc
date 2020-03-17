@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2019/05/12 06:19:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/17 21:33:24 rillig Exp $
 
 DISTNAME=	binutils-2.32
 PKGNAME=	cross-arm-none-eabi-${DISTNAME}
@@ -11,9 +11,10 @@ HOMEPAGE=	# empty
 COMMENT=	Cross binutils for bare metal ARM EABI
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake makeinfo
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake makeinfo
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # several sub-configures don't know --enable-nls
 
 ARMELF_PREFIX=		${PREFIX}/cross-arm-none-eabi
 
@@ -22,7 +23,8 @@ CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 GNU_CONFIGURE_PREFIX=	${ARMELF_PREFIX}
 
-CONFIGURE_ARGS+=	--disable-werror --target=arm-none-eabi
+CONFIGURE_ARGS+=	--disable-werror
+CONFIGURE_ARGS+=	--target=arm-none-eabi
 CONFIGURE_ARGS+=	--disable-nls
 INFO_FILES=		yes
 
