@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/01/27 10:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2020/03/17 22:24:20 rillig Exp $
 
 DISTNAME=	sed-4.8
 PKGNAME=	g${DISTNAME}
@@ -21,6 +21,9 @@ INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
 # at least Solaris-2.9 has issues with grep/egrep
 USE_TOOLS+=		grep makeinfo
+
+# Prevent "Please add USE_TOOLS+=perl" warning at the end of configure phase.
+CONFIGURE_ENV+=		PERL=
 
 CONFIGURE_ARGS+=	--program-prefix=g
 
