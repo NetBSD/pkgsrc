@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2019/10/14 19:44:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2020/03/17 18:59:16 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -418,6 +418,7 @@ share/mysql/test/include/diff_servers.inc
 share/mysql/test/include/diff_tables.inc
 share/mysql/test/include/end_include_file.inc
 share/mysql/test/include/endspace.inc
+share/mysql/test/include/escape_sql.inc
 share/mysql/test/include/eval.inc
 share/mysql/test/include/execute_with_statistics.inc
 share/mysql/test/include/expect_qep.inc
@@ -1204,6 +1205,7 @@ share/mysql/test/r/innodb_pk_extension_off.result
 share/mysql/test/r/innodb_pk_extension_on.result
 share/mysql/test/r/innodb_recovery_with_upper_case_names.result
 share/mysql/test/r/insert.result
+share/mysql/test/r/insert_debug.result
 share/mysql/test/r/insert_notembedded.result
 share/mysql/test/r/insert_select.result
 share/mysql/test/r/insert_update.result
@@ -6466,6 +6468,7 @@ share/mysql/test/suite/rpl/r/rpl_grant_plugin.result
 share/mysql/test/suite/rpl/r/rpl_group_commit_deadlock.result
 share/mysql/test/suite/rpl/r/rpl_gtid_binary_log_as_relay_log.result
 share/mysql/test/suite/rpl/r/rpl_gtid_binlog_errors.result
+share/mysql/test/suite/rpl/r/rpl_gtid_deleted_binlog_fail_to_connect.result
 share/mysql/test/suite/rpl/r/rpl_gtid_do_table_filter_insensitive.result
 share/mysql/test/suite/rpl/r/rpl_gtid_do_table_filter_sensitive.result
 share/mysql/test/suite/rpl/r/rpl_gtid_drop_table.result
@@ -6997,6 +7000,7 @@ share/mysql/test/suite/rpl/t/rpl_group_commit_deadlock.test
 share/mysql/test/suite/rpl/t/rpl_gtid_binary_log_as_relay_log.test
 share/mysql/test/suite/rpl/t/rpl_gtid_binlog_errors-master.opt
 share/mysql/test/suite/rpl/t/rpl_gtid_binlog_errors.test
+share/mysql/test/suite/rpl/t/rpl_gtid_deleted_binlog_fail_to_connect.test
 share/mysql/test/suite/rpl/t/rpl_gtid_do_table_filter_insensitive-master.opt
 share/mysql/test/suite/rpl/t/rpl_gtid_do_table_filter_insensitive-slave.opt
 share/mysql/test/suite/rpl/t/rpl_gtid_do_table_filter_insensitive.test
@@ -9312,6 +9316,8 @@ share/mysql/test/t/innodb_pk_extension_on.test
 share/mysql/test/t/innodb_recovery_with_upper_case_names-master.opt
 share/mysql/test/t/innodb_recovery_with_upper_case_names.test
 share/mysql/test/t/insert.test
+share/mysql/test/t/insert_debug-master.opt
+share/mysql/test/t/insert_debug.test
 share/mysql/test/t/insert_notembedded.test
 share/mysql/test/t/insert_select.test
 share/mysql/test/t/insert_update.test

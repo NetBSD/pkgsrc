@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.54 2019/10/14 19:44:46 adam Exp $
+$NetBSD: distinfo,v 1.55 2020/03/17 18:59:16 adam Exp $
 
-SHA1 (mysql-5.6.46.tar.gz) = dd735b6efa8f5be61ba65b58755188f38986151c
-RMD160 (mysql-5.6.46.tar.gz) = c0486a82fc070cffb7b56609c630dfec369e0240
-SHA512 (mysql-5.6.46.tar.gz) = 5a1ef9085b1461adb6eec7e9c80d347736ddbe2cd5087b5aebcac54094af8ce3bc5dc99499dd517a469e0bc4a40df8325e4306da5a05388950f4fd6652f6b5b9
-Size (mysql-5.6.46.tar.gz) = 32395002 bytes
+SHA1 (mysql-5.6.47.tar.gz) = 9a01ef6bf2a85ec819c6ececad7c2b733375aff3
+RMD160 (mysql-5.6.47.tar.gz) = c580c4bab8c81db0bc9eac19223fb2b260e35f55
+SHA512 (mysql-5.6.47.tar.gz) = ad5df97135a30f1ff1790ae03f7ad449deb5f5a8d15aa17d6365c49beefd250164a21175b6e82fc64c2a8576d62e8a3b3efc678ef981cd9638f8964897de1a8b
+Size (mysql-5.6.47.tar.gz) = 32388152 bytes
 SHA1 (sphinx-2.2.11-release.tar.gz) = 34e83f43de0e69e258bf749ea00348c60a51632a
 RMD160 (sphinx-2.2.11-release.tar.gz) = 5804b4cce64bc03fa20bac26c7391cd661cecc77
 SHA512 (sphinx-2.2.11-release.tar.gz) = cf1a262a5b0fbf0bd2827ec6ec629edeaf709ce855a6e7b509b65342baaeb26c02717ca63f1578d32c83d21e2fd6d1e92dceb34660e6351b93cd96fd4e623689
