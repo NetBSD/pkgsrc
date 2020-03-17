@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1626 2020/03/17 10:28:27 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1627 2020/03/17 11:04:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2204,3 +2204,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated ham/trustedQSL to 2.5.1 [gdt 2020-03-16]
 	Updated devel/meson to 0.53.2 [adam 2020-03-17]
 	Updated devel/py-xdis to 4.2.3 [adam 2020-03-17]
+	Updated sysutils/py-salt-pepper to 0.7.6 [adam 2020-03-17]
+	Updated devel/py-coverage to 5.0.4 [adam 2020-03-17]
