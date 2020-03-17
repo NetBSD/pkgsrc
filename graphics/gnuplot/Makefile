@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.139 2020/03/10 22:10:07 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2020/03/17 13:40:04 rin Exp $
 
 DISTNAME=	gnuplot-5.2.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES+=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnuplot/}
 
@@ -17,7 +17,6 @@ CONFLICTS+=		gnuplot-nox11-[0-9]*
 USE_LANGUAGES=		c
 USE_TOOLS+=		makeinfo pkg-config gmake
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-readline=bsd
 CONFIGURE_ARGS+=	--without-latex
 CONFIGURE_ARGS+=	--without-tutorial
 CONFIGURE_ARGS+=	ac_cv_prog_EMACS=
@@ -36,7 +35,13 @@ SUBST_SED.fontpath=	-e 's,@PKGSRC_PREFIX@,"${PREFIX}",'
 
 .include "options.mk"
 
+.include "../../mk/readline.buildlink3.mk"
+.if   ${READLINE_TYPE} == "editline"
+CONFIGURE_ARGS+=	--with-readline=bsd
+.elif ${READLINE_TYPE} == "readline"
+CONFIGURE_ARGS+=	--with-readline=gnu
+.endif
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
