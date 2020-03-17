@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.84 2020/01/12 10:10:04 adam Exp $
+# $NetBSD: Makefile.common,v 1.85 2020/03/17 03:48:24 rillig Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -54,12 +54,6 @@ GCC_REQD+=		4.5
 .  endif
 
 PLIST_SUBST+=		BOOST_VERSION="${BOOST_VERSION}"
-
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	pre-configure
-SUBST_MESSAGE.prefix=	Fixing prefix.
-SUBST_FILES.prefix=	boostcpp.jam
-SUBST_VARS.prefix=	PREFIX
 
 SUBST_CLASSES+=		darwin
 SUBST_STAGE.darwin=	pre-configure
