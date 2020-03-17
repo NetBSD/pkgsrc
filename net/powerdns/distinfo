@@ -1,15 +1,13 @@
-$NetBSD: distinfo,v 1.37 2019/04/25 18:42:41 adam Exp $
+$NetBSD: distinfo,v 1.38 2020/03/17 19:04:49 adam Exp $
 
-SHA1 (pdns-4.1.8.tar.bz2) = c1b2220781ead0dbd5363f6335535e377283e85b
-RMD160 (pdns-4.1.8.tar.bz2) = 2552af0d6cb9176da6090435a362a2df5dfa987c
-SHA512 (pdns-4.1.8.tar.bz2) = 1113745cdaa8fba591c176721893fb478e976861beee0cb6c0240e5afa6b68c9afae286579036b2ed77fffe76ca1e6f103cda915f8b7b875bcdc1253931ad935
-Size (pdns-4.1.8.tar.bz2) = 1116996 bytes
-SHA1 (patch-configure) = 8218324a863217f954ba63adf242c65c1b864038
+SHA1 (pdns-4.2.1.tar.bz2) = 81a4edb44f53f3f2c36793760ce30f81429fbc97
+RMD160 (pdns-4.2.1.tar.bz2) = 0efc805e4ed45ebdaf16cd97e2e797a37e000ca3
+SHA512 (pdns-4.2.1.tar.bz2) = 40b5533c755d7c0d41cfb273b704a45a3006dafc98c79bf41cae43d9e2d03bbd7a663996a7f209c390a89c5f7161f2f6246389beef18fbac48e95907e1b7936a
+Size (pdns-4.2.1.tar.bz2) = 1252829 bytes
+SHA1 (patch-configure) = 1503efadf2d8baaaa0887b61bd4f7672ea33a043
 SHA1 (patch-ext_json11_json11.cpp) = a8ffe67156a836841aef8a6bba134a82283f381e
-SHA1 (patch-m4_pdns__check__os.m4) = c7a8d91c519ae7ca0616dfc08fa04402fca950d0
-SHA1 (patch-pdns_dns.hh) = 626eb4e29b7fcd82fbe056036c157c1e85fa49ca
 SHA1 (patch-pdns_dnsscope.cc) = b289b750686b25041c3e291fb0d3d562beb36eaf
 SHA1 (patch-pdns_iputils.cc) = fbd3bb210216bb98c3cd73b702b6dea486c51dec
 SHA1 (patch-pdns_iputils.hh) = 714277322ea721ea0439fc6aa0265bd290219e8b
 SHA1 (patch-pdns_qtype.hh) = 0f8bca4c0cafea9a5257a08077fa42b4c52127f5
-SHA1 (patch-pdns_version.cc) = be2035a37a554f64b8e6dad8f7faa112aba10f6c
+SHA1 (patch-pdns_version.cc) = 25917c329dafa34e657fa31c7a9abd99110bb4b0
