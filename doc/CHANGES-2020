@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1632 2020/03/17 14:23:36 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1633 2020/03/17 14:30:49 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2211,3 +2211,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/gnuplot to 5.2.8nb5 [rin 2020-03-17]
 	Updated graphics/openimageio to 1.8.15nb13 [ryoon 2020-03-17]
 	Updated graphics/blender to 2.82a [ryoon 2020-03-17]
+	Updated graphics/libansilove to 1.2.1 [fcambus 2020-03-17]
