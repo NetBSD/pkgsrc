@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2020/03/17 13:37:11 tnn Exp $
+# $NetBSD: Makefile.common,v 1.18 2020/03/17 13:50:11 tnn Exp $
 # used by www/webkit24-gtk/Makefile
 # used by www/webkit24-gtk3/Makefile
 
@@ -71,6 +71,8 @@ CXXFLAGS.SunOS+=	-fpermissive
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-Wno-c++11-narrowing
 .endif
+
+CXXFLAGS+=	-Wno-expansion-to-defined
 
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
 CONFIGURE_ARGS+=	--disable-fast-malloc
