@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.27 2019/04/25 18:42:41 adam Exp $
+# $NetBSD: Makefile.common,v 1.28 2020/03/17 19:04:49 adam Exp $
 
-PDNS_VERSION=	4.1.8
+PDNS_VERSION=	4.2.1
 DISTNAME=	pdns-${PDNS_VERSION}
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.powerdns.com/releases/
@@ -17,7 +17,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
-CONFIGURE_ARGS+=	--without-lua
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

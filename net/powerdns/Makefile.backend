@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.backend,v 1.6 2017/03/09 13:52:34 fhajny Exp $
+# $NetBSD: Makefile.backend,v 1.7 2020/03/17 19:04:49 adam Exp $
 # used by net/powerdns-geoip/Makefile
 # used by net/powerdns-ldap/Makefile
 # used by net/powerdns-mysql/Makefile
@@ -12,6 +12,7 @@ DEPENDS+=		powerdns>=${PDNS_VERSION}:../../net/powerdns
 DISTINFO_FILE=		${.CURDIR}/../../net/powerdns/distinfo
 PATCHDIR=		${.CURDIR}/../../net/powerdns/patches
 
+CONFIGURE_ARGS+=	--disable-lua-records
 CONFIGURE_ARGS+=	--disable-pdns_server
 CONFIGURE_ARGS+=	--with-modules=""
 

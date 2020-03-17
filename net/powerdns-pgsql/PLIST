@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/02 12:18:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/03/17 19:04:50 adam Exp $
 lib/pdns/libgpgsqlbackend.la
 share/doc/pdns/3.4.0_to_4.1.0_schema.pgsql.sql
+share/doc/pdns/4.1.0_to_4.2.0_schema.pgsql.sql
 share/doc/pdns/dnssec-3.x_to_3.4.0_schema.pgsql.sql
 share/doc/pdns/nodnssec-3.x_to_3.4.0_schema.pgsql.sql
 share/doc/pdns/schema.pgsql.sql
