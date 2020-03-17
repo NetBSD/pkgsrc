@@ -1,0 +1,12 @@
+$NetBSD: patch-scripts_snapstamp,v 1.1 2020/03/17 23:06:08 gdt Exp $
+
+Remediate bashisms.
+
+--- scripts/snapstamp.orig	2019-05-25 19:15:55.000000000 +0000
++++ scripts/snapstamp
+@@ -17,4 +17,4 @@
+ # You should have received a copy of the GNU General Public License
+ # along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ 
+-[[ -n $STP_BUILD_SNAPSHOT && -d .git ]] && printf '%s%(%Y-%m-%dT%H-%M)T-%s' - -1 $(git describe --dirty --always --first-parent --exclude '*')
++[ -n $STP_BUILD_SNAPSHOT && -d .git ] && printf '%s%(%Y-%m-%dT%H-%M)T-%s' - -1 $(git describe --dirty --always --first-parent --exclude '*')
