@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1630 2020/03/17 13:42:28 rin Exp $
+$NetBSD: CHANGES-2020,v 1.1631 2020/03/17 14:19:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2209,3 +2209,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/SDL2 to 2.0.12 [nia 2020-03-17]
 	Updated www/gitea to 1.11.3 [nia 2020-03-17]
 	Updated graphics/gnuplot to 5.2.8nb5 [rin 2020-03-17]
+	Updated graphics/openimageio to 1.8.15nb13 [ryoon 2020-03-17]
