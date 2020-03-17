@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.35 2019/12/06 14:05:11 jperkin Exp $
+$NetBSD: distinfo,v 1.36 2020/03/17 18:33:08 adam Exp $
 
-SHA1 (mysql-5.7.28.tar.gz) = 93d5c460f32576c92f95d9d81938e1d15ece1ae4
-RMD160 (mysql-5.7.28.tar.gz) = 2ab8cddf7479aac8f5eaddd5a23cd4ee62b042d3
-SHA512 (mysql-5.7.28.tar.gz) = fa96cdf8d748a0cc12e01ddf8662e2ebd3a8e6474e38ec94f8c1bc1c6b590b9f60a95d91e7a9157ba2c06043b6cbe9426dc018e1fe33ec23ef8d1db7aa8ee0d6
-Size (mysql-5.7.28.tar.gz) = 54419008 bytes
+SHA1 (mysql-5.7.29.tar.gz) = 5ee9ebf33da3a3135bdadc41cef35f4d205e2049
+RMD160 (mysql-5.7.29.tar.gz) = bf95b9948331cf78c1e6880146381e69f7cf7491
+SHA512 (mysql-5.7.29.tar.gz) = d68add452102d1f6417c992aee22aadee4026147503fe0a3c7cae615cb470f2eb040cd03d01af7b5ae5d454840ce123385d472163eb10fe2216d9062281d174c
+Size (mysql-5.7.29.tar.gz) = 54438870 bytes
 SHA1 (patch-CMakeLists.txt) = 1409a98380c999c6973fa3106dc35684b7c3b3cc
 SHA1 (patch-client_CMakeLists.txt) = 4af2fb3f3d05a66a9ee89f3653e2fcccadfa5f79
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
@@ -13,7 +13,7 @@ SHA1 (patch-cmake_build__configurations_mysql__release.cmake) = 7a1fb8c686f187db
 SHA1 (patch-cmake_os_SunOS.cmake) = b71c3e1fafb48ebbba77c19bb1c31556ebe1ad2a
 SHA1 (patch-cmake_plugin.cmake) = 4480438969e297f67890b1974a86fb88a23d28ed
 SHA1 (patch-cmake_readline.cmake) = fb79ed969240ae2984098f72c2d3fb501154902c
-SHA1 (patch-cmake_ssl.cmake) = e3919316b3d4dc62648b64b8a04dfd824742b4b8
+SHA1 (patch-cmake_ssl.cmake) = 1954dfa0562e5e771bc6d4c6071e49086f7dfab5
 SHA1 (patch-cmd-line-utils_libedit_chartype.h) = 6b1453df648001ed1fc81190106e15872a69a04c
 SHA1 (patch-cmd-line-utils_libedit_vi.c) = 7c5ce1d07f650815d028e435a59e5d078ec74c2f
 SHA1 (patch-include_CMakeLists.txt) = 944991702f046ea7a5e2b6ea4dc390f17426e55a
