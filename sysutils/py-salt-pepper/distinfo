@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/01/24 13:58:17 adam Exp $
+$NetBSD: distinfo,v 1.2 2020/03/17 10:59:32 adam Exp $
 
-SHA1 (salt-pepper-0.7.5.tar.gz) = 9514242be551752eaae23115e835bdbade2de3fe
-RMD160 (salt-pepper-0.7.5.tar.gz) = d27939d8d870d6be0858a17170b303342a088ec2
-SHA512 (salt-pepper-0.7.5.tar.gz) = 740395fc01ead459e26b1445449ab6f46ccc65947a151dbd1f644c126d00f0486b6ae45ae16d835e0192f152c503081f3a3828b89f07bbcd7fe8659401799c31
-Size (salt-pepper-0.7.5.tar.gz) = 21742 bytes
+SHA1 (salt-pepper-0.7.6.tar.gz) = 7ccbee5789c42d3a6c0de19ccfef7f0ddcaefe62
+RMD160 (salt-pepper-0.7.6.tar.gz) = cd10fbbcd8f5f35c667ee0cbebaa0f1cba4ee4eb
+SHA512 (salt-pepper-0.7.6.tar.gz) = 1936e3d0c2419b8af4a7446057c04cb94a1c41a417040e4ce3120a9b45e6e60e0838b97ae6a13b93058838d0cf58f0a91860ca4f9d2c62f5286a582e0c145273
+Size (salt-pepper-0.7.6.tar.gz) = 23854 bytes
