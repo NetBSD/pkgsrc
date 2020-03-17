@@ -1,0 +1,4 @@
+DUMB is a module audio renderer library. It reads module files and outputs
+audio that can be dumped to the actual audio playback library.
+
+This is a fork of the original dumb by Ben Davis.
