@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.37 2020/02/24 11:55:36 nia Exp $
+$NetBSD: distinfo,v 1.38 2020/03/17 12:49:29 nia Exp $
 
-SHA1 (SDL2-2.0.10.tar.gz) = fb31312ea1d4b45db839796ae2336dfe3d5884e5
-RMD160 (SDL2-2.0.10.tar.gz) = b35818cbf8eaf0c9c4d3b6d7a293c05a368366b2
-SHA512 (SDL2-2.0.10.tar.gz) = f49b869362699b3282f6e82920e59c7fac581bcbf955f18a81cc126293c08093a90df7fcb39517cc8bc32708d2213fe645a42b655d6d811c1386efebb3d3c798
-Size (SDL2-2.0.10.tar.gz) = 5550762 bytes
-SHA1 (patch-configure) = 1631314dab18886ea553ee53fac89e16718cacab
+SHA1 (SDL2-2.0.12.tar.gz) = e8ba91bf5eb438dbcf1fedf0530a1bcbe30d3bb6
+RMD160 (SDL2-2.0.12.tar.gz) = 0f2c979da6151b622a6445e7fc8d4e3ea8987105
+SHA512 (SDL2-2.0.12.tar.gz) = 3f1f04af0f3d9dda9c84a2e9274ae8d83ea0da3fc367970a820036cc4dc1dbf990cfc37e4975ae05f0b45a4ffa739c6c19e470c00bf3f2bce9b8b63717b8b317
+Size (SDL2-2.0.12.tar.gz) = 5720162 bytes
+SHA1 (patch-configure) = 3038dc62450f6b64197ee4aa42d8ec9518a608bd
 SHA1 (patch-src_joystick_bsd_SDL__sysjoystick.c) = 1c5756e47ad906235369b46b36d7b0b1ee776156
 SHA1 (patch-src_video_cocoa_SDL__cocoawindow.m) = 1d5ac9c17ceadf668925734b5cad311e26f2fc58
-SHA1 (patch-src_video_wayland_SDL__waylanddyn.h) = 0387bedd962154c4de0d6dda78b4e40f992215ac
-SHA1 (patch-src_video_wayland_SDL__waylandevents.c) = 6d6ca278ac26cb85b310f6edfe17107403440c84
-SHA1 (patch-src_video_wayland_SDL__waylandsym.h) = 58bc720c947ca3031e31b66c967872db65a7b767
-SHA1 (patch-src_video_wayland_SDL__waylandvideo.c) = 27281242898fa622b0a30a6126fe542bc0ed7ac1
-SHA1 (patch-src_video_x11_SDL__x11opengl.c) = 70b63021c12c52760c0811c673b259844bdfcdc0
+SHA1 (patch-src_video_wayland_SDL__waylandevents.c) = 15ba8caf1b0036ffe859669cc1ed4a535d164e7b
+SHA1 (patch-src_video_x11_SDL__x11opengl.c) = d506a17a0d7e3571e2ae4385cc864f9a2e4eeb3c

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/11/01 21:08:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/03/17 12:49:29 nia Exp $
 bin/sdl2-config
 include/SDL2/SDL.h
 include/SDL2/SDL_assert.h
@@ -25,6 +25,7 @@ include/SDL2/SDL_loadso.h
 include/SDL2/SDL_log.h
 include/SDL2/SDL_main.h
 include/SDL2/SDL_messagebox.h
+include/SDL2/SDL_metal.h
 include/SDL2/SDL_mouse.h
 include/SDL2/SDL_mutex.h
 include/SDL2/SDL_name.h
@@ -73,6 +74,7 @@ include/SDL2/SDL_video.h
 include/SDL2/SDL_vulkan.h
 include/SDL2/begin_code.h
 include/SDL2/close_code.h
+lib/cmake/SDL2/sdl2-config-version.cmake
 lib/cmake/SDL2/sdl2-config.cmake
 lib/libSDL2.la
 lib/libSDL2_test.la
