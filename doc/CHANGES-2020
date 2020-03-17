@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1641 2020/03/17 21:42:14 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1642 2020/03/17 22:14:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2227,3 +2227,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-jupyter_core to 4.6.3 [adam 2020-03-17]
 	Updated lang/py-mypy to 0.770 [adam 2020-03-17]
 	Added audio/dumb version 2.0.3 [nia 2020-03-17]
+	Updated www/viewvc to 1.2.0 [wiz 2020-03-17]
