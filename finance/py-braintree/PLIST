@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/01/22 21:18:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/03/17 20:02:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -38,6 +38,9 @@ ${PYSITELIB}/braintree/apple_pay_card.pyo
 ${PYSITELIB}/braintree/apple_pay_gateway.py
 ${PYSITELIB}/braintree/apple_pay_gateway.pyc
 ${PYSITELIB}/braintree/apple_pay_gateway.pyo
+${PYSITELIB}/braintree/apple_pay_options.py
+${PYSITELIB}/braintree/apple_pay_options.pyc
+${PYSITELIB}/braintree/apple_pay_options.pyo
 ${PYSITELIB}/braintree/attribute_getter.py
 ${PYSITELIB}/braintree/attribute_getter.pyc
 ${PYSITELIB}/braintree/attribute_getter.pyo
@@ -56,9 +59,6 @@ ${PYSITELIB}/braintree/client_token.pyo
 ${PYSITELIB}/braintree/client_token_gateway.py
 ${PYSITELIB}/braintree/client_token_gateway.pyc
 ${PYSITELIB}/braintree/client_token_gateway.pyo
-${PYSITELIB}/braintree/coinbase_account.py
-${PYSITELIB}/braintree/coinbase_account.pyc
-${PYSITELIB}/braintree/coinbase_account.pyo
 ${PYSITELIB}/braintree/configuration.py
 ${PYSITELIB}/braintree/configuration.pyc
 ${PYSITELIB}/braintree/configuration.pyo
@@ -164,12 +164,9 @@ ${PYSITELIB}/braintree/exceptions/braintree_error.pyo
 ${PYSITELIB}/braintree/exceptions/configuration_error.py
 ${PYSITELIB}/braintree/exceptions/configuration_error.pyc
 ${PYSITELIB}/braintree/exceptions/configuration_error.pyo
-${PYSITELIB}/braintree/exceptions/down_for_maintenance_error.py
-${PYSITELIB}/braintree/exceptions/down_for_maintenance_error.pyc
-${PYSITELIB}/braintree/exceptions/down_for_maintenance_error.pyo
-${PYSITELIB}/braintree/exceptions/forged_query_string_error.py
-${PYSITELIB}/braintree/exceptions/forged_query_string_error.pyc
-${PYSITELIB}/braintree/exceptions/forged_query_string_error.pyo
+${PYSITELIB}/braintree/exceptions/gateway_timeout_error.py
+${PYSITELIB}/braintree/exceptions/gateway_timeout_error.pyc
+${PYSITELIB}/braintree/exceptions/gateway_timeout_error.pyo
 ${PYSITELIB}/braintree/exceptions/http/__init__.py
 ${PYSITELIB}/braintree/exceptions/http/__init__.pyc
 ${PYSITELIB}/braintree/exceptions/http/__init__.pyo
@@ -191,9 +188,15 @@ ${PYSITELIB}/braintree/exceptions/invalid_signature_error.pyo
 ${PYSITELIB}/braintree/exceptions/not_found_error.py
 ${PYSITELIB}/braintree/exceptions/not_found_error.pyc
 ${PYSITELIB}/braintree/exceptions/not_found_error.pyo
+${PYSITELIB}/braintree/exceptions/request_timeout_error.py
+${PYSITELIB}/braintree/exceptions/request_timeout_error.pyc
+${PYSITELIB}/braintree/exceptions/request_timeout_error.pyo
 ${PYSITELIB}/braintree/exceptions/server_error.py
 ${PYSITELIB}/braintree/exceptions/server_error.pyc
 ${PYSITELIB}/braintree/exceptions/server_error.pyo
+${PYSITELIB}/braintree/exceptions/service_unavailable_error.py
+${PYSITELIB}/braintree/exceptions/service_unavailable_error.pyc
+${PYSITELIB}/braintree/exceptions/service_unavailable_error.pyo
 ${PYSITELIB}/braintree/exceptions/test_operation_performed_in_production_error.py
 ${PYSITELIB}/braintree/exceptions/test_operation_performed_in_production_error.pyc
 ${PYSITELIB}/braintree/exceptions/test_operation_performed_in_production_error.pyo
@@ -218,12 +221,6 @@ ${PYSITELIB}/braintree/granted_payment_instrument_update.pyo
 ${PYSITELIB}/braintree/iban_bank_account.py
 ${PYSITELIB}/braintree/iban_bank_account.pyc
 ${PYSITELIB}/braintree/iban_bank_account.pyo
-${PYSITELIB}/braintree/ideal_payment.py
-${PYSITELIB}/braintree/ideal_payment.pyc
-${PYSITELIB}/braintree/ideal_payment.pyo
-${PYSITELIB}/braintree/ideal_payment_gateway.py
-${PYSITELIB}/braintree/ideal_payment_gateway.pyc
-${PYSITELIB}/braintree/ideal_payment_gateway.pyo
 ${PYSITELIB}/braintree/ids_search.py
 ${PYSITELIB}/braintree/ids_search.pyc
 ${PYSITELIB}/braintree/ids_search.pyo
@@ -372,6 +369,9 @@ ${PYSITELIB}/braintree/successful_result.pyo
 ${PYSITELIB}/braintree/test/__init__.py
 ${PYSITELIB}/braintree/test/__init__.pyc
 ${PYSITELIB}/braintree/test/__init__.pyo
+${PYSITELIB}/braintree/test/authentication_ids.py
+${PYSITELIB}/braintree/test/authentication_ids.pyc
+${PYSITELIB}/braintree/test/authentication_ids.pyo
 ${PYSITELIB}/braintree/test/credit_card_defaults.py
 ${PYSITELIB}/braintree/test/credit_card_defaults.pyc
 ${PYSITELIB}/braintree/test/credit_card_defaults.pyo
@@ -414,12 +414,6 @@ ${PYSITELIB}/braintree/transaction_line_item_gateway.pyo
 ${PYSITELIB}/braintree/transaction_search.py
 ${PYSITELIB}/braintree/transaction_search.pyc
 ${PYSITELIB}/braintree/transaction_search.pyo
-${PYSITELIB}/braintree/transparent_redirect.py
-${PYSITELIB}/braintree/transparent_redirect.pyc
-${PYSITELIB}/braintree/transparent_redirect.pyo
-${PYSITELIB}/braintree/transparent_redirect_gateway.py
-${PYSITELIB}/braintree/transparent_redirect_gateway.pyc
-${PYSITELIB}/braintree/transparent_redirect_gateway.pyo
 ${PYSITELIB}/braintree/unknown_payment_method.py
 ${PYSITELIB}/braintree/unknown_payment_method.pyc
 ${PYSITELIB}/braintree/unknown_payment_method.pyo
