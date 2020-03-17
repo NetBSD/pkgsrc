@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2020/01/03 11:53:09 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/03/17 20:18:43 adam Exp $
 
-DISTNAME=	mypy-0.761
+DISTNAME=	mypy-0.770
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy/}
@@ -21,10 +21,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON=	mypy/typeshed/tests/*.py
 
 post-install:
+.for bin in dmypy mypy mypyc stubgen stubtest
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} dmypy dmypy-${PYVERSSUFFIX} && \
-	${MV} mypy mypy-${PYVERSSUFFIX} && \
-	${MV} stubgen stubgen-${PYVERSSUFFIX} || ${TRUE}
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
