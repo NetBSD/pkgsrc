@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2020/03/16 21:20:43 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2020/03/17 11:21:49 nia Exp $
 
 DISTNAME=	mpv-0.32.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -67,7 +67,7 @@ BUILDLINK_PASSTHRU_DIRS+=	${XCODE_DIR}/Toolchains/XcodeDefault.xctoolchain/usr/l
 
 .if ${OPSYS} == "NetBSD"
 # Use audio(4) over ossaudio(4) on NetBSD.
-WAF_CONFIGURE_ARGS+=	--disable-oss-audio
+#WAF_CONFIGURE_ARGS+=	--disable-oss-audio
 .endif
 
 post-install:
