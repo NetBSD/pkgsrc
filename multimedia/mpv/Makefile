@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2020/03/17 11:21:49 nia Exp $
+# $NetBSD: Makefile,v 1.103 2020/03/17 11:36:04 nia Exp $
 
 DISTNAME=	mpv-0.32.0
 PKGREVISION=	6
@@ -63,11 +63,6 @@ BUILDLINK_PASSTHRU_DIRS+=	${XCODE_DIR}/usr/lib/swift/macosx
 .  elif exists(${XCODE_DIR}/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx)
 BUILDLINK_PASSTHRU_DIRS+=	${XCODE_DIR}/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx
 .  endif
-.endif
-
-.if ${OPSYS} == "NetBSD"
-# Use audio(4) over ossaudio(4) on NetBSD.
-#WAF_CONFIGURE_ARGS+=	--disable-oss-audio
 .endif
 
 post-install:
