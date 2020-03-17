@@ -1,20 +1,15 @@
-$NetBSD: patch-version.cc,v 1.1 2017/07/03 13:02:38 joerg Exp $
+$NetBSD: patch-version.cc,v 1.2 2020/03/17 19:07:29 adam Exp $
 
-Don't include build time noise.
+Do not store configure args, as they contain workdir references.
 
---- version.cc.orig	2017-07-03 00:20:50.928274609 +0000
+--- version.cc.orig	2020-03-17 17:04:42.000000000 +0000
 +++ version.cc
-@@ -108,13 +108,6 @@ void showBuildConfiguration()
+@@ -145,7 +145,7 @@ void showBuildConfiguration()
    // Auth only
-   theL()<<Logger::Warning<<"Built-in modules: "<<PDNS_MODULES<<endl;
+   g_log<<Logger::Warning<<"Built-in modules: "<<PDNS_MODULES<<endl;
  #endif
 -#ifdef PDNS_CONFIG_ARGS
--#define double_escape(s) #s
--#define escape_quotes(s) double_escape(s)
--  theL()<<Logger::Warning<<"Configured with: "<<escape_quotes(PDNS_CONFIG_ARGS)<<endl;
--#undef escape_quotes
--#undef double_escape
--#endif
- }
- 
- string fullVersionString()
++#if 0
+ #define double_escape(s) #s
+ #define escape_quotes(s) double_escape(s)
+   g_log<<Logger::Warning<<"Configured with: "<<escape_quotes(PDNS_CONFIG_ARGS)<<endl;
