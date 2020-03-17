@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/03/08 16:47:46 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2020/03/17 21:45:52 rillig Exp $
 
 DISTNAME=	freeglut-3.2.1
 PKGREVISION=	2
@@ -18,7 +18,6 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 CMAKE_ARGS+=	-DFREEGLUT_REPLACE_GLUT=ON
 
 PKGCONFIG_OVERRIDE=	freeglut.pc.in
-PKGCONFIG_OVERRIDE=	glut.pc.in
 
 # Install freeglut.pc for compatibility.
 post-install:
