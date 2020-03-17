@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.589 2020/03/12 16:12:28 nia Exp $
+# $NetBSD: Makefile,v 1.590 2020/03/17 21:41:50 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -68,6 +68,7 @@ SUBDIR+=	deforaos-mixer
 SUBDIR+=	din
 SUBDIR+=	disc-cover
 SUBDIR+=	distmp3
+SUBDIR+=	dumb
 SUBDIR+=	easyh10
 SUBDIR+=	easytag
 SUBDIR+=	eawpatches
