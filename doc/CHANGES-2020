@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1634 2020/03/17 14:38:36 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.1635 2020/03/17 14:49:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2213,3 +2213,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/blender to 2.82a [ryoon 2020-03-17]
 	Updated graphics/libansilove to 1.2.1 [fcambus 2020-03-17]
 	Updated textproc/miller to 5.7.0 [fcambus 2020-03-17]
+	Updated games/rocksndiamonds to 4.1.4.1 [adam 2020-03-17]
+	Updated devel/ccache to 3.7.8 [adam 2020-03-17]
