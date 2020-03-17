@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/03/04 10:25:40 nia Exp $
+# $NetBSD: Makefile,v 1.29 2020/03/17 06:42:57 rillig Exp $
 
 DISTNAME=	fribidi-1.0.9
 CATEGORIES=	converters
@@ -17,11 +17,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
 
 TEST_TARGET=	check
-
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	/bin/bash
-REPLACE.bash.new=	${SH}
-REPLACE_FILES.bash=	run.tests
 
 PKGCONFIG_OVERRIDE=	fribidi.pc.in
 
