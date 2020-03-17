@@ -1,40 +1,22 @@
-$NetBSD: patch-configure,v 1.8 2018/02/02 10:03:05 jperkin Exp $
+$NetBSD: patch-configure,v 1.9 2020/03/17 19:04:49 adam Exp $
 
-Regen after excluding -latomic test on NetBSD.
+Do not add default compiler flags.
 Leave pkgsrc to handle security features.
 
---- configure.orig	2017-11-30 09:43:31.000000000 +0000
+--- configure.orig	2019-11-29 19:23:06.000000000 +0000
 +++ configure
-@@ -5569,9 +5569,14 @@ else
- fi
+@@ -3721,8 +3721,8 @@ case $host_os in *\ *) host_os=`echo "$h
  
  
--  case "$host" in
--  mips* | powerpc-* )
--    { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the linker accepts -latomic" >&5
-+  case "$host_os" in
-+  netbsd*)
-+    : # no -latomic
-+    ;;
-+  *)
-+    case "$host" in
-+    mips* | powerpc-* )
-+      { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether the linker accepts -latomic" >&5
- $as_echo_n "checking whether the linker accepts -latomic... " >&6; }
-     LDFLAGS="-latomic $LDFLAGS"
-     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -5593,7 +5598,9 @@ else
+ # Add some default CFLAGS and CXXFLAGS, can be appended to using the environment variables
+-CFLAGS="-Wall -g -O2 $CFLAGS"
+-CXXFLAGS="-Wall -g -O2 $CXXFLAGS"
++CFLAGS="-Wall $CFLAGS"
++CXXFLAGS="-Wall $CXXFLAGS"
  
- fi
- rm -f core conftest.err conftest.$ac_objext \
--    conftest$ac_exeext conftest.$ac_ext
-+      conftest$ac_exeext conftest.$ac_ext
-+      ;;
-+    esac
-     ;;
-   esac
- 
-@@ -6797,7 +6804,7 @@ rm -f core conftest.err conftest.$ac_obj
+ ac_ext=c
+ ac_cpp='$CPP $CPPFLAGS'
+@@ -7884,7 +7884,7 @@ rm -f core conftest.err conftest.$ac_obj
  fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $gl_cv_warn_cxx__fstack_protector" >&5
  $as_echo "$gl_cv_warn_cxx__fstack_protector" >&6; }
@@ -43,7 +25,7 @@ Leave pkgsrc to handle security features.
  
          CFLAGS="-fstack-protector $CFLAGS"
          CXXFLAGS="-fstack-protector $CXXFLAGS"
-@@ -20586,7 +20593,7 @@ fi
+@@ -22723,7 +22723,7 @@ fi
  
    if test "x$PG_CONFIG" != "x" -o "x$PGSQL_LIBS" = "x"; then :
  
@@ -52,7 +34,7 @@ Leave pkgsrc to handle security features.
  
        # Extract the first word of "pg_config", so it can be a program name with args.
  set dummy pg_config; ac_word=$2
-@@ -20630,7 +20637,7 @@ fi
+@@ -22767,7 +22767,7 @@ fi
  
  
  fi
