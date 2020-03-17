@@ -1,3 +1,5 @@
 bin/dmypy @PREFIX@/bin/dmypy-@PYVERSSUFFIX@
 bin/mypy @PREFIX@/bin/mypy-@PYVERSSUFFIX@
+bin/mypyc @PREFIX@/bin/mypyc-@PYVERSSUFFIX@
 bin/stubgen @PREFIX@/bin/stubgen-@PYVERSSUFFIX@
+bin/stubtest @PREFIX@/bin/stubtest-@PYVERSSUFFIX@
