@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1639 2020/03/17 19:07:53 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1640 2020/03/17 20:19:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2222,3 +2222,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/mysql56-server to 5.6.47 [adam 2020-03-17]
 	Updated net/powerdns to 4.2.1 [adam 2020-03-17]
 	Updated net/powerdns-recursor to 4.3.0 [adam 2020-03-17]
+	Updated finance/py-braintree to 4.0.0 [adam 2020-03-17]
+	Updated devel/py-wrapt to 1.12.1 [adam 2020-03-17]
+	Updated devel/py-jupyter_core to 4.6.3 [adam 2020-03-17]
+	Updated lang/py-mypy to 0.770 [adam 2020-03-17]
