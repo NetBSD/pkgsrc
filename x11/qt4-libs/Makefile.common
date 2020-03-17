@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2019/11/03 09:14:16 rillig Exp $
+# $NetBSD: Makefile.common,v 1.50 2020/03/17 19:23:46 tnn Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -78,6 +78,7 @@ CXXFLAGS+=	-D_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC=1
 .elif !empty(PKGSRC_COMPILER:Mgcc)
 CXXFLAGS+=	-std=c++98
 .endif
+CXXFLAGS+=	-Wno-expansion-to-defined
 
 .if ${OPSYS} == "SunOS"
 .  if !empty(PKGSRC_COMPILER:Mgcc) || !empty(PKGSRC_COMPILER:Mclang)
