@@ -1,22 +1,22 @@
-$NetBSD: patch-configure,v 1.7 2018/12/30 14:47:04 maya Exp $
+$NetBSD: patch-configure,v 1.8 2020/03/17 12:49:29 nia Exp $
 
 Adding --enable-new-dtags breaks sdl2-config on NetBSD.
 Allow overriding SDL_RLD_FLAGS so we can add /usr/X11R7/lib.
 
---- configure.orig	2018-10-31 15:07:22.000000000 +0000
+--- configure.orig	2020-03-11 01:36:18.000000000 +0000
 +++ configure
-@@ -24937,7 +24937,9 @@ SDLTEST_DEPENDS=`echo "$SDLTEST_DEPENDS"
+@@ -25537,7 +25537,9 @@ SDLTEST_DEPENDS=`echo "$SDLTEST_DEPENDS"
  
  if test "x$enable_rpath" = "xyes"; then
    if test $ARCH = bsdi -o $ARCH = freebsd -o $ARCH = linux -o $ARCH = netbsd; then
 -    SDL_RLD_FLAGS="-Wl,-rpath,\${libdir}"
-+    if test -n $SDL_RLD_FLAGS; then
++    if test -n "$SDL_RLD_FLAGS"; then
 +      SDL_RLD_FLAGS="-Wl,-rpath,\${libdir}"
 +    fi
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for linker option --enable-new-dtags" >&5
  $as_echo_n "checking for linker option --enable-new-dtags... " >&6; }
-@@ -24960,7 +24962,7 @@ _ACEOF
+@@ -25560,7 +25562,7 @@ _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
  
      have_enable_new_dtags=yes

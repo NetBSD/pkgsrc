@@ -1,10 +1,12 @@
-# $NetBSD: options.mk,v 1.15 2020/01/20 21:13:16 nia Exp $
+# $NetBSD: options.mk,v 1.16 2020/03/17 12:49:29 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL2
 PKG_OPTIONS_REQUIRED_GROUPS=	gl
 PKG_SUPPORTED_OPTIONS=		alsa dbus nas jack pulseaudio wayland x11
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
 PKG_OPTIONS_GROUP.gl=		opengl
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=	x11
