@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1628 2020/03/17 12:50:03 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1629 2020/03/17 13:09:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2207,3 +2207,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-salt-pepper to 0.7.6 [adam 2020-03-17]
 	Updated devel/py-coverage to 5.0.4 [adam 2020-03-17]
 	Updated devel/SDL2 to 2.0.12 [nia 2020-03-17]
+	Updated www/gitea to 1.11.3 [nia 2020-03-17]
