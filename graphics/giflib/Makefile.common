@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2020/01/07 20:25:14 sevan Exp $
+# $NetBSD: Makefile.common,v 1.13 2020/03/17 21:53:12 rillig Exp $
 # used by graphics/giflib/Makefile
 # used by graphics/giflib-util/Makefile
 
@@ -16,9 +16,3 @@ DISTINFO_FILE=	${.CURDIR}/../../graphics/giflib/distinfo
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+= 		gmake
-
-SUBST_CLASSES+=		split
-SUBST_FILES.split+=	util/Makefile.in
-SUBST_SED.split+=	-e 's,../lib/libgif.la,$$(prefix)/lib/libgif.la,g'
-SUBST_MESSAGE.split=	Change Makefile for giflib-util split-off.
-SUBST_STAGE.split=	pre-configure
