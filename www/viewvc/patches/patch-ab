@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2011/11/01 21:08:55 scottr Exp $
+$NetBSD: patch-ab,v 1.4 2020/03/17 22:14:15 wiz Exp $
 
---- conf/viewvc.conf.dist.orig	2011-04-20 09:56:39.000000000 -0500
-+++ conf/viewvc.conf.dist	2011-10-31 21:43:19.000000000 -0500
-@@ -186,6 +186,7 @@
+--- conf/viewvc.conf.dist.orig	2020-03-17 18:04:41.000000000 +0000
++++ conf/viewvc.conf.dist
+@@ -219,6 +219,7 @@
  ##                    /usr/local/apache2/conf/mime.types
  ##
  #mime_types_files = mimetypes.conf
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.3 2011/11/01 21:08:55 scottr Exp $
  
  ## address: The address of the local repository maintainer.  (This
  ## option is provided only as a convenience for ViewVC installations
-@@ -280,6 +281,7 @@
+@@ -313,6 +314,7 @@
  ## rcs_dir = /usr/bin/
  ##
  #rcs_dir =
@@ -18,15 +18,15 @@ $NetBSD: patch-ab,v 1.3 2011/11/01 21:08:55 scottr Exp $
  
  ## cvsnt: Location of cvsnt program.  ViewVC can use CVSNT (www.cvsnt.org)
  ## instead of the RCS utilities to retrieve information from CVS
-@@ -302,6 +304,7 @@
- ## svn = /usr/bin/svn
+@@ -335,6 +337,7 @@
+ ## diff = /usr/bin/diff
  ##
- #svn =
+ #diff = 
 +svn = @PREFIX@/bin/
  
- ## diff: Location of the GNU diff program, used for showing file
- ## version differences.
-@@ -317,7 +320,7 @@
+ ## cvsgraph: Location of the CvsGraph program, a graphical CVS version
+ ## graph generator (see options.use_cvsgraph).
+@@ -342,7 +345,7 @@
  ## Example:
  ## cvsgraph = /usr/local/bin/cvsgraph
  ##
@@ -35,7 +35,7 @@ $NetBSD: patch-ab,v 1.3 2011/11/01 21:08:55 scottr Exp $
  
  
  ##---------------------------------------------------------------------------
-@@ -622,12 +625,14 @@
+@@ -754,12 +757,14 @@
  ## use_cvsgraph: Use CvsGraph to offer visual graphs of CVS revision history.
  ##
  #use_cvsgraph = 0
@@ -48,5 +48,5 @@ $NetBSD: patch-ab,v 1.3 2011/11/01 21:08:55 scottr Exp $
  #cvsgraph_conf = cvsgraph.conf
 +cvsgraph_conf = @PREFIX@/@VIEWVCDIR@/cvsgraph.conf
  
- ## use_re_search: Enable regular expression search of files in a directory.
- ##
+ ## allowed_cvsgraph_useropts: A list of settings used for cvsgraph's
+ ## user-modifiable behavior which can be changed in the graph display.
