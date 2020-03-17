@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1637 2020/03/17 18:33:51 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1638 2020/03/17 18:59:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2218,3 +2218,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/pear-Mail_Mime to 1.10.7 [taca 2020-03-17]
 	Updated databases/mysql57-client to 5.7.29 [adam 2020-03-17]
 	Updated databases/mysql57-server to 5.7.29 [adam 2020-03-17]
+	Updated databases/mysql56-client to 5.6.47 [adam 2020-03-17]
+	Updated databases/mysql56-server to 5.6.47 [adam 2020-03-17]
