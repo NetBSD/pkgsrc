@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.6 2018/01/02 12:18:15 fhajny Exp $
+# $NetBSD: options.mk,v 1.7 2020/03/17 19:04:49 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.powerdns
-PKG_SUPPORTED_OPTIONS=	bind botan pipe random remote sqlite tools zeromq
+PKG_SUPPORTED_OPTIONS=	bind botan lua pipe random remote sqlite tools zeromq
 PKG_SUGGESTED_OPTIONS=	bind pipe random
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		bind pipe random remote sqlite tools
+PLIST_VARS+=		bind lua pipe random remote sqlite tools
 
 .if !empty(PKG_OPTIONS:Mbind)
 PDNS_MODULES+=		bind
@@ -16,6 +16,16 @@ PLIST.bind=		yes
 .if !empty(PKG_OPTIONS:Mbotan)
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../security/botan-devel/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mlua)
+.include "../../lang/lua/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+PLIST.lua=		yes
+PDNS_MODULES+=		lua
+.else
+CONFIGURE_ARGS+=	--disable-lua-records
+CONFIGURE_ARGS+=	--without-lua
 .endif
 
 .if !empty(PKG_OPTIONS:Mpipe)
