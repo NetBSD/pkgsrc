@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.12 2019/04/25 18:42:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/03/17 19:04:49 adam Exp $
 ${PLIST.tools}bin/calidns
 ${PLIST.tools}bin/dnsbulktest
 ${PLIST.tools}bin/dnsgram
+bin/dnspcap2calidns
 ${PLIST.tools}bin/dnsreplay
 ${PLIST.tools}bin/dnsscan
 ${PLIST.tools}bin/dnsscope
@@ -21,12 +22,14 @@ bin/zone2json
 bin/zone2sql
 ${PLIST.bind}lib/pdns/libbindbackend.la
 ${PLIST.sqlite}lib/pdns/libgsqlite3backend.la
+${PLIST.lua}lib/pdns/libluabackend.la
 ${PLIST.pipe}lib/pdns/libpipebackend.la
 ${PLIST.random}lib/pdns/librandombackend.la
 ${PLIST.remote}lib/pdns/libremotebackend.la
 ${PLIST.tools}man/man1/calidns.1
 man/man1/dnsbulktest.1
 ${PLIST.tools}man/man1/dnsgram.1
+man/man1/dnspcap2calidns.1
 ${PLIST.tools}man/man1/dnsreplay.1
 ${PLIST.tools}man/man1/dnsscan.1
 ${PLIST.tools}man/man1/dnsscope.1
@@ -45,6 +48,8 @@ ${PLIST.tools}man/man1/sdig.1
 man/man1/zone2json.1
 man/man1/zone2sql.1
 sbin/pdns_server
+${PLIST.sqlite}share/doc/pdns/3.4.0_to_4.0.0_schema.sqlite3.sql
+${PLIST.sqlite}share/doc/pdns/4.0.0_to_4.2.0_schema.sqlite3.sql
 ${PLIST.sqlite}share/doc/pdns/dnssec-3.x_to_3.4.0_schema.sqlite3.sql
 ${PLIST.sqlite}share/doc/pdns/nodnssec-3.x_to_3.4.0_schema.sqlite3.sql
 ${PLIST.sqlite}share/doc/pdns/schema.sqlite3.sql
