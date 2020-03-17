@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2019/11/24 01:08:21 gdt Exp $
+# $NetBSD: Makefile,v 1.261 2020/03/17 03:45:55 rillig Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -256,14 +256,6 @@ REPLACE_PERL+=		ext/ExtUtils-Miniperl/lib/ExtUtils/Miniperl.pm
 REPLACE_PERL+=		ext/File-DosGlob/lib/File/DosGlob.pm
 REPLACE_PERL+=		lib/unicore/mktables
 
-# And replace a perl interpreter during the pre-install stage
-# I think this may be a bootstrap script, so can't use REPLACE_PERL
-# because that is acted upon already in the pre-configure stage
-SUBST_CLASSES+=		miniperl
-SUBST_STAGE.miniperl=	pre-install
-SUBST_FILES.miniperl=	lib/ExtUtils/xsubpp
-SUBST_SED.miniperl=	-e "1s:\#!./miniperl:\#!${PERL5}:"
-
 .if ${PKGSRC_COMPILER:Mxlc}
 SUBST_CLASSES+=		cpprun
 SUBST_STAGE.cpprun=	pre-install
@@ -281,7 +273,7 @@ SUBST_SED.cpprun=	-e "s/cpprun=''/cpprun='cc -E'/"
 #
 SUBST_CLASSES+=		dirmode
 SUBST_STAGE.dirmode=	pre-configure
-SUBST_FILES.dirmode=	installhtml install_lib.pl
+SUBST_FILES.dirmode=	install_lib.pl
 SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 
 post-extract:
