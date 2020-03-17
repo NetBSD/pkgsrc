@@ -1,10 +1,7 @@
-# $NetBSD: options.mk,v 1.23 2020/03/16 21:28:23 nia Exp $
+# $NetBSD: options.mk,v 1.24 2020/03/17 11:22:31 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
-.include "../../multimedia/libva/available.mk"
-.include "../../multimedia/libvdpau/available.mk"
-.include "../../devel/wayland/platform.mk"
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	gl
 PKG_OPTIONS_GROUP.gl=		opengl rpi
@@ -12,27 +9,37 @@ PKG_OPTIONS_GROUP.gl=		opengl rpi
 # audio outputs
 PKG_SUPPORTED_OPTIONS+=		alsa jack pulseaudio
 # video outputs
-PKG_SUPPORTED_OPTIONS+=		caca sdl2 libdrm wayland x11
+PKG_SUPPORTED_OPTIONS+=		caca libdrm wayland x11
+# audio/video outputs
+PKG_SUPPORTED_OPTIONS+=		sdl2
 # misc
 PKG_SUPPORTED_OPTIONS+=		ass bluray lua
 
-.include "../../mk/bsd.fast.prefs.mk"
-
 PKG_SUGGESTED_OPTIONS=		ass bluray lua sdl2
-
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=		opengl libdrm x11
 .endif
+
+.include "../../multimedia/libva/available.mk"
+
 .if ${VAAPI_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+=		vaapi
 PKG_SUGGESTED_OPTIONS+=		vaapi
 .endif
+
+.include "../../multimedia/libvdpau/available.mk"
+
 .if ${VDPAU_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+=		vdpau
 PKG_SUGGESTED_OPTIONS+=		vdpau
 .endif
+
+.include "../../devel/wayland/platform.mk"
+
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
 PKG_SUGGESTED_OPTIONS+=		wayland
 .endif
