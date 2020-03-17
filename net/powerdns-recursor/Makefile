@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2020/01/18 21:50:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2020/03/17 19:07:29 adam Exp $
 
-DISTNAME=	pdns-recursor-4.1.12
+DISTNAME=	pdns-recursor-4.3.0
 PKGNAME=	${DISTNAME:S/pdns/powerdns/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,8 +21,6 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_search_pthread_setaffinity_np=no
 RCD_SCRIPTS+=		pdns_recursor
 
 EGDIR=			${PREFIX}/share/examples/pdns-recursor
-
-PTHREAD_AUTO_VARS=	yes
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
