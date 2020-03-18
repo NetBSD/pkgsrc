@@ -1,6 +1,7 @@
 package pkglint
 
 import (
+	"netbsd.org/pkglint/pkgver"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/textproc"
 	"path"
@@ -371,6 +372,59 @@ func (cv *VartypeCheck) DependencyPattern() {
 			"To make the \"2.0\" above part of the package basename, the hyphen",
 			"must be omitted, so the full package name becomes \"foo2.0-2.1.x\".")
 	}
+
+	checkBuildlinkApiDepends := func() {
+		if deppat.LowerOp == "" {
+			return
+		}
+		pkg := cv.MkLines.pkg
+		if pkg == nil {
+			return
+		}
+		if !hasPrefix(cv.Varname, "BUILDLINK_API_DEPENDS.") {
+			return
+		}
+		bl3id := Buildlink3ID(varnameParam(cv.Varname))
+		data := pkg.bl3Data[bl3id]
+		if data == nil {
+			return
+		}
+		if data.apiDepends.LowerOp != deppat.LowerOp {
+			return
+		}
+		if pkgver.Compare(deppat.Lower, data.apiDepends.Lower) < 0 {
+			cv.Warnf("Version %s is smaller than the default version %s from %s.",
+				deppat.Lower, data.apiDepends.Lower, cv.MkLine.RelMkLine(data.apiDependsLine))
+		}
+	}
+
+	checkBuildlinkAbiDepends := func() {
+		if deppat.LowerOp == "" {
+			return
+		}
+		pkg := cv.MkLines.pkg
+		if pkg == nil {
+			return
+		}
+		if !hasPrefix(cv.Varname, "BUILDLINK_ABI_DEPENDS.") {
+			return
+		}
+		bl3id := Buildlink3ID(varnameParam(cv.Varname))
+		data := pkg.bl3Data[bl3id]
+		if data == nil {
+			return
+		}
+		if data.abiDepends.LowerOp != deppat.LowerOp {
+			return
+		}
+		if pkgver.Compare(deppat.Lower, data.abiDepends.Lower) < 0 {
+			cv.Warnf("Version %s is smaller than the default version %s from %s.",
+				deppat.Lower, data.abiDepends.Lower, cv.MkLine.RelMkLine(data.abiDependsLine))
+		}
+	}
+
+	checkBuildlinkApiDepends()
+	checkBuildlinkAbiDepends()
 }
 
 func (cv *VartypeCheck) DependencyWithPath() {
