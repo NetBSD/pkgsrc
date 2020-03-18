@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2020/03/10 22:09:15 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2020/03/18 23:04:21 tnn Exp $
 
 DISTNAME=	qttools-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qttools-${QTVERSION}
@@ -34,6 +34,11 @@ post-install:
 	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 
+.include "../../x11/qt5-qtbase/buildlink3.mk"
+PLIST_VARS+=	dbus
+.if ${PKG_BUILD_OPTIONS.qt5-qtbase:Mdbus}
+PLIST.dbus=	yes
+.endif
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
