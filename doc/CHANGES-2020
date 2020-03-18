@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1654 2020/03/18 20:54:43 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1655 2020/03/18 21:30:56 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2241,3 +2241,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/tor to 0.4.2.7 [wiz 2020-03-18]
 	Updated geography/py-proj to 2.6.0 [gdt 2020-03-18]
 	Updated databases/gramps5 to 5.1.2nb2 [wiz 2020-03-18]
+	Updated net/syncthing to 1.4.0 [gdt 2020-03-18]
