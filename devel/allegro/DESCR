@@ -6,11 +6,4 @@ According to the Oxford Companion to Music, Allegro is the Italian for
 "quick, lively, bright". It is also a recursive acronym which stands for
 "Allegro Low LEvel Game ROutines".
 
-Cross-platform support
-
-    o Dos (DJGPP, Watcom)
-    o Unix (Linux, *BSD, Irix, Solaris, Darwin)
-    o Windows (MSVC, MinGW, Cygwin, Borland)
-    o BeOS
-    o QNX
-    o MacOS X
+This is the legacy 4.x branch, for the current version see devel/allegro5.

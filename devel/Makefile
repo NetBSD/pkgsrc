@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3060 2020/03/16 14:28:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3061 2020/03/18 01:23:00 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -96,6 +96,7 @@ SUBDIR+=	afl
 SUBDIR+=	ald
 SUBDIR+=	alex
 SUBDIR+=	allegro
+SUBDIR+=	allegro5
 SUBDIR+=	amtk
 SUBDIR+=	anjuta
 SUBDIR+=	ant-contrib
