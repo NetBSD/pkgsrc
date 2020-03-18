@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1644 2020/03/18 01:23:16 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1645 2020/03/18 08:25:06 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2230,3 +2230,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/viewvc to 1.2.0 [wiz 2020-03-17]
 	Updated geography/viking to 1.8 [gdt 2020-03-18]
 	Added devel/allegro5 version 5.2.6.0 [nia 2020-03-18]
+	Updated pkgtools/pkglint to 19.4.12 [rillig 2020-03-18]
