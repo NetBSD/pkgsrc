@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2020/02/10 11:56:29 triaxx Exp $
+# $NetBSD: Makefile,v 1.105 2020/03/18 21:30:50 gdt Exp $
 
 # Upstream used to frequently break protocol compatibility, but since
 # 2018 or so this has been much better.  While users of pkgsrc
@@ -6,22 +6,23 @@
 # use case is interoperating with syncthing-android.
 #
 # Therefore, pkgsrc will update to a new syncthing version
-# (e.g. 0.14.x vs 1.0.x) if either there is no protocol break, or when
-# a corresponding syncthing-android version becomes available in the
+# (e.g. 0.14.x vs 1.0.x) if either there is no protocol break, or if a
+# corresponding syncthing-android version becomes available in the
 # f-droid.org repository:
 #   https://f-droid.org/repository/browse/?fdid=com.nutomic.syncthingandroid
 # Updates that could possibly break protocol compatibility with the
 # current syncthing-android in f-droid must be tested against the
 # android version from f-droid prior to commiting.  (This is an
 # attempt to avoid having to version syncthing in pkgsrc.)
-DISTNAME=	syncthing-source-v1.3.4
+#
+# Minor version updates may be committed without asking.  Major
+# updates not following the above policy will be reverted.
+DISTNAME=	syncthing-source-v1.4.0
 PKGNAME=	${DISTNAME:S,source-v,,}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-# Minor version updates may be committed without asking.  Major
-# updates not following the above policy will be reverted.
 COMMENT=	Keeps directories in sync across hosts
 HOMEPAGE=	https://syncthing.net/
 MAINTAINER=	gdt@NetBSD.org
@@ -59,6 +60,8 @@ SYNCTHING_GROUP?=	syncthing
 
 PKG_GROUPS_VARS+=	SYNCTHING_GROUP
 PKG_USERS_VARS+=	SYNCTHING_USER
+
+BUILD_DEFS+=		VARBASE
 
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${SYNCTHING_USER} ${SYNCTHING_GROUP} 0755
 OWN_DIRS_PERMS+=	${VARBASE}/db/syncthing ${SYNCTHING_USER} ${SYNCTHING_GROUP} 0755
