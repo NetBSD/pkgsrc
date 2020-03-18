@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.14 2020/03/05 11:56:19 nia Exp $
+# $NetBSD: options.mk,v 1.15 2020/03/18 21:48:03 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt5
-PKG_SUPPORTED_OPTIONS+=	cups gtk3
+PKG_SUPPORTED_OPTIONS+=	cups dbus gtk3
+PKG_SUGGESTED_OPTIONS+=	dbus
 
 .include "../../mk/bsd.options.mk"
 
@@ -12,6 +13,18 @@ CONFIGURE_ARGS+=	-cups
 PLIST.cups=		yes
 .else
 CONFIGURE_ARGS+=	-no-cups
+.endif
+
+PLIST_VARS+=		dbus
+.if !empty(PKG_OPTIONS:Mdbus)
+PC_FILES+=		Qt5DBus.pc
+# Use lib/dbus-1.0/include/dbus/dbus-arch-deps.h from sysutils/dbus
+USE_DBUS-ARCH-DEPS_H=	yes
+.include "../../sysutils/dbus/buildlink3.mk"
+CONFIGURE_ARGS+=	-dbus-linked
+PLIST.dbus=		yes
+.else
+CONFIGURE_ARGS+=	-no-dbus
 .endif
 
 PLIST_VARS+=		gtk3
