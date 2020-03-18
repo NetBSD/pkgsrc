@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2020/03/18 13:47:13 micha Exp $
+bin/bystand
+share/doc/bystand/bystand.doc
+share/doc/bystand/setup/README
+share/doc/bystand/setup/schema
+share/doc/bystand/setup/template
