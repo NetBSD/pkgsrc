@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/08/01 14:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/18 18:03:29 joerg Exp $
 #
 
 DISTNAME=	aipo-${VERSION}-linux-x86
@@ -39,7 +39,8 @@ CONF_FILES+=	${PREFIX}/share/examples/aipo/dbcp-org001.properties \
  
 
 post-extract:
-	cd ${WRKDIR} && ${TAR} -xpf aipo-${VERSION}-linux-x86
+	cd ${WRKDIR} && mv aipo-${VERSION}-linux-x86 aipo-${VERSION}-linux-x86.tar
+	cd ${WRKDIR} && ${TAR} xf aipo-${VERSION}-linux-x86.tar
 	${UNZIP_CMD} -d ${WRKSRC}/dist/ROOT \
 		${WRKSRC}/dist/aipo.war
 
