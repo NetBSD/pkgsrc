@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/18 13:47:13 micha Exp $
+
+SHA1 (bystand-1.0.1.zip) = 490072cb6f565118a91cff70aef4d5cd50eb7955
+RMD160 (bystand-1.0.1.zip) = d2bc64a17db2623f4bfdc1d1953871a4e8185739
+SHA512 (bystand-1.0.1.zip) = 42460006b45ca27f6f3c5c556fd6bcca37353467665e5261caf74ada4ba50f9c04f33431a46300a18ac4dd145b9370b270a86583cd5c40a42dbd698db0bdc926
+Size (bystand-1.0.1.zip) = 33071 bytes
