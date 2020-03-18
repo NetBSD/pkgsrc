@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2020/02/03 04:51:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.118 2020/03/18 17:56:09 joerg Exp $
 #
 
 DISTNAME=		notqmail-1.07
@@ -79,6 +79,8 @@ BUILD_DEFS+=		QMAIL_QMAIL_GROUP QMAIL_NOFILES_GROUP
 .if !empty(QMAIL_QUEUE_DIR:M${QMAILDIR}/*)
 PKG_FAIL_REASON+=	"QMAIL_QUEUE_DIR must not be under ${QMAILDIR}"
 .endif
+
+USE_TOOLS+=		tar
 
 .if !empty(QMAIL_QUEUE_EXTRA)
 USE_TOOLS+=		expr
