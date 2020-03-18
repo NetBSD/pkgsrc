@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1652 2020/03/18 16:43:58 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1653 2020/03/18 20:11:19 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2239,3 +2239,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added news/bystand version 1.0.1 [baeuerle 2020-03-18]
 	Updated devel/picotrace to 20200318 [kamil 2020-03-18]
 	Updated net/tor to 0.4.2.7 [wiz 2020-03-18]
+	Updated geography/py-proj to 2.6.0 [gdt 2020-03-18]
