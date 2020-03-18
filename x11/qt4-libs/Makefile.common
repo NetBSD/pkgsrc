@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2020/03/17 19:23:46 tnn Exp $
+# $NetBSD: Makefile.common,v 1.51 2020/03/18 21:55:23 tnn Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -49,14 +49,14 @@ LIBQT?=			-lQtCore -lQtGui
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
 MAKE_ENV+=		QTDIR=${WRKSRC}
-PLIST_VARS+=		mac unix
+PLIST_VARS+=		mac notdarwin
 .if ${OPSYS} == "Darwin"
 CFLAGS+=		-D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=1
 PLIST.mac=		yes
 QMAKE_CONF=		qmake.conf.mac
 QMAKE_RANLIB=		${RANLIB}
 .else
-PLIST.unix=		yes
+PLIST.notdarwin=	yes
 QMAKE_CONF=		qmake.conf
 QMAKE_RANLIB=		${TRUE}
 .endif
