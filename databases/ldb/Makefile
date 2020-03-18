@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 17:30:52 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/03/18 00:29:38 tnn Exp $
 
 # Before updating, make sure net/samba4 supports the newer version.
 DISTNAME=	ldb-2.0.8
@@ -62,8 +62,9 @@ PLIST.64bit=		yes
 CONFIGURE_ARGS+=	--without-ldb-lmdb
 .endif
 
+.include "options.mk"
+
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../databases/tdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
