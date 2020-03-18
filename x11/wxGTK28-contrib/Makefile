@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/03/10 22:09:17 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2020/03/18 18:03:53 joerg Exp $
 
 .include "../../x11/wxGTK28/Makefile.common"
 
@@ -10,6 +10,9 @@ USE_TOOLS+=		gmake
 
 BUILD_DIRS=		build-non-unicode/contrib/src \
 			build-unicode/contrib/src
+
+# We patch configure
+CHECK_PORTABILITY_SKIP+=	configure.in
 
 INSTALL_TARGET=		install
 
