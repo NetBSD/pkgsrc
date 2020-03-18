@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/02/12 05:02:11 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/18 12:50:56 tnn Exp $
 
 GCC_PKGNAME=		gcc8
 .include		"version.mk"
@@ -39,6 +39,7 @@ GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
 INFO_FILES=		yes
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 CONFIGURE_ARGS+=	--with-system-zlib
+CHECK_PORTABILITY_SKIP+=contrib/*
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
