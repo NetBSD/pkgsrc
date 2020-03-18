@@ -1,0 +1,13 @@
+$NetBSD: patch-autoconf_Makefile.common.in,v 1.1 2020/03/18 18:02:11 joerg Exp $
+
+--- autoconf/Makefile.common.in.orig	2020-03-18 14:06:28.445542718 +0000
++++ autoconf/Makefile.common.in
+@@ -40,7 +40,7 @@ uninstall.script:
+ 
+ indent:
+ 		@SRCS=`echo "$(OBJS) " | sed "s/.o /.c /g"`; \
+-		if test "x$$SRCS" == "x"; then exit; fi; \
++		if test "x$$SRCS" = "x"; then exit; fi; \
+ 		for i in $$SRCS; do \
+ 		  if (indent -di14 -ts4 -i4 -l100 -lc80 -bad -nbbb -bli0 -c48 -cd48 -ce -cli1 -ncs -nbs -nbbo -hnl < $$i > /tmp/$$i); then \
+ 		    echo "indent $$i"; \

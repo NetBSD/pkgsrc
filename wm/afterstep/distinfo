@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2017/07/14 12:52:49 joerg Exp $
+$NetBSD: distinfo,v 1.23 2020/03/18 18:02:11 joerg Exp $
 
 SHA1 (AfterStep-2.2.11.tar.bz2) = ecfd815b659046281530441af0bc4fc42900d0da
 RMD160 (AfterStep-2.2.11.tar.bz2) = a82a4b3fddcbcd97862212669c11d14629e51a4d
@@ -6,7 +6,11 @@ SHA512 (AfterStep-2.2.11.tar.bz2) = cf6663427656162f20cce596f63c7368c66fb336d586
 Size (AfterStep-2.2.11.tar.bz2) = 6126237 bytes
 SHA1 (patch-aa) = 1103686bde4a2b9a071768f4f9447b8192eb3c46
 SHA1 (patch-afterstep_desktop_desklets_desklet.display) = 40c5db3f72cdb7d0a0f6adc43fa9b7968176f47e
+SHA1 (patch-autoconf_Makefile.common.in) = 51f403f3b7b9d7e8a0ea4f30a72a5ff3b4ea36d8
+SHA1 (patch-autoconf_Makefile.common.lib.in) = 815e45f8d8c6117cbfb8e02759c6e6be15e6ba65
+SHA1 (patch-autoconf_configure.in) = d89b42717506dbd096c85b07232cddca83fd59eb
 SHA1 (patch-configure) = 14a32d22e101ac43c53b7356333e13f94af5d260
+SHA1 (patch-libAfterBase_Makefile.in) = 090ef7a135df43160d38af785a61db73e41b81d9
 SHA1 (patch-libAfterBase_ashash.c) = 12f63117a4a3187b85bbcf868483f9b95309985d
 SHA1 (patch-libAfterBase_asvector.c) = b4feb2a0f10110464d798f1ea405fd4a40490e52
 SHA1 (patch-libAfterBase_asvector.h) = f1c775e576dcdbbd8fa73a4fd362dc6e17d84b58
@@ -16,6 +20,9 @@ SHA1 (patch-libAfterBase_parse.h) = 5e2e0a1b3351f7d3b7d84076879e3827d47e3f24
 SHA1 (patch-libAfterBase_selfdiag.c) = 72fa80bb37f8c73bcf27eb9c0a7b65af561d2e96
 SHA1 (patch-libAfterConf_Color.c) = 346f16a2ea539cb0ff352b73ba1f60d522efea00
 SHA1 (patch-libAfterConf_DesktopEntry.c) = 57b8ff21093434434711d05ad2054c1415de0ca3
+SHA1 (patch-libAfterImage_Makefile.in) = 092564ab8bdd78ded9155a63a126aeda7cf205cd
+SHA1 (patch-libAfterImage_aftershow_Makefile.in) = 3d5c4f3141f51fcb4d4c8b95d244e2722e088cc6
+SHA1 (patch-libAfterImage_apps_Makefile.in) = a23ad87dcc2e0c96abc6c4896edf79f345d54acb
 SHA1 (patch-libAfterImage_asfont.c) = 4fd6498495855c2909530ac5e34accb715b48497
 SHA1 (patch-libAfterImage_export.c) = 0b450561673cb3351c2f8685ba7357cc6a1de366
 SHA1 (patch-libAfterImage_import.c) = 57fdfec498ba05aa6d52470c545d1c9958095435
