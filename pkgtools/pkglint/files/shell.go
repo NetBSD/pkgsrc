@@ -57,8 +57,6 @@ func (scc *SimpleCommandChecker) checkCommandStart() {
 		break
 	case hasPrefix(shellword, "./"): // All commands from the current directory are fine.
 		break
-	case matches(shellword, `\$\{(PKGSRCDIR|PREFIX)(:Q)?\}`):
-		break
 	default:
 		if G.WarnExtra && !scc.mklines.indentation.DependsOn("OPSYS") {
 			scc.mkline.Warnf("Unknown shell command %q.", shellword)

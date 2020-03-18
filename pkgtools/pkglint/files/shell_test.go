@@ -145,6 +145,7 @@ func (s *Suite) Test_SimpleCommandChecker_handleForbiddenCommand(c *check.C) {
 func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable(c *check.C) {
 	t := s.Init(c)
 
+	t.SetUpVartypes()
 	t.SetUpTool("runtime", "RUNTIME", AtRunTime)
 	t.SetUpTool("nowhere", "NOWHERE", Nowhere)
 	mklines := t.NewMkLines("Makefile",
@@ -157,7 +158,8 @@ func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable(c *check.C) {
 		"",
 		"pre-configure:",
 		"\t: ${RUNTIME_Q_CMD} ${NOWHERE_Q_CMD}",
-		"\t: ${RUNTIME_CMD} ${NOWHERE_CMD}")
+		"\t: ${RUNTIME_CMD} ${NOWHERE_CMD}",
+		"\t${PKGNAME}") // This doesn't make sense; it's just for code coverage
 
 	mklines.Check()
 
@@ -168,7 +170,8 @@ func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable(c *check.C) {
 	// TODO: Add a warning that in lines 3 and 4, the :Q is wrong.
 	t.CheckOutputLines(
 		"WARN: Makefile:4: The \"${NOWHERE:Q}\" tool is used but not added to USE_TOOLS.",
-		"WARN: Makefile:6: The \"${NOWHERE}\" tool is used but not added to USE_TOOLS.")
+		"WARN: Makefile:6: The \"${NOWHERE}\" tool is used but not added to USE_TOOLS.",
+		"WARN: Makefile:11: Unknown shell command \"${PKGNAME}\".")
 }
 
 func (s *Suite) Test_SimpleCommandChecker_handleCommandVariable__parameterized(c *check.C) {
