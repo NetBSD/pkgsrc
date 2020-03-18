@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1643 2020/03/18 00:02:55 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.1644 2020/03/18 01:23:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2229,3 +2229,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added audio/dumb version 2.0.3 [nia 2020-03-17]
 	Updated www/viewvc to 1.2.0 [wiz 2020-03-17]
 	Updated geography/viking to 1.8 [gdt 2020-03-18]
+	Added devel/allegro5 version 5.2.6.0 [nia 2020-03-18]
