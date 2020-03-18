@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/02/10 13:13:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2020/03/18 00:05:18 rillig Exp $
 
 DISTNAME=	ninja-1.10.0
 PKGNAME=	${DISTNAME:S/ninja/ninja-build/}
@@ -15,12 +15,6 @@ LICENSE=	apache-2.0
 BUILD_DEPENDS+=	re2c>=0.11.3:../../devel/re2c
 
 USE_LANGUAGES=	c c++
-
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	pre-configure
-SUBST_MESSAGE.prefix=	Fix PREFIX
-SUBST_FILES.prefix=	configure.py
-SUBST_VARS.prefix=	PREFIX
 
 INSTALLATION_DIRS=	bin share/doc/ninja share/ninja
 
