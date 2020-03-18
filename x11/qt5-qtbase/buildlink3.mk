@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2020/03/10 22:09:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2020/03/18 21:48:03 tnn Exp $
 
 BUILDLINK_TREE+=	qt5-qtbase
 
@@ -21,7 +21,12 @@ MAKE_ENV+=	QTDIR=${QTDIR}
 
 PTHREAD_OPTS+=	require
 
-.include "../../mk/bsd.fast.prefs.mk"
+pkgbase := qt5-qtbase
+.include "../../mk/pkg-build-options.mk"
+
+.if ${PKG_BUILD_OPTIONS.qt5-qtbase:Mdbus}
+.include "../../sysutils/dbus/buildlink3.mk"
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
@@ -33,7 +38,6 @@ PTHREAD_OPTS+=	require
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../www/libproxy/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
