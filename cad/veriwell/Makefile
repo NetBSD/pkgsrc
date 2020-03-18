@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/10/09 13:14:06 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/18 17:45:25 joerg Exp $
 
 DISTNAME=	veriwell-2.8.7
 CATEGORIES=	cad
@@ -10,7 +10,7 @@ COMMENT=	Verilog Simulator
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++03
 
 TEST_TARGET=	check
 
