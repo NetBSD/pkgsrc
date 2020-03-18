@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2020/03/18 01:23:01 nia Exp $
+# $NetBSD: options.mk,v 1.2 2020/03/18 01:46:12 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.allegro5
 PKG_SUPPORTED_OPTIONS=		alsa openal pulseaudio x11
@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS.Linux=	alsa
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-PKG_SUGGESTED_OPTIONS=		x11
+PKG_SUGGESTED_OPTIONS=		openal x11
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -23,7 +23,10 @@ CMAKE_ARGS+=	-DWANT_ALSA=OFF
 CMAKE_ARGS+=	-DWANT_OPENAL=ON
 .  include "../../audio/openal-soft/buildlink3.mk"
 .else
+# OpenAL is required on Darwin and also built-in.
+.  if ${OPSYS} != "Darwin"
 CMAKE_ARGS+=	-DWANT_OPENAL=OFF
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
