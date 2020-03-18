@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.awk,v 1.11 2020/03/13 08:11:36 rillig Exp $
+# $NetBSD: check-portability.awk,v 1.12 2020/03/18 17:47:40 joerg Exp $
 #
 # Checks a shell file for possible portability problems.
 #
@@ -9,10 +9,11 @@
 BEGIN {
 	found_random = no;
 	found_test_eqeq = no;
+	lineno = 0;
 }
 
 # Check for $RANDOM, which is specific to ksh and bash.
-function check_random(line) {
+function check_random(line, lineno) {
 
 	# $RANDOM together with the PID is often found in GNU-style
 	# configure scripts and is considered acceptable.
@@ -25,11 +26,11 @@ function check_random(line) {
 	} else if (line ~ /\$RANDOM/) {
 		found_random = yes;
 		cs_warning_heading("Found $RANDOM:");
-		cs_warning_msg(cs_fname ": " $0);
+		cs_warning_msg(cs_fname ":" lineno ": " $0);
 	}
 }
 
-function check_test_eqeq(line,  n, word, i) {
+function check_test_eqeq(line, lineno, n, word, i) {
 
 	if (length(line) == 0)
 		return;
@@ -39,10 +40,14 @@ function check_test_eqeq(line,  n, word, i) {
 			if (word[i-2] == "test" || word[i-2] == "[") {
 				found_test_eqeq = yes;
 				cs_error_heading("Found test ... == ...:");
-				cs_error_msg(cs_fname ": " $0);
+				cs_error_msg(cs_fname ":" lineno ": " $0);
 			}
 		}
 	}
+}
+
+/^$/ {
+	++lineno;
 }
 
 /./ {
@@ -54,9 +59,10 @@ function check_test_eqeq(line,  n, word, i) {
 	line = $0;
 	gsub(/^#.*/, "", line);
 	gsub(/[[:space:]]#.*/, "", line);
+	++lineno;
 
-	check_random(line);
-	check_test_eqeq(line);
+	check_random(line, lineno);
+	check_test_eqeq(line, lineno);
 }
 
 END {
