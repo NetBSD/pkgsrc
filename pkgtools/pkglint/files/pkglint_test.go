@@ -740,6 +740,23 @@ func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 	t.CheckEquals(resolved, "gst-plugins0.10-x11/distinfo")
 }
 
+func (s *Suite) Test_resolveVariableRefs__indeterminate(c *check.C) {
+	t := s.Init(c)
+
+	pkg := NewPackage(G.Pkgsrc.File("category/package"))
+	pkg.vars.Define("PKGVAR", t.NewMkLine("filename.mk", 123, "PKGVAR!=\tcommand"))
+	mklines := t.NewMkLinesPkg("filename.mk", pkg,
+		"VAR!=\tcommand")
+	mklines.collectVariables()
+
+	resolved := resolveVariableRefs("${VAR} ${PKGVAR}", mklines, nil)
+
+	// VAR and PKGVAR are defined, but since they contain the result of
+	// a shell command, their value is indeterminate.
+	// Therefore they are not replaced.
+	t.CheckEquals(resolved, "${VAR} ${PKGVAR}")
+}
+
 // Just for code coverage.
 func (s *Suite) Test_CheckFileOther__no_tracing(c *check.C) {
 	t := s.Init(c)
@@ -1104,6 +1121,24 @@ func (s *Suite) Test_Pkglint_checkReg__spec(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: ~/category/package/spec: Only packages in regress/ may have spec files.")
+}
+
+func (s *Suite) Test_Pkglint_checkReg__options_mk(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.CreateFileLines("mk/bsd.options.mk")
+	t.CreateFileLines("category/package/options.mk",
+		MkCvsID,
+		"",
+		"PKG_OPTIONS_VAR=\tPKG_OPTIONS.package",
+		"",
+		".include \"../../mk/bsd.options.mk\"")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package/options.mk"))
+
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_Pkglint_checkRegCvsSubst(c *check.C) {
