@@ -248,13 +248,7 @@ func (mklines *MkLines) collectDocumentedVariables() {
 }
 
 func (mklines *MkLines) collectVariables() {
-	if trace.Tracing {
-		defer trace.Call0()()
-	}
-
-	mklines.ForEach(func(mkline *MkLine) {
-		mklines.collectVariable(mkline)
-	})
+	mklines.ForEach(mklines.collectVariable)
 }
 
 func (mklines *MkLines) collectVariable(mkline *MkLine) {
