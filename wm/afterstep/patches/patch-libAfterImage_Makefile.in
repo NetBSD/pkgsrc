@@ -1,0 +1,13 @@
+$NetBSD: patch-libAfterImage_Makefile.in,v 1.1 2020/03/18 18:02:11 joerg Exp $
+
+--- libAfterImage/Makefile.in.orig	2020-03-18 14:05:16.947587042 +0000
++++ libAfterImage/Makefile.in
+@@ -297,7 +297,7 @@ distclean: clean
+ 
+ indent:
+ 		@SRCS=`echo "$(AFTERIMAGE_OBJS) " | sed "s/.o /.c /g"`; \
+-		if test "x$$SRCS" == "x"; then exit; fi; \
++		if test "x$$SRCS" = "x"; then exit; fi; \
+ 		for i in $$SRCS; do \
+ 		  if (indent -di14 -ts4 -i4 -l120 -lc80 -bad -nbbb -bli0 -c48 -cd48 -ce -cli1 -ncs -nbs -nbbo -hnl < $$i > /tmp/$$i); then \
+ 		    echo "indent $$i"; \
