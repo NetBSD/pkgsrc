@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/03/10 22:09:18 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/03/18 17:42:17 joerg Exp $
 
 PKGNAME=		bmp-crossfade-0.3.11
 DISTNAME=		xmms-crossfade-0.3.11
@@ -19,6 +19,8 @@ USE_TOOLS+=		pkg-config
 LDFLAGS+=		${LIBOSSAUDIO}
 OSS_DEFS+=		-DDEFAULT_OSS_ALT_AUDIO_DEVICE='"${DEVOSSSOUND}"'
 MAKE_ENV+=		OSS_DEFS=${OSS_DEFS:Q}
+
+CHECK_PORTABILITY_SKIP+=	configure.in
 
 .include "../../audio/bmp/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
