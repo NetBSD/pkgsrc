@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/01/20 21:32:59 nia Exp $
+# $NetBSD: Makefile,v 1.43 2020/03/18 01:23:00 nia Exp $
 
 DISTNAME=	allegro-4.4.3.1
 PKGREVISION=	1
@@ -9,7 +9,7 @@ GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://liballeg.org/
-COMMENT=	Allegro game programming library
+COMMENT=	Cross-platform library aimed at video game programming (4.x branch)
 #LICENSE=	# TODO: (see mk/license.mk)
 
 USE_CMAKE=	yes
