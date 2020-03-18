@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/03/13 15:00:36 bacon Exp $
+# $NetBSD: Makefile,v 1.29 2020/03/18 19:50:52 rillig Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -46,6 +46,11 @@ SUBST_MESSAGE.vars=	Setting target machine name path in ${SUBST_FILES.vars}
 SUBST_STAGE.vars=	pre-configure
 SUBST_FILES.vars=	gcc/Makefile.in
 SUBST_VARS.vars=	MACHINE_GNU_PLATFORM
+
+# These programs use [[ ... ]] and are not needed for the build.
+CHECK_PORTABILITY_CHECK+= \
+	contrib/prepare_patch.sh \
+	contrib/patch_tester.sh
 
 .include "../../mk/bsd.prefs.mk"
 
