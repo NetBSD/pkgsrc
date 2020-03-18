@@ -455,9 +455,9 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__load_time_in_condition(c 
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	G.Pkgsrc.vartypes.DefineParse("LOAD_TIME", BtPathPattern, List,
+	t.SetUpType("LOAD_TIME", BtPathPattern, List,
 		"special:filename.mk: use-loadtime")
-	G.Pkgsrc.vartypes.DefineParse("RUN_TIME", BtPathPattern, List,
+	t.SetUpType("RUN_TIME", BtPathPattern, List,
 		"special:filename.mk: use")
 	t.Chdir(".")
 	t.FinishSetUp()
@@ -479,9 +479,9 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__load_time_in_for_loop(c *
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	G.Pkgsrc.vartypes.DefineParse("LOAD_TIME", BtPathPattern, List,
+	t.SetUpType("LOAD_TIME", BtPathPattern, List,
 		"special:filename.mk: use-loadtime")
-	G.Pkgsrc.vartypes.DefineParse("RUN_TIME", BtPathPattern, List,
+	t.SetUpType("RUN_TIME", BtPathPattern, List,
 		"special:filename.mk: use")
 	t.Chdir(".")
 	t.FinishSetUp()
@@ -532,16 +532,16 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__load_time_run_time(c *che
 	t := s.Init(c)
 
 	t.SetUpPkgsrc()
-	G.Pkgsrc.vartypes.DefineParse("LOAD_TIME", BtUnknown, NoVartypeOptions,
+	t.SetUpType("LOAD_TIME", BtUnknown, NoVartypeOptions,
 		"*.mk: use, use-loadtime")
-	G.Pkgsrc.vartypes.DefineParse("RUN_TIME", BtUnknown, NoVartypeOptions,
+	t.SetUpType("RUN_TIME", BtUnknown, NoVartypeOptions,
 		"*.mk: use")
-	G.Pkgsrc.vartypes.DefineParse("WRITE_ONLY", BtUnknown, NoVartypeOptions,
+	t.SetUpType("WRITE_ONLY", BtUnknown, NoVartypeOptions,
 		"*.mk: set")
-	G.Pkgsrc.vartypes.DefineParse("LOAD_TIME_ELSEWHERE", BtUnknown, NoVartypeOptions,
+	t.SetUpType("LOAD_TIME_ELSEWHERE", BtUnknown, NoVartypeOptions,
 		"Makefile: use-loadtime",
 		"*.mk: set")
-	G.Pkgsrc.vartypes.DefineParse("RUN_TIME_ELSEWHERE", BtUnknown, NoVartypeOptions,
+	t.SetUpType("RUN_TIME_ELSEWHERE", BtUnknown, NoVartypeOptions,
 		"Makefile: use",
 		"*.mk: set")
 	t.Chdir(".")
@@ -637,7 +637,7 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__write_only_usable_in_othe
 func (s *Suite) Test_MkVarUseChecker_checkPermissions__usable_only_at_loadtime_in_other_file(c *check.C) {
 	t := s.Init(c)
 
-	G.Pkgsrc.vartypes.DefineParse("VAR", BtFilename, NoVartypeOptions,
+	t.SetUpType("VAR", BtFilename, NoVartypeOptions,
 		"*: set, use-loadtime")
 	mklines := t.NewMkLines("Makefile",
 		MkCvsID,
@@ -656,9 +656,8 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__assigned_to_infrastructur
 
 	// This combination of BtUnknown and all permissions is typical for
 	// otherwise unknown variables from the pkgsrc infrastructure.
-	G.Pkgsrc.vartypes.Define("INFRA", BtUnknown, NoVartypeOptions,
-		NewACLEntry("*", aclpAll))
-	G.Pkgsrc.vartypes.DefineParse("VAR", BtUnknown, NoVartypeOptions,
+	t.SetUpType("INFRA", BtUnknown, NoVartypeOptions)
+	t.SetUpType("VAR", BtUnknown, NoVartypeOptions,
 		"buildlink3.mk: none",
 		"*: use")
 	mklines := t.NewMkLines("buildlink3.mk",
@@ -692,10 +691,10 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__assigned_to_load_time(c *
 	// to use its value in LOAD_TIME, as the latter might be evaluated later
 	// at load time, and at that point VAR would be evaluated as well.
 
-	G.Pkgsrc.vartypes.DefineParse("LOAD_TIME", BtMessage, NoVartypeOptions,
+	t.SetUpType("LOAD_TIME", BtMessage, NoVartypeOptions,
 		"buildlink3.mk: set",
 		"*.mk: use-loadtime")
-	G.Pkgsrc.vartypes.DefineParse("VAR", BtUnknown, NoVartypeOptions,
+	t.SetUpType("VAR", BtUnknown, NoVartypeOptions,
 		"buildlink3.mk: none",
 		"*.mk: use")
 	mklines := t.NewMkLines("buildlink3.mk",
@@ -963,7 +962,8 @@ func (s *Suite) Test_MkVarUseChecker_checkAssignable(c *check.C) {
 	t.SetUpVartypes()
 	mklines := t.NewMkLines("filename.mk",
 		"BUILTIN_FIND_FILES_VAR:=\tBIN_FILE",
-		"BUILTIN_FIND_FILES.BIN_FILE=\t${TOOLS_PLATFORM.file} /bin/file /usr/bin/file")
+		"BUILTIN_FIND_FILES.BIN_FILE=\t${TOOLS_PLATFORM.file} /bin/file /usr/bin/file",
+		"PKG_SHELL.user=\t${TOOLS_PLATFORM.false:Q}")
 
 	mklines.ForEach(func(mkline *MkLine) {
 		ck := NewMkAssignChecker(mkline, mklines)
@@ -971,8 +971,11 @@ func (s *Suite) Test_MkVarUseChecker_checkAssignable(c *check.C) {
 	})
 
 	t.CheckOutputLines(
-		"WARN: filename.mk:2: Incompatible types: " +
-			"TOOLS_PLATFORM.file (type \"ShellCommand\") " +
+		"WARN: filename.mk:2: Incompatible types: "+
+			"TOOLS_PLATFORM.file (type \"ShellCommand\") "+
+			"cannot be assigned to type \"Pathname\".",
+		"WARN: filename.mk:3: Incompatible types: "+
+			"TOOLS_PLATFORM.false (type \"ShellCommand\") "+
 			"cannot be assigned to type \"Pathname\".")
 }
 
@@ -993,7 +996,8 @@ func (s *Suite) Test_MkVarUseChecker_checkAssignable__shell_command_to_pathname(
 	mklines := t.NewMkLines("filename.mk",
 		"PKG_SHELL.user=\t${TOOLS_PLATFORM.sh}",
 		"PKG_SHELL.user=\t${SH}",
-		"PKG_SHELL.user=\t${BASH}")
+		"PKG_SHELL.user=\t${BASH}",
+		"PKG_SHELL.user=\t/bin/sh")
 
 	mklines.ForEach(func(mkline *MkLine) {
 		ck := NewMkAssignChecker(mkline, mklines)
@@ -1232,11 +1236,17 @@ func (s *Suite) Test_MkVarUseChecker_checkToolsPlatform(c *check.C) {
 	t.SetUpTool("cond1", "", AfterPrefsMk)
 	t.SetUpTool("cond2", "", AfterPrefsMk)
 	t.SetUpTool("undefined", "", AfterPrefsMk)
+	t.SetUpTool("non-const", "", AfterPrefsMk)
 	t.CreateFileLines("mk/tools/tools.NetBSD.mk",
+		"OTHER_VAR?=\tother value", // Just for code coverage
 		"TOOLS_PLATFORM.available?=\t/bin/available",
 		"TOOLS_PLATFORM.cond1?=\t/usr/cond1",
 		"TOOLS_PLATFORM.cond2?=\t/usr/cond2",
-		"TOOLS_PLATFORM.undefined?=\t/usr/undefined")
+		"TOOLS_PLATFORM.undefined?=\t/usr/undefined",
+		"",
+		"TOOLS_PLATFORM.non-const?=\t/non-const-initial",
+		"READ=\t${TOOLS_PLATFORM.non-const}", // Make the variable non-const
+		"TOOLS_PLATFORM.non-const?=\t/non-const-final")
 	t.CreateFileLines("mk/tools/tools.SunOS.mk",
 		"TOOLS_PLATFORM.available?=\t/bin/available",
 		"",

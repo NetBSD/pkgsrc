@@ -484,6 +484,29 @@ func (s *Suite) Test_VartypeCheck_DependencyPattern(c *check.C) {
 		"WARN: filename.mk:67: Invalid dependency pattern \"${RUBY_PKGPREFIX}-theme-[a-z0-9]*\".")
 }
 
+func (s *Suite) Test_VartypeCheck_DependencyPattern__smaller_version(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../category/lib/buildlink3.mk\"",
+		"BUILDLINK_API_DEPENDS.lib+=\tlib>=1.0pkg",
+		"BUILDLINK_ABI_DEPENDS.lib+=\tlib>=1.1pkg")
+	t.SetUpPackage("category/lib")
+	t.CreateFileBuildlink3("category/lib/buildlink3.mk",
+		"BUILDLINK_API_DEPENDS.lib+=\tlib>=1.3api",
+		"BUILDLINK_ABI_DEPENDS.lib+=\tlib>=1.4abi")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.checkdirPackage(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:21: Version 1.0pkg is smaller than the default "+
+			"version 1.3api from ../../category/lib/buildlink3.mk:12.",
+		"WARN: Makefile:22: Version 1.1pkg is smaller than the default "+
+			"version 1.4abi from ../../category/lib/buildlink3.mk:13.")
+}
+
 func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 	t := s.Init(c)
 
@@ -610,7 +633,7 @@ func (s *Suite) Test_VartypeCheck_EmulPlatform(c *check.C) {
 
 func (s *Suite) Test_VartypeCheck_Enum(c *check.C) {
 	basicType := enum("jdk1 jdk2 jdk4")
-	G.Pkgsrc.vartypes.Define("JDK", basicType, UserSettable)
+	G.Pkgsrc.vartypes.Define("JDK", basicType, UserSettable, []ACLEntry{})
 	vt := NewVartypeCheckTester(s.Init(c), basicType)
 
 	vt.Varname("JDK")
@@ -1334,11 +1357,12 @@ func (s *Suite) Test_VartypeCheck_Pathname(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_PathnameSpace(c *check.C) {
+	t := s.Init(c)
 	// Invent a variable name since this data type is only used as part
 	// of CONF_FILES.
-	G.Pkgsrc.vartypes.DefineParse("CONFIG_FILE", BtPathnameSpace,
+	t.SetUpType("CONFIG_FILE", BtPathnameSpace,
 		NoVartypeOptions, "*.mk: set, use")
-	vt := NewVartypeCheckTester(s.Init(c), BtPathnameSpace)
+	vt := NewVartypeCheckTester(t, BtPathnameSpace)
 
 	vt.Varname("CONFIG_FILE")
 	vt.Values(

@@ -571,11 +571,7 @@ func (p *Pkglint) checkReg(filename CurrPath, basename string, depth int, pkg *P
 
 	case basename == "buildlink3.mk":
 		if mklines := LoadMk(filename, pkg, NotEmpty|LogErrors); mklines != nil {
-			ck := NewBuildlink3Checker(mklines)
-			ck.Check()
-			if pkg != nil {
-				pkg.buildlinkID = ck.pkgbase
-			}
+			CheckLinesBuildlink3Mk(mklines)
 		}
 
 	case hasPrefix(basename, "DESCR"):

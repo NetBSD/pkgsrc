@@ -14,8 +14,8 @@ import (
 // It just doesn't make sense to check multiple pkgsrc installations at once.
 //
 // This type only contains data that is loaded once and then stays constant.
-// Everything else (distfile hashes, package names) is recorded in the Pkglint
-// type instead.
+// Everything else (distfile hashes, package names) is recorded in the
+// InterPackage type instead.
 type Pkgsrc struct {
 	// The top directory (PKGSRCDIR).
 	topdir CurrPath
@@ -530,11 +530,8 @@ func (src *Pkgsrc) loadToolsPlatform() {
 			conditional[opsys] = true
 		}
 		for opsys, status := range statusByNameAndOpsys[name] {
-			switch status {
-			case 1:
-				delete(undefined, opsys)
-			case 2:
-				delete(undefined, opsys)
+			delete(undefined, opsys)
+			if status == 2 {
 				delete(conditional, opsys)
 			}
 		}
@@ -1090,6 +1087,7 @@ func (src *Pkgsrc) ReadDir(dirName PkgsrcPath) []os.FileInfo {
 	var relevantFiles []os.FileInfo
 	for _, dirent := range files {
 		name := dirent.Name()
+		// TODO: defer isEmptyDir, for performance reasons; run ktrace or strace to see why.
 		if !dirent.IsDir() || !isIgnoredFilename(name) && !isEmptyDir(dir.JoinNoClean(NewRelPathString(name))) {
 			relevantFiles = append(relevantFiles, dirent)
 		}

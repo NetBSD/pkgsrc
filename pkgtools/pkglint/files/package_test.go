@@ -516,6 +516,33 @@ func (s *Suite) Test_Package_load__extra_files(c *check.C) {
 		"WARN: patches/readme.mk: Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.")
 }
 
+func (s *Suite) Test_Package_loadBuildlink3Pkgbase(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../category/lib/buildlink3.mk\"")
+	t.CreateFileBuildlink3("category/package/buildlink3.mk",
+		"pkgbase := package",
+		".include \"../../mk/pkg-build-options.mk\"",
+		".include \"../../category/lib/buildlink3.mk\"")
+	t.SetUpPackage("category/lib")
+	t.CreateFileBuildlink3("category/lib/buildlink3.mk",
+		"pkgbase := lib",
+		".include \"../../mk/pkg-build-options.mk\"")
+	t.CreateFileLines("mk/pkg-build-options.mk")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+	pkg := NewPackage(".")
+
+	pkg.Check()
+
+	t.CheckOutputEmpty()
+	seenPkgbase := pkg.seenPkgbase
+	t.Check(seenPkgbase.seen, check.HasLen, 2)
+	t.CheckEquals(seenPkgbase.Seen("lib"), true)
+	t.CheckEquals(seenPkgbase.Seen("package"), true)
+}
+
 func (s *Suite) Test_Package_loadPackageMakefile__dump(c *check.C) {
 	t := s.Init(c)
 
