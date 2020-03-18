@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1645 2020/03/18 08:25:06 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.1646 2020/03/18 10:08:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2231,3 +2231,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated geography/viking to 1.8 [gdt 2020-03-18]
 	Added devel/allegro5 version 5.2.6.0 [nia 2020-03-18]
 	Updated pkgtools/pkglint to 19.4.12 [rillig 2020-03-18]
+	Updated lang/nodejs to 13.11.0 [adam 2020-03-18]
+	Updated www/py-bleach to 3.1.3 [adam 2020-03-18]
