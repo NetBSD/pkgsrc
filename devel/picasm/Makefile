@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/06/12 20:03:45 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/18 17:52:39 joerg Exp $
 #
 
 DISTNAME=	picasm114
 PKGNAME=	${DISTNAME:S/picasm/picasm-/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://nsa.kpu-m.ac.jp/gijutu/kousaku/man-pic/
 EXTRACT_SUFX=	.tar.bz2
