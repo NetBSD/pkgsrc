@@ -1,0 +1,13 @@
+$NetBSD: patch-SETUP.in,v 1.1 2020/03/18 18:00:22 joerg Exp $
+
+--- SETUP.in.orig	2020-03-18 14:18:09.577117262 +0000
++++ SETUP.in
+@@ -1021,7 +1021,7 @@ do_choose_resolution()
+ 	    fi
+ 	    ;;
+     esac
+-    if [ "$XRESOL" == "sound" ]; then
++    if [ "$XRESOL" = "sound" ]; then
+ 	RESOLUTION="sound"
+     else
+ 	RESOLUTION=${XRESOL}x${YRESOL}
