@@ -1,6 +1,8 @@
-$NetBSD: patch-scripts_gversion.in,v 1.1 2020/03/17 23:06:08 gdt Exp $
+$NetBSD: patch-scripts_gversion.in,v 1.2 2020/03/18 13:49:30 gdt Exp $
 
 Remediate bashisms.
+
+Sent upstream by email 20200317.
 
 --- scripts/gversion.in.orig	2019-05-25 15:18:50.000000000 +0000
 +++ scripts/gversion.in
@@ -12,10 +14,10 @@ Remediate bashisms.
 -	[[ -z $tag ]] && tag=$(git describe --tags --dirty --first-parent --candidates=1000 --match "${gutenprint_release//./_}*" 2>/dev/null)
 -	[[ -z $tag ]] && tag=$(git describe --tags --dirty --first-parent --candidates=1000 --match "gutenprint*" 2>/dev/null)
 -	[[ -z $tag ]] && tag=$(git describe --tags --dirty --always --first-parent 2>/dev/null)
-+	[ -z $tag ] && tag=$(git describe --tags --dirty --first-parent --candidates=1000 --match "${gutenprint_base//./_}*" 2>/dev/null)
-+	[ -z $tag ] && tag=$(git describe --tags --dirty --first-parent --candidates=1000 --match "${gutenprint_release//./_}*" 2>/dev/null)
-+	[ -z $tag ] && tag=$(git describe --tags --dirty --first-parent --candidates=1000 --match "gutenprint*" 2>/dev/null)
-+	[ -z $tag ] && tag=$(git describe --tags --dirty --always --first-parent 2>/dev/null)
++	[ -z "$tag" ] && tag=$(git describe --tags --dirty --first-parent --candidates=1000 --match "${gutenprint_base//./_}*" 2>/dev/null)
++	[ -z "$tag" ] && tag=$(git describe --tags --dirty --first-parent --candidates=1000 --match "${gutenprint_release//./_}*" 2>/dev/null)
++	[ -z "$tag" ] && tag=$(git describe --tags --dirty --first-parent --candidates=1000 --match "gutenprint*" 2>/dev/null)
++	[ -z "$tag" ] && tag=$(git describe --tags --dirty --always --first-parent 2>/dev/null)
  	echo $tag | sed 's/^[^0-9]*-//' > "$root/git-version-stamp"
      fi
  
