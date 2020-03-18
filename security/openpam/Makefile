@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/01/30 11:17:05 triaxx Exp $
+# $NetBSD: Makefile,v 1.33 2020/03/18 12:20:45 tnn Exp $
 
 DISTNAME=	openpam-20190224
 PKGREVISION=	1
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 CONFLICTS+=	PAM-[0-9]*
 
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-pam-unix
