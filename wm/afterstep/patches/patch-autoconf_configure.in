@@ -1,0 +1,13 @@
+$NetBSD: patch-autoconf_configure.in,v 1.1 2020/03/18 18:02:11 joerg Exp $
+
+--- autoconf/configure.in.orig	2020-03-18 14:07:14.156091126 +0000
++++ autoconf/configure.in
+@@ -105,7 +105,7 @@ AC_ARG_ENABLE(send-postcard-to-developer
+ AC_ARG_ENABLE(data-reinstall,   [  --enable-data-reinstall will prevent AfterStep from reinstalling image and font files.[[yes]] ],data_reinstall=$enableval,data_reinstall="yes")
+ 
+ AC_ARG_ENABLE(script,		[  --enable-script         compile Script module [[yes]] ], enable_script=$enableval,enable_script="yes")
+-AC_ARG_ENABLE(reuse-font,	[  --enable-reuse-font     enables reuse of loaded font resource by modules (don't use with TrueType fonts !)[[no]] ],[if test x$enableval == "xyes"; then AC_DEFINE(MODULE_REUSE_LOADED_FONT,1,Enables reuse of loaded font resource by modules) fi])
++AC_ARG_ENABLE(reuse-font,	[  --enable-reuse-font     enables reuse of loaded font resource by modules (don't use with TrueType fonts !)[[no]] ],[if test x$enableval = "xyes"; then AC_DEFINE(MODULE_REUSE_LOADED_FONT,1,Enables reuse of loaded font resource by modules) fi])
+ 
+ dnl# For FreeBSD, add -I/usr/local/include
+ 
