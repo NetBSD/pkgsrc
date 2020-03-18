@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/10/09 13:14:06 kamil Exp $
+$NetBSD: distinfo,v 1.2 2020/03/18 17:45:25 joerg Exp $
 
 SHA1 (veriwell-2.8.7.tar.gz) = 9ef4e6a25a4fd65db325a89ed89b199547fabbd6
 RMD160 (veriwell-2.8.7.tar.gz) = 3d86c40b353f701d61cab301e0f7c3ec136c88e7
 SHA512 (veriwell-2.8.7.tar.gz) = c0858ce71bd8cfef989e96899bc0d5fc0c919d8248cad0bebde7faf31073cde0423ddb168cf0fabb9f7b46ced7b953ad392627b7e1ad5ea1e7ef75f9524717a8
 Size (veriwell-2.8.7.tar.gz) = 875596 bytes
+SHA1 (patch-src_acc__user.h) = 308c237f63ecb8a856ab7640ea1e00a57ce34378
