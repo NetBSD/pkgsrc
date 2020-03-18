@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/29 21:49:50 adam Exp $
+# $NetBSD: Makefile,v 1.11 2020/03/18 17:44:24 joerg Exp $
 
 DISTNAME=	pylast-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pylast/pylast
 COMMENT=	Python interface to Last.fm and Libre.fm
 LICENSE=	apache-2.0
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
