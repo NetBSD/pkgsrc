@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.156 2020/03/15 18:50:58 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.157 2020/03/18 01:27:14 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -224,7 +224,6 @@ BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 PKG_CC=		${PREFIX}/bin/clang
 PKG_CXX=	${PREFIX}/bin/clang++
 BUILDLINK_DEPMETHOD.clang=	build
-BUILDLINK_API_DEPENDS.clang+=	clang>=6.0.1nb1
 .include "../../lang/clang/buildlink3.mk"
 BUILDLINK_DEPMETHOD.rust=	build
 BUILDLINK_API_DEPENDS.rust+=	rust>=1.39.0
