@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2015/07/08 17:49:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2020/03/18 21:55:23 tnn Exp $
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
 lib/pkgconfig/QtDesignerComponents.pc
@@ -19,7 +19,7 @@ qt4/bin/qhelpgenerator
 qt4/bin/qmake
 qt4/bin/qmlviewer
 qt4/bin/qt3to4
-${PLIST.unix}qt4/bin/qtconfig
+${PLIST.notdarwin}qt4/bin/qtconfig
 qt4/bin/qttracereplay
 qt4/bin/xmlpatterns
 qt4/bin/xmlpatternsvalidator
