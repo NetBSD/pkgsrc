@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1653 2020/03/18 20:11:19 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.1654 2020/03/18 20:54:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2240,3 +2240,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/picotrace to 20200318 [kamil 2020-03-18]
 	Updated net/tor to 0.4.2.7 [wiz 2020-03-18]
 	Updated geography/py-proj to 2.6.0 [gdt 2020-03-18]
+	Updated databases/gramps5 to 5.1.2nb2 [wiz 2020-03-18]
