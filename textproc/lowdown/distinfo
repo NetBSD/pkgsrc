@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2020/03/07 22:17:01 fcambus Exp $
+$NetBSD: distinfo,v 1.6 2020/03/18 18:01:35 joerg Exp $
 
 SHA1 (lowdown-0.6.1.tar.gz) = 9946bb8331913c9bdea40fad015b460b70fb42ce
 RMD160 (lowdown-0.6.1.tar.gz) = 355f7443331f29e6acc656129c29e2b959772774
 SHA512 (lowdown-0.6.1.tar.gz) = bbd431431850492406889d67ebe11ad5e2542293d4a30f8f0c7a2d0377291b35f484437a9d07474d1853d9839b22271026160c6be31bf78843488fb5cafc880e
 Size (lowdown-0.6.1.tar.gz) = 122806 bytes
+SHA1 (patch-Makefile) = 6ca6ffd3f560c6cfa2821c0569b78737256fb727
