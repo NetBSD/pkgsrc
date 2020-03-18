@@ -53,7 +53,7 @@ func (ck *OptionsLinesChecker) collect() {
 				seenPkgOptionsVar = true
 				buildlinkID := ck.buildlinkID
 				optionsID := varnameParam(mkline.Value())
-				if buildlinkID != "" && optionsID != "" && buildlinkID != optionsID {
+				if buildlinkID != "" && buildlinkID != optionsID {
 					mkline.Warnf("The buildlink3 identifier %q should be the same as the options identifier %q.",
 						buildlinkID, optionsID)
 					mkline.Explain(

@@ -6,6 +6,7 @@ func (s *Suite) Test_VarTypeRegistry_acl__assertion(c *check.C) {
 	t := s.Init(c)
 
 	reg := NewVarTypeRegistry()
+	reg.compile("pkg", "*.mk: use")
 	reg.pkg("VARNAME", BtUnknown)
 
 	t.ExpectPanic(

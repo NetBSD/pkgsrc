@@ -731,6 +731,56 @@ func (s *Suite) Test_PlistChecker_checkDuplicate(c *check.C) {
 			"already appeared in line 2.")
 }
 
+func (s *Suite) Test_PlistChecker_checkDuplicate__OPSYS(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.Chdir("category/package")
+	t.CreateFileLines("PLIST",
+		PlistCvsID,
+		"bin/common",
+		"bin/common_end",
+		"${PLIST.cond}bin/conditional",
+		"bin/plist")
+	t.CreateFileLines("PLIST.Linux",
+		PlistCvsID,
+		"bin/common",
+		"bin/common_end",
+		"${PLIST.cond}bin/conditional",
+		"bin/os-specific",
+		"bin/plist")
+	t.CreateFileLines("PLIST.NetBSD",
+		PlistCvsID,
+		"bin/common",
+		"bin/common_end",
+		"${PLIST.cond}bin/conditional",
+		"bin/os-specific",
+		"bin/plist")
+	t.CreateFileLines("PLIST.common",
+		PlistCvsID,
+		"bin/common",
+		"${PLIST.cond}bin/conditional")
+	t.CreateFileLines("PLIST.common_end",
+		PlistCvsID,
+		"bin/common_end",
+		"${PLIST.cond}bin/conditional")
+	t.FinishSetUp()
+
+	// TODO: Use the same order as in PLIST_SRC_DFLT, see mk/plist/plist.mk.
+	// PLIST.common
+	// PLIST.${OPSYS}
+	// PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g}
+	// PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
+	// ${defined(EMUL_PLATFORM):?PLIST.${EMUL_PLATFORM}:}
+	// PLIST
+	// PLIST.common_end
+	//
+	G.Check(".")
+
+	// TODO: Warn that bin/program is duplicate, but not bin/os-specific.
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_PlistChecker_checkPathBin(c *check.C) {
 	t := s.Init(c)
 
@@ -1158,15 +1208,25 @@ func (s *Suite) Test_PlistChecker_checkOmf__ok(c *check.C) {
 		nil...)
 }
 
-func (s *Suite) Test_PlistLine_Path(c *check.C) {
+func (s *Suite) Test_PlistLine_HasPath(c *check.C) {
 	t := s.Init(c)
 
-	t.CheckEquals(
-		(&PlistLine{text: "relative"}).Path(),
-		NewRelPathString("relative"))
+	test := func(text string, hasPath bool) {
+		t.CheckEquals((&PlistLine{text: text}).HasPath(), hasPath)
+	}
 
-	t.ExpectAssert(
-		func() { (&PlistLine{text: "/absolute"}).Path() })
+	test("abc", true)
+	test("9plan", true)
+	test("bin/program", true)
+
+	test("", false)
+	test("@", false)
+	test(":", false)
+	test("/absolute", false)
+	test("-rf", false)
+	test("\\", false)
+	test("bin/$<", true)
+	test("bin/${VAR}", true)
 }
 
 func (s *Suite) Test_PlistLine_HasPlainPath(c *check.C) {
@@ -1188,6 +1248,17 @@ func (s *Suite) Test_PlistLine_HasPlainPath(c *check.C) {
 	test("\\", false)
 	test("bin/$<", false)
 	test("bin/${VAR}", false)
+}
+
+func (s *Suite) Test_PlistLine_Path(c *check.C) {
+	t := s.Init(c)
+
+	t.CheckEquals(
+		(&PlistLine{text: "relative"}).Path(),
+		NewRelPathString("relative"))
+
+	t.ExpectAssert(
+		func() { (&PlistLine{text: "/absolute"}).Path() })
 }
 
 func (s *Suite) Test_PlistLine_CheckTrailingWhitespace(c *check.C) {
@@ -1327,4 +1398,57 @@ func (s *Suite) Test_plistLineSorter_Sort(c *check.C) {
 		"man/man1/program.1",
 		"sbin/program",
 		"@exec echo \"after lib/after.la\"") // The footer starts here
+}
+
+func (s *Suite) Test_PlistRank_Dominates(c *check.C) {
+	var rel relation
+	rel.add(Plain, Common)
+	rel.add(Common, CommonEnd)
+	rel.add(CommonEnd, Opsys)
+	rel.add(CommonEnd, Arch)
+	rel.add(Opsys, OpsysArch)
+	rel.add(Opsys, EmulOpsysArch)
+	rel.add(Arch, OpsysArch)
+	rel.add(Arch, EmulOpsysArch)
+	rel.reflexive = true
+	rel.transitive = true
+	rel.antisymmetric = true
+
+	rel.check(func(a, b int) bool { return PlistRank(a).Dominates(PlistRank(b)) })
+}
+
+func (s *Suite) Test_NewPlistLines(c *check.C) {
+	lines := NewPlistLines()
+
+	c.Check(lines.all, check.NotNil)
+}
+
+func (s *Suite) Test_PlistLines_Add(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpFileLines("PLIST",
+		PlistCvsID,
+		"bin/program")
+	t.SetUpFileLines("PLIST.common",
+		PlistCvsID,
+		"bin/program")
+	plistLines := NewPlistChecker(nil).Load(Load(t.File("PLIST"), MustSucceed))
+	plistCommonLines := NewPlistChecker(nil).Load(Load(t.File("PLIST.common"), MustSucceed))
+	lines := NewPlistLines()
+
+	for _, line := range plistLines {
+		if line.HasPath() {
+			lines.Add(line, Plain)
+		}
+	}
+	for _, line := range plistCommonLines {
+		if line.HasPath() {
+			lines.Add(line, Common)
+		}
+	}
+
+	t.CheckOutputLines(
+		// TODO: Wrong order. The diagnostics should be in the same order
+		//  as in mk/plist/plist.mk.
+		"ERROR: ~/PLIST.common:2: Path bin/program is already listed in PLIST:2.")
 }
