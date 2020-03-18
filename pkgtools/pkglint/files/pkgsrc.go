@@ -885,9 +885,10 @@ func (src *Pkgsrc) ListVersions(category PkgsrcPath, re regex.Pattern, repl stri
 	}
 
 	var names []string
+	dir := src.File(category)
 	for _, fileInfo := range src.ReadDir(category) {
 		name := fileInfo.Name()
-		if matches(name, re) {
+		if matches(name, re) && !isEmptyDir(dir.JoinNoClean(NewRelPathString(name))) {
 			names = append(names, name)
 		}
 	}
@@ -1075,8 +1076,10 @@ func (src *Pkgsrc) IsBuildDef(varname string) bool {
 }
 
 // ReadDir lists the files and subdirectories from the given directory
-// (relative to the pkgsrc root), filtering out any ignored files (CVS/*)
-// and empty directories.
+// (relative to the pkgsrc root).
+//
+// The result may contain empty directories that are left over from CVS.
+// For performance reasons, the caller needs to filter these out; see isEmptyDir.
 func (src *Pkgsrc) ReadDir(dirName PkgsrcPath) []os.FileInfo {
 	dir := src.File(dirName)
 	files, err := dir.ReadDir()
@@ -1087,8 +1090,7 @@ func (src *Pkgsrc) ReadDir(dirName PkgsrcPath) []os.FileInfo {
 	var relevantFiles []os.FileInfo
 	for _, dirent := range files {
 		name := dirent.Name()
-		// TODO: defer isEmptyDir, for performance reasons; run ktrace or strace to see why.
-		if !dirent.IsDir() || !isIgnoredFilename(name) && !isEmptyDir(dir.JoinNoClean(NewRelPathString(name))) {
+		if !dirent.IsDir() || !isIgnoredFilename(name) {
 			relevantFiles = append(relevantFiles, dirent)
 		}
 	}

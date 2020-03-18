@@ -1272,7 +1272,7 @@ func (s *Suite) Test_Pkgsrc_ReadDir(c *check.C) {
 		names = append(names, info.Name())
 	}
 
-	t.CheckDeepEquals(names, []string{"aaa-subdir", "file", "subdir"})
+	t.CheckDeepEquals(names, []string{"aaa-subdir", "empty", "file", "subdir"})
 }
 
 func (s *Suite) Test_Pkgsrc_Relpath(c *check.C) {
