@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2020/03/17 23:06:08 gdt Exp $
+$NetBSD: distinfo,v 1.26 2020/03/18 13:49:29 gdt Exp $
 
 SHA1 (gutenprint-5.3.3.tar.xz) = edfab4bafe8e6420c7c321915eeb2dd16e899c59
 RMD160 (gutenprint-5.3.3.tar.xz) = 3a1a9a66ad376294fbb10b547ff53481a81b0337
@@ -6,6 +6,6 @@ SHA512 (gutenprint-5.3.3.tar.xz) = d2c47eb4ccc3c46ccb2f1042682edf7443f5c57439ead
 Size (gutenprint-5.3.3.tar.xz) = 5050624 bytes
 SHA1 (patch-aa) = 711c925b330a4c4f960439a1722251a4f022ac9f
 SHA1 (patch-configure) = 92bf9185fc7fbadd05e1c8e4f59209d0de574dc8
-SHA1 (patch-scripts_gversion) = b352ed2690a8ccad3e730cec0cc12a790a9ab696
-SHA1 (patch-scripts_gversion.in) = 21d4891a013275a11aa7fc3bd49b0e11cdb0ec70
-SHA1 (patch-scripts_snapstamp) = 69d7b30608c90630cc0939ba12d8b0d42ec398f7
+SHA1 (patch-scripts_gversion) = 117b9daa6b4807e1de73ae3711ea0101b2e3d738
+SHA1 (patch-scripts_gversion.in) = 03e74de2a33561125bc63912534cabf37d3ce5a7
+SHA1 (patch-scripts_snapstamp) = f910a3be5d07f438a12169e2d7cd63ee93889fa8
