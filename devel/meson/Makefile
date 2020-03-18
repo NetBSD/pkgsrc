@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/17 10:25:39 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/18 01:46:10 rillig Exp $
 
 DISTNAME=	meson-0.53.2
 CATEGORIES=	devel python
@@ -33,7 +33,7 @@ REPLACE_PYTHON+=	test\ cases/*/*/*.py
 REPLACE_PYTHON+=	test\ cases/*/*/*/*.py
 REPLACE_PYTHON+=	test\ cases/*/*/*/*/*.py
 REPLACE_PYTHON+=	test\ cases/common/14\ configure\ file/test.py.in
-REPLACE_PYTHON+=	test\ cases/common/188\ find\ override/subdir/gencodegen.py.in
+REPLACE_PYTHON+=	test\ cases/common/187\ find\ override/subdir/gencodegen.py.in
 REPLACE_PYTHON+=	test\ cases/common/55\ run\ target/configure.in
 REPLACE_PYTHON+=	test\ cases/windows/8\ find\ program/test-script
 REPLACE_PYTHON+=	tools/*.py
