@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.1 2018/03/20 15:47:36 khorben Exp $
+$NetBSD: distinfo,v 1.2 2020/03/18 17:57:02 joerg Exp $
 
 SHA1 (z3-solver-4.5.1.0.post2.tar.gz) = 6cc67617079010179308cf8ffe5b0098d4152fdd
 RMD160 (z3-solver-4.5.1.0.post2.tar.gz) = 97055f883f7567a53517cceda915a4e34d058452
 SHA512 (z3-solver-4.5.1.0.post2.tar.gz) = babbca25de59638c52b91953030cd7af20d1e795af7da760f71bb43940116a4415fdf7208b967bf5eb54435780d21cdc7740faac9cf81cee59005f16f4af09a0
 Size (z3-solver-4.5.1.0.post2.tar.gz) = 3891600 bytes
 SHA1 (patch-core_scripts_mk__util.py) = 45d2cd60977cfa6b89d9033586b8467af0a79cfd
+SHA1 (patch-core_src_util_lp_permutation__matrix.h) = 2ceb66d811664f5b1396137f3f40579b9c474496
 SHA1 (patch-core_src_util_stopwatch.h) = 3163302c46a6315530f9bfb25be93a1efed814a7
