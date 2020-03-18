@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/06/12 20:03:45 kamil Exp $
+$NetBSD: distinfo,v 1.2 2020/03/18 17:52:39 joerg Exp $
 
 SHA1 (picasm114.tar.bz2) = 137689c08ebc8e8842aa62521c47f7c88f70d239
 RMD160 (picasm114.tar.bz2) = b4ed44b64b256b973814848fd7201d01f1beed72
 SHA512 (picasm114.tar.bz2) = a6a8490156afe8af1fc85700890570c745c076396890491f4efe004d7dd701a324f9c7e764fcc710c8954c761f3abb4ed8e97c72ce098100192ead334b335fb7
 Size (picasm114.tar.bz2) = 35429 bytes
-SHA1 (patch-picasm.c) = 5bdc64c5798e0ac100435403e5e1f16a808759e5
+SHA1 (patch-picasm.c) = 1d14ab94f988b35b14cbf05476eab9e14337ef18
