@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.5 2020/03/17 23:39:15 gdt Exp $
+$NetBSD: patch-configure,v 1.6 2020/03/18 14:11:37 gdt Exp $
 
 Fix shell script portability
 tweak SEARCH_LIB
 
---- configure.orig	2018-03-07 16:55:38.000000000 +0000
+--- configure.orig	2014-06-14 21:48:48.000000000 +0000
 +++ configure
-@@ -19600,7 +19600,7 @@ $as_echo_n "checking SDK deployment vers
+@@ -19447,7 +19447,7 @@ $as_echo_n "checking SDK deployment vers
          MACOSX_SDK_PLIST_VERSION_MIN=`defaults read "$wxUSE_MACOSX_SDK/SDKSettings" buildSettings | grep '^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}[^"]*"\{0,1\}; *$' | sed 's/^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}\([^"]*\)"\{0,1\} *; *$/\1/'`
  
          # If that failed, try again with the new key
@@ -14,16 +14,16 @@ tweak SEARCH_LIB
  
              MACOSX_SDK_PLIST_VERSION_MIN=`defaults read "$wxUSE_MACOSX_SDK/SDKSettings" DefaultProperties | grep '^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}[^"]*"\{0,1\}; *$' | sed 's/^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}\([^"]*\)"\{0,1\} *; *$/\1/'`
  
-@@ -22169,7 +22169,7 @@ fi
+@@ -22015,7 +22015,7 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $wx_cv_std_libfullpath" >&5
  $as_echo "$wx_cv_std_libfullpath" >&6; }
  
 -SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s@include@$wx_cv_std_libpath@g` $wx_cv_std_libfullpath"
-+SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s@include@$wx_cv_std_libpath@g` $wx_cv_std_libfullpath /usr/pkg/lib"
++SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s@include@$wx_cv_std_libpath@g` $wx_cv_std_libfullpath @PREFIX@/lib"
  
  if test "$build" != "$host" -a "$GCC" = yes; then
                      if cross_root=`$CC -print-prog-name=ld 2>/dev/null`; then
-@@ -39383,7 +39383,7 @@ $as_echo "$bakefile_cv_gcc31" >&6; }
+@@ -38819,7 +38822,7 @@ $as_echo "$bakefile_cv_gcc31" >&6; }
              SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
          fi
  
@@ -32,7 +32,7 @@ tweak SEARCH_LIB
              PIC_FLAG="-dynamic -fPIC"
          fi
          if test "x$XLCC" = "xyes"; then
-@@ -40007,7 +40007,8 @@ EOF
+@@ -40007,7 +40011,8 @@ EOF
        *-*-solaris2* )
          SONAME_FLAG="-h "
          USE_SOVERSION=1

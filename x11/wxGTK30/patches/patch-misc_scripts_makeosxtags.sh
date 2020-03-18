@@ -1,4 +1,4 @@
-$NetBSD: patch-misc_scripts_makeosxtags.sh,v 1.1 2020/03/17 23:39:15 gdt Exp $
+$NetBSD: patch-misc_scripts_makeosxtags.sh,v 1.2 2020/03/18 14:11:37 gdt Exp $
 
 Remediate bashism.
 
@@ -11,7 +11,7 @@ Not yet filed uptream.
  
  osx_port=${1-cocoa}
 -if [[ $osx_port = carbon ]]; then
-+if [ $osx_port = carbon ]; then
++if [ "$osx_port" = carbon ]; then
      ext=cpp
  else
      ext=mm
