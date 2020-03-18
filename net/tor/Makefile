@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.151 2020/01/30 21:02:49 leot Exp $
+# $NetBSD: Makefile,v 1.152 2020/03/18 16:43:49 wiz Exp $
 
-DISTNAME=	tor-0.4.2.6
+DISTNAME=	tor-0.4.2.7
 CATEGORIES=	net security
 MASTER_SITES=	https://dist.torproject.org/
 
@@ -17,7 +17,7 @@ USE_TOOLS+=		perl:test pkg-config
 # Work around this by using gmake, which is tiny compared to the
 # existing perl dependency, and unlikely to be needed on any given
 # system just for tor.
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake bash:test
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
