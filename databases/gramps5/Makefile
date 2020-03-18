@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/02/18 08:27:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/18 20:54:33 wiz Exp $
 
 DISTNAME=		gramps-5.1.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gramps/}
 
@@ -32,6 +32,10 @@ CONFIGURE_ARGS+=	--enable-packager-mode
 # needs svg pixbuf loader at runtime
 DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+
+# setup.py target includes ${DESTDIR}, which is wrong
+post-install:
+	${ECHO} -n ${PREFIX}/share > ${DESTDIR}${PREFIX}/${PYSITELIB}/gramps/gen/utils/resource-path
 
 .include "options.mk"
 
