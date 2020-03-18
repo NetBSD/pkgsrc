@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2018/01/02 05:37:23 maya Exp $
+# $NetBSD: Makefile,v 1.59 2020/03/18 18:00:48 joerg Exp $
 
 DISTNAME=	pgp263is
 PKGREVISION=	1
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.pgpi.org/
 COMMENT=	Public-key encryption and digital signature utility (v2)
 LICENSE=	pgp2-license
 
+USE_TOOLS+=	tar
 WRKSRC=		${WRKDIR}/src
 
 .include "options.mk"
