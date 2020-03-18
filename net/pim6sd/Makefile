@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2019/11/03 11:45:49 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/03/18 17:59:20 joerg Exp $
 
 DISTNAME=	pim6sd-20031021a
 PKGREVISION=	1
@@ -11,7 +11,9 @@ COMMENT=	IPv6 PIM sparse mode daemon
 USE_BSD_MAKEFILE=	yes
 USE_FEATURES+=		inet6
 
-CWARNFLAGS.clang=	-Wno-error=knr-promoted-parameter -Wno-error=pointer-sign
+CWARNFLAGS.clang=	-Wno-error=knr-promoted-parameter \
+			-Wno-error=address-of-packed-member \
+			-Wno-error=pointer-sign
 MAKE_ENV+=		CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/pim6sd/
