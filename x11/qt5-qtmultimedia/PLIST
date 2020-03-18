@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2020/03/05 12:32:40 nia Exp $
+@comment $NetBSD: PLIST,v 1.21 2020/03/18 21:55:23 tnn Exp $
 lib/pkgconfig/Qt5Multimedia.pc
 lib/pkgconfig/Qt5MultimediaWidgets.pc
 qt5/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qabstractvideobuffer_p.h
@@ -282,7 +282,7 @@ qt5/include/QtMultimediaWidgets/qvideowidget.h
 qt5/include/QtMultimediaWidgets/qvideowidgetcontrol.h
 qt5/lib/cmake/Qt5Multimedia/Qt5MultimediaConfig.cmake
 qt5/lib/cmake/Qt5Multimedia/Qt5MultimediaConfigVersion.cmake
-${PLIST.unix}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_CameraBinServicePlugin.cmake
+${PLIST.notdarwin}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_CameraBinServicePlugin.cmake
 ${PLIST.alsa}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QAlsaPlugin.cmake
 ${PLIST.gst}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerAudioDecoderServicePlugin.cmake
 ${PLIST.gst}qt5/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerCaptureServicePlugin.cmake

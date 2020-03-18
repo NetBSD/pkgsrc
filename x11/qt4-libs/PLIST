@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2018/01/01 22:30:04 rillig Exp $
+@comment $NetBSD: PLIST,v 1.21 2020/03/18 21:55:23 tnn Exp $
 lib/pkgconfig/Qt3Support.pc
 lib/pkgconfig/QtCore.pc
 lib/pkgconfig/QtDeclarative.pc
@@ -58,7 +58,7 @@ qt4/plugins/imageformats/libqico.la
 qt4/plugins/imageformats/libqjpeg.la
 qt4/plugins/imageformats/libqsvg.la
 qt4/plugins/imageformats/libqtga.la
-${PLIST.unix}qt4/plugins/inputmethods/libqimsw-multi.la
+${PLIST.notdarwin}qt4/plugins/inputmethods/libqimsw-multi.la
 qt4/q3porting.xml
 ${PLIST.mac}qt4/qt_menu.nib/classes.nib
 ${PLIST.mac}qt4/qt_menu.nib/info.nib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2020/03/14 11:41:00 nia Exp $
+# $NetBSD: Makefile.common,v 1.40 2020/03/18 21:55:23 tnn Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -52,9 +52,9 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/qt5/lib
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${WRKSRC}/lib
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
-PLIST_VARS+=		unix
+PLIST_VARS+=		notdarwin
 .if ${OPSYS} != "Darwin"
-PLIST.unix=		yes
+PLIST.notdarwin=	yes
 .endif
 
 # avoid creating a .qt directory in the users home directory
