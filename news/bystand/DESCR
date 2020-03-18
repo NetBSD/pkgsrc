@@ -1,0 +1,4 @@
+The bystand program is a NNTP client program (a newsreader).
+
+It is built on top of a SQLite database.
+There is no MIME support yet.
