@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2019/07/05 08:01:31 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/03/18 17:55:46 joerg Exp $
 
 SHA1 (AssaultCube_v1.2.0.2.tar.bz2) = 16b5239c1e2129ba980aee2b96ee52c6128e5821
 RMD160 (AssaultCube_v1.2.0.2.tar.bz2) = 861c5d59e8313b7dd8548605f08d6829dca76326
@@ -8,10 +8,12 @@ SHA1 (patch-source_src_Makefile) = 8825c40bf869166708a1f9277b1f77901137771d
 SHA1 (patch-source_src_bot_bot__waypoint.cpp) = 5ded14f79b69ee6ec6c2e9628452a1d6db0d406e
 SHA1 (patch-source_src_command.cpp) = 9bf2127eff468fd213bf66d345daab982b1c0722
 SHA1 (patch-source_src_command.h) = 300f62adb527224c420ed2a6ce3044660fdb4e7a
+SHA1 (patch-source_src_console.h) = e1cc0060bee43f5c02a9e7107e02a651458f8b93
 SHA1 (patch-source_src_crypto.cpp) = fff2b1cf9cac8c4dd9999fc99ed5ce3200f331fc
 SHA1 (patch-source_src_editing.cpp) = 7bf829a47233358fe14341691e84c9bd5ff880b7
 SHA1 (patch-source_src_entity.h) = ab67abee7df1587eb01877a9aea64a1b28a940ea
 SHA1 (patch-source_src_main.cpp) = 4b3dc7617cb36054ed6de111e8994d22d2e0267b
+SHA1 (patch-source_src_master.cpp) = 95c9630e4f33e79ab9ef646532baada13b92e749
 SHA1 (patch-source_src_platform.h) = 82530eef173f161ed33cee368c0afd6ccd5644a7
 SHA1 (patch-source_src_protos.h) = 0944251480debf25e8dc25463307c223ffebbfbb
 SHA1 (patch-source_src_rendercubes.cpp) = 740f5dc169a5e0b331437fd157238a5323a0c866
