@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/03/18 01:23:01 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/18 01:46:12 nia Exp $
 
 DISTNAME=	allegro-5.2.6.0
 PKGNAME=	${DISTNAME:S/allegro-/allegro5-/1}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liballeg/}
 GITHUB_PROJECT=	allegro5
@@ -18,6 +19,10 @@ USE_LANGUAGES=	c c++
 
 CMAKE_ARGS+=	-Wno-dev
 CMAKE_ARGS+=	-DWANT_IMAGE_FREEIMAGE=OFF
+# TODO: make this work and turn it into an option
+CMAKE_ARGS+=	-DWANT_DOCS=OFF
+CMAKE_ARGS+=	-DWANT_DEMO=OFF
+CMAKE_ARGS+=	-DWANT_EXAMPLES=OFF
 
 .include "../../mk/oss.buildlink3.mk"
 .if ${OSS_TYPE} != "none"
@@ -57,5 +62,4 @@ PKGCONFIG_OVERRIDE+=	misc/allegro_video.pc.in
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
-.include "../../net/enet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
