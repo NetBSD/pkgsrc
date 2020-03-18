@@ -2,10 +2,6 @@ package pkglint
 
 import "gopkg.in/check.v1"
 
-func CheckLinesBuildlink3Mk(mklines *MkLines) {
-	NewBuildlink3Checker(mklines).Check()
-}
-
 // This test ensures that CheckLinesBuildlink3Mk really checks for
 // buildlink3.mk files that are included by the buildlink3.mk file
 // but not by the package.
@@ -1065,4 +1061,32 @@ func (s *Suite) Test_Buildlink3Checker_checkVaruseInPkgbase__PKGBASE_with_unknow
 		"WARN: buildlink3.mk:13: The variable LICENSE should be quoted as part of a shell word.",
 		"WARN: buildlink3.mk:3: Please replace \"${LICENSE}\" with a simple string "+
 			"(also in other variables in this file).")
+}
+
+func (s *Suite) Test_LoadBuildlink3Data(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileBuildlink3("category/package/buildlink3.mk",
+		"BUILDLINK_ABI_DEPENDS.package+=\tpackage>=0.1")
+	t.Chdir("category/package")
+	mklines := LoadMk("buildlink3.mk", nil, MustSucceed)
+
+	data := LoadBuildlink3Data(mklines)
+
+	t.CheckDeepEquals(data, &Buildlink3Data{
+		id:        "package",
+		pkgsrcdir: "../../category/package",
+		apiDepends: &DependencyPattern{
+			Pkgbase: "package",
+			LowerOp: ">=",
+			Lower:   "0",
+		},
+		apiDependsLine: mklines.mklines[7],
+		abiDepends: &DependencyPattern{
+			Pkgbase: "package",
+			LowerOp: ">=",
+			Lower:   "0.1",
+		},
+		abiDependsLine: mklines.mklines[11],
+	})
 }

@@ -1267,3 +1267,93 @@ func (s *Suite) Test_interval(c *check.C) {
 	t.CheckEquals(i.min, -5)
 	t.CheckEquals(i.max, 7)
 }
+
+type relation struct {
+	pairs         []struct{ a, b int }
+	reflexive     bool
+	transitive    bool
+	antisymmetric bool
+}
+
+func (r *relation) add(a interface{}, b interface{}) {
+	ia := int(reflect.ValueOf(a).Uint())
+	ib := int(reflect.ValueOf(b).Uint())
+	r.pairs = append(r.pairs, struct{ a, b int }{ia, ib})
+}
+
+func (r *relation) size() int {
+	max := 0
+	for _, pair := range r.pairs {
+		if pair.a > max {
+			max = pair.a
+		}
+		if pair.b > max {
+			max = pair.b
+		}
+	}
+	return max + 1
+}
+
+func (r *relation) check(actual func(int, int) bool) {
+	n := r.size()
+	rel := make([][]bool, n)
+	for i := 0; i < n; i++ {
+		rel[i] = make([]bool, n)
+	}
+
+	if r.reflexive {
+		for i := 0; i < n; i++ {
+			rel[i][i] = true
+		}
+	}
+
+	for _, pair := range r.pairs {
+		rel[pair.a][pair.b] = true
+	}
+
+	if r.transitive {
+		for {
+			changed := false
+			for i := 0; i < n; i++ {
+				for j := 0; j < n; j++ {
+					for k := 0; k < n; k++ {
+						if rel[i][j] && rel[j][k] && !rel[i][k] {
+							rel[i][k] = true
+							changed = true
+						}
+					}
+				}
+			}
+			if !changed {
+				break
+			}
+		}
+	}
+
+	if r.antisymmetric {
+		for i := 0; i < n; i++ {
+			for j := 0; j < n; j++ {
+				if i != j && rel[i][j] && rel[j][i] {
+					panic(sprintf(
+						"the antisymmetric relation must not contain "+
+							"both (%[1]d, %[2]d) and (%[2]d, %[1]d)",
+						i, j))
+				}
+			}
+		}
+	}
+
+	actualRel := make([][]bool, n)
+	for i := 0; i < n; i++ {
+		actualRel[i] = make([]bool, n)
+		for j := 0; j < n; j++ {
+			actualRel[i][j] = actual(i, j)
+		}
+	}
+
+	if sprintf("%#v", rel) != sprintf("%#v", actualRel) {
+		// The line breaks at these positions make the two relations
+		// visually comparable in the output.
+		panic(sprintf("the relation must be\n%#v, not \n%#v", rel, actualRel))
+	}
+}

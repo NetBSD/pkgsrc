@@ -528,13 +528,20 @@ type PlistLine struct {
 	text       string   // Line.Text without any conditions of the form ${PLIST.cond}
 }
 
-func (pline *PlistLine) Path() RelPath { return NewRelPathString(pline.text) }
+func (pline *PlistLine) HasPath() bool {
+	return pline.text != "" && plistLineStart.Contains(pline.text[0])
+}
 
 func (pline *PlistLine) HasPlainPath() bool {
 	text := pline.text
 	return text != "" &&
 		plistLineStart.Contains(text[0]) &&
 		!containsVarUse(text)
+}
+
+func (pline *PlistLine) Path() RelPath {
+	assert(pline.HasPath())
+	return NewRelPathString(pline.text)
 }
 
 func (pline *PlistLine) CheckTrailingWhitespace() {
@@ -686,4 +693,54 @@ func (s *plistLineSorter) Sort() {
 	}
 
 	s.autofixed = SaveAutofixChanges(NewLines(lines[0].Filename(), lines))
+}
+
+type PlistRank uint8
+
+const (
+	Plain PlistRank = iota
+	Common
+	CommonEnd
+	Opsys
+	Arch
+	OpsysArch
+	EmulOpsysArch
+)
+
+// The ranks among the files are:
+//  PLIST
+//  -> PLIST.common
+//  -> PLIST.common_end
+//  -> { PLIST.OPSYS, PLIST.ARCH }
+//  -> { PLIST.OPSYS.ARCH, PLIST.EMUL_PLATFORM }
+// Files are a later level must not mention files that are already
+// mentioned at an earlier level.
+func (r PlistRank) Dominates(other PlistRank) bool {
+	return r <= other &&
+		!(r == Opsys && other == Arch) &&
+		!(r == OpsysArch && other == EmulOpsysArch)
+}
+
+type PlistLines struct {
+	all map[RelPath][]*plistLineData
+}
+
+func NewPlistLines() *PlistLines {
+	return &PlistLines{make(map[RelPath][]*plistLineData)}
+}
+
+type plistLineData struct {
+	line *PlistLine
+	rank PlistRank
+}
+
+func (pl *PlistLines) Add(line *PlistLine, rank PlistRank) {
+	path := line.Path()
+	for _, existing := range pl.all[path] {
+		if existing.rank.Dominates(rank) {
+			line.Errorf("Path %s is already listed in %s.",
+				path, line.RelLine(existing.line.Line))
+		}
+	}
+	pl.all[path] = append(pl.all[path], &plistLineData{line, rank})
 }

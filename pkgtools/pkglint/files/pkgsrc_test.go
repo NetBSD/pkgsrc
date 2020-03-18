@@ -782,6 +782,19 @@ func (s *Suite) Test_Pkgsrc_loadTools__no_tools_found(c *check.C) {
 		"FATAL: ~/mk/tools/bsd.tools.mk: Too few tool files.")
 }
 
+// Just for code coverage, for the IsRelevant callback.
+func (s *Suite) Test_Pkgsrc_loadToolsPlatform__redundant(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPkgsrc()
+	t.SetUpTool("tool", "", AfterPrefsMk)
+	t.CreateFileLines("mk/tools/tools.NetBSD.mk",
+		"TOOLS_PLATFORM.tool?=\t/bin/available",
+		"TOOLS_PLATFORM.tool?=\t/bin/available")
+	t.Chdir(".")
+	t.FinishSetUp()
+}
+
 func (s *Suite) Test_Pkgsrc_initDeprecatedVars(c *check.C) {
 	t := s.Init(c)
 

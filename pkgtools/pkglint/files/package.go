@@ -43,6 +43,9 @@ type Package struct {
 	// These included files should match.
 	bl3 map[PackagePath]*MkLine
 
+	// The default dependencies from the buildlink3.mk files.
+	bl3Data map[Buildlink3ID]*Buildlink3Data
+
 	// Remembers the Makefile fragments that have already been included.
 	// The key to the map is the filename relative to the package directory.
 	// Typical keys are "../../category/package/buildlink3.mk".
@@ -103,6 +106,7 @@ func NewPackage(dir CurrPath) *Package {
 		Plist:                 NewPlistContent(),
 		vars:                  NewScope(),
 		bl3:                   make(map[PackagePath]*MkLine),
+		bl3Data:               make(map[Buildlink3ID]*Buildlink3Data),
 		included:              Once{},
 		conditionalIncludes:   make(map[PackagePath]*MkLine),
 		unconditionalIncludes: make(map[PackagePath]*MkLine),
@@ -167,11 +171,7 @@ func (pkg *Package) load() ([]CurrPath, *MkLines, *MkLines) {
 		if isRelevantMk(filename, basename) {
 			fragmentMklines := LoadMk(filename, pkg, MustSucceed)
 			pkg.collectConditionalIncludes(fragmentMklines)
-			fragmentMklines.ForEach(func(mkline *MkLine) {
-				if mkline.IsVarassign() && mkline.Varname() == "pkgbase" {
-					pkg.seenPkgbase.FirstTime(mkline.Value())
-				}
-			})
+			pkg.loadBuildlink3Pkgbase(filename, fragmentMklines)
 		}
 		if hasPrefix(basename, "PLIST") {
 			pkg.loadPlistDirs(filename)
@@ -180,6 +180,17 @@ func (pkg *Package) load() ([]CurrPath, *MkLines, *MkLines) {
 
 	pkg.seenPrefs = false
 	return files, mklines, allLines
+}
+
+func (pkg *Package) loadBuildlink3Pkgbase(filename CurrPath, fragmentMklines *MkLines) {
+	if !filename.HasBase("buildlink3.mk") {
+		return
+	}
+	fragmentMklines.ForEach(func(mkline *MkLine) {
+		if mkline.IsVarassign() && mkline.Varname() == "pkgbase" {
+			pkg.seenPkgbase.FirstTime(mkline.Value())
+		}
+	})
 }
 
 func (pkg *Package) loadPackageMakefile() (*MkLines, *MkLines) {
@@ -271,12 +282,17 @@ func (pkg *Package) parse(mklines *MkLines, allLines *MkLines, includingFileForU
 	// For every included buildlink3.mk, include the corresponding builtin.mk
 	// automatically since the pkgsrc infrastructure does the same.
 	filename := mklines.lines.Filename
-	if filename.Base() == "buildlink3.mk" {
+	if mklines.lines.BaseName == "buildlink3.mk" {
 		builtin := filename.Dir().JoinNoClean("builtin.mk").CleanPath()
 		builtinRel := G.Pkgsrc.Relpath(pkg.dir, builtin)
 		if pkg.included.FirstTime(builtinRel.String()) && builtin.IsFile() {
 			builtinMkLines := LoadMk(builtin, pkg, MustSucceed|LogErrors)
 			pkg.parse(builtinMkLines, allLines, "", false)
+		}
+
+		data := LoadBuildlink3Data(mklines)
+		if data != nil {
+			pkg.bl3Data[data.id] = data
 		}
 	}
 

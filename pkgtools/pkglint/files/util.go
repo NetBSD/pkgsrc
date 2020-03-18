@@ -555,7 +555,8 @@ type Once struct {
 }
 
 func (o *Once) FirstTime(what string) bool {
-	firstTime := o.check(o.keyString(what))
+	key := o.keyString(what)
+	firstTime := o.check(key)
 	if firstTime && o.Trace {
 		G.Logger.out.WriteLine(sprintf("FirstTime: %s", what))
 	}
@@ -563,7 +564,8 @@ func (o *Once) FirstTime(what string) bool {
 }
 
 func (o *Once) FirstTimeSlice(whats ...string) bool {
-	firstTime := o.check(o.keyStrings(whats))
+	key := o.keyStrings(whats)
+	firstTime := o.check(key)
 	if firstTime && o.Trace {
 		G.Logger.out.WriteLine(sprintf("FirstTime: %s", strings.Join(whats, ", ")))
 	}
@@ -1260,6 +1262,8 @@ func joinOxford(conn string, elements ...string) string {
 	return strings.Join(nonempty, ", ")
 }
 
+var pathMatchers = make(map[string]*pathMatcher)
+
 type pathMatcher struct {
 	matchType       pathMatchType
 	pattern         string
@@ -1267,6 +1271,15 @@ type pathMatcher struct {
 }
 
 func newPathMatcher(pattern string) *pathMatcher {
+	matcher := pathMatchers[pattern]
+	if matcher == nil {
+		matcher = newPathMatcherUncached(pattern)
+		pathMatchers[pattern] = matcher
+	}
+	return matcher
+}
+
+func newPathMatcherUncached(pattern string) *pathMatcher {
 	assert(strings.IndexByte(pattern, '[') == -1)
 	assert(strings.IndexByte(pattern, '?') == -1)
 
