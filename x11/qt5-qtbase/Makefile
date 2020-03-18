@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2020/03/10 22:09:13 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2020/03/18 21:48:03 tnn Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -14,7 +14,6 @@ CONFIGURE_ARGS+=	-L "${PREFIX}/lib"
 CONFIGURE_ARGS+=	-opensource -confirm-license
 CONFIGURE_ARGS+=	-sysconfdir "${PKG_SYSCONFDIR}/xdg"
 CONFIGURE_ARGS+=	-accessibility
-CONFIGURE_ARGS+=	-dbus-linked
 CONFIGURE_ARGS+=	-icu
 CONFIGURE_ARGS+=	-libproxy
 CONFIGURE_ARGS+=	-openssl-linked
@@ -156,7 +155,7 @@ SUBST_VARS.path=	PREFIX
 BROKEN_FILES=		qt5/mkspecs/modules/qt_lib_bootstrap_private.pri
 BROKEN_FILES1=		qt5/mkspecs/qmodule.pri
 
-PC_FILES=		Qt5Concurrent.pc Qt5Core.pc Qt5DBus.pc \
+PC_FILES=		Qt5Concurrent.pc Qt5Core.pc \
 			Qt5Gui.pc Qt5Network.pc Qt5OpenGL.pc \
 			Qt5OpenGLExtensions.pc \
 			Qt5PrintSupport.pc Qt5Sql.pc Qt5Test.pc \
@@ -233,9 +232,6 @@ post-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-# Use lib/dbus-1.0/include/dbus/dbus-arch-deps.h from sysutils/dbus
-USE_DBUS-ARCH-DEPS_H=	yes
-.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../www/libproxy/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
