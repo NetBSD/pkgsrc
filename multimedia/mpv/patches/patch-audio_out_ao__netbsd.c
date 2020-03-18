@@ -1,8 +1,8 @@
-$NetBSD: patch-audio_out_ao__netbsd.c,v 1.2 2020/03/16 20:58:18 nia Exp $
+$NetBSD: patch-audio_out_ao__netbsd.c,v 1.3 2020/03/18 11:49:21 leot Exp $
 
 NetBSD audio support.
 
---- audio/out/ao_netbsd.c.orig	2020-03-16 20:38:28.287433271 +0000
+--- audio/out/ao_netbsd.c.orig	2020-03-18 11:11:11.484992180 +0000
 +++ audio/out/ao_netbsd.c
 @@ -0,0 +1,263 @@
 +/*
@@ -80,10 +80,10 @@ NetBSD audio support.
 +                        ao->device + sizeof("netbsd/") - 1);
 +    }
 +
-+    MP_ERR(ao, "Opening device %s", ao->device);
++    MP_ERR(ao, "Opening device %s\n", device);
 +    if ((p->fd = open(device, O_WRONLY)) == -1) {
 +        MP_ERR(ao, "Can't open audio device %s: %s\n",
-+               ao->device, mp_strerror(errno));
++               device, mp_strerror(errno));
 +        goto fail;
 +    }
 +
