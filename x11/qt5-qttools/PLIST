@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.17 2020/03/06 13:56:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/03/18 21:55:24 tnn Exp $
 lib/pkgconfig/Qt5Designer.pc
 lib/pkgconfig/Qt5Help.pc
 lib/pkgconfig/Qt5UiTools.pc
-${PLIST.unix}qt5/bin/assistant
-${PLIST.unix}qt5/bin/designer
+${PLIST.notdarwin}qt5/bin/assistant
+${PLIST.notdarwin}qt5/bin/designer
 qt5/bin/lconvert
-${PLIST.unix}qt5/bin/linguist
+${PLIST.notdarwin}qt5/bin/linguist
 qt5/bin/lprodump
 qt5/bin/lrelease
 qt5/bin/lrelease-pro
