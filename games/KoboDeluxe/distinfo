@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2019/10/08 16:13:12 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2020/03/18 17:54:54 joerg Exp $
 
 SHA1 (KoboDeluxe-0.5.1.tar.bz2) = bc49dbbae562baffd312444b373c7ebbf5e233c6
 RMD160 (KoboDeluxe-0.5.1.tar.bz2) = b196054f2220fe1b479a490723b1f5da4e74aa1f
@@ -6,4 +6,5 @@ SHA512 (KoboDeluxe-0.5.1.tar.bz2) = fc107e4367fd300574823aa40c68311d95de3a403d7c
 Size (KoboDeluxe-0.5.1.tar.bz2) = 1781752 bytes
 SHA1 (patch-enemies.h) = a3e9fb60581d7a7bcb079ceda5d1271f923470cd
 SHA1 (patch-enemy.cpp) = dbec6a60bb6a26cac66498584b3f100c6acd5f21
+SHA1 (patch-graphics_window.cpp) = 608b7eff6222bdd50f2cc575adb32903bba573ab
 SHA1 (patch-kobo.cpp) = 958b9b40caee7dc3d67edbe3b834eed5f2af6beb
