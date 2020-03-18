@@ -1,0 +1,13 @@
+$NetBSD: patch-libAfterImage_apps_Makefile.in,v 1.1 2020/03/18 18:02:11 joerg Exp $
+
+--- libAfterImage/apps/Makefile.in.orig	2020-03-18 14:05:44.569598848 +0000
++++ libAfterImage/apps/Makefile.in
+@@ -81,7 +81,7 @@ distclean:
+ 
+ indent:
+ 		@SRCS=`find . -name "*.c"`; \
+-		if test "x$$SRCS" == "x"; then exit; fi; \
++		if test "x$$SRCS" = "x"; then exit; fi; \
+ 		for i in $$SRCS; do \
+ 		  if (indent -di14 -ts4 -i4 -l100 -lc80 -bad -nbbb -bli0 -c48 -cd48 -ce -cli1 -ncs -nbs -nbbo -hnl < $$i > /tmp/$$i); then \
+ 		    echo "indent $$i"; \
