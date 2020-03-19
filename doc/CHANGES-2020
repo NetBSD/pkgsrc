@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1655 2020/03/18 21:30:56 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.1656 2020/03/19 02:29:06 rin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2242,3 +2242,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated geography/py-proj to 2.6.0 [gdt 2020-03-18]
 	Updated databases/gramps5 to 5.1.2nb2 [wiz 2020-03-18]
 	Updated net/syncthing to 1.4.0 [gdt 2020-03-18]
+	Updated emulators/tme to 0.8nb44 [thorpej 2020-03-19]
