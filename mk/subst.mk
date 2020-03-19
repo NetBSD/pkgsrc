@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.62 2019/11/22 18:04:49 minskim Exp $
+# $NetBSD: subst.mk,v 1.63 2020/03/19 16:57:35 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -32,6 +32,10 @@
 #	A list of file patterns on which to run the substitution;
 #	the filenames are either absolute or relative to ${WRKSRC}.
 #
+#	Starting with 2020Q1, it is an error if any of these patterns
+#	has no effect at all, to catch typos and outdated definitions.
+#	To prevent this, see SUBST_NOOP_OK.<class> below.
+#
 # SUBST_SED.<class>
 #	List of sed(1) arguments to run on the specified files.
 #	Multiple commands can be specified using the -e option of sed.
@@ -44,7 +48,7 @@
 #		-e 's,@VARNAME@,${VARNAME},g'
 #
 #	that even works when ${VARNAME} contains arbitrary characters.
-#	Both SUBST_SED and SUBST_VARS can be used in a single class.
+#	SUBST_SED and SUBST_VARS can combined freely.
 #
 # SUBST_FILTER_CMD.<class>
 #	Filter used to perform the actual substitution on the specified
@@ -59,6 +63,13 @@
 #	During development of a package, this can be set to "yes" to see
 #	the actual changes as a unified diff.
 #
+# SUBST_NOOP_OK.<class>
+#	Whether to fail when a SUBST_FILES pattern has no effect.
+#	In most cases, "yes" is appropriate, to catch typos and outdated
+#	definitions.
+#
+#	Default: no (up to 2019Q4), yes (starting with 2020Q1)
+#
 # See also:
 #	PLIST_SUBST
 #
@@ -69,7 +80,7 @@ _VARGROUPS+=		subst
 _PKG_VARS.subst=	SUBST_CLASSES
 .for c in ${SUBST_CLASSES}
 .  for pv in SUBST_STAGE SUBST_MESSAGE SUBST_FILES SUBST_SED SUBST_VARS	\
-	SUBST_FILTER_CMD SUBST_SKIP_TEXT_CHECK
+	SUBST_FILTER_CMD SUBST_SKIP_TEXT_CHECK SUBST_NOOP_OK
 _PKG_VARS.subst+=	${pv}.${c}
 .  endfor
 .endfor
@@ -85,6 +96,10 @@ ECHO_SUBST_MSG?=	${STEP_MSG}
 _SUBST_IS_TEXT_FILE_CMD?= \
 	[ -z "`LC_ALL=C ${TR} -cd '\\0' < "$$file" | ${TR} '\\0' 'x'`" ]
 
+.if ${SUBST_CLASSES:U:O} != ${SUBST_CLASSES:U:O:u}
+PKG_FAIL_REASON+=	"[subst.mk] duplicate SUBST class: ${SUBST_CLASSES:O:u}"
+.endif
+
 .for _class_ in ${SUBST_CLASSES}
 _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
@@ -99,6 +114,7 @@ _SUBST_KEEP.${_class_}?=	${DIFF} -u "$$file" "$$tmpfile" || true
 .  endif
 _SUBST_KEEP.${_class_}?=	${DO_NADA}
 SUBST_SKIP_TEXT_CHECK.${_class_}?=	no
+SUBST_NOOP_OK.${_class_}?=	yes # TODO: change to no after 2020Q1
 
 .if !empty(SUBST_SKIP_TEXT_CHECK.${_class_}:M[Yy][Ee][Ss])
 _SUBST_IS_TEXT_FILE_CMD.${_class_}=	${TRUE}
@@ -120,9 +136,10 @@ ${_SUBST_COOKIE.${_class_}}:
 .  if !empty(SUBST_MESSAGE.${_class_})
 	${RUN} ${ECHO_SUBST_MSG} ${SUBST_MESSAGE.${_class_}:Q}
 .  endif
+.for pattern in ${SUBST_FILES.${_class_}}
 	${RUN} cd ${WRKSRC:Q};						\
-	files=${SUBST_FILES.${_class_}:Q};				\
-	for file in $$files; do						\
+	changed=no;							\
+	for file in ${pattern}; do					\
 		case $$file in /*) ;; *) file="./$$file";; esac;	\
 		tmpfile="$$file.subst.sav";				\
 		if [ ! -f "$$file" ]; then				\
@@ -138,6 +155,7 @@ ${_SUBST_COOKIE.${_class_}}:
 				${INFO_MSG} "[subst.mk:${_class_}] Nothing changed in $$file."; \
 				${RM} -f "$$tmpfile";			\
 			else						\
+				changed=yes;				\
 				${_SUBST_KEEP.${_class_}};		\
 				${MV} -f "$$tmpfile" "$$file"; 		\
 				${ECHO} "$$file" >> ${.TARGET};		\
@@ -145,6 +163,11 @@ ${_SUBST_COOKIE.${_class_}}:
 		else							\
 			${WARNING_MSG} "[subst.mk:${_class_}] Ignoring non-text file \"$$file\"."; \
 		fi;							\
-	done
+	done;								\
+	\
+	if test "$$changed,${SUBST_NOOP_OK.${_class_}:tl}" = no,no; then \
+		${FAIL_MSG} "[subst.mk:${_class_}] The pattern "${pattern:Q}" has no effect."; \
+	fi
+.endfor
 	${RUN} ${TOUCH} ${TOUCH_FLAGS} ${.TARGET:Q}
 .endfor
