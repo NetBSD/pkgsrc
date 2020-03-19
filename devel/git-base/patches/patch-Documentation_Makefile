@@ -1,6 +1,6 @@
-$NetBSD: patch-Documentation_Makefile,v 1.1 2019/11/08 12:24:31 adam Exp $
+$NetBSD: patch-Documentation_Makefile,v 1.2 2020/03/19 22:30:30 rillig Exp $
 
-* Use BSR_INSTALL_*.
+* Use BSD_INSTALL_*.
 * FIXME: Add "--skip-validation" to xmlto command.
 
 --- Documentation/Makefile.orig	2014-11-26 22:39:03.000000000 +0000
