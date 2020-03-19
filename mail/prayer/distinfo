@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2017/08/19 00:24:50 jlam Exp $
+$NetBSD: distinfo,v 1.19 2020/03/19 11:30:26 nia Exp $
 
 SHA1 (prayer-1.3.5.tar.gz) = cce72edba8859b2c4e71799a7f93a420326f87b6
 RMD160 (prayer-1.3.5.tar.gz) = 8c2c9a4ddb723c8defd7f8742d529de0b6dbaa89
@@ -9,7 +9,9 @@ SHA1 (patch-files_Makefile) = 522ac0b3354c4f2cb62db186209aa706fb95b94b
 SHA1 (patch-files_install.sh) = 8590e20625cda6b37e517e24df18ce27eedbbe5d
 SHA1 (patch-lib_os.c) = 7e9646b4aaa2518152f3c338ea22700e71f5c8be
 SHA1 (patch-lib_os__bsd.h) = b64c720e1ddbcf1756c05fed505aca00a7c61b8f
+SHA1 (patch-lib_ssl.c) = d32c2d1fb0771ba0192c5ed8e1a3e509b090a5b0
 SHA1 (patch-man_Makefile) = 642e082aa5a2813932c057ef4088256a80831636
 SHA1 (patch-servers_Makefile) = db4f3051d7f22b1bb269b8dcc9977b7aa52dde47
 SHA1 (patch-session_html__secure__tidy.c) = e6a0c0252c09655dbf894cc94107d6cf92839c8b
+SHA1 (patch-shared_config.c) = 9aefcc6e97d5dc14320a2afab7495f867ca3288b
 SHA1 (patch-utils_Makefile) = 12e95f0603fcb8b83fb20ab737fe2943ecba26b3
