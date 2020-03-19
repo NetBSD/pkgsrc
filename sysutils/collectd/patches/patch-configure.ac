@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.11 2017/11/21 15:18:23 fhajny Exp $
+$NetBSD: patch-configure.ac,v 1.12 2020/03/19 06:26:26 rillig Exp $
 
 Add KERNEL_NETBSD, add entry and disk plugins for NetBSD,
 and also do swap for "have_swapctl_three_args" (as for NetBSD).
@@ -6,14 +6,6 @@ Also, the start of process support, but that's not yet finished.
 
 --- configure.ac.orig	2017-11-18 09:03:27.330751467 +0000
 +++ configure.ac
-@@ -1,6 +1,6 @@
- dnl Process this file with autoconf to produce a configure script.
- AC_PREREQ([2.60])
--AC_INIT([collectd],[m4_esyscmd(./version-gen.sh)])
-+AC_INIT([collectd],[5.8.0])
- AC_CONFIG_SRCDIR(src/target_set.c)
- AC_CONFIG_HEADERS(src/config.h)
- AC_CONFIG_AUX_DIR([build-aux])
 @@ -110,6 +110,7 @@ AM_CONDITIONAL([BUILD_DARWIN], [test "x$
  AM_CONDITIONAL([BUILD_FREEBSD], [test "x$ac_system" = "xFreeBSD"])
  AM_CONDITIONAL([BUILD_LINUX], [test "x$ac_system" = "xLinux"])
