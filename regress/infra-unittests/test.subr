@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.1 2019/03/21 21:45:30 rillig Exp $
+# $NetBSD: test.subr,v 1.2 2020/03/19 16:58:35 rillig Exp $
 set -eu
 
 # This file defines utilities for testing Makefile fragments in a mocked
@@ -29,6 +29,10 @@ set -eu
 #		Creates a file in the temporary directory. The filename
 #		is relative to the temporary directory.
 #
+#	create_file_lines $filename $line1 $line2 ...
+#		Creates a file in the temporary directory containing the
+#		given lines.
+#
 #	create_pkgsrc_file $filename <<EOF ... EOF
 #		Creates a file in the temporary pkgsrc directory. This
 #		file will be included instead of the one in the real
@@ -48,9 +52,11 @@ set -eu
 #	assert_that $actual --equals $expected
 #		Complains loudly if $actual is not equal to $expected.
 
-: ${cleanup:=yes}
+: "${cleanup:=yes}"
+: "${make:=bmake}"
 tmpdir="${TMP:-/tmp}/infra-unittests-$$"
 mocked_pkgsrcdir="$tmpdir/pkgsrc"
+test_name="unknown test"
 rm -rf "$tmpdir"
 mkdir -p "$mocked_pkgsrcdir"
 
@@ -116,6 +122,11 @@ create_file() {
 	cat > "$tmpdir/$1"
 }
 
+create_file_lines() {
+	_cfl_filename="$1"; shift
+	printf '%s\n' "$@" > "$tmpdir/$_cfl_filename"
+}
+
 create_pkgsrc_file() {
 	mkdir -p "$mocked_pkgsrcdir/$(dirname "$1")"
 	cat > "$mocked_pkgsrcdir/$1"
@@ -130,15 +141,32 @@ PKGSRCDIR=	$real_pkgsrcdir
 EOF
 	shift
 
-	bmake -f "$tmpdir/test.subr.main.mk" "$@"
+	"$make" -f "$tmpdir/test.subr.main.mk" "$@"
 }
 
 assert_that() {
 	case "$2" in
 	(--equals)
 		[ "x$1" = "x$3" ] && return 0
-		printf 'assertion failed:\nexpected: <%s>\nbut was:  <%s>\n' "$3" "$1" 1>&2
+		printf 'assertion failed in "%s":\nexpected: <%s>\nbut was:  <%s>\n' "$test_name" "$3" "$1" 1>&2
 		exit 1
+		;;
+
+	(--file-contains-exactly)
+		printf '%s\n' "$3" > "$tmpdir/expected"
+		diff -u "$tmpdir/expected" "$tmpdir/$1" > /dev/null && return 0
+		printf 'assertion failed in "%s": file %s has unexpected content:\n' "$test_name" "$1" 1>&2
+		diff -u "$tmpdir/expected" "$tmpdir/$1" 1>&2
+		exit 1
+		;;
+
+	(--file-equals)
+		diff -u "$tmpdir/$3" "$tmpdir/$1" > /dev/null && return 0
+		printf 'assertion failed in "%s": files %s and %s differ:\n' "$test_name" "$1" "$3" 1>&2
+		diff -u "$tmpdir/$3" "$tmpdir/$1" 1>&2
+		exit 1
+		;;
+
 	(*)
 		printf 'usage: assert_that <expr> --equals <expr>\n' 1>&2
 		exit 1
