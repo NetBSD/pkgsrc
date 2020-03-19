@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1658 2020/03/19 10:41:59 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1659 2020/03/19 10:48:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2244,3 +2244,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/syncthing to 1.4.0 [gdt 2020-03-18]
 	Updated emulators/tme to 0.8nb44 [rin 2020-03-19]
 	Removed mail/imapproxy [nia 2020-03-19]
+	Removed mail/up-imapproxy [nia 2020-03-19]
