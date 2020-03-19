@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1667 2020/03/19 17:09:12 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1668 2020/03/19 19:44:24 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2251,3 +2251,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/guile22 to 2.2.7nb1 [wiz 2020-03-19]
 	Updated devel/py-pygit2 to 1.1.1nb1 [wiz 2020-03-19]
 	Updated devel/git to 2.25.2 [adam 2020-03-19]
+	Added sysutils/tealdeer version 1.3.0 [bsiegert 2020-03-19]
