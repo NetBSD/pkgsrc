@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1665 2020/03/19 14:15:26 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1666 2020/03/19 17:04:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2249,3 +2249,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/deforaos-mailer to 0.2.0nb4 [wiz 2020-03-19]
 	Updated devel/deforaos-asm to 0.2.3nb4 [wiz 2020-03-19]
 	Updated lang/guile22 to 2.2.7nb1 [wiz 2020-03-19]
+	Updated devel/py-pygit2 to 1.1.1nb1 [wiz 2020-03-19]
