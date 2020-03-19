@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2020/03/10 22:11:09 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2020/03/19 11:34:27 nia Exp $
 
 DISTNAME=	epiphany-3.34.3.1
 PKGREVISION=	2
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Apps/Web
 COMMENT=	Web browser for the GNOME desktop
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 
