@@ -1,0 +1,5 @@
+A very fast implementation of tldr in Rust: Simplified, example based and
+community-driven man pages.
+
+If you pronounce "tldr" in English, it sounds somewhat like "tealdeer". Hence
+the project name.
