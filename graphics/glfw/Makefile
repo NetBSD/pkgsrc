@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/03/19 11:23:53 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/19 11:50:31 nia Exp $
 
 DISTNAME=	glfw-3.3.2
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glfw/}
 
@@ -16,7 +17,9 @@ CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS+=	-DGLFW_BUILD_DOCS=OFF
 CMAKE_ARGS+=	-DGLFW_BUILD_EXAMPLES=OFF
 
-.include "../../mk/bsd.fast.prefs.mk"
+PKGCONFIG_OVERRIDE+=	src/glfw3.pc.in
+
+.include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
 .  include "options.mk"
 .  include "../../graphics/MesaLib/buildlink3.mk"
