@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2017/07/30 22:47:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2020/03/19 14:37:10 prlw1 Exp $
 #
 # used by audio/gnome-speech/Makefile
 # used by audio/gnome-speech-espeak/Makefile
@@ -23,6 +23,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	JAVAC=no JAVA=no IDLJ=no JAB=no
 
 PKGCONFIG_OVERRIDE+=	gnome-speech-1.0.pc.in
+
+# We patch configure
+CHECK_PORTABILITY_SKIP+=	configure.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
