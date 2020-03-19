@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/03/24 20:57:59 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/19 19:56:47 rillig Exp $
 #
 
 DISTNAME=	regress-pkg-options-1.0
@@ -13,9 +13,8 @@ REGRESS_TESTS+=	simple unsupported
 
 do-test:
 .for t in ${REGRESS_TESTS}
-	@${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO_MSG} "Running testcase "${t:Q};				\
-	${MAKE} ${MAKEFLAGS} -s -f ${FILESDIR:Q}/${t:Q}.mk test		\
+	@${ECHO_MSG} "Running testcase "${t:Q}
+	${RUN} ${MAKE} ${MAKEFLAGS} -s -f ${FILESDIR:Q}/${t:Q}.mk test \
 	| diff -u ${FILESDIR:Q}/${t:Q}.out -
 .endfor
 
