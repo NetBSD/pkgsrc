@@ -297,11 +297,64 @@ EOF
 	create_file_lines "exists"	"this file exists"
 
 	test_file "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
-	assert_that "$exitcode" --equals "0"
+
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in *exist* *not-found*' \
 		'warning: [subst.mk:class] Ignoring non-existent file "./*not-found*".'
-
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "exists" --file-contains-exactly "this example exists"
+	assert_that "$exitcode" --equals "0"
+fi
+
+
+if testcase "multiple missing files, all are reported at once"; then
+
+	create_file "testcase.mk" <<EOF
+SUBST_CLASSES+=		class
+SUBST_STAGE.class=	pre-configure
+SUBST_FILES.class=	does not exist
+SUBST_SED.class=	-e 'sahara'
+
+.include "prepare-subst.mk"
+.include "mk/subst.mk"
+EOF
+
+	test_file "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
+
+	create_file_lines "expected-output" \
+		'=> Substituting "class" in does not exist' \
+		'warning: [subst.mk:class] Ignoring non-existent file "./does".' \
+		'warning: [subst.mk:class] Ignoring non-existent file "./not".' \
+		'warning: [subst.mk:class] Ignoring non-existent file "./exist".'
+
+	assert_that "actual-output" --file-equals "expected-output"
+	assert_that "$exitcode" --equals "0"
+fi
+
+
+if testcase "multiple no-op files, all are reported at once"; then
+
+	create_file "testcase.mk" <<EOF
+SUBST_CLASSES+=		class
+SUBST_STAGE.class=	pre-configure
+SUBST_FILES.class=	first second third
+SUBST_SED.class=	-e 's,from,to,'
+
+.include "prepare-subst.mk"
+.include "mk/subst.mk"
+EOF
+	create_file_lines "first"	"text"
+	create_file_lines "second"	"second"
+	create_file_lines "third"	"third"
+
+	test_file "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
+
+	create_file_lines "expected-output" \
+		'=> Substituting "class" in first second third' \
+		'info: [subst.mk:class] Nothing changed in ./first.' \
+		'info: [subst.mk:class] Nothing changed in ./second.' \
+		'info: [subst.mk:class] Nothing changed in ./third.'
+
+	assert_that "actual-output" --file-equals "expected-output"
+	assert_that "$exitcode" --equals "0"
 fi
