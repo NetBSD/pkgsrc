@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1663 2020/03/19 14:03:39 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1664 2020/03/19 14:05:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2247,3 +2247,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed mail/up-imapproxy [nia 2020-03-19]
 	Updated graphics/glfw to 3.3.2 [nia 2020-03-19]
 	Updated mail/deforaos-mailer to 0.2.0nb4 [wiz 2020-03-19]
+	Updated devel/deforaos-asm to 0.2.3nb4 [wiz 2020-03-19]
