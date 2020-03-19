@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.866 2020/03/15 15:38:34 taca Exp $
+# $NetBSD: Makefile,v 1.867 2020/03/19 19:43:52 bsiegert Exp $
 #
 
 COMMENT=	System utilities
@@ -606,6 +606,7 @@ SUBDIR+=	tarsnap
 SUBDIR+=	tarsnap-gui
 SUBDIR+=	tcx
 SUBDIR+=	tdir
+SUBDIR+=	tealdeer
 SUBDIR+=	tegra-firmware
 SUBDIR+=	tenshi
 SUBDIR+=	testdisk
