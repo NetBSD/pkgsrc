@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2020/03/10 22:10:31 wiz Exp $
+# $NetBSD: Makefile,v 1.235 2020/03/19 21:31:19 wiz Exp $
 
 DISTNAME=	calibre-3.40.1
 PKGREVISION=	13
@@ -120,7 +120,6 @@ BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
 .include "../../mk/libusb.buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libwmf+=	libwmf>=0.2.8
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
