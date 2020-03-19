@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2020/03/18 21:48:03 tnn Exp $
+# $NetBSD: Makefile,v 1.93 2020/03/19 15:21:54 tnn Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -201,6 +201,8 @@ pre-configure:
 	${RM} -f ${WRKSRC}/mkspecs/features/mac/default_pre.prf
 	${RM} -f ${WRKSRC}/mkspecs/features/mac/default_post.prf
 
+.include "options.mk"
+
 post-install:
 .for i in ${PC_FILES}
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
@@ -220,7 +222,6 @@ post-install:
 	${MV} -f ${DESTDIR}${PREFIX}/${BROKEN_FILES1}.1 \
 		${DESTDIR}${PREFIX}/${BROKEN_FILES1}
 
-.include "options.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
