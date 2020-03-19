@@ -4,5 +4,9 @@ lib/libnss_wins.so
 lib/libnss_wins.so.2
 lib/samba/vfs/btrfs.so
 lib/samba/vfs/fileid.so
+lib/samba/vfs/glusterfs_fuse.so
+lib/samba/vfs/gpfs.so
 man/man8/vfs_btrfs.8
 man/man8/vfs_fileid.8
+man/man8/vfs_glusterfs_fuse.8
+man/man8/vfs_gpfs.8
