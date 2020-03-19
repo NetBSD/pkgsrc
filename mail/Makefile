@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.542 2020/03/19 10:41:06 nia Exp $
+# $NetBSD: Makefile,v 1.543 2020/03/19 10:47:29 nia Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -391,7 +391,6 @@ SUBDIR+=	tnef
 SUBDIR+=	tnef2txt
 SUBDIR+=	trojita
 SUBDIR+=	turba
-SUBDIR+=	up-imapproxy
 SUBDIR+=	vm
 SUBDIR+=	wl
 SUBDIR+=	wl-snapshot
