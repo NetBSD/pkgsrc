@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/04 17:47:30 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/19 19:28:52 gdt Exp $
 
 DISTNAME=	scipy-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -35,6 +35,14 @@ REPLACE_PYTHON+=	scipy/sparse/linalg/isolve/tests/test_gcrotmk.py
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
+# When unpacked by root, files with excessive permissions (group and
+# world writable, gratuitously executable) result, apparently only on
+# Darwin.  Use a large hammer for now.
+# \todo Consider using a working EXTRACT tool.
+post-extract:
+	chmod -R go-w ${WRKDIR}
+	${FIND} ${WRKDIR} -type f | xargs chmod -x
+
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
