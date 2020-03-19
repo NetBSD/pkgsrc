@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/03/10 22:50:14 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/19 17:03:51 wiz Exp $
 
 DISTNAME=	pygit2-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
 
@@ -12,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
+DEPENDS+=	${PYPKGPREFIX}-cached-property-[0-9]*:../../devel/py-cached-property
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
@@ -19,7 +21,6 @@ PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# since 1.0.0
 
-BUILDLINK_API_DEPENDS.libgit2+=	libgit2>=0.27.0
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
