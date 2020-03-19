@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1659 2020/03/19 10:48:08 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1660 2020/03/19 11:24:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2245,3 +2245,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/tme to 0.8nb44 [rin 2020-03-19]
 	Removed mail/imapproxy [nia 2020-03-19]
 	Removed mail/up-imapproxy [nia 2020-03-19]
+	Updated graphics/glfw to 3.3.2 [nia 2020-03-19]
