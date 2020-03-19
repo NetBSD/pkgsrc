@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.43 2020/02/08 12:16:35 mef Exp $
+$NetBSD: distinfo,v 1.44 2020/03/19 06:26:26 rillig Exp $
 
 SHA1 (collectd-5.8.0.tar.bz2) = eb3567563de471e1950b7388e8883b911be3756a
 RMD160 (collectd-5.8.0.tar.bz2) = 7b812b1046d57a9047213bb182b8744d98606547
 SHA512 (collectd-5.8.0.tar.bz2) = 1b3d0cc44e2ca54e13eebf292074f1efa8b33d6800d04405e0eaaa2dd1cb2416c6eae580729fb5aead23a5039f41ffe8a9989a907a8c18be8f867f1099fc0008
 Size (collectd-5.8.0.tar.bz2) = 1686017 bytes
 SHA1 (patch-Makefile.am) = 0fb4b20d995cd63943b8a826cc166db1b4f36132
-SHA1 (patch-configure.ac) = a0186e11a681cafdcf9ac2d31759259f69c4737f
+SHA1 (patch-configure.ac) = a98505a285635e54810597604c610541f4cdb5e3
 SHA1 (patch-src_collectd.conf.in) = f0b35085cf0ddfd766e140b145177ab1f1326f5f
 SHA1 (patch-src_cpu.c) = e645ae6b05c051c3c878f88a493fbbd7d548bb66
 SHA1 (patch-src_daemon_collectd.c) = 155da2fde889e961719fe6be47aa7fc25199fbe7
