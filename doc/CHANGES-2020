@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1683 2020/03/20 16:05:03 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1684 2020/03/20 16:06:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2292,3 +2292,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-rails52 to 5.2.4.2 [taca 2020-03-20]
 	Updated www/ruby-websocket-driver to 0.7.1 [taca 2020-03-20]
 	Updated www/ruby-unicorn to 5.5.3 [taca 2020-03-20]
+	Updated lang/erlang to 22.2.8 [nia 2020-03-20]
