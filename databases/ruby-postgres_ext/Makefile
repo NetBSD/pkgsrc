@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/01/16 15:17:32 taca Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/20 15:08:56 taca Exp $
 
 DISTNAME=	postgres_ext-3.0.1
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	minskim@NetBSD.org
