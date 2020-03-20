@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/03/08 16:50:30 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2020/03/20 11:58:01 nia Exp $
 #
 
 DISTNAME=		esniper-2-31-0
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=esniper/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://esniper.sourceforge.net/
+HOMEPAGE=		http://esniper.sourceforge.net/
 COMMENT=		Simple, lightweight tool for sniping ebay auctions
 LICENSE=		2-clause-bsd
 

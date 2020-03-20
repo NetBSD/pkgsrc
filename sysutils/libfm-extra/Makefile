@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/03/10 22:10:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/03/20 11:58:21 nia Exp $
 #
 
 DISTNAME=	libfm-1.3.0.2
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcmanfm/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pcmanfm.sourceforge.net/
+HOMEPAGE=	http://pcmanfm.sourceforge.net/
 COMMENT=	File management library (extra)
 LICENSE=	gnu-gpl-v2
 

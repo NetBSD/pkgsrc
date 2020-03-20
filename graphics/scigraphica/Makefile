@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2020/03/10 22:10:14 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2020/03/20 11:57:53 nia Exp $
 
 DISTNAME=	scigraphica-2.1.0
 PKGREVISION=	37
@@ -6,7 +6,7 @@ CATEGORIES=	graphics math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scigraphica/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://scigraphica.sourceforge.net/
+HOMEPAGE=	http://scigraphica.sourceforge.net/
 COMMENT=	Data analysis and technical graphics
 
 USE_LIBTOOL=		yes

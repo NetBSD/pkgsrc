@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 23:33:24 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/20 11:58:13 nia Exp $
 #
 
 DISTNAME=		cleanscore-0.9.8.1
@@ -8,7 +8,7 @@ CATEGORIES=		news
 MASTER_SITES=		http://slrn.sourceforge.net/cleanscore/
 
 MAINTAINER=		is@NetBSD.org
-HOMEPAGE=		https://slrn.sourceforge.net/cleanscore/
+HOMEPAGE=		http://slrn.sourceforge.net/cleanscore/
 COMMENT=		Clean SLRN's score file
 
 USE_TOOLS=		perl

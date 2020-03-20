@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 23:33:20 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/03/20 11:58:10 nia Exp $
 
 DISTNAME=	pptp-1.7.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pptpclient/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pptpclient.sourceforge.net/
+HOMEPAGE=	http://pptpclient.sourceforge.net/
 COMMENT=	PPTP client package for Microsoft VPN servers
 LICENSE=	gnu-gpl-v2
 

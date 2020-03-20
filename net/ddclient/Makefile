@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2020/01/18 23:33:14 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2020/03/20 11:58:05 nia Exp $
 
 DISTNAME=	ddclient-3.8.3
 PKGREVISION=	6
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ddclient/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ddclient.sourceforge.net/
+HOMEPAGE=	http://ddclient.sourceforge.net/
 COMMENT=	Client to update dynamic DNS entries
 LICENSE=	gnu-gpl-v2
 

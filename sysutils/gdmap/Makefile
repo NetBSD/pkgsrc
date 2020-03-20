@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/03/10 22:10:57 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/20 11:58:21 nia Exp $
 #
 
 DISTNAME=		gdmap-0.8.1
@@ -7,7 +7,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gdmap/}
 
 MAINTAINER=		dhowland@users.sourceforge.net
-HOMEPAGE=		https://gdmap.sourceforge.net/
+HOMEPAGE=		http://gdmap.sourceforge.net/
 COMMENT=		Tool to visualize disk space
 LICENSE=		gnu-gpl-v3
 

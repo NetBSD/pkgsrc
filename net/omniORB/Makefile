@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/18 23:33:19 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2020/03/20 11:58:09 nia Exp $
 
 DISTNAME=		omniORB-4.1.7
 PKGREVISION=		2
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=omniorb/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		ianzag@mail.ru
-HOMEPAGE=		https://omniorb.sourceforge.net/
+HOMEPAGE=		http://omniorb.sourceforge.net/
 COMMENT=		CORBA ORB
 
 MAKE_FILE=		GNUmakefile

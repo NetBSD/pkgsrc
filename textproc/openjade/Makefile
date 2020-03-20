@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/01/18 23:35:30 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2020/03/20 11:58:28 nia Exp $
 
 DISTNAME=	openjade-1.3.2
 PKGREVISION=	15
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openjade/}
 
 MAINTAINER=	kogule@mars.dti.ne.jp
-HOMEPAGE=	https://openjade.sourceforge.net/
+HOMEPAGE=	http://openjade.sourceforge.net/
 COMMENT=	SGML/XML parser toolkit and DSSSL engine, successor to "jade"
 LICENSE=	mit
 

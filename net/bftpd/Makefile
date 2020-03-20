@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/01/18 23:33:13 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/03/20 11:58:05 nia Exp $
 #
 
 DISTNAME=	bftpd-5.2
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bftpd/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bftpd.sourceforge.net/
+HOMEPAGE=	http://bftpd.sourceforge.net/
 COMMENT=	Small and fast FTP server
 LICENSE=	gnu-gpl-v2
 

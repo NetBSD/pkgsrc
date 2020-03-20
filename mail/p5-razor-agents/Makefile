@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2020/01/18 23:32:49 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2020/03/20 11:57:59 nia Exp $
 
 DISTNAME=	razor-agents-2.85
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=razor/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://razor.sourceforge.net/
+HOMEPAGE=	http://razor.sourceforge.net/
 COMMENT=	Distributed and collaborative spam detection network
 LICENSE=	artistic-2.0
 

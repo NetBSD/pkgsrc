@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.70 2020/03/12 18:22:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.71 2020/03/20 11:58:35 nia Exp $
 #
 # used by www/w3m/Makefile
 # used by www/w3m-img/Makefile
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=tats/}
 GITHUB_TAG=	v${W3M_VERS}
 
 MAINTAINER=	uebayasi@NetBSD.org
-HOMEPAGE=	https://w3m.sourceforge.net/
+HOMEPAGE=	http://w3m.sourceforge.net/
 # or https://github.com/tats/w3m
 # or https://packages.qa.debian.org/w/w3m.html
 

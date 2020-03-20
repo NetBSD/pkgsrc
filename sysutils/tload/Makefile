@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 23:35:22 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/03/20 11:58:23 nia Exp $
 #
 
 DISTNAME=	procps-2.0.6
@@ -9,7 +9,7 @@ MASTER_SITES=	http://procps.sourceforge.net/
 
 MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	Terminal version of xload
-HOMEPAGE=	https://procps.sourceforge.net/
+HOMEPAGE=	http://procps.sourceforge.net/
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

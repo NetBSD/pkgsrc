@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/01/18 23:35:17 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2020/03/20 11:58:21 nia Exp $
 #
 
 DISTNAME=	idesk-0.7.5
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=idesk/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://idesk.sourceforge.net/
+HOMEPAGE=	http://idesk.sourceforge.net/
 COMMENT=	Lightweight desktop icons handler
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 23:33:21 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/20 11:58:10 nia Exp $
 
 PYDNS_VER=	2.3.6
 DISTNAME=	pydns-${PYDNS_VER}
@@ -7,7 +7,7 @@ CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pydns/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pydns.sourceforge.net/
+HOMEPAGE=	http://pydns.sourceforge.net/
 COMMENT=	Python DNS library
 LICENSE=	python-software-foundation
 
