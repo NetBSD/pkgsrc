@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1693 2020/03/20 16:41:10 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1694 2020/03/20 17:06:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2304,3 +2304,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-sinatra to 2.0.8.1 [taca 2020-03-20]
 	Updated www/ruby-sinatra-contrib to 2.0.8.1 [taca 2020-03-20]
 	Added www/ruby-sassc-rails version 2.1.2 [taca 2020-03-20]
+	Updated games/minetest to 5.1.1 [nia 2020-03-20]
