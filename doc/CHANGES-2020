@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1685 2020/03/20 16:07:15 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1686 2020/03/20 16:08:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2294,3 +2294,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-unicorn to 5.5.3 [taca 2020-03-20]
 	Updated lang/erlang to 22.2.8 [nia 2020-03-20]
 	Updated time/ruby-tzinfo-data to 1.2019.3 [taca 2020-03-20]
+	Updated time/ruby-tzinfo to 2.0.1 [taca 2020-03-20]
