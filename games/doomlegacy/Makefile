@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 23:31:59 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/20 11:57:40 nia Exp $
 
 VERS=			1.47.2
 PKGNAME=		doomlegacy-${VERS}
@@ -9,7 +9,7 @@ DISTFILES=		${DEFAULT_DISTFILES} doomlegacy_${VERS}_common.zip
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		micha@NetBSD.org
-HOMEPAGE=		https://doomlegacy.sourceforge.net/
+HOMEPAGE=		http://doomlegacy.sourceforge.net/
 COMMENT=		The legacy of Doom
 LICENSE=		gnu-gpl-v2
 

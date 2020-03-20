@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2020/03/10 22:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2020/03/20 11:57:41 nia Exp $
 #
 
 DISTNAME=		grhino-0.16.1
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rhino/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://rhino.sourceforge.net/
+HOMEPAGE=		http://rhino.sourceforge.net/
 COMMENT=		Othello (Reversi) engine
 
 USE_LANGUAGES=		c c++
