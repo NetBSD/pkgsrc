@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.64 2020/03/20 06:17:48 rillig Exp $
+# $NetBSD: subst.mk,v 1.65 2020/03/20 09:00:44 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -35,6 +35,10 @@
 #	Starting with 2020Q1, it is an error if any of these patterns
 #	has no effect at all, to catch typos and outdated definitions.
 #	To prevent this, see SUBST_NOOP_OK.<class> below.
+#
+#	In most cases the filename patterns are given directly.
+#	If that is not flexible enough, use the :sh variable modifier.
+#	See mk/configure/replace-localedir.mk for an example.
 #
 # SUBST_SED.<class>
 #	List of sed(1) arguments to run on the specified files.
@@ -133,9 +137,8 @@ ${SUBST_STAGE.${_class_}}: subst-${_class_}
 subst-${_class_}: ${_SUBST_COOKIE.${_class_}}
 
 ${_SUBST_COOKIE.${_class_}}:
-.  if !empty(SUBST_MESSAGE.${_class_})
-	${RUN} ${ECHO_SUBST_MSG} ${SUBST_MESSAGE.${_class_}:Q}
-.  endif
+	${RUN} message=${SUBST_MESSAGE.${_class_}:Q};			\
+	if [ "$$message" ]; then ${ECHO_SUBST_MSG} "$$message"; fi
 	${RUN}								\
 	basedir=${WRKSRC:Q};						\
 	emptydir="$$basedir/.subst-empty";				\
