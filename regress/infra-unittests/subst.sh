@@ -6,9 +6,7 @@ set -eu
 
 . "./test.subr"
 
-testcase() {
-	test_name="$1"
-
+test_case_set_up() {
 	rm -rf "$tmpdir"/.subst_*_done "$tmpdir"/.subst-empty
 	rm -rf "$tmpdir"/*
 	ls -A "$tmpdir"
@@ -44,7 +42,7 @@ EOF
 }
 
 
-if testcase "single file"; then
+if test_case_begin "single file"; then
 
 	# A single file is patched successfully.
 
@@ -67,10 +65,12 @@ EOF
 
 	assert_that "output" --file-contains-exactly "=> Substituting \"class\" in subst-single.txt"
 	assert_that "subst-single.txt" --file-contains-exactly "after"
+
+	test_case_end
 fi
 
 
-if testcase "several individual files"; then
+if test_case_begin "several individual files"; then
 
 	# Several individual files are patched successfully.
 
@@ -96,10 +96,12 @@ EOF
 	assert_that "first" --file-contains-exactly "the first example"
 	assert_that "second" --file-contains-exactly "the second example"
 	assert_that "third" --file-contains-exactly "the third example"
+
+	test_case_end
 fi
 
 
-if testcase "several files by pattern"; then
+if test_case_begin "several files by pattern"; then
 
 	# Several files are patched successfully.
 	# The filenames are given by a pattern.
@@ -126,10 +128,12 @@ EOF
 	assert_that "pattern-first" --file-contains-exactly "the first example"
 	assert_that "pattern-second" --file-contains-exactly "the second example"
 	assert_that "pattern-third" --file-contains-exactly "the third example"
+
+	test_case_end
 fi
 
 
-if testcase "pattern with 1 noop"; then
+if test_case_begin "pattern with 1 noop"; then
 
 	# Several files are given via a pattern.
 	# Most of the files are patched, but one stays the same.
@@ -163,10 +167,12 @@ EOF
 	assert_that "pattern-first" --file-contains-exactly "the first example"
 	assert_that "pattern-second" --file-contains-exactly "the second is already an example"
 	assert_that "pattern-third" --file-contains-exactly "the third example"
+
+	test_case_end
 fi
 
 
-if testcase "single file noop, noop_ok=yes"; then
+if test_case_begin "single file noop, noop_ok=yes"; then
 
 	create_file "testcase.mk" <<EOF
 SUBST_CLASSES+=		class
@@ -191,10 +197,12 @@ EOF
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "single" --file-contains-exactly "already an example"
 	assert_that "$exitcode" --equals "0"
+
+	test_case_end
 fi
 
 
-if testcase "single file noop, noop_ok=no"; then
+if test_case_begin "single file noop, noop_ok=no"; then
 
 	create_file "testcase.mk" <<EOF
 SUBST_CLASSES+=		class
@@ -224,10 +232,12 @@ EOF
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "single" --file-contains-exactly "already an example"
 	assert_that "$exitcode" --equals "1"
+
+	test_case_end
 fi
 
 
-if testcase "single file nonexistent"; then
+if test_case_begin "single file nonexistent"; then
 
 	create_file "testcase.mk" <<EOF
 SUBST_CLASSES+=		class
@@ -254,10 +264,12 @@ EOF
 		"$make: stopped in $PWD"
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "$exitcode" --equals "1"
+
+	test_case_end
 fi
 
 
-if testcase "single file nonexistent ok"; then
+if test_case_begin "single file nonexistent ok"; then
 
 	create_file "testcase.mk" <<EOF
 SUBST_CLASSES+=		class
@@ -279,10 +291,12 @@ EOF
 		'warning: [subst.mk:class] Ignoring non-existent file "./nonexistent".'
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "$exitcode" --equals "0"
+
+	test_case_end
 fi
 
 
-if testcase "several patterns, 1 nonexistent"; then
+if test_case_begin "several patterns, 1 nonexistent"; then
 
 	create_file "testcase.mk" <<EOF
 SUBST_CLASSES+=		class
@@ -306,10 +320,12 @@ EOF
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "exists" --file-contains-exactly "this example exists"
 	assert_that "$exitcode" --equals "0"
+
+	test_case_end
 fi
 
 
-if testcase "multiple missing files, all are reported at once"; then
+if test_case_begin "multiple missing files, all are reported at once"; then
 
 	create_file "testcase.mk" <<EOF
 SUBST_CLASSES+=		class
@@ -330,10 +346,12 @@ EOF
 		'warning: [subst.mk:class] Ignoring non-existent file "./exist".'
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "$exitcode" --equals "0"
+
+	test_case_end
 fi
 
 
-if testcase "multiple no-op files, all are reported at once"; then
+if test_case_begin "multiple no-op files, all are reported at once"; then
 
 	create_file "testcase.mk" <<EOF
 SUBST_CLASSES+=		class
@@ -357,6 +375,8 @@ EOF
 		'info: [subst.mk:class] Nothing changed in ./third.'
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "$exitcode" --equals "0"
+
+	test_case_end
 fi
 
 # TODO: Add test that ensures SUBST_FILES is evaluated as late as possible.
