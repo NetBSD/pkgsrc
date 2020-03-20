@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2019/03/05 22:35:31 taca Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/20 15:13:58 taca Exp $
 
-DISTNAME=	jquery-rails-4.3.3
+DISTNAME=	jquery-rails-4.3.5
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,13 +10,9 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-thor>=0.14<2:../../devel/ruby-thor
+DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing>=2.0:../../textproc/ruby-rails-dom-testing
 
-RUBY_RAILS_ACCEPTED=
+RUBY_RAILS_ACCEPTED=	52 51
 
 .include "../../lang/ruby/gem.mk"
-.if ${RUBY_RAILS} >= 51
-DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing>=2.0:../../textproc/ruby-rails-dom-testing
-.else
-DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing1>=1.0:../../textproc/ruby-rails-dom-testing1
-.endif
 .include "../../mk/bsd.pkg.mk"
