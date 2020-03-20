@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1 2013/12/17 07:07:22 asau Exp $
-lib/yaws/priv/lib/yaws_sendfile_drv.so
+@comment $NetBSD: PLIST.FreeBSD,v 1.2 2020/03/20 11:39:43 tnn Exp $
+lib/yaws/priv/lib/yaws_sendfile_drv.la
