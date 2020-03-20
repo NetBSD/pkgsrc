@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:32:06 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/03/20 11:57:45 nia Exp $
 #
 
 DISTNAME=	uqm-0.7.0-source
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 DISTFILES=	${DEFAULT_DISTFILES} uqm-0.7.0-content.uqm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sc2.sourceforge.net/
+HOMEPAGE=	http://sc2.sourceforge.net/
 COMMENT=	Ur-Quan Masters
 # GPL and Creative Commons Attribution-NonCommercial-ShareAlike 2.5
 # At the moment cc-by-nc-sa-2.5v-license is not present in pkgsrc/licenses/,
