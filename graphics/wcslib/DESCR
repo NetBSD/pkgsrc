@@ -1,0 +1,4 @@
+The FITS "World Coordinate System" (WCS) standard defines keywords
+and usage that provide for the description of astronomical coordinate
+systems in a FITS image header.  SLIB is implemented in C, with support
+for FORTRAN via a set of wrapper functions.
