@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/11/23 05:29:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/20 17:52:42 rillig Exp $
 
 DISTNAME=	binutils-2.31.1
 PKGNAME=	cross-aarch64-none-elf-${DISTNAME}
@@ -11,9 +11,10 @@ HOMEPAGE=	# empty
 COMMENT=	Cross binutils for bare metal AArch64 ELF
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake makeinfo
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake makeinfo
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has several sub-configures
 
 ARMELF_PREFIX=		${PREFIX}/cross-aarch64-none-elf
 
