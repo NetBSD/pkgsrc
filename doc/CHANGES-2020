@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1702 2020/03/20 18:00:48 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1703 2020/03/20 19:51:10 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2325,3 +2325,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-rails-html-sanitizer to 1.3.0 [taca 2020-03-20]
 	Updated www/ruby-patron to 0.13.3 [taca 2020-03-20]
 	Updated www/ruby-net-http-persistent to 3.1.0 [taca 2020-03-20]
+	Updated lang/go114 to 1.14.1 [bsiegert 2020-03-20]
