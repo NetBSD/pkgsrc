@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2016/10/18 16:08:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/03/20 17:48:25 taca Exp $
 bin/restclient${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.mailmap
 ${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rubocop
 ${GEM_LIBDIR}/.rubocop-disables.yml
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.travis.yml
@@ -31,10 +33,11 @@ ${GEM_LIBDIR}/lib/restclient/windows.rb
 ${GEM_LIBDIR}/lib/restclient/windows/root_certs.rb
 ${GEM_LIBDIR}/rest-client.gemspec
 ${GEM_LIBDIR}/rest-client.windows.gemspec
+${GEM_LIBDIR}/spec/ISS.jpg
 ${GEM_LIBDIR}/spec/helpers.rb
 ${GEM_LIBDIR}/spec/integration/_lib.rb
-${GEM_LIBDIR}/spec/integration/capath_digicert/244b5494.0
-${GEM_LIBDIR}/spec/integration/capath_digicert/81b9768f.0
+${GEM_LIBDIR}/spec/integration/capath_digicert/3513523f.0
+${GEM_LIBDIR}/spec/integration/capath_digicert/399e7759.0
 ${GEM_LIBDIR}/spec/integration/capath_digicert/README
 ${GEM_LIBDIR}/spec/integration/capath_digicert/digicert.crt
 ${GEM_LIBDIR}/spec/integration/capath_verisign/415660c1.0
@@ -50,7 +53,6 @@ ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/unit/_lib.rb
 ${GEM_LIBDIR}/spec/unit/abstract_response_spec.rb
 ${GEM_LIBDIR}/spec/unit/exceptions_spec.rb
-${GEM_LIBDIR}/spec/unit/master_shake.jpg
 ${GEM_LIBDIR}/spec/unit/params_array_spec.rb
 ${GEM_LIBDIR}/spec/unit/payload_spec.rb
 ${GEM_LIBDIR}/spec/unit/raw_response_spec.rb
