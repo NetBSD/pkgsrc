@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/03/10 22:08:51 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2020/03/20 11:57:51 nia Exp $
 #
 
 DISTNAME=	Gnome2-Canvas-1.002
@@ -8,7 +8,7 @@ CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gtk2-perl.sourceforge.net/
+HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 COMMENT=	Perl bindings for libgnomecanvas and libart
 LICENSE=	gnu-lgpl-v2
 
