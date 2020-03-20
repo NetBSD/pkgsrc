@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.78 2019/11/03 19:04:06 rillig Exp $
+# $NetBSD: rails.mk,v 1.79 2020/03/20 15:06:33 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -10,7 +10,7 @@ _RUBY_RAILS_MK=	# defined
 #	Select default Ruby on Rails version.
 #
 #	Possible values: 42 51 52
-#	Default: 42
+#	Default: 52
 #
 #
 # === Infrastructure variables ===
@@ -52,7 +52,7 @@ RUBY_RAILS51_VERSION?=	5.1.6.2
 RUBY_RAILS52_VERSION?=	5.2.3
 
 RUBY_RAILS_ACCEPTED?=	# defined
-RUBY_RAILS_DEFAULT?=	42
+RUBY_RAILS_DEFAULT?=	52
 
 RUBY_RAILS_STRICT_DEP?=	no
 
