@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/04/09 04:12:39 wen Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/03/20 16:04:29 taca Exp $
 bin/unicorn${RUBY_SUFFIX}
 bin/unicorn_rails${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -16,9 +16,8 @@ ${GEM_LIBDIR}/CONTRIBUTORS
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/DESIGN
 ${GEM_LIBDIR}/Documentation/.gitignore
-${GEM_LIBDIR}/Documentation/GNUmakefile
-${GEM_LIBDIR}/Documentation/unicorn.1.txt
-${GEM_LIBDIR}/Documentation/unicorn_rails.1.txt
+${GEM_LIBDIR}/Documentation/unicorn.1
+${GEM_LIBDIR}/Documentation/unicorn_rails.1
 ${GEM_LIBDIR}/FAQ
 ${GEM_LIBDIR}/GIT-VERSION-FILE
 ${GEM_LIBDIR}/GIT-VERSION-GEN
@@ -135,6 +134,8 @@ ${GEM_LIBDIR}/t/t0116-client_body_buffer_size.sh
 ${GEM_LIBDIR}/t/t0116.ru
 ${GEM_LIBDIR}/t/t0200-rack-hijack.sh
 ${GEM_LIBDIR}/t/t0300-no-default-middleware.sh
+${GEM_LIBDIR}/t/t0301-no-default-middleware-ignored-in-config.sh
+${GEM_LIBDIR}/t/t0301.ru
 ${GEM_LIBDIR}/t/t9000-preread-input.sh
 ${GEM_LIBDIR}/t/t9001-oob_gc.sh
 ${GEM_LIBDIR}/t/t9002-oob_gc-path.sh
@@ -143,7 +144,10 @@ ${GEM_LIBDIR}/t/write-on-close.ru
 ${GEM_LIBDIR}/test/aggregate.rb
 ${GEM_LIBDIR}/test/benchmark/README
 ${GEM_LIBDIR}/test/benchmark/dd.ru
+${GEM_LIBDIR}/test/benchmark/ddstream.ru
+${GEM_LIBDIR}/test/benchmark/readinput.ru
 ${GEM_LIBDIR}/test/benchmark/stack.ru
+${GEM_LIBDIR}/test/benchmark/uconnect.perl
 ${GEM_LIBDIR}/test/exec/README
 ${GEM_LIBDIR}/test/exec/test_exec.rb
 ${GEM_LIBDIR}/test/test_helper.rb
