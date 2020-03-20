@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/09/03 08:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2020/03/20 11:45:32 nia Exp $
 
 DISTNAME=	mysql-connector-odbc-5.3.2-src
 PKGNAME=	${DISTNAME:S/mysql-connector-odbc/myodbc/:S/-src$//}
@@ -22,7 +22,7 @@ INSTALLATION_DIRS+=	share/mysql-connector-odbc/test
 
 .include "options.mk"
 
-MYSQL_VERSIONS_ACCEPTED=	56 55 51
+MYSQL_VERSIONS_ACCEPTED=	56 55
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
