@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1114 2020/02/13 15:28:58 mef Exp $
+# $NetBSD: Makefile,v 1.1115 2020/03/20 17:12:31 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -966,6 +966,7 @@ SUBDIR+=	robodoc
 SUBDIR+=	rtf-tools
 SUBDIR+=	rtfm
 SUBDIR+=	rubber
+SUBDIR+=	ruby-actiontext60
 SUBDIR+=	ruby-albino
 SUBDIR+=	ruby-amrita
 SUBDIR+=	ruby-bluecloth
