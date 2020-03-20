@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:32:05 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/20 11:57:45 nia Exp $
 #
 
 DISTNAME=	toppler-1.1.6
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=toppler/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://toppler.sourceforge.net/
+HOMEPAGE=	http://toppler.sourceforge.net/
 COMMENT=	Tower Toppler/Nebulous clone
 LICENSE=	gnu-gpl-v3
 

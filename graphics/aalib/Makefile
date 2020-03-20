@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 23:32:09 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/03/20 11:57:46 nia Exp $
 
 DISTNAME=	aalib-1.4rc5
 PKGNAME=	${DISTNAME:S/rc5/.0.5/}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aa-project/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://aa-project.sourceforge.net/aalib/
+HOMEPAGE=	http://aa-project.sourceforge.net/aalib/
 COMMENT=	ASCII Art library
 LICENSE=	gnu-lgpl-v2
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:08 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/20 11:57:46 nia Exp $
 
 DISTNAME=	libnova-0.15.0
 CATEGORIES=	geography math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libnova/}
 
-HOMEPAGE=	https://libnova.sourceforge.net/
+HOMEPAGE=	http://libnova.sourceforge.net/
 COMMENT=	Celestial Mechanics, Astrometry and Astrodynamics calculation library
 LICENSE=	gnu-lgpl-v2
 

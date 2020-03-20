@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/03/08 16:50:05 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/20 11:57:51 nia Exp $
 #
 
 DISTNAME=	Cairo-GObject-1.004
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gtk2-perl.sourceforge.net/
+HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 COMMENT=	Perl module to integrate Cairo into the Glib type system
 LICENSE=	gnu-lgpl-v2.1
 
