@@ -1,0 +1,22 @@
+$NetBSD: patch-doc_outdevs.texi,v 1.1 2020/03/20 21:19:54 nia Exp $
+
+--- doc/outdevs.texi.orig	2019-12-31 21:35:22.000000000 +0000
++++ doc/outdevs.texi
+@@ -393,6 +393,17 @@ ffmpeg -i INPUT -c:v rawvideo -pix_fmt y
+ 
+ sndio audio output device.
+ 
++@section sunau
++
++Solaris/NetBSD audio output device.
++
++@subsection Options
++@table @option
++
++@item buffer_samples
++Set the size of the audio buffer in samples. Default is 32.
++@end table
++
+ @section v4l2
+ 
+ Video4Linux2 output device.
