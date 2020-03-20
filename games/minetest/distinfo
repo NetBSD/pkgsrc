@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.3 2020/02/18 16:46:51 joerg Exp $
+$NetBSD: distinfo,v 1.4 2020/03/20 17:06:20 nia Exp $
 
-SHA1 (minetest-5.1.0/minetest-game.tar.gz) = 4376ed746279de2659d9ac3e42cec4ce596aa248
-RMD160 (minetest-5.1.0/minetest-game.tar.gz) = c6fd1ae580dc71ccb8b25f86e5229cf579d92b77
-SHA512 (minetest-5.1.0/minetest-game.tar.gz) = ad75ad9949b72111f41edfc941eeebc35b3e6012c395843df0004d62055cedc678d1fbd76acbd62c78aae427cbc9e8ebb8d27ef1bf45d123f06e1ff96525d575
-Size (minetest-5.1.0/minetest-game.tar.gz) = 1882048 bytes
-SHA1 (minetest-5.1.0/minetest.tar.gz) = 64821c57510588cc198513fd28d926c365d1d796
-RMD160 (minetest-5.1.0/minetest.tar.gz) = 6583cbdb2e6aa9d4da561a0b207f582c90f9cc49
-SHA512 (minetest-5.1.0/minetest.tar.gz) = f2cad4720c1003536cc3c619c18234a95cae1dee8fb54b46a2ef5fd24108a4c945efcb0a461926ef3ede7b8bec41ed6620806212fe11f4142bbf31fe4f0f659e
-Size (minetest-5.1.0/minetest.tar.gz) = 8939376 bytes
+SHA1 (minetest-5.1.1/minetest-game.tar.gz) = ba19928812333b55128dceb0dcfe8434ef37c28e
+RMD160 (minetest-5.1.1/minetest-game.tar.gz) = 6e6e4dfbb68615a5eb9e62bccf1d073c087dcbcb
+SHA512 (minetest-5.1.1/minetest-game.tar.gz) = ad221be6b6a109d9cd4895f0c34f7fb9da88d9192de25dd56d1e8e4ecaee8704c9a052f8a0b2ee888fde9dbc25e34e3f01774d91c42c81c0a4d02305ce7cd834
+Size (minetest-5.1.1/minetest-game.tar.gz) = 1882016 bytes
+SHA1 (minetest-5.1.1/minetest.tar.gz) = 7e3142086b62c621ca04d8c81b14a9c3b48fdccd
+RMD160 (minetest-5.1.1/minetest.tar.gz) = 687020fad483e05f95d4a4544f42a310e965fdc9
+SHA512 (minetest-5.1.1/minetest.tar.gz) = 4a36a86a3e5f8f5246ff3410e9ab182631f38292bea077e7dbc25fdc1520e5a479ffbd5ec447000fb4999ab252a59bf976299e6fecda1f8cd47f40549885766b
+Size (minetest-5.1.1/minetest.tar.gz) = 9002025 bytes
 SHA1 (patch-CMakeLists.txt) = 50ceef7b158a92900c8d5b6b178d1ab0570e16b1
 SHA1 (patch-src_noise.h) = 54e72bf65fb642542985b1eb5dcd45fb3da4a57f
 SHA1 (patch-src_threading_thread.cpp) = c5334a9fd1e5a65cfa0828b47ebd8e50ba1ed7d7
