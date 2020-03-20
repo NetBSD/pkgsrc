@@ -1,0 +1,15 @@
+$NetBSD: patch-pcre_configure.in,v 1.1 2020/03/20 10:25:15 micha Exp $
+
+Replace nonportable operator "==" with POSIX equivalent.
+
+--- pcre/configure.in.orig	2017-05-03 17:47:33.000000000 +0000
++++ pcre/configure.in
+@@ -183,7 +183,7 @@ dnl Handle --enable-ebcdic
+ 
+ AC_ARG_ENABLE(ebcdic,
+ [  --enable-ebcdic         assume EBCDIC coding rather than ASCII],
+-if test "$enableval" == "yes"; then
++if test "$enableval" = "yes"; then
+   EBCDIC=-DEBCDIC=1
+ fi
+ )
