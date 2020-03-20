@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3062 2020/03/20 16:51:32 taca Exp $
+# $NetBSD: Makefile,v 1.3063 2020/03/20 17:10:02 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2607,6 +2607,7 @@ SUBDIR+=	ruby-activemodel51
 SUBDIR+=	ruby-activemodel52
 SUBDIR+=	ruby-activemodel60
 SUBDIR+=	ruby-activestorage52
+SUBDIR+=	ruby-activestorage60
 SUBDIR+=	ruby-activesupport42
 SUBDIR+=	ruby-activesupport51
 SUBDIR+=	ruby-activesupport52
@@ -2743,6 +2744,7 @@ SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-railties42
 SUBDIR+=	ruby-railties51
 SUBDIR+=	ruby-railties52
+SUBDIR+=	ruby-railties60
 SUBDIR+=	ruby-randexp
 SUBDIR+=	ruby-rb-fsevent
 SUBDIR+=	ruby-rb-inotify
