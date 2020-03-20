@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/01/04 16:49:12 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/20 11:57:43 nia Exp $
 include/libtorrent/ConvertUTF.h
 include/libtorrent/add_torrent_params.hpp
 include/libtorrent/address.hpp
@@ -34,6 +34,7 @@ include/libtorrent/aux_/has_block.hpp
 include/libtorrent/aux_/instantiate_connection.hpp
 include/libtorrent/aux_/io.hpp
 include/libtorrent/aux_/ip_notifier.hpp
+include/libtorrent/aux_/keepalive.hpp
 include/libtorrent/aux_/listen_socket_handle.hpp
 include/libtorrent/aux_/lsd.hpp
 include/libtorrent/aux_/merkle.hpp
