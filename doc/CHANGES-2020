@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1670 2020/03/20 07:46:34 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1671 2020/03/20 08:16:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2255,3 +2255,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated geography/py-google-maps-services-python to 4.2.0 [ryoon 2020-03-20]
 	Updated www/py-httpx to 0.12.1 [adam 2020-03-20]
 	Updated textproc/py-elementpath to 1.4.3 [adam 2020-03-20]
+	Updated lang/php73 to 7.3.16 [taca 2020-03-20]
+	Updated lang/php74 to 7.4.4 [taca 2020-03-20]
+	Updated lang/php72 to 7.2.29 [taca 2020-03-20]
