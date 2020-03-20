@@ -1,0 +1,19 @@
+# Active Storage
+
+Active Storage makes it simple to upload and reference files in cloud services
+like [Amazon S3](https://aws.amazon.com/s3/), [Google Cloud
+Storage](https://cloud.google.com/storage/docs/), or [Microsoft Azure
+Storage](https://azure.microsoft.com/en-us/services/storage/), and attach
+those files to Active Records.  Supports having one main service and mirrors
+in other services for redundancy.  It also provides a disk service for testing
+or local deployments, but the focus is on cloud storage.
+
+Files can be uploaded from the server to the cloud or directly from the client
+to the cloud.
+
+Image files can furthermore be transformed using on-demand variants for
+quality, aspect ratio, size, or any other
+[MiniMagick](https://github.com/minimagick/minimagick) supported
+transformation.
+
+This is for Ruby on Rails 6.0.
