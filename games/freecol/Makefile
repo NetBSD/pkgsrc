@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 23:32:00 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/20 11:57:41 nia Exp $
 
 DISTNAME=	freecol-0.11.6
 CATEGORIES=	games
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freecol/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://freecol.sourceforge.net/
+HOMEPAGE=	http://freecol.sourceforge.net/
 COMMENT=	Turn-based strategy game based on the old game Colonization
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/01/18 23:30:52 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/03/20 11:57:37 nia Exp $
 
 DISTNAME=	wikipediafs-0.4
 PKGNAME=	fuse-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wikipediafs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://wikipediafs.sourceforge.net/
+HOMEPAGE=	http://wikipediafs.sourceforge.net/
 COMMENT=	FUSE filesystem for accessing the wikipedia
 LICENSE=	gnu-gpl-v2
 
