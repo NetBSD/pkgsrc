@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/18 13:47:13 micha Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/20 14:40:56 micha Exp $
 
 DISTNAME=	bystand-1.0.1
 CATEGORIES=	news
@@ -21,6 +21,8 @@ BYSTAND_MAKEFILE=	Makefile
 # This Makefile builds a GNU compatibility module
 BYSTAND_MAKEFILE=	Makefile.BSD
 .endif
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin share/doc/bystand share/doc/bystand/setup
 
