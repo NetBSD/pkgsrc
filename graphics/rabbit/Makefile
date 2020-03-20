@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2020/01/26 17:31:23 rillig Exp $
+# $NetBSD: Makefile,v 1.62 2020/03/20 00:57:59 joerg Exp $
 #
 
 DISTNAME=	rabbit-3.0.0
@@ -23,6 +23,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-kramdown-parser-gfm-[0-9]*:../../textproc/ruby-kramd
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.0.1:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_PKGPREFIX}-faraday-[0-9]*:../../www/ruby-faraday
 DEPENDS+=	${RUBY_PKGPREFIX}-rouge-[0-9]*:../../www/ruby-rouge
+
+RUBY_VERSIONS_INCOMPATIBLE=	24
 
 USE_RUBY_SETUP=		yes
 USE_RUBY_SETUP_PKG=	yes
