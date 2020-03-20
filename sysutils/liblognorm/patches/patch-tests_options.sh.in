@@ -1,0 +1,12 @@
+$NetBSD: patch-tests_options.sh.in,v 1.1 2020/03/20 00:00:34 joerg Exp $
+
+--- tests/options.sh.in.orig	2020-03-18 20:02:09.442824914 +0000
++++ tests/options.sh.in
+@@ -1,6 +1,6 @@
+ use_valgrind=@VALGRIND@
+ 
+ echo "Using valgrind: $use_valgrind"
+-if [ $use_valgrind == "yes" ]; then
++if [ $use_valgrind = "yes" ]; then
+     cmd="valgrind --error-exitcode=191 --malloc-fill=ff --free-fill=fe --leak-check=full --trace-children=yes $cmd"
+ fi
