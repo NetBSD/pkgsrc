@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/03/08 16:47:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/20 11:57:49 nia Exp $
 
 DISTNAME=	gts-0.7.6
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gts/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gts.sourceforge.net/
+HOMEPAGE=	http://gts.sourceforge.net/
 COMMENT=	GNU Triangulated Surface Library
 LICENSE=	gnu-gpl-v2
 

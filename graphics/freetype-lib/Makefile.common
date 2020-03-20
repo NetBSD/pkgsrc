@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2020/01/18 23:32:11 rillig Exp $
+# $NetBSD: Makefile.common,v 1.39 2020/03/20 11:57:47 nia Exp $
 #
 # used by graphics/freetype-lib/Makefile
 # used by graphics/freetype-utils/Makefile
@@ -9,7 +9,7 @@ CATEGORIES=		graphics textproc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/f/freetype1/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://freetype.sourceforge.net/
+HOMEPAGE=		http://freetype.sourceforge.net/
 
 CONFLICTS=		freetype-1.[12]*
 

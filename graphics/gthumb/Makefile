@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2020/03/10 22:10:08 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2020/03/20 11:57:49 nia Exp $
 
 DISTNAME=	gthumb-2.14.4
 PKGREVISION=	26
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gthumb/2.14/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://gthumb.sourceforge.net/
+HOMEPAGE=	http://gthumb.sourceforge.net/
 COMMENT=	Image viewer and browser for the GNOME Desktop
 LICENSE=	gnu-gpl-v2
 

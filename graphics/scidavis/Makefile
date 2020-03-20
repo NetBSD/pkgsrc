@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/03/08 16:50:08 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2020/03/20 11:57:52 nia Exp $
 #
 
 DISTNAME=	scidavis-0.2.4
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scidavis/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://scidavis.sourceforge.net/
+HOMEPAGE=	http://scidavis.sourceforge.net/
 COMMENT=	Data analysis and visualization package
 
 USE_LANGUAGES=		c c++
