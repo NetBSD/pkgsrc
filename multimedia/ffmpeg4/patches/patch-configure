@@ -1,12 +1,23 @@
-$NetBSD: patch-configure,v 1.3 2018/11/06 19:31:09 adam Exp $
+$NetBSD: patch-configure,v 1.4 2020/03/20 21:19:54 nia Exp $
+
+Sun audio support.
 
 Enable PIC on NetBSD, even on i386 to avoid text relocations.
 Do not use 'rsync'.
+
 Portability fixes.
 
---- configure.orig	2018-11-05 23:22:33.000000000 +0000
+--- configure.orig	2020-03-20 20:53:47.977808652 +0000
 +++ configure
-@@ -2203,7 +2203,6 @@ TOOLCHAIN_FEATURES="
+@@ -2119,6 +2119,7 @@ HEADERS_LIST="
+     sys_resource_h
+     sys_select_h
+     sys_soundcard_h
++    sys_audioio_h
+     sys_time_h
+     sys_un_h
+     sys_videoio_h
+@@ -2257,7 +2258,6 @@ TOOLCHAIN_FEATURES="
      inline_asm_labels
      inline_asm_nonlocal_labels
      pragma_deprecated
@@ -14,7 +25,16 @@ Portability fixes.
      symver_asm_label
      symver_gnu_asm
      vfp_args
-@@ -4844,9 +4843,9 @@ elif enabled mips; then
+@@ -3336,6 +3336,8 @@ opengl_outdev_deps="opengl"
+ opengl_outdev_suggest="sdl2"
+ oss_indev_deps_any="sys_soundcard_h"
+ oss_outdev_deps_any="sys_soundcard_h"
++sunau_indev_deps_any="sys_audioio_h"
++sunau_outdev_deps_any="sys_audioio_h"
+ pulse_indev_deps="libpulse"
+ pulse_outdev_deps="libpulse"
+ sdl2_outdev_deps="sdl2"
+@@ -4950,9 +4952,9 @@ elif enabled mips; then
                  disable mipsdsp
                  disable mipsdspr2
                  # When gcc version less than 5.3.0, add -fno-expensive-optimizations flag.
@@ -26,7 +46,7 @@ Portability fixes.
                          expensive_optimization_flag=""
                      else
                          expensive_optimization_flag="-fno-expensive-optimizations"
-@@ -5140,6 +5139,7 @@ case $target_os in
+@@ -5247,6 +5249,7 @@ case $target_os in
          ;;
      netbsd)
          disable symver
@@ -34,7 +54,7 @@ Portability fixes.
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -5526,10 +5526,13 @@ done
+@@ -5639,10 +5642,13 @@ done
  check_cc pragma_deprecated "" '_Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"")'
  
  # The global variable ensures the bits appear unchanged in the object file.
@@ -51,7 +71,15 @@ Portability fixes.
  
  check_cc const_nan math.h "struct { double d; } static const bar[] = { { NAN } }"
  
-@@ -6299,7 +6302,6 @@ enabled makeinfo \
+@@ -6021,6 +6027,7 @@ check_headers libcrystalhd/libcrystalhd_
+ check_headers malloc.h
+ check_headers net/udplite.h
+ check_headers poll.h
++check_headers sys/audioio.h
+ check_headers sys/param.h
+ check_headers sys/resource.h
+ check_headers sys/select.h
+@@ -6427,7 +6434,6 @@ enabled makeinfo \
  disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
  perl -v            > /dev/null 2>&1 && enable perl      || disable perl
  pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man

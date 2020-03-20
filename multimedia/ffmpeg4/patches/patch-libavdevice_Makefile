@@ -1,0 +1,15 @@
+$NetBSD: patch-libavdevice_Makefile,v 1.1 2020/03/20 21:19:54 nia Exp $
+
+Sun audio support.
+
+--- libavdevice/Makefile.orig	2019-12-31 21:35:24.000000000 +0000
++++ libavdevice/Makefile
+@@ -43,6 +43,8 @@ OBJS-$(CONFIG_PULSE_OUTDEV)             
+ OBJS-$(CONFIG_SDL2_OUTDEV)               += sdl2.o
+ OBJS-$(CONFIG_SNDIO_INDEV)               += sndio_dec.o sndio.o
+ OBJS-$(CONFIG_SNDIO_OUTDEV)              += sndio_enc.o sndio.o
++OBJS-$(CONFIG_SUNAU_INDEV)               += sunau_dec.o sunau.o
++OBJS-$(CONFIG_SUNAU_OUTDEV)              += sunau_enc.o sunau.o
+ OBJS-$(CONFIG_V4L2_INDEV)                += v4l2.o v4l2-common.o timefilter.o
+ OBJS-$(CONFIG_V4L2_OUTDEV)               += v4l2enc.o v4l2-common.o
+ OBJS-$(CONFIG_VFWCAP_INDEV)              += vfwcap.o

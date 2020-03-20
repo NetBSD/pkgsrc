@@ -1,0 +1,40 @@
+$NetBSD: patch-doc_indevs.texi,v 1.1 2020/03/20 21:19:54 nia Exp $
+
+--- doc/indevs.texi.orig	2019-12-31 21:35:22.000000000 +0000
++++ doc/indevs.texi
+@@ -1282,6 +1282,35 @@ Set the number of channels. Default is 2
+ 
+ @end table
+ 
++@section sunau
++
++Solaris/NetBSD audio input device.
++
++The filename to provide to the input device is the device node
++representing the Sun input device, and is usually set to
++@file{/dev/audio0}.
++
++For example to grab from @file{/dev/audio0} using @command{ffmpeg} use the
++command:
++@example
++ffmpeg -f sunau -i /dev/audio0 /tmp/oss.wav
++@end example
++
++@subsection Options
++
++@table @option
++
++@item buffer_samples
++Set the size of the audio buffer in samples. Default is 32.
++
++@item sample_rate
++Set the sample rate in Hz. Default is 48000.
++
++@item channels
++Set the number of channels. Default is 2.
++
++@end table
++
+ @section video4linux2, v4l2
+ 
+ Video4Linux2 input video device.
