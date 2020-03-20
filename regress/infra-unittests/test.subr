@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.3 2020/03/20 08:56:42 rillig Exp $
+# $NetBSD: test.subr,v 1.4 2020/03/20 21:27:04 rillig Exp $
 set -eu
 
 # This file defines utilities for testing Makefile fragments in a mocked
@@ -148,6 +148,7 @@ EOF
 }
 
 create_file() {
+	assert_that "$#" --equals 1
 	cat > "$tmpdir/$1"
 }
 
@@ -228,6 +229,20 @@ assert_that() {
 		fi
 		assert_fail 'file "%s" is not empty:\n' "$1"
 		diff -u "/dev/null" "$tmpdir/$1" 1>&2 || true
+		;;
+
+	(--file-is-lines)
+		_assert_that_tmp_actual="$tmpdir/$1"
+		_assert_that_tmp_expected="$tmpdir/$1"
+		_assert_that_filename="$1"; shift
+
+		printf '%s\n' "$@" > "$_assert_that_tmp_expected"
+		if diff -u "$_assert_that_tmp_expected" "$_assert_that_tmp_actual" > /dev/null; then
+			assert_succeed
+			return 0
+		fi
+		assert_fail 'file "%s" has unexpected content:\n' "$_assert_that_filename"
+		diff -u "$_assert_that_tmp_expected" "$_assert_that_tmp_actual" 1>&2 || true
 		;;
 
 	(*)
