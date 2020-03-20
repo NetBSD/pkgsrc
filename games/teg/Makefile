@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2020/03/10 22:09:59 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2020/03/20 11:57:44 nia Exp $
 
 DISTNAME=		teg-0.11.1
 PKGREVISION=		59
@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=teg/}
 
 MAINTAINER=		wrzymski@gmail.com
-HOMEPAGE=		https://teg.sourceforge.net/
+HOMEPAGE=		http://teg.sourceforge.net/
 COMMENT=		Round-based computer board game
 
 USE_PKGLOCALEDIR=	yes

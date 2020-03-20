@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2020/01/18 23:32:10 rillig Exp $
+# $NetBSD: Makefile.common,v 1.15 2020/03/20 11:57:46 nia Exp $
 #
 # used by graphics/cal3d/Makefile
 # used by graphics/cal3d-examples/Makefile
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cal3d/}
 CAL3D_VERSION=		0.9.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cal3d.sourceforge.net/
+HOMEPAGE=	http://cal3d.sourceforge.net/
 COMMENT=	Skeletal based 3d character animation library in C++
 
 EXTRACT_SUFX=		.tar.bz2
