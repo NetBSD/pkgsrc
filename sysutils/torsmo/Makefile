@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/01/18 23:35:22 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/03/20 11:58:23 nia Exp $
 
 DISTNAME=		torsmo-0.18
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=torsmo/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://torsmo.sourceforge.net/
+HOMEPAGE=		http://torsmo.sourceforge.net/
 COMMENT=		Tyopoytaorvelo System Monitor
 
 BROKEN_ON_PLATFORM=	Darwin-*-*

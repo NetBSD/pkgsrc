@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/01/18 23:32:45 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/03/20 11:57:56 nia Exp $
 
 DISTNAME=	basicproperty-0.6.9a
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=basicproperty/}
 
 MAINTAINER=	darcy@NetBSD.org
-HOMEPAGE=	https://basicproperty.sourceforge.net/
+HOMEPAGE=	http://basicproperty.sourceforge.net/
 COMMENT=	Python RDBMS wrapper for various databases
 LICENSE=	original-bsd
 

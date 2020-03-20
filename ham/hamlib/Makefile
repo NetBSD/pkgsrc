@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2020/01/18 23:32:39 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2020/03/20 11:57:54 nia Exp $
 #
 
 DISTNAME=	hamlib-${VERSION}
@@ -13,7 +13,7 @@ MASTER_SITES=	https://github.com/Hamlib/Hamlib/releases/download/${VERSIOND}/
 WRKSRC=		${WRKDIR}/hamlib-${VERSIONF}
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://hamlib.sourceforge.net/
+HOMEPAGE=	http://hamlib.sourceforge.net/
 COMMENT=	API for digital communications equipment
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/01/18 23:35:31 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/03/20 11:58:28 nia Exp $
 
 DISTNAME=	HappyDoc_r2_1
 PKGNAME=	${PYPKGPREFIX}-HappyDoc-2.1
@@ -7,7 +7,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=happydoc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://happydoc.sourceforge.net/
+HOMEPAGE=	http://happydoc.sourceforge.net/
 COMMENT=	Python tool to generate Python API documents
 
 USE_LANGUAGES=	#none
