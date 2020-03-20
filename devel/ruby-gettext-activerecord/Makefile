@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/03/18 14:21:20 taca Exp $
+# $NetBSD: Makefile,v 1.12 2020/03/20 00:57:59 joerg Exp $
 
 DISTNAME=	gettext_activerecord-2.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
@@ -13,6 +13,7 @@ LICENSE=	ruby-license
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=2.1.0:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
 
+RUBY_VERSIONS_INCOMPATIBLE=	24
 RUBY_RAILS_ACCEPTED=	# defined
 
 post-extract:

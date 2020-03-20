@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:54 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/03/20 00:57:59 joerg Exp $
 #
 
 DISTNAME=	rabbiter-2.0.1
@@ -17,6 +17,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-twitter_oauth-[0-9]*:../../security/ruby-twitter_oau
 DEPENDS+=	${RUBY_PKGPREFIX}-twitter-stream>=0.1.16:../../net/ruby-twitter-stream
 
 CONFLICTS+=	${RUBY_PKGPREFIX}-rabbit<2.0.0
+
+RUBY_VERSIONS_INCOMPATIBLE=	24
 
 USE_RUBY_SETUP=		yes
 USE_RUBY_SETUP_PKG=	yes
