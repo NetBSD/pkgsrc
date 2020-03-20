@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1674 2020/03/20 10:23:13 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1675 2020/03/20 11:09:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2262,3 +2262,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-ICU to 2.4.3 [adam 2020-03-20]
 	Updated devel/py-semantic_version to 2.8.4 [adam 2020-03-20]
 	Updated audio/musicpd to 0.21.21 [nia 2020-03-20]
+	Added graphics/wcslib version 7.2 [wiz 2020-03-20]
