@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:27 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/20 11:58:26 nia Exp $
 
 DISTNAME=	italiano_2_4_2007_09_01
 PKGREVISION=	1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #		clamiax@gmail.com
 
-HOMEPAGE=	https://linguistico.sourceforge.net/
+HOMEPAGE=	http://linguistico.sourceforge.net/
 COMMENT=	Italian dictionary for hunspell
 
 DICTNAME=	it_IT

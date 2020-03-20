@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:35:44 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/03/20 11:58:34 nia Exp $
 #
 
 DISTNAME=	nanoblogger-3.4.2
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nanoblogger/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://nanoblogger.sourceforge.net/
+HOMEPAGE=	http://nanoblogger.sourceforge.net/
 COMMENT=	Small weblog engine for the UNIX command line
 LICENSE=	gnu-gpl-v2
 

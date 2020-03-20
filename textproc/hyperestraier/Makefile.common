@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2020/01/18 23:35:27 rillig Exp $
+# $NetBSD: Makefile.common,v 1.13 2020/03/20 11:58:26 nia Exp $
 #
 # used by textproc/java-native-hyperestraier/Makefile
 # used by textproc/java-pure-hyperestraier/Makefile
@@ -13,7 +13,7 @@ MASTER_SITES+=		http://hyperestraier.sourceforge.net/
 HYPERESTRAIER_VERSION=	1.4.13
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://hyperestraier.sourceforge.net/
+HOMEPAGE=	http://hyperestraier.sourceforge.net/
 
 DISTINFO_FILE=	${.CURDIR}/../../textproc/hyperestraier/distinfo
 PATCHDIR=	${.CURDIR}/../../textproc/hyperestraier/patches

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/01/18 23:35:25 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2020/03/20 11:58:25 nia Exp $
 
 DISTNAME=	docbook-dsssl-1.79
 PKGNAME=	dsssl-docbook-modular-1.79
@@ -9,7 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} docbook-dsssl-doc-1.79${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://docbook.sourceforge.net/
+HOMEPAGE=	http://docbook.sourceforge.net/
 COMMENT=	DSSSL stylesheets for the DocBook DTD
 
 DEPENDS+=	docbook>=4.0:../../textproc/docbook

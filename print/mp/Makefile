@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/01/18 23:33:29 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/03/20 11:58:14 nia Exp $
 #
 
 DISTNAME=	mpdist-3.7.1
@@ -8,7 +8,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpdist/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://mpdist.sourceforge.net/
+HOMEPAGE=	http://mpdist.sourceforge.net/
 COMMENT=	PostScript pretty printer
 
 GNU_CONFIGURE=		yes

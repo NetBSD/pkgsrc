@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 23:35:25 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/03/20 11:58:25 nia Exp $
 #
 
 DISTNAME=	docbook-website-2.6.0
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://docbook.sourceforge.net/
+HOMEPAGE=	http://docbook.sourceforge.net/
 COMMENT=	DocBook XML DTD for building websites
 
 DEPENDS+=	docbook-simple-[0-9]*:../../textproc/docbook-simple

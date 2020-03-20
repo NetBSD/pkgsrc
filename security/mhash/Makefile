@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/01/18 23:35:09 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/03/20 11:58:17 nia Exp $
 
 DISTNAME=	mhash-0.9.9
 PKGREVISION=	10
@@ -10,7 +10,7 @@ PATCHFILES+=	mhash-freebsd-patches-20081108.diff.gz
 PATCH_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://mhash.sourceforge.net/
+HOMEPAGE=	http://mhash.sourceforge.net/
 COMMENT=	Hash algorithms library
 
 USE_TOOLS+=		gmake perl autoconf

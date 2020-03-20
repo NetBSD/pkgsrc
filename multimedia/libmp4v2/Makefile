@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/01/18 23:33:11 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/03/20 11:58:04 nia Exp $
 
 DISTNAME=		mpeg4ip-1.6.1
 PKGNAME=		libmp4v2-1.6.1
@@ -9,7 +9,7 @@ CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_FREEBSD_LOCAL:=ahze/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://mpeg4ip.sourceforge.net/
+HOMEPAGE=		http://mpeg4ip.sourceforge.net/
 COMMENT=		Library for reading and modifying mp4 files
 
 USE_LANGUAGES=		c c++03

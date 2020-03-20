@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2020/01/18 23:33:11 rillig Exp $
+# $NetBSD: Makefile.common,v 1.18 2020/03/20 11:58:03 nia Exp $
 #
 # used by multimedia/libdv-tools/Makefile
 
@@ -7,7 +7,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdv/}
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	https://libdv.sourceforge.net/
+HOMEPAGE=	http://libdv.sourceforge.net/
 COMMENT=	DV video codec library
 LICENSE=	gnu-lgpl-v2.1
 

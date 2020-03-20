@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/01/18 23:35:05 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2020/03/20 11:58:15 nia Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=	xdvik-22.87.03
 PKGREVISION=	3
 CATEGORIES=	print
 
-HOMEPAGE=	https://xdvi.sourceforge.net/
+HOMEPAGE=	http://xdvi.sourceforge.net/
 COMMENT=	Previewer for DVI files
 
 BUILD_DEPENDS+=	tex-tetex-[0-9]*:../../print/tex-tetex

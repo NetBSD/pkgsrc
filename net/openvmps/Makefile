@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:33:19 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/20 11:58:09 nia Exp $
 
 DISTNAME=	vmpsd-1.3
 PKGNAME=	openvmps-1.3
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vmps/}
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	https://vmps.sourceforge.net/
+HOMEPAGE=	http://vmps.sourceforge.net/
 COMMENT=	GPL implementation of the VMPS protocol
 
 WRKSRC=		${WRKDIR}/vmpsd

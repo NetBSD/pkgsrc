@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:33:14 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/20 11:58:05 nia Exp $
 
 DISTNAME=	dhcpd-pools-2.27
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dhcpd-pools/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	https://dhcpd-pools.sourceforge.net/
+HOMEPAGE=	http://dhcpd-pools.sourceforge.net/
 COMMENT=	ISC dhcpd lease analysis and reporting
 LICENSE=	gnu-gpl-v3
 

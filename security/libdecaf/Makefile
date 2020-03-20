@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 23:35:08 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/20 11:58:17 nia Exp $
 
 DISTNAME=	libdecaf-1.0.0
 CATEGORIES=	security
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ed448goldilocks/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	fox@NetBSD.org
-HOMEPAGE=	https://ed448goldilocks.sourceforge.net/
+HOMEPAGE=	http://ed448goldilocks.sourceforge.net/
 COMMENT=	Implementation of Ed448-Goldilocks elliptic curve for cryptography
 LICENSE=	mit
 

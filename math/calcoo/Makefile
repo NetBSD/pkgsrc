@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/03/10 22:10:28 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2020/03/20 11:58:00 nia Exp $
 #
 
 DISTNAME=		calcoo-1.3.18
@@ -7,7 +7,7 @@ CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=calcoo/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://calcoo.sourceforge.net/
+HOMEPAGE=		http://calcoo.sourceforge.net/
 COMMENT=		Scientific calculator
 
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/01/18 23:35:20 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/03/20 11:58:22 nia Exp $
 
 DISTNAME=		psmisc-20.1
 CATEGORIES=		sysutils
@@ -6,7 +6,7 @@ PKGREVISION=		3
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=psmisc/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://psmisc.sourceforge.net/
+HOMEPAGE=		http://psmisc.sourceforge.net/
 COMMENT=		Miscellaneous procfs tools: killall, pidof, and pstree
 LICENSE=		gnu-gpl-v2
 

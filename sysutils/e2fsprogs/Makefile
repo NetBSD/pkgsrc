@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 23:35:16 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/03/20 11:58:21 nia Exp $
 
 DISTNAME=	e2fsprogs-1.43.7
 PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES=	https://www.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v${
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://e2fsprogs.sourceforge.net/
+HOMEPAGE=	http://e2fsprogs.sourceforge.net/
 COMMENT=	Second extended file system (ext2fs) management programs
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND modified-bsd AND mit
 

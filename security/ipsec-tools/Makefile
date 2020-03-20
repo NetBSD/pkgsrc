@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/01/18 23:35:07 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2020/03/20 11:58:16 nia Exp $
 
 DISTNAME=		ipsec-tools-0.7.3
 PKGREVISION=		5
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_NETBSD:=ipsec-tools/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://ipsec-tools.sourceforge.net/
+HOMEPAGE=		http://ipsec-tools.sourceforge.net/
 COMMENT=		IPsec-tools racoon IKE daemon
 
 ONLY_FOR_PLATFORM=	NetBSD-[3-9].*-* FreeBSD-[5-9].*-* Linux-2.[6-9].*-*

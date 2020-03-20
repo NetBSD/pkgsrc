@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/01/18 23:35:12 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/03/20 11:58:19 nia Exp $
 
 DISTNAME=		steghide-0.5.1
 PKGREVISION=		7
@@ -6,7 +6,7 @@ CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=steghide/}
 
 MAINTAINER=		agc@NetBSD.org
-HOMEPAGE=		https://steghide.sourceforge.net/
+HOMEPAGE=		http://steghide.sourceforge.net/
 COMMENT=		Hides data (steganography) in audio or graphics files
 
 GNU_CONFIGURE=		yes

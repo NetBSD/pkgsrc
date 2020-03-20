@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:35:20 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/03/20 11:58:22 nia Exp $
 
 DISTNAME=	rename-1.3
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rename/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://rename.sourceforge.net/
+HOMEPAGE=	http://rename.sourceforge.net/
 COMMENT=	Rename recursively with regex patterns
 LICENSE=	gnu-gpl-v2
 

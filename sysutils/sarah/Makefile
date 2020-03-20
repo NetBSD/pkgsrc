@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/01/18 23:35:21 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/03/20 11:58:23 nia Exp $
 
 DISTNAME=	sarah-0.9.1b
 PKGREVISION=	7
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sarah/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sarah.sourceforge.net/
+HOMEPAGE=	http://sarah.sourceforge.net/
 COMMENT=	Syslog automated Rotation and Archive Handler
 
 USE_TOOLS+=	perl:run

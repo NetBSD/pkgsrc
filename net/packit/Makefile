@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:33:19 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/03/20 11:58:09 nia Exp $
 
 DISTNAME=	packit-1.0
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	http://packit.sourceforge.net/downloads/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://packit.sourceforge.net/
+HOMEPAGE=	http://packit.sourceforge.net/
 COMMENT=	Network auditing tool with the ability to manipulate IP traffic
 
 GNU_CONFIGURE=		YES

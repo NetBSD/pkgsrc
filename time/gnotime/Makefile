@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2020/03/10 22:11:05 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2020/03/20 11:58:31 nia Exp $
 
 DISTNAME=	gnotime-2.4.0
 PKGREVISION=	16
@@ -6,7 +6,7 @@ CATEGORIES=	time gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gttr/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gttr.sourceforge.net/
+HOMEPAGE=	http://gttr.sourceforge.net/
 COMMENT=	Time tracker for GNOME2
 LICENSE=	gnu-gpl-v2
 

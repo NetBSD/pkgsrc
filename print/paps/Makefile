@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/03/10 22:10:52 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/03/20 11:58:14 nia Exp $
 #
 
 DISTNAME=	paps-0.6.8
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paps/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://paps.sourceforge.net/
+HOMEPAGE=	http://paps.sourceforge.net/
 COMMENT=	Pango to PostScript converter
 LICENSE=	gnu-lgpl-v2
 

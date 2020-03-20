@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/01/18 23:33:14 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/03/20 11:58:06 nia Exp $
 
 DISTNAME=	ettercap-NG-0.7.3
 PKGREVISION=	15
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ettercap/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ettercap.sourceforge.net/
+HOMEPAGE=	http://ettercap.sourceforge.net/
 COMMENT=	Multipurpose sniffer/interceptor/logger for switched LAN
 LICENSE=	gnu-gpl-v2
 

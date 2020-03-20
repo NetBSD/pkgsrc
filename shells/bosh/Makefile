@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/03/04 11:42:23 micha Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/20 11:58:19 nia Exp $
 
 DISTNAME=	schily-2020-02-11
 PKGNAME=	bosh-20200211
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://schilytools.sourceforge.net/bosh.html
+HOMEPAGE=	http://schilytools.sourceforge.net/bosh.html
 COMMENT=	The Schily Bourne Shell
 LICENSE=	cddl-1.0
 

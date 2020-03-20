@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/03/08 16:50:48 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/03/20 11:58:05 nia Exp $
 
 DISTNAME=		cclive-0.7.16
 PKGREVISION=		24
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cclive/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		zecrazytux@zecrazytux.net
-HOMEPAGE=		https://cclive.sourceforge.net/
+HOMEPAGE=		http://cclive.sourceforge.net/
 COMMENT=		Command line video extraction tool for user-uploaded video hosts
 LICENSE=		gnu-gpl-v3
 

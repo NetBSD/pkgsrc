@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2020/01/18 23:35:14 rillig Exp $
+# $NetBSD: Makefile.common,v 1.19 2020/03/20 11:58:20 nia Exp $
 #
 # used by sysutils/cdrdao/Makefile
 # used by sysutils/gcdmaster/Makefile
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		david@maxwell.net
-HOMEPAGE=		https://cdrdao.sourceforge.net/
+HOMEPAGE=		http://cdrdao.sourceforge.net/
 COMMENT=		Records audio or data CD-Rs in disk-at-once (DAO) mode
 
 PATCHDIR=		${.CURDIR}/../../sysutils/cdrdao/patches

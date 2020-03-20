@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:12 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/20 11:58:19 nia Exp $
 #
 
 DISTNAME=	sshpass-1.06
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sshpass/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://sshpass.sourceforge.net/
+HOMEPAGE=	http://sshpass.sourceforge.net/
 COMMENT=	Non-interactive ssh password auth
 LICENSE=	gnu-gpl-v2
 

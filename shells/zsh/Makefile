@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2020/02/27 03:05:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.96 2020/03/20 11:58:20 nia Exp $
 
 DISTNAME=	zsh-5.8
 CATEGORIES=	shells
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://zsh.sourceforge.net/
+HOMEPAGE=	http://zsh.sourceforge.net/
 COMMENT=	The Z shell
 LICENSE=	gnu-gpl-v2 AND zsh
 

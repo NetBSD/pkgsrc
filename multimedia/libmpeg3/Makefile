@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/01/18 23:33:11 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/03/20 11:58:04 nia Exp $
 #
 
 DISTNAME=	libmpeg3-1.8-src
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=heroines/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://heroines.sourceforge.net/libmpeg3.php3
+HOMEPAGE=	http://heroines.sourceforge.net/libmpeg3.php3
 COMMENT=	MPEG decoding library and tools
 
 .include "../../mk/bsd.prefs.mk"

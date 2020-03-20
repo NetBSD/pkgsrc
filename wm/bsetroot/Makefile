@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/01/18 23:35:40 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/03/20 11:58:32 nia Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
@@ -8,7 +8,7 @@ CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blackboxwm/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://blackboxwm.sourceforge.net/
+HOMEPAGE=	http://blackboxwm.sourceforge.net/
 COMMENT=	Tools to set the root windows background
 
 USE_LANGUAGES=	c c++

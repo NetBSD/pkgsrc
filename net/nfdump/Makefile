@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/03/10 22:10:47 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2020/03/20 11:58:09 nia Exp $
 #
 
 DISTNAME=	nfdump-1.6.12
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nfdump/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://nfdump.sourceforge.net/
+HOMEPAGE=	http://nfdump.sourceforge.net/
 COMMENT=	Tools to collect and process netflow data
 LICENSE=	modified-bsd
 

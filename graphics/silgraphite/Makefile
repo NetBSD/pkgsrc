@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:32:19 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/20 11:57:53 nia Exp $
 
 DISTNAME=	silgraphite-2.3.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=silgraphite/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://silgraphite.sourceforge.net/
+HOMEPAGE=	http://silgraphite.sourceforge.net/
 COMMENT=	Font engine for complex non-Roman writing systems
 
 GNU_CONFIGURE=	yes

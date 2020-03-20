@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/01/18 23:35:25 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/03/20 11:58:25 nia Exp $
 #
 
 DISTNAME=	dtdparse-2.0beta6
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dtdparse/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://dtdparse.sourceforge.net/
+HOMEPAGE=	http://dtdparse.sourceforge.net/
 COMMENT=	Reads an SGML or XML DTD and constructs an XML database
 
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser

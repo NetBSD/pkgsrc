@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/01/18 23:33:16 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/03/20 11:58:07 nia Exp $
 #
 
 DISTNAME=	ipcheck.233
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://ipcheck.sourceforge.net/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ipcheck.sourceforge.net/
+HOMEPAGE=	http://ipcheck.sourceforge.net/
 COMMENT=	Python client for the dyndns service
 
 WRKSRC=		${WRKDIR}

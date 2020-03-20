@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/03/08 16:50:48 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2020/03/20 11:58:05 nia Exp $
 #
 
 DISTNAME=		libbt-1.05
@@ -8,7 +8,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libbt/}
 
 MAINTAINER=		reinoud@NetBSD.org
-HOMEPAGE=		https://libbt.sourceforge.net/
+HOMEPAGE=		http://libbt.sourceforge.net/
 COMMENT=		Fast bittorrent client and library written in C
 
 USE_TOOLS+=		makedepend

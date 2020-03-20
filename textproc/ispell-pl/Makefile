@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:28 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/20 11:58:27 nia Exp $
 #
 
 DISTNAME=	ispell-pl-20021127
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ispell-pl/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	https://ispell-pl.sourceforge.net/
+HOMEPAGE=	http://ispell-pl.sourceforge.net/
 COMMENT=	Polish dictionary for interactive spelling checker
 
 CONFLICTS+=	ispell-polski-[0-9]*

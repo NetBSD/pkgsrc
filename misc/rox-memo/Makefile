@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 23:33:09 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/20 11:58:03 nia Exp $
 #
 
 DISTNAME=	Memo-1.9.5
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	https://rox.sourceforge.net/desktop/node/159
+HOMEPAGE=	http://rox.sourceforge.net/desktop/node/159
 COMMENT=	Reminds you about things
 
 DEPENDS+=	rox-lib>=2.0.2nb2:../../devel/rox-lib

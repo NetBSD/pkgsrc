@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2020/03/10 22:10:52 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2020/03/20 11:58:14 nia Exp $
 
 INSTALLVERSION=	5.3
 VERSION=	${INSTALLVERSION}.3
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	gdt@NetBSD.org
 COMMENT=	Drivers for Canon, Epson, Lexmark, and PCL printers
-HOMEPAGE=	https://gutenprint.sourceforge.net/
+HOMEPAGE=	http://gutenprint.sourceforge.net/
 
 LICENSE=	gnu-gpl-v2
 

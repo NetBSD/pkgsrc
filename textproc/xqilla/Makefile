@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:36 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/20 11:58:30 nia Exp $
 
 DISTNAME=	XQilla-2.3.3
 PKGNAME=	${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xqilla/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://xqilla.sourceforge.net/
+HOMEPAGE=	http://xqilla.sourceforge.net/
 COMMENT=	XQuery and XPath 2 processor
 LICENSE=	apache-2.0
 

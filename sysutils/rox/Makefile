@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2020/03/10 22:11:01 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2020/03/20 11:58:22 nia Exp $
 #
 
 DISTNAME=	rox-filer-2.10
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	https://rox.sourceforge.net/
+HOMEPAGE=	http://rox.sourceforge.net/
 COMMENT=	RISC OS-like filer for X
 
 CONFLICTS=	rox-base-[0-9]*

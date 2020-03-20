@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/18 23:32:49 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2020/03/20 11:57:59 nia Exp $
 #
 
 DISTNAME=	pulsar-0.1.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pulsar/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	martin@NetBSD.org
-HOMEPAGE=	https://pulsar.sourceforge.net/
+HOMEPAGE=	http://pulsar.sourceforge.net/
 COMMENT=	Small, secure POP3 daemon, featuring native SSL support
 
 MAKE_JOBS_SAFE=		no
