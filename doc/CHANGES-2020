@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1669 2020/03/20 01:38:05 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1670 2020/03/20 07:46:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2253,3 +2253,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/git to 2.25.2 [adam 2020-03-19]
 	Added sysutils/tealdeer version 1.3.0 [bsiegert 2020-03-19]
 	Updated geography/py-google-maps-services-python to 4.2.0 [ryoon 2020-03-20]
+	Updated www/py-httpx to 0.12.1 [adam 2020-03-20]
+	Updated textproc/py-elementpath to 1.4.3 [adam 2020-03-20]
