@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.81 2020/03/20 15:36:25 taca Exp $
+# $NetBSD: rails.mk,v 1.82 2020/03/20 16:42:43 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -9,7 +9,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_DEFAULT
 #	Select default Ruby on Rails version.
 #
-#	Possible values: 42 51 52
+#	Possible values: 42 51 52 60
 #	Default: 52
 #
 #
@@ -27,7 +27,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_ACCEPTED
 #	The Ruby on Rails versions that are acceptable for the package.
 #
-#	Possible values: 42 51 52
+#	Possible values: 42 51 52 60
 #	Default: (empty)
 #
 # RUBY_RAILS_STRICT_DEP
@@ -41,7 +41,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS
 #	Selected Ruby on Rails version.
 #
-#	Possible values: 42 51 52
+#	Possible values: 42 51 52 60
 #
 
 #
@@ -50,13 +50,14 @@ _RUBY_RAILS_MK=	# defined
 RUBY_RAILS42_VERSION?=	4.2.11.1
 RUBY_RAILS51_VERSION?=	5.1.7
 RUBY_RAILS52_VERSION?=	5.2.4.2
+RUBY_RAILS60_VERSION?=	6.0.2.2
 
 RUBY_RAILS_ACCEPTED?=	# defined
 RUBY_RAILS_DEFAULT?=	52
 
 RUBY_RAILS_STRICT_DEP?=	no
 
-RUBY_RAILS_SUPPORTED=	42 51 52
+RUBY_RAILS_SUPPORTED=	42 51 52 60
 
 .if empty(RUBY_RAILS_SUPPORTED:M${RUBY_RAILS_DEFAULT})
 .  error Unsupported RUBY_RAILS_DEFAULT: ${RUBY_RAILS_DEFAULT}
@@ -89,7 +90,9 @@ RUBY_RAILS?=	${rr}
 
 RUBY_RAILS?=	${RUBY_RAILS_SUPPORTED}
 
-.if ${RUBY_RAILS} == "52"
+.if ${RUBY_RAILS} == "60"
+RAILS_VERSION:=	${RUBY_RAILS60_VERSION}
+.elif ${RUBY_RAILS} == "52"
 RAILS_VERSION:=	${RUBY_RAILS52_VERSION}
 .elif ${RUBY_RAILS} == "51"
 RAILS_VERSION:=	${RUBY_RAILS51_VERSION}
@@ -152,6 +155,12 @@ RUBY_ACTIONCABLE_DEPENDS= \
 .if ${RUBY_RAILS} >= 51
 RUBY_ACTIVESTORAGE_DEPENDS= \
 	${RUBY_PKGPREFIX}-activestorage${_RAILS_DEP}:../../devel/ruby-activestorage${RUBY_RAILS}
+.endif
+.if ${RUBY_RAILS} >= 60
+RUBY_ACTIONMAILBOX_DEPENDS= \
+	${RUBY_PKGPREFIX}-actionmailbox${_RAILS_DEP}:../../mail/ruby-actionmailbox${RUBY_RAILS}
+RUBY_ACTIONTEXT_DEPENDS= \
+	${RUBY_PKGPREFIX}-actiontext${_RAILS_DEP}:../../textproc/ruby-actiontext${RUBY_RAILS}
 .endif
 
 .endif
