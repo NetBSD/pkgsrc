@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 23:30:37 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/03/20 11:57:30 nia Exp $
 
 DISTNAME=	pychecker-0.8.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pychecker/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pychecker.sourceforge.net/
+HOMEPAGE=	http://pychecker.sourceforge.net/
 COMMENT=	Python code checker
 LICENSE=	modified-bsd
 

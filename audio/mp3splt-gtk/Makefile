@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2020/03/10 22:09:23 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2020/03/20 11:57:23 nia Exp $
 #
 
 DISTNAME=	mp3splt-gtk-0.9.2
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3splt/}
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	https://mp3splt.sourceforge.net/
+HOMEPAGE=	http://mp3splt.sourceforge.net/
 COMMENT=	Utility to split MP3 (VBR supported) and OGG files
 LICENSE=	gnu-gpl-v2
 

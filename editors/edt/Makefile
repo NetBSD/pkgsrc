@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:30:44 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/20 11:57:34 nia Exp $
 
 DISTNAME=	edt_1.9
 PKGNAME=	${DISTNAME:C:_:-:}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=edt-text-editor/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://edt-text-editor.sourceforge.net/
+HOMEPAGE=	http://edt-text-editor.sourceforge.net/
 COMMENT=	Text editor which emulates the VAX VMS EDT editor
 LICENSE=	gnu-lgpl-v2.1
 
