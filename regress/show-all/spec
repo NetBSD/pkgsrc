@@ -1,4 +1,4 @@
-# $NetBSD: spec,v 1.3 2020/03/20 15:45:12 rillig Exp $
+# $NetBSD: spec,v 1.4 2020/03/20 16:39:03 rillig Exp $
 
 tmpdir=${TMPDIR:-/tmp}/pkgsrc-show-all
 rm -rf "$tmpdir"
@@ -49,7 +49,7 @@ regress:
   pkg	REGRESS.undefined       # undefined
   pkg	REGRESS.empty=          # empty
   pkg	REGRESS.space=           # ends with space
-  pkg	REGRESS.value=          All * kinds of `strange' \escape $characters
+  pkg	REGRESS.value=          All * kinds of `strange' \escape $$characters
   pkg	*=                      show-all-regress
   pkg	**=                     asterisk
 
@@ -71,17 +71,17 @@ EOF
 	require_file "$tmpdir/show-all-regress.out" --equals "$tmpdir/expected"
 
 
-	# TODO: What the heck is going on here?
-	# The output of the ENV and ARGS cases should be the same as in PLAIN.
+	# Up to 2020-03-20, the output of the ENV and ARGS variables differed
+	# a lot from the PLAIN variable.
 	#
 	cat <<'EOF' > "$tmpdir/expected"
 shellvar:
-  pkg	SHELLVAR_PLAIN=         "$var ${var} $other"
+  pkg	SHELLVAR_PLAIN=         "$$var $${var} $$other $$$$"
   pkg	SHELLVAR_ENV=           \
-				".MAKE.LEVEL.ENVar  ther" \
+				"$$var $${var} $$other $$$$" \
 				# end of SHELLVAR_ENV (sorted)
   pkg	SHELLVAR_ARGS=          \
-				".MAKE.LEVEL.ENVar  ther" \
+				"$$var $${var} $$other $$$$" \
 				# end of SHELLVAR_ARGS
 
 EOF
