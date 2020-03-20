@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2019/03/03 16:35:33 taca Exp $
+$NetBSD: distinfo,v 1.10 2020/03/20 15:13:58 taca Exp $
 
-SHA1 (jquery-rails-4.3.3.gem) = 80be887a08527539c202784cf5ff7869537a52cd
-RMD160 (jquery-rails-4.3.3.gem) = 13cc79d414034b86333ece88a503622c14a7a63c
-SHA512 (jquery-rails-4.3.3.gem) = 55cef78f794da90ef1f7394f919810425589d3d92dc71375c3ec2f0cd6d207e0854826887e1a69503bc6609c60c10886e0b868d2d2df46ae052c90f322aef974
-Size (jquery-rails-4.3.3.gem) = 519168 bytes
+SHA1 (jquery-rails-4.3.5.gem) = 47f0f86bc4d35365255ac0e0d29b5c54caabebd9
+RMD160 (jquery-rails-4.3.5.gem) = b82c74632999e9581700a93abf69eab1aca0a208
+SHA512 (jquery-rails-4.3.5.gem) = 78afb6ad2cfa331ffed52ef6ba67bbd6e1fd7da210223e1b0cd097b0823455036aba58a1f31b70c8a9525f1f62508ec7f688924af7b0b18f262ab8d845c9ad78
+Size (jquery-rails-4.3.5.gem) = 523776 bytes
