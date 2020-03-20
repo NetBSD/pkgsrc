@@ -1,8 +1,22 @@
-# $NetBSD: options.mk,v 1.34 2019/07/15 13:47:14 nia Exp $
+# $NetBSD: options.mk,v 1.35 2020/03/20 10:43:35 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	adplug avahi bzip2 cdparanoia chromaprint curl dbus faad ffmpeg fluidsynth id3 libao libgme lame jack libmms libmpdclient libsoxr libwildmidi mikmod modplug musepack musicpd-soundcloud openal pulseaudio samba samplerate sidplay shine shout sndfile tremor twolame upnp wavpack zziplib
-PKG_SUGGESTED_OPTIONS=	curl faad ffmpeg id3 libao musepack samplerate shout sndfile vorbis
+
+# audio outputs
+PKG_SUPPORTED_OPTIONS+=	jack openal libao pulseaudio 
+# codecs
+PKG_SUPPORTED_OPTIONS+=	adplug faad ffmpeg fluidsynth libgme libwildmidi
+PKG_SUPPORTED_OPTIONS+=	mikmod modplug musepack sidplay wavpack
+# codecs (encoding only)
+PKG_SUPPORTED_OPTIONS+=	lame shine twolame
+# archive formats
+PKG_SUPPORTED_OPTIONS+=	bzip2 zziplib
+# networking/comms
+PKG_SUPPORTED_OPTIONS+=	avahi curl dbus libmms samba shout upnp
+# misc
+PKG_SUPPORTED_OPTIONS+=	cdparanoia chromaprint musicpd-soundcloud libmpdclient
+
+PKG_SUGGESTED_OPTIONS=	curl faad ffmpeg libao musepack samplerate shout vorbis
 
 PKG_OPTIONS_LEGACY_OPTS+=	game-music-emu:libgme
 
@@ -77,12 +91,6 @@ MESON_ARGS+=	-Dfluidsynth=disabled
 .  include "../../audio/game-music-emu/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dgme=disabled
-.endif
-
-.if !empty(PKG_OPTIONS:Mid3)
-.  include "../../audio/libid3tag/buildlink3.mk"
-.else
-MESON_ARGS+=	-Did3tag=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
@@ -193,12 +201,6 @@ MESON_ARGS+=	-Dsidplay=disabled
 .  include "../../audio/lame/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dshout=disabled
-.endif
-
-.if !empty(PKG_OPTIONS:Msndfile)
-.  include "../../audio/libsndfile/buildlink3.mk"
-.else
-MESON_ARGS+=	-Dsndfile=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mtremor)
