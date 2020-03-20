@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/10/09 17:03:46 taca Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/20 15:25:50 taca Exp $
 
 DISTNAME=	activemodel-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activemodel${RUBY_RAILS}-${RAILS_VERSION}
@@ -10,6 +10,8 @@ COMMENT=	Toolkit for building modeling frameworks (part of Rails 5.1)
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
+
+USE_LANGUAGES=	# none
 
 RUBY_RAILS_ACCEPTED=	51
 RUBY_RAILS_STRICT_DEP=	yes
