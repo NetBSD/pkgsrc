@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.26 2017/09/28 16:15:49 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.27 2020/03/20 19:40:39 rillig Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -29,6 +29,7 @@ DJB_RESTRICTED?=	YES
 DJB_MAKE_TARGETS?=	YES
 DJB_BUILD_TARGETS?=	# empty
 DJB_INSTALL_TARGETS?=	# empty
+DJB_ERRNO_HACK?=	YES
 DJB_SLASHPACKAGE?=	NO
 .if !empty(DJB_SLASHPACKAGE:M[yY][eE][sS])
 DJB_CONFIG_DIR?=	${WRKSRC}/src
@@ -82,6 +83,7 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} package/compile ${DJB_BUILD_ARGS}
 .endif
 
+.if !empty(DJB_ERRNO_HACK:M[yY][eE][sS])
 PKG_SUPPORTED_OPTIONS+=	djbware-errno-hack
 PKG_SUGGESTED_OPTIONS+=	djbware-errno-hack
 
@@ -102,6 +104,9 @@ SUBST_STAGE.djbware=	do-configure
 SUBST_FILES.djbware+=	error.h
 SUBST_SED.djbware=	-e 's|^extern\ int\ errno\;|\#include \<errno.h\>|'
 SUBST_MESSAGE.djbware=	Correcting definition of errno.
+.endif
+.else
+.sinclude "${PKGDIR}/options.mk"
 .endif
 
 .endif	# DJBWARE_MK
