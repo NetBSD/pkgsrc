@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1679 2020/03/20 15:15:17 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1680 2020/03/20 15:31:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2269,3 +2269,13 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/ruby-sprockets-rails to 3.2.1nb1 [taca 2020-03-20]
 	Updated devel/ruby-shoulda-matchers to 3.1.3 [taca 2020-03-20]
 	Updated www/ruby-jquery-rails to 4.3.5 [taca 2020-03-20]
+	Updated devel/ruby-activesupport51 to 5.1.7 [taca 2020-03-20]
+	Updated devel/ruby-activemodel51 to 5.1.7 [taca 2020-03-20]
+	Updated devel/ruby-activejob51 to 5.1.7 [taca 2020-03-20]
+	Updated www/ruby-actionview51 to 5.1.7 [taca 2020-03-20]
+	Updated www/ruby-actionpack51 to 5.1.7 [taca 2020-03-20]
+	Updated www/ruby-actioncable51 to 5.1.7 [taca 2020-03-20]
+	Updated databases/ruby-activerecord51 to 5.1.7 [taca 2020-03-20]
+	Updated mail/ruby-actionmailer51 to 5.1.7 [taca 2020-03-20]
+	Updated devel/ruby-railties51 to 5.1.7 [taca 2020-03-20]
+	Updated www/ruby-rails51 to 5.1.7 [taca 2020-03-20]
