@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2020/01/18 23:30:32 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/03/20 11:57:27 nia Exp $
 
 DISTNAME=	libmtp-1.1.16
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmtp/}
 
 MAINTAINER=	ku3@sl.aanet.ru
-HOMEPAGE=	https://libmtp.sourceforge.net/
+HOMEPAGE=	http://libmtp.sourceforge.net/
 COMMENT=	Implementation of Media Transfer Protocol (MTP)
 LICENSE=	gnu-lgpl-v2
 

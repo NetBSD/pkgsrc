@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/02/22 13:22:48 mef Exp $
+# $NetBSD: Makefile,v 1.23 2020/03/20 11:57:28 nia Exp $
 
 DISTNAME=	CPANPLUS-0.9906
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CPANPLUS/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cpanplus.sourceforge.net/
+HOMEPAGE=	http://cpanplus.sourceforge.net/
 COMMENT=	Ameliorated interface to the CPAN
 LICENSE=	${PERL5_LICENSE}
 

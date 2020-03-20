@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/03/08 16:49:34 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2020/03/20 11:57:40 nia Exp $
 #
 
 DISTNAME=	CriticalMass-1.0.2
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=criticalmass/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://criticalmass.sourceforge.net/
+HOMEPAGE=	http://criticalmass.sourceforge.net/
 COMMENT=	SDL/OpenGL space shoot'em up game
 
 GNU_CONFIGURE=	YES

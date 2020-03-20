@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2020/03/10 22:09:44 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2020/03/20 11:57:35 nia Exp $
 
 DISTNAME=	xournal-0.4.8.2016
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xournal/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://xournal.sourceforge.net/
+HOMEPAGE=	http://xournal.sourceforge.net/
 COMMENT=	Take notes, sketch and annotate PDFs
 LICENSE=	gnu-gpl-v2
 

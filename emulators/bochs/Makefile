@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2020/03/10 22:09:46 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2020/03/20 11:57:35 nia Exp $
 
 DISTNAME=		bochs-2.6.9
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://bochs.sourceforge.net/
+HOMEPAGE=		http://bochs.sourceforge.net/
 COMMENT=		IA32 and AMD64 PC emulator
 LICENSE=		gnu-lgpl-v2.1
 

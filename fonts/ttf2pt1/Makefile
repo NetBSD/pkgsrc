@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/01/18 23:31:58 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/03/20 11:57:39 nia Exp $
 #
 
 DISTNAME=	ttf2pt1-3.4.4
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ttf2pt1/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	reinoud@NetBSD.org
-HOMEPAGE=	https://ttf2pt1.sourceforge.net/
+HOMEPAGE=	http://ttf2pt1.sourceforge.net/
 COMMENT=	TrueType font converter to Postscript type 1
 
 DEPENDS+=	t1utils-[0-9]*:../../fonts/t1utils

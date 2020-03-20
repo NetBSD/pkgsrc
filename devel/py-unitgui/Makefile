@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/01/18 23:30:39 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/03/20 11:57:31 nia Exp $
 
 DISTNAME=	pyunit-1.4.1
 PKGNAME=	${PYPKGPREFIX}-unitgui-1.4.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyunit/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pyunit.sourceforge.net/
+HOMEPAGE=	http://pyunit.sourceforge.net/
 COMMENT=	Unit testing framework for python tk
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk

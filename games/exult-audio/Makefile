@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:32:00 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/20 11:57:41 nia Exp $
 
 DISTNAME=	exult_audio
 PKGNAME=	exultaudio-1.0
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=exult/exult-data/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	nikkohigashi@gmail.com
-HOMEPAGE=	https://exult.sourceforge.net/
+HOMEPAGE=	http://exult.sourceforge.net/
 COMMENT=	Digital music and digital wave sound effects data for Exult
 LICENSE=	gnu-gpl-v2
 
