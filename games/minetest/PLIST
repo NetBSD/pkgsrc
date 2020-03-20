@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/28 12:54:25 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/20 17:06:20 nia Exp $
 bin/minetest
 bin/minetestserver
 man/man6/minetest.6
@@ -1113,6 +1113,7 @@ share/minetest/games/minimal/mods/test/formspec.lua
 share/minetest/games/minimal/mods/test/init.lua
 share/minetest/games/minimal/mods/test/mod.conf
 share/minetest/games/minimal/mods/test/player.lua
+share/minetest/locale/ar/LC_MESSAGES/minetest.mo
 share/minetest/locale/ca/LC_MESSAGES/minetest.mo
 share/minetest/locale/cs/LC_MESSAGES/minetest.mo
 share/minetest/locale/da/LC_MESSAGES/minetest.mo
@@ -1122,6 +1123,7 @@ share/minetest/locale/el/LC_MESSAGES/minetest.mo
 share/minetest/locale/eo/LC_MESSAGES/minetest.mo
 share/minetest/locale/es/LC_MESSAGES/minetest.mo
 share/minetest/locale/et/LC_MESSAGES/minetest.mo
+share/minetest/locale/eu/LC_MESSAGES/minetest.mo
 share/minetest/locale/fil/LC_MESSAGES/minetest.mo
 share/minetest/locale/fr/LC_MESSAGES/minetest.mo
 share/minetest/locale/hu/LC_MESSAGES/minetest.mo
