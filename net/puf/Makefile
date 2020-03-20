@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:33:20 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/20 11:58:10 nia Exp $
 #
 
 DISTNAME=	puf-1.0.0
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=puf/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://puf.sourceforge.net/
+HOMEPAGE=	http://puf.sourceforge.net/
 COMMENT=	Parallel URL fetcher
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2020/03/10 22:09:07 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2020/03/20 11:58:36 nia Exp $
 
 DISTNAME=	gtksourceview-2.10.5
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtksourceview/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gtksourceview.sourceforge.net/
+HOMEPAGE=	http://gtksourceview.sourceforge.net/
 COMMENT=	Text widget that extends GTK2's GtkTextView widget (v2)
 LICENSE=	gnu-gpl-v2
 

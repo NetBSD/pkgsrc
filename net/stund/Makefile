@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:22 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/20 11:58:11 nia Exp $
 
 DISTNAME=	stund-0.97
 CATEGORIES=	net
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stun/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jmcneill@invisible.ca
-HOMEPAGE=	https://stun.sourceforge.net/
+HOMEPAGE=	http://stun.sourceforge.net/
 COMMENT=	STUN Client and Server
 LICENSE=	vovida-license
 

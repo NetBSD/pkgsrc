@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 23:35:28 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/20 11:58:27 nia Exp $
 
 DISTNAME=	libcsv-3.0.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcsv/}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	https://libcsv.sourceforge.net/
+HOMEPAGE=	http://libcsv.sourceforge.net/
 COMMENT=	CSV library written in pure ANSI C89
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2
 

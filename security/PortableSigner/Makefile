@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 23:35:06 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/20 11:58:15 nia Exp $
 
 DISTNAME=	PortableSigner-Generic-2.0.38c0573
 PKGNAME=	${DISTNAME:S/-Generic//}
@@ -7,7 +7,7 @@ MASTER_SITES=	http://sourceforge.net/projects/portablesigner/files/portablesigne
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://portablesigner.sourceforge.net/
+HOMEPAGE=	http://portablesigner.sourceforge.net/
 COMMENT=	Tool for digital signing (with X.509 certificates) of PDF files
 LICENSE=	eupl-v1.1
 

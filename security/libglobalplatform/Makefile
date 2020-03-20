@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:35:08 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/03/20 11:58:17 nia Exp $
 
 DISTNAME=	globalplatform-6.0.0
 PKGNAME=	lib${DISTNAME}
@@ -13,7 +13,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:@.SITE.@${.SITE.}globalplatform/GlobalPlatform%20Library/GlobalPlatform%20Library%20${PKGVERSION_NOREV}/@}
 
 MAINTAINER=	rhansen@bbn.com
-HOMEPAGE=	https://globalplatform.sourceforge.net/
+HOMEPAGE=	http://globalplatform.sourceforge.net/
 COMMENT=	C library for managing GlobalPlatform smart card contents
 LICENSE=	gnu-gpl-v3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:35:11 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/20 11:58:18 nia Exp $
 #
 
 DISTNAME=	pev-0.80
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pev/}
 WRKSRC=		${WRKDIR}/pev
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://pev.sourceforge.net/
+HOMEPAGE=	http://pev.sourceforge.net/
 COMMENT=	The PE analysis toolkit
 
 LICENSE=	gnu-gpl-v3

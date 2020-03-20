@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 23:35:06 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/03/20 11:58:16 nia Exp $
 #
 
 DISTNAME=	aide-0.6
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.cs.tut.fi/pub/src/gnu/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://aide.sourceforge.net/
+HOMEPAGE=	http://aide.sourceforge.net/
 COMMENT=	Older intrusion detection system for checking file integrity
 
 GNU_CONFIGURE=	yes

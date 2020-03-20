@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/03/08 16:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/03/20 11:58:17 nia Exp $
 
 DISTNAME=	liboauth-1.0.3
 PKGREVISION=	16
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=liboauth/}
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	https://liboauth.sourceforge.net/
+HOMEPAGE=	http://liboauth.sourceforge.net/
 COMMENT=	Embeddable oauth 1.0 implementation
 LICENSE=	mit AND gnu-gpl-v2
 

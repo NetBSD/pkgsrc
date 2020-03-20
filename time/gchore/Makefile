@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/03/10 22:11:05 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2020/03/20 11:58:31 nia Exp $
 #
 
 DISTNAME=	gchore-1.0
@@ -7,7 +7,7 @@ CATEGORIES=	x11 time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gchore/}
 
 MAINTAINER=	root@garbled.net
-HOMEPAGE=	https://gchore.sourceforge.net/
+HOMEPAGE=	http://gchore.sourceforge.net/
 COMMENT=	Chore reminder tool with gtk UI
 
 USE_TOOLS+=		pkg-config

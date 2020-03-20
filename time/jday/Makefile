@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:35:37 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/03/20 11:58:31 nia Exp $
 
 DISTNAME=		jday-2.4
 CATEGORIES=		time
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jday/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://jday.sourceforge.net/
+HOMEPAGE=		http://jday.sourceforge.net/
 COMMENT=		Julian date calculator
 LICENSE=		2-clause-bsd
 

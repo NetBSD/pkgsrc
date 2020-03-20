@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/01/18 23:33:16 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/03/20 11:58:07 nia Exp $
 
 DISTNAME=	iperf-2.0.5
 PKGREVISION=	1
@@ -10,7 +10,7 @@ PATCHFILES=		nomaxcpu.patch
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://iperf.sourceforge.net/
+HOMEPAGE=	http://iperf.sourceforge.net/
 COMMENT=	TCP and UDP bandwidth performance measurement tool
 LICENSE=	modified-bsd
 

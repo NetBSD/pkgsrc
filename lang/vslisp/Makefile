@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/01/18 23:32:46 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/03/20 11:57:56 nia Exp $
 
 DISTNAME=	vslisp-4.0-1
 PKGNAME=	vslisp-4.0.1
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vslisp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://vslisp.sourceforge.net/
+HOMEPAGE=	http://vslisp.sourceforge.net/
 COMMENT=	Embeddable Lisp library and standalone interpreter
 
 # funcs.c:153:17: error: use of undeclared identifier 'r'

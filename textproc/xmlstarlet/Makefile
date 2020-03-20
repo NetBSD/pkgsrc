@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/01/18 23:35:36 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/03/20 11:58:30 nia Exp $
 #
 
 DISTNAME=		xmlstarlet-1.6.1
@@ -6,7 +6,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmlstar/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://xmlstar.sourceforge.net/
+HOMEPAGE=		http://xmlstar.sourceforge.net/
 COMMENT=		Command line utilities for XML manipulation
 LICENSE=		mit
 
