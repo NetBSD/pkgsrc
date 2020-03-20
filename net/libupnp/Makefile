@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2020/01/26 05:26:25 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/03/20 20:46:40 joerg Exp $
 
 DISTNAME=		libupnp-1.8.4
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pupnp/}
 EXTRACT_SUFX=		.tar.bz2
