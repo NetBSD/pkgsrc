@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/02/21 06:44:35 tsutsui Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/20 00:57:59 joerg Exp $
 
 PKGNAME=	${RUBY_PKGPREFIX}-mikutter-plugins-twitter-4.0
 DIST_SUBDIR=	mikutter-plugins
@@ -10,6 +10,8 @@ MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	https://github.com/mikutter/twitter_bootstrap
 COMMENT=	Plugins for mikutter to use Twitter
 LICENSE=	mit
+
+RUBY_VERSIONS_INCOMPATIBLE=	24
 
 PLUGIN_DISTNAME+=	api_request_file_cache-1.0
 # XXX direct message doesn't work after Twitter API changes
