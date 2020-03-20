@@ -1,0 +1,11 @@
+= Railties -- Gluing the Engine to the Rails
+
+Railties is responsible for gluing all frameworks together. Overall, it:
+
+* handles the bootstrapping process for a Rails application;
+
+* manages the +rails+ command line interface;
+
+* and provides the Rails generators core.
+
+This is for Ruby on Rails 6.0.
