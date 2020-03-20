@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.18 2019/09/08 09:01:04 rillig Exp $
+# $NetBSD: show.mk,v 1.19 2020/03/20 16:39:03 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -165,6 +165,9 @@ show-all: show-all-${g}
 # using the :sh modifier may show warnings, for example because ${WRKDIR}
 # doesn't exist.
 
+_SHOW_ALL.d4=	$$$$		# see regress/show-all
+_SHOW_ALL.d8=	$$$$$$$$	# see regress/show-all
+
 show-all-${g}: .PHONY
 	@${RUN} printf '%s:\n' ${g:Q}
 
@@ -181,7 +184,7 @@ show-all-${g}: .PHONY
 	  printf '  %s\t%-23s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
 	  printf '  %s\t%-23s \\\n' ${_LABEL.${c}} ${v:Q}=;		\
-	  printf '\t\t\t\t%s \\\n' ${${v}:O:@x@${x:Q}@};		\
+	  printf '\t\t\t\t%s \\\n' ${${v}:O:C,\\$$,${_SHOW_ALL.d8},g:@x@${x:Q}@}; \
 	  printf '\t\t\t\t# end of %s (sorted)\n' ${v:Q};		\
 	fi
 
@@ -195,7 +198,7 @@ show-all-${g}: .PHONY
 	  printf '  %s\t%-23s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
 	  printf '  %s\t%-23s \\\n' ${_LABEL.${c}} ${v:Q}=;		\
-	  printf '\t\t\t\t%s \\\n' ${${v}:@x@${x:Q}@};			\
+	  printf '\t\t\t\t%s \\\n' ${${v}:C,\\$$,${_SHOW_ALL.d8},g:@x@${x:Q}@}; \
 	  printf '\t\t\t\t# end of %s\n' ${v:Q};			\
 	fi
 
@@ -205,7 +208,7 @@ show-all-${g}: .PHONY
 	${RUN}								\
 	if ${!defined(${v}) :? true : false}; then			\
 	  printf '  %s\t%-23s # undefined\n' ${_LABEL.${c}} ${v:Q};	\
-	elif value=${${v}:U:Q} && test "x$$value" = "x"; then		\
+	elif value=${${v}:U:C,\\$$,${_SHOW_ALL.d4},gW:Q} && test "x$$value" = "x"; then \
 	  printf '  %s\t%-23s # empty\n' ${_LABEL.${c}} ${v:Q}=;	\
 	else								\
 	  case "$$value" in (*[\	\ ]) eol="# ends with space";; (*) eol=""; esac; \
