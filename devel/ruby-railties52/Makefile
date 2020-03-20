@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/03/03 15:01:38 taca Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/20 15:43:05 taca Exp $
 
 DISTNAME=	railties-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-railties${RUBY_RAILS}-${RAILS_VERSION}
@@ -11,7 +11,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
-DEPENDS+=	${RUBY_PKGPREFIX}-thor>=0.18.1<2.0:../../devel/ruby-thor
+DEPENDS+=	${RUBY_PKGPREFIX}-thor>=0.19.0:../../devel/ruby-thor
 DEPENDS+=	${RUBY_PKGPREFIX}-method_source-[0-9]*:../../misc/ruby-method_source
 
 USE_LANGUAGES=	# none
