@@ -1,0 +1,6 @@
+Active Model provides a known set of interfaces for usage in model classes.
+They allow for Action Pack helpers to interact with non-ActiveRecord models,
+for example. Active Model also helps building custom ORMs for use outside of
+the Rails framework.
+
+This is for Ruby on Rails 6.0.
