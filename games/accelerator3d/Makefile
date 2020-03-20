@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:31:58 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/03/20 11:57:39 nia Exp $
 
 DISTNAME=	accelerator-0.1.1
 PKGNAME=	${DISTNAME:S/accelerator/accelerator3d/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=accelerator3d/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://accelerator3d.sourceforge.net/
+HOMEPAGE=	http://accelerator3d.sourceforge.net/
 COMMENT=	Fast-paced, 3D, first-person shoot/dodge-'em-up
 LICENSE=	artistic
 

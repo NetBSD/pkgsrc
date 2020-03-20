@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:30:01 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/20 11:57:22 nia Exp $
 #
 
 DISTNAME=	libmp3splt-0.9.2
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3splt/}
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	https://mp3splt.sourceforge.net/
+HOMEPAGE=	http://mp3splt.sourceforge.net/
 COMMENT=	Split mp3, ogg vorbis and FLAC without decoding
 LICENSE=	gnu-gpl-v2
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.44 2020/01/18 23:32:03 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2020/03/20 11:57:42 nia Exp $
 
 DISTNAME=	lbreakout2-2.6.5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lgames/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://lgames.sourceforge.net/LBreakout2/
+HOMEPAGE=	http://lgames.sourceforge.net/LBreakout2/
 COMMENT=	Breakout-style arcade game
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:30:19 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/03/20 11:57:25 nia Exp $
 #
 
 DISTNAME=	cx_Oracle-5.0.2
@@ -7,7 +7,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cx-oracle/}
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	https://cx-oracle.sourceforge.net/
+HOMEPAGE=	http://cx-oracle.sourceforge.net/
 COMMENT=	Oracle binding for Python
 
 PYDISTUTILSPKG=	yes

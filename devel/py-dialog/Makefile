@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/02/04 17:17:06 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/20 11:57:30 nia Exp $
 
 DISTNAME=	pythondialog-3.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python//}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pythondialog/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pythondialog.sourceforge.net/
+HOMEPAGE=	http://pythondialog.sourceforge.net/
 COMMENT=	Python wrapper for the dialog utility
 LICENSE=	gnu-lgpl-v2.1
 

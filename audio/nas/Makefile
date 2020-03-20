@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2020/01/18 23:30:03 rillig Exp $
+# $NetBSD: Makefile,v 1.101 2020/03/20 11:57:23 nia Exp $
 
 DISTNAME=	nas-1.9.4.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nas/}
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	https://nas.sourceforge.net/
+HOMEPAGE=	http://nas.sourceforge.net/
 COMMENT=	Network Audio System
 LICENSE=	mit # with no-advertisement clause
 

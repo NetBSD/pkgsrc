@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/01/18 23:30:46 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/03/20 11:57:35 nia Exp $
 #
 
 DISTNAME=	speedbar-0.14beta4
@@ -8,7 +8,7 @@ CATEGORIES=	editors devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cedet.sourceforge.net/speedbar.shtml
+HOMEPAGE=	http://cedet.sourceforge.net/speedbar.shtml
 COMMENT=	Directory and code browser for emacs
 
 .include "../../editors/emacs/modules.mk"

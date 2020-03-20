@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/03/08 16:49:17 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/03/20 11:57:29 nia Exp $
 
 DISTNAME=	Glib-Object-Introspection-0.048
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=Glib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gtk2-perl.sourceforge.net/
+HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 COMMENT=	Dynamically create Perl language bindings
 LICENSE=	gnu-lgpl-v2.1
 

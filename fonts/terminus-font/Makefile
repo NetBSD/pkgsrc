@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2020/01/18 23:31:06 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/03/20 11:57:39 nia Exp $
 
 DISTNAME=		terminus-font-4.48
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=terminus-font/}
 
 MAINTAINER=		j+pkgsrc@salmi.ch
-HOMEPAGE=		https://terminus-font.sourceforge.net/
+HOMEPAGE=		http://terminus-font.sourceforge.net/
 COMMENT=		Clean, fixed-width font
 LICENSE=		ofl-v1.1
 

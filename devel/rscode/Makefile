@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:40 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/20 11:57:31 nia Exp $
 #
 
 DISTNAME=	rscode-1.0
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rscode/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://rscode.sourceforge.net/
+HOMEPAGE=	http://rscode.sourceforge.net/
 COMMENT=	Reed Solomon error correction code library
 
 INSTALLATION_DIRS=	bin lib share/doc/rscode

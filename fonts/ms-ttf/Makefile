@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/01/18 23:31:06 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/03/20 11:57:39 nia Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
@@ -10,7 +10,7 @@ DISTFILES=	andale32.exe webdin32.exe trebuc32.exe georgi32.exe \
 		arial32.exe times32.exe courie32.exe
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://corefonts.sourceforge.net/
+HOMEPAGE=	http://corefonts.sourceforge.net/
 COMMENT=	TrueType fonts from Microsoft
 LICENSE=	ms-ttf-license
 

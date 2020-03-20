@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/01/18 23:30:50 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2020/03/20 11:57:36 nia Exp $
 
 DISTNAME=	spim-8.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://pages.cs.wisc.edu/~larus/SPIM/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://spimsimulator.sourceforge.net/
+HOMEPAGE=	http://spimsimulator.sourceforge.net/
 COMMENT=	MIPS R2000 Simulator
 LICENSE=	modified-bsd
 

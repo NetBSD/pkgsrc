@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:30:32 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/20 11:57:27 nia Exp $
 #
 
 DISTNAME=		libnjb-2.2.6
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libnjb/}
 
 MAINTAINER=		ku3@sl.aanet.ru
-HOMEPAGE=		https://libnjb.sourceforge.net/
+HOMEPAGE=		http://libnjb.sourceforge.net/
 COMMENT=		Communicating with some Creative and Dell audio players
 LICENSE=		modified-bsd
 

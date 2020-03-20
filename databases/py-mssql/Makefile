@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/03/08 16:49:06 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2020/03/20 11:57:25 nia Exp $
 
 DISTNAME=		pymssql-1.0.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -7,7 +7,7 @@ CATEGORIES=		databases python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pymssql/}
 
 MAINTAINER=		bartosz.kuzma@gmail.com
-HOMEPAGE=		https://pymssql.sourceforge.net/
+HOMEPAGE=		http://pymssql.sourceforge.net/
 COMMENT=		Python interface to MS SQL
 LICENSE=		gnu-lgpl-v2.1
 

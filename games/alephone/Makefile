@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/01/18 23:31:58 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/03/20 11:57:39 nia Exp $
 
 DISTNAME=	AlephOne-20120514
 PKGNAME=	${DISTNAME:tl}
@@ -8,7 +8,7 @@ MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=marathon/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	christtrekker@users.sourceforge.net
-HOMEPAGE=	https://marathon.sourceforge.net/
+HOMEPAGE=	http://marathon.sourceforge.net/
 COMMENT=	Classic 2.5D FPS game engine, updated to use SDL
 LICENSE=	gnu-gpl-v2
 
