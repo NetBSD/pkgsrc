@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/27 14:32:57 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/20 19:50:48 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go114/AUTHORS
@@ -514,6 +514,7 @@ go114/misc/swig/stdio/file.swig
 go114/misc/swig/stdio/file_test.go
 go114/misc/trace/README.md
 go114/misc/trace/trace_viewer_full.html
+go114/misc/trace/webcomponents.min.js
 go114/misc/wasm/go_js_wasm_exec
 go114/misc/wasm/wasm_exec.html
 go114/misc/wasm/wasm_exec.js
@@ -2163,6 +2164,7 @@ go114/src/cmd/go/testdata/script/test_flag.txt
 go114/src/cmd/go/testdata/script/test_generated_main.txt
 go114/src/cmd/go/testdata/script/test_go111module_cache.txt
 go114/src/cmd/go/testdata/script/test_import_error_stack.txt
+go114/src/cmd/go/testdata/script/test_json_panic_exit.txt
 go114/src/cmd/go/testdata/script/test_main_archive.txt
 go114/src/cmd/go/testdata/script/test_main_twice.txt
 go114/src/cmd/go/testdata/script/test_match_no_tests_build_failure.txt
@@ -8591,6 +8593,7 @@ go114/test/fixedbugs/issue36085.go
 go114/test/fixedbugs/issue36516.go
 go114/test/fixedbugs/issue36723.go
 go114/test/fixedbugs/issue3705.go
+go114/test/fixedbugs/issue37716.go
 go114/test/fixedbugs/issue3783.go
 go114/test/fixedbugs/issue3925.go
 go114/test/fixedbugs/issue4066.go
