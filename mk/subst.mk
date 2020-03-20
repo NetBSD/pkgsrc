@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.63 2020/03/19 16:57:35 rillig Exp $
+# $NetBSD: subst.mk,v 1.64 2020/03/20 06:17:48 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -136,10 +136,15 @@ ${_SUBST_COOKIE.${_class_}}:
 .  if !empty(SUBST_MESSAGE.${_class_})
 	${RUN} ${ECHO_SUBST_MSG} ${SUBST_MESSAGE.${_class_}:Q}
 .  endif
-.for pattern in ${SUBST_FILES.${_class_}}
-	${RUN} cd ${WRKSRC:Q};						\
+	${RUN}								\
+	basedir=${WRKSRC:Q};						\
+	emptydir="$$basedir/.subst-empty";				\
+	patterns=${SUBST_FILES.${_class_}:Q};				\
+	${MKDIR} "$$emptydir"; cd "$$emptydir";				\
+	for pattern in $$patterns; do					\
 	changed=no;							\
-	for file in ${pattern}; do					\
+	cd "$$basedir";							\
+	for file in $$pattern; do					\
 		case $$file in /*) ;; *) file="./$$file";; esac;	\
 		tmpfile="$$file.subst.sav";				\
 		if [ ! -f "$$file" ]; then				\
@@ -166,8 +171,9 @@ ${_SUBST_COOKIE.${_class_}}:
 	done;								\
 	\
 	if test "$$changed,${SUBST_NOOP_OK.${_class_}:tl}" = no,no; then \
-		${FAIL_MSG} "[subst.mk:${_class_}] The pattern "${pattern:Q}" has no effect."; \
-	fi
-.endfor
+		${FAIL_MSG} "[subst.mk:${_class_}] The pattern $$pattern has no effect."; \
+	fi; \
+	done; \
+	${RMDIR} "$$emptydir"
 	${RUN} ${TOUCH} ${TOUCH_FLAGS} ${.TARGET:Q}
 .endfor
