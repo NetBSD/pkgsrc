@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1673 2020/03/20 09:32:26 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1674 2020/03/20 10:23:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2261,3 +2261,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/rust to 1.42.0nb1 [he 2020-03-20]
 	Updated textproc/py-ICU to 2.4.3 [adam 2020-03-20]
 	Updated devel/py-semantic_version to 2.8.4 [adam 2020-03-20]
+	Updated audio/musicpd to 0.21.21 [nia 2020-03-20]
