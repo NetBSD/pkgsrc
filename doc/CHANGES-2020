@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1681 2020/03/20 15:44:10 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1682 2020/03/20 15:47:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2290,3 +2290,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/ruby-actionmailer52 to 5.2.4.2 [taca 2020-03-20]
 	Updated devel/ruby-railties52 to 5.2.4.2 [taca 2020-03-20]
 	Updated www/ruby-rails52 to 5.2.4.2 [taca 2020-03-20]
+	Updated www/ruby-websocket-driver to 0.7.1 [taca 2020-03-20]
