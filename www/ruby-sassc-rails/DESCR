@@ -1,0 +1,5 @@
+SassC::Rails
+
+We all love working with Sass, but compilation can take quite a long time for
+larger codebases.  This gem integrates the C implementation of Sass, LibSass,
+into the asset pipeline.
