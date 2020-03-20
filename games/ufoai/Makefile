@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/03/08 16:49:48 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2020/03/20 11:57:45 nia Exp $
 
 DISTNAME=		ufoai-2.2.1
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufoai/}
@@ -13,7 +13,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}-source
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	UFO Alien Invasion
-HOMEPAGE=	https://ufoai.sourceforge.net/
+HOMEPAGE=	http://ufoai.sourceforge.net/
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	tar gmake bzip2 msgfmt

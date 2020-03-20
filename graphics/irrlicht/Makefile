@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 23:32:14 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/20 11:57:49 nia Exp $
 
 DISTNAME=	irrlicht-1.8.4
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=irrlicht/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://irrlicht.sourceforge.net/
+HOMEPAGE=	http://irrlicht.sourceforge.net/
 COMMENT=	Open source high performance real-time 3D engine
 LICENSE=	zlib
 
