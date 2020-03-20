@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/05/21 16:01:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/03/20 16:10:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES
@@ -313,6 +313,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Phnom_Penh.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Pontianak.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Pyongyang.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Qatar.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Qostanay.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Qyzylorda.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Rangoon.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Riyadh.rb
