@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/01/18 23:32:44 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2020/03/20 11:57:56 nia Exp $
 
 DISTNAME=		oo2c_${BITS}-2.0.11
 PKGNAME=		oo2c-2.0.11
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ooc/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://ooc.sourceforge.net/
+HOMEPAGE=		http://ooc.sourceforge.net/
 COMMENT=		Optimizing Oberon-2 Compiler
 
 DEPENDS+=		libtool-base-[0-9]*:../../devel/libtool-base

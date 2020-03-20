@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/03/08 16:50:55 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2020/03/20 11:58:08 nia Exp $
 #
 
 DISTNAME=	libquvi-0.4.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quvi/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://quvi.sourceforge.net/
+HOMEPAGE=	http://quvi.sourceforge.net/
 COMMENT=	Library for quvi
 LICENSE=	gnu-lgpl-v2.1
 

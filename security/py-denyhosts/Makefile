@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/01/18 23:35:12 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/03/20 11:58:19 nia Exp $
 
 VER=		2.6
 DISTNAME=	DenyHosts-${VER}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=denyhosts/}
 LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	he@NetBSD.org
-HOMEPAGE=	https://denyhosts.sourceforge.net/
+HOMEPAGE=	http://denyhosts.sourceforge.net/
 COMMENT=	Watch auth log for invalid ssh login attempts and block hosts
 
 PYDISTUTILSPKG=	yes

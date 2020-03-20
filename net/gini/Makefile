@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/01/18 23:33:15 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/20 11:58:06 nia Exp $
 #
 
 DISTNAME=		gini-0.5.1
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gini/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://gini.sourceforge.net/
+HOMEPAGE=		http://gini.sourceforge.net/
 COMMENT=		Free streaming media server
 
 MAKE_JOBS_SAFE=		no

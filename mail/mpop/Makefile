@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/03/08 16:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2020/03/20 11:57:58 nia Exp $
 
 DISTNAME=	mpop-1.2.6
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpop/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	https://mpop.sourceforge.net/
+HOMEPAGE=	http://mpop.sourceforge.net/
 COMMENT=	Small, fast and portable POP3 client
 LICENSE=	gnu-gpl-v3
 
