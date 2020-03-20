@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/03/20 15:45:12 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/20 16:39:03 rillig Exp $
 
 DISTNAME=	show-all-1.0
 CATEGORIES=	regress
@@ -33,9 +33,9 @@ _PKG_VARS.regress+=	* **
 _SORTED_VARS.regress=	*_ENV.*
 _LISTED_VARS.regress=	*_ARGS.*
 
-SHELLVAR_PLAIN=		"$$var $${var} $$other"
-SHELLVAR_ENV=		"$$var $${var} $$other"
-SHELLVAR_ARGS=		"$$var $${var} $$other"
+SHELLVAR_PLAIN=		"$$var $${var} $$other $$$$"
+SHELLVAR_ENV=		"$$var $${var} $$other $$$$"
+SHELLVAR_ARGS=		"$$var $${var} $$other $$$$"
 
 _VARGROUPS+=		shellvar
 _PKG_VARS.shellvar=	SHELLVAR_PLAIN SHELLVAR_ENV SHELLVAR_ARGS
