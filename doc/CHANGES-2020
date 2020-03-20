@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1688 2020/03/20 16:11:01 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1689 2020/03/20 16:12:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2297,3 +2297,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/ruby-tzinfo to 2.0.1 [taca 2020-03-20]
 	Updated time/ruby-tzinfo1 to 1.2.6 [taca 2020-03-20]
 	Updated graphics/MesaLib to 20.0.2 [nia 2020-03-20]
+	Updated time/ruby-tzinfo03 to 0.3.56 [taca 2020-03-20]
