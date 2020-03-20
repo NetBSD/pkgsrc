@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:56:11 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/03/20 20:45:46 joerg Exp $
 
 SHA1 (gigabase-3.82.tar.gz) = b90a4b14f441fb80260bf7f2e332ef4a4e9e736f
 RMD160 (gigabase-3.82.tar.gz) = 91f4ec9318e64e861982cf3fb8031d27bc1e8e80
@@ -6,3 +6,6 @@ SHA512 (gigabase-3.82.tar.gz) = 2f5585e280a6871dc00ebb1f9823c5e1e01ab3d2720fc1ab
 Size (gigabase-3.82.tar.gz) = 1746054 bytes
 SHA1 (patch-aa) = b36dceea6f9c69e7b315923bea7e3bbf377607c8
 SHA1 (patch-class.h) = 86f10c351d52b562bf5e311110a1547140e2284d
+SHA1 (patch-query.h) = 44b50ad53c389bf8f6473738b118b3551b057c81
+SHA1 (patch-testddl.cpp) = d42f3bf7b4b120c97500b045a3eea811d5239b3e
+SHA1 (patch-testtimeseries.cpp) = 11f8dc2f31a5b0b71ae76b900f9aeaf3ff63fd90
