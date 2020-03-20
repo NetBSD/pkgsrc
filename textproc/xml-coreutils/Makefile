@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:35:35 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/20 11:58:30 nia Exp $
 #
 
 DISTNAME=	xml-coreutils-0.8a
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xml-coreutils/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://xml-coreutils.sourceforge.net/
+HOMEPAGE=	http://xml-coreutils.sourceforge.net/
 COMMENT=	Command line tools for XML processing
 LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c99

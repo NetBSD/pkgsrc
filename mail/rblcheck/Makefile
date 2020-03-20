@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 23:32:49 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/03/20 11:57:59 nia Exp $
 
 DISTNAME=	rblcheck-1.5
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rblcheck/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://rblcheck.sourceforge.net/
+HOMEPAGE=	http://rblcheck.sourceforge.net/
 COMMENT=	Command-line interface to Paul Vixie's RBL filter
 LICENSE=	gnu-gpl-v2
 

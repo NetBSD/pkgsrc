@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:35:36 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/20 11:58:31 nia Exp $
 #
 
 DISTNAME=	bbdate-0.2.4
@@ -7,7 +7,7 @@ CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bbtools.sourceforge.net/download.php?file=3
+HOMEPAGE=	http://bbtools.sourceforge.net/download.php?file=3
 COMMENT=	Display the current date
 
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 23:33:16 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/03/20 11:58:07 nia Exp $
 
 DISTNAME=	ipgrab-0.9.9
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ipgrab/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://ipgrab.sourceforge.net/
+HOMEPAGE=	http://ipgrab.sourceforge.net/
 COMMENT=	Verbose packet sniffer for UNIX hosts
 
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:33:23 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/03/20 11:58:12 nia Exp $
 #
 
 DISTNAME=	whois3-3.2.2
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=whois/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://whois.sourceforge.net/
+HOMEPAGE=	http://whois.sourceforge.net/
 COMMENT=	RIPE very simple and generic whois client
 
 GNU_CONFIGURE=	YES
