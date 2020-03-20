@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1699 2020/03/20 17:50:45 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1700 2020/03/20 17:54:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2322,3 +2322,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-sass to 3.7.4 [taca 2020-03-20]
 	Updated www/ruby-rest-client to 2.1.0 [taca 2020-03-20]
 	Updated www/ruby-raindrops to 0.19.1 [taca 2020-03-20]
+	Updated www/ruby-rails-html-sanitizer to 1.3.0 [taca 2020-03-20]
