@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/03/20 00:57:59 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/20 04:01:24 tsutsui Exp $
 
 PKGNAME=	${RUBY_PKGPREFIX}-mikutter-plugins-twitter-4.0
+PKGREVISION=	1
 DIST_SUBDIR=	mikutter-plugins
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mikutter/}
@@ -16,9 +17,9 @@ RUBY_VERSIONS_INCOMPATIBLE=	24
 PLUGIN_DISTNAME+=	api_request_file_cache-1.0
 # XXX direct message doesn't work after Twitter API changes
 #PLUGIN_DISTNAME+=	direct_message-1.1
-PLUGIN_DISTNAME+=	followingcontrol-1.1
+PLUGIN_DISTNAME+=	followingcontrol-1.2
 PLUGIN_DISTNAME+=	home_timeline-2.0
-PLUGIN_DISTNAME+=	list-2.0
+PLUGIN_DISTNAME+=	list-2.1
 PLUGIN_DISTNAME+=	list_for_profile-1.0
 PLUGIN_DISTNAME+=	list_settings-1.0
 PLUGIN_DISTNAME+=	mentions-1.0
@@ -26,8 +27,8 @@ PLUGIN_DISTNAME+=	message_detail_view-1.0
 PLUGIN_DISTNAME+=	message_favorite-1.0
 PLUGIN_DISTNAME+=	message_retweet-1.0
 PLUGIN_DISTNAME+=	ratelimit-1.0
-PLUGIN_DISTNAME+=	rest-1.0
-PLUGIN_DISTNAME+=	saved_search-1.0
+PLUGIN_DISTNAME+=	rest-1.1
+PLUGIN_DISTNAME+=	saved_search-1.1
 PLUGIN_DISTNAME+=	streaming-2.0
 PLUGIN_DISTNAME+=	twitter-1.0
 PLUGIN_DISTNAME+=	twitter_activity-1.0
