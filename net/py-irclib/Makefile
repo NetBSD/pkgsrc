@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:33:20 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/20 11:58:10 nia Exp $
 #
 
 PYIRCVERS=		11.1.1
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.zip
 EXTRACT_OPTS_ZIP=	-aa -q -o
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	https://python-irclib.sourceforge.net/
+HOMEPAGE=	http://python-irclib.sourceforge.net/
 COMMENT=	Internet Relay Chat (IRC) protocol client library
 LICENSE=	gnu-gpl-v2
 

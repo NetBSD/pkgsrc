@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.53 2020/01/18 23:33:18 rillig Exp $
+# $NetBSD: Makefile.common,v 1.54 2020/03/20 11:58:08 nia Exp $
 #
 # used by net/mldonkey/Makefile
 # used by net/mldonkey-gui/Makefile
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mldonkey/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://mldonkey.sourceforge.net/Main_Page
+HOMEPAGE=	http://mldonkey.sourceforge.net/Main_Page
 COMMENT=	Free peer-to-peer client with eDonkey support and more
 LICENSE=	gnu-gpl-v2
 
