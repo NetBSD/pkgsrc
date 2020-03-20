@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/03/17 14:43:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/03/20 17:58:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/patron/session_ext.${RUBY_DLEXT}
@@ -33,8 +33,6 @@ ${GEM_LIBDIR}/patron.gemspec
 ${GEM_LIBDIR}/pic.png
 ${GEM_LIBDIR}/script/console
 ${GEM_LIBDIR}/script/test_server
-${GEM_LIBDIR}/spec/certs/cacert.pem
-${GEM_LIBDIR}/spec/certs/privkey.pem
 ${GEM_LIBDIR}/spec/header_parser_spec.rb
 ${GEM_LIBDIR}/spec/patron_spec.rb
 ${GEM_LIBDIR}/spec/request_spec.rb
@@ -48,6 +46,8 @@ ${GEM_LIBDIR}/spec/sample_response_headers/webmock_headers_without_trailing_crlf
 ${GEM_LIBDIR}/spec/session_spec.rb
 ${GEM_LIBDIR}/spec/session_ssl_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/support/certs/cacert.pem
+${GEM_LIBDIR}/spec/support/certs/privkey.pem
 ${GEM_LIBDIR}/spec/support/config.ru
 ${GEM_LIBDIR}/spec/support/test_server.rb
 ${GEM_LIBDIR}/spec/util_spec.rb
