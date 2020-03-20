@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/03/06 22:44:18 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2020/03/20 17:51:57 nia Exp $
 
 DISTNAME=	llvm-9.0.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
-GCC_REQD+=		4.8
+GCC_REQD+=		5
 PYTHON_FOR_BUILD_ONLY=	yes
 
 CONFIGURE_DIRS=		${WRKDIR}/build
