@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/02/16 04:05:30 tsutsui Exp $
+# $NetBSD: Makefile,v 1.40 2020/03/20 00:57:59 joerg Exp $
 
 DISTNAME=	gettext-3.3.5
 CATEGORIES=	devel
@@ -13,6 +13,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-text>=1.3.0:../../textproc/ruby-text
 
 USE_LANGUAGES=		# none
 RUBYGEM_OPTIONS+=	--format-executable
+
+RUBY_VERSIONS_INCOMPATIBLE=	24
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
