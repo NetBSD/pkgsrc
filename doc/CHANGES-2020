@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1672 2020/03/20 09:30:18 he Exp $
+$NetBSD: CHANGES-2020,v 1.1673 2020/03/20 09:32:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2259,3 +2259,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/php74 to 7.4.4 [taca 2020-03-20]
 	Updated lang/php72 to 7.2.29 [taca 2020-03-20]
 	Updated lang/rust to 1.42.0nb1 [he 2020-03-20]
+	Updated textproc/py-ICU to 2.4.3 [adam 2020-03-20]
+	Updated devel/py-semantic_version to 2.8.4 [adam 2020-03-20]
