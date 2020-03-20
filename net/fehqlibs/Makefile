@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/03/04 15:44:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2020/03/20 19:52:23 rillig Exp $
 
 DISTNAME=		fehQlibs-14
 PKGNAME=		${DISTNAME:S/Qlibs-/qlibs-0.9./}
@@ -19,6 +19,7 @@ SUBST_CLASSES+=		echo
 SUBST_STAGE.echo=	pre-configure
 SUBST_FILES.echo=	configure install
 SUBST_SED.echo=		-e 's|echo -n|${ECHO_N}|g'
+SUBST_NOOP_OK.echo=	yes # ECHO_N may be "echo -n"
 
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	do-configure
