@@ -1,21 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2019/02/24 16:03:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/20 17:34:50 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/lib/rails/generators/sass/assets/assets_generator.rb
-${GEM_LIBDIR}/lib/rails/generators/sass/assets/templates/stylesheet.sass
-${GEM_LIBDIR}/lib/rails/generators/sass/scaffold/scaffold_generator.rb
-${GEM_LIBDIR}/lib/rails/generators/sass_scaffold.rb
-${GEM_LIBDIR}/lib/rails/generators/scss/assets/assets_generator.rb
-${GEM_LIBDIR}/lib/rails/generators/scss/assets/templates/stylesheet.scss
-${GEM_LIBDIR}/lib/rails/generators/scss/scaffold/scaffold_generator.rb
 ${GEM_LIBDIR}/lib/sass-rails.rb
 ${GEM_LIBDIR}/lib/sass/rails.rb
-${GEM_LIBDIR}/lib/sass/rails/cache_store.rb
-${GEM_LIBDIR}/lib/sass/rails/helpers.rb
 ${GEM_LIBDIR}/lib/sass/rails/importer.rb
 ${GEM_LIBDIR}/lib/sass/rails/logger.rb
 ${GEM_LIBDIR}/lib/sass/rails/railtie.rb
-${GEM_LIBDIR}/lib/sass/rails/template.rb
 ${GEM_LIBDIR}/lib/sass/rails/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
