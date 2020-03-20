@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/03/15 17:21:21 taca Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/20 15:09:58 taca Exp $
 
 DISTNAME=	protobuf-cucumber-3.10.8
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +14,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-middleware>=0:../../devel/ruby-middleware
 DEPENDS+=	${RUBY_PKGPREFIX}-thor>=0:../../devel/ruby-thor
 DEPENDS+=	${RUBY_PKGPREFIX}-thread_safe>=0:../../misc/ruby-thread_safe
 
-RUBY_RAILS_ACCEPTED=	# yes
+RUBY_RAILS_ACCEPTED=	# defined
 USE_LANGUAGES=		# none
 RUBYGEM_OPTIONS+=	--format-executable
 
