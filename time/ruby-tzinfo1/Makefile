@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/02/03 15:06:51 taca Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/20 16:09:10 taca Exp $
 
 DISTNAME=	tzinfo-${VERS}
 PKGNAME=	${RUBY_PKGPREFIX}-tzinfo1-${VERS}
@@ -11,7 +11,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-thread_safe>=0.1<1:../../misc/ruby-thread_safe
 
-VERS=		1.2.5
+VERS=		1.2.6
 USE_LANGUAGES=	# none
 
 .include "../../lang/ruby/gem.mk"
