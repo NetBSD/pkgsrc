@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2020/03/10 22:08:47 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2020/03/20 11:57:36 nia Exp $
 #
 
 DISTNAME=	gpsim-20050905
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://www-asim.lip6.fr/~bouyer/pic/
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	https://gpsim.sourceforge.net/
+HOMEPAGE=	http://gpsim.sourceforge.net/
 COMMENT=	PIC emulator with X interface
 
 GNU_CONFIGURE=	YES

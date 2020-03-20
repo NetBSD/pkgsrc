@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/01/18 23:32:04 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/03/20 11:57:43 nia Exp $
 
 DISTNAME=	plib-1.8.5
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	http://plib.sourceforge.net/dist/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://plib.sourceforge.net/
+HOMEPAGE=	http://plib.sourceforge.net/
 COMMENT=	Libraries for writing portable games/realtime interactive apps
 LICENSE=	gnu-lgpl-v2
 

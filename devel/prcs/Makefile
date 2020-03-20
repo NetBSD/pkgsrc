@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2020/03/06 11:48:57 nia Exp $
+# $NetBSD: Makefile,v 1.60 2020/03/20 11:57:30 nia Exp $
 
 DISTNAME=		prcs-1.3.3
 PKGREVISION=		14
@@ -6,7 +6,7 @@ CATEGORIES=		devel scm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=prcs/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://prcs.sourceforge.net/
+HOMEPAGE=		http://prcs.sourceforge.net/
 COMMENT=		Project Revision Control System
 LICENSE=		gnu-gpl-v2
 

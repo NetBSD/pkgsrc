@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/03/06 11:33:34 nia Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/20 11:57:26 nia Exp $
 
 DISTNAME=	elftoolchain-0.7.1
 CATEGORIES=	devel
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=elftoolchain/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	https://elftoolchain.sourceforge.net/
+HOMEPAGE=	http://elftoolchain.sourceforge.net/
 COMMENT=	Compilation tools (nm, ar, as, ld, etc.) for the ELF object format
 LICENSE=	modified-bsd
 
