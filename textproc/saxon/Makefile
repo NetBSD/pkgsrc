@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/01/18 23:35:32 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/03/20 11:58:29 nia Exp $
 
 DISTNAME=	SaxonHE9-5-0-1J
 PKGNAME=	${DISTNAME:tl:S/-/./g:S/he/-/1}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=saxon/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://saxon.sourceforge.net/
+HOMEPAGE=	http://saxon.sourceforge.net/
 COMMENT=	Michael H. Kay's Java XSLT processor
 LICENSE=	mpl-2.0
 

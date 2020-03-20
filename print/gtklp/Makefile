@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2020/03/10 22:10:51 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2020/03/20 11:58:14 nia Exp $
 #
 
 DISTNAME=	gtklp-1.3.3
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtklp/}
 EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://gtklp.sourceforge.net/
+HOMEPAGE=	http://gtklp.sourceforge.net/
 COMMENT=	CUPS frontend using GTK
 
 GNU_CONFIGURE=		yes

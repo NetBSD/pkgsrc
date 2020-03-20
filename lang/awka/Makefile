@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/01/18 23:32:41 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/03/20 11:57:55 nia Exp $
 
 DISTNAME=	awka-0.7.5
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	lang devel
 MASTER_SITES=	http://awka.sourceforge.net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://awka.sourceforge.net/
+HOMEPAGE=	http://awka.sourceforge.net/
 COMMENT=	AWK to ANSI C compiler
 LICENSE=	gnu-gpl-v2
 

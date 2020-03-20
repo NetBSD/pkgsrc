@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/01/18 23:33:24 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/03/20 11:58:12 nia Exp $
 
 DISTNAME=	yafc-0.7.10
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yafc/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://yafc.sourceforge.net/
+HOMEPAGE=	http://yafc.sourceforge.net/
 COMMENT=	Yet another FTP client
 
 GNU_CONFIGURE=		yes

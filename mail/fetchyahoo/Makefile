@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/18 23:32:47 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/03/20 11:57:57 nia Exp $
 #
 
 DISTNAME=		fetchyahoo-2.11.0
@@ -8,7 +8,7 @@ MASTER_SITES=		http://fetchyahoo.sourceforge.net/
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fetchyahoo/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://fetchyahoo.sourceforge.net/
+HOMEPAGE=		http://fetchyahoo.sourceforge.net/
 #HOMEPAGE=		http://fetchyahoo.twizzler.org
 COMMENT=		Download mails from Yahoo webmail into mbox
 
