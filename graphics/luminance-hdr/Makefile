@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/03/10 22:10:10 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2020/03/20 11:57:50 nia Exp $
 
 DISTNAME=	luminance-hdr-2.4.0
 PKGREVISION=	37
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qtpfsgui/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://qtpfsgui.sourceforge.net/
+HOMEPAGE=	http://qtpfsgui.sourceforge.net/
 COMMENT=	GUI application that aims to provide a workflow for HDR imaging
 LICENSE=	gnu-gpl-v2
 
