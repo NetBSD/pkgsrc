@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/03/04 15:57:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.44 2020/03/20 19:57:12 rillig Exp $
 #
 
 DISTNAME=		ucspi-ssl-0.11.3
@@ -14,6 +14,7 @@ COMMENT=		Command-line tools for SSL client-server applications
 WRKSRC=			${WRKDIR}/host/superscript.com/net/${DISTNAME}
 DJB_SLASHPACKAGE=	YES
 DJB_RESTRICTED=		no
+DJB_ERRNO_HACK=		no
 
 SSL_SCRIPTS=		https@ sslcat sslconnect
 SSL_PROGRAMS=		sslclient sslserver
