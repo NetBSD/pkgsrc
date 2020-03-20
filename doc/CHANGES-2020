@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1696 2020/03/20 17:35:14 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1697 2020/03/20 17:46:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2319,3 +2319,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/ruby-actiontext60 version 6.0.2.2 [taca 2020-03-20]
 	Added www/ruby-rails60 version 6.0.2.2 [taca 2020-03-20]
 	Updated www/ruby-sass-rails to 6.0.0 [taca 2020-03-20]
+	Updated www/ruby-sass to 3.7.4 [taca 2020-03-20]
