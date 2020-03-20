@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.40 2020/03/14 00:14:35 gdt Exp $
+# $NetBSD: extract.mk,v 1.41 2020/03/20 15:00:45 rillig Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -210,7 +210,7 @@ EXTRACT_CMD_DEFAULT=	\
 
 EXTRACT_CMD?=	${EXTRACT_CMD_DEFAULT}
 
-DOWNLOADED_DISTFILE=	$${extract_file}
+DOWNLOADED_DISTFILE=	"$${extract_file}"
 
 .if !target(do-extract)
 do-extract: ${WRKDIR}
