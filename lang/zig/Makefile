@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/06/02 15:02:27 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/20 11:42:38 tnn Exp $
 
 DISTNAME=	zig-0.4.0
 CATEGORIES=	lang
@@ -13,6 +13,7 @@ LICENSE=	mit
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+BROKEN=		"expected LLVM 8.x but found 9.0.1"
 
 CHECK_PORTABILITY_SKIP+=	ci/azure/macos_script
 BUILDLINK_TRANSFORM+=		rm:-Werror
