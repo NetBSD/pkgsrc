@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1694 2020/03/20 17:06:31 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1695 2020/03/20 17:17:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2305,3 +2305,16 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-sinatra-contrib to 2.0.8.1 [taca 2020-03-20]
 	Added www/ruby-sassc-rails version 2.1.2 [taca 2020-03-20]
 	Updated games/minetest to 5.1.1 [nia 2020-03-20]
+	Added devel/ruby-activesupport60 version 6.0.2.2 [taca 2020-03-20]
+	Added devel/ruby-activemodel60 version 6.0.2.2 [taca 2020-03-20]
+	Added devel/ruby-activejob60 version 6.0.2.2 [taca 2020-03-20]
+	Added www/ruby-actionview60 version 6.0.2.2 [taca 2020-03-20]
+	Added www/ruby-actionpack60 version 6.0.2.2 [taca 2020-03-20]
+	Added databases/ruby-activerecord60 version 6.0.2.2 [taca 2020-03-20]
+	Added mail/ruby-actionmailbox60 version 6.0.2.2 [taca 2020-03-20]
+	Added mail/ruby-actionmailer60 version 6.0.2.2 [taca 2020-03-20]
+	Added www/ruby-actioncable60 version 6.0.2.2 [taca 2020-03-20]
+	Added devel/ruby-railties60 version 6.0.2.2 [taca 2020-03-20]
+	Added devel/ruby-activestorage60 version 6.0.2.2 [taca 2020-03-20]
+	Added textproc/ruby-actiontext60 version 6.0.2.2 [taca 2020-03-20]
+	Added www/ruby-rails60 version 6.0.2.2 [taca 2020-03-20]
