@@ -7,9 +7,7 @@ set -eu
 . "./test.subr"
 
 test_case_set_up() {
-	rm -rf "$tmpdir"/.subst_*_done "$tmpdir"/.subst-empty
-	rm -rf "$tmpdir"/*
-	ls -A "$tmpdir"
+	rm -rf "$tmpdir"/.??* "$tmpdir"/*
 
 	create_file "prepare-subst.mk" <<EOF
 
@@ -429,5 +427,90 @@ EOF
 fi
 
 
-# TODO: Add tests for files having special characters, like space, dollar,
-# backticks, basically every ASCII character.
+if test_case_begin "special characters in filenames"; then
+
+	create_file "testcase.mk" <<EOF
+SUBST_CLASSES+=		class
+SUBST_STAGE.class=	pre-configure
+SUBST_FILES.class=	*
+SUBST_SED.class=	-e s,before,after,
+SUBST_NOOP_OK.class=	yes
+
+.include "prepare-subst.mk"
+.include "mk/subst.mk"
+EOF
+
+	create_file_lines " !\"#\$%&'()*+,-."	"before"
+	create_file_lines "0123456789:;<=>?"	"before"
+	create_file_lines "@ABCDEFGHIJKLMNO"	"before"
+	create_file_lines "PQRSTUVWXYZ[\\]^_"	"before"
+	create_file_lines "\`abcdefghijklmno"	"before"
+	create_file_lines "pqrstuvwxyz{|}~"	"before"
+	create_file_lines "--no-option"		"before"
+	create_file_lines ".hidden"		"before"
+
+	test_file "testcase.mk" "subst-class" \
+		1> "$tmpdir/stdout" \
+		2> "$tmpdir/stderr" \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "stdout" --file-is-lines \
+		'=> Substituting "class" in *' \
+		'info: [subst.mk:class] Nothing changed in ./prepare-subst.mk.' \
+		'info: [subst.mk:class] Nothing changed in ./stderr.' \
+		'info: [subst.mk:class] Nothing changed in ./stdout.' \
+		'info: [subst.mk:class] Nothing changed in ./test.subr.main.mk.'
+	assert_that "stderr" --file-is-empty
+	assert_that "$exitcode" --equals "0"
+
+	assert_that " !\"#\$%&'()*+,-."	--file-is-lines "after"
+	assert_that "0123456789:;<=>?"	--file-is-lines "after"
+	assert_that "@ABCDEFGHIJKLMNO"	--file-is-lines "after"
+	assert_that "PQRSTUVWXYZ[\\]^_"	--file-is-lines "after"
+	assert_that "\`abcdefghijklmno"	--file-is-lines "after"
+	assert_that "pqrstuvwxyz{|}~"	--file-is-lines "after"
+	assert_that "--no-option"	--file-is-lines "after"
+	assert_that ".hidden"		--file-is-lines "before"
+
+	test_case_end
+fi
+
+if test_case_begin "brackets in filename patterns"; then
+
+	create_file "testcase.mk" <<EOF
+SUBST_CLASSES+=		class
+SUBST_STAGE.class=	pre-configure
+SUBST_FILES.class=	[*]
+SUBST_SED.class=	-e s,before,after,
+SUBST_NOOP_OK.class=	yes
+
+.include "prepare-subst.mk"
+.include "mk/subst.mk"
+EOF
+
+	create_file_lines "any"	"before"
+	create_file_lines "x"	"before"
+	create_file_lines "*"	"before"
+	create_file_lines "[*]"	"before"
+
+	test_file "testcase.mk" "subst-class" \
+		1> "$tmpdir/stdout" \
+		2> "$tmpdir/stderr" \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "stdout" --file-is-lines \
+		'=> Substituting "class" in *' \
+		'info: [subst.mk:class] Nothing changed in ./prepare-subst.mk.' \
+		'info: [subst.mk:class] Nothing changed in ./stderr.' \
+		'info: [subst.mk:class] Nothing changed in ./stdout.' \
+		'info: [subst.mk:class] Nothing changed in ./test.subr.main.mk.'
+	assert_that "stderr" --file-is-empty
+	assert_that "$exitcode" --equals "0"
+
+	assert_that "any"	--file-is-lines "before"
+	assert_that "x"		--file-is-lines "before"
+	assert_that "*"		--file-is-lines "after"
+	assert_that "[*]"	--file-is-lines "before"
+
+	test_case_end
+fi
