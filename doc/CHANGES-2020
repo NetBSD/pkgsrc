@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1677 2020/03/20 11:57:53 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1678 2020/03/20 12:47:01 gson Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2265,3 +2265,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/wcslib version 7.2 [wiz 2020-03-20]
 	Updated sysutils/neofetch to 7.0.0 [nia 2020-03-20]
 	Updated net/libtorrent-rasterbar to 1.2.5 [nia 2020-03-20]
+	Updated misc/py-anita to 2.3 [gson 2020-03-20]
