@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2018/03/21 09:57:59 taca Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/20 15:28:10 taca Exp $
 
 DISTNAME=	actioncable-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-actioncable${RUBY_RAILS}-${RAILS_VERSION}
@@ -12,6 +12,8 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-nio4r>=2.0:../../net/ruby-nio4r
 DEPENDS+=	${RUBY_PKGPREFIX}-websocket-driver>=0.6.1:../../www/ruby-websocket-driver
+
+USE_LANGUAGES=	# none
 
 RUBY_RAILS_ACCEPTED=	51
 RUBY_RAILS_STRICT_DEP=	yes
