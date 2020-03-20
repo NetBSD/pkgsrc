@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2020/02/12 16:32:01 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2020/03/20 01:37:23 ryoon Exp $
 
-SHA1 (google-maps-services-python-4.1.0.tar.gz) = 9efabe87d635bb8272fd16cac1aac0b6c67887c3
-RMD160 (google-maps-services-python-4.1.0.tar.gz) = 5e900a3d43067fadaec2d9d8d5575a30d5578473
-SHA512 (google-maps-services-python-4.1.0.tar.gz) = 6ec5976d9f0b0a54e48fcad03ef86473819f7bacb05f40962730c823b459015fa5277bf183f2e74dac3f082f69a2e4b0f0077d32660df7fa4297c86a16ceff52
-Size (google-maps-services-python-4.1.0.tar.gz) = 42248 bytes
+SHA1 (google-maps-services-python-4.2.0.tar.gz) = 9f0eb9fa985da827622d07606709fe7115345ab3
+RMD160 (google-maps-services-python-4.2.0.tar.gz) = 3444686b521fdbb5408e929b4d309c67ab206d49
+SHA512 (google-maps-services-python-4.2.0.tar.gz) = 1fab45bc0beecc21e99d7881f195f9be3fd6ad53c74f6bd238fb7a01738d456d38cc8975ebb6dbe1f3abde967db78d000161dac60fa675b74166cf5bf7bc72f2
+Size (google-maps-services-python-4.2.0.tar.gz) = 46098 bytes
