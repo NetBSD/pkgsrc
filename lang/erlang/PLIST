@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2020/02/27 13:46:39 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.41 2020/03/20 16:05:34 nia Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -563,7 +563,8 @@ lib/erlang/lib/diameter-${VERSION.diameter}/ebin/diameter_watchdog_sup.beam
 lib/erlang/lib/diameter-${VERSION.diameter}/examples/code/GNUmakefile
 lib/erlang/lib/diameter-${VERSION.diameter}/examples/code/client.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/examples/code/client_cb.erl
-lib/erlang/lib/diameter-${VERSION.diameter}/examples/code/node.erl
+lib/erlang/lib/diameter-${VERSION.diameter}/examples/code/redirect.erl
+lib/erlang/lib/diameter-${VERSION.diameter}/examples/code/redirect_cb.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/examples/code/relay.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/examples/code/relay_cb.erl
 lib/erlang/lib/diameter-${VERSION.diameter}/examples/code/server.erl
