@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:30:51 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/20 11:57:37 nia Exp $
 
 DISTNAME=	djmount-0.71
 PKGNAME=	fuse-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djmount/}
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	https://djmount.sourceforge.net/
+HOMEPAGE=	http://djmount.sourceforge.net/
 COMMENT=	FUSE filesystem for accessing Media Server content via UPnP
 
 GNU_CONFIGURE=	yes

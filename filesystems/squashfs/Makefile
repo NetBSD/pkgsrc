@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:52 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/20 11:57:37 nia Exp $
 
 VERSION=	4.3
 DISTNAME=	squashfs${VERSION}
@@ -9,7 +9,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	http://downloads.sourceforge.net/project/squashfs/squashfs/${DISTNAME}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://squashfs.sourceforge.net/
+HOMEPAGE=	http://squashfs.sourceforge.net/
 COMMENT=	Tools for squashfs archives
 LICENSE=	gnu-gpl-v2
 
