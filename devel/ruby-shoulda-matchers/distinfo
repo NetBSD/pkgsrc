@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/09/23 15:15:13 taca Exp $
+$NetBSD: distinfo,v 1.6 2020/03/20 15:12:43 taca Exp $
 
-SHA1 (shoulda-matchers-3.1.2.gem) = 59e18b85b55c471ee7705694e19247f78c229111
-RMD160 (shoulda-matchers-3.1.2.gem) = 43b7929b4cb4cc8c87e2816f0905d4b651f4e2a1
-SHA512 (shoulda-matchers-3.1.2.gem) = e24602701a0f6eaa7ed0249449401582c7dc34f186e548d0741c9e416d5c6b5bc5a9b028b677b3f2b04091c6e5373cc03c05c8e1abf9156ace15846be4064d51
-Size (shoulda-matchers-3.1.2.gem) = 208384 bytes
+SHA1 (shoulda-matchers-3.1.3.gem) = 847899ddba78636c3f91fdf43f732801bfa6af64
+RMD160 (shoulda-matchers-3.1.3.gem) = 0655666f6d47ca83302a0e85ce21ea858277dd8e
+SHA512 (shoulda-matchers-3.1.3.gem) = c61397d20724f3048172a8a20ef8abaeafdba3a1d5d4b923b1b11480b25c70820fd372eb2851c6eb307894bc0b7e1aae515e23a3581a83db1b65a2c778b22d67
+Size (shoulda-matchers-3.1.3.gem) = 208384 bytes
