@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/01/20 21:31:02 nia Exp $
+# $NetBSD: Makefile,v 1.43 2020/03/20 11:57:22 nia Exp $
 
 DISTNAME=	mp3blaster-3.2.6
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3blaster/}
 
 MAINTAINER=	rxg@NetBSD.org
-HOMEPAGE=	https://mp3blaster.sourceforge.net/
+HOMEPAGE=	http://mp3blaster.sourceforge.net/
 COMMENT=	MP3 console curses-based player
 LICENSE=	gnu-gpl-v2
 

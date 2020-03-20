@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/01/18 23:30:24 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/03/20 11:57:26 nia Exp $
 
 DISTNAME=	cgdb-0.6.8
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://cgdb.me/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://cgdb.sourceforge.net/
+HOMEPAGE=	http://cgdb.sourceforge.net/
 COMMENT=	Curses-based interface to the GNU Debugger (GDB)
 LICENSE=	gnu-gpl-v2
 

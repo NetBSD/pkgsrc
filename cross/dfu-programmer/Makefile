@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 23:30:15 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/20 11:57:24 nia Exp $
 #
 
 DISTNAME=	dfu-programmer-0.7.2
@@ -7,7 +7,7 @@ CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dfu-programmer/dfu-programmer/0.7.2/}
 
 MAINTAINER=	jakllsch@NetBSD.org
-HOMEPAGE=	https://dfu-programmer.sourceforge.net/
+HOMEPAGE=	http://dfu-programmer.sourceforge.net/
 COMMENT=	Programmer for Atmel USB DFU Bootloader
 LICENSE=	gnu-gpl-v2
 
