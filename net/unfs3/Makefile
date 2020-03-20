@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:33:22 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/20 11:58:11 nia Exp $
 #
 
 DISTNAME=	unfs3-0.9.22
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unfs3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://unfs3.sourceforge.net/
+HOMEPAGE=	http://unfs3.sourceforge.net/
 COMMENT=	Userspace NFSv3 server
 LICENSE=	modified-bsd
 
