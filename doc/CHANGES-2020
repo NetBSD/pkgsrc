@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1732 2020/03/21 19:42:26 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1733 2020/03/21 19:42:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2383,3 +2383,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/py-sh version 1.12.14 [adam 2020-03-21]
 	Moved devel/py-python-dotenv to devel/py-dotenv [adam 2020-03-21]
 	Updated devel/py-dotenv to 0.12.0 [adam 2020-03-21]
+	Updated x11/qt5-qtwebkit to 5.212.0.alpha4 [nia 2020-03-21]
