@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2018/06/24 09:17:03 adam Exp $
+$NetBSD: distinfo,v 1.12 2020/03/21 14:16:04 nia Exp $
 
-SHA1 (h2o-2.2.5.tar.gz) = 188cd4792d28cd7c88a572f6a92949c6aaef5693
-RMD160 (h2o-2.2.5.tar.gz) = 4036c8ec4042fd3d9191aa38cff0754072b9067f
-SHA512 (h2o-2.2.5.tar.gz) = 24b07140d24fbb7796038aab44f44be5ffabc6f2841954273e2ad9f1a864e5482051dd7abfa6446297a46b6868763114695fa4f123ee3175bdac53b4c1868bc2
-Size (h2o-2.2.5.tar.gz) = 16257295 bytes
+SHA1 (h2o-2.2.6.tar.gz) = 5cc09af1baf35938a86d7cfafe8a0b876ff2ee81
+RMD160 (h2o-2.2.6.tar.gz) = bf99a74257ccb4c9efbd7e11ce7aab2a7af01a95
+SHA512 (h2o-2.2.6.tar.gz) = f2f28905c01782a0432c9dfdb2f21054e0a4741ac4c5f26802d4b439d0172840aa215aba5dc7c9af62275dcc24de105674a3819384dc38246e43ce3e8263eb20
+Size (h2o-2.2.6.tar.gz) = 16257760 bytes
+SHA1 (patch-CMakeLists.txt) = 32177a5bcf75a0bd4ec3e80e12ef1cb5d284072c
