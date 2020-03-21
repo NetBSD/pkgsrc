@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_krb5-config.in,v 1.1 2020/03/21 00:15:11 markd Exp $
+
+Fix RUNPATH
+
+--- tools/krb5-config.in.orig	2012-12-09 22:06:44.000000000 +0000
++++ tools/krb5-config.in
+@@ -120,7 +120,7 @@ if test "$print_exec_prefix" = "yes"; th
+ fi
+ 
+ if test "$do_libs" = "yes"; then
+-    lib_flags="-L${libdir}"
++    lib_flags="-L${libdir} -Wl,-R${libdir}"
+     case $library in
+     gssapi)
+ 	lib_flags="$lib_flags -lgssapi -lheimntlm"
