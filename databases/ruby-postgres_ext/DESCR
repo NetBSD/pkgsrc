@@ -1,2 +1,0 @@
-postgres_ext adds missing native PostgreSQL data types to ActiveRecord
-and convenient querying extensions for ActiveRecord and Arel.
