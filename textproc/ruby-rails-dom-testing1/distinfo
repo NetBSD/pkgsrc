@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2018/03/13 16:20:12 taca Exp $
-
-SHA1 (rails-dom-testing-1.0.9.gem) = 0500a0cc534cdb08ea394e1383a589a0c45b922a
-RMD160 (rails-dom-testing-1.0.9.gem) = 51b377b647483171a8397d8b41bc46cbf61237e3
-SHA512 (rails-dom-testing-1.0.9.gem) = 2882acd113f8db2eb857e09ede3950aa8e7073e5164826c8d1d0926c87a531787305a6977f352b182dd9ac1f3ad43b4a228ccf59a68fa6484845364ea082f1e7
-Size (rails-dom-testing-1.0.9.gem) = 17408 bytes
