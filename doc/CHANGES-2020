@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1730 2020/03/21 17:07:43 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1731 2020/03/21 17:17:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2378,3 +2378,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-ICU to 2.4.3nb1 [gutteridge 2020-03-21]
 	Updated www/ruby-http-form_data to 2.3.0 [taca 2020-03-21]
 	Updated www/ruby-faraday to 0.17.3 [taca 2020-03-21]
+	Updated www/ruby-sawyer to 0.8.2 [taca 2020-03-21]
