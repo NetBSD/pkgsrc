@@ -1,10 +1,10 @@
-$NetBSD: patch-sa-update,v 1.3 2016/02/05 16:06:09 prlw1 Exp $
+$NetBSD: patch-sa-update,v 1.4 2020/03/21 15:29:38 taca Exp $
 
 Prepare for substitution.
 
---- sa-update.raw.orig	2014-02-07 08:36:38.000000000 +0000
-+++ sa-update.raw	2014-04-26 13:56:38.000000000 +0100
-@@ -340,10 +340,10 @@
+--- sa-update.raw.orig	2020-01-25 02:51:16.000000000 +0000
++++ sa-update.raw
+@@ -357,10 +357,10 @@ my $GPGPath;
  if ($GPG_ENABLED || $opt{'import'}) {
    # find GPG in the PATH
    # bug 4958: for *NIX it's "gpg", in Windows it's "gpg.exe"
@@ -17,16 +17,16 @@ Prepare for substitution.
      dbg("gpg: found $GPGPath");
  
      # bug 5030: if GPGPath has a space, put it in quotes
-@@ -1459,10 +1459,8 @@
-       !$out_fname_exists ? 'new' : $force_reload ? 'replace' : 'update');
- 
-   my($ext_prog, $cmd, @args);
--  foreach my $try_prog ('curl', 'wget', 'fetch') {
--    $cmd = Mail::SpamAssassin::Util::find_executable_in_env_path($try_prog);
--    if (defined $cmd && $cmd ne '') { $ext_prog = $try_prog; last }
--  }
-+  $ext_prog = '@SA_UPDATE_FETCH_PROG@';
-+  $cmd = '@SA_UPDATE_FETCH_CMD@';
+@@ -1570,10 +1570,8 @@ sub http_get {
+       }
+     }
+   } else {
+-    foreach my $try_prog ('curl', 'wget', 'fetch') {
+-      $cmd = Mail::SpamAssassin::Util::find_executable_in_env_path($try_prog);
+-      if (defined $cmd && $cmd ne '') { $ext_prog = $try_prog; last }
+-    }
++      $ext_prog = '@SA_UPDATE_FETCH_PROG@';
++      $cmd = '@SA_UPDATE_FETCH_CMD@';
+   }
  
    if (defined $ext_prog && $ext_prog eq 'curl') {
-     push(@args, qw(-s -L -O --remote-time -g --max-redirs 2
