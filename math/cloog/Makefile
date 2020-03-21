@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/26 17:31:38 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/21 11:50:10 rillig Exp $
 
 DISTNAME=	cloog-0.18.4
 CATEGORIES=	math
@@ -16,7 +16,6 @@ USE_LIBTOOL=	yes
 TEST_TARGET=	check
 
 CONFIGURE_ARGS+=	--with-isl=system
-CONFIGURE_ARGS+=	--with-bits=gmp
 
 BUILDLINK_API_DEPENDS.gmp+=	gmp>=6.0
 .include "../../devel/gmp/buildlink3.mk"
