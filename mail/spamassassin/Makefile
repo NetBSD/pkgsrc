@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.139 2020/03/21 15:29:37 taca Exp $
+# $NetBSD: Makefile,v 1.140 2020/03/21 15:36:32 taca Exp $
 
-DISTNAME=	Mail-SpamAssassin-3.4.4
-PKGNAME=	spamassassin-3.4.4
+DISTNAME=	Mail-SpamAssassin-3.4.2
+PKGNAME=	spamassassin-3.4.2
+PKGREVISION=	3
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -19,7 +20,7 @@ LICENSE=	apache-2.0
 
 SMF_METHODS=	spamassassin
 
-RULESARCHIVE=		Mail-SpamAssassin-rules-3.4.4.r1873061.tgz
+RULESARCHIVE=		Mail-SpamAssassin-rules-3.4.2.r1840640.tgz
 #RULESARCHIVEASC=	${RULESARCHIVE}.asc
 #RULESARCHIVESHA=	${RULESARCHIVE}.sha1
 FILES_SUBST+=		RULESARCHIVE=${RULESDIR}/${RULESARCHIVE}
@@ -183,9 +184,9 @@ SUBST_FILES.fetch=	sa-update.raw
 SUBST_VARS.fetch=	SA_UPDATE_FETCH_CMD SA_UPDATE_FETCH_PROG
 
 pre-configure: perl5-configure
-#	GNU configure needs version.h -> create it
+	# GNU configure needs version.h -> create it
 	cd ${WRKSRC}/spamc && ${PERL5} ./version.h.pl
-#	values in 'config' will be set via the SUBST framework in options.mk
+	# values in 'config' will be set via the SUBST framework in options.mk
 	${CP} ${WRKSRC}/t/config.dist ${WRKSRC}/t/config
 
 post-install:
@@ -200,7 +201,7 @@ post-install:
 		${INSTALL_DATA} "$$f" ${DESTDIR}${EGDIR} &&		\
 		${ECHO} "${EG_SUBDIR}/$$f" >> ${DYNAMIC_PLIST};		\
 	done
-#	examples are in the static PLIST
+	# examples are in the static PLIST
 	${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${DESTDIR}${EGDIR}
