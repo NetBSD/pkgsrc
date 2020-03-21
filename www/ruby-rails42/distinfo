@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2019/04/14 10:16:19 taca Exp $
-
-SHA1 (rails-4.2.11.1.gem) = 8704f9ed1c0f57fa252462701d2b84504ec3b15b
-RMD160 (rails-4.2.11.1.gem) = 0cb93106d8ceffacedc46a0002fad8a866ffd9a1
-SHA512 (rails-4.2.11.1.gem) = 55cd57fdd9d8f1efa0f8c7e7c1dbcadc1a7c2bdcb6230a1c88cea5c4bb567916d1c511749a08162e509c6fe15d4f57634bcedd4e2a32fe6ed5a726a229a6ecab
-Size (rails-4.2.11.1.gem) = 1476096 bytes
