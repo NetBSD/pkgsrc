@@ -13,3 +13,6 @@ $$-$RANDOM
 # This is not the style used in GNU configure scripts, thus no warning
 # is necessary. This doesn't occur in practice.
 ${RANDOM}
+
+# This is not a special variable.
+$RANDOMNESS
