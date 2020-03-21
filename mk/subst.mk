@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.65 2020/03/20 09:00:44 rillig Exp $
+# $NetBSD: subst.mk,v 1.66 2020/03/21 12:22:31 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -101,10 +101,10 @@ _SUBST_IS_TEXT_FILE_CMD?= \
 	[ -z "`LC_ALL=C ${TR} -cd '\\0' < "$$file" | ${TR} '\\0' 'x'`" ]
 
 .if ${SUBST_CLASSES:U:O} != ${SUBST_CLASSES:U:O:u}
-PKG_FAIL_REASON+=	"[subst.mk] duplicate SUBST class: ${SUBST_CLASSES:O:u}"
+PKG_FAIL_REASON+=	"[subst.mk] duplicate SUBST class in: ${SUBST_CLASSES:O}"
 .endif
 
-.for _class_ in ${SUBST_CLASSES}
+.for _class_ in ${SUBST_CLASSES:O:u}
 _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
 SUBST_FILTER_CMD.${_class_}?=	LC_ALL=C ${SED} ${SUBST_SED.${_class_}}
