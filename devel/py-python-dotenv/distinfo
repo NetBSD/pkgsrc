@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2018/05/03 02:26:55 wen Exp $
-
-SHA1 (python-dotenv-0.8.2.tar.gz) = b3f638ca640f989408fc625c0cd29af7509bbf10
-RMD160 (python-dotenv-0.8.2.tar.gz) = 1c7ebff47846c8754e3f8353bf4373e06eb318da
-SHA512 (python-dotenv-0.8.2.tar.gz) = 2fc5a317dc1a673ca2af9aa5e23af90cd5ec23a5c52fe0852a9c2a669e3bdcd6f13c90403b01f14c079a333ba53a2bc64e096640313de63dd8a25f87661c428d
-Size (python-dotenv-0.8.2.tar.gz) = 16757 bytes
