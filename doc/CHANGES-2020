@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1722 2020/03/21 16:30:57 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1723 2020/03/21 16:51:37 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2370,3 +2370,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed www/ruby-rack-test06 [taca 2020-03-21]
 	Removed www/ruby-rack-ssl [taca 2020-03-21]
 	Removed www/ruby-rack14 [taca 2020-03-21]
+	Updated lang/go113 to 1.13.9 [bsiegert 2020-03-21]
