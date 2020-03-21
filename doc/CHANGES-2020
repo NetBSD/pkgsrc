@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1706 2020/03/21 10:07:19 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.1707 2020/03/21 10:50:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2333,3 +2333,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-flask-caching to 1.8.0 [adam 2020-03-21]
 	Updated www/py-flask-restful to 0.3.8 [adam 2020-03-21]
 	Removed lang/go112 [bsiegert 2020-03-21]
+	Updated mail/neomutt to 20200320 [wiz 2020-03-21]
