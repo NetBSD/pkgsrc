@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/08/06 07:51:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/03/21 18:47:33 gutteridge Exp $
 bin/ffmpeg4
 bin/ffprobe4
 include/ffmpeg4/libavcodec/ac3_parser.h
@@ -214,6 +214,7 @@ ${PLIST.doc}share/doc/ffmpeg4/libavformat.html
 ${PLIST.doc}share/doc/ffmpeg4/libavutil.html
 ${PLIST.doc}share/doc/ffmpeg4/libswresample.html
 ${PLIST.doc}share/doc/ffmpeg4/libswscale.html
+${PLIST.doc}share/doc/ffmpeg4/mailing-list-faq.html
 share/doc/ffmpeg4/mips.txt
 share/doc/ffmpeg4/multithreading.txt
 ${PLIST.doc}share/doc/ffmpeg4/nut.html
