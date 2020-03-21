@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1710 2020/03/21 12:58:34 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1711 2020/03/21 14:16:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2340,3 +2340,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/py-maya to 0.6.1 [adam 2020-03-21]
 	Updated devel/cmake to 3.17.0 [adam 2020-03-21]
 	Updated devel/cmake-gui to 3.17.0 [adam 2020-03-21]
+	Updated www/h2o to 2.2.6 [nia 2020-03-21]
