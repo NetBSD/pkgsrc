@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2020/03/21 19:42:36 nia Exp $
+# $NetBSD: Makefile,v 1.75 2020/03/21 23:15:17 nia Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -94,7 +94,6 @@ post-install:
 .endif
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
-.include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtsensors/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=	tool
