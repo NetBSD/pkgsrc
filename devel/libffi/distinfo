@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.51 2020/03/16 09:35:47 rin Exp $
+$NetBSD: distinfo,v 1.52 2020/03/21 16:08:34 rin Exp $
 
 SHA1 (libffi-3.3.tar.gz) = 8df6cb570c8d6596a67d1c0773bf00650154f7aa
 RMD160 (libffi-3.3.tar.gz) = 2cd43b66d792f1bad76df2e19a8411beacfcb8e0
@@ -12,4 +12,6 @@ SHA1 (patch-src_m68k_ffi.c) = 5179cfd150bc7de15eb1c5ee0a327016c2c32b3e
 SHA1 (patch-src_m88k_elfbsd.S) = 6572c7fa39c00096cb4a80bb88993ff1b4aaa8cc
 SHA1 (patch-src_mips_ffi.c) = 7353f68f73917af6bff0b90393ac3404ea54fb99
 SHA1 (patch-src_mips_ffitarget.h) = 7fe62634803ccb5a168e76d597409c9af809c448
+SHA1 (patch-src_powerpc_ffi.c) = b68a93d0f8552efaa8c50256da3af3bde5de7059
+SHA1 (patch-src_powerpc_ffi__powerpc.h) = 573b6f0f496ed7b8b6bc0df197515020519ae024
 SHA1 (patch-testsuite_libffi.call_float2.c) = 2a42a428b0cc55065968c7f0748026da12b70b9d
