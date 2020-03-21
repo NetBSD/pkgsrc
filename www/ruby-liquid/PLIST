@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/06/21 13:46:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/03/21 16:59:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/LICENSE
@@ -20,6 +20,7 @@ ${GEM_LIBDIR}/lib/liquid/interrupts.rb
 ${GEM_LIBDIR}/lib/liquid/lexer.rb
 ${GEM_LIBDIR}/lib/liquid/locales/en.yml
 ${GEM_LIBDIR}/lib/liquid/parse_context.rb
+${GEM_LIBDIR}/lib/liquid/parse_tree_visitor.rb
 ${GEM_LIBDIR}/lib/liquid/parser.rb
 ${GEM_LIBDIR}/lib/liquid/parser_switching.rb
 ${GEM_LIBDIR}/lib/liquid/profiler.rb
@@ -48,6 +49,7 @@ ${GEM_LIBDIR}/lib/liquid/tags/table_row.rb
 ${GEM_LIBDIR}/lib/liquid/tags/unless.rb
 ${GEM_LIBDIR}/lib/liquid/template.rb
 ${GEM_LIBDIR}/lib/liquid/tokenizer.rb
+${GEM_LIBDIR}/lib/liquid/truffle.rb
 ${GEM_LIBDIR}/lib/liquid/utils.rb
 ${GEM_LIBDIR}/lib/liquid/variable.rb
 ${GEM_LIBDIR}/lib/liquid/variable_lookup.rb
@@ -55,6 +57,7 @@ ${GEM_LIBDIR}/lib/liquid/version.rb
 ${GEM_LIBDIR}/test/fixtures/en_locale.yml
 ${GEM_LIBDIR}/test/integration/assign_test.rb
 ${GEM_LIBDIR}/test/integration/blank_test.rb
+${GEM_LIBDIR}/test/integration/block_test.rb
 ${GEM_LIBDIR}/test/integration/capture_test.rb
 ${GEM_LIBDIR}/test/integration/context_test.rb
 ${GEM_LIBDIR}/test/integration/document_test.rb
@@ -63,6 +66,7 @@ ${GEM_LIBDIR}/test/integration/error_handling_test.rb
 ${GEM_LIBDIR}/test/integration/filter_test.rb
 ${GEM_LIBDIR}/test/integration/hash_ordering_test.rb
 ${GEM_LIBDIR}/test/integration/output_test.rb
+${GEM_LIBDIR}/test/integration/parse_tree_visitor_test.rb
 ${GEM_LIBDIR}/test/integration/parsing_quirks_test.rb
 ${GEM_LIBDIR}/test/integration/render_profiling_test.rb
 ${GEM_LIBDIR}/test/integration/security_test.rb
@@ -82,6 +86,7 @@ ${GEM_LIBDIR}/test/integration/template_test.rb
 ${GEM_LIBDIR}/test/integration/trim_mode_test.rb
 ${GEM_LIBDIR}/test/integration/variable_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
+${GEM_LIBDIR}/test/truffle/truffle_test.rb
 ${GEM_LIBDIR}/test/unit/block_unit_test.rb
 ${GEM_LIBDIR}/test/unit/condition_unit_test.rb
 ${GEM_LIBDIR}/test/unit/context_unit_test.rb
