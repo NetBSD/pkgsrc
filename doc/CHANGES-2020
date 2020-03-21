@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1728 2020/03/21 17:03:43 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.1729 2020/03/21 17:04:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2376,3 +2376,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-liquid to 4.0.3 [taca 2020-03-21]
 	Updated www/ruby-loofah to 2.4.0 [taca 2020-03-21]
 	Updated textproc/py-ICU to 2.4.3nb1 [gutteridge 2020-03-21]
+	Updated www/ruby-http-form_data to 2.3.0 [taca 2020-03-21]
