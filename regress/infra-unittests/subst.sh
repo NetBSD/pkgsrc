@@ -627,3 +627,44 @@ EOF
 
 	test_case_end
 fi
+
+
+if test_case_begin "global show diff"; then
+
+	create_file_lines "file" "one" "two" "three"
+
+	create_file "testcase.mk" <<EOF
+SUBST_CLASSES+=		two
+SUBST_STAGE.two=	pre-configure
+SUBST_FILES.two=	file
+SUBST_SED.two=		-e 's,two,II,'
+SUBST_SHOW_DIFF=	yes
+
+.include "prepare-subst.mk"
+.include "mk/subst.mk"
+EOF
+
+	LC_ALL=C \
+	test_file "testcase.mk" "pre-configure" \
+		1> "$tmpdir/stdout" \
+		2> "$tmpdir/stderr" \
+	&& exitcode=0 || exitcode=$?
+
+	awk '{ if (/^... \.\/.*/) { print $1 " " $2 " (filtered timestamp)" } else { print $0 } }' \
+	< "$tmpdir/stdout" > "$tmpdir/stdout-filtered"
+
+	assert_that "file" --file-is-lines "one" "II" "three"
+	assert_that "stdout-filtered" --file-is-lines \
+		"=> Substituting \"two\" in file" \
+		"--- ./file (filtered timestamp)" \
+		"+++ ./file.subst.sav (filtered timestamp)" \
+		"@@ -1,3 +1,3 @@" \
+		" one" \
+		"-two" \
+		"+II" \
+		" three"
+	assert_that "stderr" --file-is-empty
+	assert_that "$exitcode" --equals 0
+
+	test_case_end
+fi
