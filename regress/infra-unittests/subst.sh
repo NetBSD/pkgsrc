@@ -510,3 +510,31 @@ EOF
 
 	test_case_end
 fi
+
+
+if test_case_begin "duplicate SUBST class"; then
+
+	create_file "testcase.mk" <<EOF
+SUBST_CLASSES+=		one
+SUBST_CLASSES+=		two
+SUBST_CLASSES+=		one
+
+all:
+	@printf 'fail reason: %s\n' \${PKG_FAIL_REASON} 1>&2
+
+.include "prepare-subst.mk"
+.include "mk/subst.mk"
+EOF
+
+	test_file "testcase.mk" "all" \
+		1> "$tmpdir/stdout" \
+		2> "$tmpdir/stderr" \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "stdout" --file-is-empty
+	assert_that "stderr" --file-is-lines \
+		"fail reason: [subst.mk] duplicate SUBST class in: one one two"
+	assert_that "$exitcode" --equals 0
+
+	test_case_end
+fi
