@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1712 2020/03/21 14:20:52 mef Exp $
+$NetBSD: CHANGES-2020,v 1.1713 2020/03/21 14:42:59 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2350,3 +2350,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Dist-Zilla to 6.014 [mef 2020-03-21]
 	Updated www/h2o to 2.2.6 [nia 2020-03-21]
 	Updated devel/p5-ExtUtils-MakeMaker to 7.44 [mef 2020-03-21]
+	Updated games/exchess to 7.97beta [rillig 2020-03-21]
