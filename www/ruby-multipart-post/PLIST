@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2014/01/17 08:32:07 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/21 16:58:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -13,8 +16,9 @@ ${GEM_LIBDIR}/lib/multipartable.rb
 ${GEM_LIBDIR}/lib/net/http/post/multipart.rb
 ${GEM_LIBDIR}/lib/parts.rb
 ${GEM_LIBDIR}/multipart-post.gemspec
-${GEM_LIBDIR}/test/multibyte.txt
-${GEM_LIBDIR}/test/net/http/post/test_multipart.rb
-${GEM_LIBDIR}/test/test_composite_io.rb
-${GEM_LIBDIR}/test/test_parts.rb
+${GEM_LIBDIR}/spec/composite_io_spec.rb
+${GEM_LIBDIR}/spec/multibyte.txt
+${GEM_LIBDIR}/spec/net/http/post/multipart_spec.rb
+${GEM_LIBDIR}/spec/parts_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
