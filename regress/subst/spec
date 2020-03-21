@@ -1,8 +1,0 @@
-# $NetBSD: spec,v 1.1 2019/03/17 10:19:36 rillig Exp $
-#
-
-MAKEARGS_CLEAN="clean"
-
-check_result() {
-	exit_status 0
-}
