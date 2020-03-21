@@ -499,11 +499,7 @@ EOF
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "stdout" --file-is-lines \
-		'=> Substituting "class" in *' \
-		'info: [subst.mk:class] Nothing changed in ./prepare-subst.mk.' \
-		'info: [subst.mk:class] Nothing changed in ./stderr.' \
-		'info: [subst.mk:class] Nothing changed in ./stdout.' \
-		'info: [subst.mk:class] Nothing changed in ./test.subr.main.mk.'
+		'=> Substituting "class" in [*]'
 	assert_that "stderr" --file-is-empty
 	assert_that "$exitcode" --equals "0"
 

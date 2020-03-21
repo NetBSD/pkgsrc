@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.4 2020/03/20 21:27:04 rillig Exp $
+# $NetBSD: test.subr,v 1.5 2020/03/21 06:53:18 rillig Exp $
 set -eu
 
 # This file defines utilities for testing Makefile fragments in a mocked
@@ -233,8 +233,8 @@ assert_that() {
 
 	(--file-is-lines)
 		_assert_that_tmp_actual="$tmpdir/$1"
-		_assert_that_tmp_expected="$tmpdir/$1"
-		_assert_that_filename="$1"; shift
+		_assert_that_tmp_expected="$tmpdir/expected"
+		_assert_that_filename="$1"; shift 2
 
 		printf '%s\n' "$@" > "$_assert_that_tmp_expected"
 		if diff -u "$_assert_that_tmp_expected" "$_assert_that_tmp_actual" > /dev/null; then
