@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.11 2020/03/14 09:47:09 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.12 2020/03/21 15:02:20 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -157,6 +157,15 @@ cstr_right_of_last(cstr s, cstr delimiter)
 	if (i == npos)
 		return s;
 	return cstr_substr(s, i + delimiter.len, s.len);
+}
+
+static bool
+cstr_has_word_boundary(cstr s, size_t idx)
+{
+	assert(idx <= s.len);
+	if (idx == 0 || idx == s.len)
+		return true;
+	return is_alnum(s.data[idx - 1]) != is_alnum(s.data[idx]);
 }
 
 // str is a modifiable string buffer.
@@ -364,7 +373,10 @@ checkline_sh_dollar_random(cstr filename, size_t lineno, cstr line)
 	// a safe usage of $RANDOM, it will pass the test.
 	if (is_shell_comment(line))
 		return;
-	if (!cstr_contains(line, CSTR("$RANDOM")))
+	size_t idx = cstr_index(line, CSTR("$RANDOM"));
+
+	// Variable names that only start with RANDOM are not special.
+	if (idx == npos || !cstr_has_word_boundary(line, idx + 7))
 		return;
 
 	// $RANDOM together with the PID is often found in GNU-style
@@ -372,11 +384,6 @@ checkline_sh_dollar_random(cstr filename, size_t lineno, cstr line)
 	if (cstr_contains(line, CSTR("$$-$RANDOM")))
 		return;
 	if (cstr_contains(line, CSTR("$RANDOM-$$")))
-		return;
-
-	// Variable names that only start with RANDOM are not special.
-	size_t idx = cstr_index(line, CSTR("$RANDOM"));
-	if (idx != npos && idx + 7 < line.len && is_alnum(line.data[idx + 7]))
 		return;
 
 	printf("%s:%zu:%zu: $RANDOM: %s\n",
