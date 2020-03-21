@@ -1,30 +1,24 @@
-# $NetBSD: Makefile,v 1.73 2020/03/10 22:09:15 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2020/03/21 19:42:36 nia Exp $
 
+QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
 PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
-PKGREVISION=	5
+CATEGORIES=	x11 www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qtwebkit/}
 GITHUB_PROJECT=	qtwebkit
 GITHUB_RELEASE=	${DISTNAME}
-CATEGORIES=	x11
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/qtwebkit/qtwebkit/wiki
 COMMENT=	Qt5 WebView module
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3
-EXTRACT_SUFX=	.tar.xz
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
-QTWKVERSION=	5.212.0-alpha3
-
-PYTHON_VERSIONS_ACCEPTED=	27 # as of 5.212.0-alpha2
-
-.include "../../mk/dlopen.buildlink3.mk"
-BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c c++11
-USE_TOOLS+=		gmake perl:build pkg-config bison flex sed
+USE_TOOLS+=		perl:build pkg-config
 USE_CMAKE=		yes
 CMAKE_ARG_PATH=		..
 CONFIGURE_DIRS=		_build
@@ -56,13 +50,13 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
-BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
-
 REPLACE_PERL+=		Source/WebKit2/Scripts/generate-forwarding-headers.pl
 
 #MAKE_ENV+=		QTDIR=${QTDIR}
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${_USE_CWRAPPERS} == "yes"
 BUILDLINK_TRANSFORM+=	R:${WRKSRC}/lib:${QTDIR}/lib
@@ -70,7 +64,7 @@ BUILDLINK_TRANSFORM+=	R:${WRKSRC}/lib:${QTDIR}/lib
 BUILDLINK_TRANSFORM+=	rpath:${WRKSRC}/lib:${QTDIR}/lib
 .endif
 
-.if ${OPSYS} == "NetBSD" && ${MACHINE_CPU:U} == "arm"
+.if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:M*arm*)
 LDFLAGS+=	-Wl,-no-keep-memory -Wl-reduce-memory
 .endif
 
@@ -89,15 +83,13 @@ post-install:
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
+.include "../../fonts/woff2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../textproc/hyphen/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
-# https://github.com/GStreamer/gst-plugins-bad/commit/b9e15fddb14b2cde6470255794ef130523885e9f
-BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.15.1
-.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .endif
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
@@ -105,8 +97,11 @@ BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.15.1
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtsensors/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
-PYTHON_FOR_BUILD_ONLY=			yes
+PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/tool.mk"
 .include "../../lang/ruby/buildlink3.mk"
 BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/bsd.pkg.mk"
