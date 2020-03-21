@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/21 19:26:59 adam Exp $
+
+SHA1 (sh-1.12.14.tar.gz) = aafac521b3f38089169f38135ad5533acfb8eae7
+RMD160 (sh-1.12.14.tar.gz) = 49b53f06797959c42b339885ff47473cb3d801a5
+SHA512 (sh-1.12.14.tar.gz) = 5f2daa2666cf8efe90ba550c8ea5875f2a8812d787597c9d9b933f58feccd192e1ec0ab5695b756bdbfbf9748d106c2045be20838e680b31dac3f778970b5786
+Size (sh-1.12.14.tar.gz) = 56861 bytes
