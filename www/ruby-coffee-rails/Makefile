@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/03/03 15:45:40 taca Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/21 15:55:32 taca Exp $
 
 DISTNAME=	coffee-rails-4.2.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rails-/rails${RUBY_RAILS}-/}
@@ -14,7 +14,7 @@ DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
 
 USE_LANGUAGES=	# none
 
-RUBY_RAILS_ACCEPTED=	42 51
+RUBY_RAILS_ACCEPTED=	51
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
