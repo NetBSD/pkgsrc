@@ -1,4 +1,6 @@
-$NetBSD: patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp,v 1.1 2015/03/31 16:01:12 joerg Exp $
+$NetBSD: patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp,v 1.2 2020/03/21 19:42:37 nia Exp $
+
+Use unified syntax on ARM.
 
 --- Source/WebCore/platform/graphics/cpu/arm/filters/FELightingNEON.cpp.orig	2014-12-05 16:24:49.000000000 +0000
 +++ Source/WebCore/platform/graphics/cpu/arm/filters/FELightingNEON.cpp
