@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2018/11/27 23:36:00 sevan Exp $
+$NetBSD: distinfo,v 1.47 2020/03/21 00:15:11 markd Exp $
 
 SHA1 (heimdal-1.5.3.tar.gz) = 23f39a099ae862dce1f5f4e5c3720861849a4bd0
 RMD160 (heimdal-1.5.3.tar.gz) = 834660b4c0fe81a3aac4ffd9d8d37d74add1fa70
@@ -19,3 +19,4 @@ SHA1 (patch-lib_libedit_src_unvis.c) = 117c91ead1ca94aaed38c2d0611588fec6746d61
 SHA1 (patch-lib_libedit_src_vis.c) = ade98e513187c3fa03194909409a9bb23f66509a
 SHA1 (patch-lib_otp_Makefile.in) = 8815c33a4eb024018a6160db58356704ec43d30c
 SHA1 (patch-lib_roken_vis.c) = 8037c4b36d6cd4bc2557a9409df04232276b7a28
+SHA1 (patch-tools_krb5-config.in) = 3398c233aa4d9f0cbfd5b0ca13a2444b5bddebb6
