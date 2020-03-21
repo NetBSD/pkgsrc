@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/12/21 21:06:30 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/21 08:59:45 adam Exp $
 
-DISTNAME=	Flask-RESTful-0.3.7
+DISTNAME=	Flask-RESTful-0.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-RESTful/}
@@ -11,7 +11,6 @@ COMMENT=	Simple framework for creating REST APIs
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-aniso8601>=0.82:../../time/py-aniso8601
-DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.8:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-six>=1.3.0:../../lang/py-six
