@@ -1,7 +1,15 @@
-$NetBSD: patch-configure,v 1.2 2019/01/22 15:28:45 gdt Exp $
+$NetBSD: patch-configure,v 1.3 2020/03/21 14:36:22 gdt Exp $
 
-Remediate bashisms.  I believe this has been reported upstream, but
-that should be verified with upstream head.
+Remediate bashism.  Discussed with upstream by email 20200321.
+
+The root cause of this bug is that intltool's
+share/aclocal/intltool.m4 uses $RANDOM, and thus when a distfile is
+built for a program that uses intltool in configure.ac, the bug is
+inherited.
+
+Therefore this bug cannot reasonably be fixed by viking.
+
+\todo File a bug with intltool.
 
 --- configure.orig	2019-01-21 20:16:51.000000000 +0000
 +++ configure
