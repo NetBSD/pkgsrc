@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1718 2020/03/21 16:13:54 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1719 2020/03/21 16:17:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2366,3 +2366,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/ruby-coffee-rails4 version 4.2.2 [taca 2020-03-21]
 	Updated www/ruby-coffee-rails to 5.0.0 [taca 2020-03-21]
 	Removed databases/ruby-arel60 [taca 2020-03-21]
+	Removed time/ruby-tzinfo03 [taca 2020-03-21]
