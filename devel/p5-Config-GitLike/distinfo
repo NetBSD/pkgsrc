@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2017/08/21 13:31:56 mef Exp $
+$NetBSD: distinfo,v 1.12 2020/03/21 12:29:01 mef Exp $
 
-SHA1 (Config-GitLike-1.17.tar.gz) = 84b9304d314079924033d802bf34be75a101935c
-RMD160 (Config-GitLike-1.17.tar.gz) = 93fcd021771408d7c35681e1f4a16aa52a8ca4db
-SHA512 (Config-GitLike-1.17.tar.gz) = 22f63681753b38e881170a605697cbf62b46d074dfeacc00549d25a043254f15ba18e8c73f57dc6d0255702ae3b1078af969b51c9663636375990a86664f18b8
-Size (Config-GitLike-1.17.tar.gz) = 52044 bytes
+SHA1 (Config-GitLike-1.18.tar.gz) = 47f0b748e08676354c6f2984c7b69cb9920e2a98
+RMD160 (Config-GitLike-1.18.tar.gz) = 08fd29ddb6ce05063439fb0b4f91c700c9eebf76
+SHA512 (Config-GitLike-1.18.tar.gz) = 4f7e3d987bae63f5f3971135a44d393c0a6f6ccf294de1b94187b05d288533a97419fdc234b27c2bd957b10b3fd0bff2fbde4c2010c50e65e6027ee87ff9a7f8
+Size (Config-GitLike-1.18.tar.gz) = 52692 bytes
 SHA1 (patch-Makefile.PL) = 7e7c27385c81af5544f9f96da75740e83d2bf0d2
