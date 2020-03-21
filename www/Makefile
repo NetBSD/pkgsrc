@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1442 2020/03/20 17:14:25 taca Exp $
+# $NetBSD: Makefile,v 1.1443 2020/03/21 15:23:02 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -832,11 +832,9 @@ SUBDIR+=	rekonq
 SUBDIR+=	ruby-actioncable51
 SUBDIR+=	ruby-actioncable52
 SUBDIR+=	ruby-actioncable60
-SUBDIR+=	ruby-actionpack42
 SUBDIR+=	ruby-actionpack51
 SUBDIR+=	ruby-actionpack52
 SUBDIR+=	ruby-actionpack60
-SUBDIR+=	ruby-actionview42
 SUBDIR+=	ruby-actionview51
 SUBDIR+=	ruby-actionview52
 SUBDIR+=	ruby-actionview60
@@ -915,7 +913,6 @@ SUBDIR+=	ruby-rack14
 SUBDIR+=	ruby-rack16
 SUBDIR+=	ruby-rails-deprecated_sanitizer
 SUBDIR+=	ruby-rails-html-sanitizer
-SUBDIR+=	ruby-rails42
 SUBDIR+=	ruby-rails51
 SUBDIR+=	ruby-rails52
 SUBDIR+=	ruby-rails60
