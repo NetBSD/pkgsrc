@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/03/20 09:26:21 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/21 17:02:14 gutteridge Exp $
 
 DISTNAME=	PyICU-2.4.3
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyICU/ICU/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyICU/}
@@ -11,6 +12,10 @@ COMMENT=	Python extension wrapping the ICU C++ libraries
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 .include "../../lang/python/egg.mk"
 .include "../../textproc/icu/buildlink3.mk"
