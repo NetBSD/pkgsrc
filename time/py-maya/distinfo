@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/10/31 09:22:21 jperkin Exp $
+$NetBSD: distinfo,v 1.4 2020/03/21 12:56:46 adam Exp $
 
-SHA1 (maya-0.3.3.tar.gz) = 057ef0cdd2f5ea4d11dd6eeb59873169da9ff2d3
-RMD160 (maya-0.3.3.tar.gz) = 00c619fd835e660ea45ef405b7c93a4da3bb8c32
-SHA512 (maya-0.3.3.tar.gz) = b9cd1836607f482aaa8e3d1a7f22f0848602386959d8e3e0b040dd0a7b6e0cb13885085f333a1f064ead1b81a554467b05cd6bd65b9d53a08ff6c7d884f45806
-Size (maya-0.3.3.tar.gz) = 9781 bytes
-SHA1 (patch-setup.py) = c942fcc6a361eda8029b4d08fc08962adc97526e
+SHA1 (maya-0.6.1.tar.gz) = 414ae4626970699a1708766f30fb932dc1ac1e65
+RMD160 (maya-0.6.1.tar.gz) = f9f46ac004756a2f98b31cbeec758b4472f4c31c
+SHA512 (maya-0.6.1.tar.gz) = 11d721de6d63cfed3980fc3fdd0c857d981f5286ee4cdb02cd464e69684f4461fae9d23e1b957855071d6408ef0fbb4f55c39914750c939af77a2b38a30cbfee
+Size (maya-0.6.1.tar.gz) = 14387 bytes
