@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/03/20 07:28:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.1 2020/03/21 18:59:57 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
