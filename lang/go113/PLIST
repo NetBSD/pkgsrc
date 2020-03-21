@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/12/07 21:34:17 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/21 16:51:10 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go113/AUTHORS
@@ -530,6 +530,7 @@ go113/misc/swig/stdio/file.swig
 go113/misc/swig/stdio/file_test.go
 go113/misc/trace/README.md
 go113/misc/trace/trace_viewer_full.html
+go113/misc/trace/webcomponents.min.js
 go113/misc/wasm/go_js_wasm_exec
 go113/misc/wasm/wasm_exec.html
 go113/misc/wasm/wasm_exec.js
