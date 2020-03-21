@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.72 2018/10/18 19:54:32 bsiegert Exp $
+$NetBSD: distinfo,v 1.73 2020/03/21 15:29:37 taca Exp $
 
-SHA1 (Mail-SpamAssassin-3.4.2.tar.gz) = f24c471d6594f60f1a1146a11bcb1c2f5215de03
-RMD160 (Mail-SpamAssassin-3.4.2.tar.gz) = dd3cbd744a642478d5773e2fb524461b2cd864e3
-SHA512 (Mail-SpamAssassin-3.4.2.tar.gz) = 85e3d78bb885ad1d0bf2066d1bc919d6ad5e9f86795069397e7c28cc1ba02870566ec014c08c81f68e7ed03b7f60d2de0b9730b3415b35d848abde2c8920a28f
-Size (Mail-SpamAssassin-3.4.2.tar.gz) = 3185452 bytes
-SHA1 (Mail-SpamAssassin-rules-3.4.2.r1840640.tgz) = c93006e1572297f816a0e186a98cbbae246a4945
-RMD160 (Mail-SpamAssassin-rules-3.4.2.r1840640.tgz) = d1f5d207176e51e37c346b2b6ce893b50341011d
-SHA512 (Mail-SpamAssassin-rules-3.4.2.r1840640.tgz) = 38b5f4dc6e6776937e787123c265ecd9a0a2f60aca1b57d6ed4a8f78cf81550478eddd0829b1255e9e8ce64421e06cc13ae82f1a597e893b65f0d07ba8c53a7f
-Size (Mail-SpamAssassin-rules-3.4.2.r1840640.tgz) = 284758 bytes
-SHA1 (patch-Makefile.PL) = f598b173e73130b55714413d5fc55e29ca6a3c4f
+SHA1 (Mail-SpamAssassin-3.4.4.tar.gz) = 98ce46e464a3dd9d3bf83b8744eebcb109292a6d
+RMD160 (Mail-SpamAssassin-3.4.4.tar.gz) = 414fdfcb544afd44f3e17dbced145f26fe827e2e
+SHA512 (Mail-SpamAssassin-3.4.4.tar.gz) = b6efa1c733ddf810b189ec69445faeae6488ee2671f87f56b49ec3bf85690bf7950aa5ce251c1f1371b2bbe4fb88dbce0a162c9a24a48ed5e6584f9019611552
+Size (Mail-SpamAssassin-3.4.4.tar.gz) = 3274482 bytes
+SHA1 (Mail-SpamAssassin-rules-3.4.4.r1873061.tgz) = ee022f1cc18a66d49c1954936c70c36049c37dcf
+RMD160 (Mail-SpamAssassin-rules-3.4.4.r1873061.tgz) = fb8a8c71dbd6621ca7044600bf9a52f9398b6fcb
+SHA512 (Mail-SpamAssassin-rules-3.4.4.r1873061.tgz) = cc2f6949db4662cdcaf5dcef922e69d18320a591deb7fb98c1fb729d91d37f5164052ab6cd2e294657334874fbfc0cccdefc750910e0453cb8da0b3f263b3ede
+Size (Mail-SpamAssassin-rules-3.4.4.r1873061.tgz) = 315930 bytes
+SHA1 (patch-Makefile.PL) = 8c866690cd40109dbeb31e475603255daba075e1
 SHA1 (patch-README) = 5d2aaecc4791e4f76df1078c17036cc23a39a8d0
 SHA1 (patch-ae) = e6e83c1de1002b8db647779d17740e67103b69d8
-SHA1 (patch-sa-update) = 59cba1287051042fc7f510f5e5ef462e2ee8d034
+SHA1 (patch-sa-update) = 12f996b23ae05e1a5919a314e82dc66e28b8ef4c
 SHA1 (patch-spamc_libspamc.c) = 757b845df445414d4ba0c2fb039dbc6d9e68b85f
 SHA1 (patch-spamd_netbsd-rc-script.sh) = 192fc1876ee30a4475c0efd9be6340e87d9fa2f4
