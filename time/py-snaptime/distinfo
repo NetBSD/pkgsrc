@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/21 11:21:54 adam Exp $
+
+SHA1 (snaptime-0.2.4.tar.gz) = cf57e07c176187b7cd02bd3d0040011c3be1d24d
+RMD160 (snaptime-0.2.4.tar.gz) = c011196fbd5c54464cf9d607d15b1a954bc3c802
+SHA512 (snaptime-0.2.4.tar.gz) = 6dfc6194ad4c330cddb28bdd0d68e88f0aa1ebb320134ec5a26675cee5cb35b07b81c23fcdf53b88cf486111a354460634cd2c2f5d76eecbea406493b9a8f851
+Size (snaptime-0.2.4.tar.gz) = 2913 bytes
