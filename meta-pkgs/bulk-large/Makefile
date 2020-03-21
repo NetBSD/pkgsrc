@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2020/03/13 10:41:12 nia Exp $
+# $NetBSD: Makefile,v 1.46 2020/03/21 20:28:42 tnn Exp $
 
-DISTNAME=	bulk-large-20200313
+DISTNAME=	bulk-large-20200321
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -87,9 +87,9 @@ BUILD_DEPENDS+=	mit-krb5-appl-[0-9]*:../../security/mit-krb5-appl
 BUILD_DEPENDS+=	FlightCrew-[0-9]*:../../textproc/FlightCrew
 BUILD_DEPENDS+=	clearsilver-[0-9]*:../../www/clearsilver
 BUILD_DEPENDS+=	mediawiki-[0-9]*:../../www/mediawiki
-BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rails42>=4.2:../../www/ruby-rails42
 BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rails51>=5.1.6.1:../../www/ruby-rails51
 BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rails52>=5.2.2:../../www/ruby-rails52
+BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rails60>=6.0.2.2:../../www/ruby-rails60
 
 #
 # 3. Libraries
