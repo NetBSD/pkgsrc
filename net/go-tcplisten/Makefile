@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/02/02 14:19:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/21 16:57:06 bsiegert Exp $
 
 GITHUB_TAG=		ceec8f93295a060cdb565ec25e4ccf17941dbd55
 DISTNAME=		go-tcplisten-0.0.0.20161114
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=valyala/}
 GITHUB_PROJECT=		tcplisten

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/02/02 14:19:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2020/03/21 16:57:20 bsiegert Exp $
 
 DISTNAME=	stats-0.2.0.20170729
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	16
+PKGREVISION=	17
 MASTER_SITES=	${MASTER_SITE_GITHUB:=montanaflynn/}
 CATEGORIES=	math
 GITHUB_TAG=	4a163274fa4ca0b524ccee24757d7bec79475aca

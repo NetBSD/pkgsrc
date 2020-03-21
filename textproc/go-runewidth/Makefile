@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2020/02/02 14:19:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.24 2020/03/21 16:57:19 bsiegert Exp $
 
 DISTNAME=	go-runewidth-0.0.2
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mattn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

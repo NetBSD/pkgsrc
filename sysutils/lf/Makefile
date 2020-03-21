@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2020/02/02 14:19:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.24 2020/03/21 16:57:19 bsiegert Exp $
 #
 
 DISTNAME=		lf-20180302
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gokcehan/}
 GITHUB_TAG=		c3f4aa5
