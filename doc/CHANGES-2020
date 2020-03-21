@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1731 2020/03/21 17:17:19 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1732 2020/03/21 19:42:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2379,3 +2379,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-http-form_data to 2.3.0 [taca 2020-03-21]
 	Updated www/ruby-faraday to 0.17.3 [taca 2020-03-21]
 	Updated www/ruby-sawyer to 0.8.2 [taca 2020-03-21]
+	Moved geography/py-google-maps-services-python to geography/py-googlemaps [adam 2020-03-21]
+	Added sysutils/py-sh version 1.12.14 [adam 2020-03-21]
+	Moved devel/py-python-dotenv to devel/py-dotenv [adam 2020-03-21]
+	Updated devel/py-dotenv to 0.12.0 [adam 2020-03-21]
