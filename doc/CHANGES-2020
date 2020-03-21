@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1711 2020/03/21 14:16:19 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1712 2020/03/21 14:20:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2336,8 +2336,17 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/neomutt to 20200320 [wiz 2020-03-21]
 	Added time/py-snaptime version 0.2.4 [adam 2020-03-21]
 	Updated textproc/py-humanize to 2.1.0 [adam 2020-03-21]
+	Updated devel/p5-Alien-Build to 2.17 [mef 2020-03-21]
+	Updated devel/p5-Config-GitLike to 1.18 [mef 2020-03-21]
+	Updated devel/p5-Data-MessagePack to 1.01 [mef 2020-03-21]
 	Updated time/py-pendulum to 2.1.0 [adam 2020-03-21]
 	Updated time/py-maya to 0.6.1 [adam 2020-03-21]
 	Updated devel/cmake to 3.17.0 [adam 2020-03-21]
 	Updated devel/cmake-gui to 3.17.0 [adam 2020-03-21]
+	Updated devel/p5-Date-Manip to 6.81 [mef 2020-03-21]
+	Updated devel/p5-Devel-Leak-Object to 1.02 [mef 2020-03-21]
+	Updated devel/p5-Devel-PPPort to 3.58 [mef 2020-03-21]
+	Updated devel/p5-Devel-PatchPerl to 1.90 [mef 2020-03-21]
+	Updated devel/p5-Dist-Zilla to 6.014 [mef 2020-03-21]
 	Updated www/h2o to 2.2.6 [nia 2020-03-21]
+	Updated devel/p5-ExtUtils-MakeMaker to 7.44 [mef 2020-03-21]
