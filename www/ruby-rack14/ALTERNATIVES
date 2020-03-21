@@ -1,1 +1,0 @@
-bin/rackup @PREFIX@/bin/rackup14@RUBY_SUFFIX@
