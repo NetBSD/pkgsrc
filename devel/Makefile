@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3065 2020/03/21 19:41:55 adam Exp $
+# $NetBSD: Makefile,v 1.3066 2020/03/21 23:38:44 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1845,6 +1845,7 @@ SUBDIR+=	p5-Test-DistManifest
 SUBDIR+=	p5-Test-Distribution
 SUBDIR+=	p5-Test-EOL
 SUBDIR+=	p5-Test-Exception
+SUBDIR+=	p5-Test-Exit
 SUBDIR+=	p5-Test-Expect
 SUBDIR+=	p5-Test-FailWarnings
 SUBDIR+=	p5-Test-Fatal
