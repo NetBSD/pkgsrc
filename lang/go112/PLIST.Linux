@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2019/03/09 09:29:30 bsiegert Exp $
-go112/pkg/${GO_PLATFORM}/internal/syscall/unix.a
