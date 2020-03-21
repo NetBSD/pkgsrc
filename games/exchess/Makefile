@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2020/01/26 17:31:14 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/03/21 14:41:45 rillig Exp $
 
-DISTNAME=		EXchess_v7.31beta
-PKGNAME=		exchess-7.31beta
+DISTNAME=		EXchess_v7.97beta
+PKGNAME=		exchess-7.97beta
 CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_LOCAL}
+MASTER_SITES=		-https://sites.google.com/site/experimentalchessprogram/home/${DISTNAME}${EXTRACT_SUFX}?attredirects=0&d=1
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -12,28 +12,24 @@ COMMENT=		Experimental chess engine
 LICENSE=		gnu-gpl-v3
 
 USE_LANGUAGES=		c++
-NO_CONFIGURE=		yes
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/beta//}
 LIBDIR=			${PREFIX}/lib/exchess
 DOCDIR=			${PREFIX}/share/doc/exchess
+AUTO_MKDIRS=		yes
 
 CFLAGS+=		-DEXCHESS_DIR=${LIBDIR}
 LDFLAGS+=		${PTHREAD_LDFLAGS}
 LIBS+=			${PTHREAD_LIBS}
 
-post-extract:
-	cd ${WRKSRC} && ${MV} search.par search.par.in
+SUBST_CLASSES+=		dirs
+SUBST_STAGE.dirs=	pre-configure
+SUBST_FILES.dirs=	search.par
+SUBST_SED.dirs=		-e 's,/Users/homand/EXchess/TB,${PREFIX}/share/egtb,'
 
 do-build:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} \
 		${CXX} ${CFLAGS} src/EXchess.cc -o exchess ${LDFLAGS} ${LIBS}
-
-post-build:
-	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
-		< ${WRKSRC}/search.par.in > ${WRKSRC}/search.par
-
-INSTALLATION_DIRS+=	bin lib/exchess ${DOCDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/exchess ${DESTDIR}${PREFIX}/bin
