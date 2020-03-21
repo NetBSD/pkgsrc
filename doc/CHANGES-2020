@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1726 2020/03/21 17:00:29 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1727 2020/03/21 17:01:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2374,3 +2374,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ruby-mustermann to 1.1.1 [taca 2020-03-21]
 	Updated www/ruby-multipart-post to 2.1.1 [taca 2020-03-21]
 	Updated www/ruby-liquid to 4.0.3 [taca 2020-03-21]
+	Updated www/ruby-loofah to 2.4.0 [taca 2020-03-21]
