@@ -1,0 +1,45 @@
+files/testdata/Makefile.am:7:5: double brackets: 	if [[ cond ]]; then :; fi
+
+	The keyword [[ is only available in bash, not in other shells.
+	Since it is typically used inside an if statement, if that
+	command is missing, it is interpreted as a "no".
+
+	An error message of the form "[[: command not found"
+	is logged, but that is easy to overlook in the large
+	output of the build process.
+
+
+	To fix this message, decide whether this file is necessary
+	for the package to build. Then choose any of these variants:
+
+	1.  Add a patch for the file
+	    (see https://www.netbsd.org/docs/pkgsrc/pkgsrc.html#components.patches)
+	2.  Add a SUBST block for the file to the package Makefile
+	    (see mk/subst.mk)
+	3.  Add CHECK_PORTABILITY_SKIP+= shell/glob to the package Makefile
+	    (see mk/check/check-portability.mk)
+
+files/testdata/Makefile.am:8:5: double brackets: 	if [[ ${COND} ]] || [[ $(COND) ]]; then :; fi
+files/testdata/double-brackets:8:4: double brackets: if [[ test ]]; then
+files/testdata/double-brackets:10:1: double brackets: [[ test ]]
+files/testdata/double-brackets:12:1: double brackets: [[ test ]] || echo
+files/testdata/env-sh:8:4: found test ... == ...: [ a == b ]
+
+	The "test" command, as well as the "[" command, are not required to know
+	the "==" operator. Only a few implementations like bash and some
+	versions of ksh support it.
+
+	When you run "test foo == foo" on a platform that does not support the
+	"==" operator, the result will be "false" instead of "true". This can
+	lead to unexpected behavior.
+
+files/testdata/random:7:1: $RANDOM: $RANDOM
+
+	The variable $RANDOM is not required for a POSIX-conforming shell, and
+	many implementations of /bin/sh do not support it. It should therefore
+	not be used in shell programs that are meant to be portable across a
+	large number of POSIX-like systems.
+
+files/testdata/test-eqeq:7:7: found test ... == ...: test a == b	# bad
+files/testdata/test-eqeq:10:4: found test ... == ...: [ a == b ]	# bad
+files/testdata/test-eqeq:14:4: found test ... == ...: [ a == b -a c == d ]

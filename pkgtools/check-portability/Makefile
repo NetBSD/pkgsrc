@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/03/14 09:18:49 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/21 15:02:20 rillig Exp $
 
 PKGNAME=	check-portability-19.4.3
 CATEGORIES=	pkgtools
@@ -18,5 +18,9 @@ AUTO_MKDIRS=		yes
 
 do-extract:
 	cd ${FILESDIR} && ${CP} -R . ${WRKSRC}
+
+do-test:
+	${WRKSRC}/check-portability files/testdata/* \
+	| ${DIFF} -u files/testdata/zzz_expected -
 
 .include "../../mk/bsd.pkg.mk"
