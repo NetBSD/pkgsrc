@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2018/12/12 19:07:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.60 2020/03/21 15:54:22 rillig Exp $
 
 DISTNAME=	fox-1.6.57
 CATEGORIES=	x11
@@ -15,7 +15,6 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--with-opengl
-CONFIGURE_ARGS+=	--with-shm
 CONFIGURE_ARGS+=	--with-xft
 CONFIGURE_ARGS+=	--with-x
 
