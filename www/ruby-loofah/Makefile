@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/10/22 16:24:20 taca Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/21 17:01:18 taca Exp $
 
-DISTNAME=	loofah-2.3.1
+DISTNAME=	loofah-2.4.0
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
