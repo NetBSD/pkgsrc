@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/21 16:04:15 taca Exp $
+
+SHA1 (coffee-rails-4.2.2.gem) = 6de60589dd4320928e96e58bdf48a74ebd84a9d6
+RMD160 (coffee-rails-4.2.2.gem) = e57f88e09a59994e9e56f55944093c440377ac13
+SHA512 (coffee-rails-4.2.2.gem) = 7a6f750d51c058a34d7bab541aac41ac655a7caa7c947ac078307b930aa97f5e77ec1e2b8eac1a44266a5c25b8194aaa4dbc3f27e9cac34b7feb380083e2e756
+Size (coffee-rails-4.2.2.gem) = 7168 bytes

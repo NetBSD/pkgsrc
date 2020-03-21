@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2020/03/21 16:04:15 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/assets/javascripts/coffee-script.js.erb
+${GEM_LIBDIR}/lib/coffee-rails.rb
+${GEM_LIBDIR}/lib/coffee/rails/engine.rb
+${GEM_LIBDIR}/lib/coffee/rails/js_hook.rb
+${GEM_LIBDIR}/lib/coffee/rails/template_handler.rb
+${GEM_LIBDIR}/lib/coffee/rails/version.rb
+${GEM_LIBDIR}/lib/rails/generators/coffee/assets/assets_generator.rb
+${GEM_LIBDIR}/lib/rails/generators/coffee/assets/templates/javascript.coffee
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
