@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/03/10 22:11:21 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2020/03/21 14:31:30 tnn Exp $
 
 DISTNAME=		tint2-v16.7
 PKGNAME=		${DISTNAME:S/-v/-/}
@@ -15,7 +15,7 @@ LICENSE=		gnu-gpl-v2
 USE_LANGUAGES=		c c++ # XXX CMake. pkg does not really need c++
 USE_CMAKE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		msgfmt msgmerge pkg-config
 
 INSTALLATION_DIRS=	share/examples/tint2
 OWN_DIRS=		${PKG_SYSCONFDIR}/xdg/tint2
