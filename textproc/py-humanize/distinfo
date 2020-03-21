@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/04/04 11:34:05 wiz Exp $
+$NetBSD: distinfo,v 1.2 2020/03/21 11:23:57 adam Exp $
 
-SHA1 (humanize-0.5.1.tar.gz) = 8b883f6c712dbc5b866382842e59567cdb3c7240
-RMD160 (humanize-0.5.1.tar.gz) = 7c5a7c9c5ac28eb29b04e80e83506e14bf46f811
-SHA512 (humanize-0.5.1.tar.gz) = 2727268d9fc7b393228f7eb9e71a5c881988ec56e265ddf83613fe57116da3aaad70d2417db4cef8a8c40cb73753eb2c2bd775d3cd25c2de751cb61373f0a551
-Size (humanize-0.5.1.tar.gz) = 14250 bytes
+SHA1 (humanize-2.1.0.tar.gz) = b2325f8a7e4dbd97d9e3595066097bf3bb346cbc
+RMD160 (humanize-2.1.0.tar.gz) = 870c751b1cf7136dba039bfbb7b06a7f15ac7de6
+SHA512 (humanize-2.1.0.tar.gz) = 1efd1c34febf6140a02f15b73a90f453630b255414e056c75fd77c83e9aaa30f802a845b7e1c4e90baf0da26fa6d258e0d0fd84f0d4660b55730baccfde62b2d
+Size (humanize-2.1.0.tar.gz) = 38484 bytes
