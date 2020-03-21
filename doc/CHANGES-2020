@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1704 2020/03/21 07:26:28 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1705 2020/03/21 09:00:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2328,3 +2328,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/go114 to 1.14.1 [bsiegert 2020-03-20]
 	Updated security/gnupg2 to 2.2.20 [adam 2020-03-21]
 	Updated time/py-icalendar to 4.0.5 [adam 2020-03-21]
+	Updated textproc/py-regex to 2020.2.20 [adam 2020-03-21]
+	Updated textproc/py-yaml to 5.3.1 [adam 2020-03-21]
+	Updated www/py-flask-caching to 1.8.0 [adam 2020-03-21]
+	Updated www/py-flask-restful to 0.3.8 [adam 2020-03-21]
