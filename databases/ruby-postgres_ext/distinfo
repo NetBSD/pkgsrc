@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2020/01/16 15:17:32 taca Exp $
-
-SHA1 (postgres_ext-3.0.1.gem) = 60dc47991c25e6f3593a4062f4fa0fcea64b9756
-RMD160 (postgres_ext-3.0.1.gem) = 66e4074fe75f5b2930cb35a1aaebaed23dff8d36
-SHA512 (postgres_ext-3.0.1.gem) = da1f47e90e12229f675955491d21eea56a349213db963e7a6e29886c1f5b8773a1988ca224be4abf5163e66e4189d98e9adf85d61e201488e5c13b36bc6f7b4f
-Size (postgres_ext-3.0.1.gem) = 24064 bytes
