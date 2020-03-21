@@ -1,0 +1,399 @@
+$NetBSD: patch-move,v 1.1 2020/03/21 14:41:45 rillig Exp $
+
+Avoid conflict with std::move (joerg, 2013-04-30).
+
+The package builds fine on NetBSD 8 without this patch. Therefore it is
+placed in files/ instead of patches/, until it is needed. Next time when
+a build failure occurs, please mention the exact build environment.
+
+Can be removed after 2021Q1 if not needed.
+
+--- src/book.cpp.orig	2017-02-04 14:23:32.000000000 +0000
++++ src/book.cpp
+@@ -44,7 +44,7 @@ void build_book(position ipos)
+   char instring[100], line[100];     // strings from input files
+   char outbook[100], resp;
+   position temp_pos;                 // temporary position
+-  move bmove;                        // book move under consideration
++  my_move bmove;                     // book move under consideration
+   unsigned __int64 pcode;            // hash code for position
+   int i = -1, j = 0, p,q;            // loop variables
+   int r, s;                    
+@@ -314,7 +314,7 @@ void build_book(position ipos)
+ //--------------------------------------------------------
+ // Function to find a position in the book
+ //--------------------------------------------------------
+-int find_record(position p, move m, int file_size, book_rec *book_record, fstream *book_f, int file_pos)
++int find_record(position p, my_move m, int file_size, book_rec *book_record, fstream *book_f, int file_pos)
+ {
+   int jump = int(file_size/2);
+   unsigned __int64 pcode = ZERO;
+@@ -384,12 +384,12 @@ int find_record(position p, move m, int 
+ // becomes a candidate move.  Information is stored to
+ // facilitate easy learning during the game.
+ //--------------------------------------------------------
+-move opening_book(h_code hash_code, position p, game_rec *gr)
++my_move opening_book(h_code hash_code, position p, game_rec *gr)
+ {
+   int file_size, mflag = 0, j;
+   int candidates = 0, total_score = 0;
+   move_list list;
+-  move nomove; nomove.t = 0;
++  my_move nomove; nomove.t = 0;
+   char book_file[100];          // file name for the book
+   book_rec book_record;         // record of move considered
+   int file_pos = 0;                 // file position of record
+@@ -680,7 +680,7 @@ int edit_book(h_code hash_code, position
+   if(outflag == 1) cout << "\n";
+ 
+   /* Edit mode for individual moves */
+-  move edit_move;
++  my_move edit_move;
+   while(1) {
+     cout << "\nEnter a move to be edited/investigated (0 = quit): ";
+     cin >> mstring; if(mstring[0] == '0') break;
+
+--- src/chess.h.orig	2017-02-04 14:23:32.000000000 +0000
++++ src/chess.h
+@@ -31,7 +31,7 @@ struct move_t {
+ // union of move_t and an integer to make comparison of 
+ // moves easier.  (as suggested in Tom Kerrigans simple chess program)
+ 
+-union move {
++union my_move {
+   move_t b;
+   int32_t t;           // assuming a 32 bit integer
+ };
+@@ -39,7 +39,7 @@ union move {
+ // Add a score for sorting purposes to the move record
+ 
+ struct move_rec {
+-  move m;
++  my_move m;
+   int score; 
+ };
+ 
+@@ -91,17 +91,17 @@ struct position {
+   unsigned char threat_square;
+   unsigned char threat_check;
+ 
+-  move hmove;                // expected best move
+-  move rmove;                // reply move               
+-  move cmove;                // combination move
+- 
++  my_move hmove;             // expected best move
++  my_move rmove;             // reply move
++  my_move cmove;             // combination move
++
+   int8_t gstage;             // game stage, range 0-16 -- depends only  
+                              //    upon pawn structure --> important for pawn hashing!
+                              // NOTE: **must** be integer so it is subtracted properly
+                              //   -- should check this for all subtractions!  unsigned ints
+                              //      may be converted incorrectly if they are negated.
+   int8_t plist[2][7][10];    // piece lists
+-  move last;                 // last move made
++  my_move last;              // last move made
+   h_code hcode;              // hash code
+   h_code pcode;              // pawn hash code
+ 
+@@ -142,7 +142,7 @@ struct position {
+ 
+   /* moves.cpp */
+   void allmoves(move_list *list, ts_thread_data *tdata);
+-  int verify_move(move_list *list, ts_thread_data *tdata, move tmove);
++  int verify_move(move_list *list, ts_thread_data *tdata, my_move tmove);
+   void add_move(int fsq, int tsq, move_list *list, char type, ts_thread_data *tdata);
+   void pawn_moves(move_list *list, int sqr, ts_thread_data *tdata);
+   void king_moves(move_list *list, int sqr, ts_thread_data *tdata);
+@@ -169,7 +169,7 @@ struct position {
+   void rook_cc(move_list *list, int sqr, int ds);
+ 
+   /* exmove.cpp */
+-  int exec_move(move emove, int ply);
++  int exec_move(my_move emove, int ply);
+ 
+   /* attacks.cpp */
+   int simple_check(int move_sq);
+@@ -198,8 +198,8 @@ struct position {
+ 
+   /* support.cpp */
+   void write_fen(int trailing_cr);
+-  void print_move(move pmove, char mstring[10], ts_thread_data *temps);
+-  move parse_move(char mstring[10], ts_thread_data *temps);
++  void print_move(my_move pmove, char mstring[10], ts_thread_data *temps);
++  my_move parse_move(char mstring[10], ts_thread_data *temps);
+ 
+ };
+ 
+@@ -225,7 +225,7 @@ struct search_node {
+   h_code ckey;       // variables for combination hash move 
+   cmove_rec *cmove;
+ 
+-  move smove;        // current move we are searching
++  my_move smove;     // current move we are searching
+ 
+   int ply;           
+ 
+@@ -290,7 +290,7 @@ struct ts_thread_data {
+   int quit_thread;         // flag to tell thread to quit
+ 
+   search_node n[MAXD+1];   // array of search positions
+-  move pc[MAXD+1][MAXD+1]; // triangular array for search
++  my_move pc[MAXD+1][MAXD+1];   // triangular array for search
+                            //    principle continuation
+   h_code plist[MAX_GAME_PLY];   // hash codes of positions visited
+ 
+@@ -337,7 +337,7 @@ struct ts_thread_data {
+   }
+ 
+   /* search.cpp */
+-  inline void pc_update(move pcmove, int ply);
++  inline void pc_update(my_move pcmove, int ply);
+ 
+ };
+ 
+@@ -389,16 +389,16 @@ struct tree_search {
+   int fail_high;                // flag for failing high
+   int fail_low;                 // flag for failing low 
+ 
+-  move bookm;                   // move from opening book
+-  move ponder_move;             // move we are pondering
+-  move last_displayed_move;     // best move from previous search display
++  my_move bookm;                // move from opening book
++  my_move ponder_move;          // move we are pondering
++  my_move last_displayed_move;  // best move from previous search display
+ 
+   int tsuite, analysis_mode;    // flags to determine whether we are in
+                                 //    analysis mode or a test suite
+ 
+   move_list root_moves;         // movelist for the root position
+ 
+-  move singular_response;       // store a singular response
++  my_move singular_response;    // store a singular response
+ 
+   // threads for SMP
+   int thread_index;                              
+@@ -415,7 +415,7 @@ struct tree_search {
+ 
+   // variables to support testsuite mode 
+   float soltime;
+-  unsigned int bmcount; move bmoves[256];
++  unsigned int bmcount; my_move bmoves[256];
+   int best_score;
+   char bmtype[3];      // "am" avoid move or "bm" best move string                              
+ 
+@@ -432,7 +432,7 @@ struct tree_search {
+   void history_stats();
+ 
+   /* search.cpp */
+-  move search(position p, int time_limit, int T, game_rec *gr);
++  my_move search(position p, int time_limit, int T, game_rec *gr);
+   int search_threads(int alpha, int beta, int depth, int threads);
+   void sort_root_moves();
+ 
+@@ -465,9 +465,9 @@ struct game_rec {
+   position reset;          // reset position for takebacks
+  /* available moves */
+   move_list movelist;      // list of pseudo-legal moves for current pos
+-  move best;               // best move for current position
++  my_move best;            // best move for current position
+  /* game history info */
+-  move game_history[MAX_GAME_PLY];  // list of move played
++  my_move game_history[MAX_GAME_PLY];  // list of move played
+ 
+  /* game control flags and counters */
+   int T;                   // turn number
+
+--- src/exmove.cpp.orig	2017-02-04 14:23:32.000000000 +0000
++++ src/exmove.cpp
+@@ -15,7 +15,7 @@
+ // If the move is legal, the function returns a 1, otherwise 0.
+ // Note that the move is made, regardless - so proper precautions
+ // need to be taken, if the move might need to be undone
+-int position::exec_move(move emove, int ply)
++int position::exec_move(my_move emove, int ply)
+ {
+   move_t mv = emove.b;
+   register int pi;
+
+--- src/funct.h.orig	2017-02-04 14:23:32.000000000 +0000
++++ src/funct.h
+@@ -22,7 +22,7 @@ void write_out(const char *);   // write
+ void performance();             // performance test function
+ 
+ /* search.cpp */
+-void pc_update(move pcmove, int ply);
++void pc_update(my_move pcmove, int ply);
+ 
+ /* setup.cpp */
+ void set_search_param();
+@@ -41,7 +41,7 @@ void QuickSortMove(move_rec *Lb, move_re
+ void build_book(position ipos);
+ void book_learn(int flag, game_rec *gr);
+ int edit_book(h_code hash_code, position *p);
+-move opening_book(h_code hash_code, position p, game_rec *gr);
++my_move opening_book(h_code hash_code, position p, game_rec *gr);
+ 
+ /* util.cpp */
+ int GetTime();
+
+--- src/game_rec.cpp.orig	2017-02-04 14:23:32.000000000 +0000
++++ src/game_rec.cpp
+@@ -695,7 +695,7 @@ void game_rec::build_fen_list()
+   /* variables */
+   char file[100];                    // file names
+   char instring[100], line[200];     // strings from input files
+-  move bmove;                        // book move under consideration
++  my_move bmove;                     // book move under consideration
+   unsigned __int64 pcode;            // hash code for position
+   int i = -1, j = 0, p,q;            // loop variables
+   int r, s;                    
+
+--- src/hash.cpp.orig	2017-02-04 14:23:32.000000000 +0000
++++ src/hash.cpp
+@@ -7,7 +7,7 @@
+ // void close_hash()
+ // void put_hash(h_code (*h_key), int score, int alpha, int beta,
+ // 	      int depth, int hmove_t, int mate_ext, int h_id)
+-// int get_hash(h_code (*h_key), int *hflag, int *hdepth, int *mate_ext, move *gmove)
++// int get_hash(h_code (*h_key), int *hflag, int *hdepth, int *mate_ext, my_move *gmove)
+ // int get_move(h_code (*h_key))
+ // int put_move(h_code (h_key), int putmove, int h_id)
+ // void position::gen_code()
+@@ -218,7 +218,7 @@ void put_hash(h_code (*h_key), int score
+ //--------------------------------------------
+ // function to find and return a hash entry
+ //--------------------------------------------
+-int get_hash(h_code (*h_key), int *hflag, int *hdepth, move *gmove, int ply, int *singular)
++int get_hash(h_code (*h_key), int *hflag, int *hdepth, my_move *gmove, int ply, int *singular)
+ {
+   hash_bucket *h; int best_depth_rec = -1; 
+ 
+@@ -298,7 +298,7 @@ int get_move(h_code (*h_key))
+  if (best_depth_rec < 0) return NOMOVE;  
+ 
+  // copy relevant data
+- move hmove;
++ my_move hmove;
+  hmove.t = h->rec[best_depth_rec].hr_hmove.t;
+ 
+  // unset any singular bit that might be set
+
+--- src/hash.h.orig	2017-02-04 14:23:32.000000000 +0000
++++ src/hash.h
+@@ -28,7 +28,7 @@
+ struct hash_rec
+ {
+   h_code hr_key;
+-  move hr_hmove;
++  my_move hr_hmove;
+   int16_t hr_score;
+   char hr_depth;   // note that stored depths cannot be larger than 127
+   unsigned char hr_data;  // first 5 bits = id, next 2 = flag, next 1 = mate_ext
+@@ -131,7 +131,7 @@ void open_hash();
+ void close_hash();
+ void set_hash_size(unsigned int Mbytes);
+ void put_hash(h_code *h_key, int score, int alpha, int beta, int depth, int hmove, int h_id, int ply);
+-int get_hash(h_code *h_key, int *hflag, int *hdepth, move *gmove, int ply, int *singular);
++int get_hash(h_code *h_key, int *hflag, int *hdepth, my_move *gmove, int ply, int *singular);
+ int get_move(h_code *h_key);
+ int put_move(h_code h_key, int putmove, int h_id);
+ 
+
+--- src/main.cpp.orig	2017-02-04 14:23:32.000000000 +0000
++++ src/main.cpp
+@@ -104,7 +104,7 @@ char exec_path[FILENAME_MAX];
+ int main(int argc, char *argv[])
+ {
+   char mstring[10];
+-  move hint;
++  my_move hint;
+ 
+ #ifdef TEST_ASSERT
+   assert(0);  // testing that asserts are off
+
+--- src/moves.cpp.orig	2017-02-04 14:23:32.000000000 +0000
++++ src/moves.cpp
+@@ -33,7 +33,7 @@ void position::allmoves(move_list *list,
+ 
+ }
+ 
+-int position::verify_move(move_list *list, ts_thread_data *tdata, move tmove)
++int position::verify_move(move_list *list, ts_thread_data *tdata, my_move tmove)
+ {
+   list->count = 0;
+ 
+
+--- src/search.cpp.orig	2017-02-04 14:23:32.000000000 +0000
++++ src/search.cpp
+@@ -3,7 +3,7 @@
+ 
+ /* Search Functions */
+ //-----------------------------------------------------------------------------
+-// move tree_search::search(position p, int time_limit, int T, game_rec *gr)
++// my_move tree_search::search(position p, int time_limit, int T, game_rec *gr)
+ // inline void tree_search::pc_update(move pcmove, int ply)
+ // inline void MSort(move_rec *Lb, move_rec *Ub)
+ // int search_node::root_pvs(int alpha, int beta, int depth)
+@@ -39,7 +39,7 @@ unsigned __int64 attempts=0, successes=0
+ /*----------------------- Search function ---------------------*/
+ // Driver for the search process.  1st initialize important data
+ // structures, then do iterative deeping until time runs out.
+-move tree_search::search(position p, int time_limit, int T, game_rec *gr)
++my_move tree_search::search(position p, int time_limit, int T, game_rec *gr)
+ {
+    char outstring[400], mstring[10];
+    int g, done, pvi;
+@@ -47,7 +47,7 @@ move tree_search::search(position p, int
+    int last_mate_score = 0, mate_iteration_count = 0; 
+    int limit_search_depth = max_search_depth;
+    position pv_pos; 
+-   move nomove; nomove.t = NOMOVE;
++   my_move nomove; nomove.t = NOMOVE;
+ 
+ #if DEBUG_SEARCH
+  search_outfile.open("search_debug.log");
+@@ -583,7 +583,7 @@ move tree_search::search(position p, int
+ // It is updated by doing a mem-copy of the principle continuation
+ // found at deeper depths to this depth + the move at this depth
+ // is stuffed in first.
+-inline void ts_thread_data::pc_update(move pcmove, int ply)
++inline void ts_thread_data::pc_update(my_move pcmove, int ply)
+ {
+  pc[ply][ply].t = pcmove.t;
+  for (int pci = ply+1; pci < MAXD; pci++)
+
+--- src/support.cpp.orig	2017-02-04 14:23:32.000000000 +0000
++++ src/support.cpp
+@@ -3,7 +3,7 @@
+ 
+ /* support.cpp  - functions for position and tree search support */
+ //--------------------------------------------------------------------------------
+-//  move position::parse_move(char mstring[10], tree_search *temps)
++//  my_move position::parse_move(char mstring[10], tree_search *temps)
+ //  void position::print_move(move pmove, char mstring[10], tree_search *temps)
+ //  void position::write_fen() 
+ //  void tree_search::log_search(int score)
+@@ -24,11 +24,11 @@
+ // Function to parse a move from the human player
+ // This move is checked then checked to see if it is legal
+ //----------------------------------------------------------
+-move position::parse_move(char mstring[10], ts_thread_data *temps)
++my_move position::parse_move(char mstring[10], ts_thread_data *temps)
+ {
+   int legal = 0, piece, to_sq = -1, from_sq = -1, promote = QUEEN;
+   int from_file = -1, from_row = -1, match_count = 0;
+-  move play, mplay[4], nomove; 
++  my_move play, mplay[4], nomove; 
+   play.t = 0; nomove.t = 0;
+   mplay[0].t = 0; mplay[1].t = 0; mplay[2].t = 0; mplay[3].t = 0;
+   position t_pos;
+@@ -200,7 +200,7 @@ move position::parse_move(char mstring[1
+ // long algebraic format. This function works by simply 
+ // adding the appropriate characters to the move string
+ //----------------------------------------------------------
+-void position::print_move(move pmove, char mstring[10], ts_thread_data *temps)
++void position::print_move(my_move pmove, char mstring[10], ts_thread_data *temps)
+ {
+   char dummy[10];             // dummy character string
+   int ptype, pfrom, pto, ppiece;
