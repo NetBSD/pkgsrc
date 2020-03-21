@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/02/02 14:19:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2020/03/21 16:57:15 bsiegert Exp $
 
 DISTNAME=	go-shellwords-1.0.3
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mattn/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
