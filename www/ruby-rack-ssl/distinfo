@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 02:47:37 agc Exp $
-
-SHA1 (rack-ssl-1.4.1.gem) = 87f2fb53c6882436b8d522288993d658dc7025ce
-RMD160 (rack-ssl-1.4.1.gem) = ec435a9c691245fa77d4f0f5a60d57707b0353a1
-SHA512 (rack-ssl-1.4.1.gem) = 77eec500a973c86028d082edf3313ac220150dbe9b502958d8fd0829608c7de4ef8356534939543faa157d2dd57b755734f7fef927698f6acc1f8f3ecb8e737e
-Size (rack-ssl-1.4.1.gem) = 6144 bytes
