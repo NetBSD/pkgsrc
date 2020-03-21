@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1714 2020/03/21 15:00:19 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1715 2020/03/21 16:00:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2352,3 +2352,14 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-ExtUtils-MakeMaker to 7.44 [mef 2020-03-21]
 	Updated games/exchess to 7.97beta [rillig 2020-03-21]
 	Removed databases/ruby-postgres_ext [taca 2020-03-21]
+	Removed www/ruby-rails42 [taca 2020-03-21]
+	Removed devel/ruby-railties42 [taca 2020-03-21]
+	Removed mail/ruby-actionmailer42 [taca 2020-03-21]
+	Removed databases/ruby-activerecord42 [taca 2020-03-21]
+	Removed www/ruby-actionpack42 [taca 2020-03-21]
+	Removed www/ruby-actionview42 [taca 2020-03-21]
+	Removed devel/ruby-activemodel42 [taca 2020-03-21]
+	Removed devel/ruby-activejob42 [taca 2020-03-21]
+	Removed www/ruby-rails-deprecated_sanitizer [taca 2020-03-21]
+	Removed textproc/ruby-rails-dom-testing1 [taca 2020-03-21]
+	Removed devel/ruby-activesupport42 [taca 2020-03-21]
