@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2019/10/19 12:42:39 mef Exp $
+# $NetBSD: Makefile,v 1.11 2020/03/21 23:48:46 mef Exp $
 
-DISTNAME=	File-Find-Object-0.3.4
+DISTNAME=	File-Find-Object-0.3.5
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
