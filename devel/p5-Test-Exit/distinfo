@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/21 23:36:28 mef Exp $
+
+SHA1 (Test-Exit-0.11.tar.gz) = b5896ca24bf621760036a4913f23ba3e362360a4
+RMD160 (Test-Exit-0.11.tar.gz) = 19483baa0c2854be9a207ae96ebd261fb09f69b9
+SHA512 (Test-Exit-0.11.tar.gz) = cd2ebb191f1d0c64017df9c4de50539985b96251222d88c644dafeb64b7373afdf28cd84d1c58caa78ee5704650f94efdd0e2971bbba962c1aeb799e812f26e4
+Size (Test-Exit-0.11.tar.gz) = 9778 bytes
