@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.15 2019/12/13 09:48:02 mrg Exp $
+$NetBSD: distinfo,v 1.16 2020/03/21 19:42:36 nia Exp $
 
-SHA1 (qtwebkit-5.212.0-alpha3.tar.xz) = dd17b3884ccc20c9fce0f151738f923ec8cd147b
-RMD160 (qtwebkit-5.212.0-alpha3.tar.xz) = 5a28f56735b7d3e98dd82f0a2566d9e31e0c37a3
-SHA512 (qtwebkit-5.212.0-alpha3.tar.xz) = 38794514b886de3fa63a41277c2bcbb970e87a12070962b527e3898466cf7ad3b65ce4588669498415d365310b37729e81aabb457808fe11120558ef8e35445f
-Size (qtwebkit-5.212.0-alpha3.tar.xz) = 12457896 bytes
+SHA1 (qtwebkit-5.212.0-alpha4.tar.xz) = a2e2840cd751013f6e9fd0d15601d1ea4beb81d5
+RMD160 (qtwebkit-5.212.0-alpha4.tar.xz) = af000947daa429945d80e3c23e5cfd0eb13793be
+SHA512 (qtwebkit-5.212.0-alpha4.tar.xz) = 33f11270bd030599beff9c1983a6c5ff2d61f407cc8a6825f7f405d46f9184c720fc7f60c7359f08f828db96a2170092875066a0d5c0a21ff09bc48a2603fbf6
+Size (qtwebkit-5.212.0-alpha4.tar.xz) = 12528508 bytes
 SHA1 (patch-Source_JavaScriptCore_API_ObjCCallbackFunction.h) = be77c4b19f5f97c12180c1b7d3b72968364f3229
 SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 8b502d6960e5b52000dd6e67f65c2fbaf6e9d1f2
 SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = 7bbb0a59a0c087abaaddda08fc31aa24809acb70
@@ -19,7 +19,7 @@ SHA1 (patch-Source_WTF_wtf_MathExtras.h) = 7dac41bf3e50944e49c3e3c29d482d2c33006
 SHA1 (patch-Source_WTF_wtf_Platform.h) = 73e8b07e8d7e718abe986a12b9f0b903dfcc4765
 SHA1 (patch-Source_WTF_wtf_ThreadIdentifierDataPthreads.cpp) = bfa570aa20e3508c77bbaebed051821a33f36209
 SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = e8972f4b703a9ff45ce313609d2540f89064b4ff
-SHA1 (patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp) = dd409929936955ad31b8ec0902067e2f23c054a2
+SHA1 (patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp) = ec7c7533c2d5a4258170745bfc49655848d0780c
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_GraphicsSurface.h) = d1d986afd5525143fc786a959240a72167f03352
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_GraphicsSurfaceToken.h) = 838acb2d7ecf41e5f6989d98459d103f4268cdcf
 SHA1 (patch-Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp) = d18013d0e07d7ad7e9d84cb6ef2d418d9bba4c7e
