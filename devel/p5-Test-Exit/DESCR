@@ -1,0 +1,12 @@
+Test::Exit provides some simple tools for testing code that might call
+exit(), providing you with the status code without exiting the test
+file.
+
+The only criterion tested is that the supplied code does or does not
+call exit(). If the code throws an exception, the exception will be
+propagated and you will have to catch it yourself. die()ing is not
+exiting for the purpose of these tests.
+
+Unlike previous versions of this module, the current version doesn't
+use exceptions to do its work, so even if you call exit() inside of an
+eval, everything should work.
