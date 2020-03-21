@@ -10,7 +10,7 @@ Fix stale code and add missing getAvailableFDs() implementation.
    virtual int run(struct timeval* tv, int timeout=500);
 +  virtual void getAvailableFDs(std::vector<int>& fds, int timeout) override;
  
-   virtual void addFD(callbackmap_t& cbmap, int fd, callbackfunc_t toDo, const boost::any& parameter);
+   virtual void addFD(callbackmap_t& cbmap, int fd, callbackfunc_t toDo, const boost::any& parameter, const struct timeval* ttd=nullptr);
    virtual void removeFD(callbackmap_t& cbmap, int fd);
 -  string getName()
 +  string getName() const override

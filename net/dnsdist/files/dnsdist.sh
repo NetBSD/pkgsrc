@@ -13,7 +13,7 @@ fi
 name="dnsdist"
 rcvar=$name
 command="@PREFIX@/bin/dnsdist"
-dnsdist_flags="${dnsdist_flags:- -d -u @DNSDIST_USER@ -g @DNSDIST@ -C @PKG_SYSCONFDIR@/dnsdist.conf}"
+dnsdist_flags="${dnsdist_flags:- -d -u @DNSDIST_USER@ -g @DNSDIST_GROUP@ -C @PKG_SYSCONFDIR@/dnsdist.conf}"
 
 if [ -f /etc/rc.subr ]; then
         load_rc_config $name
