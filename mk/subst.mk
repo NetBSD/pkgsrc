@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.66 2020/03/21 12:22:31 rillig Exp $
+# $NetBSD: subst.mk,v 1.67 2020/03/21 13:30:35 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -14,6 +14,12 @@
 #	SUBST_STAGE.prefix=	pre-configure
 #	SUBST_FILES.prefix=	./configure doc/*.html
 #	SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
+#
+# User-settable variables:
+#
+# SUBST_SHOW_DIFF
+#	Whether to log each changed file as a unified diff, for all
+#	SUBST classes. Defaults to "no".
 #
 # Package-settable variables:
 #
@@ -82,6 +88,7 @@
 
 _VARGROUPS+=		subst
 _PKG_VARS.subst=	SUBST_CLASSES
+SUBST_SHOW_DIFF?=	no
 .for c in ${SUBST_CLASSES}
 .  for pv in SUBST_STAGE SUBST_MESSAGE SUBST_FILES SUBST_SED SUBST_VARS	\
 	SUBST_FILTER_CMD SUBST_SKIP_TEXT_CHECK SUBST_NOOP_OK
@@ -113,7 +120,7 @@ SUBST_MESSAGE.${_class_}?=	Substituting "${_class_}" in ${SUBST_FILES.${_class_}
 .  for v in ${SUBST_VARS.${_class_}}
 SUBST_FILTER_CMD.${_class_}+=	-e s,@${v:C|[^A-Za-z0-9_]|\\\\&|gW:Q}@,${${v}:S|\\|\\\\|gW:S|,|\\,|gW:S|&|\\\&|gW:S|${.newline}|\\${.newline}|gW:Q},g
 .  endfor
-.  if !empty(SUBST_SHOW_DIFF.${_class_}:Uno:M[Yy][Ee][Ss])
+.  if ${SUBST_SHOW_DIFF.${_class_}:U${SUBST_SHOW_DIFF}:tl} == yes
 _SUBST_KEEP.${_class_}?=	${DIFF} -u "$$file" "$$tmpfile" || true
 .  endif
 _SUBST_KEEP.${_class_}?=	${DO_NADA}
