@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1709 2020/03/21 12:57:09 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1710 2020/03/21 12:58:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2338,3 +2338,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-humanize to 2.1.0 [adam 2020-03-21]
 	Updated time/py-pendulum to 2.1.0 [adam 2020-03-21]
 	Updated time/py-maya to 0.6.1 [adam 2020-03-21]
+	Updated devel/cmake to 3.17.0 [adam 2020-03-21]
+	Updated devel/cmake-gui to 3.17.0 [adam 2020-03-21]
