@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2020/01/11 14:40:44 nia Exp $
+$NetBSD: distinfo,v 1.8 2020/03/21 16:41:41 rillig Exp $
 
 SHA1 (FreeImage3180.zip) = 38daa9d8f1bca2330a2eaa42ec66fbe6ede7dce9
 RMD160 (FreeImage3180.zip) = b791715fccf49355a3cb27b6250d8ed809c2454e
@@ -7,3 +7,4 @@ Size (FreeImage3180.zip) = 7415716 bytes
 SHA1 (patch-Makefile) = d453337cb2a34f4480d1bd3c2115cb93715170b8
 SHA1 (patch-Makefile.fip) = 466b82e70d06f9552a73d86a742aa1bd3450f881
 SHA1 (patch-Source_LibOpenJPEG_opj__malloc.h) = 7e8b65d17cf1f0ed295964d477b96acac56bd927
+SHA1 (patch-Source_LibRawLite_internal_dcraw__common.cpp) = 3f9a149c7294b3ed3f2c17f4c28fe5b7cc223838
