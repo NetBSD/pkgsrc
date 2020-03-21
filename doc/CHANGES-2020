@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1721 2020/03/21 16:27:15 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1722 2020/03/21 16:30:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2369,3 +2369,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed time/ruby-tzinfo03 [taca 2020-03-21]
 	Removed www/ruby-rack-test06 [taca 2020-03-21]
 	Removed www/ruby-rack-ssl [taca 2020-03-21]
+	Removed www/ruby-rack14 [taca 2020-03-21]
