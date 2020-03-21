@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2019/03/13 23:15:54 jperkin Exp $
-go112/pkg/${GO_PLATFORM}/internal/x/net/lif.a
