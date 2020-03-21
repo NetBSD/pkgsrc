@@ -644,7 +644,6 @@ SUBST_SHOW_DIFF=	yes
 .include "mk/subst.mk"
 EOF
 
-	LC_ALL=C \
 	test_file "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
@@ -663,6 +662,177 @@ EOF
 		"-two" \
 		"+II" \
 		" three"
+	assert_that "stderr" --file-is-empty
+	assert_that "$exitcode" --equals 0
+
+	test_case_end
+fi
+
+
+if test_case_begin "SUBST_VARS"; then
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	vars' \
+		'SUBST_STAGE.vars=	pre-configure' \
+		'SUBST_FILES.vars=	vars.txt' \
+		'SUBST_VARS.vars=	PLAIN DQUOT SQUOT DELIM PRINTABLE' \
+		'SUBST_VARS.vars+=	UNDEFINED' \
+		'' \
+		'PLAIN=		plain' \
+		'DQUOT=		"double   quoted"' \
+		'SQUOT=		'\''single   quoted'\''' \
+		'DELIM=		hello,   world' \
+		'PRINTABLE=	!"\#$$%&'\''()*+,-./09:;<=>?@AZ[\]^_`az{|}' \
+		'#UNDEFINED=	# undefined' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "vars.txt" \
+		"@PLAIN@" \
+		"@DQUOT@" \
+		"@SQUOT@" \
+		"@DELIM@" \
+		"@PRINTABLE@" \
+		"@UNDEFINED@"
+
+	test_file "testcase.mk" "pre-configure" \
+		1> "$tmpdir/stdout" \
+		2> "$tmpdir/stderr" \
+	&& exitcode=0 || exitcode=$?
+
+	# The double quotes and single quotes are kept since the variables
+	# are treated as simple string variables, not as lists of shell
+	# words. In these string variables, the quotes are part of the value.
+	assert_that "vars.txt" --file-is-lines \
+		"plain" \
+		"\"double   quoted\"" \
+		"'single   quoted'" \
+		"hello,   world" \
+		'!"#$%&'\''()*+,-./09:;<=>?@AZ[\]^_`az{|}' \
+		""
+	assert_that "stdout" --file-is-lines \
+		"=> Substituting \"vars\" in vars.txt"
+	assert_that "stderr" --file-is-empty
+	assert_that "$exitcode" --equals 0
+
+	test_case_end
+fi
+
+if test_case_begin "SUBST_VARS with surrounding whitespace"; then
+
+	# Ensure that leading and trailing whitespace is preserved
+	# in the variable values.
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	vars' \
+		'SUBST_STAGE.vars=	pre-configure' \
+		'SUBST_FILES.vars=	vars.txt' \
+		'SUBST_VARS.vars=	SPACE TAB NEWLINE' \
+		'' \
+		'SPACE=			${:U }between spaces${:U }' \
+		'TAB=			${:U	}between tabs${:U	}' \
+		'NEWLINE=		${.newline}between newlines${.newline}' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "vars.txt" \
+		"@SPACE@" \
+		"@TAB@" \
+		"@NEWLINE@"
+
+	test_file "testcase.mk" "pre-configure" \
+		1> "$tmpdir/stdout" \
+		2> "$tmpdir/stderr" \
+	&& exitcode=0 || exitcode=$?
+
+	space=' '
+	tab='	'
+	newline='
+'
+	assert_that "vars.txt" --file-is-lines \
+		"$space""between spaces""$space" \
+		"$tab""between tabs""$tab" \
+		"$newline""between newlines""$newline"
+	assert_that "stdout" --file-is-lines \
+		"=> Substituting \"vars\" in vars.txt"
+	assert_that "stderr" --file-is-empty
+	assert_that "$exitcode" --equals 0
+
+	test_case_end
+fi
+
+
+if test_case_begin "SUBST_VARS with backslashes"; then
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	bs' \
+		'SUBST_STAGE.bs=	pre-configure' \
+		'SUBST_FILES.bs=	backslash.txt' \
+		'SUBST_VARS.bs=		BACKSLASHES' \
+		'' \
+		'BACKSLASHES=	\" \, \\, \" \'\'' \0\000 \x40 \089 \a \$$' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "backslash.txt" "@BACKSLASHES@"
+
+	test_file "testcase.mk" "pre-configure" \
+		1> "$tmpdir/stdout" \
+		2> "$tmpdir/stderr" \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "backslash.txt" --file-is-lines \
+		'\" \, \\, \" \'\'' \0\000 \x40 \089 \a \$'
+	assert_that "stdout" --file-is-lines \
+		"=> Substituting \"bs\" in backslash.txt"
+	assert_that "stderr" --file-is-empty
+	assert_that "$exitcode" --equals 0
+
+	test_case_end
+fi
+
+
+if test_case_begin "SUBST_VARS for variables with regex characters"; then
+
+	# Ensure that special regex characters like dots and parentheses
+	# may appear in variable names and are properly escaped.
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	vars' \
+		'SUBST_STAGE.vars=	pre-configure' \
+		'SUBST_FILES.vars=	vars.txt' \
+		'SUBST_VARS.vars=	VAR...... VAR.abcde VAR.() VAR.<>' \
+		'' \
+		'VAR......=	dots' \
+		'VAR.abcde=	letters' \
+		'VAR.()=	parentheses' \
+		'VAR.<>=	angle brackets' \
+		'VAR.[]=	square brackets' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "vars.txt" \
+		"@VAR......@" \
+		"@VAR.abcde@" \
+		"@VAR.()@" \
+		"@VAR.<>@" \
+		"@VAR.[]@"
+
+	test_file "testcase.mk" "pre-configure" \
+		1> "$tmpdir/stdout" \
+		2> "$tmpdir/stderr" \
+	&& exitcode=0 || exitcode=$?
+
+	# TODO: Why are the angle brackets replaced, but not the parentheses
+	# and square brackets?
+	assert_that "vars.txt" --file-is-lines \
+		"dots" \
+		"letters" \
+		"@VAR.()@" \
+		"angle brackets" \
+		"@VAR.[]@"
+	assert_that "stdout" --file-is-lines \
+		"=> Substituting \"vars\" in vars.txt"
 	assert_that "stderr" --file-is-empty
 	assert_that "$exitcode" --equals 0
 
