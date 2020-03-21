@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1733 2020/03/21 19:42:53 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1734 2020/03/21 23:50:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2384,3 +2384,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Moved devel/py-python-dotenv to devel/py-dotenv [adam 2020-03-21]
 	Updated devel/py-dotenv to 0.12.0 [adam 2020-03-21]
 	Updated x11/qt5-qtwebkit to 5.212.0.alpha4 [nia 2020-03-21]
+	Updated devel/p5-ExtUtils-CBuilder to 0.28.02.34 [mef 2020-03-21]
+	Updated devel/p5-Error to 0.17029 [mef 2020-03-21]
+	Updated devel/p5-ExtUtils-CppGuess to 0.21 [mef 2020-03-21]
+	Added devel/p5-Test-Exit version 0.11 [mef 2020-03-21]
+	Updated devel/p5-FFI-CheckLib to 0.26 [mef 2020-03-21]
+	Updated devel/p5-File-Find-Object to 0.3.5 [mef 2020-03-21]
