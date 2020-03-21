@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.8 2019/11/27 22:32:27 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.9 2020/03/21 12:58:00 adam Exp $
 
-- Don't insist on ncurses.
-- NetBSD curses has wsyncup(3).
+Don't insist on ncurses.
+On Darwin, don't make application bundle.
 
---- CMakeLists.txt.orig	2019-11-26 14:18:07.000000000 +0000
+--- CMakeLists.txt.orig	2020-03-20 10:26:14.000000000 +0000
 +++ CMakeLists.txt
-@@ -613,7 +613,6 @@ macro (CMAKE_BUILD_UTILITIES)
+@@ -612,7 +612,6 @@ macro (CMAKE_BUILD_UTILITIES)
      set(BUILD_CursesDialog 0)
    endif ()
    if(BUILD_CursesDialog)
@@ -13,17 +13,8 @@ $NetBSD: patch-CMakeLists.txt,v 1.8 2019/11/27 22:32:27 adam Exp $
      find_package(Curses)
      if(NOT CURSES_FOUND)
        message(WARNING
-@@ -719,7 +718,7 @@ if(NOT CMake_TEST_EXTERNAL_CMAKE)
-   # which isn't in the default linker search path. So without RPATH ccmake
-   # doesn't run and the build doesn't succeed since ccmake is executed for
-   # generating the documentation.
--  if(BUILD_CursesDialog)
-+  if(FALSE)
-     get_filename_component(_CURSES_DIR "${CURSES_LIBRARY}" PATH)
-     set(CURSES_NEED_RPATH FALSE)
-     if(NOT "${_CURSES_DIR}" STREQUAL "/lib" AND NOT "${_CURSES_DIR}" STREQUAL "/usr/lib" AND NOT "${_CURSES_DIR}" STREQUAL "/lib64" AND NOT "${_CURSES_DIR}" STREQUAL "/usr/lib64")
-@@ -728,7 +727,7 @@ if(NOT CMake_TEST_EXTERNAL_CMAKE)
-   endif()
+@@ -710,7 +709,7 @@ if(NOT CMake_TEST_EXTERNAL_CMAKE)
+   CMAKE_BUILD_UTILITIES()
  
    if(BUILD_QtDialog)
 -    if(APPLE)
