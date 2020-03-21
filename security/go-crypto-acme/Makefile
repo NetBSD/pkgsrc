@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/02/03 14:51:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/21 16:57:04 bsiegert Exp $
 
 PKGNAME=	${DISTNAME:S/crypto/crypto-acme/}
+PKGREVISION=	1
 COMMENT=	ACME library from go-crypto
 
 GO_SRCPATH=	golang.org/x/crypto/acme
