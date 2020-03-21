@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2019/11/03 10:15:53 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/03/21 14:04:56 mef Exp $
 
-DISTNAME=	Dist-Zilla-6.012
+DISTNAME=	Dist-Zilla-6.014
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Dist/}
 
@@ -64,18 +63,15 @@ DEPENDS+=	p5-YAML-Tiny-[0-9]*:../../textproc/p5-YAML-Tiny
 DEPENDS+=	p5-autobox>=2.53:../../devel/p5-autobox
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
-BUILD_DEPENDS+=		p5-CPAN-Meta-Check-[0-9]*:../../devel/p5-CPAN-Meta-Check
-BUILD_DEPENDS+=		p5-File-ShareDir-Install>=0.03:../../devel/p5-File-ShareDir-Install
-BUILD_DEPENDS+=		p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
-BUILD_DEPENDS+=		p5-Log-Log4perl-[0-9]*:../../devel/p5-Log-Log4perl
-BUILD_DEPENDS+=		p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
-BUILD_DEPENDS+=		p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=		p5-Test-File-ShareDir-[0-9]*:../../devel/p5-Test-File-ShareDir
-#BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=		p5-Scalar-List-Utils>=1.45:../../devel/p5-Scalar-List-Utils
-
-# for make test
-BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+TEST_DEPENDS+=	p5-CPAN-Meta-Check-[0-9]*:../../devel/p5-CPAN-Meta-Check
+TEST_DEPENDS+=	p5-File-ShareDir-Install>=0.03:../../devel/p5-File-ShareDir-Install
+TEST_DEPENDS+=	p5-IPC-Run-[0-9]*:../../devel/p5-IPC-Run
+TEST_DEPENDS+=	p5-Log-Log4perl-[0-9]*:../../devel/p5-Log-Log4perl
+TEST_DEPENDS+=	p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
+TEST_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TEST_DEPENDS+=	p5-Test-File-ShareDir-[0-9]*:../../devel/p5-Test-File-ShareDir
+TEST_DEPENDS+=	p5-Scalar-List-Utils>=1.45:../../devel/p5-Scalar-List-Utils
+TEST_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_PACKLIST=		auto/Dist/Zilla/.packlist
 
