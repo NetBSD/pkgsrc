@@ -1,2 +1,0 @@
-This Ruby module can compare DOMs and assert certain elements exist
-in doms using Nokogiri.
