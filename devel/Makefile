@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3064 2020/03/21 15:26:41 taca Exp $
+# $NetBSD: Makefile,v 1.3065 2020/03/21 19:41:55 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2176,6 +2176,7 @@ SUBDIR+=	py-docopt
 SUBDIR+=	py-docstyle
 SUBDIR+=	py-doctor
 SUBDIR+=	py-dogpile-cache
+SUBDIR+=	py-dotenv
 SUBDIR+=	py-dulwich
 SUBDIR+=	py-editorconfig-core
 SUBDIR+=	py-entrypoints
@@ -2427,7 +2428,6 @@ SUBDIR+=	py-pysha3
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pyte
 SUBDIR+=	py-pytemplate
-SUBDIR+=	py-python-dotenv
 SUBDIR+=	py-python-slugify
 SUBDIR+=	py-pyutil
 SUBDIR+=	py-pyvex
