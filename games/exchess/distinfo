@@ -1,17 +1,6 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 20:56:48 agc Exp $
+$NetBSD: distinfo,v 1.13 2020/03/21 14:41:45 rillig Exp $
 
-SHA1 (EXchess_v7.31beta.zip) = 09fa6d133172e34c1908df148f56489c47ee8cc2
-RMD160 (EXchess_v7.31beta.zip) = 38a3a6b3a3a53ff62321642954ff4d29ebfe9705
-SHA512 (EXchess_v7.31beta.zip) = 0bac23f748238fc2f8fceeee29112911a7f3f03ce0ce930bf415ab69632bf673b23d466ca0299069daf5636ef91b9ff0d4633632e6f57a352bebbd9344dd60a6
-Size (EXchess_v7.31beta.zip) = 3421179 bytes
-SHA1 (patch-search.par.in) = 664781d6f9a204f9a071825dc3ebee19da4e3f8b
-SHA1 (patch-src_book.cpp) = ab12445c7ebd769a2a90166fba4ef256f293709d
-SHA1 (patch-src_chess.h) = 569c3f79a51a6be9cec83e98ef6c38f7e8d30660
-SHA1 (patch-src_exmove.cpp) = e4cff58e89501f5b73d78984ab8bf76a50d12677
-SHA1 (patch-src_funct.h) = d3ecab4fad483ac41f76993ecfb6af38c243115a
-SHA1 (patch-src_hash.cpp) = 3556b37f386d867d092075edcd1cc279bb4c0223
-SHA1 (patch-src_hash.h) = 5af2f9bad4484cc07ff8cb452b7b7759c3ab9d4e
-SHA1 (patch-src_main.cpp) = e68ef0a3a9ef4aaaeab59c8da0e3badd198e49f1
-SHA1 (patch-src_score.cpp) = f74c09b8bed649bbf6d00d0e3401de4dc16dd353
-SHA1 (patch-src_search.cpp) = eae69d8e31ca42b27db64df19e58b02b030b0a6a
-SHA1 (patch-src_support.cpp) = 4329f3863e2f4ebb18f2c427043cfbdff6879c4c
+SHA1 (EXchess_v7.97beta.zip) = 1ea71ba8ce9ecbc52699ee39490f1d275c91dd82
+RMD160 (EXchess_v7.97beta.zip) = 7e317362040321b8dcecae867a6710036846d579
+SHA512 (EXchess_v7.97beta.zip) = 33e909bf2f39996e579c16ba2752f6d8d1c0d3c7e788c95be7fa8bc8b8ef67d3792693b28d3f73e52fb3f45bffbc5c9ccb0cf7a5fb27f70bb154de7e93f7df86
+Size (EXchess_v7.97beta.zip) = 1759660 bytes
