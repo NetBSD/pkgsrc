@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1708 2020/03/21 11:57:18 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1709 2020/03/21 12:57:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2336,3 +2336,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/neomutt to 20200320 [wiz 2020-03-21]
 	Added time/py-snaptime version 0.2.4 [adam 2020-03-21]
 	Updated textproc/py-humanize to 2.1.0 [adam 2020-03-21]
+	Updated time/py-pendulum to 2.1.0 [adam 2020-03-21]
+	Updated time/py-maya to 0.6.1 [adam 2020-03-21]
