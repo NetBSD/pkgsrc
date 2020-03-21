@@ -14,6 +14,7 @@ test_case_set_up() {
 # The tools that are used by subst.mk
 CHMOD=		chmod-is-not-used
 CMP=		cmp
+DIFF=		diff
 ECHO=		echo
 MKDIR=		mkdir -p
 MV=		mv
@@ -534,6 +535,94 @@ EOF
 	assert_that "stdout" --file-is-empty
 	assert_that "stderr" --file-is-lines \
 		"fail reason: [subst.mk] duplicate SUBST class in: one one two"
+	assert_that "$exitcode" --equals 0
+
+	test_case_end
+fi
+
+
+if test_case_begin "several SUBST classes"; then
+
+	# It's ok to have several SUBST classes that apply to the same file.
+	# The order of execution is not guaranteed though.
+
+	create_file_lines "file" "zero one two three four"
+
+	create_file "testcase.mk" <<EOF
+SUBST_CLASSES+=		one
+SUBST_STAGE.one=	pre-configure
+SUBST_FILES.one=	file
+SUBST_SED.one=		-e 's,one,I,'
+
+SUBST_CLASSES+=		two
+SUBST_STAGE.two=	pre-configure
+SUBST_FILES.two=	file
+SUBST_SED.two=		-e 's,two,II,'
+
+SUBST_CLASSES+=		three
+SUBST_STAGE.three=	pre-configure
+SUBST_FILES.three=	file
+SUBST_SED.three=	-e 's,three,III,'
+
+.include "prepare-subst.mk"
+.include "mk/subst.mk"
+EOF
+
+	test_file "testcase.mk" "pre-configure" \
+		1> "$tmpdir/stdout" \
+		2> "$tmpdir/stderr" \
+	&& exitcode=0 || exitcode=$?
+
+	# The order of the above output is not guaranteed.
+	LC_ALL=C sort < "$tmpdir/stdout" > "$tmpdir/stdout-sorted"
+
+	assert_that "file" --file-is-lines "zero I II III four"
+	assert_that "stdout-sorted" --file-is-lines \
+		"=> Substituting \"one\" in file" \
+		"=> Substituting \"three\" in file" \
+		"=> Substituting \"two\" in file"
+	assert_that "stderr" --file-is-empty
+	assert_that "$exitcode" --equals 0
+
+	test_case_end
+fi
+
+
+if test_case_begin "show diff"; then
+
+	create_file_lines "file" "one" "two" "three"
+
+	create_file "testcase.mk" <<EOF
+SUBST_CLASSES+=		two
+SUBST_STAGE.two=	pre-configure
+SUBST_FILES.two=	file
+SUBST_SED.two=		-e 's,two,II,'
+SUBST_SHOW_DIFF.two=	yes
+
+.include "prepare-subst.mk"
+.include "mk/subst.mk"
+EOF
+
+	LC_ALL=C \
+	test_file "testcase.mk" "pre-configure" \
+		1> "$tmpdir/stdout" \
+		2> "$tmpdir/stderr" \
+	&& exitcode=0 || exitcode=$?
+
+	awk '{ if (/^... \.\/.*/) { print $1 " " $2 " (filtered timestamp)" } else { print $0 } }' \
+	< "$tmpdir/stdout" > "$tmpdir/stdout-filtered"
+
+	assert_that "file" --file-is-lines "one" "II" "three"
+	assert_that "stdout-filtered" --file-is-lines \
+		"=> Substituting \"two\" in file" \
+		"--- ./file (filtered timestamp)" \
+		"+++ ./file.subst.sav (filtered timestamp)" \
+		"@@ -1,3 +1,3 @@" \
+		" one" \
+		"-two" \
+		"+II" \
+		" three"
+	assert_that "stderr" --file-is-empty
 	assert_that "$exitcode" --equals 0
 
 	test_case_end
