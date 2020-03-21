@@ -33,8 +33,12 @@ include/h2o/tunnel.h
 include/h2o/url.h
 include/h2o/version.h
 include/h2o/websocket.h
-lib/libh2o-evloop.a
-lib/libh2o.a
+lib/libh2o-evloop.so
+lib/libh2o-evloop.so.0.13
+lib/libh2o-evloop.so.0.13.6
+lib/libh2o.so
+lib/libh2o.so.0.13
+lib/libh2o.so.0.13.6
 lib/pkgconfig/libh2o-evloop.pc
 lib/pkgconfig/libh2o.pc
 share/doc/h2o/assets/8mbps100msec-nginx195-h2o150.png
