@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1715 2020/03/21 16:00:56 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1716 2020/03/21 16:05:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2363,3 +2363,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed www/ruby-rails-deprecated_sanitizer [taca 2020-03-21]
 	Removed textproc/ruby-rails-dom-testing1 [taca 2020-03-21]
 	Removed devel/ruby-activesupport42 [taca 2020-03-21]
+	Added www/ruby-coffee-rails4 version 4.2.2 [taca 2020-03-21]
