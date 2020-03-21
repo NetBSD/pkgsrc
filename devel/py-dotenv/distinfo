@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/21 19:41:56 adam Exp $
+
+SHA1 (python-dotenv-0.12.0.tar.gz) = 21f4cf56b416e64866877eacb61f85f513229b83
+RMD160 (python-dotenv-0.12.0.tar.gz) = 825dc8d22b7ebea16f73051f9235309d7ded1bde
+SHA512 (python-dotenv-0.12.0.tar.gz) = 9e70ae4f91f3562627f1c54d2e1c8306e6c537cb8807aceff4e97fc11ce7cc5ac759c3bf610c5993e73ab2e5853106b41f460d852e45593dc093b979346eebf9
+Size (python-dotenv-0.12.0.tar.gz) = 28460 bytes
