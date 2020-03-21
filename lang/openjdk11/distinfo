@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2020/02/11 02:30:42 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2020/03/21 10:46:57 rillig Exp $
 
 SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = d76599619b8bea879b8202b3efc38a82335d2e8c
 RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = a1b998e4e7edfb73ec35b0cc94895d9af16a8cd8
@@ -25,6 +25,7 @@ SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_vm__version__bsd__aarch64.cpp) = ab
 SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 86d9772592524f4119b4cf99671ac4d1224a28da
 SHA1 (patch-src_hotspot_os_bsd_os__perf__bsd.cpp) = 7bb57f82f3a93adc1970ed4215148fc02ecbcd5a
 SHA1 (patch-src_hotspot_os_posix_os__posix.cpp) = e70e8c1e59f0be184a7a1d6e9d11ac7b934ce4b2
+SHA1 (patch-src_hotspot_share_libadt_dict.cpp) = ad7ee25e66232b07db6abe7b13f9d6ed05a61202
 SHA1 (patch-src_java.base_bsd_native_libjava_ProcessHandleImpl__bsd.c) = fbc0aa6656292535fb38344fee7178b6f625f58a
 SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.c) = 39c7afb3c36fa9557d2a660c4b4068b5684c552f
 SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.h) = 121357cb76b4a96c06cc2bf670579e0b27f66fc1
