@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.4 2018/02/20 05:17:31 kamil Exp $
+$NetBSD: distinfo,v 1.5 2020/03/22 07:52:59 nia Exp $
 
 SHA1 (libgroove-4.3.0.tar.gz) = 3d64b6bb5ba14043ae1924b8e8f96bb0716f469d
 RMD160 (libgroove-4.3.0.tar.gz) = af4b30b7fbc887bc030d3bb18f34576ce7a0a16f
 SHA512 (libgroove-4.3.0.tar.gz) = 30d75a3b1b3efa9b33687bb146648b66f8f4c718551c0db2c24c0259f09cf355a7c7bbac40d60d7a97bbbd7f83401d09464c6ac2b18cdfcd6198220cefc8a705
 Size (libgroove-4.3.0.tar.gz) = 48857 bytes
+SHA1 (patch-groove_encoder.c) = 2a351fe67428256300cbaaef97d009dbbed659ea
+SHA1 (patch-groove_file.c) = ae89be22e18481b8b312aa55eee0bab523a80874
+SHA1 (patch-groove_playlist.c) = 31049d013d3635779c825184534cc40d4b683c6a
