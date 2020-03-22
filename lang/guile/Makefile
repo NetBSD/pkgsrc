@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2019/12/24 01:42:53 gutteridge Exp $
+# $NetBSD: Makefile,v 1.113 2020/03/22 08:17:23 rillig Exp $
 
 DISTNAME=		guile-1.8.8
 PKGREVISION=		10
@@ -13,6 +13,7 @@ LICENSE=		gnu-lgpl-v2.1
 CONFLICTS=		guile14<1.4.1nb1 guile-oops-[0-9]*
 
 GNU_CONFIGURE=		YES
+GNU_CONFIGURE_STRICT=	no # has several configure programs
 USE_TOOLS+=		gmake makeinfo
 USE_LIBTOOL=		YES
 PTHREAD_AUTO_VARS=	YES
