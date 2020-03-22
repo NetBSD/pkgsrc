@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/08/11 13:23:36 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/03/22 20:56:32 rillig Exp $
 
 DISTNAME=	Pod-Spell-1.20
 PKGNAME=	p5-${DISTNAME}
@@ -21,12 +21,6 @@ DEPENDS+=	p5-File-ShareDir-Install>=0:../../devel/p5-File-ShareDir-Install
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 PERL5_PACKLIST=		auto/Pod/Spell/.packlist
-
-SUBST_CLASSES+=		perl
-SUBST_STAGE.perl=	pre-configure
-SUBST_MESSAGE.perl=	Fixing path to perl
-SUBST_FILES.perl+=	bin/podspell
-SUBST_SED.perl=		-e "s|/usr/bin/env perl|${PERL5}|"
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
