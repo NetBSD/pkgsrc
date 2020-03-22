@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/02/29 11:45:02 nia Exp $
+# $NetBSD: Makefile,v 1.13 2020/03/22 07:47:00 nia Exp $
 
 DISTNAME=	mbedtls-2.16.5-apache
 PKGNAME=	${DISTNAME:-apache=}
@@ -17,7 +17,7 @@ SUPERSEDES+=	polarssl-[0-9]*
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c99
-USE_TOOLS+=	gmake perl pkg-config
+USE_TOOLS+=	perl pkg-config
 
 GCC_REQD+=	4.4
 REPLACE_PERL=	tests/scripts/*.pl
