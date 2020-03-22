@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/07/20 10:39:18 nia Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/03/22 08:39:48 nia Exp $
 lib/audacious/Container/asx.so
 lib/audacious/Container/asx3.so
 lib/audacious/Container/audpl.so
@@ -9,7 +9,6 @@ lib/audacious/Effect/compressor.so
 lib/audacious/Effect/crossfade.so
 lib/audacious/Effect/crystalizer.so
 lib/audacious/Effect/echo.so
-${PLIST.gtk}lib/audacious/Effect/ladspa.so
 lib/audacious/Effect/mixer.so
 lib/audacious/Effect/resample.so
 lib/audacious/Effect/silence-removal.so
@@ -17,29 +16,20 @@ lib/audacious/Effect/sox-resampler.so
 lib/audacious/Effect/speed-pitch.so
 lib/audacious/Effect/stereo.so
 lib/audacious/Effect/voice_removal.so
-${PLIST.gtk}lib/audacious/General/alarm.so
-${PLIST.qt}lib/audacious/General/albumart-qt.so
-${PLIST.gtk}lib/audacious/General/albumart.so
-${PLIST.gtk}lib/audacious/General/aosd.so
+lib/audacious/General/albumart-qt.so
 lib/audacious/General/cd-menu-items.so
 lib/audacious/General/delete-files.so
-${PLIST.gtk}lib/audacious/General/gtkui.so
-${PLIST.gtk}lib/audacious/General/hotkey.so
-${PLIST.qt}lib/audacious/General/lyricwiki-qt.so
-${PLIST.gtk}lib/audacious/General/lyricwiki.so
+lib/audacious/General/lyricwiki-qt.so
 ${PLIST.dbus}lib/audacious/General/mpris2.so
-${PLIST.qt}lib/audacious/General/playlist-manager-qt.so
-${PLIST.gtk}lib/audacious/General/playlist-manager.so
-${PLIST.qt}lib/audacious/General/qtui.so
+lib/audacious/General/playlist-manager-qt.so
+lib/audacious/General/qtui.so
 lib/audacious/General/scrobbler.so
-${PLIST.qt}lib/audacious/General/search-tool-qt.so
-${PLIST.gtk}lib/audacious/General/search-tool.so
-${PLIST.qt}lib/audacious/General/skins-qt.so
-${PLIST.gtk}lib/audacious/General/skins.so
-${PLIST.qt}lib/audacious/General/song-info-qt.so
+lib/audacious/General/search-tool-qt.so
+lib/audacious/General/skins-qt.so
+lib/audacious/General/song-info-qt.so
 lib/audacious/General/song_change.so
-${PLIST.qt}lib/audacious/General/statusicon-qt.so
-${PLIST.gtk}lib/audacious/General/statusicon.so
+lib/audacious/General/statusicon-qt.so
+lib/audacious/General/streamtuner.so
 lib/audacious/Input/aac-raw.so
 ${PLIST.adplug}lib/audacious/Input/adplug.so
 ${PLIST.fluidsynth}lib/audacious/Input/amidi-plug.so
@@ -65,10 +55,10 @@ lib/audacious/Output/sdlout.so
 lib/audacious/Transport/gio.so
 lib/audacious/Transport/mms.so
 lib/audacious/Transport/neon.so
-${PLIST.gtk}lib/audacious/Visualization/blur_scope.so
-${PLIST.gtk}lib/audacious/Visualization/cairo-spectrum.so
-${PLIST.qt}lib/audacious/Visualization/gl-spectrum-qt.so
-${PLIST.gtk}lib/audacious/Visualization/gl-spectrum.so
+lib/audacious/Visualization/blur_scope-qt.so
+lib/audacious/Visualization/gl-spectrum-qt.so
+lib/audacious/Visualization/qt-spectrum.so
+lib/audacious/Visualization/vumeter-qt.so
 share/audacious/Skins/Classic/balance.png
 share/audacious/Skins/Classic/cbuttons.png
 share/audacious/Skins/Classic/eq_ex.png

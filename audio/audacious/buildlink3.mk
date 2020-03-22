@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.44 2020/03/10 22:08:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2020/03/22 08:39:48 nia Exp $
 
 BUILDLINK_TREE+=	audacious
 
@@ -20,12 +20,9 @@ pkgbase := audacious
 .if !empty(PKG_BUILD_OPTIONS.audacious:Mdbus)
 .include "../../sysutils/dbus/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.audacious:Mgtk2)
+
 .include "../../x11/gtk2/buildlink3.mk"
-.endif
-.if !empty(PKG_BUILD_OPTIONS.audacious:Mqt5)
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.endif
 .endif # AUDACIOUS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-audacious
