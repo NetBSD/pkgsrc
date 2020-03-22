@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2020/03/10 22:10:24 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2020/03/22 21:22:20 joerg Exp $
 
 JDK_MICRO=	141
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20170813
@@ -50,7 +50,7 @@ MAKE_ENV+=		PKGSRC_UNZIPSFX=${TOOLS_PATH.unzip}sfx
 BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
 NO_CONFIGURE=		yes
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c gnu++03
 USE_TOOLS+=		gmake pax unzip:run zip:run # patch
 UNLIMIT_RESOURCES=	datasize stacksize
 WRKSRC=			${WRKDIR}/openjdk
@@ -154,14 +154,16 @@ _WRAP_EXTRA_ARGS.CXX+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-tautological-compare \
 			-Wno-delete-non-virtual-dtor \
 			-Wno-return-type -Wno-unused-parameter \
-			-Wno-parentheses-equality -Wno-empty-body
+			-Wno-parentheses-equality -Wno-empty-body \
+			-Wno-sizeof-array-div
 CWRAPPERS_APPEND.cxx+=	-Wno-parentheses -Wno-sign-conversion \
 			-Wno-shorten-64-to-32 -Wno-conversion \
 			-Wno-unused-value -Wno-switch-enum -Wno-switch \
 			-Wno-tautological-compare \
 			-Wno-delete-non-virtual-dtor \
 			-Wno-return-type -Wno-unused-parameter \
-			-Wno-parentheses-equality -Wno-empty-body
+			-Wno-parentheses-equality -Wno-empty-body \
+			-Wno-sizeof-array-div
 .  if ${OPSYS} != "FreeBSD"
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-new-returns-null
 CWRAPPERS_APPEND.cxx+=	-Wno-new-returns-null
