@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2019/06/05 19:06:07 adam Exp $
+# $NetBSD: Makefile,v 1.24 2020/03/22 17:52:51 tnn Exp $
 
 DISTNAME=	cryptopp820
 PKGNAME=	cryptopp-8.2.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.zip
