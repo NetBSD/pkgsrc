@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/03/22 13:51:23 tnn Exp $
+
+libgtest.a needs to link with -pthread on Linux
+XXX it really /should/ be using pkg-config to figure this out!
+
+--- CMakeLists.txt.orig	2019-04-28 12:04:25.000000000 +0000
++++ CMakeLists.txt
+@@ -274,7 +274,7 @@ if(URIPARSER_BUILD_TESTS)
+     )
+ 
+     target_link_libraries(testrunner PUBLIC
+-        ${GTEST_BOTH_LIBRARIES}
++        -pthread ${GTEST_BOTH_LIBRARIES}
+     )
+ 
+     add_test(
