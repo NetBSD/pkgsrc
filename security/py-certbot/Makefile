@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/12/15 09:48:37 adam Exp $
+# $NetBSD: Makefile,v 1.23 2020/03/22 22:32:29 rillig Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -34,11 +34,8 @@ PKG_SYSCONFSUBDIR=	letsencrypt
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-build
 SUBST_MESSAGE.path=	Fixing default paths
-SUBST_FILES.path+=	certbot/cert_manager.py
-SUBST_FILES.path+=	certbot/cli.py
-SUBST_FILES.path+=	certbot/compat/misc.py
-SUBST_FILES.path+=	certbot/tests/cli_test.py
-SUBST_SED.path+=	-e 's,/etc/letsencrypt,${PKG_SYSCONFDIR},g'
+SUBST_FILES.path=	certbot/compat/misc.py
+SUBST_SED.path=		-e 's,/etc/letsencrypt,${PKG_SYSCONFDIR},g'
 SUBST_SED.path+=	-e 's,/var/lib/letsencrypt,${VARBASE}/letsencrypt,g'
 SUBST_SED.path+=	-e 's,/var/log/letsencrypt,${VARBASE}/letsencrypt/log,g'
 
