@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.70 2020/03/22 13:19:50 rillig Exp $
+# $NetBSD: subst.mk,v 1.71 2020/03/22 18:43:46 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -174,7 +174,7 @@ ${_SUBST_COOKIE.${_class_}}:
 				changed=yes;				\
 				${_SUBST_KEEP.${_class_}};		\
 				${MV} -f "$$tmpfile" "$$file"; 		\
-				${ECHO} "$$file" >> ${.TARGET};		\
+				${ECHO} "$$file" >> ${.TARGET}.tmp;	\
 			fi;						\
 		else							\
 			${_SUBST_WARN.${_class_}} "Ignoring non-text file \"$$file\"."; \
@@ -186,5 +186,5 @@ ${_SUBST_COOKIE.${_class_}}:
 	fi; \
 	done; \
 	${RMDIR} "$$emptydir"
-	${RUN} ${TOUCH} ${TOUCH_FLAGS} ${.TARGET:Q}
+	${RUN} ${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp && ${MV} ${.TARGET}.tmp ${.TARGET}
 .endfor
