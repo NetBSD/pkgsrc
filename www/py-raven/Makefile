@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/02/18 11:44:22 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/22 12:28:28 rillig Exp $
 
 DISTNAME=	raven-6.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -43,8 +43,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-zconfig-[0-9]*:../../devel/py-zconfig
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
+.if ${PYPKGPREFIX} == py27
 DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
+TEST_DEPENDS=	# none; py-aiohttp and py-sanic are incompatible with py27
+do-test:
 .endif
 
 USE_LANGUAGES=	# none
