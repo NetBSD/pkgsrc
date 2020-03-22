@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:30:43 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/22 06:57:54 nia Exp $
 
 DISTNAME=	wildmidi-0.4.3
 PKGNAME=	lib${DISTNAME}
@@ -14,7 +14,6 @@ LICENSE=	gnu-lgpl-v3
 
 WRKSRC=		${WRKDIR}/wildmidi-${DISTNAME}
 USE_LANGUAGES=	c99
-USE_TOOLS+=	gmake
 USE_CMAKE=	yes
 
 SUBST_CLASSES+=		man
