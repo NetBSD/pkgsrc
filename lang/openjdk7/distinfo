@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.93 2019/09/22 15:16:26 tnn Exp $
+$NetBSD: distinfo,v 1.94 2020/03/22 21:22:20 joerg Exp $
 
 SHA1 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 99bff3c702dd79076f4e705e3541f7e35bbb4306
 RMD160 (openjdk7/apache-ant-1.9.4-bin.tar.bz2) = 7f4263d617bbf40a15eab401369d18a755f8d260
@@ -85,6 +85,7 @@ SHA1 (patch-hotspot_make_solaris_makefiles_optimized.make) = 78d64fe6cb7c3420889
 SHA1 (patch-hotspot_make_solaris_makefiles_product.make) = 6105c8e7f8b612e70957bccf7313384488388aa5
 SHA1 (patch-hotspot_make_solaris_makefiles_saproc.make) = 8a034088ca3c9f5a625849b772dd51f65fad0b43
 SHA1 (patch-hotspot_make_solaris_makefiles_vm.make) = d72c16b90479c5df0dc33f3b30916b0552dcc17a
+SHA1 (patch-hotspot_src_cpu_x86_vm_jni__x86.h) = 30c4e22a666f9155032bff3c61f77ead61a77b14
 SHA1 (patch-hotspot_src_cpu_zero_vm_cppInterpreter__zero.cpp) = 273e588661fd82411c9f7b48f2bf142bbc8caebb
 SHA1 (patch-hotspot_src_cpu_zero_vm_methodHandles__zero.cpp) = 9f7acf1eff3baba430880be9fd0f6148056dd088
 SHA1 (patch-hotspot_src_cpu_zero_vm_nativeInst__zero.cpp) = dcd83b65a7d74e153a3e1c44f8c7980827ec20c7
