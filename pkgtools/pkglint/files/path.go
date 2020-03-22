@@ -94,6 +94,25 @@ func (p Path) HasPrefixPath(prefix Path) bool {
 		return !p.IsAbs()
 	}
 
+	si := 0
+	pi := 0
+	for {
+		for si < len(p) && (p[si] == '.' || p[si] == '/') {
+			si++
+		}
+		for pi < len(prefix) && (prefix[pi] == '.' || prefix[pi] == '/') {
+			pi++
+		}
+		if si >= len(p) || pi >= len(prefix) {
+			break
+		}
+		if p[si] != prefix[pi] {
+			return false
+		}
+		si++
+		pi++
+	}
+
 	parts := p.Parts()
 	prefixParts := prefix.Parts()
 	if len(prefixParts) > len(parts) {
@@ -192,7 +211,7 @@ func (p Path) CleanPath() Path {
 }
 
 func (p Path) IsAbs() bool {
-	return p.HasPrefixText("/") || filepath.IsAbs(filepath.FromSlash(string(p)))
+	return len(p) > 0 && (p[0] == '/' || len(p) > 2 && p[1] == ':' && p[2] == '/')
 }
 
 // Rel returns the relative path from this path to the other.

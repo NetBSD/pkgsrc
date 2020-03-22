@@ -1092,6 +1092,18 @@ func (s *Suite) Test_Pkgsrc_ListVersions__error_is_cached(c *check.C) {
 	t.CheckOutputEmpty() // No repeated error message
 }
 
+func (s *Suite) Test_Pkgsrc_ListVersions__empty_directories_are_ignored(c *check.C) {
+	t := s.Init(c)
+
+	t.CreateFileLines("lang/lang123/Makefile")
+	t.CreateFileLines("lang/lang124/empty/empty/empty/empty/CVS/Entries")
+
+	versions := G.Pkgsrc.ListVersions("lang", `^lang[0-9]+$`, "lang/$0", true)
+
+	// lang/lang124 is not mentioned since it is "essentially empty".
+	t.CheckDeepEquals(versions, []string{"lang/lang123"})
+}
+
 // See PR 46570, Ctrl+F "3. In lang/perl5".
 func (s *Suite) Test_Pkgsrc_VariableType(c *check.C) {
 	t := s.Init(c)

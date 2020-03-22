@@ -185,6 +185,8 @@ func (s *Suite) Test_distinfoLinesChecker_check__missing_php_patches(c *check.C)
 		"",
 		".include \"../../lang/php/ext.mk\"",
 		".include \"../../mk/bsd.pkg.mk\"")
+	t.CreateFileLines("archivers/php-bz2/DESCR",
+		"Description")
 	t.FinishSetUp()
 
 	G.Check(t.File("archivers/php-bz2"))
@@ -194,6 +196,8 @@ func (s *Suite) Test_distinfoLinesChecker_check__missing_php_patches(c *check.C)
 		"",
 		".include \"../../lang/php/ext.mk\"",
 		".include \"../../mk/bsd.pkg.mk\"")
+	t.CreateFileLines("archivers/php-zlib/DESCR",
+		"Description")
 
 	G.Check(t.File("archivers/php-zlib"))
 
