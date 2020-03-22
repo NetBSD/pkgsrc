@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 03:27:24 agc Exp $
+$NetBSD: distinfo,v 1.10 2020/03/22 22:32:11 tnn Exp $
 
-SHA1 (libedit-20150325-3.1.tar.gz) = c5bf50b433ea35f9fc883400cde674556c44af30
-RMD160 (libedit-20150325-3.1.tar.gz) = 76fb284ada78215c17d886b2c0ea13c6b3b79329
-SHA512 (libedit-20150325-3.1.tar.gz) = 03221f3de844a7768764b3ebf80bc3110a13699f452609ba351c134e4225fc7d9e826522c672e925a7f6183094b3f3dbf489f197ddd44e6b1ea5fed762aed07d
-Size (libedit-20150325-3.1.tar.gz) = 502792 bytes
+SHA1 (libedit-20191231-3.1.tar.gz) = 44891b6ceb0429fec0a118a1245c605410571d7d
+RMD160 (libedit-20191231-3.1.tar.gz) = a0e32d4bbb896b6f7e6567902e4205f2e435cd26
+SHA512 (libedit-20191231-3.1.tar.gz) = 1df2eced98e8db1bb0af940678c154d87e3b11dd21e65a903682367f5feace5112f9a543b8e0cb04bbfeaaf73729f808db2d9c302637fc063e81c0a37777ac2c
+Size (libedit-20191231-3.1.tar.gz) = 516801 bytes
 SHA1 (patch-Makefile.am) = c9c49476fcff0da3363874795fcf4b6ebd0f59de
-SHA1 (patch-ab) = 834c9bf151c1fc46ded350eafa19fe91088b2ffa
+SHA1 (patch-ab) = 18297f76965ecd56834c94f6c9f780d3e05a44d8
 SHA1 (patch-ac) = 666403d5ef03fea39081d7a657aefaa91746f788
-SHA1 (patch-src_chartype.h) = 1fef9f7d41970cd9e1c9e1641346341a7313c05b
+SHA1 (patch-src_chartype.h) = ec6ff8c8417464b54cffcbf8752f07a599067685
