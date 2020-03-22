@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.68 2020/03/21 19:26:12 rillig Exp $
+# $NetBSD: subst.mk,v 1.69 2020/03/22 12:15:59 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -126,6 +126,7 @@ _SUBST_KEEP.${_class_}?=	LC_ALL=C ${DIFF} -u "$$file" "$$tmpfile" || true
 _SUBST_KEEP.${_class_}?=	${DO_NADA}
 SUBST_SKIP_TEXT_CHECK.${_class_}?=	no
 SUBST_NOOP_OK.${_class_}?=	yes # TODO: change to no after 2020Q1
+_SUBST_WARN.${_class_}=		${${SUBST_NOOP_OK.${_class_}:tl} == yes:?${INFO_MSG}:${WARNING_MSG}} "[subst.mk:${_class_}]"
 
 .if !empty(SUBST_SKIP_TEXT_CHECK.${_class_}:M[Yy][Ee][Ss])
 _SUBST_IS_TEXT_FILE_CMD.${_class_}=	${TRUE}
@@ -158,7 +159,7 @@ ${_SUBST_COOKIE.${_class_}}:
 		case $$file in /*) ;; *) file="./$$file";; esac;	\
 		tmpfile="$$file.subst.sav";				\
 		if [ ! -f "$$file" ]; then				\
-			${WARNING_MSG} "[subst.mk:${_class_}] Ignoring non-existent file \"$$file\"."; \
+			${_SUBST_WARN.${_class_}} "Ignoring non-existent file \"$$file\"."; \
 		elif ${_SUBST_IS_TEXT_FILE_CMD.${_class_}}; then	\
 			${SUBST_FILTER_CMD.${_class_}}			\
 			< "$$file"					\
@@ -167,7 +168,7 @@ ${_SUBST_COOKIE.${_class_}}:
 				${CHMOD} +x "$$tmpfile";		\
 			fi;						\
 			if ${CMP} -s "$$tmpfile" "$$file"; then 	\
-				${INFO_MSG} "[subst.mk:${_class_}] Nothing changed in $$file."; \
+				${_SUBST_WARN.${_class_}} "Nothing changed in $$file."; \
 				${RM} -f "$$tmpfile";			\
 			else						\
 				changed=yes;				\
@@ -176,7 +177,7 @@ ${_SUBST_COOKIE.${_class_}}:
 				${ECHO} "$$file" >> ${.TARGET};		\
 			fi;						\
 		else							\
-			${WARNING_MSG} "[subst.mk:${_class_}] Ignoring non-text file \"$$file\"."; \
+			${_SUBST_WARN.${_class_}} "Ignoring non-text file \"$$file\"."; \
 		fi;							\
 	done;								\
 	\
