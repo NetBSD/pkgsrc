@@ -1,7 +1,9 @@
-$NetBSD: patch-src_file.cc,v 1.2 2020/03/22 10:35:44 nia Exp $
+$NetBSD: patch-src_file.cc,v 1.3 2020/03/22 10:45:10 nia Exp $
 
 Allow KAK_BIN_PATH to be used as a fallback for finding the executable
 path on more platforms.
+
+Note: the author of kakoune rejected making this fully portable.
 
 --- src/file.cc.orig	2020-01-16 09:52:20.000000000 +0000
 +++ src/file.cc
