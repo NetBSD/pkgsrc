@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2020/01/26 17:31:53 rillig Exp $
+# $NetBSD: Makefile,v 1.91 2020/03/22 21:09:42 nia Exp $
 
-DISTNAME=		Net-DNS-1.21
+DISTNAME=		Net-DNS-1.23
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
