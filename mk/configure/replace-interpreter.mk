@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.17 2019/02/18 14:10:37 bsiegert Exp $
+# $NetBSD: replace-interpreter.mk,v 1.18 2020/03/22 21:31:21 rillig Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -99,6 +99,7 @@ REPLACE.sys-sh.old=	[^[:space:]]*sh
 REPLACE.sys-sh.new=	${SH}
 REPLACE_FILES.sys-sh=	${REPLACE_SH}
 .endif
+
 # sed regexp to match optional "/usr/bin/env" followed by one or more spaces
 REPLACE.optional-env-space= \(/usr/bin/env[[:space:]][[:space:]]*\)\{0,1\}
 
