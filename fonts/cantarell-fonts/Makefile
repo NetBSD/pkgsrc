@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2020/03/22 09:47:25 nia Exp $
+# $NetBSD: Makefile,v 1.11 2020/03/22 09:48:36 nia Exp $
 
 DISTNAME=	cantarell-fonts-0.201
-CATEGORIES=	fonts
+CATEGORIES=	fonts gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/cantarell-fonts/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
 
