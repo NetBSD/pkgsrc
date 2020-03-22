@@ -31,6 +31,7 @@ type Package struct {
 	Patchdir     PackagePath  // PATCHDIR from the package Makefile
 	DistinfoFile PackagePath  // DISTINFO_FILE from the package Makefile
 	Plist        PlistContent // Files and directories mentioned in the PLIST files
+	PlistLines   *PlistLines
 
 	vars      Scope
 	redundant *RedundantScope
@@ -104,6 +105,7 @@ func NewPackage(dir CurrPath) *Package {
 		Patchdir:              "patches",            // TODO: Redundant, see the vars.Fallback below.
 		DistinfoFile:          "${PKGDIR}/distinfo", // TODO: Redundant, see the vars.Fallback below.
 		Plist:                 NewPlistContent(),
+		PlistLines:            NewPlistLines(),
 		vars:                  NewScope(),
 		bl3:                   make(map[PackagePath]*MkLine),
 		bl3Data:               make(map[Buildlink3ID]*Buildlink3Data),
@@ -520,13 +522,19 @@ func (pkg *Package) loadPlistDirs(plistFilename CurrPath) {
 		"",
 		Once{},
 		false}
-	ck.Load(lines)
+	plistLines := ck.Load(lines)
 
 	for filename, pline := range ck.allFiles {
 		pkg.Plist.Files[filename] = pline
 	}
 	for dirname, pline := range ck.allDirs {
 		pkg.Plist.Dirs[dirname] = pline
+	}
+	for _, plistLine := range plistLines {
+		if plistLine.HasPath() {
+			rank := NewPlistRank(plistLine.Basename)
+			pkg.PlistLines.Add(plistLine, rank)
+		}
 	}
 }
 
@@ -577,7 +585,24 @@ func (pkg *Package) check(filenames []CurrPath, mklines, allLines *MkLines) {
 				"To generate a distinfo file for the existing patches, run",
 				sprintf("%q.", bmake("makepatchsum")))
 		}
+
+		pkg.checkDescr(filenames, mklines)
 	}
+}
+
+func (pkg *Package) checkDescr(filenames []CurrPath, mklines *MkLines) {
+	if mklines == nil {
+		return
+	}
+	for _, filename := range filenames {
+		if filename.HasBase("DESCR") {
+			return
+		}
+	}
+	if pkg.vars.IsDefined("DESCR_SRC") {
+		return
+	}
+	mklines.Whole().Errorf("Each package must have a DESCR file.")
 }
 
 func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines, allLines *MkLines) {

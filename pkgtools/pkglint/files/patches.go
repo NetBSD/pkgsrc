@@ -136,6 +136,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile Path) {
 				linesToAdd--
 				ck.checktextCvsID(text)
 				ck.checkConfigure(text[1:], isConfigure)
+				ck.checkAddedLine(text[1:])
 
 			case hasPrefix(text, "\\"):
 				// \ No newline at end of file (or a translation of that message)
@@ -220,6 +221,18 @@ func (ck *PatchChecker) checkConfigure(addedText string, isConfigure bool) {
 		"",
 		"For more details, look for \"configure-scripts-override\" in",
 		"mk/configure/gnu-configure.mk.")
+}
+
+func (ck *PatchChecker) checkAddedLine(addedText string) {
+	if !matches(addedText, `/usr/pkg\b`) {
+		return
+	}
+
+	line := ck.llex.PreviousLine()
+	line.Errorf("Patches must not hard-code the pkgsrc PREFIX.")
+	line.Explain(
+		"Instead of hard-coding /usr/pkg, packages should use the PREFIX variable.",
+		"The usual way of doing this is to use the SUBST framework in mk/subst.mk.")
 }
 
 func (ck *PatchChecker) checktextUniHunkCr() {

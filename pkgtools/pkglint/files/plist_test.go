@@ -777,8 +777,29 @@ func (s *Suite) Test_PlistChecker_checkDuplicate__OPSYS(c *check.C) {
 	//
 	G.Check(".")
 
-	// TODO: Warn that bin/program is duplicate, but not bin/os-specific.
-	t.CheckOutputEmpty()
+	// For example, bin/program is duplicate, but not bin/os-specific.
+	t.CheckOutputLines(
+		"ERROR: PLIST.Linux:2: Path bin/common is already listed in PLIST:2.",
+		"ERROR: PLIST.Linux:3: Path bin/common_end is already listed in PLIST:3.",
+		"ERROR: PLIST.Linux:4: Path bin/conditional is already listed in PLIST:4.",
+		"ERROR: PLIST.Linux:6: Path bin/plist is already listed in PLIST:5.",
+		"ERROR: PLIST.NetBSD:2: Path bin/common is already listed in PLIST:2.",
+		"ERROR: PLIST.NetBSD:3: Path bin/common_end is already listed in PLIST:3.",
+		"ERROR: PLIST.NetBSD:4: Path bin/conditional is already listed in PLIST:4.",
+		"ERROR: PLIST.NetBSD:6: Path bin/plist is already listed in PLIST:5.",
+		"ERROR: PLIST.common:2: Path bin/common is already listed in PLIST:2.",
+		"ERROR: PLIST.Linux:2: Path bin/common is already listed in PLIST.common:2.",
+		"ERROR: PLIST.NetBSD:2: Path bin/common is already listed in PLIST.common:2.",
+		"ERROR: PLIST.common:3: Path bin/conditional is already listed in PLIST:4.",
+		"ERROR: PLIST.Linux:4: Path bin/conditional is already listed in PLIST.common:3.",
+		"ERROR: PLIST.NetBSD:4: Path bin/conditional is already listed in PLIST.common:3.",
+		"ERROR: PLIST.common_end:2: Path bin/common_end is already listed in PLIST:3.",
+		"ERROR: PLIST.Linux:3: Path bin/common_end is already listed in PLIST.common_end:2.",
+		"ERROR: PLIST.NetBSD:3: Path bin/common_end is already listed in PLIST.common_end:2.",
+		"ERROR: PLIST.common_end:3: Path bin/conditional is already listed in PLIST:4.",
+		"ERROR: PLIST.Linux:4: Path bin/conditional is already listed in PLIST.common_end:3.",
+		"ERROR: PLIST.NetBSD:4: Path bin/conditional is already listed in PLIST.common_end:3.",
+		"ERROR: PLIST.common_end:3: Path bin/conditional is already listed in PLIST.common:3.")
 }
 
 func (s *Suite) Test_PlistChecker_checkPathBin(c *check.C) {
@@ -1400,21 +1421,57 @@ func (s *Suite) Test_plistLineSorter_Sort(c *check.C) {
 		"@exec echo \"after lib/after.la\"") // The footer starts here
 }
 
-func (s *Suite) Test_PlistRank_Dominates(c *check.C) {
+func (s *Suite) Test_NewPlistRank(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	t.CheckDeepEquals(NewPlistRank("PLIST"), &PlistRank{0, "", "", ""})
+	t.CheckDeepEquals(NewPlistRank("PLIST.common"), &PlistRank{1, "", "", ""})
+	t.CheckDeepEquals(NewPlistRank("PLIST.common_end"), &PlistRank{2, "", "", ""})
+	t.CheckDeepEquals(NewPlistRank("PLIST.NetBSD"), &PlistRank{3, "NetBSD", "", ""})
+	t.CheckDeepEquals(NewPlistRank("PLIST.NetBSD-opt"), &PlistRank{3, "NetBSD", "", "opt"})
+	t.CheckDeepEquals(NewPlistRank("PLIST.x86_64"), &PlistRank{3, "", "x86_64", ""})
+	t.CheckDeepEquals(NewPlistRank("PLIST.NetBSD-x86_64"), &PlistRank{3, "NetBSD", "x86_64", ""})
+	t.CheckDeepEquals(NewPlistRank("PLIST.linux-x86_64"), &PlistRank{3, "linux", "x86_64", ""})
+	t.CheckDeepEquals(NewPlistRank("PLIST.solaris-sparc"), &PlistRank{3, "solaris", "sparc", ""})
+	t.CheckDeepEquals(NewPlistRank("PLIST.other"), &PlistRank{3, "", "", "other"})
+
+	// To list all current PLIST filenames:
+	//  cd $pkgsrcdir && find . -name 'PLIST*' -printf '%f\n' | sort | uniq -c | sort -nr
+}
+
+func (s *Suite) Test_PlistRank_MoreGeneric(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+	plain := NewPlistRank("PLIST")
+	common := NewPlistRank("PLIST.common")
+	commonEnd := NewPlistRank("PLIST.common_end")
+	netbsd := NewPlistRank("PLIST.NetBSD")
+	netbsdRest := NewPlistRank("PLIST.NetBSD-rest")
+	x86 := NewPlistRank("PLIST.x86_64")
+	netbsdX86 := NewPlistRank("PLIST.NetBSD-x86_64")
+	linuxX86 := NewPlistRank("PLIST.Linux-x86_64")
+	emulLinuxX86 := NewPlistRank("PLIST.linux-x86_64")
+
 	var rel relation
-	rel.add(Plain, Common)
-	rel.add(Common, CommonEnd)
-	rel.add(CommonEnd, Opsys)
-	rel.add(CommonEnd, Arch)
-	rel.add(Opsys, OpsysArch)
-	rel.add(Opsys, EmulOpsysArch)
-	rel.add(Arch, OpsysArch)
-	rel.add(Arch, EmulOpsysArch)
-	rel.reflexive = true
+	rel.add(plain, common)
+	rel.add(common, commonEnd)
+	rel.add(commonEnd, netbsd)
+	rel.add(commonEnd, x86)
+	rel.add(commonEnd, linuxX86)
+	rel.add(netbsd, netbsdX86)
+	rel.add(netbsd, netbsdRest)
+	rel.add(x86, netbsdX86)
+	rel.add(x86, linuxX86)
+	rel.add(x86, emulLinuxX86)
+	rel.reflexive = false
 	rel.transitive = true
 	rel.antisymmetric = true
+	rel.onError = func(s string) { c.Error(s) }
 
-	rel.check(func(a, b int) bool { return PlistRank(a).Dominates(PlistRank(b)) })
+	rel.check(func(a, b interface{}) bool { return a.(*PlistRank).MoreGeneric(b.(*PlistRank)) })
 }
 
 func (s *Suite) Test_NewPlistLines(c *check.C) {
@@ -1438,12 +1495,12 @@ func (s *Suite) Test_PlistLines_Add(c *check.C) {
 
 	for _, line := range plistLines {
 		if line.HasPath() {
-			lines.Add(line, Plain)
+			lines.Add(line, NewPlistRank(line.Basename))
 		}
 	}
 	for _, line := range plistCommonLines {
 		if line.HasPath() {
-			lines.Add(line, Common)
+			lines.Add(line, NewPlistRank(line.Basename))
 		}
 	}
 
