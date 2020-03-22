@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2020/02/08 17:47:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/22 18:33:29 wiz Exp $
 
-DISTNAME=	QR-Code-generator-1.4.0
+DISTNAME=	QR-Code-generator-1.6.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES=	https://dev-www.libreoffice.org/src/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=nayuki/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/nayuki/QR-Code-generator
@@ -13,6 +13,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 BUILDLINK_TRANSFORM+=	rm:-fsanitize=undefined
 # Automatically added to CXXFLAGS too.

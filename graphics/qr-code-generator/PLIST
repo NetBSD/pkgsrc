@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/05 13:17:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/22 18:33:29 wiz Exp $
 bin/QrCodeGeneratorDemo
 bin/QrCodeGeneratorWorker
 bin/qrcodegen-demo
 bin/qrcodegen-test
 bin/qrcodegen-worker
-include/qrcodegen/BitBuffer.hpp
 include/qrcodegen/QrCode.hpp
-include/qrcodegen/QrSegment.hpp
 include/qrcodegen/qrcodegen.h
 lib/libqrcodegen.a
 lib/libqrcodegencpp.a
