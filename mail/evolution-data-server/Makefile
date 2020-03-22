@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2020/03/10 22:08:53 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2020/03/22 17:01:49 nia Exp $
 
 DISTNAME=	evolution-data-server-3.35.1
 PKGREVISION=	4
@@ -24,6 +24,8 @@ TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 CMAKE_ARGS+=	-DENABLE_GOA=OFF
 CMAKE_ARGS+=	-DWITH_LIBDB=OFF
 CMAKE_ARGS+=	-DENABLE_WEATHER=OFF
+
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/evolution-data-server
 
