@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2019/09/09 12:21:44 tm Exp $
+# $NetBSD: Makefile.common,v 1.2 2020/03/22 18:48:06 rillig Exp $
 #
 # used by sysutils/munin-common/Makefile
 # used by sysutils/munin-master/Makefile
@@ -51,7 +51,7 @@ PKG_SYSCONFSUBDIR?=	munin
 
 EGDIR=			${PREFIX}/share/examples/munin
 
-REPLACE_PERL=		master/_bin/munin-update.in
+REPLACE_PERL=		${WRKDIR}/${DISTNAME}/master/_bin/munin-update.in
 
 FILES_SUBST+=		MUNIN_GROUP=${MUNIN_GROUP}
 FILES_SUBST+=		MUNIN_RUN=${MUNIN_RUN:Q}
