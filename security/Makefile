@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.748 2020/03/14 04:42:12 tpaul Exp $
+# $NetBSD: Makefile,v 1.749 2020/03/22 07:54:22 nia Exp $
 #
 
 COMMENT=	Security tools
@@ -207,7 +207,6 @@ SUBDIR+=	lua-sec
 SUBDIR+=	lynis
 SUBDIR+=	mate-polkit
 SUBDIR+=	mbedtls
-SUBDIR+=	mbedtls1
 SUBDIR+=	mcrypt
 SUBDIR+=	md4-collision
 SUBDIR+=	md5-collision
