@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1768 2020/03/22 17:55:37 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1769 2020/03/22 18:01:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2425,3 +2425,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 19.4.13 [rillig 2020-03-22]
 	Updated graphics/ImageMagick to 7.0.10.1 [wiz 2020-03-22]
 	Updated devel/catch2 to 2.11.3 [wiz 2020-03-22]
+	Updated devel/glibmm to 2.64.1 [wiz 2020-03-22]
