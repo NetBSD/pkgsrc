@@ -20,6 +20,8 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 		"TOOLS_CREATE+=nice",
 		"TOOLS_CREATE+=true",
 		"_TOOLS_VARNAME.nice=NICE")
+	t.CreateFileLines("category/pkgbase/DESCR",
+		"Description")
 
 	t.CreateFileLines("category/pkgbase/Makefile",
 		MkCvsID,
@@ -247,6 +249,8 @@ func (s *Suite) Test_Package__redundant_master_sites(c *check.C) {
 		"",
 		".include \"../../math/R/Makefile.extension\"",
 		".include \"../../mk/bsd.pkg.mk\"")
+	t.CreateFileLines("math/R-date/DESCR",
+		"Description")
 	t.FinishSetUp()
 
 	// See Package.checkfilePackageMakefile
@@ -297,7 +301,9 @@ func (s *Suite) Test_Package__distinfo_from_other_package(c *check.C) {
 		"WARN: x11/gst-x11/Makefile: This package should have a PLIST file.",
 		"ERROR: x11/gst-x11/Makefile: Each package must define its LICENSE.",
 		"WARN: x11/gst-x11/Makefile: Each package should define a COMMENT.",
-		"WARN: x11/gst-x11/../../multimedia/gst-base/distinfo:3: Patch file \"patch-aa\" does not exist in directory \"../../x11/gst-x11/patches\".")
+		"WARN: x11/gst-x11/../../multimedia/gst-base/distinfo:3: "+
+			"Patch file \"patch-aa\" does not exist in directory \"../../x11/gst-x11/patches\".",
+		"ERROR: x11/gst-x11/Makefile: Each package must have a DESCR file.")
 }
 
 func (s *Suite) Test_Package__case_insensitive(c *check.C) {
@@ -549,6 +555,8 @@ func (s *Suite) Test_Package_loadPackageMakefile__dump(c *check.C) {
 	t.SetUpCommandLine("--dumpmakefile")
 	t.SetUpPkgsrc()
 	t.CreateFileLines("category/Makefile")
+	t.CreateFileLines("category/package/DESCR",
+		"Description")
 	t.CreateFileLines("category/package/PLIST",
 		PlistCvsID,
 		"bin/program")
@@ -1322,6 +1330,20 @@ func (s *Suite) Test_Package_check__patches_Makefile(c *check.C) {
 		"1 warning found.")
 }
 
+func (s *Suite) Test_Package_checkDescr__DESCR_SRC(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("other/package")
+	t.SetUpPackage("category/package",
+		"DESCR_SRC=\t../../other/package/DESCR")
+	t.Remove("category/package/DESCR")
+	t.FinishSetUp()
+
+	G.Check(t.File("category/package"))
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_Package_checkfilePackageMakefile__GNU_CONFIGURE(c *check.C) {
 	t := s.Init(c)
 
@@ -1923,6 +1945,7 @@ func (s *Suite) Test_Package_CheckVarorder__license(c *check.C) {
 
 	t.CreateFileLines("mk/bsd.pkg.mk", "# dummy")
 	t.CreateFileLines("x11/Makefile", MkCvsID)
+	t.CreateFileLines("x11/9term/DESCR", "Terminal")
 	t.CreateFileLines("x11/9term/PLIST", PlistCvsID, "bin/9term")
 	t.CreateFileLines("x11/9term/Makefile",
 		MkCvsID,
