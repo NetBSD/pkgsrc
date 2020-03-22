@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/03/21 23:51:57 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/22 21:21:32 joerg Exp $
 
 MODNAME=		json
 CATEGORIES+=		textproc
@@ -13,6 +13,8 @@ CONFIGURE_ARGS+=	--enable-${MODNAME}=shared
 INSTALLATION_DIRS+=	include/php/ext/json
 JSON_INCLUDES=		php_json.h
 PLIST_SRC+=		${.CURDIR}/../../textproc/php-json/PLIST
+
+MAKE_ENV+=		RE2C=re2c
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/${JSON_INCLUDES} \
