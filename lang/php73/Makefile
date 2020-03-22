@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/25 17:21:14 taca Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/22 11:00:36 rillig Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -33,8 +33,7 @@ REPLACE_PHP=		ext/phar/phar/phar.php run-tests.php
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing common paths.
 SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	ext/phar/phar/phar.php
-SUBST_FILES.path+=	php.ini-development php.ini-production run-tests.php
+SUBST_FILES.path=	php.ini-development php.ini-production run-tests.php
 SUBST_FILES.path+=	sapi/cgi/Makefile.frag
 SUBST_VARS.path=	CGIDIR
 SUBST_VARS.path+=	PREFIX
