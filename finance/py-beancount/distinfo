@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/22 21:27:51 riastradh Exp $
+
+SHA1 (beancount-2.2.3.tar.gz) = f761bbf881bcf24a267d2390f84bfe8e1e3f2996
+RMD160 (beancount-2.2.3.tar.gz) = 706810f10713aeb835266d11f05066b32805bb40
+SHA512 (beancount-2.2.3.tar.gz) = 850875fd7b28ca2b861111d1d2b90b2e2f01e1e6fcc729c7983fca9b3b60409cf9cd3d13e0b5fa0ba617659db5088607ad05dbc87ad3672476b2b5744d58c47b
+Size (beancount-2.2.3.tar.gz) = 604034 bytes
