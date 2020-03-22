@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/11/04 22:09:55 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2020/03/22 22:46:27 roy Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.goaccess
 PKG_SUPPORTED_OPTIONS=	geoip wide-curses
@@ -12,8 +12,5 @@ CONFIGURE_ARGS+=	--enable-geoip=legacy
 .endif # geoip
 
 .if !empty(PKG_OPTIONS:Mwide-curses)
-.  include "../../devel/ncursesw/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-utf8
-.else
-.  include "../../devel/ncurses/buildlink3.mk"
-.endif # wide-curses
+.endif
