@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2020/03/22 12:21:12 rillig Exp $
+# $NetBSD: Makefile,v 1.209 2020/03/22 12:21:59 rillig Exp $
 
 DISTNAME=	gnutls-3.6.12
 PKGREVISION=	1
@@ -47,7 +47,6 @@ REPLACE_BASH+=		tests/gnutls-cli-debug.sh
 REPLACE_BASH+=		tests/ocsp-tests/ocsp-must-staple-connection
 REPLACE_BASH+=		tests/ocsp-tests/ocsp-tls-connection
 REPLACE_BASH+=		tests/starttls.sh
-# tests/suite is not included in distributions anymore
 REPLACE_BASH+=		tests/cert-tests/pkcs12-utf8
 
 REPLACE_PERL+=		doc/scripts/gdoc doc/scripts/sort2.pl
