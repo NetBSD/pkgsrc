@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/02/10 12:28:12 nia Exp $
+$NetBSD: distinfo,v 1.9 2020/03/22 11:39:52 nia Exp $
 
-SHA1 (papirus-icon-theme-20200201-20200201.tar.gz) = 1e26cc644744acda23e448c234eed485611cb603
-RMD160 (papirus-icon-theme-20200201-20200201.tar.gz) = c129b50566bb6462fddf8f4e2f7a6a4fe93ceb05
-SHA512 (papirus-icon-theme-20200201-20200201.tar.gz) = 07ed45eb409ed12f57657f058f9a5a03dec77679ed598dc8645536a614ecc5424c60be57f10de20ca72204d2a21152fdd62adadf2637bbfa1266d588c787d7e9
-Size (papirus-icon-theme-20200201-20200201.tar.gz) = 21482791 bytes
+SHA1 (papirus-icon-theme-20200301-20200301.tar.gz) = 1d6b7e7466a4620eddddb4d3ba06f3a53188bc33
+RMD160 (papirus-icon-theme-20200301-20200301.tar.gz) = ae171b1a1d226b9bcf5a971e3f0e06bebc728084
+SHA512 (papirus-icon-theme-20200301-20200301.tar.gz) = 8b9f0a9b0fdb676365d6b30af8ba8dee71ff433a4c4317151899f09614da3fc9764e5e9c48743cdf7c8fde6eea53a1d3ab37eb890f1486fc54ce328e6af9b348
+Size (papirus-icon-theme-20200301-20200301.tar.gz) = 21896164 bytes
