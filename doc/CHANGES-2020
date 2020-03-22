@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1785 2020/03/22 21:19:49 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1786 2020/03/22 21:21:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2442,3 +2442,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/p5-Net-DNS to 1.23 [nia 2020-03-22]
 	Updated security/p5-Net-SSLeay to 1.88 [nia 2020-03-22]
 	Updated security/p5-IO-Socket-SSL to 2.067 [nia 2020-03-22]
+	Updated devel/p5-Scalar-List-Utils to 1.54 [nia 2020-03-22]
