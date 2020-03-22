@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/03/22 12:42:41 tnn Exp $
+
+Disable installation of bin/ld_iscsi.so
+
+--- configure.ac.orig	2019-07-13 22:04:44.000000000 +0000
++++ configure.ac
+@@ -169,7 +169,7 @@ if ! test "$ac_cv_have_cunit" = yes ; th
+ fi
+ AM_CONDITIONAL(ISCSITEST, [test "$ac_cv_have_cunit" = yes -a "$enable_shared" = "yes"])
+ 
+-AM_CONDITIONAL(LD_ISCSI, [expr "(" "$host_os" : "linux" ")" "&" "$enable_shared" "=" "yes"])
++AM_CONDITIONAL(LD_ISCSI, [expr "(" "disabled" : "linux" ")" "&" "$enable_shared" "=" "yes"])
+ 
+ AC_CHECK_MEMBER([struct CU_SuiteInfo.pSetUpFunc],
+ 		[AC_DEFINE([HAVE_CU_SUITEINFO_PSETUPFUNC], 1,
