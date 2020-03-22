@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1772 2020/03/22 18:23:43 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1773 2020/03/22 18:28:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2429,3 +2429,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/gmime3 to 3.2.7 [wiz 2020-03-22]
 	Updated databases/hiredis to 0.14.1 [wiz 2020-03-22]
 	Updated security/openssl to 1.1.1e [wiz 2020-03-22]
+	Updated devel/protobuf to 3.11.4 [wiz 2020-03-22]
