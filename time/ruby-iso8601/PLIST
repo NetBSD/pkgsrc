@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/05 15:30:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/22 09:39:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/docs/date-time.md
-${GEM_LIBDIR}/docs/duration.md
-${GEM_LIBDIR}/docs/time-interval.md
 ${GEM_LIBDIR}/iso8601.gemspec
 ${GEM_LIBDIR}/lib/iso8601.rb
 ${GEM_LIBDIR}/lib/iso8601/atomic.rb
@@ -26,17 +22,4 @@ ${GEM_LIBDIR}/lib/iso8601/time_interval.rb
 ${GEM_LIBDIR}/lib/iso8601/version.rb
 ${GEM_LIBDIR}/lib/iso8601/weeks.rb
 ${GEM_LIBDIR}/lib/iso8601/years.rb
-${GEM_LIBDIR}/spec/iso8601/date_spec.rb
-${GEM_LIBDIR}/spec/iso8601/date_time_spec.rb
-${GEM_LIBDIR}/spec/iso8601/days_spec.rb
-${GEM_LIBDIR}/spec/iso8601/duration_spec.rb
-${GEM_LIBDIR}/spec/iso8601/hours_spec.rb
-${GEM_LIBDIR}/spec/iso8601/minutes_spec.rb
-${GEM_LIBDIR}/spec/iso8601/months_spec.rb
-${GEM_LIBDIR}/spec/iso8601/seconds_spec.rb
-${GEM_LIBDIR}/spec/iso8601/time_interval_spec.rb
-${GEM_LIBDIR}/spec/iso8601/time_spec.rb
-${GEM_LIBDIR}/spec/iso8601/weeks_spec.rb
-${GEM_LIBDIR}/spec/iso8601/years_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
