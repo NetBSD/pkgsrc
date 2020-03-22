@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/07/24 17:01:02 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/22 10:35:44 nia Exp $
 bin/kak
 man/man1/kak.1
 share/doc/kak/README.asciidoc
@@ -7,9 +7,13 @@ share/kak/colors/base16.kak
 share/kak/colors/default.kak
 share/kak/colors/desertex.kak
 share/kak/colors/github.kak
+share/kak/colors/greyscale.kak
 share/kak/colors/gruvbox.kak
+share/kak/colors/kaleidoscope-dark.kak
+share/kak/colors/kaleidoscope-light.kak
 share/kak/colors/lucius.kak
 share/kak/colors/palenight.kak
+share/kak/colors/plain.kak
 share/kak/colors/red-phoenix.kak
 share/kak/colors/reeder.kak
 share/kak/colors/solarized-dark-termcolors.kak
@@ -53,6 +57,7 @@ share/kak/rc/filetype/css.kak
 share/kak/rc/filetype/cucumber.kak
 share/kak/rc/filetype/d.kak
 share/kak/rc/filetype/dart.kak
+share/kak/rc/filetype/dhall.kak
 share/kak/rc/filetype/diff.kak
 share/kak/rc/filetype/dockerfile.kak
 share/kak/rc/filetype/elixir.kak
@@ -60,8 +65,10 @@ share/kak/rc/filetype/elm.kak
 share/kak/rc/filetype/etc.kak
 share/kak/rc/filetype/exherbo.kak
 share/kak/rc/filetype/fish.kak
+share/kak/rc/filetype/fsharp.kak
 share/kak/rc/filetype/gas.kak
 share/kak/rc/filetype/git.kak
+share/kak/rc/filetype/gluon.kak
 share/kak/rc/filetype/go.kak
 share/kak/rc/filetype/haml.kak
 share/kak/rc/filetype/haskell.kak
@@ -71,12 +78,14 @@ share/kak/rc/filetype/i3.kak
 share/kak/rc/filetype/ini.kak
 share/kak/rc/filetype/java.kak
 share/kak/rc/filetype/javascript.kak
+share/kak/rc/filetype/jinja.kak
 share/kak/rc/filetype/json.kak
 share/kak/rc/filetype/julia.kak
 share/kak/rc/filetype/just.kak
 share/kak/rc/filetype/kakrc.kak
 share/kak/rc/filetype/kickstart.kak
 share/kak/rc/filetype/latex.kak
+share/kak/rc/filetype/ledger.kak
 share/kak/rc/filetype/lisp.kak
 share/kak/rc/filetype/lua.kak
 share/kak/rc/filetype/mail.kak
@@ -85,6 +94,7 @@ share/kak/rc/filetype/markdown.kak
 share/kak/rc/filetype/mercurial.kak
 share/kak/rc/filetype/moon.kak
 share/kak/rc/filetype/nim.kak
+share/kak/rc/filetype/nix.kak
 share/kak/rc/filetype/ocaml.kak
 share/kak/rc/filetype/perl.kak
 share/kak/rc/filetype/php.kak
@@ -106,6 +116,7 @@ share/kak/rc/filetype/sql.kak
 share/kak/rc/filetype/swift.kak
 share/kak/rc/filetype/systemd.kak
 share/kak/rc/filetype/taskpaper.kak
+share/kak/rc/filetype/terraform.kak
 share/kak/rc/filetype/toml.kak
 share/kak/rc/filetype/troff.kak
 share/kak/rc/filetype/tupfile.kak
@@ -117,7 +128,7 @@ share/kak/rc/tools/clang.kak
 share/kak/rc/tools/comment.kak
 share/kak/rc/tools/ctags.kak
 share/kak/rc/tools/doc.kak
-share/kak/rc/tools/formatter.kak
+share/kak/rc/tools/format.kak
 share/kak/rc/tools/git.kak
 share/kak/rc/tools/go/go-tools.kak
 share/kak/rc/tools/grep.kak

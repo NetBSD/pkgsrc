@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/08/27 10:36:05 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/22 10:35:44 nia Exp $
 
-DISTNAME=	kakoune-2019.07.01
+DISTNAME=	kakoune-2020.01.16
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mawww/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -18,12 +18,11 @@ USE_LANGUAGES=	c c++17
 # C++17
 GCC_REQD+=	7
 
-LDFLAGS.SunOS+=	-lsocket -lnsl
-
-FAKE_NCURSES=	yes
-
+CXXFLAGS+=	-D'KAK_BIN_PATH="${PREFIX}/bin/kak"'
 MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=	gzip_man=no
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
