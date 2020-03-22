@@ -1,0 +1,23 @@
+$NetBSD: patch-src_lib_Makefile.in,v 1.1 2020/03/22 14:25:00 tnn Exp $
+
+Work around an issue with Linux install(1). It does not like to
+install the same file twice. For example:
+
+$ install libiscsi.3 libiscsi.3 /tmp
+install: will not overwrite just-created '/tmp/libiscsi.3' with 'libiscsi.3'
+
+Removing the am__base_list sed script from the pipeline disables this
+coalescing and still installs the same file twice, but with two install(1)
+invocations. Why the file gets installed twice is an automake mystery.
+
+--- src/lib/Makefile.in.orig	2010-05-10 14:48:22.000000000 +0000
++++ src/lib/Makefile.in
+@@ -474,7 +474,7 @@ install-man3: $(dist_man_MANS) $(man3_MA
+ 	    $(INSTALL_DATA) "$$file" "$(DESTDIR)$(man3dir)/$$inst" || exit $$?; \
+ 	  fi; \
+ 	done; \
+-	for i in $$list; do echo "$$i"; done | $(am__base_list) | \
++	for i in $$list; do echo "$$i"; done | \
+ 	while read files; do \
+ 	  test -z "$$files" || { \
+ 	    echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(man3dir)'"; \
