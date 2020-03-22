@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 23:27:02 agc Exp $
+$NetBSD: distinfo,v 1.11 2020/03/22 21:24:56 joerg Exp $
 
 SHA1 (cone-0.90.tar.bz2) = 51614269ed0b8c091de4573bacefe5f394a08311
 RMD160 (cone-0.90.tar.bz2) = 2b2a924d8726535654c74c9d98d7e444aff9fd5e
@@ -6,7 +6,8 @@ SHA512 (cone-0.90.tar.bz2) = 6446f868e07a54bda074e403ce48d590a55e97cf25b7e6172ba
 Size (cone-0.90.tar.bz2) = 3906323 bytes
 SHA1 (patch-af) = f2018ee08526ee9e0c9c93e6ff5f83b948fd7067
 SHA1 (patch-cone_cursesmessage.C) = df0d016ffaf546614fb3292368cdcf4b1d895416
-SHA1 (patch-curses-cursesscreen.C) = 55aae19747367036d859c0e1835f2af96ea58a77
+SHA1 (patch-cone_myserverremoteconfig.C) = 7d5449288f4e94806181a5a4fb2bb547ab4174e1
+SHA1 (patch-curses-cursesscreen.C) = 5f825ff97aa7788ea89e1e2fb71d20d62d4281c5
 SHA1 (patch-curses_cursescontainer.C) = 3168e56fd5f26b59c22fa4823cd55ef98e8fd7c8
 SHA1 (patch-curses_cursescontainer.H) = 7a81ff321c72d002da8381412da474fbaecb07cb
 SHA1 (patch-libmail-maildir.C) = 724c16cb897667792cbfb769b7c7e81b803a1bd5
@@ -16,3 +17,4 @@ SHA1 (patch-libmail-mboxfolder.C) = c2c6d87bb76ab8805549c7cd72a5670633079725
 SHA1 (patch-libmail-mboxgetmessage.C) = a46d7ee0962e89721ff75b43adcf5316aa5bda28
 SHA1 (patch-libmail-mboxread.C) = 940eab3b9040d9362f816d9af4d9bcc305701ae6
 SHA1 (patch-libmail-tmpaccount.C) = dbd3d7bde51e9c94b3258fcb2fca6b9077f9ad12
+SHA1 (patch-libmail_addmessage.H) = 27a07ef263bd351938e658c7f8c7faed44376479
