@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2019/09/26 10:36:33 prlw1 Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/22 18:36:17 wiz Exp $
 
 .include "../../devel/py-gobject3/Makefile.common"
 
 PKGNAME=	py-${DISTNAME:S/^py//:S/-/3-common-/}
-PKGREVISION=	1
 
 COMMENT=	Python version independent files for glib2 gobject bindings
 
