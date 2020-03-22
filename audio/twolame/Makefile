@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2016/04/20 12:10:33 nros Exp $
-#
+# $NetBSD: Makefile,v 1.10 2020/03/22 11:37:17 nia Exp $
 
-DISTNAME=	twolame-0.3.13
+DISTNAME=	twolame-0.4.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=twolame/}
 
@@ -10,10 +9,10 @@ HOMEPAGE=	http://www.twolame.org/
 COMMENT=	Optimised MPEG Audio Layer 2 (MP2) encoder based on tooLAME
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c99
+GNU_CONFIGURE=	yes
 
 PKGCONFIG_OVERRIDE+=	twolame.pc.in
 
