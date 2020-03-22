@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2019/12/15 18:28:55 taca Exp $
+# $NetBSD: Makefile,v 1.53 2020/03/22 21:48:35 rillig Exp $
 #
 
 DISTNAME=	PEAR-1.10.10
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
 EXTRACT_SUFX=	.tgz
@@ -60,7 +60,7 @@ SUBST_VARS.config=	WRKSRC
 SUBST_VARS.config+=	PREFIX
 SUBST_MESSAGE.config=	Fixing configuration files.
 
-REPLACE_SH+=		script/pear.sh
+REPLACE_SH+=		scripts/pear.sh
 
 INSTALLATION_DIRS+=	share/examples/pear
 
