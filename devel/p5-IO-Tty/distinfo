@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 03:28:22 agc Exp $
+$NetBSD: distinfo,v 1.14 2020/03/22 21:02:34 nia Exp $
 
-SHA1 (IO-Tty-1.12.tar.gz) = a8227d3648fcb41e8bb2dfbedfd5c2327d2dae58
-RMD160 (IO-Tty-1.12.tar.gz) = 5988cb385311d5ae2ac66c8a915457a2f40fb784
-SHA512 (IO-Tty-1.12.tar.gz) = 23733e7832a0de370952420df8a781f85d28ff60eb4cd55be22147337bf5587f4e1ec7fcfc190ae3ad1fd9df0f9697f2d647e00739f4a2927b1ac9c81435454d
-Size (IO-Tty-1.12.tar.gz) = 24564 bytes
+SHA1 (IO-Tty-1.14.tar.gz) = a05ddbee8b764b43e6715892ac7a9fcabae706db
+RMD160 (IO-Tty-1.14.tar.gz) = 5cb4bbb149b7351422d28e2c765506ab5f15392c
+SHA512 (IO-Tty-1.14.tar.gz) = 4d6a5299f87eab0281f5e26953bc1537d760d88c486de9c8512750af733d5e466e059400a310746eb8fe432b8c8dcb82055c4cfbb1d31e25c9ce874557618305
+Size (IO-Tty-1.14.tar.gz) = 27756 bytes
