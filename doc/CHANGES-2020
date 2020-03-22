@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1780 2020/03/22 21:04:51 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1781 2020/03/22 21:05:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2437,3 +2437,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/p5-DateTime-TimeZone to 2.38 [nia 2020-03-22]
 	Updated devel/p5-IO-Tty to 1.14 [nia 2020-03-22]
 	Updated misc/libreoffice to 6.4.2.2 [ryoon 2020-03-22]
+	Updated devel/p5-List-AllUtils to 0.16 [nia 2020-03-22]
