@@ -1269,33 +1269,32 @@ func (s *Suite) Test_interval(c *check.C) {
 }
 
 type relation struct {
-	pairs         []struct{ a, b int }
+	idx           map[interface{}]int
+	elements      []interface{}
+	pairs         []struct{ a, b interface{} }
 	reflexive     bool
 	transitive    bool
 	antisymmetric bool
+	onError       func(s string)
 }
 
 func (r *relation) add(a interface{}, b interface{}) {
-	ia := int(reflect.ValueOf(a).Uint())
-	ib := int(reflect.ValueOf(b).Uint())
-	r.pairs = append(r.pairs, struct{ a, b int }{ia, ib})
-}
-
-func (r *relation) size() int {
-	max := 0
-	for _, pair := range r.pairs {
-		if pair.a > max {
-			max = pair.a
-		}
-		if pair.b > max {
-			max = pair.b
-		}
+	if r.idx == nil {
+		r.idx = make(map[interface{}]int)
 	}
-	return max + 1
+	if _, ok := r.idx[a]; !ok {
+		r.idx[a] = len(r.idx)
+		r.elements = append(r.elements, a)
+	}
+	if _, ok := r.idx[b]; !ok {
+		r.idx[b] = len(r.idx)
+		r.elements = append(r.elements, b)
+	}
+	r.pairs = append(r.pairs, struct{ a, b interface{} }{a, b})
 }
 
-func (r *relation) check(actual func(int, int) bool) {
-	n := r.size()
+func (r *relation) check(actual func(interface{}, interface{}) bool) {
+	n := len(r.idx)
 	rel := make([][]bool, n)
 	for i := 0; i < n; i++ {
 		rel[i] = make([]bool, n)
@@ -1308,7 +1307,7 @@ func (r *relation) check(actual func(int, int) bool) {
 	}
 
 	for _, pair := range r.pairs {
-		rel[pair.a][pair.b] = true
+		rel[r.idx[pair.a]][r.idx[pair.b]] = true
 	}
 
 	if r.transitive {
@@ -1334,26 +1333,25 @@ func (r *relation) check(actual func(int, int) bool) {
 		for i := 0; i < n; i++ {
 			for j := 0; j < n; j++ {
 				if i != j && rel[i][j] && rel[j][i] {
-					panic(sprintf(
+					r.onError(sprintf(
 						"the antisymmetric relation must not contain "+
-							"both (%[1]d, %[2]d) and (%[2]d, %[1]d)",
-						i, j))
+							"both (%#[1]v, %#[2]v) and (%#[2]v, %#[1]v)",
+						r.elements[i], r.elements[j]))
 				}
 			}
 		}
 	}
 
-	actualRel := make([][]bool, n)
 	for i := 0; i < n; i++ {
-		actualRel[i] = make([]bool, n)
 		for j := 0; j < n; j++ {
-			actualRel[i][j] = actual(i, j)
+			ei := r.elements[i]
+			ej := r.elements[j]
+			actualRel := actual(ei, ej)
+			if actualRel != rel[i][j] {
+				_ = actual(ei, ej)
+				r.onError(sprintf("expected %#v <=> %#v to be %v, was %v",
+					ei, ej, rel[i][j], actualRel))
+			}
 		}
-	}
-
-	if sprintf("%#v", rel) != sprintf("%#v", actualRel) {
-		// The line breaks at these positions make the two relations
-		// visually comparable in the output.
-		panic(sprintf("the relation must be\n%#v, not \n%#v", rel, actualRel))
 	}
 }
