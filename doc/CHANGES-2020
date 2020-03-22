@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1752 2020/03/22 09:51:32 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1753 2020/03/22 10:00:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2408,3 +2408,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/ruby-iso8601 to 0.12.1 [taca 2020-03-22]
 	Updated fonts/cantarell-fonts to 0.201 [nia 2020-03-22]
 	Updated fonts/culmus to 0.133 [nia 2020-03-22]
+	Updated fonts/overpass to 3.0.4 [nia 2020-03-22]
