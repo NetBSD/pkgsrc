@@ -1,4 +1,4 @@
-$NetBSD: patch-GNUmakefile,v 1.2 2019/06/05 19:06:07 adam Exp $
+$NetBSD: patch-GNUmakefile,v 1.3 2020/03/22 17:52:52 tnn Exp $
 
 Avoid -march=native compiler flag.
 On Darwin, use absolute path to avoid conflict with devel/libtool.
@@ -6,6 +6,24 @@ Fix dylib name.
 
 --- GNUmakefile.orig	2019-04-28 23:36:50.000000000 +0000
 +++ GNUmakefile
+@@ -27,7 +27,7 @@ CHMOD ?= chmod
+ MKDIR ?= mkdir -p
+ 
+ LN ?= ln -sf
+-LDCONF ?= /sbin/ldconfig -n
++LDCONF ?= true
+ 
+ # Solaris provides a non-Posix grep at /usr/bin
+ ifneq ($(wildcard /usr/xpg4/bin/grep),)
+@@ -83,7 +83,7 @@ endif
+ 
+ # Enable shared object versioning for Linux and Solaris
+ HAS_SOLIB_VERSION ?= 0
+-ifneq ($(IS_LINUX)$(IS_HURD)$(IS_SUN),000)
++ifeq ($(IS_DARWIN),0)
+   HAS_SOLIB_VERSION := 1
+ endif
+ 
 @@ -140,7 +140,7 @@ endif
  ifneq ($(IS_DARWIN),0)
    CXX ?= c++
@@ -48,6 +66,18 @@ Fix dylib name.
  
  # Undefined Behavior Sanitizer (UBsan) testing. Issue 'make ubsan'.
  ifeq ($(findstring ubsan,$(MAKECMDGOALS)),ubsan)
+@@ -1006,9 +980,9 @@ ifeq ($(HAS_SOLIB_VERSION),1)
+ # Different patchlevels and minors are compatible since 6.1
+ SOLIB_COMPAT_SUFFIX=.$(LIB_MAJOR)
+ # Linux uses -Wl,-soname
+-ifneq ($(IS_LINUX)$(IS_HURD),00)
++ifneq ($(IS_LINUX)$(IS_HURD)$(IS_NETBSD),00)
+ # Linux uses full version suffix for shared library
+-SOLIB_VERSION_SUFFIX=.$(LIB_MAJOR).$(LIB_MINOR).$(LIB_PATCH)
++SOLIB_VERSION_SUFFIX=.$(LIB_MAJOR).$(LIB_MINOR)
+ SOLIB_FLAGS=-Wl,-soname,libcryptopp.so$(SOLIB_COMPAT_SUFFIX)
+ endif
+ # Solaris uses -Wl,-h
 @@ -1248,7 +1222,7 @@ ifneq ($(wildcard libcryptopp.dylib),)
  	@-$(MKDIR) $(DESTDIR)$(LIBDIR)
  	$(CP) libcryptopp.dylib $(DESTDIR)$(LIBDIR)
@@ -57,3 +87,11 @@ Fix dylib name.
  endif
  ifneq ($(wildcard libcryptopp.so$(SOLIB_VERSION_SUFFIX)),)
  	@-$(MKDIR) $(DESTDIR)$(LIBDIR)
+@@ -1256,6 +1230,7 @@ ifneq ($(wildcard libcryptopp.so$(SOLIB_
+ 	$(CHMOD) 0755 $(DESTDIR)$(LIBDIR)/libcryptopp.so$(SOLIB_VERSION_SUFFIX)
+ ifeq ($(HAS_SOLIB_VERSION),1)
+ 	-$(LN) libcryptopp.so$(SOLIB_VERSION_SUFFIX) $(DESTDIR)$(LIBDIR)/libcryptopp.so
++	-$(LN) libcryptopp.so$(SOLIB_VERSION_SUFFIX) $(DESTDIR)$(LIBDIR)/libcryptopp.so$(SOLIB_COMPAT_SUFFIX)
+ 	$(LDCONF) $(DESTDIR)$(LIBDIR)
+ endif
+ endif
