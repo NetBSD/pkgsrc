@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/03/20 11:21:48 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/22 21:25:05 tnn Exp $
 
 DISTNAME=	asterisk-native-sounds-20060209-01-ulaw
 PKGNAME=	asterisk-sounds-native-20060209
@@ -23,6 +23,7 @@ INSTALLATION_DIRS=	libdata/asterisk/sounds/dictate \
 			libdata/asterisk/sounds/phonetic
 
 # work around bogosity in distfile: tarred with non-x directories
+EXTRACT_USING+=		bsdtar
 post-extract:
 	find ${WRKDIR} -type d -exec chmod a+x {} \;
 
