@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1753 2020/03/22 10:00:26 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1754 2020/03/22 10:02:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2409,3 +2409,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/cantarell-fonts to 0.201 [nia 2020-03-22]
 	Updated fonts/culmus to 0.133 [nia 2020-03-22]
 	Updated fonts/overpass to 3.0.4 [nia 2020-03-22]
+	Updated games/freeciv-share to 2.6.2 [nia 2020-03-22]
