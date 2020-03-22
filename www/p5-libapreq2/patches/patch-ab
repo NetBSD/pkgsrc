@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2011/03/30 18:38:07 bouyer Exp $
+$NetBSD: patch-ab,v 1.2 2020/03/22 21:21:05 rillig Exp $
 
-perl_install cause the Makefile in perl/ to be rebuilt with /usr/pkg/lib
-as library path instead of the source tree. install the tries to relink
+perl_install causes the Makefile in perl/ to be rebuilt with /usr/pkg/lib
+as library path instead of the source tree. install then tries to relink
 the target with the new path, which fails because the just-installed
 libraries are not in the buildlink directory.
 Just don't rebuild makefiles, the run-time search path has been fixed
