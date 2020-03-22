@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/03/22 19:28:51 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2020/03/22 20:33:29 tnn Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
@@ -21,8 +21,9 @@ DISTNAME=	phraseanet-v${VERS}-linux
 DIST_SUBDIR=	#empty
 
 # The package's config.mk sets CC=g++, which is a bit unorthodox and
-# confuses libtool. Libtool needs an explicit tagged configuration.
-MAKE_FLAGS+=	LIBTOOL=libtool\ --tag=CXX
+# confuses libtool, which can't deduce the tagged configuration if
+# pkgsrc's idea of CXX is something other than g++.
+MAKE_FLAGS+=	CC=${CXX}
 
 # This seems to now be needed though it wasn't before...
 WRKSRC=	${WRKDIR}/${DISTNAME}/bin/src/php_phrasea2
