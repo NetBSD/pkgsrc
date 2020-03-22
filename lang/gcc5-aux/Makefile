@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/11/03 19:03:59 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/03/22 10:52:15 rillig Exp $
 
 PKGNAME=	gcc5-aux-${SNAPSHOT}
 PKGREVISION=	${MAIN_PR}
@@ -21,6 +21,8 @@ NOT_PAX_MPROTECT_SAFE+=	gcc5-aux/bin/gnatmake
 .include "Makefile.version"
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+
+CHECK_PORTABILITY_SKIP+=	contrib/*.sh # not used during the build
 
 # Requires bootstrap compiler, which is only available for on selected systems
 # Disable SunOS for now until multilib version can be built and tested.
