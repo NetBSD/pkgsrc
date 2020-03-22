@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2016/10/16 17:10:49 bsiegert Exp $
+$NetBSD: distinfo,v 1.13 2020/03/22 18:09:10 tnn Exp $
 
 SHA1 (exult-1.4.9rc1.tar.gz) = 259f778d6b8b5e9c9466e2f4967b6352435b6792
 RMD160 (exult-1.4.9rc1.tar.gz) = 8c6fce2bc17ff59709c5827c5dd70f2e2a473914
@@ -6,6 +6,8 @@ SHA512 (exult-1.4.9rc1.tar.gz) = 0da559ce574a07eba597b44e6ed6ddd72d3db45dfa8f546
 Size (exult-1.4.9rc1.tar.gz) = 5452640 bytes
 SHA1 (patch-audio_midi__drivers_forked__player.cc) = 058c77900828cc75643237e5ddbc1d21e67a2337
 SHA1 (patch-configure) = 0812526182ffa1746c45fd5a005ca8b10fd50093
+SHA1 (patch-files_U7obj.h) = fc17761779f99f2c2f8e5fa631601db61bb7b78c
+SHA1 (patch-files_databuf.h) = 2a11ad1820ed14ead54bb66d52855d594cf28c5c
 SHA1 (patch-imagewin_manip.h) = d9a90c7fbe046a4079618aeda4c428ef1672525e
 SHA1 (patch-istring.h) = 18e8b49932f7317e6c978c585e1dfe855ac05a51
 SHA1 (patch-usecode_compiler_ucstmt.cc) = 8aadf06c18f347d7de437709e44da86a0783bb1f
