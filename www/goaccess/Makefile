@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2020/03/08 16:51:36 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2020/03/22 22:46:27 roy Exp $
 
 DISTNAME=	goaccess-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://tar.goaccess.io/
 
@@ -16,7 +16,9 @@ GNU_CONFIGURE=	yes
 
 USE_LANGUAGES=	c99
 USE_TOOLS+=	pkg-config aclocal autoconf automake
-USE_NCURSES=	yes
+
+USE_CURSES=	getmouse
+FAKE_NCURSES=	yes
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=	${EGDIR}/goaccess.conf ${PKG_SYSCONFDIR}/goaccess.conf
@@ -33,4 +35,5 @@ pre-configure:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
