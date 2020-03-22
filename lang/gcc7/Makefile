@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/03/18 19:50:52 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/03/22 10:56:25 rillig Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -48,7 +48,7 @@ SUBST_FILES.vars=	gcc/Makefile.in
 SUBST_VARS.vars=	MACHINE_GNU_PLATFORM
 
 # These programs use [[ ... ]] and are not needed for the build.
-CHECK_PORTABILITY_CHECK+= \
+CHECK_PORTABILITY_SKIP+= \
 	contrib/prepare_patch.sh \
 	contrib/patch_tester.sh
 
