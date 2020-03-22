@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2020/03/17 14:19:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2020/03/22 21:24:23 joerg Exp $
 
 OIIOVER=	1.8.15
 DISTNAME=	oiio-Release-${OIIOVER}
@@ -11,6 +11,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://sites.google.com/site/openimageio/
 COMMENT=	OpenImageIO is a library for reading and writing images
 LICENSE=	modified-bsd
+
+UNLIMIT_RESOURCES=	datasize virtualsize
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c gnu++11
