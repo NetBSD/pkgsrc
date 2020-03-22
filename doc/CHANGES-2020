@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1739 2020/03/22 08:45:18 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1740 2020/03/22 08:53:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2395,3 +2395,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/audacious to 4.0 [nia 2020-03-22]
 	Updated audio/audacious-plugins to 4.0 [nia 2020-03-22]
 	Updated audio/game-music-emu to 0.6.3 [nia 2020-03-22]
+	Updated audio/qsynth to 0.6.1 [nia 2020-03-22]
