@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/07/03 06:00:25 maya Exp $
+$NetBSD: distinfo,v 1.2 2020/03/22 09:50:44 nia Exp $
 
-SHA1 (culmus-0.132.tar.gz) = af96eac3601a6226264e0da79e07c086056745f1
-RMD160 (culmus-0.132.tar.gz) = 8f7ac47583b0715a28a21a50af47b5396fc1b4e9
-SHA512 (culmus-0.132.tar.gz) = 95c9d39ef0fa31a18155c43bf47657c4a06e84408ab4b477d8c5dabf8d97d6b9634f0bc050fc32a53790abc8a536a541179e7ba7e644630ade4d385b33f6695f
-Size (culmus-0.132.tar.gz) = 1216844 bytes
+SHA1 (culmus-0.133.tar.gz) = a2dfb24c6daf5ccd81ab93ff7e5679099ab079d1
+RMD160 (culmus-0.133.tar.gz) = ce06ef672f955fb5989f0fabf17438f62420a36a
+SHA512 (culmus-0.133.tar.gz) = 97c17dbe4ad5b542a2bfd6c9c7a7afeeabae942cbbd3a718d46ceb18b4020fe7fdf93ade07a65a2da93dadff645abf0da4648713e3452d30bf2a9a79201f2845
+Size (culmus-0.133.tar.gz) = 1174687 bytes
