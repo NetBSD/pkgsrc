@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/01/26 17:30:55 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2020/03/22 11:29:46 rillig Exp $
 #
 
 DISTNAME=		bglibs-2.04
@@ -18,6 +18,7 @@ USE_LIBTOOL=		yes
 
 DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
+DJB_ERRNO_HACK=		NO
 TEST_TARGET=		selftests
 
 DJB_CONFIG_CMDS= \
