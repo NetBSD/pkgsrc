@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19745 2020/03/19 21:30:30 wiz Exp $
+$NetBSD: TODO,v 1.19746 2020/03/22 13:22:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -375,6 +375,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.10.1
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o OdfConverter-4.0
@@ -404,6 +405,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o alephone-20150620
 	o alevt-1.6.2
 	o allegro-5.10
+	o alsa-lib-1.2.2
 	o alsa-plugins-1.1.0
 	o amarok-2.9.0
 	o amavis-perl-0.3.12 [called just amavis]
@@ -471,6 +473,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o calibre-4.11.0 [started in wip; needs QtWebEngineCore]
 	o calligra-3.0.1 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
+	o catch2-2.11.3
 	o catdoc-1.1
 	o catdoc-tk-1.1
 	o cddbd-1.5.2
@@ -628,9 +631,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-share-2.3.5
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
+	o glibmm-2.64.1
 	o gliv-1.9.7
 	o glom-1.14.2
 	o gmake-4.3 [cannot build firefox/openjdk11 etc.]
+	o gmime3-3.2.7
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-3.36
@@ -703,6 +708,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hevea-2.28
 	o heyu-2.9.0
 	o hiawatha-10.8.1
+	o hiredis-0.14.1
 	o honeyd-1.5c
 	o horde-5.2.9
 	o hs-cgrep-6.6.3
@@ -774,6 +780,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libbpg-0.9.6
 	o libcaca-0.99.19
 	o libcarddav-14.0.4
+	o libev-4.33
 	o libflash-0.4.13
 	o libfolks-0.10.1 [wip]
 	o libgfshare-2.0.0
@@ -837,6 +844,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
 	o mediawiki-1.34
+	o mednafen-1.24.1
 	o memached-1.5.6
 	o memcached-1.6
 	o merkaator-0.18.3
@@ -910,6 +918,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openslp-2.0.0
 	o opensmtpd-6.0.0
 	o openssh-8.2
+	o openssl-1.1.1e
 	o openvas-libraries-8.0.8
 	o opera-26
 	o oroborus-2.0.18
@@ -987,6 +996,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o prelude-lml-3.1.0
 	o prelude-manager-3.1.0
 	o profit-2.5.3
+	o protobuf-3.11.4
 	o psmisc-22.20
 	o pspp-0.10.1
 	o ptlib-2.16.2
@@ -999,6 +1009,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ephem3-3.7.6.0
 	o py-gds-1.4.2
 	o py-gnome-menus-3.8.0
+	o py-gobject3-3.36.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
@@ -1007,7 +1018,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-omniORBpy-3.7
 	o py-pandas-1.0.0
 	o py-ptt-1.10.2
-	o py-setuptools-46.0.0 [drops python-2.x support]
+	o py-setuptools-46.1.1 [drops python-2.x support]
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
 	o py-sybase-0.37
@@ -1016,6 +1027,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pythontidy-1.23
 	o qbzr-0.23.2
 	o qlandkartegt-1.8.1 [pkg/53376]
+	o qr-code-generator-1.6.0
 	o qt4-creator-3.4.0
 	o racket-7.1
 	o radiance-4R1
