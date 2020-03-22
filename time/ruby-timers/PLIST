@@ -1,20 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2017/03/20 15:43:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/22 09:36:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.coveralls.yml
+${GEM_LIBDIR}/.editorconfig
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.ruby-version
 ${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/AUTHORS.md
-${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/timers.rb
 ${GEM_LIBDIR}/lib/timers/events.rb
 ${GEM_LIBDIR}/lib/timers/group.rb
+${GEM_LIBDIR}/lib/timers/interval.rb
 ${GEM_LIBDIR}/lib/timers/timer.rb
 ${GEM_LIBDIR}/lib/timers/version.rb
 ${GEM_LIBDIR}/lib/timers/wait.rb
