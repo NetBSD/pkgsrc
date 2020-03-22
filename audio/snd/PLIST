@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/02/26 16:40:38 nia Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/03/22 08:58:17 nia Exp $
 bin/snd
 man/man1/snd.1
 share/snd/CM_patterns.scm
@@ -79,6 +79,7 @@ share/snd/libgsl.scm
 share/snd/libm.scm
 share/snd/libutf8proc.scm
 share/snd/lint.scm
+share/snd/loop.scm
 share/snd/maraca.rb
 share/snd/maraca.scm
 share/snd/marks-menu.scm
