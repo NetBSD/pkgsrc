@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1735 2020/03/22 03:53:09 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1736 2020/03/22 07:55:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2391,3 +2391,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-FFI-CheckLib to 0.26 [mef 2020-03-21]
 	Updated devel/p5-File-Find-Object to 0.3.5 [mef 2020-03-21]
 	Updated net/ruby-xdr to 3.0.0nb1 [taca 2020-03-22]
+	Removed security/mbedtls1 successor security/mbedtls [nia 2020-03-22]
