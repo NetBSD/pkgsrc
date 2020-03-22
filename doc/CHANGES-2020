@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1737 2020/03/22 08:40:06 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1738 2020/03/22 08:40:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2393,3 +2393,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-xdr to 3.0.0nb1 [taca 2020-03-22]
 	Removed security/mbedtls1 successor security/mbedtls [nia 2020-03-22]
 	Updated audio/audacious to 4.0 [nia 2020-03-22]
+	Updated audio/audacious-plugins to 4.0 [nia 2020-03-22]
