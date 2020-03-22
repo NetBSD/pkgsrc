@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2020/03/10 22:10:24 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2020/03/22 22:06:02 tnn Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
@@ -37,7 +37,7 @@ CONFIG_SUB_OVERRIDE+=	common/autoconf/build-aux/autoconf-config.sub
 CONFIG_GUESS_OVERRIDE+=	common/autoconf/build-aux/autoconf-config.guess
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash gmake pax pkg-config unzip:run zip:run
-UNLIMIT_RESOURCES=	datasize stacksize
+UNLIMIT_RESOURCES=	datasize stacksize virtualsize
 PLIST_SRC+=		${PLIST_SRC_DFLT}
 CHECK_SHLIBS_SKIP+=	java/${JAVA_NAME}/jre/lib/${LIBDIR_ARCH}/libinstrument.so
 
@@ -211,9 +211,6 @@ ${WRKDIR}/stage1_5-done: ${WRKDIR}/stage1-done
 	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/jar*
 	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java
 	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java[a-z]*
-.endif
-.if defined(BATCH)
-	@${RECURSIVE_MAKE} ${MAKEFLAGS} apply-va-hack
 .endif
 	@${STEP_MSG} "Reconfiguring with newly built JDK"
 	@${RECURSIVE_MAKE} ${MAKEFLAGS} do-configure
