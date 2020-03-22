@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/06/05 19:06:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/03/22 17:52:51 tnn Exp $
 bin/cryptest
 include/cryptopp/3way.h
 include/cryptopp/adler32.h
@@ -177,6 +177,8 @@ include/cryptopp/zinflate.h
 include/cryptopp/zlib.h
 lib/libcryptopp.a
 lib/libcryptopp.so
+lib/libcryptopp.so.8
+lib/libcryptopp.so.8.2
 share/cryptopp/TestData/3desval.dat
 share/cryptopp/TestData/3wayval.dat
 share/cryptopp/TestData/aria.dat
