@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2020/03/17 18:59:16 adam Exp $
+# $NetBSD: Makefile.common,v 1.55 2020/03/22 20:12:14 rillig Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
@@ -117,6 +117,7 @@ SUBST_SED.scr=		-e "s,chown,${CHOWN},g"
 SUBST_SED.scr+=		-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
 SUBST_SED.scr+=		-e "s,@SHELL_PATH@,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scr=	Fixing scripts.
+SUBST_NOOP_OK.scr=	yes # since RCD_SCRIPTS_SHELL may be /bin/sh
 
 SUBST_CLASSES+=		fixpaths
 SUBST_STAGE.fixpaths=	post-install
