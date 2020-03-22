@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2019/12/14 17:18:28 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/03/22 09:08:51 nia Exp $
 
-SHA1 (quake2-7.42.tar.xz) = 0de1f703e5a91f9c3a1566cef99b44627648c28d
-RMD160 (quake2-7.42.tar.xz) = 6c77bb9aab22070cb1834ba24fab6877ae2f4f68
-SHA512 (quake2-7.42.tar.xz) = 0f51204fcf14ecb3f1f654e6ee19207836cf4642022569ef202bc12f312f76dbd43695aa4d9f9fb70c8b023f42d1a8fcec25f472a32175ebb0a308211fa40cc0
-Size (quake2-7.42.tar.xz) = 1987332 bytes
+SHA1 (quake2-7.43.tar.xz) = 7336f1e9958bee28a6d3a9e26337a68de28a955f
+RMD160 (quake2-7.43.tar.xz) = 1e9d48416c757e2b27da125a83ace0ea450637b5
+SHA512 (quake2-7.43.tar.xz) = c728609e277330b39fc423d66bbd098e360e7fc8c54500fa5accbc4aaeb9145a00c8ff8be67ce8f36047dbe6d98480bdbe1f330da5b0037517607ada8a63e4b8
+Size (quake2-7.43.tar.xz) = 1989812 bytes
 SHA1 (patch-CMakeLists.txt) = 9abf8f2345ed90379146a637bf79f4021777a67b
