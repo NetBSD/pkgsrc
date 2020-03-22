@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2019/11/02 15:38:05 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2020/03/22 21:01:08 rillig Exp $
 
 DISTNAME=	SQL-Abstract-1.86
 PKGNAME=	p5-${DISTNAME}
@@ -25,7 +25,6 @@ BUILD_DEPENDS+=		p5-Tree-DAG_Node>=0:../../devel/p5-Tree-DAG_Node
 
 PERL5_PACKLIST=		auto/SQL/Abstract/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
-REPLACE_PERL=		script/format-sql
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
