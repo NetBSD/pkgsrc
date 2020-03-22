@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/04/11 19:47:13 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/22 22:36:02 rillig Exp $
 
 DISTNAME=	jaraco.util-11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./_/}
@@ -19,7 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.0:../../devel/py-test
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	jaraco/lang/python.py
-REPLACE_PYTHON+=	jaraco/util/filesystem.py
 
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
