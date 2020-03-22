@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:12:53 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/03/22 11:37:17 nia Exp $
 
-SHA1 (twolame-0.3.13.tar.gz) = 3ca460472c2f6eeedad70291d8e37da88b64eb8b
-RMD160 (twolame-0.3.13.tar.gz) = a73f01a281a66cf53e8109d57919593a90dc0bcc
-SHA512 (twolame-0.3.13.tar.gz) = 241ae5faebf05cb919959bb0545cb89e9b71cfb07f92a7118d864499ea4f0065ddaa646ab1482ffbcbca427d52c2436764074bd67fd19a1eb9979987f23163f7
-Size (twolame-0.3.13.tar.gz) = 660415 bytes
+SHA1 (twolame-0.4.0.tar.gz) = 6ec05fdaf555ef4157746ac3c91e8cdd20d4a3bc
+RMD160 (twolame-0.4.0.tar.gz) = cec54945c4dd28921f8dbdb25e74aac2fa07b61e
+SHA512 (twolame-0.4.0.tar.gz) = cc594bc8d2322922280f915a3c0aa52540cca0350d6498bc96f3f60fd6e53f951e775ea015a44bdb29ec883b46b31a0e5483f6a5c188b02e30008289273c7d03
+Size (twolame-0.4.0.tar.gz) = 890908 bytes
