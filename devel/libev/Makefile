@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2019/12/31 12:28:23 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/03/22 16:01:46 nia Exp $
 
-DISTNAME=	libev-4.31
+DISTNAME=	libev-4.33
 CATEGORIES=	devel
-MASTER_SITES=	http://dist.schmorp.de/libev/
+MASTER_SITES=	http://dist.schmorp.de/libev/Attic/
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://software.schmorp.de/pkg/libev.html
