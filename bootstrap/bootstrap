@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.275 2020/03/22 16:34:46 rillig Exp $
+# $NetBSD: bootstrap,v 1.276 2020/03/22 16:40:19 rillig Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1428,6 +1428,10 @@ if [ ! -f "$etc_mk_conf" ]; then
 	TARGET_MKCONF="$etc_mk_conf"
 fi
 
+[ -n "${binary_kit}" ] && mkbinarykit_tar
+[ -n "${binary_gzip_kit}" ] && mkbinarykit_tgz
+[ -n "${binary_macpkg}" ] && mkbinarykit_macpkg
+
 hline="==========================================================================="
 echo ""
 echo "$hline"
@@ -1451,10 +1455,6 @@ echo "Thank you for using pkgsrc!"
 echo ""
 echo "$hline"
 echo ""
-
-[ -n "${binary_kit}" ] && mkbinarykit_tar
-[ -n "${binary_gzip_kit}" ] && mkbinarykit_tgz
-[ -n "${binary_macpkg}" ] && mkbinarykit_macpkg
 
 echo_msg "bootstrap started: $build_start"
 echo_msg "bootstrap ended:   `date`"
