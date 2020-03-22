@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.274 2020/02/23 18:32:46 rillig Exp $
+# $NetBSD: bootstrap,v 1.275 2020/03/22 16:34:46 rillig Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -36,8 +36,6 @@
 #
 # * the ${var%pattern} or ${var#pattern} expansions
 # * the $(command) subshell
-
-BOOTSTRAP_VERSION=20190721
 
 # Don't let the bootstrap program get confused by a pre-existing mk.conf
 # file.
