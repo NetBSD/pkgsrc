@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19755 2020/03/22 18:28:52 wiz Exp $
+$NetBSD: TODO,v 1.19756 2020/03/22 18:33:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1018,7 +1018,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pythontidy-1.23
 	o qbzr-0.23.2
 	o qlandkartegt-1.8.1 [pkg/53376]
-	o qr-code-generator-1.6.0
 	o qt4-creator-3.4.0
 	o racket-7.1
 	o radiance-4R1
