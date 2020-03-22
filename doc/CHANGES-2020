@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1787 2020/03/22 21:25:05 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.1788 2020/03/22 21:54:01 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2444,3 +2444,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/p5-IO-Socket-SSL to 2.067 [nia 2020-03-22]
 	Updated devel/p5-Scalar-List-Utils to 1.54 [nia 2020-03-22]
 	Removed comms/asterisk-sounds-native [tnn 2020-03-22]
+	Updated textproc/bat to 0.13.0 [fox 2020-03-22]
