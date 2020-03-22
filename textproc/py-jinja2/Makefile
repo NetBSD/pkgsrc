@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/02/01 20:31:28 adam Exp $
+# $NetBSD: Makefile,v 1.28 2020/03/22 22:42:13 rillig Exp $
 
 DISTNAME=	Jinja2-2.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,12 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-markupsafe>=0.23:../../textproc/py-markupsafe
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=		# none
-
-SUBST_CLASSES+=		unicode
-SUBST_FILES.unicode=	jinja2/*.py
-SUBST_STAGE.unicode=	pre-install
-SUBST_SED.unicode+=	-e "s,u',',g"
-SUBST_SED.unicode+=	-e 's,u",",g'
 
 .include "../../lang/python/pyversion.mk"
 
