@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1760 2020/03/22 11:16:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1761 2020/03/22 11:24:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2417,3 +2417,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/liblo to 0.31 [nia 2020-03-22]
 	Updated net/py-lexicon to 3.3.18 [adam 2020-03-22]
 	Updated www/py-pylint-django to 2.0.14 [adam 2020-03-22]
+	Updated games/supertuxkart to 1.1 [nia 2020-03-22]
