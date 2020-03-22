@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2020/03/10 22:09:30 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2020/03/22 22:36:51 tnn Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -293,6 +293,7 @@ LDFLAGS+= -L${PREFIX}/lib
 .endif
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/editline/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
