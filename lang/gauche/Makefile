@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2020/01/26 17:31:27 rillig Exp $
+# $NetBSD: Makefile,v 1.75 2020/03/22 10:50:35 rillig Exp $
 #
 
 DISTNAME=	Gauche-0.9.6
@@ -17,6 +17,7 @@ DEPENDS+=		slib-[0-9]*:../../devel/slib
 
 MAKE_JOBS_SAFE=		no
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has several configure programs
 CONFIGURE_ARGS+=	--with-slib=${LOCALBASE}/share/slib
 CONFIGURE_ARGS+=	--enable-threads=pthreads
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
