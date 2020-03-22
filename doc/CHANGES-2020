@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1747 2020/03/22 09:36:56 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1748 2020/03/22 09:38:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2403,3 +2403,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/lpairs to 1.0.5 [nia 2020-03-22]
 	Updated audio/qmmp to 1.3.6 [nia 2020-03-22]
 	Updated time/ruby-timers to 4.3.0 [taca 2020-03-22]
+	Updated time/ruby-hitimes to 2.0.0 [taca 2020-03-22]
