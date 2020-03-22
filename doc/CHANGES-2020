@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1778 2020/03/22 20:58:40 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1779 2020/03/22 21:02:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2435,3 +2435,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/p5-Crypt-Rijndael to 1.14 [nia 2020-03-22]
 	Updated security/p5-Crypt-Random to 1.52 [nia 2020-03-22]
 	Updated time/p5-DateTime-TimeZone to 2.38 [nia 2020-03-22]
+	Updated devel/p5-IO-Tty to 1.14 [nia 2020-03-22]
