@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.59 2020/03/12 17:01:39 gdt Exp $
+# $NetBSD: NetBSD.mk,v 1.60 2020/03/22 21:17:30 joerg Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -34,10 +34,11 @@ PKG_TOOLS_BIN?=		${PKG_TOOLS_BIN_cmd:sh}
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=	wheel
-ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
-ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
-ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
-ULIMIT_CMD_cputime?=	ulimit -t `ulimit -H -t`
+ULIMIT_CMD_virtualsize?=	ulimit -v `ulimit -H -v`
+ULIMIT_CMD_datasize?=		ulimit -d `ulimit -H -d`
+ULIMIT_CMD_stacksize?=		ulimit -s `ulimit -H -s`
+ULIMIT_CMD_memorysize?=		ulimit -m `ulimit -H -m`
+ULIMIT_CMD_cputime?=		ulimit -t `ulimit -H -t`
 
 # Native X11 is only supported on NetBSD-5 and later.
 # On NetBSD-5, native X11 has enough issues that we default
