@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2020/03/17 10:36:38 nia Exp $
+# $NetBSD: Makefile,v 1.30 2020/03/22 16:08:26 nia Exp $
 
-DISTNAME=	mednafen-1.22.2
-PKGREVISION=	1
+DISTNAME=	mednafen-1.24.1
 CATEGORIES=	emulators
 MASTER_SITES=	https://mednafen.github.io/releases/files/
 EXTRACT_SUFX=	.tar.xz
