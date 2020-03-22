@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:27:51 agc Exp $
+$NetBSD: distinfo,v 1.8 2020/03/22 14:24:59 tnn Exp $
 
 SHA1 (netbsd-iscsi-20111006.tar.gz) = e8c0176a32416e17f90ec33ebd014ec19d978c3b
 RMD160 (netbsd-iscsi-20111006.tar.gz) = fcb28098f0048f726570ee0f10d6d84e641330f2
@@ -9,5 +9,6 @@ SHA1 (patch-ac) = d7a7f72b83eb444f62bbfc34c2c02cc03b186ee9
 SHA1 (patch-ad) = 3844a8f8a6ddf6e584f1c097f95be0501f901a3e
 SHA1 (patch-ae) = e6cad821057074c50d0388cf1e6b3df2e080678c
 SHA1 (patch-include_iscsi-md5.h) = 038355a84a1c979fe1c439eea4604b5323437ea4
+SHA1 (patch-src_lib_Makefile.in) = e7049779c58ae989bf806cf55a7aaaccf6b0dc39
 SHA1 (patch-src_lib_md5c.c) = 905c0e4000a401a105bb0521c20281158c6ad149
 SHA1 (patch-src_lib_md5hl.c) = de4c44f00614fb871f2ac8619f3f41896c1d7f26
