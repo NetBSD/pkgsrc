@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/03/08 16:48:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/22 21:25:13 joerg Exp $
 
 DISTNAME=	centerim5-5.0.1
 PKGREVISION=	3
@@ -27,6 +27,9 @@ SUBST_STAGE.equals=	pre-configure
 SUBST_MESSAGE.equals=	Use portable = instead of ==.
 SUBST_FILES.equals+=	configure.ac
 SUBST_SED.equals=	-e 's,== True,= True,g'
+
+post-extract:
+	rm ${WRKSRC}/version
 
 pre-configure:
 	cd ${WRKSRC} && ./bootstrap
