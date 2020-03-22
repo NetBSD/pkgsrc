@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1756 2020/03/22 10:13:34 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1757 2020/03/22 10:20:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2412,3 +2412,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/freeciv-share to 2.6.2 [nia 2020-03-22]
 	Updated games/freeciv-client to 2.6.2 [nia 2020-03-22]
 	Updated games/freeciv-server to 2.6.2 [nia 2020-03-22]
+	Updated games/frotz to 2.51 [nia 2020-03-22]
