@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/14 22:37:07 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/03/22 11:02:14 rillig Exp $
 
 DISTNAME=	asttokens-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-astroid-[0-9]*:../../devel/py-astroid
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYPKGPREFIX} == py27
+TEST_DEPENDS=	# none; py-astroid is incompatible to py27
+do-test:
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
