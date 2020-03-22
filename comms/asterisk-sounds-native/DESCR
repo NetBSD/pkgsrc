@@ -1,7 +1,0 @@
-This is an optional collection of sound files, with the same content
-and in the same voice as the originals, but in better formats (uLaw
-and aLaw) to avoid transcoding when talking to a uLaw/aLaw capable
-peer.
-
-(This package is for very old versions of asterisk, and does not
-install files in the expected place.)
