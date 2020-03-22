@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1764 2020/03/22 16:01:55 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1765 2020/03/22 16:08:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2421,3 +2421,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/twolame to 0.4.0 [nia 2020-03-22]
 	Updated graphics/papirus-icon-theme to 20200301 [nia 2020-03-22]
 	Updated devel/libev to 4.33 [nia 2020-03-22]
+	Updated emulators/mednafen to 1.24.1 [nia 2020-03-22]
