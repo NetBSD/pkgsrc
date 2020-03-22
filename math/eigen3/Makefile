@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/11/02 16:16:18 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/03/22 11:03:22 rillig Exp $
 
 DISTNAME=	3.3.7
 PKGNAME=	eigen3-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://bitbucket.org/eigen/eigen/get/
 DIST_SUBDIR=	eigen3
@@ -21,7 +22,7 @@ WRKSRC=		${WRKDIR}/eigen-eigen-323c052e1731
 CMAKE_ARGS+=	-DCMAKEPACKAGE_INSTALL_DIR=${PREFIX}/lib/cmake/eigen3
 CMAKE_ARGS+=	-DPKGCONFIG_INSTALL_DIR=${PREFIX}/lib/pkgconfig
 
-PKGCONFIG_OVERRIDE+=	eigen.pc.in
+PKGCONFIG_OVERRIDE+=	eigen3.pc.in
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/_build
