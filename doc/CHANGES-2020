@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1742 2020/03/22 09:09:21 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1743 2020/03/22 09:14:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2398,3 +2398,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/qsynth to 0.6.1 [nia 2020-03-22]
 	Updated audio/snd to 20.2 [nia 2020-03-22]
 	Updated games/yquake2 to 7.43 [nia 2020-03-22]
+	Updated games/lgogdownloader to 3.6 [nia 2020-03-22]
