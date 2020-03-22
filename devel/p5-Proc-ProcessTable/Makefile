@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/08/14 14:55:14 wen Exp $
+# $NetBSD: Makefile,v 1.29 2020/03/22 20:58:24 rillig Exp $
 
 DISTNAME=		Proc-ProcessTable-0.59
 PKGNAME=		p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://metacpan.org/release/Proc-ProcessTable
 COMMENT=		Perl extension to access the UNIX process table
 LICENSE=		${PERL5_LICENSE}
-
-REPLACE_PERL=		example.pl
 
 PERL5_PACKLIST=		auto/Proc/ProcessTable/.packlist
 
