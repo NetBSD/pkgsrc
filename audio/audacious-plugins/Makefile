@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2020/03/10 22:09:18 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2020/03/22 08:39:48 nia Exp $
 
-DISTNAME=	audacious-plugins-3.10.1
-PKGREVISION=	8
+DISTNAME=	audacious-plugins-4.0
 CATEGORIES=	audio
 MASTER_SITES=	https://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,7 +24,7 @@ CONFIGURE_ARGS+=	--disable-oss4
 CONFIGURE_ARGS+=	--disable-qtaudio
 CONFIGURE_ARGS+=	--disable-sndio
 
-PLIST_VARS+=	dbus gtk qt
+PLIST_VARS+=	dbus
 
 .include "options.mk"
 .include "../../audio/audacious/buildlink3.mk"
@@ -34,15 +33,6 @@ TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 PLIST.dbus=		yes
 .else
 CONFIGURE_ARGS+=	--disable-mpris2
-.endif
-.if !empty(PKG_BUILD_OPTIONS.audacious:Mqt5)
-PLIST.qt=		yes
-CONFIGURE_ARGS+=	--enable-qt
-.endif
-.if !empty(PKG_BUILD_OPTIONS.audacious:Mgtk2)
-PLIST.gtk=		yes
-.else
-CONFIGURE_ARGS+=	--disable-gtk
 .endif
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
