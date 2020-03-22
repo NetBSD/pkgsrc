@@ -596,6 +596,26 @@ func (s *Suite) Test_PatchChecker_Check__absolute_path(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+func (s *Suite) Test_PatchChecker_Check__add_hardcoded_usr_pkg(c *check.C) {
+	t := s.Init(c)
+
+	lines := t.SetUpFileLines("patch-aa",
+		CvsID,
+		"",
+		"This patch wrongly contains the hard-coded PREFIX.",
+		"",
+		"--- Makefile",
+		"+++ Makefile",
+		"@@ -1,1 +1,1 @@",
+		"- prefix := @prefix@",
+		"+ prefix := /usr/pkg")
+
+	CheckLinesPatch(lines, nil)
+
+	t.CheckOutputLines(
+		"ERROR: ~/patch-aa:9: Patches must not hard-code the pkgsrc PREFIX.")
+}
+
 func (s *Suite) Test_PatchChecker_checkUnifiedDiff__lines_at_end(c *check.C) {
 	t := s.Init(c)
 
