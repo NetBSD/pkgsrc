@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/01/18 23:33:27 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/03/22 13:21:05 tnn Exp $
 #
 
 PKGNAME=		rc.subr-20181226
@@ -14,6 +14,7 @@ ONLY_FOR_PLATFORM+=	Linux-*-* OpenBSD-*-* QNX-*-* SunOS-*-*
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
+NOT_FOR_UNPRIVILEGED=	yes
 
 CHECK_FILES_SUPPORTED=	no
 BUILD_DEFS+=		RCD_SCRIPTS_DIR
