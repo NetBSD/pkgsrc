@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:08 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/22 12:24:58 rillig Exp $
 #
 
 DISTNAME=	acpica-unix2-20160930
@@ -18,9 +18,6 @@ DISTFILES+=	${TESTS_DISTNAME}${EXTRACT_SUFX}
 
 USE_TOOLS+=	bison flex gm4 gmake bash
 
-REPLACE_BASH+=	tests/aapits/bin/aapitsrun
-REPLACE_BASH+=	tests/aapits/bin/cadir
-REPLACE_BASH+=	tests/aapits/bin/run1
 REPLACE_BASH+=	tests/aslts.sh
 REPLACE_BASH+=	tests/aslts/bin/Do
 REPLACE_BASH+=	tests/aslts/bin/asltsdiffres
