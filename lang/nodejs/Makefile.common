@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2020/03/11 09:22:49 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.34 2020/03/22 20:28:13 rillig Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs8/Makefile
 # used by lang/nodejs10/Makefile
@@ -65,6 +65,7 @@ SUBST_FILES.mktools+=	out/tools/v8_gypfiles/mksnapshot.target.mk
 # nodejs13
 SUBST_FILES.mktools+=	out/node_mksnapshot.target.mk
 SUBST_SED.mktools+=	-e 's|call do_cmd,link)|call do_cmd,link)\${.newline}	${TOOLS_PLATFORM.paxctl} +m $$@|'
+SUBST_NOOP_OK.mktools=	yes # because of the different affected files
 .endif
 
 CFLAGS.SunOS+=		-D_FILE_OFFSET_BITS=64
