@@ -1,12 +1,13 @@
-# $NetBSD: options.mk,v 1.1 2020/03/05 12:32:40 nia Exp $
+# $NetBSD: options.mk,v 1.2 2020/03/22 07:31:42 nia Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.qt5-qtmultimedia
-PKG_SUPPORTED_OPTIONS=	alsa gstreamer openal pulseaudio
+PKG_OPTIONS_VAR=		PKG_OPTIONS.qt5-qtmultimedia
+PKG_SUPPORTED_OPTIONS=		alsa gstreamer openal pulseaudio
+PKG_SUGGESTED_OPTIONS.Linux=	alsa
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-PKG_SUGGESTED_OPTIONS=	alsa gstreamer openal pulseaudio
+PKG_SUGGESTED_OPTIONS+=		gstreamer openal pulseaudio
 .endif
 
 .include "../../mk/bsd.options.mk"
