@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/01/16 13:31:15 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/03/22 18:23:34 wiz Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -722,6 +722,7 @@ man/man3/CRYPTO_mem_leaks_fp.3
 man/man3/CRYPTO_memcmp.3
 man/man3/CRYPTO_new_ex_data.3
 man/man3/CRYPTO_realloc.3
+man/man3/CRYPTO_secure_allocated.3
 man/man3/CRYPTO_secure_clear_free.3
 man/man3/CRYPTO_secure_free.3
 man/man3/CRYPTO_secure_malloc.3
@@ -1295,6 +1296,7 @@ man/man3/EVP_DecryptFinal_ex.3
 man/man3/EVP_DecryptInit.3
 man/man3/EVP_DecryptInit_ex.3
 man/man3/EVP_DecryptUpdate.3
+man/man3/EVP_Digest.3
 man/man3/EVP_DigestFinal.3
 man/man3/EVP_DigestFinalXOF.3
 man/man3/EVP_DigestFinal_ex.3
@@ -1331,13 +1333,17 @@ man/man3/EVP_MD_CTX_free.3
 man/man3/EVP_MD_CTX_md.3
 man/man3/EVP_MD_CTX_md_data.3
 man/man3/EVP_MD_CTX_new.3
+man/man3/EVP_MD_CTX_pkey_ctx.3
 man/man3/EVP_MD_CTX_reset.3
 man/man3/EVP_MD_CTX_set_flags.3
 man/man3/EVP_MD_CTX_set_pkey_ctx.3
+man/man3/EVP_MD_CTX_set_update_fn.3
 man/man3/EVP_MD_CTX_size.3
 man/man3/EVP_MD_CTX_test_flags.3
 man/man3/EVP_MD_CTX_type.3
+man/man3/EVP_MD_CTX_update_fn.3
 man/man3/EVP_MD_block_size.3
+man/man3/EVP_MD_flags.3
 man/man3/EVP_MD_meth_dup.3
 man/man3/EVP_MD_meth_free.3
 man/man3/EVP_MD_meth_get_app_datasize.3
@@ -1424,6 +1430,8 @@ man/man3/EVP_PKEY_CTX_set_dh_paramgen_type.3
 man/man3/EVP_PKEY_CTX_set_dh_rfc5114.3
 man/man3/EVP_PKEY_CTX_set_dhx_rfc5114.3
 man/man3/EVP_PKEY_CTX_set_dsa_paramgen_bits.3
+man/man3/EVP_PKEY_CTX_set_dsa_paramgen_md.3
+man/man3/EVP_PKEY_CTX_set_dsa_paramgen_q_bits.3
 man/man3/EVP_PKEY_CTX_set_ec_param_enc.3
 man/man3/EVP_PKEY_CTX_set_ec_paramgen_curve_nid.3
 man/man3/EVP_PKEY_CTX_set_ecdh_cofactor_mode.3
@@ -1481,6 +1489,7 @@ man/man3/EVP_PKEY_assign_POLY1305.3
 man/man3/EVP_PKEY_assign_RSA.3
 man/man3/EVP_PKEY_assign_SIPHASH.3
 man/man3/EVP_PKEY_base_id.3
+man/man3/EVP_PKEY_bits.3
 man/man3/EVP_PKEY_check.3
 man/man3/EVP_PKEY_cmp.3
 man/man3/EVP_PKEY_cmp_parameters.3
@@ -1527,6 +1536,8 @@ man/man3/EVP_PKEY_meth_get_ctrl.3
 man/man3/EVP_PKEY_meth_get_decrypt.3
 man/man3/EVP_PKEY_meth_get_derive.3
 man/man3/EVP_PKEY_meth_get_digest_custom.3
+man/man3/EVP_PKEY_meth_get_digestsign.3
+man/man3/EVP_PKEY_meth_get_digestverify.3
 man/man3/EVP_PKEY_meth_get_encrypt.3
 man/man3/EVP_PKEY_meth_get_init.3
 man/man3/EVP_PKEY_meth_get_keygen.3
@@ -1547,6 +1558,8 @@ man/man3/EVP_PKEY_meth_set_ctrl.3
 man/man3/EVP_PKEY_meth_set_decrypt.3
 man/man3/EVP_PKEY_meth_set_derive.3
 man/man3/EVP_PKEY_meth_set_digest_custom.3
+man/man3/EVP_PKEY_meth_set_digestsign.3
+man/man3/EVP_PKEY_meth_set_digestverify.3
 man/man3/EVP_PKEY_meth_set_encrypt.3
 man/man3/EVP_PKEY_meth_set_init.3
 man/man3/EVP_PKEY_meth_set_keygen.3
@@ -2144,6 +2157,7 @@ man/man3/PEM_read_bio_PKCS7.3
 man/man3/PEM_read_bio_PKCS8.3
 man/man3/PEM_read_bio_PKCS8_PRIV_KEY_INFO.3
 man/man3/PEM_read_bio_PUBKEY.3
+man/man3/PEM_read_bio_Parameters.3
 man/man3/PEM_read_bio_PrivateKey.3
 man/man3/PEM_read_bio_RSAPrivateKey.3
 man/man3/PEM_read_bio_RSAPublicKey.3
@@ -2200,6 +2214,7 @@ man/man3/PEM_write_bio_PKCS8PrivateKey.3
 man/man3/PEM_write_bio_PKCS8PrivateKey_nid.3
 man/man3/PEM_write_bio_PKCS8_PRIV_KEY_INFO.3
 man/man3/PEM_write_bio_PUBKEY.3
+man/man3/PEM_write_bio_Parameters.3
 man/man3/PEM_write_bio_PrivateKey.3
 man/man3/PEM_write_bio_PrivateKey_traditional.3
 man/man3/PEM_write_bio_RSAPrivateKey.3
@@ -2366,6 +2381,7 @@ man/man3/RSA_get0_multi_prime_crt_params.3
 man/man3/RSA_get0_multi_prime_factors.3
 man/man3/RSA_get0_n.3
 man/man3/RSA_get0_p.3
+man/man3/RSA_get0_pss_params.3
 man/man3/RSA_get0_q.3
 man/man3/RSA_get_default_method.3
 man/man3/RSA_get_ex_data.3
@@ -2646,6 +2662,8 @@ man/man3/SSL_CTX_set_ciphersuites.3
 man/man3/SSL_CTX_set_client_CA_list.3
 man/man3/SSL_CTX_set_client_cert_cb.3
 man/man3/SSL_CTX_set_client_hello_cb.3
+man/man3/SSL_CTX_set_cookie_generate_cb.3
+man/man3/SSL_CTX_set_cookie_verify_cb.3
 man/man3/SSL_CTX_set_ct_validation_callback.3
 man/man3/SSL_CTX_set_ctlog_list_file.3
 man/man3/SSL_CTX_set_current_cert.3
@@ -2765,6 +2783,8 @@ man/man3/SSL_add1_chain_cert.3
 man/man3/SSL_add1_host.3
 man/man3/SSL_add1_to_CA_list.3
 man/man3/SSL_add_client_CA.3
+man/man3/SSL_add_dir_cert_subjects_to_stack.3
+man/man3/SSL_add_file_cert_subjects_to_stack.3
 man/man3/SSL_alert_desc_string.3
 man/man3/SSL_alert_desc_string_long.3
 man/man3/SSL_alert_type_string.3
@@ -3223,8 +3243,18 @@ man/man3/X509_EXTENSION_new.3
 man/man3/X509_EXTENSION_set_critical.3
 man/man3/X509_EXTENSION_set_data.3
 man/man3/X509_EXTENSION_set_object.3
+man/man3/X509_LOOKUP.3
+man/man3/X509_LOOKUP_METHOD.3
+man/man3/X509_LOOKUP_TYPE.3
+man/man3/X509_LOOKUP_add_dir.3
+man/man3/X509_LOOKUP_by_alias.3
+man/man3/X509_LOOKUP_by_fingerprint.3
+man/man3/X509_LOOKUP_by_issuer_serial.3
+man/man3/X509_LOOKUP_by_subject.3
+man/man3/X509_LOOKUP_ctrl.3
 man/man3/X509_LOOKUP_ctrl_fn.3
 man/man3/X509_LOOKUP_file.3
+man/man3/X509_LOOKUP_free.3
 man/man3/X509_LOOKUP_get_by_alias_fn.3
 man/man3/X509_LOOKUP_get_by_fingerprint_fn.3
 man/man3/X509_LOOKUP_get_by_issuer_serial_fn.3
@@ -3232,6 +3262,8 @@ man/man3/X509_LOOKUP_get_by_subject_fn.3
 man/man3/X509_LOOKUP_get_method_data.3
 man/man3/X509_LOOKUP_get_store.3
 man/man3/X509_LOOKUP_hash_dir.3
+man/man3/X509_LOOKUP_init.3
+man/man3/X509_LOOKUP_load_file.3
 man/man3/X509_LOOKUP_meth_free.3
 man/man3/X509_LOOKUP_meth_get_ctrl.3
 man/man3/X509_LOOKUP_meth_get_free.3
@@ -3252,7 +3284,9 @@ man/man3/X509_LOOKUP_meth_set_get_by_subject.3
 man/man3/X509_LOOKUP_meth_set_init.3
 man/man3/X509_LOOKUP_meth_set_new_item.3
 man/man3/X509_LOOKUP_meth_set_shutdown.3
+man/man3/X509_LOOKUP_new.3
 man/man3/X509_LOOKUP_set_method_data.3
+man/man3/X509_LOOKUP_shutdown.3
 man/man3/X509_NAME_ENTRY_create_by_NID.3
 man/man3/X509_NAME_ENTRY_create_by_OBJ.3
 man/man3/X509_NAME_ENTRY_create_by_txt.3
@@ -3336,6 +3370,7 @@ man/man3/X509_SIG_free.3
 man/man3/X509_SIG_get0.3
 man/man3/X509_SIG_getm.3
 man/man3/X509_SIG_new.3
+man/man3/X509_STORE.3
 man/man3/X509_STORE_CTX_cert_crl_fn.3
 man/man3/X509_STORE_CTX_check_crl_fn.3
 man/man3/X509_STORE_CTX_check_issued_fn.3
@@ -3390,6 +3425,7 @@ man/man3/X509_STORE_CTX_verify_cb.3
 man/man3/X509_STORE_CTX_verify_fn.3
 man/man3/X509_STORE_add_cert.3
 man/man3/X509_STORE_add_crl.3
+man/man3/X509_STORE_add_lookup.3
 man/man3/X509_STORE_free.3
 man/man3/X509_STORE_get0_objects.3
 man/man3/X509_STORE_get0_param.3
@@ -3990,6 +4026,7 @@ man/man7/evp.7
 man/man7/ossl_store-file.7
 man/man7/ossl_store.7
 man/man7/passphrase-encoding.7
+man/man7/proxy-certificates.7
 man/man7/scrypt.7
 man/man7/ssl.7
 man/man7/x509.7
