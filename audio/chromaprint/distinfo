@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.15 2018/01/28 15:43:03 wiz Exp $
+$NetBSD: distinfo,v 1.16 2020/03/22 07:34:03 nia Exp $
 
 SHA1 (chromaprint-1.4.3.tar.gz) = b87ac1a5597cc28d930ed1de6c6f6892d80c2eaa
 RMD160 (chromaprint-1.4.3.tar.gz) = 49945e81e161b4ca300766b42732c30fda0f5a11
 SHA512 (chromaprint-1.4.3.tar.gz) = aab00ca3d42047f20f48b24efdc50ef06fac799c69b3007a0e9c4e8217133a3626c51e49b4c842a59fc0e606169f2542c91997b0e838c62e9492a7ff5968363b
 Size (chromaprint-1.4.3.tar.gz) = 613718 bytes
-SHA1 (patch-cmake_modules_FindFFmpeg.cmake) = 193eac515ea1152762d911cf5cb2fac32ec62b4b
