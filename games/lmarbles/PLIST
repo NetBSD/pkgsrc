@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/03/22 09:21:24 nia Exp $
 bin/lmarbles
 man/man6/lmarbles.6
+share/applications/lmarbles.desktop
 share/doc/lmarbles/arrow.jpg
 share/doc/lmarbles/arrow2.jpg
 share/doc/lmarbles/crumble.jpg
@@ -8,6 +9,7 @@ share/doc/lmarbles/manual.html
 share/doc/lmarbles/marbles.jpg
 share/doc/lmarbles/teleport.jpg
 share/examples/lmarbles/lmarbles.prfs
+share/icons/lmarbles48.gif
 share/lmarbles/gfx/board.bmp
 share/lmarbles/gfx/f_red.bmp
 share/lmarbles/gfx/f_small.bmp
