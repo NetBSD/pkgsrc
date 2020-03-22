@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:56:58 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/03/22 09:26:34 nia Exp $
 
-SHA1 (lpairs-1.0.4.tar.gz) = 4e7c8d9b55ccb8c740d8125c116347cf7bb36fb4
-RMD160 (lpairs-1.0.4.tar.gz) = ca4a23bc536dba7da625eb3485258381de003c5d
-SHA512 (lpairs-1.0.4.tar.gz) = 637f9782c1c1faee3fe0d02adeeb7ea70704f1b625922e1ba086cd03e9a6cf1d61a082eff4753a2ec8be5fc7041bd029f193adf847a39e773e4eedd9eafb2b97
-Size (lpairs-1.0.4.tar.gz) = 536625 bytes
+SHA1 (lpairs-1.0.5.tar.gz) = a89c1d7e8fe9d2ad5a6b0a2fd6399333dfd76f80
+RMD160 (lpairs-1.0.5.tar.gz) = 119130b9b277efa39a2ca7c3e24d47a14e5d1eb1
+SHA512 (lpairs-1.0.5.tar.gz) = 381c47969446b778c694f484647ab6a6bd41eb996e741a01a63f1b854c30f78c7e9f1043546a3b8649ec6db940cac3b7ae5ba3c23e6c9df2716a93e6f6d37324
+Size (lpairs-1.0.5.tar.gz) = 557997 bytes
 SHA1 (patch-aa) = 59a134c074cf9b0ff2aeef297fc88e06ed6a977a
-SHA1 (patch-lpairs_sdl.c) = 119452952684dd51af5c92f0becdf9344f715da4
-SHA1 (patch-lpairs_sdl.h) = c376de1f420f5a930a2c78a2947b17949d763769
