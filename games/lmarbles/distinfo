@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:56:58 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/03/22 09:21:24 nia Exp $
 
-SHA1 (lmarbles-1.0.7.tar.gz) = 25b0a635f53a3ab351247ac2820cbd6951d7050d
-RMD160 (lmarbles-1.0.7.tar.gz) = 5fc90ff923848496b1fbce63473a22fcc716c345
-SHA512 (lmarbles-1.0.7.tar.gz) = cf99e9f6a20d6b3e752235547c91c90f68ae2e12e2abf814a45ac0c365b441dee79af3373e1121f17acb69dc426bb0e7e69fc52cfd6e513c62c74bbf613a55c1
-Size (lmarbles-1.0.7.tar.gz) = 829635 bytes
+SHA1 (lmarbles-1.0.8.tar.gz) = 58db2447276bdf480e03964d729513f022f7790b
+RMD160 (lmarbles-1.0.8.tar.gz) = cc77687efa88cecb2aabf2385eb6cb6a6dd71a9c
+SHA512 (lmarbles-1.0.8.tar.gz) = d765b669a1b0039a0af8b28ede8209e9736c2f967b21d9f8372d1fc5475d49a766bef297615bff090532ade41fe44e084a458227b443566a54afebc3e989b57a
+Size (lmarbles-1.0.8.tar.gz) = 914238 bytes
 SHA1 (patch-aa) = b453e75a29848a470275d06bc97e9fe09a12e1b8
 SHA1 (patch-ab) = dfbb9afc0860f9ea1154de35c46f4e8ad8eef840
 SHA1 (patch-ac) = 9f82e82c946f7ded444fd7bf054838e1203a427e
