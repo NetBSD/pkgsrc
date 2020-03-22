@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1 2017/08/23 13:46:12 he Exp $
+$NetBSD: distinfo,v 1.2 2020/03/22 13:15:13 tnn Exp $
 
 SHA1 (Crypt-Curve25519-0.06.tar.gz) = 5c3e217f6260f83c1a5cce33c2b63ae4954a85e1
 RMD160 (Crypt-Curve25519-0.06.tar.gz) = 5c4ec052c338d798d41d1e12e76ca1c482896cf6
 SHA512 (Crypt-Curve25519-0.06.tar.gz) = e5d351c36c9f60e1b55f45bf9fa871fddf949bd5c0a20b4d065e1eb2d4e24ba43807289591eda854fca28b5909fd6af1b0fc9ede63efbeeaf6e011e7382a4e1d
 Size (Crypt-Curve25519-0.06.tar.gz) = 27835 bytes
+SHA1 (patch-curve25519-donna-c64.c) = bc15215560043b3f88016677c8f5d85b483a0b64
+SHA1 (patch-curve25519-donna.c) = d6a7a9f03ff64f0f9fe0e0d5ee36d4974b1c021c
