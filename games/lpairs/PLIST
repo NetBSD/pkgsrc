@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/04/16 17:44:07 shattered Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/03/22 09:26:34 nia Exp $
 bin/lpairs
 share/games/lpairs/gfx/0.bmp
 share/games/lpairs/gfx/1.bmp
@@ -22,9 +22,10 @@ share/games/lpairs/gfx/8.bmp
 share/games/lpairs/gfx/9.bmp
 share/games/lpairs/gfx/back.bmp
 share/games/lpairs/gfx/button.bmp
+share/games/lpairs/gfx/f_small_white.bmp
+share/games/lpairs/gfx/f_standard.bmp
 share/games/lpairs/gfx/f_white.bmp
 share/games/lpairs/gfx/f_yellow.bmp
-share/games/lpairs/gfx/stan_font.bmp
 share/games/lpairs/gfx/title.bmp
 share/games/lpairs/sound/click.wav
 share/games/lpairs/sound/fail.wav
