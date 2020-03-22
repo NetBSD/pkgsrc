@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/08/11 13:25:06 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2020/03/22 21:21:05 rillig Exp $
 
 DISTNAME=	libapreq2-2.13
 PKGNAME=	p5-${APACHE_PKG_PREFIX}-${DISTNAME}
@@ -16,12 +16,6 @@ DEPENDS+=	p5-ExtUtils-XSBuilder>=0.23:../../devel/p5-ExtUtils-XSBuilder
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
 PERL5_PACKLIST=	auto/libapreq2/.packlist
-
-SUBST_CLASSES+=		apxs
-SUBST_STAGE.apxs=	pre-configure
-SUBST_FILES.apxs=	env/Makefile.in
-SUBST_SED.apxs=		-e "s|@APACHE2_APXS@ -i -a -n|@APACHE2_APXS@ -i -n|g"
-SUBST_MESSAGE.apxs=	Fixing module installation.
 
 .include "../../lang/perl5/module.mk"
 
