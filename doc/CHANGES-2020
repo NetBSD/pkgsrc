@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1782 2020/03/22 21:07:40 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1783 2020/03/22 21:09:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2439,3 +2439,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/libreoffice to 6.4.2.2 [ryoon 2020-03-22]
 	Updated devel/p5-List-AllUtils to 0.16 [nia 2020-03-22]
 	Updated mail/p5-MailTools to 2.21 [nia 2020-03-22]
+	Updated net/p5-Net-DNS to 1.23 [nia 2020-03-22]
