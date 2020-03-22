@@ -487,8 +487,8 @@ func (s *Suite) Test_Path_IsAbs(c *check.C) {
 	test(".", false)
 	test("a/b", false)
 	test("/a", true)
-	test("C:/", runtime.GOOS == "windows")
-	test("c:/", runtime.GOOS == "windows")
+	test("C:/", true)
+	test("c:/", true)
 }
 
 func (s *Suite) Test_Path_Rel(c *check.C) {
@@ -651,7 +651,7 @@ func (s *Suite) Test_CurrPath_IsAbs(c *check.C) {
 
 	test("/", true)
 	test("./", false)
-	test("C:/", runtime.GOOS == "windows")
+	test("C:/", true)
 }
 
 func (s *Suite) Test_CurrPath_HasPrefixPath(c *check.C) {
