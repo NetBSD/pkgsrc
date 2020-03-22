@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/08/11 13:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2020/03/22 20:38:01 rillig Exp $
 
 DISTNAME=		Mail-DKIM-0.55
 PKGNAME=		p5-${DISTNAME}
@@ -27,7 +27,7 @@ REPLACE_PERL+=		lib/Mail/DKIM.pm
 REPLACE_PERL+=		lib/Mail/DKIM/*.pm
 REPLACE_PERL+=		lib/Mail/DKIM/Algorithm/*.pm
 REPLACE_PERL+=		lib/Mail/DKIM/Canonicalization/*.pm
-REPLACE_PERL+=		sample_mime_lite.pl
+REPLACE_PERL+=		scripts/sample_mime_lite.pl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
