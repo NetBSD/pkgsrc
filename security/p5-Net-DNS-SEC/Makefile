@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2020/01/26 17:32:05 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2020/03/22 20:48:34 rillig Exp $
 
 DISTNAME=		Net-DNS-SEC-1.12
 PKGNAME=		p5-${DISTNAME}
@@ -26,11 +26,6 @@ DOCSUBDIR=		share/doc/${PKGBASE}
 EGSUBDIR=		share/examples/${PKGBASE}
 
 INSTALLATION_DIRS+=	${DOCSUBDIR} ${EGSUBDIR}
-
-SUBST_CLASSES+=		p5nds
-SUBST_STAGE.p5nds=	post-install
-SUBST_FILES.p5nds=	demo/getkeyset
-SUBST_SED.p5nds=	-e "1s,-I./blib/lib,,"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README  ${DESTDIR}${PREFIX}/${DOCSUBDIR}
