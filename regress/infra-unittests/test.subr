@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.6 2020/03/21 18:43:02 rillig Exp $
+# $NetBSD: test.subr,v 1.7 2020/03/22 12:15:59 rillig Exp $
 set -eu
 
 # This file defines utilities for testing Makefile fragments in a mocked
@@ -206,6 +206,17 @@ assert_fail() {
 	assert_failed=`expr "$assert_failed" + 1`
 }
 
+tmpdir_equal() {
+	(cd "$tmpdir" && diff -u -- "$@" >/dev/null) || return 1
+}
+
+tmpdir_diff() {
+	# removes the timestamps from the diff files since these are not
+	# useful in tests.
+	(cd "$tmpdir" && diff -u -- "$@" || true) \
+	| awk '/^(---|[+][+][+]) / { print($1, $2); next } { print }' 1>&2
+}
+
 assert_that() {
 	case "$2" in
 	(--equals)
@@ -218,44 +229,43 @@ assert_that() {
 
 	(--file-contains-exactly)
 		printf '%s\n' "$3" > "$tmpdir/expected"
-		if diff -u "$tmpdir/expected" "$tmpdir/$1" > /dev/null; then
+		if tmpdir_equal "expected" "$1"; then
 			assert_succeed
 			return 0
 		fi
 		assert_fail 'file "%s" has unexpected content:\n' "$1"
-		diff -u "$tmpdir/expected" "$tmpdir/$1" 1>&2 || true
+		tmpdir_diff "expected" "$1"
 		;;
 
 	(--file-equals)
-		if diff -u "$tmpdir/$3" "$tmpdir/$1" > /dev/null; then
+		if tmpdir_equal "$3" "$1"; then
 			assert_succeed
 			return 0
 		fi
 		assert_fail 'files "%s" and "%s" differ:\n' "$1" "$3"
-		diff -u "$tmpdir/$3" "$tmpdir/$1" 1>&2 || true
+		tmpdir_diff "$3" "$1"
 		;;
 
 	(--file-is-empty)
-		if diff -u "/dev/null" "$tmpdir/$1" > /dev/null; then
+		if tmpdir_equal "/dev/null" "$1"; then
 			assert_succeed
 			return 0
 		fi
 		assert_fail 'file "%s" is not empty:\n' "$1"
-		diff -u "/dev/null" "$tmpdir/$1" 1>&2 || true
+		tmpdir_diff "/dev/null" "$1"
 		;;
 
 	(--file-is-lines)
-		_assert_that_tmp_actual="$tmpdir/$1"
-		_assert_that_tmp_expected="$tmpdir/expected"
+		_assert_that_tmp_actual="$1"
 		_assert_that_filename="$1"; shift 2
 
-		printf '%s\n' "$@" > "$_assert_that_tmp_expected"
-		if diff -u "$_assert_that_tmp_expected" "$_assert_that_tmp_actual" > /dev/null; then
+		printf '%s\n' "$@" > "$tmpdir/expected"
+		if tmpdir_equal "expected" "$_assert_that_tmp_actual"; then
 			assert_succeed
 			return 0
 		fi
 		assert_fail 'file "%s" has unexpected content:\n' "$_assert_that_filename"
-		diff -u "$_assert_that_tmp_expected" "$_assert_that_tmp_actual" 1>&2 || true
+		tmpdir_diff "expected" "$_assert_that_tmp_actual"
 		;;
 
 	(*)
