@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2020/03/17 18:33:08 adam Exp $
+# $NetBSD: Makefile.common,v 1.24 2020/03/22 20:23:52 rillig Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
@@ -115,6 +115,7 @@ SUBST_SED.scr=		-e "s,chown,${CHOWN},g"
 SUBST_SED.scr+=		-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
 SUBST_SED.scr+=		-e "s,@SHELL_PATH@,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scr=	Fixing scripts.
+SUBST_NOOP_OK.scr=	yes # since RCD_SCRIPTS_SHELL may be /bin/sh
 
 # Don't use the base system "libedit" under NetBSD because MySQL expects
 # an incompatible prototype for "rl_completion_entry_function".
