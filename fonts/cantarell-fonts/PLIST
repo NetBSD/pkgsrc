@@ -1,3 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2014/06/01 16:35:32 wiz Exp $
-share/fonts/X11/TTF/Cantarell-Bold.otf
-share/fonts/X11/TTF/Cantarell-Regular.otf
+@comment $NetBSD: PLIST,v 1.3 2020/03/22 09:47:25 nia Exp $
+share/fonts/X11/OTF/Cantarell-Bold.otf
+share/fonts/X11/OTF/Cantarell-ExtraBold.otf
+share/fonts/X11/OTF/Cantarell-Light.otf
+share/fonts/X11/OTF/Cantarell-Regular.otf
+share/fonts/X11/OTF/Cantarell-Thin.otf
+share/fonts/X11/OTF/Cantarell-VF.otf
+@pkgdir share/fonts/X11/TTF
