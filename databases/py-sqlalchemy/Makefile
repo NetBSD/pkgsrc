@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2020/02/04 16:57:20 adam Exp $
+# $NetBSD: Makefile,v 1.60 2020/03/22 22:45:24 rillig Exp $
 
 DISTNAME=	SQLAlchemy-1.3.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,8 +13,6 @@ LICENSE=	mit
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.5.2:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
-
-REPLACE_PYTHON=	lib/sqlalchemy/testing/runner.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
