@@ -838,3 +838,88 @@ if test_case_begin "SUBST_VARS for variables with regex characters"; then
 
 	test_case_end
 fi
+
+if test_case_begin "pattern matches directory"; then
+
+	# When a pattern matches a directory, that directory is silently
+	# skipped.
+	#
+	# In this test case, the pattern also matches a regular file that
+	# is actually modified. Therefore the pattern has an effect, and
+	# there is no error message.
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	dir' \
+		'SUBST_STAGE.dir=	pre-configure' \
+		'SUBST_FILES.dir=	sub*' \
+		'SUBST_VARS.dir=	VAR' \
+		'SUBST_NOOP_OK.dir=	no' \
+		'' \
+		'VAR=			value' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	mkdir "$tmpdir/subdir"
+	create_file_lines "subdir/subfile" \
+		"@VAR@"
+	create_file_lines "subst-file" \
+		"@VAR@"
+
+	test_file "testcase.mk" "pre-configure" \
+		1> "$tmpdir/stdout" \
+		2> "$tmpdir/stderr" \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "subst-file" --file-is-lines "value"
+	assert_that "subdir/subfile" --file-is-lines "@VAR@" # unchanged
+	assert_that "stdout" --file-is-lines \
+		"=> Substituting \"dir\" in sub*"
+	assert_that "stderr" --file-is-empty
+	assert_that "$exitcode" --equals 0
+
+	test_case_end
+fi
+
+
+if test_case_begin "pattern matches only directory"; then
+
+	# When a pattern matches a directory, that directory is silently
+	# skipped.
+	#
+	# In this test case, the pattern also matches a regular file that
+	# is actually modified. Therefore the pattern has an effect, and
+	# there is no error message.
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	dir' \
+		'SUBST_STAGE.dir=	pre-configure' \
+		'SUBST_FILES.dir=	sub*' \
+		'SUBST_VARS.dir=	VAR' \
+		'SUBST_NOOP_OK.dir=	no' \
+		'' \
+		'VAR=			value' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	mkdir "$tmpdir/subdir"
+	create_file_lines "subdir/subfile" \
+		"@VAR@"
+
+	test_file "testcase.mk" "pre-configure" \
+		1> "$tmpdir/stdout" \
+		2> "$tmpdir/stderr" \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "subdir/subfile" --file-is-lines "@VAR@" # unchanged
+	assert_that "stdout" --file-is-lines \
+		"=> Substituting \"dir\" in sub*" \
+		"fail: [subst.mk:dir] The pattern sub* has no effect." \
+		"*** Error code 1" \
+		"" \
+		"Stop." \
+		"$make: stopped in $PWD"
+	assert_that "stderr" --file-is-empty
+	assert_that "$exitcode" --equals 1
+
+	test_case_end
+fi
