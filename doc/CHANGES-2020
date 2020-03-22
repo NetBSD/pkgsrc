@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1751 2020/03/22 09:48:13 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1752 2020/03/22 09:51:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2407,3 +2407,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dnscrypt-proxy2 to 2.0.40 [nia 2020-03-22]
 	Updated time/ruby-iso8601 to 0.12.1 [taca 2020-03-22]
 	Updated fonts/cantarell-fonts to 0.201 [nia 2020-03-22]
+	Updated fonts/culmus to 0.133 [nia 2020-03-22]
