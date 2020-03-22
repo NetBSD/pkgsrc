@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.117 2020/03/06 11:16:28 nia Exp $
+# $NetBSD: Makefile,v 1.118 2020/03/22 21:25:05 tnn Exp $
 #
 
 COMMENT=	Communication utilities
 
 SUBDIR+=	asterisk-sounds-de-x9media
-SUBDIR+=	asterisk-sounds-native
 SUBDIR+=	asterisk13
 SUBDIR+=	asterisk14
 SUBDIR+=	asterisk15
