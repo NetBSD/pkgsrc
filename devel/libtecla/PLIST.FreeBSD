@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1 2015/03/01 18:29:05 sevan Exp $
-lib/libtecla.so
-lib/libtecla.so.1
