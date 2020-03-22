@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2020/03/13 13:21:39 tnn Exp $
+$NetBSD: distinfo,v 1.2 2020/03/22 12:42:41 tnn Exp $
 
 SHA1 (libiscsi-1.19.0.tar.gz) = 0c1aca9a473a915e6d221de4593b404f7078b22f
 RMD160 (libiscsi-1.19.0.tar.gz) = 2512d310dc23adb6e6edf46f29598e053ebd0e24
 SHA512 (libiscsi-1.19.0.tar.gz) = 2c0e70b7ecf66204524e57edf557a014b5141a8819e5d663b6e50cb2e756fd634ae1db0b1ca6915444d80a9babd54a82619bdd98726d16d4eeaf7b3c89cf3d53
 Size (libiscsi-1.19.0.tar.gz) = 284969 bytes
+SHA1 (patch-configure.ac) = 44b797fae92942ba6886b7ed5d158fd920aab9a5
