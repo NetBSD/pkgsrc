@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2020/03/20 11:57:43 nia Exp $
+# $NetBSD: Makefile,v 1.18 2020/03/22 09:21:24 nia Exp $
 
-DISTNAME=	lmarbles-1.0.7
-PKGREVISION=	8
+DISTNAME=	lmarbles-1.0.8
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lgames/}
 
