@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/11/03 19:26:22 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2020/03/22 13:04:11 tnn Exp $
 #
 
 DISTNAME=	perfuse-20190222
@@ -14,11 +14,13 @@ WRKSRC=			${WRKDIR}/src/
 BUILD_DIRS=		lib/libperfuse usr.sbin/perfused
 BUILDLINK_TRANSFORM=	rm:-Werror
 CPPFLAGS+=		-DPERFUSE_DEBUG -D_PATH_PERFUSED=\"${PREFIX}/sbin/perfused\"
-CPPFLAGS.NetBSD+=	-D_KERNTYPES
-
-CFLAGS+=	-g
+CPPFLAGS+=		-D_KERNTYPES
+CFLAGS+=		-g # ???
 
 INSTALLATION_DIRS=	include lib sbin
+
+# Uses <puffs.h>
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 pre-build:
 	${LN} -s ${WRKSRC}/lib/libperfuse/perfuse.h ${BUILDLINK_DIR}/include/
