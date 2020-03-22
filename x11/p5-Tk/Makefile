@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2019/08/11 13:25:14 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2020/03/22 21:08:45 rillig Exp $
 
 DISTNAME=	Tk-804.034
 PKGNAME=	p5-${DISTNAME}
@@ -24,11 +24,6 @@ REPLACE_PERL+=		TextList/reindex.pl
 REPLACE_PERL+=		pTk/Tcl-pTk
 REPLACE_PERL+=		pTk/mkVFunc
 REPLACE_PERL+=		demos/widget
-
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	pre-configure
-SUBST_FILES.prefix=	PNG/Makefile.PL
-SUBST_SED.prefix=	-e 's,%%LOCALBASE%%,${LOCALBASE},g'
 
 pre-configure:
 	${FIND} ${WRKSRC} -name "*.orig" -type f | ${XARGS} ${RM} -f
