@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2019/10/01 12:43:04 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/03/22 09:27:12 nia Exp $
 
-SHA1 (qmmp-1.3.4.tar.bz2) = 791860fc8a318cad9af307ca95ccb795686612b5
-RMD160 (qmmp-1.3.4.tar.bz2) = 6feca04c6d7547baaf4386ed73ceea5bd1b67f67
-SHA512 (qmmp-1.3.4.tar.bz2) = 520a7b50a3e0bd17418bd3137a4e73a52f644ad38d7fe86647a8781ed3036cdbbd14d5311b9471443f8a2cb42422b5fa11e22acee72ff5b670a7508b55364bb5
-Size (qmmp-1.3.4.tar.bz2) = 1246048 bytes
+SHA1 (qmmp-1.3.6.tar.bz2) = 0c5175aff1e50ce3c66363fbfa1f53284894f508
+RMD160 (qmmp-1.3.6.tar.bz2) = 020fcc9d8544393bb2336b3ab846e86c023b4b27
+SHA512 (qmmp-1.3.6.tar.bz2) = 83600b3116a62200d6751b4c6a526cd0af842b943d8d2979e16803ad788ee826a52a25ac0736f337a8fa739affcba361e6cfd1947c5135aef963d128dcb7e3b9
+Size (qmmp-1.3.6.tar.bz2) = 1250131 bytes
 SHA1 (patch-src_plugins_Ui_skinned_symboldisplay.cpp) = d172068a4215c6dafb5b5c921bfabe71060be16f
