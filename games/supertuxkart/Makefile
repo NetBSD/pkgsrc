@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2020/03/08 16:49:48 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2020/03/22 11:24:01 nia Exp $
 
-VERSION=	1.0
-DISTNAME=	supertuxkart-${VERSION}-src
+DISTNAME=	supertuxkart-1.1-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=supertuxkart/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +11,6 @@ HOMEPAGE=	https://supertuxkart.net/Main_Page
 COMMENT=	Free 3D kart racing game
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/supertuxkart-${VERSION}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake pkg-config
@@ -35,6 +32,7 @@ CXXFLAGS+=	-march=i586
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
