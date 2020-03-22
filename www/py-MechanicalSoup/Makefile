@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/02/29 19:43:52 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/22 12:28:28 rillig Exp $
 
 DISTNAME=	MechanicalSoup-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpbin-[0-9]*:../../www/py-test-httpbin
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYPKGPREFIX} == py27
+TEST_DEPENDS=	# none; py-test-httpbin is incompatible with py27
+do-test:
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
