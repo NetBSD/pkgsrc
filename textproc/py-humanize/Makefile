@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/03/21 11:23:57 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/22 17:56:22 tnn Exp $
 
 DISTNAME=	humanize-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	mit
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 
