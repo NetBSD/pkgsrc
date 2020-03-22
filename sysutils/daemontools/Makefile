@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/01/21 21:52:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.42 2020/03/22 10:36:39 rillig Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		3
@@ -17,6 +17,7 @@ SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 CONFLICTS+=		daemontools-encore-[0-9]*
 
 DJB_RESTRICTED=		no
+DJB_ERRNO_HACK=		no
 
 WRKSRC=			${WRKDIR}/admin/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
