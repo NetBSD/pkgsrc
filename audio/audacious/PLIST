@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/07/06 13:17:00 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/03/22 08:39:48 nia Exp $
 bin/audacious
 ${PLIST.dbus}bin/audtool
 include/audacious/audtag.h
@@ -24,29 +24,25 @@ include/libaudcore/probe.h
 include/libaudcore/ringbuf.h
 include/libaudcore/runtime.h
 include/libaudcore/templates.h
+include/libaudcore/threads.h
 include/libaudcore/tinylock.h
 include/libaudcore/tuple.h
 include/libaudcore/vfs.h
 include/libaudcore/vfs_async.h
 include/libaudcore/visualizer.h
-${PLIST.gtk}include/libaudgui/libaudgui-gtk.h
-${PLIST.gtk}include/libaudgui/libaudgui.h
-${PLIST.gtk}include/libaudgui/list.h
-${PLIST.gtk}include/libaudgui/menu.h
-${PLIST.qt}include/libaudqt/export.h
-${PLIST.qt}include/libaudqt/iface.h
-${PLIST.qt}include/libaudqt/info-widget.h
-${PLIST.qt}include/libaudqt/libaudqt.h
-${PLIST.qt}include/libaudqt/menu.h
+include/libaudqt/colorbutton.h
+include/libaudqt/export.h
+include/libaudqt/iface.h
+include/libaudqt/info-widget.h
+include/libaudqt/libaudqt.h
+include/libaudqt/menu.h
+include/libaudqt/treeview.h
 lib/libaudcore.so
 lib/libaudcore.so.5
-lib/libaudcore.so.5.1.0
-${PLIST.gtk}lib/libaudgui.so
-${PLIST.gtk}lib/libaudgui.so.5
-${PLIST.gtk}lib/libaudgui.so.5.0.0
-${PLIST.qt}lib/libaudqt.so
-${PLIST.qt}lib/libaudqt.so.2
-${PLIST.qt}lib/libaudqt.so.2.1.0
+lib/libaudcore.so.5.2.0
+lib/libaudqt.so
+lib/libaudqt.so.2
+lib/libaudqt.so.2.2.0
 lib/libaudtag.so
 lib/libaudtag.so.3
 lib/libaudtag.so.3.0.0
