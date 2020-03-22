@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2018/07/04 13:40:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.54 2020/03/22 18:28:15 rillig Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	mail
 MASTER_SITES=	http://ftp.funet.fi/pub/unix/mail/metamail/
 MASTER_SITES+=	ftp://ftp.research.telcordia.com/pub/nsb/
@@ -11,9 +11,9 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Implementation of MIME, the Multipurpose Internet Mail Extensions
 
-CONFLICTS+=	mm-2.7
+CONFLICTS+=	mm-2.7{,nb*}
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 CFLAGS.Linux+=	-DLINUX
 CFLAGS.SunOS+=	-DSYSV
@@ -23,21 +23,17 @@ EGDIR=		${PREFIX}/share/examples/metamail
 CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
 USE_TOOLS+=	bdftopcf csh:run
 
-REPLACE_CSH=	bin/audiocompose bin/audiosend bin/extcompose
-REPLACE_CSH+=	bin/getfilename bin/mailserver bin/mailto-hebrew
-REPLACE_CSH+=	bin/metasend bin/patch-metamail bin/showaudio
-REPLACE_CSH+=	bin/showexternal bin/shownonascii bin/showpartial
-REPLACE_CSH+=	bin/showpicture bin/sun-audio-file bin/sun-message.csh
-REPLACE_CSH+=	bin/sun-to-mime
-REPLACE_CSH+=	fonts/Xmailto-hebrew fonts/Xshownonascii
+REPLACE_CSH=	bin/* fonts/*
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man4 ${EGDIR}
 
-SUBST_CLASSES+=		awk sys
+SUBST_CLASSES+=		awk
 SUBST_STAGE.awk=	pre-configure
 SUBST_MESSAGE.awk=	Adjusting the path to awk
 SUBST_FILES.awk=	bin/sun2mime
 SUBST_SED.awk=		-e "s|/bin/nawk|${AWK}|"
+
+SUBST_CLASSES+=		sys
 SUBST_STAGE.sys=	pre-configure
 SUBST_MESSAGE.sys=	Adjusting the path for PKG_SYSCONFDIR.
 SUBST_FILES.sys=	config.h
