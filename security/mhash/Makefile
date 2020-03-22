@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/03/20 11:58:17 nia Exp $
+# $NetBSD: Makefile,v 1.36 2020/03/22 18:38:27 rillig Exp $
 
 DISTNAME=	mhash-0.9.9
 PKGREVISION=	10
@@ -25,7 +25,7 @@ POLLUTING_SYMS=		MD4Final MD4Init MD4Transform MD4Update \
 SUBST_CLASSES+=		ns
 SUBST_STAGE.ns=		pre-configure
 SUBST_MESSAGE.ns=	Prefixing symbols to avoid libc namespace pollution
-SUBST_FILES.ns=		lib/*.c lib/*.h src/*.c src/*.h
+SUBST_FILES.ns=		lib/*.c lib/*.h
 .for sym in ${POLLUTING_SYMS}
 SUBST_SED.ns+=		-e 's,\(${sym}\),mhash_\1,g'
 .endfor
