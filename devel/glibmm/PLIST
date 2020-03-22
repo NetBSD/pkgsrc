@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2019/11/14 11:49:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2020/03/22 18:01:26 wiz Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/action.h
 include/giomm-2.4/giomm/actiongroup.h
@@ -1094,6 +1094,8 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1Source__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1SpawnError-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1SpawnError.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1SpawnError__inherit__graph.png
+share/doc/glibmm-2.4/reference/html/classGlib_1_1StdStringView-members.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1StdStringView.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1StreamIOChannel-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1StreamIOChannel.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1StreamIOChannel__inherit__graph.png
@@ -1136,6 +1138,8 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1TimeoutSource.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1TimeoutSource__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Timer-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Timer.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1UStringView-members.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1UStringView.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Value.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1ValueArray-members.html
@@ -1486,6 +1490,8 @@ share/doc/glibmm-2.4/reference/html/inherit_graph_111.png
 share/doc/glibmm-2.4/reference/html/inherit_graph_112.png
 share/doc/glibmm-2.4/reference/html/inherit_graph_113.png
 share/doc/glibmm-2.4/reference/html/inherit_graph_114.png
+share/doc/glibmm-2.4/reference/html/inherit_graph_115.png
+share/doc/glibmm-2.4/reference/html/inherit_graph_116.png
 share/doc/glibmm-2.4/reference/html/inherit_graph_12.png
 share/doc/glibmm-2.4/reference/html/inherit_graph_13.png
 share/doc/glibmm-2.4/reference/html/inherit_graph_14.png
@@ -1691,6 +1697,7 @@ share/doc/glibmm-2.4/reference/html/since_2_56.html
 share/doc/glibmm-2.4/reference/html/since_2_6.html
 share/doc/glibmm-2.4/reference/html/since_2_60.html
 share/doc/glibmm-2.4/reference/html/since_2_62.html
+share/doc/glibmm-2.4/reference/html/since_2_64.html
 share/doc/glibmm-2.4/reference/html/since_2_8.html
 share/doc/glibmm-2.4/reference/html/splitbar.png
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits-members.html
