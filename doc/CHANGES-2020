@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1774 2020/03/22 18:33:38 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1775 2020/03/22 18:36:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2431,3 +2431,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/openssl to 1.1.1e [wiz 2020-03-22]
 	Updated devel/protobuf to 3.11.4 [wiz 2020-03-22]
 	Updated graphics/qr-code-generator to 1.6.0 [wiz 2020-03-22]
+	Updated devel/py-gobject3 to 3.36.0 [wiz 2020-03-22]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19756 2020/03/22 18:33:38 wiz Exp $
+$NetBSD: TODO,v 1.19757 2020/03/22 18:36:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1000,7 +1000,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ephem3-3.7.6.0
 	o py-gds-1.4.2
 	o py-gnome-menus-3.8.0
-	o py-gobject3-3.36.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
