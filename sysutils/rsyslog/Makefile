@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/03/08 16:51:22 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/03/22 23:39:13 rillig Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
@@ -47,10 +47,11 @@ OWN_DIRS+=		${RSYSLOG_PIDDIR} ${RSYSLOG_WRKDIR}
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	platform/redhat/rsyslog.conf tools/rsyslog.conf.5
-SUBST_FILES.paths+=	tools/rsyslogd.8 tools/rsyslogd.c tools/syslogd.c
+SUBST_FILES.paths+=	tools/rsyslogd.8 tools/rsyslogd.c
 SUBST_VARS.paths=	RSYSLOG_PIDDIR RSYSLOG_SYSMOD
 SUBST_SED.paths=	-e "s|/etc|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.paths=	Setting default paths and options.
+# FIXME: This also replaces /etc/timezone, which is probably unintended.
 
 SUBST_CLASSES.Darwin+=	ldargs
 SUBST_STAGE.ldargs=	pre-configure
