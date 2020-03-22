@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/01/26 17:30:56 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/22 22:32:11 tnn Exp $
 #
 
-DISTNAME=		libedit-20150325-3.1
-PKGNAME=		editline-3.1.20150325
+DISTNAME=		libedit-20191231-3.1
+PKGNAME=		editline-3.1.20191231
 CATEGORIES=		devel
 MASTER_SITES=		http://thrysoee.dk/editline/
 
