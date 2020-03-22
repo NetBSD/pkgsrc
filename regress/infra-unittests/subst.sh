@@ -222,7 +222,7 @@ EOF
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in single' \
-		'info: [subst.mk:class] Nothing changed in ./single.' \
+		'warning: [subst.mk:class] Nothing changed in ./single.' \
 		'fail: [subst.mk:class] The pattern single has no effect.' \
 		'*** Error code 1' \
 		'' \
@@ -287,7 +287,7 @@ EOF
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in nonexistent' \
-		'warning: [subst.mk:class] Ignoring non-existent file "./nonexistent".'
+		'info: [subst.mk:class] Ignoring non-existent file "./nonexistent".'
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "$exitcode" --equals "0"
 
@@ -315,7 +315,7 @@ EOF
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in *exist* *not-found*' \
-		'warning: [subst.mk:class] Ignoring non-existent file "./*not-found*".'
+		'info: [subst.mk:class] Ignoring non-existent file "./*not-found*".'
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "exists" --file-contains-exactly "this example exists"
 	assert_that "$exitcode" --equals "0"
@@ -340,9 +340,9 @@ EOF
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in does not exist' \
-		'warning: [subst.mk:class] Ignoring non-existent file "./does".' \
-		'warning: [subst.mk:class] Ignoring non-existent file "./not".' \
-		'warning: [subst.mk:class] Ignoring non-existent file "./exist".'
+		'info: [subst.mk:class] Ignoring non-existent file "./does".' \
+		'info: [subst.mk:class] Ignoring non-existent file "./not".' \
+		'info: [subst.mk:class] Ignoring non-existent file "./exist".'
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "$exitcode" --equals "0"
 
