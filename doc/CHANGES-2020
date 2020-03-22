@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1759 2020/03/22 11:11:45 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1760 2020/03/22 11:16:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2415,3 +2415,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/frotz to 2.51 [nia 2020-03-22]
 	Updated editors/kakoune to 2020.01.16 [nia 2020-03-22]
 	Updated audio/liblo to 0.31 [nia 2020-03-22]
+	Updated net/py-lexicon to 3.3.18 [adam 2020-03-22]
+	Updated www/py-pylint-django to 2.0.14 [adam 2020-03-22]
