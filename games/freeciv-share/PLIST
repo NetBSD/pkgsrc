@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/09/22 18:03:53 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/03/22 10:01:58 nia Exp $
 lib/libfreeciv.la
 man/man6/freeciv-client.6
 man/man6/freeciv-gtk2.6
@@ -40,6 +40,7 @@ share/doc/freeciv/README.effects
 share/doc/freeciv/README.fcdb
 share/doc/freeciv/README.governor
 share/doc/freeciv/README.graphics
+share/doc/freeciv/README.modpack_installer
 share/doc/freeciv/README.msys2
 share/doc/freeciv/README.nations
 share/doc/freeciv/README.packaging
