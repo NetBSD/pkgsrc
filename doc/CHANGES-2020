@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1836 2020/03/23 18:43:25 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1837 2020/03/23 18:45:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2494,3 +2494,19 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/erlang-goldrush to 0.2.0 [nia 2020-03-23]
 	Updated security/erlang-jose to 1.10.1 [nia 2020-03-23]
 	Updated textproc/expat to 2.2.9 [nia 2020-03-23]
+	Updated security/py-acme to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-apache to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-dns-digitalocean to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-dns-dnsimple to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-dns-gehirn to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-dns-google to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-dns-linode to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-dns-luadns to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-dns-nsone to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-dns-ovh to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-dns-rfc2136 to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-dns-route53 to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-dns-sakuracloud to 1.3.0 [adam 2020-03-23]
+	Updated security/py-certbot-nginx to 1.3.0 [adam 2020-03-23]
