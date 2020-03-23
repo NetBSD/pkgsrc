@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/23 19:45:36 nia Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/23 20:07:29 nia Exp $
 
 DISTNAME=	dhex_0.69
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -7,7 +7,7 @@ MASTER_SITES=	https://dettus.net/dhex/
 
 MAINTAINER=	amoibos@gmail.com
 HOMEPAGE=	https://www.dettus.net/dhex/
-COMMENT=	The curses-based hex-editor with diff mode
+COMMENT=	Curses-based hex-editor with diff mode
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c
