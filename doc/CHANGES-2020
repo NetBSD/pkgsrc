@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1822 2020/03/23 16:50:07 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1823 2020/03/23 16:56:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2479,3 +2479,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/ruby-highline17 [taca 2020-03-23]
 	Updated finance/ledger2beancount to 2.0nb1 [riastradh 2020-03-23]
 	Updated misc/ruby-launchy to 2.5.0 [taca 2020-03-23]
+	Updated misc/ruby-method_source to 1.0.0 [taca 2020-03-23]
