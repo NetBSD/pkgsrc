@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19759 2020/03/23 12:33:19 nia Exp $
+$NetBSD: TODO,v 1.19760 2020/03/23 15:31:16 taca Exp $
 
 Suggested new packages
 ======================
@@ -1096,7 +1096,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sqlrelay-1.4.0
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
-	o squidview-0.81
 	o sqwebmail-5.8.2
 	o srp_client-1.7.5
 	o ssh-askpass-1.2.4.1
