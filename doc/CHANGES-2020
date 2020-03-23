@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1805 2020/03/23 15:06:30 leot Exp $
+$NetBSD: CHANGES-2020,v 1.1806 2020/03/23 15:18:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2462,3 +2462,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/dasher to 5.0.0.b20200225 [nia 2020-03-23]
 	Updated security/pear-Crypt_GPG to 1.6.4 [taca 2020-03-23]
 	Updated www/tscrape to 0.4nb1 [leot 2020-03-23]
+	Updated www/squidview to 0.86 [taca 2020-03-23]
