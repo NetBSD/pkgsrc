@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1819 2020/03/23 16:37:47 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1820 2020/03/23 16:43:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2476,3 +2476,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/ruby-bundler to 2.1.4 [taca 2020-03-23]
 	Added net/terraform version 0.12.24 [riastradh 2020-03-23]
 	Updated misc/ruby-commander to 4.5.2 [taca 2020-03-23]
+	Removed devel/ruby-highline17 [taca 2020-03-23]
