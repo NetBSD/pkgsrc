@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2020/03/10 22:08:56 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2020/03/23 09:22:07 nia Exp $
 
 DISTNAME=		avahi-0.6.32
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES=		net
 MASTER_SITES=		https://github.com/lathiat/avahi/releases/download/v${PKGVERSION_NOREV}/
 
@@ -79,6 +79,7 @@ CONFIGURE_ARGS+=	--disable-xmltoman
 CONFIGURE_ARGS+=	--disable-autoipd
 CONFIGURE_ARGS+=	--disable-qt3
 CONFIGURE_ARGS+=	--disable-qt4
+CONFIGURE_ARGS+=	--disable-pygtk
 CONFIGURE_ARGS+=	--with-distro=none
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
