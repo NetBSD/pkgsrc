@@ -1,14 +1,10 @@
-$NetBSD: distinfo,v 1.6 2019/08/27 14:45:04 wiz Exp $
+$NetBSD: distinfo,v 1.7 2020/03/23 11:57:13 nia Exp $
 
-SHA1 (codelite-13.0.tar.gz) = 011e1ce86f6c9bd88278e3935d7f7cc6d90ef2ce
-RMD160 (codelite-13.0.tar.gz) = af6b08ebca99fa7ac56f50ea415aff71d950af0c
-SHA512 (codelite-13.0.tar.gz) = 53b1e8610268ad368d40f31a7355b88a57bb77c29616e02c2eb8a98310ce362f1430a1112761ac81e5c287e84e0703102d18c753328fa7c57b22c66bc4162010
-Size (codelite-13.0.tar.gz) = 63051086 bytes
-SHA1 (patch-CodeLite_CMakeLists.txt) = d0e30ce409746d166c3f050834116623f42e2b31
-SHA1 (patch-CodeLite_unixprocess__impl.cpp) = ba497d2dd383f38c0405df45661ce2a29f38cdc3
-SHA1 (patch-LiteEditor_CMakeLists.txt) = 1b55945779f62bc9e4d0a1ee4ab9ea6e5b44f199
-SHA1 (patch-Plugin_CMakeLists.txt) = 29c4859a6092e6d025220df45199c90a93b6c862
-SHA1 (patch-Plugin_wxterminal.cpp) = 4a86640b6fc532eab93d2f97934b672d87140b06
-SHA1 (patch-codelite__terminal_TextView.cpp) = 13b5cafa6975c95c74d61f5a355e0c88d0f056cd
-SHA1 (patch-sdk_codelite__indexer_libctags_read.c) = 9c9e166dbf895bb746194547e9b0bea99db14926
+SHA1 (codelite-14.0.tar.gz) = 790b903016c628ad18e368aa3ec03a2240aa34ab
+RMD160 (codelite-14.0.tar.gz) = 34532c534d68c084aab0b4cdc326c0bf39ee9463
+SHA512 (codelite-14.0.tar.gz) = 6f8598deb206685ec1feb2923bfd00bf08a3f9a7e195049670b0b93c8405720dba58c02af7ab6de391d83f074bcac3f9b452b042956299e15ad21a9a0a98d967
+Size (codelite-14.0.tar.gz) = 63051086 bytes
+SHA1 (patch-CodeLite_fileextmanager.cpp) = 1eaf696d3bde907a635d767b3d022e1d92692087
 SHA1 (patch-sdk_codelite__indexer_network_np__connections__server.cpp) = 5906e4a1a295b260833ea9d499a3b42d5e8b04c3
+SHA1 (patch-svgs_svgs-dark_create-logo.sh) = d794ca7bb16a248a7aead3ca30e6c9f16073e1a3
+SHA1 (patch-svgs_svgs-light_create-logo.sh) = 4b0d06911baf89636311cc10e7042f3a2b4f22b3
