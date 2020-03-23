@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/03/14 15:02:25 taca Exp $
+$NetBSD: distinfo,v 1.4 2020/03/23 16:55:54 taca Exp $
 
-SHA1 (method_source-0.9.0.gem) = f0286dc6f0e77c3622a37c385c8638270063210c
-RMD160 (method_source-0.9.0.gem) = d7b4a5441e42a25f9801a32c0ee16885a3860fd1
-SHA512 (method_source-0.9.0.gem) = 4ef6cdf3f4427a7910f9da8e569d9cc2711de449498fe88ea8782379330a5725a4800168b06fcc593c18faa52294836881852768306303ebc658f97c1bec8830
-Size (method_source-0.9.0.gem) = 13312 bytes
+SHA1 (method_source-1.0.0.gem) = dd5cac56b5867d2bffc7a76a60fe5b54d8c88538
+RMD160 (method_source-1.0.0.gem) = e9974778b97be94dd2a98e5af235bf53862eab3a
+SHA512 (method_source-1.0.0.gem) = d3a2dace01d987203d0520583120bfe08812237602421efc3ec7ff8054f2403b0aac13f15b8b91dfdb6e6679a519f707ede67ea6fed72cd8242edacc828a9caa
+Size (method_source-1.0.0.gem) = 13824 bytes
