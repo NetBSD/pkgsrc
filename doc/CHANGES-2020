@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1808 2020/03/23 15:30:48 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1809 2020/03/23 15:32:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2465,3 +2465,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/squidview to 0.86 [taca 2020-03-23]
 	Updated databases/ruby-pg to 1.2.3 [taca 2020-03-23]
 	Added archivers/php-pecl-zip version 1.18.2 [taca 2020-03-23]
+	Updated devel/php-xdebug to 2.9.3 [taca 2020-03-23]
