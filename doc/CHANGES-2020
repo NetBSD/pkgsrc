@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1832 2020/03/23 18:17:56 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1833 2020/03/23 18:24:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2489,3 +2489,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/erlang-ezlib to 1.0.7 [nia 2020-03-23]
 	Updated devel/erlang-base64url to 1.0.1 [nia 2020-03-23]
 	Updated security/erlang-epam to 1.0.7 [nia 2020-03-23]
+	Updated sysutils/erlang-goldrush to 0.2.0 [nia 2020-03-23]
