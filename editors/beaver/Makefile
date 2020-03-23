@@ -1,31 +1,21 @@
-# $NetBSD: Makefile,v 1.48 2020/03/10 22:09:40 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.49 2020/03/23 19:57:29 nia Exp $
 
-DISTNAME=	beaver${BEAVER_VERSION:S/./_/g}
-PKGNAME=	beaver-${BEAVER_VERSION}
-PKGREVISION=	31
+DISTNAME=	beaver-0.4.1
 CATEGORIES=	editors
-MASTER_SITES=	http://download.savannah.gnu.org/releases/beaver/0.3.0.1%20-%202008.06.26/
-EXTRACT_SUFX=	.tgz
-
-BEAVER_VERSION=	0.3.0.1
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beaver-editor/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	vincent.derrien@ahoup.net
-HOMEPAGE=	https://www.nongnu.org/beaver/
-COMMENT=	Lightweight GTK+ text editor with syntax highlighting
+HOMEPAGE=	http://beaver-editor.sourceforge.net/
+COMMENT=	Lightweight GTK+2 text editor with syntax highlighting
+LICENSE=	gnu-gpl-v2
 
-BUILD_DIRS=	src
+GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config perl
+USE_TOOLS+=	intltool msgfmt msgmerge xgettext
 
-SUBST_CLASSES+=		iconpath
-SUBST_FILES.iconpath=	beaver.desktop src/interface.c
-SUBST_MESSAGE.iconpath=	Substituting hard-coded pathnames.
-SUBST_STAGE.iconpath=	pre-build
-SUBST_SED.iconpath=	-e 's,Icon=,&${PREFIX}/share/pixmaps/beaver/,'
-SUBST_VARS.iconpath=	PREFIX
-
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
