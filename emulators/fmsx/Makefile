@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2020/03/08 16:49:26 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2020/03/23 18:54:51 nia Exp $
 
-DISTNAME=	fMSX53
-PKGNAME=	fmsx-5.3
-PKGREVISION=	3
+DISTNAME=	fMSX54
+PKGNAME=	fmsx-5.4
 CATEGORIES=	emulators x11
-MASTER_SITES=	http://fms.komkon.org/fMSX/
+MASTER_SITES=	https://fms.komkon.org/fMSX/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -36,8 +35,6 @@ DEFS+=		-DLSB_FIRST
 BROKEN=		"Unknown endian"
 .endif
 
-MAKE_ENV+=	DEFS=${DEFS:Q}
-
 INSTALLATION_DIRS=	bin share/doc
 
 # Makefile of fMSX doesn't have install target.
@@ -45,7 +42,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fMSX/Unix/fmsx ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/fMSX/fMSX.html ${DESTDIR}${PREFIX}/share/doc
 
-.include "../../audio/pulseaudio/buildlink3.mk"
+.include "options.mk"
+MAKE_ENV+=	DEFS=${DEFS:Q}
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
