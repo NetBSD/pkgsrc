@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/09/26 11:37:43 maya Exp $
+$NetBSD: distinfo,v 1.5 2020/03/23 16:12:11 taca Exp $
 
-SHA1 (php-imagick/imagick-3.4.3.tgz) = 8b97956ca9932d2c61e571ee6d364f08f4c370c3
-RMD160 (php-imagick/imagick-3.4.3.tgz) = 1a0a9f607917c4e80fd2c06cccb91386a1ba2c2e
-SHA512 (php-imagick/imagick-3.4.3.tgz) = 2cb2b856cf83a78d3542cdf7c69554dcc063a0541e9092b24e5e1fbd8928066a4a3de154049d0202c35addbc5055ccfbb5910ae92f2f13da80ddfc025340ddcd
-Size (php-imagick/imagick-3.4.3.tgz) = 245410 bytes
+SHA1 (php-imagick/imagick-3.4.4.tgz) = f860b4b82563614883e4a8e8d0dbf3417057c7e1
+RMD160 (php-imagick/imagick-3.4.4.tgz) = c0dc62d13b63281ef973a948b71ddc8dff2ffe3e
+SHA512 (php-imagick/imagick-3.4.4.tgz) = 73145a1f095849c32760db2dfc4acc13c57d99a037d65eca9b0ddf8f8e81cf6d28a50f2614e44bae1d90b4f881a2e9a64926e0e3b9403e491fd903ffeb30c4b7
+Size (php-imagick/imagick-3.4.4.tgz) = 253434 bytes
