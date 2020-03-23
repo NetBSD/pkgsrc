@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2019/12/15 09:48:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2020/03/23 18:43:45 adam Exp $
 bin/certbot-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -21,9 +21,6 @@ ${PYSITELIB}/certbot/_internal/auth_handler.pyo
 ${PYSITELIB}/certbot/_internal/cert_manager.py
 ${PYSITELIB}/certbot/_internal/cert_manager.pyc
 ${PYSITELIB}/certbot/_internal/cert_manager.pyo
-${PYSITELIB}/certbot/_internal/cli.py
-${PYSITELIB}/certbot/_internal/cli.pyc
-${PYSITELIB}/certbot/_internal/cli.pyo
 ${PYSITELIB}/certbot/_internal/client.py
 ${PYSITELIB}/certbot/_internal/client.pyc
 ${PYSITELIB}/certbot/_internal/client.pyo
@@ -63,12 +60,6 @@ ${PYSITELIB}/certbot/_internal/log.pyo
 ${PYSITELIB}/certbot/_internal/main.py
 ${PYSITELIB}/certbot/_internal/main.pyc
 ${PYSITELIB}/certbot/_internal/main.pyo
-${PYSITELIB}/certbot/_internal/notify.py
-${PYSITELIB}/certbot/_internal/notify.pyc
-${PYSITELIB}/certbot/_internal/notify.pyo
-${PYSITELIB}/certbot/_internal/ocsp.py
-${PYSITELIB}/certbot/_internal/ocsp.pyc
-${PYSITELIB}/certbot/_internal/ocsp.pyo
 ${PYSITELIB}/certbot/_internal/plugins/__init__.py
 ${PYSITELIB}/certbot/_internal/plugins/__init__.pyc
 ${PYSITELIB}/certbot/_internal/plugins/__init__.pyo
