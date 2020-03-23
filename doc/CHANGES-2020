@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1790 2020/03/22 23:37:10 riastradh Exp $
+$NetBSD: CHANGES-2020,v 1.1791 2020/03/23 02:31:25 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2447,3 +2447,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/bat to 0.13.0 [fox 2020-03-22]
 	Updated devel/editline to 3.1.20191231 [tnn 2020-03-22]
 	Added finance/py-beancount version 2.2.3 [riastradh 2020-03-22]
+	Added devel/p5-Config-Onion version 1.007 [riastradh 2020-03-23]
