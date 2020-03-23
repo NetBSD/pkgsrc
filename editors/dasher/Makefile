@@ -1,46 +1,31 @@
-# $NetBSD: Makefile,v 1.102 2020/03/10 22:09:40 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2020/03/23 12:25:38 nia Exp $
 
-DISTNAME=	dasher-4.10.1
-PKGREVISION=	47
+DISTNAME=	dasher-5.0.0.b20200225
 CATEGORIES=	editors gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/4.10/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dasher-project/}
+GITHUB_TAG=	e03b0dbf1f1132e83645ff78c92efd63fca5a812
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.inference.phy.cam.ac.uk/dasher/
 COMMENT=	Easy typing without using keyboard
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++03
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
+TOOL_DEPENDS+=	yelp-tools-[0-9]*:../../textproc/yelp-tools
 
-INSTALLATION_DIRS=	${GCONF_SCHEMAS_DIR}
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_LANGUAGES=	c c++
 
-.include "../../mk/bsd.prefs.mk"
-.include "options.mk"
+USE_TOOLS+=	autoreconf autoconf automake
+USE_TOOLS+=	pkg-config
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
-# Needed for ftime(3).
-LIBS+=			-lcompat
-.endif
+pre-configure:
+	# tries to invoke git for something, probably fetching the ref
+	${ECHO} "true" > ${WRKSRC}/build-aux/mkversion
+	cd ${WRKSRC} && autoreconf -fi
 
-GCONF_SCHEMAS+=	dasher.schemas
-
-post-build:
-	cd ${WRKSRC}/Data && ../Src/Gtk2/generate-schema >dasher.schemas
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/Data/dasher.schemas ${DESTDIR}${GCONF_SCHEMAS_DIR}
-
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
-.include "../../devel/libglade/buildlink3.mk"
+.include "../../audio/speech-dispatcher/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libXtst/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

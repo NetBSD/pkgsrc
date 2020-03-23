@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.32 2015/11/03 03:32:15 agc Exp $
+$NetBSD: distinfo,v 1.33 2020/03/23 12:25:38 nia Exp $
 
-SHA1 (dasher-4.10.1.tar.bz2) = bc2bd8c8c8f078f5290527f1525563d098f53b5d
-RMD160 (dasher-4.10.1.tar.bz2) = 0ed314ba5717f129168e315e02389259dc28532c
-SHA512 (dasher-4.10.1.tar.bz2) = ca36195916dac2caa619fd2e11b6de714d710bb8e2bc395813040807d9d20768cafcb4477df8bcdf4cdec574545ff85a40ae22bd31c995c7051fb7d4e2ee83c9
-Size (dasher-4.10.1.tar.bz2) = 6679084 bytes
-SHA1 (patch-Src_DasherCore_DasherViewSquare.h) = 3bd8b1d06c837b1c704eb9b9592c070eeff8dda6
-SHA1 (patch-Src_DasherCore_SettingsStore.h) = b56d4480ef6a2da6ac9bfd0f0c5230486efdc8b2
-SHA1 (patch-Src_DasherCore_View_DelayedDraw.h) = e56cc2be5f36f7a9a6be26bc53939fa679d116f3
+SHA1 (dasher-5.0.0.b20200225-e03b0dbf1f1132e83645ff78c92efd63fca5a812.tar.gz) = 327a9f268df919e9f123edc210115a6f5c089178
+RMD160 (dasher-5.0.0.b20200225-e03b0dbf1f1132e83645ff78c92efd63fca5a812.tar.gz) = 2dc783e860df87fe1b5a0c6cc6b9cd2b5c6fac20
+SHA512 (dasher-5.0.0.b20200225-e03b0dbf1f1132e83645ff78c92efd63fca5a812.tar.gz) = 4c21270c2608c80d9ecaddc21de9fe6fc840c7803c03b9c7d43b2844ff551df6c89031c934636ea05adaa05e5d467f32eb05ea6859a400866aeeb4d2c604868d
+Size (dasher-5.0.0.b20200225-e03b0dbf1f1132e83645ff78c92efd63fca5a812.tar.gz) = 18684114 bytes
