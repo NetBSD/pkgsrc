@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.41 2019/09/11 18:13:27 nia Exp $
+$NetBSD: distinfo,v 1.42 2020/03/23 19:23:14 nia Exp $
 
-SHA1 (libgdiplus-6.0.2.tar.gz) = 6c6c312e81ed38ee9f1a8be56f96bf9f4fd92e16
-RMD160 (libgdiplus-6.0.2.tar.gz) = 4b11e8dd15edb86d21170a215c62681c777a9df3
-SHA512 (libgdiplus-6.0.2.tar.gz) = b334846cf9471e6f81a3e0a2d6b68c9a39f52e6b22833432e34d3823ae12e3aa9d481806ea9a078463a77f56f3265633447d6709c5ade86ea117d3690f16472c
-Size (libgdiplus-6.0.2.tar.gz) = 1377140 bytes
+SHA1 (libgdiplus-6.0.4.tar.gz) = 81da9a05dfbb6b315175d987de48235eddb4ebed
+RMD160 (libgdiplus-6.0.4.tar.gz) = 6a652cb64b213733d41aab41920469818409042e
+SHA512 (libgdiplus-6.0.4.tar.gz) = 91784b2a9e1480c5fd70b1918b10ad03a41246c91d89f0a10fbbce67cd72595b7fb8543457cdfd500014b3f9e39347bed1ab68d7e4f9628a3a413caafef30bdc
+Size (libgdiplus-6.0.4.tar.gz) = 1390998 bytes
