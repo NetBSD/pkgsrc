@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2020/03/08 16:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2020/03/23 10:07:49 nia Exp $
 #
 
 PKGREVISION=	20
@@ -29,6 +29,9 @@ PKG_SUPPORTED_OPTIONS=	debug
 .if !empty(PKG_OPTIONS:Mdebug)
 CFLAGS=			-O0 -ggdb
 .endif
+
+# we already patch 'configure'
+CHECK_PORTABILITY_SKIP+=	configure.in
 
 .include "../../devel/libltdl/convenience.mk"
 .include "../../security/gnutls/buildlink3.mk"
