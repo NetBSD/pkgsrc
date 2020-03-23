@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3066 2020/03/21 23:38:44 mef Exp $
+# $NetBSD: Makefile,v 1.3067 2020/03/23 02:28:24 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -1171,6 +1171,7 @@ SUBDIR+=	p5-Config-INI-Reader-Ordered
 SUBDIR+=	p5-Config-IniFiles
 SUBDIR+=	p5-Config-MVP
 SUBDIR+=	p5-Config-MVP-Reader-INI
+SUBDIR+=	p5-Config-Onion
 SUBDIR+=	p5-Config-Properties
 SUBDIR+=	p5-Config-Std
 SUBDIR+=	p5-Config-Tiny
