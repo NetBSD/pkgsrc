@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1841 2020/03/23 19:23:30 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1842 2020/03/23 19:31:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2514,3 +2514,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/fmsx to 5.4 [nia 2020-03-23]
 	Updated graphics/gource to 0.51 [nia 2020-03-23]
 	Updated graphics/libgdiplus to 6.0.4 [nia 2020-03-23]
+	Updated textproc/liblrdf to 0.6.1 [nia 2020-03-23]
