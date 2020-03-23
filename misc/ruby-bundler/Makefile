@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2019/09/18 14:30:43 taca Exp $
+# $NetBSD: Makefile,v 1.36 2020/03/23 16:34:26 taca Exp $
 
-DISTNAME=	bundler-2.0.2
+DISTNAME=	bundler-2.1.4
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,6 +10,7 @@ LICENSE=	mit
 
 RUBYGEM_OPTIONS+=	--format-executable
 COMMANDS=		bundle bundler
+USE_LANGUAGES=		# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
