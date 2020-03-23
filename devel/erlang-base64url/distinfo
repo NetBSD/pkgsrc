@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/12/14 21:00:30 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2020/03/23 18:15:22 nia Exp $
 
-SHA1 (base64url-1.0.tar.gz) = df1d68329c88b7afea78432da1ea76f7d523c0f5
-RMD160 (base64url-1.0.tar.gz) = 2eb21758b8b89829abc3658bcc6f36444b2964f4
-SHA512 (base64url-1.0.tar.gz) = f9f5062d8a45c5d0fbfb7179359137e88a1af10e29c1329506446d2142331176f6be2aa30387e4c98855440c1da943ea16a655ed2ad5168d4f5f8a2cd1c47c5f
-Size (base64url-1.0.tar.gz) = 2759 bytes
+SHA1 (base64url-1.0.1.tar.gz) = beafd79ee7e4e72acf833a0df6b8ea3e30015859
+RMD160 (base64url-1.0.1.tar.gz) = b2875858decd96c2edf7626cd30dbf9abbd32ca1
+SHA512 (base64url-1.0.1.tar.gz) = 7398dc99078053b6e0544eb8ca93e9616549493c02245084c220ec854f429139dcaba38dd522858dd74b95067979a3ec4378eb3abd5f6d1662af27687381c738
+Size (base64url-1.0.1.tar.gz) = 2726 bytes
