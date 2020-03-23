@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/03/22 17:47:56 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/23 10:37:00 tnn Exp $
 
 GCC_PKGNAME=		gcc8
 .include		"version.mk"
@@ -199,7 +199,9 @@ GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && 					\
 	${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print | ${SORT} ;
 
+CHECK_BUILTIN.zlib:=	yes
 .include "../../devel/zlib/builtin.mk"
+CHECK_BUILTIN.zlib:=	no
 .if !empty(USE_BUILTIN.zlib:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--with-system-zlib
 .include "../../devel/zlib/buildlink3.mk"
