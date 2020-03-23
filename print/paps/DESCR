@@ -1,4 +1,4 @@
 libpaps is a library for converting Unicode text encoded in UTF-8
-to postscript by using pango.
+to PostScript by using pango.
 
 paps is a command line program using this library.
