@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/04/26 14:57:57 bsiegert Exp $
+$NetBSD: distinfo,v 1.3 2020/03/23 20:00:47 nia Exp $
 
-SHA1 (dte-1.8.2.tar.gz) = 6afe1855a44d7f4fd4d47e6c3a75ed25c2a6eca6
-RMD160 (dte-1.8.2.tar.gz) = b30f1e09b756a30c1c0ea25a746a8e5b572d1e51
-SHA512 (dte-1.8.2.tar.gz) = ed4cf6fb728521323e3489a87ec3c4185d2f780107468b40aa9d22e9319f0229e1726499d87204081b453c7e39301f6a39ab0b6d2a9d7a8fc528d006d3bd162e
-Size (dte-1.8.2.tar.gz) = 267142 bytes
+SHA1 (dte-1.9.1.tar.gz) = c5f1e8c7ec5c4e40a2c2ab3d3fe9ab8fbd41e8d0
+RMD160 (dte-1.9.1.tar.gz) = 54019ac3dc5e1a21cd6a7c508f1c11706ab68551
+SHA512 (dte-1.9.1.tar.gz) = f8bea92f518d5f5dec1a1052c4ee9fbd3175cd149140c43163bd4e2f2e5c3e68ee9289d3388555c635ce10a30a490907f8959fde74c49e357821cb85c9275358
+Size (dte-1.9.1.tar.gz) = 281750 bytes
