@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1793 2020/03/23 02:32:07 riastradh Exp $
+$NetBSD: CHANGES-2020,v 1.1794 2020/03/23 02:32:27 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2450,3 +2450,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/p5-Config-Onion version 1.007 [riastradh 2020-03-23]
 	Added textproc/p5-String-Interpolate version 0.32 [riastradh 2020-03-23]
 	Added textproc/scdoc version 1.10.1 [riastradh 2020-03-23]
+	Added finance/ledger2beancount version 2.0 [riastradh 2020-03-23]
