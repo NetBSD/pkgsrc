@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1827 2020/03/23 17:16:31 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1828 2020/03/23 17:17:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2484,3 +2484,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ruby-RMagick to 4.1.0 [taca 2020-03-23]
 	Updated misc/ruby-mimemagic to 0.3.4 [taca 2020-03-23]
 	Updated misc/ruby-progressbar to 1.10.1 [taca 2020-03-23]
+	Updated misc/ruby-slop to 4.8.0 [taca 2020-03-23]
