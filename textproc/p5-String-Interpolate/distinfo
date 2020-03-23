@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/23 02:28:47 riastradh Exp $
+
+SHA1 (String-Interpolate-0.32.tar.gz) = 409aec54386540e3315cf29b376d6ee4bb89286f
+RMD160 (String-Interpolate-0.32.tar.gz) = 181d34a0a4f55f4ca8dd7cc45d462bce459c413d
+SHA512 (String-Interpolate-0.32.tar.gz) = a782ec8e1084fec291342d61a68edd4d43c647aefa693923e7548f001c5f7aead27ba6721d6054fef051041af3b0beac5e9b07de88c63220c257be72fb720e93
+Size (String-Interpolate-0.32.tar.gz) = 19723 bytes

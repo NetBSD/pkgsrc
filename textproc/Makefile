@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1116 2020/03/21 15:49:24 taca Exp $
+# $NetBSD: Makefile,v 1.1117 2020/03/23 02:28:47 riastradh Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -592,6 +592,7 @@ SUBDIR+=	p5-String-Errf
 SUBDIR+=	p5-String-Expand
 SUBDIR+=	p5-String-Flogger
 SUBDIR+=	p5-String-Formatter
+SUBDIR+=	p5-String-Interpolate
 SUBDIR+=	p5-String-Koremutake
 SUBDIR+=	p5-String-RewritePrefix
 SUBDIR+=	p5-String-ShellQuote
