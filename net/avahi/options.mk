@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.16 2020/03/23 09:22:07 nia Exp $
+# $NetBSD: options.mk,v 1.17 2020/03/23 15:56:55 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avahi
-PKG_SUPPORTED_OPTIONS=	avahi-howl gdbm introspection gtk2 gtk3 mono python
+PKG_SUPPORTED_OPTIONS=	avahi-howl gdbm introspection gtk3 mono python
 PKG_SUPPORTED_OPTIONS+=	tests
 PKG_SUGGESTED_OPTIONS+=	gtk3
-PLIST_VARS+=		introspection gtk2 gtk3 mono ui
+PLIST_VARS+=		introspection gtk3 mono ui
 
 .include "../../mk/bsd.options.mk"
 
@@ -23,15 +23,6 @@ PLIST_SRC+=		${PKGDIR}/PLIST.howl
 .  include "../../databases/gdbm/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gdbm
-.endif
-
-.if !empty(PKG_OPTIONS:Mgtk2)
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.14.0
-.include "../../x11/gtk2/buildlink3.mk"
-PLIST.gtk2=		yes
-PLIST.ui=		yes
-.else
-CONFIGURE_ARGS+=	--disable-gtk
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk3)

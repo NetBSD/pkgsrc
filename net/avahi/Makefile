@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2020/03/23 09:22:07 nia Exp $
+# $NetBSD: Makefile,v 1.92 2020/03/23 15:56:55 wiz Exp $
 
 DISTNAME=		avahi-0.6.32
 PKGREVISION=		22
@@ -18,6 +18,8 @@ USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		pkg-config gmake intltool msgfmt xgettext
 MAKE_JOBS_SAFE=		no
+
+CONFIGURE_ARGS+=	--disable-gtk
 
 PKGCONFIG_OVERRIDE+=	avahi-client.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-compat-howl.pc.in
