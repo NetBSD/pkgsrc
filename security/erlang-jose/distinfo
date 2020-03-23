@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/07/20 09:55:47 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2020/03/23 18:32:00 nia Exp $
 
-SHA1 (jose-1.8.4.tar.gz) = ce78563fbc0cb71121230f8883fde747c558e55b
-RMD160 (jose-1.8.4.tar.gz) = 94f38bc1018bc87af0b2c386b0e0b790464bd9f6
-SHA512 (jose-1.8.4.tar.gz) = 47171b4e5f6b61735a15365b4130c110c14de1f4b157cdbf97b448550d48de4ab27a30537e9d9f613d87862d592b3bd95638daacee60f3f5b9877d80a3de773b
-Size (jose-1.8.4.tar.gz) = 230947 bytes
-SHA1 (patch-src_jose__public__key.erl) = f7a0a75a332d3b58ab4946ff88835b6149a74589
+SHA1 (jose-1.10.1.tar.gz) = 97f4ccf34ec7eb751068f76d3deda83660e797ff
+RMD160 (jose-1.10.1.tar.gz) = ed315e1126b8cbcfd0f57da277ac22d99ec5cfb2
+SHA512 (jose-1.10.1.tar.gz) = 2887a1d43e212516b32a0a690d5a94e6a797b4802b21fa0a51cc4830790f56625575db38af8fb1c0f4cf4694740c6149eb75989cfbd51867af69c1b23b7ba8ee
+Size (jose-1.10.1.tar.gz) = 279187 bytes
