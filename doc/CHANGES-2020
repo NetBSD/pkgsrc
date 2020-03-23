@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1835 2020/03/23 18:39:17 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1836 2020/03/23 18:43:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2452,6 +2452,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/scdoc version 1.10.1 [riastradh 2020-03-23]
 	Added finance/ledger2beancount version 2.0 [riastradh 2020-03-23]
 	Updated graphics/gd to 2.3.0 [adam 2020-03-23]
+	Updated devel/py-txaio to 20.3.1 [adam 2020-03-23]
+	Updated textproc/py-xmlschema to 1.1.2 [adam 2020-03-23]
 	Removed time/planner [nia 2020-03-23]
 	Removed textproc/gnome-spell [nia 2020-03-23]
 	Removed time/gnotime [nia 2020-03-23]
