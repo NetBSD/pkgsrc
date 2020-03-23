@@ -1,11 +1,10 @@
-$NetBSD: patch-libglusterfs_src_common-utils.c,v 1.2 2018/08/06 02:22:31 manu Exp $
+$NetBSD: patch-libglusterfs_src_common-utils.c,v 1.3 2020/03/23 23:01:48 gdt Exp $
 
 Make NetBSD memory size reading routine 64-bit aware
 
---- libglusterfs/src/common-utils.c.orig	2018-08-05 19:00:57.102350607 +0200
-+++ libglusterfs/src/common-utils.c	2018-08-05 19:21:38.677872008 +0200
-@@ -2970,15 +2970,25 @@
- 
+--- libglusterfs/src/common-utils.c.orig	2018-04-12 17:46:46.578237383 +0000
++++ libglusterfs/src/common-utils.c
+@@ -2971,13 +2971,23 @@ get_mem_size ()
  	memsize = page_size * num_pages;
  #endif
  
@@ -30,4 +29,3 @@ Make NetBSD memory size reading routine 64-bit aware
  	return memsize;
  }
  
- /* Strips all whitespace characters in a string and returns length of new string
