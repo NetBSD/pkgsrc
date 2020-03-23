@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/01/20 14:35:39 taca Exp $
+$NetBSD: distinfo,v 1.3 2020/03/23 17:14:15 taca Exp $
 
-SHA1 (mimemagic-0.3.3.gem) = 0b1dafa78b1ec28f7b383caed01dc0c9e0b8378e
-RMD160 (mimemagic-0.3.3.gem) = cee6e67ec3003192da0edfb3962c0eba66ff0f5b
-SHA512 (mimemagic-0.3.3.gem) = ea62cf519af76324ed62863142422a4b5546927b243a9ac45c37ae0b8bfc97813b2276a1fd898bce470b091b1818190a0dc1637d167233a2e187d78e27bb8b77
-Size (mimemagic-0.3.3.gem) = 402944 bytes
+SHA1 (mimemagic-0.3.4.gem) = 5cf917ddca0ef476194325d17daf8d0f63c0fb1a
+RMD160 (mimemagic-0.3.4.gem) = 93390267d6aecd845bbc5ea7716f5d8fdaa5679b
+SHA512 (mimemagic-0.3.4.gem) = 40b97e523fe96bba28bcc80da02d824c5a3d3be55b0bb1ae1e4eed0337ae8d8e625325adcbfcacd19a2b1ccefbd77b6c3a20af1cf00e03722959ba98659d4281
+Size (mimemagic-0.3.4.gem) = 410112 bytes
