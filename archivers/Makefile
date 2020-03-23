@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2020/03/12 07:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.172 2020/03/23 15:30:31 taca Exp $
 #
 
 COMMENT=	Archivers
@@ -87,6 +87,7 @@ SUBDIR+=	pax
 SUBDIR+=	pbzip2
 SUBDIR+=	pdbar
 SUBDIR+=	php-bz2
+SUBDIR+=	php-pecl-zip
 SUBDIR+=	php-zip
 SUBDIR+=	php-zlib
 SUBDIR+=	pigz
