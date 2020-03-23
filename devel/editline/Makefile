@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/03/23 09:27:34 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2020/03/23 09:34:27 tnn Exp $
 #
 
 DISTNAME=		libedit-20191231-3.1
@@ -40,8 +40,7 @@ PLIST.doc=	yes
 .endif
 
 post-extract:
-.if !empty(PKG_OPTIONS:Mdoc)
-.else
+.if empty(PKG_OPTIONS:Mdoc)
 	${ECHO} "" > ${WRKSRC}/doc/Makefile.am
 .endif
 
