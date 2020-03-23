@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2019/09/18 14:30:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/03/23 16:34:26 taca Exp $
 bin/bundle2-${RUBY_SUFFIX}
 bin/bundler2-${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -7,7 +7,6 @@ ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/bundler.gemspec
 ${GEM_LIBDIR}/exe/bundle
-${GEM_LIBDIR}/exe/bundle_ruby
 ${GEM_LIBDIR}/exe/bundler
 ${GEM_LIBDIR}/lib/bundler.rb
 ${GEM_LIBDIR}/lib/bundler/build_metadata.rb
@@ -33,7 +32,6 @@ ${GEM_LIBDIR}/lib/bundler/cli/list.rb
 ${GEM_LIBDIR}/lib/bundler/cli/lock.rb
 ${GEM_LIBDIR}/lib/bundler/cli/open.rb
 ${GEM_LIBDIR}/lib/bundler/cli/outdated.rb
-${GEM_LIBDIR}/lib/bundler/cli/package.rb
 ${GEM_LIBDIR}/lib/bundler/cli/platform.rb
 ${GEM_LIBDIR}/lib/bundler/cli/plugin.rb
 ${GEM_LIBDIR}/lib/bundler/cli/pristine.rb
@@ -44,7 +42,6 @@ ${GEM_LIBDIR}/lib/bundler/cli/viz.rb
 ${GEM_LIBDIR}/lib/bundler/compact_index_client.rb
 ${GEM_LIBDIR}/lib/bundler/compact_index_client/cache.rb
 ${GEM_LIBDIR}/lib/bundler/compact_index_client/updater.rb
-${GEM_LIBDIR}/lib/bundler/compatibility_guard.rb
 ${GEM_LIBDIR}/lib/bundler/constants.rb
 ${GEM_LIBDIR}/lib/bundler/current_ruby.rb
 ${GEM_LIBDIR}/lib/bundler/definition.rb
@@ -67,7 +64,6 @@ ${GEM_LIBDIR}/lib/bundler/fetcher/index.rb
 ${GEM_LIBDIR}/lib/bundler/friendly_errors.rb
 ${GEM_LIBDIR}/lib/bundler/gem_helper.rb
 ${GEM_LIBDIR}/lib/bundler/gem_helpers.rb
-${GEM_LIBDIR}/lib/bundler/gem_remote_fetcher.rb
 ${GEM_LIBDIR}/lib/bundler/gem_tasks.rb
 ${GEM_LIBDIR}/lib/bundler/gem_version_promoter.rb
 ${GEM_LIBDIR}/lib/bundler/gemdeps.rb
@@ -122,11 +118,6 @@ ${GEM_LIBDIR}/lib/bundler/source/rubygems.rb
 ${GEM_LIBDIR}/lib/bundler/source/rubygems/remote.rb
 ${GEM_LIBDIR}/lib/bundler/source_list.rb
 ${GEM_LIBDIR}/lib/bundler/spec_set.rb
-${GEM_LIBDIR}/lib/bundler/ssl_certs/.document
-${GEM_LIBDIR}/lib/bundler/ssl_certs/certificate_manager.rb
-${GEM_LIBDIR}/lib/bundler/ssl_certs/index.rubygems.org/GlobalSignRootCA.pem
-${GEM_LIBDIR}/lib/bundler/ssl_certs/rubygems.global.ssl.fastly.net/DigiCertHighAssuranceEVRootCA.pem
-${GEM_LIBDIR}/lib/bundler/ssl_certs/rubygems.org/AddTrustExternalCARoot.pem
 ${GEM_LIBDIR}/lib/bundler/stub_specification.rb
 ${GEM_LIBDIR}/lib/bundler/templates/.document
 ${GEM_LIBDIR}/lib/bundler/templates/Executable
@@ -160,8 +151,11 @@ ${GEM_LIBDIR}/lib/bundler/ui/rg_proxy.rb
 ${GEM_LIBDIR}/lib/bundler/ui/shell.rb
 ${GEM_LIBDIR}/lib/bundler/ui/silent.rb
 ${GEM_LIBDIR}/lib/bundler/uri_credentials_filter.rb
+${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/lib/connection_pool.rb
+${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/lib/connection_pool/monotonic_time.rb
+${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/lib/connection_pool/timed_stack.rb
+${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/lib/connection_pool/version.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/fileutils/lib/fileutils.rb
-${GEM_LIBDIR}/lib/bundler/vendor/fileutils/lib/fileutils/version.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/compatibility.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/delegates/resolution_state.rb
@@ -183,9 +177,10 @@ ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/modules/ui.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/resolution.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/resolver.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/state.rb
-${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/faster.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
-${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/persistent/ssl_reuse.rb
+${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/persistent/connection.rb
+${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/persistent/pool.rb
+${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/persistent/timed_stack_multi.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/actions.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/actions/create_file.rb
@@ -197,14 +192,13 @@ ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/actions/inject_into_file.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/base.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/command.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/core_ext/hash_with_indifferent_access.rb
-${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/core_ext/io_binary_read.rb
-${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/core_ext/ordered_hash.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/error.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/group.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/invocation.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/line_editor.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/line_editor/basic.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/line_editor/readline.rb
+${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/nested_context.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/parser.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/parser/argument.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/parser/arguments.rb
@@ -218,10 +212,24 @@ ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/shell/color.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/shell/html.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/util.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/version.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/common.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/file.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/ftp.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/generic.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/http.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/https.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/ldap.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/ldaps.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/mailto.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/rfc2396_parser.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/rfc3986_parser.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/version.rb
 ${GEM_LIBDIR}/lib/bundler/vendored_fileutils.rb
 ${GEM_LIBDIR}/lib/bundler/vendored_molinillo.rb
 ${GEM_LIBDIR}/lib/bundler/vendored_persistent.rb
 ${GEM_LIBDIR}/lib/bundler/vendored_thor.rb
+${GEM_LIBDIR}/lib/bundler/vendored_uri.rb
 ${GEM_LIBDIR}/lib/bundler/version.rb
 ${GEM_LIBDIR}/lib/bundler/version_ranges.rb
 ${GEM_LIBDIR}/lib/bundler/vlad.rb
@@ -233,6 +241,9 @@ ${GEM_LIBDIR}/man/bundle-add.ronn
 ${GEM_LIBDIR}/man/bundle-binstubs.1
 ${GEM_LIBDIR}/man/bundle-binstubs.1.txt
 ${GEM_LIBDIR}/man/bundle-binstubs.ronn
+${GEM_LIBDIR}/man/bundle-cache.1
+${GEM_LIBDIR}/man/bundle-cache.1.txt
+${GEM_LIBDIR}/man/bundle-cache.ronn
 ${GEM_LIBDIR}/man/bundle-check.1
 ${GEM_LIBDIR}/man/bundle-check.1.txt
 ${GEM_LIBDIR}/man/bundle-check.ronn
@@ -275,9 +286,6 @@ ${GEM_LIBDIR}/man/bundle-open.ronn
 ${GEM_LIBDIR}/man/bundle-outdated.1
 ${GEM_LIBDIR}/man/bundle-outdated.1.txt
 ${GEM_LIBDIR}/man/bundle-outdated.ronn
-${GEM_LIBDIR}/man/bundle-package.1
-${GEM_LIBDIR}/man/bundle-package.1.txt
-${GEM_LIBDIR}/man/bundle-package.ronn
 ${GEM_LIBDIR}/man/bundle-platform.1
 ${GEM_LIBDIR}/man/bundle-platform.1.txt
 ${GEM_LIBDIR}/man/bundle-platform.ronn
