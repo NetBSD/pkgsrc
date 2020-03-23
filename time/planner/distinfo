@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2015/11/02 23:31:43 agc Exp $
-
-SHA1 (planner-0.14.6.tar.xz) = 3e6220aaf106d8d7e1fa6325b9a0b5f09ebf0917
-RMD160 (planner-0.14.6.tar.xz) = edfb1df0158695d918a6848b7e62ebed8830a210
-SHA512 (planner-0.14.6.tar.xz) = a96a730c84580d32f02ada599ccc630e0fcd330e0306c60d828a7d6e08bbebf8ac400b0bfe8846ab055135e289f7112872b29fa006d7a21e31cbf5db0a79c91a
-Size (planner-0.14.6.tar.xz) = 3392796 bytes
-SHA1 (patch-aa) = 769530b3b7a6cbd5fb3beefd5bbf13af5d777d5e
