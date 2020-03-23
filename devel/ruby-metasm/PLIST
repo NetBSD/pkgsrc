@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/14 17:22:13 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/23 15:42:31 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.hgtags
@@ -66,6 +66,12 @@ ${GEM_LIBDIR}/metasm/cpu/dalvik.rb
 ${GEM_LIBDIR}/metasm/cpu/dalvik/decode.rb
 ${GEM_LIBDIR}/metasm/cpu/dalvik/main.rb
 ${GEM_LIBDIR}/metasm/cpu/dalvik/opcodes.rb
+${GEM_LIBDIR}/metasm/cpu/ebpf.rb
+${GEM_LIBDIR}/metasm/cpu/ebpf/debug.rb
+${GEM_LIBDIR}/metasm/cpu/ebpf/decode.rb
+${GEM_LIBDIR}/metasm/cpu/ebpf/main.rb
+${GEM_LIBDIR}/metasm/cpu/ebpf/opcodes.rb
+${GEM_LIBDIR}/metasm/cpu/ebpf/render.rb
 ${GEM_LIBDIR}/metasm/cpu/ia32.rb
 ${GEM_LIBDIR}/metasm/cpu/ia32/compile_c.rb
 ${GEM_LIBDIR}/metasm/cpu/ia32/debug.rb
@@ -81,7 +87,6 @@ ${GEM_LIBDIR}/metasm/cpu/mcs51/decode.rb
 ${GEM_LIBDIR}/metasm/cpu/mcs51/main.rb
 ${GEM_LIBDIR}/metasm/cpu/mcs51/opcodes.rb
 ${GEM_LIBDIR}/metasm/cpu/mips.rb
-${GEM_LIBDIR}/metasm/cpu/mips/compile_c.rb
 ${GEM_LIBDIR}/metasm/cpu/mips/debug.rb
 ${GEM_LIBDIR}/metasm/cpu/mips/decode.rb
 ${GEM_LIBDIR}/metasm/cpu/mips/encode.rb
@@ -93,6 +98,13 @@ ${GEM_LIBDIR}/metasm/cpu/msp430.rb
 ${GEM_LIBDIR}/metasm/cpu/msp430/decode.rb
 ${GEM_LIBDIR}/metasm/cpu/msp430/main.rb
 ${GEM_LIBDIR}/metasm/cpu/msp430/opcodes.rb
+${GEM_LIBDIR}/metasm/cpu/openrisc.rb
+${GEM_LIBDIR}/metasm/cpu/openrisc/debug.rb
+${GEM_LIBDIR}/metasm/cpu/openrisc/decode.rb
+${GEM_LIBDIR}/metasm/cpu/openrisc/decompile.rb
+${GEM_LIBDIR}/metasm/cpu/openrisc/main.rb
+${GEM_LIBDIR}/metasm/cpu/openrisc/opcodes.rb
+${GEM_LIBDIR}/metasm/cpu/openrisc/render.rb
 ${GEM_LIBDIR}/metasm/cpu/pic16c/decode.rb
 ${GEM_LIBDIR}/metasm/cpu/pic16c/main.rb
 ${GEM_LIBDIR}/metasm/cpu/pic16c/opcodes.rb
@@ -116,6 +128,13 @@ ${GEM_LIBDIR}/metasm/cpu/st20/decode.rb
 ${GEM_LIBDIR}/metasm/cpu/st20/decompile.rb
 ${GEM_LIBDIR}/metasm/cpu/st20/main.rb
 ${GEM_LIBDIR}/metasm/cpu/st20/opcodes.rb
+${GEM_LIBDIR}/metasm/cpu/webasm.rb
+${GEM_LIBDIR}/metasm/cpu/webasm/debug.rb
+${GEM_LIBDIR}/metasm/cpu/webasm/decode.rb
+${GEM_LIBDIR}/metasm/cpu/webasm/decompile.rb
+${GEM_LIBDIR}/metasm/cpu/webasm/encode.rb
+${GEM_LIBDIR}/metasm/cpu/webasm/main.rb
+${GEM_LIBDIR}/metasm/cpu/webasm/opcodes.rb
 ${GEM_LIBDIR}/metasm/cpu/x86_64.rb
 ${GEM_LIBDIR}/metasm/cpu/x86_64/compile_c.rb
 ${GEM_LIBDIR}/metasm/cpu/x86_64/debug.rb
@@ -160,6 +179,7 @@ ${GEM_LIBDIR}/metasm/exe_format/serialstruct.rb
 ${GEM_LIBDIR}/metasm/exe_format/shellcode.rb
 ${GEM_LIBDIR}/metasm/exe_format/shellcode_rwx.rb
 ${GEM_LIBDIR}/metasm/exe_format/swf.rb
+${GEM_LIBDIR}/metasm/exe_format/wasm.rb
 ${GEM_LIBDIR}/metasm/exe_format/xcoff.rb
 ${GEM_LIBDIR}/metasm/exe_format/zip.rb
 ${GEM_LIBDIR}/metasm/gui.rb
@@ -178,6 +198,7 @@ ${GEM_LIBDIR}/metasm/gui/qt.rb
 ${GEM_LIBDIR}/metasm/gui/win32.rb
 ${GEM_LIBDIR}/metasm/gui/x11.rb
 ${GEM_LIBDIR}/metasm/main.rb
+${GEM_LIBDIR}/metasm/os/emulator.rb
 ${GEM_LIBDIR}/metasm/os/gdbremote.rb
 ${GEM_LIBDIR}/metasm/os/gnu_exports.rb
 ${GEM_LIBDIR}/metasm/os/linux.rb
@@ -196,6 +217,7 @@ ${GEM_LIBDIR}/misc/lint.rb
 ${GEM_LIBDIR}/misc/metasm-all.rb
 ${GEM_LIBDIR}/misc/objdiff.rb
 ${GEM_LIBDIR}/misc/objscan.rb
+${GEM_LIBDIR}/misc/openrisc-parser.rb
 ${GEM_LIBDIR}/misc/pdfparse.rb
 ${GEM_LIBDIR}/misc/ppc_pdf2oplist.rb
 ${GEM_LIBDIR}/misc/tcp_proxy_hex.rb
@@ -244,6 +266,8 @@ ${GEM_LIBDIR}/samples/dynamic_ruby.rb
 ${GEM_LIBDIR}/samples/elf_list_needed.rb
 ${GEM_LIBDIR}/samples/elf_listexports.rb
 ${GEM_LIBDIR}/samples/elfencode.rb
+${GEM_LIBDIR}/samples/emubios.rb
+${GEM_LIBDIR}/samples/emudbg.rb
 ${GEM_LIBDIR}/samples/exeencode.rb
 ${GEM_LIBDIR}/samples/factorize-headers-elfimports.rb
 ${GEM_LIBDIR}/samples/factorize-headers-peimports.rb
