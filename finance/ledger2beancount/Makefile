@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/03/23 02:29:49 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/23 16:49:07 riastradh Exp $
 
 DISTNAME=	ledger2beancount-2.0
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zacchiro/}
 GITHUB_PROJECT=	ledger2beancount
