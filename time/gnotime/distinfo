@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.12 2016/07/30 02:56:34 mef Exp $
-
-SHA1 (gnotime-2.4.0.tar.gz) = 2f7bd2ec0287bc0631f5d6e9aabf0a4e2279277a
-RMD160 (gnotime-2.4.0.tar.gz) = a0963cad9547c9b25f2ee6280c211a7fcb87e4d2
-SHA512 (gnotime-2.4.0.tar.gz) = d2b6e7e401dfaa7331e11074d09af7f21ac66d759050d780f5ea3165664a9a9a8e9c6181e4f5e54e9dc6789d947d730f6113a1b32c5aca776eeada454040c3f9
-Size (gnotime-2.4.0.tar.gz) = 1767510 bytes
