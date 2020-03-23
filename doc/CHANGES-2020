@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1802 2020/03/23 12:25:51 fox Exp $
+$NetBSD: CHANGES-2020,v 1.1803 2020/03/23 12:33:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2459,3 +2459,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/stella to 6.1 [nia 2020-03-23]
 	Updated www/php-nextcloud to 18.0.2 [ryoon 2020-03-23]
 	Updated audio/fasttracker2 to 1.14 [fox 2020-03-23]
+	Updated editors/dasher to 5.0.0.b20200225 [nia 2020-03-23]
