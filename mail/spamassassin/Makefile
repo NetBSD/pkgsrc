@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.140 2020/03/21 15:36:32 taca Exp $
+# $NetBSD: Makefile,v 1.141 2020/03/23 18:45:47 gdt Exp $
 
-DISTNAME=	Mail-SpamAssassin-3.4.2
-PKGNAME=	spamassassin-3.4.2
-PKGREVISION=	3
+VERSION=	3.4.4
+DISTNAME=	Mail-SpamAssassin-${VERSION}
+PKGNAME=	spamassassin-${VERSION}
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -20,7 +20,9 @@ LICENSE=	apache-2.0
 
 SMF_METHODS=	spamassassin
 
-RULESARCHIVE=		Mail-SpamAssassin-rules-3.4.2.r1840640.tgz
+# The RULESARCHIVE path is taken from the link on the Download page
+# reachable from $HOMEPAGE.
+RULESARCHIVE=		Mail-SpamAssassin-rules-3.4.4.r1873061.tgz
 #RULESARCHIVEASC=	${RULESARCHIVE}.asc
 #RULESARCHIVESHA=	${RULESARCHIVE}.sha1
 FILES_SUBST+=		RULESARCHIVE=${RULESDIR}/${RULESARCHIVE}
