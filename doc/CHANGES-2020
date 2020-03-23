@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1810 2020/03/23 15:34:03 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1811 2020/03/23 15:42:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2467,3 +2467,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added archivers/php-pecl-zip version 1.18.2 [taca 2020-03-23]
 	Updated devel/php-xdebug to 2.9.3 [taca 2020-03-23]
 	Updated devel/ruby-cucumber-wire to 2.0.1 [taca 2020-03-23]
+	Updated devel/ruby-metasm to 1.0.4 [taca 2020-03-23]
