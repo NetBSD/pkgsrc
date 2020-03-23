@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.31 2018/10/01 14:59:49 triaxx Exp $
+# $NetBSD: check-shlibs.mk,v 1.32 2020/03/23 09:24:35 jperkin Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -54,11 +54,8 @@ _CHECK_SHLIBS_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST} |		\
 	done)
 
 .if !empty(CHECK_SHLIBS:M[Yy][Ee][Ss]) && \
-    !empty(CHECK_SHLIBS_SUPPORTED:M[Yy][Ee][Ss])
-privileged-install-hook: _check-shlibs
-.endif
-
-.if ${_USE_CHECK_SHLIBS_NATIVE} == "yes"
+    !empty(CHECK_SHLIBS_SUPPORTED:M[Yy][Ee][Ss]) && \
+    ${_USE_CHECK_SHLIBS_NATIVE} == "yes"
 CHECK_SHLIBS_NATIVE_ENV=
 .  if ${OBJECT_FMT} == "ELF"
 USE_TOOLS+=			readelf
@@ -81,6 +78,7 @@ CHECK_SHLIBS_NATIVE_ENV+=	CHECK_WRKREF_EXTRA_DIRS=${CHECK_WRKREF_EXTRA_DIRS:Q}
 CHECK_SHLIBS_NATIVE_ENV+=	CHECK_SHLIBS_BLACKLIST=${CHECK_SHLIBS_BLACKLIST:Q}
 .  endif
 
+privileged-install-hook: _check-shlibs
 _check-shlibs: error-check .PHONY
 	@${STEP_MSG} "Checking for missing run-time search paths in ${PKGNAME}"
 	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
@@ -96,8 +94,4 @@ _check-shlibs: error-check .PHONY
 		${ECHO} $$file;						\
 	done |								\
 	${PKGSRC_SETENV} ${CHECK_SHLIBS_NATIVE_ENV} ${AWK} -f ${CHECK_SHLIBS_NATIVE} > ${ERROR_DIR}/${.TARGET}
-
-.else
-_check-shlibs: error-check .PHONY
-	@${WARNING_MSG} "Skipping missing run-time search-path check in DESTDIR mode."
 .endif
