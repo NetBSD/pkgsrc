@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2013/09/02 21:17:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/03/23 07:10:53 adam Exp $
 bin/annotate
 bin/bdftogd
 bin/gd2copypal
 bin/gd2togif
 bin/gd2topng
 bin/gdcmpgif
-bin/gdlib-config
 bin/gdparttopng
 bin/gdtopng
 bin/giftogd2
