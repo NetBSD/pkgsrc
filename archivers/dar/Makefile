@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2019/11/02 22:54:26 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2020/03/23 11:50:22 ryoon Exp $
 
 DISTNAME=	dar-2.4.13
 PKGREVISION=	1
@@ -104,7 +104,7 @@ SUBST_SED.static=	-e 's,-all-static,-static,g'
 .endif
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
-BUILDLINK_TRANSFORM=	l:execinfo:execinfo:elf
+BUILDLINK_TRANSFORM+=	l:execinfo:execinfo:elf
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
