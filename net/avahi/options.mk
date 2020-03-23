@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.15 2020/01/26 12:36:34 nia Exp $
+# $NetBSD: options.mk,v 1.16 2020/03/23 09:22:07 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avahi
 PKG_SUPPORTED_OPTIONS=	avahi-howl gdbm introspection gtk2 gtk3 mono python
 PKG_SUPPORTED_OPTIONS+=	tests
-PKG_SUGGESTED_OPTIONS+=	gtk2
+PKG_SUGGESTED_OPTIONS+=	gtk3
 PLIST_VARS+=		introspection gtk2 gtk3 mono ui
 
 .include "../../mk/bsd.options.mk"
@@ -64,12 +64,10 @@ CONFIGURE_ARGS+=	--disable-mono --disable-monodoc
 ###
 .if !empty(PKG_OPTIONS:Mpython)
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-gtk2
 .  include "../../lang/python/application.mk"
 REPLACE_PYTHON+=	avahi-python/avahi-discover/__init__.py
 .  include "../../lang/python/extension.mk"
 .  include "../../sysutils/py-dbus/buildlink3.mk"
-.  include "../../x11/py-gtk2/buildlink3.mk"
 DEPENDS+=		${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 ### If python and gdbm are enabled we need py-gdbm as well
@@ -81,7 +79,6 @@ PLIST_SRC+=		${PKGDIR}/PLIST.python
 .else
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-python-dbus
-CONFIGURE_ARGS+=	--disable-pygtk
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)
