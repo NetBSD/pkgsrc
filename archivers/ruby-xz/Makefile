@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/05/23 19:22:55 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/03/23 15:23:10 taca Exp $
 
 DISTNAME=	ruby-xz-1.0.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -10,8 +10,6 @@ COMMENT=	Ruby bindings for liblzma
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_NAME}-fiddle>=${RUBY_VERSION}:../../devel/ruby-fiddle
-
-RUBY_VERSIONS_ACCEPTED=	24 25 26
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
