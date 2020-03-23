@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2019/11/04 22:10:15 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/23 15:17:53 taca Exp $
 
-DISTNAME=	squidview-0.80
-PKGREVISION=	3
+DISTNAME=	squidview-0.86
 CATEGORIES=	www
 MASTER_SITES=	http://www.rillion.net/squidview/
 
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
-.include "../../www/squid3/Makefile.common"
+.include "../../www/squid4/Makefile.common"
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	pre-configure
