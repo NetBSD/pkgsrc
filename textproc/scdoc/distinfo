@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/23 02:29:17 riastradh Exp $
+
+SHA1 (scdoc-1.10.1.tar.gz) = 5fbd5a9d9af526d92c71dcef46a220facbc2eabc
+RMD160 (scdoc-1.10.1.tar.gz) = fe7d7ed1859a4bcb989e02435506406cea014d07
+SHA512 (scdoc-1.10.1.tar.gz) = 2b6f86263aa7d2f3b08e00772446f8ae067178b8c4ed6d53cb0ed75a8326eb96288813af5faa403a2fbcbfca131adf6e2ca614bcac90c6c3bf979b6c15ec21ad
+Size (scdoc-1.10.1.tar.gz) = 12447 bytes
