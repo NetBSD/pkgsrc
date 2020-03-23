@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2017/12/14 21:04:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/23 18:32:00 nia Exp $
 
-DISTNAME=	jose-1.8.4
+DISTNAME=	jose-1.10.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=potatosalad/}
+GITHUB_PROJECT=	erlang-jose
 
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://hexdocs.pm/jose/JOSE.html
 COMMENT=	JSON Object Signing and Encryption
 LICENSE=	mpl-2.0
 
-DEPENDS+=	erlang-base64url-[0-9]*:../../devel/erlang-base64url
-
-GITHUB_PROJECT=	erlang-jose
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake
 
