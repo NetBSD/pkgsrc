@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/03/23 02:29:49 riastradh Exp $
+bin/ledger2beancount
+man/man1/ledger2beancount.1
+man/man5/ledger2beancount.5

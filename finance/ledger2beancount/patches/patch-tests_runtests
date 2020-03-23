@@ -1,0 +1,30 @@
+$NetBSD: patch-tests_runtests,v 1.1 2020/03/23 02:29:49 riastradh Exp $
+
+- Let the environment specify SORT so we can set it from the makefile.
+- Avoid C.UTF-8 locale.
+
+--- tests/runtests.orig	2020-02-22 07:25:00.000000000 +0000
++++ tests/runtests
+@@ -3,11 +3,13 @@
+ status=0
+ 
+ # We need sort from coreutils for -V
++if [ -z "${SORT-}" ]; then
+ case `uname -s` in
+ 	Linux*) SORT=sort ;;
+ 	Darwin*) SORT=gsort ;;
+ 	*) SORT=sort ;;
+ esac
++fi
+ 
+ test_conversion () {
+ 	test=$1
+@@ -68,7 +70,7 @@ test_validity_beancount () {
+ 	fi
+ }
+ 
+-export LC_ALL=C.UTF-8
++export LC_ALL=en_US.UTF-8
+ 
+ ledger_version=$(ledger --version 2>/dev/null | grep "^Ledger [0-9]" | cut -d " " -f 2 | cut -d . -f 1)
+ if [ -z $ledger_version ]; then
