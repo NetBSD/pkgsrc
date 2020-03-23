@@ -837,6 +837,29 @@ func (s *Suite) Test_CheckLinesDescr__variables(c *check.C) {
 	test("$@", nil...)
 }
 
+func (s *Suite) Test_CheckLinesDescr__TODO(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpVartypes()
+
+	test := func(text string, diagnostics ...string) {
+		lines := t.NewLines("DESCR",
+			text)
+
+		CheckLinesDescr(lines)
+
+		t.CheckOutput(diagnostics)
+	}
+
+	// See pkgtools/url2pkg/files/url2pkg.py
+	test("TODO: Fill in a short description of the package",
+
+		"ERROR: DESCR:1: DESCR files must not have TODO lines.")
+
+	test("TODO-list is an organizer for everything you need to do, now or later",
+		nil...)
+}
+
 func (s *Suite) Test_CheckLinesMessage__one_line_of_text(c *check.C) {
 	t := s.Init(c)
 
