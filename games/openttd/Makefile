@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2020/03/08 16:49:45 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2020/03/23 10:29:30 nia Exp $
 
 DISTNAME=	openttd-1.9.3-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	https://proxy.binaries.openttd.org/openttd-releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -14,13 +14,15 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c gnu++11
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 BUILD_DEFS+=	VARBASE
 BUILD_TARGET=	bundle
 
 # C++11
 GCC_REQD+=	4.8
+
+BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11 # alloca
 
 CONFIGURE_ARGS+=	--prefix-dir=${PREFIX}
 CONFIGURE_ARGS+=	--binary-dir=bin
