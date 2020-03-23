@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/20 14:35:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/23 17:14:15 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -16,7 +16,9 @@ ${GEM_LIBDIR}/mimemagic.gemspec
 ${GEM_LIBDIR}/script/freedesktop.org.xml
 ${GEM_LIBDIR}/script/generate-mime.rb
 ${GEM_LIBDIR}/test/files/application.gzip
-${GEM_LIBDIR}/test/files/application.vnd.openxmlformats-officedocument.spreadsheetml.sheet
+${GEM_LIBDIR}/test/files/application.vnd.openxmlformats-officedocument.spreadsheetml{gdocs}.sheet
+${GEM_LIBDIR}/test/files/application.vnd.openxmlformats-officedocument.spreadsheetml{msoffice}.sheet
+${GEM_LIBDIR}/test/files/application.vnd.openxmlformats-officedocument.spreadsheetml{rubyxl}.sheet
 ${GEM_LIBDIR}/test/files/application.x-bzip
 ${GEM_LIBDIR}/test/files/application.x-ruby
 ${GEM_LIBDIR}/test/files/application.x-tar
