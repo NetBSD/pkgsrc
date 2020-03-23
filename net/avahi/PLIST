@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/10/27 14:46:09 kamil Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/03/23 09:22:07 nia Exp $
 bin/avahi-browse
 bin/avahi-browse-domains
 ${PLIST.ui}bin/avahi-discover-standalone
@@ -44,7 +44,7 @@ include/avahi-gobject/ga-error.h
 include/avahi-gobject/ga-record-browser.h
 include/avahi-gobject/ga-service-browser.h
 include/avahi-gobject/ga-service-resolver.h
-${PLIST.gtk2}include/avahi-ui/avahi-ui.h
+${PLIST.ui}include/avahi-ui/avahi-ui.h
 ${PLIST.introspection}lib/girepository-1.0/Avahi-0.6.typelib
 ${PLIST.introspection}lib/girepository-1.0/AvahiCore-0.6.typelib
 lib/libavahi-client.la
@@ -79,8 +79,8 @@ man/man1/avahi-resolve-address.1
 man/man1/avahi-resolve-host-name.1
 man/man1/avahi-resolve.1
 man/man1/avahi-set-host-name.1
-${PLIST.ui}man/man1/bssh.1
-${PLIST.ui}man/man1/bvnc.1
+${PLIST.gtk2}man/man1/bssh.1
+${PLIST.gtk2}man/man1/bvnc.1
 man/man5/avahi-daemon.conf.5
 man/man5/avahi.hosts.5
 man/man5/avahi.service.5
