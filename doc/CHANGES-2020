@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1834 2020/03/23 18:34:16 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1835 2020/03/23 18:39:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2491,3 +2491,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/erlang-epam to 1.0.7 [nia 2020-03-23]
 	Updated sysutils/erlang-goldrush to 0.2.0 [nia 2020-03-23]
 	Updated security/erlang-jose to 1.10.1 [nia 2020-03-23]
+	Updated textproc/expat to 2.2.9 [nia 2020-03-23]
