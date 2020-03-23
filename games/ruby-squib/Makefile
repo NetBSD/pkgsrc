@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/26 17:31:17 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/03/23 23:56:43 tnn Exp $
 
 DISTNAME=	squib-0.14.2
 PKGREVISION=	1
@@ -22,7 +22,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-pango>=3.3.8:../../devel/ruby-pango
 DEPENDS+=	${RUBY_PKGPREFIX}-rsvg2>=3.3.8:../../graphics/ruby-rsvg2
 DEPENDS+=	${RUBY_PKGPREFIX}-gobject-introspection>=3.3.8:../../devel/ruby-gobject-introspection
 DEPENDS+=	${RUBY_PKGPREFIX}-gio2>=3.3.8:../../devel/ruby-gio2
-DEPENDS+=	${RUBY_PKGPREFIX}-highline17>=1.7.10<1.8:../../devel/ruby-highline17
+#DEPENDS+=	${RUBY_PKGPREFIX}-highline17>=1.7.10<1.8:../../devel/ruby-highline17
+BROKEN=		"ruby-highline17 was removed"
 
 RUBYGEM_OPTIONS+=	--format-executable
 
