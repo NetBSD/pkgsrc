@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1796 2020/03/23 10:22:35 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1797 2020/03/23 10:36:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2453,3 +2453,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added finance/ledger2beancount version 2.0 [riastradh 2020-03-23]
 	Updated graphics/gd to 2.3.0 [adam 2020-03-23]
 	Removed time/planner [nia 2020-03-23]
+	Removed textproc/gnome-spell [nia 2020-03-23]
