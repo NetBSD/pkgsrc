@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2012/12/14 19:36:37 drochner Exp $
+# $NetBSD: options.mk,v 1.6 2020/03/23 19:37:54 rmind Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.sqlite3
-PKG_SUPPORTED_OPTIONS=		fts icu rtree
+PKG_SUPPORTED_OPTIONS=		fts icu rtree deserialize
 PKG_SUGGESTED_OPTIONS=		fts # enabled in NetBSD builtin version
 
 .include "../../mk/bsd.options.mk"
@@ -18,4 +18,8 @@ LDFLAGS+=	-licui18n -licuuc -licudata
 
 .if !empty(PKG_OPTIONS:Mrtree)
 CFLAGS+=	-DSQLITE_ENABLE_RTREE=1
+.endif
+
+.if !empty(PKG_OPTIONS:Mdeserialize)
+CFLAGS+=	-DSQLITE_ENABLE_DESERIALIZE=1
 .endif
