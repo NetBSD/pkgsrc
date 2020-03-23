@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3067 2020/03/23 02:28:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.3068 2020/03/23 16:42:02 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2676,7 +2676,6 @@ SUBDIR+=	ruby-google-protobuf
 SUBDIR+=	ruby-hashery
 SUBDIR+=	ruby-heckle
 SUBDIR+=	ruby-highline
-SUBDIR+=	ruby-highline17
 SUBDIR+=	ruby-hike
 SUBDIR+=	ruby-hike1
 SUBDIR+=	ruby-hocon
