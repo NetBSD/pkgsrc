@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/06/17 13:51:08 nia Exp $
+@comment $NetBSD: PLIST,v 1.12 2020/03/23 12:01:15 nia Exp $
 bin/stella
 share/applications/stella.desktop
 share/doc/stella/Announce.txt
@@ -41,7 +41,6 @@ share/doc/stella/graphics/eventmapping_devsports.png
 share/doc/stella/graphics/eventmapping_remap.png
 share/doc/stella/graphics/jr_pacman.png
 share/doc/stella/graphics/launcher.png
-share/doc/stella/graphics/launcher_options_files.png
 share/doc/stella/graphics/launcher_options_snapshots.png
 share/doc/stella/graphics/launcher_override.png
 share/doc/stella/graphics/logs.png
@@ -50,12 +49,13 @@ share/doc/stella/graphics/options_audio.png
 share/doc/stella/graphics/options_developer.png
 share/doc/stella/graphics/options_developer_debugger.png
 share/doc/stella/graphics/options_developer_emulation.png
+share/doc/stella/graphics/options_developer_tia.png
 share/doc/stella/graphics/options_developer_timemachine.png
 share/doc/stella/graphics/options_developer_video.png
-share/doc/stella/graphics/options_gameinfo.png
+share/doc/stella/graphics/options_gameinfo_cartridge.png
 share/doc/stella/graphics/options_gameinfo_console.png
 share/doc/stella/graphics/options_gameinfo_controller.png
-share/doc/stella/graphics/options_gameinfo_display.png
+share/doc/stella/graphics/options_gameinfo_emulation.png
 share/doc/stella/graphics/options_misc.png
 share/doc/stella/graphics/options_misc_classic.png
 share/doc/stella/graphics/options_misc_light.png
