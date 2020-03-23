@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2020/03/21 23:15:17 nia Exp $
+# $NetBSD: Makefile,v 1.76 2020/03/23 08:47:45 nia Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -15,10 +15,12 @@ COMMENT=	Qt5 WebView module
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v3
 
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c c++11
-USE_TOOLS+=		perl:build pkg-config
+USE_TOOLS+=		perl:build pkg-config bison
 USE_CMAKE=		yes
 CMAKE_ARG_PATH=		..
 CONFIGURE_DIRS=		_build
