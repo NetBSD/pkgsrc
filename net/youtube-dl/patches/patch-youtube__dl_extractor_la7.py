@@ -1,18 +1,18 @@
-$NetBSD: patch-youtube__dl_extractor_la7.py,v 1.1 2020/01/15 08:22:03 leot Exp $
+$NetBSD: patch-youtube__dl_extractor_la7.py,v 1.2 2020/03/23 20:32:23 leot Exp $
 
-[la7] Fix extraction
+[la7] Fix extraction (closes #23323)
 
 Parsing `videoParams' or `videoLa7' JavaScript snippets as JSON is getting too
-for js_to_json.  Just extract the `vid' from there and use _search_og_* for all
-other data.
+hard for js_to_json.  Just extract the `vid' from there and use _search_og_*
+for all other data.
 
-Update 2nd test with an existent video.
+Remove the 2nd test: unfortunately the page are removed after a couple of
+days/weeks.
+
+Thanks to Elia Geretto for spotting and suggesting several problems with the
+tests!
 
 Closes #23323.
-
-Shared upstream via:
-
- <https://github.com/ytdl-org/youtube-dl/pull/23641>
 
 --- youtube_dl/extractor/la7.py.orig
 +++ youtube_dl/extractor/la7.py
@@ -24,28 +24,30 @@ Shared upstream via:
      smuggle_url,
  )
  
-@@ -31,12 +30,16 @@ class LA7IE(InfoExtractor):
+@@ -23,21 +22,12 @@ class LA7IE(InfoExtractor):
+             'id': '0_42j6wd36',
+             'ext': 'mp4',
+             'title': 'Inc.Cool8',
+-            'description': 'Benvenuti nell\'incredibile mondo della INC. COOL. 8. dove “INC.” sta per “Incorporated” “COOL” sta per “fashion” ed Eight sta per il gesto  atletico',
++            'description': 'Benvenuti nell\'incredibile mondo della INC. COOL. 8. dove “INC.” sta per “Incorporated” “COOL” sta per “fashion” ed Eight sta per il gesto atletico',
+             'thumbnail': 're:^https?://.*',
+             'uploader_id': 'kdla7pillole@iltrovatore.it',
+             'timestamp': 1443814869,
+             'upload_date': '20151002',
          },
-     }, {
-         # 'src' is a dictionary
+-    }, {
+-        # 'src' is a dictionary
 -        'url': 'http://tg.la7.it/repliche-tgla7?id=189080',
 -        'md5': '6b0d8888d286e39870208dfeceaf456b',
-+        'url': 'http://tg.la7.it/repliche-tgla7?id=300465',
-+        'md5': '9440057f4531005c426421487770b756',
-         'info_dict': {
+-        'info_dict': {
 -            'id': '189080',
-+            'id': '0_i2fn53i6',
-             'ext': 'mp4',
+-            'ext': 'mp4',
 -            'title': 'TG LA7',
-+            'title': 'Repliche Tgla7',
-+            'description': 'Repliche Tgla7',
-+            'uploader_id': 'kdla7pillole@iltrovatore.it',
-+            'timestamp': 1578231030,
-+            'upload_date': '20200105',
-         },
+-        },
      }, {
          'url': 'http://www.la7.it/omnibus/rivedila7/omnibus-news-02-07-2016-189077',
-@@ -48,20 +51,19 @@ class LA7IE(InfoExtractor):
+         'only_matching': True,
+@@ -48,20 +38,19 @@ class LA7IE(InfoExtractor):
  
          webpage = self._download_webpage(url, video_id)
  
