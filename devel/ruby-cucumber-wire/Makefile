@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/03/15 17:34:44 taca Exp $
+# $NetBSD: Makefile,v 1.6 2020/03/23 15:33:40 taca Exp $
 
-DISTNAME=	cucumber-wire-2.0.0
+DISTNAME=	cucumber-wire-2.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
