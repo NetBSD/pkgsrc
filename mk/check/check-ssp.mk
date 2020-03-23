@@ -1,6 +1,7 @@
-# $NetBSD: check-ssp.mk,v 1.2 2020/03/23 09:24:35 jperkin Exp $
+# $NetBSD: check-ssp.mk,v 1.3 2020/03/23 09:25:58 jperkin Exp $
 #
-# This file verifies that SSP was applied accordingly at build-time.
+# This file verifies that stack-smashing protection, commonly known as SSP,
+# was applied correctly at build-time.
 #
 # User-settable variables:
 #
