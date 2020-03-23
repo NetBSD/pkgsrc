@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.43 2020/03/10 22:08:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2020/03/23 15:56:55 wiz Exp $
 
 BUILDLINK_TREE+=	avahi
 
@@ -14,10 +14,6 @@ pkgbase := avahi
 
 .if !empty(PKG_BUILD_OPTIONS.avahi:Mgdbm)
 .  include "../../databases/gdbm/buildlink3.mk"
-.endif
-
-.if !empty(PKG_BUILD_OPTIONS.avahi:Mgtk2)
-.include "../../x11/gtk2/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.avahi:Mgtk3)
