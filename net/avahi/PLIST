@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/03/23 11:49:58 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/03/23 15:56:55 wiz Exp $
 bin/avahi-browse
 bin/avahi-browse-domains
 ${PLIST.ui}bin/avahi-discover-standalone
@@ -53,7 +53,6 @@ lib/libavahi-core.la
 lib/libavahi-glib.la
 lib/libavahi-gobject.la
 ${PLIST.gtk3}lib/libavahi-ui-gtk3.la
-${PLIST.gtk2}lib/libavahi-ui.la
 ${PLIST.mono}lib/mono/avahi-sharp/avahi-sharp.dll
 ${PLIST.mono}lib/mono/avahi-ui-sharp/avahi-ui-sharp.dll
 ${PLIST.mono}lib/mono/gac/avahi-sharp/1.0.0.0__4d116c78973743f5/avahi-sharp.dll
@@ -69,7 +68,6 @@ lib/pkgconfig/avahi-gobject.pc
 ${PLIST.mono}lib/pkgconfig/avahi-sharp.pc
 ${PLIST.gtk3}lib/pkgconfig/avahi-ui-gtk3.pc
 ${PLIST.mono}lib/pkgconfig/avahi-ui-sharp.pc
-${PLIST.gtk2}lib/pkgconfig/avahi-ui.pc
 man/man1/avahi-browse-domains.1
 man/man1/avahi-browse.1
 man/man1/avahi-publish-address.1
@@ -79,8 +77,6 @@ man/man1/avahi-resolve-address.1
 man/man1/avahi-resolve-host-name.1
 man/man1/avahi-resolve.1
 man/man1/avahi-set-host-name.1
-${PLIST.gtk2}man/man1/bssh.1
-${PLIST.gtk2}man/man1/bvnc.1
 man/man5/avahi-daemon.conf.5
 man/man5/avahi.hosts.5
 man/man5/avahi.service.5
@@ -92,7 +88,6 @@ sbin/avahi-dnsconfd
 ${PLIST.ui}share/applications/bssh.desktop
 ${PLIST.ui}share/applications/bvnc.desktop
 share/avahi/avahi-service.dtd
-${PLIST.gtk2}${PLIST.ui}share/avahi/interfaces/avahi-discover.ui
 share/avahi/service-types
 share/dbus-1/interfaces/org.freedesktop.Avahi.AddressResolver.xml
 share/dbus-1/interfaces/org.freedesktop.Avahi.DomainBrowser.xml
