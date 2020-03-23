@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2020/03/08 16:49:29 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2020/03/23 12:01:15 nia Exp $
 
-DISTNAME=	stella-6.0.2-src
+DISTNAME=	stella-6.1-src
 PKGNAME=	${DISTNAME:S/-src//1}
-PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stella-emu/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
