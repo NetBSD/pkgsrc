@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.55 2018/09/21 00:59:53 jym Exp $
+# $NetBSD: Makefile,v 1.56 2020/03/23 22:49:53 rillig Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
 COMMENT=		Network UPS Tools
+
+# Don't regenerate any files in tools/.
+TOOLS_SCRIPT.perl=	exit 1
 
 CONFIGURE_ARGS+=	--with-drvpath=${NUT_DRVDIR:Q}
 CONFIGURE_ARGS+=	--with-altpidpath=${NUT_STATEDIR:Q}
