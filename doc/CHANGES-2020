@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1845 2020/03/23 19:55:19 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.1846 2020/03/23 19:57:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2518,3 +2518,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/rvault to version 0.2 [rmind 2020-03-23]
 	Updated editors/dhex to 0.69 [nia 2020-03-23]
 	Updated pkgtools/pkglint to 20.1.0 [rillig 2020-03-23]
+	Updated editors/beaver to 0.4.1 [nia 2020-03-23]
