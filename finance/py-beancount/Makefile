@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/22 21:27:51 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/23 09:41:00 jperkin Exp $
 
 DISTNAME=	beancount-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.10:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-magic>=0.4.12:../../sysutils/py-magic
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-google-api-python-client
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
