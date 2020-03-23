@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2020/03/22 22:32:11 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/23 09:27:34 tnn Exp $
 #
 
 DISTNAME=		libedit-20191231-3.1
 PKGNAME=		editline-3.1.20191231
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://thrysoee.dk/editline/
 
@@ -26,6 +27,23 @@ pre-configure:
 	${CP} ${FILESDIR}/err.h ${BUILDLINK_DIR}/include
 .endif
 	cd ${WRKSRC} && autoreconf -fiv
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.editline
+PKG_SUPPORTED_OPTIONS+=	doc
+PKG_SUGGESTED_OPTIONS+=	# empty; conflicts with devel/readline
+
+.include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	doc
+.if !empty(PKG_OPTIONS:Mdoc)
+PLIST.doc=	yes
+.endif
+
+post-extract:
+.if !empty(PKG_OPTIONS:Mdoc)
+.else
+	${ECHO} "" > ${WRKSRC}/doc/Makefile.am
+.endif
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
