@@ -441,12 +441,19 @@ func CheckLinesDescr(lines *Lines) {
 		}
 	}
 
+	checkTodo := func(line *Line) {
+		if hasPrefix(line.Text, "TODO:") {
+			line.Errorf("DESCR files must not have TODO lines.")
+		}
+	}
+
 	for _, line := range lines.Lines {
 		ck := LineChecker{line}
 		ck.CheckLength(80)
 		ck.CheckTrailingWhitespace()
 		ck.CheckValidCharacters()
 		checkVarRefs(line)
+		checkTodo(line)
 	}
 
 	CheckLinesTrailingEmptyLines(lines)
