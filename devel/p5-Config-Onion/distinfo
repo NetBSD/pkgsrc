@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/23 02:28:24 riastradh Exp $
+
+SHA1 (Config-Onion-1.007.tar.gz) = ce8341c05f96c3a884c74abb216591cbb3800909
+RMD160 (Config-Onion-1.007.tar.gz) = efc1a73eb6473e88820ce018687d54ac1d716aed
+SHA512 (Config-Onion-1.007.tar.gz) = ddafcbfc8da71139954984777a7863351720c81dac03f72f62cab43682867336260a8bbd3543de8b94f034beadd8d7ab25fa28498d73e659f8cf3a88460a378e
+Size (Config-Onion-1.007.tar.gz) = 15676 bytes
