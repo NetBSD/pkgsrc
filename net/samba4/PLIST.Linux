@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST.Linux,v 1.2 2019/04/23 07:42:53 maya Exp $
+@comment $NetBSD: PLIST.Linux,v 1.3 2020/03/23 09:50:19 nia Exp $
 lib/libnss_winbind.so.2
 lib/libnss_wins.so
 lib/libnss_wins.so.2
 lib/samba/vfs/btrfs.so
 lib/samba/vfs/fileid.so
+lib/samba/vfs/glusterfs_fuse.so
+lib/samba/vfs/gpfs.so
 man/man8/vfs_btrfs.8
 man/man8/vfs_fileid.8
+man/man8/vfs_glusterfs_fuse.8
+man/man8/vfs_gpfs.8
