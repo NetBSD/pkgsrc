@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2020/03/16 13:30:57 tnn Exp $
+$NetBSD: distinfo,v 1.10 2020/03/23 08:52:11 triaxx Exp $
 
 SHA1 (mozjs-52.7.4.tar.bz2) = ff009853040bb46017204fda4ed69a79484fd321
 RMD160 (mozjs-52.7.4.tar.bz2) = 71ee71c2444d8b6a1b2b3c744c9f52a2b7129879
@@ -24,3 +24,4 @@ SHA1 (patch-modules_fdlibm_src_math__private.h) = afa40802bfdb917d7906de486eb888
 SHA1 (patch-mozglue_build_moz.build) = f35ffa1a54ccc4cd1ed7983aac792e334c9169b1
 SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = ffb59ddf2d95eb284d24dad3d3aedc7d7f5b5d96
 SHA1 (patch-python_mozbuild_mozbuild_configure_constants.py) = e90a88fba0643d02efb3c399aa22e5b9b225bc02
+SHA1 (patch-python_mozbuild_mozbuild_virtualenv.py) = 9dba53dab604be3c3f611c79bb109d1469222200
