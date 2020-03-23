@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.3 2019/06/08 10:40:53 rillig Exp $
+$NetBSD: distinfo,v 1.4 2020/03/23 19:45:36 nia Exp $
 
-SHA1 (dhex_0.68.tar.gz) = d23d65a7b330b47f8254f6c1ff25a30c4778440e
-RMD160 (dhex_0.68.tar.gz) = 0b5e4232a8f9e0a3ae345a9c1486c335ae7038c2
-SHA512 (dhex_0.68.tar.gz) = 9397ec0574652022387f4108613f839b9262841c436079249fb325011b0a0e3c5bbd32d323f37b0f30e643f7060c1275337710c237ab68fb0c3f8096651a2421
-Size (dhex_0.68.tar.gz) = 58602 bytes
-SHA1 (patch-aa) = 663a11004dc2838797c9d16f5953e500f33f4f65
-SHA1 (patch-ac) = 05a58bbf2202de62699cb1ebee9238dae7e52bc7
+SHA1 (dhex_0.69.tar.gz) = f18020a8fd59839eb735bc8bba2624c9a8a7ae5c
+RMD160 (dhex_0.69.tar.gz) = e963140362f661bb415ae0519dcd62192ab4fa70
+SHA512 (dhex_0.69.tar.gz) = 76115fd6b67bf1f61af6acfbc4dac9ac54c14aeb291de6a190aa1ffa599cf8b3e40a422ed34c237cf1f5c7406b07e38e38fb1c9c9dd36ce93d05265238060ba0
+Size (dhex_0.69.tar.gz) = 57362 bytes
+SHA1 (patch-main.c) = 1e9b3801f5d11373a53e21aa0e98e72cfcc3cc98
