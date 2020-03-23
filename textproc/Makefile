@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1117 2020/03/23 02:28:47 riastradh Exp $
+# $NetBSD: Makefile,v 1.1118 2020/03/23 02:29:17 riastradh Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1050,6 +1050,7 @@ SUBDIR+=	ruby-yard
 SUBDIR+=	sablotron
 SUBDIR+=	sary
 SUBDIR+=	saxon
+SUBDIR+=	scdoc
 SUBDIR+=	scew
 SUBDIR+=	scrollkeeper-dtd
 SUBDIR+=	sdop
