@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/04/26 14:57:57 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/23 20:00:47 nia Exp $
 
-DISTNAME=	dte-1.8.2
+DISTNAME=	dte-1.9.1
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_GITHUB:=craigbarnes/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://craigbarnes.gitlab.io/dist/dte/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/craigbarnes/dte/
+HOMEPAGE=	https://craigbarnes.gitlab.io/dte/
 COMMENT=	Small and easy to use console text editor
 LICENSE=	gnu-gpl-v2
 
