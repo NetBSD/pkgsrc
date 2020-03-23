@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:59:38 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/03/23 19:30:54 nia Exp $
 
-SHA1 (liblrdf-0.5.0.tar.gz) = 1b9fef83ccd9a57372e0859fc79e6cb882d61961
-RMD160 (liblrdf-0.5.0.tar.gz) = cfaeb99114071c1478c69b35fa9acb5d85e8fd69
-SHA512 (liblrdf-0.5.0.tar.gz) = d3bd4d83fb1e53f93817bcfe30aec74f74e46dd98f1d573b7d123ee0cdf3162b27a24ffc8430f71b1616d9ba9af7c88b1b625e7459b30f3941804b56c5cc0cd3
-Size (liblrdf-0.5.0.tar.gz) = 283109 bytes
+SHA1 (liblrdf-0.6.1.tar.gz) = 898440c3f4c6b2714eb4ff5d268dfcc32b180b0a
+RMD160 (liblrdf-0.6.1.tar.gz) = 5db9332b882cbb186e96ff7bf111090b1c0f9534
+SHA512 (liblrdf-0.6.1.tar.gz) = 7732813eec704aef984d056de254e4fa049fdd0a7444b6a88f75f012afe9c587cbd1295f027c77361fa42bc097cdce9d9cabdba6b86e99a3c14805d84258df1c
+Size (liblrdf-0.6.1.tar.gz) = 43878 bytes
 SHA1 (patch-configure.ac) = 3236332b7312e61989caa0bc89738f8e1e698de5
