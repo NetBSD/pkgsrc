@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1831 2020/03/23 18:15:42 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1832 2020/03/23 18:17:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2488,3 +2488,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-net-ping to 2.0.6 [taca 2020-03-23]
 	Updated devel/erlang-ezlib to 1.0.7 [nia 2020-03-23]
 	Updated devel/erlang-base64url to 1.0.1 [nia 2020-03-23]
+	Updated security/erlang-epam to 1.0.7 [nia 2020-03-23]
