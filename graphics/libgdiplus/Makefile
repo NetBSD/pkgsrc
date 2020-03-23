@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2020/03/10 22:10:10 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2020/03/23 19:23:14 nia Exp $
 
-DISTNAME=	libgdiplus-6.0.2
-PKGREVISION=	2
+DISTNAME=	libgdiplus-6.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.mono-project.com/sources/libgdiplus/
 
