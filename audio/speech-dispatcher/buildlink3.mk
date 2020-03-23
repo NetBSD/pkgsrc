@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2020/03/08 16:47:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/03/23 12:18:34 nia Exp $
 
 BUILDLINK_TREE+=	speech-dispatcher
 
@@ -10,6 +10,7 @@ BUILDLINK_ABI_DEPENDS.speech-dispatcher?=		speech-dispatcher>=0.9.1nb2
 BUILDLINK_PKGSRCDIR.speech-dispatcher?=		../../audio/speech-dispatcher
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .endif	# SPEECH_DISPATCHER_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-speech-dispatcher
