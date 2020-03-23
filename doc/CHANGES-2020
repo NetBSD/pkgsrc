@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1824 2020/03/23 17:09:45 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1825 2020/03/23 17:13:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2481,3 +2481,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/ruby-launchy to 2.5.0 [taca 2020-03-23]
 	Updated misc/ruby-method_source to 1.0.0 [taca 2020-03-23]
 	Updated misc/ruby-pry to 0.13.0 [taca 2020-03-23]
+	Updated graphics/ruby-RMagick to 4.1.0 [taca 2020-03-23]
