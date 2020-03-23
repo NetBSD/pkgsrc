@@ -1,0 +1,6 @@
+A script to automatically convert ledger-based textual ledgers
+(finance/ledger) to beancount-based ones (finance/py-beancount).
+
+Conversion is based on (concrete) syntax, so that information that is
+not meaningful for accounting reasons but still valuable (e.g.,
+comments, formatting, etc.) can be preserved.
