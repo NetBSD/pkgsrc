@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/03/23 09:22:07 nia Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/03/23 11:49:58 ryoon Exp $
 bin/avahi-browse
 bin/avahi-browse-domains
 ${PLIST.ui}bin/avahi-discover-standalone
@@ -92,7 +92,7 @@ sbin/avahi-dnsconfd
 ${PLIST.ui}share/applications/bssh.desktop
 ${PLIST.ui}share/applications/bvnc.desktop
 share/avahi/avahi-service.dtd
-${PLIST.ui}share/avahi/interfaces/avahi-discover.ui
+${PLIST.gtk2}${PLIST.ui}share/avahi/interfaces/avahi-discover.ui
 share/avahi/service-types
 share/dbus-1/interfaces/org.freedesktop.Avahi.AddressResolver.xml
 share/dbus-1/interfaces/org.freedesktop.Avahi.DomainBrowser.xml
