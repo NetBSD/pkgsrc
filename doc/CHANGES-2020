@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1798 2020/03/23 10:39:50 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1799 2020/03/23 11:57:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2455,3 +2455,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed time/planner [nia 2020-03-23]
 	Removed textproc/gnome-spell [nia 2020-03-23]
 	Removed time/gnotime [nia 2020-03-23]
+	Updated editors/codelite to 14.0 [nia 2020-03-23]
