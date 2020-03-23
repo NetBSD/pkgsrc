@@ -1,9 +1,23 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:50:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/03/23 19:57:29 nia Exp $
 bin/beaver
+include/beaver.h
+lib/beaver/plugins/ascii.la
+lib/beaver/plugins/sample.la
+lib/beaver/plugins/tools.la
 man/man1/beaver.1
 share/applications/beaver.desktop
-share/beaver/bl/example1.bl
-share/beaver/bl/example2.bl
-share/beaver/bl/glib.bl
-share/pixmaps/beaver/about.xpm
-share/pixmaps/beaver/beaver.png
+share/beaver/pixmaps/about.xpm
+share/beaver/pixmaps/beaver-old.png
+share/beaver/pixmaps/beaver-project-icon.svg
+share/beaver/pixmaps/beaver-project-icon_16.svg
+share/beaver/pixmaps/beaver-project-icon_22.svg
+share/beaver/pixmaps/beaver-project-icon_32.svg
+share/beaver/pixmaps/beaver-project-icon_48.svg
+share/beaver/resource/beaver.conf.default
+share/beaver/resource/standard.xml
+share/beaver/resource/wordfile.default
+share/icons/hicolor/16x16/apps/beaver.png
+share/icons/hicolor/22x22/apps/beaver.png
+share/icons/hicolor/32x32/apps/beaver.png
+share/icons/hicolor/48x48/apps/beaver.png
+share/pixmaps/beaver.png
