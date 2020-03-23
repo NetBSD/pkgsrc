@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1843 2020/03/23 19:44:53 rmind Exp $
+$NetBSD: CHANGES-2020,v 1.1844 2020/03/23 19:45:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2516,3 +2516,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/libgdiplus to 6.0.4 [nia 2020-03-23]
 	Updated textproc/liblrdf to 0.6.1 [nia 2020-03-23]
 	Updated security/rvault to version 0.2 [rmind 2020-03-23]
+	Updated editors/dhex to 0.69 [nia 2020-03-23]
