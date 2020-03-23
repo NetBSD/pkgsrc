@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/23 16:33:50 riastradh Exp $
+
+SHA1 (terraform-0.12.24.tar.gz) = 5b071a240ef20e35cd400097367cb328c9585ec6
+RMD160 (terraform-0.12.24.tar.gz) = cf8193ea9501630446da3cef087b3d6fc81fd363
+SHA512 (terraform-0.12.24.tar.gz) = 026b4c30438459d5fa433ea606e8e020f2ff71ba6e14a5caeecef32f5800a0699cb192ece4bf9b5005b8e0fb2e375f70602d44d94b0b8efa3bac20f9a30e14e6
+Size (terraform-0.12.24.tar.gz) = 10427523 bytes
