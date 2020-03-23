@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/02/20 11:53:28 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.28 2020/03/23 12:10:18 ryoon Exp $
 share/nextcloud/.htaccess
 share/nextcloud/.user.ini
 share/nextcloud/3rdparty/LICENSE INFO
@@ -5036,6 +5036,7 @@ share/nextcloud/apps/dav/lib/CalDAV/Search/Xml/Filter/PropFilter.php
 share/nextcloud/apps/dav/lib/CalDAV/Search/Xml/Filter/SearchTermFilter.php
 share/nextcloud/apps/dav/lib/CalDAV/Search/Xml/Request/CalendarSearchReport.php
 share/nextcloud/apps/dav/lib/CalDAV/WebcalCaching/Plugin.php
+share/nextcloud/apps/dav/lib/CalDAV/WebcalCaching/RefreshWebcalService.php
 share/nextcloud/apps/dav/lib/Capabilities.php
 share/nextcloud/apps/dav/lib/CardDAV/AddressBook.php
 share/nextcloud/apps/dav/lib/CardDAV/AddressBookImpl.php
@@ -8530,6 +8531,7 @@ share/nextcloud/apps/nextcloud_announcements/lib/Notification/Notifier.php
 share/nextcloud/apps/nextcloud_announcements/lib/Settings/Admin.php
 share/nextcloud/apps/nextcloud_announcements/templates/admin.php
 share/nextcloud/apps/notifications/.babelrc.js
+share/nextcloud/apps/notifications/.eslintignore
 share/nextcloud/apps/notifications/COPYING
 share/nextcloud/apps/notifications/appinfo/app.php
 share/nextcloud/apps/notifications/appinfo/info.xml
@@ -12940,6 +12942,9 @@ share/nextcloud/core/doc/user/_images/files_page.png
 share/nextcloud/core/doc/user/_images/files_versioning.png
 share/nextcloud/core/doc/user/_images/gallery-1.png
 share/nextcloud/core/doc/user/_images/gallery-2.png
+share/nextcloud/core/doc/user/_images/gnome-online-accounts.png
+share/nextcloud/core/doc/user/_images/goa-add-nextcloud-account.png
+share/nextcloud/core/doc/user/_images/goa-nextcloud-select.png
 share/nextcloud/core/doc/user/_images/hidden_files.png
 share/nextcloud/core/doc/user/_images/korganizer_credentials.png
 share/nextcloud/core/doc/user/_images/korganizer_resource_choice.png
@@ -12992,6 +12997,7 @@ share/nextcloud/core/doc/user/_sources/pim/calendar.rst.txt
 share/nextcloud/core/doc/user/_sources/pim/contacts.rst.txt
 share/nextcloud/core/doc/user/_sources/pim/index.rst.txt
 share/nextcloud/core/doc/user/_sources/pim/sync_android.rst.txt
+share/nextcloud/core/doc/user/_sources/pim/sync_gnome.rst.txt
 share/nextcloud/core/doc/user/_sources/pim/sync_ios.rst.txt
 share/nextcloud/core/doc/user/_sources/pim/sync_kde.rst.txt
 share/nextcloud/core/doc/user/_sources/pim/sync_osx.rst.txt
@@ -13102,6 +13108,7 @@ share/nextcloud/core/doc/user/pim/calendar.html
 share/nextcloud/core/doc/user/pim/contacts.html
 share/nextcloud/core/doc/user/pim/index.html
 share/nextcloud/core/doc/user/pim/sync_android.html
+share/nextcloud/core/doc/user/pim/sync_gnome.html
 share/nextcloud/core/doc/user/pim/sync_ios.html
 share/nextcloud/core/doc/user/pim/sync_kde.html
 share/nextcloud/core/doc/user/pim/sync_osx.html
