@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST.python,v 1.5 2020/03/23 09:22:07 nia Exp $
+@comment $NetBSD: PLIST.python,v 1.6 2020/03/23 13:23:47 nia Exp $
 ${PYSITELIB}/avahi/__init__.py
 ${PYSITELIB}/avahi/__init__.pyc
 ${PYSITELIB}/avahi/__init__.pyo
 bin/avahi-bookmarks
 man/man1/avahi-bookmarks.1
+${PLIST.ui}share/avahi/interfaces/avahi-discover.ui
