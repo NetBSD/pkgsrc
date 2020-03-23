@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1801 2020/03/23 12:11:12 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1802 2020/03/23 12:25:51 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2458,3 +2458,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/codelite to 14.0 [nia 2020-03-23]
 	Updated emulators/stella to 6.1 [nia 2020-03-23]
 	Updated www/php-nextcloud to 18.0.2 [ryoon 2020-03-23]
+	Updated audio/fasttracker2 to 1.14 [fox 2020-03-23]
