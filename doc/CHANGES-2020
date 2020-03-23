@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1847 2020/03/23 20:01:02 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1848 2020/03/23 20:32:38 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2520,3 +2520,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 20.1.0 [rillig 2020-03-23]
 	Updated editors/beaver to 0.4.1 [nia 2020-03-23]
 	Updated editors/dte to 1.9.1 [nia 2020-03-23]
+	Updated net/youtube-dl to 20200324 [leot 2020-03-23]
