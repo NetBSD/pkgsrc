@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/08/28 09:09:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/03/23 11:57:13 nia Exp $
 bin/codelite
 bin/codelite-cc
 bin/codelite-echo
@@ -65,7 +65,6 @@ share/codelite/PHP.zip
 share/codelite/astyle.sample
 share/codelite/codelite-bitmaps-dark.zip
 share/codelite/codelite-bitmaps-light.zip
-share/codelite/codelite-icons.zip
 share/codelite/config/accelerators.conf.default
 share/codelite/config/build_settings.xml.default
 share/codelite/config/cfg/avr.cfg
