@@ -1,2 +1,12 @@
-TODO: Fill in a short description of the package.
-TODO: It should be between 3 and 20 lines.
+All too often, configuration is not a universal or one-time thing,
+yet most configuration-handling treats it as such. Perhaps you can
+only load one config file. If you can load more than one, you often
+have to load all of them at the same time or each is stored completely
+independently, preventing one from being able to override another.
+Config::Onion changes that.
+
+Config::Onion stores all configuration settings in four layers:
+Defaults, Main, Local, and Override. Each layer can be added to as
+many times as you like. Within each layer, settings which are given
+multiple times will take the last specified value, while those
+which are not repeated will remain untouched.
