@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1913 2020/03/24 17:18:24 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1914 2020/03/24 17:22:11 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2591,3 +2591,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libstree to 0.4.2 [nia 2020-03-24]
 	Removed textproc/ruby-tilt1 [taca 2020-03-24]
 	Updated textproc/ruby-tilt to 2.0.10 [taca 2020-03-24]
+	Updated math/libsvm to 3.24 [nia 2020-03-24]
