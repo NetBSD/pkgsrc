@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/12/06 14:40:58 taca Exp $
+$NetBSD: distinfo,v 1.2 2020/03/24 18:25:55 taca Exp $
 
-SHA1 (puppet-resource_api-1.6.2.gem) = 59238ec2ec33ca99dc65a678fdac44fd1595e19d
-RMD160 (puppet-resource_api-1.6.2.gem) = 4e744c02d7a102a4a82f147041579d262b732d4a
-SHA512 (puppet-resource_api-1.6.2.gem) = 08f49f4a46be3ff652556494d7f0649cbb20431adfc33b1d12bb402e7c6235293c0f50ac0888774cd4420d3ab37be732214d33a02af29c46ca43cc6cf800786f
-Size (puppet-resource_api-1.6.2.gem) = 37888 bytes
+SHA1 (puppet-resource_api-1.8.12.gem) = cb43201efaf4ab193256a322df3a33e1be343a7e
+RMD160 (puppet-resource_api-1.8.12.gem) = a8b1f5d16008060d3628a00e3d74f6acff6979ac
+SHA512 (puppet-resource_api-1.8.12.gem) = 7d6913b03809ed08a5ce613e59d5e383dcec0d2f5f057c3a86d542be52a4f862c84d1e3f66a0fa711fa3493e47c7d7139d58b4e7cb8feaabe4de3901a37a6acc
+Size (puppet-resource_api-1.8.12.gem) = 109056 bytes
