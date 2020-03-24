@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/09/23 16:28:04 taca Exp $
+$NetBSD: distinfo,v 1.5 2020/03/24 17:51:09 taca Exp $
 
-SHA1 (mixlib-log-2.0.4.gem) = fd3b5aa4205881b5430234e5cbbf0f311a528d65
-RMD160 (mixlib-log-2.0.4.gem) = b60ab91f66b88f94f8b55e74269a233e67bb588e
-SHA512 (mixlib-log-2.0.4.gem) = d02e9ea35dd08b144d421c8ccefcaa4882e8b8c09438b5e786cd5ebabf16b9124b51181142f5afb8fc46b83f2a0b7fa73b875459cb42d24d06dcea11d3c1c70f
-Size (mixlib-log-2.0.4.gem) = 16896 bytes
+SHA1 (mixlib-log-3.0.8.gem) = 4e32ce5463ddf424000a280227cd76605a06e699
+RMD160 (mixlib-log-3.0.8.gem) = 982385527f84a9b61ef3e2db104568eca3129151
+SHA512 (mixlib-log-3.0.8.gem) = 55c0c8a3b92e5f295aa83cf320f8b4cdb0cdd26e29a2852f0a2feb7dce5176dba0b893d0eb96931c4bac29e1d696022c69f5b83f3d1c40d8844853812f65f00f
+Size (mixlib-log-3.0.8.gem) = 11776 bytes
