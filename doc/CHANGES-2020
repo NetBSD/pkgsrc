@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1856 2020/03/24 14:01:29 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1857 2020/03/24 14:07:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2532,3 +2532,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/libduktape to 2.5.0 [nia 2020-03-24]
 	Updated lang/duktape to 2.5.0 [nia 2020-03-24]
 	Updated fonts/alee-ttf to 13.3 [nia 2020-03-24]
+	Updated fonts/linux-libertine-ttf to 5.3.0 [nia 2020-03-24]
