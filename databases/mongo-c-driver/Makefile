@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2020/02/06 20:20:42 adam Exp $
+# $NetBSD: Makefile,v 1.42 2020/03/24 14:31:58 adam Exp $
 
-DISTNAME=	mongo-c-driver-1.16.1
+DISTNAME=	mongo-c-driver-1.16.2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -15,6 +15,7 @@ NOT_FOR_PLATFORM+=	OpenBSD-*-*
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
+TEST_TARGET=	check
 
 CMAKE_ARGS+=	-DENABLE_ICU=ON
 #CMAKE_ARGS+=	-DENABLE_MAN_PAGES=ON
