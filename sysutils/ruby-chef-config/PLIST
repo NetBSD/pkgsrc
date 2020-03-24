@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2018/09/23 16:31:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/03/24 18:03:50 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/chef-config.gemspec
 ${GEM_LIBDIR}/lib/chef-config.rb
 ${GEM_LIBDIR}/lib/chef-config/config.rb
+${GEM_LIBDIR}/lib/chef-config/dist.rb
 ${GEM_LIBDIR}/lib/chef-config/exceptions.rb
 ${GEM_LIBDIR}/lib/chef-config/fips.rb
 ${GEM_LIBDIR}/lib/chef-config/logger.rb
