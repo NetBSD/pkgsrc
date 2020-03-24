@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2019/11/04 21:43:47 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/03/24 17:22:32 taca Exp $
 
-DISTNAME=	yard-0.9.20
-CATEGORIES=	ruby textproc
+DISTNAME=	yard-0.9.24
+CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://yardoc.org/
