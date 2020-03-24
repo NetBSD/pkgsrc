@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2018/12/22 17:31:02 taca Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/24 17:18:01 taca Exp $
 
-DISTNAME=	tilt-2.0.9
-PKGREVISION=	1
+DISTNAME=	tilt-2.0.10
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

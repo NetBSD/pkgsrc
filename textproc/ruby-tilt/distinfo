@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2018/12/17 15:10:38 taca Exp $
+$NetBSD: distinfo,v 1.14 2020/03/24 17:18:01 taca Exp $
 
-SHA1 (tilt-2.0.9.gem) = 55a75a80e29731d072fe44dfaf865479b65c27fd
-RMD160 (tilt-2.0.9.gem) = 71b99474d4ce56656696cb50dfb3e85b235cf2cc
-SHA512 (tilt-2.0.9.gem) = 522b2b40ca1eefc7df66cb421c66734699a2ffb1e7d1797181c2718f7ca018d3376c1a2b3617b5d3549115af69108db4c3c4632e2682329d5baf24bfdae92b42
-Size (tilt-2.0.9.gem) = 55296 bytes
+SHA1 (tilt-2.0.10.gem) = d265c822a6b228392d899e9eb5114613d65e6967
+RMD160 (tilt-2.0.10.gem) = fa77229cb4d136d248ea88b96d2918df71ed0b46
+SHA512 (tilt-2.0.10.gem) = d2e0e1976da24ea4d8581d29a3ac2c0772c2e42f1cd04c48f1e3c1745a14d7cd319f14cead3e5341ec0f6c07aa216b50c29ad96984a85a9757ff9f7cc89b80df
+Size (tilt-2.0.10.gem) = 22528 bytes
