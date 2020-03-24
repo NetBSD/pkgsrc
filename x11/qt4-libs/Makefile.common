@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2020/03/18 21:55:23 tnn Exp $
+# $NetBSD: Makefile.common,v 1.52 2020/03/24 19:45:47 gdt Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -153,6 +153,11 @@ SUBST_SED.lt+=		-e 's,$$$${first(QMAKE_EXT_OBJ)},.lo,'
 .if !empty(CC_VERSION:Mgcc-2.8*)
 CXXFLAGS+=		-DQ_INLINE_TEMPLATES=inline
 .endif
+
+# Remove files with portability issues, thereby ~proving they are not used in the build.
+post-extract:
+	rm ${WRKSRC}/src/3rdparty/webkit/Source/JavaScriptCore/gyp/generate-dtrace-header.sh
+	rm ${WRKSRC}/src/3rdparty/webkit/Source/WebCore/gyp/streamline-inspector-source.sh
 
 pre-configure:
 	sed	-e 's:@LOCALBASE@:${LOCALBASE}:g' \
