@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1896 2020/03/24 16:32:32 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1897 2020/03/24 16:35:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2573,3 +2573,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/libmicrohttpd to 0.9.70 [nia 2020-03-24]
 	Updated sysutils/capistrano to 3.12.1 [taca 2020-03-24]
 	Updated sysutils/ruby-childprocess to 3.0.0 [taca 2020-03-24]
+	Updated multimedia/libbluray to 1.2.0 [adam 2020-03-24]
+	Updated print/ghostscript-agpl to 9.52 [adam 2020-03-24]
