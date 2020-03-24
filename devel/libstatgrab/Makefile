@@ -1,20 +1,15 @@
-# $NetBSD: Makefile,v 1.35 2019/08/11 13:18:46 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2020/03/24 16:54:37 nia Exp $
 
-DISTNAME=	libstatgrab-0.91
-PKGREVISION=	3
+DISTNAME=	libstatgrab-0.92
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.uk.i-scream.org/pub/i-scream/libstatgrab/
-MASTER_SITES+=	ftp://ftp.i-scream.org/pub/i-scream/libstatgrab/
-MASTER_SITES+=	http://ftp.i-scream.org/pub/i-scream/libstatgrab/
-MASTER_SITES+=	http://www.mirrorservice.org/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/
-MASTER_SITES+=	http://dl.ambiweb.de/mirrors/ftp.i-scream.org/libstatgrab/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libstatgrab/}
+GITHUB_PROJECT=	libstatgrab
+GITHUB_RELEASE=	LIBSTATGRAB_${PKGVERSION_NOREV:S/./_/g}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.i-scream.org/libstatgrab/
+HOMEPAGE=	https://libstatgrab.org/
 COMMENT=	Provides a useful interface to system statistics
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
-
-.include "options.mk"
 
 CPPFLAGS.NetBSD+=	-D_KERNTYPES
 
@@ -37,5 +32,6 @@ CHECK_BUILTIN.pthread:= yes
 .include "../../mk/pthread.builtin.mk"
 CHECK_BUILTIN.pthread:= no
 
+.include "options.mk"
 .include "../../devel/log4cplus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
