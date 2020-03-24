@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.53 2019/11/04 08:13:50 wiz Exp $
+$NetBSD: distinfo,v 1.54 2020/03/24 17:30:34 nia Exp $
 
-SHA1 (libtasn1-4.14.tar.gz) = 4ce6a70a40f50a2c29a62bbf1c0c5b6e306ca4e3
-RMD160 (libtasn1-4.14.tar.gz) = bb9ed36d7d07b08fd1f7cb6d42e7a63f949b0721
-SHA512 (libtasn1-4.14.tar.gz) = efdcf3729e9e057cafbfdc9929f08531de03cf3b64e7db62cb53c26bf34c8db4d73786fd853620ab1a10dbafe55e119ad17bfeb40e191071945c7b4db9c9e223
-Size (libtasn1-4.14.tar.gz) = 1771184 bytes
-SHA1 (patch-lib_ASN1.y) = 5d8cf15002d29feba370e7e44397df663ee24bb0
-SHA1 (patch-src_Makefile.in) = b1385b2cdc56bfdc9ef3c9ce451f18eae20a2a91
+SHA1 (libtasn1-4.16.0.tar.gz) = f4f1fc301c0835389d9db7754815e48f4f57937a
+RMD160 (libtasn1-4.16.0.tar.gz) = f35e54581ac47cb4569edb72fabbe6387c9e1104
+SHA512 (libtasn1-4.16.0.tar.gz) = b356249535d5d592f9b59de39d21e26dd0f3f00ea47c9cef292cdd878042ea41ecbb7c8d2f02ac5839f5210092fe92a25acd343260ddf644887b031b167c2e71
+Size (libtasn1-4.16.0.tar.gz) = 1812442 bytes
