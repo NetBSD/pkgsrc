@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1854 2020/03/24 13:49:26 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1855 2020/03/24 13:49:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2530,3 +2530,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cdk to 5.0.20200228 [nia 2020-03-24]
 	Added lang/neko version 2.3.0 [nia 2020-03-24]
 	Updated lang/libduktape to 2.5.0 [nia 2020-03-24]
+	Updated lang/duktape to 2.5.0 [nia 2020-03-24]
