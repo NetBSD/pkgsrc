@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2019/11/04 21:28:51 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/03/24 18:27:42 taca Exp $
 
-DISTNAME=		puppet-5.5.2
+DISTNAME=		puppet-6.14.0
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
@@ -9,13 +9,20 @@ HOMEPAGE=		http://www.puppetlabs.com/
 COMMENT=		Configuration management framework written in Ruby
 LICENSE=		apache-2.0
 
-DEPENDS+=	${RUBY_PKGPREFIX}-facter>=1.7.0<4:../../sysutils/ruby-facter
-DEPENDS+=	${RUBY_PKGPREFIX}-hiera>=1.0.0<4:../../databases/ruby-hiera
-DEPENDS+=	${RUBY_PKGPREFIX}-fast_gettext>=1.1.2:../../devel/ruby-fast_gettext
+DEPENDS+=	${RUBY_PKGPREFIX}-facter>=2.0.1<5:../../sysutils/ruby-facter
+DEPENDS+=	${RUBY_PKGPREFIX}-hiera>=3.2.1<4:../../databases/ruby-hiera
+DEPENDS+=	${RUBY_PKGPREFIX}-semantic_puppet>=1.0<2:../../devel/ruby-semantic_puppet
+DEPENDS+=	${RUBY_PKGPREFIX}-fast_gettext>=1.1:../../devel/ruby-fast_gettext
 DEPENDS+=	${RUBY_PKGPREFIX}-locale>=2.1<3:../../devel/ruby-locale
 DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.10<2:../../textproc/ruby-multi_json
+DEPENDS+=	${RUBY_PKGPREFIX}-httpclient>=2.8<3:../../www/ruby-httpclient
+DEPENDS+=	${RUBY_PKGPREFIX}-puppet-resource_api>=1.5<2:../../sysutils/ruby-puppet-resource_api
+DEPENDS+=	${RUBY_PKGPREFIX}-concurrent-ruby>=1.0<2:../../devel/ruby-concurrent-ruby
+DEPENDS+=	${RUBY_PKGPREFIX}-deep_merge>=1.0<2:../../devel/ruby-deep_merge
 
 RUBYGEM_OPTIONS+=	--format-executable
+OVERRIDE_GEMSPEC+=	fast_gettext>=1.1
+USE_LANAUGES=		# none
 
 PKG_SYSCONFSUBDIR=	puppet
 RCD_SCRIPTS=		puppetd puppetmasterd
