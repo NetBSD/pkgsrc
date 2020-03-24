@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2017/07/05 19:43:52 wiedi Exp $
+$NetBSD: distinfo,v 1.15 2020/03/24 16:54:37 nia Exp $
 
-SHA1 (libstatgrab-0.91.tar.gz) = dd443de8556ca4760c7e33f384208167b266b9cd
-RMD160 (libstatgrab-0.91.tar.gz) = cc2b99cc8be559b2253088a8091b2ae71908c690
-SHA512 (libstatgrab-0.91.tar.gz) = f360f2e1b185bf9603b1d9c50649b0050e9502128ff81a9f4de88457e2f5203deafe7fd7ac13ebc4cc56e6ecd1bdf8aacae64987bdf36af0c9929e30626915f6
-Size (libstatgrab-0.91.tar.gz) = 776046 bytes
+SHA1 (libstatgrab-0.92.tar.gz) = e929bf6d4566ad2cf30a878eb972c8583deef959
+RMD160 (libstatgrab-0.92.tar.gz) = 34d0e0fbfbff6879e866a79cfd02c4649f87317a
+SHA512 (libstatgrab-0.92.tar.gz) = a99c6be56d930779d0d8f6f81e64e2f31e19423009c39e925b39116a42aa2c6037651992ac2168c43a5c6ecadf3e4a58486ab6148cf96118c429b04fdcf65192
+Size (libstatgrab-0.92.tar.gz) = 815262 bytes
 SHA1 (patch-src_libstatgrab_tools.h) = 873a7f8e067561b0c4184fb9d4cbecbc59690b73
