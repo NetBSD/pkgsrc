@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/09/23 15:59:57 taca Exp $
+$NetBSD: distinfo,v 1.4 2020/03/24 15:28:20 taca Exp $
 
-SHA1 (ruby_smb-1.0.4.gem) = 612f229f870aacec7a03281b64605126fd827bf4
-RMD160 (ruby_smb-1.0.4.gem) = f1d765c30b55f2e8ce8f9bc6418b111bd6be1b64
-SHA512 (ruby_smb-1.0.4.gem) = 37261edbeedda8d00e5e02ff7d871bc2de0c4dd576971021f835ae4074e6fdec0c144ae028a65f865b919d752a2c0b51cd24e49fbc7788dbf373a45ee8c023fb
-Size (ruby_smb-1.0.4.gem) = 156672 bytes
+SHA1 (ruby_smb-1.1.0.gem) = 35edf0d89721590e2d02037b255ddb3a75064cd8
+RMD160 (ruby_smb-1.1.0.gem) = 2fbf8b97426ea8969adf2a844efe56b826a9b43c
+SHA512 (ruby_smb-1.1.0.gem) = 038ca625b580ac32455d08c675a5d7319e320944fe3aef6ed7272872fdc6affbbf2bda325897369cb23d4d62e24923a74b13fe392017854c6c5b9889c5e003f6
+Size (ruby_smb-1.1.0.gem) = 175104 bytes
