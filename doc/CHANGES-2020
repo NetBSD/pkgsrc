@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1935 2020/03/24 18:26:21 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1936 2020/03/24 18:28:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2615,3 +2615,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/mythes to 1.2.4 [nia 2020-03-24]
 	Updated sysutils/ncdu to 1.14.2 [nia 2020-03-24]
 	Updated sysutils/ruby-puppet-resource_api to 1.8.12 [taca 2020-03-24]
+	Updated sysutils/puppet to 6.14.0 [taca 2020-03-24]
