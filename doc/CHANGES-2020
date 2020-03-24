@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1915 2020/03/24 17:22:53 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1916 2020/03/24 17:24:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2593,3 +2593,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-tilt to 2.0.10 [taca 2020-03-24]
 	Updated math/libsvm to 3.24 [nia 2020-03-24]
 	Updated textproc/ruby-yard to 0.9.24 [taca 2020-03-24]
+	Updated textproc/ruby-unicode-display_width to 1.7.0 [taca 2020-03-24]
