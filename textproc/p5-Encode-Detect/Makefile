@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/03/24 05:49:40 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/03/24 05:51:19 rillig Exp $
 #
 
 DISTNAME=		Encode-Detect-1.01
@@ -19,6 +19,7 @@ USE_LANGUAGES+=		c c++
 PERL5_PACKLIST=		auto/Encode/Detect/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
+# https://rt.cpan.org/Public/Bug/Display.html?id=132207
 SUBST_CLASSES+=		char
 SUBST_STAGE.char=	pre-configure
 SUBST_MESSAGE.char=	Fixing 'char array subscript' errors.
