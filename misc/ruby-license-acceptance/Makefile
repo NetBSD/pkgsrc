@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/19 15:38:45 taca Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/24 17:58:03 taca Exp $
 
-DISTNAME=	license-acceptance-1.0.13
+DISTNAME=	license-acceptance-1.0.18
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
