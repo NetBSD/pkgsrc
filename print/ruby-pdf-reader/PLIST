@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/03/14 15:31:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/03/24 15:40:56 taca Exp $
 bin/pdf_callbacks${RUBY_SUFFIX}
 bin/pdf_object${RUBY_SUFFIX}
 bin/pdf_text${RUBY_SUFFIX}
@@ -23,7 +23,6 @@ ${GEM_LIBDIR}/examples/rspec.rb
 ${GEM_LIBDIR}/examples/text.rb
 ${GEM_LIBDIR}/examples/version.rb
 ${GEM_LIBDIR}/lib/pdf-reader.rb
-${GEM_LIBDIR}/lib/pdf/hash.rb
 ${GEM_LIBDIR}/lib/pdf/reader.rb
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Courier-Bold.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Courier-BoldOblique.afm
@@ -70,6 +69,7 @@ ${GEM_LIBDIR}/lib/pdf/reader/object_cache.rb
 ${GEM_LIBDIR}/lib/pdf/reader/object_hash.rb
 ${GEM_LIBDIR}/lib/pdf/reader/object_stream.rb
 ${GEM_LIBDIR}/lib/pdf/reader/orientation_detector.rb
+${GEM_LIBDIR}/lib/pdf/reader/overlapping_runs_filter.rb
 ${GEM_LIBDIR}/lib/pdf/reader/page.rb
 ${GEM_LIBDIR}/lib/pdf/reader/page_layout.rb
 ${GEM_LIBDIR}/lib/pdf/reader/page_state.rb
