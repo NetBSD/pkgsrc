@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1937 2020/03/24 18:30:45 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1938 2020/03/24 18:35:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2617,3 +2617,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ruby-puppet-resource_api to 1.8.12 [taca 2020-03-24]
 	Updated sysutils/puppet to 6.14.0 [taca 2020-03-24]
 	Updated devel/ruby-thor to 1.0.1 [taca 2020-03-24]
+	Updated sysutils/ruby-facter to 4.0.12 [taca 2020-03-24]
