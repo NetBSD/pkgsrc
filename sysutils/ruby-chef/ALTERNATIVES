@@ -1,6 +1,1 @@
-bin/chef-apply @PREFIX@/bin/chef-apply@RUBY_SUFFIX@
-bin/chef-client @PREFIX@/bin/chef-client@RUBY_SUFFIX@
-bin/chef-shell @PREFIX@/bin/chef-shell@RUBY_SUFFIX@
-bin/chef-resource-inspector @PREFIX@/bin/chef-resource-inspector@RUBY_SUFFIX@
-bin/chef-solo @PREFIX@/bin/chef-solo@RUBY_SUFFIX@
 bin/knife @PREFIX@/bin/knife@RUBY_SUFFIX@
