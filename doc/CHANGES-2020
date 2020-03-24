@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1903 2020/03/24 16:57:26 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1904 2020/03/24 16:59:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2581,3 +2581,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-kramdown-parser-gfm to 1.1.0 [taca 2020-03-24]
 	Updated devel/libstatgrab to 0.92 [nia 2020-03-24]
 	Updated textproc/ruby-multi_json to 1.14.1 [taca 2020-03-24]
+	Updated textproc/ruby-plist to 3.5.0 [taca 2020-03-24]
