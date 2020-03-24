@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:59:41 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/03/24 18:18:15 nia Exp $
 
-SHA1 (mythes-1.2.3.tar.gz) = 8a5d58aa4bb8752375eff51db9f701c269d1831e
-RMD160 (mythes-1.2.3.tar.gz) = b89878cad47646db5562d76c81f458612a58433c
-SHA512 (mythes-1.2.3.tar.gz) = b0ab3298875c6ce542cce2463f64c680c259847a12296e51551b3823e1ebc74fe1c008991eda980fe0b7a23fdf209a20285848332ff811006e1e9c16505a8949
-Size (mythes-1.2.3.tar.gz) = 4910188 bytes
+SHA1 (mythes-1.2.4.tar.gz) = c038831d84882cdf639e038e44decb1e40527591
+RMD160 (mythes-1.2.4.tar.gz) = 4bf022808a362c0711ec857787bc3376e9adb940
+SHA512 (mythes-1.2.4.tar.gz) = a04da39812bcfb1391a2cba7de73e955eafe141679ec03ed6657d03bebf360b432480d0037dff9ed72a1dfda5a70d77d44ac2bb14cdb109fd8e2a38376feee21
+Size (mythes-1.2.4.tar.gz) = 4910303 bytes
