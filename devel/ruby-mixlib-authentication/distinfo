@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/09/23 16:27:15 taca Exp $
+$NetBSD: distinfo,v 1.6 2020/03/24 17:48:28 taca Exp $
 
-SHA1 (mixlib-authentication-2.1.1.gem) = 023b459f0bf08635d13a0f3d7d82c631d9197a6b
-RMD160 (mixlib-authentication-2.1.1.gem) = aafbc30b32b23d69cbb990366bb2072c9196225e
-SHA512 (mixlib-authentication-2.1.1.gem) = 6496450ebf6f8ac5b72230827025a137803d02c3942602df78b24c1e9b271c6a25bcb477fa3260fcecff2b1f2ece170581aaff6745c65702edea7053169428c9
-Size (mixlib-authentication-2.1.1.gem) = 25088 bytes
+SHA1 (mixlib-authentication-3.0.4.gem) = 2c5ff0ad07e99c0c0a592e82c5cf5bf931635116
+RMD160 (mixlib-authentication-3.0.4.gem) = 1d24dac29444c22ddb0ed1365c4ebf66f4ce8ac5
+SHA512 (mixlib-authentication-3.0.4.gem) = e95b05cb233bd35a588b20969aa61f2a9a1fc5ef1e857a4196472def820ec50ef3a3650975efdb4222217ceddddde43064ad379f2c469a17226d58085ee1c2f1
+Size (mixlib-authentication-3.0.4.gem) = 15872 bytes
