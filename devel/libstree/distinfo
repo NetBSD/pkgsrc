@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:27:45 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/03/24 17:15:47 nia Exp $
 
-SHA1 (libstree-0.4.0.tar.gz) = b6df1ff749d8d402deaf73a918bb10efffc8dd08
-RMD160 (libstree-0.4.0.tar.gz) = 92e0e999a20ee02510e5bc1d2cd243132d034b74
-SHA512 (libstree-0.4.0.tar.gz) = f9f6c610cad7964072cb5a1951308394d964a3da7957bf29de3c3cdaf426b850dec029c4551967fd4261a46da01ea611fd299573a6f019d9ef776a8c79d9a5be
-Size (libstree-0.4.0.tar.gz) = 253700 bytes
+SHA1 (libstree-0.4.2.tar.gz) = b35bc18fbbc43bec1415bc1d884708e1df7bf2c6
+RMD160 (libstree-0.4.2.tar.gz) = d8050168b3988bcc49eb2adcf8967fd6e39bc28f
+SHA512 (libstree-0.4.2.tar.gz) = ab77ff94600e96e61629cf5d8d988528070a5412573ab0b24c7a1c65c530aaf9a2a633d17dc2cf3c268dc539746f5150d87d0226a5c02d10280edd8e8ef5f566
+Size (libstree-0.4.2.tar.gz) = 334483 bytes
 SHA1 (patch-src_lst__string.c) = 7a368536570c54d34d06f4629dd3e8a32820a143
