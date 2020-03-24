@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.16 2018/01/01 22:29:29 rillig Exp $
-share/doc/alee-ttf/COPYING
+@comment $NetBSD: PLIST,v 1.17 2020/03/24 14:01:18 nia Exp $
 share/fonts/X11/TTF/Bandal.ttf
 share/fonts/X11/TTF/Bangwool.ttf
 share/fonts/X11/TTF/Eunjin.ttf
 share/fonts/X11/TTF/EunjinNakseo.ttf
 share/fonts/X11/TTF/Guseul.ttf
+@pkgdir share/fonts/X11/OTF
