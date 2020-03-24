@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1867 2020/03/24 15:12:22 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1868 2020/03/24 15:24:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2544,3 +2544,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-netaddr to 2.0.4 [taca 2020-03-24]
 	Updated multimedia/libdvdread to 6.1.0 [nia 2020-03-24]
 	Updated net/ruby-nio4r to 2.5.2 [taca 2020-03-24]
+	Updated net/ruby-recog to 2.3.7 [taca 2020-03-24]
