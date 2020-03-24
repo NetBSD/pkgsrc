@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.19 2018/01/17 18:37:34 markd Exp $
+$NetBSD: patch-aq,v 1.20 2020/03/24 20:38:03 joerg Exp $
 
 --- configure.orig	2015-05-07 14:14:56.000000000 +0000
 +++ configure
@@ -92,16 +92,28 @@ $NetBSD: patch-aq,v 1.19 2018/01/17 18:37:34 markd Exp $
  		;;
  	    3.4*)
  		canBuildQtXmlPatterns="no"
-@@ -7734,7 +7747,7 @@ case "$XPLATFORM" in
-     *-g++*)
- 	# Check gcc's version
- 	case "$(${QMAKE_CONF_COMPILER} -dumpversion)" in
+@@ -7731,20 +7744,6 @@ case "$XPLATFORM" in
+ 	canBuildWebKit="no"
+ 	canBuildQtXmlPatterns="no"
+ 	;;
+-    *-g++*)
+-	# Check gcc's version
+-	case "$(${QMAKE_CONF_COMPILER} -dumpversion)" in
 -	    5*|4*|3.4*)
-+	    [4-9]*|3.4*)
- 		;;
-             3.3*)
-                 canBuildWebKit="no"
-@@ -7981,7 +7994,7 @@ fi
+-		;;
+-            3.3*)
+-                canBuildWebKit="no"
+-                ;;
+-	    *)
+-		canBuildWebKit="no"
+-		canBuildQtXmlPatterns="no"
+-		;;
+-	esac
+-	;;
+     solaris-cc*)
+         # Check the compiler version
+         case `${QMAKE_CONF_COMPILER} -V 2>&1 | awk '{print $4}'` in
+@@ -7981,7 +7980,7 @@ fi
  # env. variable.
  if [ "$PLATFORM_MAC" = "yes" ] && [ "$CFG_MAC_XARCH" != "no" ]; then
      case "$PLATFORM" in
@@ -110,7 +122,7 @@ $NetBSD: patch-aq,v 1.19 2018/01/17 18:37:34 markd Exp $
          # Avoid overriding the default settings when building clang/libc++.
          ;;
      *)
-@@ -8050,7 +8063,7 @@ g++*)
+@@ -8050,7 +8049,7 @@ g++*)
      3.*)
          COMPILER_VERSION="3.*"
          ;;
@@ -119,7 +131,7 @@ $NetBSD: patch-aq,v 1.19 2018/01/17 18:37:34 markd Exp $
          COMPILER_VERSION="4"
          ;;
      *)
-@@ -8485,7 +8498,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
+@@ -8485,7 +8484,7 @@ QMakeVar set sql-plugins "$SQL_PLUGINS"
  [ "$CFG_EXCEPTIONS" = "no" ] && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_EXCEPTIONS"
  [ "$CFG_IPV6" = "no" ]       && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_IPV6"
  [ "$CFG_SXE" = "no" ]        && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_NO_SXE"
@@ -128,7 +140,7 @@ $NetBSD: patch-aq,v 1.19 2018/01/17 18:37:34 markd Exp $
  
  if [ "$PLATFORM_QWS" != "yes" -a "$PLATFORM_QPA" != "yes" ]; then
      [ "$CFG_GRAPHICS_SYSTEM" = "raster" ] && QCONFIG_FLAGS="$QCONFIG_FLAGS QT_GRAPHICSSYSTEM_RASTER"
-@@ -8701,6 +8714,7 @@ cat >>"$QTCONFIG.tmp" <<EOF
+@@ -8701,6 +8700,7 @@ cat >>"$QTCONFIG.tmp" <<EOF
  #configuration
  CONFIG += $QTCONFIG_CONFIG
  QT_ARCH = $CFG_ARCH
