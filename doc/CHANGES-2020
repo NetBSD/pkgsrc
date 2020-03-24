@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1899 2020/03/24 16:47:25 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1900 2020/03/24 16:50:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2577,3 +2577,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/ghostscript-agpl to 9.52 [adam 2020-03-24]
 	Updated sysutils/ruby-listen to 3.2.1 [taca 2020-03-24]
 	Updated textproc/ruby-erubi to 1.9.0 [taca 2020-03-24]
+	Updated textproc/ruby-haml to 5.1.2 [taca 2020-03-24]
