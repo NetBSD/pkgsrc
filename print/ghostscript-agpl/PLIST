@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/05/06 14:53:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/03/24 16:34:45 adam Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -518,6 +518,7 @@ share/ghostscript/${PKGVERSION}/lib/mkcidfm.ps
 share/ghostscript/${PKGVERSION}/lib/necp2x.upp
 share/ghostscript/${PKGVERSION}/lib/necp2x6.upp
 share/ghostscript/${PKGVERSION}/lib/pdf2dsc.ps
+share/ghostscript/${PKGVERSION}/lib/pdf_info.ps
 share/ghostscript/${PKGVERSION}/lib/pf2afm.ps
 share/ghostscript/${PKGVERSION}/lib/pfbtopfa.ps
 share/ghostscript/${PKGVERSION}/lib/ppath.ps
