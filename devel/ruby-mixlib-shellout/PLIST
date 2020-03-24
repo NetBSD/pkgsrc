@@ -1,15 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2015/11/29 14:20:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/24 17:52:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/mixlib/shellout.rb
 ${GEM_LIBDIR}/lib/mixlib/shellout/exceptions.rb
 ${GEM_LIBDIR}/lib/mixlib/shellout/unix.rb
 ${GEM_LIBDIR}/lib/mixlib/shellout/version.rb
 ${GEM_LIBDIR}/lib/mixlib/shellout/windows.rb
 ${GEM_LIBDIR}/lib/mixlib/shellout/windows/core_ext.rb
-${GEM_LIBDIR}/mixlib-shellout-windows.gemspec
-${GEM_LIBDIR}/mixlib-shellout.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
