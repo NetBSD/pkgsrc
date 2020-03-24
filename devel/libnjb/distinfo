@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:43 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/03/24 16:44:41 nia Exp $
 
-SHA1 (libnjb-2.2.6.tar.gz) = 339c24b1c007d914d2d4969315a3e128603a046a
-RMD160 (libnjb-2.2.6.tar.gz) = 9a81674daa7b0163682ef7bc40cc852c7b69ea8d
-SHA512 (libnjb-2.2.6.tar.gz) = c079abcf5d2c1fd56dfd6da6a7bf08d1f35e365b6186072f526980a49d8f72cf04c79381eda4fbada5ca467ae6c9e96c6e3a13b753937040530f6e6c61b012f2
-Size (libnjb-2.2.6.tar.gz) = 504329 bytes
+SHA1 (libnjb-2.2.7.tar.gz) = 7acd42b4e3e6edf8d48fcd758eb21ad0eb4aee38
+RMD160 (libnjb-2.2.7.tar.gz) = 2772db533bc05575fa1bb6df84037925ecbb016c
+SHA512 (libnjb-2.2.7.tar.gz) = d217beb772024ec122739327dae9f1e991ace4c3dfe79a4960d1d7421c3d663f924304331025a1790ea7b697ac84d8926f3ab507c6d919e781e90ca82ef6fd06
+Size (libnjb-2.2.7.tar.gz) = 497862 bytes
 SHA1 (patch-aa) = 5fd79fd8b8281c9b819bb77de481d8fbfa620226
