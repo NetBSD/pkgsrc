@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2018/12/15 21:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/24 15:55:19 nia Exp $
 
-DISTNAME=	liblogging-1.0.5
+DISTNAME=	liblogging-1.0.6
 CATEGORIES=	sysutils
-MASTER_SITES=	http://download.rsyslog.com/liblogging/
+MASTER_SITES=	https://download.rsyslog.com/liblogging/
 
 MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	http://www.liblogging.org/
