@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/03/23 14:27:08 taca Exp $
+$NetBSD: distinfo,v 1.7 2020/03/24 15:06:30 taca Exp $
 
-SHA1 (netaddr-2.0.3.gem) = db1ba5f972cd1e49b6a75d40342b0067990069ca
-RMD160 (netaddr-2.0.3.gem) = a60309b10e42da2dc641f0fce0f6d7fd151b328b
-SHA512 (netaddr-2.0.3.gem) = 9841cd4d76a3d72c3c38d5048210b74403d541fc1550e5de9e5eea42f52033b02e83b1865930ffb094db627790f4e00ee94d9050e9f6a36e1973618ebac525bd
-Size (netaddr-2.0.3.gem) = 22016 bytes
+SHA1 (netaddr-2.0.4.gem) = 98665225a56e00463203b68db8fe788a546e2c05
+RMD160 (netaddr-2.0.4.gem) = cea747fb584844e94a75f4b513f0f09ddd318146
+SHA512 (netaddr-2.0.4.gem) = 32706b85df93ce8cbec8fcb1af16388e42e2b1f8dfcdf1bd35882bdac77f1329366b209391fcf37abedb36d7e40582e6154d8f439136625f2c603a9f0a98788a
+Size (netaddr-2.0.4.gem) = 22016 bytes
