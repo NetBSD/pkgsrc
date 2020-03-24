@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.5 2019/09/08 12:34:38 nia Exp $
+$NetBSD: distinfo,v 1.6 2020/03/24 15:52:38 nia Exp $
 
-SHA1 (emulationstation-2.7.6.tar.gz) = d340b3092be0f041f850596f0959e45125ddfe68
-RMD160 (emulationstation-2.7.6.tar.gz) = 0ca33e9028a8d4ccd7bb2f330ae033385884eaa4
-SHA512 (emulationstation-2.7.6.tar.gz) = 9df1573d172b8a77a478283fad040d4ed535ba5ca90cf1d215e2d2eb0d258247e57c732a99034dc58d4b12afba2892d34f9f6c36c47a1b155b6328d4246e7cd9
-Size (emulationstation-2.7.6.tar.gz) = 1048857 bytes
+SHA1 (emulationstation-2.9.0.tar.gz) = f57e3cf13c4d58262c477dfc89f93177ce1395e3
+RMD160 (emulationstation-2.9.0.tar.gz) = af4d9cda5146ed5cd80be5263d1822f527f59e67
+SHA512 (emulationstation-2.9.0.tar.gz) = e48b0338578b4840f633dbeffc692b3a225b448bf02e5770f2fe8ebf0d27bd8447bff69abbefe4864ec402f057f75b023f165bf708150ec7be0c8d632ac2156a
+Size (emulationstation-2.9.0.tar.gz) = 849388 bytes
 SHA1 (patch-es-app_src_ScraperCmdLine.cpp) = cdb2ccc0a1cff45e407b3608c9c95b9aae7b3366
 SHA1 (patch-es-app_src_components_TextListComponent.h) = 63c33ad1f48a0654c881fc41455b22e3a8dc4c94
 SHA1 (patch-es-core_src_components_ImageGridComponent.h) = f53ffe1528a351e58d99cfe76791c1ba4ab27b18
+SHA1 (patch-es-core_src_utils_FileSystemUtil.cpp) = bc0af15b0bd2bae44d8039911b2b1c6433f79b08
 SHA1 (patch-external_CMakeLists.txt) = d08cb2eecb59242ef1252338c6a79d6716ece8b1
