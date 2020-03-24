@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2019/11/30 17:23:08 sjmulder Exp $
+# $NetBSD: Makefile,v 1.12 2020/03/24 18:20:59 nia Exp $
 
-DISTNAME=	ncdu-1.14.1
-CATEGORIES=	filesystems
+DISTNAME=	ncdu-1.14.2
+CATEGORIES=	sysutils
 MASTER_SITES=	https://dev.yorhel.nl/download/
 
 COMMENT=	Disk usage visualization tool
