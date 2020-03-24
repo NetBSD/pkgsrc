@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.54 2019/11/02 19:45:26 maya Exp $
+$NetBSD: distinfo,v 1.55 2020/03/24 20:34:31 joerg Exp $
 
 SHA1 (kdelibs-4.14.38.tar.xz) = 2271f8b38cd5b6b55fa31c567271e3ca37ef641a
 RMD160 (kdelibs-4.14.38.tar.xz) = edf16e14842237950655bf44c073070c5bb7d74b
@@ -16,14 +16,20 @@ SHA1 (patch-al) = 20212d740191a699f7aa35db8c23a3b3cb55904e
 SHA1 (patch-am) = b6c315d152d2c3d3c66ad85050549d0b39b263e5
 SHA1 (patch-cmake_modules_FindHUNSPELL.cmake) = 52bd28c88d696d52ce052ddd7702a0f46244f86e
 SHA1 (patch-cmake_modules_FindKDE4Internal.cmake) = becfce89d45fd9b70c2ca08a83ca0e650004996a
+SHA1 (patch-dnssd_servicemodel.cpp) = c106e5feca008ac62d3ad9a074c1bcf4a998d55a
 SHA1 (patch-kdecore_io_kdirwatch__p.h) = 3c14e26f3962743f7d450e2a5ea2df43bc7524b5
-SHA1 (patch-kdecore_localization_klocale_kde.cpp) = b8a513a0c51e65d7e604a88c1d0e3325be6ad688
+SHA1 (patch-kdecore_localization_klocale_kde.cpp) = b6109c79c2e4c6a7c3338ab04a48b29affc502ca
 SHA1 (patch-kdecore_network_ConfigureChecks.cmake) = 0ad9352974911ef78ec565f7b2a97c45ead2cf72
 SHA1 (patch-kdecore_tests_CMakeLists.txt) = bbe806b078f54201528c86489d3ac200145a8d2f
 SHA1 (patch-kdecore_util_kshareddatacache_p.h) = 6d064fe75fbecd489b0343960333864c717c0805
+SHA1 (patch-kdeui_icons_kiconcache.cpp) = c360192afd21efedc6dad8a6ccdd61573ee0dbac
 SHA1 (patch-khtml_dom_dom2_traversal.h) = b001fc3825fcfea8f25b7219057e59d5b87723e4
+SHA1 (patch-khtml_misc_AtomicString.cpp) = eff036bcd09e031651eba1e3a2136e313d184f2b
 SHA1 (patch-kinit_CMakeLists.txt) = bcbf273d79702a4f1a617df0c86c2d5771447364
+SHA1 (patch-kinit_kinit.cpp) = 75dfe546c92169e692ddb45cd1a056a1b4042bb6
 SHA1 (patch-kio_CMakeLists.txt) = 3033fe7d31555e83f197f889cf1aa15949a3c14e
+SHA1 (patch-kio_kfile_kopenwithdialog.cpp) = b705ed794a082bca03890d69369b4e043e90f6c5
+SHA1 (patch-kio_kfile_kpropertiesdialog.cpp) = 27bced17b818051c6df5bc1ea176fd9f2692caa4
 SHA1 (patch-kio_kssl_kopenssl.cpp) = 4d9319966f4be0b8c09501105f7664481af2834e
 SHA1 (patch-kio_kssl_kopenssl.h) = c6f27f3a8911929684d62cc96849b6171e2ade8c
 SHA1 (patch-kio_kssl_kssl.cpp) = b5ff02a2a96e667096143fec9e681cb2980aa7e3
@@ -32,7 +38,7 @@ SHA1 (patch-kio_kssl_ksslcertchain.cpp) = f26c2d4ac8a3a107ad5a06b71df4fd9a244fdf
 SHA1 (patch-kio_kssl_ksslcertificate.cpp) = 177546af1bf2a770d7bb6650f7a4a1dca6f8f716
 SHA1 (patch-kio_kssl_ksslutils.cpp) = 359075855a8582693e5e4fab9aa5ad5afbe7b4a1
 SHA1 (patch-kjs_JSImmediate.h) = ecc761c7c82f711f41cf47d706c1c22d22c2980a
-SHA1 (patch-kjs_date_object.h) = 25b636930f9d5055a9ce3e760e179e0816abea6a
-SHA1 (patch-kjs_interpreter.cpp) = 9d400daf7d96674b8d66e1cde46dcb3615635241
+SHA1 (patch-kjs_date_object.h) = 12a820cad0bb9a002e524e8ea4e32ac082bd3c6e
+SHA1 (patch-kjs_interpreter.cpp) = 747a9d63d96cbbe5edcc4668c7db46bd4cb0f590
 SHA1 (patch-kjs_wtf_DisallowCType.h) = 6305dd274f1478ba0fe0a6f1717451ab8e3e50d2
 SHA1 (patch-kpty_kpty.cpp) = e8fd2e7c88b8926cf5bf12deea9e6af08e0739d8
