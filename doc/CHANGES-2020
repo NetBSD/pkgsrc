@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1905 2020/03/24 17:01:12 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1906 2020/03/24 17:03:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2583,3 +2583,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-multi_json to 1.14.1 [taca 2020-03-24]
 	Updated textproc/ruby-plist to 3.5.0 [taca 2020-03-24]
 	Updated textproc/ruby-redcarpet to 3.5.0 [taca 2020-03-24]
+	Updated textproc/ruby-safe_yaml to 1.0.5 [taca 2020-03-24]
