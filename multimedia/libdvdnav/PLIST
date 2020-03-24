@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2014/10/01 12:23:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/03/24 14:59:20 nia Exp $
 include/dvdnav/dvd_types.h
 include/dvdnav/dvdnav.h
 include/dvdnav/dvdnav_events.h
+include/dvdnav/version.h
 lib/libdvdnav.la
 lib/pkgconfig/dvdnav.pc
 share/doc/libdvdnav/AUTHORS
