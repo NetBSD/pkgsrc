@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/12/17 15:07:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/24 16:08:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -25,6 +25,7 @@ ${GEM_LIBDIR}/lib/rbnacl/auth.rb
 ${GEM_LIBDIR}/lib/rbnacl/boxes/curve25519xsalsa20poly1305.rb
 ${GEM_LIBDIR}/lib/rbnacl/boxes/curve25519xsalsa20poly1305/private_key.rb
 ${GEM_LIBDIR}/lib/rbnacl/boxes/curve25519xsalsa20poly1305/public_key.rb
+${GEM_LIBDIR}/lib/rbnacl/boxes/sealed.rb
 ${GEM_LIBDIR}/lib/rbnacl/group_elements/curve25519.rb
 ${GEM_LIBDIR}/lib/rbnacl/hash.rb
 ${GEM_LIBDIR}/lib/rbnacl/hash/blake2b.rb
@@ -60,6 +61,7 @@ ${GEM_LIBDIR}/spec/rbnacl/authenticators/poly1305_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/boxes/curve25519xsalsa20poly1305/private_key_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/boxes/curve25519xsalsa20poly1305/public_key_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/boxes/curve25519xsalsa20poly1305_spec.rb
+${GEM_LIBDIR}/spec/rbnacl/boxes/sealed_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/group_element_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/hash/blake2b_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/hash_spec.rb
@@ -73,12 +75,14 @@ ${GEM_LIBDIR}/spec/rbnacl/secret_box_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/signatures/ed25519/signing_key_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/signatures/ed25519/verify_key_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/simple_box_spec.rb
+${GEM_LIBDIR}/spec/rbnacl/sodium_spec.rb
 ${GEM_LIBDIR}/spec/rbnacl/util_spec.rb
 ${GEM_LIBDIR}/spec/shared/aead.rb
 ${GEM_LIBDIR}/spec/shared/authenticator.rb
 ${GEM_LIBDIR}/spec/shared/box.rb
 ${GEM_LIBDIR}/spec/shared/hmac.rb
 ${GEM_LIBDIR}/spec/shared/key_equality.rb
+${GEM_LIBDIR}/spec/shared/sealed_box.rb
 ${GEM_LIBDIR}/spec/shared/serializable.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/tasks/rspec.rake
