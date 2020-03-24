@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2018/10/19 17:03:10 jperkin Exp $
+$NetBSD: distinfo,v 1.3 2020/03/24 15:52:13 taca Exp $
 
-SHA1 (bcrypt_pbkdf-1.0.0.gem) = 224ee06a25e7a2f1ca02c59c76be8d9405464ff7
-RMD160 (bcrypt_pbkdf-1.0.0.gem) = 3cd26326a2b6ae2c7d3f0fe486576e24e071ba56
-SHA512 (bcrypt_pbkdf-1.0.0.gem) = b582407617633f5277cde9251ed1fd2ca408ae8bd19cc73f107d7932bed38061dc0099d3033ff5def1b586507392c33d8c50815fb156322f0dd08fbbe4a8e967
-Size (bcrypt_pbkdf-1.0.0.gem) = 24576 bytes
+SHA1 (bcrypt_pbkdf-1.0.1.gem) = a726ff6606383e14a6ffbc6a70e4d7d67dd9767f
+RMD160 (bcrypt_pbkdf-1.0.1.gem) = 52fca12fcc159ce1a5584084aa94ce36188ee1c5
+SHA512 (bcrypt_pbkdf-1.0.1.gem) = 7caf65dc48ec9d51dbde7741b0960e2606129f888787db31fe36f3cf103d51f06156e942badb10310faa8ca9dcf8f7f8dd86358431942a6e2097714ae3462dee
+Size (bcrypt_pbkdf-1.0.1.gem) = 24576 bytes
 SHA1 (patch-ext_mri_blf.h) = add75b3700ea21554a739a544e9085fc131f7fda
