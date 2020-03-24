@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1862 2020/03/24 14:56:59 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1863 2020/03/24 14:59:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2539,3 +2539,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/lft to 3.80 [nia 2020-03-24]
 	Updated graphics/libdmtx to 0.7.5 [nia 2020-03-24]
 	Updated multimedia/libdvbpsi to 1.3.3 [nia 2020-03-24]
+	Updated multimedia/libdvdnav to 6.1.0 [nia 2020-03-24]
