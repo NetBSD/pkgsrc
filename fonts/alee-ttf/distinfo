@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 20:44:28 agc Exp $
+$NetBSD: distinfo,v 1.17 2020/03/24 14:01:18 nia Exp $
 
-SHA1 (ttf-alee_12.tar.gz) = cc5e946dc14badc51121cfe88ea2c7cf2dcee45b
-RMD160 (ttf-alee_12.tar.gz) = e632fe4c3d3153718369d82c49eaf965fb4f640b
-SHA512 (ttf-alee_12.tar.gz) = e09c93d2374c52e389c881ec866608320721b2337c6a104959ab02c7d09b5c2eca4fd65e967eeb20b76962d96c43ce3b92a4efa48a5e80ff54005cf45caf4b5a
-Size (ttf-alee_12.tar.gz) = 776652 bytes
+SHA1 (fonts-alee_13.3.tar.xz) = bfac330b7b2a388d7f3a2210221906fa56e92b21
+RMD160 (fonts-alee_13.3.tar.xz) = 51ee0439181fcee128a5254236bef09bdb300134
+SHA512 (fonts-alee_13.3.tar.xz) = fc91a018c0757fce1b899ecf736260b96c7acc9c8ec626fb8d53f8e002d89ca23bdaf3a5712e747cfa63f53463c5471da292af715968a5612a17d7499222bc45
+Size (fonts-alee_13.3.tar.xz) = 213160 bytes
