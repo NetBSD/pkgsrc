@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/02/13 16:54:58 kamil Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/24 16:18:06 adam Exp $
 
-DISTNAME=	libbluray-1.1.2
-PKGREVISION=	2
+DISTNAME=	libbluray-1.2.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.videolan.org/pub/videolan/libbluray/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	src/libbluray.pc.in
 
 # provide jni_md.h for other architectures
 post-extract:
-	ln -s ${WRKSRC}/jni/linux/jni_md.h ${WRKSRC}/jni/jni_md.h
+	${LN} -s ${WRKSRC}/jni/linux/jni_md.h ${WRKSRC}/jni/jni_md.h
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
