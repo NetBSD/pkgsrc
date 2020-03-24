@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2019/02/03 16:16:38 taca Exp $
+# $NetBSD: Makefile,v 1.13 2020/03/24 18:06:28 taca Exp $
 
-DISTNAME=	chef-zero-14.0.11
+DISTNAME=	chef-zero-15.0.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,12 +9,11 @@ COMMENT=	Simple fast-start in-memory Chef server
 LICENSE=	apache-2.0
 
 DEPENDS+=	${RUBY_PKGPREFIX}-ffi-yajl>=2.2<3:../../devel/ruby-ffi-yajl
-DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-log>=2.0<3:../../devel/ruby-mixlib-log
+DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-log>=2.0<4:../../devel/ruby-mixlib-log
 DEPENDS+=	${RUBY_PKGPREFIX}-uuidtools>=2.1<3:../../devel/ruby-uuidtools
-DEPENDS+=	${RUBY_PKGPREFIX}-hashie>=2.0.5<4.0:../../misc/ruby-hashie
-DEPENDS+=	${RUBY_PKGPREFIX}-rack>=2.0.6:../../www/ruby-rack
+DEPENDS+=	${RUBY_PKGPREFIX}-hashie>=2.0.5<5:../../misc/ruby-hashie
+DEPENDS+=	${RUBY_PKGPREFIX}-rack>=2.0.6<3:../../www/ruby-rack
 
-RUBY_VERSIONS_ACCEPTED=	24 25 26	# www/ruby-rack
 RUBYGEM_OPTIONS+=	--format-executable
 
 pre-configure:
