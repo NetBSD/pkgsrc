@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1859 2020/03/24 14:34:23 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1860 2020/03/24 14:41:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2536,3 +2536,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/gifsicle to 1.92 [nia 2020-03-24]
 	Updated databases/mongo-c-driver to 1.16.2 [adam 2020-03-24]
 	Updated databases/mongodb to 4.2.5 [adam 2020-03-24]
+	Updated net/lft to 3.80 [nia 2020-03-24]
