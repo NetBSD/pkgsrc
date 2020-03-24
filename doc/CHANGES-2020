@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1910 2020/03/24 17:09:47 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1911 2020/03/24 17:16:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2588,3 +2588,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-stringex to 2.8.5 [taca 2020-03-24]
 	Updated textproc/ruby-temple to 0.8.2 [taca 2020-03-24]
 	Updated devel/libthai to 0.1.28 [nia 2020-03-24]
+	Updated devel/libstree to 0.4.2 [nia 2020-03-24]
