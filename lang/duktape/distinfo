@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2019/03/20 18:29:20 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/03/24 13:49:11 nia Exp $
 
-SHA1 (duktape-2.3.0.tar.xz) = 1d0edbb757b16f85bcf916b66c605103f736b4ff
-RMD160 (duktape-2.3.0.tar.xz) = 3e90960d43a93909aadacd6cfc5ae642f057f483
-SHA512 (duktape-2.3.0.tar.xz) = ec6b88549948c7f68f0ae8e54b16240c148fcc0d976fc7004b9d29c67652abbc659429ecb102c6e386809463ed99e5c76d636ec6ec632af4abca46d4cb03e834
-Size (duktape-2.3.0.tar.xz) = 997572 bytes
+SHA1 (duktape-2.5.0.tar.xz) = d91e1982f707cb0b7be42f1f11cf00e972465319
+RMD160 (duktape-2.5.0.tar.xz) = 723132dc4c51cae75b48314463d9aa6d019485bd
+SHA512 (duktape-2.5.0.tar.xz) = 230e298a91cb48407d7c2a4b7c85cf9d53151d550e2fd7ba6cb8f9115682abce295fb78a3c3cd22b4812ce86944dd6d28c2b25c3845668a17232e3a08ea63837
+Size (duktape-2.5.0.tar.xz) = 1031188 bytes
 SHA1 (patch-Makefile.cmdline) = 8e19c38b6da425c3fcff644987c0ab6c92b4b1d2
