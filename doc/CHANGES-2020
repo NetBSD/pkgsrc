@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1866 2020/03/24 15:10:43 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1867 2020/03/24 15:12:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2543,3 +2543,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/php-xdebug to 2.9.4 [taca 2020-03-24]
 	Updated net/ruby-netaddr to 2.0.4 [taca 2020-03-24]
 	Updated multimedia/libdvdread to 6.1.0 [nia 2020-03-24]
+	Updated net/ruby-nio4r to 2.5.2 [taca 2020-03-24]
