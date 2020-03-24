@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1927 2020/03/24 18:03:50 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1928 2020/03/24 18:07:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2605,3 +2605,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/ruby-license-acceptance to 1.0.18 [taca 2020-03-24]
 	Updated devel/lwp to 2.8 [nia 2020-03-24]
 	Updated graphics/materia-gtk-theme to 20200320 [nia 2020-03-24]
+	Updated sysutils/ruby-chef-config to 15.8.23 [taca 2020-03-24]
+	Updated sysutils/ruby-chef-zero to 15.0.0 [taca 2020-03-24]
