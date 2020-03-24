@@ -1,17 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/05 04:44:54 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/24 16:52:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CONTRIBUTERS
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/lib/kramdown-parser-gfm.rb
 ${GEM_LIBDIR}/lib/kramdown/parser/gfm.rb
+${GEM_LIBDIR}/lib/kramdown/parser/gfm/options.rb
 ${GEM_LIBDIR}/test/test_files.rb
 ${GEM_LIBDIR}/test/testcases/atx_header.html
 ${GEM_LIBDIR}/test/testcases/atx_header.text
-${GEM_LIBDIR}/test/testcases/backticks_disable_highlighting.html
-${GEM_LIBDIR}/test/testcases/backticks_disable_highlighting.options
-${GEM_LIBDIR}/test/testcases/backticks_disable_highlighting.text
 ${GEM_LIBDIR}/test/testcases/backticks_syntax.html
+${GEM_LIBDIR}/test/testcases/backticks_syntax.options
 ${GEM_LIBDIR}/test/testcases/backticks_syntax.text
 ${GEM_LIBDIR}/test/testcases/codeblock_fenced.html
 ${GEM_LIBDIR}/test/testcases/codeblock_fenced.options
