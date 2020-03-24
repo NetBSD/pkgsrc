@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2020/03/23 17:15:56 roy Exp $
+# $NetBSD: Makefile,v 1.25 2020/03/24 11:50:10 roy Exp $
 
 DISTNAME=	goaccess-1.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://tar.goaccess.io/
 
