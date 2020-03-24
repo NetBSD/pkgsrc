@@ -1,17 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/11 14:56:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/24 17:46:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/NOTICE
-${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/mixlib/config.rb
 ${GEM_LIBDIR}/lib/mixlib/config/configurable.rb
 ${GEM_LIBDIR}/lib/mixlib/config/reopened_config_context_with_configurable_error.rb
 ${GEM_LIBDIR}/lib/mixlib/config/reopened_configurable_with_config_context_error.rb
 ${GEM_LIBDIR}/lib/mixlib/config/unknown_config_option_error.rb
 ${GEM_LIBDIR}/lib/mixlib/config/version.rb
-${GEM_LIBDIR}/mixlib-config.gemspec
-${GEM_LIBDIR}/spec/mixlib/config_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
