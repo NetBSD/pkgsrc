@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2020/01/26 17:31:21 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/03/24 14:12:54 nia Exp $
 
-DISTNAME=	gifsicle-1.91
+DISTNAME=	gifsicle-1.92
 CATEGORIES=	graphics
 MASTER_SITES=	${HOMEPAGE}
 
@@ -12,5 +12,4 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=		yes
 
 .include "options.mk"
-
 .include "../../mk/bsd.pkg.mk"
