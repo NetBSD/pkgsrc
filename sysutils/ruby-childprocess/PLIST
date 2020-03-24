@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/04/22 16:48:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/03/24 16:32:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -40,6 +40,7 @@ ${GEM_LIBDIR}/lib/childprocess/windows/process_builder.rb
 ${GEM_LIBDIR}/lib/childprocess/windows/structs.rb
 ${GEM_LIBDIR}/spec/abstract_io_spec.rb
 ${GEM_LIBDIR}/spec/childprocess_spec.rb
+${GEM_LIBDIR}/spec/get_env.ps1
 ${GEM_LIBDIR}/spec/io_spec.rb
 ${GEM_LIBDIR}/spec/jruby_spec.rb
 ${GEM_LIBDIR}/spec/pid_behavior.rb
@@ -48,4 +49,4 @@ ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/unix_spec.rb
 ${GEM_LIBDIR}/spec/windows_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
+
