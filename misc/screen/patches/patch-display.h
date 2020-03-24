@@ -1,4 +1,4 @@
-$NetBSD: patch-display.h,v 1.1 2020/03/24 06:55:34 rillig Exp $
+$NetBSD: patch-display.h,v 1.2 2020/03/24 07:00:22 rillig Exp $
 
 display.c: In function 'disp_readev_fn':
 display.c:3590:39: error: array subscript has type 'char' [-Werror=char-subscripts]
@@ -19,6 +19,8 @@ display.c:3626:39: error: array subscript has type 'char' [-Werror=char-subscrip
 
 The constants for the state are from an anonymous enum at the top of
 display.c. They are all small nonnegative numbers.
+
+https://savannah.gnu.org/bugs/index.php?58034
 
 --- display.h.orig	2020-02-05 20:09:38.000000000 +0000
 +++ display.h
