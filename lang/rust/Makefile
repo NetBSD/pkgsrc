@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2020/03/20 09:25:00 he Exp $
+# $NetBSD: Makefile,v 1.158 2020/03/24 20:41:18 joerg Exp $
 
 DISTNAME=	rustc-1.42.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -99,7 +99,7 @@ MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
-UNLIMIT_RESOURCES+=	cputime
+UNLIMIT_RESOURCES+=	cputime datasize virtualsize
 
 TEST_TARGET=	check
 
@@ -360,12 +360,12 @@ pre-build: pre-build-fix
 
 do-build:
 	cd ${WRKSRC} \
-	&& ${SETENV} ${MAKE_ENV} \
+	&& ${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} ./x.py -v ${BUILD_TARGET} -j ${_MAKE_JOBS_N}
 
 do-install:
 	cd ${WRKSRC} \
-	&& ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} \
+	&& ${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} \
 		${PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N}
 
 GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
