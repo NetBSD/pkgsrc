@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2019/11/18 15:52:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/03/24 16:20:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/release-drafter.yml
+${GEM_LIBDIR}/.github/workflows/push.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.rubocop_todo.yml
