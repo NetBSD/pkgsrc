@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2018/09/23 15:57:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/24 15:23:40 taca Exp $
 bin/recog_export${RUBY_SUFFIX}
 bin/recog_match${RUBY_SUFFIX}
 bin/recog_verify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/bug_report.md
+${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/feature_request.md
+${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/fingerprint_request.md
+${GEM_LIBDIR}/.github/PULL_REQUEST_TEMPLATE
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml
@@ -46,11 +50,13 @@ ${GEM_LIBDIR}/lib/recog/version.rb
 ${GEM_LIBDIR}/misc/convert_mysql_err
 ${GEM_LIBDIR}/misc/order.xsl
 ${GEM_LIBDIR}/recog.gemspec
+${GEM_LIBDIR}/requirements.txt
 ${GEM_LIBDIR}/spec/data/best_os_match_1.yml
 ${GEM_LIBDIR}/spec/data/best_os_match_2.yml
 ${GEM_LIBDIR}/spec/data/best_service_match_1.yml
 ${GEM_LIBDIR}/spec/data/smb_native_os.txt
 ${GEM_LIBDIR}/spec/data/test_fingerprints.xml
+${GEM_LIBDIR}/spec/data/verification_fingerprints.xml
 ${GEM_LIBDIR}/spec/data/whitespaced_fingerprint.xml
 ${GEM_LIBDIR}/spec/lib/fingerprint_self_test_spec.rb
 ${GEM_LIBDIR}/spec/lib/recog/db_spec.rb
@@ -70,6 +76,7 @@ ${GEM_LIBDIR}/xml/fingerprints.xsd
 ${GEM_LIBDIR}/xml/ftp_banners.xml
 ${GEM_LIBDIR}/xml/h323_callresp.xml
 ${GEM_LIBDIR}/xml/hp_pjl_id.xml
+${GEM_LIBDIR}/xml/html_title.xml
 ${GEM_LIBDIR}/xml/http_cookies.xml
 ${GEM_LIBDIR}/xml/http_servers.xml
 ${GEM_LIBDIR}/xml/http_wwwauth.xml
@@ -84,6 +91,7 @@ ${GEM_LIBDIR}/xml/ntp_banners.xml
 ${GEM_LIBDIR}/xml/operating_system.xml
 ${GEM_LIBDIR}/xml/pop_banners.xml
 ${GEM_LIBDIR}/xml/rsh_resp.xml
+${GEM_LIBDIR}/xml/rtsp_servers.xml
 ${GEM_LIBDIR}/xml/sip_banners.xml
 ${GEM_LIBDIR}/xml/sip_user_agents.xml
 ${GEM_LIBDIR}/xml/smb_native_lm.xml
@@ -104,6 +112,7 @@ ${GEM_LIBDIR}/xml/snmp_sysdescr.xml
 ${GEM_LIBDIR}/xml/snmp_sysobjid.xml
 ${GEM_LIBDIR}/xml/ssh_banners.xml
 ${GEM_LIBDIR}/xml/telnet_banners.xml
-${GEM_LIBDIR}/xml/upnp_banners.xml
 ${GEM_LIBDIR}/xml/x11_banners.xml
+${GEM_LIBDIR}/xml/x509_issuers.xml
+${GEM_LIBDIR}/xml/x509_subjects.xml
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
