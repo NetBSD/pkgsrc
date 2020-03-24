@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.12 2017/07/03 18:13:43 joerg Exp $
+# $NetBSD: application.mk,v 1.13 2020/03/24 04:40:34 rillig Exp $
 #
 # Replace the #! interpreter for Python scripts.
 #
@@ -10,7 +10,8 @@
 # Package-settable variables:
 #
 # REPLACE_PYTHON
-#	A list of Python scripts to be installed, relative to ${WRKSRC}.
+#	A list of filename patterns for Python scripts to be installed,
+#	relative to ${WRKSRC}.
 #
 # Keywords: python
 #
