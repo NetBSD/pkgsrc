@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/07/24 21:29:05 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/03/24 17:15:47 nia Exp $
 include/libstree.h
 include/stree/lst_algorithms.h
 include/stree/lst_macros.h
@@ -7,33 +7,4 @@ include/stree/lst_string.h
 include/stree/lst_structs.h
 include/stree/lst_timestamp.h
 lib/libstree.la
-share/doc/libstree/a1501.html
-share/doc/libstree/a1502.html
-share/doc/libstree/a1503.html
-share/doc/libstree/a1543.html
-share/doc/libstree/about.html
-share/doc/libstree/api.html
-share/doc/libstree/b1513.html
-share/doc/libstree/b1514.html
-share/doc/libstree/b1515.html
-share/doc/libstree/b1555.html
-share/doc/libstree/c14.html
-share/doc/libstree/c15.html
-share/doc/libstree/c16.html
-share/doc/libstree/c39.html
-share/doc/libstree/c40.html
-share/doc/libstree/c41.html
-share/doc/libstree/index.html
-share/doc/libstree/index.sgml
-share/doc/libstree/libstree-lst-algorithms.html
-share/doc/libstree/libstree-lst-debug.html
-share/doc/libstree/libstree-lst-stree.html
-share/doc/libstree/libstree-lst-string.html
-share/doc/libstree/libstree-lst-structs.html
-share/doc/libstree/stylesheet.css
-share/doc/libstree/x22.html
-share/doc/libstree/x23.html
-share/doc/libstree/x24.html
-share/doc/libstree/x36.html
-share/doc/libstree/x37.html
-share/doc/libstree/x38.html
+@pkgdir share/doc/libstree
