@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.118 2020/01/13 01:53:50 ryoon Exp $
+# $NetBSD: java-vm.mk,v 1.119 2020/03/24 20:41:58 joerg Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -296,12 +296,12 @@ _JAVA_HOME=		${LOCALBASE}/java/openjdk8
 _JDK_PKGSRCDIR=		../../lang/sun-jdk7
 _JRE_PKGSRCDIR=		../../lang/sun-jre7
 _JAVA_HOME=		${LOCALBASE}/java/sun-7
-UNLIMIT_RESOURCES+=	datasize
+UNLIMIT_RESOURCES+=	datasize virtualsize
 .elif ${_PKG_JVM} == "oracle-jdk8"
 _JDK_PKGSRCDIR=		../../lang/oracle-jdk8
 _JRE_PKGSRCDIR=		../../lang/oracle-jre8
 _JAVA_HOME=		${LOCALBASE}/java/oracle-8
-UNLIMIT_RESOURCES+=	datasize
+UNLIMIT_RESOURCES+=	datasize virtualsize
 .elif ${_PKG_JVM} == "adoptopenjdk11-bin"
 _JDK_PKGSRCDIR=		../../lang/adoptopenjdk11-bin
 _JRE_PKGSRCDIR=		../../lang/adoptopenjdk11-bin
@@ -310,12 +310,12 @@ _JAVA_HOME=		${LOCALBASE}/java/adoptopenjdk11-bin
 _JDK_PKGSRCDIR=		../../lang/openjdk-bin
 _JRE_PKGSRCDIR=		../../lang/openjdk-bin
 _JAVA_HOME=		${LOCALBASE}/java/openjdk-bin
-UNLIMIT_RESOURCES+=	datasize
+UNLIMIT_RESOURCES+=	datasize virtualsize
 .elif ${_PKG_JVM} == "openjdk11"
 _JDK_PKGSRCDIR=		../../lang/openjdk11
 _JRE_PKGSRCDIR=		../../lang/openjdk11
 _JAVA_HOME=		${LOCALBASE}/java/openjdk11
-UNLIMIT_RESOURCES+=	datasize
+UNLIMIT_RESOURCES+=	datasize virtualsize
 .endif
 
 # If we are not using Java for building, then we need a run-time dependency on
