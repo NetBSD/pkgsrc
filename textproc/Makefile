@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1119 2020/03/23 10:35:21 nia Exp $
+# $NetBSD: Makefile,v 1.1120 2020/03/24 17:15:00 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1031,7 +1031,6 @@ SUBDIR+=	ruby-terminal-table
 SUBDIR+=	ruby-text
 SUBDIR+=	ruby-textpow
 SUBDIR+=	ruby-tilt
-SUBDIR+=	ruby-tilt1
 SUBDIR+=	ruby-toml
 SUBDIR+=	ruby-treetop
 SUBDIR+=	ruby-ultraviolet
