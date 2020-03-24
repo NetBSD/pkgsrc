@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:27:40 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/03/24 15:28:09 nia Exp $
 
-SHA1 (libestr-0.1.10.tar.gz) = 35cc717f5ae737a28140dd1472e13ce2ec317c6c
-RMD160 (libestr-0.1.10.tar.gz) = d392cbca3df55d73f2ed77d05adc2450c5b45fd4
-SHA512 (libestr-0.1.10.tar.gz) = 477b06e2b6ea9b2e34fe0d91328c9191a678b173751e595359c05772db50a4d348ac132bec0c926fba91ceccc013e15cd4cc57a6b734874c06073bf23151bac7
-Size (libestr-0.1.10.tar.gz) = 336122 bytes
+SHA1 (libestr-0.1.11.tar.gz) = 3acdf7dae0c3e0fa3dabf43267a1fb5f625c0606
+RMD160 (libestr-0.1.11.tar.gz) = 60da7ca58473ec70d932392b6d65f2b01670082e
+SHA512 (libestr-0.1.11.tar.gz) = 0ab98c2fa4b58cf6fee89c88602725b8b5e8e5a171a6976cdd8cff4dfc1cd3e5b747868da74fccd1bca66b9fa524ceae1c4f1ad5ee653a44ff81df6916ab5328
+Size (libestr-0.1.11.tar.gz) = 355544 bytes

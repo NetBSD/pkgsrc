@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/26 17:30:59 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.4 2020/03/24 15:28:09 nia Exp $
 
-DISTNAME=		libestr-0.1.10
+DISTNAME=		libestr-0.1.11
 CATEGORIES=		devel
-MASTER_SITES=		http://libestr.adiscon.com/files/download/
+MASTER_SITES=		https://libestr.adiscon.com/files/download/
 
 MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		https://libestr.adiscon.com/
