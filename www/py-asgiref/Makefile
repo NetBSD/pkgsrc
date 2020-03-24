@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2020/03/12 16:15:09 adam Exp $
+# $NetBSD: Makefile,v 1.19 2020/03/24 06:58:46 adam Exp $
 
-DISTNAME=	asgiref-3.2.5
+DISTNAME=	asgiref-3.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asgiref/}
@@ -10,7 +10,13 @@ HOMEPAGE=	https://github.com/django/asgiref
 COMMENT=	Contains various reference ASGI implementations
 LICENSE=	modified-bsd
 
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.3.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.10.0:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
 USE_LANGUAGES=	# none
+
+PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
