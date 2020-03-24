@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2020/01/18 21:48:10 nia Exp $
+# $NetBSD: Makefile,v 1.43 2020/03/24 13:18:05 nia Exp $
 
-DISTNAME=		cdk-5.0-20191231
+DISTNAME=		cdk-5.0-20200228
 PKGNAME=		${DISTNAME:S/5.0-/5.0./}
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.invisible-island.net/cdk/
@@ -9,11 +9,13 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://invisible-island.net/cdk/
 COMMENT=		Curses Development Kit
+LICENSE=		original-bsd
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_NCURSES=		yes # uses ncurses internals
-USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 
 BUILD_TARGET=		default
 
