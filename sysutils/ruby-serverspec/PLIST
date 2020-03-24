@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2018/03/21 12:53:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/03/24 18:21:24 taca Exp $
 bin/serverspec-init${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/stale.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
 ${GEM_LIBDIR}/.travis.yml
