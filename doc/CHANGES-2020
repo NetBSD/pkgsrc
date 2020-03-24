@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1921 2020/03/24 17:50:14 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1922 2020/03/24 17:51:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2599,3 +2599,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-mixlib-config to 3.0.6 [taca 2020-03-24]
 	Updated textproc/lowdown to 0.6.2 [nia 2020-03-24]
 	Updated devel/ruby-mixlib-cli to 2.1.5 [taca 2020-03-24]
+	Updated devel/ruby-mixlib-log to 3.0.8 [taca 2020-03-24]
