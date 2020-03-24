@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2018/12/17 15:04:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/03/24 15:46:22 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/release-drafter.yml
+${GEM_LIBDIR}/.github/workflows/push.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
-${GEM_LIBDIR}/Dangerfile
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/LICENSE.txt
