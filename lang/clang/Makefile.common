@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2020/01/26 17:31:27 rillig Exp $
+# $NetBSD: Makefile.common,v 1.40 2020/03/24 05:58:48 rillig Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 # used by lang/clang-tools-extra/Makefile
@@ -6,6 +6,7 @@
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	clang-${LLVM_VERSION}.src
+PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -62,7 +63,6 @@ REPLACE_PYTHON+=	utils/analyzer/CmpRuns.py
 REPLACE_PYTHON+=	utils/analyzer/SATestAdd.py
 REPLACE_PYTHON+=	utils/analyzer/SATestBuild.py
 REPLACE_PYTHON+=	utils/analyzer/SumTimerInfo.py
-REPLACE_PYTHON+=	utils/analyzer/ubiviz
 REPLACE_PYTHON+=	utils/check_cfc/check_cfc.py
 REPLACE_PYTHON+=	utils/check_cfc/obj_diff.py
 REPLACE_PYTHON+=	utils/check_cfc/test_check_cfc.py
@@ -82,8 +82,7 @@ LIBCPP_CHECK_SH=	echo NO
 SUBST_CLASSES+=			libcxx
 SUBST_STAGE.libcxx=		pre-configure
 SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ (matching the host compiler)
-SUBST_FILES.libcxx=		lib/Driver/ToolChains.cpp
-SUBST_FILES.libcxx+=		lib/Driver/Tools.cpp
+SUBST_FILES.libcxx=		lib/Driver/ToolChains/NetBSD.cpp
 SUBST_SED.libcxx=		-e 's,(Major >= 7 || Major == 0),(false),'
 
 CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
