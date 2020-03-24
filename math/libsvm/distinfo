@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 23:33:36 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/03/24 17:21:43 nia Exp $
 
-SHA1 (libsvm-3.20.tar.gz) = 6902c22afadc70034c0d1c0e25455df10fb01eaf
-RMD160 (libsvm-3.20.tar.gz) = 857fc1fed153e72c894e3579e3b6cb92309e82fb
-SHA512 (libsvm-3.20.tar.gz) = a810976d91ebfb7a1a3dccfd091652018967642c181446585d104bc1c1fdbedf237f3bfa6c313dcbe4648415ce6d1a64d09201d6c338a4b1ffe4df91badb36dc
-Size (libsvm-3.20.tar.gz) = 609951 bytes
+SHA1 (libsvm-3.24.tar.gz) = 473d35f311881979251e7fc7ad18db7cef1d7932
+RMD160 (libsvm-3.24.tar.gz) = f6ec26eb68849893520157e65da9553d7f9892fe
+SHA512 (libsvm-3.24.tar.gz) = ff3c39bc84291bfb707151d7b8b6fb2eece937afa769cb8ee579d00ee4c30e943d476cd7bb18851d482c9bed89cf94fb3fd8abca4d47253360e12e9406f2f24b
+Size (libsvm-3.24.tar.gz) = 876441 bytes
