@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:00:10 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/03/24 17:03:36 taca Exp $
 
-SHA1 (safe_yaml-1.0.4.gem) = b42af3b12aca32cc7072694e39c0a54d7d80f9d0
-RMD160 (safe_yaml-1.0.4.gem) = a71cc7c1f6b751e35d3093ebfab52a117c73384b
-SHA512 (safe_yaml-1.0.4.gem) = ecc944a6e5f0862acf1413d7ab38bd35b56405893bb8064be2b8a056f0164d3710afaa2f6ef65868770e855ecf54a87bf9ddae2241c3c2957ca001ca04b04c5a
-Size (safe_yaml-1.0.4.gem) = 30208 bytes
+SHA1 (safe_yaml-1.0.5.gem) = 916765bf13a73d4e9b656dd90420203b8bed55be
+RMD160 (safe_yaml-1.0.5.gem) = fbc0812f4d624b8f33a5f7af4e720a2280b62bea
+SHA512 (safe_yaml-1.0.5.gem) = d9c8d9c28c3c8708f97cb0545f58152af81056f5e79147424dd7bf625f8e533440d1ed41d6abe2faf84578754823a1215ba28772c2e8593bfcfc397d647187b9
+Size (safe_yaml-1.0.5.gem) = 30720 bytes

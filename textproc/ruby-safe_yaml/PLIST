@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/03/21 13:56:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/03/24 17:03:36 taca Exp $
 bin/safe_yaml${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
@@ -21,6 +21,7 @@ ${GEM_LIBDIR}/lib/safe_yaml/psych_handler.rb
 ${GEM_LIBDIR}/lib/safe_yaml/psych_resolver.rb
 ${GEM_LIBDIR}/lib/safe_yaml/resolver.rb
 ${GEM_LIBDIR}/lib/safe_yaml/safe_to_ruby_visitor.rb
+${GEM_LIBDIR}/lib/safe_yaml/store.rb
 ${GEM_LIBDIR}/lib/safe_yaml/syck_hack.rb
 ${GEM_LIBDIR}/lib/safe_yaml/syck_node_monkeypatch.rb
 ${GEM_LIBDIR}/lib/safe_yaml/syck_resolver.rb
@@ -44,6 +45,7 @@ ${GEM_LIBDIR}/spec/psych_resolver_spec.rb
 ${GEM_LIBDIR}/spec/resolver_specs.rb
 ${GEM_LIBDIR}/spec/safe_yaml_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/store_spec.rb
 ${GEM_LIBDIR}/spec/support/exploitable_back_door.rb
 ${GEM_LIBDIR}/spec/syck_resolver_spec.rb
 ${GEM_LIBDIR}/spec/transform/base64_spec.rb
@@ -53,4 +55,3 @@ ${GEM_LIBDIR}/spec/transform/to_integer_spec.rb
 ${GEM_LIBDIR}/spec/transform/to_symbol_spec.rb
 ${GEM_LIBDIR}/spec/yaml_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
