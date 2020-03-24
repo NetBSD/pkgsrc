@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1889 2020/03/24 16:14:21 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1890 2020/03/24 16:15:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2566,3 +2566,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/ruby-rex-bin_tools to 0.1.6 [taca 2020-03-24]
 	Updated security/ruby-rex-exploitation to 0.1.22 [taca 2020-03-24]
 	Updated security/ruby-rex-socket to 0.1.23 [taca 2020-03-24]
+	Updated security/ruby-rex-struct2 to 0.1.2 [taca 2020-03-24]
