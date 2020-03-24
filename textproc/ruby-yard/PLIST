@@ -1,14 +1,29 @@
-@comment $NetBSD: PLIST,v 1.9 2019/08/05 09:55:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/03/24 17:22:32 taca Exp $
 bin/yard${RUBY_SUFFIX}
 bin/yardoc${RUBY_SUFFIX}
 bin/yri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.dockerignore
+${GEM_LIBDIR}/.github/ISSUE_TEMPLATE.md
+${GEM_LIBDIR}/.github/PULL_REQUEST_TEMPLATE.md
+${GEM_LIBDIR}/.github/workflows/ci.yml
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rubocop.yml
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/.yardopts_guide
+${GEM_LIBDIR}/.yardopts_i18n
 ${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CODE_OF_CONDUCT.md
+${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/Dockerfile.samus
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LEGAL
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/benchmarks/builtins_vs_eval.rb
 ${GEM_LIBDIR}/benchmarks/concat_vs_join.rb
 ${GEM_LIBDIR}/benchmarks/erb_vs_erubis.rb
@@ -167,6 +182,7 @@ ${GEM_LIBDIR}/lib/yard/parser/c/c_parser.rb
 ${GEM_LIBDIR}/lib/yard/parser/c/comment_parser.rb
 ${GEM_LIBDIR}/lib/yard/parser/c/statement.rb
 ${GEM_LIBDIR}/lib/yard/parser/ruby/ast_node.rb
+${GEM_LIBDIR}/lib/yard/parser/ruby/legacy/irb/slex.rb
 ${GEM_LIBDIR}/lib/yard/parser/ruby/legacy/ruby_lex.rb
 ${GEM_LIBDIR}/lib/yard/parser/ruby/legacy/ruby_parser.rb
 ${GEM_LIBDIR}/lib/yard/parser/ruby/legacy/statement.rb
@@ -258,6 +274,8 @@ ${GEM_LIBDIR}/lib/yard/templates/template.rb
 ${GEM_LIBDIR}/lib/yard/templates/template_options.rb
 ${GEM_LIBDIR}/lib/yard/verifier.rb
 ${GEM_LIBDIR}/lib/yard/version.rb
+${GEM_LIBDIR}/po/ja.po
+${GEM_LIBDIR}/samus.json
 ${GEM_LIBDIR}/spec/cli/command_parser_spec.rb
 ${GEM_LIBDIR}/spec/cli/command_spec.rb
 ${GEM_LIBDIR}/spec/cli/config_spec.rb
@@ -282,6 +300,7 @@ ${GEM_LIBDIR}/spec/code_objects/extra_file_object_spec.rb
 ${GEM_LIBDIR}/spec/code_objects/macro_object_spec.rb
 ${GEM_LIBDIR}/spec/code_objects/method_object_spec.rb
 ${GEM_LIBDIR}/spec/code_objects/module_object_spec.rb
+${GEM_LIBDIR}/spec/code_objects/namespace_mapper_spec.rb
 ${GEM_LIBDIR}/spec/code_objects/namespace_object_spec.rb
 ${GEM_LIBDIR}/spec/code_objects/proxy_spec.rb
 ${GEM_LIBDIR}/spec/code_objects/spec_helper.rb
@@ -295,7 +314,6 @@ ${GEM_LIBDIR}/spec/core_ext/string_spec.rb
 ${GEM_LIBDIR}/spec/core_ext/symbol_hash_spec.rb
 ${GEM_LIBDIR}/spec/docstring_parser_spec.rb
 ${GEM_LIBDIR}/spec/docstring_spec.rb
-${GEM_LIBDIR}/spec/examples.txt
 ${GEM_LIBDIR}/spec/handlers/alias_handler_spec.rb
 ${GEM_LIBDIR}/spec/handlers/attribute_handler_spec.rb
 ${GEM_LIBDIR}/spec/handlers/base_spec.rb
@@ -379,6 +397,7 @@ ${GEM_LIBDIR}/spec/parser/ruby/token_resolver_spec.rb
 ${GEM_LIBDIR}/spec/parser/source_parser_spec.rb
 ${GEM_LIBDIR}/spec/parser/tag_parsing_spec.rb
 ${GEM_LIBDIR}/spec/rake/yardoc_task_spec.rb
+${GEM_LIBDIR}/spec/registry_resolver_spec.rb
 ${GEM_LIBDIR}/spec/registry_spec.rb
 ${GEM_LIBDIR}/spec/registry_store_spec.rb
 ${GEM_LIBDIR}/spec/rubygems/doc_manager_spec.rb
@@ -448,6 +467,12 @@ ${GEM_LIBDIR}/spec/templates/helpers/method_helper_spec.rb
 ${GEM_LIBDIR}/spec/templates/helpers/module_helper_spec.rb
 ${GEM_LIBDIR}/spec/templates/helpers/shared_signature_examples.rb
 ${GEM_LIBDIR}/spec/templates/helpers/text_helper_spec.rb
+${GEM_LIBDIR}/spec/templates/markup_processor_integrations/asciidoctor_spec.rb
+${GEM_LIBDIR}/spec/templates/markup_processor_integrations/integration_spec_helper.rb
+${GEM_LIBDIR}/spec/templates/markup_processor_integrations/rdoc_markdown_spec.rb
+${GEM_LIBDIR}/spec/templates/markup_processor_integrations/rdoc_spec.rb
+${GEM_LIBDIR}/spec/templates/markup_processor_integrations/redcarpet_spec.rb
+${GEM_LIBDIR}/spec/templates/markup_processor_integrations/redcloth_spec.rb
 ${GEM_LIBDIR}/spec/templates/method_spec.rb
 ${GEM_LIBDIR}/spec/templates/module_spec.rb
 ${GEM_LIBDIR}/spec/templates/onefile_spec.rb
