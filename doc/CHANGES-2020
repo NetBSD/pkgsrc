@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1920 2020/03/24 17:47:25 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1921 2020/03/24 17:50:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2598,3 +2598,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/libykneomgr to 0.1.8 [nia 2020-03-24]
 	Updated devel/ruby-mixlib-config to 3.0.6 [taca 2020-03-24]
 	Updated textproc/lowdown to 0.6.2 [nia 2020-03-24]
+	Updated devel/ruby-mixlib-cli to 2.1.5 [taca 2020-03-24]
