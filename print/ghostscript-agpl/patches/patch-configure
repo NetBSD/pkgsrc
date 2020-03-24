@@ -1,32 +1,32 @@
-$NetBSD: patch-configure,v 1.3 2018/09/05 13:19:40 adam Exp $
+$NetBSD: patch-configure,v 1.4 2020/03/24 16:34:45 adam Exp $
 
 Use system zlib for linking.
 Add rpath.
 Use correct install_name with path on Darwin.
 
---- configure.orig	2018-09-03 08:51:26.000000000 +0000
+--- configure.orig	2020-03-19 08:22:25.000000000 +0000
 +++ configure
-@@ -3757,7 +3757,7 @@ CFLAGSAUX_STANDARDTMP="\$(CFLAGS_STANDAR
+@@ -3917,7 +3917,7 @@ CFLAGSAUX_STANDARDTMP="\$(CFLAGS_STANDAR
  CFLAGSAUX_DEBUGTMP="\$(CFLAGS_DEBUG)"
  CFLAGSAUX_PROFILETMP="\$(CFLAGS_PROFILE)"
  LDFLAGSAUXTMP="\$(LDFLAGS)"
 -AUXEXTRALIBSTMP="\$(EXTRALIBS)"
 +AUXEXTRALIBSTMP="\$(EXTRALIBS) -lz"
  
- 
  # purposefully do not include "help" output for this
-@@ -4371,9 +4371,7 @@ else
-         SunOS)
-         CC_OPT_FLAGS_TO_TRY="-O2"
+ # Check whether --enable-save_confaux was given.
+@@ -4544,9 +4544,7 @@ case $host in
+         CC_OPT_FLAGS_TO_TRY="-O2 -DNDEBUG"
+         CFLAGS_LARGEFILE="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
          # the trailing space is required!
 -        if test $ac_cv_c_compiler_gnu = no; then
 -            SET_DT_SONAME="-h "
 -        fi
 +        SET_DT_SONAME="-h,"
          if test $ac_cv_c_compiler_gnu = yes; then
-             CC_OPT_FLAGS_TO_TRY="-O2"
+             CC_OPT_FLAGS_TO_TRY="-O2 -DNDEBUG"
              CC_DBG_FLAGS_TO_TRY="-gdwarf-2 -g3 -O0"
-@@ -6772,7 +6770,7 @@ fi
+@@ -7022,7 +7020,7 @@ fi
  fi
  
  if test x$with_libpaper != xno; then
@@ -35,10 +35,10 @@ Use correct install_name with path on Darwin.
  
  $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
  
-@@ -10193,10 +10191,10 @@ else
-       SO_LIB_EXT=".so"
+@@ -10881,10 +10879,10 @@ case $host in
      ;;
-     Darwin*)
+     *-darwin*)
+       DYNAMIC_CFLAGS="-fPIC $DYNAMIC_CFLAGS"
 -      GS_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(GS_SONAME_MAJOR_MINOR)"
 -      PCL_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(PCL_SONAME_MAJOR_MINOR)"
 -      XPS_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(XPS_SONAME_MAJOR_MINOR)"
@@ -50,18 +50,18 @@ Use correct install_name with path on Darwin.
        DYNAMIC_LIBS=""
        SO_LIB_EXT=".dylib"
      ;;
-@@ -10206,10 +10204,10 @@ else
-       else
-         DYNAMIC_CFLAGS="-KPIC"
+@@ -10900,10 +10898,10 @@ case $host in
+         #fi
+         # ^^^ untested
        fi
--      GS_DYNAMIC_LDFLAGS="-G -shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GS_SONAME_MAJOR)"
--      PCL_DYNAMIC_LDFLAGS="-G -shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(PCL_SONAME_MAJOR)"
--      XPS_DYNAMIC_LDFLAGS="-G -shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(XPS_SONAME_MAJOR)"
--      PDL_DYNAMIC_LDFLAGS="-G -shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GPDL_SONAME_MAJOR)"
-+      GS_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GS_SONAME_MAJOR)"
-+      PCL_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(PCL_SONAME_MAJOR)"
-+      XPS_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(XPS_SONAME_MAJOR)"
-+      PDL_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GPDL_SONAME_MAJOR)"
+-      GS_DYNAMIC_LDFLAGS="-G -shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GS_SONAME_MAJOR) $_ldflags"
+-      PCL_DYNAMIC_LDFLAGS="-G -shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(PCL_SONAME_MAJOR) $_ldflags"
+-      XPS_DYNAMIC_LDFLAGS="-G -shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(XPS_SONAME_MAJOR) $_ldflags"
+-      PDL_DYNAMIC_LDFLAGS="-G -shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GPDL_SONAME_MAJOR) $_ldflags"
++      GS_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GS_SONAME_MAJOR) $_ldflags"
++      PCL_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(PCL_SONAME_MAJOR) $_ldflags"
++      XPS_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(XPS_SONAME_MAJOR) $_ldflags"
++      PDL_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GPDL_SONAME_MAJOR) $_ldflags"
        DYNAMIC_LIBS=""
        SO_LIB_EXT=".so"
-       ;;
+     ;;
