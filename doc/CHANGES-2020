@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1891 2020/03/24 16:17:59 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1892 2020/03/24 16:20:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2568,3 +2568,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/ruby-rex-socket to 0.1.23 [taca 2020-03-24]
 	Updated security/ruby-rex-struct2 to 0.1.2 [taca 2020-03-24]
 	Updated security/ruby-rex-powershell to 0.1.87 [taca 2020-03-24]
+	Updated security/ruby-sshkit to 1.21.0 [taca 2020-03-24]
