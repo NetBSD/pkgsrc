@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2018/02/23 15:03:42 adam Exp $
+$NetBSD: distinfo,v 1.14 2020/03/24 17:09:26 nia Exp $
 
-SHA1 (libthai-0.1.27.tar.xz) = bb74972fb9acc4425763034aad1d0929dc03cb72
-RMD160 (libthai-0.1.27.tar.xz) = ac105f45b58d7ed6ae865543a9d887b896bb657b
-SHA512 (libthai-0.1.27.tar.xz) = 931ba74ab003c7670b0919fc12bf456df1b516f859f55fbf6c063341215f1743158070f6256f78c49f56641d16ab0e8b0c71b96078c448f454b1257d44b10757
-Size (libthai-0.1.27.tar.xz) = 410360 bytes
+SHA1 (libthai-0.1.28.tar.xz) = 6fceeb37f91003958c7a163445fb3987d0a8f1af
+RMD160 (libthai-0.1.28.tar.xz) = 6f356e667687feb34cd8e77ede11a6da57c33f1a
+SHA512 (libthai-0.1.28.tar.xz) = 925be8367ae0cba026e602f1f60c813306e9051e22fe722afba496b6e493f8c1f3eb56abb77ca663f53678b14ad793daf3269b32d32720c0d869b906cdf15f4e
+Size (libthai-0.1.28.tar.xz) = 413592 bytes
