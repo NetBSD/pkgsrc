@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/13 16:04:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/24 15:11:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/nio4r_ext.${RUBY_DLEXT}
@@ -9,7 +9,6 @@ ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Guardfile
-${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/appveyor.yml
@@ -17,18 +16,17 @@ ${GEM_LIBDIR}/examples/echo_server.rb
 ${GEM_LIBDIR}/ext/libev/Changes
 ${GEM_LIBDIR}/ext/libev/LICENSE
 ${GEM_LIBDIR}/ext/libev/README
-${GEM_LIBDIR}/ext/libev/README.embed
 ${GEM_LIBDIR}/ext/libev/ev.c
 ${GEM_LIBDIR}/ext/libev/ev.h
 ${GEM_LIBDIR}/ext/libev/ev_epoll.c
 ${GEM_LIBDIR}/ext/libev/ev_kqueue.c
+${GEM_LIBDIR}/ext/libev/ev_linuxaio.c
 ${GEM_LIBDIR}/ext/libev/ev_poll.c
 ${GEM_LIBDIR}/ext/libev/ev_port.c
 ${GEM_LIBDIR}/ext/libev/ev_select.c
 ${GEM_LIBDIR}/ext/libev/ev_vars.h
 ${GEM_LIBDIR}/ext/libev/ev_win32.c
 ${GEM_LIBDIR}/ext/libev/ev_wrap.h
-${GEM_LIBDIR}/ext/libev/test_libev_win32.c
 ${GEM_LIBDIR}/ext/nio4r/bytebuffer.c
 ${GEM_LIBDIR}/ext/nio4r/extconf.rb
 ${GEM_LIBDIR}/ext/nio4r/libev.h
@@ -48,6 +46,9 @@ ${GEM_LIBDIR}/lib/nio/version.rb
 ${GEM_LIBDIR}/lib/nio4r_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/logo.png
 ${GEM_LIBDIR}/nio4r.gemspec
+${GEM_LIBDIR}/rakelib/extension.rake
+${GEM_LIBDIR}/rakelib/rspec.rake
+${GEM_LIBDIR}/rakelib/rubocop.rake
 ${GEM_LIBDIR}/spec/nio/acceptables_spec.rb
 ${GEM_LIBDIR}/spec/nio/bytebuffer_spec.rb
 ${GEM_LIBDIR}/spec/nio/monitor_spec.rb
@@ -58,7 +59,4 @@ ${GEM_LIBDIR}/spec/nio/selectables/udp_socket_spec.rb
 ${GEM_LIBDIR}/spec/nio/selector_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/support/selectable_examples.rb
-${GEM_LIBDIR}/tasks/extension.rake
-${GEM_LIBDIR}/tasks/rspec.rake
-${GEM_LIBDIR}/tasks/rubocop.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
