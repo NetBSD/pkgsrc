@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2018/03/02 14:27:00 adam Exp $
+$NetBSD: distinfo,v 1.18 2020/03/24 14:56:46 nia Exp $
 
-SHA1 (libdvbpsi-1.3.2.tar.bz2) = 544e2c085b9d907e2416920c55d59fffc21b3cf4
-RMD160 (libdvbpsi-1.3.2.tar.bz2) = 71d91566cac867834c4c161a6747162e0066c6a7
-SHA512 (libdvbpsi-1.3.2.tar.bz2) = cb59c2e66a214cad7bb96aa1f80a178399fcd80da9fc05b22c72763f2cd818bfab3724d36eee4c6467fb8bc8bae18b1d8afec64c02e8e47cd7a6e887f0230309
-Size (libdvbpsi-1.3.2.tar.bz2) = 487807 bytes
+SHA1 (libdvbpsi-1.3.3.tar.bz2) = 0fe0b72da762a961df27e4e94e55fa270cc9772b
+RMD160 (libdvbpsi-1.3.3.tar.bz2) = 3d809e73776d3ac3426efdbe327780c55292284e
+SHA512 (libdvbpsi-1.3.3.tar.bz2) = 70f9e783a947e026ea50afe98ad2b3bfce075bd8d76932f73a6253b077a3a180aa632e9a1fff20308e2f0f3f881d727b4e4aad9b8da2b384edf9a3a0f9eacc69
+Size (libdvbpsi-1.3.3.tar.bz2) = 488020 bytes
 SHA1 (patch-examples_dvbinfo_udp.c) = 4d4360780a3d54cdd669760235df7a67d296989e
