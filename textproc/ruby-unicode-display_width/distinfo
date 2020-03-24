@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/10/04 23:41:47 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2020/03/24 17:24:23 taca Exp $
 
-SHA1 (unicode-display_width-1.6.0.gem) = 61490c063cc6296f142ad2a94172d964f62b9045
-RMD160 (unicode-display_width-1.6.0.gem) = c21810f58a6900abdd1529f84a2bd3e51ee4edae
-SHA512 (unicode-display_width-1.6.0.gem) = 1506bb739629061c49ff7fa7f02907e3745674fb88478a7d26d4d7d97e1c5d31d8c2b082853a80cd278f1346f3fb0392cabc73bc555ada5bf9e27c097b9964de
-Size (unicode-display_width-1.6.0.gem) = 11264 bytes
+SHA1 (unicode-display_width-1.7.0.gem) = 6d743a99b24181c979b99f09df161fb2a2d983bf
+RMD160 (unicode-display_width-1.7.0.gem) = 20e55c7160dc4933bb2973d0c909a9bc7b88d0e2
+SHA512 (unicode-display_width-1.7.0.gem) = 962c8866dff37f006b91c3c61e9f988d00e28249736eb2c771117e2a0b9df99484aacc85b17e5b58eab9404735a34f97023258a403028306ab6a56208022d20f
+Size (unicode-display_width-1.7.0.gem) = 11776 bytes
