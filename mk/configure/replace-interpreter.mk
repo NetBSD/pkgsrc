@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.18 2020/03/22 21:31:21 rillig Exp $
+# $NetBSD: replace-interpreter.mk,v 1.19 2020/03/24 04:40:34 rillig Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -12,9 +12,9 @@
 # REPLACE_PERL
 # REPLACE_PERL6
 # REPLACE_SH
-#	Lists of files relative to WRKSRC in which the #! interpreter
-#	should be replaced by the pkgsrc one. If any directories
-#	appear in the lists, they are silenty skipped, assuming that
+#	Lists of filename patterns relative to WRKSRC in which the #!
+#	interpreter should be replaced by the pkgsrc one. Any directories
+#	that appear in the lists are silenty skipped, assuming that
 #	they result from shell globbing expressions.
 #
 #	Use REPLACE_SH for shell programs that don't need any
