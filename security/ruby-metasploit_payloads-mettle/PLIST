@@ -1,11 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2018/09/23 17:57:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/03/24 16:04:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/build/aarch64-iphone-darwin/bin/mettle
+${GEM_LIBDIR}/build/aarch64-iphone-darwin/bin/mettle.dylib
+${GEM_LIBDIR}/build/aarch64-iphone-darwin/bin/mettle.sha1.dylib
+${GEM_LIBDIR}/build/aarch64-iphone-darwin/bin/sniffer
 ${GEM_LIBDIR}/build/aarch64-linux-musl/bin/mettle
 ${GEM_LIBDIR}/build/aarch64-linux-musl/bin/mettle.bin
 ${GEM_LIBDIR}/build/aarch64-linux-musl/bin/sniffer
 ${GEM_LIBDIR}/build/aarch64-linux-musl/bin/sniffer.bin
 ${GEM_LIBDIR}/build/arm-iphone-darwin/bin/mettle
+${GEM_LIBDIR}/build/arm-iphone-darwin/bin/mettle.dylib
+${GEM_LIBDIR}/build/arm-iphone-darwin/bin/mettle.sha1.dylib
+${GEM_LIBDIR}/build/arm-iphone-darwin/bin/sniffer
 ${GEM_LIBDIR}/build/armv5b-linux-musleabi/bin/mettle
 ${GEM_LIBDIR}/build/armv5b-linux-musleabi/bin/mettle.bin
 ${GEM_LIBDIR}/build/armv5b-linux-musleabi/bin/sniffer
@@ -14,7 +20,6 @@ ${GEM_LIBDIR}/build/armv5l-linux-musleabi/bin/mettle
 ${GEM_LIBDIR}/build/armv5l-linux-musleabi/bin/mettle.bin
 ${GEM_LIBDIR}/build/armv5l-linux-musleabi/bin/sniffer
 ${GEM_LIBDIR}/build/armv5l-linux-musleabi/bin/sniffer.bin
-${GEM_LIBDIR}/build/darwin.x86_64/bin/mettle
 ${GEM_LIBDIR}/build/i486-linux-musl/bin/mettle
 ${GEM_LIBDIR}/build/i486-linux-musl/bin/mettle.bin
 ${GEM_LIBDIR}/build/i486-linux-musl/bin/sniffer
@@ -49,10 +54,12 @@ ${GEM_LIBDIR}/build/s390x-linux-musl/bin/mettle.bin
 ${GEM_LIBDIR}/build/s390x-linux-musl/bin/sniffer
 ${GEM_LIBDIR}/build/s390x-linux-musl/bin/sniffer.bin
 ${GEM_LIBDIR}/build/x86_64-apple-darwin/bin/mettle
+${GEM_LIBDIR}/build/x86_64-apple-darwin/bin/sniffer
 ${GEM_LIBDIR}/build/x86_64-linux-musl/bin/mettle
 ${GEM_LIBDIR}/build/x86_64-linux-musl/bin/mettle.bin
 ${GEM_LIBDIR}/build/x86_64-linux-musl/bin/sniffer
 ${GEM_LIBDIR}/build/x86_64-linux-musl/bin/sniffer.bin
+${GEM_LIBDIR}/build/x86_64-w64-mingw32/bin/mettle.exe
 ${GEM_LIBDIR}/lib/metasploit_payloads/mettle.rb
 ${GEM_LIBDIR}/lib/metasploit_payloads/mettle/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
