@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.2 2019/09/21 12:14:05 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/03/24 06:29:40 rillig Exp $
 
 SHA1 (icoutils-0.32.3.tar.bz2) = 6fe61b85b2a44bd1a8a7d8e03eeb0efa45f2a7fd
 RMD160 (icoutils-0.32.3.tar.bz2) = 0ce5252ba66e100ac8aa1dd0850479ff41ec02a3
 SHA512 (icoutils-0.32.3.tar.bz2) = 982a051a5dc4a63bb2a9f23e78e5a88e481e5c7a9c25789253e1c396e40d4c093e5a9b399966d660e4f2da21ce15d539cb9d20bfd8126b1138f148b86baa6726
 Size (icoutils-0.32.3.tar.bz2) = 609286 bytes
+SHA1 (patch-common_hmap.c) = 0ee879db27f6bf632e2ce171a1fcf44194b5a6ab
+SHA1 (patch-common_string-utils.c) = 8fe8ce50925101331623e3719ffab51016146e2b
