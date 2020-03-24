@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1850 2020/03/24 04:09:07 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.1851 2020/03/24 07:02:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2523,3 +2523,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/youtube-dl to 20200324 [leot 2020-03-23]
 	Updated games/ruby-squib to 0.15.3 [taca 2020-03-24]
 	Updated textproc/py-ICU to 2.4.3nb2 [gutteridge 2020-03-24]
+	Updated sysutils/py-crontab to 2.4.1 [adam 2020-03-24]
+	Updated www/py-asgiref to 3.2.6 [adam 2020-03-24]
+	Updated textproc/py-humanize to 2.2.0 [adam 2020-03-24]
+	Updated finance/py-stripe to 2.44.0 [adam 2020-03-24]
