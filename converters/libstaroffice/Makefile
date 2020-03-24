@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2020/01/26 17:30:51 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/03/24 17:04:27 nia Exp $
 
-DISTNAME=	libstaroffice-0.0.2
-PKGREVISION=	9
+DISTNAME=	libstaroffice-0.0.6
 CATEGORIES=	converters
-MASTER_SITES=	http://dev-www.libreoffice.org/src/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://dev-www.libreoffice.org/src/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://dev-www.libreoffice.org/src/
@@ -15,6 +14,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+# C++11
+GCC_REQD+=	4.7
 
 CONFIGURE_ARGS+=	--without-docs
 CONFIGURE_ARGS+=	--disable-werror
