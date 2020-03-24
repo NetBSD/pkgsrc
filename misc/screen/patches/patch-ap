@@ -1,13 +1,6 @@
-$NetBSD: patch-ap,v 1.8 2017/07/18 23:02:18 kim Exp $
+$NetBSD: patch-ap,v 1.9 2020/03/24 06:55:34 rillig Exp $
 
 Replace configurable paths with tags.
-
-BE CAREFUL IF YOU WANT TO REGENERATE THIS PATCH!
-YOU MUST RUN DIFF BEFORE SUBSTITUTIONS!
-
-% make clean && make extract && make pre-patch && make do-patch
-
-RUNNING "make patch" TAKES YOU TOO FAR.
 
 --- doc/screen.1.orig	2017-07-10 19:26:25.000000000 +0000
 +++ doc/screen.1	2017-07-18 22:44:38.000000000 +0000
@@ -25,7 +18,7 @@ RUNNING "make patch" TAKES YOU TOO FAR.
  .I screen
  is invoked, it executes initialization commands from the files
 -\*Q/usr/local/etc/screenrc\*U and
-+\*Q/usr/pkg/etc/screenrc\*U and
++\*Q@PKG_SYSCONFDIR@/screenrc\*U and
  \*Q.screenrc\*U in the user's home directory. These are the \*Qprogrammer's
  defaults\*U that can be overridden in the following ways: for the
  global screenrc file 
@@ -34,7 +27,7 @@ RUNNING "make patch" TAKES YOU TOO FAR.
  .PP
  Two configuration files are shipped as examples with your screen distribution:
 -\*Qetc/screenrc\*U and \*Qetc/etcscreenrc\*U. They contain a number of
-+\*Q/usr/pkg/share/examples/screen/screenrc\*U and \*Q/usr/pkg/share/examples/screen/etcscreenrc\*U. They contain a number of
++\*Q@EXAMPLES@/screenrc\*U and \*Q@EXAMPLES/etcscreenrc\*U. They contain a number of
  useful examples for various commands.
  .PP
  Customization can also be done 'on-line'. To enter the command mode type
@@ -43,13 +36,13 @@ RUNNING "make patch" TAKES YOU TOO FAR.
  distribution package for private and global initialization files.
  .IP $SYSSCREENRC 
 -.IP /usr/local/etc/screenrc
-+.IP /usr/pkg/etc/screenrc
++.IP @PKG_SYSCONFDIR@/screenrc
  .I screen
  initialization commands
  .IP $SCREENRC
  .IP $HOME/.screenrc
 -Read in after /usr/local/etc/screenrc
-+Read in after /usr/pkg/etc/screenrc
++Read in after @PKG_SYSCONFDIR@/screenrc
  .IP $SCREENDIR/S\-<login>
 -.IP /local/screens/S\-<login>
 +.IP /tmp/screens/S\-<login>
