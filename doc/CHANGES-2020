@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1876 2020/03/24 15:49:13 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1877 2020/03/24 15:49:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2553,3 +2553,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/ruby-pdf-reader to 2.4.0 [taca 2020-03-24]
 	Updated security/ruby-airbrussh to 1.4.0 [taca 2020-03-24]
 	Updated security/ruby-bcrypt to 3.1.13 [taca 2020-03-24]
+	Updated converters/libfreehand to 0.1.2 [nia 2020-03-24]
