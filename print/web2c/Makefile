@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2020/03/04 22:07:28 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2020/03/24 20:42:23 joerg Exp $
 
 PKGREVISION= 5
 .include "../../print/texlive/Makefile.common"
@@ -18,6 +18,9 @@ USE_LANGUAGES=		c c++14
 USE_TOOLS+=		gmake lex yacc
 GNU_CONFIGURE_STRICT=	no # texk/web2c/web2c doesn't know the options
 PKGCONFIG_OVERRIDE=	synctexdir/synctex.pc.in
+
+# broken dependencies
+BUILD_TARGET=	mplib.h all
 
 INFO_FILES=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/texk/web2c
