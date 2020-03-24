@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2019/06/24 10:59:42 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/24 13:49:11 nia Exp $
 
-DISTNAME=	duktape-2.3.0
+DISTNAME=	duktape-2.5.0
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://duktape.org/
+MASTER_SITES=	https://duktape.org/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
