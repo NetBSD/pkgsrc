@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2020/03/24 13:23:46 nia Exp $
+bin/neko
+bin/nekoc
+bin/nekoml
+bin/nekotools
+include/neko.h
+include/neko_elf.h
+include/neko_mod.h
+include/neko_vm.h
+lib/cmake/Neko/NekoConfig.cmake
+lib/cmake/Neko/NekoConfigVersion.cmake
+lib/cmake/Neko/NekoTargets-noconfig.cmake
+lib/cmake/Neko/NekoTargets.cmake
+lib/libneko.so
+lib/libneko.so.2
+lib/libneko.so.2.3.0
+${PLIST.apache}lib/neko/mod_neko2.ndll
+${PLIST.apache}lib/neko/mod_tora2.ndll
+${PLIST.mysql}lib/neko/mysql.ndll
+${PLIST.mysql}lib/neko/mysql5.ndll
+lib/neko/nekoml.std
+${PLIST.regexp}lib/neko/regexp.ndll
+${PLIST.sqlite}lib/neko/sqlite.ndll
+${PLIST.ssl}lib/neko/ssl.ndll
+lib/neko/std.ndll
+${PLIST.ui}lib/neko/ui.ndll
+lib/neko/zlib.ndll
