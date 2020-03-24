@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2019/01/06 02:51:47 tnn Exp $
+$NetBSD: distinfo,v 1.7 2020/03/24 15:49:36 nia Exp $
 
-SHA1 (libfreehand-0.1.1.tar.bz2) = 713ffc76f065390ce82016ba205415d5bffe724f
-RMD160 (libfreehand-0.1.1.tar.bz2) = 4770e3c4c62909221e4b6f7875b3c88ebf362f86
-SHA512 (libfreehand-0.1.1.tar.bz2) = 2189eb9b4e0959d4a1854f8f73048b00d639c9c155f948f0823c3bf13da28fbeee5ed548ba18c14c1255bc0420df4500382da640488e695ba743a9284655933b
-Size (libfreehand-0.1.1.tar.bz2) = 597212 bytes
+SHA1 (libfreehand-0.1.2.tar.xz) = f945b23b7801a3601998973028a054ee379967cb
+RMD160 (libfreehand-0.1.2.tar.xz) = 192b04b4aa85a6d3e7f1200aad7588e72978a329
+SHA512 (libfreehand-0.1.2.tar.xz) = 4112a76ac99999801d97d1b282596d631d8496a5bf65778ab26aa06da86637b1e2b630648a67ea01bf3316ecec9f2715546baff27af090b900267c87a011b963
+Size (libfreehand-0.1.2.tar.xz) = 516132 bytes
 SHA1 (patch-src_lib_FHPath.h) = a883f19924232b178b98aeb480cc0fa1ab37e98f
