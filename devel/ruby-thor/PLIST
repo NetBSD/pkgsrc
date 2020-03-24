@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/03/20 12:48:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/03/24 18:30:19 taca Exp $
 bin/thor${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -18,14 +18,13 @@ ${GEM_LIBDIR}/lib/thor/actions/inject_into_file.rb
 ${GEM_LIBDIR}/lib/thor/base.rb
 ${GEM_LIBDIR}/lib/thor/command.rb
 ${GEM_LIBDIR}/lib/thor/core_ext/hash_with_indifferent_access.rb
-${GEM_LIBDIR}/lib/thor/core_ext/io_binary_read.rb
-${GEM_LIBDIR}/lib/thor/core_ext/ordered_hash.rb
 ${GEM_LIBDIR}/lib/thor/error.rb
 ${GEM_LIBDIR}/lib/thor/group.rb
 ${GEM_LIBDIR}/lib/thor/invocation.rb
 ${GEM_LIBDIR}/lib/thor/line_editor.rb
 ${GEM_LIBDIR}/lib/thor/line_editor/basic.rb
 ${GEM_LIBDIR}/lib/thor/line_editor/readline.rb
+${GEM_LIBDIR}/lib/thor/nested_context.rb
 ${GEM_LIBDIR}/lib/thor/parser.rb
 ${GEM_LIBDIR}/lib/thor/parser/argument.rb
 ${GEM_LIBDIR}/lib/thor/parser/arguments.rb
