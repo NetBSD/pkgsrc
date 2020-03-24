@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/09/23 16:05:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/03/24 15:48:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/bcrypt_ext.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -18,10 +18,13 @@ ${GEM_LIBDIR}/ext/mri/bcrypt_ext.c
 ${GEM_LIBDIR}/ext/mri/crypt.c
 ${GEM_LIBDIR}/ext/mri/crypt.h
 ${GEM_LIBDIR}/ext/mri/crypt_blowfish.c
+${GEM_LIBDIR}/ext/mri/crypt_blowfish.h
 ${GEM_LIBDIR}/ext/mri/crypt_gensalt.c
+${GEM_LIBDIR}/ext/mri/crypt_gensalt.h
 ${GEM_LIBDIR}/ext/mri/extconf.rb
 ${GEM_LIBDIR}/ext/mri/ow-crypt.h
 ${GEM_LIBDIR}/ext/mri/wrapper.c
+${GEM_LIBDIR}/ext/mri/x86.S
 ${GEM_LIBDIR}/lib/bcrypt.rb
 ${GEM_LIBDIR}/lib/bcrypt/engine.rb
 ${GEM_LIBDIR}/lib/bcrypt/error.rb
