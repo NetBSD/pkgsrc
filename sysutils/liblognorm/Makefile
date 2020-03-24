@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 17:32:10 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/03/24 15:59:57 nia Exp $
 
-DISTNAME=	liblognorm-2.0.5
+DISTNAME=	liblognorm-2.0.6
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.liblognorm.com/files/download/
+MASTER_SITES=	https://www.liblognorm.com/files/download/
 
 MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	https://www.liblognorm.com/
