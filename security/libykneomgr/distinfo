@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:17:50 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/03/24 17:38:14 nia Exp $
 
-SHA1 (libykneomgr-0.1.6.tar.gz) = 9e0d39544421788223baaea176c3ecafc4290589
-RMD160 (libykneomgr-0.1.6.tar.gz) = 93b55f02766ac36485df6d5d3c28c626a41629f9
-SHA512 (libykneomgr-0.1.6.tar.gz) = deb8deafa3c748bb888309d9d2d62f3657cd6d9d103ceee738abbc47a8e4466535e9641f104f5628657ec8924306b8d9d0a90cd2485dd5ad46dd2d8ee932fab4
-Size (libykneomgr-0.1.6.tar.gz) = 633881 bytes
+SHA1 (libykneomgr-0.1.8.tar.gz) = 5383c7849139a737f995a4f825de9b99aace0478
+RMD160 (libykneomgr-0.1.8.tar.gz) = 34c49ae3ad4d29ec85f935f9c274ea36c2ba98e5
+SHA512 (libykneomgr-0.1.8.tar.gz) = 536db3a81b74d24e727cc09c5bb898723b602e6c55e249745ced59d5f9416673fdbecd80bb7ebc7031be349092c8fb4f5623c8f6972ab870ec1f50ac1bc2f795
+Size (libykneomgr-0.1.8.tar.gz) = 626257 bytes
