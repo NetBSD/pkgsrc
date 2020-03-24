@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2020/01/18 21:47:59 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2020/03/24 14:31:58 adam Exp $
 
 BUILDLINK_TREE+=	mongo-c-driver
 
@@ -12,11 +12,11 @@ BUILDLINK_PKGSRCDIR.mongo-c-driver?=	../../databases/mongo-c-driver
 pkgbase := mongo-c-driver
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.mongo-c-driver:Msasl)
+.if ${PKG_BUILD_OPTIONS.mongo-c-driver:Msasl}
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.mongo-c-driver:Mssl)
+.if ${PKG_BUILD_OPTIONS.mongo-c-driver:Mssl}
 .  include "../../security/openssl/buildlink3.mk"
 .endif
 
