@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/02/03 16:16:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/03/24 18:06:28 taca Exp $
 bin/chef-zero${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -22,6 +22,7 @@ ${GEM_LIBDIR}/lib/chef_zero/data_store/memory_store_v2.rb
 ${GEM_LIBDIR}/lib/chef_zero/data_store/raw_file_store.rb
 ${GEM_LIBDIR}/lib/chef_zero/data_store/v1_to_v2_adapter.rb
 ${GEM_LIBDIR}/lib/chef_zero/data_store/v2_to_v1_adapter.rb
+${GEM_LIBDIR}/lib/chef_zero/dist.rb
 ${GEM_LIBDIR}/lib/chef_zero/endpoints/acl_endpoint.rb
 ${GEM_LIBDIR}/lib/chef_zero/endpoints/acls_endpoint.rb
 ${GEM_LIBDIR}/lib/chef_zero/endpoints/actor_default_key_endpoint.rb
