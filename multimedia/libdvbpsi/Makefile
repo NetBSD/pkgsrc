@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2020/01/26 17:31:46 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/03/24 14:56:46 nia Exp $
 
-DISTNAME=	libdvbpsi-1.3.2
+DISTNAME=	libdvbpsi-1.3.3
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.videolan.org/pub/libdvbpsi/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://www.videolan.org/pub/libdvbpsi/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
