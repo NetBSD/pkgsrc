@@ -1,16 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2018/09/23 16:10:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/03/24 18:19:54 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.github/stale.yml
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.gitmodules
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/appveyor.yml
-${GEM_LIBDIR}/examples/multiple_backends.rb
 ${GEM_LIBDIR}/lib/specinfra.rb
 ${GEM_LIBDIR}/lib/specinfra/backend.rb
 ${GEM_LIBDIR}/lib/specinfra/backend/base.rb
@@ -63,7 +56,6 @@ ${GEM_LIBDIR}/lib/specinfra/command/amazon/v2/port.rb
 ${GEM_LIBDIR}/lib/specinfra/command/amazon/v2/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/arch.rb
 ${GEM_LIBDIR}/lib/specinfra/command/arch/base.rb
-${GEM_LIBDIR}/lib/specinfra/command/arch/base/file.rb
 ${GEM_LIBDIR}/lib/specinfra/command/arch/base/package.rb
 ${GEM_LIBDIR}/lib/specinfra/command/arch/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/base.rb
@@ -96,6 +88,10 @@ ${GEM_LIBDIR}/lib/specinfra/command/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/base/user.rb
 ${GEM_LIBDIR}/lib/specinfra/command/base/yumrepo.rb
 ${GEM_LIBDIR}/lib/specinfra/command/base/zfs.rb
+${GEM_LIBDIR}/lib/specinfra/command/clearlinux.rb
+${GEM_LIBDIR}/lib/specinfra/command/clearlinux/base.rb
+${GEM_LIBDIR}/lib/specinfra/command/clearlinux/base/package.rb
+${GEM_LIBDIR}/lib/specinfra/command/clearlinux/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/coreos.rb
 ${GEM_LIBDIR}/lib/specinfra/command/coreos/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/coreos/base/service.rb
@@ -106,6 +102,7 @@ ${GEM_LIBDIR}/lib/specinfra/command/cumulus/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/darwin.rb
 ${GEM_LIBDIR}/lib/specinfra/command/darwin/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/darwin/base/file.rb
+${GEM_LIBDIR}/lib/specinfra/command/darwin/base/group.rb
 ${GEM_LIBDIR}/lib/specinfra/command/darwin/base/host.rb
 ${GEM_LIBDIR}/lib/specinfra/command/darwin/base/interface.rb
 ${GEM_LIBDIR}/lib/specinfra/command/darwin/base/inventory.rb
@@ -157,13 +154,17 @@ ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v11.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v11/interface.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v6.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v6/package.rb
+${GEM_LIBDIR}/lib/specinfra/command/freebsd/v6/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v6/user.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v7.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v7/package.rb
+${GEM_LIBDIR}/lib/specinfra/command/freebsd/v7/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v8.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v8/package.rb
+${GEM_LIBDIR}/lib/specinfra/command/freebsd/v8/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v9.rb
 ${GEM_LIBDIR}/lib/specinfra/command/freebsd/v9/package.rb
+${GEM_LIBDIR}/lib/specinfra/command/freebsd/v9/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/gentoo.rb
 ${GEM_LIBDIR}/lib/specinfra/command/gentoo/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/gentoo/base/package.rb
@@ -191,11 +192,13 @@ ${GEM_LIBDIR}/lib/specinfra/command/linux/base/zfs.rb
 ${GEM_LIBDIR}/lib/specinfra/command/linuxmint.rb
 ${GEM_LIBDIR}/lib/specinfra/command/linuxmint/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module.rb
+${GEM_LIBDIR}/lib/specinfra/command/module/openrc.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module/service/daemontools.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module/service/delegator.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module/service/god.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module/service/init.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module/service/monit.rb
+${GEM_LIBDIR}/lib/specinfra/command/module/service/openrc.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module/service/runit.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module/service/supervisor.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module/service/systemd.rb
@@ -240,11 +243,11 @@ ${GEM_LIBDIR}/lib/specinfra/command/poky/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/raspbian.rb
 ${GEM_LIBDIR}/lib/specinfra/command/redhat.rb
 ${GEM_LIBDIR}/lib/specinfra/command/redhat/base.rb
-${GEM_LIBDIR}/lib/specinfra/command/redhat/base/file.rb
 ${GEM_LIBDIR}/lib/specinfra/command/redhat/base/host.rb
 ${GEM_LIBDIR}/lib/specinfra/command/redhat/base/iptables.rb
 ${GEM_LIBDIR}/lib/specinfra/command/redhat/base/package.rb
 ${GEM_LIBDIR}/lib/specinfra/command/redhat/base/port.rb
+${GEM_LIBDIR}/lib/specinfra/command/redhat/base/selinux_module.rb
 ${GEM_LIBDIR}/lib/specinfra/command/redhat/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/redhat/base/yumrepo.rb
 ${GEM_LIBDIR}/lib/specinfra/command/redhat/v5.rb
@@ -253,8 +256,14 @@ ${GEM_LIBDIR}/lib/specinfra/command/redhat/v7.rb
 ${GEM_LIBDIR}/lib/specinfra/command/redhat/v7/host.rb
 ${GEM_LIBDIR}/lib/specinfra/command/redhat/v7/port.rb
 ${GEM_LIBDIR}/lib/specinfra/command/redhat/v7/service.rb
+${GEM_LIBDIR}/lib/specinfra/command/redhat/v8.rb
+${GEM_LIBDIR}/lib/specinfra/command/redhat/v8/selinux_module.rb
+${GEM_LIBDIR}/lib/specinfra/command/redhat/v8/yumrepo.rb
 ${GEM_LIBDIR}/lib/specinfra/command/sles.rb
 ${GEM_LIBDIR}/lib/specinfra/command/sles/base.rb
+${GEM_LIBDIR}/lib/specinfra/command/sles/base/service.rb
+${GEM_LIBDIR}/lib/specinfra/command/sles/v11.rb
+${GEM_LIBDIR}/lib/specinfra/command/sles/v11/user.rb
 ${GEM_LIBDIR}/lib/specinfra/command/sles/v12.rb
 ${GEM_LIBDIR}/lib/specinfra/command/sles/v12/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/smartos.rb
@@ -283,6 +292,8 @@ ${GEM_LIBDIR}/lib/specinfra/command/solaris/v10/group.rb
 ${GEM_LIBDIR}/lib/specinfra/command/solaris/v10/host.rb
 ${GEM_LIBDIR}/lib/specinfra/command/solaris/v10/package.rb
 ${GEM_LIBDIR}/lib/specinfra/command/solaris/v10/user.rb
+${GEM_LIBDIR}/lib/specinfra/command/solaris/v11.rb
+${GEM_LIBDIR}/lib/specinfra/command/solaris/v11/user.rb
 ${GEM_LIBDIR}/lib/specinfra/command/suse.rb
 ${GEM_LIBDIR}/lib/specinfra/command/suse/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/suse/base/package.rb
@@ -327,6 +338,7 @@ ${GEM_LIBDIR}/lib/specinfra/helper/detect_os.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/aix.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/alpine.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/arch.rb
+${GEM_LIBDIR}/lib/specinfra/helper/detect_os/clearlinux.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/coreos.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/darwin.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/debian.rb
@@ -362,6 +374,7 @@ ${GEM_LIBDIR}/lib/specinfra/host_inventory/group.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/hostname.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/kernel.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/memory.rb
+${GEM_LIBDIR}/lib/specinfra/host_inventory/mount.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/ohai.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/platform.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/platform_version.rb
@@ -392,9 +405,11 @@ ${GEM_LIBDIR}/spec/command/base/mail_alias_spec.rb
 ${GEM_LIBDIR}/spec/command/base/package_spec.rb
 ${GEM_LIBDIR}/spec/command/base/process_spec.rb
 ${GEM_LIBDIR}/spec/command/base/user_spec.rb
+${GEM_LIBDIR}/spec/command/clearlinux/package_spec.rb
 ${GEM_LIBDIR}/spec/command/cumulus/ppa_cumuluslinux_spec.rb
 ${GEM_LIBDIR}/spec/command/cumulus/ppa_cumulusnetworks_spec.rb
 ${GEM_LIBDIR}/spec/command/darwin/file_spec.rb
+${GEM_LIBDIR}/spec/command/darwin/group_spec.rb
 ${GEM_LIBDIR}/spec/command/darwin/host_spec.rb
 ${GEM_LIBDIR}/spec/command/darwin/interface_spec.rb
 ${GEM_LIBDIR}/spec/command/darwin/port_spec.rb
@@ -412,6 +427,7 @@ ${GEM_LIBDIR}/spec/command/freebsd/file_spec.rb
 ${GEM_LIBDIR}/spec/command/freebsd/host_spec.rb
 ${GEM_LIBDIR}/spec/command/freebsd/interface_spec.rb
 ${GEM_LIBDIR}/spec/command/freebsd/package_spec.rb
+${GEM_LIBDIR}/spec/command/freebsd/service_spec.rb
 ${GEM_LIBDIR}/spec/command/linux/bond_spec.rb
 ${GEM_LIBDIR}/spec/command/linux/bridge_spec.rb
 ${GEM_LIBDIR}/spec/command/linux/file_spec.rb
@@ -439,11 +455,17 @@ ${GEM_LIBDIR}/spec/command/redhat7/host_spec.rb
 ${GEM_LIBDIR}/spec/command/redhat7/interface_spec.rb
 ${GEM_LIBDIR}/spec/command/redhat7/port_spec.rb
 ${GEM_LIBDIR}/spec/command/redhat7/service_spec.rb
+${GEM_LIBDIR}/spec/command/redhat8/selinux_spec.rb
+${GEM_LIBDIR}/spec/command/redhat8/yumrepo_spec.rb
+${GEM_LIBDIR}/spec/command/sles11/user_spec.rb
+${GEM_LIBDIR}/spec/command/sles15/service_spec.rb
+${GEM_LIBDIR}/spec/command/solaris11/user_spec.rb
 ${GEM_LIBDIR}/spec/command/ubuntu/ppa_spec.rb
 ${GEM_LIBDIR}/spec/command/windows/registry_key_spec.rb
 ${GEM_LIBDIR}/spec/command/windows/service_spec.rb
 ${GEM_LIBDIR}/spec/configuration_spec.rb
 ${GEM_LIBDIR}/spec/helper/detect_os/aix_spec.rb
+${GEM_LIBDIR}/spec/helper/detect_os/clearlinux_spec.rb
 ${GEM_LIBDIR}/spec/helper/detect_os/darwin_spec.rb
 ${GEM_LIBDIR}/spec/helper/detect_os/debian_spec.rb
 ${GEM_LIBDIR}/spec/helper/detect_os/eos_spec.rb
