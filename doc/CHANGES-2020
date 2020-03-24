@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1931 2020/03/24 18:20:27 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1932 2020/03/24 18:21:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2610,3 +2610,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/mpage to 2.5.7 [nia 2020-03-24]
 	Updated textproc/ruby-will-paginate to 3.3.0 [taca 2020-03-24]
 	Updated sysutils/ruby-specinfra to 2.82.12 [taca 2020-03-24]
+	Updated sysutils/ruby-serverspec to 2.41.5 [taca 2020-03-24]
