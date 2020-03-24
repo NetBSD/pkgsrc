@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/01/26 17:31:50 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/24 14:40:56 nia Exp $
 
-DISTNAME=	lft-3.79
+DISTNAME=	lft-3.8
+PKGNAME=	lft-3.80
 CATEGORIES=	net
 MASTER_SITES=	http://pwhois.org/dl/index.who?file=
 
