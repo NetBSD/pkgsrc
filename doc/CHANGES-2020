@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1918 2020/03/24 17:38:35 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1919 2020/03/24 17:46:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2596,3 +2596,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-unicode-display_width to 1.7.0 [taca 2020-03-24]
 	Updated security/libtasn1 to 4.16.0 [nia 2020-03-24]
 	Updated security/libykneomgr to 0.1.8 [nia 2020-03-24]
+	Updated devel/ruby-mixlib-config to 3.0.6 [taca 2020-03-24]
