@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1858 2020/03/24 14:13:08 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1859 2020/03/24 14:34:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2534,3 +2534,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/alee-ttf to 13.3 [nia 2020-03-24]
 	Updated fonts/linux-libertine-ttf to 5.3.0 [nia 2020-03-24]
 	Updated graphics/gifsicle to 1.92 [nia 2020-03-24]
+	Updated databases/mongo-c-driver to 1.16.2 [adam 2020-03-24]
+	Updated databases/mongodb to 4.2.5 [adam 2020-03-24]
