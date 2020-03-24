@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:49:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/24 20:38:39 joerg Exp $
 
 DISTNAME=	redeclipse_2.0.0_nix
 PKGNAME=	redeclipse-2.0.0
@@ -30,5 +30,6 @@ MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
