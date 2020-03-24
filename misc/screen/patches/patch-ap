@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.9 2020/03/24 06:55:34 rillig Exp $
+$NetBSD: patch-ap,v 1.10 2020/03/24 07:04:37 rillig Exp $
 
 Replace configurable paths with tags.
 
@@ -27,7 +27,7 @@ Replace configurable paths with tags.
  .PP
  Two configuration files are shipped as examples with your screen distribution:
 -\*Qetc/screenrc\*U and \*Qetc/etcscreenrc\*U. They contain a number of
-+\*Q@EXAMPLES@/screenrc\*U and \*Q@EXAMPLES/etcscreenrc\*U. They contain a number of
++\*Q@EXAMPLES@/screenrc\*U and \*Q@EXAMPLES@/etcscreenrc\*U. They contain a number of
  useful examples for various commands.
  .PP
  Customization can also be done 'on-line'. To enter the command mode type
