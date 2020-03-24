@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1901 2020/03/24 16:54:47 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1902 2020/03/24 16:55:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2579,3 +2579,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-erubi to 1.9.0 [taca 2020-03-24]
 	Updated textproc/ruby-haml to 5.1.2 [taca 2020-03-24]
 	Updated textproc/ruby-kramdown-parser-gfm to 1.1.0 [taca 2020-03-24]
+	Updated devel/libstatgrab to 0.92 [nia 2020-03-24]
