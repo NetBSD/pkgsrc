@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1908 2020/03/24 17:06:42 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1909 2020/03/24 17:09:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2586,3 +2586,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-safe_yaml to 1.0.5 [taca 2020-03-24]
 	Updated converters/libstaroffice to 0.0.6 [nia 2020-03-24]
 	Updated textproc/ruby-stringex to 2.8.5 [taca 2020-03-24]
+	Updated textproc/ruby-temple to 0.8.2 [taca 2020-03-24]
