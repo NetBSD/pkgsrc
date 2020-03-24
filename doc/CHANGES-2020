@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1880 2020/03/24 15:55:49 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1881 2020/03/24 15:56:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2557,3 +2557,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/ruby-bcrypt_pbkdf to 1.0.1 [taca 2020-03-24]
 	Updated emulators/emulationstation to 2.9.0 [nia 2020-03-24]
 	Updated sysutils/liblogging to 1.0.6 [nia 2020-03-24]
+	Updated security/ruby-metasploit-concern to 3.0.0 [taca 2020-03-24]
