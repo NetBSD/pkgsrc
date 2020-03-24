@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1869 2020/03/24 15:25:29 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1870 2020/03/24 15:28:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2546,3 +2546,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-nio4r to 2.5.2 [taca 2020-03-24]
 	Updated net/ruby-recog to 2.3.7 [taca 2020-03-24]
 	Updated converters/libepubgen to 0.1.1 [nia 2020-03-24]
+	Updated devel/libestr to 0.1.11 [nia 2020-03-24]
