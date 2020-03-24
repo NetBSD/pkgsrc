@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1315 2020/03/23 16:33:49 riastradh Exp $
+# $NetBSD: Makefile,v 1.1316 2020/03/24 07:03:31 riastradh Exp $
 #
 
 COMMENT=	Networking tools
@@ -874,6 +874,7 @@ SUBDIR+=	tcptraceroute6
 SUBDIR+=	teamspeak-client
 SUBDIR+=	teamspeak-server
 SUBDIR+=	terraform
+SUBDIR+=	terraform-provider-aws
 SUBDIR+=	tigervnc
 SUBDIR+=	tightvnc
 SUBDIR+=	tightvncviewer
