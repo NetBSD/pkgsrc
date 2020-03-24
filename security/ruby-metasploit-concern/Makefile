@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/03/21 20:26:17 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/24 15:55:25 taca Exp $
 
-DISTNAME=	metasploit-concern-2.0.5
+DISTNAME=	metasploit-concern-3.0.0
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
@@ -8,10 +8,10 @@ HOMEPAGE=	https://github.com/rapid7/metasploit-concern
 COMMENT=	Automatically include concern modules
 LICENSE=	modified-bsd
 
-#DEPENDS+=	${RUBY_PKGPREFIX}-activemodel42>=4.2.6:../../devel/ruby-activemodel42
-#DEPENDS+=	${RUBY_PKGPREFIX}-activesupport42>=4.2.6:../../devel/ruby-activesupport42
-#DEPENDS+=	${RUBY_PKGPREFIX}-railties42>=4.2.6:../../devel/ruby-railties42
-BROKEN=		"rails 4.2 was removed"
+DEPENDS+=	${RUBY_ACTIVEMODEL_DEPENDS}
+DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
+
+RUBY_RAILS_ACCEPTED=	52
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
