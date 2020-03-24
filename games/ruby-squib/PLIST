@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2018/09/23 15:22:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/03/24 00:34:50 taca Exp $
 bin/squib${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/Dockerfile
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
@@ -126,6 +127,7 @@ ${GEM_LIBDIR}/samples/basic.rb
 ${GEM_LIBDIR}/samples/build_groups/build_groups.rb
 ${GEM_LIBDIR}/samples/colors/_colors.rb
 ${GEM_LIBDIR}/samples/colors/_gradients.rb
+${GEM_LIBDIR}/samples/colors/_switch_color.rb
 ${GEM_LIBDIR}/samples/config/config_text_markup.rb
 ${GEM_LIBDIR}/samples/config/custom_config.rb
 ${GEM_LIBDIR}/samples/data/_csv.rb
@@ -148,6 +150,7 @@ ${GEM_LIBDIR}/samples/proofs/_tgc_proofs.rb
 ${GEM_LIBDIR}/samples/ranges/_ranges.rb
 ${GEM_LIBDIR}/samples/saves/_hand.rb
 ${GEM_LIBDIR}/samples/saves/_portrait_landscape.rb
+${GEM_LIBDIR}/samples/saves/_save_filenames.rb
 ${GEM_LIBDIR}/samples/saves/_save_pdf.rb
 ${GEM_LIBDIR}/samples/saves/_saves.rb
 ${GEM_LIBDIR}/samples/saves/_showcase.rb
