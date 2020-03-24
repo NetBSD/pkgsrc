@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/06/21 22:18:13 taca Exp $
+$NetBSD: distinfo,v 1.2 2020/03/24 17:07:55 taca Exp $
 
-SHA1 (temple-0.8.0.gem) = 0c386423b2acceccb0950f802e2d2c2ae4dc94f2
-RMD160 (temple-0.8.0.gem) = 1ea0f3ec1d62d34bd76e7195c8f00344e1f7bd22
-SHA512 (temple-0.8.0.gem) = ad57c484de78f029797fbf4331fa9c24247d6cec2e3dea447d394a104eb9496c91af45f505b720da1c4242845d94b34b626ca586c625cd126f72d1e4296ab2a6
-Size (temple-0.8.0.gem) = 39424 bytes
+SHA1 (temple-0.8.2.gem) = 214c52a2c137908943acf31074e0c45329260206
+RMD160 (temple-0.8.2.gem) = f46618f5d93a0debb1dfe16fd5fd87e2c1e2d2da
+SHA512 (temple-0.8.2.gem) = 51923b3bf9d4c05255131be62f567ca21305ba023ea5395a08d6970236b2a2833b058f7b3906046b8a57a224b368de12a6d5e426effca39324670fb632f33b67
+Size (temple-0.8.2.gem) = 39424 bytes
