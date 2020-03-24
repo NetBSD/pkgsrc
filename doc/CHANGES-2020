@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1934 2020/03/24 18:25:48 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1935 2020/03/24 18:26:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2614,3 +2614,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ruby-chef to 15.8.23 [taca 2020-03-24]
 	Updated textproc/mythes to 1.2.4 [nia 2020-03-24]
 	Updated sysutils/ncdu to 1.14.2 [nia 2020-03-24]
+	Updated sysutils/ruby-puppet-resource_api to 1.8.12 [taca 2020-03-24]
