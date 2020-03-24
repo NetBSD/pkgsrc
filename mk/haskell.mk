@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.15 2020/01/20 14:14:33 pho Exp $
+# $NetBSD: haskell.mk,v 1.16 2020/03/24 20:43:17 joerg Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -140,6 +140,9 @@ HOMEPAGE?=	http://hackage.haskell.org/package/${_DISTBASE}
 # that. (PHO: I think that should be handled by url2pkg (2009-05-20))
 USE_TOOLS+=	pkg-config
 
+# GHC can be a memory hog, so don't apply regular limits.
+UNLIMIT_RESOURCES+=	datasize virtualsize
+
 # Default value of HASKELL_OPTIMIZATION_LEVEL
 HASKELL_OPTIMIZATION_LEVEL?=		2
 
@@ -231,19 +234,19 @@ _check-ignored-plist: error-check
 # is much faster, we try it and then fall back to static linkage if
 # that didn't work.
 do-configure:
-	${RUN}cd ${WRKSRC} && \
+	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 		( ${_HASKELL_BIN:Q} --make Setup -dynamic || \
 			${_HASKELL_BIN:Q} --make Setup -static )
-	${RUN}cd ${WRKSRC:Q} && \
+	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC:Q} && \
 		${SETENV} ${CONFIGURE_ENV} \
 			./Setup configure ${PKG_VERBOSE:D-v} ${CONFIGURE_ARGS}
 
 # Define build target. _MAKE_JOBS_N is defined in build/build.mk
 do-build:
-	${RUN}cd ${WRKSRC:Q} && \
+	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC:Q} && \
 		./Setup build ${PKG_VERBOSE:D-v} -j${_MAKE_JOBS_N}
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
-	${RUN}cd ${WRKSRC:Q} && \
+	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC:Q} && \
 		./Setup haddock ${PKG_VERBOSE:D-v}
 .endif
 
@@ -255,7 +258,7 @@ _HASKELL_PKG_ID_FILE=		${_HASKELL_PKG_DESCR_DIR}/package-id
 
 INSTALLATION_DIRS+=		${_HASKELL_PKG_DESCR_DIR}
 do-install:
-	${RUN}cd ${WRKSRC} && \
+	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 		./Setup register ${PKG_VERBOSE:D-v} \
 			--gen-pkg-config=dist/package-description \
 			--print-ipid \
@@ -270,7 +273,7 @@ do-install:
 
 # Define test target.
 do-test:
-	${RUN}cd ${WRKSRC} && \
+	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
 		./Setup test ${PKG_VERBOSE:D-v}
 
 # Substitutions for INSTALL and DEINSTALL.
