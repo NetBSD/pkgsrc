@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/19 15:38:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/24 17:58:03 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/config/product_info.toml
 ${GEM_LIBDIR}/lib/license_acceptance/acceptor.rb
 ${GEM_LIBDIR}/lib/license_acceptance/cli_flags/mixlib_cli.rb
@@ -20,16 +18,4 @@ ${GEM_LIBDIR}/lib/license_acceptance/strategy/file.rb
 ${GEM_LIBDIR}/lib/license_acceptance/strategy/prompt.rb
 ${GEM_LIBDIR}/lib/license_acceptance/strategy/provided_value.rb
 ${GEM_LIBDIR}/lib/license_acceptance/version.rb
-${GEM_LIBDIR}/spec/license_acceptance/acceptor_spec.rb
-${GEM_LIBDIR}/spec/license_acceptance/cli_flags/mixlib_cli_spec.rb
-${GEM_LIBDIR}/spec/license_acceptance/cli_flags/thor_spec.rb
-${GEM_LIBDIR}/spec/license_acceptance/config_spec.rb
-${GEM_LIBDIR}/spec/license_acceptance/product_reader_spec.rb
-${GEM_LIBDIR}/spec/license_acceptance/product_spec.rb
-${GEM_LIBDIR}/spec/license_acceptance/strategy/argument_spec.rb
-${GEM_LIBDIR}/spec/license_acceptance/strategy/environment_spec.rb
-${GEM_LIBDIR}/spec/license_acceptance/strategy/file_spec.rb
-${GEM_LIBDIR}/spec/license_acceptance/strategy/prompt_spec.rb
-${GEM_LIBDIR}/spec/license_acceptance/strategy/provided_value_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
