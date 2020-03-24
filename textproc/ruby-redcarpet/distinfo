@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/03/20 15:40:02 taca Exp $
+$NetBSD: distinfo,v 1.11 2020/03/24 17:00:50 taca Exp $
 
-SHA1 (redcarpet-3.4.0.gem) = 5b75e3d781c66e52dbc16c99eddaa1eff067458f
-RMD160 (redcarpet-3.4.0.gem) = b5a087b4bcd6550a9a96d94b19a2471be2e705fd
-SHA512 (redcarpet-3.4.0.gem) = 7cd68a7d6c2dc4d94683e8738e4867b99a98ee135a59041cddb6d4f42a67ba137e56852e7a1701b35fae7b3b825008194f2a7ed818c5a9fe2bab8e904328529f
-Size (redcarpet-3.4.0.gem) = 61440 bytes
+SHA1 (redcarpet-3.5.0.gem) = ac95368eb36679a4b7c28b9b29d0eb4661371df8
+RMD160 (redcarpet-3.5.0.gem) = 2aad51748cbe71f4ddafeec9106577ab4933aa0e
+SHA512 (redcarpet-3.5.0.gem) = afcb10a1a73356724846f9f4c3f794d3cd6fcd31e3bcbc75d249e1ed69e3d8f8808cd628b1c195ba27dd5ac2de0c477d7cce9667138cbe1646c77d78bcaf5278
+Size (redcarpet-3.5.0.gem) = 62464 bytes
