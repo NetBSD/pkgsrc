@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1853 2020/03/24 13:24:06 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1854 2020/03/24 13:49:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2529,3 +2529,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/py-stripe to 2.44.0 [adam 2020-03-24]
 	Updated devel/cdk to 5.0.20200228 [nia 2020-03-24]
 	Added lang/neko version 2.3.0 [nia 2020-03-24]
+	Updated lang/libduktape to 2.5.0 [nia 2020-03-24]
