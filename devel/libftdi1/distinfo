@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:27:40 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/03/24 16:21:12 nia Exp $
 
-SHA1 (libftdi1-1.1.tar.bz2) = f05ade5614aa31e64f91a30ce3782f7ca3704d18
-RMD160 (libftdi1-1.1.tar.bz2) = 185237715206743b3c4aeea1510137eca7c9042d
-SHA512 (libftdi1-1.1.tar.bz2) = 49ca09a0e918ca5e03168cfa5d4aaec603141891cacc8f02ae63f5b21e3413a021afde05c6dc9883bb48c04a16c955b14513e8350c8c44540145fc12820721df
-Size (libftdi1-1.1.tar.bz2) = 99690 bytes
+SHA1 (libftdi1-1.4.tar.bz2) = 5b14cebab8168e12dd6c2b5325a29ad93ed40f3d
+RMD160 (libftdi1-1.4.tar.bz2) = c7160d343c6098eb1f26f54d37b221113985e4e3
+SHA512 (libftdi1-1.4.tar.bz2) = dbab74f7bc35ca835b9c6dd5b70a64816948d65da1f73a9ece37a0f0f630bd0df1a676543acc517b02a718bc34ba4f7a30cbc48b6eed1c154c917f8ef0a358fc
+Size (libftdi1-1.4.tar.bz2) = 109521 bytes
