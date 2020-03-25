@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2020/01/18 23:30:14 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/03/25 10:44:04 nia Exp $
 
-DISTNAME=	libmwaw-0.3.7
-# next two lines added for 0.3.6-v2, remove after update to usual
-# version number format
-PKGNAME=	${DISTNAME:S/-v/./}
-PKGREVISION=	11
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-v2//}
+DISTNAME=	libmwaw-0.3.16
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmwaw/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/p/libmwaw/wiki/Home/
@@ -20,16 +15,10 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
+# C++11
+GCC_REQD+=	4.7
+
 CONFIGURE_ARGS+=	--without-docs
-
-BUILDLINK_TRANSFORM+=	rm:-Werror
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CONFIGURE_ARGS+=	--with-sharedptr=c++11
-.else
-CONFIGURE_ARGS+=	--with-sharedptr=tr1
-.endif
 
 PKGCONFIG_OVERRIDE+=	libmwaw.pc.in
 
