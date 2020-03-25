@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1944 2020/03/25 11:11:05 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1945 2020/03/25 11:16:13 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2624,3 +2624,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/libmwaw to 0.3.16 [nia 2020-03-25]
 	Updated converters/libabw to 0.1.3 [nia 2020-03-25]
 	Updated www/p5-CGI-Simple to 1.25 [nia 2020-03-25]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2020Q1 branch [jperkin 2020-03-25]
