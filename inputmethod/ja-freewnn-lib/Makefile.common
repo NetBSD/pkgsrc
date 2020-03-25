@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2020/01/26 17:31:25 rillig Exp $
+# $NetBSD: Makefile.common,v 1.25 2020/03/25 07:13:52 rillig Exp $
 # used by inputmethod/ja-freewnn-server/Makefile
 # used by inputmethod/ja-freewnn-lib/Makefile
 
@@ -30,3 +30,16 @@ SUBST_CLASSES+=		imdictdir
 SUBST_STAGE.imdictdir=	post-extract
 SUBST_SED.imdictdir=	-e 's|@LIBDIR/@LANG/dic|${WNNDICTDIR}/@LANG|'
 SUBST_FILES.imdictdir=	Wnn/jd/jserverrc
+
+# Fix GCC warnings:
+# rk_main.c:1441:41: error: array subscript has type 'char'
+# rk_main.c:1453:24: error: array subscript has type 'char'
+# rk_main.c:1454:26: error: array subscript has type 'char'
+# rk_main.c:1505:36: error: array subscript has type 'char'
+#
+# The variable ebf_sw should really be a boolean, not an int.
+#
+SUBST_CLASSES+=		char
+SUBST_STAGE.char=	pre-configure
+SUBST_FILES.char=	Wnn/romkan/rk_main.c
+SUBST_SED.char=		-e 's,char ebf_sw = 0,int ebf_sw = 0,'
