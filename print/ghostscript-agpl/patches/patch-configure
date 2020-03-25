@@ -1,7 +1,8 @@
-$NetBSD: patch-configure,v 1.4 2020/03/24 16:34:45 adam Exp $
+$NetBSD: patch-configure,v 1.5 2020/03/25 07:46:19 adam Exp $
 
 Use system zlib for linking.
 Add rpath.
+Get all LDFLAGS for FreeType2.
 Use correct install_name with path on Darwin.
 
 --- configure.orig	2020-03-19 08:22:25.000000000 +0000
@@ -35,6 +36,15 @@ Use correct install_name with path on Darwin.
  
  $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
  
+@@ -7324,7 +7322,7 @@ $as_echo_n "checking for system freetype
+                 { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+                 FT_CFLAGS="$CFLAGS `$PKGCONFIG --cflags freetype2`"
+-                FT_LIBS="`$PKGCONFIG --libs-only-l freetype2`"
++                FT_LIBS="`$PKGCONFIG --libs freetype2`"
+                 FT_BRIDGE=1
+                 SHARE_FT=1
+             else
 @@ -10881,10 +10879,10 @@ case $host in
      ;;
      *-darwin*)
