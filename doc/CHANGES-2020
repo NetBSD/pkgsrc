@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1947 2020/03/25 11:30:59 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1948 2020/03/25 13:01:57 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2627,3 +2627,4 @@ Changes to the packages collection and infrastructure in 2020:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2020Q1 branch [jperkin 2020-03-25]
 	Updated devel/p5-Perl-Tidy to 20200110 [nia 2020-03-25]
 	Updated devel/py-xdg to 0.26 [nia 2020-03-25]
+	Updated audio/din to 45 [fox 2020-03-25]
