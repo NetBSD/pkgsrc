@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2020/01/26 17:30:51 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/03/25 10:56:09 nia Exp $
 
-DISTNAME=	libabw-0.1.1
-PKGREVISION=	17
+DISTNAME=	libabw-0.1.3
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://dev-www.libreoffice.org/src/
@@ -18,11 +17,12 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	perl:build pkg-config
 USE_LANGUAGES=	c c++
 
+# C++11
+GCC_REQD+=	4.7
+
 CONFIGURE_ARGS+=	--without-docs
 
 PKGCONFIG_OVERRIDE+=	libabw.pc.in
-
-BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
