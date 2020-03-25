@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2020/02/20 15:36:17 nia Exp $
+# $NetBSD: Makefile,v 1.47 2020/03/25 11:47:23 nia Exp $
 
 DISTNAME=	libexif-0.6.21
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libexif/}
 EXTRACT_SUFX=	.tar.bz2
