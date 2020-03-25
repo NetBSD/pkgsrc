@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1950 2020/03/25 16:19:26 riastradh Exp $
+$NetBSD: CHANGES-2020,v 1.1951 2020/03/25 16:20:02 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2629,3 +2629,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-xdg to 0.26 [nia 2020-03-25]
 	Updated audio/din to 45 [fox 2020-03-25]
 	Added net/terraform-provider-aws version 2.54.0 [riastradh 2020-03-25]
+	Updated net/py-gandi.cli to 1.5 [riastradh 2020-03-25]
