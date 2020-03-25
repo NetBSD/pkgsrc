@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2020/03/10 22:09:22 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2020/03/25 14:49:38 wiz Exp $
 
 DISTNAME=	kid3-3.5.1
 PKGREVISION=	16
@@ -38,6 +38,7 @@ SUBST_SED.apple=	-e 's,APPLE,ELPPA,g'
 .include "../../audio/chromaprint/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/id3lib/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
