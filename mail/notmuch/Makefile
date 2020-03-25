@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/03/08 16:47:54 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2020/03/25 11:06:19 jperkin Exp $
 
 DISTNAME=	notmuch-0.29.3
 PKGREVISION=	1
@@ -38,17 +38,11 @@ SUBST_FILES.sphinx+=	bindings/python/docs/Makefile configure doc/Makefile.local
 SUBST_STAGE.sphinx=	pre-configure
 SUBST_MESSAGE.sphinx=	Fix sphinx command names.
 
-.if !empty(PKG_BUILD_OPTIONS.gpgme:Mgnupg2)
-GPG=	gpg2
-.else
-GPG=	gpg
-.endif
-
 SUBST_CLASSES+=		gpg
 SUBST_STAGE.gpg=	pre-configure
 SUBST_MESSAGE.gpg=	Select GnuPG command
 SUBST_FILES.gpg+=	configure
-SUBST_VARS.gpg=		GPG
+SUBST_VARS.gpg=		GPGME_GPG
 
 LDFLAGS.SunOS+=	-lnsl
 
