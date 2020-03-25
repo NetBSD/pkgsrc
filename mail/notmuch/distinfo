@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2019/11/27 13:30:53 ryoon Exp $
+$NetBSD: distinfo,v 1.44 2020/03/25 11:06:19 jperkin Exp $
 
 SHA1 (notmuch-0.29.3.tar.xz) = f1cdf4d50d344ca67df182ad1e3109988e8c80e8
 RMD160 (notmuch-0.29.3.tar.xz) = e935fa029a83b9f7019547e6272c68224b04b0b2
@@ -6,6 +6,6 @@ SHA512 (notmuch-0.29.3.tar.xz) = b1e0b47ebf2d2de0ccd39976782eb8a7b417e36f2f9d78e
 Size (notmuch-0.29.3.tar.xz) = 660536 bytes
 SHA1 (patch-Makefile.global) = f436bdb163e3110a8d097f3c88198aefb126eafc
 SHA1 (patch-Makefile.local) = d0a83ff130de36164f1667236860aa31d481d025
-SHA1 (patch-configure) = afbc37cdf886c6b73be4c34903d495cf0589963a
+SHA1 (patch-configure) = fb498d8ca9d74be5e9c46625f0943fbbedee3dcb
 SHA1 (patch-doc_conf.py) = 7492c878c96da68df16827aa0d6407c2e9808701
 SHA1 (patch-emacs_Makefile.local) = 4a36a2c165852a098a45c8b99c8372d65d33b07c
