@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2019/06/07 13:42:50 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2020/03/25 11:06:19 jperkin Exp $
 
 * Select GnuPG binary
 
@@ -9,7 +9,7 @@ $NetBSD: patch-configure,v 1.1 2019/06/07 13:42:50 ryoon Exp $
          errors=$((errors + 1))
      elif ${CC} ${CFLAGS} ${gmime_cflags} _check_session_keys.c ${gmime_ldflags} -o _check_session_keys \
 -           && GNUPGHOME=${TEMP_GPG} gpg --batch --quiet --import < test/gnupg-secret-key.asc \
-+           && GNUPGHOME=${TEMP_GPG} @GPG@ --batch --quiet --import < test/gnupg-secret-key.asc \
++           && GNUPGHOME=${TEMP_GPG} @GPGME_GPG@ --batch --quiet --import < test/gnupg-secret-key.asc \
             && SESSION_KEY=$(GNUPGHOME=${TEMP_GPG} ./_check_session_keys) \
             && [ $SESSION_KEY = 9:0BACD64099D1468AB07C796F0C0AC4851948A658A15B34E803865E9FC635F2F5 ]
      then
