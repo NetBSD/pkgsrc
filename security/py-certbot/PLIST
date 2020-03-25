@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2020/03/23 18:43:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2020/03/25 06:44:07 adam Exp $
 bin/certbot-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -21,6 +21,36 @@ ${PYSITELIB}/certbot/_internal/auth_handler.pyo
 ${PYSITELIB}/certbot/_internal/cert_manager.py
 ${PYSITELIB}/certbot/_internal/cert_manager.pyc
 ${PYSITELIB}/certbot/_internal/cert_manager.pyo
+${PYSITELIB}/certbot/_internal/cli/__init__.py
+${PYSITELIB}/certbot/_internal/cli/__init__.pyc
+${PYSITELIB}/certbot/_internal/cli/__init__.pyo
+${PYSITELIB}/certbot/_internal/cli/cli_constants.py
+${PYSITELIB}/certbot/_internal/cli/cli_constants.pyc
+${PYSITELIB}/certbot/_internal/cli/cli_constants.pyo
+${PYSITELIB}/certbot/_internal/cli/cli_utils.py
+${PYSITELIB}/certbot/_internal/cli/cli_utils.pyc
+${PYSITELIB}/certbot/_internal/cli/cli_utils.pyo
+${PYSITELIB}/certbot/_internal/cli/group_adder.py
+${PYSITELIB}/certbot/_internal/cli/group_adder.pyc
+${PYSITELIB}/certbot/_internal/cli/group_adder.pyo
+${PYSITELIB}/certbot/_internal/cli/helpful.py
+${PYSITELIB}/certbot/_internal/cli/helpful.pyc
+${PYSITELIB}/certbot/_internal/cli/helpful.pyo
+${PYSITELIB}/certbot/_internal/cli/paths_parser.py
+${PYSITELIB}/certbot/_internal/cli/paths_parser.pyc
+${PYSITELIB}/certbot/_internal/cli/paths_parser.pyo
+${PYSITELIB}/certbot/_internal/cli/plugins_parsing.py
+${PYSITELIB}/certbot/_internal/cli/plugins_parsing.pyc
+${PYSITELIB}/certbot/_internal/cli/plugins_parsing.pyo
+${PYSITELIB}/certbot/_internal/cli/report_config_interaction.py
+${PYSITELIB}/certbot/_internal/cli/report_config_interaction.pyc
+${PYSITELIB}/certbot/_internal/cli/report_config_interaction.pyo
+${PYSITELIB}/certbot/_internal/cli/subparsers.py
+${PYSITELIB}/certbot/_internal/cli/subparsers.pyc
+${PYSITELIB}/certbot/_internal/cli/subparsers.pyo
+${PYSITELIB}/certbot/_internal/cli/verb_help.py
+${PYSITELIB}/certbot/_internal/cli/verb_help.pyc
+${PYSITELIB}/certbot/_internal/cli/verb_help.pyo
 ${PYSITELIB}/certbot/_internal/client.py
 ${PYSITELIB}/certbot/_internal/client.pyc
 ${PYSITELIB}/certbot/_internal/client.pyo
@@ -132,6 +162,9 @@ ${PYSITELIB}/certbot/interfaces.pyo
 ${PYSITELIB}/certbot/main.py
 ${PYSITELIB}/certbot/main.pyc
 ${PYSITELIB}/certbot/main.pyo
+${PYSITELIB}/certbot/ocsp.py
+${PYSITELIB}/certbot/ocsp.pyc
+${PYSITELIB}/certbot/ocsp.pyo
 ${PYSITELIB}/certbot/plugins/__init__.py
 ${PYSITELIB}/certbot/plugins/__init__.pyc
 ${PYSITELIB}/certbot/plugins/__init__.pyo
