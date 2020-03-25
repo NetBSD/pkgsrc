@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/10/27 10:15:18 joerg Exp $
+$NetBSD: distinfo,v 1.2 2020/03/25 16:19:48 riastradh Exp $
 
-SHA1 (gandi.cli/0.19.tar.gz) = 101d977f489a1d839ad47d8d278c58dac3114115
-RMD160 (gandi.cli/0.19.tar.gz) = 86c603a4506b6bd5ea38dba1ec05e56e21fc0bdb
-SHA512 (gandi.cli/0.19.tar.gz) = 769ae11b9376d8726b5cedf9e2864455b852398e43ad382336c95d3a6a3cd6203fde11b458d1ee8ae4573c2b3303d273d4d6e92b389c87b2d77e599b5e728a23
-Size (gandi.cli/0.19.tar.gz) = 149011 bytes
+SHA1 (gandi.cli/1.5.tar.gz) = 16f19aacb49945777a41a8fced0e8e05b3b50da4
+RMD160 (gandi.cli/1.5.tar.gz) = c64618f7f248d0b296bbb8f0d2092412218f6d1f
+SHA512 (gandi.cli/1.5.tar.gz) = cdcaf4441c253a465e73e6b108ea2e348d5943308263f3d190ef82279aa340378e9c576d71c5d03cf60e4d7586b0282a5a804078129ec96af34e80d5919d6a89
+Size (gandi.cli/1.5.tar.gz) = 167825 bytes
