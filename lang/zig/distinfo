@@ -1,6 +1,15 @@
-$NetBSD: distinfo,v 1.3 2019/06/02 15:02:27 adam Exp $
+$NetBSD: distinfo,v 1.4 2020/03/25 22:27:20 nia Exp $
 
-SHA1 (zig-0.4.0.tar.xz) = 2d3b2caaf83fd64888f32c125aca9497e7d5ac3d
-RMD160 (zig-0.4.0.tar.xz) = 6ce0d42c8d2a5608f4960722c004e83f97be2f42
-SHA512 (zig-0.4.0.tar.xz) = 4174234e05da6c13cd4fda59509ed3f35c4d4abdb34acc12d2027bbe584c86576489d473f1652eafd366cc86610487be02e671463e07043fd6763a40e65a962f
-Size (zig-0.4.0.tar.xz) = 5348776 bytes
+SHA1 (zig-0.5.0.tar.xz) = 1624885158323fee2b9e1c23b2affe82c8fefe3b
+RMD160 (zig-0.5.0.tar.xz) = 1a8619ed274cc1dc224ddd20b5a346d7eb8c1afe
+SHA512 (zig-0.5.0.tar.xz) = 1ce479077d2501c160bcac318b3d59e66921207855f56d900b9a59c44b14116639de10c5b578663b4963ccc8d49bb0d5aa75afb8987f5df1950037248561d1e2
+Size (zig-0.5.0.tar.xz) = 10956132 bytes
+SHA1 (patch-CMakeLists.txt) = f1fcb76f8a833c3afd047e6ab3ca6a3dd190e985
+SHA1 (patch-lib_std_c.zig) = 9a4e44bff7b9c108e5e6c2b8da262a63bd0c3bec
+SHA1 (patch-lib_std_c_netbsd.zig) = 1f960d80663335775a2b53aef93b642774389867
+SHA1 (patch-lib_std_fs.zig) = 6f2e72ba87d014c6d038d463ab8c72b20909dcb9
+SHA1 (patch-lib_std_fs_file.zig) = 98ec96cab2552b10e969833ec6a632dca9dee562
+SHA1 (patch-lib_std_os.zig) = dd11ca464e39b08cc38b0d2cca8d038413406258
+SHA1 (patch-lib_std_os_bits_netbsd.zig) = d9de9f5d55d99d798a102d544f8b57e05a8c6902
+SHA1 (patch-lib_std_thread.zig) = 4a18e20547dd9adf0dc6917fc33f0d895d7f7089
+SHA1 (patch-src_link.cpp) = 3a7e9af1e05b3455b74bc9ac4f37088228401299
