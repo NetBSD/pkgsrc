@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:29:17 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/03/25 11:30:48 nia Exp $
 
-SHA1 (pyxdg-0.25.tar.gz) = 1272ee62b8c3909ac4844a34a95f8b1fb3398af2
-RMD160 (pyxdg-0.25.tar.gz) = 923a2ff32d729bf01e34cf518842817011f3014a
-SHA512 (pyxdg-0.25.tar.gz) = 86cbf3a54fb8e79043db60dcdbb3fb10013ae25a900fa3592edc8a24bf3f440c19bc04626c7906293c785fcb56eab9d87d209b723b5baa872376ba1eb86758b6
-Size (pyxdg-0.25.tar.gz) = 48935 bytes
+SHA1 (pyxdg-0.26.tar.gz) = 904b336596167b8e4a829d77ec4107d5d2e200a6
+RMD160 (pyxdg-0.26.tar.gz) = be6da6e5f7552c41c8590e59bf6deca95948a510
+SHA512 (pyxdg-0.26.tar.gz) = f5306e6e15af07df2599017500fc8ad83e722e5d5c6e4fda014aab1d77df92a3c3199a5be7a889faaecab72861e9910be9d80142d29856eb7a11f6ab9a923bd2
+Size (pyxdg-0.26.tar.gz) = 57879 bytes
