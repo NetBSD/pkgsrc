@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1948 2020/03/25 13:01:57 fox Exp $
+$NetBSD: CHANGES-2020,v 1.1949 2020/03/25 16:18:23 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2628,3 +2628,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Perl-Tidy to 20200110 [nia 2020-03-25]
 	Updated devel/py-xdg to 0.26 [nia 2020-03-25]
 	Updated audio/din to 45 [fox 2020-03-25]
+	Updated net/terraform-provider-aws to 2.54.0 [riastradh 2020-03-25]
