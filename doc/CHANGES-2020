@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1940 2020/03/25 10:12:44 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1941 2020/03/25 10:24:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2620,3 +2620,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ruby-facter to 4.0.12 [taca 2020-03-24]
 	Updated converters/libwpd to 0.10.3 [nia 2020-03-25]
 	Updated converters/libwps to 0.4.10 [nia 2020-03-25]
+	Updated converters/libwpg to 0.3.3 [nia 2020-03-25]
