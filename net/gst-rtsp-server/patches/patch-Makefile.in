@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/03/26 02:29:37 joerg Exp $
+
+--- Makefile.in.orig	2020-03-25 23:05:18.738514594 +0000
++++ Makefile.in
+@@ -1161,7 +1161,7 @@ download-po: $(top_srcdir)/common/downlo
+ 	for f in po/*.po; do \
+ 	  num_changed=`git diff $$f | grep -e '^[+-][^+-]' | wc -l`; \
+ 	  num_date=`git diff $$f | grep -e '^[+-][^+-]' | grep POT-Creation-Date | wc -l`; \
+-	  if [ $num_date == $num_changed ]; then \
++	  if [ $num_date = $num_changed ]; then \
+ 	    git checkout $$f; \
+ 	  fi; \
+ 	done
