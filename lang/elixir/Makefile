@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/02/26 19:21:50 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/26 02:31:23 joerg Exp $
 
 DISTNAME=	elixir-1.10.2
 CATEGORIES=	lang
@@ -11,6 +11,8 @@ COMMENT=	Functional, meta-programming aware language built on top of Erlang VM
 LICENSE=	apache-2.0
 
 DEPENDS+=	erlang>=20.0:../../lang/erlang
+
+UNLIMIT_RESOURCES=	datasize virtualsize
 
 USE_TOOLS+=	gmake
 BUILD_TARGET=	compile
