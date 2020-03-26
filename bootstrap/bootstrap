@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.276 2020/03/22 16:40:19 rillig Exp $
+# $NetBSD: bootstrap,v 1.277 2020/03/26 15:30:27 nia Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1315,6 +1315,14 @@ fi
 if test -n "$GREP"; then
 	echo "TOOLS_PLATFORM.grep?=		$GREP" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.grep?=		$GREP" >> ${BOOTSTRAP_MKCONF}
+fi
+if test -n "$EGREP"; then
+	echo "TOOLS_PLATFORM.egrep?=		$EGREP" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.egrep?=		$EGREP" >> ${BOOTSTRAP_MKCONF}
+fi
+if test -n "$FGREP"; then
+	echo "TOOLS_PLATFORM.fgrep?=		$FGREP" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.fgrep?=		$FGREP" >> ${BOOTSTRAP_MKCONF}
 fi
 if test -n "$ID"; then
 	echo "TOOLS_PLATFORM.id?=		$ID" >> ${TARGET_MKCONF}
