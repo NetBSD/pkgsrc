@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 01:20:23 agc Exp $
+$NetBSD: distinfo,v 1.13 2020/03/26 02:39:01 joerg Exp $
 
 SHA1 (quirc-0.9.84.tar.gz) = 0d9aa3f35616c3d5e6835a318266f1c71232e4d1
 RMD160 (quirc-0.9.84.tar.gz) = 6fdacee28b63363c3276349c32bd7bfbd463ff19
@@ -12,4 +12,5 @@ SHA1 (patch-history.h) = 7f8a6a742cd169cde13aaae865e022cc36332774
 SHA1 (patch-nick.h) = 5a7e46b1da8c4e6381d00bb7477706df52c1505b
 SHA1 (patch-query.h) = 6803318fea7c20a1b3d477bc0e55ad42a5b08862
 SHA1 (patch-serverdcc.h) = 4354cc730fd2d5bda072c61fa00e06d10c6c9448
+SHA1 (patch-servertcl.cc) = 3b8f4781c19342af85ebe2a6f38d38c5d80d5305
 SHA1 (patch-tcl.cc) = dce4bcb73d29edd03e97fccdf1af68c3820e8c24
