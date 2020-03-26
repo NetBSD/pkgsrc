@@ -1,0 +1,72 @@
+$NetBSD: patch-test_test__examples.sh.in,v 1.1 2020/03/26 21:51:11 joerg Exp $
+
+--- test/test_examples.sh.in.orig	2020-03-26 11:48:50.144837043 +0000
++++ test/test_examples.sh.in
+@@ -31,28 +31,28 @@ test()
+ 	fi
+ }
+ 
+-if [ "@ENABLE_CODE128@" == "1" ]; then
++if [ "@ENABLE_CODE128@" = "1" ]; then
+ 	test code-128.png
+ fi
+ 
+-if [ "@ENABLE_CODE93@" == "1" ]; then
++if [ "@ENABLE_CODE93@" = "1" ]; then
+         test code-93.png
+ fi
+ 
+-if [ "@ENABLE_CODE39@" == "1" ]; then
++if [ "@ENABLE_CODE39@" = "1" ]; then
+         test code-39.png
+ fi
+ 
+-if [ "@ENABLE_CODABAR@" == "1" ]; then
++if [ "@ENABLE_CODABAR@" = "1" ]; then
+         test codabar.png
+ fi
+ 
+-if [ "@ENABLE_DATABAR@" == "1" ]; then
++if [ "@ENABLE_DATABAR@" = "1" ]; then
+         test databar.png
+         test databar-exp.png
+ fi
+ 
+-if [ "@ENABLE_EAN@" == "1" ]; then
++if [ "@ENABLE_EAN@" = "1" ]; then
+         test -Sean2.enable ean-2.png
+         test -Sean5.enable ean-5.png
+         test ean-8.png
+@@ -62,27 +62,27 @@ if [ "@ENABLE_EAN@" == "1" ]; then
+         test -Supca.enable code-upc-a.png
+ fi
+ 
+-if [ "@ENABLE_I25@" == "1" ]; then
++if [ "@ENABLE_I25@" = "1" ]; then
+         test i2-5.png
+ fi
+ 
+-if [ "@ENABLE_QRCODE@" == "1" ]; then
++if [ "@ENABLE_QRCODE@" = "1" ]; then
+         test qr-code.png
+         test -Stest-inverted qr-code-inverted.png
+ fi
+ 
+-if [ "@ENABLE_SQCODE@" == "1" ]; then
++if [ "@ENABLE_SQCODE@" = "1" ]; then
+         test sqcode1-generated.png
+         test sqcode1-scanned.png
+ fi
+ 
+ # The pdf417 code is incomplete: it doesn't output any results
+ #
+-#if [ "@ENABLE_PDF417@" == "1" ]; then
++#if [ "@ENABLE_PDF417@" = "1" ]; then
+ #        test code-pdf417.png
+ #fi
+ 
+-if [ "$ERR" == "" ]; then
++if [ "$ERR" = "" ]; then
+ 	echo "zbarimg PASSED."
+ else
+ 	exit 1
