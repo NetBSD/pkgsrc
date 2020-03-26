@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
+$NetBSD: distinfo,v 1.2 2020/03/26 02:33:34 joerg Exp $
 
 SHA1 (xclannad-7hc.tar.gz) = fbe63701a47a1bc90aca8ab8d0b41ca3b5c9d114
 RMD160 (xclannad-7hc.tar.gz) = a7bea485587c59d7797aa1bde01f0eb963122d02
@@ -8,8 +8,9 @@ SHA1 (patch-Makefile.in) = 3586afaf131737ded3ac1b64bfa56b3c357f3269
 SHA1 (patch-font_font__peer__ft2.cc) = cb40078c701d1bf6c5113d21890ed8d9fbb18b62
 SHA1 (patch-font_text__stream.cc) = 27b2812c199f69f4d58cc9324c9aa56b713b5abe
 SHA1 (patch-music2_music.cc) = fe8c90d9901a86dc6c799a1482ffe8ca7ca53c98
-SHA1 (patch-scn2k_scn2k__cmd.cc) = cd13290660eab7748998e46782e751748f8d4685
+SHA1 (patch-scn2k_scn2k__cmd.cc) = b0710214e612a45fed159169ee36c0ab0126ab81
 SHA1 (patch-scn2k_scn2k__grp.cc) = cf0c7efa5fcac698873665b9b51f98b62344fb1d
+SHA1 (patch-scn2k_scn2k__impl.cc) = 197b876d15608ba65cf4ea527bf7e108d3007ad5
 SHA1 (patch-scn2k_scn2k__text.cc) = aef8170b267a5a2b3f9ddbe9246fbdab8d0856cb
 SHA1 (patch-system_file.cc) = dd68b7bd6ec97961e1e367bbbb505ee3e6f0347e
 SHA1 (patch-system_file.h) = f5a759c4716b8ecdb84672de017cb92dbe36e058
