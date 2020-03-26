@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2020/03/20 11:57:36 nia Exp $
+# $NetBSD: Makefile,v 1.147 2020/03/26 12:26:02 nia Exp $
 
 DISTNAME=	vice-3.4
 PKGREVISION=	3
@@ -18,7 +18,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++11
-USE_TOOLS+=		bash gmake pkg-config perl
+USE_TOOLS+=		bash gmake pkg-config perl flex
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-ethernet
 CONFIGURE_ARGS.NetBSD+=	--without-oss
