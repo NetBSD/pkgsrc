@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2019/08/11 13:21:12 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2020/03/26 13:29:16 nia Exp $
 
 DISTNAME=		magicpoint-1.13a
 PKGREVISION=		31
@@ -19,6 +19,7 @@ USE_IMAKE=		yes
 USE_LANGUAGES+=		c99
 USE_TOOLS+=		perl
 USE_TOOLS+=		pkg-config
+USE_TOOLS+=		bison
 
 CONFIGURE_ARGS+=	--enable-freetype-charset16
 CONFIGURE_ARGS+=	--enable-locale
