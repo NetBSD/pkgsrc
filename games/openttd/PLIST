@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2019/04/25 15:55:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/03/26 14:48:36 nia Exp $
 bin/openttd
 man/man6/openttd.6
 share/applications/openttd.desktop
@@ -26,6 +26,7 @@ share/openttd/ai/compat_1.8.nut
 share/openttd/ai/compat_1.9.nut
 share/openttd/baseset/no_music.obm
 share/openttd/baseset/no_sound.obs
+share/openttd/baseset/openttd.32.bmp
 share/openttd/baseset/openttd.grf
 share/openttd/baseset/opntitle.dat
 share/openttd/baseset/orig_dos.obg
