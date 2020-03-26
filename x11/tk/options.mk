@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2020/03/26 13:50:27 nia Exp $
+# $NetBSD: options.mk,v 1.7 2020/03/26 22:02:29 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tk
 PKG_SUPPORTED_OPTIONS=	threads debug xft2
@@ -24,7 +24,7 @@ PLIST.aqua=		yes
 .else
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXScrnSaver/buildlink.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
