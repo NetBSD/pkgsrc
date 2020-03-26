@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 14:05:54 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/03/26 22:29:47 rillig Exp $
 #
 
 DISTNAME=	unzoo.c
 PKGNAME=	unzoo-4.4
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	# no dist site available
 EXTRACT_SUFX=	# empty
