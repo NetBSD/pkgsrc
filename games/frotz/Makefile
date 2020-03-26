@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/03/22 10:20:06 nia Exp $
+# $NetBSD: Makefile,v 1.37 2020/03/26 12:32:37 nia Exp $
 
 DISTNAME=	frotz-2.51
 CATEGORIES=	games
@@ -9,7 +9,7 @@ HOMEPAGE=	https://davidgriffith.gitlab.io/frotz/
 COMMENT=	Curses-based interpreter for Infocom-compatible games
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 BUILD_TARGET=	curses
 FAKE_NCURSES=	yes
