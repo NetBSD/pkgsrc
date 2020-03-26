@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/04/29 07:43:32 adam Exp $
+# $NetBSD: options.mk,v 1.2 2020/03/26 11:31:48 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.netcdf-fortran
 PKG_SUPPORTED_OPTIONS=	f90
@@ -7,9 +7,9 @@ PKG_SUPPORTED_OPTIONS=	f90
 
 PLIST_VARS+=	f90
 
-.if empty(PKG_OPTIONS:Mf90)
-CONFIGURE_ARGS+=	--disable-f90
-.else
+.if !empty(PKG_OPTIONS:Mf90)
 USE_LANGUAGES+=		fortran
 PLIST.f90=		yes
+.else
+CONFIGURE_ARGS+=	--disable-f90
 .endif
