@@ -653,6 +653,18 @@ func (mklines *MkLines) ExpandLoopVar(varname string) []string {
 	return nil
 }
 
+// IsUnreachable determines whether the given line is unreachable because a
+// condition on the way to that line is not satisfied.
+// If unsure, returns false.
+func (mklines *MkLines) IsUnreachable(mkline *MkLine) bool {
+	// To make this code as simple as possible, the code should operate
+	// on a high-level AST, where the nodes are If, For and BasicBlock.
+	//
+	// See lang/ghc*/bootstrap.mk for good examples how pkglint should
+	// treat variable assignments. It's getting complicated.
+	return false
+}
+
 func (mklines *MkLines) SaveAutofixChanges() {
 	mklines.lines.SaveAutofixChanges()
 }
