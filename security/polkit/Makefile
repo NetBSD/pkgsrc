@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/03/08 16:48:08 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/03/26 16:07:57 nia Exp $
 
 DISTNAME=	polkit-0.115
 PKGREVISION=	4
@@ -20,6 +20,9 @@ USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config intltool gmake msgfmt perl
+
+# C++11
+GCC_REQD+=	4.7
 
 PKGCONFIG_OVERRIDE+=	data/polkit-gobject-1.pc.in
 PKGCONFIG_OVERRIDE+=	data/polkit-agent-1.pc.in
