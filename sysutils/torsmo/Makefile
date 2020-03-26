@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/03/20 11:58:23 nia Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/26 02:27:42 joerg Exp $
 
 DISTNAME=		torsmo-0.18
 PKGREVISION=		3
@@ -21,6 +21,8 @@ DOCDIR=			${PREFIX}/share/doc/torsmo
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/torsmo
 INSTALLATION_DIRS+=	share/doc/torsmo
+
+CHECK_PORTABILITY_SKIP+=	configure.in
 
 .include "../../mk/bsd.prefs.mk"
 
