@@ -1,0 +1,13 @@
+$NetBSD: patch-hdf_fmpool_configure.in,v 1.1 2020/03/26 02:36:27 joerg Exp $
+
+--- hdf/fmpool/configure.in.orig	2020-03-25 22:55:49.022672427 +0000
++++ hdf/fmpool/configure.in
+@@ -75,7 +75,7 @@ case "${host}" in
+           could_use=
+           [ -d /opt/SUNWspro/bin ] && could_use="/opt/SUNWspro/bin"
+           if [ -d /opt/cygnus/bin ] ; then
+-              if [ "$could_use" == "" ] ; then
++              if [ "$could_use" = "" ] ; then
+                   could_use="/opt/cygnus/bin"
+               else
+                   could_use="$could_use or /opt/cygnus/bin"

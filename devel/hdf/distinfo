@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2017/01/04 11:17:56 jperkin Exp $
+$NetBSD: distinfo,v 1.14 2020/03/26 02:36:27 joerg Exp $
 
 SHA1 (HDF4.2r4.tar.gz) = 000fa1be9c355c490cceed786feeb269a0d355a7
 RMD160 (HDF4.2r4.tar.gz) = 13274858f1fa0c339fab83b1f9c37314bd10d624
@@ -11,4 +11,5 @@ SHA1 (patch-ap) = 18a209229a60742a73c720d55f558949285351f2
 SHA1 (patch-ar) = 5fbb6e8c56ccf05db0217e9551a0c72ecd9f5c06
 SHA1 (patch-as) = b4fa7cd3bcafd75c9bfc045c2849bde21becd2de
 SHA1 (patch-ba) = 33e79d38ce68540308445f709f5cbafb1b917d05
+SHA1 (patch-hdf_fmpool_configure.in) = 78c80e18fdc931476c36fc451a36dc93cc254484
 SHA1 (patch-mfhdf_ncgen_ncgen.l) = a2d5a5de6a1491582d73dad291fdb0ffa40b7e9a
