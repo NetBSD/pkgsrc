@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/13 22:29:24 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/26 13:34:30 nia Exp $
 
 DISTNAME=	hexd-1.0.0
 CATEGORIES=	misc
@@ -12,6 +12,8 @@ COMMENT=	Colourful, human-friendly hexdump tool for reverse engineering
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
+
+BUILD_TARGET=	hexd
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
