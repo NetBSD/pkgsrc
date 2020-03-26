@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1953 2020/03/26 07:02:57 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.1954 2020/03/26 14:20:47 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2632,3 +2632,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-gandi.cli to 1.5 [riastradh 2020-03-25]
 	Updated lang/zig to 0.5.0 [nia 2020-03-25]
 	Updated pkgtools/pkglint to 20.1.1 [rillig 2020-03-26]
+	Updated sysutils/py-Glances to 3.1.4.1 [fox 2020-03-26]
