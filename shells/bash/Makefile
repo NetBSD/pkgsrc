@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2020/02/11 11:45:25 kre Exp $
+# $NetBSD: Makefile,v 1.93 2020/03/26 15:06:58 nia Exp $
 
 BASH_VERSION=		5.0
 BASH_PATCHLEVEL=	16
@@ -53,12 +53,15 @@ CONFIGURE_ARGS+=	--enable-array-variables
 .include "options.mk"
 
 # Minix lacks setpgid() which is needed for job control.
-# bash malloc() is also broken on Minix
 .if ${OPSYS} == "Minix"
 CONFIGURE_ARGS+=	--disable-job-control
-CONFIGURE_ARGS+=	--with-bash-malloc=no
 .else
 CONFIGURE_ARGS+=	--enable-job-control
+.endif
+
+# bash malloc() is broken on Minix and musl libc
+.if ${OPSYS} == "Minix" || (${OPSYS} == "Linux" && empty(GLIBC_VERSION))
+CONFIGURE_ARGS+=	--with-bash-malloc=no
 .endif
 
 # Use "readline" package on Darwin to avoid link erros.
