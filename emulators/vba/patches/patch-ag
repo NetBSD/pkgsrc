@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.3 2012/09/29 21:27:14 dholland Exp $
+$NetBSD: patch-ag,v 1.4 2020/03/26 02:35:31 joerg Exp $
 
 - Fix build with png-1.5.
 - Do not use void * as a synonym for gzFile, as gzFile is no longer
@@ -25,6 +25,42 @@ $NetBSD: patch-ag,v 1.3 2012/09/29 21:27:14 dholland Exp $
      png_destroy_write_struct(&png_ptr,NULL);
      fclose(fp);
      return false;
+@@ -478,7 +478,7 @@ bool utilIsGBAImage(const char * file)
+ {
+   cpuIsMultiBoot = false;
+   if(strlen(file) > 4) {
+-    char * p = strrchr(file,'.');
++    const char * p = strrchr(file,'.');
+ 
+     if(p != NULL) {
+       if(_stricmp(p, ".gba") == 0)
+@@ -502,7 +502,7 @@ bool utilIsGBAImage(const char * file)
+ bool utilIsGBImage(const char * file)
+ {
+   if(strlen(file) > 4) {
+-    char * p = strrchr(file,'.');
++    const char * p = strrchr(file,'.');
+ 
+     if(p != NULL) {
+       if(_stricmp(p, ".gb") == 0)
+@@ -522,7 +522,7 @@ bool utilIsGBImage(const char * file)
+ bool utilIsZipFile(const char *file)
+ {
+   if(strlen(file) > 4) {
+-    char * p = strrchr(file,'.');
++    const char * p = strrchr(file,'.');
+ 
+     if(p != NULL) {
+       if(_stricmp(p, ".zip") == 0)
+@@ -552,7 +552,7 @@ bool utilIsRarFile(const char *file)
+ bool utilIsGzipFile(const char *file)
+ {
+   if(strlen(file) > 3) {
+-    char * p = strrchr(file,'.');
++    const char * p = strrchr(file,'.');
+ 
+     if(p != NULL) {
+       if(_stricmp(p, ".gz") == 0)
 @@ -984,7 +984,7 @@ void utilWriteData(gzFile gzFile, variab
  
  gzFile utilGzOpen(const char *file, const char *mode)
