@@ -1540,3 +1540,18 @@ type bagEntry struct {
 	key   interface{}
 	count int
 }
+
+type lazyBool struct {
+	fn    func() bool
+	value bool
+}
+
+func newLazyBool(fn func() bool) *lazyBool { return &lazyBool{fn, false} }
+
+func (b *lazyBool) get() bool {
+	if b.fn != nil {
+		b.value = b.fn()
+		b.fn = nil
+	}
+	return b.value
+}

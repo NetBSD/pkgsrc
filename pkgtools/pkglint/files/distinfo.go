@@ -34,6 +34,13 @@ func CheckLinesDistinfo(pkg *Package, lines *Lines) {
 	CheckLinesTrailingEmptyLines(lines)
 	ck.checkUnrecordedPatches()
 
+	if pkg != nil {
+		pkg.distinfoDistfiles = make(map[string]bool)
+		for path := range ck.infos {
+			pkg.distinfoDistfiles[path.Base()] = true
+		}
+	}
+
 	SaveAutofixChanges(lines)
 }
 
@@ -106,6 +113,7 @@ func (ck *distinfoLinesChecker) check() {
 	for _, filename := range ck.filenames {
 		info := ck.infos[filename]
 
+		ck.checkFilename(filename, info)
 		ck.checkAlgorithms(info)
 		for _, hash := range info.hashes {
 			ck.checkGlobalDistfileMismatch(hash)
@@ -114,6 +122,18 @@ func (ck *distinfoLinesChecker) check() {
 			}
 		}
 	}
+}
+
+func (ck *distinfoLinesChecker) checkFilename(filename RelPath, info distinfoFileInfo) {
+	if info.isPatch != no || !info.hasDistfileAlgorithms() || matches(filename.String(), `\d`) {
+		return
+	}
+
+	line := info.line()
+	line.Warnf(
+		"Distfiles without version number should be placed in a versioned DIST_SUBDIR.")
+	line.Explain(
+		seeGuide("How to handle modified distfiles with the 'old' name", "modified-distfiles-same-name"))
 }
 
 func (ck *distinfoLinesChecker) checkAlgorithms(info distinfoFileInfo) {
@@ -417,6 +437,15 @@ func (info *distinfoFileInfo) algorithms() string {
 		algs = append(algs, hash.algorithm)
 	}
 	return strings.Join(algs, ", ")
+}
+
+func (info *distinfoFileInfo) hasDistfileAlgorithms() bool {
+	h := info.hashes
+	return len(h) == 4 &&
+		h[0].algorithm == "SHA1" &&
+		h[1].algorithm == "RMD160" &&
+		h[2].algorithm == "SHA512" &&
+		h[3].algorithm == "Size"
 }
 
 type distinfoHash struct {
