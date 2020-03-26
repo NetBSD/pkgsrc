@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/01/03 22:13:11 roy Exp $
+# $NetBSD: Makefile,v 1.23 2020/03/26 12:46:58 nia Exp $
 #
 
 DISTNAME=	sl-5.02
@@ -14,6 +14,9 @@ FAKE_NCURSES=	yes
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 BUILD_TARGET=	sl
+
+MAKE_FLAGS+=	CC=${CC:Q}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/ja_JP.EUC/man1
 
