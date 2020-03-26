@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/01/20 14:34:35 leot Exp $
+# $NetBSD: Makefile,v 1.15 2020/03/26 13:31:42 nia Exp $
 
 DISTNAME=	dvtm-0.15
 CATEGORIES=	misc
@@ -9,7 +9,8 @@ HOMEPAGE=	http://www.brain-dump.org/projects/dvtm/
 COMMENT=	Dynamic virtual terminal manager
 LICENSE=	mit
 
-USE_LANGUAGES=		c99
+USE_CURSES=	wide
+USE_LANGUAGES=	c99
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	pre-configure
