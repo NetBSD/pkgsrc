@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/29 07:43:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/26 11:31:48 nia Exp $
 bin/nf-config
-${PLIST.f90}include/NETCDF.mod
-${PLIST.f90}include/TYPESIZES.mod
 include/netcdf.inc
+${PLIST.f90}include/netcdf.mod
+${PLIST.f90}include/typesizes.mod
 info/netcdf-f77.info
 info/netcdf-f77.info-1
 info/netcdf-f77.info-2
