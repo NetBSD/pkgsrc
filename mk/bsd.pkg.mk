@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2035 2020/02/09 22:39:20 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2036 2020/03/26 12:23:54 jperkin Exp $
 #
 # This file is in the public domain.
 #
@@ -231,7 +231,7 @@ _ZERO_FILESIZE_P=	${AWK} 'END { exit (NR > 0) ? 1 : 0; }'
 _NONZERO_FILESIZE_P=	${AWK} 'END { exit (NR > 0) ? 0 : 1; }'
 
 # Automatically increase process limit where necessary for building.
-_ULIMIT_CMD=		${UNLIMIT_RESOURCES:@_lim_@${ULIMIT_CMD_${_lim_}};@}
+_ULIMIT_CMD=		${UNLIMIT_RESOURCES:@_lim_@${ULIMIT_CMD_${_lim_}:U\:};@}
 
 _NULL_COOKIE=		${WRKDIR}/.null
 
