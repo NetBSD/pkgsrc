@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2020/02/23 20:39:53 leot Exp $
+$NetBSD: distinfo,v 1.5 2020/03/26 10:16:56 leot Exp $
 
 SHA1 (tscrape-0.4.tar.gz) = 1cd9dca90f3a4a73be3377f4b6b230af5caa771b
 RMD160 (tscrape-0.4.tar.gz) = a32cb25537a0d5f785abf3758c05ab6d2b5c1f5c
 SHA512 (tscrape-0.4.tar.gz) = cbf626ba3d3bdefbf67253e810d211f0928c5931334d9656d5dffab24972fb7974a4a6f9c4d95d7d7f87c8adb000255ec1a25adf435f4c692c2af6574625cb17
 Size (tscrape-0.4.tar.gz) = 15348 bytes
+SHA1 (patch-tscrape.c) = 45a10d3b0517a6f40c683efe19b098e540d0d4f0
