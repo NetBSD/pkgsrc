@@ -1,10 +1,34 @@
-$NetBSD: patch-scn2k_scn2k__cmd.cc,v 1.1 2020/01/03 02:35:51 tsutsui Exp $
+$NetBSD: patch-scn2k_scn2k__cmd.cc,v 1.2 2020/03/26 02:33:34 joerg Exp $
 
 - don't assume signed char for arm and powerpc
 - fix wrong casts
 
 --- scn2k/scn2k_cmd.cc.orig	2008-08-31 09:52:12.000000000 +0000
 +++ scn2k/scn2k_cmd.cc
+@@ -261,9 +261,9 @@ void Flags::Load(const char* save) {
+ 					char buf[1024];
+ 					int n;
+ 					if (sscanf(save, "V<C>[%04d]=",&n) == 1) {
+-						char* s = strchr(save, '=');
++						const char* s = strchr(save, '=');
+ 						s++;
+-						char* send = strchr(s, '\n');
++						const char* send = strchr(s, '\n');
+ 						int slen = send - s;
+ 						strncpy(buf, s, slen);
+ 						buf[slen] = 0;
+@@ -330,9 +330,9 @@ void Flags::LoadSys(const char* save) {
+ 					char buf[1024];
+ 					int n;
+ 					if (sscanf(save, "V<M>[%04d]=",&n) == 1) {
+-						char* s = strchr(save, '=');
++						const char* s = strchr(save, '=');
+ 						s++;
+-						char* send = strchr(s, '\n');
++						const char* send = strchr(s, '\n');
+ 						int slen = send - s;
+ 						strncpy(buf, s, slen);
+ 						buf[slen] = 0;
 @@ -372,8 +372,8 @@ bool Flags::Exec(Cmd& cmd) {
  				string s = cmd.Str(cmd.args[1]);
  				const char* sc = s.c_str();
