@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 23:27:05 agc Exp $
+$NetBSD: distinfo,v 1.9 2020/03/26 02:30:49 joerg Exp $
 
 SHA1 (fix-mime-charset-0.5.3.tar.gz) = e331d21ba71460041958b8d4eeb61757e9f52182
 RMD160 (fix-mime-charset-0.5.3.tar.gz) = 7a456f8e40c017b9f3f06db79c7cfcd2d2d15149
 SHA512 (fix-mime-charset-0.5.3.tar.gz) = e3a15a26eb8202b8ff4c7c9367de840183ac4db9071666073a3aa4d8d9f208f94e8b82e5e1568c15ed3762def1ec6ecdb8e61e632bf5bdb0ed24e345195416c9
 Size (fix-mime-charset-0.5.3.tar.gz) = 115465 bytes
-SHA1 (patch-src_argp-local.h) = 4fc9bdc2279a1bd7e6d79b0fe9dde92edecf1d3d
+SHA1 (patch-src_argp-local.h) = b4c209a8e23c4c54a91a5bd41666c975b56856f1
 SHA1 (patch-src_decoder.cc) = 24fe88fbf000a6770b6c601b8f1c113d6283f787
 SHA1 (patch-src_input.cc) = 1ffbf69735e010f4ca516fa4a9b2d4f784f545af
