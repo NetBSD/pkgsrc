@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2015/11/03 01:12:28 agc Exp $
+$NetBSD: distinfo,v 1.26 2020/03/26 21:51:24 joerg Exp $
 
 SHA1 (daapd-0.2.4b.tgz) = 0903303f155c19ae12cdc78be05799508156a16b
 RMD160 (daapd-0.2.4b.tgz) = 899b37b3872623ef918f7faa4eb8bad2dfc5b369
@@ -8,7 +8,7 @@ SHA1 (patch-aa) = c10564ede45fa92b18926da68a7a9a2d9547627d
 SHA1 (patch-ac) = 0a4e3dfb010bbf2cc01843987c970548cb4c646f
 SHA1 (patch-ad) = 4b132fc143d3b29ff2235eacb5c2eaa438cd816c
 SHA1 (patch-ae) = 3433d7e944999e10690ccdda1d49d3c711671446
-SHA1 (patch-af) = 1a453dde4dd7d33061a500729b9ef5d89e850133
+SHA1 (patch-af) = 84086c0ee508c07e3cec07a723e07270be667c56
 SHA1 (patch-ag) = cf0dc389fb2a031883f52c348d8303dd36b33818
 SHA1 (patch-daapd.cc) = 9107fc35ca6eb8a9841f986342781769bc29a9d2
 SHA1 (patch-libhttpd_configure) = 91a7a942a078bda76582cbdf0cc1d3ae8b7029cb
