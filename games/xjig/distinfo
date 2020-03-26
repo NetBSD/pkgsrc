@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 20:57:08 agc Exp $
+$NetBSD: distinfo,v 1.9 2020/03/26 02:32:43 joerg Exp $
 
 SHA1 (xjig-2.4.tgz) = 539ee5974d7228e69bb84de1424064f84cac7577
 RMD160 (xjig-2.4.tgz) = 8abe64ebd9045eb4c39db9cec7f2907212c26b1c
@@ -6,3 +6,4 @@ SHA512 (xjig-2.4.tgz) = bf84110779d2a1056c467df6a766701aa516c8eceb7be2a2e6f617ea
 Size (xjig-2.4.tgz) = 124272 bytes
 SHA1 (patch-aa) = d2999a3388c91c8d90cca3b62ae007d8202cb8ac
 SHA1 (patch-ab) = 6055c5acc964b1bb7b4ef98b6cf14289c8e6c7da
+SHA1 (patch-gif__image.C) = 0090f0169a6919fad5a46cc31dccccc14dd748a9
