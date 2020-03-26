@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/03/21 11:02:43 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/03/26 11:37:22 nia Exp $
 
 DISTNAME=	fltk-1.3.5-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -64,6 +64,7 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--disable-localjpeg --disable-localzlib --disable-localpng
 
 .if ${OPSYS} != "Darwin"
+.  include "../../x11/libXcursor/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"
 .  include "../../x11/libXft/buildlink3.mk"
 .  include "../../x11/libXinerama/buildlink3.mk"
