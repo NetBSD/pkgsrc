@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/02/20 16:37:06 taca Exp $
+# $NetBSD: Makefile,v 1.20 2020/03/26 13:54:35 nia Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -25,6 +25,10 @@ BUILD_DEFS+=	BIND_DIR VARBASE
 USE_TOOLS+=		pax perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+.if ${OPSYS} == "Linux" && !exists(/usr/include/sys/capability.h)
+CONFIGURE_ARGS+=		--disable-linux-caps
+.endif
 
 CONFIGURE_ARGS+=		--with-libtool
 CONFIGURE_ARGS+=		--sysconfdir=${PKG_SYSCONFDIR}
