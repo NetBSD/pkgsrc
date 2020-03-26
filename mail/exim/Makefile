@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2020/01/26 17:31:33 rillig Exp $
+# $NetBSD: Makefile,v 1.175 2020/03/26 13:30:10 nia Exp $
 
 DISTNAME=	exim-4.93
 PKGREVISION=	1
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS+=	exim-exiscan-[0-9]*
 
 USE_TOOLS+=	perl:run
+USE_LANGUAGES=	c99
+
 BUILD_DEFS+=	VARBASE
 
 MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
