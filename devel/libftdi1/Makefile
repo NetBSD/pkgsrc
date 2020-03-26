@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/03/24 16:21:12 nia Exp $
+# $NetBSD: Makefile,v 1.37 2020/03/26 12:14:12 nia Exp $
 
 DISTNAME=	libftdi1-1.4
 CATEGORIES=	devel
@@ -19,6 +19,7 @@ USE_LANGUAGES=	c c++
 CMAKE_ARGS+=	-Wno-dev
 CMAKE_ARGS+=	-DEXAMPLES=off
 CMAKE_ARGS+=	-DDOCUMENTATION=off
+CMAKE_ARGS+=	-DLIB_SUFFIX=""
 
 PKGCONFIG_OVERRIDE+=	libftdi1.pc.in
 PKGCONFIG_OVERRIDE+=	libftdipp1.pc.in
