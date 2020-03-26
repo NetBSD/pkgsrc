@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2018/01/17 19:10:23 markd Exp $
+$NetBSD: distinfo,v 1.22 2020/03/26 21:48:12 joerg Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -23,6 +23,7 @@ SHA1 (patch-kdm_config.def) = ac0907cc59c5f0976cdbe152bb7fb0a4592bbe84
 SHA1 (patch-kdm_kcm_main.cpp) = bb692c83fa189342105744cc9c3c180b970571b7
 SHA1 (patch-kdm_kfrontend_CMakeLists.txt) = 0b0c541c7305d31e01a45f0a6a7f5ddb2d2e57fe
 SHA1 (patch-kdm_kfrontend_genkdmconf.c) = 28829bb285df6a3d252eb1bf7043cbd44e10500f
+SHA1 (patch-khotkeys_libkhotkeysprivate_windows__helper_window__selection__rules.cpp) = 04b707413f5ab375d9d8624e78652c725154932f
 SHA1 (patch-kinfocenter_Modules_nics_nic.cpp) = 0f7e846eac8d694e0ab6018d4f4c571b4e0c84db
 SHA1 (patch-ksysguard_example_CMakeLists.txt) = bd10f03a308442b8febe8864010987fb504b2d21
 SHA1 (patch-ksysguard_ksysguard_FreeBSD_ProcessList.c) = 716f1e75fb23f7d6ddf31092e9a60961f078845c
@@ -44,10 +45,12 @@ SHA1 (patch-libs_ksysguard_processcore_CMakeLists.txt) = 61b886388aa5d0831581eac
 SHA1 (patch-libs_ksysguard_processcore_processes.cpp) = 8bfcc8b7e91eafd6b444f4103d3860fb6434a535
 SHA1 (patch-libs_ksysguard_processcore_processes__netbsd__p.cpp) = 37303769e7b3890b47cc4f1f2715f55f2015a3ca
 SHA1 (patch-libs_oxygen_oxygenhelper.cpp) = ef013d9492a1e59e627a82a5b842cb0b7a23160f
+SHA1 (patch-libs_taskmanager_task.cpp) = 983727c78c9569a971eb07d8c1e289db3f0460b2
 SHA1 (patch-mkpamserv) = 736fc439a34298f51c9fb09200b9dc8628eabc43
 SHA1 (patch-plasma_generic_applets_digital-clock_clock.cpp) = dd052f6c36fbd62dd5fecc0bcf162f22e500463c
 SHA1 (patch-plasma_generic_dataengines_rss_CMakeLists.txt) = 6a12cb3cb54a8b1899f29e7f50a1171862dce66e
 SHA1 (patch-plasma_generic_dataengines_time_solarsystem.h) = 474bbf3bc9f9bc0c75772f01218c1739d49fd31c
 SHA1 (patch-plasma_generic_dataengines_time_timesource.h) = 85ccf0ed379c94e174880bc239daee60afccc788
+SHA1 (patch-plasma_generic_dataengines_weather_ions_bbcukmet_ion__bbcukmet.cpp) = ea085aeeb7e05e99759db9d4537ae6c5140e31c6
 SHA1 (patch-plasma_generic_scriptengines_python_plasma__importer.py) = 813dd7c51c1535e7d69ea493db8eb98084bbaac0
 SHA1 (patch-startkde.cmake) = 36421affc2af12a50623ecfd4f3b0cb320796634
