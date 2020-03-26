@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2020/03/08 16:48:38 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2020/03/26 12:04:11 nia Exp $
 
 DISTNAME=		csound-${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
@@ -15,7 +15,7 @@ LICENSE=		gnu-lgpl-v2.1 # or later
 CSOUND_VERSION=		6.13.0
 #WRKSRC=		${WRKDIR}/Csound${CSOUND_VERSION}
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison
+USE_TOOLS+=		bison flex
 CFLAGS+=		-g -D__PKGSRC_PREFIX__=\"${PREFIX}/\" -DBETA
 USE_CMAKE=		yes
 CMAKE_ARGS+=		-DBUILD_RELEASE=1
@@ -23,9 +23,6 @@ CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=		-DBUILD_HDF5_OPCODES=OFF
 # CMAKE_INSTALL_RPATH doesn't work for some reason, so do it here.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/csound6
-
-# Has long files our tar doesn't understand.
-EXTRACT_USING=		bsdtar
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 5.01
 
@@ -47,7 +44,6 @@ post-install:
 		${LN} -s ../lib/csound6/csound bin/csound6
 
 .include "options.mk"
-
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
