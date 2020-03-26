@@ -1,7 +1,24 @@
-$NetBSD: patch-au,v 1.1 2008/08/17 23:50:06 dholland Exp $
+$NetBSD: patch-au,v 1.2 2020/03/26 02:33:57 joerg Exp $
 
---- cmn/utils.h~	2003-03-19 10:03:50.000000000 -0500
-+++ cmn/utils.h	2008-08-17 19:21:44.000000000 -0400
+--- cmn/utils.h.orig	2003-03-19 10:03:50.000000000 +0000
++++ cmn/utils.h
+@@ -237,13 +237,13 @@ class Utils {
+   /* EFFECTS: Wrapper for C library strcmp().  Return 0 if strings are the
+      same. */
+ 
+-  static char* strchr(const char* cs,int c)
++  static const char* strchr(const char* cs,int c)
+     {return ::strchr(cs,c);}
+ 
+-  static char* strrchr(const char* cs,int c)
++  static const char* strrchr(const char* cs,int c)
+     {return ::strrchr(cs,c);}
+ 
+-  static char* strstr(const char* cs,const char* ct)
++  static const char* strstr(const char* cs,const char* ct)
+     {return ::strstr(cs,ct);}
+ 
+   static void strcpy(char* s,const char* ct)
 @@ -376,8 +376,10 @@ public:
    int get_write_length() const {return get_write_length(len);}
    /* EFFECTS: write_length of this list */
