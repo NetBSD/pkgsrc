@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2020/03/10 22:10:42 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2020/03/26 02:38:12 joerg Exp $
 
 DISTNAME=	transcode-1.1.7
 PKGREVISION=	39
@@ -25,6 +25,8 @@ CONFIGURE_ARGS+=	--enable-theora
 CONFIGURE_ARGS+=	--enable-vorbis
 CONFIGURE_ARGS+=	--enable-xvid
 CONFIGURE_ENV+=		PATH_TO_AWK=${AWK:Q}
+
+CHECK_PORTABILITY_SKIP+=	configure.in
 
 PTHREAD_AUTO_VARS=	yes
 PTHREAD_OPTS=		require
