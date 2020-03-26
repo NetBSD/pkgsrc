@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/03/23 20:07:29 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/26 12:18:17 nia Exp $
 
 DISTNAME=	dhex_0.69
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -15,7 +15,8 @@ FAKE_NCURSES=	yes
 
 MAKE_FLAGS+=	CC=${CC:Q}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
-MAKE_FLAGS+=	LDFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	LIBS=${BUILDLINK_LDADD.curses:Q}
 
 MAN1=		dhex.1
 MAN5=		dhexrc.5 dhex_markers.5 dhex_searchlog.5
