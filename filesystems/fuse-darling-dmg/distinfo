@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:50 joerg Exp $
+$NetBSD: distinfo,v 1.3 2020/03/26 02:34:51 joerg Exp $
 
 SHA1 (fuse-darling-dmg-20160310-b7ce87bfe59c2ed758165c8650402f6d4c84d184.tar.gz) = c251fd01bcb843244ae8aa0f9a0d74cf9a6b4974
 RMD160 (fuse-darling-dmg-20160310-b7ce87bfe59c2ed758165c8650402f6d4c84d184.tar.gz) = de3f73bb4e9e66c1b6f98beb7e5e6b647be91147
 SHA512 (fuse-darling-dmg-20160310-b7ce87bfe59c2ed758165c8650402f6d4c84d184.tar.gz) = 1476b9f0f4ff3094713bcdde82e0330f8db4ce6edf3fac900f349d0bf081fe54d3893845662497dd0ea06134ce8289cd0d2a0046593386fca5c604f69075ea4c
 Size (fuse-darling-dmg-20160310-b7ce87bfe59c2ed758165c8650402f6d4c84d184.tar.gz) = 50309 bytes
+SHA1 (patch-src_HFSAttributeBTree.cpp) = ce318ae1336d9335c111150c6779cca8a8ee055e
+SHA1 (patch-src_HFSCatalogBTree.cpp) = 407524f9c4d6eebc89abf465055d0b64853fba9b
 SHA1 (patch-src_be.h) = 9c6554c84ee3ed15cc1232b70cf87c23aa4c88fa
 SHA1 (patch-src_main-fuse.cpp) = a302b6467185f6f94731b07ed04792b6a5ef2801
+SHA1 (patch-src_unichar.cpp) = f84489f9de4f9f6456d2eed9985ca2cfa8865483
