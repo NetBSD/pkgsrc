@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2018/08/23 08:21:02 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2020/03/26 21:49:49 joerg Exp $
 
 SHA1 (gearmand-1.1.18.tar.gz) = eb7f1d806635cba309c40460c3ca5f2ff76d6519
 RMD160 (gearmand-1.1.18.tar.gz) = 2bbe1042932dd763fcc68f4c8e6227d6a53be7e0
@@ -14,4 +14,5 @@ SHA1 (patch-libgearman-server__log.cc) = ecad056d7704451bce88e889fc0f9ce52828122
 SHA1 (patch-libgearman_backtrace.cc) = f8b643a91fb7d3656c10616fcd37a9dc0749904e
 SHA1 (patch-libtest__exception.hpp) = 193ee0e3711272f99ee3594f8629e27d572ca116
 SHA1 (patch-libtest__lite.h) = 90ca2fa29aaa2c17e05f64ddba14f1a9a5901f52
+SHA1 (patch-libtest_alarm.cc) = b964f39134d882dc568a21d2d4150ddebdf622a4
 SHA1 (patch-libtest_main.cc) = bbde756232acf00b3f1562e1e4c4de67e5cfdf24
