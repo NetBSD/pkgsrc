@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:50:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/26 13:59:40 nia Exp $
 
 GITHUB_TAG=	v0.1.1
 DISTNAME=	nanotodon-${GITHUB_TAG:S/v//}
@@ -10,6 +10,8 @@ MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	https://github.com/taka-tuos/nanotodon
 COMMENT=	CUI/C99 mastodon client
 LICENSE=	mit
+
+USE_LANGUAGES=	c99
 
 INSTALLATION_DIRS+=	bin
 
