@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/03/10 22:10:54 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/03/26 21:50:24 joerg Exp $
 
 DISTNAME=	keepassxc-${GITHUB_RELEASE}-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -18,10 +18,6 @@ SUPERSEDES+=	keepassx-[0-9]*
 SUPERSEDES+=	keepassx0-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
-
-.if exists(/usr/lib/libjemalloc.so)
-LDFLAGS.NetBSD+=	-ljemalloc # for malloc_usable_size()
-.endif
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
