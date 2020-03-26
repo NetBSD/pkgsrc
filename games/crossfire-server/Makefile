@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2020/03/08 16:49:35 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2020/03/26 02:34:18 joerg Exp $
 
 DISTNAME=	crossfire-1.71.0
 PKGNAME=	${DISTNAME:S/crossfire-/crossfire-server-/1}
@@ -23,6 +23,8 @@ GNU_CONFIGURE=	yes
 PLIST_SRC=	${WRKDIR}/PLIST PLIST
 
 BUILD_DEFS+=	VARBASE
+
+CHECK_PORTABILITY_SKIP+=	utils/get_release.in
 
 # "Collect is already running.
 # If you think this is an error, rmdir collect.lock"
