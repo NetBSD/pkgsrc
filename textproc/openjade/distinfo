@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2017/07/15 14:34:15 wiz Exp $
+$NetBSD: distinfo,v 1.17 2020/03/26 21:47:54 rillig Exp $
 
 SHA1 (openjade-1.3.2.tar.gz) = 54e1999f41450fbd62c5d466002d79d3efca2321
 RMD160 (openjade-1.3.2.tar.gz) = 3b12f6596a42c49a60cc07cd9b8f4c5fdf3bafd2
@@ -10,6 +10,7 @@ SHA1 (patch-ac) = 2492ccb9bd736318ecd5c37f1b2a963f3ff188ab
 SHA1 (patch-ad) = f8c950cc4a0ffb5bdba315a298c14a3e7ebcd637
 SHA1 (patch-ae) = b67fde4062691b2d953cb4cb5b4ebd2428c3c285
 SHA1 (patch-af) = 1e0db04b5b85ad3b71066e55f94bf3144d69efe5
+SHA1 (patch-jade_HtmlFOTBuilder.cxx) = 98643b1159b6f22ae8e77ac3e8c5f431c167ce83
 SHA1 (patch-jade_TeXFOTBuilder.cxx) = 037953d73d896afae7531e313821224ccd1e30e4
 SHA1 (patch-jade_TransformFOTBuilder.cxx) = cf4c51f05f95e31111a7e48d7984397ba4850e7d
 SHA1 (patch-msggen.pl) = d55befeb6f859c9c3330c2083fce5d5281a496ef
