@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2020/03/22 08:58:17 nia Exp $
+# $NetBSD: Makefile,v 1.100 2020/03/26 12:08:47 nia Exp $
 
 DISTNAME=		snd-20.2
 CATEGORIES=		audio
@@ -24,8 +24,9 @@ MAKE_FILE=		makefile
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
 
-# On NetBSD we use sunaudio.
-.if ${OSS_TYPE} != "none" && ${OPSYS} != "NetBSD"
+# On NetBSD we use sunaudio, and on Linux we use ALSA.
+.if ${OSS_TYPE} != "none" && \
+    ${OPSYS} != "NetBSD" && ${OPSYS} != "Linux"
 CONFIGURE_ARGS+=	--with-oss
 LDFLAGS+=		${LIBOSSAUDIO}
 .else
