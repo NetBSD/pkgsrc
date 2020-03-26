@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2020/01/18 23:33:21 rillig Exp $
+# $NetBSD: Makefile,v 1.64 2020/03/26 14:01:04 nia Exp $
 #
 
 DISTNAME=	quagga-1.2.4
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gawk gmake perl
+USE_TOOLS+=		gawk gmake perl pkg-config
 USE_LIBTOOL=		YES
 
 TEST_TARGET=		check
