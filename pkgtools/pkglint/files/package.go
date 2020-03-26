@@ -86,6 +86,10 @@ type Package struct {
 	IgnoreMissingPatches bool // In distinfo, don't warn about patches that cannot be found.
 
 	Once Once
+
+	// Contains the basenames of the distfiles that are mentioned in distinfo,
+	// for example "package-1.0.tar.gz", even if that file is in a DIST_SUBDIR.
+	distinfoDistfiles map[string]bool
 }
 
 func NewPackage(dir CurrPath) *Package {
@@ -121,6 +125,7 @@ func NewPackage(dir CurrPath) *Package {
 	pkg.vars.Fallback("PATCHDIR", "patches")
 	pkg.vars.Fallback("KRB5_TYPE", "heimdal")
 	pkg.vars.Fallback("PGSQL_VERSION", "95")
+	pkg.vars.Fallback("EXTRACT_SUFX", ".tar.gz")
 
 	// In reality, this is an absolute pathname. Since this variable is
 	// typically used in the form ${.CURDIR}/../../somewhere, this doesn't
@@ -132,6 +137,9 @@ func NewPackage(dir CurrPath) *Package {
 
 func (pkg *Package) Check() {
 	files, mklines, allLines := pkg.load()
+	if files == nil {
+		return
+	}
 	pkg.check(files, mklines, allLines)
 }
 
@@ -588,6 +596,8 @@ func (pkg *Package) check(filenames []CurrPath, mklines, allLines *MkLines) {
 
 		pkg.checkDescr(filenames, mklines)
 	}
+
+	pkg.checkDistfilesInDistinfo(allLines)
 }
 
 func (pkg *Package) checkDescr(filenames []CurrPath, mklines *MkLines) {
@@ -603,6 +613,43 @@ func (pkg *Package) checkDescr(filenames []CurrPath, mklines *MkLines) {
 		return
 	}
 	mklines.Whole().Errorf("Each package must have a DESCR file.")
+}
+
+func (pkg *Package) checkDistfilesInDistinfo(mklines *MkLines) {
+	// Needs more work; see MkLines.IsUnreachable.
+	if !G.Experimental {
+		return
+	}
+
+	if pkg.distinfoDistfiles == nil {
+		return
+	}
+
+	redundant := pkg.redundant
+	distfiles := redundant.get("DISTFILES")
+	if distfiles == nil {
+		return
+	}
+
+	for _, mkline := range distfiles.vari.WriteLocations() {
+		unreachable := newLazyBool(
+			func() bool { return mklines.IsUnreachable(mkline) })
+		resolved := resolveVariableRefs(mkline.Value(), nil, pkg)
+
+		for _, distfile := range mkline.ValueFields(resolved) {
+			if containsVarUse(distfile) {
+				continue
+			}
+			if pkg.distinfoDistfiles[NewPath(distfile).Base()] {
+				continue
+			}
+			if unreachable.get() {
+				continue
+			}
+			mkline.Warnf("Distfile %q is not mentioned in %s.",
+				distfile, mkline.Rel(pkg.File(pkg.DistinfoFile)))
+		}
+	}
 }
 
 func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines, allLines *MkLines) {

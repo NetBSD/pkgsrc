@@ -293,10 +293,16 @@ func (mkline *MkLine) Args() string { return mkline.data.(*mkLineDirective).args
 func (mkline *MkLine) Cond() *MkCond {
 	cond := mkline.data.(*mkLineDirective).cond
 	if cond == nil {
+		assert(mkline.HasCond())
 		cond = NewMkParser(mkline.Line, mkline.Args()).MkCond()
 		mkline.data.(*mkLineDirective).cond = cond
 	}
 	return cond
+}
+
+func (mkline *MkLine) HasCond() bool {
+	directive := mkline.Directive()
+	return directive == "if" || directive == "elif"
 }
 
 // DirectiveComment is the trailing end-of-line comment, typically at a deeply nested .endif or .endfor.

@@ -657,6 +657,8 @@ func (ck *ShellLineChecker) CheckShellCommandLine(shelltext string) {
 			line.Errorf("Use of _PKG_SILENT and _PKG_DEBUG is obsolete. Use ${RUN} instead.")
 		}
 	}
+	lexer.SkipHspace()
+	lexer.SkipString("${_ULIMIT_CMD}") // It brings its own semicolon, just like ${RUN}.
 
 	ck.CheckShellCommand(lexer.Rest(), &setE, RunTime)
 	ck.checkMultiLineComment()

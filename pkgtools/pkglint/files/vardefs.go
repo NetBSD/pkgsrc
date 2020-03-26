@@ -287,7 +287,7 @@ func (reg *VarTypeRegistry) compilerLanguages(src *Pkgsrc) *BasicType {
 				}
 			}
 
-			if mkline.IsDirective() && mkline.Cond() != nil {
+			if mkline.IsDirective() && mkline.HasCond() && mkline.Cond() != nil {
 				mkline.Cond().Walk(&MkCondCallback{
 					VarUse: func(varuse *MkVarUse) {
 						if varuse.varname == "USE_LANGUAGES" && len(varuse.modifiers) == 1 {
@@ -1691,7 +1691,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.syslist("TOUCH_FLAGS", BtShellWord)
 	reg.pkglist("UAC_REQD_EXECS", BtPrefixPathname)
 	reg.pkglistbl3("UNLIMIT_RESOURCES",
-		enum("cputime datasize memorysize stacksize"))
+		enum("cputime datasize memorysize stacksize virtualsize"))
 	reg.usr("UNPRIVILEGED_USER", BtUserGroupName)
 	reg.usr("UNPRIVILEGED_GROUP", BtUserGroupName)
 	reg.pkglist("UNWRAP_FILES", BtPathPattern)
@@ -1767,6 +1767,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglist("X11_LDFLAGS", BtLdFlag)
 	reg.sys("X11_PKGSRCDIR.*", BtPathname)
 	reg.pkglist("XMKMF_FLAGS", BtShellWord)
+	reg.sys("_ULIMIT_CMD", BtShellCommands)
 	reg.pkglist("_WRAP_EXTRA_ARGS.*", BtShellWord)
 
 	reg.infralist("_VARGROUPS", BtIdentifierDirect)

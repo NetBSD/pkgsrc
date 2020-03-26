@@ -1344,6 +1344,124 @@ func (s *Suite) Test_Package_checkDescr__DESCR_SRC(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
+// All files that can possibly be added to DISTFILES need a corresponding
+// entry in the distinfo file.
+//
+// https://mail-index.netbsd.org/pkgsrc-changes/2020/02/05/msg206172.html
+// https://mail-index.netbsd.org/pkgsrc-changes/2020/03/25/msg209445.html
+func (s *Suite) Test_Package_checkDistfilesInDistinfo__indirect_conditional_DISTFILES(c *check.C) {
+	G.Experimental = true
+
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
+		"DISTFILES.i386=\t\tdistfile-i386.tar.gz",
+		"DISTFILES.other=\tdistfile-other.tar.gz",
+		"",
+		".if ${MACHINE_ARCH} == i386",
+		"DISTFILES+=\t${DISTFILES.i386}",
+		".else",
+		"DISTFILES+=\t${DISTFILES.other}",
+		".endif",
+		"",
+		"DISTFILES+=\tok-3.tar.gz")
+	t.CreateFileLines("category/package/distinfo",
+		CvsID,
+		"",
+		"SHA1 (ok-3.tar.gz) = 1234",
+		"RMD160 (ok-3.tar.gz) = 1234",
+		"SHA512 (ok-3.tar.gz) = 1234",
+		"Size (ok-3.tar.gz) = 1234",
+		"SHA1 (package-1.0.tar.gz) = 1234",
+		"RMD160 (package-1.0.tar.gz) = 1234",
+		"SHA512 (package-1.0.tar.gz) = 1234",
+		"Size (package-1.0.tar.gz) = 1234")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:26: Distfile \"distfile-i386.tar.gz\" is not mentioned in distinfo.",
+		"WARN: Makefile:28: Distfile \"distfile-other.tar.gz\" is not mentioned in distinfo.")
+}
+
+func (s *Suite) Test_Package_checkDistfilesInDistinfo__indirect_DIST_SUBDIR(c *check.C) {
+	G.Experimental = true
+
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
+		// As of 2020-03-26, pkglint doesn't know how to resolve PKGNAME_NOREV.
+		"DIST_SUBDIR=\t${PKGNAME_NOREV}",
+		// Strictly speaking, this is redundant, but as of 2020-03-26,
+		// pkglint doesn't infer the default DISTFILES, so it needs a bit of help here.
+		"DISTFILES+=\tdistfile-1.0.tar.gz",
+		"DISTFILES+=\tdistfile-other.tar.gz")
+	t.CreateFileLines("distinfo",
+		CvsID,
+		"",
+		"SHA1 (package-1.0/distfile-other.tar.gz) = 1234",
+		"RMD160 (package-1.0/distfile-other.tar.gz) = 1234",
+		"SHA512 (package-1.0/distfile-other.tar.gz) = 1234",
+		"Size (package-1.0/distfile-other.tar.gz) = 1234",
+		"SHA1 (package-1.0/package-1.0.tar.gz) = 1234",
+		"RMD160 (package-1.0/package-1.0.tar.gz) = 1234",
+		"SHA512 (package-1.0/package-1.0.tar.gz) = 1234",
+		"Size (package-1.0/package-1.0.tar.gz) = 1234")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: Makefile:24: Distfile \"distfile-other.tar.gz\" is not mentioned in distinfo.")
+}
+
+func (s *Suite) Test_Package_checkDistfilesInDistinfo__depending_on_package_settable(c *check.C) {
+	G.Experimental = true
+
+	t := s.Init(c)
+
+	t.SetUpPackage("print/tex-varisize",
+		"DISTNAME=\tvarisize",
+		"PKGNAME=\ttex-${DISTNAME}-2014",
+		"TEXLIVE_REV=\t15878",
+		"",
+		"TEXLIVE_UNVERSIONED=\tyes",
+		"",
+		".include \"../../print/texlive/package.mk\"")
+	t.CreateFileLines("print/tex-varisize/distinfo",
+		CvsID,
+		"",
+		"SHA1 (tex-varisize-15878/varisize.tar.xz) = 1234",
+		"RMD160 (tex-varisize-15878/varisize.tar.xz) = 1234",
+		"SHA512 (tex-varisize-15878/varisize.tar.xz) = 1234",
+		"Size (tex-varisize-15878/varisize.tar.xz) = 3176 bytes")
+	t.CreateFileLines("print/texlive/package.mk",
+		MkCvsID,
+		"",
+		".if empty(TEXLIVE_UNVERSIONED)",
+		"DISTFILES?=\t${DISTNAME}.r${TEXLIVE_REV}${EXTRACT_SUFX}",
+		".endif")
+	t.Chdir("print/tex-varisize")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	// The package-settable TEXLIVE_UNVERSIONED is definitely not empty,
+	// therefore the line in package.mk doesn't apply.
+	// FIXME: This warning is wrong because the line in package.mk is unreachable.
+	//  See MkLines.IsUnreachable.
+	t.CheckOutputLines(
+		"WARN: ../../print/texlive/package.mk:4: Distfile \"varisize.r15878.tar.gz\" " +
+			"is not mentioned in ../../print/tex-varisize/distinfo.")
+}
+
 func (s *Suite) Test_Package_checkfilePackageMakefile__GNU_CONFIGURE(c *check.C) {
 	t := s.Init(c)
 
