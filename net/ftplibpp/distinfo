@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:35:01 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/03/26 02:30:26 joerg Exp $
 
 SHA1 (ftplibpp-1.0.1.tar.gz) = 51bfa48cf54efd23becdc83eb0f5d16f3e7bec21
 RMD160 (ftplibpp-1.0.1.tar.gz) = 6ea80510ba4aace8cf73474ab2bcb9373d799070
 SHA512 (ftplibpp-1.0.1.tar.gz) = e613638419646d628c5966ac94634701108edba17e20b0fb7df8aa6702550ad0b3537e0c7f3a06120468db48f058c489e1aeb8692fadc5d02b1e5bc46de63a76
 Size (ftplibpp-1.0.1.tar.gz) = 26688 bytes
 SHA1 (patch-aa) = d4b1d2a39fe2a157a671eeb012a2f5a6f77f39c0
+SHA1 (patch-ftplib.cpp) = df97c2155be65329d483294297d3ae668a12cdbb
