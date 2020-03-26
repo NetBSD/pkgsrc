@@ -401,7 +401,7 @@ func resolveVariableRefs(text string, mklines *MkLines, pkg *Package) string {
 	str := text
 	for {
 		// TODO: Replace regular expression with full parser.
-		replaced := replaceAllFunc(str, `\$\{([\w.]+)\}`, replace)
+		replaced := replaceAllFunc(str, `\$\{([\w.\-]+)\}`, replace)
 		if replaced == str {
 			if trace.Tracing && str != text {
 				trace.Stepf("resolveVariableRefs %q => %q", text, replaced)
