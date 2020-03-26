@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2020/03/18 21:55:23 tnn Exp $
+# $NetBSD: Makefile.common,v 1.41 2020/03/26 14:11:29 nia Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -37,6 +37,9 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 USE_LANGUAGES=		c gnu++11
 USE_TOOLS+=		gmake perl:build pkg-config
+
+# C++11
+GCC_REQD+=		4.7
 
 # Avoid failures to due 'register' usage in X11 headers.
 CFLAGS+=		-Wno-register
