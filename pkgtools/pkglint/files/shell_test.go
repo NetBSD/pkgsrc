@@ -587,6 +587,21 @@ func (s *Suite) Test_SimpleCommandChecker_checkEchoN(c *check.C) {
 		"WARN: Makefile:4: Please use ${ECHO_N} instead of \"echo -n\".")
 }
 
+// Before 2020-03-25, pkglint ran into a parse error since it didn't
+// know that _ULIMIT_CMD brings its own semicolon.
+func (s *Suite) Test_ShellLineChecker__skip_ULIMIT_CMD(c *check.C) {
+	t := s.Init(c)
+
+	mklines := t.NewMkLines("Makefile",
+		MkCvsID,
+		"pre-configure:",
+		"\t${RUN} ${_ULIMIT_CMD} while :; do :; done")
+
+	mklines.Check()
+
+	t.CheckOutputEmpty()
+}
+
 func (s *Suite) Test_ShellLineChecker_checkConditionalCd(c *check.C) {
 	t := s.Init(c)
 

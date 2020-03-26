@@ -14,8 +14,8 @@ func (s *Suite) Test_CheckLinesDistinfo__parse_errors(c *check.C) {
 	lines := t.SetUpFileLines("distinfo",
 		"should be the CVS ID",
 		"should be empty",
-		"MD5 (distfile.tar.gz) = 12345678901234567890123456789012",
-		"SHA1 (distfile.tar.gz) = 1234567890123456789012345678901234567890",
+		"MD5 (distfile-1.0.tar.gz) = 12345678901234567890123456789012",
+		"SHA1 (distfile-1.0.tar.gz) = 1234567890123456789012345678901234567890",
 		"SHA1 (patch-aa) = 6b98dd609f85a9eb9c4c1e4e7055a6aaa62b7cc7",
 		"Size (patch-aa) = 104",
 		"SHA1 (patch-ab) = 6b98dd609f85a9eb9c4c1e4e7055a6aaa62b7cc7",
@@ -31,7 +31,7 @@ func (s *Suite) Test_CheckLinesDistinfo__parse_errors(c *check.C) {
 		"ERROR: distinfo:1: Invalid line: should be the CVS ID",
 		"ERROR: distinfo:2: Invalid line: should be empty",
 		"ERROR: distinfo:8: Invalid line: Another invalid line",
-		"ERROR: distinfo:3: Expected SHA1, RMD160, SHA512, Size checksums for \"distfile.tar.gz\", got MD5, SHA1.",
+		"ERROR: distinfo:3: Expected SHA1, RMD160, SHA512, Size checksums for \"distfile-1.0.tar.gz\", got MD5, SHA1.",
 		"ERROR: distinfo:5: Expected SHA1 hash for patch-aa, got SHA1, Size.",
 		"WARN: distinfo:9: Patch file \"patch-nonexistent\" does not exist in directory \"patches\".")
 }
@@ -202,6 +202,41 @@ func (s *Suite) Test_distinfoLinesChecker_check__missing_php_patches(c *check.C)
 	G.Check(t.File("archivers/php-zlib"))
 
 	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_distinfoLinesChecker_checkFilename(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package")
+	t.CreateFileLines("category/package/distinfo",
+		CvsID,
+		"",
+		"SHA1 (ok-1.0.tar.gz) = 1234",
+		"RMD160 (ok-1.0.tar.gz) = 1234",
+		"SHA512 (ok-1.0.tar.gz) = 1234",
+		"Size (ok-1.0.tar.gz) = 1234",
+		"SHA1 (not-ok.tar.gz) = 1234",
+		"RMD160 (not-ok.tar.gz) = 1234",
+		"SHA512 (not-ok.tar.gz) = 1234",
+		"Size (not-ok.tar.gz) = 1234",
+		"SHA1 (non-versioned/not-ok.tar.gz) = 1234",
+		"RMD160 (non-versioned/not-ok.tar.gz) = 1234",
+		"SHA512 (non-versioned/not-ok.tar.gz) = 1234",
+		"Size (non-versioned/not-ok.tar.gz) = 1234",
+		"SHA1 (versioned-1/ok.tar.gz) = 1234",
+		"RMD160 (versioned-1/ok.tar.gz) = 1234",
+		"SHA512 (versioned-1/ok.tar.gz) = 1234",
+		"Size (versioned-1/ok.tar.gz) = 1234")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"WARN: distinfo:7: Distfiles without version number "+
+			"should be placed in a versioned DIST_SUBDIR.",
+		"WARN: distinfo:11: Distfiles without version number "+
+			"should be placed in a versioned DIST_SUBDIR.")
 }
 
 func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__nonexistent_distfile_called_patch(c *check.C) {
@@ -653,6 +688,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkUnrecordedPatches(c *check.C) {
 	G.checkdirPackage(".")
 
 	t.CheckOutputLines(
+		"WARN: distinfo:3: Distfiles without version number should be placed in a versioned DIST_SUBDIR.",
 		"ERROR: distinfo: Patch \"patches/patch-aa\" is not recorded. Run \""+confMake+" makepatchsum\".",
 		"ERROR: distinfo: Patch \"patches/patch-src-Makefile\" is not recorded. Run \""+confMake+" makepatchsum\".")
 }
