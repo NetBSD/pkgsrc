@@ -1,7 +1,37 @@
-$NetBSD: patch-ao,v 1.1 2006/03/21 17:30:00 yyamano Exp $
+$NetBSD: patch-ao,v 1.2 2020/03/26 21:09:20 rillig Exp $
+
+tfmtodit.cc: In member function 'int tfm::get_height(int)':
+tfmtodit.cc:212:47: error: array subscript has type 'char' [-Werror=char-subscripts]
+   return height[char_info[i - bc].height_index];
+                                               ^
+tfmtodit.cc: In member function 'int tfm::get_depth(int)':
+tfmtodit.cc:217:45: error: array subscript has type 'char' [-Werror=char-subscripts]
+   return depth[char_info[i - bc].depth_index];
+                                             ^
+tfmtodit.cc: In member function 'int tfm::get_italic(int)':
+tfmtodit.cc:222:47: error: array subscript has type 'char' [-Werror=char-subscripts]
+   return italic[char_info[i - bc].italic_index];
+                                               ^
+
+The above errors are harmless, but it's too hard to prove for the
+compiler. These variables were always initialized from an unsigned char,
+shifted right by a few positions.
 
 --- tfmtodit/tfmtodit.cc.orig	2006-03-22 01:56:43.000000000 +0900
 +++ tfmtodit/tfmtodit.cc
+@@ -67,9 +67,9 @@ both be zero. */
+ 
+ struct char_info_word {
+   unsigned char width_index;
+-  char height_index;
+-  char depth_index;
+-  char italic_index;
++  unsigned char height_index;
++  unsigned char depth_index;
++  unsigned char italic_index;
+   char tag;
+   unsigned char remainder;
+ };
 @@ -651,7 +651,7 @@ lig_chars table. `ch' gives the full-nam
  gives the groff name of the character, `i' gives its index in
  the encoding, which is filled in later  (-1 if it does not appear). */
