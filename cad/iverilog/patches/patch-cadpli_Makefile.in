@@ -1,4 +1,4 @@
-$NetBSD: patch-cadpli_Makefile,v 1.1 2016/10/08 23:01:45 kamil Exp $
+$NetBSD: patch-cadpli_Makefile.in,v 1.1 2020/03/26 02:37:14 joerg Exp $
 
 gcc -std=gnu99 -shared -L/usr/lib -Wl,-R/usr/lib -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -o cadpli.vpl cadpli.o ../libveriuser/libveriuser.o -L../vvp -lvpi
 mkdir: dep: Not a directory
