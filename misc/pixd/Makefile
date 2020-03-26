@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/13 22:30:34 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/26 13:48:29 nia Exp $
 
 DISTNAME=	pixd-1.0.0
 CATEGORIES=	misc
@@ -12,6 +12,8 @@ COMMENT=	Colourful visualization tool for binary files
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
+
+BUILD_TARGET=	pixd
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
