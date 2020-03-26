@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/09/21 11:32:08 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/03/26 13:11:16 nia Exp $
 bin/milkytracker
 share/appdata/milkytracker.appdata.xml
 share/applications/milkytracker.desktop
@@ -8,6 +8,7 @@ share/doc/milkytracker/Copying.txt
 share/doc/milkytracker/FAQ.html
 share/doc/milkytracker/MilkyTracker.html
 share/doc/milkytracker/TiTAN.nfo
+share/doc/milkytracker/readme_unix
 share/milkytracker/songs/milky.xm
 share/milkytracker/songs/slumberjack.xm
 share/milkytracker/songs/sv_ttt.xm
