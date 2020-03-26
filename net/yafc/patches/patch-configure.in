@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.in,v 1.1 2020/03/26 21:53:31 joerg Exp $
+
+--- configure.in.orig	2020-03-26 11:58:13.964325554 +0000
++++ configure.in
+@@ -255,7 +255,7 @@ if test "$mhe_with_krb4" = "yes" -o "$mh
+           fi
+ 
+ dnl          if test "$found_all_krb5" = "1" ; then
+-dnl            if test "$krb5_flavor" == "heimdal" ; then
++dnl            if test "$krb5_flavor" = "heimdal" ; then
+ dnl              dnl Heimdal calls this libdb
+ dnl              AC_CHECK_LIB(db, dbopen)
+ dnl              if test "$ac_cv_lib_db_dbopen" = "no" ; then
