@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2020/03/23 10:29:30 nia Exp $
+# $NetBSD: Makefile,v 1.86 2020/03/26 14:48:36 nia Exp $
 
 DISTNAME=	openttd-1.9.3-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	https://proxy.binaries.openttd.org/openttd-releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -24,6 +24,7 @@ GCC_REQD+=	4.8
 
 BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11 # alloca
 
+CONFIGURE_ARGS+=	--os=UNIX
 CONFIGURE_ARGS+=	--prefix-dir=${PREFIX}
 CONFIGURE_ARGS+=	--binary-dir=bin
 CONFIGURE_ARGS+=	--data-dir=share/openttd
@@ -34,12 +35,8 @@ CONFIGURE_ARGS+=	--man-dir=${PKGMANDIR}/man6
 CONFIGURE_ARGS+=	--menu-dir=share/applications
 CONFIGURE_ARGS+=	--personal-dir=.openttd
 CONFIGURE_ARGS+=	--shared-dir=${VARBASE}/games/openttd
-CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
-CONFIGURE_ARGS+=	--with-lzo2=${BUILDLINK_PREFIX.lzo}/lib
 
 .include "../../mk/bsd.prefs.mk"
-
-CONFIGURE_ARGS.DragonFly+=	--os=FREEBSD
 
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--disable-cocoa-quickdraw
@@ -48,6 +45,7 @@ CONFIGURE_ARGS+=	--without-application-bundle
 CONFIGURE_ARGS+=	--without-osx-sysroot
 .else
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../x11/libxdg-basedir/buildlink3.mk"
 .endif
 
 .include "../../archivers/lzo/buildlink3.mk"
