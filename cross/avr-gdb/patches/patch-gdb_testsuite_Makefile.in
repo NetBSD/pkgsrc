@@ -1,0 +1,22 @@
+$NetBSD: patch-gdb_testsuite_Makefile.in,v 1.1 2020/03/26 21:48:41 joerg Exp $
+
+--- gdb/testsuite/Makefile.in.orig	2020-03-26 14:22:02.641157595 +0000
++++ gdb/testsuite/Makefile.in
+@@ -201,7 +201,7 @@ check-single-racy:
+ 	-rm -rf cache racy_outputs temp
+ 	mkdir -p racy_outputs; \
+ 	racyiter="$(RACY_ITER)"; \
+-	test "x$$racyiter" == "x" && \
++	test "x$$racyiter" = "x" && \
+ 	  racyiter=$(DEFAULT_RACY_ITER); \
+ 	if test $$racyiter -lt 2 ; then \
+ 	  echo "RACY_ITER must be at least 2."; \
+@@ -231,7 +231,7 @@ check-parallel:
+ check-parallel-racy:
+ 	-rm -rf cache racy_outputs temp
+ 	racyiter="$(RACY_ITER)"; \
+-	test "x$$racyiter" == "x" && \
++	test "x$$racyiter" = "x" && \
+ 	  racyiter=$(DEFAULT_RACY_ITER); \
+ 	if test $$racyiter -lt 2 ; then \
+ 	  echo "RACY_ITER must be at least 2."; \
