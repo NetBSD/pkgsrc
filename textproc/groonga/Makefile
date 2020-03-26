@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2020/03/08 16:48:14 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2020/03/26 02:27:21 joerg Exp $
 #
 
 DISTNAME=	groonga-7.0.6
@@ -53,6 +53,9 @@ REPLACE_RUBY+=	data/munin/groonga_n_records_
 REPLACE_RUBY+=	data/munin/groonga_query_performance_
 REPLACE_RUBY+=	data/munin/groonga_status_
 REPLACE_RUBY+=	data/munin/groonga_throughput_
+
+post-extract:
+	rm ${WRKSRC}/version
 
 .include "../../lang/ruby/replace.mk"
 .include "../../devel/editline/buildlink3.mk"
