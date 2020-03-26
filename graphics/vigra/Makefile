@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/05/29 12:35:06 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2020/03/26 02:31:57 joerg Exp $
 
 DISTNAME=	vigra-1.11.1-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -33,7 +33,10 @@ SUBST_MESSAGE.python=	Fixing path to python.
 
 # Package doesn't need dependency, only packages using the script,
 # usually during configure, so don't depend on python.
-CHECK_INTERPRETER_SKIP=	bin/vigra-config
+CHECK_INTERPRETER_SKIP+=	bin/vigra-config
+
+# Don't have permissions for that anyway
+CHECK_PORTABILITY_SKIP+=	config/update-gh-pages.sh.in
 
 pre-install:
 	${RM} -f ${WRKSRC}/include/vigra/*.orig
