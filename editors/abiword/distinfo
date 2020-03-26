@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.80 2019/11/27 16:01:09 nia Exp $
+$NetBSD: distinfo,v 1.81 2020/03/26 02:36:02 joerg Exp $
 
 SHA1 (abiword-3.0.4.tar.gz) = eb6c18e649fe8ca185c8d09f2c7869a27c9942db
 RMD160 (abiword-3.0.4.tar.gz) = cd7eaf6c89b44f094c70b1700158b3ef2844c5a4
@@ -27,3 +27,4 @@ SHA1 (patch-src_af_util_xp_ut__mbtowc.cpp) = cf7078a6bfdf9ac9b30478d11d9d3a81a95
 SHA1 (patch-src_af_util_xp_ut__misc.cpp) = f552ecbb87490355d8e74218dd59fd3961f1af5d
 SHA1 (patch-src_af_xap_xp_enchant__checker.cpp) = 5ad3b8bb4e186e998d7e8930247534c9f058c534
 SHA1 (patch-src_text_fmt_xp_fv__FrameEdit.h) = 684310bf9aece4ce72d004dfae9a4b4b6ca69570
+SHA1 (patch-src_wp_ap_gtk_ap__UnixApp.cpp) = 0269d41c71db3501afc0f06ba1d21cd68f3f9304
