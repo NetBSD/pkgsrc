@@ -1,0 +1,13 @@
+$NetBSD: patch-man_Makefile.am,v 1.1 2020/03/26 02:37:38 joerg Exp $
+
+--- man/Makefile.am.orig	2020-03-26 00:13:21.169357410 +0000
++++ man/Makefile.am
+@@ -8,7 +8,7 @@ doc_DATA = vsearch_manual.pdf
+ 
+ vsearch_manual.pdf : vsearch.1
+ 	TEMP=$$(mktemp temp.XXXXXXXX) ; \
+-	if [ $$(uname) == "Darwin" ] ; then \
++	if [ $$(uname) = "Darwin" ] ; then \
+ 		sed -e 's/\\-/-/g' $< | \
+ 		iconv -f UTF-8 -t ISO-8859-1 > $$TEMP ; \
+ 	else \
