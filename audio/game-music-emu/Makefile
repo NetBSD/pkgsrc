@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/03/22 08:44:19 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/03/26 12:27:58 nia Exp $
 
 DISTNAME=	game-music-emu-0.6.3
 CATEGORIES=	audio
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-PKGCONFIG_OVERRIDE=	gme//libgme.pc.in
+PKGCONFIG_OVERRIDE+=	gme/libgme.pc.in
+
+BUILDLINK_TRANSFORM+=	rm:-fsanitize=undefined
 
 .include "../../mk/bsd.pkg.mk"
