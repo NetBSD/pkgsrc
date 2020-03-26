@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2019/09/21 11:32:08 nia Exp $
+$NetBSD: distinfo,v 1.11 2020/03/26 13:11:16 nia Exp $
 
 SHA1 (milkytracker-1.02.00.tar.gz) = 04c04fd429316cabe197baa1c510c4a81e9aef40
 RMD160 (milkytracker-1.02.00.tar.gz) = 1376ce67426b46e90f871c48ef5469ec6eae46c7
 SHA512 (milkytracker-1.02.00.tar.gz) = 479a7b3198d97c68dca4fa772a2aa64d7f740957f5d8038fabfb303e724c85aec0865746a0a5c3ef6b9599b78892dcda22727ab2bb80ae38764bcf81b249e134
 Size (milkytracker-1.02.00.tar.gz) = 3753882 bytes
+SHA1 (patch-docs_CMakeLists.txt) = 096dc06a4f898665a00d409cfb124925df9f93f6
