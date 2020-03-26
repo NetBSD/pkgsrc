@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/03/26 02:37:14 joerg Exp $
+
+--- Makefile.in.orig	2016-02-10 19:39:12.000000000 +0000
++++ Makefile.in
+@@ -249,14 +249,13 @@ version.exe: $(srcdir)/version.c $(srcdi
+ main.o: main.cc version_tag.h
+ 
+ lexor.o: lexor.cc parse.h
+-
+-parse.o: parse.cc
++parse.o: parse.cc parse.h
+ 
+ # Build this in two steps to avoid parallel build issues (see pr3462585)
+ parse.cc: $(srcdir)/parse.y
+-	$(YACC) --verbose -t -p VL -d -o $@ $<
+-parse.h: parse.cc
+-	mv parse.cc.h $@ 2>/dev/null || mv parse.hh $@
++	$(YACC) --verbose -t -p VL -d -o parse-tmp1.cc $< && mv parse-tmp1.cc $@
++parse.h: $(srcdir)/parse.y
++	$(YACC) --verbose -t -p VL -d -o parse-tmp2.cc $< && mv parse-tmp2.hh $@
+ 
+ syn-rules.cc: $(srcdir)/syn-rules.y
+ 	$(YACC) --verbose -t -p syn_ -o $@ $<
