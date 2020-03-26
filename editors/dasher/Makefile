@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2020/03/23 12:25:38 nia Exp $
+# $NetBSD: Makefile,v 1.104 2020/03/26 12:20:01 nia Exp $
 
 DISTNAME=	dasher-5.0.0.b20200225
 CATEGORIES=	editors gnome
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	autoreconf autoconf automake
+USE_TOOLS+=	autoreconf autoconf automake autopoint
 USE_TOOLS+=	pkg-config
 
 pre-configure:
