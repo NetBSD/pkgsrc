@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/03/24 18:09:30 taca Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/26 12:14:01 jperkin Exp $
 
 DISTNAME=	chef-15.8.23
 CATEGORIES=	sysutils
@@ -12,7 +12,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-chef-config>=15.8.23<15.9:../../sysutils/ruby-chef-c
 #DEPENDS+=	${RUBY_PKGPREFIX}-chef-utils>=15.8.23<15.9:../../sysutils/ruby-chef-utils
 DEPENDS+=	${RUBY_PKGPREFIX}-train-core>=3.1<4:../../net/ruby-train-core
 DEPENDS+=	${RUBY_PKGPREFIX}-train-winrm>=0.2.5:../../net/ruby-train-winrm
-DEPENDS+=	${RUBY_PKGPREFIX}-license-acceptance>=1.0.5:../../misc/ruby-license-acceptance/
+DEPENDS+=	${RUBY_PKGPREFIX}-license-acceptance>=1.0.5:../../misc/ruby-license-acceptance
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-cli>=2.1.1:../../devel/ruby-mixlib-cli
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-log>=2.0.3:../../devel/ruby-mixlib-log
 DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-authentication>=2.1:../../devel/ruby-mixlib-authentication
