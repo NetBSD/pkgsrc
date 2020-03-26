@@ -1,0 +1,17 @@
+$NetBSD: patch-tgt-pcb_Makefile.in,v 1.1 2020/03/26 02:37:14 joerg Exp $
+
+--- tgt-pcb/Makefile.in.orig	2020-03-25 22:40:55.245547401 +0000
++++ tgt-pcb/Makefile.in
+@@ -88,9 +88,9 @@ fp_lex.cc: $(srcdir)/fp.lex
+ 	$(LEX) -s -ofp_lex.cc $(srcdir)/fp.lex
+ 
+ fp.cc: $(srcdir)/fp.y
+-	$(YACC) --verbose -t -p fp -d -o $@ $<
+-fp.h: fp.cc
+-	mv fp.cc.h $@ 2>/dev/null || mv fp.hh $@
++	$(YACC) --verbose -t -p fp -d -o fp-tmp1.cc $< && mv fp-tmp1.cc $@
++fp.h: $(srcdir)/fp.y
++	$(YACC) --verbose -t -p fp -d -o fp-tmp1.cc $< && mv fp-tmp1.hh $@
+ 
+ ifeq (@WIN32@,yes)
+   TGTLDFLAGS=-L.. -livl

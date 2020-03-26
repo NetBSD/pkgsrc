@@ -1,0 +1,17 @@
+$NetBSD: patch-vhdlpp_Makefile.in,v 1.1 2020/03/26 02:37:14 joerg Exp $
+
+--- vhdlpp/Makefile.in.orig	2020-03-25 22:02:30.283023254 +0000
++++ vhdlpp/Makefile.in
+@@ -117,9 +117,9 @@ lexor.cc: $(srcdir)/lexor.lex
+ 
+ # Build this in two steps to avoid parallel build issues (see pr3462585)
+ parse.cc: $(srcdir)/parse.y
+-	$(YACC) --verbose -t -d -o $@ $<
+-parse.h: parse.cc
+-	mv parse.cc.h $@ 2>/dev/null || mv parse.hh $@
++	$(YACC) --verbose -t -d -o parse-tmp1.cc $< && mv parse-tmp1.cc $@
++parse.h: $(srcdir)/parse.y
++	$(YACC) --verbose -t -d -o parse-tmp2.cc $< && mv parse-tmp2.hh $@
+ 
+ lexor_keyword.o: lexor_keyword.cc parse.h
+ 
