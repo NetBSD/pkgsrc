@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 20:57:04 agc Exp $
+$NetBSD: distinfo,v 1.8 2020/03/26 12:46:58 nia Exp $
 
 SHA1 (sl-5.02/sl-5.02.tar.gz) = 8ea1ed978ed6738d6c510eceb329cb43616afb91
 RMD160 (sl-5.02/sl-5.02.tar.gz) = f3643055900b8a71dc9c18d59b0815c554298875
 SHA512 (sl-5.02/sl-5.02.tar.gz) = a4d18bc79d7e0eca7748b10226a6b2a85a7a01d636e4e9215bf524a7849bc5cb250034326e5a69f7423d79e40b92182fddc0e56e25df616edae06369c782cb26
 Size (sl-5.02/sl-5.02.tar.gz) = 5353 bytes
+SHA1 (patch-Makefile) = 4e82d8e3d7a514213d8d2bc806191975f13546d4
