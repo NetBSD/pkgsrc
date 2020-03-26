@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2016/03/30 08:40:53 jperkin Exp $
+$NetBSD: patch-aa,v 1.10 2020/03/26 13:27:31 nia Exp $
 
 Use pkgsrc flags/layout.
 
@@ -55,7 +55,7 @@ Use pkgsrc flags/layout.
  
  # SysVish
  #INSTALL_PROG	= install -u ${BINOWN} -g ${BINGRP} -m ${BINMODE}
-@@ -65,7 +65,7 @@ SRCS		= level.c main.c misc.c move.c sco
+@@ -65,18 +65,19 @@ SRCS		= level.c main.c misc.c move.c sco
  HDRS		= zombies.h
  MAN		= zombies.6
  OBJS		= ${SRCS:.c=.o}
@@ -64,7 +64,10 @@ Use pkgsrc flags/layout.
  
  all:		$(PROG)
  
-@@ -75,8 +75,9 @@ zombies:	${OBJS}
+ zombies:	${OBJS}
+-		${CC} -o $@ ${OBJS} ${LIBS}
++		${CC} ${LDFLAGS} -o $@ ${OBJS} ${LIBS}
+ 
  ${OBJS}:	${HDRS}
  
  install:	${PROG}
