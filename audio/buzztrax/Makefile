@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/03/10 22:09:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/26 12:07:19 nia Exp $
 
 DISTNAME=	buzztrax-0.10.2
 PKGREVISION=	2
@@ -27,7 +27,7 @@ USE_TOOLS+=	gmake
 # GLib-GIO-ERROR **: Settings schema 'org.buzztrax' is not installed
 MAKE_ENV+=	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
-PLIST_SRC+=	PLIST
+PLIST_SRC=	${PLIST_SRC_DFLT}
 
 USE_PKGLOCALEDIR=	yes
 
@@ -45,5 +45,4 @@ CONFIGURE_ARGS+=	--disable-schemas-compile
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
