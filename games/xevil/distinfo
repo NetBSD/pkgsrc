@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2016/05/07 09:57:53 joerg Exp $
+$NetBSD: distinfo,v 1.12 2020/03/26 02:33:57 joerg Exp $
 
 SHA1 (xevilsrc2.02r2.zip) = e9a262daffc7ee5c06196dc94cf35c199be86bbc
 RMD160 (xevilsrc2.02r2.zip) = dca82298ac2dfe66e4e92a02731bb6851563b67e
@@ -22,8 +22,8 @@ SHA1 (patch-ap) = 7fb4d991f629ee5f36718a047ce4667c563fd95b
 SHA1 (patch-aq) = 2a781bd3118bda38244f7b7a0bb1a202a90c3983
 SHA1 (patch-ar) = 8be1ce3f1ed2bd55dfc77042fa5f62fc6b036903
 SHA1 (patch-as) = 4c4e4ef0e626b8f04a120c996ec155cacf0c0ddf
-SHA1 (patch-at) = 6344907d83f7e6ee426e60970de88a0dc1686f48
-SHA1 (patch-au) = f1092ff4228d4bb6f13e6aeb0ea70a5b4b9635b6
+SHA1 (patch-at) = 5a6bc7e322d87c79595d8bcfb10a86db0aa79044
+SHA1 (patch-au) = 31ca4e555c886388542a3440c2ed6df315df2f29
 SHA1 (patch-cmn_game.h) = 47db702d729158290118cf75a0c437362f9af1c3
 SHA1 (patch-cmn_streams.cpp) = bb32e15807cc5ff2289df2e1dc1c1661c8949ad4
 SHA1 (patch-cmn_world.cpp) = 7bae7dfe426bf7dcf06906d62cd60c50efe98d4f
