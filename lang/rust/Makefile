@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2020/03/24 20:41:18 joerg Exp $
+# $NetBSD: Makefile,v 1.159 2020/03/26 20:05:29 rillig Exp $
 
 DISTNAME=	rustc-1.42.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -479,7 +479,7 @@ stage0-bootstrap: install
 		 (${MACHINE_ARCH} == "powerpc")) \
 	&& (empty(OS_VERSION:M[012345678].*) || \
 	    !empty(OS_VERSION:M8.99.*))
-DEPENDS+=	compat80>=0:../../emulators/compat80/
+DEPENDS+=	compat80>=0:../../emulators/compat80
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
