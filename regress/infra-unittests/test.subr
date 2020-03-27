@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.7 2020/03/22 12:15:59 rillig Exp $
+# $NetBSD: test.subr,v 1.8 2020/03/27 21:41:33 rillig Exp $
 set -eu
 
 # This file defines utilities for testing Makefile fragments in a mocked
@@ -162,16 +162,18 @@ EOF
 
 create_file() {
 	assert_that "$#" --equals 1
+	mkdir -p "$(dirname "$tmpdir/$1")"
 	cat > "$tmpdir/$1"
 }
 
 create_file_lines() {
+	mkdir -p "$(dirname "$tmpdir/$1")"
 	_cfl_filename="$1"; shift
 	printf '%s\n' "$@" > "$tmpdir/$_cfl_filename"
 }
 
 create_pkgsrc_file() {
-	mkdir -p "$mocked_pkgsrcdir/$(dirname "$1")"
+	mkdir -p "$(dirname "$mocked_pkgsrcdir/$1")"
 	cat > "$mocked_pkgsrcdir/$1"
 }
 
