@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2020/03/27 16:34:57 gutteridge Exp $
+
+Fix non-portable test expression.
+
+--- Makefile.orig	2018-07-30 16:05:13.000000000 +0000
++++ Makefile
+@@ -74,7 +74,7 @@ valgrind: build $(PYTHON_SUPP)
+ 	    $(PYTHON) setup.py test
+ 
+ 	@grep -A7 "blocks are definitely lost" build/valgrind.log; \
+-	if [ $$? == 0 ]; then \
++	if [ $$? = 0 ]; then \
+ 	    echo "Found definitive leak, see build/valgrind.log"; \
+ 	    exit 1; \
+ 	fi
