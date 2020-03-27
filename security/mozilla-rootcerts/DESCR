@@ -1,10 +1,12 @@
-This package provides a script which can be used to extract the root
-CA certificates distributed by the Mozilla Project into the current
-working directory and to rehash the existing certificates.  The directory
-can be used by most SSL-aware programs that expect a "CA certificate
-path".
+This package provides the certificates distributed by the Mozilla
+Project.  It also provides a script, mozilla-rootcerts, which can be
+used to extract the root CA certificates distributed by the Mozilla
+Project into the current working directory and to rehash the existing
+certificates.  The directory can be used by most SSL-aware programs
+that expect a "CA certificate path".
 
-NB: This package provides certificates, but does not configure them as
-trust anchors in any particular SSL/TLS implementation.  See also
-Mozilla-rootcerts-openssl for a package that configures these
-certificates as trust anchors in OpenSSL.
+NB: This package provides certificates, but does not as a consequence
+of installation configure them as trust anchors in any particular
+SSL/TLS implementation.  See the mozilla-rootcerts script for a way to
+configure them.  See also Mozilla-rootcerts-openssl for a package that
+configures these certificates as trust anchors in OpenSSL.
