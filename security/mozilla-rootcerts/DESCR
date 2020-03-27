@@ -1,11 +1,15 @@
 This package provides the certificates distributed by the Mozilla
-Project.  It also provides a script, mozilla-rootcerts, which can be
-used to install the root CA certificates distributed by the Mozilla
-Project into a location that makes them usable by OpenSSL and other
-TLS implementations, and rehash the existing certificates.
+Project.
+
+It also provides a script, mozilla-rootcerts, which can be used to
+install the root CA certificates distributed by the Mozilla Project
+into a location that makes them usable by TLS implementations, extract
+them to the current working directory, or rehash the existing
+certificates.
 
 NB: This package provides certificates, but does not as a consequence
-of installation configure them as trust anchors in any particular
-SSL/TLS implementation.  See the mozilla-rootcerts script for a way to
-configure them.  See also mozilla-rootcerts-openssl for a package that
-configures these certificates as trust anchors upon installation.
+of installation place them in a location that makes them immediately
+usable by SSL/TLS implementations.
+
+Use the 'mozilla-rootcerts install' script or mozilla-rootcerts-openssl
+package if you want to use these certificates.
