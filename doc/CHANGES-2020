@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1956 2020/03/27 16:04:24 jdolecek Exp $
+$NetBSD: CHANGES-2020,v 1.1957 2020/03/27 16:35:38 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2635,3 +2635,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-Glances to 3.1.4.1 [fox 2020-03-26]
 	Updated lang/py-hy to 0.18.0 [adam 2020-03-27]
 	Updated benchmarks/netio to 1.33 [jdolecek 2020-03-27]
+	Updated databases/py-ldap to 3.2.0nb2 [gutteridge 2020-03-27]
