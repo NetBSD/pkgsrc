@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile,v 1.1 2020/03/27 16:02:04 jdolecek Exp $
+
+Patch to add way to compile with IPv6 support. Patch taken from:
+https://svnweb.freebsd.org/ports/head/benchmarks/netio/files/patch-Makefile
+
+--- Makefile.orig	2012-12-11 20:54:30.000000000 +0000
++++ Makefile
+@@ -111,7 +111,7 @@ netio$X: netio$O getopt$O
+ 
+ .SUFFIXES: .c $O
+ .c$O:
+-	$(CC) $(CFLAGS) $(INC) -c $*.c
++	$(CC) $(OUT) $@ $(CFLAGS) $(INC) -c $*.c
+ 
+ netio$O: netio.c getopt.h
+ getopt$O: getopt.c getopt.h
