@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/03/08 16:42:27 bsiegert Exp $
+# $NetBSD: Makefile,v 1.43 2020/03/27 04:13:57 riastradh Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -193,7 +193,7 @@ BUILD_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
 # In a sandboxed build environment, we have to reach over to the
 # installed libraries themselves, since the symlinks compat80 adds
 # to the /usr tree can't be applied.
-MAKE_ENV+=	LD_LIBRARY_PATH=${PREFIX:Q}/emul/netbsd/usr/lib
+ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX:Q}/emul/netbsd/usr/lib
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"

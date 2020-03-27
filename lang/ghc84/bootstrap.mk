@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.5 2020/02/17 17:24:06 jperkin Exp $
+# $NetBSD: bootstrap.mk,v 1.6 2020/03/27 04:13:57 riastradh Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -111,7 +111,7 @@ pre-configure:
 	${RUN}cd ${WRKDIR}/build-extract/ghc-${BOOT_VERSION}-boot && \
 		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure \
 			--prefix=${TOOLS_DIR:Q} && \
-		${MAKE_PROGRAM} install
+		${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install
 
 
 # -----------------------------------------------------------------------------
