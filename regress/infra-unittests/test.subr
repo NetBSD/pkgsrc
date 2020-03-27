@@ -1,56 +1,118 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.8 2020/03/27 21:41:33 rillig Exp $
+# $NetBSD: test.subr,v 1.9 2020/03/27 22:56:29 rillig Exp $
 set -eu
 
-# This file defines utilities for testing Makefile fragments in a mocked
-# environment. It is used primarily to test the pkgsrc infrastructure.
+# This file defines utilities for testing Makefile fragments and shell
+# programs from the pkgsrc infrastructure. While testing one part of the
+# infrastructure, other parts can be mocked away.
 #
-# It defines the following shell variables:
+# A test case is defined by the following functions:
 #
-#	cleanup
-#		If yes (the default), clean up the temporary directory
-#		after the test has run successfully.
+#	test_case_begin
+#	test_case_set_up
+#	test_case_tear_down
+#	test_case_end
 #
-# It defines the following shell functions:
+# These functions form the structure for a test. To define a test, use the
+# following pattern:
 #
-#	mock_cmd
-#		Returns the path to a newly created shell program whose
-#		behavior (output and exit status) is specified by pairs
-#		of --when-args/--then-output or --when-args/--then-exit.
-#		Example:
+# 	if test_case_begin "description of the test"; then
+#		...
+#		test_end
+#	fi
 #
-#		hello=$(mock_cmd mock-hello \
-#			--when-args "" --then-output "Hello, world!" \
-#			--when-args "-t" --then-output "hello, world" \
-#			--when-args "-?" --then-exit 1
-#		)
+# The functions test_case_set_up and test_case_tear_down can be defined in the
+# test file to provide a test fixture that is common to all test cases. These
+# functions are called by test_case_begin and test_case_end, respectively.
 #
-#	create_file $filename <<EOF ... EOF
-#		Creates a file in the temporary directory. The filename
-#		is relative to the temporary directory.
+# During a test case, the following variables are defined:
 #
-#	create_file_lines $filename $line1 $line2 ...
-#		Creates a file in the temporary directory containing the
-#		given lines.
+#	tmpdir		a directory for creating intermediate files
+#	pkgsrcdir	the real pkgsrc directory
+#	mocked_pkgsrcdir
+#			the directory where the mock files are installed,
+#			which override the Makefile fragments from the real
+#			pkgsrc infrastructure
 #
-#	create_pkgsrc_file $filename <<EOF ... EOF
-#		Creates a file in the temporary pkgsrc directory. This
-#		file will be included instead of the one in the real
-#		pkgsrc infrastructure. The filename is relative to the
-#		pkgsrc directory, such as mk/defaults/mk.conf.
 #
-#		This is typically used for creating an empty file for
-#		mk/bsd.prefs.mk or similar files that are included by the
-#		file that is currently under test.
+# Setting up a test
 #
-#	test_file $filename $bmake_args...
-#		Runs bmake with the correct environment so that it picks
-#		up the mocked infrastructure files first and then the ones
-#		from the real pkgsrc installation. The filename is
-#		relative to the temporary directory.
+# mock_cmd
+#	Returns the path to a newly created shell program whose behavior
+#	(output and exit status) is specified by pairs of
+#	--when-args/--then-output or --when-args/--then-exit.
 #
-#	assert_that $actual --equals $expected
-#		Complains loudly if $actual is not equal to $expected.
+#	Example:
+#
+#	hello=$(mock_cmd mock-hello \
+#		--when-args "" --then-output "Hello, world!" \
+#		--when-args "-t" --then-output "hello, world" \
+#		--when-args "-?" --then-exit 1
+#	)
+#
+# create_file $filename <<EOF ... EOF
+#	Creates a file in the temporary directory. The filename is relative
+#	to the temporary directory.
+#
+# create_file_lines $filename $line1 $line2 ...
+#	Creates a file in the temporary directory containing the given lines.
+#
+# create_pkgsrc_file $filename <<EOF ... EOF
+#	Creates a file in the temporary pkgsrc directory. If it is a Makefile
+#	fragment, it will be included instead of the one in the real pkgsrc
+#	infrastructure.
+#
+#	This is typically used for creating an empty file for mk/bsd.prefs.mk
+#	or similar files that are included by the file that is currently under
+#	test.
+#
+#	Example:
+#
+#	create_pkgsrc_file "mk/pkg-build-options.mk" <<EOF
+#	# nothing
+#	EOF
+#
+#
+# Running the code to be tested
+#
+# run_bmake $filename $bmake_args...
+#	Runs bmake with the correct environment so that it picks up the mocked
+#	infrastructure files first and then the ones from the real pkgsrc
+#	installation. The filename is relative to the temporary directory.
+#
+#
+# Checking the result
+#
+# assert_that $actual --equals $expected
+#	Complains loudly if the string $actual is not equal to $expected.
+#
+# assert_that $tmpfile --file-contains-exactly $content
+#	Complains loudly if the file in $tmpdir does not contain the $content,
+#	plus a trailing newline.
+#
+# assert_that $tmpfile1 --file-equals $tmpfile2
+#	Complains loudly if the two files in $tmpdir differ.
+#
+# assert_that $tmpfile --file-is-empty
+#	Complains loudly if the file in $tmpdir is not empty.
+#
+# assert_that $tmpfile --file-is-lines $lines...
+#	Complains loudly if the file in $tmpdir does not consist of exactly
+#	the given lines.
+#
+# assert_succeed
+#	Counts one succeeded assertion, for the verbose statistics.
+#
+# assert_fail $format $args...
+#	Marks the current test as failed but continues to execute it.
+#
+#
+# Misc
+#
+# cleanup
+#	If this variable is yes (the default), clean up the temporary
+#	directory after the test has run successfully.
+#
 
 : "${cleanup:=yes}"
 : "${make:=bmake}"
@@ -60,15 +122,17 @@ mocked_pkgsrcdir="$tmpdir/pkgsrc"
 rm -rf "$tmpdir"
 mkdir -p "$mocked_pkgsrcdir"
 
-real_pkgsrcdir=""
-for rel in .. ../.. ../../..; do
-	[ -f "$rel/mk/bsd.pkg.mk" ] || continue
-	real_pkgsrcdir="$rel"
+pkgsrcdir=""
+for relative_pkgsrcdir in . .. ../.. ../../..; do
+	if [ -f "$relative_pkgsrcdir/mk/bsd.pkg.mk" ]; then
+		pkgsrcdir="$PWD/$relative_pkgsrcdir"
+		break
+	fi
 done
-[ "$real_pkgsrcdir" ] || {
+if [ -z "$pkgsrcdir" ]; then
 	printf 'error: must be run from somewhere inside the pkgsrc directory\n' 1>&2
 	exit 1
-}
+fi
 
 verbose_printf() {
 	$if_verbose printf "$@"
@@ -128,7 +192,9 @@ mock_cmd() {
 	shift 1
 
 	{
-	printf '#! /bin/sh\n\n'
+	printf '#! /bin/sh\n'
+	printf '\n'
+
 	while [ $# -ge 4 ]; do
 		case $1,$3 in
 		(--when-args,--then-output)
@@ -151,7 +217,7 @@ EOF
 		esac
 	done
 	cat <<EOF
-printf 'error: %s: no mock behavior defined for arguments %s\n' "\$0" "\$*" 1>&2
+printf 'error: %s: no mock behavior defined for arguments "%s"\n' "\$0" "\$*" 1>&2
 exit 1
 EOF
 	} > "$tmpdir/$cmdname"
@@ -177,11 +243,11 @@ create_pkgsrc_file() {
 	cat > "$mocked_pkgsrcdir/$1"
 }
 
-test_file() {
+run_bmake() {
 	cat <<EOF > "$tmpdir/test.subr.main.mk"
-PKGSRCDIR=	$real_pkgsrcdir
+PKGSRCDIR=	$relative_pkgsrcdir
 .PATH:		$mocked_pkgsrcdir
-.PATH:		$real_pkgsrcdir
+.PATH:		$pkgsrcdir
 .include "$1"
 EOF
 	shift
