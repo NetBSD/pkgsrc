@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2019/02/17 10:17:46 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/03/27 08:45:26 nia Exp $
 
 SHA1 (quassel-0.13.1.tar.bz2) = a2a734d4f6332912f341ea18337ea330669b4e18
 RMD160 (quassel-0.13.1.tar.bz2) = e129944a8863abc3bf03e78c53630b6639b94bab
 SHA512 (quassel-0.13.1.tar.bz2) = 4ed55e81b1638c8851ddae5d9c9d23a1c2cea92f307e19f426873c2600d8e183898d3ed7c290f2ea5d1b8c5e1be7f9ffcc3e8c3c0193d080fc879b10cc3a962c
 Size (quassel-0.13.1.tar.bz2) = 4289663 bytes
+SHA1 (patch-src_common_types.h) = bc1c32f97faf271402a7886cc4f1fd33cfce0984
