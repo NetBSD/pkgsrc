@@ -1,7 +1,37 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 00:35:26 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/03/27 20:52:19 joerg Exp $
 
 SHA1 (paris-traceroute-0.92-dev.tar.gz) = 83096a5bbc58329633407db040ece2af21954f6b
 RMD160 (paris-traceroute-0.92-dev.tar.gz) = 05fb22f0d8138950eb73ab69adf3c2d2cb50ff03
 SHA512 (paris-traceroute-0.92-dev.tar.gz) = ecae447bb3f811f5668d2beb24fb0146e9267189e14c10b09fe930daad552e97dbcde7208be6020c83b3560b41395a866a87d4076e6ce6c5d574490a9e0d9128
 Size (paris-traceroute-0.92-dev.tar.gz) = 1063191 bytes
-SHA1 (patch-src_Util.cc) = a46a3318bf8fd5325bf62f1040370f525824e034
+SHA1 (patch-src_ConcurrentTracert.cc) = 411c26a3599056908e92b54e5bb553f1bd1569af
+SHA1 (patch-src_ExhaustiveOldTracert.cc) = 3b726ea4894b6753d87631db48eeaf31c853f967
+SHA1 (patch-src_ExhaustiveTracert.cc) = 41171f5789d5700cd84e263ba508295b26c912b0
+SHA1 (patch-src_HopByHopTracert.cc) = 756aeb7db69aaa04165aad3b27ed5531331a3d51
+SHA1 (patch-src_ICMPDestUnreachable.cc) = ade361797bbf4b256d43a3462e29bae0326d7ed6
+SHA1 (patch-src_ICMPEcho.cc) = d74e1a011520249888a5cb1bc1de0bc65576016c
+SHA1 (patch-src_ICMPHeader.cc) = 8f859cb9938669a15ce16dede5efb90aa6b0eab6
+SHA1 (patch-src_ICMPProbe.cc) = 598eb55d84fb9f53091b14eb13ebacaec44f3bb2
+SHA1 (patch-src_ICMPReply.cc) = cb01a8d300784cedb555917ac766ed0285aee7ac
+SHA1 (patch-src_ICMPTimeExceeded.cc) = 21192c307fcf635808ebafcfc1c5184d4b9c6d22
+SHA1 (patch-src_IP4Header.cc) = 116771fd348c8065409a1e77e4cfe8f296a8511b
+SHA1 (patch-src_IP4Header__NetBSD.cc) = 9b369b437493eb746f9b39176ef73494513a6856
+SHA1 (patch-src_MPLSHeader.cc) = 13f4319f321d73175781793283486ea6d4b689df
+SHA1 (patch-src_MihScannerTracert.cc) = 065f91c51fec7a041c4588b7ad59ed31398299fc
+SHA1 (patch-src_NULLTracert.cc) = d75ac4b3c91d8d774b52bf1ffc43d4540ca742e7
+SHA1 (patch-src_Options.cc) = fd8c0fdc44c140d32ee211ddf2347b7cdc5e9ac4
+SHA1 (patch-src_PackByPackTracert.cc) = 058fa4f419f6c7e7f27d3d9b0e7531c4177a813b
+SHA1 (patch-src_Reply.cc) = d5194545728f4220d16886eb3940270b868c2133
+SHA1 (patch-src_ScoutTracert.cc) = 30e5dd549f592cdee26f8174a2800b6ae42c83be
+SHA1 (patch-src_Server.cc) = 32b1a406d449b958b788bbfd3a6e7721a11701b3
+SHA1 (patch-src_TCPHeader.cc) = 98f1951db359c80d6ab55fec919c6424c6a2b486
+SHA1 (patch-src_TCPProbe.cc) = d8e62afba4a570668b225d1018a662b669c08dbf
+SHA1 (patch-src_TCPReply.cc) = 3d115dadaf1fcf4ef27391ceba0324e0c82c4ff2
+SHA1 (patch-src_TracertImpl.cc) = 7e74f90175095b4903727ff7f14634a482e4f64e
+SHA1 (patch-src_UDPHeader.cc) = ee04ffec773f790d949575ee00d9b57febd52bb8
+SHA1 (patch-src_UDPProbe.cc) = a70e18583f5e4d7f77cc60bc5b7c880a8ff4aa9a
+SHA1 (patch-src_Util.cc) = f079a15ed07ff68705f4a09be3fafa8adbe70e86
+SHA1 (patch-src_Util__NetBSD.cc) = 481daa18bcf68042cb17e4910d146f4768dcf263
+SHA1 (patch-src_common.h) = 0f71af6b6138313cf43259daa7302cf1d6744439
+SHA1 (patch-src_paris-traceroute.cc) = 84b8b096628f9356b66360f5372ca77091787804
+SHA1 (patch-src_tupleroute.cc) = 3507e5c3902964f2afa6ce5d8103467a4d62f30e
