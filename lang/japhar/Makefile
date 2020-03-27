@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/03/08 16:42:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.34 2020/03/27 15:09:00 ryoon Exp $
 #
 
 DISTNAME=		japhar-0.08
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_BACKUP}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hungry.com/old-hungry/products/japhar/
 COMMENT=		Java Virtual Machine, currently JDK 1.1.5-level
+LICENSE=		gnu-lgpl-v2 AND gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
