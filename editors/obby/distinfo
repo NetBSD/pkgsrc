@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2016/02/10 08:09:37 mef Exp $
+$NetBSD: distinfo,v 1.5 2020/03/27 20:58:12 joerg Exp $
 
 SHA1 (obby-0.4.8.tar.gz) = 49de7813bb56b249d2e6f0b6b014ae3b850d8987
 RMD160 (obby-0.4.8.tar.gz) = 9b45340938cd0a85e379deab553be7396851366b
 SHA512 (obby-0.4.8.tar.gz) = 39cd01e74f8df805bd6f077afab023f70f6da16d421dd0d12abc82972a9ec3e2563cc4ef6bf99c74b59f1c96e18eb3d5065f8b07add8ecb56c26601715f184d0
 Size (obby-0.4.8.tar.gz) = 530525 bytes
 SHA1 (patch-aa) = 044bf10cfa88475b8d2d25d349bf1c01cd853b05
+SHA1 (patch-src_colour.cpp) = 6def696ab0de7ccc8b034972a9738283e9b60fa6
