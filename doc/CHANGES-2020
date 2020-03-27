@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1954 2020/03/26 14:20:47 fox Exp $
+$NetBSD: CHANGES-2020,v 1.1955 2020/03/27 15:28:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2633,3 +2633,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/zig to 0.5.0 [nia 2020-03-25]
 	Updated pkgtools/pkglint to 20.1.1 [rillig 2020-03-26]
 	Updated sysutils/py-Glances to 3.1.4.1 [fox 2020-03-26]
+	Updated lang/py-hy to 0.18.0 [adam 2020-03-27]
