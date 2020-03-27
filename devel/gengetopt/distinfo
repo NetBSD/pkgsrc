@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:27 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/03/27 20:53:05 joerg Exp $
 
 SHA1 (gengetopt-2.22.6.tar.gz) = c93bdec17f247aa32b3cd6530a6f68aa430d67f5
 RMD160 (gengetopt-2.22.6.tar.gz) = e4e147cb4e75b4a0d0e959ae737b3082f534c3da
 SHA512 (gengetopt-2.22.6.tar.gz) = dad5baf1b6c4c76ae7f532dd63c6aecdc30f31d68a259b6a26a10197f1fe42dc9147a52ac12a0c3fc4b7cd61d288a343a9223f967a5a9a15a0614330b41f68dc
 Size (gengetopt-2.22.6.tar.gz) = 1056293 bytes
+SHA1 (patch-tests_valgrind__tests.sh.in) = 9b2432c80882ae94012b48ce8f57f74e6050e730
