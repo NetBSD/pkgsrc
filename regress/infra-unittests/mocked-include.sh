@@ -16,7 +16,7 @@ all:
 	@echo 'the mocked definition wins'
 EOF
 
-	out=$(test_file "including.mk")
+	out=$(run_bmake "including.mk")
 
 	assert_that "$out" --equals "the mocked definition wins"
 
