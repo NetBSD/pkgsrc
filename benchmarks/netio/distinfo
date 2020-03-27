@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 00:25:51 agc Exp $
+$NetBSD: distinfo,v 1.12 2020/03/27 16:02:04 jdolecek Exp $
 
-SHA1 (netio126.zip) = ef63e9b0564445a1831b53be98a5472dbceaa922
-RMD160 (netio126.zip) = bff92f25df1df87c7075432b1da3e0f7defe1e30
-SHA512 (netio126.zip) = ff3d704621d6dcee11c88a79cc8037b3d3c8afb7fb508256c4045e119e65b754749355d12262d8f1039779cf45cb2e9f116a186f0c9ec822b66251d984e7025a
-Size (netio126.zip) = 140402 bytes
-SHA1 (patch-aa) = 194bb630fd09f2cc5c8a6842212eb01adb676584
+SHA1 (netio133.zip) = ffc562dfe45127e58fcfb7dcf325317e29809baf
+RMD160 (netio133.zip) = 544a3bcc53db6363c7d2601d63430e102237f75e
+SHA512 (netio133.zip) = 79a4d8ad5a5d9750a19bf7f8f4cc762e6d1a866a63138bfc1cf8614057eb8ade147817e489f93210990ce9d82be03a5053821663212fbee71c4cd46c2f9c9232
+Size (netio133.zip) = 235931 bytes
+SHA1 (patch-Makefile) = 79bff1eb7b526a0f41fbb89e646c66a16b78c23e
+SHA1 (patch-netio.c) = bdd658e03101fa820e614c0a1113a8688e485a7f
