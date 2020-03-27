@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.32 2020/03/12 18:22:54 wiz Exp $
+$NetBSD: distinfo,v 1.33 2020/03/27 06:19:47 rillig Exp $
 
 SHA1 (w3m-0.5.3+git20190105.tar.gz) = 47d315af8e4a34f0d726687295e5d448a809acdc
 RMD160 (w3m-0.5.3+git20190105.tar.gz) = d71cd692d9ce166c8a1fd3e3c7203f0a37cd5158
 SHA512 (w3m-0.5.3+git20190105.tar.gz) = b63b15d0bea82f50bcaa9fc0826c2d3c265a3ad73069b4a020812f28b552cdf08618ab877280c9f3a43bd64f51b80b7a526098e6395ea121c0981a3fcd2562b4
 Size (w3m-0.5.3+git20190105.tar.gz) = 2183651 bytes
+SHA1 (patch-main.c) = ac422d68d399eec6339d8eb24a4f85991ef58208
