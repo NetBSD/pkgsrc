@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/01/18 23:35:44 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2020/03/27 08:54:47 nia Exp $
 
 DISTNAME=	libproxy-0.4.15
 CATEGORIES=	www gnome
@@ -11,7 +11,8 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c99 c++03
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config
+
 CMAKE_ARGS+=	-DWITH_PERL:BOOL=OFF
 CMAKE_ARGS+=	-DWITH_PYTHON2:BOOL=OFF
 CMAKE_ARGS+=	-DWITH_PYTHON3:BOOL=OFF
