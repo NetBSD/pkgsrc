@@ -16,9 +16,6 @@ test_case_set_up() {
 	export LC_ALL
 }
 
-# XXX: This definition should be available everywhere.
-pkgsrcdir="`cd "$real_pkgsrcdir" && exec pwd`"
-
 if test_case_begin "exclude directory by basename"; then
 
 	# Demonstrates that excluding a directory name also excludes that
