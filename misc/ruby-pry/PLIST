@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/12/17 15:02:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/03/27 06:07:57 taca Exp $
 bin/pry${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -7,6 +7,8 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/bin/pry
 ${GEM_LIBDIR}/lib/pry.rb
 ${GEM_LIBDIR}/lib/pry/basic_object.rb
+${GEM_LIBDIR}/lib/pry/block_command.rb
+${GEM_LIBDIR}/lib/pry/class_command.rb
 ${GEM_LIBDIR}/lib/pry/cli.rb
 ${GEM_LIBDIR}/lib/pry/code.rb
 ${GEM_LIBDIR}/lib/pry/code/code_file.rb
@@ -16,7 +18,7 @@ ${GEM_LIBDIR}/lib/pry/code_object.rb
 ${GEM_LIBDIR}/lib/pry/color_printer.rb
 ${GEM_LIBDIR}/lib/pry/command.rb
 ${GEM_LIBDIR}/lib/pry/command_set.rb
-${GEM_LIBDIR}/lib/pry/commands.rb
+${GEM_LIBDIR}/lib/pry/command_state.rb
 ${GEM_LIBDIR}/lib/pry/commands/amend_line.rb
 ${GEM_LIBDIR}/lib/pry/commands/bang.rb
 ${GEM_LIBDIR}/lib/pry/commands/bang_pry.rb
@@ -31,7 +33,6 @@ ${GEM_LIBDIR}/lib/pry/commands/change_prompt.rb
 ${GEM_LIBDIR}/lib/pry/commands/clear_screen.rb
 ${GEM_LIBDIR}/lib/pry/commands/code_collector.rb
 ${GEM_LIBDIR}/lib/pry/commands/disable_pry.rb
-${GEM_LIBDIR}/lib/pry/commands/disabled_commands.rb
 ${GEM_LIBDIR}/lib/pry/commands/easter_eggs.rb
 ${GEM_LIBDIR}/lib/pry/commands/edit.rb
 ${GEM_LIBDIR}/lib/pry/commands/edit/exception_patcher.rb
@@ -41,18 +42,9 @@ ${GEM_LIBDIR}/lib/pry/commands/exit_all.rb
 ${GEM_LIBDIR}/lib/pry/commands/exit_program.rb
 ${GEM_LIBDIR}/lib/pry/commands/find_method.rb
 ${GEM_LIBDIR}/lib/pry/commands/fix_indent.rb
-${GEM_LIBDIR}/lib/pry/commands/gem_cd.rb
-${GEM_LIBDIR}/lib/pry/commands/gem_install.rb
-${GEM_LIBDIR}/lib/pry/commands/gem_list.rb
-${GEM_LIBDIR}/lib/pry/commands/gem_open.rb
-${GEM_LIBDIR}/lib/pry/commands/gem_readme.rb
-${GEM_LIBDIR}/lib/pry/commands/gem_search.rb
-${GEM_LIBDIR}/lib/pry/commands/gem_stats.rb
-${GEM_LIBDIR}/lib/pry/commands/gist.rb
 ${GEM_LIBDIR}/lib/pry/commands/help.rb
 ${GEM_LIBDIR}/lib/pry/commands/hist.rb
 ${GEM_LIBDIR}/lib/pry/commands/import_set.rb
-${GEM_LIBDIR}/lib/pry/commands/install_command.rb
 ${GEM_LIBDIR}/lib/pry/commands/jump_to.rb
 ${GEM_LIBDIR}/lib/pry/commands/list_inspectors.rb
 ${GEM_LIBDIR}/lib/pry/commands/ls.rb
@@ -92,12 +84,15 @@ ${GEM_LIBDIR}/lib/pry/commands/watch_expression/expression.rb
 ${GEM_LIBDIR}/lib/pry/commands/whereami.rb
 ${GEM_LIBDIR}/lib/pry/commands/wtf.rb
 ${GEM_LIBDIR}/lib/pry/config.rb
-${GEM_LIBDIR}/lib/pry/config/behavior.rb
-${GEM_LIBDIR}/lib/pry/config/convenience.rb
-${GEM_LIBDIR}/lib/pry/config/default.rb
-${GEM_LIBDIR}/lib/pry/config/memoization.rb
+${GEM_LIBDIR}/lib/pry/config/attributable.rb
+${GEM_LIBDIR}/lib/pry/config/lazy_value.rb
+${GEM_LIBDIR}/lib/pry/config/memoized_value.rb
+${GEM_LIBDIR}/lib/pry/config/value.rb
+${GEM_LIBDIR}/lib/pry/control_d_handler.rb
 ${GEM_LIBDIR}/lib/pry/core_extensions.rb
 ${GEM_LIBDIR}/lib/pry/editor.rb
+${GEM_LIBDIR}/lib/pry/env.rb
+${GEM_LIBDIR}/lib/pry/exception_handler.rb
 ${GEM_LIBDIR}/lib/pry/exceptions.rb
 ${GEM_LIBDIR}/lib/pry/forwardable.rb
 ${GEM_LIBDIR}/lib/pry/helpers.rb
@@ -122,7 +117,6 @@ ${GEM_LIBDIR}/lib/pry/method/weird_method_locator.rb
 ${GEM_LIBDIR}/lib/pry/object_path.rb
 ${GEM_LIBDIR}/lib/pry/output.rb
 ${GEM_LIBDIR}/lib/pry/pager.rb
-${GEM_LIBDIR}/lib/pry/platform.rb
 ${GEM_LIBDIR}/lib/pry/plugins.rb
 ${GEM_LIBDIR}/lib/pry/prompt.rb
 ${GEM_LIBDIR}/lib/pry/pry_class.rb
@@ -130,12 +124,12 @@ ${GEM_LIBDIR}/lib/pry/pry_instance.rb
 ${GEM_LIBDIR}/lib/pry/repl.rb
 ${GEM_LIBDIR}/lib/pry/repl_file_loader.rb
 ${GEM_LIBDIR}/lib/pry/ring.rb
-${GEM_LIBDIR}/lib/pry/rubygem.rb
 ${GEM_LIBDIR}/lib/pry/slop.rb
 ${GEM_LIBDIR}/lib/pry/slop/LICENSE
 ${GEM_LIBDIR}/lib/pry/slop/commands.rb
 ${GEM_LIBDIR}/lib/pry/slop/option.rb
-${GEM_LIBDIR}/lib/pry/terminal.rb
+${GEM_LIBDIR}/lib/pry/syntax_highlighter.rb
+${GEM_LIBDIR}/lib/pry/system_command_handler.rb
 ${GEM_LIBDIR}/lib/pry/testable.rb
 ${GEM_LIBDIR}/lib/pry/testable/evalable.rb
 ${GEM_LIBDIR}/lib/pry/testable/mockable.rb
@@ -143,6 +137,7 @@ ${GEM_LIBDIR}/lib/pry/testable/pry_tester.rb
 ${GEM_LIBDIR}/lib/pry/testable/utility.rb
 ${GEM_LIBDIR}/lib/pry/testable/variables.rb
 ${GEM_LIBDIR}/lib/pry/version.rb
+${GEM_LIBDIR}/lib/pry/warning.rb
 ${GEM_LIBDIR}/lib/pry/wrapped_module.rb
 ${GEM_LIBDIR}/lib/pry/wrapped_module/candidate.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
