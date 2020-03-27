@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/12/14 17:29:32 triaxx Exp $
+# $NetBSD: options.mk,v 1.2 2020/03/27 08:07:27 nia Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.warzone2100
@@ -13,7 +13,6 @@ PKG_SUGGESTED_OPTIONS=		sdl2
 ### Use SDL backend.
 ###
 .if !empty(PKG_OPTIONS:Msdl2)
-CONFIGURE_ARGS+=	--with-backend=sdl
 .include "../../devel/SDL2/buildlink3.mk"
 .endif
 
@@ -21,6 +20,5 @@ CONFIGURE_ARGS+=	--with-backend=sdl
 ### Use QT5 backend.
 ###
 .if !empty(PKG_OPTIONS:Mqt5)
-CONFIGURE_ARGS+=	--with-backend=qt
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .endif
