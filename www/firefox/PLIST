@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.156 2020/03/14 04:49:16 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.157 2020/03/27 00:24:20 gutteridge Exp $
 bin/firefox
 lib/firefox/actors/AudioPlaybackChild.jsm
 lib/firefox/actors/AudioPlaybackParent.jsm
@@ -2791,6 +2791,7 @@ lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server.js
 ${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server-dev.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils.js
+${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils-dev.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types.js
 ${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types-dev.js
