@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2020/03/08 16:51:39 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2020/03/27 20:51:43 joerg Exp $
 
 DISTNAME=	wwwoffle-2.9j
 PKGREVISION=	6
@@ -17,6 +17,8 @@ BUILD_DEFS+=	VARBASE
 
 CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-spooldir=${VARBASE}/wwwoffle
+
+CHECK_PORTABILITY_SKIP+=	configure.in
 
 PKG_SYSCONFSUBDIR=	wwwoffle
 CONF_FILES+=		${PREFIX}/share/examples/wwwoffle/wwwoffle.conf ${PKG_SYSCONFDIR}/wwwoffle.conf
