@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2020/03/17 19:04:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/03/27 07:45:17 adam Exp $
 ${PLIST.tools}bin/calidns
 ${PLIST.tools}bin/dnsbulktest
 ${PLIST.tools}bin/dnsgram
-bin/dnspcap2calidns
+${PLIST.tools}bin/dnspcap2calidns
 ${PLIST.tools}bin/dnsreplay
 ${PLIST.tools}bin/dnsscan
 ${PLIST.tools}bin/dnsscope
@@ -29,7 +29,7 @@ ${PLIST.remote}lib/pdns/libremotebackend.la
 ${PLIST.tools}man/man1/calidns.1
 man/man1/dnsbulktest.1
 ${PLIST.tools}man/man1/dnsgram.1
-man/man1/dnspcap2calidns.1
+${PLIST.tools}man/man1/dnspcap2calidns.1
 ${PLIST.tools}man/man1/dnsreplay.1
 ${PLIST.tools}man/man1/dnsscan.1
 ${PLIST.tools}man/man1/dnsscope.1
