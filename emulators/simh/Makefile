@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/03/08 16:49:29 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2020/03/27 15:25:36 ryoon Exp $
 
 DISTNAME=	simh-4.0.0
 PKGNAME=	simh-4.0.0.20180919
@@ -11,6 +11,7 @@ GITHUB_TAG=	0fe4bf3281a4d1f9fd10bba07cf0f7e40da92fc3
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
 COMMENT=	Bob Supniks historical computer simulator
+LICENSE=	mit
 
 DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
