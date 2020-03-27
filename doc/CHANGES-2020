@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1955 2020/03/27 15:28:35 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1956 2020/03/27 16:04:24 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2634,3 +2634,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 20.1.1 [rillig 2020-03-26]
 	Updated sysutils/py-Glances to 3.1.4.1 [fox 2020-03-26]
 	Updated lang/py-hy to 0.18.0 [adam 2020-03-27]
+	Updated benchmarks/netio to 1.33 [jdolecek 2020-03-27]
