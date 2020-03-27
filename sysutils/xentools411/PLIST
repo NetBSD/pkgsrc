@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/24 13:40:11 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/27 03:42:13 riastradh Exp $
 ${PYSITELIB}/fsimage.so
 ${PYSITELIB}/grub/ExtLinuxConf.py
 ${PYSITELIB}/grub/ExtLinuxConf.pyc
@@ -155,7 +155,7 @@ include/xentoolcore.h
 include/xentoollog.h
 include/xs.h
 include/xs_lib.h
-lib/debug/usr/pkg/libexec/xen/boot/xen-shim-syms
+lib/debug${LOCALBASE}/libexec/xen/boot/xen-shim-syms
 lib/fs/ext2fs/fsimage.so
 lib/fs/fat/fsimage.so
 lib/fs/iso9660/fsimage.so
