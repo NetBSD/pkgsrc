@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2020/01/27 19:35:54 triaxx Exp $
+$NetBSD: distinfo,v 1.11 2020/03/27 08:31:02 nia Exp $
 
 SHA1 (warzone2100-3.3.0_src.tar.xz) = 781ee178a9e2cf5204a4cb8fc29a5226f64d8229
 RMD160 (warzone2100-3.3.0_src.tar.xz) = 28fa1a10af8df3f029ea8026cb76d59c883ffa1b
@@ -8,3 +8,4 @@ SHA1 (patch-build__tools_autorevision) = eabdeddd5e920467f7f05a0dbf1b4689da44477
 SHA1 (patch-lib_exceptionhandler_exceptionhandler.cpp) = 4271efc90e2972ee196d6ced5ec254fe708c42f0
 SHA1 (patch-lib_framework_string__ext.h) = 93a0e2e4acf298be49d5853f9084df187240309b
 SHA1 (patch-lib_netplay_netplay.cpp) = 9152f24677a900e68e034c45154ad44e05a79bc1
+SHA1 (patch-lib_sdl_CMakeLists.txt) = 2034d69568dcb90784b9a26e920d632182dee794
