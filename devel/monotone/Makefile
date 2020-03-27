@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2019/11/03 10:39:20 rillig Exp $
+# $NetBSD: Makefile,v 1.112 2020/03/27 16:42:26 rillig Exp $
 
 DISTNAME=	monotone-1.1
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.monotone.ca/downloads/1.1/
 EXTRACT_SUFX=	.tar.bz2
@@ -31,7 +31,7 @@ CHECK_INTERPRETER_SKIP+=	share/monotone/contrib/*
 CHECK_PORTABILITY_SKIP+=	debian/*
 
 REPLACE_PERL=			extra/bin/mtn-cleanup
-REPLACE_SH=			mtnopt
+REPLACE_SH=			src/util/mtnopt.in
 # The following are optional scripts for hooks.  We do not replace their
 # interpreter because we want to avoid a dependency on them.  (Ideally they
 # should be in separate packages with appropriate dependencies.)
