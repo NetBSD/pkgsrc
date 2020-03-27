@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.31 2015/12/25 20:07:42 joerg Exp $
+$NetBSD: distinfo,v 1.32 2020/03/27 02:08:46 joerg Exp $
 
 SHA1 (gst-plugins-bad-0.10.23.tar.bz2) = 46208d7bcebaac31310e2a884cc840c51034781a
 RMD160 (gst-plugins-bad-0.10.23.tar.bz2) = 3a837843b8aa941ff7c81b90d37930ccb1ddb0be
 SHA512 (gst-plugins-bad-0.10.23.tar.bz2) = da73c4dcfcfd5afe8414920d83b6b2d4634daacfca70653e850e9a7ec519275b9b1b76f46aa8b87c0c5dcd8696d5b05b7c54a0f66698725e7f726b81eb367ddb
 Size (gst-plugins-bad-0.10.23.tar.bz2) = 4001543 bytes
 SHA1 (patch-ac) = f83a2eb523f0af4f3b63df425123394354b92c64
+SHA1 (patch-ext_apexsink_gstapexraop.c) = 51ab76fce6c63743954c8c9b27d3dbbc060b0578
 SHA1 (patch-ext_spc_tag_c) = 6384b4ae56b4d1dca86ccc9106f147086784500f
 SHA1 (patch-ext_spc_tag_h) = 23186e9a06d08d3a3a482c924b7b3e3b7c55da7e
 SHA1 (patch-ext_vp8_gstvp8enc.c) = c4a1877d212a3a186e4fb5fe388c2185beeab3c5
