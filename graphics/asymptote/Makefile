@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/01/26 05:26:25 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/03/27 03:41:20 riastradh Exp $
 
 DISTNAME=	asymptote-2.41
 PKGREVISION=	4
@@ -12,16 +12,16 @@ HOMEPAGE=	https://asymptote.sourceforge.io/
 COMMENT=	Powerful descriptive vector graphics language for technical drawings
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
-BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
-BUILD_DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
-BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-BUILD_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
-BUILD_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
-BUILD_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
-BUILD_DEPENDS+=	tex-parskip-[0-9]*:../../print/tex-parskip
-BUILD_DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
-BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
-BUILD_DEPENDS+=	ghostscript-agpl>=9.16:../../print/ghostscript-agpl
+TOOL_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
+TOOL_DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
+TOOL_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TOOL_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TOOL_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
+TOOL_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
+TOOL_DEPENDS+=	tex-parskip-[0-9]*:../../print/tex-parskip
+TOOL_DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
+TOOL_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+TOOL_DEPENDS+=	ghostscript-agpl>=9.16:../../print/ghostscript-agpl
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
 
 UNLIMIT_RESOURCES=	datasize
@@ -45,8 +45,8 @@ SUBST_MESSAGE.python=	Fixing path to python interpreter.
 SUBST_SED.python+=	-e "s|/usr/bin/env python|${PYTHONBIN:Q}|g"
 
 # DragonFly has stripped makeinfo in the base - without texi2dvi.
-OPSYSVARS+=			BUILD_DEPENDS
-BUILD_DEPENDS.DragonFly+=	gtexinfo-[0-9]*:../../devel/gtexinfo
+OPSYSVARS+=			TOOL_DEPENDS
+TOOL_DEPENDS.DragonFly+=	gtexinfo-[0-9]*:../../devel/gtexinfo
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xasy.1x \
