@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2013/08/31 14:46:48 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2020/03/27 20:53:32 joerg Exp $
 
 DragonFly support.
 
@@ -22,3 +22,34 @@ DragonFly support.
    host = gethostbyname_r(addr, &hostent, soap->buf, SOAP_BUFLEN, &soap->errnum);
  #elif defined(VXWORKS)
    /* If the DNS resolver library resolvLib has been configured in the vxWorks
+@@ -3865,10 +3865,10 @@ again:
+               int j;
+               if (!meth)
+                 break;
+-              data = ext->value->data;
++              data = X509_EXTENSION_get_data(ext)->data;
+ #if (OPENSSL_VERSION_NUMBER > 0x00907000L)
+               if (meth->it) 
+-                ext_data = ASN1_item_d2i(NULL, &data, ext->value->length, ASN1_ITEM_ptr(meth->it));
++                ext_data = ASN1_item_d2i(NULL, &data, X509_EXTENSION_get_data(ext)->length, ASN1_ITEM_ptr(meth->it));
+               else
+               { /* OpenSSL not perfectly portable at this point (?):
+                    Some compilers appear to prefer
+@@ -3876,7 +3876,7 @@ again:
+                    and others prefer
+                      meth->d2i(NULL, &data, ext->value->length);
+                 */
+-                ext_data = meth->d2i(NULL, &data, ext->value->length);
++                ext_data = meth->d2i(NULL, &data, X509_EXTENSION_get_data(ext)->length);
+               }
+ #else
+               ext_data = meth->d2i(NULL, &data, ext->value->length);
+@@ -3916,7 +3916,7 @@ again:
+               break;
+             name = X509_NAME_ENTRY_get_data(X509_NAME_get_entry(subj, i));
+             if (name)
+-            { if (!soap_tag_cmp(host, (const char*)M_ASN1_STRING_data(name)))
++            { if (!soap_tag_cmp(host, (const char*)ASN1_STRING_data(name)))
+                 ok = 1;
+               else
+               { unsigned char *tmp = NULL;
