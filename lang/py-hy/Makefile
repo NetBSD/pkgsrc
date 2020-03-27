@@ -1,27 +1,30 @@
-# $NetBSD: Makefile,v 1.8 2018/02/23 07:03:09 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/27 15:27:41 adam Exp $
 
-DISTNAME=	hy-0.14.0
+DISTNAME=	hy-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hylang.org/
+HOMEPAGE=	https://docs.hylang.org/
 COMMENT=	Lisp and Python love each other
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-astor>=0.6:../../devel/py-astor
-DEPENDS+=	${PYPKGPREFIX}-clint>=0.4:../../devel/py-clint
-DEPENDS+=	${PYPKGPREFIX}-rply>=0.7.5:../../devel/py-rply
+DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
+DEPENDS+=	${PYPKGPREFIX}-funcparserlib>=0.3.6:../../devel/py-funcparserlib
+DEPENDS+=	${PYPKGPREFIX}-rply>=0.7.7:../../devel/py-rply
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 		${RM} hy[23] hy2py[23] hyc[23] && \
-		${MV} hy hy${PYVERSSUFFIX} && \
-		${MV} hy2py hy2py${PYVERSSUFFIX} && \
-		${MV} hyc hyc${PYVERSSUFFIX} || ${TRUE}
+		${MV} hy hy-${PYVERSSUFFIX} && \
+		${MV} hy2py hy2py-${PYVERSSUFFIX} && \
+		${MV} hyc hyc-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
