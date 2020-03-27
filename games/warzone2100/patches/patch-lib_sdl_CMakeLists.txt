@@ -1,0 +1,17 @@
+$NetBSD: patch-lib_sdl_CMakeLists.txt,v 1.1 2020/03/27 08:31:02 nia Exp $
+
+Don't statically link SDL2.
+
+--- lib/sdl/CMakeLists.txt.orig	2019-08-31 18:17:22.000000000 +0000
++++ lib/sdl/CMakeLists.txt
+@@ -19,9 +19,7 @@ set(_sdl2_main_library)
+ # - and is required to properly link with a static SDL2 library (at least on Windows and macOS)
+ find_package(SDL2 ${SDL2_MIN_VERSION} CONFIG QUIET)
+ if(SDL2_FOUND)
+-	if (TARGET SDL2::SDL2-static)
+-		set(_sdl2_library SDL2::SDL2-static)
+-	elseif(TARGET SDL2::SDL2)
++	if(TARGET SDL2::SDL2)
+ 		set(_sdl2_library SDL2::SDL2)
+ 	else()
+ 		# Fall-back to FindSDL2 module (below)
