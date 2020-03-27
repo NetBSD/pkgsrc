@@ -1,0 +1,24 @@
+$NetBSD: patch-src_plugins_Makefile,v 1.1 2020/03/27 20:56:25 joerg Exp $
+
+--- src/plugins/Makefile.orig	2020-03-27 18:10:48.425427652 +0000
++++ src/plugins/Makefile
+@@ -55,9 +55,7 @@ json: LIBNAME = $(json_LIBNAME)
+ json: $(json_OBJS)
+ 
+ $(PLUGINS):
+-ifeq ($(PLATFORM_OS), Linux)
+-	$(LINK) -shared -Wl,-soname,$(LIBNAME).so.1 $(LDFLAGS) -o ${plugins_BUILDDIR}/$(LIBNAME).so $^
+-else ifeq ($(PLATFORM_OS), Darwin)
++ifeq ($(PLATFORM_OS), Darwin)
+ 	$(LINK) -headerpad_max_install_names -dynamiclib \
+ 		-undefined dynamic_lookup -fno-common \
+ 		-flat_namespace -install_name $(LIBNAME).$(VERSION).dylib \
+@@ -65,6 +63,8 @@ else ifeq ($(PLATFORM_OS), Darwin)
+ 		$(LDFLAGS) -o ${plugins_BUILDDIR}/$(LIBNAME).dylib $^
+ else ifeq ($(PLATFORM_OS), CYGWIN)
+ 	$(LINK) -shared $(LDFLAGS) -o ${plugins_BUILDDIR}/$(LIBNAME).dll $^
++else
++	$(LINK) -shared -Wl,-soname,$(LIBNAME).so.1 $(LDFLAGS) -o ${plugins_BUILDDIR}/$(LIBNAME).so $^
+ endif
+ 
+ $(plugins_BUILDDIR)/%.o: %.c

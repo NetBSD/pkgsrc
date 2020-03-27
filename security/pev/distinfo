@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2019/10/22 16:37:05 khorben Exp $
+$NetBSD: distinfo,v 1.7 2020/03/27 20:56:25 joerg Exp $
 
 SHA1 (pev-0.80.tar.gz) = 18dcb65269344b5047504cca8598477b33532bab
 RMD160 (pev-0.80.tar.gz) = 01ed4fa37c5349397dbd8aa3b592b9657e63acf8
@@ -8,3 +8,4 @@ SHA1 (patch-src_Makefile) = f51a9d6afa64de8ba761a9b889911403b0107aad
 SHA1 (patch-src_pehash.c) = c31083fca0d98dc607eb4f8b338bd93dd714f594
 SHA1 (patch-src_pesec.c) = fa302aa9bf2f07558f6cef0c41b0cd9063df7706
 SHA1 (patch-src_plugins.c) = c85c5c3b918850c7383f30d2efdae38985cdd143
+SHA1 (patch-src_plugins_Makefile) = ef5357385db2ac15c4f853b296dfee3703fd62eb
