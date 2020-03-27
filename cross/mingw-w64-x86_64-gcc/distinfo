@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.4 2019/09/18 15:29:21 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2020/03/27 20:55:39 joerg Exp $
 
 SHA1 (gcc-9.2.0.tar.xz) = 306d27c3465fa36862c206738d06d65fff5c3645
 RMD160 (gcc-9.2.0.tar.xz) = a51d7f812f45980c517c4505e04a217cf319a992
 SHA512 (gcc-9.2.0.tar.xz) = a12dff52af876aee0fd89a8d09cdc455f35ec46845e154023202392adc164848faf8ee881b59b681b696e27c69fd143a214014db4214db62f9891a1c8365c040
 Size (gcc-9.2.0.tar.xz) = 70607648 bytes
 SHA1 (patch-contrib_download__prerequisites) = 50f8aaf7403ce9f63cc119ff038d5f3e952bb8b6
+SHA1 (patch-libcc1_connection.cc) = 3b21290f4228dd29430e61b207aec0b153ae8120
 SHA1 (patch-libgo_mksysinfo.sh) = 4e3024d53457836adbdbbfd3ee140badc5a8800c
