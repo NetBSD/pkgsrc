@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/09/06 10:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/03/27 15:12:27 ryoon Exp $
 #
 
 DISTNAME=		xcopilot-0.6.6
@@ -9,6 +9,7 @@ CATEGORIES=		emulators
 MAINTAINER=		nathanw@NetBSD.org
 #HOMEPAGE=		http://xcopilot.cuspy.com/
 COMMENT=		PalmPilot emulator for X
+LICENSE=		gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
