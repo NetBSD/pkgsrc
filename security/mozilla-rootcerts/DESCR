@@ -3,3 +3,8 @@ CA certificates distributed by the Mozilla Project into the current
 working directory and to rehash the existing certificates.  The directory
 can be used by most SSL-aware programs that expect a "CA certificate
 path".
+
+NB: This package provides certificates, but does not configure them as
+trust anchors in any particular SSL/TLS implementation.  See also
+Mozilla-rootcerts-openssl for a package that configures these
+certificates as trust anchors in OpenSSL.
