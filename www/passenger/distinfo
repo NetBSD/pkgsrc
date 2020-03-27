@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2019/12/25 00:15:42 joerg Exp $
+$NetBSD: distinfo,v 1.12 2020/03/27 20:51:23 joerg Exp $
 
 SHA1 (passenger-5.3.7.tar.gz) = 8d665aa9c662bf0e75585ad038d5474398120a8c
 RMD160 (passenger-5.3.7.tar.gz) = 0ec1392becd55903c88ec2a52baa41c130b8fb6b
@@ -6,9 +6,12 @@ SHA512 (passenger-5.3.7.tar.gz) = bbef4881e0e0c698b29b10ff8a7afbc001c31d14fb80ff
 Size (passenger-5.3.7.tar.gz) = 7195477 bytes
 SHA1 (patch-build_common__library.rb) = fc019cb2774245400e74741d34b43b87b4b8b0c8
 SHA1 (patch-build_packaging.rb) = b50c291c8e3989bbd8d128dab98c06f5e6a30e51
+SHA1 (patch-src_agent_Core_ApplicationPool_Group_ProcessListManagement.cpp) = 8ed38113188ea92a856d3501d4e69af526bb0b6f
+SHA1 (patch-src_agent_Core_ApplicationPool_Pool_GarbageCollection.cpp) = c6d18ea068860e3f6b9529f9935da36cb26f933b
 SHA1 (patch-src_agent_Core_SpawningKit_Exceptions.h) = 2a11497e944f680893662a8cd4bef866dd4e71f8
 SHA1 (patch-src_cxx__supportlib_LoggingKit_Context.h) = ff8dd506a6f5cd110c8e4317ecceab480a8f90c4
 SHA1 (patch-src_cxx__supportlib_SystemTools_ProcessMetricsCollector.h) = 51e91937618fe89c56e9f1cdbce03a76bd59d635
+SHA1 (patch-src_cxx__supportlib_oxt_system__calls.cpp) = cf22b21ab012f5bbe2ab76364a9483a91ae7ec0e
 SHA1 (patch-src_cxx__supportlib_vendor-modified_boost_asio_detail_impl_kqueue__reactor.ipp) = 87bc0fc0aab123274b760d60cf2b49d3c1ecddd9
 SHA1 (patch-src_ruby__supportlib_phusion__passenger.rb) = b5bf22b8ef94f9c64e0f02ed97e4c104eddf7cb6
 SHA1 (patch-src_ruby__supportlib_phusion__passenger_packaging.rb) = 74134ef6c360bc65ffb4f74e7ebcc36bf7b6e9f7
