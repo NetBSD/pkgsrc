@@ -1,7 +1,18 @@
-This is a hack for managing the certificate files installed into
-the OpenSSL certs directory by the mozilla-rootcerts package.
+This package configures the Mozilla rootcerts bundle CAs as trust
+anchors in OpenSSL, so that programs using OpenSSL will be able to use
+them to validate SSL certificates.
 
-For native OpenSSL it operates directly in /etc/ssl/certs (because it
-has to) and not under the pkgsrc prefix, and even for pkgsrc OpenSSL
-it still scribbles in $PREFIX/etc/ssl/certs where packages normally
-shouldn't. Be advised.
+For pkgsrc-provided OpenSSL, this package operates modifies
+${PREFIX}/etc/ssl/certs as installed by another package.  This is
+somewhat irregular as packages should not modify content under etc.
+
+For native OpenSSL, it modifies the base system OpenSSL certificate
+directory, e.g. /etc/openssl/certs or /etc/ssl/certs.  This is
+necessary to configure trust anchors for native OpenSSL, so that
+progams in pkgsrc can use these CA certs in validation.  Modification
+of /etc is very irregular as pkgsrc should not write anything outside
+of ${PREFIX}.
+
+See also the mozilla-rootcerts package (which this one depends on) for
+placing the Mozilla CA list in the filesystem but not configuring it
+into OpenSSL.
