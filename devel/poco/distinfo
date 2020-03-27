@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.13 2018/02/06 11:41:14 jperkin Exp $
+$NetBSD: distinfo,v 1.14 2020/03/27 02:08:11 joerg Exp $
 
 SHA1 (poco-1.6.1-all.tar.gz) = 38841212a6893d4290909a62b4f310450230fb6d
 RMD160 (poco-1.6.1-all.tar.gz) = a7ab9429db5b4b5fc02c194a208f11f296deb90b
 SHA512 (poco-1.6.1-all.tar.gz) = 6c68f3f2692bad8ad4a111e541e8da6376246517b2dca73f429539e9ceaa107e791c3673261467cf8a2e2efabd0dd2a5160d9d412e71af114b4a6b700c9c2393
 Size (poco-1.6.1-all.tar.gz) = 5636597 bytes
+SHA1 (patch-Crypto_src_CipherImpl.cpp) = ebaa5380c6ce90d1b2c9ca05f34d0ace66804b32
+SHA1 (patch-Crypto_src_DigestEngine.cpp) = 8a99eb509df15e1d413e58671545a78b971939e0
+SHA1 (patch-Crypto_src_RSAKeyImpl.cpp) = 3e6bbe58f3cc24f4a744e8e580765bcc2ad0efdc
+SHA1 (patch-Crypto_src_X509Certificate.cpp) = 2a119c3bb207bd121dd789121f49b94a4969f8f4
 SHA1 (patch-Foundation_Makefile) = 492b55268b6b848bfb0d5c255b59ae2745eb4f72
 SHA1 (patch-Foundation_include_Poco_Platform.h) = a7d81c20902af7e23ce8a10eb90fc1a98d7cc412
 SHA1 (patch-Foundation_include_Poco_RegularExpression.h) = a113fdcfdd25a4d98deba6b32f9be7ae675450d6
