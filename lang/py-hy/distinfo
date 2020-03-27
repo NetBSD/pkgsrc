@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2018/02/23 07:03:09 adam Exp $
+$NetBSD: distinfo,v 1.6 2020/03/27 15:27:41 adam Exp $
 
-SHA1 (hy-0.14.0.tar.gz) = 6bdf18c39aeab76b37d02a6ce9e631499887784a
-RMD160 (hy-0.14.0.tar.gz) = d260ea81f6b235267ce54bd95ec441b163ddfd27
-SHA512 (hy-0.14.0.tar.gz) = fd65ce96282a6c9c9149e2a6d0d06ff3fe05c55421c4b4f9fd29132e91e1012d266f4fcff48175b2d90cc40feee6eacfd165794edb63400b2aa0d75b5063d793
-Size (hy-0.14.0.tar.gz) = 71895 bytes
+SHA1 (hy-0.18.0.tar.gz) = 4e402d8b86554efd1028e7117e79031495dd65b4
+RMD160 (hy-0.18.0.tar.gz) = c662ae772e336683e39e9228fc384e2de0960c21
+SHA512 (hy-0.18.0.tar.gz) = 0e79a9e8057c2cf022703d4c8d7ff6832a211562d97024ebcb9e3d16bfc1b427d3ba08b855cef9b5810a36e33bde694b8bd3bbac947615e3f1693c9cdf32e8b2
+Size (hy-0.18.0.tar.gz) = 83803 bytes
 SHA1 (patch-setup.py) = dc39e78039b408334f6f126730492355148e45c8
