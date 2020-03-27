@@ -1,0 +1,31 @@
+$NetBSD: patch-tests_valgrind__tests.sh.in,v 1.1 2020/03/27 20:53:05 joerg Exp $
+
+--- tests/valgrind_tests.sh.in.orig	2020-03-27 19:17:51.919209257 +0000
++++ tests/valgrind_tests.sh.in
+@@ -52,7 +52,7 @@ vgrind () {
+     fi;
+ 
+     grep -e "LEAK SUMMARY" ${TMP_LOG} >/dev/null 2>&1
+-    if test "$?" == "0"; then
++    if test "$?" = "0"; then
+ 	echo -n " LEAKS!"
+ 	
+ 	echo ""              >> ${SUMMARY}
+@@ -62,7 +62,7 @@ vgrind () {
+     fi
+ 
+     grep -e "[1-9][0-9]* error" ${TMP_LOG} >/dev/null 2>&1
+-    if test "$?" == "0"; then
++    if test "$?" = "0"; then
+ 	echo -n " ERRORS!"
+ 
+ 	echo ""              >> ${SUMMARY}
+@@ -71,7 +71,7 @@ vgrind () {
+ 	tmp_err=1
+     fi
+ 
+-    if test "x${tmp_err}" == "x"; then
++    if test "x${tmp_err}" = "x"; then
+ 	echo " OK."
+     else
+ 	ERROR=1
