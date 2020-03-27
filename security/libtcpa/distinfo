@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 01:17:50 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/03/27 20:57:11 joerg Exp $
 
 SHA1 (tpm-1.1b.tar.gz) = be59de89ae7ab633e23d4a03c855e3063aaf4c20
 RMD160 (tpm-1.1b.tar.gz) = 82fa9e9a9f60cb588319c2d73ca94e948fbc9b26
@@ -11,3 +11,7 @@ Size (tcpa_man_20031210.tgz) = 7794 bytes
 SHA1 (patch-aa) = 6da066464bd105fda446da801e2d4ca9f11b9394
 SHA1 (patch-ab) = 978df91511c61a1067781e54994bad028a047d6a
 SHA1 (patch-ac) = 3793ca470d634974aabc32c698db4cfcfce4ca75
+SHA1 (patch-examples_createkey.c) = 1d26a6de2875cbb3921e08dadf7924415b707dbd
+SHA1 (patch-examples_takeown.c) = 05ff728a73b488d9540292cbed5d16bf553e6eff
+SHA1 (patch-libtcpa_hmac.c) = 88862b22b8f357181ec0bfea709ce205070f833d
+SHA1 (patch-libtcpa_keys.c) = c91d1d48e584542ad2635ad054a04f96d4316b19
