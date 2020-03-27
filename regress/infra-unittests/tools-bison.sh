@@ -35,7 +35,7 @@ all:
 .include "mk/tools/bison.mk"
 EOF
 
-	out=$(test_file "multiple-reqd-entries.mk")
+	out=$(run_bmake "multiple-reqd-entries.mk")
 
 	assert_that "$out" --equals "yes"
 
@@ -63,7 +63,7 @@ all:
 .include "mk/tools/bison.mk"
 EOF
 
-	out=$(test_file "multiple-reqd-entries.mk")
+	out=$(run_bmake "multiple-reqd-entries.mk")
 
 	assert_that "$out" --equals "no"
 

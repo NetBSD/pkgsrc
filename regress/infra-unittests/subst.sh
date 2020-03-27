@@ -33,7 +33,7 @@ STEP_MSG=	echo "=>"
 DO_NADA=	: do-nada
 INFO_MSG=	echo "info:"
 WARNING_MSG=	echo "warning:"
-FAIL_MSG=	sh $PWD/$real_pkgsrcdir/mk/scripts/fail echo "fail:"
+FAIL_MSG=	sh $pkgsrcdir/mk/scripts/fail echo "fail:"
 
 WRKDIR=		$tmpdir
 WRKSRC=		$tmpdir
@@ -60,7 +60,7 @@ EOF
 	create_file_lines "subst-single.txt" \
 		"before"
 
-	test_file "subst-single.mk" > "$tmpdir/output"
+	run_bmake "subst-single.mk" > "$tmpdir/output"
 
 	assert_that "output" --file-contains-exactly "=> Substituting \"class\" in subst-single.txt"
 	assert_that "subst-single.txt" --file-contains-exactly "after"
@@ -89,7 +89,7 @@ EOF
 	create_file_lines "second"	"the second file"
 	create_file_lines "third"	"the third file"
 
-	output=$(test_file "testcase.mk")
+	output=$(run_bmake "testcase.mk")
 
 	assert_that "$output" --equals "=> Substituting \"class\" in first second third"
 	assert_that "first" --file-contains-exactly "the first example"
@@ -121,7 +121,7 @@ EOF
 	create_file_lines "pattern-second"	"the second file"
 	create_file_lines "pattern-third"	"the third file"
 
-	output=$(test_file "testcase.mk")
+	output=$(run_bmake "testcase.mk")
 
 	assert_that "$output" --equals "=> Substituting \"class\" in pattern-*"
 	assert_that "pattern-first" --file-contains-exactly "the first example"
@@ -157,7 +157,7 @@ EOF
 	create_file_lines "pattern-second"	"the second is already an example"
 	create_file_lines "pattern-third"	"the third file"
 
-	test_file "testcase.mk" > "$tmpdir/actual-output"
+	run_bmake "testcase.mk" > "$tmpdir/actual-output"
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in pattern-*' \
 		'info: [subst.mk:class] Nothing changed in ./pattern-second.'
@@ -188,7 +188,7 @@ EOF
 
 	create_file_lines "single"	"already an example"
 
-	test_file "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
+	run_bmake "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in single' \
@@ -218,7 +218,7 @@ EOF
 
 	create_file_lines "single"	"already an example"
 
-	test_file "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
+	run_bmake "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in single' \
@@ -251,7 +251,7 @@ SUBST_NOOP_OK.class=	no
 all: subst-class
 EOF
 
-	test_file "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
+	run_bmake "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in nonexistent' \
@@ -283,7 +283,7 @@ SUBST_NOOP_OK.class=	yes
 all: subst-class
 EOF
 
-	test_file "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
+	run_bmake "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in nonexistent' \
@@ -311,7 +311,7 @@ EOF
 
 	create_file_lines "exists"	"this file exists"
 
-	test_file "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
+	run_bmake "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in *exist* *not-found*' \
@@ -336,7 +336,7 @@ SUBST_SED.class=	-e 'sahara'
 .include "mk/subst.mk"
 EOF
 
-	test_file "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
+	run_bmake "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in does not exist' \
@@ -365,7 +365,7 @@ EOF
 	create_file_lines "second"	"second"
 	create_file_lines "third"	"third"
 
-	test_file "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
+	run_bmake "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in first second third' \
@@ -410,7 +410,7 @@ prepare-subst-class:
 	\${RUN} \${ECHO} "from" > "\${WRKSRC}/third"
 EOF
 
-	test_file "testcase.mk" "subst-class" \
+	run_bmake "testcase.mk" "subst-class" \
 		1> "$tmpdir/actual-output" \
 		2> "$tmpdir/actual-stderr" \
 	&& exitcode=0 || exitcode=$?
@@ -450,7 +450,7 @@ EOF
 	create_file_lines "--no-option"		"before"
 	create_file_lines ".hidden"		"before"
 
-	test_file "testcase.mk" "subst-class" \
+	run_bmake "testcase.mk" "subst-class" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
@@ -494,7 +494,7 @@ EOF
 	create_file_lines "*"	"before"
 	create_file_lines "[*]"	"before"
 
-	test_file "testcase.mk" "subst-class" \
+	run_bmake "testcase.mk" "subst-class" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
@@ -527,7 +527,7 @@ all:
 .include "mk/subst.mk"
 EOF
 
-	test_file "testcase.mk" "all" \
+	run_bmake "testcase.mk" "all" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
@@ -568,7 +568,7 @@ SUBST_SED.three=	-e 's,three,III,'
 .include "mk/subst.mk"
 EOF
 
-	test_file "testcase.mk" "pre-configure" \
+	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
@@ -604,7 +604,7 @@ SUBST_SHOW_DIFF.two=	yes
 EOF
 
 	LC_ALL=C \
-	test_file "testcase.mk" "pre-configure" \
+	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
@@ -644,7 +644,7 @@ SUBST_SHOW_DIFF=	yes
 .include "mk/subst.mk"
 EOF
 
-	test_file "testcase.mk" "pre-configure" \
+	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
@@ -695,7 +695,7 @@ if test_case_begin "SUBST_VARS"; then
 		"@PRINTABLE@" \
 		"@UNDEFINED@"
 
-	test_file "testcase.mk" "pre-configure" \
+	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
@@ -740,7 +740,7 @@ if test_case_begin "SUBST_VARS with surrounding whitespace"; then
 		"@TAB@" \
 		"@NEWLINE@"
 
-	test_file "testcase.mk" "pre-configure" \
+	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
@@ -776,7 +776,7 @@ if test_case_begin "SUBST_VARS with backslashes"; then
 		'.include "mk/subst.mk"'
 	create_file_lines "backslash.txt" "@BACKSLASHES@"
 
-	test_file "testcase.mk" "pre-configure" \
+	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
@@ -818,7 +818,7 @@ if test_case_begin "SUBST_VARS for variables with regex characters"; then
 		"@VAR.<>@" \
 		"@VAR.[]@"
 
-	test_file "testcase.mk" "pre-configure" \
+	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
@@ -865,7 +865,7 @@ if test_case_begin "pattern matches directory"; then
 	create_file_lines "subst-file" \
 		"@VAR@"
 
-	test_file "testcase.mk" "pre-configure" \
+	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
@@ -905,7 +905,7 @@ if test_case_begin "pattern matches only directory"; then
 	create_file_lines "subdir/subfile" \
 		"@VAR@"
 
-	test_file "testcase.mk" "pre-configure" \
+	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
