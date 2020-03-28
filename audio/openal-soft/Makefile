@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/03/08 16:48:48 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/03/28 18:00:47 nia Exp $
 
 DISTNAME=	openal-soft-1.20.1
 PKGREVISION=	1
@@ -15,8 +15,8 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pkg-config gmake
 
-# C++11
-GCC_REQD+=	4.7
+# https://github.com/kcat/openal-soft/issues/347
+GCC_REQD+=	5
 
 MAKE_JOBS_SAFE=		no
 
