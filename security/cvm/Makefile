@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/01/26 17:32:02 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/03/28 19:43:31 rillig Exp $
 #
 
 DISTNAME=		cvm-0.97
@@ -16,6 +16,7 @@ MAKE_JOBS_SAFE=		no
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 
 DJB_RESTRICTED=		NO
+DJB_ERRNO_HACK=		NO
 DJB_MAKE_TARGETS=	NO
 INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
 
