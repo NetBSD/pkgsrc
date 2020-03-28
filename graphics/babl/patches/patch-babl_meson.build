@@ -1,0 +1,14 @@
+$NetBSD: patch-babl_meson.build,v 1.1 2020/03/28 18:24:06 nia Exp $
+
+Don't make lacking --version-script a hard error
+
+--- babl/meson.build.orig	2020-01-12 23:26:51.000000000 +0000
++++ babl/meson.build
+@@ -36,7 +36,6 @@ elif host_machine.system() == 'darwin' a
+   # Clang on Darwin
+   babl_link_args = ['-Wl,-exported_symbols_list',version_script_clang]
+ else
+-  error('Linker doesn\'t support --version-script or -exported_symbols_list')
+ endif
+ if platform_win32
+   babl_link_args += '-Wl,--no-undefined'
