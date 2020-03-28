@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/03/24 14:59:20 nia Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/28 17:43:37 nia Exp $
 
 DISTNAME=	libdvdnav-6.1.0
 CATEGORIES=	multimedia
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c99
 
 PKGCONFIG_OVERRIDE=	misc/dvdnav.pc.in
 
