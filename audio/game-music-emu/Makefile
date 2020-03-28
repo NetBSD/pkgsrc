@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/03/27 07:53:59 nia Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/28 17:48:44 nia Exp $
 
 DISTNAME=	game-music-emu-0.6.3
 CATEGORIES=	audio
@@ -17,4 +17,5 @@ CMAKE_ARGS+=	-DENABLE_UBSAN=OFF
 
 PKGCONFIG_OVERRIDE+=	gme/libgme.pc.in
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
