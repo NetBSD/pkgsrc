@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.72 2020/03/23 11:27:29 jperkin Exp $
+# $NetBSD: subst.mk,v 1.73 2020/03/28 20:39:50 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -58,7 +58,7 @@
 #		-e 's,@VARNAME@,${VARNAME},g'
 #
 #	that even works when ${VARNAME} contains arbitrary characters.
-#	SUBST_SED and SUBST_VARS can combined freely.
+#	SUBST_SED and SUBST_VARS can be combined freely.
 #
 # SUBST_FILTER_CMD.<class>
 #	Filter used to perform the actual substitution on the specified
