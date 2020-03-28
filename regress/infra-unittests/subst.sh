@@ -923,3 +923,38 @@ if test_case_begin "pattern matches only directory"; then
 
 	test_case_end
 fi
+
+
+if test_case_begin "first filename pattern has no effect"; then
+
+	# All patterns of SUBST_FILES should be applied before erroring out.
+	# TODO: also warn about file2
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_STAGE.id=	pre-configure' \
+		'SUBST_FILES.id=	file1 file2' \
+		'SUBST_VARS.id=		A B' \
+		'SUBST_NOOP_OK.id=	no' \
+		'A=			a-value' \
+		'B=			b-value' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "file1"	"nothing to replace"
+	create_file_lines "file2"	"nothing to replace"
+
+	run_bmake "testcase.mk" "pre-configure" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in file1 file2' \
+		'warning: [subst.mk:id] Nothing changed in ./file1.' \
+		'fail: [subst.mk:id] The pattern file1 has no effect.' \
+		'*** Error code 1' \
+		'' \
+		'Stop.' \
+		"$make: stopped in $PWD"
+
+	test_case_end
+fi
