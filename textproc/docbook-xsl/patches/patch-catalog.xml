@@ -1,15 +1,15 @@
-$NetBSD: patch-catalog.xml,v 1.1 2020/03/05 10:38:40 wiz Exp $
+$NetBSD: patch-catalog.xml,v 1.2 2020/03/28 18:36:42 wiz Exp $
 
 Add backwards compatibility rewrites for old master site.
 
---- catalog.xml.orig	2016-12-09 22:46:49.000000000 +0000
+--- catalog.xml.orig	2016-12-09 22:47:33.000000000 +0000
 +++ catalog.xml
 @@ -1,6 +1,8 @@
  <?xml version="1.0" encoding="utf-8"?>
  <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-   <!-- XML Catalog file for DocBook XSL Stylesheets v1.79.2 -->
+   <!-- XML Catalog file for DocBook XSL-NONS v1.79.2 -->
 +  <rewriteURI uriStartString="http://docbook.sourceforge.net/release/xsl/current/" rewritePrefix="./"/>
 +  <rewriteSystem systemIdStartString="http://docbook.sourceforge.net/release/xsl/current/" rewritePrefix="./"/>
-   <rewriteURI uriStartString="http://cdn.docbook.org/release/xsl/current/" rewritePrefix="./"/>
-   <rewriteSystem systemIdStartString="http://cdn.docbook.org/release/xsl/current/" rewritePrefix="./"/>
-   <rewriteURI uriStartString="http://cdn.docbook.org/release/xsl/1.79.2/" rewritePrefix="./"/>
+   <rewriteURI uriStartString="http://cdn.docbook.org/release/xsl-nons/current/" rewritePrefix="./"/>
+   <rewriteSystem systemIdStartString="http://cdn.docbook.org/release/xsl-nons/current/" rewritePrefix="./"/>
+   <rewriteURI uriStartString="http://cdn.docbook.org/release/xsl-nons/1.79.2/" rewritePrefix="./"/>
