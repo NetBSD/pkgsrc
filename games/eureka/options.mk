@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2020/02/26 12:28:02 micha Exp $
+# $NetBSD: options.mk,v 1.2 2020/03/29 01:03:22 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.eureka
 PKG_SUPPORTED_OPTIONS=	opengl xdg-utils
@@ -26,4 +26,8 @@ SUBST_SED.opengl+=	-e 's,LIBS += -lGLU -lGL,\#LIBS += -lGLU -lGL,'
 # Can be used by FLTK for fl_open_uri() on X11.
 .if !empty(PKG_OPTIONS:Mxdg-utils)
 DEPENDS+=	xdg-utils>=1.1:../../misc/xdg-utils
+.endif
+
+.if !empty(PKG_OPTIONS:Mopengl)
+.include "../../x11/libXcursor/buildlink3.mk"
 .endif
