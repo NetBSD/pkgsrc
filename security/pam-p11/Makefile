@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 21:50:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/29 02:18:56 manu Exp $
 #
 
-DISTNAME=	pam_p11-0.1.5
-PKGREVISION=	5
+DISTNAME=	pam_p11-0.3.1
+#PKGREVISION=	1
 CATEGORIES=	security
-# This has a bad name and doesn't have generated auto* files.
-#MASTER_SITES=	https://github.com/OpenSC/pam_p11/archive/
-MASTER_SITES=	${MASTER_SITE_BACKUP}
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=OpenSC/}
+GITHUB_TAG=	pam_p11
+GITHUB_RELEASE= pam_p11-0.3.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	https://opensc-project.org/opensc/wiki/pam_p11
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config autoconf automake
 
+WRKSRC=	${WRKDIR}/${DISTNAME}
 pre-configure:
 	cd ${WRKSRC} && autoreconf -f -i
 
