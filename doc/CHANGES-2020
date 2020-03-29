@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1959 2020/03/28 18:36:52 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1960 2020/03/29 02:13:32 manu Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2638,3 +2638,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-ldap to 3.2.0nb2 [gutteridge 2020-03-27]
 	Updated devel/ncurses to 6.2nb1 [wiz 2020-03-28]
 	Updated textproc/docbook-xsl to 1.79.2nb3 [wiz 2020-03-28]
+	Updated security/libp11 to 0.4.4 [manu 2020-03-29]
