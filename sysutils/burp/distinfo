@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2016/12/17 14:21:26 joerg Exp $
+$NetBSD: distinfo,v 1.5 2020/03/29 01:02:12 joerg Exp $
 
 SHA1 (burp-1.4.40.tar.bz2) = b06dbe9d1440b9e7915d35ad0c23b9d120fec10e
 RMD160 (burp-1.4.40.tar.bz2) = 3ba2a60605562bbff7bacc600ee511c3ce020995
@@ -15,4 +15,6 @@ SHA1 (patch-manpages_bedup.8) = 5e1a2e3c42118d98c9b66a0bc5cafb2eb9c09f11
 SHA1 (patch-manpages_burp.8) = 81879e11cf917c36467513aeb440d0ab2dbad142
 SHA1 (patch-manpages_burp__ca.8) = f9ac9ffe1f67df040c939bb1afcf614869695034
 SHA1 (patch-src-xattr.c) = 105aa2c67fde7007b525d6ff93e0d9ce67ee2f4f
+SHA1 (patch-src_handy.c) = 6d3fe34734c6392a28a59ed1491688d2f12e0a66
+SHA1 (patch-src_msg.c) = 2a8f542f801f2d4ace5d9335d3abb7490cba82d7
 SHA1 (patch-src_server.c) = 3dc518b24bd866d0ff7cc9c834d4fde810cacb74
