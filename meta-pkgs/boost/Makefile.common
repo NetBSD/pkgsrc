@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.85 2020/03/17 03:48:24 rillig Exp $
+# $NetBSD: Makefile.common,v 1.86 2020/03/29 05:34:36 taca Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -36,10 +36,10 @@ CONFLICTS+=		boost<1.36.0
 DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
 
-.include "../../mk/bsd.prefs.mk"
-
 USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++
+
+.include "../../mk/bsd.prefs.mk"
 
 # IMPORTANT: sync this with devel/boost-libs/buildlink3.mk
 # GCC 4.5 or later is required to build, and GCC 4.5 is not provided for OpenBSD
