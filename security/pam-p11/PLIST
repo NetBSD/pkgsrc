@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:54 rillig Exp $
-lib/security/pam_p11_opensc.la
-lib/security/pam_p11_openssh.la
+@comment $NetBSD: PLIST,v 1.6 2020/03/29 02:18:56 manu Exp $
+lib/security/pam_p11.la
+share/doc/pam_p11/NEWS
+share/doc/pam_p11/README.md
