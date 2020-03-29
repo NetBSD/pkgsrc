@@ -1,16 +1,13 @@
-$NetBSD: patch-Makefile.in,v 1.2 2019/05/14 13:23:10 adam Exp $
-
-Remove a race condition. $(nodist_libmplibbackends_a_SOURCES) should't
-be compiled before mplib.h is created.
+$NetBSD: patch-Makefile.in,v 1.3 2020/03/29 01:02:57 joerg Exp $
 
 --- Makefile.in.orig	2019-02-20 21:54:28.000000000 +0000
 +++ Makefile.in
-@@ -18394,7 +18394,7 @@ $(nodist_libmplibcore_a_SOURCES): $(mpma
+@@ -2799,7 +2799,7 @@ AM_CFLAGS = $(WARNING_CFLAGS)
+ AM_CXXFLAGS = ## $(WARNING_CXXFLAGS)
+ AM_OBJCXXFLAGS = ## $(WARNING_OBJCXXFLAGS)
+ version = $(WEB2CVERSION)
+-SUBDIRS = doc lib man web2c . window omegafonts otps
++SUBDIRS = doc lib man web2c window omegafonts otps
+ proglib = lib/lib.a
  
- $(libmplibcore_a_OBJECTS): $(nodist_libmplibcore_a_SOURCES) $(KPATHSEA_DEPEND)  
- $(libmplibextramath_a_OBJECTS): $(nodist_libmplibextramath_a_SOURCES) $(KPATHSEA_DEPEND)  $(MPFR_DEPEND)
--$(libmplibbackends_a_OBJECTS): $(nodist_libmplibbackends_a_SOURCES) $(KPATHSEA_DEPEND) $(CAIRO_DEPEND) $(MPFR_DEPEND)
-+$(libmplibbackends_a_OBJECTS): $(nodist_libmplibbackends_a_SOURCES) mplib.h $(KPATHSEA_DEPEND) $(CAIRO_DEPEND) $(MPFR_DEPEND)
- $(etex_OBJECTS): $(etex_prereq)
- 
- $(etex_c_h): etex-web2c
+ #EXTRA_LIBRARIES += libluasocket.a liblua53socket.a libluajitsocket.a
