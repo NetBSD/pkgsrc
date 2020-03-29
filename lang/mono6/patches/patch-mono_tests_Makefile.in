@@ -1,0 +1,13 @@
+$NetBSD: patch-mono_tests_Makefile.in,v 1.1 2020/03/29 01:07:01 joerg Exp $
+
+--- mono/tests/Makefile.in.orig	2020-03-27 23:45:58.917886158 +0000
++++ mono/tests/Makefile.in
+@@ -2682,7 +2682,7 @@ uninstall-am:
+ check-local:
+ 	ok=:; \
+ 	$(MAKE) test-tailcall || ok=false; \
+-	if test x$(IGNORE_TEST_JIT) == x; then $(MAKE) test-jit || ok=false; fi; \
++	if test x$(IGNORE_TEST_JIT) = x; then $(MAKE) test-jit || ok=false; fi; \
+ 	$(MAKE) test-generic-sharing || ok=false; \
+ 	$(MAKE) test-type-load || ok=false; \
+ 	$(MAKE) test-multi-netmodule || ok=false; \
