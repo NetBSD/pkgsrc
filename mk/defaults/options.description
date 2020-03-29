@@ -185,6 +185,7 @@ enchant-zemberek	Add spell checking support for Turkish.
 epoll			Enable support for epoll I/O event notification facility.
 epub			Enable epub support.
 erlang-hipe		Enable HiPE support.
+esi			Enable ESI (Edge Side Includes) support.
 evolution-data-server	Enable support for evolution-data-server.
 exim-build-eximon	Also build the X based exim queue monitoring tool.
 exim-content-scan	Call virus and spam scanning direct from ACLs.
