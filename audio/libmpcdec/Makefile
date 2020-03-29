@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/26 17:30:43 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/29 18:30:06 gutteridge Exp $
 
 DISTNAME=	libmpcdec-1.2.6
 CATEGORIES=	audio
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.musepack.net/
 COMMENT=	Portable Musepack decoder library (V7)
 LICENSE=	modified-bsd
+
+CONFLICTS=	musepack-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

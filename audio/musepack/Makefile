@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/26 17:30:44 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/03/29 18:30:06 gutteridge Exp $
 
 DISTNAME=	musepack_src_r475
 PKGNAME=	musepack-0rc475
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.musepack.net/
 COMMENT=	MPEG-Plus and MusePack decoder (V8)
 LICENSE=	modified-bsd
+
+CONFLICTS=	libmpcdec-[0-9]*
 
 USE_CMAKE=		yes
 
