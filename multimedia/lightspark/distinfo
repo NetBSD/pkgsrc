@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2019/10/03 15:53:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/03/29 01:04:06 joerg Exp $
 
 SHA1 (lightspark-0.8.2.tar.gz) = d1194130aeadc144ef90065782cd8f9bf893d7e8
 RMD160 (lightspark-0.8.2.tar.gz) = 26dd4ff4fdb991c1159f964dd5bee1ab6efafee1
@@ -10,3 +10,5 @@ SHA1 (patch-src_main.cpp) = 3da1e6f80e07ae3ef9485c006fe7fee23d7f0c82
 SHA1 (patch-src_parsing_tags.cpp) = 951f2757ed68f6e0f5964df3fa944aeace4cbda3
 SHA1 (patch-src_platforms_engineutils.cpp) = 884e37623cf8203d86fcb27e479b41af08a509c4
 SHA1 (patch-src_plugin__ppapi_plugin.cpp) = 52d76189aded5687ba5671623bdc919ebaffd5dd
+SHA1 (patch-src_scripting_flash_display_flashdisplay.h) = 816ece22cc5377d40324745f52fa3aa618be3269
+SHA1 (patch-src_swf.h) = b8c0545f122322001b49cd0d4efbf95a0495664f
