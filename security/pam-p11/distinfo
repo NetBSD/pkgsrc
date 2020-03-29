@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:18:00 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/03/29 02:18:56 manu Exp $
 
-SHA1 (pam_p11-0.1.5.tar.gz) = 4ff838140e452c84143445dcf6a3f158009b83b0
-RMD160 (pam_p11-0.1.5.tar.gz) = 57930c4b93182dd36cd2a1c81231638f813b47d2
-SHA512 (pam_p11-0.1.5.tar.gz) = 848c4671daa535db67c16b2eedc0495ed68cedeffe5a8c657310ff10fcfd17d2a8b4708f343b4b7b17498953ad47fdc133eb7ea885f94f795b29ff3973ceea12
-Size (pam_p11-0.1.5.tar.gz) = 348181 bytes
-SHA1 (patch-aa) = c82f6de3fdb094601f5250280c7a5727d41d983d
-SHA1 (patch-ab) = 701f8e878f928c98f0037b363099f9c12ece429e
-SHA1 (patch-src_Makefile.am) = b9b9883552a4e0f01f78473c22e97534d075f05e
+SHA1 (pam_p11-0.3.1.tar.gz) = 540e7e0d342d9ef74aa9d0452a7b1f7f9864db0c
+RMD160 (pam_p11-0.3.1.tar.gz) = 1f3cc07a7da062f5b4df9681f807f3fc75a70cd5
+SHA512 (pam_p11-0.3.1.tar.gz) = caaa6882d4c007dfaba5974dc420bc45aa225f705679d170fdc9576aa49cbd24bba6985f14eb2bca97d4fe37aaf6088641add912dfbb93740b7d634f448addcf
+Size (pam_p11-0.3.1.tar.gz) = 422940 bytes
+SHA1 (patch-ab) = d953fe263b8cbd0b659d79b03f7f5ccc78404d5d
+SHA1 (patch-src_login.c) = 985a660cfbf76368f8d18527fef43180a81dc3be
+SHA1 (patch-src_passwd.c) = 88a5280eb0b00b3687c04559726dbabca345113c
+SHA1 (patch-src_test.c) = 81c44e7310086f8537dc65ecfcd41c71003edc29
