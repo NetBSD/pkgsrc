@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/11/03 11:45:57 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/03/29 06:01:31 rillig Exp $
 
 DISTNAME=		ppp-001107.src
 PKGNAME=		userppp-001107
@@ -18,8 +18,6 @@ MANCOMPRESSED_IF_MANZ=	YES
 PKG_SYSCONFSUBDIR=	ppp
 
 CFLAGS+=		-fno-strict-aliasing
-# fix build on -current for wrong is* arguments (char instead of unsigned char)
-BUILDLINK_TRANSFORM+=	rm:-Werror
 
 SUBST_CLASSES+=		cfgdir
 SUBST_STAGE.cfgdir=	do-configure
