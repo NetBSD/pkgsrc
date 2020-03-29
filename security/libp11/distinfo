@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:17:49 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/03/29 02:13:32 manu Exp $
 
-SHA1 (libp11-0.2.8.tar.gz) = e20a3eb67b7effc26339f1decbca85dee3d98586
-RMD160 (libp11-0.2.8.tar.gz) = 8f54c66f929fff1bc4ec548f95e7798f9992a272
-SHA512 (libp11-0.2.8.tar.gz) = b07da8a9055dd63563fb0e4dffbc4705c6bf125fdd6188f751a14b853de43608b5737f8b91730f47f4963f9fe37fec15fd2cac340196c5e53876faa0294e48b5
-Size (libp11-0.2.8.tar.gz) = 69955 bytes
-SHA1 (patch-Makefile.am) = 5020d2b5f345f603be775b7d5bf3edb75b5a2549
+SHA1 (libp11-0.4.4.tar.gz) = eff34266f77e8758b2c6a33588fe37a70059fc11
+RMD160 (libp11-0.4.4.tar.gz) = 28e5d6c0001a24695d37d3e905617ec3d6dac064
+SHA512 (libp11-0.4.4.tar.gz) = d39976cf27655a01331a08fdcd28c9d00de586c6918bec9e43228da4668132e637a3b0069d7478618ae63aeaa6bdb9f40b36e6fdac2934d42ea12c7e9b5eec5b
+Size (libp11-0.4.4.tar.gz) = 108307 bytes
+SHA1 (patch-Makefile.am) = c1ef488d455013841d973462fb67a64baf4db452

@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/05 20:28:24 hasso Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/29 02:13:32 manu Exp $
 include/libp11.h
 lib/libp11.la
+lib/libpkcs11.so
+lib/pkcs11.la
 lib/pkgconfig/libp11.pc
