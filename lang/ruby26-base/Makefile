@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/03/18 00:32:55 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/29 05:31:33 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -20,6 +20,7 @@ TEST_TARGET=		test
 CONFIGURE_ARGS+=	--enable-shared --enable-install-static-library
 WRKSRC=			${RUBY_WRKSRC}
 
+.include "options.mk"
 .include "../../lang/ruby/platform.mk"
 
 .if !empty(RUBY_SUFFIX)
