@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2020/01/10 15:27:25 nia Exp $
+$NetBSD: distinfo,v 1.13 2020/03/29 06:56:48 rillig Exp $
 
 SHA1 (anope-2.0.7-source.tar.gz) = 298c21edbff18a1d3cc711bf84b55ac06ae10d6b
 RMD160 (anope-2.0.7-source.tar.gz) = fdbc31d1bcd902eddc35efbae871af2b0dddc88b
@@ -6,4 +6,4 @@ SHA512 (anope-2.0.7-source.tar.gz) = 22a9f3e0d9fe7f68304062829a19b693a3414f94c90
 Size (anope-2.0.7-source.tar.gz) = 1817484 bytes
 SHA1 (patch-CMakeLists.txt) = 698034091457fb58de32a43fd701c7ce716f898e
 SHA1 (patch-data_CMakeLists.txt) = e0d762da4345ded9a080ea6cf216db510c4c1665
-SHA1 (patch-data_example.conf) = 5d239fdf2362561b860ffbd3b6dfe7a5dd177632
+SHA1 (patch-data_example.conf) = 6866b154f464ed6072b267f589ee67056bea73ac
