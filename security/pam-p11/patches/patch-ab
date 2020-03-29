@@ -1,31 +1,16 @@
-$NetBSD: patch-ab,v 1.3 2010/07/14 07:14:29 manu Exp $
---- src/pam_p11.c.orig	2010-06-29 08:56:07.000000000 +0200
-+++ src/pam_p11.c	2010-06-29 09:05:03.000000000 +0200
-@@ -21,10 +21,16 @@
- #include <sys/stat.h>
- #include <fcntl.h>
- #include <unistd.h>
- 
-+#include <openssl/sha.h>
-+
+$NetBSD: patch-ab,v 1.4 2020/03/29 02:18:56 manu Exp $
+--- src/pam_p11.c.orig	2020-03-28 02:10:02.159482871 +0000
++++ src/pam_p11.c	2020-03-28 02:12:32.285912554 +0000
+@@ -32,8 +32,12 @@
  #include <libp11.h>
+ #include <regex.h>
+ #include <stdlib.h>
  
 +#ifdef __NetBSD__
 +#define NO_STATIC_MODULES
 +#endif
 +
- /* We have to make this definitions before we include the pam header files! */
- #define PAM_SM_AUTH
- #define PAM_SM_ACCOUNT
- #define PAM_SM_SESSION
-@@ -43,9 +49,9 @@
- 
- #define LOGNAME   "pam_p11"	/* name for log-file entries */
- 
- #define RANDOM_SOURCE "/dev/urandom"
--#define RANDOM_SIZE 128
-+#define RANDOM_SIZE SHA_DIGEST_LENGTH
- #define MAX_SIGSIZE 256
- 
- extern int match_user(X509 * x509, const char *login);
- 
+ /* openssl deprecated API emulation */
+ #ifndef HAVE_EVP_MD_CTX_NEW
+ #define EVP_MD_CTX_new()	EVP_MD_CTX_create()
+ #endif
