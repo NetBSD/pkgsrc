@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2019/11/03 17:11:59 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/03/29 01:05:18 joerg Exp $
 #
 
 DISTNAME=	acidrip-0.14
@@ -10,6 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://untrepid.com/acidrip/
 COMMENT=	Gtk2::Perl application for ripping and encoding DVDs
 
+DEPENDS+=	lame-[0-9]*:../../audio/lame
 DEPENDS+=	lsdvd-[0-9]*:../../multimedia/lsdvd
 DEPENDS+=	mencoder-[0-9]*:../../multimedia/mencoder
 DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
