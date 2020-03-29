@@ -1,0 +1,13 @@
+$NetBSD: patch-mono_mini_Makefile.in,v 1.1 2020/03/29 01:07:01 joerg Exp $
+
+--- mono/mini/Makefile.in.orig	2020-03-27 23:42:13.693641403 +0000
++++ mono/mini/Makefile.in
+@@ -3314,7 +3314,7 @@ fullaotcheck: $(mono) $(fullaot_regtests
+ 	MONO_PATH=$(FULLAOT_MONO_PATH) $(top_builddir)/runtime/mono-wrapper $(MOBILE_RUNTIME_ARG) $(LLVM_AOT_RUNTIME_OPTS) $(GSHAREDVT_RUNTIME_OPTS) --aot="$(FULLAOT_AOT_ARGS),$(LLVM_AOT_COMPILER_OPTS)" $(FULLAOT_TMP_DIR)/{$(fullaot_testing_deps_commas),*.exe} || exit 1
+ 	ln -s $(if $(MONO_EXECUTABLE),$(MONO_EXECUTABLE),$$PWD/mono) $(FULLAOT_TMP_DIR)/
+ 	for i in $(fullaot_regtests); do echo $$i; MONO_PATH=$(FULLAOT_MONO_PATH) $(top_builddir)/runtime/mono-wrapper $(MOBILE_RUNTIME_ARG) $(FULLAOT_ARGS) $(FULLAOT_TMP_DIR)/$$i --exclude '!FULLAOT' $(ARCH_FULLAOT_EXCLUDE) || exit 1; done
+-	if test x$(MIXED) == x1; then failed=0;i=0; while test $$i -lt 900; do i=`expr $$i + 1`; bash -c "echo -n '.'"; MONO_PATH=$(FULLAOT_MONO_PATH) MONO_DEBUG=aot-skip=$$i $(top_builddir)/runtime/mono-wrapper --full-aot-interp $(FULLAOT_TMP_DIR)/basic.exe > $(FULLAOT_TMP_DIR)/mixed.log || failed=1; if test $$failed -eq 1; then echo "Failed at $$i"; exit $$failed; fi; done; fi
++	if test x$(MIXED) = x1; then failed=0;i=0; while test $$i -lt 900; do i=`expr $$i + 1`; bash -c "echo -n '.'"; MONO_PATH=$(FULLAOT_MONO_PATH) MONO_DEBUG=aot-skip=$$i $(top_builddir)/runtime/mono-wrapper --full-aot-interp $(FULLAOT_TMP_DIR)/basic.exe > $(FULLAOT_TMP_DIR)/mixed.log || failed=1; if test $$failed -eq 1; then echo "Failed at $$i"; exit $$failed; fi; done; fi
+ 
+ # This can run in parallel
+ fullaot-libs: $(patsubst %,fullaot-tmp/%.dylib,$(FULLAOT_LIBS))

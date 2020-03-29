@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.8 2020/02/14 00:50:51 kamil Exp $
+$NetBSD: distinfo,v 1.9 2020/03/29 01:07:01 joerg Exp $
 
 SHA1 (mono-6.8.0.105.tar.xz) = e39aa0ac15b3b73ecf0767462798a5acde0aed79
 RMD160 (mono-6.8.0.105.tar.xz) = 5a84c75f941d5a2a645999e13da8458fc87d3bac
 SHA512 (mono-6.8.0.105.tar.xz) = 8207082f6c538037a17dba5e22576d8e9b0aac946df270ff34daad0857e7b1cfd71c8cf4851e74dd5338397c9587540f11b23e71776bca6dc2a1b89dbed2fd7e
 Size (mono-6.8.0.105.tar.xz) = 243441900 bytes
+SHA1 (patch-acceptance-tests_Makefile.in) = 66866b180ccce299a0d492add5330351611ec5f2
 SHA1 (patch-data_Makefile.am) = 535480855e413750d5b6cab6351b1683ac911246
 SHA1 (patch-data_net__2__0_Browsers_Makefile.am) = 847fa7f5a54e7583a87c40749efe5a99e513c3c9
 SHA1 (patch-data_net__2__0_Makefile.am) = dffb23423381a9031587536ee5de2b34610329ee
@@ -18,9 +19,15 @@ SHA1 (patch-mono_eglib_giconv.c) = 04d2559d3868605194efd6267da010870f53d961
 SHA1 (patch-mono_metadata_icall.c) = b326c16e9aa8f9ee154d937128e5e09fd31b235a
 SHA1 (patch-mono_metadata_mono-config.c) = d349721ff2b6b3b767208eacdc5882b9e6dc47b4
 SHA1 (patch-mono_metadata_w32mutex-unix.c) = c3d424fe4ae1079c9c664c876a087fb0134f2e22
+SHA1 (patch-mono_mini_Makefile.am.in) = 7f4555b53e74646d96c847862999e4eceaa86164
+SHA1 (patch-mono_mini_Makefile.in) = c8a96e8d9139b5f1c751abc2256af45c219e504e
+SHA1 (patch-mono_tests_Makefile.am) = ddeab885c28be53dc457261c63af53b3de754052
+SHA1 (patch-mono_tests_Makefile.in) = cf6a670e94b52f41d30ae6262f2f4ed5c0da4c05
+SHA1 (patch-mono_utils_jemalloc_Makefile.in) = 37a31f4c1fc40330a95c1c421dfc88359fbb4ef1
 SHA1 (patch-mono_utils_mono-os-semaphore.h) = b850911945c95be804e9462263d558ef702831ca
 SHA1 (patch-mono_utils_mono-sigcontext.h) = b8a6f886661622e9b0d382443536bd3dc998f95f
 SHA1 (patch-mono_utils_mono-threads-posix.c) = 3111d6a47fa104d964b34fdb5f7eca8643559ea3
 SHA1 (patch-mono_utils_mono-utils-debug.c) = 39f099969040b3a52101b611be723b25674ea68b
 SHA1 (patch-runtime_mono-wrapper.in) = ea40d2f2e8b67de0ae42c6e608e3c085dc2b040e
+SHA1 (patch-scripts_submodules_versions.mk) = 65f7ee0b8503f10d20f07127e6ca7021b44077de
 SHA1 (patch-support_minizip_ioapi.c) = 605c86916c957c31a8b3048d7703482f8f545463

@@ -1,0 +1,13 @@
+$NetBSD: patch-mono_tests_Makefile.am,v 1.3 2020/03/29 01:07:01 joerg Exp $
+
+--- mono/tests/Makefile.am.orig	2020-03-27 23:57:32.877761629 +0000
++++ mono/tests/Makefile.am
+@@ -5,7 +5,7 @@ SUBDIRS = gc-descriptors . testing_gac a
+ check-local:
+ 	ok=:; \
+ 	$(MAKE) test-tailcall || ok=false; \
+-	if test x$(IGNORE_TEST_JIT) == x; then $(MAKE) test-jit || ok=false; fi; \
++	if test x$(IGNORE_TEST_JIT) = x; then $(MAKE) test-jit || ok=false; fi; \
+ 	$(MAKE) test-generic-sharing || ok=false; \
+ 	$(MAKE) test-type-load || ok=false; \
+ 	$(MAKE) test-multi-netmodule || ok=false; \
