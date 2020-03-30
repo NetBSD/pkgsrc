@@ -1,0 +1,16 @@
+# $NetBSD: Makefile.common,v 1.1 2020/03/30 14:00:09 adam Exp $
+# used by www/nghttp2/Makefile
+# used by www/nghttp2-tools/Makefile
+
+DISTNAME=	nghttp2-1.40.0
+CATEGORIES=	www
+MASTER_SITES=	${MASTER_SITE_GITHUB:=tatsuhiro-t/}
+EXTRACT_SUFX=	.tar.xz
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://nghttp2.org/
+LICENSE=	mit
+
+DISTINFO_FILE=	${.CURDIR}/../../www/nghttp2/distinfo
+PATCHDIR=	${.CURDIR}/../../www/nghttp2/patches
