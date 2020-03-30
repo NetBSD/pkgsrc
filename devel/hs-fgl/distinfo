@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:36:48 riastradh Exp $
+
+SHA1 (fgl-5.7.0.2.tar.gz) = 2211e8418f323df8a019c288a7a599b3f539c743
+RMD160 (fgl-5.7.0.2.tar.gz) = f6d7d6313dda8ac0d765fec237d5efeb2ed62dfe
+SHA512 (fgl-5.7.0.2.tar.gz) = a259cd9abe236cfec892d520b27e293293071ce1b435055cd009087d7d1fc2a87b71306e362020d3e8f6460c538da4e686c6b08b13361fc07c1e978b49a775fd
+Size (fgl-5.7.0.2.tar.gz) = 56399 bytes
