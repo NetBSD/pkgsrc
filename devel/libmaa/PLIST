@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/02/27 19:36:06 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/03/30 13:09:54 cheusov Exp $
 include/maa.h
 lib/libmaa.a
 lib/libmaa.so
@@ -7,4 +7,5 @@ lib/libmaa.so.4.0
 share/doc/libmaa/LICENSE
 share/doc/libmaa/NEWS
 share/doc/libmaa/README
+share/doc/libmaa/TODO
 share/doc/libmaa/libmaa.600dpi.ps
