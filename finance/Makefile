@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2020/03/30 16:44:12 riastradh Exp $
+# $NetBSD: Makefile,v 1.74 2020/03/30 16:52:48 riastradh Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -17,6 +17,8 @@ SUBDIR+=	cpuminer
 SUBDIR+=	gkrellm-stock
 SUBDIR+=	gnucash
 SUBDIR+=	gnucash-docs
+SUBDIR+=	hledger
+SUBDIR+=	hledger-lib
 SUBDIR+=	homebank
 SUBDIR+=	hs-Decimal
 SUBDIR+=	ledger
