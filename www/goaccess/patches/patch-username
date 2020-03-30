@@ -1,0 +1,86 @@
+$NetBSD: patch-username,v 1.1 2020/03/30 11:31:25 roy Exp $
+
+Accepted upstream here:
+https://github.com/allinurl/goaccess/pull/1718
+
+--- src/settings.h.orig	2020-03-24 14:02:12.012898702 +0000
++++ src/settings.h	2020-03-24 14:02:53.094348769 +0000
+@@ -147,6 +147,7 @@
+   int color_scheme;                 /* color scheme */
+   int crawlers_only ;               /* crawlers only */
+   int daemonize;                    /* run program as a Unix daemon */
++  const char *username;                   /* user to run program as */
+   int double_decode;                /* need to double decode */
+   int enable_html_resolver;         /* html/json/csv resolver */
+   int geo_db;                       /* legacy geoip db */
+--- src/options.c.orig	2020-03-24 14:01:49.531659575 +0000
++++ src/options.c	2020-03-24 14:02:51.274006910 +0000
+@@ -133,6 +133,7 @@
+   {"real-time-html"       , no_argument       , 0 ,  0  } ,
+   {"sort-panel"           , required_argument , 0 ,  0  } ,
+   {"static-file"          , required_argument , 0 ,  0  } ,
++  {"user-name"            , required_argument , 0 ,  0  } ,
+ #ifdef HAVE_LIBSSL
+   {"ssl-cert"             , required_argument , 0 ,  0  } ,
+   {"ssl-key"              , required_argument , 0 ,  0  } ,
+@@ -457,6 +458,9 @@
+   if (!strcmp ("daemonize", name))
+     conf.daemonize = 1;
+ 
++  if (!strcmp ("user-name", name))
++    conf.username = oarg;
++
+   /* WebSocket origin */
+   if (!strcmp ("origin", name))
+     conf.origin = oarg;
+--- src/goaccess.c.orig	2018-11-23 02:15:07.000000000 +0000
++++ src/goaccess.c	2020-03-27 11:28:44.797783056 +0000
+@@ -44,6 +44,7 @@
+ 
+ #include <fcntl.h>
+ #include <pthread.h>
++#include <pwd.h>
+ #include <signal.h>
+ #include <stdint.h>
+ #include <stdio.h>
+@@ -205,6 +206,27 @@
+   free (gwsreader);
+ }
+ 
++/* Drop permissions to the user specified. */
++static void
++drop_permissions(void)
++{
++  struct passwd *pw;
++
++  errno = 0;
++  if ((pw = getpwnam(conf.username)) == NULL) {
++    if (errno == 0)
++      FATAL ("No such user %s", conf.username);
++    FATAL ("Unable to retreive user %s: %s", conf.username, strerror (errno));
++  }
++
++  if (setgroups (1, &pw->pw_gid) == -1)
++    FATAL ("setgroups: %s", strerror (errno));
++  if (setgid (pw->pw_gid) == -1)
++    FATAL ("setgid: %s", strerror (errno));
++  if (setuid (pw->pw_uid) == -1)
++    FATAL ("setuid: %s", strerror (errno));
++}
++
+ /* Open the pidfile whose name is specified in the given path and write
+  * the daemonized given pid. */
+ static void
+@@ -1369,7 +1391,11 @@
+ static void
+ initializer (void)
+ {
+-  /* initialize modules and set first */
++  /* drop permissions right away */
++  if (conf.username)
++    drop_permissions ();
++
++  /* then initialize modules and set */
+   gscroll.current = init_modules ();
+   /* setup to use the current locale */
+   set_locale ();
