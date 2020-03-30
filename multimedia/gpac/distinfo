@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2020/01/10 21:16:40 joerg Exp $
+$NetBSD: distinfo,v 1.16 2020/03/30 19:30:28 joerg Exp $
 
 SHA1 (gpac-0.8.0.tar.gz) = eb9254a64210992d0fab44dbebe4dd6b9ed169dc
 RMD160 (gpac-0.8.0.tar.gz) = a73c08fc4be9b43e9f2173f0a3125a7734347ef6
@@ -6,4 +6,3 @@ SHA512 (gpac-0.8.0.tar.gz) = 47771b9f5143f103993d9c2ebbd0fccdca5f34b9a6ea08febc9
 Size (gpac-0.8.0.tar.gz) = 11405239 bytes
 SHA1 (patch-Makefile) = 9f6cf58175ab3d95cbcf1c9fdd7b024432f6d08c
 SHA1 (patch-configure) = b76d24b134b7e10c613411f08d8374f0e0202599
-SHA1 (patch-src_utils_downloader.c) = 3c55df3e695abb417fa457c71b388eba2df2771f
