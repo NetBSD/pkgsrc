@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:41:41 riastradh Exp $
+
+SHA1 (uglymemo-0.1.0.1.tar.gz) = a917ff2129478755da6fd929fe377d0ded8ba448
+RMD160 (uglymemo-0.1.0.1.tar.gz) = e3e34a9627e26af64abf97a72bc306db216bd4e9
+SHA512 (uglymemo-0.1.0.1.tar.gz) = 1cebcab9c3b01bef0ed89d363a248369dac329ba7bb0b23a7d84507f94a402f3b5982193c99d0179160c9fe14cb3cd7bd81551bb91f634a4a21d0bf625f8ed7c
+Size (uglymemo-0.1.0.1.tar.gz) = 887 bytes
