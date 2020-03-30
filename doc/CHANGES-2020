@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1994 2020/03/30 19:19:55 cheusov Exp $
+$NetBSD: CHANGES-2020,v 1.1995 2020/03/30 19:23:12 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2704,3 +2704,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/qbittorrent to 4.2.2 [adam 2020-03-30]
 	Updated devel/libmaa to 1.4.6 [cheusov 2020-03-30]
 	Updated devel/libmaa to 1.4.6 [cheusov 2020-03-30]
+	Updated parallel/paexec to 1.1.2 [cheusov 2020-03-30]
