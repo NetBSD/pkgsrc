@@ -1,19 +1,10 @@
-$NetBSD: patch-configure,v 1.3 2018/10/07 23:21:27 ryoon Exp $
+$NetBSD: patch-configure,v 1.4 2020/03/30 23:20:21 gutteridge Exp $
 
-Remove bash(1)ism(?).
+Fix compiler flag settings.
 
 --- configure.orig	2018-07-27 17:32:48.000000000 +0000
 +++ configure
-@@ -17635,7 +17635,7 @@ else
- fi
- 
- 
--if test "x$enable_TLS" == xyes
-+if test "x$enable_TLS" = xyes
- then
- 
-   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for thread local storage (TLS) class" >&5
-@@ -17710,8 +17710,8 @@ then
+@@ -17808,8 +17808,8 @@ then
  	# But not the NetBSD sh, so use sed instead.
  	# CFLAGS="${CFLAGS//-O[[2-9]]} -g"
  	# CXXFLAGS="${CXXFLAGS//-O[[2-9]]} -g"

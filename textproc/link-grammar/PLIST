@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/06/07 00:02:45 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/03/30 23:20:20 gutteridge Exp $
 bin/link-parser
 include/link-grammar/dict-api.h
 include/link-grammar/dict-structures.h
@@ -71,6 +71,7 @@ share/link-grammar/demo-sql/4.0.regex
 share/link-grammar/demo-sql/dict.db
 share/link-grammar/en/4.0.affix
 share/link-grammar/en/4.0.constituent-knowledge
+share/link-grammar/en/4.0.dialect
 share/link-grammar/en/4.0.dict
 share/link-grammar/en/4.0.dict.m4
 share/link-grammar/en/4.0.knowledge
@@ -85,6 +86,10 @@ share/link-grammar/en/words/entities.gods
 share/link-grammar/en/words/entities.locations.sing
 share/link-grammar/en/words/entities.national.sing
 share/link-grammar/en/words/entities.organizations.sing
+share/link-grammar/en/words/entities.people
+share/link-grammar/en/words/entities.people.vowel
+share/link-grammar/en/words/entities.prof
+share/link-grammar/en/words/entities.prof.vowel
 share/link-grammar/en/words/entities.us-states.sing
 share/link-grammar/en/words/measures.1
 share/link-grammar/en/words/measures.2
