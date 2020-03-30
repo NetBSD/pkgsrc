@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1962 2020/03/29 05:22:29 taca Exp $
+$NetBSD: CHANGES-2020,v 1.1963 2020/03/30 07:55:35 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2641,3 +2641,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/libp11 to 0.4.4 [manu 2020-03-29]
 	Updated security/pam-p11 to 0.3.1 [manu 2020-03-29]
 	Updated textproc/ruby-nokogiri to 1.10.9nb1 [taca 2020-03-29]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2020Q1 branch [jperkin 2020-03-30]
