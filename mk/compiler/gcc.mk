@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.209 2020/03/14 10:00:37 nia Exp $
+# $NetBSD: gcc.mk,v 1.210 2020/03/30 09:39:24 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -1046,14 +1046,7 @@ ${_GCC_${_var_}}:
 .endfor
 
 # On systems without a Fortran compiler, pull one in if needed.
-# The default is g95 as it supports a modern dialect, but it can
-# be overridden in mk.conf to use only f2c.
-#
-.if !empty(MACHINE_ARCH:Maarch64*)
 PKGSRC_FORTRAN?=gfortran
-.else
-PKGSRC_FORTRAN?=g95
-.endif
 
 _GCC_NEEDS_A_FORTRAN=	no
 .if empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && !exists(${FCPATH})
