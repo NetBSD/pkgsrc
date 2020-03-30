@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1980 2020/03/30 12:51:19 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1981 2020/03/30 13:11:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2659,3 +2659,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/nsd to 4.3.0 [ryoon 2020-03-30]
 	Updated net/knot to 2.9.3 [ryoon 2020-03-30]
 	Updated devel/glibmm to 2.64.2 [ryoon 2020-03-30]
+	Updated devel/py-wcwidth to 0.1.9 [adam 2020-03-30]
+	Updated devel/py-prompt_toolkit2 to 3.0.5 [adam 2020-03-30]
+	Updated databases/py-peewee to 3.13.2 [adam 2020-03-30]
+	Updated textproc/py-ujson to 2.0.3 [adam 2020-03-30]
