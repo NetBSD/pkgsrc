@@ -1,0 +1,19 @@
+Haskell-Decimal
+===============
+
+Fixed-precision decimal numbers, where the precision is carried with
+the numbers at run-time.
+
+The `Decimal` type is mainly intended for doing financial arithmetic
+where the number of decimal places may not be known at compile time
+(e.g. for a program that handles both Yen and Dollars) and the
+application must not drop pennies on the floor.  For instance if you
+have to divide $10 between three people then one of them has to get
+$3.34.
+
+The number of decimal places in a value is represented as a Word8,
+allowing for up to 255 decimal places.  Functions preserve precision.
+Addition and subtraction operators return a result with the precision
+of the most precise argument, so 2.3 + 5.678 = 7.978. Multiplication
+and division use whatever precision is necessary up to 255 decimal
+places.
