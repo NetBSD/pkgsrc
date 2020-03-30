@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2020/03/22 21:35:37 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2020/03/30 19:22:57 cheusov Exp $
 #
 
-DISTNAME=	paexec-1.1.1
+DISTNAME=	paexec-1.1.2
 CATEGORIES=	parallel sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/}
 
