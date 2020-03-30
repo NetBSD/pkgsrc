@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:51:09 riastradh Exp $
+
+SHA1 (tasty-1.2.3.tar.gz) = 292e41bbc001921706ee414aef111385a26947dd
+RMD160 (tasty-1.2.3.tar.gz) = 927fb2ade24bd04a7165cce38504bb0de2c12ecd
+SHA512 (tasty-1.2.3.tar.gz) = 3922fc19c3ed74b1a39f8e6dc5fe243a955ab55d2e9d08d68b0932dfa0d16cb1efbc73bb2d793c1226d56986141494ce0490c9af70e7e612d07da64d5e2ee472
+Size (tasty-1.2.3.tar.gz) = 49148 bytes
