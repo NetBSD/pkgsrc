@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.24 2020/02/18 18:02:58 maya Exp $
+# $NetBSD: go-package.mk,v 1.25 2020/03/30 19:33:13 joerg Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -79,12 +79,12 @@ post-extract:
 
 .if !target(do-build)
 do-build:
-	${RUN} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_BUILD_PATTERN}
+	${RUN} ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_BUILD_PATTERN}
 .endif
 
 .if !target(do-test)
 do-test:
-	${RUN} ${PKGSRC_SETENV} ${TEST_ENV} ${MAKE_ENV} ${GO} test -v ${GO_BUILD_PATTERN}
+	${RUN} ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${TEST_ENV} ${MAKE_ENV} ${GO} test -v ${GO_BUILD_PATTERN}
 .endif
 
 .if !target(do-install)
