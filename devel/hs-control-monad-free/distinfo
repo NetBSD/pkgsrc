@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:36:06 riastradh Exp $
+
+SHA1 (control-monad-free-0.6.2.tar.gz) = 52b21b62ccfd3490a2e06c7801d266255bc12b94
+RMD160 (control-monad-free-0.6.2.tar.gz) = 3e47dbf702773082ca129348522ae1910d967836
+SHA512 (control-monad-free-0.6.2.tar.gz) = 32d39d7aed7fe355542cbc28d9a6a4de74cafe3e56ef10d1f327b063b1c9fb005332073ad5b623a620c9ac241ed5214e7d90e6fdfd4fb444b6162fc29a631006
+Size (control-monad-free-0.6.2.tar.gz) = 3665 bytes

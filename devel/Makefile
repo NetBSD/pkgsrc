@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3072 2020/03/30 16:35:08 riastradh Exp $
+# $NetBSD: Makefile,v 1.3073 2020/03/30 16:36:06 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -516,6 +516,7 @@ SUBDIR+=	hs-cmdargs
 SUBDIR+=	hs-code-page
 SUBDIR+=	hs-colour
 SUBDIR+=	hs-conduit
+SUBDIR+=	hs-control-monad-free
 SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-data-default
 SUBDIR+=	hs-data-default-class
