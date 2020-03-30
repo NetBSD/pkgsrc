@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/08/15 11:18:46 wiz Exp $
-
-	To use YoSucker, copy the file header-translation and a
-	sample config file from ${PREFIX}/share/examples/YoSucker
-	to ~/.yosucker and edit the config file.
-
-===========================================================================
