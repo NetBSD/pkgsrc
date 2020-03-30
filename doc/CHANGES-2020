@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1973 2020/03/30 10:06:49 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.1974 2020/03/30 10:10:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2652,3 +2652,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/oshu to 2.0.1 [nia 2020-03-30]
 	Updated chat/weechat to 2.8 [nia 2020-03-30]
 	Updated www/logswan to 2.1.4 [fcambus 2020-03-30]
+	Updated net/dnscrypt-proxy2 to 2.0.42 [nia 2020-03-30]
