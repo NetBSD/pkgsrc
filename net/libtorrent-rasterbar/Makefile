@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/20 11:57:43 nia Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/30 17:13:21 adam Exp $
 
 DISTNAME=	libtorrent-rasterbar-1.2.5
 CATEGORIES=	net
@@ -12,11 +12,10 @@ COMMENT=	Feature complete C++ bittorrent implementation
 LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
+USE_LANGUAGES=	c c++14
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
 
-# C++11
-GCC_REQD+=	4.7
+GCC_REQD+=	6 # c++14
 
 PKGCONFIG_OVERRIDE+=	libtorrent-rasterbar.pc.in
 
