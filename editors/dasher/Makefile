@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2020/03/26 12:20:01 nia Exp $
+# $NetBSD: Makefile,v 1.105 2020/03/30 19:31:19 joerg Exp $
 
 DISTNAME=	dasher-5.0.0.b20200225
 CATEGORIES=	editors gnome
@@ -16,8 +16,11 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-USE_TOOLS+=	autoreconf autoconf automake autopoint
+USE_TOOLS+=	autoreconf autoconf automake autopoint msgfmt
 USE_TOOLS+=	pkg-config
+
+# Requires --desktop in msgfmt.
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 pre-configure:
 	# tries to invoke git for something, probably fetching the ref
