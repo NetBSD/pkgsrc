@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2019/11/06 11:56:56 mrg Exp $
+# $NetBSD: Makefile,v 1.45 2020/03/30 19:30:03 joerg Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound5-${CSOUND_VERSION}
@@ -52,5 +52,6 @@ PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/fltk13/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
