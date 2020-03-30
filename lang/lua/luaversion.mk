@@ -1,4 +1,4 @@
-# $NetBSD: luaversion.mk,v 1.10 2018/07/23 22:22:42 rillig Exp $
+# $NetBSD: luaversion.mk,v 1.11 2020/03/30 09:38:05 nia Exp $
 
 # This file determins which Lua version is used as a dependency for
 # a package.
@@ -9,7 +9,7 @@
 #	The preferred lua version to use.
 #
 #	Possible values: 51 52 53
-#	Default: 52
+#	Default: 53
 #
 # === Infrastructure variables ===
 #
@@ -28,7 +28,7 @@
 #	listed later.
 #
 #	Possible values: 51 52 53
-#	Default: 52 53 51
+#	Default: 53 52 51
 #
 # LUA_VERSIONS_INCOMPATIBLE
 #	The Lua versions that the package *cannot* build against.
@@ -45,12 +45,12 @@
 # LUA_PKGPREFIX
 #	The prefix to use in PKGNAME for multiversion packages.
 #
-#	Example: lua51
+#	Example: lua53
 #
 # LUA_INCDIR
 #	Relative path to include files.
 #
-#	Example: include/lua-51
+#	Example: include/lua-5.3
 #
 # LUA_INTERPRETER
 #	Full path to Lua interpreter.
@@ -79,8 +79,8 @@ LUA_VERSION_REQD?= ${PKGNAME_OLD:C/(^.*-|^)lua([0-9][0-9])-.*/\2/}
 BUILD_DEFS+=		LUA_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	LUA_PACKAGE
 
-LUA_VERSION_DEFAULT?=	52
-LUA_VERSIONS_ACCEPTED?=	52 53 51
+LUA_VERSION_DEFAULT?=	53
+LUA_VERSIONS_ACCEPTED?=	53 52 51
 LUA_VERSIONS_INCOMPATIBLE?=# empty
 
 #
