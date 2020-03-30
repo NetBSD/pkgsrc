@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1965 2020/03/30 08:04:09 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.1966 2020/03/30 08:04:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2644,3 +2644,4 @@ Changes to the packages collection and infrastructure in 2020:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2020Q1 branch [jperkin 2020-03-30]
 	Updated devel/apenwarr-redo to 0.42a [schmonz 2020-03-30]
 	Updated net/ucspi-tcp6 to 1.11.4 [schmonz 2020-03-30]
+	Updated net/ucspi-ssl to 0.999.11.4 [schmonz 2020-03-30]
