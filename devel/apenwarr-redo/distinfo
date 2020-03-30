@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.4 2019/11/09 15:00:55 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2020/03/30 08:02:22 schmonz Exp $
 
-SHA1 (redo-0.42.tar.gz) = 86ccb48dd5356b6b2a595b270ca6ab845c9e51d1
-RMD160 (redo-0.42.tar.gz) = 176deeb21453759b315fc584c51078c8b26821d9
-SHA512 (redo-0.42.tar.gz) = 41b8417136f98d12edf3c62f027f2459ae3fb92f6c5464553d79c3a52344de57220a5c64b565118da0a99c1544eaa153a468ffcdcfbf7193c76c896bcd40e900
-Size (redo-0.42.tar.gz) = 194344 bytes
+SHA1 (redo-0.42a.tar.gz) = 5720e2fa9d7fc5bd1d36fcb9477c771f5fe1c229
+RMD160 (redo-0.42a.tar.gz) = 4c7fdfee85b036b827e33a04837fb49127d168a8
+SHA512 (redo-0.42a.tar.gz) = 8473bd8168c8e70b59a573560f8f725c8538061ee15eabeb63e467a363fa6869aa8088e8ce324726da4e2f7115e2ddf72cbb657703e9090f4f93c05f42bb67cb
+Size (redo-0.42a.tar.gz) = 195053 bytes
 SHA1 (patch-bin_all.do) = 761d24a832fa8067b6123fc02918460f579ffb5a
 SHA1 (patch-do) = 75b461b94d83f6145d161355aec59633bcad2c20
+SHA1 (patch-docs_md2man.py) = 7b2c08665a9777f713c584025b91e2b95c349eb9
 SHA1 (patch-redo_sh.do) = d6223596c83744d19f23d0026a321fc89102569d
+SHA1 (patch-redo_whichpython.do) = aadf1ccc48743980abc40840121a423bb07eb9dc
 SHA1 (patch-t_shelltest.od) = ca86299da6ae30b44a0e10cfe1a6ef30299dd0bc
