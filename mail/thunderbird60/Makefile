@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/08 16:50:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/30 19:46:01 joerg Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird60-${TB_VER}
@@ -76,7 +76,7 @@ post-configure:
 
 do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
-	cd ${WRKSRC}/${OBJDIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
+	${RUN}${_ULIMIT_CMD} cd ${WRKSRC}/${OBJDIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
 
 MOZILLA=	${PKGBASE}
 MOZILLA_NAME=	${PKGBASE}

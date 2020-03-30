@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2020/02/08 22:20:26 kamil Exp $
+$NetBSD: distinfo,v 1.3 2020/03/30 19:46:01 joerg Exp $
 
 SHA1 (thunderbird-52.9.1.source.tar.xz) = 9970d78084fe979f568ea00bf06b8e81a738e630
 RMD160 (thunderbird-52.9.1.source.tar.xz) = b3169a0154fa85648a98ba0d74f264abd224b323
@@ -24,6 +24,7 @@ SHA1 (patch-mozilla_build_pgo_profileserver.py) = 7a88be17fc5939aa2bc5af334dde32
 SHA1 (patch-mozilla_config_Makefile.in) = ef7b31712e3be7620dfaf548d4138c6b425eb2ca
 SHA1 (patch-mozilla_config_baseconfig.mk) = 92891a656cb83de0f5ff7f88d10579cdde0e1359
 SHA1 (patch-mozilla_config_external_moz.build) = bf05e5da3781087c4e588e0bdccaee05b9d02b24
+SHA1 (patch-mozilla_config_gcc-stl-wrapper.template.h) = be32e0e51992278915ffd7c205f9846ca353c89a
 SHA1 (patch-mozilla_config_stl__wrappers_ios) = f84d793f65bc7c7d1ffc7b542f846b394cf6de50
 SHA1 (patch-mozilla_config_stl__wrappers_ostream) = b36e7e199e355a0950e0db51c45fb34ce5ea2cc4
 SHA1 (patch-mozilla_config_system-headers) = 4665d754c8e498b3a34f877836287c7723ce930f
@@ -120,3 +121,4 @@ SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp) = 
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__asm__mips.S) = edbf6721ac8d74dc314f4c70fc5c74ebb6f44076
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__asm__sparc64__netbsd.s) = a04a46c13752d4c92bbba8b96d85cb430f3a4ac6
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__netbsd__m68k.cpp) = bb0d322a00c42e6ce1a5a931fecdcaf1b58109bc
+SHA1 (patch-mozilla_xpcom_typelib_xpt_xpt__arena.h) = 186cc580476fa80836d8ebd1e27de6c30377e89f
