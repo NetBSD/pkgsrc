@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2018/07/04 13:40:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2020/03/30 19:39:05 joerg Exp $
 
 DISTNAME=	dgd-1.2p4
 PKGNAME=	dgd-1.2.0.4
@@ -12,6 +12,8 @@ COMMENT=	Object-oriented programmable server
 LICENSE=	fee-based-commercial-use
 
 MAKE_JOBS_SAFE=		no
+
+USE_TOOLS+=	tar
 
 WRKSRC=			${WRKDIR}/dgd
 BUILD_DIRS=		src
