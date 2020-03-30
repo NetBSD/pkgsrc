@@ -1,0 +1,14 @@
+cassava is a library for parsing and encoding RFC 4180 compliant
+comma-separated values (CSV) data, which is a textual line-oriented
+format commonly used for exchanging tabular data.
+
+cassava's API includes support for
+
+- Index-based record-conversion
+- Name-based record-conversion
+- Typeclass directed conversion of fields and records
+- Built-in field-conversion instances for standard types
+- Customizable record-conversion instance derivation via GHC generics
+- Low-level bytestring builders (see "Data.Csv.Builder")
+- Incremental decoding and encoding API (see "Data.Csv.Incremental")
+- Streaming API for constant-space decoding (see "Data.Csv.Streaming")
