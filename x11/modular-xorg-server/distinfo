@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.100 2020/02/05 20:18:27 tnn Exp $
+$NetBSD: distinfo,v 1.101 2020/03/30 11:49:39 wiz Exp $
 
-SHA1 (xorg-server-1.20.7.tar.bz2) = 11d048431dc7582898628149ca3a758008b7d50b
-RMD160 (xorg-server-1.20.7.tar.bz2) = 6dbe9b9f29ff89a84276d76a269321baa706b23f
-SHA512 (xorg-server-1.20.7.tar.bz2) = c67612e379111c28c68941c0a660abf72be7669591b41ccaa3b3474c4540a03822a28d892831b12ce08bac6e5e7e33504c2d19ef2a0c2298f83bd083459f96f5
-Size (xorg-server-1.20.7.tar.bz2) = 6303005 bytes
+SHA1 (xorg-server-1.20.8.tar.bz2) = 077d081f912faf11c87ea1c9d0e29490961b0cd4
+RMD160 (xorg-server-1.20.8.tar.bz2) = 74f2a5ab7b482d2aded54fd412e9c0d673f270ba
+SHA512 (xorg-server-1.20.8.tar.bz2) = ab0ec0fcbf490c61558b9297f61b58fd2dedb676c78bef6431dc9166054743b43a0091b88a8b3f4e81d1f539909440ee7e188a298cefabe13ea89159639cd805
+Size (xorg-server-1.20.8.tar.bz2) = 6309640 bytes
 SHA1 (patch-configure) = ce2c732c3d8493445744a927a25b9cd3b45880f8
 SHA1 (patch-hw_xfree86_common_xf86AutoConfig.c) = 70adf85be9fc6222a335686e7e9e9f385aca02f9
 SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = f56f87336b2f669413ebb1005a2b64568a111f92
