@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1982 2020/03/30 13:55:19 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1983 2020/03/30 14:02:09 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2665,3 +2665,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-ujson to 2.0.3 [adam 2020-03-30]
 	Updated www/nghttp2 to 1.40.0nb3 [adam 2020-03-30]
 	Added www/nghttp2-tools version 1.40.0 [adam 2020-03-30]
+	Updated devel/libmaa to 1.4.5 [cheusov 2020-03-30]
