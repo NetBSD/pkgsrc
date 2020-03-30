@@ -1,0 +1,6 @@
+HUnit support for the Tasty test framework.
+
+Note that this package does not depend on HUnit but implements the
+relevant subset of its API.  The name is a legacy of the early
+versions of tasty-hunit and of test-framework-hunit, which did depend
+on HUnit.
