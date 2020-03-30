@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.545 2020/03/21 15:29:37 taca Exp $
+# $NetBSD: Makefile,v 1.546 2020/03/30 10:13:55 nia Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -7,7 +7,6 @@ SUBDIR+=	GNUMail
 SUBDIR+=	OSBF-lua
 SUBDIR+=	Pantomime
 SUBDIR+=	R-mime
-SUBDIR+=	YoSucker
 SUBDIR+=	akonadi
 SUBDIR+=	alpine
 SUBDIR+=	amavisd-milter
