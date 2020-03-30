@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1985 2020/03/30 14:03:20 cheusov Exp $
+$NetBSD: CHANGES-2020,v 1.1986 2020/03/30 14:04:25 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2668,3 +2668,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libmaa to 1.4.5 [cheusov 2020-03-30]
 	Updated textproc/dict-client to 1.13.0 [cheusov 2020-03-30]
 	Updated textproc/dict-server to 1.13.0 [cheusov 2020-03-30]
+	Updated textproc/colorit to 1.13.0 [cheusov 2020-03-30]
