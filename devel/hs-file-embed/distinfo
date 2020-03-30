@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:39:47 riastradh Exp $
+
+SHA1 (file-embed-0.0.11.2.tar.gz) = 9d8bbc68a0cf04583a2533732abe44c488125241
+RMD160 (file-embed-0.0.11.2.tar.gz) = 323712fa5d8f599251fd4c70fb07d42d05a06052
+SHA512 (file-embed-0.0.11.2.tar.gz) = 48ea61d41d1f0ac855a446c64830b15904f2a696c16a0abec4407d6f74b61d333ed4854d3c75c2402c7a834704c063793a6660ef4e4fdd0ce9195492a34f8361
+Size (file-embed-0.0.11.2.tar.gz) = 6493 bytes

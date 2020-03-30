@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3074 2020/03/30 16:36:47 riastradh Exp $
+# $NetBSD: Makefile,v 1.3075 2020/03/30 16:39:47 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -533,6 +533,7 @@ SUBDIR+=	hs-exceptions
 SUBDIR+=	hs-extensible-exceptions
 SUBDIR+=	hs-fail
 SUBDIR+=	hs-fgl
+SUBDIR+=	hs-file-embed
 SUBDIR+=	hs-fingertree
 SUBDIR+=	hs-fsnotify
 SUBDIR+=	hs-generic-deriving
