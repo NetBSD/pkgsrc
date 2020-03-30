@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2019/12/05 09:32:49 adam Exp $
+# $NetBSD: Makefile,v 1.29 2020/03/30 15:40:15 adam Exp $
 
-DISTNAME=	x265_3.2.1
+DISTNAME=	x265_3.3
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://bitbucket.org/multicoreware/x265/downloads/
-MASTER_SITES+=	http://download.videolan.org/videolan/x265/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.x265.org/
