@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:49:55 riastradh Exp $
+
+SHA1 (cassava-megaparsec-2.0.1.tar.gz) = 447bb239ae9708b506b6431364808e8a079b7319
+RMD160 (cassava-megaparsec-2.0.1.tar.gz) = f56e249712a437552ee9dd09e0ff5607359bfb0c
+SHA512 (cassava-megaparsec-2.0.1.tar.gz) = f4be4741871b14c3ded67fbb7c7c084c649b3a3f848650ab61a5a2d5462d86b66941794e201a10cd803c06876fc2a8bf40d2efdf49379ed08e8f11436dd89282
+Size (cassava-megaparsec-2.0.1.tar.gz) = 6131 bytes
