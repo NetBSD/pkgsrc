@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2019/12/07 18:29:31 sevan Exp $
+# $NetBSD: Makefile,v 1.35 2020/03/30 16:38:03 gdt Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	-https://hg.mozilla.org/mozilla-central/raw-file/491b05117886ece80b94c88f7107e6e12c1394be/security/nss/lib/ckfw/builtins/certdata.txt
 DISTFILES=	${CERTDATA}
