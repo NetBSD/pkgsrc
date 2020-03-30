@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1978 2020/03/30 12:30:57 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.1979 2020/03/30 12:43:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2657,3 +2657,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/bdf2psf to 1.195 [fcambus 2020-03-30]
 	Updated x11/modular-xorg-server to 1.20.8 [wiz 2020-03-30]
 	Updated net/nsd to 4.3.0 [ryoon 2020-03-30]
+	Updated net/knot to 2.9.3 [ryoon 2020-03-30]
