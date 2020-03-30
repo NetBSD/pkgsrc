@@ -1,4 +1,4 @@
-# $NetBSD: replace-localedir.mk,v 1.2 2006/08/03 16:49:48 salo Exp $
+# $NetBSD: replace-localedir.mk,v 1.3 2020/03/30 22:57:18 rillig Exp $
 
 ######################################################################
 ### replace-localedir (PRIVATE)
@@ -44,3 +44,4 @@ SUBST_SED.pkglocaledir=		\
 	-e 's|^\(itlocaledir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|'		\
 	-e 's|^\(gnulocaledir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|'		\
 	-e 's|\(-DLOCALEDIR[ 	]*=\)[^ 	]*\(\.\*\)|\1"\\"${_PKGLOCALEDIR}\\""\2|'
+SUBST_NOOP_OK.pkglocaledir=	yes
