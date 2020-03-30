@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.19 2017/07/06 00:58:35 gdt Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.20 2020/03/30 16:38:03 gdt Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -189,10 +189,11 @@ extract)
 	}'
 	;;
 install)
-	# Insist on e.g. /etc/openssl/certs existing.
+	# ${WHATEVER}/etc/openssl/certs should exist, but an
+	# install/removal cycle of mozilla-rootcerts-openssl might have removed it.
 	if [ ! -d $destdir$certdir ]; then
-		${ECHO} 1>&2 "ERROR: $destdir$certdir does not exist, aborting."
-		exit 1
+		${ECHO} 1>&2 "WARNING: $destdir$certdir does not exist.  Creating it."
+		${MKDIR} -p $destdir$certdir
 	fi
 	cd $destdir$certdir
 	if [ -n "`${LS}`" ]; then
