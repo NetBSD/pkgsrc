@@ -1,0 +1,5 @@
+Tabular provides a Haskell representation of two-dimensional data
+tables, the kind that you might find in a spreadsheet or a research
+report.  It also comes with some default rendering functions for
+turning those tables into ASCII art, simple text with an arbitrary
+delimiter, CSV, HTML, or LaTeX.
