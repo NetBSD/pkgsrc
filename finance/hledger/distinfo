@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:52:48 riastradh Exp $
+
+SHA1 (hledger-1.17.1.1.tar.gz) = c293bf7ef81d3423c13a2c8598d665d6214d5154
+RMD160 (hledger-1.17.1.1.tar.gz) = 6dbd8f4c43cc897830413acd9a7894d96683018d
+SHA512 (hledger-1.17.1.1.tar.gz) = 3d1d34a307ca4687c7740a591047c7e4cda2b8e779e675696cc8cdca3cb669f71f4e15a3c30cbef9ec0784d853b2103f14797e84ea7f2c3002134ab9c50bb3e5
+Size (hledger-1.17.1.1.tar.gz) = 1796221 bytes
