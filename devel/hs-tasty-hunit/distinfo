@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:51:43 riastradh Exp $
+
+SHA1 (tasty-hunit-0.10.0.2.tar.gz) = f3e97ad2b17627e1876e593fc725a892bddda8b4
+RMD160 (tasty-hunit-0.10.0.2.tar.gz) = f88e9b16d141e7412705bdb6334b47000c62255a
+SHA512 (tasty-hunit-0.10.0.2.tar.gz) = 82f70cd7813affeb756de89842a77070e688169eb35a386fbc4db36b65d8c960bca7b923294918e10b65281d3265820f9592398550af8af92027960d48562fd0
+Size (tasty-hunit-0.10.0.2.tar.gz) = 7403 bytes
