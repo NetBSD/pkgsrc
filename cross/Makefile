@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2020/03/30 16:26:40 riastradh Exp $
+# $NetBSD: Makefile,v 1.95 2020/03/30 16:29:53 riastradh Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -66,6 +66,7 @@ SUBDIR+=	or1k-none-elf-gcc
 SUBDIR+=	pdp11-aout-binutils
 SUBDIR+=	pdp11-aout-gcc
 SUBDIR+=	powerpc-none-elf-binutils
+SUBDIR+=	powerpc-none-elf-gcc
 SUBDIR+=	stlink
 SUBDIR+=	uisp
 SUBDIR+=	xtensa-esp32-elf-binutils
