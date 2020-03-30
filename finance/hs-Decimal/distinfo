@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:44:12 riastradh Exp $
+
+SHA1 (Decimal-0.5.1.tar.gz) = 9d744d8edf29bb4e453ec10d025278b1c8b32273
+RMD160 (Decimal-0.5.1.tar.gz) = ee2b2c1ce4b5dde1d8af70824b41601886983fbd
+SHA512 (Decimal-0.5.1.tar.gz) = 9ca3d6f1de96ef4eb6e5e2e3bd7002019ea41e7d404ad9f566926b84ed1ff4aa4a57aa071ef82f00764008469476b5ca196d7c43553885732663f7608c2995fb
+Size (Decimal-0.5.1.tar.gz) = 9553 bytes
