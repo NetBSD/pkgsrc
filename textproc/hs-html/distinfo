@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:46:10 riastradh Exp $
+
+SHA1 (html-1.0.1.2.tar.gz) = 3075f689b29d28229e09a3d2aefa2bfbb008d1da
+RMD160 (html-1.0.1.2.tar.gz) = 55d95a42c297c9c4b0b0c3bbd077a5ed59e48878
+SHA512 (html-1.0.1.2.tar.gz) = e7ce2be53ce4c7898aa8772c34d1469a90fcb5258ffec0cb1da544f334b6f13ecb73060dfec2284622be1156a2adbadec8b9cac5088c1ca9d84edfb50719b9e0
+Size (html-1.0.1.2.tar.gz) = 11021 bytes
