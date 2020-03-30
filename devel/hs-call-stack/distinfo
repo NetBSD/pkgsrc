@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:35:08 riastradh Exp $
+
+SHA1 (call-stack-0.2.0.tar.gz) = 6774070261de2eeecbca6579379fa792daef6558
+RMD160 (call-stack-0.2.0.tar.gz) = a86de38881165b79540100e93452809d10080f40
+SHA512 (call-stack-0.2.0.tar.gz) = c22862ca24906b07e258690da8c7f6fadf87f4216023cbe847e8ddf0c87548e5c353b5cd82c4748c6ef09604556884caafe5fdc1996be9d000d2db29aaef1537
+Size (call-stack-0.2.0.tar.gz) = 2565 bytes
