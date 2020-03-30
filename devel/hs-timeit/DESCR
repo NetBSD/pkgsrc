@@ -1,0 +1,2 @@
+A simple wrapper to show the used CPU time of monadic computation with
+an IO base.

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:41:04 riastradh Exp $
+
+SHA1 (timeit-2.0.tar.gz) = a6e1b208ca82394276c8cdd53383662a15c1f30b
+RMD160 (timeit-2.0.tar.gz) = ce48d274616b416d6dd60a135ffe7565915c315a
+SHA512 (timeit-2.0.tar.gz) = 3cbe554ddb17fbeb5f8be1f6459144921f8be4db0fa9571678980251ca397fca0700df61d0e5bd8466b0b2cdcedac8473ac53debbd9b4e9c239ebb37bec2845b
+Size (timeit-2.0.tar.gz) = 2117 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3076 2020/03/30 16:40:25 riastradh Exp $
+# $NetBSD: Makefile,v 1.3077 2020/03/30 16:41:04 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -571,6 +571,7 @@ SUBDIR+=	hs-tagged
 SUBDIR+=	hs-terminal-size
 SUBDIR+=	hs-tf-random
 SUBDIR+=	hs-th-abstraction
+SUBDIR+=	hs-timeit
 SUBDIR+=	hs-transformers-base
 SUBDIR+=	hs-transformers-compat
 SUBDIR+=	hs-uniplate
