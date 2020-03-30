@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2015/11/04 01:59:27 agc Exp $
+$NetBSD: distinfo,v 1.24 2020/03/30 13:38:58 cheusov Exp $
 
-SHA1 (dictd-1.12.1.tar.gz) = 5870cc0f727f89091d0ae8a054b37e891f4cf145
-RMD160 (dictd-1.12.1.tar.gz) = 6c8b2ea5a8afa26fde019dea686d52ab5007ea17
-SHA512 (dictd-1.12.1.tar.gz) = 51bceba36f9e34ffcbbf42a6235aab6097fe66ba8ed086ea60d0df8b7daf91c6449fdf7c5605150c77035d98029053233db106f9188786b30e02ecd61748209b
-Size (dictd-1.12.1.tar.gz) = 423870 bytes
+SHA1 (dictd-1.13.0.tar.gz) = 3c2e09ec241c20633eeeddeefc0bd51e5419f02b
+RMD160 (dictd-1.13.0.tar.gz) = ae046dc173773ebee2d7d4aecf6ef58bcdbc3931
+SHA512 (dictd-1.13.0.tar.gz) = 86871aaf34a182d1d7aac1a1282d4a75f2d7c112c762e92f303924c324f665dae75c51e7ca91e3cc1dde2053ad8e2d1fd50a76934a5f84ff70975aa858e26439
+Size (dictd-1.13.0.tar.gz) = 395455 bytes
