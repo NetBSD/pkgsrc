@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1977 2020/03/30 11:49:50 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1978 2020/03/30 12:30:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2656,3 +2656,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed mail/YoSucker [nia 2020-03-30]
 	Updated converters/bdf2psf to 1.195 [fcambus 2020-03-30]
 	Updated x11/modular-xorg-server to 1.20.8 [wiz 2020-03-30]
+	Updated net/nsd to 4.3.0 [ryoon 2020-03-30]
