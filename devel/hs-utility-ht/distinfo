@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:42:57 riastradh Exp $
+
+SHA1 (utility-ht-0.0.15.tar.gz) = 08b3ee392d955f592ea3df007495e51813dc0981
+RMD160 (utility-ht-0.0.15.tar.gz) = e195193a5ace6a433cedcc93839d3ef6b1185619
+SHA512 (utility-ht-0.0.15.tar.gz) = 29be7ed40c4dc025df0997f7d8611b0f86125ba6a6aa3e4d65844f996f19f3d417b4b1dc7da58589a5259ddb9f473c71af0fc32891105a364a3dbc7f05671905
+Size (utility-ht-0.0.15.tar.gz) = 26280 bytes

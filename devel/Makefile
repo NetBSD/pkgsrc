@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3079 2020/03/30 16:42:18 riastradh Exp $
+# $NetBSD: Makefile,v 1.3080 2020/03/30 16:42:56 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -581,6 +581,7 @@ SUBDIR+=	hs-unix-compat
 SUBDIR+=	hs-unliftio-core
 SUBDIR+=	hs-unordered-containers
 SUBDIR+=	hs-utf8-string
+SUBDIR+=	hs-utility-ht
 SUBDIR+=	hs-uuid-types
 SUBDIR+=	hs-vault
 SUBDIR+=	hs-vector
