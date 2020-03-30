@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/26 17:31:44 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/03/30 19:02:32 jperkin Exp $
 
 DISTNAME=	mbuffer-20180625
 PKGREVISION=	1
@@ -27,6 +27,8 @@ INSTALL_MAKE_FLAGS+=	etcdir=${PREFIX}/share/examples/mbuffer
 INSTALLATION_DIRS+=	share/examples/mbuffer
 CONF_FILES+=		share/examples/mbuffer/mbuffer.rc \
 			${PKG_SYSCONFDIR}/mbuffer.rc
+
+CHECK_PORTABILITY_SKIP+=	configure.in
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
