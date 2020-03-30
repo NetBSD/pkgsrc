@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/06/03 11:53:53 fhajny Exp $
-${PLIST.tools}bin/deflatehd
-${PLIST.tools}bin/h2load
-${PLIST.tools}bin/inflatehd
-${PLIST.tools}bin/nghttp
-${PLIST.tools}bin/nghttpd
-${PLIST.tools}bin/nghttpx
+@comment $NetBSD: PLIST,v 1.2 2020/03/30 13:54:29 adam Exp $
 ${PLIST.asio}include/nghttp2/asio_http2.h
 ${PLIST.asio}include/nghttp2/asio_http2_client.h
 ${PLIST.asio}include/nghttp2/asio_http2_server.h
