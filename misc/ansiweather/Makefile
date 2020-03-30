@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2020/01/21 18:07:52 fcambus Exp $
+# $NetBSD: Makefile,v 1.13 2020/03/30 15:35:09 fcambus Exp $
 
 DISTNAME=	ansiweather-1.16.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	fcambus@NetBSD.org
 HOMEPAGE=	https://github.com/fcambus/ansiweather/
