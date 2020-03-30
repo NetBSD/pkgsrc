@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.18 2020/03/30 17:51:07 riastradh Exp $
+# $NetBSD: haskell.mk,v 1.19 2020/03/30 18:23:48 riastradh Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -249,6 +249,7 @@ do-build:
 		./Setup build ${PKG_VERBOSE:D-v} -j${_MAKE_JOBS_N}
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC:Q} && \
+		${SETENV} ${MAKE_ENV} \
 		./Setup haddock ${PKG_VERBOSE:D-v}
 .endif
 
