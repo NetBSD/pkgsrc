@@ -730,9 +730,9 @@ spamassassin-test-bayes-sql	Enable tests of the SQL module for Bayes data.
 spamassassin-test-prefork	Enable spamd prefork test (kills processes containing "spam child").
 spandsp			Enable spandsp support.
 speex			Enable speex support.
-spice			Enable Spice-Space support.
 spf			Enable Sender Policy Framework support.
 sphinx			Enable Sphinx full-text search.
+spice			Enable Spice-Space support.
 sqlite			Enable SQLite support.
 sqlite3			Enable SQLite3 support.
 squid-arp-acl		Enable use of ARP ACL lists (ether address).
@@ -767,6 +767,7 @@ storage-pgsql		Use PostgreSQL for the jabberd2 message store.
 storage-sqlite		Use SQLite for the jabberd2 message store.
 streamtuner-local	Enable local metadata support.
 streamtuner-xiph	Enable the Xiph plugin.
+subversion-plaintext-storage	Enable cleartest password storage.
 suexec			Enable suEXEC support in Apache web server.
 suhosin			Enable suhosin security enhancements for PHP.
 sun-jre-jce		Use unlimited strength cryptography extension.
@@ -852,9 +853,9 @@ webvmail		Install CGI script for voicemail.
 wide-curses		Enable wide curses support.
 winbind			Enable name-service switch daemon support using Windows Servers.
 wiredtiger		Enable WiredTiger support.
-wolfssl			Enable wolfSSL support.
 wmf			Enable WMF support.
 wnn4			Use wnn for Kana-to-Kanji conversion.
+wolfssl			Enable wolfSSL support.
 wxwidgets		Enable wxWidgets support.
 x11			Enable X11 support.
 x264			Enable x264 support.
