@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:34:14 riastradh Exp $
+
+SHA1 (bytestring-builder-0.10.8.2.0.tar.gz) = d1c4a04f5f11ec6259a599daab3bb2b15c179820
+RMD160 (bytestring-builder-0.10.8.2.0.tar.gz) = 116b1cf4ae5e751ae3e72f6d5ebbbe4d7d866dec
+SHA512 (bytestring-builder-0.10.8.2.0.tar.gz) = bb3c5bee6f05d7ce9213f490f65293d3eb2a59f2f7b4d6423a66e7e20e375ec957c8a030fc58296b59d5314a6fd4684e03fe625b8edad89429e503ada73367e0
+Size (bytestring-builder-0.10.8.2.0.tar.gz) = 47366 bytes
