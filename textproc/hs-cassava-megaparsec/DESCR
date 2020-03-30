@@ -1,0 +1,3 @@
+The package provides alternative parser for the Cassava package
+written with Megaparsec so you can get better error messages at
+expense of some speed.
