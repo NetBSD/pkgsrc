@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3071 2020/03/30 16:34:14 riastradh Exp $
+# $NetBSD: Makefile,v 1.3072 2020/03/30 16:35:08 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -510,6 +510,7 @@ SUBDIR+=	hs-basement
 SUBDIR+=	hs-bitarray
 SUBDIR+=	hs-blaze-builder
 SUBDIR+=	hs-bytestring-builder
+SUBDIR+=	hs-call-stack
 SUBDIR+=	hs-cereal
 SUBDIR+=	hs-cmdargs
 SUBDIR+=	hs-code-page
