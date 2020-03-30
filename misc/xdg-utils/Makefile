@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/03/12 17:23:12 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/03/30 19:04:21 plunky Exp $
 
 DISTNAME=	xdg-utils-1.1.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	https://portland.freedesktop.org/download/
 
@@ -30,6 +30,13 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Avoid hardcoded paths.
 SUBST_SED.paths+=	-e "s,/usr/local,${PREFIX},g"
 SUBST_SED.paths+=	-e "s,/etc,${PKG_SYSCONFDIR},g"
+
+SUBST_CLASSES+=		man
+SUBST_FILES.man=	scripts/man/xdg-*.1
+SUBST_STAGE.man=	post-build
+SUBST_MESSAGE.man=	Clean up manpages.
+SUBST_SED.man+=		-e 's,^[ 	]*,,'
+SUBST_SED.man+=		-e '/^$$/d'
 
 # "foo > /dev/null 2> /dev/null" gives "foo: not found" with NetBSD's sh
 REPLACE_BASH+=	scripts/xdg-*
