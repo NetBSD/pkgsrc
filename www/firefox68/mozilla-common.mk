@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.8 2020/03/18 01:33:58 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.9 2020/03/30 19:46:03 joerg Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -23,7 +23,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 gnu++14
-UNLIMIT_RESOURCES+=	datasize
+UNLIMIT_RESOURCES+=	datasize virtualsize
 
 TOOL_DEPENDS+=		cbindgen>=0.8.7:../../devel/cbindgen
 .if ${MACHINE_ARCH} == "sparc64"
@@ -63,8 +63,6 @@ CXXFLAGS+=		-march=i586
 # This is required for SSE2 code under i386.
 CXXFLAGS+=		-mstackrealign
 .endif
-
-CXXFLAGS+=		-D__HAVE_INLINE___ISINF
 
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
