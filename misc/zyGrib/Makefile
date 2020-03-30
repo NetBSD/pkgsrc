@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/03/10 22:10:37 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2020/03/30 19:38:34 joerg Exp $
 #
 
 DISTNAME=	zyGrib-8.0.1
@@ -150,6 +150,10 @@ INSTALL_FILES+=		tr/zyGrib_pt.qm
 INSTALL_FILES+=		tr/zyGrib_pt.ts
 INSTALL_FILES+=		tr/zyGrib_ru.qm
 INSTALL_FILES+=		tr/zyGrib_ru.ts
+
+.include "../../mk/bsd.prefs.mk"
+
+CXXFLAGS+=	-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H
 
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake "QMAKE_RPATHDIR+=${QWT_DIR}/lib" "QMAKE_LIBDIR+=${QWT_DIR}/lib"
