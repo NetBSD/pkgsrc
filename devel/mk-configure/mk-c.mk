@@ -1,11 +1,11 @@
-# $NetBSD: mk-c.mk,v 1.8 2019/11/03 10:39:20 rillig Exp $
+# $NetBSD: mk-c.mk,v 1.9 2020/03/30 14:10:55 cheusov Exp $
 
 TOOL_DEPENDS+=	${BUILDLINK_API_DEPENDS.mk-c}:${BUILDLINK_PKGSRCDIR.mk-c}
 
 MAKE_PROGRAM=		${PREFIX}/bin/mkcmake
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} INSTALL=${INSTALL:Q}
 MAKE_ENV+=		SYSCONFDIR=${PKG_SYSCONFDIR}
-CONFIGURE_TARGET?=	errorcheck
+CONFIGURE_TARGET?=	configure
 
 do-configure:
 	set -e; cd ${WRKSRC}; \

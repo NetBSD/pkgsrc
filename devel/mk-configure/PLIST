@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/02/19 22:03:17 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/03/30 14:10:55 cheusov Exp $
 bin/mkc_check_compiler
 bin/mkc_check_custom
 bin/mkc_check_decl
@@ -34,6 +34,7 @@ share/doc/mk-configure/NOTES
 share/doc/mk-configure/README.md
 share/doc/mk-configure/TODO
 share/doc/mk-configure/presentation.pdf
+share/examples/mk-configure/Makefile
 share/examples/mk-configure/Makefile.inc
 share/examples/mk-configure/README
 share/examples/mk-configure/check_compiler_opts/Makefile
@@ -447,6 +448,8 @@ share/mk-configure/builtins/prog_flex
 share/mk-configure/builtins/prog_gawk
 share/mk-configure/builtins/prog_gm4
 share/mk-configure/builtins/prog_gmake
+share/mk-configure/builtins/prog_mkdep
+share/mk-configure/builtins/prog_nbmkdep
 share/mk-configure/features/_mkcfake.c
 share/mk-configure/features/err/err.c
 share/mk-configure/features/fgetln/fgetln.c
@@ -523,6 +526,7 @@ share/mk-configure/mk/mkc_imp.f_strndup.mk
 share/mk-configure/mk/mkc_imp.f_warn.mk
 share/mk-configure/mk/mkc_imp.files.mk
 share/mk-configure/mk/mkc_imp.final.mk
+share/mk-configure/mk/mkc_imp.foreign_autotools.mk
 share/mk-configure/mk/mkc_imp.help.mk
 share/mk-configure/mk/mkc_imp.inc.mk
 share/mk-configure/mk/mkc_imp.info.mk
