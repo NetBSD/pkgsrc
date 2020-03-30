@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:15 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/03/30 23:20:20 gutteridge Exp $
 
-DISTNAME=	link-grammar-5.6.2
+DISTNAME=	link-grammar-5.8.0
 CATEGORIES=	textproc
 MASTER_SITES=	https://www.abisource.com/downloads/link-grammar/${PKGVERSION_NOREV}/
 
