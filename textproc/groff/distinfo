@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2019/04/01 16:48:37 ryoon Exp $
+$NetBSD: distinfo,v 1.27 2020/03/30 19:32:24 joerg Exp $
 
 SHA1 (groff-1.22.4.tar.gz) = 2ce4ab107e3fab1414fef2c5b5312f562a4e4d35
 RMD160 (groff-1.22.4.tar.gz) = 6f0555695ac882a8e1f925cce22f7e3d267188cb
@@ -6,4 +6,15 @@ SHA512 (groff-1.22.4.tar.gz) = 1c42d3cd71efaf067b5850945d9097fa1f0fadd5e2b6ba744
 Size (groff-1.22.4.tar.gz) = 4137480 bytes
 SHA1 (patch-aa) = 98c10a0ef1854ee4baca00c702746a948f5a0fe2
 SHA1 (patch-configure) = b4193e18b1e7159f5dfbc96f9a84787f6648f616
+SHA1 (patch-src_libs_libgroff_assert.cpp) = 3b9ee7280af1235e942573e4c83eb228c353af99
+SHA1 (patch-src_libs_libgroff_curtime.cpp) = f95f01086161a71a1a55cd2a0ccd053d41009840
+SHA1 (patch-src_libs_libgroff_device.cpp) = d86cfa3f6c730b25c888df7d3cfceb051839094e
+SHA1 (patch-src_libs_libgroff_error.cpp) = 96102d8457584744242ecef920e9e66c84564716
+SHA1 (patch-src_libs_libgroff_fatal.cpp) = 20d998e05cfbac6c0788583b14927f20f50fc4f1
+SHA1 (patch-src_libs_libgroff_string.cpp) = f10e617475d6a5d0e4aa554ce47b6834af844d87
+SHA1 (patch-src_libs_libgroff_strsave.cpp) = 3274b38b4cb1e747c42473090586aed743b970b9
 SHA1 (patch-src_libs_libgroff_tmpfile.cpp) = 3794a028dc7c569e5adea6b7b876c3ac085376ba
+SHA1 (patch-src_preproc_eqn_eqn.ypp) = 8249a560a1bbe9b80aade66929a96e4fc39f0af2
+SHA1 (patch-src_preproc_eqn_other.cpp) = 46f8cc23bdc06dc0341ba86d74ef1bdf5fd5d35e
+SHA1 (patch-src_preproc_eqn_text.cpp) = d5ce06f49a40a8e8586247beb9639261ec624a9c
+SHA1 (patch-src_preproc_pic_object.cpp) = 9e7bdfc5ad93857c92302cd7bb6da35e35f76459
