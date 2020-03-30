@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1989 2020/03/30 16:28:39 riastradh Exp $
+$NetBSD: CHANGES-2020,v 1.1990 2020/03/30 16:30:16 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2673,3 +2673,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/stellarium to 0.20.0 [adam 2020-03-30]
 	Updated multimedia/x265 to 3.3 [adam 2020-03-30]
 	Added cross/powerpc-none-elf-binutils version 2.32 [riastradh 2020-03-30]
+	Added cross/powerpc-none-elf-gcc version 8.3.0 [riastradh 2020-03-30]
