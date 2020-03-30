@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1990 2020/03/30 16:30:16 riastradh Exp $
+$NetBSD: CHANGES-2020,v 1.1991 2020/03/30 16:53:13 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2674,3 +2674,30 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/x265 to 3.3 [adam 2020-03-30]
 	Added cross/powerpc-none-elf-binutils version 2.32 [riastradh 2020-03-30]
 	Added cross/powerpc-none-elf-gcc version 8.3.0 [riastradh 2020-03-30]
+	Added devel/hs-Only version 0.1 [riastradh 2020-03-30]
+	Added devel/hs-base-compat-batteries version 0.11.0 [riastradh 2020-03-30]
+	Added devel/hs-bytestring-builder version 0.10.8.2.0 [riastradh 2020-03-30]
+	Added devel/hs-call-stack version 0.2.0 [riastradh 2020-03-30]
+	Added devel/hs-control-monad-free version 0.6.2 [riastradh 2020-03-30]
+	Added devel/hs-fgl version 5.7.0.2 [riastradh 2020-03-30]
+	Added devel/hs-file-embed version 0.0.11.2 [riastradh 2020-03-30]
+	Added devel/hs-hashtables version 1.2.3.4 [riastradh 2020-03-30]
+	Added devel/hs-timeit version 2.0 [riastradh 2020-03-30]
+	Added devel/hs-uglymemo version 0.1.0.1 [riastradh 2020-03-30]
+	Added devel/hs-unbounded-delays version 0.1.1.0 [riastradh 2020-03-30]
+	Added devel/hs-wizards version 1.0.3 [riastradh 2020-03-30]
+	Added finance/hs-Decimal version 0.5.1 [riastradh 2020-03-30]
+	Added textproc/hs-Diff version 0.4.0 [riastradh 2020-03-30]
+	Added textproc/hs-csv version 0.1.2 [riastradh 2020-03-30]
+	Added textproc/hs-html version 1.0.1.2 [riastradh 2020-03-30]
+	Added devel/hs-tabular version 0.2.2.7 [riastradh 2020-03-30]
+	Added textproc/hs-lucid version 2.9.12 [riastradh 2020-03-30]
+	Added textproc/hs-shakespeare version 2.0.24 [riastradh 2020-03-30]
+	Added textproc/hs-text-short version 0.1.3 [riastradh 2020-03-30]
+	Added textproc/hs-cassava version 0.5.2.0 [riastradh 2020-03-30]
+	Added textproc/hs-cassava-megaparsec version 2.0.1 [riastradh 2020-03-30]
+	Added textproc/hs-wcwidth version 0.0.2 [riastradh 2020-03-30]
+	Added devel/hs-tasty version 1.2.3 [riastradh 2020-03-30]
+	Added devel/hs-tasty-hunit version 0.10.0.2 [riastradh 2020-03-30]
+	Added finance/hledger-lib version 1.17.1.1 [riastradh 2020-03-30]
+	Added finance/hledger version 1.17.1.1 [riastradh 2020-03-30]
