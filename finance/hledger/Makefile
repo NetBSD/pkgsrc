@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/30 16:52:48 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/30 17:52:39 riastradh Exp $
 
 .include "../../finance/hledger/common.mk"
 
@@ -22,3 +22,12 @@ USE_LANGUAGES=	# none
 .include "../../textproc/hs-lucid/buildlink3.mk"
 .include "../../textproc/hs-shakespeare/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+# XXX Kludge: We need to run this in a UTF-8 locale; otherwise GHC is
+# unhappy.  But we also need to make this override the C locale that
+# pkgsrc tries hard to ensure everything gets built in for the sake of
+# reproducibility, so it has to come _after_ bsd.pkg.mk.  This would be
+# C.UTF-8, but C.UTF-8 was only recently introduced into NetBSD, so
+# let's pick a locale that is pretty universally supported even if not
+# exactly appropriate for this.
+MAKE_ENV+=	LC_ALL=en_US.UTF-8
