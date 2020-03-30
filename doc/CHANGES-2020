@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1968 2020/03/30 09:15:06 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1969 2020/03/30 09:22:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2647,3 +2647,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ucspi-ssl to 0.999.11.4 [schmonz 2020-03-30]
 	Updated sysutils/vultr to 2.0.1 [schmonz 2020-03-30]
 	Added chat/srain version 1.0.1 [nia 2020-03-30]
+	Updated lang/janet to 1.8.0 [nia 2020-03-30]
