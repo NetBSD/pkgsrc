@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.7 2020/02/23 00:10:40 fox Exp $
+# $NetBSD: mozilla-common.mk,v 1.8 2020/03/30 19:46:02 joerg Exp $
 #
 # Common Makefile fragment for mozilla packages based on gecko 2.0.
 # derived from www/firefox
@@ -22,8 +22,6 @@ CXXFLAGS+=	-march=i586
 # This is required for SSE2 code under i386.
 CXXFLAGS+=	-mstackrealign
 .endif
-
-CXXFLAGS+=	-D__HAVE_INLINE___ISINF
 
 CHECK_PORTABILITY_SKIP+=	build-tools/scripts/l10n/release_repacks.sh
 CHECK_PORTABILITY_SKIP+=	mozilla-release/intl/icu/source/configure

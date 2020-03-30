@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2020/02/08 22:30:17 kamil Exp $
+$NetBSD: distinfo,v 1.5 2020/03/30 19:46:01 joerg Exp $
 
 SHA1 (thunderbird-60.9.1.source.tar.xz) = ce6b4e411e8f5da3e217122e9bf61553ce76b1a7
 RMD160 (thunderbird-60.9.1.source.tar.xz) = 9e771f2540e34d222cfb85f3ae9e108364881209
@@ -14,6 +14,7 @@ SHA1 (patch-comm_mail_app_nsMailApp.cpp) = 72cb57b9995fb180db3865136e3a53ffc7d5c
 SHA1 (patch-comm_mail_components_shell_nsMailGNOMEIntegration.cpp) = e0ed20894e1343fc06816e78193a0cee39aeb4b7
 SHA1 (patch-comm_mail_installer_package-manifest.in) = 14e8977f690e579a8caf73326248323615e04803
 SHA1 (patch-comm_mail_installer_removed-files.in) = bda8a8d12075fa5bf87d552035812f5cf485a393
+SHA1 (patch-config_gcc-stl-wrapper.template.h) = 78ad8c2fcf16d834d071554eb6682591902a96a6
 SHA1 (patch-dom_media_CubebUtils.cpp) = 76fc35167e603f96450f4bc17cd0d76157a22dd3
 SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp) = 23c0f9d4677c1a87ebeb12a9a822fd7a15f51215
 SHA1 (patch-gfx_gl_GLContextProviderGLX.cpp) = 4b85e9bf5a199b450c56790d5f14e6bdc7867c33
