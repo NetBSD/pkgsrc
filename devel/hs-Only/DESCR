@@ -1,0 +1,2 @@
+This package provides a canonical anonymous 1-tuple type missing from
+Haskell for attaching typeclass instances.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3068 2020/03/23 16:42:02 taca Exp $
+# $NetBSD: Makefile,v 1.3069 2020/03/30 16:32:25 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -494,6 +494,7 @@ SUBDIR+=	hoe
 SUBDIR+=	honggfuzz
 SUBDIR+=	hptools
 SUBDIR+=	hs-MonadRandom
+SUBDIR+=	hs-Only
 SUBDIR+=	hs-QuickCheck
 SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-ansi-terminal
