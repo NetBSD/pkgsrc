@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/24 07:03:32 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/30 19:34:21 joerg Exp $
 
 DISTNAME=	terraform-provider-aws-2.54.0
 CATEGORIES=	net
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.terraform.io/docs/providers/aws/
 COMMENT=	Terraform provider for Amazon Web Services
 LICENSE=	mpl-2.0
+
+UNLIMIT_RESOURCES=	datasize virtualsize
 
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/terraform-providers/${GITHUB_PROJECT}
