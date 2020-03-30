@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:43:35 riastradh Exp $
+
+SHA1 (wizards-1.0.3.tar.gz) = 29e9e914663151dade9fd3cf979167275ae3793b
+RMD160 (wizards-1.0.3.tar.gz) = 4562593266b075ed942e61aa01b7eb26003a23a1
+SHA512 (wizards-1.0.3.tar.gz) = 74289bce609954ecd2d16729b67f4655ebfa2b5211303c2c64c1a7636e78e2b1dc3823472be8d5851fc490d9ff80559bdfbfda59cc753b60cacc4dd1b512663c
+Size (wizards-1.0.3.tar.gz) = 8243 bytes
