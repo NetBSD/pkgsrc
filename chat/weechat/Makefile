@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2020/03/30 09:31:52 nia Exp $
+# $NetBSD: Makefile,v 1.113 2020/03/30 11:07:18 nia Exp $
 
 DISTNAME=	weechat-2.8
 CATEGORIES=	chat
@@ -35,12 +35,14 @@ LDFLAGS.SunOS+=		-lresolv
 
 BUILDLINK_TRANSFORM+=	rm:-Werror-implicit-function-declaration
 
-# use standard cmake mechanisms for detecting python
-# works better with pkgsrc.
-pre-configure:
-	${RM} -f ${WRKSRC}/cmake/FindPython.cmake
-
 .include "options.mk"
+
+pre-configure:
+.if !empty(PKG_OPTIONS:Mpython)
+	${LN} -sf ${BUILDLINK_DIR}/lib/pkgconfig/python-${PYVERSSUFFIX}.pc \
+		${BUILDLINK_DIR}/lib/pkgconfig/python3.pc
+.endif
+
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
