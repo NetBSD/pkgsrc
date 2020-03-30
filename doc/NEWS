@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.12 2019/04/24 13:19:31 maya Exp $
+# $NetBSD: NEWS,v 1.13 2020/03/30 10:04:27 nia Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,17 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+lua 5.3 default [nia 2020-03-30]
+	The default Lua version was switched to 5.3.
+	Since many packages specify a preferred Lua version, this is mainly
+	expected to affect users of Lua modules who were using the default
+	settings.
+
+gfortran default [nia 2020-03-30]
+	gfortran is now the default Fortran compiler instead of g95.
+	gfortran is expected to support more pkgsrc platforms and be
+	better at compiling newer Fortran code.
 
 python 3.7 default [maya 2019-04-24]
 	As Python 2.x versions are nearing end of life, we have switched
