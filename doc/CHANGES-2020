@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1983 2020/03/30 14:02:09 cheusov Exp $
+$NetBSD: CHANGES-2020,v 1.1984 2020/03/30 14:03:04 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2666,3 +2666,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/nghttp2 to 1.40.0nb3 [adam 2020-03-30]
 	Added www/nghttp2-tools version 1.40.0 [adam 2020-03-30]
 	Updated devel/libmaa to 1.4.5 [cheusov 2020-03-30]
+	Updated textproc/dict-client to 1.13.0 [cheusov 2020-03-30]
