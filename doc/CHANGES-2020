@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1997 2020/03/30 22:11:25 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.1998 2020/03/30 23:20:32 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2705,3 +2705,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libmaa to 1.4.6 [cheusov 2020-03-30]
 	Updated parallel/paexec to 1.1.2 [cheusov 2020-03-30]
 	Updated converters/bdf2sfd to 1.1.1 [fcambus 2020-03-30]
+	Updated textproc/link-grammar to 5.8.0 [gutteridge 2020-03-30]
