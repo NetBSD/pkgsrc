@@ -1,0 +1,7 @@
+Clear to write, read and edit DSL for writing HTML.
+
+- Names are consistent, and do not conflict with base or are keywords
+  (all have suffix _).
+
+- Same combinator can be used for attributes and elements
+  (e.g. style_).
