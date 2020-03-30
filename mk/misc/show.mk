@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.19 2020/03/20 16:39:03 rillig Exp $
+# $NetBSD: show.mk,v 1.20 2020/03/30 22:49:30 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -153,7 +153,7 @@ _LABEL._USE_VARS=	use
 _LABEL._DEF_VARS=	def
 
 show-all: .PHONY
-.for g in ${_VARGROUPS:O:u}
+.for g in ${"${.TARGETS:Mshow-all*}":?${_VARGROUPS:O:u}:}
 
 show-all: show-all-${g}
 
