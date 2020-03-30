@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1991 2020/03/30 16:53:13 riastradh Exp $
+$NetBSD: CHANGES-2020,v 1.1992 2020/03/30 17:17:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2701,3 +2701,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/hs-tasty-hunit version 0.10.0.2 [riastradh 2020-03-30]
 	Added finance/hledger-lib version 1.17.1.1 [riastradh 2020-03-30]
 	Added finance/hledger version 1.17.1.1 [riastradh 2020-03-30]
+	Updated net/qbittorrent to 4.2.2 [adam 2020-03-30]
