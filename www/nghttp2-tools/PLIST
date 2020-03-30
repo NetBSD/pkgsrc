@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/03/30 13:54:29 adam Exp $
+bin/deflatehd
+bin/h2load
+bin/inflatehd
+bin/nghttp
+bin/nghttpd
+bin/nghttpx
