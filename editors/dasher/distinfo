@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.33 2020/03/23 12:25:38 nia Exp $
+$NetBSD: distinfo,v 1.34 2020/03/30 19:31:19 joerg Exp $
 
 SHA1 (dasher-5.0.0.b20200225-e03b0dbf1f1132e83645ff78c92efd63fca5a812.tar.gz) = 327a9f268df919e9f123edc210115a6f5c089178
 RMD160 (dasher-5.0.0.b20200225-e03b0dbf1f1132e83645ff78c92efd63fca5a812.tar.gz) = 2dc783e860df87fe1b5a0c6cc6b9cd2b5c6fac20
 SHA512 (dasher-5.0.0.b20200225-e03b0dbf1f1132e83645ff78c92efd63fca5a812.tar.gz) = 4c21270c2608c80d9ecaddc21de9fe6fc840c7803c03b9c7d43b2844ff551df6c89031c934636ea05adaa05e5d467f32eb05ea6859a400866aeeb4d2c604868d
 Size (dasher-5.0.0.b20200225-e03b0dbf1f1132e83645ff78c92efd63fca5a812.tar.gz) = 18684114 bytes
+SHA1 (patch-Src_DasherCore_SocketInputBase.cpp) = 9ba2c64218fb3338a3de83292f9a0d494d753ea5
