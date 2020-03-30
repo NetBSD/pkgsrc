@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:44:48 riastradh Exp $
+
+SHA1 (Diff-0.4.0.tar.gz) = aec51ca97a0e5f18320122074f0bc04c631bd75f
+RMD160 (Diff-0.4.0.tar.gz) = e2df45050370e521c754500ba389532f58b716d8
+SHA512 (Diff-0.4.0.tar.gz) = 6a48a234d3140bc8c641cdf649a1f0daa39ab4de4064435dcbb15a9ea52994c967aadc8584f70aab89ef78e17ecc66b8ce3d8dd2157eb5b85277dfff80fd608c
+Size (Diff-0.4.0.tar.gz) = 8065 bytes

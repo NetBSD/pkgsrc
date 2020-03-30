@@ -1,0 +1,4 @@
+O(ND) diff algorithm in Haskell.
+
+Implementation of the standard diff algorithm, and utilities for
+pretty-printing.
