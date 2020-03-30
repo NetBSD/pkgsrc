@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1971 2020/03/30 09:29:21 nia Exp $
+$NetBSD: CHANGES-2020,v 1.1972 2020/03/30 09:32:12 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2650,3 +2650,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/janet to 1.8.0 [nia 2020-03-30]
 	Updated net/gallery-dl to 1.13.3 [leot 2020-03-30]
 	Updated games/oshu to 2.0.1 [nia 2020-03-30]
+	Updated chat/weechat to 2.8 [nia 2020-03-30]
