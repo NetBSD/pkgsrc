@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.34 2019/08/25 20:30:11 rillig Exp $
+# $NetBSD: help.awk,v 1.35 2020/03/30 06:21:52 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -38,7 +38,9 @@ BEGIN {
 function end_of_topic() {
 
 	if (comment_lines <= 2 || ignore_this_section) {
-		if (comment_lines <= 2) {
+		if (array_is_empty(keywords)) {
+			dprint("Ignoring section because of missing keywords.");
+		} else if (comment_lines <= 2) {
 			dprint("Ignoring section because of too small comment.");
 		} else {
 			dprint("Ignoring section because of a previous decision.");
@@ -101,9 +103,22 @@ function cleanup() {
 }
 
 function dprint(msg) {
-	if (debug) {
-		print(FILENAME ":" FNR ": " msg);
+	if (!debug) return;
+	print(FILENAME ":" FNR ": " msg);
+}
+
+function dprint_skip(word, reason) {
+	if (!debug) return;
+	print(FILENAME ":" FNR ": \"" word "\" is no keyword because " reason);
+}
+
+function array_is_empty(arr,   i, empty) {
+	empty = yes;
+	for (i in arr) {
+		empty = no;
+		break;
 	}
+	return empty;
 }
 
 {
@@ -127,7 +142,7 @@ function dprint(msg) {
 		w = ($i == toupper($i)) ? tolower($i) : $i;
 		sub(/,$/, "", w);
 		keywords[w] = yes;
-		dprint("Adding keyword " w);
+		dprint("Adding keyword \"" w "\"");
 	}
 	ignore_this_line = yes;
 	ignore_next_empty_line = yes;
@@ -167,29 +182,41 @@ NF >= 1 && !/^[\t.]/ && !/^#*$/ && !/^#\t\t/ {
 
 	if (w ~ /\+=$/) {
 		# Appending to a variable is usually not a definition.
+		dprint_skip(w, "it is appended to a variable");
 
 	} else if (w != toupper(w) && w != tolower(w)) {
 		# Words in mixed case are not taken as keywords. If you
 		# want them anyway, list them in a "Keywords:" line.
+		dprint_skip(w, "it is mixed case");
 
 	} else if (w !~ /^[A-Za-z][-0-9A-Z_a-z]*[0-9A-Za-z](:|\?=|=)?$/) {
 		# Keywords must consist only of letters, digits, hyphens
 		# and underscores; except for some trailing type specifier.
+		dprint_skip(w, "it contains special characters");
 
-	} else if (w == tolower(w) && !(w ~ /:$/)) {
+	} else if (NF > 2 && w == tolower(w)) {
+		dprint_skip(w, "it is lowercase and followed by other words");
+
+	} else if (/^#[ \t][ \t]/ && w == tolower(w)) {
+		dprint_skip(w, "it is indented by several spaces");
+
+	} else if (w == tolower(w) && w !~ /:$/ && $0 != "# " w) {
 		# Lower-case words (often make targets) must be followed
 		# by a colon to be recognized as keywords.
+		dprint_skip(w, "it is lowercase and not followed by a colon");
 
 	} else if (w == toupper(w) && w ~ /:$/) {
 		# Upper-case words ending with a colon are probably not
 		# make targets, so ignore them. Common cases are tags
 		# like FIXME and TODO.
+		dprint_skip(w, "it is uppercase and followed by a hyphen");
 
 	} else {
 		sub(/^#[ \t]*/, "", w);
 		sub(/(:|\?=|=)$/, "", w);
 		sub(/:$/, "", w);
 		if (w != "") {
+			if (debug) dprint("Adding keyword \"" w "\"");
 			keywords[w] = yes;
 		}
 	}
