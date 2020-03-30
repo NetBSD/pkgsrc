@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/03/22 21:23:10 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/30 19:34:55 joerg Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -33,7 +33,7 @@ CONFIG_SUB_OVERRIDE+=	make/autoconf/build-aux/autoconf-config.sub
 CONFIG_GUESS_OVERRIDE+=	make/autoconf/build-aux/autoconf-config.guess
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash gmake pax pkg-config unzip:run zip:run autoconf automake
-UNLIMIT_RESOURCES=	datasize stacksize virtualsize
+UNLIMIT_RESOURCES=	datasize stacksize virtualsize cputime
 
 BUILDLINK_PASSTHRU_DIRS+=	${ALT_BOOTDIR}
 
