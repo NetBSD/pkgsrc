@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.70 2018/01/11 08:54:37 alnsn Exp $
+# $NetBSD: fetch.mk,v 1.71 2020/03/30 22:44:26 rillig Exp $
 
 .if empty(INTERACTIVE_STAGE:Mfetch) && empty(FETCH_MESSAGE:U)
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -316,7 +316,7 @@ do-fetch-file: .USE
 		case $$d in						\
 		""|${DISTDIR})	continue ;;				\
 		esac;							\
-		file="$$d/${DIST_SUBDIR}/${.TARGET:T}";			\
+		file="$$d/${DIST_SUBDIR:D${DIST_SUBDIR}/}${.TARGET:T}";	\
 		if ${TEST} -f $$file; then				\
 			${ECHO} "Using $$file";				\
 			${RM} -f ${.TARGET};				\
