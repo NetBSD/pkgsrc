@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/03/27 04:13:57 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2020/03/30 19:36:03 joerg Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -13,6 +13,8 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell - 8.4 Release Series
 LICENSE=	modified-bsd
+
+UNLIMIT_RESOURCES=	datasize virtualsize
 
 # TODO: We should be using the alternatives framework.
 CONFLICTS+=	ghc-[0-9]*
@@ -209,7 +211,7 @@ BUILD_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
 # In a sandboxed build environment, we have to reach over to the
 # installed libraries themselves, since the symlinks compat80 adds
 # to the /usr tree can't be applied.
-ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX}/emul/netbsd/usr/lib
+ALL_ENV+=	LD_LIBRARY_PATH=${PREFIX:Q}/emul/netbsd/usr/lib:${FILESDIR}
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
