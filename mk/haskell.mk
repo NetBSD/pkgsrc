@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.16 2020/03/24 20:43:17 joerg Exp $
+# $NetBSD: haskell.mk,v 1.17 2020/03/30 16:51:53 riastradh Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -108,6 +108,7 @@ BUILD_DEFS+=	HASKELL_ENABLE_HADDOCK_DOCUMENTATION
 _VARGROUPS+=		haskell
 _DEF_VARS.haskell= \
 	HASKELL_OPTIMIZATION_LEVEL \
+	HASKELL_PKG_NAME \
 	_DISTBASE \
 	_DISTVERSION \
 	_GHC_BIN \
@@ -252,7 +253,8 @@ do-build:
 
 # Define install target. We need installed-pkg-config to be installed
 # for package registration (if any).
-_HASKELL_PKG_DESCR_DIR=		${PREFIX}/lib/${DISTNAME}/${_HASKELL_VERSION}
+HASKELL_PKG_NAME?=		${DISTNAME}
+_HASKELL_PKG_DESCR_DIR=		${PREFIX}/lib/${HASKELL_PKG_NAME}/${_HASKELL_VERSION}
 _HASKELL_PKG_DESCR_FILE=	${_HASKELL_PKG_DESCR_DIR}/package-description
 _HASKELL_PKG_ID_FILE=		${_HASKELL_PKG_DESCR_DIR}/package-id
 
