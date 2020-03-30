@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2020/03/23 17:15:56 roy Exp $
+$NetBSD: distinfo,v 1.18 2020/03/30 11:31:25 roy Exp $
 
 SHA1 (goaccess-1.3.tar.gz) = 24e889533e8d7a0fc533e7a0ad1bb303b2bb1af4
 RMD160 (goaccess-1.3.tar.gz) = b4744d1500a86ab56c94ce3612a8121b38cb3a37
@@ -10,3 +10,4 @@ SHA1 (patch-configure.ac) = 7cf4b8b57e2f335a81cfd81f929aafe7aa41aa79
 SHA1 (patch-src_error.c) = 522ea4010c86914715cdb40c1ac33045d4342daa
 SHA1 (patch-src_json.c) = ab8575a654299a5d08de635ca5bb71093419ca8e
 SHA1 (patch-src_tcbtdb.c) = fb0005899b08f74d0d3e6be4d5947a39fabdf278
+SHA1 (patch-username) = 6ac114fac0f86d9a3387edd93b40f12e4222be8f
