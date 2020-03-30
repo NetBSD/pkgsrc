@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1992 2020/03/30 17:17:58 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1993 2020/03/30 18:40:01 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2702,3 +2702,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added finance/hledger-lib version 1.17.1.1 [riastradh 2020-03-30]
 	Added finance/hledger version 1.17.1.1 [riastradh 2020-03-30]
 	Updated net/qbittorrent to 4.2.2 [adam 2020-03-30]
+	Updated devel/libmaa to 1.4.6 [cheusov 2020-03-30]
