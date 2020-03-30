@@ -1,10 +1,13 @@
-$NetBSD: patch-misc_terminfo.src,v 1.3 2020/03/28 07:55:55 wiz Exp $
+$NetBSD: patch-misc_terminfo.src,v 1.4 2020/03/30 08:53:42 jperkin Exp $
 
 Many terminal emulators still do not support the "rep" capability, so
 avoid it for maximum portability.  Patch from OmniOS, see also
 http://invisible-island.net/ncurses/ncurses.faq.html#xterm_generic
 or
 https://github.com/joyent/pkgsrc/issues/248
+
+Apply Debian patch for https://bugs.debian.org/933572, removing "rin"
+from screen-256color until tmux supports it correctly.
 
 --- misc/terminfo.src.orig	2020-01-19 01:09:38.000000000 +0000
 +++ misc/terminfo.src
@@ -17,3 +20,11 @@ https://github.com/joyent/pkgsrc/issues/248
  	use=ecma+strikeout, use=xterm+keypad, use=vt420+lrmm,
  	use=xterm+sm+1006, use=xterm+pcfkeys, use=xterm+tmux,
  	use=xterm-basic,
+@@ -7346,6 +7346,7 @@ screen-16color-bce-s|GNU Screen with 16 
+ 
+ screen-256color|GNU Screen with 256 colors,
+ 	use=xterm+256setaf, use=screen4,
++	rin@,
+ 
+ screen-256color-s|GNU Screen with 256 colors and status line,
+ 	use=xterm+256setaf, use=screen-s,
