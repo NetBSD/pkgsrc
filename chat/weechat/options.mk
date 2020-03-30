@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2019/12/06 15:39:06 jperkin Exp $
+# $NetBSD: options.mk,v 1.24 2020/03/30 11:07:18 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
 # mk/curses will handle wide-curses
@@ -18,12 +18,6 @@ PLIST_VARS+=		lua plugin python perl ruby
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/extension.mk"
 CMAKE_ARGS+=	-DENABLE_PYTHON=ON
-CMAKE_ARGS+=	-DPython_EXECUTABLE=${PYTHONBIN}
-.  if ${OPSYS} == "Darwin"
-CMAKE_ARGS+=	-DPYTHON_LIBRARIES=${PREFIX}/lib/libpython${PYVERSSUFFIX}.dylib
-.  else
-CMAKE_ARGS+=	-DPYTHON_LIBRARIES=${PREFIX}/lib/libpython${PYVERSSUFFIX}.so
-.  endif
 PLIST.python=	yes
 .else
 CMAKE_ARGS+=	-DENABLE_PYTHON=OFF
