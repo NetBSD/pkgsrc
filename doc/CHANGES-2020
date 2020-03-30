@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1981 2020/03/30 13:11:40 adam Exp $
+$NetBSD: CHANGES-2020,v 1.1982 2020/03/30 13:55:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2663,3 +2663,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-prompt_toolkit2 to 3.0.5 [adam 2020-03-30]
 	Updated databases/py-peewee to 3.13.2 [adam 2020-03-30]
 	Updated textproc/py-ujson to 2.0.3 [adam 2020-03-30]
+	Updated www/nghttp2 to 1.40.0nb3 [adam 2020-03-30]
+	Added www/nghttp2-tools version 1.40.0 [adam 2020-03-30]
