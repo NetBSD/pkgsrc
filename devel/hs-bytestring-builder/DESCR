@@ -1,0 +1,5 @@
+This is the bytestring builder that is debuting in
+bytestring-0.10.4.0, which should be shipping with GHC 7.8, probably
+in late 2013.  This builder has several nice simplifications and
+improvements, and more out-of-box functionality than the older
+blaze-builder.
