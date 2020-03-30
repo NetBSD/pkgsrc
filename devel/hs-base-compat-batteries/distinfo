@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 16:33:17 riastradh Exp $
+
+SHA1 (base-compat-batteries-0.11.0.tar.gz) = c96de7211534b2411f096ef30264608432845234
+RMD160 (base-compat-batteries-0.11.0.tar.gz) = 286477e6dfa96c185e261a1db59810f21a8d6e55
+SHA512 (base-compat-batteries-0.11.0.tar.gz) = 40b9a4ad696df743e9833120f594077653533d05ee66a03d7a79072505d226d578ad3226304b527556384cc30a4e4ab84898686acc3188e585859ae6b089c177
+Size (base-compat-batteries-0.11.0.tar.gz) = 16591 bytes
