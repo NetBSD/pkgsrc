@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/03/30 09:11:53 nia Exp $
+
+SHA1 (srain-1.0.1.tar.gz) = 8b1b4628e0a404defe74f1656f9877e047f652a4
+RMD160 (srain-1.0.1.tar.gz) = 21c2eccaeffc4edc5191ea1c3e9702bb486e434b
+SHA512 (srain-1.0.1.tar.gz) = e6a878f804b8188affb088dd113aab7fc28c03ff1c46c28f9dabe6559d0a4d182f91a10a9d56e021bbee294bb4048ffc5e8209d3661fba0e6cdf37d4bf30280e
+Size (srain-1.0.1.tar.gz) = 938233 bytes
+SHA1 (patch-data_Makefile) = 9330228df6a9648c332417a2658417a8ed445499

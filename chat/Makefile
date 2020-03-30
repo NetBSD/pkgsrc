@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2020/03/13 11:57:37 nia Exp $
+# $NetBSD: Makefile,v 1.245 2020/03/30 09:11:53 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -115,6 +115,7 @@ SUBDIR+=	silc-server
 SUBDIR+=	sirc
 SUBDIR+=	skypeweb-purple
 SUBDIR+=	spectrum
+SUBDIR+=	srain
 SUBDIR+=	swift
 SUBDIR+=	telegram-purple
 SUBDIR+=	telepathy-farstream
