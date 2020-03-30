@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2020/03/17 12:49:29 nia Exp $
+# $NetBSD: options.mk,v 1.17 2020/03/30 10:18:48 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL2
 PKG_OPTIONS_REQUIRED_GROUPS=	gl
@@ -89,7 +89,6 @@ SUBST_SED.vc+=		-e "s;/opt/vc;${PREFIX};g"
 
 .if !empty(PKG_OPTIONS:Mwayland)
 CONFIGURE_ARGS+=	--enable-video-wayland
-CONFIGURE_ARGS+=	--disable-wayland-shared
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
