@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2020/03/08 16:49:27 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2020/03/30 19:37:47 joerg Exp $
 
 DISTNAME=	mame-0.219
 PKGREVISION=	1
@@ -23,7 +23,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 USE_LANGUAGES=		c99 c++
 GCC_REQD+=		7
 USE_TOOLS+=		bsdtar gmake pkg-config
-UNLIMIT_RESOURCES+=	datasize
+UNLIMIT_RESOURCES+=	datasize virtualsize
 MAKE_FILE=		makefile
 EXTRACT_USING=		bsdtar
 
