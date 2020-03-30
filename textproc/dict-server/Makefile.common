@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.7 2017/01/19 18:52:27 agc Exp $
+# $NetBSD: Makefile.common,v 1.8 2020/03/30 13:38:58 cheusov Exp $
 # used by textproc/colorit/Makefile
 # used by textproc/dict-server/Makefile
 # used by textproc/dict-client/Makefile
-DISTNAME=	dictd-1.12.1
+DISTNAME=	dictd-1.13.0
 
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/}
-MASTER_SITES+=	ftp://ftp.dict.org/pub/dict/
 
 MAINTAINER?=		cheusov@NetBSD.org
-HOMEPAGE=		http://www.dict.org/
+HOMEPAGE=		https://github.com/cheusov/dictd
