@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.111 2020/03/08 16:49:01 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2020/03/30 09:31:52 nia Exp $
 
-DISTNAME=	weechat-2.7.1
-PKGREVISION=	1
+DISTNAME=	weechat-2.8
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.xz
@@ -11,11 +10,10 @@ HOMEPAGE=	https://www.weechat.org/
 COMMENT=	Lightweight and user friendly curses based IRC client
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 USE_TOOLS+=	msgfmt pkg-config
 USE_LANGUAGES=	c99
-USE_LIBTOOL=	yes
 USE_CMAKE=	yes
 FAKE_NCURSES=	yes
 
