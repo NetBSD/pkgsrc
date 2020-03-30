@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2020/02/08 21:44:59 kamil Exp $
+$NetBSD: distinfo,v 1.23 2020/03/30 19:46:02 joerg Exp $
 
 SHA1 (firefox-52.9.0esr.source.tar.xz) = df3d47518b380fe934e32a288515c25435fd82a7
 RMD160 (firefox-52.9.0esr.source.tar.xz) = 8940269f0a515c0066b6ab2eea1da8963d27617b
@@ -16,6 +16,7 @@ SHA1 (patch-build_pgo_profileserver.py) = 48ad50f716eda2157cbc225298f6672f164b42
 SHA1 (patch-config_Makefile.in) = fc6d4de55f4d9ab8598d5b89e6630e4685af1795
 SHA1 (patch-config_baseconfig.mk) = fbc3fd75bf5d794284e5703a9df227949e819136
 SHA1 (patch-config_external_moz.build) = 68708dc0fb94119b9f140d05dd737e69bb6bba81
+SHA1 (patch-config_gcc-stl-wrapper.template.h) = 4440748c79c0da76cb06bd5b9f36dac6f3dc8b0b
 SHA1 (patch-config_stl__wrappers_ios) = 00d723e2f2f252485350ede5833f0bb84c1235c1
 SHA1 (patch-config_stl__wrappers_ostream) = 7be7fe36704ffbdc070a113b46b4f391a598206b
 SHA1 (patch-config_system-headers) = fd0cb4d2061af1eaa34313370a57720ed693607f
@@ -118,3 +119,4 @@ SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp) = 3a902eb9
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs__asm__mips.S) = 79a4686d368132aff804f217baa685b2e06bc396
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs__asm__sparc64__netbsd.s) = 522bc237bc90d85c98b61a467a431fddd91d8c3c
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs__netbsd__m68k.cpp) = 75db49c9cb6bf2993afba82b731d80389d866212
+SHA1 (patch-xpcom_typelib_xpt_xpt__arena.h) = a9cee44921eae1ad6a3ddc14054b1c03dc6f5e84
