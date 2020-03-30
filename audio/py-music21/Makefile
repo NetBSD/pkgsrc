@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/27 22:36:45 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2020/03/30 23:21:41 gutteridge Exp $
 
 VERSION=	5.7.2
 DISTNAME=	music21-noCorpus-${VERSION}
@@ -24,7 +24,9 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 
 # Many tests will fail because they depend on the score files that
-# are part of the full music21 distribution.
+# are part of the full music21 distribution. The entire test suite
+# will also fail to run with Python < 3.8 as of 5.7.2, due to:
+# https://github.com/cuthbertLab/music21/issues/507
 TEST_DEPENDS+=	${PYPKGPREFIX}-guppy3-[0-9]*:../../devel/py-guppy3
 
 USE_LANGUAGES=	# none
