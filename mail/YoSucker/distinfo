@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 23:27:00 agc Exp $
-
-SHA1 (YoSucker-pr37.tar.gz) = df2fa3a7272f79a4a152dcc20650e30fb7178ef8
-RMD160 (YoSucker-pr37.tar.gz) = b5b8280f67a686d0305e45b19528ced14a75f3c6
-SHA512 (YoSucker-pr37.tar.gz) = 40713442e7add06bede2b5fa5c687c71a9a05ecf02b9d560e96de568b3ecc11e9a1985b7c4d3d5329a2d947cd5cb76cb1c8db67f166212def95d91f5087efa94
-Size (YoSucker-pr37.tar.gz) = 35226 bytes
