@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3078 2020/03/30 16:41:41 riastradh Exp $
+# $NetBSD: Makefile,v 1.3079 2020/03/30 16:42:18 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -575,6 +575,7 @@ SUBDIR+=	hs-timeit
 SUBDIR+=	hs-transformers-base
 SUBDIR+=	hs-transformers-compat
 SUBDIR+=	hs-uglymemo
+SUBDIR+=	hs-unbounded-delays
 SUBDIR+=	hs-uniplate
 SUBDIR+=	hs-unix-compat
 SUBDIR+=	hs-unliftio-core
