@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1986 2020/03/30 14:04:25 cheusov Exp $
+$NetBSD: CHANGES-2020,v 1.1987 2020/03/30 14:13:30 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2669,3 +2669,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/dict-client to 1.13.0 [cheusov 2020-03-30]
 	Updated textproc/dict-server to 1.13.0 [cheusov 2020-03-30]
 	Updated textproc/colorit to 1.13.0 [cheusov 2020-03-30]
+	Updated devel/mk-configure to 0.34.1 [cheusov 2020-03-30]
