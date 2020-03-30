@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/03/10 22:10:47 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/03/30 17:17:23 adam Exp $
 
-DISTNAME=	qbittorrent-4.2.1
-PKGREVISION=	4
+DISTNAME=	qbittorrent-4.2.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qbittorrent/}
 GITHUB_PROJECT=	qBittorrent
@@ -13,15 +12,17 @@ COMMENT=	BitTorrent client in Qt
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
+# c++14 mode is required; also for libtorrent
+# https://github.com/qbittorrent/qBittorrent/issues/11425
+USE_LANGUAGES=	c c++14
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
-
-# C++11
-GCC_REQD+=	4.7
-
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
+GCC_REQD+=	6 # c++14
+
 LDFLAGS.NetBSD+=	-ljemalloc
+
+.include "../../mk/bsd.prefs.mk"
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -29,6 +30,8 @@ LDFLAGS.NetBSD+=	-ljemalloc
 .include "../../net/libtorrent-rasterbar/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.if ${OPSYS} == Darwin
+.include "../../x11/qt5-qtmacextras/buildlink3.mk"
+.endif
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
