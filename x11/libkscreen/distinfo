@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/31 23:08:28 gutteridge Exp $
+
+SHA1 (libkscreen-5.16.4.tar.xz) = 6506533a9ea257700bd2813eb885db1a28345372
+RMD160 (libkscreen-5.16.4.tar.xz) = dd99eb12619a4ca12d1ec2842b98d674793ddddd
+SHA512 (libkscreen-5.16.4.tar.xz) = 84b7e0af12f95a385575ec71cbbd1dc189d463dd7ad189a2adc49b8dc665018e36325f86d0a949310e07b90e67bc8c5ff8f75e914947a013064377579862b9e7
+Size (libkscreen-5.16.4.tar.xz) = 80988 bytes
