@@ -1,9 +1,9 @@
-$NetBSD: patch-Configurations_unix-Makefile.tmpl,v 1.1 2020/01/16 13:30:29 jperkin Exp $
+$NetBSD: patch-Configurations_unix-Makefile.tmpl,v 1.2 2020/03/31 15:02:31 sevan Exp $
 
 Use pkgsrc layout.
 Do not install HTML documentation.
 
---- Configurations/unix-Makefile.tmpl.orig	2019-09-10 13:13:07.000000000 +0000
+--- Configurations/unix-Makefile.tmpl.orig	2020-03-31 14:23:39.098512410 +0000
 +++ Configurations/unix-Makefile.tmpl
 @@ -274,8 +274,9 @@ libdir={- File::Spec::Win32->file_name_i
            ? $libdir : '$(INSTALLTOP)/$(LIBDIR)' -}
@@ -16,7 +16,7 @@ Do not install HTML documentation.
  HTMLDIR=$(DOCDIR)/html
  
  # MANSUFFIX is for the benefit of anyone who may want to have a suffix
-@@ -544,54 +545,54 @@ install_sw: install_dev install_engines
+@@ -544,54 +545,54 @@ install_sw: install_dev install_engines 
  
  uninstall_sw: uninstall_runtime uninstall_engines uninstall_dev
  
@@ -24,79 +24,79 @@ Do not install HTML documentation.
 +install_docs: install_man_docs
  
  uninstall_docs: uninstall_man_docs uninstall_html_docs
- 	$(RM) -r $(DESTDIR)$(DOCDIR)
+ 	$(RM) -r "$(DESTDIR)$(DOCDIR)"
  
  install_ssldirs:
--	@$(PERL) $(SRCDIR)/util/mkdir-p.pl $(DESTDIR)$(OPENSSLDIR)/certs
--	@$(PERL) $(SRCDIR)/util/mkdir-p.pl $(DESTDIR)$(OPENSSLDIR)/private
--	@$(PERL) $(SRCDIR)/util/mkdir-p.pl $(DESTDIR)$(OPENSSLDIR)/misc
-+	@$(PERL) $(SRCDIR)/util/mkdir-p.pl $(DESTDIR)$(EXAMPLEDIR)/certs
-+	@$(PERL) $(SRCDIR)/util/mkdir-p.pl $(DESTDIR)$(EXAMPLEDIR)/private
-+	@$(PERL) $(SRCDIR)/util/mkdir-p.pl $(DESTDIR)$(EXAMPLEDIR)/misc
+-	@$(PERL) $(SRCDIR)/util/mkdir-p.pl "$(DESTDIR)$(OPENSSLDIR)/certs"
+-	@$(PERL) $(SRCDIR)/util/mkdir-p.pl "$(DESTDIR)$(OPENSSLDIR)/private"
+-	@$(PERL) $(SRCDIR)/util/mkdir-p.pl "$(DESTDIR)$(OPENSSLDIR)/misc"
++	@$(PERL) $(SRCDIR)/util/mkdir-p.pl "$(DESTDIR)$(EXAMPLEDIR)/certs"
++	@$(PERL) $(SRCDIR)/util/mkdir-p.pl "$(DESTDIR)$(EXAMPLEDIR)/private"
++	@$(PERL) $(SRCDIR)/util/mkdir-p.pl "$(DESTDIR)$(EXAMPLEDIR)/misc"
  	@set -e; for x in dummy $(MISC_SCRIPTS); do \
  		if [ "$$x" = "dummy" ]; then continue; fi; \
  		x1=`echo "$$x" | cut -f1 -d:`; \
  		x2=`echo "$$x" | cut -f2 -d:`; \
  		fn=`basename $$x1`; \
 -		$(ECHO) "install $$x1 -> $(DESTDIR)$(OPENSSLDIR)/misc/$$fn"; \
--		cp $$x1 $(DESTDIR)$(OPENSSLDIR)/misc/$$fn.new; \
--		chmod 755 $(DESTDIR)$(OPENSSLDIR)/misc/$$fn.new; \
--		mv -f $(DESTDIR)$(OPENSSLDIR)/misc/$$fn.new \
--		      $(DESTDIR)$(OPENSSLDIR)/misc/$$fn; \
+-		cp $$x1 "$(DESTDIR)$(OPENSSLDIR)/misc/$$fn.new"; \
+-		chmod 755 "$(DESTDIR)$(OPENSSLDIR)/misc/$$fn.new"; \
+-		mv -f "$(DESTDIR)$(OPENSSLDIR)/misc/$$fn.new" \
+-		      "$(DESTDIR)$(OPENSSLDIR)/misc/$$fn"; \
 +		$(ECHO) "install $$x1 -> $(DESTDIR)$(EXAMPLEDIR)/misc/$$fn"; \
-+		cp $$x1 $(DESTDIR)$(EXAMPLEDIR)/misc/$$fn.new; \
-+		chmod 755 $(DESTDIR)$(EXAMPLEDIR)/misc/$$fn.new; \
-+		mv -f $(DESTDIR)$(EXAMPLEDIR)/misc/$$fn.new \
-+		      $(DESTDIR)$(EXAMPLEDIR)/misc/$$fn; \
++		cp $$x1 "$(DESTDIR)$(EXAMPLEDIR)/misc/$$fn.new"; \
++		chmod 755 "$(DESTDIR)$(EXAMPLEDIR)/misc/$$fn.new"; \
++		mv -f "$(DESTDIR)$(EXAMPLEDIR)/misc/$$fn.new" \
++		      "$(DESTDIR)$(EXAMPLEDIR)/misc/$$fn"; \
  		if [ "$$x1" != "$$x2" ]; then \
  			ln=`basename "$$x2"`; \
  			: {- output_off() unless windowsdll(); "" -}; \
 -			$(ECHO) "copy $(DESTDIR)$(OPENSSLDIR)/misc/$$ln -> $(DESTDIR)$(OPENSSLDIR)/misc/$$fn"; \
--			cp $(DESTDIR)$(OPENSSLDIR)/misc/$$fn $(DESTDIR)$(OPENSSLDIR)/misc/$$ln; \
+-			cp "$(DESTDIR)$(OPENSSLDIR)/misc/$$fn" "$(DESTDIR)$(OPENSSLDIR)/misc/$$ln"; \
 +			$(ECHO) "copy $(DESTDIR)$(EXAMPLEDIR)/misc/$$ln -> $(DESTDIR)$(EXAMPLEDIR)/misc/$$fn"; \
-+			cp $(DESTDIR)$(EXAMPLEDIR)/misc/$$fn $(DESTDIR)$(EXAMPLEDIR)/misc/$$ln; \
++			cp "$(DESTDIR)$(EXAMPLEDIR)/misc/$$fn" "$(DESTDIR)$(EXAMPLEDIR)/misc/$$ln"; \
  			: {- output_on() unless windowsdll();
  			     output_off() if windowsdll(); "" -}; \
 -			$(ECHO) "link $(DESTDIR)$(OPENSSLDIR)/misc/$$ln -> $(DESTDIR)$(OPENSSLDIR)/misc/$$fn"; \
--			ln -sf $$fn $(DESTDIR)$(OPENSSLDIR)/misc/$$ln; \
+-			ln -sf $$fn "$(DESTDIR)$(OPENSSLDIR)/misc/$$ln"; \
 +			$(ECHO) "link $(DESTDIR)$(EXAMPLEDIR)/misc/$$ln -> $(DESTDIR)$(EXAMPLEDIR)/misc/$$fn"; \
-+			ln -sf $$fn $(DESTDIR)$(EXAMPLEDIR)/misc/$$ln; \
++			ln -sf $$fn "$(DESTDIR)$(EXAMPLEDIR)/misc/$$ln"; \
  			: {- output_on() if windowsdll(); "" -}; \
  		fi; \
  	done
 -	@$(ECHO) "install $(SRCDIR)/apps/openssl.cnf -> $(DESTDIR)$(OPENSSLDIR)/openssl.cnf.dist"
--	@cp $(SRCDIR)/apps/openssl.cnf $(DESTDIR)$(OPENSSLDIR)/openssl.cnf.new
--	@chmod 644 $(DESTDIR)$(OPENSSLDIR)/openssl.cnf.new
--	@mv -f  $(DESTDIR)$(OPENSSLDIR)/openssl.cnf.new $(DESTDIR)$(OPENSSLDIR)/openssl.cnf.dist
+-	@cp $(SRCDIR)/apps/openssl.cnf "$(DESTDIR)$(OPENSSLDIR)/openssl.cnf.new"
+-	@chmod 644 "$(DESTDIR)$(OPENSSLDIR)/openssl.cnf.new"
+-	@mv -f "$(DESTDIR)$(OPENSSLDIR)/openssl.cnf.new" "$(DESTDIR)$(OPENSSLDIR)/openssl.cnf.dist"
 -	@if [ ! -f "$(DESTDIR)$(OPENSSLDIR)/openssl.cnf" ]; then \
 -		$(ECHO) "install $(SRCDIR)/apps/openssl.cnf -> $(DESTDIR)$(OPENSSLDIR)/openssl.cnf"; \
--		cp $(SRCDIR)/apps/openssl.cnf $(DESTDIR)$(OPENSSLDIR)/openssl.cnf; \
--		chmod 644 $(DESTDIR)$(OPENSSLDIR)/openssl.cnf; \
+-		cp $(SRCDIR)/apps/openssl.cnf "$(DESTDIR)$(OPENSSLDIR)/openssl.cnf"; \
+-		chmod 644 "$(DESTDIR)$(OPENSSLDIR)/openssl.cnf"; \
 +	@$(ECHO) "install $(SRCDIR)/apps/openssl.cnf -> $(DESTDIR)$(EXAMPLEDIR)/openssl.cnf.dist"
-+	@cp $(SRCDIR)/apps/openssl.cnf $(DESTDIR)$(EXAMPLEDIR)/openssl.cnf.new
-+	@chmod 644 $(DESTDIR)$(EXAMPLEDIR)/openssl.cnf.new
-+	@mv -f  $(DESTDIR)$(EXAMPLEDIR)/openssl.cnf.new $(DESTDIR)$(EXAMPLEDIR)/openssl.cnf.dist
++	@cp $(SRCDIR)/apps/openssl.cnf "$(DESTDIR)$(EXAMPLEDIR)/openssl.cnf.new"
++	@chmod 644 "$(DESTDIR)$(EXAMPLEDIR)/openssl.cnf.new"
++	@mv -f "$(DESTDIR)$(EXAMPLEDIR)/openssl.cnf.new" "$(DESTDIR)$(EXAMPLEDIR)/openssl.cnf.dist"
 +	@if [ ! -f "$(DESTDIR)$(EXAMPLEDIR)/openssl.cnf" ]; then \
 +		$(ECHO) "install $(SRCDIR)/apps/openssl.cnf -> $(DESTDIR)$(EXAMPLEDIR)/openssl.cnf"; \
-+		cp $(SRCDIR)/apps/openssl.cnf $(DESTDIR)$(EXAMPLEDIR)/openssl.cnf; \
-+		chmod 644 $(DESTDIR)$(EXAMPLEDIR)/openssl.cnf; \
++		cp $(SRCDIR)/apps/openssl.cnf "$(DESTDIR)$(EXAMPLEDIR)/openssl.cnf"; \
++		chmod 644 "$(DESTDIR)$(EXAMPLEDIR)/openssl.cnf"; \
  	fi
 -	@$(ECHO) "install $(SRCDIR)/apps/ct_log_list.cnf -> $(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf.dist"
--	@cp $(SRCDIR)/apps/ct_log_list.cnf $(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf.new
--	@chmod 644 $(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf.new
--	@mv -f  $(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf.new $(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf.dist
+-	@cp $(SRCDIR)/apps/ct_log_list.cnf "$(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf.new"
+-	@chmod 644 "$(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf.new"
+-	@mv -f "$(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf.new" "$(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf.dist"
 -	@if [ ! -f "$(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf" ]; then \
 -		$(ECHO) "install $(SRCDIR)/apps/ct_log_list.cnf -> $(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf"; \
--		cp $(SRCDIR)/apps/ct_log_list.cnf $(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf; \
--		chmod 644 $(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf; \
+-		cp $(SRCDIR)/apps/ct_log_list.cnf "$(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf"; \
+-		chmod 644 "$(DESTDIR)$(OPENSSLDIR)/ct_log_list.cnf"; \
 +	@$(ECHO) "install $(SRCDIR)/apps/ct_log_list.cnf -> $(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf.dist"
-+	@cp $(SRCDIR)/apps/ct_log_list.cnf $(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf.new
-+	@chmod 644 $(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf.new
-+	@mv -f  $(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf.new $(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf.dist
++	@cp $(SRCDIR)/apps/ct_log_list.cnf "$(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf.new"
++	@chmod 644 "$(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf.new"
++	@mv -f "$(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf.new" "$(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf.dist"
 +	@if [ ! -f "$(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf" ]; then \
 +		$(ECHO) "install $(SRCDIR)/apps/ct_log_list.cnf -> $(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf"; \
-+		cp $(SRCDIR)/apps/ct_log_list.cnf $(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf; \
-+		chmod 644 $(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf; \
++		cp $(SRCDIR)/apps/ct_log_list.cnf "$(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf"; \
++		chmod 644 "$(DESTDIR)$(EXAMPLEDIR)/ct_log_list.cnf"; \
  	fi
  
  install_dev: install_runtime_libs
