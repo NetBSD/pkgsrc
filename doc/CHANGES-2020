@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2011 2020/03/31 16:46:53 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2012 2020/03/31 17:00:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2721,3 +2721,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ImageMagick to 7.0.10.3 [wiz 2020-03-31]
 	Updated devel/automake to 1.16.2 [wiz 2020-03-31]
 	Updated net/glib-networking to 2.64.1 [wiz 2020-03-31]
+	Updated x11/gtk3 to 3.24.16 [wiz 2020-03-31]
