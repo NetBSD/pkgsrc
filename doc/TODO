@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19779 2020/03/31 17:42:24 wiz Exp $
+$NetBSD: TODO,v 1.19780 2020/03/31 21:29:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -659,7 +659,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
-	o gnucash-3.9
 	o gnuradio-3.8.0.0
 	o gnustep-back-0.27.0
 	o gnustep-base-1.26.0
@@ -997,7 +996,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-cairo-1.19.1 [drops python-2.x support]
 	o py-cassa-1.11.0
-	o py-configparser-5.0.0
+	o py-configparser-5.0.0 [drops python-2.x support]
 	o py-ephem3-3.7.6.0
 	o py-gds-1.4.2
 	o py-gnome-menus-3.8.0
