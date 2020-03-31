@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2016 2020/03/31 17:35:20 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2017 2020/03/31 17:36:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2726,3 +2726,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libgsf to 1.14.47 [wiz 2020-03-31]
 	Updated graphics/librsvg to 2.48.1 [wiz 2020-03-31]
 	Updated lang/vala to 0.48.2 [wiz 2020-03-31]
+	Updated converters/utf8proc to 2.5.0 [wiz 2020-03-31]
