@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2017/10/02 13:57:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.40 2020/03/31 17:02:42 wiz Exp $
 bin/gsf
 bin/gsf-office-thumbnailer
 bin/gsf-vba-dump
@@ -70,6 +70,7 @@ share/gtk-doc/html/gsf/gsf-Outfile-writing-structed-files.html
 share/gtk-doc/html/gsf/gsf-Output-to-unstructured-files.html
 share/gtk-doc/html/gsf/gsf-Reading-and-Writing-from-local-files-and-directories.html
 share/gtk-doc/html/gsf/gsf-Text.html
+share/gtk-doc/html/gsf/gsf-Utilities.html
 share/gtk-doc/html/gsf/gsf-XML-and-libxml.html
 share/gtk-doc/html/gsf/gsf-Zip.html
 share/gtk-doc/html/gsf/gsf-blobs.html
@@ -78,7 +79,6 @@ share/gtk-doc/html/gsf/gsf-index.html
 share/gtk-doc/html/gsf/gsf-memory.html
 share/gtk-doc/html/gsf/gsf-metadata.html
 share/gtk-doc/html/gsf/gsf-users.html
-share/gtk-doc/html/gsf/gsf-utils.html
 share/gtk-doc/html/gsf/gsf.devhelp2
 share/gtk-doc/html/gsf/history.html
 share/gtk-doc/html/gsf/home.png
