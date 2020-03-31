@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2020/03/23 15:30:31 taca Exp $
+# $NetBSD: Makefile,v 1.173 2020/03/31 10:25:28 nia Exp $
 #
 
 COMMENT=	Archivers
@@ -65,6 +65,7 @@ SUBDIR+=	lzo
 SUBDIR+=	lzop
 SUBDIR+=	macutil
 SUBDIR+=	makeself
+SUBDIR+=	minizip
 SUBDIR+=	mousetar
 SUBDIR+=	mscompress
 SUBDIR+=	nomarch
