@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/31 10:03:35 nia Exp $
+
+SHA1 (tl-expected-1.0.0.tar.gz) = 2ce5120ef6b4238b092a73214a48516462f809ce
+RMD160 (tl-expected-1.0.0.tar.gz) = 554d783c23c26a27d68bcc015599f4cd69000c1c
+SHA512 (tl-expected-1.0.0.tar.gz) = 747ea34b5540dfcf595896332851f10c52a823ab8ba3fc8152478b0a9e8ca01f0f26827348407249827f4106ff577bd6e697ea6f749c1f21bd1f0913a621075d
+Size (tl-expected-1.0.0.tar.gz) = 102672 bytes
