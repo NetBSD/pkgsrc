@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2009 2020/03/31 16:44:27 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2010 2020/03/31 16:45:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2719,3 +2719,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/py-ansi to 0.1.5 [adam 2020-03-31]
 	Updated devel/py-xdis to 4.2.4 [adam 2020-03-31]
 	Updated graphics/ImageMagick to 7.0.10.3 [wiz 2020-03-31]
+	Updated devel/automake to 1.16.2 [wiz 2020-03-31]
