@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/03/08 16:49:48 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/03/31 09:44:34 nia Exp $
 
 PKGNAME=		supertux-0.6.1.1
 PKGREVISION=		1
@@ -20,6 +20,9 @@ USE_LANGUAGES=		c c++14
 
 # C++14
 GCC_REQD+=		5
+
+# We already patch 'configure'...
+CHECK_PORTABILITY_SKIP+=	external/SDL_ttf/configure.in
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
