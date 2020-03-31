@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2007 2020/03/31 16:15:50 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2008 2020/03/31 16:26:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2716,3 +2716,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/cliqz to 1.34.0 [fox 2020-03-31]
 	Updated finance/bitcoin to 0.19.1 [adam 2020-03-31]
 	Updated devel/ccache to 3.7.9 [adam 2020-03-31]
+	Updated misc/py-ansi to 0.1.5 [adam 2020-03-31]
+	Updated devel/py-xdis to 4.2.4 [adam 2020-03-31]
