@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2025 2020/03/31 22:45:11 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2026 2020/03/31 23:11:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2735,3 +2735,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/streamlink to 1.3.1 [maya 2020-03-31]
 	Added wm/obconf-qt 0.14.1 [gutteridge 2020-03-31]
 	Updated sysutils/libfm to 1.3.1nb4 [gutteridge 2020-03-31]
+	Added x11/libkscreen 5.16.4 [gutteridge 2020-03-31]
+
