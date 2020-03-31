@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2003 2020/03/31 13:59:48 roy Exp $
+$NetBSD: CHANGES-2020,v 1.2004 2020/03/31 15:09:50 sevan Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2711,3 +2711,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added archivers/minizip version 1.2.11 [nia 2020-03-31]
 	Added devel/range-v3 version 0.10.0 [nia 2020-03-31]
 	Updated www/cgit to 1.2.3 [roy 2020-03-31]
+	Updated security/openssl to 1.1.1f [sevan 2020-03-31]
