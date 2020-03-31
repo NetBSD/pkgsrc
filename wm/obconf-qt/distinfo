@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/31 22:36:37 gutteridge Exp $
+
+SHA1 (obconf-qt-0.14.1.tar.xz) = 1468271a9f09df9f83924e01172d7810242b1916
+RMD160 (obconf-qt-0.14.1.tar.xz) = 63335640475da1ee3620f746f3b6248747d0031b
+SHA512 (obconf-qt-0.14.1.tar.xz) = 7ae4feb8daa3853f768e9cb613fc99046f98744e03efc673ee9e5cb3d4ffa2861f2a9f762acd9c54ef2b9ca3f288d2901cdcce5c09db84689dd186006b8e26ed
+Size (obconf-qt-0.14.1.tar.xz) = 97032 bytes
