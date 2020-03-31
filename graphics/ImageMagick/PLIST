@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.108 2020/03/10 23:04:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.109 2020/03/31 16:44:18 wiz Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -206,6 +206,11 @@ share/doc/ImageMagick-7/images/color-thresholding-rgb.gif
 share/doc/ImageMagick-7/images/color-thresholding.gif
 share/doc/ImageMagick-7/images/color-thresholding.jpg
 share/doc/ImageMagick-7/images/configure.jpg
+share/doc/ImageMagick-7/images/convex-hull-barn-closure.jpg
+share/doc/ImageMagick-7/images/convex-hull-barn.jpg
+share/doc/ImageMagick-7/images/convex-hull-blocks-closure.png
+share/doc/ImageMagick-7/images/convex-hull-blocks.png
+share/doc/ImageMagick-7/images/convex-hull.png
 share/doc/ImageMagick-7/images/cylinder_shaded.png
 share/doc/ImageMagick-7/images/difference.png
 share/doc/ImageMagick-7/images/examples.jpg
@@ -1143,6 +1148,7 @@ share/doc/ImageMagick-7/www/conjure.html
 share/doc/ImageMagick-7/www/connected-components.html
 share/doc/ImageMagick-7/www/contact.html
 share/doc/ImageMagick-7/www/convert.html
+share/doc/ImageMagick-7/www/convex-hull.html
 share/doc/ImageMagick-7/www/develop.html
 share/doc/ImageMagick-7/www/display.html
 share/doc/ImageMagick-7/www/distribute-pixel-cache.html
