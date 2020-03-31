@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/31 10:43:54 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/03/31 10:49:49 nia Exp $
 include/concepts/concepts.hpp
 include/concepts/swap.hpp
 include/concepts/type_traits.hpp
 include/meta/meta.hpp
 include/meta/meta_fwd.hpp
-include/module.modulemap
 include/range/v3/action.hpp
 include/range/v3/action/action.hpp
 include/range/v3/action/adjacent_remove_if.hpp
