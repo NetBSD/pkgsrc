@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2019 2020/03/31 17:39:27 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2020 2020/03/31 17:42:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2729,3 +2729,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/utf8proc to 2.5.0 [wiz 2020-03-31]
 	Updated fonts/unifont to 13.0.01 [wiz 2020-03-31]
 	Updated mail/thunderbird-enigmail to 2.1.6 [wiz 2020-03-31]
+	Updated security/py-google-auth to 1.12.0 [wiz 2020-03-31]
