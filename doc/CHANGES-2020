@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.1999 2020/03/31 09:39:23 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.2000 2020/03/31 10:03:51 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2707,3 +2707,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/bdf2sfd to 1.1.1 [fcambus 2020-03-30]
 	Updated textproc/link-grammar to 5.8.0 [gutteridge 2020-03-30]
 	Updated textproc/lowdown to 0.6.4 [fcambus 2020-03-31]
+	Added devel/tl-expected version 1.0.0 [nia 2020-03-31]
