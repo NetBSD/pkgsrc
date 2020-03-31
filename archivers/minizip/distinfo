@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/31 10:25:28 nia Exp $
+
+SHA1 (zlib-1.2.11.tar.xz) = e1cb0d5c92da8e9a8c2635dfa249c341dfd00322
+RMD160 (zlib-1.2.11.tar.xz) = 3f3ecd35efa6d41ba7b90e5f6e872e2ee8e42044
+SHA512 (zlib-1.2.11.tar.xz) = b7f50ada138c7f93eb7eb1631efccd1d9f03a5e77b6c13c8b757017b2d462e19d2d3e01c50fad60a4ae1bc86d431f6f94c72c11ff410c25121e571953017cb67
+Size (zlib-1.2.11.tar.xz) = 467960 bytes
