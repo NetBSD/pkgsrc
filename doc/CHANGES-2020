@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2001 2020/03/31 10:25:42 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2002 2020/03/31 10:44:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2709,3 +2709,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/lowdown to 0.6.4 [fcambus 2020-03-31]
 	Added devel/tl-expected version 1.0.0 [nia 2020-03-31]
 	Added archivers/minizip version 1.2.11 [nia 2020-03-31]
+	Added devel/range-v3 version 0.10.0 [nia 2020-03-31]
