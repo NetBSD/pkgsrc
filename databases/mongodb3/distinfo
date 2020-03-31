@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2020/03/12 16:36:53 gdt Exp $
+$NetBSD: distinfo,v 1.9 2020/03/31 14:34:41 gdt Exp $
 
 SHA1 (mongodb-src-r3.4.24.tar.gz) = 86909b211998f0cbc8104df774aecb3d00a01763
 RMD160 (mongodb-src-r3.4.24.tar.gz) = f7e4bfe1e2bd046f1a6c0f2695762076ffee5ae5
@@ -11,7 +11,7 @@ SHA1 (patch-src_mongo_db_query_collation_collator__interface__icu.h) = 43c94a970
 SHA1 (patch-src_mongo_db_repl_isself.c) = 82321c918b91ce1a68ce79c14589126aca6baf96
 SHA1 (patch-src_mongo_db_repl_master__slave.cpp) = 2f37f0819a2b2743df01f6b6ab0b3013b3b7d726
 SHA1 (patch-src_mongo_db_repl_oplog__fetcher.cpp) = e12dbfbd4e70ee210cdd4eb0582661666e8eb06a
-SHA1 (patch-src_mongo_db_storage_mmap__v1_durop.h) = 9ccba5b5e730791d57b43f2c9d412bdf54f42a63
+SHA1 (patch-src_mongo_db_storage_mmap__v1_durop.h) = fb4c0fa1cbd1c2f362e04bcee49f9c3db77d7874
 SHA1 (patch-src_mongo_installer_msi_SConscript) = 78424fa10f90470dd941b900ef8fd131d28f6e65
 SHA1 (patch-src_mongo_platform_random.cpp) = 9af0fd82a653bf4f273ce107e54c5e63eaeb3b85
 SHA1 (patch-src_mongo_platform_stack__locator__netbsd.cpp) = 3f67bbae82c0f3cae410a21219589bc082e7b9b1
@@ -22,9 +22,9 @@ SHA1 (patch-src_mongo_util_processinfo__netbsd.cpp) = 6c01ad839ff31e7500d76af662
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_dpml__exception.c) = ef3b260e8a49227cbbabf427500b7c70bce15083
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h) = 39f6fba82e2870ee4a5d99785033621225a72a16
 SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_src_bid__functions.h) = d3a85d3a3b33691466c65cdf51c56f221429aea9
-SHA1 (patch-src_third__party_asio-master_asio_include_asio_detail_impl_kqueue__reactor.ipp) = 49a74ef12f20c4b243d328a2cd8317aa1a668b18
+SHA1 (patch-src_third__party_asio-master_asio_include_asio_detail_impl_kqueue__reactor.ipp) = b942286acd85ca8cf5fd03bc9f70a5dff0943243
 SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_build_js-confdefs.h) = c2ad1041b5c1ff9fac9085d2a8963781f51873a8
 SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_include_js-config.h) = 7ddbb4e3bf4126a1be2195acc82ff859e8130a01
 SHA1 (patch-src_third__party_s2_base_port.h) = 892ce91b5aaa432f34e1e7c169b7fd6eea2a3e94
 SHA1 (patch-src_third__party_wiredtiger_SConscript) = 71fd2326a4e95fec674326225bce5ccf5793aa5a
-SHA1 (patch-src_third__party_wiredtiger_src_os__posix_os__fs.c) = c1f227a2e026c0c90f438384b71873fecf27cde5
+SHA1 (patch-src_third__party_wiredtiger_src_os__posix_os__fs.c) = 6da1014613231a0e56dd3449bd5d61014340575a
