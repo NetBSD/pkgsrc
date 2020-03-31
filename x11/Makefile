@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.884 2020/03/15 16:58:23 taca Exp $
+# $NetBSD: Makefile,v 1.885 2020/03/31 23:08:28 gutteridge Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -237,6 +237,7 @@ SUBDIR+=	libfm-qt
 SUBDIR+=	libgnomekbd
 SUBDIR+=	libgnomekbd2
 SUBDIR+=	libkactivities4
+SUBDIR+=	libkscreen
 SUBDIR+=	liblxqt
 SUBDIR+=	libmatekbd
 SUBDIR+=	liboldXrandr
