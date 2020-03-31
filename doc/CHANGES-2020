@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2004 2020/03/31 15:09:50 sevan Exp $
+$NetBSD: CHANGES-2020,v 1.2005 2020/03/31 15:32:15 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2712,3 +2712,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/range-v3 version 0.10.0 [nia 2020-03-31]
 	Updated www/cgit to 1.2.3 [roy 2020-03-31]
 	Updated security/openssl to 1.1.1f [sevan 2020-03-31]
+	Updated emulators/PC6001VX to 3.4.0 [tsutsui 2020-03-31]
