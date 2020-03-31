@@ -1,4 +1,4 @@
-$NetBSD: patch-doc_api_Makefile.in,v 1.2 2017/01/29 04:29:54 mef Exp $
+$NetBSD: patch-doc_api_Makefile.in,v 1.3 2020/03/31 12:59:27 mef Exp $
 
 Fix dependencies. Ultimately ignore the errors from latex though, since
 undefined references remain.
@@ -10,7 +10,7 @@ undefined references remain.
  
  $(USER_MANUAL).pdf: latex_src/refman.tex
 -	cd latex_src && ${MAKE} refman.pdf
-+	cd latex_src && sed -e 's,pdflatex refman$$,pdflatex refman || true,' < Makefile > Makefile.new && mv Makefile.new Makefile && ${MAKE} refman.pdf
++	cd latex_src && sed -e 's,pdflatex refman$$,pdflatex refman || true,' < Makefile > Makefile.new && mv Makefile.new Makefile && ${MAKE} || echo true
  	cp latex_src/refman.pdf $(USER_MANUAL).pdf
  
  # Install rules for the various documentation parts.  The actual
