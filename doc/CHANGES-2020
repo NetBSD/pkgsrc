@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2006 2020/03/31 15:43:21 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2007 2020/03/31 16:15:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2714,3 +2714,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/openssl to 1.1.1f [sevan 2020-03-31]
 	Updated emulators/PC6001VX to 3.4.0 [tsutsui 2020-03-31]
 	Updated www/cliqz to 1.34.0 [fox 2020-03-31]
+	Updated finance/bitcoin to 0.19.1 [adam 2020-03-31]
+	Updated devel/ccache to 3.7.9 [adam 2020-03-31]
