@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/03/31 10:43:54 nia Exp $
+
+SHA1 (range-v3-0.10.0.tar.gz) = 57b20853b84602d7f021fe280bc56ca59b2a1ace
+RMD160 (range-v3-0.10.0.tar.gz) = 99e31b7ae58996bc890325d15accffe0a648194b
+SHA512 (range-v3-0.10.0.tar.gz) = 4db089dcbf638eb30fa20dcf6785dd460c5a074a8912984a484592753cfee9f5b9a0e2c56b5bc5921d1b6120877aa2c83ac0a6fe428088ef2854033a635e9723
+Size (range-v3-0.10.0.tar.gz) = 525765 bytes
