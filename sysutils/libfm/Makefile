@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2020/03/20 11:58:21 nia Exp $
+# $NetBSD: Makefile,v 1.18 2020/03/31 22:44:54 gutteridge Exp $
 #
 
 DISTNAME=	libfm-1.3.1
-PKGREVISION=	3
-CATEGORIES=	devel
+PKGREVISION=	4
+CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcmanfm/}
 EXTRACT_SUFX=	.tar.xz
 
@@ -26,12 +26,22 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/libfm
 CONF_FILES+=		share/examples/libfm/libfm.conf \
 			${PKG_SYSCONFDIR}/libfm/libfm.conf
 
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Fixing paths.
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	src/base/fm-file-info.c
+SUBST_FILES.prefix+=	src/modules/vfs-menu.c
+# Upstream has a typo in a hard-coded path of "xgd" where they mean "xdg".
+# On the next update, check vfs-menu.c, as this may be corrected to "xdg".
+SUBST_SED.prefix=	-e 's,/etc/xgd,${PKG_SYSCONFDIR},g'
+SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
+
 # XXX: walk-around bug in build wrappers
 #      they try to copy $PREFIX/include/libfm to work dir and there link libfm -> libfm-1.0 is resolved
 #      in the end a consumer of libfm cannot find nonexisting include/libfm
 post-install:
-	${RUN} rm -f ${DESTDIR}${PREFIX}/include/libfm
-	${RUN} cp -r ${DESTDIR}${PREFIX}/include/libfm-1.0 ${DESTDIR}${PREFIX}/include/libfm
+	${RUN} ${RM} -f ${DESTDIR}${PREFIX}/include/libfm
+	${RUN} ${CP} -r ${DESTDIR}${PREFIX}/include/libfm-1.0 ${DESTDIR}${PREFIX}/include/libfm
 
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
