@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/03/31 20:37:47 roy Exp $
+
+SHA1 (mlmmj-1.3.0.tar.bz2) = e11652dfe1b74f87034914eb79302944cfb89b4f
+RMD160 (mlmmj-1.3.0.tar.bz2) = 6353f546342593adc76d17e178f702dc340a1586
+SHA512 (mlmmj-1.3.0.tar.bz2) = c704d89f8a96c0ffc751a744ffdefb5e4304ab74be89292f06ce0c337b8ff1cc5a91737c8b1bd96fe3e993338986fa42bf360cfefc508e1eac74ab88ffda2494
+Size (mlmmj-1.3.0.tar.bz2) = 292519 bytes
+SHA1 (patch-reduce-subscription-confirmation-address-length.diff) = e350db1b63319db94df658d7e31f492af96d0761
