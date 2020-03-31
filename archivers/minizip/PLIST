@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/03/31 10:25:28 nia Exp $
+include/minizip/ioapi.h
+include/minizip/mztools.h
+include/minizip/unzip.h
+include/minizip/zip.h
+lib/libminizip.la
+lib/pkgconfig/minizip.pc
