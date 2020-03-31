@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2021 2020/03/31 20:39:19 roy Exp $
+$NetBSD: CHANGES-2020,v 1.2022 2020/03/31 21:29:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2731,3 +2731,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/thunderbird-enigmail to 2.1.6 [wiz 2020-03-31]
 	Updated security/py-google-auth to 1.12.0 [wiz 2020-03-31]
 	Updated mail/mlmmj to 1.3.0nb1 [roy 2020-03-31]
+	Updated finance/gnucash to 3.9 [wiz 2020-03-31]
