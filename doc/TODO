@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19777 2020/03/31 17:37:45 wiz Exp $
+$NetBSD: TODO,v 1.19778 2020/03/31 17:39:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1133,7 +1133,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o telepathy-mission-control5-5.16.3
 	o tetrinetx-1.40c
 	o tfmxplay-1.1.6
-	o thunderbird-enigmail-2.1.6
 	o tig-2.2
 	o tightvnc-2.7.10
 	o tile-0.7.4
