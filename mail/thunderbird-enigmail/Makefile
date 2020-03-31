@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/01/04 19:11:01 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/03/31 17:39:18 wiz Exp $
 
-DISTNAME=	enigmail-2.1.5
+DISTNAME=	enigmail-2.1.6
 PKGNAME=	thunderbird-${DISTNAME}
 CATEGORIES=	mail security
 MASTER_SITES=	http://www.enigmail.net/download/source/
