@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2020/01/27 22:58:05 gutteridge Exp $
+# $NetBSD: Makefile,v 1.147 2020/03/31 22:36:37 gutteridge Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -62,6 +62,7 @@ SUBDIR+=	musca
 SUBDIR+=	notion
 SUBDIR+=	novawm
 SUBDIR+=	obconf
+SUBDIR+=	obconf-qt
 SUBDIR+=	obpager
 SUBDIR+=	olvwm
 SUBDIR+=	openbox
