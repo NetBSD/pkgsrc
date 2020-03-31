@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2020/03/11 09:44:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/03/31 17:35:12 wiz Exp $
 bin/vala
 bin/vala-0.48
 bin/vala-gen-introspect
@@ -64,6 +64,8 @@ share/vala-0.48/vapi/avahi-client.vapi
 share/vala-0.48/vapi/avahi-gobject.deps
 share/vala-0.48/vapi/avahi-gobject.vapi
 share/vala-0.48/vapi/bzlib.vapi
+share/vala-0.48/vapi/cairo-gobject.deps
+share/vala-0.48/vapi/cairo-gobject.vapi
 share/vala-0.48/vapi/cairo-xcb.deps
 share/vala-0.48/vapi/cairo-xcb.vapi
 share/vala-0.48/vapi/cairo.vapi
