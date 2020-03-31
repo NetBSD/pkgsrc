@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/03/31 10:43:54 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/03/31 10:49:49 nia Exp $
 
 DISTNAME=	range-v3-0.10.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ericniebler/}
 
@@ -19,5 +20,8 @@ CMAKE_ARGS+=	-DRANGE_V3_DOCS=OFF
 CMAKE_ARGS+=	-DRANGE_V3_EXAMPLES=OFF
 CMAKE_ARGS+=	-DRANGE_V3_HEADER_CHECKS=OFF
 CMAKE_ARGS+=	-DRANGE_V3_TESTS=OFF
+
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/include/module.modulemap
 
 .include "../../mk/bsd.pkg.mk"
