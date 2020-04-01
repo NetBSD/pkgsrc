@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2020/03/22 18:09:13 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/04/01 14:51:05 wiz Exp $
 
-DISTNAME=	meson-0.53.2
+DISTNAME=	meson-0.54.0
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 CONFLICTS=	${PYPKGPREFIX}-meson-[0-9]*
 SUPERSEDES=	${PYPKGPREFIX}-meson-[0-9]*
 
-DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+DEPENDS+=	ninja-build>=1.7:../../devel/ninja-build
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
