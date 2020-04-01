@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.25 2020/02/03 12:02:18 kleink Exp $
+# $NetBSD: Makefile.common,v 1.26 2020/04/01 17:44:54 adam Exp $
 # used by www/py-werkzeug/Makefile
 # used by www/py-werkzeug-docs/Makefile
 
-DISTNAME=	Werkzeug-0.16.1
+DISTNAME=	Werkzeug-1.0.1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Werkzeug/}
 
@@ -10,7 +10,7 @@ DISTINFO_FILE=	${.CURDIR}/../../www/py-werkzeug/distinfo
 PATCHDIR=	${.CURDIR}/../../www/py-werkzeug/patches
 
 MAINTAINER?=	kleink@NetBSD.org
-HOMEPAGE=	http://werkzeug.pocoo.org/
+HOMEPAGE=	https://werkzeug.palletsprojects.com/
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
