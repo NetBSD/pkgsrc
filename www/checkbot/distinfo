@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 02:46:51 agc Exp $
+$NetBSD: distinfo,v 1.11 2020/04/01 10:21:32 nia Exp $
 
-SHA1 (checkbot-1.79.tar.gz) = 0f389bd0f27e7dd9af45e99c43c97f26988e783e
-RMD160 (checkbot-1.79.tar.gz) = b70bfd1d0ee52363856c70048420fa7f9f79ab28
-SHA512 (checkbot-1.79.tar.gz) = c60e93b966587e590379f7bebb90af71395681f8b830910dbc6773e2ea3aeda493cc8a1a8bcfa07693fdb5b422adc1602f355c5333aad25201dd14655a60ff67
-Size (checkbot-1.79.tar.gz) = 36023 bytes
+SHA1 (checkbot-1.80.tar.gz) = 72c03cca93dcd800c51cd1732ac94f4cb034c901
+RMD160 (checkbot-1.80.tar.gz) = 71fc3e5b2294475ec63e8eb7a339d523fc3bab76
+SHA512 (checkbot-1.80.tar.gz) = 5575220d87294d49b8eb5a85fd62ddfd9578f5c708f78d54bff292f731d5fbe8262e73cba5d29fcb08341208a12c3be7eeb399ea3c3319bbb90c795a103024b1
+Size (checkbot-1.80.tar.gz) = 36200 bytes
