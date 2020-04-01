@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/03/31 10:25:28 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/01 09:55:12 nia Exp $
 
 DISTNAME=	zlib-1.2.11
 PKGNAME=	${DISTNAME:S/zlib-/minizip-/1}
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://zlib.net/
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +17,8 @@ WRKSRC=		${WRKDIR}/zlib-${PKGVERSION_NOREV}/contrib/minizip
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake autoreconf
+
+CPPFLAGS+=	-DUSE_FILE32API
 
 PKGCONFIG_OVERRIDE+=	minizip.pc.in
 
