@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2041 2020/04/01 15:32:06 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2042 2020/04/01 17:45:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2761,3 +2761,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/ruby25 to 2.5.8 [taca 2020-04-01]
 	Updated lang/ruby24-base to 2.4.10 [taca 2020-04-01]
 	Updated lang/ruby24 to 2.4.10 [taca 2020-04-01]
+	Added textproc/py-sphinxcontrib-log-cabinet version 1.0.1 [adam 2020-04-01]
+	Updated www/py-werkzeug to 1.0.1 [adam 2020-04-01]
+	Updated www/py-werkzeug-docs to 1.0.1 [adam 2020-04-01]
