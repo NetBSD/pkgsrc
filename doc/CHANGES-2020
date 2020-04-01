@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2030 2020/04/01 09:17:45 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.2031 2020/04/01 09:19:36 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2740,3 +2740,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/scummvm to 2.1.2 [adam 2020-04-01]
 	Updated databases/phpmyadmin to 4.9.5 [tm 2020-04-01]
 	Updated net/dbip-country-lite to 2020.04 [fcambus 2020-04-01]
+	Updated net/dbip-city-lite to 2020.04 [fcambus 2020-04-01]
