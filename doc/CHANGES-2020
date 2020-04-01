@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2033 2020/04/01 10:01:59 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2034 2020/04/01 10:12:07 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2743,3 +2743,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dbip-city-lite to 2020.04 [fcambus 2020-04-01]
 	Updated audio/asunder to 2.9.5 [nia 2020-04-01]
 	Updated net/bftpd to 5.4 [nia 2020-04-01]
+	Updated mail/offlineimap to 7.2.3nb2 [nikita 2020-04-01]
