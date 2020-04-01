@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2028 2020/04/01 08:36:28 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2029 2020/04/01 08:39:50 tm Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2738,3 +2738,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added x11/libkscreen 5.16.4 [gutteridge 2020-03-31]
 	Updated security/gnutls to 3.6.13 [adam 2020-04-01]
 	Updated games/scummvm to 2.1.2 [adam 2020-04-01]
+	Updated databases/phpmyadmin to 4.9.5 [tm 2020-04-01]
