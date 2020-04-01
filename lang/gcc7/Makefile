@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/03/22 10:56:25 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2020/04/01 14:08:14 wiz Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -83,7 +83,7 @@ SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
 .include "options.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
-# native SSP conflicts with gcc's libssp
+# on NetBSD, use the native SSP code in libc
 CONFIGURE_ARGS+=	--disable-libssp
 # Match base libstdc++ major
 SUBST_CLASSES+=		libstdc
@@ -169,16 +169,8 @@ SUBST_SED.ccs=		-e 's,/usr/ccs/bin,/usr/bin,g'
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
-TEST_TARGET=	-k check || ${TRUE}
-
-pre-test:
-	${RUN} 							\
-	if runtest --version >/dev/null 2>/dev/null ; then	\
-		: ;						\
-	else							\
-	  ${ECHO} "ERROR: Please install devel/dejagnu in order to run the test suite."; \
-	  exit 1;						\
-	fi
+TEST_TARGET=	-j ${MAKE_JOBS} -k check || ${TRUE}
+TEST_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
 
 post-test:
 	${RUN} cd ${WRKSRC} && cd ${OBJDIR} &&		\
