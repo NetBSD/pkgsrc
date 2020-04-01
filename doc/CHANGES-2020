@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2031 2020/04/01 09:19:36 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.2032 2020/04/01 09:46:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2741,3 +2741,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/phpmyadmin to 4.9.5 [tm 2020-04-01]
 	Updated net/dbip-country-lite to 2020.04 [fcambus 2020-04-01]
 	Updated net/dbip-city-lite to 2020.04 [fcambus 2020-04-01]
+	Updated audio/asunder to 2.9.5 [nia 2020-04-01]
