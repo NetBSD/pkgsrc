@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2019/07/07 05:46:51 nia Exp $
+$NetBSD: distinfo,v 1.7 2020/04/01 10:24:05 nia Exp $
 
 SHA1 (SDL2_image-2.0.5.tar.gz) = c0aed07994f670a3758f6b8b93d9034a58df5781
 RMD160 (SDL2_image-2.0.5.tar.gz) = e876034e5d2f3f12940b6edeab91746bd48228f3
 SHA512 (SDL2_image-2.0.5.tar.gz) = 77e743d3f32707e015b290c1379ae3c7d7a3fe265995713267f0d0ec6517de4808f0de9890b5ab28445941af5bc9fbff346620629e0d7d7e9f365262cab05ee7
 Size (SDL2_image-2.0.5.tar.gz) = 11736518 bytes
+SHA1 (patch-Makefile.in) = 223b48a4b66e9138fdd3b2aae82af16e493dd703
 SHA1 (patch-configure) = fe18749571cdf44e0a66f7716b35b45dbb6ae203
