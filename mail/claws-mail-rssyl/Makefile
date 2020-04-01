@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2020/03/10 22:10:26 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2020/04/01 13:44:05 nia Exp $
 #
 
 PLUGIN_NAME=    rssyl
 
-PKGREVISION= 4
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
