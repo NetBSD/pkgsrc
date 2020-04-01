@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.73 2020/03/28 20:39:50 rillig Exp $
+# $NetBSD: subst.mk,v 1.74 2020/04/01 15:10:09 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -20,6 +20,13 @@
 # SUBST_SHOW_DIFF
 #	Whether to log each changed file as a unified diff, for all
 #	SUBST classes. Defaults to "no".
+#
+# SUBST_NOOP_OK
+#	Whether it is ok to have filename patterns in SUBST_FILES that
+#	don't have any effect.
+#
+#	For backwards compatibility this defaults to "yes", but it
+#	should rather be set to "no".
 #
 # Package-settable variables:
 #
@@ -86,9 +93,12 @@
 # Keywords: subst
 #
 
-_VARGROUPS+=		subst
-_PKG_VARS.subst=	SUBST_CLASSES
 SUBST_SHOW_DIFF?=	no
+SUBST_NOOP_OK?=		yes	# only for backwards compatiblity
+
+_VARGROUPS+=		subst
+_USR_VARS.subst=	SUBST_SHOW_DIFF SUBST_NOOP_OK
+_PKG_VARS.subst=	SUBST_CLASSES
 .for c in ${SUBST_CLASSES}
 .  for pv in SUBST_STAGE SUBST_MESSAGE SUBST_FILES SUBST_SED SUBST_VARS	\
 	SUBST_FILTER_CMD SUBST_SKIP_TEXT_CHECK SUBST_NOOP_OK
@@ -125,7 +135,7 @@ _SUBST_KEEP.${_class_}?=	LC_ALL=C ${DIFF} -u "$$file" "$$tmpfile" || true
 .  endif
 _SUBST_KEEP.${_class_}?=	${DO_NADA}
 SUBST_SKIP_TEXT_CHECK.${_class_}?=	no
-SUBST_NOOP_OK.${_class_}?=	yes # TODO: change to no after 2020Q1
+SUBST_NOOP_OK.${_class_}?=	${SUBST_NOOP_OK}
 _SUBST_WARN.${_class_}=		${${SUBST_NOOP_OK.${_class_}:tl} == yes:?${INFO_MSG}:${WARNING_MSG}} "[subst.mk:${_class_}]"
 
 .if !empty(SUBST_SKIP_TEXT_CHECK.${_class_}:M[Yy][Ee][Ss])
