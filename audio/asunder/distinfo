@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/04/25 12:57:24 triaxx Exp $
+$NetBSD: distinfo,v 1.5 2020/04/01 09:45:54 nia Exp $
 
-SHA1 (asunder-2.8.tar.bz2) = 85872ce9b43eb3b62853c466b0142c0c7c44ab42
-RMD160 (asunder-2.8.tar.bz2) = be883223c1cbb516c042b9521fba149e244c72c1
-SHA512 (asunder-2.8.tar.bz2) = 54f606e10a27cc73aa5c0f1dc74a2df87020562fb74f14ad7030dd1b5f4ab1a4f42477c7d23b5285a7b0cba00f75929f444bc63e18e8da545c3cbdd2c3330ebe
-Size (asunder-2.8.tar.bz2) = 269472 bytes
+SHA1 (asunder-2.9.5.tar.bz2) = 68c559b66f11437fe3a7f739cc4d09e2dc62180e
+RMD160 (asunder-2.9.5.tar.bz2) = e6139ebc68a5f21726f6ecd63406c8e768b4ba3e
+SHA512 (asunder-2.9.5.tar.bz2) = 40e27877c8fa17465b13a7fa08df6f94dbcb893bd6d8d46a389ca18bce4f574e04e894f9ca19f52bc22e7d1ec0db67a79f236ae4037be459bc24fe95739771dc
+Size (asunder-2.9.5.tar.bz2) = 273141 bytes
