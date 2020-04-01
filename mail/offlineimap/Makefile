@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2019/04/25 07:33:04 maya Exp $
+# $NetBSD: Makefile,v 1.34 2020/04/01 10:10:21 nikita Exp $
 
 
 DISTNAME=	offlineimap-7.2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OfflineIMAP/}
 
@@ -12,6 +12,8 @@ COMMENT=	Powerful IMAP/Maildir synchronization and reader support
 LICENSE=	gnu-gpl-v2 # or later
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported
 
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-cursespanel-[0-9]*:../../devel/py-cursespanel
