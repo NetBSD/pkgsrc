@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2020/03/10 22:08:53 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2020/04/01 13:44:04 nia Exp $
 #
 
 PLUGIN_NAME=	pgpcore
 
-PKGREVISION= 4
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
