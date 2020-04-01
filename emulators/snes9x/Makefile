@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2019/01/01 22:16:14 nia Exp $
+# $NetBSD: Makefile,v 1.59 2020/04/01 10:08:15 nia Exp $
+
+PKGREVISION=	1
 
 .include "../../emulators/snes9x/Makefile.common"
 
@@ -7,10 +9,14 @@ COMMENT=	Super Nintendo Entertainment System (SNES) emulator (CLI version)
 
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		unix
-USE_TOOLS+=		gmake
+
 GNU_CONFIGURE=		yes
 
+USE_TOOLS+=		gmake pkg-config
+
 CONFIGURE_ARGS+=	--enable-netplay
+
+CONFIGURE_ARGS+=	--with-system-zip
 
 .include "../../mk/oss.buildlink3.mk"
 
@@ -45,7 +51,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/unix/docs/readme_unix.html \
 	    ${DESTDIR}${PREFIX}/share/doc/snes9x
 
-.include "../../mk/libusb.buildlink3.mk"
+.include "../../archivers/minizip/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
