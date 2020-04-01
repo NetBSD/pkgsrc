@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.33 2019/11/26 19:13:25 nia Exp $
+$NetBSD: distinfo,v 1.34 2020/04/01 13:44:03 nia Exp $
 
-SHA1 (claws-mail-3.17.4.tar.xz) = f91f1e687175a97960b576f9357e07ff38f91e2d
-RMD160 (claws-mail-3.17.4.tar.xz) = 420a0b1f6ff3efac9218478e0a1c60677eac0927
-SHA512 (claws-mail-3.17.4.tar.xz) = 4fc3b04d89c84b068654902d3d4f8ba66ec86c4ea9c4bd145fb3169dd26a2fcfc26adc8367b0ed90c69d095f6b1717ba3a9a52cc6d3e310a9dad1c3f733d8012
-Size (claws-mail-3.17.4.tar.xz) = 6280252 bytes
+SHA1 (claws-mail-3.17.5.tar.xz) = 5534900f498137e126d4e25c7d1199d1d87e33a4
+RMD160 (claws-mail-3.17.5.tar.xz) = 3ce11e8f770517331328619a2d74947defe45731
+SHA512 (claws-mail-3.17.5.tar.xz) = a1d3576eba70b83a6fe70aafead3d80681e6372d146b573f5d43fee63bdcf84b5350d4dc8a4290b11d11320381417253d893daee8169c110e294178d10ea542f
+Size (claws-mail-3.17.5.tar.xz) = 6290944 bytes
 SHA1 (patch-ab) = d1c89842cedad037c9ac3836da630244fe8ff9c9
 SHA1 (patch-af) = 2655fac7e0e7bfb2d50291537eab9481dbc83691
 SHA1 (patch-ai) = f70a8b1e4f169740f90707b4c9b05851196c9323
