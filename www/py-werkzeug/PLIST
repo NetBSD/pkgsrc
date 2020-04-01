@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/04/24 16:05:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/04/01 17:44:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,36 +16,6 @@ ${PYSITELIB}/werkzeug/_internal.pyo
 ${PYSITELIB}/werkzeug/_reloader.py
 ${PYSITELIB}/werkzeug/_reloader.pyc
 ${PYSITELIB}/werkzeug/_reloader.pyo
-${PYSITELIB}/werkzeug/contrib/__init__.py
-${PYSITELIB}/werkzeug/contrib/__init__.pyc
-${PYSITELIB}/werkzeug/contrib/__init__.pyo
-${PYSITELIB}/werkzeug/contrib/atom.py
-${PYSITELIB}/werkzeug/contrib/atom.pyc
-${PYSITELIB}/werkzeug/contrib/atom.pyo
-${PYSITELIB}/werkzeug/contrib/cache.py
-${PYSITELIB}/werkzeug/contrib/cache.pyc
-${PYSITELIB}/werkzeug/contrib/cache.pyo
-${PYSITELIB}/werkzeug/contrib/fixers.py
-${PYSITELIB}/werkzeug/contrib/fixers.pyc
-${PYSITELIB}/werkzeug/contrib/fixers.pyo
-${PYSITELIB}/werkzeug/contrib/iterio.py
-${PYSITELIB}/werkzeug/contrib/iterio.pyc
-${PYSITELIB}/werkzeug/contrib/iterio.pyo
-${PYSITELIB}/werkzeug/contrib/lint.py
-${PYSITELIB}/werkzeug/contrib/lint.pyc
-${PYSITELIB}/werkzeug/contrib/lint.pyo
-${PYSITELIB}/werkzeug/contrib/profiler.py
-${PYSITELIB}/werkzeug/contrib/profiler.pyc
-${PYSITELIB}/werkzeug/contrib/profiler.pyo
-${PYSITELIB}/werkzeug/contrib/securecookie.py
-${PYSITELIB}/werkzeug/contrib/securecookie.pyc
-${PYSITELIB}/werkzeug/contrib/securecookie.pyo
-${PYSITELIB}/werkzeug/contrib/sessions.py
-${PYSITELIB}/werkzeug/contrib/sessions.pyc
-${PYSITELIB}/werkzeug/contrib/sessions.pyo
-${PYSITELIB}/werkzeug/contrib/wrappers.py
-${PYSITELIB}/werkzeug/contrib/wrappers.pyc
-${PYSITELIB}/werkzeug/contrib/wrappers.pyo
 ${PYSITELIB}/werkzeug/datastructures.py
 ${PYSITELIB}/werkzeug/datastructures.pyc
 ${PYSITELIB}/werkzeug/datastructures.pyo
@@ -151,6 +121,9 @@ ${PYSITELIB}/werkzeug/wrappers/base_response.pyo
 ${PYSITELIB}/werkzeug/wrappers/common_descriptors.py
 ${PYSITELIB}/werkzeug/wrappers/common_descriptors.pyc
 ${PYSITELIB}/werkzeug/wrappers/common_descriptors.pyo
+${PYSITELIB}/werkzeug/wrappers/cors.py
+${PYSITELIB}/werkzeug/wrappers/cors.pyc
+${PYSITELIB}/werkzeug/wrappers/cors.pyo
 ${PYSITELIB}/werkzeug/wrappers/etag.py
 ${PYSITELIB}/werkzeug/wrappers/etag.pyc
 ${PYSITELIB}/werkzeug/wrappers/etag.pyo
@@ -170,10 +143,6 @@ ${PYSITELIB}/werkzeug/wsgi.py
 ${PYSITELIB}/werkzeug/wsgi.pyc
 ${PYSITELIB}/werkzeug/wsgi.pyo
 ${EGDIR}/README.rst
-${EGDIR}/contrib/README
-${EGDIR}/contrib/securecookie.py
-${EGDIR}/contrib/sessions.py
-${EGDIR}/cookieauth.py
 ${EGDIR}/coolmagic/__init__.py
 ${EGDIR}/coolmagic/application.py
 ${EGDIR}/coolmagic/helpers.py

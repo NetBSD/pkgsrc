@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2020/02/03 12:02:18 kleink Exp $
+$NetBSD: distinfo,v 1.25 2020/04/01 17:44:54 adam Exp $
 
-SHA1 (Werkzeug-0.16.1.tar.gz) = df85857118a45b0b9f3b95713d19d1df4fd0e8ae
-RMD160 (Werkzeug-0.16.1.tar.gz) = 4c83c5c89c5cdd99ad6425780625c549ce902444
-SHA512 (Werkzeug-0.16.1.tar.gz) = 1f27ea5b890c10df67726299c7656bab492e356021beec8f7a08413b386b7a884b64aaa16b80b60d7060a59c8c8e497ccc4c1e1e9104e8800dbfd7cf8b5b0d9c
-Size (Werkzeug-0.16.1.tar.gz) = 935128 bytes
+SHA1 (Werkzeug-1.0.1.tar.gz) = 07b0f2dcd460076d437d1481c556584db88df199
+RMD160 (Werkzeug-1.0.1.tar.gz) = 9dc625e19c6cb90783972a8d467bd5270aafe30c
+SHA512 (Werkzeug-1.0.1.tar.gz) = ba76ee6f39cf8f6b2c8988e6119be78cc6c868ea78bd2014837b4e9f59e8b790fb3a7b5a45b392cabdc61f32b8a6902cf5f43d7e20b1f4571e0bef102a3e88fa
+Size (Werkzeug-1.0.1.tar.gz) = 904455 bytes
