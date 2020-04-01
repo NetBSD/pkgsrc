@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/03/10 22:09:18 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/04/01 09:45:54 nia Exp $
 
-DISTNAME=	asunder-2.8
-PKGREVISION=	5
+DISTNAME=	asunder-2.9.5
 CATEGORIES=	audio
 MASTER_SITES=	http://littlesvr.ca/asunder/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +14,8 @@ DEPENDS+=	cdparanoia-[0-9]*:../../audio/cdparanoia
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config intltool msgfmt
+USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		intltool msgfmt msgmerge xgettext
 
 .include "options.mk"
 
