@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/02/28 22:08:05 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/01 19:15:00 plunky Exp $
 
 DISTNAME=	congen-1.7
 CATEGORIES=	math
@@ -19,4 +19,5 @@ REPLACE_RUBY=	scripts/*.rb
 
 .include "../../databases/libtcd/buildlink3.mk"
 .include "../../lang/ruby/replace.mk"
+.include "../../lang/ruby/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
