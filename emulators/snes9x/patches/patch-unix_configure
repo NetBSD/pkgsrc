@@ -1,18 +1,28 @@
-$NetBSD: patch-unix_configure,v 1.1 2019/01/01 22:16:14 nia Exp $
+$NetBSD: patch-unix_configure,v 1.2 2020/04/01 10:08:15 nia Exp $
 
 !Linux sometimes has OSS.
 
---- unix/configure.orig	2018-12-16 17:04:59.000000000 +0000
+--- unix/configure.orig	2019-04-23 18:57:18.000000000 +0000
 +++ unix/configure
-@@ -6301,12 +6301,12 @@ $as_echo "yes" >&6; }
- $as_echo "no" >&6; }
- 		{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Your OS is not Linux. Build without sound support." >&5
- $as_echo "$as_me: WARNING: Your OS is not Linux. Build without sound support." >&2;}
--		enable_sound="no"
- 	fi
- fi
+@@ -6291,22 +6291,8 @@ fi
+ 
  
  if test "x$enable_sound" = "xyes"; then
+-	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether sound is supported on this platform" >&5
+-$as_echo_n "checking whether sound is supported on this platform... " >&6; }
+-	if test "x$snes9x_cv_linux_os" = "xyes"; then
+-		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-$as_echo "yes" >&6; }
+-	else
+-		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-		{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Your OS is not Linux. Build without sound support." >&5
+-$as_echo "$as_me: WARNING: Your OS is not Linux. Build without sound support." >&2;}
+-		enable_sound="no"
+-	fi
+-fi
+-
+-if test "x$enable_sound" = "xyes"; then
  	ac_fn_cxx_check_header_mongrel "$LINENO" "pthread.h" "ac_cv_header_pthread_h" "$ac_includes_default"
 +		S9XLIBS="$S9XLIBS $LIBOSSAUDIO"
  if test "x$ac_cv_header_pthread_h" = xyes; then :
