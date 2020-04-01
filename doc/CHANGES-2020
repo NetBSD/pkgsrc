@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2027 2020/03/31 23:13:10 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2028 2020/04/01 08:36:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2736,3 +2736,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added wm/obconf-qt 0.14.1 [gutteridge 2020-03-31]
 	Updated sysutils/libfm to 1.3.1nb4 [gutteridge 2020-03-31]
 	Added x11/libkscreen 5.16.4 [gutteridge 2020-03-31]
+	Updated security/gnutls to 3.6.13 [adam 2020-04-01]
+	Updated games/scummvm to 2.1.2 [adam 2020-04-01]
