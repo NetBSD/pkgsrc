@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2020/03/20 11:58:05 nia Exp $
-#
+# $NetBSD: Makefile,v 1.23 2020/04/01 10:01:29 nia Exp $
 
-DISTNAME=	bftpd-5.2
+DISTNAME=	bftpd-5.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bftpd/}
 
@@ -11,6 +10,8 @@ COMMENT=	Small and fast FTP server
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	YES
+USE_TOOLS+=	gmake
+
 WRKSRC=		${WRKDIR}/bftpd
 
 CONF_FILES=	${PREFIX}/share/examples/bftpd/bftpd.conf \
