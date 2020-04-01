@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:32:43 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/04/01 14:35:19 wiz Exp $
 
 GCC_PKGNAME=	gcc8
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC8_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc8 package so that with the dependence pattern
 ## '{gcc8,gcc8-libs}>=8.2.*' pkg_add will choose gcc8-libs over gcc8.
-PKGREVISION=	3
+PKGREVISION=	4
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
@@ -44,15 +44,15 @@ SHLIB_EXT=	so
 LIBRARY_FILES=	${WRKDIR}/lib_files
 
 GENERATE_PLIST+=	${SED} -e 's,^,${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/,' \
-			       ${LIBRARY_FILES};
+			${LIBRARY_FILES};
 GENERATE_PLIST+=	${GREP} -q 'lib/' ${LIBRARY_FILES} || \
-			${ECHO} '@pkgdir ${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/lib' ;
+			${ECHO} '@pkgdir ${LIBGCC_SUBPREFIX}/${GCC_TARGET_MACHINE}/lib';
 
 ${LIBRARY_FILES}:
-	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC8_DIST_VERSION}*' |		\
+	${PKG_INFO} -qL '${GCC_PKGNAME}-${GCC8_DIST_VERSION}*' |	\
 	${SED} -n -e's,^${LIBGCC_PREFIX}/,,' -e'/libexec\//d'		\
 		-e'/libgij/d;/libgcj/d;/libjvm/d'			\
-		-e'/lib.*\.${SHLIB_EXT}/p' 		>${LIBRARY_FILES}
+		-e'/lib.*\.${SHLIB_EXT}/p' >${LIBRARY_FILES}
 
 do-install: ${LIBRARY_FILES}
 	${TEST} -d ${DESTDIR}${LIBGCC_PREFIX}/${GCC_TARGET_MACHINE}/lib ||	\
