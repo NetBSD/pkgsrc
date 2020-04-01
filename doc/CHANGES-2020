@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2039 2020/04/01 14:35:41 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2040 2020/04/01 14:51:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2749,3 +2749,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/claws-mail to 3.17.5 [nia 2020-04-01]
 	Updated lang/gcc8-libs to 8.3.0nb4 [wiz 2020-04-01]
 	Updated lang/gcc8 to 8.3.0nb3 [wiz 2020-04-01]
+	Updated devel/meson to 0.54.0 [wiz 2020-04-01]
