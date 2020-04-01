@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2035 2020/04/01 10:21:55 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2036 2020/04/01 10:51:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2745,3 +2745,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/bftpd to 5.4 [nia 2020-04-01]
 	Updated mail/offlineimap to 7.2.3nb2 [nikita 2020-04-01]
 	Updated www/checkbot to 1.80 [nia 2020-04-01]
+	Updated x11/clipit to 1.4.4 [nia 2020-04-01]
