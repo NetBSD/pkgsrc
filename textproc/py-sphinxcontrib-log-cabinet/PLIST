@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/01 17:39:14 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/sphinxcontrib/log_cabinet.py
+${PYSITELIB}/sphinxcontrib/log_cabinet.pyc
+${PYSITELIB}/sphinxcontrib/log_cabinet.pyo
