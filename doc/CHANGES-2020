@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2034 2020/04/01 10:12:07 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.2035 2020/04/01 10:21:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2744,3 +2744,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/asunder to 2.9.5 [nia 2020-04-01]
 	Updated net/bftpd to 5.4 [nia 2020-04-01]
 	Updated mail/offlineimap to 7.2.3nb2 [nikita 2020-04-01]
+	Updated www/checkbot to 1.80 [nia 2020-04-01]
