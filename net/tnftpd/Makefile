@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2016/02/25 08:27:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2020/04/02 09:35:22 nia Exp $
 
-DISTNAME=		tnftpd-20130325
+DISTNAME=		tnftpd-20190602
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
+MASTER_SITES=		https://cdn.netbsd.org/pub/NetBSD/misc/tnftp/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		The NetBSD FTP Daemon
