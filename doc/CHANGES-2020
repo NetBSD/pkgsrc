@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2047 2020/04/02 09:23:16 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2048 2020/04/02 09:31:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2769,3 +2769,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/git to 2.26.0 [adam 2020-04-02]
 	Updated sysutils/u-boot-rockpro64 to 2020.01.rc5 [tnn 2020-04-02]
 	Updated print/zathura to 0.4.5 [nia 2020-04-02]
+	Updated print/zathura-pdf-poppler to 0.3.0 [nia 2020-04-02]
