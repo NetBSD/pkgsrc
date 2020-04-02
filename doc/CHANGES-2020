@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2053 2020/04/02 10:11:47 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.2054 2020/04/02 10:33:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2775,3 +2775,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/fpdns to 0.10.0pre20190131 [fcambus 2020-04-02]
 	Updated textproc/json-schema to 1.3 [wiz 2020-04-02]
 	Updated lang/yabasic to 2.86.6 [fcambus 2020-04-02]
+	Added devel/py-codespell version 1.16.0 [wiz 2020-04-02]
