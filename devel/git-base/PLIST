@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/01/20 20:07:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/04/02 07:46:42 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -246,6 +246,7 @@ share/locale/ko/LC_MESSAGES/git.mo
 share/locale/pt_PT/LC_MESSAGES/git.mo
 share/locale/ru/LC_MESSAGES/git.mo
 share/locale/sv/LC_MESSAGES/git.mo
+share/locale/tr/LC_MESSAGES/git.mo
 share/locale/vi/LC_MESSAGES/git.mo
 share/locale/zh_CN/LC_MESSAGES/git.mo
 share/locale/zh_TW/LC_MESSAGES/git.mo
