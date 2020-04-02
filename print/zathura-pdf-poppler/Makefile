@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.44 2020/03/10 22:10:53 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2020/04/02 09:31:26 nia Exp $
 
-DISTNAME=	zathura-pdf-poppler-0.2.9
-PKGREVISION=	15
+DISTNAME=	zathura-pdf-poppler-0.3.0
 CATEGORIES=	print
-MASTER_SITES=	https://pwmt.org/projects/zathura/plugins/download/
+MASTER_SITES=	https://pwmt.org/projects/zathura-pdf-poppler/download/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	degroote@NetBSD.org
-HOMEPAGE=	https://pwmt.org/projects/zathura/
+HOMEPAGE=	https://pwmt.org/projects/zathura-pdf-poppler/
 COMMENT=	Add PDF support to zathura using poppler rendering engine
 LICENSE=	zlib
 
 USE_TOOLS+=	pkg-config
 
+PYTHON_FOR_BUILD_ONLY=	tool
+
 .include "../../devel/meson/build.mk"
-.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/girara/buildlink3.mk"
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../print/zathura/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
