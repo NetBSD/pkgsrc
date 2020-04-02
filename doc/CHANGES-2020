@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2045 2020/04/02 07:47:25 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2046 2020/04/02 09:16:28 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2767,3 +2767,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/nano to 4.9 [schwarz 2020-04-01]
 	Updated textproc/libxslt to 1.1.34nb1 [wiz 2020-04-02]
 	Updated devel/git to 2.26.0 [adam 2020-04-02]
+	Updated sysutils/u-boot-rockpro64 to 2020.01.rc5 [tnn 2020-04-02]
