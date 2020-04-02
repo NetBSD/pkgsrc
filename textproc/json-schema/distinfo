@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/04/09 07:33:45 wiz Exp $
+$NetBSD: distinfo,v 1.4 2020/04/02 09:57:41 wiz Exp $
 
-SHA1 (json-schema-1.2.tar.xz) = a66c508aafd84aff3e99db3bf9d1e2757fdd7293
-RMD160 (json-schema-1.2.tar.xz) = 4a01badf19e5ba0aa58a485c87a50c3d8bccaf5d
-SHA512 (json-schema-1.2.tar.xz) = 4c58560d11063d10e15740713a8c8fae59e59c7d029419282a6e92b47d29452c541fee9d04debfb2400ef57b8445520f1e5af11d76c970a2d06f021accc96c77
-Size (json-schema-1.2.tar.xz) = 40444 bytes
+SHA1 (json-schema-1.3.tar.xz) = 3770809889a9dea7497deab7cafc63bd0b04b9f8
+RMD160 (json-schema-1.3.tar.xz) = 881bb6ead49b8fda8a10ab8cecc192281aae7c06
+SHA512 (json-schema-1.3.tar.xz) = e4fd7d8eadf854a48829a44e3b7372a6d8e38de8562a20d3695220dd15e9b49607db9efacc9cfdd7f95214278331699c68fb49a5137207bb9860ca24e003925a
+Size (json-schema-1.3.tar.xz) = 43160 bytes
