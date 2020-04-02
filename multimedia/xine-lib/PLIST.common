@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.41 2020/04/02 15:52:46 nia Exp $
+@comment $NetBSD: PLIST.common,v 1.42 2020/04/02 17:46:40 nia Exp $
 bin/xine-config
 bin/xine-list-1.2
 include/xine.h
@@ -168,16 +168,8 @@ ${PLIST.sdl}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_sdl.a
 ${PLIST.sdl}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_sdl.so
 ${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xcbshm.a
 ${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xcbshm.so
-${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xcbxv.a
-${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xcbxv.so
 ${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xshm.a
 ${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xshm.so
-${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xv.a
-${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xv.so
-${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xvmc.a
-${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xvmc.so
-${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xxmc.a
-${PLIST.x11}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xxmc.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_xiph.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_xiph.so
 man/man1/xine-config.1
