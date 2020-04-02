@@ -1,15 +1,15 @@
-$NetBSD: patch-source4_dsdb_samdb_ldb__modules_wscript__build__server,v 1.1 2019/03/20 19:09:10 adam Exp $
+$NetBSD: patch-source4_dsdb_samdb_ldb__modules_wscript__build__server,v 1.2 2020/04/02 11:21:42 adam Exp $
 
 Some linkers do not support --wrap.
 
---- source4/dsdb/samdb/ldb_modules/wscript_build_server.orig	2019-03-20 09:32:08.000000000 +0000
+--- source4/dsdb/samdb/ldb_modules/wscript_build_server.orig	2020-01-31 10:25:36.000000000 +0000
 +++ source4/dsdb/samdb/ldb_modules/wscript_build_server
 @@ -54,6 +54,7 @@ bld.SAMBA_BINARY('test_audit_log_errors'
                       -Wl,--wrap,json_add_version
                       -Wl,--wrap,json_add_timestamp
                   ''',
 +                 enabled=bld.env['HAVE_LDWRAP'],
-                  install=False)
+                  for_selftest=True)
  
  bld.SAMBA_BINARY('test_group_audit',
 @@ -87,6 +88,7 @@ bld.SAMBA_BINARY('test_group_audit_error
@@ -17,6 +17,6 @@ Some linkers do not support --wrap.
                       -Wl,--wrap,json_add_timestamp
                   ''',
 +                 enabled=bld.env['HAVE_LDWRAP'],
-                  install=False)
+                  for_selftest=True)
  
  bld.SAMBA_MODULE('ldb_samba_dsdb',
