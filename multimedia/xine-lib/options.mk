@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2020/04/02 15:52:46 nia Exp $
+# $NetBSD: options.mk,v 1.4 2020/04/02 17:46:40 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xine-lib
 
@@ -77,10 +77,8 @@ CONFIGURE_ARGS+=	--with-x
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
-.include "../../x11/libXvMC/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-xvmc
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-xcb
 .endif
