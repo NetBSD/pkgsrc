@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/05/07 18:44:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/04/02 15:53:28 nia Exp $
 bin/fbxine
 bin/xine
 bin/xine-bugreport
@@ -83,6 +83,7 @@ share/mime/packages/xine-ui.xml
 share/pixmaps/xine.xpm
 share/xine/oxine/mainmenu
 share/xine/oxine/mediamarks
+share/xine/skins/xine-ui_logo.mpg
 share/xine/skins/xine-ui_logo.png
 share/xine/skins/xine_splash.png
 share/xine/skins/xinetic/BigArrowDown.png
