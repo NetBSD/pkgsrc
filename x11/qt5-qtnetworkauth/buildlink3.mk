@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2020/03/10 22:09:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2020/04/02 22:05:58 adam Exp $
 
 BUILDLINK_TREE+=	qt5-qtnetworkauth
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtnetworkauth
 QT5_QTNETWORKAUTH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtnetworkauth+=	qt5-qtnetworkauth>=5.11.2
-BUILDLINK_ABI_DEPENDS.qt5-qtnetworkauth+=	qt5-qtnetworkauth>=5.14.1nb2
+BUILDLINK_ABI_DEPENDS.qt5-qtnetworkauth+=	qt5-qtnetworkauth>=5.14.2
 BUILDLINK_PKGSRCDIR.qt5-qtnetworkauth?=		../../x11/qt5-qtnetworkauth
 
 BUILDLINK_INCDIRS.qt5-qtnetworkauth+=	qt5/include
