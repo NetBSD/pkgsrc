@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2019/08/11 13:22:08 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2020/04/02 09:46:52 fcambus Exp $
 
-VERSION=	20130404
-DISTNAME=	20130404
-PKGREVISION=	6
+VERSION=	20190131
+DISTNAME=	20190131
 PKGNAME=	fpdns-0.10.0pre${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/kirei/fpdns/archive/
@@ -19,7 +18,6 @@ REPLACE_PERL=	apps/fpdns
 USE_TOOLS+=	perl
 USE_LANGUAGES=	# none
 
-PERL5_CONFIGURE=	yes
 PERL5_PACKLIST=		auto/Net/DNS/Fingerprint/.packlist
 
 .include "../../lang/perl5/module.mk"
