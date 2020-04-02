@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.89 2020/01/20 21:54:03 nia Exp $
+# $NetBSD: Makefile.common,v 1.90 2020/04/02 15:52:46 nia Exp $
 #
 # used by audio/xine-alsa/Makefile
 # used by audio/xine-pulse/Makefile
 # used by multimedia/xine-v4l/Makefile
 # used by multimedia/xine-v4l2/Makefile
 
-DISTNAME=		xine-lib-1.2.9
-XINE_PKGNAME=		xine-lib-1.2.9
+DISTNAME=		xine-lib-1.2.10
+XINE_PKGNAME=		xine-lib-1.2.10
 PKGNAME?=		${XINE_PKGNAME}
 CATEGORIES?=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
@@ -17,7 +17,7 @@ HOMEPAGE=		https://www.xine-project.org/
 
 MAKE_JOBS_SAFE=		no
 
-XINE_MOD_DIR_VER=	2.7
+XINE_MOD_DIR_VER=	2.8
 PLIST_SUBST+=		XINE_MOD_DIR_VER=${XINE_MOD_DIR_VER:Q}
 
 DISTINFO_FILE=		${.CURDIR}/../../multimedia/xine-lib/distinfo
@@ -28,43 +28,20 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	libtool libtool-nofpic
 PKGCONFIG_OVERRIDE=	misc/libxine.pc.in
-USE_TOOLS+=		autoconf automake gmake msgfmt pkg-config xmkmf perl gsed
+USE_TOOLS+=		aclocal autoconf automake
+USE_TOOLS+=		msgfmt msgmerge xgettext
+USE_TOOLS+=		gmake pkg-config xmkmf perl gsed
+
+CPPFLAGS+=		-DHAVE_ZERO_SAFE_MEM=1
 
 CONFIGURE_ARGS+=	--with-w32-path='${PREFIX}/lib/win32'
 #CONFIGURE_ARGS+=	--without-external-ffmpeg --disable-ffmpegtest
 CONFIGURE_ENV+=		have_libpng="yes"
 CONFIGURE_ENV+=		PNG_CFLAGS="-I${PREFIX}/include"
-CONFIGURE_ENV+=		PNG_LIBS="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lpng"
+CONFIGURE_ENV+=		PNG_LIBS="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lpng"
 # XXX broken configure check in 1.2.1
 CONFIGURE_ENV+=		cc_cv_cflags__Werror_implicit_function_declaration="no"
 PKGSRC_MAKE_ENV+=	"mkdir_p"="mkdir -p"
-
-.include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS+=		xv xvmc
-.include "../../x11/libXv/buildlink3.mk"
-.include "../../x11/libXvMC/buildlink3.mk"
-
-.if ${X11_TYPE} == "modular"
-PLIST.xv=		yes
-PLIST.xvmc=		yes
-.else
-.  if exists(${X11BASE}/lib/libXv.so)
-CONFIGURE_ARGS+=	--with-xv-path='${X11BASE}/lib'
-PLIST.xv=		yes
-.  endif
-.  if exists(${X11BASE}/lib/libXvMC.so)
-CONFIGURE_ARGS+=	--with-xvmc-path='${X11BASE}/lib'
-CONFIGURE_ARGS+=	--with-xxmc-path='${X11BASE}/lib'
-PLIST.xvmc=		yes
-.  endif
-.endif # X11_TYPE
-
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[1-4].*)
-# --no-undefined causes errors if shlibs are not linked against libc
-BUILDLINK_TRANSFORM+=	"rm:-Wl,--no-undefined"
-.endif
 
 pre-configure:
 	${TOUCH} ${WRKSRC}/lib/dummy.c
