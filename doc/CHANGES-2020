@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2055 2020/04/02 11:22:05 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2056 2020/04/02 11:39:05 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2778,3 +2778,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-codespell version 1.16.0 [wiz 2020-04-02]
 	Updated databases/ldb to 2.1.1 [adam 2020-04-02]
 	Updated net/samba4 to 4.12.0 [adam 2020-04-02]
+	Updated sysutils/upower to 0.99.11 [bsiegert 2020-04-02]
