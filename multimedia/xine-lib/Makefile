@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.158 2020/04/02 15:52:46 nia Exp $
+# $NetBSD: Makefile,v 1.159 2020/04/02 17:46:40 nia Exp $
+
+PKGREVISION=	1
 
 .include "Makefile.common"
 
@@ -13,6 +15,7 @@ CONFIGURE_ARGS+=	--disable-real-codecs
 CONFIGURE_ARGS+=	--disable-mlib
 CONFIGURE_ARGS+=	--disable-vaapi
 CONFIGURE_ARGS+=	--disable-vidix
+CONFIGURE_ARGS+=	--disable-xvmc
 
 CONFIGURE_ARGS+=	--with-a52dec=internal
 CONFIGURE_ARGS+=	--without-dav1d
@@ -50,6 +53,11 @@ PLIST.oss=	yes
 
 CPPFLAGS.SunOS+=	-D__u32=uint32_t -DHAVE_SYSI86 -DHAVE_MMX_FALSE
 LDFLAGS.SunOS+=		-lresolv
+
+# xv video output seems to be broken. Make sure another gets used instead.
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xcbxv.*
+	${RM} -f ${DESTDIR}${PREFIX}/lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xv.*
 
 .include "options.mk"
 .include "../../audio/flac/buildlink3.mk"
