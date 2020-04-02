@@ -1,31 +1,5 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.7 2014/12/31 16:10:41 rumko Exp $
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/cyberblade_vid.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/cyberblade_vid.so
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/mach64_vid.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/mach64_vid.so
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/mga_crtc2_vid.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/mga_crtc2_vid.so
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/mga_vid.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/mga_vid.so
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/nvidia_vid.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/nvidia_vid.so
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/pm2_vid.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/pm2_vid.so
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/pm3_vid.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/pm3_vid.so
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/radeon_vid.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/radeon_vid.so
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/rage128_vid.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/rage128_vid.so
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/savage_vid.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/savage_vid.so
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/sis_vid.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/sis_vid.so
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/unichrome_vid.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix/unichrome_vid.so
+@comment $NetBSD: PLIST.FreeBSD,v 1.8 2020/04/02 15:52:46 nia Exp $
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_vcdo.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_vcdo.so
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_vidix.a
-${PLIST.vidix}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_vidix.so
