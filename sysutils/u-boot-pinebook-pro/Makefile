@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/02/23 01:01:11 mrg Exp $
+# $NetBSD: Makefile,v 1.8 2020/04/02 09:12:54 tnn Exp $
 
 PKGREVISION=		5
 
@@ -10,4 +10,4 @@ UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 
 U_BOOT_IMAGE_TYPE=	rk3399
 
-.include "../../sysutils/u-boot-pinebook-pro/u-boot-rockchip.mk"
+.include "../../sysutils/u-boot/u-boot-rockchip.mk"
