@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2043 2020/04/01 20:30:53 schwarz Exp $
+$NetBSD: CHANGES-2020,v 1.2044 2020/04/02 06:42:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2765,3 +2765,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-werkzeug to 1.0.1 [adam 2020-04-01]
 	Updated www/py-werkzeug-docs to 1.0.1 [adam 2020-04-01]
 	Updated editors/nano to 4.9 [schwarz 2020-04-01]
+	Updated textproc/libxslt to 1.1.34nb1 [wiz 2020-04-02]
