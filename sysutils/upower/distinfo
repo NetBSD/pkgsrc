@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/07/18 19:18:07 bsiegert Exp $
+$NetBSD: distinfo,v 1.6 2020/04/02 11:38:49 bsiegert Exp $
 
-SHA1 (upower-0.99.4.tar.xz) = 70beb18c218e758586fb5d98d79b5121cc4a47b1
-RMD160 (upower-0.99.4.tar.xz) = 6cc312d44a19ffc604c3a3282d03b9cdb6aa3638
-SHA512 (upower-0.99.4.tar.xz) = b3fdee5ccf5f4d0c69e227f543272f6952119132814e27bc8f112716b8d36b5e07741a87bcf02203e80ef910cad9ddffa1adecb338c9a9aaa5e1038b62be07f3
-Size (upower-0.99.4.tar.xz) = 426292 bytes
-SHA1 (patch-libupower-glib_up-client.c) = 9eab8b87649546ab7f4d16f009f464a97142836c
-SHA1 (patch-libupower-glib_up-client.h) = d4c458a6f9ce07166a7e1f6c3ad757ca731b32b7
-SHA1 (patch-tools_up-tool.c) = e7594be12597f47b3c4f2eb65c486004804539ee
+SHA1 (upower-0.99.11.tar.xz) = 5a023b29d64a6ce41cc6901bc46a279041784a9b
+RMD160 (upower-0.99.11.tar.xz) = cb4620efd91cd8d1ac770ca014fa91939f39ed00
+SHA512 (upower-0.99.11.tar.xz) = 67219a0beb98c97ac4512e4fe8ba83fc80a1035d1edb5367dda6911da50c672b047051f2f528e8703be29ab47547d92b6c71a7ef695226a1bdb5bc33e6d18803
+Size (upower-0.99.11.tar.xz) = 430128 bytes
