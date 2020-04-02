@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.28 2019/05/15 15:37:32 nia Exp $
+$NetBSD: distinfo,v 1.29 2020/04/02 15:53:28 nia Exp $
 
-SHA1 (xine-ui-0.99.10.tar.xz) = 4d61653d9bd88ba446c7c0772d03fc68ddfac46b
-RMD160 (xine-ui-0.99.10.tar.xz) = 14193feda1255e6dd7adc68d03ea09e3298b853e
-SHA512 (xine-ui-0.99.10.tar.xz) = 73cbc72375b27335e9d5f5527c35dab12d1ae40539b587630b3d8709471e4c61ce7b619062b75f587252c0647c234ffcf611f3b4e38e0447f7041b7ca5d7289e
-Size (xine-ui-0.99.10.tar.xz) = 1762968 bytes
+SHA1 (xine-ui-0.99.12.tar.xz) = ee4fc8bad73f67527a035b67ce97c542bd6d6db6
+RMD160 (xine-ui-0.99.12.tar.xz) = 8745bb5d5add4cbecf171aca7f73f58918b26149
+SHA512 (xine-ui-0.99.12.tar.xz) = bc04cb8df730abce147485b488250331a304e4318fc28ebab890c6485242a5edeafd953547c637622e2312c65aa1e36aaae6117d608dd668781d841804f2ae86
+Size (xine-ui-0.99.12.tar.xz) = 1980672 bytes
 SHA1 (patch-ab) = 93cd824f2b85affb8847d84dd8562ef4bb12f6eb
 SHA1 (patch-aj) = 9300e6b992603f9488370d928097eefc65048305
 SHA1 (patch-bb) = e4e1eb142843d78497c66701d433fb24997b867b
