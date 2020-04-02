@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.42 2020/01/29 12:44:14 adam Exp $
+$NetBSD: distinfo,v 1.43 2020/04/02 11:21:41 adam Exp $
 
-SHA1 (samba-4.11.6.tar.gz) = 29b5c678ddf47dd77fe459c17c183c8273e6c850
-RMD160 (samba-4.11.6.tar.gz) = 28ea01683005e9ec4e7f9adc73035983c6b089f0
-SHA512 (samba-4.11.6.tar.gz) = 3815080a1693c596a126371a5ea4e8534317a7266803c7de13a7e5b3ee9757dfbf13c0de20d498a6683d3aaf56941ed42f289e3c24f88713529a5f047a691af2
-Size (samba-4.11.6.tar.gz) = 18541566 bytes
+SHA1 (samba-4.12.0.tar.gz) = c852939a700d273c78663a47944d944c5bc81498
+RMD160 (samba-4.12.0.tar.gz) = 0ffcc753270568944c5a40193b0307959514ca4e
+SHA512 (samba-4.12.0.tar.gz) = d50be899675b8e3504311e73bb75fbb8264e918e0d1765239ecb5b14e15c0917565f8a9ce1877fb604151bf4f23dfc4c2f7f30a53c872681e3d2571d3ed5ef82
+Size (samba-4.12.0.tar.gz) = 18156651 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d927db17124d2bb5b382885e70a41f84c3929926
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
-SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = a7cc41a55ce032c3fe1e0b660f88fa7871710e0e
+SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = e4c0ed3dacfcf5613a5b397b3c6cf88509497da7
 SHA1 (patch-buildtools_wafsamba_samba__utils.py) = 0a587421870c1974175fadbb02dde215f35938f2
 SHA1 (patch-buildtools_wafsamba_wscript) = 0ca4c3a9d2e07f9165784e495f6f6b2b21db2758
 SHA1 (patch-docs-xml_wscript__build) = 5aa5cbf61882604b7ec9d19f0cd1537a23705ad0
@@ -26,9 +26,8 @@ SHA1 (patch-nsswitch_winbind__nss__netbsd.c) = 71d8acd0aa4c297d75555fba650461c77
 SHA1 (patch-nsswitch_wscript__build) = e8a6251e031ffa13d6347fade8891f7afd65d3eb
 SHA1 (patch-source3_libsmb_pylibsmb.c) = 50c3aaecf345449e02642e387eeac3dd7043e77a
 SHA1 (patch-source3_smbd_process.c) = 532d2426b9bd2a215d133bc489741558aa07f849
-SHA1 (patch-source4_dsdb_samdb_ldb__modules_count__attrs.c) = a9cb90484e192e8533a39d9afc6ce7d55cac84ac
-SHA1 (patch-source4_dsdb_samdb_ldb__modules_wscript__build__server) = c322cf56995192039fa22548d6d6e50641c4c796
-SHA1 (patch-source4_heimdal__build_roken.h) = ee535f8e7cc46a3487d95bc859438c476a88fe60
+SHA1 (patch-source4_dsdb_samdb_ldb__modules_wscript__build__server) = 47f55ec16b667a0a4d38de5ac89a117f2ac8f898
+SHA1 (patch-source4_heimdal__build_roken.h) = f467a541fa09e2aa483d10ed9d49df9167a3443a
 SHA1 (patch-source4_heimdal_include_heim__threads.h) = c93e0c80790ea2045333822c80e66d371bf2249c
 SHA1 (patch-source4_scripting_wsript_build) = bd4feddcaadf1c3d2d25eb7914e7b5843e4e9511
 SHA1 (patch-source4_utils_oLschema2ldif_wscript__build) = b0cbbcd4ebedd443dc9f9a59d1dad2e039bb9663
