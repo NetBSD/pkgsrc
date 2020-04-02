@@ -1,12 +1,12 @@
-$NetBSD: patch-src-post-planar-eq.c,v 1.4 2018/11/13 11:10:41 markd Exp $
+$NetBSD: patch-src-post-planar-eq.c,v 1.5 2020/04/02 15:52:46 nia Exp $
 
 https://bugs.xine-project.org/show_bug.cgi?id=524
 
 Disable MMX sections on SunOS.
 
---- src/post/planar/eq.c.orig	2018-01-11 12:49:47.000000000 +0000
+--- src/post/planar/eq.c.orig	2019-12-13 20:47:50.000000000 +0000
 +++ src/post/planar/eq.c
-@@ -31,7 +31,7 @@
+@@ -33,7 +33,7 @@
  #include <pthread.h>
  
  
@@ -15,7 +15,7 @@ Disable MMX sections on SunOS.
  
  #if defined(ARCH_X86_64)
  #  define MEM1(reg) "(%"reg")"
-@@ -157,9 +157,11 @@ typedef struct eq_parameters_s {
+@@ -155,9 +155,11 @@ typedef struct eq_parameters_s {
   * description of params struct
   */
  START_PARAM_DESCR( eq_parameters_t )
@@ -29,8 +29,8 @@ Disable MMX sections on SunOS.
              "contrast" )
  END_PARAM_DESCR( param_descr )
  
-@@ -278,7 +280,7 @@ static post_plugin_t *eq_open_plugin(pos
-   }
+@@ -360,7 +362,7 @@ static post_plugin_t *eq_open_plugin(pos
+   (void)audio_target;
  
    process = process_C;
 -#if defined(ARCH_X86)
