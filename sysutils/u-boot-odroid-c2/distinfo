@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2019/10/16 23:41:33 bad Exp $
+$NetBSD: distinfo,v 1.6 2020/04/02 08:11:23 wiz Exp $
 
 SHA1 (odroidc2-v2015.01-bl1.bin.hardkernel) = 40d92af372797dc3e24de62feab117206dae6718
 RMD160 (odroidc2-v2015.01-bl1.bin.hardkernel) = 356c7ec0fada96ff8371c5286990fd31212174f9
@@ -31,6 +31,7 @@ SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-m2-zero.dts) = aaa530a5f520eea0c
 SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-p2-zero.dts) = 8c78d0e0877aa9784fa209af2e16e80cb1110364
 SHA1 (patch-arch_arm_dts_sun8i-h3-nanopi-duo2.dts) = ec4927bb5f024f9aca6f71890c4bc14dc53e8ba7
 SHA1 (patch-arch_arm_dts_sun8i-h3-nanopi-r1.dts) = a192c05c31038cf11354dd4a32d94b5b62945661
+SHA1 (patch-arch_powerpc_include_asm_byteorder.h) = 8cab2805c6b21c986f7b4e2c38db11dfcea28c42
 SHA1 (patch-configs_A20-OLinuXino-Lime2-eMMC_defconfig) = 425ae3a82ce9006dbd734f41f7d49bb3587b1493
 SHA1 (patch-configs_A20-OLinuXino-Lime2_defconfig) = 9eecb0a44ec9ddda2425b042c219f59ba546a494
 SHA1 (patch-configs_bananapi_m2_zero_defconfig) = 5e4baef63f0e51cb8c94a1dc0c0e50ecb016807d
