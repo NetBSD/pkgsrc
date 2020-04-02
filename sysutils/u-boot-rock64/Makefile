@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/27 08:02:30 thorpej Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/02 09:09:05 tnn Exp $
 
 PKGREVISION=		6
 UBOOT_TARGET=		rock64
@@ -10,7 +10,7 @@ UBOOT_INSTALLBOOT_PLIST=	installboot.plist
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/u-boot-rock64/distinfo
 
 U_BOOT_IMAGE_TYPE=	rk3328
-.include "../../sysutils/u-boot/u-boot-rockchip.mk"
+.include "../../sysutils/u-boot-rock64/u-boot-rockchip.mk"
 
 # Boot Loader stage 3-1 (BL31) EL3 Runtime Firmware
 # XXX LICENSE?
