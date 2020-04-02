@@ -831,7 +831,7 @@ Before you download any pkgsrc files, you should decide whether you want the
 current branch or the stable branch. The latter is forked on a quarterly basis
 from the current branch and only gets modified for security updates. The names
 of the stable branches are built from the year and the quarter, for example
-2019Q4.
+2020Q1.
 
 The second step is to decide how you want to download pkgsrc. You can get it as
 a tar file or via CVS. Both ways are described here.
@@ -855,12 +855,12 @@ published at pkgsrc.tar.bz2 and pkgsrc.tar.xz respectively.
 
 You can fetch the same files using FTP.
 
-The tar file for the stable branch 2019Q4 is in the directory pkgsrc-2019Q4 and
+The tar file for the stable branch 2020Q1 is in the directory pkgsrc-2020Q1 and
 is also called pkgsrc.tar.gz.
 
 To download the latest pkgsrc stable tarball, run:
 
-$ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2019Q4/pkgsrc.tar.gz
+$ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/pkgsrc-2020Q1/pkgsrc.tar.gz
 
 If you prefer, you can also fetch it using "wget", "curl", or your web browser.
 
@@ -879,7 +879,7 @@ $ ftp ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz
 
 To fetch a specific pkgsrc stable branch, run:
 
-$ cd /usr && cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-2019Q4 -P pkgsrc
+$ cd /usr && cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-2020Q1 -P pkgsrc
 
 This will create the directory pkgsrc/ in your /usr/ directory and all the
 package source will be stored under /usr/pkgsrc/.
@@ -961,7 +961,7 @@ When updating pkgsrc, the CVS program keeps track of the branch you selected.
 But if you, for whatever reason, want to switch from the stable branch to the
 current one, you can do it by adding the option "-A" after the "update"
 keyword. To switch from the current branch back to the stable branch, add the "
--rpkgsrc-2019Q4" option.
+-rpkgsrc-2020Q1" option.
 
 3.2.2.2. What happens to my changes when updating?
 
@@ -1091,7 +1091,7 @@ To install packages directly from an FTP or HTTP server, run the following
 commands in a Bourne-compatible shell (be sure to su to root first):
 
 # PATH="/usr/pkg/sbin:$PATH"
-# PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages"
+# PKG_PATH="https://cdn.NetBSD.org/pub/pkgsrc/packages"
 # PKG_PATH="$PKG_PATH/OPSYS/ARCH/VERSIONS/All/"
 # export PATH PKG_PATH
 
@@ -1142,8 +1142,8 @@ files.
 
 The pkgsrc Security Team and Packages Groups maintain a list of known security
 vulnerabilities to packages which are (or have been) included in pkgsrc. The
-list is available from the NetBSD FTP site at http://ftp.NetBSD.org/pub/NetBSD/
-packages/vulns/pkg-vulnerabilities.
+list is available from the NetBSD FTP site at https://ftp.NetBSD.org/pub/NetBSD
+/packages/vulns/pkg-vulnerabilities.
 
 Through pkg_admin fetch-pkg-vulnerabilities, this list can be downloaded
 automatically, and a security audit of all packages installed on a system can
@@ -1156,7 +1156,7 @@ your installed packages are vulnerable. If a package is vulnerable, you will
 see output similar to the following:
 
 Package samba-2.0.9 has a local-root-shell vulnerability, see
-    http://www.samba.org/samba/whatsnew/macroexploit.html
+    https://www.samba.org/samba/whatsnew/macroexploit.html
 
 You may wish to have the vulnerabilities file downloaded daily so that it
 remains current. This may be done by adding an appropriate entry to the root
@@ -2056,7 +2056,7 @@ To subscribe, do:
 
 % echo subscribe listname | mail majordomo@NetBSD.org
 
-Archives for all these mailing lists are available from http://
+Archives for all these mailing lists are available from https://
 mail-index.NetBSD.org/.
 
 10.2. Utilities for package management (pkgtools)
@@ -4949,8 +4949,8 @@ the suffix) can be found.
 DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=     foo-file.tar.gz
 SITES.foo-file.tar.gz= \
-http://www.somewhere.com/somehow/ \
-http://www.somewhereelse.com/mirror/somehow/
+https://www.somewhere.com/somehow/ \
+https://www.somewhereelse.com/mirror/somehow/
 
 When actually fetching the distfiles, each item from MASTER_SITES or SITES.*
 gets the name of each distfile appended to it, without an intermediate slash.
@@ -4959,7 +4959,7 @@ character. This allows for example to set MASTER_SITES to a URL of a CGI script
 that gets the name of the distfile as a parameter. In this case, the definition
 would look like:
 
-MASTER_SITES=   http://www.example.com/download.cgi?file=
+MASTER_SITES=   https://www.example.com/download.cgi?file=
 
 The exception to this rule are URLs starting with a dash. In that case the URL
 is taken as is, fetched and the result stored under the name of the distfile.
@@ -4970,7 +4970,7 @@ Content-Disposition header. In the following example, foo-1.0.0.tar.gz will be
 created instead of the default v1.0.0.tar.gz.
 
 DISTNAME=       foo-1.0.0
-MASTER_SITES=   -http://www.example.com/archive/v1.0.0.tar.gz
+MASTER_SITES=   -https://www.example.com/archive/v1.0.0.tar.gz
 
 There are some predefined values for MASTER_SITES, which can be used in
 packages. The names of the variables should speak for themselves.
@@ -6277,8 +6277,8 @@ of the three recipes from below:
 
 21.2.3.1. Fetch based on a tagged release
 
-If your distfile URL looks similar to http://github.com/username/exampleproject
-/archive/v1.0.zip, then you are packaging a tagged release.
+If your distfile URL looks similar to https://github.com/username/
+exampleproject/archive/v1.0.zip, then you are packaging a tagged release.
 
 DISTNAME=       exampleproject-1.0
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
@@ -6288,7 +6288,7 @@ EXTRACT_SUFX=   .zip
 
 21.2.3.2. Fetch based on a specific commit
 
-If your distfile URL looks similar to http://github.com?/example?/example?/
+If your distfile URL looks similar to https://github.com?/example?/example?/
 archive?/988881adc9fc3655077dc2d4d757d480b5ea0e11.tar.gz, then you are
 packaging a specific commit not tied to a release.
 
@@ -6299,7 +6299,7 @@ GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
 
 21.2.3.3. Fetch based on release
 
-If your distfile URL looks similar to http://github.com?/username/
+If your distfile URL looks similar to https://github.com?/username/
 exampleproject?/releases?/download?/rel-1.6?/offensive-1.6.zip, then you are
 packaging a release.
 
@@ -7234,7 +7234,7 @@ what was explained in the previous sections, only with some debugging aids.
 
     % mkdir /usr/pkgsrc/category/examplepkg
     % cd /usr/pkgsrc/category/examplepkg
-    % url2pkg http://www.example.com/path/to/distfile.tar.gz
+    % url2pkg https://www.example.com/path/to/distfile.tar.gz
 
   * Edit the Makefile as requested.
 
@@ -7332,7 +7332,7 @@ Chapter 22, Debugging and the rest of this document. Next, generate an
 uuencoded gzipped tar(1) archive that contains all files that make up the
 package. Finally, send this package to the pkgsrc bug tracking system, either
 with the send-pr(1) command, or if you don't have that, go to the web page
-http://www.NetBSD.org/support/send-pr.html, which contains some instructions
+https://www.NetBSD.org/support/send-pr.html, which contains some instructions
 and a link to a form where you can submit packages. The sysutils/gtk-send-pr
 package is also available as a substitute for either of the above two tools.
 
@@ -7346,7 +7346,7 @@ If you want to submit several packages, please send a separate PR for each one,
 it's easier for us to track things that way.
 
 Alternatively, you can also import new packages into pkgsrc-wip ("pkgsrc
-work-in-progress"); see the homepage at http://pkgsrc.org/wip/ for details.
+work-in-progress"); see the homepage at https://pkgsrc.org/wip/ for details.
 
 23.3. General notes when adding, updating, or removing packages
 
@@ -7618,8 +7618,8 @@ pkgsrc-users mailing list.
           explain large parts of pkgsrc, but some chapters tend to be outdated.
           Which ones they are is hard to say.
 
-        * On the mailing list archives (see http://mail-index.NetBSD.org/), you
-          can find discussions about certain features, announcements of new
+        * On the mailing list archives (see https://mail-index.NetBSD.org/),
+          you can find discussions about certain features, announcements of new
           parts of the pkgsrc infrastructure and sometimes even announcements
           that a certain feature has been marked as obsolete. The benefit here
           is that each message has a date appended to it.
@@ -8340,7 +8340,7 @@ CATEGORIES=     devel
 MASTER_SITES=   ${MASTER_SITE_GNU:=bison/}
 
 MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
+HOMEPAGE=       https://www.gnu.org/software/bison/bison.html
 COMMENT=        GNU yacc clone
 
 GNU_CONFIGURE=  yes
@@ -9088,86 +9088,87 @@ PLIST                                PLIST_AWK
 PLIST_AWK_ENV                        PLIST_SRC
 PLIST_SUBST                          PLIST_TYPE
 PLIST_VARS                           POPTOP_USE_MPPE
-POST_FETCH_HOOK                      PREFER
-PREFER_NATIVE                        PREFER_NATIVE_PTHREADS
-PREFER_PKGSRC                        PREFIX
-PREPEND_PATH                         PRE_ROOT_CMD
-PRIVILEGED_STAGES                    PS
-PTHREAD_AUTO_VARS                    PTHREAD_CFLAGS
-PTHREAD_LDFLAGS                      PTHREAD_LIBS
-PTHREAD_OPTS                         PTHREAD_TYPE
-PVM_SSH                              PYPKGPREFIX
-PYTHON_FOR_BUILD_ONLY                PYTHON_SELF_CONFLICT
-PYTHON_VERSIONED_DEPENDENCIES        PYTHON_VERSIONS_ACCEPTED
-PYTHON_VERSIONS_INCOMPATIBLE         PYTHON_VERSION_DEFAULT
-PYTHON_VERSION_REQD                  PYVERSSUFFIX
-PY_NO_EGG                            QMAILDIR
-QMAIL_ALIAS_USER                     QMAIL_DAEMON_USER
-QMAIL_LOG_USER                       QMAIL_NOFILES_GROUP
-QMAIL_PASSWD_USER                    QMAIL_QMAIL_GROUP
-QMAIL_QUEUE_DIR                      QMAIL_QUEUE_EXTRA
-QMAIL_QUEUE_USER                     QMAIL_REMOTE_USER
-QMAIL_ROOT_USER                      QMAIL_SEND_USER
-QPOPPER_FAC                          QPOPPER_SPOOL_DIR
-QPOPPER_USER                         RAKE_NAME
-RASMOL_DEPTH                         RCD_DIR
-RCD_ORDER                            RCD_SCRIPTS
-RCD_SCRIPTS_DIR                      RCD_SCRIPTS_EXAMPLEDIR
-RCD_SCRIPTS_MODE                     RCD_SCRIPTS_SHELL
-RCD_SCRIPT_SRC                       RCD_SUBR
-RDOC                                 READLINE_DEFAULT
-READLINE_TYPE                        REAL_ROOT_GROUP
-REAL_ROOT_USER                       RECURSIVE_MAKE
-RELAY_CTRL_DIR                       REPLACE_AWK
-REPLACE_BASH                         REPLACE_CSH
-REPLACE_KSH                          REPLACE_PERL
-REPLACE_PERL6                        REPLACE_PHP
-REPLACE_PYTHON                       REPLACE_RUBY
-REPLACE_RUBY_DIRS                    REPLACE_RUBY_PAT
-REPLACE_SH                           REPLACE_TEXLUA
-REQD_DIRS                            REQD_DIRS_PERMS
-REQD_FILES                           REQD_FILES_MODE
-REQD_FILES_PERMS                     RESOLV_AUTO_VARS
-RESOLV_LDFLAGS                       RESOLV_LIBS
-RM                                   ROCKSPEC_NAME
-ROCKSPEC_SPECFILE                    ROOT_CMD
-ROOT_GROUP                           ROOT_USER
-RPCGEN                               RPM
-RPM2PKG_PLIST                        RPM2PKG_PREFIX
-RPM2PKG_STAGE                        RPM2PKG_STRIP
-RPM2PKG_SUBPREFIX                    RPMFILES
-RPMIGNOREPATH                        RPM_DB_PREFIX
-RSSH_CVS_PATH                        RSSH_RDIST_PATH
-RSSH_RSYNC_PATH                      RSSH_SCP_PATH
-RSSH_SFTP_SERVER_PATH                RUBY
-RUBYGEM                              RUBYGEM_NAME
-RUBYGEM_OPTIONS                      RUBY_ABI_VERSION
-RUBY_ARCH                            RUBY_ARCHINC
-RUBY_ARCHLIB                         RUBY_BASE
-RUBY_BASERIDIR                       RUBY_BUILD_DOCUMENT
-RUBY_DLEXT                           RUBY_DOC
-RUBY_DYNAMIC_DIRS                    RUBY_EG
-RUBY_ENCODING_ARG                    RUBY_EXTCONF
-RUBY_EXTCONF_CHECK                   RUBY_EXTCONF_DEBUG
-RUBY_EXTCONF_MAKEFILE                RUBY_GEM_BASE
-RUBY_INC                             RUBY_LIB
-RUBY_LIB_BASE                        RUBY_NAME
-RUBY_NOVERSION                       RUBY_PKGPREFIX
-RUBY_RAILS                           RUBY_RAILS42_VERSION
+POSSIBLE_GFORTRAN_VERSION            POST_FETCH_HOOK
+PREFER                               PREFER_NATIVE
+PREFER_NATIVE_PTHREADS               PREFER_PKGSRC
+PREFIX                               PREPEND_PATH
+PRE_ROOT_CMD                         PRIVILEGED_STAGES
+PS                                   PTHREAD_AUTO_VARS
+PTHREAD_CFLAGS                       PTHREAD_LDFLAGS
+PTHREAD_LIBS                         PTHREAD_OPTS
+PTHREAD_TYPE                         PVM_SSH
+PYPKGPREFIX                          PYTHON_FOR_BUILD_ONLY
+PYTHON_SELF_CONFLICT                 PYTHON_VERSIONED_DEPENDENCIES
+PYTHON_VERSIONS_ACCEPTED             PYTHON_VERSIONS_INCOMPATIBLE
+PYTHON_VERSION_DEFAULT               PYTHON_VERSION_REQD
+PYVERSSUFFIX                         PY_NO_EGG
+QMAILDIR                             QMAIL_ALIAS_USER
+QMAIL_DAEMON_USER                    QMAIL_LOG_USER
+QMAIL_NOFILES_GROUP                  QMAIL_PASSWD_USER
+QMAIL_QMAIL_GROUP                    QMAIL_QUEUE_DIR
+QMAIL_QUEUE_EXTRA                    QMAIL_QUEUE_USER
+QMAIL_REMOTE_USER                    QMAIL_ROOT_USER
+QMAIL_SEND_USER                      QPOPPER_FAC
+QPOPPER_SPOOL_DIR                    QPOPPER_USER
+RAKE_NAME                            RASMOL_DEPTH
+RCD_DIR                              RCD_ORDER
+RCD_SCRIPTS                          RCD_SCRIPTS_DIR
+RCD_SCRIPTS_EXAMPLEDIR               RCD_SCRIPTS_MODE
+RCD_SCRIPTS_SHELL                    RCD_SCRIPT_SRC
+RCD_SUBR                             RDOC
+READLINE_DEFAULT                     READLINE_TYPE
+REAL_ROOT_GROUP                      REAL_ROOT_USER
+RECURSIVE_MAKE                       RELAY_CTRL_DIR
+REPLACE_AWK                          REPLACE_BASH
+REPLACE_CSH                          REPLACE_KSH
+REPLACE_PERL                         REPLACE_PERL6
+REPLACE_PHP                          REPLACE_PYTHON
+REPLACE_RUBY                         REPLACE_RUBY_DIRS
+REPLACE_RUBY_PAT                     REPLACE_SH
+REPLACE_TEXLUA                       REQD_DIRS
+REQD_DIRS_PERMS                      REQD_FILES
+REQD_FILES_MODE                      REQD_FILES_PERMS
+RESOLV_AUTO_VARS                     RESOLV_LDFLAGS
+RESOLV_LIBS                          RM
+ROCKSPEC_NAME                        ROCKSPEC_SPECFILE
+ROOT_CMD                             ROOT_GROUP
+ROOT_USER                            RPCGEN
+RPM                                  RPM2PKG_PLIST
+RPM2PKG_PREFIX                       RPM2PKG_STAGE
+RPM2PKG_STRIP                        RPM2PKG_SUBPREFIX
+RPMFILES                             RPMIGNOREPATH
+RPM_DB_PREFIX                        RSSH_CVS_PATH
+RSSH_RDIST_PATH                      RSSH_RSYNC_PATH
+RSSH_SCP_PATH                        RSSH_SFTP_SERVER_PATH
+RUBY                                 RUBYGEM
+RUBYGEM_NAME                         RUBYGEM_OPTIONS
+RUBY_ABI_VERSION                     RUBY_ARCH
+RUBY_ARCHINC                         RUBY_ARCHLIB
+RUBY_BASE                            RUBY_BASERIDIR
+RUBY_BUILD_DOCUMENT                  RUBY_DLEXT
+RUBY_DOC                             RUBY_DYNAMIC_DIRS
+RUBY_EG                              RUBY_ENCODING_ARG
+RUBY_EXTCONF                         RUBY_EXTCONF_CHECK
+RUBY_EXTCONF_DEBUG                   RUBY_EXTCONF_MAKEFILE
+RUBY_GEM_BASE                        RUBY_INC
+RUBY_LIB                             RUBY_LIB_BASE
+RUBY_NAME                            RUBY_NOVERSION
+RUBY_PKGPREFIX                       RUBY_RAILS
 RUBY_RAILS51_VERSION                 RUBY_RAILS52_VERSION
-RUBY_RAILS_ACCEPTED                  RUBY_RAILS_DEFAULT
-RUBY_RAILS_REQD                      RUBY_RAILS_STRICT_DEP
-RUBY_RIDIR                           RUBY_SETUP
-RUBY_SHLIB                           RUBY_SHLIBALIAS
-RUBY_SHLIBVER                        RUBY_SIMPLE_INSTALL
-RUBY_SITEARCHLIB                     RUBY_SITELIB
-RUBY_SITELIB_BASE                    RUBY_SITERIDIR
-RUBY_SLEXT                           RUBY_SRCDIR
-RUBY_STATICLIB                       RUBY_SUFFIX
-RUBY_SYSRIDIR                        RUBY_USE_PTHREAD
-RUBY_VENDORARCHLIB                   RUBY_VENDORLIB
-RUBY_VENDORLIB_BASE                  RUBY_VER
-RUBY_VERSION                         RUBY_VERSIONS_ACCEPTED
+RUBY_RAILS60_VERSION                 RUBY_RAILS_ACCEPTED
+RUBY_RAILS_DEFAULT                   RUBY_RAILS_REQD
+RUBY_RAILS_STRICT_DEP                RUBY_RIDIR
+RUBY_SETUP                           RUBY_SHLIB
+RUBY_SHLIBALIAS                      RUBY_SHLIBVER
+RUBY_SIMPLE_INSTALL                  RUBY_SITEARCHLIB
+RUBY_SITELIB                         RUBY_SITELIB_BASE
+RUBY_SITERIDIR                       RUBY_SLEXT
+RUBY_SRCDIR                          RUBY_STATICLIB
+RUBY_SUFFIX                          RUBY_SYSRIDIR
+RUBY_USE_PTHREAD                     RUBY_VENDORARCHLIB
+RUBY_VENDORLIB                       RUBY_VENDORLIB_BASE
+RUBY_VER                             RUBY_VERSION
+RUBY_VERSIONS_ACCEPTED               RUBY_VERSIONS_INCOMPATIBLE
 RUBY_VERSION_DEFAULT                 RUBY_VERSION_REQD
 RUBY_VER_DIR                         RUN
 RUN_LDCONFIG                         SAWFISH_THEMES
@@ -9192,9 +9193,10 @@ SSYNC_PAWD                           STEP_MSG
 STRIP                                STRIP_DBG
 STRIP_DEBUG                          STRIP_DEBUG_SUPPORTED
 STRIP_FILES_SKIP                     SU
-SUBDIR                               SUBST_CLASSES
-SUBST_FILES                          SUBST_FILTER_CMD
-SUBST_MESSAGE                        SUBST_SED
+SUBDIR                               SUBST
+SUBST_CLASSES                        SUBST_FILES
+SUBST_FILTER_CMD                     SUBST_MESSAGE
+SUBST_NOOP_OK                        SUBST_SED
 SUBST_SHOW_DIFF                      SUBST_SKIP_TEXT_CHECK
 SUBST_STAGE                          SUBST_VARS
 SUNWSPROBASE                         SUSE_PREFER
@@ -9204,169 +9206,184 @@ SVN_REVISION                         TERMCAP_TYPE
 TERMINFO_DEFAULT                     TERMINFO_TYPE
 TEST                                 TEST_DEPENDS
 TEST_DIRS                            TEST_ENV
-TEST_MAKE_CMD                        TEST_MAKE_FLAGS
-TEST_TARGET                          TEXLIVE_IGNORE_PATTERNS
-TEXLIVE_REV                          TEXLIVE_UNVERSIONED
-TEXMFSITE                            TEX_FORMATS
-TEX_HYPHEN_DAT                       TEX_HYPHEN_DEF
-TEX_TEXMF_DIRS                       THTTPD_LOG_FACILITY
-TO                                   TOOLS_ALIASES
-TOOLS_ARGS                           TOOLS_BROKEN
-TOOLS_CMD                            TOOLS_CREATE
-TOOLS_DIR                            TOOLS_FAIL
-TOOLS_GNU_MISSING                    TOOLS_LDCONFIG
-TOOLS_NOOP                           TOOLS_PATH
-TOOLS_SCRIPT                         TOOL_DEPENDS
-TTF_FONTDIR                          TTF_FONTS_DIR
-TYPE                                 UAC_REQD_EXECS
-UCSPI_SSL_GROUP                      UCSPI_SSL_USER
-UNLIMIT_RESOURCES                    UNPRIVILEGED
-UNPRIVILEGED_GROUP                   UNPRIVILEGED_GROUPS
-UNPRIVILEGED_USER                    UNWRAP_FILES
-UNWRAP_PATTERNS                      UPDATE_GEMSPEC
-UPDATE_TARGET                        URI
-USA                                  USERGROUP_PHASE
-USERPPP_GROUP                        USER_SPECIFIC_PKGS
-USE_ABI_DEPENDS                      USE_APR
-USE_BSD_MAKEFILE                     USE_BUILTIN
-USE_CROSS_COMPILE                    USE_CURSES
-USE_CWRAPPERS                        USE_DB185
-USE_FEATURES                         USE_GAMESGROUP
-USE_GCC_RUNTIME                      USE_IMAKE
-USE_JAVA                             USE_JAVA2
-USE_LANGUAGES                        USE_LIBTOOL
-USE_NATIVE_GCC                       USE_NETBSD_REPO
-USE_PKGSRC_GCC                       USE_PKGSRC_GCC_RUNTIME
-USE_PKGTASKS                         USE_PKG_ADMIN_DIGEST
-USE_RUBY_EXTCONF                     USE_RUBY_INSTALL
-USE_RUBY_SETUP                       USE_RUBY_SETUP_PKG
-USE_TOOLS                            UUCP_GROUP
-UUCP_USER                            VARBASE
-VARNAME                              VIM_EXTRA_OPTS
-WARNING_MSG                          WCALC_CGIDIR
-WCALC_CGIPATH                        WCALC_HTMLDIR
-WCALC_HTMLPATH                       WDM_MANAGERS
-WRAPPER_REORDER_CMDS                 WRKDIR
-WRKDIR_BASENAME                      WRKDIR_LOCKTYPE
-WRKLOG                               WRKOBJDIR
-WRKSRC                               WXGTK_ACCEPTED
-WXGTK_DEFAULT                        X10_PORT
-X11                                  X11BASE
-X11_PKGSRCDIR                        X11_TYPE
-X509_CERTIFICATE                     X509_KEY
-XAW_TYPE                             XLOCK_DEFAULT_MODE
-XMKMF_FLAGS                          XXX
-XXXX                                 YES
-ZERO_FILESIZE_P                      ZSH_STATIC
-__stdc__                             _vargroups
-add                                  all
-alternatives                         aslr
-asprintf                             atlas
-autoconf                             automake
-autoreconf                           awk
-bash                                 big-endian
-bin-install                          binpkg-list
+TEST_ENV_SHELL                       TEST_MAKE_CMD
+TEST_MAKE_FLAGS                      TEST_TARGET
+TEXLIVE_IGNORE_PATTERNS              TEXLIVE_REV
+TEXLIVE_UNVERSIONED                  TEXMFSITE
+TEX_FORMATS                          TEX_HYPHEN_DAT
+TEX_HYPHEN_DEF                       TEX_TEXMF_DIRS
+THTTPD_LOG_FACILITY                  TO
+TOOLS_ALIASES                        TOOLS_ARGS
+TOOLS_BROKEN                         TOOLS_CMD
+TOOLS_CREATE                         TOOLS_DIR
+TOOLS_FAIL                           TOOLS_GNU_MISSING
+TOOLS_LDCONFIG                       TOOLS_NOOP
+TOOLS_PATH                           TOOLS_SCRIPT
+TOOL_DEPENDS                         TTF_FONTDIR
+TTF_FONTS_DIR                        TYPE
+UAC_REQD_EXECS                       UCSPI_SSL_GROUP
+UCSPI_SSL_USER                       UNLIMIT_RESOURCES
+UNPRIVILEGED                         UNPRIVILEGED_GROUP
+UNPRIVILEGED_GROUPS                  UNPRIVILEGED_USER
+UNWRAP_FILES                         UNWRAP_PATTERNS
+UPDATE_GEMSPEC                       UPDATE_TARGET
+URI                                  USA
+USERGROUP_PHASE                      USERPPP_GROUP
+USER_SPECIFIC_PKGS                   USE_ABI_DEPENDS
+USE_APR                              USE_BSD_MAKEFILE
+USE_BUILTIN                          USE_CROSS_COMPILE
+USE_CURSES                           USE_CWRAPPERS
+USE_DB185                            USE_FEATURES
+USE_GAMESGROUP                       USE_GCC_RUNTIME
+USE_IMAKE                            USE_JAVA
+USE_JAVA2                            USE_LANGUAGES
+USE_LIBTOOL                          USE_NATIVE_GCC
+USE_NETBSD_REPO                      USE_PKGSRC_GCC
+USE_PKGSRC_GCC_RUNTIME               USE_PKGTASKS
+USE_PKG_ADMIN_DIGEST                 USE_RUBY_EXTCONF
+USE_RUBY_INSTALL                     USE_RUBY_SETUP
+USE_RUBY_SETUP_PKG                   USE_TOOLS
+UUCP_GROUP                           UUCP_USER
+VARBASE                              VARNAME
+VIM_EXTRA_OPTS                       WARNING_MSG
+WCALC_CGIDIR                         WCALC_CGIPATH
+WCALC_HTMLDIR                        WCALC_HTMLPATH
+WDM_MANAGERS                         WRAPPER_REORDER_CMDS
+WRKDIR                               WRKDIR_BASENAME
+WRKDIR_LOCKTYPE                      WRKLOG
+WRKOBJDIR                            WRKSRC
+X10_PORT                             X11
+X11BASE                              X11_PKGSRCDIR
+X11_TYPE                             X509_CERTIFICATE
+X509_KEY                             XAW_TYPE
+XLOCK_DEFAULT_MODE                   XMKMF_FLAGS
+XXX                                  XXXX
+YES                                  ZERO_FILESIZE_P
+ZSH_STATIC                           __stdc__
+_vargroups                           accept
+acquire-localbase-lock               acquire-lock
+add                                  administrator
+alloca                               alternatives
+aslr                                 asprintf
+atlas                                autoconf
+automake                             autoreconf
+awk                                  bash
+big-endian                           bin-install
+bind                                 binpkg-list
 blas                                 bootstrap-depends
 broken                               broken_on_platform
+bsd                                  bsd.prog.mk
 build                                build-env
 buildlink-directories                buildlink-oss-soundcard-h
 c                                    c++
 ccache                               cce
-cdefs                                changes
-changes-entry                        changes-entry-noupdate
-check                                check-clean
-check-files                          check-files-clean
-check-vulnerable                     checksum
-checksum-phase                       clean
-clean-depends                        cleandir
-commit                               commit-changes-entry
-compact                              compiler
-conf                                 config.guess
-config.sub                           configuration
-configure                            configure-env
-configure-help                       configure_args
-cputime                              create-usergroup
-csh                                  ctf
-cvs                                  debug
-declaration                          declare
-defined                              depend
-dependencies                         depends
-depends-checksum                     depends-fetch
-deps                                 describe
-destdir                              disable
-distclean                            distinfo
-dl                                   dlopen
-do-build                             do-buildlink
-do-clean                             do-configure
-do-configure-post-hook               do-extract
-do-fetch                             do-install
-emul                                 emulation
-emulator                             enable
-endian                               enomem
+cdefs                                ceil
+changes                              changes-entry
+changes-entry-noupdate               check
+check-clean                          check-files
+check-files-clean                    check-vulnerable
+checksum                             checksum-phase
+clean                                clean-depends
+cleandir                             commit
+commit-changes-entry                 compact
+compiler                             conf
+config.guess                         config.sub
+configuration                        configure
+configure-env                        configure-help
+configure_args                       connect
+cos                                  cputime
+create-usergroup                     csh
+ctf                                  cvs
+debug                                declaration
+declare                              defined
+depend                               dependencies
+depends                              depends-checksum
+depends-fetch                        deps
+describe                             destdir
+disable                              distclean
+distinfo                             dl
+dlopen                               do-build
+do-buildlink                         do-clean
+do-configure                         do-configure-post-hook
+do-extract                           do-fetch
+do-install                           emul
+emul-distinfo                        emul-fetch
+emulation                            emulator
+enable                               endian
+endif                                enomem
 err                                  errx
-etc                                  feature
-features                             fetch
-fetch-list                           follows
-forbids                              form
-format                               fortify
-fortify_source                       fossil
-friend                               from
+etc                                  exp
+extract-rpm                          fabs
+feature                              features
+fetch                                fetch-list
+follows                              forbids
+form                                 format
+fortify                              fortify_source
+fossil                               friend
 fts                                  fts_close
 fts_open                             fts_read
-fts_set                              full
-gcc                                  getopt_long
-getprogname                          gettext
-git                                  github
-glob                                 gnu
-gnu_configure_strict                 go
-go-deps                              golang
-guess-license                        hashbang
-heimdal                              help
-hg                                   imake
-increment                            interp
+fts_set                              gcc
+gethostbyaddr                        gethostbyname
+gethostbyname2                       getopt_long
+getprogname                          getservbyname
+getservbyport                        getservent
+gettext                              git
+github                               glob
+gnu                                  gnu_configure_strict
+go                                   go-deps
+golang                               guess-license
+hashbang                             heimdal
+help                                 hg
+imake                                increment
+inet_aton                            interp
 interpreter                          intl
 iso                                  kerberos
 krb                                  krb5
 ksh                                  lapack
-latex                                libnbcompat
-libs                                 libtool
-licence                              license
-lintl                                little-endian
-lock                                 locking
-lvalue                               make
-makesum                              memory
-mercurial                            meta
-meta-package                         meta_package
-mit-krb5                             mk.conf
-mkl                                  mount
-mprotect                             mremap
-nb                                   nbcompat
-no                                   obstack
+latex                                libintl_bindtextdomain
+libintl_gettext                      libintl_textdomain
+libnbcompat                          libs
+libtool                              licence
+license                              lintl
+little-endian                        lock
+locking                              lvalue
+make                                 makesum
+memory                               mercurial
+meta                                 meta-package
+meta_package                         mit-krb5
+mk.conf                              mkl
+mount                                mprotect
+mremap                               nb
+nbcompat                             obstack
 obstack_ptr_grow                     occurs
 only                                 openblas
 options                              options.mk
 order                                override
 override-intltool                    override-message-intltool
 package                              parallel
-partial                              path
-pax                                  paxctl
-pbulk-index                          pc
-perl                                 perl5
-perms                                php
-pkg-build-options                    pkg-config
-pkg_build_options                    platform
-plist                                post-extract
-post-fetch                           post-wrapper
-pre-configure                        pre-extract
-pre-fetch                            print-go-deps
-print-plist                          print-summary-data
-privileged-install-hook              pypi
-python                               readme-all
-regcomp                              relro
-rename                               reorder
-replace                              replace_interpreter
-reproducible                         resolv
-root                                 ruby
+path                                 pax
+paxctl                               pbulk-index
+pc                                   perl
+perl5                                perms
+php                                  pkg-build-options
+pkg-config                           pkg_build_options
+platform                             plist
+post-extract                         post-fetch
+post-wrapper                         pre-build-checks-hook
+pre-configure                        pre-configure-checks-hook
+pre-extract                          pre-fetch
+print-go-deps                        print-plist
+print-summary-data                   privileged-install-hook
+pypi                                 python
+readme-all                           recv
+recvfrom                             regcomp
+release-localbase-lock               release-lock
+relro                                rename
+reorder                              replace
+replace_interpreter                  reproducible
+resolv                               root
+ruby                                 send
+sendfile                             sendto
 setenv                               setgid
 setprogname                          setuid
 sh                                   show
@@ -9375,31 +9392,33 @@ show-depends                         show-deps
 show-distfiles                       show-downlevel
 show-subdir-var                      show-tools
 show-var                             show-vars
-snprintf                             ssp
-st_mode                              stage-install
+snprintf                             socket
+ssp                                  st_mode
+stage-install                        strcasestr
 strict                               strip
-strnlen                              strong
-subst                                subversion
+strndup                              strnlen
+strsep                               subst
+substitutions                        subversion
 sun                                  sunpro
 sunwspro                             svn
 symlink                              test
-tex                                  texlive
-tmp                                  tool
-tools                                tools-libtool-m4-override
-type                                 ulimit
-undefined                            undo-replace
-unlimit                              unprivileged
-unprivileged-install-hook            unstripped
-update                               upload
-upload-distfiles                     usage
+test-env                             tex
+texlive                              tmp
+tool                                 tools
+tools-libtool-m4-override            type
+ulimit                               undefined
+undo-replace                         unlimit
+unprivileged                         unprivileged-install-hook
+unstripped                           update
+upload                               upload-distfiles
 use_tools                            user
 utimes                               vasprintf
 verbose                              vsnprintf
 warn                                 warning
 warnings                             warnx
-weak                                 work
-wrapper                              wrkdir
-yes                                   
+wattr_off                            wattr_on
+work                                 wrapper
+wrkdir                                
 
 Appendix E. Editing guidelines for the pkgsrc guide
 
@@ -9419,12 +9438,12 @@ files are created from it:
 
   * pkgsrc/doc/pkgsrc.html
 
-  * http://www.NetBSD.org/docs/pkgsrc/
+  * https://www.NetBSD.org/docs/pkgsrc/
 
-  * http://www.NetBSD.org/docs/pkgsrc/pkgsrc.pdf: The PDF version of the pkgsrc
-    guide.
+  * https://www.NetBSD.org/docs/pkgsrc/pkgsrc.pdf: The PDF version of the
+    pkgsrc guide.
 
-  * http://www.NetBSD.org/docs/pkgsrc/pkgsrc.ps: PostScript version of the
+  * https://www.NetBSD.org/docs/pkgsrc/pkgsrc.ps: PostScript version of the
     pkgsrc guide.
 
 E.2. Procedure
