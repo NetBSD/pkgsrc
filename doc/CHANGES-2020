@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2050 2020/04/02 09:40:03 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2051 2020/04/02 09:47:03 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2772,3 +2772,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/zathura-pdf-poppler to 0.3.0 [nia 2020-04-02]
 	Updated net/tnftpd to 20190602 [nia 2020-04-02]
 	Updated misc/vttest to 20200303 [nia 2020-04-02]
+	Updated net/fpdns to 0.10.0pre20190131 [fcambus 2020-04-02]
