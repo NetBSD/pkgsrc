@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.3 2020/01/26 12:55:00 rhialto Exp $
+$NetBSD: distinfo,v 1.4 2020/04/03 21:59:48 wiz Exp $
 
-SHA1 (dupeguru-src-4.0.3.tar.gz) = a794780e187a36d45c384395e9bd8c2b8f5018bf
-RMD160 (dupeguru-src-4.0.3.tar.gz) = 5cd2b7f93276fcd8f09b699cfec5246f7dc5abed
-SHA512 (dupeguru-src-4.0.3.tar.gz) = dc8a5a122ad1d3d235825a498fb75b192566d3b5a33382ebb0002a361428af5cc453b143002ea3f57a9cb6ee30ce49f0b9f5a54bce2a90364fb1b92e102a289a
-Size (dupeguru-src-4.0.3.tar.gz) = 686580 bytes
-SHA1 (patch-Makefile) = 809ee7de40622a0e348df60b1251f2bed3c49b97
-SHA1 (patch-build.py) = 074a9adb4e48c07b637abe9183d49ece7d5520dc
-SHA1 (patch-hscommon_sphinxgen.py) = cd558d14733d394e7adf2b6b0c826dda5eed689f
-SHA1 (patch-qt_platform.py) = e97e226b53f57f8c4e9bf21f4726e024bb0b2d67
+SHA1 (dupeguru-src-4.0.4_RC.tar.gz) = f4fb780feb40eb9707551aa9cfb73adc7840a614
+RMD160 (dupeguru-src-4.0.4_RC.tar.gz) = 90d8437b790a96235c6e62f6ddad31e05524ff1f
+SHA512 (dupeguru-src-4.0.4_RC.tar.gz) = 991a06afa9fb89ca8294a415d6c1448c6a9fdefb1ff26e08e38686567076ad255be49a7018d7529e72c557597a105b076470750da8a6f87d0ea84444937bb700
+Size (dupeguru-src-4.0.4_RC.tar.gz) = 502389 bytes
+SHA1 (patch-build.py) = 66737c7183cc949f6988a66e06a00d0e6d29d1ec
