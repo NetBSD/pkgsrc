@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/04/03 20:05:41 nia Exp $
+# $NetBSD: Makefile,v 1.24 2020/04/03 20:32:57 nia Exp $
 
 DISTNAME=	libusb-1.0.23
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
@@ -44,5 +44,6 @@ CONFLICTS=	libusbx-[0-9]*
 do-test:
 	cd ${WRKSRC}/tests && ./stress
 
+.include "options.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
