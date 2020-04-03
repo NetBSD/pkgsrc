@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.90 2020/04/03 08:45:44 hauke Exp $
+$NetBSD: distinfo,v 1.91 2020/04/03 08:58:24 hauke Exp $
 
 SHA1 (cdrtools-3.01.tar.bz2) = 62766aa9bfeec91b3c78da7c59b5c96bfbec84d9
 RMD160 (cdrtools-3.01.tar.bz2) = 3696b1bc502905cbe7c06e492b42d2ffe2dba982
 SHA512 (cdrtools-3.01.tar.bz2) = 54f06496e47184e324fc9d8b1153d3c806ed43c3c57e2a8d79a79afe12aa5334e82fa500fe1b1bf49307ad7dfabe687f6e1ad914fc2f0c5c429d8e6a34c293eb
 Size (cdrtools-3.01.tar.bz2) = 2087416 bytes
-SHA1 (patch-cdda2wav-setuid.c) = 63f7b25e2fc37d1f16ccb735969ef4ca122e3990
+SHA1 (patch-cdda2wav-setuid.c) = 64bdccf89061abe667584f0b78a4c9ce72e68b33
