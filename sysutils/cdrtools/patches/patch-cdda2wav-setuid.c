@@ -1,11 +1,11 @@
-$NetBSD: patch-cdda2wav-setuid.c,v 1.2 2020/04/03 08:45:44 hauke Exp $
+$NetBSD: patch-cdda2wav-setuid.c,v 1.3 2020/04/03 08:58:24 hauke Exp $
 
 Joerg Schilling has recently released schilytools-2005-09-16 (1).
 Lines 83 to 84 of AN-2015-09-16 (2) mention an issue affecting
 unpriviledged users running cdda2wav on NetBSD:
 
 cdda2wav: fixed the file setuid.c to work on NetBSD. Thanks to
-Heiko Eifeldt for reporting.
+Heiko Eissfeldt for reporting.
 
 Hence this "diff -urp cdrtools-3.01/cdda2wav/ schily-2015-09-16/cdda2wav/"
 
