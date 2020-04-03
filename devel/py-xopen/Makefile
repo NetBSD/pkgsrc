@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2019/10/26 22:48:55 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/03 16:20:49 adam Exp $
 
-DISTNAME=	xopen-0.8.4
+DISTNAME=	xopen-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xopen/}
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-bz2file-[0-9]*:../../archivers/py-bz2file
 .endif
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
