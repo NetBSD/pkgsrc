@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2020/01/18 23:35:26 rillig Exp $
+# $NetBSD: Makefile,v 1.94 2020/04/03 19:47:00 jperkin Exp $
 
 DISTNAME=	groff-1.22.4
 PKGREVISION=	2
@@ -22,7 +22,7 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		PERLPATH=${PERL5:Q}
 TEXINFO_REQD+=		4.8
-USE_TOOLS+=		perl sed:run awk:run gmake makeinfo
+USE_TOOLS+=		perl sed:run awk:run gmake makeinfo yacc
 EXTRACT_USING=		bsdtar
 USE_FEATURES=		getopt_long
 CONFIGURE_ARGS+=	--with-urw-fonts-dir=${PREFIX}/share/fonts/urw
