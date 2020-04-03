@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2072 2020/04/03 11:56:43 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2073 2020/04/03 14:28:48 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2827,3 +2827,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-spawn to 0.13.0 [jaapb 2020-04-03]
 	Updated databases/openldap-server to 2.4.49nb1 [jperkin 2020-04-03]
 	Updated devel/ocaml-core_kernel to 0.13.1 [jaapb 2020-04-03]
+	Updated devel/ocaml-async_kernel to 0.13.0 [jaapb 2020-04-03]
