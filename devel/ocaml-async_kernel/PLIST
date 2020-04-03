@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/19 10:40:23 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/03 14:28:34 jaapb Exp $
 ${OCAML_SITELIB}/async_kernel/META
 ${OCAML_SITELIB}/async_kernel/async_condition.ml
 ${OCAML_SITELIB}/async_kernel/async_condition.mli
@@ -38,13 +38,10 @@ ${OCAML_SITELIB}/async_kernel/async_kernel__Async_kernel_config.cmi
 ${OCAML_SITELIB}/async_kernel/async_kernel__Async_kernel_config.cmt
 ${OCAML_SITELIB}/async_kernel/async_kernel__Async_kernel_config.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/async_kernel__Async_kernel_config.cmx
-${OCAML_SITELIB}/async_kernel/async_kernel__Async_quickcheck.cmi
-${OCAML_SITELIB}/async_kernel/async_kernel__Async_quickcheck.cmt
-${OCAML_SITELIB}/async_kernel/async_kernel__Async_quickcheck.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/async_kernel__Async_quickcheck.cmx
-${OCAML_SITELIB}/async_kernel/async_kernel__Async_quickcheck_intf.cmi
-${OCAML_SITELIB}/async_kernel/async_kernel__Async_quickcheck_intf.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/async_kernel__Async_quickcheck_intf.cmx
+${OCAML_SITELIB}/async_kernel/async_kernel__Async_kernel_scheduler.cmi
+${OCAML_SITELIB}/async_kernel/async_kernel__Async_kernel_scheduler.cmt
+${OCAML_SITELIB}/async_kernel/async_kernel__Async_kernel_scheduler.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/async_kernel__Async_kernel_scheduler.cmx
 ${OCAML_SITELIB}/async_kernel/async_kernel__Async_stream.cmi
 ${OCAML_SITELIB}/async_kernel/async_kernel__Async_stream.cmt
 ${OCAML_SITELIB}/async_kernel/async_kernel__Async_stream.cmti
@@ -230,9 +227,8 @@ ${OCAML_SITELIB}/async_kernel/async_kernel__Types.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/async_kernel__Types.cmx
 ${OCAML_SITELIB}/async_kernel/async_kernel_config.ml
 ${OCAML_SITELIB}/async_kernel/async_kernel_config.mli
-${OCAML_SITELIB}/async_kernel/async_quickcheck.ml
-${OCAML_SITELIB}/async_kernel/async_quickcheck.mli
-${OCAML_SITELIB}/async_kernel/async_quickcheck_intf.ml
+${OCAML_SITELIB}/async_kernel/async_kernel_scheduler.ml
+${OCAML_SITELIB}/async_kernel/async_kernel_scheduler.mli
 ${OCAML_SITELIB}/async_kernel/async_stream.ml
 ${OCAML_SITELIB}/async_kernel/async_stream.mli
 ${OCAML_SITELIB}/async_kernel/bvar.ml
@@ -271,10 +267,12 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred.a
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred.cma
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred.cmi
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred.cmt
+${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred.cmxs
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred.ml
+${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred.mli
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred0.ml
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred1.ml
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred1.mli
@@ -289,6 +287,9 @@ ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Eager_deferred1.cmi
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Eager_deferred1.cmt
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Eager_deferred1.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Eager_deferred1.cmx
+${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Eager_deferred_intf.cmi
+${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Eager_deferred_intf.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Eager_deferred_intf.cmx
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Eager_deferred_or_error.cmi
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Eager_deferred_or_error.cmt
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Eager_deferred_or_error.cmti
@@ -299,6 +300,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__E
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Import.cmi
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Import.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred__Import.cmx
+${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred_intf.ml
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred_or_error.ml
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred_or_error.mli
 ${OCAML_SITELIB}/async_kernel/eager_deferred/eager_deferred_result.ml
