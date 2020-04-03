@@ -1,12 +1,13 @@
-$NetBSD: patch-src_dune,v 1.1 2019/03/19 10:40:23 jaapb Exp $
+$NetBSD: patch-src_dune,v 1.2 2020/04/03 14:28:34 jaapb Exp $
 
-Removed unknown argument
---- src/dune.orig	2019-02-13 10:33:20.000000000 +0000
+Remove unknown dune flags
+
+--- src/dune.orig	2019-11-18 14:56:06.000000000 +0000
 +++ src/dune
-@@ -1,4 +1,4 @@
- (library (name async_kernel) (public_name async_kernel)
-  (libraries core_kernel core_kernel.moption
-   core_kernel.thread_pool_cpu_affinity core_kernel.thread_safe_queue)
+@@ -2,4 +2,4 @@
+  (libraries core_kernel core_kernel.moption core_kernel.pairing_heap
+   core_kernel.thread_pool_cpu_affinity core_kernel.thread_safe_queue
+   core_kernel.timing_wheel core_kernel.tuple_pool)
 - (preprocess (pps ppx_jane -annotated-ignores -check-doc-comments)))
 \ No newline at end of file
 + (preprocess (pps ppx_jane)))
