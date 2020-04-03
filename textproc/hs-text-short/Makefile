@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/30 16:48:43 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/03 07:32:32 wiz Exp $
 
 DISTNAME=	text-short-0.1.3
 CATEGORIES=	textproc
@@ -8,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://hackage.haskell.org/package/text-short
 COMMENT=	Memory-efficient representation of Unicode text strings
 LICENSE=	modified-bsd
+
+DEPENDS+=	hs-hashable-[0-9]*:../../devel/hs-hashable
 
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
