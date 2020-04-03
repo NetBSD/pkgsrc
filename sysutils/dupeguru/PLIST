@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/03/14 17:11:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/04/03 21:59:48 wiz Exp $
 bin/dupeguru
 share/applications/dupeguru.desktop
 share/dupeguru/core/__init__.py
@@ -171,32 +171,24 @@ share/dupeguru/help/_sources/quick_start.rst.txt
 share/dupeguru/help/_sources/reprioritize.rst.txt
 share/dupeguru/help/_sources/results.rst.txt
 share/dupeguru/help/_sources/scan.rst.txt
-share/dupeguru/help/_static/ajax-loader.gif
 share/dupeguru/help/_static/alert_info_32.png
 share/dupeguru/help/_static/alert_warning_32.png
 share/dupeguru/help/_static/basic.css
 share/dupeguru/help/_static/bg-page.png
 share/dupeguru/help/_static/bullet_orange.png
-share/dupeguru/help/_static/comment-bright.png
-share/dupeguru/help/_static/comment-close.png
-share/dupeguru/help/_static/comment.png
 share/dupeguru/help/_static/doctools.js
 share/dupeguru/help/_static/documentation_options.js
-share/dupeguru/help/_static/down-pressed.png
-share/dupeguru/help/_static/down.png
 share/dupeguru/help/_static/file.png
 share/dupeguru/help/_static/haiku.css
-share/dupeguru/help/_static/jquery-3.2.1.js
+share/dupeguru/help/_static/jquery-3.4.1.js
 share/dupeguru/help/_static/jquery.js
+share/dupeguru/help/_static/language_data.js
 share/dupeguru/help/_static/minus.png
 share/dupeguru/help/_static/plus.png
 share/dupeguru/help/_static/pygments.css
 share/dupeguru/help/_static/searchtools.js
 share/dupeguru/help/_static/underscore-1.3.1.js
 share/dupeguru/help/_static/underscore.js
-share/dupeguru/help/_static/up-pressed.png
-share/dupeguru/help/_static/up.png
-share/dupeguru/help/_static/websupport.js
 share/dupeguru/help/changelog.html
 share/dupeguru/help/contribute.html
 share/dupeguru/help/developer/core/app.html
