@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2020/01/16 15:31:15 jaapb Exp $
+$NetBSD: distinfo,v 1.4 2020/04/03 11:56:31 jaapb Exp $
 
-SHA1 (core_kernel-0.13.0.tar.gz) = 95b80f1397537c7bbb5e63afcee396fdba60bdaa
-RMD160 (core_kernel-0.13.0.tar.gz) = 0427e51991a98fc172ee233e679410c67b87c8c8
-SHA512 (core_kernel-0.13.0.tar.gz) = 966df60f48b4f9a0f3d5a43131415a399aef57c699d0e12fb59d541d1b6c1b0a3653849f62b7988e833bf4ebcc74d6ae8befcdaf2431a9274b12f7448606660e
-Size (core_kernel-0.13.0.tar.gz) = 638728 bytes
+SHA1 (core_kernel-0.13.1.tar.gz) = dfcaf18cf6bfe24170fdc330c7801845af395357
+RMD160 (core_kernel-0.13.1.tar.gz) = 150319ff503552bc3d94943140d536405cedf0cf
+SHA512 (core_kernel-0.13.1.tar.gz) = c29d4013f1b6fa84bfe1f5589911aea1ec4949529de68fcf6702f44596ce0ee2f030eba5cbb260a3dd3ef129978103899eb884d71e058eea3604bad3747c9f6d
+Size (core_kernel-0.13.1.tar.gz) = 638728 bytes
 SHA1 (patch-balanced__reducer_src_dune) = e730285aa24a2bc7764e3f8ae8b27ed829e587ff
 SHA1 (patch-binary__packing_src_dune) = 56085a0a70dfe5a5eb5fd65222cd6e5bf03d9434
 SHA1 (patch-bounded__int__table_src_dune) = f7cf752b774f7282c96121c20e549bbd5f79c630
