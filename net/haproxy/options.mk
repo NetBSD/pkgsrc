@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.8 2020/01/01 21:18:07 adam Exp $
+# $NetBSD: options.mk,v 1.9 2020/04/03 16:34:13 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.haproxy
-PKG_SUPPORTED_OPTIONS=		deviceatlas lua prometheus ssl
+PKG_SUPPORTED_OPTIONS=		lua prometheus ssl
 PKG_OPTIONS_OPTIONAL_GROUPS=	regex
 PKG_OPTIONS_GROUP.regex=	pcre pcre2 pcre2-jit
 PKG_SUGGESTED_OPTIONS=		pcre ssl
@@ -42,25 +42,6 @@ BUILD_MAKE_FLAGS+=	LUA_LIB_NAME=lua5.3
 ###
 .if !empty(PKG_OPTIONS:Mprometheus)
 BUILD_MAKE_FLAGS+=	EXTRA_OBJS="contrib/prometheus-exporter/service-prometheus.o"
-.endif
-
-###
-### Support DeviceAtlas detection.
-###
-.if !empty(PKG_OPTIONS:Mpcre) && !empty(PKG_OPTIONS:Mdeviceatlas)
-DEVICEATLAS_VERSION=	2.1
-DEVICEATLAS_DISTFILE=	deviceatlas-enterprise-c-${DEVICEATLAS_VERSION}
-DISTFILES=		${DISTNAME}.tar.gz ${DEVICEATLAS_DISTFILE}.zip
-DEVICEATLAS_HOMEPAGE=	https://www.deviceatlas.com/deviceatlas-haproxy-module
-
-BUILD_MAKE_FLAGS+=	USE_DEVICEATLAS=1 DEVICEATLAS_SRC=../${DEVICEATLAS_DISTFILE}
-
-.  if !exists(${DISTDIR}/${DEVICEATLAS_DISTFILE}.zip)
-FETCH_MESSAGE=		"Please fetch ${DEVICEATLAS_DISTFILE}.zip manually from"
-FETCH_MESSAGE+=		"${DEVICEATLAS_HOMEPAGE}"
-FETCH_MESSAGE+=		"and put into"
-FETCH_MESSAGE+=		"${DISTDIR}"
-.  endif
 .endif
 
 ###
