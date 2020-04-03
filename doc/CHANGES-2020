@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2081 2020/04/03 22:06:34 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2082 2020/04/03 22:11:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2838,3 +2838,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xscreensaver to 5.44 [wiz 2020-04-03]
 	Updated sysutils/dupeguru to 4.0.4rc1 [wiz 2020-04-03]
 	Updated sysutils/fdupes to 1.51nb1 [wiz 2020-04-03]
+	Updated sysutils/fdupes to 2.0.0 [wiz 2020-04-03]
