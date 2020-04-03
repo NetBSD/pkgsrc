@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2082 2020/04/03 22:11:57 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2083 2020/04/03 23:05:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2839,3 +2839,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/dupeguru to 4.0.4rc1 [wiz 2020-04-03]
 	Updated sysutils/fdupes to 1.51nb1 [wiz 2020-04-03]
 	Updated sysutils/fdupes to 2.0.0 [wiz 2020-04-03]
+	Added devel/py-libusb1 version 1.7.1 [nia 2020-04-03]
