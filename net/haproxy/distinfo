@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.52 2020/03/26 06:34:00 rillig Exp $
+$NetBSD: distinfo,v 1.53 2020/04/03 16:34:13 adam Exp $
 
-SHA1 (deviceatlas-enterprise-c-2.1.zip) = fbd4a4198307616d51518e50d09666aeac2eea29
-RMD160 (deviceatlas-enterprise-c-2.1.zip) = fc4b78bc18c80cc19e36fa5b8776cbf8b959abd7
-SHA512 (deviceatlas-enterprise-c-2.1.zip) = 99a8e89f3d1c084a93b184685108ea65d1fd925e0c8b52599a42dbe70af3126103da0a9fd284b14ddf59b996204334d360a12651025413bc4d7f76054779275b
-Size (deviceatlas-enterprise-c-2.1.zip) = 504286 bytes
-SHA1 (haproxy-2.1.3.tar.gz) = 6904ebe6b1742d5e70592e85b1f664ac74b7280b
-RMD160 (haproxy-2.1.3.tar.gz) = 613b731a1ec7387b85f200c1eaf3c10b699928fe
-SHA512 (haproxy-2.1.3.tar.gz) = 4728c1177b2bba69465cbc56b1ed73a1b2d36891ba2d94d29bb49714ad98ccfac4b52947735aded211f0cd8070002f5406ddd77cabd2f8230b00438189dd7a60
-Size (haproxy-2.1.3.tar.gz) = 2675529 bytes
+SHA1 (haproxy-2.1.4.tar.gz) = 79bde694574d8cec2d3cc5de593d66654c89b6cb
+RMD160 (haproxy-2.1.4.tar.gz) = 7744d6100b37426a8a5369869aca409fd9f39337
+SHA512 (haproxy-2.1.4.tar.gz) = fd029ac1ec877fa89a9410944439b66795b1392b6c8416aaa7978943170530c3826ba50ea706366f3f7785b7cffed58497cb362fc2480dd6920a99af4f920d98
+Size (haproxy-2.1.4.tar.gz) = 2684568 bytes
 SHA1 (patch-Makefile) = 790242ebde13ac1a9d95a16cba29e30a9bccd57c
 SHA1 (patch-src_cli.c) = 4bc5cf0116df121ac4c3c38b8f962c3a62d536e5
 SHA1 (patch-src_haproxy.c) = badb172013541087d84f03726ea928c6f5634dc3
