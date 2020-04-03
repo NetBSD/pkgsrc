@@ -1,0 +1,8 @@
+This is a complete replacement and rearchitecture of the Android
+project's ADB and fastboot, using libusb1 for USB communications.
+
+This code is mainly targeted to users that need to communicate with
+Android devices in an automated fashion, such as in automated
+testing. It does not have a daemon between the client and the
+device, and therefore does not support multiple simultaneous commands
+to the same device.
