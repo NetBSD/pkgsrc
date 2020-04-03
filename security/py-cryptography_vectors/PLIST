@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/10/21 11:17:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/04/03 06:25:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -2224,7 +2224,9 @@ ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-responder-key-hash.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-revoked-no-next-update.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-revoked-reason.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-revoked.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-sct-extension.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-sha256.der
+${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-single-extension-reason.der
 ${PYSITELIB}/cryptography_vectors/x509/ocsp/resp-unauthorized.der
 ${PYSITELIB}/cryptography_vectors/x509/rapidssl_sha256_ca_g3.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/basic_constraints.pem
