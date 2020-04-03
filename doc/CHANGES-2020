@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2062 2020/04/02 22:07:16 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2063 2020/04/03 06:26:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2814,3 +2814,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/qt5-qtwebsockets to 5.14.2 [adam 2020-04-02]
 	Updated x11/qt5-qtx11extras to 5.14.2 [adam 2020-04-02]
 	Updated x11/qt5-qtxmlpatterns to 5.14.2 [adam 2020-04-02]
+	Updated security/py-cryptography to 2.9 [adam 2020-04-03]
+	Updated security/py-cryptography_vectors to 2.9 [adam 2020-04-03]
