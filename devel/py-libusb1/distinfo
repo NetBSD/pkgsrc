@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/03 23:04:54 nia Exp $
+
+SHA1 (libusb1-1.7.1.tar.gz) = 05fd9b765741ed64be871ee0d5bfa5e61eeebe1e
+RMD160 (libusb1-1.7.1.tar.gz) = 7357f508102c556d48a248bb044e59421d7eebfb
+SHA512 (libusb1-1.7.1.tar.gz) = 8a7029a70dba0fee9448a485e7e1205e695dd5f0db15ef5143a7bf6d1e0739e307e139a46fa7d38fb767b12f60610b9408e6c580cc0513e964214faa13ed7b0f
+Size (libusb1-1.7.1.tar.gz) = 78016 bytes
