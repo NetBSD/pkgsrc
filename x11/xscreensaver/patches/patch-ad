@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.24 2017/08/16 07:33:39 wiz Exp $
+$NetBSD: patch-ad,v 1.25 2020/04/03 20:49:16 wiz Exp $
 
 Do not unconditionally install xscreensaver-demo nor GNOME files.
 
---- driver/Makefile.in.orig	2017-07-05 17:52:56.000000000 +0000
+--- driver/Makefile.in.orig	2020-03-21 01:40:19.000000000 +0000
 +++ driver/Makefile.in
-@@ -226,7 +226,7 @@ SCRIPTS		= $(SCRIPTS_1) @SCRIPTS_OSX@
+@@ -233,7 +233,7 @@ SCRIPTS		= $(SCRIPTS_1) @SCRIPTS_OSX@
  HDRS		= XScreenSaver_ad.h XScreenSaver_Xm_ad.h \
  		  xscreensaver.h prefs.h remote.h exec.h \
  		  demo-Gtk-conf.h auth.h mlstring.h types.h
@@ -13,7 +13,7 @@ Do not unconditionally install xscreensaver-demo nor GNOME files.
  		  xscreensaver-command.man \
  		  xscreensaver-text.man \
  		  xscreensaver-getimage.man \
-@@ -257,7 +257,7 @@ all: $(EXES) $(EXES2)
+@@ -265,7 +265,7 @@ all: $(EXES) $(EXES2)
  tests: $(TEST_EXES)
  
  install:   install-program   install-ad    install-scripts \
@@ -22,16 +22,16 @@ Do not unconditionally install xscreensaver-demo nor GNOME files.
  uninstall: uninstall-program uninstall-ad  \
  	   uninstall-gnome   uninstall-man uninstall-xml  
  
-@@ -292,7 +292,7 @@ install-program: $(EXES)
+@@ -300,7 +300,7 @@ install-program: $(EXES)
  	fi ;								      \
  	echo $$inst xscreensaver $(install_prefix)$(bindir)/xscreensaver ;    \
  	$$inst xscreensaver $(install_prefix)$(bindir)/xscreensaver
 -	@for exe in xscreensaver-command xscreensaver-demo	           \
 +	@for exe in xscreensaver-command 	           \
- 		    xscreensaver-getimage @EXES_OSX@ ; do	           \
+ 		    xscreensaver-getimage @EXES_OSX@ @EXES_SYSTEMD@ ; do   \
  	  echo $(INSTALL_PROGRAM) $$exe $(install_prefix)$(bindir)/$$exe ; \
  	       $(INSTALL_PROGRAM) $$exe $(install_prefix)$(bindir)/$$exe ; \
-@@ -491,7 +491,7 @@ install-pam: xscreensaver.pam
+@@ -499,7 +499,7 @@ install-pam: xscreensaver.pam
  
  # screensaver-properties.desktop
  # into /usr/share/applications/
