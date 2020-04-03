@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2078 2020/04/03 20:15:36 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2079 2020/04/03 20:49:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2835,3 +2835,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/prometheus to 2.17.1 [adam 2020-04-03]
 	Updated devel/libusb1 to 1.0.23 [nia 2020-04-03]
 	Updated devel/libmtp to 1.1.17nb1 [nia 2020-04-03]
+	Updated x11/xscreensaver to 5.44 [wiz 2020-04-03]
