@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2066 2020/04/03 09:15:11 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2067 2020/04/03 09:17:07 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2821,3 +2821,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/easy-rsa to 3.0.7 [adam 2020-04-03]
 	Updated net/qbittorrent to 4.2.3 [adam 2020-04-03]
 	Updated devel/ocaml-ppx_tools_versioned to 5.3.0 [jaapb 2020-04-03]
+	Updated devel/ocaml-lwt_log to 1.1.1 [jaapb 2020-04-03]
