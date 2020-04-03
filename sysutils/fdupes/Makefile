@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2016/04/01 11:12:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/03 22:06:17 wiz Exp $
 
 DISTNAME=	fdupes-1.51
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://fdupes.googlecode.com/files/
 
