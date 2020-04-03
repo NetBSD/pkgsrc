@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2020/02/13 19:27:36 adam Exp $
+# $NetBSD: Makefile,v 1.20 2020/04/03 07:44:59 adam Exp $
 
-DISTNAME=	uncompyle6-3.6.4
+DISTNAME=	uncompyle6-3.6.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uncompyle6/}
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-spark-parser>=1.8.9:../../lang/py-spark-parser
 DEPENDS+=	${PYPKGPREFIX}-xdis>=4.2.2:../../devel/py-xdis
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
@@ -19,6 +20,9 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pydisassemble pydisassemble-${PYVERSSUFFIX} && \
 	${MV} uncompyle6 uncompyle6-${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC}/pytest && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
