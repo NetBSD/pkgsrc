@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/04/09 07:54:28 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/04/03 14:36:44 jaapb Exp $
 
-SHA1 (lwt_ssl-1.1.2.tar.gz) = fe68a186840b302fcd4c2f4726845941daed65e6
-RMD160 (lwt_ssl-1.1.2.tar.gz) = 56eb64ed6e497f7aed416ad87ea9a8e88e45cae6
-SHA512 (lwt_ssl-1.1.2.tar.gz) = a276a16b8cf0f66637730fcdafc64a00b0980053c16c0c6457ef4337980257341a60c5e91dd3ad6969cacbc9623339ad8423c67f0ed6ad0536f5d9c2762f3ac0
-Size (lwt_ssl-1.1.2.tar.gz) = 14643 bytes
+SHA1 (lwt_ssl-1.1.3.tar.gz) = 69dbbfa2eeabbbcdb1694b92b66068bb99d16e4b
+RMD160 (lwt_ssl-1.1.3.tar.gz) = bfe4f9152d7c5ce3e5555de1d5396ce465072a07
+SHA512 (lwt_ssl-1.1.3.tar.gz) = 1bcc610ccf660436be2ed068ef98d85d752aecd2f364eab585ef1553b0ef1561a0fd50b5edc15000cf4cffc78d0ba184f7ede53651de14f5227ad1b795e2240a
+Size (lwt_ssl-1.1.3.tar.gz) = 14785 bytes
