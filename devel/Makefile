@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3087 2020/04/02 10:33:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3088 2020/04/03 23:04:54 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -2291,6 +2291,7 @@ SUBDIR+=	py-lazr.delegates
 SUBDIR+=	py-lazy-object-proxy
 SUBDIR+=	py-libevent-rpcgen
 SUBDIR+=	py-libmc
+SUBDIR+=	py-libusb1
 SUBDIR+=	py-limits
 SUBDIR+=	py-line_profiler
 SUBDIR+=	py-linecache2
