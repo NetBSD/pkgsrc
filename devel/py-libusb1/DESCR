@@ -1,0 +1,3 @@
+Pure Python wrapper for libusb-1.0.
+
+Supports all transfer types, both in synchronous and asynchronous mode.
