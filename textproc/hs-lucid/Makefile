@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/30 16:47:25 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/03 07:22:04 wiz Exp $
 
 DISTNAME=	lucid-2.9.12
 CATEGORIES=	textproc
@@ -8,6 +8,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/chrisdone/lucid
 COMMENT=	Clear to write, read and edit DSL for HTML
 LICENSE=	modified-bsd
+
+DEPENDS+=	hs-blaze-builder-[0-9]*:../../devel/hs-blaze-builder
+DEPENDS+=	hs-unordered-containers-[0-9]*:../../devel/hs-unordered-containers
 
 USE_LANGUAGES=	# none
 
