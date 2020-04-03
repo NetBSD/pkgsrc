@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/30 16:49:19 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/03 07:40:44 wiz Exp $
 
 DISTNAME=	cassava-0.5.2.0
 CATEGORIES=	textproc
@@ -8,6 +8,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/hvr/cassava
 COMMENT=	CSV parsing and encoding library
 LICENSE=	modified-bsd
+
+DEPENDS+=	hs-attoparsec-[0-9]*:../../textproc/hs-attoparsec
+DEPENDS+=	hs-unordered-containers-[0-9]*:../../devel/hs-unordered-containers
+DEPENDS+=	hs-vector-[0-9]*:../../devel/hs-vector
 
 USE_LANGUAGES=	# none
 
