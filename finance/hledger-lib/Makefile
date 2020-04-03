@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/30 16:52:48 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/03 08:02:17 wiz Exp $
 
 .include "../../finance/hledger/common.mk"
 
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/simonmichael/hledger/
 COMMENT=	Plain-text accounting tool
 LICENSE=	gnu-gpl-v3
+
+DEPENDS+=	hs-data-default-[0-9]*:../../devel/hs-data-default
+DEPENDS+=	hs-utf8-string-[0-9]*:../../devel/hs-utf8-string
 
 USE_LANGUAGES=	# none
 
