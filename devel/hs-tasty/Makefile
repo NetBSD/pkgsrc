@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/30 16:51:09 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/03 07:30:53 wiz Exp $
 
 DISTNAME=	tasty-1.2.3
 CATEGORIES=	devel
@@ -8,6 +8,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/feuerbach/tasty
 COMMENT=	Modern and extensible testing framework
 LICENSE=	mit
+
+DEPENDS+=	hs-async-[0-9]*:../../devel/hs-async
+DEPENDS+=	hs-tagged-[0-9]*:../../devel/hs-tagged
 
 USE_LANGUAGES=	# none
 
