@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2065 2020/04/03 08:28:08 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2066 2020/04/03 09:15:11 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2820,3 +2820,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/py-uncompyle6 to 3.6.5 [adam 2020-04-03]
 	Updated security/easy-rsa to 3.0.7 [adam 2020-04-03]
 	Updated net/qbittorrent to 4.2.3 [adam 2020-04-03]
+	Updated devel/ocaml-ppx_tools_versioned to 5.3.0 [jaapb 2020-04-03]
