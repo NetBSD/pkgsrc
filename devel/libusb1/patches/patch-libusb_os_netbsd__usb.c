@@ -1,4 +1,4 @@
-$NetBSD: patch-libusb_os_netbsd__usb.c,v 1.3 2020/04/03 20:05:41 nia Exp $
+$NetBSD: patch-libusb_os_netbsd__usb.c,v 1.4 2020/04/03 20:39:03 nia Exp $
 
 * Set structure values by name
 * Do not emit log messages from netbsd_clock_gettime as it is called from
@@ -101,11 +101,12 @@ $NetBSD: patch-libusb_os_netbsd__usb.c,v 1.3 2020/04/03 20:05:41 nia Exp $
  	if (clkid == USBI_CLOCK_REALTIME)
  		return clock_gettime(CLOCK_REALTIME, tp);
  
-@@ -521,6 +499,8 @@ _errno_to_libusb(int err)
+@@ -521,6 +499,9 @@ _errno_to_libusb(int err)
  		return (LIBUSB_ERROR_NO_DEVICE);
  	case ENOMEM:
  		return (LIBUSB_ERROR_NO_MEM);
 +	case EWOULDBLOCK:
++	case ETIMEDOUT:
 +		return (LIBUSB_ERROR_TIMEOUT);
  	}
  
