@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2067 2020/04/03 09:17:07 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2068 2020/04/03 10:23:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2822,3 +2822,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/qbittorrent to 4.2.3 [adam 2020-04-03]
 	Updated devel/ocaml-ppx_tools_versioned to 5.3.0 [jaapb 2020-04-03]
 	Updated devel/ocaml-lwt_log to 1.1.1 [jaapb 2020-04-03]
+	Updated print/poppler to 0.87.0 [wiz 2020-04-03]
