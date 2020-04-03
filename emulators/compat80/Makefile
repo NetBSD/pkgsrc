@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/26 17:31:08 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/03 06:17:25 wiz Exp $
 
 COMPAT_PKG=		compat80	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		8.0
@@ -28,6 +28,8 @@ EMUL_PLATFORMS=		netbsd-alpha \
 # select ONLY_FOR_PLATFORM start by the osversion we diffed against
 # add NetBSD-8.[1-9]*-* once 8.1 is out and we have compat81
 ONLY_FOR_PLATFORM=	NetBSD-9*-* NetBSD-[1-9][0-9]*-*
+
+CHECK_RELRO_SKIP=	*
 
 .include "../../emulators/compat_netbsd/Makefile.common"
 
