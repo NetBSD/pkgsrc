@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2018/04/13 15:35:34 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/04/03 09:16:54 jaapb Exp $
 
-SHA1 (lwt_log-1.1.0.tar.gz) = dddf437effe67a3ad0559193d4480ea85109f4b5
-RMD160 (lwt_log-1.1.0.tar.gz) = 858fa8f9ac30d0631e595655e2d6f2463b708d16
-SHA512 (lwt_log-1.1.0.tar.gz) = fa0ce2928912b55ecbddc14ecd6f6d5db399f7cd6cba5f38d61db4c89ab7345d3e42f8f1292d9a5be973e16fd43d8381d6c269ae47f3692bb64ff567a7039451
-Size (lwt_log-1.1.0.tar.gz) = 24284 bytes
+SHA1 (lwt_log-1.1.1.tar.gz) = cf54dd9aafa7045a96b08872bd3b7d291e0d1064
+RMD160 (lwt_log-1.1.1.tar.gz) = b56f8fe345bfc806de216bab54b6f2dad227a2c4
+SHA512 (lwt_log-1.1.1.tar.gz) = df3d171a7c72f37e96b756d252ab586767df9c13e01500faf13d4b2cee936b0602fd7c725c03db488d3737d8d92300af103d395a926dc654a2c44a5d6068f24a
+Size (lwt_log-1.1.1.tar.gz) = 24569 bytes
