@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2070 2020/04/03 10:56:25 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2071 2020/04/03 10:57:56 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2825,3 +2825,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/poppler to 0.87.0 [wiz 2020-04-03]
 	Updated devel/ocaml-base to 0.13.1 [jaapb 2020-04-03]
 	Updated devel/ocaml-spawn to 0.13.0 [jaapb 2020-04-03]
+	Updated databases/openldap-server to 2.4.49nb1 [jperkin 2020-04-03]
