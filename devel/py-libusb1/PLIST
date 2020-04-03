@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/03 23:04:54 nia Exp $
+${PYSITELIB}/libusb1.pyo
+${PYSITELIB}/libusb1.pyc
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/libusb1.py
+${PYSITELIB}/usb1/__init__.py
+${PYSITELIB}/usb1/__init__.pyo
+${PYSITELIB}/usb1/__init__.pyc
+${PYSITELIB}/usb1/_version.pyo
+${PYSITELIB}/usb1/_version.pyc
+${PYSITELIB}/usb1/libusb1.pyo
+${PYSITELIB}/usb1/libusb1.pyc
+${PYSITELIB}/usb1/testUSB1.pyo
+${PYSITELIB}/usb1/testUSB1.pyc
+${PYSITELIB}/usb1/_version.py
+${PYSITELIB}/usb1/libusb1.py
+${PYSITELIB}/usb1/testUSB1.py
