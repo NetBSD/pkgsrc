@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2076 2020/04/03 16:40:14 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2077 2020/04/03 20:06:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2833,3 +2833,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-xopen to 0.9.0 [adam 2020-04-03]
 	Updated net/haproxy to 2.1.4 [adam 2020-04-03]
 	Updated databases/prometheus to 2.17.1 [adam 2020-04-03]
+	Updated devel/libusb1 to 1.0.23 [nia 2020-04-03]
