@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/17 11:56:26 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/03 22:11:48 wiz Exp $
 bin/fdupes
 man/man1/fdupes.1
+man/man7/fdupes-help.7
