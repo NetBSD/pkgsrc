@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2020/03/31 12:59:27 mef Exp $
+# $NetBSD: options.mk,v 1.6 2020/04/04 03:22:02 mef Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.avr-libc
 PKG_SUPPORTED_OPTIONS+=		doc
@@ -53,8 +53,6 @@ post-install:
 	## delete following or similar files, which includes PATH at build time.
 	##_usr_pkgsrc_cross_avr-libc_work_avr-libc-1.8.0_libc_string_.3
 	${RM} -f ${DESTDIR}${PREFIX}/share/doc/avr-libc/man/man3/*${PKGVERSION_NOREV}*
-	${MV}    ${DESTDIR}${PREFIX}/share/doc/avr-libc/man/man3/_VECTOR.3 \
-	         ${DESTDIR}${PREFIX}/share/doc/avr-libc/man/man3/VECTOR.3
 .  for f in Makefile demo.c demo.bin demo.hex demo.pdf demo.srec
 	${INSTALL_DATA} ${WRKSRC}/doc/examples/demo/${f} \
 		${DESTDIR}${PREFIX}/share/doc/avr-libc/examples/demo
