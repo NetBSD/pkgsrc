@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2086 2020/04/04 02:39:38 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2087 2020/04/04 07:29:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2843,3 +2843,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-adb version 1.3.0 [nia 2020-04-03]
 	Updated www/firefox to 74.0.1 [ryoon 2020-04-04]
 	Updated www/firefox-l10n to 74.0.1 [ryoon 2020-04-04]
+	Updated www/php-nextcloud to 18.0.3 [ryoon 2020-04-04]
