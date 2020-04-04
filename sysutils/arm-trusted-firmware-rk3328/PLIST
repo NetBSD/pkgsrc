@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/04 06:21:54 mrg Exp $
+share/arm-trusted-firmware/rk3328/bl31.elf

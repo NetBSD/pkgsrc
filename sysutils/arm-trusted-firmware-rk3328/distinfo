@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2020/04/04 06:21:54 mrg Exp $
+
+SHA1 (arm-trusted-firmware-2.2.zip) = 95bd4fc50b233ffffef87fe209756811a813f284
+RMD160 (arm-trusted-firmware-2.2.zip) = 615b7a60e3293dee8686cfca8bca3a83fea5ff88
+SHA512 (arm-trusted-firmware-2.2.zip) = 84fd95b14b5363b1a98482b71bde6915e8e36e832260371343fd576245124abfeb017ee5898996c373efcc46d03210b86ab665446aa1f7a3c9e4f290d2137f37
+Size (arm-trusted-firmware-2.2.zip) = 5205813 bytes
+SHA1 (patch-plat_rockchip_common_params_setup.c) = 4a53e20d8ff0500aee691f415801c574a07d2d7f
+SHA1 (patch-plat_rockchip_rk3399_drivers_pmu_pmu.c) = 64d3db54b8b3a9d25b955636a4338969dae05f5e
+SHA1 (patch-plat_rockchip_rk3399_drivers_pmu_pmu.h) = f3cc7c2ec114cb08d38e5e08e54eb4b34080da70
+SHA1 (patch-plat_rockchip_rk3399_drivers_soc_soc.c) = 3813ad5f37eeb5ae431fdb1eb779a0a74b9598a9
