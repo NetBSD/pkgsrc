@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2092 2020/04/04 16:31:32 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2093 2020/04/04 17:05:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2853,3 +2853,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/u-boot-orangepi-lite2 version 2018.11 [thorpej 2020-04-04]
 	Updated www/firefox68 to 68.6.1 [nia 2020-04-04]
 	Updated audio/fasttracker2 to 1.17 [fox 2020-04-04]
+	Updated www/firefox-l10n to 74.0 [nia 2020-04-04]
