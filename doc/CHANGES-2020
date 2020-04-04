@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2088 2020/04/04 09:31:31 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2089 2020/04/04 15:13:56 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2849,3 +2849,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-grpcio to 1.28.1 [adam 2020-04-04]
 	Updated net/py-grpcio-testing to 1.28.1 [adam 2020-04-04]
 	Updated net/py-grpcio-tools to 1.28.1 [adam 2020-04-04]
+	Updated sysutils/arm-trusted-firmware-sun50i-h6 to 20180207nb1 [thorpej 2020-04-04]
