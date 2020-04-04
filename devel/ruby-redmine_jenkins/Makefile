@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/11/03 10:00:24 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/04 04:02:11 mef Exp $
 
 GITHUB_PROJECT=	redmine_jenkins
 DISTNAME=	1.0.1
@@ -80,7 +80,7 @@ _RUBYGEM_OPTIONS=		--no-update-sources	# don't cache the gem index
 _RUBYGEM_OPTIONS+=		--install-dir ${PREFIX}/${GEM_HOME}
 _RUBYGEM_OPTIONS+=		${RUBYGEM_INSTALL_ROOT_OPTION}
 _RUBYGEM_OPTIONS+=		--ignore-dependencies
-_RUBYGEM_OPTIONS+=		--no-ri --no-rdoc
+_RUBYGEM_OPTIONS+=		--no-document
 
 .include "../../lang/ruby/rubyversion.mk"
 
