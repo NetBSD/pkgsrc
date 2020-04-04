@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2017/01/29 04:29:54 mef Exp $
+@comment $NetBSD: PLIST,v 1.25 2020/04/04 03:22:02 mef Exp $
 avr/include/alloca.h
 avr/include/assert.h
 avr/include/avr/boot.h
@@ -1199,6 +1199,7 @@ ${PLIST.doc}share/doc/avr-libc/man/man3/_MONTHS_.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/_MemoryBarrier.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/_NOP.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/_PROTECTED_WRITE.3
+${PLIST.doc}share/doc/avr-libc/man/man3/_VECTOR.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/_WEEK_DAYS_.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/__AVR_LIBC_DATE_.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/__AVR_LIBC_DATE_STRING__.3
