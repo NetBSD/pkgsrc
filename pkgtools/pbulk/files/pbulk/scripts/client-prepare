@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: client-prepare,v 1.3 2016/12/18 22:59:35 joerg Exp $
+# $NetBSD: client-prepare,v 1.4 2020/04/04 15:17:36 riastradh Exp $
 
 . @PBULK_CONFIG@
 
@@ -27,11 +27,11 @@ for client in ${scan_clients} ${build_clients}; do
 done
 
 for client in ${unique_clients}; do
-	case ${client} in 
+	case ${client} in
 	/*)
+		path=${client}
 		port=
 		client=
-		path=${client}
 		;;
 	*:*)
 		port="-p ${client##*:}"
