@@ -1,10 +1,11 @@
-$NetBSD: patch-arch_arm_dts_Makefile,v 1.6 2019/10/08 20:48:49 bad Exp $
+$NetBSD: patch-arch_arm_dts_Makefile,v 1.7 2020/04/04 15:20:35 thorpej Exp $
 
 Add device tree files for:
 - Banana Pi BPI-M2 Zero
 - Banana Pi BPI-P2 Zero
 - FriendlyArm NanoPi R1
 - FriendlyArm NanoPi Duo2
+- OrangePi Lite 2
 
 --- arch/arm/dts/Makefile.orig	2018-11-14 16:10:06.000000000 +0000
 +++ arch/arm/dts/Makefile
@@ -26,3 +27,11 @@ Add device tree files for:
  	sun8i-h3-nanopi-neo.dtb \
  	sun8i-h3-nanopi-neo-air.dtb \
  	sun8i-h3-orangepi-2.dtb \
+@@ -396,6 +400,7 @@ dtb-$(CONFIG_MACH_SUN50I_H5) += \
+ 	sun50i-h5-orangepi-zero-plus2.dtb
+ dtb-$(CONFIG_MACH_SUN50I_H6) += \
+ 	sun50i-h6-orangepi-one-plus.dtb \
++	sun50i-h6-orangepi-lite2.dtb \
+ 	sun50i-h6-pine-h64.dtb
+ dtb-$(CONFIG_MACH_SUN50I) += \
+ 	sun50i-a64-amarula-relic.dtb \
