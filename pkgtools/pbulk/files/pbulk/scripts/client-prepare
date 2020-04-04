@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: client-prepare,v 1.4 2020/04/04 15:17:36 riastradh Exp $
+# $NetBSD: client-prepare,v 1.5 2020/04/04 15:17:48 riastradh Exp $
 
 . @PBULK_CONFIG@
 
@@ -46,7 +46,7 @@ for client in ${unique_clients}; do
 	if [ -z "$path" ]; then
 		ssh $port $client "${client_prepare_action}" &
 	else
-		clients_prepare_chroot "$path" &
+		$client_prepare_chroot "$path" &
 	fi
 done
 
