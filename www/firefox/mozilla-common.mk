@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.158 2020/03/30 19:46:02 joerg Exp $
+# $NetBSD: mozilla-common.mk,v 1.159 2020/04/04 02:37:30 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -20,6 +20,7 @@ ALL_ENV+=			PYTHON3=${LOCALBASE}/bin/python3.7
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
+# Some modules written in Rust dislike gnu++17 as of 74.0.
 USE_LANGUAGES+=		c99 gnu++14
 UNLIMIT_RESOURCES+=	datasize virtualsize
 
