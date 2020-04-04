@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.24 2020/03/15 22:27:52 adam Exp $
+$NetBSD: distinfo,v 1.25 2020/04/04 09:30:37 adam Exp $
 
-SHA1 (grpc-1.27.3.tar.gz) = ef7d83e6142f846c5f113761629b397f533ab57f
-RMD160 (grpc-1.27.3.tar.gz) = b021261189afc3bb922ea9e55eca1e469bc27902
-SHA512 (grpc-1.27.3.tar.gz) = 0338eedcce40cd7359cc1b216eb3eeaaeb1f2b065d1bb03e72322978a7e40ef8ecc1ad39808bec8c0fd5bcaa91e91bbd6037e5a6611a979c9ab413eb159bb38b
-Size (grpc-1.27.3.tar.gz) = 16596221 bytes
+SHA1 (grpc-1.28.1.tar.gz) = be8c3d8c607078d9692b671c567ea8643ca3d3a5
+RMD160 (grpc-1.28.1.tar.gz) = d469809bae7e2cdfa8d68af0dd465d82d74bc207
+SHA512 (grpc-1.28.1.tar.gz) = 5cc4993470e2df21447d032ddeb65ab4175bb8acad5a06fdd22564068b80a5be255ef0e44d36732642d39dc3eaec02a93d2aaf6e369ad5dc43ff99b5023f357b
+Size (grpc-1.28.1.tar.gz) = 6888015 bytes
 SHA1 (patch-CMakeLists.txt) = af17a03bdbb2b7905ced111b3c13c80b0cf3fec2
 SHA1 (patch-cmake_benchmark.cmake) = 6a7880c30019a723a35b56b0c5bd2d730b36550d
 SHA1 (patch-include_grpc_impl_codegen_port__platform.h) = b8d07e5bbf04694df00d0d19884844b791eb002c

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/02/10 15:36:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/04/04 09:30:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -39,6 +39,9 @@ ${PYSITELIB}/grpc/_plugin_wrapping.pyo
 ${PYSITELIB}/grpc/_server.py
 ${PYSITELIB}/grpc/_server.pyc
 ${PYSITELIB}/grpc/_server.pyo
+${PYSITELIB}/grpc/_simple_stubs.py
+${PYSITELIB}/grpc/_simple_stubs.pyc
+${PYSITELIB}/grpc/_simple_stubs.pyo
 ${PYSITELIB}/grpc/_utilities.py
 ${PYSITELIB}/grpc/_utilities.pyc
 ${PYSITELIB}/grpc/_utilities.pyo
@@ -72,6 +75,12 @@ ${PYSITELIB}/grpc/experimental/aio/__init__.pyo
 ${PYSITELIB}/grpc/experimental/aio/_base_call.py
 ${PYSITELIB}/grpc/experimental/aio/_base_call.pyc
 ${PYSITELIB}/grpc/experimental/aio/_base_call.pyo
+${PYSITELIB}/grpc/experimental/aio/_base_channel.py
+${PYSITELIB}/grpc/experimental/aio/_base_channel.pyc
+${PYSITELIB}/grpc/experimental/aio/_base_channel.pyo
+${PYSITELIB}/grpc/experimental/aio/_base_server.py
+${PYSITELIB}/grpc/experimental/aio/_base_server.pyc
+${PYSITELIB}/grpc/experimental/aio/_base_server.pyo
 ${PYSITELIB}/grpc/experimental/aio/_call.py
 ${PYSITELIB}/grpc/experimental/aio/_call.pyc
 ${PYSITELIB}/grpc/experimental/aio/_call.pyo
