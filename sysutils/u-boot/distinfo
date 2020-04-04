@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2020/03/30 16:30:54 riastradh Exp $
+$NetBSD: distinfo,v 1.32 2020/04/04 15:20:35 thorpej Exp $
 
 SHA1 (u-boot-2018.11.tar.bz2) = e58e86c633ad3e2613196e0c0b0a7760ae5966d6
 RMD160 (u-boot-2018.11.tar.bz2) = f63c67750951d0e2883935a5d4cc3252f51a5453
@@ -6,11 +6,14 @@ SHA512 (u-boot-2018.11.tar.bz2) = 1ea0bbb5f5e6d4c60b3a6bd345d1fa6e9da025daf36f47
 Size (u-boot-2018.11.tar.bz2) = 13045125 bytes
 SHA1 (patch-Makefile) = 5b86d70e05620cc3133faf508e983e2fe6ca6603
 SHA1 (patch-arch_arm_cpu_armv8_Kconfig) = 63cbbf2e3cebd46793fc03cc8e62297f6dc01aa9
-SHA1 (patch-arch_arm_dts_Makefile) = a64a01255af3d2a744fe7b923c66fd8ce0f9d489
+SHA1 (patch-arch_arm_dts_Makefile) = 1941cb6e1300f14b624d8a3126a09def8654f8e4
+SHA1 (patch-arch_arm_dts_sun50i-h6-orangepi-one-plus.dts) = 0baa27eb56458be290a7cfcc81ca606f6439b1cf
 SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-m2-zero.dts) = aaa530a5f520eea0cb5dcece0b730e23db59eb40
 SHA1 (patch-arch_arm_dts_sun8i-h2-plus-bananapi-p2-zero.dts) = 8c78d0e0877aa9784fa209af2e16e80cb1110364
 SHA1 (patch-arch_arm_dts_sun8i-h3-nanopi-duo2.dts) = ec4927bb5f024f9aca6f71890c4bc14dc53e8ba7
 SHA1 (patch-arch_arm_dts_sun8i-h3-nanopi-r1.dts) = a192c05c31038cf11354dd4a32d94b5b62945661
+SHA1 (patch-arch_arm_include_asm_arch-sunxi_cpu_sun50i_h6.h) = 49c6373884852aeff535830f21c12e807ed74988
+SHA1 (patch-arch_arm_mach-sunxi_board.c) = 1e707066636b4ddf57fb5d3b9319371812de6d74
 SHA1 (patch-arch_powerpc_include_asm_byteorder.h) = 8cab2805c6b21c986f7b4e2c38db11dfcea28c42
 SHA1 (patch-configs_A20-OLinuXino-Lime2-eMMC_defconfig) = 425ae3a82ce9006dbd734f41f7d49bb3587b1493
 SHA1 (patch-configs_A20-OLinuXino-Lime2_defconfig) = 9eecb0a44ec9ddda2425b042c219f59ba546a494
@@ -19,6 +22,7 @@ SHA1 (patch-configs_bananapi_p2_zero_defconfig) = 6468b3246cbf35d10320c8a974fc06
 SHA1 (patch-configs_jetson-tk1_defconfig) = e25d89b9440f9bb4486ac22fc47083ed24abdd95
 SHA1 (patch-configs_nanopi__duo2__defconfig) = 1464c4eb5d31779caa5714386891ae60b25c1825
 SHA1 (patch-configs_nanopi__r1__defconfig) = deb0edece928cd0a761451b034757a31cb17760f
+SHA1 (patch-configs_orangepi_lite2_defconfig) = e3426f649bb6e8ab2045a5f1cbe32e83b14cb8ef
 SHA1 (patch-configs_p2371-2180_defconfig) = 2a3f1ad4f9963af403c2c9f2f01b892bbe55188c
 SHA1 (patch-drivers_video_sunxi_sunxi__display.c) = 8e6a6a781cce25af5cba289fc2ca76e30b62aff6
 SHA1 (patch-include_configs_tegra-common-post.h) = dfc081d2a3f7cd32e340b03f6c77c629bffd29b4
