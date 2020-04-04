@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.868 2020/03/21 19:26:59 adam Exp $
+# $NetBSD: Makefile,v 1.869 2020/04/04 15:20:34 thorpej Exp $
 #
 
 COMMENT=	System utilities
@@ -663,6 +663,7 @@ SUBDIR+=	u-boot-odroid-c2
 SUBDIR+=	u-boot-odroid-xu3
 SUBDIR+=	u-boot-orangepi-2
 SUBDIR+=	u-boot-orangepi-lite
+SUBDIR+=	u-boot-orangepi-lite2
 SUBDIR+=	u-boot-orangepi-one
 SUBDIR+=	u-boot-orangepi-plus2e
 SUBDIR+=	u-boot-orangepi-zero
