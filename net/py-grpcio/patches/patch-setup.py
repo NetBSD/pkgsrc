@@ -1,9 +1,19 @@
-$NetBSD: patch-setup.py,v 1.5 2019/10/24 18:34:17 adam Exp $
+$NetBSD: patch-setup.py,v 1.6 2020/04/04 09:30:37 adam Exp $
 
+Fix libatomic detection.
 Use dependencies in pkgsrc.
 
---- setup.py.orig	2019-10-22 19:40:13.000000000 +0000
+--- setup.py.orig	2020-04-03 01:18:49.000000000 +0000
 +++ setup.py
+@@ -146,7 +146,7 @@ def check_linker_need_libatomic():
+   """Test if linker on system needs libatomic."""
+   code_test = (b'#include <atomic>\n' +
+                b'int main() { return std::atomic<int64_t>{}; }')
+-  cc_test = subprocess.Popen(['cc', '-x', 'c++', '-std=c++11', '-'],
++  cc_test = subprocess.Popen(['c++', '-x', 'c++', '-std=c++11', '-'],
+                              stdin=PIPE,
+                              stdout=PIPE,
+                              stderr=PIPE)
 @@ -235,19 +235,7 @@ EXTENSION_INCLUDE_DIRECTORIES = (
      UPB_GRPC_GENERATED_INCLUDE +
      ZLIB_INCLUDE)
@@ -14,7 +24,7 @@ Use dependencies in pkgsrc.
 -if not "win32" in sys.platform:
 -  EXTENSION_LIBRARIES += ('m',)
 -if "win32" in sys.platform:
--  EXTENSION_LIBRARIES += ('advapi32', 'ws2_32',)
+-  EXTENSION_LIBRARIES += ('advapi32', 'ws2_32', 'dbghelp',)
 -if BUILD_WITH_SYSTEM_OPENSSL:
 -  EXTENSION_LIBRARIES += ('ssl', 'crypto',)
 -if BUILD_WITH_SYSTEM_ZLIB:
@@ -25,7 +35,7 @@ Use dependencies in pkgsrc.
  
  DEFINE_MACROS = (('OPENSSL_NO_ASM', 1), ('_WIN32_WINNT', 0x600))
  if not DISABLE_LIBC_COMPATIBILITY:
-@@ -294,7 +282,7 @@ def cython_extensions_and_necessity():
+@@ -295,7 +283,7 @@ def cython_extensions_and_necessity():
                    for name in CYTHON_EXTENSION_MODULE_NAMES]
    config = os.environ.get('CONFIG', 'opt')
    prefix = 'libs/' + config + '/'
@@ -34,7 +44,7 @@ Use dependencies in pkgsrc.
      extra_objects = [prefix + 'libares.a',
                       prefix + 'libboringssl.a',
                       prefix + 'libgpr.a',
-@@ -306,7 +294,7 @@ def cython_extensions_and_necessity():
+@@ -307,7 +295,7 @@ def cython_extensions_and_necessity():
    extensions = [
        _extension.Extension(
            name=module_name,
