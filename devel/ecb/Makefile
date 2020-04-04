@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/21 11:56:48 pho Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/04 03:44:57 mef Exp $
 
 DISTNAME=	ecb-2.50
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/ecb-home/ecb
 COMMENT=	Emacs Code Browser
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=	find gmake makeinfo
+USE_TOOLS=	find gmake makeinfo tar
 INFO_FILES=	yes
 
 MAKE_FLAGS+=		EMACS=${EMACS_BIN}
