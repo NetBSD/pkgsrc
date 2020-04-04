@@ -1,14 +1,14 @@
-Duktape is an embeddable Ecmascript E5/E5.1 engine with a focus on
+Duktape is an embeddable ECMAScript E5/E5.1 engine with a focus on
 portability and compact footprint.  By integrating Duktape into your
 C/C++ program you can easily extend its functionality through
 scripting.  You can also build the main control flow of your program
-in Ecmascript and use fast C code functions to do heavy lifting.
+in ECMAScript and use fast C code functions to do heavy lifting.
 
-The terms Ecmascript and Javascript are often considered more or less
-equivalent, although Javascript and its variants are technically just
-one environment where the Ecmascript language is used.  The line
+The terms ECMAScript and JavaScript are often considered more or less
+equivalent, although JavaScript and its variants are technically just
+one environment where the ECMAScript language is used.  The line
 between the two is not very clear in practice:  even non-browser
-Ecmascript environments often provide some browser-specific built-ins.
+ECMAScript environments often provide some browser-specific built-ins.
 Duktape is no exception, and provides the commonly used print() and
-alert() built-ins.  Even so, we use the term Ecmascript throughout to
+alert() built-ins.  Even so, we use the term ECMAScript throughout to
 refer to the language implemented by Duktape.
