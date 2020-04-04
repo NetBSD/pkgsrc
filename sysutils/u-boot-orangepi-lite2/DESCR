@@ -1,0 +1,5 @@
+U-Boot is a bootloader for embedded boards based on PowerPC, ARM, MIPS and
+several other processors, which can be installed in a boot ROM and used to
+initialize and test the hardware or to download and run application code.
+
+This package provides U-Boot for the Xunlong Orange Pi Lite 2.
