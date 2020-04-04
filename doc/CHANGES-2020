@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2091 2020/04/04 15:27:53 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2092 2020/04/04 16:31:32 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2852,3 +2852,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/arm-trusted-firmware-sun50i-h6 to 20180207nb1 [thorpej 2020-04-04]
 	Added sysutils/u-boot-orangepi-lite2 version 2018.11 [thorpej 2020-04-04]
 	Updated www/firefox68 to 68.6.1 [nia 2020-04-04]
+	Updated audio/fasttracker2 to 1.17 [fox 2020-04-04]
