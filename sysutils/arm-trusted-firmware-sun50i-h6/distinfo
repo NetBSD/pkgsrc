@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/05/26 17:51:33 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2020/04/04 15:12:17 thorpej Exp $
 
-SHA1 (arm-trusted-firmware-sun50i-h6-20180207-406a637162bee1f1b0c26525c3aae204aac241fa.zip) = 57cb3ee8bbcd225e3b643bc57676a85fd413e77a
-RMD160 (arm-trusted-firmware-sun50i-h6-20180207-406a637162bee1f1b0c26525c3aae204aac241fa.zip) = 60a903dfbb523ef09c9c052cbc77bcf21efe7a67
-SHA512 (arm-trusted-firmware-sun50i-h6-20180207-406a637162bee1f1b0c26525c3aae204aac241fa.zip) = 6f9b7b27b1d449a313b7b04b400f463356018b446e6e7c3cf20f6ee9625231d39d2e1bbe35049eb2c992a7b9c1e902e69e2ffb8b207a8c7bec577eae2fe1e472
-Size (arm-trusted-firmware-sun50i-h6-20180207-406a637162bee1f1b0c26525c3aae204aac241fa.zip) = 3330975 bytes
+SHA1 (arm-trusted-firmware-sun50i-h6-20180207nb1-406a637162bee1f1b0c26525c3aae204aac241fa.zip) = 57cb3ee8bbcd225e3b643bc57676a85fd413e77a
+RMD160 (arm-trusted-firmware-sun50i-h6-20180207nb1-406a637162bee1f1b0c26525c3aae204aac241fa.zip) = 60a903dfbb523ef09c9c052cbc77bcf21efe7a67
+SHA512 (arm-trusted-firmware-sun50i-h6-20180207nb1-406a637162bee1f1b0c26525c3aae204aac241fa.zip) = 6f9b7b27b1d449a313b7b04b400f463356018b446e6e7c3cf20f6ee9625231d39d2e1bbe35049eb2c992a7b9c1e902e69e2ffb8b207a8c7bec577eae2fe1e472
+Size (arm-trusted-firmware-sun50i-h6-20180207nb1-406a637162bee1f1b0c26525c3aae204aac241fa.zip) = 3330975 bytes
+SHA1 (patch-plat_allwinner_sun50i_h6_include_sunxi_mmap.h) = 08a603aa0fdb2c352ce50ee5644d24af71040062
