@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/03/15 14:09:48 uwe Exp $
+# $NetBSD: Makefile,v 1.29 2020/04/04 15:20:35 thorpej Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
@@ -56,6 +56,7 @@ DEPENDS+=	u-boot-odroid-c2-[0-9]*:../../sysutils/u-boot-odroid-c2
 DEPENDS+=	u-boot-odroid-xu3-[0-9]*:../../sysutils/u-boot-odroid-xu3
 DEPENDS+=	u-boot-orangepi-2-[0-9]*:../../sysutils/u-boot-orangepi-2
 DEPENDS+=	u-boot-orangepi-lite-[0-9]*:../../sysutils/u-boot-orangepi-lite
+DEPENDS+=	u-boot-orangepi-lite2-[0-9]*:../../sysutils/u-boot-orangepi-lite2
 DEPENDS+=	u-boot-orangepi-one-[0-9]*:../../sysutils/u-boot-orangepi-one
 DEPENDS+=	u-boot-orangepi-plus2e-[0-9]*:../../sysutils/u-boot-orangepi-plus2e
 DEPENDS+=	u-boot-orangepi-zero-[0-9]*:../../sysutils/u-boot-orangepi-zero
