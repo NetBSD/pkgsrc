@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2084 2020/04/03 23:06:47 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2085 2020/04/04 02:38:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2841,3 +2841,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/fdupes to 2.0.0 [wiz 2020-04-03]
 	Added devel/py-libusb1 version 1.7.1 [nia 2020-04-03]
 	Added devel/py-adb version 1.3.0 [nia 2020-04-03]
+	Updated www/firefox to 74.0.1 [ryoon 2020-04-04]
