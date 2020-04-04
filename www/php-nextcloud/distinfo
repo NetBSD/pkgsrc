@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2020/03/23 12:10:18 ryoon Exp $
+$NetBSD: distinfo,v 1.30 2020/04/04 07:25:45 ryoon Exp $
 
-SHA1 (nextcloud-18.0.2.tar.bz2) = e4822f365e78aec537f8f9e9ba18010d67ba45b5
-RMD160 (nextcloud-18.0.2.tar.bz2) = 4fd4ab64a0455baf0db373e4b296517955b91c38
-SHA512 (nextcloud-18.0.2.tar.bz2) = 36ea3a45edfee8b6c12921643bb6c340b125381414afe422b254c0a1d27b24fbb406bf28284b1902ce4120a7fc8cf416c01a5ba188a7346d32cb1861d1e15299
-Size (nextcloud-18.0.2.tar.bz2) = 86105689 bytes
+SHA1 (nextcloud-18.0.3.tar.bz2) = 07e900cecca18fd5f6470b001cdbe5ae099feadb
+RMD160 (nextcloud-18.0.3.tar.bz2) = 68e525b0302d0c80aa91d9db326273886e258038
+SHA512 (nextcloud-18.0.3.tar.bz2) = b1f433dee2e7eea800de8cd8131332530050b6194460a397081a134f63b236f65e33758c60cd8e97a43570d0b6a1baac9e0503535d85a9a34cd63abd50041292
+Size (nextcloud-18.0.3.tar.bz2) = 86636651 bytes
