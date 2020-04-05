@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3089 2020/04/03 23:06:34 nia Exp $
+# $NetBSD: Makefile,v 1.3090 2020/04/05 13:20:55 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -750,7 +750,6 @@ SUBDIR+=	liblnk
 SUBDIR+=	libltdl
 SUBDIR+=	libmaa
 SUBDIR+=	libmatchbox
-SUBDIR+=	libmcs
 SUBDIR+=	libmemcache
 SUBDIR+=	libmemcached
 SUBDIR+=	libmemmgr
