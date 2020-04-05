@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.5 2017/08/16 20:45:48 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2020/04/05 14:06:13 nia Exp $
 
-DISTNAME=	libxdg-basedir-1.1.1
-PKGREVISION=	1
+DISTNAME=	libxdg-basedir-1.2.0
 CATEGORIES=	x11
-#MASTER_SITES=	http://n.ethz.ch/student/nevillm/download/libxdg-basedir/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=devnev/}
+GITHUB_TAG=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://n.ethz.ch/student/nevillm/download/libxdg-basedir/
+HOMEPAGE=	https://github.com/devnev/libxdg-basedir
 COMMENT=	XDG Base Directory library
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS+=	autoconf automake autoreconf
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/libxdg-basedir.pc.in
@@ -32,5 +32,8 @@ SUBST_SED.testsdir=	-e 's|/etc/xdg|${PKG_SYSCONFDIR}/xdg|g'
 SUBST_SED.testsdir+=	-e 's|/usr/local/share|${PREFIX}/share|g'
 
 TEST_TARGET=	check
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi
 
 .include "../../mk/bsd.pkg.mk"
