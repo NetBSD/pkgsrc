@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2019/04/25 15:56:29 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/04/05 14:43:05 nia Exp $
 
-SHA1 (opengfx-0.5.5-all.zip) = 080385a1b42223aa04c649289d25ef61c41b8ec4
-RMD160 (opengfx-0.5.5-all.zip) = 7c5f7180f806d520593565e3a0243975d2317183
-SHA512 (opengfx-0.5.5-all.zip) = 12bca0d74ac6a30bd074d08064e7f3236700829996e8ebe36fd08ce8c180e19419d42ecc87dc8793749127022b51f5d6f781bbbb7b1952522feec1e8e2a0b6a2
-Size (opengfx-0.5.5-all.zip) = 3548368 bytes
+SHA1 (opengfx-0.6.0-all.zip) = 5266b491643958f8c6a746d360bef0babbd1f284
+RMD160 (opengfx-0.6.0-all.zip) = 6ef0cbd399b3a4e117a70e723c072ed694b7517f
+SHA512 (opengfx-0.6.0-all.zip) = 712812744b7d4dea4d704b179cc6d2078626f1582e73283ff8b512a1fbe46bdf4e293e8ed678965d280ad9fe3665d7cd291dc89b65212ee01451034f356f9d57
+Size (opengfx-0.6.0-all.zip) = 3551230 bytes
 SHA1 (openmsx-0.3.1-all.zip) = e9c4203923bb9c974ac67886bd00b7090658b961
 RMD160 (openmsx-0.3.1-all.zip) = 8eff246e89e44f63ca480e9acef94a1da5fa81d2
 SHA512 (openmsx-0.3.1-all.zip) = d17856fc70796eadb798b133af8a987ff9887c7f0d736e48bd27e9451eb122935271779b65e098e061c1316def455f56da6caa1d448e2bf111ecf8c189d3fbc8
