@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/29 05:14:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/05 06:14:07 wiz Exp $
 bin/pk-example-frobnicate
 bin/pkaction
 bin/pkcheck
@@ -47,8 +47,8 @@ man/man1/pkttyagent.1
 man/man8/polkit.8
 man/man8/polkitd.8
 share/dbus-1/system-services/org.freedesktop.PolicyKit1.service
-share/examples/polkit/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
 ${PLIST.pam}share/examples/pam.d/polkit-1
+share/examples/polkit/dbus-1/system.d/org.freedesktop.PolicyKit1.conf
 share/examples/polkit/polkit-1/rules.d/50-default.rules
 share/gettext/its/polkit.its
 share/gettext/its/polkit.loc
@@ -60,6 +60,7 @@ share/locale/de/LC_MESSAGES/polkit-1.mo
 share/locale/hr/LC_MESSAGES/polkit-1.mo
 share/locale/hu/LC_MESSAGES/polkit-1.mo
 share/locale/id/LC_MESSAGES/polkit-1.mo
+share/locale/it/LC_MESSAGES/polkit-1.mo
 share/locale/pl/LC_MESSAGES/polkit-1.mo
 share/locale/pt_BR/LC_MESSAGES/polkit-1.mo
 share/locale/sk/LC_MESSAGES/polkit-1.mo
