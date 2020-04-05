@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.32 2019/09/18 18:27:11 nia Exp $
+$NetBSD: distinfo,v 1.33 2020/04/05 14:41:21 nia Exp $
 
-SHA1 (openttd-1.9.3-source.tar.xz) = 43686d697e9c03d2aa35d8577c32dd098458b82f
-RMD160 (openttd-1.9.3-source.tar.xz) = 552fb989520c2dfc94e26f821c3795d2085df031
-SHA512 (openttd-1.9.3-source.tar.xz) = e2208f730cf26c2df9b1950e885e20471060217dd47f2483db3f1cc86b40658d71208f27caab38a9fa513cfddb33c791a0972336dfa902a6d110ef246d936a34
-Size (openttd-1.9.3-source.tar.xz) = 6659508 bytes
+SHA1 (openttd-1.10.0-source.tar.xz) = 47e02a70316aa88467ece280be8a44a3564edb84
+RMD160 (openttd-1.10.0-source.tar.xz) = ca06ad6aef68c13d6c4f11d0d08c5eb3d2222b38
+SHA512 (openttd-1.10.0-source.tar.xz) = f1727b81a059aa04bea1fb6a9a89ae0619942d6406a77f99e642a60ea9416daa215bbd0cbd183747c2df5f6dea81766b7e04493a52211e55522e8b2642db701a
+Size (openttd-1.10.0-source.tar.xz) = 6801228 bytes
 SHA1 (patch-config.lib) = 297caf33c50298a4efcbddbe3fea88e2b4f101c1
 SHA1 (patch-src_core_alloc__func.hpp) = 17fcfe3ce984cd453f6756f4f212c8fe8ab15ed1
 SHA1 (patch-src_core_endian__type.hpp) = 23564a89fd0e2ebe97043c7d16d5831831b65f40
