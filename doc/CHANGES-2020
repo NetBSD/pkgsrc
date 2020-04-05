@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2105 2020/04/05 13:33:36 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2106 2020/04/05 13:33:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2866,3 +2866,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/libodfgen to 0.1.7 [nia 2020-04-05]
 	Removed devel/libmcs [nia 2020-04-05]
 	Updated www/gitea to 1.11.4 [nia 2020-04-05]
+	Updated audio/musicpd to 0.21.22 [nia 2020-04-05]
