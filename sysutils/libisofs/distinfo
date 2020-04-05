@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/12/08 10:54:49 wen Exp $
+$NetBSD: distinfo,v 1.5 2020/04/05 12:35:35 nia Exp $
 
-SHA1 (libisofs-1.5.0.tar.gz) = c158b3e91f4c774d61cd46a31e4bcb8a9b2b65ee
-RMD160 (libisofs-1.5.0.tar.gz) = 8b6356a812aa04f6ab77a729af509696f7975d34
-SHA512 (libisofs-1.5.0.tar.gz) = 1d0bc488c18b95971b7aa89765d7b5772b64d17eadeae9ec52c0f880c6f68acee80ee39b603752a1f9fbe0f35029c27023d5a6710d149a0f568bb396c3dcede8
-Size (libisofs-1.5.0.tar.gz) = 834099 bytes
+SHA1 (libisofs-1.5.2.tar.gz) = 8c7b6e5ec968a2b890e35178150d9141328100b4
+RMD160 (libisofs-1.5.2.tar.gz) = b7dd9bd4d6da52d63fd17f10bf575748d80b4121
+SHA512 (libisofs-1.5.2.tar.gz) = 65048f2e33e96091ebce5b432ea607242050a3561c8eac18364bbe966d38c4f12ac1f4b38da5ea95ad4414f2b79b5fca99c1c0827e754bbbf6f7668d7e2c2bab
+Size (libisofs-1.5.2.tar.gz) = 857346 bytes
