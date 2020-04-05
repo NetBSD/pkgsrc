@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/12/30 22:41:14 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/05 16:05:40 bsiegert Exp $
 bin/caja-sendto
 include/caja-sendto/caja-sendto-plugin.h
 lib/caja-sendto/plugins/libnstburn.la
@@ -18,7 +18,6 @@ lib/pkgconfig/caja-sendto.pc
 man/man1/caja-sendto.1
 share/caja-extensions/caja-image-resize.ui
 share/caja-extensions/caja-image-rotate.ui
-share/caja-extensions/caja-sendto.ui
 share/caja-extensions/share-dialog.ui
 share/caja/extensions/libcaja-gksu.caja-extension
 share/caja/extensions/libcaja-image-converter.caja-extension
