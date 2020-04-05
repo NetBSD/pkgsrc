@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2095 2020/04/05 06:11:40 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2096 2020/04/05 06:14:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2856,3 +2856,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox-l10n to 74.0 [nia 2020-04-04]
 	Updated lang/nim to 1.2.0 [ryoon 2020-04-05]
 	Added lang/mozjs60 version 60.8.0 [wiz 2020-04-05]
+	Updated security/polkit to 0.116 [wiz 2020-04-05]
