@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.9 2019/12/30 22:51:10 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2020/04/05 16:05:42 bsiegert Exp $
 
-SHA1 (mate-desktop-1.22.2.tar.xz) = 54e7feadc273fdd5ab524b5db6e65bf666340faf
-RMD160 (mate-desktop-1.22.2.tar.xz) = b58acbc17f795880f8f40d57f38b0d0060752393
-SHA512 (mate-desktop-1.22.2.tar.xz) = d2e965f9e26e4fe25337a4ef69521239388f38cff25e978331a307591555d8a9ff22d6a19ef3c92cf336c472fbfb231969ef5ac60e3a4c5908a81ded1e5f0f46
-Size (mate-desktop-1.22.2.tar.xz) = 903312 bytes
-SHA1 (patch-libmate-desktop_mate-desktop-thumbnail.c) = 31320a4a6db879f633f684a8e91f57c6b5f9c608
-SHA1 (patch-schemas_org.mate.interface.gschema.xml.in) = dc8fcfcfd1dbb231c372d3c76960a1b04cc87593
+SHA1 (mate-desktop-1.24.0.tar.xz) = 2adce91cd287c8b6adca93184f48b700a9102551
+RMD160 (mate-desktop-1.24.0.tar.xz) = caad8d67fcd4c74126430113e0bde64e936986dc
+SHA512 (mate-desktop-1.24.0.tar.xz) = ca60325e7f6167efd21bdd32ae40c2f2bf5ae9bef85f0a43afec05d50567fb650fc0426d94c510b3a42c625dc4b2d31d7559befa50cfbb6d9878635558a52323
+Size (mate-desktop-1.24.0.tar.xz) = 1113912 bytes
+SHA1 (patch-schemas_org.mate.interface.gschema.xml.in) = bd3b82a9ffa0eb5a5b464a8bbfa8e8b06eb7b847

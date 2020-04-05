@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2018/05/14 13:17:15 youri Exp $
+# $NetBSD: options.mk,v 1.3 2020/04/05 16:05:44 bsiegert Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mate-settings-daemon
 PKG_SUPPORTED_OPTIONS=		nss polkit
@@ -30,8 +30,6 @@ CONFIGURE_ARGS+=	--disable-pulse
 CONFIGURE_ARGS+=	--enable-polkit
 PLIST.polkit=	yes
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/dbus-1/system.d
-CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/dbus-1/system.d/org.mate.SettingsDaemon.DateTimeMechanism.conf \
-		${PKG_SYSCONFDIR}/dbus-1/system.d/org.mate.SettingsDaemon.DateTimeMechanism.conf
 .else
 CONFIGURE_ARGS+=	--disable-polkit
 .endif

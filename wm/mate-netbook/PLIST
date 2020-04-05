@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/02/17 06:18:55 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/05 16:05:43 bsiegert Exp $
 bin/mate-maximus
 libexec/mate-window-picker-applet
 man/man1/mate-maximus.1
@@ -25,6 +25,7 @@ share/locale/cmn/LC_MESSAGES/mate-netbook.mo
 share/locale/crh/LC_MESSAGES/mate-netbook.mo
 share/locale/cs/LC_MESSAGES/mate-netbook.mo
 share/locale/csb/LC_MESSAGES/mate-netbook.mo
+share/locale/cv/LC_MESSAGES/mate-netbook.mo
 share/locale/cy/LC_MESSAGES/mate-netbook.mo
 share/locale/da/LC_MESSAGES/mate-netbook.mo
 share/locale/de/LC_MESSAGES/mate-netbook.mo
@@ -73,6 +74,7 @@ share/locale/hu/LC_MESSAGES/mate-netbook.mo
 share/locale/hy/LC_MESSAGES/mate-netbook.mo
 share/locale/ia/LC_MESSAGES/mate-netbook.mo
 share/locale/id/LC_MESSAGES/mate-netbook.mo
+share/locale/ie/LC_MESSAGES/mate-netbook.mo
 share/locale/ig/LC_MESSAGES/mate-netbook.mo
 share/locale/is/LC_MESSAGES/mate-netbook.mo
 share/locale/it/LC_MESSAGES/mate-netbook.mo
