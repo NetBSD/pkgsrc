@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2100 2020/04/05 12:47:27 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2101 2020/04/05 12:49:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2861,3 +2861,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated converters/libwps to 0.4.11 [nia 2020-04-05]
 	Updated sysutils/libisofs to 1.5.2 [nia 2020-04-05]
 	Updated sysutils/libburn to 1.5.2 [nia 2020-04-05]
+	Updated sysutils/libisoburn to 1.5.2 [nia 2020-04-05]
