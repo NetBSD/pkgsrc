@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.143 2020/03/31 16:59:58 wiz Exp $
+# $NetBSD: Makefile,v 1.144 2020/04/05 14:29:08 hauke Exp $
 
 DISTNAME=	gtk+-3.24.16
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk+/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -68,6 +69,7 @@ INSTALL_TEMPLATES+=	../../x11/gtk2/files/icon-cache.tmpl
 _BUILDING_GTK3=	yes
 .include "modules.mk"
 
+.include "../../converters/fribidi/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.atk+=	atk>=2.15.1
 .include "../../devel/atk/buildlink3.mk"
