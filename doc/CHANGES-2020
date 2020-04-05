@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2111 2020/04/05 16:11:15 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.2112 2020/04/05 22:37:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2909,3 +2909,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/mate-utils to 1.24.0 [bsiegert 2020-04-05]
 	Updated x11/mozo to 1.24.0 [bsiegert 2020-04-05]
 	Updated editors/pluma to 1.24.0 [bsiegert 2020-04-05]
+	Updated x11/xfce4-terminal to 0.8.9.2 [gutteridge 2020-04-05]
