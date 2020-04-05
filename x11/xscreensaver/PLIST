@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2020/04/03 20:49:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.51 2020/04/05 17:30:36 gutteridge Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -58,7 +58,6 @@ libexec/xscreensaver/config/distort.xml
 libexec/xscreensaver/config/drift.xml
 libexec/xscreensaver/config/epicycle.xml
 libexec/xscreensaver/config/eruption.xml
-libexec/xscreensaver/config/etruscanvenus.xml
 libexec/xscreensaver/config/euler2d.xml
 libexec/xscreensaver/config/fadeplot.xml
 libexec/xscreensaver/config/fiberlamp.xml
@@ -70,7 +69,6 @@ libexec/xscreensaver/config/fluidballs.xml
 libexec/xscreensaver/config/fontglide.xml
 libexec/xscreensaver/config/fuzzyflakes.xml
 libexec/xscreensaver/config/galaxy.xml
-libexec/xscreensaver/config/gibson.xml
 libexec/xscreensaver/config/glitchpeg.xml
 libexec/xscreensaver/config/goop.xml
 libexec/xscreensaver/config/grav.xml
@@ -161,7 +159,6 @@ libexec/xscreensaver/distort
 libexec/xscreensaver/drift
 libexec/xscreensaver/epicycle
 libexec/xscreensaver/eruption
-libexec/xscreensaver/etruscanvenus
 libexec/xscreensaver/euler2d
 libexec/xscreensaver/fadeplot
 libexec/xscreensaver/fiberlamp
@@ -173,7 +170,6 @@ libexec/xscreensaver/fluidballs
 libexec/xscreensaver/fontglide
 libexec/xscreensaver/fuzzyflakes
 libexec/xscreensaver/galaxy
-libexec/xscreensaver/gibson
 libexec/xscreensaver/glitchpeg
 libexec/xscreensaver/goop
 libexec/xscreensaver/grav
@@ -291,7 +287,6 @@ man/man6/distort.6
 man/man6/drift.6
 man/man6/epicycle.6
 man/man6/eruption.6
-man/man6/etruscanvenus.6
 man/man6/euler2d.6
 man/man6/fadeplot.6
 man/man6/fiberlamp.6
@@ -303,7 +298,6 @@ man/man6/fluidballs.6
 man/man6/fontglide.6
 man/man6/fuzzyflakes.6
 man/man6/galaxy.6
-man/man6/gibson.6
 man/man6/glitchpeg.6
 man/man6/goop.6
 man/man6/grav.6
