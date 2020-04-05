@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2020/03/30 09:22:21 nia Exp $
+$NetBSD: distinfo,v 1.4 2020/04/05 13:36:27 nia Exp $
 
-SHA1 (janet-1.8.0.tar.gz) = 8efd14e97941437a0360aab555b0f53224988c17
-RMD160 (janet-1.8.0.tar.gz) = 4c60ecb0517df4bca83a664fba9b5d9758d50d84
-SHA512 (janet-1.8.0.tar.gz) = 3fb52fbe386dfcd24515a3b1ef1aa82ce2afae16bb723264e2f7721d643d60376540207789017740a7ba2a92220dcb2c030fc976ec973b150889123faf97af0c
-Size (janet-1.8.0.tar.gz) = 977758 bytes
+SHA1 (janet-1.8.1.tar.gz) = 7d1ab48861b644559dffe65ba1b4339d4e306000
+RMD160 (janet-1.8.1.tar.gz) = c9ecd03f59c37cc42a27f32751547683cd45d0a6
+SHA512 (janet-1.8.1.tar.gz) = e2296b16ad7df35e0f6ff0f56b9cd5071e887288df195ac0a14a73284a48f010cc26a413ea836aa3faa4385e25f7f313b183f0fbb8e6eebdc3975b69c62e4ebf
+Size (janet-1.8.1.tar.gz) = 977929 bytes
