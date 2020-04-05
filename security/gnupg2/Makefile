@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2020/03/21 07:24:30 adam Exp $
+# $NetBSD: Makefile,v 1.111 2020/04/05 23:36:02 tnn Exp $
 
 DISTNAME=	gnupg-2.2.20
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -33,6 +33,7 @@ CONFIGURE_ARGS.SunOS+=	ac_cv_func_getaddrinfo=yes
 
 TEST_TARGET=		check
 
+LDFLAGS.NetBSD+=	-lintl
 LDFLAGS.Darwin+=	-lintl -lresolv
 LDFLAGS.FreeBSD+=	-lintl
 LDFLAGS.SunOS+=		-lintl -lsocket
