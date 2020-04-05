@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2019/12/30 22:41:14 gutteridge Exp $
+$NetBSD: distinfo,v 1.7 2020/04/05 16:05:40 bsiegert Exp $
 
-SHA1 (caja-extensions-1.22.1.tar.xz) = 71078befdc4cce8659f47cd71e6966c5baa4fa84
-RMD160 (caja-extensions-1.22.1.tar.xz) = 3e6af00b612faf45744e2b26a38b2a114d93b8c5
-SHA512 (caja-extensions-1.22.1.tar.xz) = 4c0fb47a251d4118c83a985732d8a549355907519b746a68eb8843c84328d868eec1535b68484c46e3d0bf4b42f0e0340fe178714f50b5f7cc8434c0e1883906
-Size (caja-extensions-1.22.1.tar.xz) = 439516 bytes
+SHA1 (caja-extensions-1.24.0.tar.xz) = 5e764db7b55f9af985e4b097e9d9a5af0bb85189
+RMD160 (caja-extensions-1.24.0.tar.xz) = fb0cd6f8f4d39896dd2a6f48285af0fabf479642
+SHA512 (caja-extensions-1.24.0.tar.xz) = f05a7d83f16aebacb04f75b76ca86e44c1a01d9ad6c2aefeac19398c4d9da8385e6852fa0118c763aee630e7eb6c7c81d77e0c9452200aee9cf4f058487c4dbf
+Size (caja-extensions-1.24.0.tar.xz) = 548828 bytes

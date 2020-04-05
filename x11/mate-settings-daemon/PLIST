@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/12/30 22:29:45 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/04/05 16:05:44 bsiegert Exp $
 include/mate-settings-daemon/mate-settings-client.h
 include/mate-settings-daemon/mate-settings-plugin.h
 lib/mate-settings-daemon/a11y-keyboard.mate-settings-plugin
@@ -45,7 +45,7 @@ man/man1/msd-datetime-mechanism.1
 man/man1/msd-locate-pointer.1
 share/dbus-1/services/org.mate.SettingsDaemon.service
 ${PLIST.polkit}share/dbus-1/system-services/org.mate.SettingsDaemon.DateTimeMechanism.service
-${PLIST.polkit}share/examples/mate-settings-daemon/dbus-1/system.d/org.mate.SettingsDaemon.DateTimeMechanism.conf
+${PLIST.polkit}share/dbus-1/system.d/org.mate.SettingsDaemon.DateTimeMechanism.conf
 share/examples/mate-settings-daemon/xdg/autostart/mate-settings-daemon.desktop
 share/examples/mate-settings-daemon/xrdb/Editres.ad
 share/examples/mate-settings-daemon/xrdb/Emacs.ad
@@ -74,12 +74,17 @@ share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.xrdb.gschema.xml
 share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.xsettings.gschema.xml
 share/glib-2.0/schemas/org.mate.applications-at.gschema.xml
 share/glib-2.0/schemas/org.mate.font-rendering.gschema.xml
+share/glib-2.0/schemas/org.mate.peripherals-keyboard.gschema.xml
+share/glib-2.0/schemas/org.mate.peripherals-mouse.gschema.xml
 share/glib-2.0/schemas/org.mate.peripherals-smartcard.gschema.xml
 share/glib-2.0/schemas/org.mate.peripherals-touchpad.gschema.xml
 share/icons/hicolor/16x16/apps/msd-xrandr.png
 share/icons/hicolor/22x22/apps/msd-xrandr.png
 share/icons/hicolor/24x24/apps/msd-xrandr.png
 share/icons/hicolor/32x32/apps/msd-xrandr.png
+share/icons/hicolor/48x48/apps/msd-xrandr.png
+share/icons/hicolor/64x64/apps/msd-xrandr.png
+share/icons/hicolor/96x96/apps/msd-xrandr.png
 share/icons/hicolor/scalable/apps/msd-xrandr.svg
 share/locale/af/LC_MESSAGES/mate-settings-daemon.mo
 share/locale/am/LC_MESSAGES/mate-settings-daemon.mo

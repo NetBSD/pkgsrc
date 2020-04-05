@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2019/05/08 02:08:50 gutteridge Exp $
+$NetBSD: distinfo,v 1.7 2020/04/05 16:05:44 bsiegert Exp $
 
-SHA1 (mate-sensors-applet-1.22.1.tar.xz) = fe7f99584264c0ae62793996794c1a1de8eb4cc1
-RMD160 (mate-sensors-applet-1.22.1.tar.xz) = 582fc1a050a03977a1900ade6ee1b9622ecdc8ab
-SHA512 (mate-sensors-applet-1.22.1.tar.xz) = 4b6e608c92f03051044863f770b295d1526b19a9668513b566e81adeb28bc8524d8f458d114d2b44acf00f20c2f0a8d86b1ca7254fa165fde3b867c75a6b83e6
-Size (mate-sensors-applet-1.22.1.tar.xz) = 496776 bytes
+SHA1 (mate-sensors-applet-1.24.0.tar.xz) = 909a462908abb0b0943be2046d935396a59d65a6
+RMD160 (mate-sensors-applet-1.24.0.tar.xz) = 317bcc8a405524035d4cbbec4c9d937ea86317d5
+SHA512 (mate-sensors-applet-1.24.0.tar.xz) = 039834b7cfe641e670e372e311da3d737254ab3cf13b27e71c6555888ac1165766fe2d940bcea44a5ceed5f0ddcd3390d01331d927121137c21a6647c68875c2
+Size (mate-sensors-applet-1.24.0.tar.xz) = 580536 bytes
 SHA1 (patch-plugins_sonypi_sonypi-plugin.c) = 903f3c27e211518934fad8cf1493fb79bd198ae1
 SHA1 (patch-sensors-applet_Makefile.in) = 260e64160369d2e373bfd8219a9bf814966c33be

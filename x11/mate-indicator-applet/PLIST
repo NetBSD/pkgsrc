@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/12/30 23:44:16 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/05 16:05:43 bsiegert Exp $
 libexec/mate-indicator-applet
 libexec/mate-indicator-applet-appmenu
 libexec/mate-indicator-applet-complete
@@ -55,12 +55,10 @@ share/locale/eu/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/fa/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/fi/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/fr/LC_MESSAGES/mate-indicator-applet.mo
-share/locale/fr_CA/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/frp/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/fur/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/fy/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ga/LC_MESSAGES/mate-indicator-applet.mo
-share/locale/gd/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/gl/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/gu/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ha/LC_MESSAGES/mate-indicator-applet.mo
@@ -78,7 +76,6 @@ share/locale/it/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ja/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/jv/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/ka/LC_MESSAGES/mate-indicator-applet.mo
-share/locale/kab/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/kk/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/km/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/kn/LC_MESSAGES/mate-indicator-applet.mo
@@ -146,6 +143,6 @@ share/locale/zh_CN/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/zh_HK/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/zh_TW/LC_MESSAGES/mate-indicator-applet.mo
 share/locale/zu/LC_MESSAGES/mate-indicator-applet.mo
-share/mate-panel/applets/org.ayatana.panel.IndicatorApplet.mate-panel-applet
-share/mate-panel/applets/org.ayatana.panel.IndicatorAppletAppmenu.mate-panel-applet
-share/mate-panel/applets/org.ayatana.panel.IndicatorAppletComplete.mate-panel-applet
+share/mate-panel/applets/org.mate.applets.Indicator.mate-panel-applet
+share/mate-panel/applets/org.mate.applets.IndicatorAppmenu.mate-panel-applet
+share/mate-panel/applets/org.mate.applets.IndicatorComplete.mate-panel-applet

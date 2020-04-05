@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2019/12/30 22:54:52 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2020/04/05 16:05:45 bsiegert Exp $
 
-SHA1 (mate-utils-1.22.2.tar.xz) = a75469df0990e3211d6133aa82c28bc7de86ccff
-RMD160 (mate-utils-1.22.2.tar.xz) = cba88213417eb3b4e6f19877dafee7a39c4134d5
-SHA512 (mate-utils-1.22.2.tar.xz) = bf33019ebd1dc4ff6010ba0824981334b7065a62dfc7a73170487df5f165ad20831a900ef4e4e0641ca130aa618f82aa27606f0a48c2cb9907ea7ef118f02a60
-Size (mate-utils-1.22.2.tar.xz) = 7306448 bytes
+SHA1 (mate-utils-1.24.0.tar.xz) = 9ee9fad257c50e9ae0253832e62d8a141c0258d1
+RMD160 (mate-utils-1.24.0.tar.xz) = 01e23e5ff56e520978b53bf3aec47e5d9706ac1d
+SHA512 (mate-utils-1.24.0.tar.xz) = d8945c85936a55d22f3ed94c9858ba84cadf552a63cdd2d9eec9120111ad71526ac88772f8e4b7a6a460b691574534e52706fba35a0395b1d894b27eece9e92c
+Size (mate-utils-1.24.0.tar.xz) = 7930068 bytes
 SHA1 (patch-logview_src_logview-utils.c) = 218670ddcc013c31d75e7654acf138e4153c0be9

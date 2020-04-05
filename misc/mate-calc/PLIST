@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/12/30 22:43:28 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/05 16:05:41 bsiegert Exp $
 bin/mate-calc
 bin/mate-calc-cmd
 bin/mate-calculator
@@ -3300,9 +3300,4 @@ share/locale/zh_CN/LC_MESSAGES/mate-calc.mo
 share/locale/zh_HK/LC_MESSAGES/mate-calc.mo
 share/locale/zh_TW/LC_MESSAGES/mate-calc.mo
 share/locale/zu/LC_MESSAGES/mate-calc.mo
-share/mate-calc/buttons-advanced.ui
-share/mate-calc/buttons-basic.ui
-share/mate-calc/buttons-financial.ui
-share/mate-calc/buttons-programming.ui
-share/mate-calc/preferences.ui
 share/metainfo/mate-calc.appdata.xml

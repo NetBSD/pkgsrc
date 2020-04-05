@@ -1,9 +1,9 @@
-$NetBSD: patch-schemas_org.mate.interface.gschema.xml.in,v 1.1 2018/06/11 23:43:40 youri Exp $
+$NetBSD: patch-schemas_org.mate.interface.gschema.xml.in,v 1.2 2020/04/05 16:05:42 bsiegert Exp $
 
 Use the faenza icon theme by default.
 
---- schemas/org.mate.interface.gschema.xml.in.orig	2018-02-06 20:13:24.000000000 +0000
-+++ schemas/org.mate.interface.gschema.xml.in
+--- schemas/org.mate.interface.gschema.xml.orig	2018-02-06 20:13:24.000000000 +0000
++++ schemas/org.mate.interface.gschema.xml
 @@ -56,7 +56,7 @@
        <description>Length of the cursor blink cycle, in milliseconds.</description>
      </key>

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2020/03/10 22:09:11 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/04/05 16:05:42 bsiegert Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-control-center-${VERSION:R}.2
+DISTNAME=	mate-control-center-${VERSION:R}.0
 CATEGORIES=	sysutils
 
 COMMENT=	MATE Control Center
@@ -36,6 +35,7 @@ CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/xdg/menus/matecc.menu \
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+.include "../../security/polkit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
