@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2018/02/07 17:03:28 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2020/04/05 13:13:02 nia Exp $
 
-SHA1 (libodfgen-0.1.6.tar.xz) = 49da7cc0dc4adfe0452e951d2dea3c225358fd63
-RMD160 (libodfgen-0.1.6.tar.xz) = 9c3fcb5aecb0ad54bab246fbf16bf5d3ac562bb6
-SHA512 (libodfgen-0.1.6.tar.xz) = bc5e6908ee14c576adececdf8a94ae01f2ed487e6f2490e41aab787e1e8f72a3fb2a786f51ceeefa327710af215741ce13bcf4bb3d99d2aaf403f568c5db75a5
-Size (libodfgen-0.1.6.tar.xz) = 359988 bytes
-SHA1 (patch-src_PageSpan.cxx) = 8397b3a3bce846d2ab5544d079f3cdf8bb6430f8
+SHA1 (libodfgen-0.1.7.tar.xz) = 42628faa433c57497566438f9048ce44e820b945
+RMD160 (libodfgen-0.1.7.tar.xz) = b65e5504731bd0d24e411eb44c6371658c9f42f8
+SHA512 (libodfgen-0.1.7.tar.xz) = eaf5c6646a9cacf54cb0416b08526f35d18d0618f3f64cf14f4b24537b0285da2786d2f6d6e2c204c8248f900d37287b2c5af79720b0d49452f67b14c86ea36e
+Size (libodfgen-0.1.7.tar.xz) = 384760 bytes
+SHA1 (patch-src_PageSpan.cxx) = b61c6af1885e3d863671708d1562f37724fbda94
