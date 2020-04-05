@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2114 2020/04/05 22:59:15 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2115 2020/04/05 23:01:48 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2912,3 +2912,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xfce4-terminal to 0.8.9.2 [gutteridge 2020-04-05]
 	Updated x11/xfce4-session to 4.14.2 [gutteridge 2020-04-05]
 	Updated x11/xfce4-garcon to 0.7.0 [gutteridge 2020-04-05]
+	Updated sysutils/xfce4-thunar to 1.8.14 [gutteridge 2020-04-05]
