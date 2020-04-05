@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2020/03/20 11:58:27 nia Exp $
+# $NetBSD: Makefile,v 1.28 2020/04/05 13:13:02 nia Exp $
 
-DISTNAME=	libodfgen-0.1.6
-PKGREVISION=	11
+DISTNAME=	libodfgen-0.1.7
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpd/libodfgen/libodfgen-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,23 +13,15 @@ LICENSE=	mpl-2.0 OR gnu-lgpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
+# C++11
+GCC_REQD+=	4.7
+
+CONFIGURE_ARGS+=	--disable-werror
 CONFIGURE_ARGS+=	--without-docs
 
 PKGCONFIG_OVERRIDE+=	libodfgen.pc.in
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CONFIGURE_ARGS+=	--with-sharedptr=c++11
-.else
-CONFIGURE_ARGS+=	--with-sharedptr=tr1
-.endif
-
-# Avoid erroring out due to multiple -Werror=parentheses with gcc8
-.if !empty(CC_VERSION:Mgcc-[89]*)
-CONFIGURE_ARGS+=	--disable-werror
-.endif
 
 .include "../../converters/libetonyek/buildlink3.mk"
 .include "../../converters/librevenge/buildlink3.mk"
