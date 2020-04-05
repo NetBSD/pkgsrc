@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19789 2020/04/05 14:06:23 nia Exp $
+$NetBSD: TODO,v 1.19790 2020/04/05 14:41:31 nia Exp $
 
 Suggested new packages
 ======================
@@ -913,7 +913,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openslp-2.0.0
 	o opensmtpd-6.0.0
 	o openssh-8.2
-	o openttd-1.10
 	o openvas-libraries-8.0.8
 	o opera-26
 	o oroborus-2.0.18
