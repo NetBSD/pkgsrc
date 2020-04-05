@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.86 2020/03/26 14:48:36 nia Exp $
+# $NetBSD: Makefile,v 1.87 2020/04/05 14:41:21 nia Exp $
 
-DISTNAME=	openttd-1.9.3-source
+DISTNAME=	openttd-1.10.0-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	https://proxy.binaries.openttd.org/openttd-releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -22,8 +21,6 @@ BUILD_TARGET=	bundle
 # C++11
 GCC_REQD+=	4.8
 
-BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11 # alloca
-
 CONFIGURE_ARGS+=	--os=UNIX
 CONFIGURE_ARGS+=	--prefix-dir=${PREFIX}
 CONFIGURE_ARGS+=	--binary-dir=bin
@@ -36,6 +33,8 @@ CONFIGURE_ARGS+=	--menu-dir=share/applications
 CONFIGURE_ARGS+=	--personal-dir=.openttd
 CONFIGURE_ARGS+=	--shared-dir=${VARBASE}/games/openttd
 
+CONFIGURE_ARGS+=	--without-allegro
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
@@ -44,9 +43,15 @@ CONFIGURE_ARGS+=	--with-cocoa
 CONFIGURE_ARGS+=	--without-application-bundle
 CONFIGURE_ARGS+=	--without-osx-sysroot
 .else
-.include "../../devel/SDL/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sdl=sdl2
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../x11/libxdg-basedir/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libxdg-basedir+=	libxdg-basedir>=1.2.0
 .endif
+
+MAKE_FLAGS.NetBSD+=	MD5SUM="/usr/bin/cksum -n -a md5"
+
+BUILDLINK_TRANSFORM+=	opt:-std=c++11:-std=gnu++11 # alloca
 
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
