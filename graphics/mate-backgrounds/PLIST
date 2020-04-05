@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/02/17 06:05:58 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/05 16:05:42 bsiegert Exp $
 share/backgrounds/mate/abstract/Arc-Colors-Transparent-Wallpaper.png
 share/backgrounds/mate/abstract/Flow.png
 share/backgrounds/mate/abstract/Gulp.png
@@ -74,6 +74,7 @@ share/locale/hr/LC_MESSAGES/mate-backgrounds.mo
 share/locale/hu/LC_MESSAGES/mate-backgrounds.mo
 share/locale/hy/LC_MESSAGES/mate-backgrounds.mo
 share/locale/id/LC_MESSAGES/mate-backgrounds.mo
+share/locale/ie/LC_MESSAGES/mate-backgrounds.mo
 share/locale/is/LC_MESSAGES/mate-backgrounds.mo
 share/locale/it/LC_MESSAGES/mate-backgrounds.mo
 share/locale/ja/LC_MESSAGES/mate-backgrounds.mo

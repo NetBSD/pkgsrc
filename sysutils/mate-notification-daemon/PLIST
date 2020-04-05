@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/12/30 23:35:39 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/05 16:05:43 bsiegert Exp $
 bin/mate-notification-properties
 lib/mate-notification-daemon/engines/libcoco.la
 lib/mate-notification-daemon/engines/libnodoka.la
@@ -122,4 +122,3 @@ share/locale/yo/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/zh_CN/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/zh_HK/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/zh_TW/LC_MESSAGES/mate-notification-daemon.mo
-share/mate-notification-daemon/mate-notification-properties.ui

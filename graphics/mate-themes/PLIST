@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/07/09 02:37:27 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/05 16:05:45 bsiegert Exp $
 share/icons/ContrastHigh/16x16/actions/action-unavailable.png
 share/icons/ContrastHigh/16x16/actions/bookmark-add.png
 share/icons/ContrastHigh/16x16/actions/bookmark-new.png
@@ -3522,7 +3522,6 @@ share/icons/mate/cursors/watch
 share/icons/mate/cursors/xterm
 share/icons/mate/cursors/zoom-in
 share/icons/mate/cursors/zoom-out
-share/themes/BlackMATE-border/index.theme
 share/themes/BlackMATE-border/metacity-1/bar.png
 share/themes/BlackMATE-border/metacity-1/bar_unfocused.png
 share/themes/BlackMATE-border/metacity-1/button-close-focus.png
@@ -3722,7 +3721,6 @@ share/themes/BlackMATE/unity/unmaximize_focused_pressed.png
 share/themes/BlackMATE/unity/unmaximize_unfocused.png
 share/themes/BlackMATE/unity/unmaximize_unfocused_prelight.png
 share/themes/BlackMATE/unity/unmaximize_unfocused_pressed.png
-share/themes/Blue-Submarine-border/index.theme
 share/themes/Blue-Submarine-border/metacity-1/icon_close.png
 share/themes/Blue-Submarine-border/metacity-1/icon_close_u.png
 share/themes/Blue-Submarine-border/metacity-1/icon_maximize.png
@@ -3894,7 +3892,6 @@ share/themes/Blue-Submarine/metacity-1/metacity-theme-1.xml
 share/themes/Blue-Submarine/metacity-1/stripes.png
 share/themes/BlueMenta-border/COPYING
 share/themes/BlueMenta-border/README
-share/themes/BlueMenta-border/index.theme
 share/themes/BlueMenta-border/metacity-1/close_focused_normal.svg
 share/themes/BlueMenta-border/metacity-1/close_focused_prelight.svg
 share/themes/BlueMenta-border/metacity-1/close_focused_pressed.svg
@@ -4220,7 +4217,6 @@ share/themes/BlueMenta/xfwm4/top-right-active-shaded.xpm
 share/themes/BlueMenta/xfwm4/top-right-active.xpm
 share/themes/BlueMenta/xfwm4/top-right-inactive.xpm
 share/themes/ContrastHigh/index.theme
-share/themes/Green-Submarine-border/index.theme
 share/themes/Green-Submarine-border/metacity-1/icon_close.png
 share/themes/Green-Submarine-border/metacity-1/icon_close_u.png
 share/themes/Green-Submarine-border/metacity-1/icon_maximize.png
@@ -4391,7 +4387,6 @@ share/themes/Green-Submarine/metacity-1/icon_restore_u.png
 share/themes/Green-Submarine/metacity-1/metacity-theme-1.xml
 share/themes/Green-Submarine/metacity-1/stripes.png
 share/themes/GreenLaguna-border/COPYING
-share/themes/GreenLaguna-border/index.theme
 share/themes/GreenLaguna-border/metacity-1/button-close-focus.png
 share/themes/GreenLaguna-border/metacity-1/button-max-focus.png
 share/themes/GreenLaguna-border/metacity-1/button-max-focus1.png
@@ -4669,7 +4664,6 @@ share/themes/HighContrastInverse/pixmaps/volume-mute.png
 share/themes/HighContrastInverse/pixmaps/volume-zero.png
 share/themes/Menta-border/COPYING
 share/themes/Menta-border/README
-share/themes/Menta-border/index.theme
 share/themes/Menta-border/metacity-1/close_focused_normal.svg
 share/themes/Menta-border/metacity-1/close_focused_prelight.svg
 share/themes/Menta-border/metacity-1/close_focused_pressed.svg
