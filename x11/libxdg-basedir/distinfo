@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 03:28:47 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/04/05 14:06:13 nia Exp $
 
-SHA1 (libxdg-basedir-1.1.1.tar.gz) = 133b2b66a6ea43560f4ac41d1235d3282e31da84
-RMD160 (libxdg-basedir-1.1.1.tar.gz) = 5024e1fe92d6fd4a093e4c5ff2c3c0520b27c91e
-SHA512 (libxdg-basedir-1.1.1.tar.gz) = ece0c75ed1dee652ddc40e4262662dd89ff3365c015752b053cf89b42c4c4898d427128ac7883d80e595c6278c5a2c372ae83be80e503142de21c112872d6cc8
-Size (libxdg-basedir-1.1.1.tar.gz) = 316118 bytes
+SHA1 (libxdg-basedir-1.2.0.tar.gz) = e671b01b17c8cf785d95dd3aefa93e7cf31e56a5
+RMD160 (libxdg-basedir-1.2.0.tar.gz) = fbbd0955ec47ae72891b021f26e30a1fe02d9316
+SHA512 (libxdg-basedir-1.2.0.tar.gz) = 8584405d45e0b57e570666b6eab6d99d70411d00f88965826c9ed0292372385668f190157a10ff536f3a5a59fd0031b332ecbb8a38ac64eda1b04a0603997406
+Size (libxdg-basedir-1.2.0.tar.gz) = 30159 bytes
