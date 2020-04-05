@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2020/03/17 13:08:38 nia Exp $
+$NetBSD: distinfo,v 1.19 2020/04/05 13:33:26 nia Exp $
 
-SHA1 (gitea-1.11.3.tar.gz) = 43438b3e52423e0578b2f224943869d301ae190e
-RMD160 (gitea-1.11.3.tar.gz) = 7d5ffc69999c56d968b48c47a188fbf5cb95e78c
-SHA512 (gitea-1.11.3.tar.gz) = 41ca69de38158cfebcd9c54a74c9a9068c34457c77a61e252f5287d88f2744c08d1948d95abaa575332483d069794a0e39ca0b181462e5bf47eec572feb47b9e
-Size (gitea-1.11.3.tar.gz) = 28743267 bytes
+SHA1 (gitea-1.11.4.tar.gz) = 5da002dcb72b6da46a13b10963341a81fe9d3009
+RMD160 (gitea-1.11.4.tar.gz) = da1d7692caa1a382a59ebc6f684604f22e741018
+SHA512 (gitea-1.11.4.tar.gz) = 5b7d07fd02f3acf900f1a3d2d9bb99a94487eaaf148d11a9746b309ee97ffc2d208fd47cc7e121ac0b2a6e97c919ea0232898f7f6851248a8407c706edbc904a
+Size (gitea-1.11.4.tar.gz) = 28240336 bytes
