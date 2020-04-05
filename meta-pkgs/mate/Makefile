@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/04/05 16:05:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.31 2020/04/05 17:48:18 gutteridge Exp $
 
 PKGNAME=	mate-${VERSION}
 CATEGORIES=	meta-pkgs
@@ -41,7 +41,7 @@ DEPENDS+=	mate-session-manager>=${VERSION}:../../x11/mate-session-manager
 DEPENDS+=	mate-settings-daemon>=${VERSION:R}.1:../../x11/mate-settings-daemon
 #DEPENDS+=	mate-system-monitor>=${VERSION}:../../sysutils/mate-system-monitor
 DEPENDS+=	mate-terminal>=${VERSION:R}.1:../../x11/mate-terminal
-DEPENDS+=	mate-themes>=3.22.20:../../graphics/mate-themes
+DEPENDS+=	mate-themes>=3.22.21:../../graphics/mate-themes
 #DEPENDS+=	mate-user-share>=${VERSION:R}.1:../../net/mate-user-share
 DEPENDS+=	mate-utils>=${VERSION}:../../misc/mate-utils
 DEPENDS+=	mozo>=${VERSION}:../../x11/mozo
