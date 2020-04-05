@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2113 2020/04/05 22:41:53 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2114 2020/04/05 22:59:15 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2911,3 +2911,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/pluma to 1.24.0 [bsiegert 2020-04-05]
 	Updated x11/xfce4-terminal to 0.8.9.2 [gutteridge 2020-04-05]
 	Updated x11/xfce4-session to 4.14.2 [gutteridge 2020-04-05]
+	Updated x11/xfce4-garcon to 0.7.0 [gutteridge 2020-04-05]
