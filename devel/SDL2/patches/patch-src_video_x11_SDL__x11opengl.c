@@ -1,7 +1,9 @@
-$NetBSD: patch-src_video_x11_SDL__x11opengl.c,v 1.3 2020/03/17 12:49:29 nia Exp $
+$NetBSD: patch-src_video_x11_SDL__x11opengl.c,v 1.4 2020/04/05 16:24:28 nia Exp $
 
-NetBSD's libGL version differs between xsrc and pkgsc.  All hail the
+NetBSD's libGL version differs between xsrc and pkgsrc.  All hail the
 mighty symlink.
+
+https://bugzilla.libsdl.org/show_bug.cgi?id=5075
 
 --- src/video/x11/SDL_x11opengl.c.orig	2020-03-11 01:36:18.000000000 +0000
 +++ src/video/x11/SDL_x11opengl.c
