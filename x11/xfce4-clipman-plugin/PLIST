@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2020/03/10 04:20:04 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/04/05 23:11:18 gutteridge Exp $
 bin/xfce4-clipman
+bin/xfce4-clipman-history
 bin/xfce4-clipman-settings
 bin/xfce4-popup-clipman
 bin/xfce4-popup-clipman-actions
 lib/xfce4/panel/plugins/libclipman.la
 share/appdata/xfce4-clipman.appdata.xml
 share/applications/xfce4-clipman.desktop
+share/applications/xfce4-clipman-settings.desktop
 share/examples/xfce4/autostart/xfce4-clipman-plugin-autostart.desktop
 share/examples/xfce4/panel/xfce4-clipman-actions.xml
 share/icons/hicolor/16x16/apps/clipman-symbolic.svg
