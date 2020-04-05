@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/12/30 22:57:31 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/04/05 16:05:44 bsiegert Exp $
 bin/mate-screensaver
 bin/mate-screensaver-command
 bin/mate-screensaver-preferences
@@ -140,6 +140,5 @@ share/locale/zh_TW/LC_MESSAGES/mate-screensaver.mo
 share/locale/zu/LC_MESSAGES/mate-screensaver.mo
 share/mate-background-properties/cosmos.xml
 share/mate-screensaver/lock-dialog-default.ui
-share/mate-screensaver/mate-screensaver-preferences.ui
 share/pixmaps/mate-logo-white.svg
 @pkgdir share/examples/pam.d/pam.d

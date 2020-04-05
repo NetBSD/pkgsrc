@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/16 18:08:25 youri Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/05 16:05:43 bsiegert Exp $
 libexec/polkit-mate-authentication-agent-1
 share/examples/mate-polkit/xdg/autostart/polkit-mate-authentication-agent-1.desktop
 share/locale/af/LC_MESSAGES/mate-polkit.mo
@@ -48,6 +48,7 @@ share/locale/hr/LC_MESSAGES/mate-polkit.mo
 share/locale/hu/LC_MESSAGES/mate-polkit.mo
 share/locale/hy/LC_MESSAGES/mate-polkit.mo
 share/locale/id/LC_MESSAGES/mate-polkit.mo
+share/locale/ie/LC_MESSAGES/mate-polkit.mo
 share/locale/is/LC_MESSAGES/mate-polkit.mo
 share/locale/it/LC_MESSAGES/mate-polkit.mo
 share/locale/ja/LC_MESSAGES/mate-polkit.mo

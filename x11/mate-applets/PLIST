@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/12/30 22:36:19 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.12 2020/04/05 16:05:42 bsiegert Exp $
 ${PLIST.cpufreq}bin/mate-cpufreq-selector
 libexec/mate-applets/accessx-status-applet
 ${PLIST.batt}libexec/mate-applets/battstat-applet
@@ -33,7 +33,7 @@ share/dbus-1/services/org.mate.panel.applet.StickyNotesAppletFactory.service
 share/dbus-1/services/org.mate.panel.applet.TimerAppletFactory.service
 share/dbus-1/services/org.mate.panel.applet.TrashAppletFactory.service
 ${PLIST.cpufreq}share/dbus-1/system-services/org.mate.CPUFreqSelector.service
-${PLIST.cpufreq}share/examples/mate-applets/dbus-1/system.d/org.mate.CPUFreqSelector.conf
+${PLIST.cpufreq}share/dbus-1/system.d/org.mate.CPUFreqSelector.conf
 ${PLIST.batt}share/examples/mate-applets/sound/events/mate-battstat_applet.soundlist
 share/glib-2.0/schemas/org.mate.drivemount.gschema.xml
 ${PLIST.batt}share/glib-2.0/schemas/org.mate.panel.applet.battstat.gschema.xml
