@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:42 agc Exp $
-
-SHA1 (libmcs-0.7.1.tgz) = 498a8ace5bc171cb8999ecf8c77cab59c6ded4bb
-RMD160 (libmcs-0.7.1.tgz) = 4deb72bd417394a484a689bb4dc58bc1a6a563ba
-SHA512 (libmcs-0.7.1.tgz) = e94c1068011e1b49771c5eb04bcd749f927d72bdaa4dc8b83e5a5eef271d4420b8290b1a999f88284b4fe56ba1a1cb2a6c2fcda27e237000eb91cccdea203d8b
-Size (libmcs-0.7.1.tgz) = 107684 bytes
-SHA1 (patch-aa) = b1653f1c06caffcd19cf985427695ea857ce06e9
