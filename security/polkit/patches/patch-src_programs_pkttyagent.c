@@ -1,8 +1,8 @@
-$NetBSD: patch-src_programs_pkttyagent.c,v 1.2 2018/04/29 05:14:37 wiz Exp $
+$NetBSD: patch-src_programs_pkttyagent.c,v 1.3 2020/04/05 06:14:08 wiz Exp $
 
 Avoid %m usage in printf.
 
---- src/programs/pkttyagent.c.orig	2018-04-03 18:16:17.000000000 +0000
+--- src/programs/pkttyagent.c.orig	2019-04-02 11:20:42.000000000 +0000
 +++ src/programs/pkttyagent.c
 @@ -24,6 +24,7 @@
  #endif
@@ -10,9 +10,9 @@ Avoid %m usage in printf.
  #include <stdio.h>
 +#include <errno.h>
  #include <stdlib.h>
- #include <glib/gi18n.h>
- #include <polkit/polkit.h>
-@@ -206,7 +207,7 @@ main (int argc, char *argv[])
+ #include <signal.h>
+ #include <termios.h>
+@@ -242,7 +243,7 @@ main (int argc, char *argv[])
      {
        if (close (opt_notify_fd) != 0)
          {
