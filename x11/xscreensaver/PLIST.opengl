@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opengl,v 1.6 2020/01/18 20:00:26 gutteridge Exp $
+@comment $NetBSD: PLIST.opengl,v 1.7 2020/04/05 17:30:36 gutteridge Exp $
 bin/xscreensaver-gl-helper
 libexec/xscreensaver/antinspect
 libexec/xscreensaver/antmaze
@@ -48,6 +48,7 @@ libexec/xscreensaver/config/endgame.xml
 libexec/xscreensaver/config/energystream.xml
 libexec/xscreensaver/config/engine.xml
 libexec/xscreensaver/config/esper.xml
+libexec/xscreensaver/config/etruscanvenus.xml
 libexec/xscreensaver/config/extrusion.xml
 libexec/xscreensaver/config/flipflop.xml
 libexec/xscreensaver/config/flipscreen3d.xml
@@ -58,6 +59,7 @@ libexec/xscreensaver/config/gears.xml
 libexec/xscreensaver/config/geodesic.xml
 libexec/xscreensaver/config/geodesicgears.xml
 libexec/xscreensaver/config/gflux.xml
+libexec/xscreensaver/config/gibson.xml
 libexec/xscreensaver/config/glblur.xml
 libexec/xscreensaver/config/glcells.xml
 libexec/xscreensaver/config/gleidescope.xml
@@ -146,6 +148,7 @@ libexec/xscreensaver/endgame
 libexec/xscreensaver/energystream
 libexec/xscreensaver/engine
 libexec/xscreensaver/esper
+libexec/xscreensaver/etruscanvenus
 libexec/xscreensaver/extrusion
 libexec/xscreensaver/flipflop
 libexec/xscreensaver/flipscreen3d
@@ -156,6 +159,7 @@ libexec/xscreensaver/gears
 libexec/xscreensaver/geodesic
 libexec/xscreensaver/geodesicgears
 libexec/xscreensaver/gflux
+libexec/xscreensaver/gibson
 libexec/xscreensaver/glblur
 libexec/xscreensaver/glcells
 libexec/xscreensaver/gleidescope
@@ -260,6 +264,7 @@ man/man6/endgame.6
 man/man6/energystream.6
 man/man6/engine.6
 man/man6/esper.6
+man/man6/etruscanvenus.6
 man/man6/extrusion.6
 man/man6/flipflop.6
 man/man6/flipscreen3d.6
@@ -270,6 +275,7 @@ man/man6/gears.6
 man/man6/geodesic.6
 man/man6/geodesicgears.6
 man/man6/gflux.6
+man/man6/gibson.6
 man/man6/glblur.6
 man/man6/glcells.6
 man/man6/gleidescope.6
