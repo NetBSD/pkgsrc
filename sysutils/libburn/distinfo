@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/12/08 10:59:21 wen Exp $
+$NetBSD: distinfo,v 1.5 2020/04/05 12:47:13 nia Exp $
 
-SHA1 (libburn-1.5.0.tar.gz) = fb22b575552e1ea8ec38b960e1eea495e043530b
-RMD160 (libburn-1.5.0.tar.gz) = a541de09751826a8729ef5b766f406c04760b213
-SHA512 (libburn-1.5.0.tar.gz) = c524d672d79db2f6dc22f6381cd422ddaa3b61d6741c998c773772722e37c53576ae9549dd17a33c2d020c66857ecbb948f353bc22cdf28c2bb115bd2b82d4a2
-Size (libburn-1.5.0.tar.gz) = 979953 bytes
+SHA1 (libburn-1.5.2.tar.gz) = f56ea7a0ab5d86c38085812e3982d78a5d0f56e1
+RMD160 (libburn-1.5.2.tar.gz) = 856d643653c3130a2ae3ed386a495fd06fda12bc
+SHA512 (libburn-1.5.2.tar.gz) = a8887907bbfcd9b743dfc2e8924cc9290d7af5a71651aeabfdc5874f2df076278ccdbc94f81efd6a720972f380512d330576739837ba685055ee717dd74797d3
+Size (libburn-1.5.2.tar.gz) = 988375 bytes
