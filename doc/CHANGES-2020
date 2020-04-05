@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2097 2020/04/05 07:05:44 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2098 2020/04/05 12:28:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2858,3 +2858,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added lang/mozjs60 version 60.8.0 [wiz 2020-04-05]
 	Updated security/polkit to 0.116 [wiz 2020-04-05]
 	Updated multimedia/mkvtoolnix to 45.0.0 [adam 2020-04-05]
+	Updated converters/libwps to 0.4.11 [nia 2020-04-05]
