@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2020/01/16 02:31:41 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2020/04/05 16:05:40 bsiegert Exp $
 
-SHA1 (engrampa-1.22.3.tar.xz) = f130f5c13ea116dbcf7455932516e39eb12b50da
-RMD160 (engrampa-1.22.3.tar.xz) = 9282abd5f9136215a8535c78dee595a72cb89ba7
-SHA512 (engrampa-1.22.3.tar.xz) = fd110b2bc188207645985a6f788b8e618cb4910a275950dfb17c0bcc42eff8765a4c7a36760dec2636485685a7a2f4adefb8e2c83537d1b3a819582e3878c9db
-Size (engrampa-1.22.3.tar.xz) = 1407412 bytes
-SHA1 (patch-src_fr-command-lrzip.c) = 0409d41ab993ca67c71c6896083f848919fc8be8
+SHA1 (engrampa-1.24.0.tar.xz) = 280ea32001e31b16d968ddc84d26f7cf26ec7880
+RMD160 (engrampa-1.24.0.tar.xz) = 4ba972d22705bf30ed074dcbe2dd41d833c14938
+SHA512 (engrampa-1.24.0.tar.xz) = b6996e224ef52d8fd7102e4498193faa62056e8c22aa260ab5c6361533744f78755d500536ec0e03fd8b42b71da56d3f58d9d760809d20b572bee02fdee07cce
+Size (engrampa-1.24.0.tar.xz) = 1678920 bytes
+SHA1 (patch-src_fr-command-lrzip.c) = 6617c7481a798a67a71158ab74870400b3e36273
 SHA1 (patch-src_fr-command-unarchiver.c) = 12ef9b4ec8a6ee0205aff0e47cf7cdfb735fe63e

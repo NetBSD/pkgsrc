@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2019/12/30 22:31:08 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/05 16:05:44 bsiegert Exp $
 bin/mate-session
 bin/mate-session-inhibit
 bin/mate-session-properties
 bin/mate-session-save
 bin/mate-wm
+libexec/mate-session-check-accelerated
+libexec/mate-session-check-accelerated-gl-helper
+${PLIST.glesv2}libexec/mate-session-check-accelerated-gles-helper
 man/man1/mate-session-inhibit.1
 man/man1/mate-session-properties.1
 man/man1/mate-session-save.1
@@ -155,5 +158,6 @@ share/locale/zh_HK/LC_MESSAGES/mate-session-manager.mo
 share/locale/zh_TW/LC_MESSAGES/mate-session-manager.mo
 share/locale/zu/LC_MESSAGES/mate-session-manager.mo
 share/mate-session-manager/gsm-inhibit-dialog.ui
+share/mate-session-manager/hardware-compatibility
 share/mate-session-manager/session-properties.ui
 share/xsessions/mate.desktop

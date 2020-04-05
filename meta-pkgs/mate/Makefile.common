@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2020/01/04 00:06:41 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.10 2020/04/05 16:05:39 bsiegert Exp $
 # used by meta-pkgs/mate/Makefile
 # used by print/atril/Makefile
 # used by sysutils/caja/Makefile
@@ -38,7 +38,7 @@
 # used by x11/mozo/Makefile
 # used by editors/pluma/Makefile
 
-VERSION=	1.22.2
+VERSION=	1.24.0
 MASTER_SITES+=	http://pub.mate-desktop.org/releases/${VERSION:R}/
 EXTRACT_SUFX=	.tar.xz
 
@@ -51,6 +51,9 @@ LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
+
+# Fails without GNU msgfmt
+USE_BUILTIN.gettext=    no
 
 .include "../../lang/python/pyversion.mk"
 .include "../../x11/gtk3/buildlink3.mk"

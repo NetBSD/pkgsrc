@@ -1,14 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2020/03/10 22:09:43 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/04/05 16:05:45 bsiegert Exp $
 
-# XXX: meta-pkgs/mate/Makefile.common includes pyversion.mk which sets the
-# python version too early and clashes with PYTHON_VERSIONS_INCOMPATIBLE
-# from libpeas bl3, so we include it early to ensure a valid version is
-# chosen.  This is not ideal, please fix it properly at some point.
-PKGREVISION= 2
-.include "../../devel/libpeas/buildlink3.mk"
-.include "../../meta-pkgs/mate/Makefile.common"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-DISTNAME=	pluma-${VERSION:R}.2
+DISTNAME=	pluma-${VERSION:R}.0
 CATEGORIES=	editors
 
 COMMENT=	Small and lightweight UTF-8 text editor for MATE
@@ -19,16 +13,19 @@ TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 PKGCONFIG_OVERRIDE+=	data/pluma.pc.in
 
-CONFIGURE_ARGS+=	--disable-updater # only for OS X and Windows
-
 REPLACE_PYTHON+=	plugins/externaltools/data/switch-c.tool.in
 REPLACE_BASH+=		plugins/externaltools/data/search-recursive.tool.in
 
+post-install:
+	find ${DESTDIR}${PREFIX} -type d -name __pycache__ | xargs rm -rf
+
 .include "options.mk"
 
+.include "../../devel/libpeas/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/mate-desktop/buildlink3.mk"
 .include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../meta-pkgs/mate/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
