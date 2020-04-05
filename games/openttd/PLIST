@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.26 2020/03/26 14:48:36 nia Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/04/05 14:41:21 nia Exp $
 bin/openttd
 man/man6/openttd.6
 share/applications/openttd.desktop
-share/doc/openttd/COPYING
+share/doc/openttd/COPYING.md
 share/doc/openttd/README.md
 share/doc/openttd/changelog.txt
 share/doc/openttd/known-bugs.txt
-share/doc/openttd/multiplayer.txt
+share/doc/openttd/multiplayer.md
 share/icons/hicolor/128x128/apps/openttd.png
 share/icons/hicolor/16x16/apps/openttd.png
 share/icons/hicolor/256x256/apps/openttd.png
@@ -16,6 +16,7 @@ share/icons/hicolor/64x64/apps/openttd.png
 share/openttd/ai/compat_0.7.nut
 share/openttd/ai/compat_1.0.nut
 share/openttd/ai/compat_1.1.nut
+share/openttd/ai/compat_1.10.nut
 share/openttd/ai/compat_1.2.nut
 share/openttd/ai/compat_1.3.nut
 share/openttd/ai/compat_1.4.nut
@@ -38,6 +39,7 @@ share/openttd/baseset/orig_tto.obm
 share/openttd/baseset/orig_win.obg
 share/openttd/baseset/orig_win.obm
 share/openttd/baseset/orig_win.obs
+share/openttd/game/compat_1.10.nut
 share/openttd/game/compat_1.2.nut
 share/openttd/game/compat_1.3.nut
 share/openttd/game/compat_1.4.nut
