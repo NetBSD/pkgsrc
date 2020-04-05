@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2108 2020/04/05 14:06:23 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2109 2020/04/05 14:41:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2869,3 +2869,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/musicpd to 0.21.22 [nia 2020-04-05]
 	Updated lang/janet to 1.8.1 [nia 2020-04-05]
 	Updated x11/libxdg-basedir to 1.2.0 [nia 2020-04-05]
+	Updated games/openttd to 1.10.0 [nia 2020-04-05]
