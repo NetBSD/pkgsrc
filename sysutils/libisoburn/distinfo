@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2018/12/08 10:46:30 wen Exp $
+$NetBSD: distinfo,v 1.5 2020/04/05 12:49:44 nia Exp $
 
-SHA1 (libisoburn-1.5.0.tar.gz) = 27dcdd0d55f83e9cc6ccf24d54b8a1a6b25c040e
-RMD160 (libisoburn-1.5.0.tar.gz) = 6dec8b9759256c6747287a4b9c5a08fe74c441cd
-SHA512 (libisoburn-1.5.0.tar.gz) = c74a9e2887244c28c82abe70d2603dbcd49b639c370e5b7fea03aabce59ff2b361345cd6ec88fe8152727e8a416d4759b88d91e2b5aec8a697408e00b7dc9e4d
-Size (libisoburn-1.5.0.tar.gz) = 1550656 bytes
+SHA1 (libisoburn-1.5.2.tar.gz) = 8b58d6a3ef0eec2e5551e743e51ad8d4c2c885ae
+RMD160 (libisoburn-1.5.2.tar.gz) = cc85ebb55fff1c93c01f1a67b48e0c1c71dd6f96
+SHA512 (libisoburn-1.5.2.tar.gz) = b481aa5ff20bb35ab0ab19f3f4f3ebc4f2baa8366a14a5afe4f262788441679b6501e140e182f4e80045c747f1cf48db40832d8d5cd064e58a02de2882536897
+Size (libisoburn-1.5.2.tar.gz) = 1564700 bytes
