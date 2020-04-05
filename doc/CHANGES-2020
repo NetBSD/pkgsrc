@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2101 2020/04/05 12:49:59 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2102 2020/04/05 13:12:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2862,3 +2862,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/libisofs to 1.5.2 [nia 2020-04-05]
 	Updated sysutils/libburn to 1.5.2 [nia 2020-04-05]
 	Updated sysutils/libisoburn to 1.5.2 [nia 2020-04-05]
+	Updated converters/orcus to 0.15.4 [nia 2020-04-05]
