@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2019/07/10 10:32:56 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/04/05 14:43:05 nia Exp $
 
-GFXVER=		0.5.5
+GFXVER=		0.6.0
 PKGNAME=	openttd-data-${GFXVER}
 CATEGORIES=	games x11
-MASTER_SITES=	https://binaries.openttd.org/extra
+MASTER_SITES=	http://master.binaries.openttd.org/binaries/extra/openmsx/
 DISTFILES=	opengfx-${GFXVER}-all.zip
 DISTFILES+=	openmsx-0.3.1-all.zip
 DISTFILES+=	opensfx-0.2.3-all.zip
 
-SITES.opengfx-${GFXVER}-all.zip=	${MASTER_SITES:Q}/opengfx/${GFXVER}/
+SITES.opengfx-${GFXVER}-all.zip=	https://cdn.openttd.org/opengfx-releases/${GFXVER}/
 SITES.openmsx-0.3.1-all.zip=		${MASTER_SITES:Q}/openmsx/0.3.1/
 SITES.opensfx-0.2.3-all.zip=		${MASTER_SITES:Q}/opensfx/0.2.3/
 
