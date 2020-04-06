@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3090 2020/04/05 13:20:55 nia Exp $
+# $NetBSD: Makefile,v 1.3091 2020/04/06 08:01:26 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2232,6 +2232,7 @@ SUBDIR+=	py-funcsigs
 SUBDIR+=	py-functools32
 SUBDIR+=	py-future
 SUBDIR+=	py-futures
+SUBDIR+=	py-fuzzywuzzy
 SUBDIR+=	py-game
 SUBDIR+=	py-gcovr
 SUBDIR+=	py-generate
