@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/06 08:00:19 wiz Exp $
+
+SHA1 (fuzzywuzzy-0.18.0.tar.gz) = 8583e05227ecae72845dd257d4b9a4543122656f
+RMD160 (fuzzywuzzy-0.18.0.tar.gz) = 338055623418a154bd45704f31126f97b8c3f7a1
+SHA512 (fuzzywuzzy-0.18.0.tar.gz) = 4a21ea67278fa525842d48fed8db666d00eae6d13254e8844d11f63b47c3a305b3cac760f28c24c6347aebcf73e96180e0a7cfba29c75f01ece2f7751e0398c5
+Size (fuzzywuzzy-0.18.0.tar.gz) = 28888 bytes
