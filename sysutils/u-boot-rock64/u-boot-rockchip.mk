@@ -1,4 +1,4 @@
-#	$NetBSD: u-boot-rockchip.mk,v 1.1 2020/04/02 09:09:05 tnn Exp $
+#	$NetBSD: u-boot-rockchip.mk,v 1.2 2020/04/06 15:06:17 tnn Exp $
 #
 # used by sysutils/u-boot-rock64/Makefile
 
@@ -14,7 +14,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ayufan-rock64/}
 GITHUB_PROJECT=	linux-u-boot
 GITHUB_TAG=	2017.09-rockchip-ayufan-1063-g29843fbd42
 DISTNAME=	${GITHUB_TAG}
-PATCHDIR=	${.CURDIR}/../../sysutils/u-boot-rockpro64/patches
+PATCHDIR=	${.CURDIR}/../../sysutils/u-boot-rock64/patches
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_SUFX=	.tar.gz
 
