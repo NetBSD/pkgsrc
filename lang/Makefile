@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.553 2020/04/05 06:11:28 wiz Exp $
+# $NetBSD: Makefile,v 1.554 2020/04/06 04:59:00 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -158,6 +158,7 @@ SUBDIR+=	mono-basic
 SUBDIR+=	mono6
 SUBDIR+=	moscow_ml
 SUBDIR+=	mozjs60
+SUBDIR+=	mozjs68
 SUBDIR+=	mpd
 SUBDIR+=	nawk
 SUBDIR+=	neko
