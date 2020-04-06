@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/31 17:42:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/06 09:19:25 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -54,6 +54,9 @@ ${PYSITELIB}/google/auth/crypt/_python_rsa.pyo
 ${PYSITELIB}/google/auth/crypt/base.py
 ${PYSITELIB}/google/auth/crypt/base.pyc
 ${PYSITELIB}/google/auth/crypt/base.pyo
+${PYSITELIB}/google/auth/crypt/es256.py
+${PYSITELIB}/google/auth/crypt/es256.pyc
+${PYSITELIB}/google/auth/crypt/es256.pyo
 ${PYSITELIB}/google/auth/crypt/rsa.py
 ${PYSITELIB}/google/auth/crypt/rsa.pyc
 ${PYSITELIB}/google/auth/crypt/rsa.pyo
