@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2020/03/04 12:04:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2020/04/06 12:26:07 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -13,7 +13,6 @@ bin/pngcmp
 bin/regrep
 bin/romcmp
 bin/split
-bin/src2html
 bin/srcclean
 bin/unidasm
 man/man1/castool.1
@@ -65,7 +64,6 @@ share/mame/artwork/slot-mask.png
 share/mame/artwork/white.png
 share/mame/hash/32x.xml
 share/mame/hash/3do_m2.xml
-share/mame/hash/LICENSE
 share/mame/hash/README.md
 share/mame/hash/a2600.xml
 share/mame/hash/a2600_cass.xml
@@ -195,6 +193,8 @@ share/mame/hash/coleco.xml
 share/mame/hash/compclr2_flop.xml
 share/mame/hash/compis.xml
 share/mame/hash/comx35_flop.xml
+share/mame/hash/conchess_plymate.xml
+share/mame/hash/conchess_standard.xml
 share/mame/hash/copera.xml
 share/mame/hash/cpc_cass.xml
 share/mame/hash/cpc_flop.xml
@@ -408,6 +408,7 @@ share/mame/hash/mtx_rom.xml
 share/mame/hash/myvision.xml
 share/mame/hash/mz2000_cass.xml
 share/mame/hash/mz2000_flop.xml
+share/mame/hash/mz2200_cass.xml
 share/mame/hash/mz2500.xml
 share/mame/hash/mz700_cass.xml
 share/mame/hash/mz800_cass.xml
@@ -442,6 +443,7 @@ share/mame/hash/p500_flop.xml
 share/mame/hash/partner_cass.xml
 share/mame/hash/partner_flop.xml
 share/mame/hash/pasogo.xml
+share/mame/hash/pasopia_cass.xml
 share/mame/hash/pb2000c.xml
 share/mame/hash/pc1000.xml
 share/mame/hash/pc1512_flop.xml
