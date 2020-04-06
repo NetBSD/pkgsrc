@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2138 2020/04/06 14:19:48 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2139 2020/04/06 15:14:54 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2937,3 +2937,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added editors/focuswriter version 1.7.5 [pin 2020-04-06]
 	Updated emulators/mame to 0.220 [wiz 2020-04-06]
 	Updated print/foliate to 2.0.0 [fox 2020-04-06]
+	Added sysutils/u-boot-rockpro64-ayufan version 2020.01.2007 [tnn 2020-04-06]
