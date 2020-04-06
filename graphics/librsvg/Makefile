@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.119 2020/03/31 17:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2020/04/06 08:55:38 wiz Exp $
 
-DISTNAME=	librsvg-2.48.1
+DISTNAME=	librsvg-2.48.2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -51,7 +51,7 @@ CARGO_CRATE_DEPENDS+=	cssparser-macros-0.6.0
 CARGO_CRATE_DEPENDS+=	csv-1.1.3
 CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
 CARGO_CRATE_DEPENDS+=	data-url-0.1.0
-CARGO_CRATE_DEPENDS+=	derive_more-0.99.3
+CARGO_CRATE_DEPENDS+=	derive_more-0.99.5
 CARGO_CRATE_DEPENDS+=	downcast-rs-1.1.1
 CARGO_CRATE_DEPENDS+=	dtoa-0.4.5
 CARGO_CRATE_DEPENDS+=	dtoa-short-0.3.2
@@ -83,7 +83,7 @@ CARGO_CRATE_DEPENDS+=	gio-sys-0.9.1
 CARGO_CRATE_DEPENDS+=	glib-0.9.3
 CARGO_CRATE_DEPENDS+=	glib-sys-0.9.1
 CARGO_CRATE_DEPENDS+=	gobject-sys-0.9.1
-CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.8
+CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.10
 CARGO_CRATE_DEPENDS+=	idna-0.2.0
 CARGO_CRATE_DEPENDS+=	itertools-0.8.2
 CARGO_CRATE_DEPENDS+=	itoa-0.4.5
@@ -127,9 +127,9 @@ CARGO_CRATE_DEPENDS+=	pin-utils-0.1.0-alpha.4
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.17
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.6
 CARGO_CRATE_DEPENDS+=	precomputed-hash-0.1.1
-CARGO_CRATE_DEPENDS+=	proc-macro-hack-0.5.14
+CARGO_CRATE_DEPENDS+=	proc-macro-hack-0.5.15
 CARGO_CRATE_DEPENDS+=	proc-macro-nested-0.1.4
-CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.9
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.10
 CARGO_CRATE_DEPENDS+=	quote-1.0.3
 CARGO_CRATE_DEPENDS+=	rand-0.7.3
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.2.2
@@ -158,7 +158,7 @@ CARGO_CRATE_DEPENDS+=	semver-0.9.0
 CARGO_CRATE_DEPENDS+=	semver-parser-0.7.0
 CARGO_CRATE_DEPENDS+=	serde-1.0.105
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.105
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.48
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.50
 CARGO_CRATE_DEPENDS+=	servo_arc-0.1.1
 CARGO_CRATE_DEPENDS+=	siphasher-0.3.2
 CARGO_CRATE_DEPENDS+=	slab-0.4.2
@@ -183,9 +183,9 @@ CARGO_CRATE_DEPENDS+=	walkdir-2.3.1
 CARGO_CRATE_DEPENDS+=	wasi-0.9.0+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	winapi-0.3.8
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
-CARGO_CRATE_DEPENDS+=	winapi-util-0.1.3
+CARGO_CRATE_DEPENDS+=	winapi-util-0.1.4
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
-CARGO_CRATE_DEPENDS+=	xml-rs-0.8.0
+CARGO_CRATE_DEPENDS+=	xml-rs-0.8.1
 
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
