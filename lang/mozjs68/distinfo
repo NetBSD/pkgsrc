@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/04/06 04:58:42 wiz Exp $
+
+SHA1 (mozjs68_68.6.0.orig.tar.xz) = 98eb63629e8889caa738fa15591fe8eeba73b227
+RMD160 (mozjs68_68.6.0.orig.tar.xz) = 7b00f416e1e767b0595fbd7e4c26c42c83ccd7a1
+SHA512 (mozjs68_68.6.0.orig.tar.xz) = faf6c64bb82c309dd09be49a83f76a182885eb97d6845a83b4463ca63d2186d6e0790068b1671960752b55d049a9cda3b6a062e0fbcec5403b52c9150c61a84e
+Size (mozjs68_68.6.0.orig.tar.xz) = 75303520 bytes
+SHA1 (patch-.._.._config_rules.mk) = cf3421d991e1cbfab4c0cdcb7b648b1388fa32d5
+SHA1 (patch-.._.._python_mozbuild_mozbuild_backend_recursivemake.py) = dda670432e5673c5d28dcf6c4902d4a724e71170
