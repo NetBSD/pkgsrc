@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/02/29 11:47:09 nia Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/06 08:34:23 wiz Exp $
 
 DISTNAME=	guile-git-0.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.com/guile-git/guile-git/uploads/160f6a36c1be8d4fc1990a193081a04d/
 
