@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2020/01/26 17:32:07 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/04/06 09:27:13 wiz Exp $
 
-DISTNAME=	spiped-1.5.0
-PKGREVISION=	2
-CATEGORIES=	net security
+DISTNAME=	spiped-1.6.1
+CATEGORIES=	security net
 MASTER_SITES=	http://www.tarsnap.com/spiped/
 EXTRACT_SUFX=	.tgz
 
@@ -10,7 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tarsnap.com/spiped/
 COMMENT=	Tool for creating symmetrically encrypted and authenticated pipes
 LICENSE=	2-clause-bsd
+
 USE_LANGUAGES=	c99
+TEST_TARGET=	test
 
 MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin
 MAKE_FLAGS+=	MAN1DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
@@ -30,7 +31,7 @@ MAKE_ENV+=	LDADD_EXTRA="${LDADD_EXTRA}"
 INSTALLATION_DIRS+=	share/doc/spiped ${PKGMANDIR}/man1
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/spiped
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/spiped
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

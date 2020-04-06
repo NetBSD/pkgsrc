@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2014/04/21 21:58:57 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/06 09:27:13 wiz Exp $
 bin/spipe
 bin/spiped
 man/man1/spipe.1
 man/man1/spiped.1
-share/doc/spiped/README
+share/doc/spiped/README.md
