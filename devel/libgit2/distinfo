@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2020/02/29 11:39:53 nia Exp $
+$NetBSD: distinfo,v 1.21 2020/04/06 08:33:40 wiz Exp $
 
-SHA1 (libgit2-0.99.0.tar.gz) = b5aa2daf06f9e6258358d54a0e2b6ccd5597a48e
-RMD160 (libgit2-0.99.0.tar.gz) = c8685a267ec8006e9e0e6d98d0c36d7c532713ab
-SHA512 (libgit2-0.99.0.tar.gz) = e38e18da0e6ed1e5c8198c9eb2c362b21da2d0b9c8bc23309d2f70183549f4b9f23a6db8ce5f1f0f24b373e6427039c2a845b62dd74f91b02cfe8954f961a91b
-Size (libgit2-0.99.0.tar.gz) = 5307975 bytes
-SHA1 (patch-deps_ntlmclient_compat.h) = a6d6eca024fa6a63f1f0575e9c7ac22980f82594
+SHA1 (libgit2-1.0.0.tar.gz) = 70ea27ada7433b08c08b2706dc8520a8da2156fb
+RMD160 (libgit2-1.0.0.tar.gz) = 6b3f8c350692ff04b10a1dcc03167e7773db9617
+SHA512 (libgit2-1.0.0.tar.gz) = 7e3b6582dd1567fd5ebfc829a98e22acfd5566ba08f2fb9b7a6783fa87f5e8952ac67f1a2c13adb543e56753d858e73a03204bac17a096c72f5daf4ba376d904
+Size (libgit2-1.0.0.tar.gz) = 5312324 bytes
+SHA1 (patch-deps_ntlmclient_compat.h) = c808fccd9ee6bc99f0620cd8820fbdb301d4c42b
