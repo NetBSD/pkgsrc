@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/10/01 13:22:55 triaxx Exp $
+$NetBSD: distinfo,v 1.2 2020/04/06 09:14:03 wiz Exp $
 
-SHA1 (distro-1.4.0.tar.gz) = d72ac60844b2b472fc815441afe60fc1da728926
-RMD160 (distro-1.4.0.tar.gz) = e2403c4fdb70861f89a8e09e4118027e39fb2514
-SHA512 (distro-1.4.0.tar.gz) = eac7d32ea77c2074e57c6828a8b2e4d4d01e9c46cb0f7adbd99998630b0af4924bf18d05d5f5b42fef5603b024ef835dbb4c05fc88310f5e64d193514b2fc10f
-Size (distro-1.4.0.tar.gz) = 53719 bytes
+SHA1 (distro-1.5.0.tar.gz) = cb0e7d550a3c66c960a1914718e4f4dfe1228a19
+RMD160 (distro-1.5.0.tar.gz) = 34bf3cb1216eda586f428ea71a43629119d9f27d
+SHA512 (distro-1.5.0.tar.gz) = 14831fe1355e9ef4f58f273ce4a548a3fe438e95466b4b4f596b8110da51305d66ed77c2e40c3dbfbcbd1a66c74e23a4d4244c8bfdebc4b49b3e7ddcbff55b8f
+Size (distro-1.5.0.tar.gz) = 54340 bytes
