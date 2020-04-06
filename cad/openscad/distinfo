@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2019/06/22 12:57:50 mef Exp $
+$NetBSD: distinfo,v 1.9 2020/04/06 18:30:00 plunky Exp $
 
 SHA1 (openscad-2019.05.tar.gz) = 3817758e0c7299dbfbe340cdae0fe39da915c799
 RMD160 (openscad-2019.05.tar.gz) = 047761217599899d40226ee051f2f0d14e65b650
@@ -7,4 +7,5 @@ Size (openscad-2019.05.tar.gz) = 14605674 bytes
 SHA1 (patch-features_qscintilla2-priv.prf) = ca5d5735d091441d6daf7535802f5ba7362c808c
 SHA1 (patch-openscad.pro) = 8b4250254ea66338ecafdac437ce9a69deb2fe27
 SHA1 (patch-src_colormap.h) = d218a17ac71e0178d32b79723b532c9f098bc038
+SHA1 (patch-src_parser.y) = 48b538fe16927c0acd37a96d312554541f46f1e4
 SHA1 (patch-src_scintillaeditor.h) = 5da071ca50470c36bab3792d4aaeb135df84726d
