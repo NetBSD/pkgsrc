@@ -1,8 +1,8 @@
-$NetBSD: patch-deps_ntlmclient_compat.h,v 1.1 2020/02/29 11:39:54 nia Exp $
+$NetBSD: patch-deps_ntlmclient_compat.h,v 1.2 2020/04/06 08:33:41 wiz Exp $
 
 NetBSD does not have htonll.
 
---- deps/ntlmclient/compat.h.orig	2020-02-19 10:27:00.000000000 +0000
+--- deps/ntlmclient/compat.h.orig	2020-04-01 13:49:12.000000000 +0000
 +++ deps/ntlmclient/compat.h
 @@ -21,7 +21,7 @@
  # include <stdbool.h>
@@ -10,6 +10,6 @@ NetBSD does not have htonll.
  
 -#ifdef __linux__
 +#if defined(__linux__) || defined(__NetBSD__)
+ /* See man page endian(3) */
  # include <endian.h>
  # define htonll htobe64
- #endif
