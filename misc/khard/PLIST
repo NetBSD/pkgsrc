@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/03/13 10:10:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/04/06 08:09:26 wiz Exp $
 bin/khard
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -29,6 +29,9 @@ ${PYSITELIB}/khard/config.pyc
 ${PYSITELIB}/khard/config.pyo
 ${PYSITELIB}/khard/data/config.spec
 ${PYSITELIB}/khard/data/template.yaml
+${PYSITELIB}/khard/formatter.py
+${PYSITELIB}/khard/formatter.pyc
+${PYSITELIB}/khard/formatter.pyo
 ${PYSITELIB}/khard/helpers.py
 ${PYSITELIB}/khard/helpers.pyc
 ${PYSITELIB}/khard/helpers.pyo
