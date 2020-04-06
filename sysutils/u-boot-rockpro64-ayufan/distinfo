@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/06 15:08:34 tnn Exp $
+
+SHA1 (u-boot-rockpro64-ayufan-2020.01-ayufan-2007-g928e3ac6.tar.gz) = 3c7f28393cd9e1264202127d48066cf005713f09
+RMD160 (u-boot-rockpro64-ayufan-2020.01-ayufan-2007-g928e3ac6.tar.gz) = 6efbfa81544e7c5987063215f8b79bb9813c885a
+SHA512 (u-boot-rockpro64-ayufan-2020.01-ayufan-2007-g928e3ac6.tar.gz) = 6713258a35e4c493ab483418d3257ea69e261fb1b875ee7350e72c1ecfebf9d3922bbdf854ac94a4cd9b7632d2520d08d027e6709202e5a65dc537a9241025fd
+Size (u-boot-rockpro64-ayufan-2020.01-ayufan-2007-g928e3ac6.tar.gz) = 18847582 bytes
