@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2125 2020/04/06 08:23:22 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2126 2020/04/06 08:27:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2923,3 +2923,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-sphinx-autodoc-typehints to 1.10.3 [wiz 2020-04-06]
 	Updated misc/khard to 0.16.0 [wiz 2020-04-06]
 	Updated x11/gtk3 to 3.24.17 [wiz 2020-04-06]
+	Updated www/apache24 to 2.4.43 [wiz 2020-04-06]
