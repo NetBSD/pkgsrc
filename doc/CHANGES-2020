@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2118 2020/04/06 04:59:13 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2119 2020/04/06 05:33:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2916,3 +2916,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xfce4-clipman-plugin to 1.6.1 [gutteridge 2020-04-05]
 	Updated editors/retext to 7.1.0 [gutteridge 2020-04-06]
 	Added lang/mozjs68 version 68.6.0 [wiz 2020-04-06]
+	Updated lang/mozjs60 to 60.8.0nb1 [wiz 2020-04-06]
