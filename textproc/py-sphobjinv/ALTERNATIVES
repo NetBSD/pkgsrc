@@ -1,0 +1,1 @@
+bin/sphobjinv @PREFIX@/bin/sphobjinv-@PYVERSSUFFIX@
