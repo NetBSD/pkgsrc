@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2123 2020/04/06 08:06:38 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2124 2020/04/06 08:09:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2921,3 +2921,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-fuzzywuzzy version 0.18.0 [wiz 2020-04-06]
 	Added textproc/py-sphobjinv version 2.0.1 [wiz 2020-04-06]
 	Updated textproc/py-sphinx-autodoc-typehints to 1.10.3 [wiz 2020-04-06]
+	Updated misc/khard to 0.16.0 [wiz 2020-04-06]
