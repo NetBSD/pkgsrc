@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2136 2020/04/06 11:42:22 pin Exp $
+$NetBSD: CHANGES-2020,v 1.2137 2020/04/06 12:26:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2935,3 +2935,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-lexicon to 3.3.19 [adam 2020-04-06]
 	Updated security/py-certifi to 2020.4.5.1 [adam 2020-04-06]
 	Added editors/focuswriter version 1.7.5 [pin 2020-04-06]
+	Updated emulators/mame to 0.220 [wiz 2020-04-06]
