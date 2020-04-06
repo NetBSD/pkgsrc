@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/06 08:03:00 wiz Exp $
+
+SHA1 (sphobjinv-2.0.1.tar.gz) = e100fdbd649f774e51a8b08d52c1a29c6e063705
+RMD160 (sphobjinv-2.0.1.tar.gz) = 6c6df3976c8b86772da75c5018b5d0dd67744e25
+SHA512 (sphobjinv-2.0.1.tar.gz) = bc471fdd41d54d3483781a0c7214bd65711872a62bb7c03473bd731f70c853c1a4030a3a920db27bc0669ded3177d52847c43abc0da5edbc9683ffef0d0b1e99
+Size (sphobjinv-2.0.1.tar.gz) = 28559 bytes
