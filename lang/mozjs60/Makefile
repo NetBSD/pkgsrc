@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/04/05 06:10:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/06 05:33:02 wiz Exp $
 
 DISTNAME=	mozjs60_60.8.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://deb.debian.org/debian/pool/main/m/mozjs60/
 EXTRACT_SUFX=	.tar.xz
@@ -24,8 +25,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--enable-readline
-CONFIGURE_ARGS+=	--with-system-nspr
-#CONFIGURE_ARGS+=	--enable-posix-nspr-emulation
+CONFIGURE_ARGS+=	--enable-posix-nspr-emulation
 CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ARGS+=	--disable-jemalloc
 CONFIGURE_ARGS+=	--disable-debug-symbols
@@ -54,6 +54,5 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../textproc/icu/buildlink3.mk"
-.include "../../devel/nspr/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
