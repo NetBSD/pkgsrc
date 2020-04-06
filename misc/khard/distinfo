@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2019/11/06 11:59:38 wiz Exp $
+$NetBSD: distinfo,v 1.12 2020/04/06 08:09:26 wiz Exp $
 
-SHA1 (khard-0.15.1.tar.gz) = 6d2e2e0c4d41f0f55f396b849f2aef3f9ff4f6e5
-RMD160 (khard-0.15.1.tar.gz) = 469964c5600438393eacc320687d642d85b94b6a
-SHA512 (khard-0.15.1.tar.gz) = 64ba1acf7e4046cd2e93034eb6e56fa38390993121880109a83411ef10839272b63e32c84efd9508230a93aed2b9a965f8333ed32344204f179ada936d9cce48
-Size (khard-0.15.1.tar.gz) = 5099734 bytes
+SHA1 (khard-0.16.0.tar.gz) = 66267de4c8a093d348890be67312b8d0b1790ec5
+RMD160 (khard-0.16.0.tar.gz) = 3a795da77b953daa4f885caf992baab371e251a4
+SHA512 (khard-0.16.0.tar.gz) = 3bc9c580ea3e1a4aa38366a50beaa7ae5ae40688100024ecef058cc899ac22ff9b47fbdb5279ee2377d8340edeb7e6e896c910f4f3d9a93ae4323952bb8765d4
+Size (khard-0.16.0.tar.gz) = 673659 bytes
