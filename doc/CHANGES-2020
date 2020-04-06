@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2130 2020/04/06 09:11:22 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2131 2020/04/06 09:14:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2928,3 +2928,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/librsvg to 2.48.2 [wiz 2020-04-06]
 	Updated devel/libsigc++ to 2.10.3 [wiz 2020-04-06]
 	Updated devel/libsigc++3 to 3.0.3 [wiz 2020-04-06]
+	Updated devel/py-distro to 1.5.0 [wiz 2020-04-06]
