@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/11/04 21:43:37 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/04/06 09:30:48 wiz Exp $
 
 DISTNAME=	html2text-1.3.2a
 CATEGORIES=	textproc
@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.mbayer.de/html2text/downloads/
 MASTER_SITES+=	${MASTER_SITE_SUNSITE:=apps/www/converters/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mbayer.de/html2text/
+HOMEPAGE=	https://github.com/grobian/html2text
 COMMENT=	Advanced HTML-to-text converter
 LICENSE=	gnu-gpl-v2
 
