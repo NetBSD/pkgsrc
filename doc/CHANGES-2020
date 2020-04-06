@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2134 2020/04/06 10:27:41 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2135 2020/04/06 10:52:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2932,3 +2932,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-google-auth to 1.13.1 [wiz 2020-04-06]
 	Updated security/spiped to 1.6.1 [wiz 2020-04-06]
 	Updated devel/py-mercurial to 5.3.2 [wiz 2020-04-06]
+	Updated net/py-lexicon to 3.3.19 [adam 2020-04-06]
+	Updated security/py-certifi to 2020.4.5.1 [adam 2020-04-06]
