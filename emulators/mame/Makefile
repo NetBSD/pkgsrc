@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.112 2020/03/30 19:37:47 joerg Exp $
+# $NetBSD: Makefile,v 1.113 2020/04/06 12:26:07 wiz Exp $
 
-DISTNAME=	mame-0.219
-PKGREVISION=	1
+DISTNAME=	mame-0.220
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -31,9 +30,9 @@ EXTRACT_USING=		bsdtar
 
 .if ${OPSYS} == "NetBSD"
 # needs kvm and I didn't find the right place to add it in the build system
-MAKE_ENV+=	LDOPTS="-Wl,-R${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib -lkvm"
+MAKE_ENV+=	LDOPTS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib -lkvm"
 .else
-MAKE_ENV+=	LDOPTS="-Wl,-R${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib"
+MAKE_ENV+=	LDOPTS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib"
 .endif
 
 # -Werror is problematic
@@ -85,7 +84,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mame64 ${DESTDIR}${PREFIX}/bin/mame
 	set -e; \
 	for prg in castool chdman floptool imgtool jedutil ldresample ldverify \
-		nltool nlwav pngcmp regrep romcmp split src2html srcclean unidasm; do \
+		nltool nlwav pngcmp regrep romcmp split srcclean unidasm; do \
 		${INSTALL_PROGRAM} ${WRKSRC}/"$$prg" ${DESTDIR}${PREFIX}/bin; \
 	done
 	${INSTALL_DATA} ${WRKSRC}/docs/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
