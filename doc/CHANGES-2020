@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2141 2020/04/06 17:01:31 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2142 2020/04/06 20:24:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2942,3 +2942,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-test-django to 3.9.0 [adam 2020-04-06]
 	Updated www/py-django2 to 2.2.12 [adam 2020-04-06]
 	Updated www/py-django3 to 3.0.5 [adam 2020-04-06]
+	Updated lang/nodejs to 13.12.0 [adam 2020-04-06]
+	Updated lang/npm to 6.14.4 [adam 2020-04-06]
