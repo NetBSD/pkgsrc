@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/01/01 21:16:12 adam Exp $
+# $NetBSD: Makefile,v 1.29 2020/04/06 17:14:44 jperkin Exp $
 
 DISTNAME=	libepoxy-1.5.4
 CATEGORIES=	graphics
@@ -16,6 +16,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	epoxy.pc.in
 PYTHON_FOR_BUILD_ONLY=	tool
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-D_XOPEN_SOURCE
 
 PLIST_VARS+=		egl
 
