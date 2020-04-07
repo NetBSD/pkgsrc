@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2020/01/26 05:26:10 rillig Exp $
+# $NetBSD: Makefile,v 1.86 2020/04/07 09:21:20 wiz Exp $
 
 DISTNAME=	lame-3.100
 CATEGORIES=	audio
@@ -17,6 +17,7 @@ USE_LANGUAGES=		c c++
 USE_FEATURES+=		strnlen
 
 LDFLAGS.SunOS+=		-lm
+LDFLAGS.NetBSD+=	-ltermcap
 
 .include "options.mk"
 
@@ -36,4 +37,5 @@ CONFIGURE_ARGS+=	--enable-nasm
 .endif
 
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
