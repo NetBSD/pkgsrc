@@ -1,26 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2018/10/09 12:21:20 leot Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/07 14:14:55 maya Exp $
 bin/megacopy
 bin/megadf
 bin/megadl
+bin/megaexport
 bin/megaget
 bin/megals
 bin/megamkdir
 bin/megaput
 bin/megareg
 bin/megarm
-man/man1/megacopy.1
-man/man1/megadf.1
-man/man1/megadl.1
-man/man1/megaget.1
-man/man1/megals.1
-man/man1/megamkdir.1
-man/man1/megaput.1
-man/man1/megareg.1
-man/man1/megarm.1
-man/man5/megarc.5
-man/man7/megatools.7
-share/doc/megatools/HACKING
-share/doc/megatools/INSTALL
+bin/megatest
+bin/megatools
 share/doc/megatools/LICENSE
 share/doc/megatools/NEWS
 share/doc/megatools/README
