@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2146 2020/04/07 08:17:49 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2147 2020/04/07 08:18:44 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2949,3 +2949,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/bcmfw to 2.3 [plunky 2020-04-07]
 	Updated archivers/unrar to 5.9.2 [adam 2020-04-07]
 	Updated net/samba4 to 4.12.1 [adam 2020-04-07]
+	Updated cad/qcad to 3.24.3.0 [plunky 2020-04-07]
