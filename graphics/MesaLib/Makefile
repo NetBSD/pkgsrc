@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.190 2020/03/20 16:10:51 nia Exp $
+# $NetBSD: Makefile,v 1.191 2020/04/07 13:20:40 nia Exp $
 
-DISTNAME=	mesa-20.0.2
+DISTNAME=	mesa-20.0.4
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
