@@ -1,10 +1,10 @@
-$NetBSD: patch-src_core_RS.cpp,v 1.2 2019/09/05 13:39:10 nia Exp $
+$NetBSD: patch-src_core_RS.cpp,v 1.3 2020/04/07 08:18:22 plunky Exp $
 
 fix hardcoded paths
 
---- src/core/RS.cpp.orig	2019-07-18 15:47:56.000000000 +0000
+--- src/core/RS.cpp.orig	2020-03-17 10:40:38.000000000 +0000
 +++ src/core/RS.cpp
-@@ -139,48 +139,9 @@ bool RS::compare(const QPair<QVariant, R
+@@ -139,44 +139,10 @@
  QStringList RS::getDirectoryList(const QString& subDirectory) {
      QStringList dirList;
  
@@ -46,13 +46,10 @@ fix hardcoded paths
 -    }
 -#endif
 -    */
--
--    // TODO: add a path to users home to be used to extend pattern, etc.
--    //QString appDirName = QSettings.applicationName();
--    //dirList.append(RSettings::getHomeLocation() + "/." + appDirName + "/" + subDirectory);
++    //QString appDirName = QSettings.applicationName();
 +    dirList.append("@PREFIX@/lib/qcad/" + subDirectory);
 +    dirList.append("@PREFIX@/share/qcad/" + subDirectory);
 +    dirList.append(QDir::homePath() + "/.qcad/" + subDirectory);
  
-     QStringList ret;
-     for (int i=0; i<dirList.size(); i++) {
+     // add a path to users home (config dir) to be used to extend pattern, linetypes, etc.
+     dirList.append(RSettings::getPath() + "/" + subDirectory);
