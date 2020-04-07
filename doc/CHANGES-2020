@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2147 2020/04/07 08:18:44 plunky Exp $
+$NetBSD: CHANGES-2020,v 1.2148 2020/04/07 08:52:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2950,3 +2950,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/unrar to 5.9.2 [adam 2020-04-07]
 	Updated net/samba4 to 4.12.1 [adam 2020-04-07]
 	Updated cad/qcad to 3.24.3.0 [plunky 2020-04-07]
+	Updated devel/py-txaio to 20.4.1 [adam 2020-04-07]
+	Updated www/py-flask to 1.1.2 [adam 2020-04-07]
