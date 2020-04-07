@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/03/23 10:06:24 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/07 08:47:45 adam Exp $
 
-DISTNAME=	txaio-20.3.1
+DISTNAME=	txaio-20.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/txaio/}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/crossbario/txaio
 COMMENT=	Compatibility API between asyncio/Twisted/Trollius
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
@@ -20,7 +19,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
