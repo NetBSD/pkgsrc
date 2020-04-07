@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2151 2020/04/07 10:46:10 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2152 2020/04/07 12:13:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2958,3 +2958,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-enum34 to 1.1.10 [adam 2020-04-07]
 	Updated devel/py-autopep8 to 1.5.1 [adam 2020-04-07]
 	Updated www/py-asgiref to 3.2.7 [adam 2020-04-07]
+	Updated devel/py-pyparsing to 2.4.7 [adam 2020-04-07]
+	Updated net/py-smbc to 1.0.20 [adam 2020-04-07]
+	Updated devel/py-typing-extensions to 3.7.4.2 [adam 2020-04-07]
+	Updated devel/py-pygit2 to 1.2.0 [adam 2020-04-07]
