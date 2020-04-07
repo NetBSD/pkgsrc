@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/10/12 19:37:47 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/04/07 08:12:31 leot Exp $
 #
 
 DISTNAME=	netbeans-8.2-201609300101
@@ -8,7 +8,7 @@ CATEGORIES=	devel editors
 MASTER_SITES=	http://download.netbeans.org/netbeans/${PKGVERSION_NOREV}/final/zip/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	drue@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.netbeans.org/
 COMMENT=	NetBeans Java IDE
 
