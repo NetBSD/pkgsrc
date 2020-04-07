@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2159 2020/04/07 15:16:17 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2160 2020/04/07 15:52:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2968,3 +2968,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fasttracker2 to 1.18 [fox 2020-04-07]
 	Updated security/tor-browser to 9.0.7 [wiz 2020-04-07]
 	Updated security/tor-browser to 9.0.8 [wiz 2020-04-07]
+	Updated ham/uhd to 3.15.0.0 [mef 2020-04-07]
