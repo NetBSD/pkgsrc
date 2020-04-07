@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2152 2020/04/07 12:13:14 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2153 2020/04/07 13:20:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2962,3 +2962,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-smbc to 1.0.20 [adam 2020-04-07]
 	Updated devel/py-typing-extensions to 3.7.4.2 [adam 2020-04-07]
 	Updated devel/py-pygit2 to 1.2.0 [adam 2020-04-07]
+	Updated graphics/MesaLib to 20.0.4 [nia 2020-04-07]
