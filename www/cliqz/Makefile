@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2020/03/31 15:40:54 fox Exp $
+# $NetBSD: Makefile,v 1.37 2020/04/07 02:48:38 fox Exp $
 
-DISTNAME=	cliqz-1.34.0
+DISTNAME=	cliqz-1.34.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliqz-oss/}
 GITHUB_PROJECT=	browser-f
@@ -15,7 +15,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 CLIQZ_CHANNEL=		release
 # If the PKGVERSION_NOREV is updated, make sure to update the last build id from
 # ftp -Vo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
-CLIQZ_LAST_BUILD_ID=	20200325191531
+CLIQZ_LAST_BUILD_ID=	20200404160144
 CLIQZ_PLUGIN_SUFX=	@cliqz.com.xpi
 
 SITES.adult-domains.bin= \
@@ -38,6 +38,7 @@ COMMENT=	Secure browser (Mozilla based) with built-in quick search
 LICENSE=	mpl-2.0 AND gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config perl gmake autoconf213 unzip zip bash pax
+# Some modules written in Rust dislike gnu++17 as of 74.0 (www/firefox).
 USE_LANGUAGES+=	c99 gnu++14
 
 # Build script does not support python 3.x yet.
@@ -148,7 +149,6 @@ post-install:
 PKG_CC=		${PREFIX}/bin/clang
 PKG_CXX=	${PREFIX}/bin/clang++
 BUILDLINK_DEPMETHOD.clang=     build
-BUILDLINK_API_DEPENDS.clang+=  clang>=6.0.1nb1
 .include "../../lang/clang/buildlink3.mk"
 BUILDLINK_DEPMETHOD.rust=      build
 BUILDLINK_API_DEPENDS.rust+=   rust>=1.39.0
