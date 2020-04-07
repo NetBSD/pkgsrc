@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/11/18 18:34:10 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/07 16:45:39 nikita Exp $
 bin/gnurl
 bin/gnurl-config
 include/gnurl/curl.h
@@ -201,6 +201,7 @@ man/man3/GNURLOPT_LOW_SPEED_TIME.3
 man/man3/GNURLOPT_MAIL_AUTH.3
 man/man3/GNURLOPT_MAIL_FROM.3
 man/man3/GNURLOPT_MAIL_RCPT.3
+man/man3/GNURLOPT_MAIL_RCPT_ALLLOWFAILS.3
 man/man3/GNURLOPT_MAXAGE_CONN.3
 man/man3/GNURLOPT_MAXCONNECTS.3
 man/man3/GNURLOPT_MAXFILESIZE.3
@@ -418,6 +419,7 @@ man/man3/gnurl_multi_socket_all.3
 man/man3/gnurl_multi_strerror.3
 man/man3/gnurl_multi_timeout.3
 man/man3/gnurl_multi_wait.3
+man/man3/gnurl_multi_wakeup.3
 man/man3/gnurl_share_cleanup.3
 man/man3/gnurl_share_init.3
 man/man3/gnurl_share_setopt.3
