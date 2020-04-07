@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19800 2020/04/06 10:27:41 wiz Exp $
+$NetBSD: TODO,v 1.19801 2020/04/07 13:20:55 nia Exp $
 
 Suggested new packages
 ======================
@@ -377,7 +377,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Gorm-1.2.22
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-20.0.3
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
