@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2020/03/18 11:49:21 leot Exp $
+# $NetBSD: Makefile,v 1.105 2020/04/07 13:47:04 ryoon Exp $
 
 DISTNAME=	mpv-0.32.0
 PKGREVISION=	7
@@ -70,6 +70,7 @@ post-install:
 
 .include "options.mk"
 
+LDFLAGS.NetBSD+=	-lossaudio
 .include "../../mk/oss.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/waf/waf.mk"
