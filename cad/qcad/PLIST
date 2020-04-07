@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2019/12/29 14:18:20 plunky Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/04/07 08:18:21 plunky Exp $
 bin/qcad
 lib/libdxflib.so
 lib/libopennurbs.so
@@ -216,6 +216,7 @@ lib/qcad/patterns/imperial/lattice-04.pat
 lib/qcad/patterns/imperial/lattice-05.pat
 lib/qcad/patterns/imperial/lattice-06.pat
 lib/qcad/patterns/imperial/line.pat
+lib/qcad/patterns/imperial/looplinks.pat
 lib/qcad/patterns/imperial/maze-01.pat
 lib/qcad/patterns/imperial/maze-02.pat
 lib/qcad/patterns/imperial/mudst.pat
@@ -235,6 +236,7 @@ lib/qcad/patterns/imperial/swamp.pat
 lib/qcad/patterns/imperial/trans.pat
 lib/qcad/patterns/imperial/tri-overlap.pat
 lib/qcad/patterns/imperial/triang.pat
+lib/qcad/patterns/imperial/wire-fence.pat
 lib/qcad/patterns/imperial/zigzag.pat
 lib/qcad/patterns/metric/acad_iso02w100.pat
 lib/qcad/patterns/metric/acad_iso03w100.pat
@@ -264,12 +266,14 @@ lib/qcad/patterns/metric/ar-b816c.pat
 lib/qcad/patterns/metric/ar-b88.pat
 lib/qcad/patterns/metric/ar-brelm.pat
 lib/qcad/patterns/metric/ar-brstd.pat
+lib/qcad/patterns/metric/ar-conc-01.pat
 lib/qcad/patterns/metric/ar-conc.pat
 lib/qcad/patterns/metric/ar-hbone.pat
 lib/qcad/patterns/metric/ar-parq1.pat
 lib/qcad/patterns/metric/ar-rroof.pat
 lib/qcad/patterns/metric/ar-rshke.pat
 lib/qcad/patterns/metric/ar-sand.pat
+lib/qcad/patterns/metric/barbwire.pat
 lib/qcad/patterns/metric/blocks-01.pat
 lib/qcad/patterns/metric/blocks-02.pat
 lib/qcad/patterns/metric/box-overlap.pat
@@ -279,8 +283,13 @@ lib/qcad/patterns/metric/boxjoin-02.pat
 lib/qcad/patterns/metric/brass.pat
 lib/qcad/patterns/metric/brick.pat
 lib/qcad/patterns/metric/brstone.pat
+lib/qcad/patterns/metric/bubbles-01.pat
+lib/qcad/patterns/metric/bubbles-02.pat
+lib/qcad/patterns/metric/bubbles-03.pat
 lib/qcad/patterns/metric/celtic-01.pat
 lib/qcad/patterns/metric/celtic-02.pat
+lib/qcad/patterns/metric/celtic-03.pat
+lib/qcad/patterns/metric/celtic-04.pat
 lib/qcad/patterns/metric/circles-02.pat
 lib/qcad/patterns/metric/circles.pat
 lib/qcad/patterns/metric/clay.pat
@@ -295,7 +304,10 @@ lib/qcad/patterns/metric/explosion.pat
 lib/qcad/patterns/metric/flex.pat
 lib/qcad/patterns/metric/grass.pat
 lib/qcad/patterns/metric/grate.pat
+lib/qcad/patterns/metric/gravel-01.pat
 lib/qcad/patterns/metric/gravel.pat
+lib/qcad/patterns/metric/hatch-dots.pat
+lib/qcad/patterns/metric/hatch-sqrs.pat
 lib/qcad/patterns/metric/hex.pat
 lib/qcad/patterns/metric/hexagons.pat
 lib/qcad/patterns/metric/hexjoin-01.pat
@@ -321,7 +333,12 @@ lib/qcad/patterns/metric/lattice-03.pat
 lib/qcad/patterns/metric/lattice-04.pat
 lib/qcad/patterns/metric/lattice-05.pat
 lib/qcad/patterns/metric/lattice-06.pat
+lib/qcad/patterns/metric/lattice-07.pat
+lib/qcad/patterns/metric/leaf-01.pat
+lib/qcad/patterns/metric/leaf-02.pat
+lib/qcad/patterns/metric/leaf-03.pat
 lib/qcad/patterns/metric/line.pat
+lib/qcad/patterns/metric/looplinks.pat
 lib/qcad/patterns/metric/maze-01.pat
 lib/qcad/patterns/metric/maze-02.pat
 lib/qcad/patterns/metric/mudst.pat
@@ -330,6 +347,7 @@ lib/qcad/patterns/metric/net3.pat
 lib/qcad/patterns/metric/plast.pat
 lib/qcad/patterns/metric/plasti.pat
 lib/qcad/patterns/metric/qcad-logo.pat
+lib/qcad/patterns/metric/redback.pat
 lib/qcad/patterns/metric/sacncr.pat
 lib/qcad/patterns/metric/scaffold.pat
 lib/qcad/patterns/metric/square.pat
@@ -341,6 +359,11 @@ lib/qcad/patterns/metric/swamp.pat
 lib/qcad/patterns/metric/trans.pat
 lib/qcad/patterns/metric/tri-overlap.pat
 lib/qcad/patterns/metric/triang.pat
+lib/qcad/patterns/metric/weatherboard.pat
+lib/qcad/patterns/metric/weaving.pat
+lib/qcad/patterns/metric/wire-fence.pat
+lib/qcad/patterns/metric/xmastree-01.pat
+lib/qcad/patterns/metric/xmastree-02.pat
 lib/qcad/patterns/metric/zigzag.pat
 lib/qcad/plugins/designer/libqcadcustomwidgets.so
 lib/qcad/plugins/libqcaddxf.so
@@ -2681,7 +2704,9 @@ lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest04.js
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest05.js
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest06.js
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest07.js
+lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest08.js
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/data/contour.dxf
+lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_line.dxf
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_lines.dxf
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_polyline.dxf
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_blocks.dxf
@@ -6078,6 +6103,7 @@ lib/qcad/scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js
 lib/qcad/scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.pro
 lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/CurtainRope.svg
 lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js
+lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.pro
 lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.svg
 lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.svg
 lib/qcad/scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui
@@ -7465,6 +7491,9 @@ lib/qcad/scripts/Modify/Stretch/Tests/StretchTest02.js
 lib/qcad/scripts/Modify/Stretch/Tests/StretchTest03.js
 lib/qcad/scripts/Modify/Stretch/Tests/StretchTest05.js
 lib/qcad/scripts/Modify/Stretch/Tests/StretchTest06.js
+lib/qcad/scripts/Modify/Stretch/Tests/StretchTest07.js
+lib/qcad/scripts/Modify/Stretch/Tests/StretchTest08.js
+lib/qcad/scripts/Modify/Stretch/Tests/StretchTest09.js
 lib/qcad/scripts/Modify/Stretch/Tests/data/entities0.dxf
 lib/qcad/scripts/Modify/Stretch/Tests/data/entities1.dxf
 lib/qcad/scripts/Modify/Stretch/Tests/data/entities2.dxf
@@ -7474,6 +7503,9 @@ lib/qcad/scripts/Modify/Stretch/Tests/required/StretchTest02_000.dxf
 lib/qcad/scripts/Modify/Stretch/Tests/required/StretchTest03_000.dxf
 lib/qcad/scripts/Modify/Stretch/Tests/required/StretchTest05_000.dxf
 lib/qcad/scripts/Modify/Stretch/Tests/required/StretchTest06_000.dxf
+lib/qcad/scripts/Modify/Stretch/Tests/required/StretchTest07_000.dxf
+lib/qcad/scripts/Modify/Stretch/Tests/required/StretchTest08_000.dxf
+lib/qcad/scripts/Modify/Stretch/Tests/required/StretchTest09_000.dxf
 lib/qcad/scripts/Modify/Stretch/doc/Stretch.png
 lib/qcad/scripts/Modify/Stretch/doc/StretchFigure.dxf
 lib/qcad/scripts/Modify/Stretch/doc/StretchFigure.png
@@ -10033,24 +10065,7 @@ lib/qcad/scripts/simple_view.js
 lib/qcad/scripts/splashscreen.png
 lib/qcad/scripts/splashscreen@2x.png
 lib/qcad/scripts/sprintf.js
-lib/qcad/themes/Dark/checkbox_checked.png
-lib/qcad/themes/Dark/checkbox_checked_disabled.png
-lib/qcad/themes/Dark/checkbox_checked_focus.png
-lib/qcad/themes/Dark/checkbox_unchecked.png
-lib/qcad/themes/Dark/checkbox_unchecked_disabled.png
-lib/qcad/themes/Dark/checkbox_unchecked_focus.png
-lib/qcad/themes/Dark/close-hover.png
-lib/qcad/themes/Dark/close.png
-lib/qcad/themes/Dark/radio_checked.png
-lib/qcad/themes/Dark/radio_checked_disabled.png
-lib/qcad/themes/Dark/radio_checked_focus.png
-lib/qcad/themes/Dark/radio_unchecked.png
-lib/qcad/themes/Dark/radio_unchecked_disabled.png
-lib/qcad/themes/Dark/radio_unchecked_focus.png
 lib/qcad/themes/Dark/stylesheet.css
-lib/qcad/themes/Dark/stylesheet_linux.css
-lib/qcad/themes/Dark/triangle_down.png
-lib/qcad/themes/Dark/triangle_right.png
 lib/qcad/ts/assistant_ar.qm
 lib/qcad/ts/assistant_bg.qm
 lib/qcad/ts/assistant_cs.qm
@@ -10569,6 +10584,9 @@ share/qcad/libraries/default/Hydraulics/3-2valve.rdf
 share/qcad/libraries/default/Hydraulics/_META/meta.rdf
 share/qcad/libraries/default/Hydraulics/cylinder.dxf
 share/qcad/libraries/default/Hydraulics/cylinder.rdf
+share/qcad/libraries/default/Mechanics/Gears/CrankWheel.js
+share/qcad/libraries/default/Mechanics/Gears/CrankWheel.ui
+share/qcad/libraries/default/Mechanics/Gears/CrankWheel_LICENSE.txt
 share/qcad/libraries/default/Mechanics/Gears/InvoluteSpur.js
 share/qcad/libraries/default/Mechanics/Gears/InvoluteSpur.rdf
 share/qcad/libraries/default/Mechanics/Gears/InvoluteSpur.ui
