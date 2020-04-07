@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2144 2020/04/07 02:50:37 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2145 2020/04/07 08:14:04 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2946,3 +2946,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/npm to 6.14.4 [adam 2020-04-06]
 	Updated sysutils/tarsnap to 1.0.39nb2 [schmonz 2020-04-06]
 	Updated www/cliqz to 1.34.1 [fox 2020-04-07]
+	Updated sysutils/bcmfw to 2.3 [plunky 2020-04-07]
