@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2020/03/08 16:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.225 2020/04/07 18:04:07 wiz Exp $
 
 DISTNAME=		mutt-1.13.4
 PKGREVISION=		1
@@ -12,8 +12,6 @@ LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3 # or newer
 
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILD_DEPENDS+=		lynx-[0-9]*:../../www/lynx
-
-CONFLICTS+=		neomutt-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
