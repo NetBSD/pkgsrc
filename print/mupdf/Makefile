@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2020/04/07 09:37:46 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2020/04/07 12:13:01 wiz Exp $
 
 DISTNAME=	mupdf-1.16.1-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -19,7 +19,6 @@ INSTALLATION_DIRS+=	bin include lib/pkgconfig
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
 INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${X11BASE}/lib
-LDFLAGS.NetBSD+=	-lGL # for glCallList
 MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=		XCFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		build=release
