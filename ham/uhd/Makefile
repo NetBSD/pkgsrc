@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/04/07 15:51:50 mef Exp $
+# $NetBSD: Makefile,v 1.54 2020/04/07 15:57:02 mef Exp $
 
 DISTNAME=	uhd-3.15.0.0
 CATEGORIES=	ham
@@ -40,7 +40,6 @@ EXTRACT_USING=		gtar
 WRKSRC=			${WRKDIR}/${DISTNAME}/host
 
 # The files with their name uhd-xxxx, are moved down from uhd/xxxx for this process.
-REPLACE_PYTHON+=	utils/converter_benchmark.py
 REPLACE_PYTHON+=	utils/converter_benchmark.py
 REPLACE_PYTHON+=	utils/latency/graph.py
 REPLACE_PYTHON+=	utils/latency/run_tests.py
