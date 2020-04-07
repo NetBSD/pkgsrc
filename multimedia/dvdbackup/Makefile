@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2020/03/20 11:58:03 nia Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/07 09:15:19 rhialto Exp $
 
 DISTNAME=	dvdbackup-0.4.2
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvdbackup/}
 EXTRACT_SUFX=	.tar.xz
