@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2018/10/09 12:21:20 leot Exp $
+$NetBSD: distinfo,v 1.4 2020/04/07 14:14:55 maya Exp $
 
-SHA1 (megatools-1.10.2.tar.gz) = a1ab8663549ca9ddc1173604eb850371b28cca94
-RMD160 (megatools-1.10.2.tar.gz) = 01a2437f40da4112e496de15682268cb0da70bd9
-SHA512 (megatools-1.10.2.tar.gz) = 6d9a5dcba6be12bce38313c3481565b2f8671e354d2e021614b62c2cf30963b9e4a87574dd80b36613290db7721e3ef4d32072a19efee76ff292b17bc6c2bafe
-Size (megatools-1.10.2.tar.gz) = 300486 bytes
+SHA1 (megatools-1.11.0-git-20200404.tar.gz) = 7d9fe2770d52f6e265d2840fcad23d87e7be6151
+RMD160 (megatools-1.11.0-git-20200404.tar.gz) = 2cdffc72a9214d3407b24ecaf6ed168f8fe91ba5
+SHA512 (megatools-1.11.0-git-20200404.tar.gz) = 874b569e3a9d1311f169a5b4e3c40aa3be053344389abae67541f64cb253f5a13bb6f64634524ff10d493772519121206ab7bb535367635cee6194ceb6c603b7
+Size (megatools-1.11.0-git-20200404.tar.gz) = 102383 bytes
