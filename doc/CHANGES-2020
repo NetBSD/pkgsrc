@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2148 2020/04/07 08:52:24 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2149 2020/04/07 09:23:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2952,3 +2952,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated cad/qcad to 3.24.3.0 [plunky 2020-04-07]
 	Updated devel/py-txaio to 20.4.1 [adam 2020-04-07]
 	Updated www/py-flask to 1.1.2 [adam 2020-04-07]
+	Updated devel/py-importlib-resources to 1.4.0 [adam 2020-04-07]
+	Updated devel/py-importlib-metadata to 1.6.0 [adam 2020-04-07]
