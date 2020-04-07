@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2020/01/20 19:50:33 adam Exp $
+# $NetBSD: Makefile,v 1.12 2020/04/07 10:43:30 adam Exp $
 
-DISTNAME=	autopep8-1.5
+DISTNAME=	autopep8-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autopep8/}
