@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2020/01/12 20:20:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2020/04/07 15:51:50 mef Exp $
 
-DISTNAME=	uhd-3.14.1.1
-PKGREVISION=	1
+DISTNAME=	uhd-3.15.0.0
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -42,6 +41,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/host
 
 # The files with their name uhd-xxxx, are moved down from uhd/xxxx for this process.
 REPLACE_PYTHON+=	utils/converter_benchmark.py
+REPLACE_PYTHON+=	utils/converter_benchmark.py
 REPLACE_PYTHON+=	utils/latency/graph.py
 REPLACE_PYTHON+=	utils/latency/run_tests.py
 REPLACE_PYTHON+=	utils/uhd_images_downloader.py.in
@@ -55,6 +55,7 @@ REPLACE_PYTHON+=	tests/devtest/rx_samples_to_file_test.py
 REPLACE_PYTHON+=	tests/devtest/test_messages_test.py
 REPLACE_PYTHON+=	tests/devtest/test_pps_test.py
 REPLACE_PYTHON+=	tests/devtest/tx_bursts_test.py
+REPLACE_PYTHON+=	tests/devtest/tx_waveforms_test.py
 REPLACE_PYTHON+=	tests/devtest/uhd_test_base.py
 REPLACE_PYTHON+=	tests/devtest/usrp_probe.py
 REPLACE_PYTHON+=	tests/devtest/usrp_probe_test.py
