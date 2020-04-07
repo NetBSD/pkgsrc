@@ -1,22 +1,18 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2019/10/04 10:41:44 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2020/04/07 15:51:50 mef Exp $
 
 Allow overrides on PKG_DOC_DIR and PKG_MAN_DIR.
 https://github.com/EttusResearch/uhd/issues/301
 
---- CMakeLists.txt.orig	2019-10-03 18:21:01.000000000 +0000
-+++ CMakeLists.txt
-@@ -128,8 +128,12 @@ set(PKG_DATA_DIR share/uhd)
- if(NOT DEFINED PKG_LIB_DIR)
-     set(PKG_LIB_DIR ${LIBRARY_DIR}/uhd)
+--- host/CMakeLists.txt.orig	2020-01-01 13:21:49.000000000 +0900
++++ CMakeLists.txt	2020-04-08 00:03:10.169349083 +0900
+@@ -124,8 +124,9 @@
+ if(NOT DEFINED PKG_DOC_DIR)
+     set(PKG_DOC_DIR share/doc/uhd)
  endif()
--set(PKG_DOC_DIR share/doc/uhd)
--set(PKG_MAN_DIR share/man/man1)
-+if(NOT DEFINED PKG_DOC_DIR)
-+    set(PKG_DOC_DIR share/doc/uhd)
-+endif()
 +if(NOT DEFINED PKG_MAN_DIR)
-+    set(PKG_MAN_DIR share/man/man1)
+ set(PKG_MAN_DIR share/man/man1)
+-
 +endif()
- 
  ########################################################################
  # UHD config files
+ ########################################################################

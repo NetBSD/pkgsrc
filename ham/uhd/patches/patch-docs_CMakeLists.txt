@@ -1,31 +1,36 @@
-$NetBSD: patch-docs_CMakeLists.txt,v 1.1 2019/10/04 10:41:44 adam Exp $
+$NetBSD: patch-docs_CMakeLists.txt,v 1.2 2020/04/07 15:51:50 mef Exp $
 
 Do not compress man pages.
 
---- docs/CMakeLists.txt.orig	2019-10-03 17:48:04.000000000 +0000
-+++ docs/CMakeLists.txt
-@@ -150,23 +150,5 @@ LIBUHD_REGISTER_COMPONENT("Man Pages" EN
+--- host/docs/CMakeLists.txt.orig	2020-01-01 13:21:49.000000000 +0900
++++ docs/CMakeLists.txt	2020-04-08 00:01:23.449612527 +0900
+@@ -178,28 +178,5 @@
  
+ LIBUHD_REGISTER_COMPONENT("Man Pages" ENABLE_MAN_PAGES ON "${MAN_PAGES_DEPS}" OFF OFF)
  if(ENABLE_MAN_PAGES)
-     #Generate man pages
--    foreach(manfile ${man_page_sources})
--        #make the gzip file depend on the text file
--        string(REPLACE ".1" "" PROGRAM_NAME "${manfile}")
--        set(gzfile "${CMAKE_CURRENT_BINARY_DIR}/${manfile}.gz")
--        set(manfile "${CMAKE_CURRENT_SOURCE_DIR}/${manfile}")
--        add_custom_command(
--            OUTPUT ${gzfile}
--            DEPENDS ${manfile}
--            COMMAND ${GZIP_EXECUTABLE} -9 -cf ${manfile} > ${gzfile}
--            COMMENT "Generating ${PROGRAM_NAME} man page"
--        )
--
--        #make the man page target depend on the gz file
--        list(APPEND man_page_gz_files ${gzfile})
--        UHD_INSTALL(FILES ${gzfile} DESTINATION ${PKG_MAN_DIR} COMPONENT manpages)
--    endforeach(manfile ${man_page_sources})
--
--    #make the man pages a build-time dependency
--    add_custom_target(man_page_gzips ALL DEPENDS ${man_page_gz_files})
-+    UHD_INSTALL(FILES ${man_page_sources} DESTINATION ${PKG_MAN_DIR} COMPONENT manpages)
+-    #Generate man pages; either compressed or not
+-    if(ENABLE_MAN_PAGE_COMPRESSION)
+-        # compress man pages
+-        foreach(manfile ${man_page_sources})
+-            #make the gzip file depend on the text file
+-            string(REPLACE ".1" "" PROGRAM_NAME "${manfile}")
+-            set(gzfile "${CMAKE_CURRENT_BINARY_DIR}/${manfile}.gz")
+-            set(manfile "${CMAKE_CURRENT_SOURCE_DIR}/${manfile}")
+-            add_custom_command(
+-                OUTPUT ${gzfile}
+-                DEPENDS ${manfile}
+-                COMMAND ${GZIP_EXECUTABLE} -9 -cf ${manfile} > ${gzfile}
+-                COMMENT "Generating ${PROGRAM_NAME} man page"
+-            )
+-            #make the man page target depend on the gz file
+-            list(APPEND man_page_gz_files ${gzfile})
+-        endforeach(manfile ${man_page_sources})
+-        #make the man pages a build-time dependency
+-        UHD_INSTALL(FILES ${man_page_gz_files} DESTINATION ${PKG_MAN_DIR} COMPONENT manpages)
+-        add_custom_target(man_page_gzips ALL DEPENDS ${man_page_gz_files})
+-    else(ENABLE_MAN_PAGE_COMPRESSION)
+-        # uncompressed man pages; just install them
+-        UHD_INSTALL(FILES ${man_page_sources} DESTINATION ${PKG_MAN_DIR} COMPONENT manpages)
+-    endif(ENABLE_MAN_PAGE_COMPRESSION)
++   UHD_INSTALL(FILES ${man_page_sources} DESTINATION ${PKG_MAN_DIR} COMPONENT manpages)
  endif(ENABLE_MAN_PAGES)
