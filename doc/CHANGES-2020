@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2158 2020/04/07 14:29:20 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2159 2020/04/07 15:16:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2967,3 +2967,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/megatools to 1.11.0.20200404 [maya 2020-04-07]
 	Updated audio/fasttracker2 to 1.18 [fox 2020-04-07]
 	Updated security/tor-browser to 9.0.7 [wiz 2020-04-07]
+	Updated security/tor-browser to 9.0.8 [wiz 2020-04-07]
