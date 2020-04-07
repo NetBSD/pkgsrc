@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/03/30 11:31:25 roy Exp $
+# $NetBSD: Makefile,v 1.27 2020/04/07 09:29:26 wiz Exp $
 
 DISTNAME=	goaccess-1.3
 PKGREVISION=	5
@@ -25,6 +25,7 @@ CONF_FILES=	${EGDIR}/goaccess.conf ${PKG_SYSCONFDIR}/goaccess.conf
 
 LIBS.SunOS+=		-lsocket -lnsl
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
+LDFLAGS.NetBSD+=	-lterminfo
 
 BROKEN_GETTEXT_DETECTION=	yes
 
@@ -51,4 +52,5 @@ pre-configure:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
