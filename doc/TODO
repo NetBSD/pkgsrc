@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19801 2020/04/07 13:20:55 nia Exp $
+$NetBSD: TODO,v 1.19802 2020/04/08 17:27:11 riastradh Exp $
 
 Suggested new packages
 ======================
@@ -920,7 +920,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pam-yubico-2.21
 	o pari-2.11.2
 	o parrot-7.11.0
-	o pcal-4.8
 	o pcc-1.1.0
 	o pcc-current-20160305
 	o pdmenu-1.2.87
