@@ -1,11 +1,11 @@
-$NetBSD: patch-fixincludes_inclhack.def,v 1.1 2019/10/19 21:20:38 minskim Exp $
+$NetBSD: patch-fixincludes_inclhack.def,v 1.2 2020/04/08 06:39:57 wiz Exp $
 
 A workaround for Catalina SDK bug from
 https://github.com/Homebrew/homebrew-core/pull/44762
 
---- fixincludes/inclhack.def.orig	2018-02-22 08:12:26.000000000 -0800
-+++ fixincludes/inclhack.def	2019-10-18 18:17:01.000000000 -0700
-@@ -1268,6 +1268,28 @@
+--- fixincludes/inclhack.def.orig	2020-03-04 08:29:59.000000000 +0000
++++ fixincludes/inclhack.def
+@@ -1269,6 +1269,28 @@ fix = {
  };
  
  /*
@@ -31,6 +31,6 @@ https://github.com/Homebrew/homebrew-core/pull/44762
 +};
 +
 +/*
-  *  For the AAB_darwin7_9_long_double_funcs fix to be useful,
-  *  you have to not use "" includes.
+  *  macOS 10.12 <AvailabilityInternal.h> uses __attribute__((availability))
+  *  unconditionally.
   */
