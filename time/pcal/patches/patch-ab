@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/21 06:20:53 kei Exp $
+$NetBSD: patch-ab,v 1.2 2020/04/08 06:14:46 riastradh Exp $
 
---- pcal.cgi.orig	Wed Dec 20 15:43:36 2000
-+++ pcal.cgi	Wed Dec 20 15:45:35 2000
+--- html/pcal.cgi.orig	Wed Dec 20 15:43:36 2000
++++ html/pcal.cgi	Wed Dec 20 15:45:35 2000
 @@ -27,8 +27,8 @@
  # common calendar file on your system (note that the user can't use his/her
  # own calendar file since most servers will execute pcal.cgi as 'nobody')
@@ -12,4 +12,4 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/21 06:20:53 kei Exp $
 +file=@@PREFIX@@/share/misc/calendar
  
  # set DEBUG=1 to echo debugging output as HTML text
- DEBUG=0
+ # DEBUG=0

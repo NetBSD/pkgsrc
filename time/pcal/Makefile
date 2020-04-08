@@ -1,45 +1,44 @@
-# $NetBSD: Makefile,v 1.19 2020/03/20 11:58:31 nia Exp $
+# $NetBSD: Makefile,v 1.20 2020/04/08 06:14:46 riastradh Exp $
 #
 
-DISTNAME=	pcal-4.7
-PKGREVISION=	2
+DISTNAME=	pcal-4.11.0
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcal/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pcal.sourceforge.net/
+HOMEPAGE=	https://pcal.sourceforge.net/
 COMMENT=	PostScript calendar program
 
 HTDOCS=		${PREFIX}/share/httpd/htdocs
 CGIBINDIR=	${PREFIX}/libexec/cgi-bin
 WWWSERVER=	${HOSTNAME_CMD:sh}
 
-.include "../../mk/bsd.prefs.mk"	# for PAPERSIZE
-MAKE_ENV+=	PAPERSIZE=${PAPERSIZE:Q}
-MAKE_ENV+=	CC=${CC:Q} HOST_CC=${CC:Q}
+USE_TOOLS+=	gmake
 
-BUILD_TARGET=	pcal
+MAKE_ENV+=	CC=${CC:Q}
+
+BUILD_TARGET=	exec/pcal
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/pcal ${HTDOCS} ${CGIBINDIR}
 
 pre-install:
-	${MV} ${WRKSRC}/pcal.cgi ${WRKSRC}/pcal.cgi.tmp
+	${MV} ${WRKSRC}/html/pcal.cgi ${WRKSRC}/html/pcal.cgi.tmp
 	${SED} -e 's|@@PREFIX@@|${PREFIX}|' \
-		< ${WRKSRC}/pcal.cgi.tmp > ${WRKSRC}/pcal.cgi
-	${MV} ${WRKSRC}/pcal.html ${WRKSRC}/pcal.html.tmp
+		< ${WRKSRC}/html/pcal.cgi.tmp > ${WRKSRC}/html/pcal.cgi
+	${MV} ${WRKSRC}/html/pcal.html ${WRKSRC}/html/pcal.html.tmp
 	${SED} -e 's|@@WWWSERVER@@|${WWWSERVER}|' \
-		< ${WRKSRC}/pcal.html.tmp > ${WRKSRC}/pcal.html
-	${MV} ${WRKSRC}/pcalw.html ${WRKSRC}/pcalw.html.tmp
+		< ${WRKSRC}/html/pcal.html.tmp > ${WRKSRC}/html/pcal.html
+	${MV} ${WRKSRC}/html/pcalw.html ${WRKSRC}/html/pcalw.html.tmp
 	${SED} -e 's|@@WWWSERVER@@|${WWWSERVER}|' \
-		< ${WRKSRC}/pcalw.html.tmp > ${WRKSRC}/pcalw.html
+		< ${WRKSRC}/html/pcalw.html.tmp > ${WRKSRC}/html/pcalw.html
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pcal ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/pcal.cgi ${DESTDIR}${CGIBINDIR}
-	${INSTALL_MAN} ${WRKSRC}/pcal.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pcal.1
-	${INSTALL_DATA} ${WRKSRC}/ReadMe ${DESTDIR}${PREFIX}/share/doc/pcal/ReadMe
-	${INSTALL_DATA} ${WRKSRC}/pcal.html ${DESTDIR}${HTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/pcalw.html ${DESTDIR}${HTDOCS}
+	${INSTALL_PROGRAM} ${WRKSRC}/exec/pcal ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/html/pcal.cgi ${DESTDIR}${CGIBINDIR}
+	${INSTALL_MAN} ${WRKSRC}/doc/pcal.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pcal.1
+	${INSTALL_DATA} ${WRKSRC}/doc/ReadMe.txt ${DESTDIR}${PREFIX}/share/doc/pcal/README
+	${INSTALL_DATA} ${WRKSRC}/html/pcal.html ${DESTDIR}${HTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/html/pcalw.html ${DESTDIR}${HTDOCS}
 
 .include "../../mk/bsd.pkg.mk"

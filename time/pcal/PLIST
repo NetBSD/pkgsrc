@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:38:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/04/08 06:14:46 riastradh Exp $
 bin/pcal
 libexec/cgi-bin/pcal.cgi
 man/man1/pcal.1
-share/doc/pcal/ReadMe
+share/doc/pcal/README
 share/httpd/htdocs/pcal.html
 share/httpd/htdocs/pcalw.html
