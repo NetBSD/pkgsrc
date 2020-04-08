@@ -1,11 +1,12 @@
-$NetBSD: patch-src_dune,v 1.1 2019/03/19 10:48:15 jaapb Exp $
+$NetBSD: patch-src_dune,v 1.2 2020/04/08 11:08:59 jaapb Exp $
 
 Removed unknown parameters
---- src/dune.orig	2019-02-13 10:33:20.000000000 +0000
+
+--- src/dune.orig	2019-11-18 14:56:06.000000000 +0000
 +++ src/dune
 @@ -2,4 +2,4 @@
-  (libraries async_kernel core core.nano_mutex core.squeue thread_pool
-   thread_safe_ivar core.uuid)
+  (libraries async_kernel core_kernel.bounded_int_table core core.nano_mutex
+   core.squeue thread_pool thread_safe_ivar core.time_stamp_counter core.uuid)
   (c_names dump_core_on_job_delay_stubs)
 - (preprocess (pps ppx_jane -annotated-ignores -check-doc-comments)))
 \ No newline at end of file

@@ -1,6 +1,7 @@
-$NetBSD: patch-thread__pool_src_dune,v 1.1 2019/03/19 10:48:15 jaapb Exp $
+$NetBSD: patch-thread__pool_src_dune,v 1.2 2020/04/08 11:08:59 jaapb Exp $
 
 Removed unknown parameters
+
 --- thread_pool/src/dune.orig	2019-02-13 10:33:20.000000000 +0000
 +++ thread_pool/src/dune
 @@ -1,4 +1,4 @@
