@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2020/04/01 14:08:14 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2020/04/08 13:29:54 rhialto Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC7_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC7_DIST_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc7-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
