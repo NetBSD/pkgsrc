@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/09/16 19:27:24 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/08 21:45:14 gutteridge Exp $
 
-DISTNAME=	http-parser-0.8.3
+DISTNAME=	http-parser-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/http-parser/}
