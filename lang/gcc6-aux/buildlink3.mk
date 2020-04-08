@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.4 2019/11/03 19:04:00 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2020/04/08 09:12:46 jperkin Exp $
 
 BUILDLINK_TREE+=	gcc6-aux
 
-.if !defined(GCC5_AUX_BUILDLINK3_MK)
-GCC5_AUX_BUILDLINK3_MK:=
+.if !defined(GCC6_AUX_BUILDLINK3_MK)
+GCC6_AUX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc6-aux+=	gcc6-aux>=20160822
 BUILDLINK_ABI_DEPENDS.gcc6-aux?=	gcc6-aux>=20160822nb1
@@ -17,7 +17,6 @@ BUILDLINK_DEPMETHOD.gcc6-aux?=		build
 
 pkgbase := gcc6-aux
 .include "../../mk/pkg-build-options.mk"
-
 .endif
 
 BUILDLINK_TREE+=	-gcc6-aux
