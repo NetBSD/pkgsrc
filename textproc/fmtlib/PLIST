@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/12/07 13:56:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/08 09:39:38 adam Exp $
 include/fmt/chrono.h
 include/fmt/color.h
 include/fmt/compile.h
@@ -6,6 +6,7 @@ include/fmt/core.h
 include/fmt/format-inl.h
 include/fmt/format.h
 include/fmt/locale.h
+include/fmt/os.h
 include/fmt/ostream.h
 include/fmt/posix.h
 include/fmt/printf.h
