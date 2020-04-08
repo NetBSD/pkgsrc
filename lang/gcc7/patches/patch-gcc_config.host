@@ -1,0 +1,18 @@
+$NetBSD: patch-gcc_config.host,v 1.1 2020/04/08 13:29:54 rhialto Exp $
+
+Add host hooks for NetBSD - needed for working precompiled headers.
+http://gcc.gnu.org/bugzilla/show_bug.cgi?id=58397
+
+--- gcc/config.host.orig	2013-01-10 21:38:27.000000000 +0100
++++ gcc/config.host	2013-09-10 20:25:36.000000000 +0200
+@@ -271,6 +271,10 @@
+     out_host_hook_obj=host-openbsd.o
+     host_xmake_file="${host_xmake_file} x-openbsd"
+     ;;
++  *-*-netbsd*)
++    out_host_hook_obj=host-netbsd.o
++    host_xmake_file="${host_xmake_file} x-netbsd"
++    ;;
+   ia64-*-hpux*)
+     use_long_long_for_widest_fast_int=yes
+     out_host_hook_obj=host-hpux.o
