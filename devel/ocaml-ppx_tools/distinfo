@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/07/31 09:13:50 jaapb Exp $
+$NetBSD: distinfo,v 1.8 2020/04/08 08:56:37 jaapb Exp $
 
-SHA1 (ppx_tools-5.3.tar.gz) = f197aab2f1057fe6107dcd25fba91408fd81470c
-RMD160 (ppx_tools-5.3.tar.gz) = e331797d0f5c2af7aadc418804405aeb4a27f39b
-SHA512 (ppx_tools-5.3.tar.gz) = 817e2688d60f013fa42ffa263cfcc15cfae820240d2e54dfedf1f4a4191f9b9fc365a190cc7eeb9082ed72fbf3c94d6ba72c38c7db3e2bcac49a17ba590d71b5
-Size (ppx_tools-5.3.tar.gz) = 18590 bytes
+SHA1 (ppx_tools-6.0.tar.gz) = 047967742dcf23a2642d76e5d1e2fa84737d3c6d
+RMD160 (ppx_tools-6.0.tar.gz) = 17e1eacfe0ee59ccd47e1f73e6f8a429fc7e4e9c
+SHA512 (ppx_tools-6.0.tar.gz) = b576398a0dfad76ea9874cc18550bb44078a7e8f8dc0c169a0441f75f3881e458c42316c96d816c6e81d5ef219fac3aa539471f006b46088c9b943ed8af8b947
+Size (ppx_tools-6.0.tar.gz) = 18166 bytes
