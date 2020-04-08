@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.33 2020/01/17 16:39:46 nia Exp $
+# $NetBSD: options.mk,v 1.34 2020/04/08 08:40:00 rhialto Exp $
 
 # Global and legacy options
 
@@ -16,6 +16,10 @@ PKG_SUGGESTED_OPTIONS+=		gssapi mutt-compressed-mbox sasl
 # remove after 2019Q1
 PKG_OPTIONS_LEGACY_OPTS+=	ncurses:curses ncursesw:wide-curses
 PKG_OPTIONS_LEGACY_OPTS+=	ssl:openssl
+
+# Must be at the top; some other buildlink files indirectly
+# include bdb.buildlink3.mk.
+BDB_ACCEPTED=		db4 db5
 
 .include "../../mk/bsd.options.mk"
 
@@ -105,7 +109,6 @@ CONFIGURE_ARGS+=	--enable-tokyocabinet
 CONFIGURE_ARGS+=	--without-gdbm
 CONFIGURE_ARGS+=	--without-bdb
 .  else
-BDB_ACCEPTED=		db4 db5
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 .  include "../../mk/bdb.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-hcache
