@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/25 09:19:32 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/04/08 09:34:28 jaapb Exp $
 
-SHA1 (protocol_version_header-0.12.0.tar.gz) = 1338478b668f556f0b11dad2c896f6f2cfcef235
-RMD160 (protocol_version_header-0.12.0.tar.gz) = fb5941ee6fef7711d2d78ccad0af3ba9848a2816
-SHA512 (protocol_version_header-0.12.0.tar.gz) = 2c6ed33f23d1169a54a870c42d3a7dfa7dec0da2ab559f3109b33587ad4b953e927b7485d940a261f6ee2bc711a8cd6dd20aa541ac0a8c53e1e5af77b38a2b2c
-Size (protocol_version_header-0.12.0.tar.gz) = 5303 bytes
+SHA1 (protocol_version_header-0.13.0.tar.gz) = 0b2e4905fabcb90aa968cc07a242c15323d166d5
+RMD160 (protocol_version_header-0.13.0.tar.gz) = cef791a8382db562ffa89c3772198c7c9e02ac3e
+SHA512 (protocol_version_header-0.13.0.tar.gz) = 1b154cc8e7a417edf5a776a484e2b974b0b972004299833342886536239898a3f4b3f1460da8c463888adc307e01a171a62e8e51d7593b152f5cf4fb0540f4d0
+Size (protocol_version_header-0.13.0.tar.gz) = 6526 bytes
