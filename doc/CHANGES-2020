@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2174 2020/04/08 12:26:35 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2175 2020/04/08 12:31:16 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2985,3 +2985,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ocaml-textutils to 0.13.0 [jaapb 2020-04-08]
 	Updated devel/ocaml-async to 0.13.0 [jaapb 2020-04-08]
 	Added net/ocaml-domain-name version 0.3.0 [jaapb 2020-04-08]
+	Updated net/ocaml-ipaddr to 4.0.0 [jaapb 2020-04-08]
