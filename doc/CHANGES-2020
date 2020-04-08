@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2164 2020/04/08 06:40:21 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2165 2020/04/08 08:56:48 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2974,3 +2974,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/khard to 0.16.1 [adam 2020-04-07]
 	Updated lang/gcc8 to 8.4.0 [wiz 2020-04-08]
 	Updated lang/gcc8-libs to 8.4.0nb1 [wiz 2020-04-08]
+	Updated devel/ocaml-ppx_tools to 6.0 [jaapb 2020-04-08]
