@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.NetBSD-x86_64,v 1.2 2020/01/10 07:46:43 rillig Exp $
+@comment $NetBSD: PLIST.NetBSD-x86_64,v 1.3 2020/04/08 16:35:59 wiz Exp $
 gcc9/bin/c++
 gcc9/bin/cc
 gcc9/bin/cpp
@@ -1401,7 +1401,7 @@ gcc9/lib/libitm.spec
 ${PLIST.objc}gcc9/lib/libobjc.la
 gcc9/lib/libquadmath.la
 gcc9/lib/libstdc++.la
-gcc9/lib/libstdc++.so.7.27-gdb.py
+gcc9/lib/libstdc++.so.7.28-gdb.py
 gcc9/lib/libstdc++fs.la
 gcc9/lib/libsupc++.la
 gcc9/libexec/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/cc1
