@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/13 11:06:00 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/04/08 09:19:42 jaapb Exp $
 
-SHA1 (bin_prot-0.12.0.tar.gz) = 70b695c95d186fd16bc395860434a90f16c39b43
-RMD160 (bin_prot-0.12.0.tar.gz) = 724b108e2d7e73803510cab4fcf9c4b74ad39834
-SHA512 (bin_prot-0.12.0.tar.gz) = e3e68e51473449208a5789a72dbfff311934ac23c84d3283f82099850fa0176e082de4ec734a60dcfef93e8c5194974e47024ab411cec5e311f7005ef93841d2
-Size (bin_prot-0.12.0.tar.gz) = 337996 bytes
+SHA1 (bin_prot-0.13.0.tar.gz) = b85637ca7337e46ea0e7321049c6a7f114c0e3f2
+RMD160 (bin_prot-0.13.0.tar.gz) = a1edfc09c6a53e8ea169b86555ea72478d4b63f4
+SHA512 (bin_prot-0.13.0.tar.gz) = b7d120222c3c1b2313d8bbd357d06dcd3433b7b906e89d4188c8746ce83ca7960853f15a81a3721ed7ab63876c4307346af2d4ce3ca68b15650b9e14140c3550
+Size (bin_prot-0.13.0.tar.gz) = 341301 bytes
