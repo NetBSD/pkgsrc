@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2166 2020/04/08 08:58:21 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2167 2020/04/08 09:19:55 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2976,3 +2976,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/gcc8-libs to 8.4.0nb1 [wiz 2020-04-08]
 	Updated devel/ocaml-ppx_tools to 6.0 [jaapb 2020-04-08]
 	Updated devel/ocaml-ppx_deriving to 4.4.1 [jaapb 2020-04-08]
+	Updated devel/ocaml-bin_prot to 0.13.0 [jaapb 2020-04-08]
