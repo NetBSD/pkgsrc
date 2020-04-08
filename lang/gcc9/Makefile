@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2020/03/08 23:52:54 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/08 16:35:59 wiz Exp $
 
-GCC9_VERSION=	9.2.0
+GCC9_VERSION=	9.3.0
 
 DISTNAME=	gcc-${GCC9_VERSION}
 PKGNAME=	gcc9-${GCC9_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC9_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
@@ -76,7 +75,7 @@ LANGS=			c
 LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 
 ## The Library rpath to use in end programs.
-LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*}
+LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*} ${LDFLAGS:M-Wl,-z*}
 
 # The "-static-libstdc++ -static-libgcc" flags are normally added to the
 # boot-ldflags by configure but because we are supply the boot-ldflags
