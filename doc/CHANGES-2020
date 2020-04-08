@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2176 2020/04/08 12:46:40 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2177 2020/04/08 13:33:42 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2987,3 +2987,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/ocaml-domain-name version 0.3.0 [jaapb 2020-04-08]
 	Updated net/ocaml-ipaddr to 4.0.0 [jaapb 2020-04-08]
 	Updated net/ocaml-conduit to 2.1.0 [jaapb 2020-04-08]
+	Updated lang/gcc7 to 7.5.0nb2 [rhialto 2020-04-08]
