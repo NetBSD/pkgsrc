@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2162 2020/04/07 21:39:04 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2163 2020/04/08 06:40:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2972,3 +2972,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/gnurl to 7.69.1 [nikita 2020-04-07]
 	Updated devel/googletest to 1.10.0 [adam 2020-04-07]
 	Updated misc/khard to 0.16.1 [adam 2020-04-07]
+	Updated lang/gcc8 to 8.4.0 [wiz 2020-04-08]
