@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux-x86_64,v 1.1 2020/01/28 21:33:39 rillig Exp $
+@comment $NetBSD: PLIST.Linux-x86_64,v 1.2 2020/04/08 16:35:59 wiz Exp $
 gcc9/bin/c++
 gcc9/bin/cc
 gcc9/bin/cpp
@@ -1409,7 +1409,7 @@ gcc9/lib64/libsanitizer.spec
 gcc9/lib64/libssp.la
 gcc9/lib64/libssp_nonshared.la
 gcc9/lib64/libstdc++.la
-gcc9/lib64/libstdc++.so.6.0.27-gdb.py
+gcc9/lib64/libstdc++.so.6.0.28-gdb.py
 gcc9/lib64/libstdc++fs.la
 gcc9/lib64/libsupc++.la
 gcc9/lib64/libtsan.la
