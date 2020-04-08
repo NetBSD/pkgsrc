@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.270 2020/03/15 19:51:30 wiz Exp $
+# $NetBSD: Makefile,v 1.271 2020/04/08 12:22:10 prlw1 Exp $
 
 .include "Makefile.common"
 
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 COMMENT=	Some useful routines for C programming (glib2)
 
@@ -27,12 +28,13 @@ REPLACE_PYTHON+=	gobject/tests/mkenums.py
 REPLACE_PYTHON+=	tests/gen-casefold-txt.py
 REPLACE_PYTHON+=	tests/gen-casemap-txt.py
 
-FILES_SUBST+=		GIO_MODULES_DIR=${PREFIX}/lib/gio/modules
+GIO_MODULES_DIR=	${PREFIX}/lib/gio/modules
+OWN_DIRS=		${GIO_MODULES_DIR}
+
+FILES_SUBST+=		GIO_MODULES_DIR=${GIO_MODULES_DIR}
 FILES_SUBST+=		GIO_QUERYMODULES=${PREFIX}/bin/gio-querymodules
 FILES_SUBST+=		GLIB_COMPILE_SCHEMAS=${PREFIX}/bin/glib-compile-schemas
 FILES_SUBST+=		GLIB_SCHEMAS_DIR=${PREFIX}/share/glib-2.0/schemas
-
-OWN_DIRS=		${GIO_MODULES_DIR}
 
 BUILD_DEFS+=		VARBASE
 SUBST_CLASSES+=		dbusdb
