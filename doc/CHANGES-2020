@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2179 2020/04/08 16:36:08 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2180 2020/04/08 17:27:11 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2990,3 +2990,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/gcc7 to 7.5.0nb2 [rhialto 2020-04-08]
 	Updated lang/gcc7-libs to 7.5.0nb3 [rhialto 2020-04-08]
 	Updated lang/gcc9 to 9.3.0 [wiz 2020-04-08]
+	Updated time/pcal to 4.11.0 [riastradh 2020-04-08]
