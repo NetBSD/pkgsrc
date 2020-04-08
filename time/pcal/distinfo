@@ -1,15 +1,9 @@
-$NetBSD: distinfo,v 1.7 2015/11/02 23:31:43 agc Exp $
+$NetBSD: distinfo,v 1.8 2020/04/08 06:14:46 riastradh Exp $
 
-SHA1 (pcal-4.7.tar.bz2) = 4604067da16b7674630eb4d8894406b885e85d89
-RMD160 (pcal-4.7.tar.bz2) = d0b5380da2bbf94c5c5824f3355b583abba593bc
-SHA512 (pcal-4.7.tar.bz2) = eb643ea869e808a813aee8a3d3bb7e259370de464a19d5863ddf0d10429247489eec3e978aae771b2d5b54eb3c71cb3b8052da4e8994b131a0f273658808c494
-Size (pcal-4.7.tar.bz2) = 134913 bytes
-SHA1 (patch-aa) = 4defcb72a9cfdfa167e02b15c896be5550d2b219
-SHA1 (patch-ab) = 95205a855ed29f45f68bdb940f88d33133348b97
-SHA1 (patch-ac) = ab1eee4e3441268255d4bbc2d043db74d3eac2ae
-SHA1 (patch-ad) = ffd8b00dbb716df55be4a7e17f4637dad86bcd1f
-SHA1 (patch-ae) = 34ae04ae56d096b1b2294114428dc1f29af83701
-SHA1 (patch-af) = 1d97ed88bbcadc1187b8a010c6a2856222584bc3
-SHA1 (patch-ag) = e52a268b8301459dcecea70927a0c8862e68435e
-SHA1 (patch-ah) = c8a1ccf6c8f5addd7c4088caae4c8d7fd7f54ef3
-SHA1 (patch-ai) = 86458a1eeffea3722cdbe3d65558c267a7220583
+SHA1 (pcal-4.11.0.tgz) = 214bcb4c4b7bc986ae495c96f2ab169233a7f973
+RMD160 (pcal-4.11.0.tgz) = f2c6d061ff0abbb01c33b8d7617f3e1c03e967c5
+SHA512 (pcal-4.11.0.tgz) = a04ed4e859c4df32dd9c8b8dd8076f88679cc631aa4acecfb23524c14eef758fa3cac41f52bc88a018544e2df025b5f659d1bcc8c8f6c317ebfdcbe197c066c8
+Size (pcal-4.11.0.tgz) = 324368 bytes
+SHA1 (patch-ab) = aa664915b47cf9119ef7a1e5a3db964dc30c9a72
+SHA1 (patch-ac) = da39b0cb675f2e955f183964c9ece0263364c97e
+SHA1 (patch-ad) = eaacccb3b3830e0d169820271e8f74d5ec2fc514
