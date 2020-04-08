@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2019/03/19 11:02:59 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/04/08 11:55:26 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-async
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ocaml-async
 OCAML_ASYNC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-async+=	ocaml-async>=0.12.0
+BUILDLINK_ABI_DEPENDS.ocaml-async+=	ocaml-async>=0.13.0
 BUILDLINK_PKGSRCDIR.ocaml-async?=	../../devel/ocaml-async
 
 .endif	# OCAML_ASYNC_BUILDLINK3_MK
