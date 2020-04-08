@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2019/12/30 18:17:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2020/04/08 09:42:05 adam Exp $
 bin/dhcpclient
 bin/map_unit
 bin/rad_counter
@@ -445,7 +445,6 @@ share/examples/freeradius/mods-config/sql/ippool/mongo/queries.conf
 share/examples/freeradius/mods-config/sql/ippool/mysql/procedure.sql
 share/examples/freeradius/mods-config/sql/ippool/mysql/queries.conf
 share/examples/freeradius/mods-config/sql/ippool/mysql/schema.sql
-share/examples/freeradius/mods-config/sql/ippool/oracle/procedures.sql
 share/examples/freeradius/mods-config/sql/ippool/oracle/queries.conf
 share/examples/freeradius/mods-config/sql/ippool/oracle/schema.sql
 share/examples/freeradius/mods-config/sql/ippool/postgresql/procedure.sql
