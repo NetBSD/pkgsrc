@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.105 2020/03/15 22:45:36 tnn Exp $
+# $NetBSD: Makefile,v 1.106 2020/04/08 09:42:05 adam Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-server//}
@@ -116,7 +115,6 @@ EGFILES=		certs/ca.cnf certs/client.cnf certs/inner-server.cnf \
 			mods-config/sql/cui/sqlite/schema.sql \
 			mods-config/sql/ippool/mysql/queries.conf \
 			mods-config/sql/ippool/mysql/schema.sql \
-			mods-config/sql/ippool/oracle/procedures.sql \
 			mods-config/sql/ippool/oracle/queries.conf \
 			mods-config/sql/ippool/oracle/schema.sql \
 			mods-config/sql/ippool/postgresql/queries.conf \
