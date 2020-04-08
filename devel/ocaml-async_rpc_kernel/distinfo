@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 10:43:19 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/04/08 09:41:35 jaapb Exp $
 
-SHA1 (async_rpc_kernel-0.12.0.tar.gz) = 9c12d397b7c189fc89e5d1d75086dbb2000a5ea7
-RMD160 (async_rpc_kernel-0.12.0.tar.gz) = 28548e7d4125d4f1877048647d1611fb116122f6
-SHA512 (async_rpc_kernel-0.12.0.tar.gz) = 7f460f2b89110de6000ff5bed5214b6af51948a860eccc3352f102e59e729d00ca2ec582e372800d2c32c032b7ce3411b8421b1a99ddb273fc2033bf6dcbd3a6
-Size (async_rpc_kernel-0.12.0.tar.gz) = 58824 bytes
-SHA1 (patch-src_dune) = 4b25ede0ad30d91f75a23783045c649c0cf2d5d2
+SHA1 (async_rpc_kernel-0.13.0.tar.gz) = 00df0e0f3b4d622cf11e2c13178a26af9d302e0d
+RMD160 (async_rpc_kernel-0.13.0.tar.gz) = 6519bbd67c6b6e8de532e138e7beabe8494f11f7
+SHA512 (async_rpc_kernel-0.13.0.tar.gz) = 8c925140f55f4a7091b298f83e3ce4e4102fa1add62243cf1a23376c1c37303f36987d45074f033554c1f843b239b53f7169c7995e507045fed9bdf7420439be
+Size (async_rpc_kernel-0.13.0.tar.gz) = 61491 bytes
+SHA1 (patch-src_dune) = cf6bcec340cff3565f4fe29606c794432a44b838
