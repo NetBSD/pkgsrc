@@ -1,9 +1,9 @@
-$NetBSD: patch-gcc_config_netbsd-protos.h,v 1.1 2018/05/05 04:08:36 maya Exp $
+$NetBSD: patch-gcc_config_netbsd-protos.h,v 1.2 2020/04/08 06:39:57 wiz Exp $
 
---- /dev/null	2014-12-15 07:13:57.000000000 +0000
+--- gcc/config/netbsd-protos.h.orig	2020-03-04 08:30:00.000000000 +0000
 +++ gcc/config/netbsd-protos.h
-@@ -0,0 +1,29 @@
-+/* Prototypes.
+@@ -1,4 +1,33 @@
+ /* Prototypes.
 +   Copyright (C) 2001-2014 Free Software Foundation, Inc.
 +
 +This file is part of GCC.
@@ -32,3 +32,7 @@ $NetBSD: patch-gcc_config_netbsd-protos.h,v 1.1 2018/05/05 04:08:36 maya Exp $
 +void netbsd_patch_builtins (void);
 +
 +#endif /* _NETBSD_PROTOS_H_ */
++/* Prototypes.
+    Copyright (C) 2017-2018 Free Software Foundation, Inc.
+ 
+ This file is part of GCC.

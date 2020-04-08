@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.11 2019/10/19 21:20:38 minskim Exp $
+$NetBSD: distinfo,v 1.12 2020/04/08 06:39:57 wiz Exp $
 
-SHA1 (gcc-8.3.0.tar.xz) = c27f4499dd263fe4fb01bcc5565917f3698583b2
-RMD160 (gcc-8.3.0.tar.xz) = 59396f7136301466d0ec15eb7307558c0da692df
-SHA512 (gcc-8.3.0.tar.xz) = 1811337ae3add9680cec64968a2509d085b6dc5b6783fc1e8c295e3e47416196fd1a3ad8dfe7e10be2276b4f62c357659ce2902f239f60a8648548231b4b5802
-Size (gcc-8.3.0.tar.xz) = 63694700 bytes
+SHA1 (gcc-8.4.0.tar.xz) = 00ddb177b04caffd40f7af0175d5b3c8e5442545
+RMD160 (gcc-8.4.0.tar.xz) = 4b3890e8865fae1d2b91166fb98e1097f5401d4a
+SHA512 (gcc-8.4.0.tar.xz) = 6de904f552a02de33b11ef52312bb664396efd7e1ce3bbe37bfad5ef617f133095b3767b4804bc7fe78df335cb53bc83f1ac055baed40979ce4c2c3e46b70280
+Size (gcc-8.4.0.tar.xz) = 63713440 bytes
 SHA1 (isl-0.16.1.tar.bz2) = c5a2b201bf05229647e73203c0bf2d9679d4d21f
 RMD160 (isl-0.16.1.tar.bz2) = 5a99db3fe0d0a1f6bbac1ed4448f2403495c55b2
 SHA512 (isl-0.16.1.tar.bz2) = c188667a84dc5bdddb4ab7c35f89c91bf15a8171f4fcaf41301cf285fb7328846d9a367c096012fec4cc69d244f0bc9e95d84c09ec097394cd4093076f2a041b
 Size (isl-0.16.1.tar.bz2) = 1626446 bytes
 SHA1 (patch-contrib_download__prerequisites) = 9cdcde21ab174052911447d20762ddfd40aa8791
-SHA1 (patch-fixincludes_fixincl.x) = e78103bbc1783f18e39cab5f31a73767617b2a79
-SHA1 (patch-fixincludes_inclhack.def) = 7bc5afb89118bf46c66a34a0f325f0748dd081db
+SHA1 (patch-fixincludes_fixincl.x) = f4d3504db0480f8a3443a684e0132a521a06b026
+SHA1 (patch-fixincludes_inclhack.def) = 7b00974d3f52a8364190a607f52a5d7e8a6db41a
 SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
 SHA1 (patch-gcc_config.gcc) = 4a971d1df7f05cfaefdf462d1b7c6dea1e838713
 SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = b10ef4b9ad39e605fc4e2a0c8dffdae677842e94
@@ -19,11 +19,12 @@ SHA1 (patch-gcc_config_aarch64_aarch64.h) = 64e7a12701f14fea94693908ab0581677d1b
 SHA1 (patch-gcc_config_aarch64_t-aarch64-netbsd) = 29de4fe018f7cecf740bc596d8205f8980de5bfa
 SHA1 (patch-gcc_config_arm_arm.h) = b668b6753e375e57bc4fbc3e5726f60f4808906e
 SHA1 (patch-gcc_config_netbsd-elf.h) = e392918cce01627d64d4153329775c7ad03b4a45
-SHA1 (patch-gcc_config_netbsd-protos.h) = 6d28864b4ccc8c1a63fe28e43601b84b63a00633
-SHA1 (patch-gcc_config_t-netbsd) = 802ad5706aa7ca9629f8e237f08fbb1569d28846
+SHA1 (patch-gcc_config_netbsd-protos.h) = 54641de17fa2c9459497f57fd7fc1e23372b284c
+SHA1 (patch-gcc_config_t-netbsd) = 208a90f7127ad0a6a3573670b441af56716c1b1b
 SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_configure) = 6a2d8eeeed2bf08c3c81291178e669dc91c913ce
 SHA1 (patch-gcc_ggc-common.c) = a5d2dba635859f5d680c3f80d7c30b42461c752b
+SHA1 (patch-gcc_gimplify.c) = 6f4fc96f0de1e0e96bc2e020aa352260d4270ba7
 SHA1 (patch-gcc_ginclude_stddef.h) = fb1f83801e0f5bcec110667dc868c47ff2d10343
 SHA1 (patch-gcc_lto_lto.c) = 7bd85ac8ade76a28c394f6fbe5d495f91824f79f
 SHA1 (patch-gcc_targhooks.c) = b28d8a9696d07bbfb00b7d8c55193ba99447ff1d
@@ -38,4 +39,4 @@ SHA1 (patch-libsanitizer_sanitizer__common_Makefile.am) = 4cf6c4f5189078e8f092bf
 SHA1 (patch-libsanitizer_sanitizer__common_Makefile.in) = 62382c683e98bd8f2f27bd07ef01bdfadcdf256a
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h) = 1b907114f8b3477400fabc7b84ca5c16cd9c2930
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__configure__char.cc) = d498ce411dfcd57652f87957778fab66dd4ab9a0
-SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = 7cbe0b3ca32371d6a0ad534e089ea530d5253620
+SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = 4183b00a5ee6e61524da4755c825a0c08fd01ed6
