@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19802 2020/04/08 17:27:11 riastradh Exp $
+$NetBSD: TODO,v 1.19803 2020/04/08 20:27:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -425,7 +425,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap22-limitipconn-0.24
 	o ap22-vhost-ldap-2.4.0
 	o apache-maven-3.6.2
-	o apache24-2.4.43
 	o apollo-1.7
 	o argtable-2.9
 	o argus-20121202
@@ -437,6 +436,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aspell-nb-2.0.10
 	o asterisk13-13.21.1
 	o autoconvert-0.3.16
+	o autogen-5.18.16
 	o avant-window-navigator-0.4.2
 	o avidemux-2.6.16
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
