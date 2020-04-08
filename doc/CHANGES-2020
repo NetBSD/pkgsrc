@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2172 2020/04/08 11:41:54 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2173 2020/04/08 11:55:38 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2983,3 +2983,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/freeradius to 3.0.21 [adam 2020-04-08]
 	Updated devel/ocaml-async_unix to 0.13.0 [jaapb 2020-04-08]
 	Updated textproc/ocaml-textutils to 0.13.0 [jaapb 2020-04-08]
+	Updated devel/ocaml-async to 0.13.0 [jaapb 2020-04-08]
