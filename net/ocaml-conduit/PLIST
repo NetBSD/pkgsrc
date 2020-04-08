@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/07/01 16:01:36 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/08 12:46:24 jaapb Exp $
 ${PLIST.async}${OCAML_SITELIB}/conduit-async/META
 ${PLIST.async}${PLIST.ocaml-opt}${OCAML_SITELIB}/conduit-async/conduit_async.a
 ${PLIST.async}${OCAML_SITELIB}/conduit-async/conduit_async.cma
@@ -26,6 +26,10 @@ ${PLIST.async}${OCAML_SITELIB}/conduit-async/conduit_async__V2.cmi
 ${PLIST.async}${OCAML_SITELIB}/conduit-async/conduit_async__V2.cmt
 ${PLIST.async}${OCAML_SITELIB}/conduit-async/conduit_async__V2.cmti
 ${PLIST.async}${PLIST.ocaml-opt}${OCAML_SITELIB}/conduit-async/conduit_async__V2.cmx
+${PLIST.async}${OCAML_SITELIB}/conduit-async/conduit_async__V3.cmi
+${PLIST.async}${OCAML_SITELIB}/conduit-async/conduit_async__V3.cmt
+${PLIST.async}${OCAML_SITELIB}/conduit-async/conduit_async__V3.cmti
+${PLIST.async}${PLIST.ocaml-opt}${OCAML_SITELIB}/conduit-async/conduit_async__V3.cmx
 ${PLIST.async}${OCAML_SITELIB}/conduit-async/dune-package
 ${PLIST.async}${OCAML_SITELIB}/conduit-async/opam
 ${PLIST.async}${OCAML_SITELIB}/conduit-async/private_ssl.ml
@@ -34,6 +38,8 @@ ${PLIST.async}${OCAML_SITELIB}/conduit-async/v1.ml
 ${PLIST.async}${OCAML_SITELIB}/conduit-async/v1.mli
 ${PLIST.async}${OCAML_SITELIB}/conduit-async/v2.ml
 ${PLIST.async}${OCAML_SITELIB}/conduit-async/v2.mli
+${PLIST.async}${OCAML_SITELIB}/conduit-async/v3.ml
+${PLIST.async}${OCAML_SITELIB}/conduit-async/v3.mli
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/META
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_launchd.cmi
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_launchd.cmt
@@ -47,10 +53,8 @@ ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_server.ml
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_server.mli
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_tls.cmi
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_tls.cmt
-${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_tls.cmti
 ${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_tls.cmx
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_tls.ml
-${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_tls.mli
 ${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_unix.a
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_unix.cma
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_unix.cmi
@@ -63,10 +67,8 @@ ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_unix.ml
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_unix.mli
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_unix_ssl.cmi
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_unix_ssl.cmt
-${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_unix_ssl.cmti
 ${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_unix_ssl.cmx
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_unix_ssl.ml
-${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/conduit_lwt_unix_ssl.mli
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/dune-package
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/opam
 ${PLIST.lwt}${OCAML_SITELIB}/conduit-lwt-unix/resolver_lwt_unix.cmi
