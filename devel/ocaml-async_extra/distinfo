@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 10:51:00 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/04/08 11:29:05 jaapb Exp $
 
-SHA1 (async_extra-0.12.0.tar.gz) = e748676a6d0e064e3fe0e541c7721e5114910826
-RMD160 (async_extra-0.12.0.tar.gz) = a692d174570044fcba6a7afbd5e915880961660f
-SHA512 (async_extra-0.12.0.tar.gz) = e28d170499a31e1179f2a3dc6c6ee6403f2cae636a6b91d9d9f22a71d11be886ad38f92bfa15def4847336d3549f39d42d76d8a969282a747c9adc695cc24f95
-Size (async_extra-0.12.0.tar.gz) = 38437 bytes
-SHA1 (patch-src_dune) = 553dee22fa0e872033eb64b34a17857f0d51a485
+SHA1 (async_extra-0.13.0.tar.gz) = d4a311d9f97270db27295a838266b9990739f49b
+RMD160 (async_extra-0.13.0.tar.gz) = 695c883c68d6a069939eab6e5ecf76a22962a8cb
+SHA512 (async_extra-0.13.0.tar.gz) = d8cbe44ba2cc02b3289b98961714e6d2869982331e58d246dd055bec46e95d44d55b8c64872cc9edc8b392219b7fcc3031fa6a68cc1e78b300ae5c78104e5257
+Size (async_extra-0.13.0.tar.gz) = 17699 bytes
+SHA1 (patch-async__bus_src_dune) = 089089d2021a76bb165630eabe5b0c8f0a82d1ac
