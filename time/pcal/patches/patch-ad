@@ -1,16 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/12/21 06:20:53 kei Exp $
+$NetBSD: patch-ad,v 1.2 2020/04/08 06:14:46 riastradh Exp $
 
---- pcalw.html.orig	Thu Feb 10 01:06:23 2000
-+++ pcalw.html	Wed Dec 20 17:38:56 2000
-@@ -12,14 +12,14 @@
- 
- -->
- <HEAD>
--<TITLE>pcal v4.6 (single-year mode)</TITLE>
-+<TITLE>pcal v4.7 (single-year mode)</TITLE>
- </HEAD>
- <BODY>
- <H2 ALIGN=CENTER>Generate single-page PostScript calendar for entire year</H2>
+--- html/pcalw.html.orig	Thu Feb 10 01:06:23 2000
++++ html/pcalw.html	Wed Dec 20 17:38:56 2000
+@@ -12,7 +12,7 @@
  
                         <!-- start of form -->
  
