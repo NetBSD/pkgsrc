@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 10:56:03 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/04/08 11:41:44 jaapb Exp $
 
-SHA1 (textutils-0.12.0.tar.gz) = c277da42f1d52ef5871445f810d310414bf058e1
-RMD160 (textutils-0.12.0.tar.gz) = 7ecd1b8d2f47bac0a65db8f2130e661490fb5239
-SHA512 (textutils-0.12.0.tar.gz) = fdac0c1003a2702f0c67667d682a66b794a108955b9d0b28a58ae2799b8607de486bd212efb9b9bcbdea4ed8cc674d45498a2b160d5cca2c416dc2a2eec23278
-Size (textutils-0.12.0.tar.gz) = 12669 bytes
-SHA1 (patch-console_src_dune) = ff057a3d29242f0fe2f86d38f4e3134399c0e6b4
+SHA1 (textutils-0.13.0.tar.gz) = c2a6ac9a976f95ac8573c0284eae9b97cd779bd1
+RMD160 (textutils-0.13.0.tar.gz) = 8a54ee83c4eed67545c8c252f129ed70d5b23759
+SHA512 (textutils-0.13.0.tar.gz) = b48241e48eb988fc2fcf83ff3ff86370450fd94f390d757e19bbe985eb2a54c8dfe0c287d3ad17019b03c8010194d1bf7a0769cc129d0f3e76d3a71c1abf2f18
+Size (textutils-0.13.0.tar.gz) = 12589 bytes
