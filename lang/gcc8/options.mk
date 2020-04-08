@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/11/03 19:04:00 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2020/04/08 06:39:57 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -66,6 +66,7 @@ DELETE_INSTALLED_LIBGCC=	yes
 .  if ${DELETE_INSTALLED_LIBGCC:Uno}
 post-install:	delete-installed-libgcc
 
+.PHONY: delete-installed-libgcc
 delete-installed-libgcc:
 	${FIND} ${DESTDIR} -name 'libgcc_s.so*' -delete
 
@@ -118,9 +119,9 @@ LIBS.SunOS+=		-lgmp
 ### Graphite Support
 ###
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
-ISL16 =		isl-0.16.1
-SITES.${ISL16}.tar.bz2 = ${MASTER_SITE_GNU:=gcc/infrastructure/}
-DISTFILES +=	${ISL16}.tar.bz2
+ISL16=			isl-0.16.1
+SITES.${ISL16}.tar.bz2=	${MASTER_SITE_GNU:=gcc/infrastructure/}
+DISTFILES+=		${ISL16}.tar.bz2
 .endif
 
 ###

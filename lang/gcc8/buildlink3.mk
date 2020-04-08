@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.2 2018/07/23 01:07:08 maya Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2020/04/08 06:39:57 wiz Exp $
 
 BUILDLINK_TREE+=	gcc8
 
 .if !defined(GCC8_BUILDLINK3_MK)
-GCC6SNAPSHOT_BUILDLINK3_MK:=
+GCC8_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gcc8+=	gcc8>=${_GCC_REQD}
 BUILDLINK_ABI_DEPENDS.gcc8+=	gcc8>=8.0
@@ -25,5 +25,6 @@ pkgbase := gcc8
 .include "../../mk/pkg-build-options.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.endif # gcc8_BUILDLINK3_MK
+.endif # GCC8_BUILDLINK3_MK
+
 BUILDLINK_TREE+=	-gcc8

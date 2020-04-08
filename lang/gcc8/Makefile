@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2020/04/01 14:35:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/04/08 06:39:57 wiz Exp $
 
 GCC_PKGNAME=		gcc8
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC8_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC8_DIST_VERSION}
-PKGREVISION=	3
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc8-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
@@ -48,7 +47,7 @@ SUBST_STAGE.vars=	pre-configure
 SUBST_FILES.vars=	gcc/Makefile.in
 SUBST_VARS.vars=	GCC_TARGET_MACHINE
 
-CHECK_PORTABILITY_SKIP+=contrib/*
+CHECK_PORTABILITY_SKIP+=	contrib/*
 
 .include "../../mk/bsd.prefs.mk"
 
