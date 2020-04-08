@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/07/01 16:01:36 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/04/08 12:46:24 jaapb Exp $
 
-SHA1 (ocaml-conduit-1.4.0.tar.gz) = 0002d85cd9194012d7054b0b615fd07830f6ff79
-RMD160 (ocaml-conduit-1.4.0.tar.gz) = cc3ae9b0ed74957fa127ec70d6b5bb23a72f5e02
-SHA512 (ocaml-conduit-1.4.0.tar.gz) = 030946f88bc037c8c1e78818b9250acdd374c5c067d3a718f50818647da7e8b12dbc494c62dd3bd35bf07a85dd4aa1c19a561f5bb95ce065a222ce3fd36d5aa3
-Size (ocaml-conduit-1.4.0.tar.gz) = 39066 bytes
+SHA1 (ocaml-conduit-2.1.0.tar.gz) = 42455080b260edd835d2f66d25a4f7a2d7c1aa7a
+RMD160 (ocaml-conduit-2.1.0.tar.gz) = 438e11bff637c78285abc0fafa265a2690bca4d3
+SHA512 (ocaml-conduit-2.1.0.tar.gz) = c65f55933d00f17f281474d756064e89424226defa10a1e82716ed8f50ceb5f2c8c005b42f25ef32702ccb2ce827f605da4d88425e24198962c264689f48ac82
+Size (ocaml-conduit-2.1.0.tar.gz) = 41641 bytes
