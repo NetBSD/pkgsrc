@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.23 2020/04/07 15:51:50 mef Exp $
+$NetBSD: distinfo,v 1.24 2020/04/08 08:07:17 adam Exp $
 
 SHA1 (uhd-3.15.0.0.tar.gz) = 17286a52a591038af16e870962c1767c5935ec2f
 RMD160 (uhd-3.15.0.0.tar.gz) = b05282c4b3f25bd201e9b91b3652fba9b150c7ae
 SHA512 (uhd-3.15.0.0.tar.gz) = ef62639d956adb5b4815b8e57bf4d6e62519bcaf509ce87af4f6091b79b4bb78c2bc079ec6f678777c24a146d5d5e1c8f225ad7ac5dba46bec6f8e1cc20309b0
 Size (uhd-3.15.0.0.tar.gz) = 12895934 bytes
-SHA1 (patch-CMakeLists.txt) = 2ba015aad8e08963a2bba8e1fc421aae53207cc5
-SHA1 (patch-docs_CMakeLists.txt) = 27b04f5b3ef7b0604b43d50d95dd948535d4b434
+SHA1 (patch-CMakeLists.txt) = 5691ddd6a98f92e649a184cfc092a4eb721c6fe7
 SHA1 (patch-lib_transport_nirio_lvbitx_process-lvbitx.py) = 350af0f9ed999f64105a42195d2df037faef87c7
