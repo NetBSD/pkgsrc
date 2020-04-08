@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/08 12:26:20 jaapb Exp $
+${OCAML_SITELIB}/domain-name/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/domain-name/domain_name.a
+${OCAML_SITELIB}/domain-name/domain_name.cma
+${OCAML_SITELIB}/domain-name/domain_name.cmi
+${OCAML_SITELIB}/domain-name/domain_name.cmt
+${OCAML_SITELIB}/domain-name/domain_name.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/domain-name/domain_name.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/domain-name/domain_name.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/domain-name/domain_name.cmxs
+${OCAML_SITELIB}/domain-name/domain_name.ml
+${OCAML_SITELIB}/domain-name/domain_name.mli
+${OCAML_SITELIB}/domain-name/dune-package
+${OCAML_SITELIB}/domain-name/opam
+share/doc/domain-name/CHANGES.md
+share/doc/domain-name/LICENSE.md
+share/doc/domain-name/README.md

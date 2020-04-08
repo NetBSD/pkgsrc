@@ -1,0 +1,2 @@
+Library for RFC 1035 Internet domain names that preserves the invariants
+specified in the RFC.
