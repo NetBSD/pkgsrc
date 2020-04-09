@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2019/09/13 08:21:08 jperkin Exp $
+$NetBSD: distinfo,v 1.4 2020/04/09 15:00:47 tm Exp $
 
-SHA1 (munin-2.0.49.tar.gz) = 48531b84c4382983cf4fe64a7c3ad22a86cbdc2e
-RMD160 (munin-2.0.49.tar.gz) = 0e13eb4dfd01ea122476d041f51233612db00cfd
-SHA512 (munin-2.0.49.tar.gz) = 20f1f27aa1ff39ed92c967a13581ae199930323f5d2b62b62ce0a548a4cf561595e85d069e836b156c05d4a94c66328009aba56cb1b06c4b2719fbd9e1061ca4
-Size (munin-2.0.49.tar.gz) = 2252353 bytes
+SHA1 (munin-2.0.56.tar.gz) = 8753d2b6b2ed2a10e48f2b880951d969a70c6d93
+RMD160 (munin-2.0.56.tar.gz) = 36ff9fa559d0b0e45612a2f8ad1ddcacaf7b05b8
+SHA512 (munin-2.0.56.tar.gz) = b7012cadac0658902ba04a62a7b51ac86e0e47f496451044926aaa0cb69cafdc5b89ef25e99a80658659a93da6532fc85626c195b04d10c0babe696b204f67ca
+Size (munin-2.0.56.tar.gz) = 2264291 bytes
 SHA1 (patch-MANIFEST) = 538cec30723a6d41b732c9dc4a175472fb821609
 SHA1 (patch-Makefile) = f3fd52b56fcddda3efca61453c23243fac35568a
 SHA1 (patch-Makefile.config) = aeaae9374c58c6baf1901ddb9b55a8fac77cf30c
