@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2187 2020/04/09 12:59:30 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2188 2020/04/09 13:29:17 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2999,3 +2999,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/mit-krb5 to 1.18 [adam 2020-04-09]
 	Updated print/foliate to 2.1.1 [fox 2020-04-09]
 	Updated audio/fasttracker2 to 1.19 [fox 2020-04-09]
+	Updated lang/go114 to 1.14.2 [bsiegert 2020-04-09]
