@@ -1,11 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.2 2018/06/15 20:46:01 tez Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2020/04/09 10:57:05 adam Exp $
 
-Don't build plugin examples & tests and avoid libtool problem.
-No idea why... copied from previous instance of this package.
+Don't build plugin examples and tests to avoid libtool problems.
 
---- Makefile.in.orig	2018-05-03 14:34:47.000000000 +0000
+--- Makefile.in.orig	2020-02-12 17:21:58.000000000 +0000
 +++ Makefile.in
-@@ -9,23 +9,11 @@ mydir=.
+@@ -9,28 +9,15 @@ mydir=.
  SUBDIRS=util include lib \
  	@sam2_plugin@ \
  	plugins/audit \
@@ -13,6 +12,7 @@ No idea why... copied from previous instance of this package.
  	@audit_plugin@ \
 -	plugins/kadm5_hook/test \
 -	plugins/kadm5_auth/test \
+-	plugins/gssapi/negoextest \
 -	plugins/hostrealm/test \
 -	plugins/localauth/test \
 -	plugins/pwqual/test \
@@ -21,29 +21,16 @@ No idea why... copied from previous instance of this package.
 -	plugins/certauth/test \
  	plugins/kdb/db2 \
  	@ldap_plugin_dir@ \
+ 	@lmdb_plugin_dir@ \
 -	plugins/kdb/test \
 -	plugins/kdcpolicy/test \
  	plugins/preauth/otp \
  	plugins/preauth/pkinit \
+ 	plugins/preauth/spake \
 -	plugins/preauth/test \
  	plugins/tls/k5tls \
- 	kdc kadmin slave clients appl tests \
+-	kdc kadmin kprop clients appl tests \
++	kdc kadmin kprop clients appl \
  	config-files build-tools man doc @po@
-@@ -76,7 +64,7 @@ INSTALLMKDIRS = $(KRB5ROOT) $(KRB5MANROO
- install-strip:
- 	$(MAKE) install INSTALL_STRIP=-s
- 
--install-recurse: install-mkdirs
-+install-recurse:
- 
- install-mkdirs:
- 	@for i in $(INSTALLMKDIRS); do \
-@@ -87,7 +75,7 @@ install-headers-mkdirs:
- 	$(srcdir)/config/mkinstalldirs $(DESTDIR)$(KRB5_INCDIR)
- 	$(srcdir)/config/mkinstalldirs $(DESTDIR)$(KRB5_INCDIR)/gssapi
- 	$(srcdir)/config/mkinstalldirs $(DESTDIR)$(KRB5_INCDIR)/gssrpc
--install-headers-prerecurse: install-headers-mkdirs
-+install-headers-prerecurse:
- 
- clean-:: clean-windows
- clean-unix::
+ WINSUBDIRS=include util lib ccapi windows clients appl plugins\preauth\spake
+ BUILDTOP=$(REL).
