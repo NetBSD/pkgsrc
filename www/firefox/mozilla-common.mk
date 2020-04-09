@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.159 2020/04/04 02:37:30 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.160 2020/04/09 14:01:26 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -21,7 +21,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 # Some modules written in Rust dislike gnu++17 as of 74.0.
-USE_LANGUAGES+=		c99 gnu++14
+USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize virtualsize
 
 TOOL_DEPENDS+=		cbindgen>=0.13.0:../../devel/cbindgen
@@ -31,6 +31,12 @@ CONFIGURE_ARGS+=	--disable-nodejs
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
 .endif
 
+# Depend on Python3 sqlite3 module.
+.if !empty(PYTHON_VERSION_DEFAULT:M3[6789])
+BUILD_DEPENDS+=		py${PYTHON_VERSION_DEFAULT}-sqlite3-[0-9]*:../../databases/py-sqlite3
+.else
+BUILD_DEPENDS+=		py37-sqlite3-[0-9]*:../../databases/py-sqlite3
+.endif
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		nasm>=1.1:../../devel/nasm
 BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm

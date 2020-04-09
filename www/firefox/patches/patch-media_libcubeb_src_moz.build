@@ -1,8 +1,8 @@
-$NetBSD: patch-media_libcubeb_src_moz.build,v 1.19 2020/01/18 15:32:40 nia Exp $
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.20 2020/04/09 14:01:26 ryoon Exp $
 
 * Add Sun audio support
 
---- media/libcubeb/src/moz.build.orig	Wed Jan  8 01:23:35 2020
+--- media/libcubeb/src/moz.build.orig	2020-04-03 19:35:03.000000000 +0000
 +++ media/libcubeb/src/moz.build
 @@ -23,6 +23,12 @@ if CONFIG['MOZ_ALSA']:
      ]
@@ -17,11 +17,3 @@ $NetBSD: patch-media_libcubeb_src_moz.build,v 1.19 2020/01/18 15:32:40 nia Exp $
  if CONFIG['MOZ_PULSEAUDIO'] or CONFIG['MOZ_JACK']:
      SOURCES += [
          'cubeb_resampler.cpp',
-@@ -92,6 +98,7 @@ FINAL_LIBRARY = 'gkmedias'
- 
- CFLAGS += CONFIG['MOZ_ALSA_CFLAGS']
- CFLAGS += CONFIG['MOZ_JACK_CFLAGS']
-+CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
- CFLAGS += CONFIG['MOZ_PULSEAUDIO_CFLAGS']
- 
- # We allow warnings for third-party code that can be updated from upstream.
