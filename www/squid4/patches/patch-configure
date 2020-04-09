@@ -1,14 +1,15 @@
-$NetBSD: patch-configure,v 1.2 2020/02/04 03:03:49 taca Exp $
+$NetBSD: patch-configure,v 1.3 2020/04/09 09:45:20 sborrill Exp $
 
 * More support for OpenSSL 1.1; not only check SSL_Library_init() but
   also check OPENSSL_init_ssl().
 * Fix syntax error by accidental new line.
-* Utilisze <stdlib.h> on BSD.
+* Utilize <stdlib.h> on BSD.
 * Do not override CFLAGS/CXXFLAGS except linux.
+* Fix detection of IPv6 NAT in IPFilter by including correct headers
 
 --- configure.orig	2020-01-20 02:51:59.000000000 +0000
-+++ configure
-@@ -23201,10 +23201,12 @@ do
++++ configure	2020-04-09 08:51:08.000000000 +0100
+@@ -23201,10 +23201,12 @@
  done
  
    # GLIBC 2.30 deprecates sysctl.h. Test with the same flags that (may) break includes later.
@@ -24,7 +25,7 @@ $NetBSD: patch-configure,v 1.2 2020/02/04 03:03:49 taca Exp $
        ${TRUE}
        ;;
      mingw)
-@@ -23244,6 +23246,7 @@ done
+@@ -23244,6 +23246,7 @@
  do :
    as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
  ac_fn_cxx_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
@@ -32,7 +33,7 @@ $NetBSD: patch-configure,v 1.2 2020/02/04 03:03:49 taca Exp $
  #include <sys/types.h>
  #include <sys/socket.h>
  
-@@ -24080,7 +24083,51 @@ if test "x$ac_cv_lib_ssl_SSL_CTX_new" = 
+@@ -24080,7 +24083,51 @@
    LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
  else
  
@@ -85,7 +86,7 @@ $NetBSD: patch-configure,v 1.2 2020/02/04 03:03:49 taca Exp $
  
  fi
  
-@@ -24183,7 +24230,51 @@ if test "x$ac_cv_lib_ssl_SSL_CTX_new" = 
+@@ -24183,7 +24230,51 @@
    LIBOPENSSL_LIBS="-lssl $LIBOPENSSL_LIBS"
  else
  
@@ -138,7 +139,7 @@ $NetBSD: patch-configure,v 1.2 2020/02/04 03:03:49 taca Exp $
  
  fi
  
-@@ -39234,6 +39325,8 @@ else
+@@ -39234,6 +39325,8 @@
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -147,7 +148,29 @@ $NetBSD: patch-configure,v 1.2 2020/02/04 03:03:49 taca Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -42057,7 +42150,7 @@ _ACEOF
+@@ -42021,6 +42114,9 @@
+ #if USE_SOLARIS_IPFILTER_MINOR_T_HACK
+ #define minor_t fubar
+ #endif
++#if HAVE_SYS_PARAM_H
++#include <sys/param.h>
++#endif
+ #if HAVE_SYS_TYPES_H
+ #include <sys/types.h>
+ #endif
+@@ -42046,7 +42142,11 @@
+ #elif HAVE_NETINET_IP_FIL_H
+ #include <netinet/ip_fil.h>
+ #endif
++#if HAVE_IP_NAT_H
+ #include <ip_nat.h>
++#elif HAVE_NETINET_IP_NAT_H
++#include <netinet/ip_nat.h>
++#endif
+ 
+ "
+ if test "x$ac_cv_member_struct_natlookup_nl_inipaddr_in6" = xyes; then :
+@@ -42057,11 +42157,14 @@
  
  
  fi
@@ -156,3 +179,31 @@ $NetBSD: patch-configure,v 1.2 2020/02/04 03:03:49 taca Exp $
     "ac_cv_member_struct_natlookup_nl_realipaddr_in6___" "
  #if USE_SOLARIS_IPFILTER_MINOR_T_HACK
  #define minor_t fubar
+ #endif
++#if HAVE_SYS_PARAM_H
++#include <sys/param.h>
++#endif
+ #if HAVE_SYS_TYPES_H
+ #include <sys/types.h>
+ #endif
+@@ -42087,7 +42190,11 @@
+ #elif HAVE_NETINET_IP_FIL_H
+ #include <netinet/ip_fil.h>
+ #endif
++#if HAVE_IP_NAT_H
+ #include <ip_nat.h>
++#elif HAVE_NETINET_IP_NAT_H
++#include <netinet/ip_nat.h>
++#endif
+ 
+ "
+ if test "x$ac_cv_member_struct_natlookup_nl_realipaddr_in6___" = xyes; then :
+@@ -44368,6 +44475,8 @@
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
