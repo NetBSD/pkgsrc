@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2020/04/08 23:22:48 fox Exp $
+$NetBSD: distinfo,v 1.4 2020/04/09 12:40:20 fox Exp $
 
-SHA1 (foliate-2.1.0.tar.gz) = 1cdffe1b8af484e5151ac010fd424585f33c29ce
-RMD160 (foliate-2.1.0.tar.gz) = bee0b9fc653849ef6f7029842c5c62c9282178f4
-SHA512 (foliate-2.1.0.tar.gz) = 4d29255b015995ec8017dddd510e31fd39fa45bcceeabd66816aa13f8d10f08cf579ae98dd75ed0a9a4b2443ba1ae2517d032b359baeafc198f4dd5607237c40
-Size (foliate-2.1.0.tar.gz) = 3123567 bytes
+SHA1 (foliate-2.1.1.tar.gz) = 38a18901948ed1d31bd7df46ce7f414a15188356
+RMD160 (foliate-2.1.1.tar.gz) = c4de4a13e35833ce303f42e161a17ec3e0b2e026
+SHA512 (foliate-2.1.1.tar.gz) = 164ba01bc7a786fa4b8998af4efc8e03bfc583219615f0622bd0a45bedb5fcb096e2ea22eb1daa076af2a208b87ac684882e1ca457dc4e454b7f6ce08fb3caaa
+Size (foliate-2.1.1.tar.gz) = 3123638 bytes
 SHA1 (patch-src_assets_KindleUnpack_kindleunpack.py) = 2b558fe842669982aec6087e9ce1c72f1fc52315
 SHA1 (patch-src_epubView.js) = 894a196410894d80ff60ab0338003f327276aa9e
