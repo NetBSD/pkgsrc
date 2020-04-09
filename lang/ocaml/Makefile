@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2020/01/23 07:17:13 dbj Exp $
+# $NetBSD: Makefile,v 1.134 2020/04/09 15:53:10 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -12,6 +12,11 @@ USE_TOOLS+=		bash
 USE_LANGUAGES+=		c
 USE_LIBTOOL=		yes
 USE_GNU_CONFIGURE_HOST=	no
+
+# This actually works fine, but requires some patches that the maintainer
+# insists on removing every time the package is updated, so we unfortunately
+# have to mark it broken to stop wasting people's valuable time investigating.
+NOT_FOR_BULK_PLATFORM=	SunOS-*-*
 
 #USE_GCC_RUNTIME=	yes
 
