@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.80 2020/04/09 16:48:08 nia Exp $
+# $NetBSD: options.mk,v 1.81 2020/04/09 16:54:22 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 
@@ -33,6 +33,7 @@ PKG_SUGGESTED_OPTIONS+=		llvm
 
 # ELF TLS is broken in at least the following cases:
 # - NetBSD with SDL2 without X11
+# - FreeBSD - https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/3559
 # - Linux with musl libc
 #
 # https://gitlab.freedesktop.org/mesa/mesa/issues/966
