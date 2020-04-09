@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.2 2020/03/22 18:48:06 rillig Exp $
+# $NetBSD: Makefile.common,v 1.3 2020/04/09 15:00:47 tm Exp $
 #
 # used by sysutils/munin-common/Makefile
 # used by sysutils/munin-master/Makefile
 # used by sysutils/munin-node/Makefile
 
-VERSION=	2.0.49
+VERSION=	2.0.56
 DISTNAME=	munin-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://downloads.munin-monitoring.org/munin/stable/${VERSION}/
