@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/04/08 08:07:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/04/09 16:23:09 prlw1 Exp $
 bin/uhd_cal_rx_iq_balance
 bin/uhd_cal_tx_dc_offset
 bin/uhd_cal_tx_iq_balance
@@ -140,7 +140,7 @@ lib/cmake/uhd/UHDBoost.cmake
 lib/cmake/uhd/UHDConfig.cmake
 lib/cmake/uhd/UHDConfigVersion.cmake
 lib/libuhd.so
-lib/libuhd.so.${PKGVERSION}
+lib/libuhd.so.3.15.0
 lib/pkgconfig/uhd.pc
 lib/uhd/examples/benchmark_rate
 lib/uhd/examples/benchmark_streamer
