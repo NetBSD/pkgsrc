@@ -1,10 +1,10 @@
-$NetBSD: patch-audio_out_ao__netbsd.c,v 1.5 2020/04/09 20:53:39 nia Exp $
+$NetBSD: patch-audio_out_ao__netbsd.c,v 1.6 2020/04/09 21:08:38 nia Exp $
 
 NetBSD audio support.
 
---- audio/out/ao_netbsd.c.orig	2020-04-09 20:51:23.971921857 +0000
+--- audio/out/ao_netbsd.c.orig	2020-04-09 21:05:57.443146477 +0000
 +++ audio/out/ao_netbsd.c
-@@ -0,0 +1,276 @@
+@@ -0,0 +1,264 @@
 +/*
 + * Copyright (c) 2020 Nia Alarie <nia@NetBSD.org>
 + * All rights reserved.
@@ -155,12 +155,6 @@ NetBSD audio support.
 +static void reset(struct ao *ao)
 +{
 +    struct priv *p = ao->priv;
-+    struct audio_info info;
-+
-+    if (ioctl(p->fd, AUDIO_GETBUFINFO, &info) == -1) {
-+        MP_ERR(ao, "AUDIO_GETBUFINFO failed: %s\n", mp_strerror(errno));
-+        return;
-+    }
 +
 +    (void)ioctl(p->fd, AUDIO_FLUSH, NULL);
 +}
@@ -168,12 +162,6 @@ NetBSD audio support.
 +static void drain(struct ao *ao)
 +{
 +    struct priv *p = ao->priv;
-+    struct audio_info info;
-+
-+    if (ioctl(p->fd, AUDIO_GETBUFINFO, &info) == -1) {
-+        MP_ERR(ao, "AUDIO_GETBUFINFO failed: %s\n", mp_strerror(errno));
-+        return;
-+    }
 +
 +    (void)ioctl(p->fd, AUDIO_DRAIN, NULL);
 +}
