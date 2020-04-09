@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2019/12/15 15:38:58 taca Exp $
+# $NetBSD: Makefile,v 1.42 2020/04/09 15:00:47 tm Exp $
 #
 
 PKGNAME=	${DISTNAME:S/munin/munin-node/}
-PKGREVISION=	1
 COMMENT=	System monitoring tool, client version
 
 .include "../../sysutils/munin-common/Makefile.common"
@@ -15,8 +14,8 @@ DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
 DEPENDS+=	p5-Socket6>=0:../../net/p5-Socket6
 DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 
-OWN_DIRS+=		${PKG_SYSCONFDIR}/plugin-conf.d
-OWN_DIRS=		${PKG_SYSCONFDIR}/plugins
+OWN_DIRS=		${PKG_SYSCONFDIR}/plugin-conf.d
+OWN_DIRS+=		${PKG_SYSCONFDIR}/plugins
 
 OWN_DIRS_PERMS+=	${MUNIN_DBDIR} ${MUNIN_USER} ${MUNIN_GROUP} 0755
 OWN_DIRS_PERMS+=	${MUNIN_LOGDIR} ${MUNIN_USER} ${MUNIN_GROUP} 0755
@@ -33,6 +32,8 @@ CONF_FILES+=		${EGDIR}/munin-node.conf ${PKG_SYSCONFDIR}/munin-node.conf
 INSTALLATION_DIRS+=	${EGDIR}
 
 CHECK_INTERPRETER_SKIP+=	lib/munin/plugins/tomcat_
+
+CHECK_PORTABILITY_SKIP+=	plugins/*
 
 RCD_SCRIPTS+=		munin-node
 
