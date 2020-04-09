@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2020/04/05 06:10:28 wiz Exp $
+$NetBSD: distinfo,v 1.2 2020/04/09 09:40:47 jperkin Exp $
 
 SHA1 (mozjs60_60.8.0.orig.tar.xz) = b66207ee477c110995029f173e6b026f2e013591
 RMD160 (mozjs60_60.8.0.orig.tar.xz) = fef033969a51dc56c84669d33401f60bd499de6d
@@ -6,6 +6,10 @@ SHA512 (mozjs60_60.8.0.orig.tar.xz) = ad4d5d17824b1d0e50fc43a56cb5ffe022ffd150ce
 Size (mozjs60_60.8.0.orig.tar.xz) = 25294372 bytes
 SHA1 (patch-.._.._config_rules.mk) = cf3421d991e1cbfab4c0cdcb7b648b1388fa32d5
 SHA1 (patch-.._.._python_mozbuild_mozbuild_backend_recursivemake.py) = dda670432e5673c5d28dcf6c4902d4a724e71170
+SHA1 (patch-gc_Memory.cpp) = ba865bee4b99ce6298404b41b465b281fd23555f
 SHA1 (patch-jsdate.cpp) = f9314460476ffbc00fe85a75bddc964807d0153f
+SHA1 (patch-threading_posix_Thread.cpp) = c48a642fa98d8112c149142a4af4ac633d3ae332
+SHA1 (patch-util_NativeStack.cpp) = 68d2d80291a856c74bac2e6870317f143bb61355
 SHA1 (patch-vm_Time.cpp) = 5c08e7b3997055c50f40aadcaefb81628cf1133c
 SHA1 (patch-vm_Time.h) = 1dbc623a9b5e249d84bffd1b036feb7b6a54ce75
+SHA1 (patch-wasm_WasmSignalHandlers.cpp) = 9023ead4639414ab0ca6641191dcb1a9aab1298a
