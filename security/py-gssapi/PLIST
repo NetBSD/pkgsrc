@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/08/03 11:42:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/04/09 08:28:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,9 @@ ${PYSITELIB}/gssapi/__init__.pyo
 ${PYSITELIB}/gssapi/_utils.py
 ${PYSITELIB}/gssapi/_utils.pyc
 ${PYSITELIB}/gssapi/_utils.pyo
+${PYSITELIB}/gssapi/_win_config.py
+${PYSITELIB}/gssapi/_win_config.pyc
+${PYSITELIB}/gssapi/_win_config.pyo
 ${PYSITELIB}/gssapi/creds.py
 ${PYSITELIB}/gssapi/creds.pyc
 ${PYSITELIB}/gssapi/creds.pyo
