@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2183 2020/04/09 00:21:27 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2184 2020/04/09 08:35:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2994,3 +2994,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-http-parser to 0.9.0 [gutteridge 2020-04-08]
 	Updated print/foliate to 2.1.0 [fox 2020-04-08]
 	Added audio/pavucontrol-qt version 0.14.1 [gutteridge 2020-04-09]
+	Updated security/py-gssapi to 1.6.5 [adam 2020-04-09]
+	Updated net/py-smbc to 1.0.21 [adam 2020-04-09]
