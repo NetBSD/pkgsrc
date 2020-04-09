@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.128 2020/02/27 13:19:03 adam Exp $
+$NetBSD: distinfo,v 1.129 2020/04/09 14:37:15 adam Exp $
 
-SHA1 (wireshark-3.2.2.tar.xz) = 9cc54a56e9c2ed77e1bc436d9ae2f7bba68d26f8
-RMD160 (wireshark-3.2.2.tar.xz) = 886e731f8055c32f82d29931981b13a07bb0584c
-SHA512 (wireshark-3.2.2.tar.xz) = ab0a312369655f10926dc4245c2e11b988e0a1e49ffefe22d8fdad31e4f310b0b141bac080034511f4ffb1c6cace7e6e595c59a8f65d67909fdcb1c16e87b651
-Size (wireshark-3.2.2.tar.xz) = 31548392 bytes
-SHA1 (patch-CMakeLists.txt) = e73e8fa117fda08a5ed5e8293e743c54beb64b5b
+SHA1 (wireshark-3.2.3.tar.xz) = 4656856a40b294f183900ba47651b0fc8e3950fd
+RMD160 (wireshark-3.2.3.tar.xz) = b0f8681798a5bd180eb2f23c9ae448c5041d5bf9
+SHA512 (wireshark-3.2.3.tar.xz) = 6e13f5aba9c3f531fab94c9f19e85856278ff534d02e406143c0c134c9b37a76d372105b43f51e95f319e31d742fc17c2812defe377886bd8f7ed03f743f9e9a
+Size (wireshark-3.2.3.tar.xz) = 31572052 bytes
+SHA1 (patch-CMakeLists.txt) = 399adad3434a00d6eaf6e36afe8e96ddb0812d68
