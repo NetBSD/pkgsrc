@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.15 2019/09/09 12:21:44 tm Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/04/09 15:00:47 tm Exp $
+bin/munin-get
 bin/munindoc
 lib/munin/plugins/amavis
 lib/munin/plugins/apache_accesses
@@ -48,7 +49,6 @@ lib/munin/plugins/hp2000_
 lib/munin/plugins/http_loadtime
 lib/munin/plugins/ifx_concurrent_sessions_
 lib/munin/plugins/ipac-ng
-lib/munin/plugins/ipmi_
 lib/munin/plugins/ipmi_sensor_
 lib/munin/plugins/ircu
 lib/munin/plugins/loggrep
@@ -71,7 +71,6 @@ lib/munin/plugins/mysql_queries
 lib/munin/plugins/mysql_slowqueries
 lib/munin/plugins/mysql_threads
 lib/munin/plugins/named
-lib/munin/plugins/netopia
 lib/munin/plugins/netstat
 lib/munin/plugins/nginx_request
 lib/munin/plugins/nginx_status
@@ -179,7 +178,6 @@ lib/munin/plugins/tomcat_access
 lib/munin/plugins/tomcat_jvm
 lib/munin/plugins/tomcat_threads
 lib/munin/plugins/tomcat_volume
-lib/munin/plugins/users
 lib/munin/plugins/varnish_
 lib/munin/plugins/vmstat
 lib/munin/plugins/zimbra_
@@ -201,6 +199,7 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Utils.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Plugin.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Plugin/Pgsql.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Plugin/SNMP.pm
+man/man1/munin-get.1
 man/man1/munin-node-configure.1
 man/man1/munin-node.1
 man/man1/munin-run.1
@@ -227,6 +226,5 @@ sbin/munin-node
 sbin/munin-node-configure
 sbin/munin-run
 share/examples/munin/munin-node.conf
-share/examples/rc.d/munin-node
 @pkgdir etc/munin/plugin-conf.d
 @pkgdir var/munin/plugin-state

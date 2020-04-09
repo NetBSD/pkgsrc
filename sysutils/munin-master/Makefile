@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/09 12:21:44 tm Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/09 15:00:47 tm Exp $
 #
 
 PKGNAME=	${DISTNAME:S/munin/munin-master/}
@@ -61,6 +61,7 @@ CONF_FILES+=	${STATIC_EGDIR}/${f} ${PKG_SYSCONFDIR}/static/${f}
 INSTALLATION_DIRS+=	${EGDIR}
 
 CHECK_PORTABILITY_SKIP+=	node/node.d/*
+CHECK_PORTABILITY_SKIP+=	plugins/*
 
 BUILD_TARGET=		build
 INSTALL_TARGET=		install-master-prime
