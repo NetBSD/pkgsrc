@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.25 2019/04/11 02:21:09 mrg Exp $
+$NetBSD: distinfo,v 1.26 2020/04/09 11:55:02 rhialto Exp $
 
 SHA1 (kermit-9.0.302/cku302.tar.gz) = d04c8b5600bc0bb0f163d294881f7a5a0d4395b5
 RMD160 (kermit-9.0.302/cku302.tar.gz) = ef3a71b5a42868c80408ac09662d00b71da0b0c8
 SHA512 (kermit-9.0.302/cku302.tar.gz) = 2cfc264e5262d29618fdf218fd3407fd9049b16110972cdddb03d114703b7a0ea13c4b0a354f50c2a9f70d4727732fe4d1920b5c656f969bc56c1eb9dc3c43fa
 Size (kermit-9.0.302/cku302.tar.gz) = 3122219 bytes
 SHA1 (patch-aa) = fd3a613ce3cd3755a2e3b8baf33df33593713024
-SHA1 (patch-ab) = 2dd97608d57d7b46630bcff7ec234449e8abe472
+SHA1 (patch-ab) = 280bfca4d44630bc9ec4a9331b650b81c7f80774
 SHA1 (patch-ac) = 62cc9e92f2413a42312d9f6d168ee85664b6aab9
 SHA1 (patch-ad) = 414f61c19185e4a82a8326121c2d9dacfba48077
 SHA1 (patch-ae) = 53384e9cbfe13559d69ab95215a4575f726dc325
@@ -13,9 +13,11 @@ SHA1 (patch-af) = 2a09f9f933d3c1e6860983d8138ac61f33306ef7
 SHA1 (patch-ag) = cae37680ea5af85f4d2c774fe230f73a1f0be48c
 SHA1 (patch-ah) = 5b2098dfd57f8bd4d107acafaabe1a2c9b97d037
 SHA1 (patch-aj) = 6468e2139639f601de4609db8dff07b8b3a82d82
-SHA1 (patch-ak) = 9ded2d7cc3a83158edfbbe87851f892ccb09df0b
+SHA1 (patch-ak) = 983583d79abc4fcee1b7e9bf8ae46f184aa7011d
 SHA1 (patch-al) = 616ad10e65b24a04d24ff2556d6362ef3cc64b78
 SHA1 (patch-am) = 8c5acbfefe7b7d11825cc32c4449582b51f6cad9
+SHA1 (patch-ckcftp.c) = 1af977dce79f61c43619186c6a5d2032d7a9a6bd
 SHA1 (patch-ckcpro.w) = 247c1d0e0bcec632c4095c10067757cc40fb3831
 SHA1 (patch-ckupty.c) = fd8966627f3642550750ccd42e3add64a36dae09
+SHA1 (patch-ckuus3.c) = 557e938b36931f7948783116d1c5c2224d51bcbb
 SHA1 (patch-ckuus4.c) = 2204f4c95f8266358b66ac0936ac83ab27bec0c9
