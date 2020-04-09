@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.105 2020/01/26 17:32:04 rillig Exp $
+# $NetBSD: Makefile,v 1.106 2020/04/09 10:57:04 adam Exp $
 
-DISTNAME=	krb5-1.16.2
+DISTNAME=	krb5-1.18
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	security
-MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${PKGVERSION_NOREV:R}/
+MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${PKGVERSION_NOREV}/
 
 MAINTAINER=	tez@NetBSD.org
 HOMEPAGE=	https://web.mit.edu/kerberos/
 COMMENT=	MIT Kerberos 5 authentication system
 
-MAKE_JOBS_SAFE=		no
+MAKE_JOBS_SAFE=	no
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
@@ -39,22 +38,18 @@ BUILD_DEFS+=		VARBASE
 
 CONFIGURE_ARGS+=	--localstatedir=${MIT_KRB5_STATEDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ARGS+=	--enable-dns-for-realm
+CONFIGURE_ARGS+=	--disable-aesni
 CONFIGURE_ARGS+=	--disable-kdc-lookaside-cache
 CONFIGURE_ARGS+=	--disable-thread-support
-CONFIGURE_ARGS+=	--without-tcl
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-dns-for-realm
 CONFIGURE_ARGS+=	--enable-pkgsrc-libtool
 CONFIGURE_ARGS+=	--without-system-verto
-CONFIGURE_ARGS+=	--disable-aesni
+CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ENV+=		BUILDLINK_PREFIX_OPENSSL=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ENV+=		DEFKTNAME=FILE:${PKG_SYSCONFDIR}/krb5.keytab
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 LIBS.SunOS=		-lrt
-
-PATCH_DIST_ARGS=	-d ${WRKSRC} -p2
-
-INFO_FILES=		YES
 
 OWN_DIRS_PERMS=		${MIT_KRB5_STATEDIR}/krb5kdc			\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
@@ -73,13 +68,6 @@ INSTALLATION_DIRS=	bin include/gssapi include/gssrpc ${PKGINFODIR}	\
 
 pre-configure:
 	cd ${WRKSRC} && autoconf -I ${WRKSRC} -f
-
-post-install:
-	cd ${WRKDIR}/${DISTNAME}/doc;					\
-	for f in *.info *.info-[0-9]*; do				\
-		${TEST} ! -f "$$f" ||					\
-		${INSTALL_MAN} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};	\
-	done
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
