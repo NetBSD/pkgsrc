@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19804 2020/04/09 11:03:28 adam Exp $
+$NetBSD: TODO,v 1.19805 2020/04/09 15:03:07 tm Exp $
 
 Suggested new packages
 ======================
@@ -865,7 +865,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o multitail-6.4.2
 	o munin-common-2.0.52
 	o munin-master-2.0.52
-	o munin-node-2.0.52
 	o muse-0.9.2
 	o mutt-1.13.5
 	o myodbc-5.3.4
