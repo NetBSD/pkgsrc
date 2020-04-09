@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2194 2020/04/09 15:03:07 tm Exp $
+$NetBSD: CHANGES-2020,v 1.2195 2020/04/09 15:03:38 tm Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3006,3 +3006,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/wireshark to 3.2.3 [adam 2020-04-09]
 	Updated devel/php-composer to 1.10.3 [tpaul 2020-04-09]
 	Updated sysutils/munin-node to 2.0.56 [tm 2020-04-09]
+	Updated sysutils/munin-master to 2.0.56 [tm 2020-04-09]
