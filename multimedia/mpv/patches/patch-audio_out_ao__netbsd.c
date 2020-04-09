@@ -1,8 +1,8 @@
-$NetBSD: patch-audio_out_ao__netbsd.c,v 1.4 2020/04/08 12:17:02 nia Exp $
+$NetBSD: patch-audio_out_ao__netbsd.c,v 1.5 2020/04/09 20:53:39 nia Exp $
 
 NetBSD audio support.
 
---- audio/out/ao_netbsd.c.orig	2020-04-08 12:06:20.470592603 +0000
+--- audio/out/ao_netbsd.c.orig	2020-04-09 20:51:23.971921857 +0000
 +++ audio/out/ao_netbsd.c
 @@ -0,0 +1,276 @@
 +/*
@@ -46,18 +46,16 @@ NetBSD audio support.
 +#include "ao.h"
 +#include "internal.h"
 +
++#ifndef NETBSD_MAX_CHANNELS
++#define NETBSD_MAX_CHANNELS (12)
++#endif
++
 +#ifndef NETBSD_MAX_DEVS
 +#define NETBSD_MAX_DEVS (8)
 +#endif
 +
-+#ifndef NETBSD_BUF_SIZE
-+#define NETBSD_BUF_SIZE (1024)
-+#endif
-+
 +struct priv {
 +    int fd;
-+    uint64_t total_blocks; /* audio blocks output */
-+    uint64_t total_bytes; /* bytes sent to the queue */
 +};
 +
 +static int init(struct ao *ao)
@@ -79,7 +77,7 @@ NetBSD audio support.
 +    }
 +
 +    MP_ERR(ao, "Opening device %s\n", device);
-+    if ((p->fd = open(device, O_WRONLY)) == -1) {
++    if ((p->fd = open(device, O_WRONLY | O_NONBLOCK)) == -1) {
 +        MP_ERR(ao, "Can't open audio device %s: %s\n",
 +               device, mp_strerror(errno));
 +        goto fail;
@@ -92,7 +90,7 @@ NetBSD audio support.
 +
 +    info.mode = AUMODE_PLAY;
 +
-+    for (int n = 1; n <= hw_info.play.channels; n++) {
++    for (int n = 1; n <= NETBSD_MAX_CHANNELS; n++) {
 +        struct mp_chmap map;
 +
 +        mp_chmap_from_channels(&map, n);
@@ -127,6 +125,15 @@ NetBSD audio support.
 +        MP_ERR(ao, "AUDIO_SETINFO failed: %s\n", mp_strerror(errno));
 +        goto fail;
 +    }
++
++    if (ioctl(p->fd, AUDIO_GETINFO, &info) == -1) {
++        MP_ERR(ao, "AUDIO_GETINFO failed: %s\n", mp_strerror(errno));
++        goto fail;
++    }
++
++    ao->period_size = info.blocksize / (pinfo->precision / 8) / pinfo->channels;
++    ao->device_buffer = info.play.buffer_size / (pinfo->precision / 8) / pinfo->channels;
++
 +    return 0;
 +
 +fail:
@@ -149,38 +156,40 @@ NetBSD audio support.
 +{
 +    struct priv *p = ao->priv;
 +    struct audio_info info;
-+    struct audio_offset offset;
 +
-+    if (ioctl(p->fd, AUDIO_GETINFO, &info) == -1) {
-+        MP_ERR(ao, "AUDIO_GETINFO failed: %s\n", mp_strerror(errno));
++    if (ioctl(p->fd, AUDIO_GETBUFINFO, &info) == -1) {
++        MP_ERR(ao, "AUDIO_GETBUFINFO failed: %s\n", mp_strerror(errno));
 +        return;
 +    }
 +
 +    (void)ioctl(p->fd, AUDIO_FLUSH, NULL);
-+    (void)ioctl(p->fd, AUDIO_GETOOFFS, &offset); /* reset deltablks */
-+    p->total_blocks = p->total_bytes / info.blocksize;
 +}
 +
 +static void drain(struct ao *ao)
 +{
 +    struct priv *p = ao->priv;
 +    struct audio_info info;
-+    struct audio_offset offset;
 +
-+    if (ioctl(p->fd, AUDIO_GETINFO, &info) == -1) {
-+        MP_ERR(ao, "AUDIO_GETINFO failed: %s\n", mp_strerror(errno));
++    if (ioctl(p->fd, AUDIO_GETBUFINFO, &info) == -1) {
++        MP_ERR(ao, "AUDIO_GETBUFINFO failed: %s\n", mp_strerror(errno));
 +        return;
 +    }
 +
 +    (void)ioctl(p->fd, AUDIO_DRAIN, NULL);
-+    (void)ioctl(p->fd, AUDIO_FLUSH, NULL);
-+    (void)ioctl(p->fd, AUDIO_GETOOFFS, &offset); /* reset deltablks */
-+    p->total_blocks = p->total_bytes / info.blocksize;
 +}
 +
 +static int get_space(struct ao *ao)
 +{
-+    return NETBSD_BUF_SIZE;
++    struct priv *p = ao->priv;
++    struct audio_info info;
++    unsigned int nblk;
++
++    if (ioctl(p->fd, AUDIO_GETBUFINFO, &info) == -1) {
++        MP_ERR(ao, "AUDIO_GETBUFINFO failed: %s\n", mp_strerror(errno));
++        return 0;
++    }
++    nblk = info.hiwat - (info.play.seek / info.blocksize);
++    return nblk * ao->period_size;
 +}
 +
 +static void audio_pause(struct ao *ao)
@@ -214,20 +223,12 @@ NetBSD audio support.
 +{
 +    struct priv *p = ao->priv;
 +    struct audio_info info;
-+    struct audio_offset offset;
-+    uint64_t transfer_len;
 +
-+    if (ioctl(p->fd, AUDIO_GETINFO, &info) == -1) {
-+        MP_ERR(ao, "AUDIO_GETINFO failed: %s\n", mp_strerror(errno));
++    if (ioctl(p->fd, AUDIO_GETBUFINFO, &info) == -1) {
++        MP_ERR(ao, "AUDIO_GETBUFINFO failed: %s\n", mp_strerror(errno));
 +        return 0;
 +    }
-+    if (ioctl(p->fd, AUDIO_GETOOFFS, &offset) == -1) {
-+        MP_ERR(ao, "AUDIO_GETOOFFS failed: %s\n", mp_strerror(errno));
-+        return 0;
-+    }
-+    p->total_blocks += offset.deltablks;
-+    transfer_len = p->total_bytes - (p->total_blocks * info.blocksize);
-+    return transfer_len / (double)ao->bps;
++    return (info.blocksize + info.play.seek) / (double)ao->bps;
 +}
 +
 +static int play(struct ao *ao, void **data, int samples, int flags)
@@ -244,7 +245,6 @@ NetBSD audio support.
 +        MP_ERR(ao, "audio write failed: %s\n", mp_strerror(errno));
 +        return 0;
 +    }
-+    p->total_bytes += ret;
 +    return ret / ao->sstride;
 +}
 +
