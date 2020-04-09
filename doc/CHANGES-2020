@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2192 2020/04/09 14:37:39 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2193 2020/04/09 14:50:20 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3004,3 +3004,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox-l10n to 75.0 [ryoon 2020-04-09]
 	Updated mail/pst-utils to 0.6.75 [ryoon 2020-04-09]
 	Updated net/wireshark to 3.2.3 [adam 2020-04-09]
+	Updated devel/php-composer to 1.10.3 [tpaul 2020-04-09]
