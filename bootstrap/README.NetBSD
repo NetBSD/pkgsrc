@@ -1,0 +1,24 @@
+$NetBSD: README.NetBSD,v 1.1 2020/04/09 15:04:03 gdt Exp $
+
+Generally, pkgsrc considers the current and previous major releases of
+NetBSD to be supported, and older ones not to be supported, following
+NetBSD's support notions.  (If as an exception beyond this policy,
+NetBSD provides support for an older branch, such as -7 during the
+first half of 2020, pkgsrc is likely to follow suit.)
+
+Despite older releases not being considered supported, pkgsrc
+generally tries to avoid unnecessarily breaking them.  However, a main
+cause of breakage is upstreams of various packages requiring newer
+standards, both POSIX and languages.  Thus, even the older of the two
+supported releases is likely to be significantly troubled at any given
+time.
+
+Beyond the issue of packages building, there is also the consideration
+of system infrastructure, such as /usr/bin/make.  If a NetBSD system
+has a make which is too old for pkgsrc, one can perform a full
+bootstrap.  (Alternatively one could build bmake and use it, as a
+workaround.)
+
+As of 2020, it is believed that NetBSD 6 and newer have an adequate
+/usr/bin/make, and that NetBSD 5 and older require a bootstrap or
+replacement.
