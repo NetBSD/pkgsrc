@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2182 2020/04/08 23:26:00 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2183 2020/04/09 00:21:27 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -2993,3 +2993,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/pcal to 4.11.0 [riastradh 2020-04-08]
 	Updated www/py-http-parser to 0.9.0 [gutteridge 2020-04-08]
 	Updated print/foliate to 2.1.0 [fox 2020-04-08]
+	Added audio/pavucontrol-qt version 0.14.1 [gutteridge 2020-04-09]
