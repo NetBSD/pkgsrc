@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2189 2020/04/09 14:01:52 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2190 2020/04/09 14:02:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3001,3 +3001,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fasttracker2 to 1.19 [fox 2020-04-09]
 	Updated lang/go114 to 1.14.2 [bsiegert 2020-04-09]
 	Updated www/firefox to 75.0 [ryoon 2020-04-09]
+	Updated www/firefox-l10n to 75.0 [ryoon 2020-04-09]
