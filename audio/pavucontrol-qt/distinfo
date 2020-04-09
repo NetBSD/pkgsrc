@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/09 00:16:02 gutteridge Exp $
+
+SHA1 (pavucontrol-qt-0.14.1.tar.xz) = 810ae488eb0111363d6f949de3f57bac4424994e
+RMD160 (pavucontrol-qt-0.14.1.tar.xz) = ec05c8be4d88adf8c2b79fadc3cf9d2b7bab7cc7
+SHA512 (pavucontrol-qt-0.14.1.tar.xz) = 55a8bceb31e07ceac7ab1fbb5f20101dfb087e58578039a238677e77f858e0564dca46efee2d5513a247c0be474f24d31e3afa9cf3cea0734feb0e56c33d5494
+Size (pavucontrol-qt-0.14.1.tar.xz) = 94948 bytes

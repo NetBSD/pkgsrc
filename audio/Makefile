@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.590 2020/03/17 21:41:50 nia Exp $
+# $NetBSD: Makefile,v 1.591 2020/04/09 00:16:01 gutteridge Exp $
 #
 
 COMMENT=	Audio tools
@@ -354,6 +354,7 @@ SUBDIR+=	p5-MusicBrainz-Queries
 SUBDIR+=	paman
 SUBDIR+=	paprefs
 SUBDIR+=	pavucontrol
+SUBDIR+=	pavucontrol-qt
 SUBDIR+=	pavumeter
 SUBDIR+=	pd
 SUBDIR+=	pianobar
