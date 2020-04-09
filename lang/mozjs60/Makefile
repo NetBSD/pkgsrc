@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/04/06 05:33:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/09 16:46:56 nia Exp $
 
 DISTNAME=	mozjs60_60.8.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -16,7 +16,8 @@ WRKSRC=		${WRKDIR}/mozjs-60.8.0/js/src
 USE_TOOLS+=	autoconf213 gmake perl pkg-config
 USE_LANGUAGES=	c c++
 
-GCC_REQD+=	4.8
+# "ERROR: Only GCC 4.9 or newer is supported"
+GCC_REQD+=	4.9
 
 HAS_CONFIGURE=		yes
 CONFIGURE_DIRS=		build
