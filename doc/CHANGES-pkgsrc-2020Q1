@@ -1,7 +1,22 @@
-$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.2 2020/03/30 17:17:24 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.3 2020/04/09 12:06:47 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q1 branch:
 
 Pullup ticket #6149 - requested by ryoon
 devel/glibmm: bugfix (for inkscape)
+
+Pullup ticket #6150 - requested by nia
+www/firefox68: security fix
+
+Pullup ticket #6151 - requested by nia
+www/firefox68-l10n: dependent update
+
+Pullup ticket #6152 - requested by adam
+net/haproxy: security fix (CVE-2020-11100)
+
+Pullup ticket #6153 - requested by wiz
+www/apache24: Security fix
+
+Pullup ticket #6154 - requested by wiz
+security/tor-browser: security fix
 
