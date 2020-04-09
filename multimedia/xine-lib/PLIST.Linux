@@ -1,20 +1,14 @@
-@comment $NetBSD: PLIST.Linux,v 1.18 2019/06/19 13:31:02 nia Exp $
+@comment $NetBSD: PLIST.Linux,v 1.19 2020/04/09 16:36:15 nia Exp $
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_oss.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_spu.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_spu.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_video.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dxr3_video.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_vdpau.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_vdpau.so
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_dxr3.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_dxr3.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_flac.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_flac.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_dvb.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_dvb.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_vcdo.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_inp_vcdo.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_dxr3.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_dxr3.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_fb.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_fb.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_vdpau.a
