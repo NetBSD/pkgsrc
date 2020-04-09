@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.160 2020/04/09 14:01:26 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.161 2020/04/09 22:42:12 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -217,7 +217,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.25
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.50
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.51
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
@@ -231,7 +231,7 @@ PKG_CXX=	${PREFIX}/bin/clang++
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 BUILDLINK_DEPMETHOD.rust=	build
-BUILDLINK_API_DEPENDS.rust+=	rust>=1.39.0
+BUILDLINK_API_DEPENDS.rust+=	rust>=1.41.0
 .include "../../lang/rust/buildlink3.mk"
 # webrtc option requires internal libvpx
 #BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
