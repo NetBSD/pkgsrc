@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.79 2020/01/04 01:53:55 nia Exp $
+# $NetBSD: options.mk,v 1.80 2020/04/09 16:48:08 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 
 .include "features.mk"
 
-PKG_SUPPORTED_OPTIONS+=		llvm vulkan x11
+PKG_SUPPORTED_OPTIONS+=		elf-tls llvm vulkan x11
 
 .if ${MESALIB_SUPPORTS_DRI} == "yes"
 PKG_SUPPORTED_OPTIONS+=		wayland
@@ -15,6 +15,8 @@ PKG_SUGGESTED_OPTIONS+=		wayland
 .endif
 
 PKG_SUGGESTED_OPTIONS+=		x11
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 # The LLVM option enables JIT accelerated software rendering and is also
 # required to support the latest RADEON GPUs.
@@ -29,6 +31,15 @@ PKG_SUGGESTED_OPTIONS+=		x11
 PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
 
+# ELF TLS is broken in at least the following cases:
+# - NetBSD with SDL2 without X11
+# - Linux with musl libc
+#
+# https://gitlab.freedesktop.org/mesa/mesa/issues/966
+.if ${OPSYS} == "Linux" && !empty(GLIBC_VERSION)
+PKG_SUGGESTED_OPTIONS+=		elf-tls
+.endif
+
 .include "../../mk/bsd.options.mk"
 
 # Gallium drivers requiring LLVM
@@ -39,6 +50,13 @@ PLIST_VARS+=	wayland glx
 
 # Misc. features
 PLIST_VARS+=	vdpau
+
+#
+# ELF TLS support
+#
+.if empty(PKG_OPTIONS:Melf-tls)
+BUILDLINK_TRANSFORM+=	rm:-DUSE_ELF_TLS
+.endif
 
 #
 # LLVM support
