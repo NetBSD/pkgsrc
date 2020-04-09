@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/04/07 12:08:43 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/04/09 08:35:39 adam Exp $
 
-SHA1 (pysmbc-1.0.20.tar.bz2) = 022614f32b110cec07ee5ad0dc62efeb131cccc7
-RMD160 (pysmbc-1.0.20.tar.bz2) = eec68f59e1388d2fa80f5d531175f7544deb995f
-SHA512 (pysmbc-1.0.20.tar.bz2) = 646da1068847ba2a257568937b6cbeb5c23f3ec362e3aebe4fb471c1fdff43f143bbcfbe3f13be958314d95ee432774ccc2ad49afa5fe42cfc3cc859a67f2be4
-Size (pysmbc-1.0.20.tar.bz2) = 26158 bytes
+SHA1 (pysmbc-1.0.21.tar.bz2) = 8c1f9fad510aede09182476af39f7104dd86c35a
+RMD160 (pysmbc-1.0.21.tar.bz2) = 9f3b0d26de1048d870813cd28a537285540740a2
+SHA512 (pysmbc-1.0.21.tar.bz2) = 531e2ab0322ea7f1536aa8296b70cc29e82c874aa31eced5cb2ad3e8fdbe8a5e89e303d46cf777613f7a6aa0932597039ef7e4a8ced6420d39831101825fa614
+Size (pysmbc-1.0.21.tar.bz2) = 26342 bytes
