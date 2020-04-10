@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2198 2020/04/10 05:55:47 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2199 2020/04/10 07:30:21 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3011,3 +3011,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/php-composer to 1.10.4 [tpaul 2020-04-10]
 	Updated devel/cmake to 3.17.1 [adam 2020-04-10]
 	Updated devel/py-flakes to 2.2.0 [adam 2020-04-10]
+	Updated audio/din to 46 [fox 2020-04-10]
