@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2206 2020/04/10 21:25:03 schwarz Exp $
+$NetBSD: CHANGES-2020,v 1.2207 2020/04/10 22:44:37 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3023,3 +3023,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/tor-browser to 9.0.9 [wiz 2020-04-10]
 	Updated x11/xfce4-notifyd to 0.6.0 [gutteridge 2020-04-10]
 	Updated net/arping to 2.21 [schwarz 2020-04-10]
+	Updated devel/libmaa to 1.4.7 [cheusov 2020-04-10]
