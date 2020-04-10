@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2204 2020/04/10 19:18:13 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2205 2020/04/10 20:46:40 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3021,3 +3021,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox68 to 68.7.0 [nia 2020-04-10]
 	Updated www/firefox68-l10n to 68.7.0 [nia 2020-04-10]
 	Updated security/tor-browser to 9.0.9 [wiz 2020-04-10]
+	Updated x11/xfce4-notifyd to 0.6.0 [gutteridge 2020-04-10]
