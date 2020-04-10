@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2200 2020/04/10 08:05:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2201 2020/04/10 08:55:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3016,3 +3016,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-sqlalchemy-utils to 0.36.3 [adam 2020-04-10]
 	Updated databases/py-alembic to 1.4.2 [adam 2020-04-10]
 	Updated misc/py-tqdm to 4.45.0 [adam 2020-04-10]
+	Updated devel/py-pathspec to 0.8.0 [adam 2020-04-10]
+	Updated devel/py-pebble to 4.5.1 [adam 2020-04-10]
