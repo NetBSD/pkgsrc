@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.13 2020/04/10 23:38:50 khorben Exp $
+$NetBSD: distinfo,v 1.14 2020/04/10 23:46:14 khorben Exp $
 
-SHA1 (pkg-1.9.99.9.tar.xz) = e631533d038080c113d78b5d283fd1c5e9ce0fe2
-RMD160 (pkg-1.9.99.9.tar.xz) = e453d9151d6b0fd1203898b4bb77a30c9e8b4d6d
-SHA512 (pkg-1.9.99.9.tar.xz) = 78b9d94b5ed4c61d30da61b848baecc70eef10f3c8232fd6ff59bfcf6e8f3cb54f68669aded4e8a2d149405de3f21de6b7eea26583d60a5ff251faa26e2b9271
-Size (pkg-1.9.99.9.tar.xz) = 2225144 bytes
+SHA1 (pkg-1.9.99.11.tar.xz) = f6ffb976b66e322f3f0069f151d893043c2ba8cb
+RMD160 (pkg-1.9.99.11.tar.xz) = 8657921a70f4e61059530a44b419d7b8f0f32daf
+SHA512 (pkg-1.9.99.11.tar.xz) = 7626d9bb4b32abf106b81fd0e07999cfdce6aaac173077bab7947519967d0ceefd9567b5755fd11b05401b488fe8b42e861fe2aa1bf54566cca3cbacfd311e1b
+Size (pkg-1.9.99.11.tar.xz) = 2170084 bytes
 SHA1 (patch-scripts_periodic_411.pkg-backup.in) = ec4ff8991b79608c448739b693b2eb527b646c63
