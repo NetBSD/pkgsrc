@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2017/08/19 00:24:13 jlam Exp $
+$NetBSD: distinfo,v 1.12 2020/04/10 23:28:32 khorben Exp $
 
 SHA1 (pkg-1.9.99.4.tar.xz) = e7f2f5c9481c6a4f5e05e08818ea8f114fc1bfcf
 RMD160 (pkg-1.9.99.4.tar.xz) = 320f9866503d028f4f54f466a9ebc86cc9378331
 SHA512 (pkg-1.9.99.4.tar.xz) = eb4b01e26cffec6b6cd5604a81ba515eadcce09b4742876285bf8f510591c122665a1e598c100266f943439d0b2867b5a6e5702bc174ea302688bb73e0128d8b
 Size (pkg-1.9.99.4.tar.xz) = 1923452 bytes
+SHA1 (patch-scripts_periodic_411.pkg-backup.in) = ec4ff8991b79608c448739b693b2eb527b646c63
