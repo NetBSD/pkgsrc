@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2199 2020/04/10 07:30:21 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2200 2020/04/10 08:05:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3012,3 +3012,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cmake to 3.17.1 [adam 2020-04-10]
 	Updated devel/py-flakes to 2.2.0 [adam 2020-04-10]
 	Updated audio/din to 46 [fox 2020-04-10]
+	Updated databases/py-sqlalchemy to 1.3.16 [adam 2020-04-10]
+	Updated databases/py-sqlalchemy-utils to 0.36.3 [adam 2020-04-10]
+	Updated databases/py-alembic to 1.4.2 [adam 2020-04-10]
+	Updated misc/py-tqdm to 4.45.0 [adam 2020-04-10]
