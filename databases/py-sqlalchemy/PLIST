@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2019/04/02 08:59:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/04/10 07:58:16 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -55,6 +55,9 @@ ${PYSITELIB}/sqlalchemy/dialects/mssql/information_schema.pyo
 ${PYSITELIB}/sqlalchemy/dialects/mssql/mxodbc.py
 ${PYSITELIB}/sqlalchemy/dialects/mssql/mxodbc.pyc
 ${PYSITELIB}/sqlalchemy/dialects/mssql/mxodbc.pyo
+${PYSITELIB}/sqlalchemy/dialects/mssql/provision.py
+${PYSITELIB}/sqlalchemy/dialects/mssql/provision.pyc
+${PYSITELIB}/sqlalchemy/dialects/mssql/provision.pyo
 ${PYSITELIB}/sqlalchemy/dialects/mssql/pymssql.py
 ${PYSITELIB}/sqlalchemy/dialects/mssql/pymssql.pyc
 ${PYSITELIB}/sqlalchemy/dialects/mssql/pymssql.pyo
@@ -94,6 +97,9 @@ ${PYSITELIB}/sqlalchemy/dialects/mysql/mysqldb.pyo
 ${PYSITELIB}/sqlalchemy/dialects/mysql/oursql.py
 ${PYSITELIB}/sqlalchemy/dialects/mysql/oursql.pyc
 ${PYSITELIB}/sqlalchemy/dialects/mysql/oursql.pyo
+${PYSITELIB}/sqlalchemy/dialects/mysql/provision.py
+${PYSITELIB}/sqlalchemy/dialects/mysql/provision.pyc
+${PYSITELIB}/sqlalchemy/dialects/mysql/provision.pyo
 ${PYSITELIB}/sqlalchemy/dialects/mysql/pymysql.py
 ${PYSITELIB}/sqlalchemy/dialects/mysql/pymysql.pyc
 ${PYSITELIB}/sqlalchemy/dialects/mysql/pymysql.pyo
@@ -118,6 +124,9 @@ ${PYSITELIB}/sqlalchemy/dialects/oracle/base.pyo
 ${PYSITELIB}/sqlalchemy/dialects/oracle/cx_oracle.py
 ${PYSITELIB}/sqlalchemy/dialects/oracle/cx_oracle.pyc
 ${PYSITELIB}/sqlalchemy/dialects/oracle/cx_oracle.pyo
+${PYSITELIB}/sqlalchemy/dialects/oracle/provision.py
+${PYSITELIB}/sqlalchemy/dialects/oracle/provision.pyc
+${PYSITELIB}/sqlalchemy/dialects/oracle/provision.pyo
 ${PYSITELIB}/sqlalchemy/dialects/oracle/zxjdbc.py
 ${PYSITELIB}/sqlalchemy/dialects/oracle/zxjdbc.pyc
 ${PYSITELIB}/sqlalchemy/dialects/oracle/zxjdbc.pyo
@@ -145,6 +154,9 @@ ${PYSITELIB}/sqlalchemy/dialects/postgresql/json.pyo
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/pg8000.py
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/pg8000.pyc
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/pg8000.pyo
+${PYSITELIB}/sqlalchemy/dialects/postgresql/provision.py
+${PYSITELIB}/sqlalchemy/dialects/postgresql/provision.pyc
+${PYSITELIB}/sqlalchemy/dialects/postgresql/provision.pyo
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2.py
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2.pyc
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2.pyo
@@ -172,6 +184,9 @@ ${PYSITELIB}/sqlalchemy/dialects/sqlite/base.pyo
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/json.py
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/json.pyc
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/json.pyo
+${PYSITELIB}/sqlalchemy/dialects/sqlite/provision.py
+${PYSITELIB}/sqlalchemy/dialects/sqlite/provision.pyc
+${PYSITELIB}/sqlalchemy/dialects/sqlite/provision.pyo
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/pysqlcipher.py
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/pysqlcipher.pyc
 ${PYSITELIB}/sqlalchemy/dialects/sqlite/pysqlcipher.pyo
