@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2208 2020/04/10 23:40:38 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.2209 2020/04/10 23:46:26 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3025,3 +3025,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/arping to 2.21 [schwarz 2020-04-10]
 	Updated devel/libmaa to 1.4.7 [cheusov 2020-04-10]
 	Updated pkgtools/pkg to 1.9.99.9 [khorben 2020-04-10]
+	Updated pkgtools/pkg to 1.9.99.11 [khorben 2020-04-10]
