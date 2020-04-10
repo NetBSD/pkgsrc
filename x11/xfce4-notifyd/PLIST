@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/18 12:33:51 youri Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/10 20:46:21 gutteridge Exp $
 bin/xfce4-notifyd-config
 lib/systemd/user/xfce4-notifyd.service
 lib/xfce4/notifyd/xfce4-notifyd
@@ -35,10 +35,13 @@ share/locale/gl/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/he/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/hr/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/hu/LC_MESSAGES/xfce4-notifyd.mo
+share/locale/hy_AM/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/id/LC_MESSAGES/xfce4-notifyd.mo
+share/locale/ie/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/is/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/it/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/ja/LC_MESSAGES/xfce4-notifyd.mo
+share/locale/ka/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/kk/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/ko/LC_MESSAGES/xfce4-notifyd.mo
 share/locale/lt/LC_MESSAGES/xfce4-notifyd.mo
