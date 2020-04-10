@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/04/05 16:05:44 bsiegert Exp $
+# $NetBSD: Makefile,v 1.21 2020/04/10 00:48:14 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -9,6 +9,7 @@ COMMENT=	MATE session manager
 
 TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	mate-common-${VERSION}:../../devel/mate-common
 
 DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
