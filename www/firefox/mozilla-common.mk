@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.161 2020/04/09 22:42:12 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.162 2020/04/10 09:21:35 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -24,7 +24,7 @@ USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize virtualsize
 
-TOOL_DEPENDS+=		cbindgen>=0.13.0:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.13.1:../../devel/cbindgen
 .if ${MACHINE_ARCH} == "sparc64"
 CONFIGURE_ARGS+=	--disable-nodejs
 .else
