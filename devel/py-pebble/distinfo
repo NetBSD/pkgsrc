@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/02/16 20:36:09 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/04/10 08:54:47 adam Exp $
 
-SHA1 (Pebble-4.5.0.tar.gz) = 58b1d3395fa86a53006e46093e60f186a7896d6d
-RMD160 (Pebble-4.5.0.tar.gz) = 6469b8e4767199a9bb610a97c25caa4ca98c834e
-SHA512 (Pebble-4.5.0.tar.gz) = 72ca09b872e2c664da59ec1cdd1cf6dc6b79c0ae40ede661c79f68bfeb4504cf867eb65c1260a7f96245811c72f5e7292494a6479ca556a3515923f7f663f414
-Size (Pebble-4.5.0.tar.gz) = 23597 bytes
+SHA1 (Pebble-4.5.1.tar.gz) = 27fbb3ccd4a073e4858edeccd3288c0190e1cbd0
+RMD160 (Pebble-4.5.1.tar.gz) = 87f9a114cd9c361c39e0e300db9b338e8f860942
+SHA512 (Pebble-4.5.1.tar.gz) = 5d33df8dbd779665ebdd23f92e1bdebb0ba48c4c1ff7a7ce4f42c996ad4fc7b15847fb86ca2e7c6c27cb53edb8bfddbfdacc6693c1f0e6bc1912be8f3255cd84
+Size (Pebble-4.5.1.tar.gz) = 23693 bytes
