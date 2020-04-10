@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2203 2020/04/10 11:04:11 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2204 2020/04/10 19:18:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3020,3 +3020,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pebble to 4.5.1 [adam 2020-04-10]
 	Updated www/firefox68 to 68.7.0 [nia 2020-04-10]
 	Updated www/firefox68-l10n to 68.7.0 [nia 2020-04-10]
+	Updated security/tor-browser to 9.0.9 [wiz 2020-04-10]
