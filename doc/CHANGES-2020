@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2196 2020/04/09 16:33:18 roy Exp $
+$NetBSD: CHANGES-2020,v 1.2197 2020/04/10 03:22:36 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3008,3 +3008,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/munin-node to 2.0.56 [tm 2020-04-09]
 	Updated sysutils/munin-master to 2.0.56 [tm 2020-04-09]
 	Updated net/dhcpcd to 8.1.7 [roy 2020-04-09]
+	Updated devel/php-composer to 1.10.4 [tpaul 2020-04-10]
