@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2209 2020/04/10 23:46:26 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.2210 2020/04/11 03:02:12 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -1424,7 +1424,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/seamonkey to 2.49.5nb3 [kamil 2020-02-08]
 	Updated multimedia/vlc to 3.0.8nb4 [ryoon 2020-02-09]
 	Updated math/R-ellipsis to 0.3.0 [mef 2020-02-09]
-	Added devel/R-rversions version  2.0.1 [mef 2020-02-09]
+	Added devel/R-rversions version 2.0.1 [mef 2020-02-09]
 	Updated devel/R-devtools to 2.2.1 [mef 2020-02-09]
 	Updated security/gnutls to 3.6.12 [wiz 2020-02-09]
 	Updated security/libsecret to 0.20.1 [wiz 2020-02-09]
@@ -2515,7 +2515,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/gource to 0.51 [nia 2020-03-23]
 	Updated graphics/libgdiplus to 6.0.4 [nia 2020-03-23]
 	Updated textproc/liblrdf to 0.6.1 [nia 2020-03-23]
-	Updated security/rvault to version 0.2 [rmind 2020-03-23]
+	Updated security/rvault to 0.2 [rmind 2020-03-23]
 	Updated editors/dhex to 0.69 [nia 2020-03-23]
 	Updated pkgtools/pkglint to 20.1.0 [rillig 2020-03-23]
 	Updated editors/beaver to 0.4.1 [nia 2020-03-23]
