@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2019/08/29 04:58:29 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/11 16:28:58 adam Exp $
 
-DISTNAME=	jsbeautifier-1.10.2
+DISTNAME=	jsbeautifier-1.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsbeautifier/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://beautifier.io/
 COMMENT=	JavaScript unobfuscator and beautifier
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-editorconfig-core>=0.12.0:../../devel/py-editorconfig-core
-DEPENDS+=	${PYPKGPREFIX}-six>=1.6.1:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-editorconfig-core>=0.12.2:../../devel/py-editorconfig-core
+DEPENDS+=	${PYPKGPREFIX}-six>=1.13.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
