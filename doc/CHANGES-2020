@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2210 2020/04/11 03:02:12 khorben Exp $
+$NetBSD: CHANGES-2020,v 1.2211 2020/04/11 03:08:12 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3026,3 +3026,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/libmaa to 1.4.7 [cheusov 2020-04-10]
 	Updated pkgtools/pkg to 1.9.99.9 [khorben 2020-04-10]
 	Updated pkgtools/pkg to 1.9.99.11 [khorben 2020-04-10]
+	Updated sysutils/deforaos-browser to 0.5.4 [khorben 2020-04-11]
