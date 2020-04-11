@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2215 2020/04/11 05:06:49 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2216 2020/04/11 06:37:49 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3031,3 +3031,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/deforaos-libdatabase to 0.0.2 [khorben 2020-04-11]
 	Updated sysutils/xfce4-taskmanager to 1.2.3 [gutteridge 2020-04-11]
 	Updated sysutils/xfburn to 0.6.2 [gutteridge 2020-04-11]
+	Updated devel/php-composer to 1.10.5 [tpaul 2020-04-11]
