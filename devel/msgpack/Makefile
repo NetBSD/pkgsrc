@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2020/04/11 13:39:29 adam Exp $
+# $NetBSD: Makefile,v 1.18 2020/04/11 13:40:15 adam Exp $
 
 DISTNAME=	msgpack-3.2.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msgpack/}
-GITHUB_RELEASE=	cpp-${PKGVERSION_NOREV}
 GITHUB_PROJECT=	msgpack-c
+GITHUB_RELEASE=	cpp-${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://msgpack.org/
