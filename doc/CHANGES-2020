@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2216 2020/04/11 06:37:49 tpaul Exp $
+$NetBSD: CHANGES-2020,v 1.2217 2020/04/11 07:04:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3032,3 +3032,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/xfce4-taskmanager to 1.2.3 [gutteridge 2020-04-11]
 	Updated sysutils/xfburn to 0.6.2 [gutteridge 2020-04-11]
 	Updated devel/php-composer to 1.10.5 [tpaul 2020-04-11]
+	Updated wm/windowmaker to 0.95.9 [adam 2020-04-11]
+	Updated www/py-httplib2 to 0.17.2 [adam 2020-04-11]
