@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/03/16 13:18:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/11 02:46:59 khorben Exp $
 bin/deforaos-cpp
 include/Devel/CPP.h
 lib/libcpp.a
@@ -7,9 +7,9 @@ lib/libcpp.so.0
 lib/libcpp.so.0.0
 lib/pkgconfig/cpp.pc
 share/gtk-doc/html/CPP/CPP-CPP:CAPS.html
+share/gtk-doc/html/CPP/CPP.devhelp2
 share/gtk-doc/html/CPP/api-index-full.html
 share/gtk-doc/html/CPP/ch01.html
-share/gtk-doc/html/CPP/deprecated-api-index.html
 share/gtk-doc/html/CPP/home.png
 share/gtk-doc/html/CPP/index.html
 share/gtk-doc/html/CPP/left-insensitive.png

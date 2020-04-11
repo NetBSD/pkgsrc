@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/03/16 13:18:44 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/11 02:46:59 khorben Exp $
 
 DISTNAME=	CPP-0.0.3
 PKGNAME=	deforaos-cpp-0.0.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	https://www.defora.org/os/download/download/4422/
 
