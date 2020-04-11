@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2217 2020/04/11 07:04:33 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2218 2020/04/11 07:14:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3034,3 +3034,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/php-composer to 1.10.5 [tpaul 2020-04-11]
 	Updated wm/windowmaker to 0.95.9 [adam 2020-04-11]
 	Updated www/py-httplib2 to 0.17.2 [adam 2020-04-11]
+	Updated textproc/py-humanize to 2.3.0 [adam 2020-04-11]
+	Updated textproc/py-regex to 2020.4.4 [adam 2020-04-11]
+	Updated www/py-rfc3986 to 1.4.0 [adam 2020-04-11]
+	Updated www/py-hstspreload to 2020.4.7 [adam 2020-04-11]
