@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2020/04/11 10:56:54 nia Exp $
+
+SHA1 (amsynth-1.9.0.tar.bz2) = a0cc9377282937d79707628fcbf6611f965266fa
+RMD160 (amsynth-1.9.0.tar.bz2) = 2e8c3761d18716788ffbacb9b6f5cb295f24c1c2
+SHA512 (amsynth-1.9.0.tar.bz2) = 4600c0ca8ee2cfecdbaa272bf9a29a29386b04081fe2b75fa3d12c7d53c75a32803f30d1822c36db64009f8c38258f2e22c4e59210b882de0568d5241c623965
+Size (amsynth-1.9.0.tar.bz2) = 1145389 bytes
+SHA1 (patch-configure) = c933c8f377d29e03c3052ecc90f3f9c6a54fdb14
+SHA1 (patch-configure.ac) = 7d23744efa7f3e5a5de25d6c8e8bfb43a947ab9e
+SHA1 (patch-src_amsynth__vst.cpp) = 237bc55cb257fc61bb06a037785340e9b8f91583
