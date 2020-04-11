@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/03/10 22:08:55 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/04/11 21:50:27 khorben Exp $
 
 DISTNAME=	Player-0.2.0
 PKGNAME=	deforaos-player-0.2.0
@@ -37,7 +37,6 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
 .endif
-	cd ${DESTDIR}${PREFIX} && ${MV} share/doc/html/Player/* share/doc/deforaos-player/
 
 .include "options.mk"
 
