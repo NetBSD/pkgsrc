@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.9 2017/06/07 14:42:24 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2020/04/11 11:58:08 mef Exp $
 
-SHA1 (Class-Trigger-0.14.tar.gz) = fb184c1e58c32bb3add03d45b1b88e23fa3cbfdb
-RMD160 (Class-Trigger-0.14.tar.gz) = fc9c9d0fec5aa40930809fd62cfd75a697976bea
-SHA512 (Class-Trigger-0.14.tar.gz) = f0908469a4853ef386158f2ee66bb52a1bb4cfcdb385ecd9fd3375af87943910ba75f99066a00eab5dd367f68404369c8ad4ae2afbcb76d18e9f1327f95eb2ca
-Size (Class-Trigger-0.14.tar.gz) = 49950 bytes
-SHA1 (patch-Makefile.PL) = 1182236a38f6c7f9cd96020f628e50873cceadd6
+SHA1 (Class-Trigger-0.15.tar.gz) = 9ec4c16aad79cf78c7f1de9093a99ad5b69a92c4
+RMD160 (Class-Trigger-0.15.tar.gz) = 8294dbf5a041c43c474636bc7e8a17a4d9a0166f
+SHA512 (Class-Trigger-0.15.tar.gz) = 16e66c17cc44e3656573af7221b67c46e1cc83fdc047f6378a89ec7b8e8688f2020223018231b670c46972815e755a0b1f631f5cadd0b8f891d755c2e07526d8
+Size (Class-Trigger-0.15.tar.gz) = 17705 bytes
