@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2018/09/10 10:24:18 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/11 13:39:29 adam Exp $
 
-DISTNAME=	msgpack-3.1.1
+DISTNAME=	msgpack-3.2.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msgpack/}
 GITHUB_RELEASE=	cpp-${PKGVERSION_NOREV}
@@ -12,9 +12,12 @@ COMMENT=	Binary-based efficient object serialization library
 LICENSE=	boost-license
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 PKGCONFIG_OVERRIDE=	msgpack.pc.in
+TEST_ENV=		LD_LIBRARY_PATH=${WRKSRC}
 TEST_TARGET=		test
+
+CMAKE_ARGS+=	-DMSGPACK_CXX11=ON
 
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
