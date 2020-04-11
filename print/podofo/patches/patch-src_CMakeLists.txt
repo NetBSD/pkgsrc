@@ -1,0 +1,11 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2020/04/11 10:54:00 adam Exp $
+
+Inherit CMake requirement from the main CMakeLists.txt.
+
+--- src/CMakeLists.txt.orig	2018-03-11 11:42:20.000000000 +0000
++++ src/CMakeLists.txt
+@@ -1,4 +1,3 @@
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+ 
+ IF(NOT PODOFO_MAIN_CMAKELISTS_READ)
+   MESSAGE(FATAL_ERROR "Run cmake on the CMakeLists.txt in the project root, not the one in the 'src' directory. You will need to delete CMakeCache.txt from the current directory.")
