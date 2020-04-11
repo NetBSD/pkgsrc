@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2212 2020/04/11 03:42:23 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2213 2020/04/11 03:57:21 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3028,3 +3028,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkg to 1.9.99.11 [khorben 2020-04-10]
 	Updated sysutils/deforaos-browser to 0.5.4 [khorben 2020-04-11]
 	Updated audio/din to 46.1 [fox 2020-04-11]
+	Updated databases/deforaos-libdatabase to 0.0.2 [khorben 2020-04-11]
