@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.20 2019/11/09 12:33:29 nia Exp $
+$NetBSD: distinfo,v 1.21 2020/04/11 10:54:00 adam Exp $
 
 SHA1 (podofo-0.9.6.tar.gz) = 54275025b1049e40177e35c7003e87ea092f277c
 RMD160 (podofo-0.9.6.tar.gz) = 71764cd85c7e443654689f84dd8c68fccb24e442
 SHA512 (podofo-0.9.6.tar.gz) = 35c1a457758768bdadc93632385f6b9214824fead279f1b85420443fb2135837cefca9ced476df0d47066f060e9150e12fcd40f60fa1606b177da433feb20130
 Size (podofo-0.9.6.tar.gz) = 995898 bytes
-SHA1 (patch-CMakeLists.txt) = c92ea81cde1af07ac3464d1a6a8df1f36f81a833
+SHA1 (patch-CMakeLists.txt) = cb576aaf2e6ebe875818aefbba8d83c4ddbae7e4
 SHA1 (patch-cmake_modules_FindFREETYPE.cmake) = 755d6d7ad73dea490479b90299728129bb1b0795
+SHA1 (patch-src_CMakeLists.txt) = eb44b1ba06a850340a7fb2de42ac982336cb04cd
 SHA1 (patch-src_base_PdfMemoryManagement.cpp) = 9303daf1e471106d9d22e42230db650dba5f1006
 SHA1 (patch-src_doc_PdfImage.cpp) = 844250a772d40ba3ea2322ea623990b87b27c664
 SHA1 (patch-test_CMakeLists.txt) = 846871dac995ff80544ad9096574eddd776e324f
