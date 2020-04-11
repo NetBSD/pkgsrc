@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2219 2020/04/11 07:34:22 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2220 2020/04/11 07:48:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3042,3 +3042,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-bleach to 3.1.4 [adam 2020-04-11]
 	Updated devel/py-rope to 0.16.0 [adam 2020-04-11]
 	Updated devel/py-testtools to 2.4.0 [adam 2020-04-11]
+	Updated net/py-aio-pika to 6.6.0 [adam 2020-04-11]
+	Updated finance/py-stripe to 2.45.0 [adam 2020-04-11]
+	Updated math/py-networkx to 2.4 [adam 2020-04-11]
+	Updated devel/py-decorator to 4.4.2 [adam 2020-04-11]
