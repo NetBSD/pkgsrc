@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2222 2020/04/11 11:54:04 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2223 2020/04/11 12:20:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3047,4 +3047,14 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-networkx to 2.4 [adam 2020-04-11]
 	Updated devel/py-decorator to 4.4.2 [adam 2020-04-11]
 	Added audio/amsynth version 1.9.0 [nia 2020-04-11]
+	Updated devel/p5-Alien-Build to 2.20 [mef 2020-04-11]
+	Updated devel/p5-Cache-FastMmap to 1.49 [mef 2020-04-11]
+	Updated devel/p5-Cache-Memcached-Fast to 0.26 [mef 2020-04-11]
+	Updated devel/p5-Class-C3-XS to 0.15nb3 [mef 2020-04-11]
 	Updated misc/dpkg to 1.20.0 [adam 2020-04-11]
+	Updated devel/p5-Class-Trigger to 0.15 [mef 2020-04-11]
+	Updated devel/p5-Config-IniFiles to 3.000003 [mef 2020-04-11]
+	Updated devel/p5-EV to 4.33 [mef 2020-04-11]
+	Updated devel/p5-File-Slurp to 9999.30 [mef 2020-04-11]
+	Updated devel/p5-Filesys-Notify-Simple to 0.14 [mef 2020-04-11]
+	Updated devel/p5-Future to 0.44 [mef 2020-04-11]
