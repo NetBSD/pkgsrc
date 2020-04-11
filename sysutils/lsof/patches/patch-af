@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.17 2020/03/05 20:49:22 tnn Exp $
+$NetBSD: patch-af,v 1.18 2020/04/11 15:22:52 tnn Exp $
 
 --- dialects/n+obsd/dlsof.h.orig	2006-03-28 21:54:15.000000000 +0000
 +++ dialects/n+obsd/dlsof.h
@@ -99,6 +99,15 @@ $NetBSD: patch-af,v 1.17 2020/03/05 20:49:22 tnn Exp $
  	char *dir;			/* mounted directory */
  	char *fsname;			/* file system name */
  	struct l_vfs *next;		/* forward link */
+@@ -565,7 +579,7 @@ struct sfile {
+ #define	NCACHE_NODEADDR	nc_vp		/* node address in NCACHE */
+ #define	NCACHE_PARADDR	nc_dvp		/* parent node address in NCACHE */
+ 
+-#  if	(defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000)
++#  if	(defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000 && __NetBSD_Version__ < 999005400)
+ #define	NCACHE_NXT	nc_hash.le_next	/* link in NCACHE */
+ #  else	/* (defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000) */
+ #   if	defined(NetBSD1_0) && NetBSD<1994101
 @@ -581,4 +595,12 @@ struct sfile {
  #  endif	/* defined(HASNCVPID) */
  # endif  /* defined(HASNCACHE) */
