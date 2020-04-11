@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2019/12/14 10:35:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2020/04/11 07:21:37 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -30,6 +30,34 @@ ${PYSITELIB}/fontTools/cffLib/specializer.pyo
 ${PYSITELIB}/fontTools/cffLib/width.py
 ${PYSITELIB}/fontTools/cffLib/width.pyc
 ${PYSITELIB}/fontTools/cffLib/width.pyo
+${PYSITELIB}/fontTools/colorLib/__init__.py
+${PYSITELIB}/fontTools/colorLib/__init__.pyc
+${PYSITELIB}/fontTools/colorLib/__init__.pyo
+${PYSITELIB}/fontTools/colorLib/builder.py
+${PYSITELIB}/fontTools/colorLib/builder.pyc
+${PYSITELIB}/fontTools/colorLib/builder.pyo
+${PYSITELIB}/fontTools/colorLib/errors.py
+${PYSITELIB}/fontTools/colorLib/errors.pyc
+${PYSITELIB}/fontTools/colorLib/errors.pyo
+${PYSITELIB}/fontTools/cu2qu/__init__.py
+${PYSITELIB}/fontTools/cu2qu/__init__.pyc
+${PYSITELIB}/fontTools/cu2qu/__init__.pyo
+${PYSITELIB}/fontTools/cu2qu/__main__.py
+${PYSITELIB}/fontTools/cu2qu/__main__.pyc
+${PYSITELIB}/fontTools/cu2qu/__main__.pyo
+${PYSITELIB}/fontTools/cu2qu/cli.py
+${PYSITELIB}/fontTools/cu2qu/cli.pyc
+${PYSITELIB}/fontTools/cu2qu/cli.pyo
+${PYSITELIB}/fontTools/cu2qu/cu2qu.c
+${PYSITELIB}/fontTools/cu2qu/cu2qu.py
+${PYSITELIB}/fontTools/cu2qu/cu2qu.pyc
+${PYSITELIB}/fontTools/cu2qu/cu2qu.pyo
+${PYSITELIB}/fontTools/cu2qu/errors.py
+${PYSITELIB}/fontTools/cu2qu/errors.pyc
+${PYSITELIB}/fontTools/cu2qu/errors.pyo
+${PYSITELIB}/fontTools/cu2qu/ufo.py
+${PYSITELIB}/fontTools/cu2qu/ufo.pyc
+${PYSITELIB}/fontTools/cu2qu/ufo.pyo
 ${PYSITELIB}/fontTools/designspaceLib/__init__.py
 ${PYSITELIB}/fontTools/designspaceLib/__init__.pyc
 ${PYSITELIB}/fontTools/designspaceLib/__init__.pyo
@@ -87,6 +115,9 @@ ${PYSITELIB}/fontTools/misc/classifyTools.pyo
 ${PYSITELIB}/fontTools/misc/cliTools.py
 ${PYSITELIB}/fontTools/misc/cliTools.pyc
 ${PYSITELIB}/fontTools/misc/cliTools.pyo
+${PYSITELIB}/fontTools/misc/cython.py
+${PYSITELIB}/fontTools/misc/cython.pyc
+${PYSITELIB}/fontTools/misc/cython.pyo
 ${PYSITELIB}/fontTools/misc/dictTools.py
 ${PYSITELIB}/fontTools/misc/dictTools.pyc
 ${PYSITELIB}/fontTools/misc/dictTools.pyo
@@ -186,6 +217,9 @@ ${PYSITELIB}/fontTools/pens/boundsPen.pyo
 ${PYSITELIB}/fontTools/pens/cocoaPen.py
 ${PYSITELIB}/fontTools/pens/cocoaPen.pyc
 ${PYSITELIB}/fontTools/pens/cocoaPen.pyo
+${PYSITELIB}/fontTools/pens/cu2quPen.py
+${PYSITELIB}/fontTools/pens/cu2quPen.pyc
+${PYSITELIB}/fontTools/pens/cu2quPen.pyo
 ${PYSITELIB}/fontTools/pens/filterPen.py
 ${PYSITELIB}/fontTools/pens/filterPen.pyc
 ${PYSITELIB}/fontTools/pens/filterPen.pyo
@@ -637,6 +671,9 @@ ${PYSITELIB}/fontTools/varLib/builder.pyo
 ${PYSITELIB}/fontTools/varLib/cff.py
 ${PYSITELIB}/fontTools/varLib/cff.pyc
 ${PYSITELIB}/fontTools/varLib/cff.pyo
+${PYSITELIB}/fontTools/varLib/errors.py
+${PYSITELIB}/fontTools/varLib/errors.pyc
+${PYSITELIB}/fontTools/varLib/errors.pyo
 ${PYSITELIB}/fontTools/varLib/featureVars.py
 ${PYSITELIB}/fontTools/varLib/featureVars.pyc
 ${PYSITELIB}/fontTools/varLib/featureVars.pyo
