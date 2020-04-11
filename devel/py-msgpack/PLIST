@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/23 09:40:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/04/11 14:02:50 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/msgpack/__init__.py
 ${PYSITELIB}/msgpack/__init__.pyc
 ${PYSITELIB}/msgpack/__init__.pyo
-${PYSITELIB}/msgpack/_packer.so
-${PYSITELIB}/msgpack/_unpacker.so
+${PLIST.py3x}${PYSITELIB}/msgpack/_cmsgpack.so
 ${PYSITELIB}/msgpack/_version.py
 ${PYSITELIB}/msgpack/_version.pyc
 ${PYSITELIB}/msgpack/_version.pyo
 ${PYSITELIB}/msgpack/exceptions.py
 ${PYSITELIB}/msgpack/exceptions.pyc
 ${PYSITELIB}/msgpack/exceptions.pyo
+${PYSITELIB}/msgpack/ext.py
+${PYSITELIB}/msgpack/ext.pyc
+${PYSITELIB}/msgpack/ext.pyo
 ${PYSITELIB}/msgpack/fallback.py
 ${PYSITELIB}/msgpack/fallback.pyc
 ${PYSITELIB}/msgpack/fallback.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
