@@ -3,6 +3,7 @@
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-server//}
+PKGREVISION=	1
 COMMENT=	Free RADIUS server implementation
 
 BUILD_DEFS+=		VARBASE
@@ -29,6 +30,7 @@ CONFIGURE_ARGS+=	--without-rlm_sql_postgresql
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
 
 RCD_SCRIPTS=		radiusd
+SMF_METHODS=		radiusd
 RADIUS_GROUP?=		radiusd
 RADIUS_USER?=		radiusd
 PKG_GROUPS=		${RADIUS_GROUP}

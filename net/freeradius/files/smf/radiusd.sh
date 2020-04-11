@@ -1,0 +1,14 @@
+#!@SMF_METHOD_SHELL@
+#
+# $NetBSD: radiusd.sh,v 1.1 2020/04/11 16:17:42 ??? Exp $
+#
+
+. /lib/svc/share/smf_include.sh
+
+if [ ! -d @VARBASE@/run/radiusd ]; then
+	@MKDIR@ @VARBASE@/run/radiusd
+	@CHMOD@ 0750 @VARBASE@/run/radiusd
+	@CHOWN@ @RADIUSD_USER@:@RADIUSD_GROUP@ @VARBASE@/run/radiusd
+fi
+
+@PREFIX@/sbin/radiusd "$@"
