@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.162 2020/04/10 09:21:35 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.163 2020/04/11 00:30:18 gdt Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -20,9 +20,22 @@ ALL_ENV+=			PYTHON3=${LOCALBASE}/bin/python3.7
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
-# Some modules written in Rust dislike gnu++17 as of 74.0.
-USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize virtualsize
+
+# firefox needs a compiler that supports gnu++14 and gnu++17.
+# However, passing --std=gnu++17 (from wrappers, as a result of
+# USE_LANGUAGES), results in problems for some Rust modules (as of
+# 74.0).  Therefore, do not declare the languages that are actually
+# needed.
+# \todo In pkgsrc infrastructure, separate the concept of needing a
+# compiler that can implement a standard, and the concept of forcibly
+# adding a --std flag.  (The build system of a package should be
+# setting the --std flag that is needed, rather than relying on the
+# defaults of a particular compiler version.)
+# NB: Even when building firefox with PKGSRC_COMPILER=gcc, the package
+# will depend on and use clang, doing so outside the normal compiler
+# selection framework.
+USE_LANGUAGES+=		c99 c++
 
 TOOL_DEPENDS+=		cbindgen>=0.13.1:../../devel/cbindgen
 .if ${MACHINE_ARCH} == "sparc64"
@@ -226,6 +239,10 @@ BUILDLINK_API_DEPENDS.nss+=	nss>=3.51
 #.include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
+# Force the use of clang from pkgsrc, regardless of the setting of
+# PKGSRC_COMPILER.
+# \todo This breaks the use of ccache, which should be fixed, probably
+# by adding support for this kind of forcing to pkgsrc infrastructure.
 PKG_CC=		${PREFIX}/bin/clang
 PKG_CXX=	${PREFIX}/bin/clang++
 BUILDLINK_DEPMETHOD.clang=	build
