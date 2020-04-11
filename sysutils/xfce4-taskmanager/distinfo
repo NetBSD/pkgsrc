@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/01/20 21:28:45 youri Exp $
+$NetBSD: distinfo,v 1.6 2020/04/11 04:24:55 gutteridge Exp $
 
-SHA1 (xfce4-taskmanager-1.2.2.tar.bz2) = 7e65f0d77ec6f5f7a82bacd89b9cf089d9ef355c
-RMD160 (xfce4-taskmanager-1.2.2.tar.bz2) = 14aba76c4c8d7de5fad60164219821342a9ee100
-SHA512 (xfce4-taskmanager-1.2.2.tar.bz2) = 670e8fd09bdaa85dc822dd5a7b055f898941e8079315843344e4dae12e2c0a14049b58241fb58f170461e7b8829bc479bea1a488b756210ef91ef8a4d7ff3348
-Size (xfce4-taskmanager-1.2.2.tar.bz2) = 395320 bytes
+SHA1 (xfce4-taskmanager-1.2.3.tar.bz2) = 11253425df5683f50257c7119686002482ed91c2
+RMD160 (xfce4-taskmanager-1.2.3.tar.bz2) = 3f22efe15400333e401e85db562527e32fc1f869
+SHA512 (xfce4-taskmanager-1.2.3.tar.bz2) = e3fbc89e4a1f6d3cd2f03388626b86129244c9d16092c74db18459efcaffc401a4aaab0588d9b96771f609bf5b17fa0a923a17d598e148b6d71efbb08aa5faf3
+Size (xfce4-taskmanager-1.2.3.tar.bz2) = 406223 bytes
