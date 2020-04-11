@@ -1,9 +1,29 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2019/11/09 12:33:29 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2020/04/11 10:54:00 adam Exp $
 
+Require newer CMake to fix install_name on Darwin.
+Set correct shared library target.
 Install man pages to correct directory.
 
 --- CMakeLists.txt.orig	2018-07-08 10:33:27.000000000 +0000
 +++ CMakeLists.txt
+@@ -1,4 +1,4 @@
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
++CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
+ 
+ #*****************  IMPORTANT  ************* IMPORTANT **********************
+ # Look at http://www.vtk.org/Wiki/CMake_HowToDoPlatformChecks
+@@ -516,9 +516,9 @@ IF(FONTCONFIG_FOUND AND WANT_FONTCONFIG)
+   INCLUDE_DIRECTORIES(${FONTCONFIG_INCLUDE_DIR})
+ ENDIF(FONTCONFIG_FOUND AND WANT_FONTCONFIG)
+ 
+-IF(WIN32 OR PODOFO_BUILD_STATIC)
++IF(PODOFO_BUILD_SHARED)
+   SET(PODOFO_LIB
+-      podofo
++      podofo_shared
+       ${PODOFO_LIB_DEPENDS}
+       )
+ ELSE(WIN32 OR PODOFO_BUILD_STATIC)
 @@ -530,7 +530,7 @@ ENDIF(WIN32 OR PODOFO_BUILD_STATIC)
  #
  # Setup directories we will need
