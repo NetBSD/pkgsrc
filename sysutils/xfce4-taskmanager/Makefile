@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2020/03/10 22:11:03 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/04/11 04:24:55 gutteridge Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-taskmanager-1.2.2
+VERSION=	1.2.3
+DISTNAME=	xfce4-taskmanager-${VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://archive.xfce.org/src/apps/xfce4-taskmanager/1.2/
+MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-taskmanager/${VERSION:R}/
 
 HOMEPAGE=	https://goodies.xfce.org/projects/applications/xfce4-taskmanager
 COMMENT=	Xfce task manager
