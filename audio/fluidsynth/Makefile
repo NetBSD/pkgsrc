@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/03/08 16:47:24 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2020/04/11 10:59:58 nia Exp $
 
 DISTNAME=	fluidsynth-2.1.1
 PKGREVISION=	1
@@ -32,9 +32,7 @@ SUBST_STAGE.oss=	pre-configure
 SUBST_MESSAGE.oss=	Correcting the path to the OSS device.
 SUBST_FILES.oss+=	src/drivers/fluid_oss.c
 SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
-.  if ${OPSYS} == "NetBSD"
-SUBST_SED.oss+=		-e "s,/dev/midi,/dev/rmidi0,g"
-.  endif
+SUBST_SED.oss+=		-e "s,/dev/midi,${DEVOSSMIDI},g"
 .endif
 
 .include "options.mk"
