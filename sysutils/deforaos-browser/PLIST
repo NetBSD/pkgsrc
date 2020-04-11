@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/01/10 23:08:26 khorben Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/04/11 03:07:42 khorben Exp $
 bin/browser
 bin/copy
 bin/delete
@@ -48,12 +48,29 @@ man/man1/move.1
 man/man1/open.1
 man/man1/properties.1
 man/man1/view.1
-share/applications/deforaos-browser.desktop
 share/applications/deforaos-browser-folder.desktop
+share/applications/deforaos-browser.desktop
 share/applications/deforaos-desktop-settings.desktop
-share/applications/deforaos-viewer.desktop
+share/applications/deforaos-view.desktop
+share/doc/Browser/COPYING
+share/doc/Browser/README.md
 share/doc/Browser/pinentry-sudo-askpass
 share/doc/Browser/zenity-sudo-askpass
+share/gtk-doc/html/Browser/Browser-desktop.html
+share/gtk-doc/html/Browser/Browser-plugin.html
+share/gtk-doc/html/Browser/Browser-vfs.html
+share/gtk-doc/html/Browser/Browser.devhelp2
+share/gtk-doc/html/Browser/api-index-full.html
+share/gtk-doc/html/Browser/ch01.html
+share/gtk-doc/html/Browser/home.png
+share/gtk-doc/html/Browser/index.html
+share/gtk-doc/html/Browser/left-insensitive.png
+share/gtk-doc/html/Browser/left.png
+share/gtk-doc/html/Browser/right-insensitive.png
+share/gtk-doc/html/Browser/right.png
+share/gtk-doc/html/Browser/style.css
+share/gtk-doc/html/Browser/up-insensitive.png
+share/gtk-doc/html/Browser/up.png
 share/icons/hicolor/16x16/apps/browser-view-details.png
 share/icons/hicolor/16x16/apps/browser-view-icons.png
 share/icons/hicolor/16x16/apps/browser-view-list.png
