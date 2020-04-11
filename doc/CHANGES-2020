@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2214 2020/04/11 04:25:50 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2215 2020/04/11 05:06:49 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3030,3 +3030,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/din to 46.1 [fox 2020-04-11]
 	Updated databases/deforaos-libdatabase to 0.0.2 [khorben 2020-04-11]
 	Updated sysutils/xfce4-taskmanager to 1.2.3 [gutteridge 2020-04-11]
+	Updated sysutils/xfburn to 0.6.2 [gutteridge 2020-04-11]
