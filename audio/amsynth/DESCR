@@ -1,0 +1,9 @@
+amsynth is an easy-to-use software synth with a classic subtractive
+synthesizer topology.
+
+- Dual oscillators (sine / saw / square / noise) with hard sync
+- 12/24 dB/oct resonant filter (low-pass / high-pass / band-pass / notch)
+- Mono / poly / legato keyboard modes
+- Dual ADSR envelope generators (filter & amplitude)
+- LFO which can modulate the oscillators, filter, and amplitude
+- Distortion and reverb

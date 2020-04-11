@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.591 2020/04/09 00:16:01 gutteridge Exp $
+# $NetBSD: Makefile,v 1.592 2020/04/11 10:56:53 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -22,6 +22,7 @@ SUBDIR+=	amaroc
 SUBDIR+=	amarok
 SUBDIR+=	amp
 SUBDIR+=	ampache
+SUBDIR+=	amsynth
 SUBDIR+=	applerecords
 SUBDIR+=	ardour
 SUBDIR+=	ario
