@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/25 18:24:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/11 14:08:10 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,9 @@ ${PYSITELIB}/bitcoin/__init__.pyo
 ${PYSITELIB}/bitcoin/base58.py
 ${PYSITELIB}/bitcoin/base58.pyc
 ${PYSITELIB}/bitcoin/base58.pyo
+${PYSITELIB}/bitcoin/bech32.py
+${PYSITELIB}/bitcoin/bech32.pyc
+${PYSITELIB}/bitcoin/bech32.pyo
 ${PYSITELIB}/bitcoin/bloom.py
 ${PYSITELIB}/bitcoin/bloom.pyc
 ${PYSITELIB}/bitcoin/bloom.pyo
@@ -40,6 +43,9 @@ ${PYSITELIB}/bitcoin/net.pyo
 ${PYSITELIB}/bitcoin/rpc.py
 ${PYSITELIB}/bitcoin/rpc.pyc
 ${PYSITELIB}/bitcoin/rpc.pyo
+${PYSITELIB}/bitcoin/segwit_addr.py
+${PYSITELIB}/bitcoin/segwit_addr.pyc
+${PYSITELIB}/bitcoin/segwit_addr.pyo
 ${PYSITELIB}/bitcoin/signature.py
 ${PYSITELIB}/bitcoin/signature.pyc
 ${PYSITELIB}/bitcoin/signature.pyo
@@ -55,6 +61,9 @@ ${PYSITELIB}/bitcoin/tests/fakebitcoinproxy.pyo
 ${PYSITELIB}/bitcoin/tests/test_base58.py
 ${PYSITELIB}/bitcoin/tests/test_base58.pyc
 ${PYSITELIB}/bitcoin/tests/test_base58.pyo
+${PYSITELIB}/bitcoin/tests/test_bech32.py
+${PYSITELIB}/bitcoin/tests/test_bech32.pyc
+${PYSITELIB}/bitcoin/tests/test_bech32.pyo
 ${PYSITELIB}/bitcoin/tests/test_bloom.py
 ${PYSITELIB}/bitcoin/tests/test_bloom.pyc
 ${PYSITELIB}/bitcoin/tests/test_bloom.pyo
