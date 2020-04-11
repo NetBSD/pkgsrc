@@ -1,0 +1,22 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2020/04/11 10:55:05 adam Exp $
+
+Dynamically link the executable.
+
+--- src/CMakeLists.txt.orig	2020-04-11 10:31:40.000000000 +0000
++++ src/CMakeLists.txt
+@@ -47,7 +47,6 @@ set(LIBRARY_SOURCES
+ 
+ set(PROGRAM "cmark")
+ set(PROGRAM_SOURCES
+-  ${LIBRARY_SOURCES}
+   main.c
+   )
+ 
+@@ -93,6 +92,7 @@ if (CMARK_SHARED)
+     BASE_NAME ${PROJECT_NAME})
+ 
+   list(APPEND CMARK_INSTALL ${LIBRARY})
++  target_link_libraries(${PROGRAM} ${LIBRARY})
+ endif()
+ 
+ if (CMARK_STATIC)
