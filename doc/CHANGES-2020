@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2223 2020/04/11 12:20:55 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2224 2020/04/11 12:47:45 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3058,3 +3058,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-File-Slurp to 9999.30 [mef 2020-04-11]
 	Updated devel/p5-Filesys-Notify-Simple to 0.14 [mef 2020-04-11]
 	Updated devel/p5-Future to 0.44 [mef 2020-04-11]
+	Updated devel/gdb to 8.3.1 [bsiegert 2020-04-11]
