@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/21 18:14:21 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/11 13:47:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/xarray/__init__.py
 ${PYSITELIB}/xarray/__init__.pyc
 ${PYSITELIB}/xarray/__init__.pyo
-${PYSITELIB}/xarray/_version.py
-${PYSITELIB}/xarray/_version.pyc
-${PYSITELIB}/xarray/_version.pyo
 ${PYSITELIB}/xarray/backends/__init__.py
 ${PYSITELIB}/xarray/backends/__init__.pyc
 ${PYSITELIB}/xarray/backends/__init__.pyo
@@ -139,6 +137,9 @@ ${PYSITELIB}/xarray/core/extensions.pyo
 ${PYSITELIB}/xarray/core/formatting.py
 ${PYSITELIB}/xarray/core/formatting.pyc
 ${PYSITELIB}/xarray/core/formatting.pyo
+${PYSITELIB}/xarray/core/formatting_html.py
+${PYSITELIB}/xarray/core/formatting_html.pyc
+${PYSITELIB}/xarray/core/formatting_html.pyo
 ${PYSITELIB}/xarray/core/groupby.py
 ${PYSITELIB}/xarray/core/groupby.pyc
 ${PYSITELIB}/xarray/core/groupby.pyo
@@ -169,6 +170,9 @@ ${PYSITELIB}/xarray/core/ops.pyo
 ${PYSITELIB}/xarray/core/options.py
 ${PYSITELIB}/xarray/core/options.pyc
 ${PYSITELIB}/xarray/core/options.pyo
+${PYSITELIB}/xarray/core/parallel.py
+${PYSITELIB}/xarray/core/parallel.pyc
+${PYSITELIB}/xarray/core/parallel.pyo
 ${PYSITELIB}/xarray/core/pdcompat.py
 ${PYSITELIB}/xarray/core/pdcompat.pyc
 ${PYSITELIB}/xarray/core/pdcompat.pyo
@@ -193,6 +197,9 @@ ${PYSITELIB}/xarray/core/utils.pyo
 ${PYSITELIB}/xarray/core/variable.py
 ${PYSITELIB}/xarray/core/variable.pyc
 ${PYSITELIB}/xarray/core/variable.pyo
+${PYSITELIB}/xarray/core/weighted.py
+${PYSITELIB}/xarray/core/weighted.pyc
+${PYSITELIB}/xarray/core/weighted.pyo
 ${PYSITELIB}/xarray/plot/__init__.py
 ${PYSITELIB}/xarray/plot/__init__.pyc
 ${PYSITELIB}/xarray/plot/__init__.pyo
@@ -209,6 +216,8 @@ ${PYSITELIB}/xarray/plot/utils.py
 ${PYSITELIB}/xarray/plot/utils.pyc
 ${PYSITELIB}/xarray/plot/utils.pyo
 ${PYSITELIB}/xarray/py.typed
+${PYSITELIB}/xarray/static/css/style.css
+${PYSITELIB}/xarray/static/html/icons-svg-inline.html
 ${PYSITELIB}/xarray/testing.py
 ${PYSITELIB}/xarray/testing.pyc
 ${PYSITELIB}/xarray/testing.pyo
@@ -299,6 +308,9 @@ ${PYSITELIB}/xarray/tests/test_extensions.pyo
 ${PYSITELIB}/xarray/tests/test_formatting.py
 ${PYSITELIB}/xarray/tests/test_formatting.pyc
 ${PYSITELIB}/xarray/tests/test_formatting.pyo
+${PYSITELIB}/xarray/tests/test_formatting_html.py
+${PYSITELIB}/xarray/tests/test_formatting_html.pyc
+${PYSITELIB}/xarray/tests/test_formatting_html.pyo
 ${PYSITELIB}/xarray/tests/test_groupby.py
 ${PYSITELIB}/xarray/tests/test_groupby.pyc
 ${PYSITELIB}/xarray/tests/test_groupby.pyo
@@ -338,12 +350,18 @@ ${PYSITELIB}/xarray/tests/test_tutorial.pyo
 ${PYSITELIB}/xarray/tests/test_ufuncs.py
 ${PYSITELIB}/xarray/tests/test_ufuncs.pyc
 ${PYSITELIB}/xarray/tests/test_ufuncs.pyo
+${PYSITELIB}/xarray/tests/test_units.py
+${PYSITELIB}/xarray/tests/test_units.pyc
+${PYSITELIB}/xarray/tests/test_units.pyo
 ${PYSITELIB}/xarray/tests/test_utils.py
 ${PYSITELIB}/xarray/tests/test_utils.pyc
 ${PYSITELIB}/xarray/tests/test_utils.pyo
 ${PYSITELIB}/xarray/tests/test_variable.py
 ${PYSITELIB}/xarray/tests/test_variable.pyc
 ${PYSITELIB}/xarray/tests/test_variable.pyo
+${PYSITELIB}/xarray/tests/test_weighted.py
+${PYSITELIB}/xarray/tests/test_weighted.pyc
+${PYSITELIB}/xarray/tests/test_weighted.pyo
 ${PYSITELIB}/xarray/tutorial.py
 ${PYSITELIB}/xarray/tutorial.pyc
 ${PYSITELIB}/xarray/tutorial.pyo
@@ -353,6 +371,6 @@ ${PYSITELIB}/xarray/ufuncs.pyo
 ${PYSITELIB}/xarray/util/__init__.py
 ${PYSITELIB}/xarray/util/__init__.pyc
 ${PYSITELIB}/xarray/util/__init__.pyo
+${PYSITELIB}/xarray/util/print_versions.py
 ${PYSITELIB}/xarray/util/print_versions.pyc
 ${PYSITELIB}/xarray/util/print_versions.pyo
-${PYSITELIB}/xarray/util/print_versions.py
