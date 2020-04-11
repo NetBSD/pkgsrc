@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/03/19 14:03:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/04/11 21:11:26 khorben Exp $
 bin/compose
 bin/mailer
 include/Desktop/Mailer.h
@@ -32,9 +32,9 @@ share/gtk-doc/html/Mailer/Mailer-helper.html
 share/gtk-doc/html/Mailer/Mailer-mailer.html
 share/gtk-doc/html/Mailer/Mailer-message.html
 share/gtk-doc/html/Mailer/Mailer-plugin.html
+share/gtk-doc/html/Mailer/Mailer.devhelp2
 share/gtk-doc/html/Mailer/api-index-full.html
 share/gtk-doc/html/Mailer/ch01.html
-share/gtk-doc/html/Mailer/deprecated-api-index.html
 share/gtk-doc/html/Mailer/home.png
 share/gtk-doc/html/Mailer/index.html
 share/gtk-doc/html/Mailer/left-insensitive.png
