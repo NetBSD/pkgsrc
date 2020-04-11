@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/02/22 12:32:59 khorben Exp $
+$NetBSD: distinfo,v 1.6 2020/04/11 03:57:10 khorben Exp $
 
-SHA1 (libDatabase-0.0.1.tar.gz) = 6f65b444cdc8bc314f1f004bafbf469f45a4efe0
-RMD160 (libDatabase-0.0.1.tar.gz) = 43823431becbe6decb8b610e502eddaba821dadf
-SHA512 (libDatabase-0.0.1.tar.gz) = 8b959eeeae81094d642d24a92a28d15ef9eab0313a73cf29384f02833a4444d753a596ff4a898858cbf9c1eb46f705e42860a1663e368daa4fcb29419c10f696
-Size (libDatabase-0.0.1.tar.gz) = 18743 bytes
-SHA1 (patch-tests_tests.sh) = 101816b16f034e370fe770a03088e8cbf1b4ee3f
+SHA1 (libDatabase-0.0.2.tar.gz) = 11d3a12f6c6fc5322b1bada964c64bcf5120f22e
+RMD160 (libDatabase-0.0.2.tar.gz) = 60de5c5f8afe2541c36a5857a0607135f0c0f66a
+SHA512 (libDatabase-0.0.2.tar.gz) = 31dcb501123971a64bc23f35560176b6e4a3cf33833821c3c85cb4bdf433a57bfc29d122d7cf560aa0fa3a07388341310790526b96390bd0252e9862f138dc70
+Size (libDatabase-0.0.2.tar.gz) = 26039 bytes

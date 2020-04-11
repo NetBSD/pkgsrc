@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2020/03/16 13:17:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/11 03:57:10 khorben Exp $
+bin/database
 include/Database.h
 include/Database/database.h
 include/Database/engine.h
+include/Database/statement.h
 lib/Database/engine/pdo.so
 lib/Database/engine/pgsql.so
 lib/Database/engine/pgsqlpool.so
@@ -14,14 +16,16 @@ lib/libDatabase.so.0.0
 lib/pkgconfig/libDatabase.pc
 share/gtk-doc/html/libDatabase/api-index-full.html
 share/gtk-doc/html/libDatabase/ch01.html
-share/gtk-doc/html/libDatabase/deprecated-api-index.html
 share/gtk-doc/html/libDatabase/home.png
 share/gtk-doc/html/libDatabase/index.html
 share/gtk-doc/html/libDatabase/left-insensitive.png
 share/gtk-doc/html/libDatabase/left.png
 share/gtk-doc/html/libDatabase/libDatabase-database.html
+share/gtk-doc/html/libDatabase/libDatabase.devhelp2
 share/gtk-doc/html/libDatabase/right-insensitive.png
 share/gtk-doc/html/libDatabase/right.png
 share/gtk-doc/html/libDatabase/style.css
 share/gtk-doc/html/libDatabase/up-insensitive.png
 share/gtk-doc/html/libDatabase/up.png
+share/man/html1/database.html
+share/man/man1/database.1
