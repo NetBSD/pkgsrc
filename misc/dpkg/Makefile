@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2019/08/11 13:21:54 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2020/04/11 11:53:42 adam Exp $
 
-DISTNAME=	dpkg_1.18.25
+DISTNAME=	dpkg_1.20.0
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,6 +20,7 @@ BUILD_DEFS+=	VARBASE
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake msgfmt perl:run gtar:run pod2man
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-admindir=${VARBASE}/db/dpkg
