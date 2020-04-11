@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST.common,v 1.13 2018/01/31 20:33:11 maya Exp $
+@comment $NetBSD: PLIST.common,v 1.14 2020/04/11 12:47:28 bsiegert Exp $
 bin/gdb
+bin/gdb-add-index
 include/gdb/jit-reader.h
 info/annotate.info
 info/gdb.info
 info/stabs.info
+man/man1/gdb-add-index.1
 man/man1/gdb.1
 man/man1/gdbserver.1
 man/man5/gdbinit.5
