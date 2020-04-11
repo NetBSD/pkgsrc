@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/01/20 21:28:45 youri Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/04/11 04:24:55 gutteridge Exp $
 bin/xfce4-taskmanager
 share/applications/xfce4-taskmanager.desktop
 share/icons/hicolor/16x16/actions/xc_crosshair.png
@@ -23,7 +23,9 @@ share/locale/gl/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/he/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/hr/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/hu/LC_MESSAGES/xfce4-taskmanager.mo
+share/locale/hy_AM/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/id/LC_MESSAGES/xfce4-taskmanager.mo
+share/locale/ie/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/is/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/it/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/ja/LC_MESSAGES/xfce4-taskmanager.mo
