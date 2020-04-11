@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2225 2020/04/11 13:47:28 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2226 2020/04/11 14:08:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3061,3 +3061,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/gdb to 8.3.1 [bsiegert 2020-04-11]
 	Updated devel/msgpack to 3.2.1 [adam 2020-04-11]
 	Updated math/py-xarray to 0.15.1 [adam 2020-04-11]
+	Updated devel/py-msgpack to 1.0.0 [adam 2020-04-11]
+	Updated finance/py-bitcoinlib to 0.11.0 [adam 2020-04-11]
