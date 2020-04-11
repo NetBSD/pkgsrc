@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2020/03/21 08:36:03 adam Exp $
+$NetBSD: distinfo,v 1.23 2020/04/11 07:09:16 adam Exp $
 
-SHA1 (regex-2020.2.20.tar.gz) = a127346120a901ed5ab0b6e930db1e87f39ec78e
-RMD160 (regex-2020.2.20.tar.gz) = 92a9d7a3cb4c2bd3bf5f89c329d61c2f5fe97bba
-SHA512 (regex-2020.2.20.tar.gz) = 0a35b9512048bd36bcbf8a03905cc77f007d204f9ed9a0aaa3d5fcd72392bf37285c35ec0f04b1520e486b651028063c799ec265782c52ca4ecf7eeb0581727a
-Size (regex-2020.2.20.tar.gz) = 681215 bytes
+SHA1 (regex-2020.4.4.tar.gz) = 779604c9653e58cfb4c381a51931c8a39c078585
+RMD160 (regex-2020.4.4.tar.gz) = 6039de92ad504da901723ea35c461f7b8fd37ff2
+SHA512 (regex-2020.4.4.tar.gz) = 95eadaaffaf87a19b31024ad3cff670d34a31de8b9be430fc276a533a584203842d1634b66a346c4aaecf2407b973bb1ae9c8ee8b48785d03bd5e45a67a271a9
+Size (regex-2020.4.4.tar.gz) = 695848 bytes
