@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/03/16 13:22:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/04/11 02:42:06 khorben Exp $
 bin/widget
 include/Desktop.h
 include/Desktop/about.h
@@ -20,7 +20,6 @@ man/html1/widget.html
 man/man1/widget.1
 share/gtk-doc/html/libDesktop/api-index-full.html
 share/gtk-doc/html/libDesktop/ch01.html
-share/gtk-doc/html/libDesktop/deprecated-api-index.html
 share/gtk-doc/html/libDesktop/home.png
 share/gtk-doc/html/libDesktop/index.html
 share/gtk-doc/html/libDesktop/left-insensitive.png
@@ -33,6 +32,7 @@ share/gtk-doc/html/libDesktop/libDesktop-menubar.html
 share/gtk-doc/html/libDesktop/libDesktop-message.html
 share/gtk-doc/html/libDesktop/libDesktop-mime.html
 share/gtk-doc/html/libDesktop/libDesktop-toolbar.html
+share/gtk-doc/html/libDesktop/libDesktop.devhelp2
 share/gtk-doc/html/libDesktop/right-insensitive.png
 share/gtk-doc/html/libDesktop/right.png
 share/gtk-doc/html/libDesktop/style.css
