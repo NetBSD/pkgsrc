@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2020/04/11 10:56:54 nia Exp $
+
+Shell portability.
+
+--- configure.orig	2019-04-13 06:36:47.000000000 +0000
++++ configure
+@@ -16933,7 +16933,7 @@ fi
+ fi
+ 
+ 
+- if test "x$with_nsm" == "xyes"; then
++ if test "x$with_nsm" = "xyes"; then
+   BUILD_NSM_TRUE=
+   BUILD_NSM_FALSE='#'
+ else
+@@ -17522,7 +17522,7 @@ else
+   BUILD_DSSI_FALSE=
+ fi
+ 
+- if test "x$with_dssi_gui" == "xyes"; then
++ if test "x$with_dssi_gui" = "xyes"; then
+   BUILD_DSSI_GUI_TRUE=
+   BUILD_DSSI_GUI_FALSE='#'
+ else
