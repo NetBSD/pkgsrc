@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2220 2020/04/11 07:48:24 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2221 2020/04/11 10:57:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3046,3 +3046,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/py-stripe to 2.45.0 [adam 2020-04-11]
 	Updated math/py-networkx to 2.4 [adam 2020-04-11]
 	Updated devel/py-decorator to 4.4.2 [adam 2020-04-11]
+	Added audio/amsynth version 1.9.0 [nia 2020-04-11]
