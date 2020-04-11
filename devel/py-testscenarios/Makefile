@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/06/13 22:20:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/11 07:27:37 adam Exp $
 
 DISTNAME=	testscenarios-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,7 @@ COMMENT=	Pyunit extension for dependency injection
 LICENSE=	apache-2.0 OR modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
-# circular dependency
-# https://github.com/testing-cabal/testscenarios/issues/4
-#DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
+DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
 TEST_TARGET=	check
 
