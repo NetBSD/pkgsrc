@@ -8,7 +8,7 @@
 if [ ! -d @VARBASE@/run/radiusd ]; then
 	@MKDIR@ @VARBASE@/run/radiusd
 	@CHMOD@ 0750 @VARBASE@/run/radiusd
-	@CHOWN@ @RADIUSD_USER@:@RADIUSD_GROUP@ @VARBASE@/run/radiusd
+	@CHOWN@ @RADIUS_USER@:@RADIUS_GROUP@ @VARBASE@/run/radiusd
 fi
 
 @PREFIX@/sbin/radiusd "$@"
