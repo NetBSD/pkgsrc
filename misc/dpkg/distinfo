@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2018/08/31 13:58:44 adam Exp $
+$NetBSD: distinfo,v 1.15 2020/04/11 11:53:43 adam Exp $
 
-SHA1 (dpkg_1.18.25.tar.xz) = 49e827b0fef7e3b335cace31cba8ff6b340a4e27
-RMD160 (dpkg_1.18.25.tar.xz) = dd6ef449130ab14fd9104d3d849f45fe5cea5cfe
-SHA512 (dpkg_1.18.25.tar.xz) = a26907c32ea02044d8729b70996b786204d3ce89ac294a8422b009688ab9bf886f593cb37430e84593dec2c26cfbc01a458d47fbda749decdf8acbfb72e07bb3
-Size (dpkg_1.18.25.tar.xz) = 4541640 bytes
+SHA1 (dpkg_1.20.0.tar.xz) = eda82352ba507bc7d7749b44579983ace07064c8
+RMD160 (dpkg_1.20.0.tar.xz) = e0a2ca3232723d4e0927e6ae1a7f92648cc917da
+SHA512 (dpkg_1.20.0.tar.xz) = 5dd7961bde19ccc891fd5b77ca0085f7fc0308c20380e20b393397ff92e50d1c0f54e7b57676c05876021b44aa3788af8258c21ff2b672110ac92c7ce0b408f9
+Size (dpkg_1.20.0.tar.xz) = 4738556 bytes
+SHA1 (patch-utils_start-stop-daemon.c) = 7927b364851b039e44279157aa783afde4508af9
