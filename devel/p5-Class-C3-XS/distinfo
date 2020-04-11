@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/08/08 13:01:24 mef Exp $
+$NetBSD: distinfo,v 1.6 2020/04/11 11:42:47 mef Exp $
 
-SHA1 (Class-C3-XS-0.14.tar.gz) = 3c30b637ea4c691f64d68a15f93c27916e9757a2
-RMD160 (Class-C3-XS-0.14.tar.gz) = 8034cbcc2439ef5d53c7e86db17a93c0bc77b6c7
-SHA512 (Class-C3-XS-0.14.tar.gz) = 8db844636d80efcde4a31f2db2b55dc972502b21a202c9fb1bce1d30588314371cf012962a21f978db3abcd90bc9ee2ad4f0544854c3888cdceebbd7e6d93739
-Size (Class-C3-XS-0.14.tar.gz) = 35209 bytes
+SHA1 (Class-C3-XS-0.15.tar.gz) = ba462638390b52710ca9c31abd67e511b13235dc
+RMD160 (Class-C3-XS-0.15.tar.gz) = 22974f2fcca15559ec5d042a5b84809c72f3463a
+SHA512 (Class-C3-XS-0.15.tar.gz) = 1133081f3c81fbe3f69b83da0c188494c5c4861d6dfbca252acd88856e80d6d1403a4808caad5f039462a9c9f9f122e911e30dbeb237b89a7ddb307216194099
+Size (Class-C3-XS-0.15.tar.gz) = 37489 bytes
