@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.22 2017/03/20 12:29:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2020/04/11 07:02:34 adam Exp $
 bin/convertfonts
-bin/get-wings-flags
-bin/get-wraster-flags
-bin/get-wutil-flags
 bin/geticonset
 bin/getstyle
 bin/seticons
@@ -44,9 +41,6 @@ man/cs/man1/wxcopy.1
 man/cs/man1/wxpaste.1
 man/man1/WPrefs.1
 man/man1/WindowMaker.1
-man/man1/get-wings-flags.1
-man/man1/get-wraster-flags.1
-man/man1/get-wutil-flags.1
 man/man1/geticonset.1
 man/man1/getstyle.1
 man/man1/seticons.1
@@ -61,7 +55,6 @@ man/man1/wmmenugen.1
 man/man1/wmsetbg.1
 man/man1/wxcopy.1
 man/man1/wxpaste.1
-man/man8/upgrade-windowmaker-defaults.8
 man/ru/man1/geticonset.1
 man/ru/man1/getstyle.1
 man/ru/man1/seticons.1
@@ -239,6 +232,7 @@ share/WindowMaker/README
 share/WindowMaker/README.themes
 share/WindowMaker/SoundSets/.directory
 share/WindowMaker/Sounds/.directory
+share/WindowMaker/Styles/Adwaita.style
 share/WindowMaker/Styles/Autumn.style
 share/WindowMaker/Styles/Black.style
 share/WindowMaker/Styles/BlackTexture.style
@@ -280,8 +274,12 @@ share/WindowMaker/Themes/OpenStep.style
 share/WindowMaker/Themes/Pastel.style
 share/WindowMaker/Themes/SteelBlueSilk.style
 share/WindowMaker/appearance.menu
+share/WindowMaker/appearance.menu.fy
+share/WindowMaker/appearance.menu.nl
 share/WindowMaker/autostart.sh
 share/WindowMaker/background.menu
+share/WindowMaker/background.menu.fy
+share/WindowMaker/background.menu.nl
 share/WindowMaker/exitscript.sh
 share/WindowMaker/menu
 share/WindowMaker/menu.bg
