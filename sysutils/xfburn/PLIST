@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2018/05/15 22:13:21 youri Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/11 05:05:40 gutteridge Exp $
 bin/xfburn
 man/man1/xfburn.1
 share/Thunar/sendto/thunar-sendto-xfburn.desktop
-share/appdata/xfburn.appdata.xml
 share/applications/xfburn.desktop
 share/icons/hicolor/16x16/stock/media/stock_xfburn-audio-cd.png
 share/icons/hicolor/16x16/stock/media/stock_xfburn-blank-cdrw.png
@@ -50,6 +49,7 @@ share/icons/hicolor/scalable/stock/media/stock_xfburn-new-data-composition.svg
 share/icons/hicolor/scalable/stock/media/stock_xfburn.svg
 share/locale/ar/LC_MESSAGES/xfburn.mo
 share/locale/ast/LC_MESSAGES/xfburn.mo
+share/locale/be/LC_MESSAGES/xfburn.mo
 share/locale/bg/LC_MESSAGES/xfburn.mo
 share/locale/ca/LC_MESSAGES/xfburn.mo
 share/locale/cs/LC_MESSAGES/xfburn.mo
@@ -68,7 +68,9 @@ share/locale/gl/LC_MESSAGES/xfburn.mo
 share/locale/he/LC_MESSAGES/xfburn.mo
 share/locale/hr/LC_MESSAGES/xfburn.mo
 share/locale/hu/LC_MESSAGES/xfburn.mo
+share/locale/hy_AM/LC_MESSAGES/xfburn.mo
 share/locale/id/LC_MESSAGES/xfburn.mo
+share/locale/ie/LC_MESSAGES/xfburn.mo
 share/locale/is/LC_MESSAGES/xfburn.mo
 share/locale/it/LC_MESSAGES/xfburn.mo
 share/locale/ja/LC_MESSAGES/xfburn.mo
@@ -88,6 +90,7 @@ share/locale/pt_BR/LC_MESSAGES/xfburn.mo
 share/locale/ru/LC_MESSAGES/xfburn.mo
 share/locale/si/LC_MESSAGES/xfburn.mo
 share/locale/sk/LC_MESSAGES/xfburn.mo
+share/locale/sl/LC_MESSAGES/xfburn.mo
 share/locale/sq/LC_MESSAGES/xfburn.mo
 share/locale/sr/LC_MESSAGES/xfburn.mo
 share/locale/sv/LC_MESSAGES/xfburn.mo
@@ -101,5 +104,7 @@ share/locale/ur_PK/LC_MESSAGES/xfburn.mo
 share/locale/vi/LC_MESSAGES/xfburn.mo
 share/locale/zh_CN/LC_MESSAGES/xfburn.mo
 share/locale/zh_TW/LC_MESSAGES/xfburn.mo
+share/metainfo/org.xfce.xfburn.appdata.xml
+share/xfburn/xfburn-popup-menus.ui
 share/xfburn/xfburn-toolbars.ui
 share/xfburn/xfburn.ui
