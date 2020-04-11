@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2218 2020/04/11 07:14:27 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2219 2020/04/11 07:34:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3038,3 +3038,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-regex to 2020.4.4 [adam 2020-04-11]
 	Updated www/py-rfc3986 to 1.4.0 [adam 2020-04-11]
 	Updated www/py-hstspreload to 2020.4.7 [adam 2020-04-11]
+	Updated fonts/py-fonttools to 4.7.0 [adam 2020-04-11]
+	Updated www/py-bleach to 3.1.4 [adam 2020-04-11]
+	Updated devel/py-rope to 0.16.0 [adam 2020-04-11]
+	Updated devel/py-testtools to 2.4.0 [adam 2020-04-11]
