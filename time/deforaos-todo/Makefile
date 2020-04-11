@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/03/10 22:11:05 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/04/11 21:16:40 khorben Exp $
 
 DISTNAME=	Todo-0.3.0
 PKGNAME=	deforaos-todo-0.3.0
@@ -38,7 +38,6 @@ post-install:
 .include "options.mk"
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../mail/deforaos-mailer/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
