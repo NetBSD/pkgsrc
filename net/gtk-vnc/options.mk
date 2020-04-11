@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.13 2019/09/02 13:19:50 adam Exp $
+# $NetBSD: options.mk,v 1.14 2020/04/11 21:09:23 khorben Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk-vnc
 PKG_SUPPORTED_OPTIONS=	python vnc-sasl pulseaudio
-PKG_SUGGESTED_OPTIONS=	python vnc-sasl
+PKG_SUGGESTED_OPTIONS=	python vnc-sasl pulseaudio
 
 .include "../../mk/bsd.options.mk"
 
