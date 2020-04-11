@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2224 2020/04/11 12:47:45 bsiegert Exp $
+$NetBSD: CHANGES-2020,v 1.2225 2020/04/11 13:47:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3059,3 +3059,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Filesys-Notify-Simple to 0.14 [mef 2020-04-11]
 	Updated devel/p5-Future to 0.44 [mef 2020-04-11]
 	Updated devel/gdb to 8.3.1 [bsiegert 2020-04-11]
+	Updated devel/msgpack to 3.2.1 [adam 2020-04-11]
+	Updated math/py-xarray to 0.15.1 [adam 2020-04-11]
