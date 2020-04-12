@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2237 2020/04/12 11:24:22 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2238 2020/04/12 11:32:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3082,3 +3082,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fluidsynth to 2.1.2 [nia 2020-04-12]
 	Updated textproc/py-docutils to 0.16 [adam 2020-04-12]
 	Updated devel/py-faker to 4.0.2 [adam 2020-04-12]
+	Updated devel/rgbds to 0.4.0 [nia 2020-04-12]
