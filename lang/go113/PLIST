@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/21 16:51:10 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/12 11:09:03 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go113/AUTHORS
@@ -800,6 +800,7 @@ go113/pkg/${GO_PLATFORM}/internal/poll.a
 go113/pkg/${GO_PLATFORM}/internal/race.a
 go113/pkg/${GO_PLATFORM}/internal/reflectlite.a
 go113/pkg/${GO_PLATFORM}/internal/singleflight.a
+go113/pkg/${GO_PLATFORM}/internal/syscall/execenv.a
 go113/pkg/${GO_PLATFORM}/internal/syscall/unix.a
 go113/pkg/${GO_PLATFORM}/internal/testenv.a
 go113/pkg/${GO_PLATFORM}/internal/testlog.a
@@ -2012,6 +2013,7 @@ go113/src/cmd/go/testdata/script/mod_domain_root.txt
 go113/src/cmd/go/testdata/script/mod_dot.txt
 go113/src/cmd/go/testdata/script/mod_download.txt
 go113/src/cmd/go/testdata/script/mod_download_hash.txt
+go113/src/cmd/go/testdata/script/mod_download_partial.txt
 go113/src/cmd/go/testdata/script/mod_edit.txt
 go113/src/cmd/go/testdata/script/mod_edit_go.txt
 go113/src/cmd/go/testdata/script/mod_enabled.txt
@@ -4521,6 +4523,8 @@ go113/src/internal/reflectlite/type.go
 go113/src/internal/reflectlite/value.go
 go113/src/internal/singleflight/singleflight.go
 go113/src/internal/singleflight/singleflight_test.go
+go113/src/internal/syscall/execenv/execenv_default.go
+go113/src/internal/syscall/execenv/execenv_windows.go
 go113/src/internal/syscall/unix/asm_aix_ppc64.s
 go113/src/internal/syscall/unix/asm_solaris.s
 go113/src/internal/syscall/unix/at.go
@@ -5222,10 +5226,8 @@ go113/src/os/dir_plan9.go
 go113/src/os/dir_unix.go
 go113/src/os/dir_windows.go
 go113/src/os/env.go
-go113/src/os/env_default.go
 go113/src/os/env_test.go
 go113/src/os/env_unix_test.go
-go113/src/os/env_windows.go
 go113/src/os/error.go
 go113/src/os/error_errno.go
 go113/src/os/error_plan9.go
