@@ -1,8 +1,8 @@
-# $NetBSD: octave.mk,v 1.8 2009/04/12 20:46:20 adam Exp $
+# $NetBSD: octave.mk,v 1.9 2020/04/12 21:19:32 adam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
-OCTAVE_CONFIG=	${LOCALBASE}/bin/octave-config
+OCTAVE_CONFIG=	${PREFIX}/bin/octave-config
 
 # OCTAVE_VARS is a list of variables to define in the make environment.
 # This may be overridden in an octave add-on package Makefile.
@@ -24,6 +24,6 @@ OCT_${var}!=	${OCTAVE_CONFIG} -p ${var}
 .if defined(REPLACE_OCTAVE)
 REPLACE_INTERPRETER+=	octave
 REPLACE.octave.old=	.*octave
-REPLACE.octave.new=	${LOCALBASE}/bin/octave
+REPLACE.octave.new=	${PREFIX}/bin/octave
 REPLACE_FILES.octave=	${REPLACE_OCTAVE}
 .endif # defined(REPLACE_OCTAVE)

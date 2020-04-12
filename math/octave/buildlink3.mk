@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2016/12/31 09:26:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2020/04/12 21:19:32 adam Exp $
 
 BUILDLINK_TREE+=	octave
 
@@ -14,7 +14,7 @@ BUILDLINK_PKGSRCDIR.octave?=	../../math/octave
 pkgbase := octave
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.octave:Mhdf5)
+.if ${PKG_BUILD_OPTIONS.octave:Mhdf5}
 .  include "../../devel/hdf5/buildlink3.mk"
 .endif
 
