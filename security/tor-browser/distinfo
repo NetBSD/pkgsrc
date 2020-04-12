@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14.2.1 2020/04/09 12:05:30 bsiegert Exp $
+$NetBSD: distinfo,v 1.14.2.2 2020/04/12 08:53:27 bsiegert Exp $
 
-SHA1 (src-firefox-tor-browser-68.6.0esr-9.0-1-build2.tar.xz) = bfc0a2ff6b82f5bc934b39e8c5d797cfbe4cd3fa
-RMD160 (src-firefox-tor-browser-68.6.0esr-9.0-1-build2.tar.xz) = 400cd8b36770405c6d9541e38ec138380bcbb72f
-SHA512 (src-firefox-tor-browser-68.6.0esr-9.0-1-build2.tar.xz) = fc3f85d3b2981de370035227a3dd08a3894cdf0df365ca569ec97174dd582aeaa1f318f7b8696872705f4872b39fe460d2242c5c6bc4724a095d70e84090d5a4
-Size (src-firefox-tor-browser-68.6.0esr-9.0-1-build2.tar.xz) = 348541924 bytes
+SHA1 (src-firefox-tor-browser-68.7.0esr-9.0-2-build1.tar.xz) = c9be70c6cbbac9d73d1aee930703ea4d013725df
+RMD160 (src-firefox-tor-browser-68.7.0esr-9.0-2-build1.tar.xz) = 6289e342fa8e99c21098331d153beb6d88bc39b2
+SHA512 (src-firefox-tor-browser-68.7.0esr-9.0-2-build1.tar.xz) = 6cf582c1eb3092c1ecbef86c67040c89dc2c84f54805c52408b0c1051550fcff1af563e09e85ba9cd72a1a1e924b6643a812e9669676856a86e903e0063e5270
+Size (src-firefox-tor-browser-68.7.0esr-9.0-2-build1.tar.xz) = 348594032 bytes
 SHA1 (patch-.mozconfig) = 66fbb2f113091eee1f022cd656231f845b04b0f8
 SHA1 (patch-aa) = 9f7200c411cd2217a80ec10a276c8877bc6b845c
 SHA1 (patch-browser_app_profile_firefox.js) = 076cc2892547bac07fe907533f4e821f13f5738e
