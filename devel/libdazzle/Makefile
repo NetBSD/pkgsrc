@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/03/11 09:53:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/12 10:42:04 nia Exp $
 
 DISTNAME=	libdazzle-3.34.1
 PKGREVISION=	3
@@ -23,6 +23,7 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/libdazzle-1.0.pc
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
