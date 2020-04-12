@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/12/31 12:27:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/04/12 21:05:01 wiz Exp $
 include/libssh/callbacks.h
 include/libssh/legacy.h
 include/libssh/libssh.h
@@ -11,5 +11,5 @@ lib/cmake/libssh/libssh-config-version.cmake
 lib/cmake/libssh/libssh-config.cmake
 lib/libssh.so
 lib/libssh.so.4
-lib/libssh.so.4.8.4
+lib/libssh.so.4.8.5
 lib/pkgconfig/libssh.pc
