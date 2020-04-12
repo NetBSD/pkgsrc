@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.152 2020/03/10 22:10:04 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2020/04/12 08:28:48 adam Exp $
 
 DISTNAME=	digikam-6.4.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/6.4.0/}
 

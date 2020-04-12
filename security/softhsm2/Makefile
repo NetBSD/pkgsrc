@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/31 19:13:07 he Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/12 08:28:06 adam Exp $
 #
 
 VERSION=	2.5.0
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	softhsm-${VERSION}
 PKGNAME=	softhsm2-${VERSION}
 CATEGORIES=	security
