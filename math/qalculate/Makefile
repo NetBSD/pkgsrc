@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/04/12 08:28:00 adam Exp $
+# $NetBSD: Makefile,v 1.57 2020/04/12 19:48:40 joerg Exp $
 
 DISTNAME=	libqalculate-3.5.0a
 PKGNAME=	qalculate-3.5.0
@@ -28,8 +28,7 @@ UNLIMIT_RESOURCES=	datasize
 CFLAGS.SunOS+=		-D_LCONV_C99
 
 pre-configure:
-	set -e; cd ${WRKSRC}; \
-	autoheader; automake -a --foreign -i; autoconf
+	${RUN} cd ${WRKSRC} && autoreconf
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
