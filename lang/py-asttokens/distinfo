@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/01/14 22:37:07 wiz Exp $
+$NetBSD: distinfo,v 1.11 2020/04/12 21:12:21 wiz Exp $
 
-SHA1 (asttokens-2.0.3.tar.gz) = 4a2ddbfdb402ac0334e39dfafaaa2cbf9c7984b7
-RMD160 (asttokens-2.0.3.tar.gz) = cdc3c5beb41b940a96bb51c9ec9fa0e15b9c4397
-SHA512 (asttokens-2.0.3.tar.gz) = 6d962c81925593b00ad9e5842eec56f56ec6cb2541c8265ccff0883f571b39ad81b60df824b0088f8f08c7bd079f2c0f777452a34eb06c8dae6ddd31165dedee
-Size (asttokens-2.0.3.tar.gz) = 41533 bytes
+SHA1 (asttokens-2.0.4.tar.gz) = 8d61aae17af85be2bead3cf7920d5f3ee9fd3d8f
+RMD160 (asttokens-2.0.4.tar.gz) = a85249c57ded4bc4c3e1f8e1466c6b5b1cfc03e3
+SHA512 (asttokens-2.0.4.tar.gz) = 2be6a2ddef35c45ed8b6576a35618b6bc1a4d8c50ab7ac2970d549e7310d46fc8a29fff514d58d6e01c984e04389ca8aee6efed510f349013ab8e2c867c98669
+Size (asttokens-2.0.4.tar.gz) = 50173 bytes
