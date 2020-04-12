@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2230 2020/04/12 07:34:58 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2231 2020/04/12 07:51:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3071,3 +3071,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/py-sip-qt5 to 4.19.22 [adam 2020-04-12]
 	Updated x11/py-qt5 to 5.14.2 [adam 2020-04-12]
 	Updated textproc/icu to 66.1 [adam 2020-04-12]
+	Updated print/qpdf to 10.0.1 [ryoon 2020-04-12]
