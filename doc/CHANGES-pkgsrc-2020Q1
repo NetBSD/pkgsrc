@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.3 2020/04/09 12:06:47 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.4 2020/04/12 09:33:33 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q1 branch:
 
@@ -19,4 +19,16 @@ www/apache24: Security fix
 
 Pullup ticket #6154 - requested by wiz
 security/tor-browser: security fix
+
+Pullup ticket #6155 - requested by nia
+www/firefox68: security fix
+
+Pullup ticket #6156 - requested by nia
+www/firefox68-l10n: dependent update
+
+Pullup ticket #6157 - requested by wiz
+security/tor-browser: security fix
+
+Pullup ticket #6158 - requested by leot
+lang/scala: build fix
 
