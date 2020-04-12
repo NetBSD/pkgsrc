@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/03/10 22:09:18 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2020/04/12 19:36:26 joerg Exp $
 
 DISTNAME=	Ardour-5.12.0
 PKGNAME=	${DISTNAME:tl}
@@ -14,6 +14,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ardour.org/
 COMMENT=	Digital Audio Workstation
 LICENSE=	gnu-gpl-v2
+
+UNLIMIT_RESOURCES=	stacksize
 
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++11
