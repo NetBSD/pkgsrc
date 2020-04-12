@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2020/02/02 20:03:04 nia Exp $
+# $NetBSD: Makefile,v 1.19 2020/04/12 23:59:42 joerg Exp $
 
 DISTNAME=	get_iplayer-3.25
 CATEGORIES=	net multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=get-iplayer/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	shattered@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/get-iplayer/${GITHUB_PROJECT}
 COMMENT=	Search, index, record or stream BBC iPlayer broadcasts
 LICENSE=	gnu-gpl-v3
