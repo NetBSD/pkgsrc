@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/11 10:56:54 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/12 15:21:44 nia Exp $
 
 DISTNAME=	amsynth-1.9.0
 CATEGORIES=	audio
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--without-pandoc
 .include "../../mk/oss.buildlink3.mk"
 
 .if ${OSS_TYPE} != "none"
+LIBS+=			${LIBOSSAUDIO}
 CONFIGURE_ARGS=		--with-oss
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
