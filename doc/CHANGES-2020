@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2245 2020/04/12 20:42:07 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2246 2020/04/12 21:00:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3091,3 +3091,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ImageMagick to 7.0.10.6 [wiz 2020-04-12]
 	Updated devel/gobject-introspection to 1.64.1 [wiz 2020-04-12]
 	Updated x11/gtk3 to 3.24.18 [wiz 2020-04-12]
+	Updated graphics/librsvg to 2.48.3 [wiz 2020-04-12]
