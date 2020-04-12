@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2020/03/04 10:56:35 nia Exp $
+$NetBSD: distinfo,v 1.7 2020/04/12 19:36:26 joerg Exp $
 
 SHA1 (Ardour-5.12.0.tar.bz2) = 8bf06a17638e89531cab14af67cfd59d7185518f
 RMD160 (Ardour-5.12.0.tar.bz2) = 71c25f13445f4036ff7127d071d8c1e0851d5eb8
@@ -7,8 +7,24 @@ Size (Ardour-5.12.0.tar.bz2) = 8852834 bytes
 SHA1 (patch-.waf-1.6.11-06ee4b7efbeab1252ed3b11499834d2a_waflib_Tools_c__config.py) = 6b6c776485def8e57ab1ec7fb4b8207ac6d3094a
 SHA1 (patch-gtk2__ardour_ardour__ui.cc) = 83d5fe364d068fc619781ae76fb37f8ed4cda41b
 SHA1 (patch-gtk2__ardour_wscript) = f78f4028e20d9d917fd1251618136c51ce3fa28a
+SHA1 (patch-libs_ardour_ardour_chan__count.h) = b8b175a41cc7c6fa540e97af9267daaefb7a36d1
+SHA1 (patch-libs_ardour_ardour_chan__mapping.h) = 1eb6a8f6e475545db57755ba1543255221252ad7
+SHA1 (patch-libs_ardour_ardour_plugin__insert.h) = 2c3bf28ebceabb217fb81d5350089745b87f21c8
+SHA1 (patch-libs_ardour_ardour_presentation__info.h) = 5fa8c228a583468a423369f24626eb0d986129f6
+SHA1 (patch-libs_ardour_ardour_tempo.h) = 08c70b1a141fe22c999f64234b4d48e7dc5d8d0f
+SHA1 (patch-libs_ardour_chan__count.cc) = 9ab0958a9641d34f80157706c458f77215227a7d
+SHA1 (patch-libs_ardour_chan__mapping.cc) = 2f6078e25b9fb76f479af82e5b0946343623ce29
+SHA1 (patch-libs_ardour_luabindings.cc) = 4c34733d35fed48860580cae7d3de809a906447f
+SHA1 (patch-libs_ardour_plugin__insert.cc) = b87e903555f5853c3256357c74414650d27d7e9f
+SHA1 (patch-libs_ardour_presentation__info.cc) = e9c89b9519cf7a13682b83b5582c6ebfa6e5948e
+SHA1 (patch-libs_ardour_tempo.cc) = 5796d6f3a51b7763b4a30ae9e2738e657a394b08
 SHA1 (patch-libs_backends_jack_jack__audiobackend.cc) = 9fc4201948a6e88711d18d9218e1dacc1dd2700b
 SHA1 (patch-libs_backends_jack_jack__audiobackend.h) = e7cd23f39e31d3a4af3ed513b7e41503c4a6b16c
 SHA1 (patch-libs_backends_jack_jack__utils.cc) = 61ce895e998e359fa3801bcdd3ce6e83926f6ec0
 SHA1 (patch-libs_backends_jack_jack__utils.h) = d2bdfca276271c67f49a06ea63077c52cac803d7
+SHA1 (patch-libs_pbd_id.cc) = 264ec2889f8481972c32df33b307292802925fa1
+SHA1 (patch-libs_pbd_pbd_id.h) = 6ffa31d7bcf88f0cdb3c0f3701dd28426b21e2ca
+SHA1 (patch-libs_timecode_src_time.cc) = cf18341b5ea2050f73c93f67743168b817e29c9d
+SHA1 (patch-libs_timecode_timecode_bbt__time.h) = 3ce496fa6a08717004e222d171cca68ed155b2d4
+SHA1 (patch-libs_timecode_timecode_time.h) = 1b47ce9be05ae98b11dedb07f906bd16fccd525a
 SHA1 (patch-wscript) = 9cfa56ac1ccbb9706f009ce4001dc0b55146338b
