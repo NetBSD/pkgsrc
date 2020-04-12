@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.205 2020/04/03 10:30:32 wiz Exp $
+# $NetBSD: Makefile,v 1.206 2020/04/12 08:28:49 adam Exp $
 
 DISTNAME=	inkscape-0.92.4
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.bz2

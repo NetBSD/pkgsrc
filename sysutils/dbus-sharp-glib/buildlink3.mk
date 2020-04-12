@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2019/04/03 00:33:06 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2020/04/12 08:28:06 adam Exp $
 
 BUILDLINK_TREE+=	dbus-sharp-glib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	dbus-sharp-glib
 DBUS_SHARP_GLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dbus-sharp-glib+=	dbus-sharp-glib>=0.5.0
-BUILDLINK_ABI_DEPENDS.dbus-sharp-glib?=	dbus-sharp-glib>=0.5.0nb15
+BUILDLINK_ABI_DEPENDS.dbus-sharp-glib?=	dbus-sharp-glib>=0.5.0nb16
 BUILDLINK_PKGSRCDIR.dbus-sharp-glib?=	../../sysutils/dbus-sharp-glib
 
 .include "../../sysutils/dbus-sharp/buildlink3.mk"

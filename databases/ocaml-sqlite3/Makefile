@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.45 2020/01/31 11:57:04 jaapb Exp $
+# $NetBSD: Makefile,v 1.46 2020/04/12 08:28:25 adam Exp $
 
 GITHUB_PROJECT=	sqlite3-ocaml
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 DISTNAME=	sqlite3-5.0.1
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mmottl/}
 EXTRACT_SUFX=	.tbz

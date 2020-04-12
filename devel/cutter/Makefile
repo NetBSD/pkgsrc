@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2020/03/20 11:57:26 nia Exp $
+# $NetBSD: Makefile,v 1.69 2020/04/12 08:28:29 adam Exp $
 #
 
 DISTNAME=	cutter-1.2.4
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cutter/}
 
