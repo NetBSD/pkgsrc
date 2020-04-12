@@ -1,14 +1,14 @@
-$NetBSD: patch-liboctave_util_quit.cc,v 1.1 2019/12/24 01:58:48 dbj Exp $
+$NetBSD: patch-liboctave_util_quit.cc,v 1.2 2020/04/12 21:24:11 adam Exp $
 
-Add missing header file for use of exit system call
+Make sure exit() is defined.
 
---- liboctave/util/quit.cc.orig	2019-02-23 17:33:37.000000000 +0000
+--- liboctave/util/quit.cc.orig	2019-06-15 20:18:59.699714202 +0000
 +++ liboctave/util/quit.cc
-@@ -25,6 +25,7 @@ along with Octave; see the file COPYING.
+@@ -24,6 +24,7 @@ along with Octave; see the file COPYING.
+ #  include "config.h"
  #endif
  
- #include <cstring>
 +#include <cstdlib>
+ #include <cstring>
  
  #include <new>
- 
