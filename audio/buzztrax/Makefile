@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/03/26 12:07:19 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/04/12 19:34:47 joerg Exp $
 
 DISTNAME=	buzztrax-0.10.2
 PKGREVISION=	2
@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=	--disable-schemas-compile
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/rarian/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
