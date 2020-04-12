@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2020/03/21 16:57:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.33 2020/04/12 11:01:47 bsiegert Exp $
 
 DISTNAME=		go-text-0.3.0
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		text
