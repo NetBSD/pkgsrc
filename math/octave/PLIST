@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.33 2019/03/05 11:11:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.34 2020/04/12 21:19:32 adam Exp $
+bin/${PKGNAME}
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
-bin/${PKGNAME}
 bin/octave-cli
 bin/octave-cli-${PKGVERSION}
 bin/octave-config
@@ -796,13 +796,20 @@ lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/qr.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/symbfact.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/symrcm.oct
 lib/octave/${PKGVERSION}/qr.a
+@pkgdir lib/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
 lib/octave/${PKGVERSION}/symbfact.a
 lib/octave/${PKGVERSION}/symrcm.a
+@pkgdir lib/octave/site/oct/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/site/oct/api-v53/${MACHINE_GNU_PLATFORM}
 lib/pkgconfig/octave.pc
 lib/pkgconfig/octinterp.pc
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/octave-gui
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/octave-svgconvert
+@pkgdir libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/api-v53/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
 share/applications/org.octave.Octave.desktop
+share/icons/hicolor/1024x1024/apps/octave.png
 share/icons/hicolor/128x128/apps/octave.png
 share/icons/hicolor/16x16/apps/octave.png
 share/icons/hicolor/22x22/apps/octave.png
@@ -1002,6 +1009,7 @@ share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Sneetch/Sneetch.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Sneetch/display.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/Snork.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/cack.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/ctranspose.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/display.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/double.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/end.m
@@ -1033,6 +1041,7 @@ share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/subsindex.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/subsref.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/tattack.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/times.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/transpose.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/uminus.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/uplus.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/vertcat.m
@@ -1256,6 +1265,7 @@ share/octave/${PKGVERSION}/etc/tests/libinterp/octave-value/ov-typeinfo.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/octave-value/ov-usr-fcn.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/octave-value/ov.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/octave.cc-tst
+share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/bp-table.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/lex.ll-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/oct-parse.yy-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/parse-tree/pt-assign.cc-tst
@@ -2259,12 +2269,6 @@ share/octave/${PKGVERSION}/m/time/etime.m
 share/octave/${PKGVERSION}/m/time/is_leap_year.m
 share/octave/${PKGVERSION}/m/time/now.m
 share/octave/${PKGVERSION}/m/time/weekday.m
-share/octave/site/m/startup/octaverc
-@pkgdir share/octave/site/api-v53/m
 @pkgdir share/octave/${PKGVERSION}/site/m
-@pkgdir libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
-@pkgdir libexec/octave/api-v53/site/exec/${MACHINE_GNU_PLATFORM}
-@pkgdir libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
-@pkgdir lib/octave/site/oct/${MACHINE_GNU_PLATFORM}
-@pkgdir lib/octave/site/oct/api-v53/${MACHINE_GNU_PLATFORM}
-@pkgdir lib/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
+@pkgdir share/octave/site/api-v53/m
+share/octave/site/m/startup/octaverc
