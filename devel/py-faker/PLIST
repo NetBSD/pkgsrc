@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2020/02/24 16:20:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2020/04/12 11:23:43 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -209,6 +209,9 @@ ${PYSITELIB}/faker/providers/automotive/en_US/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/fil_PH/__init__.py
 ${PYSITELIB}/faker/providers/automotive/fil_PH/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/fil_PH/__init__.pyo
+${PYSITELIB}/faker/providers/automotive/fr_FR/__init__.py
+${PYSITELIB}/faker/providers/automotive/fr_FR/__init__.pyc
+${PYSITELIB}/faker/providers/automotive/fr_FR/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/hu_HU/__init__.py
 ${PYSITELIB}/faker/providers/automotive/hu_HU/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/hu_HU/__init__.pyo
@@ -263,6 +266,9 @@ ${PYSITELIB}/faker/providers/bank/no_NO/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/pl_PL/__init__.py
 ${PYSITELIB}/faker/providers/bank/pl_PL/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/pl_PL/__init__.pyo
+${PYSITELIB}/faker/providers/bank/pt_PT/__init__.py
+${PYSITELIB}/faker/providers/bank/pt_PT/__init__.pyc
+${PYSITELIB}/faker/providers/bank/pt_PT/__init__.pyo
 ${PYSITELIB}/faker/providers/bank/ru_RU/__init__.py
 ${PYSITELIB}/faker/providers/bank/ru_RU/__init__.pyc
 ${PYSITELIB}/faker/providers/bank/ru_RU/__init__.pyo
@@ -284,6 +290,9 @@ ${PYSITELIB}/faker/providers/color/color.pyo
 ${PYSITELIB}/faker/providers/color/en_US/__init__.py
 ${PYSITELIB}/faker/providers/color/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/color/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/color/fa_IR/__init__.py
+${PYSITELIB}/faker/providers/color/fa_IR/__init__.pyc
+${PYSITELIB}/faker/providers/color/fa_IR/__init__.pyo
 ${PYSITELIB}/faker/providers/color/fr_FR/__init__.py
 ${PYSITELIB}/faker/providers/color/fr_FR/__init__.pyc
 ${PYSITELIB}/faker/providers/color/fr_FR/__init__.pyo
