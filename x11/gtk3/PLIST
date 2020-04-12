@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2020/04/06 08:23:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2020/04/12 20:41:57 wiz Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -1112,6 +1112,7 @@ share/gtk-doc/html/gtk3/panes.png
 share/gtk-doc/html/gtk3/placessidebar.png
 share/gtk-doc/html/gtk3/platform-support.html
 share/gtk-doc/html/gtk3/popup-anchors.png
+share/gtk-doc/html/gtk3/popup-at.svg
 share/gtk-doc/html/gtk3/popup-flip.png
 share/gtk-doc/html/gtk3/popup-slide.png
 share/gtk-doc/html/gtk3/printdialog.png
