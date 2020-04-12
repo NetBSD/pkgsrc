@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19808 2020/04/12 06:25:14 adam Exp $
+$NetBSD: TODO,v 1.19809 2020/04/12 08:36:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -375,6 +375,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.10.6
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o OdfConverter-4.0
@@ -587,6 +588,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flow-tools-0.411
+	o fluidsynth-2.1.2
 	o fortunes-calvin-0.3
 	o freedv-1.2.2
 	o freenet-0.7
@@ -628,6 +630,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-share-2.3.5
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
+	o glib2-2.64.2
 	o gliv-1.9.7
 	o glom-1.14.2
 	o gmake-4.3 [cannot build firefox/openjdk11 etc.]
@@ -665,6 +668,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnustep-make-2.7.0
 	o gnustep-objc-1.8.1
 	o gobby-0.5.0
+	o gobject-introspection-1.64.1
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
@@ -679,6 +683,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gthumb-3.4.0
+	o gtk3-3.24.18
 	o gtkglarea-2.1.0
 	o gtklevel9-5.1
 	o gtkmagnetic-23
@@ -793,10 +798,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
+	o librsvg-2.48.3
+	o libssh-0.94
 	o libtecla-1.6.3
 	o libv4l-0.8.5
 	o libvirt-2.3
 	o libwnck3-3.32.0
+	o libyaml-0.2.3
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
@@ -819,6 +827,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o magit-2.5
 	o mailman-3.0.3
 	o mailutis-2.2 [wip]
+	o maim-5.6.3
 	o maketool-0.8.4
 	o makeztxt-1.60
 	o manedit-1.2.1
@@ -982,6 +991,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
+	o py-asttokens-2.0.4
+	o py-cachetools-4.1.0
 	o py-cairo-1.19.1 [drops python-2.x support]
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support]
@@ -996,6 +1007,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-omniORBpy-3.7
 	o py-pandas-1.0.0
 	o py-ptt-1.10.2
+	o py-pyrsistent-0.16.0
 	o py-setuptools-46.1.3 [drops python-2.x support]
 	o py-simpletal-5.1
 	o py-spf-2.0.12t
@@ -1073,6 +1085,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sjeng-11.2
 	o skktools-1.3.3
 	o skype-4.3
+	o slop-7.5
 	o smokeping-2.6.11
 	o smproxy-1.0.3
 	o softhsm-2.0.0
@@ -1146,6 +1159,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o userppp-030706
 	o userspace-rcu-0.9.1
 	o utilisp-1.14
+	o vala-0.48.3
 	o varnish-5.1.3
 	o varnish-6.0
 	o vbetool-1.1
@@ -1182,6 +1196,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o x2vnc-1.31
 	o xaric-0.13.7
 	o xcoral-3.14
+	o xerces-c-3.2.3
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xfe-1.42 [pkg/52968]
