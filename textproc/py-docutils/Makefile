@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2020/01/26 05:26:26 rillig Exp $
+# $NetBSD: Makefile,v 1.51 2020/04/12 11:19:48 adam Exp $
 
-DISTNAME=	docutils-0.15.2
+DISTNAME=	docutils-0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/docutils/}
@@ -30,14 +30,8 @@ post-install:
 	${MV} ${bin}.py ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
 
-.include "../../lang/python/pyversion.mk"
-
 do-test:
-.if ${_PYTHON_VERSION} == 27
 	cd ${WRKSRC} && ${PYTHONBIN} test/alltests.py
-.else
-	cd ${WRKSRC} && ${PYTHONBIN} test3/alltests.py
-.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
