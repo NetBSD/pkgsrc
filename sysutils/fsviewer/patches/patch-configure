@@ -1,0 +1,38 @@
+$NetBSD: patch-configure,v 1.1 2020/04/12 19:44:55 joerg Exp $
+
+get-wraster is dead, long live pkg-config.
+
+--- configure.orig	2020-04-12 14:57:14.176711976 +0000
++++ configure
+@@ -2757,30 +2757,7 @@ fi
+ #CFLAGS="$CFLAGS -I/usr/X11/include"
+ #LDFLAGS="$LDFLAGS -L/usr/X11/lib"
+ 
+-# Extract the first word of "get-wraster-flags", so it can be a program name with args.
+-set dummy get-wraster-flags; ac_word=$2
+-echo "$as_me:2762: checking for $ac_word" >&5
+-echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
+-if test "${ac_cv_prog_GET_WRASTER_FLAGS+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  if test -n "$GET_WRASTER_FLAGS"; then
+-  ac_cv_prog_GET_WRASTER_FLAGS="$GET_WRASTER_FLAGS" # Let the user override the test.
+-else
+-  ac_save_IFS=$IFS; IFS=$ac_path_separator
+-ac_dummy="$PATH"
+-for ac_dir in $ac_dummy; do
+-  IFS=$ac_save_IFS
+-  test -z "$ac_dir" && ac_dir=.
+-  $as_executable_p "$ac_dir/$ac_word" || continue
+-ac_cv_prog_GET_WRASTER_FLAGS="get-wraster-flags"
+-echo "$as_me:2777: found $ac_dir/$ac_word" >&5
+-break
+-done
+-
+-fi
+-fi
+-GET_WRASTER_FLAGS=$ac_cv_prog_GET_WRASTER_FLAGS
++GET_WRASTER_FLAGS="pkg-config wrlib"
+ if test -n "$GET_WRASTER_FLAGS"; then
+   echo "$as_me:2785: result: $GET_WRASTER_FLAGS" >&5
+ echo "${ECHO_T}$GET_WRASTER_FLAGS" >&6
