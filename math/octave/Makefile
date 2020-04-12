@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.201 2020/03/10 22:10:30 wiz Exp $
+# $NetBSD: Makefile,v 1.202 2020/04/12 21:19:32 adam Exp $
 
-DISTNAME=	octave-5.1.0
-PKGREVISION=	13
+DISTNAME=	octave-5.2.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=octave/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://www.octave.org/
+HOMEPAGE=	https://www.gnu.org/software/octave/
 COMMENT=	High-level language, intended for numerical computations
 LICENSE=	gnu-gpl-v3
 
@@ -20,23 +20,20 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
+USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf gsed gmake:run perl pkg-config bison bsdtar:run
 USE_TOOLS+=		makeinfo:test
 GNU_CONFIGURE=		yes
 
-USE_LANGUAGES=		c c++ fortran77
-
 # needed for loading of shared objects such as those in the
 # octave-forge package or user written ones compiled with mkoctfile
 CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ARGS+=	--enable-shared
-
 #CONFIGURE_ARGS+=	--without-opengl
 #CONFIGURE_ARGS+=	--with-framework-opengl=no
 CONFIGURE_ARGS+=	--disable-java
-# use this to bypass qt5 portability issues:
-#CONFIGURE_ARGS+=	CPPFLAGS=-DQT_DISABLE_DEPRECATED_BEFORE=0
+TEST_TARGET=		check
 
 # Provide a full path gfortran in MKOCTFILE for octave-forge
 CONFIGURE_ENV+=		MKOCTFILE_F77=${FCPATH}
@@ -55,17 +52,16 @@ CONFIGURE_ENV+=		INSTALL_LIB=${INSTALL_LIB:Q}
 
 .include "options.mk"
 
-INFO_FILES=		yes
-OCTAVE_DOC=		doc/interpreter/octave.pdf doc/liboctave/liboctave.pdf \
+INFO_FILES=	yes
+OCTAVE_DOC=	doc/interpreter/octave.pdf doc/liboctave/liboctave.pdf \
 		doc/refcard/refcard-a4.pdf doc/refcard/refcard-legal.pdf \
 		doc/refcard/refcard-letter.pdf
+
 INSTALLATION_DIRS+=	share/octave/${PKGVERSION_NOREV}/doc
 
 PRINT_PLIST_AWK+=	{ gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}"); }
 CHECK_WRKREF_SKIP+=	lib/octave/${PKGVERSION_NOREV}/liboctinterp*.${SHLIB_TYPE}* \
 			lib/octave/${PKGVERSION_NOREV}/liboctinterp.a
-
-TEST_TARGET=	check
 
 SUBST_CLASSES+=			fix-make
 SUBST_STAGE.fix-make=		pre-configure
@@ -88,9 +84,9 @@ SUBST_SED.qt5-pkg-config+=	-e 's,QtOpenGL,Qt5OpenGL,g'
 CFLAGS+=	-fPIC
 .endif
 
-PREPEND_PATH+=			${QTDIR}/bin
+PREPEND_PATH+=		${QTDIR}/bin
 
-CHECK_WRKREF_SKIP+=		lib/octave/5.1.0/liboctinterp.so*
+CHECK_WRKREF_SKIP+=	lib/octave/${PKGVERSION_NOREV}/liboctinterp.so*
 
 pre-configure:
 	 cd ${WRKSRC} && autoconf
@@ -102,6 +98,7 @@ post-install:
 	${RM} -f ${DESTDIR}/${PREFIX}/lib/charset.alias
 
 .include "../../audio/libsndfile/buildlink3.mk"
+.include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
@@ -112,15 +109,12 @@ post-install:
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../x11/fltk13/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../x11/libX11/buildlink3.mk"
 .endif
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
-BUILDLINK_DEPMETHOD.gperf?=build
-.include "../../devel/gperf/buildlink3.mk"
-.include "../../x11/fltk13/buildlink3.mk"
-
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
