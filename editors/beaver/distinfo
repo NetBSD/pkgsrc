@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2020/03/23 19:57:29 nia Exp $
+$NetBSD: distinfo,v 1.9 2020/04/12 19:49:18 joerg Exp $
 
 SHA1 (beaver-0.4.1.tar.bz2) = 93b331d182d50cb3f59b9d7467229c24271d7f80
 RMD160 (beaver-0.4.1.tar.bz2) = 096563b5a1add9ad965408576de1df434cce5c89
 SHA512 (beaver-0.4.1.tar.bz2) = 3000bed3aa2a67d6c38a68a7782a9d5423bcec0b8420272b0f0dade604c094a7b52058b43222af38d56313f0aa27998028c984f69340bf28eeaa8b8a93548a1e
 Size (beaver-0.4.1.tar.bz2) = 436321 bytes
+SHA1 (patch-src_editor.c) = ba07ad0efb621e0feafe86e7fbf45952deb06db2
