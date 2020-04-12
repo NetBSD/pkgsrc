@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 10:39:05 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/12 19:52:40 joerg Exp $
 #
 
 DISTNAME=		acme091src
@@ -34,5 +34,12 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/acme ${DESTDIR}${PREFIX}/bin/acme
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${DESTDIR}${PREFIX}/share/doc/acme
 	cd ${WRKDIR}/ACME_Lib && pax -rw . ${DESTDIR}${ACME_LIB}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# Extra data overflow: Need 24 bytes but only found 20 bytes
+TOOLS_PLATFORM.unzip=
+.endif
 
 .include "../../mk/bsd.pkg.mk"
