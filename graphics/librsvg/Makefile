@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2020/04/06 08:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2020/04/12 21:00:37 wiz Exp $
 
-DISTNAME=	librsvg-2.48.2
+DISTNAME=	librsvg-2.48.3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -146,6 +146,7 @@ CARGO_CRATE_DEPENDS+=	rayon-1.3.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.7.0
 CARGO_CRATE_DEPENDS+=	rctree-0.3.3
 CARGO_CRATE_DEPENDS+=	rdrand-0.4.0
+CARGO_CRATE_DEPENDS+=	redox_syscall-0.1.56
 CARGO_CRATE_DEPENDS+=	regex-1.3.6
 CARGO_CRATE_DEPENDS+=	regex-automata-0.1.9
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.17
@@ -156,13 +157,13 @@ CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	selectors-0.22.0
 CARGO_CRATE_DEPENDS+=	semver-0.9.0
 CARGO_CRATE_DEPENDS+=	semver-parser-0.7.0
-CARGO_CRATE_DEPENDS+=	serde-1.0.105
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.105
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.50
+CARGO_CRATE_DEPENDS+=	serde-1.0.106
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.106
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.51
 CARGO_CRATE_DEPENDS+=	servo_arc-0.1.1
 CARGO_CRATE_DEPENDS+=	siphasher-0.3.2
 CARGO_CRATE_DEPENDS+=	slab-0.4.2
-CARGO_CRATE_DEPENDS+=	smallvec-1.2.0
+CARGO_CRATE_DEPENDS+=	smallvec-1.3.0
 CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.1.1
 CARGO_CRATE_DEPENDS+=	string_cache-0.8.0
 CARGO_CRATE_DEPENDS+=	string_cache_codegen-0.5.1
@@ -171,6 +172,7 @@ CARGO_CRATE_DEPENDS+=	tendril-0.4.1
 CARGO_CRATE_DEPENDS+=	textwrap-0.11.0
 CARGO_CRATE_DEPENDS+=	thin-slice-0.1.1
 CARGO_CRATE_DEPENDS+=	thread_local-1.0.1
+CARGO_CRATE_DEPENDS+=	time-0.1.42
 CARGO_CRATE_DEPENDS+=	tinytemplate-1.0.3
 CARGO_CRATE_DEPENDS+=	typenum-1.11.2
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.4
@@ -185,11 +187,11 @@ CARGO_CRATE_DEPENDS+=	winapi-0.3.8
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.4
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
-CARGO_CRATE_DEPENDS+=	xml-rs-0.8.1
+CARGO_CRATE_DEPENDS+=	xml5ever-0.16.1
 
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.50.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.38
 .include "../../devel/pango/buildlink3.mk"
