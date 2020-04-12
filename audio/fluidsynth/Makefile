@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2020/04/11 10:59:58 nia Exp $
+# $NetBSD: Makefile,v 1.37 2020/04/12 11:21:10 nia Exp $
 
-DISTNAME=	fluidsynth-2.1.1
-PKGREVISION=	1
+DISTNAME=	fluidsynth-2.1.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FluidSynth/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,7 +21,6 @@ PKGCONFIG_OVERRIDE=	fluidsynth.pc.in
 
 LDFLAGS.SunOS+=		-lsocket
 
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/oss.buildlink3.mk"
 
 .if ${OSS_TYPE} != "none"
