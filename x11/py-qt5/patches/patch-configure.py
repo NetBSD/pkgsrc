@@ -1,10 +1,10 @@
-$NetBSD: patch-configure.py,v 1.7 2018/02/01 21:09:29 adam Exp $
+$NetBSD: patch-configure.py,v 1.8 2020/04/12 06:24:31 adam Exp $
 
 Do not expect an app bundle on Darwin.
 
---- configure.py.orig	2018-01-23 10:20:28.000000000 +0000
+--- configure.py.orig	2020-04-02 14:58:06.000000000 +0000
 +++ configure.py
-@@ -2009,10 +2009,7 @@ def run_make(target_config, verbose, exe
+@@ -2137,10 +2137,7 @@ def run_make(target_config, verbose, exe
          make = 'make'
          makefile_target = ''
  
@@ -16,7 +16,7 @@ Do not expect an app bundle on Darwin.
  
      remove_file(platform_exe)
  
-@@ -2568,7 +2565,7 @@ def generate_module_makefile(target_conf
+@@ -2702,7 +2699,7 @@ def generate_module_makefile(target_conf
  
      # Note some version of Qt5 (probably incorrectly) implements
      # 'plugin_bundle' instead of 'plugin' so we specify both.
@@ -25,7 +25,7 @@ Do not expect an app bundle on Darwin.
  
      pro_add_qt_dependencies(target_config, metadata, pro_lines)
  
-@@ -2614,7 +2611,7 @@ win32 {
+@@ -2748,7 +2745,7 @@ win32 {
      PY_MODULE = %s.so
  
      macx {
@@ -34,3 +34,12 @@ Do not expect an app bundle on Darwin.
  
          QMAKE_LFLAGS += "-undefined dynamic_lookup"
  
+@@ -3008,7 +3005,7 @@ def check_sip(target_config, verbose):
+ 
+             os.makedirs(target_config.sip_inc_dir, exist_ok=True)
+ 
+-            argv = ['sip-module', '--sip-h']
++            argv = ['sip-module-@PYVERSSUFFIX@', '--sip-h']
+ 
+             if target_config.abi_version:
+                 argv.append('--abi-version')

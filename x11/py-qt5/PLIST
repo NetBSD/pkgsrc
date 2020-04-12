@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/01/26 12:53:34 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/04/12 06:24:30 adam Exp $
 bin/pylupdate5-${PYVERSSUFFIX}
 bin/pyrcc5-${PYVERSSUFFIX}
 bin/pyuic5-${PYVERSSUFFIX}
@@ -40,6 +40,8 @@ ${PLIST.py3x}${PYSITELIB}/PyQt5/QtQuickWidgets.pyi
 ${PYSITELIB}/PyQt5/QtQuickWidgets.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtSensors.pyi
 ${PYSITELIB}/PyQt5/QtSensors.so
+${PYSITELIB}/PyQt5/QtSerialPort.pyi
+${PYSITELIB}/PyQt5/QtSerialPort.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtSql.pyi
 ${PYSITELIB}/PyQt5/QtSql.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtSvg.pyi
@@ -165,6 +167,7 @@ share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qbitarray.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qbuffer.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qbytearray.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qbytearraymatcher.sip
+share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qcalendar.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qcborcommon.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qcborstream.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qchar.sip
@@ -226,7 +229,6 @@ share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qpluginloader.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qpoint.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qprocess.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qpropertyanimation.sip
-share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qpycore_onexit.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qpycore_qhash.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qpycore_qlist.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtCore/qpycore_qmap.sip
@@ -330,6 +332,8 @@ share/sip${PYVERSSUFFIX}/PyQt5/QtGui/qbitmap.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtGui/qbrush.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtGui/qclipboard.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtGui/qcolor.sip
+share/sip${PYVERSSUFFIX}/PyQt5/QtGui/qcolorspace.sip
+share/sip${PYVERSSUFFIX}/PyQt5/QtGui/qcolortransform.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtGui/qcursor.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtGui/qdesktopservices.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtGui/qdrag.sip
@@ -525,6 +529,7 @@ share/sip${PYVERSSUFFIX}/PyQt5/QtNetwork/qdnslookup.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtNetwork/qhostaddress.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtNetwork/qhostinfo.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtNetwork/qhstspolicy.sip
+share/sip${PYVERSSUFFIX}/PyQt5/QtNetwork/qhttp2configuration.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtNetwork/qhttpmultipart.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtNetwork/qlocalserver.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtNetwork/qlocalsocket.sip
@@ -648,6 +653,7 @@ share/sip${PYVERSSUFFIX}/PyQt5/QtQuick/qsgflatcolormaterial.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtQuick/qsggeometry.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtQuick/qsgimagenode.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtQuick/qsgmaterial.sip
+share/sip${PYVERSSUFFIX}/PyQt5/QtQuick/qsgmaterialrhishader.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtQuick/qsgnode.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtQuick/qsgrectanglenode.sip
 share/sip${PYVERSSUFFIX}/PyQt5/QtQuick/qsgrendererinterface.sip
