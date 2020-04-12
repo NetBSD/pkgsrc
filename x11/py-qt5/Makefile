@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.55 2020/03/10 22:11:19 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2020/04/12 06:24:30 adam Exp $
 
-DISTNAME=	PyQt5-5.13.2
+DISTNAME=	PyQt5-5.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
-PKGREVISION=	4
 CATEGORIES=	x11 python
-MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/PyQt5/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt5/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python binding for Qt5
@@ -44,7 +43,7 @@ SUBST_FILES.x11lib+=	configure.py
 SUBST_FILES.x11lib+=	designer/designer.pro-in
 SUBST_FILES.x11lib+=	qmlscene/qmlscene.pro-in
 SUBST_SED.x11lib+=	-e 's,@X11LIB@,${X11BASE}/lib,'
-SUBST_VARS.x11lib=	PREFIX
+SUBST_VARS.x11lib=	PREFIX PYVERSSUFFIX
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
@@ -65,9 +64,8 @@ fix-darwin-install-name:
 .else
 PLIST.x11=	yes
 .endif
-post-install: fix-alternatives
 
-fix-alternatives:
+post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pylupdate5 pylupdate5-${PYVERSSUFFIX} && \
 	${MV} pyrcc5 pyrcc5-${PYVERSSUFFIX} && \
@@ -85,6 +83,7 @@ BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.19.14
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtnetworkauth/buildlink3.mk"
 .include "../../x11/qt5-qtsensors/buildlink3.mk"
+.include "../../x11/qt5-qtserialport/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .if ${OPSYS} == "Darwin"
@@ -95,6 +94,7 @@ PLIST.webkit=	yes
 .  include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .  include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .endif
+.include "../../x11/qt5-qtwebchannel/buildlink3.mk"
 .include "../../x11/qt5-qtwebsockets/buildlink3.mk"
 .include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
