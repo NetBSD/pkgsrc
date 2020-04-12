@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 01:32:14 agc Exp $
+$NetBSD: distinfo,v 1.11 2020/04/12 19:44:55 joerg Exp $
 
 SHA1 (FSViewer.app-0.2.5.tar.gz) = 0df2e5c6317f13b2c867c4d07c9840e455134f7d
 RMD160 (FSViewer.app-0.2.5.tar.gz) = 6e11d8c950c4c4b6020b2af33a32d31f7bca371d
@@ -13,6 +13,7 @@ SHA1 (patch-Makefile.in) = 7b707482d0ec2d29c0cba3dd8a7f964dd9b5eedd
 SHA1 (patch-aa) = 790b6a6810bf38ffebb0b00f68f29e5ebe01a83d
 SHA1 (patch-ab) = a0894d4fc9a1e925f1df331c26f23c915699a73f
 SHA1 (patch-ag) = 5496345589bdf7cbf8bd64449f93a7270ce046a0
+SHA1 (patch-configure) = 7a3adb0294ca5c22aa2b6bf5c5e9702767e22d71
 SHA1 (patch-src_FSFileButton.c) = 128ebcd74177133d87363cdafad8cf5aa1868d20
 SHA1 (patch-src_FSPanel.c) = 9c9315e50335086e4c0ba7166731dfdefc1967c3
 SHA1 (patch-src_extnInspector.c) = 280d65c66b081b313dc6ee0496cd0381ba2ea6f6
