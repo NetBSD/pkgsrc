@@ -1,0 +1,19 @@
+$NetBSD: patch-homedir_fix-map.in,v 1.1 2020/04/12 15:04:22 gdt Exp $
+
+fix-map moved into rc-files as start_precmd check and is run as root,
+so it is necessary to change the owner of the files created to "dcc".
+
+--- homedir/fix-map.in.orig    2020-04-12 10:32:38.891198922 +0000
++++ homedir/fix-map.in
+@@ -42,7 +42,10 @@
+ set -e
+ 
+ @NO_SUID@
+-@PKG_MAKE@
++# 
++# PKG_MAKE prevents fix-map from making the necessary permission changes when
++# running dcc* as user dcc and using NetBSD pkgsrc rc scripts.
++# @PKG_MAKE@
+ 
+ DCC_HOMEDIR=@prefix@
+ CDCC=@bindir@/cdcc
