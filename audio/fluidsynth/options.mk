@@ -1,13 +1,23 @@
-# $NetBSD: options.mk,v 1.3 2019/12/01 12:51:57 nia Exp $
+# $NetBSD: options.mk,v 1.4 2020/04/12 11:21:10 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fluidsynth
+
+# Audio backends
 PKG_SUPPORTED_OPTIONS=		alsa jack portaudio pulseaudio sdl2
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
+# Misc
+PKG_SUPPORTED_OPTIONS=		dbus ladspa
 
 .include "../../mk/oss.buildlink3.mk"
 
-.if ${OPSYS} != "Linux" && ${OSS_TYPE} == "none"
+# On platforms without a native-ish backend, build the SDL2 backend.
+.if ${OPSYS} != "Linux" && ${OPSYS} != Darwin && ${OSS_TYPE} == "none"
 PKG_SUGGESTED_OPTIONS+=		sdl2
+.endif
+
+# A guess at platforms where ladspa is likely to work...
+.if ${OPSYS} == "Linux" || !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
+PKG_SUGGESTED_OPTIONS+=		ladspa
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -17,6 +27,13 @@ CMAKE_ARGS+=	-Denable-alsa=ON
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-Denable-alsa=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mdbus)
+CMAKE_ARGS+=	-Denable-dbus=ON
+.include "../../sysutils/dbus/buildlink3.mk"
+.else
+CMAKE_ARGS+=	-Denable-dbus=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
@@ -45,4 +62,11 @@ CMAKE_ARGS+=	-Denable-sdl2=ON
 .include "../../devel/SDL2/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-Denable-sdl2=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mladspa)
+CMAKE_ARGS+=	-Denable-ladspa=ON
+.include "../../audio/ladspa/buildlink3.mk"
+.else
+CMAKE_ARGS+=	-Denable-ladspa=OFF
 .endif
