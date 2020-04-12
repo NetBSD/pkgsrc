@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/05/17 08:09:11 adam Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/12 11:47:40 adam Exp $
 
-DISTNAME=	python-subunit-1.3.0
+DISTNAME=	python-subunit-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-subunit/}
@@ -19,12 +19,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios-[0-9]*:../../devel/py-testscenarios
 USE_LANGUAGES=	# none
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-	for f in subunit-1to2 subunit-1to2 subunit-2to1 subunit-filter subunit-ls \
+.for f in subunit-1to2 subunit-1to2 subunit-2to1 subunit-filter subunit-ls \
 	subunit-notify subunit-output subunit-stats subunit-tags subunit2csv \
-	subunit2disk subunit2gtk subunit2junitxml subunit2pyunit tap2subunit; do \
-		${MV} $${f} $${f}-${PYVERSSUFFIX} || ${TRUE}; \
-	done
+	subunit2disk subunit2gtk subunit2junitxml subunit2pyunit tap2subunit
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${f} ${f}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 do-test:
 	cd ${WRKSRC}/python && ${PYTHONBIN} -m unittest discover -v
