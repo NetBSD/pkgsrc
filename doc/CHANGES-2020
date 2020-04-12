@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2227 2020/04/11 16:29:16 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2228 2020/04/12 02:50:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3065,3 +3065,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/py-bitcoinlib to 0.11.0 [adam 2020-04-11]
 	Updated www/py-terminado to 0.8.3 [adam 2020-04-11]
 	Updated textproc/py-jsbeautifier to 1.11.0 [adam 2020-04-11]
+	Updated lang/algol68g to 2.8.4 [ryoon 2020-04-12]
