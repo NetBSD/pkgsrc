@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2020/03/31 22:36:37 gutteridge Exp $
+# $NetBSD: Makefile,v 1.148 2020/04/12 17:34:18 pin Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -77,6 +77,7 @@ SUBDIR+=	sawfish
 SUBDIR+=	selectwm
 SUBDIR+=	skhd
 SUBDIR+=	skippy
+SUBDIR+=	sowm
 SUBDIR+=	spectrwm
 SUBDIR+=	swc
 SUBDIR+=	trayer
