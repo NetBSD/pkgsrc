@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.87 2020/04/09 13:28:38 bsiegert Exp $
+# $NetBSD: version.mk,v 1.88 2020/04/12 09:41:18 bsiegert Exp $
 
 #
 # If bsd.prefs.mk is included before go-package.mk in a package, then this
@@ -24,7 +24,7 @@ GO_VERSION_DEFAULT?=	19
 # darwin version 13.4 is osx 10.9.5
 GO_VERSION_DEFAULT?=	110
 .else
-GO_VERSION_DEFAULT?=	113
+GO_VERSION_DEFAULT?=	114
 .endif
 
 .if !empty(GO_VERSION_DEFAULT)
