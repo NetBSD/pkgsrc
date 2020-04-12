@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2020/03/10 22:10:46 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2020/04/12 08:29:05 adam Exp $
 
 DISTNAME=	krdc-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 
 HOMEPAGE=	https://kde.org/applications/internet/krdc/
