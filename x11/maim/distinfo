@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/04/25 12:50:28 nia Exp $
+$NetBSD: distinfo,v 1.3 2020/04/12 21:10:25 wiz Exp $
 
-SHA1 (maim-5.5.3.tar.gz) = 837bd07fa580a4719df734d67fa125dd99d52fec
-RMD160 (maim-5.5.3.tar.gz) = 8b6fcb3c6dbd73247373cf2ca28e7da29133116c
-SHA512 (maim-5.5.3.tar.gz) = bbcd4f0276090b9650cda88e527d0d1b80270a50935fbc02aac9a302a64bc3975386f24a97d8eb3c1f97d7d32cc9905d5e1f652915fbe3aae0766bd90bc5f51a
-Size (maim-5.5.3.tar.gz) = 40083 bytes
+SHA1 (maim-5.6.3.tar.gz) = 36bf5730aa0cebbfbcb4b070503fba3337f15e3d
+RMD160 (maim-5.6.3.tar.gz) = 6badb251036e1694d63cc2d04506228c90925d86
+SHA512 (maim-5.6.3.tar.gz) = 8e19bd4e89db117bcb74a9b9e35f3232cdd0ef3836a536d170f803d7159fbc4be415d20695e5e61942ff7714d990d027149cee20a689f797d25d01610cc1c3be
+Size (maim-5.6.3.tar.gz) = 40217 bytes
