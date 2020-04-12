@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/03/21 16:57:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2020/04/12 11:01:34 bsiegert Exp $
 
 DISTNAME=	mapstructure-bep-0.0.20180511
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	13
+PKGREVISION=	14
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bep/}
 CATEGORIES=	devel
 GITHUB_TAG=	bb74f1db0675b241733089d5a1faa5dd8b0ef57b
