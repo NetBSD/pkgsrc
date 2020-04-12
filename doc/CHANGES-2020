@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2234 2020/04/12 11:01:55 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2235 2020/04/12 11:09:22 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3078,3 +3078,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/glib2-tools to 2.64.2 [adam 2020-04-12]
 	Updated textproc/libyaml to 0.2.3 [adam 2020-04-12]
 	Updated net/py-kombu to 4.6.8 [adam 2020-04-12]
+	Updated lang/go113 to 1.13.10 [bsiegert 2020-04-12]
