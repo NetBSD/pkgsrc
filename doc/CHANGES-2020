@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2228 2020/04/12 02:50:28 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2229 2020/04/12 06:25:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3066,3 +3066,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-terminado to 0.8.3 [adam 2020-04-11]
 	Updated textproc/py-jsbeautifier to 1.11.0 [adam 2020-04-11]
 	Updated lang/algol68g to 2.8.4 [ryoon 2020-04-12]
+	Updated graphics/libjpeg-turbo to 2.0.4 [adam 2020-04-12]
+	Updated x11/py-sip to 4.19.22 [adam 2020-04-12]
+	Updated x11/py-sip-qt5 to 4.19.22 [adam 2020-04-12]
+	Updated x11/py-qt5 to 5.14.2 [adam 2020-04-12]
