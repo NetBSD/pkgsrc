@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2020/03/15 11:37:17 leot Exp $
+@comment $NetBSD: PLIST,v 1.40 2020/04/12 20:05:04 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -72,6 +72,9 @@ ${PYSITELIB}/gallery_dl/extractor/adultempire.pyo
 ${PYSITELIB}/gallery_dl/extractor/artstation.py
 ${PYSITELIB}/gallery_dl/extractor/artstation.pyc
 ${PYSITELIB}/gallery_dl/extractor/artstation.pyo
+${PYSITELIB}/gallery_dl/extractor/aryion.py
+${PYSITELIB}/gallery_dl/extractor/aryion.pyc
+${PYSITELIB}/gallery_dl/extractor/aryion.pyo
 ${PYSITELIB}/gallery_dl/extractor/bcy.py
 ${PYSITELIB}/gallery_dl/extractor/bcy.pyc
 ${PYSITELIB}/gallery_dl/extractor/bcy.pyo
