@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2241 2020/04/12 17:34:56 pin Exp $
+$NetBSD: CHANGES-2020,v 1.2242 2020/04/12 20:05:18 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3087,3 +3087,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-test-assume to 2.2.1 [adam 2020-04-12]
 	Updated editors/nano to 4.9.2 [schwarz 2020-04-12]
 	Added wm/sowm version 1.6 [pin 2020-04-12]
+	Updated net/gallery-dl to 1.13.4 [leot 2020-04-12]
