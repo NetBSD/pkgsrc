@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/03/31 22:36:37 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/12 08:29:15 adam Exp $
 
 DISTNAME=	obconf-qt-0.14.1
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	https://downloads.lxqt.org/downloads/obconf-qt/0.14.1/
 EXTRACT_SUFX=	.tar.xz
