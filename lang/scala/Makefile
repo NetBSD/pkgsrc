@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/01/26 17:31:32 rillig Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2020/04/12 09:33:12 bsiegert Exp $
 
 DISTNAME=	scala-2.13.0
 CATEGORIES=	lang
@@ -14,7 +14,7 @@ USE_JAVA=	run
 USE_JAVA2=	8
 NO_BUILD=	yes
 
-USE_TOOLS+=	bash:run
+USE_TOOLS+=	bash:run tar
 REPLACE_BASH+=	bin/fsc bin/scala bin/scalac \
 		bin/scaladoc bin/scalap
 
