@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/04/12 17:32:45 pin Exp $
+
+SHA1 (sowm-1.6.tar.gz) = 87bd3f40ae70364c15f8e36c78c95e146d1423ac
+RMD160 (sowm-1.6.tar.gz) = f1f5ec85623335214e9e89fc2ce2e48a74679415
+SHA512 (sowm-1.6.tar.gz) = 36f0818d769c224c727713d862201dee7478a04e99c4b0ea0e48a1e1a12a033f704962351ec39df901c196a0ab75fd07b0551b6177f3bb51639dc1ea362b0c16
+Size (sowm-1.6.tar.gz) = 5916 bytes
+SHA1 (patch-config.def.h) = 8ea95b69bc52f4913dce9a7650cae1739bfd1400

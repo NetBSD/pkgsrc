@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/12 17:32:45 pin Exp $
+bin/sowm
+share/doc/sowm/README.md

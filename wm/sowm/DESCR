@@ -1,0 +1,10 @@
+sowm (Simple Opinionated Window Manager)
+An itsy bitsy floating window manager.
+
+- Floating only.
+- Fullscreen toggle.
+- Window centering.
+- Mix of mouse and keyboard workflow.
+- Focus with cursor.
+- Rounded corners (through patch(https://github.com/dylanaraps/sowm/pull/58))
+- Titlebars (through patch(https://github.com/dylanaraps/sowm/pull/57))
