@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2020/04/12 08:28:17 adam Exp $
+# $NetBSD: Makefile,v 1.104 2020/04/12 12:08:51 nia Exp $
 
-DISTNAME=	audacious-plugins-4.0
-PKGREVISION=	1
+DISTNAME=	audacious-plugins-4.0.1
 CATEGORIES=	audio
 MASTER_SITES=	https://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +18,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-ampache
 CONFIGURE_ARGS+=	--disable-bs2b
 CONFIGURE_ARGS+=	--disable-cue
+# prefer libsamplerate
+CONFIGURE_ARGS+=	--disable-soxr
 CONFIGURE_ARGS+=	--disable-notify
 # use SDL instead, it has working volume control
 CONFIGURE_ARGS+=	--disable-oss4
@@ -40,7 +41,6 @@ CONFIGURE_ARGS+=	--disable-mpris2
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../audio/libsoxr/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/mpg123/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
