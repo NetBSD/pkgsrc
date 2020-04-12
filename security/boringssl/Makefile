@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/08/11 13:22:45 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/12 19:40:22 joerg Exp $
 
 DISTNAME=	boringssl-20151230
 PKGREVISION=	9
@@ -28,8 +28,8 @@ SUBST_SED.go=		-e '/find_program.GO_EXECUTABLE/s,go,${GO},'
 
 do-build:
 	mkdir -p ${WRKSRC}/build
-	cd ${WRKSRC}/build && cmake ..
-	cd ${WRKSRC}/build && make
+	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} cmake ..
+	cd ${WRKSRC}/build && ${SETENV} ${MAKE_ENV} make
 
 do-install:
 	for d in bssl/bin bssl/lib bssl/include/openssl; do		\
