@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/03/10 22:11:01 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/12 08:29:13 adam Exp $
 
 DISTNAME=	pcmanfm-qt-0.14.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://downloads.lxqt.org/downloads/pcmanfm-qt/0.14.1/
 EXTRACT_SUFX=	.tar.xz

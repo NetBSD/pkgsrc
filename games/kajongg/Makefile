@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2020/03/10 22:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2020/04/12 08:28:40 adam Exp $
 
 DISTNAME=	kajongg-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kajongg/
