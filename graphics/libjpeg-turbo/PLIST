@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/06/14 12:07:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/12 06:17:06 adam Exp $
 bin/cjpeg
 bin/djpeg
 bin/jpegtran
@@ -10,8 +10,14 @@ include/jerror.h
 include/jmorecfg.h
 include/jpeglib.h
 include/turbojpeg.h
-lib/libjpeg.la
-lib/libturbojpeg.la
+lib/libjpeg.a
+lib/libjpeg.so
+lib/libjpeg.so.8
+lib/libjpeg.so.8.2.2
+lib/libturbojpeg.a
+lib/libturbojpeg.so
+lib/libturbojpeg.so.0
+lib/libturbojpeg.so.0.2.0
 lib/pkgconfig/libjpeg.pc
 lib/pkgconfig/libturbojpeg.pc
 man/man1/cjpeg.1
@@ -22,8 +28,9 @@ man/man1/wrjpgcom.1
 share/doc/libjpeg-turbo/LICENSE.md
 share/doc/libjpeg-turbo/README.ijg
 share/doc/libjpeg-turbo/README.md
-share/doc/libjpeg-turbo/example.c
+share/doc/libjpeg-turbo/example.txt
 share/doc/libjpeg-turbo/libjpeg.txt
 share/doc/libjpeg-turbo/structure.txt
+share/doc/libjpeg-turbo/tjexample.c
 share/doc/libjpeg-turbo/usage.txt
 share/doc/libjpeg-turbo/wizard.txt
