@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2232 2020/04/12 09:14:20 jnemeth Exp $
+$NetBSD: CHANGES-2020,v 1.2233 2020/04/12 10:40:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3073,3 +3073,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/icu to 66.1 [adam 2020-04-12]
 	Updated print/qpdf to 10.0.1 [ryoon 2020-04-12]
 	Updated mail/sendmail to 8.15.2nb8 [jnemeth 2020-04-12]
+	Updated devel/gdbus-codegen to 2.64.2 [adam 2020-04-12]
+	Updated devel/glib2 to 2.64.2 [adam 2020-04-12]
+	Updated devel/glib2-tools to 2.64.2 [adam 2020-04-12]
