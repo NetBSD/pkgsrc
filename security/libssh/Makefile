@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2020/01/26 17:32:04 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2020/04/12 21:05:01 wiz Exp $
 #
 # history: upstream renamed 0.11 to 0.1.1;
 # we have to use the old-style convention so that version compares work.
 
-VER=		0.9.3
+VER=		0.9.4
 DISTNAME=	libssh-${VER}
-PKGNAME=	libssh-0.93
-PKGREVISION=	1
+PKGNAME=	libssh-0.94
 CATEGORIES=	security
 MASTER_SITES=	https://www.libssh.org/files/${VER:R}/
 EXTRACT_SUFX=	.tar.xz
