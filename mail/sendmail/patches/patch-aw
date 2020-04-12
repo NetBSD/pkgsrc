@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.5 2019/07/15 04:32:49 jnemeth Exp $
+$NetBSD: patch-aw,v 1.6 2020/04/12 09:11:42 jnemeth Exp $
 
 --- sendmail/readcf.c.orig	2015-06-17 16:51:58.000000000 +0000
 +++ sendmail/readcf.c
@@ -13,18 +13,16 @@ $NetBSD: patch-aw,v 1.5 2019/07/15 04:32:49 jnemeth Exp $
  
  #define SECONDS
  #define MINUTES	* 60
-@@ -2910,6 +2914,10 @@ static struct optioninfo
+@@ -2910,6 +2914,8 @@ static struct optioninfo
  #endif
  #define O_USECOMPRESSEDIPV6ADDRESSES 0xec
  	{ "UseCompressedIPv6Addresses",	O_USECOMPRESSEDIPV6ADDRESSES, OI_NONE },
-+#ifdef USE_BLACKLIST
 +# define O_BLACKLIST	0xf2
 +	{ "UseBlacklist",             O_BLACKLIST,    OI_NONE },
-+#endif
  
  	{ NULL,				'\0',		OI_NONE	}
  };
-@@ -3318,13 +3326,13 @@ setoption(opt, val, safe, sticky, e)
+@@ -3318,13 +3324,13 @@ setoption(opt, val, safe, sticky, e)
  			if (rfp->rf_name == NULL)
  				syserr("readcf: I option value %s unrecognized", q);
  			else if (clearmode)
@@ -41,15 +39,13 @@ $NetBSD: patch-aw,v 1.5 2019/07/15 04:32:49 jnemeth Exp $
  #else /* NAMED_BIND */
  		usrerr("name server (I option) specified but BIND not compiled in");
  #endif /* NAMED_BIND */
-@@ -4540,6 +4548,12 @@ setoption(opt, val, safe, sticky, e)
+@@ -4540,6 +4546,10 @@ setoption(opt, val, safe, sticky, e)
  		UseCompressedIPv6Addresses = atobool(val);
  		break;
  
-+#ifdef USE_BLACKLIST
 +	  case O_BLACKLIST:
 +		UseBlacklist = atobool(val);
 +		break;
-+#endif
 +
  	  default:
  		if (tTd(37, 1))
