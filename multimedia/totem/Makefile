@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2020/03/11 19:34:11 nia Exp $
+# $NetBSD: Makefile,v 1.108 2020/04/12 08:29:03 adam Exp $
 
 DISTNAME=	totem-3.34.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/3.34/}
 EXTRACT_SUFX=	.tar.xz

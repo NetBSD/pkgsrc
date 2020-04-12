@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2020/03/08 16:50:54 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2020/04/12 08:29:05 adam Exp $
 
 DISTNAME=	kget-15.12.0
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	net
 COMMENT=	download manager for KDE
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}

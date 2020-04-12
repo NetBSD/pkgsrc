@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/04/09 00:16:02 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/12 08:28:19 adam Exp $
 
 VERSION=	0.14.1
 DISTNAME=	pavucontrol-qt-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://downloads.lxqt.org/downloads/pavucontrol-qt/${VERSION}/
 EXTRACT_SUFX=	.tar.xz

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2020/03/08 16:51:48 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2020/04/12 08:29:20 adam Exp $
 
-PKGREVISION= 14
+PKGREVISION= 15
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-sqlite3-${QTVERSION}

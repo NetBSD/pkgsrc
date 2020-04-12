@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2019/04/03 00:33:14 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2020/04/12 08:28:10 adam Exp $
 
 BUILDLINK_TREE+=	gnustep-back
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnustep-back
 GNUSTEP_BACK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnustep-back+=	gnustep-back>=0.9.2
-BUILDLINK_ABI_DEPENDS.gnustep-back+=	gnustep-back>=0.22.0nb21
+BUILDLINK_ABI_DEPENDS.gnustep-back+=	gnustep-back>=0.22.0nb22
 BUILDLINK_PKGSRCDIR.gnustep-back?=	../../x11/gnustep-back
 
 .include "../../x11/gnustep-gui/buildlink3.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/03/20 14:40:56 micha Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/12 08:29:07 adam Exp $
 
 DISTNAME=	bystand-1.0.1
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	http://zzo38computer.org/prog/bystand/
 EXTRACT_SUFX=	.zip
