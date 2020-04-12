@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.111 2020/04/02 15:52:46 nia Exp $
+$NetBSD: distinfo,v 1.112 2020/04/12 11:09:05 nia Exp $
 
 SHA1 (xine-lib-1.2.10.tar.xz) = 66fe7a7d372f74967df46834167f85f5c2d43ae7
 RMD160 (xine-lib-1.2.10.tar.xz) = 1dba24e9e6c4f21e766d9b696dd02f4e645f4c8c
@@ -10,6 +10,7 @@ SHA1 (patch-contrib_libxdg-basedir_basedir.c) = 8dd88fd712853e58363148023be6ef09
 SHA1 (patch-fa) = 9312a3bab4ae8482a208948277f1d11fb7eaaf8c
 SHA1 (patch-include_xine_attributes.h) = e7cb5f50d95a2523e2de83250fe11a12f0126a7f
 SHA1 (patch-include_xine_post.h) = 3ada327a7f171bdf680074b30f005099011a201c
+SHA1 (patch-include_xine_xineutils.h) = a8e32954433fcbd035dfe1416623c3e22ac754c2
 SHA1 (patch-src-post-audio-stretch.c) = 6f950bcd47fdf68b691744dc105f59f821748ce1
 SHA1 (patch-src-post-audio-upmix.c) = 70ca6babfa9a7add0ac70a6024fcff429e1bc49d
 SHA1 (patch-src-post-audio-upmix_mono.c) = 2c70ded10118cbeed5be3c948886f7311ddb7bbd
