@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/28 07:38:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/12 21:12:21 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,3 +19,6 @@ ${PYSITELIB}/asttokens/mark_tokens.pyo
 ${PYSITELIB}/asttokens/util.py
 ${PYSITELIB}/asttokens/util.pyc
 ${PYSITELIB}/asttokens/util.pyo
+${PYSITELIB}/asttokens/version.py
+${PYSITELIB}/asttokens/version.pyc
+${PYSITELIB}/asttokens/version.pyo
