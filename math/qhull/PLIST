@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/02/03 16:05:56 nros Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/04/12 21:15:01 adam Exp $
 bin/qconvex
 bin/qdelaunay
 bin/qhalf
@@ -75,15 +75,19 @@ include/libqhullcpp/RoadError.h
 include/libqhullcpp/RoadLogEvent.h
 include/libqhullcpp/RoadTest.h
 include/libqhullcpp/functionObjects.h
+lib/cmake/Qhull/QhullConfig.cmake
+lib/cmake/Qhull/QhullConfigVersion.cmake
+lib/cmake/Qhull/QhullTargets-noconfig.cmake
+lib/cmake/Qhull/QhullTargets.cmake
 lib/libqhull.so
 lib/libqhull.so.7
-lib/libqhull.so.7.2.0
+lib/libqhull.so.7.3.2
 lib/libqhull_p.so
 lib/libqhull_p.so.7
-lib/libqhull_p.so.7.2.0
+lib/libqhull_p.so.7.3.2
 lib/libqhull_r.so
 lib/libqhull_r.so.7
-lib/libqhull_r.so.7.2.0
+lib/libqhull_r.so.7.3.2
 lib/libqhullcpp.a
 lib/libqhullstatic.a
 lib/libqhullstatic_r.a
@@ -117,6 +121,7 @@ share/doc/qhull/qh-optp.htm
 share/doc/qhull/qh-optq.htm
 share/doc/qhull/qh-optt.htm
 share/doc/qhull/qh-quick.htm
+share/doc/qhull/qh_findbestfacet-drielsma.pdf
 share/doc/qhull/qhalf.htm
 share/doc/qhull/qhull-cpp.xml
 share/doc/qhull/qhull.htm
