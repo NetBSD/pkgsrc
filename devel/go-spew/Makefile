@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/03/21 16:57:13 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/12 11:01:38 bsiegert Exp $
 
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 DISTNAME=		go-spew-1.1.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=davecgh/}
 GITHUB_PROJECT=		go-spew
