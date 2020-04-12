@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2019/08/13 12:35:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2020/04/12 11:19:48 adam Exp $
 bin/rst2html-${PYVERSSUFFIX}
 bin/rst2html4-${PYVERSSUFFIX}
 bin/rst2html5-${PYVERSSUFFIX}
@@ -18,9 +18,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/docutils/__init__.py
 ${PYSITELIB}/docutils/__init__.pyc
 ${PYSITELIB}/docutils/__init__.pyo
-${PYSITELIB}/docutils/_compat.py
-${PYSITELIB}/docutils/_compat.pyc
-${PYSITELIB}/docutils/_compat.pyo
 ${PYSITELIB}/docutils/core.py
 ${PYSITELIB}/docutils/core.pyc
 ${PYSITELIB}/docutils/core.pyo
