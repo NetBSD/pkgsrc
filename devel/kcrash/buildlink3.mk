@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2020/03/10 22:08:41 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2020/04/12 08:27:51 adam Exp $
 
 BUILDLINK_TREE+=	kcrash
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kcrash
 KCRASH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kcrash+=	kcrash>=5.18.0
-BUILDLINK_ABI_DEPENDS.kcrash?=	kcrash>=5.66.0nb2
+BUILDLINK_ABI_DEPENDS.kcrash?=	kcrash>=5.66.0nb3
 BUILDLINK_PKGSRCDIR.kcrash?=	../../devel/kcrash
 
 .include "../../devel/kcoreaddons/buildlink3.mk"

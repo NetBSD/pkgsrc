@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2020/03/10 22:09:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2020/04/12 08:28:07 adam Exp $
 
 BUILDLINK_TREE+=	sonnet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	sonnet
 SONNET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sonnet+=	sonnet>=5.19.0
-BUILDLINK_ABI_DEPENDS.sonnet?=	sonnet>=5.66.0nb2
+BUILDLINK_ABI_DEPENDS.sonnet?=	sonnet>=5.66.0nb3
 BUILDLINK_PKGSRCDIR.sonnet?=	../../textproc/sonnet
 
 #.include "../../textproc/aspell/buildlink3.mk"
