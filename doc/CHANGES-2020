@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2243 2020/04/12 20:26:29 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2244 2020/04/12 20:29:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3089,3 +3089,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added wm/sowm version 1.6 [pin 2020-04-12]
 	Updated net/gallery-dl to 1.13.4 [leot 2020-04-12]
 	Updated graphics/ImageMagick to 7.0.10.6 [wiz 2020-04-12]
+	Updated devel/gobject-introspection to 1.64.1 [wiz 2020-04-12]
