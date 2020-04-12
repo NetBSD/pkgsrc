@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.129 2020/03/18 00:26:28 rillig Exp $
+# $NetBSD: Makefile,v 1.130 2020/04/12 07:06:43 adam Exp $
 
-DISTNAME=	icu4c-64_2-src
+DISTNAME=	icu4c-66_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
-PKGREVISION=	2
 CATEGORIES=	textproc
-MASTER_SITES=	http://download.icu-project.org/files/icu4c/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=unicode-org/}
 EXTRACT_SUFX=	.tgz
+GITHUB_PROJECT=	icu
+GITHUB_RELEASE=	release-66-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.icu-project.org/
+HOMEPAGE=	http://site.icu-project.org/
 COMMENT=	Robust and full-featured Unicode services
 LICENSE=	mit
 
 WRKSRC=			${WRKDIR}/icu/source
 USE_LANGUAGES=		c99 c++
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GCC_REQD+=		4.8
 TEST_TARGET=		check
 UNLIMIT_RESOURCES+=	datasize
