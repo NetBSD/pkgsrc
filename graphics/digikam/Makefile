@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2020/04/12 08:28:48 adam Exp $
+# $NetBSD: Makefile,v 1.154 2020/04/12 19:53:09 joerg Exp $
 
 DISTNAME=	digikam-6.4.0
 PKGREVISION=	6
@@ -18,6 +18,8 @@ CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 USE_TOOLS+=	flex bison msgmerge perl:run pkg-config
 
 CXXFLAGS.NetBSD+=	-D_KERNTYPES
+
+CHECK_PORTABILITY_SKIP+=	*.desktop.cmake.in
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/knotifications/buildlink3.mk"
