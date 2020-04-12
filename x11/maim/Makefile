@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/04/12 08:29:19 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/04/12 21:10:25 wiz Exp $
 
-DISTNAME=	maim-5.5.3
-PKGREVISION=	2
+DISTNAME=	maim-5.6.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=naelstrof/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -24,6 +23,7 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
+BUILDLINK_API_DEPENDS.slop?=    slop>=7.5
 .include "../../x11/slop/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
