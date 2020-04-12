@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.57 2020/04/01 20:30:53 schwarz Exp $
+$NetBSD: distinfo,v 1.58 2020/04/12 14:41:14 schwarz Exp $
 
-SHA1 (nano-4.9.tar.xz) = f566133338ac083975c028504e7dc789d29a76b1
-RMD160 (nano-4.9.tar.xz) = f67794bca69754bad2dc0d5ca66a1c4656764b05
-SHA512 (nano-4.9.tar.xz) = 138e3279413f2555bb2109b3ca0a7b61e0d3e0385c7c6d7ce7ab23f4db3b7bf0cc463930d6728e4f244868b93a3df7db73b0c85d30748cdfa7591b4ae71cfe1b
-Size (nano-4.9.tar.xz) = 1520144 bytes
+SHA1 (nano-4.9.2.tar.xz) = 5da9831a1c57f225094d1475479f84b325f68c19
+RMD160 (nano-4.9.2.tar.xz) = b56a2194b6fdd11ccbbbe10a924b5be18f4a7483
+SHA512 (nano-4.9.2.tar.xz) = 532f706ec0797247f59283f93de7858fb8b66ca4eabc020218cc912f893c354ff79a4c828a16f89146d7a512dd5046009c8118f0a1726718cd32275ca2c095cf
+Size (nano-4.9.2.tar.xz) = 1517276 bytes
 SHA1 (patch-configure) = 20c1525ba2b762d851a2938d1cce4b128985a0b8
