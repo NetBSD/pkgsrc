@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2250 2020/04/12 21:12:30 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2251 2020/04/12 21:13:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3096,3 +3096,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/slop to 7.5 [wiz 2020-04-12]
 	Updated x11/maim to 5.6.3 [wiz 2020-04-12]
 	Updated lang/py-asttokens to 2.0.4 [wiz 2020-04-12]
+	Updated devel/py-cachetools to 4.1.0 [wiz 2020-04-12]
