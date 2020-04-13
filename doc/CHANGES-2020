@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2262 2020/04/13 19:47:02 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.2263 2020/04/13 20:23:41 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3113,4 +3113,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dhcpcd to 9.0.1 [roy 2020-04-13]
 	Added devel/gopls version 0.4.0 [bsiegert 2020-04-13]
 	Updated devel/golint to 20200301 [bsiegert 2020-04-13]
-	Updated pkgtools/pkglint to 20.1.2 [rillig 2020-04-08]
+	Updated pkgtools/pkglint to 20.1.2 [rillig 2020-04-13]
