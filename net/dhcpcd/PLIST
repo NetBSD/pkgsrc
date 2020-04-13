@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2016/01/07 17:29:48 roy Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/04/13 16:24:09 roy Exp $
 libexec/dhcpcd-hooks/01-test
-libexec/dhcpcd-hooks/02-dump
 libexec/dhcpcd-hooks/20-resolv.conf
 libexec/dhcpcd-hooks/30-hostname
 libexec/dhcpcd-hooks/50-ntp.conf
