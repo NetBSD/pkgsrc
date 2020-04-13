@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2256 2020/04/13 12:07:35 leot Exp $
+$NetBSD: CHANGES-2020,v 1.2257 2020/04/13 14:01:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3103,3 +3103,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/qhull to 2019.1 [adam 2020-04-12]
 	Updated math/octave to 5.2.0 [adam 2020-04-12]
 	Updated www/webkit-gtk to 2.28.1 [leot 2020-04-13]
+	Updated devel/p5-Getopt-Long-Descriptive to 0.105 [mef 2020-04-13]
+	Updated devel/p5-GitLab-API-v4 to 0.25 [mef 2020-04-13]
+	Updated devel/p5-Hash-Case to 1.050 [mef 2020-04-13]
+	Updated devel/p5-IO-Stty to 0.04 [mef 2020-04-13]
+	Updated devel/p5-IPC-System-Simple to 1.30 [mef 2020-04-13]
+	Updated devel/p5-Inline to 0.86 [mef 2020-04-13]
