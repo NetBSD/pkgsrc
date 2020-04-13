@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:28:23 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/04/13 13:54:23 mef Exp $
 
-SHA1 (IPC-System-Simple-1.25.tar.gz) = fb50f4f27407c81bb884073bd9bc5cf75f4841f1
-RMD160 (IPC-System-Simple-1.25.tar.gz) = d952603a779d2611642d769af81004f9c731271c
-SHA512 (IPC-System-Simple-1.25.tar.gz) = fda275786605eb80acaa6062cc51c32aa0e84f150e7ca7afcfe874f088ce7b8f9a97669e91bec24fdb05426db8b0f05552aa8853e44b08996e625281d1892f72
-Size (IPC-System-Simple-1.25.tar.gz) = 29744 bytes
+SHA1 (IPC-System-Simple-1.30.tar.gz) = 535263c7f8097de96663e65ed4e9e171982e0235
+RMD160 (IPC-System-Simple-1.30.tar.gz) = 942037112338db3c443995b865113c6b28878171
+SHA512 (IPC-System-Simple-1.30.tar.gz) = 82937df80ae38a9c21e43e256a21cdac1482d4a069eae282043d676ece06251a7139b752cd2b379a0f69ea9209ddd075607da86c6cb9b25f19cf90d91c28d72f
+Size (IPC-System-Simple-1.30.tar.gz) = 31902 bytes
