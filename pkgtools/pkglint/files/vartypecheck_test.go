@@ -582,9 +582,55 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 		"gettext-[0-9]*:files/../../../databases/py-sqlite3")
 
 	vt.Output(
-		"WARN: ~/category/package/filename.mk:31: " +
-			"\"files/../../../databases/py-sqlite3\" is " +
+		"ERROR: ~/category/package/filename.mk:31: "+
+			"Relative package directories like "+
+			"\"files/../../../databases/py-sqlite3\" must be canonical.",
+		"WARN: ~/category/package/filename.mk:31: "+
+			"\"files/../../../databases/py-sqlite3\" is "+
 			"not a valid relative package directory.")
+
+	// The path has a trailing slash.
+	// https://mail-index.netbsd.org/pkgsrc-changes/2020/03/26/msg209490.html
+	vt.Values(
+		"py-sqlite3-[0-9]*:../../databases/py-sqlite3/",
+		"py-sqlite3-[0-9]*:../../././databases/py-sqlite3")
+
+	vt.Output(
+		"ERROR: ~/category/package/filename.mk:41: "+
+			"Relative package directories like "+
+			"\"../../databases/py-sqlite3/\" must not end with a slash.",
+		"ERROR: ~/category/package/filename.mk:42: "+
+			"Relative package directories like "+
+			"\"../../././databases/py-sqlite3\" must be canonical.")
+
+	vt.Values("py-sqlite3>=0:/usr/pkg")
+
+	vt.Output(
+		"ERROR: ~/category/package/filename.mk:51: " +
+			"Dependency paths like \"/usr/pkg\" must be relative.")
+
+	vt.Values(
+		"py-sqlite3>=0:../package/../../category/package")
+
+	// These warnings are quite redundant. It's an edge case anyway.
+	vt.Output(
+		"WARN: ~/category/package/filename.mk:61: "+
+			"Dependency paths should have the form \"../../category/package\".",
+		"WARN: ~/category/package/filename.mk:61: "+
+			"References to other packages should look like \"../../category/package\", not \"../package\".",
+		"ERROR: ~/category/package/filename.mk:61: "+
+			"Relative package directories like "+
+			"\"../package/../../category/package\" must be canonical.",
+		"WARN: ~/category/package/filename.mk:61: "+
+			"\"../package/../../category/package\" is not a valid relative package directory.")
+
+	// The "empty" field after the colon is not even counted as a field.
+	vt.Values(
+		"py-sqlite3>=0:")
+
+	vt.Output(
+		"WARN: ~/category/package/filename.mk:71: " +
+			"Invalid dependency pattern with path \"py-sqlite3>=0:\".")
 }
 
 func (s *Suite) Test_VartypeCheck_DistSuffix(c *check.C) {
@@ -2128,6 +2174,30 @@ func (s *Suite) Test_VartypeCheck_WrkdirSubdirectory(c *check.C) {
 	vt.Output(
 		"WARN: filename.mk:8: The pathname \"two words\" " +
 			"contains the invalid character \" \".")
+}
+
+func (s *Suite) Test_VartypeCheck_WrksrcPathPattern(c *check.C) {
+	t := s.Init(c)
+	vt := NewVartypeCheckTester(t, BtWrksrcPathPattern)
+
+	vt.Varname("SUBST_FILES.class")
+	vt.Op(opAssign)
+	vt.Values(
+		"relative/*.sh",
+		"${WRKSRC}/relative/*.sh")
+
+	vt.Output(
+		"NOTE: filename.mk:2: The pathname patterns in SUBST_FILES.class " +
+			"don't need to mention ${WRKSRC}.")
+
+	t.SetUpCommandLine("--autofix")
+
+	vt.Values(
+		"relative/*.sh",
+		"${WRKSRC}/relative/*.sh")
+
+	vt.Output(
+		"AUTOFIX: filename.mk:12: Replacing \"${WRKSRC}/\" with \"\".")
 }
 
 func (s *Suite) Test_VartypeCheck_WrksrcSubdirectory(c *check.C) {
