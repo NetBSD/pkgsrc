@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3091 2020/04/06 08:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3092 2020/04/13 15:22:47 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -459,6 +459,7 @@ SUBDIR+=	golint
 SUBDIR+=	google-api-go-client
 SUBDIR+=	google-glog
 SUBDIR+=	googletest
+SUBDIR+=	gopls
 SUBDIR+=	gperf
 SUBDIR+=	gperftools
 SUBDIR+=	gprbuild-aux
