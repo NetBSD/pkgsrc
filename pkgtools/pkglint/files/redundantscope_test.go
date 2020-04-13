@@ -1584,6 +1584,116 @@ func (s *Suite) Test_RedundantScope_handleVarassign__assign_then_eval(c *check.C
 			"Definition of PKG_OPTIONS is redundant because of line 1.")
 }
 
+func (s *Suite) Test_RedundantScope_checkAppendUnique__redundant_before_including(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"CATEGORIES=\tcategory perl5",
+		".include \"included.mk\"")
+	t.CreateFileLines("category/package/included.mk",
+		MkCvsID,
+		"CATEGORIES+=\tperl5 python",
+		"CATEGORIES+=\tpython",
+		"CATEGORIES?=\tcategory japanese")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	// The second line sounds a bit strange since it references a line
+	// further down in the file. It's correct though.
+	t.CheckOutputLines(
+		"NOTE: Makefile:5: Adding \"perl5\" to CATEGORIES is redundant "+
+			"because it will later be appended in included.mk:2.",
+		"NOTE: included.mk:2: Adding \"python\" to CATEGORIES is redundant "+
+			"because it will later be appended in line 3.")
+}
+
+func (s *Suite) Test_RedundantScope_checkAppendUnique__redundant_after_including(c *check.C) {
+	t := s.Init(c)
+
+	// The assignment to CATEGORIES must be commented out in this test.
+	// The redundancy check only works if either _all_ previous variable
+	// assignments happen in included files or if _all_ previous variable
+	// assignments happen in including files.
+	//
+	// See Tester.SetUpPackage for the magic that is involved in defining
+	// a package during testing. That magic is also the reason for having
+	// both included1.mk and included2.mk.
+	t.SetUpPackage("category/package",
+		"#CATEGORIES=\tcategory",
+		".include \"included1.mk\"")
+	t.CreateFileLines("category/package/included1.mk",
+		MkCvsID,
+		".include \"included2.mk\"",
+		"CATEGORIES+=\tcategory perl5 python japanese")
+	t.CreateFileLines("category/package/included2.mk",
+		MkCvsID,
+		"CATEGORIES+=\tcategory perl5 japanese chinese")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"NOTE: included1.mk:3: Appending \"category\" to CATEGORIES is redundant "+
+			"because it is already added in included2.mk:2.",
+		"NOTE: included1.mk:3: Appending \"perl5\" to CATEGORIES is redundant "+
+			"because it is already added in included2.mk:2.",
+		"NOTE: included1.mk:3: Appending \"japanese\" to CATEGORIES is redundant "+
+			"because it is already added in included2.mk:2.")
+}
+
+func (s *Suite) Test_RedundantScope_checkAppendUnique__redundant_and_later_conditional(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"CATEGORIES=\tcategory",
+		".include \"included.mk\"")
+	t.CreateFileLines("category/package/included.mk",
+		MkCvsID,
+		"CATEGORIES+=\tperl5 python",
+		"CATEGORIES+=\tpython",
+		"CATEGORIES?=\tcategory japanese",
+		"",
+		".if 1",
+		"CATEGORIES+=\tchinese",
+		".endif")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	// Even though the "chinese" category is conditional, pkglint can
+	// diagnose that everything that happens before that conditional
+	// assignment adds to the constant value of the variable.
+	// Therefore it flags the duplicate category "python".
+	t.CheckOutputLines(
+		"NOTE: included.mk:2: Adding \"python\" to CATEGORIES is redundant " +
+			"because it will later be appended in line 3.")
+}
+
+// The := assignment operator is equivalent to the simple = operator
+// if its right-hand side does not contain references to any variables.
+func (s *Suite) Test_RedundantScope_checkAppendUnique__eval_assignment(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"CATEGORIES:=\tcategory",
+		".include \"included.mk\"")
+	t.CreateFileLines("category/package/included.mk",
+		MkCvsID,
+		"CATEGORIES+=\tcategory")
+	t.Chdir("category/package")
+	t.FinishSetUp()
+
+	G.Check(".")
+
+	t.CheckOutputLines(
+		"NOTE: Makefile:5: Adding \"category\" to CATEGORIES is redundant " +
+			"because it will later be appended in included.mk:2.")
+}
+
 func (s *Suite) Test_includePath_includes(c *check.C) {
 	t := s.Init(c)
 

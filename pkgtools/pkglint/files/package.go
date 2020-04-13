@@ -711,7 +711,6 @@ func (pkg *Package) checkfilePackageMakefile(filename CurrPath, mklines *MkLines
 		return G.CheckGlobal || !G.Pkgsrc.IsInfra(mkline.Filename())
 	}
 	pkg.redundant.Check(allLines) // Updates the variables in the scope
-	pkg.checkCategories()
 	pkg.checkGnuConfigureUseLanguages()
 	pkg.checkUseLanguagesCompilerMk(allLines)
 
@@ -1045,38 +1044,6 @@ func (pkg *Package) CheckVarorder(mklines *MkLines) {
 		"",
 		"See doc/Makefile-example for an example Makefile.",
 		seeGuide("Package components, Makefile", "components.Makefile"))
-}
-
-func (pkg *Package) checkCategories() {
-	categories := pkg.redundant.vars["CATEGORIES"]
-	if categories == nil || !categories.vari.IsConstant() {
-		return
-	}
-
-	// XXX: Decide what exactly this map means.
-	//  Is it "this category has been seen somewhere",
-	//  or is it "this category has definitely been added"?
-	seen := map[string]*MkLine{}
-	for _, mkline := range categories.vari.WriteLocations() {
-		switch mkline.Op() {
-		case opAssignDefault:
-			for _, category := range mkline.ValueFields(mkline.Value()) {
-				if seen[category] == nil {
-					seen[category] = mkline
-				}
-			}
-		default:
-			for _, category := range mkline.ValueFields(mkline.Value()) {
-				if seen[category] != nil {
-					mkline.Notef("Category %q is already added in %s.",
-						category, mkline.RelMkLine(seen[category]))
-				}
-				if seen[category] == nil {
-					seen[category] = mkline
-				}
-			}
-		}
-	}
 }
 
 func (pkg *Package) checkGnuConfigureUseLanguages() {
