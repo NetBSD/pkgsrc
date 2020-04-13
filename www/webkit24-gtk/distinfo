@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2018/08/16 11:49:13 he Exp $
+$NetBSD: distinfo,v 1.8 2020/04/13 19:11:55 joerg Exp $
 
 SHA1 (webkitgtk-2.4.11.tar.xz) = e425ae86084ab6335dadb368c9e8f53600665d54
 RMD160 (webkitgtk-2.4.11.tar.xz) = e1f72498f911465f5ba152313dd9c62ae8d5eee6
@@ -16,6 +16,8 @@ SHA1 (patch-Source_WTF_wtf_MathExtras.h) = bce39efce126793c2a33ab99224ca44860273
 SHA1 (patch-Source_WTF_wtf_Platform.h) = 5eabed49099e03ddcf9c973ecca0508174a09ed6
 SHA1 (patch-Source_WTF_wtf_dtoa_utils.h) = 3e00331ef4ea5dd71a07f0952da089ccd67a9e66
 SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = 2835657e04cdbc0cc7be8a6793061f0b98f84224
+SHA1 (patch-Source_WebCore_dom_Document.cpp) = c7f810b09a17b0a0e7534cfeacc7a2f2ac833c60
+SHA1 (patch-Source_WebCore_platform_graphics_SegmentedFontData.cpp) = dd37d10a794d832e87b4074ff08e8f2f2630b0e7
 SHA1 (patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp) = 6d3b9ee1559a18c17229698e44246f13c77278c9
 SHA1 (patch-Source_autotools_SetupCompilerFlags.m4) = 2802b09bc3bcb92a291f471cef4f3dbf6201a582
 SHA1 (patch-Tools_DumpRenderTree_gtk_DumpRenderTree.cpp) = 994d1671ff2d8e3a961b9b7ed34f69215ed46f91
