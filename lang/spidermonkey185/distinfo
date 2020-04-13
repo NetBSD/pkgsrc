@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2018/05/02 12:42:50 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2020/04/13 19:19:37 joerg Exp $
 
 SHA1 (js185-1.0.0.tar.gz) = 52a01449c48d7a117b35f213d3e4263578d846d6
 RMD160 (js185-1.0.0.tar.gz) = 23e6ddc81d5b63e015aecc1a104b2d3d3ced5005
@@ -19,6 +19,7 @@ SHA1 (patch-jsstr.h) = 0d23725326ab5432bebe63d4775911bc2c74039b
 SHA1 (patch-jsstrinlines.h) = 34b465a4fb504973f65395ccd2819a29ce16c5da
 SHA1 (patch-jstracer.cpp) = 5b0b4d7709b446d1471b593e2c338f48d9fa4eec
 SHA1 (patch-jstracer.h) = 4f0bd2f958d1bedb76b6ac54e218e1fde846ad6d
+SHA1 (patch-methodjit_MethodJIT.cpp) = 2645e1b5d7c4bb21ad8813f84799a79e074a8358
 SHA1 (patch-tracejit_Writer.cpp) = fdd2751e411e933fcb22736b65ea3c93c2cecda1
 SHA1 (patch-v8-dtoa_platform.cc) = 24670e996fcc7ca0d1e7b1b3765a67ac05e9a661
 SHA1 (patch-v8-dtoa_platform.h) = 1d618d8f51e3ee169606297950d3030fcf72abbc
