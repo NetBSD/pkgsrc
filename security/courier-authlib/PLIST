@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2014/03/11 14:05:13 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.12 2020/04/13 19:11:07 joerg Exp $
 bin/courierauthconfig
 include/courier_auth_config.h
 include/courierauth.h
@@ -6,12 +6,16 @@ include/courierauthdebug.h
 include/courierauthsasl.h
 include/courierauthsaslclient.h
 include/courierauthstaticlist.h
+lib/courier-authlib/libauthpipe.la
+lib/courier-authlib/libauthpwd.la
+lib/courier-authlib/libauthuserdb.la
 lib/courier-authlib/libcourierauth.la
 lib/courier-authlib/libcourierauthcommon.la
 lib/courier-authlib/libcourierauthsasl.la
 lib/courier-authlib/libcourierauthsaslclient.la
 libexec/courier-authlib/authdaemond
 libexec/courier-authlib/authsystem.passwd
+libexec/courier-authlib/makedatprog
 man/man1/authpasswd.1
 man/man1/authtest.1
 man/man1/courierlogger.1
@@ -20,11 +24,13 @@ man/man3/auth_generic.3
 man/man3/auth_getoption.3
 man/man3/auth_getuserinfo.3
 man/man3/auth_login.3
+man/man3/auth_mkhomedir.3
 man/man3/auth_passwd.3
 man/man3/auth_sasl.3
 man/man3/auth_sasl_ex.3
 man/man3/authlib.3
 man/man8/makeuserdb.8
+man/man8/pw2userdb.8
 man/man8/userdb.8
 man/man8/userdbpw.8
 sbin/authdaemond
@@ -32,8 +38,14 @@ sbin/authenumerate
 sbin/authpasswd
 sbin/authtest
 sbin/courierlogger
+sbin/makeuserdb
+sbin/pw2userdb
 sbin/sysconftool
+sbin/userdb
+sbin/userdb-test-cram-md5
+sbin/userdbpw
 share/doc/courier-authlib/INSTALL.html
 share/doc/courier-authlib/README.authdebug.html
 share/doc/courier-authlib/README.html
 share/doc/courier-authlib/README_authlib.html
+share/examples/courier-authlib/authdaemonrc.dist
