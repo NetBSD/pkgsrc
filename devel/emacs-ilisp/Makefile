@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2018/07/04 13:40:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2020/04/13 19:11:31 joerg Exp $
 #
 
 DISTNAME=	ilisp-20021222
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/ilisp/
 COMMENT=	Emacs interface to embedded Lisp process
 #LICENSE=	# ILISP License, see COPYING file.
+
+EMACS_VERSIONS_ACCEPTED= emacs20 emacs21 emacs21nox
 
 MAKE_ENV+=	EMACS=${EMACS_BIN:Q}
 BUILD_TARGET=	compile
