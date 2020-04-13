@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2257 2020/04/13 14:01:21 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2258 2020/04/13 14:53:03 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3109,3 +3109,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-IO-Stty to 0.04 [mef 2020-04-13]
 	Updated devel/p5-IPC-System-Simple to 1.30 [mef 2020-04-13]
 	Updated devel/p5-Inline to 0.86 [mef 2020-04-13]
+	Updated sysutils/lf to 13 [bsiegert 2020-04-13]
