@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2019/06/08 03:44:32 wen Exp $
+$NetBSD: distinfo,v 1.19 2020/04/13 13:59:43 mef Exp $
 
-SHA1 (Inline-0.83.tar.gz) = 62962fd16386138e53c27a216d622a765f119b07
-RMD160 (Inline-0.83.tar.gz) = 622f966cbbd616b302144a298529ce7e7fb1aff7
-SHA512 (Inline-0.83.tar.gz) = 83ebc1f6e836117a49e991117be2a650c077ecd368b50547b80176b8da1ab776c12ee9615b54d30f07cc4ec9b1456929e6a940e52e3a05d8d8df568ad32709cd
-Size (Inline-0.83.tar.gz) = 78956 bytes
+SHA1 (Inline-0.86.tar.gz) = dbea997f3f17bc72ac386f6dcded56e5ab9e9d44
+RMD160 (Inline-0.86.tar.gz) = bc1cdeee73ca169b6b250c770a558a5b50506b01
+SHA512 (Inline-0.86.tar.gz) = d7f5a15f66c686c89dbc0b6aa3e2496b939683befeb5033b242b4d5281cc1ed6bb5d7303f51059177e042d6fe8c903e4df535099b60eb16dbef431b50a179ac0
+Size (Inline-0.86.tar.gz) = 87329 bytes
