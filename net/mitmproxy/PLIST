@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/12/17 10:21:51 leot Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/04/13 20:40:22 leot Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -476,6 +476,7 @@ ${PYSITELIB}/mitmproxy/proxy/root_context.pyo
 ${PYSITELIB}/mitmproxy/proxy/server.py
 ${PYSITELIB}/mitmproxy/proxy/server.pyc
 ${PYSITELIB}/mitmproxy/proxy/server.pyo
+${PYSITELIB}/mitmproxy/py.typed
 ${PYSITELIB}/mitmproxy/script/__init__.py
 ${PYSITELIB}/mitmproxy/script/__init__.pyc
 ${PYSITELIB}/mitmproxy/script/__init__.pyo
