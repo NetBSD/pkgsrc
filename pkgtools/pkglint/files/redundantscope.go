@@ -152,6 +152,51 @@ func (s *RedundantScope) handleVarassign(mkline *MkLine, ind *Indentation) {
 				s.onRedundant(prevWrites[len(prevWrites)-1], mkline)
 			}
 		}
+
+	case opAssignAppend:
+		s.checkAppendUnique(mkline, info)
+	}
+}
+
+// checkAppendUnique checks whether a redundant value is appended to a
+// variable that doesn't need repeated values, such as CATEGORIES.
+func (s *RedundantScope) checkAppendUnique(mkline *MkLine, info *redundantScopeVarinfo) {
+	if !info.vari.IsConstant() {
+		return
+	}
+
+	vartype := G.Pkgsrc.VariableType(nil, info.vari.Name)
+	if !(vartype != nil && vartype.IsUnique()) {
+		return
+	}
+
+	checkRedundantAppend := func(redundant *MkLine, because *MkLine) {
+		reds := redundant.ValueFieldsLiteral()
+		becs := because.ValueFieldsLiteral()
+		for _, red := range reds {
+			for _, bec := range becs {
+				if red != bec {
+					continue
+				}
+				if redundant == mkline {
+					redundant.Notef("Appending %q to %s is redundant because it is already added in %s.",
+						red, info.vari.Name, redundant.RelMkLine(because))
+				} else {
+					redundant.Notef("Adding %q to %s is redundant because it will later be appended in %s.",
+						red, info.vari.Name, redundant.RelMkLine(because))
+				}
+			}
+		}
+	}
+
+	if s.includePath.includesOrEqualsAll(info.includePaths) {
+		for _, prev := range info.vari.WriteLocations() {
+			checkRedundantAppend(mkline, prev)
+		}
+	} else if s.includePath.includedByOrEqualsAll(info.includePaths) {
+		for _, prev := range info.vari.WriteLocations() {
+			checkRedundantAppend(prev, mkline)
+		}
 	}
 }
 

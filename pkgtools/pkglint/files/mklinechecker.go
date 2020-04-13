@@ -382,6 +382,21 @@ func (ck MkLineChecker) CheckRelativePkgdir(rel RelPath, pkgdir PackagePath) {
 	mkline := ck.MkLine
 	makefile := pkgdir.JoinNoClean("Makefile")
 	ck.CheckRelativePath(makefile, makefile.AsRelPath(), true)
+
+	if hasSuffix(pkgdir.String(), "/") {
+		mkline.Errorf("Relative package directories like %q must not end with a slash.", pkgdir.String())
+		mkline.Explain(
+			"This causes problems with bulk builds, at least with limited builds,",
+			"as the trailing slash in a package directory name causes pbulk-scan",
+			"to fail with \"Invalid path from master\" and leads to a hung scan phase.")
+	} else if pkgdir.AsPath() != pkgdir.AsPath().Clean() {
+		mkline.Errorf("Relative package directories like %q must be canonical.",
+			pkgdir.String())
+		mkline.Explain(
+			"The canonical form of a package path is \"../../category/package\".")
+	}
+
+	// This strips any trailing slash.
 	pkgdir = mkline.ResolveVarsInRelativePath(pkgdir, ck.MkLines.pkg)
 
 	if !matches(pkgdir.String(), `^\.\./\.\./([^./][^/]*/[^./][^/]*)$`) && !containsVarUse(pkgdir.String()) {

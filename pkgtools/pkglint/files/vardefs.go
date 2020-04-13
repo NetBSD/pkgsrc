@@ -861,7 +861,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sys("AR", BtShellCommand, AlwaysInScope|DefinedIfInScope|NonemptyIfDefined)
 	reg.sys("AS", BtShellCommand, AlwaysInScope|DefinedIfInScope|NonemptyIfDefined)
 	reg.pkglist("AUTOCONF_REQD", BtVersion)
-	reg.pkglist("AUTOMAKE_OVERRIDE", BtPathPattern)
+	reg.pkglist("AUTOMAKE_OVERRIDE", BtYesNo)
 	reg.pkglist("AUTOMAKE_REQD", BtVersion)
 	reg.pkg("AUTO_MKDIRS", BtYesNo)
 	reg.usr("BATCH", BtYes)
@@ -1007,7 +1007,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		"builtin.mk: set")
 	reg.sys("BUILTIN_X11_TYPE", BtUnknown)
 	reg.sys("BUILTIN_X11_VERSION", BtUnknown)
-	reg.pkglist("CATEGORIES", BtCategory)
+	reg.DefineName("CATEGORIES", BtCategory, List|PackageSettable|Unique, "pkglist")
 	reg.sysload("CC_VERSION", BtMessage, DefinedIfInScope|NonemptyIfDefined)
 	reg.sysload("CC", BtShellCommand)
 	reg.pkglistbl3("CFLAGS", BtCFlag)   // may also be changed by the user
@@ -1041,8 +1041,8 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkg("CMAKE_ARG_PATH", BtPathname)
 	reg.pkglist("CMAKE_ARGS", BtShellWord)
 	reg.pkglist("CMAKE_ARGS.*", BtShellWord)
-	reg.pkglist("CMAKE_DEPENDENCIES_REWRITE", BtPathPattern) // Relative to WRKSRC
-	reg.pkglist("CMAKE_MODULE_PATH_OVERRIDE", BtPathPattern) // Relative to WRKSRC
+	reg.pkglist("CMAKE_DEPENDENCIES_REWRITE", BtWrksrcPathPattern)
+	reg.pkglist("CMAKE_MODULE_PATH_OVERRIDE", BtWrksrcPathPattern)
 	reg.pkg("CMAKE_PKGSRC_BUILD_FLAGS", BtYesNo)
 	reg.pkglist("CMAKE_PREFIX_PATH", BtPathPattern)
 	reg.pkg("CMAKE_USE_GNU_INSTALL_DIRS", BtYesNo)
@@ -1059,11 +1059,10 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkg("CONFIGURE_HAS_LIBDIR", BtYesNo)
 	reg.pkg("CONFIGURE_HAS_MANDIR", BtYesNo)
 	reg.pkg("CONFIGURE_SCRIPT", BtPathname)
-	reg.pkglist("CONFIG_GUESS_OVERRIDE", BtPathPattern)
-	reg.pkglist("CONFIG_STATUS_OVERRIDE", BtPathPattern)
+	reg.pkglist("CONFIG_GUESS_OVERRIDE", BtWrksrcPathPattern)
 	reg.pkg("CONFIG_SHELL", BtShellCommand)
 	reg.cmdline("CONFIG_SHELL_FLAGS", BtShellWord, List)
-	reg.pkglist("CONFIG_SUB_OVERRIDE", BtPathPattern)
+	reg.pkglist("CONFIG_SUB_OVERRIDE", BtWrksrcPathPattern)
 	reg.pkglist("CONFLICTS", BtDependencyPattern)
 	reg.pkgappend("CONF_FILES", BtConfFiles)
 	reg.pkg("CONF_FILES_MODE", enum("0644 0640 0600 0400"))
@@ -1151,7 +1150,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sys("EXTRACT_CMD", BtShellCommand)
 	reg.pkg("EXTRACT_DIR", BtPathname)
 	reg.pkg("EXTRACT_DIR.*", BtPathname)
-	reg.pkglist("EXTRACT_ELEMENTS", BtPathPattern)
+	reg.pkglist("EXTRACT_ELEMENTS", BtPathPattern) // TODO: No slashes allowed
 	reg.pkglist("EXTRACT_ENV", BtShellWord)
 	reg.pkglist("EXTRACT_ONLY", BtPathname)
 	reg.pkglist("EXTRACT_OPTS", BtShellWord)
@@ -1266,7 +1265,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkglist("LIBS", BtLdFlag)
 	reg.pkglist("LIBS.*", BtLdFlag)
 	reg.sys("LIBTOOL", BtShellCommand)
-	reg.pkglist("LIBTOOL_OVERRIDE", BtPathPattern)
+	reg.pkglist("LIBTOOL_OVERRIDE", BtWrksrcPathPattern)
 	reg.pkglistrat("LIBTOOL_REQD", BtVersion)
 	reg.pkgappend("LICENCE", BtLicense)
 	reg.pkgappend("LICENSE", BtLicense)
@@ -1277,7 +1276,6 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sysload("LOWER_OPSYS", BtIdentifierDirect, NonemptyIfDefined)
 	reg.sysload("LOWER_VENDOR", BtIdentifierDirect, NonemptyIfDefined)
 	reg.sysloadlist("LP64PLATFORMS", BtMachinePlatformPattern, DefinedIfInScope|NonemptyIfDefined)
-	reg.pkglist("LTCONFIG_OVERRIDE", BtPathPattern)
 
 	// See devel/bmake/files/main.c:/Var_Set."MACHINE_ARCH"/.
 	reg.sysload("MACHINE_ARCH", BtMachineArch, AlwaysInScope|DefinedIfInScope|NonemptyIfDefined)
@@ -1429,7 +1427,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		PackageSettable,
 		"builtin.mk: set, append",
 		"special:pkgconfig-builtin.mk: use-loadtime")
-	reg.pkglist("PKGCONFIG_OVERRIDE", BtPathPattern)
+	reg.pkglist("PKGCONFIG_OVERRIDE", BtWrksrcPathPattern)
 	reg.pkg("PKGCONFIG_OVERRIDE_STAGE", BtStage)
 	reg.pkg("PKGDIR", BtRelativePkgDir)
 	reg.sys("PKGDIRMODE", BtFileMode)
@@ -1596,17 +1594,17 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	// is a plain string.
 	reg.pkg("REPLACE.*", BtUnknown)
 
-	reg.pkglist("REPLACE_AWK", BtPathPattern)
-	reg.pkglist("REPLACE_BASH", BtPathPattern)
-	reg.pkglist("REPLACE_CSH", BtPathPattern)
-	reg.pkglist("REPLACE_FILES.*", BtPathPattern)
+	reg.pkglist("REPLACE_AWK", BtWrksrcPathPattern)
+	reg.pkglist("REPLACE_BASH", BtWrksrcPathPattern)
+	reg.pkglist("REPLACE_CSH", BtWrksrcPathPattern)
+	reg.pkglist("REPLACE_FILES.*", BtWrksrcPathPattern)
 	reg.pkglist("REPLACE_INTERPRETER", BtIdentifierIndirect)
-	reg.pkglist("REPLACE_KSH", BtPathPattern)
+	reg.pkglist("REPLACE_KSH", BtWrksrcPathPattern)
 	reg.pkglist("REPLACE_LOCALEDIR_PATTERNS", BtFilePattern)
-	reg.pkglist("REPLACE_LUA", BtPathPattern)
-	reg.pkglist("REPLACE_PERL", BtPathPattern)
-	reg.pkglist("REPLACE_PYTHON", BtPathPattern)
-	reg.pkglist("REPLACE_SH", BtPathPattern)
+	reg.pkglist("REPLACE_LUA", BtWrksrcPathPattern)
+	reg.pkglist("REPLACE_PERL", BtWrksrcPathPattern)
+	reg.pkglist("REPLACE_PYTHON", BtWrksrcPathPattern)
+	reg.pkglist("REPLACE_SH", BtWrksrcPathPattern)
 	reg.pkglist("REQD_DIRS", BtPathname)
 	reg.pkglist("REQD_DIRS_PERMS", BtPerms)
 	reg.pkglist("REQD_FILES", BtPathname)
@@ -1640,7 +1638,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sysload("SHAREOWN", BtUserGroupName, DefinedIfInScope|NonemptyIfDefined)
 	reg.sys("SHCOMMENT", BtShellCommand, DefinedIfInScope|NonemptyIfDefined)
 	reg.sys("SHLIBTOOL", BtShellCommand)
-	reg.pkglist("SHLIBTOOL_OVERRIDE", BtPathPattern)
+	reg.pkglist("SHLIBTOOL_OVERRIDE", BtWrksrcPathPattern)
 	reg.sysload("SHLIB_TYPE",
 		enum("COFF ECOFF ELF SOM XCOFF Mach-O PE PEwin a.out aixlib dylib none"),
 		DefinedIfInScope|NonemptyIfDefined)
@@ -1664,7 +1662,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 
 	reg.pkglistbl3("SUBST_CLASSES", BtIdentifierDirect)
 	reg.pkglistbl3("SUBST_CLASSES.*", BtIdentifierDirect) // OPSYS-specific
-	reg.pkglistbl3("SUBST_FILES.*", BtPathPattern)
+	reg.pkglistbl3("SUBST_FILES.*", BtWrksrcPathPattern)
 	reg.pkgbl3("SUBST_FILTER_CMD.*", BtShellCommand)
 	reg.pkgbl3("SUBST_MESSAGE.*", BtMessage)
 	reg.pkgappendbl3("SUBST_SED.*", BtSedCommands)
