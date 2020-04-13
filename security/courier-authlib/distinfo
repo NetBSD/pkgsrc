@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2015/11/04 01:17:42 agc Exp $
+$NetBSD: distinfo,v 1.17 2020/04/13 19:11:07 joerg Exp $
 
-SHA1 (courier-authlib-0.64.0.tar.bz2) = ea8a38b81135f23ab8084fc89751fb320fe6b7d1
-RMD160 (courier-authlib-0.64.0.tar.bz2) = a2933436eb4ae799c2ef760a12b94dec6c3747a9
-SHA512 (courier-authlib-0.64.0.tar.bz2) = 9a1cb195bfa00c02294f87e5e01254108d5b2bc9ae2e32abbb38d9dc0af108748eec4fa365efcc244ec194751b69ef7e26963a1b0315c386758502938421fd80
-Size (courier-authlib-0.64.0.tar.bz2) = 2267236 bytes
-SHA1 (patch-aa) = bd3f7cc7a809717be7b32e5eb5890f6a8175b439
-SHA1 (patch-ab) = 89ef33fa3dc4aba6aed2b3fed19ccdcf8b1b47fd
+SHA1 (courier-authlib-0.69.1.tar.bz2) = 4f2a26f05b3b4d2d794974804699a6a3c06542b2
+RMD160 (courier-authlib-0.69.1.tar.bz2) = a29a44f6540f46b853c8b2202f0594e8df87e471
+SHA512 (courier-authlib-0.69.1.tar.bz2) = b6eb14b53ac992fb81b4ef1dd98273b92f5ef61f88bad291de82f9dc0cdf33b7cb01b838472c53c40c292165b5b54d2c3d9aa97d26908b0a4d6344d596181abe
+Size (courier-authlib-0.69.1.tar.bz2) = 2204546 bytes
+SHA1 (patch-Makefile.in) = 01435a04cc4f32badd76ab3edffeb5466099d32d
+SHA1 (patch-configure) = d4139c665f2d2178cf5ca7f9a5928961ad74fbdd
