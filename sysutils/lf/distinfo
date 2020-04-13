@@ -1,6 +1,22 @@
-$NetBSD: distinfo,v 1.2 2018/03/14 08:46:23 bsiegert Exp $
+$NetBSD: distinfo,v 1.3 2020/04/13 14:52:45 bsiegert Exp $
 
-SHA1 (lf-20180302-c3f4aa5.tar.gz) = 12e67cb9101d2da54919341efe4f09d5c6e6b919
-RMD160 (lf-20180302-c3f4aa5.tar.gz) = 3f2762fa91d01df14e083a6a407977876d17ccc3
-SHA512 (lf-20180302-c3f4aa5.tar.gz) = fa3d89adc9b2666345fd0c4ac285db9f62bbe8ed4c7f7aedd7767ced64cc4038b6fc57f392d2a27029e805405ae0f0b21a05e2092a478b7a041c92f272e48fe5
-Size (lf-20180302-c3f4aa5.tar.gz) = 37753 bytes
+SHA1 (github.com_mattn_go-runewidth_@v_v0.0.4.mod) = 4ea1d8179b52949e0536e3744d69410414540dd7
+RMD160 (github.com_mattn_go-runewidth_@v_v0.0.4.mod) = 7b055d0690c748e3832a9ecb6db2a8d49f9aeb8c
+SHA512 (github.com_mattn_go-runewidth_@v_v0.0.4.mod) = b891712f639a850e41582c15bcb384a985fad4f8aa86ce2d3f4d2554354aa1a9619667f60837a8280f869fc07dd58dc676c222bac23aaa5b2b00c06284b2f475
+Size (github.com_mattn_go-runewidth_@v_v0.0.4.mod) = 37 bytes
+SHA1 (github.com_mattn_go-runewidth_@v_v0.0.4.zip) = 9a8a2430a3c128189b5b97a737a4d155cd2a36e2
+RMD160 (github.com_mattn_go-runewidth_@v_v0.0.4.zip) = b86ebf1499cb4f234839e3061dda815e9d1a011e
+SHA512 (github.com_mattn_go-runewidth_@v_v0.0.4.zip) = fb2bd143a0eb1be1faacc0069ec8c2d53b16b6969e6c4dd7ae4802f16606a80ff1c362712f0836b97f1453df468e7e12bb5dfabf9161436fbe9b87231f593068
+Size (github.com_mattn_go-runewidth_@v_v0.0.4.zip) = 22344 bytes
+SHA1 (github.com_nsf_termbox-go_@v_v0.0.0-20190325093121-288510b9734e.mod) = d48d2f3ba9f25e16d2896c365a2a546c13f0645b
+RMD160 (github.com_nsf_termbox-go_@v_v0.0.0-20190325093121-288510b9734e.mod) = 91a64464b5c3108f10e1f9a74996b464c40d6cfa
+SHA512 (github.com_nsf_termbox-go_@v_v0.0.0-20190325093121-288510b9734e.mod) = d96b326f421417a67e9db79350043b29f2b2c9b7ca00f696955303f0ba090c8fd82f018f312ebef4d443ef87732af99d807dcb6f6e16187d00ba0c0502d78876
+Size (github.com_nsf_termbox-go_@v_v0.0.0-20190325093121-288510b9734e.mod) = 33 bytes
+SHA1 (github.com_nsf_termbox-go_@v_v0.0.0-20190325093121-288510b9734e.zip) = d5c8e5954e888c17df553d43ab77cd3d002c9660
+RMD160 (github.com_nsf_termbox-go_@v_v0.0.0-20190325093121-288510b9734e.zip) = 67589548e73ca56daab2c52adc8ea214139bd3e2
+SHA512 (github.com_nsf_termbox-go_@v_v0.0.0-20190325093121-288510b9734e.zip) = 1fdba1fd9660dac4b61534346127703c3a7fc49bc8ea5f2a9348aed2a32182dbbfbb196105d247d0ddbae44116be1effed29546ce0bea41969f179badf68cdce
+Size (github.com_nsf_termbox-go_@v_v0.0.0-20190325093121-288510b9734e.zip) = 46179 bytes
+SHA1 (lf-13.tar.gz) = 0ac58823fbaef505c98f32d478a64100e5191cd1
+RMD160 (lf-13.tar.gz) = d542305b5a26090262304d5f330145b4926ba319
+SHA512 (lf-13.tar.gz) = 67c0fdbf7dc86a3856a0dce9fb8ed38f1a4c8a66a8ae051887b4aa6ddcbd086a748124cae804f4a051e20efcffb1cd847611b400c54143a79587ce4561a938c0
+Size (lf-13.tar.gz) = 67064 bytes
