@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:28:21 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/04/13 13:44:16 mef Exp $
 
-SHA1 (IO-Stty-0.03.tar.gz) = e7ca2246c381b6ff950dec90dbea39a8f1abbc2d
-RMD160 (IO-Stty-0.03.tar.gz) = ffacc6c7cdcb54ea1055e723800425993ad7addf
-SHA512 (IO-Stty-0.03.tar.gz) = 0670005929f604c8c2103d3f5e5e03e17413f8ff8a2e93911d5a064f64f268f59eb8855126c86a69649f8a350b70ecd812e60b01584c5d042bd64174d9710e4f
-Size (IO-Stty-0.03.tar.gz) = 10251 bytes
+SHA1 (IO-Stty-0.04.tar.gz) = 50265e3653da21e94b52ff6ecf9c7114608ae807
+RMD160 (IO-Stty-0.04.tar.gz) = 8ea993f9444fe523fe4d8f54c3ca1fccdde057ef
+SHA512 (IO-Stty-0.04.tar.gz) = 1a75adef5376612c87bb7c76eed96f6d67bd70eaae51dedf65e25a31b0d1d592a89dbf58fc669e956460a4d3889c3d5273c78bd1c7d926113b42e5f97064d38f
+Size (IO-Stty-0.04.tar.gz) = 9686 bytes
