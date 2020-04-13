@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2255 2020/04/12 21:25:36 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2256 2020/04/13 12:07:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3102,3 +3102,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/xerces-c to 3.2.3 [wiz 2020-04-12]
 	Updated math/qhull to 2019.1 [adam 2020-04-12]
 	Updated math/octave to 5.2.0 [adam 2020-04-12]
+	Updated www/webkit-gtk to 2.28.1 [leot 2020-04-13]
