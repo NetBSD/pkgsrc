@@ -3,6 +3,11 @@
 # PROVIDE: dhcpcd
 # REQUIRE: network mountcritlocal
 # BEFORE:  NETWORKING
+# KEYWORD: chrootdir
+
+# To get syslog support for chroots, add this to rc.conf:
+#dhcpcd_chrootdir=/var/chroot/dhcpcd
+# The directory should match the home directory of the dhcpcd user.
 
 $_rc_subr_loaded . /etc/rc.subr
 
