@@ -134,6 +134,12 @@ const (
 	//  X11_TYPE (user-settable)
 	NonemptyIfDefined
 
+	// Unique is true if it doesn't make sense to append the same
+	// value more than once to the variable.
+	//
+	// A typical example is CATEGORIES.
+	Unique
+
 	NoVartypeOptions = 0
 )
 
@@ -201,6 +207,7 @@ func (vt *Vartype) IsOnePerLine() bool          { return vt.options&OnePerLine !
 func (vt *Vartype) IsAlwaysInScope() bool       { return vt.options&AlwaysInScope != 0 }
 func (vt *Vartype) IsDefinedIfInScope() bool    { return vt.options&DefinedIfInScope != 0 }
 func (vt *Vartype) IsNonemptyIfDefined() bool   { return vt.options&NonemptyIfDefined != 0 }
+func (vt *Vartype) IsUnique() bool              { return vt.options&Unique != 0 }
 
 func (vt *Vartype) EffectivePermissions(basename string) ACLPermissions {
 	for _, aclEntry := range vt.aclEntries {
@@ -465,6 +472,7 @@ var (
 	BtWrapperReorder         = &BasicType{"WrapperReorder", (*VartypeCheck).WrapperReorder}
 	BtWrapperTransform       = &BasicType{"WrapperTransform", (*VartypeCheck).WrapperTransform}
 	BtWrkdirSubdirectory     = &BasicType{"WrkdirSubdirectory", (*VartypeCheck).WrkdirSubdirectory}
+	BtWrksrcPathPattern      = &BasicType{"WrksrcPathPattern", (*VartypeCheck).WrksrcPathPattern}
 	BtWrksrcSubdirectory     = &BasicType{"WrksrcSubdirectory", (*VartypeCheck).WrksrcSubdirectory}
 	BtYes                    = &BasicType{"Yes", (*VartypeCheck).Yes}
 	BtYesNo                  = &BasicType{"YesNo", (*VartypeCheck).YesNo}

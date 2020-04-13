@@ -436,43 +436,46 @@ func (cv *VartypeCheck) DependencyWithPath() {
 	}
 
 	parts := cv.MkLine.ValueSplit(value, ":")
-	if len(parts) == 2 {
-		pattern := parts[0]
-		packagePath := NewPackagePathString(parts[1])
-		relPath := packagePath.AsRelPath()
-		pathParts := relPath.Parts()
-		pkg := pathParts[len(pathParts)-1]
-
-		if len(pathParts) >= 2 && pathParts[0] == ".." && pathParts[1] != ".." {
-			cv.Warnf("Dependency paths should have the form \"../../category/package\".")
-			cv.MkLine.ExplainRelativeDirs()
-		}
-
-		if !containsVarUse(packagePath.String()) {
-			ck := MkLineChecker{cv.MkLines, cv.MkLine}
-			ck.CheckRelativePkgdir(relPath, packagePath)
-		}
-
-		switch pkg {
-		case "gettext":
-			cv.Warnf("Please use USE_TOOLS+=msgfmt instead of this dependency.")
-		case "perl5":
-			cv.Warnf("Please use USE_TOOLS+=perl:run instead of this dependency.")
-		case "gmake":
-			cv.Warnf("Please use USE_TOOLS+=gmake instead of this dependency.")
-		}
-
-		cv.WithValue(pattern).DependencyPattern()
-
+	if len(parts) != 2 {
+		cv.Warnf("Invalid dependency pattern with path %q.", value)
+		cv.Explain(
+			"Examples for valid dependency patterns with path are:",
+			"  package-[0-9]*:../../category/package",
+			"  package>=3.41:../../category/package",
+			"  package-2.718{,nb*}:../../category/package")
 		return
 	}
 
-	cv.Warnf("Invalid dependency pattern with path %q.", value)
-	cv.Explain(
-		"Examples for valid dependency patterns with path are:",
-		"  package-[0-9]*:../../category/package",
-		"  package>=3.41:../../category/package",
-		"  package-2.718{,nb*}:../../category/package")
+	pattern := parts[0]
+	dependencyDir := NewPath(parts[1])
+	if dependencyDir.IsAbs() {
+		cv.Errorf("Dependency paths like %q must be relative.", parts[1])
+		return
+	}
+
+	pathParts := dependencyDir.Parts()
+	if len(pathParts) >= 2 && pathParts[0] == ".." && pathParts[1] != ".." {
+		cv.Warnf("Dependency paths should have the form \"../../category/package\".")
+		cv.MkLine.ExplainRelativeDirs()
+	}
+
+	if !containsVarUse(parts[1]) {
+		ck := MkLineChecker{cv.MkLines, cv.MkLine}
+		rel := NewRelPath(dependencyDir)
+		ck.CheckRelativePkgdir(rel, NewPackagePath(rel))
+	}
+
+	pkg := pathParts[len(pathParts)-1]
+	switch pkg {
+	case "gettext":
+		cv.Warnf("Please use USE_TOOLS+=msgfmt instead of this dependency.")
+	case "perl5":
+		cv.Warnf("Please use USE_TOOLS+=perl:run instead of this dependency.")
+	case "gmake":
+		cv.Warnf("Please use USE_TOOLS+=gmake instead of this dependency.")
+	}
+
+	cv.WithValue(pattern).DependencyPattern()
 }
 
 func (cv *VartypeCheck) DistSuffix() {
@@ -1520,6 +1523,21 @@ func (cv *VartypeCheck) WrapperTransform() {
 
 func (cv *VartypeCheck) WrkdirSubdirectory() {
 	cv.Pathname()
+}
+
+// WrksrcPathPattern is a shell pattern for existing pathnames, possibly including slashes.
+func (cv *VartypeCheck) WrksrcPathPattern() {
+	cv.PathPattern()
+
+	if hasPrefix(cv.Value, "${WRKSRC}/") {
+		fix := cv.Autofix()
+		fix.Notef("The pathname patterns in %s don't need to mention ${WRKSRC}.", cv.Varname)
+		fix.Explain(
+			"These pathname patters are interpreted relative to ${WRKSRC} by definition.",
+			"Therefore that part can be left out.")
+		fix.Replace("${WRKSRC}/", "")
+		fix.Apply()
+	}
 }
 
 // WrksrcSubdirectory checks a directory relative to ${WRKSRC},
