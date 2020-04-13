@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2259 2020/04/13 16:24:26 roy Exp $
+$NetBSD: CHANGES-2020,v 1.2260 2020/04/13 17:12:27 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3111,3 +3111,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Inline to 0.86 [mef 2020-04-13]
 	Updated sysutils/lf to 13 [bsiegert 2020-04-13]
 	Updated net/dhcpcd to 9.0.1 [roy 2020-04-13]
+	Added devel/gopls version 0.4.0 [bsiegert 2020-04-13]
