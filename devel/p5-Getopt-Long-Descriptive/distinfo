@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2019/08/14 01:48:06 wen Exp $
+$NetBSD: distinfo,v 1.22 2020/04/13 13:26:41 mef Exp $
 
-SHA1 (Getopt-Long-Descriptive-0.104.tar.gz) = c1a3842f97d81dbac975c5d5cba3aa72a86fd79b
-RMD160 (Getopt-Long-Descriptive-0.104.tar.gz) = a7064949bdd75f7d6a3d096ece659a8227a16733
-SHA512 (Getopt-Long-Descriptive-0.104.tar.gz) = 5579faa6f9012cd03ac4d51149b0854771f15d8e324f8df345fe6af1a8f3fdeaaef6c5becee55bf77515da85d92aa61a63dfc5ee8264d2d0368e02a4a4cbd7fa
-Size (Getopt-Long-Descriptive-0.104.tar.gz) = 32643 bytes
+SHA1 (Getopt-Long-Descriptive-0.105.tar.gz) = 53f92fa4ee19579b6eb2591f91b60f1df40f7d52
+RMD160 (Getopt-Long-Descriptive-0.105.tar.gz) = 30e56ef4d954364ffe9ac0bd7f03c31aa54f9783
+SHA512 (Getopt-Long-Descriptive-0.105.tar.gz) = e7528ac509bc7fb49ee59a8ed8dec0c9a619a8f34c207e7a9185829666248797211a56576721b7fc8cdd44ae55d2d45f048958b79a6228ee76d91c3a52685236
+Size (Getopt-Long-Descriptive-0.105.tar.gz) = 33074 bytes
