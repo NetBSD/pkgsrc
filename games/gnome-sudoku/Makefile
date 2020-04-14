@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/03/11 09:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2020/04/14 19:52:19 prlw1 Exp $
 
 DISTNAME=	gnome-sudoku-3.24.0
 PKGREVISION=	14
@@ -15,7 +15,8 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++11
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
+USE_BUILTIN.gettext=	no
 
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
@@ -26,7 +27,6 @@ BUILDLINK_API_DEPENDS.qqwing+=	qqwing>=1.3.4
 .include "../../games/qqwing/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala:= build
-BUILDLINK_API_DEPENDS.vala+=	vala>=0.27.1.30
 .include "../../lang/vala/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
