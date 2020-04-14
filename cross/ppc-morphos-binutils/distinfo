@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 20:53:21 js Exp $
+
+SHA1 (sdk-source-20191111.tar.xz) = 73188877bc83ddf7382f2dcef70c5bc9c631aec6
+RMD160 (sdk-source-20191111.tar.xz) = b8c01cc4e6caa897672f44426bc3e575abaeddc8
+SHA512 (sdk-source-20191111.tar.xz) = d201e1a6425d847ec5567939225db402524436398d7961180d2295e69ef8003edaf311df49e89ef0fbefe3a0f6f74935a6d132e58b496e3be1f6136a91aa6634
+Size (sdk-source-20191111.tar.xz) = 503342768 bytes
