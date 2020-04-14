@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1317 2020/04/08 12:27:37 jaapb Exp $
+# $NetBSD: Makefile,v 1.1318 2020/04/14 19:43:17 js Exp $
 #
 
 COMMENT=	Networking tools
@@ -650,6 +650,7 @@ SUBDIR+=	py-Socks
 SUBDIR+=	py-adns
 SUBDIR+=	py-aio-pika
 SUBDIR+=	py-aiormq
+SUBDIR+=	py-aiorpcX
 SUBDIR+=	py-amqp
 SUBDIR+=	py-apache-libcloud
 SUBDIR+=	py-asyncio-nats-client
