@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2268 2020/04/14 10:35:36 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2269 2020/04/14 10:42:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3119,3 +3119,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/ocaml-ke version 0.4 [jaapb 2020-04-14]
 	Updated devel/ocaml-encore to 0.4 [jaapb 2020-04-14]
 	Updated finance/gnucash to 3.10 [wiz 2020-04-14]
+	Updated finance/gnucash-docs to 3.10 [wiz 2020-04-14]
