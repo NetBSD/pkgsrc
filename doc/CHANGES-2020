@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2293 2020/04/14 21:56:10 js Exp $
+$NetBSD: CHANGES-2020,v 1.2294 2020/04/14 22:02:34 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3146,3 +3146,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added cross/ppc-morphos-binutils version 2.33.1 [js 2020-04-14]
 	Updated fonts/lanna-io to 20200318 [scole 2020-04-14]
 	Added cross/ppc-morphos-sdk version 20191111nb2 [js 2020-04-14]
+	Added cross/ppc-morphos-gcc-9 version 9.2.0nb1 [js 2020-04-14]
