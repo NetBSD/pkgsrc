@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 22:02:21 js Exp $
+
+SHA1 (sdk-source-20191111.tar.xz) = 73188877bc83ddf7382f2dcef70c5bc9c631aec6
+RMD160 (sdk-source-20191111.tar.xz) = b8c01cc4e6caa897672f44426bc3e575abaeddc8
+SHA512 (sdk-source-20191111.tar.xz) = d201e1a6425d847ec5567939225db402524436398d7961180d2295e69ef8003edaf311df49e89ef0fbefe3a0f6f74935a6d132e58b496e3be1f6136a91aa6634
+Size (sdk-source-20191111.tar.xz) = 503342768 bytes
+SHA1 (patch-gcc_config_rs6000_morphos.c) = 68f558ecd56c7ccf1a019471deac004b0e48b0ac
+SHA1 (patch-gcc_config_rs6000_rs6000.c) = 465e17d7843cd10f5128d3842ffa33bb1b3bbea7
+SHA1 (patch-libgcc_crtstuff.c) = 0f97d44f7a740c51de2662c9919631248c39ed34
+SHA1 (patch-libstdc++-v3_libsupc++_unwind-cxx.h) = 0234e780171554bf60858b884ab1181cad36f8b2
