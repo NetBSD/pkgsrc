@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 22:33:14 js Exp $
+
+SHA1 (alac_decoder-0.2.0.tgz) = a620f6293ef2d9490927d21ec341bbeff13eabe8
+RMD160 (alac_decoder-0.2.0.tgz) = 72664dff4eeff6e484314f625f74337e60ba39fb
+SHA512 (alac_decoder-0.2.0.tgz) = 4b37d4fe37681bfccaa4a27fbaf11eb2a1fba5f14e77d219a6d9814ff44d1168534d05eb19443dd2fd11e6fcdf4da3a22e3f3c79314cb7a6767c152351b13e29
+Size (alac_decoder-0.2.0.tgz) = 19019 bytes
