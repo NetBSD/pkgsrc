@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 14:07:50 ryoon Exp $
+
+SHA1 (snowball-2.0.0.tar.gz) = b152bbebca34505d963f3cfb6b726859d5b83b66
+RMD160 (snowball-2.0.0.tar.gz) = f5dc4e6caeb65120eeb36d9f45dd758a8024c881
+SHA512 (snowball-2.0.0.tar.gz) = 7da7c653d41bf03f3fb2f0b4a8963572fc97319fe44e82c1fc7882ba440e60e5947ed7fb722f7e78592d5ea862e3d733880f9f656236e40c1d5306e70a80a1b1
+Size (snowball-2.0.0.tar.gz) = 179986 bytes
+SHA1 (patch-GNUmakefile) = dc58eaec3de72fb93cf2393631b1bdc7d31be7cf
+SHA1 (patch-libstemmer_symbol.map) = 0122f03d0ac54dae908ffd873f1ae4a6e502a56f
