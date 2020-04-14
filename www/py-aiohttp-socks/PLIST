@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/14 19:52:15 js Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/aiohttp_socks/__init__.py
+${PYSITELIB}/aiohttp_socks/__init__.pyc
+${PYSITELIB}/aiohttp_socks/__init__.pyo
+${PYSITELIB}/aiohttp_socks/connector.py
+${PYSITELIB}/aiohttp_socks/connector.pyc
+${PYSITELIB}/aiohttp_socks/connector.pyo
+${PYSITELIB}/aiohttp_socks/errors.py
+${PYSITELIB}/aiohttp_socks/errors.pyc
+${PYSITELIB}/aiohttp_socks/errors.pyo
+${PYSITELIB}/aiohttp_socks/helpers.py
+${PYSITELIB}/aiohttp_socks/helpers.pyc
+${PYSITELIB}/aiohttp_socks/helpers.pyo
+${PYSITELIB}/aiohttp_socks/proto.py
+${PYSITELIB}/aiohttp_socks/proto.pyc
+${PYSITELIB}/aiohttp_socks/proto.pyo
