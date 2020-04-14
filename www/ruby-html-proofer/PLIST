@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/14 16:10:51 ryoon Exp $
+bin/htmlproofer
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/bin/htmlproofer
+${GEM_LIBDIR}/lib/html-proofer.rb
+${GEM_LIBDIR}/lib/html-proofer/cache.rb
+${GEM_LIBDIR}/lib/html-proofer/check.rb
+${GEM_LIBDIR}/lib/html-proofer/check/favicon.rb
+${GEM_LIBDIR}/lib/html-proofer/check/html.rb
+${GEM_LIBDIR}/lib/html-proofer/check/images.rb
+${GEM_LIBDIR}/lib/html-proofer/check/links.rb
+${GEM_LIBDIR}/lib/html-proofer/check/opengraph.rb
+${GEM_LIBDIR}/lib/html-proofer/check/scripts.rb
+${GEM_LIBDIR}/lib/html-proofer/configuration.rb
+${GEM_LIBDIR}/lib/html-proofer/element.rb
+${GEM_LIBDIR}/lib/html-proofer/issue.rb
+${GEM_LIBDIR}/lib/html-proofer/log.rb
+${GEM_LIBDIR}/lib/html-proofer/middleware.rb
+${GEM_LIBDIR}/lib/html-proofer/runner.rb
+${GEM_LIBDIR}/lib/html-proofer/url_validator.rb
+${GEM_LIBDIR}/lib/html-proofer/utils.rb
+${GEM_LIBDIR}/lib/html-proofer/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
