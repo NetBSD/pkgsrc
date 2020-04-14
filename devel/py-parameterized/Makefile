@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/11/25 06:41:42 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/14 12:13:59 adam Exp $
 
-DISTNAME=	parameterized-0.7.1
+DISTNAME=	parameterized-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/parameterized/}

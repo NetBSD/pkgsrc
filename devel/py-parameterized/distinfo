@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/11/29 09:46:36 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/04/14 12:13:59 adam Exp $
 
-SHA1 (parameterized-0.7.1.tar.gz) = 119080df2ff22944bb406d383dfe789059c94927
-RMD160 (parameterized-0.7.1.tar.gz) = 1370aa149be72a5da89d7fef102ffb0eae44e319
-SHA512 (parameterized-0.7.1.tar.gz) = 331752b6bf27f88921d39567a58900c0e78f1740056d93755fc7e4528a032207f81e4938302c27cdfd82fe2ad455c01100d91da5f222a11e4bcf0210de68d9c2
-Size (parameterized-0.7.1.tar.gz) = 22365 bytes
-SHA1 (patch-README.rst) = d7994f6e59238947cb972acea2dd38298ae3b9a8
+SHA1 (parameterized-0.7.3.tar.gz) = dafb6ae9894b7696b1853efa721dd28c9e636d2e
+RMD160 (parameterized-0.7.3.tar.gz) = 48fb23b449734e1f73b34936366dadc380547105
+SHA512 (parameterized-0.7.3.tar.gz) = ff4ce23356bbaa13bd92f41bb57b650cd1cf3074ac33116ccb88e37bfae8a1bf6ce7015246e0e7788b247fa8f8b3780cdc73e8760b252e8458e4e15719c14dda
+Size (parameterized-0.7.3.tar.gz) = 22678 bytes
