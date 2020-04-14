@@ -1,0 +1,13 @@
+$NetBSD: patch-libstemmer_symbol.map,v 1.1 2020/04/14 14:07:50 ryoon Exp $
+
+* Build dynamic library, from archlinux.
+
+--- libstemmer/symbol.map.orig	2020-04-05 13:44:49.355871263 +0000
++++ libstemmer/symbol.map
+@@ -0,0 +1,6 @@
++SB_STEMMER_0 {
++    global:
++        sb_stemmer_*;
++    local:
++        *;
++};
