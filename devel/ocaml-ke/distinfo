@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 08:18:30 jaapb Exp $
+
+SHA1 (ke-0.4.tar.gz) = a986d8d4e0ee698f55e785d6493b695241affbec
+RMD160 (ke-0.4.tar.gz) = 753bff712bd002c2303b8596f425b0a41ce58b51
+SHA512 (ke-0.4.tar.gz) = baf56fe15b6647df6a8e11c32ad9d6e20fb8044ea4a3af930c1cc9e0d00d3f77a2a47f9680e7ca0b820e3f1ca719d067d5eb8349e014b0b6ce9aac2fd1a92467
+Size (ke-0.4.tar.gz) = 19052 bytes
