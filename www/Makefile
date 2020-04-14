@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1450 2020/04/14 15:53:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.1451 2020/04/14 15:59:57 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -931,6 +931,7 @@ SUBDIR+=	ruby-sinatra
 SUBDIR+=	ruby-sinatra-contrib
 SUBDIR+=	ruby-staticmatic
 SUBDIR+=	ruby-tag
+SUBDIR+=	ruby-typhoeus
 SUBDIR+=	ruby-unicorn
 SUBDIR+=	ruby-url_mount
 SUBDIR+=	ruby-webkit-gtk
