@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2019/04/17 07:05:20 wiz Exp $
+# $NetBSD: Makefile,v 1.199 2020/04/14 12:35:05 wiz Exp $
 
 DISTNAME=	libpng-1.6.37
 PKGNAME=	${DISTNAME:S/lib//}
@@ -8,7 +8,7 @@ MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=libpng/}
 MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/graphics/png/src/libpng16/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libpng.org/pub/png/libpng.html
 COMMENT=	Library for manipulating PNG images
 LICENSE=	zlib
