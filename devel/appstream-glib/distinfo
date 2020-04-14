@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 14:18:32 ryoon Exp $
+
+SHA1 (appstream-glib-appstream_glib_0_7_17.tar.gz) = d4fa25c47812377d031e1a66521f0fb83b784273
+RMD160 (appstream-glib-appstream_glib_0_7_17.tar.gz) = a3179f64ae3799f4d1846a22933f80dfc486466f
+SHA512 (appstream-glib-appstream_glib_0_7_17.tar.gz) = dd578157806199434479c04aea4ae18f63fc2438a9c1ec109d60c9b96b4906c7330b46a56b3105568a25f884b44329427d1f48e4127837df22d35b2302834340
+Size (appstream-glib-appstream_glib_0_7_17.tar.gz) = 2404663 bytes
