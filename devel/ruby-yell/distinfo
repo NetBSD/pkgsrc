@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 15:03:11 ryoon Exp $
+
+SHA1 (yell-2.2.2.gem) = 513687b95bfb638261bd6bf16f8e1efd52547f0e
+RMD160 (yell-2.2.2.gem) = 79a8a65b2fb80139ae0fe81f0104a6f8dd21a461
+SHA512 (yell-2.2.2.gem) = 32d8e02974e5357cf5955b3c624927f796b2edeb489379e677bf049f1509b9946aa18501f35d7880e9b96c3a280bc0e7fbc955efefbf4c320aa778c40b59c871
+Size (yell-2.2.2.gem) = 24576 bytes
