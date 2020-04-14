@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2292 2020/04/14 21:40:14 scole Exp $
+$NetBSD: CHANGES-2020,v 1.2293 2020/04/14 21:56:10 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3145,3 +3145,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added finance/electrum version 3.3.8 [js 2020-04-14]
 	Added cross/ppc-morphos-binutils version 2.33.1 [js 2020-04-14]
 	Updated fonts/lanna-io to 20200318 [scole 2020-04-14]
+	Added cross/ppc-morphos-sdk version 20191111nb2 [js 2020-04-14]
