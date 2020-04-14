@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2273 2020/04/14 13:27:19 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2274 2020/04/14 14:08:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3126,3 +3126,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-zmq to 19.0.0 [adam 2020-04-14]
 	Updated devel/py-ipykernel to 5.2.0 [adam 2020-04-14]
 	Updated audio/fasttracker2 to 1.20 [fox 2020-04-14]
+	Added textproc/libstemmer version 2.0.0 [ryoon 2020-04-14]
