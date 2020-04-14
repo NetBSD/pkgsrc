@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/11/25 10:07:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/04/14 19:30:46 wiz Exp $
 include/GL/glxint.h
 include/GL/glxmd.h
 include/GL/glxproto.h
@@ -200,6 +200,7 @@ share/pkgconfig/bigreqsproto.pc
 share/pkgconfig/compositeproto.pc
 share/pkgconfig/damageproto.pc
 share/pkgconfig/dmxproto.pc
+share/pkgconfig/dpmsproto.pc
 share/pkgconfig/dri2proto.pc
 share/pkgconfig/dri3proto.pc
 share/pkgconfig/fixesproto.pc
