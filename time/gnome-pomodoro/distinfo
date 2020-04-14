@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 14:25:19 ryoon Exp $
+
+SHA1 (gnome-pomodoro-0.17.0.tar.gz) = 25b63c6f89554a9ea33c4aaf5f6c1135e38157bc
+RMD160 (gnome-pomodoro-0.17.0.tar.gz) = 3aa2800fe270e080ffbbb5d2205626e30622ea50
+SHA512 (gnome-pomodoro-0.17.0.tar.gz) = b84fca4eef846135b847dafd3c4a491c6e879be353f9fd9cc03aee2dfb7a5a609a6dbc95d2c0ae64e08ffa2ce610eb062f7c719895314c6c02d1e84418edc0c5
+Size (gnome-pomodoro-0.17.0.tar.gz) = 6220914 bytes
