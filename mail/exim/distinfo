@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.74 2019/12/09 18:46:00 adam Exp $
+$NetBSD: distinfo,v 1.75 2020/04/14 19:34:39 wiz Exp $
 
-SHA1 (exim-4.93.tar.xz) = 1fd4eeefacbb51648f578b91f49561b29e5679cc
-RMD160 (exim-4.93.tar.xz) = aeee8a593c1866f4816946772a3ecba7b4e43496
-SHA512 (exim-4.93.tar.xz) = 556c7fe75042739c3e92346b96c40960680fe2838589add5fad1f69f18600dd9ed128f367627c812051b3a3a1a64e740488d5ce8c198bf87b59fa84ab8a0eb5b
-Size (exim-4.93.tar.xz) = 1803660 bytes
+SHA1 (exim-4.93.0.4.tar.xz) = 890bdf2fe00bb6916c47ed9e77a84cf85b385a4c
+RMD160 (exim-4.93.0.4.tar.xz) = c2ae47ef89f062bd94c1444baa9af4164bb37c37
+SHA512 (exim-4.93.0.4.tar.xz) = 84951849b69399d6f187d2801760dc0cb9e61c88c7c88aaca4e07e48120199a6be94b2236d058ffeacb8d611dd84056b610d480353c301a3ad5799768dd39d96
+Size (exim-4.93.0.4.tar.xz) = 1804696 bytes
 SHA1 (patch-Local_Makefile.pkgsrc) = 7d6971cfe6f6fecf854926e90460b1a8bcd6a79d
 SHA1 (patch-OS_Makefile-Default) = 6af17f036ed02a3bc37c1f303269eea447fcb691
 SHA1 (patch-lookups_Makefile) = cfc40dba3f75ef37b9887f7767139ad50cf9d4e5
