@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3093 2020/04/14 08:54:38 jaapb Exp $
+# $NetBSD: Makefile,v 1.3094 2020/04/14 14:20:01 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -108,6 +108,7 @@ SUBDIR+=	apache-maven
 SUBDIR+=	apel
 SUBDIR+=	apenwarr-redo
 SUBDIR+=	appdata-tools
+SUBDIR+=	appstream-glib
 SUBDIR+=	apr
 SUBDIR+=	apr-util
 SUBDIR+=	arcanist
