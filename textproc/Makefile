@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1132 2020/04/14 14:09:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.1133 2020/04/14 16:06:18 ryoon Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1018,6 +1018,7 @@ SUBDIR+=	ruby-mecab
 SUBDIR+=	ruby-multi_json
 SUBDIR+=	ruby-native-hyperestraier
 SUBDIR+=	ruby-nokogiri
+SUBDIR+=	ruby-nokogumbo
 SUBDIR+=	ruby-nori
 SUBDIR+=	ruby-nqxml
 SUBDIR+=	ruby-oniguruma
