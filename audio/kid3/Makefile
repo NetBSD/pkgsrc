@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.104 2020/04/12 08:28:18 adam Exp $
+# $NetBSD: Makefile,v 1.105 2020/04/14 12:33:49 wiz Exp $
 
 DISTNAME=	kid3-3.5.1
 PKGREVISION=	17
 CATEGORIES=	kde audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kid3/}
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kid3.sourceforge.io/
 COMMENT=	ID3 tagger for QT
 LICENSE=	gnu-gpl-v2
