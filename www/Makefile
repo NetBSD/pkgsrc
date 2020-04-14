@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1452 2020/04/14 16:12:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.1453 2020/04/14 19:54:51 js Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -625,6 +625,7 @@ SUBDIR+=	py-WebOb
 SUBDIR+=	py-WebTest
 SUBDIR+=	py-aiohttp
 SUBDIR+=	py-aiohttp-cors
+SUBDIR+=	py-aiohttp-socks
 SUBDIR+=	py-asgiref
 SUBDIR+=	py-autobahn
 SUBDIR+=	py-beautifulsoup
