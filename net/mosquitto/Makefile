@@ -18,6 +18,7 @@ USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 
+LDFLAGS.SunOS+=	-lsocket -lnsl
 CMAKE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
 
 MOSQUITTO_USER=		mosquitto
