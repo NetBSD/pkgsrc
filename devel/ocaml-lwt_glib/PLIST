@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2018/03/11 03:56:13 dholland Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/14 10:44:37 jaapb Exp $
 ${OCAML_SITELIB}/lwt_glib/META
+${OCAML_SITELIB}/lwt_glib/dune-package
 ${OCAML_SITELIB}/lwt_glib/liblwt_glib_stubs.a
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_glib/lwt_glib.a
 ${OCAML_SITELIB}/lwt_glib/lwt_glib.cma
@@ -9,6 +10,7 @@ ${OCAML_SITELIB}/lwt_glib/lwt_glib.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_glib/lwt_glib.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_glib/lwt_glib.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt_glib/lwt_glib.cmxs
+${OCAML_SITELIB}/lwt_glib/lwt_glib.ml
 ${OCAML_SITELIB}/lwt_glib/lwt_glib.mli
 ${OCAML_SITELIB}/lwt_glib/opam
 ${OCAML_SITELIB}/stublibs/dlllwt_glib_stubs.so
