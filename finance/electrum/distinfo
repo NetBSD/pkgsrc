@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 20:05:49 js Exp $
+
+SHA1 (Electrum-3.3.8.tar.gz) = 5a46dc474b1d67ebef1883eb0450fe90aebbe566
+RMD160 (Electrum-3.3.8.tar.gz) = ef9f1d379665ce0af0c3994d51b87950be08ab90
+SHA512 (Electrum-3.3.8.tar.gz) = 5f756da4d2df59c69997925c69f651011def07bfbdbc582f492ecc19386eee7d79b9951732a792e6041da902d776052d6590cbd2d7004bc93c8406bcf9093fe6
+Size (Electrum-3.3.8.tar.gz) = 8911228 bytes
