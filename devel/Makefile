@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3094 2020/04/14 14:20:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.3095 2020/04/14 15:05:05 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2837,6 +2837,7 @@ SUBDIR+=	ruby-uuidtools
 SUBDIR+=	ruby-validatable
 SUBDIR+=	ruby-wisper
 SUBDIR+=	ruby-wmi-lite
+SUBDIR+=	ruby-yell
 SUBDIR+=	ruby-zeitwerk
 SUBDIR+=	ruby-zookeeper
 SUBDIR+=	ruby2ruby
