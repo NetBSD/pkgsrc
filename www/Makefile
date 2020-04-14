@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1449 2020/03/30 13:54:29 adam Exp $
+# $NetBSD: Makefile,v 1.1450 2020/04/14 15:53:21 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -857,6 +857,7 @@ SUBDIR+=	ruby-div
 SUBDIR+=	ruby-em-http-request
 SUBDIR+=	ruby-em-websocket
 SUBDIR+=	ruby-erubis
+SUBDIR+=	ruby-ethon
 SUBDIR+=	ruby-faraday
 SUBDIR+=	ruby-faraday_middleware
 SUBDIR+=	ruby-faye-websocket
