@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2017/10/29 12:13:13 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/14 22:14:09 js Exp $
 
 DISTNAME=	objfw-0.90.2
 CATEGORIES=	devel
-MASTER_SITES=	https://heap.zone/objfw/downloads/
+MASTER_SITES=	https://objfw.nil.im/downloads/
 
-MAINTAINER=	js@heap.zone
-HOMEPAGE=	https://heap.zone/objfw/
+MAINTAINER=	js@pkgsrc.org
+HOMEPAGE=	https://objfw.nil.im/
 COMMENT=	Portable, lightweight framework for the Objective-C language
 LICENSE=	qpl-v1.0 OR gnu-gpl-v2 OR gnu-gpl-v3
 
