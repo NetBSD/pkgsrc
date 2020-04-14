@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1451 2020/04/14 15:59:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.1452 2020/04/14 16:12:02 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -862,6 +862,7 @@ SUBDIR+=	ruby-faraday
 SUBDIR+=	ruby-faraday_middleware
 SUBDIR+=	ruby-faye-websocket
 SUBDIR+=	ruby-fcgi
+SUBDIR+=	ruby-html-proofer
 SUBDIR+=	ruby-htmlsplit
 SUBDIR+=	ruby-http
 SUBDIR+=	ruby-http-accept
