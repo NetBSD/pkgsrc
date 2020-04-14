@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2288 2020/04/14 19:57:31 prlw1 Exp $
+$NetBSD: CHANGES-2020,v 1.2289 2020/04/14 20:03:41 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3141,3 +3141,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/exim to 4.93.0.4 [wiz 2020-04-14]
 	Added net/py-aiorpcX version 0.18.2 [js 2020-04-14]
 	Updated security/ecap_clamav_adapter to 2.0.0nb2 [prlw1 2020-04-14]
+	Added www/py-aiohttp-socks version 0.2.2 [js 2020-04-14]
