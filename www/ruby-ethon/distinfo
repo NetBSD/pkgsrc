@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 15:52:00 ryoon Exp $
+
+SHA1 (ethon-0.12.0.gem) = 921ef1be44583a7644ee7f20fe5f26f21d018a04
+RMD160 (ethon-0.12.0.gem) = 63e254cbcdd7706a12c52b27c28e2d4f6cd6f159
+SHA512 (ethon-0.12.0.gem) = 5fea666efdd5e2d568d0e074f205525656e202ecea3bb5ff8a8ab838a596cab349b869baffb7926227d6cfdae5b9c1cb86bb201b4c9585056c6671ab4feee596
+Size (ethon-0.12.0.gem) = 56832 bytes
