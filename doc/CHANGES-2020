@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2270 2020/04/14 10:45:06 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2271 2020/04/14 12:14:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3121,3 +3121,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/gnucash to 3.10 [wiz 2020-04-14]
 	Updated finance/gnucash-docs to 3.10 [wiz 2020-04-14]
 	Updated devel/ocaml-lwt_glib to 1.1.1 [jaapb 2020-04-14]
+	Updated textproc/py-jinja2 to 2.11.2 [adam 2020-04-14]
+	Updated devel/py-parameterized to 0.7.3 [adam 2020-04-14]
