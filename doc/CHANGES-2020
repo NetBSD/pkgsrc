@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2275 2020/04/14 14:13:44 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2276 2020/04/14 14:19:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3128,3 +3128,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fasttracker2 to 1.20 [fox 2020-04-14]
 	Added textproc/libstemmer version 2.0.0 [ryoon 2020-04-14]
 	Added databases/gom version 0.4 [ryoon 2020-04-14]
+	Added devel/appstream-glib version 0.7.17 [ryoon 2020-04-14]
