@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/14 22:33:14 js Exp $
+bin/alac
