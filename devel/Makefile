@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3092 2020/04/13 15:22:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3093 2020/04/14 08:54:38 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -949,6 +949,7 @@ SUBDIR+=	ocaml-jane-street-headers
 SUBDIR+=	ocaml-jbuilder
 SUBDIR+=	ocaml-js-build-tools
 SUBDIR+=	ocaml-jst-config
+SUBDIR+=	ocaml-ke
 SUBDIR+=	ocaml-logs
 SUBDIR+=	ocaml-lru
 SUBDIR+=	ocaml-lwt
