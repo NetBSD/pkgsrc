@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2282 2020/04/14 16:11:22 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2283 2020/04/14 18:28:07 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3135,3 +3135,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/ruby-typhoeus version 1.3.1 [ryoon 2020-04-14]
 	Added textproc/ruby-nokogumbo version 2.0.2 [ryoon 2020-04-14]
 	Added www/ruby-html-proofer version 3.15.2 [ryoon 2020-04-14]
+	Updated devel/git to 2.26.1 [leot 2020-04-14]
