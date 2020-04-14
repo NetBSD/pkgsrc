@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 15:58:29 ryoon Exp $
+
+SHA1 (typhoeus-1.3.1.gem) = 57fe283b58130581a6edfaa2bfde3a9ecaa5e5ac
+RMD160 (typhoeus-1.3.1.gem) = b0f3eccc93865761c3f20d89555ceee43d5a4fc8
+SHA512 (typhoeus-1.3.1.gem) = f826cdb7e48577226b12fc2715123e13519148f67d036470e385f80f8f3112d1ad24bf580c2ed0d213242c9afc1bdf868084266d430858b2cf6de73e50a11422
+Size (typhoeus-1.3.1.gem) = 55808 bytes
