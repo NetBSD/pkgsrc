@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2289 2020/04/14 20:03:41 js Exp $
+$NetBSD: CHANGES-2020,v 1.2290 2020/04/14 20:31:51 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3142,3 +3142,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/py-aiorpcX version 0.18.2 [js 2020-04-14]
 	Updated security/ecap_clamav_adapter to 2.0.0nb2 [prlw1 2020-04-14]
 	Added www/py-aiohttp-socks version 0.2.2 [js 2020-04-14]
+	Added finance/electrum version 3.3.8 [js 2020-04-14]
