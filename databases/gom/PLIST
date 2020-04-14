@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/14 14:13:10 ryoon Exp $
+include/gom-1.0/gom/gom-adapter.h
+include/gom-1.0/gom/gom-autocleanups.h
+include/gom-1.0/gom/gom-command-builder.h
+include/gom-1.0/gom/gom-command.h
+include/gom-1.0/gom/gom-cursor.h
+include/gom-1.0/gom/gom-error.h
+include/gom-1.0/gom/gom-filter.h
+include/gom-1.0/gom/gom-repository.h
+include/gom-1.0/gom/gom-resource-group.h
+include/gom-1.0/gom/gom-resource.h
+include/gom-1.0/gom/gom-sorting.h
+include/gom-1.0/gom/gom.h
+lib/girepository-1.0/Gom-1.0.typelib
+lib/libgom-1.0.so
+lib/libgom-1.0.so.0
+lib/libgom-1.0.so.0.1.0
+lib/pkgconfig/gom-1.0.pc
+${PYSITELIB}/gi/overrides/Gom.py
+share/gir-1.0/Gom-1.0.gir
