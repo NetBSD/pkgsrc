@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2283 2020/04/14 18:28:07 leot Exp $
+$NetBSD: CHANGES-2020,v 1.2284 2020/04/14 19:27:36 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3136,3 +3136,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/ruby-nokogumbo version 2.0.2 [ryoon 2020-04-14]
 	Added www/ruby-html-proofer version 3.15.2 [ryoon 2020-04-14]
 	Updated devel/git to 2.26.1 [leot 2020-04-14]
+	Added textproc/py-jsonrpclib-pelix version 0.4.0 [js 2020-04-14]
