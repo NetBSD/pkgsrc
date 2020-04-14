@@ -1,0 +1,7 @@
+Last.fm standalone scrobbler for the cmus music player.
+
+Features:
+ * Listening now notification support
+ * Off-line played track cache for later submission
+ * POSIX ERE-based file name parser
+ * Small memory footprint
