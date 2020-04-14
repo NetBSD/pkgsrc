@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.2 2016/06/23 15:17:28 prlw1 Exp $
+$NetBSD: distinfo,v 1.3 2020/04/14 19:57:02 prlw1 Exp $
 
 SHA1 (ecap_clamav_adapter-2.0.0.tar.gz) = 2aaf6c970db3622d1380d353c4c38b21b6aab769
 RMD160 (ecap_clamav_adapter-2.0.0.tar.gz) = 1869b60b4de16ef0202fd86c47c053413948674d
 SHA512 (ecap_clamav_adapter-2.0.0.tar.gz) = 882e66ad566220f68e59d41ea5c199af2745eaaa96610cdb7fe475811dbf87b01b5a6a97e6c9a729aecbf470aaae7082dbe502830aa88e86d32ae0d1acabde4b
 Size (ecap_clamav_adapter-2.0.0.tar.gz) = 383682 bytes
+SHA1 (patch-src_ClamAv.cc) = aa2e321e5647c1b27e9d03b893d6f010f69adf8f
 SHA1 (patch-src_Pointers.h) = 9e9b562c12af401de15aeeddb595a9134d31e1d6
 SHA1 (patch-src_Service.cc) = e14a4b29539c25f679b4f207cdd659ae752c0fac
 SHA1 (patch-src_Service.h) = 5b4997278e7b67aa7ee4813ba5a7753e154cb2ae
