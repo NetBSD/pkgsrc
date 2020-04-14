@@ -1,0 +1,3 @@
+The ke library provides some implementation of queues/FIFOs in a
+functional or imperative way. It's a little library with a benchmark,
+fuzzer and tests.
