@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2266 2020/04/14 08:18:44 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2267 2020/04/14 08:56:26 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3117,3 +3117,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/mitmproxy to 5.1.1 [leot 2020-04-13]
 	Added audio/cmusfm version 0.3.3 [tpaul 2020-04-14]
 	Added devel/ocaml-ke version 0.4 [jaapb 2020-04-14]
+	Updated devel/ocaml-encore to 0.4 [jaapb 2020-04-14]
