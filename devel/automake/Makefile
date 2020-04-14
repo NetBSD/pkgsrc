@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2020/03/31 16:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2020/04/14 12:34:42 wiz Exp $
 #
 # for major version updates, don't forget adding new links in
 # mk/tools/automake.mk
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=automake/}
 MASTER_SITES+=	ftp://sources.redhat.com/pub/automake/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/automake/automake.html
 COMMENT=	GNU Standards-compliant Makefile generator
 LICENSE=	gnu-gpl-v2
