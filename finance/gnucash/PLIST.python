@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST.python,v 1.1 2018/04/09 08:47:54 wiz Exp $
+@comment $NetBSD: PLIST.python,v 1.2 2020/04/14 10:35:17 wiz Exp $
 ${PYSITELIB}/gnucash/__init__.py
 ${PYSITELIB}/gnucash/_gnucash_core_c.so
 ${PYSITELIB}/gnucash/_sw_app_utils.so
 ${PYSITELIB}/gnucash/_sw_core_utils.so
+${PYSITELIB}/gnucash/app_utils.py
 ${PYSITELIB}/gnucash/function_class.py
 ${PYSITELIB}/gnucash/gnucash_business.py
 ${PYSITELIB}/gnucash/gnucash_core.py
