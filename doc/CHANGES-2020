@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2265 2020/04/14 04:38:20 tpaul Exp $
+$NetBSD: CHANGES-2020,v 1.2266 2020/04/14 08:18:44 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3116,3 +3116,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkglint to 20.1.2 [rillig 2020-04-13]
 	Updated net/mitmproxy to 5.1.1 [leot 2020-04-13]
 	Added audio/cmusfm version 0.3.3 [tpaul 2020-04-14]
+	Added devel/ocaml-ke version 0.4 [jaapb 2020-04-14]
