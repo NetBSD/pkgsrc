@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2278 2020/04/14 15:03:57 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2279 2020/04/14 15:52:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3131,3 +3131,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/appstream-glib version 0.7.17 [ryoon 2020-04-14]
 	Added time/gnome-pomodoro version 0.17.0 [ryoon 2020-04-14]
 	Added devel/ruby-yell version 2.2.2 [ryoon 2020-04-14]
+	Added www/ruby-ethon version 0.12.0 [ryoon 2020-04-14]
