@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 14:13:10 ryoon Exp $
+
+SHA1 (gom-0.4.tar.xz) = 3644652c50926a0d813ae7e4945e33fce31c9d00
+RMD160 (gom-0.4.tar.xz) = 312e4b14a815e04fdc369b3f7cf47d899be05b6a
+SHA512 (gom-0.4.tar.xz) = d847928ce09c53a3f64777c313cb843052e5e001873f29d3f7acf02772cadf0e4b133fb0137aa0463b4ff95dd54810bde87062d8e396ff4fc6d142ba59c8e9c8
+Size (gom-0.4.tar.xz) = 102744 bytes
