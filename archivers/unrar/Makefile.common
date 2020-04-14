@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2020/04/07 08:15:01 adam Exp $
+# $NetBSD: Makefile.common,v 1.32 2020/04/14 12:33:21 wiz Exp $
 #
 # used by archivers/libunrar/Makefile
 # used by archivers/unrar/Makefile
@@ -8,7 +8,7 @@ PKGNAME=	${DISTNAME:S/src//}
 CATEGORIES=	archivers
 MASTER_SITES=	https://www.rarlab.com/rar/
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.rarlab.com/
 COMMENT=	Extract, view & test RAR archives
 LICENSE=	unrar-license
