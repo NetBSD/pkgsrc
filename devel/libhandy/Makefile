@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/03/11 09:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/14 20:28:38 prlw1 Exp $
 
 DISTNAME=	libhandy-v0.0.13
 PKGNAME=	${DISTNAME:S/-v/-/1}
@@ -22,6 +22,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/libhandy-0.0.pc
 
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
