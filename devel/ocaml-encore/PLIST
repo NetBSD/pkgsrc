@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/19 11:38:06 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/14 08:56:07 jaapb Exp $
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/encore/Encore.a
 ${OCAML_SITELIB}/encore/Encore.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/encore/Encore.cmxa
@@ -6,6 +6,15 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/encore/Encore.cmxs
 ${OCAML_SITELIB}/encore/META
 ${OCAML_SITELIB}/encore/bijection.ml
 ${OCAML_SITELIB}/encore/bijection.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/encore/butils/butils.a
+${OCAML_SITELIB}/encore/butils/butils.cma
+${OCAML_SITELIB}/encore/butils/butils.cmi
+${OCAML_SITELIB}/encore/butils/butils.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/encore/butils/butils.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/encore/butils/butils.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/encore/butils/butils.cmxs
+${OCAML_SITELIB}/encore/butils/butils.ml
+${OCAML_SITELIB}/encore/butils/libbutils_stubs.a
 ${OCAML_SITELIB}/encore/dune-package
 ${OCAML_SITELIB}/encore/either.ml
 ${OCAML_SITELIB}/encore/encoder.ml
@@ -31,10 +40,6 @@ ${OCAML_SITELIB}/encore/encore__Encoder.cmi
 ${OCAML_SITELIB}/encore/encore__Encoder.cmt
 ${OCAML_SITELIB}/encore/encore__Encoder.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/encore/encore__Encoder.cmx
-${OCAML_SITELIB}/encore/encore__FQueue.cmi
-${OCAML_SITELIB}/encore/encore__FQueue.cmt
-${OCAML_SITELIB}/encore/encore__FQueue.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/encore/encore__FQueue.cmx
 ${OCAML_SITELIB}/encore/encore__Lole.cmi
 ${OCAML_SITELIB}/encore/encore__Lole.cmt
 ${OCAML_SITELIB}/encore/encore__Lole.cmti
@@ -51,8 +56,6 @@ ${OCAML_SITELIB}/encore/encore__Proxy_encoder.cmi
 ${OCAML_SITELIB}/encore/encore__Proxy_encoder.cmt
 ${OCAML_SITELIB}/encore/encore__Proxy_encoder.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/encore/encore__Proxy_encoder.cmx
-${OCAML_SITELIB}/encore/fQueue.ml
-${OCAML_SITELIB}/encore/fQueue.mli
 ${OCAML_SITELIB}/encore/lole.ml
 ${OCAML_SITELIB}/encore/lole.mli
 ${OCAML_SITELIB}/encore/meta.ml
@@ -62,6 +65,7 @@ ${OCAML_SITELIB}/encore/proxy_decoder.ml
 ${OCAML_SITELIB}/encore/proxy_decoder.mli
 ${OCAML_SITELIB}/encore/proxy_encoder.ml
 ${OCAML_SITELIB}/encore/proxy_encoder.mli
+${OCAML_SITELIB}/stublibs/dllbutils_stubs.so
 share/doc/encore/CHANGES.md
 share/doc/encore/LICENSE.md
 share/doc/encore/README.md
