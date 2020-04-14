@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.12 2019/12/05 10:02:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/04/14 12:50:02 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/zmq/__init__.pxd
 ${PYSITELIB}/zmq/__init__.py
 ${PYSITELIB}/zmq/__init__.pyc
 ${PYSITELIB}/zmq/__init__.pyo
@@ -62,6 +63,7 @@ ${PYSITELIB}/zmq/backend/cffi/socket.pyo
 ${PYSITELIB}/zmq/backend/cffi/utils.py
 ${PYSITELIB}/zmq/backend/cffi/utils.pyc
 ${PYSITELIB}/zmq/backend/cffi/utils.pyo
+${PYSITELIB}/zmq/backend/cython/__init__.pxd
 ${PYSITELIB}/zmq/backend/cython/__init__.py
 ${PYSITELIB}/zmq/backend/cython/__init__.pyc
 ${PYSITELIB}/zmq/backend/cython/__init__.pyo
@@ -186,6 +188,9 @@ ${PYSITELIB}/zmq/green/poll.pyo
 ${PYSITELIB}/zmq/log/__init__.py
 ${PYSITELIB}/zmq/log/__init__.pyc
 ${PYSITELIB}/zmq/log/__init__.pyo
+${PYSITELIB}/zmq/log/__main__.py
+${PYSITELIB}/zmq/log/__main__.pyc
+${PYSITELIB}/zmq/log/__main__.pyo
 ${PYSITELIB}/zmq/log/handlers.py
 ${PYSITELIB}/zmq/log/handlers.pyc
 ${PYSITELIB}/zmq/log/handlers.pyo
@@ -255,6 +260,9 @@ ${PYSITELIB}/zmq/tests/test_constants.pyo
 ${PYSITELIB}/zmq/tests/test_context.py
 ${PYSITELIB}/zmq/tests/test_context.pyc
 ${PYSITELIB}/zmq/tests/test_context.pyo
+${PYSITELIB}/zmq/tests/test_cython.py
+${PYSITELIB}/zmq/tests/test_cython.pyc
+${PYSITELIB}/zmq/tests/test_cython.pyo
 ${PYSITELIB}/zmq/tests/test_decorators.py
 ${PYSITELIB}/zmq/tests/test_decorators.pyc
 ${PYSITELIB}/zmq/tests/test_decorators.pyo
