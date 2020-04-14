@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2019/03/19 11:38:06 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/04/14 08:56:07 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-encore
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ocaml-encore
 OCAML_ENCORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-encore+=	ocaml-encore>=0.2
+BUILDLINK_ABI_DEPENDS.ocaml-encore+=	ocaml-encore>=0.4
 BUILDLINK_PKGSRCDIR.ocaml-encore?=	../../devel/ocaml-encore
 
 .endif	# OCAML_ENCORE_BUILDLINK3_MK
