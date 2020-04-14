@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/14 19:41:53 js Exp $
+
+SHA1 (aiorpcX-0.18.2.tar.gz) = 343239a46ee50f1f4af18b33f592b94118ab8357
+RMD160 (aiorpcX-0.18.2.tar.gz) = cf66224886e5cbb4d07b75b3a87e64505c4ca25b
+SHA512 (aiorpcX-0.18.2.tar.gz) = 7fb4d1a5765bfe04b9856077689376e641a9e6b84d96854dd1112d8e6b2d03abedf9b02fefb9f15e289753cc87c671e97c8978b1da3a26e473c9fbda39f7bbc4
+Size (aiorpcX-0.18.2.tar.gz) = 27429 bytes
