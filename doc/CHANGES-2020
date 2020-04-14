@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2291 2020/04/14 21:01:11 js Exp $
+$NetBSD: CHANGES-2020,v 1.2292 2020/04/14 21:40:14 scole Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3144,3 +3144,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added www/py-aiohttp-socks version 0.2.2 [js 2020-04-14]
 	Added finance/electrum version 3.3.8 [js 2020-04-14]
 	Added cross/ppc-morphos-binutils version 2.33.1 [js 2020-04-14]
+	Updated fonts/lanna-io to 20200318 [scole 2020-04-14]
