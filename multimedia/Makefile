@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.294 2020/03/12 13:40:53 nia Exp $
+# $NetBSD: Makefile,v 1.295 2020/04/15 19:31:56 js Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -197,6 +197,7 @@ SUBDIR+=	ruby-clutter-gstreamer
 SUBDIR+=	ruby-gstreamer
 SUBDIR+=	ruby-ming
 SUBDIR+=	schroedinger
+SUBDIR+=	sickgear
 SUBDIR+=	smpeg
 SUBDIR+=	smpeg2
 SUBDIR+=	ssr
