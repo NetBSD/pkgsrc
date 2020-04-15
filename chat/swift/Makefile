@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2020/04/12 08:28:22 adam Exp $
+# $NetBSD: Makefile,v 1.55 2020/04/15 08:44:15 wiz Exp $
 
 DISTNAME=	swift-3.0
 PKGREVISION=	38
@@ -16,6 +16,8 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pkg-config
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
