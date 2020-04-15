@@ -1,0 +1,40 @@
+$NetBSD: patch-misc_Makefile,v 1.1 2020/04/15 08:22:07 wiz Exp $
+
+Honor LDFLAGS and CFLAGS.
+
+--- misc/Makefile.orig	2019-11-09 00:11:32.000000000 +0000
++++ misc/Makefile
+@@ -2,7 +2,7 @@
+ XCBMLIB = ..
+ 
+ # -Wall -ansi et al. cause compile problems.
+-CFLAGS =  -O2
++CFLAGS +=  -O2
+ 
+ LIBS = #-lncurses -ltermcap -lm
+ 
+@@ -10,19 +10,19 @@ LIBS = #-lncurses -ltermcap -lm
+ all: ../mkrom.sh ../uncpk ../printcbm ../file65 ../reloc65 ../ldo65
+ 
+ ../uncpk: uncpk.c
+-	${CC} ${CFLAGS} uncpk.c -o $(XCBMLIB)/uncpk
++	${CC} ${CFLAGS} ${LDFLAGS} uncpk.c -o $(XCBMLIB)/uncpk
+ 
+ ../printcbm: printcbm.c
+-	${CC} ${CFLAGS} printcbm.c -o $(XCBMLIB)/printcbm
++	${CC} ${CFLAGS} ${LDFLAGS} printcbm.c -o $(XCBMLIB)/printcbm
+ 
+ ../file65: file65.c
+-	${CC} ${CFLAGS} file65.c -o $(XCBMLIB)/file65
++	${CC} ${CFLAGS} ${LDFLAGS} file65.c -o $(XCBMLIB)/file65
+ 
+ ../ldo65: ldo65.c
+-	${CC} ${CFLAGS} ldo65.c -o $(XCBMLIB)/ldo65
++	${CC} ${CFLAGS} ${LDFLAGS} ldo65.c -o $(XCBMLIB)/ldo65
+ 
+ ../reloc65: reloc65.c
+-	${CC} ${CFLAGS} reloc65.c -o $(XCBMLIB)/reloc65
++	${CC} ${CFLAGS} ${LDFLAGS} reloc65.c -o $(XCBMLIB)/reloc65
+ 
+ ../mkrom.sh: mkrom.sh
+ 	cp mkrom.sh ../mkrom.sh

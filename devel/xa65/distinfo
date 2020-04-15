@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2020/02/05 09:12:19 fcambus Exp $
+$NetBSD: distinfo,v 1.5 2020/04/15 08:22:07 wiz Exp $
 
 SHA1 (xa-2.3.10.tar.gz) = b3e37b7660995bfc22fc635516472710cdbc38d5
 RMD160 (xa-2.3.10.tar.gz) = 7d6d54be9a31d39220a9bdc0cfcaeb25ad880867
 SHA512 (xa-2.3.10.tar.gz) = 08b9994e295495744d5252fa983b111f41d0447cdb32d0c065f8fbd942ffa0899476d6cfebe1162e4aa08b1d0a2d8df74c2a60987d2509b8bca45da670f4a67f
 Size (xa-2.3.10.tar.gz) = 152433 bytes
-SHA1 (patch-Makefile) = 6450d6c40cd05e7a2bd09d4ec9f75f4b6aba77be
+SHA1 (patch-Makefile) = 823e5019ad799938926d79e03a2cab732272ecb9
+SHA1 (patch-misc_Makefile) = 488705f516aec448fb51db6ab788b788bfbd31bc
