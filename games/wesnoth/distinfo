@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.69 2020/02/20 17:58:02 nia Exp $
+$NetBSD: distinfo,v 1.70 2020/04/15 22:52:09 joerg Exp $
 
 SHA1 (wesnoth-1.14.11.tar.bz2) = 04381df6391283da4aae5b5d4a8eab8800efbbc0
 RMD160 (wesnoth-1.14.11.tar.bz2) = 0267a0943b8277de89e4d1f518c13e4948a6c4de
@@ -6,4 +6,5 @@ SHA512 (wesnoth-1.14.11.tar.bz2) = f0c932a2623df35bdcae3d758f3c9ef583ab04bb88640
 Size (wesnoth-1.14.11.tar.bz2) = 458916843 bytes
 SHA1 (patch-CMakeLists.txt) = 5c580a7b9719d769507c2c0ec3580d6cf523e7f0
 SHA1 (patch-src_CMakeLists.txt) = 5839663ab11a9fdc31e89b74ce2708a251155d9f
+SHA1 (patch-src_color__range.cpp) = bdce94054a0fb2972e63a968fdb78e34db1213a6
 SHA1 (patch-src_wesnoth.cpp) = 73fa69b47de231c5ce16f66a52b449d5242ffe67
