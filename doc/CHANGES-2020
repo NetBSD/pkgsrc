@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2303 2020/04/15 15:09:21 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2304 2020/04/15 16:06:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3158,3 +3158,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/beats to 6.8.8 [jperkin 2020-04-15]
 	Updated www/py-aiohttp-socks to 0.3.7 [adam 2020-04-15]
 	Updated textproc/py-jsonrpclib-pelix to 0.4.1 [adam 2020-04-15]
+	Added editors/fileobj version 0.7.96 [wiz 2020-04-15]
