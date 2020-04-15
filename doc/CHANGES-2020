@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2298 2020/04/15 09:51:16 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2299 2020/04/15 09:52:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3151,3 +3151,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/xa65 to 2.3.10nb1 [wiz 2020-04-15]
 	Updated textproc/halibut to 1.1nb5 [wiz 2020-04-15]
 	Updated lang/ocaml to 4.09.1 [jaapb 2020-04-14]
+	Updated sysutils/py-borgbackup to 1.1.11nb1 [wiz 2020-04-15]
