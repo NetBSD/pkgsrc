@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/07/23 15:13:06 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/15 22:50:52 joerg Exp $
 
 DISTNAME=	clickclick-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/zalando/python-clickclick
 COMMENT=	Click utility functions
 LICENSE=	apache-2.0
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 DEPENDS+=	${PYPKGPREFIX}-click>=4.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
 BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
