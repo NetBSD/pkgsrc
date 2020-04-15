@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:27:02 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/04/15 22:39:51 joerg Exp $
 
 SHA1 (cachesaver-0.10.9.tar.gz) = 81a7e3168e40f4bc2354d1d278d9711da1aab90c
 RMD160 (cachesaver-0.10.9.tar.gz) = 36306555c47757aa60f4434caadf97b674363ea7
 SHA512 (cachesaver-0.10.9.tar.gz) = 51d0c1b5339a4e03a28461b51e03e69f57bb4eb95f459825977e09929d9fab04dfc3e21f286f36edfc482c5c4fffb24d810e26c610363ac7e49d4ba739262814
 Size (cachesaver-0.10.9.tar.gz) = 334633 bytes
+SHA1 (patch-configure) = e2b8c671cba80887550add0ab092bdebab5b5f0e
