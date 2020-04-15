@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2020/04/14 19:52:15 js Exp $
+$NetBSD: distinfo,v 1.2 2020/04/15 14:27:56 adam Exp $
 
-SHA1 (aiohttp_socks-0.2.2.tar.gz) = 879f5c11ed12c62d89878d7b4ba49d4989915fcc
-RMD160 (aiohttp_socks-0.2.2.tar.gz) = 7e817087b5e650fa2999ee19d0a5b4f1a59db681
-SHA512 (aiohttp_socks-0.2.2.tar.gz) = b31c1dc4e32a0a4259bacdd4837f70e35994172a2a20b6797007181c50d4a06bdc1fa052006964297b68a4dc8f790bb28e416b3848932b838a9da967090b23bb
-Size (aiohttp_socks-0.2.2.tar.gz) = 10444 bytes
+SHA1 (aiohttp_socks-0.3.7.tar.gz) = 988b8e16a1591706d2ae0f6ecfff2fda748983b3
+RMD160 (aiohttp_socks-0.3.7.tar.gz) = d60810a9a6729f61e7b5a1249cbeed2cba7dadc6
+SHA512 (aiohttp_socks-0.3.7.tar.gz) = d0032107068669d0741130f50f613a89925448c6094abfa65bed7cc1f099a28d74a21da7cdb0d44bfe722f608bbc06b938b9dec79cf80c45289acc9a9063603e
+Size (aiohttp_socks-0.3.7.tar.gz) = 13838 bytes
