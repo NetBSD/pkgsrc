@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2020/01/14 19:53:35 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.53 2020/04/15 09:50:54 jaapb Exp $
 bin/ocaml
 ${PLIST.instrumented_runtime}bin/ocaml-instr-graph
 ${PLIST.instrumented_runtime}bin/ocaml-instr-report
@@ -870,6 +870,9 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlbytecomp.cmxa
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlcommon.a
 lib/ocaml/compiler-libs/ocamlcommon.cma
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlcommon.cmxa
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlmiddleend.a
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlmiddleend.cma
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamlmiddleend.cmxa
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamloptcomp.a
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamloptcomp.cma
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamloptcomp.cmxa
