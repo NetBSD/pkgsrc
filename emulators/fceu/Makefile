@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/07/04 13:40:17 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.22 2020/04/15 08:43:23 wiz Exp $
 
 DISTNAME=		fceu-0.98.13.src
 PKGNAME=		${DISTNAME:S/.src//}
@@ -24,7 +23,7 @@ SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man6 share/doc/fceu
 
-LDFLAGS.DragonFly=	-lm
+LDFLAGS+=		-lm ${LIBOSSAUDIO}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Documentation/fceu-sdl.6 \
