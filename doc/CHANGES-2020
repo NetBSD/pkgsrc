@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2295 2020/04/14 22:33:35 js Exp $
+$NetBSD: CHANGES-2020,v 1.2296 2020/04/15 08:22:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3148,3 +3148,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added cross/ppc-morphos-sdk version 20191111nb2 [js 2020-04-14]
 	Added cross/ppc-morphos-gcc-9 version 9.2.0nb1 [js 2020-04-14]
 	Added audio/alac version 0.2.0 [js 2020-04-14]
+	Updated devel/xa65 to 2.3.10nb1 [wiz 2020-04-15]
