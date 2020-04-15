@@ -1,0 +1,15 @@
+$NetBSD: patch-runlabel.in,v 1.1 2020/04/15 22:53:33 joerg Exp $
+
+Use an actual feature check.
+
+--- runlabel.in.orig	2020-04-13 19:36:47.994115580 +0000
++++ runlabel.in
+@@ -123,7 +123,7 @@ array *readpath(const string& psname, bo
+     if(!pdf) gs << newl;
+ 
+ // Workaround broken stringstream container in MacOS 10.9 libc++.
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__ )
++#if defined(_LIBCPP_VERSION)
+     for(string::iterator i=s.begin(); i != s.end(); ++i) {
+       if(isalpha(*i) && *i != 'e') {buf << " ";}
+       buf << *i;
