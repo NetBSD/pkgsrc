@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/02/05 09:12:19 fcambus Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/15 08:22:07 wiz Exp $
 
 DISTNAME=		xa-2.3.10
-PKGNAME=		${DISTNAME:S/xa/&65/}
+PKGNAME=		${DISTNAME:S/xa/xa65/}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		https://www.floodgap.com/retrotech/xa/dists/
 
