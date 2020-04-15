@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2019/01/08 10:58:09 markd Exp $
+$NetBSD: distinfo,v 1.11 2020/04/15 22:53:33 joerg Exp $
 
 SHA1 (asymptote-2.41.src.tgz) = ee33febaab5b42e0f04375f4a40512102d01a1d5
 RMD160 (asymptote-2.41.src.tgz) = 2614a78d24126817462a8b7bffd918c84b96b808
@@ -6,3 +6,4 @@ SHA512 (asymptote-2.41.src.tgz) = 93f737a44b085c2290c4553c765cf49679820e6623bc5b
 Size (asymptote-2.41.src.tgz) = 3516426 bytes
 SHA1 (patch-configure) = c3d035f0744b8558624863fddbe68205c862a37b
 SHA1 (patch-main.cc) = 1cf992b56fe28efb94128f68e941f36d9b033e9a
+SHA1 (patch-runlabel.in) = 8cd6fd4cc1e7b7e72c50dea9d777ed839e1ad269
