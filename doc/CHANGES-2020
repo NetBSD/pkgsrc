@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2305 2020/04/15 16:10:28 bouyer Exp $
+$NetBSD: CHANGES-2020,v 1.2306 2020/04/15 19:32:41 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3160,3 +3160,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-jsonrpclib-pelix to 0.4.1 [adam 2020-04-15]
 	Added editors/fileobj version 0.7.96 [wiz 2020-04-15]
 	Updated sysutils/xenkernel411 to 4.11.1nb2 [bouyer 2020-04-15]
+	Added multimedia/sickgear version 0.21.26 [js 2020-04-15]
