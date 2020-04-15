@@ -20,7 +20,7 @@ Sent upstream via email 20190427.
  	if (APPLE)
  		set_target_properties(mosquitto PROPERTIES LINK_FLAGS "-Wl,-exported_symbols_list -Wl,${mosquitto_SOURCE_DIR}/src/linker-macosx.syms")
 -	else (APPLE)
-+	elseif (CMAKE_SYSTEM_NAME STREQUAL Linux)
++	elseif (NOT CMAKE_SYSTEM_NAME STREQUAL SunOS)
  		set_target_properties(mosquitto PROPERTIES LINK_FLAGS "-Wl,-dynamic-list=${mosquitto_SOURCE_DIR}/src/linker.syms")
 -	endif (APPLE)
 +	endif ()
