@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/04/14 19:52:19 prlw1 Exp $
+# $NetBSD: Makefile,v 1.31 2020/04/15 19:55:12 prlw1 Exp $
 
 DISTNAME=	gnome-sudoku-3.24.0
 PKGREVISION=	14
@@ -16,7 +16,10 @@ USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++11
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
-USE_BUILTIN.gettext=	no
+
+# Requires --desktop in msgfmt.
+_TOOLS_USE_PKGSRC.msgfmt=	yes
+
 
 BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
