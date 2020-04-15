@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2020/03/10 22:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2020/04/15 22:54:38 joerg Exp $
 
 DISTNAME=	BasiliskII-20190405
 PKGREVISION=	2
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}/BasiliskII
 CONFIGURE_DIRS=	src/Unix
 BUILD_DIRS=	src/Unix
 
-USE_LANGUAGES=	c c++03
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	aclocal autoheader autoconf automake
 USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_TOOLS+=	pkg-config gmake
@@ -35,6 +35,9 @@ CONFIGURE_ARGS+=	--without-esd
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--enable-macosx-gui
 CONFIGURE_ARGS+=	--enable-macosx-sound
+.else
+post-extract:
+	${RM} ${WRKSRC}/src/Unix/semaphore.h
 .endif
 
 .include "options.mk"
