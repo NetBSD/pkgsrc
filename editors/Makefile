@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2020/04/06 11:41:05 pin Exp $
+# $NetBSD: Makefile,v 1.203 2020/04/15 16:06:21 wiz Exp $
 #
 
 COMMENT=	Editors
@@ -43,6 +43,7 @@ SUBDIR+=	ex
 SUBDIR+=	fe
 SUBDIR+=	feathernotes
 SUBDIR+=	featherpad
+SUBDIR+=	fileobj
 SUBDIR+=	focuswriter
 SUBDIR+=	gate
 SUBDIR+=	gconf-editor
