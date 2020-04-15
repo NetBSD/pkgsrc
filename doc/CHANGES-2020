@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2302 2020/04/15 13:01:06 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.2303 2020/04/15 15:09:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3156,3 +3156,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-parameterized to 0.7.4 [adam 2020-04-15]
 	Updated www/ruby-rouge to 3.18.0 [fcambus 2020-04-15]
 	Updated sysutils/beats to 6.8.8 [jperkin 2020-04-15]
+	Updated www/py-aiohttp-socks to 0.3.7 [adam 2020-04-15]
+	Updated textproc/py-jsonrpclib-pelix to 0.4.1 [adam 2020-04-15]
