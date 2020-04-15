@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2020/01/18 21:51:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2020/04/15 11:57:35 triaxx Exp $
 
 PKGNAME=	${PHP_PKG_PREFIX}-fpm-${PHP_VERSION}
 PKGREVISION=	3
-CATEGORIES=	www
 
 HOMEPAGE=	https://php-fpm.org/
 MAINTAINER=	fhajny@NetBSD.org
@@ -16,8 +15,8 @@ LIBTOOL_OVERRIDE=	# empty
 
 .include "../../mk/bsd.prefs.mk"
 
-FPM_USER?=		${APACHE_USER}
-FPM_GROUP?=		${APACHE_GROUP}
+FPM_USER?=		fpm
+FPM_GROUP?=		www
 
 BUILD_DEFS+=		VARBASE FPM_USER FPM_GROUP
 
