@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/15 16:06:07 wiz Exp $
+
+SHA1 (fileobj-0.7.96.tar.gz) = 782f14ccf8a31b4dfc67135e02a7ba37c2c06091
+RMD160 (fileobj-0.7.96.tar.gz) = a92eda8ddc50cc7a57c289a40682ffb395819dd1
+SHA512 (fileobj-0.7.96.tar.gz) = ecc52a1fa3181c504a6685584986f6ad6a77266ac55ef4c26bc094cb215e174464afc639692fb2881d4dc7bd09c38478bf8f6c58cff15118995c21ae026041ba
+Size (fileobj-0.7.96.tar.gz) = 167685 bytes
