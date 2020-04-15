@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/04/12 08:28:47 adam Exp $
+# $NetBSD: Makefile,v 1.22 2020/04/15 22:55:50 joerg Exp $
 
 DISTNAME=		pyproj-2.6.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,8 @@ MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		https://github.com/pyproj4/pyproj
 COMMENT=		Python interface to PROJ.4 library
 LICENSE=		mit
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
 
 .include "../../geography/proj/buildlink3.mk"
 .include "../../lang/python/egg.mk"
