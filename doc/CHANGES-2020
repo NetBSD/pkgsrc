@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2300 2020/04/15 09:57:26 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2301 2020/04/15 10:54:38 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3154,3 +3154,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-borgbackup to 1.1.11nb1 [wiz 2020-04-15]
 	Updated devel/py-ipykernel to 5.2.1 [adam 2020-04-15]
 	Updated devel/py-parameterized to 0.7.4 [adam 2020-04-15]
+	Updated www/ruby-rouge to 3.18.0 [fcambus 2020-04-15]
