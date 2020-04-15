@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.59 2020/02/15 14:48:08 rillig Exp $
+# $NetBSD: Makefile.common,v 1.60 2020/04/15 09:50:54 jaapb Exp $
 
 # used by x11/labltk/Makefile
-DISTNAME=	ocaml-4.09.0
+DISTNAME=	ocaml-4.09.1
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.09/
 #EXTRACT_SUFX=	.tar.bz2
