@@ -1,4 +1,4 @@
-# $NetBSD: files,v 1.10 2020/02/11 01:21:25 rillig Exp $
+# $NetBSD: files,v 1.11 2020/04/15 13:33:32 sborrill Exp $
 #
 # Generate a +FILES script that reference counts config files that are
 # required for the proper functioning of the package.
@@ -98,8 +98,8 @@ esac
 
 CURDIR=`${PWD_CMD}`
 PKG_METADATA_DIR="${2-${CURDIR}}"
-: "${PKGNAME=${PKG_METADATA_DIR##*/}}"
-: "${PKG_DBDIR=${PKG_METADATA_DIR%/*}}"
+: ${PKGNAME="${PKG_METADATA_DIR##*/}"}
+: ${PKG_DBDIR="${PKG_METADATA_DIR%/*}"}
 : "${PKG_REFCOUNT_DBDIR=${PKG_DBDIR}.refcount}"
 PKG_REFCOUNT_FILES_DBDIR="${PKG_REFCOUNT_DBDIR}/files"
 
