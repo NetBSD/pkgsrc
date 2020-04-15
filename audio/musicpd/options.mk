@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.35 2020/03/20 10:43:35 nia Exp $
+# $NetBSD: options.mk,v 1.36 2020/04/15 08:48:13 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 
 # audio outputs
-PKG_SUPPORTED_OPTIONS+=	jack openal libao pulseaudio 
+PKG_SUPPORTED_OPTIONS+=	jack openal libao pulseaudio
 # codecs
 PKG_SUPPORTED_OPTIONS+=	adplug faad ffmpeg fluidsynth libgme libwildmidi
 PKG_SUPPORTED_OPTIONS+=	mikmod modplug musepack sidplay wavpack
