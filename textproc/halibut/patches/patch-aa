@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2016/04/01 11:41:42 jperkin Exp $
+$NetBSD: patch-aa,v 1.4 2020/04/15 08:24:08 wiz Exp $
 
 Use pkgsrc layout.
 
@@ -22,6 +22,15 @@ Use pkgsrc layout.
  
  SRC := ../
  
+@@ -101,7 +101,7 @@ OBJECTS := $(addsuffix .o,$(MODULES)) $(
+ DEPS := $(addsuffix .d,$(MODULES))
+ 
+ halibut: $(OBJECTS)
+-	$(CC) $(LFLAGS) -o halibut $(OBJECTS) $(LIBS)
++	$(CC) $(LFLAGS) ${LDFLAGS} -o halibut $(OBJECTS) $(LIBS)
+ 
+ %.o: $(SRC)%.c
+ 	$(CC) $(CFLAGS) -MD -c $<
 @@ -109,6 +109,9 @@ halibut: $(OBJECTS)
  version.o: FORCE
  	$(CC) $(VDEF) -MD -c $(SRC)version.c
