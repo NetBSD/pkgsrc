@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.51 2020/04/12 11:01:46 bsiegert Exp $
+# $NetBSD: Makefile,v 1.52 2020/04/15 13:00:55 jperkin Exp $
 
-DISTNAME=		beats-6.6.2
-PKGREVISION=		11
+DISTNAME=		beats-6.8.8
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=elastic/}
 GITHUB_PROJECT=		beats
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=		fhajny@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.elastic.co/products/beats
 COMMENT=		Data Shippers for Elasticsearch
 LICENSE=		apache-2.0
@@ -34,9 +33,11 @@ PLIST.audit=		yes
 
 .for beat in ${BEATS}
 CHECK_RELRO_SKIP+=	bin/${beat}
-CONF_FILES+=		share/examples/beats/${beat}.yml			\
-				${PKG_SYSCONFDIR}/${beat}.yml
+CONF_FILES+=		share/examples/beats/${beat}.yml \
+			${PKG_SYSCONFDIR}/${beat}.yml
 .endfor
+
+BUILD_DEFS+=		VARBASE
 
 BEATS_DIR?=		${VARBASE}/db/beats
 BEATS_LOGDIR?=		${VARBASE}/log/beats
