@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.47 2020/04/12 08:28:16 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.48 2020/04/15 08:46:20 wiz Exp $
 
 BUILDLINK_TREE+=	qt5-qtwebkit
 
@@ -23,7 +23,6 @@ BUILDLINK_LIBDIRS.qt5-qtwebkit+=	qt5/plugins
 .endif
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
-.include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtsensors/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
 .endif	# QT5_QTWEBKIT_BUILDLINK3_MK
