@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2020/04/12 08:28:29 adam Exp $
+# $NetBSD: Makefile,v 1.137 2020/04/15 22:50:24 joerg Exp $
 
 DISTNAME=	devhelp-3.34.0
 PKGREVISION=	3
@@ -29,6 +29,7 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/libdevhelp-3.0.pc
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/amtk/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
