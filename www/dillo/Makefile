@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2020/01/18 21:51:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.79 2020/04/15 22:37:40 joerg Exp $
 
 DISTNAME=	dillo-3.0.5
 PKGREVISION=	6
@@ -42,6 +42,7 @@ post-install:
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/fltk13/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
