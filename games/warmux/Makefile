@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/03/08 16:49:48 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2020/04/15 22:51:51 joerg Exp $
 
 DISTNAME=	warmux-11.01
 PKGREVISION=	30
@@ -19,6 +19,8 @@ CONFIGURE_ARGS+=	--enable-fribidi
 CONFIGURE_ARGS+=	--enable-servers
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
+
+CHECK_PORTABILITY_SKIP+=	build/win32_setup/create_setup.sh.in
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
