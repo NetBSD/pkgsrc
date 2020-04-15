@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/04/15 22:39:52 joerg Exp $
+
+Don't claim to have config.h, when it is not created.
+
+--- configure.orig	2020-04-13 20:38:29.723713406 +0000
++++ configure
+@@ -22298,8 +22298,6 @@ test "x$prefix" = xNONE && prefix=$ac_de
+ # Let make expand exec_prefix.
+ test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+ 
+-DEFS=-DHAVE_CONFIG_H
+-
+ ac_libobjs=
+ ac_ltlibobjs=
+ for ac_i in : $LIBOBJS; do test "x$ac_i" = x: && continue
