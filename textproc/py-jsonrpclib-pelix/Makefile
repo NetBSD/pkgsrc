@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2020/04/14 20:42:31 js Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/15 15:09:05 adam Exp $
 
-DISTNAME=	jsonrpclib-pelix-0.4.0
-PKGNAME=	${PYPKGPREFIX}-jsonrpclib-pelix-0.4.0
-CATEGORIES=	textproc net devel
+DISTNAME=	jsonrpclib-pelix-0.4.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonrpclib-pelix/}
 
 MAINTAINER=	js@pkgsrc.org
-HOMEPAGE=	https://pypi.python.org/pypi/jsonrpclib-pelix
+HOMEPAGE=	https://github.com/tcalmant/jsonrpclib
 COMMENT=	Implementation of the JSON-RPC v2.0 specification
 LICENSE=	apache-2.0
 
