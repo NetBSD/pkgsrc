@@ -44,6 +44,12 @@ OWN_DIRS_PERMS+=	${VARBASE}/run/radiusd \
 
 PKG_SYSCONFSUBDIR=	raddb
 
+SUBST_CLASSES+=		secconf
+SUBST_STAGE.secconf=	post-configure
+SUBST_MESSAGE.secconf=	Substituting user and group in radiusd.conf
+SUBST_FILES.secconf=	raddb/radiusd.conf
+SUBST_VARS.secconf=	RADIUS_USER RADIUS_GROUP
+
 FILES_SUBST+=		RADIUS_USER=${RADIUS_USER} RADIUS_GROUP=${RADIUS_GROUP}
 MESSAGE_SUBST+=		BOOTSTRAP=${PKG_SYSCONFDIR}/certs/bootstrap
 
