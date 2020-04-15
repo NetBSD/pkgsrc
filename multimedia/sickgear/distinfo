@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/15 19:31:56 js Exp $
+
+SHA1 (SickGear/release_0.21.26.tar.gz) = 19067fd36329e7e58d2489fcb5ffd56e99fb32a3
+RMD160 (SickGear/release_0.21.26.tar.gz) = 7a2a4fa2f9b9484d6a8d836af3565b2b6b0659ee
+SHA512 (SickGear/release_0.21.26.tar.gz) = 7453cf58a31a525fcdfcfb5dfb3c5c77339989cf5eb0ac44520e7790ef01b371cb2cecf19d386e61a45b0fc5289e234ab8fbbb09758d50c12383a7a29f65f1ba
+Size (SickGear/release_0.21.26.tar.gz) = 11614828 bytes
