@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/09 14:02:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/15 22:50:40 joerg Exp $
 
 DISTNAME=	angr-8.20.1.7
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
@@ -18,6 +18,7 @@ USE_TOOLS+=	gmake
 MAKE_FLAGS+=	LIBDIR=${LIBDIR:Q}
 
 DEPENDS+=	${PYPKGPREFIX}-archinfo-[0-9]*:../../devel/py-archinfo
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 DEPENDS+=	${PYPKGPREFIX}-cachetools-[0-9]*:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-capstone-[0-9]*:../../devel/py-capstone
 DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
