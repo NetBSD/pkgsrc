@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2020/04/14 12:55:04 nia Exp $
+# $NetBSD: Makefile,v 1.216 2020/04/15 08:48:13 wiz Exp $
 
 DISTNAME=	mpd-0.21.22
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
@@ -87,7 +87,7 @@ CPPFLAGS.SunOS+=	-std=gnu99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
-SUBST_FILES.conf=	${WRKSRC}/mpd.conf
+SUBST_FILES.conf=	mpd.conf
 SUBST_MESSAGE.conf=	Setting variables in the configuration file.
 SUBST_VARS.conf+=	VARBASE
 SUBST_VARS.conf+=	MPD_USER
