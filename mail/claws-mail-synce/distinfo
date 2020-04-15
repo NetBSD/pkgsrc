@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 23:27:02 agc Exp $
+$NetBSD: distinfo,v 1.8 2020/04/15 22:39:52 joerg Exp $
 
 SHA1 (synce_plugin-0.7.5.tar.gz) = c23f587218e859238b8bfa2d9a3ad3b41b5ff8bb
 RMD160 (synce_plugin-0.7.5.tar.gz) = 0cc50f58b6ce3317d0eaabe9d8d0f9b86d9d46db
 SHA512 (synce_plugin-0.7.5.tar.gz) = 028ed41839d7d2fd4dc0813769b9c423fa054f7b279337974cbb66efece33e7cf705f2def65effb5b0ffb20c3b99ada284ca06f79104bb45bae97d1f12f529a2
 Size (synce_plugin-0.7.5.tar.gz) = 339485 bytes
+SHA1 (patch-configure) = cc9cc6caf0e9f2ff57c28cb099499d529463d546
 SHA1 (patch-src_synce__gtk.c) = 0c880bb7a7b0cc28aa16bb34e9ddabb6f80545ee
 SHA1 (patch-src_synce__plugin.c) = 765c5868a66fc30f10f5fb95d11719d824ae7a1e
