@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_Makefile.in,v 1.15 2018/12/09 18:33:55 adam Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.16 2020/04/16 17:07:07 adam Exp $
 
 Honour LDFLAGS.
 
---- unix/Makefile.in.orig	2017-12-21 18:16:25.000000000 +0000
+--- unix/Makefile.in.orig	2019-11-21 19:10:50.000000000 +0000
 +++ unix/Makefile.in
 @@ -8,6 +8,7 @@ VERSION 		= @TCL_VERSION@
  MAJOR_VERSION		= @TCL_MAJOR_VERSION@
@@ -12,7 +12,7 @@ Honour LDFLAGS.
  
  #--------------------------------------------------------------------------
  # Things you can change to personalize the Makefile for your own site (you can
-@@ -54,6 +55,8 @@ SCRIPT_INSTALL_DIR	= $(INSTALL_ROOT)$(TC
+@@ -55,6 +56,8 @@ SCRIPT_INSTALL_DIR	= $(INSTALL_ROOT)$(TC
  
  # Directory in which to install the include file tcl.h:
  INCLUDE_INSTALL_DIR	= $(INSTALL_ROOT)$(includedir)
@@ -21,7 +21,7 @@ Honour LDFLAGS.
  
  # Path to the private tcl header dir:
  PRIVATE_INCLUDE_DIR	= @PRIVATE_INCLUDE_DIR@
-@@ -103,7 +106,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
+@@ -104,7 +107,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
  #CFLAGS			= $(CFLAGS_DEBUG)
  #CFLAGS			= $(CFLAGS_OPTIMIZE)
  #CFLAGS			= $(CFLAGS_DEBUG) $(CFLAGS_OPTIMIZE)
@@ -30,7 +30,7 @@ Honour LDFLAGS.
  
  # Flags to pass to the linker
  LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
-@@ -144,7 +147,7 @@ NO_DEPRECATED_FLAGS	=
+@@ -145,7 +148,7 @@ NO_DEPRECATED_FLAGS	=
  
  # Some versions of make, like SGI's, use the following variable to determine
  # which shell to use for executing commands:
@@ -39,7 +39,7 @@ Honour LDFLAGS.
  
  # Tcl used to let the configure script choose which program to use for
  # installing, but there are just too many different versions of "install"
-@@ -189,7 +192,7 @@ DLTEST_TARGETS		= dltest.marker
+@@ -191,7 +194,7 @@ DLTEST_TARGETS		= dltest.marker
  # run-time. The first symbol is for use when creating a binary with cc, and
  # the second is for use when running ld directly.
  CC_SEARCH_FLAGS	= @CC_SEARCH_FLAGS@
@@ -48,7 +48,7 @@ Honour LDFLAGS.
  
  # The following symbol is defined to "$(DLTEST_TARGETS)" if dynamic loading is
  # available; this causes everything in the "dltest" subdirectory to be built
-@@ -200,6 +203,7 @@ BUILD_DLTEST		= @BUILD_DLTEST@
+@@ -202,6 +205,7 @@ BUILD_DLTEST		= @BUILD_DLTEST@
  #BUILD_DLTEST		=
  
  TCL_LIB_FILE		= @TCL_LIB_FILE@
@@ -56,7 +56,7 @@ Honour LDFLAGS.
  #TCL_LIB_FILE		= libtcl.a
  
  # Generic lib name used in rules that apply to tcl and tk
-@@ -614,7 +618,7 @@ SRCS = $(GENERIC_SRCS) $(TOMMATH_SRCS) $
+@@ -712,7 +716,7 @@ SRCS = $(GENERIC_SRCS) $(TOMMATH_SRCS) $
  
  all: binaries libraries doc packages
  
@@ -65,7 +65,7 @@ Honour LDFLAGS.
  
  libraries:
  
-@@ -633,6 +637,11 @@ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
+@@ -731,6 +735,11 @@ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
  	rm -f $@
  	@MAKE_STUB_LIB@
  
@@ -77,7 +77,7 @@ Honour LDFLAGS.
  # Make target which outputs the list of the .o contained in the Tcl lib useful
  # to build a single big shared library containing Tcl and other extensions.
  # Used for the Tcl Plugin.  -- dl
-@@ -795,9 +804,16 @@ install-binaries: binaries
+@@ -893,9 +902,16 @@ install-binaries: binaries
  	    done;
  	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
  	@@INSTALL_LIB@
@@ -95,7 +95,7 @@ Honour LDFLAGS.
  	@echo "Installing tclConfig.sh to $(CONFIG_INSTALL_DIR)/"
  	@$(INSTALL_DATA) tclConfig.sh "$(CONFIG_INSTALL_DIR)/tclConfig.sh"
  	@echo "Installing tclooConfig.sh to $(CONFIG_INSTALL_DIR)/"
-@@ -821,7 +837,7 @@ install-libraries: libraries
+@@ -919,7 +935,7 @@ install-libraries: libraries
  		else true; \
  		fi; \
  	    done;
@@ -104,23 +104,23 @@ Honour LDFLAGS.
  	    do \
  	    if [ ! -d "$(SCRIPT_INSTALL_DIR)"/$$i ] ; then \
  		echo "Making directory $(SCRIPT_INSTALL_DIR)/$$i"; \
-@@ -842,6 +858,8 @@ install-libraries: libraries
+@@ -940,6 +956,8 @@ install-libraries: libraries
  	    done;
- 	@echo "Installing package http 2.9.0 as a Tcl Module";
- 	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.6/http-2.9.0.tm;
+ 	@echo "Installing package http 2.9.1 as a Tcl Module";
+ 	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.6/http-2.9.1.tm;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/http/http.tcl;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/http/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/http/pkgIndex.tcl;
  	@echo "Installing package opt0.4 files to $(SCRIPT_INSTALL_DIR)/opt0.4/";
  	@for i in $(TOP_DIR)/library/opt/*.tcl ; \
  	    do \
-@@ -849,13 +867,21 @@ install-libraries: libraries
+@@ -947,13 +965,21 @@ install-libraries: libraries
  	    done;
  	@echo "Installing package msgcat 1.6.1 as a Tcl Module";
  	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/msgcat.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.5/msgcat-1.6.1.tm;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/msgcat.tcl "$(SCRIPT_INSTALL_DIR)"/msgcat1.6/msgcat.tcl;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/msgcat1.6/pkgIndex.tcl;
- 	@echo "Installing package tcltest 2.5.0 as a Tcl Module";
- 	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/tcltest.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.5/tcltest-2.5.0.tm;
+ 	@echo "Installing package tcltest 2.5.1 as a Tcl Module";
+ 	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/tcltest.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.5/tcltest-2.5.1.tm;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/tcltest.tcl "$(SCRIPT_INSTALL_DIR)"/tcltest2.5/tcltest.tcl;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/tcltest2.5/pkgIndex.tcl;
  
@@ -135,7 +135,7 @@ Honour LDFLAGS.
  
  	@echo "Installing encoding files to $(SCRIPT_INSTALL_DIR)/encoding/";
  	@for i in $(TOP_DIR)/library/encoding/*.enc ; do \
-@@ -940,7 +966,7 @@ install-doc: doc
+@@ -1038,7 +1064,7 @@ install-doc: doc
  	done
  
  install-headers:
@@ -144,7 +144,7 @@ Honour LDFLAGS.
  	    do \
  	    if [ ! -d "$$i" ] ; then \
  		echo "Making directory $$i"; \
-@@ -949,13 +975,17 @@ install-headers:
+@@ -1047,13 +1073,17 @@ install-headers:
  		fi; \
  	    done;
  	@echo "Installing header files to $(INCLUDE_INSTALL_DIR)/";
@@ -168,7 +168,7 @@ Honour LDFLAGS.
  	    done;
  
  # Optional target to install private headers
-@@ -1725,7 +1755,7 @@ configure-packages:
+@@ -1811,7 +1841,7 @@ configure-packages:
  	      mkdir -p $(PKG_DIR)/$$pkg; \
  	      if [ ! -f $(PKG_DIR)/$$pkg/Makefile ]; then \
  		( cd $(PKG_DIR)/$$pkg; \

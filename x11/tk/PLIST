@@ -1,11 +1,16 @@
-@comment $NetBSD: PLIST,v 1.17 2018/02/03 17:53:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/04/16 17:07:07 adam Exp $
 bin/wish
 bin/wish${BASEVER}
+${PLIST.aqua}include/X11/DECkeysym.h
+${PLIST.aqua}include/X11/HPkeysym.h
+${PLIST.aqua}include/X11/Sunkeysym.h
 ${PLIST.aqua}include/X11/X.h
+${PLIST.aqua}include/X11/XF86keysym.h
 ${PLIST.aqua}include/X11/Xatom.h
 ${PLIST.aqua}include/X11/Xfuncproto.h
 ${PLIST.aqua}include/X11/Xlib.h
 ${PLIST.aqua}include/X11/Xutil.h
+${PLIST.aqua}include/X11/ap_keysym.h
 ${PLIST.aqua}include/X11/cursorfont.h
 ${PLIST.aqua}include/X11/keysym.h
 ${PLIST.aqua}include/X11/keysymdef.h
@@ -15,10 +20,12 @@ include/tk/generic/default.h
 include/tk/generic/ks_names.h
 include/tk/generic/tk.h
 include/tk/generic/tk3d.h
+include/tk/generic/tkArray.h
 include/tk/generic/tkBusy.h
 include/tk/generic/tkButton.h
 include/tk/generic/tkCanvas.h
 include/tk/generic/tkColor.h
+include/tk/generic/tkDList.h
 include/tk/generic/tkDecls.h
 include/tk/generic/tkEntry.h
 include/tk/generic/tkFileFilter.h
@@ -226,6 +233,9 @@ lib/tk${BASEVER}/unsupported.tcl
 lib/tk${BASEVER}/xmfbox.tcl
 lib/tkConfig.sh
 man/man1/wish.1
+man/man3/FindPhoto.3
+man/man3/FontId.3
+man/man3/MeasureChar.3
 man/man3/Tk_3DBorderColor.3
 man/man3/Tk_3DBorderGC.3
 man/man3/Tk_3DHorizontalBevel.3
