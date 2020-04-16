@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/02/29 18:29:01 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2020/04/16 15:19:11 jperkin Exp $
 
 VERSION=	1.6.9
 DISTNAME=	mosquitto-${VERSION}
@@ -18,6 +18,7 @@ USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 
+LDFLAGS.SunOS+=	-lsocket -lnsl
 CMAKE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
 
 MOSQUITTO_USER=		mosquitto
@@ -35,9 +36,10 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-configure
 SUBST_MESSAGE.paths=	Substituting paths
 SUBST_FILES.paths=	mosquitto.conf
-SUBST_VARS.paths=	SSLCERTS
+SUBST_VARS.paths=	SSLCERTS VARBASE
 
 RCD_SCRIPTS=	mosquitto
+SMF_METHODS=	mosquitto
 FILES_SUBST+=	MOSQUITTO_USER=${MOSQUITTO_USER}
 FILES_SUBST+=	MOSQUITTO_GROUP=${MOSQUITTO_GROUP}
 FILES_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
