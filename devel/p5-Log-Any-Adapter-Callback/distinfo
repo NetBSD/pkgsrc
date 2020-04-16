@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/11/08 12:04:43 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2020/04/16 10:49:41 mef Exp $
 
-SHA1 (Log-Any-Adapter-Callback-0.09.tar.gz) = 74bb34133332abc463428f25c6996f796e5f3b67
-RMD160 (Log-Any-Adapter-Callback-0.09.tar.gz) = 237dc8842cf813ec1518380c2b6fa335ed79743c
-SHA512 (Log-Any-Adapter-Callback-0.09.tar.gz) = 4a311d68c5b211071e2b3549db846d1f5c3cfe7d933b805a843bfa241751015823a2376ce324386f625349416ea79cca3f91e07f514ae6e15792df50c31f0c68
-Size (Log-Any-Adapter-Callback-0.09.tar.gz) = 13328 bytes
+SHA1 (Log-Any-Adapter-Callback-0.101.tar.gz) = eb01441cb801ce0d1e90103f5b462ddbb682bf5e
+RMD160 (Log-Any-Adapter-Callback-0.101.tar.gz) = 993a09211f9236ca75e6d9102ba44179915573ab
+SHA512 (Log-Any-Adapter-Callback-0.101.tar.gz) = de3b4c0bec44bcd36f6ab3cd6077c65a9c45d793cd6c67269c5c7b45f39dd84b144064d05264359011c8e329462d896d6e6ad5ba0682c5fabb82d3e77d83f2e3
+Size (Log-Any-Adapter-Callback-0.101.tar.gz) = 15512 bytes
