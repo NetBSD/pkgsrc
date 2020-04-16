@@ -1,6 +1,6 @@
-$NetBSD: patch-generic_tclInt.h,v 1.2 2016/09/03 11:58:01 adam Exp $
+$NetBSD: patch-generic_tclInt.h,v 1.3 2020/04/16 17:07:07 adam Exp $
 
---- generic/tclInt.h.orig	2016-07-11 11:51:23.000000000 +0000
+--- generic/tclInt.h.orig	2019-11-13 17:57:08.000000000 +0000
 +++ generic/tclInt.h
 @@ -38,16 +38,8 @@
  #include <stdio.h>
@@ -17,5 +17,5 @@ $NetBSD: patch-generic_tclInt.h,v 1.2 2016/09/03 11:58:01 adam Exp $
  #include <string.h>
 -#endif
  #if defined(STDC_HEADERS) || defined(__STDC__) || defined(__C99__FUNC__) \
-      || defined(__cplusplus) || defined(_MSC_VER)
+      || defined(__cplusplus) || defined(_MSC_VER) || defined(__ICC)
  #include <stddef.h>
