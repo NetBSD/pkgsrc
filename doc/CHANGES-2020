@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2324 2020/04/16 17:07:44 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2325 2020/04/16 17:37:08 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3197,3 +3197,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/freeradius to 3.0.21nb1 [jperkin 2020-04-16]
 	Updated lang/tcl to 8.6.10 [adam 2020-04-16]
 	Updated x11/tk to 8.6.10 [adam 2020-04-16]
+	Added lang/libobjc2 version 2.0 [joerg 2020-04-16]
