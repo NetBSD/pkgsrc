@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/01/13 07:48:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/16 15:08:08 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -40,7 +40,7 @@ share/tomcat/lib/catalina-ssi.jar
 share/tomcat/lib/catalina-storeconfig.jar
 share/tomcat/lib/catalina-tribes.jar
 share/tomcat/lib/catalina.jar
-share/tomcat/lib/ecj-4.13.jar
+share/tomcat/lib/ecj-4.15.jar
 share/tomcat/lib/el-api.jar
 share/tomcat/lib/jasper-el.jar
 share/tomcat/lib/jasper.jar
@@ -84,6 +84,7 @@ share/tomcat/webapps/docs/RELEASE-NOTES.txt
 share/tomcat/webapps/docs/RUNNING.txt
 share/tomcat/webapps/docs/WEB-INF/web.xml
 share/tomcat/webapps/docs/aio.html
+share/tomcat/webapps/docs/annotationapi/index.html
 share/tomcat/webapps/docs/api/index.html
 share/tomcat/webapps/docs/appdev/build.xml.txt
 share/tomcat/webapps/docs/appdev/deployment.html
