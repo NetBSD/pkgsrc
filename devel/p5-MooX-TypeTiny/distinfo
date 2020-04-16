@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/16 12:00:10 mef Exp $
+
+SHA1 (MooX-TypeTiny-0.001004.tar.gz) = 75c615ab33238d9af4e64b649dd721d1fc621c0e
+RMD160 (MooX-TypeTiny-0.001004.tar.gz) = ca303f306e4aed4a52f94b2fee058c10fd1585ca
+SHA512 (MooX-TypeTiny-0.001004.tar.gz) = e2801fb836b98b156de69a87624a03751c760c2e01c4bd8ccd8d55d63994b41eaf61471bfbaf42f586f2200424c3aca913fb2497b59aaa041b039144aee11880
+Size (MooX-TypeTiny-0.001004.tar.gz) = 12303 bytes
