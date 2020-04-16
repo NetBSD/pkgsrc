@@ -1,0 +1,20 @@
+$NetBSD: patch-bc,v 1.3 2020/04/16 14:03:29 manu Exp $
+--- include/imapproxy.h.orig	2010-03-22 07:40:36.000000000 +0100
++++ include/imapproxy.h	2010-03-22 08:46:47.000000000 +0100
+@@ -171,14 +171,14 @@
+  */
+ #define PGM                     "in.imapproxyd"
+ #define IMAP_UNTAGGED_OK        "* OK "           /* untagged OK response    */
+ #define IMAP_TAGGED_OK          "1 OK "           /* tagged OK response      */
+-#define BUFSIZE                 4096              /* default buffer size     */
++#define BUFSIZE                 8192              /* default buffer size     */
+ #define MAX_CONN_BACKLOG        5                 /* tcp connection backlog  */
+ #define MAXTAGLEN               256               /* max IMAP tag length     */
+ #define MAXMAILBOXNAME          512               /* max mailbox name length */
+ #define MAXUSERNAMELEN          64                /* max username length     */
+-#define MAXPASSWDLEN            64                /* max passwd length       */
++#define MAXPASSWDLEN            8192              /* max passwd length       */
+ #define POLL_TIMEOUT_MINUTES    30                /* Poll timeout in minutes */
+ #define POLL_TIMEOUT            (POLL_TIMEOUT_MINUTES * 60000)
+ #define SELECT_BUF_SIZE         BUFSIZE           /* max length of a SELECT  */
+ 						  /* string we can cache     */

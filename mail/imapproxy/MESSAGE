@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2020/04/16 14:03:29 manu Exp $
+
+imapproxy configuration file must be located at ${PREFIX}/etc/imapproxy.conf
+A sample file is provided in ${PREFIX}/share/examples/imapproxy
+
+===========================================================================

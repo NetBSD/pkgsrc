@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2318 2020/04/16 13:54:09 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2319 2020/04/16 14:03:28 manu Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3189,3 +3189,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-PPIx-Regexp to 0.071 [mef 2020-04-16]
 	Updated devel/p5-Perl-Critic to 1.138 [mef 2020-04-16]
 	Updated devel/p5-Alien-Build to 2.21 [mef 2020-04-16]
+	Re-added mail/imapproxy [manu 2020-04-16]
