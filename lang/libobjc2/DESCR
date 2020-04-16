@@ -1,0 +1,15 @@
+The GNUstep Objective-C runtime was designed as a drop-in replacement for
+the GCC runtime. It supports three ABIs:
+
+- The old GCC ABI, which provides support for Objective-C 1.0 features.
+  This can be selected via the -fobjc-runtime=gcc flag in Clang or by
+  compiling with GCC.
+
+- The initial GNUstep non-fragile ABI, which was intended to be
+  compatible with the GCC ABI, but provide support for modern Objective-C
+  features. This can be selected with the -fobjc-runtime=gnustep-1.9 flag
+  in Clang.
+
+- The modern (v2) ABI, which provides richer reflection metadata, smaller
+  binaries and reduced memory usage. This is selected with the
+  -fobjc-runtime=gnustep-2.0 flag in Clang 7.0 or later.
