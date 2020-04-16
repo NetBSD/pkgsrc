@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2326 2020/04/16 18:32:51 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2327 2020/04/16 21:50:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3200,3 +3200,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added lang/libobjc2 version 2.0 [joerg 2020-04-16]
 	Updated www/py-urllib3 to 1.25.9 [adam 2020-04-16]
 	Updated devel/py-xdis to 4.3.1 [adam 2020-04-16]
+	Updated devel/cppcheck to 1.90 [wiz 2020-04-16]
