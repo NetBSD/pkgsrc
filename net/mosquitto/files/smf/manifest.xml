@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<service_bundle type='manifest' name='@SMF_NAME@'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <create_default_instance enabled='false' />
+    <single_instance />
+
+    <!-- dependencies -->
+    <dependency name='fs-root' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/root' />
+    </dependency>
+    <dependency name='network-service' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/network/service'/>
+    </dependency>
+    <dependency name='config-file' grouping='require_all' restart_on='none' type='path'>
+      <service_fmri value='file://localhost/@PKG_SYSCONFDIR@/mosquitto.conf' />
+    </dependency>
+
+    <method_context></method_context>
+    <exec_method type='method' name='start' exec='@PREFIX@/@SMF_METHOD_FILE.mosquitto@ -d -c @PKG_SYSCONFDIR@/mosquitto.conf' timeout_seconds='60' />
+    <exec_method type='method' name='stop' exec=':kill' timeout_seconds='30' />
+
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>Mosquitto MQTT Broker</loctext>
+      </common_name>
+      <documentation>
+        <doc_link name='Mosquitto' uri='https://mosquitto.org/'/>
+        <manpage title='mosquitto' section='8M' manpath='man' />
+      </documentation>
+    </template>
+  </service>
+</service_bundle>
