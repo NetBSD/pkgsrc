@@ -1,16 +1,10 @@
-$NetBSD: patch-af,v 1.18 2020/04/11 15:22:52 tnn Exp $
+$NetBSD: patch-af,v 1.19 2020/04/16 09:47:26 manu Exp $
 
---- dialects/n+obsd/dlsof.h.orig	2006-03-28 21:54:15.000000000 +0000
-+++ dialects/n+obsd/dlsof.h
-@@ -46,6 +46,7 @@
- #include <signal.h>
- #include <string.h>
- #include <unistd.h>
-+#include <sys/ptrace.h> /* pulled in by procfs.h, but needs to be pulled in before _KERNEL is defined */
- 
- # if	defined(HASGETBOOTFILE)
- #include <util.h>
-@@ -95,6 +96,10 @@ struct uio;	/* dummy for function protot
+
+--- dialects/n+obsd/dlsof.h.orig	2006-03-28 23:54:15.000000000 +0200
++++ dialects/n+obsd/dlsof.h	2020-04-10 16:35:54.222640631 +0200
+@@ -94,8 +94,12 @@
+ #define	_KERNEL
  # endif	/* (defined(OPENBSDV) && OPENBSDV<3030)
  	   || (defined(NETBSDV) && __NetBSD_Version__>=106060000) */
  
@@ -21,7 +15,9 @@ $NetBSD: patch-af,v 1.18 2020/04/11 15:22:52 tnn Exp $
  #include <sys/mount.h>
  
  # if	(defined(OPENBSDV) && OPENBSDV>=3030) \
-@@ -106,10 +111,6 @@ struct uio;	/* dummy for function protot
+   ||	(defined(NETBSDV) && __NetBSD_Version__>=106060000)
+@@ -105,12 +109,8 @@
+ 
  #include <rpc/types.h>
  #include <sys/protosw.h>
  
@@ -32,7 +28,9 @@ $NetBSD: patch-af,v 1.18 2020/04/11 15:22:52 tnn Exp $
  #include <sys/socket.h>
  
  # if	defined(HASMSDOSFS)
-@@ -147,6 +148,9 @@ struct uio;	/* dummy for function protot
+ #  if	HASMSDOSFS==1
+@@ -146,8 +146,11 @@
+ #  endif	/* (defined(OPENBSDV) && OPENBSDV<3030)
  		   || (defined(NETBSDV) && __NetBSD_Version__<106060000) */
  
  #define	_KERNEL
@@ -42,7 +40,9 @@ $NetBSD: patch-af,v 1.18 2020/04/11 15:22:52 tnn Exp $
  struct nameidata;	/* to satisfy a function prototype in msdosfsmount.h */
  #include <msdosfs/msdosfsmount.h>
  #undef	_KERNEL
-@@ -161,6 +165,7 @@ struct nameidata;	/* to satisfy a functi
+ #include <msdosfs/direntry.h>
+@@ -160,8 +163,9 @@
+ 
  #include <sys/socketvar.h>
  #include <sys/un.h>
  #include <sys/unpcb.h>
@@ -50,7 +50,9 @@ $NetBSD: patch-af,v 1.18 2020/04/11 15:22:52 tnn Exp $
  #include <netinet/in.h>
  #include <netinet/in_systm.h>
  #include <netinet/ip.h>
-@@ -170,7 +175,6 @@ struct nameidata;	/* to satisfy a functi
+ 
+@@ -169,9 +173,8 @@
+ #include <netinet/ip6.h>
  #include <netinet6/in6_pcb.h>
  # endif	/* defined(HASIPv6) && defined(NETBSDV) && !defined(HASINRIAIPv6) */
  
@@ -58,7 +60,9 @@ $NetBSD: patch-af,v 1.18 2020/04/11 15:22:52 tnn Exp $
  #include <netinet/in_pcb.h>
  #include <netinet/ip_var.h>
  #include <netinet/tcp.h>
-@@ -264,6 +268,9 @@ struct sockproto {
+ #include <netinet/tcpip.h>
+@@ -263,8 +266,11 @@
+ #endif	/* defined(HASBUFQ_H) */
  
  #undef KERNEL
  #include <ufs/mfs/mfsnode.h>
@@ -68,7 +72,19 @@ $NetBSD: patch-af,v 1.18 2020/04/11 15:22:52 tnn Exp $
  
  # if	defined(HASNFSPROTO)
  #include <nfs/rpcv2.h>
-@@ -370,7 +377,6 @@ struct sockproto {
+ #include <nfs/nfsproto.h>
+@@ -359,8 +365,9 @@
+ # if	defined(HASPROCFS)
+ #  if	defined(HASPROCFS_PFSROOT)
+ #define	_KERNEL
+ #  endif	/* defined(HASPROCFS_PFSROOT) */
++#include <sys/ptrace.h>
+ #include <miscfs/procfs/procfs.h>
+ #  if	defined(HASPROCFS_PFSROOT)
+ #undef	_KERNEL
+ #define	Proot		PFSroot
+@@ -369,9 +376,8 @@
+ #define	Pmem		PFSmem
  #define	Pregs		PFSregs
  #define	Pfile		PFSfile
  #define	Pfpregs		PFSfpregs
@@ -76,7 +92,9 @@ $NetBSD: patch-af,v 1.18 2020/04/11 15:22:52 tnn Exp $
  #define	Pstatus		PFSstatus
  #define	Pnote		PFSnote
  #define	Pnotepg		PFSnotepg
-@@ -382,6 +388,9 @@ struct sockproto {
+ #   if	defined(NetBSDV)
+@@ -381,8 +387,11 @@
+ #    if	NETBSDV>=1006000
  #define	Pmap		PFSmap
  #define	Pmaps		PFSmaps
  #    endif	/* NETBSDV>=1006000 */
@@ -86,7 +104,9 @@ $NetBSD: patch-af,v 1.18 2020/04/11 15:22:52 tnn Exp $
  #   endif	/* defined(NetBSDV) */
  #  endif	/* defined(HASPROCFS_PFSROOT) */
  #include <machine/reg.h>
-@@ -489,7 +498,12 @@ extern KA_T Kpa;
+ # endif	/* defined(HASPROCFS) */
+@@ -488,9 +497,14 @@
+ 
  struct l_vfs {
  	KA_T addr;			/* kernel address */
  	fsid_t	fsid;			/* file system ID */
@@ -99,16 +119,9 @@ $NetBSD: patch-af,v 1.18 2020/04/11 15:22:52 tnn Exp $
  	char *dir;			/* mounted directory */
  	char *fsname;			/* file system name */
  	struct l_vfs *next;		/* forward link */
-@@ -565,7 +579,7 @@ struct sfile {
- #define	NCACHE_NODEADDR	nc_vp		/* node address in NCACHE */
- #define	NCACHE_PARADDR	nc_dvp		/* parent node address in NCACHE */
- 
--#  if	(defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000)
-+#  if	(defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000 && __NetBSD_Version__ < 999005400)
- #define	NCACHE_NXT	nc_hash.le_next	/* link in NCACHE */
- #  else	/* (defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000) */
- #   if	defined(NetBSD1_0) && NetBSD<1994101
-@@ -581,4 +595,12 @@ struct sfile {
+ };
+@@ -580,5 +594,13 @@
+ #define	NCACHE_NODEID	nc_vpid		/* node ID in NCACHE */
  #  endif	/* defined(HASNCVPID) */
  # endif  /* defined(HASNCACHE) */
  
