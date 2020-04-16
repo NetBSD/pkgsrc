@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2020/01/14 09:03:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/16 15:03:42 ryoon Exp $
 
-DISTNAME=	OpenJDK11U-jdk_x64_linux_hotspot_11.0.5_10
+DISTNAME=	OpenJDK11U-jdk_x64_linux_hotspot_11.0.7_10
 PKGNAME=	${DISTNAME:S/OpenJDK11U-jdk_x64_linux_hotspot_/adoptopenjdk11-bin-/:S/_/./:tl}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdoptOpenJDK/}
 GITHUB_PROJECT=	openjdk11-binaries
-GITHUB_RELEASE=	jdk-11.0.5+10
+GITHUB_RELEASE=	jdk-11.0.7+10
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://adoptopenjdk.net/
