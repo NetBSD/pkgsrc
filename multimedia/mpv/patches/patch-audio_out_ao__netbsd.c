@@ -1,10 +1,10 @@
-$NetBSD: patch-audio_out_ao__netbsd.c,v 1.6 2020/04/09 21:08:38 nia Exp $
+$NetBSD: patch-audio_out_ao__netbsd.c,v 1.7 2020/04/16 04:17:55 nia Exp $
 
 NetBSD audio support.
 
---- audio/out/ao_netbsd.c.orig	2020-04-09 21:05:57.443146477 +0000
+--- audio/out/ao_netbsd.c.orig	2020-04-16 04:14:21.934246800 +0000
 +++ audio/out/ao_netbsd.c
-@@ -0,0 +1,264 @@
+@@ -0,0 +1,268 @@
 +/*
 + * Copyright (c) 2020 Nia Alarie <nia@NetBSD.org>
 + * All rights reserved.
@@ -83,10 +83,14 @@ NetBSD audio support.
 +        goto fail;
 +    }
 +
++#ifdef AUDIO_GETFORMAT
 +    if (ioctl(p->fd, AUDIO_GETFORMAT, &hw_info) == -1) {
 +        MP_ERR(ao, "AUDIO_GETFORMAT failed: %s\n", mp_strerror(errno));
 +        goto fail;
 +    }
++#else
++    hw_info.play.sample_rate = 48000;
++#endif
 +
 +    info.mode = AUMODE_PLAY;
 +
