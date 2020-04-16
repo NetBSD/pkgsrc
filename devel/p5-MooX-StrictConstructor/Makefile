@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 13:19:54 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/04/16 11:37:20 mef Exp $
 
-DISTNAME=	MooX-StrictConstructor-0.010
+DISTNAME=	MooX-StrictConstructor-0.011
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/H/HA/HARTZELL/}
 
@@ -17,12 +16,13 @@ DEPENDS+=	p5-indirect-[0-9]*:../../devel/p5-indirect
 DEPENDS+=	p5-bareword-filehandles-[0-9]*:../../devel/p5-bareword-filehandles
 DEPENDS+=	p5-multidimensional-[0-9]*:../../devel/p5-multidimensional
 DEPENDS+=	p5-strictures-[0-9]*:../../devel/p5-strictures
-BUILD_DEPENDS+=	p5-Test-CPAN-Meta-[0-9]*:../../devel/p5-Test-CPAN-Meta
-BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
-BUILD_DEPENDS+=	p5-Pod-Coverage-[0-9]*:../../textproc/p5-Pod-Coverage
-BUILD_DEPENDS+=	p5-Pod-Coverage-TrustPod-[0-9]*:../../textproc/p5-Pod-Coverage-TrustPod
+
+TEST_DEPENDS+=	p5-Test-CPAN-Meta-[0-9]*:../../devel/p5-Test-CPAN-Meta
+TEST_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+TEST_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+TEST_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
+TEST_DEPENDS+=	p5-Pod-Coverage-[0-9]*:../../textproc/p5-Pod-Coverage
+TEST_DEPENDS+=	p5-Pod-Coverage-TrustPod-[0-9]*:../../textproc/p5-Pod-Coverage-TrustPod
 
 PERL5_PACKLIST=		auto/MooX/StrictConstructor/.packlist
 
