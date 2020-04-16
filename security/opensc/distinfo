@@ -1,13 +1,11 @@
-$NetBSD: distinfo,v 1.15 2018/10/13 10:54:04 mlelstv Exp $
+$NetBSD: distinfo,v 1.16 2020/04/16 12:37:51 manu Exp $
 
-SHA1 (opensc-0.19.0.tar.gz) = 7e4e52c15407b5e1642418068ae52a38b01cdaec
-RMD160 (opensc-0.19.0.tar.gz) = d589dc2d4371958e7e35e282c0f970b29eb18fbb
-SHA512 (opensc-0.19.0.tar.gz) = a54161b72e6ecea9d61d8bdf0fe0dbd0f97dd8fff0ce6ce344442d9dd9218779851054f8a9049c95c4276e69d3ab96afd0906ebb3278739c8f8e32ad3dbf2d4b
-Size (opensc-0.19.0.tar.gz) = 1607290 bytes
+SHA1 (opensc-0.20.0.tar.gz) = a03dab062dd033c5662f11ee39e53b84106c2c0d
+RMD160 (opensc-0.20.0.tar.gz) = 71003565bee88d9fb20723ad6b5ad68c627eff3b
+SHA512 (opensc-0.20.0.tar.gz) = 1360ee35f579cbeecf368777bb60d6c23ec2a80a2983328ea2c193530cc9b101a807ff1e2982ad34bfcc2bae2c867feecf300b6229d15057e796bd31ecffb02d
+Size (opensc-0.20.0.tar.gz) = 1653931 bytes
 SHA1 (patch-aa) = 5ca9245c763a9f8a8aa273e7e76c75168c52d0cd
 SHA1 (patch-ab) = 5ea2a3e623df6bc2c814c37ce89fed491149f8b4
 SHA1 (patch-configure.ac) = 9031a51162d883b3e3118820d400e07ef99dbad9
 SHA1 (patch-doc_tools_Makefile.am) = 4535988c6fbe4b9f45838362f2f9604c91fecd53
-SHA1 (patch-src_common_compat__getopt.h) = a9c4fad2d1fd73f5b2c245a364cfd37d838f51eb
-SHA1 (patch-src_common_compat__getopt__main.c) = 96d51499ea6d48bd53a17e3849c44ae4e0c9b669
-SHA1 (patch-src_libopensc_log.c) = e272654963cf03a459369fa512a79b46daa30720
+SHA1 (patch-src_libopensc_log.c) = 00acff447b1890b05cd3bea10ece8d42e7b6cf26

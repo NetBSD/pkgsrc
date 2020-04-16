@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.10 2018/10/13 10:54:04 mlelstv Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/04/16 12:37:51 manu Exp $
 bin/cardos-tool
 bin/cryptoflex-tool
 bin/dnie-tool
 bin/egk-tool
 bin/eidenv
 bin/gids-tool
+bin/goid-tool
 bin/iasecc-tool
 bin/netkey-tool
 bin/npa-tool
@@ -14,6 +15,7 @@ bin/opensc-explorer
 bin/opensc-notify
 bin/opensc-tool
 bin/piv-tool
+bin/pkcs11-register
 bin/pkcs11-tool
 bin/pkcs15-crypt
 bin/pkcs15-init
@@ -21,6 +23,7 @@ bin/pkcs15-tool
 bin/sc-hsm-tool
 bin/westcos-tool
 lib/libopensc.la
+etc/xdg/autostart/pkcs11-register.desktop
 lib/libsmm-local.la
 lib/onepin-opensc-pkcs11.la
 lib/opensc-pkcs11.la
@@ -82,6 +85,7 @@ share/opensc/openpgp.profile
 share/opensc/pkcs15.profile
 share/opensc/rutoken.profile
 share/opensc/rutoken_ecp.profile
+share/opensc/rutoken_lite.profile
 share/opensc/sc-hsm.profile
 share/opensc/setcos.profile
 share/opensc/starcos.profile
