@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2020/04/12 08:28:29 adam Exp $
+# $NetBSD: Makefile,v 1.67 2020/04/16 21:50:35 wiz Exp $
 
-DISTNAME=	cppcheck-1.76.1
-PKGREVISION=	24
+DISTNAME=	cppcheck-1.90
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppcheck/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,17 +18,17 @@ USE_LANGUAGES=		c c++0x
 USE_TOOLS+=		gmake
 
 BUILD_TARGET=		all man
-BUILD_MAKE_FLAGS+=	DB2MAN=${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl
-# tell cppcheck where its config is
-MAKE_FLAGS+=		CFGDIR=${PREFIX}/share/cppcheck/cfg
+BUILD_MAKE_FLAGS+=	DB2MAN=${PREFIX}/share/xsl/docbook/manpages/docbook.xsl
+# tell cppcheck where its CPP files are
+MAKE_FLAGS+=		FILESDIR=${PREFIX}/share/cppcheck
 # rules support (needs pcre)
 MAKE_FLAGS+=		HAVE_RULES=yes
 
 # use pkgsrc tinyxml2 instead of included copy
 MAKE_FLAGS+=		TINYXML=
-MAKE_FLAGS+=		INCLUDE_FOR_LIB="-Ilib -Iexternals/simplecpp"
-MAKE_FLAGS+=		INCLUDE_FOR_CLI="-Ilib -Iexternals/simplecpp"
-MAKE_FLAGS+=		INCLUDE_FOR_TEST="-Ilib -Icli -Iexternals/simplecpp"
+MAKE_FLAGS+=		INCLUDE_FOR_LIB="-Ilib -isystem externals -isystem externals/simplecpp"
+MAKE_FLAGS+=		INCLUDE_FOR_CLI="-Ilib -isystem externals/simplecpp"
+MAKE_FLAGS+=		INCLUDE_FOR_TEST="-Ilib -Icli -isystem externals/simplecpp"
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.tinyxml2}/include
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tinyxml2}/lib -L${BUILDLINK_PREFIX.tinyxml2}/lib -ltinyxml2
 
@@ -41,7 +40,6 @@ CXXFLAGS+= -include lib/cxx11emu.h
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 REPLACE_PYTHON+=	htmlreport/cppcheck-htmlreport
-REPLACE_PYTHON+=	addons/y2038/y2038.py
 
 .include "options.mk"
 
