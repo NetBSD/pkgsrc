@@ -1,21 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2015/04/16 20:21:19 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2020/04/16 09:03:47 manu Exp $
 
-After the tables are set up and the MySQL server is running,
-please remember to set a password for the MySQL root user!
-This is done by running both:
+To use the ``mysqlhotcopy'' script, you'll have to install the following
+package:
 
-  ${PREFIX}/bin/mysqladmin -u root -p password 'new-password'
-  ${PREFIX}/bin/mysqladmin -h `hostname` -u root -p password 'new-password'
-
-The "Enter password:" prompt is asking for the existing password.
-As there is no existing password, just press the Return key.
-
-There is a script distributed with MySQL that can help you lock down
-an installation.  This script has been installed to
-
-  ${PREFIX}/bin/mysql_secure_installation.
-
-Please see the manual and the MySQL web site for more instructions.
+	databases/p5-DBD-mysql
 
 ===========================================================================
