@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2319 2020/04/16 14:03:28 manu Exp $
+$NetBSD: CHANGES-2020,v 1.2320 2020/04/16 15:07:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3190,3 +3190,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Perl-Critic to 1.138 [mef 2020-04-16]
 	Updated devel/p5-Alien-Build to 2.21 [mef 2020-04-16]
 	Re-added mail/imapproxy [manu 2020-04-16]
+	Updated lang/adoptopenjdk11-bin to 11.0.7.10 [ryoon 2020-04-16]
