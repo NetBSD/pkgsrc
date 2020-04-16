@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2307 2020/04/16 04:28:10 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2308 2020/04/16 07:43:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3161,3 +3161,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added editors/fileobj version 0.7.96 [wiz 2020-04-15]
 	Updated sysutils/xenkernel411 to 4.11.1nb2 [bouyer 2020-04-15]
 	Added multimedia/sickgear version 0.21.26 [js 2020-04-15]
+	Updated fonts/py-fonttools to 4.7.0nb1 [adam 2020-04-16]
+	Updated www/py-daphne to 2.5.0 [adam 2020-04-16]
