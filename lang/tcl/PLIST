@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2018/12/09 18:33:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2020/04/16 17:07:07 adam Exp $
 bin/sqlite3_analyzer
 bin/tclsh
 bin/tclsh${BASEVER}
@@ -299,8 +299,8 @@ lib/tcl${BASEVER}/word.tcl
 lib/tcl8/8.4/platform-1.0.14.tm
 lib/tcl8/8.4/platform/shell-1.1.4.tm
 lib/tcl8/8.5/msgcat-1.6.1.tm
-lib/tcl8/8.5/tcltest-2.5.0.tm
-lib/tcl8/8.6/http-2.9.0.tm
+lib/tcl8/8.5/tcltest-2.5.1.tm
+lib/tcl8/8.6/http-2.9.1.tm
 lib/tcl8/8.6/tdbc/sqlite3-${TDBC_VERSION}.tm
 lib/tclConfig.sh
 lib/tclooConfig.sh
@@ -322,6 +322,9 @@ lib/thread${THREAD_VERSION}/libthread${THREAD_VERSION}.so
 lib/thread${THREAD_VERSION}/pkgIndex.tcl
 lib/thread${THREAD_VERSION}/ttrace.tcl
 man/man1/tclsh.1
+man/man3/DString.3
+man/man3/Notifier.3
+man/man3/RegExp.3
 man/man3/TCL_MEM_DEBUG.3
 man/man3/Tcl_Access.3
 man/man3/Tcl_AddErrorInfo.3
@@ -970,6 +973,7 @@ man/man3/Tcl_ZlibStreamGetCommandName.3
 man/man3/Tcl_ZlibStreamInit.3
 man/man3/Tcl_ZlibStreamPut.3
 man/man3/Tdbc_Init.3
+man/man3/Thread.3
 man/man3/attemptckalloc.3
 man/man3/attemptckrealloc.3
 man/man3/ckalloc.3
@@ -1051,6 +1055,7 @@ man/mann/itclwidget.n
 man/mann/join.n
 man/mann/lappend.n
 man/mann/lassign.n
+man/mann/library.n
 man/mann/lindex.n
 man/mann/linsert.n
 man/mann/list.n
@@ -1080,8 +1085,10 @@ man/mann/oo_objdefine.n
 man/mann/oo_object.n
 man/mann/open.n
 man/mann/package.n
+man/mann/packagens.n
 man/mann/parray.n
 man/mann/pid.n
+man/mann/pkgMkIndex.n
 man/mann/pkg_create.n
 man/mann/pkg_mkIndex.n
 man/mann/platform.n
@@ -1145,6 +1152,7 @@ man/mann/tell.n
 man/mann/thread.n
 man/mann/throw.n
 man/mann/time.n
+man/mann/timerate.n
 man/mann/tm.n
 man/mann/tpool.n
 man/mann/trace.n
