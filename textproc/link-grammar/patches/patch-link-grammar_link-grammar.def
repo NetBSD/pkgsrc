@@ -1,0 +1,13 @@
+$NetBSD: patch-link-grammar_link-grammar.def,v 1.1 2020/04/16 14:45:15 gutteridge Exp $
+
+Fix build on macOS and SunOS.
+https://github.com/opencog/link-grammar/pull/1092
+
+--- link-grammar/link-grammar.def.orig	2020-02-29 01:44:12.000000000 +0000
++++ link-grammar/link-grammar.def
+@@ -118,5 +118,4 @@ lg_error_clearall
+ lg_error_flush
+ lg_exp_stringify
+ prt_error
+-regex_tokenizer_test
+ utf8_strwidth
