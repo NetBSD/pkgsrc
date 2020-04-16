@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2315 2020/04/16 12:37:50 manu Exp $
+$NetBSD: CHANGES-2020,v 1.2316 2020/04/16 12:42:27 manu Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3171,3 +3171,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/openjdk11 to 1.11.0.7.10 [ryoon 2020-04-16]
 	Updated multimedia/adobe-flash-player to 32.0.0.363 [tsutsui 2020-04-16]
 	Updated security/opensc to 0.20.0 [manu 2020-04-16]
+	Updated security/libp11 to 0.4.10 [manu 2020-04-16]
