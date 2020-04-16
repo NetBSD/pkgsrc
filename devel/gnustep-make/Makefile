@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2019/11/03 10:39:13 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2020/04/16 09:21:51 manu Exp $
 
-DISTNAME=	gnustep-make-2.6.2
-PKGREVISION=	2
+DISTNAME=	gnustep-make-2.8.0
+#PKGREVISION=	1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -21,8 +21,10 @@ CONFIGURE_ARGS+=	--with-config-file=${PKG_SYSCONFDIR}/GNUstep.conf
 CONFIGURE_ARGS+=	--with-objc-lib-flag="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lobjc"
 MAKE_FILE=		GNUmakefile
 
-CONF_FILES+=		${PREFIX}/share/examples/GNUstep/GNUstep.conf \
+CONF_FILES+=		${PREFIX}/share/examples/GNUstep/GNUstep-strict-v2.conf\
 			${PKG_SYSCONFDIR}/GNUstep.conf
+
+REPLACE_BASH+=		bake_debian_files.sh
 
 .include "gnustep.mk"
 .include "../../mk/pthread.buildlink3.mk"
@@ -32,9 +34,6 @@ PTHREAD_LIBS+=		-lpth
 .endif
 
 CONFIGURE_ARGS+=	--with-thread-lib=${PTHREAD_LIBS:Q}
-.if empty(PKG_OPTIONS:Mfragile)
-CONFIGURE_ARGS+=	--enable-objc-nonfragile-abi
-.endif
 
 .if ${MACHINE_ARCH} == "i386"
 GNUSTEP_ARCH=	ix86

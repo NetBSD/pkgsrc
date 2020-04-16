@@ -1,8 +1,9 @@
-$NetBSD: patch-ad,v 1.11 2012/10/22 02:06:19 rh Exp $
+$NetBSD: patch-ad,v 1.12 2020/04/16 09:21:51 manu Exp $
 
---- configure.orig	2011-05-03 15:28:07.000000000 +0000
-+++ configure
-@@ -2918,13 +2918,13 @@ $as_echo "$ac_cv_prog_cc_g" >&6; }
+--- configure.orig	2020-04-05 16:59:54.000000000 +0200
++++ configure	2020-04-14 10:31:20.723580801 +0200
+@@ -3442,15 +3442,15 @@
+ $as_echo "$ac_cv_prog_cc_g" >&6; }
  if test "$ac_test_CFLAGS" = set; then
    CFLAGS=$ac_save_CFLAGS
  elif test $ac_cv_prog_cc_g = yes; then
@@ -18,7 +19,9 @@ $NetBSD: patch-ad,v 1.11 2012/10/22 02:06:19 rh Exp $
      CFLAGS="-O2"
    else
      CFLAGS=
-@@ -5484,7 +5484,7 @@ fi
+   fi
+@@ -7462,18 +7462,18 @@
+ fi
  
    fi
    if test x"$objc_threaded" = x""; then
@@ -27,7 +30,8 @@ $NetBSD: patch-ad,v 1.11 2012/10/22 02:06:19 rh Exp $
      if test "$cross_compiling" = yes; then :
    objc_threaded=""
  else
-@@ -5493,7 +5493,7 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
  #include "config_thread.m"
  _ACEOF
  if ac_fn_c_try_run "$LINENO"; then :
@@ -36,3 +40,4 @@ $NetBSD: patch-ad,v 1.11 2012/10/22 02:06:19 rh Exp $
  else
    objc_threaded=""
  fi
+ rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \

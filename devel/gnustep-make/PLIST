@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2012/10/22 02:06:19 rh Exp $
+@comment $NetBSD: PLIST,v 1.23 2020/04/16 09:21:51 manu Exp $
 bin/debugapp
 bin/gnustep-config
 bin/gnustep-tests
@@ -6,6 +6,7 @@ bin/openapp
 bin/opentool
 man/man1/debugapp.1
 man/man1/gnustep-config.1
+man/man1/gnustep-tests.1.gz
 man/man1/openapp.1
 man/man1/opentool.1
 man/man7/GNUstep.7
@@ -22,6 +23,7 @@ share/GNUstep/Makefiles/Instance/Documentation/texi.make
 share/GNUstep/Makefiles/Instance/Shared/bundle.make
 share/GNUstep/Makefiles/Instance/Shared/headers.make
 share/GNUstep/Makefiles/Instance/Shared/java.make
+share/GNUstep/Makefiles/Instance/Shared/pkgconfig.make
 share/GNUstep/Makefiles/Instance/Shared/stamp-string.make
 share/GNUstep/Makefiles/Instance/Shared/strings.make
 share/GNUstep/Makefiles/Instance/application.make
@@ -49,6 +51,7 @@ share/GNUstep/Makefiles/Master/application.make
 share/GNUstep/Makefiles/Master/bundle.make
 share/GNUstep/Makefiles/Master/clibrary.make
 share/GNUstep/Makefiles/Master/ctool.make
+share/GNUstep/Makefiles/Master/deb.make
 share/GNUstep/Makefiles/Master/documentation.make
 share/GNUstep/Makefiles/Master/framework.make
 share/GNUstep/Makefiles/Master/gswapp.make
@@ -88,6 +91,7 @@ share/GNUstep/Makefiles/TestFramework/example9.m
 share/GNUstep/Makefiles/aggregate.make
 share/GNUstep/Makefiles/app-wrapper.template
 share/GNUstep/Makefiles/application.make
+share/GNUstep/Makefiles/bake_debian_files.sh
 share/GNUstep/Makefiles/bundle.make
 share/GNUstep/Makefiles/clean_cpu.sh
 share/GNUstep/Makefiles/clean_os.sh
@@ -143,7 +147,7 @@ share/GNUstep/Makefiles/test-library.make
 share/GNUstep/Makefiles/test-tool.make
 share/GNUstep/Makefiles/tool.make
 share/GNUstep/Makefiles/vendor.sh
-share/examples/GNUstep/GNUstep.conf
+share/examples/GNUstep/GNUstep-strict-v2.conf
 @pkgdir share/GNUstep/Makefiles/${GNUSTEP_ARCH}
 @pkgdir share/GNUstep/Makefiles/Auxiliary
 @pkgdir share/GNUstep/Makefiles/Additional
