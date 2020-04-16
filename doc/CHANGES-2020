@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2311 2020/04/16 09:28:39 manu Exp $
+$NetBSD: CHANGES-2020,v 1.2312 2020/04/16 09:35:35 manu Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3167,3 +3167,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/mariadb55-server to 5.5.67 [manu 2020-04-16]
 	Updated devel/gnustep-make to 2.8.0 [manu 2020-04-16]
 	Updated devel/gnustep-objc to 1.8.1 [manu 2020-04-16]
+	Updated devel/gnustep-base to 1.27.0 [manu 2020-04-16]
