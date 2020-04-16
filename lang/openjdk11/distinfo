@@ -1,17 +1,13 @@
-$NetBSD: distinfo,v 1.10 2020/03/25 18:15:15 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2020/04/16 11:51:26 ryoon Exp $
 
 SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = d76599619b8bea879b8202b3efc38a82335d2e8c
 RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = a1b998e4e7edfb73ec35b0cc94895d9af16a8cd8
 SHA512 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = 6e61996f7e3c3492b0c878644db30d72021dc4096639992e53b4440d4e2e18cd92e5630ecd4600d1917a1e63a7c814b63f74f811a40588febfe19ad8d3208a9d
 Size (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = 105760636 bytes
-SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz) = 0ab80546e192cff461dfadf85ca8dc42d11a2710
-RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz) = ec41da372ab1f927295a207a65a2a5f940760339
-SHA512 (bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz) = 1bf5336e9bfeea9ecbcd347f2ea8dd3c9633df42cab13a09c7afaae94faa95b92d862dd97caf380a7037825c3324377240d5d0639b2e0b31a2d7a6316ed56359
-Size (bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz) = 96662264 bytes
-SHA1 (openjdk-jdk11u-jdk-11.0.6-10-1.tar.gz) = 38f6a56467a62a68803628d15655561c67bbc43b
-RMD160 (openjdk-jdk11u-jdk-11.0.6-10-1.tar.gz) = 8215758ada6a24d3e2bf3268a4be462b03cfdfb6
-SHA512 (openjdk-jdk11u-jdk-11.0.6-10-1.tar.gz) = ecbf20dfb1eaa1a089a2e47449030ff3922e6dd1ad6b8a0432b96783c6e004eaf6b5702023856d6710e39e6d496f8d0a33559fce2f2fb1b75e69407019e5ca2b
-Size (openjdk-jdk11u-jdk-11.0.6-10-1.tar.gz) = 117035292 bytes
+SHA1 (openjdk-jdk11u-jdk-11.0.7-10-2.tar.gz) = a4a3ae9f7d214d08b89ff16a5f794e0650a15288
+RMD160 (openjdk-jdk11u-jdk-11.0.7-10-2.tar.gz) = e46bb700a915d30f22e7e29a7f533b55c16c8e21
+SHA512 (openjdk-jdk11u-jdk-11.0.7-10-2.tar.gz) = 79d35e9f78e3823154fa009cfd99d57841368fcec5db63fb1375cb447116a00d65bb81d3f73de26ae1c730384ab0cc7741276835a40eb34300d60ec08cab7b8c
+Size (openjdk-jdk11u-jdk-11.0.7-10-2.tar.gz) = 117654998 bytes
 SHA1 (patch-make_autoconf_basics.m4) = 5a8d3cd229f73eef34fb3860dfae1a813ec39ab5
 SHA1 (patch-make_autoconf_flags-cflags.m4) = 7ec010eb62a1e4f057b7886caf0d0efaae4b6b63
 SHA1 (patch-make_autoconf_jdk-options.m4) = d0d9fbaf29cc521fa4b62b1ea2616dc8f3b07618
@@ -26,7 +22,7 @@ SHA1 (patch-src_hotspot_cpu_aarch64_vm__version__aarch64.hpp) = 042ae280b0988c94
 SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_bytes__bsd__aarch64.inline.hpp) = 4153d3a12ffc24de868b2fd97498dbdf7645e499
 SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_os__bsd__aarch64.cpp) = 190f56e8c725884712d850e096955d6d694e902d
 SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_vm__version__bsd__aarch64.cpp) = abbfd0f9bd79e6363ffb050b48d081b7d1c3a8e1
-SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 86d9772592524f4119b4cf99671ac4d1224a28da
+SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 6322cbdda03dee528e89ac8b725f3df5e2165797
 SHA1 (patch-src_hotspot_os_bsd_os__perf__bsd.cpp) = 7bb57f82f3a93adc1970ed4215148fc02ecbcd5a
 SHA1 (patch-src_hotspot_os_posix_os__posix.cpp) = e70e8c1e59f0be184a7a1d6e9d11ac7b934ce4b2
 SHA1 (patch-src_hotspot_share_libadt_dict.cpp) = ad7ee25e66232b07db6abe7b13f9d6ed05a61202
