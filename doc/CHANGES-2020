@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2322 2020/04/16 15:10:34 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2323 2020/04/16 15:49:41 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3194,3 +3194,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/adoptopenjdk11-bin to 11.0.7.10 [ryoon 2020-04-16]
 	Updated www/apache-tomcat9 to 9.0.34 [ryoon 2020-04-16]
 	Updated devel/p5-Proc-Background to 1.21 [mef 2020-04-16]
+	Updated net/freeradius to 3.0.21nb1 [jperkin 2020-04-16]
