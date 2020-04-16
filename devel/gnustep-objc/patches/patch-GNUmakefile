@@ -1,34 +1,41 @@
-$NetBSD: patch-GNUmakefile,v 1.1 2016/11/16 22:46:49 wiedi Exp $
+$NetBSD: patch-GNUmakefile,v 1.2 2020/04/16 09:28:39 manu Exp $
 
-- only use -no-integrated-as with clang
-- _XOPEN_SOURCE=500 conflicts with c99
+Install fixes
 
---- GNUmakefile.orig	2012-03-21 16:45:31.000000000 +0000
-+++ GNUmakefile
-@@ -81,7 +81,7 @@ ${LIBOBJC}_OBJ_FILES = \
+--- GNUmakefile.orig	2015-08-07 13:33:41.000000000 +0200
++++ GNUmakefile	2020-04-15 03:22:59.875513487 +0200
+@@ -78,22 +78,22 @@
  
- # Add rule for producing object files from assembler
- $(GNUSTEP_OBJ_INSTANCE_DIR)/%.S$(OEXT) : %.S
--	$(ECHO_COMPILING)$(CC) -no-integrated-as $< -c \
-+	$(ECHO_COMPILING)$(CC) $(ASMFLAGS) $< -c \
- 	      $(filter-out $($<_FILE_FILTER_OUT_FLAGS),$(ALL_CPPFLAGS) \
- 	                                                $(ALL_CFLAGS)) \
- 	      $($<_FILE_FLAGS) -o $@$(END_ECHO)
-@@ -153,7 +153,7 @@ endif
- # we are special, precious, little flowers.
- ${LIBOBJC}_CPPFLAGS +=\
- 	-D__OBJC_RUNTIME_INTERNAL__=1\
--	-D_XOPEN_SOURCE=500\
-+	-D_XOPEN_SOURCE=600\
- 	-D__BSD_VISIBLE=1\
- 	-D_BSD_SOURCE=1\
- 
-@@ -164,6 +164,8 @@ ${LIBOBJC}_CFLAGS += -std=gnu99 -g -fexc
- ${LIBOBJC}_CCFLAGS += -std=c++98 -g -fexceptions #-fvisibility=hidden
- ${LIBOBJC}_CFLAGS += -Wno-unused-function
- 
-+ASMFLAGS += `if $(CC) -v 2>&1| grep -q 'clang' ; then echo -no-integrated-as ; fi`
-+
- # Uncomment this when debugging - it makes everything slow, but means that the
- # debugger actually works...
- ifeq ($(debug), yes)
+ install: all
+ 	$(SILENT)echo Installing libraries...
+ 	$(SILENT)install -d $(LIB_DIR)
+-	$(SILENT)install -m 444 $(STRIP) $(LIBOBJC).so.$(VERSION) $(LIB_DIR)
+-	$(SILENT)install -m 444 $(STRIP) $(LIBOBJCXX).so.$(VERSION) $(LIB_DIR)
+-	$(SILENT)install -m 444 $(STRIP) $(LIBOBJC).a $(LIB_DIR)
++	$(SILENT)install -m 444 $(STRIP) $(LIBOBJC).so.$(VERSION) $(DESTDIR)/$(LIB_DIR)
++	$(SILENT)install -m 444 $(STRIP) $(LIBOBJCXX).so.$(VERSION) $(DESTDIR)/$(LIB_DIR)
++	#$(SILENT)install -m 444 $(STRIP) $(LIBOBJC).a $(LIB_DIR)
+ 	$(SILENT)echo Creating symbolic links...
+-	$(SILENT)ln -sf $(LIBOBJC).so.$(VERSION) $(LIB_DIR)/$(LIBOBJC).so
+-	$(SILENT)ln -sf $(LIBOBJC).so.$(VERSION) $(LIB_DIR)/$(LIBOBJC).so.$(MAJOR_VERSION)
+-	$(SILENT)ln -sf $(LIBOBJC).so.$(VERSION) $(LIB_DIR)/$(LIBOBJC).so.$(MAJOR_VERSION).$(MINOR_VERSION)
+-	$(SILENT)ln -sf $(LIBOBJCXX).so.$(VERSION) $(LIB_DIR)/$(LIBOBJCXX).so
+-	$(SILENT)ln -sf $(LIBOBJCXX).so.$(VERSION) $(LIB_DIR)/$(LIBOBJCXX).so.$(MAJOR_VERSION)
+-	$(SILENT)ln -sf $(LIBOBJCXX).so.$(VERSION) $(LIB_DIR)/$(LIBOBJCXX).so.$(MAJOR_VERSION).$(MINOR_VERSION)
++	$(SILENT)ln -sf $(LIBOBJC).so.$(VERSION) $(DESTDIR)$(LIB_DIR)/$(LIBOBJC).so
++	$(SILENT)ln -sf $(LIBOBJC).so.$(VERSION) $(DESTDIR)$(LIB_DIR)/$(LIBOBJC).so.$(MAJOR_VERSION)
++	#$(SILENT)ln -sf $(LIBOBJC).so.$(VERSION) $(DESTDIR)$(LIB_DIR)/$(LIBOBJC).so.$(MAJOR_VERSION).$(MINOR_VERSION)
++	$(SILENT)ln -sf $(LIBOBJCXX).so.$(VERSION) $(DESTDIR)$(LIB_DIR)/$(LIBOBJCXX).so
++	$(SILENT)ln -sf $(LIBOBJCXX).so.$(VERSION) $(DESTDIR)$(LIB_DIR)/$(LIBOBJCXX).so.$(MAJOR_VERSION)
++	#$(SILENT)ln -sf $(LIBOBJCXX).so.$(VERSION) $(DESTDIR)$(LIB_DIR)/$(LIBOBJCXX).so.$(MAJOR_VERSION).$(MINOR_VERSION)
+ 	$(SILENT)echo Installing headers...
+-	$(SILENT)install -d $(HEADER_DIR)/objc
+-	$(SILENT)install -m 444 objc/*.h $(HEADER_DIR)/objc
+-	$(SILENT)install -m 444 objc/*.h $(HEADER_DIR)/objc
++	$(SILENT)install -d $(DESTDIR)$(HEADER_DIR)/objc
++	$(SILENT)install -m 444 objc/*.h $(DESTDIR)$(HEADER_DIR)/objc
++	$(SILENT)install -m 444 objc/*.h $(DESTDIR)$(HEADER_DIR)/objc
+ 	$(SILENT)echo "To use the newly installed objc2 library with GNUstep,"
+ 	$(SILENT)echo "please change to your gnustep-make directory and"
+ 	$(SILENT)echo "type 'configure; make install' to tell gnustep-make"
+ 	$(SILENT)echo "to use the new library (you will then need to configure" 
