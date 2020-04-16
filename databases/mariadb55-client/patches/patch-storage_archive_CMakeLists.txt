@@ -1,11 +1,12 @@
-$NetBSD: patch-storage_archive_CMakeLists.txt,v 1.1 2015/04/16 20:20:15 ryoon Exp $
+$NetBSD: patch-storage_archive_CMakeLists.txt,v 1.2 2020/04/16 09:03:47 manu Exp $
 
 Build with newer DTrace.
 
---- storage/archive/CMakeLists.txt.orig	2015-02-13 12:07:04.000000000 +0000
-+++ storage/archive/CMakeLists.txt
-@@ -14,5 +14,6 @@
- # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+--- storage/archive/CMakeLists.txt.orig	2020-04-09 14:33:09.860833494 +0200
++++ storage/archive/CMakeLists.txt	2020-04-09 14:33:33.288439148 +0200
+@@ -13,6 +13,7 @@
+ # along with this program; if not, write to the Free Software
+ # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1335 USA
  
  SET(ARCHIVE_SOURCES  azio.c ha_archive.cc ha_archive.h)
 -MYSQL_ADD_PLUGIN(archive ${ARCHIVE_SOURCES} STORAGE_ENGINE LINK_LIBRARIES ${ZLIB_LIBRARY})
