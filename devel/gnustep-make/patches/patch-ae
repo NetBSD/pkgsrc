@@ -1,8 +1,9 @@
-$NetBSD: patch-ae,v 1.9 2012/10/22 02:06:19 rh Exp $
+$NetBSD: patch-ae,v 1.10 2020/04/16 09:21:51 manu Exp $
 
---- GNUmakefile.in.orig	2011-03-16 10:25:42.000000000 +0000
-+++ GNUmakefile.in
-@@ -180,9 +180,9 @@ install: generated-files
+--- GNUmakefile.in.orig	2020-04-05 16:59:54.000000000 +0200
++++ GNUmakefile.in	2020-04-14 10:31:20.761270469 +0200
+@@ -200,11 +200,11 @@
+ 		"$(makedir)/Instance" \
  		"$(makedir)/Instance/Shared" \
  		"$(makedir)/Instance/Documentation" \
  		"$(testdir)")
@@ -15,3 +16,4 @@ $NetBSD: patch-ae,v 1.9 2012/10/22 02:06:19 rh Exp $
  	 $(EC)(echo "Installing gnustep-make support software")
  	 $(EC)(for f in config.guess config.sub install-sh mkinstalldirs \
  		clean_cpu.sh clean_os.sh \
+ 		clean_vendor.sh cpu.sh os.sh vendor.sh \
