@@ -1,22 +1,21 @@
-$NetBSD: patch-pkgs_tdbcpostgres1.1.0_configure,v 1.1 2018/12/09 18:33:55 adam Exp $
+$NetBSD: patch-pkgs_sqlite3.30.1.2_configure,v 1.1 2020/04/16 17:07:07 adam Exp $
 
 Honor LDFLAGS on NetBSD.
 https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
 
---- pkgs/tdbcpostgres1.1.0/configure.orig	2018-11-01 16:09:49.000000000 +0000
-+++ pkgs/tdbcpostgres1.1.0/configure
-@@ -7393,7 +7393,7 @@ fi
+--- pkgs/sqlite3.30.1.2/configure.orig	2019-11-21 19:01:58.000000000 +0000
++++ pkgs/sqlite3.30.1.2/configure
+@@ -6876,20 +6876,18 @@ fi
  fi
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
  	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
 -	    LDFLAGS="-Wl,-export-dynamic"
 +	    LDFLAGS="-Wl,--export-dynamic"
  	    CFLAGS_OPTIMIZE="-O2"
- 	    if test "${TCL_THREADS}" = "1"; then :
- 
-@@ -7404,13 +7404,11 @@ fi
- 
- fi
+ 	    # On OpenBSD:	Compile with -pthread
+ 	    #		Don't link with -lpthread
+ 	    LIBS=`echo $LIBS | sed s/-lpthread//`
+ 	    CFLAGS="$CFLAGS -pthread"
  	    # OpenBSD doesn't do version numbers with dots.
 -	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
 -	    TCL_LIB_VERSIONS_OK=nodots
@@ -29,7 +28,7 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  	    SHLIB_SUFFIX=".so"
  	    LDFLAGS="$LDFLAGS -export-dynamic"
  	    if test $doRpath = yes; then :
-@@ -7449,10 +7447,6 @@ fi
+@@ -6921,10 +6919,6 @@ fi
  	    case $system in
  	    FreeBSD-3.*)
  		# Version numbers are dot-stripped by system policy.
