@@ -1,9 +1,20 @@
-$NetBSD: patch-af,v 1.19 2020/04/16 09:47:26 manu Exp $
-
+$NetBSD: patch-af,v 1.20 2020/04/16 12:28:36 manu Exp $
 
 --- dialects/n+obsd/dlsof.h.orig	2006-03-28 23:54:15.000000000 +0200
-+++ dialects/n+obsd/dlsof.h	2020-04-10 16:35:54.222640631 +0200
-@@ -94,8 +94,12 @@
++++ dialects/n+obsd/dlsof.h	2020-04-16 14:25:29.349520955 +0200
+@@ -45,8 +45,11 @@
+ #include <setjmp.h>
+ #include <signal.h>
+ #include <string.h>
+ #include <unistd.h>
++#if (!defined(NETBSDV) || __NetBSD_Version__<900000000)
++#include <sys/ptrace.h> /* pulled in by procfs.h, but needs to be pulled in before _KERNEL is defined */
++#endif
+ 
+ # if	defined(HASGETBOOTFILE)
+ #include <util.h>
+ # endif	/* defined(HASGETBOOTFILE) */
+@@ -94,8 +97,12 @@
  #define	_KERNEL
  # endif	/* (defined(OPENBSDV) && OPENBSDV<3030)
  	   || (defined(NETBSDV) && __NetBSD_Version__>=106060000) */
@@ -16,7 +27,7 @@ $NetBSD: patch-af,v 1.19 2020/04/16 09:47:26 manu Exp $
  
  # if	(defined(OPENBSDV) && OPENBSDV>=3030) \
    ||	(defined(NETBSDV) && __NetBSD_Version__>=106060000)
-@@ -105,12 +109,8 @@
+@@ -105,12 +112,8 @@
  
  #include <rpc/types.h>
  #include <sys/protosw.h>
@@ -29,7 +40,7 @@ $NetBSD: patch-af,v 1.19 2020/04/16 09:47:26 manu Exp $
  
  # if	defined(HASMSDOSFS)
  #  if	HASMSDOSFS==1
-@@ -146,8 +146,11 @@
+@@ -146,8 +149,11 @@
  #  endif	/* (defined(OPENBSDV) && OPENBSDV<3030)
  		   || (defined(NETBSDV) && __NetBSD_Version__<106060000) */
  
@@ -41,7 +52,7 @@ $NetBSD: patch-af,v 1.19 2020/04/16 09:47:26 manu Exp $
  #include <msdosfs/msdosfsmount.h>
  #undef	_KERNEL
  #include <msdosfs/direntry.h>
-@@ -160,8 +163,9 @@
+@@ -160,8 +166,9 @@
  
  #include <sys/socketvar.h>
  #include <sys/un.h>
@@ -51,7 +62,7 @@ $NetBSD: patch-af,v 1.19 2020/04/16 09:47:26 manu Exp $
  #include <netinet/in_systm.h>
  #include <netinet/ip.h>
  
-@@ -169,9 +173,8 @@
+@@ -169,9 +176,8 @@
  #include <netinet/ip6.h>
  #include <netinet6/in6_pcb.h>
  # endif	/* defined(HASIPv6) && defined(NETBSDV) && !defined(HASINRIAIPv6) */
@@ -61,7 +72,7 @@ $NetBSD: patch-af,v 1.19 2020/04/16 09:47:26 manu Exp $
  #include <netinet/ip_var.h>
  #include <netinet/tcp.h>
  #include <netinet/tcpip.h>
-@@ -263,8 +266,11 @@
+@@ -263,8 +269,11 @@
  #endif	/* defined(HASBUFQ_H) */
  
  #undef KERNEL
@@ -73,17 +84,19 @@ $NetBSD: patch-af,v 1.19 2020/04/16 09:47:26 manu Exp $
  # if	defined(HASNFSPROTO)
  #include <nfs/rpcv2.h>
  #include <nfs/nfsproto.h>
-@@ -359,8 +365,9 @@
+@@ -359,8 +368,11 @@
  # if	defined(HASPROCFS)
  #  if	defined(HASPROCFS_PFSROOT)
  #define	_KERNEL
  #  endif	/* defined(HASPROCFS_PFSROOT) */
++#if (defined(NETBSDV) && __NetBSD_Version__>=900000000)
 +#include <sys/ptrace.h>
++#endif
  #include <miscfs/procfs/procfs.h>
  #  if	defined(HASPROCFS_PFSROOT)
  #undef	_KERNEL
  #define	Proot		PFSroot
-@@ -369,9 +376,8 @@
+@@ -369,9 +381,8 @@
  #define	Pmem		PFSmem
  #define	Pregs		PFSregs
  #define	Pfile		PFSfile
@@ -93,7 +106,7 @@ $NetBSD: patch-af,v 1.19 2020/04/16 09:47:26 manu Exp $
  #define	Pnote		PFSnote
  #define	Pnotepg		PFSnotepg
  #   if	defined(NetBSDV)
-@@ -381,8 +387,11 @@
+@@ -381,8 +392,11 @@
  #    if	NETBSDV>=1006000
  #define	Pmap		PFSmap
  #define	Pmaps		PFSmaps
@@ -105,7 +118,7 @@ $NetBSD: patch-af,v 1.19 2020/04/16 09:47:26 manu Exp $
  #  endif	/* defined(HASPROCFS_PFSROOT) */
  #include <machine/reg.h>
  # endif	/* defined(HASPROCFS) */
-@@ -488,9 +497,14 @@
+@@ -488,9 +502,14 @@
  
  struct l_vfs {
  	KA_T addr;			/* kernel address */
@@ -120,7 +133,18 @@ $NetBSD: patch-af,v 1.19 2020/04/16 09:47:26 manu Exp $
  	char *fsname;			/* file system name */
  	struct l_vfs *next;		/* forward link */
  };
-@@ -580,5 +594,13 @@
+@@ -564,9 +583,9 @@
+ #define	NCACHE_NMLEN	nc_nlen		/* name length in NCACHE */
+ #define	NCACHE_NODEADDR	nc_vp		/* node address in NCACHE */
+ #define	NCACHE_PARADDR	nc_dvp		/* parent node address in NCACHE */
+ 
+-#  if	(defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000)
++#  if	(defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000 && __NetBSD_Version__ < 999005400)
+ #define	NCACHE_NXT	nc_hash.le_next	/* link in NCACHE */
+ #  else	/* (defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000) */
+ #   if	defined(NetBSD1_0) && NetBSD<1994101
+ #define	NCACHE_NXT	nc_nxt		/* link in NCACHE */
+@@ -580,5 +599,13 @@
  #define	NCACHE_NODEID	nc_vpid		/* node ID in NCACHE */
  #  endif	/* defined(HASNCVPID) */
  # endif  /* defined(HASNCACHE) */
