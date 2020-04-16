@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2325 2020/04/16 17:37:08 joerg Exp $
+$NetBSD: CHANGES-2020,v 1.2326 2020/04/16 18:32:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3198,3 +3198,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/tcl to 8.6.10 [adam 2020-04-16]
 	Updated x11/tk to 8.6.10 [adam 2020-04-16]
 	Added lang/libobjc2 version 2.0 [joerg 2020-04-16]
+	Updated www/py-urllib3 to 1.25.9 [adam 2020-04-16]
+	Updated devel/py-xdis to 4.3.1 [adam 2020-04-16]
