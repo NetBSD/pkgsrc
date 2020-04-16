@@ -1,4 +1,4 @@
 MariaDB is a fork of MySQL relational database management system.
 It is an enhanced, drop-in replacement for MySQL.
 
-This package contains client libraries.
+This package contains server programs.
