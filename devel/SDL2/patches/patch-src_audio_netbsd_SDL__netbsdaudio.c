@@ -1,4 +1,4 @@
-$NetBSD: patch-src_audio_netbsd_SDL__netbsdaudio.c,v 1.5 2020/04/08 14:41:33 nia Exp $
+$NetBSD: patch-src_audio_netbsd_SDL__netbsdaudio.c,v 1.6 2020/04/16 04:12:39 nia Exp $
 
 Use the preferred hardware sample rate
 https://bugzilla.libsdl.org/show_bug.cgi?id=5080
@@ -17,15 +17,19 @@ https://bugzilla.libsdl.org/show_bug.cgi?id=5076
      struct audio_prinfo *prinfo = iscapture ? &info.record : &info.play;
  
      /* We don't care what the devname is...we'll try to open anything. */
-@@ -232,8 +232,16 @@ NETBSDAUDIO_OpenDevice(_THIS, void *hand
+@@ -232,8 +232,20 @@ NETBSDAUDIO_OpenDevice(_THIS, void *hand
      }
  
      AUDIO_INITINFO(&info);
 +    AUDIO_INITINFO(&hwinfo);
 +
++#ifdef AUDIO_GETFORMAT
 +    if (ioctl(this->hidden->audio_fd, AUDIO_GETFORMAT, &hwinfo) == -1) {
 +        return SDL_SetError("Couldn't get device format %s: %s", devname, strerror(errno));
 +    }
++#else
++    hwinfo.record.sample_rate = hwinfo.play.sample_rate = 48000;
++#endif
  
      prinfo->encoding = AUDIO_ENCODING_NONE;
 +    prinfo->channels = this->spec.channels;
@@ -34,7 +38,7 @@ https://bugzilla.libsdl.org/show_bug.cgi?id=5076
  
      for (format = SDL_FirstAudioFormat(this->spec.format); format;) {
          switch (format) {
-@@ -261,6 +269,14 @@ NETBSDAUDIO_OpenDevice(_THIS, void *hand
+@@ -261,6 +273,14 @@ NETBSDAUDIO_OpenDevice(_THIS, void *hand
              prinfo->encoding = AUDIO_ENCODING_ULINEAR_BE;
              prinfo->precision = 16;
              break;
@@ -49,7 +53,7 @@ https://bugzilla.libsdl.org/show_bug.cgi?id=5076
          }
          if (prinfo->encoding != AUDIO_ENCODING_NONE) {
              break;
-@@ -274,21 +290,18 @@ NETBSDAUDIO_OpenDevice(_THIS, void *hand
+@@ -274,21 +294,18 @@ NETBSDAUDIO_OpenDevice(_THIS, void *hand
  
      this->spec.format = format;
  
