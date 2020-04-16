@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/04/15 15:09:05 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/16 20:00:45 js Exp $
 
 DISTNAME=	jsonrpclib-pelix-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,5 +12,5 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
