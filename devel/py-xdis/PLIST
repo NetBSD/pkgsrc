@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/12/11 13:18:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/04/16 18:32:32 adam Exp $
 bin/pydisasm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -18,9 +18,27 @@ ${PYSITELIB}/xdis/bin/pydisasm.pyo
 ${PYSITELIB}/xdis/bytecode.py
 ${PYSITELIB}/xdis/bytecode.pyc
 ${PYSITELIB}/xdis/bytecode.pyo
-${PYSITELIB}/xdis/code.py
-${PYSITELIB}/xdis/code.pyc
-${PYSITELIB}/xdis/code.pyo
+${PYSITELIB}/xdis/codetype/__init__.py
+${PYSITELIB}/xdis/codetype/__init__.pyc
+${PYSITELIB}/xdis/codetype/__init__.pyo
+${PYSITELIB}/xdis/codetype/base.py
+${PYSITELIB}/xdis/codetype/base.pyc
+${PYSITELIB}/xdis/codetype/base.pyo
+${PYSITELIB}/xdis/codetype/code13.py
+${PYSITELIB}/xdis/codetype/code13.pyc
+${PYSITELIB}/xdis/codetype/code13.pyo
+${PYSITELIB}/xdis/codetype/code15.py
+${PYSITELIB}/xdis/codetype/code15.pyc
+${PYSITELIB}/xdis/codetype/code15.pyo
+${PYSITELIB}/xdis/codetype/code20.py
+${PYSITELIB}/xdis/codetype/code20.pyc
+${PYSITELIB}/xdis/codetype/code20.pyo
+${PYSITELIB}/xdis/codetype/code30.py
+${PYSITELIB}/xdis/codetype/code30.pyc
+${PYSITELIB}/xdis/codetype/code30.pyo
+${PYSITELIB}/xdis/codetype/code38.py
+${PYSITELIB}/xdis/codetype/code38.pyc
+${PYSITELIB}/xdis/codetype/code38.pyo
 ${PYSITELIB}/xdis/dropbox/__init__.py
 ${PYSITELIB}/xdis/dropbox/__init__.pyc
 ${PYSITELIB}/xdis/dropbox/__init__.pyo
@@ -162,6 +180,9 @@ ${PYSITELIB}/xdis/verify.pyo
 ${PYSITELIB}/xdis/version.py
 ${PYSITELIB}/xdis/version.pyc
 ${PYSITELIB}/xdis/version.pyo
+${PYSITELIB}/xdis/version_info.py
+${PYSITELIB}/xdis/version_info.pyc
+${PYSITELIB}/xdis/version_info.pyo
 ${PYSITELIB}/xdis/wordcode.py
 ${PYSITELIB}/xdis/wordcode.pyc
 ${PYSITELIB}/xdis/wordcode.pyo
