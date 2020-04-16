@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2019/10/25 14:04:47 mef Exp $
+$NetBSD: distinfo,v 1.14 2020/04/16 10:53:10 mef Exp $
 
-SHA1 (Modern-Perl-1.20190727.tar.gz) = 36d95956063f5e74594d79e1317355542e5492e9
-RMD160 (Modern-Perl-1.20190727.tar.gz) = eab944f8db55457264a79b4766199a3657c23fe9
-SHA512 (Modern-Perl-1.20190727.tar.gz) = c2e4d51d51340c3412c197ca4e48fee2b786a8f07aca83315be862637cf1bb9c2d294e98e7e51ba5a76eab307aa18f4f739b12030bad35e81292ffed68bcaf09
-Size (Modern-Perl-1.20190727.tar.gz) = 14826 bytes
+SHA1 (Modern-Perl-1.20200211.tar.gz) = 995661bc4fbf4aa358948f488883cf4d70dbcb9d
+RMD160 (Modern-Perl-1.20200211.tar.gz) = c37c0e46879edf996bfdfe856a41ea8eb27bff7a
+SHA512 (Modern-Perl-1.20200211.tar.gz) = eb647c1b617ca517dc09a2de7395de3aca19b13e7089214127f86257544e790b5b79d439d0896be88c018f2ece47ca2b853168b65d676c4af034dbcc815619be
+Size (Modern-Perl-1.20200211.tar.gz) = 14856 bytes
