@@ -1,94 +1,52 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 21:47:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2020/04/16 09:03:47 manu Exp $
 
-PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	3
-COMMENT=	MariaDB 5.5, a free SQL database (server)
+PKGNAME=	${DISTNAME:S/-/-client-/}
+#PKGREVISION=	1
+COMMENT=	MariaDB 5.5, a free SQL database (client)
 
-CONFLICTS=	mysql3-server-[0-9]*
-CONFLICTS=	mysql-server-[0-9]*
+CONFLICTS=	mysql3-client-[0-9]*
+CONFLICTS=	mysql-client-[0-9]*
 
-.include "../../databases/mariadb55-client/Makefile.common"
+.include "Makefile.common"
 
-CMAKE_ARGS+=		-DWITH_LIBWRAP=ON
-CMAKE_ARGS+=		-DINSTALL_INFODIR=${PKGINFODIR}
-# Avoid build error on NetBSD/amd64 7.99.9
-# and TokuDB is available only on amd64.
-CMAKE_ARGS+=		-DWITHOUT_TOKUDB=1
+CMAKE_ARGS+=		-DWITHOUT_SERVER=ON
+CMAKE_ARGS+=		-DWITH_UNIT_TESTS=OFF
+# MariaDB uses internal OpenSSL structure made opaque with later versions
+CMAKE_ARGS+=		-DWITH_SSL=bundled
+UNWRAP_FILES+=		scripts/mysql_config
+INFO_FILES=		yes
+INSTALL_DIRS+=		client include libmysql man scripts tests
 
-# for O_DIRECT in fcntl.h
-CFLAGS.NetBSD=		-D_NETBSD_SOURCE
+REPLACE_PERL+=	scripts/mysql_convert_table_format.sh
+REPLACE_PERL+=	scripts/mysql_find_rows.sh
+REPLACE_PERL+=	scripts/mysql_fix_extensions.sh
+REPLACE_PERL+=	scripts/mysql_fix_privilege_tables.sh
+REPLACE_PERL+=	scripts/mysql_setpermission.sh
+REPLACE_PERL+=	scripts/mysql_zap.sh
+REPLACE_PERL+=	scripts/mysqlaccess.sh
+REPLACE_PERL+=	scripts/mysqld_multi.sh
+REPLACE_PERL+=	scripts/mysqldumpslow.sh
+REPLACE_PERL+=	scripts/mysqlhotcopy.sh
+REPLACE_PERL+=	scripts/mytop.sh
 
-.if !empty(PKG_OPTIONS:Membedded-server)
-CMAKE_ARGS+=		-DWITH_EMBEDDED_SERVER=ON
-PLIST.embedded=		yes
-.else
-# We only need readline to placate the configure script if we don't build
-# the embedded server as it is the only binary linked against "readline".
-BUILDLINK_DEPMETHOD.readline=	build
-.endif
+# REPLACE_PERL doesn't replace @PERL_PATH@, which is what's found in these
+# files now.
+SUBST_CLASSES+=		perlpath
+SUBST_STAGE.perlpath=	pre-configure
+SUBST_FILES.perlpath=	${REPLACE_PERL}
+SUBST_SED.perlpath=	-e s,@PERL_PATH@,perl,
 
-# ndb-cluster does not configure with cmake
-#.if !empty(PKG_OPTIONS:Mndb-cluster)
-#CMAKE_ARGS+=		-DWITH_NDBCLUSTER_STORAGE_ENGINE=ON
-#REPLACE_PERL+=		storage/ndb/tools/ndb_error_reporter
-#REPLACE_PERL+=		storage/ndb/tools/ndb_size.pl
-#PLIST.ndb=		yes
-#.endif
+SUBST_CLASSES+=		fixwrap
+SUBST_STAGE.fixwrap=	post-build
+SUBST_FILES.fixwrap=	scripts/mysqlbug
+SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/,,g"
 
-PLIST_VARS+=		embedded ndb auth_socket
+# Replace manual pages which only include other ones with a symbolic link.
+# It is for manual compression is activated or mandoc(1) is used.
+post-install:
+.for mf in mysql_client_test_embedded.1 mysqltest_embedded.1
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${mf}
+	${LN} -s ${mf:S/_embedded//} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${mf}
+.endfor
 
-.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PLIST.auth_socket=	yes
-.endif
-
-PTHREAD_OPTS+=		require
-
-PKG_GROUPS=		${MYSQL_GROUP}
-PKG_USERS=		${MYSQL_USER}:${MYSQL_GROUP}
-
-PKG_GECOS.${MYSQL_USER}=	MySQL database administrator
-PKG_HOME.${MYSQL_USER}=		${MYSQL_DATADIR}
-PKG_SHELL.${MYSQL_USER}=	${SH}
-
-RCD_SCRIPTS=		mysqld
-SMF_NAME=		mysql
-SMF_METHODS=		${RCD_SCRIPTS}
-
-FILES_SUBST+=		HOSTNAME_CMD=${HOSTNAME_CMD:Q}
-FILES_SUBST+=		MYSQL_DATADIR=${MYSQL_DATADIR}
-FILES_SUBST+=		MYSQL_USER=${MYSQL_USER} MYSQL_GROUP=${MYSQL_GROUP}
-FILES_SUBST+=		MYSQL_PIDFILE=${MYSQL_PIDFILE}
-MESSAGE_SUBST+=		MYSQL_DATADIR=${MYSQL_DATADIR}
-MESSAGE_SUBST+=		MYSQL_USER=${MYSQL_USER} MYSQL_GROUP=${MYSQL_GROUP}
-BUILD_DEFS+=		MYSQL_DATADIR
-
-REPLACE_PERL+=		mysql-test/lib/My/SafeProcess/safe_process.pl
-REPLACE_PERL+=		mysql-test/lib/process-purecov-annotations.pl
-REPLACE_PERL+=		mysql-test/lib/v1/mysql-test-run.pl
-REPLACE_PERL+=		mysql-test/mtr
-REPLACE_PERL+=		mysql-test/mysql-stress-test.pl
-REPLACE_PERL+=		mysql-test/mysql-test-run.pl
-REPLACE_PERL+=		mysql-test/std_data/checkDBI_DBD-mysql.pl
-REPLACE_PERL+=		mysql-test/suite/engines/rr_trx/run_stress_tx_rr.pl
-REPLACE_PERL+=		mysql-test/suite/funcs_1/lib/DataGen_local.pl
-REPLACE_PERL+=		mysql-test/suite/funcs_1/lib/DataGen_modify.pl
-REPLACE_PERL+=		mysql-test/suite/funcs_2/lib/gen_charset_utf8.pl
-REPLACE_PERL+=		mysql-test/suite/rpl/extension/checksum.pl
-REPLACE_PERL+=		sql-bench/*.sh
-
-REPLACE_SH+=		mysql-test/t/long_tmpdir-master.sh
-REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir-master.sh
-
-INSTALLATION_DIRS+=	bin
-
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Msunpro)
-CFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
-CXXFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
-.endif
-
-BUILDLINK_AUTO_DIRS.mariadb-client=	no
-.include "../../databases/mariadb55-client/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
