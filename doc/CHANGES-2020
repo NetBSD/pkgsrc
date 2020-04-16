@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2317 2020/04/16 12:50:01 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2318 2020/04/16 13:54:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3184,3 +3184,8 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/opensc to 0.20.0 [manu 2020-04-16]
 	Updated security/libp11 to 0.4.10 [manu 2020-04-16]
 	Updated devel/p5-MooX-late to 0.100 [mef 2020-04-16]
+	Updated devel/p5-Mouse to 2.5.10 [mef 2020-04-16]
+	Updated devel/p5-OLE-Storage_Lite to 0.20 [mef 2020-04-16]
+	Updated devel/p5-PPIx-Regexp to 0.071 [mef 2020-04-16]
+	Updated devel/p5-Perl-Critic to 1.138 [mef 2020-04-16]
+	Updated devel/p5-Alien-Build to 2.21 [mef 2020-04-16]
