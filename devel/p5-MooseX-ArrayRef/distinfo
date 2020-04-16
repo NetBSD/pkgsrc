@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/16 12:14:11 mef Exp $
+
+SHA1 (MooseX-ArrayRef-0.005.tar.gz) = 703fcf3365f5d52eab5989775bda918645f068a4
+RMD160 (MooseX-ArrayRef-0.005.tar.gz) = beda2dfa8231596ed7e26052566acc540ed86675
+SHA512 (MooseX-ArrayRef-0.005.tar.gz) = bfc62fd6bf083cb74f05e318b052c49c3c00afc4d1b6f4f07ec7279d53ce3303bf6aca9cdefc32c712f87ee431ba447d43f98adf697c55641450807708f2b16f
+Size (MooseX-ArrayRef-0.005.tar.gz) = 17552 bytes
