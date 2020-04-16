@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2019/03/16 23:27:26 wen Exp $
+$NetBSD: distinfo,v 1.18 2020/04/16 14:27:38 mef Exp $
 
-SHA1 (Data-UUID-1.224.tar.gz) = c6a1f932230707ed4ce95bfdbda1690684342bf6
-RMD160 (Data-UUID-1.224.tar.gz) = b2a7ce331c4ea5ac03ca0374d856f4651031c849
-SHA512 (Data-UUID-1.224.tar.gz) = 897ab26e83600214110167b86fc63848281b7bdf3818dcfedb713bf2eb64a06c48cc7cee43bfa4130c6fdb912fb77863bd31ffe08c95ec85e6660a9b369b7970
-Size (Data-UUID-1.224.tar.gz) = 17635 bytes
+SHA1 (Data-UUID-1.226.tar.gz) = fa6786e7cd95c30316b5bfe86d1b2ea0cbdeaec2
+RMD160 (Data-UUID-1.226.tar.gz) = 383901aceb4aeb42b56c95a4b2d39a719008259e
+SHA512 (Data-UUID-1.226.tar.gz) = 61c13b1aab3263d7bf94ecfde758acbdd986879144adbc436d32e5f5e03d70c8475984458681ab1d73d71bf5169b368c1f21a576ce996e225b6d74b5afd061fe
+Size (Data-UUID-1.226.tar.gz) = 17647 bytes
