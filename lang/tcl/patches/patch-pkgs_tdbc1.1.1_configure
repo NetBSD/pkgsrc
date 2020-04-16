@@ -1,22 +1,21 @@
-$NetBSD: patch-pkgs_itcl4.1.2_configure,v 1.1 2018/12/09 18:33:55 adam Exp $
+$NetBSD: patch-pkgs_tdbc1.1.1_configure,v 1.1 2020/04/16 17:07:07 adam Exp $
 
 Honor LDFLAGS on NetBSD.
 https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
 
---- pkgs/itcl4.1.2/configure.orig	2018-11-01 15:59:41.000000000 +0000
-+++ pkgs/itcl4.1.2/configure
-@@ -6935,7 +6935,7 @@ fi
+--- pkgs/tdbc1.1.1/configure.orig	2019-11-20 16:33:00.000000000 +0000
++++ pkgs/tdbc1.1.1/configure
+@@ -7034,20 +7034,18 @@ fi
  fi
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
  	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
 -	    LDFLAGS="-Wl,-export-dynamic"
 +	    LDFLAGS="-Wl,--export-dynamic"
  	    CFLAGS_OPTIMIZE="-O2"
- 	    if test "${TCL_THREADS}" = "1"; then :
- 
-@@ -6946,13 +6946,11 @@ fi
- 
- fi
+ 	    # On OpenBSD:	Compile with -pthread
+ 	    #		Don't link with -lpthread
+ 	    LIBS=`echo $LIBS | sed s/-lpthread//`
+ 	    CFLAGS="$CFLAGS -pthread"
  	    # OpenBSD doesn't do version numbers with dots.
 -	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
 -	    TCL_LIB_VERSIONS_OK=nodots
@@ -29,7 +28,7 @@ https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
  	    SHLIB_SUFFIX=".so"
  	    LDFLAGS="$LDFLAGS -export-dynamic"
  	    if test $doRpath = yes; then :
-@@ -6991,10 +6989,6 @@ fi
+@@ -7079,10 +7077,6 @@ fi
  	    case $system in
  	    FreeBSD-3.*)
  		# Version numbers are dot-stripped by system policy.
