@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2316 2020/04/16 12:42:27 manu Exp $
+$NetBSD: CHANGES-2020,v 1.2317 2020/04/16 12:50:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3168,7 +3168,19 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/gnustep-make to 2.8.0 [manu 2020-04-16]
 	Updated devel/gnustep-objc to 1.8.1 [manu 2020-04-16]
 	Updated devel/gnustep-base to 1.27.0 [manu 2020-04-16]
+	Updated devel/p5-Log-Any to 1.70.8 [mef 2020-04-16]
+	Updated devel/p5-Log-Any-Adapter-Callback to 0.101 [mef 2020-04-16]
+	Updated devel/p5-Modern-Perl to 1.20200211 [mef 2020-04-16]
+	Updated devel/p5-Module-Build to 0.42310 [mef 2020-04-16]
+	Updated devel/p5-Module-CoreList to 5.20200320 [mef 2020-04-16]
+	Updated devel/p5-Module-Find to 0.15 [mef 2020-04-16]
+	Updated devel/p5-Moo to 2.004000 [mef 2020-04-16]
+	Updated devel/p5-MooX-StrictConstructor to 0.011 [mef 2020-04-16]
 	Updated lang/openjdk11 to 1.11.0.7.10 [ryoon 2020-04-16]
 	Updated multimedia/adobe-flash-player to 32.0.0.363 [tsutsui 2020-04-16]
+	Added devel/p5-MooX-TypeTiny version 0.001004 [mef 2020-04-16]
+	Added devel/p5-MooseX-ArrayRef version 0.005 [mef 2020-04-16]
+	Added devel/p5-Sub-HandlesVia version 0.013 [mef 2020-04-16]
 	Updated security/opensc to 0.20.0 [manu 2020-04-16]
 	Updated security/libp11 to 0.4.10 [manu 2020-04-16]
+	Updated devel/p5-MooX-late to 0.100 [mef 2020-04-16]
