@@ -1,13 +1,15 @@
-$NetBSD: patch-storage_csv_CMakeLists.txt,v 1.1 2015/04/16 20:20:15 ryoon Exp $
+$NetBSD: patch-storage_csv_CMakeLists.txt,v 1.2 2020/04/16 09:03:47 manu Exp $
 
 Build with newer DTrace.
 
---- storage/csv/CMakeLists.txt.orig	2015-02-13 12:07:04.000000000 +0000
-+++ storage/csv/CMakeLists.txt
-@@ -14,4 +14,5 @@
- # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+--- storage/csv/CMakeLists.txt.orig	2020-04-09 14:35:12.872420941 +0200
++++ storage/csv/CMakeLists.txt	2020-04-09 14:35:24.979532784 +0200
+@@ -13,5 +13,7 @@
+ # along with this program; if not, write to the Free Software
+ # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1335 USA
  
  SET(CSV_SOURCES  ha_tina.cc ha_tina.h transparent_file.cc transparent_file.h)
 -MYSQL_ADD_PLUGIN(csv ${CSV_SOURCES} STORAGE_ENGINE MANDATORY)
 +MYSQL_ADD_PLUGIN(csv ${CSV_SOURCES} STORAGE_ENGINE
 +                 MANDATORY DTRACE_INSTRUMENTED)
++

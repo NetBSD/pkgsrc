@@ -1,16 +1,23 @@
-# $NetBSD: buildlink3.mk,v 1.3 2020/01/18 21:47:59 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2020/04/16 09:03:47 manu Exp $
 
-BUILDLINK_TREE+=	mariadb-server
+# This buildlink file uses mysql-client and not mariadb-client,
+# because some packages depending on it expect BUILDLINK_*.mysql-client
+# to be set and will fail build if they get BUILDLINK_*.mariadb-client
+# instead.
+BUILDLINK_TREE+=	mysql-client
 
-.if !defined(MARIADB_SERVER_BUILDLINK3_MK)
-MARIADB_SERVER_BUILDLINK3_MK:=
+.if !defined(MARIADB_CLIENT_BUILDLINK3_MK)
+MARIADB_CLIENT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.mariadb-server+=	mariadb-server>=5.5.42
-BUILDLINK_ABI_DEPENDS.mariadb-server?=	mariadb-server>=5.5.57nb3
-BUILDLINK_PKGSRCDIR.mariadb-server?=	../../databases/mariadb55-server
-BUILDLINK_LIBDIRS.mariadb-server?=	lib
+BUILDLINK_API_DEPENDS.mysql-client+=	mariadb-client>=5.5.43
+BUILDLINK_ABI_DEPENDS.mysql-client?=	mariadb-client>=5.5.57nb3
+BUILDLINK_PKGSRCDIR.mysql-client?=	../../databases/mariadb55-client
+BUILDLINK_PKGSRCDIR.mysql-client?=	../../databases/mariadb55-client
+BUILDLINK_INCDIRS.mysql-client?=	include/mysql
+BUILDLINK_LIBDIRS.mysql-client?=	lib
 
-.include "../../databases/mariadb55-client/buildlink3.mk"
-.endif	# MARIADB_SERVER_BUILDLINK3_MK
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.endif	# MARIADB_CLIENT_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-mariadb-server
+BUILDLINK_TREE+=	-mysql-client
