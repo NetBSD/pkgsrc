@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2020/04/12 08:27:51 adam Exp $
+# $NetBSD: Makefile,v 1.82 2020/04/16 09:35:35 manu Exp $
 
-DISTNAME=	gnustep-base-1.24.0
-PKGREVISION=	26
+DISTNAME=	gnustep-base-1.27.0
+#PKGREVISION=	1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -13,10 +13,11 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=		objc
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
+CONFIGURE_ARGS+=	--with-installation-domain=SYSTEM
+# Allow building with NetBSD libiconv that does not support //TRANSLIT
+CONFIGURE_ARGS+=	--enable-stricticonv
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
 MAKE_FILE=		GNUmakefile
-
-GNUSTEP_OVERRIDE_INSTALL=	YES
 
 pre-configure:
 	sed 's|@PREFIX@|${PREFIX}|g' <${FILESDIR}/openapp >${WRKDIR}/openapp
