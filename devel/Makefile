@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3095 2020/04/14 15:05:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.3096 2020/04/16 12:50:01 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1574,6 +1574,7 @@ SUBDIR+=	p5-MooX-Roles-Pluggable
 SUBDIR+=	p5-MooX-StrictConstructor
 SUBDIR+=	p5-MooX-Types-MooseLike
 SUBDIR+=	p5-MooX-Types-MooseLike-Numeric
+SUBDIR+=	p5-MooX-TypeTiny
 SUBDIR+=	p5-MooX-late
 SUBDIR+=	p5-Moos
 SUBDIR+=	p5-Moose
@@ -1582,6 +1583,7 @@ SUBDIR+=	p5-Moose-Policy
 SUBDIR+=	p5-MooseX-Aliases
 SUBDIR+=	p5-MooseX-App
 SUBDIR+=	p5-MooseX-App-Cmd
+SUBDIR+=	p5-MooseX-ArrayRef
 SUBDIR+=	p5-MooseX-Attribute-Chained
 SUBDIR+=	p5-MooseX-AttributeHelpers
 SUBDIR+=	p5-MooseX-Attributes-Curried
@@ -1794,6 +1796,7 @@ SUBDIR+=	p5-Sub-Exporter
 SUBDIR+=	p5-Sub-Exporter-ForMethods
 SUBDIR+=	p5-Sub-Exporter-GlobExporter
 SUBDIR+=	p5-Sub-Exporter-Progressive
+SUBDIR+=	p5-Sub-HandlesVia
 SUBDIR+=	p5-Sub-Identify
 SUBDIR+=	p5-Sub-Info
 SUBDIR+=	p5-Sub-Install
