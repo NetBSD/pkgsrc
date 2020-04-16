@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2020/04/08 09:42:05 adam Exp $
+$NetBSD: distinfo,v 1.41 2020/04/16 15:49:30 jperkin Exp $
 
 SHA1 (freeradius-server-3.0.21.tar.bz2) = 3d90d63bf1452794cf9d0b04147745a254872c3f
 RMD160 (freeradius-server-3.0.21.tar.bz2) = 04a038b701f19d9c598e826a795a0cdaacd3768b
@@ -8,4 +8,5 @@ SHA1 (patch-ai) = e32ffd24b93e2cef2e72ef9a8ea59d49e1571dc0
 SHA1 (patch-configure.ac) = ffec1f851d23f560797c12eba5092f2940e4d662
 SHA1 (patch-main_command.c) = 1c79b29eb13df341906c710c8dd41860a27473dd
 SHA1 (patch-main_util.c) = e8814255c32c8469e81d62f2c7092e8d42744e85
+SHA1 (patch-raddb_radiusd.conf.in) = 353cbed35013777bf055a77cc610b50a637ae7b7
 SHA1 (patch-src_lib_udpfromto.c) = 2457f0a7223b1f3ef86d0af020290b26380e6319
