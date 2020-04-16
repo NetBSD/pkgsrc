@@ -1,12 +1,12 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2019/07/20 23:09:27 gdt Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2020/04/16 15:19:11 jperkin Exp $
 
 On NetBSD, don't use -ldl (why?).
 
 Sent upstream via email 20190427.
 
---- src/CMakeLists.txt.orig	2019-04-17 19:54:00.000000000 +0000
+--- src/CMakeLists.txt.orig	2020-02-27 23:49:51.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -146,6 +146,8 @@ endif (HAVE_GETADDRINFO_A)
+@@ -151,6 +151,8 @@ endif (HAVE_GETADDRINFO_A AND WITH_ADNS)
  if (UNIX)
  	if (APPLE)
  		set (MOSQ_LIBS ${MOSQ_LIBS} dl m)
@@ -15,3 +15,15 @@ Sent upstream via email 20190427.
      elseif(QNX)
          set(MOSQ_LIBS ${MOSQ_LIBS} m socket)
      else(APPLE)
+@@ -184,9 +186,9 @@ target_link_libraries(mosquitto ${MOSQ_L
+ if (UNIX)
+ 	if (APPLE)
+ 		set_target_properties(mosquitto PROPERTIES LINK_FLAGS "-Wl,-exported_symbols_list -Wl,${mosquitto_SOURCE_DIR}/src/linker-macosx.syms")
+-	else (APPLE)
++	elseif (NOT CMAKE_SYSTEM_NAME STREQUAL SunOS)
+ 		set_target_properties(mosquitto PROPERTIES LINK_FLAGS "-Wl,-dynamic-list=${mosquitto_SOURCE_DIR}/src/linker.syms")
+-	endif (APPLE)
++	endif ()
+ endif (UNIX)
+ 
+ install(TARGETS mosquitto RUNTIME DESTINATION "${CMAKE_INSTALL_SBINDIR}")
