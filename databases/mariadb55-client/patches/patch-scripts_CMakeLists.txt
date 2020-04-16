@@ -1,10 +1,11 @@
-$NetBSD: patch-scripts_CMakeLists.txt,v 1.1 2015/04/16 20:20:15 ryoon Exp $
+$NetBSD: patch-scripts_CMakeLists.txt,v 1.2 2020/04/16 09:03:47 manu Exp $
 
 Fix paths.
 
---- scripts/CMakeLists.txt.orig	2015-02-13 12:07:04.000000000 +0000
-+++ scripts/CMakeLists.txt
-@@ -180,22 +180,14 @@ ENDIF(UNIX)
+--- scripts/CMakeLists.txt.orig	2020-01-18 02:00:01.000000000 +0100
++++ scripts/CMakeLists.txt	2020-04-09 14:31:30.921866851 +0200
+@@ -187,24 +187,16 @@
+ # Really ugly, one script, "mysql_install_db", needs prefix set to ".",
  # i.e. makes access relative the current directory. This matches
  # the documentation, so better not change this.
  
@@ -25,5 +26,6 @@ Fix paths.
    SET(localstatedir ${MYSQL_DATADIR})
 -ENDIF()
  
- IF(UNIX)
- CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mysql_install_db.sh
+ SET(resolveip_locations "$basedir/${INSTALL_BINDIR} $basedir/bin")
+ SET(mysqld_locations "$basedir/${INSTALL_SBINDIR} $basedir/libexec $basedir/sbin $basedir/bin")
+ SET(errmsg_locations "$basedir/${INSTALL_MYSQLSHAREDIR}/english $basedir/share/english $basedir/share/mysql/english")

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2308 2020/04/16 07:43:03 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2309 2020/04/16 09:03:46 manu Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3163,3 +3163,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added multimedia/sickgear version 0.21.26 [js 2020-04-15]
 	Updated fonts/py-fonttools to 4.7.0nb1 [adam 2020-04-16]
 	Updated www/py-daphne to 2.5.0 [adam 2020-04-16]
+	Updated databases/mariadb55-client to 5.5.67 [manu 2020-04-16]
+	Updated databases/mariadb55-server to 5.5.67 [manu 2020-04-16]

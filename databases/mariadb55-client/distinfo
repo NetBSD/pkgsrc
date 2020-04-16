@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2018/08/05 15:59:26 manu Exp $
+$NetBSD: distinfo,v 1.10 2020/04/16 09:03:47 manu Exp $
 
-SHA1 (mariadb-5.5.57.tar.gz) = 2e2d48179b770940f053bb37c72c7ea42aea46ca
-RMD160 (mariadb-5.5.57.tar.gz) = 332179a8f94eb6d467021b2095d1c004cb7dc5b0
-SHA512 (mariadb-5.5.57.tar.gz) = 5d6350abd6f0ba98326633a36bb7ec67525e34e08cbe43f79c9b30bf0b872b0a8f9f0bfd5f3a4c2800a52d25b9c6f3a3a4a62e0f41574153bbf4b881f5347c71
-Size (mariadb-5.5.57.tar.gz) = 45783940 bytes
+SHA1 (mariadb-5.5.67.tar.gz) = e9ced85c0564837acd43561ba75c79d2d25a24e1
+RMD160 (mariadb-5.5.67.tar.gz) = 46f04809b441e964a40778555caf63b6302d51a9
+SHA512 (mariadb-5.5.67.tar.gz) = 494b2b0d863e2fed6f02f8d61134a645aa113bb0e17ba08b304350dfa974f6fce2a2fcc231fb413872156f70f08fbd2604f58d642fffe085f3b093176a3e68c9
+Size (mariadb-5.5.67.tar.gz) = 45971908 bytes
 SHA1 (sphinx-2.2.11-release.tar.gz) = 34e83f43de0e69e258bf749ea00348c60a51632a
 RMD160 (sphinx-2.2.11-release.tar.gz) = 5804b4cce64bc03fa20bac26c7391cd661cecc77
 SHA512 (sphinx-2.2.11-release.tar.gz) = cf1a262a5b0fbf0bd2827ec6ec629edeaf709ce855a6e7b509b65342baaeb26c02717ca63f1578d32c83d21e2fd6d1e92dceb34660e6351b93cd96fd4e623689
@@ -32,17 +32,17 @@ SHA1 (patch-mysys_my__getopt.c) = 76ed2ffb774a7171bb547b3098db148329cbe21d
 SHA1 (patch-mysys_my_symlink.c) = d88553afa2ca97370d307092fedf6c8c53f63b02
 SHA1 (patch-mysys_stacktrace.c) = 9f18875126208c30d41f896f0e6edc7000df0c73
 SHA1 (patch-plugin_handler__socket_libhsclient_socket.cpp) = 4fe680a207162c750ca4a6107bfbaa912e93d5d0
-SHA1 (patch-scripts_CMakeLists.txt) = 5e30442df51009fd253b0f3c99526b587b2626ff
+SHA1 (patch-scripts_CMakeLists.txt) = 0e30f7c4d7f1cf9d8460b76b54770b1263f4bae5
 SHA1 (patch-scripts_mysqld_safe.sh) = 5ce94ea8ebce4041fe9ba4753a18b378052aab4d
 SHA1 (patch-sql-common_client__plugin.c) = 507fb154013dc66218f36fe12e8b28eb8774d090
 SHA1 (patch-sql_CMakeLists.txt) = fd2bfb8cbb74ea806b95a6c02b282197c3f8c04c
 SHA1 (patch-sql_log_event.h) = 8d2700e370e77d3f6cb441b67b3d19f13d77e600
 SHA1 (patch-sql_mysqld.cc) = fa0f827f18f667788fc63f8eda60e87281b10ece
 SHA1 (patch-sql_sql_string.h) = a452b9ec57c8706fe42c7982cb9996a07c57761a
-SHA1 (patch-storage_archive_CMakeLists.txt) = 1ca57fce7224d57d1e57596b29ff26d1cc578005
-SHA1 (patch-storage_blackhole_CMakeLists.txt) = 9eb54080ad2911d19f2d9b0643397de8e5292d4a
-SHA1 (patch-storage_csv_CMakeLists.txt) = d24d5ca563cb3b7294942639015609f8212ff5bf
-SHA1 (patch-storage_example_CMakeLists.txt) = dd2f5f8fcb8c7d81f3c627f67d4af48488f8a815
+SHA1 (patch-storage_archive_CMakeLists.txt) = 6b97ca889db51516052591e6ae64b0b8c364dc2f
+SHA1 (patch-storage_blackhole_CMakeLists.txt) = a6468e1c3e513ad678cf9410b7368c11d0a06e43
+SHA1 (patch-storage_csv_CMakeLists.txt) = cfe0096bc15419e6da5bb9c0a4eafd8f54164467
+SHA1 (patch-storage_example_CMakeLists.txt) = fda961bfca089b760e61a7f1e6016705401a34cc
 SHA1 (patch-storage_federated_CMakeLists.txt) = 422498972e3e6716f785d37d0a4cf9ef4954564d
 SHA1 (patch-storage_heap_CMakeLists.txt) = 3aa82a8ff12b4ab5d844ee56621569fb70616802
 SHA1 (patch-storage_innobase_include_os0sync.h) = 6eb85db54783267f78aac6197a9c6829282f249d
