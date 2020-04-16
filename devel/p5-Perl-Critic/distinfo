@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2020/01/01 05:39:06 mef Exp $
+$NetBSD: distinfo,v 1.26 2020/04/16 13:50:59 mef Exp $
 
-SHA1 (Perl-Critic-1.136.tar.gz) = f275bc83cd7252bda940baee38355860f51d71d7
-RMD160 (Perl-Critic-1.136.tar.gz) = 55e08b653b7c6f03da4e979196354cd1fd785f9a
-SHA512 (Perl-Critic-1.136.tar.gz) = 91664725ad6698203b73bcd678a540b57654d7411e3bfa467221216eaebaddd38d518dc1652137b012655d030f83cb48478b4eef3789422578773ce784ba3934
-Size (Perl-Critic-1.136.tar.gz) = 649105 bytes
+SHA1 (Perl-Critic-1.138.tar.gz) = 0e9fcc83769e2a8b3757aa1060594594f2f1014c
+RMD160 (Perl-Critic-1.138.tar.gz) = b9fbef6a0c2ee01e5c827791928d1e7131fbb30e
+SHA512 (Perl-Critic-1.138.tar.gz) = e36c44dc6ab67cdb0014c6b575238e3c54d4ffa506082df66f5e44ec0137111945f3a1196f2902e7c363c9ea10f08bfc8285b75d0af32080d9603ae7b28a4df7
+Size (Perl-Critic-1.138.tar.gz) = 649701 bytes
