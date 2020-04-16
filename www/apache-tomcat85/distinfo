@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/01/13 07:45:20 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2020/04/16 23:00:01 ryoon Exp $
 
-SHA1 (apache-tomcat-8.5.50.tar.gz) = 294b8a2d7a1613f41977c32649e51d310085fa17
-RMD160 (apache-tomcat-8.5.50.tar.gz) = f686801f0962f140ab25d5b2cf2355d59620703a
-SHA512 (apache-tomcat-8.5.50.tar.gz) = ffca86027d298ba107c7d01c779318c05b61ba48767cc5967ee6ce5a88271bb6ec8eed60708d45453f30eeedddcaedd1a369d6df1b49eea2cd14fa40832cfb90
-Size (apache-tomcat-8.5.50.tar.gz) = 10305939 bytes
+SHA1 (apache-tomcat-8.5.54.tar.gz) = 3c4e522adcfa20c286bde310194390d528025496
+RMD160 (apache-tomcat-8.5.54.tar.gz) = e2807ef51497d4b73f26d8df7c920852b55d8512
+SHA512 (apache-tomcat-8.5.54.tar.gz) = dc3ba0183d1e6f6006e5430e91abbc0758bdb719efebea5809f7034c9a28c590a764d8fcf2528a27a98cb86531e94cd9dc5a92cdbcae36e808ced0e5f1c665b8
+Size (apache-tomcat-8.5.54.tar.gz) = 10312541 bytes
