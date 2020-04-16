@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2019/10/26 11:32:27 mef Exp $
+$NetBSD: distinfo,v 1.32 2020/04/16 11:29:52 mef Exp $
 
-SHA1 (Moo-2.003006.tar.gz) = ed27ab6e00087fb8f27bb7848fcaa3b04cdfb976
-RMD160 (Moo-2.003006.tar.gz) = 21b29cb8160a396906d6115e4697bd56d48043dd
-SHA512 (Moo-2.003006.tar.gz) = 151875a67aeaf78afdd678964ca3bae36dfd13d2290b5ffb903f648deeb1157ee3829f7310b7fae3a899404cfeaea211b57cb3f6e6d611bf39e8209a7bef2863
-Size (Moo-2.003006.tar.gz) = 105654 bytes
+SHA1 (Moo-2.004000.tar.gz) = 7de067c51a601018fae1cadcb8c632abf287b2ef
+RMD160 (Moo-2.004000.tar.gz) = 91e726f53d80e4ee141c6fddaa53b6fdc1469fe1
+SHA512 (Moo-2.004000.tar.gz) = 154a4246e69120e98d0955ffe34f890a199c6ad145f3428481caa89d07614ae25cc4c0bcfb474311f85393520ca0e9551cfdeac4a2958b231895e4556c2abb0a
+Size (Moo-2.004000.tar.gz) = 107574 bytes
