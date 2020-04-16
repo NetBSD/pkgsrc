@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2323 2020/04/16 15:49:41 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.2324 2020/04/16 17:07:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3195,3 +3195,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/apache-tomcat9 to 9.0.34 [ryoon 2020-04-16]
 	Updated devel/p5-Proc-Background to 1.21 [mef 2020-04-16]
 	Updated net/freeradius to 3.0.21nb1 [jperkin 2020-04-16]
+	Updated lang/tcl to 8.6.10 [adam 2020-04-16]
+	Updated x11/tk to 8.6.10 [adam 2020-04-16]
