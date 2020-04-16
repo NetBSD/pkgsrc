@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.6 2020/04/16 14:03:29 manu Exp $
+sbin/in.imapproxyd
+sbin/pimpstat
+share/doc/imapproxy/COPYING
+share/doc/imapproxy/ChangeLog
+share/doc/imapproxy/README
+share/doc/imapproxy/README.known_issues
+share/doc/imapproxy/README.ssl
+share/examples/imapproxy/imapproxy.conf
