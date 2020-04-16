@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/03 20:33:15 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/16 22:48:25 ryoon Exp $
 bin/obs
 bin/obs-ffmpeg-mux
 include/obs/audio-monitoring/pulse/pulseaudio-wrapper.h
@@ -13,6 +13,7 @@ include/obs/graphics/effect-parser.h
 include/obs/graphics/effect.h
 include/obs/graphics/graphics-internal.h
 include/obs/graphics/graphics.h
+include/obs/graphics/half.h
 include/obs/graphics/image-file.h
 include/obs/graphics/input.h
 include/obs/graphics/libnsgif/libnsgif.h
@@ -66,6 +67,7 @@ include/obs/util/cf-parser.h
 include/obs/util/circlebuf.h
 include/obs/util/config-file.h
 include/obs/util/crc32.h
+include/obs/util/curl/curl-helper.h
 include/obs/util/darray.h
 include/obs/util/dstr.h
 include/obs/util/file-serializer.h
@@ -75,14 +77,12 @@ include/obs/util/platform.h
 include/obs/util/profiler.h
 include/obs/util/profiler.hpp
 include/obs/util/serializer.h
+include/obs/util/sse-intrin.h
 include/obs/util/text-lookup.h
 include/obs/util/threading-posix.h
 include/obs/util/threading.h
 include/obs/util/utf8.h
 include/obs/util/util_uint128.h
-include/obs/util/vc/vc_inttypes.h
-include/obs/util/vc/vc_stdbool.h
-include/obs/util/vc/vc_stdint.h
 lib/cmake/LibObs/LibObsConfig.cmake
 lib/cmake/LibObs/LibObsConfigVersion.cmake
 lib/cmake/LibObs/LibObsTarget-relwithdebinfo.cmake
@@ -227,6 +227,7 @@ share/obs/obs-plugins/image-source/locale/mn-MN.ini
 share/obs/obs-plugins/image-source/locale/ms-MY.ini
 share/obs/obs-plugins/image-source/locale/nb-NO.ini
 share/obs/obs-plugins/image-source/locale/nl-NL.ini
+share/obs/obs-plugins/image-source/locale/pa-IN.ini
 share/obs/obs-plugins/image-source/locale/pl-PL.ini
 share/obs/obs-plugins/image-source/locale/pt-BR.ini
 share/obs/obs-plugins/image-source/locale/pt-PT.ini
@@ -420,6 +421,9 @@ share/obs/obs-plugins/obs-ffmpeg/locale/vi-VN.ini
 share/obs/obs-plugins/obs-ffmpeg/locale/zh-CN.ini
 share/obs/obs-plugins/obs-ffmpeg/locale/zh-TW.ini
 share/obs/obs-plugins/obs-filters/LUTs/black_and_white.png
+share/obs/obs-plugins/obs-filters/LUTs/grayscale.cube
+share/obs/obs-plugins/obs-filters/LUTs/grayscale.png
+share/obs/obs-plugins/obs-filters/LUTs/original.cube
 share/obs/obs-plugins/obs-filters/LUTs/original.png
 share/obs/obs-plugins/obs-filters/LUTs/posterize.png
 share/obs/obs-plugins/obs-filters/LUTs/red_isolated.png
@@ -839,6 +843,7 @@ share/obs/obs-studio/themes/Dark/no_sources.svg
 share/obs/obs-studio/themes/Dark/plus.svg
 share/obs/obs-studio/themes/Dark/refresh.svg
 share/obs/obs-studio/themes/Dark/revert.svg
+share/obs/obs-studio/themes/Dark/save.svg
 share/obs/obs-studio/themes/Dark/settings/advanced.svg
 share/obs/obs-studio/themes/Dark/settings/audio.svg
 share/obs/obs-studio/themes/Dark/settings/general.svg
@@ -846,6 +851,19 @@ share/obs/obs-studio/themes/Dark/settings/hotkeys.svg
 share/obs/obs-studio/themes/Dark/settings/output.svg
 share/obs/obs-studio/themes/Dark/settings/stream.svg
 share/obs/obs-studio/themes/Dark/settings/video.svg
+share/obs/obs-studio/themes/Dark/sources/brush.svg
+share/obs/obs-studio/themes/Dark/sources/camera.svg
+share/obs/obs-studio/themes/Dark/sources/default.svg
+share/obs/obs-studio/themes/Dark/sources/gamepad.svg
+share/obs/obs-studio/themes/Dark/sources/globe.svg
+share/obs/obs-studio/themes/Dark/sources/group.svg
+share/obs/obs-studio/themes/Dark/sources/image.svg
+share/obs/obs-studio/themes/Dark/sources/media.svg
+share/obs/obs-studio/themes/Dark/sources/microphone.svg
+share/obs/obs-studio/themes/Dark/sources/scene.svg
+share/obs/obs-studio/themes/Dark/sources/slideshow.svg
+share/obs/obs-studio/themes/Dark/sources/text.svg
+share/obs/obs-studio/themes/Dark/sources/window.svg
 share/obs/obs-studio/themes/Dark/trash.svg
 share/obs/obs-studio/themes/Dark/up.svg
 share/obs/obs-studio/themes/Dark/updown.svg
