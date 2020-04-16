@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/04/11 07:21:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/04/16 07:39:41 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -52,6 +52,7 @@ ${PYSITELIB}/fontTools/cu2qu/cu2qu.c
 ${PYSITELIB}/fontTools/cu2qu/cu2qu.py
 ${PYSITELIB}/fontTools/cu2qu/cu2qu.pyc
 ${PYSITELIB}/fontTools/cu2qu/cu2qu.pyo
+${PYSITELIB}/fontTools/cu2qu/cu2qu.so
 ${PYSITELIB}/fontTools/cu2qu/errors.py
 ${PYSITELIB}/fontTools/cu2qu/errors.pyc
 ${PYSITELIB}/fontTools/cu2qu/errors.pyo

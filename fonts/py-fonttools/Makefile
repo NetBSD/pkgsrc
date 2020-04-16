@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2020/04/11 07:21:37 adam Exp $
+# $NetBSD: Makefile,v 1.62 2020/04/16 07:39:41 adam Exp $
 
 DISTNAME=	fonttools-4.7.0
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	fonts python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FontTools/}
@@ -16,8 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-fs-[0-9]*:../../filesystems/py-fs
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
-USE_LANGUAGES=	# none
-
 PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # since 4.0.0
@@ -29,12 +28,12 @@ SUBST_FILES.man+=	setup.py
 SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
 
 post-install:
+.for bin in fonttools pyftmerge pyftsubset ttx
 	cd ${DESTDIR}${PREFIX}/bin && \
-	for i in fonttools pyftmerge pyftsubset ttx; do \
-		${MV} $${i} $${i}-${PYVERSSUFFIX}; \
-	done
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && \
-		${MV} ttx.1 ttx-${PYVERSSUFFIX}.1 || ${TRUE}
+	${MV} ttx.1 ttx-${PYVERSSUFFIX}.1 || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
