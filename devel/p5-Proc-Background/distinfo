@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:28:41 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/04/16 15:09:12 mef Exp $
 
-SHA1 (Proc-Background-1.10.tar.gz) = 3e530b18adf4cf0904495af0bb431b5add3888d9
-RMD160 (Proc-Background-1.10.tar.gz) = c0623ee1b051a2d7a8bc261084e8dfe6ad6ada81
-SHA512 (Proc-Background-1.10.tar.gz) = 233eeb8159b7b0f99f6ce991b30f5a321189d2af9d4c8a6d997d0ff348ab9ba4510b322f58dca0df1b0bee279a442f49386bbd2152a5245921c95e9f0497301e
-Size (Proc-Background-1.10.tar.gz) = 15113 bytes
+SHA1 (Proc-Background-1.21.tar.gz) = 896ecef06c95def6323710a46c45719587974d68
+RMD160 (Proc-Background-1.21.tar.gz) = 988b63f181ae7143154fa20a71695334c8929ef2
+SHA512 (Proc-Background-1.21.tar.gz) = 2cc5cdf3e6b0614a252f6a5e2f0c35c50504eaefb87d642b8a4f91f6e5e34096f6e30262f0d8496b318301e3359d26a6dceb1658556ad0ac548a26b6a3476432
+Size (Proc-Background-1.21.tar.gz) = 25960 bytes
