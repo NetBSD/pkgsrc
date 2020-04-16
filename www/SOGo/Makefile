@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2020/04/12 08:29:16 adam Exp $
+# $NetBSD: Makefile,v 1.60 2020/04/16 09:42:42 manu Exp $
 #
 
 DISTNAME=	SOGo-2.3.23
