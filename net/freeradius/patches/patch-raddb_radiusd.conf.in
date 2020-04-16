@@ -1,0 +1,17 @@
+$NetBSD: patch-raddb_radiusd.conf.in,v 1.1 2020/04/16 15:49:30 jperkin Exp $
+
+Update example radiusd.conf to include the correct user/group
+
+--- raddb/radiusd.conf.in.orig	2020-04-15 11:59:38.209113301 +0000
++++ raddb/radiusd.conf.in	2020-04-15 12:00:19.973538936 +0000
+@@ -501,8 +501,8 @@
+ 	#  member.  This can allow for some finer-grained access
+ 	#  controls.
+ 	#
+-#	user = radius
+-#	group = radius
++	user = @RADIUS_USER@
++	group = @RADIUS_GROUP@
+ 
+ 	#  Core dumps are a bad thing.  This should only be set to
+ 	#  'yes' if you're debugging a problem with the server.
