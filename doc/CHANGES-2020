@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2313 2020/04/16 11:52:03 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2314 2020/04/16 11:57:25 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3169,3 +3169,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/gnustep-objc to 1.8.1 [manu 2020-04-16]
 	Updated devel/gnustep-base to 1.27.0 [manu 2020-04-16]
 	Updated lang/openjdk11 to 1.11.0.7.10 [ryoon 2020-04-16]
+	Updated multimedia/adobe-flash-player to 32.0.0.363 [tsutsui 2020-04-16]
