@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2019/10/27 13:49:47 mef Exp $
+# $NetBSD: Makefile,v 1.70 2020/04/16 13:29:45 mef Exp $
 
-DISTNAME=	Mouse-v2.5.9
+DISTNAME=	Mouse-v2.5.10
 PKGNAME=	p5-${DISTNAME:S/v//1}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SK/SKAJI/}
@@ -22,6 +22,7 @@ TEST_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
 TEST_DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 TEST_DEPENDS+=	p5-Pod-Coverage-[0-9]*:../../textproc/p5-Pod-Coverage
 TEST_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+TEST_DEPENDS+=	p5-Params-Coerce-[0-9]*:../../devel/p5-Params-Coerce
 
 MAKE_JOBS_SAFE=	no
 
