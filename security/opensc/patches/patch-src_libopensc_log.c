@@ -1,19 +1,22 @@
-$NetBSD: patch-src_libopensc_log.c,v 1.4 2018/10/13 10:54:05 mlelstv Exp $
+$NetBSD: patch-src_libopensc_log.c,v 1.5 2020/04/16 12:37:51 manu Exp $
 
---- src/libopensc/log.c.orig	2018-09-13 11:47:21.000000000 +0000
-+++ src/libopensc/log.c
-@@ -93,7 +93,13 @@ static void sc_do_log_va(sc_context_t *c
+Build without pthread
+
+--- src/libopensc/log.c.orig	2019-12-29 12:42:06.000000000 +0000
++++ src/libopensc/log.c	2020-04-15 13:00:39.853594605 +0000
+@@ -112,9 +112,14 @@
+ 	sc_color_fprintf(SC_COLOR_FG_GREEN|SC_COLOR_BOLD,
+ 			ctx, ctx->debug_file,
+ 			"P:%lu; T:0x%lu",
+ 			(unsigned long)getpid(),
+-			(unsigned long)pthread_self());
++#ifdef HAVE_PTHREAD
++			(unsigned long)pthread_self()
++#else
++			0UL
++#endif
++	);
  	gettimeofday (&tv, NULL);
  	tm = localtime (&tv.tv_sec);
  	strftime (time_string, sizeof(time_string), "%H:%M:%S", tm);
--	r = snprintf(p, left, "0x%lx %s.%03ld ", (unsigned long)pthread_self(), time_string, (long)tv.tv_usec / 1000);
-+	r = snprintf(p, left, "0x%lx %s.%03ld ",
-+#ifdef HAVE_PTHREAD
-+		     (unsigned long)pthread_self(),
-+#else
-+		     (unsigned long) 0,
-+#endif
-+		     time_string, (long) tv.tv_usec / 1000);
- #endif
- 	p += r;
- 	left -= r;
+ 	sc_color_fprintf(SC_COLOR_FG_GREEN,
