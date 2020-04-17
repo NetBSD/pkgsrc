@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2340 2020/04/17 12:36:19 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2341 2020/04/17 17:51:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3219,3 +3219,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/ekg to 20200416 [adam 2020-04-17]
 	Removed net/py-pydns [adam 2020-04-17]
 	Removed net/py-py3dns [adam 2020-04-17]
+	Added devel/afl++ version 2.62c [wiz 2020-04-17]
