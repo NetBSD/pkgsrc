@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2343 2020/04/17 18:01:44 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2344 2020/04/17 20:16:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3222,3 +3222,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/afl++ version 2.62c [wiz 2020-04-17]
 	Updated benchmarks/fio to 3.19 [wiz 2020-04-17]
 	Updated mail/neomutt to 20200417 [wiz 2020-04-17]
+	Updated net/openvpn to 2.4.9 [adam 2020-04-17]
