@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2334 2020/04/17 07:59:20 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2335 2020/04/17 11:06:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3211,3 +3211,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs to 13.13.0 [adam 2020-04-17]
 	Updated lang/nodejs12 to 12.16.2 [adam 2020-04-17]
 	Updated lang/nodejs10 to 10.20.1 [adam 2020-04-17]
+	Updated editors/OmegaT to 5.2.0 [ryoon 2020-04-17]
