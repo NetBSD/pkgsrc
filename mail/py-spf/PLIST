@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2014/02/15 17:20:59 wiz Exp $
-bin/spfquery.py
-bin/type99.py
+@comment $NetBSD: PLIST,v 1.4 2020/04/17 11:27:36 adam Exp $
+bin/spfquery.py-${PYVERSSUFFIX}
+bin/type99.py-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/spf.py
 ${PYSITELIB}/spf.pyc
