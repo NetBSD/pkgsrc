@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2017/02/19 20:18:16 maya Exp $
+# $NetBSD: Makefile.common,v 1.36 2020/04/17 21:28:01 ad Exp $
 #
 # used by shells/ast-ksh/Makefile
 # used by shells/static-ast-ksh/Makefile
@@ -16,6 +16,8 @@ HOMEPAGE=	http://www.kornshell.com/
 COMMENT=	Official AT&T release of KornShell 93
 LICENSE=	epl-v1.0
 
+USE_TOOLS=	bash
+
 NOT_FOR_PLATFORM=	Interix-*-* # taking nearly a day to build and crash!
 
 CONFLICTS=	static-ast-ksh-[0-9]*
@@ -29,7 +31,9 @@ MAKE_FLAGS+=	CC=${CC:Q} CCFLAGS=${CFLAGS:M*:Q}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-PDKSH=		/bin/ksh
+PDKSH=			${TOOLS_PATH.bash}
+KSH93_MAKEFLAGS+=	"SHELL=${PDKSH}"
+KSH93_MAKEFLAGS+=	"CCFLAGS=-D_NETBSD_SOURCE"
 .endif
 
 # Link with libm to fix sfcvt link error -
