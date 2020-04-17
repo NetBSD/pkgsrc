@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/04/17 00:32:04 js Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/17 00:46:45 js Exp $
 
 DISTNAME=	pymacaroons-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# empty
 
-.include "../../security/libsodium/buildlink3.mk"
+DEPENDS+=	${PYPKGPREFIX}-six>=1.8.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-nacl>=1.1.2:../../security/py-nacl
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
