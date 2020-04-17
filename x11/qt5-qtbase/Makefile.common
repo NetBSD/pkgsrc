@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2020/03/28 18:04:42 nia Exp $
+# $NetBSD: Makefile.common,v 1.43 2020/04/17 02:00:52 gutteridge Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -39,7 +39,7 @@ USE_LANGUAGES=		c gnu++11
 USE_TOOLS+=		gmake perl:build pkg-config
 
 # https://doc.qt.io/qt-5/supported-platforms.html
-GCC_REQD+=		4.8
+GCC_REQD+=		5
 
 # Avoid failures to due 'register' usage in X11 headers.
 CFLAGS+=		-Wno-register
