@@ -1,0 +1,41 @@
+$NetBSD: patch-remove-install-chown,v 1.1 2020/04/17 11:28:02 tm Exp $
+
+Remove install chown
+This eliminates the chown/chgrp from the install commands, which allows the
+package to be built without root privileges.
+
+Author: Richard Laager <rlaager@wiktel.com>
+
+--- Makefile.in.orig
++++ Makefile.in
+@@ -80,23 +80,23 @@
+ 
+ install: $(XYD_BIN) $(TAT_BIN)
+ 	mkdir -p $(DESTDIR)$(EBIN)
+-	$(INSTALL) -o bin -g bin -m 0755 $(XYD_BIN) $(DESTDIR)$(EBIN)
+-	$(INSTALL) -o bin -g bin -m 0755 $(TAT_BIN) $(DESTDIR)$(EBIN)
++	$(INSTALL) -m 0755 $(XYD_BIN) $(DESTDIR)$(EBIN)
++	$(INSTALL) -m 0755 $(TAT_BIN) $(DESTDIR)$(EBIN)
+ 
+ install-init-linux:
+-	$(INSTALL) -o root -g sys -m 0755 ./scripts/imapproxy-linux.init $(DESTDIR)$(ETC)/init.d/imapproxy
++	$(INSTALL) -m 0755 ./scripts/imapproxy-linux.init $(DESTDIR)$(ETC)/init.d/imapproxy
+ 	ln -s ../init.d/imapproxy $(DESTDIR)/etc/rc2.d/S99imapproxy
+ 	ln -s ../init.d/imapproxy $(DESTDIR)/etc/rc0.d/K10imapproxy
+ 
+ install-init-systemd:
+-	$(INSTALL) -o root -g root -m 0644 ./scripts/imap_proxy.service $(DESTDIR)/lib/systemd/system
++	$(INSTALL) -m 0644 ./scripts/imap_proxy.service $(DESTDIR)/lib/systemd/system
+ 
+ install-conf:
+-	$(INSTALL) -o root -g bin -m 0644 ./scripts/imapproxy.conf $(DESTDIR)$(ETC)
++	$(INSTALL) -m 0644 ./scripts/imapproxy.conf $(DESTDIR)$(ETC)
+ 
+ rpm-install: install
+-	$(INSTALL) -o root -g sys -m 0644 ./scripts/imapproxy.conf $(DESTDIR)/etc
+-	$(INSTALL) -o root -g sys -m 0755 ./scripts/imapproxy-linux.init $(DESTDIR)/etc/init.d/imapproxy
++	$(INSTALL) -m 0644 ./scripts/imapproxy.conf $(DESTDIR)/etc
++	$(INSTALL) -m 0755 ./scripts/imapproxy-linux.init $(DESTDIR)/etc/init.d/imapproxy
+ 
+ pkg:
+ 	pkgmk -o -r .

@@ -1,0 +1,37 @@
+$NetBSD: patch-check-dup-return-value,v 1.1 2020/04/17 11:28:02 tm Exp $
+
+Check dup() return value. Switched to dup2(), which combines the
+close() call.
+
+Richard Laager <rlaager@wiktel.com>
+https://sourceforge.net/p/squirrelmail/mailman/message/35526927/
+
+--- src/main.c.orig
++++ src/main.c
+@@ -998,6 +998,7 @@
+  FILE* fp=NULL;
+  pid_t pid;                         /* used just for a fork call */
+  int i;
++ int j;
+ 
+     /* detach from our parent if necessary */
+     // NOTE: When started under systemd, the parent PID is already 1, so
+@@ -1059,9 +1060,15 @@
+ 		strerror(errno));
+ 		exit( 1 );
+ 	}
+-	close(2); dup(i);
+-	close(1); dup(i);
+-	close(0); dup(i);
++	for(j=0; j <= 2; j++)
++	{
++		if (dup2(i, j) < 0)
++		{
++			syslog(LOG_ERR, "%s: dup2() failed: %s", fn,
++				strerror(errno));
++			exit( 1 );
++		}
++	}
+ 	close(i);
+     }
+     else
