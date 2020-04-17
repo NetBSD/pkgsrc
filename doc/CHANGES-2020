@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2338 2020/04/17 12:03:10 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2339 2020/04/17 12:29:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3216,3 +3216,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/tigervnc to 1.9.0nb4 [wiz 2020-04-17]
 	Updated net/py-dns to 1.16.0 [adam 2020-04-17]
 	Updated mail/py-spf to 2.0.14 [adam 2020-04-17]
+	Updated chat/ekg to 20200416 [adam 2020-04-17]
