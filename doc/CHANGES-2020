@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2331 2020/04/17 00:17:01 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.2332 2020/04/17 00:33:10 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3204,3 +3204,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/obs-studio to 25.0.4 [ryoon 2020-04-16]
 	Updated www/apache-tomcat85 to 8.5.54 [ryoon 2020-04-16]
 	Updated net/syncthing to 1.4.2 [gdt 2020-04-17]
+	Added devel/py-macaroons version 0.13.0 [js 2020-04-17]
