@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/17 00:29:35 js Exp $
+
+SHA1 (pymacaroons-0.13.0.tar.gz) = 8de1e6ffd7d3f38bded9062f04c1896ea2571d38
+RMD160 (pymacaroons-0.13.0.tar.gz) = ffcebf23570e6f9f194acf40e06264be5d713160
+SHA512 (pymacaroons-0.13.0.tar.gz) = 1929a63755dcfdc2e154217f3ce65a489b4ffdb8f4f9a27d6eb1f1899eba6d7f3f92c7db4401337e948306b6a97dd3b249196c89533991c9986d5702ad98e4ca
+Size (pymacaroons-0.13.0.tar.gz) = 21083 bytes
