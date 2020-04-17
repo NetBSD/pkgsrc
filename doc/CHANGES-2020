@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2339 2020/04/17 12:29:49 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2340 2020/04/17 12:36:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3217,3 +3217,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-dns to 1.16.0 [adam 2020-04-17]
 	Updated mail/py-spf to 2.0.14 [adam 2020-04-17]
 	Updated chat/ekg to 20200416 [adam 2020-04-17]
+	Removed net/py-pydns [adam 2020-04-17]
+	Removed net/py-py3dns [adam 2020-04-17]
