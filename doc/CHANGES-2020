@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2342 2020/04/17 17:54:42 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2343 2020/04/17 18:01:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3221,3 +3221,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed net/py-py3dns [adam 2020-04-17]
 	Added devel/afl++ version 2.62c [wiz 2020-04-17]
 	Updated benchmarks/fio to 3.19 [wiz 2020-04-17]
+	Updated mail/neomutt to 20200417 [wiz 2020-04-17]
