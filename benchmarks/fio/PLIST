@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/08 18:13:32 maya Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/17 17:54:34 wiz Exp $
 bin/fio
 bin/fio-dedupe
 bin/fio-genzipf
@@ -27,8 +27,10 @@ share/examples/fio/disk-zone-profile.fio
 share/examples/fio/e4defrag.fio
 share/examples/fio/e4defrag2.fio
 share/examples/fio/enospc-pressure.fio
+share/examples/fio/exitwhat.fio
 share/examples/fio/falloc.fio
 share/examples/fio/filecreate-ioengine.fio
+share/examples/fio/filestat-ioengine.fio
 share/examples/fio/fio-rand-RW.fio
 share/examples/fio/fio-rand-read.fio
 share/examples/fio/fio-rand-write.fio
