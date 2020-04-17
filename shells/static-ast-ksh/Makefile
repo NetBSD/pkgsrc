@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/11/04 21:14:07 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/04/17 21:28:01 ad Exp $
 #
 
 .include "../../shells/ast-ksh/Makefile.common"
@@ -17,6 +17,6 @@ COMMENT:=	Statically-linked version of the ${COMMENT}
 # SunOS 5.10 stopped shipping static libraries
 NOT_FOR_PLATFORM+=	SunOS-5.1[0-9]-*
 
-KSH93_MAKEFLAGS=	LDFLAGS=-static
+KSH93_MAKEFLAGS+=	LDFLAGS=-static
 
 .include "../../mk/bsd.pkg.mk"
