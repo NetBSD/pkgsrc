@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/14 14:18:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/17 00:19:26 joerg Exp $
 
 DISTNAME=	appstream-glib-appstream_glib_0_7_17
 PKGNAME=	appstream-glib-0.7.17
@@ -23,6 +23,7 @@ PKGCONFIG_OVERRIDE+=	libappstream-glib/appstream-glib.pc.in
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
