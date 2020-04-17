@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2019/07/12 23:56:54 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.23 2020/04/17 23:52:55 gutteridge Exp $
 bin/xfwm4
 bin/xfwm4-settings
 bin/xfwm4-tweaks-settings
@@ -37,6 +37,7 @@ share/locale/am/LC_MESSAGES/xfwm4.mo
 share/locale/ar/LC_MESSAGES/xfwm4.mo
 share/locale/ast/LC_MESSAGES/xfwm4.mo
 share/locale/be/LC_MESSAGES/xfwm4.mo
+share/locale/be@tarask/LC_MESSAGES/xfwm4.mo
 share/locale/bg/LC_MESSAGES/xfwm4.mo
 share/locale/bn/LC_MESSAGES/xfwm4.mo
 share/locale/ca/LC_MESSAGES/xfwm4.mo
@@ -51,6 +52,7 @@ share/locale/eo/LC_MESSAGES/xfwm4.mo
 share/locale/es/LC_MESSAGES/xfwm4.mo
 share/locale/et/LC_MESSAGES/xfwm4.mo
 share/locale/eu/LC_MESSAGES/xfwm4.mo
+share/locale/fa_IR/LC_MESSAGES/xfwm4.mo
 share/locale/fi/LC_MESSAGES/xfwm4.mo
 share/locale/fr/LC_MESSAGES/xfwm4.mo
 share/locale/gl/LC_MESSAGES/xfwm4.mo
@@ -63,6 +65,7 @@ share/locale/ie/LC_MESSAGES/xfwm4.mo
 share/locale/is/LC_MESSAGES/xfwm4.mo
 share/locale/it/LC_MESSAGES/xfwm4.mo
 share/locale/ja/LC_MESSAGES/xfwm4.mo
+share/locale/ka/LC_MESSAGES/xfwm4.mo
 share/locale/kk/LC_MESSAGES/xfwm4.mo
 share/locale/ko/LC_MESSAGES/xfwm4.mo
 share/locale/lt/LC_MESSAGES/xfwm4.mo
