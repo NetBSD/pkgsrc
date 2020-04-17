@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.4 2020/04/12 09:33:33 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.5 2020/04/17 12:35:32 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q1 branch:
 
@@ -31,4 +31,13 @@ security/tor-browser: security fix
 
 Pullup ticket #6158 - requested by leot
 lang/scala: build fix
+
+Pullup ticket #6159 - requested by leot
+devel/git-base: security fix
+
+Pullup ticket #6160 - requested by bouyer
+sysutils/xenkernel411: security fix
+
+Pullup ticket #6161 - requested by sborrill
+mk/pkginstall: NetBSD 7 bugfix
 
