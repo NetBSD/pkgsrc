@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.24 2020/01/20 17:32:49 adam Exp $
+$NetBSD: distinfo,v 1.25 2020/04/17 12:29:32 adam Exp $
 
-SHA1 (ekg-20200116.tar.gz) = fd07911e92218c7a0a79f9732ca17ec1ff033a47
-RMD160 (ekg-20200116.tar.gz) = 033133c290178b59fc650004ecea2a55c94a94cc
-SHA512 (ekg-20200116.tar.gz) = db5c26973ebd0b7a622ba25c0a6f099eb94eefa43cb5c57fc7afedb7a1aed1285445d66d24de0d61ff08a2dce78a416107fe061e0118be7406e33fbd9d0ea2d3
-Size (ekg-20200116.tar.gz) = 4254772 bytes
+SHA1 (ekg-20200416.tar.gz) = 3bcecb02af3f487d104a63511f2f460580d17647
+RMD160 (ekg-20200416.tar.gz) = 78a023e7308c7316c7b0cb7dc0582994fe9415b1
+SHA512 (ekg-20200416.tar.gz) = d99a2926dd9cd9d032f0a75089e91b67f288b30a53fe4932fb7afe37c9edde998f90ecc959725f1bea876030dbbf8f50195e8fa7d4e91fd6b57c8a011a414005
+Size (ekg-20200416.tar.gz) = 4254837 bytes
 SHA1 (patch-Makefile.in) = 7a08b075b62bc72eac773cb86e0826dbe55de908
 SHA1 (patch-src_Makefile.in) = 2012b518cd643275d7a603864f3bc2c336a7bc32
 SHA1 (patch-src_ui-ncurses.c) = f526452651b793d68e69d0aaac72307e0e4033f8
