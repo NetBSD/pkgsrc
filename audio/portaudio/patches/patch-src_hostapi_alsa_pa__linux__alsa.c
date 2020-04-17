@@ -1,8 +1,7 @@
-$NetBSD: patch-src_hostapi_alsa_pa__linux__alsa.c,v 1.2 2019/10/26 17:22:08 nia Exp $
+$NetBSD: patch-src_hostapi_alsa_pa__linux__alsa.c,v 1.3 2020/04/17 15:50:03 nia Exp $
 
-Support building on non-Linux systems.
-
-Add features needed to make portmixer work with audacity.
+- Support building on non-Linux systems.
+- Add features needed to make portmixer work with audacity.
 
 --- src/hostapi/alsa/pa_linux_alsa.c.orig	2016-10-30 01:23:04.000000000 +0000
 +++ src/hostapi/alsa/pa_linux_alsa.c
