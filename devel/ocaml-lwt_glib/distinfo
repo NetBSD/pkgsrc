@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/17 12:03:43 mef Exp $
+
+SHA1 (lwt_glib-1.1.1.tar.gz) = 25b0d611053f06451e706f5130fa3c2875a0ace8
+RMD160 (lwt_glib-1.1.1.tar.gz) = d2613c5ba1596d6ee9675c1a6103988ea1f5e1af
+SHA512 (lwt_glib-1.1.1.tar.gz) = 43dcf27e8860cac363308f3767606b9eebcdc3dce768f63f56ee3876ed0a85f327a43d778700442bde2f4b35372b1c4a054ec65eedafb7e4f21b832647186983
+Size (lwt_glib-1.1.1.tar.gz) = 18222 bytes
