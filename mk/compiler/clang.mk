@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.24 2020/04/17 13:35:36 joerg Exp $
+# $NetBSD: clang.mk,v 1.25 2020/04/17 13:36:26 joerg Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -91,7 +91,8 @@ PKGSRC_FORTRAN?=gfortran
 .endif
 
 _WRAP_EXTRA_ARGS.CC+=	-Qunused-arguments -fcommon
-CWRAPPERS_APPEND.cc+=	-Qunused-arguments -fcommon
+CWRAPPERS_APPEND.cc+=	-Qunused-arguments
+CWRAPPERS_PREPEND.cc+=	-Qunused-arguments -fcommon
 _WRAP_EXTRA_ARGS.CXX+=	-Qunused-arguments
 CWRAPPERS_APPEND.cxx+=	-Qunused-arguments
 
