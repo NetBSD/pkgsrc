@@ -1,0 +1,69 @@
+$NetBSD: patch-configure.in,v 1.1 2020/04/17 15:50:03 nia Exp $
+
+- Sun/NetBSD audio support
+- Install extra headers needed by portmixer in Audacity for OSS.
+- Don't use -pthread
+
+--- configure.in.orig	2016-10-30 01:23:04.000000000 +0000
++++ configure.in
+@@ -32,6 +32,10 @@ AC_ARG_WITH(oss,
+             AS_HELP_STRING([--with-oss], [Enable support for OSS @<:@autodetect@:>@]),
+             [with_oss=$withval])
+ 
++AC_ARG_WITH(sun,
++            AS_HELP_STRING([--with-sun], [Enable support for Sun/NetBSD Audio @<:@autodetect@:>@]),
++            [with_sun=$withval])
++
+ AC_ARG_WITH(asihpi,
+             AS_HELP_STRING([--with-asihpi], [Enable support for ASIHPI @<:@autodetect@:>@]),
+             [with_asihpi=$withval])
+@@ -132,6 +136,10 @@ if test "x$with_oss" != "xno"; then
+         AC_CHECK_LIB(ossaudio, _oss_ioctl, have_libossaudio=yes, have_libossaudio=no)
+     fi
+ fi
++have_sun=no
++if test "x$with_sun" != "xno"; then
++    AC_CHECK_HEADERS([sys/audioio.h], [have_sun=yes])
++fi
+ have_jack=no
+ if test "x$with_jack" != "xno"; then
+     PKG_CHECK_MODULES(JACK, jack, have_jack=yes, have_jack=no)
+@@ -416,6 +424,7 @@ case "${host_os}" in
+ 
+         if [[ "$with_oss" != "no" ]] ; then
+            OTHER_OBJS="$OTHER_OBJS src/hostapi/oss/pa_unix_oss.o"
++           INCLUDES="$INCLUDES pa_unix_oss.h"
+            if [[ "$have_libossaudio" = "yes" ]] ; then
+                    DLL_LIBS="$DLL_LIBS -lossaudio"
+                    LIBS="$LIBS -lossaudio"
+@@ -423,6 +432,11 @@ case "${host_os}" in
+            AC_DEFINE(PA_USE_OSS,1)
+         fi
+ 
++        if [[ "$with_sun" != "no" ]] ; then
++           OTHER_OBJS="$OTHER_OBJS src/hostapi/sun/pa_unix_sun.o"
++           AC_DEFINE(PA_USE_SUN,1)
++        fi
++
+         if [[ "$have_asihpi" = "yes" ] && [ "$with_asihpi" != "no" ]] ; then
+            LIBS="$LIBS -lhpi"
+            DLL_LIBS="$DLL_LIBS -lhpi"
+@@ -430,8 +444,8 @@ case "${host_os}" in
+            AC_DEFINE(PA_USE_ASIHPI,1)
+         fi
+ 
+-        DLL_LIBS="$DLL_LIBS -lm -lpthread"
+-        LIBS="$LIBS -lm -lpthread"
++        DLL_LIBS="$DLL_LIBS -lm ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
++        LIBS="$LIBS -lm ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+         PADLL="libportaudio.so"
+ 
+         ## support sun cc compiler flags
+@@ -510,6 +524,7 @@ case "$target_os" in
+      *)
+ 	AC_MSG_RESULT([
+   OSS ......................... $have_oss
++  Sun ......................... $have_sun
+   JACK ........................ $have_jack
+ ])
+         ;;
