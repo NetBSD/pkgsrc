@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2019/10/08 18:13:32 maya Exp $
+$NetBSD: distinfo,v 1.6 2020/04/17 17:54:34 wiz Exp $
 
-SHA1 (fio-3.16.tar.gz) = 817571ef04f3309b15296cedf5e73f907dd2c472
-RMD160 (fio-3.16.tar.gz) = c7934c02ee72afd9cb98ced67f5c88204a124af3
-SHA512 (fio-3.16.tar.gz) = 05b85755411da5ccf620a8f4cc53347de01a605347ccc40769e850dc553abe9472231bd059e8ffe8d59681d7ed4291c7cce38b0f2109afbc390fbed6329f3a31
-Size (fio-3.16.tar.gz) = 979997 bytes
+SHA1 (fio-3.19.tar.gz) = 02503623deb40fae2b12c09cdf5f4b9339902f7b
+RMD160 (fio-3.19.tar.gz) = 1bfeee6af3fd5b94d134df9ca3c308dd84e7e24d
+SHA512 (fio-3.19.tar.gz) = 2154fb1c91f30c56182a85f0011ad5d1d25f3857a33165ea46f15a413bc8e47d0150026a7f87e901bcb5d587bc96bf22e62bc689bcfdc99976d82808f58a99fe
+Size (fio-3.19.tar.gz) = 1006012 bytes
