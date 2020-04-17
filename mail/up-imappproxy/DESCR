@@ -1,0 +1,4 @@
+Proxies IMAP transactions between an IMAP client and an IMAP server. The
+general idea is that the client should never know that it's not talking to
+the real IMAP server. The only thing that makes this a slightly unique Imap
+Proxy server is that it caches server connections.

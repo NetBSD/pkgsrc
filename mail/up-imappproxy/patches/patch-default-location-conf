@@ -1,0 +1,32 @@
+$NetBSD: patch-default-location-conf,v 1.1 2020/04/17 11:28:02 tm Exp $
+
+Fix config and pid file path. And add missing definitions.
+
+--- include/imapproxy.h.orig	Fri Jan 27 20:53:57 2017
++++ include/imapproxy.h	Thu Apr 16 21:25:31 2020
+@@ -179,10 +179,10 @@
+ #define SELECT_STATUS_BUF_SIZE  256               /* size of select status   */
+ 
+ #ifndef DEFAULT_CONFIG_FILE
+-#define DEFAULT_CONFIG_FILE     "/etc/imapproxy.conf"
++#define DEFAULT_CONFIG_FILE     "@PKG_SYSCONFDIR@/etc/imapproxy.conf"
+ #endif
+ #ifndef DEFAULT_PID_FILE
+-#define DEFAULT_PID_FILE       "/var/run/imapproxy.pid"
++#define DEFAULT_PID_FILE       "@VARBASE@/run/imapproxy.pid"
+ #endif
+ 
+ #define LITERAL_PASSWORD        1
+@@ -373,8 +373,12 @@
+ extern void ICC_Logout( ICC_Struct * );
+ extern void ICC_Recycle( unsigned int );
+ extern void ICC_Recycle_Loop( void );
++extern void ICC_Invalidate( ICC_Struct * );
+ extern void LockMutex( pthread_mutex_t * );
+ extern void UnLockMutex( pthread_mutex_t * );
++#ifdef HAVE_LIBSSL
++extern int Attempt_STARTTLS( ITD_Struct * );
++#endif
+ extern void SetDefaultConfigValues(ProxyConfig_Struct *);
+ extern void SetConfigOptions( char * );
+ extern void SetLogOptions( void );

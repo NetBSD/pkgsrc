@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/04/17 11:28:02 tm Exp $
+
+Fix test command in configure
+
+--- configure.orig	2010-07-25 08:19:30.000000000 +0000
++++ configure
+@@ -3419,7 +3419,7 @@ else
+    curses_found=no
+ fi
+ 
+-if test "$curses_found" == no; then
++if test "$curses_found" = no; then
+   echo "$as_me:$LINENO: checking for initscr in -lncurses" >&5
+ echo $ECHO_N "checking for initscr in -lncurses... $ECHO_C" >&6
+ if test "${ac_cv_lib_ncurses_initscr+set}" = set; then
