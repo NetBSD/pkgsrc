@@ -1,0 +1,2 @@
+bin/spfquery.py @PREFIX@/bin/spfquery.py-@PYVERSSUFFIX@
+bin/type99.py @PREFIX@/bin/type99.py-@PYVERSSUFFIX@
