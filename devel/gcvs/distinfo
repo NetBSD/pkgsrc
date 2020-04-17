@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 03:27:27 agc Exp $
+$NetBSD: distinfo,v 1.14 2020/04/17 00:21:56 joerg Exp $
 
 SHA1 (gcvs-1.0.tar.gz) = 42b2469d0a9acc0e69a127b44000cd1b11bb895e
 RMD160 (gcvs-1.0.tar.gz) = 195698283848cd1f22d00eb37df7dd0f6b52cffc
@@ -13,7 +13,7 @@ SHA1 (patch-ab) = 3f9764eb2e67ecc33cbfb5fac27eadb4b120434d
 SHA1 (patch-ac) = d3aea42a044fab09542cbda6956f4bdcb5a05f0b
 SHA1 (patch-ad) = 595277d9fcf9f4bc62637beae6bf5b9e70a0fb7d
 SHA1 (patch-ae) = acc2f668834409f379403b08e67ccc0ce4e1ff18
-SHA1 (patch-af) = 6048ade2cb3fe3fda6332159099190e5d8377e23
+SHA1 (patch-af) = 208ecfdc4af4b1fbfa3d1cbb8af01b2cccb48f0d
 SHA1 (patch-ag) = 495ec4b0b6e54834b2c54facd9ad1f853be188df
 SHA1 (patch-ah) = fa23ed2155af00d85cfe62d15c01dc77c9ddb55c
 SHA1 (patch-ai) = c349a5c49d8e0a481a4dd7eb56b713475b3c9e67
@@ -29,8 +29,11 @@ SHA1 (patch-ar) = 05244267342a031e5470e4c2641ac359985c6334
 SHA1 (patch-as) = c56bf78b4b72ff39eabc6011dce65c2e5650baa2
 SHA1 (patch-at) = 9ab6cef9e6122b2f2b4148be1610948f9764b387
 SHA1 (patch-au) = 62e0a709039fc73ea131a975fd4a4cbd9e5b134e
+SHA1 (patch-common_AppGlue.cpp) = 136104d0d4bbb90f74a1bd20251ed685f9fdf7c7
 SHA1 (patch-common_AppGlue.h) = 3ddf2f3cb842cd159407a232bc2122c2c89a5863
+SHA1 (patch-common_CvsArgs.cpp) = e8e13b823ac0718a499ff0e5500ef7241b80f9bb
 SHA1 (patch-common_Persistent.h) = 4df5170a64a6d3135cb4bb5aad90b4f86f2ed1b9
+SHA1 (patch-common_TextBinary.cpp) = c8f62175cb6470d333c005c053780555e1588d0a
 SHA1 (patch-common_UCvsConsole.cpp) = 276990c24811183c682410f4324f9e93de356931
 SHA1 (patch-common_getline_c) = 038fb5200c692e4b4d82041008b762a2bec55be2
 SHA1 (patch-common_getline_h) = ea1153a559b349da6083de7cd913840802c8caa9
@@ -40,3 +43,4 @@ SHA1 (patch-cvsunix_lib_getline_c) = 502b5967beb579bbbd5ebab7ee8824136e24f3fd
 SHA1 (patch-cvsunix_lib_getline_h) = c717385903f2f36e992213cbc8f010d683858d5a
 SHA1 (patch-cvsunix_src_client.c) = 7f07bf41740470f3c6123a20dba9b005b5dca329
 SHA1 (patch-cvsunix_src_server.c) = dce0f6cd59df4dda7f5baf3222f222e1bd1d8deb
+SHA1 (patch-rf_umenu.cpp) = 2469c96295a5e0e1fdd8a446fcc0246736af7686
