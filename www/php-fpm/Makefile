@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/04/15 11:57:35 triaxx Exp $
+# $NetBSD: Makefile,v 1.31 2020/04/17 09:18:54 triaxx Exp $
 
 PKGNAME=	${PHP_PKG_PREFIX}-fpm-${PHP_VERSION}
 PKGREVISION=	3
@@ -10,7 +10,6 @@ LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	pkg-config
 
-USE_PHP_EXT_PATCHES=	yes
 LIBTOOL_OVERRIDE=	# empty
 
 .include "../../mk/bsd.prefs.mk"
