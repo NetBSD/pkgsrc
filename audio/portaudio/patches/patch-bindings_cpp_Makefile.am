@@ -1,0 +1,13 @@
+$NetBSD: patch-bindings_cpp_Makefile.am,v 1.1 2020/04/17 15:50:03 nia Exp $
+
+Correct path for pkgconfig files.
+
+--- bindings/cpp/Makefile.am.orig	2016-10-30 01:23:04.000000000 +0000
++++ bindings/cpp/Makefile.am
+@@ -3,5 +3,5 @@ SUBDIRS = lib include bin 
+ 
+ EXTRA_DIST = portaudiocpp.pc
+ 
+-pkgconfigdir = $(libdir)/pkgconfig
++pkgconfigdir = $(prefix)/lib/pkgconfig
+ pkgconfig_DATA = portaudiocpp.pc

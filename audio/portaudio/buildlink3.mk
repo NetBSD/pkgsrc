@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2019/12/22 04:14:33 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2020/04/17 15:50:03 nia Exp $
 
 BUILDLINK_TREE+=	portaudio
 
@@ -15,11 +15,11 @@ pkgbase:=	portaudio
 
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.portaudio:Malsa)
+.if ${PKG_BUILD_OPTIONS.portaudio:Malsa}
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.portaudio:Mjack)
+.if ${PKG_BUILD_OPTIONS.portaudio:Mjack}
 .  include "../../audio/jack/buildlink3.mk"
 .endif
 .endif # PORTAUDIO_BUILDLINK3_MK
