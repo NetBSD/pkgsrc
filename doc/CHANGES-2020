@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2330 2020/04/16 23:00:37 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2331 2020/04/17 00:17:01 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3203,3 +3203,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/cppcheck to 1.90 [wiz 2020-04-16]
 	Updated multimedia/obs-studio to 25.0.4 [ryoon 2020-04-16]
 	Updated www/apache-tomcat85 to 8.5.54 [ryoon 2020-04-16]
+	Updated net/syncthing to 1.4.2 [gdt 2020-04-17]
