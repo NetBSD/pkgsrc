@@ -1,0 +1,4 @@
+afl++ is an upgrade to the American Fuzzy Lop (afl) fuzzer, created initially
+to incorporate all the best features developed in the years for the fuzzers in
+the AFL family but was not merged in AFL as it is not updated since November
+2017.
