@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:54:23 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/04/17 13:34:47 joerg Exp $
 
 SHA1 (dvdview-1.2.2.tar.gz) = d7d00aee0a5553f97b5a7673d7fa7174d173c12e
 RMD160 (dvdview-1.2.2.tar.gz) = 6563a006ecb788d5c9554016c97fbecb69814dab
 SHA512 (dvdview-1.2.2.tar.gz) = d67299f08aac102fa10eeaf30d601e46846ba7ce42540a49ecc67e418dd9b204a12610bd9ec594637a9900b08c77bc8ad8db819acd0a750a40b386eca99b7fdb
 Size (dvdview-1.2.2.tar.gz) = 209143 bytes
-SHA1 (patch-aa) = b691e2988b1394002a1e57512216cdf55a592665
+SHA1 (patch-aa) = 1851dba28923a5b2dd43673180c35bb8ae92daba
 SHA1 (patch-ab) = 6509989ade7aff868c15436b859679ddd6b35a36
 SHA1 (patch-ac) = 68773260cfc04b8fd1ac8ac3a33ad685fecabc38
+SHA1 (patch-src_input_streamsrc__udp.cc) = 9db39dba255bde35b3eefa2d65e88010ffb1f718
