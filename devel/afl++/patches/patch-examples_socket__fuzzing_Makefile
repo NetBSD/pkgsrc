@@ -1,0 +1,17 @@
+$NetBSD: patch-examples_socket__fuzzing_Makefile,v 1.1 2020/04/17 17:51:09 wiz Exp $
+
+Honor CFLAGS and LDFLAGS.
+
+--- examples/socket_fuzzing/Makefile.orig	2020-02-28 00:13:28.000000000 +0000
++++ examples/socket_fuzzing/Makefile
+@@ -15,8 +15,8 @@ PREFIX     ?= /usr/local
+ BIN_PATH    = $(PREFIX)/bin
+ HELPER_PATH = $(PREFIX)/lib/afl
+ 
+-CFLAGS = -fPIC -Wall -Wextra
+-LDFLAGS = -shared
++CFLAGS += -fPIC -Wall -Wextra
++LDFLAGS += -shared
+ 
+ ifneq "$(filter Linux GNU%,$(shell uname))" ""
+   LDFLAGS  += -ldl
