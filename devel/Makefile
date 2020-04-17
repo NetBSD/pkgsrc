@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3097 2020/04/17 00:35:28 js Exp $
+# $NetBSD: Makefile,v 1.3098 2020/04/17 17:51:39 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -93,6 +93,7 @@ SUBDIR+=	adacurses
 SUBDIR+=	adocman
 SUBDIR+=	aegis
 SUBDIR+=	afl
+SUBDIR+=	afl++
 SUBDIR+=	ald
 SUBDIR+=	alex
 SUBDIR+=	allegro
