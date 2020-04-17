@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.166 2020/04/06 20:21:57 adam Exp $
+$NetBSD: distinfo,v 1.167 2020/04/17 07:51:55 adam Exp $
 
-SHA1 (node-v13.12.0.tar.xz) = 6d9eb7095d379a32c051d3f89376bf0f8373ba3f
-RMD160 (node-v13.12.0.tar.xz) = 5fc3a1051534cc5fe09ff746dc9d94427fff40de
-SHA512 (node-v13.12.0.tar.xz) = 3166da61a3d84fa9d4cbfc473df7441a6f7e648ad92b095cc357c2440214ddde117fb220270db8e0736eea3b715742f0d73666bba25724770e7e8f6071495d57
-Size (node-v13.12.0.tar.xz) = 32841080 bytes
+SHA1 (node-v13.13.0.tar.xz) = f51c5ef8fac4c49743126123c9083aff2e54f3a4
+RMD160 (node-v13.13.0.tar.xz) = 2ce04174bf52b60db7cdc091b7e76403f72c628c
+SHA512 (node-v13.13.0.tar.xz) = 344d364fd39c9497ff7d2829b271b572f3f997fc3eb01744c9ba533b4ba1e8a1fbd08ad28909e74504f4bf84de95d0197a0b5e8b9cf07180a1457fdd2e95775e
+Size (node-v13.13.0.tar.xz) = 32862040 bytes
 SHA1 (patch-common.gypi) = f0bd2962bf7c8466db24b35a35154897ecad6316
 SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
 SHA1 (patch-deps_uv_common.gypi) = d38a9c8d9e3522f15812aec2f5b1e1e636d4bab3
@@ -20,7 +20,6 @@ SHA1 (patch-node.gypi) = 4a104dba6c22702211009bc60a6be6f87554e2fa
 SHA1 (patch-src_cares__wrap.cc) = a26a162f130468cbc0650a33b27b71377d273704
 SHA1 (patch-src_inspector__agent.cc) = 2ec2a7be459648700488096f467a4ae6af5a9d91
 SHA1 (patch-src_node__postmortem__metadata.cc) = 9938482d724ad6636af5dc3fa719ec26ed8539ff
-SHA1 (patch-tools_gyp_pylib_gyp_common.py) = b25eeab3ccc2ac1d224575ac4d07a79f198dc7ed
 SHA1 (patch-tools_gyp_pylib_gyp_generator_make.py) = be3cc1aaa85c3d59b6f2758df813cb5ad8d8f74e
 SHA1 (patch-tools_gyp_pylib_gyp_xcode__emulation.py) = 15937c419f3226ab280c7bcd5d726773cb5add57
 SHA1 (patch-tools_install.py) = 8058eb63387971b97a1c3573d1875befeb873e77
