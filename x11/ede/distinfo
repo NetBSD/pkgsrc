@@ -1,11 +1,16 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 03:28:28 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/04/17 13:31:46 joerg Exp $
 
 SHA1 (ede-1.0.4.tar.bz2) = 22dfcb972ceef00fa4c79b971708b317095c612c
 RMD160 (ede-1.0.4.tar.bz2) = 1165f448a4ee0d385cc0372c9b18d0f18ec669fe
 SHA512 (ede-1.0.4.tar.bz2) = ec777d42b2ed80b0a1edb9d8087790ec3db6c6a69563464eb261d12056f3ea2d952063cca63dca348681bb2620fcd093a262d4de0239b39b7057b44ea1196d87
 Size (ede-1.0.4.tar.bz2) = 1372589 bytes
 SHA1 (patch-aa) = 53580cfa4d25730fb7cc8cd417c293978e130c95
+SHA1 (patch-common_aboutdialog.cpp) = 3ea276232880527f17fa2e261e6df5f28c145480
+SHA1 (patch-edewm_Desktop.cpp) = 651394fa0120deafee102238b5d731ed35e92c08
 SHA1 (patch-esvrconf_escreensaver_cpp) = 7f63df9d0e8f5a0997704e00df7058950233262e
+SHA1 (patch-etip_etip.cpp) = f173fd1cbd785c4d00dab00d58a2ab775a4c1775
+SHA1 (patch-eworkpanel_aboutdialog.cpp) = 47e34835e7a5327541ecb83e57041a9c5e8bacae
+SHA1 (patch-eworkpanel_menu.h) = a37d9178a120fb690bc2f8b06235c2141878d240
 SHA1 (patch-eworkpanel_workpanel_cpp) = 1c918020ed748398f6e3b41792f560bee40df271
 SHA1 (patch-fl_time_cpp) = c4189968a471c0a861af2d2b77eb0ec3a7bbf0b2
 SHA1 (patch-makeinclude.in) = 88dd36a2aee3069a99245fd77a2fcf87f816c6b1
