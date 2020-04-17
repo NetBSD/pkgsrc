@@ -1,28 +1,32 @@
-# $NetBSD: Makefile,v 1.10 2017/02/25 17:40:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/04/17 11:27:36 adam Exp $
 
-VERSION=	2.0.12
-DISTNAME=	pyspf-${VERSION}t
-PKGNAME=	${PYPKGPREFIX}-spf-${VERSION}
-PKGREVISION=	1
+DISTNAME=	pyspf-2.0.14
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyspf/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/pyspf
-COMMENT=	Python implementation of the RFC 4408 SPF protocol
+HOMEPAGE=	https://github.com/sdgathman/pyspf
+COMMENT=	SPF (Sender Policy Framework) implemented in Python
 LICENSE=	python-software-foundation
 
-EGG_NAME=	${DISTNAME:S/t$//}
-WRKSRC=		${WRKDIR}/${DISTNAME:S/t$//}
-
 .include "../../lang/python/pyversion.mk"
-
-.if ${PYVERSSUFFIX} == "2.7"
-DEPENDS+=	${PYPKGPREFIX}-pydns-[0-9]*:../../net/py-pydns
+.if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-ipaddress-[0-9]*:../../net/py-ipaddress
 .else
-DEPENDS+=	${PYPKGPREFIX}-py3dns-[0-9]*:../../net/py-py3dns
+DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 .endif
+
+USE_LANGUAGES=	# none
+
+post-install:
+.for bin in spfquery.py type99.py
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
+
+do-test:
+	cd ${WRKSRC}/test && ${PYTHONBIN} testspf.py
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
