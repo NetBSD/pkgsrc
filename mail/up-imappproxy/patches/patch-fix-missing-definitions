@@ -1,0 +1,17 @@
+$NetBSD: patch-fix-missing-definitions,v 1.1 2020/04/17 11:28:02 tm Exp $
+
+Fix missing definitions
+
+Richard Laager <rlaager@wiktel.com>
+https://sourceforge.net/p/squirrelmail/mailman/message/35526927/
+
+--- src/becomenonroot.c.orig
++++ src/becomenonroot.c
+@@ -48,6 +48,7 @@
+ 
+ #include <sys/types.h>
+ #include <strings.h>
++#include <string.h>
+ #include <errno.h>
+ #include <stdlib.h>
+ #include <stdio.h>

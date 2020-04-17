@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1 2020/04/17 11:28:02 tm Exp $
+
+SHA1 (up-imapproxy_1.2.8~svn20171105.orig.tar.bz2) = 85e76717b0d2f790e366b7516cc567fc551c9cc6
+RMD160 (up-imapproxy_1.2.8~svn20171105.orig.tar.bz2) = dac57dcea68c333f6b05942c99fb8d0bfd0b7808
+SHA512 (up-imapproxy_1.2.8~svn20171105.orig.tar.bz2) = 72b79266d3f277052657ecab47a431c9efd764e9fa9523177288cedeede47dd1a5a654a8c9a851a45b3175f43e18ad2290d87778b45889976f7ce0d17625962f
+Size (up-imapproxy_1.2.8~svn20171105.orig.tar.bz2) = 118836 bytes
+SHA1 (patch-check-dup-return-value) = ee1aee413dd3d0a1a01cb9c360c71f4cecfe5c7a
+SHA1 (patch-configure) = 514e1b7c7470aef719364470987166418f6f40ba
+SHA1 (patch-default-location-conf) = 5d43f7d142b3a25d940a58c8bed5def799119845
+SHA1 (patch-fix-egd-ifdef) = cd17fb681a9c7bcfe8f005235eeed36160e97721
+SHA1 (patch-fix-missing-definitions) = 026448da651b76b91bda4ccef453a1ab646d8524
+SHA1 (patch-fix-size_t-formatters-hash.c) = a5c2c26c9c4c1241099d78e6ef0adc9241c2e8e6
+SHA1 (patch-fix-size_t-formatters-imapcommon.c) = 23ea515f680105864dd5c8381acdcfd84c141be7
+SHA1 (patch-fix-socklen_t-types-main.c) = d9ec2c92ecfee08c54c6e28a6a15dfc6730eeffd
+SHA1 (patch-fix-socklen_t-types-request.c) = 99cd03e88f7885bebc766be9d2d14958ffd45be6
+SHA1 (patch-fix-ssl-types) = 2f32060a7ab8922dd038e07f20da6d4240c2bdb0
+SHA1 (patch-openssl-1.1-imapcommon.c) = 69fca63f349fc4c2c11169936136e4611d496901
+SHA1 (patch-openssl-1.1-main.c) = fe2d2eab38a872dd55f0f1cf965e50bd9e501022
+SHA1 (patch-remove-install-chown) = e3811e13fa3fe89dc7d58162a3dcde9a57527be2
+SHA1 (patch-remove-unused-variables) = 37e0a94667d390e11bb408a69e3758e40675c63c
