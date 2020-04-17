@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/04 13:11:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/17 13:31:31 plunky Exp $
 share/mypaint-data/2.0/brushes/Dieterle/8B_Pencil#1.myb
 share/mypaint-data/2.0/brushes/Dieterle/8B_Pencil#1_prev.png
 share/mypaint-data/2.0/brushes/Dieterle/Blender.myb
@@ -37,8 +37,6 @@ share/mypaint-data/2.0/brushes/Dieterle/WateryFlatbrush.myb
 share/mypaint-data/2.0/brushes/Dieterle/WateryFlatbrush_prev.png
 share/mypaint-data/2.0/brushes/Dieterle/arrow#1.myb
 share/mypaint-data/2.0/brushes/Dieterle/arrow#1_prev.png
-share/mypaint-data/2.0/brushes/FX_blender_prev.png
-share/mypaint-data/2.0/brushes/Makefile.am
 share/mypaint-data/2.0/brushes/classic/blend+paint.myb
 share/mypaint-data/2.0/brushes/classic/blend+paint_prev.png
 share/mypaint-data/2.0/brushes/classic/blending_knife.myb
@@ -269,9 +267,7 @@ share/mypaint-data/2.0/brushes/kaerhon_v1/smudge_ink(0.7)_sm.myb
 share/mypaint-data/2.0/brushes/kaerhon_v1/smudge_ink(0.7)_sm_prev.png
 share/mypaint-data/2.0/brushes/kaerhon_v1/wet_paint_sm.myb
 share/mypaint-data/2.0/brushes/kaerhon_v1/wet_paint_sm_prev.png
-share/mypaint-data/2.0/brushes/label-brush-mypaint.sh
 share/mypaint-data/2.0/brushes/order.conf
-share/mypaint-data/2.0/brushes/prev-template.xcf.gz
 share/mypaint-data/2.0/brushes/ramon/100%_Opaque.myb
 share/mypaint-data/2.0/brushes/ramon/100%_Opaque_prev.png
 share/mypaint-data/2.0/brushes/ramon/2B_pencil.myb
