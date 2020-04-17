@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/04/12 08:28:52 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/04/17 13:34:11 joerg Exp $
 
 DISTNAME=	fcitx-skk-0.1.4
 PKGREVISION=	7
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 
 .include "../../inputmethod/fcitx/buildlink3.mk"
 .include "../../inputmethod/fcitx-qt5/buildlink3.mk"
