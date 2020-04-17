@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/20 15:18:59 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/17 00:18:51 joerg Exp $
 
 DISTNAME=	binutils-gdb-xtensa-2.31_20190405
 PKGNAME=	${DISTNAME:C/binutils-gdb-xtensa/xtensa-lx106-elf-binutils/}
@@ -27,6 +27,9 @@ CONFIGURE_ARGS+=	--target=xtensa-lx106-elf
 CONFIGURE_ARGS+=	--enable-multilib
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-gdb
+
+# Running tests needs a lot more work anyway
+CHECK_PORTABILITY_SKIP+=	gdb/testsuite/Makefile.in
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
