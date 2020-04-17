@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2344 2020/04/17 20:16:23 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2345 2020/04/17 23:53:22 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3223,3 +3223,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated benchmarks/fio to 3.19 [wiz 2020-04-17]
 	Updated mail/neomutt to 20200417 [wiz 2020-04-17]
 	Updated net/openvpn to 2.4.9 [adam 2020-04-17]
+	Updated wm/xfce4-wm to 4.14.1 [gutteridge 2020-04-17]
