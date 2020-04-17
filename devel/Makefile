@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3096 2020/04/16 12:50:01 mef Exp $
+# $NetBSD: Makefile,v 1.3097 2020/04/17 00:35:28 js Exp $
 #
 
 COMMENT=	Development utilities
@@ -2310,6 +2310,7 @@ SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
 SUBDIR+=	py-lru-dict
 SUBDIR+=	py-lupa
+SUBDIR+=	py-macaroons
 SUBDIR+=	py-macholib
 SUBDIR+=	py-mako
 SUBDIR+=	py-mando
