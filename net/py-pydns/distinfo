@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2016/10/27 12:03:51 jperkin Exp $
-
-SHA1 (pydns-2.3.6.tar.gz) = 1e0c11248071d3fac0a2d7516b1d2894388edbac
-RMD160 (pydns-2.3.6.tar.gz) = 6b9e79b8b4bed84f9e121d764a65ba1a1c6f4c4b
-SHA512 (pydns-2.3.6.tar.gz) = 261598c085c7d9f7adf5ce881814e444cdcf48a946dc17db467268ab6164f6045c204507cc58eff8e6f826b9786715ad2a9e766a72193ac8666969913180954b
-Size (pydns-2.3.6.tar.gz) = 28220 bytes
