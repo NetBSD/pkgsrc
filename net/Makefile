@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1318 2020/04/14 19:43:17 js Exp $
+# $NetBSD: Makefile,v 1.1319 2020/04/17 12:35:22 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -711,9 +711,7 @@ SUBDIR+=	py-pika
 SUBDIR+=	py-portend
 SUBDIR+=	py-prometheus_client
 SUBDIR+=	py-ptt
-SUBDIR+=	py-py3dns
 SUBDIR+=	py-pychromecast
-SUBDIR+=	py-pydns
 SUBDIR+=	py-pyftpdlib
 SUBDIR+=	py-pylint-celery
 SUBDIR+=	py-pypiserver
