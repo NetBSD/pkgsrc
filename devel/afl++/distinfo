@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/04/17 17:51:09 wiz Exp $
+
+SHA1 (AFLplusplus-2.62c.tar.gz) = 4442de6667fe780867a7bd0ddbbc0eaa897f95e5
+RMD160 (AFLplusplus-2.62c.tar.gz) = 0840d48520ee90d9263cdf040b6253efac3d7ea2
+SHA512 (AFLplusplus-2.62c.tar.gz) = 0214845af0acc889c5f80bbfc6f50b662cb608c4c0959061075db29ee60bdaca7b11499368b44597674e1a11c49e60725abe2f919a7ddf7850c410019902eb40
+Size (AFLplusplus-2.62c.tar.gz) = 1272000 bytes
+SHA1 (patch-examples_argv__fuzzing_Makefile) = 04032386558713ca4d142964f63cc6820ae010c8
+SHA1 (patch-examples_socket__fuzzing_Makefile) = 46b5474f61029d5ea4a4449cfad6de0d6f5c8d66
