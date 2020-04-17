@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/02/26 10:32:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/17 05:39:55 gutteridge Exp $
 #
 
 DISTNAME=	ispell-3.4.00
@@ -35,7 +35,8 @@ do-configure:
 	${ECHO} "#define LANGUAGES \"{${DICT_LANG},MASTERDICTS=${DICT_LANG}.xlg,HASHFILES=${DICT_LANG}xlg.hash,EXTRADICT=}\""  >>local.h; \
 	${ECHO} '#define MASTERHASH "${DICT_LANG}xlg.hash"'  >> local.h ;	\
 	${ECHO} "#undef WORDS"  >> local.h ;				\
-	${ECHO} '#define WORDS   "${WORDS}"'  >> local.h
+	${ECHO} '#define WORDS   "${WORDS}"'  >> local.h ; 		\
+	${ECHO} '#ifdef __sun\n#include<sys/types.h>\n#include<sys/dirent.h>\n#define USG 1\n#endif' >> local.h
 
 do-install:
 	${CP} ${WRKSRC}/languages/${DICT_LANG}/${DICT_LANG}xlg.hash ${DESTDIR}${PREFIX}/lib
