@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/04/12 11:01:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.40 2020/04/17 01:19:20 gutteridge Exp $
 
 DISTNAME=		go-net-20200130
 PKGREVISION=		2
@@ -24,7 +24,7 @@ PLIST_VARS+=	h2i route
 
 .if ${OPSYS} == "SunOS"
 # route support is not yet implemented for sunos
-# h2i is missing terminal.MakeRaw and terminal.Restore
+PLIST.h2i=	yes
 .elif ${OPSYS} == "Linux"
 PLIST.h2i=	yes
 .else
