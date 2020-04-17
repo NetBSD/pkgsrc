@@ -1,0 +1,54 @@
+$NetBSD: patch-tcpd_configure,v 1.1 2020/04/17 00:21:17 joerg Exp $
+
+SSL_load_error_strings is no long a symbol in OpenSSL 1.1.
+
+--- tcpd/configure.orig	2020-04-13 20:46:43.239442081 +0000
++++ tcpd/configure
+@@ -12863,9 +12863,9 @@ else
+ fi
+ 
+ 
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for SSL_load_error_strings in -lssl" >&5
+-$as_echo_n "checking for SSL_load_error_strings in -lssl... " >&6; }
+-if ${ac_cv_lib_ssl_SSL_load_error_strings+:} false; then :
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for OPENSSL_init_ssl in -lssl" >&5
++$as_echo_n "checking for OPENSSL_init_ssl in -lssl... " >&6; }
++if ${ac_cv_lib_ssl_OPENSSL_init_ssl+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -12879,27 +12879,27 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char SSL_load_error_strings ();
++char OPENSSL_init_ssl ();
+ int
+ main ()
+ {
+-return SSL_load_error_strings ();
++return OPENSSL_init_ssl ();
+   ;
+   return 0;
+ }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+-  ac_cv_lib_ssl_SSL_load_error_strings=yes
++  ac_cv_lib_ssl_OPENSSL_init_ssl=yes
+ else
+-  ac_cv_lib_ssl_SSL_load_error_strings=no
++  ac_cv_lib_ssl_OPENSSL_init_ssl=no
+ fi
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_ssl_SSL_load_error_strings" >&5
+-$as_echo "$ac_cv_lib_ssl_SSL_load_error_strings" >&6; }
+-if test "x$ac_cv_lib_ssl_SSL_load_error_strings" = xyes; then :
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_ssl_OPENSSL_init_ssl" >&5
++$as_echo "$ac_cv_lib_ssl_OPENSSL_init_ssl" >&6; }
++if test "x$ac_cv_lib_ssl_OPENSSL_init_ssl" = xyes; then :
+   have_ssl=yes
+ else
+   have_ssl=no
