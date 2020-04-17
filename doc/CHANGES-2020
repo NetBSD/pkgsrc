@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2335 2020/04/17 11:06:11 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2336 2020/04/17 11:37:10 tm Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3212,3 +3212,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/nodejs12 to 12.16.2 [adam 2020-04-17]
 	Updated lang/nodejs10 to 10.20.1 [adam 2020-04-17]
 	Updated editors/OmegaT to 5.2.0 [ryoon 2020-04-17]
+	Updated mail/up-imappproxy to 1.2.8 [tm 2020-04-17]
