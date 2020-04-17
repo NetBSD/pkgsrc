@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/01/20 17:25:10 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/04/17 12:27:51 adam Exp $
 
 BUILDLINK_TREE+=	libgadu
 
@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.libgadu?=	../../chat/libgadu
 
 .include "../../devel/protobuf-c/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .endif	# LIBGADU_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libgadu
