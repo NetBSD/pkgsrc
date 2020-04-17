@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2016/03/13 11:58:43 morr Exp $
+$NetBSD: distinfo,v 1.29 2020/04/17 08:43:46 jperkin Exp $
 
 SHA1 (rxvt-unicode-9.22.tar.bz2) = e575b869782fbfed955f84f48b204ec888d91ba1
 RMD160 (rxvt-unicode-9.22.tar.bz2) = 83e315f513500c2bf1f31cd4fd3854b508bc8d22
@@ -7,3 +7,4 @@ Size (rxvt-unicode-9.22.tar.bz2) = 931198 bytes
 SHA1 (patch-Makefile.in) = 1c2890e2057d062f823f944fc2ecd2258f14b61e
 SHA1 (patch-configure) = 8b8c95ea8e39efc2fa35188798d5d3ac53e3abc1
 SHA1 (patch-doc_Makefile.in) = 8465193e21878a18ae467dc50a336a65f1bd4de7
+SHA1 (patch-libptytty_src_logging.C) = 583d2012cd3061ef88fa7867674a9c75bca2c88f
