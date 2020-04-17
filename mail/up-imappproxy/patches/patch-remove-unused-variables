@@ -1,0 +1,18 @@
+$NetBSD: patch-remove-unused-variables,v 1.1 2020/04/17 11:28:02 tm Exp $
+
+Remove unused variables
+
+--- src/main.c.orig	Thu Apr 16 22:21:03 2020
++++ src/main.c	Thu Apr 16 22:30:27 2020
+@@ -186,11 +186,6 @@
+ **
+ */
+ 
+-
+-static char *sourceRevision = "$Revision: 1.1 $";
+-static char *sourceVersion = "$Id: patch-remove-unused-variables,v 1.1 2020/04/17 11:28:02 tm Exp $";
+-static char *sourceAuthor = "$Author: tm $";
+-
+ #define _REENTRANT
+ 
+ #include <config.h>
