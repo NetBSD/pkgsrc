@@ -1,6 +1,7 @@
-$NetBSD: patch-include_portaudio.h,v 1.1 2019/10/26 17:22:39 nia Exp $
+$NetBSD: patch-include_portaudio.h,v 1.2 2020/04/17 15:50:03 nia Exp $
 
-Add features needed to make portmixer work in audacity.
+- Sun/NetBSD audio support.
+- Add features needed to make portmixer work in audacity.
 
 --- include/portaudio.h.orig	2016-10-30 01:23:04.000000000 +0000
 +++ include/portaudio.h
