@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/04/12 08:29:15 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/17 16:58:32 gutteridge Exp $
 
 DISTNAME=	PyICU-2.4.3
 PKGREVISION=	3
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/ovalhub/pyicu
 COMMENT=	Python extension wrapping the ICU C++ libraries
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pkg-config
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
