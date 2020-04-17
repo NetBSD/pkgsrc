@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/01/26 17:31:33 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2020/04/17 00:22:28 joerg Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
@@ -95,6 +95,9 @@ SPECIAL_PERMS+=	${PREFIX}/sbin/courierfilter  ${COURIER_USER} \
 
 post-extract:
 	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
+
+pre-build:
+	${RM} -f ${WRKSRC}/version
 
 post-build:
 	${TOUCH} ${WRKDIR}/locallowercase
