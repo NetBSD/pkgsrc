@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/04/05 16:05:43 bsiegert Exp $
+# $NetBSD: Makefile,v 1.23 2020/04/17 21:07:00 gutteridge Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -7,8 +7,11 @@ CATEGORIES=	sysutils
 
 COMMENT=	Power manager for MATE
 
-TOOL_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=		libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
+# This looks unorthodox, but polkit is required directly for its ITS
+# data during the build phase only, in order to generate the file
+# "org.mate.power.policy".
+TOOL_DEPENDS+=		polkit-[0-9]*:../../security/polkit
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/${PKGBASE}
