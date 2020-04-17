@@ -1,6 +1,6 @@
 Brushes used by MyPaint and other software using libmypaint.
 
-This data package is versionned. This are the brushes to be used
+This data package is versioned. This are the brushes to be used
 by libmypaint 2.x, current development version which has no releases
 to the day of writing. If you want brushes for the libmypaint 1.x
 releases, do not install mypaint-brushes from master, but from
