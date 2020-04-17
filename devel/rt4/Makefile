@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2019/11/22 13:01:38 mef Exp $
+# $NetBSD: Makefile,v 1.32 2020/04/17 15:31:43 mef Exp $
 
 DISTNAME=	rt-4.2.16
 PKGNAME=	${DISTNAME:S/rt/rt4/}
@@ -148,6 +148,9 @@ DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Convert-Color-[0-9]*:../../converters/p5-Convert-Color
 
 DEPENDS+=	p5-Text-Reform-[0-9]*:../../textproc/p5-Text-Reform
+
+DEPENDS+=	p5-Sub-HandlesVia-[0-9]*:../../devel/p5-Sub-HandlesVia
+
 
 .include "dirs.mk"
 .include "options.mk"
