@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.160 2020/02/08 22:59:55 kamil Exp $
+$NetBSD: distinfo,v 1.161 2020/04/17 00:18:24 joerg Exp $
 
 SHA1 (seamonkey-2.49.5.source.tar.xz) = 366953dee336185102d9a17028d49834cdb897d2
 RMD160 (seamonkey-2.49.5.source.tar.xz) = 6423a548286a166e88695060713afefd7365f389
@@ -16,6 +16,7 @@ SHA1 (patch-mozilla_build_pgo_profileserver.py) = 5e93f4153f654d3cfeffcbabfa9ef9
 SHA1 (patch-mozilla_config_Makefile.in) = 307d1013be22bc97cd5eb340ba6a3835998319d3
 SHA1 (patch-mozilla_config_baseconfig.mk) = 49914353e167442440e04afd8e64b57ddf9399df
 SHA1 (patch-mozilla_config_external_moz.build) = a6f9bfad761428f0690a96d9953cd9fd3879f4ba
+SHA1 (patch-mozilla_config_gcc-stl-wrapper.template.h) = 6870fee7feabed3794334278ee6f49e0b2857743
 SHA1 (patch-mozilla_config_stl__wrappers_ios) = 9200935d025d899a5810dc615345b9a7005369b2
 SHA1 (patch-mozilla_config_stl__wrappers_ostream) = 232e253bca5d8f7f0de1b880dc34b613f8852ee7
 SHA1 (patch-mozilla_config_system-headers) = 6d205afa00cabef39ab626320d423392d64e0165
@@ -114,6 +115,7 @@ SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp) = 
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__asm__mips.S) = 40231c0cbd4694f375211c21fe0473fd5fb9f483
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__asm__sparc64__netbsd.s) = 219bdb7ef05d156642dd4124e444696c744badfd
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__netbsd__m68k.cpp) = 09b4833061face404731f2ec99a7fd2b3f313f70
+SHA1 (patch-mozilla_xpcom_typelib_xpt_xpt__arena.h) = 2a48f7dcbcf09e4020b846c1677ee346881a4235
 SHA1 (patch-netwerk_srtp_src_crypto_hash_hmac.c) = f1c41712212182af22403f32a4153b6542aa14b1
 SHA1 (patch-netwerk_srtp_src_crypto_kernel_crypto__kernel.c) = 439709724e30ef5b4e671fb4b525dca804f9597c
 SHA1 (patch-rc) = bf98fe87c83c322dcdfe3d7aff3ca8e6f273a567
