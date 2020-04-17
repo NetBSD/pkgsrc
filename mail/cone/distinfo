@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2020/03/22 21:24:56 joerg Exp $
+$NetBSD: distinfo,v 1.12 2020/04/17 00:21:17 joerg Exp $
 
 SHA1 (cone-0.90.tar.bz2) = 51614269ed0b8c091de4573bacefe5f394a08311
 RMD160 (cone-0.90.tar.bz2) = 2b2a924d8726535654c74c9d98d7e444aff9fd5e
@@ -18,3 +18,5 @@ SHA1 (patch-libmail-mboxgetmessage.C) = a46d7ee0962e89721ff75b43adcf5316aa5bda28
 SHA1 (patch-libmail-mboxread.C) = 940eab3b9040d9362f816d9af4d9bcc305701ae6
 SHA1 (patch-libmail-tmpaccount.C) = dbd3d7bde51e9c94b3258fcb2fca6b9077f9ad12
 SHA1 (patch-libmail_addmessage.H) = 27a07ef263bd351938e658c7f8c7faed44376479
+SHA1 (patch-tcpd_configure) = eba2223ad6a62e273c8da6cfe0ba2cf141680470
+SHA1 (patch-tcpd_libcouriertls.c) = ffe6d71d7c1092c88f5ac496ee12e41d2db5e3bb
