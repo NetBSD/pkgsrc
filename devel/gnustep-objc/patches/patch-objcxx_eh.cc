@@ -1,11 +1,18 @@
-$NetBSD: patch-objcxx_eh.cc,v 1.1 2020/04/16 09:28:39 manu Exp $
+$NetBSD: patch-objcxx_eh.cc,v 1.2 2020/04/17 13:32:23 joerg Exp $
 
-Workaround build failure due to redefinition
+Workaround build failure due to redefinition and include correct header.
 
---- objcxx_eh.cc.orig	2020-04-14 11:22:03.686048307 +0200
-+++ objcxx_eh.cc	2020-04-14 11:22:33.134026599 +0200
-@@ -14,8 +14,9 @@
- }
+--- objcxx_eh.cc.orig	2015-08-07 11:33:41.000000000 +0000
++++ objcxx_eh.cc
+@@ -3,6 +3,7 @@
+ #include "dwarf_eh.h"
+ #include "objcxx_eh.h"
+ #include <exception>
++#include <typeinfo>
+ 
+ extern "C" 
+ {
+@@ -15,6 +16,7 @@ namespace __cxxabiv1
  
  using __cxxabiv1::__class_type_info;
  
@@ -13,14 +20,11 @@ Workaround build failure due to redefinition
  namespace std
  {
  	/**
- 	 * std::type_info defined with the GCC ABI.  This may not be exposed in
-@@ -47,8 +48,9 @@
- 				                const __class_type_info *target,
+@@ -48,6 +50,7 @@ namespace std
  				                void **thrown_object) const;
  	};
  }
 +#endif
  
  using namespace std;
- 
  
