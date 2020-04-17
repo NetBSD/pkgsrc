@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2020/04/12 08:27:58 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/04/17 07:58:54 adam Exp $
 
-DISTNAME=	node-v10.19.0
+DISTNAME=	node-v10.20.1
 
 USE_LANGUAGES=	c gnu++14
 
 # Requires http_parser_set_max_header_size
 BUILDLINK_API_DEPENDS.http-parser+=	http-parser>=2.9.0
 
-PKGREVISION= 1
 .include "../../mk/bsd.prefs.mk"
 
 # XXX: figure out a way to add rpaths to torque
