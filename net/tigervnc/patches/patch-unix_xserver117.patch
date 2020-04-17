@@ -1,0 +1,72 @@
+$NetBSD: patch-unix_xserver117.patch,v 1.7 2020/04/17 11:37:24 wiz Exp $
+
+--- unix/xserver117.patch.orig	2015-07-11 13:00:36.000000000 +0000
++++ unix/xserver117.patch
+@@ -85,7 +85,24 @@ diff -up xorg-server-1.17.1/mi/miinitext
+ diff -up xorg-server-1.17.1/os/WaitFor.c.vnc xorg-server-1.17.1/os/WaitFor.c
+ --- xorg-server-1.17.1/os/WaitFor.c.vnc	2015-01-26 18:40:30.000000000 +0000
+ +++ xorg-server-1.17.1/os/WaitFor.c	2015-02-13 16:14:05.132516837 +0000
+-@@ -125,6 +125,9 @@ static void DoTimer(OsTimerPtr timer, CA
++@@ -52,6 +52,8 @@
++  *
++  *****************************************************************/
++ 
+++#include <X11/Xpoll.h>
+++
++ #ifdef HAVE_DIX_CONFIG_H
++ #include <dix-config.h>
++ #endif
++@@ -66,7 +68,6 @@
++ #include "misc.h"
++ 
++ #include "osdep.h"
++-#include <X11/Xpoll.h>
++ #include "dixstruct.h"
++ #include "opaque.h"
++ #ifdef DPMSExtension
++@@ -125,6 +126,9 @@
+  static void CheckAllTimers(void);
+  static volatile OsTimerPtr timers = NULL;
+  
+@@ -135,3 +152,41 @@ diff -up xorg-server-1.17.1/os/WaitFor.c
+          if (i <= 0) {           /* An error or timeout occurred */
+              if (dispatchException)
+                  return 0;
++--- xorg-server-1.17.1/os/connection.c.orig	2015-07-22 08:50:52.000000000 +1200
+++++ xorg-server-1.17.1/os/connection.c	2015-07-22 08:54:35.000000000 +1200
++@@ -60,6 +60,8 @@
++  *
++  *****************************************************************/
++ 
+++#include <X11/Xpoll.h>
+++
++ #ifdef HAVE_DIX_CONFIG_H
++ #include <dix-config.h>
++ #endif
++@@ -103,7 +105,6 @@
++ #endif                          /* WIN32 */
++ #include "misc.h"               /* for typedef of pointer */
++ #include "osdep.h"
++-#include <X11/Xpoll.h>
++ #include "opaque.h"
++ #include "dixstruct.h"
++ #include "xace.h"
++--- xorg-server-1.17.1/os/io.c.orig	2015-07-22 08:50:52.000000000 +1200
+++++ xorg-server-1.17.1/os/io.c	2015-07-22 08:55:03.000000000 +1200
++@@ -51,6 +51,8 @@
++  *
++  *****************************************************************/
++ 
+++#include <X11/Xpoll.h>
+++
++ #ifdef HAVE_DIX_CONFIG_H
++ #include <dix-config.h>
++ #endif
++@@ -74,7 +76,6 @@
++ #include <X11/Xproto.h>
++ #include "os.h"
++ #include "osdep.h"
++-#include <X11/Xpoll.h>
++ #include "opaque.h"
++ #include "dixstruct.h"
++ #include "misc.h"
