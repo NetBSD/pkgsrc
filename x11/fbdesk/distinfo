@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 03:28:28 agc Exp $
+$NetBSD: distinfo,v 1.11 2020/04/17 13:30:49 joerg Exp $
 
 SHA1 (fbdesk-1.4.1.tar.gz) = b5a2f446fa27406d9adb9a9608f1dc3c638d37ff
 RMD160 (fbdesk-1.4.1.tar.gz) = ce22936b73acd8273e9816f4c2a5458cc98cf45a
@@ -10,7 +10,7 @@ SHA1 (patch-ac) = 56ee3f78fb3f2bb20270c472eb699bf6269e9604
 SHA1 (patch-src_FbDesk.cc) = 65ac9146794e1ea7388906a05bbc8b86fdd70b46
 SHA1 (patch-src_FbTk_KeyUtil.cc) = b895774066d0f474ff6f1b0f6ee38477bd87fca3
 SHA1 (patch-src_FbTk_StringUtil.cc) = fcc300d550a58995822f7ff9bc368d0e5f63bda7
-SHA1 (patch-src_FbTk_TextBox.cc) = bf786dec9636e7941f9435baadb157684cb560b4
+SHA1 (patch-src_FbTk_TextBox.cc) = c947dc52f96395c9c8348344fe0033e72df428b4
 SHA1 (patch-src_FbTk_TextureRender.cc) = 56b1dc0ebf05ee2e188ab4c960eef518cdbd92a5
 SHA1 (patch-src_FbTk_Theme.cc) = 842743e69a7b005fa12e4732270cdb218a23d990
 SHA1 (patch-src_FbTk_ThemeItems.cc) = 61656f0b627455594816db1f09ad85d94a65e042
