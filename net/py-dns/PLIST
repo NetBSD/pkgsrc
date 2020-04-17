@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2016/11/11 09:39:05 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/04/17 11:24:43 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
@@ -53,6 +58,7 @@ ${PYSITELIB}/dns/node.pyo
 ${PYSITELIB}/dns/opcode.py
 ${PYSITELIB}/dns/opcode.pyc
 ${PYSITELIB}/dns/opcode.pyo
+${PYSITELIB}/dns/py.typed
 ${PYSITELIB}/dns/query.py
 ${PYSITELIB}/dns/query.pyc
 ${PYSITELIB}/dns/query.pyo
@@ -143,6 +149,9 @@ ${PYSITELIB}/dns/rdtypes/ANY/NSEC3.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/NSEC3PARAM.py
 ${PYSITELIB}/dns/rdtypes/ANY/NSEC3PARAM.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/NSEC3PARAM.pyo
+${PYSITELIB}/dns/rdtypes/ANY/OPENPGPKEY.py
+${PYSITELIB}/dns/rdtypes/ANY/OPENPGPKEY.pyc
+${PYSITELIB}/dns/rdtypes/ANY/OPENPGPKEY.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/PTR.py
 ${PYSITELIB}/dns/rdtypes/ANY/PTR.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/PTR.pyo
@@ -179,6 +188,12 @@ ${PYSITELIB}/dns/rdtypes/ANY/X25.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/__init__.py
 ${PYSITELIB}/dns/rdtypes/ANY/__init__.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/__init__.pyo
+${PYSITELIB}/dns/rdtypes/CH/A.py
+${PYSITELIB}/dns/rdtypes/CH/A.pyc
+${PYSITELIB}/dns/rdtypes/CH/A.pyo
+${PYSITELIB}/dns/rdtypes/CH/__init__.py
+${PYSITELIB}/dns/rdtypes/CH/__init__.pyc
+${PYSITELIB}/dns/rdtypes/CH/__init__.pyo
 ${PYSITELIB}/dns/rdtypes/IN/A.py
 ${PYSITELIB}/dns/rdtypes/IN/A.pyc
 ${PYSITELIB}/dns/rdtypes/IN/A.pyo
@@ -278,7 +293,3 @@ ${PYSITELIB}/dns/wiredata.pyo
 ${PYSITELIB}/dns/zone.py
 ${PYSITELIB}/dns/zone.pyc
 ${PYSITELIB}/dns/zone.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
