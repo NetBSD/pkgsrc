@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/04/18 19:42:18 schmonz Exp $
+
+SHA1 (TextTest-4.0.0.tar.gz) = d500195985f526e05a2106c0e3a4ff74ec5fe835
+RMD160 (TextTest-4.0.0.tar.gz) = 5064af6bd4474d986839afe68a2953e1492f5f98
+SHA512 (TextTest-4.0.0.tar.gz) = 36b8d4516db43ec477b3a0300142a4fdb2313289a31d4f0c411ff6b4ef4e18e9a5d3c4e9e95fd097617c44ec25139e06ac29a560bfaf5b40eba1e909e16fd2bd
+Size (TextTest-4.0.0.tar.gz) = 594936 bytes
+SHA1 (patch-texttestlib_default_____init____.py) = 3bd79ebe3e6e6d7311d73b7063622c4cddb984d5
