@@ -223,7 +223,7 @@ EOF
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in single' \
 		'warning: [subst.mk:class] Nothing changed in ./single.' \
-		'fail: [subst.mk:class] The pattern single has no effect.' \
+		'fail: [subst.mk:class] The filename pattern "single" has no effect.' \
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
@@ -256,7 +256,7 @@ EOF
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in nonexistent' \
 		'warning: [subst.mk:class] Ignoring non-existent file "./nonexistent".' \
-		'fail: [subst.mk:class] The pattern nonexistent has no effect.' \
+		'fail: [subst.mk:class] The filename pattern "nonexistent" has no effect.' \
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
@@ -884,10 +884,6 @@ if test_case_begin "pattern matches only directory"; then
 
 	# When a pattern matches a directory, that directory is silently
 	# skipped.
-	#
-	# In this test case, the pattern also matches a regular file that
-	# is actually modified. Therefore the pattern has an effect, and
-	# there is no error message.
 
 	create_file_lines "testcase.mk" \
 		'SUBST_CLASSES+=	dir' \
@@ -912,7 +908,7 @@ if test_case_begin "pattern matches only directory"; then
 	assert_that "subdir/subfile" --file-is-lines "@VAR@" # unchanged
 	assert_that "stdout" --file-is-lines \
 		"=> Substituting \"dir\" in sub*" \
-		"fail: [subst.mk:dir] The pattern sub* has no effect." \
+		'fail: [subst.mk:dir] The filename pattern "sub*" has no effect.' \
 		"*** Error code 1" \
 		"" \
 		"Stop." \
@@ -949,7 +945,7 @@ if test_case_begin "first filename pattern has no effect"; then
 	assert_that "out" --file-is-lines \
 		'=> Substituting "id" in file1 file2' \
 		'warning: [subst.mk:id] Nothing changed in ./file1.' \
-		'fail: [subst.mk:id] The pattern file1 has no effect.' \
+		'fail: [subst.mk:id] The filename pattern "file1" has no effect.' \
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
