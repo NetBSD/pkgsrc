@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/03/31 15:40:54 fox Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/04/18 07:58:36 fox Exp $
 bin/cliqz
 lib/cliqz/actors/AudioPlaybackChild.jsm
 lib/cliqz/actors/AudioPlaybackParent.jsm
@@ -29,6 +29,7 @@ lib/cliqz/actors/PrintingChild.jsm
 lib/cliqz/actors/PurgeSessionHistoryChild.jsm
 lib/cliqz/actors/SelectChild.jsm
 lib/cliqz/actors/SelectParent.jsm
+lib/cliqz/actors/SidebarSearchParent.jsm
 lib/cliqz/actors/ThumbnailsChild.jsm
 lib/cliqz/actors/UAWidgetsChild.jsm
 lib/cliqz/actors/UnselectedTabHoverChild.jsm
@@ -44,6 +45,8 @@ lib/cliqz/application.ini
 lib/cliqz/browser/actors/AboutLoginsChild.jsm
 lib/cliqz/browser/actors/AboutLoginsParent.jsm
 lib/cliqz/browser/actors/AboutReaderChild.jsm
+lib/cliqz/browser/actors/AboutWelcomeChild.jsm
+lib/cliqz/browser/actors/AboutWelcomeParent.jsm
 lib/cliqz/browser/actors/BlockedSiteChild.jsm
 lib/cliqz/browser/actors/BlockedSiteParent.jsm
 lib/cliqz/browser/actors/BrowserTabChild.jsm
@@ -64,7 +67,6 @@ lib/cliqz/browser/actors/LinkHandlerChild.jsm
 lib/cliqz/browser/actors/LinkHandlerParent.jsm
 lib/cliqz/browser/actors/NetErrorChild.jsm
 lib/cliqz/browser/actors/NetErrorParent.jsm
-lib/cliqz/browser/actors/OfflineAppsChild.jsm
 lib/cliqz/browser/actors/PageInfoChild.jsm
 lib/cliqz/browser/actors/PageStyleChild.jsm
 lib/cliqz/browser/actors/PageStyleParent.jsm
@@ -74,6 +76,7 @@ lib/cliqz/browser/actors/PromptParent.jsm
 lib/cliqz/browser/actors/RFPHelperChild.jsm
 lib/cliqz/browser/actors/RFPHelperParent.jsm
 lib/cliqz/browser/actors/SearchTelemetryChild.jsm
+lib/cliqz/browser/actors/SearchTelemetryParent.jsm
 lib/cliqz/browser/actors/SiteSpecificBrowserChild.jsm
 lib/cliqz/browser/actors/SiteSpecificBrowserParent.jsm
 lib/cliqz/browser/actors/SwitchDocumentDirectionChild.jsm
@@ -107,8 +110,8 @@ lib/cliqz/browser/chrome/browser/content/browser/aboutLibrary.xhtml
 lib/cliqz/browser/chrome/browser/content/browser/aboutNetError.js
 lib/cliqz/browser/chrome/browser/content/browser/aboutNetError.xhtml
 lib/cliqz/browser/chrome/browser/content/browser/aboutPrivateBrowsing.css
+lib/cliqz/browser/chrome/browser/content/browser/aboutPrivateBrowsing.html
 lib/cliqz/browser/chrome/browser/content/browser/aboutPrivateBrowsing.js
-lib/cliqz/browser/chrome/browser/content/browser/aboutPrivateBrowsing.xhtml
 lib/cliqz/browser/chrome/browser/content/browser/aboutRestartRequired.js
 lib/cliqz/browser/chrome/browser/content/browser/aboutRestartRequired.xhtml
 lib/cliqz/browser/chrome/browser/content/browser/aboutRobots-icon.png
@@ -335,7 +338,10 @@ lib/cliqz/browser/chrome/browser/content/browser/illustrations/error-malformed-u
 lib/cliqz/browser/chrome/browser/content/browser/illustrations/error-server-not-found.svg
 lib/cliqz/browser/chrome/browser/content/browser/illustrations/under-construction.svg
 lib/cliqz/browser/chrome/browser/content/browser/license.html
-lib/cliqz/browser/chrome/browser/content/browser/logos/lockwise-mobile-app.svg
+lib/cliqz/browser/chrome/browser/content/browser/logos/etp-mobile-dark.svg
+lib/cliqz/browser/chrome/browser/content/browser/logos/etp-mobile-light.svg
+lib/cliqz/browser/chrome/browser/content/browser/logos/lockwise-dark.svg
+lib/cliqz/browser/chrome/browser/content/browser/logos/lockwise-light.svg
 lib/cliqz/browser/chrome/browser/content/browser/logos/lockwise.svg
 lib/cliqz/browser/chrome/browser/content/browser/logos/monitor.svg
 lib/cliqz/browser/chrome/browser/content/browser/logos/proxy.svg
@@ -395,8 +401,8 @@ lib/cliqz/browser/chrome/browser/content/browser/places/places.js
 lib/cliqz/browser/chrome/browser/content/browser/places/places.xhtml
 lib/cliqz/browser/chrome/browser/content/browser/places/treeView.js
 lib/cliqz/browser/chrome/browser/content/browser/policies/aboutPolicies.css
+lib/cliqz/browser/chrome/browser/content/browser/policies/aboutPolicies.html
 lib/cliqz/browser/chrome/browser/content/browser/policies/aboutPolicies.js
-lib/cliqz/browser/chrome/browser/content/browser/policies/aboutPolicies.xhtml
 lib/cliqz/browser/chrome/browser/content/browser/policies/policies-active.svg
 lib/cliqz/browser/chrome/browser/content/browser/policies/policies-documentation.svg
 lib/cliqz/browser/chrome/browser/content/browser/policies/policies-error.svg
@@ -936,13 +942,16 @@ lib/cliqz/browser/chrome/browser/skin/classic/browser/history.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/home.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/identity-icon.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/illustrations/error-session-restore.svg
-lib/cliqz/browser/chrome/browser/skin/classic/browser/import-export.svg
+lib/cliqz/browser/chrome/browser/skin/classic/browser/import.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/info.svg
+lib/cliqz/browser/chrome/browser/skin/classic/browser/install-ssb.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/library-bookmark-animation.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/library-pocket-animation.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/library.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/link.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/login.svg
+lib/cliqz/browser/chrome/browser/skin/classic/browser/logo-android.svg
+lib/cliqz/browser/chrome/browser/skin/classic/browser/logo-ios.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/mail.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/menu-badged.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/menu.svg
@@ -1029,8 +1038,6 @@ lib/cliqz/browser/chrome/browser/skin/classic/browser/preferences/in-content/for
 lib/cliqz/browser/chrome/browser/skin/classic/browser/preferences/in-content/fxaPairDevice.css
 lib/cliqz/browser/chrome/browser/skin/classic/browser/preferences/in-content/general.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/preferences/in-content/history.svg
-lib/cliqz/browser/chrome/browser/skin/classic/browser/preferences/in-content/logo-android.svg
-lib/cliqz/browser/chrome/browser/skin/classic/browser/preferences/in-content/logo-ios.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/preferences/in-content/no-search-bar.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/preferences/in-content/no-search-results.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/preferences/in-content/preferences.css
@@ -1052,6 +1059,7 @@ lib/cliqz/browser/chrome/browser/skin/classic/browser/privatebrowsing-eraser.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/privatebrowsing/aboutPrivateBrowsing.css
 lib/cliqz/browser/chrome/browser/skin/classic/browser/privatebrowsing/favicon.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/privatebrowsing/private-browsing.svg
+lib/cliqz/browser/chrome/browser/skin/classic/browser/profiler-popup-backdrop.png
 lib/cliqz/browser/chrome/browser/skin/classic/browser/quit.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/readerMode.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/reload-to-stop.svg
@@ -1071,7 +1079,6 @@ lib/cliqz/browser/chrome/browser/skin/classic/browser/sidebars-right.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/sidebars.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/sign-out.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/slowStartup-16.png
-lib/cliqz/browser/chrome/browser/skin/classic/browser/sort.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/stop-to-reload.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/stop.svg
 lib/cliqz/browser/chrome/browser/skin/classic/browser/sync.svg
@@ -1180,10 +1187,10 @@ lib/cliqz/browser/chrome/devtools/content/netmonitor/src/assets/styles/netmonito
 lib/cliqz/browser/chrome/devtools/content/netmonitor/src/assets/styles/search.css
 lib/cliqz/browser/chrome/devtools/content/netmonitor/src/assets/styles/variables.css
 lib/cliqz/browser/chrome/devtools/content/netmonitor/src/assets/styles/websockets.css
+lib/cliqz/browser/chrome/devtools/content/performance-new/aboutprofiling/index.xhtml
+lib/cliqz/browser/chrome/devtools/content/performance-new/aboutprofiling/initializer.js
 lib/cliqz/browser/chrome/devtools/content/performance-new/frame-script.js
 lib/cliqz/browser/chrome/devtools/content/performance-new/index.xhtml
-lib/cliqz/browser/chrome/devtools/content/performance-new/popup/initializer.js
-lib/cliqz/browser/chrome/devtools/content/performance-new/popup/popup.xhtml
 lib/cliqz/browser/chrome/devtools/content/performance/index.xhtml
 lib/cliqz/browser/chrome/devtools/content/responsive/index.xhtml
 lib/cliqz/browser/chrome/devtools/content/responsive/toolbar.xhtml
@@ -1300,6 +1307,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/aboutdebugging/src/typ
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/aboutdebugging/src/types/index.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/aboutdebugging/src/types/runtime.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/aboutdebugging/src/types/ui.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/accessibility/accessibility-proxy.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/accessibility/accessibility-startup.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/accessibility/accessibility-view.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/accessibility/accessibility.css
@@ -1439,10 +1447,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/images/plus.s
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/images/prettyPrint.svg
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/images/regex-match.svg
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/images/reload.svg
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/images/replay-pause.svg
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/images/replay-resume.svg
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/images/resume.svg
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/images/rewind.svg
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/images/search.svg
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/images/sources/aframe.svg
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/images/sources/angular.svg
@@ -1536,6 +1541,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/actions/p
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/actions/pause/expandScopes.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/actions/pause/fetchFrames.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/actions/pause/fetchScopes.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/actions/pause/highlightCalls.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/actions/pause/index.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/actions/pause/inlinePreview.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/actions/pause/mapFrames.js
@@ -1595,6 +1601,8 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/component
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/Editor/EmptyLines.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/Editor/Footer.css
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/Editor/Footer.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/Editor/HighlightCalls.css
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/Editor/HighlightCalls.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/Editor/HighlightLine.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/Editor/HighlightLines.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/Editor/InlinePreview.css
@@ -1641,8 +1649,6 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/component
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/EventListeners.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/Expressions.css
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/Expressions.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/FrameTimeline.css
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/FrameTimeline.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/Frames/Frame.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/Frames/FrameIndent.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/Frames/FrameMenu.js
@@ -1656,7 +1662,6 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/component
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/Thread.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/Threads.css
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/Threads.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/UtilsBar.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/WhyPaused.css
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/WhyPaused.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/debugger/src/components/SecondaryPanes/XHRBreakpoints.css
@@ -1848,6 +1853,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/dom/content/utils.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/dom/panel.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/actions/dom-mutation-breakpoints.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/actions/index.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/actions/threads.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/browser-menus.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/browser-toolbox/Launcher.jsm
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/components/DebugTargetErrorPage.css
@@ -1864,6 +1870,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/menu-item.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/menu.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/reducers/dom-mutation-breakpoints.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/reducers/index.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/reducers/threads.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/selection.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/source-map-url-service.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/framework/store-provider.js
@@ -2125,6 +2132,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/actions/allocat
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/actions/census-display.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/actions/diffing.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/actions/filter.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/actions/front.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/actions/io.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/actions/label-display.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/actions/refresh.js
@@ -2164,6 +2172,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/reducers/census
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/reducers/diffing.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/reducers/errors.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/reducers/filter.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/reducers/front.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/reducers/individuals.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/reducers/label-display.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/memory/reducers/sizes.js
@@ -2189,8 +2198,6 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/actions
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/api.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/app.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/App.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/CachePanel.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/CookiesPanel.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/CustomRequestPanel.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/DropHarHandler.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/HeadersPanel.js
@@ -2199,10 +2206,8 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/compone
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/MonitorPanel.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/NetworkActionBar.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/NetworkDetailsPanel.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/ParamsPanel.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/PropertiesView.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/ResponsePanel.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/SecurityPanel.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/SecurityState.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/SourceEditor.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/StackTracePanel.js
@@ -2212,13 +2217,20 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/compone
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/TabboxPanel.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/TimingsPanel.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/Toolbar.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/previews/SourcePreview.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-blocking/RequestBlockingPanel.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-details/CachePanel.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-details/CookiesPanel.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-details/ParamsPanel.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-details/PropertiesView.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-details/SecurityPanel.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-list/RequestList.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-list/RequestListColumnCause.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-list/RequestListColumnContentSize.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-list/RequestListColumnCookies.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-list/RequestListColumnDomain.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-list/RequestListColumnFile.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-list/RequestListColumnInitiator.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-list/RequestListColumnMethod.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-list/RequestListColumnProtocol.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/components/request-list/RequestListColumnRemoteIP.js
@@ -2322,6 +2334,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/utils/r
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/utils/request-utils.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/utils/sort-predicates.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/utils/sort-utils.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/utils/tooltips.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/widgets/PropertiesViewContextMenu.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/widgets/RequestListContextMenu.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/netmonitor/src/widgets/RequestListHeaderContextMenu.js
@@ -2344,6 +2357,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/performance-new/initia
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/performance-new/panel.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/performance-new/popup/background.jsm.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/performance-new/popup/menu-button.jsm.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/performance-new/popup/panel.jsm.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/performance-new/preference-management.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/performance-new/store/actions.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/performance-new/store/reducers.js
@@ -2461,7 +2475,6 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/browser-loader-
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/browser-loader.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/Accordion.css
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/Accordion.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/AutoCompletePopup.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/Frame.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/HSplitBox.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/List.css
@@ -2471,6 +2484,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/MdnL
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/NotificationBox.css
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/NotificationBox.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/SearchBox.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/SearchBoxAutocompletePopup.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/Sidebar.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/SidebarToggle.css
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/shared/components/SidebarToggle.js
@@ -2648,6 +2662,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/webconsole/components/
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/webconsole/components/Input/EagerEvaluation.css
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/webconsole/components/Input/EagerEvaluation.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/webconsole/components/Input/EditorToolbar.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/client/webconsole/components/Input/EvaluationSelector.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/webconsole/components/Input/JSTerm.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/webconsole/components/Input/ReverseSearchInput.css
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/webconsole/components/Input/ReverseSearchInput.js
@@ -2708,18 +2723,16 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/client/webconsole/webconsole-
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/webconsole/webconsole-ui.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/webconsole/webconsole-wrapper.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/webconsole/webconsole.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/webreplay/components/WebReplayPlayer.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/client/webreplay/menu.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/whats-new/panel.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/whats-new/src/main.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/client/whats-new/src/whats-new.css
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/accessibility/accessibility-parent.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/accessibility/accessibility.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/accessibility/accessible.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/accessibility/audit/contrast.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/accessibility/audit/keyboard.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/accessibility/audit/text-label.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/accessibility/constants.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/accessibility/parent-accessibility.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/accessibility/simulator.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/accessibility/walker.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/accessibility/worker.js
@@ -2735,6 +2748,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/common.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/css-properties.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/descriptors/frame.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/descriptors/process.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/descriptors/tab.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/descriptors/webextension.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/device.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/emulation/content-viewer.js
@@ -2787,6 +2801,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/network-monitor
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/network-monitor/network-observer.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/network-monitor/network-response-listener.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/network-monitor/stack-trace-collector.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/network-monitor/utils/wildcard-to-regexp.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/network-monitor/websocket-actor.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/object.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/object/previewers.js
@@ -2802,14 +2817,6 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/performance.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/preference.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/process.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/reflow.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/replay/connection-worker.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/replay/connection.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/replay/control.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/replay/debugger.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/replay/graphics.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/replay/inspector.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/replay/replay.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/replay/utils/findStepOffsets.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/root.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/screenshot.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/source.js
@@ -2820,7 +2827,6 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/stylesheets.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/targets/browsing-context.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/targets/chrome-window.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/targets/content-process.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/targets/frame-proxy.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/targets/frame.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/targets/parent-process.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/targets/webextension.js
@@ -2847,15 +2853,18 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webbrowser.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/commands.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/content-process-forward.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/eager-ecma-whitelist.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/eager-function-whitelist.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/eval-with-debugger.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/listeners/console-api.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/listeners/console-progress.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/listeners/console-file-activity.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/listeners/console-reflow.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/listeners/console-service.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/listeners/content-process.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/listeners/document-events.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/message-manager-mock.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/utils.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/webidl-pure-whitelist.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/webconsole/worker-listeners.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/worker/push-subscription.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/actors/worker/service-worker-process.js
@@ -2869,8 +2878,8 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/server/connectors/js-window-a
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/connectors/js-window-actor/DevToolsFrameParent.jsm
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/connectors/js-window-actor/frame-js-window-actor-connector.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/connectors/worker-connector.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/debugger-server-connection.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/server/debugger-server.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/server/devtools-server-connection.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/server/devtools-server.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/performance/framerate.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/performance/memory.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/server/performance/profiler.js
@@ -2909,7 +2918,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/shared/base-loader.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/builtin-modules.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/client/connection-manager.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/client/constants.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/shared/client/debugger-client.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/shared/client/devtools-client.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/constants.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/content-observer.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/css/color-db.js
@@ -2926,7 +2935,6 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/shared/dom-helpers.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/dom-node-constants.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/dom-node-filter-constants.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/event-emitter.js
-lib/cliqz/browser/chrome/devtools/modules/devtools/shared/execution-point-utils.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/extend.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/flags.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/fronts/accessibility.js
@@ -2940,6 +2948,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/shared/fronts/content-viewer.
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/fronts/css-properties.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/fronts/descriptors/frame.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/fronts/descriptors/process.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/shared/fronts/descriptors/tab.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/fronts/descriptors/webextension.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/fronts/device.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/fronts/emulation.js
@@ -3049,6 +3058,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/shared/specs/content-viewer.j
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/specs/css-properties.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/specs/descriptors/frame.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/specs/descriptors/process.js
+lib/cliqz/browser/chrome/devtools/modules/devtools/shared/specs/descriptors/tab.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/specs/descriptors/webextension.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/specs/device.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/specs/emulation.js
@@ -3121,6 +3131,7 @@ lib/cliqz/browser/chrome/devtools/modules/devtools/shared/webconsole/throttle.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/worker/helper.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/worker/loader.js
 lib/cliqz/browser/chrome/devtools/modules/devtools/shared/worker/worker.js
+lib/cliqz/browser/chrome/devtools/skin/aboutprofiling.css
 lib/cliqz/browser/chrome/devtools/skin/accessibility-color-contrast.css
 lib/cliqz/browser/chrome/devtools/skin/animation.css
 lib/cliqz/browser/chrome/devtools/skin/badge.css
@@ -3187,7 +3198,6 @@ lib/cliqz/browser/chrome/devtools/skin/images/command-noautohide.svg
 lib/cliqz/browser/chrome/devtools/skin/images/command-paintflashing.svg
 lib/cliqz/browser/chrome/devtools/skin/images/command-pick-accessibility.svg
 lib/cliqz/browser/chrome/devtools/skin/images/command-pick.svg
-lib/cliqz/browser/chrome/devtools/skin/images/command-replay.svg
 lib/cliqz/browser/chrome/devtools/skin/images/command-responsivemode.svg
 lib/cliqz/browser/chrome/devtools/skin/images/command-rulers.svg
 lib/cliqz/browser/chrome/devtools/skin/images/command-screenshot.svg
@@ -3228,7 +3238,6 @@ lib/cliqz/browser/chrome/devtools/skin/images/item-arrow-rtl.svg
 lib/cliqz/browser/chrome/devtools/skin/images/item-toggle.svg
 lib/cliqz/browser/chrome/devtools/skin/images/lock.svg
 lib/cliqz/browser/chrome/devtools/skin/images/more.svg
-lib/cliqz/browser/chrome/devtools/skin/images/next-circle.svg
 lib/cliqz/browser/chrome/devtools/skin/images/next.svg
 lib/cliqz/browser/chrome/devtools/skin/images/open-3-pane.svg
 lib/cliqz/browser/chrome/devtools/skin/images/open-inspector.svg
@@ -3242,7 +3251,6 @@ lib/cliqz/browser/chrome/devtools/skin/images/performance-details-waterfall.svg
 lib/cliqz/browser/chrome/devtools/skin/images/play.svg
 lib/cliqz/browser/chrome/devtools/skin/images/profiler-stopwatch.svg
 lib/cliqz/browser/chrome/devtools/skin/images/pseudo-class.svg
-lib/cliqz/browser/chrome/devtools/skin/images/read-only.svg
 lib/cliqz/browser/chrome/devtools/skin/images/reload.svg
 lib/cliqz/browser/chrome/devtools/skin/images/reveal.svg
 lib/cliqz/browser/chrome/devtools/skin/images/rewind.svg
@@ -3271,8 +3279,7 @@ lib/cliqz/browser/chrome/devtools/skin/images/tool-styleeditor.svg
 lib/cliqz/browser/chrome/devtools/skin/images/tool-webconsole.svg
 lib/cliqz/browser/chrome/devtools/skin/images/vview-delete.svg
 lib/cliqz/browser/chrome/devtools/skin/images/vview-edit.svg
-lib/cliqz/browser/chrome/devtools/skin/images/vview-lock.png
-lib/cliqz/browser/chrome/devtools/skin/images/vview-lock@2x.png
+lib/cliqz/browser/chrome/devtools/skin/images/vview-lock.svg
 lib/cliqz/browser/chrome/devtools/skin/images/webconsole/editor.svg
 lib/cliqz/browser/chrome/devtools/skin/images/webconsole/input.svg
 lib/cliqz/browser/chrome/devtools/skin/images/webconsole/navigation.svg
@@ -3307,7 +3314,6 @@ lib/cliqz/browser/chrome/en-US/locale/browser/bookmarks.html
 lib/cliqz/browser/chrome/en-US/locale/browser/brandings.dtd
 lib/cliqz/browser/chrome/en-US/locale/browser/browser.dtd
 lib/cliqz/browser/chrome/en-US/locale/browser/browser.properties
-lib/cliqz/browser/chrome/en-US/locale/browser/cliqzPrivateBrowsing.dtd
 lib/cliqz/browser/chrome/en-US/locale/browser/customizableui/customizableWidgets.properties
 lib/cliqz/browser/chrome/en-US/locale/browser/downloads/downloads.dtd
 lib/cliqz/browser/chrome/en-US/locale/browser/downloads/downloads.properties
@@ -3325,7 +3331,6 @@ lib/cliqz/browser/chrome/en-US/locale/browser/places/places.properties
 lib/cliqz/browser/chrome/en-US/locale/browser/pocket.properties
 lib/cliqz/browser/chrome/en-US/locale/browser/safebrowsing/safebrowsing.properties
 lib/cliqz/browser/chrome/en-US/locale/browser/search.properties
-lib/cliqz/browser/chrome/en-US/locale/browser/setDesktopBackground.dtd
 lib/cliqz/browser/chrome/en-US/locale/browser/shellservice.properties
 lib/cliqz/browser/chrome/en-US/locale/browser/siteData.properties
 lib/cliqz/browser/chrome/en-US/locale/browser/sitePermissions.properties
@@ -3365,7 +3370,6 @@ lib/cliqz/browser/chrome/en-US/locale/en-US/devtools/client/sourceeditor.propert
 lib/cliqz/browser/chrome/en-US/locale/en-US/devtools/client/startup.properties
 lib/cliqz/browser/chrome/en-US/locale/en-US/devtools/client/storage.dtd
 lib/cliqz/browser/chrome/en-US/locale/en-US/devtools/client/storage.properties
-lib/cliqz/browser/chrome/en-US/locale/en-US/devtools/client/styleeditor.dtd
 lib/cliqz/browser/chrome/en-US/locale/en-US/devtools/client/styleeditor.properties
 lib/cliqz/browser/chrome/en-US/locale/en-US/devtools/client/toolbox.properties
 lib/cliqz/browser/chrome/en-US/locale/en-US/devtools/client/webconsole.properties
@@ -3707,6 +3711,7 @@ lib/cliqz/browser/localization/en-US/browser/branding/sync-brand.ftl
 lib/cliqz/browser/localization/en-US/browser/browser.ftl
 lib/cliqz/browser/localization/en-US/browser/browserContext.ftl
 lib/cliqz/browser/localization/en-US/browser/browserSets.ftl
+lib/cliqz/browser/localization/en-US/browser/cliqzPrivateBrowsing.ftl
 lib/cliqz/browser/localization/en-US/browser/customizeMode.ftl
 lib/cliqz/browser/localization/en-US/browser/menubar.ftl
 lib/cliqz/browser/localization/en-US/browser/newInstallPage.ftl
@@ -3738,6 +3743,7 @@ lib/cliqz/browser/localization/en-US/browser/safeMode.ftl
 lib/cliqz/browser/localization/en-US/browser/safebrowsing/blockedSite.ftl
 lib/cliqz/browser/localization/en-US/browser/sanitize.ftl
 lib/cliqz/browser/localization/en-US/browser/screenshots.ftl
+lib/cliqz/browser/localization/en-US/browser/setDesktopBackground.ftl
 lib/cliqz/browser/localization/en-US/browser/sync.ftl
 lib/cliqz/browser/localization/en-US/browser/syncedTabs.ftl
 lib/cliqz/browser/localization/en-US/browser/tabContextMenu.ftl
@@ -3746,6 +3752,7 @@ lib/cliqz/browser/localization/en-US/browser/touchbar/touchbar.ftl
 lib/cliqz/browser/localization/en-US/devtools/client/aboutdebugging.ftl
 lib/cliqz/browser/localization/en-US/devtools/client/accessibility.ftl
 lib/cliqz/browser/localization/en-US/devtools/client/application.ftl
+lib/cliqz/browser/localization/en-US/devtools/client/styleeditor.ftl
 lib/cliqz/browser/localization/en-US/devtools/client/toolbox-options.ftl
 lib/cliqz/browser/localization/en-US/devtools/client/tooltips.ftl
 lib/cliqz/browser/localization/en-US/devtools/startup/aboutDevTools.ftl
@@ -3981,7 +3988,6 @@ lib/cliqz/chrome/en-US/locale/en-US/necko/necko.properties
 lib/cliqz/chrome/en-US/locale/en-US/passwordmgr/passwordmgr.properties
 lib/cliqz/chrome/en-US/locale/en-US/pipnss/nsserrors.properties
 lib/cliqz/chrome/en-US/locale/en-US/pipnss/pipnss.properties
-lib/cliqz/chrome/en-US/locale/en-US/pippki/pippki.dtd
 lib/cliqz/chrome/en-US/locale/en-US/pippki/pippki.properties
 lib/cliqz/chrome/en-US/locale/en-US/places/places.properties
 lib/cliqz/chrome/en-US/locale/en-US/pluginproblem/pluginproblem.dtd
@@ -4138,8 +4144,8 @@ lib/cliqz/chrome/toolkit/content/global/BrowserElementChild.js
 lib/cliqz/chrome/toolkit/content/global/BrowserElementChildPreload.js
 lib/cliqz/chrome/toolkit/content/global/BrowserElementCopyPaste.js
 lib/cliqz/chrome/toolkit/content/global/TopLevelVideoDocument.js
+lib/cliqz/chrome/toolkit/content/global/aboutAbout.html
 lib/cliqz/chrome/toolkit/content/global/aboutAbout.js
-lib/cliqz/chrome/toolkit/content/global/aboutAbout.xhtml
 lib/cliqz/chrome/toolkit/content/global/aboutCache.js
 lib/cliqz/chrome/toolkit/content/global/aboutCheckerboard.css
 lib/cliqz/chrome/toolkit/content/global/aboutCheckerboard.js
@@ -4621,6 +4627,7 @@ lib/cliqz/defaults/pref/channel-prefs.js
 lib/cliqz/dependentlibs.list
 lib/cliqz/dictionaries/en-US.aff
 lib/cliqz/dictionaries/en-US.dic
+lib/cliqz/fonts/TwemojiMozilla.ttf
 lib/cliqz/gmp-clearkey/0.1/libclearkey.so
 lib/cliqz/gmp-clearkey/0.1/manifest.json
 lib/cliqz/greprefs.js
@@ -4671,6 +4678,7 @@ lib/cliqz/libxul.so
 lib/cliqz/localization/en-US/crashreporter/aboutcrashes.ftl
 lib/cliqz/localization/en-US/security/certificates/certManager.ftl
 lib/cliqz/localization/en-US/security/certificates/deviceManager.ftl
+lib/cliqz/localization/en-US/security/pippki/pippki.ftl
 lib/cliqz/localization/en-US/toolkit/about/aboutAbout.ftl
 lib/cliqz/localization/en-US/toolkit/about/aboutAddons.ftl
 lib/cliqz/localization/en-US/toolkit/about/aboutCompat.ftl
@@ -4856,7 +4864,7 @@ lib/cliqz/modules/LightweightThemeConsumer.jsm
 lib/cliqz/modules/LightweightThemeManager.jsm
 lib/cliqz/modules/Localization.jsm
 lib/cliqz/modules/Log.jsm
-lib/cliqz/modules/LoginAutoCompleteResult.jsm
+lib/cliqz/modules/LoginAutoComplete.jsm
 lib/cliqz/modules/LoginFormFactory.jsm
 lib/cliqz/modules/LoginHelper.jsm
 lib/cliqz/modules/LoginImport.jsm
@@ -4892,7 +4900,6 @@ lib/cliqz/modules/NotificationDB.jsm
 lib/cliqz/modules/NotificationStorage.jsm
 lib/cliqz/modules/OSCrypto.jsm
 lib/cliqz/modules/ObjectUtils.jsm
-lib/cliqz/modules/PageIconProtocolHandler.jsm
 lib/cliqz/modules/PageMenu.jsm
 lib/cliqz/modules/PageThumbUtils.jsm
 lib/cliqz/modules/PageThumbs.jsm
@@ -4929,6 +4936,7 @@ lib/cliqz/modules/PromiseUtils.jsm
 lib/cliqz/modules/PromiseWorker.jsm
 lib/cliqz/modules/Prompter.jsm
 lib/cliqz/modules/ProxyChannelFilter.jsm
+lib/cliqz/modules/PurgeTrackerService.jsm
 lib/cliqz/modules/Push.jsm
 lib/cliqz/modules/PushBroadcastService.jsm
 lib/cliqz/modules/PushComponents.jsm
