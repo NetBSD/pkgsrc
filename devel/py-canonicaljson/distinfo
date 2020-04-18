@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/18 12:49:47 js Exp $
+
+SHA1 (canonicaljson-1.1.4.tar.gz) = 50622a7a18d88c9d28c36cef9c0adc40d156942e
+RMD160 (canonicaljson-1.1.4.tar.gz) = df86b6d842edc74643f9a29f84bbe4d514478560
+SHA512 (canonicaljson-1.1.4.tar.gz) = 00f10168f226ba4c5cb49a50f5c0f135003897645d5533acb7b62889781f42f1bccf13ee0f0e03d3990b575da499872bdb168a86890a3cc1d2052c768faaaac4
+Size (canonicaljson-1.1.4.tar.gz) = 9355 bytes
