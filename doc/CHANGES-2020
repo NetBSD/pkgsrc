@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2371 2020/04/18 17:50:12 schwarz Exp $
+$NetBSD: CHANGES-2020,v 1.2372 2020/04/18 19:43:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3297,3 +3297,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/pbosh to 20200418 [kre 2020-04-18]
 	Added www/zola version 0.10.1 [nikita 2020-04-18]
 	Updated games/gnuchess to 6.2.6 [schwarz 2020-04-18]
+	Added devel/texttest version 4.0.0 [schmonz 2020-04-18]
