@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2018/11/18 08:40:17 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2020/04/18 14:56:06 nikita Exp $
 
-SHA1 (minify-2.3.8.tar.gz) = ca6c3e5820b83f32dc0d06ce32c27a4252f4d142
-RMD160 (minify-2.3.8.tar.gz) = 2b84a1aa4ca19e0065bda932096bfca497b3b582
-SHA512 (minify-2.3.8.tar.gz) = dced371cb18a7b69048a5c2fbb6df4bd9143e11f7d346c8378c819a8dd6dc810e2090c340a7d26ddaae0208578c92a307d534170a57fd9ff36093c19576803dd
-Size (minify-2.3.8.tar.gz) = 2125614 bytes
+SHA1 (minify-2.7.3.tar.gz) = 266e56c21360e7d241faf4b3e7f21ffda375d83b
+RMD160 (minify-2.7.3.tar.gz) = 8134758cbfabe43ed8abcb942917edb246b8b0dc
+SHA512 (minify-2.7.3.tar.gz) = 4796981cf7e9425cee618b5cdeebcdb6dcb96010772cca639f887a691acb63f36fd3c0089efa2a053d46472a96564ba7f7b59df83f463dbe9e73ebe2e4e0818f
+Size (minify-2.7.3.tar.gz) = 2303638 bytes
+SHA1 (patch-cmd_minify_install.sh) = bff4d4223f80acbbf820ba06e4eb3d5daba6a872
