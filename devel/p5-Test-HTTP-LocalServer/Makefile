@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2019/10/28 12:58:10 mef Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/18 11:09:21 mef Exp $
 
-DISTNAME=	Test-HTTP-LocalServer-0.69
+DISTNAME=	Test-HTTP-LocalServer-0.71
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/C/CO/CORION/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
