@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3100 2020/04/18 12:47:55 js Exp $
+# $NetBSD: Makefile,v 1.3101 2020/04/18 12:49:47 js Exp $
 #
 
 COMMENT=	Development utilities
@@ -2151,6 +2151,7 @@ SUBDIR+=	py-buildbot-worker
 SUBDIR+=	py-buildbot-www
 SUBDIR+=	py-cached-property
 SUBDIR+=	py-cachetools
+SUBDIR+=	py-canonicaljson
 SUBDIR+=	py-capstone
 SUBDIR+=	py-case
 SUBDIR+=	py-cffi
