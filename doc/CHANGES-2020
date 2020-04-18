@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2345 2020/04/17 23:53:22 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2346 2020/04/18 01:21:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3224,3 +3224,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/neomutt to 20200417 [wiz 2020-04-17]
 	Updated net/openvpn to 2.4.9 [adam 2020-04-17]
 	Updated wm/xfce4-wm to 4.14.1 [gutteridge 2020-04-17]
+	Updated devel/p5-Regexp-Parser to 0.23 [mef 2020-04-17]
+	Updated devel/p5-SVN-Dump to 0.08 [mef 2020-04-17]
+	Updated devel/p5-Search-Elasticsearch to 6.80 [mef 2020-04-18]
+	Updated devel/p5-Set-Object to 1.40 [mef 2020-04-18]
+	Updated devel/p5-Shell-Config-Generate to 0.34 [mef 2020-04-18]
+	Added devel/p5-Test2-Tools-Explain version 0.02 [mef 2020-04-18]
+	Added devel/p5-XString version 0.002 [mef 2020-04-18]
+	Updated devel/p5-Specio to 0.46 [mef 2020-04-18]
