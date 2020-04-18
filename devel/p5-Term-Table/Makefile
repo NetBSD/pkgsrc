@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2019/10/28 12:31:58 mef Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/18 01:37:02 mef Exp $
 
-DISTNAME=	Term-Table-0.014
+DISTNAME=	Term-Table-0.015
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/E/EX/EXODIST/
@@ -14,7 +14,6 @@ TEST_DEPENDS+=	p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
 TEST_DEPENDS+=	p5-Importer-[0-9]*:../../devel/p5-Importer
 
 PERL5_PACKLIST=	auto/Term/Table/.packlist
-
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
