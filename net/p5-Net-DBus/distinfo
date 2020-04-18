@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/08/01 12:35:58 mef Exp $
+$NetBSD: distinfo,v 1.5 2020/04/18 13:14:23 mef Exp $
 
-SHA1 (Net-DBus-1.1.0.tar.gz) = 62599a0613c3b6d764531f68a6674729532fa277
-RMD160 (Net-DBus-1.1.0.tar.gz) = c06f6a3f1f9669a8a702bbe33ddc2287903d99d8
-SHA512 (Net-DBus-1.1.0.tar.gz) = 96f5983ef1e33b4abea93277e39e779821c8ee4b1f2bc7a4a3aaa3612b9513a426b9f8e04094eb8449e89324c22c264df2d34b3d3e43dace85f443a57c770cc3
-Size (Net-DBus-1.1.0.tar.gz) = 2075154 bytes
+SHA1 (Net-DBus-1.2.0.tar.gz) = 6446a8ffde84c940efe130672fbce63cc36be9eb
+RMD160 (Net-DBus-1.2.0.tar.gz) = ea2bdd525aa9571cefb5d0cb76f70502a29734b6
+SHA512 (Net-DBus-1.2.0.tar.gz) = 9dc95288ae81037985020e18db33331de6908b1280fc3b0ca898c183a5b577d21d240f4f1045393f9459a9be6e3425feffa9ea581e6af2bcf165cdf48348b255
+Size (Net-DBus-1.2.0.tar.gz) = 108296 bytes
