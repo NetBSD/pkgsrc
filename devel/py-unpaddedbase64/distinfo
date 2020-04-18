@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/18 12:46:27 js Exp $
+
+SHA1 (unpaddedbase64-1.1.0.zip) = 38eb7fe41b1fc20182b7e5bc40db40e7c584f244
+RMD160 (unpaddedbase64-1.1.0.zip) = 7fa06ba54e907ccc0af71fdaf52d485d7380b7fd
+SHA512 (unpaddedbase64-1.1.0.zip) = 2b3d16c11882dee3b835fd6aba8601a0f0c3bc45e086eb296a6a1f02f8fbe2ba676c10473c8b3522c7ae81b10f086f031fe22aa7de16447aaaf34132e0d2d44f
+Size (unpaddedbase64-1.1.0.zip) = 8271 bytes
