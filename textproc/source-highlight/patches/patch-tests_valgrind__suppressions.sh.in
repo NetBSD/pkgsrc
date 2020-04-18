@@ -1,0 +1,10 @@
+$NetBSD: patch-tests_valgrind__suppressions.sh.in,v 1.1 2020/04/18 21:55:07 joerg Exp $
+
+--- tests/valgrind_suppressions.sh.in.orig	2020-04-18 21:10:58.614527351 +0000
++++ tests/valgrind_suppressions.sh.in
+@@ -1,4 +1,4 @@
+-#! @SHELL@
++#! @BASH_SHELL@
+ # --------------------------------------------------------------------- #
+ #
+ #  Script to run an example through VALGRIND and generate suppressions
