@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.77 2020/04/18 12:21:10 rillig Exp $
+# $NetBSD: subst.mk,v 1.78 2020/04/18 12:59:43 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -193,7 +193,7 @@ ${_SUBST_COOKIE.${class}}:
 	done;								\
 	\
 	if ${TEST} "$$changed,${SUBST_NOOP_OK.${class}:tl}" = no,no; then \
-		${FAIL_MSG} "[subst.mk:${class}] The pattern $$pattern has no effect."; \
+		${FAIL_MSG} "[subst.mk:${class}] The filename pattern \"$$pattern\" has no effect."; \
 	fi; \
 	done; \
 	cd ${WRKDIR}; ${RMDIR} "$$emptydir"
