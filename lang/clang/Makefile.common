@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2020/03/26 14:47:46 nia Exp $
+# $NetBSD: Makefile.common,v 1.42 2020/04/18 07:53:38 adam Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 # used by lang/clang-tools-extra/Makefile
@@ -6,7 +6,6 @@
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	clang-${LLVM_VERSION}.src
-PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +16,7 @@ LICENSE=	apache-2.0
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++14
 USE_CMAKE=		yes
 GCC_REQD+=		5
 
