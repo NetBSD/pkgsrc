@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/18 12:46:27 js Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/18 15:24:37 js Exp $
 
 DISTNAME=	unpaddedbase64-${VERSION}
 VERSION=	1.1.0
@@ -10,7 +10,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	js@pkgsrc.org
-HOMEPAGE=	https://github.com/matrix-org/
+HOMEPAGE=	https://github.com/matrix-org/python-unpaddedbase64
 COMMENT=	Encode and decode Base64 without "=" padding
 LICENSE=	apache-2.0
 
