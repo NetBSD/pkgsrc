@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.78 2020/04/18 12:59:43 rillig Exp $
+# $NetBSD: subst.mk,v 1.79 2020/04/18 15:04:34 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -128,7 +128,7 @@ SUBST_FILTER_CMD.${class}?=	LC_ALL=C ${SED} ${SUBST_SED.${class}}
 SUBST_VARS.${class}?=		# none
 SUBST_MESSAGE.${class}?=	Substituting "${class}" in ${SUBST_FILES.${class}}
 .  for v in ${SUBST_VARS.${class}}
-SUBST_FILTER_CMD.${class}+=	-e s,@${v:C|[.[\\*^${$}]|\\\\&|gW:Q}@,${${v}:S|\\|\\\\|gW:S|,|\\,|gW:S|&|\\\&|gW:S|${.newline}|\\${.newline}|gW:Q},g
+SUBST_FILTER_CMD.${class}+=	-e s,@${v:C|[.[\\*^]|\\\\&|gW:Q}@,${${v}:S|\\|\\\\|gW:S|,|\\,|gW:S|&|\\\&|gW:S|${.newline}|\\${.newline}|gW:Q},g
 .  endfor
 .  if ${SUBST_SHOW_DIFF.${class}:U${SUBST_SHOW_DIFF}:tl} == yes
 _SUBST_KEEP.${class}?=		LC_ALL=C ${DIFF} -u "$$file" "$$tmpfile" || true
