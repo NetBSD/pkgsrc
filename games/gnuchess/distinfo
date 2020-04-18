@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2017/08/18 22:14:38 adam Exp $
+$NetBSD: distinfo,v 1.15 2020/04/18 17:50:11 schwarz Exp $
 
-SHA1 (gnuchess-6.2.5.tar.gz) = d38a485e681f391e70f8110793215a3f432c8bc2
-RMD160 (gnuchess-6.2.5.tar.gz) = 582178de6fd7a1392379fce2c43d389715678543
-SHA512 (gnuchess-6.2.5.tar.gz) = f3f65a85eb4c93f6f10c7058bde7ee7f4a48c2f465b24a7cc0d5bcafe4df186b434ce23bf8c032d012efffba39c6c3c60ada484ff22d87114ce2be5dd0da6835
-Size (gnuchess-6.2.5.tar.gz) = 782359 bytes
+SHA1 (gnuchess-6.2.6.tar.gz) = bc99afbe834f6dfaf72faee8d496c9a36ce0587b
+RMD160 (gnuchess-6.2.6.tar.gz) = a1b769598049ead715c39239e997b030d26fef38
+SHA512 (gnuchess-6.2.6.tar.gz) = 32bb36c54b73659752657ee43c7f9723e74ae974980e016c56d564c7870d1bc98ee40e407e0687df968fc2d4dc778a972282e3aea1ddca31dee1cce7e96da7e2
+Size (gnuchess-6.2.6.tar.gz) = 797233 bytes

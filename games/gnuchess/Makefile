@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2020/01/18 23:32:01 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2020/04/18 17:50:11 schwarz Exp $
 
-DISTNAME=	gnuchess-6.2.5
+DISTNAME=	gnuchess-6.2.6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNU:=chess/}
 
