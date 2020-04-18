@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:28:59 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/04/18 12:44:10 mef Exp $
 
-SHA1 (lib-abs-0.93.tar.gz) = f4b286ec1e977c3b5ad6f561a9b15e26661d7e9c
-RMD160 (lib-abs-0.93.tar.gz) = f47cb6f67365b20057f6fa6d1e317b6d5a1e420c
-SHA512 (lib-abs-0.93.tar.gz) = b9927ac7ebac7a415fedbd801d83b7083a0897a3566f34ed5c0aa5edc1be18aed66314e9899163719879eecf59c1b4f45d6c825a07357b352ff6aab612fac775
-Size (lib-abs-0.93.tar.gz) = 41754 bytes
+SHA1 (lib-abs-0.95.tar.gz) = 2ff19b2ef9a4406c6a02bc7852d3e15a989b51f4
+RMD160 (lib-abs-0.95.tar.gz) = 24b6e69d4fd72751635f2274557d88b28be3147c
+SHA512 (lib-abs-0.95.tar.gz) = 153e6515551f5907ec932c065455f73f38564ac24607fd168123a55a4b008ce03d9edccedd2b4b9ef91c0ace5ea3bfe6a21722459ebe8ac4fa5e21166b6b3e6c
+Size (lib-abs-0.95.tar.gz) = 41598 bytes
