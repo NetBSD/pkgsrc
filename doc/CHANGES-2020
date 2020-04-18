@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2347 2020/04/18 01:45:29 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2348 2020/04/18 04:19:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3236,3 +3236,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Term-ANSIColor to 5.01 [mef 2020-04-18]
 	Updated devel/p5-Term-Table to 0.015 [mef 2020-04-18]
 	Updated devel/p5-Test-Compile to 2.4.0 [mef 2020-04-18]
+	Updated misc/libreoffice to 6.4.3.2 [ryoon 2020-04-18]
