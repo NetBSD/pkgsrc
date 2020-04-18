@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/18 01:12:03 mef Exp $
+
+SHA1 (XString-0.002.tar.gz) = df6c42604f0e7ef65605c26a8fdc1d12e6a1c881
+RMD160 (XString-0.002.tar.gz) = d5d799f263dfaf083d253eeb21e1ec664e499bcb
+SHA512 (XString-0.002.tar.gz) = 5fb9a3baec891485d0ad32b9aec3c1a48ff6ab7aa47e3d289127cbe2b7ec9bd7a16da9e2ccd349cdd513af62bd85a9ce1b1a04f90ecf67f2a161c187a8abd613
+Size (XString-0.002.tar.gz) = 17906 bytes
