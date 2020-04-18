@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/09/18 14:32:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/18 06:12:28 taca Exp $
 bin/arpaname
 bin/bind9-config
 bin/delv
@@ -208,6 +208,7 @@ include/isc/sockaddr.h
 include/isc/socket.h
 include/isc/stat.h
 include/isc/stats.h
+include/isc/stdatomic.h
 include/isc/stdio.h
 include/isc/stdlib.h
 include/isc/stdtime.h
@@ -268,8 +269,6 @@ include/pk11/site.h
 include/pkcs11/cryptoki.h
 include/pkcs11/eddsa.h
 include/pkcs11/pkcs11.h
-include/pkcs11/pkcs11f.h
-include/pkcs11/pkcs11t.h
 lib/libbind9.la
 lib/libdns.la
 lib/libirs.la
