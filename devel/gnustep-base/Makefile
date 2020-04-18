@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2020/04/16 09:35:35 manu Exp $
+# $NetBSD: Makefile,v 1.83 2020/04/18 22:00:59 joerg Exp $
 
 DISTNAME=	gnustep-base-1.27.0
 #PKGREVISION=	1
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	GNUstep foundation classes
 LICENSE=	gnu-gpl-v3
 
+USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		objc
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
