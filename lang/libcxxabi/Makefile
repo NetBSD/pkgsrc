@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/26 17:31:29 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/04/18 08:03:07 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -17,7 +17,7 @@ LICENSE=	apache-2.0
 # circular dependencies.  This must be kept in sync with libcxxabi/Makefile.
 LIBCXX=			${DISTNAME:S/cxxabi/cxx/}
 _EXTRA_DIST=		${LIBCXX}${EXTRACT_SUFX}
-#SITES.${_EXTRA_DIST}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
+SITES.${_EXTRA_DIST}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
 DISTFILES=	${DEFAULT_DISTFILES} ${_EXTRA_DIST}
 

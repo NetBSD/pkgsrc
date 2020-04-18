@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2019/12/29 15:31:22 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/04/18 08:03:07 adam Exp $
 
-SHA1 (libcxx-9.0.1.src.tar.xz) = d6da82e9445fe824f021baf35f81a7efb6096ae3
-RMD160 (libcxx-9.0.1.src.tar.xz) = b85b557e1fa372f2f3eb854c13ca103abb671d66
-SHA512 (libcxx-9.0.1.src.tar.xz) = aabbc98c5bd6935d3dabfb309dfc171fbc16441396628d22d8dcdb89a5015f8fdedef4237134b841314d572205f7d5cfe44c1c8900db0f0156810f7810376bb2
-Size (libcxx-9.0.1.src.tar.xz) = 1813356 bytes
-SHA1 (libcxxabi-9.0.1.src.tar.xz) = 457cec7f1dff38648518416a292853c8d643fe4e
-RMD160 (libcxxabi-9.0.1.src.tar.xz) = 8f1529d722a6ffe44c44290dbea5a8a9ca2acea9
-SHA512 (libcxxabi-9.0.1.src.tar.xz) = b5dbe4379a13046e7b9003e6913b0435271476feef0acbfd4e8207fca6d4a580182628866bd2032ce84a55d524fee8620841f17214bc79c8f46a3fde2f57627a
-Size (libcxxabi-9.0.1.src.tar.xz) = 552088 bytes
+SHA1 (libcxx-10.0.0.src.tar.xz) = 9fa3bcaf229a8b74bbc1c53d60f040656f89cb9f
+RMD160 (libcxx-10.0.0.src.tar.xz) = 18abe549c2ea43b7707641c10aca739f25e3b72c
+SHA512 (libcxx-10.0.0.src.tar.xz) = 8cbcbea23c50f0d7020386d11af5b736b8b43291146c11ccc543118ed1877a88adc381be2573594236e97bcf75c47408f986e5e9644a4fce57758cde47e5b641
+Size (libcxx-10.0.0.src.tar.xz) = 1843328 bytes
+SHA1 (libcxxabi-10.0.0.src.tar.xz) = 474dfec6db4a6ca34902ed8446c8c3f85b210c46
+RMD160 (libcxxabi-10.0.0.src.tar.xz) = 966f5fd4dcc425e126389047187cef29d9ff9529
+SHA512 (libcxxabi-10.0.0.src.tar.xz) = e58be156f924b0e613a69872c1d42190a4123e9c7a4de973e3f735a23992487df91549756c8acee81a35f9575f5b3001e748f8b01439f233660a18f4a45b0f32
+Size (libcxxabi-10.0.0.src.tar.xz) = 554184 bytes
