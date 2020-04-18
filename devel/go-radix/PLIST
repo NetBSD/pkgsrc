@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/18 15:51:55 nikita Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/armon/go-radix.a
+gopkg/src/github.com/armon/go-radix/LICENSE
+gopkg/src/github.com/armon/go-radix/README.md
+gopkg/src/github.com/armon/go-radix/go.mod
+gopkg/src/github.com/armon/go-radix/radix.go
+gopkg/src/github.com/armon/go-radix/radix_test.go

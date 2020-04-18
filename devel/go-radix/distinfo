@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/18 15:51:55 nikita Exp $
+
+SHA1 (go-radix/v1.0.0.tar.gz) = 8eeb8c910561ddde8ce6e17b11c3ea32024067ac
+RMD160 (go-radix/v1.0.0.tar.gz) = 28d16952e62da3b7c4191818f0c74c00a8e7c0d6
+SHA512 (go-radix/v1.0.0.tar.gz) = 5d75fc9cb9823b71c2b27f2825d80cd100de381af7c25c19afd5f49ab67160e2860ff83cbee45a4df851fb5a71f8d0bf9ef9387184a4fe431249de3581b4d4fa
+Size (go-radix/v1.0.0.tar.gz) = 5975 bytes
