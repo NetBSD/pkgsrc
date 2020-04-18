@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2353 2020/04/18 08:00:10 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2354 2020/04/18 08:15:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3243,3 +3243,18 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/py-fonttools to 4.8.1 [adam 2020-04-18]
 	Updated www/py-pylint-django to 2.0.15 [adam 2020-04-18]
 	Updated www/cliqz to 1.35.0 [fox 2020-04-18]
+	Updated lang/llvm to 10.0.0 [adam 2020-04-18]
+	Updated lang/clang to 10.0.0 [adam 2020-04-18]
+	Updated lang/clang-static-analyzer to 10.0.0 [adam 2020-04-18]
+	Updated lang/clang-tools-extra to 10.0.0 [adam 2020-04-18]
+	Updated devel/lldb to 10.0.0 [adam 2020-04-18]
+	Updated devel/lld to 10.0.0 [adam 2020-04-18]
+	Updated devel/polly to 10.0.0 [adam 2020-04-18]
+	Updated lang/compiler-rt to 10.0.0 [adam 2020-04-18]
+	Updated lang/libcxx to 10.0.0 [adam 2020-04-18]
+	Updated lang/libcxxabi to 10.0.0 [adam 2020-04-18]
+	Updated lang/libunwind to 10.0.0 [adam 2020-04-18]
+	Updated parallel/openmp to 10.0.0 [adam 2020-04-18]
+	Updated lang/zig to 0.6.0 [adam 2020-04-18]
+	Updated devel/py-llvmlite to 0.32.0 [adam 2020-04-18]
+	Updated math/py-numba to 0.49.0 [adam 2020-04-18]
