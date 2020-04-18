@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2359 2020/04/18 12:54:38 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2360 2020/04/18 13:49:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3277,3 +3277,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-parent to 0.238 [mef 2020-04-18]
 	Added devel/py-canonicaljson version 1.1.4 [js 2020-04-18]
 	Added security/py-signedjson version 1.1 [js 2020-04-18]
+	Updated net/p5-Net-DBus to 1.2.0 [mef 2020-04-18]
+	Updated net/p5-Net-DNS-Resolver-Mock to 1.20200215 [mef 2020-04-18]
+	Updated net/p5-Net-Frame-Layer-ICMPv6 to 1.11 [mef 2020-04-18]
+	Updated net/p5-Net-GitHub to 0.99 [mef 2020-04-18]
+	Updated net/p5-Net-FTPSSL to 0.42 [mef 2020-04-18]
+	Updated net/p5-Net-Ident to 1.25 [mef 2020-04-18]
+	Updated net/p5-Net-Libdnet6 to 0.28 [mef 2020-04-18]
+	Updated net/p5-NetPacket to 1.7.2 [mef 2020-04-18]
