@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/11/18 08:42:16 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/18 14:18:41 nikita Exp $
 gopkg/pkg/${GO_PLATFORM}/github.com/tdewolff/parse.a
 gopkg/pkg/${GO_PLATFORM}/github.com/tdewolff/parse/buffer.a
 gopkg/pkg/${GO_PLATFORM}/github.com/tdewolff/parse/css.a
@@ -31,6 +31,7 @@ gopkg/src/github.com/tdewolff/parse/css/parse_test.go
 gopkg/src/github.com/tdewolff/parse/css/util.go
 gopkg/src/github.com/tdewolff/parse/css/util_test.go
 gopkg/src/github.com/tdewolff/parse/error.go
+gopkg/src/github.com/tdewolff/parse/error_test.go
 gopkg/src/github.com/tdewolff/parse/go.mod
 gopkg/src/github.com/tdewolff/parse/go.sum
 gopkg/src/github.com/tdewolff/parse/html/README.md
