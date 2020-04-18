@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.34 2018/03/11 14:53:10 rillig Exp $
+# $NetBSD: print-plist.mk,v 1.35 2020/04/18 10:54:21 rillig Exp $
 #
 # Automatic PLIST generation
 #  - files & symlinks first
@@ -87,7 +87,7 @@ _PRINT_PLIST_LIBTOOLIZE_FILTER?=	${CAT}
 .if !target(print-PLIST)
 print-PLIST:
 	${RUN} ${ECHO} '@comment $$'NetBSD'$$'
-	${RUN} ${ALL_ENV};					\
+	${RUN} ${ALL_ENV};						\
 	shlib_type=${SHLIB_TYPE:Q};					\
 	case $$shlib_type in 						\
 	"a.out")	genlinks=1 ;;					\
@@ -144,3 +144,18 @@ print-PLIST:
 	done								\
 	| ${AWK} '${_PRINT_PLIST_AWK_SUBST} { print $$0; }'
 .endif # target(print-PLIST)
+
+_VARGROUPS+=		print-PLIST
+_PKG_VARS.print-PLIST=	\
+	PKGNAME_NOREV PKGVERSION \
+	PKGLOCALEDIR PKGGNUDIR PKGINFODIR PKGMANDIR PKG_DBDIR \
+	FONTS_DIRS.x11 FONTS_DIRS.ttf FONTS_DIRS.type1 \
+	INFO_FILES ICON_THEMES PRINT_PLIST_AWK
+_SYS_VARS.print-PLIST=	\
+	PREFIX DESTDIR LIBTOOLIZE_PLIST SHLIB_TYPE WRKDIR
+_USE_VARS.print-PLIST=	ALL_ENV
+_IGN_VARS.print-PLIST=	_*
+_LISTED_VARS.print-PLIST= \
+	*_SUBST *_AWK
+_SORTED_VARS.print-PLIST= \
+	*_ENV
