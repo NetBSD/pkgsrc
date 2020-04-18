@@ -1,15 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/12/22 10:38:15 bsiegert Exp $
+$NetBSD: distinfo,v 1.3 2020/04/18 14:18:41 nikita Exp $
 
-SHA1 (parse-2.3.5.tar.gz) = e42a580abc7b74a88abd707bd63a15245750bbbf
-RMD160 (parse-2.3.5.tar.gz) = 7ec2fd6987d9c4fddb21669d1b1980f640786a7d
-SHA512 (parse-2.3.5.tar.gz) = e32da6cd04de9535b612adce1064203a6d50b8065104353efbd9088f2807de22433c9b1d112e99184683cf212d229c0a674afb77732ec254293c079a47fff47e
-Size (parse-2.3.5.tar.gz) = 75027 bytes
-SHA1 (patch-buffer_buffer.go) = abd4848578932ce02b7b76f097d6c12974fb1a6a
-SHA1 (patch-buffer_lexer.go) = e8fde846ea9e658a6c73d2b4e0cf7b35909d9d5a
-SHA1 (patch-buffer_lexer__test.go) = 15a422e2840db3f67d862f055cb6400ea0efca87
-SHA1 (patch-buffer_reader.go) = ca66390b91fef7576e3e53d58dd367bb9f8b6d04
-SHA1 (patch-buffer_reader__test.go) = 071481b95d888eab77d97ed6656b240e038a7c2d
-SHA1 (patch-buffer_streamlexer.go) = 7c01833dd18d37ade71e9461aa8e009c1ac143b2
-SHA1 (patch-buffer_streamlexer__test.go) = 7499b4a93e48905ed2d453abdb001060eb61d530
-SHA1 (patch-buffer_writer.go) = 6afbdb31bb0ff88ca7ceacab86c40eef830a800e
-SHA1 (patch-buffer_writer__test.go) = bf18af95bb22c3093f2124e36784ea749fc39afd
+SHA1 (parse-2.4.2.tar.gz) = 499e9733005fd595fe437b523d8a3ee15d38a4c0
+RMD160 (parse-2.4.2.tar.gz) = e3660370f96ecc50c984172dea0c72a28ae50e94
+SHA512 (parse-2.4.2.tar.gz) = bcc97dff30b568d804042165d6ee8b866e84e70a3bcbecd59b237dc1add5a42ba8d01e59a163b16f7dea86dd709f2c817e23b1b1a9c68470e0e6198b10def661
+Size (parse-2.4.2.tar.gz) = 88729 bytes
