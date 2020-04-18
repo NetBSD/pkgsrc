@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2357 2020/04/18 12:50:01 js Exp $
+$NetBSD: CHANGES-2020,v 1.2358 2020/04/18 12:52:09 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3261,3 +3261,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/py-frozendict version 1.2 [js 2020-04-18]
 	Added devel/py-unpaddedbase64 version 1.1.0 [js 2020-04-18]
 	Added devel/py-canonicaljson version 1.1.4 [js 2020-04-18]
+	Added security/py-signedjson version 1.1 [js 2020-04-18]
