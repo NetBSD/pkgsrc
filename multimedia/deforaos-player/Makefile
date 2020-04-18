@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/04/11 21:50:27 khorben Exp $
+# $NetBSD: Makefile,v 1.28 2020/04/18 03:56:05 mef Exp $
 
 DISTNAME=	Player-0.2.0
 PKGNAME=	deforaos-player-0.2.0
@@ -19,6 +19,8 @@ BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 DEPENDS+=	mpv-[0-9]*:../../multimedia/mpv
+
+CFLAGS+=	-fPIC
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
