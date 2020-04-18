@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/10/28 12:53:38 mef Exp $
+$NetBSD: distinfo,v 1.11 2020/04/18 01:44:20 mef Exp $
 
-SHA1 (Test-Compile-v2.3.1.tar.gz) = ea590f24aac46db88213e7007c7e5feb4977d290
-RMD160 (Test-Compile-v2.3.1.tar.gz) = 8416f5f695b0f6bad4560b66f3c7763ff913d91b
-SHA512 (Test-Compile-v2.3.1.tar.gz) = adbdd9285aeee08a6f73ba23a995b0271a2f6687093b82fa0cfc7a2d9addd330dc52e3c1802869c9be8f28154cd7488d390bfee8cb1f116e47576594d44b6167
-Size (Test-Compile-v2.3.1.tar.gz) = 18096 bytes
+SHA1 (Test-Compile-v2.4.0.tar.gz) = 33eee06ac7d824161dc06ad407c832b18d2bc4ab
+RMD160 (Test-Compile-v2.4.0.tar.gz) = d48ec06a099bbeb8603a3d804018ef8748094369
+SHA512 (Test-Compile-v2.4.0.tar.gz) = f69eca6f18d0236eb08b074e24463524899e42c1b41a1c29cc371d6f9b5af6218556afb54e9da786e1642ec9c94dab01dfba33637744ca7929d0b3fa5b9bdc35
+Size (Test-Compile-v2.4.0.tar.gz) = 18314 bytes
