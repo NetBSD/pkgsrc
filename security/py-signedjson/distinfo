@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/18 12:50:44 js Exp $
+
+SHA1 (signedjson-1.1.tar.gz) = d5b8d63f2863596f8e7a315df7421fa3cba49a3e
+RMD160 (signedjson-1.1.tar.gz) = d01ca8d1949292dd781267cdf85c77a68e269e94
+SHA512 (signedjson-1.1.tar.gz) = 1e03a20c7074825a1357dc4dd683a5debb32dc8dbda3d58ca68cd4b3d35482d92b7fb068cfa06076038e0df04ff5503d2c42806b62d4dd3ef38934ba7d6dc200
+Size (signedjson-1.1.tar.gz) = 10053 bytes
