@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2368 2020/04/18 15:52:38 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.2369 2020/04/18 15:54:40 kre Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3293,3 +3293,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/openttd to 1.10.1 [nia 2020-04-18]
 	Updated www/go-minify to 2.7.3 [nikita 2020-04-18]
 	Added devel/go-radix version 1.0.0 [nikita 2020-04-18]
+	Updated shells/bosh to 20200418 [kre 2020-04-18]
+	Updated shells/pbosh to 20200418 [kre 2020-04-18]
