@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2020/04/18 21:55:07 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2020/04/18 23:28:42 joerg Exp $
 
 DISTNAME=	source-highlight-3.1.8
 PKGREVISION=	11
@@ -25,7 +25,9 @@ PKGCONFIG_OVERRIDE=	source-highlight.pc.in
 
 INFO_FILES=	YES
 
-USE_TOOLS+=	gmake:test gsed:test bash:test
+# gmake and gsed are necessary for testing only,
+# but the tools handling is somewhat broken in that regard
+USE_TOOLS+=	gsed gmake bash:test
 TEST_TARGET=	check
 
 # bash scripts
