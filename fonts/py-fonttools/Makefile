@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2020/04/16 07:39:41 adam Exp $
+# $NetBSD: Makefile,v 1.63 2020/04/18 07:29:59 adam Exp $
 
-DISTNAME=	fonttools-4.7.0
-PKGREVISION=	1
+DISTNAME=	fonttools-4.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	fonts python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FontTools/}
@@ -12,6 +11,7 @@ HOMEPAGE=	https://github.com/fonttools/fonttools
 COMMENT=	Library for manipulating fonts
 LICENSE=	mit
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 TEST_DEPENDS+=	${PYPKGPREFIX}-fs-[0-9]*:../../filesystems/py-fs
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
