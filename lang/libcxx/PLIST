@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/10/19 13:59:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/18 08:03:06 adam Exp $
 include/c++/v1/__bit_reference
 include/c++/v1/__bsd_locale_defaults.h
 include/c++/v1/__bsd_locale_fallbacks.h
@@ -65,6 +65,7 @@ include/c++/v1/cxxabi.h
 include/c++/v1/deque
 include/c++/v1/errno.h
 include/c++/v1/exception
+include/c++/v1/execution
 include/c++/v1/experimental/__config
 include/c++/v1/experimental/__memory
 include/c++/v1/experimental/algorithm
