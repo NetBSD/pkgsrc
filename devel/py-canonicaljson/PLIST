@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/18 12:49:47 js Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/canonicaljson.py
+${PYSITELIB}/canonicaljson.pyc
+${PYSITELIB}/canonicaljson.pyo
