@@ -797,17 +797,30 @@ if test_case_begin "SUBST_VARS for variables with regex characters"; then
 	# Ensure that special regex characters like dots and parentheses
 	# may appear in variable names and are properly escaped.
 
+	# Variable names containing a dollar are not supported.
+	# Bmake behaves very surprisingly when a $ is expanded inside a :C
+	# modifier. Nobody needs this feature anyway, it was just an
+	# experiment to see whether this would be theoretically possible.
+
+	# Variable names ending with a backslash are not supported.
+	# The backslash may only occur in the middle of the variable name.
+
 	create_file_lines "testcase.mk" \
 		'SUBST_CLASSES+=	vars' \
 		'SUBST_STAGE.vars=	pre-configure' \
 		'SUBST_FILES.vars=	vars.txt' \
-		'SUBST_VARS.vars=	VAR...... VAR.abcde VAR.() VAR.<> VAR.[]' \
+		'SUBST_VARS.vars=	VAR...... VAR.abcde' \
+		'SUBST_VARS.vars+=	VAR.() VAR.<> VAR.[]' \
+		'SUBST_VARS.vars+=	VAR.$$x VAR.^ VAR.\x' \
 		'' \
 		'VAR......=	dots' \
 		'VAR.abcde=	letters' \
 		'VAR.()=	parentheses' \
 		'VAR.<>=	angle brackets' \
 		'VAR.[]=	square brackets' \
+		'VAR.$$x=	dollar' \
+		'VAR.^=		circumflex' \
+		'VAR.\x=	backslash' \
 		'' \
 		'.include "prepare-subst.mk"' \
 		'.include "mk/subst.mk"'
@@ -816,7 +829,10 @@ if test_case_begin "SUBST_VARS for variables with regex characters"; then
 		"@VAR.abcde@" \
 		"@VAR.()@" \
 		"@VAR.<>@" \
-		"@VAR.[]@"
+		"@VAR.[]@" \
+		'@VAR.$x@' \
+		'@VAR.^@' \
+		'@VAR.\x@'
 
 	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
@@ -828,7 +844,10 @@ if test_case_begin "SUBST_VARS for variables with regex characters"; then
 		"letters" \
 		"parentheses" \
 		"angle brackets" \
-		"square brackets"
+		"square brackets" \
+		'@VAR.$x@' \
+		'circumflex' \
+		'backslash'
 	assert_that "stdout" --file-is-lines \
 		"=> Substituting \"vars\" in vars.txt"
 	assert_that "stderr" --file-is-empty
