@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/18 12:45:26 js Exp $
+
+SHA1 (frozendict-1.2.tar.gz) = 88a893fecbb8ad629dbc4664358b25885f750e9b
+RMD160 (frozendict-1.2.tar.gz) = f9f5ec836fb3d1711da3eec2101538156ec709df
+SHA512 (frozendict-1.2.tar.gz) = 095cf5f6f8b02bf5666e04200431992bf4b3160aae3464d528bc256b1ab643e29dda78fe94d9e8c983dbfe66cd2459e0559122e17b6b8660c0552adc5318b3da
+Size (frozendict-1.2.tar.gz) = 2650 bytes
