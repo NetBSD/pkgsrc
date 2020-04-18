@@ -1,1 +1,7 @@
-distinfo.awk: /data/scratch/textproc/source-highlight/work/.distfiles not found
+$NetBSD: distinfo,v 1.26 2020/04/18 23:11:08 joerg Exp $
+
+SHA1 (source-highlight-3.1.8.tar.gz) = 55b814ec09674ef7f5ab42c46b2ae5a0f86f7c9b
+RMD160 (source-highlight-3.1.8.tar.gz) = a6e0ad1713deb2056984a97adc7dfd0e6610809f
+SHA512 (source-highlight-3.1.8.tar.gz) = 00a49ab180460750614b38be9a569478d1d34d01f601ebc7452a4fee8475a19faf9bb9fb2f256c6b40d43fbc3d34962a77ba8b9833483345c4e4a42faad6976c
+Size (source-highlight-3.1.8.tar.gz) = 1648351 bytes
+SHA1 (patch-tests_valgrind__suppressions.sh.in) = f3bd3b94b74d198ce0ac2cf81a688835fa940323
