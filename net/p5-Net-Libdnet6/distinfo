@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/10/11 07:34:51 wiz Exp $
+$NetBSD: distinfo,v 1.5 2020/04/18 13:45:33 mef Exp $
 
-SHA1 (Net-Libdnet6-0.27.tar.gz) = ab0162ca789f0136b01f2a41f2b71178b313676c
-RMD160 (Net-Libdnet6-0.27.tar.gz) = 1546992c09529f4d52620612e7ec8656168aae17
-SHA512 (Net-Libdnet6-0.27.tar.gz) = 28376d8a7eb60a27a1b81cdf57b2fdb0481a9b5a782965242bb1ef5f4f307c1a8e0e06ca85d3b871771f482877cc88bab3417b4f1586e1a83954807b40d62b62
-Size (Net-Libdnet6-0.27.tar.gz) = 9190 bytes
-SHA1 (patch-Carp) = 56fa47f40c754e3bb59c5769cad49a42ba67145d
+SHA1 (Net-Libdnet6-0.28.tar.gz) = 66fe06f39df235a038ac1a10e3ebecb4c21ccb3d
+RMD160 (Net-Libdnet6-0.28.tar.gz) = b436f0474493fd578ed9e05076620cdcfc6fb43a
+SHA512 (Net-Libdnet6-0.28.tar.gz) = 285804c9f8eaecd4ed26ff4f5c3ea6b58bc985e808fdd7955278b7252b9607b338ef63e22cb589de4f9db01f2100cea2c79df521f4fc55e4c6d8c58bdc3c941b
+Size (Net-Libdnet6-0.28.tar.gz) = 8131 bytes
 SHA1 (patch-_get_routes) = d401a4364a07118282b51469446cdded05a41c6e
