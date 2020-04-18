@@ -817,7 +817,6 @@ if test_case_begin "SUBST_VARS for variables with regex characters"; then
 		"@VAR.()@" \
 		"@VAR.<>@" \
 		"@VAR.[]@"
-cp "$tmpdir/testcase.mk" /tmp
 
 	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
