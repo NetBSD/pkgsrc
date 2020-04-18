@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/04/18 15:24:37 js Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/18 17:36:45 js Exp $
 
-DISTNAME=	unpaddedbase64-${VERSION}
-VERSION=	1.1.0
-PKGNAME=	${PYPKGPREFIX}-1.1.0
+DISTNAME=	unpaddedbase64-1.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 GITHUB_PROJECT=	python-unpaddedbase64
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
