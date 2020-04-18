@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2360 2020/04/18 13:49:54 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2361 2020/04/18 13:54:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3285,3 +3285,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/p5-Net-Ident to 1.25 [mef 2020-04-18]
 	Updated net/p5-Net-Libdnet6 to 0.28 [mef 2020-04-18]
 	Updated net/p5-NetPacket to 1.7.2 [mef 2020-04-18]
+	Updated devel/p5-Scalar-List-Utils to 1.55 [mef 2020-04-18]
