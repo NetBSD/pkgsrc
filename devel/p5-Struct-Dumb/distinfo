@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/07/28 04:37:27 wen Exp $
+$NetBSD: distinfo,v 1.4 2020/04/18 13:59:06 mef Exp $
 
-SHA1 (Struct-Dumb-0.09.tar.gz) = dfb81a7f4eb7c543c11d51a199bcfe346d4d7ed3
-RMD160 (Struct-Dumb-0.09.tar.gz) = 4a2b8a4966e2364b30e3fccdf449613fafa1170c
-SHA512 (Struct-Dumb-0.09.tar.gz) = 6dc1e6ce02386906f5e440d989a5cd1810201327567684d26d877a212e0b97d64b2cfdb0432ac5d8ab94bcecfb61c4b59fd8aa3ae22adc06de3c8083f667c134
-Size (Struct-Dumb-0.09.tar.gz) = 16084 bytes
+SHA1 (Struct-Dumb-0.11.tar.gz) = c455d474495e7633a530f4a838b23a22d2784922
+RMD160 (Struct-Dumb-0.11.tar.gz) = 377fcb3908884a328b8e8c564be3ec36ce3d2e17
+SHA512 (Struct-Dumb-0.11.tar.gz) = 0955e4a5a6263ffbaaa964e485b283c4200f4ce20892a4774e0720b867c63dc13dfe20c621d090e165cbf723a6c8339fb585e78bd127c843934dd614625be994
+Size (Struct-Dumb-0.11.tar.gz) = 17502 bytes
