@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/03/22 18:01:21 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2020/04/18 07:50:18 adam Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -33,7 +33,7 @@ HOMEPAGE=	https://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++14
 USE_CMAKE=		yes
 GCC_REQD+=		5.1
 PYTHON_FOR_BUILD_ONLY=	yes
