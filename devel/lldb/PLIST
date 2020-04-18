@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.11 2019/10/19 14:01:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2020/04/18 07:59:44 adam Exp $
 bin/lldb
 bin/lldb-argdumper
 bin/lldb-instr
-bin/lldb-mi
 bin/lldb-server
 bin/lldb-vscode
 include/lldb/API/LLDB.h
@@ -25,6 +24,7 @@ include/lldb/API/SBError.h
 include/lldb/API/SBEvent.h
 include/lldb/API/SBExecutionContext.h
 include/lldb/API/SBExpressionOptions.h
+include/lldb/API/SBFile.h
 include/lldb/API/SBFileSpec.h
 include/lldb/API/SBFileSpecList.h
 include/lldb/API/SBFrame.h
@@ -115,6 +115,7 @@ include/lldb/Core/FileSpecList.h
 include/lldb/Core/FormatEntity.h
 include/lldb/Core/Highlighter.h
 include/lldb/Core/IOHandler.h
+include/lldb/Core/IOHandlerCursesGUI.h
 include/lldb/Core/IOStreamMacros.h
 include/lldb/Core/LoadedModuleInfoList.h
 include/lldb/Core/Mangled.h
@@ -127,7 +128,6 @@ include/lldb/Core/Opcode.h
 include/lldb/Core/PluginInterface.h
 include/lldb/Core/PluginManager.h
 include/lldb/Core/RichManglingContext.h
-include/lldb/Core/STLUtils.h
 include/lldb/Core/SearchFilter.h
 include/lldb/Core/Section.h
 include/lldb/Core/SourceManager.h
@@ -137,8 +137,6 @@ include/lldb/Core/StreamFile.h
 include/lldb/Core/StructuredDataImpl.h
 include/lldb/Core/ThreadSafeDenseMap.h
 include/lldb/Core/ThreadSafeDenseSet.h
-include/lldb/Core/ThreadSafeSTLMap.h
-include/lldb/Core/ThreadSafeSTLVector.h
 include/lldb/Core/ThreadSafeValue.h
 include/lldb/Core/UniqueCStringMap.h
 include/lldb/Core/UserSettingsController.h
@@ -172,7 +170,6 @@ include/lldb/DataFormatters/TypeCategoryMap.h
 include/lldb/DataFormatters/TypeFormat.h
 include/lldb/DataFormatters/TypeSummary.h
 include/lldb/DataFormatters/TypeSynthetic.h
-include/lldb/DataFormatters/TypeValidator.h
 include/lldb/DataFormatters/ValueObjectPrinter.h
 include/lldb/DataFormatters/VectorIterator.h
 include/lldb/DataFormatters/VectorType.h
@@ -212,6 +209,7 @@ include/lldb/Host/HostNativeThreadBase.h
 include/lldb/Host/HostNativeThreadForward.h
 include/lldb/Host/HostProcess.h
 include/lldb/Host/HostThread.h
+include/lldb/Host/LZMA.h
 include/lldb/Host/LockFile.h
 include/lldb/Host/LockFileBase.h
 include/lldb/Host/MainLoop.h
@@ -292,6 +290,7 @@ include/lldb/Interpreter/OptionGroupFile.h
 include/lldb/Interpreter/OptionGroupFormat.h
 include/lldb/Interpreter/OptionGroupOutputFile.h
 include/lldb/Interpreter/OptionGroupPlatform.h
+include/lldb/Interpreter/OptionGroupPythonClassWithDict.h
 include/lldb/Interpreter/OptionGroupString.h
 include/lldb/Interpreter/OptionGroupUInt64.h
 include/lldb/Interpreter/OptionGroupUUID.h
@@ -324,10 +323,11 @@ include/lldb/Interpreter/Property.h
 include/lldb/Interpreter/ScriptInterpreter.h
 include/lldb/Symbol/ArmUnwindInfo.h
 include/lldb/Symbol/Block.h
+include/lldb/Symbol/CallFrameInfo.h
 include/lldb/Symbol/ClangASTContext.h
 include/lldb/Symbol/ClangASTImporter.h
+include/lldb/Symbol/ClangASTMetadata.h
 include/lldb/Symbol/ClangExternalASTSourceCallbacks.h
-include/lldb/Symbol/ClangExternalASTSourceCommon.h
 include/lldb/Symbol/ClangUtil.h
 include/lldb/Symbol/CompactUnwindInfo.h
 include/lldb/Symbol/CompileUnit.h
@@ -363,7 +363,6 @@ include/lldb/Symbol/UnwindPlan.h
 include/lldb/Symbol/UnwindTable.h
 include/lldb/Symbol/Variable.h
 include/lldb/Symbol/VariableList.h
-include/lldb/Symbol/VerifyDecl.h
 include/lldb/Target/ABI.h
 include/lldb/Target/DynamicLoader.h
 include/lldb/Target/ExecutionContext.h
@@ -431,7 +430,6 @@ include/lldb/Utility/ArchSpec.h
 include/lldb/Utility/Args.h
 include/lldb/Utility/Baton.h
 include/lldb/Utility/Broadcaster.h
-include/lldb/Utility/CleanUp.h
 include/lldb/Utility/CompletionRequest.h
 include/lldb/Utility/Connection.h
 include/lldb/Utility/ConstString.h
@@ -443,12 +441,11 @@ include/lldb/Utility/DataExtractor.h
 include/lldb/Utility/Endian.h
 include/lldb/Utility/Environment.h
 include/lldb/Utility/Event.h
-include/lldb/Utility/FileCollector.h
 include/lldb/Utility/FileSpec.h
 include/lldb/Utility/Flags.h
+include/lldb/Utility/GDBRemote.h
 include/lldb/Utility/IOObject.h
 include/lldb/Utility/Iterable.h
-include/lldb/Utility/JSON.h
 include/lldb/Utility/LLDBAssert.h
 include/lldb/Utility/Listener.h
 include/lldb/Utility/Log.h
@@ -469,7 +466,6 @@ include/lldb/Utility/State.h
 include/lldb/Utility/Status.h
 include/lldb/Utility/Stream.h
 include/lldb/Utility/StreamCallback.h
-include/lldb/Utility/StreamGDBRemote.h
 include/lldb/Utility/StreamString.h
 include/lldb/Utility/StreamTee.h
 include/lldb/Utility/StringExtractor.h
@@ -501,7 +497,7 @@ include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
 lib/liblldb.so.${PKGVERSION}
-${PLIST.posix}lib/liblldb.so.9
+${PLIST.posix}lib/liblldb.so.10
 ${PYSITELIB}/lldb/__init__.py
 ${PYSITELIB}/lldb/_lldb.so
 ${PYSITELIB}/lldb/embedded_interpreter.py
@@ -515,6 +511,6 @@ ${PYSITELIB}/lldb/formatters/cpp/libcxx.py
 ${PYSITELIB}/lldb/formatters/metrics.py
 ${PYSITELIB}/lldb/formatters/synth.py
 ${PYSITELIB}/lldb/lldb-argdumper
-${PYSITELIB}/lldb/runtime/__init__.py
 ${PYSITELIB}/lldb/utils/__init__.py
+${PYSITELIB}/lldb/utils/in_call_stack.py
 ${PYSITELIB}/lldb/utils/symbolication.py
