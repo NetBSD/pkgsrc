@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/11 13:22:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/18 13:24:25 mef Exp $
 
-DISTNAME=	Net-Frame-Layer-ICMPv6-1.10
+DISTNAME=	Net-Frame-Layer-ICMPv6-1.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
