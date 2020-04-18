@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2348 2020/04/18 04:19:01 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2349 2020/04/18 05:00:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3237,3 +3237,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Term-Table to 0.015 [mef 2020-04-18]
 	Updated devel/p5-Test-Compile to 2.4.0 [mef 2020-04-18]
 	Updated misc/libreoffice to 6.4.3.2 [ryoon 2020-04-18]
+	Updated lang/php73 to 7.3.17 [taca 2020-04-18]
