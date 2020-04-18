@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/03/10 12:22:04 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2020/04/18 22:02:28 joerg Exp $
 
 DISTNAME=		upx-3.96
 CATEGORIES=		archivers
@@ -23,6 +23,12 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/upx
 
 BUILDLINK_TRANSFORM+=		rm:-mcpu=i686
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Map rm:-Wl,upx.map
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CXX+=	-Wno-error=misleading-indentation
+CWRAPPERS_APPEND.cxx+=	-Wno-error=misleading-indentation
+.endif
 
 post-extract:
 	rmdir ${WRKSRC}/src/lzma-sdk
