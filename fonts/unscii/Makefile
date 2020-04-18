@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/01/02 01:59:47 ng0 Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/18 22:07:39 joerg Exp $
 
 DISTNAME=	unscii-1.1-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -9,6 +9,8 @@ MAINTAINER=	ng0@NetBSD.org
 HOMEPAGE=	http://pelulamu.net/unscii/
 COMMENT=	Bitmapped character-art friendly Unicode fonts
 LICENSE=	gnu-gpl-v2
+
+UNLIMIT_RESOURCES=	datasize virtualsize
 
 USE_TOOLS+=	perl:build
 BUILD_DEPENDS+=	bdftopcf-[0-9]*:../../fonts/bdftopcf
