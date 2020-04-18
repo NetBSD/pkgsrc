@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.75 2020/04/18 11:32:01 rillig Exp $
+# $NetBSD: subst.mk,v 1.76 2020/04/18 11:42:34 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -97,7 +97,7 @@ SUBST_SHOW_DIFF?=	no
 SUBST_NOOP_OK?=		yes	# only for backwards compatiblity
 
 _VARGROUPS+=		subst
-_USR_VARS.subst=	SUBST_SHOW_DIFF SUBST_NOOP_OK
+_USER_VARS.subst=	SUBST_SHOW_DIFF SUBST_NOOP_OK
 _PKG_VARS.subst=	SUBST_CLASSES
 .for c in ${SUBST_CLASSES}
 .  for pv in SUBST_STAGE SUBST_MESSAGE SUBST_FILES SUBST_SED SUBST_VARS	\
@@ -113,9 +113,9 @@ _LISTED_VARS.subst=	SUBST_SED.* SUBST_FILTER_CMD.*
 
 ECHO_SUBST_MSG?=	${STEP_MSG}
 
-# _SUBST_IS_TEXT_FILE_CMD returns 0 if $$file is a text file.
-_SUBST_IS_TEXT_FILE_CMD?= \
-	[ -z "`LC_ALL=C ${TR} -cd '\\0' < "$$file" | ${TR} '\\0' 'x'`" ]
+# _SUBST_IS_TEXT_FILE_CMD exits successfully if $$file is a text file.
+_SUBST_IS_TEXT_FILE_CMD= \
+	[ -z "`LC_ALL=C ${TR} -cd '\\0' < \"$$file\" | ${TR} '\\0' 'x'`" ]
 
 .if ${SUBST_CLASSES:U:O} != ${SUBST_CLASSES:U:O:u}
 PKG_FAIL_REASON+=	"[subst.mk] duplicate SUBST class in: ${SUBST_CLASSES:O}"
@@ -134,15 +134,16 @@ SUBST_FILTER_CMD.${class}+=	-e s,@${v:C|[^A-Za-z0-9_]|\\\\&|gW:Q}@,${${v}:S|\\|\
 _SUBST_KEEP.${class}?=		LC_ALL=C ${DIFF} -u "$$file" "$$tmpfile" || true
 .  endif
 _SUBST_KEEP.${class}?=		${DO_NADA}
-SUBST_SKIP_TEXT_CHECK.${class}?=	no
+SUBST_SKIP_TEXT_CHECK.${class}?= \
+				no
 SUBST_NOOP_OK.${class}?=	${SUBST_NOOP_OK}
 _SUBST_WARN.${class}=		${${SUBST_NOOP_OK.${class}:tl} == yes:?${INFO_MSG}:${WARNING_MSG}} "[subst.mk:${class}]"
 
-.if !empty(SUBST_SKIP_TEXT_CHECK.${class}:M[Yy][Ee][Ss])
+.  if !empty(SUBST_SKIP_TEXT_CHECK.${class}:M[Yy][Ee][Ss])
 _SUBST_IS_TEXT_FILE_CMD.${class}=	${TRUE}
-.else
+.  else
 _SUBST_IS_TEXT_FILE_CMD.${class}=	${_SUBST_IS_TEXT_FILE_CMD}
-.endif
+.  endif
 
 .  if defined(SUBST_STAGE.${class})
 ${SUBST_STAGE.${class}}: subst-${class}
@@ -191,7 +192,7 @@ ${_SUBST_COOKIE.${class}}:
 		fi;							\
 	done;								\
 	\
-	if test "$$changed,${SUBST_NOOP_OK.${class}:tl}" = no,no; then \
+	if ${TEST} "$$changed,${SUBST_NOOP_OK.${class}:tl}" = no,no; then \
 		${FAIL_MSG} "[subst.mk:${class}] The pattern $$pattern has no effect."; \
 	fi; \
 	done; \
