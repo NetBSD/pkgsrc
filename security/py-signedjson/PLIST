@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/18 12:50:44 js Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/signedjson/__init__.py
+${PYSITELIB}/signedjson/__init__.pyc
+${PYSITELIB}/signedjson/__init__.pyo
+${PYSITELIB}/signedjson/key.py
+${PYSITELIB}/signedjson/key.pyc
+${PYSITELIB}/signedjson/key.pyo
+${PYSITELIB}/signedjson/sign.py
+${PYSITELIB}/signedjson/sign.pyc
+${PYSITELIB}/signedjson/sign.pyo
+${PYSITELIB}/signedjson/types.py
+${PYSITELIB}/signedjson/types.pyc
+${PYSITELIB}/signedjson/types.pyo
