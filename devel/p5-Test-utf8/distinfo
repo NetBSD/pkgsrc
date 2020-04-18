@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2017/06/07 14:42:26 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2020/04/18 11:31:56 mef Exp $
 
-SHA1 (Test-utf8-1.01.tar.gz) = cf75b7fd96da36e9f461037772e66e78715830d5
-RMD160 (Test-utf8-1.01.tar.gz) = 5204e28992c00fda261fc9aef737afe3b32243bf
-SHA512 (Test-utf8-1.01.tar.gz) = 07dcd5ed98a63f7d96bb0fc629b168773d02bb4c93c5bc44ec60738fc29669794547dfde5913f9de682cd583cf85f4d82b6151398aaebcfec9278525447b9c4e
-Size (Test-utf8-1.01.tar.gz) = 33308 bytes
+SHA1 (Test-utf8-1.02.tar.gz) = ccdc0ddd458ef1fe871056b5cf8347d3f8f45676
+RMD160 (Test-utf8-1.02.tar.gz) = e4874168f7ebbcfd3426ebb2defacd65e388d010
+SHA512 (Test-utf8-1.02.tar.gz) = f544174ad570c5e027acf66dcf335ddc4be3727488559933a389dbd7f2214e66490f96d0e816677310468076719d891fa3da80524b2b10345d8be8eebf4a1469
+Size (Test-utf8-1.02.tar.gz) = 32036 bytes
 SHA1 (patch-Makefile.PL) = 3f7382435a7fa738931ae71ff9c591d2d7768b80
