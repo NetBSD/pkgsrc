@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19824 2020/04/17 12:03:10 adam Exp $
+$NetBSD: TODO,v 1.19825 2020/04/18 06:14:18 taca Exp $
 
 Suggested new packages
 ======================
@@ -450,7 +450,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bibclean-2.17
 	o bibparse-1.11
 	o bin86-0.16.21
-	o bind-9.16.0
+	o bind-9.16.2
 	o binkd-1.04
 	o bird6-1.5.0
 	o bitlbee-3.6.1
