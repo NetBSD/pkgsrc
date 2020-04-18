@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/11/05 07:46:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/04/18 07:32:24 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -118,6 +118,9 @@ ${PYSITELIB}/pylint_django/tests/input/func_noerror_formview_ancestors.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_generic_foreign_key.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_generic_foreign_key.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_generic_foreign_key.pyo
+${PYSITELIB}/pylint_django/tests/input/func_noerror_gettext_lazy_format.py
+${PYSITELIB}/pylint_django/tests/input/func_noerror_gettext_lazy_format.pyc
+${PYSITELIB}/pylint_django/tests/input/func_noerror_gettext_lazy_format.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_ignore_meta_subclass.py
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_ignore_meta_subclass.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_noerror_ignore_meta_subclass.pyo
