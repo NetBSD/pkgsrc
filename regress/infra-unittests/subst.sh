@@ -801,7 +801,7 @@ if test_case_begin "SUBST_VARS for variables with regex characters"; then
 		'SUBST_CLASSES+=	vars' \
 		'SUBST_STAGE.vars=	pre-configure' \
 		'SUBST_FILES.vars=	vars.txt' \
-		'SUBST_VARS.vars=	VAR...... VAR.abcde VAR.() VAR.<>' \
+		'SUBST_VARS.vars=	VAR...... VAR.abcde VAR.() VAR.<> VAR.[]' \
 		'' \
 		'VAR......=	dots' \
 		'VAR.abcde=	letters' \
@@ -817,20 +817,19 @@ if test_case_begin "SUBST_VARS for variables with regex characters"; then
 		"@VAR.()@" \
 		"@VAR.<>@" \
 		"@VAR.[]@"
+cp "$tmpdir/testcase.mk" /tmp
 
 	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
 
-	# TODO: Why are the angle brackets replaced, but not the parentheses
-	# and square brackets?
 	assert_that "vars.txt" --file-is-lines \
 		"dots" \
 		"letters" \
-		"@VAR.()@" \
+		"parentheses" \
 		"angle brackets" \
-		"@VAR.[]@"
+		"square brackets"
 	assert_that "stdout" --file-is-lines \
 		"=> Substituting \"vars\" in vars.txt"
 	assert_that "stderr" --file-is-empty
