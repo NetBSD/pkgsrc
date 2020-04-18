@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.749 2020/03/22 07:54:22 nia Exp $
+# $NetBSD: Makefile,v 1.750 2020/04/18 12:50:44 js Exp $
 #
 
 COMMENT=	Security tools
@@ -479,6 +479,7 @@ SUBDIR+=	py-requests-ntlm
 SUBDIR+=	py-requests-oauthlib
 SUBDIR+=	py-rsa
 SUBDIR+=	py-service_identity
+SUBDIR+=	py-signedjson
 SUBDIR+=	py-simplesha3
 SUBDIR+=	py-slowaes
 SUBDIR+=	py-smbpasswd
