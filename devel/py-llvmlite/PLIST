@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/06/02 09:02:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/04/18 08:11:53 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -95,9 +95,6 @@ ${PYSITELIB}/llvmlite/llvmpy/core.pyo
 ${PYSITELIB}/llvmlite/llvmpy/passes.py
 ${PYSITELIB}/llvmlite/llvmpy/passes.pyc
 ${PYSITELIB}/llvmlite/llvmpy/passes.pyo
-${PYSITELIB}/llvmlite/six.py
-${PYSITELIB}/llvmlite/six.pyc
-${PYSITELIB}/llvmlite/six.pyo
 ${PYSITELIB}/llvmlite/tests/__init__.py
 ${PYSITELIB}/llvmlite/tests/__init__.pyc
 ${PYSITELIB}/llvmlite/tests/__init__.pyo
