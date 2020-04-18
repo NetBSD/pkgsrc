@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.74 2020/04/01 15:10:09 rillig Exp $
+# $NetBSD: subst.mk,v 1.75 2020/04/18 11:32:01 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -121,46 +121,46 @@ _SUBST_IS_TEXT_FILE_CMD?= \
 PKG_FAIL_REASON+=	"[subst.mk] duplicate SUBST class in: ${SUBST_CLASSES:O}"
 .endif
 
-.for _class_ in ${SUBST_CLASSES:O:u}
-_SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
+.for class in ${SUBST_CLASSES:O:u}
+_SUBST_COOKIE.${class}=		${WRKDIR}/.subst_${class}_done
 
-SUBST_FILTER_CMD.${_class_}?=	LC_ALL=C ${SED} ${SUBST_SED.${_class_}}
-SUBST_VARS.${_class_}?=		# none
-SUBST_MESSAGE.${_class_}?=	Substituting "${_class_}" in ${SUBST_FILES.${_class_}}
-.  for v in ${SUBST_VARS.${_class_}}
-SUBST_FILTER_CMD.${_class_}+=	-e s,@${v:C|[^A-Za-z0-9_]|\\\\&|gW:Q}@,${${v}:S|\\|\\\\|gW:S|,|\\,|gW:S|&|\\\&|gW:S|${.newline}|\\${.newline}|gW:Q},g
+SUBST_FILTER_CMD.${class}?=	LC_ALL=C ${SED} ${SUBST_SED.${class}}
+SUBST_VARS.${class}?=		# none
+SUBST_MESSAGE.${class}?=	Substituting "${class}" in ${SUBST_FILES.${class}}
+.  for v in ${SUBST_VARS.${class}}
+SUBST_FILTER_CMD.${class}+=	-e s,@${v:C|[^A-Za-z0-9_]|\\\\&|gW:Q}@,${${v}:S|\\|\\\\|gW:S|,|\\,|gW:S|&|\\\&|gW:S|${.newline}|\\${.newline}|gW:Q},g
 .  endfor
-.  if ${SUBST_SHOW_DIFF.${_class_}:U${SUBST_SHOW_DIFF}:tl} == yes
-_SUBST_KEEP.${_class_}?=	LC_ALL=C ${DIFF} -u "$$file" "$$tmpfile" || true
+.  if ${SUBST_SHOW_DIFF.${class}:U${SUBST_SHOW_DIFF}:tl} == yes
+_SUBST_KEEP.${class}?=		LC_ALL=C ${DIFF} -u "$$file" "$$tmpfile" || true
 .  endif
-_SUBST_KEEP.${_class_}?=	${DO_NADA}
-SUBST_SKIP_TEXT_CHECK.${_class_}?=	no
-SUBST_NOOP_OK.${_class_}?=	${SUBST_NOOP_OK}
-_SUBST_WARN.${_class_}=		${${SUBST_NOOP_OK.${_class_}:tl} == yes:?${INFO_MSG}:${WARNING_MSG}} "[subst.mk:${_class_}]"
+_SUBST_KEEP.${class}?=		${DO_NADA}
+SUBST_SKIP_TEXT_CHECK.${class}?=	no
+SUBST_NOOP_OK.${class}?=	${SUBST_NOOP_OK}
+_SUBST_WARN.${class}=		${${SUBST_NOOP_OK.${class}:tl} == yes:?${INFO_MSG}:${WARNING_MSG}} "[subst.mk:${class}]"
 
-.if !empty(SUBST_SKIP_TEXT_CHECK.${_class_}:M[Yy][Ee][Ss])
-_SUBST_IS_TEXT_FILE_CMD.${_class_}=	${TRUE}
+.if !empty(SUBST_SKIP_TEXT_CHECK.${class}:M[Yy][Ee][Ss])
+_SUBST_IS_TEXT_FILE_CMD.${class}=	${TRUE}
 .else
-_SUBST_IS_TEXT_FILE_CMD.${_class_}=	${_SUBST_IS_TEXT_FILE_CMD}
+_SUBST_IS_TEXT_FILE_CMD.${class}=	${_SUBST_IS_TEXT_FILE_CMD}
 .endif
 
-.  if defined(SUBST_STAGE.${_class_})
-${SUBST_STAGE.${_class_}}: subst-${_class_}
+.  if defined(SUBST_STAGE.${class})
+${SUBST_STAGE.${class}}: subst-${class}
 .  else
 # SUBST_STAGE.* does not need to be defined.
-#PKG_FAIL_REASON+=	"SUBST_STAGE missing for ${_class_}."
+#PKG_FAIL_REASON+=	"SUBST_STAGE missing for ${class}."
 .  endif
 
-.PHONY: subst-${_class_}
-subst-${_class_}: ${_SUBST_COOKIE.${_class_}}
+.PHONY: subst-${class}
+subst-${class}: ${_SUBST_COOKIE.${class}}
 
-${_SUBST_COOKIE.${_class_}}:
-	${RUN} message=${SUBST_MESSAGE.${_class_}:Q};			\
+${_SUBST_COOKIE.${class}}:
+	${RUN} message=${SUBST_MESSAGE.${class}:Q};			\
 	if [ "$$message" ]; then ${ECHO_SUBST_MSG} "$$message"; fi
 	${RUN}								\
 	basedir=${WRKSRC:Q};						\
 	emptydir="$$basedir/.subst-empty";				\
-	patterns=${SUBST_FILES.${_class_}:Q};				\
+	patterns=${SUBST_FILES.${class}:Q};				\
 	${MKDIR} "$$emptydir"; cd "$$emptydir";				\
 	for pattern in $$patterns; do					\
 	changed=no;							\
@@ -169,30 +169,30 @@ ${_SUBST_COOKIE.${_class_}}:
 		case $$file in /*) ;; *) file="./$$file";; esac;	\
 		tmpfile="$$file.subst.sav";				\
 		if [ ! -f "$$file" ]; then				\
-			[ -d "$$file" ] || ${_SUBST_WARN.${_class_}} "Ignoring non-existent file \"$$file\"."; \
-		elif ${_SUBST_IS_TEXT_FILE_CMD.${_class_}}; then	\
-			${SUBST_FILTER_CMD.${_class_}}			\
+			[ -d "$$file" ] || ${_SUBST_WARN.${class}} "Ignoring non-existent file \"$$file\"."; \
+		elif ${_SUBST_IS_TEXT_FILE_CMD.${class}}; then	\
+			${SUBST_FILTER_CMD.${class}}			\
 			< "$$file"					\
 			> "$$tmpfile";					\
 			if ${TEST} -x "$$file"; then			\
 				${CHMOD} +x "$$tmpfile";		\
 			fi;						\
 			if ${CMP} -s "$$tmpfile" "$$file"; then 	\
-				${_SUBST_WARN.${_class_}} "Nothing changed in $$file."; \
+				${_SUBST_WARN.${class}} "Nothing changed in $$file."; \
 				${RM} -f "$$tmpfile";			\
 			else						\
 				changed=yes;				\
-				${_SUBST_KEEP.${_class_}};		\
+				${_SUBST_KEEP.${class}};		\
 				${MV} -f "$$tmpfile" "$$file"; 		\
 				${ECHO} "$$file" >> ${.TARGET}.tmp;	\
 			fi;						\
 		else							\
-			${_SUBST_WARN.${_class_}} "Ignoring non-text file \"$$file\"."; \
+			${_SUBST_WARN.${class}} "Ignoring non-text file \"$$file\"."; \
 		fi;							\
 	done;								\
 	\
-	if test "$$changed,${SUBST_NOOP_OK.${_class_}:tl}" = no,no; then \
-		${FAIL_MSG} "[subst.mk:${_class_}] The pattern $$pattern has no effect."; \
+	if test "$$changed,${SUBST_NOOP_OK.${class}:tl}" = no,no; then \
+		${FAIL_MSG} "[subst.mk:${class}] The pattern $$pattern has no effect."; \
 	fi; \
 	done; \
 	cd ${WRKDIR}; ${RMDIR} "$$emptydir"
