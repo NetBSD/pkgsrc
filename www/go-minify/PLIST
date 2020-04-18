@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/11/18 08:40:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/18 14:56:06 nikita Exp $
 bin/minify
 gopkg/pkg/${GO_PLATFORM}/github.com/tdewolff/minify.a
 gopkg/pkg/${GO_PLATFORM}/github.com/tdewolff/minify/css.a
@@ -21,6 +21,7 @@ gopkg/src/github.com/tdewolff/minify/benchmarks/sample_bbc.html
 gopkg/src/github.com/tdewolff/minify/benchmarks/sample_blogpost.html
 gopkg/src/github.com/tdewolff/minify/benchmarks/sample_books.xml
 gopkg/src/github.com/tdewolff/minify/benchmarks/sample_bootstrap.css
+gopkg/src/github.com/tdewolff/minify/benchmarks/sample_car.svg
 gopkg/src/github.com/tdewolff/minify/benchmarks/sample_catalog.xml
 gopkg/src/github.com/tdewolff/minify/benchmarks/sample_dot.js
 gopkg/src/github.com/tdewolff/minify/benchmarks/sample_es6.html
@@ -35,12 +36,14 @@ gopkg/src/github.com/tdewolff/minify/benchmarks/sample_normalize.css
 gopkg/src/github.com/tdewolff/minify/benchmarks/sample_omg.xml
 gopkg/src/github.com/tdewolff/minify/benchmarks/sample_stackoverflow.html
 gopkg/src/github.com/tdewolff/minify/benchmarks/sample_testsuite.json
+gopkg/src/github.com/tdewolff/minify/benchmarks/sample_tiger.svg
 gopkg/src/github.com/tdewolff/minify/benchmarks/sample_twitter.json
 gopkg/src/github.com/tdewolff/minify/benchmarks/sample_usa.svg
 gopkg/src/github.com/tdewolff/minify/benchmarks/sample_wikipedia.html
 gopkg/src/github.com/tdewolff/minify/benchmarks/svg_test.go
 gopkg/src/github.com/tdewolff/minify/benchmarks/xml_test.go
 gopkg/src/github.com/tdewolff/minify/cmd/minify/README.md
+gopkg/src/github.com/tdewolff/minify/cmd/minify/install.sh
 gopkg/src/github.com/tdewolff/minify/cmd/minify/main.go
 gopkg/src/github.com/tdewolff/minify/cmd/minify/minify_bash_tab_completion
 gopkg/src/github.com/tdewolff/minify/cmd/minify/util.go
@@ -50,11 +53,14 @@ gopkg/src/github.com/tdewolff/minify/common.go
 gopkg/src/github.com/tdewolff/minify/common_test.go
 gopkg/src/github.com/tdewolff/minify/css/css.go
 gopkg/src/github.com/tdewolff/minify/css/css_test.go
+gopkg/src/github.com/tdewolff/minify/css/hash.go
 gopkg/src/github.com/tdewolff/minify/css/table.go
+gopkg/src/github.com/tdewolff/minify/css/util.go
 gopkg/src/github.com/tdewolff/minify/go.mod
 gopkg/src/github.com/tdewolff/minify/go.sum
 gopkg/src/github.com/tdewolff/minify/html/buffer.go
 gopkg/src/github.com/tdewolff/minify/html/buffer_test.go
+gopkg/src/github.com/tdewolff/minify/html/hash.go
 gopkg/src/github.com/tdewolff/minify/html/html.go
 gopkg/src/github.com/tdewolff/minify/html/html_test.go
 gopkg/src/github.com/tdewolff/minify/html/table.go
@@ -66,6 +72,7 @@ gopkg/src/github.com/tdewolff/minify/minify.go
 gopkg/src/github.com/tdewolff/minify/minify_test.go
 gopkg/src/github.com/tdewolff/minify/svg/buffer.go
 gopkg/src/github.com/tdewolff/minify/svg/buffer_test.go
+gopkg/src/github.com/tdewolff/minify/svg/hash.go
 gopkg/src/github.com/tdewolff/minify/svg/pathdata.go
 gopkg/src/github.com/tdewolff/minify/svg/pathdata_test.go
 gopkg/src/github.com/tdewolff/minify/svg/svg.go
@@ -73,5 +80,6 @@ gopkg/src/github.com/tdewolff/minify/svg/svg_test.go
 gopkg/src/github.com/tdewolff/minify/svg/table.go
 gopkg/src/github.com/tdewolff/minify/xml/buffer.go
 gopkg/src/github.com/tdewolff/minify/xml/buffer_test.go
+gopkg/src/github.com/tdewolff/minify/xml/table.go
 gopkg/src/github.com/tdewolff/minify/xml/xml.go
 gopkg/src/github.com/tdewolff/minify/xml/xml_test.go
