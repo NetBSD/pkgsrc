@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.125 2020/04/12 08:28:38 adam Exp $
+# $NetBSD: Makefile,v 1.126 2020/04/18 14:32:02 nia Exp $
 
-DISTNAME=	harfbuzz-2.6.4
-PKGREVISION=	3
+DISTNAME=	harfbuzz-2.6.5
 CATEGORIES=	fonts
-MASTER_SITES=	https://www.freedesktop.org/software/harfbuzz/release/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=harfbuzz/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.freedesktop.org/wiki/Software/HarfBuzz/
+HOMEPAGE=	https://harfbuzz.github.io/
 COMMENT=	OpenType text shaping engine
 LICENSE=	mit
 
