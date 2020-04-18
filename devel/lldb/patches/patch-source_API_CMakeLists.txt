@@ -1,17 +1,17 @@
-$NetBSD: patch-source_API_CMakeLists.txt,v 1.3 2019/10/19 14:01:37 adam Exp $
+$NetBSD: patch-source_API_CMakeLists.txt,v 1.4 2020/04/18 07:59:44 adam Exp $
 
 Fix finding libxml2's includes.
 
---- source/API/CMakeLists.txt.orig	2019-07-10 11:09:29.000000000 +0000
+--- source/API/CMakeLists.txt.orig	2020-03-23 15:01:02.000000000 +0000
 +++ source/API/CMakeLists.txt
-@@ -13,6 +13,10 @@ if(LLDB_BUILD_FRAMEWORK)
-   set(option_install_prefix INSTALL_PREFIX ${LLDB_FRAMEWORK_INSTALL_DIR})
+@@ -19,6 +19,10 @@ if(LLDB_BUILD_FRAMEWORK)
+   set(option_framework FRAMEWORK)
  endif()
  
 +if(LIBXML2_FOUND)
 +  include_directories(SYSTEM ${LIBXML2_INCLUDE_DIR})
 +endif()
 +
- add_lldb_library(liblldb SHARED
+ add_lldb_library(liblldb SHARED ${option_framework}
    SBAddress.cpp
    SBAttachInfo.cpp
