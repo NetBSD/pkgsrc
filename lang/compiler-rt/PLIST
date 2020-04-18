@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2019/10/19 13:52:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/18 08:03:07 adam Exp $
+lib/clang/${PKGVERSION}/include/fuzzer/FuzzedDataProvider.h
+lib/clang/${PKGVERSION}/include/profile/InstrProfData.inc
 lib/clang/${PKGVERSION}/include/sanitizer/allocator_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/asan_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/common_interface_defs.h
@@ -12,6 +14,7 @@ lib/clang/${PKGVERSION}/include/sanitizer/netbsd_syscall_hooks.h
 lib/clang/${PKGVERSION}/include/sanitizer/scudo_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/tsan_interface.h
 lib/clang/${PKGVERSION}/include/sanitizer/tsan_interface_atomic.h
+lib/clang/${PKGVERSION}/include/sanitizer/ubsan_interface.h
 lib/clang/${PKGVERSION}/include/xray/xray_interface.h
 lib/clang/${PKGVERSION}/include/xray/xray_log_interface.h
 lib/clang/${PKGVERSION}/include/xray/xray_records.h
