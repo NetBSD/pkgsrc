@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3099 2020/04/18 01:21:38 mef Exp $
+# $NetBSD: Makefile,v 1.3100 2020/04/18 12:47:55 js Exp $
 #
 
 COMMENT=	Development utilities
@@ -2292,6 +2292,7 @@ SUBDIR+=	py-jersey
 SUBDIR+=	py-joblib
 SUBDIR+=	py-jupyter_client
 SUBDIR+=	py-jupyter_core
+SUBDIR+=	py-frozendict
 SUBDIR+=	py-kafka-python
 SUBDIR+=	py-kaitaistruct
 SUBDIR+=	py-kjbuckets
@@ -2564,6 +2565,7 @@ SUBDIR+=	py-unitgui
 SUBDIR+=	py-unittest-mixins
 SUBDIR+=	py-unittest2
 SUBDIR+=	py-unittest2pytest
+SUBDIR+=	py-unpaddedbase64
 SUBDIR+=	py-urwid
 SUBDIR+=	py-usb
 SUBDIR+=	py-uuid
