@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2356 2020/04/18 12:46:40 js Exp $
+$NetBSD: CHANGES-2020,v 1.2357 2020/04/18 12:50:01 js Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3260,3 +3260,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-numba to 0.49.0 [adam 2020-04-18]
 	Added devel/py-frozendict version 1.2 [js 2020-04-18]
 	Added devel/py-unpaddedbase64 version 1.1.0 [js 2020-04-18]
+	Added devel/py-canonicaljson version 1.1.4 [js 2020-04-18]
