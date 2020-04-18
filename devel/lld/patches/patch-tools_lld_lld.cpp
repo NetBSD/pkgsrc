@@ -1,9 +1,9 @@
-$NetBSD: patch-tools_lld_lld.cpp,v 1.1 2019/11/03 12:11:27 kamil Exp $
+$NetBSD: patch-tools_lld_lld.cpp,v 1.2 2020/04/18 08:00:50 adam Exp $
 
 [LLD] Add NetBSD support as a new flavor of LLD (nb.lld)
 https://reviews.llvm.org/D69755
 
---- tools/lld/lld.cpp.orig	2019-07-11 06:12:18.000000000 +0000
+--- tools/lld/lld.cpp.orig	2020-03-23 15:01:02.000000000 +0000
 +++ tools/lld/lld.cpp
 @@ -10,12 +10,13 @@
  // function is a thin wrapper which dispatches to the platform specific
@@ -22,8 +22,8 @@ https://reviews.llvm.org/D69755
  //  - ld64:      Mach-O (macOS)
  //  - lld-link:  COFF (Windows)
  //  - ld-wasm:   WebAssembly
-@@ -35,6 +36,9 @@
- #include "llvm/Support/CommandLine.h"
+@@ -36,6 +37,9 @@
+ #include "llvm/Support/Host.h"
  #include "llvm/Support/InitLLVM.h"
  #include "llvm/Support/Path.h"
 +#include "llvm/Support/Program.h"
@@ -32,7 +32,7 @@ https://reviews.llvm.org/D69755
  #include <cstdlib>
  
  using namespace lld;
-@@ -44,6 +48,7 @@ using namespace llvm::sys;
+@@ -45,6 +49,7 @@ using namespace llvm::sys;
  enum Flavor {
    Invalid,
    Gnu,     // -flavor gnu
@@ -40,7 +40,7 @@ https://reviews.llvm.org/D69755
    WinLink, // -flavor link
    Darwin,  // -flavor darwin
    Wasm,    // -flavor wasm
-@@ -57,6 +62,7 @@ LLVM_ATTRIBUTE_NORETURN static void die(
+@@ -58,6 +63,7 @@ LLVM_ATTRIBUTE_NORETURN static void die(
  static Flavor getFlavor(StringRef s) {
    return StringSwitch<Flavor>(s)
        .CasesLower("ld", "ld.lld", "gnu", Gnu)
@@ -48,7 +48,7 @@ https://reviews.llvm.org/D69755
        .CasesLower("wasm", "ld-wasm", Wasm)
        .CaseLower("link", WinLink)
        .CasesLower("ld64", "ld64.lld", "darwin", Darwin)
-@@ -99,10 +105,15 @@ static Flavor parseProgname(StringRef pr
+@@ -100,10 +106,15 @@ static Flavor parseProgname(StringRef pr
  #endif
  
  #if LLVM_ON_UNIX
@@ -66,7 +66,7 @@ https://reviews.llvm.org/D69755
  
    // Progname may be something like "lld-gnu". Parse it.
    SmallVector<StringRef, 3> v;
-@@ -132,6 +143,38 @@ static Flavor parseFlavor(std::vector<co
+@@ -133,6 +144,38 @@ static Flavor parseFlavor(std::vector<co
    return parseProgname(arg0);
  }
  
@@ -105,7 +105,7 @@ https://reviews.llvm.org/D69755
  // If this function returns true, lld calls _exit() so that it quickly
  // exits without invoking destructors of globally allocated objects.
  //
-@@ -140,7 +183,7 @@ static Flavor parseFlavor(std::vector<co
+@@ -141,7 +184,7 @@ static Flavor parseFlavor(std::vector<co
  // and we use it to detect whether we are running tests or not.
  static bool canExitEarly() { return StringRef(getenv("LLD_IN_TEST")) != "1"; }
  
@@ -114,17 +114,17 @@ https://reviews.llvm.org/D69755
  /// windows linker based on the argv[0] or -flavor option.
  int main(int argc, const char **argv) {
    InitLLVM x(argc, argv);
-@@ -151,6 +194,8 @@ int main(int argc, const char **argv) {
+@@ -152,6 +195,8 @@ int main(int argc, const char **argv) {
      if (isPETarget(args))
-       return !mingw::link(args);
-     return !elf::link(args, canExitEarly());
+       return !mingw::link(args, canExitEarly(), llvm::outs(), llvm::errs());
+     return !elf::link(args, canExitEarly(), llvm::outs(), llvm::errs());
 +  case NetBSD:
 +    return exec_nb_lld(argc - 1, argv + 1);
    case WinLink:
-     return !coff::link(args, canExitEarly());
+     return !coff::link(args, canExitEarly(), llvm::outs(), llvm::errs());
    case Darwin:
-@@ -159,7 +204,8 @@ int main(int argc, const char **argv) {
-     return !wasm::link(args, canExitEarly());
+@@ -160,7 +205,8 @@ int main(int argc, const char **argv) {
+     return !wasm::link(args, canExitEarly(), llvm::outs(), llvm::errs());
    default:
      die("lld is a generic driver.\n"
 -        "Invoke ld.lld (Unix), ld64.lld (macOS), lld-link (Windows), wasm-ld"
