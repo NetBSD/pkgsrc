@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/03/10 22:09:19 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2020/04/18 04:13:51 mef Exp $
 
 DISTNAME=	Mixer-0.4.0
 PKGNAME=	deforaos-mixer-0.4.0
@@ -17,6 +17,8 @@ USE_TOOLS+=	xgettext
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
+CFLAGS+=	-fPIC
 
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
