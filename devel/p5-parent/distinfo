@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/07/07 10:25:50 wen Exp $
+$NetBSD: distinfo,v 1.10 2020/04/18 12:47:42 mef Exp $
 
-SHA1 (parent-0.237.tar.gz) = db0060ebc8de345602b23f7dc70b6fd5c4803438
-RMD160 (parent-0.237.tar.gz) = cb1fd8d6a4ba4976d84766349c61b3375fcef562
-SHA512 (parent-0.237.tar.gz) = 3da3b16eb8401a0c37aeadc4cf8518c9640f6c22edb837e652d33d68758932079f576b1ede52cdf28d35c3edb2f4e0f49462ad1567419487634349508d7b4794
-Size (parent-0.237.tar.gz) = 10004 bytes
+SHA1 (parent-0.238.tar.gz) = 10fd90c605deac346b1325356d569650468ab8d6
+RMD160 (parent-0.238.tar.gz) = b4af0bafa8dfaab16a41c63a73b9611e68077f5e
+SHA512 (parent-0.238.tar.gz) = b1ede0366f6a9f16e9b76553d4af5934f99a63449b8db0e681ba7103b306a777b698be008da87f25791fb83bbc6085294c4c4cd695a6899fcd04cbc5045a2bf4
+Size (parent-0.238.tar.gz) = 10388 bytes
