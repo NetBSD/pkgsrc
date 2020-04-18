@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3102 2020/04/18 15:51:55 nikita Exp $
+# $NetBSD: Makefile,v 1.3103 2020/04/18 19:43:04 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2935,6 +2935,7 @@ SUBDIR+=	tex-tlshell
 SUBDIR+=	tex-tlshell-doc
 SUBDIR+=	tex-xifthen
 SUBDIR+=	tex-xifthen-doc
+SUBDIR+=	texttest
 SUBDIR+=	threadweaver
 SUBDIR+=	thrift
 SUBDIR+=	tig
