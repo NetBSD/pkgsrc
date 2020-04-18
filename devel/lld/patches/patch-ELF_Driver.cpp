@@ -1,13 +1,10 @@
-$NetBSD: patch-ELF_Driver.cpp,v 1.7 2019/11/03 12:40:40 kamil Exp $
-
-Cherry-pick upstream patch commit 2a0fcae3d4d1fd85d6ae8378d7c6f12430c0087d
-[lld] [ELF] Add '-z nognustack' opt to suppress emitting PT_GNU_STACK
+$NetBSD: patch-ELF_Driver.cpp,v 1.8 2020/04/18 08:00:50 adam Exp $
 
 Add dummy option for an AArch64 erratum.
 
---- ELF/Driver.cpp.orig	2019-07-17 14:54:02.000000000 +0000
+--- ELF/Driver.cpp.orig	2020-03-23 15:01:02.000000000 +0000
 +++ ELF/Driver.cpp
-@@ -129,7 +129,7 @@ static std::tuple<ELFKind, uint16_t, uin
+@@ -132,7 +132,7 @@ static std::tuple<ELFKind, uint16_t, uin
    std::pair<ELFKind, uint16_t> ret =
        StringSwitch<std::pair<ELFKind, uint16_t>>(s)
            .Cases("aarch64elf", "aarch64linux", "aarch64_elf64_le_vec",
@@ -26,48 +23,11 @@ Add dummy option for an AArch64 erratum.
    if (config->fixCortexA53Errata843419 && config->emachine != EM_AARCH64)
      error("--fix-cortex-a53-843419 is only supported on AArch64 targets");
  
-@@ -373,6 +376,20 @@ static bool getZFlag(opt::InputArgList &
-   return Default;
- }
- 
-+static GnuStackKind getZGnuStack(opt::InputArgList &args) {
-+  for (auto *arg : args.filtered_reverse(OPT_z)) {
-+    if (StringRef("execstack") == arg->getValue())
-+      return GnuStackKind::Exec;
-+    if (StringRef("noexecstack") == arg->getValue())
-+      return GnuStackKind::NoExec;
-+    if (StringRef("nognustack") == arg->getValue())
-+      return GnuStackKind::None;
-+  }
-+
-+  // default
-+  return GnuStackKind::NoExec;
-+}
-+
- static bool isKnownZFlag(StringRef s) {
-   return s == "combreloc" || s == "copyreloc" || s == "defs" ||
-          s == "execstack" || s == "global" || s == "hazardplt" ||
-@@ -380,6 +397,7 @@ static bool isKnownZFlag(StringRef s) {
-          s == "keep-text-section-prefix" || s == "lazy" || s == "muldefs" ||
-          s == "nocombreloc" || s == "nocopyreloc" || s == "nodefaultlib" ||
-          s == "nodelete" || s == "nodlopen" || s == "noexecstack" ||
-+         s == "nognustack" ||
-          s == "nokeep-text-section-prefix" || s == "norelro" || s == "notext" ||
-          s == "now" || s == "origin" || s == "relro" || s == "retpolineplt" ||
-          s == "rodynamic" || s == "text" || s == "wxneeded" ||
-@@ -828,6 +846,7 @@ static void readConfigs(opt::InputArgLis
+@@ -879,6 +882,7 @@ static void readConfigs(opt::InputArgLis
        args.hasFlag(OPT_export_dynamic, OPT_no_export_dynamic, false);
    config->filterList = args::getStrings(args, OPT_filter);
    config->fini = args.getLastArgValue(OPT_fini, "_fini");
 +  config->fixCortexA53Errata835769 = args.hasArg(OPT_fix_cortex_a53_843419);
    config->fixCortexA53Errata843419 = args.hasArg(OPT_fix_cortex_a53_843419);
-   config->forceBTI = args.hasArg(OPT_force_bti);
-   config->requireCET = args.hasArg(OPT_require_cet);
-@@ -921,6 +940,7 @@ static void readConfigs(opt::InputArgLis
-   config->zCopyreloc = getZFlag(args, "copyreloc", "nocopyreloc", true);
-   config->zExecstack = getZFlag(args, "execstack", "noexecstack", false);
-   config->zGlobal = hasZOption(args, "global");
-+  config->zGnustack = getZGnuStack(args);
-   config->zHazardplt = hasZOption(args, "hazardplt");
-   config->zIfuncNoplt = hasZOption(args, "ifunc-noplt");
-   config->zInitfirst = hasZOption(args, "initfirst");
+   config->fixCortexA8 = args.hasArg(OPT_fix_cortex_a8);
+   config->forceBTI = hasZOption(args, "force-bti");
