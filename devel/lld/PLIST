@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/11/03 12:10:29 kamil Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/04/18 08:00:49 adam Exp $
 bin/ld.lld
 bin/ld64.lld
 bin/lld
@@ -6,6 +6,7 @@ bin/lld-link
 bin/nb.lld
 bin/wasm-ld
 include/lld/Common/Args.h
+include/lld/Common/DWARF.h
 include/lld/Common/Driver.h
 include/lld/Common/ErrorHandler.h
 include/lld/Common/Filesystem.h
