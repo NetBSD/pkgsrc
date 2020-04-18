@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/19 13:58:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/18 07:58:49 adam Exp $
 bin/clang-apply-replacements
 bin/clang-change-namespace
 bin/clang-doc
 bin/clang-include-fixer
+bin/clang-move
 bin/clang-query
 bin/clang-reorder-fields
 bin/clang-tidy
 bin/clangd
 bin/find-all-symbols
 bin/modularize
+bin/pp-trace
 lib/libclangApplyReplacements.a
 lib/libclangChangeNamespace.a
 lib/libclangDaemon.a
@@ -26,10 +28,12 @@ lib/libclangTidyBoostModule.a
 lib/libclangTidyBugproneModule.a
 lib/libclangTidyCERTModule.a
 lib/libclangTidyCppCoreGuidelinesModule.a
+lib/libclangTidyDarwinModule.a
 lib/libclangTidyFuchsiaModule.a
 lib/libclangTidyGoogleModule.a
 lib/libclangTidyHICPPModule.a
 lib/libclangTidyLLVMModule.a
+lib/libclangTidyLinuxKernelModule.a
 lib/libclangTidyMPIModule.a
 lib/libclangTidyMiscModule.a
 lib/libclangTidyModernizeModule.a
@@ -42,8 +46,10 @@ lib/libclangTidyReadabilityModule.a
 lib/libclangTidyUtils.a
 lib/libclangTidyZirconModule.a
 lib/libfindAllSymbols.a
+share/clang/clang-doc-default-stylesheet.css
 share/clang/clang-include-fixer.el
 share/clang/clang-include-fixer.py
 share/clang/clang-tidy-diff.py
+share/clang/index.js
 share/clang/run-clang-tidy.py
 share/clang/run-find-all-symbols.py
