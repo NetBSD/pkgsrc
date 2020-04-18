@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2350 2020/04/18 05:02:16 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2351 2020/04/18 06:13:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3239,3 +3239,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/libreoffice to 6.4.3.2 [ryoon 2020-04-18]
 	Updated lang/php73 to 7.3.17 [taca 2020-04-18]
 	Updated lang/php74 to 7.4.5 [taca 2020-04-18]
+	Updated net/bind911 to 9.11.18 [taca 2020-04-18]
