@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/04/17 00:19:26 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/18 22:00:10 joerg Exp $
 
 DISTNAME=	appstream-glib-appstream_glib_0_7_17
 PKGNAME=	appstream-glib-0.7.17
@@ -11,6 +11,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/hughsie/appstream-glib/
 COMMENT=	GObjects and helper methods for AppStream metadata
 LICENSE=	gnu-lgpl-v2.1
+
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
