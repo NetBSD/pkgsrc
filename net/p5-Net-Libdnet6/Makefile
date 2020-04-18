@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2019/08/11 13:22:21 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/04/18 13:45:33 mef Exp $
 
-DISTNAME=	Net-Libdnet6-0.27
+DISTNAME=	Net-Libdnet6-0.28
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
-CATEGORIES=	perl5 net
+CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
