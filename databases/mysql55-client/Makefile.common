@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2019/11/02 15:38:02 rillig Exp $
+# $NetBSD: Makefile.common,v 1.67 2020/04/18 17:33:51 gdt Exp $
 #
 # used by databases/mysql55-client/Makefile
 # used by databases/mysql55-server/Makefile
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE?=	${.CURDIR}/../../databases/mysql55-client/distinfo
 PATCHDIR?=	${.CURDIR}/../../databases/mysql55-client/patches
+
+BROKEN=		"Requires old openssl (that pkgsrc no longer uses)"
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
