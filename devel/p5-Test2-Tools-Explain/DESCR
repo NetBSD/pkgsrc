@@ -1,0 +1,12 @@
+SUBROUTINES
+explain( @things_to_explain )
+
+Will convert the contents of any references in a human readable
+format, and return them as strings. Usually you want to pass this into
+note or diag.
+
+Handy for things like:
+
+  is( $errors, [], 'Should have no errors' ) or diag explain( $errors );
+
+Note that explain does NOT output anything.
