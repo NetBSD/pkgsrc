@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/12/29 15:31:23 adam Exp $
+$NetBSD: distinfo,v 1.5 2020/04/18 08:05:11 adam Exp $
 
-SHA1 (openmp-9.0.1.src.tar.xz) = b23687827cb69da01fb3ea1234b708ab604def22
-RMD160 (openmp-9.0.1.src.tar.xz) = e5562fce183a9838d412d4e60c5afb41607b0c37
-SHA512 (openmp-9.0.1.src.tar.xz) = 608b87f9a1fd0cbd88d6273fab413d5bf47052f958888326e9e8a278409fc78071c740edcd306b1a76ceb8f1b2652ea6768e248ea19ccb5f00f1276e886255cf
-Size (openmp-9.0.1.src.tar.xz) = 938360 bytes
+SHA1 (openmp-10.0.0.src.tar.xz) = f661145e8cb6abab94e4d0e3a8efd37d7c56b463
+RMD160 (openmp-10.0.0.src.tar.xz) = 818001eb0d6f92592af75a87ccd8e05ccc7f8b4d
+SHA512 (openmp-10.0.0.src.tar.xz) = 07f03b8eb633f7e4dbb1b8f4f5c5fea88b14944b0b303c340b09759776bfa52a6b7c2cea35cf6e8b601fbfa580a20161fbba35b2951b3b16771b2be9000cdc3a
+Size (openmp-10.0.0.src.tar.xz) = 959016 bytes
