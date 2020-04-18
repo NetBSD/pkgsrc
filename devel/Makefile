@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3101 2020/04/18 12:49:47 js Exp $
+# $NetBSD: Makefile,v 1.3102 2020/04/18 15:51:55 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -437,6 +437,7 @@ SUBDIR+=	go-pflag
 SUBDIR+=	go-properties
 SUBDIR+=	go-protobuf
 SUBDIR+=	go-purell
+SUBDIR+=	go-radix
 SUBDIR+=	go-ratelimit
 SUBDIR+=	go-repr
 SUBDIR+=	go-review
