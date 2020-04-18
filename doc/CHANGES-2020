@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2364 2020/04/18 14:22:13 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2365 2020/04/18 14:33:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3289,3 +3289,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Struct-Dumb to 0.11 [mef 2020-04-18]
 	Updated www/go-parse to 2.4.2 [nikita 2020-04-18]
 	Updated security/mbedtls to 2.16.6 [nia 2020-04-18]
+	Updated fonts/harfbuzz to 2.6.5 [nia 2020-04-18]
