@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/10/28 12:58:10 mef Exp $
+$NetBSD: distinfo,v 1.4 2020/04/18 11:09:21 mef Exp $
 
-SHA1 (Test-HTTP-LocalServer-0.69.tar.gz) = 5cc8066b5af64639c49f0448e5451ddd4ef3381a
-RMD160 (Test-HTTP-LocalServer-0.69.tar.gz) = 6576fdaa1a0e5c3aaa809423ee90dd2658ee882c
-SHA512 (Test-HTTP-LocalServer-0.69.tar.gz) = aa9794cb6ea77318caac8904ca7d8214530663f09ab2c5fc5cab3549269b3a20ba6630cfe7cabe830ee4a4ee43ceb1c2f7d2ead4f3ddb28c3fb17dbde2981d8b
-Size (Test-HTTP-LocalServer-0.69.tar.gz) = 28034 bytes
+SHA1 (Test-HTTP-LocalServer-0.71.tar.gz) = 6b12010d58d112dfb3c109c3e79d293072faa5ab
+RMD160 (Test-HTTP-LocalServer-0.71.tar.gz) = 543d8a672ecab68dafa0bead97fca153f8a53b64
+SHA512 (Test-HTTP-LocalServer-0.71.tar.gz) = c596053e40a70a94b30c6f8ac107981afd130adcc1e7bfacbb3b6a639a1905ca69f6687104393ec7b4576c5b1fb7c9e9e5165d279dfa744cf53feee2a092706e
+Size (Test-HTTP-LocalServer-0.71.tar.gz) = 29860 bytes
