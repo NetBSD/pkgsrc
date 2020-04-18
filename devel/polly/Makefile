@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/01/26 17:31:02 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/04/18 08:01:43 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -16,7 +16,7 @@ DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++14
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
 
