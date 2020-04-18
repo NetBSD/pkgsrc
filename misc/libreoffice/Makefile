@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2020/04/18 04:18:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.226 2020/04/18 11:16:31 tsutsui Exp $
 
 VERREL=		6.4.3
 VERRC=		2
@@ -250,6 +250,11 @@ BUILD_MAKE_FLAGS+=	VERBOSE=true
 
 .if ${OPSYS} != "Linux"
 BUILDLINK_TRANSFORM+=	rm:-ldl
+.endif
+
+.if ${MACHINE_ARCH} == "i386"
+# For 64 bit atomic ops (PR/54826)
+CXXFLAGS+=		-march=i586
 .endif
 
 INSTALLATION_DIRS=	bin share/applications
