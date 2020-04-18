@@ -1,0 +1,4 @@
+TextTest is an open source tool for text-based functional testing. This
+means running a program in lots of different ways from the command line,
+and using the text output produced as a means of controlling the
+behaviour of that application.
