@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/04/05 16:05:41 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/04/18 12:22:45 bsiegert Exp $
 include/mate-mixer/libmatemixer/matemixer-app-info.h
 include/mate-mixer/libmatemixer/matemixer-context.h
 include/mate-mixer/libmatemixer/matemixer-device-switch.h
@@ -17,7 +17,7 @@ include/mate-mixer/libmatemixer/matemixer-version.h
 include/mate-mixer/libmatemixer/matemixer.h
 lib/libmatemixer.la
 lib/libmatemixer/libmatemixer-null.la
-lib/libmatemixer/libmatemixer-oss.la
+${PLIST.oss}lib/libmatemixer/libmatemixer-oss.la
 lib/pkgconfig/libmatemixer.pc
 share/gtk-doc/html/libmatemixer/MateMixerAppInfo.html
 share/gtk-doc/html/libmatemixer/MateMixerContext.html
