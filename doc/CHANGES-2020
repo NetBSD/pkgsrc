@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2365 2020/04/18 14:33:17 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2366 2020/04/18 14:52:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3290,3 +3290,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/go-parse to 2.4.2 [nikita 2020-04-18]
 	Updated security/mbedtls to 2.16.6 [nia 2020-04-18]
 	Updated fonts/harfbuzz to 2.6.5 [nia 2020-04-18]
+	Updated games/openttd to 1.10.1 [nia 2020-04-18]
