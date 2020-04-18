@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2020/04/12 08:29:16 adam Exp $
+# $NetBSD: Makefile,v 1.39 2020/04/18 07:58:36 fox Exp $
 
-DISTNAME=	cliqz-1.34.1
-PKGREVISION=	1
+DISTNAME=	cliqz-1.35.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cliqz-oss/}
 GITHUB_PROJECT=	browser-f
@@ -16,7 +15,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 CLIQZ_CHANNEL=		release
 # If the PKGVERSION_NOREV is updated, make sure to update the last build id from
 # ftp -Vo - https://repository.cliqz.com/dist/${CLIQZ_CHANNEL}/${PKGVERSION_NOREV}/lastbuildid
-CLIQZ_LAST_BUILD_ID=	20200404160144
+CLIQZ_LAST_BUILD_ID=	20200414182840
 CLIQZ_PLUGIN_SUFX=	@cliqz.com.xpi
 
 SITES.adult-domains.bin= \
@@ -39,17 +38,34 @@ COMMENT=	Secure browser (Mozilla based) with built-in quick search
 LICENSE=	mpl-2.0 AND gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config perl gmake autoconf213 unzip zip bash pax
-# Some modules written in Rust dislike gnu++17 as of 74.0 (www/firefox).
-USE_LANGUAGES+=	c99 gnu++14
+# cliqz (which is based on firefox) needs a compiler that supports
+# gnu++14 and gnu++17.  However, passing --std=gnu++17 (from wrappers,
+# as a result of USE_LANGUAGES), results in problems for some Rust
+# modules (as of 74.0).  Therefore, do not declare the languages that
+# are actually needed.
+# \todo In pkgsrc infrastructure, separate the concept of needing a
+# compiler that can implement a standard, and the concept of forcibly
+# adding a --std flag.  (The build system of a package should be
+# setting the --std flag that is needed, rather than relying on the
+# defaults of a particular compiler version.)
+# NB: Even when building cliqz (which is based on firefox) with
+# PKGSRC_COMPILER=gcc, the package will depend on and use clang, doing
+# so outside the normal compiler selection framework.
+USE_LANGUAGES+=	c99 c++
 
 # Build script does not support python 3.x yet.
 # https://firefox-source-docs.mozilla.org/build/buildsystem/python.html
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
-TOOL_DEPENDS+=			cbindgen>=0.13.0:../../devel/cbindgen
+TOOL_DEPENDS+=			cbindgen>=0.13.1:../../devel/cbindgen
 TOOL_DEPENDS+=			nodejs-[0-9]*:../../lang/nodejs
-TOOL_DEPENDS+=			${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
+# Depend on Python3 sqlite3 module.
+.if !empty(PYTHON_VERSION_DEFAULT:M3[6789])
+BUILD_DEPENDS+=			py${PYTHON_VERSION_DEFAULT}-sqlite3-[0-9]*:../../databases/py-sqlite3
+.else
+BUILD_DEPENDS+=			py37-sqlite3-[0-9]*:../../databases/py-sqlite3
+.endif
 BUILD_DEPENDS+=			yasm>=1.1:../../devel/yasm
 BUILD_DEPENDS+=			nasm>=1.1:../../devel/nasm
 
@@ -147,12 +163,16 @@ post-install:
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/compiler.mk"
+# Force the use of clang from pkgsrc, regardless of the setting of
+# PKGSRC_COMPILER.
+# \todo This breaks the use of ccache, which should be fixed, probably
+# by adding support for this kind of forcing to pkgsrc infrastructure.
 PKG_CC=		${PREFIX}/bin/clang
 PKG_CXX=	${PREFIX}/bin/clang++
 BUILDLINK_DEPMETHOD.clang=     build
 .include "../../lang/clang/buildlink3.mk"
 BUILDLINK_DEPMETHOD.rust=      build
-BUILDLINK_API_DEPENDS.rust+=   rust>=1.39.0
+BUILDLINK_API_DEPENDS.rust+=   rust>=1.41.0
 .include "../../lang/rust/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
