@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/02/02 20:30:55 nils Exp $
+$NetBSD: distinfo,v 1.4 2020/04/19 20:17:55 nils Exp $
 
-SHA1 (pelican-3.7.1.zip) = 47064aaba3a82be6b0f5c73aeb59a8ca788521df
-RMD160 (pelican-3.7.1.zip) = c01d3ca05160ca07439e59ec28ff092e36cb546d
-SHA512 (pelican-3.7.1.zip) = 4c121fbe1374a22c73ab9e24593224cea7da1f34ab6fe79078e756be1358fcf8ea7be8a388cbfcb12b812be9c87319222edcde13ab46f38398540f965e1d54db
-Size (pelican-3.7.1.zip) = 1088252 bytes
+SHA1 (pelican-4.2.0.zip) = 00cea4cae835db882c1a2b6f58f6009700bd53a7
+RMD160 (pelican-4.2.0.zip) = 3a49fbdbcdd73822642acbf5261a4ca1492c0d58
+SHA512 (pelican-4.2.0.zip) = 0515035c899fb373e731596dfcbddef3fab5df9e1b4fa2eabc4862c21ac64b76520899cf55d6fb20afdc40978677b79bd9e560cca9b56cd5b170a76eae5646a5
+Size (pelican-4.2.0.zip) = 1615714 bytes
