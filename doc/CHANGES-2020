@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2374 2020/04/19 07:05:32 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2375 2020/04/19 08:58:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3300,3 +3300,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/texttest version 4.0.0 [schmonz 2020-04-18]
 	Updated lang/php72 to 7.2.30 [taca 2020-04-19]
 	Updated audio/din to 46.2 [fox 2020-04-19]
+	Updated devel/p5-Test-BDD-Cucumber to 0.70 [schmonz 2020-04-19]
