@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2020/01/18 21:51:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2020/04/19 06:06:00 plunky Exp $
 #
 
 DISTNAME=	screws-0.56
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.nopcode.org/prj/screws/
 
@@ -21,6 +21,7 @@ PKG_GROUPS=	${SCREWS_GROUP}
 
 MAKE_ENV+=		ETCPREFIX=${PKG_SYSCONFDIR:Q}
 MAKE_ENV+=		PERL=${PERL5:Q}
+MAKE_ENV+=		COMPILER_RPATH_FLAG=${COMPILER_RPATH_FLAG}
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
 EGDIR=		${PREFIX}/share/examples/screws
