@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2380 2020/04/19 12:05:24 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.2381 2020/04/19 12:43:50 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3307,3 +3307,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/audacious-plugins to 4.0.1 [nia 2020-04-19]
 	Added graphics/kvantum version 0.15.2 [pin 2020-04-19]
 	Updated pkgtools/check-portability to 20.1.0 [rillig 2020-04-19]
+	Added devel/p5-Test-Strict version 0.47 [rillig 2020-04-19]
