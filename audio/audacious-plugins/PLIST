@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2020/04/12 12:08:51 nia Exp $
+@comment $NetBSD: PLIST,v 1.20 2020/04/19 11:33:46 nia Exp $
 lib/audacious/Container/asx.so
 lib/audacious/Container/asx3.so
 lib/audacious/Container/audpl.so
@@ -49,6 +49,7 @@ lib/audacious/Input/xsf.so
 ${PLIST.alsa}lib/audacious/Output/alsa.so
 lib/audacious/Output/filewriter.so
 ${PLIST.jack}lib/audacious/Output/jack-ng.so
+${PLIST.oss4}lib/audacious/Output/oss4.so
 ${PLIST.pulse}lib/audacious/Output/pulse_audio.so
 lib/audacious/Output/sdlout.so
 lib/audacious/Transport/gio.so
