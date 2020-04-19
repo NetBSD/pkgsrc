@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2377 2020/04/19 11:33:59 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2378 2020/04/19 11:34:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3304,3 +3304,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/py-psutil to 5.7.0 [adam 2020-04-19]
 	Updated databases/mongodb to 4.2.6 [adam 2020-04-19]
 	Updated audio/audacious to 4.0.2 [nia 2020-04-19]
+	Updated audio/audacious-plugins to 4.0.1 [nia 2020-04-19]
