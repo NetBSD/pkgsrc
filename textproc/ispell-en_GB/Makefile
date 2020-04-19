@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/04/17 06:04:17 gutteridge Exp $
+# $NetBSD: Makefile,v 1.9 2020/04/19 13:50:39 gutteridge Exp $
 #
 
 DISTNAME=	ispell-3.4.00
@@ -11,6 +11,7 @@ HOMEPAGE=	http://ficus-www.cs.ucla.edu/geoff/ispell.html
 COMMENT=	British dictionary for interactive spelling checker
 
 CONFLICTS+=	ispell-british-[0-9]*
+USE_TOOLS+=	yacc
 DEPENDS+=	ispell>=3.3.02:../../textproc/ispell
 
 PATCHDIR=	${.CURDIR}/../../textproc/ispell/patches
