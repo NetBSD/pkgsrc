@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.110 2020/04/16 17:07:07 adam Exp $
+# $NetBSD: Makefile,v 1.111 2020/04/19 23:34:38 wiz Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -75,6 +76,9 @@ post-build:
 	install_name_tool -id ${PREFIX}/lib/${lib} ${WRKSRC}/unix/pkgs/${lib}
 .  endfor
 .endif
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3 && mv Thread.3 Tcl_Thread.3
 
 BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=${SQLITE3_VERSION}
 .include "../../databases/sqlite3/buildlink3.mk"
