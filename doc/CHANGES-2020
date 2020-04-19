@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2381 2020/04/19 12:43:50 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.2382 2020/04/19 12:50:41 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3308,3 +3308,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/kvantum version 0.15.2 [pin 2020-04-19]
 	Updated pkgtools/check-portability to 20.1.0 [rillig 2020-04-19]
 	Added devel/p5-Test-Strict version 0.47 [rillig 2020-04-19]
+	Added devel/ninka version 1.3.2pre20180106 [rillig 2020-04-19]
