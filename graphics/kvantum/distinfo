@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/04/19 11:57:23 pin Exp $
+
+SHA1 (Kvantum-V0.15.2.tar.gz) = 58650a6bf7d233887ad08c37eaaf4ff54d039cf5
+RMD160 (Kvantum-V0.15.2.tar.gz) = 59f8bc6661b9cde3602102ad137d53fdfc0c80f9
+SHA512 (Kvantum-V0.15.2.tar.gz) = 98b83a14c3c86636acb6f2440d64dc47496536b5487dc08aed8e8370d656e8838d00866bfb54a4b5752135bdc3d3da0eaab209f5ca3e33c237aada59640a78f7
+Size (Kvantum-V0.15.2.tar.gz) = 2652167 bytes
+SHA1 (patch-style_themeconfig_ThemeConfig.cpp) = b87ed451c8b9e7c5ab0169e1f120e8f77eb5ccc6
