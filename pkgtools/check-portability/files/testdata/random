@@ -16,3 +16,6 @@ ${RANDOM}
 
 # This is not a special variable.
 $RANDOMNESS
+
+# This is not a special variable as well.
+$RANDOM_FILE
