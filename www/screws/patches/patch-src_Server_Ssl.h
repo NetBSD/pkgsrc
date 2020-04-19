@@ -1,12 +1,15 @@
-$NetBSD: patch-src_Server_Ssl.h,v 1.1 2016/04/03 20:24:27 joerg Exp $
+$NetBSD: patch-src_Server_Ssl.h,v 1.2 2020/04/19 06:06:00 plunky Exp $
 
---- src/Server/Ssl.h.orig	2016-04-03 16:01:03.871663755 +0000
+remove deprecated methods
+
+--- src/Server/Ssl.h.orig	2004-09-16 22:05:58.000000000 +0000
 +++ src/Server/Ssl.h
-@@ -9,7 +9,6 @@
+@@ -9,8 +9,6 @@
  #endif
  
  enum {
 -	ENC_SSL2,
- 	ENC_SSL3,
+-	ENC_SSL3,
  	ENC_SSL23,
  	ENC_TLS
+ };

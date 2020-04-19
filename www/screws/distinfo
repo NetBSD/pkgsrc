@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2016/04/03 20:24:27 joerg Exp $
+$NetBSD: distinfo,v 1.19 2020/04/19 06:06:00 plunky Exp $
 
 SHA1 (screws-0.56.tar.gz) = 3335e7e7116561499ee7164831c31df4ecebe403
 RMD160 (screws-0.56.tar.gz) = 5d7f1af67a42cd5726f0d4708713bb13c4c8fe21
@@ -15,7 +15,7 @@ SHA1 (patch-ah) = 90ba05b735295caa1ce6974ac5d7c1d35799c49f
 SHA1 (patch-ai) = 76c15330b3f3ba3c9d7442d98ea461e6b89ce33d
 SHA1 (patch-aj) = f2b4c3d70c309a5221fea0d6ff008a597c9f8411
 SHA1 (patch-ak) = fde982c23af9f6c1d724276f8e8f5dd19b0faebe
-SHA1 (patch-src_Server_Config.c) = 385339a7ac651b139963b3dba1a81dde26d407ff
+SHA1 (patch-src_Server_Config.c) = 4d139aa8e07147bb2682b14ae106615543b69f23
 SHA1 (patch-src_Server_IO__buffer.c) = c695f7dfaa2f000ab191edc339c1c02b95641a42
-SHA1 (patch-src_Server_Ssl.c) = a782d93fef0ac57c05876b3567f15321c7797207
-SHA1 (patch-src_Server_Ssl.h) = 2dd870425c5642303fd5a34231b3c1cd72795a24
+SHA1 (patch-src_Server_Ssl.c) = dddea00b99ad13f954cf6c875e764dc0da26465f
+SHA1 (patch-src_Server_Ssl.h) = 83c54b0e2f4abbb244f8e0c86a1f6a6abe11b376
