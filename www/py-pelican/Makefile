@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2019/10/21 22:11:34 adam Exp $
+# $NetBSD: Makefile,v 1.9 2020/04/19 20:17:55 nils Exp $
 
-DISTNAME=		pelican-3.7.1
-PKGREVISION=		1
+DISTNAME=		pelican-4.2.0
 GITHUB_PROJECT=		pelican
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		www textproc
@@ -33,6 +32,7 @@ REPLACE_PYTHON+=	pelican/tools/pelican_quickstart.py
 REPLACE_PYTHON+=	pelican/tools/pelican_themes.py
 REPLACE_PYTHON+=	pelican/tools/templates/pelicanconf.py.in
 REPLACE_PYTHON+=	pelican/tools/templates/publishconf.py.in
+REPLACE_PYTHON+=	pelican/tools/templates/publishconf.py.jinja2
 
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/usr/bin/env bash
@@ -43,8 +43,7 @@ SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-build
 SUBST_MESSAGE.version=	Removing useless import of pelican.
 SUBST_FILES.version=	docs/conf.py
-SUBST_SED.version=	-e 's,from pelican,\#from pelican,g'
-SUBST_SED.version+=	-e 's,release = __version__,release = "${PKGVERSION_NOREV}",g'
+SUBST_SED.version=	-e 's,from pelican import __version__,__version__ = "${PKGVERSION_NOREV}",g'
 
 DOCDIR=			${PREFIX}/share/doc/pelican
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1/ ${DOCDIR}
