@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2017/08/16 20:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/04/19 12:58:28 rillig Exp $
 #
 
 DISTNAME=		libmemcache-1.4.0.b9
 PKGNAME=		${DISTNAME:S/.b/beta/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		https://people.freebsd.org/~seanc/libmemcache/
 EXTRACT_SUFX=		.tar.bz2
@@ -11,6 +11,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://people.freebsd.org/~seanc/libmemcache/
 COMMENT=		C API for memcached
+LICENSE=		mit
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
