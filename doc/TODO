@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19826 2020/04/18 08:15:43 adam Exp $
+$NetBSD: TODO,v 1.19827 2020/04/19 09:37:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -394,6 +394,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adms-2.3.6
 	o adocman-0.13
 	o adodb-5.20.15 [security]
+	o adwaita-icon-theme-3.36.1
 	o aegis-4.25
 	o aewm++-1.1.5
 	o afbinit-1.0.1
@@ -482,6 +483,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cgic-207
 	o cherokee-1.2.103 [pkg/48268]
 	o chimera-1.30a
+	o chromaprint-1.5.0
 	o cim-5.1
 	o cjk-lyx-1.4.4
 	o classpath-0.99
@@ -619,6 +621,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o genius-1.0.25
 	o gens-2.15.5
 	o geoclue-2.1.10
+	o gettext-0.20.2
 	o gfract-0.33
 	o ghdl-0.33
 	o gjs-1.64.1
@@ -628,6 +631,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-share-2.3.5
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
+	o glib-networking-2.64.2
 	o gliv-1.9.7
 	o glom-1.14.2
 	o gmake-4.3 [cannot build firefox/openjdk11 etc.]
@@ -793,6 +797,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
+	o libsecret-0.20.3
+	o libstaroffice-0.0.7
 	o libtecla-1.6.3
 	o libv4l-0.8.5
 	o libvirt-2.3
@@ -830,6 +836,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
 	o mediawiki-1.34
+	o meld-3.21.0
 	o memached-1.5.6
 	o memcached-1.6
 	o merkaator-0.18.3
@@ -987,6 +994,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ephem3-3.7.6.0
 	o py-gds-1.4.2
 	o py-gnome-menus-3.8.0
+	o py-google-auth-1.14.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.1
@@ -1094,6 +1102,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sunclock-3.57 [https://github.com/mdoege/Sunclock]
 	o swapd-1.0.5
 	o swath-0.5.2
+	o swift-4.0.2
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
@@ -1117,6 +1126,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tetrinetx-1.40c
 	o tfmxplay-1.1.6
 	o tig-2.2
+	o tigervnc-1.10.1 [quite unstable]
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tinc-1.0.33
@@ -1161,6 +1171,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vnstat-1.15
 	o vtk-5.10.1
 	o wMosaic-3.8.22
+	o waf-2.0.20
 	o wap-utils-1.4.1
 	o warmux-11.04.1
 	o wcalc-2.4
