@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.888 2020/03/20 11:08:56 wiz Exp $
+# $NetBSD: Makefile,v 1.889 2020/04/19 11:58:47 pin Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -285,6 +285,7 @@ SUBDIR+=	kqtquickcharts
 SUBDIR+=	kqtquickcharts4
 SUBDIR+=	krita
 SUBDIR+=	kruler
+SUBDIR+=	kvantum
 SUBDIR+=	lasem
 SUBDIR+=	lcms
 SUBDIR+=	lcms2
