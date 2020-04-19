@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2378 2020/04/19 11:34:24 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2379 2020/04/19 11:59:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3305,3 +3305,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/mongodb to 4.2.6 [adam 2020-04-19]
 	Updated audio/audacious to 4.0.2 [nia 2020-04-19]
 	Updated audio/audacious-plugins to 4.0.1 [nia 2020-04-19]
+	Added graphics/kvantum version 0.15.2 [pin 2020-04-19]
