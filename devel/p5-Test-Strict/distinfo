@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/19 12:43:24 rillig Exp $
+
+SHA1 (Test-Strict-0.47.tar.gz) = 567b46694ab5ad808d7d59f849dd0f55d7a0f9c1
+RMD160 (Test-Strict-0.47.tar.gz) = 44bfaf2c5dce70be1df8a5edb61fb383d6f61647
+SHA512 (Test-Strict-0.47.tar.gz) = 56ffc488cb2502af228ad03f3da7bf11f04c0cacc7f1ea13b3aa8e0578f0df36a9be092f71db973748c8db15f45873a384f2e24844468b9a300d2386692c21b9
+Size (Test-Strict-0.47.tar.gz) = 20679 bytes
