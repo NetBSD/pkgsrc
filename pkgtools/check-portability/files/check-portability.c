@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.12 2020/03/21 15:02:20 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.13 2020/04/19 12:05:14 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -39,9 +39,9 @@
 static const size_t npos = -1;
 
 static bool
-is_alnum(char c)
+is_alnumu(char c)
 {
-	return isalnum((unsigned char) c) != 0;
+	return isalnum((unsigned char) c) != 0 || c == '_';
 }
 
 static bool
@@ -160,12 +160,12 @@ cstr_right_of_last(cstr s, cstr delimiter)
 }
 
 static bool
-cstr_has_word_boundary(cstr s, size_t idx)
+cstr_has_varname_boundary(cstr s, size_t idx)
 {
 	assert(idx <= s.len);
 	if (idx == 0 || idx == s.len)
 		return true;
-	return is_alnum(s.data[idx - 1]) != is_alnum(s.data[idx]);
+	return is_alnumu(s.data[idx - 1]) != is_alnumu(s.data[idx]);
 }
 
 // str is a modifiable string buffer.
@@ -376,7 +376,7 @@ checkline_sh_dollar_random(cstr filename, size_t lineno, cstr line)
 	size_t idx = cstr_index(line, CSTR("$RANDOM"));
 
 	// Variable names that only start with RANDOM are not special.
-	if (idx == npos || !cstr_has_word_boundary(line, idx + 7))
+	if (idx == npos || !cstr_has_varname_boundary(line, idx + 7))
 		return;
 
 	// $RANDOM together with the PID is often found in GNU-style
