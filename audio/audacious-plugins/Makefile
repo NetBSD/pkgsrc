@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2020/04/12 12:08:51 nia Exp $
+# $NetBSD: Makefile,v 1.105 2020/04/19 11:33:46 nia Exp $
 
 DISTNAME=	audacious-plugins-4.0.1
 CATEGORIES=	audio
@@ -21,16 +21,32 @@ CONFIGURE_ARGS+=	--disable-cue
 # prefer libsamplerate
 CONFIGURE_ARGS+=	--disable-soxr
 CONFIGURE_ARGS+=	--disable-notify
-# use SDL instead, it has working volume control
-CONFIGURE_ARGS+=	--disable-oss4
 CONFIGURE_ARGS+=	--disable-qtaudio
 CONFIGURE_ARGS+=	--disable-sndio
+
+.include "../../mk/oss.buildlink3.mk"
+PLIST_VARS+=		oss4
+# Currently, don't use this on NetBSD - the volume manipulation is broken.
+# Use SDL instead, it has working volume control
+.if ${OSS_TYPE} != "none" && \
+	(${OPSYS} == "FreeBSD" || \
+	${OPSYS} == "SunOS")
+PLIST.oss4=		yes
+LDFLAGS+=		${LIBOSSAUDIO}
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Correcting the path to the OSS device.
+SUBST_FILES.oss+=	src/oss4/oss.h
+SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
+.else
+CONFIGURE_ARGS+=	--disable-oss4
+.endif
 
 PLIST_VARS+=	dbus
 
 .include "options.mk"
 .include "../../audio/audacious/buildlink3.mk"
-.if !empty(PKG_BUILD_OPTIONS.audacious:Mdbus)
+.if ${PKG_BUILD_OPTIONS.audacious:Mdbus}
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 PLIST.dbus=		yes
 .else
