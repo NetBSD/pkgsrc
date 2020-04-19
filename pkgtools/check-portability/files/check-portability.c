@@ -1,4 +1,4 @@
-/* $NetBSD: check-portability.c,v 1.13 2020/04/19 12:05:14 rillig Exp $ */
+/* $NetBSD: check-portability.c,v 1.14 2020/04/19 12:47:27 rillig Exp $ */
 
 /*
  Copyright (c) 2020 Roland Illig
@@ -389,6 +389,7 @@ checkline_sh_dollar_random(cstr filename, size_t lineno, cstr line)
 	printf("%s:%zu:%zu: $RANDOM: %s\n",
 	    cstr_charptr(filename), lineno, idx + 1,
 	    cstr_charptr(line));
+	// No nerrors++ since this is not critical.
 	explain(
 	    W_dollar_random,
 	    "The variable $RANDOM is not required for a POSIX-conforming shell, and",
@@ -437,6 +438,7 @@ checkline_sh_test_eqeq_action(cstr f1, cstr f2, cstr f3, void *actiondata)
 	    cstr_charptr(ad->filename), ad->lineno,
 	    (size_t) (f3.data - ad->line.data),
 	    cstr_charptr(ad->line));
+	nerrors++;
 	explain(
 	    W_test_eqeq,
 	    "The \"test\" command, as well as the \"[\" command, are not required to know",
