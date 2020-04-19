@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3104 2020/04/19 12:43:23 rillig Exp $
+# $NetBSD: Makefile,v 1.3105 2020/04/19 12:50:24 rillig Exp $
 #
 
 COMMENT=	Development utilities
@@ -901,6 +901,7 @@ SUBDIR+=	netcdf-cxx
 SUBDIR+=	netcdf-fortran
 SUBDIR+=	newfile
 SUBDIR+=	ninja-build
+SUBDIR+=	ninka
 SUBDIR+=	noweb
 SUBDIR+=	npapi-sdk
 SUBDIR+=	npth
