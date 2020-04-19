@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2376 2020/04/19 10:06:09 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2377 2020/04/19 11:33:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3303,3 +3303,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Test-BDD-Cucumber to 0.70 [schmonz 2020-04-19]
 	Updated sysutils/py-psutil to 5.7.0 [adam 2020-04-19]
 	Updated databases/mongodb to 4.2.6 [adam 2020-04-19]
+	Updated audio/audacious to 4.0.2 [nia 2020-04-19]
