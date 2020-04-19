@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2020/04/16 17:07:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2020/04/19 23:34:38 wiz Exp $
 bin/sqlite3_analyzer
 bin/tclsh
 bin/tclsh${BASEVER}
@@ -889,6 +889,7 @@ man/man3/Tcl_StringMatch.3
 man/man3/Tcl_SubstObj.3
 man/man3/Tcl_TakeBignumFromObj.3
 man/man3/Tcl_Tell.3
+man/man3/Tcl_Thread.3
 man/man3/Tcl_ThreadAlert.3
 man/man3/Tcl_ThreadQueueEvent.3
 man/man3/Tcl_TraceCommand.3
@@ -973,7 +974,6 @@ man/man3/Tcl_ZlibStreamGetCommandName.3
 man/man3/Tcl_ZlibStreamInit.3
 man/man3/Tcl_ZlibStreamPut.3
 man/man3/Tdbc_Init.3
-man/man3/Thread.3
 man/man3/attemptckalloc.3
 man/man3/attemptckrealloc.3
 man/man3/ckalloc.3
