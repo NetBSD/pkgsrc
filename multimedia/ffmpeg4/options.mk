@@ -1,16 +1,16 @@
-# $NetBSD: options.mk,v 1.10 2019/06/18 14:41:09 nia Exp $
+# $NetBSD: options.mk,v 1.11 2020/04/19 18:25:07 nia Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
-PKG_OPTIONS_GROUP.ssl=		gnutls openssl
+PKG_OPTIONS_GROUP.ssl=		gnutls mbedtls openssl
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg4
 PKG_SUPPORTED_OPTIONS=	ass av1 bluray doc fdk-aac fontconfig freetype \
 			gnutls lame libvpx opencore-amr opus pulseaudio rpi \
 			rtmp tesseract theora vorbis x11 x264 x265 xvid
-PKG_SUGGESTED_OPTIONS=	lame ass av1 bluray freetype fontconfig libvpx \
-			openssl theora vorbis x11 x264 xvid
+PKG_SUGGESTED_OPTIONS=	lame ass av1 bluray freetype fontconfig gnutls \
+			libvpx opus theora vorbis x11 x264 x265 xvid
 
 PKG_OPTIONS_LEGACY_OPTS+=	xcb:x11
 
@@ -90,6 +90,14 @@ CONFIGURE_ARGS+=	--enable-gnutls
 .include "../../security/gnutls/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gnutls
+.endif
+
+# mbedTLS support
+.if !empty(PKG_OPTIONS:Mmbedtls)
+CONFIGURE_ARGS+=	--enable-mbedtls
+.include "../../security/mbedtls/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-mbedtls
 .endif
 
 # opencore-amr option
