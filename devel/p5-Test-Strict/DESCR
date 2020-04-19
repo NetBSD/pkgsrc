@@ -1,0 +1,3 @@
+Test::Strict lets you check the syntax, presence of use strict; and
+presence use warnings; in your perl code. It report its results in
+standard Test::Simple fashion.
