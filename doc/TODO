@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19827 2020/04/19 09:37:34 wiz Exp $
+$NetBSD: TODO,v 1.19828 2020/04/20 06:51:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -394,7 +394,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adms-2.3.6
 	o adocman-0.13
 	o adodb-5.20.15 [security]
-	o adwaita-icon-theme-3.36.1
 	o aegis-4.25
 	o aewm++-1.1.5
 	o afbinit-1.0.1
