@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1319 2020/04/17 12:35:22 adam Exp $
+# $NetBSD: Makefile,v 1.1320 2020/04/20 19:51:21 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -760,6 +760,7 @@ SUBDIR+=	radiusd-cistron
 SUBDIR+=	radsecproxy
 SUBDIR+=	rancid
 SUBDIR+=	rbldnsd
+SUBDIR+=	rclone
 SUBDIR+=	rdesktop
 SUBDIR+=	rdist6
 SUBDIR+=	remmina
