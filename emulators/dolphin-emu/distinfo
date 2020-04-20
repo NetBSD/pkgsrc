@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2019/10/25 09:56:51 kamil Exp $
+$NetBSD: distinfo,v 1.4 2020/04/20 00:34:20 joerg Exp $
 
 SHA1 (dolphin-emu-5.0.tar.gz) = 6553f9fe5281326b86f33fb6b99a93fe6a8820af
 RMD160 (dolphin-emu-5.0.tar.gz) = e8c4cb2c903b78c3e21cb12b0724ab0728c1391a
@@ -10,6 +10,7 @@ SHA1 (patch-Source_Core_Common_FileUtil.cpp) = 27b859714e294abbfb3f468928e22b30a
 SHA1 (patch-Source_Core_Common_MemoryUtil.cpp) = af681a3f43687f7af09c87732a7a2da8e8c58e05
 SHA1 (patch-Source_Core_Common_StringUtil.cpp) = 3a53d42ae9da1d50c0693bd222cb20be9ebe5a16
 SHA1 (patch-Source_Core_Common_Thread.cpp) = 8356c548c43ad762f4d226cf3d51a854f0a8b7f3
+SHA1 (patch-Source_Core_Common_x64CPUDetect.cpp) = 9238fc6d7c9f225fbd9885c1e5b07b237041e4f7
 SHA1 (patch-Source_Core_Core_HW_EXI__DeviceEthernet.h) = 144250d51b78e287a8305e75ee06e24c305c3d75
 SHA1 (patch-Source_Core_Core_IPC__HLE_WII__Socket.h) = 8de6dec95689efb63c3795d3e361b5bd9a8d7768
 SHA1 (patch-Source_Core_Core_MemTools.cpp) = 2316e8103749fe174db7f694f2eeb22035cd135c
