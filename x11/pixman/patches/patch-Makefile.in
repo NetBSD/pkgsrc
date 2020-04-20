@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile.in,v 1.1 2020/03/12 19:19:52 tnn Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2020/04/20 06:40:05 wiz Exp $
 
 Skip building demos and test SUBDIRS
 Shell portability
 
---- Makefile.in.orig	2019-04-10 17:19:26.000000000 +0000
+--- Makefile.in.orig	2020-04-19 21:53:21.000000000 +0000
 +++ Makefile.in
 @@ -381,7 +381,7 @@ target_alias = @target_alias@
  top_build_prefix = @top_build_prefix@
@@ -15,7 +15,7 @@ Shell portability
  pkgconfig_DATA = pixman-1.pc
  GPGKEY = 3892336E
 @@ -964,7 +964,7 @@ release-remove-old:
- 	$(RM) $(tar_gz) $(tar_bz2) $(HASHFILES) $(gpg_file)
+ 	$(RM) $(tar_gz) $(tar_xz) $(HASHFILES) $(gpg_file)
  
  ensure-prev:
 -	@if [[ "$(PREV)" == "" ]]; then							\
