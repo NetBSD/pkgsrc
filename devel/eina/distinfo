@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 03:27:24 agc Exp $
+$NetBSD: distinfo,v 1.12 2020/04/20 13:15:09 joerg Exp $
 
-SHA1 (eina-1.7.7.tar.bz2) = 57aca1d86aed53be39e30596f3dc1625e2c5f0f0
-RMD160 (eina-1.7.7.tar.bz2) = 080aa59620f91d5e6eaf9a430a893a35d8f89659
-SHA512 (eina-1.7.7.tar.bz2) = b183c91bf59694bf1b5275520887d313d2c49536471454d000f5ea68b9adfc3ac848d24014af76bf59f1955b2d9251ec9a96738a3ac621cc7adc7b0d3f9a052a
-Size (eina-1.7.7.tar.bz2) = 9792205 bytes
+SHA1 (eina-1.7.10.tar.bz2) = f8c254a9029ef73fa4ee4b4ca88094acbb7597b9
+RMD160 (eina-1.7.10.tar.bz2) = 0498a47557d8522336e1e0a422af09d4b3217532
+SHA512 (eina-1.7.10.tar.bz2) = c1195ec9f2cd79777912ba3c8b6e69a206d035c9a7f2c38762c18e3c86ec43d52f020e4dd8d0ea0c9b580aff9707cede909412260ac6d23796ddbd78eb8e280e
+Size (eina-1.7.10.tar.bz2) = 9703289 bytes
