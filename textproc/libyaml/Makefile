@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/04/12 10:57:33 adam Exp $
+# $NetBSD: Makefile,v 1.16 2020/04/20 07:54:53 adam Exp $
 
-DIST_SUBDIR=	yaml # Remove for next version
-
-DISTNAME=	yaml-0.2.3
+DISTNAME=	yaml-0.2.4
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://pyyaml.org/download/libyaml/
