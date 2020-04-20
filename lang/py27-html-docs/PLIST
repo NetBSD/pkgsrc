@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/10/21 10:08:08 leot Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/04/20 20:05:56 adam Exp $
 share/doc/python2.7/.buildinfo
 share/doc/python2.7/_images/logging_flow.png
 share/doc/python2.7/_sources/about.rst.txt
@@ -487,7 +487,7 @@ share/doc/python2.7/_static/default.css
 share/doc/python2.7/_static/doctools.js
 share/doc/python2.7/_static/documentation_options.js
 share/doc/python2.7/_static/file.png
-share/doc/python2.7/_static/jquery-3.2.1.js
+share/doc/python2.7/_static/jquery-3.4.1.js
 share/doc/python2.7/_static/jquery.js
 share/doc/python2.7/_static/language_data.js
 share/doc/python2.7/_static/minus.png
