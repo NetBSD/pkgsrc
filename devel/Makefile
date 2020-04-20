@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3105 2020/04/19 12:50:24 rillig Exp $
+# $NetBSD: Makefile,v 1.3106 2020/04/20 14:38:20 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2115,6 +2115,7 @@ SUBDIR+=	py-angr
 SUBDIR+=	py-anytree
 SUBDIR+=	py-apipkg
 SUBDIR+=	py-appdirs
+SUBDIR+=	py-approvaltests
 SUBDIR+=	py-archinfo
 SUBDIR+=	py-argcomplete
 SUBDIR+=	py-argh
