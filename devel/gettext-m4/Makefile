@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2019/12/16 14:44:56 kim Exp $
+# $NetBSD: Makefile,v 1.27 2020/04/20 08:37:14 wiz Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-m4-/}
-PKGREVISION=	1
 COMMENT=	Autoconf/automake m4 files for GNU NLS library
 LICENSE=	gnu-gpl-v2
 
@@ -15,7 +14,7 @@ NO_CONFIGURE=		yes
 
 INSTALLATION_DIRS+=	share/aclocal
 
-GNULIB_M4_FILES=			\
+GNULIB_M4_FILES=		\
 	codeset.m4		\
 	extern-inline.m4	\
 	host-cpu-c-abi.m4	\
@@ -24,10 +23,9 @@ GNULIB_M4_FILES=			\
 	lib-link.m4		\
 	lib-prefix.m4		\
 	lock.m4			\
-	longlong.m4		\
 	threadlib.m4		\
 	wchar_t.m4		\
-	wint_t.m4		\
+	wint_t.m4
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gettext-runtime/m4/*.m4 \
