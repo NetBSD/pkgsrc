@@ -1,0 +1,2 @@
+The libopusenc libraries provide a high-level API for encoding .opus files
+and live streams. libopusenc depends only on libopus.
