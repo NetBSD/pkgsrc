@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/03/16 08:46:09 tnn Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/04/20 06:50:53 wiz Exp $
 share/icons/Adwaita/16x16/devices/audio-headphones.png
 share/icons/Adwaita/16x16/devices/audio-headset.png
 share/icons/Adwaita/16x16/devices/computer.png
@@ -2590,10 +2590,12 @@ share/icons/Adwaita/scalable/status/battery-level-90-symbolic.svg
 share/icons/Adwaita/scalable/status/battery-missing-symbolic.svg
 share/icons/Adwaita/scalable/status/bluetooth-active-symbolic.svg
 share/icons/Adwaita/scalable/status/bluetooth-disabled-symbolic.svg
+share/icons/Adwaita/scalable/status/bluetooth-hardware-disabled-symbolic.svg
 share/icons/Adwaita/scalable/status/call-incoming-symbolic.svg
 share/icons/Adwaita/scalable/status/call-missed-symbolic.svg
 share/icons/Adwaita/scalable/status/call-outgoing-symbolic.svg
 share/icons/Adwaita/scalable/status/camera-disabled-symbolic.svg
+share/icons/Adwaita/scalable/status/camera-hardware-disabled-symbolic.svg
 share/icons/Adwaita/scalable/status/changes-allow-symbolic.svg
 share/icons/Adwaita/scalable/status/changes-prevent-symbolic.svg
 share/icons/Adwaita/scalable/status/channel-insecure-symbolic.svg
@@ -2625,6 +2627,7 @@ share/icons/Adwaita/scalable/status/media-playlist-repeat-song-symbolic.svg
 share/icons/Adwaita/scalable/status/media-playlist-repeat-symbolic.svg
 share/icons/Adwaita/scalable/status/media-playlist-shuffle-symbolic.svg
 share/icons/Adwaita/scalable/status/microphone-disabled-symbolic.svg
+share/icons/Adwaita/scalable/status/microphone-hardware-disabled-symbolic.svg
 share/icons/Adwaita/scalable/status/microphone-sensitivity-high-symbolic.svg
 share/icons/Adwaita/scalable/status/microphone-sensitivity-low-symbolic.svg
 share/icons/Adwaita/scalable/status/microphone-sensitivity-medium-symbolic.svg
@@ -2637,6 +2640,7 @@ share/icons/Adwaita/scalable/status/network-cellular-connected-symbolic.svg
 share/icons/Adwaita/scalable/status/network-cellular-disabled-symbolic.svg
 share/icons/Adwaita/scalable/status/network-cellular-edge-symbolic.svg
 share/icons/Adwaita/scalable/status/network-cellular-gprs-symbolic.svg
+share/icons/Adwaita/scalable/status/network-cellular-hardware-disabled-symbolic.svg
 share/icons/Adwaita/scalable/status/network-cellular-hspa-symbolic.svg
 share/icons/Adwaita/scalable/status/network-cellular-no-route-symbolic.svg
 share/icons/Adwaita/scalable/status/network-cellular-offline-symbolic.svg
@@ -2663,6 +2667,7 @@ share/icons/Adwaita/scalable/status/network-wireless-acquiring-symbolic.svg
 share/icons/Adwaita/scalable/status/network-wireless-connected-symbolic.svg
 share/icons/Adwaita/scalable/status/network-wireless-disabled-symbolic.svg
 share/icons/Adwaita/scalable/status/network-wireless-encrypted-symbolic.svg
+share/icons/Adwaita/scalable/status/network-wireless-hardware-disabled-symbolic.svg
 share/icons/Adwaita/scalable/status/network-wireless-hotspot-symbolic.svg
 share/icons/Adwaita/scalable/status/network-wireless-no-route-symbolic.svg
 share/icons/Adwaita/scalable/status/network-wireless-offline-symbolic.svg
