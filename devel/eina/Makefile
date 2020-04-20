@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2019/07/06 16:46:09 nia Exp $
+# $NetBSD: Makefile,v 1.11 2020/04/20 13:15:09 joerg Exp $
 #
 
-DISTNAME=	eina-1.7.7
+DISTNAME=	eina-1.7.10
 CATEGORIES=	devel
-MASTER_SITES=	http://download.enlightenment.org/releases/
+MASTER_SITES=	http://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
