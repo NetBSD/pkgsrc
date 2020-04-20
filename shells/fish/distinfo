@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2020/02/18 22:00:49 maya Exp $
+$NetBSD: distinfo,v 1.17 2020/04/20 00:45:07 joerg Exp $
 
 SHA1 (fish-3.1.0.tar.gz) = ff863d58bcd5151f1235f8adaacebc2564f11fd4
 RMD160 (fish-3.1.0.tar.gz) = 75fbb9270035b6f172d3b1d7781430eb1e638c83
@@ -8,4 +8,5 @@ SHA1 (patch-cmake_ConfigureChecks.cmake) = f673d726b42a60adff60b7e53783a1a2d0e76
 SHA1 (patch-config__cmake.h.in) = 0d522168dceebb60a0e759df3e2b39595f64d156
 SHA1 (patch-src_common.cpp) = 130e632f41db5974aeec657f0830079b8d9c28ef
 SHA1 (patch-src_fallback.cpp) = 021d454b12e1b9ac45b5820236e5b0742f25e20d
+SHA1 (patch-src_proc.h) = e8ef91a36e3ee134d3220f2396deee292ff93a40
 SHA1 (patch-src_wutil.cpp) = f016ef23b3e3ad7937e944bf341cc6ce0a3f0257
