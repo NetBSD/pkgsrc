@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 20:30:58 agc Exp $
+$NetBSD: distinfo,v 1.13 2020/04/20 00:36:45 joerg Exp $
 
 SHA1 (gpsim-20050905.tar.gz) = 46e7d0d69695961aca4324d8d3267181bd641081
 RMD160 (gpsim-20050905.tar.gz) = 1b717f0e51440c4e2db72a4bdfb90d2e8d5e4a3d
@@ -10,7 +10,7 @@ SHA1 (patch-ac) = 47ff4e3cd8a9255a85519a29a61f1d1f51997965
 SHA1 (patch-ae) = 31c9ac582edf2e9e543905f0af6aed92da49f73c
 SHA1 (patch-af) = 7cc61d6a1b6476a2a120ae15f25c500693f1897f
 SHA1 (patch-cli-parse.yy) = 15828629b4d151f816699a22fa56abdf50b2fe5c
-SHA1 (patch-cli-scan.ll) = 27e96369b155fe3a627acef734b09b0398fb9c43
+SHA1 (patch-cli-scan.ll) = 85ad52785574b85a062256297586782a5b04bc81
 SHA1 (patch-cli_cmd__clear.cc) = c5cded15623247dfc3028f8af6bf6331ee8f8e63
 SHA1 (patch-cli_cmd__help.cc) = a26b30ca138f630de751acc7a8bc463f48c4739b
 SHA1 (patch-cli_cmd__list.cc) = 9494ef3c3458e22b85bd0555a59e1dab3598cc03
@@ -33,4 +33,4 @@ SHA1 (patch-src_program__files.cc) = db0b4561d20f6b1feabeb33847f22326455608da
 SHA1 (patch-src_protocol.h) = ed2c7c903ed605b26a50c125436ac18f11d824eb
 SHA1 (patch-src_symbol.cc) = 195c15f4c258398d4a7c28cee1cf3d3ad7164429
 SHA1 (patch-src_symbol.h) = 778f2b9f8febfa498b87acfb59fdcb665975e592
-SHA1 (patch-src_value.cc) = 3fceae8b4d40ad1c26a06ac7dce6bb88965ae018
+SHA1 (patch-src_value.cc) = ce7b2ce2ffe136bb3b64b3212cef4ad4cbb82def
