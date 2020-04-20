@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2020/03/26 20:05:29 rillig Exp $
+# $NetBSD: Makefile,v 1.160 2020/04/20 13:22:31 joerg Exp $
 
 DISTNAME=	rustc-1.42.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -360,12 +360,12 @@ pre-build: pre-build-fix
 
 do-build:
 	cd ${WRKSRC} \
-	&& ${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} \
+	&& ${_ULIMIT_CMD} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 		${PYTHONBIN} ./x.py -v ${BUILD_TARGET} -j ${_MAKE_JOBS_N}
 
 do-install:
 	cd ${WRKSRC} \
-	&& ${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} \
+	&& ${_ULIMIT_CMD} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 		${PYTHONBIN} ./x.py -v install -j ${_MAKE_JOBS_N}
 
 GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
