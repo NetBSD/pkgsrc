@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2020/04/12 10:57:33 adam Exp $
+$NetBSD: distinfo,v 1.14 2020/04/20 07:54:53 adam Exp $
 
-SHA1 (yaml/yaml-0.2.3.tar.gz) = 2e7a894e839e1b04711a95c30f478a72ec682743
-RMD160 (yaml/yaml-0.2.3.tar.gz) = 1ac2edd0c55aaace2c89753796ea6a65c7c2c1e2
-SHA512 (yaml/yaml-0.2.3.tar.gz) = 6c8c3ad82a534df21cbc98b170f05f4b8ed7f462156ba3274c6d14946d76b94a035f3e1935bb95df797267b43547f7d5a73dc8e6fa86230e89ccdd0aa99c0fb3
-Size (yaml/yaml-0.2.3.tar.gz) = 608037 bytes
+SHA1 (yaml-0.2.4.tar.gz) = 22dc72c927a5ff78b54985b3e2f6ee1bbebaa2cb
+RMD160 (yaml-0.2.4.tar.gz) = 86d62acb3e6b41c119292c7a71f2715fd1a1691c
+SHA512 (yaml-0.2.4.tar.gz) = 8e1d932d9fa80faaa62fa92dc182c9f8d02c7f64057fa63c50c6394b9fd9ceee4037e1df969d681ff770b7435eec6254e88249f2cc7683f91bcbd4415561f4fc
+Size (yaml-0.2.4.tar.gz) = 608448 bytes
