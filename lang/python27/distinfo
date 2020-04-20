@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.72 2019/10/21 09:40:35 adam Exp $
+$NetBSD: distinfo,v 1.73 2020/04/20 20:05:56 adam Exp $
 
-SHA1 (Python-2.7.17.tar.xz) = dc5784d11d09c29fbf3fc155e2f242b3d3309454
-RMD160 (Python-2.7.17.tar.xz) = 55e05d1475d4e27873e71802529499361ba25e14
-SHA512 (Python-2.7.17.tar.xz) = 2dc19a0b0d818c71429dae94783e58b2aac0fa31f5faa1e840cac06245a59932ecc4658d913515736601bcf70a78c9ec60367aed75f4567d1e41ff3bb104da9a
-Size (Python-2.7.17.tar.xz) = 12855568 bytes
+SHA1 (Python-2.7.18.tar.xz) = 678d4cf483a1c92efd347ee8e1e79326dc82810b
+RMD160 (Python-2.7.18.tar.xz) = 40a514bb05c9e631454ea8466e28f5bb229428ad
+SHA512 (Python-2.7.18.tar.xz) = a7bb62b51f48ff0b6df0b18f5b0312a523e3110f49c3237936bfe56ed0e26838c0274ff5401bda6fc21bf24337477ccac49e8026c5d651e4b4cafb5eb5086f6c
+Size (Python-2.7.18.tar.xz) = 12854736 bytes
 SHA1 (patch-Include_pyerrors.h) = 0d2cd52d18cc719b895fa32ed7e11c6cb15bae54
 SHA1 (patch-Include_pyport.h) = f3e4ddbc954425a65301465410911222ca471320
 SHA1 (patch-Lib_ctypes_util.py) = 6fa516c7b43f08992427a0afcbe80c17bcc070f1
