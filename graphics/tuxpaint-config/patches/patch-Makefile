@@ -1,9 +1,27 @@
-$NetBSD: patch-Makefile,v 1.1 2019/12/19 22:17:33 joerg Exp $
+$NetBSD: patch-Makefile,v 1.2 2020/04/20 00:38:59 joerg Exp $
 
 Ensure that trans directory is made before trying to put files in it.
 
---- Makefile.orig	2019-12-19 18:27:04.435743784 +0000
+--- Makefile.orig	2018-08-28 17:18:29.000000000 +0000
 +++ Makefile
+@@ -165,7 +165,7 @@ win32:
+ 		ICON_PREFIX=./ \
+ 		X11_ICON_PREFIX=./ \
+ 		CONFDIR=$(PREFIX)/etc/tuxpaint \
+-		ARCH_LINKS=$(shell if [ "x$$OSTYPE" == "xcygwin" ]; then echo -n "-lintl"; else echo -n "-lintl-8"; fi ) \
++		ARCH_LINKS=$(shell if [ "x$$OSTYPE" = "xcygwin" ]; then echo -n "-lintl"; else echo -n "-lintl-8"; fi ) \
+ 		ARCH_LIBS="obj/resource.o obj/win32utils.o" \
+ 		PAPER_LIB= 
+ 
+@@ -176,7 +176,7 @@ install-win32:
+ 		ICON_PREFIX=./ \
+ 		X11_ICON_PREFIX=./ \
+ 		CONFDIR=$(PREFIX)/etc/tuxpaint \
+-		ARCH_LINKS=$(shell if [ "x$$OSTYPE" == "xcygwin" ]; then echo -n "-lintl"; else echo -n "-lintl-8"; fi ) \
++		ARCH_LINKS=$(shell if [ "x$$OSTYPE" = "xcygwin" ]; then echo -n "-lintl"; else echo -n "-lintl-8"; fi ) \
+ 		ARCH_LIBS="obj/resource.o obj/win32utils.o"
+ 
+ # "make install" installs all of the various parts
 @@ -406,7 +406,7 @@ endif
  
  # Build the translation files for gettext
