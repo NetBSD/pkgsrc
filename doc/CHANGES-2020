@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2408 2020/04/20 20:03:52 leot Exp $
+$NetBSD: CHANGES-2020,v 1.2409 2020/04/20 20:06:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3335,3 +3335,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/opus-tools to 0.2 [nia 2020-04-20]
 	Added net/rclone version 1.51.0 [leot 2020-04-20]
 	Updated devel/git to 2.26.2 [leot 2020-04-20]
+	Updated lang/python27 to 2.7.18 [adam 2020-04-20]
+	Updated lang/py27-html-docs to 2.7.18 [adam 2020-04-20]
