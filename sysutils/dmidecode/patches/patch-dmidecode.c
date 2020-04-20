@@ -1,11 +1,15 @@
-$NetBSD: patch-dmidecode.c,v 1.1 2018/10/23 10:16:12 jmcneill Exp $
+$NetBSD: patch-dmidecode.c,v 1.2 2020/04/20 19:28:34 triaxx Exp $
 
-Find SMBIOS table address on NetBSD ARM64.
+* Find SMBIOS table address on NetBSD ARM64.
+* Add missing header for FreeBSD.
 
---- dmidecode.c.orig	2018-10-23 09:59:50.281527237 +0000
+--- dmidecode.c.orig	2020-04-20 13:13:37.626217000 +0000
 +++ dmidecode.c
-@@ -72,6 +72,12 @@
+@@ -70,8 +70,15 @@
+ #ifdef __FreeBSD__
+ #include <errno.h>
  #include <kenv.h>
++#include <sys/socket.h>
  #endif
  
 +#ifdef __NetBSD__
@@ -17,7 +21,7 @@ Find SMBIOS table address on NetBSD ARM64.
  #include "version.h"
  #include "config.h"
  #include "types.h"
-@@ -5463,6 +5469,9 @@ static int address_from_efi(off_t *addre
+@@ -5466,6 +5473,9 @@ static int address_from_efi(off_t *address)
  	char linebuf[64];
  #elif defined(__FreeBSD__)
  	char addrstr[KENV_MVALLEN + 1];
@@ -27,10 +31,12 @@ Find SMBIOS table address on NetBSD ARM64.
  #endif
  	const char *eptype;
  	int ret;
-@@ -5516,6 +5525,23 @@ static int address_from_efi(off_t *addre
+@@ -5517,6 +5527,23 @@ static int address_from_efi(off_t *address)
+ 	}
+ 
  	*address = strtoull(addrstr, NULL, 0);
- 	eptype = "SMBIOS";
- 	ret = 0;
++	eptype = "SMBIOS";
++	ret = 0;
 +#elif defined(__NetBSD__)
 +	/*
 +	 * On NetBSD, SMBIOS anchor base address on non-x86 is exposed
@@ -46,8 +52,6 @@ Find SMBIOS table address on NetBSD ARM64.
 +	}
 +
 +	*address = (off_t)addr;
-+	eptype = "SMBIOS";
-+	ret = 0;
+ 	eptype = "SMBIOS";
+ 	ret = 0;
  #else
- 	ret = EFI_NOT_FOUND;
- #endif
