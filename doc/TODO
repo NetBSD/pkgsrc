@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19837 2020/04/20 13:15:40 joerg Exp $
+$NetBSD: TODO,v 1.19838 2020/04/20 13:20:21 joerg Exp $
 
 Suggested new packages
 ======================
@@ -533,7 +533,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ede-2.0
 	o edje-1.7.10
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o eet-1.7.10
 	o efreet-1.7.10
 	o eio-1.7.10
 	o ekiga-4.0.1
