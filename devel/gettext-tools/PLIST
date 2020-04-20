@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2019/05/27 13:21:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2020/04/20 08:37:15 wiz Exp $
 bin/autopoint
 bin/envsubst
 bin/gettext
@@ -137,14 +137,14 @@ share/doc/libtextstyle/libtextstyle_6.html
 share/doc/libtextstyle/libtextstyle_7.html
 share/doc/libtextstyle/libtextstyle_abt.html
 share/doc/libtextstyle/libtextstyle_toc.html
-share/gettext-0.20/its/glade.loc
-share/gettext-0.20/its/glade1.its
-share/gettext-0.20/its/glade2.its
-share/gettext-0.20/its/gsettings.its
-share/gettext-0.20/its/gsettings.loc
-share/gettext-0.20/its/gtkbuilder.its
-share/gettext-0.20/its/metainfo.its
-share/gettext-0.20/its/metainfo.loc
+share/gettext-${PKGVERSION}/its/glade.loc
+share/gettext-${PKGVERSION}/its/glade1.its
+share/gettext-${PKGVERSION}/its/glade2.its
+share/gettext-${PKGVERSION}/its/gsettings.its
+share/gettext-${PKGVERSION}/its/gsettings.loc
+share/gettext-${PKGVERSION}/its/gtkbuilder.its
+share/gettext-${PKGVERSION}/its/metainfo.its
+share/gettext-${PKGVERSION}/its/metainfo.loc
 share/gettext/archive.dir.tar.xz
 share/gettext/msgunfmt.tcl
 share/locale/ast/LC_MESSAGES/gettext-runtime.mo

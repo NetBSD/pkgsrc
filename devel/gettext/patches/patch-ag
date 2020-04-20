@@ -1,21 +1,12 @@
-$NetBSD: patch-ag,v 1.10 2019/05/27 13:21:41 ryoon Exp $
+$NetBSD: patch-ag,v 1.11 2020/04/20 08:37:14 wiz Exp $
 
---- gettext-tools/gnulib-lib/Makefile.in.orig	2019-05-12 15:09:15.000000000 +0000
+--- gettext-tools/gnulib-lib/Makefile.in.orig	2020-04-14 04:46:29.000000000 +0000
 +++ gettext-tools/gnulib-lib/Makefile.in
-@@ -3255,7 +3255,7 @@ check: $(BUILT_SOURCES)
- 	$(MAKE) $(AM_MAKEFLAGS) check-am
- all-am: Makefile $(LTLIBRARIES) $(DATA)
- installdirs:
--	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(gettextsrcdir)" "$(DESTDIR)$(pkgdatadir)"; do \
-+	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(gettextsrcdir)"; do \
- 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
- 	done
- install: $(BUILT_SOURCES)
-@@ -3326,13 +3326,13 @@ info: info-am
+@@ -3483,13 +3483,13 @@ info: info-am
  
  info-am:
  
--install-data-am: install-gettextsrcDATA install-pkgdataDATA
+-install-data-am: install-pkgdataDATA
 +install-data-am:
  
  install-dvi: install-dvi-am
@@ -27,7 +18,7 @@ $NetBSD: patch-ag,v 1.10 2019/05/27 13:21:41 ryoon Exp $
  
  install-html: install-html-am
  
-@@ -3608,14 +3608,6 @@ getopt-cdefs.h: getopt-cdefs.in.h $(top_
+@@ -3767,14 +3767,6 @@ getopt-cdefs.h: getopt-cdefs.in.h $(top_
  	} > $@-t && \
  	mv -f $@-t $@
  

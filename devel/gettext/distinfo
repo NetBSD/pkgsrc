@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.37 2019/05/27 13:21:41 ryoon Exp $
+$NetBSD: distinfo,v 1.38 2020/04/20 08:37:14 wiz Exp $
 
-SHA1 (gettext-0.20.1.tar.gz) = 2aa01db95b064d7f5d1a46de34a2cc6a57eadf36
-RMD160 (gettext-0.20.1.tar.gz) = 6915ebc852a910c6ab64bffa88f580b64543c239
-SHA512 (gettext-0.20.1.tar.gz) = af6d74986da285df0bdd59524bdf01bb12db448e5ea659dda3b60b660c4a9063c80e8c74cc8751334e065e98348ee0db0079e43c67d485a15e86ae236115fe06
-Size (gettext-0.20.1.tar.gz) = 23267473 bytes
+SHA1 (gettext-0.20.2.tar.gz) = 3cb11e9648bacee4c56660d34de3ae3e8b143078
+RMD160 (gettext-0.20.2.tar.gz) = 32e99c55361970315dd9d43f9e36dd43f05fc09e
+SHA512 (gettext-0.20.2.tar.gz) = 50b0520230dba5da6e04e51b2317e073cacf1536d73ea88e4b5dc6cc5bd97cf2c9a279c3c3ada1067f39c8b3bb0b1ce8e0823cc1dd4c33f4f10860bdf787009d
+Size (gettext-0.20.2.tar.gz) = 23717789 bytes
 SHA1 (patch-aa) = ec9cad88d5a0de67b70d417915ec0f1cfb3552b2
 SHA1 (patch-ad) = 56222fbc6f1db47a70457bb06d0b82f06f286563
 SHA1 (patch-ae) = 662975f811495f13604001964fcc6e3d13b1276c
-SHA1 (patch-ag) = 339abdfbbd0f2f87de2a5f554bc1c13443551451
+SHA1 (patch-ag) = ccb339cd8a652a9078ce69c78711734fb61ea352
 SHA1 (patch-aj) = bf45d1093d8156615670bd6c781796b62ad79b92
 SHA1 (patch-al) = 15563935bd43886309dd95a0816a5c2153b5da3c
 SHA1 (patch-an) = 2284bfe8a44873776970af7fc70a419fa2a10054
 SHA1 (patch-ao) = d0ab5520f53f38c7b2eb76395c5d6dd24407ef4f
 SHA1 (patch-gettext-runtime_m4_gettext.m4) = a154919e5da2013c3a2eaa965dc5f12460b1d4f4
-SHA1 (patch-gettext-tools_tests_Makefile.in) = 7ea89df2c45e6c544e2ec6c91cde6d135d964679
+SHA1 (patch-gettext-tools_tests_Makefile.in) = 17dbffc987536d56d2792cf5f459a3a0eccd33dc
