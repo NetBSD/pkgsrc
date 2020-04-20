@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/04/12 11:01:46 bsiegert Exp $
+# $NetBSD: Makefile,v 1.53 2020/04/20 00:46:22 joerg Exp $
 
 DISTNAME=	consul-1.2.3
 PKGREVISION=	15
@@ -9,6 +9,8 @@ MAINTAINER=	fhajny@NetBSD.org
 HOMEPAGE=	https://www.consul.io/
 COMMENT=	Tool for service discovery, monitoring and configuration
 LICENSE=	mpl-2.0
+
+UNLIMIT_RESOURCES=	datasize virtualsize
 
 EXTRACT_USING=	bsdtar
 
