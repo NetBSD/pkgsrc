@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/02/18 22:00:49 maya Exp $
+# $NetBSD: Makefile,v 1.23 2020/04/20 00:45:07 joerg Exp $
 
 DISTNAME=		fish-3.1.0
 CATEGORIES=		shells
@@ -41,6 +41,9 @@ PLIST.realpath= yes
 .else
 PLIST.open=	yes
 .endif
+
+post-extract:
+	${RM} ${WRKSRC}/version
 
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
