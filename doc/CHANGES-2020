@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2404 2020/04/20 17:26:54 nils Exp $
+$NetBSD: CHANGES-2020,v 1.2405 2020/04/20 17:34:29 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3331,3 +3331,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated news/bystand to 1.1.0 [micha 2020-04-20]
 	Added devel/py-approvaltests version 0.2.6 [schmonz 2020-04-20]
 	Updated security/fail2ban to 0.11.1 [nils 2020-04-20]
+	Added audio/libopusenc version 0.2.1 [nia 2020-04-20]
