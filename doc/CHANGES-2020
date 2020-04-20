@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2395 2020/04/20 08:04:53 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2396 2020/04/20 08:37:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3323,3 +3323,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/libyaml to 0.2.4 [adam 2020-04-20]
 	Updated devel/libuv to 1.37.0 [adam 2020-04-20]
 	Updated devel/meld to 3.21.0nb1 [wiz 2020-04-20]
+	Updated devel/gettext to 0.20.2 [wiz 2020-04-20]
