@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2017/08/19 00:27:44 jlam Exp $
+$NetBSD: distinfo,v 1.8 2020/04/20 00:42:30 joerg Exp $
 
 SHA1 (ccrtp-2.1.2.tar.gz) = ecad8c17c5ed61e1c9fb1b785592958c678b7c4b
 RMD160 (ccrtp-2.1.2.tar.gz) = b3b2cb2f6822e08422b19fcd1528f976ca10ad66
@@ -6,3 +6,4 @@ SHA512 (ccrtp-2.1.2.tar.gz) = a835f57a0eef7cba11c55c93ce2f11ebd8ab4099e7c723043c
 Size (ccrtp-2.1.2.tar.gz) = 764869 bytes
 SHA1 (patch-doc_CMakeLists.txt) = e9cfcfc618dc6bc16da5d3bff61774c57febaff6
 SHA1 (patch-src_ccrtp_crypto_gcrypt_InitializeGcrypt.cpp) = 407f3a7f6536028a1b727a826183133dfe3ce4d6
+SHA1 (patch-src_ccrtp_crypto_openssl_hmac.cpp) = eb0372a01628cecb638a00278686054633d396dd
