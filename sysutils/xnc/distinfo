@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 01:32:42 agc Exp $
+$NetBSD: distinfo,v 1.10 2020/04/20 00:46:51 joerg Exp $
 
 SHA1 (xnc-5.0.4.src.tar.gz) = 4673ba128f4df88342bfd4968a2427e894f6f3cb
 RMD160 (xnc-5.0.4.src.tar.gz) = 46366a75eca41f10f68ae7d4ad95b76ed4d576e2
@@ -8,4 +8,11 @@ SHA1 (patch-aa) = 2da27a17e9b5c114b9ff930c38f8ec04b7221abc
 SHA1 (patch-ab) = 2ec2bbbc1eb542527c5e45756a10e91337b7719d
 SHA1 (patch-ak) = 8174f9791016fbaa179efbefa4971423677f7652
 SHA1 (patch-am) = 5522a4a41bf5e0512f38017c28300cc9529c9c23
+SHA1 (patch-src_bookmark.cxx) = 713abda8d075dc004bf396dee0f1e666e1c4bb92
+SHA1 (patch-src_include_commonfuncs.h) = f6ec3f86bd6938e07404ac9045e7c455ac6b0b5c
 SHA1 (patch-src_lib_image2_sdl__image_IMG__png.c) = 63b12a13d81a608c141f9383a4f745d14beaed1e
+SHA1 (patch-src_lib_tool_commonfuncs.cxx) = b521a5b5526d85bc6d8c8e63e781c0f6a4e30d09
+SHA1 (patch-src_lib_vfs_afs.cxx) = 1df148b20ee9962ec5b55bcac3b744b44a43654f
+SHA1 (patch-src_lib_vfs_ftpfs.cxx) = 106e33851c1d963b2b3b961d31e94ece531faa87
+SHA1 (patch-src_plugins_aqua_aquagui.cxx) = 858c2d7ca95711e9e88703fdd753f62b82945201
+SHA1 (patch-src_plugins_five_fivegui.cxx) = ae4b3b5fa1a472b01cc0f508a900aad33e828ac1
