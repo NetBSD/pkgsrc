@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2020/03/26 12:19:19 nia Exp $
+# $NetBSD: Makefile,v 1.60 2020/04/20 00:32:56 joerg Exp $
 
 DISTNAME=	ghex-3.18.4
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config msgfmt
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
