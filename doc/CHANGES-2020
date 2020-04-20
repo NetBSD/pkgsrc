@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2402 2020/04/20 14:38:51 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.2403 2020/04/20 14:48:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3318,11 +3318,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/libsecret to 0.20.3 [wiz 2020-04-20]
 	Updated converters/libstaroffice to 0.0.7 [wiz 2020-04-20]
 	Updated devel/waf to 2.0.20 [wiz 2020-04-20]
-	Updated devel/meld to 3.21.0 [wiz 2020-04-20]
 	Updated security/py-google-auth to 1.14.0 [wiz 2020-04-20]
 	Updated textproc/libyaml to 0.2.4 [adam 2020-04-20]
 	Updated devel/libuv to 1.37.0 [adam 2020-04-20]
-	Updated devel/meld to 3.21.0nb1 [wiz 2020-04-20]
 	Updated devel/gettext to 0.20.2 [wiz 2020-04-20]
 	Updated graphics/p5-Image-ExifTool to 11.85 [adam 2020-04-20]
 	Updated lang/py-parso to 0.7.0 [adam 2020-04-20]
