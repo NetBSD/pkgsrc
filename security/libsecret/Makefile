@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/03/15 19:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/04/20 06:58:20 wiz Exp $
 
-DISTNAME=	libsecret-0.20.2
+DISTNAME=	libsecret-0.20.3
 CATEGORIES=	security gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsecret/${PKGVERSION:R}/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsecret/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
