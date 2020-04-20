@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.97 2020/04/18 04:18:05 ryoon Exp $
+$NetBSD: distinfo,v 1.98 2020/04/20 13:00:48 joerg Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -235,6 +235,7 @@ SHA1 (patch-external_postgresql_ExternalProject__postgresql.mk) = 48e68ff43b9719
 SHA1 (patch-i18nutil_source_utility_unicode.cxx) = 014d48574a379f92f2d0afe3c91d2c2956708dd8
 SHA1 (patch-sal_osl_unx_system.hxx) = 478dd47dc512d283a554600951010bbaa10c2c0e
 SHA1 (patch-sal_rtl_cipher.cxx) = e5e46d0b96e25572be86bf26f0053436859736cd
+SHA1 (patch-sc_source_core_opencl_formulagroupcl.cxx) = 1a589c8190a28f603671faf1d84cac022425849e
 SHA1 (patch-sc_source_core_tool_math.cxx) = dd665c6bbe3c18fca0b5fbf847a6ec1ff50d0bb9
 SHA1 (patch-solenv_gbuild_Module.mk) = cbd6ca3acae187458e49fe76d973e6475ed5fe1d
 SHA1 (patch-solenv_gbuild_platform_NETBSD_AARCH64_GCC.mk) = eda8dbd0e9394b2dde2f98c0df39e7e9888f49dc
