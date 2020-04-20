@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2020/01/18 23:35:16 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2020/04/20 19:28:34 triaxx Exp $
 #
 
 DISTNAME=	dmidecode-3.2
-PKGREVISION=	5
+PKGREVISION=	6
 EXTRACT_SUFX=	.tar.xz
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.savannah.gnu.org/releases/dmidecode/
