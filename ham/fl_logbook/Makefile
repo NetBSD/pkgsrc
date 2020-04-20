@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2018/03/12 11:16:52 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/20 00:39:36 joerg Exp $
 #
 
 DISTNAME=		fl_logbook-2.5
@@ -22,4 +22,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fl_logbook ${DESTDIR}${PREFIX}/bin
 
 .include "../../x11/fltk13/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
