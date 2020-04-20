@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2020/04/11 07:02:34 adam Exp $
+# $NetBSD: Makefile,v 1.129 2020/04/20 17:04:18 adam Exp $
 
 DISTNAME=	WindowMaker-0.95.9
 PKGNAME=	${DISTNAME:tl}
@@ -30,6 +30,12 @@ REPLACE_PERL+=		util/wkdemenu.pl
 INSTALLATION_DIRS=	share/WindowMaker/SoundSets
 INSTALLATION_DIRS+=	share/WindowMaker/Sounds
 INSTALLATION_DIRS+=	share/doc/WindowMaker
+
+PKGCONFIG_OVERRIDE=		WINGs/WINGs.pc
+PKGCONFIG_OVERRIDE+=		WINGs/WUtil.pc
+PKGCONFIG_OVERRIDE+=		wmlib/wmlib.pc
+PKGCONFIG_OVERRIDE+=		wrlib/wrlib.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../mk/compiler.mk"
 
