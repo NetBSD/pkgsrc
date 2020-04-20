@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2403 2020/04/20 14:48:39 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2404 2020/04/20 17:26:54 nils Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3330,3 +3330,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/p5-Sys-CpuLoad to 0.30 [mef 2020-04-20]
 	Updated news/bystand to 1.1.0 [micha 2020-04-20]
 	Added devel/py-approvaltests version 0.2.6 [schmonz 2020-04-20]
+	Updated security/fail2ban to 0.11.1 [nils 2020-04-20]
