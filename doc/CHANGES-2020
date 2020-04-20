@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2384 2020/04/19 23:34:48 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2385 2020/04/20 06:40:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3311,3 +3311,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/ninka version 1.3.2pre20180106 [rillig 2020-04-19]
 	Updated www/py-pelican to 4.2.0 [nils 2020-04-19]
 	Updated lang/tcl to 8.6.10nb1 [wiz 2020-04-19]
+	Updated x11/pixman to 0.40.0 [wiz 2020-04-20]
