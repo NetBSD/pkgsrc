@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2020/03/20 10:25:15 micha Exp $
+$NetBSD: distinfo,v 1.27 2020/04/20 14:47:34 micha Exp $
 
 SHA1 (tin-2.4.4.tar.xz) = 7f4c1869cdcac4ac49bb70c6448538691fc19b4a
 RMD160 (tin-2.4.4.tar.xz) = dbb0b44f3365059f155ec53874d283a18da9e0b1
@@ -7,5 +7,5 @@ Size (tin-2.4.4.tar.xz) = 1545016 bytes
 SHA1 (patch-Makefile) = 7f9048d31e70d9630ba6511d834db5d0c60a7de1
 SHA1 (patch-configure) = 02f6c943c7e6cbf8552f163c8ff4922413c9c340
 SHA1 (patch-include_tin.h) = 75a933e15128e7e102598c311ff292caf9c49041
-SHA1 (patch-pcre_configure.in) = c062b56be504eef7526c6d7cec0bf619930dc67c
+SHA1 (patch-pcre_configure.in) = 8bd7a8353c280a9ec4199bc43fb234f52f6ca7b1
 SHA1 (patch-src_Makefile.in) = 412f1cd6b01618e64d6a3f713f3758d5a563e79e
