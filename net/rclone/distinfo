@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2020/04/20 19:50:54 leot Exp $
+
+SHA1 (rclone-1.51.0.tar.gz) = 91c7f7220506ccc7591fd2949f922e14ade2a070
+RMD160 (rclone-1.51.0.tar.gz) = 5af21f20657e3e47a4805e652d1eea0b043029ab
+SHA512 (rclone-1.51.0.tar.gz) = b0881e09b75093abe4d31e95425a90513aed4a16d9e2dbf79023c9dc68875b90a1332204879530c450a16ab9cac475d967f7657d6f810a1e0f0d84b88d7de916
+Size (rclone-1.51.0.tar.gz) = 18835242 bytes
+SHA1 (patch-cmd_mountlib_mounttest_write__non__unix.go) = 8c6222c6f3e7a24243e94b768b20e5f686763cf6
+SHA1 (patch-cmd_mountlib_mounttest_write__unix.go) = eeddb2e8bba6f455d8069758dc37227f2f389a25
