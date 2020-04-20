@@ -1,34 +1,22 @@
-$NetBSD: patch-configure.ac,v 1.2 2014/01/02 14:52:10 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.3 2020/04/20 17:39:13 nia Exp $
 
-* Disable opusdec's direct audio output
+Make sure the Sun audio support actually gets detected.
 
---- configure.ac.orig	2013-12-06 02:31:11.000000000 +0000
+--- configure.ac.orig	2014-06-12 00:11:24.000000000 +0000
 +++ configure.ac
-@@ -145,18 +145,18 @@ AS_IF([test "$HAVE_PKG_CONFIG" = "yes"],
-  ])
+@@ -151,10 +151,14 @@ AC_CHECK_HEADERS([sys/soundcard.h soundc
+   break
+ ])
  
- dnl check for OSS
--HAVE_OSS=no
--AC_CHECK_HEADERS([sys/soundcard.h soundcard.h machine/soundcard.h],[
--  HAVE_OSS=yes
--  break
--])
-+dnl HAVE_OSS=no
-+dnl AC_CHECK_HEADERS([sys/soundcard.h soundcard.h machine/soundcard.h],[
-+dnl   HAVE_OSS=yes
-+dnl   break
-+dnl ])
- 
++AC_CHECK_HEADERS([sys/audioio.h])
++
  dnl check for sndio
--AC_CHECK_LIB([sndio], [sio_open])
-+dnl AC_CHECK_LIB([sndio], [sio_open])
+ AC_CHECK_LIB([sndio], [sio_open])
  
 -if test "$HAVE_OSS" != "yes" && test "$ac_cv_lib_sndio_sio_open" != "yes"; then
--  AC_MSG_WARN([Audio support not found -- no direct audio output in opusdec])
--fi
-+dnl if test "$HAVE_OSS" != "yes" && test "$ac_cv_lib_sndio_sio_open" != "yes"; then
-+dnl   AC_MSG_WARN([Audio support not found -- no direct audio output in opusdec])
-+dnl fi
++if test "$HAVE_OSS" != "yes" &&
++   test "$ac_cv_header_sys_audioio_h" != "yes" &&
++   test "$ac_cv_lib_sndio_sio_open" != "yes"; then
+   AC_MSG_WARN([Audio support not found -- no direct audio output in opusdec])
+ fi
  
- dnl check for flac
- AC_ARG_WITH([flac],
