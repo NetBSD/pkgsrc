@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2388 2020/04/20 06:57:10 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2389 2020/04/20 06:58:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3315,3 +3315,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/adwaita-icon-theme to 3.36.1 [wiz 2020-04-20]
 	Updated audio/chromaprint to 1.5.0 [wiz 2020-04-20]
 	Updated net/glib-networking to 2.64.2 [wiz 2020-04-20]
+	Updated security/libsecret to 0.20.3 [wiz 2020-04-20]
