@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2399 2020/04/20 13:20:20 joerg Exp $
+$NetBSD: CHANGES-2020,v 1.2400 2020/04/20 13:32:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3328,3 +3328,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/py-parso to 0.7.0 [adam 2020-04-20]
 	Updated devel/eet to 1.7.10 [joerg 2020-04-20]
 	Updated devel/eina to 1.7.10 [joerg 2020-04-20]
+	Updated sysutils/p5-Quota to 1.8.0 [mef 2020-04-20]
+	Updated sysutils/p5-Sys-CpuLoad to 0.30 [mef 2020-04-20]
