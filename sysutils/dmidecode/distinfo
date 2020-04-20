@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2019/10/29 17:27:51 msaitoh Exp $
+$NetBSD: distinfo,v 1.26 2020/04/20 19:28:34 triaxx Exp $
 
 SHA1 (dmidecode-patches/1d0db85949a5bdd96375f6131d393a11204302a6) = 156610089ffc468c8fe6ce3fc4206f624d0f88aa
 RMD160 (dmidecode-patches/1d0db85949a5bdd96375f6131d393a11204302a6) = 896035dc2c48731b156729c6862e86ad82637003
@@ -24,5 +24,5 @@ SHA1 (dmidecode-patches/fde47bb227b8fa817c88d7e10a8eb771c46de1df) = 396611839e85
 RMD160 (dmidecode-patches/fde47bb227b8fa817c88d7e10a8eb771c46de1df) = 0f7f3565a0cdef72a6bce8a0b993d2aefbc2a185
 SHA512 (dmidecode-patches/fde47bb227b8fa817c88d7e10a8eb771c46de1df) = ef5856934bcbf831cad6f733ecd8d0dad92087f4813579b75f89e5576a8be1df23fd670d2f86b0ac2ff1e084951b05ae15421a0e6e84b2cec76789ddec85e88f
 Size (dmidecode-patches/fde47bb227b8fa817c88d7e10a8eb771c46de1df) = 989 bytes
-SHA1 (patch-aa) = 6c861b3742b1627a1b60dbaea9df0843f2ed603d
-SHA1 (patch-dmidecode.c) = 63cf0302a13603038ee871cc7410009a722eae39
+SHA1 (patch-aa) = c29130893fa1eb59a041b1579628e77fadbcfc68
+SHA1 (patch-dmidecode.c) = 2d7cbafd979aa7f6a33939eb136dc06e945f4188
