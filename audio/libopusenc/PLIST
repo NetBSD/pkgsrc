@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/20 17:34:14 nia Exp $
+include/opus/opusenc.h
+lib/libopusenc.la
+lib/pkgconfig/libopusenc.pc
+share/doc/libopusenc/AUTHORS
+share/doc/libopusenc/COPYING
+share/doc/libopusenc/README.md

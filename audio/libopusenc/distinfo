@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/20 17:34:14 nia Exp $
+
+SHA1 (libopusenc-0.2.1.tar.gz) = 0f107876925141fe1a8840f4d602d5b0771be105
+RMD160 (libopusenc-0.2.1.tar.gz) = 0998d928539a52585ac43e4fada71ccbe09a7d29
+SHA512 (libopusenc-0.2.1.tar.gz) = adf30cacea9ac2e5889a40147f53943a1bec5279c5ff3a9b09de8ca52727a6cbaeecd338417fc5856e337ae183c85b0d366d14ec4ec329de12d50709a6f6507a
+Size (libopusenc-0.2.1.tar.gz) = 388071 bytes
