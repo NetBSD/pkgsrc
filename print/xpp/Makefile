@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2020/03/20 11:58:15 nia Exp $
+# $NetBSD: Makefile,v 1.73 2020/04/20 00:44:09 joerg Exp $
 
 DISTNAME=	xpp-1.5
 PKGREVISION=	30
@@ -24,4 +24,5 @@ post-install:
 
 .include "../../print/cups-base/buildlink3.mk"
 .include "../../x11/fltk13/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
