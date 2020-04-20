@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19838 2020/04/20 13:20:21 joerg Exp $
+$NetBSD: TODO,v 1.19839 2020/04/20 14:48:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -828,6 +828,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
 	o mediawiki-1.34
+	o meld-3.21.0 [dumps core]
 	o memached-1.5.6
 	o memcached-1.6
 	o merkaator-0.18.3
