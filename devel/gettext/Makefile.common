@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2020/01/18 23:30:28 rillig Exp $
+# $NetBSD: Makefile.common,v 1.17 2020/04/20 08:37:14 wiz Exp $
 #
 # used by devel/gettext/Makefile
 # used by devel/gettext-asprintf/Makefile
@@ -6,7 +6,7 @@
 # used by devel/gettext-m4/Makefile
 # used by devel/gettext-tools/Makefile
 
-DISTNAME=	gettext-0.20.1
+DISTNAME=	gettext-0.20.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gettext/}
 
