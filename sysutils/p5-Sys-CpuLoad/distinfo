@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:25 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/04/20 13:28:55 mef Exp $
 
-SHA1 (Sys-CpuLoad-0.03.tar.gz) = 371bf186d81963c81e6891120c4eb6343d482a5d
-RMD160 (Sys-CpuLoad-0.03.tar.gz) = 577d9d6d831e2a328f19d009ac048a8d7023ecfc
-SHA512 (Sys-CpuLoad-0.03.tar.gz) = f8175d1c4e65901e22b5adf912ffb17458151b098634758e6d5377a32bb513e39e914136216b2b38fd8ba30d6bd47957f9637157794cd741cf8802cb5a5f1503
-Size (Sys-CpuLoad-0.03.tar.gz) = 2806 bytes
+SHA1 (Sys-CpuLoad-0.30.tar.gz) = 266582b017ea48c0a63665b9da1e88d313655457
+RMD160 (Sys-CpuLoad-0.30.tar.gz) = 3cec7ed98290617e4bb8d5b8a769663e1a71efb2
+SHA512 (Sys-CpuLoad-0.30.tar.gz) = 1050aeadd8cd59346510c91584e3725b13ad4e378a732e6eb5246aafa57c2702c47e92d9db5fa190cdcfebcf5482c0a8674b64b5569b7adcd184acec03715412
+Size (Sys-CpuLoad-0.30.tar.gz) = 19717 bytes
