@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2017/02/14 21:25:50 joerg Exp $
+$NetBSD: distinfo,v 1.10 2020/04/20 00:42:07 joerg Exp $
 
 SHA1 (fuppes-0.660.tar.gz) = ca729343754e0d775fb8291fda8b3ac64ef64df2
 RMD160 (fuppes-0.660.tar.gz) = 4a1f278fd4cb00d80ce2efae57201aaa73d11840
@@ -8,4 +8,5 @@ SHA1 (patch-include_fuppes__plugin.h) = bfe692659f2b2033c5acf197845c3adfc9ed516f
 SHA1 (patch-src_lib_Common_Common.cpp) = 740b88bbcfc4333d7b3b957d963be65152ef3282
 SHA1 (patch-src_lib_HTTP_HTTPParser.cpp) = ddc3feba5a0d381dd2896f18943a946b556f2812
 SHA1 (patch-src_plugins_database__sqlite3.cpp) = 99408f855d5d0f09d8b620785022a205a7c1f621
+SHA1 (patch-src_plugins_metadata__exiv2.cpp) = 8cd091a31b67d67e7d17320c199f6c5bbaf801f8
 SHA1 (patch-src_plugins_metadata__libavformat.c) = a66c05432d6a12beca47f8f2d496b522655b2159
