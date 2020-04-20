@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2391 2020/04/20 07:09:45 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2392 2020/04/20 07:15:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3318,3 +3318,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/libsecret to 0.20.3 [wiz 2020-04-20]
 	Updated converters/libstaroffice to 0.0.7 [wiz 2020-04-20]
 	Updated devel/waf to 2.0.20 [wiz 2020-04-20]
+	Updated devel/meld to 3.21.0 [wiz 2020-04-20]
