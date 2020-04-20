@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2385 2020/04/20 06:40:13 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2386 2020/04/20 06:51:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3312,3 +3312,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-pelican to 4.2.0 [nils 2020-04-19]
 	Updated lang/tcl to 8.6.10nb1 [wiz 2020-04-19]
 	Updated x11/pixman to 0.40.0 [wiz 2020-04-20]
+	Updated graphics/adwaita-icon-theme to 3.36.1 [wiz 2020-04-20]
