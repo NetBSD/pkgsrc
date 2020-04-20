@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2020/03/08 16:42:24 bsiegert Exp $
+# $NetBSD: Makefile,v 1.49 2020/04/20 00:32:04 joerg Exp $
 
 DISTNAME=	elasticsearch-6.4.0
 PKGREVISION=	1
@@ -9,6 +9,9 @@ MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://www.elasticsearch.org/
 COMMENT=	Distributed RESTful Search Engine
 LICENSE=	apache-2.0
+
+# Uses javah, which doesn't exist in JDK10+ anymore.
+PKG_JVMS_ACCEPTED=	openjdk8 oracle-jdk8 openjdk7 sun-jdk7
 
 # Build our own native JNA, the version should match the one that ES ships with
 JNA=			jna-4.5.1
@@ -75,8 +78,8 @@ post-extract:
 
 do-build:
 	# Override silly SunOS et al. assumptions.
-	cd ${WRKSRC}/jna && ${SETENV} ${MAKE_ENV} ant -Ddynlink.native=true -Dgrep=grep -Dmake.PATH=PATH=${PATH:Q} -Dmake=make native
-	cd ${WRKSRC}/jna/build/classes && ${SETENV} ${MAKE_ENV} jar cf ${WRKSRC}/lib/${JNA}.jar com/
+	${_ULIMIT_CMD} cd ${WRKSRC}/jna && ${SETENV} ${MAKE_ENV} ant -Ddynlink.native=true -Dgrep=grep -Dmake.PATH=PATH=${PATH:Q} -Dmake=make native
+	${_ULIMIT_CMD} cd ${WRKSRC}/jna/build/classes && ${SETENV} ${MAKE_ENV} jar cf ${WRKSRC}/lib/${JNA}.jar com/
 
 do-install:
 .for f in ${CONFS}
