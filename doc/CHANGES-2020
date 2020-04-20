@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2409 2020/04/20 20:06:18 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2410 2020/04/20 22:55:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3337,3 +3337,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/git to 2.26.2 [leot 2020-04-20]
 	Updated lang/python27 to 2.7.18 [adam 2020-04-20]
 	Updated lang/py27-html-docs to 2.7.18 [adam 2020-04-20]
+	Updated ham/xlog to 2.0.19 [mef 2020-04-20]
