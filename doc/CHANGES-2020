@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2407 2020/04/20 19:51:50 leot Exp $
+$NetBSD: CHANGES-2020,v 1.2408 2020/04/20 20:03:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3334,3 +3334,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added audio/libopusenc version 0.2.1 [nia 2020-04-20]
 	Updated audio/opus-tools to 0.2 [nia 2020-04-20]
 	Added net/rclone version 1.51.0 [leot 2020-04-20]
+	Updated devel/git to 2.26.2 [leot 2020-04-20]
