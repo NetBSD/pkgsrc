@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.3 2020/04/08 16:35:59 wiz Exp $
+$NetBSD: distinfo,v 1.4 2020/04/20 14:25:52 bsiegert Exp $
 
 SHA1 (gcc-9.3.0.tar.xz) = b746688bf045a316fc92c3528138ad10d0822b6b
 RMD160 (gcc-9.3.0.tar.xz) = e0ade31726b8fbb1eb308e2b1383a79633aef996
 SHA512 (gcc-9.3.0.tar.xz) = 4b9e3639eef6e623747a22c37a904b4750c93b6da77cf3958d5047e9b5ebddb7eebe091cc16ca0a227c0ecbd2bf3b984b221130f269a97ee4cc18f9cf6c444de
 Size (gcc-9.3.0.tar.xz) = 70533868 bytes
 SHA1 (patch-gcc_gimplify.c) = f933a033d4a6c11fa82c8c9c6785842ba7993862
+SHA1 (patch-libgo_go_runtime_os__netbsd.go) = 357c62afe017a5ca3d7138abb2c19dc10bc5cd3d
+SHA1 (patch-libgo_go_runtime_signal__gccgo.go) = 51b632c1c827f6d99fc2d7803294a0b7a64514a1
+SHA1 (patch-libgo_go_runtime_stubs.go) = f4753765eb7ee9a933f2bb3a05f27c487a1d51ef
+SHA1 (patch-libgo_runtime_go-signal.c) = 6121b041cdd850adeea943f385d52b65d6bfe249
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h) = f12f6a97f94d13efa73a2500411bc77b27887edd
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__configure__char.cc) = 007bce70f75deace18f60924b5a3f94bf7a0af2f
