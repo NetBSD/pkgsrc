@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.594 2020/04/14 22:33:14 js Exp $
+# $NetBSD: Makefile,v 1.595 2020/04/20 17:34:14 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -253,6 +253,7 @@ SUBDIR+=	libofa
 SUBDIR+=	libopenmpt
 SUBDIR+=	libopenspc
 SUBDIR+=	libopus
+SUBDIR+=	libopusenc
 SUBDIR+=	libreplaygain
 SUBDIR+=	libsamplerate
 SUBDIR+=	libsbsms
