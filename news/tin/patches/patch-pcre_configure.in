@@ -1,6 +1,7 @@
-$NetBSD: patch-pcre_configure.in,v 1.1 2020/03/20 10:25:15 micha Exp $
+$NetBSD: patch-pcre_configure.in,v 1.2 2020/04/20 14:47:35 micha Exp $
 
 Replace nonportable operator "==" with POSIX equivalent.
+Reported and fixed upstream (remove this patch for next release).
 
 --- pcre/configure.in.orig	2017-05-03 17:47:33.000000000 +0000
 +++ pcre/configure.in
