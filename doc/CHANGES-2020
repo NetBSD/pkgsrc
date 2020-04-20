@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2406 2020/04/20 17:39:25 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2407 2020/04/20 19:51:50 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3333,3 +3333,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/fail2ban to 0.11.1 [nils 2020-04-20]
 	Added audio/libopusenc version 0.2.1 [nia 2020-04-20]
 	Updated audio/opus-tools to 0.2 [nia 2020-04-20]
+	Added net/rclone version 1.51.0 [leot 2020-04-20]
