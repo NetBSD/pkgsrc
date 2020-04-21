@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.48 2018/09/05 13:29:30 fhajny Exp $
+$NetBSD: distinfo,v 1.49 2020/04/21 16:06:19 jperkin Exp $
 
-SHA1 (elasticsearch-6.4.0.tar.gz) = cc1d950ec2a3bbc41dc8864afc4153b1f6eb6126
-RMD160 (elasticsearch-6.4.0.tar.gz) = ac505661d231fcdc408087f78ffc98b080be3fa2
-SHA512 (elasticsearch-6.4.0.tar.gz) = 6f465378a51c487f1f6a84a0843ac1038db60170ee8a5d96874a759f6dbbf2de9f7bcbbf55616f49f28f1098c82f2e585c917267d02b8b1f43627a1984b3da66
-Size (elasticsearch-6.4.0.tar.gz) = 97901357 bytes
+SHA1 (elasticsearch-6.8.8.tar.gz) = dbe27b9dec378ac79dae67500dbfdf4b7ae5865f
+RMD160 (elasticsearch-6.8.8.tar.gz) = 099a901c0022c8f99e3f38cf1c00df4b31f0324b
+SHA512 (elasticsearch-6.8.8.tar.gz) = c703d6230a42b77fb0f169158afbc18517118375e341ef889c231acc0f096a44716ba4fc1a2558fd000b0ceff4d9c3aff2f2c792f2c2ae92f0e7f82c6a70eaec
+Size (elasticsearch-6.8.8.tar.gz) = 149927766 bytes
 SHA1 (jna-4.5.1.tar.gz) = 883e6250817ab73fbefd61320dff00f3350c896d
 RMD160 (jna-4.5.1.tar.gz) = 353462bf559cc368e739dd04a0e7652db2079911
 SHA512 (jna-4.5.1.tar.gz) = 057e185011dc492fef3e9273f8df8dc9971752337bb39b6fa1d53d305bb2ff52e8408b96bddc288cbbd2ae08c126904fa278276dd79d93801bcac361adda8300
