@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/03/22 18:23:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/21 13:35:59 sevan Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -3504,6 +3504,7 @@ man/man3/X509_check_ip.3
 man/man3/X509_check_ip_asc.3
 man/man3/X509_check_issued.3
 man/man3/X509_check_private_key.3
+man/man3/X509_check_purpose.3
 man/man3/X509_cmp.3
 man/man3/X509_cmp_current_time.3
 man/man3/X509_cmp_time.3
