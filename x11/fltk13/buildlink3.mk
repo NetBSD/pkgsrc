@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2020/03/15 22:41:05 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2020/04/21 07:53:56 micha Exp $
 
 BUILDLINK_TREE+=	fltk
 
@@ -22,6 +22,7 @@ pkgbase := fltk
 .endif
 
 .if ${OPSYS} != "Darwin"
+.  include "../../x11/libXcursor/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"
 .  include "../../x11/libXft/buildlink3.mk"
 .  include "../../x11/libXinerama/buildlink3.mk"
