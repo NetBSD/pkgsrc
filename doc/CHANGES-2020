@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2431 2020/04/21 13:02:33 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2432 2020/04/21 13:32:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3361,3 +3361,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/eliom to 6.11.0 [jaapb 2020-04-21]
 	Updated www/ocsigen-toolkit to 2.5.0 [jaapb 2020-04-21]
 	Updated www/ocsigen-i18n to 3.5.0 [jaapb 2020-04-21]
+	Added audio/pragha version 1.3.4 [nia 2020-04-21]
