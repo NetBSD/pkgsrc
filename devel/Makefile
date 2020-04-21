@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3106 2020/04/20 14:38:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.3107 2020/04/21 10:56:45 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -1015,6 +1015,7 @@ SUBDIR+=	ocaml-sexplib0
 SUBDIR+=	ocaml-spawn
 SUBDIR+=	ocaml-splittable_random
 SUBDIR+=	ocaml-stdio
+SUBDIR+=	ocaml-stdlib-shims
 SUBDIR+=	ocaml-stringext
 SUBDIR+=	ocaml-type_conv
 SUBDIR+=	ocaml-typerep
