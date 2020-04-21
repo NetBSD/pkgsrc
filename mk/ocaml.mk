@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.27 2020/01/17 09:19:03 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.28 2020/04/21 11:23:29 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -294,7 +294,8 @@ do-build:
 do-build:
 .if !empty(DUNE_BUILD_PACKAGES)
 	${RUN} ${_ULIMIT_CMD} \
-		cd ${WRKSRC} && dune build -j ${MAKE_JOBS:U1} \
+		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		dune build -j ${MAKE_JOBS:U1} \
 		${DUNE_BUILD_FLAGS} -p ${DUNE_BUILD_PACKAGES:ts,} \
 		${DUNE_BUILD_TARGETS}
 .else
