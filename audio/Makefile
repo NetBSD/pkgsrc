@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.595 2020/04/20 17:34:14 nia Exp $
+# $NetBSD: Makefile,v 1.596 2020/04/21 13:32:23 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -366,6 +366,7 @@ SUBDIR+=	picard
 SUBDIR+=	playitslowly
 SUBDIR+=	pocketsphinx
 SUBDIR+=	portaudio
+SUBDIR+=	pragha
 SUBDIR+=	pulseaudio
 SUBDIR+=	py-acoustid
 SUBDIR+=	py-ao

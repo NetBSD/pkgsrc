@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/21 13:32:23 nia Exp $
+
+SHA1 (pragha-1.3.4.tar.bz2) = 4a149b512dc1b0c2675d3ed58be8b8f0ea4d62ef
+RMD160 (pragha-1.3.4.tar.bz2) = 549254e2d30734f1b89fe4b06f0b39420633c128
+SHA512 (pragha-1.3.4.tar.bz2) = 65aadf68f427f03ea7ca07d2002806eb94019c8091a80320da7d8ff4c2f0cd912e9c346956188b42d2b7a68c56c79ee5af8e8327c69ad69f4a1fa5b9e3b3ca58
+Size (pragha-1.3.4.tar.bz2) = 691256 bytes
