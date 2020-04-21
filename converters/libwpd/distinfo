@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2020/03/25 10:00:43 nia Exp $
+$NetBSD: distinfo,v 1.16 2020/04/21 18:58:18 dholland Exp $
 
 SHA1 (libwpd-0.10.3.tar.bz2) = 4088e9762a99e7a451d00764807a2ec639cf13e8
 RMD160 (libwpd-0.10.3.tar.bz2) = 1b2e4940a736f50df58b6225de5543f95cb9f9c0
 SHA512 (libwpd-0.10.3.tar.bz2) = cf3db714d424c32ecf5740b17d9f1721f228d3a7edbd1cc7a0f4b30f7ac9b1024cf45c0727b9f916b7672321e05f0d791c7f7f5ad5d47fedcea9ad9e886eb459
 Size (libwpd-0.10.3.tar.bz2) = 669503 bytes
+SHA1 (patch-src_lib_WPXTable.h) = 892c5addb5faece4385d30b557268d6bc22f33c1
