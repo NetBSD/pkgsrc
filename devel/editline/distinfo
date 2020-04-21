@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2020/03/22 22:32:11 tnn Exp $
+$NetBSD: distinfo,v 1.11 2020/04/21 13:07:01 jperkin Exp $
 
 SHA1 (libedit-20191231-3.1.tar.gz) = 44891b6ceb0429fec0a118a1245c605410571d7d
 RMD160 (libedit-20191231-3.1.tar.gz) = a0e32d4bbb896b6f7e6567902e4205f2e435cd26
@@ -8,3 +8,5 @@ SHA1 (patch-Makefile.am) = c9c49476fcff0da3363874795fcf4b6ebd0f59de
 SHA1 (patch-ab) = 18297f76965ecd56834c94f6c9f780d3e05a44d8
 SHA1 (patch-ac) = 666403d5ef03fea39081d7a657aefaa91746f788
 SHA1 (patch-src_chartype.h) = ec6ff8c8417464b54cffcbf8752f07a599067685
+SHA1 (patch-src_sys.h) = 3c1f69b520b382e3a0308e7f8ffaddca65d91a8d
+SHA1 (patch-src_terminal.h) = 5d658f7b7c3b88c0c3122a1be740f3a72d7d2370
