@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/07/01 15:48:53 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/04/21 11:25:18 jaapb Exp $
 
-SHA1 (ocaml-cohttp-2.1.2.tar.gz) = 16ed1c2fdb14efd8bedccaab5614ae819fc4d784
-RMD160 (ocaml-cohttp-2.1.2.tar.gz) = a63107e3787326de2739f13c8c278795380e988c
-SHA512 (ocaml-cohttp-2.1.2.tar.gz) = bf466e2dbcbb4be8dc0b790130ae9a1abbbdd7fd865ba6b01dba83e5a8625e058b2918761a924a6b4baf04094b28a7a03b22f3d7a8e4f929b252069b7dd61be4
-Size (ocaml-cohttp-2.1.2.tar.gz) = 110147 bytes
+SHA1 (ocaml-cohttp-2.5.1.tar.gz) = cd751de2365a277198fe7ddd694d4f840338edcd
+RMD160 (ocaml-cohttp-2.5.1.tar.gz) = 268e995911551358dee6badb4ff12af87d595695
+SHA512 (ocaml-cohttp-2.5.1.tar.gz) = 6a9a548ab66ceee311e7e689934ee57132d747598d24043b6a48314a1982149d08100c52f510bea2d12aa63ce0f22ea47537e88b8cae1367eeb4610ddaf0b4db
+Size (ocaml-cohttp-2.5.1.tar.gz) = 111677 bytes
