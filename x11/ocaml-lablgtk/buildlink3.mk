@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.44 2020/04/12 08:28:13 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2020/04/21 11:32:58 wiz Exp $
 
 BUILDLINK_TREE+=	ocaml-lablgtk
 
@@ -29,6 +29,7 @@ pkgbase := ocaml-lablgtk
 .  include "../../x11/gnome-panel/buildlink3.mk"
 .endif
 
+.include "../../x11/gtk2/buildlink3.mk"
 .endif # OCAML_LABLGTK_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-ocaml-lablgtk
