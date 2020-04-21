@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2429 2020/04/21 12:52:33 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2430 2020/04/21 12:56:55 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3359,3 +3359,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ocaml-tyxml to 4.4.0 [jaapb 2020-04-21]
 	Updated www/ocsigen to 2.16.0 [jaapb 2020-04-21]
 	Updated www/eliom to 6.11.0 [jaapb 2020-04-21]
+	Updated www/ocsigen-toolkit to 2.5.0 [jaapb 2020-04-21]
