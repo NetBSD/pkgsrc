@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:51 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/04/21 11:16:56 micha Exp $
 bin/cleanscore
-share/doc/cleanscore/COPYING
-share/doc/cleanscore/README
+share/doc/cleanscore/NEWS.cleanscore
+share/doc/cleanscore/README.cleanscore
