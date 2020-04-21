@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/10/28 20:02:29 gdt Exp $
+# $NetBSD: options.mk,v 1.3 2020/04/21 11:33:33 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unison
 PKG_SUPPORTED_OPTIONS=	lablgtk
@@ -7,12 +7,11 @@ PKG_SUPPORTED_OPTIONS=	lablgtk
 
 .if !empty(PKG_OPTIONS:Mlablgtk)
 MAKE_FLAGS+=	UISTYLE=gtk2
-BUILDLINK_API_DEPENDS.ocaml-lablgtk+= ocaml-lablgtk>=2.16.0
 
 DEPENDS+=	font-schumacher-misc>=1.0:../../fonts/font-schumacher-misc
 
+BUILDLINK_API_DEPENDS.ocaml-lablgtk+= ocaml-lablgtk>=2.16.0
 .include "../../x11/ocaml-lablgtk/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .else
 MAKE_FLAGS+=	UISTYLE=text
 .endif
