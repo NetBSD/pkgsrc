@@ -1,10 +1,10 @@
-$NetBSD: patch-install_functions.php,v 1.1 2019/04/29 16:09:05 hauke Exp $
+$NetBSD: patch-install_functions.php,v 1.2 2020/04/21 13:42:52 mef Exp $
 
 Find utilites in PREFIX first.
 Make log directory configurable by package variable
 
---- install/functions.php.orig	2019-03-30 23:40:23.000000000 +0000
-+++ install/functions.php
+--- install/functions.php.orig	2019-09-30 03:36:29.000000000 +0900
++++ install/functions.php	2020-04-21 22:16:27.694372184 +0900
 @@ -298,8 +298,8 @@ function find_best_path($binary_name) {
  		);
  	} else {
@@ -74,16 +74,15 @@ Make log directory configurable by package variable
  			'win32' => 'c:/spine/bin/spine.exe'
  		));
  
-@@ -533,7 +533,7 @@ function install_file_paths() {
- 	if (!config_value_exists('path_cactilog')) {
- 		$input['path_cactilog'] = $settings['path']['path_cactilog'];
- 		if (empty($input['path_cactilog']['default'])) {
--			$input['path_cactilog']['default'] = $config['base_path'] . '/log/cacti.log';
-+			$input['path_cactilog']['default'] = '@CACTI_LOGDIR@' . '/cacti.log';
- 		}
- 	} else {
- 		$input['path_cactilog'] = $settings['path']['path_cactilog'];
-@@ -544,7 +544,7 @@ function install_file_paths() {
+@@ -538,14 +538,14 @@ function install_file_paths() {
+ 	}
+ 
+ 	if (empty($input['path_cactilog']['default'])) {
+-		$input['path_cactilog']['default'] = $config['base_path'] . '/log/cacti.log';
++		$input['path_cactilog']['default'] = '@CACTI_LOGDIR@' . '/log/cacti.log';
+ 	}
+ 
+ 	/* stderr log file path */
  	if (!config_value_exists('path_cactilog')) {
  		$input['path_stderrlog'] = $settings['path']['path_stderrlog'];
  		if (empty($input['path_stderrlog']['default'])) {
