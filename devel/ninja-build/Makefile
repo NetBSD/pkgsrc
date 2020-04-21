@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/03/18 00:05:18 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/21 07:48:55 dsainty Exp $
 
 DISTNAME=	ninja-1.10.0
 PKGNAME=	${DISTNAME:S/ninja/ninja-build/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ninja-build/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,6 +14,23 @@ COMMENT=	Small build system with a focus on speed
 LICENSE=	apache-2.0
 
 BUILD_DEPENDS+=	re2c>=0.11.3:../../devel/re2c
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+#
+# Under MacOS X the LD_LIBRARY_PATH variable is unset by the build system
+# running executables under /bin (namely /bin/sh).  This is part of MacOS X
+# System Integrity Protection.
+#
+# Because many (most?) users of ninja/meson seem to need hacks involving
+# LD_LIBRARY_PATH, use a non-SIP-triggering shell under MacOS X.
+#
+DEPENDS+=	pdksh-[0-9]*:../../shells/pdksh
+CFLAGS+=	-DNINJA_SHELL=${PREFIX}/bin/pdksh
+.else
+CFLAGS+=	-DNINJA_SHELL=/bin/sh
+.endif
 
 USE_LANGUAGES=	c c++
 
