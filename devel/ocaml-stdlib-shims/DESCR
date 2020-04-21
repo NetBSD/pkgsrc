@@ -1,0 +1,3 @@
+This is a compatibility library for OCaml; the shim will make post-4.08
+code work with pre-4.08 versions of OCaml (with respect to the change from
+Pervasives to Stdlib).
