@@ -1,14 +1,7 @@
-$NetBSD: distinfo,v 1.15 2019/08/24 11:07:34 jaapb Exp $
+$NetBSD: distinfo,v 1.16 2020/04/21 12:52:06 jaapb Exp $
 
-SHA1 (eliom-6.7.0.tar.gz) = 02a105be3f58170d7ba39bd2152cb557b5e71fb5
-RMD160 (eliom-6.7.0.tar.gz) = d8f465a141f7eb761bf64964cfeb5653eadb2158
-SHA512 (eliom-6.7.0.tar.gz) = d7914dc1f5f2fd8a2d977dd79523a1b98ccfd8e34f67d285a5566f143d226b2563c4e7a9196170e91aba3c2e732cc97a1aa5b747e678e8bd219cc9b538c84f69
-Size (eliom-6.7.0.tar.gz) = 653578 bytes
-SHA1 (patch-opam) = 106a66cddc084774a6b68dcdfc4532825d89cceb
-SHA1 (patch-pkg_META) = cc17e1c7b2c6620662ffa37a991bf9f6612c3da2
-SHA1 (patch-pkg_build.ml) = 9622b65fe58fe939336ac61fa80579afefda1dec
-SHA1 (patch-src___tags) = 4f3be24e6c5f8c4871fcfc218d2dfc8c413217c8
-SHA1 (patch-src_ocamlbuild_ocamlbuild__eliom.ml) = cbbfd6bbdf9bee928d2d4c82f46cc6335f8c1e3e
-SHA1 (patch-src_ppx_ppx__eliom__type.ml) = 77bb28c5e73b4db7de2b96f07042eeaa31b0e106
-SHA1 (patch-src_ppx_ppx__eliom__utils.ml) = b592111fdef4fb33cace3e9f8857cbd3db64c226
-SHA1 (patch-src_tools_eliomc.ml) = 578c35f563746ef3a974af16f761c047943db633
+SHA1 (eliom-6.11.0.tar.gz) = 00eb272bd75a222c0201576b8ac06c0b0475f35b
+RMD160 (eliom-6.11.0.tar.gz) = 3a40c4734c2d0c968feaf32e7c6f809914fb029c
+SHA512 (eliom-6.11.0.tar.gz) = d17821f2da4808d79278efc4230a328c128c7a4dc1ef60ca01e2093c24e1a5d1c8dd98c06fb5be283d876368154e19d5246eda7b950e8942202ea89fe4352833
+Size (eliom-6.11.0.tar.gz) = 641496 bytes
+SHA1 (patch-pkg_build.ml) = a952e78e2e8e9e35d287fcf6e575a2e91eaf4016
