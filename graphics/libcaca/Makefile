@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2017/12/03 03:57:31 maya Exp $
+# $NetBSD: Makefile,v 1.37 2020/04/21 10:17:40 nia Exp $
 
-DISTNAME=	libcaca-0.99.beta18
+DISTNAME=	libcaca-0.99.beta19
 PKGNAME=	${DISTNAME:S/beta//}
-PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://caca.zoy.org/files/libcaca/
 
@@ -17,9 +16,8 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE+=	caca/caca.pc.in
 
-CHECK_FILES_SKIP+=	${PREFIX}/lib/libcucul.*
+PKGCONFIG_OVERRIDE+=	caca/caca.pc.in
 
 CONFIG_GUESS_OVERRIDE+=	.auto/config.guess
 CONFIG_SUB_OVERRIDE+=	.auto/config.sub

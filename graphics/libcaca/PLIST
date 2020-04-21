@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/02/23 00:35:32 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/21 10:17:40 nia Exp $
 bin/caca-config
 bin/cacaclock
 bin/cacademo
@@ -11,11 +11,8 @@ include/caca.h
 include/caca0.h
 include/caca_conio.h
 include/caca_types.h
-include/cucul.h
 lib/libcaca.la
-lib/libcucul.la
 lib/pkgconfig/caca.pc
-lib/pkgconfig/cucul.pc
 man/man1/caca-config.1
 man/man1/cacademo.1
 man/man1/cacafire.1
