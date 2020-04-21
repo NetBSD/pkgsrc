@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/03/14 22:26:26 gutteridge Exp $
+$NetBSD: distinfo,v 1.3 2020/04/21 08:11:19 pin Exp $
 
-SHA1 (Arqiver-V0.4.0.tar.gz) = 6ac3e335851db9d628bfe423ccda31c9d33325a4
-RMD160 (Arqiver-V0.4.0.tar.gz) = 6a1e49f912ec79ba445386fe3e74e53e827f7b53
-SHA512 (Arqiver-V0.4.0.tar.gz) = c2c8ac67b0aebe74c22795d2493177c95858bd5afe50dc76aafc62b2d2ba60fa7a1a8519811a0325aabfec8cd48ea31f0c6f6d1c712c9a89bf41441008551ad1
-Size (Arqiver-V0.4.0.tar.gz) = 118725 bytes
+SHA1 (Arqiver-V0.5.0.tar.gz) = 29dc919f6c6d850fc71724f4e0a886b3e02f3a16
+RMD160 (Arqiver-V0.5.0.tar.gz) = bef05b43a21af68e15f494d679b66cfce691f21b
+SHA512 (Arqiver-V0.5.0.tar.gz) = a951a60fb292a4f63f135b32eec87e81c100485e69ac8cfc91d8c6ea6fee88cce76c128d6de8541a9564151a24a2a3cf2d566098223853692fed7bfa77bd07f1
+Size (Arqiver-V0.5.0.tar.gz) = 120137 bytes
