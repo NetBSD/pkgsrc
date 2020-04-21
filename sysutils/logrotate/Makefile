@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2019/03/20 12:29:37 he Exp $
+# $NetBSD: Makefile,v 1.19 2020/04/21 17:01:43 nils Exp $
 
-DISTNAME=		logrotate-3.15.0
-PKGREVISION=		1
+GITHUB_RELEASE=		${PKGVERSION_NOREV}
+DISTNAME=		logrotate-3.16.0
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=logrotate/}
 
@@ -9,8 +9,6 @@ MAINTAINER=		nils@NetBSD.org
 HOMEPAGE=		https://github.com/logrotate/logrotate/
 COMMENT=		Daemon to rotate, compress, remove and mail system log files
 LICENSE=		gnu-gpl-v2
-
-GITHUB_RELEASE=		${PKGVERSION_NOREV}
 
 USE_TOOLS+=		gmake gzip:run gunzip:run mail:run
 USE_LIBTOOL=		yes
@@ -33,7 +31,11 @@ SUBST_FILES.paths=	examples/logrotate.conf
 SUBST_FILES.paths+=	examples/logrotate.cron
 SUBST_VARS.paths=	PREFIX PKG_SYSCONFDIR
 
-CONF_FILES=		${EGDIR}/logrotate.conf ${PKG_SYSCONFDIR}/logrotate.conf
+CONF_FILES=		${EGDIR}/logrotate.conf ${PKG_SYSCONFDIR}/logrotate.conf \
+			${EGDIR}/btmp ${PKG_SYSCONFDIR}/logrotate.d/btmp \
+			${EGDIR}/wtmp \
+			${EGDIR}/logrotate.service
+
 OWN_DIRS=		${PKG_SYSCONFDIR}/logrotate.d
 
 EGDIR=			share/examples/logrotate
@@ -43,7 +45,13 @@ INSTALLATION_DIRS+=	${EGDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/logrotate.conf \
 		${DESTDIR}${PREFIX}/${EGDIR}/logrotate.conf
+	${INSTALL_DATA} ${WRKSRC}/examples/btmp \
+		${DESTDIR}${PREFIX}/${EGDIR}/btmp
+	${INSTALL_DATA} ${WRKSRC}/examples/wtmp \
+		${DESTDIR}${PREFIX}/${EGDIR}/wtmp
 	${INSTALL_DATA} ${WRKSRC}/examples/logrotate.cron \
+		${DESTDIR}${PREFIX}/${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/logrotate.service \
 		${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../devel/popt/buildlink3.mk"
