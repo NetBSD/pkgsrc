@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2440 2020/04/21 16:06:28 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.2441 2020/04/21 17:03:32 nils Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3370,3 +3370,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/mutt to 1.13.5 [nia 2020-04-21]
 	Updated security/keepassxc to 2.5.4 [nia 2020-04-21]
 	Updated databases/elasticsearch to 6.8.8 [jperkin 2020-04-21]
+	Updated sysutils/logrotate to 3.16.0 [nils 2020-04-21]
