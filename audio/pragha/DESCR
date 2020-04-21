@@ -1,0 +1,4 @@
+Pragha is a Lightweight Music Player, based on GTK and SQLite.
+
+It is completely written in C, constructed to be fast, light, and
+simultaneously tries to be complete without obstructing the daily work.
