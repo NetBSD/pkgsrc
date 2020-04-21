@@ -1,14 +1,14 @@
-$NetBSD: patch-install_functions.php,v 1.2 2020/04/21 13:42:52 mef Exp $
+$NetBSD: patch-install_functions.php,v 1.3 2020/04/21 13:55:22 mef Exp $
 
 Find utilites in PREFIX first.
 Make log directory configurable by package variable
 
---- install/functions.php.orig	2019-09-30 03:36:29.000000000 +0900
-+++ install/functions.php	2020-04-21 22:16:27.694372184 +0900
-@@ -298,8 +298,8 @@ function find_best_path($binary_name) {
- 		);
- 	} else {
- 		$search_paths = array(
+--- install/functions.php.orig	2020-04-06 11:14:20.000000000 +0900
++++ install/functions.php	2020-04-21 22:46:24.419734842 +0900
+@@ -374,8 +374,8 @@ function find_search_paths($os = 'unix')
+ 		$search_suffix = ':';
+ 		$search_slash  = '';
+ 		$search_paths  = array(
 -			'/bin',
 -			'/sbin',
 +			'@PREFIX@/bin',
@@ -101,3 +101,4 @@ Make log directory configurable by package variable
 +		file_put_contents('@CACTI_LOGDIR@' . '/install-complete.log', sprintf($format_log2, $day, $time, $sectionname, $levelname, $data, PHP_EOL), $flags);
  	}
  }
+ 

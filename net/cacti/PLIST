@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/04/21 13:42:52 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/04/21 13:55:21 mef Exp $
 bin/cacti-poller
 share/cacti/CHANGELOG
 share/cacti/LICENSE
@@ -113,6 +113,7 @@ share/cacti/docs/Graphs.html
 share/cacti/docs/How-To-Data-Query-Templates.html
 share/cacti/docs/How-To-Determine-Template-Version.html
 share/cacti/docs/How-To-SSH-Tunnels.html
+share/cacti/docs/How-To-Setup-Remote-Pollers.html
 share/cacti/docs/How-to-Graph-Your-Network.html
 share/cacti/docs/How-to-Graph-a-Custom-Collection-Script.html
 share/cacti/docs/Import-Template.html
@@ -130,6 +131,7 @@ share/cacti/docs/Plugin-Reference.html
 share/cacti/docs/Plugins.html
 share/cacti/docs/Principles-of-Operation.html
 share/cacti/docs/RRDTool-Specific-Features.html
+share/cacti/docs/RRDproxy.html
 share/cacti/docs/Requirements.html
 share/cacti/docs/SNMP-Data-Queries-Walkthrough.html
 share/cacti/docs/SNMP-New-Data-Query-Walkthrough.html
@@ -595,6 +597,7 @@ share/cacti/include/content/basic-example.html
 share/cacti/include/content/iframe-example.html
 share/cacti/include/content/index.php
 share/cacti/include/content/php-example.html
+share/cacti/include/csrf.php
 share/cacti/include/fa/css/fontawesome.css
 share/cacti/include/fa/css/index.php
 share/cacti/include/fa/index.php
@@ -789,7 +792,6 @@ share/cacti/include/js/jquery.cookie.js
 share/cacti/include/js/jquery.dropdown.js
 share/cacti/include/js/jquery.hotkeys.js
 share/cacti/include/js/jquery.js
-share/cacti/include/js/jquery.metadata.js
 share/cacti/include/js/jquery.multiselect.filter.js
 share/cacti/include/js/jquery.multiselect.js
 share/cacti/include/js/jquery.sparkline.js
@@ -1150,9 +1152,10 @@ share/cacti/include/vendor/cldr-to-gettext-plural-rules/src/cldr-data/supplement
 share/cacti/include/vendor/cldr-to-gettext-plural-rules/tests/Get/GetTest.php
 share/cacti/include/vendor/cldr-to-gettext-plural-rules/tests/Rules/RulesTest.php
 share/cacti/include/vendor/cldr-to-gettext-plural-rules/tests/bootstrap.php
-share/cacti/include/vendor/csrf/LICENSE
-share/cacti/include/vendor/csrf/NEWS
-share/cacti/include/vendor/csrf/README
+share/cacti/include/vendor/csrf/LICENSE.txt
+share/cacti/include/vendor/csrf/NEWS.md
+share/cacti/include/vendor/csrf/README.md
+share/cacti/include/vendor/csrf/csrf-conf.php
 share/cacti/include/vendor/csrf/csrf-magic.js
 share/cacti/include/vendor/csrf/csrf-magic.php
 share/cacti/include/vendor/csrf/index.php
@@ -1937,6 +1940,7 @@ share/cacti/include/vendor/phpmailer/composer.json
 share/cacti/include/vendor/phpmailer/get_oauth_token.php
 share/cacti/include/vendor/phpmailer/index.php
 share/cacti/include/vendor/phpmailer/language/index.php
+share/cacti/include/vendor/phpmailer/language/phpmailer.lang-af.php
 share/cacti/include/vendor/phpmailer/language/phpmailer.lang-am.php
 share/cacti/include/vendor/phpmailer/language/phpmailer.lang-ar.php
 share/cacti/include/vendor/phpmailer/language/phpmailer.lang-az.php
@@ -2091,10 +2095,12 @@ share/cacti/install/upgrades/1_1_7.php
 share/cacti/install/upgrades/1_1_8.php
 share/cacti/install/upgrades/1_2_0.php
 share/cacti/install/upgrades/1_2_1.php
+share/cacti/install/upgrades/1_2_11.php
 share/cacti/install/upgrades/1_2_2.php
 share/cacti/install/upgrades/1_2_3.php
 share/cacti/install/upgrades/1_2_5.php
 share/cacti/install/upgrades/1_2_7.php
+share/cacti/install/upgrades/1_2_8.php
 share/cacti/install/upgrades/index.php
 share/cacti/lib/aggregate.php
 share/cacti/lib/api_aggregate.php
@@ -2242,6 +2248,7 @@ share/cacti/rra/.htaccess
 share/cacti/rrdcleaner.php
 share/cacti/script_server.php
 share/cacti/scripts/3com_cable_modem.pl
+share/cacti/scripts/cacti_user_stats.php
 share/cacti/scripts/diskfree.pl
 share/cacti/scripts/diskfree.sh
 share/cacti/scripts/freebsd_memory.pl
