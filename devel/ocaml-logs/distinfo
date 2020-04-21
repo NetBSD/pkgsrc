@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/19 11:25:41 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2020/04/21 10:43:38 jaapb Exp $
 
-SHA1 (logs-0.6.2.tbz) = 39dc2ba598c77738c4b7479ffe433369d0c40acb
-RMD160 (logs-0.6.2.tbz) = df4cf3340846b3c9d1da4b1b928919c0995a1bce
-SHA512 (logs-0.6.2.tbz) = a669e373652bac6789626ad1d58e414c6d156c646bf0706c9d55b04151850113d45a5c28077707514d1a27d46fcc0f90b39b8652ce7a3980f79675e9874db8b4
-Size (logs-0.6.2.tbz) = 18558 bytes
+SHA1 (logs-0.7.0.tbz) = b02f9ecbbf68a632205b5db2f7a05ff7b2805667
+RMD160 (logs-0.7.0.tbz) = 66820f0ca378f77448ab12364c8d01e70f6e1ea4
+SHA512 (logs-0.7.0.tbz) = 657f66eeaf5788947a3ff4b2a179f7e192ad4ce086fc8968286066d4b83af476523b3befce50ee58abf2d9b8c8dc65573ba8ed62f9c5e7933db29a7fb769646a
+Size (logs-0.7.0.tbz) = 18458 bytes
