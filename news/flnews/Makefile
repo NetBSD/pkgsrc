@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/04/20 00:43:51 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2020/04/21 07:57:01 micha Exp $
 
 FLNEWS_VERSION=	0.17
 
@@ -76,6 +76,5 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/fltk13/buildlink3.mk"
-.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
