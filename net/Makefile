@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1320 2020/04/20 19:51:21 leot Exp $
+# $NetBSD: Makefile,v 1.1321 2020/04/21 11:34:16 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -913,6 +913,7 @@ SUBDIR+=	uftp
 SUBDIR+=	unbound
 SUBDIR+=	unfs3
 SUBDIR+=	unifi
+SUBDIR+=	unison-snapshot
 SUBDIR+=	unison2.51
 SUBDIR+=	unworkable
 SUBDIR+=	upclient
