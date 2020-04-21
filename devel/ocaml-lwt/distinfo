@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2019/05/13 11:38:45 jaapb Exp $
+$NetBSD: distinfo,v 1.23 2020/04/21 11:29:59 jaapb Exp $
 
-SHA1 (lwt-4.2.1.tar.gz) = bba54c66d8c7dd7b09bc091ed33656276ce73b30
-RMD160 (lwt-4.2.1.tar.gz) = ed70a120a8c2cf87985ef3153512b63959b60bec
-SHA512 (lwt-4.2.1.tar.gz) = 4289568e9ca0ffc8625caddc0b5c7d79737800106289931927133eeeb79e3c638aad4399b075bf46b339e91a739589983ce546f4dad07f492fd31ce5be5c216d
-Size (lwt-4.2.1.tar.gz) = 286694 bytes
-SHA1 (patch-src_unix_config_discover.ml) = ef8ea37d85f20d56654514617050ee46d6080ef1
-SHA1 (patch-src_unix_unix__c_unix__stat__job__utils.c) = 5ec0ae3afe3d65e673681fcf8faeebf811e64518
+SHA1 (lwt-5.2.0.tar.gz) = ccfc215289f33222ad08f3a83b3b5026b3510feb
+RMD160 (lwt-5.2.0.tar.gz) = b7f3b5372bea3aacb3d7fd85481dd86e517dc733
+SHA512 (lwt-5.2.0.tar.gz) = 361019d128bd2924cfa3251a5d8929b0ba85fc519c4c987ab0e3e2023dfc06cf376146941546abd2c03b6999bce0abf0de342507c1ac9674c2915b3b6f280707
+Size (lwt-5.2.0.tar.gz) = 296289 bytes
+SHA1 (patch-src_react_dune) = 49e256b74876a11b75478a1ffc434ff2a6ec61ee
+SHA1 (patch-src_unix_unix__c_unix__stat__job__utils.c) = ca86829f5330a26b5bc8514bf4081fa71b8b32d4
