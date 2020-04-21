@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2020/04/20 00:32:04 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2020/04/21 16:06:19 jperkin Exp $
 
-DISTNAME=	elasticsearch-6.4.0
-PKGREVISION=	1
-CATEGORIES=	textproc
+DISTNAME=	elasticsearch-6.8.8
+CATEGORIES=	databases textproc
 MASTER_SITES=	https://artifacts.elastic.co/downloads/elasticsearch/
 
 MAINTAINER=	imil@NetBSD.org
@@ -36,7 +35,7 @@ DOCS=		LICENSE.txt NOTICE.txt README.textile
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	ES_USER ES_GROUP ES_DBDIR ES_LOGDIR ES_PIDDIR
+BUILD_DEFS+=	ES_USER ES_GROUP ES_DBDIR ES_LOGDIR ES_PIDDIR VARBASE
 
 ES_USER?=	elasticsearch
 ES_GROUP?=	${ES_USER}
@@ -71,6 +70,9 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	bin/elasticsearch-env config/elasticsearch.yml
 SUBST_VARS.paths=	PKG_JAVA_HOME PKG_SYSCONFDIR ES_DBDIR ES_BASEDIR ES_LOGDIR
+
+BUILDLINK_TRANSFORM+=	rm:-Wno-unknown-warning-option
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 post-extract:
 	${RM} ${WRKSRC}/lib/${JNA}.jar
