@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2422 2020/04/21 11:30:18 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2423 2020/04/21 11:32:33 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3350,3 +3350,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ocaml-uri to 3.1.0 [jaapb 2020-04-21]
 	Updated www/ocaml-cohttp to 2.5.1 [jaapb 2020-04-21]
 	Updated devel/ocaml-lwt to 5.2.0 [jaapb 2020-04-21]
+	Updated devel/ocaml-lwt_ppx to 2.0.1 [jaapb 2020-04-21]
