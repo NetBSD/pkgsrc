@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/11/27 17:20:09 jaapb Exp $
+$NetBSD: distinfo,v 1.6 2020/04/21 11:00:32 jaapb Exp $
 
-SHA1 (markup-0.8.0.tar.gz) = 74cc130b8959693592aa181d1164400c9eccde2f
-RMD160 (markup-0.8.0.tar.gz) = 242c0eb71b9923241930f9a8e476980c2db930c9
-SHA512 (markup-0.8.0.tar.gz) = f28b7f5cf9d1e4a86e240c7b9f5d62ccd0444142af3ba2ef1fb8906ea233ff9408d91aea4c66ba4c9a8163135efe87c59b9f9c23068710d6b2d54d38515b505a
-Size (markup-0.8.0.tar.gz) = 280344 bytes
+SHA1 (markup-0.8.2.tar.gz) = 01fad94437e5597b9641da2a215e433b02dc033b
+RMD160 (markup-0.8.2.tar.gz) = 9f52f90aa0c02479877f44cdb1aab637e4ab1989
+SHA512 (markup-0.8.2.tar.gz) = d529e5bf8ef154244603474a5e017d0a62baf64e3550346e8440adcc1166576813a22b17d0419b0399d35673f463bea5e2ae46ab5abef3f3b9befc4821fd7e1b
+Size (markup-0.8.2.tar.gz) = 280961 bytes
