@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/02 23:49:46 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/04/21 11:16:56 micha Exp $
 
-SHA1 (cleanscore-0.9.8.1.tar.gz) = ae132707ee5e7e5805ee6a7051d34f605b8340cb
-RMD160 (cleanscore-0.9.8.1.tar.gz) = 575e1ac974ad23aa557ca2c67a28bbd07546f9ec
-SHA512 (cleanscore-0.9.8.1.tar.gz) = 46c4f392890f06ccbd1eeb829760b6c20fdd36b20a758b243b4e982b82aab88b8f78def5cfe16048a8a83b7efb7fb80111632040809ab3a1d336f0069a2708df
-Size (cleanscore-0.9.8.1.tar.gz) = 13439 bytes
-SHA1 (patch-aa) = 4622601fe21bacb1a775b28539ff477c1272ac9d
+SHA1 (slrn-1.0.3a.tar.bz2) = 898d09685f5fe159f23829cd21e15308f5dce822
+RMD160 (slrn-1.0.3a.tar.bz2) = dd5f5df5d508b8e0c5b136093f24121af31d3432
+SHA512 (slrn-1.0.3a.tar.bz2) = 11cef2dfe41f441af15acc22fb675cf607e932f0dd6d4a998e51ecda05c9a50d7abf10a3e693ffc857ad77e09634f460404e4d5b289169e7bbffdaf5d6d565a3
+Size (slrn-1.0.3a.tar.bz2) = 997138 bytes
