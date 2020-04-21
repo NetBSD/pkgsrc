@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2415 2020/04/21 10:43:57 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2416 2020/04/21 10:48:49 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3343,3 +3343,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dhcpcd to 9.0.2 [roy 2020-04-21]
 	Updated graphics/libcaca to 0.99.19 [nia 2020-04-21]
 	Updated devel/ocaml-logs to 0.7.0 [jaapb 2020-04-21]
+	Updated devel/ocaml-resource-pooling to 1.1 [jaapb 2020-04-21]
