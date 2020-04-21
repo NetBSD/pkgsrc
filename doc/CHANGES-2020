@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2423 2020/04/21 11:32:33 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2424 2020/04/21 11:34:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3351,3 +3351,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/ocaml-cohttp to 2.5.1 [jaapb 2020-04-21]
 	Updated devel/ocaml-lwt to 5.2.0 [jaapb 2020-04-21]
 	Updated devel/ocaml-lwt_ppx to 2.0.1 [jaapb 2020-04-21]
+	Added net/unison-snapshot version 2.51.2.20200221 [wiz 2020-04-21]
