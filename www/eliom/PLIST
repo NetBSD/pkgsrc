@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/08/24 11:07:34 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/04/21 12:52:06 jaapb Exp $
 bin/eliom-distillery
 bin/eliombuild
 bin/eliomc
@@ -103,7 +103,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_cscache.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_error_pages.cmx
 ${OCAML_SITELIB}/eliom/server/eliom_extension.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_extension.cmx
-${OCAML_SITELIB}/eliom/server/eliom_form.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_form.cmx
 ${OCAML_SITELIB}/eliom/server/eliom_form_sigs.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_lazy.cmx
 ${OCAML_SITELIB}/eliom/server/eliom_lib.cmi
@@ -182,13 +182,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/server.a
 ${OCAML_SITELIB}/eliom/server/server.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/server.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/server.cmxs
-${OCAML_SITELIB}/eliom/templates/basic.camlp4/.ocp-indent
-${OCAML_SITELIB}/eliom/templates/basic.camlp4/Makefile
-${OCAML_SITELIB}/eliom/templates/basic.camlp4/Makefile.options
-${OCAML_SITELIB}/eliom/templates/basic.camlp4/PROJECT_NAME.conf.in
-${OCAML_SITELIB}/eliom/templates/basic.camlp4/PROJECT_NAME.eliom
-${OCAML_SITELIB}/eliom/templates/basic.camlp4/README
-${OCAML_SITELIB}/eliom/templates/basic.camlp4/static!css!PROJECT_NAME.css
 ${OCAML_SITELIB}/eliom/templates/basic.ppx/.ocp-indent
 ${OCAML_SITELIB}/eliom/templates/basic.ppx/Makefile
 ${OCAML_SITELIB}/eliom/templates/basic.ppx/Makefile.options
