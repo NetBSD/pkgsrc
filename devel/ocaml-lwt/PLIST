@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/03/05 16:56:16 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/04/21 11:29:59 jaapb Exp $
 ${OCAML_SITELIB}/lwt/META
 ${OCAML_SITELIB}/lwt/dune-package
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/lwt.a
@@ -90,6 +90,11 @@ ${OCAML_SITELIB}/lwt/unix/lwt_engine.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/unix/lwt_engine.cmx
 ${OCAML_SITELIB}/lwt/unix/lwt_engine.ml
 ${OCAML_SITELIB}/lwt/unix/lwt_engine.mli
+${OCAML_SITELIB}/lwt/unix/lwt_features.cmi
+${OCAML_SITELIB}/lwt/unix/lwt_features.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/unix/lwt_features.cmx
+${OCAML_SITELIB}/lwt/unix/lwt_features.h
+${OCAML_SITELIB}/lwt/unix/lwt_features.ml
 ${OCAML_SITELIB}/lwt/unix/lwt_fmt.cmi
 ${OCAML_SITELIB}/lwt/unix/lwt_fmt.cmt
 ${OCAML_SITELIB}/lwt/unix/lwt_fmt.cmti
@@ -155,11 +160,8 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/unix/lwt_unix.cmxs
 ${OCAML_SITELIB}/lwt/unix/lwt_unix.h
 ${OCAML_SITELIB}/lwt/unix/lwt_unix.ml
 ${OCAML_SITELIB}/lwt/unix/lwt_unix.mli
-${OCAML_SITELIB}/lwt/unix/lwt_unix_jobs.cmi
-${OCAML_SITELIB}/lwt/unix/lwt_unix_jobs.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/unix/lwt_unix_jobs.cmx
-${OCAML_SITELIB}/lwt/unix/lwt_unix_jobs.ml
 ${OCAML_SITELIB}/stublibs/dlllwt_unix_stubs.so
 share/doc/lwt/CHANGES
 share/doc/lwt/LICENSE.md
 share/doc/lwt/README.md
+share/doc/lwt/odoc-pages/index.mld
