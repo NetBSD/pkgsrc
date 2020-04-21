@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/21 10:53:10 jaapb Exp $
+
+SHA1 (stdlib-shims-0.2.0.tar.gz) = 098f2a9ff8d3c44075c03b383a0818b70cc2c42d
+RMD160 (stdlib-shims-0.2.0.tar.gz) = c4f9c142ad9657213b80a4ba7b2411c5bffd1c58
+SHA512 (stdlib-shims-0.2.0.tar.gz) = 3f62bb2512a754bd9f1977fc6effcadd5887e251e66db35f527052db9b2c80e60295e10abfa416fe1de71b5f80b32318ac568ddf86c82a1e94e6dcb75d6ffee0
+Size (stdlib-shims-0.2.0.tar.gz) = 17528 bytes
