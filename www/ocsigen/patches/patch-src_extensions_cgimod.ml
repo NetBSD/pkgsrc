@@ -1,6 +1,7 @@
-$NetBSD: patch-src_extensions_cgimod.ml,v 1.3 2019/01/29 12:47:02 jaapb Exp $
+$NetBSD: patch-src_extensions_cgimod.ml,v 1.4 2020/04/21 11:51:02 jaapb Exp $
 
 Write correct request URI
+
 --- src/extensions/cgimod.ml.orig	2018-12-19 10:54:19.000000000 +0000
 +++ src/extensions/cgimod.ml
 @@ -270,7 +270,7 @@ let array_environment filename re doc_ro
