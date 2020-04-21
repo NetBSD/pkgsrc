@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2414 2020/04/21 10:18:35 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2415 2020/04/21 10:43:57 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3342,3 +3342,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/arqiver to 0.5.0 [pin 2020-04-21]
 	Updated net/dhcpcd to 9.0.2 [roy 2020-04-21]
 	Updated graphics/libcaca to 0.99.19 [nia 2020-04-21]
+	Updated devel/ocaml-logs to 0.7.0 [jaapb 2020-04-21]
