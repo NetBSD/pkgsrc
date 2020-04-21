@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.10 2019/04/29 16:09:05 hauke Exp $
+$NetBSD: distinfo,v 1.11 2020/04/21 13:42:52 mef Exp $
 
-SHA1 (cacti-1.2.3.tar.gz) = 8f9ef47264cd6fcfe3ad2053c9004cd7100127ae
-RMD160 (cacti-1.2.3.tar.gz) = 32e71256b160edf7b57c1a4a906a976911f3c533
-SHA512 (cacti-1.2.3.tar.gz) = 195d71a6eb08770211c30985ea3b96e2c4f84d91f16617a15e84fab0959a91f1f7923462ea931724a60580757662e01b335490f563d50e6e938c313dcf2044d0
-Size (cacti-1.2.3.tar.gz) = 23977004 bytes
+SHA1 (cacti-1.2.7.tar.gz) = ed2b24c0443d573ecba8686764fb1fd5f2dbb95c
+RMD160 (cacti-1.2.7.tar.gz) = d9a231d07f9994b1213bee326068836bff77bdba
+SHA512 (cacti-1.2.7.tar.gz) = 2fc31342aa23b4fa98e6f3cf6b7e42f8cf98f272232a1bceb1b256b2104ea26445c1be1c1ff83bf20d293a3c1e7a21eb3a871623f78069aea9b21151ac57a243
+Size (cacti-1.2.7.tar.gz) = 24819135 bytes
 SHA1 (patch-cacti.sql) = 7bdfe92fc5254762ec4f75019ca380754f5867d5
 SHA1 (patch-cli_install__cacti.php) = 76d6fc73607902d1863fdc54c4c98171c2817454
 SHA1 (patch-include_global.php) = c115a912c63617a4821690829b46ba7350e03c6b
-SHA1 (patch-include_global__settings.php) = 85247ece53fa08c38a6ac70509b0658fb8d4ee0f
-SHA1 (patch-install_functions.php) = 05fb12e1f034043fba8c9ccba0901b602ca5e828
+SHA1 (patch-include_global__settings.php) = e65425a6564541aa578366454a6a4cd5f8db3afc
+SHA1 (patch-install_functions.php) = dcfc37ca08fdd32b779c1f490bf1ef0bb3f7dc9e
 SHA1 (patch-lib_clog__webapi.php) = f17084d66ef21c4315547c389da6d94795ceeed8
 SHA1 (patch-lib_functions.php) = c29ce98afd2a865d3f307b25003af10bc9e8b13e
-SHA1 (patch-lib_installer.php) = 8d5f23369dc5dcfe8a99a3896a590f8d6f147968
+SHA1 (patch-lib_installer.php) = 8406eb68e394b993246519188ecce9300a173c85
 SHA1 (patch-lib_rrd.php) = 1f97271d4d4832f93b3e312b2d25281d1724aeec
 SHA1 (patch-poller__maintenance.php) = 91ad867cd958835412a652ff50ffb1ad3d1074fa
 SHA1 (patch-utilities.php) = 4a681095225c59f1d9a28408978af7b81a64141a
