@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2020/01/18 21:51:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2020/04/21 12:52:06 jaapb Exp $
 #
 
 GITHUB_PROJECT=	eliom
-DISTNAME=	${GITHUB_PROJECT}-6.7.0
+DISTNAME=	${GITHUB_PROJECT}-6.11.0
 CATEGORIES=	www
-PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
 MAINTAINER=	jaapb@NetBSD.org
@@ -15,6 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c
 OCAML_USE_FINDLIB=	yes
+UNLIMIT_RESOURCES+=	stacksize
 
 DEPENDS+=	ocsigen>=2.9:../../www/ocsigen
 #DEPENDS+=	ocaml-deriving-ocsigen>=0.8.1:../../devel/ocaml-deriving-ocsigen
