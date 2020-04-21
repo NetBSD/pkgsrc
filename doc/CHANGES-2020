@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2412 2020/04/21 08:12:21 pin Exp $
+$NetBSD: CHANGES-2020,v 1.2413 2020/04/21 10:00:24 roy Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3340,3 +3340,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated ham/xlog to 2.0.19 [mef 2020-04-20]
 	Updated devel/ninja-build to 1.10.0nb1 [dsainty 2020-04-21]
 	Updated archivers/arqiver to 0.5.0 [pin 2020-04-21]
+	Updated net/dhcpcd to 9.0.2 [roy 2020-04-21]
