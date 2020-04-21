@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/29 13:34:57 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/21 12:56:17 jaapb Exp $
 ${OCAML_SITELIB}/ocsigen-toolkit/META
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_buttons.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_buttons.cmo
@@ -6,6 +6,8 @@ ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_calendar.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_calendar.cmo
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_carousel.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_carousel.cmo
+${OCAML_SITELIB}/ocsigen-toolkit/client/ot_color_picker.cmi
+${OCAML_SITELIB}/ocsigen-toolkit/client/ot_color_picker.cmo
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_drawer.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_drawer.cmo
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_form.cmi
@@ -24,12 +26,12 @@ ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_picture_uploader.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_picture_uploader.cmo
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_popup.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_popup.cmo
+${OCAML_SITELIB}/ocsigen-toolkit/client/ot_pulltorefresh.cmi
+${OCAML_SITELIB}/ocsigen-toolkit/client/ot_pulltorefresh.cmo
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_range.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_range.cmo
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_size.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_size.cmo
-${OCAML_SITELIB}/ocsigen-toolkit/client/ot_social_meta.cmi
-${OCAML_SITELIB}/ocsigen-toolkit/client/ot_social_meta.cmo
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_spinner.cmi
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_spinner.cmo
 ${OCAML_SITELIB}/ocsigen-toolkit/client/ot_sticky.cmi
@@ -53,6 +55,8 @@ ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_calendar.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_calendar.cmx
 ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_carousel.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_carousel.cmx
+${OCAML_SITELIB}/ocsigen-toolkit/server/ot_color_picker.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_color_picker.cmx
 ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_drawer.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_drawer.cmx
 ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_form.cmi
@@ -71,12 +75,12 @@ ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_picture_uploader.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_picture_uploader.cmx
 ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_popup.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_popup.cmx
+${OCAML_SITELIB}/ocsigen-toolkit/server/ot_pulltorefresh.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_pulltorefresh.cmx
 ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_range.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_range.cmx
 ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_size.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_size.cmx
-${OCAML_SITELIB}/ocsigen-toolkit/server/ot_social_meta.cmi
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_social_meta.cmx
 ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_spinner.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_spinner.cmx
 ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_sticky.cmi
@@ -93,11 +97,13 @@ ${OCAML_SITELIB}/ocsigen-toolkit/server/ot_toggle.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-toolkit/server/ot_toggle.cmx
 share/ocsigen-toolkit/css/ot_buttons.css
 share/ocsigen-toolkit/css/ot_carousel.css
+share/ocsigen-toolkit/css/ot_color_picker.css
 share/ocsigen-toolkit/css/ot_datetime.css
 share/ocsigen-toolkit/css/ot_drawer.css
 share/ocsigen-toolkit/css/ot_icons.css
 share/ocsigen-toolkit/css/ot_page_transition.css
 share/ocsigen-toolkit/css/ot_picture_uploader.css
 share/ocsigen-toolkit/css/ot_popup.css
+share/ocsigen-toolkit/css/ot_pull_to_refresh.css
 share/ocsigen-toolkit/css/ot_spinner.css
 share/ocsigen-toolkit/css/ot_sticky.css
