@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2019/11/04 22:09:58 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/21 13:02:02 jaapb Exp $
 
 GITHUB_PROJECT=	ocsigen-i18n
-DISTNAME=	${GITHUB_PROJECT}-3.4.0
+DISTNAME=	${GITHUB_PROJECT}-3.5.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=besport/}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/besport/ocsigen-i18n/
-COMMENT=	i18n package for Ocsigen
+COMMENT=	I18n package for Ocsigen
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		# none
@@ -27,4 +27,5 @@ MAKE_ENV+=	OPTNESS=native
 MAKE_ENV+=	OPTNESS=byte
 .endif
 
+.include "../../devel/ocaml-ppx_tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
