@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2426 2020/04/21 11:39:43 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2427 2020/04/21 11:43:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3343,9 +3343,12 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dhcpcd to 9.0.2 [roy 2020-04-21]
 	Updated graphics/libcaca to 0.99.19 [nia 2020-04-21]
 	Updated devel/ocaml-logs to 0.7.0 [jaapb 2020-04-21]
+	Updated net/p5-Test-DNS to 0.203 [mef 2020-04-21]
 	Updated devel/ocaml-resource-pooling to 1.1 [jaapb 2020-04-21]
 	Added devel/ocaml-stdlib-shims version 0.2.0 [jaapb 2020-04-21]
 	Updated textproc/ocaml-markup to 0.8.2 [jaapb 2020-04-21]
+	Updated net/p5-Net-Amazon-S3 to 0.89 [mef 2020-04-21]
+	Updated net/p5-WebService-MusicBrainz to 1.0.5 [mef 2020-04-21]
 	Updated news/cleanscore to 0.9.8.1nb10 [micha 2020-04-21]
 	Updated www/ocaml-uri to 3.1.0 [jaapb 2020-04-21]
 	Updated www/ocaml-cohttp to 2.5.1 [jaapb 2020-04-21]
