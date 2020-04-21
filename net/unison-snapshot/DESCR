@@ -6,3 +6,5 @@ the changes in each replica to the other.
 
 This package contains a snapshot of the git repository to get
 bugfixes not in the latest release.
+
+This version interoperates with net/unison2.51.
