@@ -1,6 +1,7 @@
-$NetBSD: patch-template.distillery_Makefile.db,v 1.1 2018/06/06 09:45:01 jaapb Exp $
+$NetBSD: patch-template.distillery_Makefile.db,v 1.2 2020/04/21 13:06:00 jaapb Exp $
 
 Avoid error with wrongly set locale in template
+
 --- template.distillery/Makefile.db.orig	2018-03-09 16:47:43.000000000 +0000
 +++ template.distillery/Makefile.db
 @@ -98,7 +98,7 @@ $(PSQL_DIR):

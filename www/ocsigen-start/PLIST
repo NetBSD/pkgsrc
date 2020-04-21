@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/29 14:23:07 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/21 13:06:00 jaapb Exp $
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/.eliomignore
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/.eliomreserve
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/.eliomverbatim
@@ -51,6 +51,7 @@ ${OCAML_SITELIB}/eliom/templates/os.pgocaml/demo_pagetransition.eliom
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/demo_pgocaml.eliom
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/demo_pgocaml_db.ml
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/demo_popup.eliom
+${OCAML_SITELIB}/eliom/templates/os.pgocaml/demo_pulltorefresh.eliom
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/demo_react.eliom
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/demo_ref.eliom
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/demo_rpc.eliom
@@ -129,7 +130,7 @@ ${OCAML_SITELIB}/ocsigen-start/client/os_user_proxy.cmi
 ${OCAML_SITELIB}/ocsigen-start/client/os_user_proxy.cmo
 ${OCAML_SITELIB}/ocsigen-start/client/os_user_view.cmi
 ${OCAML_SITELIB}/ocsigen-start/client/os_user_view.cmo
-${OCAML_SITELIB}/ocsigen-start/server/ocsigen-start.server.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-start/server/ocsigen-start.server.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-start/server/ocsigen-start.server.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-start/server/ocsigen-start.server.cmxs
 ${OCAML_SITELIB}/ocsigen-start/server/os_comet.cmi
