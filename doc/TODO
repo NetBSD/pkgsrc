@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19840 2020/04/21 10:18:35 nia Exp $
+$NetBSD: TODO,v 1.19841 2020/04/21 13:55:36 mef Exp $
 
 Suggested new packages
 ======================
@@ -465,7 +465,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bzr-svn-1.2.2
 	o bzrtools-2.6.0
 	o c4-1.10
-	o cacti-1.2.7
 	o cacti-spine-1.2.7
 	o cal3d-0.11.0
 	o calc-2.11.10.1
