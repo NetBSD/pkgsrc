@@ -1,9 +1,9 @@
-$NetBSD: patch-lib_installer.php,v 1.2 2019/04/29 16:09:05 hauke Exp $
+$NetBSD: patch-lib_installer.php,v 1.3 2020/04/21 13:42:52 mef Exp $
 
 Make log directory configurable by package variable
 
---- lib/installer.php.orig	2019-03-30 23:40:23.000000000 +0000
-+++ lib/installer.php
+--- lib/installer.php.orig	2019-09-30 03:36:29.000000000 +0900
++++ lib/installer.php	2020-04-21 22:17:18.590745257 +0900
 @@ -465,7 +465,7 @@ class Installer implements JsonSerializa
  
  		$always_paths = array(
@@ -13,12 +13,12 @@ Make log directory configurable by package variable
  			$config['base_path'] . '/cache/boost',
  			$config['base_path'] . '/cache/mibcache',
  			$config['base_path'] . '/cache/realtime',
-@@ -3184,7 +3184,7 @@ class Installer implements JsonSerializa
- 
- 	public static function getInstallLog() {
+@@ -3226,7 +3226,7 @@ class Installer implements JsonSerializa
  		global $config;
--		$logcontents = tail_file($config['base_path'] . '/log/cacti.log', 100, -1, ' INSTALL:' , 1, $total_rows);
-+		$logcontents = tail_file('@CACTI_LOGDIR@' . '/cacti.log', 100, -1, ' INSTALL:' , 1, $total_rows);
+ 
+ 		$page_nr = 1;
+-		$logcontents = tail_file($config['base_path'] . '/log/cacti.log', 100, -1, ' INSTALL:' , $page_nr, $total_rows);
++		$logcontents = tail_file($config['base_path'] . '/cacti.log', 100, -1, ' INSTALL:' , $page_nr, $total_rows);
  
  		$output_log = '';
  		foreach ($logcontents as $logline) {
