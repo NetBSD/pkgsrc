@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2439 2020/04/21 14:22:38 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2440 2020/04/21 16:06:28 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3369,3 +3369,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated filesystems/fuse-curlftpfs to 0.9.2 [nia 2020-04-21]
 	Updated mail/mutt to 1.13.5 [nia 2020-04-21]
 	Updated security/keepassxc to 2.5.4 [nia 2020-04-21]
+	Updated databases/elasticsearch to 6.8.8 [jperkin 2020-04-21]
