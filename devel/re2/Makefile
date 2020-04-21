@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/02/26 16:20:43 nia Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/21 12:31:19 jperkin Exp $
 
 DISTNAME=	re2-20200101
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ COMMENT=	Regular expression library
 LICENSE=	modified-bsd
 
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake gsed pkg-config
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixup pathnames
