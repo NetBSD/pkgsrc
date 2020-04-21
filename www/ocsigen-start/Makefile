@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2019/11/04 22:09:58 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/04/21 13:06:00 jaapb Exp $
 
 GITHUB_PROJECT=	ocsigen-start
-DISTNAME=	${GITHUB_PROJECT}-1.7.0
+DISTNAME=	${GITHUB_PROJECT}-2.16.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -44,12 +44,12 @@ SUBST_SED.fix-md5=	-e 's,md5sum,md5,g'
 pre-configure:
 	${RUN} cd ${WRKSRC} && rm -f template.distillery/*.orig
 
-.include "../../databases/ocaml-macaque/buildlink3.mk"
-.include "../../devel/ocaml-lwt_camlp4/buildlink3.mk"
+.include "../../databases/pgocaml/buildlink3.mk"
 .include "../../devel/ocaml-lwt_log/buildlink3.mk"
 .include "../../devel/ocaml-resource-pooling/buildlink3.mk"
 .include "../../devel/ocaml-yojson/buildlink3.mk"
 .include "../../security/ocaml-safepass/buildlink3.mk"
+.include "../../www/ocaml-cohttp/buildlink3.mk"
 .include "../../www/ocsigen-i18n/buildlink3.mk"
 .include "../../www/ocsigen-toolkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
