@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/21 11:34:01 wiz Exp $
+bin/unison
+share/doc/unison/BUGS.txt
+share/doc/unison/CONTRIB
+share/doc/unison/COPYING
+share/doc/unison/NEWS
+share/doc/unison/README
+share/doc/unison/ROADMAP.txt
+share/doc/unison/TODO.txt
