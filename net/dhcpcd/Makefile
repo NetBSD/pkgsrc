@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2020/04/13 16:24:09 roy Exp $
+# $NetBSD: Makefile,v 1.100 2020/04/21 09:59:48 roy Exp $
 
-DISTNAME=		dhcpcd-9.0.1
+DISTNAME=		dhcpcd-9.0.2
 PKGNAME=		${DISTNAME:S/-rc/rc/}
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
