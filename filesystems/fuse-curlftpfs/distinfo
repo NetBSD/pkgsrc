@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 00:15:00 agc Exp $
+$NetBSD: distinfo,v 1.8 2020/04/21 13:56:25 nia Exp $
 
-SHA1 (curlftpfs-0.9.1.tar.gz) = 768385f68f7e128ec9e852bbf7860a632e8e3c46
-RMD160 (curlftpfs-0.9.1.tar.gz) = bb1a156160ff4bd517410f872f68ba77c8085b11
-SHA512 (curlftpfs-0.9.1.tar.gz) = 4714860e18707b04e96c9fc934ec348977ade8c41ab9804ab27433a3fc763d7f0638fbe7720cb043742c292764e7170a44a2d832884366d3e1d832e38bbeae94
-Size (curlftpfs-0.9.1.tar.gz) = 362542 bytes
-SHA1 (patch-aa) = bfa05b8930560ffe25c3a2b12ff9497c0c5d37c4
-SHA1 (patch-ab) = 32f21df67c043bd8fb60f9a217fc00767ad36b10
+SHA1 (curlftpfs-0.9.2.tar.gz) = 83f148afe6bd4d44c9790790f1c30986c8b9ea56
+RMD160 (curlftpfs-0.9.2.tar.gz) = 16740731fc75b4249a8fddcae355ad1a9d408061
+SHA512 (curlftpfs-0.9.2.tar.gz) = df07c418d175f766c89525017fc56e79726061eee0c3a6607ded0e1bf24f64f1475ba0e546157b65892194e3c4414c120822bf8fb175437e68366f82de216067
+Size (curlftpfs-0.9.2.tar.gz) = 365503 bytes
+SHA1 (patch-ftpfs.h) = e658fe0e9fffa47e69fe35c9f1a8f465aa5c45e6
+SHA1 (patch-tests_run__tests.sh) = 2b7b20f3490b8fc0026c148b2a9d7dbac2a33362
