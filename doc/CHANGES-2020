@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2419 2020/04/21 11:18:32 micha Exp $
+$NetBSD: CHANGES-2020,v 1.2420 2020/04/21 11:22:06 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3347,3 +3347,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/ocaml-stdlib-shims version 0.2.0 [jaapb 2020-04-21]
 	Updated textproc/ocaml-markup to 0.8.2 [jaapb 2020-04-21]
 	Updated news/cleanscore to 0.9.8.1nb10 [micha 2020-04-21]
+	Updated www/ocaml-uri to 3.1.0 [jaapb 2020-04-21]
