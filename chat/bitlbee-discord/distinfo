@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/07/28 15:16:36 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/04/22 04:39:48 nia Exp $
 
-SHA1 (bitlbee-discord-0.4.2.tar.gz) = 583183036ff09f0e455b7392209fc72f5c5b4de9
-RMD160 (bitlbee-discord-0.4.2.tar.gz) = bb0c193451a83c26effa4bd4ba2269ca4f9e351c
-SHA512 (bitlbee-discord-0.4.2.tar.gz) = fc344e804070ab477fa4c9b4ceae024f8e4771e847fa06b7c6042c49972aafcf533dd5c7413aafe9fb673eaeedfd6590e8931ccef8840acc12a9d9622c914ab3
-Size (bitlbee-discord-0.4.2.tar.gz) = 33704 bytes
+SHA1 (bitlbee-discord-0.4.3.tar.gz) = 1b7f44d6d09f287c193d71f2247a4a97e49d6d50
+RMD160 (bitlbee-discord-0.4.3.tar.gz) = 17b8393b569f34b44f4f5fa1115c446ad22e723d
+SHA512 (bitlbee-discord-0.4.3.tar.gz) = 7a8ec073bb028fa8ed2cd7bec163626cb3be134b9ac9d32e0c2b8e8f5e72d9b61f9b84c9c602568d6818f049f50637c754566925c6d7af62f8b757536a95b05c
+Size (bitlbee-discord-0.4.3.tar.gz) = 34144 bytes
