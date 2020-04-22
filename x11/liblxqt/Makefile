@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/04/12 08:28:13 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/22 08:46:30 pin Exp $
 
 DISTNAME=	liblxqt-0.14.1
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/liblxqt/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Core utility library for all LXQt components
 LICENSE=	gnu-lgpl-v2.1
