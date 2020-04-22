@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2019/12/31 11:16:49 ng0 Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/22 08:35:27 pin Exp $
 
 DISTNAME=	ufetch-v0.2
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://gitlab.com/jschx/ufetch/-/archive/v${PKGVERSION_NOREV}/
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://gitlab.com/jschx/ufetch/
 COMMENT=	Tiny system info for Unix-like Operating Systems
 LICENSE=	isc
