@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2466 2020/04/22 08:48:26 pin Exp $
+$NetBSD: CHANGES-2020,v 1.2467 2020/04/22 09:27:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3384,18 +3384,3 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-cryptography to 2.9.1 [adam 2020-04-22]
 	Updated emulators/caprice32 to 4.6.0 [nia 2020-04-22]
 	Updated editors/focuswriter to 1.7.6 [pin 2020-04-22]
-	Updated wm/sowm to 1.6 [pin 2020-04-22]
-	Updated editors/featherpad to 0.13.1nb1 [pin 2020-04-22]
-	Updated editors/feathernotes to 0.6.0nb1 [pin 2020-04-22]
-	Updated graphics/kvantum to 0.15.2 [pin 2020-04-22]
-	Updated graphics/lximage-qt to 0.14.1nb3 [pin 2020-04-22]
-	Updated archivers/arqiver to 0.5.0 [pin 2020-04-22]
-	Updated devel/lxqt-build-tools to 0.6.0nb3 [pin 2020-04-22]
-	Updated sysutils/pcmanfm-qt to 0.14.1nb3 [pin 2020-04-22]
-	Updated sysutils/ufetch to 0.2 [pin 2020-04-22]
-	Updated x11/libqtxdg to 3.4.0nb3 [pin 2020-04-22]
-	Updated x11/qterminal to 0.14.1nb3 [pin 2020-04-22]
-	Updated x11/libfm-qt to 0.14.1nb3 [pin 2020-04-22]
-	Updated x11/qtermwidget to 0.14.1nb3 [pin 2020-04-22]
-	Updated x11/liblxqt to 0.14.1nb3 [pin 2020-04-22]
-	Updated x11/qt5ct to 0.41nb4 [pin 2020-04-22]
