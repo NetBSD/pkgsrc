@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2454 2020/04/22 08:25:12 pin Exp $
+$NetBSD: CHANGES-2020,v 1.2455 2020/04/22 08:27:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3387,3 +3387,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated wm/sowm to 1.6 [pin 2020-04-22]
 	Updated editors/featherpad to 0.13.1nb1 [pin 2020-04-22]
 	Updated editors/feathernotes to 0.6.0nb1 [pin 2020-04-22]
+	Updated graphics/kvantum to 0.15.2 [pin 2020-04-22]
