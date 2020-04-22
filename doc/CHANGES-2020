@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2441 2020/04/21 17:03:32 nils Exp $
+$NetBSD: CHANGES-2020,v 1.2442 2020/04/22 04:26:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3371,3 +3371,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/keepassxc to 2.5.4 [nia 2020-04-21]
 	Updated databases/elasticsearch to 6.8.8 [jperkin 2020-04-21]
 	Updated sysutils/logrotate to 3.16.0 [nils 2020-04-21]
+	Updated audio/audacious-plugins to 4.0.2 [nia 2020-04-22]
