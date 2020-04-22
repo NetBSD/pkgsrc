@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/04/12 08:28:12 adam Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/22 08:43:33 pin Exp $
 
 DISTNAME=	libfm-qt-0.14.1
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/libfm-qt/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Core library of PCManFM-Qt
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
