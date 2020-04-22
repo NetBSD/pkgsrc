@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2020/04/12 17:32:45 pin Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/22 08:21:06 pin Exp $
 
 DISTNAME=	sowm-1.6
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dylanaraps/}
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/dylanaraps/sowm/
 COMMENT=	Itsy bitsy floating window manager
 LICENSE=	mit
