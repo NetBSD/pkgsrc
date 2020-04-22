@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2020/03/29 01:06:11 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2020/04/22 23:17:05 dsainty Exp $
 
 # See wip/zoneminder for a draft update to 1.29.0.
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
@@ -21,6 +21,7 @@ EXTRACT_USING=	gtar
 
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
+# This PHP 5.6 limitation is only to match the limitation in php-mysql
 PHP_VERSIONS_ACCEPTED=	56
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zoneminder
