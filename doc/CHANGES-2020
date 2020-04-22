@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2443 2020/04/22 04:40:08 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2444 2020/04/22 04:41:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3373,3 +3373,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/logrotate to 3.16.0 [nils 2020-04-21]
 	Updated audio/audacious-plugins to 4.0.2 [nia 2020-04-22]
 	Updated chat/bitlbee-discord to 0.4.3 [nia 2020-04-22]
+	Updated chat/bitlbee-mastodon to 1.4.4 [nia 2020-04-22]
