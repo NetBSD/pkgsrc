@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/06 12:23:01 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/22 08:13:39 nia Exp $
 bin/cap32
 man/man6/cap32.6
+share/applications/caprice32.desktop
 share/caprice32/resources/audio.bmp
 share/caprice32/resources/cap32logo.bmp
 share/caprice32/resources/disk.bmp
 share/caprice32/resources/general.bmp
 share/caprice32/resources/input.bmp
+share/caprice32/resources/keymap_de_linux.map
+share/caprice32/resources/keymap_de_win.map
 share/caprice32/resources/keymap_es_linux.map
 share/caprice32/resources/keymap_es_win.map
 share/caprice32/resources/keymap_fr_linux.map
@@ -18,3 +21,5 @@ share/caprice32/resources/vera_mono.ttf
 share/caprice32/resources/vera_sans.ttf
 share/caprice32/resources/video.bmp
 share/examples/caprice32/cap32.cfg
+share/pixmaps/caprice32.png
+@pkgdir share/caprice32/rom

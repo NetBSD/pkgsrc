@@ -1,19 +1,19 @@
-$NetBSD: patch-doc_man6_cap32.6,v 1.1 2020/03/06 12:23:01 nia Exp $
+$NetBSD: patch-doc_man6_cap32.6,v 1.2 2020/04/22 08:13:40 nia Exp $
 
 Fix path.
 
---- doc/man6/cap32.6.orig	2019-01-04 19:01:29.000000000 +0000
+--- doc/man6/cap32.6.orig	2020-03-14 14:36:08.000000000 +0000
 +++ doc/man6/cap32.6
-@@ -26,7 +26,7 @@ The \fBrom_path\fR entry in the configur
+@@ -34,7 +34,7 @@ When launched, Caprice32 will look for a
+ .br
+   - \fB$HOME/.cap32.cfg\fR for compatibility. 
+ .br
+-  - \fB/etc/cap32.cfg\fR.
++  - \fB@PKG_SYSCONFDIR@/cap32.cfg\fR.
+ .br
+ Caprice32 will use the first valid file it finds. If no configuration file is found, a default configuration will be used.
  .PP
- \fBConfiguration\fR
- .RS
--When launched, Caprice32 will look for a configuration file in several locations. If a configuration file was specified using the \fB\-\-cfg_file\fR command line switch, Caprice32 will try and use it. If no configuration file was specified, or the configuration file specified does not exist, Caprice32 will try and open, in this order: \fB$CWD/cap32.cfg\fR ($CWD being the directory where the cap32 executable resides), then a \fB.cap32.cfg\fR file in the user home directory, then \fB/etc/cap32.cfg\fR. Caprice32 will use the first valid file it finds. If no configuration file is found, a default configuration will be used.
-+When launched, Caprice32 will look for a configuration file in several locations. If a configuration file was specified using the \fB\-\-cfg_file\fR command line switch, Caprice32 will try and use it. If no configuration file was specified, or the configuration file specified does not exist, Caprice32 will try and open, in this order: \fB$CWD/cap32.cfg\fR ($CWD being the directory where the cap32 executable resides), then a \fB.cap32.cfg\fR file in the user home directory, then \fB@PKG_SYSCONFDIR@/cap32.cfg\fR. Caprice32 will use the first valid file it finds. If no configuration file is found, a default configuration will be used.
- .PP
- The configuration file contains various configuration parameters, some of which can be modified from the GUI.
- When saving the configuration from the GUI, it will be written in the configuration file specified by the \fB\-\-cfg_file\fR switch, if it exists, else in $CWD/cap32.cfg if it exists, otherwise in $HOME/.cap32.cfg.
-@@ -138,7 +138,7 @@ The screen capture code uses driedfruit 
+@@ -148,7 +148,7 @@ The screen capture code uses driedfruit 
  .SH FILES
  $HOME/.cap32.cfg
  .br
