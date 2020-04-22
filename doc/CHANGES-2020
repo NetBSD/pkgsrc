@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2446 2020/04/22 05:06:23 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2447 2020/04/22 06:38:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3377,3 +3377,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/bftpd to 5.5 [nia 2020-04-22]
 	Updated mail/balsa to 2.6.0 [nia 2020-04-22]
 	Updated devel/byacc to 20200330 [nia 2020-04-22]
+	Updated misc/stellarium to 0.20.1 [adam 2020-04-22]
+	Updated www/py-aiohttp-socks to 0.3.8 [adam 2020-04-22]
