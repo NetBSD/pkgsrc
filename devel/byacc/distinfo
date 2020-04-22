@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2018/12/08 12:22:03 wen Exp $
+$NetBSD: distinfo,v 1.10 2020/04/22 05:05:56 nia Exp $
 
-SHA1 (byacc-20180609.tgz) = 414172ab152d1a9b273c16013295e37adcbeac1a
-RMD160 (byacc-20180609.tgz) = 2784ffe49fd3c4724deacbfbc6b9c481efa3bad2
-SHA512 (byacc-20180609.tgz) = 45aa6de839ca23385ab832685fdaa49225dcde6a40bdb990eefde8ab1be2cfe063875072e844629ac91e9533e6e310fa0bb8a6bd01e246a1cefc67bbc3c175f9
-Size (byacc-20180609.tgz) = 745317 bytes
+SHA1 (byacc-20200330.tgz) = 3e64f5aa03a4b416d61fb7db9b2ef40ad54f0dca
+RMD160 (byacc-20200330.tgz) = 20dced16fe511f4179f189e56fb5d1b2226cac84
+SHA512 (byacc-20200330.tgz) = df8cc1aa550d633ab547a13a4f091d8c940a9a67b52dc5ecacad5b005fd54c3ceb1269593068c1a7949049e85b6e6eea20cffbbf4b408e049fde75c0ffe51f07
+Size (byacc-20200330.tgz) = 872217 bytes
