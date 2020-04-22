@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/04/18 14:56:06 nikita Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/22 20:51:22 nikita Exp $
 
 DISTNAME=	minify-2.7.3
 PKGNAME=	go-${DISTNAME}
@@ -16,7 +16,7 @@ GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/tdewolff/minify
 
 post-configure:
-	cd ${WRKSRC} && rm cmd/minify/install.sh.orig
+	cd ${WRKSRC} && ${RM} cmd/minify/install.sh.orig
 
 .include "../../www/go-parse/buildlink3.mk"
 .include "../../devel/go-humanize/buildlink3.mk"
