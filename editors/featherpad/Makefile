@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/04/12 08:28:35 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/04/22 08:23:13 pin Exp $
 
 VERSION=	0.13.1
 DISTNAME=	FeatherPad-V${VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/tsujan/FeatherPad/
 COMMENT=	Lightweight Qt5 plain-text editor
 LICENSE=	gnu-gpl-v3
