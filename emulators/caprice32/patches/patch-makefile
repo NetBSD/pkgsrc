@@ -1,18 +1,12 @@
-$NetBSD: patch-makefile,v 1.1 2020/03/06 12:23:01 nia Exp $
+$NetBSD: patch-makefile,v 1.2 2020/04/22 08:13:40 nia Exp $
 
-We pass our own flags.
+- Don't force -O2
+- Use the executable for the "all" target
+- Use BSD_INSTALL_*.
 
---- makefile.orig	2019-01-04 19:01:29.000000000 +0000
+--- makefile.orig	2020-03-14 14:36:08.000000000 +0000
 +++ makefile
-@@ -50,7 +50,6 @@ COMMON_CFLAGS += -DWITH_IPF
- LIBS += $(MINGW_PATH)/bin/$(CAPSIPFDLL)
- endif
- else
--prefix = /usr/local
- TARGET = cap32
- TEST_TARGET = test_runner
- IPATHS = -Isrc/ -Isrc/gui/includes `pkg-config --cflags freetype2` `sdl-config --cflags` `pkg-config --cflags libpng`
-@@ -97,7 +96,7 @@ TEST_OBJECTS:=$(TEST_DEPENDS:.d=.o)
+@@ -104,7 +104,7 @@ TEST_OBJECTS:=$(TEST_DEPENDS:.d=.o)
  WARNINGS = -Wall -Wextra -Wzero-as-null-pointer-constant -Wformat=2 -Wold-style-cast -Wmissing-include-dirs -Wlogical-op -Woverloaded-virtual -Wpointer-arith -Wredundant-decls
  COMMON_CFLAGS += $(CFLAGS) -std=c++11 $(IPATHS)
  DEBUG_FLAGS = -Werror -g -O0 -DDEBUG
@@ -21,7 +15,7 @@ We pass our own flags.
  BUILD_FLAGS = $(RELEASE_FLAGS)
  
  debug: BUILD_FLAGS:=$(DEBUG_FLAGS)
-@@ -117,7 +116,7 @@ ifdef DEBUG
+@@ -124,7 +124,7 @@ ifdef DEBUG
  BUILD_FLAGS = $(DEBUG_FLAGS)
  all: check_deps debug
  else
@@ -30,7 +24,7 @@ We pass our own flags.
  endif
  
  # gtest doesn't build with warnings flags, hence the COMMON_CFLAGS
-@@ -204,11 +203,15 @@ distrib: $(TARGET)
+@@ -211,11 +211,19 @@ distrib: $(TARGET)
  	ln -s caprice32-$(VERSION).tar.bz2 $(ARCHIVE)/caprice32_$(VERSION).orig.tar.bz2 || true
  
  install: $(TARGET)
@@ -46,7 +40,11 @@ We pass our own flags.
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(prefix)/share/examples/caprice32
 +	$(BSD_INSTALL_DATA) cap32.cfg $(DESTDIR)$(prefix)/share/examples/caprice32/cap32.cfg
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(prefix)/share/caprice32/resources
-+	$(BSD_INSTALL_DATA) resources/* $(DESTDIR)$(prefix)/share/caprice32/resources
++	$(BSD_INSTALL_DATA) resources/*.* $(DESTDIR)$(prefix)/share/caprice32/resources
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(prefix)/share/pixmaps
++	$(BSD_INSTALL_DATA) resources/freedesktop/caprice32.png $(DESTDIR)$(prefix)/share/pixmaps
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(prefix)/share/applications
++	$(BSD_INSTALL_DATA) resources/freedesktop/caprice32.desktop $(DESTDIR)$(prefix)/share/applications
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(prefix)/share/caprice32/rom
  endif
  
