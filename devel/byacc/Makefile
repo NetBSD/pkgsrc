@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2019/06/22 11:37:13 nia Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/22 05:05:56 nia Exp $
 #
 
-DISTNAME=	byacc-20180609
+DISTNAME=	byacc-20200330
 CATEGORIES=	devel
 MASTER_SITES=	https://invisible-mirror.net/archives/byacc/
 EXTRACT_SUFX=	.tgz
