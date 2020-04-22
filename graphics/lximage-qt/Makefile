@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/04/12 08:28:50 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/22 08:28:11 pin Exp $
 
 DISTNAME=	lximage-qt-0.14.1
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lximage-qt/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Image viewer and screenshot tool for the LXQt desktop
 LICENSE=	gnu-gpl-v2
