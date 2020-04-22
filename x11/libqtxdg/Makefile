@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/04/12 08:28:13 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/22 08:40:07 pin Exp $
 
 DISTNAME=	libqtxdg-3.4.0
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/libqtxdg/3.4.0/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pin@NNetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Qt implementation of freedesktop.org xdg specs
 LICENSE=	gnu-lgpl-v2.1
