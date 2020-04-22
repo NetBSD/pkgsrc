@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2442 2020/04/22 04:26:10 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2443 2020/04/22 04:40:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3372,3 +3372,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/elasticsearch to 6.8.8 [jperkin 2020-04-21]
 	Updated sysutils/logrotate to 3.16.0 [nils 2020-04-21]
 	Updated audio/audacious-plugins to 4.0.2 [nia 2020-04-22]
+	Updated chat/bitlbee-discord to 0.4.3 [nia 2020-04-22]
