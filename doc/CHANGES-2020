@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2448 2020/04/22 06:53:14 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.2449 2020/04/22 07:20:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3380,3 +3380,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/stellarium to 0.20.1 [adam 2020-04-22]
 	Updated www/py-aiohttp-socks to 0.3.8 [adam 2020-04-22]
 	Updated devel/glib2 to 2.64.2nb1 [triaxx 2020-04-22]
+	Updated security/py-cryptography_vectors to 2.9.1 [adam 2020-04-22]
+	Updated security/py-cryptography to 2.9.1 [adam 2020-04-22]
