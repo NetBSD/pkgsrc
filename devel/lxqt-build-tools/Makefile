@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/04/12 08:28:32 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/22 08:31:54 pin Exp $
 
 DISTNAME=	lxqt-build-tools-0.6.0
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-build-tools/0.6.0/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	LXQt build tools
 LICENSE=	modified-bsd
