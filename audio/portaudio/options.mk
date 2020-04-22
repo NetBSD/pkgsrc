@@ -1,8 +1,15 @@
-# $NetBSD: options.mk,v 1.3 2019/11/29 17:34:09 nia Exp $
+# $NetBSD: options.mk,v 1.4 2020/04/22 10:47:47 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.portaudio
-PKG_SUPPORTED_OPTIONS=		alsa jack debug
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+PKG_SUPPORTED_OPTIONS=		alsa jack
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
+.endif
+
+PKG_SUPPORTED_OPTIONS+=		debug
 
 .include "../../mk/bsd.options.mk"
 
