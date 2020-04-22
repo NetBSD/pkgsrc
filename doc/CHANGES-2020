@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2453 2020/04/22 08:23:41 pin Exp $
+$NetBSD: CHANGES-2020,v 1.2454 2020/04/22 08:25:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3386,3 +3386,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/focuswriter to 1.7.6 [pin 2020-04-22]
 	Updated wm/sowm to 1.6 [pin 2020-04-22]
 	Updated editors/featherpad to 0.13.1nb1 [pin 2020-04-22]
+	Updated editors/feathernotes to 0.6.0nb1 [pin 2020-04-22]
