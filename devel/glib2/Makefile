@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.272 2020/04/12 10:39:31 adam Exp $
+# $NetBSD: Makefile,v 1.273 2020/04/22 06:45:43 triaxx Exp $
 
 .include "Makefile.common"
 
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 COMMENT=	Some useful routines for C programming (glib2)
 
@@ -10,6 +11,9 @@ COMMENT=	Some useful routines for C programming (glib2)
 MESON_ARGS+=	-Dinstalled_tests=false
 # Avoid linux dependency on libmount-dev
 MESON_ARGS+=	-Dlibmount=disabled
+.if ${OPSYS} == "FreeBSD"
+MESON_ARGS+=	-Db_lundef=false
+.endif
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC}/output/gobject:${WRKSRC}/output/gmodule
 
