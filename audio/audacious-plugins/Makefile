@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2020/04/19 11:33:46 nia Exp $
+# $NetBSD: Makefile,v 1.106 2020/04/22 04:25:54 nia Exp $
 
-DISTNAME=	audacious-plugins-4.0.1
+DISTNAME=	audacious-plugins-4.0.2
 CATEGORIES=	audio
 MASTER_SITES=	https://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
