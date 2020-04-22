@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/19 11:57:23 pin Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/22 08:26:45 pin Exp $
 
 VERSION=	0.15.2
 DISTNAME=	Kvantum-V${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/tsujan/Kvantum/
 COMMENT=	SVG-based theme engine for Qt and KDE
 LICENSE=	gnu-gpl-v3
