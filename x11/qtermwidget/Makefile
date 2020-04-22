@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/04/12 08:29:21 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/22 08:45:02 pin Exp $
 
 DISTNAME=	qtermwidget-0.14.1
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/qtermwidget/0.14.1/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
 COMMENT=	Terminal emulator widget for Qt5
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
