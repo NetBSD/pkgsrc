@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2464 2020/04/22 08:45:25 pin Exp $
+$NetBSD: CHANGES-2020,v 1.2465 2020/04/22 08:46:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3397,3 +3397,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/qterminal to 0.14.1nb3 [pin 2020-04-22]
 	Updated x11/libfm-qt to 0.14.1nb3 [pin 2020-04-22]
 	Updated x11/qtermwidget to 0.14.1nb3 [pin 2020-04-22]
+	Updated x11/liblxqt to 0.14.1nb3 [pin 2020-04-22]
