@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2451 2020/04/22 08:19:15 pin Exp $
+$NetBSD: CHANGES-2020,v 1.2452 2020/04/22 08:21:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3384,3 +3384,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-cryptography to 2.9.1 [adam 2020-04-22]
 	Updated emulators/caprice32 to 4.6.0 [nia 2020-04-22]
 	Updated editors/focuswriter to 1.7.6 [pin 2020-04-22]
+	Updated wm/sowm to 1.6 [pin 2020-04-22]
