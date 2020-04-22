@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.12 2020/04/12 08:27:55 adam Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/22 19:36:32 gdt Exp $
 
-# Upgrade to 1.5.1 is on hold because it requires proj 6
 DISTNAME=	libgeotiff-1.5.1
 PKGREVISION=	1
 CATEGORIES=	geography
