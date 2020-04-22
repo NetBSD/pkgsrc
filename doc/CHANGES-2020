@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2459 2020/04/22 08:34:11 pin Exp $
+$NetBSD: CHANGES-2020,v 1.2460 2020/04/22 08:35:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3392,3 +3392,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/arqiver to 0.5.0 [pin 2020-04-22]
 	Updated devel/lxqt-build-tools to 0.6.0nb3 [pin 2020-04-22]
 	Updated sysutils/pcmanfm-qt to 0.14.1nb3 [pin 2020-04-22]
+	Updated sysutils/ufetch to 0.2 [pin 2020-04-22]
