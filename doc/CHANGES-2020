@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2461 2020/04/22 08:40:34 pin Exp $
+$NetBSD: CHANGES-2020,v 1.2462 2020/04/22 08:42:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3394,3 +3394,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/pcmanfm-qt to 0.14.1nb3 [pin 2020-04-22]
 	Updated sysutils/ufetch to 0.2 [pin 2020-04-22]
 	Updated x11/libqtxdg to 3.4.0nb3 [pin 2020-04-22]
+	Updated x11/qterminal to 0.14.1nb3 [pin 2020-04-22]
