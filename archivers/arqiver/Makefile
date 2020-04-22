@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/04/21 08:11:19 pin Exp $
+# $NetBSD: Makefile,v 1.8 2020/04/22 08:30:13 pin Exp $
 
 VERSION=	0.5.0
 DISTNAME=	Arqiver-V${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
 
-MAINTAINER=	voidpin@protonmail.com
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/tsujan/Arqiver/
 COMMENT=	Simple Qt5 archive manager
 LICENSE=	gnu-gpl-v3
