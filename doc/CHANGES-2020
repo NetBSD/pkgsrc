@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2469 2020/04/22 20:49:27 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2470 2020/04/23 05:53:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3388,3 +3388,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-responses to 0.10.14 [adam 2020-04-22]
 	Updated devel/py-xdis to 4.4.0 [adam 2020-04-22]
 	Updated lang/py-uncompyle6 to 3.6.6 [adam 2020-04-22]
+	Updated security/py-cryptography to 2.9.2 [adam 2020-04-23]
+	Updated security/py-cryptography_vectors to 2.9.2 [adam 2020-04-23]
+	Updated textproc/py-readme_renderer to 26.0 [adam 2020-04-23]
+	Updated finance/py-stripe to 2.46.0 [adam 2020-04-23]
