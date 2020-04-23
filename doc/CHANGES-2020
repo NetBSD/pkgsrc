@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2487 2020/04/23 15:57:11 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2488 2020/04/23 16:07:42 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3412,5 +3412,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed x11/xvidcap-gtk2 [nia 2020-04-23]
 	Removed multimedia/pspvc [nia 2020-04-23]
 	Removed multimedia/fuppes [nia 2020-04-23]
-	Removed multimedia/ffmpeg1 [nia 2020-04-23]
-	Removed multimedia/ffplay1 [nia 2020-04-23]
+	Removed multimedia/ffmpeg1 successor multimedia/ffmpeg4 [nia 2020-04-23]
+	Removed multimedia/ffplay1 successor multimedia/ffplay4 [nia 2020-04-23]
