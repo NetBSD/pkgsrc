@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.298 2020/04/23 14:48:45 nia Exp $
+# $NetBSD: Makefile,v 1.299 2020/04/23 14:57:50 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -41,7 +41,6 @@ SUBDIR+=	ffplay4
 SUBDIR+=	flashplayer
 SUBDIR+=	flvstreamer
 SUBDIR+=	frei0r
-SUBDIR+=	fuppes
 SUBDIR+=	fxtv
 SUBDIR+=	ggrab
 SUBDIR+=	gmediaserver
