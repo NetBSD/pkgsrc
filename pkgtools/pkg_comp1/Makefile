@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/02/12 10:48:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/23 11:28:08 sborrill Exp $
 
-PKGNAME=	pkg_comp1-1.38
-PKGREVISION=	1
+PKGNAME=	pkg_comp1-1.39
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
