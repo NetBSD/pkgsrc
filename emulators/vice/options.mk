@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2020/01/01 16:30:37 rhialto Exp $
+# $NetBSD: options.mk,v 1.13 2020/04/23 17:45:26 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vice
 PKG_SUPPORTED_OPTIONS=		ffmpeg vice-x64 vice-cpuhistory
@@ -35,7 +35,7 @@ PLIST.sdl=		yes
 .if !empty(PKG_OPTIONS:Mffmpeg)
 #BUILDLINK_DEPMETHOD.ffmpeg?=	build
 CONFIGURE_ARGS+=	--enable-external-ffmpeg
-.  include "../../multimedia/ffmpeg3/buildlink3.mk"
+.  include "../../multimedia/ffmpeg4/buildlink3.mk"
 .endif
 
 # Building x64 is deprecated, in favour of x64sc (but that is slower).
