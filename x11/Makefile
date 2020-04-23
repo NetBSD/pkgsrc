@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.885 2020/03/31 23:08:28 gutteridge Exp $
+# $NetBSD: Makefile,v 1.886 2020/04/23 14:31:11 nia Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -670,7 +670,6 @@ SUBDIR+=	xtrans
 SUBDIR+=	xtruss
 SUBDIR+=	xvattr
 SUBDIR+=	xvidcap
-SUBDIR+=	xvidcap-gtk2
 SUBDIR+=	xvidtune
 SUBDIR+=	xview
 SUBDIR+=	xview-clients
