@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/04/28 19:28:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/23 17:01:34 nia Exp $
 bin/ffmpegthumbnailer
 include/libffmpegthumbnailer/ffmpegthumbnailertypes.h
 include/libffmpegthumbnailer/filmstripfilter.h
@@ -9,7 +9,7 @@ include/libffmpegthumbnailer/videothumbnailer.h
 include/libffmpegthumbnailer/videothumbnailerc.h
 lib/libffmpegthumbnailer.so
 lib/libffmpegthumbnailer.so.4
-lib/libffmpegthumbnailer.so.4.13.1
+lib/libffmpegthumbnailer.so.4.15.1
 lib/pkgconfig/libffmpegthumbnailer.pc
 man/man1/ffmpegthumbnailer.1
 share/thumbnailers/ffmpegthumbnailer.thumbnailer

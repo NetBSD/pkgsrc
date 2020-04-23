@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2018/04/28 19:28:20 wiz Exp $
+$NetBSD: distinfo,v 1.8 2020/04/23 17:01:34 nia Exp $
 
-SHA1 (ffmpegthumbnailer-2.2.0.tar.bz2) = 4c7cdb3f2f7acd73c2f5138429ed2d2397f0f146
-RMD160 (ffmpegthumbnailer-2.2.0.tar.bz2) = 3b89af75a3c65c4a1d998157e8000a2b862b6bd1
-SHA512 (ffmpegthumbnailer-2.2.0.tar.bz2) = 526d15b2c754fcb1415e69fb54cb6e7d0102b6d73a32a7e8528df81e32633dfe3786898984fdb988c93daee7218956c75c096ef657c9b3a42399d2d1d27c7bbf
-Size (ffmpegthumbnailer-2.2.0.tar.bz2) = 1223895 bytes
+SHA1 (ffmpegthumbnailer-2.2.2.tar.bz2) = b17350070794f5a1e40d18a9f403d9c5d77da14b
+RMD160 (ffmpegthumbnailer-2.2.2.tar.bz2) = 39b1409f60ccf6e718ce99852fd9fd71e4f95752
+SHA512 (ffmpegthumbnailer-2.2.2.tar.bz2) = 52760dcf59430e5e85024c9f19dc1fac1d5f0edb4f937b33feac2b3ca8f12bbf549b5f658fc16fc07bf773717b9e10048aa3eb24bf52811c5c88c995ef492612
+Size (ffmpegthumbnailer-2.2.2.tar.bz2) = 1201838 bytes
