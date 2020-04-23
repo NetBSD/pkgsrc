@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2020/04/12 08:28:24 adam Exp $
+# $NetBSD: Makefile,v 1.67 2020/04/23 19:59:41 rillig Exp $
 
 DISTNAME=		apache-couchdb-2.3.1
 PKGNAME=		${DISTNAME:S/apache-//}
@@ -58,9 +58,7 @@ CONF_FILES_PERMS+=	${COUCH_EGDIR}/vm.args ${PKG_SYSCONFDIR}/vm.args \
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting standard paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	configure
 SUBST_FILES.paths+=	rel/files/couchdb.in
-SUBST_FILES.paths+=	rel/overlay/bin/couchdb
 SUBST_FILES.paths+=	rel/overlay/etc/default.ini
 SUBST_FILES.paths+=	src/config/src/config_app.erl
 SUBST_VARS.paths=	COUCH_DBDIR COUCH_LOGDIR COUCH_RUNDIR PREFIX PKG_SYSCONFDIR
