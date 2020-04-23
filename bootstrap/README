@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.14 2018/07/07 13:18:29 bsiegert Exp $
+$NetBSD: README,v 1.15 2020/04/23 13:51:52 gdt Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -55,3 +55,83 @@ settings you provided to the bootstrap. Copy it to your
 $sysconfdir directory (see above about --sysconfdir and its default
 value). If the default mk.conf doesn't already exist, the example is
 copied into place.
+
+
+PER PLATFORM INFORMATION
+========================
+
+pkgsrc supports or has supported many operating systems (platforms).
+In general, there is a README.os for each platform that can run
+pkgsrc, explaining particular considerations.
+
+Because pgksrc contains many per-platform fixes and accommodations,
+and because the presence of those at times causes more work for
+others, we list platforms according to whether they are in active use.
+(If you feel a platform is miscategorized, send rationale to
+pkgsrc-users@.  Include a README.platform with instructions if it is
+missing and you are asserting that there are users.  Developers should
+of course feel free to make improvements.)
+
+Note that listing a platform as having no users is not a decision to
+remove it from pkgsrc; this is merely recording information that
+individual developers can use when deciding how much work is justified
+for keeping any particular accommodation.  (As always, any large-scale
+removals require a proposal and discussion on pkgsrc-users@.)
+
+Note also that pkgsrc policy is that fixes to packages, unless the
+fixes are to adjust a package to pkgsrc norms, should be filed
+upstream and the upstream tracker URL included in the patch file or
+Makefile.
+
+Platforms are listed by the filename in mk/platform, annotated by the
+README.platform here if different.
+
+
+Platforms with active use and maintenance
+-----------------------------------------
+
+The following platforms have active users, and people that regularly
+fix problems.
+
+  Darwin (README.MacOSX, macOS)
+  FreeBSD
+  Linux
+  NetBSD
+  SunOS (README.Solaris, Illumos, SmartOS)
+
+
+Platforms believed to have users
+--------------------------------
+
+  OpenBSD
+
+
+Platforms with unknown status
+-----------------------------
+  Cygwin
+  DragonFly (no README)
+  FreeMiNT (no README)
+  GNUkFreeBSD
+  Minix (no README)
+  SCO_SV (no README)
+  UnixWare (no README)
+
+
+Platforms believed to have almost no users
+------------------------------------------
+
+  AIX 
+  BSDOS (no README)
+  HPUX
+  IRIX
+  Interix
+  MirBSD
+  OSF1
+  QNX (no README)
+
+
+Platforms believed to have no users
+-----------------------------------
+
+  Bitrig
+  Haiku
