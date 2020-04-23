@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.25 2019/11/07 10:56:42 adam Exp $
+$NetBSD: distinfo,v 1.26 2020/04/23 08:44:26 adam Exp $
 
 SHA1 (astroid-2.3.3.tar.gz) = d53a00c984beb22679a7f10bc02310a1ce24a9f9
 RMD160 (astroid-2.3.3.tar.gz) = 180dfda90675ead4026b7cd2f47f2ba2ecb7aee9
 SHA512 (astroid-2.3.3.tar.gz) = 72011f3eb312ea7ce7dd55f7615972f6bfc152d8f16f9052b405f44fe17e594d5da22e0502b4c3034881b9783be9e808509d4ded3d679182ddf6d34eb90748f1
 Size (astroid-2.3.3.tar.gz) = 297350 bytes
+SHA1 (patch-astroid_____pkginfo____.py) = a173438f76081d66dd4c65cf42740dbd97f59854
