@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2479 2020/04/23 12:31:25 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2480 2020/04/23 13:12:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3406,3 +3406,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/qbittorrent to 4.2.4 [adam 2020-04-23]
 	Removed multimedia/libquicktime [nia 2020-04-23]
 	Updated net/ocamlnet to 4.1.7 [jaapb 2020-04-23]
+	Removed multimedia/mkv2mp4 [nia 2020-04-23]
