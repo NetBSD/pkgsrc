@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2020/04/23 10:29:19 nia Exp $
+# $NetBSD: options.mk,v 1.18 2020/04/23 10:35:40 nia Exp $
 
 # Global and legacy options
 
@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=	--disable-htmlpages
 
 # Fraunhofer FDK AAC codec support
 .if !empty(PKG_OPTIONS:Mfdk-aac)
-RESTRICTED=		This software may require the payment of patent royalties
+RESTRICTED=		ffmpeg built with fdk-aac combines GPL and GPL-incompatible code
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 CONFIGURE_ARGS+=	--enable-libfdk_aac
