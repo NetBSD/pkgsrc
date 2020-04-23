@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.15 2020/04/23 13:51:52 gdt Exp $
+$NetBSD: README,v 1.16 2020/04/23 14:02:47 gdt Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -84,7 +84,8 @@ upstream and the upstream tracker URL included in the patch file or
 Makefile.
 
 Platforms are listed by the filename in mk/platform, annotated by the
-README.platform here if different.
+README.platform here if different.  Problems are listed, such as lack
+of a README, lack of cwrappers support, and lack of destdir support.
 
 
 Platforms with active use and maintenance
@@ -120,7 +121,7 @@ Platforms with unknown status
 Platforms believed to have almost no users
 ------------------------------------------
 
-  AIX 
+  AIX (no cwrappers)
   BSDOS (no README)
   HPUX
   IRIX
