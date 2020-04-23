@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/04/14 13:57:51 leot Exp $
+$NetBSD: distinfo,v 1.2 2020/04/23 18:33:49 adam Exp $
 
-SHA1 (pysrt-1.1.1.tar.gz) = 5ab4084dd09c48915b9f1a3bfcde876da150dd5e
-RMD160 (pysrt-1.1.1.tar.gz) = 3357335d46ec5ba3e9bd4e497a88709976d6c7ff
-SHA512 (pysrt-1.1.1.tar.gz) = 607f80c1f66702d36b6fa54b293f59c6a28415d812bf54d7210075d1c84a7547ce2776c0809910ed3d79c08a3c595ce74719976d8f2818820a3f4a306ffc1825
-Size (pysrt-1.1.1.tar.gz) = 104027 bytes
+SHA1 (pysrt-1.1.2.tar.gz) = 62ce69c19618f3a783c0ea4dbec5f87632ddc762
+RMD160 (pysrt-1.1.2.tar.gz) = 0fbe218413ba5c56f795e5da76dbe9ddb36b873d
+SHA512 (pysrt-1.1.2.tar.gz) = a3a0988068d3cc13e6d44aec548a94e79d9ed29cfcd1e8e35ff56b50f0feb32a1baac2220c5331281c98a19ad9a3e9f960832a661699921cde0d185ea21e9753
+Size (pysrt-1.1.2.tar.gz) = 104371 bytes
