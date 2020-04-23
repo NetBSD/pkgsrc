@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.80 2020/04/23 18:06:13 rillig Exp $
+# $NetBSD: subst.mk,v 1.81 2020/04/23 19:06:09 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -156,44 +156,45 @@ ${SUBST_STAGE.${class}}: subst-${class}
 subst-${class}: ${_SUBST_COOKIE.${class}}
 
 ${_SUBST_COOKIE.${class}}:
-	${RUN} message=${SUBST_MESSAGE.${class}:Q};			\
-	if [ "$$message" ]; then ${ECHO_SUBST_MSG} "$$message"; fi
 	${RUN}								\
+	message=${SUBST_MESSAGE.${class}:Q};				\
+	[ "$$message" ] && ${ECHO_SUBST_MSG} "$$message";		\
+	\
 	cd ${WRKSRC};							\
 	patterns=${SUBST_FILES.${class}:Q};				\
 	set -f;								\
 	for pattern in $$patterns; do					\
-	set +f;								\
-	changed=no;							\
-	for file in $$pattern; do					\
-		case $$file in /*) ;; *) file="./$$file";; esac;	\
-		tmpfile="$$file.subst.sav";				\
-		if [ ! -f "$$file" ]; then				\
-			[ -d "$$file" ] || ${_SUBST_WARN.${class}} "Ignoring non-existent file \"$$file\"."; \
-		elif ${_SUBST_IS_TEXT_FILE_CMD.${class}}; then		\
-			${SUBST_FILTER_CMD.${class}}			\
-			< "$$file"					\
-			> "$$tmpfile";					\
-			if ${TEST} -x "$$file"; then			\
-				${CHMOD} +x "$$tmpfile";		\
-			fi;						\
-			if ${CMP} -s "$$tmpfile" "$$file"; then 	\
+		set +f;							\
+		changed=no;						\
+		for file in $$pattern; do				\
+			case $$file in /*) ;; *) file="./$$file";; esac; \
+			tmpfile="$$file.subst.sav";			\
+			[ -d "$$file" ] && continue;			\
+			[ -f "$$file" ] || {				\
+				${_SUBST_WARN.${class}} "Ignoring non-existent file \"$$file\"."; \
+				continue;				\
+			};						\
+			${_SUBST_IS_TEXT_FILE_CMD.${class}} || {	\
+				${_SUBST_WARN.${class}} "Ignoring non-text file \"$$file\"."; \
+				continue;				\
+			};						\
+			${SUBST_FILTER_CMD.${class}} < "$$file" > "$$tmpfile";	\
+			${CMP} -s "$$tmpfile" "$$file" && {		\
 				${_SUBST_WARN.${class}} "Nothing changed in $$file."; \
 				${RM} -f "$$tmpfile";			\
-			else						\
-				changed=yes;				\
-				${_SUBST_KEEP.${class}};		\
-				${MV} -f "$$tmpfile" "$$file"; 		\
-				${ECHO} "$$file" >> ${.TARGET}.tmp;	\
-			fi;						\
-		else							\
-			${_SUBST_WARN.${class}} "Ignoring non-text file \"$$file\"."; \
-		fi;							\
-	done;								\
+				continue;				\
+			};						\
+			[ -x "$$file" ] && ${CHMOD} +x "$$tmpfile";	\
+			changed=yes;					\
+			${_SUBST_KEEP.${class}};			\
+			${MV} -f "$$tmpfile" "$$file"; 			\
+			${ECHO} "$$file" >> ${.TARGET}.tmp;		\
+		done;							\
 	\
-	if ${TEST} "$$changed,${SUBST_NOOP_OK.${class}:tl}" = no,no; then \
-		${FAIL_MSG} "[subst.mk:${class}] The filename pattern \"$$pattern\" has no effect."; \
-	fi; \
-	done
-	${RUN} ${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp && ${MV} ${.TARGET}.tmp ${.TARGET}
+		[ "$$changed,${SUBST_NOOP_OK.${class}:tl}" = no,no ]	\
+		&& ${FAIL_MSG} "[subst.mk:${class}] The filename pattern \"$$pattern\" has no effect."; \
+	done; \
+	\
+	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp;				\
+	${MV} ${.TARGET}.tmp ${.TARGET}
 .endfor
