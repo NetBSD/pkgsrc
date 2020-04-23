@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/03/13 18:00:02 adam Exp $
+$NetBSD: distinfo,v 1.2 2020/04/23 05:53:00 adam Exp $
 
-SHA1 (readme_renderer-24.0.tar.gz) = c41ad5b7ea9eb844dcfc422814bf7146037a49be
-RMD160 (readme_renderer-24.0.tar.gz) = a947424077e136b2c4055f745e4ccb0427b3bb7b
-SHA512 (readme_renderer-24.0.tar.gz) = 202a7142ccca3f5bc4e6d92330f25284fcc4f3984ccdd886e4be2789518242ed659660db5a7c7224f838dc8f5ea9dd6e14c65746cf08a102431ddd77d62a434a
-Size (readme_renderer-24.0.tar.gz) = 24038 bytes
+SHA1 (readme_renderer-26.0.tar.gz) = ce89e3beb17791e5a821989769904b7a16afb89f
+RMD160 (readme_renderer-26.0.tar.gz) = 37a4ad1a8805873c58047f575c055011ab5f552f
+SHA512 (readme_renderer-26.0.tar.gz) = a5e7cfa47257fd3ceaf417cc814226b5aef6aacf72ffb2eeed3e6affa4a09aa1f6c752a8c4311910c258d090d94f03e3f5c2603819f5dceb37440c9bfd9090ea
+Size (readme_renderer-26.0.tar.gz) = 27068 bytes
