@@ -1,0 +1,1 @@
+bin/weasyprint @PREFIX@/bin/weasyprint-@PYVERSSUFFIX@
