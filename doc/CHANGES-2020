@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2480 2020/04/23 13:12:38 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2481 2020/04/23 13:52:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3407,3 +3407,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed multimedia/libquicktime [nia 2020-04-23]
 	Updated net/ocamlnet to 4.1.7 [jaapb 2020-04-23]
 	Removed multimedia/mkv2mp4 [nia 2020-04-23]
+	Updated www/squid4 to 4.11 [mef 2020-04-23]
