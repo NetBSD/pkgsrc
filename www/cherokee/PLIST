@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/01/01 22:30:02 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/04/23 15:46:01 nia Exp $
 bin/CTK-run
 bin/cget
 bin/cherokee-admin-launcher
@@ -99,6 +99,7 @@ lib/cherokee/libplugin_scgi.la
 lib/cherokee/libplugin_secdownload.la
 lib/cherokee/libplugin_server_info.la
 lib/cherokee/libplugin_ssi.la
+${PLIST.ffmpeg}lib/cherokee/libplugin_streaming.la
 lib/cherokee/libplugin_target_ip.la
 lib/cherokee/libplugin_tls.la
 lib/cherokee/libplugin_url_arg.la
