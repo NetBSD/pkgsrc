@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.1 2017/02/12 10:48:55 jmmv Exp $
+.\" $NetBSD: pkg_comp.8,v 1.2 2020/04/23 11:28:09 sborrill Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -213,10 +213,16 @@ This is the directory which holds
 .Nb
 binary sets and X sets.
 Its structure is the same as official release
-distributions, that is, tgz files must reside inside
+distributions, that is, tarball files must reside inside
 .Pa $DISTRIBDIR/binary/sets .
 Defaults to
 .Pa /var/pub/NetBSD .
+.It DISTRIB_EXT
+This is the file extension for the tarballs in
+.Pa $DISTRIBDIR .
+Recent NetBSD releases use tar.xz instead of tgz.
+Defaults to 
+.Pa tgz
 .It EXTRAMK
 Specifies a whitespace-separated list of files that must be appended to
 .Pa $DESTDIR/etc/mk.conf .
