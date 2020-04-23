@@ -1,5 +1,3 @@
 xvidcap is a tool (like Lotus ScreenCam and Camtasia) that captures
 movement on a selected area of an X11 screen to files. Frame output
 formats include: XWD, PPM, PNG, MNG, JPEG and MPEG.
-
-This is the Xt Intrinsics version.
