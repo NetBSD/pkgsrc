@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2020/04/19 18:25:07 nia Exp $
+# $NetBSD: options.mk,v 1.12 2020/04/23 10:29:19 nia Exp $
 
 # Global and legacy options
 
@@ -7,7 +7,7 @@ PKG_OPTIONS_GROUP.ssl=		gnutls mbedtls openssl
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg4
 PKG_SUPPORTED_OPTIONS=	ass av1 bluray doc fdk-aac fontconfig freetype \
-			gnutls lame libvpx opencore-amr opus pulseaudio rpi \
+			lame libvpx opencore-amr opus pulseaudio rpi \
 			rtmp tesseract theora vorbis x11 x264 x265 xvid
 PKG_SUGGESTED_OPTIONS=	lame ass av1 bluray freetype fontconfig gnutls \
 			libvpx opus theora vorbis x11 x264 x265 xvid
