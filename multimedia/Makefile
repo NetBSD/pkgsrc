@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.295 2020/04/15 19:31:56 js Exp $
+# $NetBSD: Makefile,v 1.296 2020/04/23 12:06:56 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -135,7 +135,6 @@ SUBDIR+=	libmpeg3
 SUBDIR+=	libnms
 SUBDIR+=	libogg
 SUBDIR+=	liboggz
-SUBDIR+=	libquicktime
 SUBDIR+=	libtheora
 SUBDIR+=	libtheora-docs
 SUBDIR+=	libva
