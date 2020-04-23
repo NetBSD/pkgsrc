@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2017/11/12 15:36:58 khorben Exp $
+# $NetBSD: options.mk,v 1.8 2020/04/23 15:52:02 nia Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freerdp
 PKG_SUPPORTED_OPTIONS=	alsa cups ffmpeg pcsc pulseaudio debug
@@ -36,7 +36,7 @@ CMAKE_ARGS+=	-DWITH_CUPS=OFF
 ### FFmpeg support
 ###
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.  include "../../multimedia/ffmpeg1/buildlink3.mk"
+.  include "../../multimedia/ffmpeg4/buildlink3.mk"
 CMAKE_ARGS+=	-DWITH_FFMPEG=ON
 PLIST.ffmpeg=	yes
 .else
