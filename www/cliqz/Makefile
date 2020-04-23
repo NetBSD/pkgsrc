@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/04/18 07:58:36 fox Exp $
+# $NetBSD: Makefile,v 1.40 2020/04/23 20:04:05 fox Exp $
 
 DISTNAME=	cliqz-1.35.0
 CATEGORIES=	www
@@ -66,6 +66,9 @@ BUILD_DEPENDS+=			py${PYTHON_VERSION_DEFAULT}-sqlite3-[0-9]*:../../databases/py-
 .else
 BUILD_DEPENDS+=			py37-sqlite3-[0-9]*:../../databases/py-sqlite3
 .endif
+# XXX: For now depend on python 2.7 version of sqlite3 since cliqz
+# cannot detect py37-sqlite3 correctly.
+BUILD_DEPENDS+=			py27-sqlite3-[0-9]*:../../databases/py-sqlite3
 BUILD_DEPENDS+=			yasm>=1.1:../../devel/yasm
 BUILD_DEPENDS+=			nasm>=1.1:../../devel/nasm
 
