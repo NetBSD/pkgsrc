@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2476 2020/04/23 11:08:04 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2477 2020/04/23 12:10:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3403,3 +3403,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/abseil to 20200225.2 [adam 2020-04-23]
 	Updated net/libtorrent-rasterbar to 1.2.6 [adam 2020-04-23]
 	Updated net/qbittorrent to 4.2.4 [adam 2020-04-23]
+	Removed multimedia/libquicktime [nia 2020-04-23]
