@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2019/06/18 14:41:09 nia Exp $
+# $NetBSD: options.mk,v 1.17 2020/04/23 10:29:19 nia Exp $
 
 # Global and legacy options
 
@@ -8,10 +8,10 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 
 PKG_SUPPORTED_OPTIONS=	ass bluray doc fdk-aac fontconfig freetype \
-			lame libvpx opencore-amr opus rpi rtmp \
-			tesseract theora vorbis x11 x264 x265 xvid
-PKG_SUGGESTED_OPTIONS=	lame ass bluray freetype fontconfig libvpx openssl \
-			theora vorbis x11 x264 xvid
+			lame libvpx opencore-amr opus pulseaudio rpi \
+			rtmp tesseract theora vorbis x11 x264 x265 xvid
+PKG_SUGGESTED_OPTIONS=	lame ass bluray freetype fontconfig gnutls libvpx \
+			opus theora vorbis x11 x264 x265 xvid
 
 PKG_OPTIONS_LEGACY_OPTS+=	xcb:x11
 
@@ -108,6 +108,14 @@ CONFIGURE_ARGS+=	--enable-openssl
 .include "../../security/openssl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-openssl
+.endif
+
+# pulseaudio option
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+CONFIGURE_ARGS+=	--enable-libpulse
+.include "../../audio/pulseaudio/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libpulse
 .endif
 
 # RTMP support via librtmp
