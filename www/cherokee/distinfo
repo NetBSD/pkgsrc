@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2020/04/15 22:38:18 joerg Exp $
+$NetBSD: distinfo,v 1.9 2020/04/23 15:46:01 nia Exp $
 
 SHA1 (cherokee-1.2.101.tar.gz) = b27f149c7d7111207ac8c3cd8a4856c05490d136
 RMD160 (cherokee-1.2.101.tar.gz) = dd3dedc352ba17bdcefd8e200143b8ffa19ad035
@@ -10,4 +10,5 @@ SHA1 (patch-cherokee_cryptor__libssl__dh__1024.c) = 331bf1bb18ec78f8ddb2e5e2ef18
 SHA1 (patch-cherokee_cryptor__libssl__dh__2048.c) = 46541cfd1ab8dfcc14a14aa3240d2047dd044aaa
 SHA1 (patch-cherokee_cryptor__libssl__dh__4096.c) = 8aa7c90d05fcefba59243a8b9671fca3f74f73d3
 SHA1 (patch-cherokee_cryptor__libssl__dh__512.c) = 8c0c43942b7fa2485e241f376c9d542cb9b506b9
+SHA1 (patch-cherokee_handler__streaming.c) = 0cc14d5de031b69146939114f28981f522e15174
 SHA1 (patch-configure) = 58a25088320863dd00f4c7d4f050e1c163dbe6f3
