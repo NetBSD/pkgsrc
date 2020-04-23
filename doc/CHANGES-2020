@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2484 2020/04/23 14:51:01 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2485 2020/04/23 14:58:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3411,3 +3411,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/xvidcap to 1.1.7 [nia 2020-04-23]
 	Removed x11/xvidcap-gtk2 [nia 2020-04-23]
 	Removed multimedia/pspvc [nia 2020-04-23]
+	Removed multimedia/fuppes [nia 2020-04-23]
