@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/04/23 16:45:57 nia Exp $
+
+ffmpeg fails to build with mmx.
+
+--- configure.orig	2011-11-02 15:11:49.000000000 +0000
++++ configure
+@@ -16700,7 +16700,7 @@ fi
+         --disable-ffmpeg --disable-ffprobe --enable-static --enable-pic \
+ 	--disable-encoder=flac --disable-decoder=cavs --disable-protocols --disable-devices\
+ 	--disable-network --disable-hwaccels --disable-filters --disable-doc\
+-	--enable-optimizations"
++	--disable-mmx --enable-optimizations"
+ 
+   if test "x$enable_lgpl" != "xyes"; then
+     embffmpeg_configure_args="$embffmpeg_configure_args --enable-postproc \
