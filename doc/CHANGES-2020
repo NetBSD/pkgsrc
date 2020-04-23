@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2475 2020/04/23 10:36:35 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2476 2020/04/23 11:08:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3400,3 +3400,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/mozjs60 to 60.8.0nb4 [wiz 2020-04-23]
 	Updated databases/prometheus to 2.17.2 [adam 2020-04-23]
 	Updated www/py-WebTest to 2.0.34 [adam 2020-04-23]
+	Updated devel/abseil to 20200225.2 [adam 2020-04-23]
+	Updated net/libtorrent-rasterbar to 1.2.6 [adam 2020-04-23]
+	Updated net/qbittorrent to 4.2.4 [adam 2020-04-23]
