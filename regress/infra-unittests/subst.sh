@@ -971,3 +971,97 @@ if test_case_begin "first filename pattern has no effect"; then
 
 	test_case_end
 fi
+
+
+if test_case_begin "empty SUBST_FILES"; then
+
+	# An empty SUBST_FILES section is ok.
+	# It may have been produced by a shell command like find(1).
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_STAGE.id=	pre-configure' \
+		'SUBST_FILES.id=	# none' \
+		'SUBST_SED.id=		-e s,from,to,' \
+		'SUBST_NOOP_OK.id=	no' \
+		'' \
+		'all:' \
+		'	@printf "%s\n" ${PKG_FAIL_REASON:Uok}' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+
+	run_bmake "testcase.mk" "pre-configure" "all" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in ' \
+		'ok'
+
+	test_case_end
+fi
+
+
+if test_case_begin "empty SUBST_SED"; then
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_STAGE.id=	pre-configure' \
+		'SUBST_FILES.id=	file' \
+		'SUBST_SED.id=		# none' \
+		'SUBST_NOOP_OK.id=	no' \
+		'' \
+		'all:' \
+		'	@printf "%s\n" ${PKG_FAIL_REASON:Uok}' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+
+	run_bmake "testcase.mk" "pre-configure" "all" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in file' \
+		'warning: [subst.mk:id] Ignoring non-existent file "./file".' \
+		'fail: [subst.mk:id] The filename pattern "file" has no effect.' \
+		'*** Error code 1' \
+		'' \
+		'Stop.' \
+		"$make: stopped in $PWD"
+
+	test_case_end
+fi
+
+
+if test_case_begin "typo in SUBST_CLASSES"; then
+
+	# Look closely. The SUBST_CLASSES line contains a typo.
+	# subst.mk does not catch this, but pkglint does.
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES=+	id' \
+		'SUBST_STAGE.id=	pre-configure' \
+		'SUBST_FILES.id=	file' \
+		'SUBST_SED.id=		# none' \
+		'SUBST_NOOP_OK.id=	no' \
+		'' \
+		'all:' \
+		'	@printf "%s\n" ${PKG_FAIL_REASON:Uok}' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+
+	run_bmake "testcase.mk" "pre-configure" "all" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in file' \
+		'warning: [subst.mk:id] Ignoring non-existent file "./file".' \
+		'fail: [subst.mk:id] The filename pattern "file" has no effect.' \
+		'*** Error code 1' \
+		'' \
+		'Stop.' \
+		"$make: stopped in $PWD"
+
+	test_case_end
+fi
