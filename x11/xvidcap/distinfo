@@ -1,15 +1,8 @@
-$NetBSD: distinfo,v 1.12 2015/11/04 03:29:13 agc Exp $
+$NetBSD: distinfo,v 1.13 2020/04/23 14:31:12 nia Exp $
 
-SHA1 (xvidcap-1.1.3.tar.gz) = e6d86a4184c8cc3e74738fb6e20d49c0d1640025
-RMD160 (xvidcap-1.1.3.tar.gz) = cc7be360153f192b502ffedc6548cce163a9154c
-SHA512 (xvidcap-1.1.3.tar.gz) = f43bbee7df6a06a61d5b04a32e13f38c1e2cf25a4b3a8572c7918b55a3138b9ad67759025fab9a20b9a5a673213f13b0248dadb7ccc89a280f344b31ede01850
-Size (xvidcap-1.1.3.tar.gz) = 1627036 bytes
-SHA1 (patch-aa) = 9196f59ec849a361821fd5cae800ec6aef2a1dfc
-SHA1 (patch-ab) = a1b379bbca8ca8dcbad4363b8d37897d56cf16d5
-SHA1 (patch-ac) = 0de9d748e3808a210ec68d140eb1dfd5e18d9e4f
-SHA1 (patch-ad) = ac40095849f721cfd8aa1e0143dff3ac9b705be7
-SHA1 (patch-ae) = 2ebab45421ab2782d48067f7b63e010190111397
-SHA1 (patch-af) = 52a10e0c278c956a3de8b77b8f89c4e1f28c6838
-SHA1 (patch-ag) = 44cb7ad63e477f21b013a43d06ce81fddb235ef7
-SHA1 (patch-src_xtomng.c) = 474b082c94883fd367126e6835e91bfc856063b5
-SHA1 (patch-src_xtopng.c) = 5e4e8e7150ccb67e25a65ecf33e2900074fa1179
+SHA1 (xvidcap-1.1.7.tar.gz) = ccdf8ac85c76b202dbf46074df6b3844faf127d1
+RMD160 (xvidcap-1.1.7.tar.gz) = 782f0f8b4693bb3e96fdf06de71b2f6832b246e0
+SHA512 (xvidcap-1.1.7.tar.gz) = 9dc2e6751a0f9126dc81f24fca18430a57550b57eaad2e2cd782cc1a5274a7998b509b491d85db3a1302866583b48c36e65043608c453c0466fbbe3d1142bc42
+Size (xvidcap-1.1.7.tar.gz) = 4789924 bytes
+SHA1 (patch-configure) = 9a82ebbfd4fd6e7b1ad4567e346ce2c2860d1c9e
+SHA1 (patch-src_capture.c) = 1fc2f28c3a30a08eac799cb646d291472e99a10a
