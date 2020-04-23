@@ -938,10 +938,10 @@ if test_case_begin "pattern matches only directory"; then
 fi
 
 
-if test_case_begin "first filename pattern has no effect"; then
+if test_case_begin "two filename patterns have no effect"; then
 
-	# All patterns of SUBST_FILES should be applied before erroring out.
-	# TODO: also warn about file2
+	# All patterns of SUBST_FILES should be applied before erroring out,
+	# to give a complete picture of the situation.
 
 	create_file_lines "testcase.mk" \
 		'SUBST_CLASSES+=	id' \
@@ -963,7 +963,8 @@ if test_case_begin "first filename pattern has no effect"; then
 	assert_that "out" --file-is-lines \
 		'=> Substituting "id" in file1 file2' \
 		'warning: [subst.mk:id] Nothing changed in "file1".' \
-		'fail: [subst.mk:id] The filename pattern "file1" has no effect.' \
+		'warning: [subst.mk:id] Nothing changed in "file2".' \
+		'fail: [subst.mk:id] The filename patterns "file1 file2" have no effect.' \
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
