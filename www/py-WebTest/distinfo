@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2019/02/15 13:01:22 adam Exp $
+$NetBSD: distinfo,v 1.8 2020/04/23 10:34:53 adam Exp $
 
-SHA1 (WebTest-2.0.33.tar.gz) = 4fbce21674fe331d97c8389fc12df142441bfc27
-RMD160 (WebTest-2.0.33.tar.gz) = dedb6f6a0f7e58898c825e7cbcc6113781cf4a7f
-SHA512 (WebTest-2.0.33.tar.gz) = 9f5c614f8215837dc5cecc9c3e844c5e1678eb8275f9e27a0ec6a68648e9f4f09155aa72f6c731c34028b8671b7776a94235f3e54d7dbf5ff55de94840171ca8
-Size (WebTest-2.0.33.tar.gz) = 76081 bytes
+SHA1 (WebTest-2.0.34.tar.gz) = 690f04ccb7d341f6f24ccbcd05c6268fff48faa1
+RMD160 (WebTest-2.0.34.tar.gz) = f799725ad3597dae0f2766eb190ff1c6dfa7dd61
+SHA512 (WebTest-2.0.34.tar.gz) = 12f0d3e891d436f011f4a3a2e8e64363d87713d2a410b9220271e5f0c0b918b5cd87dc4359d1164cb67e02ad318eabfae282b4eaacb4804afbf475abebc6fd95
+Size (WebTest-2.0.34.tar.gz) = 76209 bytes
 SHA1 (patch-setup.py) = cb97658fb237eaf2307a1ef4effaa8491d796b3a
