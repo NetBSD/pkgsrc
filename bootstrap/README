@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.16 2020/04/23 14:02:47 gdt Exp $
+$NetBSD: README,v 1.17 2020/04/23 19:02:20 gdt Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -67,7 +67,7 @@ pkgsrc, explaining particular considerations.
 Because pgksrc contains many per-platform fixes and accommodations,
 and because the presence of those at times causes more work for
 others, we list platforms according to whether they are in active use.
-(If you feel a platform is miscategorized, send rationale to
+t(If you feel a platform is miscategorized, send rationale to
 pkgsrc-users@.  Include a README.platform with instructions if it is
 missing and you are asserting that there are users.  Developers should
 of course feel free to make improvements.)
@@ -107,6 +107,11 @@ Platforms believed to have users
   OpenBSD
 
 
+Platforms with at least a tiny number of users
+----------------------------------------------
+  SCO_SV (README.OpenServer5)
+
+
 Platforms with unknown status
 -----------------------------
   Cygwin
@@ -114,7 +119,6 @@ Platforms with unknown status
   FreeMiNT (no README)
   GNUkFreeBSD
   Minix (no README)
-  SCO_SV (no README)
   UnixWare (no README)
 
 
