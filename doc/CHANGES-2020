@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2470 2020/04/23 05:53:55 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2471 2020/04/23 06:10:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3392,3 +3392,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-cryptography_vectors to 2.9.2 [adam 2020-04-23]
 	Updated textproc/py-readme_renderer to 26.0 [adam 2020-04-23]
 	Updated finance/py-stripe to 2.46.0 [adam 2020-04-23]
+	Updated devel/py-autopep8 to 1.5.2 [adam 2020-04-23]
+	Updated security/py-asyncssh to 2.2.1 [adam 2020-04-23]
