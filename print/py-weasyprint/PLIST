@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2019/10/09 12:33:31 wiedi Exp $
-bin/weasyprint${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.6 2020/04/23 18:30:30 adam Exp $
+bin/weasyprint-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
