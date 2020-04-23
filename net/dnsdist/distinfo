@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.7 2019/08/02 14:32:18 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2020/04/23 07:43:30 jperkin Exp $
 
 SHA1 (dnsdist-1.3.3.tar.bz2) = 18f667b8e7f7918723c5d6721160c3aed8ebd0a1
 RMD160 (dnsdist-1.3.3.tar.bz2) = c543146e87a148cfffbf0112a07504e9572a05cb
 SHA512 (dnsdist-1.3.3.tar.bz2) = c0e3435eafc1f7bcdf41346cecf7b089cc142716f94058f9ec262d0c6ad16467e0b8bed5abc648829c597120c94f998602849ded574e75bfc1a1fb70c1b719ad
 Size (dnsdist-1.3.3.tar.bz2) = 971253 bytes
 SHA1 (patch-devpollmplexer.cc) = f942ab6fc962496ac8d8e02c95fc4e0bf41d2f06
+SHA1 (patch-dnsdist-console.cc) = 88807410b017e6e6480ace24d0f65a3f235f0c5e
+SHA1 (patch-dnsdist.cc) = d5a77b8868b84198262ca55e0eac54f5e7645919
 SHA1 (patch-ext_json11_json11.cpp) = 9fb12578d80103b8b92e984a483cbda98fd83db8
 SHA1 (patch-iputils.hh) = 09207cd894162d634cd832f12209e38a0c253624
 SHA1 (patch-portsmplexer.cc) = 9f1b0dc40d0baaa0bf7297d0c4c783abffb16c33
