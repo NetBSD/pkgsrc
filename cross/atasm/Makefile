@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2017/08/01 14:58:53 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/04/23 19:42:41 rillig Exp $
 #
 
 DISTNAME=	atasm106
 PKGNAME=	atasm-1.06
+PKGREVISION=	1
 CATEGORIES=	devel cross emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atasm/}
 EXTRACT_SUFX=	.zip
@@ -23,7 +24,7 @@ EXAMPLE_DIR=	${PREFIX}/share/examples/atasm
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${DOCDIR} ${EXAMPLE_DIR}
 
 SUBST_CLASSES+=		docdir
-SUBST_FILES.docdir=	atasm.1.in
+SUBST_FILES.docdir=	src/atasm.1.in
 SUBST_STAGE.docdir=	pre-install
 SUBST_SED.docdir=	-e 's,%%DOCDIR%%,${DOCDIR},g'
 SUBST_MESSAGE.docdir=	Edit DOCDIR variable
