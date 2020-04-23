@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2494 2020/04/23 18:34:05 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2495 2020/04/23 18:50:17 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3421,3 +3421,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed multimedia/kodi [nia 2020-04-23]
 	Updated print/py-weasyprint to 51 [adam 2020-04-23]
 	Updated textproc/py-pysrt to 1.1.2 [adam 2020-04-23]
+	Updated audio/fasttracker2 to 1.21 [fox 2020-04-23]
