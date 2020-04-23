@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/26 05:26:18 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/04/23 20:11:51 rillig Exp $
 #
 
 DISTNAME=	docx2txt-1.2
@@ -32,6 +32,7 @@ SUBST_STAGE.unzip=	pre-configure
 SUBST_MESSAGE.unzip=	Hardcoding unzip path
 SUBST_FILES.unzip=	*.pl *.config
 SUBST_SED.unzip=	-e 's,/usr/bin/unzip,${TOOLS_PATH.unzip},'
+SUBST_NOOP_OK.unzip=	yes # TOOLS_PATH.unzip may actually be /usr/bin/unzip
 
 SUBST_CLASSES+=		suffix
 SUBST_STAGE.suffix=	pre-configure
