@@ -1,0 +1,23 @@
+$NetBSD: patch-configure,v 1.1 2020/04/23 14:31:12 nia Exp $
+
+Don't pass invalid options to ffmpeg ./configure
+
+--- configure.orig	2008-07-09 07:28:25.000000000 +0000
++++ configure
+@@ -11273,14 +11273,14 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ 
+ test x$ac_cv_lib_mp3lame_lame_init = xyes && ac_my_ffmpeg_cfg_lib_switch="--enable-libmp3lame"
+-test x$ac_cv_lib_theora_theora_encode_init = xyes && ac_my_ffmpeg_cfg_lib_switch="${ac_my_ffmpeg_cfg_lib_switch} --enable-libogg --enable-libtheora"
++test x$ac_cv_lib_theora_theora_encode_init = xyes && ac_my_ffmpeg_cfg_lib_switch="${ac_my_ffmpeg_cfg_lib_switch} --enable-libtheora"
+ 
+ # if cache empty (not tested or failed) and want static avcodec (then it failed) ...
+ if ( `test \( \( x${ac_cv_lib_avutil_av_rescale+set} = x \) -a \( x$static_avutil = xyes \) \)` ) ; then
+ 	# build embedded ffmpeg
+ 	echo "${MAKE-make}-ing prerequisite ffmpeg libraries" && \
+ 	( cd ./ffmpeg/ && \
+-	./configure --cc=${CC} --enable-gpl ${ac_my_ffmpeg_cfg_lib_switch} --enable-pthreads --enable-swscale --disable-ffserver --disable-ffplay && \
++	./configure --cc=${CC} --enable-gpl ${ac_my_ffmpeg_cfg_lib_switch} --enable-pthreads --enable-swscale --disable-ffserver --disable-ffplay --disable-demuxer=v4l2 --disable-mmx && \
+ 	ln -s libavcodec/avcodec.h ./ && \
+ 	ln -s libavcodec/dsputil.h ./ && \
+ 	ln -s libavformat/avformat.h ./ && \
