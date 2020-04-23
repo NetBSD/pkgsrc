@@ -1,8 +1,0 @@
-PSPVC is an FFMPEG front-end to convert video files for the PSP. It allows
-you to queue severals conversions with different parameters for each.
-
-Formats:
-
-    * MPEG4/SP (all firmware)
-    * H264/AVC (firmware 2.0+)
-    * H264/AVC 480x272 (firmware 3.03-OE-B+)
