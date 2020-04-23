@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2019/06/18 14:41:09 nia Exp $
+# $NetBSD: options.mk,v 1.17 2020/04/23 10:29:19 nia Exp $
 
 # Global and legacy options
 
@@ -7,11 +7,11 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg2
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 
-PKG_SUPPORTED_OPTIONS=	ass doc faac fdk-aac fontconfig freetype lame \
-			libvpx opencore-amr rtmp theora vorbis x11 x264 \
-			x265 xvid
-PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx \
-			theora vorbis x11 x264 xvid
+PKG_SUPPORTED_OPTIONS=	ass bluray doc faac fdk-aac fontconfig freetype \
+			lame libvpx opencore-amr opus pulseaudio rtmp \
+			theora vorbis x11 x264 x265 xvid
+PKG_SUGGESTED_OPTIONS=	lame ass bluray freetype fontconfig gnutls libvpx \
+			opus theora vorbis x11 x264 x265 xvid
 
 PKG_OPTIONS_LEGACY_OPTS+=	xcb:x11
 
@@ -123,6 +123,15 @@ CONFIGURE_ARGS+=	--enable-openssl
 CONFIGURE_ARGS+=	--disable-openssl
 .endif
 
+
+# pulseaudio option
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+CONFIGURE_ARGS+=	--enable-libpulse
+.include "../../audio/pulseaudio/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libpulse
+.endif
+
 # RTMP support via librtmp
 .if !empty(PKG_OPTIONS:Mrtmp)
 CONFIGURE_ARGS+=	--enable-librtmp
@@ -147,6 +156,12 @@ CONFIGURE_ARGS+=	--enable-libvorbis
 BUILDLINK_ABI_DEPENDS.lame+= lame>=3.98.2nb1
 CONFIGURE_ARGS+=	--enable-libmp3lame
 .include "../../audio/lame/buildlink3.mk"
+.endif
+
+# OPUS support
+.if !empty(PKG_OPTIONS:Mopus)
+CONFIGURE_ARGS+=	--enable-libopus
+.include "../../audio/libopus/buildlink3.mk"
 .endif
 
 # XviD support
@@ -206,4 +221,12 @@ CONFIGURE_ARGS+=	--enable-libxcb-xfixes
 .include "../../x11/libxcb/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libxcb
+.endif
+
+# Bluray support
+.if !empty(PKG_OPTIONS:Mbluray)
+CONFIGURE_ARGS+=	--enable-libbluray
+.include "../../multimedia/libbluray/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libbluray
 .endif
