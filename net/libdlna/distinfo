@@ -1,7 +1,24 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 00:35:08 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/04/23 15:24:00 nia Exp $
 
 SHA1 (libdlna-0.2.4.tar.bz2) = 5e86f4443eeb9e7194c808301efeb78611a9e8b3
 RMD160 (libdlna-0.2.4.tar.bz2) = 6083bdcb7b5bc048f5b81373ef452145ba913861
 SHA512 (libdlna-0.2.4.tar.bz2) = 2d6185e0d7f9d449fe48e5e6c7331a46fb795794c6b8f229e730e47ae519e28d012a79227c2bb43d3a62442560e0d65c8a84ef48e714a99848b854495d6bf7e6
 Size (libdlna-0.2.4.tar.bz2) = 37579 bytes
 SHA1 (patch-af) = b34c260bf86062d268a8f113df17e285ed6ecdb7
+SHA1 (patch-src_audio__aac.c) = c44296b8da285f3c041e5c199983d2dd1b5a4394
+SHA1 (patch-src_audio__ac3.c) = fb54bddd790d1ab8341f65e457448775cad3a9ab
+SHA1 (patch-src_audio__amr.c) = 918b1b2fbfb4120e7b0942e50df63c8b589cff69
+SHA1 (patch-src_audio__atrac3.c) = aa6ad2cbc2189a204b883324f9b92173dfd6a868
+SHA1 (patch-src_audio__g726.c) = 938efd2964b78bb041695b6d1a626fb7a536348e
+SHA1 (patch-src_audio__lpcm.c) = f372362128418caab966e619c793b0cf59934fc2
+SHA1 (patch-src_audio__mp2.c) = 3daaa90ace01b34436b80d3c39acf065e48a14ac
+SHA1 (patch-src_audio__mp3.c) = 5945d9e8b742b51dc4dc61c9a31eeb634e3b565a
+SHA1 (patch-src_audio__wma.c) = a94755a9d1e201415a45b1d85f531868c7d004da
+SHA1 (patch-src_av__mpeg1.c) = e47cc6113895a8f7fc6ab1e90d066514894ef659
+SHA1 (patch-src_av__mpeg2.c) = 73397901c6931a761669d2f76d32a0b99f92f2e6
+SHA1 (patch-src_av__mpeg4__part10.c) = 4269b7f5fffc10fe591c8f4db191a6c101a371f0
+SHA1 (patch-src_av__mpeg4__part2.c) = b47f21ce41f900981b667caf2032126a3fe21507
+SHA1 (patch-src_av__wmv9.c) = 19fe459f154ed65f2dd67b2a681392ff201c5bc0
+SHA1 (patch-src_image__jpeg.c) = c378670db980613ea5c23909febb8b640c08a1e4
+SHA1 (patch-src_image__png.c) = d82725b1c86ef8dac18e86ca1689e6c2bc98336a
+SHA1 (patch-src_profiles.c) = 77ad202651d164dc58f38a6b486c4069eadc56f4
