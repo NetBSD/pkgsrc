@@ -1,3 +1,0 @@
-bin/ffmpeg @PREFIX@/bin/ffmpeg1
-bin/ffprobe @PREFIX@/bin/ffprobe1
-bin/ffserver @PREFIX@/bin/ffserver1
