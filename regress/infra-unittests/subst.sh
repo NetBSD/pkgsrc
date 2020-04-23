@@ -12,7 +12,7 @@ test_case_set_up() {
 	create_file "prepare-subst.mk" <<EOF
 
 # The tools that are used by subst.mk
-CHMOD=		chmod-is-not-used
+CHMOD=		chmod
 CMP=		cmp
 DIFF=		diff
 ECHO=		echo
@@ -1062,6 +1062,39 @@ if test_case_begin "typo in SUBST_CLASSES"; then
 		'' \
 		'Stop.' \
 		"$make: stopped in $PWD"
+
+	test_case_end
+fi
+
+
+if test_case_begin "executable bit is preserved"; then
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_STAGE.id=	pre-configure' \
+		'SUBST_FILES.id=	cmd data' \
+		'SUBST_VARS.id=		VAR' \
+		'VAR=			replaced' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "cmd" \
+		'@VAR@'
+	create_file_lines "data" \
+		'@VAR@'
+	chmod +x "$tmpdir/cmd"
+
+	run_bmake "testcase.mk" "pre-configure" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in cmd data'
+	assert_that "cmd" --file-is-lines "replaced"
+	assert_that "data" --file-is-lines "replaced"
+	[ -x "$tmpdir/cmd" ] \
+	|| assert_fail "cmd must still be executable"
+	[ -x "$tmpdir/data" ] \
+	&& assert_fail "data must not be executable"
 
 	test_case_end
 fi
