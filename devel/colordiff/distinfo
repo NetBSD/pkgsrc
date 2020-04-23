@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/06/19 20:47:15 wiz Exp $
+$NetBSD: distinfo,v 1.7 2020/04/23 07:31:30 adam Exp $
 
-SHA1 (colordiff-1.0.18.tar.gz) = 0fcd0dcb1ce19288b44c1d4693474f9ab603a590
-RMD160 (colordiff-1.0.18.tar.gz) = cf2e1cb9f7defc544c543d537bed42191b8f7e5c
-SHA512 (colordiff-1.0.18.tar.gz) = 53eb855b2554ca736146983adb522c8c06e4cfb9eb27bf9acb659c210b2af8101dba76ae392cf14db62fab61e3e5d3b664196c0f6432d47acdfa0846c799aa83
-Size (colordiff-1.0.18.tar.gz) = 21695 bytes
+SHA1 (colordiff-1.0.19.tar.gz) = b81f395824858c4c0558dbdf351251075353a568
+RMD160 (colordiff-1.0.19.tar.gz) = b6227892da53f1b0bd5537f83c3956aaa6237140
+SHA512 (colordiff-1.0.19.tar.gz) = 2845c4b8229df317984ea93aa9d2e08b3bb39ba67b870a14f09dc19fa1e94b4fc8e4da9a7554d53934591766b3aa1696fdc62765ce95e55f50da219e44dae523
+Size (colordiff-1.0.19.tar.gz) = 21329 bytes
