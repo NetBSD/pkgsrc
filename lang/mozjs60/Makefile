@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/04/18 21:59:15 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/23 08:32:55 wiz Exp $
 
 DISTNAME=	mozjs60_60.8.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	http://deb.debian.org/debian/pool/main/m/mozjs60/
 EXTRACT_SUFX=	.tar.xz
