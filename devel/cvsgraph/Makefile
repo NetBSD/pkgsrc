@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/03/18 12:41:08 rin Exp $
+# $NetBSD: Makefile,v 1.52 2020/04/23 20:03:42 rillig Exp $
 #
 
 DISTNAME=	cvsgraph-1.7.0
@@ -22,12 +22,6 @@ CONF_FILES=	${EGDIR}/cvsgraph.conf ${PKG_SYSCONFDIR}/cvsgraph.conf
 PLIST_SUBST+=	PKGBASE=${PKGBASE:Q}
 
 BUILD_TARGET=	cvsgraph
-
-SUBST_CLASSES+=		man
-SUBST_STAGE.man=	pre-install
-SUBST_FILES.man=	cvsgraph.1
-SUBST_SED.man=		-e "s|/usr/local/etc|${PKG_SYSCONFDIR}|g"
-SUBST_MESSAGE.man=	Fixing man page paths.
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
