@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.300 2020/04/23 16:55:32 nia Exp $
+# $NetBSD: Makefile,v 1.301 2020/04/23 17:16:40 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -99,7 +99,6 @@ SUBDIR+=	juk
 SUBDIR+=	kdenlive
 SUBDIR+=	kmix
 SUBDIR+=	kmplayer
-SUBDIR+=	kodi
 SUBDIR+=	kscd
 SUBDIR+=	libaacs
 SUBDIR+=	libaom
