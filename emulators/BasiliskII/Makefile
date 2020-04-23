@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/04/15 22:54:38 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2020/04/23 14:15:30 joerg Exp $
 
 DISTNAME=	BasiliskII-20190405
 PKGREVISION=	2
@@ -46,6 +46,7 @@ INSTALLATION_DIRS=	share/doc/BasiliskII
 
 pre-configure:
 	cd ${WRKSRC}/src/Unix && NO_CONFIGURE=x ./autogen.sh
+	${MKDIR} ${WRKSRC}/src/Unix/obj
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/BasiliskII/
