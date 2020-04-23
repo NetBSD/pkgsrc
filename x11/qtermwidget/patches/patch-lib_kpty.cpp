@@ -1,6 +1,7 @@
-$NetBSD: patch-lib_kpty.cpp,v 1.1 2020/02/20 05:47:44 gutteridge Exp $
+$NetBSD: patch-lib_kpty.cpp,v 1.2 2020/04/23 04:11:19 gutteridge Exp $
 
-Allow the package to build on NetBSD.
+Allow the package to build on NetBSD and macOS.
+https://github.com/lxqt/qtermwidget/pull/338
 
 --- lib/kpty.cpp.orig	2019-02-25 22:13:12.000000000 +0000
 +++ lib/kpty.cpp
@@ -26,12 +27,18 @@ Allow the package to build on NetBSD.
  #if defined(__APPLE__)
  #define HAVE_OPENPTY
  #define HAVE_UTIL_H
-@@ -174,7 +180,7 @@ KPtyPrivate::~KPtyPrivate()
+@@ -174,14 +180,12 @@ KPtyPrivate::~KPtyPrivate()
  {
  }
  
 -#ifndef HAVE_OPENPTY
-+#ifndef __APPLE__
  bool KPtyPrivate::chownpty(bool)
  {
  //    return !QProcess::execute(KStandardDirs::findExe("kgrantpty"),
+ //        QStringList() << (grant?"--grant":"--revoke") << QString::number(masterFd));
+     return true;
+ }
+-#endif
+ 
+ /////////////////////////////
+ // public member functions //
