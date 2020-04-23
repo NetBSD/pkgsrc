@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.83 2020/04/23 19:30:29 rillig Exp $
+# $NetBSD: subst.mk,v 1.84 2020/04/23 19:32:53 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -36,7 +36,7 @@
 #
 # SUBST_STAGE.<class>
 #	"stage" at which we do the text replacement. Should be one of
-#	{pre,do,post}-{extract,patch,configure,build,install}.
+#	{pre,do,post}-{extract,configure,build,install}.
 #
 # SUBST_MESSAGE.<class>
 #	The message to display before doing the substitution.
