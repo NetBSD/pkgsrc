@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2473 2020/04/23 07:32:19 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2474 2020/04/23 08:33:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3397,3 +3397,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/meson to 0.54.0nb1 [triaxx 2020-04-23]
 	Updated devel/blosc to 1.18.1 [adam 2020-04-23]
 	Updated devel/colordiff to 1.0.19 [adam 2020-04-23]
+	Updated lang/mozjs60 to 60.8.0nb4 [wiz 2020-04-23]
