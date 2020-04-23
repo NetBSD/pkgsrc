@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2482 2020/04/23 14:31:51 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2483 2020/04/23 14:34:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3409,3 +3409,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed multimedia/mkv2mp4 [nia 2020-04-23]
 	Updated www/squid4 to 4.11 [mef 2020-04-23]
 	Updated x11/xvidcap to 1.1.7 [nia 2020-04-23]
+	Removed x11/xvidcap-gtk2 [nia 2020-04-23]
