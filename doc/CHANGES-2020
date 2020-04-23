@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2495 2020/04/23 18:50:17 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2496 2020/04/23 19:00:42 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3422,3 +3422,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/py-weasyprint to 51 [adam 2020-04-23]
 	Updated textproc/py-pysrt to 1.1.2 [adam 2020-04-23]
 	Updated audio/fasttracker2 to 1.21 [fox 2020-04-23]
+	Updated textproc/bat to 0.14.0 [fox 2020-04-23]
