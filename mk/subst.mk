@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.82 2020/04/23 19:16:49 rillig Exp $
+# $NetBSD: subst.mk,v 1.83 2020/04/23 19:30:29 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -156,13 +156,16 @@ ${SUBST_STAGE.${class}}: subst-${class}
 subst-${class}: ${_SUBST_COOKIE.${class}}
 
 ${_SUBST_COOKIE.${class}}:
-	${RUN}								\
+	${RUN} set -u;							\
 	message=${SUBST_MESSAGE.${class}:Q};				\
 	[ "$$message" ] && ${ECHO_SUBST_MSG} "$$message";		\
 	\
 	cd ${WRKSRC};							\
 	patterns=${SUBST_FILES.${class}:Q};				\
 	set -f;								\
+	noop_count='';							\
+	noop_patterns='';						\
+	noop_sep='';							\
 	for pattern in $$patterns; do					\
 		set +f;							\
 		changed=no;						\
@@ -191,10 +194,18 @@ ${_SUBST_COOKIE.${class}}:
 			${ECHO} "$$file" >> ${.TARGET}.tmp;		\
 		done;							\
 	\
-		[ "$$changed,${SUBST_NOOP_OK.${class}:tl}" = no,no ]	\
-		&& ${FAIL_MSG} "[subst.mk:${class}] The filename pattern \"$$pattern\" has no effect."; \
-	done; \
+		[ "$$changed,${SUBST_NOOP_OK.${class}:tl}" = no,no ] && { \
+			noop_count="$$noop_count+";			\
+			noop_patterns="$$noop_patterns$$noop_sep$$pattern"; \
+			noop_sep=" ";					\
+		};							\
+	done;								\
 	\
+	case $$noop_count in						\
+	('')	;;							\
+	(+)	${FAIL_MSG} "[subst.mk:${class}] The filename pattern \"$$noop_patterns\" has no effect.";; \
+	(*)	${FAIL_MSG} "[subst.mk:${class}] The filename patterns \"$$noop_patterns\" have no effect."; \
+	esac;								\
 	${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp;				\
 	${MV} ${.TARGET}.tmp ${.TARGET}
 .endfor
