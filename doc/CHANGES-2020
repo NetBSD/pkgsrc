@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2489 2020/04/23 16:34:30 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2490 2020/04/23 16:56:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3415,3 +3415,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed multimedia/ffmpeg1 successor multimedia/ffmpeg4 [nia 2020-04-23]
 	Removed multimedia/ffplay1 successor multimedia/ffplay4 [nia 2020-04-23]
 	Updated multimedia/ffmpeg2 to 2.8.15 [nia 2020-04-23]
+	Removed multimedia/ffmpeg010 successor multimedia/ffmpeg4 [nia 2020-04-23]
