@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.147 2020/03/26 12:26:02 nia Exp $
+# $NetBSD: Makefile,v 1.148 2020/04/23 17:45:26 nia Exp $
 
 DISTNAME=	vice-3.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vice-emu/}
 
@@ -42,7 +42,6 @@ SUBST_FILES.prefix+=	doc/vice.txt
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
 
 .include "options.mk"
-
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
