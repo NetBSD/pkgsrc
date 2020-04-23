@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.79 2020/04/18 15:04:34 rillig Exp $
+# $NetBSD: subst.mk,v 1.80 2020/04/23 18:06:13 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -159,19 +159,18 @@ ${_SUBST_COOKIE.${class}}:
 	${RUN} message=${SUBST_MESSAGE.${class}:Q};			\
 	if [ "$$message" ]; then ${ECHO_SUBST_MSG} "$$message"; fi
 	${RUN}								\
-	basedir=${WRKSRC:Q};						\
-	emptydir="$$basedir/.subst-empty";				\
+	cd ${WRKSRC};							\
 	patterns=${SUBST_FILES.${class}:Q};				\
-	${MKDIR} "$$emptydir"; cd "$$emptydir";				\
+	set -f;								\
 	for pattern in $$patterns; do					\
+	set +f;								\
 	changed=no;							\
-	cd "$$basedir";							\
 	for file in $$pattern; do					\
 		case $$file in /*) ;; *) file="./$$file";; esac;	\
 		tmpfile="$$file.subst.sav";				\
 		if [ ! -f "$$file" ]; then				\
 			[ -d "$$file" ] || ${_SUBST_WARN.${class}} "Ignoring non-existent file \"$$file\"."; \
-		elif ${_SUBST_IS_TEXT_FILE_CMD.${class}}; then	\
+		elif ${_SUBST_IS_TEXT_FILE_CMD.${class}}; then		\
 			${SUBST_FILTER_CMD.${class}}			\
 			< "$$file"					\
 			> "$$tmpfile";					\
@@ -195,7 +194,6 @@ ${_SUBST_COOKIE.${class}}:
 	if ${TEST} "$$changed,${SUBST_NOOP_OK.${class}:tl}" = no,no; then \
 		${FAIL_MSG} "[subst.mk:${class}] The filename pattern \"$$pattern\" has no effect."; \
 	fi; \
-	done; \
-	cd ${WRKDIR}; ${RMDIR} "$$emptydir"
+	done
 	${RUN} ${TOUCH} ${TOUCH_FLAGS} ${.TARGET}.tmp && ${MV} ${.TARGET}.tmp ${.TARGET}
 .endfor
