@@ -160,7 +160,7 @@ EOF
 	run_bmake "testcase.mk" > "$tmpdir/actual-output"
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in pattern-*' \
-		'info: [subst.mk:class] Nothing changed in ./pattern-second.'
+		'info: [subst.mk:class] Nothing changed in "pattern-second".'
 
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "pattern-first" --file-contains-exactly "the first example"
@@ -192,7 +192,7 @@ EOF
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in single' \
-		'info: [subst.mk:class] Nothing changed in ./single.'
+		'info: [subst.mk:class] Nothing changed in "single".'
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "single" --file-contains-exactly "already an example"
 	assert_that "$exitcode" --equals "0"
@@ -222,7 +222,7 @@ EOF
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in single' \
-		'warning: [subst.mk:class] Nothing changed in ./single.' \
+		'warning: [subst.mk:class] Nothing changed in "single".' \
 		'fail: [subst.mk:class] The filename pattern "single" has no effect.' \
 		'*** Error code 1' \
 		'' \
@@ -255,7 +255,7 @@ EOF
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in nonexistent' \
-		'warning: [subst.mk:class] Ignoring non-existent file "./nonexistent".' \
+		'warning: [subst.mk:class] Ignoring non-existent file "nonexistent".' \
 		'fail: [subst.mk:class] The filename pattern "nonexistent" has no effect.' \
 		'*** Error code 1' \
 		'' \
@@ -287,7 +287,7 @@ EOF
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in nonexistent' \
-		'info: [subst.mk:class] Ignoring non-existent file "./nonexistent".'
+		'info: [subst.mk:class] Ignoring non-existent file "nonexistent".'
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "$exitcode" --equals "0"
 
@@ -340,9 +340,9 @@ EOF
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in does not exist' \
-		'info: [subst.mk:class] Ignoring non-existent file "./does".' \
-		'info: [subst.mk:class] Ignoring non-existent file "./not".' \
-		'info: [subst.mk:class] Ignoring non-existent file "./exist".'
+		'info: [subst.mk:class] Ignoring non-existent file "does".' \
+		'info: [subst.mk:class] Ignoring non-existent file "not".' \
+		'info: [subst.mk:class] Ignoring non-existent file "exist".'
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "$exitcode" --equals "0"
 
@@ -369,9 +369,9 @@ EOF
 
 	create_file_lines "expected-output" \
 		'=> Substituting "class" in first second third' \
-		'info: [subst.mk:class] Nothing changed in ./first.' \
-		'info: [subst.mk:class] Nothing changed in ./second.' \
-		'info: [subst.mk:class] Nothing changed in ./third.'
+		'info: [subst.mk:class] Nothing changed in "first".' \
+		'info: [subst.mk:class] Nothing changed in "second".' \
+		'info: [subst.mk:class] Nothing changed in "third".'
 	assert_that "actual-output" --file-equals "expected-output"
 	assert_that "$exitcode" --equals "0"
 
@@ -457,10 +457,10 @@ EOF
 
 	assert_that "stdout" --file-is-lines \
 		'=> Substituting "class" in *' \
-		'info: [subst.mk:class] Nothing changed in ./prepare-subst.mk.' \
-		'info: [subst.mk:class] Nothing changed in ./stderr.' \
-		'info: [subst.mk:class] Nothing changed in ./stdout.' \
-		'info: [subst.mk:class] Nothing changed in ./test.subr.main.mk.'
+		'info: [subst.mk:class] Nothing changed in "prepare-subst.mk".' \
+		'info: [subst.mk:class] Nothing changed in "stderr".' \
+		'info: [subst.mk:class] Nothing changed in "stdout".' \
+		'info: [subst.mk:class] Nothing changed in "test.subr.main.mk".'
 	assert_that "stderr" --file-is-empty
 	assert_that "$exitcode" --equals "0"
 
@@ -609,14 +609,14 @@ EOF
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
 
-	awk '{ if (/^... \.\/.*/) { print $1 " " $2 " (filtered timestamp)" } else { print $0 } }' \
+	awk '{ if (/^(---|\+\+\+) /) { print $1 " " $2 " (filtered timestamp)" } else { print $0 } }' \
 	< "$tmpdir/stdout" > "$tmpdir/stdout-filtered"
 
 	assert_that "file" --file-is-lines "one" "II" "three"
 	assert_that "stdout-filtered" --file-is-lines \
 		"=> Substituting \"two\" in file" \
-		"--- ./file (filtered timestamp)" \
-		"+++ ./file.subst.sav (filtered timestamp)" \
+		"--- file (filtered timestamp)" \
+		"+++ file.subst.sav (filtered timestamp)" \
 		"@@ -1,3 +1,3 @@" \
 		" one" \
 		"-two" \
@@ -649,14 +649,14 @@ EOF
 		2> "$tmpdir/stderr" \
 	&& exitcode=0 || exitcode=$?
 
-	awk '{ if (/^... \.\/.*/) { print $1 " " $2 " (filtered timestamp)" } else { print $0 } }' \
+	awk '{ if (/^(---|\+\+\+) /) { print $1 " " $2 " (filtered timestamp)" } else { print $0 } }' \
 	< "$tmpdir/stdout" > "$tmpdir/stdout-filtered"
 
 	assert_that "file" --file-is-lines "one" "II" "three"
 	assert_that "stdout-filtered" --file-is-lines \
 		"=> Substituting \"two\" in file" \
-		"--- ./file (filtered timestamp)" \
-		"+++ ./file.subst.sav (filtered timestamp)" \
+		"--- file (filtered timestamp)" \
+		"+++ file.subst.sav (filtered timestamp)" \
 		"@@ -1,3 +1,3 @@" \
 		" one" \
 		"-two" \
@@ -962,7 +962,7 @@ if test_case_begin "first filename pattern has no effect"; then
 
 	assert_that "out" --file-is-lines \
 		'=> Substituting "id" in file1 file2' \
-		'warning: [subst.mk:id] Nothing changed in ./file1.' \
+		'warning: [subst.mk:id] Nothing changed in "file1".' \
 		'fail: [subst.mk:id] The filename pattern "file1" has no effect.' \
 		'*** Error code 1' \
 		'' \
@@ -1022,7 +1022,7 @@ if test_case_begin "empty SUBST_SED"; then
 
 	assert_that "out" --file-is-lines \
 		'=> Substituting "id" in file' \
-		'warning: [subst.mk:id] Ignoring non-existent file "./file".' \
+		'warning: [subst.mk:id] Ignoring non-existent file "file".' \
 		'fail: [subst.mk:id] The filename pattern "file" has no effect.' \
 		'*** Error code 1' \
 		'' \
@@ -1056,7 +1056,7 @@ if test_case_begin "typo in SUBST_CLASSES"; then
 
 	assert_that "out" --file-is-lines \
 		'=> Substituting "id" in file' \
-		'warning: [subst.mk:id] Ignoring non-existent file "./file".' \
+		'warning: [subst.mk:id] Ignoring non-existent file "file".' \
 		'fail: [subst.mk:id] The filename pattern "file" has no effect.' \
 		'*** Error code 1' \
 		'' \
