@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/08/11 23:09:46 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2020/04/23 15:46:01 nia Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cherokee
@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS+=		inet6 pam ssl threads
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	geoip ldap mysql pam ssl
+PLIST_VARS+=	ffmpeg geoip ldap mysql pam ssl
 
 ###
 ### Threading support.
@@ -79,7 +79,7 @@ CONFIGURE_ARGS+=	--without-geoip
 .if !empty(PKG_OPTIONS:Mffmpeg)
 PLIST.ffmpeg=		yes
 CONFIGURE_ARGS+=	--with-ffmpeg=${BUILDLINK_PREFIX.ffmpeg}
-.include "../../multimedia/ffmpeg1/buildlink3.mk"
+.include "../../multimedia/ffmpeg3/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-ffmpeg
 .endif
