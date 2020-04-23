@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/02/01 20:21:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/04/23 05:53:33 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -71,6 +71,12 @@ ${PYSITELIB}/stripe/api_resources/balance_transaction.pyo
 ${PYSITELIB}/stripe/api_resources/bank_account.py
 ${PYSITELIB}/stripe/api_resources/bank_account.pyc
 ${PYSITELIB}/stripe/api_resources/bank_account.pyo
+${PYSITELIB}/stripe/api_resources/billing_portal/__init__.py
+${PYSITELIB}/stripe/api_resources/billing_portal/__init__.pyc
+${PYSITELIB}/stripe/api_resources/billing_portal/__init__.pyo
+${PYSITELIB}/stripe/api_resources/billing_portal/session.py
+${PYSITELIB}/stripe/api_resources/billing_portal/session.pyc
+${PYSITELIB}/stripe/api_resources/billing_portal/session.pyo
 ${PYSITELIB}/stripe/api_resources/bitcoin_receiver.py
 ${PYSITELIB}/stripe/api_resources/bitcoin_receiver.pyc
 ${PYSITELIB}/stripe/api_resources/bitcoin_receiver.pyo
