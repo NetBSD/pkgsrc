@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2471 2020/04/23 06:10:45 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2472 2020/04/23 07:02:58 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3394,3 +3394,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/py-stripe to 2.46.0 [adam 2020-04-23]
 	Updated devel/py-autopep8 to 1.5.2 [adam 2020-04-23]
 	Updated security/py-asyncssh to 2.2.1 [adam 2020-04-23]
+	Updated devel/meson to 0.54.0nb1 [triaxx 2020-04-23]
