@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.11 2019/10/14 13:37:43 mef Exp $
+$NetBSD: distinfo,v 1.12 2020/04/23 16:45:57 nia Exp $
 
 SHA1 (gst-ffmpeg-0.10.13.tar.gz) = 9a6a3b476e6a5b7d78f6431b90649f38654de579
 RMD160 (gst-ffmpeg-0.10.13.tar.gz) = cbc6560ac89e630f606f4639fa3d7ce51e4d71b0
 SHA512 (gst-ffmpeg-0.10.13.tar.gz) = 690466c14929753fa2f3b261fd808d40725298c37623a51bdcbaf0fa4928289b80c832a7031d1c6cf7bf37c2c6b87e85755ea7e8bc50c4dc8e8da6fc228e720e
 Size (gst-ffmpeg-0.10.13.tar.gz) = 5725107 bytes
+SHA1 (patch-configure) = 74a521cb6229415b9f13e7190601f552f4f49145
 SHA1 (patch-ext_libpostproc_gstpostproc.c) = 1828fd57c7604bd0dba82bfff4723c0de130e165
 SHA1 (patch-ext_libswscale_gstffmpgscale.c) = 8bae6dcb0be1f1589b2a829e045de93abcb5cc9d
