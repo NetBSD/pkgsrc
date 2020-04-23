@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19843 2020/04/22 09:29:43 wiz Exp $
+$NetBSD: TODO,v 1.19844 2020/04/23 14:31:51 nia Exp $
 
 Suggested new packages
 ======================
@@ -1210,7 +1210,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xsd-3.3.0
 	o xtraceroute-0.9.1
 	o xtux-20030306
-	o xvidcap-1.1.7
 	o xview-3.2.1.4.25.5
 	o xvkbd-3.7
 	o xwpe-1.5.30a
