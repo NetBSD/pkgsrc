@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:19 joerg Exp $
-bin/gvidcap
-man/man1/gvidcap.1
-share/doc/xvidcap-gtk2-${PKGVERSION}/AUTHORS
-share/doc/xvidcap-gtk2-${PKGVERSION}/ChangeLog
-share/doc/xvidcap-gtk2-${PKGVERSION}/INSTALL
-share/doc/xvidcap-gtk2-${PKGVERSION}/NEWS
-share/doc/xvidcap-gtk2-${PKGVERSION}/README
-share/doc/xvidcap-gtk2-${PKGVERSION}/TODO
