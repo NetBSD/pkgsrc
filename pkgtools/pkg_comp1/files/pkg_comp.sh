@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.1 2017/02/12 10:48:55 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.2 2020/04/23 11:28:09 sborrill Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -101,14 +101,15 @@ env_setdefaults()
     : ${PKG_DBDIR:=/var/db/pkg}
 
     # Default values for global variables used in the script.
+    : ${DISTRIB_EXT:=tgz}
     : ${DESTDIR:=/var/chroot/pkg_comp/default}
     : ${ROOTSHELL:=/bin/ksh}
     : ${COPYROOTCFG:=no}
     : ${AUTO_TARGET:=package}
     : ${BUILD_PKG_COMP_TARGET:=package}
     : ${DISTRIBDIR:=/var/pub/NetBSD}
-    : ${SETS:=base.tgz comp.tgz etc.tgz kern-GENERIC.tgz text.tgz}
-    : ${SETS_X11:=xbase.tgz xcomp.tgz xetc.tgz xfont.tgz xserver.tgz}
+    : ${SETS:=base.${DISTRIB_EXT} comp.${DISTRIB_EXT} etc.${DISTRIB_EXT} kern-GENERIC.${DISTRIB_EXT} text.${DISTRIB_EXT}}
+    : ${SETS_X11:=xbase.${DISTRIB_EXT} xcomp.${DISTRIB_EXT} xetc.${DISTRIB_EXT} xfont.${DISTRIB_EXT} xserver.${DISTRIB_EXT}}
     : ${REAL_SRC:=/usr/src}
     : ${REAL_SRC_OPTS:=-t null -o ro}
     : ${REAL_PKGSRC:=/usr/pkgsrc}
