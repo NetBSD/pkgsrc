@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.296 2020/04/23 12:06:56 nia Exp $
+# $NetBSD: Makefile,v 1.297 2020/04/23 13:12:17 nia Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -151,7 +151,6 @@ SUBDIR+=	mencoder
 SUBDIR+=	ming
 SUBDIR+=	minidlna
 SUBDIR+=	mjpegtools
-SUBDIR+=	mkv2mp4
 SUBDIR+=	mkvtoolnix
 SUBDIR+=	mkvtoolnix-old
 SUBDIR+=	mlt
