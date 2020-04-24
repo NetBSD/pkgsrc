@@ -1,9 +1,10 @@
-$NetBSD: patch-qt_configure,v 1.1 2017/06/23 07:12:19 manu Exp $
+$NetBSD: patch-qt_configure,v 1.2 2020/04/24 09:35:17 manu Exp $
 
 Fix == operator in shell script
+Allow building with recent GCC
 
---- qt/configure.orig	2017-06-20 10:22:29.000000000 +0200
-+++ qt/configure	2017-06-20 10:23:03.000000000 +0200
+--- qt/configure.orig	2016-08-23 06:13:28.000000000 +0000
++++ qt/configure	2020-04-20 09:06:51.824967933 +0000
 @@ -3570,9 +3570,9 @@
  # with the default mkspec. The 10.4u SDK does not support gcc 4.2.
  if [ "$PLATFORM_MAC" = "yes" ] && [ '!' -z "$CFG_SDK" ]; then
@@ -35,3 +36,14 @@ Fix == operator in shell script
          CFG_MAC_COCOA="no";
          CFG_MAC_CARBON="yes";
      fi
+@@ -7733,9 +7733,9 @@
+ 	;;
+     *-g++*)
+ 	# Check gcc's version
+ 	case "$(${QMAKE_CONF_COMPILER} -dumpversion)" in
+-	    5*|4*|3.4*)
++	    9*|8*|7*|6*|5*|4*|3.4*)
+ 		;;
+             3.3*)
+                 canBuildWebKit="no"
+                 ;;
