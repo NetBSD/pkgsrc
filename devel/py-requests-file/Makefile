@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2018/01/04 21:09:29 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/24 09:25:04 adam Exp $
 
-DISTNAME=	requests-file-1.4.3
+DISTNAME=	requests-file-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-file/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/dashea/requests-file/
+HOMEPAGE=	https://github.com/dashea/requests-file
 COMMENT=	Transport adapter for file:// URLs with the requests python lib
 LICENSE=	apache-2.0
 
