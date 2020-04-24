@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/04/23 14:31:12 nia Exp $
+# $NetBSD: Makefile,v 1.33 2020/04/24 08:36:59 nia Exp $
 
 DISTNAME=	xvidcap-1.1.7
 CATEGORIES=	x11
@@ -8,6 +8,8 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://xvidcap.sourceforge.net/
 COMMENT=	Capture X display to individual frames or MPEG video
 LICENSE=	gnu-gpl-v3
+
+SUPERSEDES=	xvidcap-gtk2-[0-9]*
 
 GNU_CONFIGURE=	yes
 
