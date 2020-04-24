@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 21:50:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2020/04/24 11:41:37 nia Exp $
 
 DISTNAME=	pam_ssh_agent_auth-0.9.2
 PKGREVISION=	2
@@ -10,6 +10,8 @@ MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/pamsshagentauth/
 COMMENT=	PAM module which permits authentication via ssh-agent
 LICENSE=	modified-bsd
+
+BROKEN=		"Fails to build with OpenSSL 1.1"
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pod2man
