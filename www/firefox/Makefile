@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.420 2020/04/12 08:29:17 adam Exp $
+# $NetBSD: Makefile,v 1.421 2020/04/24 13:24:21 nia Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		75.0
@@ -13,7 +13,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.mozilla.org/en-US/firefox/
-COMMENT=	Web browser with support for extensions (version ${FIREFOX_VER:C/\..*//})
+COMMENT=	Web browser with support for extensions (version ${FIREFOX_VER:tu:C/\\.[[:digit:]\.]*//})
 LICENSE=	mpl-1.1
 
 UNLIMIT_RESOURCES+=	datasize virtualsize
