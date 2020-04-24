@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/01/18 21:50:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2020/04/24 11:41:37 nia Exp $
 
 DISTNAME=	M2Crypto-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/m2crypto/m2crypto
 COMMENT=	Crypto and SSL toolkit for Python
 LICENSE=	m2crypto-license
+
+BROKEN=		"Fails to build with OpenSSL 1.1"
 
 .include "../../lang/python/pyversion.mk"
 
