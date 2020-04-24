@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/22 01:05:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/24 12:45:09 leot Exp $
 lib/dnsspoof.hosts
 lib/dsniff.magic
 lib/dsniff.services
@@ -21,7 +21,6 @@ sbin/filesnarf
 sbin/macof
 sbin/mailsnarf
 sbin/msgsnarf
-sbin/sshmitm
 sbin/tcpkill
 sbin/tcpnice
 sbin/urlsnarf
