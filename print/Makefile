@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.757 2020/03/01 17:15:49 nia Exp $
+# $NetBSD: Makefile,v 1.758 2020/04/24 12:00:52 nia Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -29,7 +29,6 @@ SUBDIR+=	cups-base
 SUBDIR+=	cups-drivers-Magicolor5440DL
 SUBDIR+=	cups-filters
 SUBDIR+=	cups-pdf
-SUBDIR+=	cups15
 SUBDIR+=	deforaos-pdfviewer
 SUBDIR+=	dspdfviewer
 SUBDIR+=	dvidvi
