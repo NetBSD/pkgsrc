@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2509 2020/04/24 12:45:50 leot Exp $
+$NetBSD: CHANGES-2020,v 1.2510 2020/04/24 12:59:30 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3437,3 +3437,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed www/squid3 successor www/squid4 [nia 2020-04-24]
 	Updated security/dsniff-nox11 to 2.3nb12 [leot 2020-04-24]
 	Updated security/dsniff to 2.3nb18 [leot 2020-04-24]
+	Updated games/nethack-lib to 3.6.6 [rhialto 2020-04-24]
