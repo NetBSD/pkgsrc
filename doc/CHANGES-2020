@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2510 2020/04/24 12:59:30 rhialto Exp $
+$NetBSD: CHANGES-2020,v 1.2511 2020/04/24 21:49:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3438,3 +3438,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/dsniff-nox11 to 2.3nb12 [leot 2020-04-24]
 	Updated security/dsniff to 2.3nb18 [leot 2020-04-24]
 	Updated games/nethack-lib to 3.6.6 [rhialto 2020-04-24]
+	Updated mail/thunderbird to 68.7.0 [ryoon 2020-04-24]
