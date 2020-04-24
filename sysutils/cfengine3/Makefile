@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 21:50:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2020/04/24 11:46:55 nia Exp $
 
 DISTNAME=	cfengine-3.7.3
 PKGREVISION=	2
@@ -9,6 +9,8 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	https://cfengine.com/product/community/
 COMMENT=	Tool for automating system administration
 LICENSE=	gnu-gpl-v3
+
+BROKEN=		"Fails to build with OpenSSL 1.1"
 
 USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes

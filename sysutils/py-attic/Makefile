@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 21:50:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2020/04/24 11:46:55 nia Exp $
 
 DISTNAME=	Attic-0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/A/a/}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://attic-backup.org/
 COMMENT=	Deduplicating backup program
 LICENSE=	modified-bsd
+
+BROKEN=		"Fails to build with OpenSSL 1.1"
 
 DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
 
