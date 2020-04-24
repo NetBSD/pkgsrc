@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/04/20 10:00:54 dsainty Exp $
+# $NetBSD: Makefile,v 1.42 2020/04/24 10:19:32 dsainty Exp $
 
 DISTNAME=	libffi-3.3
 PKGREVISION=	2
@@ -40,11 +40,6 @@ LIBS+=		-lm68k
 .if !empty(MACHINE_PLATFORM:MSunOS-*-i386) && !empty(CC_VERSION:Mgcc-[23]*)
 CPPFLAGS+=	-D__PIC__
 .endif
-
-# Irix fixes from PR 48587, but also ensures compatibility with other shells.
-# Ksh also has difficulty parsing the shell scripts patched as part of this PR.
-USE_TOOLS+=		bash:build
-MAKE_FLAGS+=		SHELL=${TOOLS_DIR}/bin/bash
 
 # On platforms where ld(1) is LLVM ld, relocations against read-only
 # segments has to be explicitly allowed.
