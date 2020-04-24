@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2508 2020/04/24 12:45:32 leot Exp $
+$NetBSD: CHANGES-2020,v 1.2509 2020/04/24 12:45:50 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3436,3 +3436,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed print/cups15 successor print/cups [nia 2020-04-24]
 	Removed www/squid3 successor www/squid4 [nia 2020-04-24]
 	Updated security/dsniff-nox11 to 2.3nb12 [leot 2020-04-24]
+	Updated security/dsniff to 2.3nb18 [leot 2020-04-24]
