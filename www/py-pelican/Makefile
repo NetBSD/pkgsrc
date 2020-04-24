@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2020/04/19 20:17:55 nils Exp $
+# $NetBSD: Makefile,v 1.10 2020/04/24 21:51:54 nils Exp $
 
 DISTNAME=		pelican-4.2.0
+PKGREVISION=		1
 GITHUB_PROJECT=		pelican
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		www textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=getpelican/}
-EXTRACT_SUFX=		.zip
 
 MAINTAINER=		nils@NetBSD.org
 HOMEPAGE=		https://blog.getpelican.com/
