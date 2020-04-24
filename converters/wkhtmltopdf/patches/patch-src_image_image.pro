@@ -1,4 +1,4 @@
-$NetBSD: patch-src_image_image.pro,v 1.1 2017/09/10 19:58:36 joerg Exp $
+$NetBSD: patch-src_image_image.pro,v 1.2 2020/04/24 09:35:17 manu Exp $
 
 --- src/image/image.pro.orig	2017-09-10 15:04:52.049437840 +0000
 +++ src/image/image.pro
@@ -11,3 +11,10 @@ $NetBSD: patch-src_image_image.pro,v 1.1 2017/09/10 19:58:36 joerg Exp $
  include(../../common.pri)
  
  TEMPLATE = app
+@@ -47,4 +49,6 @@
+ }
+ 
+ # Input
+ SOURCES += wkhtmltoimage.cc imagearguments.cc imagecommandlineparser.cc imagedocparts.cc
++
++LIBS += -lcrypto -lssl
