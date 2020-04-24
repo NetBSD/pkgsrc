@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2020/01/18 21:50:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2020/04/24 11:46:55 nia Exp $
 
 DISTNAME=	cfengine-2.2.10
 PKGREVISION=	12
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.cfengine.org/
 COMMENT=	Automate configuration and administration of large systems
 LICENSE=	gnu-gpl-v2
+
+BROKEN=		"Fails to build with OpenSSL 1.1"
 
 BUILD_DEFS+=		IPV6_READY
 
