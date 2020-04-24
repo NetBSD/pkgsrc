@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2020/01/18 21:49:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.115 2020/04/24 11:23:07 nia Exp $
 
 DISTNAME=	cyrus-imapd-2.2.13p1
 PKGREVISION=	20
@@ -9,6 +9,8 @@ MASTER_SITES+=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cyrusimap.org/
 COMMENT=	Cyrus IMAP server
+
+BROKEN=		"Fails to build with OpenSSL 1.1"
 
 MAKE_JOBS_SAFE=		no
 
