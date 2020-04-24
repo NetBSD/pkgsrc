@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2507 2020/04/24 12:24:01 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2508 2020/04/24 12:45:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3435,3 +3435,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed sysutils/gnome-commander [nia 2020-04-24]
 	Removed print/cups15 successor print/cups [nia 2020-04-24]
 	Removed www/squid3 successor www/squid4 [nia 2020-04-24]
+	Updated security/dsniff-nox11 to 2.3nb12 [leot 2020-04-24]
