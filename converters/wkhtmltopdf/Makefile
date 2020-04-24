@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 21:48:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2020/04/24 09:35:16 manu Exp $
 
 DISTNAME=	wkhtmltox-0.12.4
 PKGNAME=	wkhtmltopdf-0.12.4
-PKGREVISION=	5
+PKGREVISION=	6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wkhtmltopdf/}
 GITHUB_PROJECT=	wkhtmltopdf
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -16,9 +16,10 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES+=	c c++ gnu++98
 USE_TOOLS+=	perl
-#USE_LIBTOOL=	yes
+PYTHON_VERSIONS_ACCEPTED=	27
 
 BUILDLINK_TRANSFORM+=	opt:-std=gnu++11:-std=gnu++98 
+CXXFLAGS+=	-std=gnu++98
 
 SUBST_CLASSES+=		x11
 SUBST_MESSAGE.x11=	Fixing x11 options.
