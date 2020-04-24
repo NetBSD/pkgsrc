@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.18 2020/04/24 16:19:06 nia Exp $
+$NetBSD: README,v 1.19 2020/04/24 18:50:06 nia Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -98,7 +98,7 @@ fix problems.
   FreeBSD
   Linux
   NetBSD
-  SunOS (README.Solaris, Illumos, SmartOS)
+  SunOS (README.Solaris, illumos, SmartOS)
 
 
 Platforms believed to have users
