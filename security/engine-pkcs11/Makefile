@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/01/25 10:45:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/24 11:41:37 nia Exp $
 #
 
 VERSION=		0.1.8
@@ -7,6 +7,8 @@ PKGNAME=		${DISTNAME:S/_/-/}
 PKGREVISION=		6
 CATEGORIES=		security
 MASTER_SITES=		https://github.com/OpenSC/engine_pkcs11/archive/
+
+BROKEN=			"Fails to build with OpenSSL 1.1"
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/OpenSC/OpenSC/wiki/OpenSSL-engine-for-PKCS%2311-modules
