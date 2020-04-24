@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1454 2020/04/18 17:43:17 nikita Exp $
+# $NetBSD: Makefile,v 1.1455 2020/04/24 12:21:23 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -956,7 +956,6 @@ SUBDIR+=	snownews
 SUBDIR+=	spawn-fcgi
 SUBDIR+=	spdylay
 SUBDIR+=	sqtop
-SUBDIR+=	squid3
 SUBDIR+=	squid4
 SUBDIR+=	squidGuard
 SUBDIR+=	squidanalyzer
