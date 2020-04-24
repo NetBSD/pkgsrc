@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2017/09/10 19:58:36 joerg Exp $
+$NetBSD: distinfo,v 1.3 2020/04/24 09:35:16 manu Exp $
 
 SHA1 (wkhtmltox-0.12.4.tar.bz2) = 6a0ca9b01d5e37af3fb451bbd934afff43cf26ae
 RMD160 (wkhtmltox-0.12.4.tar.bz2) = 665abd76618cdfac27585e62caa52b33d09990fa
@@ -10,7 +10,7 @@ SHA1 (patch-qt_config.tests_unix_libjpeg_libjpeg.pro) = 5012c36257fb1f2cef7f086e
 SHA1 (patch-qt_config.tests_unix_libpng_libpng.pro) = be0dead445dbbfeef9bc2a816ef5efd85aba0411
 SHA1 (patch-qt_config.tests_x11_mitshm_mitshm.pro) = 5a411a67f6a99f87a9f22698a2a6e1e01b1a38e7
 SHA1 (patch-qt_config.tests_x11_xrender_xrender.pro) = a1120252f1f6b289caafa3835e2f2d42be69446c
-SHA1 (patch-qt_configure) = e13eb806e11a88a20650fc62d38d162145eaabae
+SHA1 (patch-qt_configure) = 823e039d8fc8da6d2518301413dcf8195021c3e2
 SHA1 (patch-qt_mkspecs_netbsd-g++_qmake.conf) = 508b1f25735d3a8f29a1da08a988f608186751bf
 SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_bytecompiler_BytecodeGenerator.cpp) = b8ef0623e9cd666d708295c006b5e72693ac715e
 SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_heap_MarkedSpace.cpp) = 79ad51f005e68156d2e339d0d925fc79ab79f059
@@ -27,7 +27,16 @@ SHA1 (patch-qt_src_3rdparty_webkit_Source_WebCore_dom_DocumentMarkerController.c
 SHA1 (patch-qt_src_3rdparty_webkit_Source_WebCore_dom_Element.cpp) = 776c988688af27ebbcd43a75b40515a13b48b9d5
 SHA1 (patch-qt_src_3rdparty_webkit_Source_WebCore_html_HTMLImageElement.cpp) = 1dfde3ad2e0d30026e0cd2c62f5f959aeace394c
 SHA1 (patch-qt_src_3rdparty_webkit_Source_WebCore_platform_DefaultLocalizationStrategy.cpp) = d510329e032f0e7362802ea23b19528d5ecdcc81
+SHA1 (patch-qt_src_network_ssl_qsslcertificate.cpp) = c6caf40e63c6bb10444361f52401d55f397e85a4
+SHA1 (patch-qt_src_network_ssl_qsslcertificate_p.h) = 6ab163f9bae77176b38aa2bc2ea0ba1897751eb7
+SHA1 (patch-qt_src_network_ssl_qsslkey.cpp) = faff8d9970bed9a141e6eb7c341efa9ba8ed7c37
+SHA1 (patch-qt_src_network_ssl_qsslkey_p.h) = af3c29385073a24f4dae133c14d90d29a3205a79
+SHA1 (patch-qt_src_network_ssl_qsslsocket_openssl.cpp) = c6f20bfa60f5bdd53dc7764c053d51d69c8edbe8
+SHA1 (patch-qt_src_network_ssl_qsslsocket_openssl_p.h) = 3c26fd2196297dc5b6ae4f67232b2d5538dc25af
+SHA1 (patch-qt_src_network_ssl_qsslsocket_openssl_symbols.cpp) = a1f73de1bb07d9e87296a1d52e5a8e3133c3b8da
+SHA1 (patch-qt_src_network_ssl_qsslsocket_openssl_symbols_p.h) = fb7c20333199a00cc233a4a7ccbc29894eb806c1
 SHA1 (patch-qt_src_plugins_platforms_xlib_xlib.pro) = 18516ea36e61c57d2acc3f5fa06890ab7a88fbe6
-SHA1 (patch-src_image_image.pro) = d33d1676608ebe663bc7c0dd43a2b71b478da7a6
+SHA1 (patch-qt_src_xmlpatterns_api_qcoloroutput_p.h) = d196f51a8168d335a00d3663418cab27f6076ca9
+SHA1 (patch-src_image_image.pro) = 1684d98030a1f163a905f8216629f09f453771eb
 SHA1 (patch-src_lib_lib.pro) = a3b1958c2bc63b79a195325cb226de37eecc17a0
-SHA1 (patch-src_pdf_pdf.pro) = e46a2a14aa3540b3128182f9938c5e64f9b39b8c
+SHA1 (patch-src_pdf_pdf.pro) = 54d60872137de6b7d6188a2ca1260bccd170c3a9
