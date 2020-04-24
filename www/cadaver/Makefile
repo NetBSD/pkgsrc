@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2020/01/18 21:51:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2020/04/24 12:14:01 nia Exp $
 
 DISTNAME=		cadaver-0.23.3
 PKGREVISION=		5
@@ -8,6 +8,8 @@ CATEGORIES=		www
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.webdav.org/cadaver/
 COMMENT=		Command-line WebDAV client
+
+BROKEN=			"Fails to build with OpenSSL 1.1"
 
 BUILD_TARGET=		cadaver
 GNU_CONFIGURE=		YES
