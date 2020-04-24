@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.65 2020/04/12 08:28:26 adam Exp $
+# $NetBSD: Makefile,v 1.66 2020/04/24 08:26:56 adam Exp $
 
-DISTNAME=	peewee-3.13.2
+DISTNAME=	peewee-3.13.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/peewee/}
 
 MAINTAINER=	fhajny@NetBSD.org
-HOMEPAGE=	http://www.peewee-orm.com/
+HOMEPAGE=	http://docs.peewee-orm.com/
 COMMENT=	Small, expressive ORM for PostgreSQL, MySQL and SQLite
 LICENSE=	mit
 
