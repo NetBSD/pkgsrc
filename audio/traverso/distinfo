@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2020/04/24 08:43:08 nia Exp $
+
+SHA1 (traverso-0.49.6.tar.gz) = 40c8f5cd86e73e65d5a9c63953bf5dc7ad8685bf
+RMD160 (traverso-0.49.6.tar.gz) = 176c4815f4184e609684db7ea76c21187551080e
+SHA512 (traverso-0.49.6.tar.gz) = ff802994bd2de214a307143800287c48f3c68f02074524e124d985cb86c03ee5989ea43babdb50f763dd41de6fab67ee3c68c04d635a9c67ba349a3693531f60
+Size (traverso-0.49.6.tar.gz) = 1511714 bytes
+SHA1 (patch-src_core_Sheet.cpp) = a1c59a95e1c517222ffa92b99d304351e688c247
+SHA1 (patch-src_engine_PADriver.cpp) = 6d5220ffda0c4d41f1c3c88a66f925ecc8e901d7
+SHA1 (patch-src_engine_PADriver.h) = 5d859bc7d1af8d66dbfa1144e57c0a848f61000d
+SHA1 (patch-src_traverso_Traverso.cpp) = 60cd8268eb060feff9ab345c28ef4fd883af8cb5
+SHA1 (patch-src_traverso_dialogs_settings_Pages.cpp) = 7e40c2d41334d393577371b67664912f610ca946

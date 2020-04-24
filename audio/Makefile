@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.596 2020/04/21 13:32:23 nia Exp $
+# $NetBSD: Makefile,v 1.597 2020/04/24 08:43:08 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -447,6 +447,7 @@ SUBDIR+=	tfmxplay
 SUBDIR+=	timidity
 SUBDIR+=	toolame
 SUBDIR+=	tracker
+SUBDIR+=	traverso
 SUBDIR+=	tremor
 SUBDIR+=	tremor-tools
 SUBDIR+=	trm
