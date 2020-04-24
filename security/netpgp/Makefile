@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/01/18 23:35:10 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/04/24 11:41:37 nia Exp $
 
 DISTNAME=		netpgp-20140220
 PKGREVISION=		8
@@ -9,6 +9,8 @@ MAINTAINER=		agc@NetBSD.org
 HOMEPAGE=		https://www.NetBSD.org/
 COMMENT=		PGP signing, verification, encryption and decryption program
 LICENSE=		modified-bsd
+
+BROKEN=			"Fails to build with OpenSSL 1.1"
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
