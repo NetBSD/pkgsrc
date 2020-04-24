@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/03/10 22:09:33 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2020/04/24 12:03:53 nia Exp $
 #
 
 DISTNAME=	virtuoso-opensource-6.1.6
@@ -10,6 +10,8 @@ MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://virtuoso.openlinksw.com/
 COMMENT=	Universal SQL/Application server
 LICENSE=	gnu-gpl-v2 # with exemptions
+
+BROKEN=		"Fails to build with OpenSSL 1.1"
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-jdk2 --without-jdk3 --without-jdk4 \
