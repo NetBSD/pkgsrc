@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2506 2020/04/24 12:22:18 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2507 2020/04/24 12:24:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3433,5 +3433,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-requests-file to 1.5.0 [adam 2020-04-24]
 	Updated www/webkit-gtk to 2.28.2 [leot 2020-04-24]
 	Removed sysutils/gnome-commander [nia 2020-04-24]
-	Removed print/cups15 [nia 2020-04-24]
-	Removed www/squid3 [nia 2020-04-24]
+	Removed print/cups15 successor print/cups [nia 2020-04-24]
+	Removed www/squid3 successor www/squid4 [nia 2020-04-24]
