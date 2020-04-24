@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/04/24 12:45:09 leot Exp $
+
+Do not build and install sshmitm, needs to be adjusted to OpenSSL 1.1.
+
+--- Makefile.in.orig	2000-12-15 20:03:26.000000000 +0000
++++ Makefile.in
+@@ -69,7 +69,7 @@ OBJS	= $(SRCS:.c=.o)
+ LIBOBJS	= dummy.o @LIBOBJS@
+ 
+ PROGS	= arpspoof dnsspoof dsniff filesnarf macof mailsnarf msgsnarf \
+-	  sshmitm tcpkill tcpnice @TCPHIJACK@ urlsnarf webmitm @WEBSPY@ 
++	  tcpkill tcpnice @TCPHIJACK@ urlsnarf webmitm @WEBSPY@ 
+ 
+ CONFIGS	= dsniff.magic dsniff.services dnsspoof.hosts
+ 
