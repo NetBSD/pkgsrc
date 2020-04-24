@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2017/08/16 20:21:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2020/04/24 11:41:36 nia Exp $
 #
 # used by security/dsniff/Makefile
 # used by security/dsniff-nox11/Makefile
@@ -7,6 +7,8 @@ DISTNAME=	dsniff-${VERS}
 VERS=		2.3
 CATEGORIES=	security
 MASTER_SITES+=	https://monkey.org/~dugsong/dsniff/
+
+BROKEN=		"Fails to build with OpenSSL 1.1"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://monkey.org/~dugsong/dsniff/
