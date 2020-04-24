@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2020/04/12 08:28:55 adam Exp $
+# $NetBSD: Makefile,v 1.59 2020/04/24 11:23:08 nia Exp $
 
 DISTNAME=	cyrus-imapd-2.3.18
 PKGREVISION=	33
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cyrusimap.org/
 COMMENT=	Cyrus IMAP server
 #LICENSE=	original-bsd # like license
+
+BROKEN=		"Fails to build with OpenSSL 1.1"
 
 BUILD_DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 
