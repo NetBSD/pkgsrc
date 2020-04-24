@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/01/26 17:31:49 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2020/04/24 11:56:56 nia Exp $
 
 DISTNAME=	freeradius-server-2.2.10
 PKGNAME=	${DISTNAME:S/-server//}
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://freeradius.org/
 COMMENT=	Free RADIUS server implementation
 LICENSE=	gnu-gpl-v2
+
+BROKEN=		"Fails to build with OpenSSL 1.1"
 
 CONFLICTS+=		radiusd-cistron-[0-9]*
 CONFLICTS+=		freeradius<2.0
