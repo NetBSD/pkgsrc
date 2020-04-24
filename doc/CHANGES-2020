@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2498 2020/04/23 19:53:25 rmind Exp $
+$NetBSD: CHANGES-2020,v 1.2499 2020/04/24 08:29:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3425,3 +3425,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/fasttracker2 to 1.21 [fox 2020-04-23]
 	Updated textproc/bat to 0.14.0 [fox 2020-04-23]
 	Updated security/wolfssl to 4.4.0 [fox 2020-04-23]
+	Updated databases/py-peewee to 3.13.3 [adam 2020-04-24]
+	Updated devel/py-test-flake8 to 1.0.5 [adam 2020-04-24]
