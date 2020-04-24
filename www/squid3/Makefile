@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2020/01/18 21:51:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.87 2020/04/24 12:14:01 nia Exp $
 
 DISTNAME=	squid-3.5.28
 PKGREVISION=	3
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 LICENSE=	gnu-gpl-v2
+
+BROKEN=		"Fails to build with OpenSSL 1.1"
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl:run gmake
