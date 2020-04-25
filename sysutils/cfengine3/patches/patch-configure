@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2020/04/25 11:49:52 nia Exp $
+
+Shell portability.
+
+--- configure.orig	2020-03-23 17:11:24.000000000 +0000
++++ configure
+@@ -22473,7 +22473,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-    if test "x$systemctl" == "xno"; then :
++    if test "x$systemctl" = "xno"; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking Not a systemd system" >&5
+ $as_echo_n "checking Not a systemd system... " >&6; }
+ else
