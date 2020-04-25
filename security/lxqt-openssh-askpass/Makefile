@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/25 18:36:10 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/25 18:39:04 gutteridge Exp $
 
 DISTNAME=	lxqt-openssh-askpass-0.14.1
 CATEGORIES=	security
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
-COMMENT=	Tool used with openssh to prompt the user for password
+COMMENT=	Tool used with openssh to prompt the user for a password
 LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=	yes
