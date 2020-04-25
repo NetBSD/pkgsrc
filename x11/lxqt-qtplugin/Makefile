@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/25 01:14:54 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/25 14:55:39 gutteridge Exp $
 
 DISTNAME=	lxqt-qtplugin-0.14.0
 CATEGORIES=	x11
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lxqt.org/
-COMMENT=	LxQt platform integration plugin for Qt5
+COMMENT=	LXQt platform integration plugin for Qt5
 LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=	yes
