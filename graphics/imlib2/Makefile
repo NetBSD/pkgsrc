@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2020/02/20 15:14:56 nia Exp $
+# $NetBSD: Makefile,v 1.78 2020/04/25 17:23:44 rillig Exp $
 
 DISTNAME=	imlib2-1.6.1
 CATEGORIES=	graphics
@@ -26,11 +26,13 @@ SHLIB_SUFFIX=		sl
 SHLIB_SUFFIX=		so
 .endif
 
+.if ${SHLIB_SUFFIX} != so
 SUBST_CLASSES+=		shlib
 SUBST_STAGE.shlib=	pre-configure
 SUBST_MESSAGE.shlib=	Replacing shared library suffix
 SUBST_FILES.shlib+=	src/lib/image.c
 SUBST_SED.shlib+=	-e 's,"\.so",".${SHLIB_SUFFIX}",'
+.endif
 
 SUBST_CLASSES+=		rpath
 SUBST_STAGE.rpath=	pre-configure
