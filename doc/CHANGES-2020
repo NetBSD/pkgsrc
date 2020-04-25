@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2515 2020/04/25 01:17:45 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2516 2020/04/25 01:35:26 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3443,3 +3443,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added graphics/lxqt-themes version 0.14.0 [gutteridge 2020-04-25]
 	Added x11/lxqt-session version 0.14.1 [gutteridge 2020-04-25]
 	Added x11/lxqt-qtplugin version 0.14.0 [gutteridge 2020-04-25]
+	Added x11/lxqt-globalkeys version 0.14.3 [gutteridge 2020-04-25]
