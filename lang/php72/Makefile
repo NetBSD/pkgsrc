@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/01/25 17:24:03 taca Exp $
+# $NetBSD: Makefile,v 1.25 2020/04/25 18:47:35 rillig Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -14,7 +14,7 @@ USE_TOOLS+=		gmake lex pkg-config
 LIBTOOL_OVERRIDE=	# empty
 PHP_CHECK_INSTALLED=	No
 
-PHP_VERSIONS_ACCEPTED=		72
+PHP_VERSIONS_ACCEPTED=	72
 
 .include "Makefile.php"
 
@@ -33,11 +33,8 @@ REPLACE_PHP=		ext/phar/phar/phar.php run-tests.php
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing common paths.
 SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	ext/phar/phar/phar.php
-SUBST_FILES.path+=	php.ini-development php.ini-production run-tests.php
-SUBST_FILES.path+=	sapi/cgi/Makefile.frag
-SUBST_VARS.path=	CGIDIR
-SUBST_VARS.path+=	PREFIX
+SUBST_FILES.path=	php.ini-development php.ini-production
+SUBST_VARS.path=	CGIDIR PREFIX
 
 INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
 
