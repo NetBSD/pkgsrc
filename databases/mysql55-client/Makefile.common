@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2020/04/18 17:33:51 gdt Exp $
+# $NetBSD: Makefile.common,v 1.68 2020/04/25 18:23:23 rillig Exp $
 #
 # used by databases/mysql55-client/Makefile
 # used by databases/mysql55-server/Makefile
@@ -73,7 +73,7 @@ CMAKE_ARGS+=		-DWITH_EXTRA_CHARSETS=${MYSQL_EXTRA_CHARSET:Q}
 BROKEN_READLINE_DETECTION=	yes # At least on RHEL 5.6
 
 # MySQL 5 depends on builtin functions enabled with i486 and later with GCC.
-.if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:Mi386)
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == i386
 GNU_ARCH.i386=		i486
 CFLAGS+=		-march=i486
 .endif
@@ -131,7 +131,7 @@ SUBST_SED.fixpaths+=	-e "s,${WRAPPER_BINDIR}/g++,${CXXPATH},g"
 
 .include "../../mk/readline.buildlink3.mk"
 
-.if !empty(READLINE_TYPE:Mreadline)
+.if ${READLINE_TYPE} == readline
 CMAKE_ARGS+=	-DREADLINE_FOUND=system
 .endif
 CMAKE_ARGS+=	-DREADLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editlinereadline}/include/readline
