@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.32 2020/02/25 05:30:14 rillig Exp $
+# $NetBSD: build.mk,v 1.33 2020/04/25 21:36:17 rillig Exp $
 #
 # This file defines what happens in the build phase, excluding the
 # self-test, which is defined in test.mk.
@@ -202,11 +202,11 @@ post-build:
 # BUILD_ENV_SHELL
 #	The shell to start.
 #
-#	Default: ${SH}
+#	Default: ${SHELL}, fallback ${SH}
 #
 # Keywords: debug build
 
-BUILD_ENV_SHELL?=	${SH}
+BUILD_ENV_SHELL?=	${SHELL:U${SH}}
 build-env: .PHONY ${_PKGSRC_BARRIER:Ubarrier:D_build-env}
 _build-env: .PHONY configure
 	@${STEP_MSG} "Entering the build environment for ${PKGNAME}"
