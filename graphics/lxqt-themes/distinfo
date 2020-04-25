@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/25 00:56:46 gutteridge Exp $
+
+SHA1 (lxqt-themes-0.14.0.tar.xz) = d5372c979f09934a87dfcc6f2a9fd404b4f4350d
+RMD160 (lxqt-themes-0.14.0.tar.xz) = 88a23d6772f43371239ed1883ae4ddd3115fcfe1
+SHA512 (lxqt-themes-0.14.0.tar.xz) = 622449df60f5f50d59ab308a7aaae35114e91bda48e112fb2abb2c394bfdfc5794d2bf0c6ce63689a29081a31bdde191e3c8cb7217f833d76a407f9970eb1fb2
+Size (lxqt-themes-0.14.0.tar.xz) = 3203820 bytes
