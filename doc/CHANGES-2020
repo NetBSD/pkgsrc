@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2521 2020/04/25 06:54:32 dsainty Exp $
+$NetBSD: CHANGES-2020,v 1.2522 2020/04/25 11:50:03 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3449,3 +3449,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added x11/lxqt-about version 0.14.1 [gutteridge 2020-04-25]
 	Updated editors/emacs26 to 26.3nb5 [dsainty 2020-04-25]
 	Updated editors/emacs26-nox11 to 26.3nb1 [dsainty 2020-04-25]
+	Updated sysutils/cfengine3 to 3.15.1 [nia 2020-04-25]
