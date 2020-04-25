@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 02:46:51 agc Exp $
+$NetBSD: distinfo,v 1.11 2020/04/25 13:47:31 nia Exp $
 
 SHA1 (cadaver-0.23.3.tar.gz) = 4ad8ea2341b77e7dee26b46e4a8a496f1a2962cd
 RMD160 (cadaver-0.23.3.tar.gz) = 104f687cfd121b091ba2f509b37574509b4ffabd
 SHA512 (cadaver-0.23.3.tar.gz) = 48fe0a266be0ca7239f325377e5e2a8dc57a5d60466c7160e36c060ad24c09a50727695b9fa931844b1e66e173ebbb838f390d6c60fd07b614bd3b636cd4dd41
 Size (cadaver-0.23.3.tar.gz) = 831884 bytes
 SHA1 (patch-aa) = 6b8391e825d8bc4131fdab4aee7214a0181a9b69
+SHA1 (patch-lib_neon_ne__auth.c) = b3be23038af390d52830e1c00c8313606e79ba96
+SHA1 (patch-lib_neon_ne__gnutls.c) = ab502c65db85b2e2db100dcbaad3f51de3e9e895
+SHA1 (patch-lib_neon_ne__privssl.h) = 83431345d2333423c664ce4f764683b1ee48b571
+SHA1 (patch-lib_neon_ne__socket.c) = effeded3caa19853b1845fdeea4754491f11e009
