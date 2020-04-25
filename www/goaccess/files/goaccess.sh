@@ -7,6 +7,7 @@
 $_rc_subr_loaded . /etc/rc.subr
 
 name="goaccess"
+rcvar=$name
 command="@PREFIX@/bin/$name"
 pidfile="/var/run/goaccess/$name.pid"
 start_precmd="goaccess_prestart"
@@ -18,7 +19,7 @@ stop_postcmd="goaccess_poststop"
 goaccess_prestart()
 {
 	if [ -z "$goaccess_logfile" ]; then
-		echo "goacess_logfile is not set" >&2
+		echo "goaccess_logfile is not set" >&2
 		return 1
 	fi
 
