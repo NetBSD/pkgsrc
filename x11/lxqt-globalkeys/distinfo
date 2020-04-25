@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/04/25 01:34:53 gutteridge Exp $
+
+SHA1 (lxqt-globalkeys-0.14.3.tar.xz) = e90b0b15f9cc3b178e7fd004c158b385fd644990
+RMD160 (lxqt-globalkeys-0.14.3.tar.xz) = 66b1548582e033fd48ae71bb2d6bda7fbb6a4bcf
+SHA512 (lxqt-globalkeys-0.14.3.tar.xz) = 205496c6be8fcefc4b0c7fc1beeac2a5ef996e1580d7662da6271149b3d26819b4db21260699bdd99db6a3e2874c7ac2670a6579c46985dcf6223ca6c98c125c
+Size (lxqt-globalkeys-0.14.3.tar.xz) = 67928 bytes
+SHA1 (patch-daemon_core.cpp) = 40af10825274060fcce20d59191eb2c9d254bc23
