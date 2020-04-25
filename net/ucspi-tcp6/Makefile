@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/03/30 08:03:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2020/04/25 20:25:32 rillig Exp $
 
 DISTNAME=		ucspi-tcp6-1.11.4
 CATEGORIES=		net
@@ -16,6 +16,7 @@ WRKSRC=			${WRKDIR}/net/${PKGBASE}/${DISTNAME}
 DJB_SLASHPACKAGE=	yes
 DJB_RESTRICTED=		no
 DJB_CONFIG_DIR=		${WRKSRC}
+DJB_ERRNO_HACK=		no
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
