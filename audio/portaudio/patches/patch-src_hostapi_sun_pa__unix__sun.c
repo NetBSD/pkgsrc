@@ -1,10 +1,10 @@
-$NetBSD: patch-src_hostapi_sun_pa__unix__sun.c,v 1.1 2020/04/17 15:50:03 nia Exp $
+$NetBSD: patch-src_hostapi_sun_pa__unix__sun.c,v 1.2 2020/04/25 10:18:09 nia Exp $
 
 Sun/NetBSD audio support.
 
---- src/hostapi/sun/pa_unix_sun.c.orig	2020-04-17 15:03:32.627418402 +0000
+--- src/hostapi/sun/pa_unix_sun.c.orig	2020-04-25 09:39:40.448044879 +0000
 +++ src/hostapi/sun/pa_unix_sun.c
-@@ -0,0 +1,1137 @@
+@@ -0,0 +1,1138 @@
 +/*
 + * $Id"
 + * PortAudio Portable Real-Time Audio Library
@@ -101,6 +101,7 @@ Sun/NetBSD audio support.
 +#endif
 +
 +#ifndef AUDIO_FLUSH
++#include <sys/stropts.h>
 +#define AUDIO_FLUSH I_FLUSH
 +#endif
 +
