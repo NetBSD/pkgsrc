@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 19:28:48 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/25 21:49:38 rillig Exp $
 #
 
 DISTNAME=	veleng10
@@ -33,7 +33,7 @@ SUBST_SED.path=		-e 's,"white_ob.cn4","${PREFIX}/share/velena/white_ob.cn4",'
 
 SUBST_CLASSES+=		ansi-c
 SUBST_STAGE.ansi-c=	pre-configure
-SUBST_FILES.ansi-c=	*.c *.h
+SUBST_FILES.ansi-c=	*.c
 SUBST_SED.ansi-c=	-e 's,<malloc\.h>,<stdlib.h>,'
 
 SUBST_CLASSES+=		cflags
