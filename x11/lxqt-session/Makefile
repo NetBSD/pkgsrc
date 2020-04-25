@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/25 01:05:25 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/25 14:58:24 gutteridge Exp $
 
 DISTNAME=	lxqt-session-0.14.1
 CATEGORIES=	x11
@@ -25,7 +25,7 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	lxqt-config-session/autostartedit.cpp
 SUBST_FILES.prefix+=	lxqt-config-session/sessionconfigwindow.cpp
 SUBST_FILES.prefix+=	lxqt-session/src/wmselectdialog.cpp
-SUBST_SED.prefix+=	-e 's,/usr/bin,${PREFIX}/bin,g'
+SUBST_SED.prefix=	-e 's,/usr/bin,${PREFIX}/bin,g'
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
