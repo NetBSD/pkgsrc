@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2523 2020/04/25 15:13:36 pin Exp $
+$NetBSD: CHANGES-2020,v 1.2524 2020/04/25 15:18:51 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3451,3 +3451,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/emacs26-nox11 to 26.3nb1 [dsainty 2020-04-25]
 	Updated sysutils/cfengine3 to 3.15.1 [nia 2020-04-25]
 	Updated editors/featherpad to 0.14.0 [pin 2020-04-25]
+	Added x11/lxqt-runner version 0.14.1 [gutteridge 2020-04-25]
