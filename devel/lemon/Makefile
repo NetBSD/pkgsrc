@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/26 17:30:58 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2020/04/25 17:34:37 rillig Exp $
 
 .include "../../databases/sqlite3/Makefile.common"
 
@@ -12,6 +12,7 @@ LEMON_VERSION=	1.0
 # - reflect reality and make it human readable without checking the sources
 
 PKGNAME=	lemon-${LEMON_VERSION}.${SQLITE3_VERSION}
+PKGREVISION=	1
 DISTNAME=	sqlite-src-${SQLITE3_DISTVERSION}
 CATEGORIES=	devel
 EXTRACT_SUFX=	.zip
@@ -24,7 +25,7 @@ CHECK_PORTABILITY_SKIP=	configure
 INSTALLATION_DIRS=	bin share/lemon share/doc/lemon
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	lemon.c
+SUBST_FILES.paths=	tool/lemon.c
 SUBST_SED.paths+=	-e 's,"lempar.c","${PREFIX}/share/lemon/lempar.c",g'
 SUBST_STAGE.paths=	pre-configure
 
