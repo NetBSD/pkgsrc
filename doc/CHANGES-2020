@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2531 2020/04/25 17:38:12 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2532 2020/04/25 18:25:29 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3459,3 +3459,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/lxqt-powermanagement version 0.14.1 [gutteridge 2020-04-25]
 	Added security/lxqt-policykit version 0.14.1 [gutteridge 2020-04-25]
 	Added x11/lxqt-admin version 0.14.1 [gutteridge 2020-04-25]
+	Added security/lxqt-sudo version 0.14.1 [gutteridge 2020-04-25]
