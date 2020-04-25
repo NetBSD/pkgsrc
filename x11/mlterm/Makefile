@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2020/03/10 22:11:18 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2020/04/25 18:11:08 rillig Exp $
 
 DISTNAME=	mlterm-3.8.9
 PKGREVISION=	2
@@ -37,8 +37,7 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 SUBST_CLASSES+=		link
 SUBST_MESSAGE.link=	Fixing hardcoded paths and link options in Makefiles.
 SUBST_STAGE.link=	pre-configure
-SUBST_FILES.link=	Makefile.in */Makefile.in */*/Makefile.in \
-			*/*/*/Makefile.in
+SUBST_FILES.link=	*/Makefile.in */*/Makefile.in */*/*/Makefile.in
 SUBST_SED.link=		-e 's|(LIBTOOL_LINK).*(LIBS)|& ${X11_LDFLAGS:M*:Q}|g'
 SUBST_SED.link+=	-e 's|(LIBTOOL_LINK).*(LIBDIR)|& ${X11_LDFLAGS:M*:Q}|g'
 SUBST_SED.link+=	-e 's|/usr/local/|${PREFIX}/|g'
