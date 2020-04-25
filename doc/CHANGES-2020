@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2526 2020/04/25 15:52:13 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2527 2020/04/25 15:53:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3454,3 +3454,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added x11/lxqt-runner version 0.14.1 [gutteridge 2020-04-25]
 	Updated audio/ruby-taglib to 1.0.1 [taca 2020-04-25]
 	Updated lang/pear to 1.10.12 [taca 2020-04-25]
+	Updated databases/pear-DB to 1.10.0 [taca 2020-04-25]
