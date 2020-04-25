@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2528 2020/04/25 16:20:39 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2529 2020/04/25 17:16:35 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3456,3 +3456,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/pear to 1.10.12 [taca 2020-04-25]
 	Updated databases/pear-DB to 1.10.0 [taca 2020-04-25]
 	Added x11/lxqt-notificationd version 0.14.1 [gutteridge 2020-04-25]
+	Added sysutils/lxqt-powermanagement version 0.14.1 [gutteridge 2020-04-25]
