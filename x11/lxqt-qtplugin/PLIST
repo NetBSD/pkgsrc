@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/25 01:14:54 gutteridge Exp $
+qt5/plugins/platformthemes/libqtlxqt.so
