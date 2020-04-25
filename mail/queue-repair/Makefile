@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/11/02 16:25:27 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/04/25 19:37:01 rillig Exp $
 #
 
 DISTNAME=		queue-repair-0.9.0
@@ -32,12 +32,14 @@ SUBST_SED.users+=	-e "s|'qmailp'|'${QMAIL_PASSWD_USER}'|g"
 SUBST_SED.users+=	-e "s|'qmailq'|'${QMAIL_QUEUE_USER}'|g"
 SUBST_SED.users+=	-e "s|'qmailr'|'${QMAIL_REMOTE_USER}'|g"
 SUBST_SED.users+=	-e "s|'qmails'|'${QMAIL_SEND_USER}'|g"
+SUBST_NOOP_OK.users=	yes
 
 SUBST_CLASSES+=		groups
 SUBST_STAGE.groups=	do-configure
 SUBST_FILES.groups=	queue_repair.py
 SUBST_SED.groups=	-e "s|'qmail'|'${QMAIL_QMAIL_GROUP}'|g"
 SUBST_SED.groups+=	-e "s|'nofiles'|'${QMAIL_NOFILES_GROUP}'|g"
+SUBST_NOOP_OK.groups=	yes
 
 BUILD_DEFS+=		QMAILDIR QMAIL_ALIAS_USER QMAIL_DAEMON_USER
 BUILD_DEFS+=		QMAIL_LOG_USER QMAIL_PASSWD_USER QMAIL_QUEUE_USER
