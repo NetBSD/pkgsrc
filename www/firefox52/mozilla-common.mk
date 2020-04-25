@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.5 2019/11/09 20:01:14 jperkin Exp $
+# $NetBSD: mozilla-common.mk,v 1.6 2020/04/25 16:37:24 rillig Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -93,12 +93,6 @@ CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}nsprpub/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
 
 CONFIGURE_ENV+=		CPP=${CPP}
-
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-configure
-SUBST_MESSAGE.python=	Fixing path to python.
-SUBST_FILES.python+=	media/webrtc/trunk/build/common.gypi
-SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
 
 # Build outside ${WRKSRC}
 # Try to avoid conflict with config/makefiles/xpidl/Makefile.in
