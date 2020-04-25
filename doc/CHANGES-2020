@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2524 2020/04/25 15:18:51 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2525 2020/04/25 15:49:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3452,3 +3452,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/cfengine3 to 3.15.1 [nia 2020-04-25]
 	Updated editors/featherpad to 0.14.0 [pin 2020-04-25]
 	Added x11/lxqt-runner version 0.14.1 [gutteridge 2020-04-25]
+	Updated audio/ruby-taglib to 1.0.1 [taca 2020-04-25]
