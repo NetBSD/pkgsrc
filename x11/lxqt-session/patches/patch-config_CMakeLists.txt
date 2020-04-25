@@ -1,0 +1,15 @@
+$NetBSD: patch-config_CMakeLists.txt,v 1.1 2020/04/25 01:05:26 gutteridge Exp $
+
+Install sample .conf files to a consistent location.
+
+--- config/CMakeLists.txt.orig	2019-02-26 01:22:39.000000000 +0000
++++ config/CMakeLists.txt
+@@ -3,7 +3,7 @@ install(FILES
+     lxqt.conf
+     session.conf
+     windowmanagers.conf
+-    DESTINATION "${CMAKE_INSTALL_DATADIR}/lxqt"
++    DESTINATION "${LXQT_ETC_XDG_DIR}"
+     COMPONENT Runtime
+ )
+ install(DIRECTORY openbox
