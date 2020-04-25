@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/03/22 11:11:32 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/04/25 17:42:53 rillig Exp $
 
 DISTNAME=	liblo-0.31
 CATEGORIES=	audio
@@ -18,13 +18,6 @@ CFLAGS+=		${PTHREAD_CFLAGS}
 PKGCONFIG_OVERRIDE+=	liblo.pc.in
 PTHREAD_OPTS+=		require
 RESOLV_AUTO_VARS=	yes	# gethostbyname and friends
-
-SUBST_CLASSES+=		conf
-SUBST_FILES.conf=	configure Makefile.in src/Makefile.in liblo.pc.in
-SUBST_MESSAGE.conf=	Performing build-time configuration substitutions.
-SUBST_SED.conf=		-e 's,-lpthread,$${PTHREAD_LDFLAGS} $${PTHREAD_LIBS},'
-SUBST_STAGE.conf=	pre-configure
-SUBST_VARS.conf=	PTHREAD_CFLAGS PTHREAD_LDFLAGS PTHREAD_LIBS
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
