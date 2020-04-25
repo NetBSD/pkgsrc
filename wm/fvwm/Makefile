@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2020/04/25 19:06:59 nikita Exp $
+# $NetBSD: Makefile,v 1.47 2020/04/25 19:22:15 nikita Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${FVWM_VER}
@@ -23,7 +23,6 @@ INSTALLATION_DIRS+=	lib/X11/fvwm2
 INSTALLATION_DIRS+=	lib/X11/fvwm2/pixmaps
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-# \todo: Add support for Xft2
 # \todo: build with debug(or dbug?) to see fvwm console etc
 # \todo: look into more configure options
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/lib/X11/fvwm2
