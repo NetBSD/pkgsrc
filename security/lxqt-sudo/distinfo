@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/04/25 18:24:57 gutteridge Exp $
+
+SHA1 (lxqt-sudo-0.14.1.tar.xz) = ba74c8b6047f8095fe825426e9d29abfaf34bf23
+RMD160 (lxqt-sudo-0.14.1.tar.xz) = bd712eb673239877759b1c3c88bc15592961adf4
+SHA512 (lxqt-sudo-0.14.1.tar.xz) = b2741ead9c03c2dddf878b7658316ad0ce170068aca413b48b2f614e6ee09e7494e9907f7bf46de09c84e50b75cd523b059d47f9a0d2be11b340824475ca9222
+Size (lxqt-sudo-0.14.1.tar.xz) = 30692 bytes
+SHA1 (patch-sudo.cpp) = fbbc7cabe06d896ecb0ed2734f92d314ac9515c5
