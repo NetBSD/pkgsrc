@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2019/08/11 13:18:37 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/04/25 19:45:34 rillig Exp $
 
 DISTNAME=	rrdtool-1.2.30
 PKGREVISION=	15
@@ -26,12 +26,6 @@ PERL5_PACKLIST+=	auto/RRDs/.packlist
 
 # rrdtool explicitly forbids any use of -ffast-math
 BUILDLINK_TRANSFORM+=	rm:-ffast-math
-
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-build
-SUBST_MESSAGE.prefix=	Fixing $${prefix} in scripts.
-SUBST_FILES.prefix=	examples/cgi-demo.cgi
-SUBST_SED.prefix=	-e '1s,^\#! \$${prefix},\#! ${PREFIX},'
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
