@@ -1,0 +1,27 @@
+$NetBSD: patch-src_exicyclog.src,v 1.1 2020/04/25 12:48:57 gavan Exp $
+
+--- src/exicyclog.src.orig	2020-01-03 12:08:52.000000000 +0000
++++ src/exicyclog.src
+@@ -49,15 +49,15 @@
+ # varies from OS to OS. Sigh.
+ 
+ keep=EXICYCLOG_MAX
+-compress=COMPRESS_COMMAND
++compress='COMPRESS_COMMAND'
+ suffix=COMPRESS_SUFFIX
+ 
+-chgrp=CHGRP_COMMAND
+-chmod=CHMOD_COMMAND
+-chown=CHOWN_COMMAND
+-mv=MV_COMMAND
+-rm=RM_COMMAND
+-touch=TOUCH_COMMAND
++chgrp='CHGRP_COMMAND'
++chmod='CHMOD_COMMAND'
++chown='CHOWN_COMMAND'
++mv='MV_COMMAND'
++rm='RM_COMMAND'
++touch='TOUCH_COMMAND'
+ 
+ # End of editable lines
+ #########################################################################
