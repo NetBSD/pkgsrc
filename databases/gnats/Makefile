@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2020/03/11 18:51:31 nia Exp $
+# $NetBSD: Makefile,v 1.46 2020/04/25 16:57:23 rillig Exp $
 
 DISTNAME=	gnats-4.2.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GNU:=gnats/}
-PKGREVISION=	3
+PKGREVISION=	4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/gnats/
@@ -85,7 +85,7 @@ MESSAGE_SUBST+=		GNATS_SERVICE=${GNATS_SERVICE:Q}
 
 SUBST_CLASSES+=		gnats
 SUBST_STAGE.gnats=	pre-configure
-SUBST_FILES.gnats=	gnats/Makefile.in gnats/mkdb.sh send-pr/Makefile.in
+SUBST_FILES.gnats=	gnats/Makefile.in gnats/ds-file/mkdb.sh
 SUBST_SED.gnats=	-e "s,%%EGDIR%%,${DESTDIR}${EGDIR},g"
 SUBST_SED.gnats+=	-e "s,%%GNATS_DEFAULTS%%,${DESTDIR}${PREFIX}/share/gnats/defaults,g"
 
