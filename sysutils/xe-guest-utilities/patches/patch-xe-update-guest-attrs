@@ -1,4 +1,4 @@
-$NetBSD: patch-xe-update-guest-attrs,v 1.4 2018/10/26 09:15:07 sborrill Exp $
+$NetBSD: patch-xe-update-guest-attrs,v 1.5 2020/04/25 20:53:02 rillig Exp $
 
 Support pkgsrc and NetBSD ifconfig
 
@@ -142,11 +142,12 @@ Support pkgsrc and NetBSD ifconfig
  # build time addons
 -xenstore_write_cached "attr/PVAddons/MajorVersion" "5"
 -xenstore_write_cached "attr/PVAddons/MinorVersion" "6"
-+xenstore_write_cached "attr/PVAddons/MajorVersion" "7"
-+xenstore_write_cached "attr/PVAddons/MinorVersion" "0"
- xenstore_write_cached "attr/PVAddons/MicroVersion" "0" 
+-xenstore_write_cached "attr/PVAddons/MicroVersion" "0" 
 -xenstore_write_cached "attr/PVAddons/BuildVersion" "39674"
-+xenstore_write_cached "attr/PVAddons/BuildVersion" "125243"
++xenstore_write_cached "attr/PVAddons/MajorVersion" "@XENMAJOR@"
++xenstore_write_cached "attr/PVAddons/MinorVersion" "@XENMINOR@"
++xenstore_write_cached "attr/PVAddons/MicroVersion" "@XENTEENY@"
++xenstore_write_cached "attr/PVAddons/BuildVersion" "@XENBUILD@"
  xenstore_write_cached "attr/PVAddons/Installed" "1" 
  
  # update xenstore if necc
