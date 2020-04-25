@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/25 17:15:57 gutteridge Exp $
+
+SHA1 (lxqt-powermanagement-0.14.1.tar.xz) = 02509b20b8f166f742966b3aee9271c23c63dfe4
+RMD160 (lxqt-powermanagement-0.14.1.tar.xz) = 0e1f9c686c69839cfbe5b922e3c6597b176bbceb
+SHA512 (lxqt-powermanagement-0.14.1.tar.xz) = 04c72e8f73fff647f0a1d987db2879dffaeba7accfa320bc3b101befdb041ce391debd5f6de12cd2614f9ddc9bf07644d778bb33611a3a4690fe818f7bc81d10
+Size (lxqt-powermanagement-0.14.1.tar.xz) = 60892 bytes
