@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2020/01/18 21:50:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.98 2020/04/25 19:41:55 rillig Exp $
 
 DISTNAME=	rpm-4.13.0.1
 PKGREVISION=	5
@@ -69,12 +69,6 @@ FILES_SUBST+=		RPMDIR=${RPMDIR}
 BROKEN_GETTEXT_DETECTION=	yes
 
 CHECK_PORTABILITY_SKIP=	tests/rpmtests
-
-SUBST_CLASSES+=		mkd
-SUBST_STAGE.mkd=	post-build
-SUBST_MESSAGE.mkd=	Fixing workdir tools references in macros file.
-SUBST_FILES.mkd=	macros
-SUBST_SED.mkd=		-e 's,${TOOLS_CMD.mkdir},${TOOLS_PATH.mkdir},'
 
 # __progname without 'extern' segfaults on some platforms (e.g. Darwin)
 SUBST_CLASSES+=		progname
