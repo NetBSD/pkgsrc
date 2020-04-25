@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2020/02/26 18:09:40 nia Exp $
+# $NetBSD: options.mk,v 1.6 2020/04/25 19:22:15 nikita Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fvwm
 PKG_SUPPORTED_OPTIONS=		gtk xrender xcursor xft2 fribidi debug svg
-PKG_SUGGESTED_OPTIONS+=		svg
+PKG_SUGGESTED_OPTIONS+=		svg xft2 xrender xcursor
 PKG_OPTIONS_LEGACY_VARS+=	FVWM2_USE_GTK:gtk
 
 .include "../../mk/bsd.options.mk"
