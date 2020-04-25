@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.750 2020/04/18 12:50:44 js Exp $
+# $NetBSD: Makefile,v 1.751 2020/04/25 17:24:40 gutteridge Exp $
 #
 
 COMMENT=	Security tools
@@ -204,6 +204,7 @@ SUBDIR+=	log2timeline
 SUBDIR+=	logcheck
 SUBDIR+=	lsh
 SUBDIR+=	lua-sec
+SUBDIR+=	lxqt-policykit
 SUBDIR+=	lynis
 SUBDIR+=	mate-polkit
 SUBDIR+=	mbedtls
