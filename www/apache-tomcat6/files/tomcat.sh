@@ -1,6 +1,6 @@
 #! @RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tomcat.sh,v 1.4 2009/08/13 21:21:30 adrianp Exp $
+# $NetBSD: tomcat.sh,v 1.5 2020/04/25 22:23:05 jym Exp $
 #
 # PROVIDE: tomcat
 # REQUIRE: DAEMON
@@ -17,8 +17,8 @@ command="@TOMCAT_HOME@/bin/catalina.sh"
 pidfile="@VARBASE@/run/tomcat/catalina.pid"
 tomcat_user="@TOMCAT_USER@"
 tomcat_group="@TOMCAT_GROUP@"
-start_cmd="$command start"
-stop_cmd="$command stop"
+start_cmd="tomcat_start"
+stop_cmd="tomcat_stop"
 restart_cmd="$stop_cmd && $start_cmd"
 run_cmd="tomcat_run"
 version_cmd="tomcat_version"
