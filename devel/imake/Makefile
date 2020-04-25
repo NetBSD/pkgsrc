@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/01/18 23:30:30 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/04/25 17:21:38 rillig Exp $
 
 DISTNAME=		imake-1.0.8
 CATEGORIES=		x11 devel
@@ -29,6 +29,7 @@ SUBST_MESSAGE.xmkmf=	Fixing "xmkmf" script.
 SUBST_STAGE.xmkmf=	post-build
 SUBST_FILES.xmkmf=	xmkmf
 SUBST_SED.xmkmf=	-e "s/^configdirspec= */configdirspec=/"
+SUBST_NOOP_OK.xmkmf=	yes
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
