@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/09/21 13:56:15 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/25 19:40:55 nikita Exp $
 @pkgdir share/doc/fvwm2/commands
 @pkgdir share/doc/fvwm2/fvwm
 @pkgdir share/doc/fvwm2/images/svg_rendering
@@ -72,8 +72,8 @@ man/man1/fvwm-menu-headlines.1
 man/man1/fvwm-menu-xlock.1
 man/man1/fvwm-perllib.1
 man/man1/fvwm-root.1
-man/man1/fvwm.1
-man/man1/fvwm2.1
+${PLIST.doc}man/man1/fvwm.1
+${PLIST.doc}man/man1/fvwm2.1
 man/man1/xpmroot.1
 share/fvwm2/ConfigFvwmBacker
 share/fvwm2/ConfigFvwmButtons
