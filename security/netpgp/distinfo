@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.23 2018/03/15 20:21:52 khorben Exp $
+$NetBSD: distinfo,v 1.24 2020/04/25 12:07:47 nia Exp $
 
 SHA1 (netpgp-20140220.tar.gz) = 815418cbae5d02a1385cd7947618303e5aa06d5c
 RMD160 (netpgp-20140220.tar.gz) = 970f55292852d5dbfde3eb17a5fefd6a7c820c4e
 SHA512 (netpgp-20140220.tar.gz) = ec6cfa0131cd50aee273b81cd64f448258121d7e9c8d4914be39ba59b5c28149bced3866c57f521167480da04b60d9d9bd2b228319dc8baa31328fb7c37e6b96
 Size (netpgp-20140220.tar.gz) = 1521820 bytes
 SHA1 (patch-src_lib_keyring.c) = b924af4877aaab98e542425b5d9427830ddd5b75
+SHA1 (patch-src_lib_openssl__crypto.c) = a401593d88efa10aa53426aaa989012ab6f4d4c9
 SHA1 (patch-src_lib_reader.c) = 2ebaddebbc2f6f42f7391933ebfef39e3a73a367
-SHA1 (patch-src_lib_signature.c) = 7e1c71b5df48bba1d5213ec5ea946db9ed1ba8d4
+SHA1 (patch-src_lib_signature.c) = dd7156d862e2d102d8338c32f50d59ee200fd0db
 SHA1 (patch-src_netpgp_netpgp.1) = a9b2345ced1d80ee14a4e100181fa34121543509
