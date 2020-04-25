@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2020/04/18 22:00:59 joerg Exp $
+# $NetBSD: Makefile,v 1.84 2020/04/25 17:08:34 rillig Exp $
 
 DISTNAME=	gnustep-base-1.27.0
 #PKGREVISION=	1
@@ -35,7 +35,7 @@ PTHREAD_LIBS+=		-lpth
 
 SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	pre-configure
-SUBST_FILES.pthread=	configure base.make.in
+SUBST_FILES.pthread=	configure
 SUBST_SED.pthread=	-e 's|@PTHREAD_LIBS@|${PTHREAD_LIBS:M*:Q}|g'
 
 CONFIGURE_ARGS+=	--with-library-flags=${GNUSTEP_LDFLAGS:Q}
