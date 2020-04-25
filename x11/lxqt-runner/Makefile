@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/25 15:16:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/25 15:18:42 gutteridge Exp $
 
 DISTNAME=	lxqt-runner-0.14.1
 CATEGORIES=	x11
@@ -23,6 +23,6 @@ pre-configure:
 TOOL_DEPENDS+=	lxqt-build-tools-[0-9]*:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
-.include "../../wip/lxqt-globalkeys/buildlink3.mk"
+.include "../../x11/lxqt-globalkeys/buildlink3.mk"
 .include "../../math/muparser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
