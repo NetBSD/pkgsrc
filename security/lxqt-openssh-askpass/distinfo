@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/25 18:36:10 gutteridge Exp $
+
+SHA1 (lxqt-openssh-askpass-0.14.1.tar.xz) = 2cec3a5712413739363ac73a4099097e82ca26bc
+RMD160 (lxqt-openssh-askpass-0.14.1.tar.xz) = db5ed64c7d12ce54bb023903335554789d727288
+SHA512 (lxqt-openssh-askpass-0.14.1.tar.xz) = ab35cd719d4a31a495bed68a30cad5bf85701d223ee7306f0dad40717d0c2821af53e07a929b5855fb0cd680684fb790a638b59a1ea3ef288e0f656ab490b5bf
+Size (lxqt-openssh-askpass-0.14.1.tar.xz) = 16848 bytes
