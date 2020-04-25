@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2019/12/28 11:19:53 wiz Exp $
+$NetBSD: patch-ac,v 1.4 2020/04/25 19:13:12 rillig Exp $
 
 Add pkgsrc path to openssl.
 Don't bother creating SSL keys, they are not installed anyway and should
@@ -11,7 +11,7 @@ be created on the target system.
      system(sysbuf);
  #else
 -    system(CC " tools/chkssl.c -I/usr/local/ssl/include -L/usr/local/ssl/lib -lssl -lcrypto -o tools/chkssl" DN);
-+    system(CC " tools/chkssl.c -I/usr/pkg/include -L/usr/pkg/lib -lssl -lcrypto -o tools/chkssl" DN);
++    system(CC " tools/chkssl.c -I@PREFIX@/include -L@PREFIX@/lib -lssl -lcrypto -o tools/chkssl" DN);
  #endif
      return checkcmp();
  }
@@ -19,7 +19,7 @@ be created on the target system.
  	"/usr/sbin/openssl",
  	"/usr/local/bin/openssl",
  	"/usr/local/ssl/bin/openssl",
-+	"/usr/pkg/bin/openssl",
++	"@PREFIX@/bin/openssl",
  	NULL
      };
  #endif
@@ -28,7 +28,7 @@ be created on the target system.
  	    printf("Yes.\n");
  	    strcpy(sslopt,"-DHAVE_SSL ");
 -	    strcpy(ssllib,"-L/usr/local/ssl/lib -lssl -lcrypto ");
-+	    strcpy(ssllib,"-L/usr/pkg/lib -lssl -lcrypto ");
++	    strcpy(ssllib,"-L@PREFIX@/lib -lssl -lcrypto ");
  	}
  #else
  	if(strlen(SSLPATH)+13<sizeof(mbuf))
@@ -51,7 +51,7 @@ be created on the target system.
  	fprintf(makefile,"INCLUDE = -I./src/ -I. -I%sinclude %s %s\n", SSLPATH, mysqlheaders, dnsinc);
  #else
 -	fprintf(makefile,"INCLUDE = -I./src/ -I. -I/usr/local/ssl/include %s %s\n", mysqlheaders, dnsinc);
-+	fprintf(makefile,"INCLUDE = -I./src/ -I. -I/usr/pkg/include %s %s\n", mysqlheaders, dnsinc);
++	fprintf(makefile,"INCLUDE = -I./src/ -I. -I@PREFIX@/include %s %s\n", mysqlheaders, dnsinc);
  #endif
      else
  	fprintf(makefile,"INCLUDE = -I./src/ -I. %s %s\n", mysqlheaders, dnsinc);
