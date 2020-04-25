@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/01/16 15:07:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/04/25 15:49:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/taglib_aiff.${RUBY_DLEXT}
@@ -13,7 +13,7 @@ ${GEM_EXTSDIR}/taglib_ogg.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/taglib_vorbis.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/taglib_wav.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.yardopts
-${GEM_LIBDIR}/CHANGES.md
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/LICENSE.txt
