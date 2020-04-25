@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2019/11/04 22:10:15 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2020/04/25 14:06:32 nia Exp $
 
 DISTNAME=		squidGuard-1.4
 PKGREVISION=		15
@@ -18,7 +18,7 @@ HOMEPAGE=	http://www.squidguard.org/
 COMMENT=	Ultrafast and free filter, redirector and access controller for Squid
 LICENSE=	gnu-gpl-v2
 
-.include "../../www/squid3/Makefile.common"
+.include "../../www/squid4/Makefile.common"
 
 BDB_ACCEPTED=		db4 db5
 USE_TOOLS+=		lex yacc perl
