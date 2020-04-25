@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/04/24 11:41:38 nia Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/25 13:57:47 nia Exp $
 
 DISTNAME=	yafic-1.2.2
 PKGREVISION=	2
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.saddi.com/software/yafic/
 COMMENT=	File integrity checker
 LICENSE=	modified-bsd
-
-BROKEN=		"Fails to build with OpenSSL 1.1"
 
 GNU_CONFIGURE=	YES
 
