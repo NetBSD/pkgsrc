@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2518 2020/04/25 01:58:25 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2519 2020/04/25 02:07:20 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3446,3 +3446,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added x11/lxqt-globalkeys version 0.14.3 [gutteridge 2020-04-25]
 	Added x11/lxqt-config version 0.14.1 [gutteridge 2020-04-25]
 	Added x11/lxqt-panel version 0.14.1 [gutteridge 2020-04-25]
+	Added x11/lxqt-about version 0.14.1 [gutteridge 2020-04-25]
