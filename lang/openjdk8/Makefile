@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2020/03/22 22:06:02 tnn Exp $
+# $NetBSD: Makefile,v 1.94 2020/04/25 18:37:28 rillig Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
@@ -160,7 +160,7 @@ SUBST_VARS.fontpaths+=		BUILDLINK_PREFIX.fontconfig
 SUBST_CLASSES+=			zlibpath
 SUBST_STAGE.zlibpath=		pre-build
 SUBST_FILES.zlibpath=		jdk/make/CompileLaunchers.gmk jdk/make/lib/CoreLibraries.gmk
-SUBST_FILES.zlibpath+=		jdk/make/lib/Awt2dLibraries.gmk jdk/make/lib/ServiceabilityLibraries.gmk
+SUBST_FILES.zlibpath+=		jdk/make/lib/Awt2dLibraries.gmk
 SUBST_VARS.zlibpath=		COMPILER_RPATH_FLAG BUILDLINK_PREFIX.zlib
 SUBST_VARS.zlibpath+=		BUILDLINK_PREFIX.iconv
 
