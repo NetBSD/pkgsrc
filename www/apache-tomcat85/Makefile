@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2020/04/16 23:00:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2020/04/25 22:23:05 jym Exp $
 #
 
 DISTNAME=	apache-tomcat-${TOMCAT_VER}
 CATEGORIES=	www
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_APACHE:=tomcat/tomcat-8/v${TOMCAT_VER}/bin/}
 
 MAINTAINER=	ryoon@NetBSD.org
