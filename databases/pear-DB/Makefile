@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2019/07/03 07:28:21 nia Exp $
+# $NetBSD: Makefile,v 1.15 2020/04/25 15:53:09 taca Exp $
 
-DISTNAME=	DB-1.9.3
+DISTNAME=	DB-1.10.0
 CATEGORIES=	databases
 
 CONFLICTS=	php-pear-DB-[0-9]*
