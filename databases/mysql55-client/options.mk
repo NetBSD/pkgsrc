@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2017/05/03 12:37:01 mef Exp $
+# $NetBSD: options.mk,v 1.14 2020/04/25 18:23:23 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql5
 
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS+=	embedded-server
 
 .include "../../mk/bsd.options.mk"
 
-.	include "../../security/openssl/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 # Enable DTrace support
 .if !empty(PKG_OPTIONS:Mdtrace)
@@ -24,9 +24,9 @@ PLIST_VARS+=	sphinx
 SPHINX_VER=	2.2.11
 DISTFILES=	${DEFAULT_DISTFILES} sphinx-${SPHINX_VER}-release${EXTRACT_SUFX}
 SITES.sphinx-2.2.11-release.tar.gz=	http://sphinxsearch.com/files/
-.if !empty(PKGPATH:Mdatabases/mysql55-server)
+.  if ${PKGPATH} == databases/mysql55-server
 MESSAGE_SRC=	${PKGDIR}/MESSAGE ${PKGDIR}/MESSAGE.sphinx
-.endif
+.  endif
 PLIST.sphinx=	yes
 
 post-extract:
