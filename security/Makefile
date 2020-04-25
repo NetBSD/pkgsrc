@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.752 2020/04/25 18:24:57 gutteridge Exp $
+# $NetBSD: Makefile,v 1.753 2020/04/25 18:36:10 gutteridge Exp $
 #
 
 COMMENT=	Security tools
@@ -204,6 +204,7 @@ SUBDIR+=	log2timeline
 SUBDIR+=	logcheck
 SUBDIR+=	lsh
 SUBDIR+=	lua-sec
+SUBDIR+=	lxqt-openssh-askpass
 SUBDIR+=	lxqt-policykit
 SUBDIR+=	lxqt-sudo
 SUBDIR+=	lynis
