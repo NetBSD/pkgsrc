@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/04/25 18:47:35 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/04/25 18:54:20 rillig Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -34,6 +34,7 @@ SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing common paths.
 SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	php.ini-development php.ini-production
+SUBST_FILES.path+=	sapi/cgi/Makefile.frag
 SUBST_VARS.path=	CGIDIR PREFIX
 
 INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
