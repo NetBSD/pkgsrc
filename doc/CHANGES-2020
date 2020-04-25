@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2512 2020/04/24 21:50:08 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2513 2020/04/25 00:57:38 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3440,3 +3440,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/nethack-lib to 3.6.6 [rhialto 2020-04-24]
 	Updated mail/thunderbird to 68.7.0 [ryoon 2020-04-24]
 	Updated mail/thunderbird-l10n to 68.7.0 [ryoon 2020-04-24]
+	Added graphics/lxqt-themes version 0.14.0 [gutteridge 2020-04-25]
