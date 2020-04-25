@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/25 01:43:21 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/25 01:44:55 gutteridge Exp $
 
 DISTNAME=	lxqt-config-0.14.1
 CATEGORIES=	x11
@@ -49,5 +49,5 @@ DEPENDS+=	lxqt-themes-[0-9]*:../../wip/lxqt-themes
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/liblxqt/buildlink3.mk"
-.include "../../wip/libkscreen/buildlink3.mk"
+.include "../../x11/libkscreen/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
