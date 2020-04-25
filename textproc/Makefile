@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1134 2020/04/14 19:24:09 js Exp $
+# $NetBSD: Makefile,v 1.1135 2020/04/25 23:49:20 nikita Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -227,6 +227,7 @@ SUBDIR+=	gnome-subtitles
 SUBDIR+=	go-chroma
 SUBDIR+=	go-diff
 SUBDIR+=	go-glob
+SUBDIR+=	go-goldmark
 SUBDIR+=	go-inflect
 SUBDIR+=	go-md2man
 SUBDIR+=	go-mmark
