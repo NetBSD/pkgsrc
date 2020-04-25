@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2020/04/25 19:40:55 nikita Exp $
+# $NetBSD: Makefile,v 1.49 2020/04/25 20:04:23 nikita Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGREVISION=	3
-CATEGORIES=	x11 wm
+CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${FVWM_VER}
 
