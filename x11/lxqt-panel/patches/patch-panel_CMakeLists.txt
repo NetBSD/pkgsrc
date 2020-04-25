@@ -1,0 +1,17 @@
+$NetBSD: patch-panel_CMakeLists.txt,v 1.1 2020/04/25 01:57:55 gutteridge Exp $
+
+Work around undefined symbol issue (which would cause the panel to fail
+to run if the volume plugin was enabled), as discussed in:
+https://github.com/lxqt/lxqt/issues/1075
+
+--- panel/CMakeLists.txt.orig	2019-02-25 22:16:30.000000000 +0000
++++ panel/CMakeLists.txt
+@@ -55,6 +55,8 @@ set(LIBRARIES
+     lxqt
+ )
+ 
++set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Xlinker --export-dynamic")
++
+ file(GLOB CONFIG_FILES resources/*.conf)
+ 
+ ############################################
