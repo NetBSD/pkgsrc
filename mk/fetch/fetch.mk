@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.72 2020/04/25 11:21:06 js Exp $
+# $NetBSD: fetch.mk,v 1.73 2020/04/25 11:36:20 js Exp $
 
 .if empty(INTERACTIVE_STAGE:Mfetch) && empty(FETCH_MESSAGE:U)
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -252,7 +252,7 @@ _FETCH_CMD.wget=		${PKGSRC_SETENV} \
 				${FETCH_PROXY.https:Dhttps_proxy=${FETCH_PROXY.https:Q}} \
 				${TOOLS_PATH.wget}
 
-_FETCH_BEFORE_ARGS.ofhttp=	# empty (or --insecure to ignore SSL errors)
+_FETCH_BEFORE_ARGS.ofhttp=	-f # (or --insecure to ignore SSL errors)
 _FETCH_AFTER_ARGS.ofhttp=	# empty
 _FETCH_RESUME_ARGS.ofhttp=	-c
 _FETCH_OUTPUT_ARGS.ofhttp=	-o
