@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.886 2020/04/23 14:31:11 nia Exp $
+# $NetBSD: Makefile,v 1.887 2020/04/25 01:05:25 gutteridge Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -260,6 +260,7 @@ SUBDIR+=	lxappearance
 SUBDIR+=	lxde-common
 SUBDIR+=	lxinput
 SUBDIR+=	lxlauncher
+SUBDIR+=	lxqt-session
 SUBDIR+=	lxrandr
 SUBDIR+=	lxsession
 SUBDIR+=	lxterminal

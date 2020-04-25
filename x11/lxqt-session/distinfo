@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2020/04/25 01:05:25 gutteridge Exp $
+
+SHA1 (lxqt-session-0.14.1.tar.xz) = 15deb8ef8f209ed0293253e67a40283013b6ab9d
+RMD160 (lxqt-session-0.14.1.tar.xz) = d6bf29c8d4923c3d7a8a984d7650850b69edff7b
+SHA512 (lxqt-session-0.14.1.tar.xz) = 9274564f3eabe33744bbe8555b1177d8ff6f241f5849bef29f0bb344f506e590e1deab87bf2fdeb867872ebaa0262cda0400f16179951fd66fbcb4d9f7358c4c
+Size (lxqt-session-0.14.1.tar.xz) = 178600 bytes
+SHA1 (patch-config_CMakeLists.txt) = 23724044a847a1eed788ca253f2003dad48b3623
