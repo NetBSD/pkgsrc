@@ -1,8 +1,8 @@
-$NetBSD: patch-configure.in,v 1.1 2020/04/17 15:50:03 nia Exp $
+$NetBSD: patch-configure.in,v 1.2 2020/04/25 09:41:32 nia Exp $
 
 - Sun/NetBSD audio support
 - Install extra headers needed by portmixer in Audacity for OSS.
-- Don't use -pthread
+- Don't use -lpthread
 
 --- configure.in.orig	2016-10-30 01:23:04.000000000 +0000
 +++ configure.in
@@ -23,7 +23,7 @@ $NetBSD: patch-configure.in,v 1.1 2020/04/17 15:50:03 nia Exp $
  fi
 +have_sun=no
 +if test "x$with_sun" != "xno"; then
-+    AC_CHECK_HEADERS([sys/audioio.h], [have_sun=yes])
++    AC_CHECK_HEADERS([sys/audioio.h], [have_sun=yes], [have_sun=no])
 +fi
  have_jack=no
  if test "x$with_jack" != "xno"; then
@@ -40,7 +40,7 @@ $NetBSD: patch-configure.in,v 1.1 2020/04/17 15:50:03 nia Exp $
             AC_DEFINE(PA_USE_OSS,1)
          fi
  
-+        if [[ "$with_sun" != "no" ]] ; then
++        if [[ "$have_sun" = "yes" ] && [ "$with_sun" != "no" ]] ; then
 +           OTHER_OBJS="$OTHER_OBJS src/hostapi/sun/pa_unix_sun.o"
 +           AC_DEFINE(PA_USE_SUN,1)
 +        fi
