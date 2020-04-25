@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/04/12 08:27:57 adam Exp $
+# $NetBSD: Makefile,v 1.12 2020/04/25 18:16:42 rillig Exp $
 
 DISTNAME=	mono-6.8.0.105
 PKGREVISION=	1
@@ -123,13 +123,6 @@ SUBST_STAGE.fix-cfgdir=		pre-configure
 SUBST_MESSAGE.fix-cfgdir=	Fixing configuration files install dir
 SUBST_FILES.fix-cfgdir=		mcs/tools/mconfig/Makefile
 SUBST_SED.fix-cfgdir=		-e 's,$$(sysconfdir)/mono,${EGDIR},g'
-
-SUBST_CLASSES+=			fix-libs
-SUBST_STAGE.fix-libs=		pre-configure
-SUBST_MESSAGE.fix-libs=		Fixing library search path configuration
-SUBST_FILES.fix-libs=		configure.ac
-SUBST_VARS.fix-libs+=		X11BASE
-SUBST_VARS.fix-libs+=		PREFIX
 
 SUBST_CLASSES+=			fix-python
 SUBST_STAGE.fix-python=		pre-configure
