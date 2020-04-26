@@ -1,19 +1,18 @@
-@comment $NetBSD: PLIST,v 1.8 2018/12/02 06:42:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/04/26 08:37:13 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README.textile
 ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/benchmark/README.md
 ${GEM_LIBDIR}/benchmark/bench-backend.rb
 ${GEM_LIBDIR}/benchmark/bench-instantiate.rb
 ${GEM_LIBDIR}/benchmark/config.yaml.sample
-${GEM_LIBDIR}/doc/text/development.textile
-${GEM_LIBDIR}/doc/text/news.textile
-${GEM_LIBDIR}/doc/text/rails.textile
-${GEM_LIBDIR}/doc/text/tutorial.textile
+${GEM_LIBDIR}/doc/text/development.md
+${GEM_LIBDIR}/doc/text/news.md
+${GEM_LIBDIR}/doc/text/rails.md
+${GEM_LIBDIR}/doc/text/tutorial.md
 ${GEM_LIBDIR}/examples/config.yaml.example
 ${GEM_LIBDIR}/examples/example.der
 ${GEM_LIBDIR}/examples/example.jpg
