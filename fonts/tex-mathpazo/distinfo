@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:09 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/04/26 12:21:17 markd Exp $
 
-SHA1 (tex-mathpazo-15878/mathpazo.tar.xz) = 9c7492ee183caa0f2dca3db0a0158eb65b77cb18
-RMD160 (tex-mathpazo-15878/mathpazo.tar.xz) = 5bfc2a43952f57b34c69fedfa6e52901029930a7
-SHA512 (tex-mathpazo-15878/mathpazo.tar.xz) = 15ab2d5e4309e11d56c9922590a87dcc96d6e306f616eda72493a691579b4005f62b602cf65913c75b53527335009579751421a10d396dc9a7be06238942ed9e
-Size (tex-mathpazo-15878/mathpazo.tar.xz) = 63640 bytes
+SHA1 (mathpazo.r52663.tar.xz) = 5e0dda2730b5957cc8ec7772ba73120339cddb5c
+RMD160 (mathpazo.r52663.tar.xz) = c6c8731696738702d405a13b9e9b280efa21e7a1
+SHA512 (mathpazo.r52663.tar.xz) = 72bfba52e37abd933cb7b1b19dd813c3c76438591c94f9c407cabb8a44c8c67f78fae04442027287e5bf30b7239c3703ece4271194716882773eeb50d4cb2f47
+Size (mathpazo.r52663.tar.xz) = 63640 bytes

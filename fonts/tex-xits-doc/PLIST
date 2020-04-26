@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/26 10:08:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/26 12:21:22 markd Exp $
 share/texmf-dist/doc/fonts/xits/FONTLOG.txt
-share/texmf-dist/doc/fonts/xits/OFL-FAQ.txt
 share/texmf-dist/doc/fonts/xits/OFL.txt
 share/texmf-dist/doc/fonts/xits/README.txt

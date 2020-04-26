@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/29 05:38:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/26 12:21:11 markd Exp $
 share/texmf-dist/fonts/cmap/adobemapping/README
 share/texmf-dist/fonts/cmap/adobemapping/cmap-resources/Adobe-CNS1-7/CMap/Adobe-CNS1-0
 share/texmf-dist/fonts/cmap/adobemapping/cmap-resources/Adobe-CNS1-7/CMap/Adobe-CNS1-1
@@ -192,7 +192,7 @@ share/texmf-dist/fonts/cmap/adobemapping/cmap-resources/Adobe-Korea1-2/CMap/UniK
 share/texmf-dist/fonts/cmap/adobemapping/cmap-resources/Adobe-Korea1-2/CMap/UniKS-UTF8-H
 share/texmf-dist/fonts/cmap/adobemapping/cmap-resources/Adobe-Korea1-2/CMap/UniKS-UTF8-V
 share/texmf-dist/fonts/cmap/adobemapping/cmap-resources/Adobe-Korea1-2/cid2code.txt
-share/texmf-dist/fonts/cmap/adobemapping/cmap-resources/LICENSE.txt
+share/texmf-dist/fonts/cmap/adobemapping/cmap-resources/LICENSE.md
 share/texmf-dist/fonts/cmap/adobemapping/cmap-resources/Makefile
 share/texmf-dist/fonts/cmap/adobemapping/cmap-resources/README.md
 share/texmf-dist/fonts/cmap/adobemapping/cmap-resources/VERSIONS.txt

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/05 11:05:52 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/04/26 12:21:19 markd Exp $
 
-SHA1 (tex-roboto-51315/roboto.doc.tar.xz) = ea303e99a2948ffad2029ecc4ece66072673638c
-RMD160 (tex-roboto-51315/roboto.doc.tar.xz) = 4bf59c49e7bced4cf8e5c866d4dfa0d90082975d
-SHA512 (tex-roboto-51315/roboto.doc.tar.xz) = ec75fbc15ba6a3cc37e7f61016dcf33441cafd3ba41c90a1c446c1d9b7a621befcb5341a1c1ecb72818bf5bc328eb8af7ab5cf4c747423fa5831b5b5a27cd026
-Size (tex-roboto-51315/roboto.doc.tar.xz) = 404748 bytes
+SHA1 (roboto.doc.r54512.tar.xz) = 84e412351e0cd90c01b084e40f45a0ebb4127dcf
+RMD160 (roboto.doc.r54512.tar.xz) = 4afdaeeb4fb4d0f64c72bbcc3c428e8d280ad3de
+SHA512 (roboto.doc.r54512.tar.xz) = f523a6017869c98991c766ea1ca3febc36e780fc66c0f9fbdd00036708865663670d6de178781489f49b2a0a0c7d3fc01c240fffe7cb06d6cb98fe355b15e549
+Size (roboto.doc.r54512.tar.xz) = 394584 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 20:45:05 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/04/26 12:21:15 markd Exp $
 
-SHA1 (tex-ipaex-35583/ipaex.tar.xz) = 6345cf2abc84169415bd53d2bc6ed4b4327fd4c8
-RMD160 (tex-ipaex-35583/ipaex.tar.xz) = 7f6934a2adeea798059bd4c188edb151ff7d0a3a
-SHA512 (tex-ipaex-35583/ipaex.tar.xz) = 7e997cfcc61f20267c60ffae4a548b5e1348b2faed26657df44065cdd22bd3aa7c091647352e38116add4fe51cbc33ceb42bd423a9e408a07579f1fee8e982bf
-Size (tex-ipaex-35583/ipaex.tar.xz) = 15864612 bytes
+SHA1 (ipaex.r52032.tar.xz) = 3d51bcbf71eccb5c1f3d1b686e25e1202ed54011
+RMD160 (ipaex.r52032.tar.xz) = e6606b689578b70ee0efdf066b72f156b4a347ca
+SHA512 (ipaex.r52032.tar.xz) = c15157c117594f670a5779bc33e1cac043fda730e2b7a95d781470da2f42075e387d2a939976d469f1b0d05804b2907a7daf7ddb7d9f45074239c6893d89c21f
+Size (ipaex.r52032.tar.xz) = 15865216 bytes
