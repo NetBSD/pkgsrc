@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/26 12:21:20 markd Exp $
 share/texmf-dist/fonts/source/public/skull/skull.mf
+share/texmf-dist/fonts/tfm/public/skull/skull.tfm
 share/texmf-dist/tex/latex/skull/skull.sty

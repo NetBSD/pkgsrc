@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:53 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/26 12:21:20 markd Exp $
 
 DISTNAME=	superiors
-PKGNAME=	tex-${DISTNAME}-1.05
-TEXLIVE_REV=	36422
+PKGNAME=	tex-${DISTNAME}-1.06
+TEXLIVE_REV=	51909
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/superiors
@@ -11,6 +11,5 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	superiors.map
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

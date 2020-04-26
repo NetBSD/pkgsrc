@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:45:15 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/04/26 12:21:19 markd Exp $
 
-SHA1 (tex-psnfss-33946/psnfss.tar.xz) = 233fa2f31612843f90a07f9ab62956f7fdab3282
-RMD160 (tex-psnfss-33946/psnfss.tar.xz) = 15b294b0f685c22295b6c70b9c319c12d6ebde11
-SHA512 (tex-psnfss-33946/psnfss.tar.xz) = 286094e81866f379d246413a0fb6da277a8b6f40d8b9b92d1dae5767249bf4373ff6917bf8f1bb3579497c68731e9b8a2306e2731144d5e09e12190c7f41baba
-Size (tex-psnfss-33946/psnfss.tar.xz) = 11924 bytes
+SHA1 (psnfss.r54694.tar.xz) = c727605f6a38f2900592eceb3125c14366ac1c82
+RMD160 (psnfss.r54694.tar.xz) = 80186e2d2bc6b96ef31d1dcb1dfca784dfa7c64b
+SHA512 (psnfss.r54694.tar.xz) = f7d1acebcd1d32a691221f396220358f3bb15dff2e2cebec4b537b1b790b68d8ce1164711983a52b4f04d6e470df2e3e5fec63bb1d3bf39fe205d5f0351299de
+Size (psnfss.r54694.tar.xz) = 11936 bytes
