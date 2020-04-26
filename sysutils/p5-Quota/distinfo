@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2020/04/20 13:24:25 mef Exp $
+$NetBSD: distinfo,v 1.6 2020/04/26 14:09:21 mef Exp $
 
-SHA1 (Quota-1.8.0.tar.gz) = cc35dbd1062a02274888fd82a517d02f058e2734
-RMD160 (Quota-1.8.0.tar.gz) = 615417fb07d4b1129d4e22cf329e1132b1f11ccd
-SHA512 (Quota-1.8.0.tar.gz) = d86c6fbf766e5d0bafdf95eae1a7b3bf196abda7d91ed7a35b77393e1ef08a849f2184142a113f90dbfb080399ab951884984cd9d01b6455129593fbcd847092
-Size (Quota-1.8.0.tar.gz) = 54601 bytes
+SHA1 (Quota-1.8.1.tar.gz) = fbd8b44940d786777a258a7749b9e9d23e91fa6b
+RMD160 (Quota-1.8.1.tar.gz) = 6e9238feaf199e27daf71a0653acd53bc98c20be
+SHA512 (Quota-1.8.1.tar.gz) = 9e27cb03c7cd76a995ff775b9a5a67b8d8deeb814efacb17b4769c567935ebabe03ba2354a6977ae86fffaeb65e8f457906adee60de3e0a86ba78516057c1d72
+Size (Quota-1.8.1.tar.gz) = 57058 bytes
