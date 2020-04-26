@@ -1,7 +1,4 @@
-a: echo second line
-a:\foo.bar
+a:\ a:\foo.bar
 second line
-a:\
-second line
-a:\foo.bar
+a:\ a:\foo.bar
 second line
