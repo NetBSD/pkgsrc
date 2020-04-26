@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/29 07:41:32 markd Exp $
-share/texmf-dist/fonts/afm/public/countriesofeurope/CountriesofEurope.afm
-share/texmf-dist/fonts/enc/dvips/countriesofeurope/CountriesofEurope.enc
-share/texmf-dist/fonts/map/dvips/countriesofeurope/CountriesofEurope.map
-share/texmf-dist/fonts/opentype/public/countriesofeurope/CountriesofEurope.otf
-share/texmf-dist/fonts/tfm/public/countriesofeurope/CountriesofEurope.tfm
-share/texmf-dist/fonts/type1/public/countriesofeurope/CountriesofEurope.pfb
-share/texmf-dist/tex/latex/countriesofeurope/CountriesofEurope.sty
+@comment $NetBSD: PLIST,v 1.3 2020/04/26 12:21:13 markd Exp $
+share/texmf-dist/fonts/afm/public/countriesofeurope/countriesofeurope.afm
+share/texmf-dist/fonts/enc/dvips/countriesofeurope/countriesofeurope.enc
+share/texmf-dist/fonts/map/dvips/countriesofeurope/countriesofeurope.map
+share/texmf-dist/fonts/opentype/public/countriesofeurope/countriesofeurope.otf
+share/texmf-dist/fonts/tfm/public/countriesofeurope/countriesofeurope.tfm
+share/texmf-dist/fonts/type1/public/countriesofeurope/countriesofeurope.pfb
+share/texmf-dist/tex/latex/countriesofeurope/countriesofeurope.sty

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/08/11 11:51:12 markd Exp $
+$NetBSD: distinfo,v 1.5 2020/04/26 12:21:18 markd Exp $
 
-SHA1 (tex-oldstandard-51741/oldstandard.tar.xz) = 0cec61038c3032a8d21b16fcc7b72c298d61dfdd
-RMD160 (tex-oldstandard-51741/oldstandard.tar.xz) = 2000f5a8d8fef83d48a838a83a0e954df7165a56
-SHA512 (tex-oldstandard-51741/oldstandard.tar.xz) = b441e51ef7ebbdd9868e4161f554d6ddffeee852b7cce7f5ab754bd1d0d27fe7279c19b3ae12ae345211f5db6fbd78dda2c4519d50fe72146fe57b9477bb7f31
-Size (tex-oldstandard-51741/oldstandard.tar.xz) = 1612472 bytes
+SHA1 (oldstandard.r54512.tar.xz) = fa7f2042f755373368fa8ffedf05a95f4d775bb7
+RMD160 (oldstandard.r54512.tar.xz) = a1e6198864719d21c7c9692132a432c96d5801c4
+SHA512 (oldstandard.r54512.tar.xz) = 5e81346120a23c9dbbe5f8c23a7d57f608bf250ad52f597418de8030da4a23fe360a5ed92eeba907b52f7a45fad677fb89a43e5eefac5a6ce73d9644bc97e837
+Size (oldstandard.r54512.tar.xz) = 1698288 bytes
