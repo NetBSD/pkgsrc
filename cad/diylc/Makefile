@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/09/11 07:51:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/26 01:05:15 dsainty Exp $
 
 DISTNAME=	diylc-3.28.0
+PKGREVISION=	1
 CATEGORIES=	cad java
 MASTER_SITES=	http://diy-layout-creator.googlecode.com/files/
 EXTRACT_SUFX=	.zip
@@ -23,7 +24,7 @@ do-build:
 	  for jar in diylc.jar main.jar *.jar; do \
 	    cp="$${cp}$${cp+:}${PREFIX}/lib/java/diylc/$${jar}"; \
 	  done; \
-	  ${ECHO} "#!${SH}"; ${ECHO} "exec ${JAVA_BINPREFIX}-java -Xms512m -Xmx2048m -Dorg.diylc.scriptRun=true -cp \"$${cp}\" org.diylc.DIYLCStarter \"\$$@\"" \
+	  ${ECHO} "#!${SH}"; ${ECHO} "exec "${PKG_JAVA_HOME:Q:Q}"/bin/java -Xms512m -Xmx2048m -Dorg.diylc.scriptRun=true -cp \"$${cp}\" org.diylc.DIYLCStarter \"\$$@\"" \
 	) > ${WRKSRC}/diylc.sh
 
 do-install:
