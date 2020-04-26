@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/05/27 17:31:14 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/26 09:47:41 rillig Exp $
 
 DISTNAME=	binutils-2.32
 PKGREVISION=	1
@@ -16,10 +16,11 @@ HOMEPAGE=	https://github.com/espressif/binutils-gdb
 COMMENT=	Cross binutils for Espressif ESP32 bare metal environment
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-INFO_FILES=	yes
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake makeinfo
+INFO_FILES=		yes
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake makeinfo
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}

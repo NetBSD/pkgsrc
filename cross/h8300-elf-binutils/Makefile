@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/10/19 12:31:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/26 09:47:40 rillig Exp $
 
 DISTNAME=	binutils-2.27
 PKGNAME=	cross-h8300-elf-${DISTNAME}
@@ -13,8 +13,9 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 H8300_PREFIX=	${PREFIX}/cross-h8300-elf
 
-USE_TOOLS+=	gmake makeinfo
-GNU_CONFIGURE=	yes
+USE_TOOLS+=		gmake makeinfo
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
