@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2548 2020/04/26 13:39:55 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2549 2020/04/26 14:02:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3578,3 +3578,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/texlive-collection-fontsrecommended to 2020 [markd 2020-04-26]
 	Added devel/p5-B-COW version 0.004 [mef 2020-04-26]
 	Updated devel/p5-Clone to 0.45 [mef 2020-04-26]
+	Updated devel/p5-Exporter-Tiny to 1.002002 [mef 2020-04-26]
+	Updated devel/p5-Future to 0.45 [mef 2020-04-26]
+	Updated devel/p5-Struct-Dumb to 0.12 [mef 2020-04-26]
