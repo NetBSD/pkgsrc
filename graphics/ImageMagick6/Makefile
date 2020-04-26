@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/04/24 09:24:34 nia Exp $
+# $NetBSD: Makefile,v 1.31 2020/04/26 10:03:25 rillig Exp $
 
 .include "Makefile.common"
 
@@ -47,6 +47,10 @@ SUBST_SED.pkgcfg+=	-e 's|Magick-config |Magick-config6 |g'
 SUBST_SED.pkgcfg+=	-e 's|s Magick++|s Magick++-6.Q16|g'
 SUBST_SED.pkgcfg+=	-e 's|@PKG_CONFIG@|${PREFIX}/bin/pkg-config|g'
 SUBST_STAGE.pkgcfg=	pre-configure
+SUBST_NOOP_OK.pkgcfg=	yes
+# The files magick/ImageMagick.pc.in and magick/MagickCore.pc.in are not
+# modified, and they don't need to since their names don't appear in any
+# "Requires:" line.
 
 GCC_REQD+=		2.95.3
 
