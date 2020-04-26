@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2545 2020/04/26 09:34:42 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2546 2020/04/26 09:41:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3480,3 +3480,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated mail/postfix-pcre to 3.5.1 [taca 2020-04-26]
 	Updated mail/postfix-pgsql to 3.5.1 [taca 2020-04-26]
 	Updated mail/postfix-sqlite to 3.5.1 [taca 2020-04-26]
+	Updated devel/php-xdebug to 2.9.5 [taca 2020-04-26]
