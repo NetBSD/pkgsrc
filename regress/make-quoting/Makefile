@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/11/30 19:06:32 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/04/26 12:59:28 rillig Exp $
 #
 
 DISTNAME=	regress-make-18.11
@@ -48,7 +48,7 @@ do-build: do-regress
 do-regress:
 	@printf "Testing bmake(1) version %s\\n" ${NUM_MAKE_VERSION:Q}""
 .for t in ${REGRESS_TESTS}
-	@${_PKG_SILENT}${_PKG_DEBUG}					\
+	@${RUN}								\
 	${ECHO_MSG} "Running testcase "${t:Q};				\
 	${MAKE} ${MAKEFLAGS} -s -f ${FILESDIR:Q}/${t:Q}.mk		\
 	| diff -u ${FILESDIR:Q}/${t:Q}.out -
