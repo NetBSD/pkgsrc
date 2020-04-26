@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/08/05 10:47:20 markd Exp $
+$NetBSD: distinfo,v 1.4 2020/04/26 12:21:18 markd Exp $
 
-SHA1 (tex-overlock-51294/overlock.doc.tar.xz) = 795fec6d599c0e26c6545fb94df1fadcc431a1b6
-RMD160 (tex-overlock-51294/overlock.doc.tar.xz) = dfcc66fb1bad55bdb1175001b99994738d1442f0
-SHA512 (tex-overlock-51294/overlock.doc.tar.xz) = 9bba88fb7850a3f1f5b37a4d0fa43774956a3789e604a0ec17c46ca5068d3456ad0ecc36669df2a51a313edc2d879db4036d5e64dcb940c5df0650b37b6f5041
-Size (tex-overlock-51294/overlock.doc.tar.xz) = 42360 bytes
+SHA1 (overlock.doc.r52408.tar.xz) = cf1b4cf349045e3903a05038c4aeac8a3e582678
+RMD160 (overlock.doc.r52408.tar.xz) = 4adfeaba8d8a31b3fcdbec08bf8e5d5811503698
+SHA512 (overlock.doc.r52408.tar.xz) = 5083d926ee34f7df8ac55111fe503d31589ff319725aba1a726500c3ad935974a29c68d677035a9b82beb249295513d4e3f70310cf078d376f084e354de81d94
+Size (overlock.doc.r52408.tar.xz) = 42360 bytes

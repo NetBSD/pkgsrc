@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/06/21 10:14:21 markd Exp $
+$NetBSD: distinfo,v 1.5 2020/04/26 12:21:18 markd Exp $
 
-SHA1 (tex-newtxtt-44510/newtxtt.doc.tar.xz) = 677768f362289f0b13f47d906931d508b8373a1a
-RMD160 (tex-newtxtt-44510/newtxtt.doc.tar.xz) = 11afc8155688f3c67bedd49f755b28f663da2334
-SHA512 (tex-newtxtt-44510/newtxtt.doc.tar.xz) = 81342ccb7b716255078e4f05c033db8fddb2780f1825d36537387a886b7f8cda471f8f8c325e7ded3634dfa486378a8c587ed7f87b8fb0fe3b2bdcc3ab3c67c1
-Size (tex-newtxtt-44510/newtxtt.doc.tar.xz) = 80544 bytes
+SHA1 (newtxtt.doc.r54512.tar.xz) = db91f7060215d4ffc8779b2bea6112ad262efd39
+RMD160 (newtxtt.doc.r54512.tar.xz) = 3ed6b24cfdd204dbf5e6f779829156a95a5d897d
+SHA512 (newtxtt.doc.r54512.tar.xz) = 0a29f11edadeec4284ac9c9c04230a925517b198eb3653a456ab68bf495a9dd0b846cea4c3e1a425539f0b834d37f8f9a7f20e5945e8c8efea7ab4bb9342f6fd
+Size (newtxtt.doc.r54512.tar.xz) = 171356 bytes

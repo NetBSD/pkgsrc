@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 20:45:22 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/04/26 12:21:21 markd Exp $
 
-SHA1 (tex-wasy-35831/wasy.doc.tar.xz) = 15725575e1f8a1c5cd95ae81905df16c50195902
-RMD160 (tex-wasy-35831/wasy.doc.tar.xz) = 63e84a1a87a80473be85a7cc3ec69df436a45bc5
-SHA512 (tex-wasy-35831/wasy.doc.tar.xz) = aecf9efcdc6d7d3bc24244b550c9819d24912179c8d283f7a1282e9716e8473840cbb2b7b3523db39871215547b33efaf03bef81d391642507825b034fe623f9
-Size (tex-wasy-35831/wasy.doc.tar.xz) = 148948 bytes
+SHA1 (wasy.doc.r53533.tar.xz) = 417201f60bdbecbd647c2c889fd0604c56310986
+RMD160 (wasy.doc.r53533.tar.xz) = 7e52e7bddc936faded1335b9882fd401849759d9
+SHA512 (wasy.doc.r53533.tar.xz) = 4ee0dba83e3d1e00a1c58bc1c27d1b8e7e1677bfadf1d2653be216618d65fd168eab7aae26a5fe5ffae42c546b3438e2ad15f1a7bbfd58cd7b75cafa78a46205
+Size (wasy.doc.r53533.tar.xz) = 305032 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:01 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/04/26 12:21:15 markd Exp $
 
-SHA1 (tex-fourier-15878/fourier.doc.tar.xz) = acaf2bf8c1a2f4ae485535a6e09855b4e025698c
-RMD160 (tex-fourier-15878/fourier.doc.tar.xz) = fe6aab913e9946feb16d82a69f484b62aaaef68c
-SHA512 (tex-fourier-15878/fourier.doc.tar.xz) = aa5f76dc027e6f4c13110a6fe771c041d8c1c6cedd1d35b0c1811b21baec0487155c11695ec6837cea7359a36d706a009dfba15ad26c727169250c50257619fa
-Size (tex-fourier-15878/fourier.doc.tar.xz) = 138472 bytes
+SHA1 (fourier.doc.r54090.tar.xz) = 18f7dcde54eebd9d3e54663eb6f3e45231c32fc2
+RMD160 (fourier.doc.r54090.tar.xz) = d35ed18da7f90154dfbd1ae0ae47f655f32a2d16
+SHA512 (fourier.doc.r54090.tar.xz) = 59d1d7ebe7e44c1b5409a9b49e83845aeadcbcbecbf30176b3bc4156f7f611878fd3ee17405df48d3b4e41dd8c95d6dcc24080f15801959c1b2ae83a7a2311ae
+Size (fourier.doc.r54090.tar.xz) = 304616 bytes

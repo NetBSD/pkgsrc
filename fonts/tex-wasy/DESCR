@@ -1,3 +1,8 @@
-The wasy fonts (Waldi's symbol fonts) provide a useful range of
-symbols in MetaFont format: they have been extended (and converted to
-Adobe Type 1) under the name wasy2.
+This font contains all lasy characters (by L.Lamport, copyright
+notice in lasychr.mf), and a lot more symbols. Provided are the
+Metafont files for 5-10pt, and bold and slanted 10pt fonts,
+together with a .tex and .pdf documentation, and a file for
+using the fonts in a PLAIN-TeX document. Type-1 fonts by
+Michael Sharpe and Taco Hoekwater are available as separate
+package wasy-type1. Support under LaTeX is provided by Axel
+Kielhorn's wasysym package.

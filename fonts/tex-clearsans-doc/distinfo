@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/04/26 12:21:13 markd Exp $
 
-SHA1 (tex-clearsans-34405/clearsans.doc.tar.xz) = 2637c853f0399b94b2647aa8d1e17275cd1db2de
-RMD160 (tex-clearsans-34405/clearsans.doc.tar.xz) = 251fb0ffd9afab1aed88cfb96a30d8ae7f95230b
-SHA512 (tex-clearsans-34405/clearsans.doc.tar.xz) = 0b0ea08f0fd9a5abe8c5cba738f22cc1682105e1f94bb84bf539a7a420d4099b675a4eb705189d2e4dca80b8216669693d519b1f1691c45af677cca211b8417d
-Size (tex-clearsans-34405/clearsans.doc.tar.xz) = 198484 bytes
+SHA1 (clearsans.doc.r54512.tar.xz) = 4680dee4492fb3ea22539cc30b11d75ae4116e4e
+RMD160 (clearsans.doc.r54512.tar.xz) = 161d811dd648c9f30ea711523b16dfa541a39b45
+SHA512 (clearsans.doc.r54512.tar.xz) = ec57c7551e9b751505d2973a50411b20b859190cee10c176eacba66b4e26c551b7b4230cbb5349a841645cb5d2e351e655ab242db59f4e3e5675f3e964977845
+Size (clearsans.doc.r54512.tar.xz) = 198492 bytes

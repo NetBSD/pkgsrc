@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/25 08:36:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/26 12:21:21 markd Exp $
 share/texmf-dist/fonts/source/public/wasy/lasychr.mf
 share/texmf-dist/fonts/source/public/wasy/rsym.mf
 share/texmf-dist/fonts/source/public/wasy/wasy10.mf
@@ -9,6 +9,7 @@ share/texmf-dist/fonts/source/public/wasy/wasy8.mf
 share/texmf-dist/fonts/source/public/wasy/wasy9.mf
 share/texmf-dist/fonts/source/public/wasy/wasyb10.mf
 share/texmf-dist/fonts/source/public/wasy/wasychr.mf
+share/texmf-dist/fonts/source/public/wasy/wasysl10.mf
 share/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
 share/texmf-dist/fonts/tfm/public/wasy/wasy5.tfm
 share/texmf-dist/fonts/tfm/public/wasy/wasy6.tfm
@@ -16,4 +17,5 @@ share/texmf-dist/fonts/tfm/public/wasy/wasy7.tfm
 share/texmf-dist/fonts/tfm/public/wasy/wasy8.tfm
 share/texmf-dist/fonts/tfm/public/wasy/wasy9.tfm
 share/texmf-dist/fonts/tfm/public/wasy/wasyb10.tfm
+share/texmf-dist/fonts/tfm/public/wasy/wasysl10.tfm
 share/texmf-dist/tex/plain/wasy/wasyfont.tex

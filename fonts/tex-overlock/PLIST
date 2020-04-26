@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/08/05 10:47:19 markd Exp $
-share/texmf-dist/fonts/enc/dvips/overlock/ovlk_4sbkqf.enc
+@comment $NetBSD: PLIST,v 1.3 2020/04/26 12:21:18 markd Exp $
 share/texmf-dist/fonts/enc/dvips/overlock/ovlk_bhbhyo.enc
 share/texmf-dist/fonts/enc/dvips/overlock/ovlk_cbxvns.enc
 share/texmf-dist/fonts/enc/dvips/overlock/ovlk_fvk6cm.enc
@@ -7,6 +6,7 @@ share/texmf-dist/fonts/enc/dvips/overlock/ovlk_irzqhk.enc
 share/texmf-dist/fonts/enc/dvips/overlock/ovlk_siy5zo.enc
 share/texmf-dist/fonts/enc/dvips/overlock/ovlk_wjzqlp.enc
 share/texmf-dist/fonts/enc/dvips/overlock/ovlk_xweksb.enc
+share/texmf-dist/fonts/enc/dvips/overlock/ovlk_y3zmsf.enc
 share/texmf-dist/fonts/map/dvips/overlock/overlock.map
 share/texmf-dist/fonts/tfm/muhafara/overlock/Overlock-Black-lf-ly1--base.tfm
 share/texmf-dist/fonts/tfm/muhafara/overlock/Overlock-Black-lf-ly1.tfm

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/29 07:41:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/04/26 12:21:13 markd Exp $
 share/texmf-dist/doc/fonts/countriesofeurope/Changes
-share/texmf-dist/doc/fonts/countriesofeurope/CountriesofEurope.pdf
-share/texmf-dist/doc/fonts/countriesofeurope/CountriesofEurope.tex
 share/texmf-dist/doc/fonts/countriesofeurope/README
+share/texmf-dist/doc/fonts/countriesofeurope/countriesofeurope.bib
+share/texmf-dist/doc/fonts/countriesofeurope/countriesofeurope.pdf
+share/texmf-dist/doc/fonts/countriesofeurope/countriesofeurope.tex

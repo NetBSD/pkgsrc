@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/26 12:21:22 markd Exp $
+share/texmf-dist/fonts/afm/public/wasy-type1/wasy10.afm
+share/texmf-dist/fonts/afm/public/wasy-type1/wasy5.afm
+share/texmf-dist/fonts/afm/public/wasy-type1/wasy6.afm
+share/texmf-dist/fonts/afm/public/wasy-type1/wasy7.afm
+share/texmf-dist/fonts/afm/public/wasy-type1/wasy8.afm
+share/texmf-dist/fonts/afm/public/wasy-type1/wasy9.afm
+share/texmf-dist/fonts/afm/public/wasy-type1/wasyb10.afm
+share/texmf-dist/fonts/afm/public/wasy-type1/wasysl10.afm
+share/texmf-dist/fonts/map/dvips/wasy-type1/wasy.map
+share/texmf-dist/fonts/type1/public/wasy-type1/wasy10.pfb
+share/texmf-dist/fonts/type1/public/wasy-type1/wasy5.pfb
+share/texmf-dist/fonts/type1/public/wasy-type1/wasy6.pfb
+share/texmf-dist/fonts/type1/public/wasy-type1/wasy7.pfb
+share/texmf-dist/fonts/type1/public/wasy-type1/wasy8.pfb
+share/texmf-dist/fonts/type1/public/wasy-type1/wasy9.pfb
+share/texmf-dist/fonts/type1/public/wasy-type1/wasyb10.pfb
+share/texmf-dist/fonts/type1/public/wasy-type1/wasysl10.pfb
