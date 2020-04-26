@@ -1,8 +1,12 @@
 #! /bin/sh
-set -eu
+# $NetBSD: mocked-include.sh,v 1.4 2020/04/26 12:46:33 rillig Exp $
+#
+# Demonstrates how to mock a pkgsrc infrastructure file in a regression
+# test.  This mocked file is created using create_pkgsrc_file and
+# overrides any file of the same name from the "real pkgsrc" directory.
+#
 
-# Ensures that files that are overridden in the "mocked pkgsrc" directory
-# are picked up before those from the "real pkgsrc" directory.
+set -eu
 
 . "./test.subr"
 
