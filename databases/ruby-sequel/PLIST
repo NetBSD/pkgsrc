@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.76 2020/03/08 13:21:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.77 2020/04/26 08:40:46 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -51,6 +51,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.28.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.29.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.30.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.31.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.6.0.txt
@@ -239,6 +240,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/accessed_columns.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/active_model.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/after_initialize.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/association_dependencies.rb
+${GEM_LIBDIR}/lib/sequel/plugins/association_lazy_eager_option.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/association_multi_add_remove.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/association_pks.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/association_proxies.rb
@@ -265,6 +267,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/eager_graph_eager.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/empty_failure_backtraces.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/error_splitter.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/finder.rb
+${GEM_LIBDIR}/lib/sequel/plugins/forbid_lazy_load.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/force_encoding.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/hook_class_methods.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/input_transformer.rb
@@ -293,6 +296,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/sharding.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/single_table_inheritance.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/singular_table_names.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/skip_create_refresh.rb
+${GEM_LIBDIR}/lib/sequel/plugins/skip_saving_columns.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/split_values.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/static_cache.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/static_cache_cache.rb
