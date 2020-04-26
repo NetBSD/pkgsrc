@@ -1,0 +1,5 @@
+LXQt is a free desktop environment with comparatively low resource
+requirements. This makes it especially suitable for resource-constrained
+personal computers such as netbooks or system-on-a-chip machines.
+
+This is a meta package for the LXQt desktop environment.
