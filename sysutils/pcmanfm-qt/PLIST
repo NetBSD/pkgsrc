@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/02/20 06:15:34 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/26 02:19:56 gutteridge Exp $
 bin/pcmanfm-qt
 man/man1/pcmanfm-qt.1
 share/applications/pcmanfm-qt-desktop-pref.desktop
 share/applications/pcmanfm-qt.desktop
 share/examples/lxqt/xdg/autostart/lxqt-desktop.desktop
-share/pcmanfm-qt/lxqt/settings.conf
+share/examples/lxqt/xdg/pcmanfm-qt/lxqt/settings.conf
 share/pcmanfm-qt/translations/pcmanfm-qt_ar.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_ca.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_cs.qm
@@ -32,4 +32,3 @@ share/pcmanfm-qt/translations/pcmanfm-qt_tr.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_uk.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_zh_CN.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_zh_TW.qm
-@pkgdir lib
