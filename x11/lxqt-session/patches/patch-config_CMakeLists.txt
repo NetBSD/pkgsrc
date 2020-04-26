@@ -1,6 +1,6 @@
-$NetBSD: patch-config_CMakeLists.txt,v 1.1 2020/04/25 01:05:26 gutteridge Exp $
+$NetBSD: patch-config_CMakeLists.txt,v 1.2 2020/04/26 02:11:17 gutteridge Exp $
 
-Install sample .conf files to a consistent location.
+Install fallback .conf files to a consistent location.
 
 --- config/CMakeLists.txt.orig	2019-02-26 01:22:39.000000000 +0000
 +++ config/CMakeLists.txt
