@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.24 2015/04/29 13:39:43 jperkin Exp $
+# $NetBSD: check-wrkref.mk,v 1.25 2020/04/26 14:23:25 rillig Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -38,7 +38,7 @@
 #
 
 _VARGROUPS+=			check-wrkref
-_USER_VARS.check-wrkref=	CHECK_WRKREF
+_USER_VARS.check-wrkref=	CHECK_WRKREF CHECK_WRKREF_EXTRA_DIRS
 _PKG_VARS.check-wrkref=		CHECK_WRKREF_SKIP
 
 .if ${PKG_DEVELOPER:Uno} != "no"
@@ -93,7 +93,7 @@ _check-wrkref: error-check .PHONY
 		*) ;;							\
 		esac;							\
 		${SHCOMMENT} "[$$file]";				\
-		${EGREP} "${_CHECK_WRKREF_DIRS:ts|}" "${DESTDIR}$$file" \
+		${EGREP} ${_CHECK_WRKREF_DIRS:ts|:Q} "${DESTDIR}$$file" \
 		    2>/dev/null | ${SED} -e "s|^|$$file:	|";	\
 	done
 	${RUN}								\
