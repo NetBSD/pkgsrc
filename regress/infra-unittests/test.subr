@@ -1,7 +1,6 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.9 2020/03/27 22:56:29 rillig Exp $
-set -eu
-
+# $NetBSD: test.subr,v 1.10 2020/04/26 12:46:33 rillig Exp $
+#
 # This file defines utilities for testing Makefile fragments and shell
 # programs from the pkgsrc infrastructure. While testing one part of the
 # infrastructure, other parts can be mocked away.
@@ -113,6 +112,8 @@ set -eu
 #	If this variable is yes (the default), clean up the temporary
 #	directory after the test has run successfully.
 #
+
+set -eu
 
 : "${cleanup:=yes}"
 : "${make:=bmake}"
