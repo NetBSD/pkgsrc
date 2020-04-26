@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2020/04/26 06:32:00 rillig Exp $
+# $NetBSD: Makefile,v 1.103 2020/04/26 06:35:30 rillig Exp $
 
 DISTNAME=	nas-1.9.4.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -40,39 +40,11 @@ SUBST_STAGE.mungeman=	pre-configure
 SUBST_FILES.mungeman=	config/mungeman
 SUBST_SED.mungeman=	-e 's|^ *\#|\#|g'
 
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
-SUBST_CLASSES+=		owngrp
-SUBST_MESSAGE.owngrp=	Fixing hardcoded owner/group.
-SUBST_STAGE.owngrp=	post-configure
-SUBST_FILES.owngrp=	clients/audio/auconvert/Makefile \
-			clients/audio/auctl/Makefile \
-			clients/audio/audemo/Makefile \
-			clients/audio/audial/Makefile \
-			clients/audio/auedit/Makefile \
-			clients/audio/auinfo/Makefile \
-			clients/audio/aupanel/Makefile \
-			clients/audio/auphone/Makefile \
-			clients/audio/auplay/Makefile \
-			clients/audio/aurecord/Makefile \
-			clients/audio/autool/Makefile \
-			clients/audio/auwave/Makefile \
-			clients/audio/examples/Makefile \
-			clients/audio/util/Makefile \
-			clients/audio/widgets/Makefile \
-			clients/audio/Makefile \
-			clients/Makefile config/Makefile doc/Makefile \
-			doc/man/lib/Makefile doc/man/Makefile \
-			include/audio/Makefile include/Makefile \
-			lib/Makefile lib/audio/Makefile \
-			Makefile server/Makefile
-SUBST_SED.owngrp=	-e 's/-c -o root -g wheel/-c -o ${UNPRIVILEGED_USER} -g ${UNPRIVILEGED_GROUP}/g'
-.endif
-
 REPLACE_SH=		clients/audio/util/checkmail
 
 PLIST_SRC=	${PKGDIR}/PLIST.clients
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin" && ${OPSYS} != "Interix"
 RCD_SCRIPTS=	nasd
