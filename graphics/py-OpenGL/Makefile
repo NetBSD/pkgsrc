@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/03/08 16:50:06 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2020/04/26 10:07:06 rillig Exp $
 
 DISTNAME=	PyOpenGL-3.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
@@ -13,7 +13,7 @@ COMMENT=	Python bindings for OpenGL
 LICENSE=	modified-bsd AND mit
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
-TEST_DEPENDS+=	${PYPKGPREFIX}-py-OpenGL-accelerate-[0-9]*:../../graphics/py-OpenGL-accelerate
+TEST_DEPENDS+=	${PYPKGPREFIX}-OpenGL-accelerate-[0-9]*:../../graphics/py-OpenGL-accelerate
 TEST_DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 
 USE_LANGUAGES=	# none
