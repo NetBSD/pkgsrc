@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:18 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/04/26 12:21:20 markd Exp $
 
-SHA1 (tex-superiors-36422/superiors.tar.xz) = 17be6430003e033f7820c454678efb80fb3db4ae
-RMD160 (tex-superiors-36422/superiors.tar.xz) = de060acb86bac9a053e60b62da11564c681f84e6
-SHA512 (tex-superiors-36422/superiors.tar.xz) = 920a052488a14de5f46985f8bc054bddd095fcc5c3193712b69e3f4e5fcd75e49edcb9e80a397255a7d401fabe786fc5a3b6b643f2c24c0ea4adf408636e9693
-Size (tex-superiors-36422/superiors.tar.xz) = 9860 bytes
+SHA1 (superiors.r51909.tar.xz) = 587ebe632025b0e6f7b21d92322a75275049ea73
+RMD160 (superiors.r51909.tar.xz) = 62a6dd09b87ce28fa8e8e463ab97708680bd63d2
+SHA512 (superiors.r51909.tar.xz) = 783d14d75daa63d108fcf870004a46680c643699ccc7256906a06fc7ca4482ebcee14f120209bd488d5c2890a3c8c33d132a0eb23d4b93d04deb05eca6bd0970
+Size (superiors.r51909.tar.xz) = 10164 bytes

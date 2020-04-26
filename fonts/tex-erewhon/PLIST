@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/30 09:20:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/26 12:21:13 markd Exp $
 share/texmf-dist/fonts/afm/public/erewhon/Erewhon-Bold.afm
 share/texmf-dist/fonts/afm/public/erewhon/Erewhon-BoldItalic.afm
 share/texmf-dist/fonts/afm/public/erewhon/Erewhon-BoldSlanted.afm
 share/texmf-dist/fonts/afm/public/erewhon/Erewhon-Italic.afm
 share/texmf-dist/fonts/afm/public/erewhon/Erewhon-Regular.afm
 share/texmf-dist/fonts/afm/public/erewhon/Erewhon-RegularSlanted.afm
+share/texmf-dist/fonts/afm/public/erewhon/erewBMI.afm
+share/texmf-dist/fonts/afm/public/erewhon/erewBRM.afm
+share/texmf-dist/fonts/afm/public/erewhon/erewMI.afm
+share/texmf-dist/fonts/afm/public/erewhon/erewMR.afm
 share/texmf-dist/fonts/enc/dvips/erewhon/erewhontlf-ot2.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_2d6v2a.enc
 share/texmf-dist/fonts/enc/dvips/erewhon/zut1_2jm7ak.enc
@@ -667,12 +671,20 @@ share/texmf-dist/fonts/tfm/public/erewhon/Erewhon-RegularSlanted-tosf-t2b.tfm
 share/texmf-dist/fonts/tfm/public/erewhon/Erewhon-RegularSlanted-tosf-t2c.tfm
 share/texmf-dist/fonts/tfm/public/erewhon/Erewhon-RegularSlanted-tosf-ts1--base.tfm
 share/texmf-dist/fonts/tfm/public/erewhon/Erewhon-RegularSlanted-tosf-ts1.tfm
+share/texmf-dist/fonts/tfm/public/erewhon/erewBMI.tfm
+share/texmf-dist/fonts/tfm/public/erewhon/erewBRM.tfm
+share/texmf-dist/fonts/tfm/public/erewhon/erewMI.tfm
+share/texmf-dist/fonts/tfm/public/erewhon/erewMR.tfm
 share/texmf-dist/fonts/type1/public/erewhon/Erewhon-Bold.pfb
 share/texmf-dist/fonts/type1/public/erewhon/Erewhon-BoldItalic.pfb
 share/texmf-dist/fonts/type1/public/erewhon/Erewhon-BoldSlanted.pfb
 share/texmf-dist/fonts/type1/public/erewhon/Erewhon-Italic.pfb
 share/texmf-dist/fonts/type1/public/erewhon/Erewhon-Regular.pfb
 share/texmf-dist/fonts/type1/public/erewhon/Erewhon-RegularSlanted.pfb
+share/texmf-dist/fonts/type1/public/erewhon/erewBMI.pfb
+share/texmf-dist/fonts/type1/public/erewhon/erewBRM.pfb
+share/texmf-dist/fonts/type1/public/erewhon/erewMI.pfb
+share/texmf-dist/fonts/type1/public/erewhon/erewMR.pfb
 share/texmf-dist/fonts/vf/public/erewhon/Erewhon-Bold-dnom-t1.vf
 share/texmf-dist/fonts/vf/public/erewhon/Erewhon-Bold-inf-t1.vf
 share/texmf-dist/fonts/vf/public/erewhon/Erewhon-Bold-lf-sc-ly1.vf
@@ -840,3 +852,4 @@ share/texmf-dist/tex/latex/erewhon/TS1erewhon-TLF.fd
 share/texmf-dist/tex/latex/erewhon/TS1erewhon-TOsF.fd
 share/texmf-dist/tex/latex/erewhon/erewhon.fontspec
 share/texmf-dist/tex/latex/erewhon/erewhon.sty
+share/texmf-dist/tex/latex/erewhon/newtx-erewhon-subs.tex

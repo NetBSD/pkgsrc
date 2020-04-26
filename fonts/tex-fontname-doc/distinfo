@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2018/05/06 03:02:09 markd Exp $
+$NetBSD: distinfo,v 1.6 2020/04/26 12:21:14 markd Exp $
 
-SHA1 (tex-fontname-45930/fontname.doc.tar.xz) = f9cfbf3460678ef8f5e0f60e278e7e6c36132d0a
-RMD160 (tex-fontname-45930/fontname.doc.tar.xz) = 437b555b06354f43225cb2773fb5fe2cd75466df
-SHA512 (tex-fontname-45930/fontname.doc.tar.xz) = c3cf408c747132cc5cd48ae33b43ea236b02cb31433b69f6562e828c9be3d791967ae68b7d857d75c511950d365b64061ef8632ff895cebdb046c2e112af4095
-Size (tex-fontname-45930/fontname.doc.tar.xz) = 679740 bytes
+SHA1 (fontname.doc.r53228.tar.xz) = ca5035551d0c77ee9d9dbad5b2c21a3473e09cd4
+RMD160 (fontname.doc.r53228.tar.xz) = 9906f11d1ee1a9433113dc071f4accbcea1f163b
+SHA512 (fontname.doc.r53228.tar.xz) = 4c981cbaff6dd6a700b5b4c323396676539aab8bacf44781de560ef226557182f3be5e573a7a2be98a1ccd7ca4f47fb7ad4b847184b8a18e3aeeca62077223f1
+Size (fontname.doc.r53228.tar.xz) = 679580 bytes

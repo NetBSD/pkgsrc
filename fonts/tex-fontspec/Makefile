@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2020/01/18 23:31:32 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2020/04/26 12:21:15 markd Exp $
 
 DISTNAME=	fontspec
-PKGNAME=	tex-${DISTNAME}-2.7c
-TEXLIVE_REV=	50387
+PKGNAME=	tex-${DISTNAME}-2.7i
+TEXLIVE_REV=	53860
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/fontspec
@@ -18,6 +18,5 @@ DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-luaotfload-[0-9]*:../../fonts/tex-luaotfload
 DEPENDS+=	tex-xunicode-[0-9]*:../../print/tex-xunicode
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

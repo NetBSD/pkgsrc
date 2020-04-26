@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:40 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/04/26 12:21:11 markd Exp $
 
-SHA1 (tex-adfsymbols-19766/adfsymbols.doc.tar.xz) = 26ad0bf4bb9fb4ef379f4593eb254230ee133630
-RMD160 (tex-adfsymbols-19766/adfsymbols.doc.tar.xz) = 0d31466993cd94c5594db5acfbb1f3d23bd595eb
-SHA512 (tex-adfsymbols-19766/adfsymbols.doc.tar.xz) = 5d5f518760fc6feec3dfddf8d7d0726999add56a0eb87d6768aa93dbb47db8d8595514ada5268f3a336cf5cca1bd20ec6a4a231a259bf14ca4ebb09e660eeb46
-Size (tex-adfsymbols-19766/adfsymbols.doc.tar.xz) = 383652 bytes
+SHA1 (adfsymbols.doc.r54512.tar.xz) = b78d1b4b3078e027ca6a00b31b96b41c4f913f36
+RMD160 (adfsymbols.doc.r54512.tar.xz) = d5fa949f9a03c63a7f171872a5404ee3966f8ca9
+SHA512 (adfsymbols.doc.r54512.tar.xz) = fbdd78030826918a3599a1f843db692390ebdcf4ca9a853d8c2e78706cfafe83ae79d23d09fb097339d8c726608a27436b3bf22725935c55060f1e8579ea1eaf
+Size (adfsymbols.doc.r54512.tar.xz) = 384924 bytes

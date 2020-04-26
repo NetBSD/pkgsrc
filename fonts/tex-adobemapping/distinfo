@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2019/05/12 03:30:28 markd Exp $
+$NetBSD: distinfo,v 1.12 2020/04/26 12:21:11 markd Exp $
 
-SHA1 (tex-adobemapping-50714/adobemapping.tar.xz) = a2c028b5a4db8d070d4fce0ba0cca913953b81f2
-RMD160 (tex-adobemapping-50714/adobemapping.tar.xz) = c4e5c90ffec85ca511ad3e9aedc68914c4418bd9
-SHA512 (tex-adobemapping-50714/adobemapping.tar.xz) = 0406c86546b3b7698b6129792610808de1e4125b1d1ede359978e0239781382de39505041c563aee90de6440eee81b19084dd1ca8fc156064edf1405fbddb809
-Size (tex-adobemapping-50714/adobemapping.tar.xz) = 2180244 bytes
+SHA1 (adobemapping.r51787.tar.xz) = a01f17d81804b7bea3f5bce09c2b7820f1c46038
+RMD160 (adobemapping.r51787.tar.xz) = 224e54d201d0511a8f2694e71807792fe07bec90
+SHA512 (adobemapping.r51787.tar.xz) = 1dd2c4a813bbcd8063d42c1872fd14427bae2e5ce9698ddb0825770653d17798c037da511d43a0939cea1a607f0a7bb7ce974bff72a2ee88c6f56f941cc7510e
+Size (adobemapping.r51787.tar.xz) = 2169892 bytes

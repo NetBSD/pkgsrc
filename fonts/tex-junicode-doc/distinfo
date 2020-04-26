@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:05 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/04/26 12:21:16 markd Exp $
 
-SHA1 (tex-junicode-28286/junicode.doc.tar.xz) = 3a4c1f0f73be1dd45bc2bfacafa1ef741d13d46a
-RMD160 (tex-junicode-28286/junicode.doc.tar.xz) = 98021e08a8d93d8e338f2cf2759dd6a86b909ceb
-SHA512 (tex-junicode-28286/junicode.doc.tar.xz) = c6b37eabe775ae89ca909a0203b804b8667285d2843bcec0a8ce4157c73e55bbd528b2d88ccc7b7c9140cebfbdb6588c49b9de6792f1adad292a38665f83c14b
-Size (tex-junicode-28286/junicode.doc.tar.xz) = 381224 bytes
+SHA1 (junicode.doc.r53954.tar.xz) = 4df77ea06615472d752ec86ad7714591936c3b1e
+RMD160 (junicode.doc.r53954.tar.xz) = ab271a3b632c21039b79dc2c60a829bf7e708220
+SHA512 (junicode.doc.r53954.tar.xz) = f692c94008d88ed2b0b0d91678072cee6cd379e5a3fe58831a69393cb2de3058c0e7320409385a2112b41c9369255ddbc6919520a222adccb38223b5b2576790
+Size (junicode.doc.r53954.tar.xz) = 5756 bytes
