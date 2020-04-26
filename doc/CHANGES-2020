@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2539 2020/04/26 03:18:25 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2540 2020/04/26 08:37:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3467,3 +3467,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/pcmanfm-qt to 0.14.1nb4 [gutteridge 2020-04-26]
 	Updated x11/lxqt-panel to 0.14.1nb1 [gutteridge 2020-04-26]
 	Added meta-pkgs/lxqt version 0.14.1 [gutteridge 2020-04-26]
+	Updated databases/ruby-activeldap to 6.0.1 [taca 2020-04-26]
