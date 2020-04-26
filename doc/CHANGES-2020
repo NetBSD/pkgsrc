@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2550 2020/04/26 14:09:52 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2551 2020/04/26 14:11:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3582,3 +3582,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Future to 0.45 [mef 2020-04-26]
 	Updated devel/p5-Struct-Dumb to 0.12 [mef 2020-04-26]
 	Updated sysutils/p5-Quota to 1.8.1 [mef 2020-04-26]
+	Updated chat/srain to 1.0.2 [nia 2020-04-26]
