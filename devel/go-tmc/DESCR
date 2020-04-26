@@ -1,0 +1,1 @@
+tmc provides round-trip serialization of typed Go maps.
