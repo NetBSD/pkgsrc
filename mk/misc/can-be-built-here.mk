@@ -1,4 +1,4 @@
-# $NetBSD: can-be-built-here.mk,v 1.9 2018/05/16 21:23:02 rillig Exp $
+# $NetBSD: can-be-built-here.mk,v 1.10 2020/04/26 06:56:29 rillig Exp $
 #
 # This file checks whether a package can be built in the current pkgsrc
 # environment. It checks the following variables:
@@ -7,7 +7,7 @@
 # * NOT_FOR_PLATFORM, ONLY_FOR_PLATFORM
 # * BROKEN_ON_PLATFORM, BROKEN_EXCEPT_ON_PLATFORM
 # * NOT_FOR_BULK_PLATFORM
-# * NOT_FOR_UNPRIVILEGED, ONLY_FOR_UNPRIVILEGED
+# * NOT_FOR_UNPRIVILEGED
 # * PKG_FAIL_REASON, PKG_SKIP_REASON
 #
 # It also depends on the following internal variables:
@@ -124,17 +124,6 @@ _CBBH.nunpriv=		yes
 .if defined(NOT_FOR_UNPRIVILEGED) && !empty(NOT_FOR_UNPRIVILEGED:M[Yy][Ee][Ss])
 .  if !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
 _CBBH.nunpriv=		no
-.  endif
-.endif
-
-# Check ONLY_FOR_UNPRIVILEGED
-_CBBH_CHECKS+=		ounpriv
-_CBBH_MSGS.ounpriv=	"This package is not available in unprivileged mode."
-
-_CBBH.ounpriv=		yes
-.if defined(ONLY_FOR_UNPRIVILEGED) && !empty(ONLY_FOR_UNPRIVILEGED:M[Yy][Ee][Ss])
-.  if empty(UNPRIVILEGED:M[Yy][Ee][Ss])
-_CBBH.ounpriv=		no
 .  endif
 .endif
 
