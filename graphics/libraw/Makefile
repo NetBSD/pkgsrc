@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2019/08/31 14:20:05 nia Exp $
+# $NetBSD: Makefile,v 1.33 2020/04/26 06:38:17 rillig Exp $
 
 DISTNAME=	LibRaw-0.19.5
 PKGNAME=	${DISTNAME:tl}
@@ -15,8 +15,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-examples
-CONFIGURE_ARGS+=	--disable-demosaic-pack-gpl2
-CONFIGURE_ARGS+=	--disable-demosaic-pack-gpl3
 
 PKGCONFIG_OVERRIDE+=	libraw.pc.in
 PKGCONFIG_OVERRIDE+=	libraw_r.pc.in
