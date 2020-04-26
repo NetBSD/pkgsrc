@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2534 2020/04/25 23:51:09 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.2535 2020/04/26 00:21:21 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3462,3 +3462,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/lxqt-sudo version 0.14.1 [gutteridge 2020-04-25]
 	Added security/lxqt-openssh-askpass version 0.14.1 [gutteridge 2020-04-25]
 	Added textproc/go-goldmark version 1.1.30 [nikita 2020-04-25]
+	Added devel/go-tmc version 0.5.1 [nikita 2020-04-26]
