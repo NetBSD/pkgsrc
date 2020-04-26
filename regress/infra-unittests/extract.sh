@@ -1,7 +1,9 @@
 #! /bin/sh
+# $NetBSD: extract.sh,v 1.4 2020/04/26 12:46:33 rillig Exp $
 #
-# Tests for mk/subst.mk.
+# Test cases for mk/extract/extract.
 #
+
 set -eu
 
 . "./test.subr"
