@@ -593,6 +593,7 @@ oniguruma		Support regular expressions via the oniguruma library.
 online-tests		Requiring Internet connectivity for "make test".
 onscripter-pda		Enable PDA_AUTOSIZE option to fit window size to screen
 openal			Enable OpenAL support.
+openbox			Use Openbox as the window manager.
 opencore-amr		Enable OpenCORE Adaptive Multi-Rate speech codecs.
 opendkim-filter		Build opendkim-filter support.
 openexr			Use OpenEXR as imaging library.
@@ -871,6 +872,7 @@ xcursor			Enable Xcursor support.
 xdbe			Use X11 Double Buffer Extension.
 xdg-utils		Enable xdg-utils support.
 xen			Use xen.
+xfce4-wm		Use Xfwm4 as the window manager.
 xft2			Enable Xft support.
 xim			Enable X Input Method support.
 xinerama		Enable Xinerama support.
