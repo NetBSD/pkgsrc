@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/04/17 00:18:51 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/26 09:47:41 rillig Exp $
 
 DISTNAME=	binutils-gdb-xtensa-2.31_20190405
 PKGNAME=	${DISTNAME:C/binutils-gdb-xtensa/xtensa-lx106-elf-binutils/}
@@ -12,10 +12,11 @@ HOMEPAGE=	https://github.com/espressif/binutils-gdb
 COMMENT=	Cross binutils for Espressif ESP8266 bare metal environment
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-INFO_FILES=	yes
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake makeinfo perl
+INFO_FILES=		yes
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake makeinfo perl
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}

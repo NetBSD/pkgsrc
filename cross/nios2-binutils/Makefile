@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/01/18 23:30:16 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/26 09:47:40 rillig Exp $
 
 DISTNAME=		binutils-2.24
 PKGNAME=		${DISTNAME:S/^/nios2-/}
@@ -17,6 +17,7 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 USE_GNU_CONFIGURE_HOST=	no
 INFO_FILES=		# empty
 
