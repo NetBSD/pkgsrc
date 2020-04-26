@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.9 2013/07/07 05:45:15 ryoon Exp $
+$NetBSD: patch-ac,v 1.10 2020/04/26 06:32:00 rillig Exp $
 
 --- server/nasd.conf.eg.orig	Thu Feb 26 01:16:01 2009
 +++ server/nasd.conf.eg
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.9 2013/07/07 05:45:15 ryoon Exp $
  inputsection
  
 -	device		"/dev/dsp1"		# The input device, usually
-+	device		"/dev/@DEVOSSAUDIO@1"		# The input device, usually
++	device		"@DEVOSSAUDIO@1"		# The input device, usually
  	mixer		"/dev/mixer1"		# mixer device
          gain            50                      # default input gain (0-100)
  	maxrate		44100
