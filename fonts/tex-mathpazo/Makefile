@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 19:30:14 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/26 12:21:17 markd Exp $
 
 DISTNAME=	mathpazo
-PKGNAME=	tex-${DISTNAME}-1.003
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-1.003.52663
+TEXLIVE_REV=	52663
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/mathpazo
 COMMENT=	Fonts to typeset mathematics to match Palatino
-LICENSE=	lppl-1.3c
+LICENSE=	gnu-gpl-v2
 
-TEXLIVE_UNVERSIONED=	yes
+DEPENDS+=	tex-fpl-[0-9]*:../../fonts/tex-fpl
+DEPENDS+=	tex-palatino-[0-9]*:../../fonts/tex-palatino
+
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

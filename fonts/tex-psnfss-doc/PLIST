@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/27 18:45:29 minskim Exp $
-share/texmf-dist/doc/latex/psnfss/00readme.txt
+@comment $NetBSD: PLIST,v 1.2 2020/04/26 12:21:19 markd Exp $
+share/texmf-dist/doc/latex/psnfss/README
 share/texmf-dist/doc/latex/psnfss/changes.txt
 share/texmf-dist/doc/latex/psnfss/manifest.txt
-share/texmf-dist/doc/latex/psnfss/psfonts.pdf
 share/texmf-dist/doc/latex/psnfss/psnfss2e.pdf
+share/texmf-dist/doc/latex/psnfss/psnfss2e.tex
 share/texmf-dist/doc/latex/psnfss/test/mathtest.tex
 share/texmf-dist/doc/latex/psnfss/test/pitest.tex
 share/texmf-dist/doc/latex/psnfss/test/test0.tex

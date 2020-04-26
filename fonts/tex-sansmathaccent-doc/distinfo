@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:17 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/04/26 12:21:20 markd Exp $
 
-SHA1 (tex-sansmathaccent-30187/sansmathaccent.doc.tar.xz) = 7f2f0c366d6e6b7f985e5511bd04b156ba7be836
-RMD160 (tex-sansmathaccent-30187/sansmathaccent.doc.tar.xz) = e1bdd92eeb0d7e986802f713a89c0572df7131e9
-SHA512 (tex-sansmathaccent-30187/sansmathaccent.doc.tar.xz) = d7f51f2e198e417b0acc26494c24a72d365dd4ea72acf6add33178019c45e4985df1468d3e4e64b02eb01180ba66a301cc3db8fe62018dca0a7695d07e3d1938
-Size (tex-sansmathaccent-30187/sansmathaccent.doc.tar.xz) = 157400 bytes
+SHA1 (sansmathaccent.doc.r53628.tar.xz) = 7978d68495b85998cae88c8a44768a7d2b37ff49
+RMD160 (sansmathaccent.doc.r53628.tar.xz) = d1db105ab09f176e2ca8476e78cf35080ec425c4
+SHA512 (sansmathaccent.doc.r53628.tar.xz) = c9bf7d65a232d668243df9867b2eca64e0288fd733c6b39ce200f64fc5b0a07c98ea6a971446f67f1766998e169c14a80eda71104c1653ed54d3865e6e145fc0
+Size (sansmathaccent.doc.r53628.tar.xz) = 158040 bytes

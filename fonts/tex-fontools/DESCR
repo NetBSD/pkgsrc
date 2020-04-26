@@ -1,7 +1,11 @@
-This package provides a few tools to ease using fonts
-(especially Truetype/Opentype ones) with Latex and fontinst:
-afm2afm - reencode .afm files; designed to replace fontinst's
-\reencodefont for big .afm files; autoinst - simplify the use
-of the LCDF TypeTools by creating a command file for otftotfm,
-plus .fd and .sty files; and ot2kpx - extract all kerning pairs
-from an OpenType font.
+This package provides tools to simplify using OpenType fonts
+with LaTeX. By far the most important program in this bundle is
+autoinst: autoinst - a wrapper script around Eddie Kohler's
+LCDF TypeTools. Autoinst aims to automate the installation of
+OpenType fonts in LaTeX by calling the LCDF TypeTools (with the
+correct options) for all fonts you wish to install, and
+generating the necessary .fd and .sty files. In addition, this
+bundle contains a few other, less important utilities: afm2afm
+- re-encode .afm files, ot2kpx - extract kerning pairs from
+OpenType fonts, splitttc - split an OpenType Collection file
+(ttc or otc) into individual fonts.

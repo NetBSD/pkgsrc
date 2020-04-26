@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2019/08/11 11:51:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/04/26 12:21:18 markd Exp $
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_2dnilg.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_2xpsha.enc
-share/texmf-dist/fonts/enc/dvips/oldstandard/ost_33mxbt.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_6xqr26.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_aclpqv.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_angj2q.enc
@@ -14,23 +13,27 @@ share/texmf-dist/fonts/enc/dvips/oldstandard/ost_gemz57.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_gmdyie.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_gxvnqn.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_hgxo4t.enc
-share/texmf-dist/fonts/enc/dvips/oldstandard/ost_hh3iaj.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_im33zw.enc
-share/texmf-dist/fonts/enc/dvips/oldstandard/ost_j4rqrf.enc
-share/texmf-dist/fonts/enc/dvips/oldstandard/ost_j4w7et.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_jejqrz.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_jkelwa.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_jsesfs.enc
-share/texmf-dist/fonts/enc/dvips/oldstandard/ost_lgaqrj.enc
+share/texmf-dist/fonts/enc/dvips/oldstandard/ost_lpt7jr.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_lu6zq2.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_mknljf.enc
+share/texmf-dist/fonts/enc/dvips/oldstandard/ost_o47vxq.enc
+share/texmf-dist/fonts/enc/dvips/oldstandard/ost_o6llsg.enc
+share/texmf-dist/fonts/enc/dvips/oldstandard/ost_ppxooj.enc
+share/texmf-dist/fonts/enc/dvips/oldstandard/ost_qpx6oq.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_qrrmno.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_qudnnd.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_roofh6.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_ry3lml.enc
+share/texmf-dist/fonts/enc/dvips/oldstandard/ost_sngi4d.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_t3mcms.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_y2jfiq.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_y4aoqz.enc
+share/texmf-dist/fonts/enc/dvips/oldstandard/ost_y6hbpa.enc
+share/texmf-dist/fonts/enc/dvips/oldstandard/ost_ytxedg.enc
 share/texmf-dist/fonts/enc/dvips/oldstandard/ost_zpoxlt.enc
 share/texmf-dist/fonts/map/dvips/oldstandard/OldStandard.map
 share/texmf-dist/fonts/opentype/public/oldstandard/OldStandard-Bold.otf

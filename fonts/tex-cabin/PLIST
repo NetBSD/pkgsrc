@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2019/05/12 11:46:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/26 12:21:12 markd Exp $
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_2wmmq3.enc
+share/texmf-dist/fonts/enc/dvips/cabin/cbn_5nrtpu.enc
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_5xld5w.enc
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_fp7bit.enc
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_hau3x5.enc
@@ -7,11 +8,10 @@ share/texmf-dist/fonts/enc/dvips/cabin/cbn_i3ioen.enc
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_jjp77t.enc
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_meva6t.enc
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_mvtsrz.enc
-share/texmf-dist/fonts/enc/dvips/cabin/cbn_taosrr.enc
+share/texmf-dist/fonts/enc/dvips/cabin/cbn_tz56ju.enc
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_vqopxp.enc
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_vqpkf5.enc
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_yhiurv.enc
-share/texmf-dist/fonts/enc/dvips/cabin/cbn_yhzmyq.enc
 share/texmf-dist/fonts/map/dvips/cabin/cabin.map
 share/texmf-dist/fonts/opentype/impallari/cabin/Cabin-Bold.otf
 share/texmf-dist/fonts/opentype/impallari/cabin/Cabin-BoldItalic.otf
@@ -605,6 +605,8 @@ share/texmf-dist/fonts/vf/impallari/cabin/CabinCondensed-SemiBoldItalic-tlf-sc-o
 share/texmf-dist/fonts/vf/impallari/cabin/CabinCondensed-SemiBoldItalic-tlf-sc-t1.vf
 share/texmf-dist/fonts/vf/impallari/cabin/CabinCondensed-SemiBoldItalic-tlf-t1.vf
 share/texmf-dist/fonts/vf/impallari/cabin/CabinCondensed-SemiBoldItalic-tlf-ts1.vf
+share/texmf-dist/tex/latex/cabin/LGRCabin-Sup.fd
+share/texmf-dist/tex/latex/cabin/LGRCabin-TLF.fd
 share/texmf-dist/tex/latex/cabin/LY1Cabin-Sup.fd
 share/texmf-dist/tex/latex/cabin/LY1Cabin-TLF.fd
 share/texmf-dist/tex/latex/cabin/OT1Cabin-Sup.fd

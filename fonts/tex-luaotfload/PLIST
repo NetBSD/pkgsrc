@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2019/08/11 05:40:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/04/26 12:21:16 markd Exp $
 share/texmf-dist/scripts/luaotfload/luaotfload-tool.lua
-share/texmf-dist/tex/luatex/luaotfload/fontloader-2019-07-04.lua
+share/texmf-dist/tex/luatex/luaotfload/fontloader-2020-01-26.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-chr.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-gen.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-nod.lua
@@ -63,16 +63,23 @@ share/texmf-dist/tex/luatex/luaotfload/luaotfload-configuration.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-database.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-diagnostics.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-embolden.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-fallback.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-features.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-filelist.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-glyphlist.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-define.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-plug.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-init.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-letterspace.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-loaders.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-log.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-main.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-multiscript.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-notdef.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-parsers.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-resolvers.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-scripts.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-status.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-tounicode.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-unicode.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload.sty
