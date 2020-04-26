@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2537 2020/04/26 02:22:00 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2538 2020/04/26 03:06:06 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3465,3 +3465,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/go-tmc version 0.5.1 [nikita 2020-04-26]
 	Updated cad/diylc to 3.28.0nb1 [dsainty 2020-04-26]
 	Updated sysutils/pcmanfm-qt to 0.14.1nb4 [gutteridge 2020-04-26]
+	Updated x11/lxqt-panel to 0.14.1nb1 [gutteridge 2020-04-26]
