@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/06/08 10:53:27 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/26 09:47:40 rillig Exp $
 
 DISTNAME=	binutils-2.24
 PKGNAME=	cross-freemint-${DISTNAME}
@@ -17,8 +17,9 @@ PATCH_DIST_STRIP=	-p1
 
 FREEMINT_PREFIX=	${PREFIX}/cross-freemint
 
-USE_TOOLS+=	gmake makeinfo
-GNU_CONFIGURE=	yes
+USE_TOOLS+=		gmake makeinfo
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}

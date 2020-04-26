@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2018/07/16 12:56:48 mef Exp $
+# $NetBSD: Makefile,v 1.30 2020/04/26 09:47:39 rillig Exp $
 
 DISTNAME=		binutils-2.30
 PKGNAME=		${DISTNAME:S/^/avr-/}
@@ -14,6 +14,7 @@ LICENSE=		gnu-gpl-v3
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 USE_PKGLOCALEDIR=	yes
 USE_GNU_CONFIGURE_HOST=	no
 

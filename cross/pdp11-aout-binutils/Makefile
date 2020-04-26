@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/07/30 19:45:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/26 09:47:40 rillig Exp $
 
 DISTNAME=	binutils-2.31.1
 PKGNAME=	cross-pdp11-aout-${DISTNAME}
@@ -11,11 +11,12 @@ HOMEPAGE=	# empty
 COMMENT=	Cross binutils for PDP-11 a.out
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake makeinfo
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake makeinfo
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 
-PDP11AOUT_PREFIX=		${PREFIX}/cross-pdp11-aout
+PDP11AOUT_PREFIX=	${PREFIX}/cross-pdp11-aout
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
