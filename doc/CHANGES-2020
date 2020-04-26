@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2547 2020/04/26 12:33:03 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2548 2020/04/26 13:39:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3576,3 +3576,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added fonts/tex-wasy-type1 version 001.002 [markd 2020-04-26]
 	Removed fonts/tex-wasy2-ps successor fonts/tex-wasy-type1 [markd 2020-04-26]
 	Updated meta-pkgs/texlive-collection-fontsrecommended to 2020 [markd 2020-04-26]
+	Added devel/p5-B-COW version 0.004 [mef 2020-04-26]
+	Updated devel/p5-Clone to 0.45 [mef 2020-04-26]
