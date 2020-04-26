@@ -1,7 +1,9 @@
 #! /bin/sh
+# $NetBSD: subst.sh,v 1.25 2020/04/26 12:46:33 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
+
 set -eu
 
 . "./test.subr"
