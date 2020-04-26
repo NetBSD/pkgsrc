@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/16 13:34:08 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/26 14:06:32 nia Exp $
 bin/xournal-thumbnailer
 bin/xournalpp
 share/applications/com.github.xournalpp.xournalpp.desktop
@@ -97,17 +97,28 @@ share/xournalpp/ui/iconsDark/hicolor/index.theme
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/arrow-draw.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/audio-playback-pause.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/audio-playback-stop.svg
+share/xournalpp/ui/iconsDark/hicolor/scalable/actions/audio-seek-backwards.svg
+share/xournalpp/ui/iconsDark/hicolor/scalable/actions/audio-seek-forwards.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/circle-draw.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/coordinate-system-draw.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/fill.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/grid_snapping.svg
+share/xournalpp/ui/iconsDark/hicolor/scalable/actions/line-style-dash-dot.svg
+share/xournalpp/ui/iconsDark/hicolor/scalable/actions/line-style-dash.svg
+share/xournalpp/ui/iconsDark/hicolor/scalable/actions/line-style-dot.svg
+share/xournalpp/ui/iconsDark/hicolor/scalable/actions/line-style-plain.svg
+share/xournalpp/ui/iconsDark/hicolor/scalable/actions/presentation-mode.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/rect-draw.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/ruler.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/shape_recognizer.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/snapping.svg
+share/xournalpp/ui/iconsDark/hicolor/scalable/actions/thickness_fine.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/thickness_medium.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/thickness_thick.svg
-share/xournalpp/ui/iconsDark/hicolor/scalable/actions/thickness_thin.svg
+share/xournalpp/ui/iconsDark/hicolor/scalable/actions/thickness_very_fine.svg
+share/xournalpp/ui/iconsDark/hicolor/scalable/actions/thickness_very_thick.svg
+share/xournalpp/ui/iconsDark/hicolor/scalable/actions/tool_highlighter.svg
+share/xournalpp/ui/iconsDark/hicolor/scalable/actions/tool_math_tex.svg
 share/xournalpp/ui/iconsDark/hicolor/scalable/actions/tool_text.svg
 share/xournalpp/ui/iconsDark/hicolor/update-icon-cache.sh
 share/xournalpp/ui/images.glade
