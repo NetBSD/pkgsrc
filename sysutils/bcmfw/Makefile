@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2020/04/07 08:13:51 plunky Exp $
+# $NetBSD: Makefile,v 1.15 2020/04/26 11:47:53 plunky Exp $
 
 DISTNAME=		bcmfw-2.3
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		https://github.com/plunky/bcmfw/archive/
 DIST_SUBDIR=		${PKGNAME_NOREV}
@@ -33,7 +34,7 @@ PLIST_SUBST+=		FIRMWARE_DIR=${FIRMWARE_DIR}
 
 SUBST_CLASSES+=		dir
 SUBST_FILES.dir=	bcmfw.8
-SUBST_SED.dir=		-e 's,/libdata/bcmfw,${PREFIX}/${FIRMWARE_DIR}&,'
+SUBST_SED.dir=		-e 's,/libdata/bcmfw,${PREFIX}/${FIRMWARE_DIR},'
 SUBST_STAGE.dir=	pre-configure
 SUBST_MESSAGE.dir=	Fixing path to firmware directory.
 
