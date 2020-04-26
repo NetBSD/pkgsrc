@@ -1,10 +1,10 @@
-$NetBSD: patch-src_dns_dns__lookup.c,v 1.6 2020/02/11 20:40:27 triaxx Exp $
+$NetBSD: patch-src_dns_dns__lookup.c,v 1.7 2020/04/26 09:33:26 taca Exp $
 
 Fix runtime problem when mysql PKG_OPTIONS is enabled.
 
---- src/dns/dns_lookup.c.orig	2019-12-15 16:13:04.000000000 +0000
+--- src/dns/dns_lookup.c.orig	2019-12-15 16:19:34.000000000 +0000
 +++ src/dns/dns_lookup.c
-@@ -245,6 +245,8 @@
+@@ -247,6 +247,8 @@
  
  /* Local stuff. */
  
@@ -13,7 +13,7 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
   /*
    * Structure to keep track of things while decoding a name server reply.
    */
-@@ -308,7 +310,7 @@ typedef struct DNS_REPLY {
+@@ -311,7 +313,7 @@ typedef struct DNS_REPLY {
  
  /* dns_res_query - a res_query() clone that can return negative replies */
  
@@ -22,7 +22,7 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
  			         unsigned char *answer, int anslen)
  {
      unsigned char msg_buf[MAX_DNS_QUERY_SIZE];
-@@ -337,14 +339,14 @@ static int dns_res_query(const char *nam
+@@ -340,14 +342,14 @@ static int dns_res_query(const char *nam
  #define NO_MKQUERY_DATA_LEN     ((int) 0)
  #define NO_MKQUERY_NEWRR        ((unsigned char *) 0)
  
@@ -39,7 +39,7 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
  	SET_H_ERRNO(TRY_AGAIN);
  	if (msg_verbose)
  	    msg_info("res_send() failed");
-@@ -373,7 +375,7 @@ static int dns_res_query(const char *nam
+@@ -378,7 +380,7 @@ static int dns_res_query(const char *nam
  
  /* dns_res_search - res_search() that can return negative replies */
  
@@ -48,7 +48,7 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
  	               unsigned char *answer, int anslen, int keep_notfound)
  {
      int     len;
-@@ -396,7 +398,7 @@ static int dns_res_search(const char *na
+@@ -401,7 +403,7 @@ static int dns_res_search(const char *na
      if (keep_notfound)
  	/* Prepare for returning a null-padded server reply. */
  	memset(answer, 0, anslen);
@@ -57,7 +57,7 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
      /* Begin API creep workaround. */
      if (len < 0 && h_errno == 0) {
  	SET_H_ERRNO(TRY_AGAIN);
-@@ -435,7 +437,7 @@ static int dns_query(const char *name, i
+@@ -440,7 +442,7 @@ static int dns_query(const char *name, i
      /*
       * Initialize the name service.
       */
@@ -66,7 +66,7 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
  	if (why)
  	    vstring_strcpy(why, "Name service initialization failure");
  	return (DNS_FAIL);
-@@ -464,24 +466,24 @@ static int dns_query(const char *name, i
+@@ -479,32 +481,32 @@ static int dns_query(const char *name, i
       */
  #define SAVE_FLAGS (USER_FLAGS | XTRA_FLAGS)
  
@@ -83,9 +83,18 @@ Fix runtime problem when mysql PKG_OPTIONS is enabled.
 +	rstate.options &= ~saved_options;
 +	rstate.options |= flags;
  	if (keep_notfound && var_dns_ncache_ttl_fix) {
+ #ifdef HAVE_RES_SEND
 -	    len = dns_res_query((char *) name, C_IN, type, reply->buf,
 +		len = dns_res_query(&rstate, (char *) name, C_IN, type, reply->buf,
  				reply->buf_len);
+ #else
+ 	    var_dns_ncache_ttl_fix = 0;
+ 	    msg_warn("system library does not support %s=yes"
+ 		     " -- ignoring this setting", VAR_DNS_NCACHE_TTL_FIX);
+-	    len = dns_res_search((char *) name, C_IN, type, reply->buf,
++	    len = dns_res_search(&rstate, (char *) name, C_IN, type, reply->buf,
+ 				 reply->buf_len, keep_notfound);
+ #endif
  	} else {
 -	    len = dns_res_search((char *) name, C_IN, type, reply->buf,
 +		len = dns_res_search(&rstate, (char *) name, C_IN, type, reply->buf,
