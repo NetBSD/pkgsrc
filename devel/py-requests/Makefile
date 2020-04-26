@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/02/21 06:42:59 adam Exp $
+# $NetBSD: Makefile,v 1.45 2020/04/26 09:59:51 rillig Exp $
 
 DISTNAME=	requests-2.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,6 +25,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=		# none
 REPLACE_PYTHON+=	requests/certs.py
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYPKGPREFIX} == py27
+TEST_DEPENDS=	# none; py-test-httpbin is incompatible with py27
+do-test:
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
