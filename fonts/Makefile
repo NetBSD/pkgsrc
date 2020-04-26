@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.336 2020/03/05 14:14:27 nia Exp $
+# $NetBSD: Makefile,v 1.337 2020/04/26 12:24:50 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -792,7 +792,7 @@ SUBDIR+=	tex-wadalab
 SUBDIR+=	tex-wadalab-doc
 SUBDIR+=	tex-wasy
 SUBDIR+=	tex-wasy-doc
-SUBDIR+=	tex-wasy2-ps
+SUBDIR+=	tex-wasy-type1
 SUBDIR+=	tex-wasysym
 SUBDIR+=	tex-wasysym-doc
 SUBDIR+=	tex-wsuipa
