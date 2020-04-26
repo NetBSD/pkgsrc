@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2017/09/03 08:36:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2020/04/26 06:23:58 rillig Exp $
 # used by comms/p5-pilot-link/Makefile
 # used by comms/pilot-link/Makefile
 # used by comms/pilot-link-libs/Makefile
@@ -25,14 +25,11 @@ CONFIGURE_ARGS+=	--without-libiconv
 .else
 CONFIGURE_ARGS+=	--with-libiconv
 .endif
-CONFIGURE_ARGS+=	--with-cpp
 
 CONFIGURE_ARGS+=	--without-java
-CONFIGURE_ARGS+=	--without-itcl
-CONFIGURE_ARGS+=	--without-perl5
+CONFIGURE_ARGS+=	--without-perl # is overridden in p5-pilot-link
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-tcl
-CONFIGURE_ARGS+=	--without-tk
 
 DISTINFO_FILE=		${.CURDIR}/../../comms/pilot-link/distinfo
 PATCHDIR=		${.CURDIR}/../../comms/pilot-link/patches
