@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/25 01:57:55 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/26 03:05:50 gutteridge Exp $
 bin/lxqt-panel
 include/lxqt/ilxqtpanel.h
 include/lxqt/ilxqtpanelplugin.h
@@ -11,6 +11,7 @@ man/man1/lxqt-panel.1
 share/desktop-directories/lxqt-leave.directory
 share/desktop-directories/lxqt-settings.directory
 share/examples/lxqt/xdg/autostart/lxqt-panel.desktop
+share/examples/lxqt/xdg/lxqt/panel.conf
 share/examples/lxqt/xdg/menus/lxqt-applications.menu
 share/lxqt/lxqt-panel/colorpicker.desktop
 share/lxqt/lxqt-panel/desktopswitch.desktop
@@ -24,7 +25,6 @@ share/lxqt/lxqt-panel/taskbar.desktop
 share/lxqt/lxqt-panel/tray.desktop
 share/lxqt/lxqt-panel/volume.desktop
 share/lxqt/lxqt-panel/worldclock.desktop
-share/lxqt/panel.conf
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_ca.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_cy.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_da.qm
