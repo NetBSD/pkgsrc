@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/26 00:17:02 nikita Exp $
+
+SHA1 (tmc-0.5.1.tar.gz) = 9c5f3ff37b5e25af9a2a53bbcf389d0f7b0b688d
+RMD160 (tmc-0.5.1.tar.gz) = 8452c7ae314c77f3a11ceda3c94cd04a15d85301
+SHA512 (tmc-0.5.1.tar.gz) = c9e0aa71c323c5f276652bb73fa68a27abd3b337c57c11d5d50e407a813538bb3f3707dcb4d40f1e90e94e773e55b29ed09aec25f919495c8aa459dd2644b713
+Size (tmc-0.5.1.tar.gz) = 8364 bytes
