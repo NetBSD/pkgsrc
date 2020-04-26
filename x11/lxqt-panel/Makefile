@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/04/25 01:57:55 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/26 03:05:50 gutteridge Exp $
 
 DISTNAME=	lxqt-panel-0.14.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://downloads.lxqt.org/downloads/lxqt-panel/0.14.1/
 EXTRACT_SUFX=	.tar.xz
