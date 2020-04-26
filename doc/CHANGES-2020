@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2552 2020/04/26 14:14:31 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2553 2020/04/26 16:17:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3584,3 +3584,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/p5-Quota to 1.8.1 [mef 2020-04-26]
 	Updated chat/srain to 1.0.2 [nia 2020-04-26]
 	Updated editors/xournalpp to 1.0.18 [nia 2020-04-26]
+	Updated devel/meld to 3.21.0nb2 [wiz 2020-04-26]
