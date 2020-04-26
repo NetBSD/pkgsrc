@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:21 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/04/26 12:21:21 markd Exp $
 
-SHA1 (tex-universa-15878/universa.doc.tar.xz) = c4fbb227297a509a15a668f232ccda2e565f114c
-RMD160 (tex-universa-15878/universa.doc.tar.xz) = 1c718f66c72b43aece2e2bad369d560bff8aa914
-SHA512 (tex-universa-15878/universa.doc.tar.xz) = 9e67dcc7ea516765e0a9ba8605748085d9b005d157da7ed6a26cd09fc376feb128ff65a5b332f2487ed07d4418e592292af01a2483b3005bc46ffc126959ed8c
-Size (tex-universa-15878/universa.doc.tar.xz) = 10752 bytes
+SHA1 (universa.doc.r51984.tar.xz) = 574edc0e100161260f83e6678b617f718c34609c
+RMD160 (universa.doc.r51984.tar.xz) = 2b7e2a18d6e7ecfae9456788eb7e7068455bec70
+SHA512 (universa.doc.r51984.tar.xz) = 3d5ae6da093d5671b369f7db4920baab6fea25e58e11926e2fffaedf1b0699885005f3d0158eb2a6afea9ac4f08ec63c577e99da7cbb75e33727f9a97c8157cd
+Size (universa.doc.r51984.tar.xz) = 595332 bytes

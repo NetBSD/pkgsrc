@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2019/12/06 19:32:20 markd Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/26 12:21:19 markd Exp $
 
 DISTNAME=	psnfss
-PKGNAME=	tex-${DISTNAME}-9.2a.33946
-TEXLIVE_REV=	33946
+PKGNAME=	tex-${DISTNAME}-9.3
+TEXLIVE_REV=	54694
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/psnfss
 COMMENT=	Font support for common PostScript fonts
 LICENSE=	lppl-1.3c
 
@@ -28,6 +29,5 @@ TEX_MAP_FILES+=	fpls.map
 TEX_MAP_FILES+=	pazo.map
 TEX_MAP_FILES+=	utopia.map
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

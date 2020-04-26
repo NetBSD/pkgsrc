@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/08/04 04:39:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/26 12:21:16 markd Exp $
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_2exa4z.enc
 share/texmf-dist/fonts/enc/dvips/libertine/lbtn_2ezly2.enc
@@ -306,7 +306,6 @@ share/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R.otf
 share/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_RB.otf
 share/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_RBO.otf
 share/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_RI.otf
-share/texmf-dist/fonts/opentype/public/libertine/LinLibertineMBnew.otf
 share/texmf-dist/fonts/opentype/public/libertine/LinLibertine_DR.otf
 share/texmf-dist/fonts/opentype/public/libertine/LinLibertine_I.otf
 share/texmf-dist/fonts/opentype/public/libertine/LinLibertine_M.otf
@@ -2373,13 +2372,7 @@ share/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-LF.fd
 share/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-OsF.fd
 share/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd
 share/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TOsF.fd
-share/texmf-dist/tex/latex/libertine/biolinum-otf.sty
-share/texmf-dist/tex/latex/libertine/biolinum-type1.sty
 share/texmf-dist/tex/latex/libertine/biolinum.sty
-share/texmf-dist/tex/latex/libertine/libertine-otf.sty
-share/texmf-dist/tex/latex/libertine/libertine-type1.sty
 share/texmf-dist/tex/latex/libertine/libertine.sty
-share/texmf-dist/tex/latex/libertine/libertineMono-type1.sty
 share/texmf-dist/tex/latex/libertine/libertineMono.sty
 share/texmf-dist/tex/latex/libertine/libertineRoman.sty
-share/texmf-dist/tex/latex/libertine/libertineotf.sty
