@@ -1,7 +1,10 @@
 #! /bin/sh
-set -eu
-
+# $NetBSD: tools-bison.sh,v 1.4 2020/04/26 12:46:33 rillig Exp $
+#
 # Tests for mk/tools/bison.mk
+#
+
+set -eu
 
 . "./test.subr"
 
