@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2019/10/09 10:41:02 adam Exp $
+# $NetBSD: Makefile,v 1.14 2020/04/26 10:01:38 rillig Exp $
 
 DISTNAME=	jupyter_client-5.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,8 +28,14 @@ post-install:
 	${MV} jupyter-kernelspec jupyter-kernelspec-${PYVERSSUFFIX} && \
 	${MV} jupyter-run jupyter-run-${PYVERSSUFFIX} || ${TRUE}
 
+.include "../../lang/python/pyversion.mk"
+.if ${PYPKGPREFIX} == py27
+TEST_DEPENDS=	# none; py-ipykernel is incompatible with py27
+do-test:
+.else
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
