@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/04/12 08:29:18 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/26 13:19:39 rillig Exp $
 
 DISTNAME=	gtk-sharp-2.99.3
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-sharp/2.99/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.mono-project.com/GtkSharp
+HOMEPAGE=	https://www.mono-project.com/docs/gui/gtksharp/
 COMMENT=	.NET bindings for GTK+3
 LICENSE=	gnu-lgpl-v2.1
 
