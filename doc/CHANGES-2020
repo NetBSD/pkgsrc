@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2543 2020/04/26 08:48:52 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2544 2020/04/26 09:19:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3471,3 +3471,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/ruby-sequel to 5.31.0 [taca 2020-04-26]
 	Updated devel/ruby-backports to 3.17.1 [taca 2020-04-26]
 	Updated mail/roundcube-plugin-password to 1.4.2nb1 [taca 2020-04-26]
+	Updated www/drupal8 to 8.7.12 [taca 2020-04-26]
