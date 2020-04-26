@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/08/11 10:35:32 markd Exp $
+$NetBSD: distinfo,v 1.4 2020/04/26 12:21:14 markd Exp $
 
-SHA1 (tex-esint-51679/esint.tar.xz) = f67252ff1e7b090926ccba581962eba69c62e3c2
-RMD160 (tex-esint-51679/esint.tar.xz) = 5b2b58ec39891432b9880b0d514594ccbed8964f
-SHA512 (tex-esint-51679/esint.tar.xz) = 7913b0797e1c13798b2aff45d4d8318d368fd406197a6f51840b5936c56ff657d24c44fa8ba78a281f2fff4a4d1059aaa154a252ecf2196ef92bda3c97ee6d64
-Size (tex-esint-51679/esint.tar.xz) = 4416 bytes
+SHA1 (esint.r52240.tar.xz) = 3a05b5b9c9e4bed71b9356dbc4552cc45f823ca4
+RMD160 (esint.r52240.tar.xz) = a3673825d50bb8a0602d6add93c5db3f8d0dd5ac
+SHA512 (esint.r52240.tar.xz) = d0eda90d6a890b7813648516f21e3a88213b1374df0c418895301354de402b9634492a1fd89193f34c6db6b9fcc0cdd0f8f46472e0e3a210234c7d8cab1bbed8
+Size (esint.r52240.tar.xz) = 5760 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2019/08/05 11:19:27 markd Exp $
+$NetBSD: distinfo,v 1.11 2020/04/26 12:21:14 markd Exp $
 
-SHA1 (tex-fira-51328/fira.tar.xz) = a6049959f2f6acc82985dcfe3e198f4fe68f2d55
-RMD160 (tex-fira-51328/fira.tar.xz) = 4e10a0b3ccaa3a857b25b7f25f71df8ef4f83ac5
-SHA512 (tex-fira-51328/fira.tar.xz) = fbf74de7a6dd47304137a5fd31363288331fed1f08e6fbddd0dee9a3af6b5f2b307a0dca4bd7fd1a59b90f24e1ea96e8446caad29e2db4af2d7ff403bcad6ad8
-Size (tex-fira-51328/fira.tar.xz) = 15825552 bytes
+SHA1 (fira.r54512.tar.xz) = 53ff487e9ccfd4473308b5bd64ff6f053273c932
+RMD160 (fira.r54512.tar.xz) = 0ea0f00c524b2f9bc0c6e3befc9ad500b54dced7
+SHA512 (fira.r54512.tar.xz) = 68dc9075ca90151ba7b713cbbd5ea994f19d0f199a09b50b0afb71a567d54b6903be2ceabf9207f91c41ae5d1158edc52541880b1c6f3afeec21d4297d7fde03
+Size (fira.r54512.tar.xz) = 15826720 bytes

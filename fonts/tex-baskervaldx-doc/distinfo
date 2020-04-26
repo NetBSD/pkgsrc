@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/06/20 21:01:17 markd Exp $
+$NetBSD: distinfo,v 1.4 2020/04/26 12:21:12 markd Exp $
 
-SHA1 (tex-baskervaldx-43461/baskervaldx.doc.tar.xz) = 9a423b2d6dee20aad399171d573764dc52b78301
-RMD160 (tex-baskervaldx-43461/baskervaldx.doc.tar.xz) = f203bb06af5d4e66700df0fde3f901da1cbaf67b
-SHA512 (tex-baskervaldx-43461/baskervaldx.doc.tar.xz) = c9a8121476011ab3ec9e3216fe0f13cac5d7607144cbe8db835e9e1b06261911493b1f18e2daf76d364433569b35519397c887e6d63af5f593d670a93d1057d3
-Size (tex-baskervaldx-43461/baskervaldx.doc.tar.xz) = 211424 bytes
+SHA1 (baskervaldx.doc.r54512.tar.xz) = f9b56387b38a6b5b61f23341498b906a0b112fde
+RMD160 (baskervaldx.doc.r54512.tar.xz) = e9f4eb8c99ec7bb2d5c9b114d1650817323798d2
+SHA512 (baskervaldx.doc.r54512.tar.xz) = 7deac9cab55197d05461a6e3cc795ec65f8b8ed65c92f69dd85bf87b9f881b7ddb853d8321b4b8c3cf2e17b034eb516e452e5b03d5062ff58380ceb90518ca02
+Size (baskervaldx.doc.r54512.tar.xz) = 211488 bytes

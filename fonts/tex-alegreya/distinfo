@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/11 22:43:19 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/04/26 12:21:11 markd Exp $
 
-SHA1 (tex-alegreya-50277/alegreya.tar.xz) = 65c4e12836f3c005dd5a025cebe1f7617a5de788
-RMD160 (tex-alegreya-50277/alegreya.tar.xz) = 52a3b13c84439a64f7976cf72ad1c97cb885d40c
-SHA512 (tex-alegreya-50277/alegreya.tar.xz) = b6bc439ce8b6e5a2015c61ba3dc32daad7900fb5d53013e99f12dff28e2ab97170d7b07bc39bbb7878e4ebed805216701846c3446d06ab0d255d230686282fa2
-Size (tex-alegreya-50277/alegreya.tar.xz) = 14352704 bytes
+SHA1 (alegreya.r54512.tar.xz) = 30cd7895306f2b7e17879426291c7f03670bc437
+RMD160 (alegreya.r54512.tar.xz) = fe8cb005cee0846871599207c5f4f07f6638a4fa
+SHA512 (alegreya.r54512.tar.xz) = 7136053c90b3c9ae5744a1740e44008b3fea0a25323cb9033a6c2a2d1c72a024645626903913485af24ee08a9614d3fd6e9ba79dfd2206ec29c0fc1b1b98a21c
+Size (alegreya.r54512.tar.xz) = 24434164 bytes

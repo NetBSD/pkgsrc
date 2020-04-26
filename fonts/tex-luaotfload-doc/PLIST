@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/01/30 11:09:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/04/26 12:21:16 markd Exp $
 man/man1/luaotfload-tool.1
 man/man5/luaotfload.conf.5
 share/texmf-dist/doc/luatex/luaotfload/COPYING
@@ -14,3 +14,9 @@ share/texmf-dist/doc/luatex/luaotfload/luaotfload-tool.pdf
 share/texmf-dist/doc/luatex/luaotfload/luaotfload-tool.rst
 share/texmf-dist/doc/luatex/luaotfload/luaotfload.conf.example
 share/texmf-dist/doc/luatex/luaotfload/luaotfload.conf.rst
+share/texmf-dist/doc/luatex/luaotfload/scripts-demo.pdf
+share/texmf-dist/doc/luatex/luaotfload/scripts-demo.tex
+share/texmf-dist/doc/luatex/luaotfload/shaper-demo-graphite.pdf
+share/texmf-dist/doc/luatex/luaotfload/shaper-demo-graphite.tex
+share/texmf-dist/doc/luatex/luaotfload/shaper-demo.pdf
+share/texmf-dist/doc/luatex/luaotfload/shaper-demo.tex

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/26 12:21:21 markd Exp $
 share/texmf-dist/fonts/afm/public/txfontsb/FreeSerifb-SmallCaps.afm
 share/texmf-dist/fonts/afm/public/txfontsb/FreeSerifb-SmallCapsAlt.afm
 share/texmf-dist/fonts/afm/public/txfontsb/FreeSerifb.afm
@@ -8,6 +8,12 @@ share/texmf-dist/fonts/afm/public/txfontsb/FreeSerifbItalic.afm
 share/texmf-dist/fonts/enc/dvips/txfontsb/gptimes.enc
 share/texmf-dist/fonts/enc/dvips/txfontsb/gptimesy.enc
 share/texmf-dist/fonts/map/dvips/txfontsb/gptimes.map
+share/texmf-dist/fonts/opentype/public/txfontsb/FreeSerifb-SmallCaps.otf
+share/texmf-dist/fonts/opentype/public/txfontsb/FreeSerifb-SmallCapsAlt.otf
+share/texmf-dist/fonts/opentype/public/txfontsb/FreeSerifb.otf
+share/texmf-dist/fonts/opentype/public/txfontsb/FreeSerifbBold.otf
+share/texmf-dist/fonts/opentype/public/txfontsb/FreeSerifbBoldItalic.otf
+share/texmf-dist/fonts/opentype/public/txfontsb/FreeSerifbItalic.otf
 share/texmf-dist/fonts/tfm/public/txfontsb/gtimesb6a.tfm
 share/texmf-dist/fonts/tfm/public/txfontsb/gtimesb6r.tfm
 share/texmf-dist/fonts/tfm/public/txfontsb/gtimesbi6a.tfm
