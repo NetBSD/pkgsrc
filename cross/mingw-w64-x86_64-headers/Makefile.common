@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2019/12/29 01:08:14 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.6 2020/04/26 06:47:12 rillig Exp $
 #
 # used by cross/mingw-w64-x86_64-headers/Makefile
 # used by cross/mingw-w64-i686-headers/Makefile
@@ -22,7 +22,6 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}/mingw
 CONFIGURE_ARGS+=	--enable-sdk=all
-CONFIGURE_ARGS+=	--enable-secure-api
 CONFIGURE_ARGS+=	--host=${MINGW_TARGET}
 
 .include "../../cross/mingw-w64/Makefile.common"
