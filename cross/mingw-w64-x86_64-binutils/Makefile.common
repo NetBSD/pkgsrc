@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2019/12/29 01:08:14 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/04/26 06:40:27 rillig Exp $
 #
 # used by cross/mingw-w64-x86_64-binutils/Makefile
 # used by cross/mingw-w64-i686-binutils/Makefile
@@ -15,6 +15,7 @@ PATCHDIR=	${.CURDIR}/../../cross/mingw-w64-x86_64-binutils/patches
 DISTINFO_FILE=	${.CURDIR}/../../cross/mingw-w64-x86_64-binutils/distinfo
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
 GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}
 CONFIGURE_ARGS+=	--target=${MINGW_TARGET}
 CONFIGURE_ARGS+=	--disable-nls
