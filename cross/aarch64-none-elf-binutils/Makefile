@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/03/20 17:52:42 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/26 09:47:39 rillig Exp $
 
 DISTNAME=	binutils-2.31.1
 PKGNAME=	cross-aarch64-none-elf-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_STRICT=	no # has several sub-configures
+GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 
 ARMELF_PREFIX=		${PREFIX}/cross-aarch64-none-elf
 

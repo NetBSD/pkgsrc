@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/14 20:53:21 js Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/26 09:47:41 rillig Exp $
 
 DISTNAME=	sdk-source-20191111
 PKGNAME=	ppc-morphos-binutils-2.33.1
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=			${WRKDIR}/sdk-source/binutils/binutils-${PKGVERSION_NOREV}
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		xzcat gtar patch gmake makeinfo
 
