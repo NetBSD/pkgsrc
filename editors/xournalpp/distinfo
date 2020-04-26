@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.4 2020/02/20 17:09:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2020/04/26 14:06:32 nia Exp $
 
-SHA1 (xournalpp-1.0.17.tar.gz) = 532461588c146a90f173252621a96d57f799e206
-RMD160 (xournalpp-1.0.17.tar.gz) = 65b18e3ef7a0cf02cc2b313c7b2e619116487434
-SHA512 (xournalpp-1.0.17.tar.gz) = cc3568ce22fd42f0e8458f1428c102d2fc18a9650d8c5968cadd6693fc19374780beb3c7f6206f2f494439296a883b2a5160da37e3a0e10d6fe3654084967ab9
-Size (xournalpp-1.0.17.tar.gz) = 14885382 bytes
+SHA1 (xournalpp-1.0.18.tar.gz) = 935cb3550bb44f6b3cf4da274b65ce275e983695
+RMD160 (xournalpp-1.0.18.tar.gz) = 7dfd02c8b316d3d81d315e532e0d847266876110
+SHA512 (xournalpp-1.0.18.tar.gz) = 90568a2674a18ff711ecef5f1a66ea1c5746d7f1fde271b36342d9bf48e096e63075cf7fd8b69e39e144273a4d1b922c415eee929eba94b2fa515a0bb481815a
+Size (xournalpp-1.0.18.tar.gz) = 14892343 bytes
 SHA1 (patch-CMakeLists.txt) = 3ead1546fe20e7481e93f2976c3e7b98c0a7699f
-SHA1 (patch-src_control_tools_StrokeHandler.cpp) = 80df57a9776a9919a95a04bf6c057dc021fc789e
+SHA1 (patch-po_CMakeLists.txt) = 897b4f9507b48be394409deda8170fe7d39f008c
+SHA1 (patch-src_control_tools_StrokeHandler.cpp) = 9e8d3d3f173ef1e84137a728646e807228184872
 SHA1 (patch-src_util_DeviceListHelper.cpp) = 8f3534c80c79ec49dd9562c3ed4e3ff7c36b2ecb
