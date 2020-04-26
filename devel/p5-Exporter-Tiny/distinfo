@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2018/07/20 07:41:02 wen Exp $
+$NetBSD: distinfo,v 1.9 2020/04/26 13:54:14 mef Exp $
 
-SHA1 (Exporter-Tiny-1.002001.tar.gz) = 9ecca5df5613f948a0d50335ba9fd7854238464b
-RMD160 (Exporter-Tiny-1.002001.tar.gz) = 1c392e3ede4b1273a8733e5b9f038ce134382f57
-SHA512 (Exporter-Tiny-1.002001.tar.gz) = b247e7785e02c3346f231736a430c2d54e5ac93c175892090c40121c86eb255ce4d138c65e31836fd2970b45fb71dc7e68ea3c45a06a9e9c4135b45df48621d8
-Size (Exporter-Tiny-1.002001.tar.gz) = 32304 bytes
+SHA1 (Exporter-Tiny-1.002002.tar.gz) = bf258f1068c80b48f63b2a925fb2a588b365ce24
+RMD160 (Exporter-Tiny-1.002002.tar.gz) = 3eca2e5e08f2ecf5076ccd1879fc4662eb0c68bb
+SHA512 (Exporter-Tiny-1.002002.tar.gz) = b6d39ba1824f6c9d68cf75e7f28fd896c2c475e419f0b1aadec58d4e7e5c8d3fd7bf85d841758772055470de56ad7a3ad6787cfd9d6c5d61d8449cf8f40bda8d
+Size (Exporter-Tiny-1.002002.tar.gz) = 88456 bytes
