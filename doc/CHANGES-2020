@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2577 2020/04/27 10:22:32 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2578 2020/04/27 13:34:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3666,3 +3666,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-faker to 4.0.3 [adam 2020-04-27]
 	Updated www/py-django-extensions to 2.2.9 [adam 2020-04-27]
 	Updated www/py-django-admin-sortable2 to 0.7.6 [adam 2020-04-27]
+	Updated time/ruby-tzinfo1 to 1.2.7 [taca 2020-04-27]
