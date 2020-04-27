@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/03/15 17:05:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/04/27 07:04:14 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -82,6 +82,7 @@ ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindStatNsec.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/FindmbedTLS.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/IdeSplitSources.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/PkgBuildConfig.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/SanitizeBool.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/SelectGSSAPI.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/SelectHTTPSBackend.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/Modules/SelectHashes.cmake
@@ -468,8 +469,6 @@ ${GEM_LIBDIR}/vendor/libgit2/src/revparse.c
 ${GEM_LIBDIR}/vendor/libgit2/src/revwalk.c
 ${GEM_LIBDIR}/vendor/libgit2/src/revwalk.h
 ${GEM_LIBDIR}/vendor/libgit2/src/settings.c
-${GEM_LIBDIR}/vendor/libgit2/src/sha1_lookup.c
-${GEM_LIBDIR}/vendor/libgit2/src/sha1_lookup.h
 ${GEM_LIBDIR}/vendor/libgit2/src/signature.c
 ${GEM_LIBDIR}/vendor/libgit2/src/signature.h
 ${GEM_LIBDIR}/vendor/libgit2/src/sortedcache.c
