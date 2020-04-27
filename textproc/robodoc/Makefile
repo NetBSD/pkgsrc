@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/10/12 21:25:02 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/04/27 17:35:22 rillig Exp $
 #
 
 DISTNAME=	robodoc-4.99.6
@@ -11,11 +11,6 @@ COMMENT=	Tool to support project documentation within source code
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gm4 gmake
-
-SUBST_CLASSES+=		gm4
-SUBST_FILES.gm4=	Docs/makefile.in
-SUBST_SED.gm4+=		-e 's,@M4@,${TOOLS_M4},g'
-SUBST_STAGE.gm4=	pre-configure
 
 MAKE_FILE=	makefile
 MAKE_FLAGS+=	docdir=${PREFIX}/share/doc/${PKGBASE}
