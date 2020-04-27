@@ -1,12 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/15 20:16:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/27 02:08:15 markd Exp $
 share/texmf-dist/tex/latex/tkz-base/tkz-base.cfg
 share/texmf-dist/tex/latex/tkz-base/tkz-base.sty
+share/texmf-dist/tex/latex/tkz-base/tkz-lib-marks.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-obj-axes.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-obj-grids.tex
 share/texmf-dist/tex/latex/tkz-base/tkz-obj-marks.tex
 share/texmf-dist/tex/latex/tkz-base/tkz-obj-points.tex
-share/texmf-dist/tex/latex/tkz-base/tkz-obj-segments.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-obj-rep.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-tools-BB.tex
 share/texmf-dist/tex/latex/tkz-base/tkz-tools-arith.tex
 share/texmf-dist/tex/latex/tkz-base/tkz-tools-base.tex
-share/texmf-dist/tex/latex/tkz-base/tkz-tools-math.tex
 share/texmf-dist/tex/latex/tkz-base/tkz-tools-misc.tex
-share/texmf-dist/tex/latex/tkz-base/tkz-tools-obsolete.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-tools-modules.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-tools-print.tex
+share/texmf-dist/tex/latex/tkz-base/tkz-tools-text.tex
 share/texmf-dist/tex/latex/tkz-base/tkz-tools-utilities.tex
