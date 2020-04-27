@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/10/20 20:02:13 ast Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/27 05:12:10 rillig Exp $
 
 DISTNAME=	nostromo-1.9.6
 PKGREVISION=	2
@@ -26,11 +26,7 @@ INSTALLATION_DIRS+=	${EGDIR}/htdocs ${EGDIR}/htdocs/cgi-bin
 SUBST_CLASSES+=		nostromo
 SUBST_MESSAGE.nostromo=	Fixing GNUmakefile src/nhttpd/GNUmakefile
 SUBST_STAGE.nostromo=	post-extract
-SUBST_FILES.nostromo=	GNUmakefile \
-			src/nhttpd/GNUmakefile \
-			src/tools/GNUmakefile \
-			src/libbsd/GNUmakefile \
-			src/libmy/GNUmakefile
+SUBST_FILES.nostromo=	GNUmakefile
 SUBST_SED.nostromo+=	-e '/install -d -o root -g daemon -m 755/d'
 SUBST_SED.nostromo+=	-e 's,cc ${CCFLAGS},${CC} ${CCFLAGS},g'
 SUBST_SED.nostromo+=	-e 's,install -c -o root -g bin -m 555,${INSTALL},g'
