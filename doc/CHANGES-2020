@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2591 2020/04/27 15:52:23 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.2592 2020/04/27 15:58:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3683,3 +3683,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/mlterm to 3.9.0 [tsutsui 2020-04-27]
 	Added devel/go-wordwrap version 1.0.0 [nikita 2020-04-27]
 	Added devel/go-textseg version 12.0.0 [nikita 2020-04-27]
+	Updated misc/ruby-slop to 4.8.1 [taca 2020-04-27]
