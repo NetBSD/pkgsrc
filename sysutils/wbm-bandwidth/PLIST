@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/02/01 13:00:41 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/04/27 15:16:46 mef Exp $
 share/examples/webmin/bandwidth/config
 share/webmin/bandwidth/CHANGELOG
 share/webmin/bandwidth/acl_security.pl
@@ -41,7 +41,6 @@ share/webmin/bandwidth/help/intro.pl.html
 share/webmin/bandwidth/images/blue.gif
 share/webmin/bandwidth/images/icon.gif
 share/webmin/bandwidth/images/red.gif
-share/webmin/bandwidth/images/smallicon.gif
 share/webmin/bandwidth/index.cgi
 share/webmin/bandwidth/lang/ca
 share/webmin/bandwidth/lang/ca.UTF-8
@@ -65,10 +64,33 @@ share/webmin/bandwidth/lang/no.UTF-8
 share/webmin/bandwidth/lang/pl
 share/webmin/bandwidth/lang/pl.UTF-8
 share/webmin/bandwidth/lang/ru_RU
+share/webmin/bandwidth/lang/ru_RU.UTF-8
 share/webmin/bandwidth/lang/sv
 share/webmin/bandwidth/lang/sv.UTF-8
 share/webmin/bandwidth/log_parser.pl
 share/webmin/bandwidth/module.info
+share/webmin/bandwidth/module.info.ca
+share/webmin/bandwidth/module.info.ca.UTF-8
+share/webmin/bandwidth/module.info.cz
+share/webmin/bandwidth/module.info.cz.UTF-8
+share/webmin/bandwidth/module.info.de
+share/webmin/bandwidth/module.info.de.UTF-8
+share/webmin/bandwidth/module.info.es
+share/webmin/bandwidth/module.info.es.UTF-8
+share/webmin/bandwidth/module.info.fr
+share/webmin/bandwidth/module.info.fr.UTF-8
+share/webmin/bandwidth/module.info.hu
+share/webmin/bandwidth/module.info.hu.UTF-8
+share/webmin/bandwidth/module.info.ms_MY
+share/webmin/bandwidth/module.info.ms_MY.UTF-8
+share/webmin/bandwidth/module.info.nl
+share/webmin/bandwidth/module.info.nl.UTF-8
+share/webmin/bandwidth/module.info.no
+share/webmin/bandwidth/module.info.no.UTF-8
+share/webmin/bandwidth/module.info.pl
+share/webmin/bandwidth/module.info.pl.UTF-8
+share/webmin/bandwidth/module.info.ru_RU
+share/webmin/bandwidth/module.info.ru_RU.UTF-8
 share/webmin/bandwidth/rotate.cgi
 share/webmin/bandwidth/rotate.pl
 share/webmin/bandwidth/setup.cgi
