@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 21:34:22 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/04/27 02:08:12 markd Exp $
 
-SHA1 (tex-auto-pst-pdf-23723/auto-pst-pdf.doc.tar.xz) = 88ea6129bb05c0091d9756189507e366e1b128fe
-RMD160 (tex-auto-pst-pdf-23723/auto-pst-pdf.doc.tar.xz) = cd3c09349c737361199c85cc66233dca4d4f2bcc
-SHA512 (tex-auto-pst-pdf-23723/auto-pst-pdf.doc.tar.xz) = ec7e5dbd9c3dc2641eb0dfcff4b49157de840cb44ad8513c37a7727142d96670e14edbedde9c8f9f256c267b1a46cb165dbc60b7b85a570c79fe1894614880cf
-Size (tex-auto-pst-pdf-23723/auto-pst-pdf.doc.tar.xz) = 318756 bytes
+SHA1 (auto-pst-pdf.doc.r52849.tar.xz) = c07787171721b3f75f70e72edb5f58480034d51a
+RMD160 (auto-pst-pdf.doc.r52849.tar.xz) = be65d316ea987950d43240f519868044edaad46d
+SHA512 (auto-pst-pdf.doc.r52849.tar.xz) = d26d65d10f4999e64e4c67a104aff38747824b88c290a21a4af3f2b0e5df8d9c524e1f7f62075453582b8bc0a87f32d72bb8fdf274f2eddb12f6984bf516f97c
+Size (auto-pst-pdf.doc.r52849.tar.xz) = 318760 bytes

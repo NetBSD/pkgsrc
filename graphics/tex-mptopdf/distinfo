@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/07 12:12:10 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/04/27 02:08:13 markd Exp $
 
-SHA1 (tex-mptopdf-50112/mptopdf.tar.xz) = 009ffd0b58e43f334178adc5977eb0c022cbd963
-RMD160 (tex-mptopdf-50112/mptopdf.tar.xz) = 70a0e5a0ead7afb8bc88aba9ade70307280c772d
-SHA512 (tex-mptopdf-50112/mptopdf.tar.xz) = d9f43241070b10241db18e1c513208b708330445edd052967e8a445378507b94859052b20d44436aa7919cc3d991cba101dc9a3092a11f722990dd8c0c3c08e6
-Size (tex-mptopdf-50112/mptopdf.tar.xz) = 38452 bytes
+SHA1 (mptopdf.r54276.tar.xz) = 6a9e280c7c5fb00084b2840135aab28dddbfc2cb
+RMD160 (mptopdf.r54276.tar.xz) = 20b4e7b9d9f398befe198c768292af6300bb0ace
+SHA512 (mptopdf.r54276.tar.xz) = 54c2ff5a18827c1c41783bfdf034ef7ee265ef23dab283f03724781d98d6cd1aa8eaddf24b3d409947f6be58aa736ffb714c4a3f4d024691c7e2f16b3bc032a0
+Size (mptopdf.r54276.tar.xz) = 38592 bytes

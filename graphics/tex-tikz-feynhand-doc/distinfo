@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/08/13 20:28:15 markd Exp $
+$NetBSD: distinfo,v 1.2 2020/04/27 02:08:15 markd Exp $
 
-SHA1 (tex-tikz-feynhand-46502/tikz-feynhand.doc.tar.xz) = c7b6676588f6a5fb6020b126010facd0a81f3cd9
-RMD160 (tex-tikz-feynhand-46502/tikz-feynhand.doc.tar.xz) = 8065a7dd3abe3b60b3e2ed855df5c1c0ae684cb0
-SHA512 (tex-tikz-feynhand-46502/tikz-feynhand.doc.tar.xz) = e95e699ae44834801ed0bf243e0bfd4dd6a7e649cb51eec8eb29118f5acb561ecbef6bb8a7bc33821fa0913e36cc6f1807e3616bcee7bedfbe350cba445f0c31
-Size (tex-tikz-feynhand-46502/tikz-feynhand.doc.tar.xz) = 313668 bytes
+SHA1 (tikz-feynhand.doc.r51915.tar.xz) = 7d75d92cc4f2fe6dfce20fe8d5faa16d17210e0e
+RMD160 (tikz-feynhand.doc.r51915.tar.xz) = 98b5df8f31372b80e9aa151401cef47793f13e9e
+SHA512 (tikz-feynhand.doc.r51915.tar.xz) = b0cf316dafb9494fc21d5657e1e3c1b4780b7c30e2fe93235d6d8538979471c31989e4203575dc66204fdb1cb11386d290feba3070e43a273b62ec59a73047d9
+Size (tikz-feynhand.doc.r51915.tar.xz) = 316036 bytes
