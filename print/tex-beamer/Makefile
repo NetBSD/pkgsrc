@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.13 2019/12/06 20:18:58 markd Exp $
+# $NetBSD: Makefile,v 1.14 2020/04/27 22:35:38 markd Exp $
 
 DISTNAME=	beamer
-PKGNAME=	tex-${DISTNAME}-3.56
-TEXLIVE_REV=	51711
+PKGNAME=	tex-${DISTNAME}-3.57
+TEXLIVE_REV=	54841
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/beamer
 COMMENT=	LaTeX class for producing presentations and slides
-LICENSE=	lppl-1.3c OR gnu-gpl-v2
+LICENSE=	lppl-1.3c AND gnu-gpl-v2 AND gnu-fdl-v1.3
 
 DEPENDS+=	tex-amscls-[0-9]*:../../print/tex-amscls
+DEPENDS+=	tex-atbegshi-[0-9]*:../../print/tex-atbegshi
 DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
-DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
+DEPENDS+=	tex-iftex-[0-9]*:../../print/tex-iftex
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 DEPENDS+=	tex-translator-[0-9]*:../../print/tex-translator
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,4 @@
+LuaTeX provides most of the commands of pdfTeX 1.40. However, a
+number of utility functions are not available. This package
+tries to fill the gap and implements some of the missing
+primitives using Lua.
