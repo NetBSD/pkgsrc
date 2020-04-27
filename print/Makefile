@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.758 2020/04/24 12:00:52 nia Exp $
+# $NetBSD: Makefile,v 1.759 2020/04/27 22:38:51 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -227,6 +227,8 @@ SUBDIR+=	tex-around-the-bend-doc
 SUBDIR+=	tex-arsclassica
 SUBDIR+=	tex-arsclassica-doc
 SUBDIR+=	tex-ascii-chart-doc
+SUBDIR+=	tex-atbegshi
+SUBDIR+=	tex-atbegshi-doc
 SUBDIR+=	tex-babel
 SUBDIR+=	tex-babel-albanian
 SUBDIR+=	tex-babel-basque
@@ -823,6 +825,8 @@ SUBDIR+=	tex-kotex-utils
 SUBDIR+=	tex-kotex-utils-doc
 SUBDIR+=	tex-kpathsea
 SUBDIR+=	tex-kpathsea-doc
+SUBDIR+=	tex-kvoptions
+SUBDIR+=	tex-kvoptions-doc
 SUBDIR+=	tex-l2picfaq-doc
 SUBDIR+=	tex-l2tabu-doc
 SUBDIR+=	tex-l2tabu-english-doc
@@ -1044,6 +1048,8 @@ SUBDIR+=	tex-pdfpages
 SUBDIR+=	tex-pdfpages-doc
 SUBDIR+=	tex-pdftex
 SUBDIR+=	tex-pdftex-doc
+SUBDIR+=	tex-pdftexcmds
+SUBDIR+=	tex-pdftexcmds-doc
 SUBDIR+=	tex-pdftools
 SUBDIR+=	tex-pdftools-doc
 SUBDIR+=	tex-pgf
