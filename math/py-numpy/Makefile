@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2020/01/30 23:34:28 minskim Exp $
+# $NetBSD: Makefile,v 1.64 2020/04/27 17:00:35 adam Exp $
 
-DISTNAME=	numpy-1.16.6
+DISTNAME=	numpy-1.18.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -18,6 +18,8 @@ USE_LANGUAGES=		c fortran
 MAKE_ENV+=		ATLAS=None
 
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # since 1.17
 
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
