@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.29 2020/04/04 07:25:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.30 2020/04/27 15:32:07 ryoon Exp $
 share/nextcloud/.htaccess
 share/nextcloud/.user.ini
+share/nextcloud/3rdparty/.gitignore
 share/nextcloud/3rdparty/LICENSE INFO
 share/nextcloud/3rdparty/README.md
 share/nextcloud/3rdparty/autoload.php
@@ -1062,12 +1063,14 @@ share/nextcloud/3rdparty/aws/aws-sdk-php/src/data/xray/2016-04-12/paginators-1.j
 share/nextcloud/3rdparty/aws/aws-sdk-php/src/functions.php
 share/nextcloud/3rdparty/aws/aws-sdk-php/src/signer/Exception/signerException.php
 share/nextcloud/3rdparty/aws/aws-sdk-php/src/signer/signerClient.php
+share/nextcloud/3rdparty/bantu/ini-get-wrapper/.gitignore
 share/nextcloud/3rdparty/bantu/ini-get-wrapper/.scrutinizer.yml
 share/nextcloud/3rdparty/bantu/ini-get-wrapper/LICENSE
 share/nextcloud/3rdparty/bantu/ini-get-wrapper/README.md
 share/nextcloud/3rdparty/bantu/ini-get-wrapper/composer.json
 share/nextcloud/3rdparty/bantu/ini-get-wrapper/phpunit.xml.dist
 share/nextcloud/3rdparty/bantu/ini-get-wrapper/src/IniGetWrapper.php
+share/nextcloud/3rdparty/christophwurst/id3parser/.gitignore
 share/nextcloud/3rdparty/christophwurst/id3parser/LICENSE
 share/nextcloud/3rdparty/christophwurst/id3parser/README.md
 share/nextcloud/3rdparty/christophwurst/id3parser/composer.json
@@ -1719,6 +1722,7 @@ share/nextcloud/3rdparty/guzzlehttp/streams/src/Stream.php
 share/nextcloud/3rdparty/guzzlehttp/streams/src/StreamDecoratorTrait.php
 share/nextcloud/3rdparty/guzzlehttp/streams/src/StreamInterface.php
 share/nextcloud/3rdparty/guzzlehttp/streams/src/Utils.php
+share/nextcloud/3rdparty/icewind/searchdav/.gitignore
 share/nextcloud/3rdparty/icewind/searchdav/LICENSE
 share/nextcloud/3rdparty/icewind/searchdav/src/Backend/ISearchBackend.php
 share/nextcloud/3rdparty/icewind/searchdav/src/Backend/SearchPropertyDefinition.php
@@ -1744,6 +1748,7 @@ share/nextcloud/3rdparty/icewind/searchdav/src/XML/PropDesc.php
 share/nextcloud/3rdparty/icewind/searchdav/src/XML/QueryDiscoverResponse.php
 share/nextcloud/3rdparty/icewind/searchdav/src/XML/Scope.php
 share/nextcloud/3rdparty/icewind/searchdav/src/XML/SupportedQueryGrammar.php
+share/nextcloud/3rdparty/icewind/streams/.gitignore
 share/nextcloud/3rdparty/icewind/streams/src/CallbackWrapper.php
 share/nextcloud/3rdparty/icewind/streams/src/CountWrapper.php
 share/nextcloud/3rdparty/icewind/streams/src/Directory.php
@@ -2032,6 +2037,7 @@ share/nextcloud/3rdparty/microsoft/azure-storage-common/src/Common/Models/Servic
 share/nextcloud/3rdparty/microsoft/azure-storage-common/src/Common/Models/SignedIdentifier.php
 share/nextcloud/3rdparty/microsoft/azure-storage-common/src/Common/Models/TransactionalMD5Trait.php
 share/nextcloud/3rdparty/microsoft/azure-storage-common/src/Common/SharedAccessSignatureHelper.php
+share/nextcloud/3rdparty/mtdowling/jmespath.php/.gitignore
 share/nextcloud/3rdparty/mtdowling/jmespath.php/CHANGELOG.md
 share/nextcloud/3rdparty/mtdowling/jmespath.php/LICENSE
 share/nextcloud/3rdparty/mtdowling/jmespath.php/Makefile
@@ -2391,10 +2397,12 @@ share/nextcloud/3rdparty/patchwork/utf8/src/Patchwork/Utf8/data/to.bestfit936.se
 share/nextcloud/3rdparty/patchwork/utf8/src/Patchwork/Utf8/data/to.bestfit949.ser
 share/nextcloud/3rdparty/patchwork/utf8/src/Patchwork/Utf8/data/to.bestfit950.ser
 share/nextcloud/3rdparty/patchwork/utf8/src/Patchwork/Utf8/data/translit_extra.ser
+share/nextcloud/3rdparty/pear/archive_tar/.gitignore
 share/nextcloud/3rdparty/pear/archive_tar/Archive/Tar.php
 share/nextcloud/3rdparty/pear/archive_tar/README.md
 share/nextcloud/3rdparty/pear/archive_tar/composer.json
 share/nextcloud/3rdparty/pear/archive_tar/package.xml
+share/nextcloud/3rdparty/pear/console_getopt/.gitignore
 share/nextcloud/3rdparty/pear/console_getopt/Console/Getopt.php
 share/nextcloud/3rdparty/pear/console_getopt/LICENSE
 share/nextcloud/3rdparty/pear/console_getopt/README.rst
@@ -2407,10 +2415,12 @@ share/nextcloud/3rdparty/pear/pear-core-minimal/src/PEAR.php
 share/nextcloud/3rdparty/pear/pear-core-minimal/src/PEAR/Error.php
 share/nextcloud/3rdparty/pear/pear-core-minimal/src/PEAR/ErrorStack.php
 share/nextcloud/3rdparty/pear/pear-core-minimal/src/System.php
+share/nextcloud/3rdparty/pear/pear_exception/.gitignore
 share/nextcloud/3rdparty/pear/pear_exception/LICENSE
 share/nextcloud/3rdparty/pear/pear_exception/PEAR/Exception.php
 share/nextcloud/3rdparty/pear/pear_exception/composer.json
 share/nextcloud/3rdparty/pear/pear_exception/package.xml
+share/nextcloud/3rdparty/php-opencloud/openstack/.gitignore
 share/nextcloud/3rdparty/php-opencloud/openstack/.php_cs.dist
 share/nextcloud/3rdparty/php-opencloud/openstack/.scrutinizer.yml
 share/nextcloud/3rdparty/php-opencloud/openstack/CODE_OF_CONDUCT.md
@@ -2594,6 +2604,7 @@ share/nextcloud/3rdparty/pimple/pimple/src/Pimple/Psr11/Container.php
 share/nextcloud/3rdparty/pimple/pimple/src/Pimple/Psr11/ServiceLocator.php
 share/nextcloud/3rdparty/pimple/pimple/src/Pimple/ServiceIterator.php
 share/nextcloud/3rdparty/pimple/pimple/src/Pimple/ServiceProviderInterface.php
+share/nextcloud/3rdparty/psr/container/.gitignore
 share/nextcloud/3rdparty/psr/container/LICENSE
 share/nextcloud/3rdparty/psr/container/README.md
 share/nextcloud/3rdparty/psr/container/composer.json
@@ -3154,6 +3165,7 @@ share/nextcloud/3rdparty/punic/punic/punic.php
 share/nextcloud/3rdparty/ralouphie/getallheaders/LICENSE
 share/nextcloud/3rdparty/ralouphie/getallheaders/composer.json
 share/nextcloud/3rdparty/ralouphie/getallheaders/src/getallheaders.php
+share/nextcloud/3rdparty/react/promise/.gitignore
 share/nextcloud/3rdparty/react/promise/LICENSE
 share/nextcloud/3rdparty/react/promise/src/CancellablePromiseInterface.php
 share/nextcloud/3rdparty/react/promise/src/Deferred.php
@@ -3167,6 +3179,7 @@ share/nextcloud/3rdparty/react/promise/src/RejectedPromise.php
 share/nextcloud/3rdparty/react/promise/src/UnhandledRejectionException.php
 share/nextcloud/3rdparty/react/promise/src/functions.php
 share/nextcloud/3rdparty/react/promise/src/functions_include.php
+share/nextcloud/3rdparty/sabre/dav/.gitignore
 share/nextcloud/3rdparty/sabre/dav/CHANGELOG.md
 share/nextcloud/3rdparty/sabre/dav/CONTRIBUTING.md
 share/nextcloud/3rdparty/sabre/dav/LICENSE
@@ -3403,6 +3416,7 @@ share/nextcloud/3rdparty/sabre/dav/lib/DAVACL/Xml/Request/ExpandPropertyReport.p
 share/nextcloud/3rdparty/sabre/dav/lib/DAVACL/Xml/Request/PrincipalMatchReport.php
 share/nextcloud/3rdparty/sabre/dav/lib/DAVACL/Xml/Request/PrincipalPropertySearchReport.php
 share/nextcloud/3rdparty/sabre/dav/lib/DAVACL/Xml/Request/PrincipalSearchPropertySetReport.php
+share/nextcloud/3rdparty/sabre/event/.gitignore
 share/nextcloud/3rdparty/sabre/event/CHANGELOG.md
 share/nextcloud/3rdparty/sabre/event/LICENSE
 share/nextcloud/3rdparty/sabre/event/README.md
@@ -3418,6 +3432,7 @@ share/nextcloud/3rdparty/sabre/event/lib/PromiseAlreadyResolvedException.php
 share/nextcloud/3rdparty/sabre/event/lib/Version.php
 share/nextcloud/3rdparty/sabre/event/lib/coroutine.php
 share/nextcloud/3rdparty/sabre/event/phpunit.xml.dist
+share/nextcloud/3rdparty/sabre/http/.gitignore
 share/nextcloud/3rdparty/sabre/http/CHANGELOG.md
 share/nextcloud/3rdparty/sabre/http/LICENSE
 share/nextcloud/3rdparty/sabre/http/README.md
@@ -3445,6 +3460,7 @@ share/nextcloud/3rdparty/sabre/http/lib/URLUtil.php
 share/nextcloud/3rdparty/sabre/http/lib/Util.php
 share/nextcloud/3rdparty/sabre/http/lib/Version.php
 share/nextcloud/3rdparty/sabre/http/lib/functions.php
+share/nextcloud/3rdparty/sabre/uri/.gitignore
 share/nextcloud/3rdparty/sabre/uri/CHANGELOG.md
 share/nextcloud/3rdparty/sabre/uri/LICENSE
 share/nextcloud/3rdparty/sabre/uri/README.md
@@ -3452,6 +3468,7 @@ share/nextcloud/3rdparty/sabre/uri/composer.json
 share/nextcloud/3rdparty/sabre/uri/lib/InvalidUriException.php
 share/nextcloud/3rdparty/sabre/uri/lib/Version.php
 share/nextcloud/3rdparty/sabre/uri/lib/functions.php
+share/nextcloud/3rdparty/sabre/vobject/.gitignore
 share/nextcloud/3rdparty/sabre/vobject/LICENSE
 share/nextcloud/3rdparty/sabre/vobject/README.md
 share/nextcloud/3rdparty/sabre/vobject/composer.json
@@ -3533,6 +3550,7 @@ share/nextcloud/3rdparty/sabre/vobject/lib/timezonedata/php-workaround.php
 share/nextcloud/3rdparty/sabre/vobject/lib/timezonedata/windowszones.php
 share/nextcloud/3rdparty/sabre/vobject/resources/schema/xcal.rng
 share/nextcloud/3rdparty/sabre/vobject/resources/schema/xcard.rng
+share/nextcloud/3rdparty/sabre/xml/.gitignore
 share/nextcloud/3rdparty/sabre/xml/CHANGELOG.md
 share/nextcloud/3rdparty/sabre/xml/LICENSE
 share/nextcloud/3rdparty/sabre/xml/README.md
@@ -3733,6 +3751,7 @@ share/nextcloud/3rdparty/swiftmailer/swiftmailer/lib/mime_types.php
 share/nextcloud/3rdparty/swiftmailer/swiftmailer/lib/preferences.php
 share/nextcloud/3rdparty/swiftmailer/swiftmailer/lib/swift_required.php
 share/nextcloud/3rdparty/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php
+share/nextcloud/3rdparty/symfony/console/.gitignore
 share/nextcloud/3rdparty/symfony/console/Application.php
 share/nextcloud/3rdparty/symfony/console/CHANGELOG.md
 share/nextcloud/3rdparty/symfony/console/Command/Command.php
@@ -3825,6 +3844,7 @@ share/nextcloud/3rdparty/symfony/event-dispatcher-contracts/EventDispatcherInter
 share/nextcloud/3rdparty/symfony/event-dispatcher-contracts/LICENSE
 share/nextcloud/3rdparty/symfony/event-dispatcher-contracts/README.md
 share/nextcloud/3rdparty/symfony/event-dispatcher-contracts/composer.json
+share/nextcloud/3rdparty/symfony/event-dispatcher/.gitignore
 share/nextcloud/3rdparty/symfony/event-dispatcher/CHANGELOG.md
 share/nextcloud/3rdparty/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php
 share/nextcloud/3rdparty/symfony/event-dispatcher/Debug/TraceableEventDispatcherInterface.php
@@ -3940,6 +3960,7 @@ share/nextcloud/3rdparty/symfony/polyfill-util/README.md
 share/nextcloud/3rdparty/symfony/polyfill-util/TestListener.php
 share/nextcloud/3rdparty/symfony/polyfill-util/TestListenerTrait.php
 share/nextcloud/3rdparty/symfony/polyfill-util/composer.json
+share/nextcloud/3rdparty/symfony/process/.gitignore
 share/nextcloud/3rdparty/symfony/process/CHANGELOG.md
 share/nextcloud/3rdparty/symfony/process/Exception/ExceptionInterface.php
 share/nextcloud/3rdparty/symfony/process/Exception/InvalidArgumentException.php
@@ -4038,6 +4059,7 @@ share/nextcloud/3rdparty/symfony/translation-contracts/README.md
 share/nextcloud/3rdparty/symfony/translation-contracts/TranslatorInterface.php
 share/nextcloud/3rdparty/symfony/translation-contracts/TranslatorTrait.php
 share/nextcloud/3rdparty/symfony/translation-contracts/composer.json
+share/nextcloud/3rdparty/symfony/translation/.gitignore
 share/nextcloud/3rdparty/symfony/translation/CHANGELOG.md
 share/nextcloud/3rdparty/symfony/translation/Catalogue/AbstractOperation.php
 share/nextcloud/3rdparty/symfony/translation/Catalogue/MergeOperation.php
@@ -4174,6 +4196,10 @@ share/nextcloud/apps/accessibility/l10n/es.js
 share/nextcloud/apps/accessibility/l10n/es.json
 share/nextcloud/apps/accessibility/l10n/es_AR.js
 share/nextcloud/apps/accessibility/l10n/es_AR.json
+share/nextcloud/apps/accessibility/l10n/es_CO.js
+share/nextcloud/apps/accessibility/l10n/es_CO.json
+share/nextcloud/apps/accessibility/l10n/et_EE.js
+share/nextcloud/apps/accessibility/l10n/et_EE.json
 share/nextcloud/apps/accessibility/l10n/eu.js
 share/nextcloud/apps/accessibility/l10n/eu.json
 share/nextcloud/apps/accessibility/l10n/fa.js
@@ -4202,6 +4228,8 @@ share/nextcloud/apps/accessibility/l10n/it.js
 share/nextcloud/apps/accessibility/l10n/it.json
 share/nextcloud/apps/accessibility/l10n/ja.js
 share/nextcloud/apps/accessibility/l10n/ja.json
+share/nextcloud/apps/accessibility/l10n/ka_GE.js
+share/nextcloud/apps/accessibility/l10n/ka_GE.json
 share/nextcloud/apps/accessibility/l10n/ko.js
 share/nextcloud/apps/accessibility/l10n/ko.json
 share/nextcloud/apps/accessibility/l10n/lt_LT.js
@@ -5077,7 +5105,6 @@ share/nextcloud/apps/dav/lib/Connector/Sabre/CachingTree.php
 share/nextcloud/apps/dav/lib/Connector/Sabre/ChecksumList.php
 share/nextcloud/apps/dav/lib/Connector/Sabre/CommentPropertiesPlugin.php
 share/nextcloud/apps/dav/lib/Connector/Sabre/CopyEtagHeaderPlugin.php
-share/nextcloud/apps/dav/lib/Connector/Sabre/CustomPropertiesBackend.php
 share/nextcloud/apps/dav/lib/Connector/Sabre/DavAclPlugin.php
 share/nextcloud/apps/dav/lib/Connector/Sabre/Directory.php
 share/nextcloud/apps/dav/lib/Connector/Sabre/DummyGetResponsePlugin.php
@@ -5179,7 +5206,6 @@ share/nextcloud/apps/dav/lib/Upload/FutureFile.php
 share/nextcloud/apps/dav/lib/Upload/RootCollection.php
 share/nextcloud/apps/dav/lib/Upload/UploadFolder.php
 share/nextcloud/apps/dav/lib/Upload/UploadHome.php
-share/nextcloud/apps/dav/templates/exception.php
 share/nextcloud/apps/dav/templates/schedule-response-error.php
 share/nextcloud/apps/dav/templates/schedule-response-options.php
 share/nextcloud/apps/dav/templates/schedule-response-success.php
@@ -5749,6 +5775,8 @@ share/nextcloud/apps/federation/l10n/tr.js
 share/nextcloud/apps/federation/l10n/tr.json
 share/nextcloud/apps/federation/l10n/uk.js
 share/nextcloud/apps/federation/l10n/uk.json
+share/nextcloud/apps/federation/l10n/vi.js
+share/nextcloud/apps/federation/l10n/vi.json
 share/nextcloud/apps/federation/l10n/zh_CN.js
 share/nextcloud/apps/federation/l10n/zh_CN.json
 share/nextcloud/apps/federation/l10n/zh_TW.js
@@ -6158,6 +6186,7 @@ share/nextcloud/apps/files/templates/list.php
 share/nextcloud/apps/files/templates/recentlist.php
 share/nextcloud/apps/files/templates/settings-personal.php
 share/nextcloud/apps/files/templates/simplelist.php
+share/nextcloud/apps/files_external/3rdparty/.gitignore
 share/nextcloud/apps/files_external/3rdparty/autoload.php
 share/nextcloud/apps/files_external/3rdparty/composer.json
 share/nextcloud/apps/files_external/3rdparty/composer.lock
@@ -6169,10 +6198,12 @@ share/nextcloud/apps/files_external/3rdparty/composer/autoload_psr4.php
 share/nextcloud/apps/files_external/3rdparty/composer/autoload_real.php
 share/nextcloud/apps/files_external/3rdparty/composer/autoload_static.php
 share/nextcloud/apps/files_external/3rdparty/composer/installed.json
+share/nextcloud/apps/files_external/3rdparty/icewind/smb/.gitignore
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/.php_cs.dist
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/LICENSE.txt
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/README.md
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/composer.json
+share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/ACL.php
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/AbstractServer.php
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/AbstractShare.php
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/AnonymousAuth.php
@@ -6182,8 +6213,10 @@ share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Exception/AccessDen
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Exception/AlreadyExistsException.php
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Exception/AuthenticationException.php
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Exception/ConnectException.php
+share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Exception/ConnectionAbortedException.php
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Exception/ConnectionException.php
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Exception/ConnectionRefusedException.php
+share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Exception/ConnectionResetException.php
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Exception/DependencyException.php
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Exception/Exception.php
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Exception/FileInUseException.php
@@ -6232,6 +6265,7 @@ share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Wrapped/RawConnecti
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Wrapped/Server.php
 share/nextcloud/apps/files_external/3rdparty/icewind/smb/src/Wrapped/Share.php
 share/nextcloud/apps/files_external/3rdparty/icewind/streams-dummy/composer.json
+share/nextcloud/apps/files_external/3rdparty/icewind/streams/.gitignore
 share/nextcloud/apps/files_external/3rdparty/icewind/streams/.travis.yml
 share/nextcloud/apps/files_external/3rdparty/icewind/streams/LICENCE
 share/nextcloud/apps/files_external/3rdparty/icewind/streams/README.md
@@ -6801,8 +6835,20 @@ share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarBut
 share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-rotateCcw@2x.png
 share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-rotateCw.png
 share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-rotateCw@2x.png
+share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-scrollHorizontal.png
+share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-scrollHorizontal@2x.png
+share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-scrollVertical.png
+share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-scrollVertical@2x.png
+share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-scrollWrapped.png
+share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-scrollWrapped@2x.png
 share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-selectTool.png
 share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-selectTool@2x.png
+share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-spreadEven.png
+share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-spreadEven@2x.png
+share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-spreadNone.png
+share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-spreadNone@2x.png
+share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-spreadOdd.png
+share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/secondaryToolbarButton-spreadOdd@2x.png
 share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/shadow.png
 share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/texture.png
 share/nextcloud/apps/files_pdfviewer/vendor/pdfjs/web/images/toolbarButton-bookmark.png
@@ -7460,6 +7506,7 @@ share/nextcloud/apps/files_sharing/lib/Hooks.php
 share/nextcloud/apps/files_sharing/lib/ISharedStorage.php
 share/nextcloud/apps/files_sharing/lib/Listener/LoadAdditionalListener.php
 share/nextcloud/apps/files_sharing/lib/Listener/LoadSidebarListener.php
+share/nextcloud/apps/files_sharing/lib/Listener/UserAddedToGroupListener.php
 share/nextcloud/apps/files_sharing/lib/Listener/UserShareAcceptanceListener.php
 share/nextcloud/apps/files_sharing/lib/Middleware/OCSShareAPIMiddleware.php
 share/nextcloud/apps/files_sharing/lib/Middleware/ShareInfoMiddleware.php
@@ -8010,6 +8057,7 @@ share/nextcloud/apps/firstrunwizard/js/activate.js
 share/nextcloud/apps/firstrunwizard/js/firstrunwizard.js
 share/nextcloud/apps/firstrunwizard/js/firstrunwizard.js.map
 share/nextcloud/apps/firstrunwizard/js/personalsettings.js
+share/nextcloud/apps/firstrunwizard/l10n/.gitignore
 share/nextcloud/apps/firstrunwizard/l10n/af.js
 share/nextcloud/apps/firstrunwizard/l10n/af.json
 share/nextcloud/apps/firstrunwizard/l10n/ar.js
@@ -9113,14 +9161,24 @@ share/nextcloud/apps/photos/css/icons.scss
 share/nextcloud/apps/photos/img/app.svg
 share/nextcloud/apps/photos/img/photos.svg
 share/nextcloud/apps/photos/img/yourphotos.svg
-share/nextcloud/apps/photos/js/0.js
-share/nextcloud/apps/photos/js/0.js.map
-share/nextcloud/apps/photos/js/1.js
-share/nextcloud/apps/photos/js/1.js.map
-share/nextcloud/apps/photos/js/2.js
-share/nextcloud/apps/photos/js/2.js.map
-share/nextcloud/apps/photos/js/3.js
-share/nextcloud/apps/photos/js/3.js.map
+share/nextcloud/apps/photos/js/photos.0.js
+share/nextcloud/apps/photos/js/photos.0.js.map
+share/nextcloud/apps/photos/js/photos.1.js
+share/nextcloud/apps/photos/js/photos.1.js.map
+share/nextcloud/apps/photos/js/photos.2.js
+share/nextcloud/apps/photos/js/photos.2.js.map
+share/nextcloud/apps/photos/js/photos.4.js
+share/nextcloud/apps/photos/js/photos.4.js.map
+share/nextcloud/apps/photos/js/photos.5.js
+share/nextcloud/apps/photos/js/photos.5.js.map
+share/nextcloud/apps/photos/js/photos.6.js
+share/nextcloud/apps/photos/js/photos.6.js.map
+share/nextcloud/apps/photos/js/photos.7.js
+share/nextcloud/apps/photos/js/photos.7.js.map
+share/nextcloud/apps/photos/js/photos.8.js
+share/nextcloud/apps/photos/js/photos.8.js.map
+share/nextcloud/apps/photos/js/photos.9.js
+share/nextcloud/apps/photos/js/photos.9.js.map
 share/nextcloud/apps/photos/js/photos.js
 share/nextcloud/apps/photos/js/photos.js.map
 share/nextcloud/apps/photos/l10n/af.js
@@ -11256,6 +11314,8 @@ share/nextcloud/apps/theming/l10n/es_UY.js
 share/nextcloud/apps/theming/l10n/es_UY.json
 share/nextcloud/apps/theming/l10n/et_EE.js
 share/nextcloud/apps/theming/l10n/et_EE.json
+share/nextcloud/apps/theming/l10n/eu.js
+share/nextcloud/apps/theming/l10n/eu.json
 share/nextcloud/apps/theming/l10n/fi.js
 share/nextcloud/apps/theming/l10n/fi.json
 share/nextcloud/apps/theming/l10n/fr.js
@@ -11407,6 +11467,8 @@ share/nextcloud/apps/twofactor_backupcodes/l10n/es_SV.js
 share/nextcloud/apps/twofactor_backupcodes/l10n/es_SV.json
 share/nextcloud/apps/twofactor_backupcodes/l10n/es_UY.js
 share/nextcloud/apps/twofactor_backupcodes/l10n/es_UY.json
+share/nextcloud/apps/twofactor_backupcodes/l10n/eu.js
+share/nextcloud/apps/twofactor_backupcodes/l10n/eu.json
 share/nextcloud/apps/twofactor_backupcodes/l10n/fi.js
 share/nextcloud/apps/twofactor_backupcodes/l10n/fi.json
 share/nextcloud/apps/twofactor_backupcodes/l10n/fr.js
@@ -12549,12 +12611,10 @@ share/nextcloud/core/doc/admin/_images/auth_rsa.png
 share/nextcloud/core/doc/admin/_images/authentication-types.png
 share/nextcloud/core/doc/admin/_images/automated_tagging_sample_rule.png
 share/nextcloud/core/doc/admin/_images/code-integrity-admin.png
-share/nextcloud/core/doc/admin/_images/code-integrity-notification.png
 share/nextcloud/core/doc/admin/_images/create_public_share-10.png
 share/nextcloud/core/doc/admin/_images/create_public_share-6.png
 share/nextcloud/core/doc/admin/_images/create_public_share-8.png
 share/nextcloud/core/doc/admin/_images/create_public_share-9.png
-share/nextcloud/core/doc/admin/_images/dropbox-oc.png
 share/nextcloud/core/doc/admin/_images/enable-app.png
 share/nextcloud/core/doc/admin/_images/encryption1.png
 share/nextcloud/core/doc/admin/_images/encryption10.png
@@ -12700,6 +12760,8 @@ share/nextcloud/core/doc/admin/_sources/file_workflows/index.rst.txt
 share/nextcloud/core/doc/admin/_sources/file_workflows/retention.rst.txt
 share/nextcloud/core/doc/admin/_sources/gdpr/cookies.rst.txt
 share/nextcloud/core/doc/admin/_sources/gdpr/index.rst.txt
+share/nextcloud/core/doc/admin/_sources/groupware/calendar.rst.txt
+share/nextcloud/core/doc/admin/_sources/groupware/index.rst.txt
 share/nextcloud/core/doc/admin/_sources/index.rst.txt
 share/nextcloud/core/doc/admin/_sources/installation/apps_supported.rst.txt
 share/nextcloud/core/doc/admin/_sources/installation/command_line_installation.rst.txt
@@ -12873,6 +12935,8 @@ share/nextcloud/core/doc/admin/file_workflows/retention.html
 share/nextcloud/core/doc/admin/gdpr/cookies.html
 share/nextcloud/core/doc/admin/gdpr/index.html
 share/nextcloud/core/doc/admin/genindex.html
+share/nextcloud/core/doc/admin/groupware/calendar.html
+share/nextcloud/core/doc/admin/groupware/index.html
 share/nextcloud/core/doc/admin/index.html
 share/nextcloud/core/doc/admin/installation/apps_supported.html
 share/nextcloud/core/doc/admin/installation/command_line_installation.html
@@ -12925,6 +12989,10 @@ share/nextcloud/core/doc/user/_images/calendar_application.png
 share/nextcloud/core/doc/user/_images/calendar_create.gif
 share/nextcloud/core/doc/user/_images/calendar_dropdown.png
 share/nextcloud/core/doc/user/_images/calendar_editing.png
+share/nextcloud/core/doc/user/_images/calendar_event_invitation_level.png
+share/nextcloud/core/doc/user/_images/calendar_event_menu.png
+share/nextcloud/core/doc/user/_images/calendar_event_reminders.png
+share/nextcloud/core/doc/user/_images/calendar_event_repeat.png
 share/nextcloud/core/doc/user/_images/calendar_new-event_month.gif
 share/nextcloud/core/doc/user/_images/calendar_new-event_week.gif
 share/nextcloud/core/doc/user/_images/calendar_settings.png
@@ -12935,9 +13003,7 @@ share/nextcloud/core/doc/user/_images/contact_new.png
 share/nextcloud/core/doc/user/_images/contact_picture.png
 share/nextcloud/core/doc/user/_images/contact_picture_options.png
 share/nextcloud/core/doc/user/_images/contact_picture_set.png
-share/nextcloud/core/doc/user/_images/contact_uploadbutton.png
 share/nextcloud/core/doc/user/_images/contacts_empty.png
-share/nextcloud/core/doc/user/_images/contacts_link.png
 share/nextcloud/core/doc/user/_images/contacts_menu.png
 share/nextcloud/core/doc/user/_images/contacts_popup.png
 share/nextcloud/core/doc/user/_images/create_public_share-6.png
@@ -13586,6 +13652,7 @@ share/nextcloud/core/templates/untrustedDomain.php
 share/nextcloud/core/templates/update.admin.php
 share/nextcloud/core/templates/update.use-cli.php
 share/nextcloud/core/templates/update.user.php
+share/nextcloud/core/vendor/.gitignore
 share/nextcloud/core/vendor/zxcvbn/LICENSE.txt
 share/nextcloud/core/vendor/zxcvbn/dist/zxcvbn.js
 share/nextcloud/cron.php
@@ -13770,6 +13837,8 @@ share/nextcloud/lib/l10n/ta_LK.js
 share/nextcloud/lib/l10n/ta_LK.json
 share/nextcloud/lib/l10n/th.js
 share/nextcloud/lib/l10n/th.json
+share/nextcloud/lib/l10n/tk.js
+share/nextcloud/lib/l10n/tk.json
 share/nextcloud/lib/l10n/tr.js
 share/nextcloud/lib/l10n/tr.json
 share/nextcloud/lib/l10n/ug.js
