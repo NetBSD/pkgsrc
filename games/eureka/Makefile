@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2020/02/26 12:28:02 micha Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/27 18:38:44 micha Exp $
 
-DISTNAME=	eureka-127-source
-# The latest macOS patches were added after the release of 1.27 but
-# unfortunately the archive name was not changed.
-# Use version 1.27.1 for the package based on the updated source archive
-PKGNAME=	${DISTNAME:S/-source/.1/:S/-1/-1./}
+DISTNAME=	eureka-1.27b-source
+# Some macOS patches were added after the release of 1.27 but unfortunately
+# the archive name was not changed (pkgsrc used 1.27.1 for this version).
+# The second patch release is called 1.27b, we use version 1.27.2 for it.
+# Switch back to upstream naming scheme for next major/minor release.
+PKGNAME=	${DISTNAME:S/-source//:S/b/.2/}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eureka-editor/}
 
@@ -17,7 +18,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c++03
 USE_TOOLS+=	gmake
 
-WRKSRC=		${WRKDIR}/eureka-1.27-source
+WRKSRC=		${WRKDIR}/eureka-1.27b-source
 
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom
