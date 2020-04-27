@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2017/02/01 13:00:44 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/04/27 15:16:51 mef Exp $
 share/examples/webmin/time/config
 share/webmin/time/CHANGELOG
 share/webmin/time/acl_security.pl
 share/webmin/time/apply.cgi
 share/webmin/time/backup_config.pl
-share/webmin/time/config-*-linux
+share/webmin/time/config-ALL-linux
 share/webmin/time/config-freebsd
 share/webmin/time/config-hpux
 share/webmin/time/config-irix
@@ -48,6 +48,7 @@ share/webmin/time/config.info.pt_BR
 share/webmin/time/config.info.pt_BR.UTF-8
 share/webmin/time/config.info.ru.UTF-8
 share/webmin/time/config.info.ru_RU
+share/webmin/time/config.info.ru_RU.UTF-8
 share/webmin/time/config.info.ru_SU
 share/webmin/time/config.info.sk
 share/webmin/time/config.info.sk.UTF-8
@@ -55,6 +56,7 @@ share/webmin/time/config.info.sv
 share/webmin/time/config.info.sv.UTF-8
 share/webmin/time/config.info.tr
 share/webmin/time/config.info.uk_UA
+share/webmin/time/config.info.uk_UA.UTF-8
 share/webmin/time/config.info.zh_CN
 share/webmin/time/config.info.zh_CN.UTF-8
 share/webmin/time/config.info.zh_TW.Big5
@@ -82,6 +84,7 @@ share/webmin/time/help/hardware_time.nl.UTF-8.html
 share/webmin/time/help/hardware_time.nl.html
 share/webmin/time/help/hardware_time.pl.UTF-8.html
 share/webmin/time/help/hardware_time.pl.html
+share/webmin/time/help/hardware_time.ru_RU.UTF-8.html
 share/webmin/time/help/hardware_time.ru_RU.html
 share/webmin/time/help/hardware_time.ru_SU.html
 share/webmin/time/help/hardware_time.sk.UTF-8.html
@@ -111,6 +114,7 @@ share/webmin/time/help/index.nl.UTF-8.html
 share/webmin/time/help/index.nl.html
 share/webmin/time/help/index.pl.UTF-8.html
 share/webmin/time/help/index.pl.html
+share/webmin/time/help/index.ru_RU.UTF-8.html
 share/webmin/time/help/index.ru_RU.html
 share/webmin/time/help/index.ru_SU.html
 share/webmin/time/help/index.sk.UTF-8.html
@@ -140,6 +144,7 @@ share/webmin/time/help/system_time.nl.UTF-8.html
 share/webmin/time/help/system_time.nl.html
 share/webmin/time/help/system_time.pl.UTF-8.html
 share/webmin/time/help/system_time.pl.html
+share/webmin/time/help/system_time.ru_RU.UTF-8.html
 share/webmin/time/help/system_time.ru_RU.html
 share/webmin/time/help/system_time.ru_SU.html
 share/webmin/time/help/system_time.sk.UTF-8.html
@@ -169,6 +174,7 @@ share/webmin/time/help/timeserver.nl.UTF-8.html
 share/webmin/time/help/timeserver.nl.html
 share/webmin/time/help/timeserver.pl.UTF-8.html
 share/webmin/time/help/timeserver.pl.html
+share/webmin/time/help/timeserver.ru_RU.UTF-8.html
 share/webmin/time/help/timeserver.ru_RU.html
 share/webmin/time/help/timeserver.ru_SU.html
 share/webmin/time/help/timeserver.sk.UTF-8.html
@@ -178,7 +184,6 @@ share/webmin/time/help/timeserver.sv.html
 share/webmin/time/help/timeserver.zh_TW.Big5.html
 share/webmin/time/help/timeserver.zh_TW.UTF-8.html
 share/webmin/time/images/icon.gif
-share/webmin/time/images/smallicon.gif
 share/webmin/time/index.cgi
 share/webmin/time/lang/ca
 share/webmin/time/lang/ca.UTF-8
@@ -217,6 +222,7 @@ share/webmin/time/lang/pt_BR
 share/webmin/time/lang/pt_BR.UTF-8
 share/webmin/time/lang/ru.UTF-8
 share/webmin/time/lang/ru_RU
+share/webmin/time/lang/ru_RU.UTF-8
 share/webmin/time/lang/ru_SU
 share/webmin/time/lang/sk
 share/webmin/time/lang/sk.UTF-8
@@ -224,6 +230,7 @@ share/webmin/time/lang/sv
 share/webmin/time/lang/sv.UTF-8
 share/webmin/time/lang/tr
 share/webmin/time/lang/uk_UA
+share/webmin/time/lang/uk_UA.UTF-8
 share/webmin/time/lang/zh_CN
 share/webmin/time/lang/zh_CN.UTF-8
 share/webmin/time/lang/zh_TW.Big5
@@ -231,6 +238,45 @@ share/webmin/time/lang/zh_TW.UTF-8
 share/webmin/time/linux-lib.pl
 share/webmin/time/log_parser.pl
 share/webmin/time/module.info
+share/webmin/time/module.info.ca
+share/webmin/time/module.info.ca.UTF-8
+share/webmin/time/module.info.cz
+share/webmin/time/module.info.cz.UTF-8
+share/webmin/time/module.info.de
+share/webmin/time/module.info.de.UTF-8
+share/webmin/time/module.info.es
+share/webmin/time/module.info.es.UTF-8
+share/webmin/time/module.info.fr
+share/webmin/time/module.info.fr.UTF-8
+share/webmin/time/module.info.hu
+share/webmin/time/module.info.hu.UTF-8
+share/webmin/time/module.info.it
+share/webmin/time/module.info.it.UTF-8
+share/webmin/time/module.info.ja_JP.UTF-8
+share/webmin/time/module.info.ja_JP.euc
+share/webmin/time/module.info.ko_KR.UTF-8
+share/webmin/time/module.info.ko_KR.euc
+share/webmin/time/module.info.ms_MY
+share/webmin/time/module.info.ms_MY.UTF-8
+share/webmin/time/module.info.nl
+share/webmin/time/module.info.nl.UTF-8
+share/webmin/time/module.info.no
+share/webmin/time/module.info.no.UTF-8
+share/webmin/time/module.info.pl
+share/webmin/time/module.info.pl.UTF-8
+share/webmin/time/module.info.pt
+share/webmin/time/module.info.pt.UTF-8
+share/webmin/time/module.info.ru.UTF-8
+share/webmin/time/module.info.ru_RU
+share/webmin/time/module.info.ru_RU.UTF-8
+share/webmin/time/module.info.ru_SU
+share/webmin/time/module.info.sk
+share/webmin/time/module.info.sk.UTF-8
+share/webmin/time/module.info.sv
+share/webmin/time/module.info.sv.UTF-8
+share/webmin/time/module.info.tr
+share/webmin/time/module.info.zh_CN
+share/webmin/time/module.info.zh_TW.Big5
 share/webmin/time/postinstall.pl
 share/webmin/time/rbac-mapping
 share/webmin/time/save_timezone.cgi
