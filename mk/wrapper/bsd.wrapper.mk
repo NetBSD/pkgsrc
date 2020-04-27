@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.101 2019/05/07 19:36:44 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.102 2020/04/27 05:23:11 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -694,6 +694,7 @@ SUBST_SED.unwrap=	${_UNWRAP_SED}
 .if defined(_WRAPPER_DEBUG) && !empty(_WRAPPER_DEBUG:M[yY][eE][sS])
 _SUBST_KEEP.unwrap=	${CP} -f "$$file" "$$file.before-unwrap"
 .endif
+SUBST_NOOP_OK.unwrap=	yes # SUBST_SED may be empty
 
 .endif
 ###
