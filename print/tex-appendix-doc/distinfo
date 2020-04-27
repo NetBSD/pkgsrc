@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:45 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/04/27 22:35:37 markd Exp $
 
-SHA1 (tex-appendix-15878/appendix.doc.tar.xz) = 52b789b4a0b83977fd297b10f1911973b402ce0a
-RMD160 (tex-appendix-15878/appendix.doc.tar.xz) = d3d66c01eb460c0ce2bd6f385f3d4581ae833b39
-SHA512 (tex-appendix-15878/appendix.doc.tar.xz) = 459f85cf543c2ceddec4df0d1d835068304d98409b55bf6cd37b22fa7973e851a7bec60ea89f9873aaa8e549db7855b5c30074c0d79b6f28bbff98858b45a83e
-Size (tex-appendix-15878/appendix.doc.tar.xz) = 159064 bytes
+SHA1 (appendix.doc.r53718.tar.xz) = b700271b36d4459cfa9490a2abeb77a2afd2fea3
+RMD160 (appendix.doc.r53718.tar.xz) = 39b65ed20f4b6da5cf15eacdbdb2c713cafd5894
+SHA512 (appendix.doc.r53718.tar.xz) = f4e90fc9fa5ca89a9a20ceb56cce788984f3ce5e55f92c99de966a54afca7145d9e3602c4e514ee6b7887b3ae9f8facc9b3191ada19514aae7c7886ae2984b0c
+Size (appendix.doc.r53718.tar.xz) = 316980 bytes
