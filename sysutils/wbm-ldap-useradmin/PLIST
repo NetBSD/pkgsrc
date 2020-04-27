@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/02/01 13:00:42 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/04/27 15:16:48 mef Exp $
 share/examples/webmin/ldap-useradmin/config
 share/webmin/ldap-useradmin/CHANGELOG
 share/webmin/ldap-useradmin/acl_security.pl
@@ -6,11 +6,11 @@ share/webmin/ldap-useradmin/batch_exec.cgi
 share/webmin/ldap-useradmin/batch_form.cgi
 share/webmin/ldap-useradmin/cgi_args.pl
 share/webmin/ldap-useradmin/config
-share/webmin/ldap-useradmin/config-*-linux
+share/webmin/ldap-useradmin/config-ALL-linux
 share/webmin/ldap-useradmin/config-coherent-linux
 share/webmin/ldap-useradmin/config-debian-linux
 share/webmin/ldap-useradmin/config-debian-linux-3.1
-share/webmin/ldap-useradmin/config-debian-linux-4.0-*
+share/webmin/ldap-useradmin/config-debian-linux-4.0-ALL
 share/webmin/ldap-useradmin/config-debian-squirrelmail-linux
 share/webmin/ldap-useradmin/config-macos
 share/webmin/ldap-useradmin/config-mandrake-linux
@@ -18,6 +18,7 @@ share/webmin/ldap-useradmin/config-pardus-linux
 share/webmin/ldap-useradmin/config-redhat-linux
 share/webmin/ldap-useradmin/config-sol-linux
 share/webmin/ldap-useradmin/config-suse-linux
+share/webmin/ldap-useradmin/config-syno-linux
 share/webmin/ldap-useradmin/config-trustix-linux
 share/webmin/ldap-useradmin/config-united-linux
 share/webmin/ldap-useradmin/config.info
@@ -59,7 +60,6 @@ share/webmin/ldap-useradmin/help/intro.html
 share/webmin/ldap-useradmin/help/intro.nl.UTF-8.html
 share/webmin/ldap-useradmin/help/intro.nl.html
 share/webmin/ldap-useradmin/images/icon.gif
-share/webmin/ldap-useradmin/images/smallicon.gif
 share/webmin/ldap-useradmin/index.cgi
 share/webmin/ldap-useradmin/install_check.pl
 share/webmin/ldap-useradmin/lang/ca
@@ -83,6 +83,22 @@ share/webmin/ldap-useradmin/log_parser.pl
 share/webmin/ldap-useradmin/mass_delete_group.cgi
 share/webmin/ldap-useradmin/mass_delete_user.cgi
 share/webmin/ldap-useradmin/module.info
+share/webmin/ldap-useradmin/module.info.ca
+share/webmin/ldap-useradmin/module.info.ca.UTF-8
+share/webmin/ldap-useradmin/module.info.cz
+share/webmin/ldap-useradmin/module.info.cz.UTF-8
+share/webmin/ldap-useradmin/module.info.de
+share/webmin/ldap-useradmin/module.info.de.UTF-8
+share/webmin/ldap-useradmin/module.info.es
+share/webmin/ldap-useradmin/module.info.es.UTF-8
+share/webmin/ldap-useradmin/module.info.ms_MY
+share/webmin/ldap-useradmin/module.info.ms_MY.UTF-8
+share/webmin/ldap-useradmin/module.info.nl
+share/webmin/ldap-useradmin/module.info.nl.UTF-8
+share/webmin/ldap-useradmin/module.info.no
+share/webmin/ldap-useradmin/module.info.no.UTF-8
+share/webmin/ldap-useradmin/module.info.pt_BR
+share/webmin/ldap-useradmin/module.info.pt_BR.UTF-8
 share/webmin/ldap-useradmin/postinstall.pl
 share/webmin/ldap-useradmin/raw.cgi
 share/webmin/ldap-useradmin/save_group.cgi

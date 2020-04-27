@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2020/04/27 15:16:46 mef Exp $
+$NetBSD: distinfo,v 1.1 2020/04/27 15:16:50 mef Exp $
 
 SHA1 (webmin-1.941.tar.gz) = 9103d027933ebc662ef76a56c07343ab5241efaa
 RMD160 (webmin-1.941.tar.gz) = 4bd1f28a7dc0338d97cf7a92e6844120d1d647bf

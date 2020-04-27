@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/02/01 13:00:41 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/27 15:16:47 mef Exp $
 share/examples/webmin/cluster-useradmin/config
 share/webmin/cluster-useradmin/CHANGELOG
 share/webmin/cluster-useradmin/add.cgi
@@ -44,7 +44,6 @@ share/webmin/cluster-useradmin/help/intro.nl.html
 share/webmin/cluster-useradmin/help/intro.pl.UTF-8.html
 share/webmin/cluster-useradmin/help/intro.pl.html
 share/webmin/cluster-useradmin/images/icon.gif
-share/webmin/cluster-useradmin/images/smallicon.gif
 share/webmin/cluster-useradmin/index.cgi
 share/webmin/cluster-useradmin/lang/ca
 share/webmin/cluster-useradmin/lang/ca.UTF-8
@@ -69,6 +68,26 @@ share/webmin/cluster-useradmin/lang/pl
 share/webmin/cluster-useradmin/lang/pl.UTF-8
 share/webmin/cluster-useradmin/log_parser.pl
 share/webmin/cluster-useradmin/module.info
+share/webmin/cluster-useradmin/module.info.ca
+share/webmin/cluster-useradmin/module.info.ca.UTF-8
+share/webmin/cluster-useradmin/module.info.cz
+share/webmin/cluster-useradmin/module.info.cz.UTF-8
+share/webmin/cluster-useradmin/module.info.de
+share/webmin/cluster-useradmin/module.info.de.UTF-8
+share/webmin/cluster-useradmin/module.info.es
+share/webmin/cluster-useradmin/module.info.es.UTF-8
+share/webmin/cluster-useradmin/module.info.fr
+share/webmin/cluster-useradmin/module.info.fr.UTF-8
+share/webmin/cluster-useradmin/module.info.hu
+share/webmin/cluster-useradmin/module.info.hu.UTF-8
+share/webmin/cluster-useradmin/module.info.ms_MY
+share/webmin/cluster-useradmin/module.info.ms_MY.UTF-8
+share/webmin/cluster-useradmin/module.info.nl
+share/webmin/cluster-useradmin/module.info.nl.UTF-8
+share/webmin/cluster-useradmin/module.info.no
+share/webmin/cluster-useradmin/module.info.no.UTF-8
+share/webmin/cluster-useradmin/module.info.pl
+share/webmin/cluster-useradmin/module.info.pl.UTF-8
 share/webmin/cluster-useradmin/refresh.cgi
 share/webmin/cluster-useradmin/save_group.cgi
 share/webmin/cluster-useradmin/save_user.cgi
