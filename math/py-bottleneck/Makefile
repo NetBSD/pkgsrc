@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/11/02 16:16:21 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/27 08:06:41 adam Exp $
 
-DISTNAME=	Bottleneck-1.2.1
+DISTNAME=	Bottleneck-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=B/Bottleneck/}
@@ -10,11 +10,10 @@ HOMEPAGE=	https://github.com/kwgoodman/bottleneck
 COMMENT=	Collection of fast NumPy array functions written in C
 LICENSE=	2-clause-bsd
 
-#DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
-USE_LANGUAGES=	c
+PYSETUPTESTTARGET=	pytest
 
-.include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
