@@ -1,13 +1,15 @@
-$NetBSD: patch-ai,v 1.5 2012/11/02 19:02:51 shattered Exp $
+$NetBSD: patch-ai,v 1.6 2020/04/27 15:16:45 mef Exp $
 
---- init/module.info.orig	2011-04-27 00:19:08.000000000 +0200
-+++ init/module.info	2011-06-15 23:20:14.000000000 +0200
-@@ -10,7 +10,7 @@
+Add dragonfly
+
+--- init/module.info.orig	2020-01-15 09:06:33.000000000 +0900
++++ init/module.info	2020-04-26 23:25:45.553247331 +0900
+@@ -1,7 +1,7 @@
+ version=1.941
+ longdesc=Setup scripts to be run at boot time from /etc/init.d or /etc/rc.local.
  name=Boot Manager
- desc_tr=A琮l ve Kapan
- desc_de=System-Start und -Stop
--os_support=solaris coherent-linux redhat-linux mandrake-linux debian-linux suse-linux united-linux hpux slackware-linux freebsd unixware openserver open-linux turbo-linux openbsd corel-linux cobalt-linux cobalt-linux osf1 irix aix macos netbsd msc-linux generic-linux trustix-linux gentoo-linux openmamba-linux windows pardus-linux
-+os_support=solaris coherent-linux redhat-linux mandrake-linux debian-linux suse-linux united-linux hpux slackware-linux freebsd unixware openserver open-linux turbo-linux openbsd corel-linux cobalt-linux cobalt-linux osf1 irix aix macos netbsd msc-linux generic-linux trustix-linux gentoo-linux openmamba-linux windows pardus-linux dragonfly
- desc_sk=﹖art a vypnutie
- desc_zh_CN=引导和关机
- risk=low medium high
+-os_support=solaris *-linux hpux freebsd unixware openserver openbsd osf1 irix aix macos netbsd windows 
++os_support=solaris *-linux hpux freebsd unixware openserver openbsd osf1 irix aix macos netbsd windows dragnfly
+ readonly=1
+ desc=Bootup and Shutdown
+ category=system

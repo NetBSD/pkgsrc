@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/02/24 14:33:38 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/27 15:16:51 mef Exp $
 share/examples/webmin/virtual-server/config
 share/webmin/virtual-server/CHANGELOG
 share/webmin/virtual-server/IDNA/Punycode.pm

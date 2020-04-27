@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.22 2017/02/01 13:00:44 mef Exp $
+$NetBSD: distinfo,v 1.23 2020/04/27 15:16:45 mef Exp $
 
-SHA1 (webmin-1.831.tar.gz) = 5f244a71c2aa49b50ba3a7ca5369e5f09601b41a
-RMD160 (webmin-1.831.tar.gz) = ed879915241683e7baa230cd0c39d448f423eaac
-SHA512 (webmin-1.831.tar.gz) = 2118decd7aa5509aff5823335cfd9e464e72a997e728bf95650fd39ae170a6eaff17f7657da2aca3ee7d47ac3a13a578e80594a10a4cf9c47fdfa71be07c015b
-Size (webmin-1.831.tar.gz) = 28549588 bytes
+SHA1 (webmin-1.941.tar.gz) = 9103d027933ebc662ef76a56c07343ab5241efaa
+RMD160 (webmin-1.941.tar.gz) = 4bd1f28a7dc0338d97cf7a92e6844120d1d647bf
+SHA512 (webmin-1.941.tar.gz) = 0285bacb3529b4b4a161fa5f78d0c2bb0b053ac84c52ac7a7b5daf1fce564bb0ab60080edd3743d5b1f0ef91c1fbf8bc0b017b849dde451ac6d9baa3f69b1a3e
+Size (webmin-1.941.tar.gz) = 31045591 bytes
 SHA1 (patch-aa) = 74a647da70fcd5afc9fa878554bc1288ec5ba979
 SHA1 (patch-ab) = fa07200462df76af23b9952739388053940c6743
 SHA1 (patch-ac) = 327ecd47b4926eb3b9c6dc5f986d5f6232364030
 SHA1 (patch-ad) = d28daa10c04705adcffa9d448250f748a8626859
-SHA1 (patch-ae) = b2b70ab748f6bb94e9a567097c874dbd67a8bc1d
+SHA1 (patch-ae) = 46ff24ab7861d0d090deb6f34ec32a66e7c506d8
 SHA1 (patch-af) = 24f130a985ab7d3bdfc7db8d82114e8b107f1574
-SHA1 (patch-ag) = 1d42b71b041d26ce8dc9b015d77dc07732b364fc
-SHA1 (patch-ah) = 4a6f1d9ee4a8d1a74037ffd86abad6c168a0fbfa
-SHA1 (patch-ai) = b06b0fe269739cc1121da7588ace6903fcccf9ff
+SHA1 (patch-ag) = c765a68f24c82ff6bf3925b6101216710ec5d46f
+SHA1 (patch-ah) = 5f447c75810a3f91365887f39e4aab2db5cf61f5
+SHA1 (patch-ai) = 97d3aa00a7159276a86ad70d785c17419fac0c22
 SHA1 (patch-ak) = 201c124d8c407e0439b8531dfb4dacba37ce37bb
 SHA1 (patch-am) = d61fed9c53870aad36651389a5d655f5b2d5c21f
 SHA1 (patch-ao) = 007eba7b551fd3d154e470f82c1c15552481e9fa
@@ -26,3 +26,4 @@ SHA1 (patch-aw) = a6f8b4c80222b4f659ebe11754d5e5cf981abf5a
 SHA1 (patch-ax) = e7debde036d736f641229b2b604b2d77b03c7366
 SHA1 (patch-ay) = 8f21939c04e71c0aa74660b93e03e0ff2b9e69d5
 SHA1 (patch-az) = 770d55c85ca9de3f038cfbcf2a1134848ad000d0
+SHA1 (patch-update-from-repo_sh) = 75e862d2e3c070de85391526acf4de853ccb14d1

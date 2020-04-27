@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/02/01 13:00:44 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/04/27 15:16:51 mef Exp $
 share/examples/webmin/useradmin/config
 share/webmin/useradmin/CHANGELOG
 share/webmin/useradmin/acl_security.pl
@@ -27,17 +27,20 @@ share/webmin/useradmin/config-openmamba-linux
 share/webmin/useradmin/config-openserver
 share/webmin/useradmin/config-osf1
 share/webmin/useradmin/config-pardus-linux
-share/webmin/useradmin/config-redhat-linux
+share/webmin/useradmin/config-redhat-linux-15.0-ALL
+share/webmin/useradmin/config-redhat-linux-ALL-14.9
 share/webmin/useradmin/config-slackware-linux
 share/webmin/useradmin/config-sol-linux
 share/webmin/useradmin/config-solaris
 share/webmin/useradmin/config-suse-linux
-share/webmin/useradmin/config-suse-linux-9.0-*
+share/webmin/useradmin/config-suse-linux-9.0-ALL
 share/webmin/useradmin/config-trustix-linux
 share/webmin/useradmin/config-turbo-linux
 share/webmin/useradmin/config-united-linux
 share/webmin/useradmin/config-unixware
 share/webmin/useradmin/config.info
+share/webmin/useradmin/config.info.bg
+share/webmin/useradmin/config.info.bg.UTF-8
 share/webmin/useradmin/config.info.ca
 share/webmin/useradmin/config.info.ca.UTF-8
 share/webmin/useradmin/config.info.cz
@@ -64,11 +67,13 @@ share/webmin/useradmin/config.info.pt_BR
 share/webmin/useradmin/config.info.pt_BR.UTF-8
 share/webmin/useradmin/config.info.ru.UTF-8
 share/webmin/useradmin/config.info.ru_RU
+share/webmin/useradmin/config.info.ru_RU.UTF-8
 share/webmin/useradmin/config.info.ru_SU
 share/webmin/useradmin/config.info.sv
 share/webmin/useradmin/config.info.sv.UTF-8
 share/webmin/useradmin/config.info.tr
 share/webmin/useradmin/config.info.uk_UA
+share/webmin/useradmin/config.info.uk_UA.UTF-8
 share/webmin/useradmin/config.info.zh_CN
 share/webmin/useradmin/config.info.zh_CN.UTF-8
 share/webmin/useradmin/config.info.zh_TW.Big5
@@ -101,6 +106,7 @@ share/webmin/useradmin/help/2nd.no.UTF-8.html
 share/webmin/useradmin/help/2nd.no.html
 share/webmin/useradmin/help/2nd.pl.UTF-8.html
 share/webmin/useradmin/help/2nd.pl.html
+share/webmin/useradmin/help/2nd.ru_RU.UTF-8.html
 share/webmin/useradmin/help/2nd.ru_RU.html
 share/webmin/useradmin/help/2nd.ru_SU.html
 share/webmin/useradmin/help/2nd.sv.UTF-8.html
@@ -131,6 +137,7 @@ share/webmin/useradmin/help/change.no.UTF-8.html
 share/webmin/useradmin/help/change.no.html
 share/webmin/useradmin/help/change.pl.UTF-8.html
 share/webmin/useradmin/help/change.pl.html
+share/webmin/useradmin/help/change.ru_RU.UTF-8.html
 share/webmin/useradmin/help/change.ru_RU.html
 share/webmin/useradmin/help/change.ru_SU.html
 share/webmin/useradmin/help/change.sv.UTF-8.html
@@ -151,6 +158,7 @@ share/webmin/useradmin/help/change2.no.UTF-8.html
 share/webmin/useradmin/help/change2.no.html
 share/webmin/useradmin/help/change2.pl.UTF-8.html
 share/webmin/useradmin/help/change2.pl.html
+share/webmin/useradmin/help/change2.ru_RU.UTF-8.html
 share/webmin/useradmin/help/change2.ru_RU.html
 share/webmin/useradmin/help/change2.ru_SU.html
 share/webmin/useradmin/help/change2.sv.UTF-8.html
@@ -171,6 +179,7 @@ share/webmin/useradmin/help/chgid.no.UTF-8.html
 share/webmin/useradmin/help/chgid.no.html
 share/webmin/useradmin/help/chgid.pl.UTF-8.html
 share/webmin/useradmin/help/chgid.pl.html
+share/webmin/useradmin/help/chgid.ru_RU.UTF-8.html
 share/webmin/useradmin/help/chgid.ru_RU.html
 share/webmin/useradmin/help/chgid.ru_SU.html
 share/webmin/useradmin/help/chgid.sv.UTF-8.html
@@ -191,6 +200,7 @@ share/webmin/useradmin/help/chuid.no.UTF-8.html
 share/webmin/useradmin/help/chuid.no.html
 share/webmin/useradmin/help/chuid.pl.UTF-8.html
 share/webmin/useradmin/help/chuid.pl.html
+share/webmin/useradmin/help/chuid.ru_RU.UTF-8.html
 share/webmin/useradmin/help/chuid.ru_RU.html
 share/webmin/useradmin/help/chuid.ru_SU.html
 share/webmin/useradmin/help/chuid.sv.UTF-8.html
@@ -211,6 +221,7 @@ share/webmin/useradmin/help/class.no.UTF-8.html
 share/webmin/useradmin/help/class.no.html
 share/webmin/useradmin/help/class.pl.UTF-8.html
 share/webmin/useradmin/help/class.pl.html
+share/webmin/useradmin/help/class.ru_RU.UTF-8.html
 share/webmin/useradmin/help/class.ru_RU.html
 share/webmin/useradmin/help/class.ru_SU.html
 share/webmin/useradmin/help/class.sv.UTF-8.html
@@ -234,6 +245,7 @@ share/webmin/useradmin/help/copy_files.nl.UTF-8.html
 share/webmin/useradmin/help/copy_files.nl.html
 share/webmin/useradmin/help/copy_files.pl.UTF-8.html
 share/webmin/useradmin/help/copy_files.pl.html
+share/webmin/useradmin/help/copy_files.ru_RU.UTF-8.html
 share/webmin/useradmin/help/copy_files.ru_RU.html
 share/webmin/useradmin/help/copy_files.ru_SU.html
 share/webmin/useradmin/help/copy_files.sv.UTF-8.html
@@ -252,6 +264,7 @@ share/webmin/useradmin/help/create_group.nl.UTF-8.html
 share/webmin/useradmin/help/create_group.nl.html
 share/webmin/useradmin/help/create_group.pl.UTF-8.html
 share/webmin/useradmin/help/create_group.pl.html
+share/webmin/useradmin/help/create_group.ru_RU.UTF-8.html
 share/webmin/useradmin/help/create_group.ru_RU.html
 share/webmin/useradmin/help/create_group.ru_SU.html
 share/webmin/useradmin/help/create_group.sv.UTF-8.html
@@ -270,6 +283,7 @@ share/webmin/useradmin/help/create_user.nl.UTF-8.html
 share/webmin/useradmin/help/create_user.nl.html
 share/webmin/useradmin/help/create_user.pl.UTF-8.html
 share/webmin/useradmin/help/create_user.pl.html
+share/webmin/useradmin/help/create_user.ru_RU.UTF-8.html
 share/webmin/useradmin/help/create_user.ru_RU.html
 share/webmin/useradmin/help/create_user.ru_SU.html
 share/webmin/useradmin/help/create_user.sv.UTF-8.html
@@ -288,6 +302,7 @@ share/webmin/useradmin/help/edit_group.nl.UTF-8.html
 share/webmin/useradmin/help/edit_group.nl.html
 share/webmin/useradmin/help/edit_group.pl.UTF-8.html
 share/webmin/useradmin/help/edit_group.pl.html
+share/webmin/useradmin/help/edit_group.ru_RU.UTF-8.html
 share/webmin/useradmin/help/edit_group.ru_RU.html
 share/webmin/useradmin/help/edit_group.ru_SU.html
 share/webmin/useradmin/help/edit_group.sv.UTF-8.html
@@ -306,6 +321,7 @@ share/webmin/useradmin/help/edit_user.nl.UTF-8.html
 share/webmin/useradmin/help/edit_user.nl.html
 share/webmin/useradmin/help/edit_user.pl.UTF-8.html
 share/webmin/useradmin/help/edit_user.pl.html
+share/webmin/useradmin/help/edit_user.ru_RU.UTF-8.html
 share/webmin/useradmin/help/edit_user.ru_RU.html
 share/webmin/useradmin/help/edit_user.ru_SU.html
 share/webmin/useradmin/help/edit_user.sv.UTF-8.html
@@ -324,6 +340,7 @@ share/webmin/useradmin/help/expire.nl.UTF-8.html
 share/webmin/useradmin/help/expire.nl.html
 share/webmin/useradmin/help/expire.pl.UTF-8.html
 share/webmin/useradmin/help/expire.pl.html
+share/webmin/useradmin/help/expire.ru_RU.UTF-8.html
 share/webmin/useradmin/help/expire.ru_RU.html
 share/webmin/useradmin/help/expire.ru_SU.html
 share/webmin/useradmin/help/expire.sv.UTF-8.html
@@ -342,6 +359,7 @@ share/webmin/useradmin/help/expire2.nl.UTF-8.html
 share/webmin/useradmin/help/expire2.nl.html
 share/webmin/useradmin/help/expire2.pl.UTF-8.html
 share/webmin/useradmin/help/expire2.pl.html
+share/webmin/useradmin/help/expire2.ru_RU.UTF-8.html
 share/webmin/useradmin/help/expire2.ru_RU.html
 share/webmin/useradmin/help/expire2.ru_SU.html
 share/webmin/useradmin/help/expire2.sv.UTF-8.html
@@ -374,6 +392,7 @@ share/webmin/useradmin/help/findform.nl.UTF-8.html
 share/webmin/useradmin/help/findform.nl.html
 share/webmin/useradmin/help/findform.pl.UTF-8.html
 share/webmin/useradmin/help/findform.pl.html
+share/webmin/useradmin/help/findform.ru_RU.UTF-8.html
 share/webmin/useradmin/help/findform.ru_RU.html
 share/webmin/useradmin/help/findform.ru_SU.html
 share/webmin/useradmin/help/findform.sv.UTF-8.html
@@ -407,6 +426,7 @@ share/webmin/useradmin/help/gchgid.nl.UTF-8.html
 share/webmin/useradmin/help/gchgid.nl.html
 share/webmin/useradmin/help/gchgid.pl.UTF-8.html
 share/webmin/useradmin/help/gchgid.pl.html
+share/webmin/useradmin/help/gchgid.ru_RU.UTF-8.html
 share/webmin/useradmin/help/gchgid.ru_RU.html
 share/webmin/useradmin/help/gchgid.ru_SU.html
 share/webmin/useradmin/help/gchgid.sv.UTF-8.html
@@ -425,6 +445,7 @@ share/webmin/useradmin/help/ggid.nl.UTF-8.html
 share/webmin/useradmin/help/ggid.nl.html
 share/webmin/useradmin/help/ggid.pl.UTF-8.html
 share/webmin/useradmin/help/ggid.pl.html
+share/webmin/useradmin/help/ggid.ru_RU.UTF-8.html
 share/webmin/useradmin/help/ggid.ru_RU.html
 share/webmin/useradmin/help/ggid.ru_SU.html
 share/webmin/useradmin/help/ggid.sv.UTF-8.html
@@ -443,6 +464,7 @@ share/webmin/useradmin/help/ggroup.nl.UTF-8.html
 share/webmin/useradmin/help/ggroup.nl.html
 share/webmin/useradmin/help/ggroup.pl.UTF-8.html
 share/webmin/useradmin/help/ggroup.pl.html
+share/webmin/useradmin/help/ggroup.ru_RU.UTF-8.html
 share/webmin/useradmin/help/ggroup.ru_RU.html
 share/webmin/useradmin/help/ggroup.ru_SU.html
 share/webmin/useradmin/help/ggroup.sv.UTF-8.html
@@ -461,6 +483,7 @@ share/webmin/useradmin/help/gmembers.nl.UTF-8.html
 share/webmin/useradmin/help/gmembers.nl.html
 share/webmin/useradmin/help/gmembers.pl.UTF-8.html
 share/webmin/useradmin/help/gmembers.pl.html
+share/webmin/useradmin/help/gmembers.ru_RU.UTF-8.html
 share/webmin/useradmin/help/gmembers.ru_RU.html
 share/webmin/useradmin/help/gmembers.ru_SU.html
 share/webmin/useradmin/help/gmembers.sv.UTF-8.html
@@ -479,6 +502,7 @@ share/webmin/useradmin/help/gpasswd.nl.UTF-8.html
 share/webmin/useradmin/help/gpasswd.nl.html
 share/webmin/useradmin/help/gpasswd.pl.UTF-8.html
 share/webmin/useradmin/help/gpasswd.pl.html
+share/webmin/useradmin/help/gpasswd.ru_RU.UTF-8.html
 share/webmin/useradmin/help/gpasswd.ru_RU.html
 share/webmin/useradmin/help/gpasswd.ru_SU.html
 share/webmin/useradmin/help/gpasswd.sv.UTF-8.html
@@ -507,6 +531,7 @@ share/webmin/useradmin/help/group.nl.UTF-8.html
 share/webmin/useradmin/help/group.nl.html
 share/webmin/useradmin/help/group.pl.UTF-8.html
 share/webmin/useradmin/help/group.pl.html
+share/webmin/useradmin/help/group.ru_RU.UTF-8.html
 share/webmin/useradmin/help/group.ru_RU.html
 share/webmin/useradmin/help/group.ru_SU.html
 share/webmin/useradmin/help/group.sv.UTF-8.html
@@ -525,6 +550,7 @@ share/webmin/useradmin/help/home.nl.UTF-8.html
 share/webmin/useradmin/help/home.nl.html
 share/webmin/useradmin/help/home.pl.UTF-8.html
 share/webmin/useradmin/help/home.pl.html
+share/webmin/useradmin/help/home.ru_RU.UTF-8.html
 share/webmin/useradmin/help/home.ru_RU.html
 share/webmin/useradmin/help/home.ru_SU.html
 share/webmin/useradmin/help/home.sv.UTF-8.html
@@ -552,6 +578,7 @@ share/webmin/useradmin/help/inactive.nl.UTF-8.html
 share/webmin/useradmin/help/inactive.nl.html
 share/webmin/useradmin/help/inactive.pl.UTF-8.html
 share/webmin/useradmin/help/inactive.pl.html
+share/webmin/useradmin/help/inactive.ru_RU.UTF-8.html
 share/webmin/useradmin/help/inactive.ru_RU.html
 share/webmin/useradmin/help/inactive.ru_SU.html
 share/webmin/useradmin/help/inactive.sv.UTF-8.html
@@ -572,6 +599,7 @@ share/webmin/useradmin/help/intro.no.UTF-8.html
 share/webmin/useradmin/help/intro.no.html
 share/webmin/useradmin/help/intro.pl.UTF-8.html
 share/webmin/useradmin/help/intro.pl.html
+share/webmin/useradmin/help/intro.ru_RU.UTF-8.html
 share/webmin/useradmin/help/intro.ru_RU.html
 share/webmin/useradmin/help/intro.ru_SU.html
 share/webmin/useradmin/help/intro.sv.UTF-8.html
@@ -590,6 +618,7 @@ share/webmin/useradmin/help/list_logins.nl.UTF-8.html
 share/webmin/useradmin/help/list_logins.nl.html
 share/webmin/useradmin/help/list_logins.pl.UTF-8.html
 share/webmin/useradmin/help/list_logins.pl.html
+share/webmin/useradmin/help/list_logins.ru_RU.UTF-8.html
 share/webmin/useradmin/help/list_logins.ru_RU.html
 share/webmin/useradmin/help/list_logins.ru_SU.html
 share/webmin/useradmin/help/list_logins.sv.UTF-8.html
@@ -608,6 +637,7 @@ share/webmin/useradmin/help/makehome.nl.UTF-8.html
 share/webmin/useradmin/help/makehome.nl.html
 share/webmin/useradmin/help/makehome.pl.UTF-8.html
 share/webmin/useradmin/help/makehome.pl.html
+share/webmin/useradmin/help/makehome.ru_RU.UTF-8.html
 share/webmin/useradmin/help/makehome.ru_RU.html
 share/webmin/useradmin/help/makehome.ru_SU.html
 share/webmin/useradmin/help/makehome.sv.UTF-8.html
@@ -626,6 +656,7 @@ share/webmin/useradmin/help/max.nl.UTF-8.html
 share/webmin/useradmin/help/max.nl.html
 share/webmin/useradmin/help/max.pl.UTF-8.html
 share/webmin/useradmin/help/max.pl.html
+share/webmin/useradmin/help/max.ru_RU.UTF-8.html
 share/webmin/useradmin/help/max.ru_RU.html
 share/webmin/useradmin/help/max.ru_SU.html
 share/webmin/useradmin/help/max.sv.UTF-8.html
@@ -654,6 +685,7 @@ share/webmin/useradmin/help/min.nl.UTF-8.html
 share/webmin/useradmin/help/min.nl.html
 share/webmin/useradmin/help/min.pl.UTF-8.html
 share/webmin/useradmin/help/min.pl.html
+share/webmin/useradmin/help/min.ru_RU.UTF-8.html
 share/webmin/useradmin/help/min.ru_RU.html
 share/webmin/useradmin/help/min.ru_SU.html
 share/webmin/useradmin/help/min.sv.UTF-8.html
@@ -682,6 +714,7 @@ share/webmin/useradmin/help/movehome.nl.UTF-8.html
 share/webmin/useradmin/help/movehome.nl.html
 share/webmin/useradmin/help/movehome.pl.UTF-8.html
 share/webmin/useradmin/help/movehome.pl.html
+share/webmin/useradmin/help/movehome.ru_RU.UTF-8.html
 share/webmin/useradmin/help/movehome.ru_RU.html
 share/webmin/useradmin/help/movehome.ru_SU.html
 share/webmin/useradmin/help/movehome.sv.UTF-8.html
@@ -716,6 +749,7 @@ share/webmin/useradmin/help/pass.no.UTF-8.html
 share/webmin/useradmin/help/pass.no.html
 share/webmin/useradmin/help/pass.pl.UTF-8.html
 share/webmin/useradmin/help/pass.pl.html
+share/webmin/useradmin/help/pass.ru_RU.UTF-8.html
 share/webmin/useradmin/help/pass.ru_RU.html
 share/webmin/useradmin/help/pass.ru_SU.html
 share/webmin/useradmin/help/pass.sv.UTF-8.html
@@ -734,6 +768,7 @@ share/webmin/useradmin/help/real.nl.UTF-8.html
 share/webmin/useradmin/help/real.nl.html
 share/webmin/useradmin/help/real.pl.UTF-8.html
 share/webmin/useradmin/help/real.pl.html
+share/webmin/useradmin/help/real.ru_RU.UTF-8.html
 share/webmin/useradmin/help/real.ru_RU.html
 share/webmin/useradmin/help/real.ru_SU.html
 share/webmin/useradmin/help/real.sv.UTF-8.html
@@ -752,6 +787,7 @@ share/webmin/useradmin/help/shell.nl.UTF-8.html
 share/webmin/useradmin/help/shell.nl.html
 share/webmin/useradmin/help/shell.pl.UTF-8.html
 share/webmin/useradmin/help/shell.pl.html
+share/webmin/useradmin/help/shell.ru_RU.UTF-8.html
 share/webmin/useradmin/help/shell.ru_RU.html
 share/webmin/useradmin/help/shell.ru_SU.html
 share/webmin/useradmin/help/shell.sv.UTF-8.html
@@ -770,6 +806,7 @@ share/webmin/useradmin/help/uid.nl.UTF-8.html
 share/webmin/useradmin/help/uid.nl.html
 share/webmin/useradmin/help/uid.pl.UTF-8.html
 share/webmin/useradmin/help/uid.pl.html
+share/webmin/useradmin/help/uid.ru_RU.UTF-8.html
 share/webmin/useradmin/help/uid.ru_RU.html
 share/webmin/useradmin/help/uid.ru_SU.html
 share/webmin/useradmin/help/uid.sv.UTF-8.html
@@ -788,6 +825,7 @@ share/webmin/useradmin/help/user.nl.UTF-8.html
 share/webmin/useradmin/help/user.nl.html
 share/webmin/useradmin/help/user.pl.UTF-8.html
 share/webmin/useradmin/help/user.pl.html
+share/webmin/useradmin/help/user.ru_RU.UTF-8.html
 share/webmin/useradmin/help/user.ru_RU.html
 share/webmin/useradmin/help/user.ru_SU.html
 share/webmin/useradmin/help/user.sv.UTF-8.html
@@ -806,6 +844,7 @@ share/webmin/useradmin/help/warn.nl.UTF-8.html
 share/webmin/useradmin/help/warn.nl.html
 share/webmin/useradmin/help/warn.pl.UTF-8.html
 share/webmin/useradmin/help/warn.pl.html
+share/webmin/useradmin/help/warn.ru_RU.UTF-8.html
 share/webmin/useradmin/help/warn.ru_RU.html
 share/webmin/useradmin/help/warn.ru_SU.html
 share/webmin/useradmin/help/warn.sv.UTF-8.html
@@ -823,10 +862,12 @@ share/webmin/useradmin/help/workph.nl.html
 share/webmin/useradmin/hpux-lib.pl
 share/webmin/useradmin/images/group.gif
 share/webmin/useradmin/images/icon.gif
-share/webmin/useradmin/images/smallicon.gif
 share/webmin/useradmin/images/user.gif
 share/webmin/useradmin/index.cgi
 share/webmin/useradmin/irix-lib.pl
+share/webmin/useradmin/lang/ar
+share/webmin/useradmin/lang/bg
+share/webmin/useradmin/lang/bg.UTF-8
 share/webmin/useradmin/lang/ca
 share/webmin/useradmin/lang/ca.UTF-8
 share/webmin/useradmin/lang/cz
@@ -861,11 +902,13 @@ share/webmin/useradmin/lang/pt_BR
 share/webmin/useradmin/lang/pt_BR.UTF-8
 share/webmin/useradmin/lang/ru.UTF-8
 share/webmin/useradmin/lang/ru_RU
+share/webmin/useradmin/lang/ru_RU.UTF-8
 share/webmin/useradmin/lang/ru_SU
 share/webmin/useradmin/lang/sv
 share/webmin/useradmin/lang/sv.UTF-8
 share/webmin/useradmin/lang/tr
 share/webmin/useradmin/lang/uk_UA
+share/webmin/useradmin/lang/uk_UA.UTF-8
 share/webmin/useradmin/lang/zh_CN
 share/webmin/useradmin/lang/zh_CN.UTF-8
 share/webmin/useradmin/lang/zh_TW.Big5
@@ -879,6 +922,46 @@ share/webmin/useradmin/mass_delete_group.cgi
 share/webmin/useradmin/mass_delete_user.cgi
 share/webmin/useradmin/md5-lib.pl
 share/webmin/useradmin/module.info
+share/webmin/useradmin/module.info.ar
+share/webmin/useradmin/module.info.ca
+share/webmin/useradmin/module.info.ca.UTF-8
+share/webmin/useradmin/module.info.cz
+share/webmin/useradmin/module.info.cz.UTF-8
+share/webmin/useradmin/module.info.da
+share/webmin/useradmin/module.info.da.UTF-8
+share/webmin/useradmin/module.info.de
+share/webmin/useradmin/module.info.de.UTF-8
+share/webmin/useradmin/module.info.es
+share/webmin/useradmin/module.info.es.UTF-8
+share/webmin/useradmin/module.info.fr
+share/webmin/useradmin/module.info.fr.UTF-8
+share/webmin/useradmin/module.info.hu
+share/webmin/useradmin/module.info.hu.UTF-8
+share/webmin/useradmin/module.info.ja_JP.UTF-8
+share/webmin/useradmin/module.info.ja_JP.euc
+share/webmin/useradmin/module.info.ko_KR.UTF-8
+share/webmin/useradmin/module.info.ko_KR.euc
+share/webmin/useradmin/module.info.ms_MY
+share/webmin/useradmin/module.info.ms_MY.UTF-8
+share/webmin/useradmin/module.info.nl
+share/webmin/useradmin/module.info.nl.UTF-8
+share/webmin/useradmin/module.info.no
+share/webmin/useradmin/module.info.no.UTF-8
+share/webmin/useradmin/module.info.pl
+share/webmin/useradmin/module.info.pl.UTF-8
+share/webmin/useradmin/module.info.pt
+share/webmin/useradmin/module.info.pt.UTF-8
+share/webmin/useradmin/module.info.pt_BR
+share/webmin/useradmin/module.info.pt_BR.UTF-8
+share/webmin/useradmin/module.info.ru.UTF-8
+share/webmin/useradmin/module.info.ru_RU
+share/webmin/useradmin/module.info.ru_RU.UTF-8
+share/webmin/useradmin/module.info.ru_SU
+share/webmin/useradmin/module.info.sv
+share/webmin/useradmin/module.info.sv.UTF-8
+share/webmin/useradmin/module.info.tr
+share/webmin/useradmin/module.info.zh_CN
+share/webmin/useradmin/module.info.zh_TW.Big5
 share/webmin/useradmin/my_group_chooser.cgi
 share/webmin/useradmin/my_user_chooser.cgi
 share/webmin/useradmin/netbsd-lib.pl
