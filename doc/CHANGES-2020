@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2556 2020/04/27 02:09:45 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2557 2020/04/27 02:22:10 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3619,3 +3619,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/tex-tkz-base-doc to 3.06c [markd 2020-04-27]
 	Updated graphics/tex-tkz-fct to 1.3c [markd 2020-04-27]
 	Updated graphics/tex-tkz-fct-doc to 1.3c [markd 2020-04-27]
+	Updated math/tex-unicode-math to 0.8q [markd 2020-04-27]
+	Updated math/tex-unicode-math-doc to 0.8q [markd 2020-04-27]
