@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/10/09 14:06:58 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/04/27 04:11:26 rillig Exp $
 #
 
 DISTNAME=		memtester-4.3.0
@@ -14,6 +14,7 @@ NOT_FOR_PLATFORM=	Interix-*-* # no m[un]lock(2), so not useful anyway
 
 DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
+DJB_ERRNO_HACK=		NO
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 share/doc/memtester
 
