@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.11 2012/02/02 18:54:35 bouyer Exp $
+$NetBSD: patch-ab,v 1.12 2020/04/27 18:05:18 bouyer Exp $
 
---- bin/smokeping_cgi.orig	2012-02-02 15:12:05.000000000 +0100
-+++ bin/smokeping_cgi	2012-02-02 15:12:35.000000000 +0100
-@@ -18,7 +18,7 @@
+--- bin/smokeping_cgi.orig	2020-04-26 12:26:58.308638086 +0200
++++ bin/smokeping_cgi	2020-04-26 12:27:17.592838363 +0200
+@@ -17,7 +17,7 @@
  
  use CGI::Fast;
  
