@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2019/12/06 20:18:46 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/27 22:35:36 markd Exp $
 
 DISTNAME=	aleph
-PKGNAME=	tex-${DISTNAME}-0.2.40768
-TEXLIVE_REV=	40768
+PKGNAME=	tex-${DISTNAME}-0.2.54276
+TEXLIVE_REV=	54276
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/aleph
 COMMENT=	Extended TeX
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
 DEPENDS+=	tex-latex>=2010:../../print/tex-latex
+DEPENDS+=	tex-omega-[0-9]*:../../print/tex-omega
 DEPENDS+=	tex-plain>=3.141592653nb2:../../print/tex-plain
 DEPENDS+=	tex-lambda>=2014:../../print/tex-lambda
 DEPENDS+=	web2c>=2014:../../print/web2c
@@ -18,7 +21,6 @@ INSTALLATION_DIRS+=	bin
 TEX_FORMATS+=		"aleph aleph - *aleph.ini\\nlamed aleph language.dat *lambda.ini\\n"
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:
