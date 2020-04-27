@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2020/04/23 18:59:37 fox Exp $
+$NetBSD: distinfo,v 1.6 2020/04/27 04:55:10 fox Exp $
 
 SHA1 (bat/adler32-1.0.4.crate) = 47d552a994ad085f2668e8ab09c5844b2d8c0761
 RMD160 (bat/adler32-1.0.4.crate) = ffc0f1ac1b24d80d4e03697598b83038688f049d
@@ -60,10 +60,10 @@ SHA1 (bat/base64-0.11.0.crate) = aa05a02c501fdc451758024bd75f7306115de577
 RMD160 (bat/base64-0.11.0.crate) = fa593f00c92f5739cab818914a107ad8364bd951
 SHA512 (bat/base64-0.11.0.crate) = 31b5f56d4907a5e4ae40e92ef1629a446126525186f5236afc2475829bf2e5e067554db200a18f7b3ab741d0cc9c01e20612e77cc0cbc1bc2a4a8d11c0fdbf33
 Size (bat/base64-0.11.0.crate) = 48362 bytes
-SHA1 (bat/bat-0.14.0.tar.gz) = bcc1f9cbd9debfdb43bbdb69559ff6d98646e606
-RMD160 (bat/bat-0.14.0.tar.gz) = f67f576b9d8ebfa230a04cd01ab3b879459bcc9a
-SHA512 (bat/bat-0.14.0.tar.gz) = 26d80f2b39f426de240bdc3cbe3ed5e262880f95a476c8c68d69a129912b0720c155665d583bb8961dc6128bbe54473f18550aa3c227d495e63a758bf104e954
-Size (bat/bat-0.14.0.tar.gz) = 1005073 bytes
+SHA1 (bat/bat-0.15.0.tar.gz) = d7097c2e281590871f91e862e46557a1336e46de
+RMD160 (bat/bat-0.15.0.tar.gz) = a93f1bd4b2027975498ee3b7d7e5e0c4647676a2
+SHA512 (bat/bat-0.15.0.tar.gz) = 71600ad303925cfbe643591012cd0e8d4920ec64ae3cffbc6bfbd3809ca01f3040d198136786503a4350e0fbb17920397ea0226fcc39c6061f6ac91492ffa93a
+Size (bat/bat-0.15.0.tar.gz) = 1003691 bytes
 SHA1 (bat/bincode-1.2.1.crate) = b8c478909c3d5d1a2a4e4f175c77d69acff84fa9
 RMD160 (bat/bincode-1.2.1.crate) = e8728bc211fdd716918d264114669ff0f9663506
 SHA512 (bat/bincode-1.2.1.crate) = b86915db2079128d6abe52c8f3fa0ec21815faa988bf678a162c2caaeb0d2ecf2f5df496d5dab08f399578b4f0258f252e890d9ab9e8347c50e5d7a2ab374db7
