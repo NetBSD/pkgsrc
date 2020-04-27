@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/02/11 17:15:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/04/27 10:20:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -91,8 +91,6 @@ ${PYSITELIB}/django_extensions/jobs/weekly/__init__.pyo
 ${PYSITELIB}/django_extensions/jobs/yearly/__init__.py
 ${PYSITELIB}/django_extensions/jobs/yearly/__init__.pyc
 ${PYSITELIB}/django_extensions/jobs/yearly/__init__.pyo
-${PYSITELIB}/django_extensions/locale/cs/LC_MESSAGES/django.mo
-${PYSITELIB}/django_extensions/locale/cs/LC_MESSAGES/django.po
 ${PYSITELIB}/django_extensions/locale/da/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_extensions/locale/da/LC_MESSAGES/django.po
 ${PYSITELIB}/django_extensions/locale/de/LC_MESSAGES/django.mo
@@ -103,8 +101,6 @@ ${PYSITELIB}/django_extensions/locale/en/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_extensions/locale/en/LC_MESSAGES/django.po
 ${PYSITELIB}/django_extensions/locale/es/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_extensions/locale/es/LC_MESSAGES/django.po
-${PYSITELIB}/django_extensions/locale/et/LC_MESSAGES/django.mo
-${PYSITELIB}/django_extensions/locale/et/LC_MESSAGES/django.po
 ${PYSITELIB}/django_extensions/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_extensions/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/django_extensions/locale/hu/LC_MESSAGES/django.mo
@@ -123,12 +119,6 @@ ${PYSITELIB}/django_extensions/locale/ro/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_extensions/locale/ro/LC_MESSAGES/django.po
 ${PYSITELIB}/django_extensions/locale/ru/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_extensions/locale/ru/LC_MESSAGES/django.po
-${PYSITELIB}/django_extensions/locale/sk/LC_MESSAGES/django.mo
-${PYSITELIB}/django_extensions/locale/sk/LC_MESSAGES/django.po
-${PYSITELIB}/django_extensions/locale/tr/LC_MESSAGES/django.mo
-${PYSITELIB}/django_extensions/locale/tr/LC_MESSAGES/django.po
-${PYSITELIB}/django_extensions/locale/zh_CN/LC_MESSAGES/django.mo
-${PYSITELIB}/django_extensions/locale/zh_CN/LC_MESSAGES/django.po
 ${PYSITELIB}/django_extensions/logging/__init__.py
 ${PYSITELIB}/django_extensions/logging/__init__.pyc
 ${PYSITELIB}/django_extensions/logging/__init__.pyo
