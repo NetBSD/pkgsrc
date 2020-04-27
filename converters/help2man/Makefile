@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2020/03/15 23:09:56 adam Exp $
+# $NetBSD: Makefile,v 1.55 2020/04/27 17:09:12 rillig Exp $
 
 DISTNAME=	help2man-1.47.13
 CATEGORIES=	converters
@@ -39,6 +39,7 @@ SOEXT=			sl
 SOEXT=			so
 .endif
 
+.if ${SOEXT} != so
 SUBST_CLASSES+=		soext
 SUBST_MESSAGE.soext=	Fixing shared library suffix
 SUBST_STAGE.soext=	pre-configure
@@ -46,6 +47,7 @@ SUBST_FILES.soext=	bindtextdomain.c
 SUBST_FILES.soext+=	Makefile.in
 SUBST_SED.soext+=	-e 's,bindtextdomain\.so,bindtextdomain.${SOEXT},g'
 SUBST_SED.soext+=	-e 's,$$(preload)\.so,$$(preload).${SOEXT},g'
+.endif
 
 PLIST_SUBST+=		SOEXT=${SOEXT}
 
