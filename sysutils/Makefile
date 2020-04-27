@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.873 2020/04/25 17:15:57 gutteridge Exp $
+# $NetBSD: Makefile,v 1.874 2020/04/27 15:21:19 mef Exp $
 #
 
 COMMENT=	System utilities
@@ -706,6 +706,7 @@ SUBDIR+=	vobcopy
 SUBDIR+=	vultr
 SUBDIR+=	vxargs
 SUBDIR+=	watchman
+SUBDIR+=	wbm-acl
 SUBDIR+=	wbm-apache
 SUBDIR+=	wbm-at
 SUBDIR+=	wbm-bandwidth
@@ -722,7 +723,6 @@ SUBDIR+=	wbm-cyrus-imapd
 SUBDIR+=	wbm-dhcpd
 SUBDIR+=	wbm-dovecot
 SUBDIR+=	wbm-fetchmail
-SUBDIR+=	wbm-file
 SUBDIR+=	wbm-htaccess-htpasswd
 SUBDIR+=	wbm-inetd
 SUBDIR+=	wbm-ipfilter
@@ -735,6 +735,7 @@ SUBDIR+=	wbm-net
 SUBDIR+=	wbm-openslp
 SUBDIR+=	wbm-postfix
 SUBDIR+=	wbm-postgresql
+SUBDIR+=	wbm-proc
 SUBDIR+=	wbm-qmailadmin
 SUBDIR+=	wbm-quota
 SUBDIR+=	wbm-sendmail
