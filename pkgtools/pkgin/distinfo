@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.61 2020/01/06 09:39:02 jperkin Exp $
+$NetBSD: distinfo,v 1.62 2020/04/27 14:54:47 jperkin Exp $
 
-SHA1 (pkgin-0.15.0.tar.gz) = 98de6a687c6ce1a30b3682ceedab77edf60b772f
-RMD160 (pkgin-0.15.0.tar.gz) = b3133a3a4b66bcabff977f4bcb2c1f5f93182ee7
-SHA512 (pkgin-0.15.0.tar.gz) = be45d4eb89e7f8843efbd96e53094d7d7b2f5b027bfbee8196c987345e12a3c7f040a77e3936a0ee23dfe7febe0ac88740963e0fd2ec586470e9e60b4a0988c9
-Size (pkgin-0.15.0.tar.gz) = 198100 bytes
+SHA1 (pkgin-0.16.0.tar.gz) = 6d211b43203d5841b3c95e51b92e0a75b1b21c06
+RMD160 (pkgin-0.16.0.tar.gz) = 1a0eff69527f430b3d98789c23bb5bc0dc9e0aa6
+SHA512 (pkgin-0.16.0.tar.gz) = 3bd51200c816fe508a1dbd2bab5ae4bc6da7d1c7162a2106ae655a37d172debad684140d32c9d094b715ab37795ca536e5a9700878a1289e7b6ee88756c05620
+Size (pkgin-0.16.0.tar.gz) = 198515 bytes
