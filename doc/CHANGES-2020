@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2565 2020/04/27 05:23:11 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2566 2020/04/27 05:51:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3648,3 +3648,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-cucumber-expressions to 10.1.0 [taca 2020-04-27]
 	Updated devel/ruby-cucumber-wire to 3.0.0 [taca 2020-04-27]
 	Updated devel/ruby-getopt to 1.5.1 [taca 2020-04-27]
+	Updated devel/ruby-mixlib-cli to 2.1.6 [taca 2020-04-27]
