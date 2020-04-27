@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/04/27 18:12:43 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2020/04/27 18:19:15 rillig Exp $
 #
 
 DISTNAME=		xwave2
@@ -16,7 +16,7 @@ INSTALLATION_DIRS=	bin lib/X11/app-defaults
 
 MAKE_JOBS_SAFE=		no
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 .if ${DEVOSSAUDIO} != /dev/audio
 SUBST_CLASSES+=		devaudio
