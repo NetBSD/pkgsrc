@@ -1,86 +1,77 @@
-$NetBSD: patch-aa,v 1.9 2017/03/20 10:24:02 bouyer Exp $
+$NetBSD: patch-aa,v 1.10 2020/04/27 17:57:52 bouyer Exp $
 
---- Makefile.in.orig	2016-06-17 16:54:15.000000000 +0200
-+++ Makefile.in	2017-03-17 18:51:01.000000000 +0100
-@@ -721,8 +721,6 @@
+--- Makefile.in.orig	2019-09-29 11:02:14.000000000 +0200
++++ Makefile.in	2019-10-17 14:40:43.000000000 +0200
+@@ -958,59 +958,30 @@
+ 		$(confdir) $(sysconfdir); do \
+ 		if [ ! -d $(DESTDIR)$$dir ] ; then \
  			echo "Creating $(DESTDIR)$$dir"; \
- 			$(INSTALL) -d -m 755 $(DESTDIR)$$dir; \
+-			$(INSTALL) -d -m 755 $(DESTDIR)$$dir; \
++			$(INSTALL) -o $(USER) -g $(GROUP) -d -m 755 $(DESTDIR)$$dir; \
  		fi; \
--		chown $(USER) $(DESTDIR)$$dir || /bin/true; \
--		chgrp $(GROUP) $(DESTDIR)$$dir || /bin/true; \
+-		chown $(USER) $(DESTDIR)$$dir; \
+-		chgrp $(GROUP) $(DESTDIR)$$dir; \
+ 	done
+ 	-@for subdir in automatic bounce msg task tmp; do \
+ 		if [ ! -d $(DESTDIR)$(spooldir)/$$subdir ] ; then \
+ 			echo "Creating $(DESTDIR)$(spooldir)/$$subdir"; \
+-			$(INSTALL) -d -m 750 $(DESTDIR)$(spooldir)/$$subdir; \
++			$(INSTALL) -o $(USER) -g $(GROUP) -d -m 750 $(DESTDIR)$(spooldir)/$$subdir; \
+ 		fi; \
+-		chown $(USER) $(DESTDIR)$(spooldir)/$$subdir; \
+-		chgrp $(GROUP) $(DESTDIR)$(spooldir)/$$subdir; \
  	done
  
- sympa_wizard.pl.inst: $(top_srcdir)/src/sbin/sympa_wizard.pl.in Makefile
-@@ -732,48 +730,17 @@
- 		< $(top_srcdir)/src/sbin/sympa_wizard.pl.in > $@
- 
- installconfig: installdir sympa_wizard.pl.inst
+ installconfig: installdir
 -	@echo "Installing basic configuration ..."
--	export PERL5LIB=$(DESTDIR)$(modulesdir); \
--	if [ ! -f  $(DESTDIR)$(confdir)/sympa.conf ]; then \
--		echo "This looks like your first Sympa installation. The following wizard will assist you to create your first Sympa configuration.";\
--		if [ ! -d $(DESTDIR)$(confdir) ]; then \
--			$(INSTALL) -d -m 755 $(DESTDIR)$(confdir); \
--		fi; \
--		chown $(USER) $(DESTDIR)$(confdir) || /bin/true; \
--		chgrp $(GROUP) $(DESTDIR)$(confdir) || /bin/true; \
--		$(PERL) sympa_wizard.pl.inst \
--			--create sympa.conf \
--			--target $(DESTDIR)$(confdir)/sympa.conf \
--			|| /bin/true; \
--		chown $(USER) $(DESTDIR)$(confdir)/sympa.conf || /bin/true; \
--		chgrp $(GROUP) $(DESTDIR)$(confdir)/sympa.conf || /bin/true; \
--	fi; \
--	if [ ! -f $(DESTDIR)$(sysconfdir)/data_structure.version ]; then \
+-	-@if [ ! -f  $(DESTDIR)$(confdir)/sympa.conf ]; then \
+-		echo "installing sympa.conf"; \
+-		$(INSTALL) -m 640 sympa.conf $(DESTDIR)$(confdir); \
+-		chown $(USER) $(DESTDIR)$(confdir)/sympa.conf; \
+-		chgrp $(GROUP) $(DESTDIR)$(confdir)/sympa.conf; \
+-	fi
+ 	@echo "Installing configuration template ..."
+ 	-@echo "installing sympa.conf-dist"; \
+-	$(INSTALL) -m 644 -T sympa.conf-dist $(DESTDIR)$(confdir)/sympa.conf-dist; \
+-	chown $(USER) $(DESTDIR)$(confdir)/sympa.conf-dist; \
+-	chgrp $(GROUP) $(DESTDIR)$(confdir)/sympa.conf-dist
+-	-@if [ ! -f $(DESTDIR)$(sysconfdir)/data_structure.version ]; then \
 -		cd $(DESTDIR)$(sysconfdir); \
 -		echo "# automatically created file" >> data_structure.version; \
 -		echo "# you should not modify it" >> data_structure.version; \
 -		echo $(VERSION) >> data_structure.version; \
--		chown $(USER) data_structure.version || /bin/true; \
--		chgrp $(GROUP) data_structure.version || /bin/true; \
+-		chown $(USER) data_structure.version; \
+-		chgrp $(GROUP) data_structure.version; \
 -	fi
--	@for dir in create_list_templates custom_actions custom_conditions \
--		data_sources families global_task_models list_task_models \
+-	-@for dir in create_list_templates custom_actions custom_conditions \
+-		data_sources families tasks \
 -		mail_tt2 scenari search_filters web_tt2; do \
 -		if [ ! -d $(DESTDIR)$(sysconfdir)/$$dir ] ; then \
 -			echo "Creating $(DESTDIR)$(sysconfdir)/$$dir"; \
 -			$(INSTALL) -d -m 755 $(DESTDIR)$(sysconfdir)/$$dir; \
 -		fi; \
--		chown $(USER) $(DESTDIR)$(sysconfdir)/$$dir || /bin/true; \
--		chgrp $(GROUP) $(DESTDIR)$(sysconfdir)/$$dir || /bin/true; \
+-		chown $(USER) $(DESTDIR)$(sysconfdir)/$$dir; \
+-		chgrp $(GROUP) $(DESTDIR)$(sysconfdir)/$$dir; \
 -	done
 -	@if [ ! -e $(DESTDIR)$(sysconfdir)/README ]; then \
 -		echo "Creating $(DESTDIR)$(sysconfdir)/README"; \
 -		$(SED) \
 -			-e 's|--sysconfdir--|$(sysconfdir)|' \
 -			-e 's|--defaultdir--|$(defaultdir)|' \
--			etc_README > $(DESTDIR)$(sysconfdir)/README; \
--		chmod 444 $(DESTDIR)$(sysconfdir)/README; \
+-			$(srcdir)/etc_README > $(DESTDIR)$(sysconfdir)/README; \
+-		chmod 644 $(DESTDIR)$(sysconfdir)/README; \
 -	fi
-+	if [ ! -d $(DESTDIR)$(prefix)/share/examples/sympa ]; then \
-+	       $(INSTALL) -d -m 755 $(DESTDIR)$(prefix)/share/examples/sympa; \
-+	fi;\
-+	env PERL5LIB=$(DESTDIR)$(prefix)/sympa/bin $(DESTDIR)$(sbindir)/sympa_wizard.pl \
-+		--create sympa.conf \
-+		--target $(DESTDIR)$(prefix)/share/examples/sympa/sympa.conf \
-+			|| true; \
++	$(INSTALL) -d -m 755 $(DESTDIR)$(prefix)/share/examples/sympa; \
++	$(INSTALL) -m 644 sympa.conf-dist $(DESTDIR)$(prefix)/share/examples/sympa/sympa.conf; \
 +	cd $(DESTDIR)$(prefix)/share/examples/sympa; \
 +	echo "# automatically created file" >> data_structure.version; \
 +	echo "# you should not modify it" >> data_structure.version; \
-+	echo $(VERSION) >> data_structure.version
++	echo $(VERSION) >> data_structure.version;
++	echo "Creating $(DESTDIR)$(prefix)share/examples/sympa/README"; \
++	$(SED) \
++		-e 's|--sysconfdir--|$(sysconfdir)|' \
++		-e 's|--defaultdir--|$(defaultdir)|' \
++		$(srcdir)/etc_README > README; \
  
  nextstep: 
  	@echo ""
-@@ -796,12 +763,6 @@
- 	@echo "#######################################################"
- 
- importantchanges:
--	if test -f $(top_srcdir)/previous_sympa_version; then \
--		export PREVIOUS=`$(CAT) $(top_srcdir)/previous_sympa_version`; \
--	fi; \
--	$(PERL) $(top_srcdir)/important_changes.pl \
--		--current=$(VERSION) \
--		--previous=$${PREVIOUS};
- 
- uninstall-hook:
- 	rm -f $(DESTDIR)$(confdir)/sympa.conf
