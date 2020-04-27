@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2020/02/05 15:10:14 taca Exp $
+# $NetBSD: Makefile,v 1.24 2020/04/27 06:53:18 taca Exp $
 
-DISTNAME=	racc-1.4.16
+DISTNAME=	racc-1.5.0
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org

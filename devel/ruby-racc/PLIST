@@ -1,27 +1,19 @@
-@comment $NetBSD: PLIST,v 1.16 2020/02/05 15:10:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/04/27 06:53:18 taca Exp $
 bin/racc${RUBY_SUFFIX}
-bin/racc2y${RUBY_SUFFIX}
-bin/y2racc${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/racc/cparse.${RUBY_DLEXT}
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
-${GEM_LIBDIR}/DEPENDS
-${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.ja.rdoc
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/bin/racc
-${GEM_LIBDIR}/bin/racc2y
-${GEM_LIBDIR}/bin/y2racc
 ${GEM_LIBDIR}/ext/racc/MANIFEST
 ${GEM_LIBDIR}/ext/racc/com/headius/racc/Cparse.java
 ${GEM_LIBDIR}/ext/racc/cparse/cparse.c
 ${GEM_LIBDIR}/ext/racc/cparse/extconf.rb
-${GEM_LIBDIR}/fastcache/extconf.rb
-${GEM_LIBDIR}/fastcache/fastcache.c
 ${GEM_LIBDIR}/lib/racc.rb
 ${GEM_LIBDIR}/lib/racc/compat.rb
 ${GEM_LIBDIR}/lib/racc/cparse.${RUBY_DLEXT}
@@ -40,7 +32,6 @@ ${GEM_LIBDIR}/lib/racc/sourcetext.rb
 ${GEM_LIBDIR}/lib/racc/state.rb
 ${GEM_LIBDIR}/lib/racc/statetransitiontable.rb
 ${GEM_LIBDIR}/lib/racc/static.rb
-${GEM_LIBDIR}/misc/dist.sh
 ${GEM_LIBDIR}/rdoc/en/NEWS.en.rdoc
 ${GEM_LIBDIR}/rdoc/en/grammar.en.rdoc
 ${GEM_LIBDIR}/rdoc/ja/NEWS.ja.rdoc
@@ -60,9 +51,6 @@ ${GEM_LIBDIR}/sample/lalr.y
 ${GEM_LIBDIR}/sample/lists.y
 ${GEM_LIBDIR}/sample/syntax.y
 ${GEM_LIBDIR}/sample/yyerr.y
-${GEM_LIBDIR}/setup.rb
-${GEM_LIBDIR}/tasks/doc.rb
-${GEM_LIBDIR}/tasks/email.rb
 ${GEM_LIBDIR}/test/assets/cadenza.y
 ${GEM_LIBDIR}/test/assets/cast.y
 ${GEM_LIBDIR}/test/assets/chk.y
