@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/27 15:42:20 nikita Exp $
+
+SHA1 (go-textseg-12.0.0.tar.gz) = 0cad6a543430f52178d29bca41347ec82f3af514
+RMD160 (go-textseg-12.0.0.tar.gz) = 66894fb99006109566318ddbd98405984b78af1d
+SHA512 (go-textseg-12.0.0.tar.gz) = 9e6079a3ddeeee672209307d95f0311ad7782240035148ed1037f4d69537f445fb439a71ee3da2a3d4f3db4d67cd7def5a1b6a81763003c61ef34bcd0acadd7e
+Size (go-textseg-12.0.0.tar.gz) = 125616 bytes
