@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2598 2020/04/27 17:58:51 bouyer Exp $
+$NetBSD: CHANGES-2020,v 1.2599 2020/04/27 18:06:05 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3691,3 +3691,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-numpy to 1.18.3 [adam 2020-04-27]
 	Added devel/go-cmp version 0.4.0 [nikita 2020-04-27]
 	Updated mail/sympa to 6.2.54 [bouyer 2020-04-27]
+	Updated net/smokeping to 2.7.3 [bouyer 2020-04-27]
