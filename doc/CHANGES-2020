@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2568 2020/04/27 06:13:20 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2569 2020/04/27 06:26:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3651,3 +3651,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-mixlib-cli to 2.1.6 [taca 2020-04-27]
 	Updated devel/ruby-mustache to 1.1.1 [taca 2020-04-27]
 	Updated devel/ruby-octokit to 4.18.0 [taca 2020-04-27]
+	Updated devel/ruby-power_assert to 1.2.0 [taca 2020-04-27]
