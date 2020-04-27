@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:58 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/27 15:16:47 mef Exp $
 share/examples/webmin/cyrus-imapd/config
 share/webmin/cyrus-imapd/AUTHORS
 share/webmin/cyrus-imapd/BUGS

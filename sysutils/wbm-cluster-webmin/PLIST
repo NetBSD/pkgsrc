@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/02/01 13:00:42 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/27 15:16:47 mef Exp $
 share/examples/webmin/cluster-webmin/config
 share/webmin/cluster-webmin/CHANGELOG
 share/webmin/cluster-webmin/add.cgi
@@ -46,7 +46,6 @@ share/webmin/cluster-webmin/help/intro.nl.html
 share/webmin/cluster-webmin/help/intro.pl.UTF-8.html
 share/webmin/cluster-webmin/help/intro.pl.html
 share/webmin/cluster-webmin/images/icon.gif
-share/webmin/cluster-webmin/images/smallicon.gif
 share/webmin/cluster-webmin/index.cgi
 share/webmin/cluster-webmin/install.cgi
 share/webmin/cluster-webmin/lang/ca
@@ -71,6 +70,26 @@ share/webmin/cluster-webmin/lang/no.UTF-8
 share/webmin/cluster-webmin/lang/pl
 share/webmin/cluster-webmin/lang/pl.UTF-8
 share/webmin/cluster-webmin/module.info
+share/webmin/cluster-webmin/module.info.ca
+share/webmin/cluster-webmin/module.info.ca.UTF-8
+share/webmin/cluster-webmin/module.info.cz
+share/webmin/cluster-webmin/module.info.cz.UTF-8
+share/webmin/cluster-webmin/module.info.de
+share/webmin/cluster-webmin/module.info.de.UTF-8
+share/webmin/cluster-webmin/module.info.es
+share/webmin/cluster-webmin/module.info.es.UTF-8
+share/webmin/cluster-webmin/module.info.fr
+share/webmin/cluster-webmin/module.info.fr.UTF-8
+share/webmin/cluster-webmin/module.info.hu
+share/webmin/cluster-webmin/module.info.hu.UTF-8
+share/webmin/cluster-webmin/module.info.ms_MY
+share/webmin/cluster-webmin/module.info.ms_MY.UTF-8
+share/webmin/cluster-webmin/module.info.nl
+share/webmin/cluster-webmin/module.info.nl.UTF-8
+share/webmin/cluster-webmin/module.info.no
+share/webmin/cluster-webmin/module.info.no.UTF-8
+share/webmin/cluster-webmin/module.info.pl
+share/webmin/cluster-webmin/module.info.pl.UTF-8
 share/webmin/cluster-webmin/refresh.cgi
 share/webmin/cluster-webmin/save_acl.cgi
 share/webmin/cluster-webmin/save_config.cgi

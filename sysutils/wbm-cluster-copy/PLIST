@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2017/02/01 13:00:41 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/27 15:16:46 mef Exp $
 share/examples/webmin/cluster-copy/config
 share/webmin/cluster-copy/CHANGELOG
-share/webmin/cluster-copy/chooser.cgi
 share/webmin/cluster-copy/cluster-copy-lib.pl
 share/webmin/cluster-copy/config
 share/webmin/cluster-copy/config.info
@@ -30,7 +29,6 @@ share/webmin/cluster-copy/help/intro.nl.html
 share/webmin/cluster-copy/help/intro.pl.UTF-8.html
 share/webmin/cluster-copy/help/intro.pl.html
 share/webmin/cluster-copy/images/icon.gif
-share/webmin/cluster-copy/images/smallicon.gif
 share/webmin/cluster-copy/index.cgi
 share/webmin/cluster-copy/lang/ca
 share/webmin/cluster-copy/lang/ca.UTF-8
@@ -55,5 +53,25 @@ share/webmin/cluster-copy/lang/pl
 share/webmin/cluster-copy/lang/pl.UTF-8
 share/webmin/cluster-copy/log_parser.pl
 share/webmin/cluster-copy/module.info
+share/webmin/cluster-copy/module.info.ca
+share/webmin/cluster-copy/module.info.ca.UTF-8
+share/webmin/cluster-copy/module.info.cz
+share/webmin/cluster-copy/module.info.cz.UTF-8
+share/webmin/cluster-copy/module.info.de
+share/webmin/cluster-copy/module.info.de.UTF-8
+share/webmin/cluster-copy/module.info.es
+share/webmin/cluster-copy/module.info.es.UTF-8
+share/webmin/cluster-copy/module.info.fr
+share/webmin/cluster-copy/module.info.fr.UTF-8
+share/webmin/cluster-copy/module.info.hu
+share/webmin/cluster-copy/module.info.hu.UTF-8
+share/webmin/cluster-copy/module.info.ms_MY
+share/webmin/cluster-copy/module.info.ms_MY.UTF-8
+share/webmin/cluster-copy/module.info.nl
+share/webmin/cluster-copy/module.info.nl.UTF-8
+share/webmin/cluster-copy/module.info.no
+share/webmin/cluster-copy/module.info.no.UTF-8
+share/webmin/cluster-copy/module.info.pl
+share/webmin/cluster-copy/module.info.pl.UTF-8
 share/webmin/cluster-copy/save.cgi
 share/webmin/cluster-copy/uninstall.pl
