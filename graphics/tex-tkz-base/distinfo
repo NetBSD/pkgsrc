@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/01/26 08:04:32 markd Exp $
+$NetBSD: distinfo,v 1.3 2020/04/27 02:08:15 markd Exp $
 
-SHA1 (tex-tkz-base-48710/tkz-base.tar.xz) = 91928275e85155ec6edf13139bceebf19f0a64ac
-RMD160 (tex-tkz-base-48710/tkz-base.tar.xz) = 4e3d749d342b5ff80daeca0cb783224c60db846f
-SHA512 (tex-tkz-base-48710/tkz-base.tar.xz) = 16167331561e1f1e308d4d725337b12094d2179c81304d750c1a359e6186310b8609fc914d8b8fd370666295a37c1150f843e4e51d25eb97340c1f9a2be321bd
-Size (tex-tkz-base-48710/tkz-base.tar.xz) = 20100 bytes
+SHA1 (tkz-base.r54758.tar.xz) = 8e59d1d97244ba65e0dcb4b02954ce3ce7a0a956
+RMD160 (tkz-base.r54758.tar.xz) = bf3fb8dcf17a9dc62eaa14f750cffb5df42f50fc
+SHA512 (tkz-base.r54758.tar.xz) = 9cba8d8d79c7cb01965660fee7913aeede3b0d2cc19bd7624982fc5854224f19f7dd2d2af0ba93c99b4f16827fb028564fcd9a1e9afed1988ce836188516f891
+Size (tkz-base.r54758.tar.xz) = 15292 bytes
