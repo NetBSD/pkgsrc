@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2020/01/26 17:32:22 rillig Exp $
+# $NetBSD: Makefile.common,v 1.18 2020/04/27 05:07:25 rillig Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -79,6 +79,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	auto/lib/pcre/conf
 SUBST_VARS.prefix=	PREFIX
+SUBST_NOOP_OK.prefix=	yes # not needed for nginx>=17
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
