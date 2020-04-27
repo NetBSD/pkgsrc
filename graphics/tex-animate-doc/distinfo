@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2019/08/11 11:11:53 markd Exp $
+$NetBSD: distinfo,v 1.13 2020/04/27 02:08:12 markd Exp $
 
-SHA1 (tex-animate-51704/animate.doc.tar.xz) = 8839a709f80fd6707ed427f5a7cc273348a10e93
-RMD160 (tex-animate-51704/animate.doc.tar.xz) = 31b9f8c4bf16f4437dfd6f61dea196400a715052
-SHA512 (tex-animate-51704/animate.doc.tar.xz) = 8f47c61581b566ace83b1258f8b11d84966a9b7b40695269276aab2bc16645a0a4a3adaf0063b680ee340d2967dba98343eb697b1a9ea1d323ab5c93adb4ca58
-Size (tex-animate-51704/animate.doc.tar.xz) = 3145916 bytes
+SHA1 (animate.doc.r54874.tar.xz) = 6cf1981e0ce31e8480ab3600affddefa7b16c249
+RMD160 (animate.doc.r54874.tar.xz) = 7b1337c533e19cb7100124b0766400d9fd87eb6d
+SHA512 (animate.doc.r54874.tar.xz) = f1dd2c86e63f0a2fd9a403cdb0cfd878499c10da6dafd34dee4732ca0c8b96683ec43e5009ff10ccfb6cedaf030af30bb413f13fa86b8548e6455d44c59852b6
+Size (animate.doc.r54874.tar.xz) = 3148336 bytes

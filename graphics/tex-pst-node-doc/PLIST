@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/12 01:31:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/27 02:08:14 markd Exp $
 share/texmf-dist/doc/generic/pst-node/Changes
 share/texmf-dist/doc/generic/pst-node/README
-share/texmf-dist/doc/generic/pst-node/psmatrix-docDE.bib
-share/texmf-dist/doc/generic/pst-node/psmatrix-docDE.pdf
-share/texmf-dist/doc/generic/pst-node/psmatrix-docDE.tex
 share/texmf-dist/doc/generic/pst-node/pst-node-doc.bib
 share/texmf-dist/doc/generic/pst-node/pst-node-doc.pdf
 share/texmf-dist/doc/generic/pst-node/pst-node-doc.tex
