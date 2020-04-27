@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/02/03 15:30:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/04/27 13:37:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -180,6 +180,7 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Noronha.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/North_Dakota/Beulah.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/North_Dakota/Center.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/North_Dakota/New_Salem.rb
+${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Nuuk.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Ojinaga.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Panama.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Pangnirtung.rb
