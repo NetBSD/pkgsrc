@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2557 2020/04/27 02:22:10 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2558 2020/04/27 03:28:08 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3621,3 +3621,20 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/tex-tkz-fct-doc to 1.3c [markd 2020-04-27]
 	Updated math/tex-unicode-math to 0.8q [markd 2020-04-27]
 	Updated math/tex-unicode-math-doc to 0.8q [markd 2020-04-27]
+	Updated devel/tex-doclicense to 1.10.1 [markd 2020-04-27]
+	Updated devel/tex-doclicense-doc to 1.10.1 [markd 2020-04-27]
+	Updated devel/tex-etoolbox to 2.5h [markd 2020-04-27]
+	Updated devel/tex-etoolbox-doc to 2.5h [markd 2020-04-27]
+	Updated devel/tex-l3backend to 2020 [markd 2020-04-27]
+	Updated devel/tex-l3backend-doc to 2020 [markd 2020-04-27]
+	Updated devel/tex-l3experimental to 2020 [markd 2020-04-27]
+	Updated devel/tex-l3kernel to 2020 [markd 2020-04-27]
+	Updated devel/tex-l3kernel-doc to 2020 [markd 2020-04-27]
+	Updated devel/tex-l3packages to 2020 [markd 2020-04-27]
+	Updated devel/tex-l3packages-doc to 2020 [markd 2020-04-27]
+	Updated devel/tex-latexbug to 1.0g [markd 2020-04-27]
+	Updated devel/tex-latexbug-doc to 1.0g [markd 2020-04-27]
+	Updated devel/tex-lualibs to 2.70 [markd 2020-04-27]
+	Updated devel/tex-lualibs-doc to 2.70 [markd 2020-04-27]
+	Updated devel/tex-tlshell to 2020 [markd 2020-04-27]
+	Updated devel/tex-tlshell-doc to 2020 [markd 2020-04-27]
