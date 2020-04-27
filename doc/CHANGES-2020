@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2595 2020/04/27 16:55:07 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.2596 2020/04/27 17:03:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3687,3 +3687,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/py-imageio to 2.8.0 [prlw1 2020-04-27]
 	Added devel/go-levenshtein version 1.2.3 [nikita 2020-04-27]
 	Updated devel/go-pflag to 1.0.5 [nikita 2020-04-27]
+	Added math/py-numpy16 version 1.16.6 [adam 2020-04-27]
+	Updated math/py-numpy to 1.18.3 [adam 2020-04-27]
