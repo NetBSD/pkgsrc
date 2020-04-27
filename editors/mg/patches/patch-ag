@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2020/04/27 04:22:22 rillig Exp $
+$NetBSD: patch-ag,v 1.5 2020/04/27 04:38:47 rillig Exp $
 
 Use pkgsrc layout/flags.
 
@@ -37,7 +37,8 @@ Use pkgsrc layout/flags.
  	$(INSTALL) -d $(DESTDIR)$(bindir)
  	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
 +	$(INSTALL) -d $(DESTDIR)$(docdir)/mg
- 	$(INSTALL) -m 755 $(name)		$(DESTDIR)$(bindir)/$(name)
+-	$(INSTALL) -m 755 $(name)		$(DESTDIR)$(bindir)/$(name)
++	$(BSD_INSTALL_PROGRAM) -m 755 $(name)	$(DESTDIR)$(bindir)/$(name)
  	$(INSTALL) -m 444 $(name).1		$(DESTDIR)$(mandir)/man1/$(name).1
 +	$(INSTALL) -m 444 tutorial		$(DESTDIR)$(docdir)/mg/tutorial
  
