@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2561 2020/04/27 04:24:31 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2562 2020/04/27 04:55:53 fox Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3641,3 +3641,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-bindata to 2.4.7 [taca 2020-04-27]
 	Updated devel/ruby-byebug to 11.1.3 [taca 2020-04-27]
 	Removed lang/ruby-gherkin [taca 2020-04-27]
+	Updated textproc/bat to 0.15.0 [fox 2020-04-27]
