@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2018/11/09 10:48:20 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/27 08:18:04 adam Exp $
 
-DISTNAME=	pytest-sugar-0.9.2
+DISTNAME=	pytest-sugar-0.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-sugar/}
