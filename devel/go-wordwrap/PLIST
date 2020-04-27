@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/27 15:15:08 nikita Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/mitchellh/go-wordwrap.a
+gopkg/src/github.com/mitchellh/go-wordwrap/LICENSE.md
+gopkg/src/github.com/mitchellh/go-wordwrap/README.md
+gopkg/src/github.com/mitchellh/go-wordwrap/go.mod
+gopkg/src/github.com/mitchellh/go-wordwrap/wordwrap.go
+gopkg/src/github.com/mitchellh/go-wordwrap/wordwrap_test.go
