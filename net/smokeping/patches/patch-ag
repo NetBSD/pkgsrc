@@ -1,19 +1,30 @@
-$NetBSD: patch-ag,v 1.1 2012/02/02 18:54:35 bouyer Exp $
+$NetBSD: patch-ag,v 1.2 2020/04/27 18:05:18 bouyer Exp $
 
---- etc/basepage.html.dist.orig	2012-02-02 18:44:25.000000000 +0100
-+++ etc/basepage.html.dist	2012-02-02 18:44:37.000000000 +0100
-@@ -53,10 +53,10 @@
- -->
- </STYLE>
+--- etc/basepage.html.dist.orig	2020-04-26 12:18:36.535286277 +0200
++++ etc/basepage.html.dist	2020-04-26 12:18:59.688451692 +0200
+@@ -4,8 +4,8 @@
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <META http-equiv="Refresh" content="<##step##>">
+     <title>SmokePing Latency Page for <##title##></title>
+-    <link rel="stylesheet" type="text/css" href="css/smokeping-print.css" media="print">
+-    <link rel="stylesheet" type="text/css" href="css/smokeping-screen.css" media="screen">
++    <link rel="stylesheet" type="text/css" href="/smokeping/css/smokeping-print.css" media="print">
++    <link rel="stylesheet" type="text/css" href="/smokeping/css/smokeping-screen.css" media="screen">
+ </head>
+ <body id="body">
  
--<script src="cropper/lib/prototype.js" type="text/javascript"></script>      
--<script src="cropper/lib/scriptaculous.js?load=builder,effects,dragdrop" type="text/javascript"></script>
--<script src="cropper/cropper.js" type="text/javascript"></script>
--<script src="cropper/smokeping-zoom.js" type="text/javascript"></script>
-+<script src="/cropper/lib/prototype.js" type="text/javascript"></script>      
-+<script src="/cropper/lib/scriptaculous.js?load=builder,effects,dragdrop" type="text/javascript"></script>
-+<script src="/cropper/cropper.js" type="text/javascript"></script>
-+<script src="/cropper/smokeping-zoom.js" type="text/javascript"></script>
+@@ -47,10 +47,10 @@
+     <p><small>Maintained by <a href="mailto:<##contact##>"><##owner##></a></small></p>
+ </div>
  
+-<script src="js/prototype.js" type="text/javascript"></script>
+-<script src="js/scriptaculous/scriptaculous.js?load=builder,effects,dragdrop" type="text/javascript"></script>
+-<script src="js/cropper/cropper.js" type="text/javascript"></script>
+-<script src="js/smokeping.js" type="text/javascript"></script>
++<script src="/smokeping/js/prototype.js" type="text/javascript"></script>
++<script src="/smokeping/js/scriptaculous/scriptaculous.js?load=builder,effects,dragdrop" type="text/javascript"></script>
++<script src="/smokeping/js/cropper/cropper.js" type="text/javascript"></script>
++<script src="/smokeping/js/smokeping.js" type="text/javascript"></script>
  
- 
+ </body>
+ </html>
