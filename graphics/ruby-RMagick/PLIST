@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.32 2020/03/23 17:12:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.33 2020/04/27 14:27:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/RMagick2.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/.codeclimate.yml
 ${GEM_LIBDIR}/.editorconfig
+${GEM_LIBDIR}/.github/ISSUE_TEMPLATE.md
 ${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
