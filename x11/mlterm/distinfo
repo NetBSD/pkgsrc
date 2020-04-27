@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.83 2019/11/23 10:31:37 ryoon Exp $
+$NetBSD: distinfo,v 1.84 2020/04/27 15:45:43 tsutsui Exp $
 
-SHA1 (mlterm-3.8.9.tar.gz) = 485d1f3215e12db8cd23f39a5c06b21e3e802307
-RMD160 (mlterm-3.8.9.tar.gz) = e5b6a4ac980866076c7b4f93aa3cbf1b20b4efcb
-SHA512 (mlterm-3.8.9.tar.gz) = 0bd5468dc58095fd9432922490178fe14335724cee08d2f509e8f72a4d5f9aea9ff2f0672706e5290219575f47a1ff15dccb4e21e318c89dd5718fe6ef694c0c
-Size (mlterm-3.8.9.tar.gz) = 4101898 bytes
-SHA1 (patch-configure) = e95b426f028c9bcb9895e69bb85ce8450f78a8c8
+SHA1 (mlterm-3.9.0.tar.gz) = be37059caab99219be79b14cfabfb26d34bb8954
+RMD160 (mlterm-3.9.0.tar.gz) = d5fec228b86918fe8dec05a6957869520dc8e5d4
+SHA512 (mlterm-3.9.0.tar.gz) = d89340eb460904ca36c6ed063b356625d9c9b4ad129dc51640d50a04e166f8239124d0003db778376c47daa6311c869f9fe7e337c90937fed5ae4151f5af57c4
+Size (mlterm-3.9.0.tar.gz) = 4143644 bytes
+SHA1 (patch-configure) = ce9fe3642258c5ab01d4e371e067c5f1501d5c22
 SHA1 (patch-etc_font-fb) = 03f0b2ecee20ef3201c8e4ce17f03ac90f657b00
 SHA1 (patch-vtemu_Makefile.in) = 172f12f73408489f782d63c8b0b7915af441d368
