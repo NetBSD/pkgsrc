@@ -1,10 +1,36 @@
-@comment $NetBSD: PLIST,v 1.8 2019/08/11 03:29:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/04/27 03:26:39 markd Exp $
 share/texmf-dist/doc/latex/l3kernel/CHANGELOG.md
 share/texmf-dist/doc/latex/l3kernel/README.md
 share/texmf-dist/doc/latex/l3kernel/expl3.pdf
 share/texmf-dist/doc/latex/l3kernel/interface3.pdf
 share/texmf-dist/doc/latex/l3kernel/interface3.tex
 share/texmf-dist/doc/latex/l3kernel/l3docstrip.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news.tex
+share/texmf-dist/doc/latex/l3kernel/l3news01.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news01.tex
+share/texmf-dist/doc/latex/l3kernel/l3news02.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news02.tex
+share/texmf-dist/doc/latex/l3kernel/l3news03.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news03.tex
+share/texmf-dist/doc/latex/l3kernel/l3news04.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news04.tex
+share/texmf-dist/doc/latex/l3kernel/l3news05.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news05.tex
+share/texmf-dist/doc/latex/l3kernel/l3news06.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news06.tex
+share/texmf-dist/doc/latex/l3kernel/l3news07.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news07.tex
+share/texmf-dist/doc/latex/l3kernel/l3news08.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news08.tex
+share/texmf-dist/doc/latex/l3kernel/l3news09.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news09.tex
+share/texmf-dist/doc/latex/l3kernel/l3news10.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news10.tex
+share/texmf-dist/doc/latex/l3kernel/l3news11.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news11.tex
+share/texmf-dist/doc/latex/l3kernel/l3news12.pdf
+share/texmf-dist/doc/latex/l3kernel/l3news12.tex
 share/texmf-dist/doc/latex/l3kernel/l3obsolete.txt
 share/texmf-dist/doc/latex/l3kernel/l3prefixes.csv
 share/texmf-dist/doc/latex/l3kernel/l3prefixes.pdf
