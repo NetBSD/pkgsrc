@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2596 2020/04/27 17:03:43 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2597 2020/04/27 17:16:14 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3689,3 +3689,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/go-pflag to 1.0.5 [nikita 2020-04-27]
 	Added math/py-numpy16 version 1.16.6 [adam 2020-04-27]
 	Updated math/py-numpy to 1.18.3 [adam 2020-04-27]
+	Added devel/go-cmp version 0.4.0 [nikita 2020-04-27]
