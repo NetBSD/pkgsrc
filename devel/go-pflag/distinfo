@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/07/21 22:04:22 minskim Exp $
+$NetBSD: distinfo,v 1.3 2020/04/27 16:54:25 nikita Exp $
 
-SHA1 (pflag-1.0.1.tar.gz) = 4bf700660caef358b41cabcf51993f18636b766a
-RMD160 (pflag-1.0.1.tar.gz) = 0272a92181dc7e99f3073dc7ead85497ff90aa61
-SHA512 (pflag-1.0.1.tar.gz) = e09066442bd7c98b3a3c2de815d89ce27d97ccec242e1e47ff38e4f8ece442657573bddab5bd560f644f62304ca6bdca3b4e002ebc330b78e69a96eccd8e778b
-Size (pflag-1.0.1.tar.gz) = 43244 bytes
+SHA1 (pflag-1.0.5.tar.gz) = 4d2a18cbeb28d0c0d5e5ffbd6740a8539e5d8679
+RMD160 (pflag-1.0.5.tar.gz) = f677e1a71a3943f4397c6a73561f1c3aa6fcb3f6
+SHA512 (pflag-1.0.5.tar.gz) = ffdfaa3b2431cbb0934cb996af158aa56132005f978a7e3a954e43f24efed36805213d5aa03bd04792119e909a0d54a8b76b0c891f83cb4f6a813a73a704e13b
+Size (pflag-1.0.5.tar.gz) = 50796 bytes
