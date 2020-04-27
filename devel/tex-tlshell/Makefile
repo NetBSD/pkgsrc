@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 19:18:36 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/27 03:26:39 markd Exp $
 
 DISTNAME=	tlshell
-PKGNAME=	tex-${DISTNAME}-2019.51677
-TEXLIVE_REV=	51677
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	54861
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GUI frontend (tcl/tk-based) for tlmgr
@@ -20,6 +20,5 @@ post-extract:
 	${MV} ${WRKSRC}/texmf-dist/scripts/tlshell/tlshell.tcl ${WRKSRC}/bin/tlshell
 	${RM} -rf ${WRKSRC}/texmf-dist
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

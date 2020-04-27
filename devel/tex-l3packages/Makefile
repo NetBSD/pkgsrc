@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2019/12/06 19:18:34 markd Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/27 03:26:39 markd Exp $
 
 DISTNAME=	l3packages
-PKGNAME=	tex-${DISTNAME}-2019.51546
-TEXLIVE_REV=	51546
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	54131
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/l3packages
@@ -14,6 +14,5 @@ DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

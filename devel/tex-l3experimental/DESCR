@@ -3,16 +3,17 @@ implementations for aspects of the LaTeX3 kernel, dealing with
 higher-level ideas such as the Designer Interface. Some of them
 work as stand alone packages, providing new functionality, and
 can be used on top of LaTeX2e with no changes to the existing
-kernel. The present release includes: xgalley, which controls
-boxes receiving text for typesetting. l3regex: kernel support
-for regular expression search and replace operations; l3sort:
-kernel support for sorting sequences, token lists or comma-
-lists, according to user-specified comparison criteria; l3str:
-kernel support for string manipulation; l3tl-build: kernel
-support for token list building; l3tl_analysis: kernel support
-for token list analysis; and xcoffins, which allows the
-alignment of boxes using a series of 'handle' positions,
-supplementing the simple TeX reference point. All the files of
-the bundle are also available in the Subversion (SVN)
-repository of the LaTeX3 Project. The bundle on CTAN is based
-on a snapshot of the SVN repository on 2013-10-11.
+kernel. The present release includes: l3benchmark for measuring
+the time taken by TeX to run certain code; l3cctab, support for
+saving and restoring category codes en masse in a table;
+l3color, support for setting colors using a range of color
+models; l3draw, a code-level interface for constructing
+drawings; l3graphics, an interfaces for the inclusion of
+graphics files; l3pdf, support for core PDF concepts like
+compression, objects, PDF version and so on; l3str, support for
+string manipulation; l3sys-shell, which provides abstractions
+for common shell functions like file deletion and copying;
+xcoffins, which allows the alignment of boxes using a series of
+'handle' positions, supplementing the simple TeX reference
+point; xgalley, which controls boxes receiving text for
+typesetting.
