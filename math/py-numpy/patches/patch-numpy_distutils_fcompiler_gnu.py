@@ -1,9 +1,9 @@
-$NetBSD: patch-numpy_distutils_fcompiler_gnu.py,v 1.15 2020/03/26 08:33:36 jperkin Exp $
+$NetBSD: patch-numpy_distutils_fcompiler_gnu.py,v 1.16 2020/04/27 19:38:23 adam Exp $
 
 Linker needs -shared explictly (at least with GCC 4.7 on SunOS), plus
 any ABI flags as appropriate.
 Do not generate debug symbols (remove '-g').
-On OS X, do not use '-bundle' and 'dynamic_lookup' (to avoid Python.framework).
+On Darwin, do not use '-bundle' (to avoid Python.framework).
 Do not use -funroll-loops compiler flag.
 Do not run a shell command when it is "None".
 
@@ -43,7 +43,7 @@ Do not run a shell command when it is "None".
                      warnings.warn(s, stacklevel=2)
  
 -            opt.extend(['-undefined', 'dynamic_lookup', '-bundle'])
-+            opt.extend(['-undefined'])
++            opt.extend(['-undefined', 'dynamic_lookup'])
          else:
              opt.append("-shared")
          if sys.platform.startswith('sunos'):
