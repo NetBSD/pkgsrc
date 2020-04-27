@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2019/01/01 20:05:02 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2020/04/27 04:22:22 rillig Exp $
 
 DISTNAME=	mg-20110905
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	editors
 MASTER_SITES=	https://homepage.boetes.org/software/mg/
 
@@ -26,7 +26,7 @@ SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Adjusting path.
 SUBST_FILES.path=	Makefile.in mg.1
-SUBST_SED.path=		-e "s|/usr/local|${PREFIX}/|g"
+SUBST_SED.path=		-e "s|/usr/local|${PREFIX}|g"
 SUBST_SED.path+=	-e "s|/usr/share/doc|${PREFIX}/share/doc|g"
 SUBST_SED.path+=	-e "s|/usr/bin/install|${INSTALL}|g"
 
