@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.9 2012/02/02 18:54:35 bouyer Exp $
+$NetBSD: patch-ac,v 1.10 2020/04/27 18:05:18 bouyer Exp $
 
---- etc/config.dist.in.orig	2011-10-30 11:33:11.000000000 +0100
-+++ etc/config.dist.in	2012-02-02 16:51:40.000000000 +0100
+--- etc/config.dist.in.orig	2017-06-25 20:18:25.000000000 +0200
++++ etc/config.dist.in	2020-04-23 10:20:42.223454811 +0200
 @@ -1,19 +1,19 @@
  *** General ***
  
@@ -37,10 +37,10 @@ $NetBSD: patch-ac,v 1.9 2012/02/02 18:54:35 bouyer Exp $
  
 -template = @prefix@/etc/basepage.html.dist
 +template = @PKG_SYSCONFDIR@/basepage.html
+ htmltitle = yes
+ graphborders = no
  
- + charts
- 
-@@ -105,10 +105,10 @@
+@@ -107,10 +107,10 @@
  
  + FPing
  
