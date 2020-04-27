@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2585 2020/04/27 15:00:54 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2586 2020/04/27 15:21:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3675,3 +3675,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/st-term to 0.8.3 [leot 2020-04-27]
 	Updated pkgtools/pkgin to 0.16.0 [jperkin 2020-04-27]
 	Updated misc/ruby-pry to 0.13.1 [taca 2020-04-27]
+	Updated sysutils/webmin to 1.941 [mef 2020-04-27]
+	Added sysutils/wbm-acl version 1.941 [mef 2020-04-27]
+	Added sysutils/wbm-proc version 1.941 [mef 2020-04-27]
