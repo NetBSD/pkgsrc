@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2018/05/02 11:15:20 markd Exp $
+$NetBSD: distinfo,v 1.7 2020/04/27 02:08:12 markd Exp $
 
-SHA1 (tex-a2ping-46893/a2ping.doc.tar.xz) = 04e924222d8ebf2ee69b69265d2afca0ce941dcc
-RMD160 (tex-a2ping-46893/a2ping.doc.tar.xz) = e1209e619846a2c969c03b0688255be05932f8cb
-SHA512 (tex-a2ping-46893/a2ping.doc.tar.xz) = f1db97d31fafb446d81f17498f5acfec931754e7282be9e1d6d7acbef8d4fc2938d385442d45fa955208d389ab5813e25702e9f5d3bca8eb0d8d5fe5104695ec
-Size (tex-a2ping-46893/a2ping.doc.tar.xz) = 37876 bytes
-SHA1 (patch-aa) = 1d51727a127e2a06b41ebf247e11dc69123e8273
+SHA1 (a2ping.doc.r52964.tar.xz) = f90e381f4afd63a60c08830591c86100ce0a791f
+RMD160 (a2ping.doc.r52964.tar.xz) = b5c92973040b042213471daddbf650e448989e8c
+SHA512 (a2ping.doc.r52964.tar.xz) = 7a7b6474819b2715c131485472963b463163378d4ae4ac586f17a130b3327c6dda1f4132f4f2379388a8a493fb2374abfff6b7ad87513cbe9d04993572692aeb
+Size (a2ping.doc.r52964.tar.xz) = 39744 bytes
