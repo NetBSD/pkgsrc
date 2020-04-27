@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/02/01 13:00:42 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/27 15:16:48 mef Exp $
 share/examples/webmin/ipfilter/config
 share/webmin/ipfilter/CHANGELOG
 share/webmin/ipfilter/apply.cgi
@@ -10,7 +10,7 @@ share/webmin/ipfilter/cluster_delete.cgi
 share/webmin/ipfilter/config
 share/webmin/ipfilter/config-freebsd
 share/webmin/ipfilter/config-netbsd
-share/webmin/ipfilter/config-solaris-10-*
+share/webmin/ipfilter/config-solaris-10-ALL
 share/webmin/ipfilter/config.info
 share/webmin/ipfilter/config.info.ca
 share/webmin/ipfilter/config.info.ca.UTF-8
@@ -26,7 +26,6 @@ share/webmin/ipfilter/images/before.gif
 share/webmin/ipfilter/images/down.gif
 share/webmin/ipfilter/images/gap.gif
 share/webmin/ipfilter/images/icon.gif
-share/webmin/ipfilter/images/smallicon.gif
 share/webmin/ipfilter/images/up.gif
 share/webmin/ipfilter/index.cgi
 share/webmin/ipfilter/install_check.pl
@@ -41,6 +40,12 @@ share/webmin/ipfilter/lang/nl
 share/webmin/ipfilter/lang/nl.UTF-8
 share/webmin/ipfilter/log_parser.pl
 share/webmin/ipfilter/module.info
+share/webmin/ipfilter/module.info.ca
+share/webmin/ipfilter/module.info.ca.UTF-8
+share/webmin/ipfilter/module.info.de
+share/webmin/ipfilter/module.info.de.UTF-8
+share/webmin/ipfilter/module.info.nl
+share/webmin/ipfilter/module.info.nl.UTF-8
 share/webmin/ipfilter/move.cgi
 share/webmin/ipfilter/natmove.cgi
 share/webmin/ipfilter/save_nat.cgi

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/02/01 13:00:43 mef Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/04/27 15:16:49 mef Exp $
 share/examples/webmin/openslp/config
 share/webmin/openslp/README
 share/webmin/openslp/backup_config.pl
@@ -13,6 +13,7 @@ share/webmin/openslp/config-openmamba-linux
 share/webmin/openslp/config-pardus-linux
 share/webmin/openslp/config-redhat-linux
 share/webmin/openslp/config-suse-linux
+share/webmin/openslp/config-syno-linux
 share/webmin/openslp/config-trustix-linux
 share/webmin/openslp/config-turbo-linux
 share/webmin/openslp/config-united-linux
@@ -33,8 +34,10 @@ share/webmin/openslp/config.info.no
 share/webmin/openslp/config.info.no.UTF-8
 share/webmin/openslp/config.info.ru.UTF-8
 share/webmin/openslp/config.info.ru_RU
+share/webmin/openslp/config.info.ru_RU.UTF-8
 share/webmin/openslp/config.info.ru_SU
 share/webmin/openslp/config.info.uk_UA
+share/webmin/openslp/config.info.uk_UA.UTF-8
 share/webmin/openslp/edit_dacfg.cgi
 share/webmin/openslp/edit_log.cgi
 share/webmin/openslp/edit_netcfg.cgi
@@ -50,7 +53,6 @@ share/webmin/openslp/images/dacfg.gif
 share/webmin/openslp/images/icon.gif
 share/webmin/openslp/images/log.gif
 share/webmin/openslp/images/netcfg.gif
-share/webmin/openslp/images/smallicon.gif
 share/webmin/openslp/images/snda.gif
 share/webmin/openslp/index.cgi
 share/webmin/openslp/install_check.pl
@@ -72,9 +74,29 @@ share/webmin/openslp/lang/no
 share/webmin/openslp/lang/no.UTF-8
 share/webmin/openslp/lang/ru.UTF-8
 share/webmin/openslp/lang/ru_RU
+share/webmin/openslp/lang/ru_RU.UTF-8
 share/webmin/openslp/lang/ru_SU
 share/webmin/openslp/lang/uk_UA
+share/webmin/openslp/lang/uk_UA.UTF-8
 share/webmin/openslp/module.info
+share/webmin/openslp/module.info.ca
+share/webmin/openslp/module.info.ca.UTF-8
+share/webmin/openslp/module.info.cz
+share/webmin/openslp/module.info.cz.UTF-8
+share/webmin/openslp/module.info.de
+share/webmin/openslp/module.info.de.UTF-8
+share/webmin/openslp/module.info.ms
+share/webmin/openslp/module.info.ms.UTF-8
+share/webmin/openslp/module.info.ms_MY
+share/webmin/openslp/module.info.ms_MY.UTF-8
+share/webmin/openslp/module.info.nl
+share/webmin/openslp/module.info.nl.UTF-8
+share/webmin/openslp/module.info.no
+share/webmin/openslp/module.info.no.UTF-8
+share/webmin/openslp/module.info.ru.UTF-8
+share/webmin/openslp/module.info.ru_RU
+share/webmin/openslp/module.info.ru_RU.UTF-8
+share/webmin/openslp/module.info.ru_SU
 share/webmin/openslp/save_dacfg.cgi
 share/webmin/openslp/save_log.cgi
 share/webmin/openslp/save_netcfg.cgi

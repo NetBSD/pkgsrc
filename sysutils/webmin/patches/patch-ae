@@ -1,13 +1,15 @@
-$NetBSD: patch-ae,v 1.5 2012/11/02 19:02:51 shattered Exp $
+$NetBSD: patch-ae,v 1.6 2020/04/27 15:16:45 mef Exp $
 
---- man/module.info.orig	2011-04-27 00:19:08.000000000 +0200
-+++ man/module.info	2011-06-15 23:17:56.000000000 +0200
-@@ -9,7 +9,7 @@
+Add dragonfly support
+
+--- man/module.info.orig	2020-01-15 09:06:33.000000000 +0900
++++ man/module.info	2020-04-26 23:24:47.441103258 +0900
+@@ -1,7 +1,7 @@
+ version=1.941
+ longdesc=View man pages, HOWTOs and other package documentation.
  name=Man
- desc_tr=Kýlavuz Sayfalar
- desc_de=Systemdokumentation
--os_support=solaris corel-linux debian-linux open-linux redhat-linux mandrake-linux slackware-linux solaris suse-linux united-linux turbo-linux freebsd openbsd cobalt-linux lfs-linux irix aix hpux macos netbsd msc-linux osf1 generic-linux openserver gentoo-linux trustix-linux sol-linux coherent-linux openmamba-linux pardus-linux
-+os_support=solaris corel-linux debian-linux open-linux redhat-linux mandrake-linux slackware-linux solaris suse-linux united-linux turbo-linux freebsd openbsd cobalt-linux lfs-linux irix aix hpux macos netbsd msc-linux osf1 generic-linux openserver gentoo-linux trustix-linux sol-linux coherent-linux openmamba-linux pardus-linux dragonfly
- desc_sk=Systémová dokumentácia
- desc_zh_CN=Ê¹ÓÃÊÖ²á
- risk=low medium high
+-os_support=solaris *-linux solaris freebsd openbsd irix aix hpux macos netbsd osf1 openserver
++os_support=solaris *-linux solaris freebsd openbsd irix aix hpux macos netbsd osf1 openserver dragonfly
+ readonly=1
+ desc=System Documentation
+ category=system
