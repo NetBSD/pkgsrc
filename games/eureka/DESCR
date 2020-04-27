@@ -1,5 +1,5 @@
 Eureka is a map editor for the classic DOOM games, and a few related games
-such as Heretic and Hexen. It supports Linux, Windows and OS X.
+such as Heretic and Hexen. It supports Windows and Unix (including macOS).
 
 There is a 2D mode to create the layout and a 3D mode to check e.g. texture
 alignment.
