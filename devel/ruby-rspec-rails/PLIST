@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/11/02 14:41:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2020/04/27 06:58:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -7,14 +7,18 @@ ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/generators/rspec.rb
+${GEM_LIBDIR}/lib/generators/rspec/channel/channel_generator.rb
+${GEM_LIBDIR}/lib/generators/rspec/channel/templates/channel_spec.rb.erb
 ${GEM_LIBDIR}/lib/generators/rspec/controller/controller_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/controller/templates/controller_spec.rb
+${GEM_LIBDIR}/lib/generators/rspec/controller/templates/request_spec.rb
+${GEM_LIBDIR}/lib/generators/rspec/controller/templates/routing_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/controller/templates/view_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/feature/feature_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/feature/templates/feature_singular_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/feature/templates/feature_spec.rb
-${GEM_LIBDIR}/lib/generators/rspec/generators/generator_generator.rb
-${GEM_LIBDIR}/lib/generators/rspec/generators/templates/generator_spec.rb
+${GEM_LIBDIR}/lib/generators/rspec/generator/generator_generator.rb
+${GEM_LIBDIR}/lib/generators/rspec/generator/templates/generator_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/helper/helper_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/helper/templates/helper_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/install/install_generator.rb
@@ -23,6 +27,8 @@ ${GEM_LIBDIR}/lib/generators/rspec/integration/integration_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/integration/templates/request_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/job/job_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/job/templates/job_spec.rb.erb
+${GEM_LIBDIR}/lib/generators/rspec/mailbox/mailbox_generator.rb
+${GEM_LIBDIR}/lib/generators/rspec/mailbox/templates/mailbox_spec.rb.erb
 ${GEM_LIBDIR}/lib/generators/rspec/mailer/mailer_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/mailer/templates/fixture
 ${GEM_LIBDIR}/lib/generators/rspec/mailer/templates/mailer_spec.rb
@@ -30,15 +36,15 @@ ${GEM_LIBDIR}/lib/generators/rspec/mailer/templates/preview.rb
 ${GEM_LIBDIR}/lib/generators/rspec/model/model_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/model/templates/fixtures.yml
 ${GEM_LIBDIR}/lib/generators/rspec/model/templates/model_spec.rb
-${GEM_LIBDIR}/lib/generators/rspec/observer/observer_generator.rb
-${GEM_LIBDIR}/lib/generators/rspec/observer/templates/observer_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/request/request_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/scaffold_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/api_controller_spec.rb
+${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/api_request_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/controller_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/edit_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/index_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/new_spec.rb
+${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/request_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/routing_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/show_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/system/system_generator.rb
@@ -51,10 +57,12 @@ ${GEM_LIBDIR}/lib/rspec/rails/active_record.rb
 ${GEM_LIBDIR}/lib/rspec/rails/adapters.rb
 ${GEM_LIBDIR}/lib/rspec/rails/configuration.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example.rb
+${GEM_LIBDIR}/lib/rspec/rails/example/channel_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/controller_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/feature_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/helper_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/job_example_group.rb
+${GEM_LIBDIR}/lib/rspec/rails/example/mailbox_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/mailer_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/model_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/example/rails_example_group.rb
@@ -69,6 +77,10 @@ ${GEM_LIBDIR}/lib/rspec/rails/file_fixture_support.rb
 ${GEM_LIBDIR}/lib/rspec/rails/fixture_file_upload_support.rb
 ${GEM_LIBDIR}/lib/rspec/rails/fixture_support.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers.rb
+${GEM_LIBDIR}/lib/rspec/rails/matchers/action_cable.rb
+${GEM_LIBDIR}/lib/rspec/rails/matchers/action_cable/have_broadcasted_to.rb
+${GEM_LIBDIR}/lib/rspec/rails/matchers/action_cable/have_streams.rb
+${GEM_LIBDIR}/lib/rspec/rails/matchers/action_mailbox.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/active_job.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/base_matcher.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/be_a_new.rb
