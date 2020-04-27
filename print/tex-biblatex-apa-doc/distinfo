@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/05/03 12:36:06 markd Exp $
+$NetBSD: distinfo,v 1.3 2020/04/27 22:35:38 markd Exp $
 
-SHA1 (tex-biblatex-apa-47268/biblatex-apa.doc.tar.xz) = 0e86267281fc087f31ab55d561663b1be96b069b
-RMD160 (tex-biblatex-apa-47268/biblatex-apa.doc.tar.xz) = 246507c22eade8cfce4cf19c81fc4bddad4106d0
-SHA512 (tex-biblatex-apa-47268/biblatex-apa.doc.tar.xz) = 2c4fd0032d46a816cf8f12c65406d39bfeb67e83d6753b7620e83ee247ef732814428864b7991c4fe126c5aa0bfd2d33baf4927ef3e3c18bc648f8849c016adc
-Size (tex-biblatex-apa-47268/biblatex-apa.doc.tar.xz) = 223888 bytes
+SHA1 (biblatex-apa.doc.r54896.tar.xz) = e92a699606bcc20fe691e1487b8b6b8506bb9f79
+RMD160 (biblatex-apa.doc.r54896.tar.xz) = 01017b7b6b60762d0eb2201ee9876ec48f27123a
+SHA512 (biblatex-apa.doc.r54896.tar.xz) = 3bc5feb99a2022b55ccd21b32ea1620596c85e4e9722e3cf51d5bcee0ffab58c13bb93f578a3b961dd830396a0f7d3f01bc4b8cbd40176858a9bad17a835b3a8
+Size (biblatex-apa.doc.r54896.tar.xz) = 317772 bytes

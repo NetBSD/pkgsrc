@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/01/30 08:07:26 markd Exp $
+$NetBSD: distinfo,v 1.4 2020/04/27 22:35:38 markd Exp $
 
-SHA1 (tex-babel-serbianc-49693/babel-serbianc.tar.xz) = 9aeb3b525acc9d78707e7e4d9c19d792743e3323
-RMD160 (tex-babel-serbianc-49693/babel-serbianc.tar.xz) = d60e7faa08462ccc6889f8e4be3f48c34102ea30
-SHA512 (tex-babel-serbianc-49693/babel-serbianc.tar.xz) = 8355b21d91ad71c6a9fcfb565efec198a87926a930fba718e2d9a5f98bd48c898e5f2c9c2f0e7daae2b3f97f6aee0452e542469e06955341919e362775942f12
-Size (tex-babel-serbianc-49693/babel-serbianc.tar.xz) = 4028 bytes
+SHA1 (babel-serbianc.r53139.tar.xz) = c30489094fdda6733529d6fb4d5f0826f2a942f5
+RMD160 (babel-serbianc.r53139.tar.xz) = e0032830717463ae9c35168ce6ecd662ef111229
+SHA512 (babel-serbianc.r53139.tar.xz) = b449ff8aea679484585ca92e47c256efc589657333818f2a4dd47344b4df8926149718520fce18a99ff2c37809873f112784b0b034abf73b1fe6c0410843bcc6
+Size (babel-serbianc.r53139.tar.xz) = 4012 bytes
