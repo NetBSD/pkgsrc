@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/11 22:39:42 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/04/27 02:20:52 markd Exp $
 
-SHA1 (tex-unicode-math-50245/unicode-math.doc.tar.xz) = 5c4913e802f334c0509058a8ed2eb21206708c1f
-RMD160 (tex-unicode-math-50245/unicode-math.doc.tar.xz) = db397f354a0a1fe00c0de8193ed7ae36b7d26bb1
-SHA512 (tex-unicode-math-50245/unicode-math.doc.tar.xz) = a7bdae5dce94420835ef5af6b6631947ce4829d02a952339b32fa098a75aa6c9fbd7455358815fac0cc4e2d2a5646b47a71405b50ccdd0b0944d9d92c5ccbb7d
-Size (tex-unicode-math-50245/unicode-math.doc.tar.xz) = 1741260 bytes
+SHA1 (unicode-math.doc.r53609.tar.xz) = f80e69243eac4ea282537e9489d44b5fb5eb9d63
+RMD160 (unicode-math.doc.r53609.tar.xz) = 33b87941c9cffa5caff3f68701e09d64d91b6b88
+SHA512 (unicode-math.doc.r53609.tar.xz) = 47051682a03bd91a9e9d6861239baca8c0f34b0e2b1b94a4a1e4100a522c639712fd9cdebf4ab7be1b2d09e90ed6ca2335b4bce0233a8e047dbe5090493fbecb
+Size (unicode-math.doc.r53609.tar.xz) = 1725060 bytes
