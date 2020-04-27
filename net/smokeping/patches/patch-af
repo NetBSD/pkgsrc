@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2012/02/02 18:54:35 bouyer Exp $
+$NetBSD: patch-af,v 1.2 2020/04/27 18:05:18 bouyer Exp $
 
---- lib/Makefile.in.orig	2012-02-02 16:07:25.000000000 +0100
-+++ lib/Makefile.in	2012-02-02 16:07:33.000000000 +0100
-@@ -217,7 +217,7 @@
+--- lib/Makefile.in.orig	2018-12-20 11:22:43.000000000 +0100
++++ lib/Makefile.in	2020-04-23 10:16:51.668142346 +0200
+@@ -268,7 +268,7 @@
  PROBE := $(wildcard Smokeping/probes/*.pm)
  MATCH := $(wildcard Smokeping/matchers/*.pm)
  EXTRA_DIST = $(PM) $(SP) $(SORT) $(PROBE) $(MATCH)
