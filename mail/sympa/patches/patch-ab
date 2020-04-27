@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.7 2015/09/26 14:56:10 bouyer Exp $
+$NetBSD: patch-ab,v 1.8 2020/04/27 17:57:52 bouyer Exp $
 
---- src/sbin/sympa_wizard.pl.in.orig	2015-09-25 15:37:58.000000000 +0200
-+++ src/sbin/sympa_wizard.pl.in	2015-09-25 15:39:07.000000000 +0200
-@@ -35,11 +35,10 @@
+--- src/sbin/sympa_wizard.pl.in.orig	2019-01-29 09:00:03.000000000 +0100
++++ src/sbin/sympa_wizard.pl.in	2020-04-26 12:37:28.779196610 +0200
+@@ -38,11 +38,10 @@
+ use Sympa::ConfDef;
  use Sympa::Constants;
- use Sympa::ModDef;
  
 -my $with_CPAN;    # check if module "CPAN" installed.
-+my $with_CPAN = 0;# check if module "CPAN" installed.
++my $with_CPAN = 0;    # check if module "CPAN" installed.
  my $modfail;      # any of required modules are not installed.
  
  BEGIN {
