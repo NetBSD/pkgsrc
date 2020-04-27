@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2020/02/26 12:28:02 micha Exp $
+$NetBSD: distinfo,v 1.3 2020/04/27 18:38:44 micha Exp $
 
-SHA1 (eureka-127-source.tar.gz) = 0bde0e4b2e0c4ee20c6633eceabb03d23db1c8db
-RMD160 (eureka-127-source.tar.gz) = 527a2f2ab978902fc7e5b21f52726b66614e66a3
-SHA512 (eureka-127-source.tar.gz) = f634d1abe1e3ebc2b2d33eab95c715ea0a315f2bd485d84738d1daee70047224216cffff801a8389e3c616d28a727c6c1b4fd0f89ab2585ee09d3648dd12fbc9
-Size (eureka-127-source.tar.gz) = 1159172 bytes
+SHA1 (eureka-1.27b-source.tar.gz) = 0ba0f2c30c1758722198c0dac99ca25e1143dd20
+RMD160 (eureka-1.27b-source.tar.gz) = fdc7c7a68962a8131c13d3d97ded55c5f5e40ef3
+SHA512 (eureka-1.27b-source.tar.gz) = 4b2ce44a99acbe1b9dd2cf31ee5c3307f5f667422ba18bee8c3f9858e9244ee05c48e96b5afa4cdf65dfd079bca19a5693b6d123b5563549d1f84ca03137eb5e
+Size (eureka-1.27b-source.tar.gz) = 1159366 bytes
 SHA1 (patch-src_m__files.cc) = 5bdfaefa324408632a8e649c8994479e7ec00ae1
 SHA1 (patch-src_main.cc) = 7c107f89e64ec2de5588880c71ba0e24b1aaf354
