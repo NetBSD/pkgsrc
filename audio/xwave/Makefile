@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2016/04/20 12:10:35 nros Exp $
+# $NetBSD: Makefile,v 1.29 2020/04/27 18:12:43 rillig Exp $
 #
 
 DISTNAME=		xwave2
@@ -16,10 +16,14 @@ INSTALLATION_DIRS=	bin lib/X11/app-defaults
 
 MAKE_JOBS_SAFE=		no
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${DEVOSSAUDIO} != /dev/audio
 SUBST_CLASSES+=		devaudio
 SUBST_STAGE.devaudio=	pre-configure
 SUBST_FILES.devaudio=	src/XWave
 SUBST_SED.devaudio=	-e 's,/dev/audio,${DEVOSSAUDIO},g'
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xwave ${DESTDIR}${PREFIX}/bin
