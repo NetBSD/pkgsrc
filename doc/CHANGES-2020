@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2582 2020/04/27 14:34:33 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2583 2020/04/27 14:47:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3672,3 +3672,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ruby-native-package-installer to 1.0.9 [taca 2020-04-27]
 	Updated graphics/ruby-RMagick to 4.1.2 [taca 2020-04-27]
 	Updated mail/ruby-mime-types-data to 3.2020.0425 [taca 2020-04-27]
+	Updated x11/st-term to 0.8.3 [leot 2020-04-27]
