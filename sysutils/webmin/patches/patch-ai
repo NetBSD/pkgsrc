@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.6 2020/04/27 15:16:45 mef Exp $
+$NetBSD: patch-ai,v 1.7 2020/04/27 15:33:30 mef Exp $
 
 Add dragonfly
 
@@ -9,7 +9,7 @@ Add dragonfly
  longdesc=Setup scripts to be run at boot time from /etc/init.d or /etc/rc.local.
  name=Boot Manager
 -os_support=solaris *-linux hpux freebsd unixware openserver openbsd osf1 irix aix macos netbsd windows 
-+os_support=solaris *-linux hpux freebsd unixware openserver openbsd osf1 irix aix macos netbsd windows dragnfly
++os_support=solaris *-linux hpux freebsd unixware openserver openbsd osf1 irix aix macos netbsd windows dragonfly
  readonly=1
  desc=Bootup and Shutdown
  category=system
