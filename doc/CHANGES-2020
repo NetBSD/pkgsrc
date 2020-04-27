@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2587 2020/04/27 15:37:42 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2588 2020/04/27 15:39:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3679,3 +3679,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added sysutils/wbm-acl version 1.941 [mef 2020-04-27]
 	Added sysutils/wbm-proc version 1.941 [mef 2020-04-27]
 	Updated www/php-nextcloud to 18.0.4 [ryoon 2020-04-27]
+	Updated misc/ruby-license-acceptance to 1.0.19 [taca 2020-04-27]
