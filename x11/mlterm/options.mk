@@ -1,21 +1,35 @@
-# $NetBSD: options.mk,v 1.17 2019/11/03 09:14:13 rillig Exp $
+# $NetBSD: options.mk,v 1.18 2020/04/27 15:45:43 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
-PKG_SUPPORTED_OPTIONS=	cairo canna fcitx fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim skk uim utmp wnn4 xft2
-PKG_SUGGESTED_OPTIONS=	cairo fribidi gdk_pixbuf2 m17nlib otl utmp xft2
+PKG_SUPPORTED_OPTIONS=	cairo canna fcitx fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb mlterm-x68kgrf otl scim skk uim wnn4 xft2
+PKG_SUGGESTED_OPTIONS=	cairo fribidi gdk_pixbuf2 m17nlib otl xft2
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	mlterm-fb
 .endif
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		bidi cairo canna fb fcitx ibus ind m17nlib otl scim skk uim wnn xft2
+PLIST_VARS+=		bidi cairo canna fb fbfiles fcitx ibus ind m17nlib otl scim skk uim wscons wnn x68kgrf xft2
 
 .if !empty(PKG_OPTIONS:Mmlterm-fb)
+. if ${OPSYS} == "NetBSD"
+.  if ${MACHINE_ARCH} == "m68k"
+PKG_SUGGESTED_OPTIONS+=	mlterm-x68kgrf
+CONFIGURE_ARGS+=	--with-gui=xlib,wscons,x68kgrf
+SPECIAL_PERMS+=		${PREFIX:Q}/bin/mlterm-x68kgrf ${SETUID_ROOT_PERMS}
+PLIST.x68kgrf=		yes
+.  else		# NetBSD && !m68k
+CONFIGURE_ARGS+=	--with-gui=xlib,wscons
+.  endif	# NetBSD
+SPECIAL_PERMS+=		${PREFIX:Q}/bin/mlterm-wscons ${SETUID_ROOT_PERMS}
+PLIST.wscons=		yes
+. else		# !NetBSD (i.e. FreeBSD or Linux)
 CONFIGURE_ARGS+=	--with-gui=xlib,fb
-PLIST.fb=		yes
 SPECIAL_PERMS+=		${PREFIX:Q}/bin/mlterm-fb ${SETUID_ROOT_PERMS}
+PLIST.fb=		yes
+. endif
 CONF_FILES+=		${EGDIR}/font-fb ${PKG_SYSCONFDIR}/font-fb
+PLIST.fbfiles=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mcairo)
@@ -111,13 +125,6 @@ PLIST.uim=		yes
 LICENSE+=		AND gnu-lgpl-v2
 .else
 CONFIGURE_ARGS+=	--disable-uim
-.endif
-
-.if !empty(PKG_OPTIONS:Mutmp)
-CONFIGURE_ARGS+=	--enable-utmp
-SPECIAL_PERMS+=		bin/mlterm ${REAL_ROOT_USER} utmp 2755
-.else
-CONFIGURE_ARGS+=	--disable-utmp
 .endif
 
 .if !empty(PKG_OPTIONS:Mwnn4)
