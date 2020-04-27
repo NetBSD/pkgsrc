@@ -1,0 +1,5 @@
+go-levenshtein is a Go package for calculating the Levenshtein
+distance between two strings.
+
+This package implements distance and similarity metrics for strings,
+based on the Levenshtein measure.
