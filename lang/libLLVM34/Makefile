@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/26 17:31:29 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/04/27 03:47:31 rillig Exp $
 
 DISTNAME=	llvm-${PKGVERSION_NOREV}.src
 PKGNAME=	libLLVM34-3.4.2
@@ -41,7 +41,6 @@ SUBST_CLASSES+=		fix-pfx
 SUBST_STAGE.fix-pfx=	pre-configure
 SUBST_MESSAGE.fix-pfx=	Adjusting installation directories to avoid conflict with clang
 SUBST_FILES.fix-pfx=	Makefile.config.in
-SUBST_FILES.fix-pfx+=	cmake/modules/Makefile
 SUBST_SED.fix-pfx=	-e 's,(PROJ_prefix)/bin$$,(PROJ_prefix)/libexec/libLLVM34,g'
 SUBST_SED.fix-pfx+=	-e 's,(PROJ_prefix)/lib$$,(PROJ_prefix)/lib/libLLVM34,g'
 SUBST_SED.fix-pfx+=	-e 's,(PROJ_prefix)/include$$,(PROJ_prefix)/include/libLLVM34,g'
