@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.74 2020/01/26 17:31:37 rillig Exp $
+# $NetBSD: Makefile,v 1.75 2020/04/27 17:57:51 bouyer Exp $
 
-DISTNAME=	sympa-6.2.16
-PKGREVISION=	4
+VERSION=	6.2.54
+DISTNAME=	sympa-${VERSION}
 CATEGORIES=	mail
-MASTER_SITES=	http://www.sympa.org/distribution/
-MASTER_SITES+=	http://www.sympa.org/distribution/old/
+MASTER_SITES=	https://github.com/sympa-community/sympa/releases/download/${VERSION}/
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	https://www.sympa.org/
@@ -155,12 +154,7 @@ SPECIAL_PERMS+=	${SYMPA_PREFIX}/libexec/cgi-bin/sympa_soap_server-wrapper.fcgi \
 
 CONF_FILES=	${PREFIX}/share/examples/sympa/sympa.conf \
 		${PKG_SYSCONFDIR}/sympa.conf
-.for f in arc.png back.png begin.png binary.png config.png crosshairs.png \
-    datasources.png down.png end.png favicon_sympa.png folder.open.png \
-    folder.png h.png image2.png junk.png left.png link.png locked.png \
-    logo-s-lock.png logo-s.png logo_sympa.png movie.png new_list.png \
-    position.png right.png search.png sound1.png spinner.gif subscribe.png \
-    sv.png text.png top.png unknown.png
+.for f in favicon_sympa.png logo_sympa.png
 CONF_FILES+=	${PREFIX}/sympa/static_content/icons/${f} \
 		${SYMPA_VARBASE}/list_data/static_content/icons/${f}
 .endfor
@@ -182,8 +176,8 @@ SUBST_SED.paths+=	-e "s|prefix/bounce|localstatedir/bounce|g"
 SUBST_MESSAGE.paths=	Fixing configure paths
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${DESTDIR}${PREFIX}/share/doc/sympa/NEWS
-	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${DESTDIR}${SYMPA_PREFIX}/static_content
+	${INSTALL_DATA} ${WRKSRC}/NEWS.md ${DESTDIR}${PREFIX}/share/doc/sympa/NEWS.md
+	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${DESTDIR}${SYMPA_PREFIX}/static_content
 	${CHMOD} a-w \
 	    ${DESTDIR}${SYMPA_PREFIX}/libexec/cgi-bin/wwsympa-wrapper.fcgi \
 	    ${DESTDIR}${SYMPA_PREFIX}/libexec/cgi-bin/sympa_soap_server-wrapper.fcgi \
