@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2018/07/18 00:06:17 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2020/04/27 18:31:36 rillig Exp $
 #
 
 DISTNAME=		xnibbles-1.0BETA4
 PKGNAME=		xnibbles-1.0b4
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.tjhsst.edu/xnibbles/
 
@@ -18,11 +18,15 @@ USE_LANGUAGES=		c c++03
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
+.include "../../mk/oss.buildlink3.mk"
+
+.if ${DEVOSSAUDIO} != /dev/dsp
 SUBST_CLASSES+=		audio
 SUBST_STAGE.audio=	pre-build
 SUBST_MESSAGE.audio=	Adjusting path to audio device
 SUBST_FILES.audio=	Makefile
 SUBST_SED.audio=	-e "s|/dev/dsp|${DEVOSSAUDIO}|"
+.endif
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
