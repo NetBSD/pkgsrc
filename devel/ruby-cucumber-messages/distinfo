@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/03/15 17:24:53 taca Exp $
+$NetBSD: distinfo,v 1.5 2020/04/27 04:55:32 taca Exp $
 
-SHA1 (cucumber-messages-10.0.3.gem) = 34c62a151df903d561d216657d1d77b693fd7602
-RMD160 (cucumber-messages-10.0.3.gem) = 6a18633c55694aaef054057c411e5d04f1308532
-SHA512 (cucumber-messages-10.0.3.gem) = 3b366072795c233d2157408f640e31a3ac6b2699e1e056eaa011d24260752fcdfa1272f8769c30376d7e82cd3c02e57ead2128d4b36c934368e60e1706fd5a5e
-Size (cucumber-messages-10.0.3.gem) = 11264 bytes
+SHA1 (cucumber-messages-12.1.1.gem) = 0b5c1c228fea671f7f882b016bc2393c59edc355
+RMD160 (cucumber-messages-12.1.1.gem) = 22c868b08e4551ff088446804e954ee1f9d4d6fc
+SHA512 (cucumber-messages-12.1.1.gem) = 89b33e14b72513e32baeb2cc18138b2c053d3e03045acac0afcc9d73a313f2184520a3186fbae54304a8c49f08dab8357aa3ddd891a08a883daec90b53374c0f
+Size (cucumber-messages-12.1.1.gem) = 10752 bytes
