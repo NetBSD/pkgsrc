@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2589 2020/04/27 15:46:02 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.2590 2020/04/27 15:51:42 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3681,3 +3681,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/php-nextcloud to 18.0.4 [ryoon 2020-04-27]
 	Updated misc/ruby-license-acceptance to 1.0.19 [taca 2020-04-27]
 	Updated x11/mlterm to 3.9.0 [tsutsui 2020-04-27]
+	Added devel/go-wordwrap version 1.0.0 [nikita 2020-04-27]
