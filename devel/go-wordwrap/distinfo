@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/27 15:15:08 nikita Exp $
+
+SHA1 (go-wordwrap-1.0.0.tar.gz) = ed70f4fcafbf655355869923842afbf4902d4e8b
+RMD160 (go-wordwrap-1.0.0.tar.gz) = 3a75e812ea77e56d30c6cd1220f04990c0da40ca
+SHA512 (go-wordwrap-1.0.0.tar.gz) = b2a916a08f13847ef8c0da2c944604bd0c8c6283eadbf2f9b791538d26c17f2c1f73ce629b245320c1ff0fbbfa9525208dddcf3a21c1370ba97d9d82b35e2812
+Size (go-wordwrap-1.0.0.tar.gz) = 2777 bytes
