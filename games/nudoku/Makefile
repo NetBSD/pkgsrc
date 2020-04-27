@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/16 12:59:02 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/27 05:14:41 rillig Exp $
 
 DISTNAME=	nudoku-2.0.0
 CATEGORIES=	games
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v3
 SUBST_CLASSES+=		includes
 SUBST_STAGE.includes=	post-configure
 SUBST_MESSAGE.includes=	Fix gettext includes
-SUBST_FILES.includes=	src/main.c
 SUBST_FILES.includes+=	src/sudoku.c
 SUBST_SED.includes+=	-e 's,"gettext.h",<libintl.h>,'
 
