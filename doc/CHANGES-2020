@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2580 2020/04/27 14:12:10 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2581 2020/04/27 14:27:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3670,3 +3670,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/ruby-tzinfo to 2.0.2 [taca 2020-04-27]
 	Updated time/ruby-tzinfo-data to 1.2020.1 [taca 2020-04-27]
 	Updated devel/ruby-native-package-installer to 1.0.9 [taca 2020-04-27]
+	Updated graphics/ruby-RMagick to 4.1.2 [taca 2020-04-27]
