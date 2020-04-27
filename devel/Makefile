@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3112 2020/04/27 16:31:22 nikita Exp $
+# $NetBSD: Makefile,v 1.3113 2020/04/27 17:15:22 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -385,6 +385,7 @@ SUBDIR+=	go-bytebufferpool
 SUBDIR+=	go-cast
 SUBDIR+=	go-check
 SUBDIR+=	go-cli
+SUBDIR+=	go-cmp
 SUBDIR+=	go-cobra
 SUBDIR+=	go-colorable
 SUBDIR+=	go-colortext
