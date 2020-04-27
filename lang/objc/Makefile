@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/04/08 11:17:15 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2020/04/27 05:17:00 rillig Exp $
 
 DISTNAME=	objc-3.2.10
 CATEGORIES=	lang
@@ -37,6 +37,7 @@ SUBST_STAGE.mandir=	post-configure
 SUBST_MESSAGE.mandir=	Making mandir=${PKGMANDIR}
 SUBST_SED.mandir=	-e '/$$(TAR)/s,man,${PKGMANDIR},'
 SUBST_FILES.mandir=	Makefile
+SUBST_NOOP_OK.mandir=	yes # PKGMANDIR defaults to man
 
 pre-configure:
 	${ECHO} >> ${WRKSRC_BS}/configure \
