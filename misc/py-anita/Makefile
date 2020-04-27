@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2020/03/20 12:46:15 gson Exp $
+# $NetBSD: Makefile,v 1.62 2020/04/27 17:28:37 rillig Exp $
 
 DISTNAME=	anita-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,10 +15,14 @@ DEPENDS+=	${PYPKGPREFIX}-pexpect>=2.1:../../devel/py-pexpect
 
 USE_LANGUAGES=	#none
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGMANDIR} != man
 SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure
 SUBST_FILES.manpath=	setup.py
 SUBST_SED.manpath=	-e 's,man/,${PKGMANDIR}/,g'
+.endif
 
 do-test:
 	${TRUE}		# Tests not integrated into pkgsrc
