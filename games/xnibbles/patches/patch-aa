@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2008/09/21 08:17:40 dholland Exp $
+$NetBSD: patch-aa,v 1.7 2020/04/27 18:31:36 rillig Exp $
 
 --- Makefile.orig	1998-03-05 17:06:19.000000000 -0500
 +++ Makefile	2008-09-21 02:02:55.000000000 -0400
@@ -21,12 +21,8 @@ $NetBSD: patch-aa,v 1.6 2008/09/21 08:17:40 dholland Exp $
  
    # Install program
    INSTALL = /usr/bin/install
-@@ -41,10 +42,10 @@
- 
-   # Requires kernel sound support, change from 0 to 1 if you want it
-   SOUND = 1
--  SOUNDDEV = /dev/dsp
-+  SOUNDDEV = /dev/audio
+@@ -38,7 +39,7 @@
+   SOUNDDEV = /dev/dsp
  
    # Requires kernel joystick support, change from 0 to 1 if you want it
 -  JOYSTICK = 1
