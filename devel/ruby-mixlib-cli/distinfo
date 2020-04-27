@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/03/24 17:49:49 taca Exp $
+$NetBSD: distinfo,v 1.5 2020/04/27 05:50:48 taca Exp $
 
-SHA1 (mixlib-cli-2.1.5.gem) = 45b7805f3f6ea140b37f5996643bb28d4a814912
-RMD160 (mixlib-cli-2.1.5.gem) = 47a36fa5d85161776bf01cf5da143d5045d5fa8b
-SHA512 (mixlib-cli-2.1.5.gem) = 5b2f016682bbd33f3ea1ef5eb4b57ea2b71997c812052952024d6e743d5b064df4a97ea21eae6139387d339ab43243710c44aaec34c0521693a263b263712f62
-Size (mixlib-cli-2.1.5.gem) = 13824 bytes
+SHA1 (mixlib-cli-2.1.6.gem) = 93e1880fbe01cf8e939dde5b4fe56bfad8b18ed8
+RMD160 (mixlib-cli-2.1.6.gem) = 206c60dca5cb973f662c564abcac6e59f9f7e966
+SHA512 (mixlib-cli-2.1.6.gem) = 6ccfb58b214a0511e359b1a8049c34a95aca6a76c27e2eed89aa4bfd98c8a5b04f4be95995f18ae5964406cde88c533cc16e26e45a25f53ebecc883717b8c8d0
+Size (mixlib-cli-2.1.6.gem) = 13824 bytes
