@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/02/01 13:00:44 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/27 15:16:51 mef Exp $
 share/examples/webmin/tunnel/config
 share/webmin/tunnel/CHANGELOG
 share/webmin/tunnel/config
@@ -22,7 +22,6 @@ share/webmin/tunnel/config.info.nl.UTF-8
 share/webmin/tunnel/config.info.no
 share/webmin/tunnel/config.info.no.UTF-8
 share/webmin/tunnel/images/icon.gif
-share/webmin/tunnel/images/smallicon.gif
 share/webmin/tunnel/index.cgi
 share/webmin/tunnel/lang/ca
 share/webmin/tunnel/lang/ca.UTF-8
@@ -50,5 +49,25 @@ share/webmin/tunnel/lang/tr
 share/webmin/tunnel/link.cgi
 share/webmin/tunnel/login.cgi
 share/webmin/tunnel/module.info
+share/webmin/tunnel/module.info.ca
+share/webmin/tunnel/module.info.ca.UTF-8
+share/webmin/tunnel/module.info.cz
+share/webmin/tunnel/module.info.cz.UTF-8
+share/webmin/tunnel/module.info.de
+share/webmin/tunnel/module.info.de.UTF-8
+share/webmin/tunnel/module.info.es
+share/webmin/tunnel/module.info.es.UTF-8
+share/webmin/tunnel/module.info.hu
+share/webmin/tunnel/module.info.hu.UTF-8
+share/webmin/tunnel/module.info.it
+share/webmin/tunnel/module.info.it.UTF-8
+share/webmin/tunnel/module.info.ko_KR.UTF-8
+share/webmin/tunnel/module.info.ko_KR.euc
+share/webmin/tunnel/module.info.ms_MY
+share/webmin/tunnel/module.info.ms_MY.UTF-8
+share/webmin/tunnel/module.info.nl
+share/webmin/tunnel/module.info.nl.UTF-8
+share/webmin/tunnel/module.info.no
+share/webmin/tunnel/module.info.no.UTF-8
 share/webmin/tunnel/seturl.cgi
 share/webmin/tunnel/tunnel-lib.pl

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/02/01 13:00:43 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/04/27 15:16:49 mef Exp $
 share/examples/webmin/mailboxes/config
 share/webmin/mailboxes/CHANGELOG
 share/webmin/mailboxes/Makefile
@@ -43,7 +43,6 @@ share/webmin/mailboxes/images/icon.gif
 share/webmin/mailboxes/images/p1.gif
 share/webmin/mailboxes/images/p2.gif
 share/webmin/mailboxes/images/read.gif
-share/webmin/mailboxes/images/smallicon.gif
 share/webmin/mailboxes/images/special.gif
 share/webmin/mailboxes/index.cgi
 share/webmin/mailboxes/lang/ca
@@ -81,6 +80,7 @@ share/webmin/mailboxes/lang/pt.UTF-8
 share/webmin/mailboxes/lang/pt_BR
 share/webmin/mailboxes/lang/pt_BR.UTF-8
 share/webmin/mailboxes/lang/ru_RU
+share/webmin/mailboxes/lang/ru_RU.UTF-8
 share/webmin/mailboxes/lang/sv
 share/webmin/mailboxes/lang/sv.UTF-8
 share/webmin/mailboxes/lang/tr
@@ -94,7 +94,42 @@ share/webmin/mailboxes/mail_search.cgi
 share/webmin/mailboxes/mailboxes-lib.pl
 share/webmin/mailboxes/makelang.pl
 share/webmin/mailboxes/module.info
+share/webmin/mailboxes/module.info.ca
+share/webmin/mailboxes/module.info.ca.UTF-8
+share/webmin/mailboxes/module.info.cz
+share/webmin/mailboxes/module.info.cz.UTF-8
+share/webmin/mailboxes/module.info.de
+share/webmin/mailboxes/module.info.de.UTF-8
+share/webmin/mailboxes/module.info.es
+share/webmin/mailboxes/module.info.es.UTF-8
+share/webmin/mailboxes/module.info.fi
+share/webmin/mailboxes/module.info.fi.UTF-8
+share/webmin/mailboxes/module.info.fr
+share/webmin/mailboxes/module.info.fr.UTF-8
+share/webmin/mailboxes/module.info.hu
+share/webmin/mailboxes/module.info.hu.UTF-8
+share/webmin/mailboxes/module.info.it
+share/webmin/mailboxes/module.info.it.UTF-8
+share/webmin/mailboxes/module.info.ja_JP.UTF-8
+share/webmin/mailboxes/module.info.ja_JP.euc
+share/webmin/mailboxes/module.info.ko_KR.UTF-8
+share/webmin/mailboxes/module.info.ko_KR.euc
+share/webmin/mailboxes/module.info.ms_MY
+share/webmin/mailboxes/module.info.ms_MY.UTF-8
+share/webmin/mailboxes/module.info.nl
+share/webmin/mailboxes/module.info.nl.UTF-8
+share/webmin/mailboxes/module.info.no
+share/webmin/mailboxes/module.info.no.UTF-8
+share/webmin/mailboxes/module.info.pl
+share/webmin/mailboxes/module.info.pl.UTF-8
+share/webmin/mailboxes/module.info.pt_BR
+share/webmin/mailboxes/module.info.pt_BR.UTF-8
+share/webmin/mailboxes/module.info.ru_RU
+share/webmin/mailboxes/module.info.ru_RU.UTF-8
+share/webmin/mailboxes/module.info.tr
+share/webmin/mailboxes/module.info.zh_TW.Big5
 share/webmin/mailboxes/reply_mail.cgi
+share/webmin/mailboxes/safeacl
 share/webmin/mailboxes/search_form.cgi
 share/webmin/mailboxes/send_mail.cgi
 share/webmin/mailboxes/slideshow.cgi
@@ -354,4 +389,3 @@ share/webmin/mailboxes/xinha/skins/xp-green/hover.png
 share/webmin/mailboxes/xinha/skins/xp-green/selected.png
 share/webmin/mailboxes/xinha/skins/xp-green/separator.png
 share/webmin/mailboxes/xinha/skins/xp-green/skin.css
-@pkgdir share/webmin/mailboxes/xinha/plugins

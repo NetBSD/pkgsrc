@@ -1,15 +1,15 @@
-$NetBSD: patch-ag,v 1.5 2017/02/01 13:00:44 mef Exp $
+$NetBSD: patch-ag,v 1.6 2020/04/27 15:16:45 mef Exp $
 
 Add dragonfly
 
---- proc/module.info.orig	2016-10-03 12:39:36.000000000 +0900
-+++ proc/module.info	2016-11-12 07:51:12.000000000 +0900
-@@ -13,7 +13,7 @@ desc_ko_KR.UTF-8=ì‹¤í–‰ì¤‘ì¸ í”„ë¡œì„¸ì
+--- proc/module.info.orig	2020-01-15 09:06:33.000000000 +0900
++++ proc/module.info	2020-04-26 23:25:26.929124925 +0900
+@@ -2,7 +2,7 @@ version=1.941
+ cpan=1
+ longdesc=List, kill and renice running processes on your system.
  name=Process Manager
- desc_tr=Çalışan Süreçler
- desc_de=Laufende Prozesse
 -os_support=solaris *-linux hpux freebsd osf1 irix unixware openserver macos aix netbsd openbsd windows
 +os_support=solaris *-linux hpux freebsd osf1 irix unixware openserver macos aix netbsd openbsd windows dragonfly
- desc_zh_CN=½ø³Ì¹ÜÀíÆ÷
- risk=medium high
- longdesc_ca=Llista, mata i canvia la prioritat dels processos en execució al sistema.
+ readonly=1
+ desc=Running Processes
+ syslog=1
