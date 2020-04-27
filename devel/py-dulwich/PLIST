@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/08/14 07:47:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2020/04/27 10:18:53 adam Exp $
 bin/dul-receive-pack-${PYVERSSUFFIX}
 bin/dul-upload-pack-${PYVERSSUFFIX}
 bin/dulwich-${PYVERSSUFFIX}
@@ -39,6 +39,9 @@ ${PYSITELIB}/dulwich/contrib/README.md
 ${PYSITELIB}/dulwich/contrib/__init__.py
 ${PYSITELIB}/dulwich/contrib/__init__.pyc
 ${PYSITELIB}/dulwich/contrib/__init__.pyo
+${PYSITELIB}/dulwich/contrib/diffstat.py
+${PYSITELIB}/dulwich/contrib/diffstat.pyc
+${PYSITELIB}/dulwich/contrib/diffstat.pyo
 ${PYSITELIB}/dulwich/contrib/paramiko_vendor.py
 ${PYSITELIB}/dulwich/contrib/paramiko_vendor.pyc
 ${PYSITELIB}/dulwich/contrib/paramiko_vendor.pyo
@@ -81,6 +84,9 @@ ${PYSITELIB}/dulwich/ignore.pyo
 ${PYSITELIB}/dulwich/index.py
 ${PYSITELIB}/dulwich/index.pyc
 ${PYSITELIB}/dulwich/index.pyo
+${PYSITELIB}/dulwich/lfs.py
+${PYSITELIB}/dulwich/lfs.pyc
+${PYSITELIB}/dulwich/lfs.pyo
 ${PYSITELIB}/dulwich/line_ending.py
 ${PYSITELIB}/dulwich/line_ending.pyc
 ${PYSITELIB}/dulwich/line_ending.pyo
@@ -278,6 +284,9 @@ ${PYSITELIB}/dulwich/tests/test_ignore.pyo
 ${PYSITELIB}/dulwich/tests/test_index.py
 ${PYSITELIB}/dulwich/tests/test_index.pyc
 ${PYSITELIB}/dulwich/tests/test_index.pyo
+${PYSITELIB}/dulwich/tests/test_lfs.py
+${PYSITELIB}/dulwich/tests/test_lfs.pyc
+${PYSITELIB}/dulwich/tests/test_lfs.pyo
 ${PYSITELIB}/dulwich/tests/test_line_ending.py
 ${PYSITELIB}/dulwich/tests/test_line_ending.pyc
 ${PYSITELIB}/dulwich/tests/test_line_ending.pyo
