@@ -1,12 +1,16 @@
-$NetBSD: patch-aa,v 1.11 2012/02/02 18:54:35 bouyer Exp $
+$NetBSD: patch-aa,v 1.12 2020/04/27 18:05:18 bouyer Exp $
 
---- bin/smokeping.orig	2012-02-02 15:09:15.000000000 +0100
-+++ bin/smokeping	2012-02-02 15:10:46.000000000 +0100
-@@ -11,7 +11,7 @@
+--- bin/smokeping.orig	2018-04-13 14:13:05.000000000 +0200
++++ bin/smokeping	2020-04-26 12:13:00.964611375 +0200
+@@ -6,11 +6,11 @@
+ 
+ use lib (split /:/, q{}); # PERL5LIB
+ use FindBin;
+ use lib "$FindBin::RealBin/../lib";use lib "$FindBin::RealBin/../thirdparty/lib/perl5"; # LIBDIR
  
  use Smokeping;
   
--Smokeping::main("$FindBin::Bin/../etc/config");
+-Smokeping::main("$FindBin::RealBin/../etc/config");
 +Smokeping::main("@PKG_SYSCONFDIR@/config");
  
  =head1 NAME

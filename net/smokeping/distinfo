@@ -1,14 +1,15 @@
-$NetBSD: distinfo,v 1.16 2015/11/04 00:35:37 agc Exp $
+$NetBSD: distinfo,v 1.17 2020/04/27 18:05:18 bouyer Exp $
 
-SHA1 (smokeping-2.6.7.tar.gz) = bc0b118164f00f79f6264f46ccb129acd1962dfc
-RMD160 (smokeping-2.6.7.tar.gz) = 126adae8ec55d7119ce57daf135327b56625ba3b
-SHA512 (smokeping-2.6.7.tar.gz) = 482c6e7fe5de4a3b3dd5b936eead6fca817932d032fcec7050ee258bf5e7718e677f14ad2660099661837041a5f6d4894b8cf832f248d036b3b36e8bf5737095
-Size (smokeping-2.6.7.tar.gz) = 423151 bytes
-SHA1 (patch-aa) = 1926aa6ebe13b06fc4cf2fae903f32b79b4f610a
-SHA1 (patch-ab) = 9258886479491e991408e07ebdf23b6fcb770f96
-SHA1 (patch-ac) = fdad1384d1925cc41e200e7a95834f76e6780fb4
-SHA1 (patch-ad) = 1b5581b88054182115ce4f667dbaaeea10596acd
-SHA1 (patch-ae) = 45410102cd230d4514d8d493655a3fa9302c3e0e
-SHA1 (patch-af) = ecb2c6f5beed570def7e4dd830864bb82b92654f
-SHA1 (patch-ag) = f200c0522db44e08d475f1a0895ee14e01663fd8
-SHA1 (patch-lib_Smokeping.pm) = 19ab8a169b1db99686bbe7af24dec1b5c2b6fb77
+SHA1 (smokeping-2.7.3.tar.gz) = a57dbd201b3d9142b15dcf63a906a265989a2929
+RMD160 (smokeping-2.7.3.tar.gz) = 54ebc0f840a7c52e4610a7409fa3213e1a90b647
+SHA512 (smokeping-2.7.3.tar.gz) = d46d61539ffdd9cac41391aa813364260f90f84443c328b1c9233ab6ba3a0c157861694614e6c33e18b153f6a6afc0769c5fc7752b3ab52f114d984e53232830
+Size (smokeping-2.7.3.tar.gz) = 6614710 bytes
+SHA1 (patch-Makefile.in) = 9eceb69c516a50b0b48ca5afad8fb8a8a1550d72
+SHA1 (patch-aa) = e1bec9750bcb3dfd9e38e4d5dea5e4bf6359e077
+SHA1 (patch-ab) = 9a14917909b6bfee57109d01dec4b9a89c56f448
+SHA1 (patch-ac) = e0420ee1108e3aa332c7e77970920cce3cc5dafd
+SHA1 (patch-ad) = bfc0d914ef24249dd01651caab27023ef2ac9d89
+SHA1 (patch-ae) = 9529ab685db10d7a4b19d4ccd0f10d0621d2cccf
+SHA1 (patch-af) = 95541f07c1e4bb77c58a9a215d6deae849523fec
+SHA1 (patch-ag) = cacfb3403115cbef3bb211a918482d5ed112fc9a
+SHA1 (patch-bin_Makefile.in) = 434300b628a1db9a583eb61a4389ad79428f98b3

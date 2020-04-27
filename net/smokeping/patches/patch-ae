@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.2 2012/02/02 18:54:35 bouyer Exp $
+$NetBSD: patch-ae,v 1.3 2020/04/27 18:05:18 bouyer Exp $
 
---- htdocs/Makefile.in.orig	2012-02-02 15:51:17.000000000 +0100
-+++ htdocs/Makefile.in	2012-02-02 15:52:04.000000000 +0100
-@@ -424,7 +424,7 @@
+--- htdocs/Makefile.in.orig	2018-12-20 11:22:43.000000000 +0100
++++ htdocs/Makefile.in	2020-04-23 10:22:45.870593346 +0200
+@@ -497,7 +497,7 @@
  install-data-local:
  	$(MKDIR) -p $(DESTDIR)$(HTDOCSDIR)
  	$(ECHO)	"#!/bin/sh" > $(DESTDIR)$(HTDOCSDIR)/smokeping.fcgi.dist
--	$(ECHO)	"$(prefix)/bin/smokeping_cgi $(prefix)/etc/config" >> $(DESTDIR)$(HTDOCSDIR)/smokeping.fcgi.dist
-+	$(ECHO)	"$(prefix)/bin/smokeping_cgi @PKG_SYSCONFDIR@/config" >> $(DESTDIR)$(HTDOCSDIR)/smokeping.fcgi.dist
+-	$(ECHO)	"exec $(bindir)/smokeping_cgi $(sysconfdir)/config" >> $(DESTDIR)$(HTDOCSDIR)/smokeping.fcgi.dist
++	$(ECHO)	"exec $(bindir)/smokeping_cgi  @PKG_SYSCONFDIR@/config" >> $(DESTDIR)$(HTDOCSDIR)/smokeping.fcgi.dist
  	chmod +x $(DESTDIR)$(HTDOCSDIR)/smokeping.fcgi.dist
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
