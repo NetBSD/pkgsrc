@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/04/27 18:05:18 bouyer Exp $
+
+--- Makefile.in.orig	2020-04-23 11:52:35.396108377 +0200
++++ Makefile.in	2020-04-23 11:53:14.548543368 +0200
+@@ -313,7 +313,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AUTOMAKE_OPTIONS = foreign
+-SUBDIRS = thirdparty doc etc htdocs lib bin
++SUBDIRS = doc etc htdocs lib bin
+ EXTRA_DIST = COPYRIGHT CHANGES CONTRIBUTORS LICENSE PERL_MODULES
+ THIRDPARTY_DIR := $(shell pwd)/thirdparty
+ all: all-recursive
+@@ -781,7 +781,6 @@
+ 	$(PERL) -i -p -e '"$(PACKAGE_VERSION)" =~ /(\d+)\.(\d+)\.(\d+)/ and $$v = sprintf("%d.%03d%03d",$$1,$$2,$$3) and s/^\$$VERSION\s*=\s*".*?"/\$$VERSION = "$$v"/'  $(distdir)/lib/Smokeping.pm
+ 
+ install-exec-hook:
+-	[ ! -d $(THIRDPARTY_DIR)/lib/perl5 ] || $(CP) -fr $(THIRDPARTY_DIR)/lib/perl5/* $(DESTDIR)$(libdir)
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
