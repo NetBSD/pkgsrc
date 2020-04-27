@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/02/01 13:00:42 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2020/04/27 15:16:48 mef Exp $
 share/examples/webmin/inetd/config
 share/webmin/inetd/CHANGELOG
 share/webmin/inetd/backup_config.pl
@@ -10,13 +10,13 @@ share/webmin/inetd/config-corel-linux
 share/webmin/inetd/config-debian-linux
 share/webmin/inetd/config-freebsd
 share/webmin/inetd/config-freebsd-2.1-2.2
-share/webmin/inetd/config-freebsd-8-*
+share/webmin/inetd/config-freebsd-8-ALL
 share/webmin/inetd/config-generic-linux
 share/webmin/inetd/config-hpux
 share/webmin/inetd/config-irix
 share/webmin/inetd/config-lfs-linux
 share/webmin/inetd/config-macos
-share/webmin/inetd/config-macos-1.5-*
+share/webmin/inetd/config-macos-1.5-ALL
 share/webmin/inetd/config-mandrake-linux
 share/webmin/inetd/config-msc-linux
 share/webmin/inetd/config-netbsd
@@ -31,7 +31,7 @@ share/webmin/inetd/config-redhat-linux
 share/webmin/inetd/config-slackware-linux
 share/webmin/inetd/config-sol-linux
 share/webmin/inetd/config-solaris
-share/webmin/inetd/config-solaris-10-*
+share/webmin/inetd/config-solaris-10-ALL
 share/webmin/inetd/config-solaris-8-9
 share/webmin/inetd/config-suse-linux
 share/webmin/inetd/config-suse-linux-6.3-8.0
@@ -60,11 +60,13 @@ share/webmin/inetd/config.info.pl
 share/webmin/inetd/config.info.pl.UTF-8
 share/webmin/inetd/config.info.ru.UTF-8
 share/webmin/inetd/config.info.ru_RU
+share/webmin/inetd/config.info.ru_RU.UTF-8
 share/webmin/inetd/config.info.ru_SU
 share/webmin/inetd/config.info.sv
 share/webmin/inetd/config.info.sv.UTF-8
 share/webmin/inetd/config.info.tr
 share/webmin/inetd/config.info.uk_UA
+share/webmin/inetd/config.info.uk_UA.UTF-8
 share/webmin/inetd/config.info.zh_CN
 share/webmin/inetd/config.info.zh_CN.UTF-8
 share/webmin/inetd/config.info.zh_TW.Big5
@@ -85,7 +87,6 @@ share/webmin/inetd/help/help.sv.html
 share/webmin/inetd/help/help.zh_TW.Big5.html
 share/webmin/inetd/help/help.zh_TW.UTF-8.html
 share/webmin/inetd/images/icon.gif
-share/webmin/inetd/images/smallicon.gif
 share/webmin/inetd/index.cgi
 share/webmin/inetd/inetd-generic-lib.pl
 share/webmin/inetd/inetd-lib.pl
@@ -126,6 +127,18 @@ share/webmin/inetd/lang/zh_TW.Big5
 share/webmin/inetd/lang/zh_TW.UTF-8
 share/webmin/inetd/log_parser.pl
 share/webmin/inetd/module.info
+share/webmin/inetd/module.info.ca
+share/webmin/inetd/module.info.ca.UTF-8
+share/webmin/inetd/module.info.de
+share/webmin/inetd/module.info.de.UTF-8
+share/webmin/inetd/module.info.hu
+share/webmin/inetd/module.info.hu.UTF-8
+share/webmin/inetd/module.info.ms_MY
+share/webmin/inetd/module.info.ms_MY.UTF-8
+share/webmin/inetd/module.info.nl
+share/webmin/inetd/module.info.nl.UTF-8
+share/webmin/inetd/module.info.no
+share/webmin/inetd/module.info.no.UTF-8
 share/webmin/inetd/restart_inetd.cgi
 share/webmin/inetd/save_rpc.cgi
 share/webmin/inetd/save_serv.cgi

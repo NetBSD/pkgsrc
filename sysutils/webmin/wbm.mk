@@ -1,4 +1,4 @@
-# $NetBSD: wbm.mk,v 1.14 2019/11/04 21:28:58 rillig Exp $
+# $NetBSD: wbm.mk,v 1.15 2020/04/27 15:16:45 mef Exp $
 #
 # Makefile fragment for Webmin modules
 #
@@ -77,6 +77,12 @@ WEBMIN_OSVERSION_cmd=	${AWK} '/^os_version=/ {sub("os_version=",""); print}' \
 			${WEBMIN_EGDIR}/config
 
 .PHONY: wbm-configure wbm-build wbm-install
+
+post-patch:
+	${FIND} ${WBMSRC} -name "*.pl"   |xargs ${CHMOD} -x
+	${FIND} ${WBMSRC} -name "*.html" |xargs ${CHMOD} -x
+	${FIND} ${WBMSRC} -name "*.gif"  |xargs ${CHMOD} -x
+	${FIND} ${WBMSRC} -name "*.png"  |xargs ${CHMOD} -x
 
 wbm-configure:
 	${FIND} ${WBMSRC} -name "*.orig" -print | ${XARGS} ${RM} -f

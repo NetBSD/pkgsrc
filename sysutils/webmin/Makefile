@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.49 2020/01/18 21:51:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2020/04/27 15:16:45 mef Exp $
 
-PKGREVISION= 3
 .include "version.mk"
 
 DISTNAME=	webmin-${WBM_VERSION}
@@ -59,6 +58,9 @@ CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}	\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
 .endfor
 RCD_SCRIPTS=		webmin
+
+REPLACE_SH=	update-from-repo.sh
+REPLACE_PYTHON= webmin/acme_tiny.py
 
 CHECK_INTERPRETER_SKIP+=	share/webmin/webmin-gentoo-init
 
@@ -143,5 +145,5 @@ do-install:
 	${CHMOD} -x *.pl */*.pl */*.gif */*/*.gif */*/*.html */*.ca lang/* \
 	*/lang/* */*.svg */*.png */*.eu
 
-
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
