@@ -1,28 +1,36 @@
-# $NetBSD: Makefile,v 1.43 2019/11/03 11:45:53 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2020/04/27 18:05:18 bouyer Exp $
 
-DISTNAME=	smokeping-2.6.7
-PKGREVISION=	8
+DISTNAME=	smokeping-2.7.3
 CATEGORIES=	net
 MASTER_SITES=	http://oss.oetiker.ch/smokeping/pub/
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	https://oss.oetiker.ch/smokeping/index.en.html
 COMMENT=	Latency/packet loss monitoring/graphing tool
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/smokeping
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-htdocs-dir=${PREFIX}/share/httpd/htdocs
+CONFIGURE_ARGS+=	--with-htdocs-dir=${PREFIX}/share/smokeping
 
 DEPENDS+=	rrdtool>=1.0:../../databases/rrdtool
 DEPENDS+=	fping>=2.4b2:../../net/fping
 #DEPENDS+=	{perl>=5.8.0,p5-Digest-MD5>=2.20}:../../security/p5-Digest-MD5
+DEPENDS+=	p5-Config-Grammar>=1.10:../../devel/p5-Config-Grammar
+DEPENDS+=	p5-Path-Tiny>=0.108:../../filesystems/p5-Path-Tiny
+DEPENDS+=	p5-Socket6>=0.29:../../net/p5-Socket6
+DEPENDS+=	p5-Net-Telnet>=3.04:../../net/p5-Net-Telnet
+DEPENDS+=	p5-Net-SNMP>=v6.0.1:../../net/p5-Net-SNMP
+DEPENDS+=	p5-Net-DNS>=1.23:../../net/p5-Net-DNS
 DEPENDS+=	p5-Digest-HMAC>=1.03:../../security/p5-Digest-HMAC
-DEPENDS+=	p5-libwww>=5.64:../../www/p5-libwww
+DEPENDS+=	p5-Net-OpenSSH>=0.78:../../security/p5-Net-OpenSSH
+DEPENDS+=	p5-IO-Socket-SSL>=2.067:../../security/p5-IO-Socket-SSL
+DEPENDS+=	p5-Digest-HMAC>=1.03:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-FCGI>=0.74:../../www/p5-FCGI
 DEPENDS+=	p5-CGI>=4.20:../../www/p5-CGI
 DEPENDS+=	p5-CGI-Fast>=2.09:../../www/p5-CGI-Fast
-DEPENDS+=	p5-Config-Grammar>=1.10:../../devel/p5-Config-Grammar
+DEPENDS+=	p5-libwww>=6.43:../../www/p5-libwww
 
 USE_TOOLS+=	pax gmake perl:run
 
@@ -68,7 +76,7 @@ SUBST_MESSAGE.libs=	Fixing library path
 OWN_DIRS+=		${SMOKEPING_HOME}
 OWN_DIRS+=		${SPDIR}/.simg
 
-INSTALLATION_DIRS=	bin libexec/cgi-bin share/httpd/htdocs
+INSTALLATION_DIRS=	bin libexec/cgi-bin share/smokeping
 
 post-extract:
 	${CP} ${FILESDIR}/smokeping.conf ${WRKSRC}
@@ -81,7 +89,7 @@ post-install:
 
 	${INSTALL_DATA} ${WRKSRC}/smokeping.conf ${DESTDIR}${EGDIR}
 
-	${MV} ${DESTDIR}${PREFIX}/share/httpd/htdocs/smokeping.fcgi.dist \
+	${MV} ${DESTDIR}${PREFIX}/share/smokeping/smokeping.fcgi.dist \
 		 ${DESTDIR}${PREFIX}/libexec/cgi-bin/smokeping.cgi
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/*.dist ${DESTDIR}${EGDIR}/
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/examples/* ${DESTDIR}${EGDIR}/
