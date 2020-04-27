@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/27 17:15:22 nikita Exp $
+
+SHA1 (go-cmp-0.4.0.tar.gz) = 9a75761c56d72ff0a50eccaa014f315811796a13
+RMD160 (go-cmp-0.4.0.tar.gz) = dbb7e95152e5bb674920901352bebe0ae0bdcd68
+SHA512 (go-cmp-0.4.0.tar.gz) = f848f5509189e14019eea56abde0e1fdf64a0de666b56270cfbd8832a656376273e3b71be556e0b637f69304c5b7099f1af4e069d6e025961dbafecf969e90ab
+Size (go-cmp-0.4.0.tar.gz) = 81600 bytes
