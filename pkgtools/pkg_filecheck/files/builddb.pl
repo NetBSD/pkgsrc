@@ -1,6 +1,6 @@
 #!@PERL5@
 
-#  $NetBSD: builddb.pl,v 1.2 2006/01/06 17:10:58 joerg Exp $
+#  $NetBSD: builddb.pl,v 1.3 2020/04/27 05:35:29 rillig Exp $
 #
 #  builddb -- build .byfile.db from tgz files or directory hierarchies.
 #  Copyright (C) 2000, 2003 Dieter Baron
@@ -51,7 +51,7 @@ my ($file, $pkg, $opkg);
 #
 
 $verbose = 0;
-$dbfile = '/var/db/pkg/xdb.byfile.db';
+$dbfile = '@PKG_DBDIR@/xdb.byfile.db';
 
 #
 # command line handling
