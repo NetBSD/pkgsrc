@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.263 2020/01/26 17:32:05 rillig Exp $
+# $NetBSD: Makefile,v 1.264 2020/04/27 04:08:43 rillig Exp $
 
 DISTNAME=		openssh-8.0p1
 PKGNAME=		${DISTNAME:S/p1/.1/}
@@ -143,7 +143,7 @@ FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR}
 
 SUBST_CLASSES+=		patch
 SUBST_STAGE.patch=	pre-configure
-SUBST_FILES.patch=	session.c sandbox-darwin.c
+SUBST_FILES.patch=	sandbox-darwin.c
 SUBST_SED.patch=	-e '/channel_input_port_forward_request/s/0/ROOTUID/'
 SUBST_VARS.patch=	PKG_SYSCONFDIR
 
