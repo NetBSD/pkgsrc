@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/04/12 06:24:30 adam Exp $
+# $NetBSD: Makefile,v 1.57 2020/04/28 05:47:25 riastradh Exp $
 
 DISTNAME=	PyQt5-5.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
@@ -70,6 +70,17 @@ post-install:
 	${MV} pylupdate5 pylupdate5-${PYVERSSUFFIX} && \
 	${MV} pyrcc5 pyrcc5-${PYVERSSUFFIX} && \
 	${MV} pyuic5 pyuic5-${PYVERSSUFFIX} || ${TRUE}
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.py-qt5
+PKG_SUPPORTED_OPTIONS+=	dbus
+PKG_SUGGESTED_OPTIONS+=	dbus
+
+.include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	dbus
+.if !empty(PKG_OPTIONS:Mdbus)
+PLIST.dbus=	yes
+.endif
 
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/dbus-python-common/buildlink3.mk"
