@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2627 2020/04/28 19:39:00 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2628 2020/04/28 21:14:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3761,3 +3761,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/unifont to 13.0.02 [wiz 2020-04-28]
 	Updated lang/vala to 0.48.5 [wiz 2020-04-28]
 	Updated security/tor-browser to 9.0.9nb2 [wiz 2020-04-28]
+	Added security/p5-Crypt-HSXKPasswd version 3.6 [wiz 2020-04-28]
