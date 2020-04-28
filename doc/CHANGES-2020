@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2621 2020/04/28 17:33:55 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2622 2020/04/28 17:37:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3755,3 +3755,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/ImageMagick to 7.0.10.8 [wiz 2020-04-28]
 	Updated devel/catch2 to 2.12.1 [wiz 2020-04-28]
 	Updated wm/i3 to 4.18.1 [wiz 2020-04-28]
+	Updated audio/musicpd to 0.21.23 [wiz 2020-04-28]
