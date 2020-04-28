@@ -1,0 +1,4 @@
+Inspired by a XKCD webcomic and by Steve Gibson's Password Haystacks
+page, HSXKPasswd is a Perl module (Crypt::HSXKPasswd) and terminal
+command (hsxkpasswd) for generating passwords that are secure,
+memorable, and easy to read, type, and share over the phone.
