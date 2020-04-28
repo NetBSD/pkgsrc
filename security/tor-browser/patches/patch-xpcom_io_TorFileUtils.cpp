@@ -1,4 +1,6 @@
-$NetBSD: patch-xpcom_io_TorFileUtils.cpp,v 1.2 2019/02/25 15:32:24 wiz Exp $
+$NetBSD: patch-xpcom_io_TorFileUtils.cpp,v 1.3 2020/04/28 19:38:49 wiz Exp $
+
+Set default directory for configuration files and profiles to $HOME/.tor-browser
 
 --- xpcom/io/TorFileUtils.cpp.orig	2019-02-23 20:01:00.000000000 +0000
 +++ xpcom/io/TorFileUtils.cpp
@@ -14,7 +16,7 @@ $NetBSD: patch-xpcom_io_TorFileUtils.cpp,v 1.2 2019/02/25 15:32:24 wiz Exp $
 +  nsresult rv = NS_NewNativeLocalFile(nsDependentCString(homeDir), true,
 +                                      getter_AddRefs(tbDataDir));
 +  NS_ENSURE_SUCCESS(rv, rv);
-+  nsAutoCString leafSubdir(NS_LITERAL_CSTRING("TorBrowser-Data"));
++  nsAutoCString leafSubdir(NS_LITERAL_CSTRING(".tor-browser"));
 +  rv = tbDataDir->AppendNative(leafSubdir);
 +  NS_ENSURE_SUCCESS(rv, rv);
 +#elif TOR_BROWSER_DATA_OUTSIDE_APP_DIR
