@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2614 2020/04/28 13:53:57 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.2615 2020/04/28 15:22:42 manu Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3748,3 +3748,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-lmfit to 1.0.0 [adam 2020-04-28]
 	Added devel/go-pkgconfig version 0.0.0.20170226 [nikita 2020-04-28]
 	Added security/libgabe version 1.0 [nikita 2020-04-28]
+	Added net/openrrcp 0.2.1 [manu 2020-04-28]
