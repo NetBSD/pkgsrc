@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/04/24 09:25:04 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/28 11:06:20 adam Exp $
 
-DISTNAME=	requests-file-1.5.0
+DISTNAME=	requests-file-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-file/}
@@ -14,6 +14,9 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=1.0.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+do-test:
+	cd ${WRKSRC} && ${PYTHONBIN} -m unittest tests/test_requests_file.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
