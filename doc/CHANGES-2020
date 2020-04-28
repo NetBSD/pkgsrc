@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2604 2020/04/27 22:44:41 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2605 2020/04/28 05:29:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3730,3 +3730,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added print/tex-pdftexcmds version 0.31 [markd 2020-04-27]
 	Added print/tex-pdftexcmds-doc version 0.31 [markd 2020-04-27]
 	Updated print/p5-biblatex-biber to 2.14 [markd 2020-04-27]
+	Updated security/sudo to 1.8.31p1 [taca 2020-04-28]
