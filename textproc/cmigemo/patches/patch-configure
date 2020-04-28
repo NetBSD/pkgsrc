@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2013/09/01 05:28:26 obache Exp $
+$NetBSD: patch-configure,v 1.2 2020/04/28 04:17:29 rillig Exp $
 
 * prefer user select tool via envrinment variable to auto detect one. 
 
@@ -19,7 +19,7 @@ $NetBSD: patch-configure,v 1.1 2013/09/01 05:28:26 obache Exp $
 +fi
  
  # Check encoding filter
-+if TEST -z "$PROGRAM_ENCODEFILTER"; then
++if test -z "$PROGRAM_ENCODEFILTER"; then
  if CHECK_COMMAND qkc ; then
    PROGRAM_ENCODEFILTER="qkc -q -u"
  elif CHECK_COMMAND nkf ; then
