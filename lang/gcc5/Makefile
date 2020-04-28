@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/01/18 23:32:43 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/04/28 16:02:20 rillig Exp $
 
 GCC_PKGNAME=		gcc5
 PKGREVISION=		5
@@ -26,6 +26,9 @@ NOT_FOR_PLATFORM=	Interix-*-*
 USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake makeinfo sed:run tar:build
 USE_TOOLS.NetBSD+=	gsed
+
+# These are not used during the build.
+CHECK_PORTABILITY_SKIP+=	contrib/*
 
 GNU_CONFIGURE=		yes
 ## Build outside ${WRKSRC}
