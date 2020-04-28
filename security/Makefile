@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.753 2020/04/25 18:36:10 gutteridge Exp $
+# $NetBSD: Makefile,v 1.754 2020/04/28 13:46:35 nikita Exp $
 #
 
 COMMENT=	Security tools
@@ -163,6 +163,7 @@ SUBDIR+=	libdecaf
 SUBDIR+=	libdes
 SUBDIR+=	libfprint
 SUBDIR+=	libfwbuilder
+SUBDIR+=	libgabe
 SUBDIR+=	libgcrypt
 SUBDIR+=	libgfshare
 SUBDIR+=	libglobalplatform
