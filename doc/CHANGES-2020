@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2605 2020/04/28 05:29:42 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2606 2020/04/28 09:45:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3731,3 +3731,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added print/tex-pdftexcmds-doc version 0.31 [markd 2020-04-27]
 	Updated print/p5-biblatex-biber to 2.14 [markd 2020-04-27]
 	Updated security/sudo to 1.8.31p1 [taca 2020-04-28]
+	Added devel/py-pybind11 version 2.5.0 [adam 2020-04-28]
+	Updated math/py-scipy to 1.4.1 [adam 2020-04-28]
