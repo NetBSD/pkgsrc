@@ -1,0 +1,2 @@
+Fork of the CP ABE library libbswabe (http://hms.isi.jhu.edu/acsc/cpabe/)
+replacing OpenSSL with libgcrypt and fixing some bugs.
