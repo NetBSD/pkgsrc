@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2001/10/07 15:03:33 fredb Exp $
+$NetBSD: patch-Border.C,v 1.1 2020/04/28 15:28:57 nikita Exp $
 
---- Border.C.orig	Wed Apr  4 04:02:34 2001
+--- Border.C.orig	2014-11-16 19:34:19.000000000 +0000
 +++ Border.C
-@@ -191,7 +191,7 @@
+@@ -306,7 +306,7 @@ void Border::initialiseStatics(WindowMan
                  strcpy (pixMapPath, home);
                  strcat (pixMapPath, "/");
                  strcat (pixMapPath, CONFIG_COMMAND_MENU);
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1 2001/10/07 15:03:33 fredb Exp $
                  
                  // look for background pixmap file in
                  // the users .wmx directory. It is *not*
-@@ -239,9 +239,8 @@
+@@ -354,9 +354,8 @@ void Border::initialiseStatics(WindowMan
                  m_backgroundPixmap = None;
                  break;
              }
