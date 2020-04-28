@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/01/26 17:31:48 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2020/04/28 04:06:09 rillig Exp $
 
 DISTNAME=	chrony-3.5
 PKGREVISION=	1
@@ -27,9 +27,8 @@ EGFILES=		chrony.conf.example3 chrony.keys.example
 RCD_SCRIPTS=		chronyd
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${EGFILES:S/^/examples\//} conf.c
-SUBST_VARS.paths+=	PKG_SYSCONFDIR
-SUBST_VARS.paths+=	VARBASE
+SUBST_FILES.paths=	examples/chrony.conf.example3
+SUBST_VARS.paths=	PKG_SYSCONFDIR VARBASE
 SUBST_STAGE.paths=	pre-configure
 
 post-install:
