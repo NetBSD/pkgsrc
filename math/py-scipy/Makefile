@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2019/11/04 17:47:30 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2020/04/28 09:45:27 adam Exp $
 
-DISTNAME=	scipy-1.3.0
+DISTNAME=	scipy-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -10,17 +10,18 @@ HOMEPAGE=	https://www.scipy.org/
 COMMENT=	Scientific Algorithms Library for Python
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-pybind11-[0-9]*:../../devel/py-pybind11
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
 USE_LANGUAGES+=	c c++ fortran
 MAKE_ENV+=	ATLAS=None
 
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
 
-.if defined(PKGSRC_FORTRAN) && ${PKGSRC_FORTRAN} == "g95"
-PYSETUPBUILDARGS+=	--fcompiler=g95
-.elif defined(PKGSRC_FORTRAN) && ${PKGSRC_FORTRAN} == "gfortran"
+.if defined(PKGSRC_FORTRAN) && ${PKGSRC_FORTRAN} == "gfortran"
 PYSETUPBUILDARGS+=	--fcompiler=gnu95
-LDFLAGS.Darwin+=	-undefined dynamic_lookup
 .else
 BROKEN=			"Requires fortran 95"
 .endif
@@ -48,9 +49,6 @@ fix-darwin-install-name:
 	done
 .endif
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-
 # self test failures for 1.1.0 reported at
 # https://github.com/scipy/scipy/issues/9196
 # needs 'make install' first!
@@ -58,12 +56,13 @@ do-test:
 	cd ${WRKDIR} && \
 	${PYTHONBIN} -c "import scipy; scipy.test('full')"
 
+.include "../../devel/py-cython/buildlink3.mk"
+.include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
-.include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.8.2
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.17.3
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
