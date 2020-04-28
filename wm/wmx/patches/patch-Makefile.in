@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2020/04/28 15:28:57 nikita Exp $
+
+--- Makefile.in.orig	2014-11-16 19:34:19.000000000 +0000
++++ Makefile.in
+@@ -12,9 +12,9 @@ LDFLAGS=@LDFLAGS@
+ 
+ # If your X includes are not in /usr/include/X11, add their location
+ # as a -I option here (excluding the X11 bit).  If you're using I18N
+ # and Xlocale, please add -DX_LOCALE.
+ #CFLAGS = -g -O2 -I/usr/include -I/usr/openwin/include
+-CXXFLAGS=@CXXFLAGS@ @XFT_CFLAGS@ @FT_CFLAGS@ @FC_CFLAGS@ -Wall
++CXXFLAGS=@CXXFLAGS@ @XFT_CFLAGS@ @FT_CFLAGS@ @FC_CFLAGS@ -Wall -DPREFIX=\"${PREFIX}\"
+ 
+ OBJECTS	= Border.o Buttons.o Channel.o Client.o Config.o Events.o Main.o Manager.o Menu.o Rotated.o Session.o
+ 
