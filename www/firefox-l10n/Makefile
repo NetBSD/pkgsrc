@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.173 2020/04/09 14:02:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.174 2020/04/28 12:17:08 ryoon Exp $
 
 FIREFOX_VER=	75.0
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/esr//}
+PKGREVISION=	1
 DISTNAME=	# empty
 CATEGORIES=	www
 #MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/linux-i686/xpi/}
@@ -19,7 +20,7 @@ DISTFILES=	${FIREFOX_LOCALES:=.xpi}
 
 NO_BUILD=	yes
 
-INSTALLATION_DIRS=	lib/firefox/browser/extensions
+INSTALLATION_DIRS=	lib/firefox/distribution/extensions
 
 FIREFOX_LOCALES= \
 	ach af an ar ast az be bg bn br bs ca cak cs cy da de dsb	\
@@ -30,7 +31,7 @@ FIREFOX_LOCALES= \
 	pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE		\
 	ta te th tr uk uz vi xh zh-CN zh-TW
 
-EXTENSIONS_DIR=		${PREFIX}/lib/firefox/browser/extensions
+EXTENSIONS_DIR=		${PREFIX}/lib/firefox/distribution/extensions
 
 do-install:
 .for locale in ${FIREFOX_LOCALES}
