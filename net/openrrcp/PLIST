@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/28 15:22:43 manu Exp $
+bin/rrcpcli
+bin/rtl8316b
+bin/rtl8324
+bin/rtl8326
+bin/rtl83xx
+bin/rtl83xx_asus_gigax_1024p
+bin/rtl83xx_compex_ps2216
+bin/rtl83xx_compex_ps2216_6d
+bin/rtl83xx_compex_ps2216_6dp
+bin/rtl83xx_compex_sds1224
+bin/rtl83xx_dlink_des1016d
+bin/rtl83xx_dlink_des1024d_b1
+bin/rtl83xx_dlink_des1024d_c1
+bin/rtl83xx_edimax_es-3116p
+bin/rtl83xx_ovislink_fsh2402gt
+bin/rtl83xx_repotec_g3224x
+bin/rtl83xx_signamax_065-7531a
+bin/rtl83xx_zyxel_es116p
