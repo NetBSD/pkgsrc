@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2020/04/27 14:54:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.98 2020/04/28 02:43:21 rillig Exp $
 
 DISTNAME=		pkgin-0.16.0
+PKGREVISION=		1
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NetBSDfr/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -31,6 +32,7 @@ SUBST_SED.path+=	-e "s|/usr/sbin|${PKG_TOOLS_BIN}|g"
 SUBST_SED.path+=	-e "s|/var|${VARBASE}|g"
 SUBST_SED.path+=	-e "s|/usr/pkg|${PREFIX}|g"
 SUBST_SED.path+=	-e "s|!=.*uname -p|=	${MACHINE_ARCH}|g"
+SUBST_SED.path+=	-e '/^BSD_PKG_MK/a\${.newline}PKGPATH=	${PKGPATH}'
 
 GNU_CONFIGURE=		yes
 USE_FEATURES=		nbcompat
