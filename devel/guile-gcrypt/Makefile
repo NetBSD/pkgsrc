@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/03 17:17:29 ng0 Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/28 11:46:28 nikita Exp $
 
 DISTNAME=	v0.2.1
 DIST_SUBDIR=	guile-gcrypt
@@ -6,7 +6,7 @@ PKGNAME=	guile-gcrypt-${DISTNAME:S/v//}
 CATEGORIES=	devel
 MASTER_SITES=	https://notabug.org/cwebber/guile-gcrypt/archive/
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://notabug.org/cwebber/guile-gcrypt/archive/
 COMMENT=	Guile bindings for libgcrypt
 LICENSE=	gnu-gpl-v3

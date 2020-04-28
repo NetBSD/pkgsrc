@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2019/11/13 10:04:19 ng0 Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/28 11:46:29 nikita Exp $
 
 DISTNAME=	gash-0.1
 PKGNAME=	guile-${DISTNAME}
 CATEGORIES=	shells
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/gash/
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://git.savannah.nongnu.org/cgit/gash.git
 COMMENT=	POSIX-compatible shell written in Guile Scheme
 LICENSE=	gnu-gpl-v3
