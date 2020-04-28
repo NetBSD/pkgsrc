@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.26 2020/01/26 17:32:20 rillig Exp $
+# $NetBSD: Makefile.common,v 1.27 2020/04/28 15:28:57 nikita Exp $
 #
 # used by wm/wmx/Makefile
 # used by wm/wmx-gnome/Makefile
 
-DISTNAME=	wmx-6
-WMX_VERS=	6.0
+DISTNAME=	wmx-8
+WMX_VERS=	8.0
 CATEGORIES+=	x11 wm
 MASTER_SITES=	http://www.all-day-breakfast.com/wmx/
 
@@ -15,6 +15,7 @@ CONFLICTS+=	wmx-[0-9]* wmx-gnome-[0-9]*
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 BUILD_TARGET=		depend all
 
 DISTINFO_FILE=		${.CURDIR}/../../wm/wmx/distinfo
@@ -33,6 +34,10 @@ do-install:
 
 BUILDLINK_DEPMETHOD.libXt+=	build
 
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
