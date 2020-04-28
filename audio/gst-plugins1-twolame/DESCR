@@ -8,5 +8,5 @@ simple plugin with a clean, generic interface.
 
 GStreamer is released under the LGPL.
 
-This package is part of the 'ugly' plugins for GStreamer.  It provides the
+This package is part of the 'good' plugins for GStreamer.  It provides the
 twolame plugin, which allows MP2 encoding.
