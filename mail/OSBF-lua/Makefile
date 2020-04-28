@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/04/14 12:47:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/04/28 09:45:26 wiz Exp $
 
 DISTNAME=	osbf-lua-2.0.4
 PKGREVISION=	6
@@ -15,6 +15,8 @@ PREV_PKGPATH=	mail/lua-OSBF
 USE_TOOLS+=		gmake
 
 INSTALL_TARGET=	install install_spamfilter
+
+LUA_VERSIONS_ACCEPTED=	52
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
