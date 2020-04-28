@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2610 2020/04/28 12:17:44 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2611 2020/04/28 13:18:16 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3741,3 +3741,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-zeroconf to 0.26.0 [adam 2020-04-28]
 	Updated multimedia/obs-studio to 25.0.8 [ryoon 2020-04-28]
 	Updated www/firefox-l10n to 75.0nb1 [ryoon 2020-04-28]
+	Added devel/go-gospel version 0.0.20200416 [nikita 2020-04-28]
