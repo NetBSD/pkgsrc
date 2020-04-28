@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2019/11/26 18:10:55 ng0 Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/28 11:46:30 nikita Exp $
 
 DISTNAME=	haunt-0.2.4
 PKGNAME=	guile-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://files.dthompson.us/haunt/
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://files.dthompson.us/haunt/
 COMMENT=	Functional static web site generator
 LICENSE=	gnu-gpl-v3

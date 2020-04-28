@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2019/11/13 13:19:39 ng0 Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/28 11:46:30 nikita Exp $
 
 DISTNAME=	guile-syntax-highlight-0.1
 CATEGORIES=	textproc
 MASTER_SITES=	https://files.dthompson.us/guile-syntax-highlight/
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://dthompson.us/projects/guile-syntax-highlight.html
 COMMENT=	General-purpose syntax highlighting library for GNU Guile
 LICENSE=	gnu-lgpl-v3
