@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/28 13:46:35 nikita Exp $
+include/gabe.h
+lib/libgabe.a
