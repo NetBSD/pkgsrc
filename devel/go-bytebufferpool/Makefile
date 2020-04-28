@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/04/12 11:01:35 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/28 11:46:28 nikita Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	go-bytebufferpool-1.0.0
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=valyala/}
 GITHUB_PROJECT=	bytebufferpool
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/valyala/bytebufferpool/
 COMMENT=	Implementation of a pool of byte buffers with anti-memory-waste protection for Go
 LICENSE=	mit

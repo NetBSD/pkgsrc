@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2020/04/06 08:34:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/28 11:46:28 nikita Exp $
 
 DISTNAME=	guile-git-0.2.0
 PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.com/guile-git/guile-git/uploads/160f6a36c1be8d4fc1990a193081a04d/
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://gitlab.com/guile-git/guile-git/
 COMMENT=	Guile bindings of libgit2
 LICENSE=	gnu-gpl-v3

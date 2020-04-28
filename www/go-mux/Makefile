@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/04/12 11:01:49 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/28 11:46:30 nikita Exp $
 
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 DISTNAME=		go-mux-1.7.3
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gorilla/}
 GITHUB_PROJECT=		mux
 
-MAINTAINER=		ng0@NetBSD.org
+MAINTAINER=		nikita@NetBSD.org
 HOMEPAGE=		https://github.com/gorilla/mux
 COMMENT=		URL router and dispatcher for Go
 LICENSE=		modified-bsd # bsd-3
