@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3115 2020/04/28 13:14:21 nikita Exp $
+# $NetBSD: Makefile,v 1.3116 2020/04/28 13:28:04 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -437,6 +437,7 @@ SUBDIR+=	go-nbreader
 SUBDIR+=	go-nitro
 SUBDIR+=	go-osext
 SUBDIR+=	go-pflag
+SUBDIR+=	go-pkgconfig
 SUBDIR+=	go-properties
 SUBDIR+=	go-protobuf
 SUBDIR+=	go-purell

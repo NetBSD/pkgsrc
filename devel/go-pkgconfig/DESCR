@@ -1,0 +1,2 @@
+A lightweight pkg-config(1) clone written in Go,
+which currently only supports a limited set of features.
