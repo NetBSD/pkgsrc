@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2020/03/10 22:10:24 wiz Exp $
+# $NetBSD: Makefile,v 1.132 2020/04/28 05:46:53 riastradh Exp $
 #
 
 DISTNAME=	coq-8.10.2
@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV:S/+/-/}
 
+USE_TOOLS+=		bash
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-prefix ${PREFIX}
