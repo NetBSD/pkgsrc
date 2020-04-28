@@ -1,19 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2003/05/05 16:13:15 fredb Exp $
+$NetBSD: patch-Config.h,v 1.1 2020/04/28 15:28:57 nikita Exp $
 
---- Config.h.orig	Wed May 24 10:48:59 2000
-+++ Config.h
-@@ -75,8 +75,8 @@
+--- Config.h.orig       2020-04-28 17:06:07.665643251 +0200
++++ Config.h    2020-04-28 17:10:09.868288671 +0200
+@@ -79,7 +79,7 @@
  
  // What to run to get a new window (from the "New" menu option)
  #define CONFIG_NEW_WINDOW_LABEL "New"
--//#define CONFIG_NEW_WINDOW_COMMAND "xterm"
--#define CONFIG_NEW_WINDOW_COMMAND "/home/chris/.wmx/terminal"
+-#define CONFIG_NEW_WINDOW_COMMAND "x-terminal-emulator"
 +#define CONFIG_NEW_WINDOW_COMMAND "xterm"
-+//#define CONFIG_NEW_WINDOW_COMMAND "/home/chris/.wmx/terminal"
  #define CONFIG_NEW_WINDOW_COMMAND_OPTIONS 0
  // or, for example,
  //#define CONFIG_NEW_WINDOW_COMMAND_OPTIONS "-ls","-sb","-sl","1024",0
-@@ -91,7 +91,7 @@
+@@ -94,7 +94,7 @@
  // middle-button menu
  #define CONFIG_COMMAND_MENU       ".wmx"
  // only used if COMMAND_MENU is not found; ignored if invalid directory:
@@ -22,17 +20,7 @@ $NetBSD: patch-aa,v 1.4 2003/05/05 16:13:15 fredb Exp $
  // append screennumber to COMMAND_MENU directory;
  // use non screen style as fallback
  #define CONFIG_ADD_SCREEN_TO_COMMAND_MENU False
-@@ -373,7 +373,9 @@
- // that you are not currently on, some strange things happen.
- // (Patch due to Henri Naccache <henri@asu.edu>)
- 
-+#ifndef CONFIG_GNOME_COMPLIANCE
- #define CONFIG_GNOME_COMPLIANCE   False
-+#endif
- 
- // This lets you choose whether to keep the regular wmx
- // mouse button behaviour, or go w/ the GNOME-described one.
-@@ -383,7 +385,9 @@
+@@ -419,7 +419,9 @@
  // command menu, and the middle mouse button (button2)
  // acts like the left mouse normally does (list of windows)
  
@@ -41,4 +29,3 @@ $NetBSD: patch-aa,v 1.4 2003/05/05 16:13:15 fredb Exp $
 +#endif
  
  #endif
- 
