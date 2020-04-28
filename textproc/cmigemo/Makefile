@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/04/28 04:17:29 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/04/28 04:20:59 rillig Exp $
 #
 
 DISTNAME=	cmigemo-default-src-20110227
@@ -36,7 +36,7 @@ INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-configure
-SUBST_FILES.prefix=	compile/config_default.mk compile/Make_gcc.mak compile/Make_sun.mak doc/README* tools/migemo.vim
+SUBST_FILES.prefix=	compile/config_default.mk compile/Make_sun.mak doc/README* tools/migemo.vim
 SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
 
 BUILD_TARGET=	gcc-all
