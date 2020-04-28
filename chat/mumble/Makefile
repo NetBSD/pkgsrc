@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/04/12 08:28:21 adam Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/28 05:46:27 riastradh Exp $
 
 DISTNAME=	mumble-1.3.0
 PKGREVISION=	7
@@ -15,6 +15,9 @@ LICENSE=	modified-bsd
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++11
 USE_LIBTOOL=	yes
+
+PYTHON_FOR_BUILD_ONLY=	tool
+CONFIGURE_ENV+=		MUMBLE_PYTHON=${PYTHONBIN:Q}
 
 BUILD_TARGET=	release
 
@@ -61,7 +64,7 @@ INSTALLATION_DIRS+=	share/pixmaps
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 do-configure:
-	cd ${WRKSRC} && ${QTDIR}/bin/qmake -unix -recursive main.pro \
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake -unix -recursive main.pro \
 	    ${CONFIG_OPTIONS} ${MAKE_ENV} \
 	    QMAKE_CFLAGS=${CFLAGS:Q} \
 	    QMAKE_CXXFLAGS=${CXXFLAGS:Q} \
@@ -104,6 +107,7 @@ do-install:
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
