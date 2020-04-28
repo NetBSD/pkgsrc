@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2606 2020/04/28 09:45:46 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2607 2020/04/28 11:06:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3733,3 +3733,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/sudo to 1.8.31p1 [taca 2020-04-28]
 	Added devel/py-pybind11 version 2.5.0 [adam 2020-04-28]
 	Updated math/py-scipy to 1.4.1 [adam 2020-04-28]
+	Updated devel/py-click to 7.1.2 [adam 2020-04-28]
+	Updated devel/py-xdis to 4.5.1 [adam 2020-04-28]
+	Updated lang/py-uncompyle6 to 3.6.7 [adam 2020-04-28]
+	Updated devel/py-requests-file to 1.5.1 [adam 2020-04-28]
