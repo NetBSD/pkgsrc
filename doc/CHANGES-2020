@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2611 2020/04/28 13:18:16 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.2612 2020/04/28 13:27:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3742,3 +3742,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/obs-studio to 25.0.8 [ryoon 2020-04-28]
 	Updated www/firefox-l10n to 75.0nb1 [ryoon 2020-04-28]
 	Added devel/go-gospel version 0.0.20200416 [nikita 2020-04-28]
+	Updated math/py-numexpr to 2.7.1 [adam 2020-04-28]
+	Updated devel/py-limits to 1.5.1 [adam 2020-04-28]
+	Updated textproc/py-tabulate to 0.8.7 [adam 2020-04-28]
+	Updated math/py-lmfit to 1.0.0 [adam 2020-04-28]
