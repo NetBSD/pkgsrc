@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/12/22 13:10:26 ng0 Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/28 11:46:29 nikita Exp $
 
 PKGNAME=	ibm-plex-ttf-4.0.2
 GITHUB_PROJECT=	plex
@@ -9,7 +9,7 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/IBM/plex/
 COMMENT=	IBM plex typeface (TrueType)
 LICENSE=	ofl-v1.1

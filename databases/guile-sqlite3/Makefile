@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/04/12 08:28:24 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/28 11:46:27 nikita Exp $
 
 DISTNAME=	v0.1.0
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://notabug.org/guile-sqlite3/guile-sqlite3/archive/
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://notabug.org/guile-sqlite3/guile-sqlite3/
 COMMENT=	Guile bindings for the SQLite3 database engine
 LICENSE=	gnu-gpl-v3

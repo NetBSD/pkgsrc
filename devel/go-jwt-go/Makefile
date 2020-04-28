@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/04/12 11:01:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/28 11:46:28 nikita Exp $
 
 GITHUB_PROJECT=	jwt-go
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -9,7 +9,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dgrijalva/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/dgrijalva/jwt-go/
 COMMENT=	Golang implementation of JSON Web Token
 LICENSE=	mit
