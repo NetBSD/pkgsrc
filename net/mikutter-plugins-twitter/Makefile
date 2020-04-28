@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/03/20 04:01:24 tsutsui Exp $
+# $NetBSD: Makefile,v 1.5 2020/04/28 13:31:36 tsutsui Exp $
 
 PKGNAME=	${RUBY_PKGPREFIX}-mikutter-plugins-twitter-4.0
-PKGREVISION=	1
+PKGREVISION=	2
 DIST_SUBDIR=	mikutter-plugins
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mikutter/}
@@ -30,7 +30,7 @@ PLUGIN_DISTNAME+=	ratelimit-1.0
 PLUGIN_DISTNAME+=	rest-1.1
 PLUGIN_DISTNAME+=	saved_search-1.1
 PLUGIN_DISTNAME+=	streaming-2.0
-PLUGIN_DISTNAME+=	twitter-1.0
+PLUGIN_DISTNAME+=	twitter-1.1
 PLUGIN_DISTNAME+=	twitter_activity-1.0
 PLUGIN_DISTNAME+=	twitter_datasource-1.1
 PLUGIN_DISTNAME+=	twitter_settings-1.0
