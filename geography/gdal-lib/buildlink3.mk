@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.60 2020/04/12 08:27:55 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.61 2020/04/28 23:53:44 gdt Exp $
 
 BUILDLINK_TREE+=	gdal-lib
 
 .if !defined(GDAL_LIB_BUILDLINK3_MK)
 GDAL_LIB_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gdal-lib+=	gdal-lib>=1.6.1
-BUILDLINK_ABI_DEPENDS.gdal-lib+=	gdal-lib>=2.4.3nb6
+BUILDLINK_API_DEPENDS.gdal-lib+=	gdal-lib>=3.0.0
+BUILDLINK_ABI_DEPENDS.gdal-lib+=	gdal-lib>=3.0.0
 BUILDLINK_PKGSRCDIR.gdal-lib?=		../../geography/gdal-lib
 
 pkgbase := gdal-lib
