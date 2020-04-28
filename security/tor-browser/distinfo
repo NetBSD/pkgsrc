@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2020/04/10 19:18:00 wiz Exp $
+$NetBSD: distinfo,v 1.18 2020/04/28 19:38:49 wiz Exp $
 
 SHA1 (src-firefox-tor-browser-68.7.0esr-9.0-2-build1.tar.xz) = c9be70c6cbbac9d73d1aee930703ea4d013725df
 RMD160 (src-firefox-tor-browser-68.7.0esr-9.0-2-build1.tar.xz) = 6289e342fa8e99c21098331d153beb6d88bc39b2
@@ -6,6 +6,7 @@ SHA512 (src-firefox-tor-browser-68.7.0esr-9.0-2-build1.tar.xz) = 6cf582c1eb3092c
 Size (src-firefox-tor-browser-68.7.0esr-9.0-2-build1.tar.xz) = 348594032 bytes
 SHA1 (patch-.mozconfig) = 66fbb2f113091eee1f022cd656231f845b04b0f8
 SHA1 (patch-aa) = 9f7200c411cd2217a80ec10a276c8877bc6b845c
+SHA1 (patch-browser_app_profile_000-tor-browser.js) = 545cf6e80f061a6a58b429d2696046de4e34725f
 SHA1 (patch-browser_app_profile_firefox.js) = 076cc2892547bac07fe907533f4e821f13f5738e
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-dom_media_CubebUtils.cpp) = 3cd2c65ab281d802c56216565970450767a3fb24
@@ -38,5 +39,5 @@ SHA1 (patch-toolkit_mozapps_installer_packager.mk) = b2343fbad2556504dfd13601c02
 SHA1 (patch-toolkit_xre_glxtest.cpp) = 04942938f45f326c7d5c4da3bf8cc2d09b977c69
 SHA1 (patch-xpcom_base_nscore.h) = 1ac4d34d3c9e80bc1ac966c6c84cb320bc0fa1ec
 SHA1 (patch-xpcom_build_BinaryPath.h) = 92461769d2fee8f015b91a5326247f271afeedea
-SHA1 (patch-xpcom_io_TorFileUtils.cpp) = c23d867b5a97a4c169198831b816b1bcef8dc630
+SHA1 (patch-xpcom_io_TorFileUtils.cpp) = 3f5c5490a3e4e0117cca3c558de93f2ffea05405
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 6956c90d4c74c71e7e9a5882e4840ba2673160fa
