@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2629 2020/04/28 21:16:39 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2630 2020/04/28 23:50:12 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3763,3 +3763,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/tor-browser to 9.0.9nb2 [wiz 2020-04-28]
 	Added security/p5-Crypt-HSXKPasswd version 3.6 [wiz 2020-04-28]
 	Updated www/py-beautifulsoup4 to 4.9.0 [gutteridge 2020-04-28]
+	Updated geography/gdal-lib to 3.0.4 [gdt 2020-04-28]
