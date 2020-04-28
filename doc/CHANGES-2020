@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2620 2020/04/28 17:32:07 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2621 2020/04/28 17:33:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3754,3 +3754,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/freeDiameter to 1.4.0 [wiz 2020-04-28]
 	Updated graphics/ImageMagick to 7.0.10.8 [wiz 2020-04-28]
 	Updated devel/catch2 to 2.12.1 [wiz 2020-04-28]
+	Updated wm/i3 to 4.18.1 [wiz 2020-04-28]
