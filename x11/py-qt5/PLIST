@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/04/12 06:24:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2020/04/28 05:47:25 riastradh Exp $
 bin/pylupdate5-${PYVERSSUFFIX}
 bin/pyrcc5-${PYVERSSUFFIX}
 bin/pyuic5-${PYVERSSUFFIX}
@@ -8,8 +8,8 @@ ${PYSITELIB}/PyQt5-${PKGVERSION}.dist-info/RECORD
 ${PYSITELIB}/PyQt5/Qt.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtCore.pyi
 ${PYSITELIB}/PyQt5/QtCore.so
-${PLIST.py3x}${PYSITELIB}/PyQt5/QtDBus.pyi
-${PYSITELIB}/PyQt5/QtDBus.so
+${PLIST.dbus}${PLIST.py3x}${PYSITELIB}/PyQt5/QtDBus.pyi
+${PLIST.dbus}${PYSITELIB}/PyQt5/QtDBus.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtDesigner.pyi
 ${PYSITELIB}/PyQt5/QtDesigner.so
 ${PLIST.py3x}${PYSITELIB}/PyQt5/QtGui.pyi
