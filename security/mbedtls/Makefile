@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/03/22 07:47:00 nia Exp $
+# $NetBSD: Makefile,v 1.13.2.1 2020/04/28 16:23:53 bsiegert Exp $
 
-DISTNAME=	mbedtls-2.16.5-apache
+DISTNAME=	mbedtls-2.16.6-apache
 PKGNAME=	${DISTNAME:-apache=}
 CATEGORIES=	security devel
 MASTER_SITES=	https://tls.mbed.org/download/
