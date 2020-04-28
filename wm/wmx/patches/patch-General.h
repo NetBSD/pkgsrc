@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2005/12/06 16:25:26 joerg Exp $
+$NetBSD: patch-General.h,v 1.1 2020/04/28 15:28:57 nikita Exp $
 
---- General.h.orig	Thu May 11 05:37:35 2000
+--- General.h.orig	2014-11-16 19:34:19.000000000 +0000
 +++ General.h
-@@ -11,7 +11,7 @@
+@@ -12,7 +12,7 @@
  #undef _POSIX_SOURCE
  #endif
  
