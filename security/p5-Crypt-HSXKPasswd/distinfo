@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/28 21:13:44 wiz Exp $
+
+SHA1 (Crypt-HSXKPasswd-v3.6.tar.gz) = 62376310b78276238ee87cc3bc2be2da17a0a610
+RMD160 (Crypt-HSXKPasswd-v3.6.tar.gz) = 0391fb8a9bacf2476b9c1f35aee37bf10baba427
+SHA512 (Crypt-HSXKPasswd-v3.6.tar.gz) = bacb9d6f6b1da94c18ebf53463ed6cce654634b94d21769e3a2733344086d84f862e7e9f7058dbf11413e27ac36bb8f178ca00afb302baa28277f455a87df194
+Size (Crypt-HSXKPasswd-v3.6.tar.gz) = 17938667 bytes
