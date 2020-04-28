@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2608 2020/04/28 11:37:43 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2609 2020/04/28 11:42:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3739,3 +3739,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-requests-file to 1.5.1 [adam 2020-04-28]
 	Updated misc/py-stdnum to 1.13 [adam 2020-04-28]
 	Updated net/py-zeroconf to 0.26.0 [adam 2020-04-28]
+	Updated multimedia/obs-studio to 25.0.8 [ryoon 2020-04-28]
