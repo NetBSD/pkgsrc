@@ -1,0 +1,8 @@
+RRCP(Realtek Remote Configuration Protocol) is protocol for making some
+specific low-cost dumb ethernet switches act like more expensive managed
+switches with no or little hardware modifications.
+
+OpenRRCP is an open-source cross-platform RRCP-based toolset, that is
+able to configure and fetch status from such ethernet switches.
+
+WWW: http://openrrcp.org.ru/
