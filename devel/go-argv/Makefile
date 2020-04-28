@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/04/12 11:01:37 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/28 11:46:28 nikita Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	go-argv-0.0.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cosiner/}
 GITHUB_PROJECT=	argv
 
-MAINTAINER=	ng0@NetBSD.org
+MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/cosiner/argv
 COMMENT=	Go library to split command line string into arguments array
 LICENSE=	mit
