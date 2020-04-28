@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2622 2020/04/28 17:37:03 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2623 2020/04/28 17:44:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3756,3 +3756,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/catch2 to 2.12.1 [wiz 2020-04-28]
 	Updated wm/i3 to 4.18.1 [wiz 2020-04-28]
 	Updated audio/musicpd to 0.21.23 [wiz 2020-04-28]
+	Updated www/py-google-api-python-client to 1.8.2 [wiz 2020-04-28]
