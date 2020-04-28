@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/03/20 11:58:05 nia Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/28 04:29:01 rillig Exp $
 
 DISTNAME=	dhcpd-pools-2.27
 PKGREVISION=	3
@@ -19,12 +19,6 @@ CONFIGURE_ARGS+=	--with-dhcpd-leases=${VARBASE}/db/dhcpd.leases
 BUILD_DEFS+=		VARBASE
 REPLACE_PERL=		contrib/snmptest.pl
 USE_TOOLS+=		perl:run
-
-SUBST_CLASSES+=		fix-name
-SUBST_STAGE.fix-name=	pre-configure
-SUBST_MESSAGE.fix-name=	Removing program_invocation_short_name.
-SUBST_FILES.fix-name=	src/dhcpd-pools.c src/other.c src/sort.c
-SUBST_SED.fix-name=	-e 's,program_invocation_short_name,"dhcpd-pools",g'
 
 LDFLAGS.SunOS+=	-lnsl
 
