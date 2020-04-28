@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/04/21 13:32:23 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/28 12:52:02 nia Exp $
 
 DISTNAME=	pragha-1.3.4
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pragha-music-player/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -20,6 +21,7 @@ TOOL_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 DEPENDS+=	gst-plugins1-flac-[0-9]*:../../audio/gst-plugins1-flac
 DEPENDS+=	gst-plugins1-mpg123-[0-9]*:../../audio/gst-plugins1-mpg123
+DEPENDS+=	gst-plugins1-ogg-[0-9]*:../../multimedia/gst-plugins1-ogg
 DEPENDS+=	gst-plugins1-opus-[0-9]*:../../audio/gst-plugins1-opus
 DEPENDS+=	gst-plugins1-vorbis-[0-9]*:../../audio/gst-plugins1-vorbis
 
