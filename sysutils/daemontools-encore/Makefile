@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/25 11:17:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2020/04/28 04:22:44 rillig Exp $
 
 DISTNAME=		daemontools-encore-1.11
 PKGREVISION=		2
@@ -13,6 +13,7 @@ LICENSE=		mit
 CONFLICTS+=		daemontools-[0-9]*
 
 DJB_RESTRICTED=		no
+DJB_ERRNO_HACK=		no
 
 MAKE_ENV+=		PKGSRC_SHELL=${TOOLS_PLATFORM.sh}
 INSTALL_TARGET=		install
