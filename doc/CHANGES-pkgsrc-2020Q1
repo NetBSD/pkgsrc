@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.5 2020/04/17 12:35:32 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.6 2020/04/28 16:28:08 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q1 branch:
 
@@ -40,4 +40,40 @@ sysutils/xenkernel411: security fix
 
 Pullup ticket #6161 - requested by sborrill
 mk/pkginstall: NetBSD 7 bugfix
+
+Pullup ticket #6162 - requested by taca
+devel/ruby-redmine_bootstrap_kit: build fix
+
+Pullup ticket #6163 - requested by taca
+databases/phpmyadmin: security fix
+
+Pullup ticket #6164 - requested by taca
+lang/ruby26-base: security fix
+
+Pullup ticket #6165 - requested by taca
+lang/ruby27-base: security fix
+
+Pullup ticket #6167 - requested by taca
+lang/ruby24-base: security fix
+
+Pullup ticket #6166 - requested by taca
+lang/ruby25-base: security fix
+
+Pullup ticket #6168 - requested by taca
+devel/ruby-fiddle: dependent update
+
+Pullup ticket #6170 - requested by nia
+security/mbedtls: security fix
+
+Pullup ticket #6169 - requested by taca
+devel/ruby-redmine_jenkins: build fix
+
+Pullup ticket #6172 - requested by nia
+x11/qt5-qtwebkit: build fix
+
+Pullup ticket #6173 - requested by nia
+games/supertux: build fix
+
+Pullup ticket #6171 - requested by taca
+lang/php73: security fix
 
