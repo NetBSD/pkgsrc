@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/28 13:46:35 nikita Exp $
+
+SHA1 (libgabe-1.0.tar.gz) = e0a63abae4b35b5b5e16ed3a131ef4ebc56a012b
+RMD160 (libgabe-1.0.tar.gz) = e8169f90e803e245de27124efe74995492fb3730
+SHA512 (libgabe-1.0.tar.gz) = 9603d8317a498da3004a43df4ce6bb903a925bf3eecdb465d222748a19f72d2b5f5399194d7bfb7864a7d53bf19a7ece9c599bb57d40692b811d1927fb90ab48
+Size (libgabe-1.0.tar.gz) = 73297 bytes
