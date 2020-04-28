@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/04/08 13:29:54 rhialto Exp $
+# $NetBSD: Makefile,v 1.33 2020/04/28 16:20:07 rillig Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -28,6 +28,7 @@ USE_TOOLS+=		gmake makeinfo perl sed:run tar:build
 USE_TOOLS.NetBSD+=	gsed
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
 ## Build outside ${WRKSRC}
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
