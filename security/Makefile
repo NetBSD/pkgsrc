@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.755 2020/04/28 19:35:19 wiz Exp $
+# $NetBSD: Makefile,v 1.756 2020/04/28 21:14:20 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -282,6 +282,7 @@ SUBDIR+=	p5-Crypt-ECB
 SUBDIR+=	p5-Crypt-Eksblowfish
 SUBDIR+=	p5-Crypt-GPG
 SUBDIR+=	p5-Crypt-GeneratePassword
+SUBDIR+=	p5-Crypt-HSXKPasswd
 SUBDIR+=	p5-Crypt-IDEA
 SUBDIR+=	p5-Crypt-OpenPGP
 SUBDIR+=	p5-Crypt-OpenSSL-AES
