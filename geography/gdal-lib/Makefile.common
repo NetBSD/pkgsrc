@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2020/04/27 23:53:38 gdt Exp $
+# $NetBSD: Makefile.common,v 1.9 2020/04/28 23:50:03 gdt Exp $
 #
 # used by geography/gdal-lib/Makefile
 # used by geography/py-gdal/Makefile
 
-VERSION=	2.4.4
+VERSION=	3.0.4
 DISTNAME=	gdal-${VERSION}
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/gdal/${PKGVERSION_NOREV}/
