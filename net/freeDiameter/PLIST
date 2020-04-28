@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/06/02 18:45:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/04/28 16:56:31 wiz Exp $
 bin/freeDiameterd
 bin/freeDiameterd-${PKGVERSION}
 ${PLIST.ext}bin/freediameter-sip-ppr
@@ -43,6 +43,8 @@ lib/freeDiameter/rt_load_balance.fdx
 lib/freeDiameter/rt_randomize.fdx
 lib/freeDiameter/rt_redirect.fdx
 lib/freeDiameter/rt_rewrite.fdx
+lib/freeDiameter/test_cc.fdx
+lib/freeDiameter/test_ccload.fdx
 lib/libfdcore.so
 lib/libfdcore.so.${PKGVERSION}
 lib/libfdcore.so.6
