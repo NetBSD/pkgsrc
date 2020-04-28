@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2613 2020/04/28 13:33:13 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.2614 2020/04/28 13:53:57 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3747,3 +3747,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-tabulate to 0.8.7 [adam 2020-04-28]
 	Updated math/py-lmfit to 1.0.0 [adam 2020-04-28]
 	Added devel/go-pkgconfig version 0.0.0.20170226 [nikita 2020-04-28]
+	Added security/libgabe version 1.0 [nikita 2020-04-28]
