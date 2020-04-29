@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/02 20:11:46 asau Exp $
+# $NetBSD: Makefile,v 1.18 2020/04/29 20:31:58 maya Exp $
 #
 
 DISTNAME=		mpd.1.0.1
@@ -17,7 +17,7 @@ MAKE_JOBS_SAFE=		no
 
 CONFLICTS+=		musicpd-[0-9]*
 
-ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 NOT_FOR_PLATFORM=	*-*-x86_64  # as per lang/sr
 
 
