@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/04/29 21:41:24 maya Exp $
+# $NetBSD: Makefile,v 1.27 2020/04/29 23:07:37 maya Exp $
 
 DISTNAME=	bulk-small-20180101
 PKGREVISION=	3
@@ -110,7 +110,6 @@ BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
 BUILD_DEPENDS+=		gmake-[0-9]*:../../devel/gmake
 BUILD_DEPENDS+=		libtool-base-[0-9]*:../../devel/libtool-base
 BUILD_DEPENDS+=		m4-[0-9]*:../../devel/m4
-BUILD_DEPENDS+=		pkg-config-[0-9]*:../../devel/pkg-config
 #BUILD_DEPENDS+=	osabi-[0-9]*:../../pkgtools/osabi
 BUILD_DEPENDS+=		pkg_tarup-[0-9]*:../../pkgtools/pkg_tarup
 
