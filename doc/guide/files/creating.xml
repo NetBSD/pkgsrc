@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.32 2019/08/30 22:19:37 gutteridge Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.33 2020/04/29 23:24:43 gutteridge Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -53,7 +53,9 @@ packages, i.e. packages for the architecture where the package
 is built;
 <varname>BUILD_DEPENDS</varname> are <emphasis>target</emphasis>
 packages, i.e. packages for the architecture for which the package
-is built.
+is built. There is also <varname>TEST_DEPENDS</varname>, which is used
+to specify a dependency used only for testing the resulting package
+built, using the upstream project's included test suite.
 Your package may then look like this:</para>
 
 <programlisting>
@@ -153,12 +155,12 @@ If the packaged software is a Python module, include one of
 
 <para>Most Python packages use either <quote>distutils</quote> or
 easy-setup/setuptools (<quote>eggs</quote>).
-if the packaged software is using setuptools, you only need
+If the packaged software is using setuptools, you only need
 to include <quote><filename>../../lang/python/egg.mk</filename></quote>.
 Otherwise, if the software uses <quote>distutils</quote>, include 
-<quote><filename>../../lang/python/distutils.mk</filename></quote>.
+<quote><filename>../../lang/python/distutils.mk</filename></quote>,
 so pkgsrc will use this framework.
-<quote>distutils</quote> uses a script called <filename>setup.py</filename>,
+<quote>distutils</quote> uses a script called <filename>setup.py</filename>;
 if the <quote>distutils</quote> driver is not called
 <filename>setup.py</filename>, set the <varname>PYSETUP</varname> variable
 to the name of the script.</para>
