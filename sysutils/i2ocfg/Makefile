@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/08/16 20:45:45 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/29 19:57:51 maya Exp $
 
 DISTNAME=		i2ocfg-1.1
 CATEGORIES=		sysutils
@@ -8,7 +8,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.hairylemon.org/~ad/software/i2ocfg/
 COMMENT=		I2O configuration dialog gateway
 
-ONLY_FOR_PLATFORM=	NetBSD-1.5[J-Z]-* NetBSD-1.6*-* NetBSD-[2-9]*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 USE_BSD_MAKEFILE=	YES
 USE_TOOLS+=		groff nroff
