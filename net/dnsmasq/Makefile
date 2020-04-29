@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2019/11/03 11:45:34 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2020/04/29 12:38:52 adam Exp $
 
-DISTNAME=	dnsmasq-2.80
-PKGREVISION=	1
+DISTNAME=	dnsmasq-2.81
 CATEGORIES=	net
 MASTER_SITES=	http://www.thekelleys.org.uk/dnsmasq/
 EXTRACT_SUFX=	.tar.xz
@@ -11,9 +10,9 @@ HOMEPAGE=	http://www.thekelleys.org.uk/dnsmasq/doc.html
 COMMENT=	Lightweight, easy to configure DNS forwarder
 LICENSE=	gnu-gpl-v3
 
-RCD_SCRIPTS=		dnsmasq
-EGDIR=			${PREFIX}/share/examples/dnsmasq
-CONF_FILES=		${EGDIR}/dnsmasq.conf.example ${PKG_SYSCONFDIR}/dnsmasq.conf
+RCD_SCRIPTS=	dnsmasq
+EGDIR=		${PREFIX}/share/examples/dnsmasq
+CONF_FILES=	${EGDIR}/dnsmasq.conf.example ${PKG_SYSCONFDIR}/dnsmasq.conf
 
 .include "../../mk/bsd.prefs.mk"
 
