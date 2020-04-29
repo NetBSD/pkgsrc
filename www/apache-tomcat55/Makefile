@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/18 23:35:42 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2020/04/29 19:44:49 maya Exp $
 
 DISTNAME=	apache-tomcat-${TOMCAT_VERSION}
 CATEGORIES=	www java
@@ -26,11 +26,6 @@ EGDIR=		${TOMCAT_LIB}/share/examples/apache-tomcat
 EGDIR2=		${EGDIR}/${CATALINA_DIR}
 
 .include "../../mk/bsd.prefs.mk"
-
-# Work around a bug in NetBSD 2.0's pax-as-tar (bin/27228)
-.if !empty(MACHINE_PLATFORM:MNetBSD-2.0*)
-EXTRACT_USING=	bsdtar
-.endif
 
 PKG_SYSCONFDIR.apache-tomcat=	${TOMCAT_LIB}/conf
 MAKE_DIRS=	${PKG_SYSCONFDIR.apache-tomcat}/${CATALINA_DIR}
