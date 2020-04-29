@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/07/04 16:18:38 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2020/04/29 21:22:58 maya Exp $
 
 DISTNAME=	alevt-1.6.1
 PKGREVISION=	3
@@ -11,9 +11,7 @@ COMMENT=	Teletext decoder and browser for Brooktree 848 compatible TV cards
 
 DEPENDS+=	fxtv>=1.02:../../multimedia/fxtv
 
-ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
-			NetBSD-1.5_ALPHA-* NetBSD-1.[56]*-* \
-			NetBSD-[2-9]*-* DragonFly-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-*
 
 USE_TOOLS+=	gmake
 
