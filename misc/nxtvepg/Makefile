@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2019/08/11 13:21:56 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2020/04/29 21:22:58 maya Exp $
 
 DISTNAME=	nxtvepg-2.7.6
 PKGREVISION=	14
@@ -11,9 +11,7 @@ COMMENT=	NextView EPG decoder
 
 MAKE_JOBS_SAFE=	no
 
-ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
-			NetBSD-1.5_ALPHA-* NetBSD-1.[5-9]*-* \
-			NetBSD-[2-9]*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 USE_TOOLS+=	gmake perl:run
 DEPENDS+=	p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/03/08 16:51:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2020/04/29 21:22:58 maya Exp $
 #
 
 DISTNAME=	devkitd-jmcneill-003
@@ -12,7 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	NetBSD port of devkitd (for DeviceKit)
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 
-ONLY_FOR_PLATFORM=	NetBSD-[5-9]*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
