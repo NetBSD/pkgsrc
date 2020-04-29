@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2020/03/16 16:27:18 sjmulder Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/29 09:29:38 sjmulder Exp $
 
-DISTNAME=	nnn-3.0
+DISTNAME=	nnn-3.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jarun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +11,11 @@ COMMENT=	Optimized, feature-packed terminal file manager
 LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	gmake pkg-config
-USE_CURSES=	wide set_escdelay getmouse
+USE_CURSES=	wide set_escdelay
+
+INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	share/fish/vendor_completions.d
+INSTALLATION_DIRS+=	share/zsh/site-functions
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,6 +34,17 @@ MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	CFLAGS_OPTIMIZATION=
 MAKE_ENV+=	CFLAGS_CURSES=${BUILDLINK_CFLAGS.curses:Q}
 MAKE_ENV+=	LDLIBS_CURSES=${BUILDLINK_LDADD.curses:Q}
+
+post-install:
+	${INSTALL_DATA} \
+		${WRKSRC}/misc/auto-completion/bash/nnn-completion.bash \
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/nnn
+	${INSTALL_DATA} \
+		${WRKSRC}/misc/auto-completion/fish/nnn.fish \
+		${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/
+	${INSTALL_DATA} \
+		${WRKSRC}/misc/auto-completion/zsh/_nnn \
+		${DESTDIR}${PREFIX}/share/zsh/site-functions
 
 .include "options.mk"
 
