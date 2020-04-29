@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.154 2020/02/24 21:13:56 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.155 2020/04/29 23:48:44 gutteridge Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -299,38 +299,40 @@ ACCEPTABLE_LICENSES+=xv-license
   <sect2 id="dependencies">
     <title>Handling dependencies</title>
 
-    <para>Your package may depend on some other package being present
-    - and there are various ways of expressing this dependency.
-    pkgsrc supports the <varname>BUILD_DEPENDS</varname> and
-    <varname>DEPENDS</varname> and
-    <varname>TOOL_DEPENDS</varname> definitions, the
+    <para>Your package may depend on some other package being present,
+    and there are various ways of expressing this dependency.
+    pkgsrc supports the <varname>DEPENDS</varname>,
+    <varname>BUILD_DEPENDS</varname>,
+    <varname>TOOL_DEPENDS</varname>, and
+    <varname>TEST_DEPENDS</varname> definitions, the
     <varname>USE_TOOLS</varname> definition, as well as dependencies
     via <filename>buildlink3.mk</filename>, which is the preferred way
     to handle dependencies, and which uses the variables named above.
     See <xref linkend="buildlink"/> for more information.</para>
 
-    <para>The basic difference between the two variables is as
-    follows: The <varname>DEPENDS</varname> definition registers
-    that pre-requisite in the binary package so it will be pulled in
-    when the binary package is later installed, whilst the
-    <varname>BUILD_DEPENDS</varname> and <varname>TOOL_DEPENDS</varname>
-    definitions does not, marking a dependency that is only needed for
-    building the package.</para>
+    <para>The basic difference is that the <varname>DEPENDS</varname>
+    definition registers that pre-requisite in the binary package so it
+    will be pulled in when the binary package is later installed, whilst
+    the <varname>BUILD_DEPENDS</varname>, <varname>TOOL_DEPENDS</varname>,
+    and <varname>TEST_DEPENDS</varname> definitions do not, marking a
+    dependency that is only needed for building or testing the resulting
+    package. See also <xref linkend="creating"/> for more information.</para>
 
     <para>This means that if you only need a package present whilst
-    you are building, it should be noted as a
-    <varname>TOOL_DEPENDS</varname> or
-    <varname>BUILD_DEPENDS</varname>.  When cross-compiling,
+    you are building or testing, it should be noted as a
+    <varname>TOOL_DEPENDS</varname>,
+    <varname>BUILD_DEPENDS</varname>, or
+    <varname>TEST_DEPENDS</varname>.  When cross-compiling,
     <varname>TOOL_DEPENDS</varname> are <emphasis>native</emphasis>
     packages, i.e. packages for the architecture where the package
     is built;
     <varname>BUILD_DEPENDS</varname> are <emphasis>target</emphasis>
-    packages, i.e. packages for the architecture for which the package
+    packages, i.e., packages for the architecture for which the package
     is built.</para>
 
-    <para>The format for <varname>BUILD_DEPENDS</varname>,
-    <varname>DEPENDS</varname> and <varname>TOOL_DEPENDS</varname>
-    definition is:</para>
+    <para>The format for a <varname>DEPENDS</varname>,
+    <varname>BUILD_DEPENDS</varname>, <varname>TOOL_DEPENDS</varname>,
+    and <varname>TEST_DEPENDS</varname> definition is:</para>
 
 <programlisting>
 &lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;
@@ -405,6 +407,12 @@ BUILD_DEPENDS+= TODO: find a good example
 <programlisting>
 DEPENDS+=        tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 </programlisting>
+      </listitem>
+      <listitem>
+        <para>If your package includes a test suite that has extra
+        dependencies only required for this purpose (frequently this
+        can be run as a <quote>make test</quote> target), use the
+        <varname>TEST_DEPENDS</varname> variable.</para>
       </listitem>
       <listitem>
 	<para>You can use wildcards in package dependencies. Note that
