@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2632 2020/04/29 02:16:05 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2633 2020/04/29 06:48:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3766,3 +3766,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated geography/gdal-lib to 3.0.4 [gdt 2020-04-28]
 	Updated geography/py-gdal to 3.0.4 [gdt 2020-04-28]
 	Updated devel/R-Rcpp to 1.0.4.6 [mef 2020-04-29]
+	Updated devel/cmake to 3.17.2 [adam 2020-04-29]
+	Updated devel/cmake-gui to 3.17.2 [adam 2020-04-29]
