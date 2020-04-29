@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2642 2020/04/29 13:35:32 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2643 2020/04/29 14:02:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3786,3 +3786,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dnsmasq to 2.81 [adam 2020-04-29]
 	Updated net/py-twython to 3.8.2 [adam 2020-04-29]
 	Updated devel/meson to 0.54.1 [adam 2020-04-29]
+	Updated devel/py-mando to 0.7.0 [adam 2020-04-29]
+	Updated textproc/py-natsort to 7.0.1 [adam 2020-04-29]
