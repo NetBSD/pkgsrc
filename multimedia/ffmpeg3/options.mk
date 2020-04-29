@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2020/04/23 10:35:40 nia Exp $
+# $NetBSD: options.mk,v 1.19 2020/04/29 14:17:48 nia Exp $
 
 # Global and legacy options
 
@@ -7,7 +7,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg3
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 
-PKG_SUPPORTED_OPTIONS=	ass bluray doc fdk-aac fontconfig freetype \
+PKG_SUPPORTED_OPTIONS=	ass bluray doc fdk-aac fontconfig freetype jack \
 			lame libvpx opencore-amr opus pulseaudio rpi \
 			rtmp tesseract theora vorbis x11 x264 x265 xvid
 PKG_SUGGESTED_OPTIONS=	lame ass bluray freetype fontconfig gnutls libvpx \
@@ -108,6 +108,14 @@ CONFIGURE_ARGS+=	--enable-openssl
 .include "../../security/openssl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-openssl
+.endif
+
+# jack option
+.if !empty(PKG_OPTIONS:Mjack)
+CONFIGURE_ARGS+=	--enable-jack
+.include "../../audio/jack/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-jack
 .endif
 
 # pulseaudio option
