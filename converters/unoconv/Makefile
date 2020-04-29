@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/04/28 15:18:44 manu Exp $
+# $NetBSD: Makefile,v 1.6 2020/04/29 13:56:10 manu Exp $
 
 DISTNAME=	unoconv-0.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dagwieers/}
 
@@ -18,8 +18,8 @@ BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 DEPENDS+=	libreoffice>=5.3.4.2nb1:../../misc/libreoffice
 
 pre-build:
-	sed "s|@PREFIX@|${PREFIX}|" ${FILESDIR}/unoconv.sh > \
-	    ${WRKDIR}/unoconv.sh
+	${SED} -e "s|@PREFIX@|${PREFIX}|; s|@PKG_INFO_CMD@|${PKG_INFO_CMD}|;" \
+	     ${FILESDIR}/unoconv.sh > ${WRKDIR}/unoconv.sh
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${PREFIX}/bin
