@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2631 2020/04/28 23:50:18 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.2632 2020/04/29 02:16:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3765,3 +3765,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-beautifulsoup4 to 4.9.0 [gutteridge 2020-04-28]
 	Updated geography/gdal-lib to 3.0.4 [gdt 2020-04-28]
 	Updated geography/py-gdal to 3.0.4 [gdt 2020-04-28]
+	Updated devel/R-Rcpp to 1.0.4.6 [mef 2020-04-29]
