@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/04/16 11:57:08 tsutsui Exp $
+# $NetBSD: Makefile,v 1.46 2020/04/29 20:11:32 maya Exp $
 
 FLASH_VERSION=		32.0.0.363
 DISTNAME=		flash_player_npapi_linux.${FLASH_ARCH}
@@ -17,10 +17,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-
-# On NetBSD, requires sufficiently new compat_linux and
-# procfs_map.c fixes pulled after 6.1 and 7.0.
-NOT_FOR_PLATFORM=	NetBSD-[0-5]*-* NetBSD-6.[0-1].*-* NetBSD-7.0.*-*
 
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
