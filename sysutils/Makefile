@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.874 2020/04/27 15:21:19 mef Exp $
+# $NetBSD: Makefile,v 1.875 2020/04/29 20:15:59 maya Exp $
 #
 
 COMMENT=	System utilities
@@ -393,7 +393,6 @@ SUBDIR+=	ndesk-dbus
 SUBDIR+=	ndesk-dbus-glib
 SUBDIR+=	neb-wipe
 SUBDIR+=	neofetch
-SUBDIR+=	netbsd-kmod-tools
 SUBDIR+=	netbt-hcidump
 SUBDIR+=	news
 SUBDIR+=	nnn
