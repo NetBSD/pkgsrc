@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/09/03 08:53:12 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2020/04/29 19:57:51 maya Exp $
 
 DISTNAME=	mDNSResponder-258.14
 PKGNAME=	mDNSResponder-nss-258.14
@@ -11,8 +11,7 @@ HOMEPAGE=	https://developer.apple.com/bonjour/
 COMMENT=	Apple's mDNS responder - NetBSD nsswitch module
 LICENSE=	modified-bsd
 
-# needs nsswitch
-ONLY_FOR_PLATFORM=	NetBSD-[3-9]*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 INSTALLATION_DIRS=	lib share/examples/nss_mdns ${PKGMANDIR}/man5
 
