@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/09/24 09:43:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/04/29 13:53:31 adam Exp $
 bin/natsort-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -24,12 +24,6 @@ ${PYSITELIB}/natsort/compat/fastnumbers.pyo
 ${PYSITELIB}/natsort/compat/locale.py
 ${PYSITELIB}/natsort/compat/locale.pyc
 ${PYSITELIB}/natsort/compat/locale.pyo
-${PYSITELIB}/natsort/compat/pathlib.py
-${PYSITELIB}/natsort/compat/pathlib.pyc
-${PYSITELIB}/natsort/compat/pathlib.pyo
-${PYSITELIB}/natsort/compat/py23.py
-${PYSITELIB}/natsort/compat/py23.pyc
-${PYSITELIB}/natsort/compat/py23.pyo
 ${PYSITELIB}/natsort/natsort.py
 ${PYSITELIB}/natsort/natsort.pyc
 ${PYSITELIB}/natsort/natsort.pyo
