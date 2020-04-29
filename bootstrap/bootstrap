@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.277 2020/03/26 15:30:27 nia Exp $
+# $NetBSD: bootstrap,v 1.278 2020/04/29 20:27:03 triaxx Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -497,7 +497,6 @@ while [ $# -gt 0 ]; do
 	shift
 done
 
-checkarg_sane_absolute_path "$prefix" "--prefix"
 checkarg_sane_absolute_path "$pkgdbdir" "--pkgdbdir"
 checkarg_sane_absolute_path "$sysconfdir" "--sysconfdir"
 checkarg_sane_absolute_path "$varbase" "--varbase"
@@ -513,6 +512,7 @@ elif [ -z "$prefix" -o "$prefix" = "/usr/pkg" ]; then
 	prefix=/usr/pkg
 	[ -z "$varbase" ] && varbase=/var
 fi
+checkarg_sane_absolute_path "$prefix" "--prefix"
 
 [ -z "$varbase" ] && varbase=${prefix}/var
 [ -z "$pkgdbdir" ] && pkgdbdir=${prefix}/pkgdb
