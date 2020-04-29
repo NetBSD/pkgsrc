@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.84 2020/04/23 19:32:53 rillig Exp $
+# $NetBSD: subst.mk,v 1.85 2020/04/29 18:33:56 rillig Exp $
 #
 # The subst framework replaces text in one or more files in the WRKSRC
 # directory. Packages can define several ``classes'' of replacements.
@@ -22,8 +22,20 @@
 #	SUBST classes. Defaults to "no".
 #
 # SUBST_NOOP_OK
-#	Whether it is ok to have filename patterns in SUBST_FILES that
-#	don't have any effect.
+#	Whether it is ok to list files in SUBST_FILES that don't contain
+#	any of the patterns from SUBST_SED or SUBST_VARS.  Such a
+#	situation often arises when a package is updated to a newer
+#	version, and the build instructions of the package have been
+#	made more portable or flexible.
+#
+#	This setting only affects the filename patterns in SUBST_FILES.
+#	It does not (yet) affect the regular expressions in SUBST_SED.
+#
+#	From the viewpoint of sed(1), a pattern like s|man|man| may look
+#	redundant but it really isn't, because the second "man" probably
+#	comes from ${PKGMANDIR}, which may be configured to a different
+#	directory.  Patterns like these are therefore allowed, even if
+#	they are no-ops in the current configuration.
 #
 #	For backwards compatibility this defaults to "yes", but it
 #	should rather be set to "no".
@@ -94,7 +106,7 @@
 #
 
 SUBST_SHOW_DIFF?=	no
-SUBST_NOOP_OK?=		yes	# only for backwards compatiblity
+SUBST_NOOP_OK?=		yes	# only for backwards compatibility
 
 _VARGROUPS+=		subst
 _USER_VARS.subst=	SUBST_SHOW_DIFF SUBST_NOOP_OK
@@ -183,6 +195,13 @@ ${_SUBST_COOKIE.${class}}:
 			};						\
 			${SUBST_FILTER_CMD.${class}} < "$$file" > "$$tmpfile";	\
 			${CMP} -s "$$tmpfile" "$$file" && {		\
+				[ ${"${SUBST_FILTER_CMD.${class}}" == "LC_ALL=C ${SED} ${SUBST_SED.${class}}":?true:false} ] \
+				&& ${AWK} -f ${PKGSRCDIR}/mk/scripts/subst-identity.awk -- ${SUBST_SED.${class}} \
+				&& found=`LC_ALL=C ${SED} -n ${SUBST_SED.${class}:C,^['"]?s.*,&p,} "$$file"` \
+				&& [ "x$$found" != "x" ] && {		\
+					changed=yes;			\
+					continue;			\
+				};					\
 				${_SUBST_WARN.${class}} "Nothing changed in \"$$file\"."; \
 				${RM} -f "$$tmpfile";			\
 				continue;				\
@@ -193,7 +212,7 @@ ${_SUBST_COOKIE.${class}}:
 			${MV} -f "$$tmpfile" "$$file"; 			\
 			${ECHO} "$$file" >> ${.TARGET}.tmp;		\
 		done;							\
-	\
+									\
 		[ "$$changed,${SUBST_NOOP_OK.${class}:tl}" = no,no ] && { \
 			noop_count="$$noop_count+";			\
 			noop_patterns="$$noop_patterns$$noop_sep$$pattern"; \

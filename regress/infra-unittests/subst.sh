@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.25 2020/04/26 12:46:33 rillig Exp $
+# $NetBSD: subst.sh,v 1.26 2020/04/29 18:33:56 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -14,6 +14,7 @@ test_case_set_up() {
 	create_file "prepare-subst.mk" <<EOF
 
 # The tools that are used by subst.mk
+AWK=		awk
 CHMOD=		chmod
 CMP=		cmp
 DIFF=		diff
@@ -1128,6 +1129,203 @@ if test_case_begin "unreadable file"; then
 		'' \
 		'Stop.' \
 		"$make: stopped in $PWD"
+
+	test_case_end
+fi
+
+
+if test_case_begin "identity substitution implementation"; then
+
+	assert_identity() {
+		ai_expected="$1"; shift
+		awk -f "$pkgsrcdir/mk/scripts/subst-identity.awk" -- "$@" \
+		&& ai_actual="yes" || ai_actual="no"
+
+		[ "$ai_actual" = "$ai_expected" ] \
+		|| assert_fail "expected '%s', got '%s' for %s\n" "$ai_expected" "$ai_actual" "$*"
+	}
+
+	# If there is no SUBST_SED at all, this is not the situation
+	# that is targeted by this test for identity substitution.
+	assert_identity "no"	# no substitutions at all
+
+	# Even though this is an identity substitution, it is missing
+	# the -e option and thus does not follow the usual format.
+	# Therefore it is considered just a normal substitution.
+	assert_identity "no"	's,from,from,'
+
+	# The following are typical identity substitutions.
+	# It does not matter whether the g modifier is there or not.
+	# Unknown modifiers are not allowed though.
+	assert_identity "yes"	-e 's,from,from,'
+	assert_identity "yes"	-e 's;from;from;'
+	assert_identity "yes"	-e 's,from,from,g'
+	assert_identity "no"	-e 's,from,from,gunknown'
+
+	# The identity substitution may include characters other than
+	# A-Za-z0-9, but no characters that have a special meaning in
+	# basic regular expressions.
+	assert_identity "yes"	-e 's,/dev/audio,/dev/audio,'
+	assert_identity "yes"	-e 's!/dev/audio!/dev/audio!'
+
+	# There may be several identity substitutions in the same
+	# SUBST_SED.  As long as all these substitutions are identity
+	# substitutions, they may be skipped.  As soon as there is one
+	# other substitution, the whole SUBST_SED is treated as usual.
+	assert_identity "yes"	-e 's;from;from;' -e 's!second!second!'
+	assert_identity "no"	-e 's,changing,x,' -e 's,id,id,'
+	assert_identity "no"	-e 's,id,id,' -e 's,changing,x,'
+
+	# A demonstration of all ASCII characters that may appear in an
+	# identity substitution.
+	#
+	# The # and $ are excluded since they are interpreted specially
+	# in Makefiles and would thus be confusing to the human reader.
+	#
+	# The characters *.?[\]^ have a special meaning in the pattern of the
+	# substitution.
+	# The & has a special meaning in the replacement of the
+	# substitution.
+	specials='!"%'\''()+,-/:;<=>@_`{|}~'
+	assert_identity "yes"	-e "sX${specials}X${specials}X"
+
+	test_case_end
+fi
+
+
+if test_case_begin "identity substitution, found in file"; then
+
+	# There are many situations in which a fixed text is replaced
+	# with a dynamic value that may or may not be equal to the
+	# original text.
+	#
+	# Typical examples are s|man|${PKGMANDIR}|, s|/usr/pkg|${PREFIX}|,
+	# s|/dev/audio|${DEVOSSAUDIO}|.
+	#
+	# It is not an error if these substitutions result in a no-op,
+	# provided that the text is actually found in the file.
+	#
+	# Alternatives for this special exception would be:
+	#
+	# 1. Mark these blocks as SUBST_NOOP_OK.  This would not detect
+	# outdated definitions.  Since this detection is the main goal
+	# of SUBST_NOOP_OK, this is out of the question.
+	#
+	# 2. Surround these blocks with a condition like ".if ${VAR} !=
+	# fixed-value ... .endif".  This pattern only works if VAR is
+	# definitely assigned, which often requires a corresponding
+	# .include line, leading to code bloat.  It would also mean that
+	# variables defined in bsd.pkg.mk could not be used in SUBST
+	# blocks like these.
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_FILES.id=	file' \
+		'SUBST_SED.id=		-e s,before,before,' \
+		'SUBST_NOOP_OK.id=	no' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "file" \
+		'before'
+
+	run_bmake "testcase.mk" "subst-id" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in file'
+
+	test_case_end
+fi
+
+
+if test_case_begin "identity substitution, not found in file"; then
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_FILES.id=	file' \
+		'SUBST_SED.id=		s,before,before,' \
+		'SUBST_NOOP_OK.id=	no' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "file" \
+		'other'
+
+	run_bmake "testcase.mk" "subst-id" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in file' \
+		'warning: [subst.mk:id] Nothing changed in "file".' \
+		'fail: [subst.mk:id] The filename pattern "file" has no effect.' \
+		'*** Error code 1' \
+		'' \
+		'Stop.' \
+		"$make: stopped in $PWD"
+
+	test_case_end
+fi
+
+
+if test_case_begin "identity + effective substitution"; then
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_FILES.id=	file' \
+		'SUBST_SED.id=		-e s,no-op,no-op,g' \
+		'SUBST_SED.id+=		-e s,from,to,' \
+		'SUBST_NOOP_OK.id=	no' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "file" \
+		'from'
+
+	run_bmake "testcase.mk" "subst-id" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in file'
+	assert_that "file" --file-is-lines \
+		'to'
+
+	test_case_end
+fi
+
+
+if test_case_begin "identity + no-op substitution"; then
+
+	# If there were only an identity substitution, it wouldn't be an
+	# error.  But since there is a regular substitution as well,
+	# that substitution is an unexpected no-op and is therefore
+	# flagged as an error.
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_FILES.id=	file' \
+		'SUBST_SED.id=		-e s,no-op,no-op,g' \
+		'SUBST_SED.id+=		-e s,from,to,' \
+		'SUBST_NOOP_OK.id=	no' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "file" \
+		'other'
+
+	run_bmake "testcase.mk" "subst-id" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in file' \
+		'warning: [subst.mk:id] Nothing changed in "file".' \
+		'fail: [subst.mk:id] The filename pattern "file" has no effect.' \
+		'*** Error code 1' \
+		'' \
+		'Stop.' \
+		"$make: stopped in $PWD"
+	assert_that "file" --file-is-lines \
+		'other'
 
 	test_case_end
 fi
