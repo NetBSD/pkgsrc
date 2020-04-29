@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2647 2020/04/29 20:20:53 wiedi Exp $
+$NetBSD: CHANGES-2020,v 1.2648 2020/04/29 23:15:15 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3792,3 +3792,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated pkgtools/pkgin to 0.16.1 [jperkin 2020-04-29]
 	Removed sysutils/netbsd-kmod-tools [maya 2020-04-29]
 	Updated sysutils/znapzend to 0.20.0 [wiedi 2020-04-29]
+	Updated meta-pkgs/bulk-small to 20200430 [maya 2020-04-29]
