@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2020/04/02 11:21:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2020/04/29 10:01:18 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -431,6 +431,7 @@ ${PYSITELIB}/samba/tests/kcc/graph_utils.py
 ${PYSITELIB}/samba/tests/kcc/kcc_utils.py
 ${PYSITELIB}/samba/tests/kcc/ldif_import_export.py
 ${PYSITELIB}/samba/tests/krb5_credentials.py
+${PYSITELIB}/samba/tests/ldap_raw.py
 ${PYSITELIB}/samba/tests/ldap_referrals.py
 ${PYSITELIB}/samba/tests/libsmb.py
 ${PYSITELIB}/samba/tests/loadparm.py
