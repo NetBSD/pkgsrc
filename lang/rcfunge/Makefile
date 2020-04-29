@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:31 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/04/29 20:30:27 maya Exp $
 #
 
 DISTNAME=	rcfunge2
@@ -21,8 +21,6 @@ INSTALLATION_DIRS=	bin
 CFLAGS.SunOS+=	-Du_int32_t=uint32_t
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
-# keypad(3) return value was fixed after -5 branch (might be pulled up)
-INCOMPAT_CURSES+=	NetBSD-[0-4]*-* NetBSD-5.[0-8]*-*
 FAKE_NCURSES=		yes # tries to link to ncurses directly
 
 pre-build:
