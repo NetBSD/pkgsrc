@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/10/06 11:35:16 jmcneill Exp $
+# $NetBSD: Makefile,v 1.37 2020/04/29 19:47:46 maya Exp $
 
 DISTNAME=	estd-r11
 PKGNAME=	estd-0.11
@@ -16,14 +16,12 @@ MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
 INSTALLATION_DIRS=	share/examples/rc.d
 
-ONLY_FOR_PLATFORM=	NetBSD-2.99.*-i386 NetBSD-[3-9]*-i386 \
-			NetBSD-[4-9]*-x86_64 \
-			NetBSD-5.99.*-powerpc \
-			NetBSD-[6-9]*-powerpc \
-			NetBSD-5.99.*-mips64el \
-			NetBSD-[6-9]*-mips64el \
-			NetBSD-[7-9]*-earm* NetBSD-[7-9]*-arm* \
-			NetBSD-[7-9]*-aarch64
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 \
+			NetBSD-*-x86_64 \
+			NetBSD-*-powerpc \
+			NetBSD-*-mips64el \
+			NetBSD-*-earm* NetBSD-*-arm* \
+			NetBSD-*-aarch64
 
 RCD_SCRIPTS=		estd
 RCD_SCRIPT_SRC.estd=	${WRKSRC}/estd.sh
