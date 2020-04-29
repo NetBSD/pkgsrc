@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/10/24 05:30:50 tsutsui Exp $
+# $NetBSD: Makefile,v 1.17 2020/04/29 20:07:41 maya Exp $
 
 PKGNAME=	libflashsupport-4.2.2011
 DISTNAME=	libflashsupport-v4.2-build2011
@@ -10,8 +10,7 @@ HOMEPAGE=	http://developer.opensound.com/
 COMMENT=	Additional Interface Support for Linux Flash Player
 LICENSE=	adobe-flashsupport-license
 
-# On NetBSD, requires sufficiently new compat_linux.
-NOT_FOR_PLATFORM=	NetBSD-[0-4]*-* NetBSD-5.[0-9].*-* Linux-*-*
+NOT_FOR_PLATFORM=	Linux-*-*
 
 EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	base openssl
