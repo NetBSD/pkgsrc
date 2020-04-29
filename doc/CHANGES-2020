@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2645 2020/04/29 15:09:30 jperkin Exp $
+$NetBSD: CHANGES-2020,v 1.2646 2020/04/29 20:16:20 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3790,3 +3790,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/py-natsort to 7.0.1 [adam 2020-04-29]
 	Updated audio/fasttracker2 to 1.22 [fox 2020-04-29]
 	Updated pkgtools/pkgin to 0.16.1 [jperkin 2020-04-29]
+	Removed sysutils/netbsd-kmod-tools [maya 2020-04-29]
