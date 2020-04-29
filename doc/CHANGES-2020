@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2633 2020/04/29 06:48:03 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2634 2020/04/29 07:32:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3768,3 +3768,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/R-Rcpp to 1.0.4.6 [mef 2020-04-29]
 	Updated devel/cmake to 3.17.2 [adam 2020-04-29]
 	Updated devel/cmake-gui to 3.17.2 [adam 2020-04-29]
+	Updated databases/openldap to 2.4.50 [adam 2020-04-29]
+	Updated databases/lmdb to 0.9.25 [adam 2020-04-29]
