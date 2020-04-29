@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.41 2019/10/15 17:12:09 adam Exp $
+$NetBSD: distinfo,v 1.42 2020/04/29 07:44:54 adam Exp $
 
-SHA1 (pytz-2019.3.tar.gz) = fc320b8b76a6067f16bbc3b8c365766978b5252f
-RMD160 (pytz-2019.3.tar.gz) = 3450820a510da54ceff2edc16e74d4aa8f76026a
-SHA512 (pytz-2019.3.tar.gz) = b925b59d197e7007dae8098d35518a470e4b7588d9114f51e4d8816813243a9f816f662055f690bedf56b86cc9ece06428ed8c55e5b3ed676ba0f504f7cb43af
-Size (pytz-2019.3.tar.gz) = 312286 bytes
+SHA1 (pytz-2020.1.tar.gz) = 60f6db35e92688c4701c16bd3d2b9cbfac1fd604
+RMD160 (pytz-2020.1.tar.gz) = 69064deed06259b927d299f438bfa5773dd5379d
+SHA512 (pytz-2020.1.tar.gz) = 4f652ab400bac0bd83ed305be7540094e674029a0cbde7da280adfd911b8c0a44023799b7c61971a5a61a1d6e3992c5b621e5e95bbfe962f310d5f26d4fda3ce
+Size (pytz-2020.1.tar.gz) = 311771 bytes
