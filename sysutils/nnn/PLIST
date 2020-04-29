@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2018/12/17 14:22:52 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/29 09:29:38 sjmulder Exp $
 bin/nnn
 man/man1/nnn.1
+share/bash-completion/completions/nnn
+share/fish/vendor_completions.d/nnn.fish
+share/zsh/site-functions/_nnn
