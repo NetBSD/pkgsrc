@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2641 2020/04/29 12:40:16 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2642 2020/04/29 13:35:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3784,3 +3784,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/curl to 7.70.0 [leot 2020-04-29]
 	Updated converters/help2man to 1.47.15 [adam 2020-04-29]
 	Updated net/dnsmasq to 2.81 [adam 2020-04-29]
+	Updated net/py-twython to 3.8.2 [adam 2020-04-29]
+	Updated devel/meson to 0.54.1 [adam 2020-04-29]
