@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2020/03/22 20:28:13 rillig Exp $
+# $NetBSD: Makefile.common,v 1.35 2020/04/29 19:23:10 riastradh Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs8/Makefile
 # used by lang/nodejs10/Makefile
@@ -82,7 +82,7 @@ post-install:
 .if ${OPSYS} != "Darwin"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
-BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.23
+BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.29
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
