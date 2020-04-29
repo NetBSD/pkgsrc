@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2637 2020/04/29 10:01:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2638 2020/04/29 10:12:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3777,3 +3777,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/nnn to 3.1 [sjmulder 2020-04-29]
 	Updated databases/ldb to 2.1.2 [adam 2020-04-29]
 	Updated net/samba4 to 4.12.2 [adam 2020-04-29]
+	Updated textproc/py-elementpath to 1.4.4 [adam 2020-04-29]
+	Updated textproc/py-humanize to 2.4.0 [adam 2020-04-29]
