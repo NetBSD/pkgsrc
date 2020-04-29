@@ -1,17 +1,17 @@
-<!-- $NetBSD: bulk.xml,v 1.26 2019/04/03 14:41:24 sevan Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.27 2020/04/29 23:20:42 gutteridge Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
 builds)</title>
 
-<para>For a number of reasons you may want to build binary packages
-for a large selected set of packages in pkgsrc or even for all pkgsrc packages.
+<para>For a number of reasons, you may want to build binary packages
+for a large selected set of packages in pkgsrc, or even for all pkgsrc packages.
 For instance, when you have multiple machines that should run the same software,
 it is wasted time if they all build their packages themselves from source.
 Or you may want to build a list of packages you want and check them before
-deploying onto production system.
+deploying onto production systems.
 There is a way of getting a set of binary packages:
-The bulk build system, or pbulk ("p" stands for "parallel").
+the bulk build system, or pbulk ("p" stands for "parallel").
 This chapter describes how to set it up.</para>
 
 <sect1 id="bulk.pre">
@@ -20,10 +20,10 @@ This chapter describes how to set it up.</para>
 <para>First of all, you have to decide whether you build all packages
 or a limited set of them. Full bulk builds usually consume a lot more resources,
 both space and time, than builds for some practical sets of packages.
-There exists a number of particularly heavy packages that are not actually
-interesting to a wide audience.
-<!-- approximate resource consumption for full bulk build is given in section <put a reference here/> -->
-For a limited bulk builds you need to make a list of packages you want to build.
+A number of particularly heavy packages exist that are not actually
+interesting to a wide audience. (The approximate resource consumption for a
+full bulk build is given in section <xref linkend="bulk.req" />.)
+For limited bulk builds you need to make a list of packages you want to build.
 Note that all their dependencies will be built, so you don't need to track them manually.
 </para>
 
@@ -221,7 +221,7 @@ temporary filesystems, others must survive a sudden reboot.</para>
       <para>If you wish to include a common set of files
       (<filename>COPYRIGHT</filename>, <filename>README</filename>,
       etc.) on each CD in the collection, then you need to create a
-      directory which contains these files. e.g.</para>
+      directory which contains these files, e.g.:</para>
 
       <screen>
 &rprompt; <userinput>mkdir /tmp/common</userinput>
