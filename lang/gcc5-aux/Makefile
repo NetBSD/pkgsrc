@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/03/22 10:52:15 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/04/29 20:33:28 maya Exp $
 
 PKGNAME=	gcc5-aux-${SNAPSHOT}
 PKGREVISION=	${MAIN_PR}
@@ -30,8 +30,8 @@ CHECK_PORTABILITY_SKIP+=	contrib/*.sh # not used during the build
 ONLY_FOR_PLATFORM=	DragonFly-*-x86_64   \
 			FreeBSD-*-i386       \
 			FreeBSD-*-x86_64     \
-			NetBSD-[5-9]*-i386   \
-			NetBSD-[5-9]*-x86_64 \
+			NetBSD-*-i386   \
+			NetBSD-*-x86_64 \
 			SunOS-5.1[1-9]*-i386 \
 			SunOS-5.1[1-9]*-x86_64
 
