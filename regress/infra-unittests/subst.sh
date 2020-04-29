@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.26 2020/04/29 18:33:56 rillig Exp $
+# $NetBSD: subst.sh,v 1.27 2020/04/29 22:46:42 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1326,6 +1326,102 @@ if test_case_begin "identity + no-op substitution"; then
 		"$make: stopped in $PWD"
 	assert_that "file" --file-is-lines \
 		'other'
+
+	test_case_end
+fi
+
+
+if test_case_begin "SUBST_FILTER_CMD + SUBST_SED in NOOP_OK=no mode"; then
+
+	# If SUBST_FILTER_CMD is defined for a SUBST class, the
+	# corresponding SUBST_SED and SUBST_VARS are ignored. To avoid
+	# redundant variable definitions, this case fails fast.
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_FILES.id=	file' \
+		'SUBST_FILTER_CMD.id=	tr -d "0-9"' \
+		'SUBST_SED.id=		-e s,x,x,' \
+		'SUBST_NOOP_OK.id=	no' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "file" \
+		'letters 123 letters'
+	create_file_lines "main.mk" \
+		"PKGSRCDIR=	$pkgsrcdir" \
+		".PATH:		$mocked_pkgsrcdir" \
+		".PATH:		$pkgsrcdir" \
+		".include \"testcase.mk\"" \
+		'' \
+		'all: subst-id' \
+		'	@printf '\''fail reason: %s\n'\'' ${PKG_FAIL_REASON} 1>&2'
+
+	"$make" -f "$tmpdir/main.mk" "all" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in file' \
+		'fail reason: [subst.mk:id] SUBST_FILTER_CMD and SUBST_SED/SUBST_VARS cannot be combined.'
+	assert_that "file" --file-is-lines \
+		'letters  letters'
+
+	test_case_end
+fi
+
+
+if test_case_begin "effective SUBST_FILTER_CMD in NOOP_OK=no mode"; then
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_FILES.id=	file' \
+		'SUBST_FILTER_CMD.id=	tr -d "0-9"' \
+		'SUBST_NOOP_OK.id=	no' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "file" \
+		'letters 123 letters'
+
+	run_bmake "testcase.mk" "subst-id" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in file'
+	assert_that "file" --file-is-lines \
+		'letters  letters'
+
+	test_case_end
+fi
+
+
+if test_case_begin "no-op SUBST_FILTER_CMD in NOOP_OK=no mode"; then
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_FILES.id=	file' \
+		'SUBST_FILTER_CMD.id=	tr -d "0-9"' \
+		'SUBST_NOOP_OK.id=	no' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "file" \
+		'only letters'
+
+	run_bmake "testcase.mk" "subst-id" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in file' \
+		'warning: [subst.mk:id] Nothing changed in "file".' \
+		'fail: [subst.mk:id] The filename pattern "file" has no effect.' \
+		'*** Error code 1' \
+		'' \
+		'Stop.' \
+		"$make: stopped in $PWD"
+
+	assert_that "file" --file-is-lines \
+		'only letters'
 
 	test_case_end
 fi
