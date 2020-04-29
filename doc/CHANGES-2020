@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2644 2020/04/29 15:06:41 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2645 2020/04/29 15:09:30 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3789,3 +3789,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-mando to 0.7.0 [adam 2020-04-29]
 	Updated textproc/py-natsort to 7.0.1 [adam 2020-04-29]
 	Updated audio/fasttracker2 to 1.22 [fox 2020-04-29]
+	Updated pkgtools/pkgin to 0.16.1 [jperkin 2020-04-29]
