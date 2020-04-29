@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2020/04/23 10:35:40 nia Exp $
+# $NetBSD: options.mk,v 1.19 2020/04/29 15:11:10 nia Exp $
 
 # Global and legacy options
 
@@ -9,9 +9,9 @@ PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 
 PKG_SUPPORTED_OPTIONS=	ass bluray doc faac fdk-aac fontconfig freetype \
 			lame libvpx opencore-amr opus pulseaudio rtmp \
-			theora vorbis x11 x264 x265 xvid
+			speex theora vorbis x11 x264 x265 xvid
 PKG_SUGGESTED_OPTIONS=	lame ass bluray freetype fontconfig gnutls libvpx \
-			opus theora vorbis x11 x264 x265 xvid
+			opus speex theora vorbis x11 x264 x265 xvid
 
 PKG_OPTIONS_LEGACY_OPTS+=	xcb:x11
 
@@ -162,6 +162,12 @@ CONFIGURE_ARGS+=	--enable-libmp3lame
 .if !empty(PKG_OPTIONS:Mopus)
 CONFIGURE_ARGS+=	--enable-libopus
 .include "../../audio/libopus/buildlink3.mk"
+.endif
+
+# Speex support
+.if !empty(PKG_OPTIONS:Mspeex)
+CONFIGURE_ARGS+=	--enable-libspeex
+.include "../../audio/speex/buildlink3.mk"
 .endif
 
 # XviD support
