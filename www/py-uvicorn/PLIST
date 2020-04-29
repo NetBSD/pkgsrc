@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/08 20:58:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/04/29 07:59:35 adam Exp $
 bin/uvicorn-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -99,12 +99,18 @@ ${PYSITELIB}/uvicorn/subprocess.pyo
 ${PYSITELIB}/uvicorn/supervisors/__init__.py
 ${PYSITELIB}/uvicorn/supervisors/__init__.pyc
 ${PYSITELIB}/uvicorn/supervisors/__init__.pyo
+${PYSITELIB}/uvicorn/supervisors/basereload.py
+${PYSITELIB}/uvicorn/supervisors/basereload.pyc
+${PYSITELIB}/uvicorn/supervisors/basereload.pyo
 ${PYSITELIB}/uvicorn/supervisors/multiprocess.py
 ${PYSITELIB}/uvicorn/supervisors/multiprocess.pyc
 ${PYSITELIB}/uvicorn/supervisors/multiprocess.pyo
 ${PYSITELIB}/uvicorn/supervisors/statreload.py
 ${PYSITELIB}/uvicorn/supervisors/statreload.pyc
 ${PYSITELIB}/uvicorn/supervisors/statreload.pyo
+${PYSITELIB}/uvicorn/supervisors/watchgodreload.py
+${PYSITELIB}/uvicorn/supervisors/watchgodreload.pyc
+${PYSITELIB}/uvicorn/supervisors/watchgodreload.pyo
 ${PYSITELIB}/uvicorn/workers.py
 ${PYSITELIB}/uvicorn/workers.pyc
 ${PYSITELIB}/uvicorn/workers.pyo
