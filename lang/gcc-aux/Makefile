@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2019/11/03 19:03:57 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2020/04/29 20:33:28 maya Exp $
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
 PKGREVISION=	4
@@ -27,8 +27,8 @@ APPLY_DIFFS=	core ada cxx
 ONLY_FOR_PLATFORM=	DragonFly-*-x86_64   \
 			FreeBSD-*-i386       \
 			FreeBSD-*-x86_64     \
-			NetBSD-[5-9]*-i386   \
-			NetBSD-[5-9]*-x86_64 \
+			NetBSD-*-i386   \
+			NetBSD-*-x86_64 \
 			SunOS-5.1[1-9]*-i386 \
 			SunOS-5.1[1-9]*-x86_64
 
