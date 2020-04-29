@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2019/11/03 17:12:03 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2020/04/29 19:56:52 maya Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	8
@@ -11,12 +11,10 @@ COMMENT=	DVD player with menus
 
 LICENSE=	gnu-gpl-v2
 
-ONLY_FOR_PLATFORM=	NetBSD-1.5.[23]*-i386 NetBSD-1.5[Y-Z]*-i386
-ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
-ONLY_FOR_PLATFORM+=	NetBSD-1.6[D-Z]*-powerpc
-ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
-ONLY_FOR_PLATFORM+=	NetBSD-1.6Z*-alpha NetBSD-[2-9]*-alpha
-ONLY_FOR_PLATFORM+=	NetBSD-1.6Z*-sparc64 NetBSD-[2-9]*-sparc64
+ONLY_FOR_PLATFORM+=	NetBSD-*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-*-powerpc
+ONLY_FOR_PLATFORM+=	NetBSD-*-alpha
+ONLY_FOR_PLATFORM+=	NetBSD-*-sparc64
 ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	Linux-*-*
 ONLY_FOR_PLATFORM+=	SunOS-*-* DragonFly-*-*
