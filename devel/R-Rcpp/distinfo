@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2020/01/11 14:12:07 mef Exp $
+$NetBSD: distinfo,v 1.14 2020/04/29 02:15:52 mef Exp $
 
-SHA1 (R/Rcpp_1.0.3.tar.gz) = 59ac582f216c8d90ab4cb5f99d141fb3607882ad
-RMD160 (R/Rcpp_1.0.3.tar.gz) = e2767c60fdb06cc3b1a171132f289bb76457d551
-SHA512 (R/Rcpp_1.0.3.tar.gz) = fee76b2d5d20fc0e7885e657736333dca310398f31683209a8750f01f94898842c2936beec6d9e4cade2923fc01163d988b9ec778a8a39d2ce674bef27e8aa64
-Size (R/Rcpp_1.0.3.tar.gz) = 2749025 bytes
+SHA1 (R/Rcpp_1.0.4.6.tar.gz) = 550e45928a3ab2db4736c7ef0c9ed4f0bb134844
+RMD160 (R/Rcpp_1.0.4.6.tar.gz) = d55412cfb6c5ecfa6ec4f2a68f5a2581aa959b3a
+SHA512 (R/Rcpp_1.0.4.6.tar.gz) = d3099925cd897100fc510e6a0b7a4c4007ec92edf5c335d7d87f39aac35a6cd5da605c904527da802414992ca13302192625fde769ce62ab7542d5cb76f5c1df
+Size (R/Rcpp_1.0.4.6.tar.gz) = 2751467 bytes
