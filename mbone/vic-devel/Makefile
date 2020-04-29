@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2019/11/03 11:04:17 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/04/29 20:24:37 maya Exp $
 
 DISTNAME=	vic-2.8ucl1.4.0beta-4337
 PKGNAME=	vic-devel-2.8.1.4.0beta.4337
@@ -11,7 +11,7 @@ MAKE_JOBS_SAFE=	no
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-1.6*) || !empty(MACHINE_PLATFORM:MNetBSD-[2-9]*)
+.if ${OPSYS} == "NetBSD"
 PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	vic-2.8ucl1.4.0_ov511.diff.gz
 .endif
