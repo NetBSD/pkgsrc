@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/01/18 21:48:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2020/04/29 19:57:51 maya Exp $
 
 DISTNAME=	nss_ldap-265
 PKGREVISION=	8
@@ -11,7 +11,7 @@ COMMENT=	LDAP client for nsswitch
 LICENSE=	gnu-lgpl-v2
 
 # needs nsswitch
-ONLY_FOR_PLATFORM=	NetBSD-[3-9]*-* FreeBSD-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-*
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

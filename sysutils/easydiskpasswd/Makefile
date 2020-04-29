@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/11/04 21:28:45 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/04/29 19:57:51 maya Exp $
 
 DISTNAME=	easydiskpasswd-1.0
 PKGREVISION=	1
@@ -15,7 +15,7 @@ INSTALLATION_DIRS=	bin
 
 # we depend on SCIOCCOMMAND, a header defining sense codes
 # and the "make" infrastructure
-ONLY_FOR_PLATFORM=	NetBSD-[3-9]*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
