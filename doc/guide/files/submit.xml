@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.35 2020/02/24 21:13:56 rillig Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.36 2020/04/29 23:09:48 gutteridge Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -209,11 +209,11 @@ much easier to get wrong than <quote>cvs add</quote>.</para>
 
 <para>Renaming packages is not recommended.</para>
 
-<para>When renaming packages, be sure to fix any references to old name
+<para>When renaming packages, be sure to fix any references to the old name
   in other Makefiles, options, buildlink files, etc.</para>
 
 <para>
-  Also when renaming a package, please add
+  Also, when renaming a package, please add
   the package name and version pattern(s) of the previous package
   to <varname>SUPERSEDES</varname>.
   This may be repeated for multiple renames.
