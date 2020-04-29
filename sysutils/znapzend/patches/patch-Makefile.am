@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2020/04/29 20:15:33 wiedi Exp $
+
+thirdparty deps are provided by pkgsrc
+
+--- Makefile.am.orig	2020-03-23 14:59:16.000000000 +0000
++++ Makefile.am
+@@ -5,7 +5,7 @@ AUTOMAKE_OPTIONS =  foreign
+ 
+ SUFFIXES = .1 .man .pm
+ 
+-SUBDIRS = lib thirdparty
++SUBDIRS = lib
+ 
+ BIN = bin/@PACKAGE@ bin/znapzendzetup bin/znapzendztatz
+ PM :=  $(shell find lib/ -name "*.pm")
