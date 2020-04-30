@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2020/04/22 05:01:51 nia Exp $
+# $NetBSD: Makefile,v 1.156 2020/04/30 12:45:10 nia Exp $
 
 DISTNAME=	balsa-2.6.0
 CATEGORIES=	mail
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 TOOL_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	yelp-tools-[0-9]*:../../textproc/yelp-tools
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
