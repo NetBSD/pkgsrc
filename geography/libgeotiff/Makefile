@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/04/22 19:36:32 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2020/04/30 00:11:59 gdt Exp $
 
-DISTNAME=	libgeotiff-1.5.1
-PKGREVISION=	1
+DISTNAME=	libgeotiff-1.6.0
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/geotiff/libgeotiff/
 
@@ -12,6 +11,8 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+TEST_TARGET=	check
 
 # TODO: add options for zlib and jpeg support
 
