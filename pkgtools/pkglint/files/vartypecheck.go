@@ -1387,7 +1387,7 @@ func (cv *VartypeCheck) URL() {
 	} else if containsVarUse(value) {
 		// No further checks
 
-	} else if m, _, host, _, _ := match4(value, `^(https?|ftp|gopher)://([-0-9A-Za-z.]+)(?::(\d+))?/([-%&+,./0-9:;=?@A-Z_a-z~]|#)*$`); m {
+	} else if m, host := match1(value, `^(?:https?|ftp|gopher)://([-0-9A-Za-z.]+)(?::\d+)?/[-#%&+,./0-9:;=?@A-Z_a-z~]*$`); m {
 		if matches(host, `(?i)\.NetBSD\.org$`) && !matches(host, `\.NetBSD\.org$`) {
 			prefix := host[:len(host)-len(".NetBSD.org")]
 			fix := cv.Autofix()
@@ -1566,7 +1566,7 @@ func (cv *VartypeCheck) WrksrcSubdirectory() {
 			"",
 			"Example:",
 			"",
-			"\tWRKSRC=\t${WRKDIR}",
+			"\tWRKSRC=\t\t${WRKDIR}",
 			"\tCONFIGURE_DIRS=\t${WRKSRC}/lib ${WRKSRC}/src",
 			"\tBUILD_DIRS=\t${WRKSRC}/lib ${WRKSRC}/src ${WRKSRC}/cmd",
 			"",

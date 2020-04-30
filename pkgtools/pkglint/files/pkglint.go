@@ -823,6 +823,12 @@ func (ip *InterPackage) Enable() {
 		make(map[string]*Hash),
 		make(map[string]struct{}),
 		make(map[string]Location)}
+
+	// This is the only license that is added by an infrastructure file,
+	// mk/djbware.mk. The correct way to handle this situation would be
+	// to scan Package.check.allLines for LICENSE lines, but that would
+	// be too much just to cover this special case.
+	ip.UseLicense("djb-unlicense")
 }
 
 func (ip *InterPackage) Enabled() bool { return ip.hashes != nil }
