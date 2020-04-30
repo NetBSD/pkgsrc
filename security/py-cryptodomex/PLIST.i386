@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.i386,v 1.1 2020/04/30 11:33:24 nikita Exp $
+${PYSITELIB}/Cryptodome/Cipher/_raw_aesni.so
+${PYSITELIB}/Cryptodome/Hash/_ghash_clmul.so
