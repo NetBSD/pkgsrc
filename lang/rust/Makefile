@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2020/04/20 13:22:31 joerg Exp $
+# $NetBSD: Makefile,v 1.161 2020/04/30 18:12:19 maya Exp $
 
 DISTNAME=	rustc-1.42.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -221,6 +221,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 CFLAGS+=		-march=i586
 pre-build-fix:
 	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/cargo
+	${TOOLS_PLATFORM.paxctl} +am ${WRKDIR}/rust-bootstrap/bin/rustc
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
 RUST_STAGE0_VER=	1.41.1
