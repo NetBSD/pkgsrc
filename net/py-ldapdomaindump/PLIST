@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2020/04/30 11:48:42 nikita Exp $
+bin/ldapdomaindump
+bin/ldd2bloodhound
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ldapdomaindump/__init__.py
+${PYSITELIB}/ldapdomaindump/__main__.py
+${PYSITELIB}/ldapdomaindump/__init__.pyo
+${PYSITELIB}/ldapdomaindump/__init__.pyc
+${PYSITELIB}/ldapdomaindump/__main__.pyo
+${PYSITELIB}/ldapdomaindump/__main__.pyc
+${PYSITELIB}/ldapdomaindump/config.pyo
+${PYSITELIB}/ldapdomaindump/config.pyc
+${PYSITELIB}/ldapdomaindump/convert.pyo
+${PYSITELIB}/ldapdomaindump/convert.pyc
+${PYSITELIB}/ldapdomaindump/domaindumper.pyo
+${PYSITELIB}/ldapdomaindump/domaindumper.pyc
+${PYSITELIB}/ldapdomaindump/config.py
+${PYSITELIB}/ldapdomaindump/convert.py
+${PYSITELIB}/ldapdomaindump/domaindumper.py
+${PYSITELIB}/ldapdomaindump/style.css
