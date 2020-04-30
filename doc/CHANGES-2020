@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2661 2020/04/30 12:49:02 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2662 2020/04/30 13:11:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3814,3 +3814,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/py-impacket version 0.9.21 [nikita 2020-04-30]
 	Updated devel/tex-tlshell to 2020.54921 [markd 2020-04-30]
 	Updated devel/tex-tlshell-doc to 2020.54921 [markd 2020-04-30]
+	Updated games/liblcf to 0.6.2 [nia 2020-04-30]
