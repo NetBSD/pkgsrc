@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/30 11:33:24 nikita Exp $
+
+SHA1 (pycryptodomex-3.8.1.tar.gz) = 20fe6dac6e2391b9c4b89d8939f79ca31d7e35bf
+RMD160 (pycryptodomex-3.8.1.tar.gz) = 441dcc4f06fe563429a945d1c27c91599c1b70ab
+SHA512 (pycryptodomex-3.8.1.tar.gz) = 21da08d24eabbcd392eac62b8805114bdc987dc02d89c797ab320e8da8e973dc7eca23623b0fd3f98d484dbb97a743dc688babf981e072adcb196757c3455de0
+Size (pycryptodomex-3.8.1.tar.gz) = 11536920 bytes
