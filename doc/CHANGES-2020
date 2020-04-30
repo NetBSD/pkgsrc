@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2651 2020/04/30 06:58:37 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2652 2020/04/30 07:12:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3800,3 +3800,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-awscli to 1.18.49 [adam 2020-04-30]
 	Updated www/py-uvicorn to 0.11.5 [adam 2020-04-30]
 	Updated lang/nodejs to 14.1.0 [adam 2020-04-30]
+	Updated mail/roundcube to 1.4.4 [taca 2020-04-30]
+	Updated mail/roundcube-plugin-enigma to 1.4.4 [taca 2020-04-30]
+	Updated mail/roundcube-plugin-zipdownload to 1.4.4 [taca 2020-04-30]
+	Updated mail/roundcube-plugin-password to 1.4.4 [taca 2020-04-30]
