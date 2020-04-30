@@ -275,7 +275,6 @@ func (pkg *Package) loadPackageMakefile() (*MkLines, *MkLines) {
 	return mainLines, allLines
 }
 
-// TODO: What is allLines used for, is it still necessary? Would it be better as a field in Package?
 func (pkg *Package) parse(mklines *MkLines, allLines *MkLines, includingFileForUsedCheck CurrPath, main bool) bool {
 	if trace.Tracing {
 		defer trace.Call(mklines.lines.Filename)()
@@ -891,7 +890,6 @@ func (pkg *Package) CheckVarorder(mklines *MkLines) {
 		{"NOT_FOR_COMPILER", many},
 		{"ONLY_FOR_COMPILER", many},
 		{"NOT_FOR_UNPRIVILEGED", optional},
-		{"ONLY_FOR_UNPRIVILEGED", optional},
 		emptyLine,
 		{"BUILD_DEPENDS", many},
 		{"TOOL_DEPENDS", many},
@@ -1147,7 +1145,7 @@ func (pkg *Package) determineEffectivePkgVars() {
 
 	effname := pkgname
 	if distname != "" && effname != "" {
-		merged, ok := pkg.pkgnameFromDistname(effname, distname)
+		merged, ok := pkg.pkgnameFromDistname(effname, distname, pkgnameLine)
 		if ok {
 			effname = merged
 		}
@@ -1209,7 +1207,7 @@ func (pkg *Package) nbPart() string {
 	return ""
 }
 
-func (pkg *Package) pkgnameFromDistname(pkgname, distname string) (string, bool) {
+func (pkg *Package) pkgnameFromDistname(pkgname, distname string, diag Diagnoser) (string, bool) {
 	tokens, rest := NewMkLexer(pkgname, nil).MkTokens()
 	if rest != "" {
 		return "", false
@@ -1228,7 +1226,10 @@ func (pkg *Package) pkgnameFromDistname(pkgname, distname string) (string, bool)
 			for _, mod := range token.Varuse.modifiers {
 				if mod.IsToLower() {
 					newDistname = strings.ToLower(newDistname)
-				} else if subst, ok := mod.Subst(newDistname); ok {
+				} else if ok, subst := mod.Subst(newDistname); ok {
+					if subst == newDistname && !containsVarUse(subst) {
+						diag.Notef("The modifier :%s does not have an effect.", mod.Text)
+					}
 					newDistname = subst
 				} else {
 					return "", false
