@@ -58,12 +58,6 @@ func match2(s string, re regex.Pattern) (matched bool, m1, m2 string) {
 func match3(s string, re regex.Pattern) (matched bool, m1, m2, m3 string) {
 	return G.res.Match3(s, re)
 }
-func match4(s string, re regex.Pattern) (matched bool, m1, m2, m3, m4 string) {
-	return G.res.Match4(s, re)
-}
-func match5(s string, re regex.Pattern) (matched bool, m1, m2, m3, m4, m5 string) {
-	return G.res.Match5(s, re)
-}
 func replaceAll(s string, re regex.Pattern, repl string) string {
 	return G.res.Compile(re).ReplaceAllString(s, repl)
 }
@@ -558,7 +552,7 @@ func (o *Once) FirstTime(what string) bool {
 	key := o.keyString(what)
 	firstTime := o.check(key)
 	if firstTime && o.Trace {
-		G.Logger.out.WriteLine(sprintf("FirstTime: %s", what))
+		G.Logger.out.WriteLine("FirstTime: " + what)
 	}
 	return firstTime
 }
@@ -567,7 +561,7 @@ func (o *Once) FirstTimeSlice(whats ...string) bool {
 	key := o.keyStrings(whats)
 	firstTime := o.check(key)
 	if firstTime && o.Trace {
-		G.Logger.out.WriteLine(sprintf("FirstTime: %s", strings.Join(whats, ", ")))
+		G.Logger.out.WriteLine("FirstTime: " + strings.Join(whats, ", "))
 	}
 	return firstTime
 }
