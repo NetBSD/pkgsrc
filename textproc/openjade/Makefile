@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2020/03/20 11:58:28 nia Exp $
+# $NetBSD: Makefile,v 1.38 2020/04/30 23:46:13 joerg Exp $
 
 DISTNAME=	openjade-1.3.2
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openjade/}
 
@@ -44,6 +44,9 @@ INSTALLATION_DIRS=	${OPENJADE_DATA_DIR}/pubtext \
 #
 # Work around the openjade bug by asking gcc not to eliminate the dead
 # stores that openjade relies on.
+#
+# Similar problems are seen with clang, so also mark the variable as
+# volatile.
 #
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mgcc)
