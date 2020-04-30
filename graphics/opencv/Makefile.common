@@ -1,6 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2020/02/13 09:23:46 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/04/30 09:23:28 wiz Exp $
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
+#
+# DO NOT FORGET to regen graphics/opencv-contrib-face/distinfo!
 
 OPENCV_VERSION=	3.4.9
 
