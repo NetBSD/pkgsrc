@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2020/02/19 09:28:44 adam Exp $
+$NetBSD: distinfo,v 1.33 2020/04/30 06:45:21 adam Exp $
 
-SHA1 (botocore-1.15.2.tar.gz) = 122689f193e1f9be975e88a24da27822c62df54c
-RMD160 (botocore-1.15.2.tar.gz) = db8aff07613c073066d6ef24498829b837c4a9ba
-SHA512 (botocore-1.15.2.tar.gz) = 3948fad42f0e40353378ee2e7847ab35a04a2ad423a2c9289e978d2667bf5e30e200b5dfed79af54060a64ca13844c7b9380a864b604461dee7c979ec8c1cdee
-Size (botocore-1.15.2.tar.gz) = 6144617 bytes
+SHA1 (botocore-1.15.49.tar.gz) = f5aa87a5b67eb39f1c7f756eea92ab93b3cf6c2a
+RMD160 (botocore-1.15.49.tar.gz) = 480c13c65313084755bc58d83da77c17c27c5617
+SHA512 (botocore-1.15.49.tar.gz) = 56a09a53d67672734141f1c9137dde72f3e4ca0ecda2a0b51868a18057bb4e310410bd591e5c1b63bd398791e0121006ef3900fa5f64c373e28b7fefccd48730
+Size (botocore-1.15.49.tar.gz) = 6366851 bytes
