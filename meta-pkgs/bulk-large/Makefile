@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2020/03/21 20:28:42 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2020/04/30 15:54:04 maya Exp $
 
-DISTNAME=	bulk-large-20200321
+DISTNAME=	bulk-large-20200430
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -54,12 +54,9 @@ BUILD_DEPENDS+=	asterisk>=16:../../comms/asterisk16
 BUILD_DEPENDS+=	avr-gcc-[0-9]*:../../cross/avr-gcc
 BUILD_DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
 BUILD_DEPENDS+=	avr-gdb-[0-9]*:../../cross/avr-gdb
-BUILD_DEPENDS+=	mysql-client>=5.6<5.7:../../databases/mysql56-client
-BUILD_DEPENDS+=	mysql-server>=5.6<5.7:../../databases/mysql56-server
 BUILD_DEPENDS+=	mysql-client>=5.7:../../databases/mysql57-client
 BUILD_DEPENDS+=	mysql-server>=5.7:../../databases/mysql57-server
 BUILD_DEPENDS+=	postgresql95-[0-9]*:../../databases/postgresql95
-BUILD_DEPENDS+=	valgrind-[0-9]*:../../devel/valgrind
 BUILD_DEPENDS+=	abiword-[0-9]*:../../editors/abiword
 BUILD_DEPENDS+=	emacs25>=25<26:../../editors/emacs25
 BUILD_DEPENDS+=	emacs-packages-[0-9]*:../../editors/emacs-packages
