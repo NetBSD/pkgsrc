@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/03/20 11:58:21 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/04/30 18:52:33 wiedi Exp $
 #
 
 DISTNAME=	menu-cache-1.1.0
@@ -18,6 +18,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	libmenu-cache/libmenu-cache.pc.in
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README \
