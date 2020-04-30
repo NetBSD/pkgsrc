@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.1 2019/08/07 18:05:25 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2020/04/30 14:57:30 nia Exp $
 # used by games/cataclysm-dda/Makefile
 # used by games/cataclysm-dda-sdl/Makefile
 
-DISTNAME=	cataclysm-dda-0.D
+DISTNAME=	cataclysm-dda-0.E
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CleverRaven/}
 GITHUB_PROJECT=	Cataclysm-DDA
-GITHUB_TAG=	0.D
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 HOMEPAGE=	https://cataclysmdda.org/
 LICENSE=	cc-by-sa-v3.0
@@ -15,10 +15,11 @@ USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake msgfmt pkg-config
 USE_TOOLS+=	pax
 
-# C++11
-GCC_REQD+=	4.8
+# C++14
+GCC_REQD+=	5
 
 DISTINFO_FILE=	${.CURDIR}/../../games/cataclysm-dda/distinfo
+PATCHDIR=	${.CURDIR}/../../games/cataclysm-dda/patches
 
 CFLAGS+=	-DCATA_NO_CPP11_STRING_CONVERSIONS
 CXXFLAGS+=	-DCATA_NO_CPP11_STRING_CONVERSIONS
@@ -35,13 +36,9 @@ MAKE_FLAGS+=	USE_XDG_DIR=1
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-LUA_VERSIONS_INCOMPATIBLE=	51
-
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/cataclysm-dda
-INSTALLATION_DIRS+=	share/cataclysm-dda/lua
 INSTALLATION_DIRS+=	share/locale
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"

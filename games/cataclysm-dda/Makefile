@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/09/20 15:05:01 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/04/30 14:57:30 nia Exp $
 
 .include "Makefile.common"
 
@@ -15,12 +15,6 @@ do-install:
 	cd ${WRKSRC}/data && ${PAX} -rw -pp ${target} \
 	    ${DESTDIR}${PREFIX}/share/cataclysm-dda
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/lua/autoexec.lua \
-	    ${DESTDIR}${PREFIX}/share/cataclysm-dda/lua
-	${INSTALL_DATA} ${WRKSRC}/lua/log.lua \
-	    ${DESTDIR}${PREFIX}/share/cataclysm-dda/lua
-	${INSTALL_DATA} ${WRKSRC}/lua/class_definitions.lua \
-	    ${DESTDIR}${PREFIX}/share/cataclysm-dda/lua
 	${INSTALL_DATA} ${WRKSRC}/data/changelog.txt \
 	    ${DESTDIR}${PREFIX}/share/cataclysm-dda
 	${INSTALL_DATA} ${WRKSRC}/data/cataicon.ico \
