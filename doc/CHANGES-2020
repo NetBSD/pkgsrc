@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2663 2020/04/30 13:11:21 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2664 2020/04/30 13:29:24 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3816,3 +3816,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/tex-tlshell-doc to 2020.54921 [markd 2020-04-30]
 	Updated games/liblcf to 0.6.2 [nia 2020-04-30]
 	Updated games/easyrpg-player to 0.6.2 [nia 2020-04-30]
+	Updated devel/ocaml-logs to 0.7.0nb1 [jaapb 2020-04-30]
