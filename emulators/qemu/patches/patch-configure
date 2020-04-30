@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.26 2020/02/06 16:46:17 kamil Exp $
+$NetBSD: patch-configure,v 1.27 2020/04/30 17:16:04 adam Exp $
 
-configure: Add HAX support in NetBSD
 Add NVMM support.
+Fix jemalloc detection.
 
---- configure.orig	2020-02-06 16:24:52.903915848 +0000
+--- configure.orig	2020-04-28 16:49:25.000000000 +0000
 +++ configure
 @@ -241,6 +241,17 @@ supported_whpx_target() {
      return 1
@@ -31,7 +31,7 @@ Add NVMM support.
      print_error "TCG disabled, but hardware accelerator not available for '$target'"
      return 1
  }
-@@ -387,6 +399,7 @@ kvm="no"
+@@ -389,6 +401,7 @@ kvm="no"
  hax="no"
  hvf="no"
  whpx="no"
@@ -39,7 +39,7 @@ Add NVMM support.
  rdma=""
  pvrdma=""
  gprof="no"
-@@ -822,6 +835,7 @@ DragonFly)
+@@ -837,6 +850,7 @@ DragonFly)
  NetBSD)
    bsd="yes"
    hax="yes"
@@ -47,7 +47,7 @@ Add NVMM support.
    make="${MAKE-gmake}"
    audio_drv_list="oss try-sdl"
    audio_possible_drivers="oss sdl"
-@@ -1172,6 +1186,10 @@ for opt do
+@@ -1210,6 +1224,10 @@ for opt do
    ;;
    --enable-whpx) whpx="yes"
    ;;
@@ -58,7 +58,7 @@ Add NVMM support.
    --disable-tcg-interpreter) tcg_interpreter="no"
    ;;
    --enable-tcg-interpreter) tcg_interpreter="yes"
-@@ -1768,6 +1786,7 @@ disabled with --disable-FEATURE, default
+@@ -1832,6 +1850,7 @@ disabled with --disable-FEATURE, default
    hax             HAX acceleration support
    hvf             Hypervisor.framework acceleration support
    whpx            Windows Hypervisor Platform acceleration support
@@ -66,7 +66,7 @@ Add NVMM support.
    rdma            Enable RDMA-based migration
    pvrdma          Enable PVRDMA support
    vde             support for vde network
-@@ -2758,6 +2777,20 @@ if test "$whpx" != "no" ; then
+@@ -2871,6 +2890,20 @@ if test "$whpx" != "no" ; then
  fi
  
  ##########################################
@@ -87,7 +87,21 @@ Add NVMM support.
  # Sparse probe
  if test "$sparse" != "no" ; then
    if has cgcc; then
-@@ -6522,6 +6555,7 @@ echo "KVM support       $kvm"
+@@ -4586,8 +4619,11 @@ if test "$jemalloc" = "yes" ; then
+ int main(void) { malloc(1); return 0; }
+ EOF
+ 
+-  if compile_prog "" "-ljemalloc" ; then
+-    LIBS="-ljemalloc $LIBS"
++  jemalloc_cflags=$($pkg_config --cflags jemalloc)
++  jemalloc_libs=$($pkg_config --libs jemalloc)
++  if compile_prog "" "$jemalloc_libs" ; then
++    LIBS="$jemalloc_libs $LIBS"
++    QEMU_CFLAGS="$QEMU_CFLAGS $jemalloc_cflags"
+   else
+     feature_not_found "jemalloc" "install jemalloc devel"
+   fi
+@@ -6651,6 +6687,7 @@ echo "KVM support       $kvm"
  echo "HAX support       $hax"
  echo "HVF support       $hvf"
  echo "WHPX support      $whpx"
@@ -95,7 +109,7 @@ Add NVMM support.
  echo "TCG support       $tcg"
  if test "$tcg" = "yes" ; then
      echo "TCG debug enabled $debug_tcg"
-@@ -7811,6 +7845,9 @@ fi
+@@ -8001,6 +8038,9 @@ fi
  if test "$target_aligned_only" = "yes" ; then
    echo "TARGET_ALIGNED_ONLY=y" >> $config_target_mak
  fi
