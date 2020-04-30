@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2020/04/28 19:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2020/04/30 07:52:39 wiz Exp $
 
 DISTNAME=	src-firefox-tor-browser-68.7.0esr-9.0-2-build1
 PKGNAME=	tor-browser-9.0.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security www
 MASTER_SITES=	https://dist.torproject.org/torbrowser/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -16,7 +16,7 @@ LICENSE=	mpl-1.1
 WRKSRC=		${WRKDIR}/${DISTNAME:S/src-//}
 
 DEPENDS+=	tor-[0-9]*:../../net/tor
-#DEPENDS+=	tor-browser-https-everywhere-[0-9]*:../../security/tor-browser-https-everywhere
+DEPENDS+=	tor-browser-https-everywhere-[0-9]*:../../security/tor-browser-https-everywhere
 DEPENDS+=	tor-browser-noscript-[0-9]*:../../security/tor-browser-noscript
 
 # How to update this package:
