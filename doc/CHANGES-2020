@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2655 2020/04/30 08:11:51 jaapb Exp $
+$NetBSD: CHANGES-2020,v 1.2656 2020/04/30 09:37:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3807,3 +3807,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/nsd to 4.3.1 [ryoon 2020-04-30]
 	Updated security/tor-browser to 9.0.9nb3 [wiz 2020-04-30]
 	Updated devel/ocaml-ppx_expect to 0.13.0nb1 [jaapb 2020-04-30]
+	Updated databases/py-redis to 3.5.0 [adam 2020-04-30]
+	Updated www/py-bleach to 3.1.5 [adam 2020-04-30]
