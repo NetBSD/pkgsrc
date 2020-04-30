@@ -393,7 +393,8 @@ func (s *Suite) Test_HomepageChecker_checkReachable(c *check.C) {
 		"https://no-such-name.example.org/",
 		// The "unknown network error" is for compatibility with Go < 1.13.
 		`^WARN: filename\.mk:1: Homepage "https://no-such-name.example.org/" `+
-			`cannot be checked: (name not found|timeout|unknown network error:.*)$`)
+			`cannot be checked: `+
+			`(name not found|timeout|connection refused|unknown network error:.*)$`)
 
 	// Syntactically invalid URLs are silently skipped since VartypeCheck.URL
 	// already warns about them.

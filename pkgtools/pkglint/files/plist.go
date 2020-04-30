@@ -370,7 +370,12 @@ func (ck *PlistChecker) checkPathLib(pline *PlistLine, rel RelPath) {
 }
 
 func (ck *PlistChecker) checkPathMan(pline *PlistLine) {
-	m, catOrMan, section, manpage, ext, gz := match5(pline.text, `^man/(cat|man)(\w+)/(.*?)\.(\w+)(\.gz)?$`)
+	m, catOrMan, section, base := match3(pline.text, `^man/(cat|man)(\w+)/(.*)$`)
+	if !m {
+		// maybe: line.Warnf("Invalid filename %q for manual page.", text)
+		return
+	}
+	m, manpage, ext, gz := match3(base, `^(.*?)\.(\w+)(\.gz)?$`)
 	if !m {
 		// maybe: line.Warnf("Invalid filename %q for manual page.", text)
 		return

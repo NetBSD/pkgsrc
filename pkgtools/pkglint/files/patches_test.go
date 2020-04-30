@@ -754,6 +754,168 @@ func (s *Suite) Test_PatchChecker_checkConfigure__configure_ac(c *check.C) {
 		"ERROR: ~/patch-aa:9: This code must not be included in patches.")
 }
 
+func (s *Suite) Test_PatchChecker_checkAddedAbsPath(c *check.C) {
+	t := s.Init(c)
+
+	test := func(addedLine string, diagnostics ...string) {
+		lines := t.NewLines("patch-file",
+			CvsID,
+			"",
+			"Demonstrates absolute paths.",
+			"",
+			"--- before",
+			"+++ after",
+			"@@ -1,0 +1,1 @@",
+			"+"+addedLine)
+
+		CheckLinesPatch(lines, nil)
+
+		t.CheckOutput(diagnostics)
+	}
+
+	test(
+		"/usr/pkg",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PREFIX.")
+
+	test(
+		"/usr/pkgsrc",
+		nil...)
+
+	test(
+		"/usr/pkg/bin",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PREFIX.")
+
+	test(
+		"/usr/local:/usr/pkg:/opt",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PREFIX.")
+
+	test(
+		"/var",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc VARBASE.")
+
+	test(
+		"/var/db",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc VARBASE.")
+
+	test(
+		"/var/run",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc VARBASE.")
+
+	// A well-known path that is not specific to pkgsrc.
+	test(
+		"/var/shm",
+		nil...)
+
+	// A well-known path that is not specific to pkgsrc.
+	test(
+		"/var/tmp",
+		nil...)
+
+	test(
+		"/etc",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PKG_SYSCONFDIR.")
+
+	// BSD-style Makefile
+	test(
+		"${PREFIX}/etc",
+		nil...)
+
+	// GNU automake-style Makefile
+	test(
+		"$(prefix)/etc",
+		nil...)
+
+	// C source code.
+	// Instead of PREFIX/etc, this should rather be PKG_SYSCONFDIR.
+	// This is a relative path because of the PREFIX.
+	test(
+		"const char *conf_dir = PREFIX \"/etc\"",
+		nil...)
+
+	// CMakeLists.txt
+	test(
+		"set(ETC_DIR \"/etc\")",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PKG_SYSCONFDIR.")
+
+	test(
+		"/etc/mk.conf",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PKG_SYSCONFDIR.")
+
+	test(
+		"/etc/rc.d/daemon",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PKG_SYSCONFDIR.")
+
+	test(
+		"/usr/pkg and /var and /etc",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PREFIX.",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc VARBASE.",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PKG_SYSCONFDIR.")
+
+	// From the --help text of a GNU configure script.
+	test(
+		"[PREFIX/etc]",
+		nil...)
+
+	// Shell program, default value for a variable.
+	test(
+		"DIR=${DIR-/var/bytebench}",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc VARBASE.")
+
+	// Shell program or Makefile.
+	// The placeholder will make this a relative path.
+	test(
+		"dir=@prefix@/etc",
+		nil...)
+
+	// Makefile with flags for the C compiler.
+	test(
+		"CFLAGS+= -I/usr/pkg/include",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PREFIX.")
+
+	// Makefile with flags for the linker.
+	test(
+		"LDFLAGS+= -L/usr/pkg/lib",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PREFIX.")
+
+	// Makefile with flags for the linker.
+	// There should be an additional warning for using COMPILER_RPATH_FLAG.
+	test(
+		"LDFLAGS+= -rpath/usr/pkg/lib",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PREFIX.")
+
+	// Makefile with flags for the linker.
+	// There should be an additional warning for using COMPILER_RPATH_FLAG.
+	test(
+		"LDFLAGS+= -Wl,-R/usr/pkg/lib",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc PREFIX.")
+
+	// The dot before the "/etc" makes it a relative pathname.
+	test(
+		"cp ./etc/hostname /tmp")
+
+	// +>	+#	from /etc/inittab (SYSV systems)
+	// +ERROR: devel/tet3/patches/patch-ac:51: Patches must not hard-code the pkgsrc PKG_SYSCONFDIR.
+
+	test(
+		"# SysV /etc/install, /usr/sbin/install")
+
+	// C or C++ program, macro definition.
+	// This is an absolute path since the PID_FILE is the macro name,
+	// and not part of the macro body containing the path.
+	test(
+		"#define PID_FILE \"/var/run/daemon.pid\"",
+		"ERROR: patch-file:8: Patches must not hard-code the pkgsrc VARBASE.")
+
+	// This is a relative path because of the PREFIX before it.
+	test(
+		"#define PID_FILE PREFIX \"/etc/conf\"",
+		nil...)
+
+	test(
+		"#define L 150 /* Length of a line in /etc/passwd */",
+		nil...)
+}
+
 func (s *Suite) Test_PatchChecker_checktextCvsID(c *check.C) {
 	t := s.Init(c)
 

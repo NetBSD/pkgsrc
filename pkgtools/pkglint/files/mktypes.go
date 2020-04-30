@@ -40,7 +40,7 @@ func NewMkVarUse(varname string, modifiers ...MkVarUseModifier) *MkVarUse {
 func (vu *MkVarUse) String() string { return sprintf("${%s%s}", vu.varname, vu.Mod()) }
 
 type MkVarUseModifier struct {
-	Text string
+	Text string // The text of the modifier, without the initial colon.
 }
 
 func (m MkVarUseModifier) IsQ() bool { return m.Text == "Q" }
@@ -59,13 +59,13 @@ func (m MkVarUseModifier) MatchSubst() (ok bool, regex bool, from string, to str
 //
 // Example:
 //  MkVarUseModifier{"S,name,file,g"}.Subst("distname-1.0") => "distfile-1.0"
-func (m MkVarUseModifier) Subst(str string) (string, bool) {
+func (m MkVarUseModifier) Subst(str string) (bool, string) {
 	// XXX: The call to MatchSubst is usually redundant because MatchSubst
 	//  is typically called directly before calling Subst.
 	//  This comes from a time when there was no boolean return value.
 	ok, isRegex, from, to, options := m.MatchSubst()
 	if !ok {
-		return "", false
+		return false, ""
 	}
 
 	leftAnchor := hasPrefix(from, "^")
@@ -86,14 +86,14 @@ func (m MkVarUseModifier) Subst(str string) (string, bool) {
 
 	if isRegex {
 		// XXX: Maybe implement regular expression substitutions later.
-		return "", false
+		return false, ""
 	}
 
 	ok, result := m.EvalSubst(str, leftAnchor, from, rightAnchor, to, options)
 	if trace.Tracing && ok && result != str {
 		trace.Stepf("Subst: %q %q => %q", str, m.Text, result)
 	}
-	return result, ok
+	return ok, result
 }
 
 // mkopSubst evaluates make(1)'s :S substitution operator.

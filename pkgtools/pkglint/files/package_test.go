@@ -2609,6 +2609,43 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__ineffective_C_modifier(c
 	pkg.check(files, mklines, allLines)
 
 	t.CheckEquals(pkg.EffectivePkgname, "distname-1.0")
+	t.CheckOutputLines(
+		"NOTE: ~/category/package/Makefile:4: " +
+			"The modifier :C:does_not_match:replacement: does not have an effect.")
+}
+
+func (s *Suite) Test_Package_determineEffectivePkgVars__ineffective_S_modifier_with_variable(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"VERSION=\t1.008",
+		"DISTNAME=\tdistname-v${VERSION}",
+		"PKGNAME=\t${DISTNAME:S/v1/1/}")
+	t.FinishSetUp()
+	pkg := NewPackage(t.File("category/package"))
+	files, mklines, allLines := pkg.load()
+
+	pkg.check(files, mklines, allLines)
+
+	// TODO: Expand ${VERSION}, that's pretty simple.
+	t.CheckEquals(pkg.EffectivePkgname, "") // Because of the unexpanded VERSION.
+	t.CheckOutputEmpty()
+}
+
+func (s *Suite) Test_Package_determineEffectivePkgVars__effective_S_modifier_with_variable(c *check.C) {
+	t := s.Init(c)
+
+	t.SetUpPackage("category/package",
+		"MINOR_VERSION=\t1.008",
+		"DISTNAME=\tdistname-v1.${MINOR_VERSION}",
+		"PKGNAME=\t${DISTNAME:S/v1/1/}")
+	t.FinishSetUp()
+	pkg := NewPackage(t.File("category/package"))
+	files, mklines, allLines := pkg.load()
+
+	pkg.check(files, mklines, allLines)
+
+	t.CheckEquals(pkg.EffectivePkgname, "") // because of MINOR_VERSION
 	t.CheckOutputEmpty()
 }
 
@@ -2724,9 +2761,11 @@ func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 	// the package version. Therefore it is discarded completely.
 	test("${DISTNAME:S|^lib||}", "libncurses", "")
 
-	// The substitution succeeds, but the substituted value is missing
-	// the package version. Therefore it is discarded completely.
-	test("${DISTNAME:S|^lib||}", "mylib", "")
+	// The substitution does not have an effect.
+	// The substituted value is missing the package version.
+	// Therefore it is discarded completely.
+	test("${DISTNAME:S|^lib||}", "mylib", "",
+		"NOTE: ~/category/package/Makefile:4: The modifier :S|^lib|| does not have an effect.")
 
 	test("${DISTNAME:tl:S/-/./g:S/he/-/1}", "SaxonHE9-5-0-1J", "saxon-9.5.0.1j")
 

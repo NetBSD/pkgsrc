@@ -592,13 +592,13 @@ func (s *Suite) Test_MkVarUseChecker_checkPermissions__indirectly(c *check.C) {
 	t.SetUpVartypes()
 	mklines := t.NewMkLines("file.mk",
 		MkCvsID,
-		"IGNORE_PKG.package=\t${ONLY_FOR_UNPRIVILEGED}")
+		"IGNORE_PKG.package=\t${NOT_FOR_UNPRIVILEGED}")
 
 	mklines.Check()
 
 	t.CheckOutputLines(
 		"WARN: file.mk:2: IGNORE_PKG.package should be set to YES or yes.",
-		"WARN: file.mk:2: ONLY_FOR_UNPRIVILEGED should not be used indirectly at load time (via IGNORE_PKG.package).")
+		"WARN: file.mk:2: NOT_FOR_UNPRIVILEGED should not be used indirectly at load time (via IGNORE_PKG.package).")
 }
 
 // This test is only here for branch coverage.

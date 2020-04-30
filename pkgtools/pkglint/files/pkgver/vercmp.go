@@ -31,7 +31,7 @@ func Compare(left, right string) int {
 
 	m := imax(len(lv.v), len(rv.v))
 	for i := 0; i < m; i++ {
-		if c := icmp(lv.Field(i), rv.Field(i)); c != 0 {
+		if c := icmp(lv.field(i), rv.field(i)); c != 0 {
 			return c
 		}
 	}
@@ -52,24 +52,24 @@ func newVersion(vstr string) *version {
 		case lex.TestByteSet(textproc.Digit):
 			num := lex.NextBytesSet(textproc.Digit)
 			n, _ := strconv.Atoi(num)
-			v.Add(n)
+			v.add(n)
 		case lex.SkipByte('_') || lex.SkipByte('.'):
-			v.Add(0)
+			v.add(0)
 		case lex.SkipString("alpha"):
-			v.Add(-3)
+			v.add(-3)
 		case lex.SkipString("beta"):
-			v.Add(-2)
+			v.add(-2)
 		case lex.SkipString("pre"):
-			v.Add(-1)
+			v.add(-1)
 		case lex.SkipString("rc"):
-			v.Add(-1)
+			v.add(-1)
 		case lex.SkipString("pl"):
-			v.Add(0)
+			v.add(0)
 		case lex.SkipString("nb"):
 			num := lex.NextBytesSet(textproc.Digit)
 			v.nb, _ = strconv.Atoi(num)
 		case lex.TestByteSet(textproc.Lower):
-			v.Add(int(lex.Rest()[0] - 'a' + 1))
+			v.add(int(lex.Rest()[0] - 'a' + 1))
 			lex.Skip(1)
 		default:
 			lex.Skip(1)
@@ -78,11 +78,12 @@ func newVersion(vstr string) *version {
 	return v
 }
 
-func (v *version) Add(i int) {
+//go:noinline
+func (v *version) add(i int) {
 	v.v = append(v.v, i)
 }
 
-func (v *version) Field(i int) int {
+func (v *version) field(i int) int {
 	if i < len(v.v) {
 		return v.v[i]
 	}
