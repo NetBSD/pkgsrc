@@ -161,7 +161,7 @@ func (s *Suite) Test_MkLineChecker_checkText__WRKSRC(c *check.C) {
 		"",
 		"\tExample:",
 		"",
-		"\t\tWRKSRC=\t${WRKDIR}",
+		"\t\tWRKSRC=\t\t${WRKDIR}",
 		"\t\tCONFIGURE_DIRS=\t${WRKSRC}/lib ${WRKSRC}/src",
 		"\t\tBUILD_DIRS=\t${WRKSRC}/lib ${WRKSRC}/src ${WRKSRC}/cmd",
 		"",
