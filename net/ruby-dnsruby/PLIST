@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2018/09/23 15:51:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/04/30 15:42:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -107,6 +107,7 @@ ${GEM_LIBDIR}/lib/dnsruby/version.rb
 ${GEM_LIBDIR}/lib/dnsruby/zone_reader.rb
 ${GEM_LIBDIR}/lib/dnsruby/zone_transfer.rb
 ${GEM_LIBDIR}/test/custom.txt
+${GEM_LIBDIR}/test/localdns.rb
 ${GEM_LIBDIR}/test/resolv.conf
 ${GEM_LIBDIR}/test/run-tests-individually
 ${GEM_LIBDIR}/test/spec_helper.rb
@@ -117,6 +118,7 @@ ${GEM_LIBDIR}/test/tc_dlv.rb
 ${GEM_LIBDIR}/test/tc_dns.rb
 ${GEM_LIBDIR}/test/tc_dnskey.rb
 ${GEM_LIBDIR}/test/tc_ds.rb
+${GEM_LIBDIR}/test/tc_encoding.rb
 ${GEM_LIBDIR}/test/tc_escapedchars.rb
 ${GEM_LIBDIR}/test/tc_gpos.rb
 ${GEM_LIBDIR}/test/tc_hash.rb
@@ -124,6 +126,7 @@ ${GEM_LIBDIR}/test/tc_header.rb
 ${GEM_LIBDIR}/test/tc_hip.rb
 ${GEM_LIBDIR}/test/tc_hs.rb
 ${GEM_LIBDIR}/test/tc_ipseckey.rb
+${GEM_LIBDIR}/test/tc_long_labels.rb
 ${GEM_LIBDIR}/test/tc_message.rb
 ${GEM_LIBDIR}/test/tc_misc.rb
 ${GEM_LIBDIR}/test/tc_name.rb

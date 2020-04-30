@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2018/09/23 15:51:05 taca Exp $
+$NetBSD: distinfo,v 1.20 2020/04/30 15:42:36 taca Exp $
 
-SHA1 (dnsruby-1.61.2.gem) = b7df398fa5fa9a4e258e7dd45d469a9d5f6df2d3
-RMD160 (dnsruby-1.61.2.gem) = 40088dd8b701305f2642d580f8ea1174c79c9396
-SHA512 (dnsruby-1.61.2.gem) = 39ba76a0ca5073b5d03172754f99fad31c3a9af9e2856b930364eb2a5859619b56a1adbf5c84ccae085afcfdc2e32ffd67cf2a92a4e6150b3a113a03e5c7503d
-Size (dnsruby-1.61.2.gem) = 257024 bytes
+SHA1 (dnsruby-1.61.3.gem) = cac5b855a728ee263faee9e7ac516c44e3561aed
+RMD160 (dnsruby-1.61.3.gem) = 6dbff9a1bff102d079469a86e829c2fbff7fcf5c
+SHA512 (dnsruby-1.61.3.gem) = 4cdf6d83c39c3209873e9bbd15ba33f851f3fb878cf746de98cf615b0f547dfc5af8b4be7d505f87f581755ff73de079b6ea3f6f8c5a11074c1c46d5bc9e8c07
+Size (dnsruby-1.61.3.gem) = 259584 bytes
