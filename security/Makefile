@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.756 2020/04/28 21:14:20 wiz Exp $
+# $NetBSD: Makefile,v 1.757 2020/04/30 07:51:44 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -617,6 +617,7 @@ SUBDIR+=	tcp_wrappers
 SUBDIR+=	tct
 SUBDIR+=	tkpasman
 SUBDIR+=	tor-browser
+SUBDIR+=	tor-browser-https-everywhere
 SUBDIR+=	tor-browser-noscript
 SUBDIR+=	tripwire
 SUBDIR+=	validns
