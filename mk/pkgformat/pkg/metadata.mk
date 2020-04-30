@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.22 2020/01/15 20:11:11 rillig Exp $
+# $NetBSD: metadata.mk,v 1.23 2020/04/30 23:50:28 joerg Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -138,6 +138,7 @@ ${_BUILD_VERSION_FILE}:
 	${FIND} ${FILESDIR} -type f 2> /dev/null | while read f; do	\
 		${TEST} ! -f "$$f" || ${ECHO} "$$f";			\
 	done
+	${RUN}								\
 	for f in ${.CURDIR}/Makefile ${PKGDIR}/*; do			\
 		${TEST} ! -f "$$f" || ${ECHO} "$$f";			\
 	done
