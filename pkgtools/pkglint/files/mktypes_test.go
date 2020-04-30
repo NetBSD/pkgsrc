@@ -90,60 +90,60 @@ func (s *Suite) Test_MkVarUseModifier_MatchSubst__backslash_as_separator(c *chec
 func (s *Suite) Test_MkVarUseModifier_Subst(c *check.C) {
 	t := s.Init(c)
 
-	test := func(mod, str, result string, ok bool) {
+	test := func(mod, str string, ok bool, result string) {
 		m := MkVarUseModifier{mod}
 
-		actualResult, actualOk := m.Subst(str)
+		actualOk, actualResult := m.Subst(str)
 
 		t.CheckDeepEquals(
-			[]interface{}{actualResult, actualOk},
-			[]interface{}{result, ok})
+			[]interface{}{actualOk, actualResult},
+			[]interface{}{ok, result})
 	}
 
-	test("???", "anything", "", false)
+	test("???", "anything", false, "")
 
-	test("S,from,to,", "from", "to", true)
+	test("S,from,to,", "from", true, "to")
 
-	test("C,from,to,", "from", "to", true)
+	test("C,from,to,", "from", true, "to")
 
-	test("C,syntax error", "anything", "", false)
+	test("C,syntax error", "anything", false, "")
 
 	// The substitution modifier does not match, therefore
 	// the value is returned unmodified, but successful.
-	test("C,no_match,replacement,", "value", "value", true)
+	test("C,no_match,replacement,", "value", true, "value")
 
 	// As of December 2019, pkglint doesn't know how to handle
 	// complicated :C modifiers.
-	test("C,.*,,", "anything", "", false)
+	test("C,.*,,", "anything", false, "")
 
 	// When given a modifier that is not actually a :S or :C, Subst
 	// doesn't do anything.
-	test("Mpattern", "anything", "", false)
+	test("Mpattern", "anything", false, "")
 
-	test("S,from,to,", "from a to b", "to a to b", true)
+	test("S,from,to,", "from a to b", true, "to a to b")
 
 	// Since the replacement text is not a simple string, the :C modifier
 	// cannot be treated like the :S modifier. The variable could contain
 	// one of the special characters that would need to be escaped in the
 	// replacement text.
-	test("C,from,${VAR},", "from a to b", "", false)
+	test("C,from,${VAR},", "from a to b", false, "")
 
 	// As of December 2019, nothing is substituted. If pkglint should ever
 	// handle variables in the modifier, this test would need to provide a
 	// context in which to resolve the variables. If that happens, the
 	// .TARGET variable needs to be set to "target".
-	test("S/$@/replaced/", "The target", "The target", true)
-	test("S,${PREFIX},/prefix,", "${PREFIX}/dir", "", false)
+	test("S/$@/replaced/", "The target", true, "The target")
+	test("S,${PREFIX},/prefix,", "${PREFIX}/dir", false, "")
 
 	// Just for code coverage.
 	t.DisableTracing()
-	test("S,long,long long,g", "A long story", "A long long story", true)
+	test("S,long,long long,g", "A long story", true, "A long long story")
 	t.EnableTracing()
 
 	// And now again with full tracing, to investigate cases where
 	// pkglint produces results that are not easily understandable.
 	t.EnableTracingToLog()
-	test("S,long,long long,g", "A long story", "A long long story", true)
+	test("S,long,long long,g", "A long story", true, "A long long story")
 	t.EnableTracing()
 	t.CheckOutputLines(
 		"TRACE:   Subst: \"A long story\" " +

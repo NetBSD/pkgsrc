@@ -995,23 +995,25 @@ func (s *Suite) Test_MkAssignChecker_checkVarassignDecreasingVersions(c *check.C
 
 	mklines.Check()
 
-	// Half of these warnings are from VartypeCheck.Version, the
-	// other half are from checkVarassignDecreasingVersions.
-	// Strictly speaking some of them are redundant, but that would
-	// mean to reject only variable references in checkVarassignDecreasingVersions.
-	// This is probably ok.
-	// TODO: Fix this.
+	// Half of these warnings are from VartypeCheck.Enum,
+	// the other half are from checkVarassignDecreasingVersions.
+	// Strictly speaking some of them are redundant, but that's ok.
+	// They all need to be fixed in the end.
 	t.CheckOutputLines(
-		"WARN: Makefile:2: Invalid version number \"__future__\".",
+		"WARN: Makefile:2: \"__future__\" is not valid for PYTHON_VERSIONS_ACCEPTED. "+
+			"Use one of { 27 36 37 38 } instead.",
 		"ERROR: Makefile:2: Value \"__future__\" for "+
 			"PYTHON_VERSIONS_ACCEPTED must be a positive integer.",
-		"WARN: Makefile:3: Invalid version number \"-13\".",
+		"WARN: Makefile:3: \"-13\" is not valid for PYTHON_VERSIONS_ACCEPTED. "+
+			"Use one of { 27 36 37 38 } instead.",
 		"ERROR: Makefile:3: Value \"-13\" for "+
 			"PYTHON_VERSIONS_ACCEPTED must be a positive integer.",
 		"ERROR: Makefile:4: Value \"${PKGVERSION_NOREV}\" for "+
 			"PYTHON_VERSIONS_ACCEPTED must be a positive integer.",
 		"WARN: Makefile:5: The values for PYTHON_VERSIONS_ACCEPTED "+
-			"should be in decreasing order (37 before 36).")
+			"should be in decreasing order (37 before 36).",
+		"WARN: Makefile:6: \"25\" is not valid for PYTHON_VERSIONS_ACCEPTED. "+
+			"Use one of { 27 36 37 38 } instead.")
 }
 
 func (s *Suite) Test_MkAssignChecker_checkVarassignMiscRedundantInstallationDirs__AUTO_MKDIRS_yes(c *check.C) {
