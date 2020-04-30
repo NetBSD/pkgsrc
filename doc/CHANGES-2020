@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2648 2020/04/29 23:15:15 maya Exp $
+$NetBSD: CHANGES-2020,v 1.2649 2020/04/30 00:12:06 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3793,3 +3793,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed sysutils/netbsd-kmod-tools [maya 2020-04-29]
 	Updated sysutils/znapzend to 0.20.0 [wiedi 2020-04-29]
 	Updated meta-pkgs/bulk-small to 20200430 [maya 2020-04-29]
+	Updated geography/libgeotiff to 1.6.0 [gdt 2020-04-30]
