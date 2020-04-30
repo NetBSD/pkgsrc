@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2665 2020/04/30 14:57:41 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2666 2020/04/30 14:58:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3818,3 +3818,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/easyrpg-player to 0.6.2 [nia 2020-04-30]
 	Updated devel/ocaml-logs to 0.7.0nb1 [jaapb 2020-04-30]
 	Updated games/cataclysm-dda to 0.E [nia 2020-04-30]
+	Updated games/cataclysm-dda-sdl to 0.E [nia 2020-04-30]
