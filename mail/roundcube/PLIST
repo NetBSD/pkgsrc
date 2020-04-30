@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2020/01/14 14:30:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.48 2020/04/30 07:09:34 taca Exp $
 share/doc/roundcube/CHANGELOG
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
@@ -960,6 +960,7 @@ share/roundcube/plugins/markasjunk/localization/de_DE.inc
 share/roundcube/plugins/markasjunk/localization/el_GR.inc
 share/roundcube/plugins/markasjunk/localization/en_GB.inc
 share/roundcube/plugins/markasjunk/localization/en_US.inc
+share/roundcube/plugins/markasjunk/localization/es_ES.inc
 share/roundcube/plugins/markasjunk/localization/et_EE.inc
 share/roundcube/plugins/markasjunk/localization/eu_ES.inc
 share/roundcube/plugins/markasjunk/localization/fi_FI.inc
@@ -967,8 +968,10 @@ share/roundcube/plugins/markasjunk/localization/fr_FR.inc
 share/roundcube/plugins/markasjunk/localization/ga_IE.inc
 share/roundcube/plugins/markasjunk/localization/he_IL.inc
 share/roundcube/plugins/markasjunk/localization/hu_HU.inc
+share/roundcube/plugins/markasjunk/localization/id_ID.inc
 share/roundcube/plugins/markasjunk/localization/is_IS.inc
 share/roundcube/plugins/markasjunk/localization/ja_JP.inc
+share/roundcube/plugins/markasjunk/localization/ko_KR.inc
 share/roundcube/plugins/markasjunk/localization/lt_LT.inc
 share/roundcube/plugins/markasjunk/localization/nb_NO.inc
 share/roundcube/plugins/markasjunk/localization/nl_NL.inc
@@ -1762,6 +1765,7 @@ share/roundcube/program/localization/kn_IN/labels.inc
 share/roundcube/program/localization/kn_IN/messages.inc
 share/roundcube/program/localization/ko_KR/labels.inc
 share/roundcube/program/localization/ko_KR/messages.inc
+share/roundcube/program/localization/ko_KR/timezones.inc
 share/roundcube/program/localization/ku/labels.inc
 share/roundcube/program/localization/ku/messages.inc
 share/roundcube/program/localization/ku_IQ/labels.inc
