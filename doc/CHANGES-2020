@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2672 2020/04/30 17:16:36 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2673 2020/04/30 20:35:19 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3825,3 +3825,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/ruby-net-ping to 2.0.7 [taca 2020-04-30]
 	Updated net/ruby-train-core to 3.2.28 [taca 2020-04-30]
 	Updated emulators/qemu to 5.0.0 [adam 2020-04-30]
+	Updated www/gnurl to 7.70.0 [nikita 2020-04-30]
