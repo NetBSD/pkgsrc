@@ -1102,7 +1102,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkg("DJB_RESTRICTED", BtYesNo)
 	reg.pkg("DJB_SLASHPACKAGE", BtYesNo)
 	reg.pkg("DLOPEN_REQUIRE_PTHREADS", BtYesNo)
-	reg.pkg("DL_AUTO_VARS", BtYes)
+	reg.pkg("DL_AUTO_VARS", BtYesNo)
 	reg.acllist("DL_LIBS", BtLdFlag,
 		PackageSettable,
 		"*: append, use")
@@ -1357,7 +1357,6 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.sysload("OBJECT_FMT", enum("COFF ECOFF ELF SOM XCOFF Mach-O PE a.out"))
 	reg.pkglistrat("ONLY_FOR_COMPILER", compilers)
 	reg.pkglistrat("ONLY_FOR_PLATFORM", BtMachinePlatformPattern)
-	reg.pkgrat("ONLY_FOR_UNPRIVILEGED", BtYesNo)
 	reg.sysload("OPSYS", operatingSystems, DefinedIfInScope|NonemptyIfDefined)
 	reg.pkglistbl3("OPSYSVARS", BtVariableName)
 	reg.pkg("OSVERSION_SPECIFIC", BtYes)
@@ -1569,11 +1568,12 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 		"special:pyversion.mk: set",
 		"*: use, use-loadtime")
 	// See lang/python/pyversion.mk
+	py := reg.enumFromDirs(src, "lang", `^python(\d+)$`, "$1", "27 36 37 38")
 	reg.pkg("PYTHON_FOR_BUILD_ONLY", enum("yes no test tool YES"))
-	reg.pkglistrat("PYTHON_VERSIONS_ACCEPTED", BtVersion)
-	reg.pkglistrat("PYTHON_VERSIONS_INCOMPATIBLE", BtVersion)
-	reg.usr("PYTHON_VERSION_DEFAULT", BtVersion)
-	reg.usr("PYTHON_VERSION_REQD", BtVersion)
+	reg.pkglistrat("PYTHON_VERSIONS_ACCEPTED", py)
+	reg.pkglistrat("PYTHON_VERSIONS_INCOMPATIBLE", py)
+	reg.usr("PYTHON_VERSION_DEFAULT", py)
+	reg.sys("PYTHON_VERSION_REQD", py)
 	reg.pkglist("PYTHON_VERSIONED_DEPENDENCIES", BtPythonDependency)
 	reg.sys("RANLIB", BtShellCommand)
 	reg.pkglist("RCD_SCRIPTS", BtFilename)

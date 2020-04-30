@@ -103,20 +103,6 @@ func (r *Registry) Match3(s string, re Pattern) (matched bool, m1, m2, m3 string
 	return
 }
 
-func (r *Registry) Match4(s string, re Pattern) (matched bool, m1, m2, m3, m4 string) {
-	if m := r.matchn(s, re, 4); m != nil {
-		return true, m[1], m[2], m[3], m[4]
-	}
-	return
-}
-
-func (r *Registry) Match5(s string, re Pattern) (matched bool, m1, m2, m3, m4, m5 string) {
-	if m := r.matchn(s, re, 5); m != nil {
-		return true, m[1], m[2], m[3], m[4], m[5]
-	}
-	return
-}
-
 func (r *Registry) ReplaceFirst(s string, re Pattern, replacement string) ([]string, string) {
 	if m := r.Compile(re).FindStringSubmatchIndex(s); m != nil {
 		replaced := s[:m[0]] + replacement + s[m[1]:]
