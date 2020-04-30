@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3116 2020/04/28 13:28:04 nikita Exp $
+# $NetBSD: Makefile,v 1.3117 2020/04/30 04:51:27 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1584,9 +1584,9 @@ SUBDIR+=	p5-MooX-Log-Any
 SUBDIR+=	p5-MooX-Options
 SUBDIR+=	p5-MooX-Roles-Pluggable
 SUBDIR+=	p5-MooX-StrictConstructor
+SUBDIR+=	p5-MooX-TypeTiny
 SUBDIR+=	p5-MooX-Types-MooseLike
 SUBDIR+=	p5-MooX-Types-MooseLike-Numeric
-SUBDIR+=	p5-MooX-TypeTiny
 SUBDIR+=	p5-MooX-late
 SUBDIR+=	p5-Moos
 SUBDIR+=	p5-Moose
@@ -1955,8 +1955,8 @@ SUBDIR+=	p5-Test-YAML-Meta
 SUBDIR+=	p5-Test-YAML-Valid
 SUBDIR+=	p5-Test-utf8
 SUBDIR+=	p5-Test2-Plugin-NoWarnings
-SUBDIR+=	p5-Test2-Tools-Explain
 SUBDIR+=	p5-Test2-Suite
+SUBDIR+=	p5-Test2-Tools-Explain
 SUBDIR+=	p5-TheSchwartz
 SUBDIR+=	p5-Throwable
 SUBDIR+=	p5-Tie-Array-AsHash
@@ -2249,6 +2249,7 @@ SUBDIR+=	py-flufl.i18n
 SUBDIR+=	py-flufl.lock
 SUBDIR+=	py-flufl.testing
 SUBDIR+=	py-freezegun
+SUBDIR+=	py-frozendict
 SUBDIR+=	py-func_timeout
 SUBDIR+=	py-funcparserlib
 SUBDIR+=	py-funcsigs
@@ -2306,7 +2307,6 @@ SUBDIR+=	py-jersey
 SUBDIR+=	py-joblib
 SUBDIR+=	py-jupyter_client
 SUBDIR+=	py-jupyter_core
-SUBDIR+=	py-frozendict
 SUBDIR+=	py-kafka-python
 SUBDIR+=	py-kaitaistruct
 SUBDIR+=	py-kjbuckets
