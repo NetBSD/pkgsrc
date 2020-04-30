@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.104 2020/04/19 12:53:21 rillig Exp $
+# $NetBSD: license.mk,v 1.105 2020/04/30 08:43:25 plunky Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -114,6 +114,7 @@
 # except that we exclude the AGPL (clearly a Free license), following
 # the decision of the board of TNF.
 DEFAULT_ACCEPTABLE_LICENSES= \
+	afl-3.0 \
 	apache-1.1 apache-2.0 \
 	arphic-public \
 	artistic artistic-2.0 \
