@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2658 2020/04/30 11:50:13 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.2659 2020/04/30 12:09:16 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3810,5 +3810,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/py-redis to 3.5.0 [adam 2020-04-30]
 	Updated www/py-bleach to 3.1.5 [adam 2020-04-30]
 	Added security/py-cryptodomex version 3.8.1 [nikita 2020-04-30]
-	Added net/py-dnspython version 1.16.0 [nikita 2020-04-30]
 	Added net/py-ldapdomaindump version 0.9.1 [nikita 2020-04-30]
