@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/04/30 11:48:42 nikita Exp $
+
+SHA1 (ldapdomaindump-0.9.1.tar.gz) = 7309760f51f39ab4ab92c0fc57f7e6638e71baa7
+RMD160 (ldapdomaindump-0.9.1.tar.gz) = aeb50508eb2326dd0c5c1551181dea660fd47a00
+SHA512 (ldapdomaindump-0.9.1.tar.gz) = 952981d65366b1f243714ce5ed053bbb08e27174e3789d803a65010a7ff5ae2b9af88f4b91ad826c8b75b3f323bf0505a217dc42224ef7974e236ee8bc5f6c5e
+Size (ldapdomaindump-0.9.1.tar.gz) = 17764 bytes
