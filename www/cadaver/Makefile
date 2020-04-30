@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/04/25 13:47:31 nia Exp $
+# $NetBSD: Makefile,v 1.53 2020/04/30 23:39:48 joerg Exp $
 
 DISTNAME=		cadaver-0.23.3
 PKGREVISION=		6
@@ -9,6 +9,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.webdav.org/cadaver/
 COMMENT=		Command-line WebDAV client
 LICENSE=		gnu-gpl-v2
+
+USE_TOOLS+=		pkg-config
 
 BUILD_TARGET=		cadaver
 GNU_CONFIGURE=		YES
