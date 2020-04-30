@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/03/20 11:58:15 nia Exp $
+# $NetBSD: Makefile,v 1.19 2020/04/30 16:29:45 rillig Exp $
 #
 
 DISTNAME=	Bastille-3.0.9
@@ -42,6 +42,7 @@ SUBST_CLASSES+=		b3
 SUBST_STAGE.b3=		pre-configure
 SUBST_FILES.b3=		${REPLACE_PERL}
 SUBST_SED.b3=		-e 's,^use lib.*,use lib "${PREFIX}/lib";,'
+SUBST_NOOP_OK.b3=	yes # some of the files don't match
 
 REPLACE_PERL+=		AutomatedBastille BastilleBackEnd BastilleChooser
 REPLACE_PERL+=		InteractiveBastille RevertBastille *.pm
