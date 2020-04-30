@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2660 2020/04/30 12:18:26 nikita Exp $
+$NetBSD: CHANGES-2020,v 1.2661 2020/04/30 12:49:02 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3812,3 +3812,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added security/py-cryptodomex version 3.8.1 [nikita 2020-04-30]
 	Added net/py-ldapdomaindump version 0.9.1 [nikita 2020-04-30]
 	Added net/py-impacket version 0.9.21 [nikita 2020-04-30]
+	Updated devel/tex-tlshell to 2020.54921 [markd 2020-04-30]
+	Updated devel/tex-tlshell-doc to 2020.54921 [markd 2020-04-30]
