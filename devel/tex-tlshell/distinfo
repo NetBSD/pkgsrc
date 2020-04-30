@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/04/27 03:26:39 markd Exp $
+$NetBSD: distinfo,v 1.5 2020/04/30 12:47:28 markd Exp $
 
-SHA1 (tlshell.r54861.tar.xz) = f534c947fe8eccb2f0513a4e95e510d3ac042588
-RMD160 (tlshell.r54861.tar.xz) = bbf5588aec7c7cd76d1a4cea91e4547a3af7e830
-SHA512 (tlshell.r54861.tar.xz) = a39618c2f97bf88b3154def0857f9b08b209c085d651e8667b2467e0450fba6c5e5684c0a63d6c2ab7b29e4c52c98b3c601b40f1fb42799ce194f012f245221c
-Size (tlshell.r54861.tar.xz) = 26736 bytes
+SHA1 (tlshell.r54921.tar.xz) = cf1a45c87f7ad3e8446abc9a799e8bfaba940414
+RMD160 (tlshell.r54921.tar.xz) = 050f344a3a179d1bc9eecc5f32cd6ab72fbae5b0
+SHA512 (tlshell.r54921.tar.xz) = a21859b4a1ce75b5700c2347e6244d2436523ef67a1dd114cfd13cd89bc4a759b8fe0e8105edc8f225ea88ba9327823e7d0c207cfa38a41dd189a2098754e7c2
+Size (tlshell.r54921.tar.xz) = 26776 bytes
