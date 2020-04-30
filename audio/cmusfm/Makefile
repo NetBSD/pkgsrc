@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/14 04:35:50 tpaul Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/30 21:49:00 wiedi Exp $
 
 DISTNAME=	cmusfm-0.3.3
 CATEGORIES=	audio
@@ -20,6 +20,8 @@ INSTALLATION_DIRS=	bin ${DOCDIR}
 DOCDIR=			${PREFIX}/share/doc/cmusfm
 
 TEST_TARGET=		check
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
