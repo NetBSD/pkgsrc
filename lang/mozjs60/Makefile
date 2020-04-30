@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/04/23 08:32:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/04/30 11:47:45 maya Exp $
 
 DISTNAME=	mozjs60_60.8.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -31,6 +31,10 @@ CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ARGS+=	--disable-jemalloc
 CONFIGURE_ARGS+=	--disable-debug-symbols
 CONFIGURE_ARGS+=	--enable-strip
+.if ${MACHINE_ARCH} == "i386"
+# 64 bit atomics.
+CXXFLAGS+=		-march=i586
+.endif
 # --with-intl-api
 # --disable-optimize
 
