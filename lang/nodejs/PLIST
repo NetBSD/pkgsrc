@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2020/01/24 18:52:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.60 2020/04/30 06:58:21 adam Exp $
 bin/node
 include/node/common.gypi
 include/node/config.gypi
@@ -16,7 +16,6 @@ include/node/node_version.h
 include/node/v8-internal.h
 include/node/v8-platform.h
 include/node/v8-profiler.h
-include/node/v8-testing.h
 include/node/v8-util.h
 include/node/v8-value-serializer-version.h
 include/node/v8-version-string.h
