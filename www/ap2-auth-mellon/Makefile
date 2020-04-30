@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/03/08 16:51:35 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2020/04/30 16:35:51 rillig Exp $
 
 DISTNAME=	mod_auth_mellon-0.14.2
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
@@ -25,6 +25,7 @@ SUBST_CLASSES+=		pthflags
 SUBST_STAGE.pthflags=	post-configure
 SUBST_FILES.pthflags=	Makefile
 SUBST_SED.pthflags=	-e 's| -pthread | |g'
+SUBST_NOOP_OK.pthflags=	yes
 
 INSTALLATION_DIRS+=	lib/httpd
 
