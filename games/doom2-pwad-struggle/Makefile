@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/08/26 16:44:05 micha Exp $
+# $NetBSD: Makefile,v 1.2 2020/04/30 16:11:37 micha Exp $
 
 DISTNAME=		strg
 # Use release date from STRG.txt as package version
@@ -7,6 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.fu-berlin.de/pc/games/idgames/levels/doom2/Ports/megawads/
 MASTER_SITES+=		ftp://mirrors.syringanetworks.net/idgames/levels/doom2/Ports/megawads/
+DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		micha@NetBSD.org
