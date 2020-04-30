@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2019/08/26 16:44:05 micha Exp $
+$NetBSD: distinfo,v 1.2 2020/04/30 16:11:37 micha Exp $
 
-SHA1 (strg.zip) = 781b84dd5fb67f657113bf13b23bd2267ae4eba5
-RMD160 (strg.zip) = 031ef27ae7cba305429a155359fd6602d91017ce
-SHA512 (strg.zip) = 332f35971d22b3a02c5cfb73afcdfba13f53f6aef70124eaa6d144a653026eb1efd02ad2d511ad1a0412fe5a966ca9eb8525f7bfc5a4f354758cf14fbbab22bc
-Size (strg.zip) = 20710259 bytes
+SHA1 (doom2-pwad-struggle-20180819/strg.zip) = 781b84dd5fb67f657113bf13b23bd2267ae4eba5
+RMD160 (doom2-pwad-struggle-20180819/strg.zip) = 031ef27ae7cba305429a155359fd6602d91017ce
+SHA512 (doom2-pwad-struggle-20180819/strg.zip) = 332f35971d22b3a02c5cfb73afcdfba13f53f6aef70124eaa6d144a653026eb1efd02ad2d511ad1a0412fe5a966ca9eb8525f7bfc5a4f354758cf14fbbab22bc
+Size (doom2-pwad-struggle-20180819/strg.zip) = 20710259 bytes
