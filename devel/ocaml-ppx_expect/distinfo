@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2020/01/16 14:20:56 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2020/04/30 08:11:24 jaapb Exp $
 
 SHA1 (ppx_expect-0.13.0.tar.gz) = 3fdb4023b8607d8823fa93ef8b99848202d3c610
 RMD160 (ppx_expect-0.13.0.tar.gz) = 4d0f99553d423e0760804c287ffdca6ee97a353c
 SHA512 (ppx_expect-0.13.0.tar.gz) = 3643ff084b9b3c640969ec5cf45d015804cde611202a3f392d29a85fd1becbff93130dc2e3a9d61d2a09d4d74b15697f35cd82e0d2a5c01ffd9d124bfa9dc926
 Size (ppx_expect-0.13.0.tar.gz) = 40160 bytes
+SHA1 (patch-collector_expect__test__collector__stubs.c) = 3b4b0c507a679251a2a9b14c362a02f1fc44538d
