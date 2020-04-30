@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/04/30 13:10:47 nia Exp $
+# $NetBSD: Makefile,v 1.8 2020/04/30 13:12:47 nia Exp $
 
 DISTNAME=	liblcf-0.6.2
 CATEGORIES=	games
@@ -13,6 +13,10 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES+=	c c++
 USE_LIBTOOL=	yes
+
+# "We require now the C++ language standard C++14.
+# The lowest GCC compiler supporting this fully is GCC5"
+GCC_REQD+=	5
 
 # Expat in pkgsrc is new enough, however, the version checking fails.
 # Remove the version requirement.
