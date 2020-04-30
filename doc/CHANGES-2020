@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2656 2020/04/30 09:37:44 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2657 2020/04/30 11:34:23 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3809,3 +3809,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/ocaml-ppx_expect to 0.13.0nb1 [jaapb 2020-04-30]
 	Updated databases/py-redis to 3.5.0 [adam 2020-04-30]
 	Updated www/py-bleach to 3.1.5 [adam 2020-04-30]
+	Added security/py-cryptodomex version 3.8.1 [nikita 2020-04-30]
