@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/04/27 18:05:18 bouyer Exp $
+# $NetBSD: Makefile,v 1.45 2020/04/30 12:03:32 bouyer Exp $
 
 DISTNAME=	smokeping-2.7.3
 CATEGORIES=	net
@@ -98,6 +98,6 @@ post-install:
 .include "options.mk"
 
 INSTALLATION_DIRS+=	lib/smokeping share/doc/smokeping ${EGDIR} \
-	${SPDIR}/cropper ${SPDIR}/resource ${SPDIR}/script
+			${SPDIR}/cropper ${SPDIR}/resource ${SPDIR}/script
 
 .include "../../mk/bsd.pkg.mk"
