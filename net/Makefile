@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1322 2020/04/28 15:22:42 manu Exp $
+# $NetBSD: Makefile,v 1.1323 2020/04/30 11:43:27 nikita Exp $
 #
 
 COMMENT=	Networking tools
@@ -668,6 +668,7 @@ SUBDIR+=	py-cymruwhois
 SUBDIR+=	py-digitalocean
 SUBDIR+=	py-dns
 SUBDIR+=	py-dnsdiag
+SUBDIR+=	py-dnspython
 SUBDIR+=	py-dpkt
 SUBDIR+=	py-dropbox
 SUBDIR+=	py-eventlib
