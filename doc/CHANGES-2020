@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2682 2020/05/01 08:18:02 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2683 2020/05/01 09:31:57 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3918,3 +3918,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated comms/asterisk16 to 16.10.0 [ryoon 2020-05-01]
 	Updated mail/py-email_validator to 1.1.0 [adam 2020-05-01]
 	Updated devel/py-pyelftools to 0.26 [adam 2020-05-01]
+	Updated graphics/libansilove to 1.2.2 [fcambus 2020-05-01]
