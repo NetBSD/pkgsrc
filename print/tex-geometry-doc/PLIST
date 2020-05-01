@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2018/05/06 04:00:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/01 02:30:50 markd Exp $
 share/texmf-dist/doc/latex/geometry/README.md
 share/texmf-dist/doc/latex/geometry/changes.txt
+share/texmf-dist/doc/latex/geometry/geometry-de.pdf
+share/texmf-dist/doc/latex/geometry/geometry-samples-de.tex
 share/texmf-dist/doc/latex/geometry/geometry-samples.tex
 share/texmf-dist/doc/latex/geometry/geometry.cfg
 share/texmf-dist/doc/latex/geometry/geometry.pdf
