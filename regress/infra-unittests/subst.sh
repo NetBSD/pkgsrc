@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.27 2020/04/29 22:46:42 rillig Exp $
+# $NetBSD: subst.sh,v 1.28 2020/05/01 06:42:32 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1422,6 +1422,29 @@ if test_case_begin "no-op SUBST_FILTER_CMD in NOOP_OK=no mode"; then
 
 	assert_that "file" --file-is-lines \
 		'only letters'
+
+	test_case_end
+fi
+
+
+if test_case_begin "backtick in SUBST_SED"; then
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_FILES.id=	file' \
+		"SUBST_SED.id=		-e 's,\"\\\\\`,\"\\\\\`,'" \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "file" \
+		'from`'
+
+	run_bmake "testcase.mk" "subst-id" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in file' \
+		'info: [subst.mk:id] Nothing changed in "file".'
 
 	test_case_end
 fi
