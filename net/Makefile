@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1326 2020/04/30 12:17:33 nikita Exp $
+# $NetBSD: Makefile,v 1.1327 2020/05/01 17:55:05 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -36,6 +36,7 @@ SUBDIR+=	avahi
 SUBDIR+=	awhois
 SUBDIR+=	aws-sdk-go
 SUBDIR+=	balance
+SUBDIR+=	bandcamp-dl
 SUBDIR+=	barnyard
 SUBDIR+=	batchftp
 SUBDIR+=	bftpd
