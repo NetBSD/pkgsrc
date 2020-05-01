@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.20 2016/11/21 00:01:01 pho Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.21 2020/05/01 21:12:05 rillig Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -93,6 +93,7 @@ SUBST_CLASSES+=		refuse
 SUBST_STAGE.refuse=	pre-configure
 SUBST_FILES.refuse=	configure configure.ac configure.in
 SUBST_SED.refuse=	-e "s|fuse_main|fuse_exit|g"
+SUBST_NOOP_OK.refuse=	yes # only some packages need this hack
 .    endif
 
 .  else # !NetBSD
