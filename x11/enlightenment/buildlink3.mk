@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.19 2020/03/08 16:48:21 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2020/05/01 00:27:52 joerg Exp $
 
 BUILDLINK_TREE+=	enlightenment
 
 .if !defined(ENLIGHTENMENT_BUILDLINK3_MK)
 ENLIGHTENMENT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.enlightenment+=	enlightenment>=0.17.3
+BUILDLINK_API_DEPENDS.enlightenment+=	enlightenment>=0.17.6
 BUILDLINK_ABI_DEPENDS.enlightenment?=	enlightenment>=0.17.3nb23
 BUILDLINK_PKGSRCDIR.enlightenment?=	../../x11/enlightenment
 
