@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2019/05/23 19:23:23 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2020/05/01 23:30:25 rillig Exp $
 
 DISTNAME=	xcolorsel-1.1a-src
 PKGNAME=	xcolorsel-1.1a
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 
