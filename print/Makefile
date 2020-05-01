@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.759 2020/04/27 22:38:51 markd Exp $
+# $NetBSD: Makefile,v 1.760 2020/05/01 04:54:34 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -751,6 +751,7 @@ SUBDIR+=	tex-hyphen-kurmanji
 SUBDIR+=	tex-hyphen-latin
 SUBDIR+=	tex-hyphen-latvian
 SUBDIR+=	tex-hyphen-lithuanian
+SUBDIR+=	tex-hyphen-macedonian
 SUBDIR+=	tex-hyphen-mongolian
 SUBDIR+=	tex-hyphen-norwegian
 SUBDIR+=	tex-hyphen-occitan
