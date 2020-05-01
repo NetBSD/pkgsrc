@@ -1,9 +1,8 @@
-# $NetBSD: spec,v 1.1 2020/05/01 19:16:47 rillig Exp $
+# $NetBSD: spec,v 1.2 2020/05/01 19:40:27 rillig Exp $
 #
 
 do_test() {
-	$TEST_MAKE do-regress 1> "$TEST_OUTFILE" 2>&1 \
-	|| TEST_EXITSTATUS=$?
+	$TEST_MAKE 1> "$TEST_OUTFILE" 2>&1 || TEST_EXITSTATUS=$?
 }
 
 do_cleanup() {
