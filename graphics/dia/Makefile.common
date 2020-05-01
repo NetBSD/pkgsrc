@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2019/11/02 22:37:55 rillig Exp $
+# $NetBSD: Makefile.common,v 1.31 2020/05/01 20:19:23 rillig Exp $
 #
 # used by graphics/dia-python/Makefile
 
@@ -31,7 +31,7 @@ SUBST_CLASSES+=		intl
 SUBST_MESSAGE.intl=	Fixing path to installed files.
 SUBST_STAGE.intl=	pre-configure
 SUBST_FILES.intl=	lib/intl.c
-SUBST_SED.intl=		-e 's,%%PREFIX%%,${PREFIX},g'
+SUBST_VARS.intl=	PREFIX
 
 SUBST_CLASSES+=		for
 SUBST_MESSAGE.for=	Fixing empty "for" loops.
