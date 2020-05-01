@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2019/11/02 22:37:55 rillig Exp $
+# $NetBSD: Makefile.common,v 1.18 2020/05/01 00:08:22 joerg Exp $
 
 # used by graphics/evas-buffer/Makefile
 # used by graphics/evas-edb/Makefile
@@ -13,10 +13,10 @@
 # used by graphics/evas-tiff/Makefile
 # used by graphics/evas-xpm/Makefile
 
-EVAS_VERSION=	1.7.7
+EVAS_VERSION=	1.7.10
 DISTNAME=	evas-${EVAS_VERSION}
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.enlightenment.org/releases/
+MASTER_SITES=	https://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org

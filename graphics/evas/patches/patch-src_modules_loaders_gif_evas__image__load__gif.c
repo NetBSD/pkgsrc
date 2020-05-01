@@ -1,8 +1,6 @@
-$NetBSD: patch-src_modules_loaders_gif_evas__image__load__gif.c,v 1.2 2014/05/25 08:12:26 obache Exp $
+$NetBSD: patch-src_modules_loaders_gif_evas__image__load__gif.c,v 1.3 2020/05/01 00:08:22 joerg Exp $
 
-* Adapt to giflib>=5 API changes
-
---- src/modules/loaders/gif/evas_image_load_gif.c.orig	2012-11-23 16:35:06.000000000 +0000
+--- src/modules/loaders/gif/evas_image_load_gif.c.orig	2013-08-01 15:41:35.000000000 +0000
 +++ src/modules/loaders/gif/evas_image_load_gif.c
 @@ -338,7 +338,7 @@ _evas_image_load_frame_image_data(Image_
  
@@ -13,16 +11,7 @@ $NetBSD: patch-src_modules_loaders_gif_evas__image__load__gif.c,v 1.2 2014/05/25
          for (i = 0; i < scale_h; i++)
            {
               free(rows[i]);
-@@ -700,7 +700,7 @@ evas_image_load_file_head_gif(Image_Entr
-         return EINA_FALSE;
-      }
- 
--   gif = DGifOpenFileHandle(fd);
-+   gif = DGifOpenFileHandle(fd, NULL);
-    if (!gif)
-      {
-         if (fd) close(fd);
-@@ -721,7 +721,7 @@ evas_image_load_file_head_gif(Image_Entr
+@@ -725,7 +725,7 @@ evas_image_load_file_head_gif(Image_Entr
     if ((w < 1) || (h < 1) || (w > IMG_MAX_SIZE) || (h > IMG_MAX_SIZE) ||
         IMG_TOO_BIG(w, h))
       {
@@ -31,7 +20,7 @@ $NetBSD: patch-src_modules_loaders_gif_evas__image__load__gif.c,v 1.2 2014/05/25
          if (IMG_TOO_BIG(w, h))
            *error = EVAS_LOAD_ERROR_RESOURCE_ALLOCATION_FAILED;
          else
-@@ -736,7 +736,7 @@ evas_image_load_file_head_gif(Image_Entr
+@@ -740,7 +740,7 @@ evas_image_load_file_head_gif(Image_Entr
          if (DGifGetRecordType(gif, &rec) == GIF_ERROR)
            {
               /* PrintGifError(); */
@@ -40,7 +29,7 @@ $NetBSD: patch-src_modules_loaders_gif_evas__image__load__gif.c,v 1.2 2014/05/25
               *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
               return EINA_FALSE;
            }
-@@ -750,7 +750,7 @@ evas_image_load_file_head_gif(Image_Entr
+@@ -754,7 +754,7 @@ evas_image_load_file_head_gif(Image_Entr
               if (DGifGetImageDesc(gif) == GIF_ERROR)
                 {
                    /* PrintGifError(); */
@@ -49,7 +38,7 @@ $NetBSD: patch-src_modules_loaders_gif_evas__image__load__gif.c,v 1.2 2014/05/25
                    *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
                    return EINA_FALSE;
                 }
-@@ -758,7 +758,7 @@ evas_image_load_file_head_gif(Image_Entr
+@@ -762,7 +762,7 @@ evas_image_load_file_head_gif(Image_Entr
               if (DGifGetCode(gif, &img_code, &img) == GIF_ERROR)
                 {
                    /* PrintGifError(); */
@@ -58,7 +47,7 @@ $NetBSD: patch-src_modules_loaders_gif_evas__image__load__gif.c,v 1.2 2014/05/25
                    *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
                    return EINA_FALSE;
                 }
-@@ -814,7 +814,7 @@ evas_image_load_file_head_gif(Image_Entr
+@@ -818,7 +818,7 @@ evas_image_load_file_head_gif(Image_Entr
          ie->frames = NULL;
       }
  
@@ -67,16 +56,7 @@ $NetBSD: patch-src_modules_loaders_gif_evas__image__load__gif.c,v 1.2 2014/05/25
     *error = EVAS_LOAD_ERROR_NONE;
     return EINA_TRUE;
  }
-@@ -838,7 +838,7 @@ evas_image_load_specific_frame(Image_Ent
-         return EINA_FALSE;
-      }
- 
--   gif = DGifOpenFileHandle(fd);
-+   gif = DGifOpenFileHandle(fd, NULL);
-    if (!gif)
-      {
-         if (fd) close(fd);
-@@ -877,7 +877,7 @@ evas_image_load_specific_frame(Image_Ent
+@@ -885,7 +885,7 @@ evas_image_load_specific_frame(Image_Ent
       }
  
     ie->frames = eina_list_append(ie->frames, frame);
@@ -85,16 +65,7 @@ $NetBSD: patch-src_modules_loaders_gif_evas__image__load__gif.c,v 1.2 2014/05/25
     return EINA_TRUE;
  }
  
-@@ -927,7 +927,7 @@ evas_image_load_file_data_gif(Image_Entr
-                   return EINA_FALSE;
-                }
- 
--             gif = DGifOpenFileHandle(fd);
-+             gif = DGifOpenFileHandle(fd, NULL);
-              if (!gif)
-                {
-                   if (fd) close(fd);
-@@ -947,7 +947,7 @@ evas_image_load_file_data_gif(Image_Entr
+@@ -959,7 +959,7 @@ evas_image_load_file_data_gif(Image_Entr
                    *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
                    return EINA_FALSE;
                 }
@@ -103,16 +74,7 @@ $NetBSD: patch-src_modules_loaders_gif_evas__image__load__gif.c,v 1.2 2014/05/25
               *error = EVAS_LOAD_ERROR_NONE;
               return EINA_TRUE;
            }
-@@ -1000,7 +1000,7 @@ evas_image_load_frame_duration_gif(Image
- #endif
-    if (fd < 0) return -1;
- 
--   gif = DGifOpenFileHandle(fd);
-+   gif = DGifOpenFileHandle(fd, NULL);
-    if (!gif)
-      {
-         if (fd) close(fd);
-@@ -1064,7 +1064,7 @@ evas_image_load_frame_duration_gif(Image
+@@ -1080,7 +1080,7 @@ evas_image_load_frame_duration_gif(Image
           }
       } while (rec != TERMINATE_RECORD_TYPE);
  
