@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/01/26 09:04:13 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/05/01 00:15:10 markd Exp $
 
-SHA1 (tex-caption-48863/caption.doc.tar.xz) = 55de6bf41cd0f7c7b9f105ddeb8466109064c23c
-RMD160 (tex-caption-48863/caption.doc.tar.xz) = b38dc41ecea5d7458905229d9347015624e85631
-SHA512 (tex-caption-48863/caption.doc.tar.xz) = 3d6d721fc30c1721fdf1df933e8117428df55b6f181464cb61162bb22021dc38aecdfeb91e5de7c001d45de6aa8f1af31f901f848851c54d130fad5ccf57e02a
-Size (tex-caption-48863/caption.doc.tar.xz) = 1677000 bytes
+SHA1 (caption.doc.r53517.tar.xz) = 1f0bfa87222ebe90eef4a95d609b80ab815cbfa0
+RMD160 (caption.doc.r53517.tar.xz) = ae1c043f41a77162f4b8776ef7df51eb7b081a3f
+SHA512 (caption.doc.r53517.tar.xz) = 57b89b79f2c81aed9101ef2b7ad0ba17053873ce8ec512fb10fde4ac8400bd7a7ba47fac67eded49db870b1dc4d001f46aa2e4ae994d750423c830b8f46450af
+Size (caption.doc.r53517.tar.xz) = 1585196 bytes

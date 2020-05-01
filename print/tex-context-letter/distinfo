@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2018/05/06 02:06:40 markd Exp $
+$NetBSD: distinfo,v 1.3 2020/05/01 00:15:11 markd Exp $
 
-SHA1 (tex-context-letter-47085/context-letter.tar.xz) = 02537cded6c36c3a32ca7665ad801f9bcb3f4a3b
-RMD160 (tex-context-letter-47085/context-letter.tar.xz) = b595546a9e1b007a494901fe9184f7e9702b8f21
-SHA512 (tex-context-letter-47085/context-letter.tar.xz) = f6023b3e4558c0985a3f49e4489d7476fc7a9a0995200f2f39ff7f4ed2abb9135f960f8160e36af356357bae902e6ae28cf839879384d8e91765fce659893f39
-Size (tex-context-letter-47085/context-letter.tar.xz) = 27160 bytes
+SHA1 (context-letter.r53499.tar.xz) = 3a2a06554b06b7543d4eee956c5bba059195c6c2
+RMD160 (context-letter.r53499.tar.xz) = 5a7bab8eff29536dbef909b01926e01f3fedc084
+SHA512 (context-letter.r53499.tar.xz) = 12e0ab8934b8022010e6a23109b094ae97a9c409cc143705d73776350b8d36aca11f3d6df181d5252415f12ff11bbaa4d12e2271ba5ad9b43ee84c566c5c1e17
+Size (context-letter.r53499.tar.xz) = 27220 bytes

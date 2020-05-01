@@ -1,5 +1,5 @@
-This package defines the environment numcases: equations with several
-alternative right-hand sides, with equation numbers for each
-alternative.  It also defines environment subnumcases, where each
-alternative is a sub-number (e.g., 8a, 8b, ...) of the equation set as
-a whole.
+This package provides a LaTeX environment "numcases" to produce
+multi-case equations with a separate equation number for each
+case. There is also a "subnumcases" environment which numbers
+each case with the overall equation number plus a letter [8a,
+8b, etc.].
