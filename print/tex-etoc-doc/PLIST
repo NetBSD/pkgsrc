@@ -1,4 +1,33 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/22 11:45:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/01 02:30:48 markd Exp $
 share/texmf-dist/doc/latex/etoc/README.md
 share/texmf-dist/doc/latex/etoc/etoc-DE.pdf
+share/texmf-dist/doc/latex/etoc/etoc-DE.tex
 share/texmf-dist/doc/latex/etoc/etoc.pdf
+share/texmf-dist/doc/latex/etoc/etoc.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-10.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-20-A.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-20-B.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-21-A.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-21-B.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-22-A.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-23.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-24.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-25.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-26.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-27.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-28.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-29.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-30-A.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-30-B.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-31.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-32.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-40.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-46.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-48.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-5.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-52-A.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-52-B.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-53.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-54.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-6.tex
+share/texmf-dist/doc/latex/etoc/etocsnippet-7.tex
