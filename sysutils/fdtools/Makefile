@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/12/15 19:07:51 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/01 20:44:52 rillig Exp $
 
 DISTNAME=		fdtools-2015.03.28
 PKGREVISION=		2
@@ -12,6 +12,7 @@ COMMENT=		Manipulate file descriptor properties from shell scripts
 LICENSE=		gnu-gpl-v2
 
 DJB_RESTRICTED=		no
+DJB_ERRNO_HACK=		no
 
 WRKSRC=			${WRKDIR}/misc/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
