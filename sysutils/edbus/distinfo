@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:32:12 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/05/01 00:21:15 joerg Exp $
 
-SHA1 (e_dbus-1.7.7.tar.bz2) = 24b4b26e7d0c9dd6f75a597db055ceb44a355738
-RMD160 (e_dbus-1.7.7.tar.bz2) = 027cc808378c93343c125d649a5890e2a3605981
-SHA512 (e_dbus-1.7.7.tar.bz2) = 7df2b18c60a008681295c99376a2e488d3915ff4fbc5f98b93cd70d77b3ecd7d2feee65f3ecbbc9438cd9c29f32ccc096c0666a42f9ff197244442fe907aa0f5
-Size (e_dbus-1.7.7.tar.bz2) = 436665 bytes
+SHA1 (e_dbus-1.7.10.tar.bz2) = 84b2d1ba3a31461036ee590c8c92d95c55cb375e
+RMD160 (e_dbus-1.7.10.tar.bz2) = b1f4b4129fb9d70ea61c64713a41f244a14530a1
+SHA512 (e_dbus-1.7.10.tar.bz2) = db3e3106cd3f66699dd59433beb8592115a8970982c7dc49f04458bc162acbbece5c6ec08bea994cc7eca04fe786ad45961bb555d2dfd364d07d3673d144b3c4
+Size (e_dbus-1.7.10.tar.bz2) = 439191 bytes
