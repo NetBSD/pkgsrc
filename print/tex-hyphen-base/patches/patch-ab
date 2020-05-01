@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.14 2019/05/11 06:57:23 markd Exp $
+$NetBSD: patch-ab,v 1.15 2020/05/01 04:51:45 markd Exp $
 
---- tex/generic/config/language.def.orig	2019-04-06 21:31:53.000000000 +0000
+--- tex/generic/config/language.def.orig	2020-04-15 23:56:28.000000000 +0000
 +++ tex/generic/config/language.def
-@@ -28,161 +28,6 @@
+@@ -28,165 +28,6 @@
  \addlanguage {USenglish}{hyphen}{}{2}{3} %%% This MUST be the first non-comment
                                           %%% line of the file
  
@@ -28,6 +28,8 @@ $NetBSD: patch-ab,v 1.14 2019/05/11 06:57:23 markd Exp $
 -\addlanguage{bulgarian}{loadhyph-bg.tex}{}{2}{2}
 -% from hyphen-catalan:
 -\addlanguage{catalan}{loadhyph-ca.tex}{}{2}{2}
+-% from hyphen-chinese:
+-\addlanguage{pinyin}{loadhyph-zh-latn-pinyin.tex}{}{1}{2}
 -% from hyphen-churchslavonic:
 -\addlanguage{churchslavonic}{loadhyph-cu.tex}{}{1}{2}
 -% from hyphen-coptic:
@@ -73,9 +75,9 @@ $NetBSD: patch-ab,v 1.14 2019/05/11 06:57:23 markd Exp $
 -\addlanguage{ngerman}{loadhyph-de-1996.tex}{}{2}{2}
 -\addlanguage{swissgerman}{loadhyph-de-ch-1901.tex}{}{2}{2}
 -% from hyphen-greek:
--\addlanguage{monogreek}{loadhyph-el-monoton.tex}{}{1}{1}
 -\addlanguage{greek}{loadhyph-el-polyton.tex}{}{1}{1}
 -\addlanguage{polygreek}{loadhyph-el-polyton.tex}{}{1}{1}
+-\addlanguage{monogreek}{loadhyph-el-monoton.tex}{}{1}{1}
 -% from hyphen-hungarian:
 -\addlanguage{hungarian}{loadhyph-hu.tex}{}{2}{2}
 -% from hyphen-icelandic:
@@ -89,8 +91,8 @@ $NetBSD: patch-ab,v 1.14 2019/05/11 06:57:23 markd Exp $
 -\addlanguage{malayalam}{loadhyph-ml.tex}{}{1}{1}
 -\addlanguage{marathi}{loadhyph-mr.tex}{}{1}{1}
 -\addlanguage{oriya}{loadhyph-or.tex}{}{1}{1}
--\addlanguage{panjabi}{loadhyph-pa.tex}{}{1}{1}
 -\addlanguage{pali}{loadhyph-pi.tex}{}{1}{2}
+-\addlanguage{panjabi}{loadhyph-pa.tex}{}{1}{1}
 -\addlanguage{tamil}{loadhyph-ta.tex}{}{1}{1}
 -\addlanguage{telugu}{loadhyph-te.tex}{}{1}{1}
 -% from hyphen-indonesian:
@@ -104,13 +106,15 @@ $NetBSD: patch-ab,v 1.14 2019/05/11 06:57:23 markd Exp $
 -% from hyphen-kurmanji:
 -\addlanguage{kurmanji}{loadhyph-kmr.tex}{}{2}{2}
 -% from hyphen-latin:
--\addlanguage{latin}{loadhyph-la.tex}{}{2}{2}
 -\addlanguage{classiclatin}{loadhyph-la-x-classic.tex}{}{2}{2}
+-\addlanguage{latin}{loadhyph-la.tex}{}{2}{2}
 -\addlanguage{liturgicallatin}{loadhyph-la-x-liturgic.tex}{}{2}{2}
 -% from hyphen-latvian:
 -\addlanguage{latvian}{loadhyph-lv.tex}{}{2}{2}
 -% from hyphen-lithuanian:
 -\addlanguage{lithuanian}{loadhyph-lt.tex}{}{2}{2}
+-% from hyphen-macedonian:
+-\addlanguage{macedonian}{loadhyph-mk.tex}{}{2}{2}
 -% from hyphen-mongolian:
 -\addlanguage{mongolian}{loadhyph-mn-cyrl.tex}{}{2}{2}
 -\addlanguage{mongolianlmc}{loadhyph-mn-cyrl-x-lmc.tex}{}{2}{2}
