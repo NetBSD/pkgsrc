@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2676 2020/05/01 00:18:22 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2677 2020/05/01 00:33:11 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3827,6 +3827,14 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/qemu to 5.0.0 [adam 2020-04-30]
 	Updated www/gnurl to 7.70.0 [nikita 2020-04-30]
 	Updated pkgtools/pkglint to 20.1.3 [rillig 2020-04-30]
+	Updated devel/eio to 1.7.10 [joerg 2020-05-01]
+	Updated lang/embryo to 1.7.10 [joerg 2020-05-01]
+	Updated sysutils/edbus to 1.7.10 [joerg 2020-05-01]
+	Updated sysutils/efreet to 1.7.10 [joerg 2020-05-01]
+	Updated x11/elementary to 1.7.10 [joerg 2020-05-01]
+	Updated x11/enlightenment to 0.17.6 [joerg 2020-05-01]
+	Updated devel/ecore to 1.7.10 [joerg 2020-05-01]
+	Updated graphics/edje to 1.7.10 [joerg 2020-05-01]
 	Updated graphics/evas to 1.7.10 [joerg 2020-05-01]
 	Updated print/tex-caption to 20200103 [markd 2020-05-01]
 	Updated print/tex-caption-doc to 20200103 [markd 2020-05-01]
