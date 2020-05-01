@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2687 2020/05/01 13:36:09 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2688 2020/05/01 13:52:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3923,3 +3923,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/dbip-city-lite to 2020.05 [fcambus 2020-05-01]
 	Updated finance/ledger to 3.2.0 [riastradh 2020-05-01]
 	Updated audio/fasttracker2 to 1.23 [fox 2020-05-01]
+	Updated multimedia/vlc to 3.0.10 [nia 2020-05-01]
