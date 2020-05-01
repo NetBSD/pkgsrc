@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:02:03 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/05/01 00:15:13 markd Exp $
 
-SHA1 (tex-draftwatermark-37498/draftwatermark.doc.tar.xz) = c948155a60766a5f4824f37a659c8ce251077185
-RMD160 (tex-draftwatermark-37498/draftwatermark.doc.tar.xz) = 4a5303568744814a23a0fde402a6cecc039af790
-SHA512 (tex-draftwatermark-37498/draftwatermark.doc.tar.xz) = 1e7c767c22596feafd66bca30b1c68d42abb1360d6b2eeb54594ad421a2c9a143e59995d2b92f0bb00abed7af7a955b936771948fc3f1b04df97d1607cc8185d
-Size (tex-draftwatermark-37498/draftwatermark.doc.tar.xz) = 92784 bytes
+SHA1 (draftwatermark.doc.r54317.tar.xz) = 25a3177b22fe14418b71f3c27d47576de7f9154b
+RMD160 (draftwatermark.doc.r54317.tar.xz) = f7ab05562df5413385faa8669d9ef173a58350d7
+SHA512 (draftwatermark.doc.r54317.tar.xz) = eed80b5fce3a0c9c70db9126b9c77ba584340a4fd76cad5f46461c9567a4dcb8e64a8f2d302d455cf3784ff3b62172e191204c6da5eca352042423bceadec24c
+Size (draftwatermark.doc.r54317.tar.xz) = 184280 bytes
