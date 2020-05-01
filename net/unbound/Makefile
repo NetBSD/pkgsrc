@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2020/02/20 20:39:07 he Exp $
+# $NetBSD: Makefile,v 1.77 2020/05/01 23:24:39 rillig Exp $
 
 DISTNAME=	unbound-1.10.0
 CATEGORIES=	net
@@ -74,12 +74,6 @@ CONFIGURE_ARGS+=	--enable-sha2
 .else
 CONFIGURE_ARGS+=	--disable-sha2
 .endif
-
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-configure
-SUBST_MESSAGE.paths=	Fixing path names
-SUBST_FILES.paths=	doc/example.conf doc/*.5 doc/*.8
-SUBST_SED.paths=	-e "s|/usr/local|${PREFIX}|"
 
 INSTALL_MAKE_FLAGS+=	\
 	configfile=${PREFIX}/share/examples/unbound/unbound.conf
