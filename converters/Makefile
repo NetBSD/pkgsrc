@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2020/02/12 14:11:22 fcambus Exp $
+# $NetBSD: Makefile,v 1.176 2020/05/01 17:50:59 nia Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -116,6 +116,7 @@ SUBDIR+=	py-confusable_homoglyphs
 SUBDIR+=	py-emoji
 SUBDIR+=	py-jpCodecs
 SUBDIR+=	py-simplejson
+SUBDIR+=	py-unicode-slugify
 SUBDIR+=	py-yenc
 SUBDIR+=	py-zbase32
 SUBDIR+=	py-zfec
