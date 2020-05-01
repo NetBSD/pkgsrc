@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2688 2020/05/01 13:52:04 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2689 2020/05/01 17:51:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3924,3 +3924,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated finance/ledger to 3.2.0 [riastradh 2020-05-01]
 	Updated audio/fasttracker2 to 1.23 [fox 2020-05-01]
 	Updated multimedia/vlc to 3.0.10 [nia 2020-05-01]
+	Added converters/py-unicode-slugify version 0.1.3 [nia 2020-05-01]
