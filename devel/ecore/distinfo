@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:24 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/05/01 00:11:52 joerg Exp $
 
-SHA1 (ecore-1.7.7.tar.bz2) = a5baeedf9dcec78b4bf0023d2d6da3fe61ab859b
-RMD160 (ecore-1.7.7.tar.bz2) = 287c09b9a8bf680edfe1f8f71057ae42d4d6bb5a
-SHA512 (ecore-1.7.7.tar.bz2) = e5ebde56dbc70f0900f28f659add28940657d750295f0ab421c34ed104b60c8931e2ae3021a48cea7ec8f386106e9185925334e8b68514705ba5a7994fd8013e
-Size (ecore-1.7.7.tar.bz2) = 3460946 bytes
+SHA1 (ecore-1.7.10.tar.bz2) = 71bc7c9f862ae657ee05b05f66052dbc9b6c8a6b
+RMD160 (ecore-1.7.10.tar.bz2) = 27379aae0e34f0bc59eabffcf1565fae74d33d2d
+SHA512 (ecore-1.7.10.tar.bz2) = 24fbe064913c566f885a2e51185b1f1d37c62c0d03ba0d549e9715ba516fb6b3f630ad331f89f66e91de1401b06b01b16916650448dda11d5e1efa24e52eaf39
+Size (ecore-1.7.10.tar.bz2) = 3455136 bytes
 SHA1 (patch-src_lib_ecore_Ecore.h) = 26b030d863d601db8287c02d1ec2dd193f73929c
+SHA1 (patch-src_lib_ecore__con_ecore__con__ssl.c) = cb9e8130092f700f8d8d83a4ddb8a0212a337d5d
