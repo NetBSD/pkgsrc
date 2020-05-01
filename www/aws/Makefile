@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/05/01 07:00:16 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/05/01 07:10:19 rillig Exp $
 
 DISTNAME=	aws-${AWS_VERSION}
 PKGREVISION=	16
@@ -40,12 +40,11 @@ CONFIGURE_ARGS+=	ZPATH=${BUILDLINK_PREFIX.zlib}/lib
 SUBST_CLASSES+=		rpath
 SUBST_STAGE.rpath=	pre-configure
 SUBST_MESSAGE.rpath=	Adjust rpaths of shared libraries
-SUBST_FILES.rpath=	src/src.gpr include/include.gpr \
-			demos/test_ldap/test_ldap.gpr tools/tools.gpr
-SUBST_SED.rpath=	-e "s,@ADDITIONAL_RPATH@,${ADDITIONAL_RPATH}," \
-			-e "s,@PREFIX@,${PREFIX},g" \
-			-e "s,@RFLAG@,${LINKER_RPATH_FLAG},g" \
-			-e "s,@SSL_RPATH@,${BUILDLINK_PREFIX.openssl}/lib,g"
+SUBST_FILES.rpath=	src/src.gpr include/include.gpr
+SUBST_FILES.rpath+=	demos/test_ldap/test_ldap.gpr tools/tools.gpr
+SUBST_VARS.rpath=	ADDITIONAL_RPATH PREFIX
+SUBST_SED.rpath+=	-e "s,@RFLAG@,${LINKER_RPATH_FLAG},g"
+SUBST_SED.rpath+=	-e "s,@SSL_RPATH@,${BUILDLINK_PREFIX.openssl}/lib,g"
 ADDITIONAL_RPATH=	${PREFIX}/lib:${PREFIX}/lib/aws/relocatable
 
 GENERATE_PLIST=		cd ${DESTDIR}${PREFIX};
