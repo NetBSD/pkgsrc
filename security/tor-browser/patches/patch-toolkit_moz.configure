@@ -1,10 +1,11 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.2 2020/03/13 17:59:27 wiz Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.3 2020/05/01 07:01:46 wiz Exp $
 
 * skia part: support bigendian architectures
+* second chunk: use bundled fonts to reduce fingerprinting possibilities
 
---- toolkit/moz.configure.orig	2018-05-03 16:58:41.000000000 +0000
+--- toolkit/moz.configure.orig	2020-04-04 03:09:31.000000000 +0000
 +++ toolkit/moz.configure
-@@ -932,11 +932,11 @@ include('nss.configure')
+@@ -834,11 +834,11 @@ include('nss.configure')
  # ==============================================================
  option('--disable-skia', help='Disable use of Skia')
  
@@ -21,3 +22,12 @@ $NetBSD: patch-toolkit_moz.configure,v 1.2 2020/03/13 17:59:27 wiz Exp $
          return True
  
  set_config('MOZ_ENABLE_SKIA', skia)
+@@ -1318,7 +1318,7 @@ set_config('MOZ_BITS_DOWNLOAD',
+ 
+ @depends(target)
+ def bundled_fonts_default(target):
+-    return target.os == 'WINNT' or target.kernel == 'Linux'
++    return True
+ 
+ @depends(build_project)
+ def allow_bundled_fonts(project):
