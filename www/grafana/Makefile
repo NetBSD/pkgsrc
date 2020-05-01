@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2020/04/12 11:01:49 bsiegert Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/01 22:04:05 tnn Exp $
 
-DISTNAME=	grafana-6.3.4
-PKGREVISION=	8
+DISTNAME=	grafana-6.7.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -25,7 +24,7 @@ GO_SRCPATH=		github.com/grafana/grafana
 
 #BUILD_DEPENDS+=	yarn>=1.15.0:../../devel/yarn
 
-CHECK_PORTABILITY_SKIP=		packaging/rpm/control/postinst
+CHECK_PORTABILITY_SKIP=		packaging/* devenv/*
 
 CHECK_RELRO_SKIP+=		bin/grafana-cli
 CHECK_RELRO_SKIP+=		bin/grafana-server
@@ -72,9 +71,6 @@ INSTALLATION_DIRS+=	share/grafana/public
 CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini \
 		${PKG_SYSCONFDIR}/grafana.conf
 
-pre-patch:
-	${RM} -rf ${WRKSRC}/vendor/golang.org/x/xerrors
-
 #post-build:
 #	cd ${WRKSRC} && yarn install --pure-lockfile && yarn build
 
@@ -85,6 +81,5 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rw conf \
 		${DESTDIR}${PREFIX}/share/grafana/
 
-.include "../../devel/go-xerrors/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
