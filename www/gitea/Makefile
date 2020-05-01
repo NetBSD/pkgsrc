@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2020/04/12 11:01:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.32 2020/05/01 21:27:49 rillig Exp $
 
 DISTNAME=	gitea-1.11.4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gitea/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -53,9 +53,10 @@ PKG_HOME.${GITEA_USER}=		${VARBASE}/db/gitea
 
 SUBST_CLASSES+=			fix-version
 SUBST_STAGE.fix-version=	pre-configure
-SUBST_MESSAGE.fix-version=	Fix the version number.
-SUBST_FILES.fix-version=	${WRKSRC}/main.go
-SUBST_SED.fix-version=		-E 's\#^(var Version = )"[^"]+"\#\1"${PKGVERSION}"\#'
+SUBST_MESSAGE.fix-version=	Fix the outdated version number.
+SUBST_FILES.fix-version=	main.go
+SUBST_SED.fix-version=		-e 's,^\(	Version = \)"1\.9\.0-dev",\1"${PKGVERSION}",'
+SUBST_NOOP_OK.fix-version=	no
 
 SUBST_CLASSES+=		fix-var
 SUBST_STAGE.fix-var=	pre-configure
