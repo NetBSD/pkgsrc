@@ -1,0 +1,1 @@
+bin/jsonlint @PREFIX@/bin/jsonlint-@PYVERSSUFFIX@
