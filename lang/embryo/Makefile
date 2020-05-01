@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2019/07/06 16:46:10 nia Exp $
+# $NetBSD: Makefile,v 1.12 2020/05/01 00:14:17 joerg Exp $
 #
 
-DISTNAME=	embryo-1.7.7
+DISTNAME=	embryo-1.7.10
 CATEGORIES=	lang
-MASTER_SITES=	http://download.enlightenment.org/releases/
+MASTER_SITES=	https://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
