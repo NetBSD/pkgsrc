@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 03:28:58 agc Exp $
+$NetBSD: distinfo,v 1.9 2020/05/01 23:30:25 rillig Exp $
 
 SHA1 (xcolorsel-1.1a-src.tar.gz) = 398df69d3c5ac99ee21b1e19100b98f385a1666c
 RMD160 (xcolorsel-1.1a-src.tar.gz) = 5ae81689bcdc23828778eb5d46f08b7c30b1566c
@@ -7,5 +7,5 @@ Size (xcolorsel-1.1a-src.tar.gz) = 67359 bytes
 SHA1 (patch-Imakefile) = 39e087e56f752930a96bd8ae4e9a39bf4a0b0806
 SHA1 (patch-RgbSink.c) = d39b2498c8015c7451dbc46727b14dc1293b7944
 SHA1 (patch-RgbSrc.c) = c3de7ce86a9eeecd716d0ca95574376a58b22c68
-SHA1 (patch-RgbText.c) = 060873da624cd93069ffcfaca08193b054116557
+SHA1 (patch-RgbText.c) = ea09371fd88c4a1068f069926097743fd25cfbdc
 SHA1 (patch-xcolorsel.c) = a6667fff4372d242cc13c44d2a2fdf53ad5b065d
