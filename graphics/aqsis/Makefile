@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2020/03/08 16:49:52 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2020/05/01 00:34:13 joerg Exp $
 #
 
 DISTNAME=		aqsis-1.8.1
@@ -14,6 +14,8 @@ LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2.1 AND modified-bsd
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config flex bison
+
+BROKEN=			Not valid C++11 code, but dependencies require C++11
 
 LDFLAGS.SunOS=		-lsocket -lnsl
 
