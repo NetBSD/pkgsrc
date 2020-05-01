@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2679 2020/05/01 04:56:48 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2680 2020/05/01 07:01:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3914,3 +3914,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/tex-hyphen-latin to 3.1.2020 [markd 2020-05-01]
 	Updated print/tex-hyphen-spanish to 5.0 [markd 2020-05-01]
 	Added print/tex-hyphen-macedonian version 2020 [markd 2020-05-01]
+	Updated security/tor-browser to 9.0.9nb4 [wiz 2020-05-01]
