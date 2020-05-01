@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/05/01 14:09:15 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/01 14:11:16 tnn Exp $
 
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
@@ -77,8 +77,6 @@ CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/make.rc
 CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/run.rc
 
 PLIST_SUBST+=	GOVERSSUFFIX=${GOVERSSUFFIX}
-
-.include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=	pty route
 
