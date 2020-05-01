@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2681 2020/05/01 08:01:06 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2682 2020/05/01 08:18:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3916,3 +3916,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Added print/tex-hyphen-macedonian version 2020 [markd 2020-05-01]
 	Updated security/tor-browser to 9.0.9nb4 [wiz 2020-05-01]
 	Updated comms/asterisk16 to 16.10.0 [ryoon 2020-05-01]
+	Updated mail/py-email_validator to 1.1.0 [adam 2020-05-01]
+	Updated devel/py-pyelftools to 0.26 [adam 2020-05-01]
