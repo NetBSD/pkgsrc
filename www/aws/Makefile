@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/04/30 23:47:41 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2020/05/01 07:00:16 rillig Exp $
 
 DISTNAME=	aws-${AWS_VERSION}
 PKGREVISION=	16
@@ -11,7 +11,7 @@ HOMEPAGE=	http://libre.adacore.com/libre/tools/aws/
 COMMENT=	Adacore Ada Web Server and framework
 LICENSE=	gnu-gpl-v2
 
-BROKEN=		sh: ../xoscons: not found
+BROKEN=		"sh: ../xoscons: not found"
 
 AWS_VERSION=		3.1.0.0
 USE_TOOLS+=		gmake makeinfo sed awk
