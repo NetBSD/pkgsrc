@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.28 2020/04/24 11:46:55 nia Exp $
+# $NetBSD: Makefile,v 1.29 2020/05/01 00:20:05 joerg Exp $
 
-DISTNAME=	efreet-1.7.7
-PKGREVISION=	18
+DISTNAME=	efreet-1.7.10
 CATEGORIES=	sysutils devel
-MASTER_SITES=	http://download.enlightenment.org/releases/
+MASTER_SITES=	https://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://enlightenment.org/
 COMMENT=	Interface Abstraction Library and Toolset
 LICENSE=	2-clause-bsd
-
-BROKEN=		"Fails to build with OpenSSL 1.1"
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
