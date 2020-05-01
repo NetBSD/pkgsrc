@@ -1,12 +1,16 @@
-$NetBSD: distinfo,v 1.18 2020/04/28 19:38:49 wiz Exp $
+$NetBSD: distinfo,v 1.19 2020/05/01 07:01:46 wiz Exp $
 
 SHA1 (src-firefox-tor-browser-68.7.0esr-9.0-2-build1.tar.xz) = c9be70c6cbbac9d73d1aee930703ea4d013725df
 RMD160 (src-firefox-tor-browser-68.7.0esr-9.0-2-build1.tar.xz) = 6289e342fa8e99c21098331d153beb6d88bc39b2
 SHA512 (src-firefox-tor-browser-68.7.0esr-9.0-2-build1.tar.xz) = 6cf582c1eb3092c1ecbef86c67040c89dc2c84f54805c52408b0c1051550fcff1af563e09e85ba9cd72a1a1e924b6643a812e9669676856a86e903e0063e5270
 Size (src-firefox-tor-browser-68.7.0esr-9.0-2-build1.tar.xz) = 348594032 bytes
+SHA1 (tor-browser-linux64-9.0.9_en-US.tar.xz) = 094d148a5df4efa979e2aaca5d88a6517469ebe6
+RMD160 (tor-browser-linux64-9.0.9_en-US.tar.xz) = b880eeecc748e6584672a761615fefccb07a7a5b
+SHA512 (tor-browser-linux64-9.0.9_en-US.tar.xz) = 72a6c080ad2d5237b20f00e82388373accd4866f19a713564823fe416bcaf41408ef774d6cb735db8c3f2766d2870655c85e6109e8ef32de8b1403fc9c63561d
+Size (tor-browser-linux64-9.0.9_en-US.tar.xz) = 80156396 bytes
 SHA1 (patch-.mozconfig) = 66fbb2f113091eee1f022cd656231f845b04b0f8
 SHA1 (patch-aa) = 9f7200c411cd2217a80ec10a276c8877bc6b845c
-SHA1 (patch-browser_app_profile_000-tor-browser.js) = 545cf6e80f061a6a58b429d2696046de4e34725f
+SHA1 (patch-browser_app_profile_000-tor-browser.js) = 84a0a15605fff0e22f3150bce901a296fc920280
 SHA1 (patch-browser_app_profile_firefox.js) = 076cc2892547bac07fe907533f4e821f13f5738e
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-dom_media_CubebUtils.cpp) = 3cd2c65ab281d802c56216565970450767a3fb24
@@ -34,7 +38,7 @@ SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = c39a222c5ab16c26cb214e5e53a0b61
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e5700d95302ef9672b404ab19e13ef7ba3ede5cf
 SHA1 (patch-toolkit_library_moz.build) = 57516a1cc888fdbaf39ba90f73e5de488ad1f01e
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 22a39e54e042ab2270a3cb54e4e307c8900cad12
-SHA1 (patch-toolkit_moz.configure) = 40ee147cc1d2c62dd6c83b3f67ce9e61f758ea57
+SHA1 (patch-toolkit_moz.configure) = 9f4edca09802f6d3adb517613e879dca8d2d65be
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = b2343fbad2556504dfd13601c02e6e2357c7d2bc
 SHA1 (patch-toolkit_xre_glxtest.cpp) = 04942938f45f326c7d5c4da3bf8cc2d09b977c69
 SHA1 (patch-xpcom_base_nscore.h) = 1ac4d34d3c9e80bc1ac966c6c84cb320bc0fa1ec
