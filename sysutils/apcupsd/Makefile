@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2019/12/22 15:57:36 jmcneill Exp $
+# $NetBSD: Makefile,v 1.90 2020/05/01 19:51:18 rillig Exp $
 
 DISTNAME=		apcupsd-3.14.13r2365
 PKGREVISION=		5
@@ -87,8 +87,6 @@ INSTALLATION_DIRS=	share/examples/apcupsd share/examples/rc.d \
 SUBST_CLASSES+=		strip
 SUBST_STAGE.strip=	pre-configure
 SUBST_FILES.strip=	autoconf/install-sh autoconf/targets.mak
-SUBST_FILES.strip+=	src/gapcmon/Makefile.in src/cgi/Makefile.in
-SUBST_FILES.strip+=	src/Makefile.in
 SUBST_SED.strip=	-e "s|STRIP|STRIPFLAG|g"
 SUBST_MESSAGE.strip=	Fixing conflicting STRIP variable name
 
