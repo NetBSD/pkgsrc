@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/01/26 17:31:28 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/01 14:09:15 tnn Exp $
 
 .include "../../lang/go/version.mk"
+.include "../../lang/go/bootstrap.mk"
 
 DISTNAME=	go${GO113_VERSION}.src
 PKGNAME=	go113-${GO113_VERSION}
@@ -74,9 +75,6 @@ CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/all.rc
 CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/clean.rc
 CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/make.rc
 CHECK_INTERPRETER_SKIP+=	go${GOVERSSUFFIX}/src/run.rc
-
-BUILD_DEPENDS+=		go14-1.4*:../../lang/go14
-GOROOT_BOOTSTRAP=	${PREFIX}/go14
 
 PLIST_SUBST+=	GOVERSSUFFIX=${GOVERSSUFFIX}
 
