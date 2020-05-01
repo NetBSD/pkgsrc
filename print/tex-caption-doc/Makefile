@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 23:33:44 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/01 00:15:10 markd Exp $
 
 DISTNAME=	caption.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-20181006
-TEXLIVE_REV=	48863
+PKGNAME=	tex-${DISTNAME:S/./-/}-20200103
+TEXLIVE_REV=	53517
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/caption
 COMMENT=	Documentation for tex-caption
 LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/12/06 20:19:06 markd Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/01 00:15:10 markd Exp $
 
 DISTNAME=	changes
-PKGNAME=	tex-${DISTNAME}-3.1.3
-TEXLIVE_REV=	51705
+PKGNAME=	tex-${DISTNAME}-3.2.1
+TEXLIVE_REV=	52838
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/changes
@@ -19,6 +19,5 @@ DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 REPLACE_PYTHON+=	${WRKSRC}/scripts/changes/pyMergeChanges.py
 
 .include "../../lang/python/application.mk"
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

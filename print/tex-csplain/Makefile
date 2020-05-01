@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2019/12/06 20:19:20 markd Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/01 00:15:12 markd Exp $
 
 DISTNAME=	csplain
-PKGNAME=	tex-${DISTNAME}-2019.51317
-TEXLIVE_REV=	51317
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	54699
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/csplain
@@ -11,6 +11,7 @@ COMMENT=	Plain TeX multilanguage support
 
 DEPENDS+=	tex-cs-[0-9]*:../../fonts/tex-cs
 DEPENDS+=	tex-enctex-[0-9]*:../../print/tex-enctex
+DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
 
 INSTALLATION_DIRS+=	bin
@@ -20,7 +21,6 @@ TEX_FORMATS+=	"csplain pdftex - -etex -enc csplain-utf8.ini\\npdfcsplain pdftex 
 # execute AddFormat name=pdfcsplain engine=xetex        options="-etex csplain.ini"
 # execute AddFormat name=pdfcsplain engine=luatex       options="-etex csplain.ini"
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/06/21 13:38:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/05/01 00:15:13 markd Exp $
 share/texmf-dist/dvips/config/alt-rule.pro
 share/texmf-dist/dvips/config/canonex.cfg
 share/texmf-dist/dvips/config/config.bakoma
@@ -37,6 +37,7 @@ share/texmf-dist/fonts/enc/dvips/base/ansinew.enc
 share/texmf-dist/fonts/enc/dvips/base/asex.enc
 share/texmf-dist/fonts/enc/dvips/base/asexp.enc
 share/texmf-dist/fonts/enc/dvips/base/dc.enc
+share/texmf-dist/fonts/enc/dvips/base/dvips-all.enc
 share/texmf-dist/fonts/enc/dvips/base/dvips.enc
 share/texmf-dist/fonts/enc/dvips/base/ec.enc
 share/texmf-dist/fonts/enc/dvips/base/extex.enc

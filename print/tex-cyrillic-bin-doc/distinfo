@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:01 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/05/01 00:15:13 markd Exp $
 
-SHA1 (tex-cyrillic-bin-29764/cyrillic-bin.doc.tar.xz) = e9a2ca41c5a35d5c4bd3cd0563a3d1cba56d1c58
-RMD160 (tex-cyrillic-bin-29764/cyrillic-bin.doc.tar.xz) = 37bb2de9533feb431ed2099c0e54c99c4fabfc52
-SHA512 (tex-cyrillic-bin-29764/cyrillic-bin.doc.tar.xz) = 60748a8b3dbd4e6810a751a3a8cd499d0eb62d1260170b35023392271e6508aace8ef99edcc54a8c231015357ccc5b84a45380c8599cd2f2f5dae52500f4e839
-Size (tex-cyrillic-bin-29764/cyrillic-bin.doc.tar.xz) = 6704 bytes
+SHA1 (cyrillic-bin.doc.r53559.tar.xz) = 4250315f36cc741d91061f613ecb64f039881bb6
+RMD160 (cyrillic-bin.doc.r53559.tar.xz) = 2848ab24065365935c7dda51aa64f7e5b41e7ce2
+SHA512 (cyrillic-bin.doc.r53559.tar.xz) = e8f1aa0313026995668e491f63171c57841c79187435b8b7ad9e807d2c7b40970b2ec1b14181d6122231b7557fb66c39dca0eec0a877735380d152482865feec
+Size (cyrillic-bin.doc.r53559.tar.xz) = 25592 bytes

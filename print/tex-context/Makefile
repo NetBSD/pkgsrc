@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 23:33:49 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/05/01 00:15:11 markd Exp $
 
 DISTNAME=	context
-PKGNAME=	tex-${DISTNAME}-2019
-TEXLIVE_REV=	50573
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	54364
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context
@@ -33,7 +33,6 @@ TEX_MAP_FILES+=		original-context-symbol.map
 
 INSTALLATION_DIRS+=	bin
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:

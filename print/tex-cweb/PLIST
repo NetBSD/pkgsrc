@@ -1,2 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/27 09:54:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/01 00:15:12 markd Exp $
+share/texmf-dist/tex/plain/cweb/ctproofmac.tex
+share/texmf-dist/tex/plain/cweb/cttwinxmac.tex
+share/texmf-dist/tex/plain/cweb/ctwimac.tex
+share/texmf-dist/tex/plain/cweb/cwebbin/Xcwebmac.tex
+share/texmf-dist/tex/plain/cweb/cwebbin/cweb_ecma94.sty
+share/texmf-dist/tex/plain/cweb/cwebbin/cweb_hp8.sty
+share/texmf-dist/tex/plain/cweb/cwebbin/cweb_mac8.sty
+share/texmf-dist/tex/plain/cweb/cwebbin/cweb_pc850.sty
+share/texmf-dist/tex/plain/cweb/cwebbin/dctproofmac.tex
+share/texmf-dist/tex/plain/cweb/cwebbin/dctwimac.tex
+share/texmf-dist/tex/plain/cweb/cwebbin/dcwebmac.tex
+share/texmf-dist/tex/plain/cweb/cwebbin/dcwebstrings.tex
+share/texmf-dist/tex/plain/cweb/cwebbin/fcwebmac.tex
+share/texmf-dist/tex/plain/cweb/cwebbin/icwebmac.tex
 share/texmf-dist/tex/plain/cweb/cwebmac.tex

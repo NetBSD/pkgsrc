@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:01:54 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/05/01 00:15:10 markd Exp $
 
-SHA1 (tex-cases-17123/cases.doc.tar.xz) = e53319a560ec61c07b5effb55afc470d389e1010
-RMD160 (tex-cases-17123/cases.doc.tar.xz) = d3c791dd927e5a09e209ac209647b19dd6a360a6
-SHA512 (tex-cases-17123/cases.doc.tar.xz) = 323b5fdaca0ed7e61b2af157d0c847c41d5be004b5a064238895d04f0e5d5355ba117b4bfaaed2cf9bedcb3b2ef85552a9f4328e10e2951c6013dd0cb32e01aa
-Size (tex-cases-17123/cases.doc.tar.xz) = 306892 bytes
+SHA1 (cases.doc.r54682.tar.xz) = 152dd2ec8dc86e60ca4434f73d671f5bf529b1f1
+RMD160 (cases.doc.r54682.tar.xz) = c22ab0b90c0bc35cdd7e5f8742cfde0dc79272bc
+SHA512 (cases.doc.r54682.tar.xz) = 89aa9005cbdecc26e0b2489b544cf3f504e952eddd9a28dedd2a2f555d3e0c5f8378ce1ef21dd78fbc5ebac616cdb7559f2147e143f3cef12286a3e33d9b5616
+Size (cases.doc.r54682.tar.xz) = 338912 bytes

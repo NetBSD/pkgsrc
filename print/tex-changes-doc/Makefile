@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2019/12/06 20:19:06 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/01 00:15:10 markd Exp $
 
 DISTNAME=	changes.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.1.3
-TEXLIVE_REV=	51705
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.2.1
+TEXLIVE_REV=	52838
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/changes
 COMMENT=	Documentation for tex-changes
 LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

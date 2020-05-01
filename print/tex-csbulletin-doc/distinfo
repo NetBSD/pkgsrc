@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/30 08:01:16 markd Exp $
+$NetBSD: distinfo,v 1.5 2020/05/01 00:15:12 markd Exp $
 
-SHA1 (tex-csbulletin-49681/csbulletin.doc.tar.xz) = ca4875db4504182fb623e9fe2be28287f9e98e64
-RMD160 (tex-csbulletin-49681/csbulletin.doc.tar.xz) = f68089ada26ee8d9997e1949e35d57d7502e4e16
-SHA512 (tex-csbulletin-49681/csbulletin.doc.tar.xz) = 9ab4f2c24c3feb3ab5a833fd7cf28a6df29e9d78d11e888820079d9cf74ecebf20034f2163fb226ce04eb3d989ded90872eb65a51d9041b8a2e6ef1e34261edf
-Size (tex-csbulletin-49681/csbulletin.doc.tar.xz) = 271880 bytes
+SHA1 (csbulletin.doc.r54433.tar.xz) = 2a5ebee7fa89b1d8509a04a1506b041c3199b3f6
+RMD160 (csbulletin.doc.r54433.tar.xz) = 8384626bc5f707bce0a8c3fa00fa1fb700d08bb9
+SHA512 (csbulletin.doc.r54433.tar.xz) = 4299308a6408a826f139bbca785cbb139f94ff10e67c80c597e0e7cbfd3bb6ff4889865a04922e4cbe23cf0d3d6f1c1ccc5cfe4d5c2dfee4c747ba18873d6190
+Size (csbulletin.doc.r54433.tar.xz) = 274080 bytes

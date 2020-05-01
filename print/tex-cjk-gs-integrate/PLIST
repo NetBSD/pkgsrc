@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/05/11 22:28:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/05/01 00:15:11 markd Exp $
 bin/cjk-gs-integrate
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-adobe.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-apple.dat
@@ -10,6 +10,7 @@ share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-fandol.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-fontworks.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-founder.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-hancom.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-haranoaji.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-heisei.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-hiragino.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-ipa.dat
@@ -22,6 +23,7 @@ share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-morisawa.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-nanum.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-notosans.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-notoserif.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-removeonly.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-ryokana.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-sazanami.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-sinotype.dat
@@ -35,3 +37,4 @@ share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-unfonts.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-wenquanyi.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-yu-osx.dat
 share/texmf-dist/fonts/misc/cjk-gs-integrate/cjkgs-yu-win.dat
+share/texmf-dist/fonts/misc/cjk-gs-integrate/zrlistttc.lua
