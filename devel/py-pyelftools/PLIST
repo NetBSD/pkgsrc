@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/06 07:08:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/01 08:17:43 adam Exp $
 bin/readelf-${PYVERSSUFFIX}.py
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/elftools/__init__.py
 ${PYSITELIB}/elftools/__init__.pyc
 ${PYSITELIB}/elftools/__init__.pyo
@@ -90,6 +94,9 @@ ${PYSITELIB}/elftools/dwarf/lineprogram.pyo
 ${PYSITELIB}/elftools/dwarf/locationlists.py
 ${PYSITELIB}/elftools/dwarf/locationlists.pyc
 ${PYSITELIB}/elftools/dwarf/locationlists.pyo
+${PYSITELIB}/elftools/dwarf/namelut.py
+${PYSITELIB}/elftools/dwarf/namelut.pyc
+${PYSITELIB}/elftools/dwarf/namelut.pyo
 ${PYSITELIB}/elftools/dwarf/ranges.py
 ${PYSITELIB}/elftools/dwarf/ranges.pyc
 ${PYSITELIB}/elftools/dwarf/ranges.pyo
@@ -117,6 +124,9 @@ ${PYSITELIB}/elftools/elf/enums.pyo
 ${PYSITELIB}/elftools/elf/gnuversions.py
 ${PYSITELIB}/elftools/elf/gnuversions.pyc
 ${PYSITELIB}/elftools/elf/gnuversions.pyo
+${PYSITELIB}/elftools/elf/hash.py
+${PYSITELIB}/elftools/elf/hash.pyc
+${PYSITELIB}/elftools/elf/hash.pyo
 ${PYSITELIB}/elftools/elf/notes.py
 ${PYSITELIB}/elftools/elf/notes.pyc
 ${PYSITELIB}/elftools/elf/notes.pyo
@@ -132,4 +142,3 @@ ${PYSITELIB}/elftools/elf/segments.pyo
 ${PYSITELIB}/elftools/elf/structs.py
 ${PYSITELIB}/elftools/elf/structs.pyc
 ${PYSITELIB}/elftools/elf/structs.pyo
-${PYSITELIB}/${EGG_FILE}
