@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2685 2020/05/01 10:26:10 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.2686 2020/05/01 11:49:23 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3921,3 +3921,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/libansilove to 1.2.2 [fcambus 2020-05-01]
 	Updated net/dbip-country-lite to 2020.05 [fcambus 2020-05-01]
 	Updated net/dbip-city-lite to 2020.05 [fcambus 2020-05-01]
+	Updated finance/ledger to 3.2.0 [riastradh 2020-05-01]
