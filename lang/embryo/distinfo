@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 22:50:34 agc Exp $
+$NetBSD: distinfo,v 1.10 2020/05/01 00:14:17 joerg Exp $
 
-SHA1 (embryo-1.7.7.tar.bz2) = 80b0efd5eff98f22dd6fa4107499475d8bb922d3
-RMD160 (embryo-1.7.7.tar.bz2) = 9b5e8af643554c92c783ec1ffea6e0fb88030416
-SHA512 (embryo-1.7.7.tar.bz2) = 928ca50ffd4de93d09f22d79788fff353de6551f5eca1ad814bcefb18734de9424c5388904af129c5cf6580e80cdc362e46c74ee7c67c7ca716f9a43625e9f5a
-Size (embryo-1.7.7.tar.bz2) = 461222 bytes
-SHA1 (patch-src_lib_embryo__float.c) = 393daf3bda1178705c97b5922e56a19a2a2d5cfa
+SHA1 (embryo-1.7.10.tar.bz2) = aa98f0eaa0226a039c91883ca96b0b5a89418076
+RMD160 (embryo-1.7.10.tar.bz2) = 4043737b811788ac2798a5cd413661d6553dda67
+SHA512 (embryo-1.7.10.tar.bz2) = 7be2171b9035d560a21aa232027d2afc46db44293e0d0ab0fdc6d3451a8a750956f09043edf851823ecc9de8c03c554205d84eddabd52f4fbe5938f5fd94d254
+Size (embryo-1.7.10.tar.bz2) = 456473 bytes
