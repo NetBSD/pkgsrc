@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/23 03:18:34 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/01 02:30:48 markd Exp $
+share/texmf-dist/doc/latex/endnotes/README.md
 share/texmf-dist/doc/latex/endnotes/endnotes.pdf
 share/texmf-dist/doc/latex/endnotes/endnotes.tex

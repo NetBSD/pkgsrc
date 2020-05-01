@@ -1,13 +1,20 @@
-@comment $NetBSD: PLIST,v 1.3 2019/05/07 10:35:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/05/01 02:30:48 markd Exp $
 share/texmf-dist/doc/latex/europecv/CHANGELOG.rst
 share/texmf-dist/doc/latex/europecv/CONTRIBUTING.md
 share/texmf-dist/doc/latex/europecv/LICENSE
 share/texmf-dist/doc/latex/europecv/README.md
 share/texmf-dist/doc/latex/europecv/europecv.pdf
 share/texmf-dist/doc/latex/europecv/europecv.tex
+share/texmf-dist/doc/latex/europecv/examples/EuropeFlagCMYK-eps-converted-to.pdf
+share/texmf-dist/doc/latex/europecv/examples/EuropeFlagCMYK.eps
+share/texmf-dist/doc/latex/europecv/examples/Pythagoras.jpg
 share/texmf-dist/doc/latex/europecv/examples/at.pdf
 share/texmf-dist/doc/latex/europecv/examples/bulgarian-koi8-r.tex
 share/texmf-dist/doc/latex/europecv/examples/bulgarian-utf8.tex
+share/texmf-dist/doc/latex/europecv/examples/europass-cv.pdf
+share/texmf-dist/doc/latex/europecv/examples/europass-cv.tex
+share/texmf-dist/doc/latex/europecv/examples/europasslogo-eps-converted-to.pdf
+share/texmf-dist/doc/latex/europecv/examples/europasslogo.eps
 share/texmf-dist/doc/latex/europecv/examples/greek-utf8.pdf
 share/texmf-dist/doc/latex/europecv/examples/greek-utf8.tex
 share/texmf-dist/doc/latex/europecv/examples/maltese-maltese.tex

@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2017/10/23 02:08:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/01 02:30:50 markd Exp $
 man/man1/makeglossaries-lite.1
 man/man1/makeglossaries.1
 share/texmf-dist/doc/latex/glossaries/CHANGES
 share/texmf-dist/doc/latex/glossaries/INSTALL
-share/texmf-dist/doc/latex/glossaries/README
+share/texmf-dist/doc/latex/glossaries/README.md
 share/texmf-dist/doc/latex/glossaries/glossaries-code.pdf
 share/texmf-dist/doc/latex/glossaries/glossaries-user.html
 share/texmf-dist/doc/latex/glossaries/glossaries-user.pdf

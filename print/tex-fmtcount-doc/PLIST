@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2017/08/17 04:21:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/05/01 02:30:49 markd Exp $
 share/texmf-dist/doc/latex/fmtcount/CHANGES
 share/texmf-dist/doc/latex/fmtcount/README
 share/texmf-dist/doc/latex/fmtcount/fc-lang.tex
-share/texmf-dist/doc/latex/fmtcount/fc-typeout-languages.tex
 share/texmf-dist/doc/latex/fmtcount/fmtcount.pdf
