@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 03:28:28 agc Exp $
+$NetBSD: distinfo,v 1.5 2020/05/01 00:27:52 joerg Exp $
 
-SHA1 (enlightenment-0.17.3.tar.bz2) = a0bda02d3dcd0105ffbb33de6411bbc910ba4585
-RMD160 (enlightenment-0.17.3.tar.bz2) = a0997f99a8fb0857cadc9b1f99b6e3217461b5dd
-SHA512 (enlightenment-0.17.3.tar.bz2) = e79e72af5f8c1ecb4d192c71debd944b95c97b19da9b6db21392b8f00af269a9e4e98afabc950ea2179727909576afd6c1835efad3dab3307912187e938d2719
-Size (enlightenment-0.17.3.tar.bz2) = 29332256 bytes
+SHA1 (enlightenment-0.17.6.tar.bz2) = 23e04845cf68d9edd3ef789331b21dcb3846ac01
+RMD160 (enlightenment-0.17.6.tar.bz2) = 3e994330b36ea9617b33aae5a4adac9db3aafff2
+SHA512 (enlightenment-0.17.6.tar.bz2) = 5f8fec0b2c9cb2bcc3e2738b68e4266179153288a161e4e2d0f7ff50b702d6d78d836b433105c548997b516324ca7ba44a74a7361052235b50e18c22a26c9dc9
+Size (enlightenment-0.17.6.tar.bz2) = 29500129 bytes
 SHA1 (patch-data_etc_Makefile.in) = 3772b93a19bf3f8bd33a5493504fb0fc5b007eab
-SHA1 (patch-src_bin_e__start__main.c) = f413dff4c0d1b61385767ed630001d1b013662a5
 SHA1 (patch-src_modules_wizard_page__011.c) = f2345a188ea819212b74e620439b1371afc34e99
 SHA1 (patch-src_modules_xkbswitch_e__mod__parse.c) = 049a532825311db1007d55169adc5d5e727b7067
