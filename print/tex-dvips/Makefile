@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/01/18 23:34:02 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2020/05/01 00:15:13 markd Exp $
 
 DISTNAME=	dvips
-PKGNAME=	tex-${DISTNAME}-2017
-TEXLIVE_REV=	44167
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	54279
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/dvips
@@ -13,6 +13,5 @@ CONFLICTS+=	tex-bin-dvipsk<=2008.12898
 
 TEXLIVE_IGNORE_PATTERNS=	texmf-dist/dvips/base
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

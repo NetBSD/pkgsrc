@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:33:57 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/01 00:15:12 markd Exp $
 
 DISTNAME=	cslatex
-PKGNAME=	tex-${DISTNAME}-2014
-PKGREVISION=	2
-TEXLIVE_REV=	28596
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	54276
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/cslatex
@@ -11,13 +10,14 @@ COMMENT=	LaTeX support for Czech/Slovak typesetting
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tex-csplain-[0-9]*:../../print/tex-csplain
+DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
+DEPENDS+=	tex-unicode-data-[0-9]*:../../print/tex-unicode-data
 
 INSTALLATION_DIRS+=	bin
 
 TEX_FORMATS+=	"cslatex pdftex - -etex cslatex.ini\\npdfcslatex pdftex - -etex cslatex.ini\\n"
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:
