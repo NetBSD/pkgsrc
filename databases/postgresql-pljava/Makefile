@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/05/21 05:52:31 adam Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/01 00:22:21 joerg Exp $
 
 DISTNAME=	pljava-1.5.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -68,7 +68,7 @@ post-extract:
 	${CP} ${PKGDIR}/files/aol.netbsd.properties ${WRKSRC}/pljava-so
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} mvn ${MAVEN_FLAGS} install
+	${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} mvn ${MAVEN_FLAGS} install
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} java ${INSTALL_FLAGS} -jar \
