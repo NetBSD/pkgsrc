@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2020/04/19 10:05:50 adam Exp $
+# $NetBSD: Makefile,v 1.55 2020/05/01 22:17:18 rillig Exp $
 
 DISTNAME=	mongodb-src-r4.2.6
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -93,7 +93,6 @@ SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-build
 SUBST_MESSAGE.path=	Replacing database paths.
 SUBST_FILES.path=	debian/mongo.1 debian/mongod.1
-SUBST_FILES.path+=	src/mongo/db/mongod_options.cpp
 SUBST_FILES.path+=	src/mongo/db/storage/storage_options.cpp
 SUBST_SED.path=		-e 's,/data/db,${MONGODB_DBPATH},g'
 SUBST_SED.path+=	-e 's,/data/configdb,${MONGODB_CONFIGDBPATH},g'
@@ -103,8 +102,8 @@ SUBST_CLASSES+=		varbase
 SUBST_STAGE.varbase=	pre-build
 SUBST_MESSAGE.varbase=	Changing /var to ${VARBASE}.
 SUBST_FILES.varbase=	debian/mongod.conf
-SUBST_SED.varbase=	-e 's,/var/lib,${VARBASE},g'
-SUBST_SED.varbase+=	-e 's,/var/log,${VARBASE},g'
+SUBST_SED.varbase=	-e 's,/var/lib/mongodb,${VARBASE}/mongodb,g'
+SUBST_SED.varbase+=	-e 's,/var/log/mongodb,${VARBASE}/mongodb,g'
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-build
