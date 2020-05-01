@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19859 2020/04/28 18:10:37 wiz Exp $
+$NetBSD: TODO,v 1.19860 2020/05/01 00:08:50 joerg Exp $
 
 Suggested new packages
 ======================
@@ -560,7 +560,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o etm-3.0.43 [wip/py-etmtk]
 	o etm-891
 	o ettercap-0.7.6
-	o evas-1.7.10
 	o evas-buffer-1.7.10
 	o evas-edb-1.7.10
 	o evas-eet-1.7.10
