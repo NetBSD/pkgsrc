@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/01 19:28:15 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/01 19:40:27 rillig Exp $
 #
 # This regression test demonstrates which features are supported by the
 # shell that is used internally by devel/bmake.  That shell may be
@@ -14,11 +14,12 @@ DISTFILES=	# none
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Test features of the shell used by bmake
+LICENSE=	2-clause-bsd
 
 WRKSRC=		${WRKDIR}
 PLIST_SRC=	# none
 
-do-regress:
+do-build:
 	# Up to May 2020, shell functions were not used in package
 	# Makefiles.  But could they?
 	${RUN} func() { :; }; func
@@ -37,5 +38,13 @@ do-regress:
 	else								\
 		: "That's expected";					\
 	fi
+
+	# Run the same tests as for ${SH}.
+	# These tests assume that they run in a temporary directory
+	# and that all platform tools can be called by their plain name.
+	# If these tests fail because of missing tools, add these to
+	# USE_TOOLS.
+	${RUN} cd ${WRKSRC};						\
+	. "${PKGSRCDIR}/regress/tools-platform/sh.test"
 
 .include "../../mk/bsd.pkg.mk"
