@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:21:26 markd Exp $
-# TeX Live Revision 17382
+# $NetBSD: Makefile,v 1.4 2020/05/01 02:30:50 markd Exp $
 
 DISTNAME=	fncylab
-PKGNAME=	tex-${DISTNAME}-1.0
+PKGNAME=	tex-${DISTNAME}-1.1
+TEXLIVE_REV=	52090
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/fncylab
 COMMENT=	LaTeX package to alter the format of \label references
 LICENSE=	lppl-1.3c
 
 CONFLICTS+=	tex-ltxmisc<2009
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
