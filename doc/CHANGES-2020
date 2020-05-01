@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2674 2020/04/30 21:15:17 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.2675 2020/05/01 00:08:50 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3827,3 +3827,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated emulators/qemu to 5.0.0 [adam 2020-04-30]
 	Updated www/gnurl to 7.70.0 [nikita 2020-04-30]
 	Updated pkgtools/pkglint to 20.1.3 [rillig 2020-04-30]
+	Updated graphics/evas to 1.7.10 [joerg 2020-05-01]
