@@ -1,4 +1,4 @@
-<!-- $NetBSD: regression.xml,v 1.9 2020/02/24 21:13:56 rillig Exp $ -->
+<!-- $NetBSD: regression.xml,v 1.10 2020/05/01 14:22:12 rillig Exp $ -->
 
 <chapter id="regression"> <?dbhtml filename="regression.html"?>
 <title>Regression tests</title>
@@ -126,7 +126,7 @@ output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
 	</listitem>
 	</varlistentry>
 
-	<varlistentry><term><varname>output_prohibit(regex...)</varname></term>
+	<varlistentry><term><varname>output_prohibit regex...</varname></term>
 	<listitem><para>This function checks for each of its parameters
 	if the output from <command>do_test()</command> does
 	<emphasis>not</emphasis> match the extended regular expression.
