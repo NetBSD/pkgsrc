@@ -1,0 +1,41 @@
+#! /bin/sh
+# $NetBSD: sh.test,v 1.1 2020/05/01 18:37:59 rillig Exp $
+#
+# Tests for the shell that is available as ${SH} in Makefiles.
+#
+# Having a feature tested in this file does not mean it is available in
+# Makefiles since devel/bmake may use a completely different shell for
+# running its commands.  For example on SunOS, devel/bmake typically
+# uses /usr/xpg4/bin/sh while TOOLS_PLATFORM.sh is /bin/ksh.
+
+set -eu
+
+dief() {
+	printf 'error: [sh.test] ' 1>&2
+	printf "$@" 1>&2
+	printf '\n' 1>&2
+	exit 1
+}
+
+assert_that() {
+	case $2 in
+	(--equals)
+		[ "x$1" = "x$3" ] \
+		|| dief 'assertion failed: expected "%s", got "%s"' "$3" "$1"
+		;;
+	(*)	dief 'wrong assert_that call: %s' "$*"
+		;;
+	esac
+}
+
+pathname="first/second/third/fourth"
+
+# Make sure that the usual word expansions work.
+assert_that "##: ${pathname##*/}"	--equals "##: fourth"
+assert_that "#: ${pathname#*/}"		--equals "#: second/third/fourth"
+assert_that "%%: ${pathname%%/*}"	--equals "%%: first"
+assert_that "%: ${pathname%/*}"		--equals "%: first/second/third"
+
+# Make sure that $(...) subshells work.
+assert_that "subshell: $(echo world | tr 'world' 'hello')" \
+	--equals "subshell: hello"
