@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.27 2020/03/08 16:47:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2020/05/01 00:16:02 joerg Exp $
 
 BUILDLINK_TREE+=	edje
 
 .if !defined(EDJE_BUILDLINK3_MK)
 EDJE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.edje+=	edje>=1.7.7
+BUILDLINK_API_DEPENDS.edje+=	edje>=1.7.10
 BUILDLINK_ABI_DEPENDS.edje?=	edje>=1.7.7nb23
 BUILDLINK_PKGSRCDIR.edje?=	../../graphics/edje
 
