@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2019/12/06 20:21:35 markd Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/01 04:51:44 markd Exp $
 
 DISTNAME=	hyphen-ancientgreek
-PKGNAME=	tex-${DISTNAME}-2019.51186
-TEXLIVE_REV=	51186
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	54568
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for ancient Greek
@@ -31,6 +31,5 @@ TEX_HYPHEN_LUA+=	['ibycus']={ \
 			  special='disabled:8-bit+only', \
 			},
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
