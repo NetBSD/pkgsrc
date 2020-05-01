@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/04/22 08:13:39 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/01 20:11:47 rillig Exp $
 
 DISTNAME=	caprice32-4.6.0
 CATEGORIES=	emulators
@@ -20,12 +20,9 @@ MAKE_FLAGS+=	GIT_HASH="pkgsrc"
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
 SUBST_MESSAGE.conf=	Fix paths.
-SUBST_FILES.conf+=	cap32.cfg
-SUBST_FILES.conf+=	src/cap32.cfg
-SUBST_FILES.conf+=	src/cap32.cpp
+SUBST_FILES.conf=	src/cap32.cpp
 SUBST_FILES.conf+=	doc/man6/cap32.6
-SUBST_VARS.conf+=	PREFIX
-SUBST_VARS.conf+=	PKG_SYSCONFDIR
+SUBST_VARS.conf=	PREFIX PKG_SYSCONFDIR
 
 EGDIR=		${PREFIX}/share/examples/caprice32
 
