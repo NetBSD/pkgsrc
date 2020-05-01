@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2019/05/11 06:57:23 markd Exp $
+$NetBSD: distinfo,v 1.13 2020/05/01 04:51:45 markd Exp $
 
-SHA1 (tex-hyph-utf8-50792/hyph-utf8.tar.xz) = b9ecd35d12346483d90300ec55b299aa0dc4a37f
-RMD160 (tex-hyph-utf8-50792/hyph-utf8.tar.xz) = b2b1280803113c324aa485b14797e591168b90d2
-SHA512 (tex-hyph-utf8-50792/hyph-utf8.tar.xz) = 4aa7f6da55e15fcf563d6146d56cd21006a57e3251ab4f4fb6fb0858563047c329dca6633785e29ecab6312fd6a269a4fe95e11679c441b94828dc5505a11d58
-Size (tex-hyph-utf8-50792/hyph-utf8.tar.xz) = 16032 bytes
+SHA1 (hyph-utf8.r54568.tar.xz) = b1405536dbe02ff6d72a5efb9413f8a039c4d452
+RMD160 (hyph-utf8.r54568.tar.xz) = 3a6a3a0eea72a08d2b4e6fcd479b3b26699a4106
+SHA512 (hyph-utf8.r54568.tar.xz) = 7d73f9ba216ed6e8f08a3efe1d7bdc26912be0fee88241c92608e0d16711bb826348209fa23b9de078eecf7ef3820344c0a95881ead177cfcfc9e65d315519df
+Size (hyph-utf8.r54568.tar.xz) = 16000 bytes

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 23:34:00 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/01 04:51:44 markd Exp $
 
 DISTNAME=	dehyph-exptl
-PKGNAME=	tex-${DISTNAME}-0.6
-TEXLIVE_REV=	50772
+PKGNAME=	tex-${DISTNAME}-0.6.54512
+TEXLIVE_REV=	54512
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/dehyph-exptl
@@ -23,7 +23,7 @@ TEX_HYPHEN_LUA+=	['german-x-2019-04-04']={ \
 			  righthyphenmin=2, \
 			  synonyms={'german-x-latest',}, \
 			  patterns='hyph-de-1901.pat.txt', \
-			  hyphenation='hyph-de-1901.hyp.txt', \
+			  hyphenation='', \
 			},
 TEX_HYPHEN_LUA+=	['ngerman-x-2019-04-04']={ \
 			  loader='dehyphn-x-2019-04-04.tex', \
@@ -31,9 +31,8 @@ TEX_HYPHEN_LUA+=	['ngerman-x-2019-04-04']={ \
 			  righthyphenmin=2, \
 			  synonyms={'ngerman-x-latest',}, \
 			  patterns='hyph-de-1996.pat.txt', \
-			  hyphenation='hyph-de-1996.hyp.txt', \
+			  hyphenation='', \
 			},
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
