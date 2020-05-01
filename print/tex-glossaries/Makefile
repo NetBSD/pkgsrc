@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2020/01/18 23:34:14 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2020/05/01 02:30:50 markd Exp $
 
 DISTNAME=	glossaries
-PKGNAME=	tex-${DISTNAME}-4.42
-PKGREVISION=	1
-TEXLIVE_REV=	49618
+PKGNAME=	tex-${DISTNAME}-4.46
+TEXLIVE_REV=	54402
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/glossaries
@@ -28,7 +27,6 @@ INSTALLATION_DIRS+=	bin
 
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf-dist
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:
