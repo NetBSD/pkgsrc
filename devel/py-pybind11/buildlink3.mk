@@ -1,13 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/04/28 09:42:48 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2020/05/01 07:54:38 adam Exp $
 
-BUILDLINK_TREE+=	py38-pybind11
+BUILDLINK_TREE+=	py-pybind11
 
-.if !defined(PY38_PYBIND11_BUILDLINK3_MK)
-PY38_PYBIND11_BUILDLINK3_MK:=
+.if !defined(PY_PYBIND11_BUILDLINK3_MK)
+PY_PYBIND11_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.py38-pybind11+=	py38-pybind11>=2.5.0
-BUILDLINK_PKGSRCDIR.py38-pybind11?=	../../devel/py-pybind11
-BUILDLINK_DEPMETHOD.py38-pybind11?=	build
-.endif	# PY38_PYBIND11_BUILDLINK3_MK
+.include "../../lang/python/pyversion.mk"
+BUILDLINK_API_DEPENDS.py-pybind11+=	${PYPKGPREFIX}-pybind11>=2.5.0
+BUILDLINK_PKGSRCDIR.py-pybind11?=	../../devel/py-pybind11
+BUILDLINK_DEPMETHOD.py-pybind11?=	build
+.endif	# PY_PYBIND11_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-py38-pybind11
+BUILDLINK_TREE+=	-py-pybind11
