@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/04/06 07:08:26 adam Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/01 08:17:43 adam Exp $
 
-DISTNAME=	pyelftools-0.24
+DISTNAME=	pyelftools-0.26
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyelftools/}
 
@@ -14,10 +13,11 @@ LICENSE=	public-domain
 USE_LANGUAGES=	# none
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} readelf.py readelf-${PYVERSSUFFIX}.py || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} readelf.py readelf-${PYVERSSUFFIX}.py || ${TRUE}
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} test/run_all_unittests.py
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
