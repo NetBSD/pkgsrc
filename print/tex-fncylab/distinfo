@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:09 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/05/01 02:30:50 markd Exp $
 
-SHA1 (tex-fncylab-1.0/fncylab.tar.xz) = 0b584289a8df2d482d8bbf562e1fe14cacdb1e99
-RMD160 (tex-fncylab-1.0/fncylab.tar.xz) = e703da57550905927b0e42531c88d95c47712344
-SHA512 (tex-fncylab-1.0/fncylab.tar.xz) = 8c891087c9e09c595c71bf1108100f21f11f3bd3b2e7060a9d3c87c22d76a49824106589302b8d0d31b96bc271cc2f65177179a9a040c25adf06595f85b27dc4
-Size (tex-fncylab-1.0/fncylab.tar.xz) = 1548 bytes
+SHA1 (fncylab.r52090.tar.xz) = a4f208281294eafd10c6506d4924cc0d2622a8c8
+RMD160 (fncylab.r52090.tar.xz) = d7892fd70cd3f742da3dd7f7d3e9ff6df331e648
+SHA512 (fncylab.r52090.tar.xz) = 47aafab923d6455da7e63eb24e0fefa8b869efa5a04bb301000cb2eb658893927dd9f9aeb8e6919ea29e0caeca235b1883106228f6acddc667117a3ba1136974
+Size (fncylab.r52090.tar.xz) = 1812 bytes

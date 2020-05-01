@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2018/05/06 04:15:45 markd Exp $
+$NetBSD: distinfo,v 1.14 2020/05/01 02:30:51 markd Exp $
 
-SHA1 (tex-graphics-47350/graphics.doc.tar.xz) = 3d73c1ef04e58b3e2af312de6651488eabebbf52
-RMD160 (tex-graphics-47350/graphics.doc.tar.xz) = 555927b7e982583b42a01edb3c14e60f5416b4f2
-SHA512 (tex-graphics-47350/graphics.doc.tar.xz) = a1cca357a00fe2478db4409e34b89535c371416746f225a0392007e1d6b1798e74dc144b0dd2be4d3e80184993bcf8c0fee415810c61223c0c50801b829bcc3d
-Size (tex-graphics-47350/graphics.doc.tar.xz) = 1998240 bytes
+SHA1 (graphics.doc.r53640.tar.xz) = f5945656aa20a811ff15b207c562170658587ce6
+RMD160 (graphics.doc.r53640.tar.xz) = b91c51cff37fa53f75a09986a6d310ab8b23a676
+SHA512 (graphics.doc.r53640.tar.xz) = 5b978813cf8fd00523cae6b543af0ef2f50544211a2fab6d2be84d778cf6c720ad2c4c91ef44cac21719358568c5728892a15b29e0b1858d61592d6b196e5479
+Size (graphics.doc.r53640.tar.xz) = 1988012 bytes

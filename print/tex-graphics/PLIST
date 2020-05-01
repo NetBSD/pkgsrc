@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/08/07 10:32:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/01 02:30:51 markd Exp $
 share/texmf-dist/tex/latex/graphics/color.sty
 share/texmf-dist/tex/latex/graphics/dvipdf.def
 share/texmf-dist/tex/latex/graphics/dvipsnam.def
@@ -6,6 +6,7 @@ share/texmf-dist/tex/latex/graphics/dvipsone.def
 share/texmf-dist/tex/latex/graphics/dviwin.def
 share/texmf-dist/tex/latex/graphics/emtex.def
 share/texmf-dist/tex/latex/graphics/epsfig.sty
+share/texmf-dist/tex/latex/graphics/graphics-2017-06-25.sty
 share/texmf-dist/tex/latex/graphics/graphics.sty
 share/texmf-dist/tex/latex/graphics/graphicx.sty
 share/texmf-dist/tex/latex/graphics/keyval.sty
