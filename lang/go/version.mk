@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.89 2020/04/12 11:09:03 bsiegert Exp $
+# $NetBSD: version.mk,v 1.90 2020/05/01 16:39:59 tnn Exp $
 
 #
 # If bsd.prefs.mk is included before go-package.mk in a package, then this
@@ -36,7 +36,7 @@ GO=			${PREFIX}/go${GOVERSSUFFIX}/bin/go
 # Build dependency for Go
 GO_PACKAGE_DEP=		go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}*:../../lang/go${GOVERSSUFFIX}
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-earmv[67]hf
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-earmv[67]hf *-*-aarch64
 NOT_FOR_PLATFORM=	SunOS-*-i386
 .if ${MACHINE_ARCH} == "i386"
 GOARCH=			386
@@ -47,6 +47,11 @@ GOCHAR=			6
 .elif ${MACHINE_ARCH} == "earmv6hf" || ${MACHINE_ARCH} == "earmv7hf"
 GOARCH=			arm
 GOCHAR=			5
+.elif ${MACHINE_ARCH} == "aarch64"
+GOARCH=			arm64
+GOOPT=			GOARM=7
+# GOHOSTARCH is being misdetected as arm on NetBSD. Unclear why.
+GOOPT+=			GOHOSTARCH=arm64
 .endif
 .if ${MACHINE_ARCH} == "earmv6hf"
 GOOPT=			GOARM=6
