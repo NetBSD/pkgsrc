@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.107 2020/04/25 10:51:42 nia Exp $
+# $NetBSD: Makefile,v 1.108 2020/05/01 20:19:23 rillig Exp $
 
-PKGREVISION= 16
+PKGREVISION=	17
 .include "Makefile.common"
 
 .include "options.mk"
