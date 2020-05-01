@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:24 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/05/01 00:12:53 joerg Exp $
 
-SHA1 (eio-1.7.7.tar.bz2) = 1acc84999731a430350ac48f31a5f00d1bbf6e92
-RMD160 (eio-1.7.7.tar.bz2) = e2f3e3972b5dada36ab1e00d84ec4e4b405490b9
-SHA512 (eio-1.7.7.tar.bz2) = a7e3e96b838395caa66963700bacc0d8901f07412a06021aedb0d895aa7031b0a9fe554cdda0e3431025d2ae1dcbbeced9d8b115b14118caaee591ee0b207ee3
-Size (eio-1.7.7.tar.bz2) = 359415 bytes
+SHA1 (eio-1.7.10.tar.bz2) = 0ddffcf7a394a870091e942756987285b85bf7f8
+RMD160 (eio-1.7.10.tar.bz2) = aa63091ef0275ff25aaa5441c435575ae183f9e1
+SHA512 (eio-1.7.10.tar.bz2) = 08edec460a27d7db039c9128fed13bef0ff2855047fbd367b0a4bd7efbd6496395eb949f4a46435fd142a4ccc0db22b59d39f71080cf21453d95b6cb3ea5864e
+Size (eio-1.7.10.tar.bz2) = 361892 bytes
 SHA1 (patch-aa) = c372345e5ea0c1930b13ed6884ceeac619cdd63d
