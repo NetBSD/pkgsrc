@@ -1,0 +1,39 @@
+# $NetBSD: spec,v 1.1 2020/05/01 18:37:59 rillig Exp $
+#
+# Tests for the platform-provided tools.
+#
+# The individual *.test files are run in a minimal environment.
+# In that environment, only the PATH is set, and it points to a
+# directory containing only the tools from mk/tools/tools.${OPSYS}.mk.
+#
+# The individual tests may create arbitrary files in their current
+# working directory.
+#
+
+do_test() {
+	regressdir="$PWD"
+	tmpdir="$(mktemp -d)" || { TEST_EXITSTATUS=$?; return; }
+	bindir="$tmpdir/bin"
+	mkdir "$bindir"
+	(
+		cd ../../pkgtools/digest \
+		&& $TEST_MAKE \
+			BINDIR="$bindir" \
+			-f "$regressdir/zzz-prepare-tools.mk" \
+			"prepare-platform-tools"
+	)
+
+	for testfile in *.test; do
+		mkdir "$tmpdir/work"
+		(cd "$tmpdir/work" && "$bindir/env" -i PATH="$bindir" \
+			"sh" "$regressdir/$testfile") \
+		|| TEST_EXITSTATUS=$?
+		rm -rf "$tmpdir/work"
+	done
+
+	rm -rf "$tmpdir"
+}
+
+check_result() {
+	exit_status 0
+}
