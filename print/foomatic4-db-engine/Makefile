@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/01/18 23:33:28 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2020/05/01 21:07:24 rillig Exp $
 #
 
 DISTNAME=	foomatic-db-engine-4.0.13
@@ -43,6 +43,10 @@ SUBST_CLASSES+=		fixpath
 SUBST_STAGE.fixpath=	post-build
 SUBST_FILES.fixpath=	lib/Foomatic/Defaults.pm
 SUBST_SED.fixpath=	-e "s,${TOOLS_DIR}/bin/curl,${BUILDLINK_PREFIX.curl}/bin/curl,g"
+SUBST_NOOP_OK.fixpath=	yes # see below
+# I'm not sure in which situations ${TOOLS_DIRS} may end up in
+# config.status.  When I tried, the correct path to curl ended up there.
+# See also https://bugs.linuxfoundation.org/show_bug.cgi?id=1442.
 
 # XXX generated but needs to be present before perl5-configure
 post-extract:
