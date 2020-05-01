@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2020/03/22 23:09:24 tnn Exp $
+@comment $NetBSD: PLIST,v 1.25 2020/05/01 07:57:36 ryoon Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -60,6 +60,7 @@ include/asterisk/datastore.h
 include/asterisk/devicestate.h
 include/asterisk/dial.h
 include/asterisk/dlinkedlists.h
+include/asterisk/dns_txt.h
 include/asterisk/dns.h
 include/asterisk/dns_core.h
 include/asterisk/dns_internal.h
