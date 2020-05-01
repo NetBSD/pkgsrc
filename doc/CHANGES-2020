@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2678 2020/05/01 02:51:47 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2679 2020/05/01 04:56:48 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3902,3 +3902,15 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/tex-graphics-doc to 1.4a [markd 2020-05-01]
 	Updated print/tex-graphics-def to 2020 [markd 2020-05-01]
 	Updated print/tex-graphics-def-doc to 2020 [markd 2020-05-01]
+	Updated print/tex-dehyph-exptl to 0.6.54512 [markd 2020-05-01]
+	Updated print/tex-dehyph-exptl-doc to 0.6.54512 [markd 2020-05-01]
+	Updated print/tex-hyph-utf8 to 2020 [markd 2020-05-01]
+	Updated print/tex-hyph-utf8-doc to 2020 [markd 2020-05-01]
+	Updated print/tex-hyphen-ancientgreek to 2020 [markd 2020-05-01]
+	Updated print/tex-hyphen-arabic to 2020 [markd 2020-05-01]
+	Updated print/tex-hyphen-base to 2020 [markd 2020-05-01]
+	Updated print/tex-hyphen-farsi to 2020 [markd 2020-05-01]
+	Updated print/tex-hyphen-german to 2020 [markd 2020-05-01]
+	Updated print/tex-hyphen-latin to 3.1.2020 [markd 2020-05-01]
+	Updated print/tex-hyphen-spanish to 5.0 [markd 2020-05-01]
+	Added print/tex-hyphen-macedonian version 2020 [markd 2020-05-01]
