@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.18 2020/03/08 16:48:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2020/05/01 00:24:32 joerg Exp $
 
 BUILDLINK_TREE+=	elementary
 
 .if !defined(ELEMENTARY_BUILDLINK3_MK)
 ELEMENTARY_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.elementary+=	elementary>=1.7.7
+BUILDLINK_API_DEPENDS.elementary+=	elementary>=1.7.10
 BUILDLINK_ABI_DEPENDS.elementary?=	elementary>=1.7.7nb21
 BUILDLINK_PKGSRCDIR.elementary?=	../../x11/elementary
 
