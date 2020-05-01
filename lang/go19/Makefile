@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:28 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/01 14:09:15 tnn Exp $
 
 PKGREVISION= 2
 .include "../../lang/go/version.mk"
+.include "../../lang/go/bootstrap.mk"
 
 DISTNAME=	go${GO19_VERSION}.src
 PKGNAME=	go19-${GO19_VERSION}
@@ -79,11 +80,6 @@ CHECK_INTERPRETER_SKIP+=	go19/src/all.rc
 CHECK_INTERPRETER_SKIP+=	go19/src/clean.rc
 CHECK_INTERPRETER_SKIP+=	go19/src/make.rc
 CHECK_INTERPRETER_SKIP+=	go19/src/run.rc
-
-BUILD_DEPENDS+=		go14-1.4*:../../lang/go14
-GOROOT_BOOTSTRAP=	${PREFIX}/go14
-
-.include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=	route
 
