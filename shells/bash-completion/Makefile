@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/11/04 21:14:06 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/01 19:59:48 rillig Exp $
 #
 # Note to packagers:
 # packages installing additional completion files should drop
@@ -23,13 +23,6 @@ OWN_DIRS+=	share/bash-completion.d
 
 USE_LANGUAGES=	# none
 GNU_CONFIGURE=	yes
-
-SUBST_CLASSES+=		path
-SUBST_SED.path+=	-e "s,/etc/bash_completion.d,${PREFIX}/share/bash-completion.d,g"
-SUBST_SED.path+=	-e "s,/etc/bash_completion,${PREFIX}/share/bash-completion/bash_completion,g"
-SUBST_STAGE.path=	pre-build
-SUBST_FILES.path+=	README
-SUBST_MESSAGE.path=	Fixing path to completion files.
 
 INSTALLATION_DIRS=	lib/pkgconfig
 
