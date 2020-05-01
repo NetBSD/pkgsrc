@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 03:28:28 agc Exp $
+$NetBSD: distinfo,v 1.4 2020/05/01 00:24:32 joerg Exp $
 
-SHA1 (elementary-1.7.7.tar.bz2) = cff6de3f496139cd806575f5c36a05e2b00f64fc
-RMD160 (elementary-1.7.7.tar.bz2) = 71a25877149998791f7a9581b59330a8026fbbe5
-SHA512 (elementary-1.7.7.tar.bz2) = 1d625c17bda1c8c4b9aea07054f029e15196253f0fcf87cedb86775b07c6c6147079bc93cf349259505130bd2e8e403d78e06446bc3fb3c21715b61e14fca19a
-Size (elementary-1.7.7.tar.bz2) = 9360420 bytes
+SHA1 (elementary-1.7.10.tar.bz2) = 52f22f2a450f28edde8d12e523a96e6761e6355d
+RMD160 (elementary-1.7.10.tar.bz2) = 458cc111b3965665bfba571690b9d288916b1ddb
+SHA512 (elementary-1.7.10.tar.bz2) = 4f8b689325f83e23f9c980655a749624c2550f32d197baa1a8a30ec5bec6f73a697f8d742a8e3e0a21adb6cc2c5aa07029dc688f3fc8f6653f55b1a2556f859b
+Size (elementary-1.7.10.tar.bz2) = 9392006 bytes
 SHA1 (patch-aa) = 83a622da4253935e243b9cdfe67e8dd880a127ad
-SHA1 (patch-ab) = 45360b2d74e8931386523df71fc9e0fb4af62249
+SHA1 (patch-ab) = 3110559be3ca18deed3a50994b458c2cfb2a68c8
