@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2020/03/18 17:56:09 joerg Exp $
+# $NetBSD: Makefile,v 1.119 2020/05/02 10:47:38 rillig Exp $
 #
 
 DISTNAME=		notqmail-1.07
@@ -36,6 +36,7 @@ DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_QMAIL_GROUP:Q}    > conf-groups;
 DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_NOFILES_GROUP:Q} >> conf-groups;
 DJB_BUILD_TARGETS=	man
 DJB_RESTRICTED=		no
+DJB_ERRNO_HACK=		no
 
 PKG_SYSCONFSUBDIR=	qmail
 OWN_DIRS+=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/alias
