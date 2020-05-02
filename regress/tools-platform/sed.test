@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: sed-test.sh,v 1.1 2006/09/20 07:39:55 rillig Exp $
+# $NetBSD: sed.test,v 1.1 2020/05/02 07:24:32 rillig Exp $
 #
 
 set -e

@@ -1,0 +1,14 @@
+# $NetBSD: tests.subr,v 1.1 2020/05/02 07:24:32 rillig Exp $
+#
+
+# usage: testcase_start <testname>
+testcase_start() {
+	printf "  Running testcase %s\\n" "$1"
+}
+
+# usage: assert_equal <testname> <expected> <got>
+assert_equal() {
+	[ "x$2" = "x$3" ] && return 0
+	printf "error: assert_equal failed for \"%s\":\nexpected: %s\nbut got:  %s\n" "$1" "$2" "$3" 1>&2
+	return 1
+}
