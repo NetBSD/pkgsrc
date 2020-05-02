@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2693 2020/05/02 01:35:39 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2694 2020/05/02 02:29:26 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3929,3 +3929,26 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/bandcamp-dl version 0.0.8.12 [nia 2020-05-01]
 	Updated www/grafana to 6.7.3 [tnn 2020-05-01]
 	Updated chat/ekg to 20200501 [mef 2020-05-02]
+	Updated print/tex-iftex to 1.0d [markd 2020-05-02]
+	Updated print/tex-iftex-doc to 1.0d [markd 2020-05-02]
+	Updated print/tex-import to 6.2 [markd 2020-05-02]
+	Updated print/tex-import-doc to 6.2 [markd 2020-05-02]
+	Updated print/tex-make4ht to 0.3e [markd 2020-05-02]
+	Updated print/tex-make4ht-doc to 0.3e [markd 2020-05-02]
+	Updated print/tex-mathtools to 1.24 [markd 2020-05-02]
+	Updated print/tex-media9 to 1.10 [markd 2020-05-02]
+	Updated print/tex-media9-doc to 1.10 [markd 2020-05-02]
+	Updated print/tex-memoir to 3.7k [markd 2020-05-02]
+	Updated print/tex-memoir-doc to 3.7k [markd 2020-05-02]
+	Updated print/tex-microtype to 2.7d [markd 2020-05-02]
+	Updated print/tex-microtype-doc to 2.7d [markd 2020-05-02]
+	Updated print/tex-mltex to 2.2.54227 [markd 2020-05-02]
+	Updated print/tex-mltex-doc to 2.2.54227 [markd 2020-05-02]
+	Updated print/tex-musixtex to 1.30 [markd 2020-05-02]
+	Updated print/tex-musixtex-doc to 1.30 [markd 2020-05-02]
+	Updated print/tex-ncctools to 3.5.3 [markd 2020-05-02]
+	Updated print/tex-ncctools-doc to 3.5.3 [markd 2020-05-02]
+	Updated print/tex-nomencl to 5.4 [markd 2020-05-02]
+	Updated print/tex-nomencl-doc to 5.4 [markd 2020-05-02]
+	Updated print/tex-ntgclass to 2.1d [markd 2020-05-02]
+	Updated print/tex-ntgclass-doc to 2.1d [markd 2020-05-02]
