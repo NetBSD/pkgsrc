@@ -1,4 +1,0 @@
-A simple package which provides an \ifxetex conditional, so
-that other code can determine that it is running under XeTeX.
-The package requires the e-TeX extensions to the TeX primitive
-set.
