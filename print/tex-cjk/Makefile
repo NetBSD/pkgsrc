@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:33:46 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/02 02:52:55 markd Exp $
 
 DISTNAME=	cjk
 PKGNAME=	tex-${DISTNAME}-4.8.4
+PKGREVISION=	1
 TEXLIVE_REV=	36951
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
@@ -13,7 +14,7 @@ DEPENDS+=	tex-arphic-[0-9]*:../../fonts/tex-arphic
 DEPENDS+=	tex-fontspec-[0-9]*:../../fonts/tex-fontspec
 DEPENDS+=	tex-garuda-c90-[0-9]*:../../fonts/tex-garuda-c90
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
-DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
+DEPENDS+=	tex-iftex>=1.0d:../../print/tex-iftex
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-norasi-c90-[0-9]*:../../fonts/tex-norasi-c90
