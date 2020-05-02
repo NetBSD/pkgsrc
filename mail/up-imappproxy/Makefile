@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/17 11:28:02 tm Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/02 00:38:10 mef Exp $
 
 VERSION=	1.2.8
 PKGNAME=	up-imapproxy-${VERSION}
@@ -29,6 +29,14 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	include/imapproxy.h
 SUBST_VARS.paths=	PKG_SYSCONFDIR VARBASE
 SUBST_MESSAGE.paths=	Fixing hard coded paths.
+
+SUBST_CLASSES+=		patch
+SUBST_STAGE.patch=	pre-patch
+SUBST_FILES.patch=	src/main.c
+SUBST_MESSAGE.patch=	Fixing patch for CVS commit
+SUBST_SED.patch=	-e '/static char \*sourceRevision/d'
+SUBST_SED.patch+=	-e '/static char \*sourceVersion/d'
+SUBST_SED.patch+=	-e '/static char \*sourceAuthor/d'
 
 post-install:
 .for doc in COPYING ChangeLog README README.known_issues README.ssl
