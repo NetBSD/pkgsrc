@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2019/12/15 14:05:47 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/02 11:23:04 tnn Exp $
 
-DISTNAME=	picom-7.5
+DISTNAME=	picom-8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yshui/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,7 +18,7 @@ SUPERSEDES+=	compton-[0-9]*
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
-MESON_ARGS+=	-Dbuild_docs=true
+MESON_ARGS+=	-Dwith_docs=true
 
 REPLACE_PYTHON+=	bin/compton-convgen.py
 REPLACE_SH+=		bin/picom-trans
@@ -36,7 +36,6 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libxcb/buildlink3.mk"
-.include "../../x11/libxdg-basedir/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
