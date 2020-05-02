@@ -1,0 +1,26 @@
+$NetBSD: distinfo,v 1.1 2020/05/02 20:07:31 tnn Exp $
+
+SHA1 (go1.14.2.darwin-amd64.tar.gz) = f7e5201a2e2928c6da2df231bd0776f5bbd6bd36
+RMD160 (go1.14.2.darwin-amd64.tar.gz) = 58e46896bb087e0193d3dd7a93d6e5f6dd7c551f
+SHA512 (go1.14.2.darwin-amd64.tar.gz) = 99a7584df26d0269bd5fd550a022fece0daccf2325289ec70dbdcf6a8082b4d7bfdc38ec861ec9f1d0cf4dc52d830a38e6e3c41e4a95f7f2318cc1d41803f597
+Size (go1.14.2.darwin-amd64.tar.gz) = 125040726 bytes
+SHA1 (go1.14.2.linux-386.tar.gz) = 214833103587f58e13b42b7ae970db17fdd80d01
+RMD160 (go1.14.2.linux-386.tar.gz) = 3374d14dba2eeeb1f7f869e9cc13a5a4b1a7b8b4
+SHA512 (go1.14.2.linux-386.tar.gz) = e7bd127665f0a69f66345cd91f1df35a5eb914403fd1d653ad4cbb5fef3e31b3b33e6c4a5f2d9c08f8c59eb7775e7fdf0a8dd3d6fb0fa67cc67d52e1d7835e34
+Size (go1.14.2.linux-386.tar.gz) = 104851976 bytes
+SHA1 (go1.14.2.linux-amd64.tar.gz) = ebef065e4d35572af5b03e2be957a9c6c5063b38
+RMD160 (go1.14.2.linux-amd64.tar.gz) = 0f9fd1e202ce63b910aeb6b244e8d51ae69220f1
+SHA512 (go1.14.2.linux-amd64.tar.gz) = 41d71c2254ad6f441eec15824fb7fc2b5edbd3fc8786774ae182216981ded7854efc9650b5f6378463da5dfcc5bcaaf3b829e2a30d5fda1276e0e9d7a8d48d8f
+Size (go1.14.2.linux-amd64.tar.gz) = 123658438 bytes
+SHA1 (go1.14.2.linux-arm64.tar.gz) = 15a508023a06e9a348897ffd47d4c2b23d5e6a76
+RMD160 (go1.14.2.linux-arm64.tar.gz) = 7709e1fdbe44e396b8688e7a453952c87a0aa348
+SHA512 (go1.14.2.linux-arm64.tar.gz) = c0aae993e75bc40594017aa7912d306a36e728da25f82a7c8c604647c4fbc4ca28c071aa58371b637555f17f534e532e201c1afd07b69411708fd47bb20cc916
+Size (go1.14.2.linux-arm64.tar.gz) = 101012554 bytes
+SHA1 (go1.14.2.linux-armv6l.tar.gz) = 8a1e0cf6c7b7743cd3a63c33ae2d86a9f88c203f
+RMD160 (go1.14.2.linux-armv6l.tar.gz) = 4e6fb97d294490dc62c775bea7f62510e6e574a9
+SHA512 (go1.14.2.linux-armv6l.tar.gz) = 2325e93cb67195ffa61bb9a5371434f082bc7552f7f1f6039aec6a5989463b5c00df55f11a6ab46b44cac3daa25beea96163d60cf5f58ed46b07e65ea02eb8c8
+Size (go1.14.2.linux-armv6l.tar.gz) = 101770334 bytes
+SHA1 (go1.14.2.netbsd-arm64.tar.gz) = 806421eb16a4b02a640da45f7209c47b6cba3daa
+RMD160 (go1.14.2.netbsd-arm64.tar.gz) = 9f8b1c91f906db09f1031a5008d50cf4fedf5a3f
+SHA512 (go1.14.2.netbsd-arm64.tar.gz) = d3750a3092118e05aa9b4a0a59ae2d49950d0c259a92b54c230d98e239725acd240556643ce7019a5d1ea3ecd1ccc37fc6bcc4e8b7a9a0f32d347f4daa4dccbf
+Size (go1.14.2.netbsd-arm64.tar.gz) = 123662640 bytes
