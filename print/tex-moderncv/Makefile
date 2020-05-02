@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:34:31 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/02 02:38:38 markd Exp $
 
 DISTNAME=	moderncv
 PKGNAME=	tex-${DISTNAME}-2.0.0
@@ -17,8 +17,7 @@ DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
 DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 DEPENDS+=	tex-fontawesome-[0-9]*:../../fonts/tex-fontawesome
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
-DEPENDS+=	tex-ifluatex-[0-9]*:../../print/tex-ifluatex
-DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
+DEPENDS+=	tex-iftex>=1.0d:../../print/tex-iftex
 DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-marvosym-[0-9]*:../../fonts/tex-marvosym
