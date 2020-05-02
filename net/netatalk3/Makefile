@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/03/20 11:58:09 nia Exp $
+# $NetBSD: Makefile,v 1.31 2020/05/02 13:27:05 rillig Exp $
 
 DISTNAME=	netatalk-3.1.12
 PKGNAME=	${DISTNAME:C/-/3-/}
@@ -59,12 +59,6 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 
 REPLACE_PYTHON+=	contrib/shell_utils/afpstats
 REPLACE_PYTHON+=	libevent/event_rpcgen.py
-
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	distrib/initscripts/Makefile.in
-SUBST_SED.paths=	-e "s,^\\(DVIPS=\\)\\(/usr/local/tex\\)\\(/bin\\),\\1${PREFIX}\\3,"
 
 PLIST_VARS+=		ea
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || \
