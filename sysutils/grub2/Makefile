@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 23:35:17 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/05/02 16:53:54 triaxx Exp $
 
-DISTNAME=		grub-2.02
+DISTNAME=		grub-2.04
 PKGNAME=		${DISTNAME:S/grub/grub2/}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/grub/
@@ -30,6 +30,8 @@ SSP_SUPPORTED=		no
 FORTIFY_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
+
+CFLAGS+=		-Wno-unused-value
 
 #
 # Build requirements, taken from the INSTALL file in GRUB's distribution:
