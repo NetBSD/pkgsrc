@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2020/03/10 22:10:28 wiz Exp $
+# $NetBSD: Makefile,v 1.212 2020/05/02 03:15:56 markd Exp $
 
 DISTNAME=	R-3.6.1
 PKGREVISION=	5
@@ -120,8 +120,7 @@ INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 #BUILD_DEPENDS+=		tex-fontname-[0-9]*:../../fonts/tex-fontname
 #BUILD_DEPENDS+=		tex-graphics-[0-9]*:../../print/tex-graphics
 #BUILD_DEPENDS+=		tex-hyperref-[0-9]*:../../print/tex-hyperref
-#BUILD_DEPENDS+=		tex-ifluatex-[0-9]*:../../print/tex-ifluatex
-#BUILD_DEPENDS+=		tex-ifxetex-[0-9]*:../../print/tex-ifxetex
+#BUILD_DEPENDS+=		tex-iftex>=1.0d:../../print/tex-iftex
 #BUILD_DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
 #BUILD_DEPENDS+=		tex-latexconfig-[0-9]*:../../print/tex-latexconfig
 #BUILD_DEPENDS+=		tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
