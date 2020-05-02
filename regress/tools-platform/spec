@@ -1,10 +1,14 @@
-# $NetBSD: spec,v 1.1 2020/05/01 18:37:59 rillig Exp $
+# $NetBSD: spec,v 1.2 2020/05/02 07:24:32 rillig Exp $
 #
 # Tests for the platform-provided tools.
 #
 # The individual *.test files are run in a minimal environment.
 # In that environment, only the PATH is set, and it points to a
 # directory containing only the tools from mk/tools/tools.${OPSYS}.mk.
+#
+# Additionally, MACHINE_PLATFORM is set, so that the tests can expect
+# different results depending on the platform.  This is used for
+# documenting bugs that have been fixed in a certain version.
 #
 # The individual tests may create arbitrary files in their current
 # working directory.
@@ -22,10 +26,16 @@ do_test() {
 			-f "$regressdir/zzz-prepare-tools.mk" \
 			"prepare-platform-tools"
 	)
+	machine_platform=$(
+		cd ../../pkgtools/digest \
+		&& $TEST_MAKE show-var VARNAME=MACHINE_PLATFORM
+	)
 
 	for testfile in *.test; do
 		mkdir "$tmpdir/work"
-		(cd "$tmpdir/work" && "$bindir/env" -i PATH="$bindir" \
+		(cd "$tmpdir/work" && "$bindir/env" -i \
+			MACHINE_PLATFORM="$machine_platform" \
+			PATH="$bindir" \
 			"sh" "$regressdir/$testfile") \
 		|| TEST_EXITSTATUS=$?
 		rm -rf "$tmpdir/work"
