@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2694 2020/05/02 02:29:26 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2695 2020/05/02 06:37:07 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3952,3 +3952,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/tex-nomencl-doc to 5.4 [markd 2020-05-02]
 	Updated print/tex-ntgclass to 2.1d [markd 2020-05-02]
 	Updated print/tex-ntgclass-doc to 2.1d [markd 2020-05-02]
+	Updated net/sayaka to 3.4.4 [tsutsui 2020-05-02]
