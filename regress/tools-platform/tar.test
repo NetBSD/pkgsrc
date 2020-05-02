@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: tar-test.sh,v 1.1 2007/09/09 08:01:45 rillig Exp $
+# $NetBSD: tar.test,v 1.1 2020/05/02 07:24:32 rillig Exp $
 #
 
 set -e
