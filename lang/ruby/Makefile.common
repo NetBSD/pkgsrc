@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2020/03/29 05:26:54 taca Exp $
+# $NetBSD: Makefile.common,v 1.44 2020/05/02 10:07:53 rillig Exp $
 #
 # Ruby base distribution common definition
 #
@@ -80,6 +80,7 @@ do-patch:
 CONFIGURE_ARGS+=	--disable-pthread
 .else
 CONFIGURE_ARGS+=	--enable-pthread
+GNU_CONFIGURE_STRICT=	no # at least ruby25-base doesn't know --enable-pthread
 
 PTHREAD_OPTS+=		native
 PTHREAD_AUTO_VARS=	yes
