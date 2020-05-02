@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2708 2020/05/02 17:17:36 leot Exp $
+$NetBSD: CHANGES-2020,v 1.2709 2020/05/02 17:52:46 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3973,3 +3973,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/subliminal to 2.1.0 [leot 2020-05-02]
 	Updated sysutils/grub2 to 2.04 [triaxx 2020-05-02]
 	Updated net/youtube-dl to 20200503 [leot 2020-05-02]
+	Updated multimedia/streamlink to 1.4.1 [maya 2020-05-02]
