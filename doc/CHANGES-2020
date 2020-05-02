@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2697 2020/05/02 11:47:59 leot Exp $
+$NetBSD: CHANGES-2020,v 1.2698 2020/05/02 11:48:13 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3960,3 +3960,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed print/tex-ifxetex successor print/tex-iftex [markd 2020-05-02]
 	Removed print/tex-ifxetex-doc successor print/tex-iftex-doc [markd 2020-05-02]
 	Updated print/cups to 2.3.3 [leot 2020-05-02]
+	Updated print/cups-base to 2.3.3 [leot 2020-05-02]
