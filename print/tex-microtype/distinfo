@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/05/11 22:17:52 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/05/02 02:27:44 markd Exp $
 
-SHA1 (tex-microtype-50187/microtype.tar.xz) = 052063fc9fd24c8c6e904064604ef2730a1a5322
-RMD160 (tex-microtype-50187/microtype.tar.xz) = f6418cfc10d95e15302f1b95cddf9af71ac2d767
-SHA512 (tex-microtype-50187/microtype.tar.xz) = b7a315e28a4014b17eec691a991ac03e2defc3acbf97c35688ea95c1d382da52272a0808ecc010e53e68c47c1474ad3308f4d8c3010493a716d25d8db6fc24c2
-Size (tex-microtype-50187/microtype.tar.xz) = 45244 bytes
+SHA1 (microtype.r52853.tar.xz) = bca21c5a39994ae66a8d2535d0dfeed75bafa258
+RMD160 (microtype.r52853.tar.xz) = a0f20ccc54660b2ab9e26fefd7ce5ba9d9f9c677
+SHA512 (microtype.r52853.tar.xz) = eba24c7a1e0f18e5d559d559745cecc9398630e4491b5c71f695e0e6893e74a87171e6cddaca8345e99ddb63558ad2a712822819c17fe1c20684e043adde4fdf
+Size (microtype.r52853.tar.xz) = 45464 bytes
