@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:30 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/05/02 02:27:44 markd Exp $
 
-SHA1 (tex-mltex-30214/mltex.tar.xz) = 094f5c7c5854a7c88135aa26852b3d16d8546f53
-RMD160 (tex-mltex-30214/mltex.tar.xz) = d238ddf7d013cd3d53c8aaa852049669fd2d2d47
-SHA512 (tex-mltex-30214/mltex.tar.xz) = 6869fadc1ecbcadace48b704d7540563868189482048da6b9601e7fba4cfc42dce71a07777d9016583a2cf9188cd3ec8293d8a0f646c445cec5bd559ac5bb943
-Size (tex-mltex-30214/mltex.tar.xz) = 6280 bytes
+SHA1 (mltex.r54227.tar.xz) = 3ac2837b2b8779897d21f741f7f0d30d76351887
+RMD160 (mltex.r54227.tar.xz) = 26f3e029b554827d49aa385b856e2780a250c0a2
+SHA512 (mltex.r54227.tar.xz) = 832e2cafb4545131ba6d17b23d81fce72086013cbacab1b53dd88e9276dabe9deb34d0e5e741018e72f6d90ebba2124a25dd73c02d9eafd0cd2f7e4b4708f567
+Size (mltex.r54227.tar.xz) = 6388 bytes

@@ -1,20 +1,26 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:22:03 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/02 02:27:44 markd Exp $
 
 DISTNAME=	mltex
-PKGNAME=	tex-${DISTNAME}-2.2
-TEXLIVE_REV=	30214
+PKGNAME=	tex-${DISTNAME}-2.2.54227
+TEXLIVE_REV=	54227
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/mltex
 COMMENT=	The MLTeX system
 
+DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
+DEPENDS+=	tex-dehyph-[0-9]*:../../print/tex-dehyph
+DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
+DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
 DEPENDS+=	tex-latex>=2012:../../print/tex-latex
+DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
+DEPENDS+=	tex-unicode-data-[0-9]*:../../print/tex-unicode-data
 
 INSTALLATION_DIRS=	bin
 
 TEX_FORMATS+=	"mltex pdftex language.dat -translate-file=cp227.tcx *mltex.ini\\nmllatex pdftex language.dat -translate-file=cp227.tcx *mllatex.ini\\n"
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf-dist
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

@@ -1,2 +1,7 @@
-Versions of the standard LaTeX article and report classes, rewritten to
-reflect a more European design, by the Dutch TeX Users Group NTG.
+The bundle offers versions of the standard LaTeX article and
+report classes, rewritten to reflect a more European design,
+and the a4 package, which is better tuned to the shape of a4
+paper than is the a4paper class option of the standard classes.
+The classes include several for article and report
+requirements, and a letter class. The elements of the bundle
+were designed by members of the Dutch TeX Users Group NTG.

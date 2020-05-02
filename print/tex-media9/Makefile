@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2019/12/06 20:21:59 markd Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/02 02:27:44 markd Exp $
 
 DISTNAME=	media9
-PKGNAME=	tex-${DISTNAME}-1.02
-TEXLIVE_REV=	51619
+PKGNAME=	tex-${DISTNAME}-1.10
+TEXLIVE_REV=	54554
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/media9
@@ -14,6 +14,5 @@ DEPENDS+=	tex-l3experimental-[0-9]*:../../devel/tex-l3experimental
 DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
