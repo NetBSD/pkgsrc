@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.28 2020/05/02 11:43:09 rillig Exp $
+# $NetBSD: djbware.mk,v 1.29 2020/05/02 11:49:40 rillig Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -83,11 +83,11 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} package/compile ${DJB_BUILD_ARGS}
 .endif
 
-.if !empty(DJB_ERRNO_HACK:M[yY][eE][sS])
+.if !empty(DJB_ERRNO_HACK:M[yY][eE][sS]) || !empty(DJB_ERRNO_HACK_FILES)
 PKG_SUPPORTED_OPTIONS+=	djbware-errno-hack
 PKG_SUGGESTED_OPTIONS+=	djbware-errno-hack
 
-.include "bsd.fast.prefs.mk"
+.  include "bsd.fast.prefs.mk"
 
 .  if exists(${PKGDIR}/options.mk)
 .    include "${PKGDIR}/options.mk"
@@ -98,10 +98,10 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 .    include "bsd.options.mk"
 .  endif
 
-.  if !empty(PKG_OPTIONS:Mdjbware-errno-hack)
+.  if !empty(PKG_OPTIONS:Mdjbware-errno-hack) || !empty(DJB_ERRNO_HACK_FILES)
 SUBST_CLASSES+=		djbware
 SUBST_STAGE.djbware=	do-configure
-SUBST_FILES.djbware+=	error.h
+SUBST_FILES.djbware+=	${DJB_ERRNO_HACK_FILES:Uerror.h}
 SUBST_SED.djbware=	-e 's|^extern\ int\ errno\;|\#include \<errno.h\>|'
 SUBST_MESSAGE.djbware=	Correcting definition of errno.
 .  endif
