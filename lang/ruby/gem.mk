@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.41 2019/11/03 19:04:06 rillig Exp $
+# $NetBSD: gem.mk,v 1.42 2020/05/02 17:03:11 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -84,8 +84,15 @@
 #	These files will be additionaly removed from the gem installed in
 #	the installation root.
 #
+# GEM_KEEPBUILD
+#	A list of shell globs representing files not to remove even it match
+#	with GEM_CLEANBUILD or GEM_CLEANBUILD_EXTENSIONS.
+#
+#	Default: (empty)
+#
 # GEM_NAME
 #	The name of the gem to install.  The default value is ${DISTNAME}.
+#	gem installed in the installation root.
 #
 # GEM_SPECFILE
 #	The path to the gemspec file to use when building a gem using
@@ -210,6 +217,7 @@ _RUBY_PRINT_PLIST_GEM+=	/^${RUBY_GEM_BASE:S|/|\\/|g}/ \
 GEM_SPECFILE?=			${WRKDIR}/${DISTNAME}.gemspec
 GEM_CLEANBUILD?=		ext/*
 GEM_CLEANBUILD_EXTENSIONS+=	*.out *.log
+GEM_KEEPBUILD?=			# empty
 
 .if !empty(GEM_CLEANBUILD:M/*) || !empty(GEM_CLEANBUILD:M*../*)
 PKG_FAIL_REASON+=	"GEM_CLEANBUILD must be relative to "${PREFIX}/${GEM_LIBDIR:Q}"."
@@ -217,6 +225,10 @@ PKG_FAIL_REASON+=	"GEM_CLEANBUILD must be relative to "${PREFIX}/${GEM_LIBDIR:Q}
 
 .if !empty(GEM_CLEANBUILD_EXTENSIONS:M/*) || !empty(GEM_CLEANBUILD_EXTENSIONS:M*../*)
 PKG_FAIL_REASON+=	"GEM_CLEANBUILD_EXTENSIONS must be relative to "${PREFIX}/${GEM_LIBDIR:Q}"."
+.endif
+
+.if !empty(GEM_KEEPBUILD:M/*) || !empty(GEM_KEEPBUILD:M*../*)
+PKG_FAIL_REASON+=	"GEM_KEEPBUILD must be relative to "${PREFIX}/${GEM_LIBDIR:Q}"."
 .endif
 
 .PHONY: gem-build
@@ -297,6 +309,7 @@ _gem-build-cleanbuild:
 	find . -print | sort -r |					\
 	while read file; do						\
 		case $$file in						\
+		${GEM_KEEPBUILD:@.p.@./${.p.}) continue ;;@}		\
 		${GEM_CLEANBUILD:@.p.@./${.p.}) ;;@}			\
 		*)	continue ;;					\
 		esac;							\
