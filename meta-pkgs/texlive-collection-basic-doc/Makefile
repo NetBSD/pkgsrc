@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:32:56 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/02 06:42:06 markd Exp $
 
 DISTNAME=	collection-basic-doc
 PKGNAME=	texlive-${DISTNAME}-2018
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	30372
@@ -23,8 +24,6 @@ DEPENDS+=	tex-etex-pkg-doc-[0-9]*:../../print/tex-etex-pkg-doc
 # gsftopk installs its documentation.
 DEPENDS+=	tex-hyph-utf8-doc-[0-9]*:../../print/tex-hyph-utf8-doc
 # tex-hyphen-base doesn't have a documentation package.
-DEPENDS+=	tex-ifluatex-doc-[0-9]*:../../print/tex-ifluatex-doc
-DEPENDS+=	tex-ifxetex-doc-[0-9]*:../../print/tex-ifxetex-doc
 DEPENDS+=	tex-kpathsea-doc-[0-9]*:../../print/tex-kpathsea-doc
 # lua-alt-getopt should install its documentation.
 DEPENDS+=	tex-luatex-doc-[0-9]*:../../print/tex-luatex-doc
