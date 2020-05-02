@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2704 2020/05/02 13:43:22 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2705 2020/05/02 13:55:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3969,3 +3969,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/ruby-sequel to 5.32.0 [taca 2020-05-02]
 	Added security/ruby-chef-vault version 4.0.1 [taca 2020-05-02]
 	Updated sysutils/capistrano to 3.13.0 [taca 2020-05-02]
+	Updated sysutils/ruby-puppet-resource_api to 1.8.13 [taca 2020-05-02]
