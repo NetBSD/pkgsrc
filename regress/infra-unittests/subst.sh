@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.29 2020/05/01 19:53:48 rillig Exp $
+# $NetBSD: subst.sh,v 1.30 2020/05/02 05:52:09 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1445,6 +1445,39 @@ if test_case_begin "backtick in SUBST_SED"; then
 	assert_that "out" --file-is-lines \
 		'=> Substituting "id" in file' \
 		'info: [subst.mk:id] Nothing changed in "file".'
+
+	test_case_end
+fi
+
+
+if test_case_begin "multiple sed commands with semicolon"; then
+
+	# From PR pkg/55226:
+	#  ===> Configuring for perl-5.30.2
+	# sh: 1: Syntax error: Word "/d"p" unexpected (expecting ")")
+
+	create_file_lines "testcase.mk" \
+		'SUBST_CLASSES+=	id' \
+		'SUBST_FILES.id=	file' \
+		'SUBST_SED.id=		-e "s/755/755/g;/umask(/d"' \
+		'SUBST_NOOP_OK.id=	no' \
+		'' \
+		'.include "prepare-subst.mk"' \
+		'.include "mk/subst.mk"'
+	create_file_lines "file" \
+		'$mode = 755;'
+
+	run_bmake "testcase.mk" "subst-id" 1> "$tmpdir/out" 2>&1 \
+	&& exitcode=0 || exitcode=$?
+
+	assert_that "out" --file-is-lines \
+		'=> Substituting "id" in file' \
+		'warning: [subst.mk:id] Nothing changed in "file".' \
+		'fail: [subst.mk:id] The filename pattern "file" has no effect.' \
+		'*** Error code 1' \
+		'' \
+		'Stop.' \
+		"$make: stopped in $PWD"
 
 	test_case_end
 fi
