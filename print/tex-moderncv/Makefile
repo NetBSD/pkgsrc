@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/05/02 02:38:38 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/02 02:43:46 markd Exp $
 
 DISTNAME=	moderncv
 PKGNAME=	tex-${DISTNAME}-2.0.0
+PKGREVISION=	1
 TEXLIVE_REV=	37992
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
