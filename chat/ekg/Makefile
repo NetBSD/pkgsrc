@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2020/05/02 01:06:40 mef Exp $
+# $NetBSD: Makefile,v 1.61 2020/05/02 01:35:20 mef Exp $
 
 DISTNAME=	ekg-20200501
 CATEGORIES=	chat
@@ -38,5 +38,6 @@ LIBS+=	-lexecinfo
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
