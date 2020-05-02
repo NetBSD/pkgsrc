@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2709 2020/05/02 17:52:46 maya Exp $
+$NetBSD: CHANGES-2020,v 1.2710 2020/05/02 18:09:06 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3974,3 +3974,25 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/grub2 to 2.04 [triaxx 2020-05-02]
 	Updated net/youtube-dl to 20200503 [leot 2020-05-02]
 	Updated multimedia/streamlink to 1.4.1 [maya 2020-05-02]
+	Updated devel/ruby-atk to 3.4.2 [tsutsui 2020-05-02]
+	Updated devel/ruby-gio2 to 3.4.2 [tsutsui 2020-05-02]
+	Updated devel/ruby-glib2 to 3.4.2 [tsutsui 2020-05-02]
+	Updated devel/ruby-gobject-introspection to 3.4.2 [tsutsui 2020-05-02]
+	Updated devel/ruby-pango to 3.4.2 [tsutsui 2020-05-02]
+	Updated graphics/ruby-cairo-gobject to 3.4.2 [tsutsui 2020-05-02]
+	Updated graphics/ruby-clutter to 3.4.2 [tsutsui 2020-05-02]
+	Updated graphics/ruby-clutter-gdk to 3.4.2 [tsutsui 2020-05-02]
+	Updated graphics/ruby-clutter-gtk to 3.4.2 [tsutsui 2020-05-02]
+	Updated graphics/ruby-gdk3 to 3.4.2 [tsutsui 2020-05-02]
+	Updated graphics/ruby-gdk_pixbuf2 to 3.4.2 [tsutsui 2020-05-02]
+	Updated graphics/ruby-rsvg2 to 3.4.2 [tsutsui 2020-05-02]
+	Updated multimedia/ruby-clutter-gstreamer to 3.4.2 [tsutsui 2020-05-02]
+	Updated multimedia/ruby-gstreamer to 3.4.2 [tsutsui 2020-05-02]
+	Updated print/ruby-poppler to 3.4.2 [tsutsui 2020-05-02]
+	Updated www/ruby-webkit-gtk to 3.4.2 [tsutsui 2020-05-02]
+	Updated www/ruby-webkit-gtk2 to 3.4.2 [tsutsui 2020-05-02]
+	Updated x11/ruby-gtk2 to 3.4.2 [tsutsui 2020-05-02]
+	Updated x11/ruby-gtk3 to 3.4.2 [tsutsui 2020-05-02]
+	Updated x11/ruby-gtksourceview2 to 3.4.2 [tsutsui 2020-05-02]
+	Updated x11/ruby-gtksourceview3 to 3.4.2 [tsutsui 2020-05-02]
+	Updated x11/ruby-vte to 3.4.2 [tsutsui 2020-05-02]
