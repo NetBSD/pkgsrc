@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2020/04/24 08:36:59 nia Exp $
+# $NetBSD: Makefile,v 1.34 2020/05/02 10:24:50 nia Exp $
 
 DISTNAME=	xvidcap-1.1.7
 CATEGORIES=	x11
@@ -19,7 +19,6 @@ USE_TOOLS+=	intltool msgfmt msgmerge xgettext
 REPLACE_SH+=	ppm2mpeg.sh
 
 # Don't require gnome-doc-utils
-CONFIGURE_ENV+=	ac_cv_path_SK_CONFIG=no
 CONFIGURE_ENV+=	ac_cv_path_XML2PO=no
 
 # Breaks recording in current X servers
@@ -55,6 +54,7 @@ CONFIGURE_ARGS+=	--with-forced-embedded-ffmpeg
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
