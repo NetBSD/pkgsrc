@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:34:53 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/02 02:35:02 markd Exp $
 
 DISTNAME=	tcolorbox
 PKGNAME=	tex-${DISTNAME}-4.20
+PKGREVISION=	1
 TEXLIVE_REV=	50206
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +14,7 @@ DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	tex-environ-[0-9]*:../../print/tex-environ
 DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
-DEPENDS+=	tex-ifluatex-[0-9]*:../../print/tex-ifluatex
+DEPENDS+=	tex-iftex>=1.0d:../../print/tex-iftex
 DEPENDS+=	tex-incgraph-[0-9]*:../../graphics/tex-incgraph
 DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
 DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
