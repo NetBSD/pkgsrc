@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:00 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/02 02:46:22 markd Exp $
 
 DISTNAME=	tufte-latex
 PKGNAME=	tex-${DISTNAME}-3.5.2
+PKGREVISION=	1
 TEXLIVE_REV=	37649
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +15,7 @@ DEPENDS+=	tex-changepage-[0-9]*:../../print/tex-changepage
 DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
-DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
+DEPENDS+=	tex-iftex>=1.0d:../../print/tex-iftex
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-microtype-[0-9]*:../../print/tex-microtype
