@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/11 16:20:24 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/02 18:05:06 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -453,7 +453,6 @@ ${GEM_LIBDIR}/sample/tutorial/exampleapp9/prefs.ui
 ${GEM_LIBDIR}/sample/tutorial/exampleapp9/window.ui
 ${GEM_LIBDIR}/test/fixture/Rakefile
 ${GEM_LIBDIR}/test/fixture/gnome-logo-icon.png
-${GEM_LIBDIR}/test/fixture/image.gresource
 ${GEM_LIBDIR}/test/fixture/image.gresource.xml
 ${GEM_LIBDIR}/test/fixture/simple_window.gresource.xml
 ${GEM_LIBDIR}/test/fixture/simple_window.ui
