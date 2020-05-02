@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/04/01 17:44:06 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/02 14:56:27 rillig Exp $
 
 DISTNAME=		gcc-8.3.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
@@ -35,6 +35,7 @@ CONFIG_SHELL=		${TOOLS_PATH.bash}
 WRAPPER_SHELL=		${TOOLS_PATH.bash}
 USE_TOOLS+=		bash gmake gsed makeinfo perl
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
 CHECK_PORTABILITY_SKIP+=contrib/*
 
 GNU_CONFIGURE_PREFIX=	${ARMELF_PREFIX}
