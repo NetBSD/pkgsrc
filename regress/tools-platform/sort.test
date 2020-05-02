@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: sort-test.sh,v 1.1 2006/06/25 21:47:28 rillig Exp $
+# $NetBSD: sort.test,v 1.1 2020/05/02 07:24:32 rillig Exp $
 #
 
 set -e
