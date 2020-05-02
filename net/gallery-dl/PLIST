@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2020/04/12 20:05:04 leot Exp $
+@comment $NetBSD: PLIST,v 1.41 2020/05/02 20:45:32 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -363,6 +363,9 @@ ${PYSITELIB}/gallery_dl/extractor/slideshare.pyo
 ${PYSITELIB}/gallery_dl/extractor/smugmug.py
 ${PYSITELIB}/gallery_dl/extractor/smugmug.pyc
 ${PYSITELIB}/gallery_dl/extractor/smugmug.pyo
+${PYSITELIB}/gallery_dl/extractor/speakerdeck.py
+${PYSITELIB}/gallery_dl/extractor/speakerdeck.pyc
+${PYSITELIB}/gallery_dl/extractor/speakerdeck.pyo
 ${PYSITELIB}/gallery_dl/extractor/test.py
 ${PYSITELIB}/gallery_dl/extractor/test.pyc
 ${PYSITELIB}/gallery_dl/extractor/test.pyo
