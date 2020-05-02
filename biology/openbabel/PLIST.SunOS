@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.SunOS,v 1.3 2020/05/02 15:05:30 wiedi Exp $
+lib/openbabel/${PKGVERSION}/xtcformat.so
