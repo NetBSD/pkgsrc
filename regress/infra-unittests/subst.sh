@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.30 2020/05/02 05:52:09 rillig Exp $
+# $NetBSD: subst.sh,v 1.31 2020/05/02 06:48:59 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1222,6 +1222,8 @@ if test_case_begin "identity substitution, found in file"; then
 		'SUBST_CLASSES+=	id' \
 		'SUBST_FILES.id=	file' \
 		'SUBST_SED.id=		-e s,before,before,' \
+		'SUBST_SED.id+=		-e "s,before,before,"' \
+		"SUBST_SED.id+=		-e 's,before,before,'" \
 		'SUBST_NOOP_OK.id=	no' \
 		'' \
 		'.include "prepare-subst.mk"' \
