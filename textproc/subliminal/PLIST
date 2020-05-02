@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/04/14 19:10:23 leot Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/02 16:32:01 leot Exp $
 bin/subliminal-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -42,12 +42,18 @@ ${PYSITELIB}/subliminal/exceptions.pyo
 ${PYSITELIB}/subliminal/extensions.py
 ${PYSITELIB}/subliminal/extensions.pyc
 ${PYSITELIB}/subliminal/extensions.pyo
+${PYSITELIB}/subliminal/matches.py
+${PYSITELIB}/subliminal/matches.pyc
+${PYSITELIB}/subliminal/matches.pyo
 ${PYSITELIB}/subliminal/providers/__init__.py
 ${PYSITELIB}/subliminal/providers/__init__.pyc
 ${PYSITELIB}/subliminal/providers/__init__.pyo
 ${PYSITELIB}/subliminal/providers/addic7ed.py
 ${PYSITELIB}/subliminal/providers/addic7ed.pyc
 ${PYSITELIB}/subliminal/providers/addic7ed.pyo
+${PYSITELIB}/subliminal/providers/argenteam.py
+${PYSITELIB}/subliminal/providers/argenteam.pyc
+${PYSITELIB}/subliminal/providers/argenteam.pyo
 ${PYSITELIB}/subliminal/providers/legendastv.py
 ${PYSITELIB}/subliminal/providers/legendastv.pyc
 ${PYSITELIB}/subliminal/providers/legendastv.pyo
@@ -63,9 +69,6 @@ ${PYSITELIB}/subliminal/providers/podnapisi.pyo
 ${PYSITELIB}/subliminal/providers/shooter.py
 ${PYSITELIB}/subliminal/providers/shooter.pyc
 ${PYSITELIB}/subliminal/providers/shooter.pyo
-${PYSITELIB}/subliminal/providers/subscenter.py
-${PYSITELIB}/subliminal/providers/subscenter.pyc
-${PYSITELIB}/subliminal/providers/subscenter.pyo
 ${PYSITELIB}/subliminal/providers/thesubdb.py
 ${PYSITELIB}/subliminal/providers/thesubdb.pyc
 ${PYSITELIB}/subliminal/providers/thesubdb.pyo
@@ -75,6 +78,9 @@ ${PYSITELIB}/subliminal/providers/tvsubtitles.pyo
 ${PYSITELIB}/subliminal/refiners/__init__.py
 ${PYSITELIB}/subliminal/refiners/__init__.pyc
 ${PYSITELIB}/subliminal/refiners/__init__.pyo
+${PYSITELIB}/subliminal/refiners/hash.py
+${PYSITELIB}/subliminal/refiners/hash.pyc
+${PYSITELIB}/subliminal/refiners/hash.pyo
 ${PYSITELIB}/subliminal/refiners/metadata.py
 ${PYSITELIB}/subliminal/refiners/metadata.pyc
 ${PYSITELIB}/subliminal/refiners/metadata.pyo
@@ -90,12 +96,6 @@ ${PYSITELIB}/subliminal/score.pyo
 ${PYSITELIB}/subliminal/subtitle.py
 ${PYSITELIB}/subliminal/subtitle.pyc
 ${PYSITELIB}/subliminal/subtitle.pyo
-${PYSITELIB}/subliminal/subtitles/__init__.py
-${PYSITELIB}/subliminal/subtitles/__init__.pyc
-${PYSITELIB}/subliminal/subtitles/__init__.pyo
-${PYSITELIB}/subliminal/subtitles/subrip.py
-${PYSITELIB}/subliminal/subtitles/subrip.pyc
-${PYSITELIB}/subliminal/subtitles/subrip.pyo
 ${PYSITELIB}/subliminal/utils.py
 ${PYSITELIB}/subliminal/utils.pyc
 ${PYSITELIB}/subliminal/utils.pyo

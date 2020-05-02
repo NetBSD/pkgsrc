@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/04/25 07:33:25 maya Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/02 16:32:01 leot Exp $
 
-DISTNAME=	subliminal-2.0.5
-PKGREVISION=	2
+DISTNAME=	subliminal-2.1.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/subliminal/}
 
@@ -17,13 +16,13 @@ DEPENDS+=	${PYPKGPREFIX}-chardet>=2.3.0:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-click>=4.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-dogpile-cache>=0.6.0:../../devel/py-dogpile-cache
 DEPENDS+=	${PYPKGPREFIX}-enzyme>=0.4.1:../../multimedia/py-enzyme
-DEPENDS+=	${PYPKGPREFIX}-guessit>=2.0.1:../../textproc/py-guessit
+DEPENDS+=	${PYPKGPREFIX}-guessit>=3.0.0:../../textproc/py-guessit
 DEPENDS+=	${PYPKGPREFIX}-pysrt>=1.0.1:../../textproc/py-pysrt
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2012c:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-rarfile>=2.7:../../archivers/py-rarfile
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-stevedore>=1.0.0:../../devel/py-stevedore
+DEPENDS+=	${PYPKGPREFIX}-stevedore>=1.20.0:../../devel/py-stevedore
 
 .include "../../lang/python/egg.mk"
 

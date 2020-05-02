@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/04/14 19:10:23 leot Exp $
+$NetBSD: distinfo,v 1.3 2020/05/02 16:32:01 leot Exp $
 
-SHA1 (subliminal-2.0.5.tar.gz) = a74f7be06afda4ce53563a13ce7d685fa4f1148f
-RMD160 (subliminal-2.0.5.tar.gz) = 0e9426ac4681cdf0e8a8f7742f4fada2f228d91c
-SHA512 (subliminal-2.0.5.tar.gz) = 56bc0e87496d5bc361430c4ee396b20374da697014203bdc4dda12341918e67c98aec579e44bd467898dbbf11f31e9de47ece17a0d78339f2bc700e3e6c8dd40
-Size (subliminal-2.0.5.tar.gz) = 51247 bytes
-SHA1 (patch-subliminal_subtitles_____init____.py) = 253b44d1421f51bc91abdbf960dbf759517e3f28
-SHA1 (patch-subliminal_subtitles_subrip.py) = 4e44270d77605812537a7549195c8667b083cf0e
+SHA1 (subliminal-2.1.0.tar.gz) = b273697d189421e0514fdacbf780339fc5a1845a
+RMD160 (subliminal-2.1.0.tar.gz) = b2d37c118cad7645c69b63aabdc5591731c8416f
+SHA512 (subliminal-2.1.0.tar.gz) = cba824329b5590856331b4b83dd753eebbb732979a826cb7e7017c176bce892d28f7fe1f237e27c3afabda113dd8967ce6772006bc9be0abe48c3ea14fe05647
+Size (subliminal-2.1.0.tar.gz) = 52468 bytes
