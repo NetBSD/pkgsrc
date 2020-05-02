@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.27 2020/03/20 19:40:39 rillig Exp $
+# $NetBSD: djbware.mk,v 1.28 2020/05/02 11:43:09 rillig Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -89,24 +89,24 @@ PKG_SUGGESTED_OPTIONS+=	djbware-errno-hack
 
 .include "bsd.fast.prefs.mk"
 
-.if exists(${PKGDIR}/options.mk)
-. include "${PKGDIR}/options.mk"
-.else
+.  if exists(${PKGDIR}/options.mk)
+.    include "${PKGDIR}/options.mk"
+.  else
 # Note: This expression is the same as ${PKGBASE}, but the latter is
 # not defined yet, so we cannot use it here.
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
-.include "bsd.options.mk"
-.endif
+.    include "bsd.options.mk"
+.  endif
 
-.if !empty(PKG_OPTIONS:Mdjbware-errno-hack)
+.  if !empty(PKG_OPTIONS:Mdjbware-errno-hack)
 SUBST_CLASSES+=		djbware
 SUBST_STAGE.djbware=	do-configure
 SUBST_FILES.djbware+=	error.h
 SUBST_SED.djbware=	-e 's|^extern\ int\ errno\;|\#include \<errno.h\>|'
 SUBST_MESSAGE.djbware=	Correcting definition of errno.
-.endif
+.  endif
 .else
-.sinclude "${PKGDIR}/options.mk"
+.  sinclude "${PKGDIR}/options.mk"
 .endif
 
 .endif	# DJBWARE_MK
