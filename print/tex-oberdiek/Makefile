@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2019/12/06 20:22:56 markd Exp $
+# $NetBSD: Makefile,v 1.27 2020/05/02 02:56:28 markd Exp $
 
 DISTNAME=	oberdiek
 PKGNAME=	tex-${DISTNAME}-2019
+PKGREVISION=	1
 TEXLIVE_REV=	51770
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,8 +14,7 @@ DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-etex-pkg-[0-9]*:../../print/tex-etex-pkg
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
-DEPENDS+=	tex-ifluatex-[0-9]*:../../print/tex-ifluatex
-DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
+DEPENDS+=	tex-iftex>=1.0d:../../print/tex-iftex
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
