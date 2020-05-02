@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: sh.test,v 1.1 2020/05/01 18:37:59 rillig Exp $
+# $NetBSD: sh.test,v 1.2 2020/05/02 07:24:32 rillig Exp $
 #
 # Tests for the shell that is available as ${SH} in Makefiles.
 #
@@ -39,3 +39,15 @@ assert_that "%: ${pathname%/*}"		--equals "%: first/second/third"
 # Make sure that $(...) subshells work.
 assert_that "subshell: $(echo world | tr 'world' 'hello')" \
 	--equals "subshell: hello"
+
+# In NetBSD 7, /bin/sh handled backslashes in word expansions incorrectly.
+# See https://gnats.netbsd.org/43469.
+line='#define bindir "/usr/bin" /* bar */'
+case $MACHINE_PLATFORM in
+(NetBSD-[0-7].*-*)
+	assert_that "${line%%/\**}" --equals '#define bindir "'
+	;;
+(*)
+	assert_that "${line%%/\**}" --equals '#define bindir "/usr/bin" '
+	;;
+esac
