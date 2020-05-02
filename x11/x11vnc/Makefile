@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2020/03/10 22:11:21 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2020/05/02 10:24:58 rillig Exp $
 #
 
 DISTNAME=	x11vnc-0.9.16
@@ -20,6 +20,7 @@ SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	pre-configure
 SUBST_FILES.pthread=	configure
 SUBST_SED.pthread=	-e 's|-lpthread||g'
+SUBST_NOOP_OK.pthread=	yes # configure does not contain "pthread"
 
 .include "options.mk"
 
