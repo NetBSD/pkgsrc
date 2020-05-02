@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2707 2020/05/02 16:56:47 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.2708 2020/05/02 17:17:36 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3972,3 +3972,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated sysutils/ruby-puppet-resource_api to 1.8.13 [taca 2020-05-02]
 	Updated textproc/subliminal to 2.1.0 [leot 2020-05-02]
 	Updated sysutils/grub2 to 2.04 [triaxx 2020-05-02]
+	Updated net/youtube-dl to 20200503 [leot 2020-05-02]
