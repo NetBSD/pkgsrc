@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2020/02/16 03:42:25 tsutsui Exp $
+$NetBSD: distinfo,v 1.13 2020/05/02 06:36:49 tsutsui Exp $
 
-SHA1 (sayaka-3.4.3.tar.gz) = 8534f5171d1abd824836728b74d32b9f2869d46c
-RMD160 (sayaka-3.4.3.tar.gz) = 24f65fef4e909f99cf203c405d03cbce9b552d6b
-SHA512 (sayaka-3.4.3.tar.gz) = dbd5f1cde2ea66e19a889874349eb897a568fc120ad8f3eeb555af673fcb18bb8df297183bb3de2f3a7f12149033c26f3648fae81b43cf1239f463d1a6b3c20d
-Size (sayaka-3.4.3.tar.gz) = 1968914 bytes
+SHA1 (sayaka-3.4.4.tar.gz) = f2b4b84bef082a5074e1fce7a1659dda539e2ee5
+RMD160 (sayaka-3.4.4.tar.gz) = 96102d1f80ded933a9095e0261ab0561e8deecdf
+SHA512 (sayaka-3.4.4.tar.gz) = 8a9d8c49fab7d3c4b5c2d5c816125f66f72def49c986bdd361aec95338fec3cac7a133604bc5c74f449837ba76508a5f0e18fc71dbf18c2ac7b8a365bb2984bc
+Size (sayaka-3.4.4.tar.gz) = 1969266 bytes
