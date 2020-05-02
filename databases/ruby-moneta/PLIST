@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/10/23 16:12:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/02 13:16:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -87,7 +87,7 @@ ${GEM_LIBDIR}/script/benchmarks
 ${GEM_LIBDIR}/script/contributors
 ${GEM_LIBDIR}/script/memusage
 ${GEM_LIBDIR}/script/parallel-tests
-${GEM_LIBDIR}/script/reconfigure-couchdb
+${GEM_LIBDIR}/script/start-couchdb
 ${GEM_LIBDIR}/script/start-hbase
 ${GEM_LIBDIR}/script/start-services
 ${GEM_LIBDIR}/script/travis-logs
@@ -130,6 +130,7 @@ ${GEM_LIBDIR}/spec/moneta/adapters/cassandra/adapter_cassandra_with_default_expi
 ${GEM_LIBDIR}/spec/moneta/adapters/cassandra/helper.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/cassandra/standard_cassandra_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/client/adapter_client_spec.rb
+${GEM_LIBDIR}/spec/moneta/adapters/client/client_helper.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/client/standard_client_tcp_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/client/standard_client_unix_spec.rb
 ${GEM_LIBDIR}/spec/moneta/adapters/cookie/adapter_cookie_spec.rb
@@ -279,6 +280,7 @@ ${GEM_LIBDIR}/spec/moneta/proxies/transformer/transformer_marshal_hex_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/transformer/transformer_marshal_hmac_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/transformer/transformer_marshal_md5_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/transformer/transformer_marshal_md5_spread_spec.rb
+${GEM_LIBDIR}/spec/moneta/proxies/transformer/transformer_marshal_prefix_base64_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/transformer/transformer_marshal_prefix_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/transformer/transformer_marshal_qp_spec.rb
 ${GEM_LIBDIR}/spec/moneta/proxies/transformer/transformer_marshal_rmd160_spec.rb
@@ -312,6 +314,7 @@ ${GEM_LIBDIR}/spec/rack/moneta_cookies_spec.rb
 ${GEM_LIBDIR}/spec/rack/moneta_store_spec.rb
 ${GEM_LIBDIR}/spec/rack/session_moneta_spec.rb
 ${GEM_LIBDIR}/spec/restserver.rb
+${GEM_LIBDIR}/spec/support/mongo_helper.rb
 ${GEM_LIBDIR}/test/action_dispatch/fixtures/session_autoload_test/foo.rb
 ${GEM_LIBDIR}/test/action_dispatch/session_moneta_store_test.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
