@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2020/04/17 11:28:02 tm Exp $
+$NetBSD: distinfo,v 1.2 2020/05/02 00:14:20 mef Exp $
 
 SHA1 (up-imapproxy_1.2.8~svn20171105.orig.tar.bz2) = 85e76717b0d2f790e366b7516cc567fc551c9cc6
 RMD160 (up-imapproxy_1.2.8~svn20171105.orig.tar.bz2) = dac57dcea68c333f6b05942c99fb8d0bfd0b7808
@@ -17,4 +17,4 @@ SHA1 (patch-fix-ssl-types) = 2f32060a7ab8922dd038e07f20da6d4240c2bdb0
 SHA1 (patch-openssl-1.1-imapcommon.c) = 69fca63f349fc4c2c11169936136e4611d496901
 SHA1 (patch-openssl-1.1-main.c) = fe2d2eab38a872dd55f0f1cf965e50bd9e501022
 SHA1 (patch-remove-install-chown) = e3811e13fa3fe89dc7d58162a3dcde9a57527be2
-SHA1 (patch-remove-unused-variables) = 37e0a94667d390e11bb408a69e3758e40675c63c
+SHA1 (patch-remove-unused-variables) = 08eb43f9b7a35769d0fee933a927b7f8c9a50847
