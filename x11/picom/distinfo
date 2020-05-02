@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.1 2019/12/15 14:05:47 nia Exp $
+$NetBSD: distinfo,v 1.2 2020/05/02 11:23:04 tnn Exp $
 
-SHA1 (picom-7.5.tar.gz) = 60f3700cb4c728e801caf6981a7bcdfcee0fa45e
-RMD160 (picom-7.5.tar.gz) = e1c889539b6d414c5a7f45b48abc7bd8a6a4ddef
-SHA512 (picom-7.5.tar.gz) = 6535e5eab1a243bbee62448bc48830b7ea3566f94b2c45d9ca76fd8b8056e1f00e55f0e4b58110364d2c4f56652cc005622d644c1db1db41d2811ecc19e6d44a
-Size (picom-7.5.tar.gz) = 219456 bytes
-SHA1 (patch-src_backend_gl_gl__common.c) = 6b42dc1a4dd061046d23d123ccc4df4dea2ab48f
+SHA1 (picom-8.tar.gz) = 9dacc23864ec52a859522e9ac3c66cc171c89dec
+RMD160 (picom-8.tar.gz) = 8a788bbadc0c21585e56fd1e433f4b4425b0dce8
+SHA512 (picom-8.tar.gz) = 154dd42dea16aca463e7d7f9913a8f10740df892bfdda2fee210a94b13c8eaf6201b35e505daf45075fdb1980bb9b85adf170b649702c1b1e2fcdc1d88406b4a
+Size (picom-8.tar.gz) = 242059 bytes
+SHA1 (patch-src_backend_gl_gl__common.c) = e702435b89018fd59d5a48f336c6cfdae644dca6
+SHA1 (patch-src_compiler.h) = 6d659359b70528bd5e6bdd98479502ebd4881976
 SHA1 (patch-src_utils.h) = 31f422592b5f9d232d26f437808b64dc2fb4c0f2
