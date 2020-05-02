@@ -1,4 +1,6 @@
-$NetBSD: patch-src_ui-readline.c,v 1.1 2014/04/16 21:00:35 joerg Exp $
+$NetBSD: patch-src_ui-readline.c,v 1.2 2020/05/02 01:35:20 mef Exp $
+
+support readline 6.3.
 
 --- src/ui-readline.c.orig	2014-04-16 20:11:28.000000000 +0000
 +++ src/ui-readline.c
