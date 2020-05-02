@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/03/08 16:51:15 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2020/05/02 14:58:17 rillig Exp $
 
 DISTNAME=	dbus-python-1.2.16
 PKGNAME=	${DISTNAME:S/python/python-common/}
@@ -20,7 +20,7 @@ PYTHON_FOR_BUILD_ONLY=		yes
 
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-html-docs --disable-api-docs
+CONFIGURE_ARGS+=	--disable-documentation
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-std=c9x
 
