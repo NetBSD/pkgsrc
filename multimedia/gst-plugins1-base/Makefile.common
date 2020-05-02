@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2020/01/10 12:47:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.37 2020/05/02 15:02:58 rillig Exp $
 #
 # used by audio/gst-plugins1-alsa/Makefile
 # used by audio/gst-plugins1-cdparanoia/Makefile
@@ -20,7 +20,6 @@ LICENSE=		gnu-lgpl-v2
 .for driver in	alsa \
 		cdparanoia \
 		cocoa \
-		freetypetest \
 		gio \
 		ivorbis \
 		libvisual \
