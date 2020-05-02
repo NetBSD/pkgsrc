@@ -11,7 +11,7 @@ marks; page cropmarks; improvements to fancy headers; float
 "styles", mini floats, side floats; manually marked footnotes;
 extension of amsmath; control of paragraph skip; an envelope to
 the graphicx package; dashed and multiple rules; alternative
-techniques for declarations of sections, captions, and toc-
-entries; generalised text-stretching; generation of new theorem-
-like environments; control of the text area; centred page
-layouts; and un-numbered top-level section.
+techniques for declarations of sections, captions, and
+toc-entries; generalised text-stretching; generation of new
+theorem-like environments; control of the text area; centred
+page layouts; and un-numbered top-level section.

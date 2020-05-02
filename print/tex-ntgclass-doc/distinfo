@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:32 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/05/02 02:27:46 markd Exp $
 
-SHA1 (tex-ntgclass-15878/ntgclass.doc.tar.xz) = 2199e53c54fb45fe0956a5a542f8630aa33308c4
-RMD160 (tex-ntgclass-15878/ntgclass.doc.tar.xz) = 628372479d1b703d97cd943bdec793e614d8c75f
-SHA512 (tex-ntgclass-15878/ntgclass.doc.tar.xz) = bb9e010b6b95a719f1cc38fc4dc86fb75dccce1eeab69fd8784d8071c8d08663916ad979f80ca09c0457ad6123bb6f5181a6251b139bdbaba56c166da772427f
-Size (tex-ntgclass-15878/ntgclass.doc.tar.xz) = 1003744 bytes
+SHA1 (ntgclass.doc.r53882.tar.xz) = 0229522ba0ae0f39dfa8ab9048df0e59832ba2fb
+RMD160 (ntgclass.doc.r53882.tar.xz) = 1a7087aa942dcbe986531be01f282e02667ae710
+SHA512 (ntgclass.doc.r53882.tar.xz) = 18703b1ddaf9fbfebb2a546bc8e63f5e15958c6f07087d936a0751786f5fc620011654649999c815c3cc0e78a04c6efac736e1f36708ec858438770c27e9398d
+Size (ntgclass.doc.r53882.tar.xz) = 1711900 bytes

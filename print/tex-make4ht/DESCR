@@ -1,3 +1,4 @@
-make4ht is a simple build system for tex4ht. It is both
-executable, which simplifies tex4ht execution, and a library
-which can be used to create customized conversion programs.
+make4ht is a simple build system for tex4ht, a TeX to XML
+converter. It provides a command line tool that drives the
+conversion process. It also provides a library which can be
+used to create customized conversion tools.

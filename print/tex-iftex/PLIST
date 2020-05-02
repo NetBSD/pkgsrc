@@ -1,2 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/26 01:08:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/02 02:27:43 markd Exp $
+share/texmf-dist/tex/generic/iftex/ifetex.sty
+share/texmf-dist/tex/generic/iftex/ifluatex.sty
+share/texmf-dist/tex/generic/iftex/ifpdf.sty
 share/texmf-dist/tex/generic/iftex/iftex.sty
+share/texmf-dist/tex/generic/iftex/ifvtex.sty
+share/texmf-dist/tex/generic/iftex/ifxetex.sty
