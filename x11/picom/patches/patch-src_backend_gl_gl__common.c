@@ -1,12 +1,12 @@
-$NetBSD: patch-src_backend_gl_gl__common.c,v 1.2 2020/05/02 11:23:05 tnn Exp $
+$NetBSD: patch-src_backend_gl_gl__common.c,v 1.3 2020/05/02 11:42:13 tnn Exp $
 
 Parentheses are required around macro argument containing braced initializer
 list.
 memcpy(3) is a macro when using e.g. -D_FORTIFY_SOURCE=2.
 
---- src/backend/gl/gl_common.c.orig	2019-08-18 21:40:33.000000000 +0000
+--- src/backend/gl/gl_common.c.orig	2020-04-21 18:33:17.000000000 +0000
 +++ src/backend/gl/gl_common.c
-@@ -316,7 +316,7 @@ static void x_rect_to_coords(int nrects,
+@@ -485,7 +485,7 @@ x_rect_to_coords(int nrects, const rect_
  		//          ri, rx, ry, rxe, rye, rdx, rdy, rdxe, rdye);
  
  		memcpy(&coord[i * 16],
@@ -15,7 +15,7 @@ memcpy(3) is a macro when using e.g. -D_FORTIFY_SOURCE=2.
  		           {vx1, vy1},
  		           {texture_x1, texture_y1},
  		           {vx2, vy1},
-@@ -325,11 +325,11 @@ static void x_rect_to_coords(int nrects,
+@@ -494,11 +494,11 @@ x_rect_to_coords(int nrects, const rect_
  		           {texture_x2, texture_y2},
  		           {vx1, vy2},
  		           {texture_x1, texture_y2},
@@ -29,7 +29,7 @@ memcpy(3) is a macro when using e.g. -D_FORTIFY_SOURCE=2.
  		       sizeof(GLuint) * 6);
  	}
  }
-@@ -673,8 +673,8 @@ _gl_fill(backend_t *base, struct color c
+@@ -886,8 +886,8 @@ static void _gl_fill(backend_t *base, st
  		GLint y1 = y_inverted ? height - rect[i].y2 : rect[i].y1,
  		      y2 = y_inverted ? height - rect[i].y1 : rect[i].y2;
  		memcpy(&coord[i * 8],
@@ -40,3 +40,22 @@ memcpy(3) is a macro when using e.g. -D_FORTIFY_SOURCE=2.
  		       sizeof(GLint[2]) * 4);
  		indices[i * 6 + 0] = (GLuint)i * 4 + 0;
  		indices[i * 6 + 1] = (GLuint)i * 4 + 1;
+@@ -1383,15 +1383,15 @@ void gl_present(backend_t *base, const r
+ 	for (int i = 0; i < nrects; i++) {
+ 		// clang-format off
+ 		memcpy(&coord[i * 8],
+-		       (GLint[]){rect[i].x1, gd->height - rect[i].y2,
++		       ((GLint[]){rect[i].x1, gd->height - rect[i].y2,
+ 		                 rect[i].x2, gd->height - rect[i].y2,
+ 		                 rect[i].x2, gd->height - rect[i].y1,
+-		                 rect[i].x1, gd->height - rect[i].y1},
++		                 rect[i].x1, gd->height - rect[i].y1}),
+ 		       sizeof(GLint) * 8);
+ 		// clang-format on
+ 
+ 		GLuint u = (GLuint)(i * 4);
+-		memcpy(&indices[i * 6], (GLuint[]){u + 0, u + 1, u + 2, u + 2, u + 3, u + 0},
++		memcpy(&indices[i * 6], ((GLuint[]){u + 0, u + 1, u + 2, u + 2, u + 3, u + 0}),
+ 		       sizeof(GLuint) * 6);
+ 	}
+ 
