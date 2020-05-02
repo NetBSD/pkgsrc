@@ -1,16 +1,19 @@
-$NetBSD: patch-remove-unused-variables,v 1.2 2020/05/02 00:14:20 mef Exp $
+$NetBSD: patch-remove-unused-variables,v 1.3 2020/05/02 00:21:39 mef Exp $
 
 Remove unused variables
 
---- src/main.c.orig	2020-05-02 09:03:31.136708514 +0900
-+++ src/main.c	2020-05-02 09:03:31.159129655 +0900
-@@ -187,9 +187,6 @@
+--- src/main.c.orig	2020-05-02 09:19:22.283803615 +0900
++++ src/main.c	2020-05-02 09:20:18.002703574 +0900
+@@ -187,9 +187,9 @@
  */
  
  
--static char *sourceRevision = "$Revision: 1.2 $";
--static char *sourceVersion = "$Id: patch-remove-unused-variables,v 1.2 2020/05/02 00:14:20 mef Exp $";
+-static char *sourceRevision = "$Revision: 1.3 $";
+-static char *sourceVersion = "$Id: patch-remove-unused-variables,v 1.3 2020/05/02 00:21:39 mef Exp $";
 -static char *sourceAuthor = "$Author: mef $";
++// static char *sourceRevision = "$$Revision: 1.3 $$";
++//static char *sourceVersion = "$$Id: patch-remove-unused-variables,v 1.3 2020/05/02 00:21:39 mef Exp $$";
++//static char *sourceAuthor = "$$Author: mef $$";
  
  #define _REENTRANT
  
