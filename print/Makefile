@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.760 2020/05/01 04:54:34 markd Exp $
+# $NetBSD: Makefile,v 1.761 2020/05/02 06:51:30 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -778,10 +778,6 @@ SUBDIR+=	tex-hyphenat-doc
 SUBDIR+=	tex-hyphenex
 SUBDIR+=	tex-hyplain
 SUBDIR+=	tex-hyplain-doc
-SUBDIR+=	tex-ifetex
-SUBDIR+=	tex-ifetex-doc
-SUBDIR+=	tex-ifluatex
-SUBDIR+=	tex-ifluatex-doc
 SUBDIR+=	tex-ifmtarg
 SUBDIR+=	tex-ifmtarg-doc
 SUBDIR+=	tex-ifnextok
@@ -792,8 +788,6 @@ SUBDIR+=	tex-ifplatform
 SUBDIR+=	tex-ifplatform-doc
 SUBDIR+=	tex-iftex
 SUBDIR+=	tex-iftex-doc
-SUBDIR+=	tex-ifxetex
-SUBDIR+=	tex-ifxetex-doc
 SUBDIR+=	tex-igo
 SUBDIR+=	tex-impatient-doc
 SUBDIR+=	tex-import
