@@ -17,7 +17,7 @@ test_shquote '' becomes "''"
 
 test_shquote ' ' becomes "' '"
 test_shquote '!' becomes '!'
-test_shquote '"' becomes \'\"\'
+test_shquote '"' becomes "'\"'"
 test_shquote '#' becomes "'#'"
 test_shquote '$' becomes "'$'"
 test_shquote '%' becomes '%'
@@ -34,7 +34,7 @@ test_shquote '>' becomes "'>'"
 test_shquote '?' becomes "'?'"
 test_shquote '@ABCDEFGHIJKLMNOPQRSTUVWXYZ' becomes '@ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 test_shquote '[' becomes "'['"
-test_shquote '\' becomes \'\\\'
+test_shquote '\' becomes "'\\'"
 test_shquote ']' becomes "']'"
 test_shquote '^' becomes "'^'"
 test_shquote '_' becomes '_'
