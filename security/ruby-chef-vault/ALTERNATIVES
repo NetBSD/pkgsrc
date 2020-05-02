@@ -1,0 +1,1 @@
+bin/chef-vault @PREFIX@/bin/chef-vault@RUBY_SUFFIX@
