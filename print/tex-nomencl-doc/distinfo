@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/05/14 09:54:13 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/05/02 02:27:45 markd Exp $
 
-SHA1 (tex-nomencl-51025/nomencl.doc.tar.xz) = c61a73f47b45a1f4eb3d82253855a76f84b3c114
-RMD160 (tex-nomencl-51025/nomencl.doc.tar.xz) = 2933bc336c8aa05934f5dd0571d4cd0505451dfd
-SHA512 (tex-nomencl-51025/nomencl.doc.tar.xz) = b7a2659e324207e37c38d37cf372c237cc94a3f8902bf9d907ed2a45ecfa94d463b550a4c3339dc75825a36b1e89e9cac771cfb2ae6bdfe3ad157aa235f488d2
-Size (tex-nomencl-51025/nomencl.doc.tar.xz) = 521732 bytes
+SHA1 (nomencl.doc.r54080.tar.xz) = 35d0f9ba80f91b4e4e770f9a7d7731d65640803d
+RMD160 (nomencl.doc.r54080.tar.xz) = f73c18931764fb686f3145e9f79496ae88703b3a
+SHA512 (nomencl.doc.r54080.tar.xz) = 17ff56c02b4bc66cbbad73cdd05e254fafc4b44dbd45bb7e749c0e9f25a8dc3c6f4a4e82690a5dc13558b52f1dd679235cf78b15aac22825db1c7a2cf9308c48
+Size (nomencl.doc.r54080.tar.xz) = 530908 bytes
