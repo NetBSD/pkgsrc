@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2020/04/20 17:04:18 adam Exp $
+# $NetBSD: Makefile,v 1.130 2020/05/02 14:33:20 rillig Exp $
 
 DISTNAME=	WindowMaker-0.95.9
 PKGNAME=	${DISTNAME:tl}
@@ -60,7 +60,6 @@ SUBST_CLASSES+=		fix-path
 SUBST_STAGE.fix-path=	pre-configure
 SUBST_MESSAGE.fix-path=	Fixing absolute paths.
 SUBST_FILES.fix-path=	WINGs/wapplication.c
-SUBST_FILES.fix-path+=	WindowMaker/Defaults/WindowMaker.in
 SUBST_FILES.fix-path+=	WPrefs.app/Paths.c
 SUBST_FILES.fix-path+=	WindowMaker/menu*
 SUBST_FILES.fix-path+=	WindowMaker/plmenu*
