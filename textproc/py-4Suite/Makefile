@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/01/26 17:32:16 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/05/02 10:28:42 rillig Exp $
 
 VER=		1.0.2
 DISTNAME=	4Suite-XML-${VER}
@@ -18,7 +18,6 @@ SUBST_FILES.python=	build/scripts.*/4xml
 SUBST_FILES.python+=	build/scripts.*/4xpath
 SUBST_FILES.python+=	build/scripts.*/4xslt
 SUBST_FILES.python+=	build/scripts.*/4xupdate
-SUBST_FILES.python+=	test/Xml/XPath/Borrowed/*.py
 SUBST_FILES.python+=	test/Xml/XPath/Core/*.py
 SUBST_FILES.python+=	test/test.py
 SUBST_STAGE.python=	post-build
