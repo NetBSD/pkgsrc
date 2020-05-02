@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/04/26 09:18:43 taca Exp $
+# $NetBSD: Makefile,v 1.32 2020/05/02 13:40:18 rillig Exp $
 
 DISTNAME=	drupal-8.7.12
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -44,12 +44,6 @@ REPLACE_FILES.php=	core/scripts/drupal.sh core/scripts/password-hash.sh
 REPLACE_FILES.php+=	core/scripts/update-countries.sh
 REPLACE_FILES.php+=	core/scripts/rebuild_token_calculator.sh
 REPLACE_FILES.php+=	vendor/pear/archive_tar/scripts/phptar.in
-
-SUBST_CLASSES+=		sh
-SUBST_STAGE.sh=		pre-configure
-SUBST_MESSAGE.sh=	Fixing path to sh
-SUBST_FILES.sh+=	vendor/paragonie/random_compat/build-phar.sh
-SUBST_SED.sh=		-e "s|/usr/bin/env bash|${SH}|"
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
