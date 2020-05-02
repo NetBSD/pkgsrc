@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/05/02 10:14:41 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/02 18:38:55 rillig Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 
@@ -9,7 +9,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 REPLACE_PYTHON+=	examples/manage-*.py
 REPLACE_PYTHON+=	examples/upload.py
-REPLACE_PYTHON+=	examples/contrib/sessions.py
 REPLACE_PYTHON+=	tests/multipart/test_collect.py
 
 PYSETUPTESTTARGET=	pytest
