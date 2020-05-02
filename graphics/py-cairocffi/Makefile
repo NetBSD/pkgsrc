@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/03/08 16:50:06 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/02 10:33:25 rillig Exp $
 
 DISTNAME=	cairocffi-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,19 +14,6 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-cffi>=0.6:../../devel/py-cffi
 
 USE_LANGUAGES=	# none
-
-.include "../../mk/bsd.prefs.mk"
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
-SOEXT=		dylib
-.else
-SOEXT=		so
-.endif
-
-SUBST_CLASSES+=		dllpath
-SUBST_STAGE.dllpath=	pre-configure
-SUBST_MESSAGE.dllpath=	Fix libcairo path.
-SUBST_FILES.dllpath=	cairocffi/__init__.py
-SUBST_VARS.dllpath=	PREFIX SOEXT
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
