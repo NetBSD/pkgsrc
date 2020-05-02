@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/09/16 13:18:54 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/05/02 16:53:54 triaxx Exp $
 bin/grub-editenv
 bin/grub-file
 bin/grub-fstest
@@ -19,7 +19,6 @@ bin/grub-script-check
 bin/grub-syslinux2cfg
 info/grub-dev.info
 info/grub.info
-lib/charset.alias
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/acpi.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/acpi.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/adler32.mod
@@ -151,8 +150,11 @@ lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ext2.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ext2.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/extcmd.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/extcmd.module
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/f2fs.mod
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/f2fs.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fat.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fat.module
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fdt.lst
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/file.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/file.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/font.mod
@@ -404,6 +406,8 @@ lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pci.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pci.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pcidump.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pcidump.module
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pgp.mod
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pgp.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/plan9.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/plan9.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/play.mod
@@ -430,6 +434,8 @@ lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/raid6rec.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/raid6rec.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/random.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/random.module
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/rdmsr.mod
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/rdmsr.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/read.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/read.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/reboot.mod
@@ -476,6 +482,8 @@ lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/spkmodem.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/spkmodem.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/squash4.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/squash4.module
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/strtoull_test.mod
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/strtoull_test.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/syslinuxcfg.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/syslinuxcfg.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/tar.mod
@@ -535,8 +543,8 @@ lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/usbtest.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/usbtest.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/vbe.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/vbe.module
-lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/verify.mod
-lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/verify.module
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/verifiers.mod
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/verifiers.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/vga.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/vga.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/vga_text.mod
@@ -558,6 +566,8 @@ lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/videotest.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/videotest.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/videotest_checksum.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/videotest_checksum.module
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/wrmsr.mod
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/wrmsr.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/xfs.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/xfs.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/xnu.mod
@@ -574,6 +584,8 @@ lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/zfscrypt.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/zfscrypt.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/zfsinfo.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/zfsinfo.module
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/zstd.mod
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/zstd.module
 man/man1/grub-editenv.1
 man/man1/grub-file.1
 man/man1/grub-fstest.1
@@ -691,7 +703,9 @@ share/locale/nb/LC_MESSAGES/grub.mo
 share/locale/nl/LC_MESSAGES/grub.mo
 share/locale/pa/LC_MESSAGES/grub.mo
 share/locale/pl/LC_MESSAGES/grub.mo
+share/locale/pt/LC_MESSAGES/grub.mo
 share/locale/pt_BR/LC_MESSAGES/grub.mo
+share/locale/ro/LC_MESSAGES/grub.mo
 share/locale/ru/LC_MESSAGES/grub.mo
 share/locale/sl/LC_MESSAGES/grub.mo
 share/locale/sr/LC_MESSAGES/grub.mo
