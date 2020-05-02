@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2692 2020/05/01 22:05:00 tnn Exp $
+$NetBSD: CHANGES-2020,v 1.2693 2020/05/02 01:35:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3928,3 +3928,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added textproc/py-demjson version 2.2.4 [nia 2020-05-01]
 	Added net/bandcamp-dl version 0.0.8.12 [nia 2020-05-01]
 	Updated www/grafana to 6.7.3 [tnn 2020-05-01]
+	Updated chat/ekg to 20200501 [mef 2020-05-02]
