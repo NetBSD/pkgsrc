@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2016/06/16 04:06:10 markd Exp $
-
-SHA1 (tex-ifluatex-41247/ifluatex.doc.tar.xz) = a629bc9b80aa02f77f64c7f6a35d88751f723a6e
-RMD160 (tex-ifluatex-41247/ifluatex.doc.tar.xz) = 0cf242bd6da6387a3cadf421928beb95e02f1561
-SHA512 (tex-ifluatex-41247/ifluatex.doc.tar.xz) = 9072ffaae527e7f7bf2abacf6dd36c18ac50e41f20d32bc68be5aa85425a88551fce2765c6fb775c81f122a08d6ea28bd204b426b20999f687171eb69c4be0be
-Size (tex-ifluatex-41247/ifluatex.doc.tar.xz) = 316900 bytes
