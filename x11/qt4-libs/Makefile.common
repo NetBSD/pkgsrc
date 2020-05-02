@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.52 2020/03/24 19:45:47 gdt Exp $
+# $NetBSD: Makefile.common,v 1.53 2020/05/02 13:53:09 rillig Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -130,12 +130,6 @@ SUBST_MESSAGE.dnr=	Disabling debug_and_release.
 SUBST_STAGE.dnr=	pre-configure
 SUBST_FILES.dnr=	mkspecs/features/debug_and_release.prf
 SUBST_SED.dnr=		-e 's,^,\#\#\#,'
-
-SUBST_CLASSES+=		nib
-SUBST_MESSAGE.nib=	Fixing nib loading on Mac OS X.
-SUBST_STAGE.nib=	pre-configure
-SUBST_FILES.nib=	src/gui/kernel/qapplication_mac.mm
-SUBST_VARS.nib=		QTPREFIX
 
 SUBST_CLASSES+=		lt
 SUBST_MESSAGE.lt=	Enabling libtool.
