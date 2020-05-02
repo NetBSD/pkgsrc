@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2020/04/26 08:40:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.78 2020/05/02 13:22:00 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -52,6 +52,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.29.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.30.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.31.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.32.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.6.0.txt
@@ -171,6 +172,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/error_sql.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/escaped_like.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/eval_inspect.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/exclude_or_null.rb
+${GEM_LIBDIR}/lib/sequel/extensions/fiber_concurrency.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/freeze_datasets.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/from_block.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/graph_each.rb
@@ -207,6 +209,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/pg_timestamptz.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/query.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/round_timestamps.rb
+${GEM_LIBDIR}/lib/sequel/extensions/run_transaction_hooks.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/s.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/schema_caching.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/schema_dumper.rb
