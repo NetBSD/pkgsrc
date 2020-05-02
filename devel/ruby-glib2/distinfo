@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/10/19 08:25:17 tsutsui Exp $
+$NetBSD: distinfo,v 1.4 2020/05/02 18:05:04 tsutsui Exp $
 
-SHA1 (glib2-3.4.1.gem) = 48f8b780bb83b72762e9d762d916e3ccbb63c787
-RMD160 (glib2-3.4.1.gem) = 02a2cc78848cb1d9eb0981985bdfdd0d9564de1d
-SHA512 (glib2-3.4.1.gem) = 29d49a10ad1002ca75a46123ed9073b01aad4e6159ce57411575b99bd9e9c2b44750233c3ee17aaa2f9e3ea6a1eb3c54159108465d9a4a9e50eece86b91f5b44
-Size (glib2-3.4.1.gem) = 148480 bytes
+SHA1 (glib2-3.4.2.gem) = 25d127e2c90533208cc7a18123ee6ab118368621
+RMD160 (glib2-3.4.2.gem) = 7cd14257c5b1ca25156f8ef264a49b9fe01cae91
+SHA512 (glib2-3.4.2.gem) = de1a41a359e392a0a4e25a920873aab7f7e2ffe3c38e066d7b2ded1109845861963d29e5f54cfe4d0d18cd23c181f5992c86cf837ef0e2259a37fbf0771778ec
+Size (glib2-3.4.2.gem) = 136192 bytes
