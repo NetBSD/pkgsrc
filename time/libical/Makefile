@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/04/12 08:28:08 adam Exp $
+# $NetBSD: Makefile,v 1.27 2020/05/02 15:07:42 rillig Exp $
 
 DISTNAME=	libical-3.0.7
 PKGREVISION=	2
@@ -17,11 +17,6 @@ USE_CMAKE=	yes
 CMAKE_ARGS+= 	-DUSE_BUILTIN_TZDATA=OFF
 CMAKE_ARGS+=	-DICAL_BUILD_DOCS=OFF
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_BDB=ON
-
-REPLACE_INTERPRETER+=	perl
-REPLACE.perl.old=	.*/bin/tclsh
-REPLACE.perl.new=	${PREFIX}/bin/tclsh
-REPLACE_FILES.perl=
 
 PKGCONFIG_OVERRIDE+=	libical.pc.in
 PKGCONFIG_OVERRIDE+=	src/libical-glib/libical-glib.pc.in
