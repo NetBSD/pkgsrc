@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2712 2020/05/02 20:45:50 leot Exp $
+$NetBSD: CHANGES-2020,v 1.2713 2020/05/02 22:24:40 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3998,3 +3998,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated x11/ruby-vte to 3.4.2 [tsutsui 2020-05-02]
 	Added lang/go-bin version 1.14.2 [tnn 2020-05-02]
 	Updated net/gallery-dl to 1.13.6 [leot 2020-05-02]
+	Updated www/firefox to 75.0nb2 [maya 2020-05-02]
