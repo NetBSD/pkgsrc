@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/03/24 11:29:19 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/02 07:24:31 rillig Exp $
 #
 
 DISTNAME=	# not applicable
@@ -15,8 +15,6 @@ WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 PLIST_SRC=	# none
 REGRESS_TESTS+=	logging shquote
-REGRESS_TESTS+=	awk sed sh sort tar tr
-USE_TOOLS+=	awk sed sh sort tar tr
 
 TOOLS_CREATE+=	script-dquot
 TOOLS_SCRIPT.script-dquot= \
