@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:20 agc Exp $
+$NetBSD: distinfo,v 1.3 2020/05/02 02:27:43 markd Exp $
 
-SHA1 (tex-import-17361/import.tar.xz) = 9bfc0425557e7999db3907d2c5e32c397a56bedc
-RMD160 (tex-import-17361/import.tar.xz) = ec5561781542c816809bd4dede7adcf45256843e
-SHA512 (tex-import-17361/import.tar.xz) = 80d0cf0012c2ef4ac77ee0d02fc3e54bf41aa9e70674042ab2cc0a05f5bd59d6bfc4830b51d67dc4a75ad76b8890d38005c8124cee112675f71ca9b4f69bd5dd
-Size (tex-import-17361/import.tar.xz) = 2552 bytes
+SHA1 (import.r54683.tar.xz) = 8a0ded0d43ba6b0d2285ab32ae038cb0d6e20c2c
+RMD160 (import.r54683.tar.xz) = 3d8fda18110edf3600d0c4d8b27db7ad282280c3
+SHA512 (import.r54683.tar.xz) = 96a92584b4ff4a4bd3b345b446f2802e34d59ebf8c14469a5b5331e6d2f92b63f42d8f5799bdcefc9ae3f74e5e6f93aad7d5371dbe7d21e84ced3890a76c7a19
+Size (import.r54683.tar.xz) = 2712 bytes
