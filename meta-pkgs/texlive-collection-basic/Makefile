@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 23:32:56 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/02 06:44:26 markd Exp $
 
 DISTNAME=	collection-basic
 PKGNAME=	texlive-${DISTNAME}-2019.51558
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	51558
@@ -26,9 +27,7 @@ DEPENDS+=	gsftopkk>=1.19.2nb4:../../fonts/gsftopkk
 DEPENDS+=	tex-hyph-utf8>=2013:../../print/tex-hyph-utf8
 DEPENDS+=	tex-hyphen-base>=2013:../../print/tex-hyphen-base
 DEPENDS+=	tex-hyphenex-[0-9]*:../../print/tex-hyphenex
-DEPENDS+=	tex-ifluatex>=1.3pl26725:../../print/tex-ifluatex
 DEPENDS+=	tex-ifplatform-[0-9]*:../../print/tex-ifplatform
-DEPENDS+=	tex-ifxetex>=0.6:../../print/tex-ifxetex
 DEPENDS+=	tex-knuth-lib>=2014:../../fonts/tex-knuth-lib
 DEPENDS+=	tex-knuth-local>=2014:../../fonts/tex-knuth-local
 DEPENDS+=	tex-kpathsea>=2013:../../print/tex-kpathsea
