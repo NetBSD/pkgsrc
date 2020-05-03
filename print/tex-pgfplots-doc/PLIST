@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2016/06/16 04:06:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/03 11:57:34 markd Exp $
 share/texmf-dist/doc/context/third/pgfplots/Makefile
 share/texmf-dist/doc/context/third/pgfplots/pgfplotsexample-context.pdf
 share/texmf-dist/doc/context/third/pgfplots/pgfplotsexample-context.tex
-share/texmf-dist/doc/context/third/pgfplots/pgfplotsexample-context.tuc
 share/texmf-dist/doc/generic/pgfplots/README
 share/texmf-dist/doc/latex/pgfplots/TeX-programming-notes.pdf
 share/texmf-dist/doc/latex/pgfplots/pgfplots.doc.src.tar.bz2
