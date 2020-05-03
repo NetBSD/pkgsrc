@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/07/03 03:48:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/05/03 12:03:51 tnn Exp $
 bin/a2x
 bin/asciidoc
 man/man1/a2x.1
@@ -16,6 +16,7 @@ share/asciidoc/docbook-xsl/manpage.xsl
 share/asciidoc/docbook-xsl/text.xsl
 share/asciidoc/docbook-xsl/xhtml.xsl
 share/asciidoc/docbook45.conf
+share/asciidoc/docbook5.conf
 share/asciidoc/filters/code/code-filter-readme.txt
 share/asciidoc/filters/code/code-filter-test.txt
 share/asciidoc/filters/code/code-filter.conf
@@ -68,6 +69,7 @@ share/asciidoc/javascripts/LaTeXMathML.js
 share/asciidoc/javascripts/asciidoc.js
 share/asciidoc/javascripts/slidy.js
 share/asciidoc/javascripts/toc.js
+share/asciidoc/lang-ca.conf
 share/asciidoc/lang-cs.conf
 share/asciidoc/lang-de.conf
 share/asciidoc/lang-el.conf
@@ -86,6 +88,7 @@ share/asciidoc/lang-ro.conf
 share/asciidoc/lang-ru.conf
 share/asciidoc/lang-sv.conf
 share/asciidoc/lang-uk.conf
+share/asciidoc/lang-zh-CN.conf
 share/asciidoc/latex.conf
 share/asciidoc/slidy.conf
 share/asciidoc/stylesheets/asciidoc.css
