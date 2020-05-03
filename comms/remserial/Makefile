@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/02/15 02:26:58 manu Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/03 18:14:01 wiedi Exp $
 
 DISTNAME=	remserial-1.4
 CATEGORIES=	comms
@@ -9,6 +9,8 @@ HOMEPAGE=	http://lpccomp.bc.ca/remserial/
 COMMENT=	Serial port over LAN through TCP/IP
 LICENSE=	gnu-gpl-v2
 INSTALLATION_DIRS=      bin share/doc/remserial
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/remserial ${DESTDIR}${PREFIX}/bin
