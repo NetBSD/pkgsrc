@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2018/06/05 22:28:38 adam Exp $
+$NetBSD: distinfo,v 1.19 2020/05/03 10:10:44 adam Exp $
 
-SHA1 (xz-5.2.4.tar.bz2) = 50ad451279404fb5206e23c7b1ba9c4aa858c994
-RMD160 (xz-5.2.4.tar.bz2) = 0c5a6ffd47d657fed0c7192f413422e503b79c69
-SHA512 (xz-5.2.4.tar.bz2) = 25a548c34a304ba51cdaa63813df0fa4ac2f3cf0ec6dc2d181ec5b62fe586090cd0f1c866ee7ba19e9b264ecabf9ca9f2f1dda7f95313546da4152f3cfaa7e6e
-Size (xz-5.2.4.tar.bz2) = 1287922 bytes
+SHA1 (xz-5.2.5.tar.bz2) = 19f83fb33dc51df87169864decd4b3de75dee1df
+RMD160 (xz-5.2.5.tar.bz2) = e8c9343d2a1d4aafda92f0b2d94962f16b46688d
+SHA512 (xz-5.2.5.tar.bz2) = 89e25ddf72427ee9608cbf2e9dbc24d592cb67a27f44ccf7d47e4d9405774444e9cfcd02ac4bcb92064860371ed31d3cfbecd5fe063f296ead607714c0a664a1
+Size (xz-5.2.5.tar.bz2) = 1473322 bytes
 SHA1 (patch-src_xz_Makefile.in) = b9360c7b2b34159028fb8b84339aa2faf3922287
