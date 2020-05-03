@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 23:30:30 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/03 08:03:00 rillig Exp $
 
 DISTNAME=	idutils-4.6
 CATEGORIES=	devel
@@ -17,6 +17,7 @@ USE_TOOLS+=		msgfmt
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_prog_EMACS=no
+CONFIGURE_ENV+=		PERL= # none
 INFO_FILES=		YES
 MAKE_ENV+=		BSD_SETENV=${SETENV:Q}
 
