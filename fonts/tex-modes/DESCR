@@ -1,0 +1,8 @@
+The modes file collects all known Metafont modes for printing
+or display devices, of whatever printing technology. Special
+provision is made for write-white printers, and a 'landscape'
+mode is available, for making suitable fonts for printers with
+pixels whose aspect is non-square. The file also provides
+definitions that make \specials identifying the mode in
+Metafont's GF output, and put coding information and other
+Xerox-world information in the TFM file.
