@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:34:25 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2020/05/03 11:57:32 markd Exp $
 
 DISTNAME=	listings
-PKGNAME=	tex-${DISTNAME}-1.8b
-TEXLIVE_REV=	50175
+PKGNAME=	tex-${DISTNAME}-1.8d
+TEXLIVE_REV=	54554
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/listings
@@ -16,6 +16,5 @@ DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-url>=3.2:../../print/tex-url
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

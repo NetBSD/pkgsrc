@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2020/01/18 23:34:39 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2020/05/03 11:57:33 markd Exp $
 
 DISTNAME=	pdftex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2018
-PKGREVISION=	1
-TEXLIVE_REV=	48806
+PKGNAME=	tex-${DISTNAME:S/./-/}-2020
+TEXLIVE_REV=	54227
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pdftex
@@ -15,6 +14,5 @@ TEXLIVE_IGNORE_PATTERNS=	texmf-dist/doc/man/man1/pdftex.1
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	texmf-dist/doc/pdftex/manual/syntaxform.pl
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
