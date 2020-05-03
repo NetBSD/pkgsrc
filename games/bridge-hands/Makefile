@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/06 11:54:32 asau Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/03 16:06:01 rillig Exp $
 
 DISTNAME=	hands-2.0.bsd386
 PKGNAME=	bridge-hands-2.0
@@ -13,6 +13,9 @@ EXTRACT_ELEMENTS=	hands/source
 
 WRKSRC=			${WRKDIR}/hands/source
 INSTALLATION_DIRS=	bin
+
+# harmless; only indexes 0..51 are used.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 do-build:
 	cd ${WRKSRC}; ${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}		\
