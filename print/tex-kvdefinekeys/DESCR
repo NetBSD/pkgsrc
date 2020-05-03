@@ -1,0 +1,2 @@
+The package provides a macro \kv@define@key (analogous to
+keyval's \define@key, to define keys for use by kvsetkeys.

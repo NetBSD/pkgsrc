@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:43 markd Exp $
+share/texmf-dist/doc/latex/picture/README.md
+share/texmf-dist/doc/latex/picture/picture-example.tex
+share/texmf-dist/doc/latex/picture/picture.pdf
