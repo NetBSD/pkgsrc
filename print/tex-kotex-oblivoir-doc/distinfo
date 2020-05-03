@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/06/21 08:28:41 markd Exp $
+$NetBSD: distinfo,v 1.7 2020/05/03 12:01:03 markd Exp $
 
-SHA1 (tex-kotex-oblivoir-43130/kotex-oblivoir.doc.tar.xz) = faf71f899645fcd94edc40b58ef004e8d8836f18
-RMD160 (tex-kotex-oblivoir-43130/kotex-oblivoir.doc.tar.xz) = ea1d0208f22957679bb40837d3551d7e5437a3a9
-SHA512 (tex-kotex-oblivoir-43130/kotex-oblivoir.doc.tar.xz) = ec746e7ad0c1c970e602b54146c53856ca888c0e55ad249714d7f8e37b96632777a7391f819851641f4949adc22a6ff4efbbae449b54e279c3f5a327f5404a1e
-Size (tex-kotex-oblivoir-43130/kotex-oblivoir.doc.tar.xz) = 265548 bytes
+SHA1 (kotex-oblivoir.doc.r54519.tar.xz) = a698197da87767ce226e5977e8a805100801712a
+RMD160 (kotex-oblivoir.doc.r54519.tar.xz) = 25130fd30dbfe2ded78478b2ae1590ebe40ab588
+SHA512 (kotex-oblivoir.doc.r54519.tar.xz) = bc983f9ebb5fd81dd199d212b9221fc96d438742e6146536408cb93e534feff3fe1ed1ea7fbc841810ac4332b4bfdfb4237d1205a7636d74b7b2d0e1c7c06344
+Size (kotex-oblivoir.doc.r54519.tar.xz) = 273752 bytes
