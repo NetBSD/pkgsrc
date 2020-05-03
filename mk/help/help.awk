@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.37 2020/05/03 09:06:59 rillig Exp $
+# $NetBSD: help.awk,v 1.38 2020/05/03 09:44:07 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -16,7 +16,7 @@ BEGIN {
 
 	found_anything = no;	# has some help text been found at all?
 	last_fname = "";
-	ignore_this_line = no;
+	print_this_line = yes;
 	ignore_next_empty_line = no;
 	ignore_this_section = no;
 
@@ -127,14 +127,14 @@ function array_is_empty(arr,   i, empty) {
 }
 
 {
-	ignore_this_line = (ignore_next_empty_line && $0 == "#") || $0 == "";
+	print_this_line = $0 != "" && !(ignore_next_empty_line && $0 == "#");
 	ignore_next_empty_line = no;
 }
 
 # There is no need to print the RCS Id, since the full pathname
 # is prefixed to the file contents.
 /^#.*\$.*\$$/ {
-	ignore_this_line = yes;
+	print_this_line = no;
 	ignore_next_empty_line = yes;
 }
 
@@ -149,7 +149,7 @@ function array_is_empty(arr,   i, empty) {
 		keywords[w] = yes;
 		dprint("Adding keyword \"" w "\"");
 	}
-	ignore_this_line = yes;
+	print_this_line = no;
 	ignore_next_empty_line = yes;
 }
 
@@ -170,7 +170,7 @@ $1 ~ /:$/ && $2 == ".PHONY" {
 	end_of_topic();
 }
 
-(!ignore_this_line) {
+print_this_line {
 	lines[nlines++] = $0;
 }
 
