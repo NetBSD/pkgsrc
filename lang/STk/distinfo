@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.11 2015/12/29 23:34:43 dholland Exp $
+$NetBSD: distinfo,v 1.12 2020/05/03 14:49:30 rillig Exp $
 
 SHA1 (STk-4.0.1.tar.gz) = 50dc98c2b64db1c9cca54411cb406feb4cb57600
 RMD160 (STk-4.0.1.tar.gz) = 58ad3c66f77a6ab33db5d4ca9f2510d50b6b6f0d
 SHA512 (STk-4.0.1.tar.gz) = c849077edac124f28e2a3531d818234416e143aab994e9ba55c4bbce90bdc8c0d40c3fbe9dd5af6bfe8a10892fe72dac7215a05cb95574ba03426175b26f9c47
 Size (STk-4.0.1.tar.gz) = 3673684 bytes
+SHA1 (patch-Extensions_jpeg.c) = 4a962c74ae68e5ea1b838255e466b2274b397ea2
 SHA1 (patch-aa) = 9fc50b3a2167dba7515270f7a9d8fd20bcb8e5c9
 SHA1 (patch-ab) = 3d50bb10bc3bd3d34509d2557f52df367373f3d2
 SHA1 (patch-ac) = 1cf5e558abf54488580b6f1631491280039bb45c
