@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/03/08 16:49:32 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/03 14:22:43 rillig Exp $
 
 DISTNAME=	7kaa-2.15.3
 PKGREVISION=	3
@@ -28,6 +28,10 @@ CONFIGURE_ARGS+=	--disable-sdltest
 
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/pixmaps
+
+# https://www.7kfans.com/forums/viewtopic.php?f=13&t=1150&p=8652
+# (bug report; requires login)
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 post-extract:
 	${PREFIX}/bin/icotool -x -i 1 ${WRKSRC}/src/7k.ico -o ${WRKDIR}/7kaa.png
