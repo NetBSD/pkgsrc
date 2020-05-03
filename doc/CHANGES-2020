@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2723 2020/05/03 18:29:53 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2724 2020/05/03 21:38:27 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4155,3 +4155,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-test-xdist to 1.32.0 [adam 2020-05-03]
 	Updated devel/py-Pyro to 4.80 [adam 2020-05-03]
 	Updated devel/py-pbr to 5.4.5 [adam 2020-05-03]
+	Updated www/firefox to 75.0nb3 [maya 2020-05-03]
