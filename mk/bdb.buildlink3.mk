@@ -1,12 +1,12 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.27 2019/09/02 02:23:02 rillig Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.28 2020/05/03 10:00:42 rillig Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB (BDB) implementation and that are not restricted
 # to a single one. The available BDB implementations are db1
-# (if builtin) and db[234].
+# (if builtin) and db[23456].
 #
-# FIXME: This Makefile cannot handle packages that can use only a
-# subset of { db2 db3 db4 }.
+# This Makefile cannot handle packages that can use only a subset of
+# { db2 db3 db4 db5 db6 }.
 #
 # User-settable variables:
 #
