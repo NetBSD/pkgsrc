@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/04/28 03:04:36 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/03 14:25:53 rillig Exp $
 
 DISTNAME=	DarwinStreamingSrvr5.5.5-Source
 PKGNAME=	DarwinStreamingServer-5.5.5
@@ -18,6 +18,10 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
 USE_LANGUAGES=	c c++03
+
+# 5.5.5 does this in StrPtrLen.cpp, function StrPtrLen::NumEqualIgnoreCase.
+# Fixed in 6.0.3
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 MAKE_FILE=	Makefile.POSIX
 MAKE_ENV+=	CCOMP=${CC:Q} CPLUS=${CXX:Q}\ -fPIC LINKER=${CXX:Q}
