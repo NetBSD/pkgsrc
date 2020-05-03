@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2020/01/18 21:58:44 prlw1 Exp $
+$NetBSD: distinfo,v 1.11 2020/05/03 08:54:28 bouyer Exp $
 
 SHA1 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = 272b8c904dc0127690eca2c5c20c67479e40da34
 RMD160 (xen411/ipxe-git-356f6c1b64d7a97746d1816cef8ca22bdd8d0b5d.tar.gz) = cfcb4a314c15da19b36132b27126f3bd9699d0e5
@@ -31,6 +31,7 @@ SHA1 (patch-tools_Rules.mk) = c15994d1e0c089674fdea874b56950a07be3deb5
 SHA1 (patch-tools_configure) = aa0838a1eadf70f5ed99748926234c0376989ff5
 SHA1 (patch-tools_console_daemon_utils.c) = 1c954e1edadad2607f7b87eaf2d6285be7f968ff
 SHA1 (patch-tools_debugger_gdbsx_Makefile) = 88960adedd258af3278ef105204ab97c662b8e61
+SHA1 (patch-tools_debugger_gdbsx_xg_xg_main.c) = 059551256e95858d7ade25e7637667862bd92499
 SHA1 (patch-tools_examples_Makefile) = fe258fc26e4507ca2fb4363c5e2197ee06e89d64
 SHA1 (patch-tools_firmware_etherboot_Makefile) = cc37708336c0a496511926327cfe807ac9f33ce0
 SHA1 (patch-tools_firmware_hvmloader_Makefile) = 02cac5e9314c4c71105f15a3c1c303c573d6583a
