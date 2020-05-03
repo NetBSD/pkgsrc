@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2019/12/15 22:09:30 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2020/05/03 08:00:42 rillig Exp $
 
 DISTNAME=	grep-3.3
 CATEGORIES=	textproc
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-perl-regexp
 CONFIGURE_ARGS+=	--program-prefix=g
 CONFIGURE_ENV+=		MKDIR_P=${INSTALL_DATA_DIR:Q}
+CONFIGURE_ENV+=		PERL= # none
 INFO_FILES=		yes
 TEXINFO_REQD=		4.0
 
