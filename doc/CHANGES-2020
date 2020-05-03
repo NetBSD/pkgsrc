@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2719 2020/05/03 12:04:49 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2720 2020/05/03 12:07:55 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4149,3 +4149,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added print/tex-latex-base-dev-doc version 20201001pre5 [markd 2020-05-03]
 	Updated print/tex-kotex-oblivoir-doc to 2.2.1 [markd 2020-05-03]
 	Updated print/tex-supertabular-doc to 4.1g [markd 2020-05-03]
+	Updated textproc/asciidoc to 9.0.0rc2 [tnn 2020-05-03]
