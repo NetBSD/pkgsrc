@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2037 2020/05/03 09:22:16 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2038 2020/05/03 10:34:00 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -154,7 +154,7 @@ ${_var_}+=	${${_var_}.*}
 
 CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
 
-# To sanitise environment set PKGSRC_SETENV=${SETENV} -i
+# To sanitize the environment, set PKGSRC_SETENV=${SETENV} -i.
 # This will however cause build failures (e.g. "www/firefox"). Settings
 # like "ALLOW_VULNERABLE_PACKAGES" will also not be correctly passed
 # to dependence builds.
@@ -208,8 +208,8 @@ _BUILD_DEFS+=		PKGINFODIR
 _BUILD_DEFS+=		PKGMANDIR
 _BUILD_DEFS+=		_USE_DESTDIR
 
-# Store the result in the +BUILD_INFO file so we can query for the build
-# options using "pkg_info -Q PKG_OPTIONS <pkg>".
+# Store the result in the +BUILD_INFO file so mk/pkg-build-options.mk
+# can query for the build options using "pkg_info -Q PKG_OPTIONS <pkg>".
 #
 .if defined(PKG_SUPPORTED_OPTIONS) && defined(PKG_OPTIONS)
 _BUILD_DEFS+=            PKG_OPTIONS
@@ -343,6 +343,7 @@ DO_NADA?=		${TRUE}
 
 # the FAIL command executes its arguments and then exits with a non-zero
 # status.
+# Example: ${FAIL} ${ERROR_MSG} "This is unexpected."
 FAIL?=			${SH} ${PKGSRCDIR}/mk/scripts/fail
 
 #
