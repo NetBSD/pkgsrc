@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.390 2020/05/02 22:24:24 maya Exp $
+$NetBSD: distinfo,v 1.391 2020/05/03 18:45:30 maya Exp $
 
 SHA1 (firefox-75.0.source.tar.xz) = df7904c16d525eb791728d655258b7d1fe064db9
 RMD160 (firefox-75.0.source.tar.xz) = e75ffcf93adab1198a93b42a6d2f8722be3745ce
 SHA512 (firefox-75.0.source.tar.xz) = 29c9e3455251ab5f5a3e8f2d0ad6f8b43f710d15605bf169fd5cd7ade3555da6b2df66ec26af5624c0f4bb46d5e7e3527351f648fee79f5defcb926fa6ae382a
 Size (firefox-75.0.source.tar.xz) = 324614064 bytes
 SHA1 (patch-aa) = 11060461fdaca5661e89651b8ded4a59d2abc4d7
-SHA1 (patch-browser_app_profile_firefox.js) = 74ef7612c6164aaf06bff353b32793435b021bf4
+SHA1 (patch-browser_app_profile_firefox.js) = 89cea0a66457c96ad0b94aaa524aa5942ad781d0
 SHA1 (patch-browser_components_BrowserGlue.jsm) = dcbf01db8b06db3376f0545ccfbba9dde5790c82
 SHA1 (patch-build_moz.configure_rust.configure) = ee9e207e67709f3c9455b4d22f5f254890e99ca8
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 781a063fa6ab345face53fd88404ead11ab335b2
@@ -19,8 +19,8 @@ SHA1 (patch-image_imgFrame.h) = f42357044238b1dcaa555e57c23287b1b573b895
 SHA1 (patch-ipc_chromium_src_base_lock__impl__posix.cc) = d84d9b4d416e049423120dcbf9199644ce1c93ab
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 4a6606da590cfb8d855bde58b9c6f90e98d0870c
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 35d20981d33ccdb1d8ffb8039e48798777f11658
-SHA1 (patch-ipc_glue_CrossProcessSemaphore.h) = 25e24743060acf10c776c6b3b3660f52a2e9fbe8
-SHA1 (patch-ipc_glue_CrossProcessSemaphore__posix.cpp) = f8d155ee66008b7cc4052b6a889327543b89e0bb
+SHA1 (patch-ipc_glue_CrossProcessSemaphore.h) = 295bfe10c8ba15cfbecf083e791a2d5bc53ea462
+SHA1 (patch-ipc_glue_CrossProcessSemaphore__posix.cpp) = bf26ef59cc0e200a5d4e7f1d7415666acbf0bbac
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 260c29bacd8bf265951b7a412f850bf2b292c836
 SHA1 (patch-js_src_jsfriendapi.h) = fce9627bb1c45addccec105a0f38f0a3aac3f9b3
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
