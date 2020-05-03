@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.74 2018/11/30 18:38:19 rillig Exp $
+# $NetBSD: bsd.options.mk,v 1.75 2020/05/03 10:10:05 rillig Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -125,7 +125,7 @@ BSD_OPTIONS_MK=		# defined
 # .if !empty(PKG_OPTIONS:Mwibble-foo)
 # CONFIGURE_ARGS+=	--enable-foo
 # .endif
-
+#
 # ###
 # ### LDAP support
 # ###
