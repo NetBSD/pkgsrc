@@ -1,0 +1,21 @@
+$NetBSD: patch-src_console_c,v 1.1 2020/05/03 14:38:36 rillig Exp $
+
+Not sure whether this could lead to an endless loop when someone enters a
+long password.  Anyway, using a signed character as array index is wrong.
+
+Found by GCC's -Werror=char-subscripts.
+
+Not reported upstream because this package doesn't even have a homepage
+anymore.
+
+--- src/console.c.orig	1999-04-15 16:05:13.000000000 +0000
++++ src/console.c
+@@ -177,7 +177,7 @@ local_message (char *this_message)
+ 
+   if (strstr (this_message, "PASS"))
+     {
+-      register char f;
++      size_t f;
+       for (f = 5; f < strlen (this_message); f++)
+ 	this_message[f] = 'x';
+     }
