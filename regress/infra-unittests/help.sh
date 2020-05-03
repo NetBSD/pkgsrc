@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: help.sh,v 1.2 2020/05/03 08:42:22 rillig Exp $
+# $NetBSD: help.sh,v 1.3 2020/05/03 08:49:16 rillig Exp $
 #
 # Test cases for "bmake help", mainly implemented in mk/help/help.awk.
 #
@@ -110,13 +110,8 @@ if test_case_begin "comments without keywords"; then
 	TOPIC=':all' awk -f "$pkgsrcdir/mk/help/help.awk" \
 		'Makefile' >"out"
 
-	# FIXME: should be empty
 	assert_that 'out' --file-is-lines \
-		'===> Makefile (keywords:):' \
-		'# Comment1' \
-		'# Comment2' \
-		'# Comment3' \
-		'SUBDIR+=	subdir2'
+		'No help found for :all.'
 
 	test_case_end
 fi
