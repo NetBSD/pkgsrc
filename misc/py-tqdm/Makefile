@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2020/04/10 08:04:52 adam Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/03 11:52:00 adam Exp $
 
-DISTNAME=	tqdm-4.45.0
+DISTNAME=	tqdm-4.46.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tqdm/}
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/tqdm/completion.sh
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \
