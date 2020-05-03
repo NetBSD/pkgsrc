@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2020/03/10 22:08:48 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2020/05/03 07:07:03 rillig Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -18,8 +18,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-modules=yes
 CONFIGURE_ARGS+=	--with-gs-font-dir=${PREFIX}/share/fonts/urw
-CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
-CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 CONFIGURE_ARGS+=	--without-perl
 
 PKGCONFIG_OVERRIDE+=	magick/GraphicsMagick.pc.in
