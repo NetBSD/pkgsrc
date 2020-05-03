@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/02 20:11:38 asau Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/03 16:45:52 rillig Exp $
 
 DISTNAME=	cu-prolog-3.94
 CATEGORIES=	lang
@@ -12,6 +12,9 @@ WRKSRC=		${WRKDIR}/src
 DIST_SUBDIR=	${DISTNAME}
 MAKE_FILE=	makefile
 BUILD_TARGET=	cup
+
+# harmless; the calls in print.c are all guarded
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS=	bin
 
