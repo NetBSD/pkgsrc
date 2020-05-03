@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2717 2020/05/03 11:33:21 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2718 2020/05/03 11:52:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4098,3 +4098,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated archivers/xz to 5.2.5 [adam 2020-05-03]
 	Updated databases/redis to 6.0.1 [adam 2020-05-03]
 	Updated multimedia/mkvtoolnix to 46.0.0 [adam 2020-05-03]
+	Updated devel/py-ipython to 7.14.0 [adam 2020-05-03]
+	Updated misc/py-tqdm to 4.46.0 [adam 2020-05-03]
