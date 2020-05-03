@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2019/10/01 12:36:34 tnn Exp $
+# $NetBSD: hacks.mk,v 1.2 2020/05/03 20:07:34 tnn Exp $
 
 .if !defined(OPENJDK11_HACKS_MK)
 OPENJDK11_HACKS_MK=	# empty
@@ -25,21 +25,16 @@ PKG_HACKS+=		broken-ieee-floats
 SUBST_CLASSES+=		fpu
 SUBST_STAGE.fpu=	pre-build
 SUBST_MESSAGE.fpu=	Broken FPU detected: applying floating point workarounds
-SUBST_FILES.fpu=	langtools/src/share/classes/com/sun/tools/javac/jvm/Items.java
-SUBST_FILES.fpu+=	langtools/src/share/classes/com/sun/tools/javac/parser/JavacParser.java
-SUBST_FILES.fpu+=	jdk/src/share/classes/sun/misc/DoubleConsts.java
-SUBST_FILES.fpu+=	jdk/src/share/classes/sun/misc/FloatConsts.java
-SUBST_FILES.fpu+=	jdk/src/share/classes/java/lang/Double.java
-SUBST_FILES.fpu+=	jdk/src/share/classes/java/lang/Float.java
-# Double{,Consts}.java: Replace problematic literals with binary representation
-SUBST_SED.fpu=		-e 's|2.2250738585072014e-308d*|Double.longBitsToDouble(0x10000000000000L)|ig'	# MIN_NORMAL
+SUBST_FILES.fpu=	src/jdk.compiler/share/classes/com/sun/tools/javac/jvm/Items.java
+SUBST_FILES.fpu+=	src/jdk.compiler/share/classes/com/sun/tools/javac/parser/JavacParser.java
+SUBST_FILES.fpu+=	src/java.base/share/classes/java/lang/Double.java
+SUBST_FILES.fpu+=	src/java.base/share/classes/java/lang/Float.java
+SUBST_FILES.fpu+=	src/java.base/share/classes/java/lang/FdLibm.java
+# Double.java, FdLibm.java: Replace problematic literals with binary representation
 SUBST_SED.fpu+=		-e 's|0x1.0p-1022d*|Double.longBitsToDouble(0x10000000000000L)|ig'		# MIN_NORMAL
-SUBST_SED.fpu+=		-e 's|4.9e-324d*|Double.longBitsToDouble(0x1L)|ig'				# MIN_VALUE
 SUBST_SED.fpu+=		-e 's|0x0.0000000000001p-1022d*|Double.longBitsToDouble(0x1L)|ig'		# MIN_VALUE
-# Float{,Consts}.java: Replace problematic literals with binary representation
-SUBST_SED.fpu+=		-e 's|1.17549435e-38f*|Float.intBitsToFloat(0x800000)|ig'	# MIN_NORMAL
+# Float.java: Replace problematic literals with binary representation
 SUBST_SED.fpu+=		-e 's|0x1.0p-126f*|Float.intBitsToFloat(0x800000)|ig'		# MIN_NORMAL
-SUBST_SED.fpu+=		-e 's|1.4e-45f*|Float.intBitsToFloat(0x1)|ig'			# MIN_VALUE
 SUBST_SED.fpu+=		-e 's|0x0.000002P-126f*|Float.intBitsToFloat(0x1)|ig'		# MIN_VALUE
 # JavacParser.java: avoid bogus "fp.number.too.small" error parsing literals representing Double.MIN_VALUE
 SUBST_SED.fpu+=		-e 's|n.floatValue() == 0.0f && !isZero(proper)|& \&\& Float.floatToIntBits(n) != 0x1|'
