@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2020/03/08 16:48:03 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2020/05/03 18:52:21 rillig Exp $
 
 DISTNAME=	libktorrent-${LIBKTORRENT_VER}
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	net kde
 #MASTER_SITES=	http://ktorrent.pwsp.net/downloads/${KTORRENT_VER}/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,29 +14,30 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Torrent library split from KTorrent
 LICENSE=	gnu-gpl-v2
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.libktorrent
-PKG_SUPPORTED_OPTIONS=	docs
-PLIST_VARS+=		docs
+PKG_OPTIONS_VAR=		PKG_OPTIONS.libktorrent
+PKG_SUPPORTED_OPTIONS=		doc
+PKG_OPTIONS_LEGACY_OPTS=	docs:doc
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake msgfmt pkg-config perl
 USE_CMAKE=		yes
-APIDOCS=		/share/docs/libktorrent-api
+APIDOCS=		share/doc/libktorrent-api
 WRKSRC=			${WRKDIR}/libktorrent-${LIBKTORRENT_FILEVER}
 
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mdocs)
+PLIST_VARS+=	doc
+.if !empty(PKG_OPTIONS:Mdoc)
 BUILD_DEPENDS+=	doxygen>=1.8.2:../../devel/doxygen
 BUILD_TARGET=	all docs
-PLIST.docs=	yes
+PLIST.doc=	yes
 USE_TOOLS+=	pax
 .endif
 
 post-install:
-.if !empty(PKG_OPTIONS:Mdocs)
+.if !empty(PKG_OPTIONS:Mdoc)
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}${APIDOCS}
 	cd ${WRKSRC}/apidocs && ${PAX} -wr * ${DESTDIR}${PREFIX}${APIDOCS}
 .endif
