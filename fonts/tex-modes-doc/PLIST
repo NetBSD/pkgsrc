@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 08:57:37 markd Exp $
+share/texmf-dist/doc/fonts/modes/ChangeLog
+share/texmf-dist/doc/fonts/modes/GNUmakefile
+share/texmf-dist/doc/fonts/modes/README
+share/texmf-dist/doc/fonts/modes/modedpicheck
+share/texmf-dist/doc/fonts/modes/modelist.txt
+share/texmf-dist/doc/fonts/modes/modenames.txt
+share/texmf-dist/doc/fonts/modes/modes.pdf
