@@ -5,7 +5,7 @@ and DOS code under unix.
 
 The C compiler understands K&R1 syntax, with a few restrictions
 regarding bitfields.  See the file bcc/bcc-cc1/bcc.bugs in the
-${DISTFILE} for Bruce's bug list.
+distfile for Bruce's bug list.
 
 The binutils (assembler and loader) have been renamed to as86 and ld86
 to not conflict with the system's assembler and loader, but they are
