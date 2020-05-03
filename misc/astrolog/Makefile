@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2020/01/26 17:31:42 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2020/05/03 15:08:29 rillig Exp $
 
 DISTNAME=	ast54unx
 PKGNAME=	astrolog-5.40
@@ -23,6 +23,9 @@ EXTRACT_ONLY=	${DISTNAME}.shr
 
 DIST_SUBDIR=	astrolog
 BUILD_TARGET=	astrolog
+
+# 1 in xscreen.c, 1 in charts.c, both harmless.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS=	bin
 
