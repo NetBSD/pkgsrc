@@ -1,0 +1,4 @@
+This package allows access to the various parameter values in
+TeX (catcode values), e-TeX (group, if and node types, and
+interaction mode), and LuaTeX (pdfliteral mode) by a
+hierarchical name system.

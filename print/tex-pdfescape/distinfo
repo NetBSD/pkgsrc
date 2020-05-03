@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/03 05:30:42 markd Exp $
+
+SHA1 (pdfescape.r53082.tar.xz) = cba0e022a4fff79831aedd763be4fc9aaf0f7137
+RMD160 (pdfescape.r53082.tar.xz) = 062136dc221950cc2527dcbf4b5cdf26f302c39b
+SHA512 (pdfescape.r53082.tar.xz) = ca908d58a9a0c0094fcd9bad550bf493a0dbea9e90702534a7418f9a5f506f5cedd42663f154bd227349e4e57e223b6360871bdc995eaea221c07cccaa780327
+Size (pdfescape.r53082.tar.xz) = 4264 bytes

@@ -1,0 +1,22 @@
+This package offers a means to remove the limitation, of only
+two properties, that is inherent in the way LaTeX's reference
+system works. The package implements an extensible referencing
+system, where properties may be defined and used in the course
+of a document. It provides an interface for macro programmers
+to access the new reference scheme and some modules that use
+it. Modules available are: zref-user, use zref for
+"traditional" labels and references; zref-abspage, retrieve
+absolute page numbers (physical pages, as opposed to the
+'logical' page number that is normally typeset when a page
+number is requested; zref-lastpage, provide a zref-label for
+the last page of the document; zref-nextpage, provide the page
+number of the next page of the document; zref-totpages, provide
+the total number of pages in the document; zref-pagelayout,
+provide the page layout parameters of a each page (which may
+then be printed at the end of the document); zref-perpage, make
+a counter reset for each new page; zref-titleref, make section
+title or caption text available through the reference system;
+zref-savepos, make positions on a page available; zref-dotfill,
+controlled dot-filling; zref-env, record the latest
+environment's name and the line it started on; and zref-xr,
+provide the facilities of the xr and xr-hyper packages.

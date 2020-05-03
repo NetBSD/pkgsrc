@@ -1,0 +1,5 @@
+This package provides \kvsetkeys, a variant of package keyval's
+\setkeys. It allows the user to specify a handler that deals
+with unknown options. Active commas and equal signs may be used
+(e.g. see babel's shorthands) and only one level of curly
+braces are removed from the values.

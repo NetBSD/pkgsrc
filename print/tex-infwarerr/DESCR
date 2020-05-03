@@ -1,0 +1,4 @@
+This package provides a complete set of macros for information,
+warning and error messages. Under LaTeX, the commands are
+wrappers for the corresponding LaTeX commands; under Plain TeX
+they are available as complete implementations.
