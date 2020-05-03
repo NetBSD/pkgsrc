@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/03/20 11:57:54 nia Exp $
+# $NetBSD: Makefile,v 1.26 2020/05/03 16:49:32 rillig Exp $
 
 DISTNAME=	cwtext-0.96
 PKGREVISION=	3
@@ -12,6 +12,9 @@ COMMENT=	Morse Code Generator
 MAKE_FILE=	makefile
 USE_TOOLS+=	gmake
 BUILD_TARGET=	ALL
+
+# harmless; the only call is properly guarded
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
