@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2020/04/11 12:47:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.67 2020/05/03 17:33:01 rillig Exp $
 
 DISTNAME=	gdb-8.3.1
 CATEGORIES=	devel
@@ -44,6 +44,7 @@ AUTO_MKDIRS=		yes
 .include "../../mk/bsd.prefs.mk"
 
 REPLACE_BASH+=		gdb/gcore.in
+REPLACE_BASH+=		sim/testsuite/sim/bfin/run-tests.sh
 
 PLIST_VARS+=	gcore
 .if (${OPSYS} == "SunOS" || ${OPSYS} == "NetBSD" \
