@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/01/26 17:30:46 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/03 14:58:18 rillig Exp $
 #
 
 DISTNAME=	arka-0.11
@@ -16,6 +16,9 @@ DEPENDS+=	gp-[0-9]*:../../biology/gp
 CONF_FILES=	${PREFIX}/share/examples/arka/arkarc ${PKG_SYSCONFDIR}/arkarc
 CPPFLAGS+=	-DARKA_GLOBAL=\"${PKG_SYSCONFDIR}/arkarc\"
 CPPFLAGS+=	-DARKA_PROGRAMS=\"${PKG_SYSCONFDIR}/arkarc\"
+
+# 2 harmless instances in genpak.c
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/pixmaps share/doc/arka \
 			share/examples/arka
