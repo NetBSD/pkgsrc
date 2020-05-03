@@ -1,5 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2020/05/01 07:10:19 rillig Exp $
-
+# $NetBSD: options.mk,v 1.13 2020/05/03 19:08:52 rillig Exp $
 
 # xmlada is built-in (not optional) due to gprbuild dependency
 # zlib is built-in because it's mandatory.  It even comes with AWS.
@@ -23,7 +22,6 @@ CONFIGURE_ARGS+=	PROCESSORS=${MAKE_JOBS}
 CONFIGURE_ARGS+=	PYTHON=python${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	XMLADA=true
 CONFIGURE_ARGS+=	prefix=${PREFIX}
-DOTBUILD=		release
 
 # The system libgcc is from version 4.1 which doesn't include the symbol
 # _Unwind_GetIPInfo.  If AWS uses the system zlib or if it's configured to use
@@ -41,10 +39,6 @@ CONFIGURE_ARGS+=	ZLIB=false
 CONFIGURE_ARGS+=	ZLIB=true
 .endif
 
-###################
-##  SSL Support  ##
-###################
-
 .if !empty(PKG_OPTIONS:Mssl)
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+= SOCKET=openssl
@@ -57,45 +51,20 @@ CONFIGURE_ARGS+= SOCKET=openssl
 CONFIGURE_ARGS+= SOCKET=gnutls
 .endif
 
-
-####################
-##  LDAP Support  ##
-####################
-
 .if !empty(PKG_OPTIONS:Mldap)
 CONFIGURE_ARGS+= LDAP=true
 .include "../../databases/openldap-client/buildlink3.mk"
 .endif
 
-####################
-##  IPv6 Support  ##
-####################
-
-PLIST_VARS+=		ipv6 noipv6
-.if !empty(PKG_OPTIONS:Mipv6)
+.if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	IPv6=true
 .endif
 
-#####################
-##  Debug Support  ##
-#####################
-
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	DEBUG=true
-DOTBUILD=		debug
 .endif
 
-##############################
-##  Shared Runtime Library  ##
-##############################
-
-#.if !empty(PKG_OPTIONS:Mdisable-shared-rt)
 CONFIGURE_ARGS+=	ENABLE_SHARED=false
-#.endif
-
-############################
-##  Default Library Type  ##
-############################
 
 .if !empty(PKG_OPTIONS:Mrelocatable)
 CONFIGURE_ARGS+=	DEFAULT_LIBRARY_TYPE=relocatable
