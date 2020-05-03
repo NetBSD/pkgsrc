@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2020/02/23 10:39:33 morr Exp $
+@comment $NetBSD: PLIST,v 1.50 2020/05/03 13:14:21 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -194,6 +194,7 @@ share/vim/${VIM_SUBDIR}/doc/os_390.txt
 share/vim/${VIM_SUBDIR}/doc/os_amiga.txt
 share/vim/${VIM_SUBDIR}/doc/os_beos.txt
 share/vim/${VIM_SUBDIR}/doc/os_dos.txt
+share/vim/${VIM_SUBDIR}/doc/os_haiku.txt
 share/vim/${VIM_SUBDIR}/doc/os_mac.txt
 share/vim/${VIM_SUBDIR}/doc/os_mint.txt
 share/vim/${VIM_SUBDIR}/doc/os_msdos.txt
@@ -804,6 +805,7 @@ share/vim/${VIM_SUBDIR}/syntax/bdf.vim
 share/vim/${VIM_SUBDIR}/syntax/bib.vim
 share/vim/${VIM_SUBDIR}/syntax/bindzone.vim
 share/vim/${VIM_SUBDIR}/syntax/blank.vim
+share/vim/${VIM_SUBDIR}/syntax/bsdl.vim
 share/vim/${VIM_SUBDIR}/syntax/bst.vim
 share/vim/${VIM_SUBDIR}/syntax/btm.vim
 share/vim/${VIM_SUBDIR}/syntax/bzl.vim
