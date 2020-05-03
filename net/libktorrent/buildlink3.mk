@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2020/03/08 16:48:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2020/05/03 18:52:21 rillig Exp $
 
 BUILDLINK_TREE+=	libktorrent
 
@@ -14,6 +14,6 @@ BUILDLINK_PKGSRCDIR.libktorrent?=	../../net/libktorrent
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
-.endif # LIBTORRENT_BUILDLINK3_MK
+.endif # LIBKTORRENT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libktorrent
