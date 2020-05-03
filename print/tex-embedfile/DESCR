@@ -1,0 +1,4 @@
+This package embeds files in a PDF document, using the PDF
+format's embedding operation (note the contrast with the attach
+operation used by the attachfile and attachfile2 packages).
+Currently only pdfTeX >=1.30, in PDF mode, is supported.

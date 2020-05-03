@@ -1,0 +1,5 @@
+Provides commands \alphalph and \AlphAlph. They are like
+\number but the expansion consists of lowercase and uppercase
+letters respectively (1 to a, 26 to z, 27 to aa, 52 to zz, 53
+to ba, 702 to zz, 703 to aaa, etc.). Can be used as a
+replacement for LaTeX's \@alph and \@Alph macros.
