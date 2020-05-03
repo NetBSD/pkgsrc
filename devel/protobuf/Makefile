@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/03/22 18:28:43 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2020/05/03 19:32:30 rillig Exp $
 
 DISTNAME=	protobuf-cpp-3.11.4
 PKGNAME=	${DISTNAME:S/-cpp//}
@@ -21,6 +21,11 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	protobuf-lite.pc.in
 PKGCONFIG_OVERRIDE+=	protobuf.pc.in
 TEST_TARGET=		check
+
+# false positive: the Makefile generates bash programs
+CHECK_PORTABILITY_SKIP=		benchmarks/Makefile.in
+# the [[ command will skip a test that would otherwise run
+CHECK_PORTABILITY_SKIP+=	src/google/protobuf/compiler/zip_output_unittest.sh
 
 SET_LIBDIR=	yes
 
