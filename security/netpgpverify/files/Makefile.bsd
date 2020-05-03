@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.bsd,v 1.12 2016/06/30 21:19:59 agc Exp $
+# $NetBSD: Makefile.bsd,v 1.13 2020/05/03 23:49:04 agc Exp $
 
 PROG=netpgpverify
 
@@ -11,6 +11,11 @@ SRCS+= bzlib.c zlib.c
 SRCS+= md5c.c rmd160.c sha1.c sha2.c
 
 CPPFLAGS+=-I.
+
+CPPFLAGS.bzlib.c+=	-Wno-error=implicit-fallthrough
+CPPFLAGS.zlib.c+=	-Wno-error=implicit-fallthrough
+
+LDFLAGS+=-Wl,--version-script=${.CURDIR}/verify.map
 
 .ifndef PRODUCTION
 CPPFLAGS+=-g -O0
