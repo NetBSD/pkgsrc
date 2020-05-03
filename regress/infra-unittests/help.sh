@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: help.sh,v 1.3 2020/05/03 08:49:16 rillig Exp $
+# $NetBSD: help.sh,v 1.4 2020/05/03 09:51:07 rillig Exp $
 #
 # Test cases for "bmake help", mainly implemented in mk/help/help.awk.
 #
@@ -109,6 +109,33 @@ if test_case_begin "comments without keywords"; then
 
 	TOPIC=':all' awk -f "$pkgsrcdir/mk/help/help.awk" \
 		'Makefile' >"out"
+
+	assert_that 'out' --file-is-lines \
+		'No help found for :all.'
+
+	test_case_end
+fi
+
+
+if test_case_begin "commented variables with continuation lines"; then
+
+	# When a variable assignment is commented out, it can still
+	# contain continuation lines.  These are not ordinary comments
+	# and therefore do not count to the minimum number of comment
+	# lines.
+	#
+	# Found in mk/defaults/mk.conf.
+
+	create_file_lines "mk.conf" \
+		'# Australia.' \
+		'#' \
+		'#MASTER_SITE_OPENOFFICE=	... \' \
+		'#				... \' \
+		'#				...' \
+		'#'
+
+	TOPIC=':all' awk -f "$pkgsrcdir/mk/help/help.awk" \
+		'mk.conf' >"out"
 
 	assert_that 'out' --file-is-lines \
 		'No help found for :all.'

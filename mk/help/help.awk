@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.38 2020/05/03 09:44:07 rillig Exp $
+# $NetBSD: help.awk,v 1.39 2020/05/03 09:51:07 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -16,6 +16,7 @@ BEGIN {
 
 	found_anything = no;	# has some help text been found at all?
 	last_fname = "";
+	eval_this_line = yes;
 	print_this_line = yes;
 	ignore_next_empty_line = no;
 	ignore_this_section = no;
@@ -178,7 +179,7 @@ print_this_line {
 # be all-lowercase (make targets) or all-uppercase (variable names).
 # Everything else is assumed to belong to the explaining text.
 #
-NF >= 1 && !/^[\t.]/ && !/^#*$/ && !/^#\t\t/ {
+eval_this_line && NF >= 1 && !/^[\t.]/ && !/^#*$/ && !/^#\t\t/ {
 	w = ($1 ~ /^#[A-Z]/) ? substr($1, 2) : ($1 == "#") ? $2 : $1;
 
 	# Reduce VAR.<param>, VAR.${param} and VAR.* to VAR.
@@ -232,7 +233,7 @@ $1 ~ /:$/ {
 	print_noncomment_lines = no;
 }
 
-$1 == "#" {
+eval_this_line && $1 == "#" {
 	comment_lines++;
 }
 
@@ -245,6 +246,7 @@ index(tolower($0), topic) != 0 {
 }
 
 {
+	eval_this_line = substr($0, length($0)) != "\\";
 	last_fname = FILENAME;
 }
 
