@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2016/06/16 04:06:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/05/03 11:57:31 markd Exp $
 share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 share/texmf-dist/tex/latex/latexconfig/latex.ini
-share/texmf-dist/tex/latex/latexconfig/lualatex-patch-kernel.tex
-share/texmf-dist/tex/latex/latexconfig/lualatex-reset-codes.tex
 share/texmf-dist/tex/latex/latexconfig/lualatexiniconfig.tex
 share/texmf-dist/tex/latex/latexconfig/lualatexquotejobname.lua
 share/texmf-dist/tex/latex/latexconfig/lualatexquotejobname.tex
