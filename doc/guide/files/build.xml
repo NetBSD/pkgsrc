@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.80 2020/02/24 21:13:56 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.81 2020/05/03 08:27:10 rillig Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -450,19 +450,6 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
       <literal>-l<replaceable>lib1</replaceable></literal> occurs
       before <literal>-l<replaceable>lib2</replaceable></literal>.
       </para></listitem></varlistentry>
-
-      <varlistentry><term><varname>WRAPPER_TRANSFORM_CMDS</varname></term>
-      <listitem><para>A list of transformation commands. [TODO:
-      investigate further]</para></listitem></varlistentry>
-
-      <!-- These should probably be internal variables
-	   <varlistentry><term><varname>WRAPPEES</varname></term>
-	   <listitem><para></para></listitem></varlistentry>
-	   <varlistentry><term><varname>UNWRAP_PATTERNS</varname></term>
-	   <listitem><para></para></listitem></varlistentry>
-	   <varlistentry><term><varname>UNWRAP_FILES</varname></term>
-	   <listitem><para></para></listitem></varlistentry>
-      -->
 
     </variablelist>
   </sect1>
