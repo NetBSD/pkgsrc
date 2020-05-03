@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/03 05:30:41 markd Exp $
+
+SHA1 (makerobust.r52811.tar.xz) = 0bb9ea992e816276adc52e293eff52ff40cb05dc
+RMD160 (makerobust.r52811.tar.xz) = b7d5a853d39a1fd21f948c32004a1ce532642fea
+SHA512 (makerobust.r52811.tar.xz) = 502b4dd65ae3535a2519c696b8b2ef73b3eb8f19d20af7dce94e24c8f718f827e55ddf7ff229bfc0810ab8747c94720cc7a66335a7d44065d0a0ac6b156a683e
+Size (makerobust.r52811.tar.xz) = 1036 bytes

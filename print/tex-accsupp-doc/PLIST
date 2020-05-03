@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:34 markd Exp $
+share/texmf-dist/doc/latex/accsupp/README.md
+share/texmf-dist/doc/latex/accsupp/accsupp-example1.tex
+share/texmf-dist/doc/latex/accsupp/accsupp-example2.tex
+share/texmf-dist/doc/latex/accsupp/accsupp.pdf

@@ -1,0 +1,11 @@
+Heiko Oberdiek's hobsub package (and hobsub-hyperref and
+hobsub-generic packages) defined a mechanism for concatenating
+multiple files into a single file for faster loading. The
+disadvantage is that it introduces hard dependencies between
+the source files that are included and complicates distribution
+and updates. It was principally used with hyperref but is not
+currently used in any standard packages in TeX Live. The
+packages are still distributed as simple stubs that reference
+the included packages via \RequirePackage rather than copying
+their source. The documented source of the original packages is
+available at github, but is not distributed to CTAN.

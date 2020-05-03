@@ -1,0 +1,3 @@
+This package provides the code for the color option that is
+used by packages hyperref and bookmark. It is not intended as
+package for the user.

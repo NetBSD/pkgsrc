@@ -1,0 +1,6 @@
+This LaTeX packages provides two hooks for \end{document} that
+are executed after the hook of \AtEndDocument:
+\AfterLastShipout can be used for code that is to be executed
+right after the last \clearpage before the `.aux' file is
+closed. \AtVeryEndDocument is used for code after closing and
+final reading of the `.aux' file.
