@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2722 2020/05/03 18:05:16 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.2723 2020/05/03 18:29:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4152,3 +4152,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/asciidoc to 9.0.0rc2 [tnn 2020-05-03]
 	Updated math/py-statsmodels to 0.11.1 [msk 2020-05-03]
 	Updated geography/proj to 6.3.2 [gdt 2020-05-03]
+	Updated devel/py-test-xdist to 1.32.0 [adam 2020-05-03]
+	Updated devel/py-Pyro to 4.80 [adam 2020-05-03]
+	Updated devel/py-pbr to 5.4.5 [adam 2020-05-03]
