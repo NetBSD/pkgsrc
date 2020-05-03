@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2020/03/10 19:01:31 bacon Exp $
+# $NetBSD: Makefile,v 1.81 2020/05/03 13:02:18 rillig Exp $
 
 DISTNAME=	binutils-2.34
 PKGREVISION=	1
@@ -40,6 +40,7 @@ LIB_PATH:=		/lib64:${LIB_PATH}
 .endif
 CONFIGURE_ARGS+=	--with-lib-path=${LIB_PATH}
 CONFIGURE_ARGS+=	--program-prefix=g
+CONFIGURE_ENV+=		ac_cv_prog_PERL= # not needed
 BINUTILS_PREFIX=	${PREFIX}/${MACHINE_GNU_PLATFORM}
 
 PLIST_SRC=	${PKGDIR}/PLIST.common
