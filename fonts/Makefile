@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.337 2020/04/26 12:24:50 markd Exp $
+# $NetBSD: Makefile,v 1.338 2020/05/03 08:58:49 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -638,6 +638,8 @@ SUBDIR+=	tex-mintspirit
 SUBDIR+=	tex-mintspirit-doc
 SUBDIR+=	tex-mnsymbol
 SUBDIR+=	tex-mnsymbol-doc
+SUBDIR+=	tex-modes
+SUBDIR+=	tex-modes-doc
 SUBDIR+=	tex-musixtex-fonts
 SUBDIR+=	tex-musixtex-fonts-doc
 SUBDIR+=	tex-mxedruli
