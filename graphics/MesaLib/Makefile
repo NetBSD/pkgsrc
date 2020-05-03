@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2020/05/02 12:13:43 tnn Exp $
+# $NetBSD: Makefile,v 1.194 2020/05/03 11:04:46 nia Exp $
 
 DISTNAME=	mesa-20.0.6
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -52,6 +52,9 @@ MESA_PLATFORMS+=	drm surfaceless
 MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
 MESON_ARGS+=		-Dgallium-xa=true
+.  if ${X11_TYPE} == "native" && !exists(${X11BASE}/include/xcb/dri3.h)
+MESON_ARGS+=		-Ddri3=false
+.  endif
 PLIST.kms=		yes
 .  if !empty(MACHINE_ARCH:M*arm*) || \
       ${MACHINE_ARCH} == "aarch64"
