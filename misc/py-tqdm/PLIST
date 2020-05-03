@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/01/29 14:01:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/05/03 11:52:00 adam Exp $
 bin/tqdm-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -45,6 +45,7 @@ ${PYSITELIB}/tqdm/autonotebook.pyo
 ${PYSITELIB}/tqdm/cli.py
 ${PYSITELIB}/tqdm/cli.pyc
 ${PYSITELIB}/tqdm/cli.pyo
+${PYSITELIB}/tqdm/completion.sh
 ${PYSITELIB}/tqdm/contrib/__init__.py
 ${PYSITELIB}/tqdm/contrib/__init__.pyc
 ${PYSITELIB}/tqdm/contrib/__init__.pyo
@@ -54,6 +55,9 @@ ${PYSITELIB}/tqdm/contrib/concurrent.pyo
 ${PYSITELIB}/tqdm/contrib/itertools.py
 ${PYSITELIB}/tqdm/contrib/itertools.pyc
 ${PYSITELIB}/tqdm/contrib/itertools.pyo
+${PYSITELIB}/tqdm/contrib/telegram.py
+${PYSITELIB}/tqdm/contrib/telegram.pyc
+${PYSITELIB}/tqdm/contrib/telegram.pyo
 ${PYSITELIB}/tqdm/gui.py
 ${PYSITELIB}/tqdm/gui.pyc
 ${PYSITELIB}/tqdm/gui.pyo
