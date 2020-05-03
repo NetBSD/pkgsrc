@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/01/26 08:39:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/05/03 11:57:33 markd Exp $
 man/man1/pdfetex.1
 share/texmf-dist/doc/pdftex/NEWS
 share/texmf-dist/doc/pdftex/README
@@ -50,9 +50,29 @@ share/texmf-dist/doc/pdftex/tests/05-mediabox/test-normal.tex
 share/texmf-dist/doc/pdftex/tests/05-mediabox/test-omit-mediabox.tex
 share/texmf-dist/doc/pdftex/tests/06-pkmap/Makefile
 share/texmf-dist/doc/pdftex/tests/06-pkmap/cmb10.72pk
+share/texmf-dist/doc/pdftex/tests/06-pkmap/cmr10.360pk
 share/texmf-dist/doc/pdftex/tests/06-pkmap/cmr10.72pk
 share/texmf-dist/doc/pdftex/tests/06-pkmap/prepatch.pdf
 share/texmf-dist/doc/pdftex/tests/06-pkmap/test-pkmap.tex
 share/texmf-dist/doc/pdftex/tests/07-mapwarn/Makefile
 share/texmf-dist/doc/pdftex/tests/07-mapwarn/test-mapwarn.tex
+share/texmf-dist/doc/pdftex/tests/08-pdfprimitive/Makefile
+share/texmf-dist/doc/pdftex/tests/08-pdfprimitive/test-pdfprimitive-non.tex
+share/texmf-dist/doc/pdftex/tests/08-pdfprimitive/test-pdfprimitive-ok.tex
+share/texmf-dist/doc/pdftex/tests/08-pdfprimitive/test-pdfprimitive-post.tex
+share/texmf-dist/doc/pdftex/tests/09-fontobjnum/Makefile
+share/texmf-dist/doc/pdftex/tests/09-fontobjnum/test-fontobjnum.tex
+share/texmf-dist/doc/pdftex/tests/10-moddate/Makefile
+share/texmf-dist/doc/pdftex/tests/10-moddate/test-moddate-abs.tex
+share/texmf-dist/doc/pdftex/tests/10-moddate/test-moddate.tex
+share/texmf-dist/doc/pdftex/tests/11-omitcharset/Makefile
+share/texmf-dist/doc/pdftex/tests/11-omitcharset/test-omitcharset.tex
+share/texmf-dist/doc/pdftex/tests/12-pdf2/Makefile
+share/texmf-dist/doc/pdftex/tests/12-pdf2/incl1.tex
+share/texmf-dist/doc/pdftex/tests/12-pdf2/incl2.tex
+share/texmf-dist/doc/pdftex/tests/12-pdf2/test-compress2.tex
+share/texmf-dist/doc/pdftex/tests/12-pdf2/test-doc1incl2.tex
+share/texmf-dist/doc/pdftex/tests/12-pdf2/test-doc2incl1.tex
+share/texmf-dist/doc/pdftex/tests/12-pdf2/test-doc2incl2.tex
+share/texmf-dist/doc/pdftex/tests/12-pdf2/test-pdfmajor.tex
 share/texmf-dist/doc/pdftex/tests/Common.mak
