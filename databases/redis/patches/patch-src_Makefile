@@ -1,8 +1,9 @@
-$NetBSD: patch-src_Makefile,v 1.1 2018/12/13 19:35:12 adam Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2020/05/03 11:31:39 adam Exp $
 
-Add DESTDIR support. Fix NetBSD support.
+Add DESTDIR support.
+Fix NetBSD support.
 
---- src/Makefile.orig	2018-12-12 12:25:58.000000000 +0000
+--- src/Makefile.orig	2020-05-01 22:10:20.000000000 +0000
 +++ src/Makefile
 @@ -30,8 +30,8 @@ WARN=-Wall -W -Wno-missing-field-initial
  OPT=$(OPTIMIZATION)
@@ -12,10 +13,10 @@ Add DESTDIR support. Fix NetBSD support.
 -INSTALL=install
 +INSTALL_BIN=$(DESTDIR)$(PREFIX)/bin
 +INSTALL=$(BSD_INSTALL_PROGRAM)
+ PKG_CONFIG?=pkg-config
  
  # Default allocator defaults to Jemalloc if it's not an ARM
- MALLOC=libc
-@@ -109,6 +109,10 @@ ifeq ($(uname_S),OpenBSD)
+@@ -121,6 +121,10 @@ ifeq ($(uname_S),OpenBSD)
      	endif
  
  else
@@ -26,7 +27,7 @@ Add DESTDIR support. Fix NetBSD support.
  ifeq ($(uname_S),FreeBSD)
  	# FreeBSD
  	FINAL_LIBS+= -lpthread -lexecinfo
-@@ -126,6 +130,7 @@ endif
+@@ -138,6 +142,7 @@ endif
  endif
  endif
  endif
