@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:30:28 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/03 17:40:34 rillig Exp $
 
 DISTNAME=	gdb-7.11
 PKGREVISION=	6
@@ -14,7 +14,7 @@ BROKEN_GETTEXT_DETECTION=	yes
 GNU_CONFIGURE=			YES
 USE_PKGLOCALEDIR=		YES
 USE_LIBTOOL=			YES
-USE_TOOLS+=			gmake msgfmt makeinfo perl:build
+USE_TOOLS+=			gmake msgfmt makeinfo perl:build bash
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 INSTALL_TARGET=			install install-info
 TEST_TARGET=			check
@@ -29,6 +29,8 @@ SUBST_FILES.fix-depcomp+=	gdb/configure
 SUBST_SED.fix-depcomp+=		-e 's,< ./depcomp,${_OVERRIDE_PATH.depcomp},'
 
 AUTO_MKDIRS=		yes
+
+REPLACE_BASH+=		sim/testsuite/sim/bfin/run-tests.sh
 
 .include "options.mk"
 
