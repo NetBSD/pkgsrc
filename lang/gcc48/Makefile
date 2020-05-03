@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2020/01/18 23:32:42 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2020/05/03 17:37:47 rillig Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
@@ -23,10 +23,13 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
+CHECK_PORTABILITY_SKIP+=	contrib/* # not needed
+
 USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake makeinfo sed:run
 USE_TOOLS.NetBSD+=	gsed
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
 GCC_REQD+=		4.4
 ## Build outside ${WRKSRC}
 OBJDIR=			../build
