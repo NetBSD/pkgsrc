@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2020/04/12 08:28:34 adam Exp $
+# $NetBSD: Makefile,v 1.48 2020/05/03 19:41:50 rillig Exp $
 
 DISTNAME=	redmine-4.0.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -215,8 +215,6 @@ SUBST_CLASSES+=		rake
 SUBST_STAGE.rake=	pre-configure
 SUBST_MESSAGE.rake=	Replacing path to rake program.
 SUBST_FILES.rake=	${DISTNAME}/Rakefile
-SUBST_FILES.rake+=	actionpack-action_caching-1.2.0/Rakefile
-SUBST_FILES.rake+=	concurrent-ruby-1.1.5/Rakefile
 SUBST_FILES.rake+=	ruby-openid-2.9.2/examples/rails_openid/Rakefile
 SUBST_FILES.rake+=	simplecov-0.14.1/Rakefile
 SUBST_SED.rake=		-e "s|/usr/bin/env rake|${PREFIX}/${RM_DIR}/gems/bin/rake|g"
