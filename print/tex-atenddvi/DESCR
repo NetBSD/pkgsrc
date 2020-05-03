@@ -1,0 +1,6 @@
+LaTeX offers \AtBeginDvi. This package provides the counterpart
+\AtEndDvi. The execution of its argument is delayed to the end
+of the document at the end of the last page. At this point
+\special and \write remain effective, because they are put into
+the last page. This is the main difference from the LaTeX
+command \AtEndDocument.

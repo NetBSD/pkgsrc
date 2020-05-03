@@ -1,0 +1,2 @@
+This package selects the input encoding by specifying pairs of
+input characters and their glyph names.

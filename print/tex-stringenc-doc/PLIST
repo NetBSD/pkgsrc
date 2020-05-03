@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:44 markd Exp $
+share/texmf-dist/doc/latex/stringenc/README.md
+share/texmf-dist/doc/latex/stringenc/stringenc.pdf

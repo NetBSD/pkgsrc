@@ -1,0 +1,6 @@
+Package listings does not support files with multi-byte
+encodings such as UTF-8. In the case of \lstinputlisting, a
+simple workaround is possible if a one-byte encoding exists
+that the file can be converted to. The package requires the
+e-TeX extensions under pdfTeX (in either PDF or DVI output
+mode).

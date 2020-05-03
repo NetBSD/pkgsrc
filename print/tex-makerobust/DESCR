@@ -1,0 +1,9 @@
+Heiko Oberdiek's makerobust package defined a command with name
+\MakeRobustCommand that could be used to make fragile commands
+robust. The LaTeX format has, since 2015, included a command
+\MakeRobust with the same syntax and behaviour. Also by 2019,
+almost all commands in LaTeX that may be used in a moving
+argument are already robust. This package is now just a simple
+one-liner defining the name \MakeRobustCommand as an alias for
+\MakeRobust. This package should not be used in any new
+documents.

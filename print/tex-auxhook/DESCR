@@ -1,0 +1,2 @@
+This package auxhook provides hooks for adding stuff at the
+begin of .aux files.

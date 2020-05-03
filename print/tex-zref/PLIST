@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:45 markd Exp $
+share/texmf-dist/tex/latex/zref/zref-abspage.sty
+share/texmf-dist/tex/latex/zref/zref-abspos.sty
+share/texmf-dist/tex/latex/zref/zref-base.sty
+share/texmf-dist/tex/latex/zref/zref-counter.sty
+share/texmf-dist/tex/latex/zref/zref-dotfill.sty
+share/texmf-dist/tex/latex/zref/zref-env.sty
+share/texmf-dist/tex/latex/zref/zref-hyperref.sty
+share/texmf-dist/tex/latex/zref/zref-lastpage.sty
+share/texmf-dist/tex/latex/zref/zref-marks.sty
+share/texmf-dist/tex/latex/zref/zref-nextpage.sty
+share/texmf-dist/tex/latex/zref/zref-pageattr.sty
+share/texmf-dist/tex/latex/zref/zref-pagelayout.sty
+share/texmf-dist/tex/latex/zref/zref-perpage.sty
+share/texmf-dist/tex/latex/zref/zref-runs.sty
+share/texmf-dist/tex/latex/zref/zref-savepos.sty
+share/texmf-dist/tex/latex/zref/zref-thepage.sty
+share/texmf-dist/tex/latex/zref/zref-titleref.sty
+share/texmf-dist/tex/latex/zref/zref-totpages.sty
+share/texmf-dist/tex/latex/zref/zref-user.sty
+share/texmf-dist/tex/latex/zref/zref-xr.sty
+share/texmf-dist/tex/latex/zref/zref.sty

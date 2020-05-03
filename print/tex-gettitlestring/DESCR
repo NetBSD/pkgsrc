@@ -1,0 +1,2 @@
+Cleans up the title string (removing \label commands) for
+packages (such as nameref) that typeset such strings.

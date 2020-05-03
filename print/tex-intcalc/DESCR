@@ -1,0 +1,3 @@
+This package provides expandable arithmetic operations with
+integers, using the e-TeX extension \numexpr if it is
+available.

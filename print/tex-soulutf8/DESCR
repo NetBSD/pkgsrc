@@ -1,0 +1,3 @@
+This package extends package soul and adds some support for
+UTF-8. Namely the input encodings in 'utf8.def' from package
+inputenc and 'utf8x.def' from package ucs are supported.

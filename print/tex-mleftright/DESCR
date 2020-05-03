@@ -1,0 +1,4 @@
+The package defines variants \mleft and \mright of \left and
+\right, that make the delimiters act as \mathopen and
+\mathclose. These commands address spacing difficulties in
+subformulas.

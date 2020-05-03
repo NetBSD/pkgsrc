@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:37 markd Exp $
+share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty

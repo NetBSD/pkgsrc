@@ -1,0 +1,4 @@
+There are macro and environment arguments that expect numbers
+that will internally be multiplied by \unitlength. This package
+extends the syntax of these arguments, so that dimensions with
+calculation support may be used for these arguments.

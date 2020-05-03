@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:43 markd Exp $
+share/texmf-dist/doc/latex/rerunfilecheck/README.md
+share/texmf-dist/doc/latex/rerunfilecheck/rerunfilecheck-example.cfg
+share/texmf-dist/doc/latex/rerunfilecheck/rerunfilecheck.pdf

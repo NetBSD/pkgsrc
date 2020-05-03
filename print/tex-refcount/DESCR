@@ -1,0 +1,7 @@
+Provides commands \setcounterref and \addtocounterref which use
+the section (or whatever) number from the reference as the
+value to put into the counter, as in: ...\label{sec:foo} ...
+\setcounterref{foonum}{sec:foo} Commands \setcounterpageref and
+\addtocounterpageref do the corresponding thing with the page
+reference of the label. No .ins file is distributed; process
+the .dtx with plain TeX to create one.

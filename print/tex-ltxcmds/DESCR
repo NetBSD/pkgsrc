@@ -1,0 +1,3 @@
+This package exports some utility macros from the LaTeX kernel
+into a separate namespace and also makes them available for
+other formats such as plain TeX.

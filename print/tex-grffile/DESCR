@@ -1,0 +1,6 @@
+The original package extended the file name processing of
+package graphics to support a larger range of file names. The
+base LaTeX code now supports multiple dots and spaces, and this
+package by default is a stub that just loads graphicx. However,
+\usepackage{grffile}[=v1] may be used to access version 1(.18)
+of the package if that is needed.

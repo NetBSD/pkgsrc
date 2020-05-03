@@ -1,0 +1,2 @@
+This package declares box drawing characters of old code pages,
+e.g. cp437. It uses rules instead of using a font.

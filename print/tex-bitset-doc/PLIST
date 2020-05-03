@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:36 markd Exp $
+share/texmf-dist/doc/latex/bitset/README.md
+share/texmf-dist/doc/latex/bitset/bitset.pdf

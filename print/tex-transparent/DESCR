@@ -1,0 +1,3 @@
+Since version 1.40 pdfTeX supports several color stacks; the
+package uses a separate colour stack for control of
+transparency (which is not, of course, a colour).

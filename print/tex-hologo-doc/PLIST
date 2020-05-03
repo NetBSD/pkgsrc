@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:38 markd Exp $
+share/texmf-dist/doc/latex/hologo/README.md
+share/texmf-dist/doc/latex/hologo/example/hologo-example.tex
+share/texmf-dist/doc/latex/hologo/hologo.pdf
