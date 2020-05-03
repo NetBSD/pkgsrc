@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2019/01/30 10:06:15 markd Exp $
+$NetBSD: distinfo,v 1.4 2020/05/03 11:57:33 markd Exp $
 
-SHA1 (tex-parskip-49730/parskip.doc.tar.xz) = 45e61f0fc27fc53a7462a687a54ea64a0fced9d2
-RMD160 (tex-parskip-49730/parskip.doc.tar.xz) = 50bfb6e212772165c2321f8cd4771f8079a38fc3
-SHA512 (tex-parskip-49730/parskip.doc.tar.xz) = f5bc216eea48e94d993ce55b6692a2235c39a3f495867f36a0afbfecee847297ce847e38f292aeb052b8002a6641c07d6e81b9e3beda3fd5643c8bcb2febc5d6
-Size (tex-parskip-49730/parskip.doc.tar.xz) = 309408 bytes
+SHA1 (parskip.doc.r53503.tar.xz) = dfbc7e0a938a2c94bea83de85181a1bf876b307f
+RMD160 (parskip.doc.r53503.tar.xz) = 01fad409ec5ce5bf732d9802bdb6d2f03cd1005c
+SHA512 (parskip.doc.r53503.tar.xz) = fe5ed5b4a7a89917603859623cd053c7a4b78de2f90c85bcf18e829b4e44e7e72a094408008fce88e2bbc0b2f235b38014aecf471cb8c7554a462065df60280d
+Size (parskip.doc.r53503.tar.xz) = 308724 bytes

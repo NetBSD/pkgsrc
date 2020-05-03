@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2019/07/17 11:14:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/05/03 11:57:33 markd Exp $
+share/texmf-dist/scripts/pgf/Makefile.pgf_release
+share/texmf-dist/scripts/pgf/pgfrevisionfile.sh
 share/texmf-dist/tex/context/third/pgf/basiclayer/t-pgf.tex
 share/texmf-dist/tex/context/third/pgf/basiclayer/t-pgfbim.tex
 share/texmf-dist/tex/context/third/pgf/basiclayer/t-pgfbla.tex
@@ -348,6 +350,7 @@ share/texmf-dist/tex/generic/pgf/libraries/luamath/pgflibraryluamath.code.tex
 share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.spaced.code.tex
+share/texmf-dist/tex/generic/pgf/libraries/pgflibrarybbox.code.tex
 share/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
 share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
 share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfixedpointarithmetic.code.tex

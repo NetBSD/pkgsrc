@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/01/26 02:48:28 markd Exp $
+$NetBSD: distinfo,v 1.5 2020/05/03 11:57:33 markd Exp $
 
-SHA1 (tex-overpic-48550/overpic.tar.xz) = 123fd1c8bf3afe8c869ab724109f6f0524eaf4bf
-RMD160 (tex-overpic-48550/overpic.tar.xz) = 9565201cfcef32ecbf1410e6328f1225e3829532
-SHA512 (tex-overpic-48550/overpic.tar.xz) = b7e0d89f8bb244f6a33cd27df558c9cebbea776cc05bdca0b5f7a5451e983ea1599ade14c1f2b95cf447e566f22fd8af7ea0038b22d121f3b209014b3b449a18
-Size (tex-overpic-48550/overpic.tar.xz) = 1756 bytes
+SHA1 (overpic.r53889.tar.xz) = 68cf191bd21fcb6b3c244b25443f2f763fb9d444
+RMD160 (overpic.r53889.tar.xz) = 3f92d634d5544b1af95e6776da341936e04f444e
+SHA512 (overpic.r53889.tar.xz) = f6946c04fb1bd17f8708698671c17037688198996cbfac9b358169d1cfbaed9835b1b05b7779f3b4545c3b7de1d0ccd5148757b3cf125983ab0cdb8d895c5e69
+Size (overpic.r53889.tar.xz) = 1728 bytes

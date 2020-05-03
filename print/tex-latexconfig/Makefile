@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2019/12/06 20:21:50 markd Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/03 11:57:31 markd Exp $
 
 DISTNAME=	latexconfig
-PKGNAME=	tex-${DISTNAME}-2016
-TEXLIVE_REV=	40274
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	53525
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Files used to generate LaTeX formats
 
 CONFLICTS+=	tex-bin-latex<2008.12778nb5
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

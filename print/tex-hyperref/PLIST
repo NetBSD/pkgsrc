@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/08/07 09:09:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/05/03 11:57:31 markd Exp $
 share/texmf-dist/tex/latex/hyperref/backref.sty
 share/texmf-dist/tex/latex/hyperref/hdvipdfm.def
 share/texmf-dist/tex/latex/hyperref/hdvips.def
@@ -13,7 +13,6 @@ share/texmf-dist/tex/latex/hyperref/hvtex.def
 share/texmf-dist/tex/latex/hyperref/hvtexhtm.def
 share/texmf-dist/tex/latex/hyperref/hvtexmrk.def
 share/texmf-dist/tex/latex/hyperref/hxetex.def
-share/texmf-dist/tex/latex/hyperref/hylatex.ltx
 share/texmf-dist/tex/latex/hyperref/hyperref.sty
 share/texmf-dist/tex/latex/hyperref/hypertex.def
 share/texmf-dist/tex/latex/hyperref/minitoc-hyper.sty
