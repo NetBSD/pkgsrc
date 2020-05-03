@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2019/09/18 15:29:21 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.6 2020/05/03 12:51:52 rillig Exp $
 #
 # used by cross/mingw-w64-x86_64-gcc-bootstrap/Makefile
 # used by cross/mingw-w64-i686-gcc-bootstrap/Makefile
@@ -19,6 +19,7 @@ DISTINFO_FILE=		${.CURDIR}/../../cross/mingw-w64-x86_64-gcc/distinfo
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
 GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}-bootstrap
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
@@ -34,6 +35,8 @@ CONFIGURE_ARGS+=	--enable-lto
 CONFIGURE_ARGS+=	--disable-dw2-exceptions
 CONFIGURE_ARGS+=	--enable-version-specific-runtime-libs
 CONFIGURE_ARGS+=	--disable-multilib
+
+CHECK_PORTABILITY_SKIP+=	contrib/*
 
 INFO_FILES=		yes
 
