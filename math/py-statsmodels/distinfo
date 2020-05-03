@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/01/08 01:23:22 minskim Exp $
+$NetBSD: distinfo,v 1.5 2020/05/03 16:13:11 minskim Exp $
 
-SHA1 (statsmodels-0.10.2.tar.gz) = 084998f7bb0b42d48e73820b7f84d5c37782ce2e
-RMD160 (statsmodels-0.10.2.tar.gz) = 9b437ff8df046770847ac865d4c4b55b7e1b4e3b
-SHA512 (statsmodels-0.10.2.tar.gz) = bd1c0784b0b17a3ca69fef5848f5eea8dcf76b1943599a5e5c285e45b7fcc7e44c0e388f007913d420ff6f3cb66a653d1c43e6e8addef534ff5572fa69ffb54a
-Size (statsmodels-0.10.2.tar.gz) = 14065612 bytes
+SHA1 (statsmodels-0.11.1.tar.gz) = 2b0ca6d66ec4415e8fe4b501149c901d92f73d9c
+RMD160 (statsmodels-0.11.1.tar.gz) = 86d2ea3a9f702c787686b5c7d3e79feb2dc0747d
+SHA512 (statsmodels-0.11.1.tar.gz) = 54afe55a23b431154c159f44d284aa093f3368988f0695c0f3fbb206046cdfb171ab2ba51ce94285d567b8536141f93a1ef404b5f7222f1e61264baf0541926d
+Size (statsmodels-0.11.1.tar.gz) = 15381516 bytes
