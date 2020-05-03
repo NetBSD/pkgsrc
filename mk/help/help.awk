@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.39 2020/05/03 09:51:07 rillig Exp $
+# $NetBSD: help.awk,v 1.40 2020/05/03 10:51:06 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -18,8 +18,8 @@ BEGIN {
 	last_fname = "";
 	eval_this_line = yes;
 	print_this_line = yes;
-	ignore_next_empty_line = no;
-	ignore_this_section = no;
+	eval_next_empty_line = yes;
+	print_this_section = yes;
 
 	delete lines;		# the collected lines
 	nlines = 0;		# the number of lines collected so far
@@ -43,7 +43,7 @@ function end_of_topic(   relevant, has_keywords, skip_reason) {
 		? "Ignoring section because of missing keywords." \
 		: comment_lines <= 2 \
 		? "Ignoring section because of too small comment." \
-		: ignore_this_section \
+		: !print_this_section \
 		? "Ignoring section because of a previous decision." \
 		: "";
 
@@ -99,13 +99,13 @@ function sorted_keys(array, prefix,   elem, list, listlen, i, j, tmp, result) {
 }
 
 function cleanup() {
-	ignore_next_empty_line = yes;
+	eval_next_empty_line = no;
 	delete lines;
 	nlines = 0;
 	delete keywords;
 	comment_lines = 0;
 	print_noncomment_lines = yes;
-	ignore_this_section = no;
+	print_this_section = yes;
 }
 
 function dprint(msg) {
@@ -128,22 +128,22 @@ function array_is_empty(arr,   i, empty) {
 }
 
 {
-	print_this_line = $0 != "" && !(ignore_next_empty_line && $0 == "#");
-	ignore_next_empty_line = no;
+	print_this_line = $0 != "" && !(!eval_next_empty_line && $0 == "#");
+	eval_next_empty_line = yes;
 }
 
 # There is no need to print the RCS Id, since the full pathname
 # is prefixed to the file contents.
 /^#.*\$.*\$$/ {
 	print_this_line = no;
-	ignore_next_empty_line = yes;
+	eval_next_empty_line = no;
 }
 
 # The lines containing the keywords should also not appear in
 # the output for now. This decision is not final since it may
 # be helpful for the user to know by which keywords a topic
 # can be reached.
-($1 == "#" && $2 == "Keywords:") {
+$1 == "#" && $2 == "Keywords:" {
 	for (i = 3; i <= NF; i++) {
 		w = ($i == toupper($i)) ? tolower($i) : $i;
 		sub(/,$/, "", w);
@@ -151,16 +151,16 @@ function array_is_empty(arr,   i, empty) {
 		dprint("Adding keyword \"" w "\"");
 	}
 	print_this_line = no;
-	ignore_next_empty_line = yes;
+	eval_next_empty_line = no;
 }
 
-($0 == "#") {
-	ignore_next_empty_line = no;
+$0 == "#" {
+	eval_next_empty_line = yes;
 }
 
 $1 == "#" && $2 == "Copyright" {
 	dprint("Ignoring the section because it contains \"Copyright\".");
-	ignore_this_section = yes;
+	print_this_section = no;
 }
 
 # Don't show the user the definition of make targets, since they are
