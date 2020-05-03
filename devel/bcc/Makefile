@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.31 2019/11/03 10:39:06 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/05/03 16:01:27 rillig Exp $
 
 DISTNAME=		bcc
-PKGREVISION=		2
+PKGREVISION=		3
 PKGNAME=		bcc-95.3.12
 CATEGORIES=		devel lang
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Bruce Evans' C compiler (with as and ld); can do 16-bit code
+LICENSE=		gnu-gpl-v2
 
 CONFLICTS=		bin86-[0-9]*
 CONFLICTS+=		dev86-[0-9]*
@@ -27,14 +28,17 @@ MAKE_FLAGS+=		CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
 .include "../../mk/bsd.prefs.mk"
 
 # This package has LP64 issues, so must build as 32-bit binary.
-.for P in ${LP64PLATFORMS}
-.  if ${MACHINE_PLATFORM:M${P}}
+.for platform in ${LP64PLATFORMS}
+.  if ${MACHINE_PLATFORM:M${platform}}
 CFLAGS+=		-m32
 LDFLAGS+=		-m32
 .  endif
 .endfor
 
 CPPFLAGS.DragonFly+=	-D_POSIX_SOURCE
+
+# Lots of array[char] expressions, but all harmless.
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 post-extract:
 	set -e; \
