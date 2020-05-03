@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2721 2020/05/03 16:14:37 minskim Exp $
+$NetBSD: CHANGES-2020,v 1.2722 2020/05/03 18:05:16 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4151,3 +4151,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/tex-supertabular-doc to 4.1g [markd 2020-05-03]
 	Updated textproc/asciidoc to 9.0.0rc2 [tnn 2020-05-03]
 	Updated math/py-statsmodels to 0.11.1 [msk 2020-05-03]
+	Updated geography/proj to 6.3.2 [gdt 2020-05-03]
