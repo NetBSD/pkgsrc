@@ -1316,7 +1316,7 @@ read_compressed(pgpv_t *pgp, pgpv_compress_t *compressed, uint8_t *p, size_t len
 		ok = (inflateInit(&z) == Z_OK);
 		break;
 	case BZIP2_COMPRESSION:
-		ok = (BZ2_bzDecompressInit(&bz, 1, 0) == BZ_OK);
+		ok = (netpgpv_BZ2_bzDecompressInit(&bz, 1, 0) == BZ_OK);
 		break;
 	}
 	if (!ok) {
@@ -1330,7 +1330,7 @@ read_compressed(pgpv_t *pgp, pgpv_compress_t *compressed, uint8_t *p, size_t len
 		unzmem->size = z.total_out;
 		break;
 	case BZIP2_COMPRESSION:
-		ok = (BZ2_bzDecompress(&bz) == BZ_STREAM_END);
+		ok = (netpgpv_BZ2_bzDecompress(&bz) == BZ_STREAM_END);
 		unzmem->size = ((uint64_t)bz.total_out_hi32 << 32) | bz.total_out_lo32;
 		break;
 	}
@@ -1881,7 +1881,7 @@ rsa_padding_check_none(uint8_t *to, int tlen, const uint8_t *from, int flen, int
 
 /* check against the exponent/moudulo operation */
 static int
-lowlevel_rsa_public_check(const uint8_t *encbuf, int enclen, uint8_t *dec, const rsa_pubkey_t *rsa)
+lowlevel_rsa_public_check(const uint8_t *encbuf, int enclen, uint8_t *dec, const netpgpv_rsa_pubkey_t *rsa)
 {
 	uint8_t		*decbuf;
 	PGPV_BIGNUM		*decbn;
@@ -1947,10 +1947,10 @@ err:
 
 /* verify */
 static int
-rsa_public_decrypt(int enclen, const unsigned char *enc, unsigned char *dec, RSA *rsa, int padding)
+rsa_public_decrypt(int enclen, const unsigned char *enc, unsigned char *dec, NETPGPV_RSA *rsa, int padding)
 {
-	rsa_pubkey_t	pub;
-	int		ret;
+	netpgpv_rsa_pubkey_t	pub;
+	int			ret;
 
 	if (enc == NULL || dec == NULL || rsa == NULL) {
 		return 0;
@@ -1985,7 +1985,7 @@ estimate_primarykey_size(pgpv_primarykey_t *primary)
 static int 
 pgpv_rsa_public_decrypt(uint8_t *out, const uint8_t *in, size_t length, const pgpv_pubkey_t *pubkey)
 {
-	RSA            *orsa;
+	NETPGPV_RSA    *orsa;
 	int             n;
 
 	if ((orsa = calloc(1, sizeof(*orsa))) == NULL) {
@@ -1993,7 +1993,7 @@ pgpv_rsa_public_decrypt(uint8_t *out, const uint8_t *in, size_t length, const pg
 	}
 	orsa->n = pubkey->bn[RSA_N].bn;
 	orsa->e = pubkey->bn[RSA_E].bn;
-	n = rsa_public_decrypt((int)length, in, out, orsa, RSA_NO_PADDING);
+	n = rsa_public_decrypt((int)length, in, out, orsa, NETPGPV_RSA_NO_PADDING);
 	orsa->n = orsa->e = NULL;
 	free(orsa);
 	return n;
@@ -2313,7 +2313,7 @@ read_ascii_armor(pgpv_cursor_t *cursor, pgpv_mem_t *mem, const char *filename)
 			(size_t)(p - mem->mem));
 		return 0;
 	}
-	binsigsize = b64decode((char *)p, (size_t)(sigend - p), binsig, sizeof(binsig));
+	binsigsize = netpgpv_b64decode((char *)p, (size_t)(sigend - p), binsig, sizeof(binsig));
 
 	read_binary_memory(cursor->pgp, "signature", cons_onepass, 15);
 	ARRAY_APPEND(cursor->pgp->pkts, litdata);
@@ -2738,8 +2738,8 @@ read_ssh_file(pgpv_t *pgp, pgpv_primarykey_t *primary, const char *fmt, ...)
 		memset(&userid, 0x0, sizeof(userid));
 		(void) gethostname(hostname, sizeof(hostname));
 		if (strlen(space + 1) - 1 == 0) {
-			(void) snprintf(owner, sizeof(owner), "<root@%s>",
-					hostname);
+			(void) snprintf(owner, sizeof(owner), "<root@%.*s>",
+					240, hostname);
 		} else {
 			(void) snprintf(owner, sizeof(owner), "<%.*s>",
 				(int)strlen(space + 1) - 1,

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2012-2019 Alistair Crooks <agc@NetBSD.org>
+ * Copyright (c) 2012-2020 Alistair Crooks <agc@NetBSD.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,9 +23,9 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #ifndef NETPGP_VERIFY_H_
-#define NETPGP_VERIFY_H_	20191003
+#define NETPGP_VERIFY_H_	20200503
 
-#define NETPGPVERIFY_VERSION	"netpgpverify portable 20191003"
+#define NETPGPVERIFY_VERSION	"netpgpverify portable 20200503"
 
 #include <sys/types.h>
 
