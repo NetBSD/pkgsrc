@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/04/20 14:08:47 micha Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/03 16:10:03 rillig Exp $
 
 DISTNAME=	bystand-1.1.0
 CATEGORIES=	news
@@ -22,25 +22,28 @@ BYSTAND_MAKEFILE=	Makefile
 BYSTAND_MAKEFILE=	Makefile.BSD
 .endif
 
+# harmless; index is only in range 0..3
+BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
+
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin share/doc/bystand share/doc/bystand/setup
 
 do-build:
-		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-			${MAKE} ${MAKE_FLAGS} -f ${BYSTAND_MAKEFILE}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${MAKE} ${MAKE_FLAGS} -f ${BYSTAND_MAKEFILE}
 
 do-install:
-		cd ${WRKSRC} && ${INSTALL_PROGRAM} ${WRKSRC}/bystand \
-			${DESTDIR}${PREFIX}/bin/bystand
-		cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/bystand.doc \
-			${DESTDIR}${PREFIX}/share/doc/bystand/bystand.doc
-		cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/setup/README \
-			${DESTDIR}${PREFIX}/share/doc/bystand/setup/README
-		cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/setup/schema \
-			${DESTDIR}${PREFIX}/share/doc/bystand/setup/schema
-		cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/setup/template \
-			${DESTDIR}${PREFIX}/share/doc/bystand/setup/template
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} ${WRKSRC}/bystand \
+		${DESTDIR}${PREFIX}/bin/bystand
+	cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/bystand.doc \
+		${DESTDIR}${PREFIX}/share/doc/bystand/bystand.doc
+	cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/setup/README \
+		${DESTDIR}${PREFIX}/share/doc/bystand/setup/README
+	cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/setup/schema \
+		${DESTDIR}${PREFIX}/share/doc/bystand/setup/schema
+	cd ${WRKSRC} && ${INSTALL_DATA} ${WRKSRC}/setup/template \
+		${DESTDIR}${PREFIX}/share/doc/bystand/setup/template
 
 # Builtin version of NetBSD 7 is not sufficient
 # Minimum required API version is undocumented (use tested one)
