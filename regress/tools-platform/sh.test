@@ -1,12 +1,19 @@
 #! /bin/sh
-# $NetBSD: sh.test,v 1.2 2020/05/02 07:24:32 rillig Exp $
+# $NetBSD: sh.test,v 1.3 2020/05/03 07:38:50 rillig Exp $
 #
 # Tests for the shell that is available as ${SH} in Makefiles.
 #
-# Having a feature tested in this file does not mean it is available in
-# Makefiles since devel/bmake may use a completely different shell for
-# running its commands.  For example on SunOS, devel/bmake typically
-# uses /usr/xpg4/bin/sh while TOOLS_PLATFORM.sh is /bin/ksh.
+# On platforms where /bin/sh is not good enough, pkgsrc may use
+# different shells, depending on the exact situation.
+#
+# TOOLS_PLATFORM.sh (which ends up in SH as well) is used for running
+# shell programs from mk/ and other programs that typically start with
+# a #! line.
+#
+# The shell commands that are written in the targets of Makefiles (such
+# as do-build, pre-configure) are run with a possibly different shell,
+# see devel/bmake/Makefile.  This shell is tested by regress/make-shell,
+# which also uses this code.
 
 set -eu
 
