@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2714 2020/05/03 05:33:28 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2715 2020/05/03 09:00:53 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4091,3 +4091,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Added print/tex-zref-doc version 2.29 [markd 2020-05-03]
 	Updated print/tex-oberdiek to 2020 [markd 2020-05-03]
 	Updated print/tex-oberdiek-doc to 2020 [markd 2020-05-03]
+	Updated fonts/tex-metafont to 2020 [markd 2020-05-03]
+	Added fonts/tex-modes version 4.1 [markd 2020-05-03]
+	Added fonts/tex-modes-doc version 4.1 [markd 2020-05-03]
