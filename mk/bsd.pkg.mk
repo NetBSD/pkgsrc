@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2036 2020/03/26 12:23:54 jperkin Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2037 2020/05/03 09:22:16 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -222,9 +222,9 @@ _BUILD_DEFS+=            PKG_OPTIONS
 _BUILD_DEFS+=            MULTI
 .endif
 
-# ZERO_FILESIZE_P exits with a successful return code if the given file
+# _ZERO_FILESIZE_P exits with a successful return code if the given file
 #	has zero length.
-# NONZERO_FILESIZE_P exits with a successful return code if the given file
+# _NONZERO_FILESIZE_P exits with a successful return code if the given file
 #	has nonzero length.
 #
 _ZERO_FILESIZE_P=	${AWK} 'END { exit (NR > 0) ? 1 : 0; }'
