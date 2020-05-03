@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/01/28 16:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/03 17:59:51 rillig Exp $
 
 DISTNAME=		mintlib-CVS-20131219
 PKGNAME=		cross-freemint-${DISTNAME:S/CVS-//}
@@ -24,6 +24,8 @@ TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
 TOOLS_PLATFORM.makeinfo=
 
 TOOL_DEPENDS+=	cross-freemint-binutils-[0-9]*:../../cross/freemint-binutils
+
+CHECK_PORTABILITY_SKIP+=	gcc-*/contrib/* # not needed
 
 FREEMINT_PREFIX=	${PREFIX}/cross-freemint
 CONFIGURE_DIRS=		${GCCNAME}bin
