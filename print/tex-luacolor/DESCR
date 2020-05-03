@@ -1,0 +1,2 @@
+This package implements color support based on LuaTeX's node
+attributes.

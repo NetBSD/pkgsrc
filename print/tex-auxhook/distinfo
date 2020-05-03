@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/03 05:30:35 markd Exp $
+
+SHA1 (auxhook.r53173.tar.xz) = bc4fa79049a4800806dc32173ef3ded8b6dbe72b
+RMD160 (auxhook.r53173.tar.xz) = 3eda6bc10cd826c0ccf08c3d9ae93d8094d3335b
+SHA512 (auxhook.r53173.tar.xz) = 8ea845a19818df2df7939031e7b251b4b4d99a17c0d1b8177a592275bed6efdc660266964e0639222b86cfdd897bcf13302f1477b997ea1a06179cdd44aff0d1
+Size (auxhook.r53173.tar.xz) = 1660 bytes

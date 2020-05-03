@@ -1,0 +1,4 @@
+This package deals with input encodings. It provides a wider
+range of input encodings using standard mappings, than does
+inputenc; it also covers nearly all slots. In this way, it
+serves as more uptodate replacement for package inputenc.

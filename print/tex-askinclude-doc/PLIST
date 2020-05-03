@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:34 markd Exp $
+share/texmf-dist/doc/latex/askinclude/README.md
+share/texmf-dist/doc/latex/askinclude/askinclude.bib
+share/texmf-dist/doc/latex/askinclude/askinclude.pdf

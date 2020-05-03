@@ -1,0 +1,5 @@
+This package can be used to attach files to a PDF document. It
+is a further development of Scott Pakin's package attachfile
+for pdfTeX. Apart from bug fixes, this package adds support for
+dvips, some new options, and gets and writes meta information
+data about the attached files.

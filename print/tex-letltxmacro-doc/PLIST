@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:40 markd Exp $
+share/texmf-dist/doc/latex/letltxmacro/README.md
+share/texmf-dist/doc/latex/letltxmacro/letltxmacro-showcases.tex
+share/texmf-dist/doc/latex/letltxmacro/letltxmacro.pdf

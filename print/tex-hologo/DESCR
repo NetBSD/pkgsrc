@@ -1,0 +1,4 @@
+The package defines a single command \hologo, whose argument is
+the usual case-confused ASCII version of the logo. The command
+is bookmark-enabled, so that every logo becomes available in
+bookmarks without further work.

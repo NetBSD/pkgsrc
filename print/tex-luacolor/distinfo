@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/03 05:30:41 markd Exp $
+
+SHA1 (luacolor.r53933.tar.xz) = 86c2b907540c28d7596200e2688c463ebbe473a7
+RMD160 (luacolor.r53933.tar.xz) = fbb8b52846e01ffef3dcb9f76df44d02cd8fac66
+SHA512 (luacolor.r53933.tar.xz) = 2ed3a27258f4cf1fcb82abd6dbf660d090dc8dabefb2352dbb0fe15d32d7a0af33039c0249cb3c06dbf3b56a6d41039112ed9e5f2abfeb5bcb5ca50bf5f798c6
+Size (luacolor.r53933.tar.xz) = 4024 bytes

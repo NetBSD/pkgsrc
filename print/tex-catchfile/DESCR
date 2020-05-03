@@ -1,0 +1,3 @@
+This package catches the contents of a file and puts it in a
+macro. It requires e-TeX. Both LaTeX and plain TeX are
+supported.

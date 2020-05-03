@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/03 05:30:43 markd Exp $
+
+SHA1 (refcount.r53164.tar.xz) = 7aec574c2812c320b55921f14fbeec21be48abe8
+RMD160 (refcount.r53164.tar.xz) = 13dac981bc2193a299705974147bb8dde368ff2c
+SHA512 (refcount.r53164.tar.xz) = da914e64de5b70e124d9eb62148f5650c9445d2fdb94272ce622478b9aa50a4c7625be9c2152fffe9ff9fd87ee19319a0bc31ec5fd82839a479faec687de4af4
+Size (refcount.r53164.tar.xz) = 3040 bytes

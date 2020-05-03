@@ -1,0 +1,4 @@
+New primitive commands are introduced in e-TeX; sometimes the
+names collide with existing macros. This package solves the
+name clashes by adding a prefix to e-TeX's commands. For
+example, eTeX's \unexpanded is provided as \etex@unexpanded.

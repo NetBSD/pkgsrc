@@ -1,0 +1,8 @@
+Since PDF 1.5 portions of a page can be marked for better
+accessibility support. For example, replacement texts or
+expansions of abbreviations can be provided. This package
+starts with providing a minimal low-level interface for
+programmers; its status is experimental. Support necessary for
+the package was added to the "distill" capabilities of
+Ghostscript with version 9.15 of Ghostscript; the dvips is only
+available with that version (or later).
