@@ -41,7 +41,7 @@ arts			Use the aRts audio daemon.
 aspell			Add spell checking support using aspell.
 ass			Enable subtitle renderer for the ASS/SSA format
 asterisk-config		Control installation of Asterisk sample config files.
-async	Use the async library
+async			Use the async library
 aterm-big5		Enable Chinese support.
 aterm-greek		Enable Greek keyboard support.
 aterm-kanji		Enable kanji support.
@@ -77,7 +77,7 @@ bugzilla-xmlimportbugs	Bulk import/export of bugs in XML format.
 bzip2			Enable compression using bzip2.
 caca			Enable libcaca support.
 cairo			Enable cairo support.
-camlp4	Enable camlp4 support.
+camlp4			Enable camlp4 support.
 camlzip			Enable camlzip support (for zip/gz/jar).
 canlock			Enable Cancel-Lock support.
 canna			Use Canna as Japanese conversion program.
@@ -98,12 +98,13 @@ clang-static-analyzer	Install the clang static analyzer.
 claws-mail-jpilot	Add jpilot support.
 clisp			Common/C Lisp.
 clutter			Use Clutter for graphics support.
-cmdliner			Enable cmdliner support.
+cmdliner		Enable cmdliner support.
 cmxs			Produce CMXS files.
 color			Enable color support.
 compface		Enable compface support.
 coqide			Enable ide support for coq.
 coreaudio		Enable Core Audio library support.
+couchdb			Support the CouchDB database.
 courier-dsn		Delivery Status Notification (DNS) mail delivery.
 courier-esmtp		ESMTP mail delivery.
 courier-gnutls		Support using GNU TLS instead of OpenSSL.
@@ -186,14 +187,17 @@ epoll			Enable support for epoll I/O event notification facility.
 epub			Enable epub support.
 erlang-hipe		Enable HiPE support.
 esi			Enable ESI (Edge Side Includes) support.
+eucjp			Support EUC-JP, a character encoding for Japanese.
 evolution-data-server	Enable support for evolution-data-server.
 exim-build-eximon	Also build the X based exim queue monitoring tool.
 exim-content-scan	Call virus and spam scanning direct from ACLs.
+exim-lookup-cdb		Support mail account lookup via a Constant Data Base.
 exim-lookup-dnsdb	Use DNS for lookups (as general database facility).
 exim-lookup-dsearch	Lookup via key as filename in directory.
 exim-lookup-ldap	LDAP lookup using a query in the form of a URL.
 exim-lookup-mysql	Perform lookups in MySQL database.
 exim-lookup-pgsql	Perform lookups in PostgreSQL database.
+exim-lookup-redis	Support mail account lookup via a Redis database.
 exim-lookup-sqlite	Perform lookups in SQLite database.
 exim-lookup-whoson	Lookup in whoson dynamic IP address.
 exim-old-demime		Use deprecated "demime" condition in the DATA ACL.
@@ -209,6 +213,8 @@ fastcgi			Use FastCGI as the CGI manager.
 fax			Enable fax support
 fcitx			Enable Fcitx inputmethod support
 fd-small		Build smaller misc/fd package.
+ffcall			Support foreign function calls, to interface with other programming languages.
+ffi			Support foreign function interface, to interface with other programming languages.
 ffmpeg			Enable ffmpeg support.
 fftw			Use the fftw library for Discrete Fourier Transforms.
 fftw-fortran		Enable Fortran support.
@@ -220,8 +226,9 @@ flac			Enable FLAC support.
 flambda			Enable Flambda optimisation passes
 floppyd			Use floppyd to access floppy device.
 fluidsynth		Enable MIDI support using fluidsynth.
-fmt		Enable ocaml-fmt support.
+fmt			Enable ocaml-fmt support.
 fontconfig		Enable FONTCONFIG (fonts/fontconfig) support.
+fortran			Support programs written in Fortran.
 fossil-system-sqlite	Use pkgsrc sqlite for fossil instead of built-in.
 fossil-th1-hooks	Add support for TH1 scripts in fossil.
 freediameter-all-extensions	Build all extensions for freeDiameter (except test and debug).
@@ -311,7 +318,7 @@ halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
 hawknl			Enable HawkNL network API support.
 hping-suid		Install hping executable setuid root.
 hpn-patch		High Performance Enabled SSH/SCP for OpenSSH.
-http	Add support for HTTP.
+http			Add support for HTTP.
 http2			Add support for HTTP/2.
 hunspell		Add spell checking support using hunspell.
 i586-optimized		Optimize for i586 (only).
@@ -363,6 +370,7 @@ jdbc-mysql31		Enable MySQL JDBC driver.
 jdbc-mysql5		Enable MySQL JDBC driver.
 jp2			Enable JPEG 2000 support using the openjpeg library.
 jpeg			Enable JPEG support.
+jre-jce			Enable the Java Cryptography Extension.
 json			Enable JSON (JavaScript Object Notation) support.
 jwhois-enable-cache	Enable cache support.
 kde			Enable KDE support.
@@ -481,6 +489,11 @@ links			Use and enable support for the links browser.
 lirc			Enable LIRC receiving and sending IR signals support.
 live			Enable live555 support.
 llvm			Enable run time generation with Low Level Virtual Machine.
+llvm-target-amdgpu	Support code generation for AMD GPUs.
+llvm-target-arm		Support code generation for ARM CPUs.
+llvm-target-mips	Support code generation for MIPS CPUs.
+llvm-target-powerpc	Support code generation for PowerPC CPUs.
+llvm-target-sparc	Support code generation for SPARC CPUs.
 lmdb			Enable lmdb support.
 lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.
@@ -498,11 +511,17 @@ m17nlib			Enable the m17n library support.
 m68060-optimized	Optimize for m68060 (only).
 mac			Enable Monkey's Audio Codec support.
 mad			Enable usage of the mad library to play MP3 files.
+magick			Use ImageMagick as the image processing backend.
 maintainer-zts		Enable the Zend Thread Safety option for PHP.
 manual			Include manual.			
 marble			Enable marble (virtual globe) support.
 mbedtls			Enable mbed TLS support.
 mc-charset		Enable charset selection and conversion.
+mc-edit			Include the built-in editor.
+mc-samba		Support direct access to Samba shares.
+mc-vfs			Support virtual filesystems for FTP, Samba, archives.
+md2			Support the hashing algorithm MD2.
+mdc2			Support the hashing algorithm MDC-2.
 mecab			Use MeCab as the Japanese Morphological Analzer.
 memcached		Enable memcached support.
 mex			Enable matlab mex support (Linux and Solaris only).
@@ -521,6 +540,8 @@ modperl			Use modperl to improve speed of Perl scripts in Apache.
 modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
 modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
 modplug			Use for decoding mod-like music formats.
+mongo			Support the MongoDB database.
+moonlight		Support the obsolete Silverlight implementation.
 motif			Enable motif support.
 motoya			Add motoya fonts.
 mozilla			Use mozilla as gecko rendering engine.
@@ -581,6 +602,7 @@ notmuch-emacs		Install emacs support files for notmuch.
 nspluginwrapper		Enable running non native netscape compatible plugins.
 nss			Enable Network Security Services (NSS) support.
 oauth			Enable OAuth support.
+objc			Support programs written in Objective C.
 ocaml			Enable OCaml support.
 ocaml-tyxml		Enable OCaml-tyxml support
 ocamlgraph		Enable Ocamlgraph support.
@@ -615,6 +637,7 @@ pam			Enable PAM support.
 pango			Enable Pango support.
 pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre			Enable Perl-compatible regular expressions.
+pcre2			Use Perl Compatible Regular Expressions, API version 2.
 pcre2-jit		Enable JIT (just-in-time) support in pcre2.
 pcsc			Enable PC/SC support.
 pdf			Enable PDF support.
@@ -638,7 +661,7 @@ portaudio		Enable PortAudio audio library support.
 postfix-milter		Build the milter with support for the Postfix MTA.
 postfix-stress		Enable Postfix stress-adaptive behaviour.
 postgrey-targrey	Enable the Postgrey taRgrey tarpitting patch.
-ppx	Enable PPX support.
+ppx			Enable PPX support.
 prime			Use Prime for Kana-to-Kanji conversion.
 proftpd-readme		Enable mod_readme.
 proj-grids		Enable optional grids for datum transformations in proj.
@@ -664,7 +687,10 @@ qt5			Enable support for QT5.
 quartz			Enable Quartz support on Mac OS X.
 quickml-analog		Enable quickml log analizer.
 quickml-limit		Enable quickml creators and members limitation.
+rar			Support RAR archive files.
+rc5			Support the hashing algorithm RC5.
 readline		Enable use of GNU readline library.
+redis			Support the Redis database.
 regexp			Enable POSIX.2 regexp support.
 rpi			Enable Raspberry Pi support.
 rrl			Enable Response Rate Limiting.
@@ -705,6 +731,7 @@ simd			Enable MMX/3DNOW/SSE/Altivec support.
 sit			Enable source identity token support.
 sixel			Enable Sixel graphics support.
 sj3			Use SJ3 for Kana-to-Kanji conversion.
+sjis			Support SJIS, a character encoding for Japanese.
 skey			Enable S/Key support.
 skk			Use SKK for Kana-to-Kanji conversion.
 skkdic-expr2		Enable fast skkdic-expr tool.
@@ -794,6 +821,7 @@ threads			Enable threads support.
 tiff			Enable TIFF support.
 timidity		Enable MIDI support using timidity.
 tin-use-inn-spool	Use the INN spool directories.
+tk			Support the Tk toolkit.
 tls			Enable TLS support.
 tokyocabinet		Enable Tokyo Cabinet support.
 tremor			Enable Tremor fixed point audio decoding library support.
@@ -808,7 +836,7 @@ uim			Enable UIM support.
 uim-fep			Enable UIM FEP support.
 umefont			Add Umefont.
 unicode			Enable support for Unicode.
-unix	Enable support for unix.
+unix			Enable support for unix.
 unixodbc		Enable ODBC support via unixODBC.
 unrealircd-no-operoverride	Disable operator override.
 unrealircd-operoverride-verify	Require opers to /invite themselves into a +s or +p channel.
@@ -896,6 +924,7 @@ xtest			Use XTEST Extension Library.
 xvid			Enable usage of XVid codecs.
 xvideo			Enable X-Video Motion Compensation library support.
 zenmap			Enable nmap GUI frontend.
+zip			Support zip archives.
 ziplinks		Compress data before transmitting it between servers.
 zlib			Enable support for zlib compression.
 zrtp			Enable ZRTP support.
