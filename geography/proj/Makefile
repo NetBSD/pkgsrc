@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2020/05/03 18:05:10 gdt Exp $
+# $NetBSD: Makefile,v 1.22 2020/05/03 18:16:18 gdt Exp $
 
 # An update to 7 is on hold because I have not yet assessed how much
 # trouble it will cause.  -gdt
 VERSION_BASE=	6.3.2
 VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
+#PKGREVISION=	0
 # proj RCs have names like 5.1.0RC1 but unpack to 5.1.0
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
