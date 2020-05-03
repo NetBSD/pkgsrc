@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.36 2020/05/03 08:49:16 rillig Exp $
+# $NetBSD: help.awk,v 1.37 2020/05/03 09:06:59 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -35,16 +35,19 @@ BEGIN {
 # end of a file or by the end of all files. When there have been enough
 # comment lines, the topic is considered worth printing.
 #
-function end_of_topic(   relevant, has_keywords) {
+function end_of_topic(   relevant, has_keywords, skip_reason) {
 
-	if (comment_lines <= 2 || ignore_this_section) {
-		if (array_is_empty(keywords)) {
-			dprint("Ignoring section because of missing keywords.");
-		} else if (comment_lines <= 2) {
-			dprint("Ignoring section because of too small comment.");
-		} else {
-			dprint("Ignoring section because of a previous decision.");
-		}
+	skip_reason = \
+		array_is_empty(keywords) \
+		? "Ignoring section because of missing keywords." \
+		: comment_lines <= 2 \
+		? "Ignoring section because of too small comment." \
+		: ignore_this_section \
+		? "Ignoring section because of a previous decision." \
+		: "";
+
+	if (skip_reason != "") {
+		dprint(skip_reason);
 		cleanup();
 		return;
 	}
@@ -52,12 +55,8 @@ function end_of_topic(   relevant, has_keywords) {
 	for (k in keywords)
 		all_keywords[k]++;
 
-	relevant = no;
-	if (topic == ":all")
-		for (k in keywords)
-			relevant = yes;
-	if (topic in keywords || lctopic in keywords || uctopic in keywords)
-		relevant = yes;
+	relevant = topic in keywords || lctopic in keywords ||
+		uctopic in keywords || topic == ":all";
 
 	if (relevant && !print_index) {
 
