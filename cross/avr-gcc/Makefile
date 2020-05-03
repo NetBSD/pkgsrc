@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2019/08/11 13:18:16 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2020/05/03 12:55:04 rillig Exp $
 
 DISTNAME=		gcc-4.8.3
 PKGNAME=		${DISTNAME:C/^/avr-/}
@@ -13,14 +13,15 @@ LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
 
-.include "../../mk/bsd.prefs.mk"
-
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
 
 USE_LANGUAGES=		c c++03
 USE_TOOLS+=		bison gmake lex perl tar msgfmt autoconf pod2man
 USE_PKGLOCALEDIR=	yes
 USE_GNU_CONFIGURE_HOST=	no
+
+CHECK_PORTABILITY_SKIP+=	contrib/*
 
 CONFIGURE_ARGS+=	--target=avr
 CONFIGURE_ARGS+=	--enable-languages='c c++'
