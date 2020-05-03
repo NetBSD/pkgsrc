@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.40 2020/05/03 10:51:06 rillig Exp $
+# $NetBSD: help.awk,v 1.41 2020/05/03 10:57:06 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -36,7 +36,7 @@ BEGIN {
 # end of a file or by the end of all files. When there have been enough
 # comment lines, the topic is considered worth printing.
 #
-function end_of_topic(   relevant, has_keywords, skip_reason) {
+function end_of_topic(   skip_reason, k, relevant, i) {
 
 	skip_reason = \
 		array_is_empty(keywords) \
@@ -118,13 +118,10 @@ function dprint_skip(word, reason) {
 	print(FILENAME ":" FNR ": \"" word "\" is no keyword because " reason);
 }
 
-function array_is_empty(arr,   i, empty) {
-	empty = yes;
-	for (i in arr) {
-		empty = no;
-		break;
-	}
-	return empty;
+function array_is_empty(arr,   i) {
+	for (i in arr)
+		return no;
+	return yes;
 }
 
 {
