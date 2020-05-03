@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/11/03 19:04:04 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2020/05/03 20:41:34 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk11
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=		jre-jce x11
 PKG_OPTIONS_GROUP.variant+=	jdk-zeroshark-vm
 .endif
 
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+.if ${MACHINE_ARCH} == "aarch64" || ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_OPTIONS_GROUP.variant+=	jdk-hotspot-vm
 PKG_SUGGESTED_OPTIONS+=		jdk-hotspot-vm
 .else
