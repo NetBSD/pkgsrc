@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2020/04/17 02:00:52 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.44 2020/05/03 11:41:45 wiedi Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -46,6 +46,9 @@ CFLAGS+=		-Wno-register
 
 # wcstof(3) etc. is used in C++ code.
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
+
+# include/openssl/e_os2.h:283:25: error: '_Noreturn' does not name a type
+CXXFLAGS.SunOS+=	-D_Noreturn=""
 
 # for GL_GLEXT_LEGACY with GL/gl.h error, GL_ARB_shader_objects is not defined.
 BUILDLINK_TRANSFORM+=	rm:-Wundef
