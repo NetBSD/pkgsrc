@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2715 2020/05/03 09:00:53 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2716 2020/05/03 10:16:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4094,3 +4094,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/tex-metafont to 2020 [markd 2020-05-03]
 	Added fonts/tex-modes version 4.1 [markd 2020-05-03]
 	Added fonts/tex-modes-doc version 4.1 [markd 2020-05-03]
+	Updated devel/py-flake8 to 3.7.9nb1 [adam 2020-05-03]
+	Updated archivers/xz to 5.2.5 [adam 2020-05-03]
