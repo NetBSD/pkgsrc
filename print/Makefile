@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.762 2020/05/03 05:31:23 markd Exp $
+# $NetBSD: Makefile,v 1.763 2020/05/03 12:02:19 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -882,6 +882,8 @@ SUBDIR+=	tex-lambda-lists
 SUBDIR+=	tex-lastpage
 SUBDIR+=	tex-lastpage-doc
 SUBDIR+=	tex-latex
+SUBDIR+=	tex-latex-base-dev
+SUBDIR+=	tex-latex-base-dev-doc
 SUBDIR+=	tex-latex-bib-ex-doc
 SUBDIR+=	tex-latex-bin
 SUBDIR+=	tex-latex-bin-doc
