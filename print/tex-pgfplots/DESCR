@@ -1,6 +1,9 @@
-Pgfplots draws high-quality function plots using normal or logarithmic
-scaling, with a user-friendly interface.  The user supplies axis
-labels, legend entries and the plot coordinates for one or more plots
-and Pgfplots applies axis scaling, computes any logarithms and axis
-ticks and draws the plots.  Pgfplots is based on Till Tantau's package
-PGF/TikZ.
+PGFPlots draws high-quality function plots in normal or
+logarithmic scaling with a user-friendly interface directly in
+TeX. The user supplies axis labels, legend entries and the plot
+coordinates for one or more plots and PGFPlots applies axis
+scaling, computes any logarithms and axis ticks and draws the
+plots, supporting line plots, scatter plots, piecewise constant
+plots, bar plots, area plots, mesh-- and surface plots and some
+more. Pgfplots is based on PGF/TikZ (PGF); it runs equally for
+LaTeX/TeX/ConTeXt.

@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/07 21:53:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/03 11:57:36 markd Exp $
+share/texmf-dist/doc/latex/snapshot/README
 share/texmf-dist/doc/latex/snapshot/snapshot.pdf
