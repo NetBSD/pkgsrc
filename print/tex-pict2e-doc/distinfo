@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/06/16 04:06:14 markd Exp $
+$NetBSD: distinfo,v 1.4 2020/05/03 11:57:35 markd Exp $
 
-SHA1 (tex-pict2e-39591/pict2e.doc.tar.xz) = 30a72bd4f9ea6303b6c9df9e57a7b3b1fc2c623a
-RMD160 (tex-pict2e-39591/pict2e.doc.tar.xz) = 95f83e7493f8a55f218d4f53ad8e4f01524b4368
-SHA512 (tex-pict2e-39591/pict2e.doc.tar.xz) = 644f27f2059dbf559d442f8833ce865d2017924d96906b10a08957ac8eb12f954b608aa2694b7e2165c28e80969db824dc70ce8805105d8607b3fdfa88c1d730
-Size (tex-pict2e-39591/pict2e.doc.tar.xz) = 742740 bytes
+SHA1 (pict2e.doc.r51918.tar.xz) = 8f04f81defee702969468f7532482bb6aec35165
+RMD160 (pict2e.doc.r51918.tar.xz) = a22e11fc4cd7d6a30772ff87faebe98fb450312b
+SHA512 (pict2e.doc.r51918.tar.xz) = 43297b99d4032a53b8dc36ae64a42ba12d5b800a352514e9678b0fccbe5798eb8c780b5b950f72f322eb12b9b23266d57df6d74409ad17d413d08028b033c6ce
+Size (pict2e.doc.r51918.tar.xz) = 755440 bytes
