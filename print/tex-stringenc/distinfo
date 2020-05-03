@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/03 05:30:44 markd Exp $
+
+SHA1 (stringenc.r52982.tar.xz) = 09280a607d018cd2f6a2e6e7b20cba9c130aabef
+RMD160 (stringenc.r52982.tar.xz) = 89dbccb186fe18cb4c82770f39438a267aa370bc
+SHA512 (stringenc.r52982.tar.xz) = a776ddb2378bea0880d7c17e1a87db5f66645c5856243e49de1c56bc427213098afbca34773a44ad955a0014b969c59454d3a0c0ec371d213481668f5f784ca4
+Size (stringenc.r52982.tar.xz) = 23376 bytes

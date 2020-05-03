@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:41 markd Exp $
+share/texmf-dist/doc/latex/makerobust/README.md
+share/texmf-dist/doc/latex/makerobust/makerobust.pdf
+share/texmf-dist/doc/latex/makerobust/makerobust.tex

@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:34 markd Exp $
+bin/pdfatfi
+share/texmf-dist/tex/latex/attachfile2/atfi-dvipdfmx.def
+share/texmf-dist/tex/latex/attachfile2/atfi-dvips.def
+share/texmf-dist/tex/latex/attachfile2/atfi-luatex.def
+share/texmf-dist/tex/latex/attachfile2/atfi-pdftex.def
+share/texmf-dist/tex/latex/attachfile2/attachfile2.sty

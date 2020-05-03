@@ -1,0 +1,3 @@
+The package asks the user which files to put in a \includeonly
+command. There is provision for answering "same as last time"
+or "all files".
