@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/04/29 20:33:28 maya Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/03 17:42:20 rillig Exp $
 
 PKGNAME=	gcc6-aux-${SNAPSHOT}
 PKGREVISION=	${MAIN_PR}
@@ -19,6 +19,8 @@ APPLY_DIFFS=	core ada cxx
 .include "Makefile.version"
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+
+CHECK_PORTABILITY_SKIP+=	contrib/* # not needed
 
 # Requires bootstrap compiler, which is only available for on selected systems
 
