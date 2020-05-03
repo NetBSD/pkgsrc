@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/03 05:30:39 markd Exp $
+
+SHA1 (intcalc.r53168.tar.xz) = b9b6ff63de3c8eebb44e41135798ac0cc8fd9200
+RMD160 (intcalc.r53168.tar.xz) = 0333f38ae525a67cd9e4c0ee5bc4d6fffaf901db
+SHA512 (intcalc.r53168.tar.xz) = e1087a7ab3f1d695bc20435ef0bb2b806d1cca71eb792fcf46e6c2fc6d819de2ff623a65593b65d5bf228309e3e3d5210ae1fb1452356f97a5ecb45921a7ce0f
+Size (intcalc.r53168.tar.xz) = 5436 bytes

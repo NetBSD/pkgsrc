@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/03 05:30:45 markd Exp $
+share/texmf-dist/doc/latex/uniquecounter/README.md
+share/texmf-dist/doc/latex/uniquecounter/uniquecounter-example.tex
+share/texmf-dist/doc/latex/uniquecounter/uniquecounter.pdf
