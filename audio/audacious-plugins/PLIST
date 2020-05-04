@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2020/04/19 11:33:46 nia Exp $
+@comment $NetBSD: PLIST,v 1.21 2020/05/04 09:37:18 nia Exp $
 lib/audacious/Container/asx.so
 lib/audacious/Container/asx3.so
 lib/audacious/Container/audpl.so
@@ -28,7 +28,6 @@ lib/audacious/General/skins-qt.so
 lib/audacious/General/song-info-qt.so
 lib/audacious/General/song_change.so
 lib/audacious/General/statusicon-qt.so
-lib/audacious/General/streamtuner.so
 lib/audacious/Input/aac-raw.so
 ${PLIST.adplug}lib/audacious/Input/adplug.so
 ${PLIST.fluidsynth}lib/audacious/Input/amidi-plug.so
