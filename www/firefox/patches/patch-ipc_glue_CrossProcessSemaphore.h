@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_glue_CrossProcessSemaphore.h,v 1.3 2020/05/03 18:45:30 maya Exp $
+$NetBSD: patch-ipc_glue_CrossProcessSemaphore.h,v 1.4 2020/05/04 21:29:08 maya Exp $
 
 --- ipc/glue/CrossProcessSemaphore.h.orig	2018-10-18 20:06:06.000000000 +0000
 +++ ipc/glue/CrossProcessSemaphore.h
@@ -17,7 +17,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore.h,v 1.3 2020/05/03 18:45:30 maya E
    HANDLE mSemaphore;
  #elif !defined(OS_MACOSX)
    RefPtr<mozilla::ipc::SharedMemoryBasic> mSharedBuffer;
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  pthread_mutex_t* mMutex;
 +  pthread_cond_t* mNotZero;
 +  uint32_t* mValue;
