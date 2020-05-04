@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/04/29 10:45:09 adam Exp $
+# $NetBSD: Makefile,v 1.24 2020/05/04 04:39:15 rillig Exp $
 
 DISTNAME=	coverage-5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.20.1:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-unittest-mixins-[0-9]*:../../devel/py-unittest-mixins
 
 PYSETUPTESTTARGET=	pytest
+
+# https://github.com/nedbat/coveragepy/issues/983
+CHECK_PORTABILITY_SKIP=	tests/gold/html/Makefile
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/coverage ${DESTDIR}${PREFIX}/bin/coverage[23]
