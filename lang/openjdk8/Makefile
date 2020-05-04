@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.95 2020/05/03 19:21:55 rillig Exp $
+# $NetBSD: Makefile,v 1.96 2020/05/04 21:32:15 tnn Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
-PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 MASTER_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}	# for bootstrap kits
 GITHUB_PROJECT=	openjdk-jdk8u
-GITHUB_TAG=	jdk8u242-b07.1
+GITHUB_TAG=	jdk8u252-b09.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://openjdk.java.net/
@@ -69,6 +68,7 @@ CONFIGURE_ARGS+=	--with-update-version=${PKGVERSION_NOREV:S/1.8.//}
 CONFIGURE_ARGS+=	--with-extra-ldflags=${LDFLAGS:Q}
 
 CHECK_PORTABILITY_SKIP+=	hotspot/test/runtime/*/*.sh
+CHECK_PORTABILITY_SKIP+=	hotspot/test/compiler/criticalnatives/argumentcorruption/Test8167409.sh
 
 NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/bin/[a-ik-z]*
 NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/bin/j[b-z]*
