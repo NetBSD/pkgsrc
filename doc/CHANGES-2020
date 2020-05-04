@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2729 2020/05/04 09:37:36 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2730 2020/05/04 10:23:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4164,3 +4164,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-numpy to 1.18.4 [adam 2020-05-04]
 	Updated audio/ncmpc to 0.38 [nia 2020-05-04]
 	Updated audio/audacious to 4.0.3 [nia 2020-05-04]
+	Updated emulators/dosbox-x to 0.83.1 [nia 2020-05-04]
