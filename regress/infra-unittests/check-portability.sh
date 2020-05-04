@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: check-portability.sh,v 1.1 2020/05/04 21:32:48 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.2 2020/05/04 21:48:18 rillig Exp $
 #
 # Test cases for mk/check/check-portability.*.
 #
@@ -165,6 +165,24 @@ if test_case_begin 'special characters in filenames'; then
 	create_file_lines 'work/patches/patch-aa' \
 		'+++ [[[[(`" 2020-05-04'
 	create_file_lines 'work/+++ [[[[(`"' \
+		'#! /bin/sh' \
+		'test a = b'
+
+	check_portability_sh
+
+	assert_that 'out' --file-is-empty
+	assert_that $exitcode --equals 0
+
+	test_case_end
+fi
+
+
+if test_case_begin 'no patches'; then
+
+	# Ensure that no error message is printed when there are no
+	# patch files.
+
+	create_file_lines 'file' \
 		'#! /bin/sh' \
 		'test a = b'
 
