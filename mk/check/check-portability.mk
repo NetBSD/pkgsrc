@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.14 2020/03/13 08:11:36 rillig Exp $
+# $NetBSD: check-portability.mk,v 1.15 2020/05/04 21:32:48 rillig Exp $
 #
 # This file contains some checks that are applied to the configure
 # scripts to check for certain constructs that are known to cause
@@ -43,4 +43,5 @@ _check-portability:
 	cd ${WRKSRC};							\
 	env	SKIP_FILTER=${CHECK_PORTABILITY_SKIP:@p@${p}) skip=yes;;@:Q} \
 		PREFIX=${PREFIX}					\
+		PATCHDIR=${PATCHDIR}					\
 		sh ${PKGSRCDIR}/mk/check/check-portability.sh
