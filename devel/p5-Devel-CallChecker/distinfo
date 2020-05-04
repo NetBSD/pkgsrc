@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/04 04:45:49 mef Exp $
+
+SHA1 (Devel-CallChecker-0.008.tar.gz) = 86d74dbc498a1c1f5e33f51ed865cf6ad07945e1
+RMD160 (Devel-CallChecker-0.008.tar.gz) = 283d99ab84c30adc9ebdcafb26e36921191174eb
+SHA512 (Devel-CallChecker-0.008.tar.gz) = 7ae7ee932e7e6a44d57178c84537cff8a9c350fbbf36c21dbc5ce56a5fe1d4ca748e0d5dd75abf5ebfa5e1223af4285b9b25074c0d1baa97eccfc6dddb62cfab
+Size (Devel-CallChecker-0.008.tar.gz) = 18940 bytes
