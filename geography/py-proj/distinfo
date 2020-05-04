@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2020/03/18 20:11:12 gdt Exp $
+$NetBSD: distinfo,v 1.7 2020/05/04 12:20:28 gdt Exp $
 
-SHA1 (pyproj-2.6.0.tar.gz) = 58919d2a5fdee9bb77b961c840fb085672e3bc59
-RMD160 (pyproj-2.6.0.tar.gz) = 13a70c3e767598b95a0833074a3ae8643acf2228
-SHA512 (pyproj-2.6.0.tar.gz) = b2e5273a84618f43ea30fae7a903df49b78895e4db8f9d81d8e6d81db1b360ed78b3feb420ad644017a5054859f29c416c1d74496a44c3215f1316f2e56dc11d
-Size (pyproj-2.6.0.tar.gz) = 524241 bytes
+SHA1 (pyproj-2.6.1.tar.gz) = b0807d0007c305de34dfe9986d3a215190c0aa10
+RMD160 (pyproj-2.6.1.tar.gz) = 356562bce354b7fee2fa92a3844a1121b73eca76
+SHA512 (pyproj-2.6.1.tar.gz) = d6bf6b77eb95bb630c41ac7737538c015e2724277f37975b106a4386887c6193c3172dfc9309d1fc8af0b95c86486f359a18a0ca443bcdac9573df6da39935e0
+Size (pyproj-2.6.1.tar.gz) = 528171 bytes
