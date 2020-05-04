@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/25 06:56:53 asau Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/04 14:25:52 nia Exp $
 #
 
 DISTNAME=	qsubst-20010422
@@ -12,6 +12,8 @@ USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		groff nroff
 
 WRKSRC=		${WRKDIR}/qsubst
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
