@@ -1,0 +1,43 @@
+$NetBSD: patch-Makefile,v 1.1 2020/05/04 16:12:48 micha Exp $
+
+Use PREFIX and PKGMANDIR from pkgsrc.
+Honor CXXFLAGS and LDFLAGS from pkgsrc.
+Don't set root owner on install.
+
+--- Makefile.orig	2018-06-19 05:23:16.000000000 +0000
++++ Makefile
+@@ -8,8 +8,8 @@
+ PROGRAM=ajbsp
+ 
+ # prefix choices: /usr  /usr/local  /opt
+-PREFIX=/usr/local
+-MANDIR=$(PREFIX)/share/man
++#PREFIX=/usr/local
++MANDIR=$(PREFIX)/$(PKGMANDIR)
+ 
+ OBJ_DIR=obj_linux
+ 
+@@ -25,9 +25,9 @@ STRIP_FLAGS=--strip-unneeded
+ 
+ MAN_PAGE=$(PROGRAM).6
+ 
+-CXXFLAGS=$(OPTIMISE) $(WARNINGS) -D_THREAD_SAFE -D_REENTRANT
++#CXXFLAGS=$(OPTIMISE) $(WARNINGS) -D_THREAD_SAFE -D_REENTRANT
+ 
+-LDFLAGS=
++#LDFLAGS=
+ # LDFLAGS=-static
+ 
+ # I needed this when using -m32 and -static:
+@@ -77,9 +77,9 @@ stripped: all
+ 
+ install: stripped
+ 	install -d -m 755 $(DESTDIR)$(PREFIX)/bin
+-	install -o root -m 755 $(PROGRAM) $(DESTDIR)$(PREFIX)/bin/
++	install -m 755 $(PROGRAM) $(DESTDIR)$(PREFIX)/bin/
+ 	install -d -m 755 $(DESTDIR)$(MANDIR)/man6
+-	install -o root -m 644 doc/$(MAN_PAGE) $(DESTDIR)$(MANDIR)/man6/
++	install -m 644 doc/$(MAN_PAGE) $(DESTDIR)$(MANDIR)/man6/
+ 
+ uninstall:
+ 	rm -f -v $(DESTDIR)$(PREFIX)/bin/$(PROGRAM)
