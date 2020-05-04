@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2738 2020/05/04 13:12:56 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2739 2020/05/04 13:29:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4180,3 +4180,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-Devel-PatchPerl to 1.92 [mef 2020-05-04]
 	Updated devel/p5-File-BOM to 0.18 [mef 2020-05-04]
 	Updated devel/p5-File-LibMagic to 1.22 [mef 2020-05-04]
+	Updated devel/p5-Type-Tiny to 1.010002 [mef 2020-05-04]
+	Updated devel/p5-Type-Tiny-XS to 0.017 [mef 2020-05-04]
