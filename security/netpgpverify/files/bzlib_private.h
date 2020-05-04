@@ -1,4 +1,4 @@
-/*	$NetBSD: bzlib_private.h,v 1.4 2020/05/03 23:49:04 agc Exp $	*/
+/*	$NetBSD: bzlib_private.h,v 1.5 2020/05/04 19:13:13 agc Exp $	*/
 
 
 /*-------------------------------------------------------------*/
@@ -32,7 +32,7 @@
 #include <string.h>
 #endif
 
-#include "bzlib.h"
+#include "netpgpv-bzlib.h"
 
 
 
