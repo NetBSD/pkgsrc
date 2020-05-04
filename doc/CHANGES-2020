@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2739 2020/05/04 13:29:28 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2740 2020/05/04 15:37:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4182,3 +4182,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/p5-File-LibMagic to 1.22 [mef 2020-05-04]
 	Updated devel/p5-Type-Tiny to 1.010002 [mef 2020-05-04]
 	Updated devel/p5-Type-Tiny-XS to 0.017 [mef 2020-05-04]
+	Updated www/py-aiohttp-socks to 0.3.9 [adam 2020-05-04]
+	Updated multimedia/py-m3u8 to 0.6.0 [adam 2020-05-04]
+	Updated sysutils/py-sh to 1.13.1 [adam 2020-05-04]
+	Updated devel/py-dotenv to 0.13.0 [adam 2020-05-04]
