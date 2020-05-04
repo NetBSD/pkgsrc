@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2726 2020/05/04 01:41:31 agc Exp $
+$NetBSD: CHANGES-2020,v 1.2727 2020/05/04 06:19:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4160,3 +4160,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/libnetpgpverify to 20200503 [agc 2020-05-03]
 	Updated security/netpgpverify to 20200504 [agc 2020-05-04]
 	Updated security/libnetpgpverify to 20200504 [agc 2020-05-04]
+	Updated net/py-xandikos to 0.2.0 [adam 2020-05-04]
+	Updated math/py-numpy to 1.18.4 [adam 2020-05-04]
