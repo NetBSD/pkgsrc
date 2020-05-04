@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.20 2020/05/04 21:32:48 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.21 2020/05/04 21:48:18 rillig Exp $
 #
 # This program checks all files in the current directory and any
 # subdirectories for portability issues that are likely to result in
@@ -34,7 +34,16 @@ check_shell() {
 	fi
 }
 
-patched_files=",$(awk 'BEGIN { ORS = "," } /^\+\+\+ / { print $2 }' "$PATCHDIR"/patch-*),"
+patched_files=",$(awk '
+	BEGIN {
+		if (ARGV[1] ~ /\/patch-\*$/)
+			exit;
+		ORS = ","
+	}
+	/^\+\+\+ / {
+		print $2
+	}' \
+	"$PATCHDIR"/patch-*),"
 
 find ./* -type f -print 2>/dev/null \
 | sed 's,$,_,' \
