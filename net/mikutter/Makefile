@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.191 2020/03/20 00:57:59 joerg Exp $
+# $NetBSD: Makefile,v 1.192 2020/05/04 20:54:27 tsutsui Exp $
 #
 
-DISTNAME=	mikutter.4.0.4
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
+DISTNAME=	mikutter-4.0.5
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
 
@@ -19,7 +19,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.7.0:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-delayer>=1.0.2:../../devel/ruby-delayer
 DEPENDS+=	${RUBY_PKGPREFIX}-delayer-deferred>=2.1.3:../../devel/ruby-delayer-deferred
 DEPENDS+=	${RUBY_PKGPREFIX}-diva>=1.0.2:../../devel/ruby-diva
-DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.2.9:../../devel/ruby-gettext
+DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.3.5:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_PKGPREFIX}-gtk2>=3.3.8:../../x11/ruby-gtk2
 DEPENDS+=	${RUBY_PKGPREFIX}-httpclient-[0-9]*:../../www/ruby-httpclient
 DEPENDS+=	${RUBY_PKGPREFIX}-memoist>=0.16.2:../../devel/ruby-memoist
@@ -28,9 +28,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.4:../../security/ruby-oauth
 DEPENDS+=	${RUBY_PKGPREFIX}-pluggaloid>=1.2.0:../../net/ruby-pluggaloid
 DEPENDS+=	${RUBY_PKGPREFIX}-typed-array>=0.1.2:../../misc/ruby-typed-array
-
-EXTRACT_DIR=	${WRKDIR}/mikutter
-WRKSRC=		${EXTRACT_DIR}
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
