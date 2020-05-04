@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.227 2020/01/26 17:32:00 rillig Exp $
+# $NetBSD: Makefile,v 1.228 2020/05/04 19:14:59 agc Exp $
 
 # Notes to package maintainers:
 #
@@ -211,9 +211,7 @@ pre-configure:
 		${SETENV} ${MAKE_ENV} ${BSD_MAKE_ENV}			\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${BUILD_MAKE_FLAGS}	\
 			-f ${MAKE_FILE} depend all
-	cd ${WRKDIR}/netpgp &&					\
-	${SED} -e '/zlib/d' Makefile.lib.in >Makefile.in &&		\
-	${RM} -f bzlib.h zlib.h &&					\
+	cd ${WRKDIR}/netpgp &&						\
 	${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS} ./configure &&		\
 	${SETENV} ${MAKE_ENV} ${BSD_MAKE_ENV} ${MAKE_PROGRAM}		\
 		${MAKE_FLAGS} ${BUILD_MAKE_FLAGS} -f ${MAKE_FILE} all
