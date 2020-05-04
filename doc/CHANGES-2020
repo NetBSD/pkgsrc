@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2746 2020/05/04 21:29:25 maya Exp $
+$NetBSD: CHANGES-2020,v 1.2747 2020/05/04 21:33:08 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4192,3 +4192,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-hg-evolve to 9.3.1 [riastradh 2020-05-04]
 	Updated net/mikutter to 4.0.5 [tsutsui 2020-05-04]
 	Updated www/firefox to 75.0nb4 [maya 2020-05-04]
+	Updated lang/openjdk8 to 1.8.252 [tnn 2020-05-04]
