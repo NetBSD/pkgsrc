@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3117 2020/04/30 04:51:27 jnemeth Exp $
+# $NetBSD: Makefile,v 1.3118 2020/05/04 12:13:32 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1264,6 +1264,7 @@ SUBDIR+=	p5-Declare-Constraints-Simple
 SUBDIR+=	p5-Devel-Autoflush
 SUBDIR+=	p5-Devel-BeginLift
 SUBDIR+=	p5-Devel-Caller
+SUBDIR+=	p5-Devel-CallChecker
 SUBDIR+=	p5-Devel-Caller-IgnoreNamespaces
 SUBDIR+=	p5-Devel-CheckBin
 SUBDIR+=	p5-Devel-CheckCompiler
@@ -1309,6 +1310,7 @@ SUBDIR+=	p5-Dir-Self
 SUBDIR+=	p5-Dist-CheckConflicts
 SUBDIR+=	p5-Dist-Zilla
 SUBDIR+=	p5-Dist-Zooky
+SUBDIR+=	p5-DynaLoader-Functions
 SUBDIR+=	p5-EV
 SUBDIR+=	p5-Env-Path
 SUBDIR+=	p5-Error

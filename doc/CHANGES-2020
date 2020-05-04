@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2734 2020/05/04 11:41:04 fox Exp $
+$NetBSD: CHANGES-2020,v 1.2735 2020/05/04 12:13:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4160,6 +4160,12 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/libnetpgpverify to 20200503 [agc 2020-05-03]
 	Updated security/netpgpverify to 20200504 [agc 2020-05-04]
 	Updated security/libnetpgpverify to 20200504 [agc 2020-05-04]
+	Updated devel/p5-Algorithm-Dependency to 1.112 [mef 2020-05-04]
+	Updated devel/p5-Async-Interrupt to 1.26 [mef 2020-05-04]
+	Updated devel/p5-CPAN-Perl-Releases to 5.20200428 [mef 2020-05-04]
+	Updated devel/p5-CPANPLUS to 0.9908 [mef 2020-05-04]
+	Added devel/p5-DynaLoader-Functions version 0.003 [mef 2020-05-04]
+	Added devel/p5-Devel-CallChecker version 0.008 [mef 2020-05-04]
 	Updated net/py-xandikos to 0.2.0 [adam 2020-05-04]
 	Updated math/py-numpy to 1.18.4 [adam 2020-05-04]
 	Updated audio/ncmpc to 0.38 [nia 2020-05-04]
