@@ -1,0 +1,17 @@
+$NetBSD: patch-po_CMakeLists.txt,v 1.1 2020/05/04 11:04:07 nia Exp $
+
+Fix building of po files. The "NOUPDATE" was added very close
+to the release, and there seems to be ongoing discussion in
+the bug reports -- not submitted upstream.
+
+--- po/CMakeLists.txt.orig	2020-04-15 19:03:39.000000000 +0000
++++ po/CMakeLists.txt
+@@ -20,7 +20,7 @@ if (XGETTEXT_FOUND)
+       "${PROJECT_SOURCE_DIR}/ui/*.glade"
+   )
+ 
+-  gettext_create_translations ("${potfile}" ALL NOUPDATE)
++  gettext_create_translations ("${potfile}" ALL)
+ 
+ else (XGETTEXT_FOUND)
+   message (ERROR "Gettext not found!")
