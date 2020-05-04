@@ -1,0 +1,15 @@
+This module provides a C API, for XS modules, concerned with custom
+parsing. It is centred around the function cv_set_call_parser, which
+allows XS code to attach a magical annotation to a Perl subroutine,
+resulting in resolvable calls to that subroutine having their
+arguments parsed by arbitrary C code. (This is a more conveniently
+structured facility than the core's PL_keyword_plugin API.) This
+module makes cv_set_call_parser and several supporting functions
+available.
+
+This module provides the implementation of the functions at
+runtime. It also, at compile time, supplies the C header file and link
+library which provide access to the functions. In normal use,
+"callparser0_h"/"callparser1_h" and "callparser_linkable" should be
+called at build time (not authoring time) for the module that wishes
+to use the C functions.
