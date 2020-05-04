@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.6 2020/05/03 18:45:30 maya Exp $
+$NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.7 2020/05/04 21:29:08 maya Exp $
 
 --- ipc/glue/CrossProcessSemaphore_posix.cpp.orig	2019-01-18 00:20:30.000000000 +0000
 +++ ipc/glue/CrossProcessSemaphore_posix.cpp
@@ -19,7 +19,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.6 2020/05/03 18:45:
  namespace {
  
  struct SemaphoreData {
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  pthread_mutex_t mMutex;
 +  pthread_cond_t mNotZero;
 +  uint32_t mValue;
@@ -33,7 +33,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.6 2020/05/03 18:45:
      return nullptr;
    }
  
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  data->mValue = aInitialValue;
 +  if (pthread_mutex_init(&data->mMutex, NULL) ||
 +      pthread_cond_init(&data->mNotZero, NULL) ) {
@@ -47,7 +47,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.6 2020/05/03 18:45:
  
    CrossProcessSemaphore* sem = new CrossProcessSemaphore;
    sem->mSharedBuffer = sharedBuffer;
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  sem->mMutex = &data->mMutex;
 +  sem->mNotZero = &data->mNotZero;
 +  sem->mValue = &data->mValue;
@@ -61,7 +61,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.6 2020/05/03 18:45:
  
    int32_t oldCount = data->mRefCount++;
    if (oldCount == 0) {
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +    if (pthread_mutex_init(&data->mMutex, NULL) ||
 +        pthread_cond_init(&data->mNotZero, NULL) ) {
 +      data->mRefCount--;
@@ -79,7 +79,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.6 2020/05/03 18:45:
  
    CrossProcessSemaphore* sem = new CrossProcessSemaphore;
    sem->mSharedBuffer = sharedBuffer;
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  sem->mMutex = &data->mMutex;
 +  sem->mNotZero = &data->mNotZero;
 +  sem->mValue = &data->mValue;
@@ -92,7 +92,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.6 2020/05/03 18:45:
  
  CrossProcessSemaphore::CrossProcessSemaphore()
 -    : mSemaphore(nullptr), mRefCount(nullptr) {
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  : mMutex (nullptr)
 +  , mNotZero (nullptr)
 +  , mValue (nullptr)
@@ -107,7 +107,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.6 2020/05/03 18:45:
  
    if (oldCount == 0) {
      // Nothing can be done if the destroy fails so ignore return code.
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +    (void)pthread_cond_destroy(mNotZero);
 +    (void)pthread_mutex_destroy(mMutex);
 +#else
@@ -118,7 +118,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.6 2020/05/03 18:45:
    MOZ_COUNT_DTOR(CrossProcessSemaphore);
  }
  
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +static struct timespec
 +makeAbsTime(const Maybe<TimeDuration>& aWaitTime) {
 +  struct timespec ts;
@@ -140,7 +140,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.6 2020/05/03 18:45:
    MOZ_ASSERT(*mRefCount > 0,
               "Attempting to wait on a semaphore with zero ref count");
    int ret;
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  struct timespec ts = makeAbsTime(aWaitTime);
 +
 +  ret = pthread_mutex_lock(mMutex);
@@ -172,7 +172,7 @@ $NetBSD: patch-ipc_glue_CrossProcessSemaphore__posix.cpp,v 1.6 2020/05/03 18:45:
  void CrossProcessSemaphore::Signal() {
    MOZ_ASSERT(*mRefCount > 0,
               "Attempting to signal a semaphore with zero ref count");
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 900000001)
 +  int ret;
 +  ret = pthread_mutex_lock(mMutex);
 +  if (ret == 0) {
