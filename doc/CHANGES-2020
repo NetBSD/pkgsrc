@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2745 2020/05/04 20:54:42 tsutsui Exp $
+$NetBSD: CHANGES-2020,v 1.2746 2020/05/04 21:29:25 maya Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4191,3 +4191,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added games/ajbsp version 1.01 [micha 2020-05-04]
 	Updated devel/py-hg-evolve to 9.3.1 [riastradh 2020-05-04]
 	Updated net/mikutter to 4.0.5 [tsutsui 2020-05-04]
+	Updated www/firefox to 75.0nb4 [maya 2020-05-04]
