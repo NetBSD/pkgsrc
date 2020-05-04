@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/04/29 10:39:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/04 06:18:05 adam Exp $
 bin/xandikos-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -35,6 +35,9 @@ ${PYSITELIB}/xandikos/icalendar.pyo
 ${PYSITELIB}/xandikos/infit.py
 ${PYSITELIB}/xandikos/infit.pyc
 ${PYSITELIB}/xandikos/infit.pyo
+${PYSITELIB}/xandikos/metrics.py
+${PYSITELIB}/xandikos/metrics.pyc
+${PYSITELIB}/xandikos/metrics.pyo
 ${PYSITELIB}/xandikos/quota.py
 ${PYSITELIB}/xandikos/quota.pyc
 ${PYSITELIB}/xandikos/quota.pyo
@@ -89,6 +92,9 @@ ${PYSITELIB}/xandikos/tests/test_web.pyo
 ${PYSITELIB}/xandikos/tests/test_webdav.py
 ${PYSITELIB}/xandikos/tests/test_webdav.pyc
 ${PYSITELIB}/xandikos/tests/test_webdav.pyo
+${PYSITELIB}/xandikos/tests/test_wsgi.py
+${PYSITELIB}/xandikos/tests/test_wsgi.pyc
+${PYSITELIB}/xandikos/tests/test_wsgi.pyo
 ${PYSITELIB}/xandikos/timezones.py
 ${PYSITELIB}/xandikos/timezones.pyc
 ${PYSITELIB}/xandikos/timezones.pyo
