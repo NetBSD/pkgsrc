@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2020/04/27 17:00:35 adam Exp $
+# $NetBSD: Makefile,v 1.65 2020/05/04 06:18:55 adam Exp $
 
-DISTNAME=	numpy-1.18.3
+DISTNAME=	numpy-1.18.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -24,9 +24,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # since 1.17
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
 
-.if defined(PKGSRC_FORTRAN) && ${PKGSRC_FORTRAN} == "g95"
-PYSETUPBUILDARGS+=	--fcompiler=g95
-.elif defined(PKGSRC_FORTRAN) && ${PKGSRC_FORTRAN} == "gfortran"
+.if defined(PKGSRC_FORTRAN) && ${PKGSRC_FORTRAN} == "gfortran"
 PYSETUPBUILDARGS+=	--fcompiler=gnu95
 .elif !empty(PKGSRC_COMPILER:Mgcc)
 PYSETUPBUILDARGS+=	--fcompiler=gnu
