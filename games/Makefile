@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.486 2020/03/16 12:59:47 fcambus Exp $
+# $NetBSD: Makefile,v 1.487 2020/05/04 16:15:40 micha Exp $
 #
 
 COMMENT=	Games
@@ -19,6 +19,7 @@ SUBDIR+=	accelerator3d
 SUBDIR+=	adom
 SUBDIR+=	afternoonstalker
 SUBDIR+=	agm
+SUBDIR+=	ajbsp
 SUBDIR+=	alephone
 SUBDIR+=	amaze
 SUBDIR+=	amor
