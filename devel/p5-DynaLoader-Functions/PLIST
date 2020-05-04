@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/04 04:42:10 mef Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/DynaLoader/Functions.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/DynaLoader/Functions/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/DynaLoader::Functions.3

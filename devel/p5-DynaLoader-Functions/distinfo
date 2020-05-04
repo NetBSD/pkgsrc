@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/04 04:42:10 mef Exp $
+
+SHA1 (DynaLoader-Functions-0.003.tar.gz) = 5693938a1ca1c46ac8cb497ad42e14666b9ffcb5
+RMD160 (DynaLoader-Functions-0.003.tar.gz) = eda79835401f8cf0a58549c060c8456eaaad064f
+SHA512 (DynaLoader-Functions-0.003.tar.gz) = 58147714352fbd6e90bb42599e5967c9a93dbb899a587ef8a2a64dd13fc9e24176e17b3c2b870b5fa846b077373ca9ea27bec49b31113a8d9cb7d800f6d29599
+Size (DynaLoader-Functions-0.003.tar.gz) = 9797 bytes
