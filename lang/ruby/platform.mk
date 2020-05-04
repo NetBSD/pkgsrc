@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.7 2020/03/04 10:30:46 nia Exp $
+# $NetBSD: platform.mk,v 1.8 2020/05/04 04:53:53 rillig Exp $
 #
 
 #
@@ -25,6 +25,7 @@ SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	lib/rubygems/config_file.rb
 SUBST_VARS.conf=	PKG_SYSCONFDIR
 SUBST_MESSAGE.conf=	Fixing configuration files.
+SUBST_NOOP_OK.conf=	yes # not needed for ruby-base>=2.6
 
 #
 # Don't reference pkgsrc's INSTALL macro since Ruby expect it could
