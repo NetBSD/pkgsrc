@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2740 2020/05/04 15:37:23 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2741 2020/05/04 15:40:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4186,3 +4186,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated multimedia/py-m3u8 to 0.6.0 [adam 2020-05-04]
 	Updated sysutils/py-sh to 1.13.1 [adam 2020-05-04]
 	Updated devel/py-dotenv to 0.13.0 [adam 2020-05-04]
+	Updated www/tscrape to 0.5 [leot 2020-05-04]
