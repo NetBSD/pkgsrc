@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.12 2020/04/18 01:31:42 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2020/05/04 20:46:10 tnn Exp $
 
+SHA1 (binutils-2.34.tar.bz2) = 361566c9ab5e90bd847d06f46fb9f18ec6c3ecf0
+RMD160 (binutils-2.34.tar.bz2) = e99f517407503cec1042a2e824b7c1f8f0fca4b8
+SHA512 (binutils-2.34.tar.bz2) = f47e7304e102c7bbc97958a08093e27796b9051d1567ce4fbb723d39ef3e29efa325ee14a1bdcc462a925a7f9bbbc9aee28294c6dc23850f371030f3835a8067
+Size (binutils-2.34.tar.bz2) = 32430470 bytes
 SHA1 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = d76599619b8bea879b8202b3efc38a82335d2e8c
 RMD160 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = a1b998e4e7edfb73ec35b0cc94895d9af16a8cd8
 SHA512 (bootstrap-jdk-1.11.0.5.8-netbsd-7-amd64-20190928.tar.xz) = 6e61996f7e3c3492b0c878644db30d72021dc4096639992e53b4440d4e2e18cd92e5630ecd4600d1917a1e63a7c814b63f74f811a40588febfe19ad8d3208a9d
@@ -21,6 +25,7 @@ SHA1 (patch-make_autoconf_lib-x11.m4) = f609a726f2d795f1d05cc933df587d3440c09b9f
 SHA1 (patch-make_common_NativeCompilation.gmk) = fc97a952ba87efb450f59e87f19fb4c47558ae1d
 SHA1 (patch-make_data_fontconfig_bsd.fontconfig.properties) = 9fd9f6ef4af0eece0b4ca0acbb44331566f17e07
 SHA1 (patch-make_lib_Awt2dLibraries.gmk) = ab77cfd0f07425b694688ffa98c2c661d1ac017d
+SHA1 (patch-src_hotspot_cpu_aarch64_icache__aarch64.hpp) = db26becc9c479c7d71b79416639dbd898346679c
 SHA1 (patch-src_hotspot_cpu_aarch64_vm__version__aarch64.cpp) = 70cd073fcc3e84e673228754dd0fb85ce5ae7102
 SHA1 (patch-src_hotspot_cpu_aarch64_vm__version__aarch64.hpp) = 042ae280b0988c945ed96a2c20e9f1cb356d8efe
 SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_bytes__bsd__aarch64.inline.hpp) = 4153d3a12ffc24de868b2fd97498dbdf7645e499
