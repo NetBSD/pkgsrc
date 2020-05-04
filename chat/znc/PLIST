@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/01 13:49:58 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/04 10:58:00 nia Exp $
 bin/znc
 bin/znc-buildmod
 include/znc/Buffer.h
@@ -74,9 +74,7 @@ lib/znc/modules_online.so
 lib/znc/nickserv.so
 lib/znc/notes.so
 lib/znc/notify_connect.so
-lib/znc/partyline.so
 lib/znc/perform.so
-lib/znc/q.so
 lib/znc/raw.so
 lib/znc/route_replies.so
 lib/znc/sample.so
