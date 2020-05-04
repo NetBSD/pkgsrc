@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: spec,v 1.1 2016/06/11 10:48:28 rillig Exp $
+# $NetBSD: spec,v 1.2 2020/05/04 20:29:26 rillig Exp $
 set -eu
 
 check_portability() {
@@ -19,8 +19,8 @@ do_test() {
 } >$TEST_OUTFILE 2>&1
 
 check_result() {
-	output_require "0 for files/portability-ok"
-	output_require "files/portability-test-eqeq: if \["
-	output_require "files/portability-test-eqeq: elif test"
+	output_require "result 0 for files/portability-ok"
+	output_require "files/portability-test-eqeq:[0-9]*: if \["
+	output_require "files/portability-test-eqeq:[0-9]*: elif test"
 	output_require "result 1 for files/portability-test-eqeq"
 }
