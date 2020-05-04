@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2742 2020/05/04 15:41:36 leot Exp $
+$NetBSD: CHANGES-2020,v 1.2743 2020/05/04 16:18:36 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4188,3 +4188,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-dotenv to 0.13.0 [adam 2020-05-04]
 	Updated www/tscrape to 0.5 [leot 2020-05-04]
 	Updated news/sfeed to 0.9.17 [leot 2020-05-04]
+	Added games/ajbsp version 1.01 [micha 2020-05-04]
