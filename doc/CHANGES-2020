@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2725 2020/05/03 23:50:27 agc Exp $
+$NetBSD: CHANGES-2020,v 1.2726 2020/05/04 01:41:31 agc Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4158,3 +4158,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 75.0nb3 [maya 2020-05-03]
 	Updated security/netpgpverify to 20200503 [agc 2020-05-03]
 	Updated security/libnetpgpverify to 20200503 [agc 2020-05-03]
+	Updated security/netpgpverify to 20200504 [agc 2020-05-04]
+	Updated security/libnetpgpverify to 20200504 [agc 2020-05-04]
