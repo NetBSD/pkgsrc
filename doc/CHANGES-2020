@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2731 2020/05/04 10:23:56 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2732 2020/05/04 10:57:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -3748,7 +3748,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-lmfit to 1.0.0 [adam 2020-04-28]
 	Added devel/go-pkgconfig version 0.0.0.20170226 [nikita 2020-04-28]
 	Added security/libgabe version 1.0 [nikita 2020-04-28]
-	Added net/openrrcp 0.2.1 [manu 2020-04-28]
+	Added net/openrrcp version 0.2.1 [manu 2020-04-28]
 	Updated wm/wmx to 8.0 [nikita 2020-04-28]
 	Updated wm/wmx-gnome to 8.0 [nikita 2020-04-28]
 	Updated net/freeDiameter to 1.4.0 [wiz 2020-04-28]
