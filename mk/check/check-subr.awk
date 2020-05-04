@@ -1,4 +1,4 @@
-# $NetBSD: check-subr.awk,v 1.3 2006/12/31 13:35:10 rillig Exp $
+# $NetBSD: check-subr.awk,v 1.4 2020/05/04 21:32:48 rillig Exp $
 #
 # This file contains functions that are used by the various awk
 # programs that check things in pkgsrc. All these programs must be
@@ -7,7 +7,7 @@
 # CK_FNAME
 #	The name of the file that is checked. Since awk interprets
 #	command line arguments in a weird way, the input file must be
-#	passed via stdin.
+#	passed via the environment.
 #
 # CK_PROGNAME
 #	The program name to be used in diagnostic messages.
