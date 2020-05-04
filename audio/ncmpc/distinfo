@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.22 2020/02/23 11:44:52 nia Exp $
+$NetBSD: distinfo,v 1.23 2020/05/04 09:21:17 nia Exp $
 
-SHA1 (ncmpc-0.37.tar.xz) = 2b27a0040ebfa2a4e27a3427e4e24b0cf8f521fb
-RMD160 (ncmpc-0.37.tar.xz) = fef991ee72bbe56368cfdb9448cc8efb19e22dc0
-SHA512 (ncmpc-0.37.tar.xz) = 0077a0e03eecfb097e4e454d12432abcca3ea8bb8fee6af994afea460d8d42bf95a95af12d25906e4853c3c70104784a496f25bc4c9a99f57ca0e13c7f0ced9e
-Size (ncmpc-0.37.tar.xz) = 240740 bytes
+SHA1 (ncmpc-0.38.tar.xz) = 8648267f6121208eba6c03ffec6231390f759778
+RMD160 (ncmpc-0.38.tar.xz) = dc542d786f33868b828cc3e9f16df553a2c9a9a8
+SHA512 (ncmpc-0.38.tar.xz) = cdacf32f9e8bfc9a859db308b37b52e5181456ee2cb34effb7660946bb579ba992a9d9e113235f6925b22ba05d296a95bd445b6e8e7bf15c2795817df0effb98
+Size (ncmpc-0.38.tar.xz) = 241780 bytes
 SHA1 (patch-doc_meson.build) = 5052b9eef5057f50dcbcea8d5bb46027263edb46
 SHA1 (patch-meson.build) = b16babee9f8e5799a600bf029b3bb606e32a265a
 SHA1 (patch-src_charset.cxx) = c8e06c936657819060c6539a3726e03fda7da54a
