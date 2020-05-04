@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/05/03 11:57:31 markd Exp $
+# $NetBSD: Makefile,v 1.23 2020/05/04 04:24:07 ryoon Exp $
 
 DISTNAME=	hyperref
 PKGNAME=	tex-${DISTNAME}-7.00d
@@ -28,7 +28,7 @@ DEPENDS+=	tex-refcount-[0-9]*:../../print/tex-refcount
 DEPENDS+=	tex-rerunfilecheck-[0-9]*:../../print/tex-rerunfilecheck
 DEPENDS+=	tex-stringenc-[0-9]*:../../print/tex-stringenc
 DEPENDS+=	tex-url>=3.2:../../print/tex-url
-DEPENDS+=	tex-zapfding-[0-9]*:../../print/tex-zapfding
+DEPENDS+=	tex-zapfding-[0-9]*:../../fonts/tex-zapfding
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
