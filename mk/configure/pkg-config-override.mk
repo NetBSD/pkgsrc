@@ -1,4 +1,4 @@
-# $NetBSD: pkg-config-override.mk,v 1.4 2014/07/21 12:10:40 wiz Exp $
+# $NetBSD: pkg-config-override.mk,v 1.5 2020/05/04 18:06:56 rillig Exp $
 
 # Package-settable variables:
 #
@@ -41,4 +41,5 @@ SUBST_STAGE._pkgconfig=		${PKGCONFIG_OVERRIDE_STAGE}
 SUBST_MESSAGE._pkgconfig=	Adding run-time search paths to pkg-config files.
 SUBST_FILES._pkgconfig=		${PKGCONFIG_OVERRIDE:S/^${WRKSRC}\///}
 SUBST_SED._pkgconfig=		${PKGCONFIG_OVERRIDE_SED}
+SUBST_NOOP_OK._pkgconfig=	yes # many files don't contain a Libs line
 .endif
