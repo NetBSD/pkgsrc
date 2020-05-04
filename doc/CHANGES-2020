@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2736 2020/05/04 12:20:36 gdt Exp $
+$NetBSD: CHANGES-2020,v 1.2737 2020/05/04 12:25:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4175,3 +4175,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated chat/znc to 1.8.0 [nia 2020-05-04]
 	Updated chat/ircd-hybrid to 8.2.31 [fox 2020-05-04]
 	Updated geography/py-proj to 2.6.1 [gdt 2020-05-04]
+	Added devel/p5-Devel-CallParser version 0.002 [mef 2020-05-04]
