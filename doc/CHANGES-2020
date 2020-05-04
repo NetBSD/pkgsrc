@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2735 2020/05/04 12:13:32 mef Exp $
+$NetBSD: CHANGES-2020,v 1.2736 2020/05/04 12:20:36 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4174,3 +4174,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated audio/audacious-plugins to 4.0.3 [nia 2020-05-04]
 	Updated chat/znc to 1.8.0 [nia 2020-05-04]
 	Updated chat/ircd-hybrid to 8.2.31 [fox 2020-05-04]
+	Updated geography/py-proj to 2.6.1 [gdt 2020-05-04]
