@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2019/03/06 14:09:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/05/04 17:23:28 riastradh Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/hgext3rd/evolve/__init__.py
 ${PYSITELIB}/hgext3rd/evolve/__init__.pyc
@@ -30,6 +30,9 @@ ${PYSITELIB}/hgext3rd/evolve/firstmergecache.pyo
 ${PYSITELIB}/hgext3rd/evolve/genericcaches.py
 ${PYSITELIB}/hgext3rd/evolve/genericcaches.pyc
 ${PYSITELIB}/hgext3rd/evolve/genericcaches.pyo
+${PYSITELIB}/hgext3rd/evolve/headchecking.py
+${PYSITELIB}/hgext3rd/evolve/headchecking.pyc
+${PYSITELIB}/hgext3rd/evolve/headchecking.pyo
 ${PYSITELIB}/hgext3rd/evolve/legacy.py
 ${PYSITELIB}/hgext3rd/evolve/legacy.pyc
 ${PYSITELIB}/hgext3rd/evolve/legacy.pyo
@@ -45,6 +48,9 @@ ${PYSITELIB}/hgext3rd/evolve/obsdiscovery.pyo
 ${PYSITELIB}/hgext3rd/evolve/obsexchange.py
 ${PYSITELIB}/hgext3rd/evolve/obsexchange.pyc
 ${PYSITELIB}/hgext3rd/evolve/obsexchange.pyo
+${PYSITELIB}/hgext3rd/evolve/obshashtree.py
+${PYSITELIB}/hgext3rd/evolve/obshashtree.pyc
+${PYSITELIB}/hgext3rd/evolve/obshashtree.pyo
 ${PYSITELIB}/hgext3rd/evolve/obshistory.py
 ${PYSITELIB}/hgext3rd/evolve/obshistory.pyc
 ${PYSITELIB}/hgext3rd/evolve/obshistory.pyo
@@ -93,6 +99,9 @@ ${PYSITELIB}/hgext3rd/serverminitopic.pyo
 ${PYSITELIB}/hgext3rd/topic/__init__.py
 ${PYSITELIB}/hgext3rd/topic/__init__.pyc
 ${PYSITELIB}/hgext3rd/topic/__init__.pyo
+${PYSITELIB}/hgext3rd/topic/common.py
+${PYSITELIB}/hgext3rd/topic/common.pyc
+${PYSITELIB}/hgext3rd/topic/common.pyo
 ${PYSITELIB}/hgext3rd/topic/compat.py
 ${PYSITELIB}/hgext3rd/topic/compat.pyc
 ${PYSITELIB}/hgext3rd/topic/compat.pyo
@@ -117,6 +126,9 @@ ${PYSITELIB}/hgext3rd/topic/randomname.pyo
 ${PYSITELIB}/hgext3rd/topic/revset.py
 ${PYSITELIB}/hgext3rd/topic/revset.pyc
 ${PYSITELIB}/hgext3rd/topic/revset.pyo
+${PYSITELIB}/hgext3rd/topic/server.py
+${PYSITELIB}/hgext3rd/topic/server.pyc
+${PYSITELIB}/hgext3rd/topic/server.pyo
 ${PYSITELIB}/hgext3rd/topic/stack.py
 ${PYSITELIB}/hgext3rd/topic/stack.pyc
 ${PYSITELIB}/hgext3rd/topic/stack.pyo
