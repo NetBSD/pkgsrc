@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/11/02 11:21:49 mef Exp $
+$NetBSD: distinfo,v 1.5 2020/05/04 13:26:11 mef Exp $
 
-SHA1 (Type-Tiny-XS-0.016.tar.gz) = 63f8c69e0c0a13b8ff5101a8359eb4260fe8adda
-RMD160 (Type-Tiny-XS-0.016.tar.gz) = 7b53c60078c73ed7adfc95b02b3073f9338349f5
-SHA512 (Type-Tiny-XS-0.016.tar.gz) = a21e2d9f08f734d27c14dfa7385c2a6c7309436b650be7d2607e400d039b77a5e4db9197f829dd9d848966dcdd8f2f0de93fc51ed2207d09dd53fe03d7b28697
-Size (Type-Tiny-XS-0.016.tar.gz) = 78204 bytes
+SHA1 (Type-Tiny-XS-0.017.tar.gz) = 72d0ce061eb9352ed4b294ef93d142659d738386
+RMD160 (Type-Tiny-XS-0.017.tar.gz) = f5f8e5704ad9c72d687da5fc7f12192cb3844c66
+SHA512 (Type-Tiny-XS-0.017.tar.gz) = 0efb9232a3e1b5b83ab2227d543970791d09362a23f2292a85eeac9583684ecccc016db821910f800794c7a8344da6110693e6b1be5563b899c2c4188eab990a
+Size (Type-Tiny-XS-0.017.tar.gz) = 78479 bytes
