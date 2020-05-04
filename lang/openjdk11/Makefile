@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/04/16 11:51:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/04 21:21:11 tnn Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -119,6 +119,9 @@ PLIST_VARS+=			aot
 PLIST_VARS+=			internal_vm_compiler
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST.aot=			yes
+PLIST.internal_vm_compiler=	yes
+.endif
+.if ${MACHINE_ARCH} == "aarch64"
 PLIST.internal_vm_compiler=	yes
 .endif
 
