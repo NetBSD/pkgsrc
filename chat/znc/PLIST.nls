@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.nls,v 1.1 2019/10/01 13:49:58 nia Exp $
+@comment $NetBSD: PLIST.nls,v 1.2 2020/05/04 10:58:00 nia Exp $
 share/locale/bg_BG/LC_MESSAGES/znc-admindebug.mo
 share/locale/bg_BG/LC_MESSAGES/znc-adminlog.mo
 share/locale/bg_BG/LC_MESSAGES/znc-alias.mo
@@ -39,11 +39,9 @@ share/locale/bg_BG/LC_MESSAGES/znc-modules_online.mo
 share/locale/bg_BG/LC_MESSAGES/znc-nickserv.mo
 share/locale/bg_BG/LC_MESSAGES/znc-notes.mo
 share/locale/bg_BG/LC_MESSAGES/znc-notify_connect.mo
-share/locale/bg_BG/LC_MESSAGES/znc-partyline.mo
 share/locale/bg_BG/LC_MESSAGES/znc-perform.mo
 share/locale/bg_BG/LC_MESSAGES/znc-perleval.mo
 share/locale/bg_BG/LC_MESSAGES/znc-pyeval.mo
-share/locale/bg_BG/LC_MESSAGES/znc-q.mo
 share/locale/bg_BG/LC_MESSAGES/znc-raw.mo
 share/locale/bg_BG/LC_MESSAGES/znc-route_replies.mo
 share/locale/bg_BG/LC_MESSAGES/znc-sample.mo
@@ -98,11 +96,9 @@ share/locale/de_DE/LC_MESSAGES/znc-modules_online.mo
 share/locale/de_DE/LC_MESSAGES/znc-nickserv.mo
 share/locale/de_DE/LC_MESSAGES/znc-notes.mo
 share/locale/de_DE/LC_MESSAGES/znc-notify_connect.mo
-share/locale/de_DE/LC_MESSAGES/znc-partyline.mo
 share/locale/de_DE/LC_MESSAGES/znc-perform.mo
 share/locale/de_DE/LC_MESSAGES/znc-perleval.mo
 share/locale/de_DE/LC_MESSAGES/znc-pyeval.mo
-share/locale/de_DE/LC_MESSAGES/znc-q.mo
 share/locale/de_DE/LC_MESSAGES/znc-raw.mo
 share/locale/de_DE/LC_MESSAGES/znc-route_replies.mo
 share/locale/de_DE/LC_MESSAGES/znc-sample.mo
@@ -157,11 +153,9 @@ share/locale/es_ES/LC_MESSAGES/znc-modules_online.mo
 share/locale/es_ES/LC_MESSAGES/znc-nickserv.mo
 share/locale/es_ES/LC_MESSAGES/znc-notes.mo
 share/locale/es_ES/LC_MESSAGES/znc-notify_connect.mo
-share/locale/es_ES/LC_MESSAGES/znc-partyline.mo
 share/locale/es_ES/LC_MESSAGES/znc-perform.mo
 share/locale/es_ES/LC_MESSAGES/znc-perleval.mo
 share/locale/es_ES/LC_MESSAGES/znc-pyeval.mo
-share/locale/es_ES/LC_MESSAGES/znc-q.mo
 share/locale/es_ES/LC_MESSAGES/znc-raw.mo
 share/locale/es_ES/LC_MESSAGES/znc-route_replies.mo
 share/locale/es_ES/LC_MESSAGES/znc-sample.mo
@@ -216,11 +210,9 @@ share/locale/fr_FR/LC_MESSAGES/znc-modules_online.mo
 share/locale/fr_FR/LC_MESSAGES/znc-nickserv.mo
 share/locale/fr_FR/LC_MESSAGES/znc-notes.mo
 share/locale/fr_FR/LC_MESSAGES/znc-notify_connect.mo
-share/locale/fr_FR/LC_MESSAGES/znc-partyline.mo
 share/locale/fr_FR/LC_MESSAGES/znc-perform.mo
 share/locale/fr_FR/LC_MESSAGES/znc-perleval.mo
 share/locale/fr_FR/LC_MESSAGES/znc-pyeval.mo
-share/locale/fr_FR/LC_MESSAGES/znc-q.mo
 share/locale/fr_FR/LC_MESSAGES/znc-raw.mo
 share/locale/fr_FR/LC_MESSAGES/znc-route_replies.mo
 share/locale/fr_FR/LC_MESSAGES/znc-sample.mo
@@ -275,11 +267,9 @@ share/locale/id_ID/LC_MESSAGES/znc-modules_online.mo
 share/locale/id_ID/LC_MESSAGES/znc-nickserv.mo
 share/locale/id_ID/LC_MESSAGES/znc-notes.mo
 share/locale/id_ID/LC_MESSAGES/znc-notify_connect.mo
-share/locale/id_ID/LC_MESSAGES/znc-partyline.mo
 share/locale/id_ID/LC_MESSAGES/znc-perform.mo
 share/locale/id_ID/LC_MESSAGES/znc-perleval.mo
 share/locale/id_ID/LC_MESSAGES/znc-pyeval.mo
-share/locale/id_ID/LC_MESSAGES/znc-q.mo
 share/locale/id_ID/LC_MESSAGES/znc-raw.mo
 share/locale/id_ID/LC_MESSAGES/znc-route_replies.mo
 share/locale/id_ID/LC_MESSAGES/znc-sample.mo
@@ -334,11 +324,9 @@ share/locale/it_IT/LC_MESSAGES/znc-modules_online.mo
 share/locale/it_IT/LC_MESSAGES/znc-nickserv.mo
 share/locale/it_IT/LC_MESSAGES/znc-notes.mo
 share/locale/it_IT/LC_MESSAGES/znc-notify_connect.mo
-share/locale/it_IT/LC_MESSAGES/znc-partyline.mo
 share/locale/it_IT/LC_MESSAGES/znc-perform.mo
 share/locale/it_IT/LC_MESSAGES/znc-perleval.mo
 share/locale/it_IT/LC_MESSAGES/znc-pyeval.mo
-share/locale/it_IT/LC_MESSAGES/znc-q.mo
 share/locale/it_IT/LC_MESSAGES/znc-raw.mo
 share/locale/it_IT/LC_MESSAGES/znc-route_replies.mo
 share/locale/it_IT/LC_MESSAGES/znc-sample.mo
@@ -393,11 +381,9 @@ share/locale/nl_NL/LC_MESSAGES/znc-modules_online.mo
 share/locale/nl_NL/LC_MESSAGES/znc-nickserv.mo
 share/locale/nl_NL/LC_MESSAGES/znc-notes.mo
 share/locale/nl_NL/LC_MESSAGES/znc-notify_connect.mo
-share/locale/nl_NL/LC_MESSAGES/znc-partyline.mo
 share/locale/nl_NL/LC_MESSAGES/znc-perform.mo
 share/locale/nl_NL/LC_MESSAGES/znc-perleval.mo
 share/locale/nl_NL/LC_MESSAGES/znc-pyeval.mo
-share/locale/nl_NL/LC_MESSAGES/znc-q.mo
 share/locale/nl_NL/LC_MESSAGES/znc-raw.mo
 share/locale/nl_NL/LC_MESSAGES/znc-route_replies.mo
 share/locale/nl_NL/LC_MESSAGES/znc-sample.mo
@@ -452,11 +438,9 @@ share/locale/pt_BR/LC_MESSAGES/znc-modules_online.mo
 share/locale/pt_BR/LC_MESSAGES/znc-nickserv.mo
 share/locale/pt_BR/LC_MESSAGES/znc-notes.mo
 share/locale/pt_BR/LC_MESSAGES/znc-notify_connect.mo
-share/locale/pt_BR/LC_MESSAGES/znc-partyline.mo
 share/locale/pt_BR/LC_MESSAGES/znc-perform.mo
 share/locale/pt_BR/LC_MESSAGES/znc-perleval.mo
 share/locale/pt_BR/LC_MESSAGES/znc-pyeval.mo
-share/locale/pt_BR/LC_MESSAGES/znc-q.mo
 share/locale/pt_BR/LC_MESSAGES/znc-raw.mo
 share/locale/pt_BR/LC_MESSAGES/znc-route_replies.mo
 share/locale/pt_BR/LC_MESSAGES/znc-sample.mo
@@ -511,11 +495,9 @@ share/locale/ru_RU/LC_MESSAGES/znc-modules_online.mo
 share/locale/ru_RU/LC_MESSAGES/znc-nickserv.mo
 share/locale/ru_RU/LC_MESSAGES/znc-notes.mo
 share/locale/ru_RU/LC_MESSAGES/znc-notify_connect.mo
-share/locale/ru_RU/LC_MESSAGES/znc-partyline.mo
 share/locale/ru_RU/LC_MESSAGES/znc-perform.mo
 share/locale/ru_RU/LC_MESSAGES/znc-perleval.mo
 share/locale/ru_RU/LC_MESSAGES/znc-pyeval.mo
-share/locale/ru_RU/LC_MESSAGES/znc-q.mo
 share/locale/ru_RU/LC_MESSAGES/znc-raw.mo
 share/locale/ru_RU/LC_MESSAGES/znc-route_replies.mo
 share/locale/ru_RU/LC_MESSAGES/znc-sample.mo
