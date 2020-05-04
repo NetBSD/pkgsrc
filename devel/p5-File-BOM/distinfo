@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2019/04/07 01:18:26 wen Exp $
+$NetBSD: distinfo,v 1.5 2020/05/04 12:52:01 mef Exp $
 
-SHA1 (File-BOM-0.16.tar.gz) = 0075dc799d1511a6519a8e0019b6031b95f713b1
-RMD160 (File-BOM-0.16.tar.gz) = 2130fafed1d7a810e1bccf5caa674ffdd90da77b
-SHA512 (File-BOM-0.16.tar.gz) = 08c45b45111e95e03670da5fe2dca309039b9f635cfa7c6fd7fcbe7358569fc3d1c374852fb8c51d609e8e7bed662baa9cbb85dc823051c349cfb00cee996fa3
-Size (File-BOM-0.16.tar.gz) = 19835 bytes
+SHA1 (File-BOM-0.18.tar.gz) = 25525f8210e4522c5ed380059c97ef91343bb34d
+RMD160 (File-BOM-0.18.tar.gz) = a4bfa43d99b2ebbb8b3a57616d1e200d64d28b47
+SHA512 (File-BOM-0.18.tar.gz) = b0d26b9453d7ccf844bf8cf4df307594f7d91457cd5eb5d6457495581cccfacd53c0e8ca4a0d91cf8b4c7553026d0c4f1faf0b07eb0fbd93e0da66f61392e15c
+Size (File-BOM-0.18.tar.gz) = 20042 bytes
