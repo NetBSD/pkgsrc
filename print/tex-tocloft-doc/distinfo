@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/10/21 03:25:12 markd Exp $
+$NetBSD: distinfo,v 1.5 2020/05/05 12:01:05 markd Exp $
 
-SHA1 (tex-tocloft-45188/tocloft.doc.tar.xz) = 905ea12d7783dadec4cb27886d61d1b7ac38b7a2
-RMD160 (tex-tocloft-45188/tocloft.doc.tar.xz) = eb0d9b3f9ad618e8de0dcf91274aa23c6950f68a
-SHA512 (tex-tocloft-45188/tocloft.doc.tar.xz) = 9c8afc29ed61269bcc86e8ff5e03a7b2646dbbb7d2c35f52139b6280e36f5e3987144aa5cfedd41fa26412219babff59d7ec67ff9b670ee19db61fc125b085d4
-Size (tex-tocloft-45188/tocloft.doc.tar.xz) = 495912 bytes
+SHA1 (tocloft.doc.r53364.tar.xz) = f4c534f5079fec0e9238d9ec40a62f3d51f02d2d
+RMD160 (tocloft.doc.r53364.tar.xz) = 6535d1bd81e555be3ebe0ad39881374b03660442
+SHA512 (tocloft.doc.r53364.tar.xz) = edd477e3c4b2a9f815c3e57a6b785c2237bc34435dd561d28b3e38bd8da5cc5d4d4de79a10dfbb55e920d69dab90d0a40efd3bcc44cad1c736a723b89f147af9
+Size (tocloft.doc.r53364.tar.xz) = 496680 bytes

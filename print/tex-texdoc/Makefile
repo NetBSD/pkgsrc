@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/01/18 23:34:55 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/05 12:01:03 markd Exp $
 
 DISTNAME=	texdoc
-PKGNAME=	tex-${DISTNAME}-2019
-TEXLIVE_REV=	50627
+PKGNAME=	tex-${DISTNAME}-2020
+TEXLIVE_REV=	53859
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/texdoc
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 REPLACE_TEXLUA=		bin/texdoc
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-extract:
