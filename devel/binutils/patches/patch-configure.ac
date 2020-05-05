@@ -1,9 +1,0 @@
-$NetBSD: patch-configure.ac,v 1.3 2020/02/05 06:18:34 rillig Exp $
-
-Remove etc
-
---- configure.ac.orig	2016-01-25 08:57:16.000000000 +0000
-+++ configure.ac
-@@ -143,1 +140,1 @@
--host_tools="flex bison binutils gas ld fixincludes gcc cgen sid sim gdb gprof etc expect dejagnu m4 utils guile fastjar gnattools libcc1 gotools"
-+host_tools="flex bison binutils gas ld fixincludes gcc cgen sid sim gdb gprof expect dejagnu m4 utils guile fastjar gnattools libcc1 gotools"
