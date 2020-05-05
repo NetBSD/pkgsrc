@@ -4,6 +4,7 @@ bin/review-checkdep @PREFIX@/bin/review-checkdep@RUBY_SUFFIX@
 bin/review-compile @PREFIX@/bin/review-compile@RUBY_SUFFIX@
 bin/review-epub2html @PREFIX@/bin/review-epub2html@RUBY_SUFFIX@
 bin/review-epubmaker @PREFIX@/bin/review-epubmaker@RUBY_SUFFIX@
+bin/review-idgxmlmaker @PREFIX@/bin/bin/review-idgxmlmaker@RUBY_SUFFIX@
 bin/review-index @PREFIX@/bin/review-index@RUBY_SUFFIX@
 bin/review-init @PREFIX@/bin/review-init@RUBY_SUFFIX@
 bin/review-pdfmaker @PREFIX@/bin/review-pdfmaker@RUBY_SUFFIX@
