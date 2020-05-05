@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2020/05/03 13:02:18 rillig Exp $
+# $NetBSD: Makefile,v 1.82 2020/05/05 10:06:10 jperkin Exp $
 
 DISTNAME=	binutils-2.34
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,7 @@ REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake makeinfo
+USE_TOOLS+=		gmake
 
 # PR pkg/48504, ksh is sufficient for NetBSD 5.2 and NetBSD 6.1
 .include "../../mk/bsd.prefs.mk"
@@ -40,7 +40,6 @@ LIB_PATH:=		/lib64:${LIB_PATH}
 .endif
 CONFIGURE_ARGS+=	--with-lib-path=${LIB_PATH}
 CONFIGURE_ARGS+=	--program-prefix=g
-CONFIGURE_ENV+=		ac_cv_prog_PERL= # not needed
 BINUTILS_PREFIX=	${PREFIX}/${MACHINE_GNU_PLATFORM}
 
 PLIST_SRC=	${PKGDIR}/PLIST.common
@@ -97,16 +96,6 @@ CFLAGS+=	-Wno-unused-value -Wno-format-security \
 .if !empty(CC_VERSION:Mgcc-4.9.*)
 CONFIGURE_ARGS+=	--disable-werror
 .endif
-
-# Prevent the need to run texi2pod.pl and pod2man which would
-# require perl as a build dependency.
-post-configure:
-.for f in ld/ldver.texi ld/ld.1 gas/doc/gasver.texi gas/doc/as.1
-	set -e; \
-	if [ -f ${WRKSRC}/${f} ]; then					\
-		${TOUCH} ${WRKSRC}/${f};				\
-	fi
-.endfor
 
 SYMLINK_FILES=	addr2line ar as c++filt dlltool elfedit ld.bfd		\
 		nlmconv nm objcopy objdump ranlib readelf size strings	\

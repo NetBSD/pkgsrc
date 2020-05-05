@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2020/02/05 06:18:34 rillig Exp $
+$NetBSD: distinfo,v 1.32 2020/05/05 10:06:10 jperkin Exp $
 
 SHA1 (binutils-2.34.tar.bz2) = 361566c9ab5e90bd847d06f46fb9f18ec6c3ecf0
 RMD160 (binutils-2.34.tar.bz2) = e99f517407503cec1042a2e824b7c1f8f0fca4b8
@@ -7,9 +7,8 @@ Size (binutils-2.34.tar.bz2) = 32430470 bytes
 SHA1 (patch-bfd_cache.c) = 20988e84ff2a1d7ff83b5adb04e4f117953205b8
 SHA1 (patch-bfd_config.bfd) = 4525214f9e7debd5cccaf1af55d04c1a5ff7a42d
 SHA1 (patch-bfd_configure) = 37777852c63bb5b13c76f4085f1e43d50ce88920
-SHA1 (patch-bfd_configure.ac) = 742e4c118f6a00b646799862172ffa70a867cf0f
-SHA1 (patch-configure) = 0adf4ebf23385ca67b32655d23dd21204d2a4618
-SHA1 (patch-configure.ac) = b2cb10dafcabf0b743ae0c241fed2f226bc759ab
+SHA1 (patch-binutils_Makefile.in) = a24f0e6a8df05f7241198793124a0eaf9fe676d2
+SHA1 (patch-configure) = 3e518bda9d3ef169f9ebd35061b1c6374f12b406
 SHA1 (patch-gas_configure.tgt) = 3a3a6fde98a457c76b70e74842ce952b0046eeda
 SHA1 (patch-gold_Makefile.in) = be0ec82e1d16c6eae50153d339c8eb29aaca42d0
 SHA1 (patch-gold_options.h) = ea98204c747b2d568e0f5ab7f64cc77c4341a744
