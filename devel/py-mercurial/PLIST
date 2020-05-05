@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/02/09 14:59:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2020/05/05 12:12:47 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -135,6 +135,9 @@ ${PYSITELIB}/hgext/fastannotate/revmap.pyo
 ${PYSITELIB}/hgext/fastannotate/support.py
 ${PYSITELIB}/hgext/fastannotate/support.pyc
 ${PYSITELIB}/hgext/fastannotate/support.pyo
+${PYSITELIB}/hgext/fastexport.py
+${PYSITELIB}/hgext/fastexport.pyc
+${PYSITELIB}/hgext/fastexport.pyo
 ${PYSITELIB}/hgext/fetch.py
 ${PYSITELIB}/hgext/fetch.pyc
 ${PYSITELIB}/hgext/fetch.pyo
@@ -169,6 +172,24 @@ ${PYSITELIB}/hgext/fsmonitor/state.pyo
 ${PYSITELIB}/hgext/fsmonitor/watchmanclient.py
 ${PYSITELIB}/hgext/fsmonitor/watchmanclient.pyc
 ${PYSITELIB}/hgext/fsmonitor/watchmanclient.pyo
+${PYSITELIB}/hgext/git/__init__.py
+${PYSITELIB}/hgext/git/__init__.pyc
+${PYSITELIB}/hgext/git/__init__.pyo
+${PYSITELIB}/hgext/git/dirstate.py
+${PYSITELIB}/hgext/git/dirstate.pyc
+${PYSITELIB}/hgext/git/dirstate.pyo
+${PYSITELIB}/hgext/git/gitlog.py
+${PYSITELIB}/hgext/git/gitlog.pyc
+${PYSITELIB}/hgext/git/gitlog.pyo
+${PYSITELIB}/hgext/git/gitutil.py
+${PYSITELIB}/hgext/git/gitutil.pyc
+${PYSITELIB}/hgext/git/gitutil.pyo
+${PYSITELIB}/hgext/git/index.py
+${PYSITELIB}/hgext/git/index.pyc
+${PYSITELIB}/hgext/git/index.pyo
+${PYSITELIB}/hgext/git/manifest.py
+${PYSITELIB}/hgext/git/manifest.pyc
+${PYSITELIB}/hgext/git/manifest.pyo
 ${PYSITELIB}/hgext/githelp.py
 ${PYSITELIB}/hgext/githelp.pyc
 ${PYSITELIB}/hgext/githelp.pyo
@@ -190,6 +211,24 @@ ${PYSITELIB}/hgext/highlight/highlight.pyo
 ${PYSITELIB}/hgext/histedit.py
 ${PYSITELIB}/hgext/histedit.pyc
 ${PYSITELIB}/hgext/histedit.pyo
+${PYSITELIB}/hgext/hooklib/__init__.py
+${PYSITELIB}/hgext/hooklib/__init__.pyc
+${PYSITELIB}/hgext/hooklib/__init__.pyo
+${PYSITELIB}/hgext/hooklib/changeset_obsoleted.py
+${PYSITELIB}/hgext/hooklib/changeset_obsoleted.pyc
+${PYSITELIB}/hgext/hooklib/changeset_obsoleted.pyo
+${PYSITELIB}/hgext/hooklib/changeset_published.py
+${PYSITELIB}/hgext/hooklib/changeset_published.pyc
+${PYSITELIB}/hgext/hooklib/changeset_published.pyo
+${PYSITELIB}/hgext/hooklib/enforce_draft_commits.py
+${PYSITELIB}/hgext/hooklib/enforce_draft_commits.pyc
+${PYSITELIB}/hgext/hooklib/enforce_draft_commits.pyo
+${PYSITELIB}/hgext/hooklib/reject_merge_commits.py
+${PYSITELIB}/hgext/hooklib/reject_merge_commits.pyc
+${PYSITELIB}/hgext/hooklib/reject_merge_commits.pyo
+${PYSITELIB}/hgext/hooklib/reject_new_heads.py
+${PYSITELIB}/hgext/hooklib/reject_new_heads.pyc
+${PYSITELIB}/hgext/hooklib/reject_new_heads.pyo
 ${PYSITELIB}/hgext/infinitepush/__init__.py
 ${PYSITELIB}/hgext/infinitepush/__init__.pyc
 ${PYSITELIB}/hgext/infinitepush/__init__.pyo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/02/07 07:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2020/05/05 12:12:47 wiz Exp $
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,9 +26,12 @@ INSTALLATION_DIRS+=	share/doc/mercurial
 
 .include "version.mk"
 
-# Known test failures:
-# none as of 5.2.2
-# Ran 820 tests, 76 skipped, 0 failed.
+# Known test failures as of 5.4:
+# test-persistent-nodemap
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6320
+# test-doctest:
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6320
+# Ran 841 tests, 78 skipped, 2 failed.
 do-test:
 	cd ${WRKSRC} && make tests PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
 
