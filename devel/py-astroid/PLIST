@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2019/10/01 11:34:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2020/05/05 18:18:55 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -28,6 +28,9 @@ ${PYSITELIB}/astroid/brain/brain_argparse.pyo
 ${PYSITELIB}/astroid/brain/brain_attrs.py
 ${PYSITELIB}/astroid/brain/brain_attrs.pyc
 ${PYSITELIB}/astroid/brain/brain_attrs.pyo
+${PYSITELIB}/astroid/brain/brain_boto3.py
+${PYSITELIB}/astroid/brain/brain_boto3.pyc
+${PYSITELIB}/astroid/brain/brain_boto3.pyo
 ${PYSITELIB}/astroid/brain/brain_builtin_inference.py
 ${PYSITELIB}/astroid/brain/brain_builtin_inference.pyc
 ${PYSITELIB}/astroid/brain/brain_builtin_inference.pyo
@@ -118,6 +121,12 @@ ${PYSITELIB}/astroid/brain/brain_random.pyo
 ${PYSITELIB}/astroid/brain/brain_re.py
 ${PYSITELIB}/astroid/brain/brain_re.pyc
 ${PYSITELIB}/astroid/brain/brain_re.pyo
+${PYSITELIB}/astroid/brain/brain_responses.py
+${PYSITELIB}/astroid/brain/brain_responses.pyc
+${PYSITELIB}/astroid/brain/brain_responses.pyo
+${PYSITELIB}/astroid/brain/brain_scipy_signal.py
+${PYSITELIB}/astroid/brain/brain_scipy_signal.pyc
+${PYSITELIB}/astroid/brain/brain_scipy_signal.pyo
 ${PYSITELIB}/astroid/brain/brain_six.py
 ${PYSITELIB}/astroid/brain/brain_six.pyc
 ${PYSITELIB}/astroid/brain/brain_six.pyo
