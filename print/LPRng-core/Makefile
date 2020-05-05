@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/01/19 18:52:22 agc Exp $
+# $NetBSD: Makefile,v 1.42 2020/05/05 18:33:15 rillig Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -13,6 +13,8 @@ HOMEPAGE=	http://www.lprng.com/
 COMMENT=	Enhanced Printer Spooler
 
 MAKE_JOBS_SAFE=		no
+
+CHECK_PORTABILITY_SKIP+=	*redhat* *RedHat*
 
 CONFLICTS+=		cups-[0-9]*
 
