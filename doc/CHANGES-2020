@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2754 2020/05/05 12:02:59 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2755 2020/05/05 12:12:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4233,3 +4233,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/tex-xetex-doc to 2020 [markd 2020-05-05]
 	Updated print/tex-zxjafont to 1.2 [markd 2020-05-05]
 	Updated print/tex-zxjafont-doc to 1.2 [markd 2020-05-05]
+	Updated devel/py-mercurial to 5.4 [wiz 2020-05-05]
