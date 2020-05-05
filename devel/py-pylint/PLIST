@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/10/01 11:38:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2020/05/05 18:21:25 adam Exp $
 bin/epylint-${PYVERSSUFFIX}
 bin/pylint-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -141,9 +141,24 @@ ${PYSITELIB}/pylint/graph.pyo
 ${PYSITELIB}/pylint/interfaces.py
 ${PYSITELIB}/pylint/interfaces.pyc
 ${PYSITELIB}/pylint/interfaces.pyo
-${PYSITELIB}/pylint/lint.py
-${PYSITELIB}/pylint/lint.pyc
-${PYSITELIB}/pylint/lint.pyo
+${PYSITELIB}/pylint/lint/__init__.py
+${PYSITELIB}/pylint/lint/__init__.pyc
+${PYSITELIB}/pylint/lint/__init__.pyo
+${PYSITELIB}/pylint/lint/check_parallel.py
+${PYSITELIB}/pylint/lint/check_parallel.pyc
+${PYSITELIB}/pylint/lint/check_parallel.pyo
+${PYSITELIB}/pylint/lint/pylinter.py
+${PYSITELIB}/pylint/lint/pylinter.pyc
+${PYSITELIB}/pylint/lint/pylinter.pyo
+${PYSITELIB}/pylint/lint/report_functions.py
+${PYSITELIB}/pylint/lint/report_functions.pyc
+${PYSITELIB}/pylint/lint/report_functions.pyo
+${PYSITELIB}/pylint/lint/run.py
+${PYSITELIB}/pylint/lint/run.pyc
+${PYSITELIB}/pylint/lint/run.pyo
+${PYSITELIB}/pylint/lint/utils.py
+${PYSITELIB}/pylint/lint/utils.pyc
+${PYSITELIB}/pylint/lint/utils.pyo
 ${PYSITELIB}/pylint/message/__init__.py
 ${PYSITELIB}/pylint/message/__init__.pyc
 ${PYSITELIB}/pylint/message/__init__.pyo
@@ -225,6 +240,9 @@ ${PYSITELIB}/pylint/utils/ast_walker.pyo
 ${PYSITELIB}/pylint/utils/file_state.py
 ${PYSITELIB}/pylint/utils/file_state.pyc
 ${PYSITELIB}/pylint/utils/file_state.pyo
+${PYSITELIB}/pylint/utils/pragma_parser.py
+${PYSITELIB}/pylint/utils/pragma_parser.pyc
+${PYSITELIB}/pylint/utils/pragma_parser.pyo
 ${PYSITELIB}/pylint/utils/utils.py
 ${PYSITELIB}/pylint/utils/utils.pyc
 ${PYSITELIB}/pylint/utils/utils.pyo
