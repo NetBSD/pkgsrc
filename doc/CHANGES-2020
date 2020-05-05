@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2748 2020/05/05 01:07:44 gutteridge Exp $
+$NetBSD: CHANGES-2020,v 1.2749 2020/05/05 05:53:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4194,3 +4194,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 75.0nb4 [maya 2020-05-04]
 	Updated lang/openjdk8 to 1.8.252 [tnn 2020-05-04]
 	Updated x11/xfce4-whiskermenu-plugin to 2.4.4 [gutteridge 2020-05-05]
+	Updated textproc/ruby-json-pure to 2.3.0 [taca 2020-05-05]
