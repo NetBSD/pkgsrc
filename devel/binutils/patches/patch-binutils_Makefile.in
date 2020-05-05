@@ -1,0 +1,17 @@
+$NetBSD: patch-binutils_Makefile.in,v 1.1 2020/05/05 10:06:10 jperkin Exp $
+
+binutils-2.34 shipped a broken tarball without pre-generated documentation,
+and we cannot depend on perl and gtexinfo to build it without serious circular
+dependency issues, so until a fixed tarball is released disable the docs.
+
+--- binutils/Makefile.in.orig	2020-05-04 17:27:24.963978676 +0000
++++ binutils/Makefile.in
+@@ -560,7 +560,7 @@ zlibdir = @zlibdir@
+ zlibinc = @zlibinc@
+ AUTOMAKE_OPTIONS = dejagnu no-dist foreign subdir-objects
+ ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
+-SUBDIRS = doc po
++SUBDIRS = po
+ tooldir = $(exec_prefix)/$(target_alias)
+ 
+ # Automake 1.10+ disables lex and yacc output file regeneration if
