@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/05 09:04:45 spz Exp $
+@comment the files not in .packlist
+share/rt4/plugins/RT-Extension-ArticleTemplates/lib/perllocal.pod
+share/rt4/plugins/RT-Extension-ArticleTemplates/html/Callbacks/RT-Extension-ArticleTemplates/Articles/Article/Elements/Preformatted/ProcessContent
+share/rt4/plugins/RT-Extension-ArticleTemplates/html/Callbacks/RT-Extension-ArticleTemplates/Articles/Elements/SubjectOverride/ProcessContent
+share/rt4/plugins/RT-Extension-ArticleTemplates/html/Callbacks/RT-Extension-ArticleTemplates/Elements/SubjectOverride/ProcessContent
+share/rt4/plugins/RT-Extension-ArticleTemplates/html/Elements/RT-Extension-ArticleTemplates/ProcessContent
