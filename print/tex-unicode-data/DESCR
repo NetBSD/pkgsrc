@@ -9,6 +9,6 @@ Currently there are two loader files: one for general character
 set up and one for initialising XeTeX character classes as has
 been carried out to date by unicode-letters.tex. The source
 data are distributed in accordance with the license stipulated
-by the Unicode Consortium. The bundle as a whole is co-
-ordinated by the LaTeX3 Project as a general resource for TeX
-users.
+by the Unicode Consortium. The bundle as a whole is
+co-ordinated by the LaTeX3 Project as a general resource for
+TeX users.

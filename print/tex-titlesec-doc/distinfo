@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/08/11 10:44:44 markd Exp $
+$NetBSD: distinfo,v 1.8 2020/05/05 12:01:05 markd Exp $
 
-SHA1 (tex-titlesec-51664/titlesec.doc.tar.xz) = dda501b94fe3667bcea48ff425e7e2c80fcdaf9f
-RMD160 (tex-titlesec-51664/titlesec.doc.tar.xz) = 86db4926e2d6d5679543b1f93df75c553b9d6ebd
-SHA512 (tex-titlesec-51664/titlesec.doc.tar.xz) = 82f6df3127e835ddb4ae3a1fc2ccc06cf51b6268efab93ee5664a9286b0852a38cf9ebbbeb9512ed60aba8c915dce534fc48a8bde7431f2f90bd202a2c3dc157
-Size (tex-titlesec-51664/titlesec.doc.tar.xz) = 349752 bytes
+SHA1 (titlesec.doc.r52413.tar.xz) = 7b4c87b767bd09a7983adf4d3ac59fc48ec6bf9f
+RMD160 (titlesec.doc.r52413.tar.xz) = 26793ac3930b89a8be254a5a64b4675f21852e29
+SHA512 (titlesec.doc.r52413.tar.xz) = 34623133da534fa15d491f3ecfeb6ee6736a580c12577d7ef313efb341c97ffe1cfac49f4c94b90f8f519847bb7b0d37b003ee485c240d1dfab3b68426563dcc
+Size (titlesec.doc.r52413.tar.xz) = 657856 bytes

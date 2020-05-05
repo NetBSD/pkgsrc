@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/30 07:10:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/05/05 12:01:05 markd Exp $
 share/texmf-dist/tex/latex/tools/.tex
 share/texmf-dist/tex/latex/tools/afterpage.sty
 share/texmf-dist/tex/latex/tools/array-2016-10-06.sty
@@ -35,6 +35,7 @@ share/texmf-dist/tex/latex/tools/thm.sty
 share/texmf-dist/tex/latex/tools/thmb.sty
 share/texmf-dist/tex/latex/tools/thp.sty
 share/texmf-dist/tex/latex/tools/trace.sty
+share/texmf-dist/tex/latex/tools/varioref-2016-02-16.sty
 share/texmf-dist/tex/latex/tools/varioref.sty
 share/texmf-dist/tex/latex/tools/verbatim.sty
 share/texmf-dist/tex/latex/tools/verbtest.tex

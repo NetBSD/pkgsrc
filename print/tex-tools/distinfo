@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2019/01/30 07:10:26 markd Exp $
+$NetBSD: distinfo,v 1.14 2020/05/05 12:01:05 markd Exp $
 
-SHA1 (tex-tools-49619/tools.tar.xz) = c2322f97be63059fee613aba3df04ea5dd99f5ce
-RMD160 (tex-tools-49619/tools.tar.xz) = 01d447a6705b1c30795abce8e11daeeb7d03d266
-SHA512 (tex-tools-49619/tools.tar.xz) = b5675534e28ba207ebc6312dbb04433b963ed7b4cfc2602521681d0ee1b1bb9b917be681bc23f1f8d7da0f98e7291d7a382f19aef039b5239f60bb72f67f45e3
-Size (tex-tools-49619/tools.tar.xz) = 40028 bytes
+SHA1 (tools.r53640.tar.xz) = 83a5f11de55b10a8375fd799d9b62495d536c6d6
+RMD160 (tools.r53640.tar.xz) = 45fdcd0936bc59052d5b5fde79356b858ad99cdd
+SHA512 (tools.r53640.tar.xz) = 1d3386bd098381e0ede5ff0c6cb107867719a54a8109208a1de448881e172265a000d91c6e7d0607af62de0504913e4698f5ee00a710b5dc32a8157faed094d5
+Size (tools.r53640.tar.xz) = 41220 bytes
