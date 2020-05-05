@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2751 2020/05/05 06:06:19 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2752 2020/05/05 10:06:19 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4197,3 +4197,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/ruby-json-pure to 2.3.0 [taca 2020-05-05]
 	Updated textproc/ruby-kramdown to 2.2.1 [taca 2020-05-05]
 	Updated textproc/ruby-review to 4.1.0 [taca 2020-05-05]
+	Updated devel/binutils to 2.34nb2 [jperkin 2020-05-05]
