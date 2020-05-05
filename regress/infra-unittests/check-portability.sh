@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: check-portability.sh,v 1.3 2020/05/05 05:55:25 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.4 2020/05/05 06:11:29 rillig Exp $
 #
 # Test cases for mk/check/check-portability.*.
 #
@@ -108,6 +108,49 @@ if test_case_begin 'configure patched, configure.in bad'; then
 		'#! /bin/sh' \
 		'good'
 	create_file_lines 'work/configure.in' \
+		'test a == b'
+
+	check_portability_sh \
+		'CHECK_PORTABILITY_EXPERIMENTAL=yes'
+
+	assert_that "out" --file-is-empty
+	assert_that $exitcode --equals 0
+
+	test_case_end
+fi
+
+
+if test_case_begin 'Makefile.in patched, Makefile.am bad'; then
+
+	# As of 2020-05-05, Makefile.am is not checked at all since only
+	# very few packages actually use that file during the build.
+
+	create_file_lines 'work/patches/patch-aa' \
+		'+++ Makefile.in 2020-05-05'
+	create_file_lines 'work/Makefile.in' \
+		'test a = b'
+	create_file_lines 'work/Makefile.am' \
+		'test a == b'
+
+	check_portability_sh \
+		'CHECK_PORTABILITY_EXPERIMENTAL=yes'
+
+	assert_that "out" --file-is-empty
+	assert_that $exitcode --equals 0
+
+	test_case_end
+fi
+
+
+if test_case_begin 'files that are usually not used for building'; then
+
+	# The following files are mostly interesting to the upstream
+	# developers and are not used during the actual build, except
+	# if the package rebuilds everything using the GNU autotools.
+
+	create_file_lines 'work/configure.ac' \
+		'test a == b'
+	create_file_lines 'work/Makefile.am' \
 		'test a == b'
 
 	check_portability_sh \
