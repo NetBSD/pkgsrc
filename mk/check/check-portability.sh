@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.sh,v 1.21 2020/05/04 21:48:18 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.22 2020/05/05 05:55:26 rillig Exp $
 #
 # This program checks all files in the current directory and any
 # subdirectories for portability issues that are likely to result in
@@ -80,7 +80,8 @@ find ./* -type f -print 2>/dev/null \
 		(c|C|cc|cxx|f|go|pl|py|ac|m4)				continue ;;
 		esac
 
-		if [ $skip_shebang_test = yes ]; then
+		if [ "$CHECK_PORTABILITY_EXPERIMENTAL" = yes ] &&
+		   [ $skip_shebang_test = yes ]; then
 			check_shell "$fname"
 			continue
 		fi
