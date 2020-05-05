@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.136 2020/05/02 12:04:44 leot Exp $
+# $NetBSD: Makefile,v 1.137 2020/05/05 10:13:14 leot Exp $
 
 DISTNAME=	cups-filters-1.27.4
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -11,8 +12,8 @@ COMMENT=	Backends, filters, and other software for cups
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND mit
 
 TOOL_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
+DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
-TEST_DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
