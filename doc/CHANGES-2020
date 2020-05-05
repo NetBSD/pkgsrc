@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2756 2020/05/05 13:04:39 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2757 2020/05/05 13:06:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4235,3 +4235,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/tex-zxjafont-doc to 1.2 [markd 2020-05-05]
 	Updated devel/py-mercurial to 5.4 [wiz 2020-05-05]
 	Updated devel/ruby-rspec-support to 3.9.3 [taca 2020-05-05]
+	Updated devel/ruby-rspec-core to 3.9.2 [taca 2020-05-05]
