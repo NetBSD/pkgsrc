@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2019/01/23 11:16:33 markd Exp $
+$NetBSD: distinfo,v 1.3 2020/05/05 12:01:05 markd Exp $
 
-SHA1 (tex-tracklang-47704/tracklang.tar.xz) = 2036d7be97b83589658f7e238cc89ba035a1dddd
-RMD160 (tex-tracklang-47704/tracklang.tar.xz) = 031cdef808ba7cec105ad3acfc43f4d1f69a4ee7
-SHA512 (tex-tracklang-47704/tracklang.tar.xz) = aa692bbdbbbe66bceb62ac818f9b8be09804f2be6f31ba8f7a1530b747603869a4f5c488461f0954cf8aef6794a20bc8c89bbc298aea95c906802f5c68e0b535
-Size (tex-tracklang-47704/tracklang.tar.xz) = 17260 bytes
+SHA1 (tracklang.r52991.tar.xz) = 78320cdfdf2a3fbe0fc9ebe69e07def5013cc057
+RMD160 (tracklang.r52991.tar.xz) = 1de45b1eaf2a9825485d65518fc971bee8722942
+SHA512 (tracklang.r52991.tar.xz) = bf1126910a73aa2df406a596760802da334c0bdb451e9062cdad2fd80a29386c42b3deac4af1624741868e9de12bf7f1b3e94e79f48b291a6f062503f5161611
+Size (tracklang.r52991.tar.xz) = 19104 bytes
