@@ -1,0 +1,6 @@
+An extension for RT4 that makes RT parse the content of Articles as
+a template, when inserting the article into a ticket, using the
+Text::Template module; this can be used to make your Articles dynamic.
+Text::Template is the same module that RT's Templates use as well.
+You need this extension to be able to generate form responses that
+contain fields from the ticket.
