@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/09/05 18:39:07 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/05/05 13:04:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/LICENSE.md
@@ -34,4 +34,5 @@ ${GEM_LIBDIR}/lib/rspec/support/spec/with_isolated_directory.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/with_isolated_stderr.rb
 ${GEM_LIBDIR}/lib/rspec/support/version.rb
 ${GEM_LIBDIR}/lib/rspec/support/warnings.rb
+${GEM_LIBDIR}/lib/rspec/support/with_keywords_when_needed.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
