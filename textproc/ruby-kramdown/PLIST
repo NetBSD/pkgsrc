@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2019/10/05 04:34:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.19 2020/05/05 06:01:51 taca Exp $
 bin/kramdown${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -290,6 +290,8 @@ ${GEM_LIBDIR}/test/testcases/block/09_html/processing_instruction.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/simple.html
 ${GEM_LIBDIR}/test/testcases/block/09_html/simple.options
 ${GEM_LIBDIR}/test/testcases/block/09_html/simple.text
+${GEM_LIBDIR}/test/testcases/block/09_html/standalone_image_in_div.htmlinput
+${GEM_LIBDIR}/test/testcases/block/09_html/standalone_image_in_div.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/textarea.html
 ${GEM_LIBDIR}/test/testcases/block/09_html/textarea.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/xml.html
@@ -361,15 +363,6 @@ ${GEM_LIBDIR}/test/testcases/block/14_table/table_with_footnote.latex
 ${GEM_LIBDIR}/test/testcases/block/14_table/table_with_footnote.text
 ${GEM_LIBDIR}/test/testcases/block/15_math/gh_128.html
 ${GEM_LIBDIR}/test/testcases/block/15_math/gh_128.text
-${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview.html
-${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview.options
-${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview.text
-${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview_as_code.html
-${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview_as_code.options
-${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview_as_code.text
-${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview_simple.html
-${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview_simple.options
-${GEM_LIBDIR}/test/testcases/block/15_math/mathjax_preview_simple.text
 ${GEM_LIBDIR}/test/testcases/block/15_math/no_engine.html
 ${GEM_LIBDIR}/test/testcases/block/15_math/no_engine.options
 ${GEM_LIBDIR}/test/testcases/block/15_math/no_engine.text
@@ -389,6 +382,9 @@ ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_footnotes.text
 ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_links.html
 ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_links.options
 ${GEM_LIBDIR}/test/testcases/block/16_toc/toc_with_links.text
+${GEM_LIBDIR}/test/testcases/cjk-line-break.html
+${GEM_LIBDIR}/test/testcases/cjk-line-break.options
+${GEM_LIBDIR}/test/testcases/cjk-line-break.text
 ${GEM_LIBDIR}/test/testcases/encoding.html
 ${GEM_LIBDIR}/test/testcases/encoding.text
 ${GEM_LIBDIR}/test/testcases/man/example.man
