@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/04/17 15:31:43 mef Exp $
+# $NetBSD: Makefile,v 1.33 2020/05/05 02:20:56 mef Exp $
 
 DISTNAME=	rt-4.2.16
 PKGNAME=	${DISTNAME:S/rt/rt4/}
@@ -20,10 +20,11 @@ DEPENDS+=	p5-CGI>=3.38:../../www/p5-CGI
 DEPENDS+=	p5-CGI-Emulate-PSGI-[0-9]*:../../www/p5-CGI-Emulate-PSGI
 DEPENDS+=	p5-CGI-PSGI-[0-9]*:../../www/p5-CGI-PSGI
 DEPENDS+=	p5-Class-Accessor>=0.34:../../devel/p5-Class-Accessor
+DEPENDS+=	p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
 DEPENDS+=	p5-Crypt-Eksblowfish-[0-9]*:../../security/p5-Crypt-Eksblowfish
-DEPENDS+=	p5-Data-GUID-[0-9]*:../../devel/p5-Data-GUID
 DEPENDS+=	p5-CSS-Squish>=0.06:../../www/p5-CSS-Squish
 DEPENDS+=	p5-Date-Extract>=0.02:../../time/p5-Date-Extract
+DEPENDS+=	p5-Data-GUID-[0-9]*:../../devel/p5-Data-GUID
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=	p5-Email-Address-List>=0.02:../../mail/p5-Email-Address-List
 DEPENDS+=	p5-DateTime>=0.44:../../time/p5-DateTime
