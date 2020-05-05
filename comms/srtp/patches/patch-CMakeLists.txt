@@ -1,0 +1,39 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2020/05/05 17:54:39 adam Exp $
+
+Set shared library version.
+Prepare and install pkgconfig file.
+Install crypto_types.h.
+
+--- CMakeLists.txt.orig	2019-12-23 09:58:25.000000000 +0000
++++ CMakeLists.txt
+@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 2.8)
+ 
+ project(libsrtp2 LANGUAGES C)
+ 
++set(PACKAGE_NAME "${CMAKE_PROJECT_NAME}")
+ set(PACKAGE_VERSION 2.3.0)
++set(PACKAGE_SOVERSION 2)
+ set(PACKAGE_STRING "${CMAKE_PROJECT_NAME} ${PACKAGE_VERSION}")
+ 
+ include(TestBigEndian)
+@@ -184,10 +186,20 @@ if(WIN32)
+   target_link_libraries(srtp2 ws2_32)
+ endif()
+ 
++set(prefix "${CMAKE_INSTALL_PREFIX}")
++set(libdir "\${exec_prefix}/lib")
++set(includedir "\${prefix}/include")
++configure_file(libsrtp2.pc.in libsrtp2.pc @ONLY)
++install(FILES libsrtp2.pc DESTINATION lib/pkgconfig)
++
++set_target_properties(srtp2 PROPERTIES
++    VERSION ${PACKAGE_VERSION} SOVERSION ${PACKAGE_SOVERSION})
++
+ install(TARGETS srtp2 DESTINATION lib)
+ install(FILES include/srtp.h crypto/include/auth.h
+   crypto/include/cipher.h
+   crypto/include/cipher_types.h
++  crypto/include/crypto_types.h
+   DESTINATION include/srtp2)
+ 
+ if(TEST_APPS)
