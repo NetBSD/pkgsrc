@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.15 2020/05/04 21:32:48 rillig Exp $
+# $NetBSD: check-portability.mk,v 1.16 2020/05/05 05:55:26 rillig Exp $
 #
 # This file contains some checks that are applied to the configure
 # scripts to check for certain constructs that are known to cause
@@ -12,6 +12,13 @@
 #	scripts before they are run.
 #
 #	Default value: yes for PKG_DEVELOPERs, no otherwise.
+#
+# CHECK_PORTABILITY_EXPERIMENTAL
+#	Enable additional experimental portability checks. New checks
+#	may be added without further notice, so expect some packages
+#	that previously succeeded to suddenly fail to build.
+#
+#	Default value: no
 #
 # Package-settable variables:
 #
@@ -44,4 +51,5 @@ _check-portability:
 	env	SKIP_FILTER=${CHECK_PORTABILITY_SKIP:@p@${p}) skip=yes;;@:Q} \
 		PREFIX=${PREFIX}					\
 		PATCHDIR=${PATCHDIR}					\
+		CHECK_PORTABILITY_EXPERIMENTAL=${CHECK_PORTABILITY_EXPERIMENTAL:Uno} \
 		sh ${PKGSRCDIR}/mk/check/check-portability.sh
