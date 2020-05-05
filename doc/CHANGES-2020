@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2749 2020/05/05 05:53:38 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2750 2020/05/05 06:02:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4195,3 +4195,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/openjdk8 to 1.8.252 [tnn 2020-05-04]
 	Updated x11/xfce4-whiskermenu-plugin to 2.4.4 [gutteridge 2020-05-05]
 	Updated textproc/ruby-json-pure to 2.3.0 [taca 2020-05-05]
+	Updated textproc/ruby-kramdown to 2.2.1 [taca 2020-05-05]
