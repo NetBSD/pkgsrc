@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/05 12:01:06 markd Exp $
+man/man1/xelatex.1
+man/man1/xetex.1
 share/texmf-dist/doc/xetex/base/NEWS
 share/texmf-dist/doc/xetex/base/README
 share/texmf-dist/doc/xetex/base/XeTeX-notes.pdf
