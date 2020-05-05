@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/12/06 20:23:31 markd Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/05 12:01:05 markd Exp $
 
 DISTNAME=	titlesec
-PKGNAME=	tex-${DISTNAME}-2.11
-TEXLIVE_REV=	51664
+PKGNAME=	tex-${DISTNAME}-2.13
+TEXLIVE_REV=	52413
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/titlesec
@@ -11,6 +11,5 @@ LICENSE=	mit
 
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

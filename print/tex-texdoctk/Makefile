@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:34:55 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/05 12:01:04 markd Exp $
 
 DISTNAME=	texdoctk
-PKGNAME=	tex-${DISTNAME}-0.6.0.50602
-TEXLIVE_REV=	50602
+PKGNAME=	tex-${DISTNAME}-0.6.0.54557
+TEXLIVE_REV=	54557
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/texdoctk
@@ -20,6 +20,5 @@ post-extract:
 		${WRKSRC}/bin/texdoctk
 	${RMDIR} ${WRKSRC}/texmf-dist/scripts/texdoctk
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
