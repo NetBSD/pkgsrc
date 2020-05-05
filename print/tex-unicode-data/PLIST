@@ -1,10 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2017/08/17 02:52:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/05 12:01:06 markd Exp $
+share/texmf-dist/tex/generic/unicode-data/BidiBrackets.txt
+share/texmf-dist/tex/generic/unicode-data/BidiMirroring-5-1-0.txt
+share/texmf-dist/tex/generic/unicode-data/BidiMirroring.txt
 share/texmf-dist/tex/generic/unicode-data/CaseFolding.txt
 share/texmf-dist/tex/generic/unicode-data/EastAsianWidth.txt
+share/texmf-dist/tex/generic/unicode-data/GraphemeBreakProperty.txt
 share/texmf-dist/tex/generic/unicode-data/LineBreak.txt
 share/texmf-dist/tex/generic/unicode-data/MathClass-15.txt
+share/texmf-dist/tex/generic/unicode-data/PropList.txt
+share/texmf-dist/tex/generic/unicode-data/ScriptExtensions.txt
+share/texmf-dist/tex/generic/unicode-data/Scripts.txt
 share/texmf-dist/tex/generic/unicode-data/SpecialCasing.txt
 share/texmf-dist/tex/generic/unicode-data/UnicodeData.txt
+share/texmf-dist/tex/generic/unicode-data/emoji-data.txt
 share/texmf-dist/tex/generic/unicode-data/load-unicode-data.tex
 share/texmf-dist/tex/generic/unicode-data/load-unicode-math-classes.tex
 share/texmf-dist/tex/generic/unicode-data/load-unicode-xetex-classes.tex

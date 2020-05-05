@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/05/02 02:35:02 markd Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/05 12:01:03 markd Exp $
 
 DISTNAME=	tcolorbox
-PKGNAME=	tex-${DISTNAME}-4.20
-PKGREVISION=	1
-TEXLIVE_REV=	50206
+PKGNAME=	tex-${DISTNAME}-4.30
+TEXLIVE_REV=	54928
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/tcolorbox
@@ -27,6 +26,5 @@ DEPENDS+=	tex-pgf-[0-9]*:../../print/tex-pgf
 DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
