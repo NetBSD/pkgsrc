@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/04/23 14:15:30 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2020/05/05 17:51:45 rillig Exp $
 
 DISTNAME=	BasiliskII-20190405
 PKGREVISION=	2
@@ -20,6 +20,9 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	aclocal autoheader autoconf automake
 USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_TOOLS+=	pkg-config gmake
+
+# Reported upstream in https://github.com/cebix/macemu/pull/198
+CHECK_PORTABILITY_SKIP+=	src/Unix/Darwin/testlmem.sh
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-fbdev-dga
