@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2019/12/19 00:39:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.24.2.1 2020/05/06 11:19:15 bsiegert Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -180,6 +180,7 @@ share/drupal/core/assets/vendor/ckeditor/plugins/about/dialogs/hidpi/logo_ckedit
 share/drupal/core/assets/vendor/ckeditor/plugins/about/dialogs/logo_ckeditor.png
 share/drupal/core/assets/vendor/ckeditor/plugins/clipboard/dialogs/paste.js
 share/drupal/core/assets/vendor/ckeditor/plugins/dialog/dialogDefinition.js
+share/drupal/core/assets/vendor/ckeditor/plugins/dialog/styles/dialog.css
 share/drupal/core/assets/vendor/ckeditor/plugins/icons.png
 share/drupal/core/assets/vendor/ckeditor/plugins/icons_hidpi.png
 share/drupal/core/assets/vendor/ckeditor/plugins/image2/dialogs/image2.js
@@ -187,7 +188,11 @@ share/drupal/core/assets/vendor/ckeditor/plugins/magicline/images/hidpi/icon-rtl
 share/drupal/core/assets/vendor/ckeditor/plugins/magicline/images/hidpi/icon.png
 share/drupal/core/assets/vendor/ckeditor/plugins/magicline/images/icon-rtl.png
 share/drupal/core/assets/vendor/ckeditor/plugins/magicline/images/icon.png
+share/drupal/core/assets/vendor/ckeditor/plugins/pastefromgdocs/filter/default.js
+share/drupal/core/assets/vendor/ckeditor/plugins/pastefromlibreoffice/filter/default.js
 share/drupal/core/assets/vendor/ckeditor/plugins/pastefromword/filter/default.js
+share/drupal/core/assets/vendor/ckeditor/plugins/pastetools/filter/common.js
+share/drupal/core/assets/vendor/ckeditor/plugins/pastetools/filter/image.js
 share/drupal/core/assets/vendor/ckeditor/plugins/showblocks/images/block_address.png
 share/drupal/core/assets/vendor/ckeditor/plugins/showblocks/images/block_blockquote.png
 share/drupal/core/assets/vendor/ckeditor/plugins/showblocks/images/block_div.png
@@ -250,6 +255,8 @@ share/drupal/core/assets/vendor/ckeditor/plugins/specialchar/dialogs/lang/si.js
 share/drupal/core/assets/vendor/ckeditor/plugins/specialchar/dialogs/lang/sk.js
 share/drupal/core/assets/vendor/ckeditor/plugins/specialchar/dialogs/lang/sl.js
 share/drupal/core/assets/vendor/ckeditor/plugins/specialchar/dialogs/lang/sq.js
+share/drupal/core/assets/vendor/ckeditor/plugins/specialchar/dialogs/lang/sr-latn.js
+share/drupal/core/assets/vendor/ckeditor/plugins/specialchar/dialogs/lang/sr.js
 share/drupal/core/assets/vendor/ckeditor/plugins/specialchar/dialogs/lang/sv.js
 share/drupal/core/assets/vendor/ckeditor/plugins/specialchar/dialogs/lang/th.js
 share/drupal/core/assets/vendor/ckeditor/plugins/specialchar/dialogs/lang/tr.js
@@ -284,6 +291,7 @@ share/drupal/core/assets/vendor/ckeditor/skins/moono-lisa/images/lock-open.png
 share/drupal/core/assets/vendor/ckeditor/skins/moono-lisa/images/lock.png
 share/drupal/core/assets/vendor/ckeditor/skins/moono-lisa/images/refresh.png
 share/drupal/core/assets/vendor/ckeditor/skins/moono-lisa/images/spinner.gif
+share/drupal/core/assets/vendor/ckeditor/vendor/promise.js
 share/drupal/core/assets/vendor/classList/LICENSE.md
 share/drupal/core/assets/vendor/classList/classList.min.js
 share/drupal/core/assets/vendor/domready/ready.min.js
