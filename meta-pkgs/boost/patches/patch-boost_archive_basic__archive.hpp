@@ -1,6 +1,6 @@
-$NetBSD: patch-boost_archive_basic__archive.hpp,v 1.2 2018/01/01 20:36:09 adam Exp $
+$NetBSD: patch-boost_archive_basic__archive.hpp,v 1.3 2020/05/06 13:33:53 adam Exp $
 
---- boost/archive/basic_archive.hpp.orig	2017-12-13 23:56:48.000000000 +0000
+--- boost/archive/basic_archive.hpp.orig	2020-04-22 13:35:57.000000000 +0000
 +++ boost/archive/basic_archive.hpp
 @@ -115,7 +115,7 @@ public:
      explicit class_id_type(const int t_) : t(t_){
@@ -10,7 +10,7 @@ $NetBSD: patch-boost_archive_basic__archive.hpp,v 1.2 2018/01/01 20:36:09 adam E
 +    explicit class_id_type(const size_t t_) : t(t_){
   //       BOOST_ASSERT(t_ <= boost::integer_traits<base_type>::const_max);
      }
-     class_id_type(const class_id_type & t_) : 
+     class_id_type(const class_id_type & t_) :
 @@ -152,7 +152,7 @@ public:
      object_id_type(): t(0) {};
      // note: presumes that size_t >= unsigned int.
