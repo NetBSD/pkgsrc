@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2020/04/08 08:07:17 adam Exp $
+# $NetBSD: Makefile,v 1.56 2020/05/06 14:04:43 adam Exp $
 
 DISTNAME=	uhd-3.15.0.0
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
