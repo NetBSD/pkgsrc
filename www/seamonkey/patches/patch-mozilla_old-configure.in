@@ -1,165 +1,19 @@
-$NetBSD: patch-mozilla_old-configure.in,v 1.5 2019/06/13 10:53:11 nia Exp $
+$NetBSD: patch-mozilla_old-configure.in,v 1.6 2020/05/06 14:34:53 ryoon Exp $
 
---- mozilla/old-configure.in.orig	2018-07-12 02:18:02.000000000 +0000
+--- mozilla/old-configure.in.orig	2020-04-01 11:01:50.000000000 +0000
 +++ mozilla/old-configure.in
-@@ -2159,11 +2159,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
-                      #include <jpeglib.h> ],
-                    [ #if JPEG_LIB_VERSION < $MOZJPEG
-                      #error "Insufficient JPEG library version ($MOZJPEG required)."
--                     #endif
--                     #ifndef JCS_EXTENSIONS
--                     #error "libjpeg-turbo JCS_EXTENSIONS required"
--                     #endif
--                     ],
-+                     #endif ],
-                    MOZ_SYSTEM_JPEG=1,
-                    AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
- fi
-@@ -2894,6 +2890,9 @@ if test -n "$MOZ_WEBRTC"; then
-     MOZ_RAW=1
-     MOZ_VPX_ERROR_CONCEALMENT=1
+@@ -2472,6 +2472,67 @@ fi
  
-+    dnl with libv4l2 we can support more cameras
-+    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
-+
- dnl enable once Signaling lands
-     MOZ_WEBRTC_SIGNALING=1
-     AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -2936,7 +2935,7 @@ dnl Use integers over floats for audio o
- dnl (regarless of the CPU architecture, because audio
- dnl backends for those platforms don't support floats. We also
- dnl use integers on ARM with other OS, because it's more efficient.
--if test "$OS_TARGET" = "Android" -o "$CPU_ARCH" = "arm"; then
-+if test -n "$MOZ_INTEGER_SAMPLES"; then
-     MOZ_SAMPLE_TYPE_S16=1
-     AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
-     AC_SUBST(MOZ_SAMPLE_TYPE_S16)
-@@ -3044,6 +3043,111 @@ if test -n "$MOZ_OMX_PLUGIN"; then
-     fi
- fi
+ AC_SUBST(MOZ_RAW)
  
-+dnl ========================================================
-+dnl Check for libogg
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-ogg,
-+[  --with-system-ogg       Use system libogg (located with pkgconfig)],
-+MOZ_SYSTEM_OGG=1,
-+MOZ_SYSTEM_OGG=)
-+
-+if test -n "$MOZ_SYSTEM_OGG"; then
-+    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.3.0)
-+
-+    _SAVE_LIBS=$LIBS
-+    LIBS="$LIBS $MOZ_OGG_LIBS"
-+    AC_CHECK_FUNC(ogg_set_mem_functions, [],
-+      [AC_DEFINE(MOZ_OGG_NO_MEM_REPORTING)])
-+    LIBS=$_SAVE_LIBS
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_OGG)
-+
-+dnl ========================================================
-+dnl Check for libvorbis
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-vorbis,
-+[  --with-system-vorbis    Use system libvorbis (located with pkgconfig)],
-+MOZ_SYSTEM_VORBIS=1,
-+MOZ_SYSTEM_VORBIS=)
-+
-+if test -n "$MOZ_SYSTEM_VORBIS"; then
-+    PKG_CHECK_MODULES(MOZ_VORBIS, vorbis vorbisenc >= 1.3.5)
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_VORBIS)
-+
-+dnl ========================================================
-+dnl Check for integer-only libvorbis aka tremor
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-tremor,
-+[  --with-system-tremor    Use system libtremor (located with pkgconfig)],
-+MOZ_SYSTEM_TREMOR=1,
-+MOZ_SYSTEM_TREMOR=)
-+
-+if test -n "$MOZ_SYSTEM_TREMOR"; then
-+    PKG_CHECK_MODULES(MOZ_TREMOR, vorbisidec >= 1.2.1)
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_TREMOR)
-+
-+dnl ========================================================
-+dnl Check for libtheora
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-theora,
-+[  --with-system-theora    Use system libtheora (located with pkgconfig)],
-+MOZ_SYSTEM_THEORA=1,
-+MOZ_SYSTEM_THEORA=)
-+
-+if test -n "$MOZ_SYSTEM_THEORA"; then
-+    PKG_CHECK_MODULES(MOZ_THEORA, theora >= 1.2)
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_THEORA)
-+
-+dnl ========================================================
-+dnl Check for libSoundTouch
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-soundtouch,
-+[  --with-system-soundtouch Use system libSoundTouch (located with pkgconfig)],
-+MOZ_SYSTEM_SOUNDTOUCH=1,
-+MOZ_SYSTEM_SOUNDTOUCH=)
-+
-+if test -n "$MOZ_SYSTEM_SOUNDTOUCH"; then
-+    PKG_CHECK_MODULES(MOZ_SOUNDTOUCH, soundtouch >= 1.9.0)
-+
-+    AC_LANG_SAVE
-+    AC_LANG_CPLUSPLUS
-+    _SAVE_CXXFLAGS=$CXXFLAGS
-+    CXXFLAGS="$CXXFLAGS $MOZ_SOUNDTOUCH_CFLAGS"
-+    AC_CACHE_CHECK(for soundtouch sample type,
-+                   ac_cv_soundtouch_sample_type,
-+                   [AC_TRY_COMPILE([#include <SoundTouch.h>
-+                                    #ifndef SOUNDTOUCH_INTEGER_SAMPLES
-+                                    #error soundtouch expects float samples
-+                                    #endif],
-+                                   [],
-+                                   [ac_cv_soundtouch_sample_type=short],
-+                                   [ac_cv_soundtouch_sample_type=float])])
-+    CXXFLAGS=$_SAVE_CXXFLAGS
-+    AC_LANG_RESTORE
-+
-+    if test \( -n "$MOZ_SAMPLE_TYPE_S16" -a "$ac_cv_soundtouch_sample_type" != short \) \
-+         -o \( -n "$MOZ_SAMPLE_TYPE_FLOAT32" -a "$ac_cv_soundtouch_sample_type" != float \) ; then
-+        AC_MSG_ERROR([SoundTouch library is built with incompatible sample type. Either rebuild the library with/without --enable-integer-samples, chase default Mozilla sample type or remove --with-system-soundtouch.])
-+    fi
-+fi
-+
-+if test -n "$MOZ_SYSTEM_SOUNDTOUCH"; then
-+    AC_DEFINE(MOZ_SYSTEM_SOUNDTOUCH)
-+fi
-+AC_SUBST(MOZ_SYSTEM_SOUNDTOUCH)
-+
- dnl system libvpx Support
- dnl ========================================================
- MOZ_ARG_WITH_BOOL(system-libvpx,
-@@ -3208,6 +3312,71 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
- AC_SUBST(MOZ_WEBM_ENCODER)
- 
- dnl ==================================
-+dnl = Check OSS/sunaudio availability
++dnl ==================================
++dnl = Check OSS availability
 +dnl ==================================
 +
-+dnl If using Linux, Solaris or BSDs, ensure that OSS or sunaudio is available
++dnl If using Linux, Solaris or BSDs, ensure that OSS is available
 +case "$OS_TARGET" in
-+Linux|DragonFly|FreeBSD|GNU/kFreeBSD)
++Linux|SunOS|DragonFly|FreeBSD|NetBSD|GNU/kFreeBSD)
 +    MOZ_OSS=1
-+    ;;
-+SunOS|NetBSD)
-+    MOZ_SUNAUDIO=1
 +    ;;
 +esac
 +
@@ -203,7 +57,7 @@ $NetBSD: patch-mozilla_old-configure.in,v 1.5 2019/06/13 10:53:11 nia Exp $
 +
 +    dnl Assume NetBSD implementation over SunAudio
 +    AC_CHECK_LIB(ossaudio, _oss_ioctl,
-+        [AC_DEFINE_UNQUOTED(CUBEB_OSS_DEFAULT_OUTPUT, "/dev/audio")
++        [AC_DEFINE_UNQUOTED(CUBEB_OSS_DEFAULT_OUTPUT, "/dev/sound")
 +         MOZ_OSS_LIBS="$MOZ_OSS_LIBS -lossaudio"])
 +fi
 +CFLAGS=$_SAVE_CFLAGS
@@ -212,37 +66,7 @@ $NetBSD: patch-mozilla_old-configure.in,v 1.5 2019/06/13 10:53:11 nia Exp $
 +AC_SUBST(MOZ_OSS)
 +AC_SUBST_LIST(MOZ_OSS_CFLAGS)
 +AC_SUBST_LIST(MOZ_OSS_LIBS)
-+AC_SUBST(MOZ_SUNAUDIO)
 +
-+dnl ==================================
- dnl = Check alsa availability on Linux
- dnl ==================================
- 
-@@ -5023,6 +5192,27 @@ if test "$USE_FC_FREETYPE"; then
- fi
- 
  dnl ========================================================
-+dnl Check for graphite2
-+dnl ========================================================
-+if test -n "$MOZ_SYSTEM_GRAPHITE2"; then
-+    dnl graphite2.pc has bogus version, check manually
-+    _SAVE_CFLAGS=$CFLAGS
-+    CFLAGS="$CFLAGS $MOZ_GRAPHITE2_CFLAGS"
-+    AC_TRY_COMPILE([ #include <graphite2/Font.h>
-+                     #define GR2_VERSION_REQUIRE(major,minor,bugfix)  \
-+                             ( GR2_VERSION_MAJOR * 10000 + GR2_VERSION_MINOR \
-+                               * 100 + GR2_VERSION_BUGFIX >= \
-+                               (major) * 10000 + (minor) * 100 + (bugfix) )
-+                   ], [
-+                     #if !GR2_VERSION_REQUIRE(1,3,8)
-+                     #error "Insufficient graphite2 version."
-+                     #endif
-+                   ], [],
-+                   [AC_MSG_ERROR([--with-system-graphite2 requested but no working libgraphite2 found])])
-+    CFLAGS=$_SAVE_CFLAGS
-+fi
-+
-+dnl ========================================================
- dnl Check for pixman and cairo
+ dnl = Apple platform decoder support
  dnl ========================================================
- 
