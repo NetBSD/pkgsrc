@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2020/03/15 16:28:26 taca Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/06 15:11:44 taca Exp $
 
-GITHUB_TAG=	v1.2.0
 DISTNAME=	${GITHUB_TAG}
-GITHUB_PROJECT=	redmine-theme-gitmike
 PKGNAME=	${RUBY_PKGPREFIX}-redmine-gitmike-theme-${DISTNAME:S/v//1}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=makotokw/}
+GITHUB_PROJECT=	redmine-theme-gitmike
+GITHUB_TAG=	v1.2.0
 DIST_SUBDIR=	ruby-redmine-gitmike-theme
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
