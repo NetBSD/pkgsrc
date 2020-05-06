@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/19 11:57:23 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/06 08:12:55 pin Exp $
 bin/kvantummanager
 bin/kvantumpreview
 qt5/plugins/styles/libkvantum.so
@@ -102,37 +102,6 @@ share/color-schemes/KvYaru.colors
 share/color-schemes/Kvantum.colors
 share/color-schemes/KvantumAlt.colors
 share/icons/hicolor/scalable/apps/kvantum.svg
-share/kde4/apps/color-schemes/KvAdapta.colors
-share/kde4/apps/color-schemes/KvAdaptaDark.colors
-share/kde4/apps/color-schemes/KvAmbiance.colors
-share/kde4/apps/color-schemes/KvAmbience.colors
-share/kde4/apps/color-schemes/KvArc.colors
-share/kde4/apps/color-schemes/KvArcDark.colors
-share/kde4/apps/color-schemes/KvBeige.colors
-share/kde4/apps/color-schemes/KvBlender.colors
-share/kde4/apps/color-schemes/KvBrown.colors
-share/kde4/apps/color-schemes/KvCurves.colors
-share/kde4/apps/color-schemes/KvCurvesLight.colors
-share/kde4/apps/color-schemes/KvCyan.colors
-share/kde4/apps/color-schemes/KvDarkRed.colors
-share/kde4/apps/color-schemes/KvFlat.colors
-share/kde4/apps/color-schemes/KvFlatLight.colors
-share/kde4/apps/color-schemes/KvFlatRed.colors
-share/kde4/apps/color-schemes/KvGnome.colors
-share/kde4/apps/color-schemes/KvGnomeAlt.colors
-share/kde4/apps/color-schemes/KvGnomeDark.colors
-share/kde4/apps/color-schemes/KvGnomish.colors
-share/kde4/apps/color-schemes/KvGray.colors
-share/kde4/apps/color-schemes/KvMojave.colors
-share/kde4/apps/color-schemes/KvMojaveLight.colors
-share/kde4/apps/color-schemes/KvMojaveMixed.colors
-share/kde4/apps/color-schemes/KvOxygen.colors
-share/kde4/apps/color-schemes/KvRoughGlass.colors
-share/kde4/apps/color-schemes/KvSimplicity.colors
-share/kde4/apps/color-schemes/KvSimplicityDark.colors
-share/kde4/apps/color-schemes/KvSimplicityTurquoise.colors
-share/kde4/apps/color-schemes/KvYaru.colors
-share/kde4/apps/color-schemes/KvantumAlt.colors
 share/kvantummanager/translations/kvantummanager_be.qm
 share/kvantummanager/translations/kvantummanager_cs.qm
 share/kvantummanager/translations/kvantummanager_cy.qm
@@ -153,6 +122,7 @@ share/kvantummanager/translations/kvantummanager_pl.qm
 share/kvantummanager/translations/kvantummanager_pt_BR.qm
 share/kvantummanager/translations/kvantummanager_ru.qm
 share/kvantummanager/translations/kvantummanager_sk_SK.qm
+share/kvantummanager/translations/kvantummanager_tr.qm
 share/kvantummanager/translations/kvantummanager_zh_CN.qm
 share/kvantumpreview/translations/kvantumpreview_cs.qm
 share/kvantumpreview/translations/kvantumpreview_cy.qm

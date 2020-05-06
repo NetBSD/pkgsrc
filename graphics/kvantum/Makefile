@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/04/22 08:26:45 pin Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/06 08:12:55 pin Exp $
 
-VERSION=	0.15.2
+VERSION=	0.15.3
 DISTNAME=	Kvantum-V${VERSION}
 PKGNAME=	kvantum-${VERSION}
 CATEGORIES=	graphics
