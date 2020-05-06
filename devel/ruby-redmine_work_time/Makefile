@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2017/09/16 19:26:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/06 14:25:43 taca Exp $
 #
 
-PLUGIN_NAME=	redmine_work_time
-DISTNAME=	${PLUGIN_NAME}-0.3.3
+DISTNAME=	${PLUGIN_NAME}-0.4.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
-MASTER_SITES=	https://bitbucket.org/tkusukawa/${PLUGIN_NAME}/downloads/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=tkusukawa/}
+GITHUB_PROJECT=	${PLUGIN_NAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.r-labs.org/projects/worktime/wiki/WorkTime
 COMMENT=	Redmine plugin to view and update Spent time by each user
 LICENSE=	gnu-gpl-v2
 
+PLUGIN_NAME=	redmine_work_time
+
 .include "../../meta-pkgs/ruby-redmine-plugins/Makefile.common"
 
-WRKSRC=		${WRKDIR}/${PLUGIN_NAME}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/01/04 23:05:13 rodent Exp $
+$NetBSD: distinfo,v 1.4 2020/05/06 14:25:43 taca Exp $
 
-SHA1 (redmine_work_time-0.3.3.zip) = 088387d4bd1f7904c350c937041288587a01039c
-RMD160 (redmine_work_time-0.3.3.zip) = b5253812a18c45e9f1b5050ea54d3855bb4f621c
-SHA512 (redmine_work_time-0.3.3.zip) = 9276dddadde27abf70249074b5671a1af51fdace0e534b0a8d900e97634b5d80737cfbdc461a8e95c94e6673d3653e095a9eab167952457e6c31b4a5163d6959
-Size (redmine_work_time-0.3.3.zip) = 76872 bytes
+SHA1 (redmine_work_time-0.4.0.tar.gz) = 7934a8b1f995eb2025b2fd624afd11ab7c64673f
+RMD160 (redmine_work_time-0.4.0.tar.gz) = 5f05d19cb8647e13cbf61007ba935d1f9daf224e
+SHA512 (redmine_work_time-0.4.0.tar.gz) = f362bdf81de11b59b395f3c922cf784e7e87105bcf5fa57dc5cdcf4c0c52d1a686b6acd3336b33d6786914da833ae4e24be5b0ba8452437677ceb772e8287a79
+Size (redmine_work_time-0.4.0.tar.gz) = 41979 bytes
