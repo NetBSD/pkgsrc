@@ -1,2 +1,1 @@
 bin/swift @PREFIX@/bin/swift@PYVERSSUFFIX@
-man/man1/swift.1 @PREFIX@/@PKGMANDIR@/man1/swift@PYVERSSUFFIX@.1
