@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.188 2020/04/12 08:27:59 adam Exp $
+# $NetBSD: Makefile,v 1.189 2020/05/06 14:04:47 adam Exp $
 
 DISTNAME=	evolution-data-server-3.35.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

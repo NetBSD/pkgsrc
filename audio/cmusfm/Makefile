@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2020/04/30 21:49:00 wiedi Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/06 14:04:17 adam Exp $
 
 DISTNAME=	cmusfm-0.3.3
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Arkq/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

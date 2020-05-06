@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/01/12 20:20:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/06 14:04:30 adam Exp $
 
 DISTNAME=	QuantLib-1.12.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lballabio/}
 GITHUB_TAG=	${PKGBASE}-v${PKGVERSION_NOREV}

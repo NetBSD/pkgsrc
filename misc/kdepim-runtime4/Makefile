@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2020/03/08 16:50:33 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2020/05/06 14:04:50 adam Exp $
 
 DISTNAME=	kdepim-runtime-4.14.10
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	misc
 COMMENT=	Runtime requirements for the KDE PIM tools
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.04.3/src/}

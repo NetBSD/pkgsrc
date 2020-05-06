@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2020/03/08 16:48:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2020/05/06 14:04:12 adam Exp $
 
 BUILDLINK_TREE+=	liboauth
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	liboauth
 LIBOAUTH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.liboauth+=	liboauth>=0.8.9
-BUILDLINK_ABI_DEPENDS.liboauth?=	liboauth>=1.0.3nb16
+BUILDLINK_ABI_DEPENDS.liboauth?=	liboauth>=1.0.3nb17
 BUILDLINK_PKGSRCDIR.liboauth?=		../../security/liboauth
 
 .include "../../security/openssl/buildlink3.mk"
