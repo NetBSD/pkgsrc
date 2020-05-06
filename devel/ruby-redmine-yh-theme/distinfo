@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/06 14:01:03 taca Exp $
+
+SHA1 (ruby-redmine-yh-theme/1.6.tar.gz) = 11438f60667e1f3c24036c560ddfe10b4bd7c34c
+RMD160 (ruby-redmine-yh-theme/1.6.tar.gz) = 348a18d5e3c29d1c80bebfa3300bd106ff132837
+SHA512 (ruby-redmine-yh-theme/1.6.tar.gz) = f918e5aaef6b687fb7b1ea9880e2dd9224c8d6de5c760db36e1985c633b031aeafd3baecf91b735bcc41344646256eeffa9896730f6014897a50a1483f7b1539
+Size (ruby-redmine-yh-theme/1.6.tar.gz) = 30782 bytes
