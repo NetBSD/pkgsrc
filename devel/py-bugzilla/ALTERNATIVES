@@ -1,2 +1,1 @@
 bin/bugzilla @PREFIX@/bin/bugzilla-@PYVERSSUFFIX@
-man/man1/bugzilla @PREFIX@/man/man1/bugzilla-@PYVERSSUFFIX@.1

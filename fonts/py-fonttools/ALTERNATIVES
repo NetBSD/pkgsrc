@@ -2,4 +2,3 @@ bin/fonttools @PREFIX@/bin/fonttools-@PYVERSSUFFIX@
 bin/pyftmerge @PREFIX@/bin/pyftmerge-@PYVERSSUFFIX@
 bin/pyftsubset @PREFIX@/bin/pyftsubset-@PYVERSSUFFIX@
 bin/ttx @PREFIX@/bin/ttx-@PYVERSSUFFIX@
-man/man1/ttx.1 @PREFIX@/man/man1/ttx-@PYVERSSUFFIX@.1
