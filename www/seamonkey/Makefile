@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.207 2020/04/12 08:29:18 adam Exp $
+# $NetBSD: Makefile,v 1.208 2020/05/06 14:34:52 ryoon Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	6
-SM_VER=		2.49.5
+SM_VER=		2.53.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -24,7 +23,8 @@ NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/seamonkey-bin
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-.include "../../www/firefox52/mozilla-common.mk"
+# See mozilla/config/milestone.txt
+.include "../../www/firefox60/mozilla-common.mk"
 
 # Workaround to fix pixman.h detection
 CFLAGS+=	-I${BUILDLINK_PREFIX.pixman}/include/pixman-1
@@ -75,8 +75,10 @@ pre-configure:
 #	touch ${WRKSRC}/.mozconfig
 
 post-install:
-#	${TOUCH} ${TOUCH_FLAGS} \
-#		${DESTDIR}${PREFIX}/include/seamonkey/mozilla/throw_gcc.h
+	${ECHO} '#! /bin/sh' > ${DESTDIR}${PREFIX}/bin/seamonkey
+	${ECHO} '${PREFIX}/lib/seamonkey/seamonkey "$$@"' >> \
+		${DESTDIR}${PREFIX}/bin/seamonkey
+	${CHMOD} 755 ${DESTDIR}${PREFIX}/bin/seamonkey
 	@${STEP_MSG} "Installing bundled seamonkey extensions."
 	rm -rf ${WRKDIR}/${OBJDIR}/extensions
 	${MKDIR} ${WRKDIR}/${OBJDIR}/extensions
