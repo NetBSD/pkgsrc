@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2780 2020/05/06 14:56:43 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2781 2020/05/06 15:03:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4268,3 +4268,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/seamonkey to 2.53.2 [ryoon 2020-05-06]
 	Updated www/seamonkey-l10n to 2.53.2 [ryoon 2020-05-06]
 	Updated meta-pkgs/ruby-redmine-themes to 1.4.0 [taca 2020-05-06]
+	Updated meta-pkgs/ruby-redmine-plugins to 1.3.0 [taca 2020-05-06]
