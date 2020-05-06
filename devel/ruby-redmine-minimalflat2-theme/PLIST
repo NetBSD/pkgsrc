@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/06 13:50:39 taca Exp $
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/favicon/favicon.ico
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/fonts/icon.eot
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/fonts/icon.svg
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/fonts/icon.ttf
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/fonts/icon.woff
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/arrow_down.png
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/draft.png
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/loading.gif
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/openid-bg.gif
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/sort_asc.png
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/sort_desc.png
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/task_parent_end.png
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/images/transparent.png
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/javascripts/theme.js
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/stylesheets/application.css
+share/${RUBY_NAME}-redmine/app/public/themes/minimalflat2/stylesheets/responsive.css
+@pkgdir share/${RUBY_NAME}-redmine/app/public/themes/minimalflat/stylesheets
+@pkgdir share/${RUBY_NAME}-redmine/app/public/themes/minimalflat/javascripts
+@pkgdir share/${RUBY_NAME}-redmine/app/public/themes/minimalflat/images
+@pkgdir share/${RUBY_NAME}-redmine/app/public/themes/minimalflat/fonts
+@pkgdir share/${RUBY_NAME}-redmine/app/public/themes/minimalflat/favicon
