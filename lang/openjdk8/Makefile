@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2020/05/04 21:32:15 tnn Exp $
+# $NetBSD: Makefile,v 1.97 2020/05/06 10:16:29 jmcneill Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
@@ -36,7 +36,7 @@ CONFIG_SUB_OVERRIDE+=	common/autoconf/build-aux/autoconf-config.sub
 CONFIG_GUESS_OVERRIDE+=	common/autoconf/build-aux/autoconf-config.guess
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash gmake pax pkg-config unzip:run zip:run
-UNLIMIT_RESOURCES=	datasize stacksize virtualsize
+UNLIMIT_RESOURCES=	datasize stacksize virtualsize cputime
 PLIST_SRC+=		${PLIST_SRC_DFLT}
 CHECK_SHLIBS_SKIP+=	java/${JAVA_NAME}/jre/lib/${LIBDIR_ARCH}/libinstrument.so
 
