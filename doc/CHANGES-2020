@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2766 2020/05/06 07:38:40 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2767 2020/05/06 07:41:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4247,3 +4247,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/inkscape to 1.0 [ryoon 2020-05-06]
 	Updated security/tor-browser to 9.0.10 [wiz 2020-05-06]
 	Updated devel/ruby-rb-fsevent to 0.10.4 [taca 2020-05-06]
+	Updated editors/featherpad to 0.14.1 [pin 2020-05-06]
