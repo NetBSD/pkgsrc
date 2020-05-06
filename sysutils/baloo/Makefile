@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2020/03/08 16:51:14 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2020/05/06 14:05:01 adam Exp $
 
 DISTNAME=	baloo-${_KDE_VERSION}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	sysutils
 COMMENT=	KDE framework for searching and managing user metadata
 LICENSE=	gnu-gpl-v3

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/03/08 16:49:15 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/05/06 14:04:27 adam Exp $
 
 DISTNAME=		mad_fcl_v1.7_src
 PKGNAME=		mad-flute-1.7
-PKGREVISION=		18
+PKGREVISION=		19
 CATEGORIES=		devel
 MASTER_SITES=		http://mad.cs.tut.fi/download/
 

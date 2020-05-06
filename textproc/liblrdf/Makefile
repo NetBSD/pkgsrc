@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2020/03/23 19:30:54 nia Exp $
+# $NetBSD: Makefile,v 1.30 2020/05/06 14:04:13 adam Exp $
 
 DISTNAME=	liblrdf-0.6.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=swh/}
 GITHUB_PROJECT=	LRDF
