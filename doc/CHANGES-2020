@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2763 2020/05/06 01:10:22 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2764 2020/05/06 01:43:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4244,3 +4244,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/firefox to 76.0 [ryoon 2020-05-06]
 	Updated www/firefox-l10n to 76.0 [ryoon 2020-05-06]
 	Updated devel/nss to 3.52 [ryoon 2020-05-06]
+	Updated graphics/inkscape to 1.0 [ryoon 2020-05-06]
