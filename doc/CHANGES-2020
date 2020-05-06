@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2782 2020/05/06 15:10:17 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2783 2020/05/06 16:36:43 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4272,3 +4272,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed devel/ruby-redmine_bootstrap_kit [taca 2020-05-06]
 	Removed devel/ruby-redmine_jenkins [taca 2020-05-06]
 	Removed devel/ruby-redmine_startpage [taca 2020-05-06]
+	Updated audio/libopenmpt to 0.4.12 [fcambus 2020-05-06]
