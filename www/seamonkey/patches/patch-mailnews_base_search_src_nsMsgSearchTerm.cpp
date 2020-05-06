@@ -1,8 +1,8 @@
-$NetBSD: patch-mailnews_base_search_src_nsMsgSearchTerm.cpp,v 1.2 2013/11/04 06:01:46 ryoon Exp $
+$NetBSD: patch-mailnews_base_search_src_nsMsgSearchTerm.cpp,v 1.3 2020/05/06 14:34:53 ryoon Exp $
 
---- mailnews/base/search/src/nsMsgSearchTerm.cpp.orig	2013-10-29 01:13:02.000000000 +0000
+--- mailnews/base/search/src/nsMsgSearchTerm.cpp.orig	2020-02-17 23:36:19.000000000 +0000
 +++ mailnews/base/search/src/nsMsgSearchTerm.cpp
-@@ -197,7 +197,7 @@ nsresult NS_MsgGetStringForAttribute(int
+@@ -207,7 +207,7 @@ nsresult NS_MsgGetStringForAttribute(int
      }
    }
    if (!found)

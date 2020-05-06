@@ -1,43 +1,22 @@
-# $NetBSD: options.mk,v 1.43 2019/11/10 21:33:52 nia Exp $
+# $NetBSD: options.mk,v 1.44 2020/05/06 14:34:52 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 
-PKG_OPTIONS_REQUIRED_GROUPS=	gtk
-PKG_OPTIONS_GROUP.gtk=		gtk2 gtk3
-PKG_SUPPORTED_OPTIONS=		alsa dbus debug mozilla-jemalloc
-PKG_SUPPORTED_OPTIONS+=		webrtc pulseaudio
-
-PLIST_VARS+=	debug gnome jemalloc
-
-PKG_SUGGESTED_OPTIONS=	gtk3
-
-PKG_SUGGESTED_OPTIONS.Linux+=	mozilla-jemalloc
-
-# On NetBSD/amd64 6.99.21 libxul.so is invalid when --enable-webrtc is set.
-.if (${OPSYS} == "FreeBSD") || (${OPSYS} == "Linux") || (${OPSYS} == "OpenBSD")
-PKG_SUGGESTED_OPTIONS+=	webrtc
-.endif
+PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
+PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
+PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio dbus
+PKG_SUPPORTED_OPTIONS+=	widevinecdm
+PLIST_VARS+=		gnome jemalloc debug
 
 .if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	dbus pulseaudio
+PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus
 .else
-PKG_SUGGESTED_OPTIONS+=	dbus
+PKG_SUGGESTED_OPTIONS+=	alsa dbus
 .endif
+
+PKG_SUGGESTED_OPTIONS.Linux+=	webrtc
 
 .include "../../mk/bsd.options.mk"
-
-PLIST_VARS+=		gtk3
-.if !empty(PKG_OPTIONS:Mgtk2)
-CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
-.include "../../x11/gtk2/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mgtk3)
-CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
-PLIST.gtk3=		yes
-.endif
 
 .if !empty(PKG_OPTIONS:Malsa)
 CONFIGURE_ARGS+=	--enable-alsa
@@ -46,26 +25,39 @@ CONFIGURE_ARGS+=	--enable-alsa
 CONFIGURE_ARGS+=	--disable-alsa
 .endif
 
-.if !empty(PKG_OPTIONS:Mdbus)
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-CONFIGURE_ARGS+=        --enable-dbus
-.else
-CONFIGURE_ARGS+=        --disable-dbus
-.endif
-
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
 PLIST.jemalloc=		yes
 CONFIGURE_ARGS+=	--enable-jemalloc
+CONFIGURE_ARGS+=	--enable-replace-malloc
 .else
 CONFIGURE_ARGS+=	--disable-jemalloc
 .endif
 
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mgcc)
+.  if ${CC_VERSION:S/gcc-//:S/.//g} >= 480
+# Modern gcc does not run any "tracking" passes when compiling with -O0,
+# which makes the generated debug info mostly useless. So explicitly
+# request them.
+O0TRACKING=-fvar-tracking-assignments -fvar-tracking
+.  endif
+.endif
+
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-debug --enable-debug-symbols
+CONFIGURE_ARGS+=	--enable-debug="-g -O0 ${O0TRACKING}"
+CONFIGURE_ARGS+=	--disable-optimize
+CONFIGURE_ARGS+=	--enable-debug-js-modules
 CONFIGURE_ARGS+=	--disable-install-strip
 PLIST.debug=		yes
 .else
-CONFIGURE_ARGS+=	--disable-debug --disable-debug-symbols
+.  if !empty(PKG_OPTIONS:Mdebug-info)
+CONFIGURE_ARGS+=	--enable-debug-symbols
+CONFIGURE_ARGS+=	--enable-optimize=-O0
+.  else
+CONFIGURE_ARGS+=	--disable-debug-symbols
+.  endif
+CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--enable-optimize=-O2
 CONFIGURE_ARGS+=	--enable-install-strip
 .endif
 
@@ -76,10 +68,35 @@ CONFIGURE_ARGS+=	--enable-pulseaudio
 CONFIGURE_ARGS+=	--disable-pulseaudio
 .endif
 
-PLIST_VARS+=            webrtc
+.if !empty(PKG_OPTIONS:Mdbus)
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-dbus
+.else
+CONFIGURE_ARGS+=	--disable-dbus
+.endif
+
+PLIST_VARS+=		branding nobranding
+.if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
+CONFIGURE_ARGS+=	--enable-official-branding
+LICENSE=		mozilla-trademark-license
+RESTRICTED=		Trademark holder prohibits distribution of modified versions.
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+PLIST.branding=		yes
+.else
+PLIST.nobranding=	yes
+.endif
+
+PLIST_VARS+=		webrtc
 .if !empty(PKG_OPTIONS:Mwebrtc)
 .include "../../graphics/libv4l/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-webrtc
+PLIST.webrtc=		yes
 .else
 CONFIGURE_ARGS+=	--disable-webrtc
+.endif
+
+# Enable Google widevine CDM. This requires external libwidevinecdm.so.
+.if !empty(PKG_OPTIONS:Mwidevinecdm)
+CONFIGURE_ARGS+=	--enable-eme=widevine
 .endif

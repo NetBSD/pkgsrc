@@ -1,6 +1,6 @@
-$NetBSD: patch-mail_app_Makefile.in,v 1.10 2017/01/01 16:14:07 ryoon Exp $
+$NetBSD: patch-mail_app_Makefile.in,v 1.11 2020/05/06 14:34:53 ryoon Exp $
 
---- mail/app/Makefile.in.orig	2016-12-14 01:58:01.000000000 +0000
+--- mail/app/Makefile.in.orig	2020-02-17 23:36:19.000000000 +0000
 +++ mail/app/Makefile.in
 @@ -13,6 +13,10 @@ DEFINES += \
  
