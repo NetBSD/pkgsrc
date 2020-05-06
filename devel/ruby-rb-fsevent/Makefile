@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2018/03/14 14:16:13 taca Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/06 07:37:52 taca Exp $
 
-DISTNAME=	rb-fsevent-0.10.3
+DISTNAME=	rb-fsevent-0.10.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
