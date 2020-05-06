@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.31 2020/05/02 06:48:59 rillig Exp $
+# $NetBSD: subst.sh,v 1.32 2020/05/06 06:14:56 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1188,6 +1188,29 @@ if test_case_begin "identity substitution implementation"; then
 	# substitution.
 	specials='!"%'\''()+,-/:;<=>@_`{|}~'
 	assert_identity "yes"	-e "sX${specials}X${specials}X"
+
+	# Regular expression meta-characters may be escaped using a
+	# backslash or be enclosed in square brackets.
+	assert_identity 'yes'	-e 's,library\.so,library.so,g'
+	assert_identity 'yes'	-e 's,library[.]so,library.so,g'
+	assert_identity 'yes'	-e 's,[*],*,'
+	assert_identity 'yes'	-e 's,[$],$,'
+
+	# When this happens, it is probably a mistake.
+	assert_identity	'no'	-e 's,,,'
+
+	# Backslashes are not considered identity substitutions since
+	# there might be tricky corner cases.
+	assert_identity	'no'	-e 's,\\,\\,'
+
+	# Back-references are not considered identity substitutions.
+	assert_identity 'no'	-e 's,\1,\1,'
+
+	# The & is interpreted specially in the replacement string.
+	assert_identity 'no'	-e 's,&&&,&&&,'
+	assert_identity 'no'	-e 's,\&,&,'
+	assert_identity 'no'	-e 's,[&],&,'
+	assert_identity 'no'	-e 's,&,\&,' # this would be an identity
 
 	test_case_end
 fi
