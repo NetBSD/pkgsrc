@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/06 13:56:10 taca Exp $
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/purplemine2/favicon/favicon.ico
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/purplemine2/fonts/FontAwesome.otf
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/purplemine2/fonts/fontawesome-webfont.eot
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/purplemine2/fonts/fontawesome-webfont.svg
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/purplemine2/fonts/fontawesome-webfont.ttf
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/purplemine2/fonts/fontawesome-webfont.woff
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/purplemine2/images/draft-pl.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/purplemine2/images/draft.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/purplemine2/images/preloader.gif
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/purplemine2/javascripts/theme.js
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/purplemine2/stylesheets/application.css
