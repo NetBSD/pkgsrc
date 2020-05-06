@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2772 2020/05/06 13:57:50 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2773 2020/05/06 14:02:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4260,3 +4260,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/boost to 1.73.0 [adam 2020-05-06]
 	Added devel/ruby-redmine-minimalflat2-theme version 1.7.0 [taca 2020-05-06]
 	Added devel/ruby-redmine-purplemine2-theme version 2.10.2 [taca 2020-05-06]
+	Added devel/ruby-redmine-yh-theme version 1.6 [taca 2020-05-06]
