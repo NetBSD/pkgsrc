@@ -1553,8 +1553,7 @@ PYTHON_VERSION_DEFAULT:
 
 PKGSRC_FORTRAN:
 
-    Specifies the fortran compiler to use. The default is g95, and gfortran is
-    an alternative.
+    Specifies the Fortran compiler to use. The default is gfortran.
 
 GFORTRAN_VERSION:
 
