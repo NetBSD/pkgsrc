@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.278 2020/04/29 20:27:03 triaxx Exp $
+# $NetBSD: bootstrap,v 1.279 2020/05/06 15:34:31 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1212,6 +1212,10 @@ run_cmd "(cd ${pkgsrcdir}/pkgtools/bootstrap-mk-files/files && env CP=${cpprog} 
  OPSYS=${opsys} MK_DST=${wrkdir}/share/mk ROOT_GROUP=${root_group} \
 ROOT_USER=${root_user} SED=${sedprog} SYSCONFDIR=${sysconfdir} \
 $shprog ./bootstrap.sh)"
+
+if [ -n "${bootstrap_sh_set}" ]; then
+	bmakexargs="${bmakexargs} --with-defshell=${bootstrap_sh}"
+fi
 
 bootstrap_bmake() {
 	echo_msg "Bootstrapping bmake"
