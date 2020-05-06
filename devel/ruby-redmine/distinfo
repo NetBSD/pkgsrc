@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2020/03/15 16:00:55 taca Exp $
+$NetBSD: distinfo,v 1.10 2020/05/06 08:15:01 taca Exp $
 
 SHA1 (actioncable-5.2.4.1.gem) = 71ad415759312c7194ae717137177f0da8247eae
 RMD160 (actioncable-5.2.4.1.gem) = ed89210c5d2095a9f24116ed947b11fee3b46c43
@@ -312,3 +312,5 @@ SHA1 (yard-0.9.20.gem) = 86ff7f1064a21b21957b92efc700b705f970f49b
 RMD160 (yard-0.9.20.gem) = fa7f80200c7aa66a642de137b26c227f836297c1
 SHA512 (yard-0.9.20.gem) = 4269037ba61185c999df9f1195825ec92a76b32ccb18fc2b86b54e34ff2e5efd22a536c3e207304ef47a52905215103a2094634d1bb8d8ab722b11488cf04e13
 Size (yard-0.9.20.gem) = 640512 bytes
+SHA1 (patch-rmagick-2.16.0_ext_RMagick_extconf.rb) = 227e2f02855019fb8750130af6cb8b10baee5bbf
+SHA1 (patch-rmagick-2.16.0_ext_RMagick_rmpixel.c) = ef9243b90961bdb2435176e70facc4eb89d66b9a
