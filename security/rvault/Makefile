@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/04/22 18:15:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/06 14:05:01 adam Exp $
 
 DISTNAME=	rvault-0.3
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rmind/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

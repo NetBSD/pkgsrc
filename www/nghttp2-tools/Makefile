@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/03/30 13:54:29 adam Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/06 14:05:06 adam Exp $
 
+PKGREVISION= 1
 .include "../../www/nghttp2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}
