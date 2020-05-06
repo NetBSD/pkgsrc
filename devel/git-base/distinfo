@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.97.2.1 2020/04/17 12:20:48 bsiegert Exp $
+$NetBSD: distinfo,v 1.97.2.2 2020/05/06 09:53:00 bsiegert Exp $
 
-SHA1 (git-2.25.3.tar.xz) = 925036762cefe2da375cc458e93ed346b4504eeb
-RMD160 (git-2.25.3.tar.xz) = 8490494c86a60a3d4f144740cc46fe16a00abc6a
-SHA512 (git-2.25.3.tar.xz) = 1ea2f0727baa29200f33469463c3b6db04a2e228e83ff552faa47fefe31063d92966d7502b2f13546c36cfc2756d42d71a26e41141c0fb972af9d6760f3aa471
-Size (git-2.25.3.tar.xz) = 5878708 bytes
+SHA1 (git-2.25.4.tar.xz) = 7fb514cf5682b21fc0829428ceae0ff1544b7dfa
+RMD160 (git-2.25.4.tar.xz) = a04c830a714df73e777d0c84ae5bb32fe18e8a82
+SHA512 (git-2.25.4.tar.xz) = ca2ecc561d06dbb393fe47d445f0d69423d114766d9bcc125ef1d6d37e350ad903c456540cea420c1a51635b750cde3901e4196f29ce95b315fda11270173450
+Size (git-2.25.4.tar.xz) = 5880976 bytes
 SHA1 (patch-Documentation_Makefile) = 6025adac0fbb4b403f3954e6dac9d690dfb22daa
 SHA1 (patch-Makefile) = 73741b9d9a1b32bb47db48a7c546c4ff10fb41d6
 SHA1 (patch-builtin_receive-pack.c) = 271df08d874a11b41f33aade64352040bc028fa2
