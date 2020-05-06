@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2017/09/16 19:26:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/06 14:17:49 taca Exp $
 #
 
-GITHUB_TAG=	v0.3.2
 DISTNAME=	${GITHUB_TAG}
-GITHUB_PROJECT=	redmine_lightbox2
-PKGNAME=	${RUBY_PKGPREFIX}-${GITHUB_PROJECT}-${DISTNAME:S/v//1}
+PKGNAME=	${RUBY_PKGPREFIX}-${PLUGIN_NAME}-${DISTNAME:S/v//1}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=paginagmbh/}
-DIST_SUBDIR=	ruby-${GITHUB_PROJECT}
+GITHUB_PROJECT=	${PLUGIN_NAME}
+GITHUB_TAG=	v0.5.1
+DIST_SUBDIR=	ruby-${PLUGIN_NAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/paginagmbh/redmine_lightbox2
 COMMENT=	Lightbox for image attachments in Redmine
 LICENSE=	mit
+
+PLUGIN_NAME=	redmine_lightbox2
 
 .include "../../meta-pkgs/ruby-redmine-plugins/Makefile.common"
 
