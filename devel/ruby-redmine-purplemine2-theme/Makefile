@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/06 13:56:10 taca Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/06 14:53:30 taca Exp $
 
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	${RUBY_PKGPREFIX}-redmine-${GITHUB_PROJECT:tl}-theme-${DISTNAME:S/v//1}
@@ -14,7 +14,7 @@ LICENSE=	mit
 
 .include "../../meta-pkgs/ruby-redmine-themes/Makefile.common"
 
-WRKSRC=		${WRKDIR}/PurpleMine2-1.9.0
+WRKSRC=		${WRKDIR}/PurpleMine2-${GITHUB_TAG:S/v//}
 
 PM2_DIR=	${REDMINE_THEMEDIR}/purplemine2
 
