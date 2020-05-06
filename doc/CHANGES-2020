@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2769 2020/05/06 08:32:05 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2770 2020/05/06 13:35:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4250,3 +4250,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated editors/featherpad to 0.14.1 [pin 2020-05-06]
 	Updated graphics/kvantum to 0.15.3 [pin 2020-05-06]
 	Updated devel/ruby-redmine-minimalflat-theme to 1.0.2nb1 [taca 2020-05-06]
+	Updated devel/boost-build to 1.73.0 [adam 2020-05-06]
+	Updated devel/boost-docs to 1.73.0 [adam 2020-05-06]
+	Updated devel/boost-headers to 1.73.0 [adam 2020-05-06]
+	Updated devel/boost-jam to 1.73.0 [adam 2020-05-06]
+	Updated devel/boost-libs to 1.73.0 [adam 2020-05-06]
+	Updated devel/boost-mpi to 1.73.0 [adam 2020-05-06]
+	Updated devel/py-boost to 1.73.0 [adam 2020-05-06]
+	Updated meta-pkgs/boost to 1.73.0 [adam 2020-05-06]
