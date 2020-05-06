@@ -1,2 +1,1 @@
 bin/blockdiag @PREFIX@/bin/blockdiag-@PYVERSSUFFIX@
-@PKGMANDIR@/man1/blockdiag @PREFIX@/@PKGMANDIR@/man1/blockdiag-@PYVERSSUFFIX@.1

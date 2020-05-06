@@ -1,2 +1,1 @@
 bin/tqdm @PREFIX@/bin/tqdm-@PYVERSSUFFIX@
-man/man1/tqdm.1 @PREFIX@/man/man1/tqdm-@PYVERSSUFFIX@.1
