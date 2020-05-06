@@ -1,11 +1,15 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2015/10/02 23:03:32 ryoon Exp $
+$NetBSD: MESSAGE,v 1.6 2020/05/06 14:36:17 ryoon Exp $
 
-To change the language in SeaMonkey
-1) Enable language packs in Tools->Add-ons->Languages
-2) Navigate to about:config
-3) Edit the general.useragent.locale property.
+To activate the new language:
 
-Alternatively you can install the "Quick Locale Switcher" addon from:
-http://addons.mozilla.org/en-US/firefox/addon/1333 .
+    Activate a language pack
+    Select "Preferences..." from the Edit menu
+    In the preferences window, expand the "Appearance" category and open
+      the "Languages/Content" panel
+    Select the new language and content packs and click OK
+    Close all SeaMonkey windows, including eventually activated Quickstart
+    After SeaMonkey is started again, the user interface should be
+      in your favourite language
+
 ===========================================================================
