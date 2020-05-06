@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/06 14:01:03 taca Exp $
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/favicon/favicon.ico
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/images/redmine.png
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/javascripts/theme.js
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/stylesheets/admin.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/stylesheets/application.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/stylesheets/buttons.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/stylesheets/controller_specific.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/stylesheets/custom_responsive.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/stylesheets/files.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/stylesheets/header.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/stylesheets/icons.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/stylesheets/issues.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/stylesheets/modal.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/stylesheets/older.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/yenihat/stylesheets/table.css
