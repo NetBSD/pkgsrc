@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/03/08 16:48:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/06 14:04:19 adam Exp $
 
 DISTNAME=	vimpc-0.09.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=boysetsfrog/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

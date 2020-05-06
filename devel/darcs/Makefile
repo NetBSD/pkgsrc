@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2020/03/08 16:49:10 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2020/05/06 14:04:26 adam Exp $
 
 DISTNAME=		darcs-2.0.2
-PKGREVISION=		29
+PKGREVISION=		30
 CATEGORIES=		devel scm
 MASTER_SITES=		http://darcs.net/releases/
 

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.79 2020/04/01 13:44:05 nia Exp $
+# $NetBSD: Makefile,v 1.80 2020/05/06 14:04:47 adam Exp $
 #
 
 PLUGIN_NAME=		spam_report
 PLUGIN_FILE=		spamreport
 
+PKGREVISION= 1
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

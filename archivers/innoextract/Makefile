@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/01/12 20:20:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/06 14:04:16 adam Exp $
 
 DISTNAME=	innoextract-1.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	https://constexpr.org/innoextract/files/
 

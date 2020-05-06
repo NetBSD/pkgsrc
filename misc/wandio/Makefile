@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2020/03/08 16:47:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/06 14:04:11 adam Exp $
 
 DISTNAME=	wandio-4.2.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	https://research.wand.net.nz/software/wandio/
 

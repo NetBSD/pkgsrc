@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2020/03/26 11:31:48 nia Exp $
+# $NetBSD: Makefile,v 1.21 2020/05/06 14:04:08 adam Exp $
 
 DISTNAME=	netcdf-fortran-4.2
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	devel
 MASTER_SITES=	https://www.unidata.ucar.edu/downloads/netcdf/ftp/
 

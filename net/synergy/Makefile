@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2020/05/02 11:36:41 tnn Exp $
+# $NetBSD: Makefile,v 1.63 2020/05/06 14:04:58 adam Exp $
 
 DISTNAME=		synergy-core-1.11.1
 PKGNAME=		${DISTNAME:S/-core//}
+PKGREVISION=		1
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=symless/}
 GITHUB_PROJECT=		synergy-core
