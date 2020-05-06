@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2774 2020/05/06 14:10:49 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2775 2020/05/06 14:18:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4262,3 +4262,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added devel/ruby-redmine-purplemine2-theme version 2.10.2 [taca 2020-05-06]
 	Added devel/ruby-redmine-yh-theme version 1.6 [taca 2020-05-06]
 	Updated devel/ruby-redmine_code_review to 1.0.0 [taca 2020-05-06]
+	Updated devel/ruby-redmine_lightbox2 to 0.5.1 [taca 2020-05-06]
