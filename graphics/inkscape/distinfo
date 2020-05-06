@@ -1,33 +1,7 @@
-$NetBSD: distinfo,v 1.71 2020/01/11 09:59:05 martin Exp $
+$NetBSD: distinfo,v 1.72 2020/05/06 01:42:28 ryoon Exp $
 
-SHA1 (inkscape-0.92.4.tar.bz2) = 5dfabeab9f6925bf098b5eeba2fe2c82e36927cc
-RMD160 (inkscape-0.92.4.tar.bz2) = 18a998ed050030a6c89621f47e2e11b69d9f151b
-SHA512 (inkscape-0.92.4.tar.bz2) = b9034605a79cd8aea808edf42e284819951ae1ea67778f0922f4c10224e94aca6c844acbc2294625773f0a7047d4e32ccdada876238a792a2c17db172c88e120
-Size (inkscape-0.92.4.tar.bz2) = 31929728 bytes
-SHA1 (patch-CMakeScripts_Pod2man.cmake) = 6176956791ae3e8eb007345e5ec19100812bdeb8
-SHA1 (patch-ag) = 6b6000f3940ec6db9404a206f9757928c1d5740b
-SHA1 (patch-aj) = 31d6cc8bb179629023bd04bcac0fd935b2c9636d
-SHA1 (patch-ap) = 412509a03d26e925548e3371529a1273db958611
-SHA1 (patch-aq) = fb7de44d33fdc5895ce84ca8d44ff6a6c328c402
-SHA1 (patch-src_CMakeLists.txt) = ccd5eeca81891f83c5eaf8cb80d33f001beaf55c
-SHA1 (patch-src_extension_internal_emf-inout.cpp) = 4fe6c24007b54d55d11502876e759f62a290922e
-SHA1 (patch-src_extension_internal_emf-print.cpp) = 5da493a452afa4b11bbb204c430fc3e63332c927
-SHA1 (patch-src_extension_internal_metafile-print.cpp) = 798a2f15986cd81d13bf576b1641a810d4d40573
-SHA1 (patch-src_extension_internal_pdfinput_pdf-input.cpp) = a837bde05708f5cb7640d4a1d9655c375f67b6ef
-SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 10ce627dc8234364df1e4d91b6e53a664e8707ea
-SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = f0ba86dca2fa52eec64aee8d0d92739422ae86ca
-SHA1 (patch-src_extension_internal_pdfinput_svg-builder.cpp) = 9cc29c7ac03f0c0419d632497c9eeae14fad9631
-SHA1 (patch-src_extension_internal_wmf-inout.cpp) = b49b504d1cf9388d2ad7e1c91c339e7c3d5ffdf5
-SHA1 (patch-src_extension_internal_wmf-print.cpp) = b658d7a0697aaed55671507fe88ce93619ef1070
-SHA1 (patch-src_gradient-drag.cpp) = d6fc1f587a9ad404715fa6e70fe07823a3c68b0c
-SHA1 (patch-src_io_inkjar.cpp) = 060d59225cfe7b66db5e9f41e76860df9ce12d01
-SHA1 (patch-src_live__effects_lpe-ellipse__5pts.cpp) = e909a5b2e65f931246e5b3de7145739d1b6f6209
-SHA1 (patch-src_live__effects_lpe-lattice.cpp) = 17040a794a312ebecb63dd7b19be8f3337b18c47
-SHA1 (patch-src_live__effects_lpe-lattice2.cpp) = bcff9e9177895168a4ef888376f1c3942e7786fb
-SHA1 (patch-src_sp-ellipse.cpp) = e0b273e14c8174712b40f2c83c2e5408644bb9c9
-SHA1 (patch-src_svg_svg-length.cpp) = 41679ab161275577ccd3f525653e7766ca4f92c6
-SHA1 (patch-src_trace_siox.cpp) = daeff4626dace6997f64ab9c96b0bfb304e724c8
-SHA1 (patch-src_ui_dialog_grid-arrange-tab.cpp) = 0ea5b92f2bf923efd149a11d9fff3d5a1d5e5421
-SHA1 (patch-src_ui_tool_node.h) = 2900ab737d6b9245aabefee5e79564bdbaec57bc
-SHA1 (patch-src_util_fixed__point.h) = 40b38724541a9dd5ea241370b23dfb55d93cbb58
-SHA1 (patch-src_widgets_desktop-widget.cpp) = 2ccfad3614fe4e40162b2788db68e86f4a1dc6c9
+SHA1 (inkscape-1.0.tar.xz) = c59c5195bbd079deb5943686650230ddbdde0569
+RMD160 (inkscape-1.0.tar.xz) = 2350d881891ac60324235a5745f76f21ba3fb3d0
+SHA512 (inkscape-1.0.tar.xz) = 37c18079eb926fd6874deee95e4008bae165c5e52d05cb53bbc8f4a48eedd0e0ab6b3e5dfbb23709169187bfe8eb5aa44d576268667f2566a2cd4dd5426554f0
+Size (inkscape-1.0.tar.xz) = 31935616 bytes
+SHA1 (patch-CMakeScripts_Pod2man.cmake) = c7f0c0d3b28604c2594bc9265363c782a57af40c
