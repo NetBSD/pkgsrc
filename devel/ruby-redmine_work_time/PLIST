@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/01/04 23:05:13 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/06 14:25:43 taca Exp $
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/controllers/work_time_controller.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/helpers/work_time_helper.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/models/user_issue_month.rb
@@ -53,7 +53,6 @@ share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/db/migrate/006_cre
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/db/migrate/007_create_wt_holidays.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/db/migrate/008_remove_month_from_user_issue_month.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/db/migrate/009_remove_prj_from_wt_project_orders.rb
-share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/db/migrate/20141029173025_add_parent_id_index_to_issues.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/init.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/lib/work_time_projects_helper_patch.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/test/fixtures/user_issue_months.yml
