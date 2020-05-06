@@ -1,10 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2020/03/16 01:16:10 tnn Exp $
+# $NetBSD: Makefile.common,v 1.5 2020/05/06 15:02:54 taca Exp $
 #
-# used by devel/ruby-redmine_bootstrap_kit/Makefile
 # used by devel/ruby-redmine_code_review/Makefile
-# used by devel/ruby-redmine_jenkins/Makefile
 # used by devel/ruby-redmine_lightbox2/Makefile
-# used by devel/ruby-redmine_startpage/Makefile
 # used by devel/ruby-redmine_theme_changer/Makefile
 # used by devel/ruby-redmine_work_time/Makefile
 
@@ -18,7 +15,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-redmine-[0-9]*:../../devel/ruby-redmine
 
 USE_LANGUAGES=	# none
 
-RM_DIR=		share/${RUBY_PKGPREFIX}-redmine
+RM_DIR=		share/${RUBY_NAME}-redmine
 GEM_HOME=	${RM_DIR}/gems
 PLIST_SUBST+=	GEM_HOME=${GEM_HOME}
 
