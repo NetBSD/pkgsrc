@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2020/04/12 08:29:07 adam Exp $
+# $NetBSD: Makefile,v 1.50 2020/05/06 14:04:58 adam Exp $
 
 PKGNAME=	transmission-qt-${VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 COMMENT=	Free, lightweight BitTorrent client (QT version)
 
 MAKE_ENV+=		QTDIR=${QTDIR}

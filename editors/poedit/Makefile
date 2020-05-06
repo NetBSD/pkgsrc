@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2020/04/12 08:28:36 adam Exp $
+# $NetBSD: Makefile,v 1.95 2020/05/06 14:04:29 adam Exp $
 
 VERSION=	2.3
 DISTNAME=	poedit-${VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vslavik/}
 GITHUB_RELEASE=	v${VERSION}-oss
