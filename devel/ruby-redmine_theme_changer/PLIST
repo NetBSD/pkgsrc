@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/06 04:12:49 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/06 14:21:39 taca Exp $
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/app/models/theme_changer_user_setting.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/app/views/my/_theme_changer_form.html.erb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/config/locales/bg.yml
@@ -8,6 +8,10 @@ share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/config/locales
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/config/locales/fr.yml
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/config/locales/ja.yml
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/config/locales/ko.yml
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/config/locales/pt-BR.yml
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/config/locales/ru.yml
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/config/locales/tr.yml
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/config/locales/zh.yml
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/db/migrate/0001_create_theme_changer_user_settings.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/init.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_theme_changer/lib/theme_changer_my_account_hooks.rb
