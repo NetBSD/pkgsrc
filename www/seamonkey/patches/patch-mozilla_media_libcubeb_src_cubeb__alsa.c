@@ -1,4 +1,6 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.11 2020/05/06 14:34:53 ryoon Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__alsa.c,v 1.12 2020/05/07 19:36:53 nia Exp $
+
+- Sun Audio support.
 
 --- mozilla/media/libcubeb/src/cubeb_alsa.c.orig	2020-04-01 11:01:50.000000000 +0000
 +++ mozilla/media/libcubeb/src/cubeb_alsa.c
