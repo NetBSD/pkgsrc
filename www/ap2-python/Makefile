@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2019/11/21 11:40:37 leot Exp $
+# $NetBSD: Makefile,v 1.37 2020/05/07 05:41:33 rillig Exp $
 
 DISTNAME=	mod_python-3.5.0
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-${DISTNAME:S/mod_//}
@@ -19,6 +19,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN:Q}
+CONFIGURE_ARGS.apache=	# none (since --with-apxs2 is unknown)
 
 SUBST_CLASSES+=			optimization
 SUBST_STAGE.optimization=	pre-configure
