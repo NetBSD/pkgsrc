@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/05/04 06:18:05 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/07 05:01:29 adam Exp $
 
-DISTNAME=	xandikos-0.2.0
+DISTNAME=	xandikos-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xandikos/}
@@ -15,6 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.19.1:../../devel/py-dulwich
 DEPENDS+=	${PYPKGPREFIX}-icalendar-[0-9]*:../../time/py-icalendar
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-multidict-[0-9]*:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-prometheus_client-[0-9]*:../../net/py-prometheus_client
 
 USE_LANGUAGES=	# none
