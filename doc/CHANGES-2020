@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2792 2020/05/07 14:22:49 wen Exp $
+$NetBSD: CHANGES-2020,v 1.2793 2020/05/07 16:01:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4305,3 +4305,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-certbot-dns-sakuracloud to 1.4.0 [adam 2020-05-07]
 	Updated security/py-certbot-nginx to 1.4.0 [adam 2020-05-07]
 	Updated www/p5-Dancer to 1.3513 [wen 2020-05-07]
+	Updated devel/ruby-redmine to 4.0.7 [taca 2020-05-07]
