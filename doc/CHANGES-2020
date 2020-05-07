@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2787 2020/05/07 05:40:35 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2788 2020/05/07 07:43:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4282,3 +4282,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated databases/mysql57-server to 5.7.30 [adam 2020-05-07]
 	Updated devel/py-pebble to 4.5.2 [adam 2020-05-07]
 	Updated net/py-zeroconf to 0.26.1 [adam 2020-05-07]
+	Updated devel/p5-experimental to 0.022 [wen 2020-05-07]
