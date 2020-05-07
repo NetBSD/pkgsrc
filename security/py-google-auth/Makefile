@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/04/28 18:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/07 05:08:20 adam Exp $
 
-DISTNAME=	google-auth-1.14.1
+DISTNAME=	google-auth-1.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-auth/}
@@ -25,8 +25,6 @@ DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
-# should this be DEPENDS?
-TEST_DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-cachetools
 
