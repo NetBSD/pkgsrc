@@ -1,0 +1,19 @@
+$NetBSD: patch-mozilla_media_libcubeb_src_moz.build,v 1.10 2020/05/07 19:36:53 nia Exp $
+
+- Sun Audio support.
+
+--- mozilla/media/libcubeb/src/moz.build.orig	2020-04-01 11:01:50.000000000 +0000
++++ mozilla/media/libcubeb/src/moz.build
+@@ -43,6 +43,12 @@ if CONFIG['MOZ_JACK']:
+     ]
+     DEFINES['USE_JACK'] = True
+ 
++if CONFIG['MOZ_SUN']:
++    SOURCES += [
++        'cubeb_sun.c',
++    ]
++    DEFINES['USE_SUN'] = True
++
+ if CONFIG['OS_ARCH'] == 'OpenBSD':
+     SOURCES += [
+         'cubeb_sndio.c',
