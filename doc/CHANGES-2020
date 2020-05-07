@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2785 2020/05/07 05:08:52 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2786 2020/05/07 05:32:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4278,3 +4278,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated time/py-icalendar to 4.0.6 [adam 2020-05-07]
 	Updated net/py-xandikos to 0.2.1 [adam 2020-05-07]
 	Updated security/py-google-auth to 1.14.2 [adam 2020-05-07]
+	Updated databases/mysql57-client to 5.7.30 [adam 2020-05-07]
+	Updated databases/mysql57-server to 5.7.30 [adam 2020-05-07]
