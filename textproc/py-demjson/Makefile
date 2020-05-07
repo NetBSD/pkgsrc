@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/01 17:52:29 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/07 09:29:04 adam Exp $
 
 DISTNAME=	demjson-2.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,9 +10,11 @@ HOMEPAGE=	https://github.com/dmeranda/demjson
 COMMENT=	Encoder, decoder, and lint/validator for JSON compliant with RFC 7159
 LICENSE=	gnu-lgpl-v3
 
+USE_LANGUAGES=	# none
+
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/jsonlint \
-	    ${DESTDIR}${PREFIX}/bin/jsonlint-${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} jsonlint jsonlint-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
