@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2020/05/01 00:08:22 joerg Exp $
+$NetBSD: distinfo,v 1.21 2020/05/07 13:05:13 wiz Exp $
 
 SHA1 (evas-1.7.10.tar.bz2) = dfdc60cbc0ee90980fe9c3c1752332b364514cb5
 RMD160 (evas-1.7.10.tar.bz2) = 54201a7a577a956dcfad9c3943b9726a77ad7333
@@ -12,4 +12,5 @@ SHA1 (patch-src_lib_cserve2_evas__cs2.h) = 6df29afcb553239f9ef2ea91c772ebaa2aada
 SHA1 (patch-src_lib_engines_common_evas__op__blend_op__blend__color__neon.c) = 44254a9b9f3baa0bf54e2732f225cf9247db84cf
 SHA1 (patch-src_lib_engines_common_evas__op__blend_op__blend__pixel__neon.c) = 29b4d5953aba050cab07a87c05f04951e4959599
 SHA1 (patch-src_lib_engines_common_evas__op__copy_op__copy__color__neon.c) = 25d27e9dbc486544cce1f3fded721679421b5e0d
+SHA1 (patch-src_modules_loaders_gif_evas__image__load__gif.c) = e6fe394d2757c9bbe2aabc94ec87fcf3b008362d
 SHA1 (patch-src_modules_loaders_psd_evas__image__load__psd.c) = 454c008696f0045726fc227d8f3e60aec187bc2b
