@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.763 2020/05/03 12:02:19 markd Exp $
+# $NetBSD: Makefile,v 1.764 2020/05/07 06:13:34 jnemeth Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -826,14 +826,14 @@ SUBDIR+=	tex-ifoddpage
 SUBDIR+=	tex-ifoddpage-doc
 SUBDIR+=	tex-ifplatform
 SUBDIR+=	tex-ifplatform-doc
+SUBDIR+=	tex-iftex
+SUBDIR+=	tex-iftex-doc
 SUBDIR+=	tex-infwarerr
 SUBDIR+=	tex-infwarerr-doc
 SUBDIR+=	tex-inputenx
 SUBDIR+=	tex-inputenx-doc
 SUBDIR+=	tex-intcalc
 SUBDIR+=	tex-intcalc-doc
-SUBDIR+=	tex-iftex
-SUBDIR+=	tex-iftex-doc
 SUBDIR+=	tex-igo
 SUBDIR+=	tex-impatient-doc
 SUBDIR+=	tex-import
@@ -923,10 +923,10 @@ SUBDIR+=	tex-lipsum
 SUBDIR+=	tex-lipsum-doc
 SUBDIR+=	tex-listing
 SUBDIR+=	tex-listing-doc
-SUBDIR+=	tex-listingsutf8
-SUBDIR+=	tex-listingsutf8-doc
 SUBDIR+=	tex-listings
 SUBDIR+=	tex-listings-doc
+SUBDIR+=	tex-listingsutf8
+SUBDIR+=	tex-listingsutf8-doc
 SUBDIR+=	tex-listofitems
 SUBDIR+=	tex-listofitems-doc
 SUBDIR+=	tex-lkproof
