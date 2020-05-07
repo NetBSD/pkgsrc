@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2020/05/07 04:26:03 gutteridge Exp $
+# $NetBSD: Makefile,v 1.39 2020/05/07 05:49:14 mef Exp $
 
 DISTNAME=	Devel-Declare-0.006022
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=		p5-B-Hooks-EndOfScope>0.05:../../devel/p5-B-Hooks-EndOfScope
 DEPENDS+=		p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
-BUILD_DEPENDS+=		p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
+DEPENDS+=		p5-ExtUtils-Depends>=0.302:../../devel/p5-ExtUtils-Depends
 
 TEST_DEPENDS+=		p5-Devel-CallParser-[0-9]*:../../devel/p5-Devel-CallParser
 TEST_DEPENDS+=		p5-B-Compiling-[0-9]*:../../devel/p5-B-Compiling # t/lines.t
@@ -20,7 +20,7 @@ TEST_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 TEST_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 TEST_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
-USE_LANGUAGES=					c
+USE_LANGUAGES=		c # is said redundent, but
 PERL5_PACKLIST=					auto/Devel/Declare/.packlist
 PERL5_MODULE_TYPE=				Module::Install::Bundled
 BUILDLINK_DEPMETHOD.p5-B-Hooks-OP-Check=	full
