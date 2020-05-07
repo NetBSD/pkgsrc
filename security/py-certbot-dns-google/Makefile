@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/14 18:28:18 adam Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/07 10:53:45 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot-dns-google/}
 COMMENT=	Google Cloud DNS Authenticator plugin for Certbot
 
 DEPENDS+=	${PYPKGPREFIX}-acme>=0.29.0:../../security/py-acme
-DEPENDS+=	${PYPKGPREFIX}-certbot>=0.39.0:../../security/py-certbot
+DEPENDS+=	${PYPKGPREFIX}-certbot>=1.1.0:../../security/py-certbot
 DEPENDS+=	${PYPKGPREFIX}-google-api-python-client>=1.5.5:../../www/py-google-api-python-client
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
