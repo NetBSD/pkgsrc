@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.21 2019/08/03 14:47:41 leot Exp $
+$NetBSD: patch-ab,v 1.22 2020/05/07 20:42:56 leot Exp $
 
 - Handle the various operating systems in the same way avoiding hardcoding
 - Avoid to use objcopy by setting HAVE_OBJCOPY to no (if `yes', and with
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.21 2019/08/03 14:47:41 leot Exp $
   If no lcms2 is available just pass `-DFZ_ENABLE_ICC=0' to disable it via
   CFLAGS.
 
---- Makerules.orig	2019-07-23 12:23:08.000000000 +0000
+--- Makerules.orig	2020-05-05 11:29:09.000000000 +0000
 +++ Makerules
 @@ -6,17 +6,6 @@ OS := $(OS:MSYS%=MINGW)
  OS := $(OS:Windows_NT=MINGW)
@@ -31,12 +31,12 @@ $NetBSD: patch-ab,v 1.21 2019/08/03 14:47:41 leot Exp $
 -  LDREMOVEUNREACH := -Wl,--gc-sections
 -endif
 -
- SANITIZE_FLAGS += -fsanitize=address
- SANITIZE_FLAGS += -fsanitize=leak
+ CFLAGS += -Wsign-compare
  
-@@ -72,77 +61,63 @@ SYS_MUJS_LIBS := -lmujs
- SYS_OPENJPEG_LIBS := -lopenjp2
- SYS_ZLIB_LIBS := -lz
+ SANITIZE_FLAGS += -fsanitize=address
+@@ -78,77 +67,63 @@ ifneq "$(CLUSTER)" ""
+   CFLAGS += -DCLUSTER
+ endif
  
 -ifeq ($(OS),MINGW)
 -  WINDRES := windres
