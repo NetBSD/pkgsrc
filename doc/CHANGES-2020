@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2788 2020/05/07 07:43:12 wen Exp $
+$NetBSD: CHANGES-2020,v 1.2789 2020/05/07 08:42:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4283,3 +4283,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pebble to 4.5.2 [adam 2020-05-07]
 	Updated net/py-zeroconf to 0.26.1 [adam 2020-05-07]
 	Updated devel/p5-experimental to 0.022 [wen 2020-05-07]
+	Updated devel/pangomm to 2.42.1 [adam 2020-05-07]
+	Updated x11/gtkmm3 to 3.24.2 [adam 2020-05-07]
