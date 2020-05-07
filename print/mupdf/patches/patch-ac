@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.24 2019/08/03 14:47:41 leot Exp $
+$NetBSD: patch-ac,v 1.25 2020/05/07 20:42:57 leot Exp $
 
 - libtool support 
 - Install target cleanup
@@ -8,7 +8,7 @@ $NetBSD: patch-ac,v 1.24 2019/08/03 14:47:41 leot Exp $
   be invoked during the building phase)
 - Install mupdf with curl support as `mupdf-curl'
 
---- Makefile.orig	2019-07-26 14:10:07.000000000 +0000
+--- Makefile.orig	2020-05-05 11:29:09.000000000 +0000
 +++ Makefile
 @@ -51,68 +51,68 @@ ifneq ($(verbose),yes)
  endif
@@ -25,7 +25,7 @@ $NetBSD: patch-ac,v 1.24 2019/08/03 14:47:41 leot Exp $
  endif
 -LINK_CMD = $(QUIET_LINK) $(MKTGTDIR) ; $(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
 +LINK_CMD = $(QUIET_LINK) $(MKTGTDIR) ; $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
- TAGS_CMD = $(QUIET_TAGS) ctags -R
+ TAGS_CMD = $(QUIET_TAGS) ctags -R --c-kinds=+p
  WINDRES_CMD = $(QUIET_WINDRES) $(MKTGTDIR) ; $(WINDRES) $< $@
  OBJCOPY_CMD = $(QUIET_OBJCOPY) $(MKTGTDIR) ; $(LD) -r -b binary -o $@ $<
  
@@ -173,8 +173,8 @@ $NetBSD: patch-ac,v 1.24 2019/08/03 14:47:41 leot Exp $
 -MURASTER_OBJ := $(OUT)/source/tools/muraster.o
 +MURASTER_OBJ := $(OUT)/source/tools/muraster.lo
  MURASTER_EXE := $(OUT)/muraster
- $(MURASTER_EXE) : $(MURASTER_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB)
- 	$(LINK_CMD) $(THIRD_LIBS) $(THREADING_LIBS)
+ $(MURASTER_EXE) : $(MURASTER_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(PKCS7_LIB) $(THREAD_LIB)
+ 	$(LINK_CMD) $(THIRD_LIBS) $(THREADING_LIBS) $(LIBCRYPTO_LIBS)
 @@ -224,7 +224,7 @@ TOOL_APPS += $(MURASTER_EXE)
  
  ifeq ($(HAVE_GLUT),yes)
@@ -263,7 +263,7 @@ $NetBSD: patch-ac,v 1.24 2019/08/03 14:47:41 leot Exp $
  
  # --- Examples ---
  
-@@ -292,10 +292,10 @@ $(OUT)/multi-threaded: docs/examples/mul
+@@ -294,10 +294,10 @@ $(OUT)/multi-threaded: docs/examples/mul
  
  # --- Update version string header ---
  
@@ -278,7 +278,7 @@ $NetBSD: patch-ac,v 1.24 2019/08/03 14:47:41 leot Exp $
  
  # --- Format man pages ---
  
-@@ -323,27 +323,30 @@ tools: $(TOOL_APPS)
+@@ -325,27 +325,30 @@ tools: $(TOOL_APPS)
  apps: $(TOOL_APPS) $(VIEW_APPS)
  
  install: libs apps
