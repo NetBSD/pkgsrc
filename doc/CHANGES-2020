@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2791 2020/05/07 10:58:48 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2792 2020/05/07 14:22:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4304,3 +4304,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated security/py-certbot-dns-route53 to 1.4.0 [adam 2020-05-07]
 	Updated security/py-certbot-dns-sakuracloud to 1.4.0 [adam 2020-05-07]
 	Updated security/py-certbot-nginx to 1.4.0 [adam 2020-05-07]
+	Updated www/p5-Dancer to 1.3513 [wen 2020-05-07]
