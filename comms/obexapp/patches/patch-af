@@ -1,12 +1,18 @@
-$NetBSD: patch-af,v 1.6 2010/11/17 19:14:34 plunky Exp $
+$NetBSD: patch-af,v 1.7 2020/05/07 17:01:27 plunky Exp $
+
+LIBSDP is not available on all platforms
+
+don't error on warnings about const
 
 --- Makefile.orig	2010-11-03 18:28:50.000000000 +0000
 +++ Makefile
-@@ -16,9 +16,16 @@ DEBUG_FLAGS=	-g
+@@ -16,9 +16,18 @@ DEBUG_FLAGS=	-g
  CFLAGS+=	-I/usr/local/include \
  		-I/usr/local/include/openobex
  
 -DPADD=		${LIBBLUETOOTH} ${LIBSDP} ${LIBREADLINE}
++CFLAGS+=	-Wno-error=incompatible-pointer-types
++
 +DPADD=		${LIBBLUETOOTH} ${LIBREADLINE}
  LDADD=		-L/usr/lib -L/usr/local/lib \
 -		-lbluetooth -lsdp -lopenobex -lexpat -lreadline -liconv
