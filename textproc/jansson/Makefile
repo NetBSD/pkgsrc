@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/12/09 20:33:12 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/07 09:20:12 adam Exp $
 
-DISTNAME=	jansson-2.12
+DISTNAME=	jansson-2.13
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.digip.org/jansson/releases/
 EXTRACT_SUFX=	.tar.bz2
