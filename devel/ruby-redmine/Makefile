@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2020/05/03 19:41:50 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2020/05/07 16:00:21 taca Exp $
 
-DISTNAME=	redmine-4.0.6
+DISTNAME=	redmine-4.0.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 PREV_PKGPATH=	devel/redmine
 CATEGORIES=	devel
 MASTER_SITES=	http://www.redmine.org/releases/
@@ -12,14 +11,14 @@ HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 
-GEMS_DISTFILES+=	actioncable-5.2.4.1.gem actionmailer-5.2.4.1.gem
-GEMS_DISTFILES+=	actionpack-5.2.4.1.gem actionpack-xml_parser-2.0.1.gem
-GEMS_DISTFILES+=	actionview-5.2.4.1.gem activejob-5.2.4.1.gem
-GEMS_DISTFILES+=	activemodel-5.2.4.1.gem activerecord-5.2.4.1.gem
-GEMS_DISTFILES+=	activestorage-5.2.4.1.gem activesupport-5.2.4.1.gem
+GEMS_DISTFILES+=	actioncable-5.2.4.2.gem actionmailer-5.2.4.2.gem
+GEMS_DISTFILES+=	actionpack-5.2.4.2.gem actionpack-xml_parser-2.0.1.gem
+GEMS_DISTFILES+=	actionview-5.2.4.2.gem activejob-5.2.4.2.gem
+GEMS_DISTFILES+=	activemodel-5.2.4.2.gem activerecord-5.2.4.2.gem
+GEMS_DISTFILES+=	activestorage-5.2.4.2.gem activesupport-5.2.4.2.gem
 GEMS_DISTFILES+=	addressable-2.7.0.gem arel-9.0.0.gem builder-3.2.3.gem
 GEMS_DISTFILES+=	capybara-2.18.0.gem childprocess-2.0.0.gem
-GEMS_DISTFILES+=	concurrent-ruby-1.1.5.gem crass-1.0.4.gem
+GEMS_DISTFILES+=	concurrent-ruby-1.1.5.gem crass-1.0.4.gem 
 GEMS_DISTFILES+=	css_parser-1.7.0.gem csv-3.0.9.gem docile-1.1.5.gem
 GEMS_DISTFILES+=	erubi-1.8.0.gem globalid-0.4.2.gem
 GEMS_DISTFILES+=	htmlentities-4.3.4.gem i18n-0.7.0.gem json-2.2.0.gem
@@ -31,8 +30,8 @@ GEMS_DISTFILES+=	mocha-1.9.0.gem net-ldap-0.16.2.gem
 GEMS_DISTFILES+=	nio4r-2.5.1.gem nokogiri-1.10.7.gem
 GEMS_DISTFILES+=	public_suffix-4.0.1.gem puma-3.12.1.gem rack-2.0.7.gem
 GEMS_DISTFILES+=	rack-openid-1.4.2.gem rack-test-1.1.0.gem
-GEMS_DISTFILES+=	rails-5.2.4.1.gem rails-dom-testing-2.0.3.gem
-GEMS_DISTFILES+=	rails-html-sanitizer-1.0.4.gem railties-5.2.4.1.gem
+GEMS_DISTFILES+=	rails-5.2.4.2.gem rails-dom-testing-2.0.3.gem
+GEMS_DISTFILES+=	rails-html-sanitizer-1.0.4.gem railties-5.2.4.2.gem
 GEMS_DISTFILES+=	rake-12.3.3.gem rbpdf-1.19.8.gem
 GEMS_DISTFILES+=	rbpdf-font-1.19.1.gem redcarpet-3.4.0.gem
 GEMS_DISTFILES+=	request_store-1.0.5.gem rmagick-2.16.0.gem
@@ -84,7 +83,7 @@ REPLACE_RUBY+=	public_suffix-4.0.1/bin/console
 REPLACE_RUBY+=	puma-3.12.1/bin/puma-wild puma-3.12.1/bin/puma
 REPLACE_RUBY+=	puma-3.12.1/bin/pumactl rack-2.0.7/bin/rackup
 REPLACE_RUBY+=	rack-2.0.7/test/cgi/rackup_stub.rb rack-2.0.7/test/cgi/test
-REPLACE_RUBY+=	rack-2.0.7/test/cgi/test.fcgi railties-5.2.4.1/exe/rails
+REPLACE_RUBY+=	rack-2.0.7/test/cgi/test.fcgi railties-5.2.4.2/exe/rails
 REPLACE_RUBY+=	raindrops-0.19.1/examples/linux-listener-stats.rb
 REPLACE_RUBY+=	rake-12.3.3/bin/bundle rake-12.3.3/bin/console
 REPLACE_RUBY+=	rake-12.3.3/bin/rake rake-12.3.3/bin/rdoc
@@ -201,6 +200,13 @@ CHECK_INTERPRETER_SKIP+=	${RM_DIR}/gems/gems/loofah-2.2.3/benchmark/benchmark.rb
 # Selenium has Linux .so files.
 CHECK_SHLIBS_SUPPORTED=	no
 CHECK_SSP=		no
+
+# childprocess gem fix
+SUBST_CLASSES+=		cproc
+SUBST_FILES.cproc=	childprocess-2.0.0.gemspec
+SUBST_MESSAGE.cproc=	Fixing chiildprocess gem.
+SUBST_SED.cproc=	-e '/s\.extensions/d'
+SUBST_STAGE.cproc=	pre-configure
 
 SUBST_CLASSES+=		pkgcfg
 SUBST_FILES.pkgcfg=	rmagick-2.16.0/ext/RMagick/extconf.rb
@@ -322,6 +328,7 @@ post-install: unicorn-post-install
 .for f in ${RM_APP_CONFIG}
 	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/app/config/${f}.example \
 		${DESTDIR}/${EGDIR}
+	${CHMOD} ${SHAREMODE} ${DESTDIR}/${EGDIR} ${f}.example
 .endfor
 .for f in ${RM_TEST_CONFIG}
 	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/app/test/fixtures/configuration/${f}.example \
