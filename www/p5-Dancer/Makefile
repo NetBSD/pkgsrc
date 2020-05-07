@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2019/11/04 22:10:03 rillig Exp $
+# $NetBSD: Makefile,v 1.45 2020/05/07 14:19:10 wen Exp $
 
-DISTNAME=	Dancer-1.3512
+DISTNAME=	Dancer-1.3513
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BI/BIGPRESH/}
 
@@ -17,6 +16,7 @@ PERL5_PACKLIST=	auto/Dancer/.packlist
 BUILD_DEPENDS+=	p5-CGI>=0:../../www/p5-CGI
 BUILD_DEPENDS+=	p5-Devel-Hide>=0:../../devel/p5-Devel-Hide
 BUILD_DEPENDS+=	p5-HTTP-CookieJar>=0.008:../../www/p5-HTTP-CookieJar
+BUILD_DEPENDS+=	p5-JSON>=2.90:../../converters/p5-JSON
 BUILD_DEPENDS+=	p5-Test-NoWarnings>=0:../../devel/p5-Test-NoWarnings
 
 DEPENDS+=	p5-Clone>=0:../../devel/p5-Clone
