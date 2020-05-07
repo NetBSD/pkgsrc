@@ -1,0 +1,24 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2020/05/07 17:16:10 nia Exp $
+
+Specify a tag when linking.
+
+--- src/Makefile.in.orig	2018-05-21 01:20:45.000000000 +0000
++++ src/Makefile.in
+@@ -157,7 +157,7 @@ AM_V_lt = $(am__v_lt_@AM_V@)
+ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+ am__v_lt_1 = 
+-liblocation_corelocation_la_LINK = $(LIBTOOL) $(AM_V_lt) \
++liblocation_corelocation_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+ 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(OBJCLD) \
+ 	$(liblocation_corelocation_la_OBJCFLAGS) $(OBJCFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+@@ -252,7 +252,7 @@ am__v_OBJC_ = $(am__v_OBJC_@AM_DEFAULT_V
+ am__v_OBJC_0 = @echo "  OBJC    " $@;
+ am__v_OBJC_1 = 
+ OBJCLD = $(OBJC)
+-OBJCLINK = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
++OBJCLINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=link $(OBJCLD) $(AM_OBJCFLAGS) $(OBJCFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ AM_V_OBJCLD = $(am__v_OBJCLD_@AM_V@)
