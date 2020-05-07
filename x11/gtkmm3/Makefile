@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2020/03/10 22:09:07 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2020/05/07 08:42:38 adam Exp $
 
-DISTNAME=	gtkmm-3.24.1
+DISTNAME=	gtkmm-3.24.2
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm3/1}
-PKGREVISION=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -19,6 +18,7 @@ USE_TOOLS+=		gmake perl pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	gdk/gdkmm.pc.in
 PKGCONFIG_OVERRIDE+=	gtk/gtkmm.pc.in
+TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 PLIST_VARS+=	x11
