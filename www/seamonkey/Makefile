@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2020/05/07 19:36:52 nia Exp $
+# $NetBSD: Makefile,v 1.210 2020/05/07 19:47:11 nia Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -40,12 +40,6 @@ ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGBASE}
 
 .include "../../mk/bsd.prefs.mk"
-
-#.if (${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || \
-#     ${OPSYS} == "DragonFly") && \
-#    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
-#BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
-#.endif
 
 CHECK_PORTABILITY_SKIP+=	mozilla/js/src/tests/update-test262.sh
 CHECK_PORTABILITY_SKIP+=	mozilla/security/nss/tests/libpkix/libpkix.sh
