@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3123 2020/05/06 15:05:45 taca Exp $
+# $NetBSD: Makefile,v 1.3124 2020/05/07 06:07:33 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1263,9 +1263,9 @@ SUBDIR+=	p5-Debug-ShowStuff
 SUBDIR+=	p5-Declare-Constraints-Simple
 SUBDIR+=	p5-Devel-Autoflush
 SUBDIR+=	p5-Devel-BeginLift
-SUBDIR+=	p5-Devel-Caller
 SUBDIR+=	p5-Devel-CallChecker
 SUBDIR+=	p5-Devel-CallParser
+SUBDIR+=	p5-Devel-Caller
 SUBDIR+=	p5-Devel-Caller-IgnoreNamespaces
 SUBDIR+=	p5-Devel-CheckBin
 SUBDIR+=	p5-Devel-CheckCompiler
@@ -1748,6 +1748,7 @@ SUBDIR+=	p5-Proc-Wait3
 SUBDIR+=	p5-Proc-WaitStat
 SUBDIR+=	p5-Python-Serialise-Marshal
 SUBDIR+=	p5-RT-Authen-ExternalAuth
+SUBDIR+=	p5-RT-Extension-ArticleTemplates
 SUBDIR+=	p5-Readonly
 SUBDIR+=	p5-Readonly-XS
 SUBDIR+=	p5-Ref-Util
