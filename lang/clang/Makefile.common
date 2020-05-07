@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2020/04/26 10:19:26 rillig Exp $
+# $NetBSD: Makefile.common,v 1.44 2020/05/07 20:21:41 rillig Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 # used by lang/clang-tools-extra/Makefile
@@ -84,7 +84,7 @@ LIBCPP_CHECK=	NO
 .endif
 
 # patch NetBSD::GetCXXStdlibType
-.if ${OPSYS} == "NetBSD" && ${LIBCPP_CHECK} == YES
+.if ${OPSYS} == "NetBSD" && ${LIBCPP_CHECK} != YES
 SUBST_CLASSES+=			libcxx
 SUBST_STAGE.libcxx=		pre-configure
 SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ (matching the host compiler)
