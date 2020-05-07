@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2020/05/07 05:49:14 mef Exp $
+# $NetBSD: Makefile,v 1.40 2020/05/07 05:50:05 mef Exp $
 
 DISTNAME=	Devel-Declare-0.006022
 PKGNAME=	p5-${DISTNAME}
@@ -20,7 +20,7 @@ TEST_DEPENDS+=		p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 TEST_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 TEST_DEPENDS+=		p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
-USE_LANGUAGES=		c # is said redundent, but
+USE_LANGUAGES=					c # is said redundent, but
 PERL5_PACKLIST=					auto/Devel/Declare/.packlist
 PERL5_MODULE_TYPE=				Module::Install::Bundled
 BUILDLINK_DEPMETHOD.p5-B-Hooks-OP-Check=	full
