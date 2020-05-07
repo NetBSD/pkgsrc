@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2020/01/18 21:48:29 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2020/05/07 05:41:33 rillig Exp $
 
 BUILDLINK_TREE+=	apache
 
@@ -24,7 +24,7 @@ CONFIGURE_ENV+=		APR_LIBTOOL=${LIBTOOL:Q}	# make apxs use the libtool we specify
 MAKE_ENV+=		APR_LIBTOOL=${LIBTOOL:Q}
 APXS?=			${BUILDLINK_PREFIX.apache}/bin/apxs
 .if defined(GNU_CONFIGURE)
-CONFIGURE_ARGS+=	--with-apxs2=${APXS:Q}
+CONFIGURE_ARGS+=	${CONFIGURE_ARGS.apache:U--with-apxs2=${APXS:Q}}
 .endif
 
 .include "../../devel/apr/buildlink3.mk"
