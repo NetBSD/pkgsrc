@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.20 2020/04/24 21:22:40 gutteridge Exp $
+$NetBSD: README,v 1.21 2020/05/07 14:20:49 nia Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -64,7 +64,7 @@ pkgsrc supports or has supported many operating systems (platforms).
 In general, there is a README.os for each platform that can run
 pkgsrc, explaining particular considerations.
 
-Because pgksrc contains many per-platform fixes and accommodations,
+Because pkgsrc contains many per-platform fixes and accommodations,
 and because the presence of those at times causes more work for
 others, we list platforms according to whether they are in active use.
 (If you feel a platform is miscategorized, send rationale to
