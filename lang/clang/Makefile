@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2019/12/29 15:31:22 adam Exp $
+# $NetBSD: Makefile,v 1.55 2020/05/07 20:21:41 rillig Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 
 CMAKE_ARGS+=	-DCLANG_ENABLE_STATIC_ANALYZER=OFF
 
