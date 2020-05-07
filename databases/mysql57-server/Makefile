@@ -1,27 +1,25 @@
-# $NetBSD: Makefile,v 1.32 2020/05/06 14:04:24 adam Exp $
+# $NetBSD: Makefile,v 1.33 2020/05/07 05:31:53 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	1
 COMMENT=	MySQL 5, a free SQL database (server)
 
 CONFLICTS=	mysql3-server-[0-9]*
 
 .include "../../databases/mysql57-client/Makefile.common"
 
-CMAKE_ARGS+=		-DINSTALL_INFODIR=${PKGINFODIR}
+CMAKE_ARGS+=	-DINSTALL_INFODIR=${PKGINFODIR}
+
+PLIST_VARS+=	embedded auth_socket
 
 .if !empty(PKG_OPTIONS:Membedded-server)
-CMAKE_ARGS+=			-DWITH_EMBEDDED_SERVER=ON
-PLIST.embedded=			yes
+CMAKE_ARGS+=	-DWITH_EMBEDDED_SERVER=ON
+PLIST.embedded=	yes
 .else
-CMAKE_ARGS+=			-DWITH_EMBEDDED_SERVER=OFF
+CMAKE_ARGS+=	-DWITH_EMBEDDED_SERVER=OFF
 # We only need readline to placate the configure script if we don't build
 # the embedded server as it is the only binary linked against "readline".
 BUILDLINK_DEPMETHOD.editline=	build
-BUILDLINK_DEPMETHOD.readline=	build
 .endif
-
-PLIST_VARS+=		embedded ndb auth_socket
 
 .if ${OPSYS} == "Linux"
 PLIST.auth_socket=	yes

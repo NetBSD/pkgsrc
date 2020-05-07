@@ -1,21 +1,22 @@
-$NetBSD: distinfo,v 1.36 2020/03/17 18:33:08 adam Exp $
+$NetBSD: distinfo,v 1.37 2020/05/07 05:31:53 adam Exp $
 
-SHA1 (mysql-5.7.29.tar.gz) = 5ee9ebf33da3a3135bdadc41cef35f4d205e2049
-RMD160 (mysql-5.7.29.tar.gz) = bf95b9948331cf78c1e6880146381e69f7cf7491
-SHA512 (mysql-5.7.29.tar.gz) = d68add452102d1f6417c992aee22aadee4026147503fe0a3c7cae615cb470f2eb040cd03d01af7b5ae5d454840ce123385d472163eb10fe2216d9062281d174c
-Size (mysql-5.7.29.tar.gz) = 54438870 bytes
+SHA1 (mysql-5.7.30.tar.gz) = 47e55b66a92d12549445a0e13e577798fb571a35
+RMD160 (mysql-5.7.30.tar.gz) = 90a5e160c4f6980bb00494c7c1918abca68831e6
+SHA512 (mysql-5.7.30.tar.gz) = 494d78881ea5a7561b3e3b8f42e6e4cc07e3c23d2dda59bc50d14fa697bfb1b5bf430d06fcb0a27cb5fd9af33585d55971780c7f7cc2d961c33750c842b628a9
+Size (mysql-5.7.30.tar.gz) = 54386443 bytes
 SHA1 (patch-CMakeLists.txt) = 1409a98380c999c6973fa3106dc35684b7c3b3cc
 SHA1 (patch-client_CMakeLists.txt) = 4af2fb3f3d05a66a9ee89f3653e2fcccadfa5f79
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
+SHA1 (patch-client_mysql.cc) = d30ca68d41a5c2fe71e50845e9e772ecf9fbaac5
 SHA1 (patch-client_mysqladmin.cc) = e1650ef3695675bcc01375bacdebcb7318218b93
 SHA1 (patch-cmake_boost.cmake) = ecf03b396c57c69e0d251497e7217e47632613c2
 SHA1 (patch-cmake_build__configurations_mysql__release.cmake) = 7a1fb8c686f187db8fd9d8ad203c1f764d6e55a6
+SHA1 (patch-cmake_curl.cmake) = 08ff31eb8de6b94a46ff90edb6df66a61a94fd9d
+SHA1 (patch-cmake_ldap.cmake) = 9bdc3c311330852286838e6159295ecc5fbdc0ea
 SHA1 (patch-cmake_os_SunOS.cmake) = b71c3e1fafb48ebbba77c19bb1c31556ebe1ad2a
 SHA1 (patch-cmake_plugin.cmake) = 4480438969e297f67890b1974a86fb88a23d28ed
-SHA1 (patch-cmake_readline.cmake) = fb79ed969240ae2984098f72c2d3fb501154902c
-SHA1 (patch-cmake_ssl.cmake) = 1954dfa0562e5e771bc6d4c6071e49086f7dfab5
-SHA1 (patch-cmd-line-utils_libedit_chartype.h) = 6b1453df648001ed1fc81190106e15872a69a04c
-SHA1 (patch-cmd-line-utils_libedit_vi.c) = 7c5ce1d07f650815d028e435a59e5d078ec74c2f
+SHA1 (patch-cmake_readline.cmake) = 96ee989be126c939a4c9ef80f8cbb27e0c0719a5
+SHA1 (patch-cmake_ssl.cmake) = 85ccd0f27fdd6950368ae10fe4b8a013d2e66dfa
 SHA1 (patch-include_CMakeLists.txt) = 944991702f046ea7a5e2b6ea4dc390f17426e55a
 SHA1 (patch-include_my__compare.h) = f45bac4b488332a668b0005751856279b67401f5
 SHA1 (patch-include_my__global.h) = 3870266cb1dd2cd0d58417dfe21bab19b62100e2

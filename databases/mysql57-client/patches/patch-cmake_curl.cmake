@@ -1,0 +1,22 @@
+$NetBSD: patch-cmake_curl.cmake,v 1.1 2020/05/07 05:31:53 adam Exp $
+
+Do not prefer static libraries (or linking will fail).
+
+--- cmake/curl.cmake.orig	2020-05-06 20:44:17.000000000 +0000
++++ cmake/curl.cmake
+@@ -34,7 +34,6 @@ MACRO(MYSQL_CHECK_CURL)
+      ENDIF()
+      MESSAGE(STATUS "CURL_LIBRARY = ${CURL_LIBRARY}")
+    ELSEIF(WITH_CURL)
+-    LIST(REVERSE CMAKE_FIND_LIBRARY_SUFFIXES)
+     FIND_LIBRARY(CURL_LIBRARY
+       NAMES curl
+       PATHS ${WITH_CURL}
+@@ -42,7 +41,6 @@ MACRO(MYSQL_CHECK_CURL)
+       NO_CMAKE_ENVIRONMENT_PATH
+       NO_SYSTEM_ENVIRONMENT_PATH
+     )
+-    LIST(REVERSE CMAKE_FIND_LIBRARY_SUFFIXES)
+     MESSAGE(STATUS "CURL_LIBRARY = ${CURL_LIBRARY}")
+    ELSE()
+      MESSAGE(STATUS
