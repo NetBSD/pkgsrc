@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2019/11/04 12:56:39 adam Exp $
+# $NetBSD: Makefile,v 1.18 2020/05/07 09:19:16 adam Exp $
 
-DISTNAME=	libsass-3.6.3
+DISTNAME=	libsass-3.6.4
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sass/}
 
