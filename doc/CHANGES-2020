@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2794 2020/05/07 18:21:24 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.2795 2020/05/07 20:43:20 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4307,3 +4307,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-Dancer to 1.3513 [wen 2020-05-07]
 	Updated devel/ruby-redmine to 4.0.7 [taca 2020-05-07]
 	Updated games/lgogdownloader to 3.7 [wiz 2020-05-07]
+	Updated print/mupdf to 1.17.0 [leot 2020-05-07]
