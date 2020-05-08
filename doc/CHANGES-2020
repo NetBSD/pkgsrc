@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2798 2020/05/08 07:14:28 wen Exp $
+$NetBSD: CHANGES-2020,v 1.2799 2020/05/08 07:32:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4311,3 +4311,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/zathura-pdf-mupdf to 0.3.5nb7 [leot 2020-05-07]
 	Updated www/p5-Dancer2 to 0.300003 [wen 2020-05-08]
 	Updated www/p5-CGI to 0.47 [wen 2020-05-08]
+	Updated www/p5-CGI-Compile to 0.24 [wen 2020-05-08]
