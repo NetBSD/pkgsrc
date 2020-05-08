@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2020/01/08 13:38:34 wen Exp $
+# $NetBSD: Makefile,v 1.55 2020/05/08 01:02:38 wen Exp $
 
-DISTNAME=	Dancer2-0.300000
+DISTNAME=	Dancer2-0.300003
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CR/CROMEDOME/}
@@ -43,6 +43,7 @@ DEPENDS+=	p5-MooX-Types-MooseLike-Numeric>=0:../../devel/p5-MooX-Types-MooseLike
 DEPENDS+=	p5-Plack>=1.0040:../../www/p5-Plack
 DEPENDS+=	p5-Plack-Middleware-FixMissingBodyInRedirect>=0:../../www/p5-Plack-Middleware-FixMissingBodyInRedirect
 DEPENDS+=	p5-Plack-Middleware-RemoveRedundantBody>=0:../../www/p5-Plack-Middleware-RemoveRedundantBody
+DEPENDS+=	p5-Ref-Util>=0:../../devel/p5-Ref-Util
 DEPENDS+=	p5-Return-MultiLevel>=0:../../devel/p5-Return-MultiLevel
 DEPENDS+=	p5-Role-Tiny>=2.000000:../../devel/p5-Role-Tiny
 DEPENDS+=	p5-Safe-Isa>=0:../../devel/p5-Safe-Isa
