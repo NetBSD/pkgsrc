@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/05/02 03:11:41 markd Exp $
+# $NetBSD: Makefile,v 1.38 2020/05/08 14:47:02 mef Exp $
 
 DISTNAME=	dblatex-0.3.10
 PKGREVISION=	3
@@ -19,6 +19,7 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 DEPENDS+=	tex-iftex>=1.0d:../../print/tex-iftex
 DEPENDS+=	tex-anysize-[0-9]*:../../print/tex-anysize
 DEPENDS+=	tex-appendix-[0-9]*:../../print/tex-appendix
+DEPENDS+=	tex-bookmark-[0-9]*:../../print/tex-bookmark
 DEPENDS+=	tex-changebar-[0-9]*:../../print/tex-changebar
 DEPENDS+=	tex-fancybox-[0-9]*:../../print/tex-fancybox
 DEPENDS+=	tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
