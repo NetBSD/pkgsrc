@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2804 2020/05/08 13:03:48 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2805 2020/05/08 13:20:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4317,3 +4317,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/youtube-dl to 20200508 [leot 2020-05-08]
 	Updated www/p5-Catalyst-Runtime to 5.90126 [wen 2020-05-08]
 	Updated audio/faad2 to 2.9.2 [nia 2020-05-08]
+	Updated audio/amsynth to 1.10.0 [nia 2020-05-08]
