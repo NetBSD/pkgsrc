@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/11 10:56:54 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/08 13:15:27 nia Exp $
 bin/amsynth
 lib/lv2/amsynth.lv2/BriansBank01.amSynth.bank.ttl
 lib/lv2/amsynth.lv2/BriansBank02.amSynth.bank.ttl
@@ -20,6 +20,8 @@ lib/lv2/amsynth.lv2/BriansBank17.amSynth.bank.ttl
 lib/lv2/amsynth.lv2/BriansBank18.amSynth.bank.ttl
 lib/lv2/amsynth.lv2/BriansBank19.amSynth.bank.ttl
 lib/lv2/amsynth.lv2/BriansBank20.amSynth.bank.ttl
+lib/lv2/amsynth.lv2/BriansBank21.amSynth.bank.ttl
+lib/lv2/amsynth.lv2/BriansBank22.amSynth.bank.ttl
 lib/lv2/amsynth.lv2/amsynth.ttl
 lib/lv2/amsynth.lv2/amsynth_factory.bank.ttl
 lib/lv2/amsynth.lv2/amsynth_lv2.so
@@ -46,6 +48,8 @@ share/amsynth/banks/BriansBank17.amSynth.bank
 share/amsynth/banks/BriansBank18.amSynth.bank
 share/amsynth/banks/BriansBank19.amSynth.bank
 share/amsynth/banks/BriansBank20.amSynth.bank
+share/amsynth/banks/BriansBank21.amSynth.bank
+share/amsynth/banks/BriansBank22.amSynth.bank
 share/amsynth/banks/amsynth_factory.bank
 share/amsynth/rc
 share/amsynth/skins/default/background.png
