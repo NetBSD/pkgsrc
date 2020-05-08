@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2799 2020/05/08 07:32:47 wen Exp $
+$NetBSD: CHANGES-2020,v 1.2800 2020/05/08 09:16:26 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4312,3 +4312,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-Dancer2 to 0.300003 [wen 2020-05-08]
 	Updated www/p5-CGI to 0.47 [wen 2020-05-08]
 	Updated www/p5-CGI-Compile to 0.24 [wen 2020-05-08]
+	Added net/dbip-asn-lite version 2020.05 [fcambus 2020-05-08]
