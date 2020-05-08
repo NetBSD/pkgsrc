@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.7 2020/05/01 11:11:11 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2020Q1,v 1.1.2.8 2020/05/08 19:20:33 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2020Q1 branch:
 
@@ -88,4 +88,16 @@ multimedia/ffmpeg2: security fix
 
 Pullup ticket #6179 - requested by taca
 www/squid4: security fix
+
+Pullup ticket #6181 - requested by leot
+devel/git-base: security fix
+
+Pullup ticket #6182 - requested by taca
+mail/roundcube-plugin-password: bugfix
+
+Pullup ticket #6183 - requested by taca
+www/drupal8: security fix
+
+Pullup ticket #6185 - requested by taca
+mail/roundcube: security fix
 
