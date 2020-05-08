@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2802 2020/05/08 11:21:25 leot Exp $
+$NetBSD: CHANGES-2020,v 1.2803 2020/05/08 12:37:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4315,3 +4315,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added net/dbip-asn-lite version 2020.05 [fcambus 2020-05-08]
 	Added net/statzone version 1.0.1 [fcambus 2020-05-08]
 	Updated net/youtube-dl to 20200508 [leot 2020-05-08]
+	Updated www/p5-Catalyst-Runtime to 5.90126 [wen 2020-05-08]
