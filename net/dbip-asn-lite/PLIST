@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/08 09:14:14 fcambus Exp $
+share/dbip/dbip-asn-lite.mmdb
