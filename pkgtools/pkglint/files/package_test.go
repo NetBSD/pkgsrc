@@ -143,7 +143,7 @@ func (s *Suite) Test_Package__using_common_Makefile_overriding_DISTINFO_FILE(c *
 	t.CreateFileLines("security/pinentry-fltk/distinfo",
 		CvsID,
 		"",
-		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
+		"SHA1 (patch-aa) = 9a93207561abfef7e7550598c5a08f2c3226995b")
 	t.FinishSetUp()
 
 	G.Check(t.File("security/pinentry"))
@@ -1531,7 +1531,7 @@ func (s *Suite) Test_Package_checkfilePackageMakefile__META_PACKAGE_with_patch(c
 	t.CreateFileLines("category/package/distinfo",
 		CvsID,
 		"",
-		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
+		"SHA1 (patch-aa) = 9a93207561abfef7e7550598c5a08f2c3226995b")
 
 	t.FinishSetUp()
 
@@ -3105,7 +3105,7 @@ func (s *Suite) Test_Package_checkOwnerMaintainer__directory(c *check.C) {
 	t.CreateFileLines("category/package/distinfo",
 		CvsID,
 		"",
-		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
+		"SHA1 (patch-aa) = 9a93207561abfef7e7550598c5a08f2c3226995b")
 	t.FinishSetUp()
 
 	G.Check(pkg)
