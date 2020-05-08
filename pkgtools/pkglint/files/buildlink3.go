@@ -330,8 +330,6 @@ type Buildlink3Data struct {
 type Buildlink3ID string
 
 func LoadBuildlink3Data(mklines *MkLines) *Buildlink3Data {
-	assert(mklines.lines.BaseName == "buildlink3.mk")
-
 	var data Buildlink3Data
 	mklines.ForEach(func(mkline *MkLine) {
 		if mkline.IsVarassign() {

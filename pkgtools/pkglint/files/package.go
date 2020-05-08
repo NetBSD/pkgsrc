@@ -8,7 +8,8 @@ import (
 )
 
 // TODO: What about package names that refer to other variables?
-const rePkgname = `^([\w\-.+]+)-(\d[.0-9A-Z_a-z]*)$`
+// TODO: Allow a hyphen in the middle of a version number.
+const rePkgname = `^([\w\-.+]+)-([0-9][.0-9A-Z_a-z]*)$`
 
 // Package is the pkgsrc package that is currently checked.
 //

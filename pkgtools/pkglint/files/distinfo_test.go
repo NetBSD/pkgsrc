@@ -113,7 +113,7 @@ func (s *Suite) Test_distinfoLinesChecker_check__distinfo_and_patches_in_separat
 
 	t.CheckOutputLines(
 		"ERROR: ../../other/common/distinfo:3: SHA1 hash of patches/patch-aa differs "+
-			"(distinfo has ..., patch file has ebbf34b0641bcb508f17d5a27f2bf2a536d810ac).",
+			"(distinfo has ..., patch file has 9a93207561abfef7e7550598c5a08f2c3226995b).",
 		"WARN: ../../other/common/distinfo:4: Patch file \"patch-only-in-distinfo\" "+
 			"does not exist in directory \"patches\".",
 		"ERROR: ../../other/common/distinfo: Patch \"patches/patch-only-in-patches\" "+
@@ -176,7 +176,7 @@ func (s *Suite) Test_distinfoLinesChecker_check__missing_php_patches(c *check.C)
 	t.CreateFileLines("lang/php72/distinfo",
 		CvsID,
 		"",
-		"SHA1 (patch-php72) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
+		"SHA1 (patch-php72) = 9bd4352244636c587db21abfbb99bb34ded1e333")
 
 	t.CreateFileLines("archivers/php-bz2/Makefile",
 		MkCvsID,
@@ -324,7 +324,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__wrong_patch_algorithm
 		"ERROR: distinfo:3: Expected SHA1 hash for patch-aa, got MD5, SHA1.",
 		"ERROR: distinfo:4: SHA1 hash of patches/patch-aa differs "+
 			"(distinfo has 1234567890123456789012345678901234567890, "+
-			"patch file has ebbf34b0641bcb508f17d5a27f2bf2a536d810ac).")
+			"patch file has 9a93207561abfef7e7550598c5a08f2c3226995b).")
 }
 
 func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__missing_patch_with_distfile_checksums(c *check.C) {
@@ -375,7 +375,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__existing_patch_with_d
 			"Expected SHA1 hash for patch-aa, got SHA1, RMD160, SHA512, Size.",
 		"ERROR: ~/category/package/distinfo:3: "+
 			"SHA1 hash of patches/patch-aa differs (distinfo has ..., "+
-			"patch file has ebbf34b0641bcb508f17d5a27f2bf2a536d810ac).")
+			"patch file has 9a93207561abfef7e7550598c5a08f2c3226995b).")
 }
 
 func (s *Suite) Test_distinfoLinesChecker_checkAlgorithms__missing_patch_with_wrong_algorithms(c *check.C) {
@@ -775,7 +775,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkUncommittedPatch__bad(c *check.C)
 	t.SetUpFileLines("distinfo",
 		CvsID,
 		"",
-		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
+		"SHA1 (patch-aa) = 9a93207561abfef7e7550598c5a08f2c3226995b")
 	t.FinishSetUp()
 
 	G.checkdirPackage(".")
@@ -797,7 +797,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkUncommittedPatch__good(c *check.C
 	t.SetUpFileLines("distinfo",
 		CvsID,
 		"",
-		"SHA1 (patch-aa) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
+		"SHA1 (patch-aa) = 9a93207561abfef7e7550598c5a08f2c3226995b")
 	t.FinishSetUp()
 
 	G.checkdirPackage(".")
@@ -830,7 +830,7 @@ func (s *Suite) Test_distinfoLinesChecker_checkPatchSha1__relative_path_in_disti
 
 	t.CheckOutputLines(
 		"ERROR: ../../other/common/distinfo:3: SHA1 hash of ../../devel/patches/patches/patch-aa differs "+
-			"(distinfo has ..., patch file has ebbf34b0641bcb508f17d5a27f2bf2a536d810ac).",
+			"(distinfo has ..., patch file has 9a93207561abfef7e7550598c5a08f2c3226995b).",
 		"WARN: ../../other/common/distinfo:4: Patch file \"patch-only-in-distinfo\" "+
 			"does not exist in directory \"../../devel/patches/patches\".",
 		"ERROR: ../../other/common/distinfo: Patch \"../../devel/patches/patches/patch-only-in-patches\" "+

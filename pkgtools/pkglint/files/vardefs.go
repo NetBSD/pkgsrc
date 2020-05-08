@@ -287,7 +287,7 @@ func (reg *VarTypeRegistry) compilerLanguages(src *Pkgsrc) *BasicType {
 				}
 			}
 
-			if mkline.IsDirective() && mkline.HasCond() && mkline.Cond() != nil {
+			if mkline.IsDirective() && mkline.NeedsCond() && mkline.Cond() != nil {
 				mkline.Cond().Walk(&MkCondCallback{
 					VarUse: func(varuse *MkVarUse) {
 						if varuse.varname == "USE_LANGUAGES" && len(varuse.modifiers) == 1 {
