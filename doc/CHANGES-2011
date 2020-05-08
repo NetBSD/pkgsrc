@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2011,v 1.3395 2015/08/03 12:26:06 wiz Exp $
+$NetBSD: CHANGES-2011,v 1.3396 2020/05/08 18:10:04 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2011:
 
@@ -150,7 +150,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated fonts/tex-courier to 2010.21101 [minskim 2011-01-18]
 	Updated graphics/shotwell to 0.8.1 [gls 2011-01-18]
 	Updated audio/cmus to 2.3.3 [gls 2011-01-18]
-	Updated multimedia/mplayer to mplayer-1.0rc20100913nb3 [jmcneill 2011-01-18]
+	Updated multimedia/mplayer to 1.0rc20100913nb3 [jmcneill 2011-01-18]
 	Updated print/cups to 1.4.6nb1 [sbd 2011-01-19]
 	Updated pkgtools/x11-links to 0.62 [jmcneill 2011-01-18]
 	Added multimedia/libva version 1.0.6 [jmcneill 2011-01-18]
@@ -623,8 +623,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Added print/tex-chessfss-doc version 1.2a [wiz 2011-02-15]
 	Added print/tex-skak version 1.5 [wiz 2011-02-15]
 	Added print/tex-skak-doc version 1.5 [wiz 2011-02-15]
-	Added print/tex-chessfss version 1.2a [wiz 2011-02-15]
-	Added print/tex-chessfss-doc version 1.2a [wiz 2011-02-15]
 	Added print/tex-texmate version 2 [wiz 2011-02-15]
 	Added print/tex-texmate-doc version 2 [wiz 2011-02-15]
 	Updated graphics/gegl to 0.1.6 [adam 2011-02-15]
@@ -741,7 +739,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/typo3 to 4.5.1 [taca 2011-02-24]
 	Updated sysutils/fabric to 0.9.4 [gls 2011-02-24]
 	Updated textproc/asciidoc to 8.6.4 [gls 2011-02-24]
-	Updated multimedia/farsight2 to 0.0.25 [wiz 2011-02-24]
 	Added textproc/ruby-escape version 0.2 [obache 2011-02-25]
 	Added www/ruby-httpclient version 2.1.6.1 [obache 2011-02-25]
 	Added devel/ruby-memoize version 1.3.1 [obache 2011-02-25]
@@ -2237,7 +2234,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated www/mono-xsp to 2.10.2 [kefren 2011-06-10]
 	Updated devel/automake14 to 1.4.6nb1 [tron 2011-06-10]
 	Updated www/nginx to 1.0.4 [joerg 2011-06-10]
-	Updated databases/sqlite3 to 3.7.6.3 [tron 2011-06-10]
 	Updated databases/ruby-arel to 2.0.10 [taca 2011-06-11]
 	Updated misc/ruby-bundler to 1.0.15 [taca 2011-06-11]
 	Updated www/ruby-rack to 1.2.3 [taca 2011-06-11]
@@ -2669,7 +2665,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated math/ruby-spreadsheet to 0.6.5.7 [obache 2011-07-20]
 	Updated net/wireshark to 1.6.1 [tron 2011-07-20]
 	Updated converters/qrencode to 3.1.1 [ryoon 2011-07-20]
-	Updated lang/ruby18-base to 1.8.7.334nb4 [taca 2011-07-21]
 	Updated graphics/radiance to 3.6.1nb7 [dholland 2011-07-21]
 	Updated devel/ruby-rdoc to 3.8 [taca 2011-07-22]
 	Updated devel/ruby-railties to 3.0.9nb1 [taca 2011-07-22]
@@ -3053,7 +3048,6 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated sysutils/capistrano to 2.8.0nb1 [taca 2011-08-12]
 	Updated sysutils/ruby-facter to 1.6.0 [taca 2011-08-12]
 	Updated textproc/ruby-feed-normalizer to 1.5.2nb1 [taca 2011-08-12]
-	Updated textproc/ruby-json to 1.5.3 [taca 2011-08-12]
 	Updated textproc/ruby-json to 1.5.3 [taca 2011-08-12]
 	Updated textproc/ruby-libxml to 2.2.0 [taca 2011-08-12]
 	Updated textproc/ruby-stringex to 1.3.0 [taca 2011-08-12]
@@ -3444,7 +3438,7 @@ Changes to the packages collection and infrastructure in 2011:
 	Updated pkgtools/x11-links to 0.67 [abs 2011-09-09]
 	Updated mail/cyrus-imapd24 to 2.4.11 [obache 2011-09-09]
 	Updated math/genius to 1.0.14 [drochner 2011-09-09]
-	Updated math/gnumeric110 to 0.10.17 [drochner 2011-09-09]
+	Updated math/gnumeric110 to 1.10.17 [drochner 2011-09-09]
 	Updated misc/goffice0.8 to 0.8.17 [drochner 2011-09-09]
 	Updated net/tor to 0.2.2.32 [drochner 2011-09-09]
 	Updated x11/gtk2 to 2.24.6 [drochner 2011-09-09]
