@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2796 2020/05/07 20:45:49 leot Exp $
+$NetBSD: CHANGES-2020,v 1.2797 2020/05/08 01:04:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4309,3 +4309,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated games/lgogdownloader to 3.7 [wiz 2020-05-07]
 	Updated print/mupdf to 1.17.0 [leot 2020-05-07]
 	Updated print/zathura-pdf-mupdf to 0.3.5nb7 [leot 2020-05-07]
+	Updated www/p5-Dancer2 to 0.300003 [wen 2020-05-08]
