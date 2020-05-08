@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2020/04/25 18:16:42 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/08 11:00:08 plunky Exp $
 
 DISTNAME=	mono-6.8.0.105
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.xz
@@ -25,7 +25,6 @@ USE_LANGUAGES+=	c c99 c++
 EXTRACT_USING=	gtar
 
 GNU_CONFIGURE=		yes
-PKG_SYSCONFSUBDIR=	mono
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-btls
 CONFIGURE_ARGS+=	--disable-btls-lib
@@ -68,47 +67,47 @@ REPLACE_BASH+=	mcs/mkinstalldirs mkinstalldirs
 EGDIR=		${PREFIX}/share/examples/mono
 
 CONF_FILES+=	${EGDIR}/2.0/Browsers/Compat.browser \
-		${PKG_SYSCONFDIR}/2.0/Browsers/Compat.browser
+		${PKG_SYSCONFDIR}/mono/2.0/Browsers/Compat.browser
 CONF_FILES+=	${EGDIR}/2.0/DefaultWsdlHelpGenerator.aspx \
-		${PKG_SYSCONFDIR}/2.0/DefaultWsdlHelpGenerator.aspx
+		${PKG_SYSCONFDIR}/mono/2.0/DefaultWsdlHelpGenerator.aspx
 CONF_FILES+=	${EGDIR}/2.0/machine.config \
-		${PKG_SYSCONFDIR}/2.0/machine.config
+		${PKG_SYSCONFDIR}/mono/2.0/machine.config
 CONF_FILES+=	${EGDIR}/2.0/settings.map \
-		${PKG_SYSCONFDIR}/2.0/settings.map
+		${PKG_SYSCONFDIR}/mono/2.0/settings.map
 CONF_FILES+=	${EGDIR}/2.0/web.config \
-		${PKG_SYSCONFDIR}/2.0/web.config
+		${PKG_SYSCONFDIR}/mono/2.0/web.config
 CONF_FILES+=	${EGDIR}/4.0/Browsers/Compat.browser \
-		${PKG_SYSCONFDIR}/4.0/Browsers/Compat.browser
+		${PKG_SYSCONFDIR}/mono/4.0/Browsers/Compat.browser
 CONF_FILES+=	${EGDIR}/4.0/DefaultWsdlHelpGenerator.aspx \
-		${PKG_SYSCONFDIR}/4.0/DefaultWsdlHelpGenerator.aspx
+		${PKG_SYSCONFDIR}/mono/4.0/DefaultWsdlHelpGenerator.aspx
 CONF_FILES+=	${EGDIR}/4.0/machine.config \
-		${PKG_SYSCONFDIR}/4.0/machine.config
+		${PKG_SYSCONFDIR}/mono/4.0/machine.config
 CONF_FILES+=	${EGDIR}/4.0/settings.map \
-		${PKG_SYSCONFDIR}/4.0/settings.map
+		${PKG_SYSCONFDIR}/mono/4.0/settings.map
 CONF_FILES+=	${EGDIR}/4.0/web.config \
-		${PKG_SYSCONFDIR}/4.0/web.config
+		${PKG_SYSCONFDIR}/mono/4.0/web.config
 CONF_FILES+=	${EGDIR}/4.5/Browsers/Compat.browser \
-		${PKG_SYSCONFDIR}/4.5/Browsers/Compat.browser
+		${PKG_SYSCONFDIR}/mono/4.5/Browsers/Compat.browser
 CONF_FILES+=	${EGDIR}/4.5/DefaultWsdlHelpGenerator.aspx \
-		${PKG_SYSCONFDIR}/4.5/DefaultWsdlHelpGenerator.aspx
+		${PKG_SYSCONFDIR}/mono/4.5/DefaultWsdlHelpGenerator.aspx
 CONF_FILES+=	${EGDIR}/4.5/machine.config \
-		${PKG_SYSCONFDIR}/4.5/machine.config
+		${PKG_SYSCONFDIR}/mono/4.5/machine.config
 CONF_FILES+=	${EGDIR}/4.5/settings.map \
-		${PKG_SYSCONFDIR}/4.5/settings.map
+		${PKG_SYSCONFDIR}/mono/4.5/settings.map
 CONF_FILES+=	${EGDIR}/4.5/web.config \
-		${PKG_SYSCONFDIR}/4.5/web.config
+		${PKG_SYSCONFDIR}/mono/4.5/web.config
 CONF_FILES+=	${EGDIR}/browscap.ini \
-		${PKG_SYSCONFDIR}/browscap.ini
+		${PKG_SYSCONFDIR}/mono/browscap.ini
 CONF_FILES+=	${EGDIR}/config \
-		${PKG_SYSCONFDIR}/config
+		${PKG_SYSCONFDIR}/mono/config
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/2.0
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/2.0/Browsers
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/4.0
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/4.0/Browsers
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/4.5
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/4.5/Browsers
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/mconfig
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0/Browsers
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.0
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.0/Browsers
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.5
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.5/Browsers
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/mconfig
 
 TEST_TARGET=	check
 
