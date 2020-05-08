@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/04/18 07:50:18 adam Exp $
+# $NetBSD: Makefile,v 1.53 2020/05/08 14:10:09 rillig Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -66,7 +66,6 @@ REPLACE_PYTHON+=	utils/*.py
 REPLACE_PYTHON+=	utils/Misc/zkill
 REPLACE_PYTHON+=	utils/bisect
 REPLACE_PYTHON+=	utils/clang-parse-diagnostics-file
-REPLACE_PYTHON+=	utils/git/find-rev
 REPLACE_PYTHON+=	utils/lit/tests/Inputs/googletest-format/DummySubDir/OneTest.py
 REPLACE_PYTHON+=	utils/llvm-build/llvm-build
 REPLACE_PYTHON+=	utils/llvm-compilers-check
