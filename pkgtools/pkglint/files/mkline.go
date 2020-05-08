@@ -293,14 +293,15 @@ func (mkline *MkLine) Args() string { return mkline.data.(*mkLineDirective).args
 func (mkline *MkLine) Cond() *MkCond {
 	cond := mkline.data.(*mkLineDirective).cond
 	if cond == nil {
-		assert(mkline.HasCond())
+		assert(mkline.NeedsCond())
 		cond = NewMkParser(mkline.Line, mkline.Args()).MkCond()
 		mkline.data.(*mkLineDirective).cond = cond
 	}
 	return cond
 }
 
-func (mkline *MkLine) HasCond() bool {
+// NeedsCond returns whether the directive requires a condition as argument.
+func (mkline *MkLine) NeedsCond() bool {
 	directive := mkline.Directive()
 	return directive == "if" || directive == "elif"
 }
