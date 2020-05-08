@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1328 2020/05/08 09:15:12 fcambus Exp $
+# $NetBSD: Makefile,v 1.1329 2020/05/08 09:33:30 fcambus Exp $
 #
 
 COMMENT=	Networking tools
@@ -854,6 +854,7 @@ SUBDIR+=	sslh
 SUBDIR+=	ssmping
 SUBDIR+=	ssync
 SUBDIR+=	stagit-gopher
+SUBDIR+=	statzone
 SUBDIR+=	stund
 SUBDIR+=	sup
 SUBDIR+=	syncffsd
