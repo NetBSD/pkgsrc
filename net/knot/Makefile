@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2020/03/30 12:42:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2020/05/08 16:25:04 rillig Exp $
 
 DISTNAME=	knot-2.9.3
 CATEGORIES=	net
@@ -34,8 +34,6 @@ CFLAGS +=	-march=i586
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bison flex gmake pkg-config
-
-REPLACE_PYTHON=		src/utils/pykeymgr/pykeymgr.in
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
