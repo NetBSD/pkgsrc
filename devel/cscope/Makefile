@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2020/01/26 05:26:22 rillig Exp $
+# $NetBSD: Makefile,v 1.61 2020/05/08 16:20:38 rillig Exp $
 
 DISTNAME=	cscope-15.8a
 PKGREVISION=	2
@@ -13,7 +13,6 @@ LICENSE=	original-bsd
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		byacc lex:run
 
-CONFIGURE_ARGS+=	--with-flex --with-yacc
 INSTALLATION_DIRS+=	share/emacs/site-lisp
 
 SUBST_CLASSES+=		path
