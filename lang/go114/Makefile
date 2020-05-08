@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/01 14:09:15 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/08 00:49:59 maya Exp $
 
 .include "../../lang/go/version.mk"
 .include "../../lang/go/bootstrap.mk"
@@ -82,7 +82,13 @@ post-extract:
 	${RM} -r -f ${WRKSRC}/test/fixedbugs/issue27836*
 
 do-build:
-	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} ${GOOPT} ${BASH} ./make.bash
+	cd ${WRKSRC}/src && \
+		env \
+		GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} \
+		GOROOT_FINAL=${GOROOT_FINAL:Q} \
+		${GOOPT} \
+		GOCACHE=${WRKDIR}/.cache/go-build \
+		${BASH} ./make.bash
 # for RELRO build:
 #	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} GO_LDFLAGS="-buildmode=pie" ${GOOPT} ${BASH} ./make.bash
 
