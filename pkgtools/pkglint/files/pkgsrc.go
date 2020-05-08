@@ -1,6 +1,7 @@
 package pkglint
 
 import (
+	"netbsd.org/pkglint/pkgver"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/textproc"
 	"os"
@@ -189,6 +190,8 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename CurrPath) []*Change {
 		year = yyyy
 	}
 
+	latest := make(map[PkgsrcPath]*Change)
+
 	infra := false
 	lines := Load(filename, MustSucceed|NotEmpty)
 	var changes []*Change
@@ -225,32 +228,85 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename CurrPath) []*Change {
 			continue
 		}
 
-		if year != "" && change.Date[0:4] != year {
-			line.Warnf("Year %q for %s does not match the filename %s.",
-				change.Date[0:4], change.Pkgpath.String(), line.Rel(filename))
-		}
-
-		if len(changes) >= 2 && year != "" {
-			if prev := changes[len(changes)-2]; change.Date < prev.Date {
-				line.Warnf("Date %q for %s is earlier than %q in %s.",
-					change.Date, change.Pkgpath.String(), prev.Date, line.RelLocation(prev.Location))
-				line.Explain(
-					"The entries in doc/CHANGES should be in chronological order, and",
-					"all dates are assumed to be in the UTC timezone, to prevent time",
-					"warps.",
-					"",
-					"To fix this, determine which of the involved dates are correct",
-					"and which aren't.",
-					"",
-					"To prevent this kind of mistakes in the future,",
-					"make sure that your system time is correct and run",
-					sprintf("%q", bmake("cce")),
-					"to commit the changes entry.")
-			}
-		}
+		src.checkChangeVersion(change, latest, line)
+		src.checkChangeDate(filename, year, change, line, changes)
 	}
 
 	return changes
+}
+
+func (src *Pkgsrc) checkChangeVersion(change *Change, latest map[PkgsrcPath]*Change, line *Line) {
+	switch change.Action {
+
+	case Added:
+		src.checkChangeVersionNumber(change, line)
+		existing := latest[change.Pkgpath]
+		if existing != nil && existing.Version() == change.Version() {
+			line.Warnf("Package %q was already added in %s.",
+				change.Pkgpath.String(), line.RelLocation(existing.Location))
+		}
+		latest[change.Pkgpath] = change
+
+	case Updated:
+		src.checkChangeVersionNumber(change, line)
+		existing := latest[change.Pkgpath]
+		if existing != nil && pkgver.Compare(change.Version(), existing.Version()) <= 0 {
+			line.Warnf("Updating %q from %s in %s to %s should increase the version number.",
+				change.Pkgpath.String(), existing.Version(), line.RelLocation(existing.Location), change.Version())
+		}
+		latest[change.Pkgpath] = change
+
+	case Downgraded:
+		src.checkChangeVersionNumber(change, line)
+		existing := latest[change.Pkgpath]
+		if existing != nil && pkgver.Compare(change.Version(), existing.Version()) >= 0 {
+			line.Warnf("Downgrading %q from %s in %s to %s should decrease the version number.",
+				change.Pkgpath.String(), existing.Version(), line.RelLocation(existing.Location), change.Version())
+		}
+		latest[change.Pkgpath] = change
+
+	case Renamed, Moved, Removed:
+		latest[change.Pkgpath] = nil
+	}
+}
+
+func (src *Pkgsrc) checkChangeVersionNumber(change *Change, line *Line) {
+	version := change.Version()
+
+	switch {
+	case !textproc.NewLexer(version).TestByteSet(textproc.Digit):
+		line.Warnf("Version number %q should start with a digit.", version)
+
+	// See rePkgname for the regular expression.
+	case !matches(version, `^([0-9][.\-0-9A-Z_a-z]*)$`):
+		line.Warnf("Malformed version number %q.", version)
+	}
+}
+
+func (src *Pkgsrc) checkChangeDate(filename CurrPath, year string, change *Change, line *Line, changes []*Change) {
+	if year != "" && change.Date[0:4] != year {
+		line.Warnf("Year %q for %s does not match the filename %s.",
+			change.Date[0:4], change.Pkgpath.String(), line.Rel(filename))
+	}
+
+	if len(changes) >= 2 && year != "" {
+		if prev := changes[len(changes)-2]; change.Date < prev.Date {
+			line.Warnf("Date %q for %s is earlier than %q in %s.",
+				change.Date, change.Pkgpath.String(), prev.Date, line.RelLocation(prev.Location))
+			line.Explain(
+				"The entries in doc/CHANGES should be in chronological order, and",
+				"all dates are assumed to be in the UTC timezone, to prevent time",
+				"warps.",
+				"",
+				"To fix this, determine which of the involved dates are correct",
+				"and which aren't.",
+				"",
+				"To prevent this kind of mistakes in the future,",
+				"make sure that your system time is correct and run",
+				sprintf("%q", bmake("cce")),
+				"to commit the changes entry.")
+		}
+	}
 }
 
 func (*Pkgsrc) parseDocChange(line *Line, warn bool) *Change {

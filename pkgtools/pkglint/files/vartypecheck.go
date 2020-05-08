@@ -373,7 +373,11 @@ func (cv *VartypeCheck) DependencyPattern() {
 			"must be omitted, so the full package name becomes \"foo2.0-2.1.x\".")
 	}
 
-	checkBuildlinkApiDepends := func() {
+	checkDepends := func(
+		prefix string,
+		depends func(data *Buildlink3Data) *DependencyPattern,
+		dependsLine func(data *Buildlink3Data) *MkLine,
+	) {
 		if deppat.LowerOp == "" {
 			return
 		}
@@ -381,7 +385,7 @@ func (cv *VartypeCheck) DependencyPattern() {
 		if pkg == nil {
 			return
 		}
-		if !hasPrefix(cv.Varname, "BUILDLINK_API_DEPENDS.") {
+		if !hasPrefix(cv.Varname, prefix) {
 			return
 		}
 		bl3id := Buildlink3ID(varnameParam(cv.Varname))
@@ -389,42 +393,25 @@ func (cv *VartypeCheck) DependencyPattern() {
 		if data == nil {
 			return
 		}
-		if data.apiDepends.LowerOp != deppat.LowerOp {
+		defpat := depends(data)
+		if defpat.LowerOp != deppat.LowerOp {
 			return
 		}
-		if pkgver.Compare(deppat.Lower, data.apiDepends.Lower) < 0 {
+		if pkgver.Compare(deppat.Lower, defpat.Lower) < 0 {
 			cv.Warnf("Version %s is smaller than the default version %s from %s.",
-				deppat.Lower, data.apiDepends.Lower, cv.MkLine.RelMkLine(data.apiDependsLine))
+				deppat.Lower, defpat.Lower, cv.MkLine.RelMkLine(dependsLine(data)))
 		}
 	}
 
-	checkBuildlinkAbiDepends := func() {
-		if deppat.LowerOp == "" {
-			return
-		}
-		pkg := cv.MkLines.pkg
-		if pkg == nil {
-			return
-		}
-		if !hasPrefix(cv.Varname, "BUILDLINK_ABI_DEPENDS.") {
-			return
-		}
-		bl3id := Buildlink3ID(varnameParam(cv.Varname))
-		data := pkg.bl3Data[bl3id]
-		if data == nil {
-			return
-		}
-		if data.abiDepends.LowerOp != deppat.LowerOp {
-			return
-		}
-		if pkgver.Compare(deppat.Lower, data.abiDepends.Lower) < 0 {
-			cv.Warnf("Version %s is smaller than the default version %s from %s.",
-				deppat.Lower, data.abiDepends.Lower, cv.MkLine.RelMkLine(data.abiDependsLine))
-		}
-	}
-
-	checkBuildlinkApiDepends()
-	checkBuildlinkAbiDepends()
+	checkDepends(
+		"BUILDLINK_API_DEPENDS.",
+		func(data *Buildlink3Data) *DependencyPattern { return data.apiDepends },
+		func(data *Buildlink3Data) *MkLine { return data.apiDependsLine },
+	)
+	checkDepends(
+		"BUILDLINK_ABI_DEPENDS.",
+		func(data *Buildlink3Data) *DependencyPattern { return data.abiDepends },
+		func(data *Buildlink3Data) *MkLine { return data.abiDependsLine })
 }
 
 func (cv *VartypeCheck) DependencyWithPath() {
