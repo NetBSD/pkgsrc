@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2020/04/06 20:24:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2020/05/08 13:37:26 adam Exp $
 bin/npm
 bin/npx
 lib/node_modules/npm/.licensee.json
@@ -2577,16 +2577,12 @@ lib/node_modules/npm/node_modules/node-gyp/test/test-find-visualstudio.js
 lib/node_modules/npm/node_modules/node-gyp/test/test-install.js
 lib/node_modules/npm/node_modules/node-gyp/test/test-options.js
 lib/node_modules/npm/node_modules/node-gyp/test/test-process-release.js
-lib/node_modules/npm/node_modules/nopt/.npmignore
-lib/node_modules/npm/node_modules/nopt/.travis.yml
 lib/node_modules/npm/node_modules/nopt/CHANGELOG.md
 lib/node_modules/npm/node_modules/nopt/LICENSE
 lib/node_modules/npm/node_modules/nopt/README.md
 lib/node_modules/npm/node_modules/nopt/bin/nopt.js
-lib/node_modules/npm/node_modules/nopt/examples/my-program.js
 lib/node_modules/npm/node_modules/nopt/lib/nopt.js
 lib/node_modules/npm/node_modules/nopt/package.json
-lib/node_modules/npm/node_modules/nopt/test/basic.js
 lib/node_modules/npm/node_modules/normalize-package-data/AUTHORS
 lib/node_modules/npm/node_modules/normalize-package-data/LICENSE
 lib/node_modules/npm/node_modules/normalize-package-data/README.md
