@@ -215,8 +215,8 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"removed lines. The hunk headers says that one line is to be",
 		"removed, but in fact, there is no deletion line below it.",
 		"",
-		"--- a/checkperms.c",
-		"+++ b/checkperms.c",
+		"--- checkperms.c",
+		"+++ checkperms.c",
 		"@@ -1,1 +1,3 @@", // at line 1, delete 1 line; at line 1, add 3 lines
 		"+// Header 1",
 		"+// Header 2",
@@ -243,7 +243,7 @@ func (s *Suite) Test_Pkglint_Main__complete_package(c *check.C) {
 		"ERROR: ~/sysutils/checkperms/Makefile:4: Invalid category \"tools\".",
 		"ERROR: ~/sysutils/checkperms/TODO: Packages in main pkgsrc must not have a TODO file.",
 		"ERROR: ~/sysutils/checkperms/distinfo:7: SHA1 hash of patches/patch-checkperms.c differs "+
-			"(distinfo has asdfasdf, patch file has e775969de639ec703866c0336c4c8e0fdd96309c).",
+			"(distinfo has asdfasdf, patch file has bcfb79696cb6bf4d2222a6d78a530e11bf1c0cea).",
 		"WARN: ~/sysutils/checkperms/patches/patch-checkperms.c:12: Premature end of patch hunk "+
 			"(expected 1 lines to be deleted and 0 lines to be added).",
 		"3 errors, 2 warnings and 1 note found.",
@@ -1069,7 +1069,7 @@ func (s *Suite) Test_Pkglint_checkReg__readme_and_todo(c *check.C) {
 	t.CreateFileLines("category/package/distinfo",
 		CvsID,
 		"",
-		"SHA1 (patch-README) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
+		"SHA1 (patch-README) = 87686be2a11c9d610ff09e029db92efddd96e4f9")
 
 	// Copy category/package/** to wip/package.
 	// TODO: Extract into Tester.CopyAll.
@@ -1204,7 +1204,7 @@ func (s *Suite) Test_Pkglint_checkRegCvsSubst__full_package(c *check.C) {
 	t.CreateFileLines("distinfo",
 		CvsID,
 		"",
-		"SHA1 (patch-any) = ebbf34b0641bcb508f17d5a27f2bf2a536d810ac")
+		"SHA1 (patch-any) = c3bc5923e225e5eafb8bb1f55e2142317c19800c")
 	t.CreateFileLines("CVS/Entries",
 		"/Makefile/1.1/modified/-ko/")
 	t.CreateFileLines("patches/CVS/Entries",
