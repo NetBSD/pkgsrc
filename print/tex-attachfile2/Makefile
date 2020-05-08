@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/03 05:30:34 markd Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/08 01:28:01 markd Exp $
 
 DISTNAME=	attachfile2
 PKGNAME=	tex-${DISTNAME}-2.11
@@ -29,6 +29,6 @@ INSTALLATION_DIRS+=	bin
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
-	${MV} ${WRKSRC}/scripts/oberdiek/pdfatfi.pl ${WRKSRC}/bin/pdfatfi
+	${MV} ${WRKSRC}/texmf-dist/scripts/attachfile2/pdfatfi.pl ${WRKSRC}/bin/pdfatfi
 
 .include "../../mk/bsd.pkg.mk"
