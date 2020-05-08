@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2020/04/12 15:21:44 nia Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/08 13:15:27 nia Exp $
 
-DISTNAME=	amsynth-1.9.0
+DISTNAME=	amsynth-1.10.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=amsynth/}
 GITHUB_PROJECT=	amsynth
 GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://amsynth.github.io/
