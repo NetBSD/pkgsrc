@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2020/04/12 08:28:04 adam Exp $
+# $NetBSD: Makefile,v 1.78 2020/05/08 05:04:18 rillig Exp $
 #
 
 DISTNAME=	yaz-4.1.6
@@ -21,7 +21,6 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		pkg-config tclsh
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.libiconv}
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-xml2=${BUILDLINK_PREFIX.libxml2}
 
 # backtrace and backtrace_symbols
