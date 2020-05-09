@@ -602,32 +602,6 @@ func (s *Suite) Test_ShellLineChecker__skip_ULIMIT_CMD(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_ShellLineChecker_checkConditionalCd(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpTool("ls", "", AtRunTime)
-	t.SetUpTool("printf", "", AtRunTime)
-	t.SetUpTool("wc", "", AtRunTime)
-	mklines := t.NewMkLines("Makefile",
-		MkCvsID,
-		"pre-configure:",
-		"\t${RUN} while cd ..; do printf .; done",
-		"\t${RUN} while cd .. && cd ..; do printf .; done", // Unusual, therefore no warning.
-		"\t${RUN} if cd ..; then printf .; fi",
-		"\t${RUN} ! cd ..",
-		"\t${RUN} if cd ..; printf 'ok\\n'; then printf .; fi",
-		"\t${RUN} if cd .. | wc -l; then printf .; fi",  // Unusual, therefore no warning.
-		"\t${RUN} if cd .. && cd ..; then printf .; fi") // Unusual, therefore no warning.
-
-	mklines.Check()
-
-	t.CheckOutputLines(
-		"ERROR: Makefile:3: The Solaris /bin/sh cannot handle \"cd\" inside conditionals.",
-		"ERROR: Makefile:5: The Solaris /bin/sh cannot handle \"cd\" inside conditionals.",
-		"WARN: Makefile:6: The Solaris /bin/sh does not support negation of shell commands.",
-		"WARN: Makefile:8: The exitcode of \"cd\" at the left of the | operator is ignored.")
-}
-
 func (s *Suite) Test_ShellLineChecker_checkSetE__simple_commands(c *check.C) {
 	t := s.Init(c)
 
@@ -721,15 +695,14 @@ func (s *Suite) Test_ShellLineChecker_canFail(c *check.C) {
 		nil...)
 
 	test("socklen=$$(expr 16)",
-		"WARN: Makefile:3: Invoking subshells via $(...) is not portable enough.",
 		"WARN: Makefile:3: Please switch to \"set -e\" mode before using a semicolon "+
 			"(after \"socklen=$$(expr 16)\") to separate commands.")
 
 	test("socklen=$$(expr 16 || true)",
-		"WARN: Makefile:3: Invoking subshells via $(...) is not portable enough.")
+		nil...)
 
 	test("socklen=$$(expr 16 || ${TRUE})",
-		"WARN: Makefile:3: Invoking subshells via $(...) is not portable enough.")
+		nil...)
 
 	test("${ECHO_MSG} \"Message\"",
 		nil...)
@@ -1257,8 +1230,10 @@ func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__subshell(c *check.C
 
 	ck.CheckShellCommandLine(ck.mkline.ShellCommand())
 
-	t.CheckOutputLines(
-		"WARN: filename.mk:1: Invoking subshells via $(...) is not portable enough.")
+	// Up to 2020-05-09, pkglint had warned that $(...) were not portable
+	// enough. The shell used in devel/bmake can handle these subshell
+	// command substitutions though.
+	t.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_ShellLineChecker_CheckShellCommandLine__install_dir(c *check.C) {
@@ -1363,39 +1338,6 @@ func (s *Suite) Test_ShellLineChecker_checkHiddenAndSuppress__no_tracing(c *chec
 
 	t.CheckOutputLines(
 		"WARN: Makefile:4: The shell command \"ls\" should not be hidden.")
-}
-
-func (s *Suite) Test_ShellLineChecker_CheckShellCommand__cd_inside_if(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpVartypes()
-	t.SetUpTool("echo", "ECHO", AtRunTime)
-	mklines := t.NewMkLines("Makefile",
-		MkCvsID,
-		"",
-		"\t${RUN} if cd /bin; then echo \"/bin exists.\"; fi")
-
-	mklines.Check()
-
-	t.CheckOutputLines(
-		"ERROR: Makefile:3: The Solaris /bin/sh cannot handle \"cd\" inside conditionals.")
-}
-
-func (s *Suite) Test_ShellLineChecker_CheckShellCommand__negated_pipe(c *check.C) {
-	t := s.Init(c)
-
-	t.SetUpVartypes()
-	t.SetUpTool("echo", "ECHO", AtRunTime)
-	t.SetUpTool("test", "TEST", AtRunTime)
-	mklines := t.NewMkLines("Makefile",
-		MkCvsID,
-		"",
-		"\t${RUN} if ! test -f /etc/passwd; then echo \"passwd is missing.\"; fi")
-
-	mklines.Check()
-
-	t.CheckOutputLines(
-		"WARN: Makefile:3: The Solaris /bin/sh does not support negation of shell commands.")
 }
 
 func (s *Suite) Test_ShellLineChecker_CheckShellCommand__subshell(c *check.C) {
@@ -1547,17 +1489,6 @@ func (s *Suite) Test_ShellLineChecker_CheckWord__dquot_dollar(c *check.C) {
 	t.CheckOutputEmpty()
 }
 
-func (s *Suite) Test_ShellLineChecker_CheckWord__dollar_subshell(c *check.C) {
-	t := s.Init(c)
-
-	ck := t.NewShellLineChecker("\t$$(echo output)")
-
-	ck.CheckWord(ck.mkline.ShellCommand(), false, RunTime)
-
-	t.CheckOutputLines(
-		"WARN: filename.mk:1: Invoking subshells via $(...) is not portable enough.")
-}
-
 func (s *Suite) Test_ShellLineChecker_CheckWord__PKGMANDIR(c *check.C) {
 	t := s.Init(c)
 
@@ -1633,7 +1564,7 @@ func (s *Suite) Test_ShellLineChecker_checkWordQuoting(c *check.C) {
 
 	test(
 		"$$(cat /bin/true)",
-		"WARN: module.mk:1: Invoking subshells via $(...) is not portable enough.")
+		nil...)
 
 	test(
 		"\"$$\"",
