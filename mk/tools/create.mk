@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.11 2019/03/24 11:29:19 rillig Exp $
+# $NetBSD: create.mk,v 1.12 2020/05/09 20:50:20 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -79,6 +79,14 @@
 #    TOOLS_FAIL is a list of tools that return false and record their
 #	call in the .warning directory, which is later shown.
 #
+# User-settable variables:
+#
+# TOOLS_ALWAYS_WRAP
+#	If defined, all tools are wrapped using a small shell program,
+#	even if a symlink were sufficient.  This will record all
+#	invocations of the tools in the work log (.work.log by default).
+#	It makes the tool invocations slower and is therefore only
+#	useful during a debugging session.
 
 ######################################################################
 
@@ -160,7 +168,7 @@ ${TOOLS_CMD.${_t_}}:
 			logmain=${TOOLS_PATH.${_t_}:Q:Q}\"\ \"${TOOLS_ARGS.${_t_}:Q:Q}; \
 			logsuffix='$$shquoted_args';			\
 		else							\
-			case ${TOOLS_PATH.${_t_}:Q}"" in		\
+			case ${TOOLS_ALWAYS_WRAP:Dwrap}${TOOLS_PATH.${_t_}:Q}"" in \
 			/*)	create=symlink ;;			\
 			*)	create=wrapper;				\
 				script=${TOOLS_SCRIPT_DFLT.${_t_}:Q};	\
