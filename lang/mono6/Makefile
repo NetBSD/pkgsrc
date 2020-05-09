@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/05/08 11:00:08 plunky Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/09 16:37:15 rillig Exp $
 
 DISTNAME=	mono-6.8.0.105
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	https://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.xz
@@ -116,6 +116,7 @@ SUBST_STAGE.fix-prefix=		pre-configure
 SUBST_MESSAGE.fix-prefix=	Fixing relative prefix
 SUBST_FILES.fix-prefix=		${PKGCONFIG_OVERRIDE}
 SUBST_SED.fix-prefix=		-e 's,$${pcfiledir}/../..,\@prefix\@,g'
+SUBST_NOOP_OK.fix-prefix=	yes
 
 SUBST_CLASSES+=			fix-cfgdir
 SUBST_STAGE.fix-cfgdir=		pre-configure
@@ -128,7 +129,7 @@ SUBST_STAGE.fix-python=		pre-configure
 SUBST_MESSAGE.fix-python=	Fixing python binary name
 SUBST_FILES.fix-python+=	mono/mini/Makefile.am.in
 SUBST_FILES.fix-python+=	mono/tests/Makefile.am
-SUBST_VARS.fix-python=		PYTHONBIN
+SUBST_SED.fix-python=		-e 's,python,${PYTHONBIN},'
 
 .include "../../mk/bsd.prefs.mk"
 
