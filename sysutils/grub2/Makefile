@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/05/09 12:17:52 triaxx Exp $
+# $NetBSD: Makefile,v 1.23 2020/05/09 17:21:32 triaxx Exp $
 
 DISTNAME=		grub-2.04
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -18,6 +18,7 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake flex bison gettext:run awk pkg-config
+PYTHON_FOR_BUILD_ONLY=	tool
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
