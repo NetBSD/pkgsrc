@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.597 2020/04/24 08:43:08 nia Exp $
+# $NetBSD: Makefile,v 1.598 2020/05/09 09:55:31 nia Exp $
 #
 
 COMMENT=	Audio tools
@@ -414,6 +414,7 @@ SUBDIR+=	shorten
 SUBDIR+=	sidplay
 SUBDIR+=	sidplay2
 SUBDIR+=	snd
+SUBDIR+=	sndfile-tools
 SUBDIR+=	solfege
 SUBDIR+=	sonata
 SUBDIR+=	sound-juicer
