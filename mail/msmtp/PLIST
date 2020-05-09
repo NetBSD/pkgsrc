@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2019/01/17 18:39:54 leot Exp $
+@comment $NetBSD: PLIST,v 1.14 2020/05/09 11:08:25 leot Exp $
 bin/msmtp
 bin/msmtpd
 info/msmtp.info
@@ -8,6 +8,8 @@ share/examples/msmtp/msmtprc-user.example
 share/locale/de/LC_MESSAGES/msmtp.mo
 share/locale/fr/LC_MESSAGES/msmtp.mo
 share/locale/pt_BR/LC_MESSAGES/msmtp.mo
+share/locale/sr/LC_MESSAGES/msmtp.mo
+share/locale/ta/LC_MESSAGES/msmtp.mo
 share/locale/uk/LC_MESSAGES/msmtp.mo
 ${PLIST.scripts}share/msmtp/find_alias/find_alias_for_msmtp.sh
 ${PLIST.scripts}share/msmtp/msmtpq/README.msmtpq
