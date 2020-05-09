@@ -1,0 +1,1 @@
+bin/tt @PREFIX@/bin/tt@RUBY_SUFFIX@
