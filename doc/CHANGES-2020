@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2828 2020/05/09 21:58:34 fcambus Exp $
+$NetBSD: CHANGES-2020,v 1.2829 2020/05/09 22:21:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4344,3 +4344,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added lang/chibi-scheme version 0.8.0 [leot 2020-05-09]
 	Updated pkgtools/pkglint to 20.1.5 [rillig 2020-05-09]
 	Updated shells/oksh to 6.7 [fcambus 2020-05-09]
+	Updated www/firefox to 76.0.1 [ryoon 2020-05-09]
