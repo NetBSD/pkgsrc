@@ -799,8 +799,7 @@ func (s *Suite) Test_MkLine_VariableNeedsQuoting__command_in_subshell(c *check.C
 	MkLineChecker{mklines, mklines.mklines[2]}.Check()
 
 	// Don't suggest to use ${AWK:Q}.
-	t.CheckOutputLines(
-		"WARN: xpi.mk:2: Invoking subshells via $(...) is not portable enough.")
+	t.CheckOutputEmpty()
 }
 
 // LDFLAGS (and even more so CPPFLAGS and CFLAGS) may contain special
