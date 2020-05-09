@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/09 18:25:28 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/09 22:13:30 rillig Exp $
 #
 # Ensures that replace-interpreter comes before check-portability.
 # Without this, it would not be possible to quickly and easily patch
@@ -25,7 +25,7 @@ do-extract:
 	${RUN} chmod +x ${WRKSRC}/command
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/command \
+	${INSTALL_SCRIPT} ${WRKSRC}/command \
 		${DESTDIR}${PREFIX}/bin/regress-replace-interpreter
 
 .include "../../mk/bsd.pkg.mk"
