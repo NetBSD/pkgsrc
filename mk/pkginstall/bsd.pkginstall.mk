@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.73 2020/02/11 01:59:30 rillig Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.74 2020/05/09 16:48:57 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -54,7 +54,7 @@ _SYS_VARS.pkginstall= \
 	SHLIB_TYPE \
 	LDCONFIG_ADD_CMD \
 	LDCONFIG_REMOVE_CMD
-_LISTED_VARS.pkginstall=	*_SRC
+_LISTED_VARS.pkginstall=	*_SRC CONF_FILES MAKE_DIRS
 _SORTED_VARS.pkginstall=	*_SUBST
 
 # The Solaris /bin/sh does not know the ${foo#bar} shell substitution.
