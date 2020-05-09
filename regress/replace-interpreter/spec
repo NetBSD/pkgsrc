@@ -1,0 +1,8 @@
+# $NetBSD: spec,v 1.1 2020/05/09 18:25:28 rillig Exp $
+
+MAKEARGS_TEST="install"
+MAKEARGS_CLEAN="deinstall clean"
+
+check_result() {
+	exit_status 0
+}
