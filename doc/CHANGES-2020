@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2821 2020/05/09 09:59:29 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2822 2020/05/09 11:08:37 leot Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4337,3 +4337,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/p5-XML-Compile to 1.63 [wen 2020-05-09]
 	Updated textproc/p5-XML-Compile-SOAP to 3.26 [wen 2020-05-09]
 	Added audio/sndfile-tools version 1.04 [nia 2020-05-09]
+	Updated mail/msmtp to 1.8.10 [leot 2020-05-09]
