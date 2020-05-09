@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile,v 1.1 2020/05/09 19:07:00 leot Exp $
+
+o .meta files need to be generated after all-libs
+o libchibi-scheme.a is generated only on mingw and cygwin operating systems.
+
+--- Makefile.orig	2018-01-24 16:29:50.000000000 +0000
++++ Makefile
+@@ -208,7 +208,7 @@ doc: doc/chibi.html doc-libs
+ %.html: %.scrbl $(CHIBI_DOC_DEPENDENCIES)
+ 	$(CHIBI_DOC) --html $< > $@
+ 
+-lib/.%.meta: lib/%/ tools/generate-install-meta.scm
++lib/.%.meta: lib/%/ tools/generate-install-meta.scm | all-libs
+ 	-$(FIND) $< -name \*.sld | \
+ 	 $(CHIBI) tools/generate-install-meta.scm $(VERSION) > $@
+ 
+@@ -385,7 +385,6 @@ install-base: all
+ 	$(INSTALL_EXE) -m0755 libchibi-scheme$(SO_VERSIONED_SUFFIX) $(DESTDIR)$(SOLIBDIR)/
+ 	$(LN) libchibi-scheme$(SO_VERSIONED_SUFFIX) $(DESTDIR)$(SOLIBDIR)/libchibi-scheme$(SO_MAJOR_VERSIONED_SUFFIX)
+ 	$(LN) libchibi-scheme$(SO_VERSIONED_SUFFIX) $(DESTDIR)$(SOLIBDIR)/libchibi-scheme$(SO)
+-	-if test -f libchibi-scheme.a; then $(INSTALL) -m0644 libchibi-scheme.a $(DESTDIR)$(SOLIBDIR)/; fi
+ 	$(MKDIR) $(DESTDIR)$(PKGCONFDIR)
+ 	$(INSTALL) -m0644 chibi-scheme.pc $(DESTDIR)$(PKGCONFDIR)
+ 	$(MKDIR) $(DESTDIR)$(MANDIR)
