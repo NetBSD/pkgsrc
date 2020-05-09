@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.32 2020/05/06 06:14:56 rillig Exp $
+# $NetBSD: subst.sh,v 1.33 2020/05/09 17:10:38 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -11,36 +11,35 @@ set -eu
 test_case_set_up() {
 	rm -rf "$tmpdir"/.??* "$tmpdir"/*
 
-	create_file "prepare-subst.mk" <<EOF
+	create_file "prepare-subst.mk" <<-EOF
+		# The tools that are used by subst.mk
+		AWK=		awk
+		CHMOD=		chmod
+		CMP=		cmp
+		DIFF=		diff
+		ECHO=		echo
+		MKDIR=		mkdir -p
+		MV=		mv
+		RM=		rm
+		RMDIR=		rmdir
+		SED=		sed
+		TEST=		test
+		TOUCH=		touch
+		TOUCH_FLAGS=	# none
+		TR=		tr
+		TRUE=		true
 
-# The tools that are used by subst.mk
-AWK=		awk
-CHMOD=		chmod
-CMP=		cmp
-DIFF=		diff
-ECHO=		echo
-MKDIR=		mkdir -p
-MV=		mv
-RM=		rm
-RMDIR=		rmdir
-SED=		sed
-TEST=		test
-TOUCH=		touch
-TOUCH_FLAGS=	# none
-TR=		tr
-TRUE=		true
+		# Commands that are specific to pkgsrc
+		RUN=		@set -e;
+		STEP_MSG=	echo "=>"
+		DO_NADA=	: do-nada
+		INFO_MSG=	echo "info:"
+		WARNING_MSG=	echo "warning:"
+		FAIL_MSG=	sh $pkgsrcdir/mk/scripts/fail echo "fail:"
 
-# Commands that are specific to pkgsrc
-RUN=		@set -e;
-STEP_MSG=	echo "=>"
-DO_NADA=	: do-nada
-INFO_MSG=	echo "info:"
-WARNING_MSG=	echo "warning:"
-FAIL_MSG=	sh $pkgsrcdir/mk/scripts/fail echo "fail:"
-
-WRKDIR=		$tmpdir
-WRKSRC=		$tmpdir
-EOF
+		WRKDIR=		$tmpdir
+		WRKSRC=		$tmpdir
+	EOF
 }
 
 
@@ -48,17 +47,17 @@ if test_case_begin "single file"; then
 
 	# A single file is patched successfully.
 
-	create_file "subst-single.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	subst-single.txt
-SUBST_SED.class=	-e 's,before,after,'
+	create_file "subst-single.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	subst-single.txt
+		SUBST_SED.class=	-e 's,before,after,'
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
 
-all: subst-class
-EOF
+		all: subst-class
+	EOF
 
 	create_file_lines "subst-single.txt" \
 		"before"
@@ -76,17 +75,17 @@ if test_case_begin "several individual files"; then
 
 	# Several individual files are patched successfully.
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	first second third
-SUBST_SED.class=	-e 's,file,example,'
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	first second third
+		SUBST_SED.class=	-e 's,file,example,'
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
 
-all: subst-class
-EOF
+		all: subst-class
+	EOF
 
 	create_file_lines "first"	"the first file"
 	create_file_lines "second"	"the second file"
@@ -108,17 +107,17 @@ if test_case_begin "several files by pattern"; then
 	# Several files are patched successfully.
 	# The filenames are given by a pattern.
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	pattern-*
-SUBST_SED.class=	-e 's,file,example,'
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	pattern-*
+		SUBST_SED.class=	-e 's,file,example,'
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
 
-all: subst-class
-EOF
+		all: subst-class
+	EOF
 
 	create_file_lines "pattern-first"	"the first file"
 	create_file_lines "pattern-second"	"the second file"
@@ -144,17 +143,17 @@ if test_case_begin "pattern with 1 noop"; then
 	# only an info is logged.
 	# This is not an error.
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	pattern-*
-SUBST_SED.class=	-e 's,file,example,'
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	pattern-*
+		SUBST_SED.class=	-e 's,file,example,'
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
 
-all: subst-class
-EOF
+		all: subst-class
+	EOF
 
 	create_file_lines "pattern-first"	"the first file"
 	create_file_lines "pattern-second"	"the second is already an example"
@@ -176,18 +175,18 @@ fi
 
 if test_case_begin "single file noop, noop_ok=yes"; then
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	single
-SUBST_SED.class=	-e 's,file,example,'
-SUBST_NOOP_OK.class=	yes
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	single
+		SUBST_SED.class=	-e 's,file,example,'
+		SUBST_NOOP_OK.class=	yes
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
 
-all: subst-class
-EOF
+		all: subst-class
+	EOF
 
 	create_file_lines "single"	"already an example"
 
@@ -206,18 +205,18 @@ fi
 
 if test_case_begin "single file noop, noop_ok=no"; then
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	single
-SUBST_SED.class=	-e 's,file,example,'
-SUBST_NOOP_OK.class=	no
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	single
+		SUBST_SED.class=	-e 's,file,example,'
+		SUBST_NOOP_OK.class=	no
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
 
-all: subst-class
-EOF
+		all: subst-class
+	EOF
 
 	create_file_lines "single"	"already an example"
 
@@ -241,18 +240,18 @@ fi
 
 if test_case_begin "single file nonexistent"; then
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	nonexistent
-SUBST_SED.class=	-e 's,file,example,'
-SUBST_NOOP_OK.class=	no
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	nonexistent
+		SUBST_SED.class=	-e 's,file,example,'
+		SUBST_NOOP_OK.class=	no
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
 
-all: subst-class
-EOF
+		all: subst-class
+	EOF
 
 	run_bmake "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
 
@@ -273,18 +272,18 @@ fi
 
 if test_case_begin "single file nonexistent ok"; then
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	nonexistent
-SUBST_SED.class=	-e 's,file,example,'
-SUBST_NOOP_OK.class=	yes
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	nonexistent
+		SUBST_SED.class=	-e 's,file,example,'
+		SUBST_NOOP_OK.class=	yes
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
 
-all: subst-class
-EOF
+		all: subst-class
+	EOF
 
 	run_bmake "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
 
@@ -300,17 +299,17 @@ fi
 
 if test_case_begin "several patterns, 1 nonexistent"; then
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	*exist* *not-found*
-SUBST_SED.class=	-e 's,file,example,'
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	*exist* *not-found*
+		SUBST_SED.class=	-e 's,file,example,'
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
 
-all: subst-class
-EOF
+		all: subst-class
+	EOF
 
 	create_file_lines "exists"	"this file exists"
 
@@ -329,15 +328,15 @@ fi
 
 if test_case_begin "multiple missing files, all are reported at once"; then
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	does not exist
-SUBST_SED.class=	-e 'sahara'
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	does not exist
+		SUBST_SED.class=	-e 'sahara'
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
-EOF
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
+	EOF
 
 	run_bmake "testcase.mk" > "$tmpdir/actual-output" && exitcode=0 || exitcode=$?
 
@@ -355,15 +354,15 @@ fi
 
 if test_case_begin "multiple no-op files, all are reported at once"; then
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	first second third
-SUBST_SED.class=	-e 's,from,to,'
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	first second third
+		SUBST_SED.class=	-e 's,from,to,'
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
-EOF
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
+	EOF
 	create_file_lines "first"	"text"
 	create_file_lines "second"	"second"
 	create_file_lines "third"	"third"
@@ -433,16 +432,16 @@ fi
 
 if test_case_begin "special characters in filenames"; then
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	*
-SUBST_SED.class=	-e s,before,after,
-SUBST_NOOP_OK.class=	yes
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	*
+		SUBST_SED.class=	-e s,before,after,
+		SUBST_NOOP_OK.class=	yes
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
-EOF
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
+	EOF
 
 	create_file_lines " !\"#\$%&'()*+,-."	"before"
 	create_file_lines "0123456789:;<=>?"	"before"
@@ -481,16 +480,16 @@ fi
 
 if test_case_begin "brackets in filename patterns"; then
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		class
-SUBST_STAGE.class=	pre-configure
-SUBST_FILES.class=	[*]
-SUBST_SED.class=	-e s,before,after,
-SUBST_NOOP_OK.class=	yes
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		class
+		SUBST_STAGE.class=	pre-configure
+		SUBST_FILES.class=	[*]
+		SUBST_SED.class=	-e s,before,after,
+		SUBST_NOOP_OK.class=	yes
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
-EOF
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
+	EOF
 
 	create_file_lines "any"	"before"
 	create_file_lines "x"	"before"
@@ -551,25 +550,25 @@ if test_case_begin "several SUBST classes"; then
 
 	create_file_lines "file" "zero one two three four"
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		one
-SUBST_STAGE.one=	pre-configure
-SUBST_FILES.one=	file
-SUBST_SED.one=		-e 's,one,I,'
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		one
+		SUBST_STAGE.one=	pre-configure
+		SUBST_FILES.one=	file
+		SUBST_SED.one=		-e 's,one,I,'
 
-SUBST_CLASSES+=		two
-SUBST_STAGE.two=	pre-configure
-SUBST_FILES.two=	file
-SUBST_SED.two=		-e 's,two,II,'
+		SUBST_CLASSES+=		two
+		SUBST_STAGE.two=	pre-configure
+		SUBST_FILES.two=	file
+		SUBST_SED.two=		-e 's,two,II,'
 
-SUBST_CLASSES+=		three
-SUBST_STAGE.three=	pre-configure
-SUBST_FILES.three=	file
-SUBST_SED.three=	-e 's,three,III,'
+		SUBST_CLASSES+=		three
+		SUBST_STAGE.three=	pre-configure
+		SUBST_FILES.three=	file
+		SUBST_SED.three=	-e 's,three,III,'
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
-EOF
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
+	EOF
 
 	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
@@ -595,16 +594,16 @@ if test_case_begin "show diff"; then
 
 	create_file_lines "file" "one" "two" "three"
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		two
-SUBST_STAGE.two=	pre-configure
-SUBST_FILES.two=	file
-SUBST_SED.two=		-e 's,two,II,'
-SUBST_SHOW_DIFF.two=	yes
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		two
+		SUBST_STAGE.two=	pre-configure
+		SUBST_FILES.two=	file
+		SUBST_SED.two=		-e 's,two,II,'
+		SUBST_SHOW_DIFF.two=	yes
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
-EOF
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
+	EOF
 
 	LC_ALL=C \
 	run_bmake "testcase.mk" "pre-configure" \
@@ -636,16 +635,16 @@ if test_case_begin "global show diff"; then
 
 	create_file_lines "file" "one" "two" "three"
 
-	create_file "testcase.mk" <<EOF
-SUBST_CLASSES+=		two
-SUBST_STAGE.two=	pre-configure
-SUBST_FILES.two=	file
-SUBST_SED.two=		-e 's,two,II,'
-SUBST_SHOW_DIFF=	yes
+	create_file "testcase.mk" <<-EOF
+		SUBST_CLASSES+=		two
+		SUBST_STAGE.two=	pre-configure
+		SUBST_FILES.two=	file
+		SUBST_SED.two=		-e 's,two,II,'
+		SUBST_SHOW_DIFF=	yes
 
-.include "prepare-subst.mk"
-.include "mk/subst.mk"
-EOF
+		.include "prepare-subst.mk"
+		.include "mk/subst.mk"
+	EOF
 
 	run_bmake "testcase.mk" "pre-configure" \
 		1> "$tmpdir/stdout" \
