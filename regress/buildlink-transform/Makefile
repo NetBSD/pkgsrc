@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/03/21 16:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/05/09 22:39:53 rillig Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -11,9 +11,12 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	test buildlink wrapper transformation
 
+USE_CWRAPPERS=	no
+
 .include "../../mk/bsd.prefs.mk"
 
 NO_CONFIGURE=	yes
+NO_BUILD=	yes
 NO_INSTALL=	yes
 
 # Remove GCC optimization options.
