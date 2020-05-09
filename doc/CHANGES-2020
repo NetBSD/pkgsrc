@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2808 2020/05/08 19:50:33 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.2809 2020/05/09 02:30:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4324,3 +4324,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/jansson to 2.13.1 [adam 2020-05-08]
 	Updated sysutils/py-magic to 0.4.18 [adam 2020-05-08]
 	Updated pkgtools/pkglint to 20.1.4 [rillig 2020-05-08]
+	Updated www/moodle to 3.8.2 [wen 2020-05-09]
