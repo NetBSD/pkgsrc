@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.12 2020/05/09 20:50:20 rillig Exp $
+# $NetBSD: create.mk,v 1.13 2020/05/09 21:08:05 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -184,7 +184,7 @@ ${TOOLS_CMD.${_t_}}:
 	wrapper)							\
 		{ ${ECHO} '#!'${TOOLS_SHELL:Q};				\
 		  ${ECHO} 'tools_wrapper_sed='${SED:Q:Q};		\
-		  ${SED} -e '/^$$/d' -e '/^\#/d' ${PKGSRCDIR}/mk/tools/shquote.sh; \
+		  ${SED} -e '/^$$/d' -e '/^	*#/d' ${PKGSRCDIR}/mk/tools/shquote.sh; \
 		  ${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
 		  ${ECHO} 'shquote_args "$$@"';				\
 		  ${ECHO} '${ECHO} "[*] "'${.TARGET:Q}'"$$shquoted_args" >> $$wrapperlog'; \
