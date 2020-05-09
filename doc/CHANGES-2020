@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2830 2020/05/09 22:22:15 ryoon Exp $
+$NetBSD: CHANGES-2020,v 1.2831 2020/05/09 22:29:28 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4346,3 +4346,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/oksh to 6.7 [fcambus 2020-05-09]
 	Updated www/firefox to 76.0.1 [ryoon 2020-05-09]
 	Updated www/firefox-l10n to 76.0.1 [ryoon 2020-05-09]
+	Updated lang/yabasic to 2.86.8 [fcambus 2020-05-09]
