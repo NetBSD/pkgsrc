@@ -1,15 +1,12 @@
-# $NetBSD: check-portability.mk,v 1.16 2020/05/05 05:55:26 rillig Exp $
+# $NetBSD: check-portability.mk,v 1.17 2020/05/09 19:40:10 rillig Exp $
 #
-# This file contains some checks that are applied to the configure
-# scripts to check for certain constructs that are known to cause
-# problems on some platforms. The detailed checks are in
-# check-portability.sh.
+# This file checks that the extracted shell programs don't contain
+# bashisms or other constructs that only work on some platforms.
 #
 # User-settable variables:
 #
 # CHECK_PORTABILITY
-#	Whether to enable some portability checks for the configure
-#	scripts before they are run.
+#	Whether to enable the portability checks.
 #
 #	Default value: yes for PKG_DEVELOPERs, no otherwise.
 #
@@ -23,15 +20,18 @@
 # Package-settable variables:
 #
 # CHECK_PORTABILITY_SKIP
-#	The list of files that should be skipped in the portability
-#	check.
+#	The filename patterns that should not be checked.
+#	Note that a * in a pattern also matches a slash in a pathname.
 #
 #	Default value: ${REPLACE_BASH}
-#	Example: debian/*
+#	Examples: debian/* test/* *.bash
 
 _VARGROUPS+=			check-portability
-_USER_VARS.check-portability=	CHECK_PORTABILITY
-_PKG_VARS.check-portability=	CHECK_PORTABILITY_SKIP
+_USER_VARS.check-portability=	CHECK_PORTABILITY \
+				CHECK_PORTABILITY_EXPERIMENTAL
+_PKG_VARS.check-portability=	CHECK_PORTABILITY_SKIP REPLACE_BASH
+_USE_VARS.check-portability=	PKG_DEVELOPER
+_LISTED_VARS.check-portability=	REPLACE_BASH
 
 .if ${PKG_DEVELOPER:Uno} != "no"
 CHECK_PORTABILITY?=		yes
