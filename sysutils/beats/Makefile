@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/04/15 13:00:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2020/05/09 18:44:14 rillig Exp $
 
 DISTNAME=		beats-6.8.8
 CATEGORIES=		sysutils
@@ -24,6 +24,7 @@ PLIST_VARS+=		audit
 
 # Components to build/install
 BEATS=			filebeat heartbeat metricbeat packetbeat
+CHECK_PORTABILITY_SKIP+= libbeat/scripts/Makefile # uses [[
 
 # No SunOS compatible event reading supported
 .if ${OPSYS} != "SunOS"
