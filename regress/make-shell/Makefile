@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/05/01 19:40:27 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/09 21:50:49 rillig Exp $
 #
 # This regression test demonstrates which features are supported by the
 # shell that is used internally by devel/bmake.  That shell may be
@@ -45,6 +45,7 @@ do-build:
 	# If these tests fail because of missing tools, add these to
 	# USE_TOOLS.
 	${RUN} cd ${WRKSRC};						\
+	MACHINE_PLATFORM=${MACHINE_PLATFORM:Q};				\
 	. "${PKGSRCDIR}/regress/tools-platform/sh.test"
 
 .include "../../mk/bsd.pkg.mk"
