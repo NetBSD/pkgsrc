@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.ac,v 1.1 2020/05/09 15:19:02 joerg Exp $
+
+--- configure.ac.orig	2020-05-09 14:30:20.178602785 +0000
++++ configure.ac
+@@ -68,7 +68,7 @@ AC_CHECK_HEADER([climits], [],
+                 [AC_MSG_ERROR([Could not find necessary C++ libs headers])])
+ AC_CHECK_HEADER([boost/cstdint.hpp], [],
+                 [AC_MSG_ERROR([Could not find necessary Boost headers])])
+-AC_CHECK_HEADER([boost/detail/endian.hpp], [],
++AC_CHECK_HEADER([boost/predef/other/endian.h], [],
+                 [AC_MSG_ERROR([Could not find necessary Boost headers])])
+ AC_CHECK_HEADER([boost/spirit/version.hpp], [],
+                 [AC_MSG_ERROR([Boost::Spirit headers were not found.])])
