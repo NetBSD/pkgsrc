@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/03/23 18:43:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/05/09 14:48:12 mef Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -48,7 +48,6 @@ ${PYSITELIB}/certbot_apache/_internal/interfaces.pyo
 ${PYSITELIB}/certbot_apache/_internal/obj.py
 ${PYSITELIB}/certbot_apache/_internal/obj.pyc
 ${PYSITELIB}/certbot_apache/_internal/obj.pyo
-${PYSITELIB}/certbot_apache/_internal/options-ssl-apache.conf
 ${PYSITELIB}/certbot_apache/_internal/override_arch.py
 ${PYSITELIB}/certbot_apache/_internal/override_arch.pyc
 ${PYSITELIB}/certbot_apache/_internal/override_arch.pyo
@@ -76,3 +75,5 @@ ${PYSITELIB}/certbot_apache/_internal/parser.pyo
 ${PYSITELIB}/certbot_apache/_internal/parsernode_util.py
 ${PYSITELIB}/certbot_apache/_internal/parsernode_util.pyc
 ${PYSITELIB}/certbot_apache/_internal/parsernode_util.pyo
+${PYSITELIB}/certbot_apache/_internal/tls_configs/current-options-ssl-apache.conf
+${PYSITELIB}/certbot_apache/_internal/tls_configs/old-options-ssl-apache.conf
