@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/05/09 16:37:15 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/09 16:45:57 rillig Exp $
 
 DISTNAME=	mono-6.8.0.105
 PKGREVISION=	3
@@ -66,40 +66,29 @@ REPLACE_BASH+=	mcs/mkinstalldirs mkinstalldirs
 
 EGDIR=		${PREFIX}/share/examples/mono
 
-CONF_FILES+=	${EGDIR}/2.0/Browsers/Compat.browser \
-		${PKG_SYSCONFDIR}/mono/2.0/Browsers/Compat.browser
-CONF_FILES+=	${EGDIR}/2.0/DefaultWsdlHelpGenerator.aspx \
-		${PKG_SYSCONFDIR}/mono/2.0/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/2.0/machine.config \
-		${PKG_SYSCONFDIR}/mono/2.0/machine.config
-CONF_FILES+=	${EGDIR}/2.0/settings.map \
-		${PKG_SYSCONFDIR}/mono/2.0/settings.map
-CONF_FILES+=	${EGDIR}/2.0/web.config \
-		${PKG_SYSCONFDIR}/mono/2.0/web.config
-CONF_FILES+=	${EGDIR}/4.0/Browsers/Compat.browser \
-		${PKG_SYSCONFDIR}/mono/4.0/Browsers/Compat.browser
-CONF_FILES+=	${EGDIR}/4.0/DefaultWsdlHelpGenerator.aspx \
-		${PKG_SYSCONFDIR}/mono/4.0/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/4.0/machine.config \
-		${PKG_SYSCONFDIR}/mono/4.0/machine.config
-CONF_FILES+=	${EGDIR}/4.0/settings.map \
-		${PKG_SYSCONFDIR}/mono/4.0/settings.map
-CONF_FILES+=	${EGDIR}/4.0/web.config \
-		${PKG_SYSCONFDIR}/mono/4.0/web.config
-CONF_FILES+=	${EGDIR}/4.5/Browsers/Compat.browser \
-		${PKG_SYSCONFDIR}/mono/4.5/Browsers/Compat.browser
-CONF_FILES+=	${EGDIR}/4.5/DefaultWsdlHelpGenerator.aspx \
-		${PKG_SYSCONFDIR}/mono/4.5/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/4.5/machine.config \
-		${PKG_SYSCONFDIR}/mono/4.5/machine.config
-CONF_FILES+=	${EGDIR}/4.5/settings.map \
-		${PKG_SYSCONFDIR}/mono/4.5/settings.map
-CONF_FILES+=	${EGDIR}/4.5/web.config \
-		${PKG_SYSCONFDIR}/mono/4.5/web.config
-CONF_FILES+=	${EGDIR}/browscap.ini \
-		${PKG_SYSCONFDIR}/mono/browscap.ini
-CONF_FILES+=	${EGDIR}/config \
-		${PKG_SYSCONFDIR}/mono/config
+EGDIR_CONF_FILES= \
+
+.for conf in \
+	2.0/Browsers/Compat.browser \
+	2.0/DefaultWsdlHelpGenerator.aspx \
+	2.0/DefaultWsdlHelpGenerator.aspx \
+	2.0/machine.config \
+	2.0/settings.map \
+	2.0/web.config \
+	4.0/Browsers/Compat.browser \
+	4.0/DefaultWsdlHelpGenerator.aspx \
+	4.0/machine.config \
+	4.0/settings.map \
+	4.0/web.config \
+	4.5/Browsers/Compat.browser \
+	4.5/DefaultWsdlHelpGenerator.aspx \
+	4.5/machine.config \
+	4.5/settings.map \
+	4.5/web.config \
+	browscap.ini \
+	config
+CONF_FILES+=	${EGDIR}/${conf} ${PKG_SYSCONFDIR}/mono/${conf}
+.endfor
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0/Browsers
