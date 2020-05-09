@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/08/11 13:18:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/09 17:53:53 rillig Exp $
 
 DISTNAME=		gcc-8.2.0
 PKGNAME=		cross-pdp11-aout-${DISTNAME}
@@ -31,6 +31,8 @@ USE_TOOLS+=		bash perl
 
 USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
+CHECK_PORTABILITY_SKIP+= contrib/* # not needed for building
 
 GNU_CONFIGURE_PREFIX=	${PDP11AOUT_PREFIX}
 
