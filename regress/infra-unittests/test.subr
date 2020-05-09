@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.12 2020/05/01 14:14:12 rillig Exp $
+# $NetBSD: test.subr,v 1.13 2020/05/09 17:41:08 rillig Exp $
 #
 # This file defines utilities for testing Makefile fragments and shell
 # programs from the pkgsrc infrastructure. While testing one part of the
@@ -105,23 +105,32 @@
 # assert_fail $format $args...
 #	Marks the current test as failed but continues to execute it.
 #
-#
-# Misc
-#
-# cleanup
-#	If this variable is yes (the default), clean up the temporary
-#	directory after the test has run successfully.
-#
 
 set -eu
 
-: "${cleanup:=yes}"
+cleanup='yes'
 : "${make:=bmake}"
-: "${if_verbose=:}"
-tmpdir="${TMP:-/tmp}/infra-unittests-$$"
+if_verbose=':'
+tmpdir="${TMPDIR:-/tmp}/infra-unittests-$$"
 mocked_pkgsrcdir="$tmpdir/pkgsrc"
+test_case_filter='.*'
+
 rm -rf "$tmpdir"
 mkdir -p "$mocked_pkgsrcdir"
+
+while getopts 'kvf:' opt; do
+	case "$opt" in
+	(f)	test_case_filter="$OPTARG";;
+	(k)	cleanup='no';;
+	(v)	if_verbose='';;
+	(*)	printf '%s\n' 1>&2 \
+			"usage: $0 [-kv] [-f filter]" \
+			'  -f regex	only run matching test cases' \
+			'  -k		keep the temporary files' \
+			'  -v		verbose mode'
+		exit 1;;
+	esac
+done
 
 pkgsrcdir=""
 for relative_pkgsrcdir in . .. ../.. ../../..; do
@@ -145,6 +154,9 @@ test_case_ended=0
 
 test_case_begin() {
 	test_case_name="$1"
+	[ "$(expr "$test_case_name" : "$test_case_filter")" -gt 0 ] \
+	|| return 1
+
 	test_case_begun="`expr "$test_case_begun" + 1`"
 	verbose_printf 'running test case "%s"\n' "$test_case_name"
 
