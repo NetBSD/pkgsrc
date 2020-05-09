@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.9 2019/11/04 21:43:47 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/09 05:56:56 taca Exp $
 
-DISTNAME=	treetop-1.4.15
+DISTNAME=	treetop-1.6.10
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/nathansobo/treetop
+HOMEPAGE=	https://github.com/cjheath/treetop
 COMMENT=	Ruby-based text parsing and interpretation DSL
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-polyglot>=0.3.1:../../devel/ruby-polyglot
+DEPENDS+=	${RUBY_PKGPREFIX}-polyglot>=0.3.1<1:../../devel/ruby-polyglot
 
-CONFLICTS=		ruby[1-9][0-9]-treetop-[0-9]*
+RUBYGEM_OPTIONS+=	--format-executable
 OVERRIDE_GEMSPEC+=	polyglot:
 
 .include "../../lang/ruby/gem.mk"
