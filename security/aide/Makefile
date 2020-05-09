@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2020/03/20 11:58:16 nia Exp $
+# $NetBSD: Makefile,v 1.39 2020/05/09 18:29:24 rillig Exp $
 #
 
 DISTNAME=	aide-0.15.1
@@ -13,6 +13,8 @@ LICENSE=	artistic
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bison flex gmake
+
+CHECK_PORTABILITY_SKIP=	contrib/gpg2_update.sh # not needed
 
 .include "../../mk/bsd.prefs.mk"
 
