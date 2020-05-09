@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2019/11/03 10:39:22 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2020/05/09 12:52:54 rillig Exp $
 
 DISTNAME=		findlib-1.8.1
 PKGNAME=		ocaml-${DISTNAME}
@@ -46,13 +46,6 @@ INSTALLATION_DIRS=	lib/ocaml libexec bin ${OCAML_SITELIBDIR}
 CONF_FILES=		${EGDIR}/ocamlfind.conf ${PKG_SYSCONFDIR}/ocamlfind.conf
 
 FILES_SUBST+=		OCAML_FINDLIB_DIRS="${OCAML_FINDLIB_DIRS}" OCAML_SITELIBDIR="${OCAML_SITELIBDIR}"
-
-SUBST_CLASSES+=		ofr
-SUBST_STAGE.ofr=	pre-configure
-SUBST_FILES.ofr=	ocaml-findlib-register.sh
-SUBST_VARS.ofr=		SH
-SUBST_VARS.ofr+=	PREFIX
-SUBST_VARS.ofr+=	FGREP
 
 SUBST_CLASSES+=		pathes
 SUBST_STAGE.pathes=	post-install
