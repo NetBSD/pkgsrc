@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2018/09/16 13:18:54 triaxx Exp $
+# $NetBSD: options.mk,v 1.4 2020/05/09 12:17:52 triaxx Exp $
 #
 
 #
@@ -16,12 +16,6 @@ PKG_SUGGESTED_OPTIONS=	freetype
 
 PLIST_VARS+=		freetype fuse
 
-UNIFONT=		unifont-5.1.20080820.pcf
-SITES.${UNIFONT}.gz=	http://unifoundry.com/
-
-post-extract: do-move-unifont
-.PHONY: do-move-unifont
-
 ###
 ### debug support
 ###
@@ -37,14 +31,11 @@ CONFIGURE_ARGS+=	--disable-mm-debug
 .if !empty(PKG_OPTIONS:Mfreetype)
 CONFIGURE_ARGS+=	--enable-grub-mkfont
 PLIST.freetype=		yes
-DISTFILES+=		${UNIFONT}.gz
 BUILD_DEPENDS+=		dejavu-ttf>=2.34nb1:../../fonts/dejavu-ttf
-do-move-unifont:
-	${MV} ${WRKDIR}/${UNIFONT} ${WRKSRC}/unifont.pcf
+BUILD_DEPENDS+=		unifont-[0-9]*:../../fonts/unifont
 .include "../../graphics/freetype2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-grub-mkfont
-do-move-unifont:
 .endif
 
 ###
