@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.60 2020/03/13 17:33:02 rillig Exp $
+# $NetBSD: bsd.tools.mk,v 1.61 2020/05/09 21:04:14 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -180,5 +180,6 @@ _PKG_VARS.tools=	USE_TOOLS TOOLS_BROKEN TOOLS_CREATE \
 	# nil
 _SYS_VARS.tools+=	${pv}.${t}
 .  endfor
+_DEF_VARS.tools+=	_TOOLS_VARNAME.${t} _TOOLS_VARNAME_GNU.${t}
 .endfor
 _SORTED_VARS.tools=	USE_TOOLS TOOLS_CREATE TOOLS_GNU_MISSING
