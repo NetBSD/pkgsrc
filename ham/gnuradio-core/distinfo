@@ -1,16 +1,38 @@
-$NetBSD: distinfo,v 1.34 2020/04/17 13:33:44 joerg Exp $
+$NetBSD: distinfo,v 1.35 2020/05/09 15:17:51 joerg Exp $
 
 SHA1 (gnuradio-3.7.13.5.tar.gz) = c81a9cb1ec5e9455d885c804ba8fb656c4573b53
 RMD160 (gnuradio-3.7.13.5.tar.gz) = 87786c5f333069c15316c6a45dbce11f329ddac6
 SHA512 (gnuradio-3.7.13.5.tar.gz) = 35fad30ccbc8a82e03d44815bb958dc3718089bce628795ded53f554dff68a4acb1a0f1110b97446f5dc0182c0313855c0f1624b5e9caea26ae6189be81453bf
 Size (gnuradio-3.7.13.5.tar.gz) = 4548612 bytes
 SHA1 (patch-cmake_Modules_FindSphinx.cmake) = 1e42ad000962f4766810fbd322c80dad1f0b1c3c
+SHA1 (patch-gnuradio-runtime_lib_block.cc) = a08a3f69ade0a935d88140e386e6f623c0edb1c6
 SHA1 (patch-gnuradio-runtime_lib_pmt_pmt__serialize.cc) = be8d6704aadc62f6a9c1e85c68443a94e81ea882
 SHA1 (patch-gnuradio_runtime_include_gnuradio_high__res__timer__h) = 59ad8192e7ac76b2ce35cda68c378bc2abad20a5
 SHA1 (patch-gnuradio_runtime_lib_thread_thread_cc) = 7e8aa146447fc7ffd006ffd540764ae4b15da2a5
+SHA1 (patch-gr-analog_lib_sig__source__X__impl.cc.t) = 103bd0b61f18e3d86d7a01189f611a9d0e3124c0
 SHA1 (patch-gr-audio_lib_CMakeLists.txt) = 42e0b52d6baba936c03e2414e83a96a19c5331e7
 SHA1 (patch-gr-audio_lib_alsa_alsa__impl_h) = d61dcd31058c04a6050479a6e8c321ca15420d49
-SHA1 (patch-gr-blocks_lib_socket__pdu__impl.cc) = 96a0f5c17fdea993531846ef011767c999d17d36
+SHA1 (patch-gr-blocks_lib_copy__impl.cc) = 86f6ea02c12788ba42a477500c8dcdb03f44ee6b
+SHA1 (patch-gr-blocks_lib_message__debug__impl.cc) = 1f44d4dc99a46b97617e911747f5820095049d31
+SHA1 (patch-gr-blocks_lib_message__strobe__impl.cc) = 67115a9fa7f1b134384eca9cd9af4a40a6aba1f4
+SHA1 (patch-gr-blocks_lib_message__strobe__random__impl.cc) = 7512b5ca9a4ab55acb77a95b35943f070f19344e
+SHA1 (patch-gr-blocks_lib_multiply__matrix__cc__impl.cc) = 96ba01c18ed47bd97cc90e6f2642ae950a9c32d4
+SHA1 (patch-gr-blocks_lib_multiply__matrix__ff__impl.cc) = 4ca3df47fce12d426efa4edfa59143bff911a1f0
+SHA1 (patch-gr-blocks_lib_mute__XX__impl.cc.t) = e2d511fd6f729f0d2947306f752cdca0e7b1c0d4
+SHA1 (patch-gr-blocks_lib_nop__impl.cc) = c388f57385a31a4c5d87923797241a9c6388303c
+SHA1 (patch-gr-blocks_lib_pdu__filter__impl.cc) = 7e7ff5033120a043871cb38bdc481dd60118b9e7
+SHA1 (patch-gr-blocks_lib_pdu__remove__impl.cc) = bbf83d6097cf0a6cfb257664a7b8925c20323d34
+SHA1 (patch-gr-blocks_lib_pdu__set__impl.cc) = 9d83b3fdb39bc76bb7b9ae64d7ffa8151e8b443b
+SHA1 (patch-gr-blocks_lib_random__pdu__impl.cc) = 818035e99e9607d5b429e3453a8d5e76d12fad5b
+SHA1 (patch-gr-blocks_lib_repeat__impl.cc) = 7971eeb9904090d69659d6dfb9423f0673043e82
+SHA1 (patch-gr-blocks_lib_socket__pdu__impl.cc) = 41a365478936aa66bf1a31ab36f7ced81520f0de
+SHA1 (patch-gr-blocks_lib_tagged__stream__multiply__length__impl.cc) = a3d2ee3887ede46142e3604c7bb4b1a77856b3af
 SHA1 (patch-gr-blocks_lib_tcp__connection.cc) = ef932b7a4d87d7fd2ed6dcff5ab2d75b25095acc
 SHA1 (patch-gr-blocks_lib_tcp__connection.h) = ef6e19424a07f4cf16dbac834bdb48f3f639ebf5
+SHA1 (patch-gr-blocks_lib_tuntap__pdu__impl.cc) = d01da5adf8a3fb888553de502657e25f730f373d
+SHA1 (patch-gr-blocks_lib_wavfile.cc) = f4348c02e450671d64f4cbd5920609e3b637e981
+SHA1 (patch-gr-digital_lib_chunks__to__symbols__XX__impl.cc.t) = 39d8e2a07d98bf10d21e75976281bb0a966ff775
+SHA1 (patch-gr-filter_lib_fractional__resampler__cc__impl.cc) = 22fb471e1bb0ff46f07d824b27b113ad40ba963d
+SHA1 (patch-gr-filter_lib_fractional__resampler__ff__impl.cc) = d8eac11e6788b405678cb86adf9224af6af568bf
+SHA1 (patch-gr-filter_lib_freq__xlating__fir__filter__XXX__impl.cc.t) = c5bbbb471a476fdb676cbfb01efa082054d9a718
 SHA1 (patch-volk_lib_qa__utils.cc) = 2bf322c4cf75183baeb589df2e3deccfffad0391
