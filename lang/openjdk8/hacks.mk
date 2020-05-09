@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.9 2020/03/22 22:06:02 tnn Exp $
+# $NetBSD: hacks.mk,v 1.10 2020/05/09 19:14:16 tnn Exp $
 
 .if !defined(OPENJDK8_HACKS_MK)
 OPENJDK8_HACKS_MK=	# empty
@@ -11,6 +11,8 @@ post-wrapper:
 	${RM} -f ${BUILDLINK_DIR}/include/jerror.h
 	${RM} -f ${BUILDLINK_DIR}/include/jmorecfg.h
 	${RM} -f ${BUILDLINK_DIR}/include/jpeglib.h
+# ditto for krb5, can be buildlinked via cups-base
+	${RM} -f ${BUILDLINK_DIR}/include/krb5/*.h
 
 # Workaround incorrect constant folding of subnormals in javac when the FPU
 # does not handle subnormal arithmetic, like on ARM in Flush-to-zero mode.
