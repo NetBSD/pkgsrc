@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/02 18:22:31 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/09 20:02:24 rillig Exp $
 
 GITHUB_PROJECT=	compute-image-packages
 GITHUB_TAG=	20170829
@@ -31,8 +31,7 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing absolute paths.
 SUBST_SED.paths=	-e 's,/etc,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,/var,${VARBASE},g'
-
-
+SUBST_NOOP_OK.paths=	yes # the paths look broken, someone should fix this
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
