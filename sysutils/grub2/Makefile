@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/05/02 16:53:54 triaxx Exp $
+# $NetBSD: Makefile,v 1.22 2020/05/09 12:17:52 triaxx Exp $
 
 DISTNAME=		grub-2.04
 PKGNAME=		${DISTNAME:S/grub/grub2/}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/grub/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -120,13 +121,13 @@ SUBST_SED.fix-paths-1=		-e 's,\(\$${sysconfdir}"\{0\,1\}\)/grub.d,\1,g'
 SUBST_SED.fix-paths-1+=		-e 's,\(\$${sysconfdir}"\{0\,1\}\)/default/grub,\1/default.conf,g'
 
 #
-# Adjust the search paths for DejaVu fonts in configure.
+# Adjust the search paths for fonts in configure.
 #
-SUBST_CLASSES+=			fix-dejavu
-SUBST_STAGE.fix-dejavu=		pre-configure
-SUBST_MESSAGE.fix-dejavu=	Fixing dejavu search paths in configure.
-SUBST_FILES.fix-dejavu=		configure
-SUBST_SED.fix-dejavu=		-e 's, \(/usr/share/fonts/dejavu\), \1 ${PREFIX}/share/fonts/X11/TTF,g'
+SUBST_CLASSES+=			fix-fonts
+SUBST_STAGE.fix-fonts=		pre-configure
+SUBST_MESSAGE.fix-fonts=	Fixing fonts search paths in configure.
+SUBST_FILES.fix-fonts=		configure
+SUBST_VARS.fix-fonts=		PREFIX
 
 #
 # Do not use `\t' with sed, as it's not portable.
