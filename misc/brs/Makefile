@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2018/07/04 13:40:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/09 08:30:49 rillig Exp $
 #
 
 DISTNAME=	brs.4.00.l1
 PKGNAME=	brs-4.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/religion/}
 
