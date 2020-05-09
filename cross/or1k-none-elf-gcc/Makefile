@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/10/04 15:46:24 maya Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/09 17:51:32 rillig Exp $
 
 DISTNAME=		gcc-9.1.0
 PKGNAME=		cross-or1k-none-elf-${DISTNAME}
@@ -36,6 +36,8 @@ CONFIG_SHELL=		${TOOLS_PATH.bash}
 WRAPPER_SHELL=		${TOOLS_PATH.bash}
 USE_TOOLS+=		bash gmake makeinfo perl
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
+CHECK_PORTABILITY_SKIP+= contrib/* # not needed for building
 
 GNU_CONFIGURE_PREFIX=	${OR1KELF_PREFIX}
 
