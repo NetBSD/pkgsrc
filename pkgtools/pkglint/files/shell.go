@@ -397,60 +397,6 @@ type ShellLineChecker struct {
 	checkVarUse bool
 }
 
-func (ck *ShellLineChecker) checkConditionalCd(list *MkShList) {
-	if trace.Tracing {
-		defer trace.Call0()()
-	}
-
-	getSimple := func(list *MkShList) *MkShSimpleCommand {
-		if len(list.AndOrs) == 1 {
-			if len(list.AndOrs[0].Pipes) == 1 {
-				if len(list.AndOrs[0].Pipes[0].Cmds) == 1 {
-					return list.AndOrs[0].Pipes[0].Cmds[0].Simple
-				}
-			}
-		}
-		return nil
-	}
-
-	checkConditionalCd := func(cmd *MkShSimpleCommand) {
-		if NewStrCommand(cmd).Name == "cd" {
-			ck.Errorf("The Solaris /bin/sh cannot handle \"cd\" inside conditionals.")
-			ck.Explain(
-				"When the Solaris shell is in \"set -e\" mode and \"cd\" fails, the",
-				"shell will exit, no matter if it is protected by an \"if\" or the",
-				"\"||\" operator.")
-		}
-	}
-
-	// TODO: It might be worth reversing the logic, like this:
-	//  walker.Callback.Simple = { if inside if.cond || loop.cond { ... } }
-	walker := NewMkShWalker()
-	walker.Callback.If = func(ifClause *MkShIf) {
-		for _, cond := range ifClause.Conds {
-			if simple := getSimple(cond); simple != nil {
-				checkConditionalCd(simple)
-			}
-		}
-	}
-	walker.Callback.Loop = func(loop *MkShLoop) {
-		if simple := getSimple(loop.Cond); simple != nil {
-			checkConditionalCd(simple)
-		}
-	}
-	walker.Callback.Pipeline = func(pipeline *MkShPipeline) {
-		if pipeline.Negated {
-			ck.Warnf("The Solaris /bin/sh does not support negation of shell commands.")
-			ck.Explain(
-				"The GNU Autoconf manual has many more details of what shell",
-				"features to avoid for portable programs.",
-				"It can be read at:",
-				"https://www.gnu.org/software/autoconf/manual/autoconf.html#Limitations-of-Builtins")
-		}
-	}
-	walker.Walk(list)
-}
-
 func (ck *ShellLineChecker) checkSetE(list *MkShList, index int) {
 	if trace.Tracing {
 		defer trace.Call0()()
@@ -733,8 +679,6 @@ func (ck *ShellLineChecker) CheckShellCommand(shellcmd string, pSetE *bool, time
 		return
 	}
 
-	ck.checkConditionalCd(program)
-
 	walker := NewMkShWalker()
 	walker.Callback.SimpleCommand = func(command *MkShSimpleCommand) {
 		scc := NewSimpleCommandChecker(command, time, ck.mkline, ck.MkLines)
@@ -828,11 +772,6 @@ outer:
 				ck.checkShVarUsePlain(atom, checkQuoting)
 
 			case atom.Type == shtSubshell:
-				ck.Warnf("Invoking subshells via $(...) is not portable enough.")
-				ck.Explain(
-					"The Solaris /bin/sh does not know this way to execute a command in a subshell.",
-					"Please use backticks (`...`) as a replacement.")
-
 				// Early return to avoid further parse errors.
 				// As of December 2018, it might be worth continuing again since the
 				// shell parser has improved in 2018.
