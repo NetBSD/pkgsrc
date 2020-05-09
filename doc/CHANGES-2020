@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2812 2020/05/09 03:08:21 wen Exp $
+$NetBSD: CHANGES-2020,v 1.2813 2020/05/09 05:57:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4328,3 +4328,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/mediawiki to 1.34.1 [wen 2020-05-09]
 	Updated www/p5-FCGI to 0.79 [wen 2020-05-09]
 	Updated www/p5-HTML-Form to 6.07 [wen 2020-05-09]
+	Updated textproc/ruby-treetop to 1.6.10 [taca 2020-05-09]
