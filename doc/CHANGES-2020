@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2814 2020/05/09 06:01:02 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2815 2020/05/09 07:55:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4330,3 +4330,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-HTML-Form to 6.07 [wen 2020-05-09]
 	Updated textproc/ruby-treetop to 1.6.10 [taca 2020-05-09]
 	Updated textproc/ruby-yard to 0.9.25 [taca 2020-05-09]
+	Updated www/p5-HTTP-CookieMonster to 0.11 [wen 2020-05-09]
