@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/05/09 17:49:37 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/09 17:52:27 rillig Exp $
 
 DISTNAME=		gcc-6.2.0
 PKGNAME=		cross-h8300-elf-${DISTNAME}
@@ -35,7 +35,7 @@ CONFIGURE_SCRIPT=	${WRKSRC}/configure
 USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
-CHECK_PORTABILITY_CHECK+= contrib/* # not needed for building
+CHECK_PORTABILITY_SKIP+= contrib/* # not needed for building
 
 GNU_CONFIGURE_PREFIX=	${H8300_PREFIX}
 
