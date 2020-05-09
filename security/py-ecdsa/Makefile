@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/02/27 16:55:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/09 20:16:59 rillig Exp $
 
 DISTNAME=	ecdsa-0.15
 PKGNAME=	${PYPKGPREFIX}-ecdsa-0.15
@@ -13,8 +13,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
-
-REPLACE_PYTHON=	ecdsa/ecdsa.py ecdsa/ellipticcurve.py ecdsa/numbertheory.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
