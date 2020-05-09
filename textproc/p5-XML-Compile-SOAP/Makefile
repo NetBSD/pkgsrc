@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2019/08/11 13:23:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/09 08:58:15 wen Exp $
 
-DISTNAME=	XML-Compile-SOAP-3.24
+DISTNAME=	XML-Compile-SOAP-3.26
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MARKOV/}
 
@@ -11,13 +10,16 @@ HOMEPAGE=	https://metacpan.org/release/XML-Compile-SOAP
 COMMENT=	SOAP 1.1 implementation for perl
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	p5-Log-Report-[0-9]*:../../devel/p5-Log-Report
-DEPENDS+=	p5-XML-Compile-[0-9]*:../../textproc/p5-XML-Compile
-DEPENDS+=	p5-XML-Compile-Cache-[0-9]*:../../textproc/p5-XML-Compile-Cache
+DEPENDS+=	p5-Log-Report>=1.05:../../devel/p5-Log-Report
+DEPENDS+=	p5-XML-Compile>=1.58:../../textproc/p5-XML-Compile
+DEPENDS+=	p5-XML-Compile-Cache>=1.03:../../textproc/p5-XML-Compile-Cache
+DEPENDS+=	p5-Net-HTTP>=6.16:../../www/p5-Net-HTTP
+DEPENDS+=	p5-File-Slurper>=0:../../devel/p5-File-Slurper
+DEPENDS+=	p5-HTTP-Message>=0:../../www/p5-HTTP-Message
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 # TEST_DEPENDS
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-BUILD_DEPENDS+=	p5-XML-Compile-Tester-[0-9]*:../../textproc/p5-XML-Compile-Tester
+BUILD_DEPENDS+=	p5-XML-Compile-Tester>=0.90:../../textproc/p5-XML-Compile-Tester
 
 PERL5_PACKLIST=	auto/XML/Compile/SOAP/.packlist
 
