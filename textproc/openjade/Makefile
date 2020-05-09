@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2020/04/30 23:46:13 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2020/05/09 15:16:30 joerg Exp $
 
 DISTNAME=	openjade-1.3.2
 PKGREVISION=	16
@@ -51,6 +51,8 @@ INSTALLATION_DIRS=	${OPENJADE_DATA_DIR}/pubtext \
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mgcc)
 CFLAGS+=	-fno-tree-dse
+.elif !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-fno-delete-null-pointer-checks
 .endif
 
 post-install:
