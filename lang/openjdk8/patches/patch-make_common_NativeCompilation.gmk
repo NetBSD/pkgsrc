@@ -1,0 +1,16 @@
+$NetBSD: patch-make_common_NativeCompilation.gmk,v 1.1 2020/05/09 20:47:26 tnn Exp $
+
+Disable PaX mprotect.
+
+--- make/common/NativeCompilation.gmk.orig	2020-04-15 02:42:06.000000000 +0000
++++ make/common/NativeCompilation.gmk
+@@ -624,6 +624,9 @@ endif # no MacOS X support yet
+         ifneq (,$$($1_GEN_MANIFEST))
+ 	  $(MT) -nologo -manifest $$($1_GEN_MANIFEST) -outputresource:$$@;#1
+         endif
++        ifeq ($(OPENJDK_TARGET_OS_VENDOR), netbsd)
++	  /usr/sbin/paxctl +m $$@
++        endif
+         # This only works if the openjdk_codesign identity is present on the system. Let
+         # silently fail otherwise.
+         ifneq (,$(CODESIGN))

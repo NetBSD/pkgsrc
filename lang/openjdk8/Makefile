@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2020/05/06 10:16:29 jmcneill Exp $
+# $NetBSD: Makefile,v 1.98 2020/05/09 20:47:26 tnn Exp $
 
 DISTNAME=	openjdk-jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
@@ -69,13 +69,6 @@ CONFIGURE_ARGS+=	--with-extra-ldflags=${LDFLAGS:Q}
 
 CHECK_PORTABILITY_SKIP+=	hotspot/test/runtime/*/*.sh
 CHECK_PORTABILITY_SKIP+=	hotspot/test/compiler/criticalnatives/argumentcorruption/Test8167409.sh
-
-NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/bin/[a-ik-z]*
-NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/bin/j[b-z]*
-NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/bin/jar*
-NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/bin/java
-NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/bin/java[a-z]*
-NOT_PAX_MPROTECT_SAFE+=	java/${JAVA_NAME}/jre/bin/*
 
 # Avoid build errors when JAVA_HOME and CLASSPATH are defined by user.
 MAKE_ENV+=	JAVA_HOME=
@@ -186,6 +179,7 @@ post-extract:
 .if exists(/usr/lib/libstdc++.so.7)
 	${RM} -f ${ALT_BOOTDIR}/jre/lib/${LIBDIR_ARCH}/libstdc++.so*
 .endif
+# This can be removed after bootstrap kits have been refreshed
 .if defined(TOOLS_PLATFORM.paxctl)
 	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/[a-ik-z]*
 	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/j[b-z]*
@@ -208,13 +202,6 @@ ${WRKDIR}/stage1-done:
 
 # stage 1.5 reconfigures, since the bootstrap JDK major version might have changed now
 ${WRKDIR}/stage1_5-done: ${WRKDIR}/stage1-done
-.if defined(TOOLS_PLATFORM.paxctl)
-	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/[a-ik-z]*
-	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/j[b-z]*
-	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/jar*
-	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java
-	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java[a-z]*
-.endif
 	@${STEP_MSG} "Reconfiguring with newly built JDK"
 	@${RECURSIVE_MAKE} ${MAKEFLAGS} do-configure
 	touch ${.TARGET}
