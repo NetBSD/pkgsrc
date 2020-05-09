@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/06/08 10:53:26 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/09 17:46:48 rillig Exp $
 
 DISTNAME=	gdb-7.10
 PKGNAME=	cross-arm-none-eabi-${DISTNAME}
@@ -24,6 +24,10 @@ GNU_CONFIGURE_PREFIX=	${ARMELF_PREFIX}
 CONFIGURE_ARGS+=	--disable-werror --target=arm-none-eabi
 CONFIGURE_ARGS+=	--disable-nls
 INFO_FILES=		yes
+
+# Uses all kinds of bashisms but is only needed for testing.
+# If ever necessary, this should be fixed using REPLACE_BASH.
+CHECK_PORTABILITY_SKIP+=	sim/testsuite/sim/bfin/run-tests.sh
 
 .include "../../mk/bsd.prefs.mk"
 
