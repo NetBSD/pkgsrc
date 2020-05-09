@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 02:00:10 agc Exp $
+$NetBSD: distinfo,v 1.10 2020/05/09 05:56:56 taca Exp $
 
-SHA1 (treetop-1.4.15.gem) = 8c6ce803f909b9e1dfcb24100c283642f43d90d1
-RMD160 (treetop-1.4.15.gem) = d05541c28b7b9bb861346e8020e181deb74c60e3
-SHA512 (treetop-1.4.15.gem) = 350e3b4fc5236f5523e7ba7486699192a689d680e60687519ffdb8707241fce493a86713d1a0a1e243654c609e221b194e151c29bee9aa7cff71ab397223791b
-Size (treetop-1.4.15.gem) = 78336 bytes
-SHA1 (patch-.._treetop-1.4.15.gemspec) = b6fffe6bc4a7b2549edd54fbc53f4dd4907f1838
+SHA1 (treetop-1.6.10.gem) = 22896058cf2404b3f026a2e0e5b1ea2ad8bb424e
+RMD160 (treetop-1.6.10.gem) = 6f60810860d7a3d335606d5e754eb13619308ead
+SHA512 (treetop-1.6.10.gem) = adff1cf93d1ea071be948437e3fd2800c2e892d1dac49d4571a89336773e012007abb1b4e15f0a86031077c46a6667f8fca8e22920e5c29186e0c3227b4d82ee
+Size (treetop-1.6.10.gem) = 92160 bytes
