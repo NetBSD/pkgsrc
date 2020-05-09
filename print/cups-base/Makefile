@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/05/02 11:47:16 leot Exp $
+# $NetBSD: Makefile,v 1.32 2020/05/09 12:15:58 maya Exp $
 
 .include "../../print/cups/Makefile.common"
 
@@ -39,7 +39,6 @@ CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--without-bundledir
 CONFIGURE_ARGS+=	--without-icondir
 CONFIGURE_ARGS+=	--without-menudir
-CONFIGURE_ARGS+=	--disable-gssapi
 
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
