@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2823 2020/05/09 12:20:54 triaxx Exp $
+$NetBSD: CHANGES-2020,v 1.2824 2020/05/09 13:08:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4339,3 +4339,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Added audio/sndfile-tools version 1.04 [nia 2020-05-09]
 	Updated mail/msmtp to 1.8.10 [leot 2020-05-09]
 	Updated sysutils/grub2 to 2.04nb1 [triaxx 2020-05-09]
+	Updated www/firefox68 to 68.8.0 [nia 2020-05-09]
