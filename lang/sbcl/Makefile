@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2019/11/10 16:58:31 he Exp $
+# $NetBSD: Makefile,v 1.85 2020/05/09 13:28:09 rillig Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.5.7
@@ -59,12 +59,6 @@ SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		install.sh src/runtime/runtime.c doc/sbcl.1
 SUBST_VARS.fix-paths=		PREFIX
 SUBST_SED.fix-paths+=		-e 's,/var/log,${VARBASE}/log,g'
-
-SUBST_CLASSES+=			fix-gtar
-SUBST_STAGE.fix-gtar=		pre-configure
-SUBST_MESSAGE.fix-gtar=		Fixing GNU tar references.
-SUBST_FILES.fix-gtar=		contrib/asdf-install/installer.lisp
-SUBST_VARS.fix-gtar=		GTAR
 
 SUBST_CLASSES+=			fix-bins
 SUBST_STAGE.fix-bins=		pre-configure
