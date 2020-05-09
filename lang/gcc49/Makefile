@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/05/03 17:36:25 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2020/05/09 17:59:09 rillig Exp $
 
 GCC_PKGNAME=	gcc49
 .include	"version.mk"
@@ -32,6 +32,8 @@ CHECK_PORTABILITY_SKIP+=	contrib/* # not needed
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
+CHECK_PORTABILITY_SKIP+= contrib/* # not needed for building
+
 ## Build outside ${WRKSRC}
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
