@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2819 2020/05/09 08:41:58 wen Exp $
+$NetBSD: CHANGES-2020,v 1.2820 2020/05/09 08:59:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4335,3 +4335,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/p5-HTTP-Cookies to 6.08 [wen 2020-05-09]
 	Updated www/p5-HTTP-Message to 6.22 [wen 2020-05-09]
 	Updated textproc/p5-XML-Compile to 1.63 [wen 2020-05-09]
+	Updated textproc/p5-XML-Compile-SOAP to 3.26 [wen 2020-05-09]
