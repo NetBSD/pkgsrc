@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2020/03/08 16:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2020/05/09 11:08:25 leot Exp $
 
-DISTNAME=	msmtp-1.8.7
-PKGREVISION=	2
+DISTNAME=	msmtp-1.8.10
 CATEGORIES=	mail
 MASTER_SITES=	https://marlam.de/msmtp/releases/
 EXTRACT_SUFX=	.tar.xz
