@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/03/30 16:29:54 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/09 17:54:54 rillig Exp $
 
 DISTNAME=		gcc-8.3.0
 PKGNAME=		cross-powerpc-none-elf-${DISTNAME}
@@ -35,6 +35,8 @@ WRAPPER_SHELL=		${TOOLS_PATH.bash}
 USE_TOOLS+=		bash gmake gsed makeinfo perl
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
+CHECK_PORTABILITY_SKIP+= contrib/* # not needed for building
 
 GNU_CONFIGURE_PREFIX=	${POWERPCELF_PREFIX}
 
