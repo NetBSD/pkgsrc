@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/05/09 22:39:53 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2020/05/09 22:42:37 rillig Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -94,11 +94,8 @@ TEST_DIR=	${.CURDIR}/tests
 
 # If RUNTESTS is defined, then just run those tests, otherwise run them all.
 .if defined(RUNTESTS)
-TEST_MAKEFILES=	${RUNTESTS:S/^/${TEST_DIR}\//:S/$/.mk/}
-.  for _mkfile_ in ${TEST_MAKEFILES}
-.    if exists(${_mkfile_})
-.      include "${_mkfile_}"
-.    endif
+.  for mkfile in ${RUNTESTS:@test@ ${TEST_DIR}/${test}.mk @}
+.    include "${mkfile}"
 .  endfor
 .else
 .  include "tests/include-pkgdir-slashdot.mk"
