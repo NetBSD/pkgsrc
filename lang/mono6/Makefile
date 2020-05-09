@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/05/09 16:45:57 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/09 16:52:51 rillig Exp $
 
 DISTNAME=	mono-6.8.0.105
 PKGREVISION=	3
@@ -97,6 +97,9 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.0/Browsers
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.5
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.5/Browsers
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/mconfig
+
+# Uses [[ ... ]], not needed during the build.
+SKIP_PORTABILITY_CHECK+=	acceptance-tests/microbench-perf.sh.in
 
 TEST_TARGET=	check
 
