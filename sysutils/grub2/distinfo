@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2020/05/02 16:53:54 triaxx Exp $
+$NetBSD: distinfo,v 1.10 2020/05/09 12:17:52 triaxx Exp $
 
 SHA1 (grub-2.04.tar.gz) = de58e12e02c4d60ef0f24057bde6abde8474c3e1
 RMD160 (grub-2.04.tar.gz) = f990ff7dc3e4fa6f1048b87b192a0ae7cf3b3c63
@@ -8,6 +8,7 @@ SHA1 (unifont-5.1.20080820.pcf.gz) = 87f8600ba24e521b5d20bdf6c4b71af8ae861e3a
 RMD160 (unifont-5.1.20080820.pcf.gz) = ddc87231a7c1e18e81a6f4578a4f0279bcd0c292
 SHA512 (unifont-5.1.20080820.pcf.gz) = 8939e2bc82ca97b60e6678f3ff079a2be7ba9b702f2e8ee289e853af5823695f7baafbf14b674fc5e41071f2a6de4f2dadd56bf8b4653849dd756d59622f1649
 Size (unifont-5.1.20080820.pcf.gz) = 1379965 bytes
+SHA1 (patch-configure) = 9c84557e13f6ce747a5e30e383aa3599a2c607b7
 SHA1 (patch-grub-core_osdep_bsd_hostdisk.c) = 2c7251081082d671d21343b5e95300a6779b4b21
 SHA1 (patch-grub-core_osdep_generic_blocklist.c) = e1bf4511edfea1754204ffb5fb2a6a5a777b8b94
 SHA1 (patch-util_getroot.c) = 7c2f148ffa778872de4f59b6fcf365bd1a497acf
