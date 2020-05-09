@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/01/26 17:32:25 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2020/05/09 19:55:10 rillig Exp $
 
 DISTNAME=	w3c-httpd-3.0A
 PKGREVISION=	1
@@ -33,7 +33,6 @@ SUBST_CLASSES+=		strcasestr
 SUBST_STAGE.strcasestr=	pre-configure
 SUBST_FILES.strcasestr=	Daemon/Implementation/HTWild.c \
 			Library/Implementation/HTString.c \
-			Library/Implementation/HTString.h \
 			Library/Implementation/HTString.h
 SUBST_SED.strcasestr=	-e 's,\([[:blank:]]\)\(strcasestr\),\1x\2,g'
 
