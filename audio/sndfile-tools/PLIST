@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/09 09:55:32 nia Exp $
+bin/sndfile-generate-chirp
+${PLIST.jack}bin/sndfile-jackplay
+bin/sndfile-mix-to-mono
+bin/sndfile-resample
+bin/sndfile-spectrogram
+bin/sndfile-waveform
+man/man1/sndfile-generate-chirp.1
+man/man1/sndfile-jackplay.1
+man/man1/sndfile-mix-to-mono.1
+man/man1/sndfile-resample.1
+man/man1/sndfile-spectrogram.1
+share/doc/sndfile-tools/index.html
+share/doc/sndfile-tools/sweep.png
+share/doc/sndfile-tools/wave-example.png
+share/doc/sndfile-tools/wave-sweep.png
