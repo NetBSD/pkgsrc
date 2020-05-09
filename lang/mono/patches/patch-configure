@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2018/07/27 20:02:40 jperkin Exp $
+$NetBSD: patch-configure,v 1.5 2020/05/09 12:39:44 rillig Exp $
 
 Fix --with-gc variables.
 
@@ -91,7 +91,7 @@ Fix --with-gc variables.
  SQLITE="libsqlite.so.0"
  SQLITE3="libsqlite3.so.0"
 -X11="libX11.so"
-+X11="/usr/X11R7/lib/libX11.so"
++X11="@X11BASE@/lib/libX11.so"
  GDKX11="libgdk-x11-2.0.so.0"
  GTKX11="libgtk-x11-2.0.so.0"
  XINERAMA="libXinerama.so.1"
