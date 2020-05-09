@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/05/04 21:21:11 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2020/05/09 00:09:15 tnn Exp $
 
 DISTNAME=	openjdk-jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -115,14 +115,14 @@ SUBST_FILES.fontpaths=		make/data/fontconfig/bsd.fontconfig.properties
 SUBST_FILES.fontpaths+=		src/java.desktop/unix/native/common/awt/fontpath.c
 SUBST_VARS.fontpaths=		PREFIX BUILDLINK_PREFIX.fontconfig
 
-PLIST_VARS+=			aot
-PLIST_VARS+=			internal_vm_compiler
+PLIST_VARS+=			aot internal_vm_compiler jvmci
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST.aot=			yes
 PLIST.internal_vm_compiler=	yes
+PLIST.jvmci=			yes
 .endif
 .if ${MACHINE_ARCH} == "aarch64"
-PLIST.internal_vm_compiler=	yes
+PLIST.jvmci=			yes
 .endif
 
 .if ${OPSYS} == "NetBSD"
