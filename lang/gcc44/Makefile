@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/01/18 23:32:42 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2020/05/09 17:57:56 rillig Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc44-${GCC_VERSION}
@@ -22,6 +22,10 @@ FILES_SUBST+=		PKGNAME=${PKGNAME}
 
 # To avoid GNU surprises
 CONFIG_SHELL=		${TOOLS_PATH.bash}
+
+# TODO: document why GNU_CONFIGURE is not set here.
+GNU_CONFIGURE_STRICT=	no # has sub-configures
+CHECK_PORTABILITY_SKIP+= contrib/* # not needed for building
 
 NOT_FOR_PLATFORM=	Interix-*-* DragonFly-*-*
 UNLIMIT_RESOURCES+=	datasize
