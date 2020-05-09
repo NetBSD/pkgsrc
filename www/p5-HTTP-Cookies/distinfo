@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2019/11/28 11:26:59 mef Exp $
+$NetBSD: distinfo,v 1.8 2020/05/09 08:19:06 wen Exp $
 
-SHA1 (HTTP-Cookies-6.07.tar.gz) = ff884d4051e94a16faa47d5f8db6cda0e5ea6cda
-RMD160 (HTTP-Cookies-6.07.tar.gz) = 0070b93f1731c8a0d778bfff678a3b18d482fa63
-SHA512 (HTTP-Cookies-6.07.tar.gz) = c4026c39b38e4a24e65a52ef7ebd688c16ff71bced5938c2e9c51e4770aff272a9dca76915a4373e61cbb2c6a98257c0abde109bde7ba0b7369d5f3d69dc6b24
-Size (HTTP-Cookies-6.07.tar.gz) = 41138 bytes
+SHA1 (HTTP-Cookies-6.08.tar.gz) = ce3c151d2dd0e9dca84088832915312b7b69f446
+RMD160 (HTTP-Cookies-6.08.tar.gz) = 91aea987abadb7c9b48d153722677b09dea5a942
+SHA512 (HTTP-Cookies-6.08.tar.gz) = ddcbe61df3e419c3e29ee60a360d5d622f49281db612cfdb586508f50351cdfa3042c5b56e29648a776cd636919b5a4e26d5f9176a2d09a76c23b5acdef5bba9
+Size (HTTP-Cookies-6.08.tar.gz) = 41482 bytes
