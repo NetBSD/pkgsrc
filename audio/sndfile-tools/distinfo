@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/09 09:55:32 nia Exp $
+
+SHA1 (sndfile-tools-1.04.tar.bz2) = bd9c90b8b9dfbfdc3f9330a77f9d310e6a8cc46f
+RMD160 (sndfile-tools-1.04.tar.bz2) = d5b714668aea20d7da328862b11a023f1dbfcaae
+SHA512 (sndfile-tools-1.04.tar.bz2) = b93fd74386960c986031fd1652335bc34243bd785ccf31480b82f4d76ef86760ca53173aace273a635db70db46c0c1c4066328aef9c21c01c6e76346dbe56390
+Size (sndfile-tools-1.04.tar.bz2) = 715692 bytes
