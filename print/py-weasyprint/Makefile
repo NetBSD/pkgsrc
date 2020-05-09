@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/04/23 18:30:30 adam Exp $
+# $NetBSD: Makefile,v 1.28 2020/05/09 13:10:35 rillig Exp $
 
 DISTNAME=	WeasyPrint-51
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -28,11 +28,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
-
-SUBST_CLASSES+=		pyversfx
-SUBST_STAGE.pyversfx=	pre-configure
-SUBST_FILES.pyversfx=	setup.cfg
-SUBST_VARS.pyversfx=	PYVERSSUFFIX
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
