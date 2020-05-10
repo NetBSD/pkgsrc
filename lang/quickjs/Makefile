@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/05/10 10:17:05 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/10 10:32:33 rillig Exp $
 
 NAME=		quickjs
 QJS_DATE=	2020-04-12
@@ -17,6 +17,7 @@ LICENSE=	mit
 USE_TOOLS+=	gmake
 MAKE_FLAGS=	prefix=${PREFIX}
 TEST_TARGET=	test
+AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,5 +34,10 @@ PLIST.lto=yes
 # Presumed to be supported
 MAKE_ENV+=	CONFIG_BIGNUM=yes
 .endif
+
+post-install:
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.html *.pdf ${DESTDIR}${PREFIX}/share/doc/quickjs/
+	cd ${WRKSRC}/examples && ${INSTALL_DATA} *.js *.c ${DESTDIR}${PREFIX}/share/doc/quickjs/examples/
+	cd ${WRKSRC}/tests && ${INSTALL_DATA} *.js *.c ${DESTDIR}${PREFIX}/share/doc/quickjs/tests/
 
 .include "../../mk/bsd.pkg.mk"
