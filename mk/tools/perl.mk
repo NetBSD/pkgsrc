@@ -1,4 +1,4 @@
-# $NetBSD: perl.mk,v 1.25 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: perl.mk,v 1.26 2020/05/10 06:05:35 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -28,10 +28,17 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
+# Packages that need perl as a tool should:
 #
-# This Makefile fragment defines additional variables that are used by
-# packages that use the perl tool.
+#	USE_TOOLS+=	perl	# (or perl:run)
 #
+# Otherwise they get a warning whenever the perl tool is used, usually in
+# the configure phase.  To suppress this warning in case perl is not
+# actually needed:
+#
+#	TOOLS_BROKEN+=	perl
+#
+# Keywords: perl USE_TOOLS
 
 .if defined(_USE_TOOLS) && !empty(_USE_TOOLS:Mperl)
 #
@@ -40,7 +47,7 @@
 # and existing on the filesystem.
 #
 .  include "../../lang/perl5/vars.mk"
-.else
+.elif !${TOOLS_BROKEN:U:Mperl}
 #
 # If a package doesn't explicitly say it uses perl, then create a "broken"
 # perl in the tools directory.
