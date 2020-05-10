@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2842 2020/05/10 22:07:49 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2843 2020/05/10 23:18:22 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4462,3 +4462,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/tex-texinfo to 5.1.55066 [markd 2020-05-10]
 	Updated graphics/tex-animate to 20200507 [markd 2020-05-10]
 	Updated graphics/tex-animate-doc to 20200507 [markd 2020-05-10]
+	Updated print/tex-babel to 3.43 [markd 2020-05-10]
+	Updated print/tex-babel-doc to 3.43 [markd 2020-05-10]
+	Updated print/tex-babel-portuges to 1.2r [markd 2020-05-10]
