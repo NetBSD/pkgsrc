@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:31:31 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/10 04:31:45 markd Exp $
 
 DISTNAME=	fontawesome
 PKGNAME=	tex-${DISTNAME}-4.6.3.2
+PKGREVISION=	1
 TEXLIVE_REV=	41412
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

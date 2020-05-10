@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 19:30:13 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/10 04:31:48 markd Exp $
 
 DISTNAME=	manfnt-font
 PKGNAME=	tex-${DISTNAME}-2014
+PKGREVISION=	1
 TEXLIVE_REV=	35799
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/04/26 12:21:16 markd Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/10 04:31:48 markd Exp $
 
 DISTNAME=	libertine
 PKGNAME=	tex-${DISTNAME}-5.3.0.54583
+PKGREVISION=	1
 TEXLIVE_REV=	54583
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2019/12/06 20:21:36 markd Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/10 04:31:59 markd Exp $
 
 DISTNAME=	hyphen-chinese
 PKGNAME=	tex-${DISTNAME}-2019.51186
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	51186
 
 MAINTAINER=	minskim@NetBSD.org

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/04/26 12:21:19 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/10 04:31:52 markd Exp $
 
 DISTNAME=	quattrocento
 PKGNAME=	tex-${DISTNAME}-2020
+PKGREVISION=	1
 TEXLIVE_REV=	54512
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

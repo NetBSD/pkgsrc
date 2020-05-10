@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/04/26 12:21:16 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/10 04:31:48 markd Exp $
 
 DISTNAME=	librecaslon
 PKGNAME=	tex-${DISTNAME}-2020
+PKGREVISION=	1
 TEXLIVE_REV=	54512
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
