@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/04/26 09:47:41 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/10 02:14:18 js Exp $
 
 DISTNAME=	sdk-source-20191111
 PKGNAME=	ppc-morphos-binutils-2.33.1
@@ -31,7 +31,7 @@ post-extract:
 	${RUN} cd ${WRKDIR}/sdk-source/binutils && \
 		${XZCAT} binutils-${PKGVERSION_NOREV}.tar.xz | ${GTAR} xf -
 
-do-patch:
+pre-patch:
 	${RUN} cd ${WRKDIR}/sdk-source/binutils && \
 		${PATCH} -p0 <binutils-${PKGVERSION_NOREV}-morphos.diff
 
