@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2020/05/10 04:13:26 markd Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/10 12:52:42 markd Exp $
 
 DISTNAME=	collection-langjapanese
 PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54074
+TEXLIVE_REV=	54894
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -35,6 +35,7 @@ DEPENDS+=	tex-ipaex-[0-9]*:../../fonts/tex-ipaex
 DEPENDS+=	tex-japanese-otf-[0-9]*:../../fonts/tex-japanese-otf
 # depend japanese-otf-uptex
 # depend jlreq
+# depend jlreq-deluxe
 DEPENDS+=	tex-jsclasses-[0-9]*:../../print/tex-jsclasses
 # lshort-japanese is documentation only
 # depend luatexja
