@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.891 2020/05/10 04:00:30 markd Exp $
+# $NetBSD: Makefile,v 1.892 2020/05/10 05:42:50 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -704,8 +704,6 @@ SUBDIR+=	tex-pst-tools
 SUBDIR+=	tex-pst-tools-doc
 SUBDIR+=	tex-pst-tree
 SUBDIR+=	tex-pst-tree-doc
-SUBDIR+=	tex-pst-vue3d
-SUBDIR+=	tex-pst-vue3d-doc
 SUBDIR+=	tex-pstricks
 SUBDIR+=	tex-pstricks-add
 SUBDIR+=	tex-pstricks-add-doc
