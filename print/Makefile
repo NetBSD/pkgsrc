@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.765 2020/05/10 04:08:53 markd Exp $
+# $NetBSD: Makefile,v 1.766 2020/05/10 05:49:24 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -151,7 +151,6 @@ SUBDIR+=	stylewriter
 SUBDIR+=	tcl-pdflib
 SUBDIR+=	tex-2up
 SUBDIR+=	tex-2up-doc
-SUBDIR+=	tex-FAQ-en-doc
 SUBDIR+=	tex-IEEEconf
 SUBDIR+=	tex-IEEEconf-doc
 SUBDIR+=	tex-IEEEtran
@@ -288,7 +287,6 @@ SUBDIR+=	tex-babel-serbianc
 SUBDIR+=	tex-babel-slovak
 SUBDIR+=	tex-babel-slovenian
 SUBDIR+=	tex-babel-sorbian
-SUBDIR+=	tex-babel-spanglish
 SUBDIR+=	tex-babel-spanish
 SUBDIR+=	tex-babel-swedish
 SUBDIR+=	tex-babel-thai
@@ -1282,8 +1280,6 @@ SUBDIR+=	tex-soulpos
 SUBDIR+=	tex-soulpos-doc
 SUBDIR+=	tex-soulutf8
 SUBDIR+=	tex-soulutf8-doc
-SUBDIR+=	tex-spanish-mx
-SUBDIR+=	tex-spanish-mx-doc
 SUBDIR+=	tex-sphack
 SUBDIR+=	tex-sphack-doc
 SUBDIR+=	tex-splitbib
