@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.1 2020/05/10 15:02:44 maya Exp $
+
+SHA1 (gcc-10.1.0.tar.xz) = 1af8d963e4a74d05a8f2d0f795ea52d2b91f6c50
+RMD160 (gcc-10.1.0.tar.xz) = eb9c7a9c10fbe5b4ff84818b280248ab97d17769
+SHA512 (gcc-10.1.0.tar.xz) = 0cb2a74c793face751f42bc580960b00e2bfea785872a0a2155f1f1dbfaa248f9591b67f4322db0f096f8844aca9243bc02732bda106c3b6e43b02bb67eb3096
+Size (gcc-10.1.0.tar.xz) = 74591240 bytes
+SHA1 (isl-0.16.1.tar.bz2) = c5a2b201bf05229647e73203c0bf2d9679d4d21f
+RMD160 (isl-0.16.1.tar.bz2) = 5a99db3fe0d0a1f6bbac1ed4448f2403495c55b2
+SHA512 (isl-0.16.1.tar.bz2) = c188667a84dc5bdddb4ab7c35f89c91bf15a8171f4fcaf41301cf285fb7328846d9a367c096012fec4cc69d244f0bc9e95d84c09ec097394cd4093076f2a041b
+Size (isl-0.16.1.tar.bz2) = 1626446 bytes
+SHA1 (patch-contrib_download__prerequisites) = 9cdcde21ab174052911447d20762ddfd40aa8791
+SHA1 (patch-fixincludes_inclhack.def) = 7b00974d3f52a8364190a607f52a5d7e8a6db41a
+SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
+SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = f4d8ab855d0755dfe533053cedde6940cb837ce0
+SHA1 (patch-gcc_configure) = 6a2d8eeeed2bf08c3c81291178e669dc91c913ce
+SHA1 (patch-gcc_ggc-common.c) = 3e325767922ab7d2079fdb9a3d6b6aa531a2fea5
+SHA1 (patch-gcc_lto_lto.c) = 7bd85ac8ade76a28c394f6fbe5d495f91824f79f
+SHA1 (patch-gcc_targhooks.c) = b28d8a9696d07bbfb00b7d8c55193ba99447ff1d
+SHA1 (patch-isl_configure) = 5523c76d95b229b3cd25461b4c2b7af24bf2534e
+SHA1 (patch-libffi_configure) = 22006b20d7f655e2455a7ad613d676703b6c1ccc
+SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 27b84a11378fb648dfaad0c70abedd77a0a1c1a8
+SHA1 (patch-libgcc_crtstuff.c) = a16d465039de00c195cf0694560140a9c38f3a25
+SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
+SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = 4183b00a5ee6e61524da4755c825a0c08fd01ed6
