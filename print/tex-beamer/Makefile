@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/04/27 22:35:38 markd Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/10 23:27:32 markd Exp $
 
 DISTNAME=	beamer
-PKGNAME=	tex-${DISTNAME}-3.57
-TEXLIVE_REV=	54841
+PKGNAME=	tex-${DISTNAME}-3.58
+TEXLIVE_REV=	55046
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/beamer
