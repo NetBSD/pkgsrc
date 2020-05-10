@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.13 2020/05/09 21:08:05 rillig Exp $
+# $NetBSD: create.mk,v 1.14 2020/05/10 14:36:18 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -160,7 +160,9 @@ ${TOOLS_CMD.${_t_}}:
 		logprefix='"set args$$shquoted_args; shift; "';		\
 		logmain=${TOOLS_SCRIPT.${_t_}:Q:Q};			\
 		logsuffix='';						\
-	elif ${TEST} -n ${TOOLS_PATH.${_t_}:Q}""; then			\
+	elif ${TEST} -z ${TOOLS_PATH.${_t_}:Q}""; then			\
+		${FAIL_MSG} "[mk/tools/create.mk] Invalid tool definition for ${_t_}"; \
+	else								\
 		if ${TEST} -n ${TOOLS_ARGS.${_t_}:Q}""; then		\
 			create=wrapper;					\
 			script=${TOOLS_SCRIPT_DFLT.${_t_}:Q};		\
@@ -177,8 +179,6 @@ ${TOOLS_CMD.${_t_}}:
 				logsuffix='$$shquoted_args';		\
 			esac;						\
 		fi;							\
-	else								\
-		create=symlink;						\
 	fi;								\
 	case "$$create" in						\
 	wrapper)							\
