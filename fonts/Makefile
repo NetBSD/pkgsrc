@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.338 2020/05/03 08:58:49 markd Exp $
+# $NetBSD: Makefile,v 1.339 2020/05/10 03:58:54 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -539,6 +539,8 @@ SUBDIR+=	tex-grotesq-doc
 SUBDIR+=	tex-hacm
 SUBDIR+=	tex-hacm-doc
 SUBDIR+=	tex-hands
+SUBDIR+=	tex-haranoaji
+SUBDIR+=	tex-haranoaji-doc
 SUBDIR+=	tex-helvetic
 SUBDIR+=	tex-heuristica
 SUBDIR+=	tex-heuristica-doc
