@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2020/05/09 16:52:51 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/05/10 18:24:56 rillig Exp $
 
 DISTNAME=	mono-6.8.0.105
 PKGREVISION=	3
@@ -25,6 +25,7 @@ USE_LANGUAGES+=	c c99 c++
 EXTRACT_USING=	gtar
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-btls
 CONFIGURE_ARGS+=	--disable-btls-lib
@@ -56,7 +57,7 @@ REPLACE_BASH+=	mono/arch/arm/dpiops.sh
 REPLACE_BASH+=	mono/arch/arm/vfpops.sh
 REPLACE_BASH+=	scripts/mono-package-runtime
 REPLACE_BASH+=	scripts/mono-find-provides.in scripts/mono-find-requires.in
-REPLACE_BASH+=	scripts/mono-test-install web/mono-build-w32.sh
+REPLACE_BASH+=	scripts/mono-test-install
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/gtk/compile.sh
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/png/compile.sh
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/win32/compile.sh
@@ -122,6 +123,9 @@ SUBST_MESSAGE.fix-python=	Fixing python binary name
 SUBST_FILES.fix-python+=	mono/mini/Makefile.am.in
 SUBST_FILES.fix-python+=	mono/tests/Makefile.am
 SUBST_SED.fix-python=		-e 's,python,${PYTHONBIN},'
+
+# Uses [[ ... ]], not needed during the build.
+CHECK_PORTABILITY_SKIP+=	acceptance-tests/microbench-perf.sh.in
 
 .include "../../mk/bsd.prefs.mk"
 
