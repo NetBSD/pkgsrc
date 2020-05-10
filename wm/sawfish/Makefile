@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.95 2020/03/10 22:11:07 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2020/05/10 14:07:07 rillig Exp $
 
 DISTNAME=		sawfish_1.12.0
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11 wm
 MASTER_SITES=		http://download.tuxfamily.org/sawfish/
 EXTRACT_SUFX=		.tar.xz
@@ -27,7 +27,8 @@ MAKE_ENV+=		REP_ENV_PKGSRC=${REP_ENV_PKGSRC:Q}
 
 SUBST_CLASSES+=		env
 SUBST_STAGE.env=	pre-configure
-SUBST_FILES.env=	lisp/sawfish/ui/main.jl.in po/sawfish-xgettext
+SUBST_FILES.env=	lisp/sawfish/cfg/main.jl.in
+SUBST_FILES.env+=	po/sawfish-xgettext
 SUBST_FILES.env+=	scripts/sawfish-*.jl*
 SUBST_SED.env=		-e 's,exec rep,exec env ${REP_ENV_PKGSRC} rep,g'
 
