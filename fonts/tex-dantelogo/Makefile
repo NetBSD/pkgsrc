@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:31:23 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/10 04:31:42 markd Exp $
 
 DISTNAME=	dantelogo
 PKGNAME=	tex-${DISTNAME}-0.03
+PKGREVISION=	1
 TEXLIVE_REV=	38599
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

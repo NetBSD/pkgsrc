@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:27 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/10 04:31:43 markd Exp $
 
 DISTNAME=	electrum
 PKGNAME=	tex-${DISTNAME}-1.005.b
+PKGREVISION=	1
 TEXLIVE_REV=	19705
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

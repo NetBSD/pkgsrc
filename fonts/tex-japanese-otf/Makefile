@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:31:39 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/10 04:31:47 markd Exp $
 
 DISTNAME=	japanese-otf
 PKGNAME=	tex-${DISTNAME}-1.7b8
+PKGREVISION=	1
 TEXLIVE_REV=	50769
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

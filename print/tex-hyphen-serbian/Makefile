@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/12/06 20:21:41 markd Exp $
+# $NetBSD: Makefile,v 1.12 2020/05/10 04:32:04 markd Exp $
 
 DISTNAME=	hyphen-serbian
 PKGNAME=	tex-${DISTNAME}-1.0a.2019.51186
+PKGREVISION=	1
 TEXLIVE_REV=	51186
 
 MAINTAINER=	minskim@NetBSD.org

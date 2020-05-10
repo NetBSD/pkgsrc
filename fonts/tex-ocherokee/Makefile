@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:31:46 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/10 04:31:51 markd Exp $
 
 DISTNAME=	ocherokee
 PKGNAME=	tex-${DISTNAME}-2014
+PKGREVISION=	1
 TEXLIVE_REV=	25689
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
