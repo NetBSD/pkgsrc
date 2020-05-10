@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/03/20 11:57:50 nia Exp $
+# $NetBSD: Makefile,v 1.19 2020/05/10 14:49:43 rillig Exp $
 
 DISTNAME=	libpano13-2.9.19
 PKGREVISION=	2
@@ -14,6 +14,7 @@ MAKE_JOBS_SAFE=		no
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
+TOOLS_BROKEN+=		perl
 PKGCONFIG_OVERRIDE=	libpano13.pc.in
 
 .include "../../mk/bsd.prefs.mk"
