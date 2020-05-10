@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2020/03/20 11:58:13 nia Exp $
+# $NetBSD: Makefile,v 1.68 2020/05/10 14:18:54 rillig Exp $
 #
 
 DISTNAME=		ganglia-3.7.2
@@ -60,15 +60,8 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing default paths
-SUBST_FILES.paths=	configure ganglia.html			\
-			gmetad/cmdline.c gmetad/cmdline.h	\
-			gmetric/cmdline.c gmetric/cmdline.h	\
-			gmond/cmdline.c gmond/cmdline.h		\
-			gmond/g25_config.h gmond/gmond.conf.5	\
-			gmond/modules/conf.d/modpython.conf	\
-			gmond/modules/conf.d/modpython.conf.in	\
-			gmond/modules/python/README.in		\
-			mans/gmetad.1 mans/gmetric.1 mans/gmond.1
+SUBST_FILES.paths=	configure ganglia.html \
+			gmond/gmond.conf.5 mans/gmetric.1
 SUBST_SED.paths+=	-e 's|/etc/ganglia|${PKG_SYSCONFDIR}|g'
 SUBST_SED.paths+=	-e 's|/usr/lib/ganglia|${PREFIX}/lib/ganglia|g'
 SUBST_VARS.paths+=	GANGLIA_VARBASE
