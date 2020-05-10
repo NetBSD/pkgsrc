@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/02/10 13:06:08 he Exp $
+@comment $NetBSD: PLIST,v 1.4 2020/05/10 10:32:33 rillig Exp $
 bin/qjs
 bin/qjsc
 bin/qjscalc
@@ -6,3 +6,28 @@ include/quickjs/quickjs-libc.h
 include/quickjs/quickjs.h
 lib/quickjs/libquickjs.a
 ${PLIST.lto}lib/quickjs/libquickjs.lto.a
+share/doc/quickjs/examples/fib.c
+share/doc/quickjs/examples/fib_module.js
+share/doc/quickjs/examples/hello.js
+share/doc/quickjs/examples/hello_module.js
+share/doc/quickjs/examples/pi_bigdecimal.js
+share/doc/quickjs/examples/pi_bigfloat.js
+share/doc/quickjs/examples/pi_bigint.js
+share/doc/quickjs/examples/point.c
+share/doc/quickjs/examples/test_fib.js
+share/doc/quickjs/examples/test_point.js
+share/doc/quickjs/jsbignum.html
+share/doc/quickjs/jsbignum.pdf
+share/doc/quickjs/quickjs.html
+share/doc/quickjs/quickjs.pdf
+share/doc/quickjs/tests/bjson.c
+share/doc/quickjs/tests/microbench.js
+share/doc/quickjs/tests/test_bignum.js
+share/doc/quickjs/tests/test_bjson.js
+share/doc/quickjs/tests/test_builtin.js
+share/doc/quickjs/tests/test_closure.js
+share/doc/quickjs/tests/test_loop.js
+share/doc/quickjs/tests/test_op.js
+share/doc/quickjs/tests/test_op_overloading.js
+share/doc/quickjs/tests/test_qjscalc.js
+share/doc/quickjs/tests/test_std.js
