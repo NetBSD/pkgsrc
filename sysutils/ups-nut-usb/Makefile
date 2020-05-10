@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2018/09/21 00:59:53 jym Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/10 14:12:33 rillig Exp $
 
 .include "../../sysutils/ups-nut/Makefile.common"
 
@@ -12,6 +12,7 @@ INSTALLATION_DIRS+=	${PREFIX}/${PKGMANDIR}/man8
 
 BUILD_DEFS+=		NUT_STATEDIR
 
+TOOLS_BROKEN+=		perl
 CONFIGURE_ARGS+=	--with-usb --with-drvpath=${NUT_DRVDIR:Q}
 
 do-install:
