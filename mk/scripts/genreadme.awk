@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.38 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: genreadme.awk,v 1.39 2020/05/10 07:48:10 rillig Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006, 2015 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -397,7 +397,7 @@ END {
 				gsub(/%%VULNERABILITIES%%/, ""vul"");
 				gsub(/%%VULDATE%%/, ""vuldate"");
 				gsub(/%%RUN_DEPENDS%%/, ""rundeps"");
-				gsub(/%%OPTIONS%%/, ""options[toppkg]"");
+				gsub(/%%OPTIONS%%/, escape_re_replacement(""options[toppkg]""));
 
 				line = $0;
 
@@ -682,6 +682,11 @@ function reg2str(reg){
 	gsub(/\]/, "\\]", reg);
 	reg = " "reg" ";
 	return(reg);
+}
+
+function escape_re_replacement(s) {
+	gsub(/&/, "\\\\\\&", s);
+	return s;
 }
 
 #
