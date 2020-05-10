@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/03/11 19:30:53 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2020/05/10 14:50:31 rillig Exp $
 
 DISTNAME=	goocanvas-2.0.4
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v2
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config msgfmt gmake
+TOOLS_BROKEN+=		perl
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	goocanvas-2.0.pc.in
