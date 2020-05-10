@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/04/24 12:33:26 nia Exp $
+# $NetBSD: Makefile,v 1.22 2020/05/10 05:06:21 rillig Exp $
 
 DISTNAME=	libatomic_ops-7.6.10
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ivmai/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
