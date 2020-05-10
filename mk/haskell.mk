@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.19 2020/03/30 18:23:48 riastradh Exp $
+# $NetBSD: haskell.mk,v 1.20 2020/05/10 17:46:59 rillig Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -163,8 +163,8 @@ HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	yes
 .include "../../lang/ghc88/buildlink3.mk"
 
 # Tools
-_GHC_BIN=		${BUILDLINK_PREFIX.ghc}/bin/ghc
-_GHC_PKG_BIN=		${BUILDLINK_PREFIX.ghc}/bin/ghc-pkg
+_GHC_BIN=		${BUILDLINK_PREFIX.ghc:U${PREFIX}}/bin/ghc
+_GHC_PKG_BIN=		${BUILDLINK_PREFIX.ghc:U${PREFIX}}/bin/ghc-pkg
 _HASKELL_BIN=		${_GHC_BIN} # Expose to the outer scope.
 _HASKELL_PKG_BIN=	${_GHC_PKG_BIN} # Expose to the outer scope.
 
@@ -211,23 +211,58 @@ CONFIGURE_ARGS+=	--with-haddock=${BUILDLINK_PREFIX.ghc:Q}/bin/haddock
 # Optimization
 CONFIGURE_ARGS+=	-O${HASKELL_OPTIMIZATION_LEVEL}
 
-# Starting from GHC 7.10 (or 7.8?), packages are installed in
-# directories with a hashed name so we can no longer predict the
-# contents of PLIST.
+# Starting from GHC 7.10 (or 7.8?), packages are installed in directories
+# with a hashed name, which makes it a bit more complicated to generate
+# the PLIST.
+#
+_HASKELL_PL_INTF=	${_HASKELL_PKG_ID_FILE:H:S,^${PREFIX}/,,}
+_HASKELL_PL_IMPL_AWK=	prev == "import-dirs:" { print $$1; exit } { prev = $$0 }
+_HASKELL_PL_IMPL_CMD=	${AWK} '${_HASKELL_PL_IMPL_AWK}' ${DESTDIR}${_HASKELL_PKG_DESCR_FILE}
+_HASKELL_PL_IMPL=	${_HASKELL_PL_IMPL_CMD:sh:S,^${PREFIX}/,,}
+_HASKELL_PL_DOCS=	${_HASKELL_PL_IMPL:S,^lib,share/doc,:C,-[A-Za-z0-9]*$,,}
+_HASKELL_PL_PLATFORM=	${_HASKELL_PL_IMPL:H:T}
+_HASKELL_PL_PKGID_CMD=	${CAT} ${DESTDIR}${_HASKELL_PKG_ID_FILE}
+_HASKELL_PL_PKGID=	${_HASKELL_PL_PKGID_CMD:sh}
+_HASKELL_PL_VER=	${_HASKELL_VERSION:S,-,,}
+
+PLIST_SUBST+=		HS_INTF=${_HASKELL_PL_INTF}
+PLIST_SUBST+=		HS_IMPL=${_HASKELL_PL_IMPL}
+PLIST_SUBST+=		HS_DOCS=${_HASKELL_PL_DOCS}
+PLIST_SUBST+=		HS_PLATFORM=${_HASKELL_PL_PLATFORM}
+PLIST_SUBST+=		HS_PKGID=${_HASKELL_PL_PKGID}
+PLIST_SUBST+=		HS_VER=${_HASKELL_PL_VER}
+PRINT_PLIST_AWK+=	{ sub("^${_HASKELL_PL_INTF}",       "$${HS_INTF}") }
+PRINT_PLIST_AWK+=	{ sub("^${_HASKELL_PL_IMPL}",       "$${HS_IMPL}") }
+PRINT_PLIST_AWK+=	{ sub("^${_HASKELL_PL_DOCS}",       "$${HS_DOCS}") }
+PRINT_PLIST_AWK+=	{ sub("/${_HASKELL_PL_PLATFORM}/", "/$${HS_PLATFORM}/") }
+PRINT_PLIST_AWK+=	{ sub( "${_HASKELL_PL_PKGID}",      "$${HS_PKGID}") }
+PRINT_PLIST_AWK+=	{ sub( "${_HASKELL_PL_VER}",        "$${HS_VER}") }
+
+.if !exists(${PKGDIR}/PLIST)
+_HS_PLIST_STATUS=	missing
+.elif ${${GREP} HS_INTF ${PKGDIR}/PLIST || ${TRUE}:L:sh}
+_HS_PLIST_STATUS=	up-to-date
+.else
+_HS_PLIST_STATUS=	outdated
+.endif
+
+HS_UPDATE_PLIST?=	no
+
+.if ${HS_UPDATE_PLIST} != no && ${_HS_PLIST_STATUS} != up-to-date
+GENERATE_PLIST+= 	${MAKE} print-PLIST > ${PKGDIR}/PLIST;
+.endif
+
+.if ${_HS_PLIST_STATUS} != up-to-date
+# The PLISTs that don't use HS_INTF and the other placeholders defined
+# above are outdated and wrong, and are therefore ignored.
 GENERATE_PLIST+= \
 	cd ${DESTDIR:Q}${PREFIX:Q} && \
 		${FIND} * \( -type f -o -type l \) | ${SORT};
-# But since our packages may still have PLIST files, it is necessary
-# to ignore them until we get rid of them all. Or they all will be
-# broken.
-PLIST_SRC=		# none
-.if ${PKG_DEVELOPER:Uno:tl} != "no"
-.PHONY: _check-ignored-plist
-privileged-install-hook: _check-ignored-plist
-_check-ignored-plist: error-check
-	${RUN}if ${TEST} -f PLIST; then \
-		${DELAYED_WARNING_MSG} "[haskell.mk] The PLIST file is no longer used. Please remove it."; \
-	fi
+PLIST_SRC=	# none, because the PLIST file is outdated or missing
+.  if ${_HS_PLIST_STATUS} == outdated && ${HS_UPDATE_PLIST} == no
+WARNINGS+=	"[haskell.mk] The PLIST format is outdated."
+WARNINGS+=	"[haskell.mk] Set HS_UPDATE_PLIST=yes to update it automatically."
+.  endif
 .endif
 
 # Define configure target. We might not have any working Haskell
@@ -287,5 +322,17 @@ FILES_SUBST+=	HASKELL_PKG_ID_FILE=${_HASKELL_PKG_ID_FILE}
 
 INSTALL_TEMPLATES+=	../../mk/haskell/INSTALL.in
 DEINSTALL_TEMPLATES+=	../../mk/haskell/DEINSTALL.in
+
+# Only present these variables if the definitions can be extracted
+# from the files in DESTDIR.
+_HS_DESTDIR_DEF_VARS=	PLIST_SUBST PRINT_PLIST_AWK
+_HS_DESTDIR_DEF_VARS+=	_HASKELL_PL_INTF
+_HS_DESTDIR_DEF_VARS+=	_HASKELL_PL_IMPL
+_HS_DESTDIR_DEF_VARS+=	_HASKELL_PL_DOCS
+_HS_DESTDIR_DEF_VARS+=	_HASKELL_PL_PLATFORM
+_HS_DESTDIR_DEF_VARS+=	_HASKELL_PL_PKGID
+_HS_DESTDIR_DEF_VARS+=	_HASKELL_PL_VER
+_DEF_VARS.haskell+=	${exists(${DESTDIR}${_HASKELL_PKG_DESCR_FILE}) :? ${_HS_DESTDIR_DEF_VARS} :}
+_LISTED_VARS.haskell+=	PLIST_SUBST PRINT_PLIST_AWK
 
 .endif # HASKELL_MK
