@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:32:59 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/10 04:13:26 markd Exp $
 
 DISTNAME=	collection-langitalian
-PKGNAME=	texlive-${DISTNAME}-2019pre1
+PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	30372
+TEXLIVE_REV=	54074
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -28,6 +28,7 @@ DEPENDS+=	tex-hyphen-italian-[0-9]*:../../print/tex-hyphen-italian
 # lshort-italian is documentation only
 # psfrag-italian is documentation only
 # texlive-it is documentation only
+# depend verifica
 
 META_PACKAGE=	yes
 
