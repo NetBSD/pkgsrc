@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:38 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/10 23:16:08 markd Exp $
 
 DISTNAME=	babel-portuges
-PKGNAME=	tex-${DISTNAME}-1.2q
-TEXLIVE_REV=	30284
+PKGNAME=	tex-${DISTNAME}-1.2r
+TEXLIVE_REV=	55008
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-portuges
@@ -11,6 +11,5 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-babel>=3.9l:../../print/tex-babel
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
