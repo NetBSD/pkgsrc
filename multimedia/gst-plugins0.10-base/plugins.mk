@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.17 2019/11/03 17:12:01 rillig Exp $
+# $NetBSD: plugins.mk,v 1.18 2020/05/10 14:27:46 rillig Exp $
 #
 # This file is shared across the gst-plugins-{base,good} packages to
 # simplify their code.  It provides a framework to write simple packages
@@ -72,6 +72,7 @@ SUBST_FILES.libs=
 SUBST_FILES.libs+=	${_d_}/Makefile.in
 .  endfor
 SUBST_SED.libs=		-e 's|$$(top_builddir)/gst-libs/gst/.*/libgst|${BUILDLINK_PREFIX.gst-plugins0.10-${GST_PLUGINS0.10_TYPE}}/lib/libgst|g'
+SUBST_NOOP_OK.lib=	yes # not all libraries depend on already installed libraries
 
 .include "../../multimedia/gst-plugins0.10-${GST_PLUGINS0.10_TYPE}/buildlink3.mk"
 .endif
