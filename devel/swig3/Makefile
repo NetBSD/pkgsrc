@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/08/11 13:20:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/10 14:53:00 rillig Exp $
 
 DISTNAME=	swig-3.0.12
 PKGNAME=	${DISTNAME:S/swig/swig3/}
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl:build
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configure
 CONFIGURE_ARGS+=	--program-suffix=3.0
 CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/3.0
 
