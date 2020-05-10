@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2020/05/04 17:23:28 riastradh Exp $
+$NetBSD: distinfo,v 1.5 2020/05/10 19:29:58 joerg Exp $
 
-SHA1 (hg-evolve-9.3.1.tar.gz) = 9c0a933ec7af36c66e12854e937c44a0c64b7d8f
-RMD160 (hg-evolve-9.3.1.tar.gz) = 414ed3c05317ee7a03b30d75e0ba2adbd3d51fa6
-SHA512 (hg-evolve-9.3.1.tar.gz) = 453104989ec1e4a7072098f8c453290d66270f1992ab1a9a7c94be96f1c3e2b9989940796579de1e11f298ffdb7eaf7b9c9bb05def61fba4feeb5e2f39299670
-Size (hg-evolve-9.3.1.tar.gz) = 798989 bytes
+SHA1 (hg-evolve-10.0.0.tar.gz) = 2ebbe4c2217cd01e75b93afbd9fd84674428b040
+RMD160 (hg-evolve-10.0.0.tar.gz) = cfe96cd1d782631ae8aca7186f6e60d8d6c22a5b
+SHA512 (hg-evolve-10.0.0.tar.gz) = 4c88af31584d61df7fe397015e185d0191a021f89a23630b6d71ead5acb233f4b71638f3637e12e1d04b03fb79f127a754eeac0e85ab2b8d045665645d528d13
+Size (hg-evolve-10.0.0.tar.gz) = 808587 bytes
