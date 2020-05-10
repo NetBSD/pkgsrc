@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2840 2020/05/10 19:30:46 joerg Exp $
+$NetBSD: CHANGES-2020,v 1.2841 2020/05/10 21:38:57 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4451,3 +4451,12 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-flask-login to 0.5.0 [kleink 2020-05-10]
 	Added lang/gcc10 version 10.1.0 [maya 2020-05-10]
 	Updated devel/py-hg-evolve to 10.0.0 [joerg 2020-05-10]
+	Removed fonts/tex-aecc [markd 2020-05-10]
+	Removed fonts/tex-aecc-doc [markd 2020-05-10]
+	Removed graphics/tex-pst-vue3d [markd 2020-05-10]
+	Removed graphics/tex-pst-vue3d-doc [markd 2020-05-10]
+	Removed print/tex-FAQ-en-doc [markd 2020-05-10]
+	Removed print/tex-babel-spanglish [markd 2020-05-10]
+	Removed print/tex-spanish-mx [markd 2020-05-10]
+	Removed print/tex-spanish-mx-doc [markd 2020-05-10]
+	Updated print/tex-texinfo to 5.1.55066 [markd 2020-05-10]
