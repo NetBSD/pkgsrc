@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/12/06 19:32:21 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/10 04:31:52 markd Exp $
 
 DISTNAME=	pxfonts
 PKGNAME=	tex-${DISTNAME}-2010
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
