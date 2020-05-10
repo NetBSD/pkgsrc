@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2038 2020/05/03 10:34:00 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2039 2020/05/10 06:52:49 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -392,7 +392,7 @@ USE_TOOLS+=	expr
 .endif
 
 # Locking
-.include "internal/locking.mk"
+.include "misc/locking.mk"
 
 # Tools
 .include "tools/bsd.tools.mk"
