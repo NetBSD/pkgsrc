@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2020/05/10 04:13:27 markd Exp $
+# $NetBSD: Makefile,v 1.29 2020/05/10 13:04:41 markd Exp $
 
 DISTNAME=	collection-pictures
 PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54750
+TEXLIVE_REV=	54812
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -92,6 +92,7 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend maker
 # depend makeshape
 # depend mathspic
+# depend mercatormap
 # depend milsymb
 # depend miniplot
 # depend mkpic
