@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/12/06 20:18:50 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/10 04:31:57 markd Exp $
 
 DISTNAME=	arabtex
 PKGNAME=	tex-${DISTNAME}-3.17
+PKGREVISION=	1
 TEXLIVE_REV=	25711
 
 MAINTAINER=	kamelderouiche@yahoo.com

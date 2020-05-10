@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:51 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/10 04:31:53 markd Exp $
 
 DISTNAME=	romande
 PKGNAME=	tex-${DISTNAME}-1.008.v7.sc
+PKGREVISION=	1
 TEXLIVE_REV=	19537
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

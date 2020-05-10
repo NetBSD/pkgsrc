@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 19:32:14 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/10 04:31:50 markd Exp $
 
 DISTNAME=	nanumtype1
 PKGNAME=	tex-${DISTNAME}-3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 TEXLIVE_REV=	29558
 

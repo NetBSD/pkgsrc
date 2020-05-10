@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/04/26 12:21:22 markd Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/10 04:31:56 markd Exp $
 
 DISTNAME=	wasy-type1
 PKGNAME=	tex-${DISTNAME}-001.002
+PKGREVISION=	1
 TEXLIVE_REV=	53534
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
