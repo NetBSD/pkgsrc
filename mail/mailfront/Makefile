@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/03/08 16:50:23 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2020/05/10 07:10:39 rillig Exp $
 #
 
 DISTNAME=		mailfront-2.22
@@ -33,8 +33,6 @@ USE_LIBTOOL=		yes
 MAKE_JOBS_SAFE=		no # due to hacky libtoolization
 
 PKG_SYSCONFSUBDIR=	qmail
-
-.include "options.mk"
 
 post-install:
 	cd ${WRKSRC};							\
