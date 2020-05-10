@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2019/12/06 19:04:13 markd Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/10 03:56:45 markd Exp $
 
 DISTNAME=	lwarp
-PKGNAME=	tex-${DISTNAME}-0.73
-TEXLIVE_REV=	51653
+PKGNAME=	tex-${DISTNAME}-0.85
+TEXLIVE_REV=	54965
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/lwarp
@@ -22,6 +22,5 @@ post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MV} ${WRKSRC}/texmf-dist/scripts/lwarp/lwarpmk.lua ${WRKSRC}/bin/lwarpmk
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/10 03:56:40 markd Exp $
+share/texmf-dist/doc/fonts/haranoaji/LICENSE
+share/texmf-dist/doc/fonts/haranoaji/README

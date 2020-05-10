@@ -1,0 +1,18 @@
+$NetBSD: patch-bin_kpsewhere,v 1.1 2020/05/10 03:56:44 markd Exp $
+
+use full path for commands
+
+--- bin/kpsewhere.orig	2012-10-09 17:39:16.000000000 +0000
++++ bin/kpsewhere
+@@ -55,9 +55,9 @@ esac
+ IFS=':'
+ for file
+ do
+-    for path in `kpsewhich --expand-path='$TEXMF'`
++    for path in `@KPSEWHICH@ --expand-path='$TEXMF'`
+     do
+-        eval TEXMF=\$path kpsewhich $options \"\$file\"
++        eval TEXMF=\$path @KPSEWHICH@ $options \"\$file\"
+     done
+ done
+ exit 0

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/10 03:56:40 markd Exp $
+share/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Bold.otf
+share/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Heavy.otf
+share/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf
+share/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Regular.otf
+share/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Bold.otf
+share/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Light.otf
+share/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf
+share/texmf-dist/tex/latex/haranoaji/HaranoAjiGothic.fontspec
+share/texmf-dist/tex/latex/haranoaji/HaranoAjiMincho.fontspec
