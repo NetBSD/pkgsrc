@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:57 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/10 04:31:56 markd Exp $
 
 DISTNAME=	yfonts-t1
 PKGNAME=	tex-${DISTNAME}-1.0
+PKGREVISION=	1
 TEXLIVE_REV=	36013
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
