@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/05/10 04:13:24 markd Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/10 11:25:00 tnn Exp $
 
 DISTNAME=	collection-basic
 PKGNAME=	texlive-${DISTNAME}-2020
@@ -17,7 +17,7 @@ DEPENDS+=	tex-cm>=2013:../../fonts/tex-cm
 DEPENDS+=	tex-colorprofiles-[0-9]*:../../print/tex-colorprofiles
 DEPENDS+=	tex-dvipdfmx>=2013:../../print/tex-dvipdfmx
 DEPENDS+=	tex-dvips>=2013:../../print/tex-dvips
-DEPENDS+=	tex-ec-[0-9]:../../fonts/tex-ec
+DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 DEPENDS+=	tex-enctex>=2013:../../print/tex-enctex
 DEPENDS+=	tex-etex>=2.1.31600:../../print/tex-etex
 DEPENDS+=	tex-etex-pkg>=2.0:../../print/tex-etex-pkg
