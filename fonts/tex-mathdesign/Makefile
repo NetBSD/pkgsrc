@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 19:30:14 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/10 04:31:49 markd Exp $
 
 DISTNAME=	mathdesign
 PKGNAME=	tex-${DISTNAME}-2.31
+PKGREVISION=	1
 TEXLIVE_REV=	31639
 
 MAINTAINER=	minskim@NetBSD.org
