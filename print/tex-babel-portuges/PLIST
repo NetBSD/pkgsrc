@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/04 12:38:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/10 23:16:08 markd Exp $
+share/texmf-dist/tex/generic/babel-portuges/brazil.ldf
+share/texmf-dist/tex/generic/babel-portuges/brazilian.ldf
 share/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+share/texmf-dist/tex/generic/babel-portuges/portuguese.ldf
