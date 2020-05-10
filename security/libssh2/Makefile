@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/03/12 17:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2020/05/10 17:27:27 rillig Exp $
 
 DISTNAME=	libssh2-1.9.0
 PKGREVISION=	1
@@ -13,9 +13,7 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
-CONFIGURE_ARGS+=	--with-libgcrypt=no
 CONFIGURE_ARGS+=	--with-libz=${BUILDLINK_PREFIX.zlib:Q}
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--disable-examples-build
 
 PKGCONFIG_OVERRIDE+=	libssh2.pc.in
