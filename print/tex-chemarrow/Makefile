@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/12/06 20:19:07 markd Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/10 04:31:57 markd Exp $
 
 DISTNAME=	chemarrow
 PKGNAME=	tex-${DISTNAME}-0.9
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	17146
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

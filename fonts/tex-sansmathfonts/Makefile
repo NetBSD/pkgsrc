@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/12/06 19:32:24 markd Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/10 04:31:53 markd Exp $
 
 DISTNAME=	sansmathfonts
 PKGNAME=	tex-${DISTNAME}-2019.51356
+PKGREVISION=	1
 TEXLIVE_REV=	51356
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

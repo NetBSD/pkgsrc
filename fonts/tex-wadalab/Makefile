@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 19:32:31 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/10 04:31:56 markd Exp $
 
 DISTNAME=	wadalab
 PKGNAME=	tex-${DISTNAME}-2011
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	22576
 
 MAINTAINER=	hubertf@NetBSD.org
