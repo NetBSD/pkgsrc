@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 23:32:58 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/10 04:13:25 markd Exp $
 
 DISTNAME=	collection-langenglish
-PKGNAME=	texlive-${DISTNAME}-2019
+PKGNAME=	texlive-${DISTNAME}-2020
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	50985
+TEXLIVE_REV=	54689
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -13,7 +13,6 @@ COMMENT=	US and UK English TeX packages
 DEPENDS+=	texlive-collection-basic>=2014:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-hyphen-english-[0-9]*:../../print/tex-hyphen-english
-# FAQ-en is documentation only
 # MemoirChapStyles is documentation only
 # Type1fonts is documentation only
 # amscls-doc is documentation only
@@ -66,6 +65,7 @@ DEPENDS+=	tex-latexfileinfo-pkgs-[0-9]*:../../print/tex-latexfileinfo-pkgs
 # tamethebeast is documentation only
 # tds is documentation only
 # tex-font-errors-cheatsheet is documentation only
+# tex-nutshell is documentation only
 # tex-overview is documentation only
 # tex-refs is documentation only
 # texbytopic is documentation only
