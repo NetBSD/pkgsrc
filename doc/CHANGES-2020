@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2841 2020/05/10 21:38:57 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2842 2020/05/10 22:07:49 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4460,3 +4460,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed print/tex-spanish-mx [markd 2020-05-10]
 	Removed print/tex-spanish-mx-doc [markd 2020-05-10]
 	Updated print/tex-texinfo to 5.1.55066 [markd 2020-05-10]
+	Updated graphics/tex-animate to 20200507 [markd 2020-05-10]
+	Updated graphics/tex-animate-doc to 20200507 [markd 2020-05-10]
