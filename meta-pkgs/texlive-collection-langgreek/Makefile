@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 23:32:59 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/10 04:13:26 markd Exp $
 
 DISTNAME=	collection-langgreek
-PKGNAME=	texlive-${DISTNAME}-2019pre1
+PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44192
+TEXLIVE_REV=	54139
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -15,7 +15,6 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 DEPENDS+=	tex-babel-greek-[0-9]*:../../print/tex-babel-greek
 # depend begingreek
 # depend betababel
-# depend bgreek
 DEPENDS+=	tex-cbfonts-[0-9]*:../../fonts/tex-cbfonts
 DEPENDS+=	tex-cbfonts-fd-[0-9]*:../../fonts/tex-cbfonts-fd
 # depend gfsbaskerville
