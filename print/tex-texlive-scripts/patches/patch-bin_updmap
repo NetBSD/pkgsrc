@@ -1,0 +1,83 @@
+$NetBSD: patch-bin_updmap,v 1.1 2020/05/10 03:56:44 markd Exp $
+
+use full path for commands
+
+--- bin/updmap.orig	2019-06-07 16:36:59.000000000 +0000
++++ bin/updmap
+@@ -19,7 +19,7 @@ my $svnid = '$Id: updmap.pl 51338 2019-0
+ my $TEXMFROOT;
+ BEGIN {
+   $^W = 1;
+-  $TEXMFROOT = `kpsewhich -var-value=TEXMFROOT`;
++  $TEXMFROOT = `@KPSEWHICH@ -var-value=TEXMFROOT`;
+   if ($?) {
+     die "$0: kpsewhich -var-value=TEXMFROOT failed, aborting early.\n";
+   }
+@@ -46,12 +46,12 @@ use TeXLive::TLUtils qw(mkdirhier mktexu
+ # see more comments at the definition of this function.
+ reset_root_home();
+ 
+-chomp(my $TEXMFDIST = `kpsewhich --var-value=TEXMFDIST`);
+-chomp(my $TEXMFVAR = `kpsewhich -var-value=TEXMFVAR`);
+-chomp(my $TEXMFSYSVAR = `kpsewhich -var-value=TEXMFSYSVAR`);
+-chomp(my $TEXMFCONFIG = `kpsewhich -var-value=TEXMFCONFIG`);
+-chomp(my $TEXMFSYSCONFIG = `kpsewhich -var-value=TEXMFSYSCONFIG`);
+-chomp(my $TEXMFHOME = `kpsewhich -var-value=TEXMFHOME`);
++chomp(my $TEXMFDIST = `@KPSEWHICH@ --var-value=TEXMFDIST`);
++chomp(my $TEXMFVAR = `@KPSEWHICH@ -var-value=TEXMFVAR`);
++chomp(my $TEXMFSYSVAR = `@KPSEWHICH@ -var-value=TEXMFSYSVAR`);
++chomp(my $TEXMFCONFIG = `@KPSEWHICH@ -var-value=TEXMFCONFIG`);
++chomp(my $TEXMFSYSCONFIG = `@KPSEWHICH@ -var-value=TEXMFSYSCONFIG`);
++chomp(my $TEXMFHOME = `@KPSEWHICH@ -var-value=TEXMFHOME`);
+ 
+ # make sure that on windows *everything* is in lower case for comparison
+ if (win32()) {
+@@ -239,7 +239,7 @@ sub main {
+     # in the list is the one where changes will be written to.
+     ($changes_config_file) = @{$opts{'cnffile'}};
+   } else {
+-    my @all_files = `kpsewhich -all updmap.cfg`;
++    my @all_files = `@KPSEWHICH@ -all updmap.cfg`;
+     chomp(@all_files);
+     my @used_files;
+     for my $f (@all_files) {
+@@ -249,10 +249,10 @@ sub main {
+     my $TEXMFLOCALVAR;
+     my @TEXMFLOCAL;
+     if (win32()) {
+-      chomp($TEXMFLOCALVAR =`kpsewhich --expand-path=\$TEXMFLOCAL`);
++      chomp($TEXMFLOCALVAR =`@KPSEWHICH@ --expand-path=\$TEXMFLOCAL`);
+       @TEXMFLOCAL = map { lc } split(/;/ , $TEXMFLOCALVAR);
+     } else {
+-      chomp($TEXMFLOCALVAR =`kpsewhich --expand-path='\$TEXMFLOCAL'`);
++      chomp($TEXMFLOCALVAR =`@KPSEWHICH@ --expand-path='\$TEXMFLOCAL'`);
+       @TEXMFLOCAL = split /:/ , $TEXMFLOCALVAR;
+     }
+     #
+@@ -1281,7 +1281,7 @@ sub mkMaps {
+ 
+   sub check_mismatch {
+     my ($mm, $d, $f, $prog) = @_;
+-    chomp (my $kpsefound = `kpsewhich --progname=$prog $f`);
++    chomp (my $kpsefound = `@KPSEWHICH@ --progname=$prog $f`);
+     if (lc("$d/$f") ne lc($kpsefound)) {
+       $mm->{$f} = $kpsefound;
+     }
+@@ -1397,7 +1397,7 @@ listed below).
+ 
+ sub locateMap {
+   my $map = shift;
+-  my $ret = `kpsewhich --format=map $map`;
++  my $ret = `@KPSEWHICH@ --format=map $map`;
+   chomp($ret);
+   return $ret;
+ }
+@@ -2072,7 +2072,7 @@ sub read_map_files {
+     $alldata->{'maps'}{$m}{'origin'} = 'builtin';
+   }
+   @maps = sort_uniq(@maps);
+-  my @fullpath = `kpsewhich --format=map @maps`;
++  my @fullpath = `@KPSEWHICH@ --format=map @maps`;
+   chomp @fullpath;
+   foreach my $map (@maps) {
+     # in case they give an absolute path (not needed/desired, but ...);

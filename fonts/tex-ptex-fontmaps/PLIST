@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/05/14 10:16:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/05/10 03:56:41 markd Exp $
 share/texmf-dist/fonts/cmap/ptex-fontmaps/2004-H
 share/texmf-dist/fonts/cmap/ptex-fontmaps/2004-V
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/adobe/otf-ko-adobe.map
@@ -37,6 +37,12 @@ share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/fandol/otf-sc-fandol.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/fandol/uptex-sc-fandol.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/founder/otf-sc-founder.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/founder/uptex-sc-founder.map
+share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/haranoaji/otf-haranoaji.map
+share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/haranoaji/otf-up-haranoaji.map
+share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/haranoaji/ptex-haranoaji-04.map
+share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/haranoaji/ptex-haranoaji.map
+share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/haranoaji/uptex-haranoaji-04.map
+share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/haranoaji/uptex-haranoaji.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-pron/otf-hiragino-pron.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-pron/otf-up-hiragino-pron.map
 share/texmf-dist/fonts/map/dvipdfmx/ptex-fontmaps/hiragino-pron/ptex-hiragino-pron-04.map

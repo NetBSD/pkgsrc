@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2019/08/11 10:16:12 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/05/10 03:56:45 markd Exp $
 
-SHA1 (tex-lwarp-51653/lwarp.doc.tar.xz) = 3996c97dacb27a227445e2764a8c3fb080e725ab
-RMD160 (tex-lwarp-51653/lwarp.doc.tar.xz) = 8a938f18f855d81df6d22cd98e92fe771a260544
-SHA512 (tex-lwarp-51653/lwarp.doc.tar.xz) = a71d8c9152197de11f2b8d13a877e2a36876be8f06556a4daf97e828bdca4fdb6723a30bd13f744d527bb064f78f2c0c2085a0e1509231907ec72e5674dd630a
-Size (tex-lwarp-51653/lwarp.doc.tar.xz) = 2356888 bytes
+SHA1 (lwarp.doc.r54965.tar.xz) = 037b11eaa3b2ec2e6a186fd6400d3b8e1790cfde
+RMD160 (lwarp.doc.r54965.tar.xz) = 8c2948c3b49c4b98bcf90bcf0b14ff6814c69c88
+SHA512 (lwarp.doc.r54965.tar.xz) = d2b7bf6d700eaaea98c0cf9ad51d3d4bd44c50868265494ce3d3cdff686998fcea334a7d2db29f957aae1d8fb67f928ff62c9f373250e3cc433c60ad29fc90cf
+Size (lwarp.doc.r54965.tar.xz) = 2592452 bytes
