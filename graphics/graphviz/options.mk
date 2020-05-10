@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2019/10/28 08:43:33 kamil Exp $
+# $NetBSD: options.mk,v 1.27 2020/05/10 10:50:04 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk gts lua ocaml poppler svg tcl x11 perl # guile does not build with guile20
@@ -99,7 +99,6 @@ USING_SWIG=	yes
 .  include "../../x11/tk/buildlink3.mk"
 CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH:Q}
 CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH:Q}
-CONFIGURE_ARGS+=	--with-wish=${WISH}
 CONFIGURE_ARGS+=	--with-tclsh=${TCLSH}
 PLIST.tcl=		yes
 PLIST_SUBST+=		TCL_BASEVER=${TCL_BASEVER}
