@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2020/05/10 03:56:42 markd Exp $
+
+SHA1 (luahbtex.doc.r54498.tar.xz) = eb6b59c610bb33dd9c6b8afcb112ab8ec13410b2
+RMD160 (luahbtex.doc.r54498.tar.xz) = 21aacec5ce183eaad9237ee05ecc2671f39ec0ef
+SHA512 (luahbtex.doc.r54498.tar.xz) = 044c7db9ca4ff5d212552f49bdfa36da682b498453fa5b2df40dd85cb33df9aca55ee95b997d6bc747578f0918cf7b992ef4e1394d66733865be1f814c320d20
+Size (luahbtex.doc.r54498.tar.xz) = 30240 bytes

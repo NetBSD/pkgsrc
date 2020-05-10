@@ -1,0 +1,4 @@
+Rebuild ls-R filename databases used by TeX.  If one or more arguments
+DIRS are given, these are used as the directories in which to build
+ls-R. Else all directories in the search path for ls-R files
+(\$TEXMFDBS) are used.

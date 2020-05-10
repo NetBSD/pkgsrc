@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/05/12 03:21:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2020/05/10 03:56:41 markd Exp $
 share/texmf-dist/makeindex/latex/gglo.ist
 share/texmf-dist/makeindex/latex/gind.ist
 share/texmf-dist/tex/latex/base/alltt.sty
@@ -59,6 +59,7 @@ share/texmf-dist/tex/latex/base/leqno.clo
 share/texmf-dist/tex/latex/base/leqno.sty
 share/texmf-dist/tex/latex/base/letter.cls
 share/texmf-dist/tex/latex/base/letter.sty
+share/texmf-dist/tex/latex/base/ltexpl.ltx
 share/texmf-dist/tex/latex/base/ltluatex.lua
 share/texmf-dist/tex/latex/base/ltluatex.tex
 share/texmf-dist/tex/latex/base/ltnews.cls
@@ -133,6 +134,7 @@ share/texmf-dist/tex/latex/base/t2benc.dfu
 share/texmf-dist/tex/latex/base/t2cenc.dfu
 share/texmf-dist/tex/latex/base/testpage.tex
 share/texmf-dist/tex/latex/base/texsys.cfg
+share/texmf-dist/tex/latex/base/textcomp-2018-08-11.sty
 share/texmf-dist/tex/latex/base/textcomp.sty
 share/texmf-dist/tex/latex/base/tracefnt.sty
 share/texmf-dist/tex/latex/base/ts1cmr.fd
@@ -153,6 +155,7 @@ share/texmf-dist/tex/latex/base/ucmss.fd
 share/texmf-dist/tex/latex/base/ucmtt.fd
 share/texmf-dist/tex/latex/base/ulasy.fd
 share/texmf-dist/tex/latex/base/ullasy.fd
+share/texmf-dist/tex/latex/base/utf8-2018.def
 share/texmf-dist/tex/latex/base/utf8.def
 share/texmf-dist/tex/latex/base/utf8enc.dfu
 share/texmf-dist/tex/latex/base/x2enc.dfu

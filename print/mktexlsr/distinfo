@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2020/05/10 03:56:37 markd Exp $
+
+SHA1 (texlive.infra.doc.r54630.tar.xz) = 1ff0a6f388ade11b536aa064f4f23b8980ba7f19
+RMD160 (texlive.infra.doc.r54630.tar.xz) = ea9fdddbb000bed2c452cb83a5f1fafd37189d4c
+SHA512 (texlive.infra.doc.r54630.tar.xz) = d0f387986cdc8c89388e0b2aa6bd5ab4c6fbd94d57e0969b425856c3538ff18c6e17924eca5ace59272d6a875aa3b63fbf97d3d2d31f6a9a69c21e6d0f199801
+Size (texlive.infra.doc.r54630.tar.xz) = 203768 bytes
+SHA1 (texlive.infra.r54630.tar.xz) = adf47b821d0bc70dfd8171d251e6fcf34c15b4ff
+RMD160 (texlive.infra.r54630.tar.xz) = 465af835fe9eb94d8658c4dd6b64ac803f100baa
+SHA512 (texlive.infra.r54630.tar.xz) = a1a6611b48a3a2cc7bae0455a6f8fb7c12112136951ca017e3ddcaca3f16f0198a628a5ccf2f6a43095dc3f97f639e0f4d2407901923bea1656fc4877dd764ee
+Size (texlive.infra.r54630.tar.xz) = 226244 bytes
