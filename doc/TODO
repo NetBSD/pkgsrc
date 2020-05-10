@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.19869 2020/05/09 15:57:37 taca Exp $
+$NetBSD: TODO,v 1.19870 2020/05/10 22:57:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -375,6 +375,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.10.11
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o OdfConverter-4.0
@@ -386,6 +387,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Sigil-1.2.0 [needs QtWebEngine]
 	o SOGo-4.3.1
 	o SOPE-4.3.1
+	o TECkit-2.5.10
 	o TeXmacs-1.99.12
 	o TiffIO-140a
 	o YoSucker-81
@@ -704,7 +706,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
 	o icinga-base-2.11.2
+	o id3-1.1.2
 	o ike-2.0.1 [pkg/37032]
+	o ilmbase-2.5.0
 	o imapsync-1.678
 	o imp-6.2.12
 	o ingo-3.2.8
@@ -820,7 +824,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
 	o mediawiki-1.34
-	o mednafen-1.24.2
+	o mednafen-1.24.3
 	o memached-1.5.6
 	o memcached-1.6
 	o merkaator-0.18.3
@@ -885,6 +889,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.16.2
 	o openafs-1.8
 	o opencsg-1.4.0
+	o openexr-2.5.0
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openoffice-4.1.7
@@ -909,6 +914,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o parrot-7.11.0
 	o pcc-1.1.0
 	o pcc-current-20160305
+	o pcre2-10.35
 	o pdmenu-1.2.87
 	o pessulus-2.30.3
 	o pgadmin4-1.0
