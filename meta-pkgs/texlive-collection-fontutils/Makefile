@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/05/10 04:13:24 markd Exp $
+# $NetBSD: Makefile,v 1.12 2020/05/10 11:32:14 tnn Exp $
 
 DISTNAME=	collection-fontutils
 PKGNAME=	texlive-${DISTNAME}-2020
@@ -20,7 +20,7 @@ DEPENDS+=	tex-epstopdf-[0-9]*:../../graphics/tex-epstopdf
 DEPENDS+=	lcdftypetools-[0-9]*:../../fonts/lcdftypetools
 # metatype1 is empty
 DEPENDS+=	ps2pkm-[0-9]*:../../fonts/ps2pkm
-DEPENDS+=	tex-ps2eps-[0-9]*:../../graphics/tex-ps2eps
+DEPENDS+=	ps2eps-[0-9]*:../../graphics/ps2eps
 DEPENDS+=	psutils-[0-9]*:../../print/psutils
 DEPENDS+=	tex-dvipsconfig-[0-9]*:../../fonts/tex-dvipsconfig
 DEPENDS+=	tex-fontinst-[0-9]*:../../fonts/tex-fontinst
