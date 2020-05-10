@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/08/16 20:45:33 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2020/05/10 13:54:19 rillig Exp $
 #
 
 DISTNAME=	bib2xml-10062002
@@ -14,6 +14,7 @@ COMMENT=	BibTeX to XML converter
 WRKSRC=		${WRKDIR}/bib2xml
 GNU_CONFIGURE=	YES
 BUILD_DIRS=	progs
+TOOLS_BROKEN+=	perl
 
 INSTALLATION_DIRS=	bin
 
