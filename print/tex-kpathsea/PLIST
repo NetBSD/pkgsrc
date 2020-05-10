@@ -1,6 +1,30 @@
-Kpathsea is a library and utility programs which provide path
-searching facilities for TeX file types, including the
-self-locating feature required for movable installations,
-layered on top of a general search mechanism. It is not
-distributed separately, but rather is released and maintained
-as part of the TeX live sources.
+@comment $NetBSD: PLIST,v 1.7 2020/05/10 23:45:16 markd Exp $
+share/texmf-dist/web2c/amiga-pl.tcx
+share/texmf-dist/web2c/cp1250cs.tcx
+share/texmf-dist/web2c/cp1250pl.tcx
+share/texmf-dist/web2c/cp1250t1.tcx
+share/texmf-dist/web2c/cp227.tcx
+share/texmf-dist/web2c/cp852-cs.tcx
+share/texmf-dist/web2c/cp852-pl.tcx
+share/texmf-dist/web2c/cp8bit.tcx
+share/texmf-dist/web2c/empty.tcx
+share/texmf-dist/web2c/fmtutil.cnf
+share/texmf-dist/web2c/il1-t1.tcx
+share/texmf-dist/web2c/il2-cs.tcx
+share/texmf-dist/web2c/il2-pl.tcx
+share/texmf-dist/web2c/il2-t1.tcx
+share/texmf-dist/web2c/kam-cs.tcx
+share/texmf-dist/web2c/kam-t1.tcx
+share/texmf-dist/web2c/macce-pl.tcx
+share/texmf-dist/web2c/macce-t1.tcx
+share/texmf-dist/web2c/maz-pl.tcx
+share/texmf-dist/web2c/mktex.cnf
+share/texmf-dist/web2c/mktex.opt
+share/texmf-dist/web2c/mktexdir
+share/texmf-dist/web2c/mktexdir.opt
+share/texmf-dist/web2c/mktexnam
+share/texmf-dist/web2c/mktexnam.opt
+share/texmf-dist/web2c/mktexupd
+share/texmf-dist/web2c/natural.tcx
+share/texmf-dist/web2c/tcvn-t5.tcx
+share/texmf-dist/web2c/viscii-t5.tcx
