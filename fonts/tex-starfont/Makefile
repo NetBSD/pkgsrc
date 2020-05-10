@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:53 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/10 04:31:54 markd Exp $
 
 DISTNAME=	starfont
 PKGNAME=	tex-${DISTNAME}-1.2
+PKGREVISION=	1
 TEXLIVE_REV=	19982
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

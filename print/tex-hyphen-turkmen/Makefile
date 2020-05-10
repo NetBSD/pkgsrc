@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 20:21:42 markd Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/10 04:32:04 markd Exp $
 
 DISTNAME=	hyphen-turkmen
 PKGNAME=	tex-${DISTNAME}-2019.51186
+PKGREVISION=	1
 TEXLIVE_REV=	51186
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

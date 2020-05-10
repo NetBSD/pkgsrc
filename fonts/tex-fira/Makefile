@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/04/26 12:21:14 markd Exp $
+# $NetBSD: Makefile,v 1.12 2020/05/10 04:31:44 markd Exp $
 
 DISTNAME=	fira
 PKGNAME=	tex-${DISTNAME}-4.3.54512
+PKGREVISION=	1
 TEXLIVE_REV=	54512
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

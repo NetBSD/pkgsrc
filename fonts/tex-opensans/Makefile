@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 19:32:18 markd Exp $
+# $NetBSD: Makefile,v 1.4 2020/05/10 04:31:51 markd Exp $
 
 DISTNAME=	opensans
 PKGNAME=	tex-${DISTNAME}-2.2
+PKGREVISION=	1
 TEXLIVE_REV=	51458
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

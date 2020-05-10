@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:31:30 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/10 04:31:44 markd Exp $
 
 DISTNAME=	fetamont
 PKGNAME=	tex-${DISTNAME}-20170415
+PKGREVISION=	1
 TEXLIVE_REV=	43812
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

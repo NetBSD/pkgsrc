@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 19:30:16 markd Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/10 04:31:49 markd Exp $
 
 DISTNAME=	mflogo-font
 PKGNAME=	tex-${DISTNAME}-1.002pl36898
+PKGREVISION=	1
 TEXLIVE_REV=	36898
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

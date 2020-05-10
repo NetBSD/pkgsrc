@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:31:15 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/10 04:31:39 markd Exp $
 
 DISTNAME=	boondox
 PKGNAME=	tex-${DISTNAME}-1.02d
+PKGREVISION=	1
 TEXLIVE_REV=	43344
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:31:17 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2020/05/10 04:31:40 markd Exp $
 
 DISTNAME=	cbfonts
 PKGNAME=	tex-${DISTNAME}-2014
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	31624
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
