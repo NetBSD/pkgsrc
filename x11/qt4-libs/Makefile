@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2020/03/10 22:11:19 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2020/05/10 13:59:09 rillig Exp $
 
 PKGNAME=	qt4-libs-${QTVERSION}
 PKGREVISION=	21
@@ -9,6 +9,7 @@ COMMENT=	C++ X GUI toolkit
 # XXX this is to test what really gets installed when 'do-install' is disabled
 INSTALL_DIRS+=		src
 
+TOOLS_BROKEN+=		perl
 BUILD_TARGET=		sub-src
 
 PTHREAD_OPTS+=			require
