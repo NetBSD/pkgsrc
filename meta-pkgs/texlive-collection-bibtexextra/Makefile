@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2020/05/10 04:13:24 markd Exp $
+# $NetBSD: Makefile,v 1.21 2020/05/10 12:50:46 markd Exp $
 
 DISTNAME=	collection-bibtexextra
 PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54297
+TEXLIVE_REV=	54875
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -78,6 +78,7 @@ DEPENDS+=	tex-biblatex-nature-[0-9]*:../../print/tex-biblatex-nature
 # depend biblatex-science
 # depend biblatex-shortfields
 # depend biblatex-socialscienceshuberlin
+# depend biblatex-software
 # depend biblatex-source-division
 # depend biblatex-subseries
 # depend biblatex-swiss-legal
@@ -94,10 +95,10 @@ DEPENDS+=	tex-bibunits-[0-9]*:../../print/tex-bibunits
 DEPENDS+=	tex-breakcites-[0-9]*:../../print/tex-breakcites
 # depend cell
 DEPENDS+=	tex-chbibref-[0-9]*:../../print/tex-chbibref
-# depend chicago
-# depend chicagoa
-# depend chicago-annote
 # depend chembst
+# depend chicago
+# depend chicago-annote
+# depend chicagoa
 # depend chscite
 # depend citeall
 # depend citeref
@@ -131,9 +132,9 @@ DEPENDS+=	tex-harvard-[0-9]*:../../print/tex-harvard
 # depend jneurosci
 DEPENDS+=	tex-jurabib-[0-9]*:../../print/tex-jurabib
 # depend ksfh_nat
-# depend ltb2bib
 # depend listbib
 DEPENDS+=	tex-logreq-[0-9]*:../../print/tex-logreq
+# depend ltb2bib
 # depend luabibentry
 # depend margbib
 DEPENDS+=	tex-multibib-[0-9]*:../../print/tex-multibib
