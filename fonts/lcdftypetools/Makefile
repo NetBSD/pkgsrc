@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:31:05 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/10 03:56:37 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	lcdftypetools-2.108
+PKGREVISION=	1
 CATEGORIES=	fonts
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/10 03:56:42 markd Exp $
+share/texmf-dist/doc/latex/newfloat/CHANGELOG
+share/texmf-dist/doc/latex/newfloat/README
+share/texmf-dist/doc/latex/newfloat/SUMMARY
+share/texmf-dist/doc/latex/newfloat/newfloat.pdf

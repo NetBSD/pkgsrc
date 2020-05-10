@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/10 03:56:37 markd Exp $
+bin/mktexlsr
+man/man1/mktexlsr.1

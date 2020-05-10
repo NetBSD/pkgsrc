@@ -1,0 +1,12 @@
+$NetBSD: patch-bin_fmtutil-sys,v 1.1 2020/05/10 03:56:44 markd Exp $
+
+use full path for commands
+
+--- bin/fmtutil-sys.orig	2015-04-20 01:48:35.000000000 +0000
++++ bin/fmtutil-sys
+@@ -22,4 +22,4 @@ PATH="$mydir:$PATH"; export PATH
+ # hack around a bug in zsh:
+ test -n "${ZSH_VERSION+set}" && alias -g '${1+"$@"}'='"$@"'
+ 
+-exec fmtutil --sys ${1+"$@"}
++exec @FMTUTIL@ --sys ${1+"$@"}

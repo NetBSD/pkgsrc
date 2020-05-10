@@ -1,0 +1,3 @@
+Miscellaneous scripts maintained as part of TeX Live, but not
+important for the infrastructure. Thus, this is not part of
+scheme-infraonly or tlcritical, just a normal package.

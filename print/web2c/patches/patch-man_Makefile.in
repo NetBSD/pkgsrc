@@ -1,8 +1,8 @@
-$NetBSD: patch-man_Makefile.in,v 1.1 2019/05/14 13:23:10 adam Exp $
+$NetBSD: patch-man_Makefile.in,v 1.2 2020/05/10 03:56:39 markd Exp $
 
---- man/Makefile.in.orig	2019-03-30 10:13:17.000000000 +0000
+--- man/Makefile.in.orig	2019-11-17 17:05:39.000000000 +0000
 +++ man/Makefile.in
-@@ -443,8 +443,7 @@ x_tool_libs = @x_tool_libs@
+@@ -446,8 +446,7 @@ x_tool_libs = @x_tool_libs@
  man_sources = $(bootstrap_man_sources) $(am__append_1) $(am__append_2) \
  	$(am__append_4) $(am__append_7) $(am__append_8) \
  	$(am__append_9) $(am__append_11) $(am__append_13) \
@@ -12,12 +12,12 @@ $NetBSD: patch-man_Makefile.in,v 1.1 2019/05/14 13:23:10 adam Exp $
  EXTRA_DIST = $(bootstrap_man_sources) $(web_man_sources) tex.man \
  	mf.man mpost.man etex.man $(pdftex_man_sources) ptex.man \
  	ppltotf.man ptftopl.man luatex.man xetex.man \
-@@ -454,7 +453,7 @@ bootstrap_man_sources = ctie.man cweb.ma
+@@ -457,7 +456,7 @@ bootstrap_man_sources = ctie.man cweb.ma
  # Symlinks within $(man1dir): FILE:LINK indicates LINK.1->FILE.1
  man1_links = cweb:ctangle cweb:cweave ctwill:ctwill-refsort \
  	ctwill:ctwill-twinx $(am__append_3) $(am__append_5) \
 -	$(am__append_6) $(am__append_10) $(am__append_12) \
 +	$(am__append_6) $(am__append_12) \
- 	$(am__append_14) $(am__append_17) $(am__append_19)
- web_man_sources = bibtex.man dvicopy.man dvitomp.man dvitype.man gftodvi.man \
- 	gftopk.man gftype.man mft.man patgen.man pktogf.man pktype.man \
+ 	$(am__append_14) $(am__append_17) $(am__append_19) \
+ 	latex-dev:pdflatex-dev latex-dev:xelatex-dev \
+ 	latex-dev:lualatex-dev latex-dev:dvilualatex-dev \
