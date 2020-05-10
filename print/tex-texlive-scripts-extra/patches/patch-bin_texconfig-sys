@@ -1,0 +1,17 @@
+$NetBSD: patch-bin_texconfig-sys,v 1.1 2020/05/10 03:56:44 markd Exp $
+
+use full path for commands
+
+--- bin/texconfig-sys.orig	2014-07-13 00:07:52.000000000 +0000
++++ bin/texconfig-sys
+@@ -23,8 +23,8 @@ mydir=`echo "$0" | sed 's,/[^/]*$,,'`
+ mydir=`cd "$mydir" && pwd`
+ PATH="$mydir:$PATH"; export PATH
+ 
+-v=`kpsewhich -var-value TEXMFSYSVAR`
+-c=`kpsewhich -var-value TEXMFSYSCONFIG`
++v=`@KPSEWHICH@ -var-value TEXMFSYSVAR`
++c=`@KPSEWHICH@ -var-value TEXMFSYSCONFIG`
+ 
+ TEXMFVAR="$v"
+ TEXMFCONFIG="$c"

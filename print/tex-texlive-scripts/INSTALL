@@ -1,0 +1,7 @@
+# $NetBSD: INSTALL,v 1.1 2020/05/10 03:56:44 markd Exp $
+
+case "${STAGE}" in
+POST-INSTALL)
+	@UPDMAP_SYS@
+	;;
+esac

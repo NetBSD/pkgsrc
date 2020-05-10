@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/10 03:56:44 markd Exp $
+bin/allcm
+bin/allec
+bin/allneeded
+bin/dvi2fax
+bin/dvired
+bin/e2pall
+bin/kpsepath
+bin/kpsetool
+bin/kpsewhere
+bin/kpsexpand
+bin/ps2frag
+bin/pslatex
+bin/texconfig-dialog
+bin/texconfig-sys
+bin/texconfig
+bin/texlinks
+share/texmf-dist/texconfig/README
+share/texmf-dist/texconfig/g/generic
+share/texmf-dist/texconfig/tcfmgr
+share/texmf-dist/texconfig/tcfmgr.map
+share/texmf-dist/texconfig/v/vt100
+share/texmf-dist/texconfig/x/xterm

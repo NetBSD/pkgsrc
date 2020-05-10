@@ -1,0 +1,36 @@
+# $NetBSD: hyphen-deinstall.tmpl,v 1.1 2020/05/10 03:56:44 markd Exp $
+#
+# Deinstall hyphenation patterns.
+#
+
+LANGUAGE_DAT=${PKG_SYSCONFBASE}/texmf/tex/generic/config/language.dat
+LANGUAGE_DEF=${PKG_SYSCONFBASE}/texmf/tex/generic/config/language.def
+LANGUAGE_LUA=${PKG_SYSCONFBASE}/texmf/tex/generic/config/language.dat.lua
+
+case ${STAGE} in
+DEINSTALL)
+	${AWK} "\
+BEGIN { do_print=1; } \
+/^%%% BEGIN @PKGBASE@\$/ { do_print=0; } \
+{ if (do_print) print \$0; } \
+/^%%% END @PKGBASE@\$/ { do_print=1; }" ${LANGUAGE_DAT} > ${LANGUAGE_DAT}.tmp &&
+	${MV} ${LANGUAGE_DAT}.tmp ${LANGUAGE_DAT}
+	@FMTUTIL_SYS@ --byhyphen ${LANGUAGE_DAT}
+	${AWK} "\
+BEGIN { do_print=1; } \
+/^%%% BEGIN @PKGBASE@\$/ { do_print=0; } \
+{ if (do_print) print \$0; } \
+/^%%% END @PKGBASE@\$/ { do_print=1; }" ${LANGUAGE_DEF} > ${LANGUAGE_DEF}.tmp &&
+	${MV} ${LANGUAGE_DEF}.tmp ${LANGUAGE_DEF}
+	@FMTUTIL_SYS@ --byhyphen ${LANGUAGE_DEF}
+	${AWK} "\
+BEGIN { do_print=1; } \
+/^--- BEGIN @PKGBASE@\$/ { do_print=0; } \
+{ if (do_print) print \$0; } \
+/^--- END @PKGBASE@\$/ { do_print=1; }" ${LANGUAGE_LUA} > ${LANGUAGE_LUA}.tmp &&
+	${MV} ${LANGUAGE_LUA}.tmp ${LANGUAGE_LUA}
+	@FMTUTIL_SYS@ --byhyphen ${LANGUAGE_LUA}
+	;;
+*)
+	;;
+esac

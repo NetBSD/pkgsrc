@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 23:31:49 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/10 03:56:41 markd Exp $
 
 DISTNAME=	ptex-fontmaps
-PKGNAME=	tex-${DISTNAME}-20190506.0
-PKGREVISION=	1
-TEXLIVE_REV=	51023
+PKGNAME=	tex-${DISTNAME}-20200217.0
+TEXLIVE_REV=	54473
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ptex-fontmaps
@@ -12,13 +11,12 @@ LICENSE=	gnu-gpl-v3 AND public-domain
 
 DEPENDS+=	tex-arphic-ttf-[0-9]*:../../fonts/tex-arphic-ttf
 DEPENDS+=	tex-baekmuk-[0-9]*:../../fonts/tex-baekmuk
-DEPENDS+=	tex-ipaex-[0-9]*:../../fonts/tex-ipaex
+DEPENDS+=	tex-haranoaji-[0-9]*:../../fonts/tex-haranoaji
 
 USE_TOOLS+=	perl:run
 
 REPLACE_PERL+=	texmf-dist/scripts/ptex-fontmaps/kanji-config-updmap.pl
 REPLACE_PERL+=	texmf-dist/scripts/ptex-fontmaps/kanji-fontmap-creator.pl
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

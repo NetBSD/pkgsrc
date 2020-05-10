@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2019/12/06 20:21:56 markd Exp $
+# $NetBSD: Makefile,v 1.24 2020/05/10 03:56:42 markd Exp $
 
 DISTNAME=	luatex
-PKGNAME=	tex-${DISTNAME}-1.10.0
-TEXLIVE_REV=	50602
+PKGNAME=	tex-${DISTNAME}-1.12.0
+TEXLIVE_REV=	54610
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.luatex.org/
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	luatex>=0.60.1:../../print/luatex
 DEPENDS+=	tex-etex-[0-9]*:../../print/tex-etex
+DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 DEPENDS+=	tex-plain>=3.14159265.12854:../../print/tex-plain
@@ -42,7 +43,6 @@ INSTALLATION_DIRS+=	bin
 
 TEX_FORMATS+=	"luatex luatex language.def,language.dat.lua luatex.ini\\ndviluatex luatex language.def,language.dat.lua dviluatex.ini\\n"
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 
 post-install:

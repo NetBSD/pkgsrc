@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.18 2019/05/09 09:47:35 adam Exp $
+$NetBSD: distinfo,v 1.19 2020/05/10 03:56:38 markd Exp $
 
-SHA1 (texlive-20190410-source.tar.xz) = d700878d3e19b6ad1313791dd5cef4bf0acfd675
-RMD160 (texlive-20190410-source.tar.xz) = a0cbe56b19b1f3d064315c37f8b5a4b04f82678b
-SHA512 (texlive-20190410-source.tar.xz) = 7759d8e668e53c0c73e48907096da9d8fb6384dd9c3342ddfb05e17d077054c5351d35256cf4e63a6da502de2f09f521979bede7209cdd5bd8ae80eba0efed2e
-Size (texlive-20190410-source.tar.xz) = 53783408 bytes
+SHA1 (texlive-20200406-source.tar.xz) = 94b77331474d678ce75d9d6c673965fd7f93295b
+RMD160 (texlive-20200406-source.tar.xz) = 7475f64f21c7ba7a2e7c6e9bfe534dd6d53e4bb9
+SHA512 (texlive-20200406-source.tar.xz) = 65be52cb5e1b52f12feb62c6cf23e56c581b9dccb8d3b9ccc85c12c62b0cb67dd71de8d22d967d2cbf8403502c66bccb238523d13a0d081be104fc9f9c68b477
+Size (texlive-20200406-source.tar.xz) = 55383320 bytes
 SHA1 (patch-Makefile.in) = 526a2eab50395bcc9c0f2aa11a0d20034f93a02b
 SHA1 (patch-ac) = 2bbaa28a6cf16c8a14b0f190387d6443c6b260d9
-SHA1 (patch-ad) = a9d724566920535e28204cf8014467297f3f7bcb
+SHA1 (patch-ad) = 83c490341314ca98ae5915f868dc2d1f3d4a4d5b

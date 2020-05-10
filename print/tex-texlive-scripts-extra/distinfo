@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2020/05/10 03:56:44 markd Exp $
+
+SHA1 (texlive-scripts-extra.r54744.tar.xz) = 61afa58af8fbff76b6012dbe13e6b1df8c4ce162
+RMD160 (texlive-scripts-extra.r54744.tar.xz) = c8c14f8e5ca2522bc816dcbe79162acdfcd56c5f
+SHA512 (texlive-scripts-extra.r54744.tar.xz) = e46691aa10b961d2359359fdf00ebc86a1b881b3d1126c52f3863343d21eba00110cd9500fb03a4a9544a3d8fb443bbdc90aa2f6216b8e62a3edb0acc58e4c75
+Size (texlive-scripts-extra.r54744.tar.xz) = 23540 bytes
+SHA1 (patch-bin_e2pall) = e8d08dc3082a1cdda05fea5bdfe4996b68d3401b
+SHA1 (patch-bin_kpsetool) = 6eb57faed69cd64cbd0bb744bcb0701bba00b6f7
+SHA1 (patch-bin_kpsewhere) = ff0459b542ddd31c7b970ad8fcd65023c66701eb
+SHA1 (patch-bin_texconfig) = 09713996bfefd1a94beaf5ebabf5adf6fddbd9c4
+SHA1 (patch-bin_texconfig-dialog) = add288966c170b10cd51b92d4339c178dd0dc5c6
+SHA1 (patch-bin_texconfig-sys) = 7bf4fbf29e5e7584e559494a5a018af4baef0a21
+SHA1 (patch-bin_texlinks) = 9507f62bcc6f5aec12dad126b1464c5427a63a5a
+SHA1 (patch-texmf-dist_texconfig_tcfmgr) = fd640c9e2e812074ce343c62635921c5c54fe2e3

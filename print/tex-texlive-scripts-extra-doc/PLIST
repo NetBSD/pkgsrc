@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/10 03:56:45 markd Exp $
+man/man1/allcm.1
+man/man1/allec.1
+man/man1/allneeded.1
+man/man1/dvi2fax.1
+man/man1/dvired.1
+man/man1/e2pall.1
+man/man1/kpsepath.1
+man/man1/kpsetool.1
+man/man1/kpsewhere.1
+man/man1/kpsexpand.1
+man/man1/ps2frag.1
+man/man1/pslatex.1
+man/man1/texconfig-sys.1
+man/man1/texconfig.1
+man/man1/texlinks.1

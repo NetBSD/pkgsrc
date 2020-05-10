@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.23 2019/05/09 09:47:35 adam Exp $
+# $NetBSD: Makefile,v 1.24 2020/05/10 03:56:38 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	dvipsk-5.999
+PKGNAME=	dvipsk-2020.1
 CATEGORIES=	print
 
 HOMEPAGE=	http://www.radicaleye.com/dvips.html
 COMMENT=	DVI-to-PostScript translator
 
-BUILD_DEPENDS+=	tex-tetex-[0-9]*:../../print/tex-tetex
+BUILD_DEPENDS+=	tex-texlive-scripts-[0-9]*:../../print/tex-texlive-scripts
 DEPENDS+=	tex-dvips>=2013:../../print/tex-dvips
 
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/dvipsk

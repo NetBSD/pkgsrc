@@ -1,0 +1,59 @@
+# $NetBSD: hyphen-install.tmpl,v 1.1 2020/05/10 03:56:44 markd Exp $
+#
+# Install hyphenation patterns.
+#
+
+LANGUAGE_DAT=${PKG_SYSCONFBASE}/texmf/tex/generic/config/language.dat
+LANGUAGE_DEF=${PKG_SYSCONFBASE}/texmf/tex/generic/config/language.def
+LANGUAGE_LUA=${PKG_SYSCONFBASE}/texmf/tex/generic/config/language.dat.lua
+
+case ${STAGE} in
+POST-INSTALL)
+	hyphen_dat="@HYPHEN_DAT@"
+	set -- dummy $hyphen_dat; shift;
+	${ECHO} "%%% BEGIN @PKGBASE@" >> ${LANGUAGE_DAT}
+	while ${TEST} $# -gt 0; do
+	    cmd="$1"; arg="$2"
+	    shift; shift
+	    if ${TEST} $cmd = "="; then
+		${ECHO} "$cmd$arg" >> ${LANGUAGE_DAT}
+	    else
+		${ECHO} "$cmd $arg" >> ${LANGUAGE_DAT}
+	    fi
+	done
+	${ECHO} "%%% END @PKGBASE@" >> ${LANGUAGE_DAT}
+	@FMTUTIL_SYS@ --byhyphen ${LANGUAGE_DAT}
+	hyphen_def="@HYPHEN_DEF@"
+	${AWK} "\
+BEGIN { f=\"${LANGUAGE_DEF}.tmp\"; } \
+/^%%% No changes/ { f=\"${LANGUAGE_DEF}.post\"; } \
+{ print>f; }" ${LANGUAGE_DEF} &&
+	set -- dummy $hyphen_def; shift;
+	${ECHO} "%%% BEGIN @PKGBASE@" >> ${LANGUAGE_DEF}.tmp
+	for line in $hyphen_def ; do
+	    ${ECHO} "${line}" >> ${LANGUAGE_DEF}.tmp
+	done
+	${ECHO} "%%% END @PKGBASE@" >> ${LANGUAGE_DEF}.tmp
+	${CAT} ${LANGUAGE_DEF}.post >> ${LANGUAGE_DEF}.tmp
+	${RM} ${LANGUAGE_DEF}.post
+	${MV} ${LANGUAGE_DEF}.tmp ${LANGUAGE_DEF}
+	@FMTUTIL_SYS@ --byhyphen ${LANGUAGE_DEF}
+	hyphen_lua="@HYPHEN_LUA@"
+	${AWK} "\
+BEGIN { f=\"${LANGUAGE_LUA}.tmp\"; } \
+/^-- END of language/ { f=\"${LANGUAGE_LUA}.post\"; } \
+{ print>f; }" ${LANGUAGE_LUA} &&
+	set -- dummy $hyphen_lua; shift;
+	${ECHO} "--- BEGIN @PKGBASE@" >> ${LANGUAGE_LUA}.tmp
+	for line in $hyphen_lua ; do
+	    ${ECHO} "${line}" | ${SED} -e 'y/+/ /' -e 's/^\([a-z]\)/	\1/' -e 's/^/	/' >> ${LANGUAGE_LUA}.tmp
+	done
+	${ECHO} "--- END @PKGBASE@" >> ${LANGUAGE_LUA}.tmp
+	${CAT} ${LANGUAGE_LUA}.post >> ${LANGUAGE_LUA}.tmp
+	${RM} ${LANGUAGE_LUA}.post
+	${MV} ${LANGUAGE_LUA}.tmp ${LANGUAGE_LUA}
+	@FMTUTIL_SYS@ --byhyphen ${LANGUAGE_LUA}
+        ;;
+*)
+	;;
+esac

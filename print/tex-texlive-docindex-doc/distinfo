@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:02:50 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/05/10 03:56:44 markd Exp $
 
-SHA1 (tex-texlive-docindex-36749/texlive-docindex.doc.tar.xz) = d277545a83f2f7dbab0b3f370100fe5cc43d14b7
-RMD160 (tex-texlive-docindex-36749/texlive-docindex.doc.tar.xz) = 52adfbeb3ad84485e58973127733f03d733d289f
-SHA512 (tex-texlive-docindex-36749/texlive-docindex.doc.tar.xz) = 01f22d40556f28f8da748316272d51a5f6fa2e339cfb838542ec6d1682a8a1dbc35098a348963746612779ecd416e659cabfa5e2480752f286f3e28f9e5c0ab7
-Size (tex-texlive-docindex-36749/texlive-docindex.doc.tar.xz) = 105852 bytes
+SHA1 (texlive-docindex.doc.r55037.tar.xz) = 192b0e2ef18e89fece6d80b6782eaf0f815441cb
+RMD160 (texlive-docindex.doc.r55037.tar.xz) = 8a28ee04891d93ab7674370fd1842f78449b319d
+SHA512 (texlive-docindex.doc.r55037.tar.xz) = ee5c58dd739f90f6dd1a721d70109d2735a1d27f3585213f3e78172116996f6ad7916bc65e52fa4d505a6cc8490f401089f1be2cc21e8a7ec95d85fd470de1ee
+Size (texlive-docindex.doc.r55037.tar.xz) = 161672 bytes

@@ -1,0 +1,26 @@
+# $NetBSD: map-install.tmpl,v 1.1 2020/05/10 03:56:44 markd Exp $
+#
+# Enable font maps.
+#
+
+UPDMAP_CFG=${PKG_SYSCONFBASE}/texmf/web2c/updmap.cfg
+
+case ${STAGE} in
+POST-INSTALL)
+	map_files="@MAP_FILES@"
+	for map in $map_files ; do
+	    echo "Map ${map}" >> ${UPDMAP_CFG}
+	done
+	mixedmap_files="@MIXEDMAP_FILES@"
+	for map in $mixedmap_files ; do
+	    echo "MixedMap ${map}" >> ${UPDMAP_CFG}
+	done
+	kanjimap_files="@KANJIMAP_FILES@"
+	for map in $kanjimap_files ; do
+	    echo "KanjiMap ${map}" >> ${UPDMAP_CFG}
+	done
+	@UPDMAP_SYS@
+        ;;
+*)
+	;;
+esac
