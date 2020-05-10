@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/11/04 21:43:47 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2020/05/10 14:09:25 rillig Exp $
 #
 
 DISTNAME=	nqxml-1.1.3p1
@@ -14,6 +14,7 @@ LICENSE=	ruby-license
 
 NO_BUILD=		yes
 USE_RUBY_INSTALL=	yes
+SUBST_NOOP_OK.rinstall=	yes # nothing found for ruby24-nqxml
 
 DOC=			README
 EXAMPLES=		data.xml doc.xml dumpXML.rb parseTestStream.rb \
