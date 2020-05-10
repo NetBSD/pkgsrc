@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/10 03:56:42 markd Exp $
+man/man1/luahbtex.1
