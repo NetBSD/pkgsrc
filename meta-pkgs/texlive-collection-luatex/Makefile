@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 23:33:00 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/10 04:13:27 markd Exp $
 
 DISTNAME=	collection-luatex
-PKGNAME=	texlive-${DISTNAME}-2019pre1
+PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	51127
+TEXLIVE_REV=	54741
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -14,18 +14,23 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 
 # depend addliga
 # depend auto-pst-pdf-lua
+# depend barracuda
 # depend bezierplot
 # depend checkcites
 # depend chickenize
 # depend combofont
 # depend cstypo
 DEPENDS+=	tex-ctablestack-[0-9]*:../../print/tex-ctablestack
+# depend emoji
+# depend emojicite
 # depend enigma
 # depend interpreter
 # depend kanaparser
+# depend lua-uca
+# depend lua-ul
 # depend lua-visual-debug
-# depend lua2dox
 DEPENDS+=	tex-luacode-[0-9]*:../../print/tex-luacode
+DEPENDS+=	tex-luacolor-[0-9]*:../../print/tex-luacolor
 # depend luahyphenrules
 # depend luaimageembed
 # depend luaindex
@@ -47,6 +52,7 @@ DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
 # depend luaxml
 # depend nodetree
 # depend odsfile
+# depend optex
 # depend pdfarticle
 # depend placeat
 # depend plantuml

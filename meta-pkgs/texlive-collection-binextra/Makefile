@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2020/01/18 23:32:57 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2020/05/10 04:13:24 markd Exp $
 
 DISTNAME=	collection-binextra
-PKGNAME=	texlive-${DISTNAME}-2019pre1
+PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	51464
+TEXLIVE_REV=	54732
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -21,7 +21,9 @@ DEPENDS+=	tex-bibtex8-[0-9]*:../../print/tex-bibtex8
 # depend bibtexu
 # depend bundledoc
 # depend checklistings
+# depend chklref
 DEPENDS+=	chktex-[0-9]*:../../print/chktex
+# depend clojure-pamphlet
 # depend cluttex
 # depend ctan-o-mat
 # depend ctan_chk
@@ -46,6 +48,8 @@ DEPENDS+=	dvipng-[0-9]*:../../graphics/dvipng
 # depend dvisvgm
 # depend findhyph
 # depend fragmaster
+# depend git-latexdiff
+DEPENDS+=	gsftopkk>=1.19.2nb4:../../fonts/gsftopkk
 # depend hook-pre-commit-pkg
 # depend installfont
 # depend ketcindy
@@ -62,6 +66,7 @@ DEPENDS+=	latexmk-[0-9]*:../../print/latexmk
 # depend ltxfileinfo
 # depend ltximg
 # depend listings-ext
+# depend luajittex
 DEPENDS+=	tex-make4ht-[0-9]*:../../print/tex-make4ht
 # depend match_parens
 # depend mflua
@@ -72,7 +77,7 @@ DEPENDS+=	tex-pdfcrop-[0-9]*:../../graphics/tex-pdfcrop
 DEPENDS+=	pdfjam-[0-9]*:../../print/pdfjam
 # depend pdflatexpicscale
 # depend pdftex-quiet
-DEPENDS+=	tex-pdftools-[0-9]*:../../print/tex-pdftools
+# depend pdftosrc
 # depend pdfxup
 # depend pfarrei
 DEPENDS+=	tex-pkfix-[0-9]*:../../print/tex-pkfix
@@ -91,9 +96,11 @@ DEPENDS+=	tex-tex4ebook-[0-9]*:../../print/tex-tex4ebook
 DEPENDS+=	tex-texdoc-[0-9]*:../../print/tex-texdoc
 DEPENDS+=	tex-texdoctk-[0-9]*:../../print/tex-texdoctk
 # depend texfot
+DEPENDS+=	tex-texlive-scripts-extra-[0-9]*:../../print/tex-texlive-scripts-extra
 # depend texliveonfly
 # depend texloganalyser
 # depend texosquery
+# depend texplate
 # texware entirely included in web2c
 # tie entirely included in web2c
 # depend tlcockpit
@@ -102,6 +109,7 @@ DEPENDS+=	tex-texdoctk-[0-9]*:../../print/tex-texdoctk
 # web entirely included in web2c
 # depend xindex
 DEPENDS+=	tex-xindy-[0-9]*:../../textproc/tex-xindy
+DEPENDS+=	xpdfopen-[0-9]*:../../print/xpdfopen
 
 META_PACKAGE=	yes
 

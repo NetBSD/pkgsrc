@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 23:33:00 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/10 04:13:27 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2019pre2
+PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	51823
+TEXLIVE_REV=	54754
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -22,6 +22,7 @@ DEPENDS+=	tex-accents-[0-9]*:../../print/tex-accents
 DEPENDS+=	tex-algorithm2e-[0-9]*:../../print/tex-algorithm2e
 DEPENDS+=	tex-algorithmicx-[0-9]*:../../print/tex-algorithmicx
 DEPENDS+=	tex-algorithms-[0-9]*:../../print/tex-algorithms
+# depend algxpar
 # depend aligned-overset
 # depend amscdx
 DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
@@ -44,6 +45,7 @@ DEPENDS+=	tex-bussproofs-[0-9]*:../../print/tex-bussproofs
 # depend calculation
 # depend cascade
 DEPENDS+=	tex-ccfonts-[0-9]*:../../fonts/tex-ccfonts
+# depend ccool
 DEPENDS+=	tex-chemarrow-[0-9]*:../../print/tex-chemarrow
 # depend chemcompounds
 # depend chemcono
@@ -52,6 +54,7 @@ DEPENDS+=	tex-chemarrow-[0-9]*:../../print/tex-chemarrow
 DEPENDS+=	tex-chemgreek-[0-9]*:../../print/tex-chemgreek
 # depend chemmacros
 # depend chemnum
+# depend chemplants
 # depend chemschemex
 # depend chemsec
 # depend chemstyle
@@ -85,6 +88,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend eqexpl
 # depend eqnarray
 # depend eqnnumwarn
+# depend euclideangeometry
 # depend extarrows
 # depend extpfeil
 # depend faktor
@@ -114,6 +118,8 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend karnaugh-map
 # depend karnaughmap
 # depend kvmap
+# depend letterswitharrows
+# depend lie-hasse
 # depend logicproof
 # depend longdivision
 # depend lpform
@@ -122,10 +128,11 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend mathcommand
 DEPENDS+=	tex-mathcomp-[0-9]*:../../print/tex-mathcomp
 # depend mathfixs
+# depend mathlig
 DEPENDS+=	tex-mathpartir-[0-9]*:../../math/tex-mathpartir
 # depend mathpunctspace
-# depend matrix-skeleton
 # depend matlab-prettifier
+# depend matrix-skeleton
 # depend mattens
 # depend memorygraphs
 # depend mgltex
@@ -134,7 +141,6 @@ DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend miller
 # depend mismath
 # depend multiobjective
-# depend mychemistry
 # depend natded
 # depend nath
 # depend nicematrix
@@ -145,7 +151,10 @@ DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend ot-tableau
 DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend perfectcut
+# depend physconst
 # depend physics
+# depend physunits
+# depend pinoutikz
 # depend pm-isomath
 # depend polexpr
 # depend prftree
@@ -158,6 +167,7 @@ DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend qsharp
 # depend rank-2-roots
 # depend rec-thy
+# depend rest-api
 # depend revquantum
 # depend ribbonproofs
 # depend rmathbr
@@ -168,6 +178,7 @@ DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend sesamanuel
 # depend sfg
 # depend shuffle
+# depend simplebnf
 # depend simpler-wick
 # depend simplewick
 DEPENDS+=	tex-siunitx-[0-9]*:../../print/tex-siunitx
@@ -206,6 +217,7 @@ DEPENDS+=	tex-tensind-[0-9]*:../../print/tex-tensind
 # depend xymtex
 # depend yhmath
 # depend youngtab
+# depend yquant
 # depend ytableau
 
 META_PACKAGE=	yes

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 23:33:01 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2020/05/10 04:13:28 markd Exp $
 
 DISTNAME=	collection-pstricks
-PKGNAME=	texlive-${DISTNAME}-2019pre1
+PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	49316
+TEXLIVE_REV=	54455
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -103,13 +103,13 @@ DEPENDS+=	tex-pst-slpe-[0-9]*:../../graphics/tex-pst-slpe
 # depend pst-soroban
 # depend pst-spectra
 # depend pst-spinner
-# depend pst-spirograph
 # depend pst-stru
 # depend pst-support
 DEPENDS+=	tex-pst-text-[0-9]*:../../graphics/tex-pst-text
 # depend pst-thick
 DEPENDS+=	tex-pst-tools-[0-9]*:../../graphics/tex-pst-tools
 DEPENDS+=	tex-pst-tree-[0-9]*:../../graphics/tex-pst-tree
+# depend pst-turtle
 # depend pst-tvz
 DEPENDS+=	tex-pst-uml-[0-9]*:../../devel/tex-pst-uml
 # depend pst-uml
@@ -117,7 +117,6 @@ DEPENDS+=	tex-pst-uml-[0-9]*:../../devel/tex-pst-uml
 # depend pst-vehicle
 # depend pst-venn
 # depend pst-vowel
-DEPENDS+=	tex-pst-vue3d-[0-9]*:../../graphics/tex-pst-vue3d
 # depend pst2pdf
 DEPENDS+=	tex-pstricks-[0-9]*:../../graphics/tex-pstricks
 DEPENDS+=	tex-pstricks-add-[0-9]*:../../graphics/tex-pstricks-add

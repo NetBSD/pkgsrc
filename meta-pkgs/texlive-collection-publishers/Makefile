@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 23:33:01 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2020/05/10 04:13:28 markd Exp $
 
 DISTNAME=	collection-publishers
-PKGNAME=	texlive-${DISTNAME}-2019pre1
+PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	51837
+TEXLIVE_REV=	54407
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -31,6 +31,7 @@ DEPENDS+=	tex-acmconf-[0-9]*:../../print/tex-acmconf
 # depend apa
 DEPENDS+=	tex-apa6-[0-9]*:../../print/tex-apa6
 # depend apa6e
+# depend apa7
 DEPENDS+=	tex-arsclassica-[0-9]*:../../print/tex-arsclassica
 # depend articleingud
 # depend asaetr
@@ -48,6 +49,7 @@ DEPENDS+=	tex-arsclassica-[0-9]*:../../print/tex-arsclassica
 # depend br-lex
 # depend brandeis-dissertation
 # depend brandeis-problemset
+# depend brandeis-thesis
 # depend cascadilla
 # depend cesenaexam
 # depend chem-journal
@@ -90,7 +92,10 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend hagenberg-thesis
 # depend har2nat
 # depend hecthese
+# depend hep-paper
 # depend hithesis
+# depend hitszthesis
+# depend hitszbeamer
 # depend hobete
 # depend hu-berlin-bundle
 # depend hustthesis
@@ -112,6 +117,7 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend ksp-thesis
 # depend ku-template
 # depend langsci
+# depend langsci-avm
 # depend limecv
 # depend lion-msc
 # depend llncsconf
@@ -145,13 +151,14 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend philosophersimprint
 # depend pittetd
 # depend pkuthss
-# depend powerdot-FUBerlin
+# depend powerdot-fuberlin
 # depend powerdot-tuliplab
 # depend pracjourn
 # depend procIAGssymp
 # depend proposal
 # depend prtec
 # depend ptptex
+# depend quantumarticle
 # depend resphilosophica
 # depend resumecls
 DEPENDS+=	tex-revtex-[0-9]*:../../print/tex-revtex
@@ -167,6 +174,7 @@ DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend sduthesis
 # depend seuthesis
 # depend seuthesix
+# depend shortmathj
 # depend soton
 # depend sphdthesis
 # depend spie

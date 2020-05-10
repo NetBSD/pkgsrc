@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 23:32:57 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2020/05/10 04:13:24 markd Exp $
 
 DISTNAME=	collection-formatsextra
-PKGNAME=	texlive-${DISTNAME}-2019
+PKGNAME=	texlive-${DISTNAME}-2020
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	44177
+TEXLIVE_REV=	54074
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
