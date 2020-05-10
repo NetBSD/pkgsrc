@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/03/20 11:57:25 nia Exp $
+# $NetBSD: Makefile,v 1.10 2020/05/10 13:54:19 rillig Exp $
 
 DISTNAME=		mingw-gcc-${DIST_VERSION}
 PKGNAME=		${DISTNAME:S/-${DIST_VERSION}/-${GCC_VERSION}/}
@@ -14,6 +14,7 @@ HOMEPAGE=		http://mingw.sourceforge.net/
 COMMENT=		GNU C Compiler for win32 cross-development
 
 USE_TOOLS+=		gmake
+TOOLS_BROKEN+=		perl
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
 INFO_FILES=		yes
