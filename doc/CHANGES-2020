@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2833 2020/05/10 10:19:40 rillig Exp $
+$NetBSD: CHANGES-2020,v 1.2834 2020/05/10 12:42:35 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4444,3 +4444,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated meta-pkgs/texlive-collection-publishers to 2020pre1 [markd 2020-05-10]
 	Updated meta-pkgs/texlive-collection-xetex to 2020pre1 [markd 2020-05-10]
 	Updated lang/quickjs to 20200412 [rillig 2020-05-10]
+	Updated www/py-flask-admin to 1.5.6 [kleink 2020-05-10]
