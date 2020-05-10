@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.5 2020/02/10 13:06:08 he Exp $
+$NetBSD: distinfo,v 1.6 2020/05/10 10:17:05 rillig Exp $
 
-SHA1 (quickjs-2020-01-19.tar.xz) = a33a7abb4471d566da39df90d0b688d120a8a2c4
-RMD160 (quickjs-2020-01-19.tar.xz) = 0de6489bf915c3e3d558c39bf5e7b264249b57a5
-SHA512 (quickjs-2020-01-19.tar.xz) = 6bbd271a3a3adfd612c9723f98d04c7a62b9f8c44ca5ae2134d34baa077f6fdba3ac65d43f8c573fdc5af23309cde7ada8cc12caf73236d2a9286fecdf677cf2
-Size (quickjs-2020-01-19.tar.xz) = 735868 bytes
+SHA1 (quickjs-2020-04-12.tar.xz) = 5fc6872e8cf307b32dd8245ca96949acde77b1ba
+RMD160 (quickjs-2020-04-12.tar.xz) = b1e011bc5a5ec6a5769e7d0ab00948c4f67b293b
+SHA512 (quickjs-2020-04-12.tar.xz) = ed15bb159fa05a7c7749e34f346d426803adf34f1ee83eb23c1a9acce037402537fb52ff0c54135da13d7908a71043eb00b5688fe13488eca356a0713d4a65a3
+Size (quickjs-2020-04-12.tar.xz) = 741060 bytes
 SHA1 (patch-Makefile) = c31015842b53368344e07eb39873fa496e5f79f1
 SHA1 (patch-cutils.h) = db3fad2bd422d2886538819ef778d13a391d6935
 SHA1 (patch-qjs.c) = 2a2d778bb43540dc5289f84cd9df43162c1ce291
 SHA1 (patch-qjsc.c) = 9a70bde5e19b65942d9f23c10d0b7b3e2741bfaa
-SHA1 (patch-quickjs-libc.c) = 8a82afa9f13c9f7d53f8a94e377fbb4aa4471947
+SHA1 (patch-quickjs-libc.c) = d07010eb2c572d8e2de8e212ab8ac34a8bcdf3bd
 SHA1 (patch-quickjs.c) = 7337eaac4ac5336db5205fa06d6cefd22a78cbf6
 SHA1 (patch-tests_test__builtin.js) = 762d201adfe15e7ab63dc0146040a7679229b10c
