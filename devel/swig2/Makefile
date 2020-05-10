@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/04/25 07:32:50 maya Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/10 18:31:20 rillig Exp $
 
 DISTNAME=	swig-2.0.12
 PKGNAME=	${DISTNAME:S/swig-/swig2-/}
@@ -40,6 +40,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pax
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has sub-configures
 
 INSTALLATION_DIRS+=	share/doc/swig/2.0 share/examples/swig/2.0
 
