@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2020/01/23 08:11:27 taca Exp $
+# $NetBSD: Makefile.common,v 1.41 2020/05/10 14:24:59 rillig Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -22,6 +22,7 @@ VERSION=		4.4.2
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no # has several configure programs
 DHCP_HOME?=		${VARBASE}/db/isc-dhcp
 DHCP_PID?=		${VARBASE}/run/isc-dhcp
 PKG_SYSCONFSUBDIR=	dhcp
