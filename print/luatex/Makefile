@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2020/04/03 10:30:34 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2020/05/10 03:56:39 markd Exp $
 
-PKGREVISION= 7
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	luatex-1.10.0
+PKGNAME=	luatex-1.12.0
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/web2c/
@@ -24,6 +23,7 @@ CONFIGURE_ARGS+=	--disable-euptex
 CONFIGURE_ARGS+=	--disable-mf
 CONFIGURE_ARGS+=	--disable-mf-nowin
 CONFIGURE_ARGS+=	--disable-luajittex
+CONFIGURE_ARGS+=	--disable-luajithbtex
 CONFIGURE_ARGS+=	--disable-mfluajit
 CONFIGURE_ARGS+=	--disable-mp
 CONFIGURE_ARGS+=	--disable-pdftex
@@ -43,6 +43,8 @@ CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
 CONFIGURE_ARGS+=	--with-system-cairo
+CONFIGURE_ARGS+=	--with-system-graphite2
+CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-pixman
 CONFIGURE_ARGS+=	--with-system-libpng
 CONFIGURE_ARGS+=	--with-system-freetype2
@@ -56,6 +58,7 @@ CONFIGURE_ARGS+=	--with-gmp-libdir=${BUILDLINK_PREFIX.gmp}/lib
 CONFIGURE_ARGS+=	--without-x
 
 CONFIGURE_DIRS=		libs/lua53
+CONFIGURE_DIRS+=	libs/luajit
 CONFIGURE_DIRS+=	texk/web2c
 
 INSTALLATION_DIRS+=	bin lib
@@ -79,9 +82,12 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/texk/web2c/luatex ${DESTDIR}${PREFIX}/bin
 	${LN} -f -s luatex ${DESTDIR}${PREFIX}/bin/texlua
 	${LN} -f -s luatex ${DESTDIR}${PREFIX}/bin/texluac
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/texk/web2c/luahbtex ${DESTDIR}${PREFIX}/bin
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/texk/web2c/mflua ${DESTDIR}${PREFIX}/bin
 
 .include "../../archivers/zziplib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
