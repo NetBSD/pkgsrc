@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2020/04/26 12:21:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/05/11 11:02:06 markd Exp $
 share/texmf-dist/scripts/luaotfload/luaotfload-tool.lua
-share/texmf-dist/tex/luatex/luaotfload/fontloader-2020-01-26.lua
+share/texmf-dist/tex/luatex/luaotfload/fontloader-2020-05-06.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-chr.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-gen.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-nod.lua
@@ -80,6 +80,8 @@ share/texmf-dist/tex/luatex/luaotfload/luaotfload-parsers.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-resolvers.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-scripts.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-status.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-suppress.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-szss.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-tounicode.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-unicode.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload.sty
