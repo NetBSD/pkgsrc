@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2846 2020/05/11 05:34:50 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2847 2020/05/11 06:44:41 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4471,3 +4471,9 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/tex-biblatex-apa-doc to 9.12 [markd 2020-05-11]
 	Updated graphics/tex-chemfig to 1.53 [markd 2020-05-11]
 	Updated graphics/tex-chemfig-doc to 1.53 [markd 2020-05-11]
+	Updated fonts/tex-erewhon to 1.106 [markd 2020-05-11]
+	Updated fonts/tex-erewhon-doc to 1.106 [markd 2020-05-11]
+	Updated fonts/tex-fontools to 2020.54926 [markd 2020-05-11]
+	Updated fonts/tex-fontools-doc to 2020.54926 [markd 2020-05-11]
+	Updated print/tex-fancyvrb to 3.6 [markd 2020-05-11]
+	Updated print/tex-fancyvrb-doc to 3.6 [markd 2020-05-11]
