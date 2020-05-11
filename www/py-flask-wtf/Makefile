@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/05/10 12:52:35 kleink Exp $
+# $NetBSD: Makefile,v 1.23 2020/05/11 09:29:11 kleink Exp $
 
 DISTNAME=	Flask-WTF-0.14.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -16,5 +16,7 @@ USE_LANGUAGES=	# empty
 
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-wtforms>=1.0.5:../../www/py-wtforms
+TEST_DEPENDS+=	${PYPKGPREFIX}-flask-babelex-[0-9]*:../../www/py-flask-babelex
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
