@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/22 10:53:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2020/05/11 00:44:20 markd Exp $
 share/texmf-dist/doc/latex/biblatex-apa/README
 share/texmf-dist/doc/latex/biblatex-apa/biblatex-apa-test-citations.bib
 share/texmf-dist/doc/latex/biblatex-apa/biblatex-apa-test-references.bib
@@ -6,3 +6,5 @@ share/texmf-dist/doc/latex/biblatex-apa/biblatex-apa-test.pdf
 share/texmf-dist/doc/latex/biblatex-apa/biblatex-apa-test.tex
 share/texmf-dist/doc/latex/biblatex-apa/biblatex-apa.pdf
 share/texmf-dist/doc/latex/biblatex-apa/biblatex-apa.tex
+share/texmf-dist/doc/latex/biblatex-apa/biblatex-apa6-test.pdf
+share/texmf-dist/doc/latex/biblatex-apa/biblatex-apa6.pdf
