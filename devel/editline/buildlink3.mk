@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2018/01/07 13:04:01 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2020/05/11 21:06:01 tnn Exp $
 
 BUILDLINK_TREE+=	editline
 
@@ -7,6 +7,7 @@ EDITLINE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.editline+=	editline>=3.0.20130712nb1
 BUILDLINK_PKGSRCDIR.editline?=		../../devel/editline
+BUILDLINK_INCDIRS.editline?=		include/readline
 
 BUILDLINK_FILES.editline+=	include/history.h
 BUILDLINK_FILES.editline+=	include/readline.h
