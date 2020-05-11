@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2020/05/10 03:56:38 markd Exp $
+# $NetBSD: Makefile,v 1.25 2020/05/11 07:02:13 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	dvipsk-2020.1
+PKGREVISION=	1
 CATEGORIES=	print
 
 HOMEPAGE=	http://www.radicaleye.com/dvips.html
@@ -47,6 +48,7 @@ post-build:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/texk/dvipsk/texmf-dist/dvips/config/config.ps \
 		${DESTDIR}${PREFIX}/share/examples/dvipsk
+	${RM} -rf ${DESTDIR}${PREFIX}/share/texmf-dist/fonts
 
 BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"
