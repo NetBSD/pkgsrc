@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2850 2020/05/11 13:39:49 kleink Exp $
+$NetBSD: CHANGES-2020,v 1.2851 2020/05/11 13:56:13 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4493,3 +4493,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated graphics/tex-tkz-fct to 1.3c.55031 [markd 2020-05-11]
 	Updated graphics/tex-tkz-fct-doc to 1.3c.55031 [markd 2020-05-11]
 	Updated www/py-wtforms to 2.3.1 [kleink 2020-05-11]
+	Updated devel/smake to 1.3nb10 [micha 2020-05-11]
