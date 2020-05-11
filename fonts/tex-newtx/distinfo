@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2020/04/26 12:21:17 markd Exp $
+$NetBSD: distinfo,v 1.11 2020/05/11 11:23:57 markd Exp $
 
-SHA1 (newtx.r54080.tar.xz) = 1dd7c3f28280e07db2524bdffa0b76ef7f76bb56
-RMD160 (newtx.r54080.tar.xz) = 0adc6d042e90887cb2581edc65f6fa7e6d464560
-SHA512 (newtx.r54080.tar.xz) = 5aa928476391c49488744a9a64159071a47ca05e37f0f7bb02fc466eeda9bff781be732187e3ea5807465c0449f79f40f74156caaecea296de50ca0614516cc1
-Size (newtx.r54080.tar.xz) = 5581516 bytes
+SHA1 (newtx.r55012.tar.xz) = 272d4cfd73f433cf2fb2f69af0d39f2626a1c5ea
+RMD160 (newtx.r55012.tar.xz) = 8f69d83e3db160aa53e7333535246f9d2cf19636
+SHA512 (newtx.r55012.tar.xz) = 9d64912533bae20a2286378b132655fecf1f5ef1515f9992d4e76aca126321baf6afc6f52e22837a168deacaefe57b8f3b025f9bc72d2f3c20e25f0137aebfb8
+Size (newtx.r55012.tar.xz) = 5577664 bytes
