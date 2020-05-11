@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.3 2020/05/11 17:52:21 rillig Exp $
+${HS_INTF}/package-description
+${HS_INTF}/package-id
+${HS_IMPL}/Graphics/X11/Xft.hi
+${HS_IMPL}/Graphics/X11/Xft.p_hi
+${HS_IMPL}/Graphics/X11/Xrender.hi
+${HS_IMPL}/Graphics/X11/Xrender.p_hi
+${HS_IMPL}/libHS${HS_PKGID}.a
+${HS_IMPL}/libHS${HS_PKGID}_p.a
+${HS_DOCS}/LICENSE
+${HS_DOCS}/html/Graphics-X11-Xft.html
+${HS_DOCS}/html/Graphics-X11-Xrender.html
+${HS_DOCS}/html/X11-xft.haddock
+${HS_DOCS}/html/doc-index.html
+${HS_DOCS}/html/haddock-bundle.min.js
+${HS_DOCS}/html/index.html
+${HS_DOCS}/html/linuwial.css
+${HS_DOCS}/html/meta.json
+${HS_DOCS}/html/quick-jump.css
+${HS_DOCS}/html/synopsis.png
