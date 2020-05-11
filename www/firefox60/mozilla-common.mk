@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.10 2020/04/28 06:56:48 riastradh Exp $
+# $NetBSD: mozilla-common.mk,v 1.11 2020/05/11 18:06:38 rillig Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -108,11 +108,13 @@ CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
 CONFIGURE_ENV+=		CPP=${CPP}
 ALL_ENV+=		SHELL=${CONFIG_SHELL:Q}
 
+.if ${PKGPATH} != mail/thunderbird60
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fixing path to python.
 SUBST_FILES.python+=	media/webrtc/trunk/build/common.gypi
 SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
+.endif
 
 # Build outside ${WRKSRC}
 # Try to avoid conflict with config/makefiles/xpidl/Makefile.in
