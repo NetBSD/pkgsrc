@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: extract.sh,v 1.4 2020/04/26 12:46:33 rillig Exp $
+# $NetBSD: extract.sh,v 1.5 2020/05/11 19:13:10 rillig Exp $
 #
 # Test cases for mk/extract/extract.
 #
@@ -9,11 +9,6 @@ set -eu
 . "./test.subr"
 
 test_case_set_up() {
-	# XXX: The mocked pkgsrc directory should be somewhere else.
-	rm -rf "$tmpdir/pkgsrc" "$tmpdir/expected"
-
-	cd "$tmpdir"
-
 	LC_ALL=C
 	export LC_ALL
 }
@@ -33,17 +28,15 @@ if test_case_begin "exclude directory by basename"; then
 	create_file_lines "other/file"		"content"
 	create_file_lines "other/contrib/file"	"content"
 
-	tar cf "archive.tar" "contrib" "other"
+	tar cf "$tmpdir/archive.tar" "contrib" "other"
 	rm -r "contrib" "other"
 
-	sh "$pkgsrcdir/mk/extract/extract" -x "archive.tar" "contrib"
+	sh "$pkgsrcdir/mk/extract/extract" -x "$tmpdir/archive.tar" "contrib"
 
-	find . -print | sort > "extracted"
+	find . -print | sort > "$tmpdir/extracted"
 
-	assert_that "extracted" --file-is-lines \
+	assert_that "$tmpdir/extracted" --file-is-lines \
 		"." \
-		"./archive.tar" \
-		"./extracted" \
 		"./other" \
 		"./other/file"
 
@@ -61,18 +54,16 @@ if test_case_begin "try to exclude directory by pattern with slash"; then
 	create_file_lines "other/file"		"content"
 	create_file_lines "other/contrib/file"	"content"
 
-	tar cf "archive.tar" "contrib" "other"
+	tar cf "$tmpdir/archive.tar" "contrib" "other"
 	rm -r "contrib" "other"
 
-	sh "$pkgsrcdir/mk/extract/extract" -x "archive.tar" "contrib/*"
+	sh "$pkgsrcdir/mk/extract/extract" -x "$tmpdir/archive.tar" "contrib/*"
 
-	find . -print | sort > "extracted"
+	find . -print | sort > "$tmpdir/extracted"
 
-	assert_that "extracted" --file-is-lines \
+	assert_that "$tmpdir/extracted" --file-is-lines \
 		"." \
-		"./archive.tar" \
 		"./contrib" \
-		"./extracted" \
 		"./other" \
 		"./other/contrib" \
 		"./other/file"
@@ -84,22 +75,26 @@ if test_case_begin "exclude asterisk"; then
 
 	# Ensure that the exclusion pattern "*" is not expanded by the
 	# shell but passed as-is to the extractor.
+	#
+	# If the pattern were expanded, it would expand to 'expanded'
+	# and would thus not exclude anything from the actual archive,
+	# which means that all files in the archive would be extracted.
 
 	create_file_lines "contrib/file"	"content"
 	create_file_lines "other/file"		"content"
 	create_file_lines "other/contrib/file"	"content"
 
-	tar cf "archive.tar" "contrib" "other"
+	tar cf "$tmpdir/archive.tar" "contrib" "other"
 	rm -r "contrib" "other"
 
-	sh "$pkgsrcdir/mk/extract/extract" -x "archive.tar" "*"
+	> 'expanded'
+	sh "$pkgsrcdir/mk/extract/extract" -x "$tmpdir/archive.tar" "*"
+	rm 'expanded'
 
-	find . -print | sort > "extracted"
+	find . -print | sort > "$tmpdir/extracted"
 
-	assert_that "extracted" --file-is-lines \
-		"." \
-		"./archive.tar" \
-		"./extracted"
+	assert_that "$tmpdir/extracted" --file-is-lines \
+		"."
 
 	test_case_end
 fi
