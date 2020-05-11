@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2020/04/26 12:21:13 markd Exp $
+$NetBSD: distinfo,v 1.9 2020/05/11 06:12:09 markd Exp $
 
-SHA1 (erewhon.r54512.tar.xz) = ea860adb78ab8457b44b59e2fe72dd94460cd535
-RMD160 (erewhon.r54512.tar.xz) = 07eed42a932ae1e16871c06f49c189e3e1e414ac
-SHA512 (erewhon.r54512.tar.xz) = bd553be41c388bffa8fa04e40a8eb59d49a2389dcb37598e4f94fe4d235e82f42b2e8c3264d2980b4880623590bd8ca12f10a4415eef5f672dd4c7bff42d4346
-Size (erewhon.r54512.tar.xz) = 2254612 bytes
+SHA1 (erewhon.r55064.tar.xz) = 2a38e8f86a4c4eb987b54fe3f910c146972c89f7
+RMD160 (erewhon.r55064.tar.xz) = 977a1a4f834374ffde6352cef3697052b5e1ae35
+SHA512 (erewhon.r55064.tar.xz) = 3e6379fb6405e7674c896c703c2e83bbe830166ba5180825ef313337e5cc7d718b4963ea8d4b418f8bc83c515f4efcc6c300b4fc3a4c2b56b5582fc356d65246
+Size (erewhon.r55064.tar.xz) = 2318568 bytes
