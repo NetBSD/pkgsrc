@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/11 17:52:04 rillig Exp $
+${HS_INTF}/package-description
+${HS_INTF}/package-id
+${HS_IMPL}/Foreign/Lua/Module/System.dyn_hi
+${HS_IMPL}/Foreign/Lua/Module/System.hi
+${HS_IMPL}/Foreign/Lua/Module/System.p_hi
+${HS_IMPL}/Foreign/Lua/Module/SystemUtils.dyn_hi
+${HS_IMPL}/Foreign/Lua/Module/SystemUtils.hi
+${HS_IMPL}/Foreign/Lua/Module/SystemUtils.p_hi
+${HS_IMPL}/libHS${HS_PKGID}.a
+${HS_IMPL}/libHS${HS_PKGID}_p.a
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${HS_DOCS}/LICENSE
+${HS_DOCS}/html/Foreign-Lua-Module-System.html
+${HS_DOCS}/html/doc-index.html
+${HS_DOCS}/html/haddock-bundle.min.js
+${HS_DOCS}/html/hslua-module-system.haddock
+${HS_DOCS}/html/index.html
+${HS_DOCS}/html/linuwial.css
+${HS_DOCS}/html/meta.json
+${HS_DOCS}/html/quick-jump.css
+${HS_DOCS}/html/synopsis.png
