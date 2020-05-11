@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2020/04/05 01:29:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2020/05/11 19:08:59 nikita Exp $
 
 DISTNAME=	nim-1.2.0
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -17,10 +18,19 @@ do-build:
 	printf '#! %s\nexec %s _=%s/nim/bin/nim %s/nim/bin/nim "$$@"\n' \
 		"${SH}" "${SETENV}" "${PREFIX}" "${PREFIX}" \
 		> ${WRKSRC}/nim-wrapper.sh
+	cd ${WRKSRC} && bin/nim c --skipUserCfg --skipParentCfg koch
+	cd ${WRKSRC} && ./koch boot -d:release --skipUserCfg --skipParentCfg
+	cd ${WRKSRC} && ./koch tools --skipUserCfg --skipParentCfg
 
 do-install:
 	cd ${WRKSRC} && sh ./install.sh ${DESTDIR}${PREFIX}
 	${INSTALL_SCRIPT} ${WRKSRC}/nim-wrapper.sh ${DESTDIR}${PREFIX}/bin/nim
+	${INSTALL} ${WRKSRC}/bin/nimble ${DESTDIR}${PREFIX}/bin/nimble
+	${INSTALL} ${WRKSRC}/bin/nimfind ${DESTDIR}${PREFIX}/bin/nimfind
+	${INSTALL} ${WRKSRC}/bin/nimgrep ${DESTDIR}${PREFIX}/bin/nimgrep
+	${INSTALL} ${WRKSRC}/bin/nimpretty ${DESTDIR}${PREFIX}/bin/nimpretty
+	${INSTALL} ${WRKSRC}/bin/nimsuggest ${DESTDIR}${PREFIX}/bin/nimsuggest
+	${INSTALL} ${WRKSRC}/bin/testament ${DESTDIR}${PREFIX}/bin/testament
 
 do-test:
 	cd ${WRKSRC} && ./bin/nim compile koch.nim
