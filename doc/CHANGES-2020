@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2847 2020/05/11 06:44:41 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2848 2020/05/11 10:51:40 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4477,3 +4477,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/tex-fontools-doc to 2020.54926 [markd 2020-05-11]
 	Updated print/tex-fancyvrb to 3.6 [markd 2020-05-11]
 	Updated print/tex-fancyvrb-doc to 3.6 [markd 2020-05-11]
+	Added games/woof version 1.2.1 [micha 2020-05-11]
