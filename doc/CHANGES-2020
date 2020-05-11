@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2852 2020/05/11 14:09:15 micha Exp $
+$NetBSD: CHANGES-2020,v 1.2853 2020/05/11 16:53:23 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4495,3 +4495,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-wtforms to 2.3.1 [kleink 2020-05-11]
 	Updated devel/smake to 1.3nb10 [micha 2020-05-11]
 	Updated archivers/star to 1.6.1nb6 [micha 2020-05-11]
+	Updated shells/bosh to 20200511 [micha 2020-05-11]
