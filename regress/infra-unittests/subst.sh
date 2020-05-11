@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.34 2020/05/11 19:13:10 rillig Exp $
+# $NetBSD: subst.sh,v 1.35 2020/05/11 19:17:22 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1214,6 +1214,14 @@ if test_case_begin "identity substitution implementation"; then
 	assert_identity 'no'	-e 's,\&,&,'
 	assert_identity 'no'	-e 's,[&],&,'
 	assert_identity 'no'	-e 's,&,\&,' # this would be an identity
+
+	# References to Makefile variables can be identical too.
+	# See converters/help2man for an example.
+	assert_identity 'yes'	-e 's,\$(var),$(var),'
+
+	# An unescaped dollar means end-of-line and cannot be part of an
+	# identity substitution.  This may happen, but is clearly a typo.
+	assert_identity 'no'	-e 's,$(var),$(var),'
 
 	test_case_end
 fi
