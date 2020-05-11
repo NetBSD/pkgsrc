@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.35 2020/05/11 19:17:22 rillig Exp $
+# $NetBSD: subst.sh,v 1.36 2020/05/11 19:52:13 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -1219,9 +1219,29 @@ if test_case_begin "identity substitution implementation"; then
 	# See converters/help2man for an example.
 	assert_identity 'yes'	-e 's,\$(var),$(var),'
 
-	# An unescaped dollar means end-of-line and cannot be part of an
-	# identity substitution.  This may happen, but is clearly a typo.
-	assert_identity 'no'	-e 's,$(var),$(var),'
+	# POSIX 2004 and 2018 both define in section "9.3.8 BRE Expression
+	# Anchoring" that a dollar-sign at the end of the string means
+	# end-of-string.
+	#
+	# A dollar-sign followed by \) may or may not be an anchor.
+	# In all other cases the dollar is an ordinary character.
+	assert_identity 'yes'	-e 's,$(var),$(var),'
+
+	# Since this dollar-sign may or may not be an anchor, treat the
+	# whole regular expression as not-an-identity.
+	#
+	# Since a regular expression with a subexpression must contain
+	# \( and \), it does not count as an identity substitution anyway,
+	# which makes the implementation simple.
+	assert_identity 'no'	-e 's,aaa\(aaa$\),aaa\(aaa$\),'
+
+	assert_identity 'yes'	-e 's,$a,$a,'
+	assert_identity 'no'	-e 's,a$,a$,'
+
+	# Same for the circumflex.
+	assert_identity 'yes'	-e 's,a^,a^,'
+	assert_identity 'no'	-e 's,^a,^a,'
+	assert_identity 'no'	-e 's,\(^aaa\)aaa,\(^aaa\)aaa,'
 
 	test_case_end
 fi
