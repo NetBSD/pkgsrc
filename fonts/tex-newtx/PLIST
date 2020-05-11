@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/04/26 12:21:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/05/11 11:23:57 markd Exp $
 share/texmf-dist/fonts/afm/public/newtx/LibertineI-5nu.afm
 share/texmf-dist/fonts/afm/public/newtx/LibertineMathBMI.afm
 share/texmf-dist/fonts/afm/public/newtx/LibertineMathBMI5.afm
@@ -88,7 +88,6 @@ share/texmf-dist/fonts/enc/dvips/newtx/ntxsups_ly1.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntxsups_ot1.enc
 share/texmf-dist/fonts/enc/dvips/newtx/ntxsups_t1.enc
 share/texmf-dist/fonts/map/dvips/newtx/newtx.map
-share/texmf-dist/fonts/map/dvips/newtx/zmn.map
 share/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Bold.otf
 share/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-BoldItalic.otf
 share/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Italic.otf
@@ -481,8 +480,6 @@ share/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
 share/texmf-dist/fonts/tfm/public/newtx/txsy5.tfm
 share/texmf-dist/fonts/tfm/public/newtx/txsy7.tfm
 share/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
-share/texmf-dist/fonts/tfm/public/newtx/zmn-vw-b.tfm
-share/texmf-dist/fonts/tfm/public/newtx/zmn-vw-r.tfm
 share/texmf-dist/fonts/tfm/public/newtx/zutbmi.tfm
 share/texmf-dist/fonts/tfm/public/newtx/zutbmia.tfm
 share/texmf-dist/fonts/tfm/public/newtx/zutmi.tfm
@@ -583,8 +580,6 @@ share/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 share/texmf-dist/fonts/type1/public/newtx/txsy5.pfb
 share/texmf-dist/fonts/type1/public/newtx/txsy7.pfb
 share/texmf-dist/fonts/type1/public/newtx/txsys.pfb
-share/texmf-dist/fonts/type1/public/newtx/zmn-vw-b.pfb
-share/texmf-dist/fonts/type1/public/newtx/zmn-vw-r.pfb
 share/texmf-dist/fonts/type1/public/newtx/ztmb.pfb
 share/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb
 share/texmf-dist/fonts/type1/public/newtx/ztmr.pfb
