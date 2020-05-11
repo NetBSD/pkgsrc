@@ -1,8 +1,8 @@
 #! /bin/sh
-# $NetBSD: sed.test,v 1.1 2020/05/02 07:24:32 rillig Exp $
+# $NetBSD: sed.test,v 1.2 2020/05/11 03:10:46 rillig Exp $
 #
 
-set -e
+set -eu
 
 mydir=`dirname "$0"`
 . "${mydir}/tests.subr"
@@ -37,3 +37,10 @@ sed_test "[[:character classes:]]" \
 	"hello${nl}foo bar" \
 	"hello" \
 	-e "/[[:space:]]/d"
+
+
+# nbsed-20120308 from textproc/nbsed does not add a newline here.
+sed_test 'adding a line' \
+	'1'"$nl"'2'"$nl"'3'"$nl"'4' \
+	'1'"$nl"'2'"$nl"'between 2 and 3'"$nl"'3'"$nl"'4' \
+	-e '/2/a\'"$nl"'between 2 and 3'
