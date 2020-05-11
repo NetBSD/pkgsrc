@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2845 2020/05/11 00:45:27 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2846 2020/05/11 05:34:50 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4469,3 +4469,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/tex-beamer-doc to 3.58 [markd 2020-05-10]
 	Updated print/tex-biblatex-apa to 9.12 [markd 2020-05-11]
 	Updated print/tex-biblatex-apa-doc to 9.12 [markd 2020-05-11]
+	Updated graphics/tex-chemfig to 1.53 [markd 2020-05-11]
+	Updated graphics/tex-chemfig-doc to 1.53 [markd 2020-05-11]
