@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2848 2020/05/11 10:51:40 micha Exp $
+$NetBSD: CHANGES-2020,v 1.2849 2020/05/11 11:36:45 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4478,3 +4478,17 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/tex-fancyvrb to 3.6 [markd 2020-05-11]
 	Updated print/tex-fancyvrb-doc to 3.6 [markd 2020-05-11]
 	Added games/woof version 1.2.1 [micha 2020-05-11]
+	Updated devel/tex-l3backend to 2020.55057 [markd 2020-05-11]
+	Updated devel/tex-l3backend-doc to 2020.55057 [markd 2020-05-11]
+	Updated devel/tex-l3kernel to 2020.55057 [markd 2020-05-11]
+	Updated devel/tex-l3kernel-doc to 2020.55057 [markd 2020-05-11]
+	Updated devel/tex-lualibs to 2.71 [markd 2020-05-11]
+	Updated devel/tex-lualibs-doc to 2.71 [markd 2020-05-11]
+	Updated fonts/tex-luaotfload to 3.14 [markd 2020-05-11]
+	Updated fonts/tex-luaotfload-doc to 3.14 [markd 2020-05-11]
+	Updated print/tex-media9 to 1.11 [markd 2020-05-11]
+	Updated print/tex-media9-doc to 1.11 [markd 2020-05-11]
+	Updated fonts/tex-newtx to 1.626 [markd 2020-05-11]
+	Updated fonts/tex-newtx-doc to 1.626 [markd 2020-05-11]
+	Updated graphics/tex-tkz-fct to 1.3c.55031 [markd 2020-05-11]
+	Updated graphics/tex-tkz-fct-doc to 1.3c.55031 [markd 2020-05-11]
