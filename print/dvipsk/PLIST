@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/05/10 03:56:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/05/11 07:02:13 markd Exp $
 bin/afm2tfm
 bin/dvips
 info/dvips.info
@@ -13,4 +13,3 @@ share/texmf-dist/dvips/base/special.pro
 share/texmf-dist/dvips/base/tex.pro
 share/texmf-dist/dvips/base/texc.pro
 share/texmf-dist/dvips/base/texps.pro
-share/texmf-dist/fonts/enc/dvips/base/dvips-all.enc
