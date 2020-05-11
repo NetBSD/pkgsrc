@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/11 17:52:01 rillig Exp $
+${HS_INTF}/package-description
+${HS_INTF}/package-id
+${HS_IMPL}/System/IO/CodePage.dyn_hi
+${HS_IMPL}/System/IO/CodePage.hi
+${HS_IMPL}/System/IO/CodePage.p_hi
+${HS_IMPL}/System/IO/CodePage/Internal.dyn_hi
+${HS_IMPL}/System/IO/CodePage/Internal.hi
+${HS_IMPL}/System/IO/CodePage/Internal.p_hi
+${HS_IMPL}/System/Win32/CodePage.dyn_hi
+${HS_IMPL}/System/Win32/CodePage.hi
+${HS_IMPL}/System/Win32/CodePage.p_hi
+${HS_IMPL}/libHS${HS_PKGID}.a
+${HS_IMPL}/libHS${HS_PKGID}_p.a
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${HS_DOCS}/LICENSE
+${HS_DOCS}/html/System-IO-CodePage-Internal.html
+${HS_DOCS}/html/System-IO-CodePage.html
+${HS_DOCS}/html/System-Win32-CodePage.html
+${HS_DOCS}/html/code-page.haddock
+${HS_DOCS}/html/doc-index.html
+${HS_DOCS}/html/haddock-bundle.min.js
+${HS_DOCS}/html/index.html
+${HS_DOCS}/html/linuwial.css
+${HS_DOCS}/html/meta.json
+${HS_DOCS}/html/quick-jump.css
+${HS_DOCS}/html/synopsis.png

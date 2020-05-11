@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2020/05/11 17:52:13 rillig Exp $
+${HS_INTF}/package-description
+${HS_INTF}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${HS_IMPL}/System/X509.dyn_hi
+${HS_IMPL}/System/X509.hi
+${HS_IMPL}/System/X509.p_hi
+${HS_IMPL}/System/X509/MacOS.dyn_hi
+${HS_IMPL}/System/X509/MacOS.hi
+${HS_IMPL}/System/X509/MacOS.p_hi
+${HS_IMPL}/System/X509/Unix.dyn_hi
+${HS_IMPL}/System/X509/Unix.hi
+${HS_IMPL}/System/X509/Unix.p_hi
+${HS_IMPL}/libHS${HS_PKGID}.a
+${HS_IMPL}/libHS${HS_PKGID}_p.a
+${HS_DOCS}/LICENSE
+${HS_DOCS}/html/System-X509-MacOS.html
+${HS_DOCS}/html/System-X509-Unix.html
+${HS_DOCS}/html/System-X509.html
+${HS_DOCS}/html/doc-index.html
+${HS_DOCS}/html/haddock-bundle.min.js
+${HS_DOCS}/html/index.html
+${HS_DOCS}/html/linuwial.css
+${HS_DOCS}/html/meta.json
+${HS_DOCS}/html/quick-jump.css
+${HS_DOCS}/html/synopsis.png
+${HS_DOCS}/html/x509-system.haddock
