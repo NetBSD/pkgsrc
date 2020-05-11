@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: check-portability.sh,v 1.4 2020/05/05 06:11:29 rillig Exp $
+# $NetBSD: check-portability.sh,v 1.5 2020/05/11 19:13:10 rillig Exp $
 #
 # Test cases for mk/check/check-portability.*.
 #
@@ -29,21 +29,10 @@ check_portability_awk() {
 	&& exitcode=0 || exitcode=$?
 }
 
-test_case_set_up() {
-	rm -rf "$tmpdir/work"
-	mkdir "$tmpdir/work"
-	cd "$tmpdir/work"
-}
-
-# TODO: remove the "work/" from the tests.
-# The $tmpdir must be a bit structured:
-# $tmpdir/pkgsrc	these files override the actual pkgsrc files
-# $tmpdir/work		current working directory
-
 
 if test_case_begin "test ... = ..."; then
 
-	create_file_lines 'work/file' \
+	create_file_lines 'file' \
 		'if [ "$var" = value ]; then' \
 		'  ...' \
 		'elif test "$var" = value ]; then' \
@@ -52,7 +41,7 @@ if test_case_begin "test ... = ..."; then
 
 	check_portability_awk 'file'
 
-	assert_that 'out' --file-is-empty
+	assert_that "$tmpdir/out" --file-is-empty
 	assert_that $exitcode --equals 0
 
 	test_case_end
@@ -61,7 +50,7 @@ fi
 
 if test_case_begin 'test ... == ...'; then
 
-	create_file_lines 'work/file' \
+	create_file_lines 'file' \
 		'if [ "$var" == value ]; then' \
 		'  ...' \
 		'elif test "$var" == value ]; then' \
@@ -93,7 +82,7 @@ package Makefile.
 ===========================================================================
 
 EOF
-	assert_that 'out' --file-equals 'expected'
+	assert_that "$tmpdir/out" --file-equals 'expected'
 	assert_that $exitcode --equals 1
 
 	test_case_end
@@ -102,18 +91,18 @@ fi
 
 if test_case_begin 'configure patched, configure.in bad'; then
 
-	create_file_lines 'work/patches/patch-aa' \
+	create_file_lines 'patches/patch-aa' \
 		'+++ configure 2020-05-04'
-	create_file_lines 'work/configure' \
+	create_file_lines 'configure' \
 		'#! /bin/sh' \
 		'good'
-	create_file_lines 'work/configure.in' \
+	create_file_lines 'configure.in' \
 		'test a == b'
 
 	check_portability_sh \
 		'CHECK_PORTABILITY_EXPERIMENTAL=yes'
 
-	assert_that "out" --file-is-empty
+	assert_that "$tmpdir/out" --file-is-empty
 	assert_that $exitcode --equals 0
 
 	test_case_end
@@ -125,17 +114,17 @@ if test_case_begin 'Makefile.in patched, Makefile.am bad'; then
 	# As of 2020-05-05, Makefile.am is not checked at all since only
 	# very few packages actually use that file during the build.
 
-	create_file_lines 'work/patches/patch-aa' \
+	create_file_lines 'patches/patch-aa' \
 		'+++ Makefile.in 2020-05-05'
-	create_file_lines 'work/Makefile.in' \
+	create_file_lines 'Makefile.in' \
 		'test a = b'
-	create_file_lines 'work/Makefile.am' \
+	create_file_lines 'Makefile.am' \
 		'test a == b'
 
 	check_portability_sh \
 		'CHECK_PORTABILITY_EXPERIMENTAL=yes'
 
-	assert_that "out" --file-is-empty
+	assert_that "$tmpdir/out" --file-is-empty
 	assert_that $exitcode --equals 0
 
 	test_case_end
@@ -148,15 +137,15 @@ if test_case_begin 'files that are usually not used for building'; then
 	# developers and are not used during the actual build, except
 	# if the package rebuilds everything using the GNU autotools.
 
-	create_file_lines 'work/configure.ac' \
+	create_file_lines 'configure.ac' \
 		'test a == b'
-	create_file_lines 'work/Makefile.am' \
+	create_file_lines 'Makefile.am' \
 		'test a == b'
 
 	check_portability_sh \
 		'CHECK_PORTABILITY_EXPERIMENTAL=yes'
 
-	assert_that "out" --file-is-empty
+	assert_that "$tmpdir/out" --file-is-empty
 	assert_that $exitcode --equals 0
 
 	test_case_end
@@ -165,9 +154,9 @@ fi
 
 if test_case_begin 'configure patched and still bad'; then
 
-	create_file_lines 'work/patches/patch-aa' \
+	create_file_lines 'patches/patch-aa' \
 		'+++ configure 2020-05-04'
-	create_file_lines 'work/configure' \
+	create_file_lines 'configure' \
 		'#! /bin/sh' \
 		'test a == b'
 
@@ -196,7 +185,7 @@ package Makefile.
 ===========================================================================
 
 EOF
-	assert_that 'out' --file-equals 'expected'
+	assert_that "$tmpdir/out" --file-equals 'expected'
 	assert_that $exitcode --equals 1
 
 	test_case_end
@@ -208,16 +197,16 @@ if test_case_begin 'special characters in filenames'; then
 	# Ensure that the filename matching for patched files
 	# does not treat special characters as shell metacharacters.
 
-	create_file_lines 'work/patches/patch-aa' \
+	create_file_lines 'patches/patch-aa' \
 		'+++ [[[[(`" 2020-05-04'
-	create_file_lines 'work/+++ [[[[(`"' \
+	create_file_lines '+++ [[[[(`"' \
 		'#! /bin/sh' \
 		'test a = b'
 
 	check_portability_sh \
 		'CHECK_PORTABILITY_EXPERIMENTAL=yes'
 
-	assert_that 'out' --file-is-empty
+	assert_that "$tmpdir/out" --file-is-empty
 	assert_that $exitcode --equals 0
 
 	test_case_end
@@ -233,9 +222,10 @@ if test_case_begin 'no patches'; then
 		'#! /bin/sh' \
 		'test a = b'
 
-	check_portability_sh
+	check_portability_sh \
+		CHECK_PORTABILITY_EXPERIMENTAL=no
 
-	assert_that 'out' --file-is-empty
+	assert_that "$tmpdir/out" --file-is-empty
 	assert_that $exitcode --equals 0
 
 	test_case_end
@@ -250,7 +240,7 @@ if test_case_begin 'no experimental by default'; then
 	check_portability_sh \
 		'CHECK_PORTABILITY_EXPERIMENTAL=no'
 
-	assert_that 'out' --file-is-empty
+	assert_that "$tmpdir/out" --file-is-empty
 	assert_that $exitcode --equals 0
 
 	test_case_end
