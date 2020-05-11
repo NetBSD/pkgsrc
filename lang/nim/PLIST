@@ -1,6 +1,12 @@
-@comment $NetBSD: PLIST,v 1.9 2020/04/05 01:29:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2020/05/11 19:08:59 nikita Exp $
 bin/nim
 nim/bin/nim
+bin/nimble
+bin/nimfind
+bin/nimgrep
+bin/nimpretty
+bin/nimsuggest
+bin/testament
 nim/compiler.nimble
 nim/compiler/aliases.nim
 nim/compiler/asciitables.nim
