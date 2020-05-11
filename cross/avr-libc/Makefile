@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/01/18 23:30:15 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2020/05/11 12:57:56 mef Exp $
 
 DISTNAME=		avr-libc-2.0.0
 PKGREVISION=		2
@@ -26,6 +26,7 @@ BUILD_DEPENDS+=		tex-hanging-[0-9]*:../../print/tex-hanging
 BUILD_DEPENDS+=		tex-stackengine-[0-9]*:../../print/tex-stackengine
 BUILD_DEPENDS+=		tex-newunicodechar-[0-9]*:../../print/tex-newunicodechar
 BUILD_DEPENDS+=		tex-etoc-[0-9]*:../../print/tex-etoc
+BUILD_DEPENDS+=		tex-epstopdf-pkg-[0-9]*:../../print/tex-epstopdf-pkg
 
 #   In doc/examples/demo directory, we have sample Makefile both for
 #   generating *.hex file at pkg installation time, and for installing
