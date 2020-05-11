@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/03/23 16:49:07 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/11 01:18:30 riastradh Exp $
 
 DISTNAME=	ledger2beancount-2.0
 PKGREVISION=	1
@@ -41,7 +41,11 @@ TEST_DEPENDS+=	ledger>=3.0.0:../../finance/ledger
 TEST_DEPENDS+=	${PYPKGPREFIX}-beancount>=0:../../finance/py-beancount
 TEST_DEPENDS+=	p5-YAML-Syck>=0:../../textproc/p5-YAML-Syck
 
-USE_TOOLS+=	gsed:test
+# This should be gsed:test, but that triggers a bug in the mk/
+# infrastructure -- the checksum logic thinks TOOL_SED is gsed, but the
+# depends logic hasn't actually brought gsed in because it's only
+# needed for test.
+USE_TOOLS+=	gsed
 
 TEST_ENV+=	SORT=gsort
 
