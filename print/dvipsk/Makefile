@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.25 2020/05/11 07:02:13 markd Exp $
+# $NetBSD: Makefile,v 1.26 2020/05/11 07:41:37 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	dvipsk-2020.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 
 HOMEPAGE=	http://www.radicaleye.com/dvips.html
 COMMENT=	DVI-to-PostScript translator
 
-BUILD_DEPENDS+=	tex-texlive-scripts-[0-9]*:../../print/tex-texlive-scripts
+#BUILD_DEPENDS+=	tex-texlive-scripts-[0-9]*:../../print/tex-texlive-scripts
 DEPENDS+=	tex-dvips>=2013:../../print/tex-dvips
 
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/dvipsk
@@ -40,10 +40,10 @@ post-build:
 	${MKDIR} ${WRKSRC}/texk/dvipsk/texmf-dist/dvips/config
 	${CP} ${LOCALBASE}/share/texmf-dist/dvips/config/config.ps \
 		${WRKSRC}/texk/dvipsk/texmf-dist/dvips/config
-	${SETENV} TEXMFCONFIG=${LOCALBASE}/share/texmf-dist \
-		TFC_TEXMFCONFIG=${WRKSRC}/texk/dvipsk/texmf \
-		configPsFile=${WRKSRC}/texk/dvipsk/texmf-dist/dvips/config/config.ps \
-		${LOCALBASE}/bin/texconfig dvips paper ${LOWER_PAPERSIZE}
+#	${SETENV} TEXMFCONFIG=${LOCALBASE}/share/texmf-dist \
+#		TFC_TEXMFCONFIG=${WRKSRC}/texk/dvipsk/texmf \
+#		configPsFile=${WRKSRC}/texk/dvipsk/texmf-dist/dvips/config/config.ps \
+#		${LOCALBASE}/bin/texconfig dvips paper ${LOWER_PAPERSIZE}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/texk/dvipsk/texmf-dist/dvips/config/config.ps \
