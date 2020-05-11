@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2020/04/27 03:26:38 markd Exp $
+$NetBSD: distinfo,v 1.3 2020/05/11 10:43:31 markd Exp $
 
-SHA1 (l3backend.r54259.tar.xz) = 65e1c4b9c85d25e970fbc7ec6c9ac57e0b64acd5
-RMD160 (l3backend.r54259.tar.xz) = 285d298758a3c14a011553f2d775bbb091a85ba9
-SHA512 (l3backend.r54259.tar.xz) = 87aa4a46738a9e629d8eb684a6d96d282867c32a074043324cea4b85d59d4cffb6357fda73a19235c5a0ba76cb2a78a64c8aca4d548e7485e02b41f707f2d361
-Size (l3backend.r54259.tar.xz) = 11916 bytes
+SHA1 (l3backend.r55057.tar.xz) = 62cb973e0920653483fc7a2b55a29956227b2b72
+RMD160 (l3backend.r55057.tar.xz) = 8b227d082155ff3c1851c64f94e94c649de637bc
+SHA512 (l3backend.r55057.tar.xz) = 3dd5d01e72c629742be1d81305667b7c46a814fe07cf9988312ee3927884a407ec75760c7209d4682e2c2715296d67334e2ff0022e62bf324e336eb4b2db6ba0
+Size (l3backend.r55057.tar.xz) = 12048 bytes

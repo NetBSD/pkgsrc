@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2020/04/27 03:26:39 markd Exp $
+$NetBSD: distinfo,v 1.17 2020/05/11 10:43:30 markd Exp $
 
-SHA1 (l3kernel.doc.r54672.tar.xz) = 29e5f6007edc25de13028a8418b038b61fd88328
-RMD160 (l3kernel.doc.r54672.tar.xz) = 70435787ade043dbdaadd05bc20119d70849a2b3
-SHA512 (l3kernel.doc.r54672.tar.xz) = ec21ddea77658c63ee2c132dc15eccbecc13b6fbf1b1476a31bf24e8fe0c32d24fe5e1b72d76b5a54daf4ff5e4be420c19c1b97bc9a4237e014dd5b89c16a71d
-Size (l3kernel.doc.r54672.tar.xz) = 10010772 bytes
+SHA1 (l3kernel.doc.r55057.tar.xz) = 7fb63f93f5e60ede2cf2e1c9532ba696bb805d4c
+RMD160 (l3kernel.doc.r55057.tar.xz) = 844d16f9689671741f103492f2375a33ffb18c1d
+SHA512 (l3kernel.doc.r55057.tar.xz) = fa20976e2ea5f08599dc12defc9810343c54ecc659eb6bfe8c59be56732a6ab2abf03aafd728a479cf254c9384d984b34637995d88a2baa3bfe0add5c92887ae
+Size (l3kernel.doc.r55057.tar.xz) = 10011612 bytes
