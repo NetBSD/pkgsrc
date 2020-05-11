@@ -1,5 +1,5 @@
 #! /usr/bin/awk -f
-# $NetBSD: subst-identity.awk,v 1.2 2020/05/06 06:14:56 rillig Exp $
+# $NetBSD: subst-identity.awk,v 1.3 2020/05/11 19:52:14 rillig Exp $
 #
 # Tests whether a sed(1) command line consists of only identity substitutions
 # like s,id,id,.
@@ -9,13 +9,17 @@
 
 # Returns the first character of the given regular expression,
 # if it is a single-character regular expression.
-function identity_char(s) {
+function identity_char(s, sep, i) {
 	if (s ~ /^[\t -~]/ && s !~ /^[$&*.\[\\\]^]/)
 		return substr(s, 1, 1);
 	if (s ~ /^\\[$*.\[\]^]/)
 		return substr(s, 2, 1) "x";
 	if (s ~ /^\[[$*.]\]/)
 		return substr(s, 2, 1) "xx";
+	if (substr(s, 1, 1) == "$" && substr(s, 2, 1) != sep)
+		return substr(s, 1, 1);
+	if (substr(s, 1, 1) == "^" && i > 3)
+		return substr(s, 1, 1);
 	return "";
 }
 
@@ -29,7 +33,7 @@ function is_identity_subst(s,   len, i, sep, pat_from, pat_to, ch, subst) {
 	i = 3;
 	pat_to = "";
 	while (i < len && substr(s, i, 1) != sep) {
-		ch = identity_char(substr(s, i));
+		ch = identity_char(substr(s, i), sep, i);
 		if (ch == "")
 			break;
 		pat_to = pat_to substr(ch, 1, 1);
