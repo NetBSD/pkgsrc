@@ -1,0 +1,6 @@
+The location of the woof WAD directory has been set to:
+
+   DOOMWADDIR
+
+This is the pkgsrc standard Doom WAD directory location (shared with other
+Doom packages).
