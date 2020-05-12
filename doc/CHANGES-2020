@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2862 2020/05/12 09:28:20 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.2863 2020/05/12 09:53:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4515,3 +4515,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-zmq to 19.0.1 [adam 2020-05-12]
 	Updated shells/pbosh to 20200511 [micha 2020-05-12]
 	Updated devel/p5-Test-BDD-Cucumber to 0.71 [schmonz 2020-05-12]
+	Updated emulators/mednafen to 1.24.3 [nia 2020-05-12]
