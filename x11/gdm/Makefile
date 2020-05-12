@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2020/03/10 22:11:12 wiz Exp $
+# $NetBSD: Makefile,v 1.196 2020/05/12 16:30:59 rillig Exp $
 #
 
 DISTNAME=	gdm-2.20.11
@@ -63,8 +63,6 @@ RCD_SCRIPTS=		gdm
 SUBST_CLASSES+=		desktop
 SUBST_MESSAGE.desktop=	Configuring GDM settings.
 SUBST_STAGE.desktop=	pre-configure
-SUBST_FILES.desktop=	config/default.desktop.in
-#SUBST_FILES.desktop+=	config/gnome.desktop.in
 SUBST_FILES.desktop+=	config/gdm.conf.in
 SUBST_SED.desktop=	-e 's/^_//g'
 SUBST_SED.desktop+=	-e 's|^User=gdm$$|User=${GDMOWN}|g'
