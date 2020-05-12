@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:29:37 agc Exp $
+$NetBSD: distinfo,v 1.7 2020/05/12 09:33:58 nia Exp $
 
-SHA1 (trio-1.12.tar.gz) = f63a5df8acd970846d64af2a0d19a3de69d901bf
-RMD160 (trio-1.12.tar.gz) = 158868f92c469803c1eb2f39296921862b6e6f7a
-SHA512 (trio-1.12.tar.gz) = 896192ec342871ea0e3296654d0cdcad7c9de25333393661654819b1fa8b9cc54ba58e2f64132582acfe2ca4f6faa4d27b1fc2792ff5cdaf972fc36113022a2d
-Size (trio-1.12.tar.gz) = 146414 bytes
+SHA1 (trio-1.16.tar.gz) = ef2ee4755e54b655c57fdabb1a9e2aa341a235a4
+RMD160 (trio-1.16.tar.gz) = ce7aaa21611d5cc4c1d888d557bc0a13ad6b0e53
+SHA512 (trio-1.16.tar.gz) = 3a8bac3ed001f70f498bd2ab0881ed6d3760bc978bf9ff587c3fc1d5d7a38205f779c5fe445f41edaa9e23c15bc1b4a521916e19161277741bc8e2f744b46c69
+Size (trio-1.16.tar.gz) = 167337 bytes

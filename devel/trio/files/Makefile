@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/31 23:13:51 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2020/05/12 09:33:58 nia Exp $
 
 LIB=		libtrio
 LIB_VER=	2:0:1
@@ -7,6 +7,8 @@ LIBS?=		-lm
 SRCS=		trio.c triostr.c trionan.c
 HDRS=		trio.h triop.h triodef.h trionan.h triostr.h
 OBJS=		${SRCS:.c=.lo}
+
+CPPFLAGS+=	-DHAVE_STRUCT_SIGACTION
 
 PREFIX?=	/usr/local
 LIBDIR?=	${PREFIX}/lib
