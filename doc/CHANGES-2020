@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2867 2020/05/12 10:50:42 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2868 2020/05/12 11:07:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4522,3 +4522,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated print/fig2dev to 3.2.7b [nia 2020-05-12]
 	Updated www/py-flask-flatpages to 0.7.2 [kleink 2020-05-12]
 	Updated devel/trio to 1.16 [nia 2020-05-12]
+	Updated graphics/openjpeg to 2.3.1nb3 [nia 2020-05-12]
