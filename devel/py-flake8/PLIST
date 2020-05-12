@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/01/30 22:53:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2020/05/12 06:40:19 adam Exp $
 bin/flake8-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -12,6 +12,9 @@ ${PYSITELIB}/flake8/__init__.pyo
 ${PYSITELIB}/flake8/__main__.py
 ${PYSITELIB}/flake8/__main__.pyc
 ${PYSITELIB}/flake8/__main__.pyo
+${PYSITELIB}/flake8/_compat.py
+${PYSITELIB}/flake8/_compat.pyc
+${PYSITELIB}/flake8/_compat.pyo
 ${PYSITELIB}/flake8/api/__init__.py
 ${PYSITELIB}/flake8/api/__init__.pyc
 ${PYSITELIB}/flake8/api/__init__.pyo
