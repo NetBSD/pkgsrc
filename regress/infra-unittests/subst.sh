@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.38 2020/05/12 04:22:44 rillig Exp $
+# $NetBSD: subst.sh,v 1.39 2020/05/12 04:35:55 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -53,7 +53,7 @@ if test_case_begin 'single file'; then
 
 	# A single file is patched successfully.
 
-	create_file 'subst-single.mk' <<-EOF
+	create_file 'testcase.mk' <<-EOF
 		SUBST_CLASSES+=		class
 		SUBST_STAGE.class=	pre-configure
 		SUBST_FILES.class=	subst-single.txt
@@ -68,11 +68,13 @@ if test_case_begin 'single file'; then
 	create_file_lines 'subst-single.txt' \
 		'before'
 
-	run_bmake 'subst-single.mk' > "$tmpdir/output"
+	run_bmake 'testcase.mk' \
+		1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
 
-	assert_that "$tmpdir/output" --file-contains-exactly \
+	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in subst-single.txt'
-	assert_that 'subst-single.txt' --file-contains-exactly \
+	assert_that 'subst-single.txt' --file-is-lines \
 		'after'
 
 	test_case_end
@@ -103,9 +105,9 @@ if test_case_begin 'several individual files'; then
 
 	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in first second third'
-	assert_that 'first' --file-contains-exactly 'the first example'
-	assert_that 'second' --file-contains-exactly 'the second example'
-	assert_that 'third' --file-contains-exactly 'the third example'
+	assert_that 'first' --file-is-lines 'the first example'
+	assert_that 'second' --file-is-lines 'the second example'
+	assert_that 'third' --file-is-lines 'the third example'
 
 	test_case_end
 fi
@@ -132,12 +134,15 @@ if test_case_begin 'several files by pattern'; then
 	create_file_lines 'pattern-second'	'the second file'
 	create_file_lines 'pattern-third'	'the third file'
 
-	output=$(run_bmake 'testcase.mk')
+	run_bmake 'testcase.mk' \
+		1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=1
 
-	assert_that "$output" --equals '=> Substituting "class" in pattern-*'
-	assert_that 'pattern-first' --file-contains-exactly 'the first example'
-	assert_that 'pattern-second' --file-contains-exactly 'the second example'
-	assert_that 'pattern-third' --file-contains-exactly 'the third example'
+	assert_that "$tmpdir/output" --file-is-lines \
+		'=> Substituting "class" in pattern-*'
+	assert_that 'pattern-first' --file-is-lines 'the first example'
+	assert_that 'pattern-second' --file-is-lines 'the second example'
+	assert_that 'pattern-third' --file-is-lines 'the third example'
 
 	test_case_end
 fi
@@ -173,9 +178,9 @@ if test_case_begin 'pattern with 1 noop'; then
 	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in pattern-*' \
 		'info: [subst.mk:class] Nothing changed in "pattern-second".'
-	assert_that 'pattern-first' --file-contains-exactly 'the first example'
-	assert_that 'pattern-second' --file-contains-exactly 'the second is already an example'
-	assert_that 'pattern-third' --file-contains-exactly 'the third example'
+	assert_that 'pattern-first' --file-is-lines 'the first example'
+	assert_that 'pattern-second' --file-is-lines 'the second is already an example'
+	assert_that 'pattern-third' --file-is-lines 'the third example'
 
 	test_case_end
 fi
@@ -204,7 +209,7 @@ if test_case_begin 'single file noop, noop_ok=yes'; then
 	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in single' \
 		'info: [subst.mk:class] Nothing changed in "single".'
-	assert_that 'single' --file-contains-exactly 'already an example'
+	assert_that 'single' --file-is-lines 'already an example'
 	assert_that "$exitcode" --equals '0'
 
 	test_case_end
@@ -231,7 +236,7 @@ if test_case_begin 'single file noop, noop_ok=no'; then
 	run_bmake 'testcase.mk' > "$tmpdir/output" \
 	&& exitcode=0 || exitcode=$?
 
-	create_file_lines 'expected-output' \
+	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in single' \
 		'warning: [subst.mk:class] Nothing changed in "single".' \
 		'fail: [subst.mk:class] The filename pattern "single" has no effect.' \
@@ -239,8 +244,7 @@ if test_case_begin 'single file noop, noop_ok=no'; then
 		'' \
 		'Stop.' \
 		"$make: stopped in $PWD"
-	assert_that "$tmpdir/output" --file-equals 'expected-output'
-	assert_that 'single' --file-contains-exactly 'already an example'
+	assert_that 'single' --file-is-lines 'already an example'
 	assert_that "$exitcode" --equals '1'
 
 	test_case_end
@@ -328,7 +332,7 @@ if test_case_begin 'several patterns, 1 nonexistent'; then
 	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in *exist* *not-found*' \
 		'info: [subst.mk:class] Ignoring nonexistent file "./*not-found*".'
-	assert_that 'exists' --file-contains-exactly 'this example exists'
+	assert_that 'exists' --file-is-lines 'this example exists'
 	assert_that "$exitcode" --equals '0'
 
 	test_case_end
@@ -422,16 +426,14 @@ prepare-subst-class:
 EOF
 
 	run_bmake 'testcase.mk' 'subst-class' \
-		1> "$tmpdir/stdout" \
-		2> "$tmpdir/stderr" \
+		1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
-	assert_that "$tmpdir/stdout" --file-is-lines \
+	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in first third'
-	assert_that "$tmpdir/stderr" --file-is-empty
-	assert_that "$wrkdir/package-1.0/first" --file-contains-exactly 'to'
-	assert_that "$wrkdir/package-1.0/second" --file-contains-exactly 'from'
-	assert_that "$wrkdir/package-1.0/third" --file-contains-exactly 'to'
+	assert_that "$wrkdir/package-1.0/first" --file-is-lines 'to'
+	assert_that "$wrkdir/package-1.0/second" --file-is-lines 'from'
+	assert_that "$wrkdir/package-1.0/third" --file-is-lines 'to'
 	assert_that "$exitcode" --equals '0'
 
 	test_case_end
@@ -1139,12 +1141,12 @@ fi
 if test_case_begin 'identity substitution implementation'; then
 
 	assert_identity() {
-		ai_expected="$1"; shift
+		_ai_expected="$1"; shift
 		awk -f "$pkgsrcdir/mk/scripts/subst-identity.awk" -- "$@" \
-		&& ai_actual='yes' || ai_actual='no'
+		&& _ai_actual='yes' || _ai_actual='no'
 
-		[ "$ai_actual" = "$ai_expected" ] \
-		|| assert_fail 'expected "%s", got "%s" for %s\n' "$ai_expected" "$ai_actual" "$*"
+		[ "$_ai_actual" = "$_ai_expected" ] \
+		|| assert_fail 'expected "%s", got "%s" for %s\n' "$_ai_expected" "$_ai_actual" "$*"
 	}
 
 	# If there is no SUBST_SED at all, this is not the situation
