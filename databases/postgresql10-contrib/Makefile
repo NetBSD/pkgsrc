@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/02/14 17:06:41 adam Exp $
+# $NetBSD: Makefile,v 1.8 2020/05/12 15:53:17 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/-/10-contrib-/}
 COMMENT=	Contrib subtree of tools and plug-ins
@@ -53,6 +53,7 @@ BUILD_DIRS+=		contrib/tsm_system_time
 BUILD_DIRS+=		contrib/unaccent
 BUILD_DIRS+=		contrib/vacuumlo
 
+TOOLS_BROKEN+=		perl
 CONFIGURE_ARGS+=	--with-openssl
 
 PLIST_VARS+=		uuid
