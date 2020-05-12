@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2864 2020/05/12 09:58:25 schmonz Exp $
+$NetBSD: CHANGES-2020,v 1.2865 2020/05/12 10:31:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4519,3 +4519,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/libhighlight to 3.56 [schmonz 2020-05-12]
 	Updated textproc/highlight to 3.56 [schmonz 2020-05-12]
 	Updated textproc/p5-highlight to 3.56 [schmonz 2020-05-12]
+	Updated print/fig2dev to 3.2.7b [nia 2020-05-12]
