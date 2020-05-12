@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.14 2020/05/11 19:13:10 rillig Exp $
+# $NetBSD: test.subr,v 1.15 2020/05/12 05:34:04 rillig Exp $
 #
 # This file defines utilities for testing Makefile fragments and shell
 # programs from the pkgsrc infrastructure. While testing one part of the
@@ -275,7 +275,7 @@ PKGSRCDIR=	$pkgsrcdir
 EOF
 	shift
 
-	"$make" -f "$tmpdir/test.subr.main.mk" "$@"
+	"$make" -f "$tmpdir/test.subr.main.mk" ${1+"$@"}
 }
 
 assert_succeeded=0

@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.39 2020/05/12 04:35:55 rillig Exp $
+# $NetBSD: subst.sh,v 1.40 2020/05/12 05:34:04 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -36,7 +36,7 @@ test_case_set_up() {
 		DO_NADA=	: do-nada
 		INFO_MSG=	echo 'info:'
 		WARNING_MSG=	echo 'warning:'
-		FAIL_MSG=	sh $pkgsrcdir/mk/scripts/fail echo 'fail:'
+		FAIL_MSG=	sh $pkgsrcdir/mk/scripts/fail echo 'fail:' 1>&2
 
 		WRKDIR=		$tmpdir/wrkdir
 		WRKSRC=		.
@@ -61,15 +61,12 @@ if test_case_begin 'single file'; then
 
 		.include "prepare-subst.mk"
 		.include "mk/subst.mk"
-
-		all: subst-class
 	EOF
 
 	create_file_lines 'subst-single.txt' \
 		'before'
 
-	run_bmake 'testcase.mk' \
-		1> "$tmpdir/output" 2>&1 \
+	run_bmake 'testcase.mk' 'subst-class' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
@@ -93,15 +90,14 @@ if test_case_begin 'several individual files'; then
 
 		.include "prepare-subst.mk"
 		.include "mk/subst.mk"
-
-		all: subst-class
 	EOF
 
 	create_file_lines 'first'	'the first file'
 	create_file_lines 'second'	'the second file'
 	create_file_lines 'third'	'the third file'
 
-	run_bmake 'testcase.mk' > "$tmpdir/output"
+	run_bmake 'testcase.mk' 'subst-class' 1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in first second third'
@@ -126,17 +122,14 @@ if test_case_begin 'several files by pattern'; then
 
 		.include "prepare-subst.mk"
 		.include "mk/subst.mk"
-
-		all: subst-class
 	EOF
 
 	create_file_lines 'pattern-first'	'the first file'
 	create_file_lines 'pattern-second'	'the second file'
 	create_file_lines 'pattern-third'	'the third file'
 
-	run_bmake 'testcase.mk' \
-		1> "$tmpdir/output" 2>&1 \
-	&& exitcode=0 || exitcode=1
+	run_bmake 'testcase.mk' 'subst-class' 1> "$tmpdir/output" 2>&1 \
+	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in pattern-*'
@@ -173,7 +166,8 @@ if test_case_begin 'pattern with 1 noop'; then
 	create_file_lines 'pattern-second'	'the second is already an example'
 	create_file_lines 'pattern-third'	'the third file'
 
-	run_bmake 'testcase.mk' > "$tmpdir/output"
+	run_bmake 'testcase.mk' 1> "$tmpdir/output" \
+	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in pattern-*' \
@@ -197,20 +191,17 @@ if test_case_begin 'single file noop, noop_ok=yes'; then
 
 		.include "prepare-subst.mk"
 		.include "mk/subst.mk"
-
-		all: subst-class
 	EOF
 
 	create_file_lines 'single'	'already an example'
 
-	run_bmake 'testcase.mk' > "$tmpdir/output" \
+	run_bmake 'testcase.mk' 'subst-class' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in single' \
 		'info: [subst.mk:class] Nothing changed in "single".'
 	assert_that 'single' --file-is-lines 'already an example'
-	assert_that "$exitcode" --equals '0'
 
 	test_case_end
 fi
@@ -227,13 +218,11 @@ if test_case_begin 'single file noop, noop_ok=no'; then
 
 		.include "prepare-subst.mk"
 		.include "mk/subst.mk"
-
-		all: subst-class
 	EOF
 
 	create_file_lines 'single'	'already an example'
 
-	run_bmake 'testcase.mk' > "$tmpdir/output" \
+	run_bmake 'testcase.mk' 'subst-class' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
@@ -262,11 +251,9 @@ if test_case_begin 'single file nonexistent'; then
 
 		.include "prepare-subst.mk"
 		.include "mk/subst.mk"
-
-		all: subst-class
 	EOF
 
-	run_bmake 'testcase.mk' > "$tmpdir/output" \
+	run_bmake 'testcase.mk' 'subst-class' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
@@ -294,11 +281,9 @@ if test_case_begin 'single file nonexistent ok'; then
 
 		.include "prepare-subst.mk"
 		.include "mk/subst.mk"
-
-		all: subst-class
 	EOF
 
-	run_bmake 'testcase.mk' > "$tmpdir/output" \
+	run_bmake 'testcase.mk' 'subst-class' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
@@ -320,13 +305,11 @@ if test_case_begin 'several patterns, 1 nonexistent'; then
 
 		.include "prepare-subst.mk"
 		.include "mk/subst.mk"
-
-		all: subst-class
 	EOF
 
 	create_file_lines 'exists'	'this file exists'
 
-	run_bmake 'testcase.mk' > "$tmpdir/output" \
+	run_bmake 'testcase.mk' 'subst-class' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
@@ -425,8 +408,7 @@ prepare-subst-class:
 	\${RUN} \${ECHO} 'from' > '\${WRKSRC}/third'
 EOF
 
-	run_bmake 'testcase.mk' 'subst-class' \
-		1> "$tmpdir/output" 2>&1 \
+	run_bmake 'testcase.mk' 'subst-class' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
@@ -462,16 +444,12 @@ if test_case_begin 'special characters in filenames'; then
 	create_file_lines '--no-option'		'before'
 	create_file_lines '.hidden'		'before'
 
-	run_bmake 'testcase.mk' 'subst-class' \
-		1> "$tmpdir/stdout" \
-		2> "$tmpdir/stderr" \
+	run_bmake 'testcase.mk' 'subst-class' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
-	assert_that "$tmpdir/stdout" --file-is-lines \
+	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in *' \
 		'info: [subst.mk:class] Nothing changed in "prepare-subst.mk".'
-	assert_that "$tmpdir/stderr" --file-is-empty
-	assert_that "$exitcode" --equals '0'
 
 	assert_that	' !"#$%&'\''()*+,-.'	--file-is-lines 'after'
 	assert_that	'0123456789:;<=>?'	--file-is-lines 'after'
@@ -503,14 +481,11 @@ if test_case_begin 'brackets in filename patterns'; then
 	create_file_lines '*'	'before'
 	create_file_lines '[*]'	'before'
 
-	run_bmake 'testcase.mk' 'subst-class' \
-		1> "$tmpdir/stdout" \
-		2> "$tmpdir/stderr" \
+	run_bmake 'testcase.mk' 'subst-class' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
-	assert_that "$tmpdir/stdout" --file-is-lines \
+	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "class" in [*]'
-	assert_that "$tmpdir/stderr" --file-is-empty
 	assert_that "$exitcode" --equals '0'
 
 	assert_that 'any'	--file-is-lines 'before'
@@ -577,21 +552,17 @@ if test_case_begin 'several SUBST classes'; then
 		.include "mk/subst.mk"
 	EOF
 
-	run_bmake 'testcase.mk' 'pre-configure' \
-		1> "$tmpdir/stdout" \
-		2> "$tmpdir/stderr" \
+	run_bmake 'testcase.mk' 'pre-configure' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	# The order of the above output is not guaranteed.
-	LC_ALL=C sort < "$tmpdir/stdout" > "$tmpdir/stdout-sorted"
+	LC_ALL=C sort < "$tmpdir/output" > "$tmpdir/output-sorted"
 
 	assert_that 'file' --file-is-lines 'zero I II III four'
-	assert_that "$tmpdir/stdout-sorted" --file-is-lines \
+	assert_that "$tmpdir/output-sorted" --file-is-lines \
 		'=> Substituting "one" in file' \
 		'=> Substituting "three" in file' \
 		'=> Substituting "two" in file'
-	assert_that "$tmpdir/stderr" --file-is-empty
-	assert_that "$exitcode" --equals '0'
 
 	test_case_end
 fi
@@ -613,16 +584,14 @@ if test_case_begin 'show diff'; then
 	EOF
 
 	LC_ALL=C \
-	run_bmake 'testcase.mk' 'pre-configure' \
-		1> "$tmpdir/stdout" \
-		2> "$tmpdir/stderr" \
+	run_bmake 'testcase.mk' 'pre-configure' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	awk '{ if (/^(---|\+\+\+) /) { print $1 " " $2 " (filtered timestamp)" } else { print $0 } }' \
-	< "$tmpdir/stdout" > "$tmpdir/stdout-filtered"
+	< "$tmpdir/output" > "$tmpdir/output-filtered"
 
 	assert_that 'file' --file-is-lines 'one' 'II' 'three'
-	assert_that "$tmpdir/stdout-filtered" --file-is-lines \
+	assert_that "$tmpdir/output-filtered" --file-is-lines \
 		'=> Substituting "two" in file' \
 		'--- file (filtered timestamp)' \
 		'+++ file.subst.sav (filtered timestamp)' \
@@ -631,8 +600,6 @@ if test_case_begin 'show diff'; then
 		'-two' \
 		'+II' \
 		' three'
-	assert_that "$tmpdir/stderr" --file-is-empty
-	assert_that "$exitcode" --equals '0'
 
 	test_case_end
 fi
@@ -640,7 +607,10 @@ fi
 
 if test_case_begin 'global show diff'; then
 
-	create_file_lines 'file' 'one' 'two' 'three'
+	create_file_lines 'file' \
+		'one' \
+		'two' \
+		'three'
 
 	create_file 'testcase.mk' <<-EOF
 		SUBST_CLASSES+=		two
@@ -653,16 +623,17 @@ if test_case_begin 'global show diff'; then
 		.include "mk/subst.mk"
 	EOF
 
-	run_bmake 'testcase.mk' 'pre-configure' \
-		1> "$tmpdir/stdout" \
-		2> "$tmpdir/stderr" \
+	run_bmake 'testcase.mk' 'pre-configure' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	awk '{ if (/^(---|\+\+\+) /) { print $1 " " $2 " (filtered timestamp)" } else { print $0 } }' \
-	< "$tmpdir/stdout" > "$tmpdir/stdout-filtered"
+	< "$tmpdir/output" > "$tmpdir/output-filtered"
 
-	assert_that 'file' --file-is-lines 'one' 'II' 'three'
-	assert_that "$tmpdir/stdout-filtered" --file-is-lines \
+	assert_that 'file' --file-is-lines \
+		'one' \
+		'II' \
+		'three'
+	assert_that "$tmpdir/output-filtered" --file-is-lines \
 		'=> Substituting "two" in file' \
 		'--- file (filtered timestamp)' \
 		'+++ file.subst.sav (filtered timestamp)' \
@@ -671,8 +642,6 @@ if test_case_begin 'global show diff'; then
 		'-two' \
 		'+II' \
 		' three'
-	assert_that "$tmpdir/stderr" --file-is-empty
-	assert_that "$exitcode" --equals '0'
 
 	test_case_end
 fi
@@ -704,9 +673,7 @@ if test_case_begin 'SUBST_VARS'; then
 		'@PRINTABLE@' \
 		'@UNDEFINED@'
 
-	run_bmake 'testcase.mk' 'pre-configure' \
-		1> "$tmpdir/stdout" \
-		2> "$tmpdir/stderr" \
+	run_bmake 'testcase.mk' 'pre-configure' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	# The double quotes and single quotes are kept since the variables
@@ -719,10 +686,8 @@ if test_case_begin 'SUBST_VARS'; then
 		'hello,   world' \
 		'!"#$%&'\''()*+,-./09:;<=>?@AZ[\]^_`az{|}' \
 		''
-	assert_that "$tmpdir/stdout" --file-is-lines \
+	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "vars" in vars.txt'
-	assert_that "$tmpdir/stderr" --file-is-empty
-	assert_that "$exitcode" --equals '0'
 
 	test_case_end
 fi
@@ -749,9 +714,7 @@ if test_case_begin 'SUBST_VARS with surrounding whitespace'; then
 		'@TAB@' \
 		'@NEWLINE@'
 
-	run_bmake 'testcase.mk' 'pre-configure' \
-		1> "$tmpdir/stdout" \
-		2> "$tmpdir/stderr" \
+	run_bmake 'testcase.mk' 'pre-configure' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	space=' '
@@ -762,10 +725,8 @@ if test_case_begin 'SUBST_VARS with surrounding whitespace'; then
 		"$space"'between spaces'"$space" \
 		"$tab"'between tabs'"$tab" \
 		"$newline"'between newlines'"$newline"
-	assert_that "$tmpdir/stdout" --file-is-lines \
+	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "vars" in vars.txt'
-	assert_that "$tmpdir/stderr" --file-is-empty
-	assert_that "$exitcode" --equals '0'
 
 	test_case_end
 fi
@@ -785,17 +746,13 @@ if test_case_begin 'SUBST_VARS with backslashes'; then
 		'.include "mk/subst.mk"'
 	create_file_lines 'backslash.txt' '@BACKSLASHES@'
 
-	run_bmake 'testcase.mk' 'pre-configure' \
-		1> "$tmpdir/stdout" \
-		2> "$tmpdir/stderr" \
+	run_bmake 'testcase.mk' 'pre-configure' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that 'backslash.txt' --file-is-lines \
 		'\" \, \\, \" \'\'' \0\000 \x40 \089 \a \$'
-	assert_that "$tmpdir/stdout" --file-is-lines \
+	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "bs" in backslash.txt'
-	assert_that "$tmpdir/stderr" --file-is-empty
-	assert_that "$exitcode" --equals '0'
 
 	test_case_end
 fi
@@ -843,9 +800,7 @@ if test_case_begin 'SUBST_VARS for variables with regex characters'; then
 		'@VAR.^@' \
 		'@VAR.\x@'
 
-	run_bmake 'testcase.mk' 'pre-configure' \
-		1> "$tmpdir/stdout" \
-		2> "$tmpdir/stderr" \
+	run_bmake 'testcase.mk' 'pre-configure' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that 'vars.txt' --file-is-lines \
@@ -857,10 +812,8 @@ if test_case_begin 'SUBST_VARS for variables with regex characters'; then
 		'@VAR.$x@' \
 		'circumflex' \
 		'backslash'
-	assert_that "$tmpdir/stdout" --file-is-lines \
+	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "vars" in vars.txt'
-	assert_that "$tmpdir/stderr" --file-is-empty
-	assert_that "$exitcode" --equals '0'
 
 	test_case_end
 fi
@@ -890,17 +843,13 @@ if test_case_begin 'pattern matches directory'; then
 	create_file_lines 'subst-file' \
 		'@VAR@'
 
-	run_bmake 'testcase.mk' 'pre-configure' \
-		1> "$tmpdir/stdout" \
-		2> "$tmpdir/stderr" \
+	run_bmake 'testcase.mk' 'pre-configure' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that 'subst-file' --file-is-lines 'value'
 	assert_that 'subdir/subfile' --file-is-lines '@VAR@' # unchanged
-	assert_that "$tmpdir/stdout" --file-is-lines \
+	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "dir" in sub*'
-	assert_that "$tmpdir/stderr" --file-is-empty
-	assert_that "$exitcode" --equals '0'
 
 	test_case_end
 fi
@@ -933,14 +882,13 @@ if test_case_begin 'pattern matches only directory'; then
 	assert_that 'subdir/subfile' --file-is-lines '@VAR@' # unchanged
 	assert_that "$tmpdir/stdout" --file-is-lines \
 		'=> Substituting "dir" in sub*' \
-		'fail: [subst.mk:dir] The filename pattern "sub*" has no effect.' \
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
 		"$make: stopped in $PWD"
-	assert_that "$tmpdir/stderr" --file-is-empty
+	assert_that "$tmpdir/stderr" --file-is-lines \
+		'fail: [subst.mk:dir] The filename pattern "sub*" has no effect.'
 	assert_that "$exitcode" --equals 1
-
 	test_case_end
 fi
 
@@ -1025,7 +973,7 @@ if test_case_begin 'empty SUBST_SED'; then
 		'.include "prepare-subst.mk"' \
 		'.include "mk/subst.mk"'
 
-	run_bmake 'testcase.mk' 'pre-configure' 'all' 1> "$tmpdir/output" 2>&1 \
+	run_bmake 'testcase.mk' 'subst-id' 'all' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
 	assert_that "$tmpdir/output" --file-is-lines \
@@ -1142,7 +1090,7 @@ if test_case_begin 'identity substitution implementation'; then
 
 	assert_identity() {
 		_ai_expected="$1"; shift
-		awk -f "$pkgsrcdir/mk/scripts/subst-identity.awk" -- "$@" \
+		awk -f "$pkgsrcdir/mk/scripts/subst-identity.awk" -- ${1+"$@"} \
 		&& _ai_actual='yes' || _ai_actual='no'
 
 		[ "$_ai_actual" = "$_ai_expected" ] \
