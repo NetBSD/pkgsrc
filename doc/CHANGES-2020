@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2856 2020/05/12 06:40:39 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2857 2020/05/12 06:55:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4501,3 +4501,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Removed textproc/libxml++1 successor textproc/libxml++ [adam 2020-05-12]
 	Updated devel/py-codestyle to 2.6.0 [adam 2020-05-12]
 	Updated devel/py-flake8 to 3.8.1 [adam 2020-05-12]
+	Updated finance/py-stripe to 2.48.0 [adam 2020-05-12]
+	Updated textproc/py-markdown2 to 2.3.9 [adam 2020-05-12]
+	Updated security/py-google-auth to 1.14.3 [adam 2020-05-12]
+	Updated www/py-django3 to 3.0.6 [adam 2020-05-12]
