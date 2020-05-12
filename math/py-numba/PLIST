@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/04/18 08:14:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2020/05/12 08:11:36 adam Exp $
 bin/numba-${PYVERSSUFFIX}
 bin/pycc-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -1909,6 +1909,9 @@ ${PYSITELIB}/numba/tests/test_maxmin.pyo
 ${PYSITELIB}/numba/tests/test_mixed_tuple_unroller.py
 ${PYSITELIB}/numba/tests/test_mixed_tuple_unroller.pyc
 ${PYSITELIB}/numba/tests/test_mixed_tuple_unroller.pyo
+${PYSITELIB}/numba/tests/test_moved_modules.py
+${PYSITELIB}/numba/tests/test_moved_modules.pyc
+${PYSITELIB}/numba/tests/test_moved_modules.pyo
 ${PYSITELIB}/numba/tests/test_multi3.py
 ${PYSITELIB}/numba/tests/test_multi3.pyc
 ${PYSITELIB}/numba/tests/test_multi3.pyo
