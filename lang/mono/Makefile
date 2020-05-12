@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2020/05/09 12:39:44 rillig Exp $
+# $NetBSD: Makefile,v 1.190 2020/05/12 16:46:27 rillig Exp $
 
 DISTNAME=	mono-4.0.4.1
 PKGREVISION=	19
@@ -117,6 +117,7 @@ SUBST_STAGE.fix-prefix=		pre-configure
 SUBST_MESSAGE.fix-prefix=	Fixing relative prefix
 SUBST_FILES.fix-prefix=		${PKGCONFIG_OVERRIDE}
 SUBST_SED.fix-prefix=		-e 's,$${pcfiledir}/../..,\@prefix\@,g'
+SUBST_NOOP_OK.fix-prefix=	yes # some of the files are modified
 
 SUBST_CLASSES+=			fix-mcs
 SUBST_STAGE.fix-mcs=		pre-configure
