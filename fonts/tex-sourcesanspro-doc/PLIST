@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/21 13:25:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2020/05/12 11:58:15 markd Exp $
 share/texmf-dist/doc/latex/sourcesanspro/LICENSE.txt
 share/texmf-dist/doc/latex/sourcesanspro/LPPL.txt
+share/texmf-dist/doc/latex/sourcesanspro/README.md
 share/texmf-dist/doc/latex/sourcesanspro/sourcesanspro-otf-specimen.pdf
 share/texmf-dist/doc/latex/sourcesanspro/sourcesanspro-otf-specimen.tex
 share/texmf-dist/doc/latex/sourcesanspro/sourcesanspro-type1-specimen.pdf
