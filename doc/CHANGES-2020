@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2863 2020/05/12 09:53:04 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2864 2020/05/12 09:58:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4516,3 +4516,6 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated shells/pbosh to 20200511 [micha 2020-05-12]
 	Updated devel/p5-Test-BDD-Cucumber to 0.71 [schmonz 2020-05-12]
 	Updated emulators/mednafen to 1.24.3 [nia 2020-05-12]
+	Updated textproc/libhighlight to 3.56 [schmonz 2020-05-12]
+	Updated textproc/highlight to 3.56 [schmonz 2020-05-12]
+	Updated textproc/p5-highlight to 3.56 [schmonz 2020-05-12]
