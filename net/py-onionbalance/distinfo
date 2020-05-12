@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.3 2019/09/19 21:25:52 adam Exp $
+$NetBSD: distinfo,v 1.4 2020/05/12 18:40:35 adam Exp $
 
-SHA1 (OnionBalance-0.1.8.tar.gz) = ec37b1ed1314318853f6f149c265853462c4be77
-RMD160 (OnionBalance-0.1.8.tar.gz) = fbdfe5e4e815595c89f5d0fdfc1a3ea290c6e519
-SHA512 (OnionBalance-0.1.8.tar.gz) = dc43a8419a6bb2d3b44dfa6f6be3ea7ed4e303c41b64249e82156610d712b5c717be47c90e6b8b37f6d4308dd616cc4312aa6132a73a8a9136f1027375a4cca6
-Size (OnionBalance-0.1.8.tar.gz) = 55919 bytes
-SHA1 (patch-setup.cfg) = 19d538a5032010eeecfb7419c611d50be77ddb01
-SHA1 (patch-setup.py) = ff228d5030dfd0a826cff04986a30a9cd1a066e2
+SHA1 (OnionBalance-0.2.0.tar.gz) = 48ff20e6874b02a213471d659ff01bd22911c691
+RMD160 (OnionBalance-0.2.0.tar.gz) = 0e86a66ce0aea6218fbc1ad67ddafde48a885982
+SHA512 (OnionBalance-0.2.0.tar.gz) = 74601210d9d0703043fdc424120f3b2b5ef7daeeed512ce18cd21f81298a17f738914d6782d2ee868c0f58af1ffe7a25c0de95f8cc70a7dfac4c3a60352130a6
+Size (OnionBalance-0.2.0.tar.gz) = 92830 bytes
+SHA1 (patch-setup.py) = cf1f186b0824931a53e03ff30d3070a78eb03f23
