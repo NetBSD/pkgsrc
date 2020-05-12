@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2020/03/10 22:10:50 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2020/05/12 11:11:11 markd Exp $
 
 DISTNAME=		auctex-11.92
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=		5
-#PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=auctex/}
 
@@ -15,6 +14,7 @@ LICENSE=		gnu-gpl-v3
 # Emacsen pre-22 lack graphics support
 EMACS_VERSIONS_ACCEPTED=	${_EMACS_VERSIONS_ALL:Nemacs2[01]*}
 
+BUILD_DEPENDS+=		tex-texlive-scripts-extra-[0-9]*:../../print/tex-texlive-scripts-extra
 DEPENDS+=		texlive-collection-latex>=2014:../../meta-pkgs/texlive-collection-latex
 
 .include "../../mk/bsd.prefs.mk"
