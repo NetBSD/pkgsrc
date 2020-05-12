@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2020/03/20 11:57:50 nia Exp $
+# $NetBSD: Makefile,v 1.224 2020/05/12 17:51:46 rillig Exp $
 
 DISTNAME=	netpbm-10.79.04
 PKGREVISION=	3
@@ -75,7 +75,7 @@ MAKE_FLAGS+=	NETWORKLD="-lsocket -lresolv"
     (!empty(CC_VERSION:Mgcc-[6-9]*) || !empty(PKGSRC_COMPILER:Mclang))
 SUBST_CLASSES+=		xopen
 SUBST_STAGE.xopen=	pre-configure
-SUBST_FILES.xopen=	*.c */*.c */*/*.c */*/*/*.c */*/*/*/*.c */*/*/*/*/*.c
+SUBST_FILES.xopen=	*/*.c */*/*.c */*/*/*.c */*/*/*/*.c */*/*/*/*/*.c
 SUBST_FILES.xopen+=	lib/util/lexheader
 SUBST_SED.xopen=	-e '/_XOPEN_SOURCE/s/500/600/'
 SUBST_SED.xopen+=	-e '/_XOPEN_SOURCE/s/1$$/600/'
