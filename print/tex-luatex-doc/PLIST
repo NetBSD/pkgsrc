@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2019/05/07 12:21:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2020/05/12 21:34:12 markd Exp $
+man/man1/dviluatex.1
 man/man1/luatex.1
 man/man1/texlua.1
 man/man1/texluac.1
+share/texmf-dist/doc/luatex/base/graphics/luaharfbuzz.pdf
 share/texmf-dist/doc/luatex/base/luatex-backend.tex
 share/texmf-dist/doc/luatex/base/luatex-callbacks.tex
 share/texmf-dist/doc/luatex/base/luatex-contents.tex
@@ -11,6 +13,7 @@ share/texmf-dist/doc/luatex/base/luatex-firstpage.tex
 share/texmf-dist/doc/luatex/base/luatex-fontloader.tex
 share/texmf-dist/doc/luatex/base/luatex-fonts.tex
 share/texmf-dist/doc/luatex/base/luatex-graphics.tex
+share/texmf-dist/doc/luatex/base/luatex-harfbuzz.tex
 share/texmf-dist/doc/luatex/base/luatex-introduction.tex
 share/texmf-dist/doc/luatex/base/luatex-languages.tex
 share/texmf-dist/doc/luatex/base/luatex-logos.tex
