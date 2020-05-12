@@ -1,6 +1,7 @@
-$NetBSD: patch-gnucash_import-export_csv-imp_gnc-imp-settings-csv.hpp,v 1.1 2020/05/12 05:35:28 adam Exp $
+$NetBSD: patch-gnucash_import-export_csv-imp_gnc-imp-settings-csv.hpp,v 1.2 2020/05/12 06:16:17 wiz Exp $
 
 Add missing include.
+https://bugs.gnucash.org/show_bug.cgi?id=797748
 
 --- gnucash/import-export/csv-imp/gnc-imp-settings-csv.hpp.orig	2020-05-11 19:38:43.108485371 +0000
 +++ gnucash/import-export/csv-imp/gnc-imp-settings-csv.hpp
