@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/01/17 15:13:20 kleink Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/12 15:59:07 kleink Exp $
 bin/webassets
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -113,9 +113,15 @@ ${PYSITELIB}/webassets/filter/libsass.pyo
 ${PYSITELIB}/webassets/filter/node_sass.py
 ${PYSITELIB}/webassets/filter/node_sass.pyc
 ${PYSITELIB}/webassets/filter/node_sass.pyo
+${PYSITELIB}/webassets/filter/postcss.py
+${PYSITELIB}/webassets/filter/postcss.pyc
+${PYSITELIB}/webassets/filter/postcss.pyo
 ${PYSITELIB}/webassets/filter/pyscss.py
 ${PYSITELIB}/webassets/filter/pyscss.pyc
 ${PYSITELIB}/webassets/filter/pyscss.pyo
+${PYSITELIB}/webassets/filter/rcssmin.py
+${PYSITELIB}/webassets/filter/rcssmin.pyc
+${PYSITELIB}/webassets/filter/rcssmin.pyo
 ${PYSITELIB}/webassets/filter/replace.py
 ${PYSITELIB}/webassets/filter/replace.pyc
 ${PYSITELIB}/webassets/filter/replace.pyo
@@ -131,6 +137,9 @@ ${PYSITELIB}/webassets/filter/rjsmin/rjsmin.pyo
 ${PYSITELIB}/webassets/filter/sass.py
 ${PYSITELIB}/webassets/filter/sass.pyc
 ${PYSITELIB}/webassets/filter/sass.pyo
+${PYSITELIB}/webassets/filter/sass_ruby.py
+${PYSITELIB}/webassets/filter/sass_ruby.pyc
+${PYSITELIB}/webassets/filter/sass_ruby.pyo
 ${PYSITELIB}/webassets/filter/slimit.py
 ${PYSITELIB}/webassets/filter/slimit.pyc
 ${PYSITELIB}/webassets/filter/slimit.pyo
