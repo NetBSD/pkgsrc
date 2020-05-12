@@ -1,18 +1,20 @@
-# $NetBSD: Makefile,v 1.10 2019/11/04 22:10:13 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/12 15:59:07 kleink Exp $
 
-DISTNAME=	webassets-0.12.1
+DISTNAME=	webassets-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/webassets/}
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	http://elsdoerfer.name/docs/webassets/
+HOMEPAGE=	https://webassets.readthedocs.io/
 COMMENT=	Asset management for Python web development
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# empty
 
 REPLACE_PYTHON+=	src/webassets/filter/rjsmin/rjsmin.py
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
