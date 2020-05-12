@@ -1,11 +1,11 @@
-$NetBSD: patch-lib_ofx__preproc.cpp,v 1.3 2019/10/25 09:23:37 kamil Exp $
+$NetBSD: patch-lib_ofx__preproc.cpp,v 1.4 2020/05/12 06:03:48 adam Exp $
 
 Fix build on NetBSD where iconv has a different prototype.
 http://sourceforge.net/p/libofx/bugs/44/
 
---- lib/ofx_preproc.cpp.orig	2014-09-12 19:26:30.000000000 +0000
+--- lib/ofx_preproc.cpp.orig	2020-05-10 08:10:38.019501839 +0000
 +++ lib/ofx_preproc.cpp
-@@ -34,6 +34,15 @@
+@@ -35,6 +35,15 @@
  #include <iconv.h>
  #endif
  
@@ -18,21 +18,15 @@ http://sourceforge.net/p/libofx/bugs/44/
 +#endif
 +#endif
 +
- #ifdef OS_WIN32
+ #ifdef __WIN32__
  # define DIRSEP "\\"
  #else
-@@ -310,7 +319,7 @@ int ofx_proc_file(LibofxContextPtr ctx, 
+@@ -307,7 +316,7 @@ int ofx_proc_file(LibofxContextPtr ctx, 
              size_t outbytesleft = inbytesleft * 2 - 1;
-             iconv_buffer = (char*) malloc (inbytesleft * 2);
+             char * iconv_buffer = (char*) malloc (inbytesleft * 2);
              memset(iconv_buffer, 0, inbytesleft * 2);
--#if defined(OS_WIN32) || defined(__sun)
-+#if defined(OS_WIN32) || defined(__sun) || (defined(__NetBSD__) && !NETBSD_POSIX_ICONV)
+-#if defined(__sun) || defined(__NetBSD__)
++#if defined(__sun) || (defined(__NetBSD__) && !NETBSD_POSIX_ICONV)
              const char * inchar = (const char *)s_buffer.c_str();
  #else
              char * inchar = (char *)s_buffer.c_str();
-@@ -655,5 +664,3 @@ std::string find_dtd(LibofxContextPtr ct
-   message_out(ERROR, "find_dtd():Unable to find the DTD named " + dtd_filename);
-   return "";
- }
--
--

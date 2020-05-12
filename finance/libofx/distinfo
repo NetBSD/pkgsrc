@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2019/10/25 09:23:37 kamil Exp $
+$NetBSD: distinfo,v 1.16 2020/05/12 06:03:48 adam Exp $
 
-SHA1 (libofx-0.9.10.tar.gz) = 33f394c963c087217cb6c508af842d4844bc0823
-RMD160 (libofx-0.9.10.tar.gz) = 928069129cf945dc85521907325977a36dbeae7f
-SHA512 (libofx-0.9.10.tar.gz) = 061110702034dbbb9be3adaebe6236a4b0842169d8ee7671bad6c93960b380cbb33953bdf080c8b14f45930b0c817fcfe1bf71f15d9872dd2535a1415f5be895
-Size (libofx-0.9.10.tar.gz) = 1433837 bytes
+SHA1 (libofx-0.9.15.tar.gz) = 96b9fad846652af5c3f2205e267dba8bf185d778
+RMD160 (libofx-0.9.15.tar.gz) = f1fdf640a482228176b5e1406e92e72512aaaeea
+SHA512 (libofx-0.9.15.tar.gz) = 9d9c5e55bd4ac71d1158c7b8dfe7ecbcaba6f03afdbf3dc2f6d3699c5e4f3fce045400df0217d5f1f4ba45a0ee1b10862b0ebbe1a0f634d756c3b1b88872ce1f
+Size (libofx-0.9.15.tar.gz) = 1298356 bytes
 SHA1 (patch-lib_Makefile.in) = 512cf3dbaa257205ffff18f3953a08eb81d015f4
-SHA1 (patch-lib_ofx__preproc.cpp) = 98ad35ccbd9b36ed486c6180287135b402e36558
+SHA1 (patch-lib_ofx__preproc.cpp) = 73f2b1f4fd30466e8af7fd87fba8815f5c206815
