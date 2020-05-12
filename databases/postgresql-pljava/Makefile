@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/01 00:22:21 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2020/05/12 15:53:17 rillig Exp $
 
 DISTNAME=	pljava-1.5.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -22,6 +22,7 @@ PGSQL_VERSIONS_ACCEPTED=	95 94
 
 USE_JAVA2=	7
 USE_LANGUAGES=	c c++
+TOOLS_BROKEN+=	perl
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/./_/g}
 
