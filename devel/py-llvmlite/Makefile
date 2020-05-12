@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/05/12 08:08:08 adam Exp $
+# $NetBSD: Makefile,v 1.15 2020/05/12 08:10:44 adam Exp $
 
 DISTNAME=	llvmlite-0.32.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 pre-configure:
 	${LN} -f ${WRKSRC}/ffi/Makefile.freebsd ${WRKSRC}/ffi/Makefile.netbsd
 
+.include "../../mk/bsd.prefs.mk"
 post-install:
 .if ${OPSYS} == "Darwin"
 	install_name_tool -id \
