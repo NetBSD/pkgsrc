@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.23 2020/04/06 14:54:54 tnn Exp $
+# $NetBSD: u-boot.mk,v 1.24 2020/05/12 16:20:47 rillig Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -24,11 +24,6 @@ PYTHON_FOR_BUILD_ONLY=	yes
 ALL_ENV+= 		PYTHON2=${PYTHONBIN} PYTHONCONFIG=${PYTHONCONFIG}
 ALL_ENV+=		PYTHONLIBPATH=-L$(LOCALBASE)/lib
 PYTHON_VERSIONS_ACCEPTED=	27
-
-SUBST_CLASSES+=		pythonpath
-SUBST_STAGE.pythonpath=	pre-configure
-SUBST_FILES.pythonpath=	tools/dtoc/dtoc
-SUBST_SED.pythonpath=	-e "s|/usr/bin/python|${PYTHONBIN}|g"
 
 REPLACE_INTERPRETER+=	python2
 REPLACE.python2.old=	python2
