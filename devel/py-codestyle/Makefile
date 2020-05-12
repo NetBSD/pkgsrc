@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2019/01/30 22:44:53 adam Exp $
+# $NetBSD: Makefile,v 1.7 2020/05/12 06:36:42 adam Exp $
 
-DISTNAME=	pycodestyle-2.5.0
+DISTNAME=	pycodestyle-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycodestyle/}
@@ -15,6 +15,9 @@ USE_LANGUAGES=	# none
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pycodestyle pycodestyle-${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC} && ${PYTHONBIN} -m unittest -v
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
