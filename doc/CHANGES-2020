@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2861 2020/05/12 09:07:58 micha Exp $
+$NetBSD: CHANGES-2020,v 1.2862 2020/05/12 09:28:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4514,3 +4514,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated net/py-aiormq to 3.2.2 [adam 2020-05-12]
 	Updated net/py-zmq to 19.0.1 [adam 2020-05-12]
 	Updated shells/pbosh to 20200511 [micha 2020-05-12]
+	Updated devel/p5-Test-BDD-Cucumber to 0.71 [schmonz 2020-05-12]
