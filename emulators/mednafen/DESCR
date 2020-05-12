@@ -11,8 +11,7 @@ button.
 Mednafen can record audiovisual movies in the QuickTime file format,
 with several different lossless codecs supported.
 
-The following systems are supported(refer to the emulation module
-documentation for more details):
+The following systems are supported:
 
 Atari Lynx, Neo Geo Pocket (Color), WonderSwan, GameBoy (Color),
 GameBoy Advance, Nintendo Entertainment System,
