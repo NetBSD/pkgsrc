@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2869 2020/05/12 12:04:13 markd Exp $
+$NetBSD: CHANGES-2020,v 1.2870 2020/05/12 15:59:46 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4531,3 +4531,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated fonts/tex-sourcesanspro-doc to 2.8 [markd 2020-05-12]
 	Updated print/tex-xcjk2uni to 1.0 [markd 2020-05-12]
 	Updated print/tex-xcjk2uni-doc to 1.0 [markd 2020-05-12]
+	Updated www/py-webassets to 2.0 [kleink 2020-05-12]
