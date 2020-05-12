@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2020/05/09 13:28:09 rillig Exp $
+# $NetBSD: Makefile,v 1.86 2020/05/12 17:05:33 rillig Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.5.7
@@ -56,7 +56,7 @@ BUILD_DEPENDS+=		sbcl-[0-9]*:../../lang/sbcl
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths=		install.sh src/runtime/runtime.c doc/sbcl.1
+SUBST_FILES.fix-paths=		doc/sbcl.1
 SUBST_VARS.fix-paths=		PREFIX
 SUBST_SED.fix-paths+=		-e 's,/var/log,${VARBASE}/log,g'
 
