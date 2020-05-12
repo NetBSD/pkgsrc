@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/10 03:56:37 markd Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/12 12:12:25 jperkin Exp $
 
 DISTNAME=	texlive.infra
 PKGNAME=	mktexlsr-2020
@@ -16,7 +16,7 @@ LICENSE=	public-domain
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/texmf-dist/scripts/texlive
 
-INSTALLATION_DIRS+=	bin man/man1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting paths to commands.
@@ -28,6 +28,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mktexlsr \
 		${DESTDIR}${PREFIX}/bin/mktexlsr
 	${INSTALL_MAN} ${WRKSRC}/../../doc/man/man1/mktexlsr.1 \
-		${DESTDIR}${PREFIX}/man/man1/mktexlsr.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mktexlsr.1
 
 .include "../../mk/bsd.pkg.mk"
