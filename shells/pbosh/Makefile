@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2020/04/18 15:54:40 kre Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/12 09:06:39 micha Exp $
 
-DISTNAME=	schily-2020-04-18
-PKGNAME=	pbosh-20200418
+DISTNAME=	schily-2020-05-11
+PKGNAME=	pbosh-20200511
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,9 @@ LICENSE=	cddl-1.0
 
 MAKE_JOBS_SAFE=	no
 
-USE_TOOLS+=	tbl
+# tbl(1) of NetBSD 9 can't process the man page, but man(1) can.
+# Install man page with unprocessed tables as workaround (may break other OS)
+#USE_TOOLS+=	tbl
 TOOL_DEPENDS+=	smake-[0-9]*:../../devel/smake
 SMAKE=		MAKEFLAGS= smake
 MAKE_FLAGS+=	DESTDIR=${DESTDIR} INS_BASE=${PREFIX} DEFMANBASE=. MANDIR=${PKGMANDIR}
@@ -41,8 +43,9 @@ do-build:
 
 # Process tables in manpage
 post-build:
-	cd ${WRKSRC} && ${TBL} sh/sh.1 >sh/sh.1.tmp;			\
-		${MV} -f sh/sh.1.tmp sh/pbosh.1
+	cd ${WRKSRC} && ${MV} sh/sh.1 sh/pbosh.1
+#	cd ${WRKSRC} && ${TBL} sh/sh.1 >sh/sh.1.tmp;			\
+#		${MV} -f sh/sh.1.tmp sh/pbosh.1
 
 do-install:
 	cd ${WRKSRC}/sh &&						\
