@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2868 2020/05/12 11:07:01 nia Exp $
+$NetBSD: CHANGES-2020,v 1.2869 2020/05/12 12:04:13 markd Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4523,3 +4523,11 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated www/py-flask-flatpages to 0.7.2 [kleink 2020-05-12]
 	Updated devel/trio to 1.16 [nia 2020-05-12]
 	Updated graphics/openjpeg to 2.3.1nb3 [nia 2020-05-12]
+	Updated fonts/tex-comicneue to 1.2 [markd 2020-05-12]
+	Updated fonts/tex-comicneue-doc to 1.2 [markd 2020-05-12]
+	Updated fonts/tex-newtxsf to 1.052 [markd 2020-05-12]
+	Updated fonts/tex-newtxsf-doc to 1.052 [markd 2020-05-12]
+	Updated fonts/tex-sourcesanspro to 2.8 [markd 2020-05-12]
+	Updated fonts/tex-sourcesanspro-doc to 2.8 [markd 2020-05-12]
+	Updated print/tex-xcjk2uni to 1.0 [markd 2020-05-12]
+	Updated print/tex-xcjk2uni-doc to 1.0 [markd 2020-05-12]
