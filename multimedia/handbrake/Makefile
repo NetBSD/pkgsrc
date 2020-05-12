@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2020/03/10 22:10:39 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2020/05/12 16:40:00 rillig Exp $
 #
 
 DISTNAME=	HandBrake-1.3.1-source
@@ -57,16 +57,6 @@ BUILD_FLAGS+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 BUILD_DEPENDS+=		nasm>=2.05.01:../../devel/nasm
 #BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
-
-# harfbuzz, which is now separate from pango, installs a header file
-# called hb.h, and the include path plopped out by autocrap causes it
-# to be included instead of handbrake's own hb.h. Hack around it by
-# changing the include name to point specifically at the right hb.h.
-SUBST_CLASSES+=		inchack
-SUBST_STAGE.inchack=	pre-configure
-SUBST_FILES.inchack=	gtk/src/*.[ch]
-SUBST_SED.inchack=	-e "/^.include \"hb\.h\"/s,hb,../../libhb/hb,"
-SUBST_MESSAGE.inchack=	Working around harfbuzz header conflict.
 
 .include "../../mk/compiler.mk"
 
