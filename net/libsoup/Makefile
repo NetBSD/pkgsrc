@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2020/04/12 08:28:04 adam Exp $
+# $NetBSD: Makefile,v 1.64 2020/05/12 18:04:14 adam Exp $
 
 DISTNAME=	libsoup-2.70.0
 PKGREVISION=	1
@@ -13,7 +13,8 @@ LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 
-USE_TOOLS+=		pkg-config gmake intltool msgfmt
+USE_LANGUAGES=	c99
+USE_TOOLS+=	pkg-config gmake intltool msgfmt
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/libsoup-2.4.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/libsoup-gnome-2.4.pc
