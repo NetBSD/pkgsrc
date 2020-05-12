@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2860 2020/05/12 08:20:03 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2861 2020/05/12 09:07:58 micha Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4513,3 +4513,4 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated math/py-numba to 0.49.1 [adam 2020-05-12]
 	Updated net/py-aiormq to 3.2.2 [adam 2020-05-12]
 	Updated net/py-zmq to 19.0.1 [adam 2020-05-12]
+	Updated shells/pbosh to 20200511 [micha 2020-05-12]
