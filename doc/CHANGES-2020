@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2855 2020/05/12 06:09:27 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2856 2020/05/12 06:40:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4499,3 +4499,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated textproc/translate-shell to 0.9.6.12 [leot 2020-05-11]
 	Updated finance/libofx to 0.9.15 [adam 2020-05-12]
 	Removed textproc/libxml++1 successor textproc/libxml++ [adam 2020-05-12]
+	Updated devel/py-codestyle to 2.6.0 [adam 2020-05-12]
+	Updated devel/py-flake8 to 3.8.1 [adam 2020-05-12]
