@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2020/05/08 14:10:09 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2020/05/12 17:46:28 rillig Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -79,7 +79,6 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 SUBST_CLASSES.SunOS+=	linkmap
 SUBST_STAGE.linkmap=	pre-configure
 SUBST_FILES.linkmap=	tools/lto/lto.exports
-SUBST_FILES.linkmap+=	tools/opt-remarks/OptRemarks.exports
 SUBST_FILES.linkmap+=	tools/remarks-shlib/Remarks.exports
 SUBST_SED.linkmap=	-e '/^LLVM/d'
 
