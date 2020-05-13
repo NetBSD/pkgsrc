@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/02/14 17:06:45 adam Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/13 04:58:22 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/-/95-server-/}
 COMMENT=	PostgreSQL database server programs
@@ -8,6 +8,7 @@ BROKEN_ON_PLATFORM=	*-*-mips
 
 .include "../../databases/postgresql95/Makefile.common"
 
+TOOLS_BROKEN+=		perl
 CONFIGURE_ARGS+=	--with-openssl
 
 INSTALL_DIRS=	src/backend
