@@ -1,0 +1,26 @@
+$NetBSD: patch-configure,v 1.1 2020/05/13 04:43:01 rillig Exp $
+
+Fix bashism.
+
+https://github.com/GrahamDumpleton/mod_wsgi/issues/567
+
+--- configure.orig	2018-08-14 00:24:32.000000000 +0000
++++ configure	2020-05-02 14:39:52.265155718 +0000
+@@ -1938,7 +1938,7 @@
+ if test -x "${APXS}"; then
+     APXS_CC=`${APXS} -q CC`
+     APXS_LIBTOOL=`${APXS} -q LIBTOOL | sed -e "s/ .*$//"`
+-    if [[ ${APXS_CC} = ${XCODE_PREFIX}* ]]; then
++    case ${APXS_CC} in "${XCODE_PREFIX}"*)
+         if test ! -x ${XCODE_CC}; then
+             cat "${APXS_LIBTOOL}" | sed -e \
+                 "s%${XCODE_BIN_PATTERN}%/usr/bin/%" > ./libtool
+@@ -1953,7 +1953,7 @@
+ 
+         chmod +x ./apxs ./libtool
+         APXS=./apxs
+-    fi
++    esac
+ fi
+ 
+ 
