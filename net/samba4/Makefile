@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2020/04/29 10:01:18 adam Exp $
+# $NetBSD: Makefile,v 1.97 2020/05/13 04:29:24 rillig Exp $
 
 DISTNAME=	samba-4.12.2
 CATEGORIES=	net
@@ -191,7 +191,6 @@ REPLACE_PERL+=		librpc/tables.pl
 REPLACE_PERL+=		pidl/pidl
 REPLACE_PERL+=		pidl/tests/*.pl
 REPLACE_PERL+=		script/*.pl
-REPLACE_PERL+=		script/findsmb.in
 REPLACE_PERL+=		source3/script/*.pl
 REPLACE_PERL+=		source4/build/pasn1/pasn1.pl
 REPLACE_PERL+=		source4/script/*.pl
