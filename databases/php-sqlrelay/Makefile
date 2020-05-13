@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/05/06 14:04:24 adam Exp $
+# $NetBSD: Makefile,v 1.26 2020/05/13 03:16:34 rillig Exp $
 
 PKGNAME=		${PHP_PKG_PREFIX}-${DISTNAME}
 PKGREVISION=		13
@@ -11,6 +11,7 @@ LICENSE=		gnu-gpl-v2 AND php
 
 PHP_VERSIONS_ACCEPTED=	56 72 73
 
+TOOLS_BROKEN+=		perl
 CONFIGURE_ARGS+=	--with-php-prefix=${BUILDLINK_PREFIX.php}
 
 BUILD_DIRS=		src/api/php
