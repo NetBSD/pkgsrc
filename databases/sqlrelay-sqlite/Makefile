@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/05/06 14:04:25 adam Exp $
+# $NetBSD: Makefile,v 1.35 2020/05/13 03:26:23 rillig Exp $
 
 PKGNAME=		${DISTNAME:S/sqlrelay/sqlrelay-sqlite/}
 PKGREVISION=		21
@@ -13,6 +13,7 @@ CONFIGURE_ARGS+=	--disable-postgresql
 CONFIGURE_ARGS+=	--disable-mysql
 CONFIGURE_ARGS+=	--disable-freetds
 CONFIGURE_ARGS+=	--disable-odbc
+CONFIGURE_ARGS+=	--disable-perl
 
 BUILD_DIRS=		src/connections
 
