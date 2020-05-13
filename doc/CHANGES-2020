@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2883 2020/05/13 14:59:27 taca Exp $
+$NetBSD: CHANGES-2020,v 1.2884 2020/05/13 15:01:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4553,3 +4553,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated misc/py-immutables to 0.12 [adam 2020-05-13]
 	Updated math/py-ephem to 3.7.7.1 [adam 2020-05-13]
 	Updated security/clamav to 0.102.3 [taca 2020-05-13]
+	Updated textproc/py-markovify to 0.8.0 [adam 2020-05-13]
+	Updated devel/py-pygit2 to 1.2.1 [adam 2020-05-13]
