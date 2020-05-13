@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/07/13 06:22:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2020/05/13 15:36:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -37,12 +37,3 @@ ${PYSITELIB}/lmfit/parameter.pyo
 ${PYSITELIB}/lmfit/printfuncs.py
 ${PYSITELIB}/lmfit/printfuncs.pyc
 ${PYSITELIB}/lmfit/printfuncs.pyo
-${PYSITELIB}/lmfit/ui/__init__.py
-${PYSITELIB}/lmfit/ui/__init__.pyc
-${PYSITELIB}/lmfit/ui/__init__.pyo
-${PYSITELIB}/lmfit/ui/basefitter.py
-${PYSITELIB}/lmfit/ui/basefitter.pyc
-${PYSITELIB}/lmfit/ui/basefitter.pyo
-${PYSITELIB}/lmfit/ui/ipy_fitter.py
-${PYSITELIB}/lmfit/ui/ipy_fitter.pyc
-${PYSITELIB}/lmfit/ui/ipy_fitter.pyo
