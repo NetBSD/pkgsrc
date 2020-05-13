@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 01:43:46 agc Exp $
+$NetBSD: distinfo,v 1.6 2020/05/13 19:58:32 fcambus Exp $
 
-SHA1 (2vcard-0.5.tar.bz2) = d9152a726f65dd0281b7c3b510da40bafc08676c
-RMD160 (2vcard-0.5.tar.bz2) = e0e042545aff8d1771b75b9e08719183742cea90
-SHA512 (2vcard-0.5.tar.bz2) = 6a681aae8297f4673ef745452c959cdf934a30ed4381f9942e98c0fb0cb355fef407ca1d3204a5efed7b3d821306d233febb2b0c5a55ab8f9b2218428948b656
-Size (2vcard-0.5.tar.bz2) = 9930 bytes
+SHA1 (2vcard-0.6.tar.gz) = aba3a2a32af2344fdbf817702be53ba88524363b
+RMD160 (2vcard-0.6.tar.gz) = 781afcaa8c21e9da6117120e6b566fa5481bd7c0
+SHA512 (2vcard-0.6.tar.gz) = 7eb50fbd9e3a696385441a247eb8eb1b7f9dfc6d56ef52ea4444c83043f4ee752455c0adf3774dbb93a004605e588b324795ab3381c8d1dfe8f72f89268cfaa6
+Size (2vcard-0.6.tar.gz) = 10471 bytes
