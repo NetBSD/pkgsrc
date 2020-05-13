@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/04/29 02:15:52 mef Exp $
+# $NetBSD: Makefile,v 1.19 2020/05/13 03:28:30 rillig Exp $
 
 R_PKGNAME=	Rcpp
 R_PKGVER=	1.0.4.6
@@ -19,7 +19,6 @@ USE_LANGUAGES+=	c++
 
 REPLACE_R+=		inst/examples/*/*.r
 REPLACE_R+=		inst/examples/SugarPerformance/sugarBenchmarks.R
-REPLACE_R+=		inst/unitTests/runit.Date.R
 
 REPLACE_RSCRIPT+=	inst/discovery/cxx0x.R
 
