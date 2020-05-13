@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2020/05/07 16:00:21 taca Exp $
+# $NetBSD: Makefile,v 1.50 2020/05/13 14:33:15 taca Exp $
 
 DISTNAME=	redmine-4.0.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -274,6 +274,9 @@ GEM_EXTSDIR_NEEDS_SUBDIR=	no
 
 .include "../../lang/ruby/gem-extract.mk"
 
+pre-configure:
+	cd ${WRKSRC}/${DISTNAME} && ${CHMOD} -R g-w .
+
 do-build:
 .for gem in ${DISTFILES:M*.gem:S/.gem$//g}
 	${RUN} cd ${WRKDIR}/${gem} && ${SETENV} ${MAKE_ENV} ${RUBYGEM_ENV} \
@@ -328,7 +331,6 @@ post-install: unicorn-post-install
 .for f in ${RM_APP_CONFIG}
 	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/app/config/${f}.example \
 		${DESTDIR}/${EGDIR}
-	${CHMOD} ${SHAREMODE} ${DESTDIR}/${EGDIR} ${f}.example
 .endfor
 .for f in ${RM_TEST_CONFIG}
 	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/app/test/fixtures/configuration/${f}.example \
