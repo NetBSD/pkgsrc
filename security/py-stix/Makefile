@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:35:12 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2020/05/13 21:49:04 adam Exp $
 
-DISTNAME=	stix-1.2.0.6
+DISTNAME=	stix-1.2.0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
-#MASTER_SITES=	${MASTER_SITE_PYPI:=s/stix/}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=STIXProject/}
-GITHUB_PROJECT=	python-stix
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/stix/}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://stixproject.github.io/
