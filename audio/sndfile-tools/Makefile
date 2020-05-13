@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/05/09 09:55:32 nia Exp $
+# $NetBSD: Makefile,v 1.2 2020/05/13 12:18:08 nia Exp $
 
 DISTNAME=	sndfile-tools-1.04
 CATEGORIES=	audio
@@ -12,6 +12,11 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+# Avoid conflicting with libsamplerate
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/sndfile-resample
+	${RM} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/sndfile-resample.1
 
 .include "options.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
