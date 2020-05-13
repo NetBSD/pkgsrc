@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/02/14 17:06:43 adam Exp $
+# $NetBSD: Makefile,v 1.12 2020/05/13 04:58:22 rillig Exp $
 
 PKGNAME=	${DISTNAME:S/-/94-client-/}
 COMMENT=	PostgreSQL database client programs
@@ -6,6 +6,7 @@ COMMENT=	PostgreSQL database client programs
 .include "../../databases/postgresql94/Makefile.common"
 
 USE_TOOLS+=		gzip tar
+TOOLS_BROKEN+=		perl
 CONFIGURE_ARGS+=	--with-openssl
 CONFIGURE_ARGS+=	--with-zlib
 
