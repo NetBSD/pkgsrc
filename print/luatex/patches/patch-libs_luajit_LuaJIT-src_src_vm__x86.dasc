@@ -1,4 +1,4 @@
-$NetBSD: patch-libs_luajit_LuaJIT-src_src_vm__x86.dasc,v 1.1 2016/07/07 11:10:05 jperkin Exp $
+$NetBSD: patch-libs_luajit_LuaJIT-src_src_vm__x86.dasc,v 1.2 2020/05/13 11:14:21 jperkin Exp $
 
 Generate SunOS compatible assembly.
 
@@ -9,7 +9,7 @@ Generate SunOS compatible assembly.
  	"\t.uleb128 6\n"			/* augmentation length */
  	"\t.byte 0x1b\n"			/* pcrel|sdata4 */
 +#ifdef __sun
-+	"\t.long lj_err_unwind_dwarf@PLT-.\n"
++	"\t.long lj_err_unwind_dwarf@PLT\n"
 +#else
  	"\t.long lj_err_unwind_dwarf-.\n"
 +#endif
