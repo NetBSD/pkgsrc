@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.2885 2020/05/13 15:18:51 adam Exp $
+$NetBSD: CHANGES-2020,v 1.2886 2020/05/13 15:37:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -4557,3 +4557,5 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated devel/py-pygit2 to 1.2.1 [adam 2020-05-13]
 	Updated textproc/py-deepdiff to 4.3.2 [adam 2020-05-13]
 	Updated devel/py-curtsies to 0.3.1 [adam 2020-05-13]
+	Updated textproc/fmtlib to 6.2.1 [adam 2020-05-13]
+	Updated math/py-lmfit to 1.0.1 [adam 2020-05-13]
